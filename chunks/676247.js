@@ -314,7 +314,7 @@ var ed = n(214947),
     eh = n(821609),
     ef = n(283973),
     em = n(408278),
-    eg = n(691540),
+    eg = n(376357),
     ej = n(857250),
     ep = n(97483),
     eC = n(305866),
@@ -354,11 +354,11 @@ function eP() {
             let e = await eR.Ay.createFriendInvite(null, H.PE1.ADD_FRIENDS_POPOUT);
             (0, eS.C)(
                 (0, eI.A)(e.code),
-                () => (0, eg.P0)((0, ej.o)(_.intl.string(_.t.tBOSx4), ep.Ck.SUCCESS)),
-                () => (0, eg.P0)((0, ej.o)(_.intl.string(_.t.R0RpRX), ep.Ck.FAILURE)),
+                () => (0, eg.P)((0, ej.o)(_.intl.string(_.t.tBOSx4), ep.Ck.SUCCESS)),
+                () => (0, eg.P)((0, ej.o)(_.intl.string(_.t.R0RpRX), ep.Ck.FAILURE)),
             );
         } catch {
-            (0, eg.P0)((0, ej.o)(_.intl.string(_.t.R0RpRX), ep.Ck.FAILURE));
+            (0, eg.P)((0, ej.o)(_.intl.string(_.t.R0RpRX), ep.Ck.FAILURE));
         } finally {
             x(!1);
         }
@@ -672,8 +672,8 @@ var eK = n(602853),
     e1 = n(723690),
     e6 = n(976860),
     e3 = n(994500),
-    e4 = n(972910);
-function e8(e) {
+    e8 = n(972910);
+function e2(e) {
     let { friend: t, appendGap: n, closePopout: s } = e,
         [a, o] = i.useState(!1),
         {
@@ -686,7 +686,7 @@ function e8(e) {
             isVR: z.A.isVROnline(t.userId),
         }));
     return (0, l.jsx)(A.D, {
-        className: r()(e4.Ke, { [e4.w$]: n }),
+        className: r()(e8.Ke, { [e8.w$]: n }),
         onMouseEnter: () => o(!0),
         onMouseLeave: () => o(!1),
         onClick: function () {
@@ -702,11 +702,11 @@ function e8(e) {
             subText: (0, l.jsx)(I.E, { variant: "text-xs/medium", color: "text-muted", children: t.user.username }),
             hovered: a,
             showAccountIdentifier: !1,
-            className: e4.eF,
+            className: e8.eF,
         }),
     });
 }
-function e2(e) {
+function e4(e) {
     let { searchResults: t, closePopout: n } = e,
         i = (0, eK.r)(ex.A.space.SPACE_XS),
         s = (0, eK.r)(ex.A.space.SPACE_XXS),
@@ -716,7 +716,7 @@ function e2(e) {
         renderRow: (e) => {
             let { section: i, row: s } = e,
                 r = t[s];
-            return (0, l.jsx)(e8, { friend: r, appendGap: s !== t.length - 1, closePopout: n }, r.userId);
+            return (0, l.jsx)(e2, { friend: r, appendGap: s !== t.length - 1, closePopout: n }, r.userId);
         },
         rowHeight: (e, n) => (n === t.length - 1 ? r : r + s),
         sections: a,
@@ -724,23 +724,23 @@ function e2(e) {
         renderSection: (e) => {
             let { section: n } = e;
             return (0, l.jsx)(I.E, {
-                className: e4.nw,
+                className: e8.nw,
                 variant: "text-sm/medium",
                 children: _.intl.format(_.t.xIWGxu, { count: t.length }),
             });
         },
-        className: e4.Xv,
+        className: e8.Xv,
     });
 }
 function e7() {
     return (0, l.jsx)(I.E, {
         variant: "text-sm/medium",
-        className: e4.n1,
+        className: e8.n1,
         children: _.intl.string(W.default["0usxBd"]),
     });
 }
 function e9() {
-    return (0, l.jsx)(I.E, { variant: "text-sm/medium", className: e4.n1, children: _.intl.string(W.default.VH2HXW) });
+    return (0, l.jsx)(I.E, { variant: "text-sm/medium", className: e8.n1, children: _.intl.string(W.default.VH2HXW) });
 }
 function e5(e) {
     let { rawQuery: t, closePopout: n } = e,
@@ -777,13 +777,13 @@ function e5(e) {
     return "" === i
         ? (0, l.jsx)(e7, {})
         : s.length > 0
-          ? (0, l.jsx)(e2, { searchResults: s, closePopout: n })
+          ? (0, l.jsx)(e4, { searchResults: s, closePopout: n })
           : (0, l.jsx)(e9, {});
 }
 function te(e) {
     let { query: t, width: n, closePopout: i } = e;
     return (0, l.jsx)("div", {
-        className: r()(e4.kL, e4.zZ),
+        className: r()(e8.kL, e8.zZ),
         style: n > 0 ? { "--custom-search-friends-popout-width": `${n}px` } : void 0,
         children: (0, l.jsx)(e5, { rawQuery: t, closePopout: i }),
     });
@@ -793,10 +793,10 @@ function tt(e) {
         [n, s] = i.useState("");
     return (0, l.jsx)(eC.l, {
         children: (0, l.jsxs)("div", {
-            className: e4.kL,
+            className: e8.kL,
             children: [
                 (0, l.jsx)("div", {
-                    className: e4.M6,
+                    className: e8.M6,
                     children: (0, l.jsx)(ev.k, { placeholder: _.intl.string(_.t.lLDtTK), value: n, onChange: s }),
                 }),
                 (0, l.jsx)(e5, { rawQuery: n, closePopout: t }),

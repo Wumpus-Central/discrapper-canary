@@ -11,7 +11,7 @@ var l = e(980707),
     u = e(192308),
     p = e(138134),
     f = e(540999),
-    y = e(691540),
+    y = e(376357),
     g = e(857250),
     A = e(97483),
     h = e(624479),
@@ -145,7 +145,7 @@ function U(n) {
                       action: function () {
                           ((0, a.Z_)(),
                               _.A.clipboard.copyFile(e.filepath),
-                              (0, y.P0)((0, g.o)(C.intl.string(C.t.mGZ66D), A.Ck.SUCCESS)));
+                              (0, y.P)((0, g.o)(C.intl.string(C.t.mGZ66D), A.Ck.SUCCESS)));
                       },
                   });
         })({ clips: i }),

@@ -4,7 +4,7 @@ var n = l(477900),
     i = l(837381),
     r = l(189213),
     s = l(765178),
-    u = l(691540),
+    u = l(376357),
     o = l(857250),
     c = l(97483),
     d = l(683438),
@@ -67,7 +67,7 @@ function A(t) {
             N(!0);
             let t = (await Promise.all(O.map(x.pk))).filter(C.Vq);
             if (0 === t.length) {
-                ((0, u.P0)((0, o.o)(P.intl.string(P.t.R0RpRX), c.Ck.FAILURE)), N(!1));
+                ((0, u.P)((0, o.o)(P.intl.string(P.t.R0RpRX), c.Ck.FAILURE)), N(!1));
                 return;
             }
             ((0, S.S_)({ channelIds: t, parentId: f ?? null, source: "modal" }), l());

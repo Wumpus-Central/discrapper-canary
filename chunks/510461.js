@@ -3,7 +3,7 @@ var n = l(477900),
     i = l(582128),
     a = l(17928),
     s = l(189213),
-    r = l(691540),
+    r = l(376357),
     u = l(857250),
     d = l(97483),
     o = l(297264),
@@ -144,7 +144,7 @@ function R(e) {
                     if (n?.ok === !1) throw Error("send failed");
                     ((e = ef.id), E.w.set(T, { ...E.w.get(T), [l]: e }), H());
                 } catch {
-                    ((0, r.P0)((0, u.o)(P.intl.string(j.default.P6SoGm), d.Ck.FAILURE)), eu(!1));
+                    ((0, r.P)((0, u.o)(P.intl.string(j.default.P6SoGm), d.Ck.FAILURE)), eu(!1));
                 }
             }
         }, [ef, eg, ex, l, H]);

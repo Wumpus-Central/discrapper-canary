@@ -118,9 +118,9 @@ var x = l(288106),
     P = l(223311),
     v = l(65238),
     j = l(758461),
-    D = l(151115),
-    V = l(812729),
-    w = l.n(V),
+    w = l(151115),
+    D = l(812729),
+    V = l.n(D),
     U = l(627363),
     K = l(587895),
     z = l(733391),
@@ -149,7 +149,7 @@ function et(e) {
         I = (0, Z.yB)("CollectiblesShopHeaderBar"),
         { searchQuery: g } = (0, G.v)(),
         h = n.useRef(null),
-        [V, et] = n.useState(!1);
+        [D, et] = n.useState(!1);
     (0, L.g)(
         h,
         n.useCallback((e) => {
@@ -238,7 +238,7 @@ function et(e) {
                                           ];
                                 }),
                             [a],
-                            w(),
+                            V(),
                         );
                     return {
                         gameShops: n.useMemo(
@@ -336,7 +336,7 @@ function et(e) {
                     null != A)
                 ) {
                     let e = B.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(A.collectionId),
-                        t = (0, D.s)(A.icon);
+                        t = (0, w.s)(A.icon);
                     l.push({
                         type: "page",
                         key: R.G2.PROMOTION,
@@ -370,10 +370,11 @@ function et(e) {
         children: (0, a.jsxs)(O.A, {
             disableDoubleClick: !0,
             disableFocusRingScope: !0,
+            keepToastsBelow: !0,
             className: s()(ee.jr, { [Z.jP]: I }),
             toolbar: (0, a.jsxs)(a.Fragment, {
                 children: [
-                    (0, a.jsx)(k, { handleTransition: i, selectedTab: t, isNarrow: V, hasText: "" !== g }),
+                    (0, a.jsx)(k, { handleTransition: i, selectedTab: t, isNarrow: D, hasText: "" !== g }),
                     (0, a.jsx)(c.D, {
                         className: ee.ij,
                         onClick: en,

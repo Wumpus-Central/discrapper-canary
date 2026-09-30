@@ -10,7 +10,7 @@ var s,
     S = n(235986),
     d = n(278941),
     u = n(665909),
-    _ = n(691540),
+    _ = n(376357),
     A = n(857250),
     E = n(97483),
     x = n(834730),
@@ -45,7 +45,7 @@ let y = function (t) {
                         (e(), (0, C.r)({ text: U.intl.string(U.t.FhgVWi), id: "safety-tools-report-false-positive" }));
                     })
                     .catch(() => {
-                        (r(!1), (0, _.P0)((0, A.o)(U.intl.string(U.t.R0RpRX), E.Ck.FAILURE)));
+                        (r(!1), (0, _.P)((0, A.o)(U.intl.string(U.t.R0RpRX), E.Ck.FAILURE)));
                     }));
         }, [n, e, s]);
     return (0, i.jsxs)(I, {

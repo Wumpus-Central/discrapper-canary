@@ -1301,7 +1301,7 @@ function nO() {
 }
 var nG = n(578434),
     nU = n(80683),
-    nw = n(691540),
+    nw = n(376357),
     nF = n(857250),
     nB = n(97483),
     nH = n(336590),
@@ -1314,7 +1314,7 @@ function n$(e) {
         n = (0, nH.k)(),
         s = (0, h.bG)([nj.default], () => nj.default.getUser(t.getRecipientId())),
         a = i.useCallback(() => {
-            (0, nw.P0)((0, nF.o)(eB.intl.string(eB.t["EDYbS+"]), nB.Ck.FAILURE));
+            (0, nw.P)((0, nF.o)(eB.intl.string(eB.t["EDYbS+"]), nB.Ck.FAILURE));
         }, []),
         r = i.useCallback(() => {
             nz.A.closeChannelSidebar(nx.fe);

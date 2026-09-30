@@ -3,7 +3,7 @@ var e = n(477900),
     l = n(582128),
     r = n(139033),
     d = n(477782),
-    a = n(691540),
+    a = n(376357),
     u = n(857250),
     s = n(97483),
     o = n(980707),
@@ -45,7 +45,7 @@ function k(t) {
                         (await (0, b.nV)(t.id, t.guildId), i(null), c(t.id, t.guildId));
                     } catch (i) {
                         let t = new h.LG(i);
-                        (0, a.P0)((0, u.o)(t.getAnyErrorMessage() ?? I.intl.string(I.t.fEptJP), s.Ck.FAILURE));
+                        (0, a.P)((0, u.o)(t.getAnyErrorMessage() ?? I.intl.string(I.t.fEptJP), s.Ck.FAILURE));
                     } finally {
                         o(!1);
                     }

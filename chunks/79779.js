@@ -2,7 +2,7 @@ n.d(e, { default: () => f });
 var i = n(477900),
     a = n(582128),
     s = n(562708),
-    r = n(691540),
+    r = n(376357),
     l = n(857250),
     o = n(97483),
     u = n(772707),
@@ -44,10 +44,10 @@ function f(t) {
         if (!v) {
             M(!0);
             try {
-                (await f(), (0, r.P0)((0, l.o)(d.intl.string(d.t["84yeoz"]), o.Ck.SUCCESS)));
+                (await f(), (0, r.P)((0, l.o)(d.intl.string(d.t["84yeoz"]), o.Ck.SUCCESS)));
             } catch (e) {
                 let t = new g.A(e).getAnyErrorMessage();
-                null != t && (0, r.P0)((0, l.o)(t, o.Ck.FAILURE));
+                null != t && (0, r.P)((0, l.o)(t, o.Ck.FAILURE));
             } finally {
                 M(!1);
             }

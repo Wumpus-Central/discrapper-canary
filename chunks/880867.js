@@ -1,7 +1,7 @@
 i.d(t, { default: () => N });
 var l = i(477900),
     a = i(582128),
-    n = i(691540),
+    n = i(376357),
     s = i(857250),
     r = i(97483),
     o = i(192308),
@@ -69,12 +69,12 @@ ${l}`
                         null != t &&
                             (await d.A.sendMessage(t.id, m.Ay.parse(t, u), !1, { location: _.Hx.USER_PROFILE }));
                     }
-                    ((0, n.P0)((0, s.o)(M.intl.string(M.t.kwmYkt), r.Ck.SUCCESS)),
+                    ((0, n.P)((0, s.o)(M.intl.string(M.t.kwmYkt), r.Ck.SUCCESS)),
                         a &&
                             null != t[0] &&
                             ((0, C.iN)(t[0], { openTextInVoiceIfVoiceChannel: !0 }), (0, o.closeAllModals)()));
                 } catch (e) {
-                    (0, n.P0)((0, s.o)(M.intl.string(M.t.iufib1), r.Ck.FAILURE));
+                    (0, n.P)((0, s.o)(M.intl.string(M.t.iufib1), r.Ck.FAILURE));
                 } finally {
                     i(!1);
                 }
@@ -88,7 +88,7 @@ ${l}`
                     text: void 0,
                     "aria-label": M.intl.string(M.t.WqhZss),
                     onClick: () => {
-                        (0, p.C)(g, () => (0, n.P0)((0, s.o)(M.intl.string(M.t["L/PwZf"]), r.Ck.SUCCESS)));
+                        (0, p.C)(g, () => (0, n.P)((0, s.o)(M.intl.string(M.t["L/PwZf"]), r.Ck.SUCCESS)));
                     },
                     icon: c.LinkIcon,
                 },

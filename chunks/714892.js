@@ -3,7 +3,7 @@ var e = a(477900),
     l = a(582128),
     t = a(834730),
     s = a(173936),
-    o = a(691540),
+    o = a(376357),
     d = a(857250),
     c = a(97483),
     r = a(148494),
@@ -109,9 +109,9 @@ function v(i) {
                                 });
                         }
                     }
-                    (0, o.P0)((0, d.o)(A.intl.string(A.t.kwmYkt), c.Ck.SUCCESS));
+                    (0, o.P)((0, d.o)(A.intl.string(A.t.kwmYkt), c.Ck.SUCCESS));
                 } catch (i) {
-                    (0, o.P0)((0, d.o)(A.intl.string(A.t.iufib1), c.Ck.FAILURE));
+                    (0, o.P)((0, d.o)(A.intl.string(A.t.iufib1), c.Ck.FAILURE));
                 } finally {
                     a(!1);
                 }
@@ -133,7 +133,7 @@ function v(i) {
                                 sku_count: v.length,
                             }),
                             (0, g.C)((0, x.aU)(E, v), () =>
-                                (0, o.P0)((0, d.o)(A.intl.string(A.t["L/PwZf"]), c.Ck.SUCCESS)),
+                                (0, o.P)((0, d.o)(A.intl.string(A.t["L/PwZf"]), c.Ck.SUCCESS)),
                             ));
                     },
                     icon: s.LinkIcon,

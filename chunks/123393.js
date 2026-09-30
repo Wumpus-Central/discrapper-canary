@@ -2,7 +2,7 @@ n.d(l, { W: () => R });
 var t = n(477900),
     u = n(582128),
     a = n(17928),
-    i = n(691540),
+    i = n(376357),
     r = n(857250),
     s = n(97483),
     c = n(192308),
@@ -15,7 +15,7 @@ function R(e, l, R, y) {
     let [k, C] = u.useState(!1),
         b = (0, a.bG)([o.A], () => o.A.getChannel(y)),
         w = u.useCallback(() => {
-            (0, i.P0)((0, r.o)(h.intl.string(h.t.R0RpRX), s.Ck.FAILURE));
+            (0, i.P)((0, r.o)(h.intl.string(h.t.R0RpRX), s.Ck.FAILURE));
         }, []),
         A = u.useCallback(async () => {
             if (!k && null != e && null != l && null != R) {

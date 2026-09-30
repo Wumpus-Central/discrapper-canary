@@ -1,4 +1,4 @@
-n.d(t, { D: () => r });
+n.d(t, { D2: () => r, WD: () => a });
 let i = (0, n(945810).mj)({
     name: "2026-09-design-systems-notification-components",
     kind: "user",
@@ -7,4 +7,7 @@ let i = (0, n(945810).mj)({
 });
 function r(e) {
     return i.useConfig({ location: e }).enabled;
+}
+function a(e) {
+    return i.getConfig({ location: e }).enabled;
 }

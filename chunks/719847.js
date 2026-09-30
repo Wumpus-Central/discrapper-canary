@@ -5,7 +5,7 @@ var l = s(477900),
     a = s(17928),
     r = s(408278),
     c = s(173936),
-    o = s(691540),
+    o = s(376357),
     p = s(857250),
     u = s(97483),
     d = s(224640),
@@ -50,7 +50,7 @@ function U(t) {
                   icon: () => (0, l.jsx)(c.LinkIcon, { size: "sm" }),
                   onClick: () => {
                       let t = `${location.protocol}//${location.host}${O.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_SECTION(U, P.GlobalDiscoveryAppsSections.STORE)}`;
-                      ((0, v.C)(t, () => (0, o.P0)((0, p.o)(b.intl.string(b.t["L/PwZf"]), u.Ck.SUCCESS))),
+                      ((0, v.C)(t, () => (0, o.P)((0, p.o)(b.intl.string(b.t["L/PwZf"]), u.Ck.SUCCESS))),
                           (0, C.K)(U, C.C.STORE_MODAL));
                   },
                   variant: "icon-only",

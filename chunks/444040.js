@@ -8,7 +8,7 @@ var a = i(477900),
     r = i(71393),
     u = i(711014),
     c = i(683180),
-    g = i(691540),
+    g = i(376357),
     f = i(857250),
     p = i(97483),
     k = i(976860),
@@ -44,7 +44,7 @@ async function I(t, e) {
     let i = await w(t, e);
     return i.ok
         ? ((0, k.pX)(x.BVt.CHANNEL(e, y.VV.VIBEGRATIONS, i.projectId)), !0)
-        : ((0, g.P0)((0, f.o)(i.message, p.Ck.FAILURE)), !1);
+        : ((0, g.P)((0, f.o)(i.message, p.Ck.FAILURE)), !1);
 }
 function S(t) {
     let { project: e, currentGuildId: i, transitionState: g, onClose: f } = t,

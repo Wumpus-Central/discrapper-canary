@@ -16,7 +16,7 @@ var a = n(477900),
     S = n(19575),
     T = n(820066),
     y = n(636537),
-    x = n(691540),
+    x = n(376357),
     C = n(857250),
     h = n(97483),
     A = n(152367),
@@ -72,7 +72,7 @@ function O(t) {
                     let [n, l] = r.useState(!1),
                         i = r.useCallback(async () => {
                             if (!n) {
-                                (l(!0), (0, x.P0)((0, C.o)(P.intl.string(P.t.p54KYY), h.Ck.AI)));
+                                (l(!0), (0, x.P)((0, C.o)(P.intl.string(P.t.p54KYY), h.Ck.AI)));
                                 try {
                                     let n = await y.Bo.post({
                                         url: N.Rsh.AI_FIX_GRAMMAR,
@@ -81,7 +81,7 @@ function O(t) {
                                     });
                                     n.body &&
                                         (e(n.body.content),
-                                        (0, x.P0)((0, C.o)(P.intl.string(P.t.mxQpUY), h.Ck.SUCCESS)));
+                                        (0, x.P)((0, C.o)(P.intl.string(P.t.mxQpUY), h.Ck.SUCCESS)));
                                 } finally {
                                     l(!1);
                                 }
@@ -104,7 +104,7 @@ function O(t) {
                                 let r = n ?? c;
                                 i(!0);
                                 let s = a ?? r;
-                                (0, x.P0)(
+                                (0, x.P)(
                                     (0, C.o)(P.intl.formatToPlainString(P.t.Znl8Z8, { targetLanguage: s }), h.Ck.AI),
                                 );
                                 try {
@@ -115,7 +115,7 @@ function O(t) {
                                     });
                                     n.body &&
                                         (e(n.body.content),
-                                        (0, x.P0)(
+                                        (0, x.P)(
                                             (0, C.o)(
                                                 P.intl.formatToPlainString(P.t.FtVUqm, { targetLanguage: s }),
                                                 h.Ck.SUCCESS,
@@ -161,7 +161,7 @@ function O(t) {
                             async (t) => {
                                 if (null == l) {
                                     (i(t.id),
-                                        (0, x.P0)(
+                                        (0, x.P)(
                                             (0, C.o)(
                                                 P.intl.formatToPlainString(P.t.rrf7Kf, { transformName: t.name }),
                                                 h.Ck.AI,
@@ -175,7 +175,7 @@ function O(t) {
                                         });
                                         a.body &&
                                             (n(a.body.content),
-                                            (0, x.P0)(
+                                            (0, x.P)(
                                                 (0, C.o)(
                                                     P.intl.formatToPlainString(P.t.qe4KvQ, { transformName: t.name }),
                                                     h.Ck.SUCCESS,

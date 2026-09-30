@@ -29,7 +29,7 @@ let m = function (t) {
     });
 };
 var h = e(834730),
-    g = e(691540),
+    g = e(376357),
     C = e(857250),
     D = e(97483),
     b = e(150934),
@@ -84,7 +84,7 @@ function P(t) {
                     (await _.A.setCommunicationDisabledDuration(n, e, B, H, M, c),
                         W && null != c && O.A.resolveFlag(c),
                         $(y.Nj.TIMEOUT),
-                        (0, g.P0)(
+                        (0, g.P)(
                             (0, C.o)(
                                 E.intl.formatToPlainString(E.t.O9C3Nt, { user: I.Ay.getName(n, null, P) }),
                                 D.Ck.SUCCESS,
@@ -92,7 +92,7 @@ function P(t) {
                         ),
                         u());
                 } catch (t) {
-                    (0, g.P0)((0, C.o)(E.intl.string(E.t.epyCuh), D.Ck.FAILURE));
+                    (0, g.P)((0, C.o)(E.intl.string(E.t.epyCuh), D.Ck.FAILURE));
                 } finally {
                     K(!1);
                 }

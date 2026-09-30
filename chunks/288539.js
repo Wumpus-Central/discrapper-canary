@@ -8,10 +8,10 @@ var l = n(477900),
     u = n(688810),
     c = n(9588),
     d = n(332173),
-    h = n(342296),
-    m = n(734057),
-    f = n(696451),
-    p = n(994500),
+    m = n(342296),
+    h = n(734057),
+    p = n(696451),
+    f = n(994500),
     g = n(287809),
     x = n(562153),
     A = n(427262);
@@ -47,7 +47,7 @@ function E(e) {
         N = i.useRef(null),
         { analyticsLocations: _ } = (0, u.Ay)(o.A.USER_MENTION),
         j = (0, r.bG)([g.default], () => g.default.getUser(c)),
-        b = (0, r.bG)([m.A], () => m.A.getChannel(E)),
+        b = (0, r.bG)([h.A], () => h.A.getChannel(E)),
         T = null != b ? b.getGuildId() : null,
         R =
             S || null == j || null == E || null == b
@@ -57,7 +57,7 @@ function E(e) {
                           ? (0, a.L3)(e, async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("403382"),
-                                    n.e("207322"),
+                                    n.e("597981"),
                                     n.e("622936"),
                                     n.e("216947"),
                                     n.e("463317"),
@@ -131,7 +131,7 @@ function E(e) {
                                 let { default: e } = await Promise.all([
                                     n.e("790484"),
                                     n.e("403382"),
-                                    n.e("207322"),
+                                    n.e("597981"),
                                     n.e("622936"),
                                     n.e("216947"),
                                     n.e("463317"),
@@ -207,23 +207,23 @@ function E(e) {
                             });
                   },
         O = A.Ay.useName(j),
-        M = (0, r.bG)([m.A, f.Ay, p.A], () => x.Ay.getNickname(T, E, j));
+        L = (0, r.bG)([h.A, p.Ay, f.A], () => x.Ay.getNickname(T, E, j));
     if (null == j) return (0, l.jsx)(C, { userId: I, className: t, children: y });
-    function L(e) {
-        return (0, l.jsx)(d.A, { ref: N, className: t, onContextMenu: R, ...e, children: `@${M ?? O}` });
+    function M(e) {
+        return (0, l.jsx)(d.A, { ref: N, className: t, onContextMenu: R, ...e, children: `@${L ?? O}` });
     }
     return S
-        ? (0, l.jsx)(u.f5, { value: _, children: L() })
+        ? (0, l.jsx)(u.f5, { value: _, children: M() })
         : (0, l.jsx)(u.f5, {
               value: _,
-              children: (0, l.jsx)(h.A, {
+              children: (0, l.jsx)(m.A, {
                   targetElementRef: N,
                   user: j,
                   guildId: T ?? void 0,
                   channelId: E,
                   position: s.Fr ? "top" : "right",
                   clickTrap: !0,
-                  children: (e) => L(e),
+                  children: (e) => M(e),
               }),
           });
 }

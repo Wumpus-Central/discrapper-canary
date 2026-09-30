@@ -214,7 +214,7 @@ var ep = n(232835),
     ey = n(834730),
     e_ = n(297264),
     ev = n(103557),
-    eb = n(691540),
+    eb = n(376357),
     eN = n(857250),
     eT = n(97483),
     eM = n(789645),
@@ -253,7 +253,7 @@ function eO(e) {
                 reasons: Array.from(s),
                 otherText: m && d.length > 0 ? d : null,
             }),
-                (0, eb.P0)((0, eN.o)(eL.intl.string(eD.default.xrEgG0), eT.Ck.SUCCESS)),
+                (0, eb.P)((0, eN.o)(eL.intl.string(eD.default.xrEgG0), eT.Ck.SUCCESS)),
                 i());
         }, [t.id, n.id, l, s, d, m, i]);
     return (0, a.jsxs)("div", {
@@ -4643,7 +4643,7 @@ var an = n(92650),
 function as(e) {
     let { channel: t, user: n } = e,
         l = r.useCallback(() => {
-            (0, eb.P0)((0, eN.o)(eL.intl.string(eL.t.a2j0hv), eT.Ck.FAILURE));
+            (0, eb.P)((0, eN.o)(eL.intl.string(eL.t.a2j0hv), eT.Ck.FAILURE));
         }, []),
         i = r.useCallback(() => {
             al.A.closeChannelSidebar(ai.fe);

@@ -1,7 +1,7 @@
 l.d(t, { fn: () => b, As: () => y, JQ: () => j });
 var a = l(477900),
     n = l(582128),
-    i = l(691540),
+    i = l(376357),
     s = l(857250),
     r = l(97483);
 let o = (0, l(945810).mj)({
@@ -154,12 +154,12 @@ async function C() {
         if (null == t) return null;
         let l = await h(t.bytes, t.fileName);
         if (!(await (l.src, (e = l.mimeType), Promise.resolve({ allowed: !0, checked: !1 }))).allowed)
-            return ((0, i.P0)((0, s.o)(m.intl.string(d.default.uF5VXk), r.Ck.FAILURE)), null);
+            return ((0, i.P)((0, s.o)(m.intl.string(d.default.uF5VXk), r.Ck.FAILURE)), null);
         return l;
     } catch (t) {
         u.nx.warn("Failed to add clip image track", t);
         let e = t instanceof f ? t.userMessage : m.intl.string(d.default["+20A3o"]);
-        return ((0, i.P0)((0, s.o)(e, r.Ck.FAILURE)), null);
+        return ((0, i.P)((0, s.o)(e, r.Ck.FAILURE)), null);
     }
 }
 function b() {

@@ -4,7 +4,7 @@ var n = i(477900),
     l = i(665260),
     r = i(17928),
     s = i(477782),
-    d = i(691540),
+    d = i(376357),
     o = i(857250),
     u = i(97483),
     c = i(192308),
@@ -112,14 +112,14 @@ function v(e, t, v, P, T) {
                     P,
                 ),
                     Q(b.Nj.TIMEOUT),
-                    (0, d.P0)(
+                    (0, d.P)(
                         (0, o.o)(
                             U.intl.formatToPlainString(U.t.O9C3Nt, { user: D.Ay.getName(i, null, e) ?? "" }),
                             u.Ck.SUCCESS,
                         ),
                     ));
             } catch (e) {
-                (0, d.P0)((0, o.o)(U.intl.string(U.t.epyCuh), u.Ck.FAILURE));
+                (0, d.P)((0, o.o)(U.intl.string(U.t.epyCuh), u.Ck.FAILURE));
             }
     }
     let X = null,

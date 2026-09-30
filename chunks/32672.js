@@ -3,7 +3,7 @@ var n = i(477900),
     l = i(582128),
     a = i(575593),
     r = i(834730),
-    s = i(691540),
+    s = i(376357),
     o = i(857250),
     c = i(97483),
     d = i(173936),
@@ -73,9 +73,9 @@ function y(t) {
                                 location: O.Hx.COLLECTIBLES_SHOP,
                             }));
                     }
-                    (0, s.P0)((0, o.o)(P.intl.string(P.t.kwmYkt), c.Ck.SUCCESS));
+                    (0, s.P)((0, o.o)(P.intl.string(P.t.kwmYkt), c.Ck.SUCCESS));
                 } catch (t) {
-                    (0, s.P0)((0, o.o)(P.intl.string(P.t.iufib1), c.Ck.FAILURE));
+                    (0, s.P)((0, o.o)(P.intl.string(P.t.iufib1), c.Ck.FAILURE));
                 } finally {
                     n(!1);
                 }
@@ -89,7 +89,7 @@ function y(t) {
                     text: void 0,
                     onClick: () => {
                         (L.default.track(v.HAw.COLLECTIBLES_SHARE_LINK_BUTTON_CLICKED, { sku_id: e }),
-                            (0, h.C)(w(e, r), () => (0, s.P0)((0, o.o)(P.intl.string(P.t["L/PwZf"]), c.Ck.SUCCESS))));
+                            (0, h.C)(w(e, r), () => (0, s.P)((0, o.o)(P.intl.string(P.t["L/PwZf"]), c.Ck.SUCCESS))));
                     },
                     icon: d.LinkIcon,
                 },

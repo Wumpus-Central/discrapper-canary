@@ -1,7 +1,7 @@
 n.d(i, { default: () => C });
 var e = n(477900),
     r = n(582128),
-    s = n(691540),
+    s = n(376357),
     a = n(857250),
     o = n(97483),
     c = n(732159),
@@ -14,7 +14,7 @@ function C(t) {
         { title: m, subtitle: S, confirmText: f, toastContent: x } = (0, u.ae)(k, C),
         I = (0, r.useMemo)(
             () => () => {
-                ((0, u.gF)(i, n), (0, s.P0)((0, a.o)(x, o.Ck.SUCCESS)));
+                ((0, u.gF)(i, n), (0, s.P)((0, a.o)(x, o.Ck.SUCCESS)));
             },
             [i, n, x],
         );

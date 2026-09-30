@@ -559,7 +559,7 @@ var tn = i(862772),
     tl = i(202541),
     ts = i(172218),
     ta = i(575593),
-    tr = i(691540),
+    tr = i(376357),
     to = i(857250),
     td = i(97483),
     tc = i(765178),
@@ -650,7 +650,7 @@ function tC(e) {
                 try {
                     (await eF.A.addSkuToWishlist(t.id, i), c?.(), r?.({ tabSection: en.RP.WISHLIST }));
                 } catch (e) {
-                    ((0, tr.P0)((0, to.o)(B.intl.string(B.t.F8FvUy), td.Ck.FAILURE)),
+                    ((0, tr.P)((0, to.o)(B.intl.string(B.t.F8FvUy), td.Ck.FAILURE)),
                         tc.O.announce(B.intl.string(B.t.F8FvUy)));
                 } finally {
                     x(!1);

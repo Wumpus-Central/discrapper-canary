@@ -436,7 +436,7 @@ function eS(e) {
         children: (0, r.jsx)(ev.Z, { size: "sm", color: e_.A.colors.INTERACTIVE_TEXT_ACTIVE }),
     });
 }
-var eT = n(691540),
+var eT = n(376357),
     eb = n(857250),
     eL = n(97483),
     eR = n(173936),
@@ -511,7 +511,7 @@ function eJ(e) {
             (0, r.jsx)(b.D, {
                 onClick: () => {
                     let e = C ? (0, eU.W)({ applicationId: t.id, referrerId: N?.id }) : (0, eU.V)({ id: t.id, ...d });
-                    ((0, ez.C)(e, () => (0, eT.P0)((0, eb.o)(et.intl.string(et.t["L/PwZf"]), eL.Ck.SUCCESS))),
+                    ((0, ez.C)(e, () => (0, eT.P)((0, eb.o)(et.intl.string(et.t["L/PwZf"]), eL.Ck.SUCCESS))),
                         eG.default.track(es.HAw.APP_LAUNCHER_APPLICATION_LINK_COPIED, {
                             application_id: t.id,
                             source: c,

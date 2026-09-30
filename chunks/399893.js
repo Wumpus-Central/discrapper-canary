@@ -34,7 +34,7 @@ var C = e(173936),
     N = e(885386),
     X = e(957565),
     Y = e(691012),
-    M = e(691540),
+    M = e(376357),
     P = e(857250),
     Q = e(97483),
     B = e(192308),
@@ -272,7 +272,7 @@ function tt(t) {
             function r() {
                 let l = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
                     i = `${location.protocol}//${location.host}${S.BVt.GUILD_EVENT_DETAILS(n, t, l ? null : e)}`;
-                (0, X.C)(i, () => (0, M.P0)((0, P.o)(T.intl.string(T.t["L/PwZf"]), Q.Ck.SUCCESS)));
+                (0, X.C)(i, () => (0, M.P)((0, P.o)(T.intl.string(T.t["L/PwZf"]), Q.Ck.SUCCESS)));
             }
             return (0, l.jsx)(d.Dr, {
                 id: T.intl.string(T.t["9o+VKx"]),

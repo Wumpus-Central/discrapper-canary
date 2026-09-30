@@ -1,5 +1,5 @@
 n.d(t, { A: () => f });
-var i = n(691540),
+var i = n(376357),
     r = n(857250),
     a = n(97483),
     s = n(192308),
@@ -44,11 +44,11 @@ let f = new (class extends E {
     onSwitchSuccess(e, t) {
         setTimeout(() => {
             (t && (0, l.pX)(h.BVt.ME),
-                (0, i.P0)((0, r.o)(I.intl.formatToPlainString(I.t.wx7O3L, { username: e.username }), a.Ck.SUCCESS)));
+                (0, i.P)((0, r.o)(I.intl.formatToPlainString(I.t.wx7O3L, { username: e.username }), a.Ck.SUCCESS)));
         }, 100);
     }
     onSwitchError() {
-        (0, i.P0)((0, r.o)(I.intl.string(I.t.pqvKWA), a.Ck.FAILURE));
+        (0, i.P)((0, r.o)(I.intl.string(I.t.pqvKWA), a.Ck.FAILURE));
     }
     onSwitchComplete() {
         ((0, s.closeModal)(A.ov), (0, s.closeModal)(A.Gl));

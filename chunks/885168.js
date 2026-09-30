@@ -4,7 +4,7 @@ var i = l(477900),
     n = l(189213),
     o = l(103557),
     s = l(911608),
-    r = l(691540),
+    r = l(376357),
     u = l(857250),
     c = l(97483),
     d = l(331322),
@@ -71,11 +71,11 @@ function k(e) {
                         f(e.loaded / e.total);
                     },
                 }),
-                    (0, r.P0)((0, u.o)("Thanks for your feedback!", c.Ck.SUCCESS)),
+                    (0, r.P)((0, u.o)("Thanks for your feedback!", c.Ck.SUCCESS)),
                     h());
             } catch (e) {
                 (C.nx.error("Failed to submit clip feedback", e),
-                    (0, r.P0)((0, u.o)("Failed to submit clip feedback. Please try again.", c.Ck.FAILURE)));
+                    (0, r.P)((0, u.o)("Failed to submit clip feedback. Please try again.", c.Ck.FAILURE)));
             } finally {
                 S(!1);
             }

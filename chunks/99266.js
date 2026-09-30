@@ -4,7 +4,7 @@ var l = i(477900),
     s = i(834730),
     r = i(831544),
     n = i(432017),
-    c = i(691540),
+    c = i(376357),
     o = i(857250),
     d = i(97483),
     u = i(173936),
@@ -70,9 +70,9 @@ function w(e) {
                                 location: g.Hx.GUILD_SPACE,
                             }));
                     }
-                    (0, c.P0)((0, o.o)(S.intl.string(S.t.kwmYkt), d.Ck.SUCCESS));
+                    (0, c.P)((0, o.o)(S.intl.string(S.t.kwmYkt), d.Ck.SUCCESS));
                 } catch (e) {
-                    (0, c.P0)((0, o.o)(S.intl.string(S.t.iufib1), d.Ck.FAILURE));
+                    (0, c.P)((0, o.o)(S.intl.string(S.t.iufib1), d.Ck.FAILURE));
                 } finally {
                     a(!1);
                 }
@@ -85,7 +85,7 @@ function w(e) {
                     variant: "secondary",
                     text: void 0,
                     onClick: () =>
-                        (0, x.C)(t.shareUrl, () => (0, c.P0)((0, o.o)(S.intl.string(S.t["L/PwZf"]), d.Ck.SUCCESS))),
+                        (0, x.C)(t.shareUrl, () => (0, c.P)((0, o.o)(S.intl.string(S.t["L/PwZf"]), d.Ck.SUCCESS))),
                     icon: u.LinkIcon,
                 },
             ],

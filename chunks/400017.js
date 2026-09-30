@@ -2,7 +2,7 @@ t.d(n, { default: () => C });
 var c = t(477900),
     o = t(980707),
     s = t(477782),
-    e = t(691540),
+    e = t(376357),
     r = t(857250),
     a = t(97483),
     l = t(173936),
@@ -21,7 +21,7 @@ function C(i) {
             label: p.intl.string(p.t.WqhZss),
             action: () => {
                 (0, k.C)(n, () => {
-                    (0, e.P0)((0, r.o)(p.intl.string(p.t["+5kSoW"]), a.Ck.SUCCESS));
+                    (0, e.P)((0, r.o)(p.intl.string(p.t["+5kSoW"]), a.Ck.SUCCESS));
                 });
             },
             icon: l.LinkIcon,

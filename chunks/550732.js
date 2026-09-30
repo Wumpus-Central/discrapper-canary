@@ -10,7 +10,7 @@ var i = l(991660),
     d = l(364840),
     x = l(408278),
     u = l(173936),
-    m = l(691540),
+    m = l(376357),
     h = l(857250),
     j = l(97483),
     v = l(587895),
@@ -79,7 +79,7 @@ function p(s) {
                                         onClick: () => {
                                             let s = `${location.protocol}//${location.host}${I.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(t, l)}`;
                                             ((0, A.C)(s, () =>
-                                                (0, m.P0)((0, h.o)(N.intl.string(N.t["L/PwZf"]), j.Ck.SUCCESS)),
+                                                (0, m.P)((0, h.o)(N.intl.string(N.t["L/PwZf"]), j.Ck.SUCCESS)),
                                             ),
                                                 (0, _.K)(t, _.C.DETAILS_MODAL, l));
                                         },

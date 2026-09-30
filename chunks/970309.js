@@ -8,7 +8,7 @@ var s = n(477900),
     o = n(17928),
     d = n(554146),
     u = n(43105),
-    h = n(691540),
+    h = n(376357),
     m = n(857250),
     g = n(97483),
     A = n(834730),
@@ -70,7 +70,7 @@ function J(e) {
             (V.A.closeChannelSidebar(O.fe), c && a && (0, q.iN)(t.id), d && r && (0, q.iN)(t.id));
         }, [t.id, d, r, c, a]),
         S = l.useCallback(() => {
-            (0, h.P0)((0, m.o)(B.intl.string(B.t.pIQ3h4), g.Ck.FAILURE));
+            (0, h.P)((0, m.o)(B.intl.string(B.t.pIQ3h4), g.Ck.FAILURE));
         }, []),
         { markAsNotSpam: f } = (0, F.t)({ onAcceptSuccess: x, onError: S });
     if (null == t || !t.isDM()) return null;
@@ -252,8 +252,8 @@ var eB = n(707539),
     e$ = n(903209),
     e0 = n(346055),
     e7 = n(863439),
-    e9 = n(521981),
-    e3 = n(448368),
+    e3 = n(521981),
+    e9 = n(448368),
     e8 = n(302031),
     e6 = n(885386),
     e1 = n(576705),
@@ -277,7 +277,7 @@ let tt = l.memo(function (e) {
         { content: m } = l.useMemo(
             () =>
                 r?.content != null && "" !== r.content
-                    ? (0, e9.Ay)(r, { formatInline: !0, noStyleAndInteraction: !0 })
+                    ? (0, e3.Ay)(r, { formatInline: !0, noStyleAndInteraction: !0 })
                     : { content: null },
             [r],
         ),
@@ -305,7 +305,7 @@ let tt = l.memo(function (e) {
                 children: B.intl.string(B.t.uxrh1O),
             });
         else if (null != r) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, e3.o)(r, m, c, d, a()(e5.BK, te.tZ), {
+            let { contentPlaceholder: e, renderedContent: t } = (0, e9.o)(r, m, c, d, a()(e5.BK, te.tZ), {
                 leadingIconClass: e5.AF,
                 trailingIconClass: e5.AF,
                 iconSize: e4.eJ,
@@ -446,7 +446,7 @@ function tr(e) {
     let { active: t, user: n, channel: i, isRestricted: a = !1 } = e,
         r = (0, W.k)(),
         c = l.useCallback(() => {
-            (0, h.P0)((0, m.o)(B.intl.string(B.t["EDYbS+"]), g.Ck.FAILURE));
+            (0, h.P)((0, m.o)(B.intl.string(B.t["EDYbS+"]), g.Ck.FAILURE));
         }, []),
         o = l.useCallback(() => {
             V.A.closeChannelSidebar(O.fe);
@@ -554,7 +554,7 @@ function tm(e) {
     let { active: t, user: n, channel: i } = e,
         a = (0, W.r)(),
         r = l.useCallback(() => {
-            ((0, h.P0)((0, m.o)(B.intl.string(B.t.pIQ3h4), g.Ck.FAILURE)),
+            ((0, h.P)((0, m.o)(B.intl.string(B.t.pIQ3h4), g.Ck.FAILURE)),
                 es.A.increment({ name: c.K.SPAM_MESSAGE_REQUEST_ERROR_VIEW }));
         }, []),
         o = l.useCallback(() => {
@@ -658,7 +658,7 @@ function tE() {
         j = (0, v.A)("message-requests-spam-list"),
         { channelId: p } = (0, eS.N)(),
         C = l.useCallback(() => {
-            (0, h.P0)((0, m.o)(B.intl.string(B.t["EDYbS+"]), g.Ck.FAILURE));
+            (0, h.P)((0, m.o)(B.intl.string(B.t["EDYbS+"]), g.Ck.FAILURE));
         }, []),
         { rejectAll: b } = (0, F.t)({ onError: C }),
         _ = l.useCallback(() => {
@@ -796,7 +796,7 @@ function tj() {
         f = eE(),
         j = z("MessageRequestPage"),
         p = l.useCallback(() => {
-            (0, h.P0)((0, m.o)(B.intl.string(B.t["EDYbS+"]), g.Ck.FAILURE));
+            (0, h.P)((0, m.o)(B.intl.string(B.t["EDYbS+"]), g.Ck.FAILURE));
         }, []),
         { rejectAll: C } = (0, F.t)({ onError: p }),
         b = (0, v.A)("message-requests-list"),

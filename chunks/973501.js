@@ -72,7 +72,7 @@ function G() {
 }
 var w = t(939249),
     V = t(366010),
-    Y = t(691540),
+    Y = t(376357),
     U = t(857250),
     Z = t(97483),
     $ = t(926268),
@@ -192,7 +192,7 @@ function em(e) {
             null != S &&
                 (0, B.q1)(S).then((e) => {
                     null == e
-                        ? (0, Y.P0)((0, U.o)(ec.A.error ?? F.intl.string(F.t.SDP0vo), Z.Ck.FAILURE))
+                        ? (0, Y.P)((0, U.o)(ec.A.error ?? F.intl.string(F.t.SDP0vo), Z.Ck.FAILURE))
                         : (0, ea.nf)(ea.HP.APPLICATION_TEST_MODE_DEBUG, {
                               shouldAutoOpenGameProfile: !1,
                               initialTabId: eE.t.STOREFRONT,

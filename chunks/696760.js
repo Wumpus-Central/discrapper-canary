@@ -17,13 +17,13 @@ var i,
     I = n(176522),
     T = n(435558),
     p = n.n(T),
-    N = n(691540),
+    N = n(376357),
     S = n(857250),
     O = n(97483),
     f = n(147036),
     L = n(957565),
     m = n(375708);
-let b = (0, T.throttle)(() => (0, N.P0)((0, S.o)(m.intl.string(m.t["+5kSoW"]), O.Ck.SUCCESS)), 3e3, {
+let b = (0, T.throttle)(() => (0, N.P)((0, S.o)(m.intl.string(m.t["+5kSoW"]), O.Ck.SUCCESS)), 3e3, {
     leading: !0,
     trailing: !1,
 });
@@ -37,8 +37,8 @@ var v = n(265422),
     x = n(64460),
     P = n(92960),
     V = n(739008),
-    j = n(314519),
-    w = n(837057),
+    w = n(314519),
+    j = n(837057),
     H = n(310419),
     B = n(488995),
     k = n(675704),
@@ -251,7 +251,7 @@ let eI = {
     [U.IWg.SEARCH_GIFS]: Y.T,
     [U.IWg.SEARCH_STICKERS]: Z.w,
     [U.IWg.TOGGLE_HOTKEYS]: ee.z,
-    [U.IWg.JUMP_TO_FIRST_UNREAD]: j.s,
+    [U.IWg.JUMP_TO_FIRST_UNREAD]: w.s,
     [U.IWg.CREATE_GUILD]: {
         binds: ["mod+shift+n"],
         comboKeysBindGlobal: !0,
@@ -299,7 +299,7 @@ let eI = {
         comboKeysBindGlobal: !0,
         action() {
             let e = d.A.getGuildId() ?? void 0;
-            (0, w.transitionToGlobalDiscovery)({
+            (0, j.transitionToGlobalDiscovery)({
                 tab: B.GlobalDiscoveryTab.APPS,
                 newSessionState: { guildId: e ?? null, entrypoint: { name: H.sW.KEYBOARD_SHORTCUT } },
             });

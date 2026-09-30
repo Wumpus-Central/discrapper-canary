@@ -3,7 +3,7 @@ var i = n(477900);
 n(582128);
 var r = n(189213),
     a = n(192308),
-    s = n(691540),
+    s = n(376357),
     l = n(857250),
     o = n(97483),
     d = n(228366),
@@ -57,7 +57,7 @@ class O extends h.Ay {
         );
     }
     showDevShelfOverrideEnabled() {
-        (0, s.P0)((0, l.o)(S.intl.string(S.t.JfA7IK), o.Ck.SUCCESS));
+        (0, s.P)((0, l.o)(S.intl.string(S.t.JfA7IK), o.Ck.SUCCESS));
     }
     leaveActivity(e) {
         let { location: t, applicationId: n, showFeedback: i, shouldClosePopout: r = !0 } = e;

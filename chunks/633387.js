@@ -1,7 +1,7 @@
 e.d(n, { r: () => C });
 var i = e(477900);
 e(582128);
-var a = e(691540),
+var a = e(376357),
     s = e(857250),
     l = e(97483),
     r = e(503698),
@@ -28,5 +28,5 @@ function _(t) {
 }
 function C(t) {
     let { text: n, id: e } = t;
-    (0, a.P0)((0, s.o)(n, l.Ck.CUSTOM, { component: (0, i.jsx)(_, { text: n }, e) }));
+    (0, a.P)((0, s.o)(n, l.Ck.CUSTOM, { component: (0, i.jsx)(_, { text: n }, e) }));
 }

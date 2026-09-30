@@ -32,7 +32,7 @@ var E = n(775121),
     D = n(92259),
     P = n(218429),
     R = n(292801),
-    L = n(691540),
+    L = n(376357),
     w = n(857250),
     V = n(97483),
     U = n(32880),
@@ -127,10 +127,10 @@ function em(e) {
                 if (e === ei._0.ERRORED) throw Error(`DesktopNativeUtils.saveImage errored for ${u}`);
                 e === ei._0.SAVED &&
                     (y.l.trackMediaViewerImageSaved({ url: u, success: !0 }),
-                    (0, L.P0)((0, w.o)(er.intl.string(er.t.cqpdJW), V.Ck.SUCCESS)));
+                    (0, L.P)((0, w.o)(er.intl.string(er.t.cqpdJW), V.Ck.SUCCESS)));
             } catch (e) {
                 (y.l.trackMediaViewerImageSaved({ url: u, success: !1 }),
-                    (0, L.P0)((0, w.o)(er.intl.string(er.t["8Ve/S0"]), V.Ck.FAILURE)));
+                    (0, L.P)((0, w.o)(er.intl.string(er.t["8Ve/S0"]), V.Ck.FAILURE)));
             } finally {
                 a(!1);
             }
@@ -192,10 +192,10 @@ function ef(e) {
                 try {
                     (await ei.Ay.copyImage(e, t.originalContentType ?? t.contentType),
                         y.l.trackMediaViewerImageCopied({ url: e, success: !0 }),
-                        (0, L.P0)((0, w.o)(er.intl.string(er.t.bhUpvC), V.Ck.SUCCESS)));
+                        (0, L.P)((0, w.o)(er.intl.string(er.t.bhUpvC), V.Ck.SUCCESS)));
                 } catch (t) {
                     (y.l.trackMediaViewerImageCopied({ url: e, success: !1 }),
-                        (0, L.P0)((0, w.o)(er.intl.string(er.t.PTPbjx), V.Ck.FAILURE)));
+                        (0, L.P)((0, w.o)(er.intl.string(er.t.PTPbjx), V.Ck.FAILURE)));
                 }
             }
             return (0, i.jsxs)(X.rX, {
@@ -227,11 +227,11 @@ function ef(e) {
                                         e,
                                         () => {
                                             (y.l.trackMediaViewerLinkCopied({ href: e, success: !0 }),
-                                                (0, L.P0)((0, w.o)(er.intl.string(er.t["L/PwZf"]), V.Ck.SUCCESS)));
+                                                (0, L.P)((0, w.o)(er.intl.string(er.t["L/PwZf"]), V.Ck.SUCCESS)));
                                         },
                                         () => {
                                             (y.l.trackMediaViewerLinkCopied({ href: e, success: !1 }),
-                                                (0, L.P0)((0, w.o)(er.intl.string(er.t.uVV00B), V.Ck.FAILURE)));
+                                                (0, L.P)((0, w.o)(er.intl.string(er.t.uVV00B), V.Ck.FAILURE)));
                                         },
                                     );
                                 },
@@ -253,7 +253,7 @@ function ef(e) {
 function eE(e, t, n) {
     let a = l.useCallback((e) => {
         (0, $.C)(e, () =>
-            (0, L.P0)({ message: er.intl.string(er.t.mGZ66D), type: V.Ck.SUCCESS, id: "media-viewer-detail-copied" }),
+            (0, L.P)({ message: er.intl.string(er.t.mGZ66D), type: V.Ck.SUCCESS, id: "media-viewer-detail-copied" }),
         );
     }, []);
     return (l) => (null != l ? (0, i.jsx)(X.Dr, { action: () => a(l), label: e, subtext: l, id: t, ...n }, t) : null);

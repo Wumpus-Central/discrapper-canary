@@ -1,7 +1,7 @@
 n.d(t, { A: () => v });
 var r = n(477900),
     l = n(582128),
-    i = n(691540),
+    i = n(376357),
     s = n(857250),
     u = n(97483),
     a = n(866665),
@@ -27,7 +27,7 @@ function v(e) {
                     impressionId: C,
                     sourceQuestContent: v,
                 }),
-                (0, i.P0)((0, s.o)(S.intl.string(S.t["+5kSoW"]), u.Ck.SUCCESS)));
+                (0, i.P)((0, s.o)(S.intl.string(S.t["+5kSoW"]), u.Ck.SUCCESS)));
         }, [C, A, n.id, v]);
     return A
         ? (0, r.jsx)("div", {

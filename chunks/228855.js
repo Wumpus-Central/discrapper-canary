@@ -4,7 +4,7 @@ var e = n(477900),
     l = n(731738),
     r = n(17928),
     a = n(189213),
-    c = n(691540),
+    c = n(376357),
     d = n(857250),
     o = n(97483),
     u = n(331322),
@@ -32,7 +32,7 @@ function v(t) {
         t.preventDefault();
         let i = (0, p.Tb)();
         (i.add(n),
-            D.$s.updateSetting(Array.from(i)).then(() => (0, c.P0)((0, d.o)(E.intl.string(E.t.rlYD1W), o.Ck.SUCCESS))),
+            D.$s.updateSetting(Array.from(i)).then(() => (0, c.P)((0, d.o)(E.intl.string(E.t.rlYD1W), o.Ck.SUCCESS))),
             v(),
             (0, f.$)(f.s.MODAL_DISABLED_DMS, n));
     }

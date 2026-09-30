@@ -2,7 +2,7 @@
 var l = a(477900),
     t = a(582128),
     i = a(834730),
-    r = a(691540),
+    r = a(376357),
     s = a(857250),
     o = a(97483),
     c = a(173936),
@@ -97,10 +97,10 @@ ${c}`
                             j.push(n));
                     }
                     ((0, f.iu)({ server: n, channels: j, hasContextMessage: g, source: a }),
-                        (0, r.P0)((0, s.o)(N.intl.string(N.t.kwmYkt), o.Ck.SUCCESS)),
+                        (0, r.P)((0, s.o)(N.intl.string(N.t.kwmYkt), o.Ck.SUCCESS)),
                         m && null != l[0] && (0, p.iN)(l[0], { openTextInVoiceIfVoiceChannel: !0 }));
                 } catch (e) {
-                    (0, r.P0)((0, s.o)(N.intl.string(N.t.iufib1), o.Ck.FAILURE));
+                    (0, r.P)((0, s.o)(N.intl.string(N.t.iufib1), o.Ck.FAILURE));
                 } finally {
                     t(!1);
                 }
@@ -113,7 +113,7 @@ ${c}`
                     variant: "secondary",
                     text: void 0,
                     onClick: () => {
-                        (0, C.C)(_, () => (0, r.P0)((0, s.o)(N.intl.string(N.t["L/PwZf"]), o.Ck.SUCCESS)));
+                        (0, C.C)(_, () => (0, r.P)((0, s.o)(N.intl.string(N.t["L/PwZf"]), o.Ck.SUCCESS)));
                     },
                     icon: c.LinkIcon,
                 },

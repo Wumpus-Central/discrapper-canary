@@ -32,7 +32,7 @@ var n = l(477900),
     R = l(339143),
     D = l(80569),
     T = l(834730),
-    L = l(691540),
+    L = l(376357),
     G = l(857250),
     z = l(97483),
     F = l(565645),
@@ -731,7 +731,7 @@ let eO = new S.A("EmojiStudio"),
                     (ef.current = !0),
                     (function (e) {
                         let { emoji: t, guildId: l } = e;
-                        (0, L.P0)(
+                        (0, L.P)(
                             (0, G.o)("", z.Ck.CUSTOM, {
                                 position: z.xJ.TOP,
                                 component: (0, n.jsx)(K, { emoji: t, guildId: l }),

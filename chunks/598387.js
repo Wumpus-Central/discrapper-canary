@@ -356,7 +356,7 @@ function eM(e) {
 let eU = (0, d.sN)(c.X.TOAST_DURATION, {
         useTitle: () => R.intl.string(R.t["3oxlia"]),
         useSubtitle: () => R.intl.string(R.t.CZ3jxp),
-        usePredicate: () => (0, eG.D)("ToastDurationSetting"),
+        usePredicate: () => (0, eG.D2)("ToastDurationSetting"),
         markers: S.hH7.TOAST_DURATION_SECOND_INCREMENTS,
         onMarkerRender: (e) =>
             e % 5 == 0 || e === S.hH7.TOAST_DURATION_MIN_SECONDS || e === S.hH7.TOAST_DURATION_MAX_SECONDS
@@ -2918,20 +2918,20 @@ let ln = new Set(["failure", "unknown"]),
     });
 var ls = n(687813),
     ll = n(562708),
-    lr = n(691540),
+    lr = n(376357),
     la = n(97483);
 async function lo() {
     try {
         await lu();
     } catch {
-        (0, lr.P0)({ id: "performance-trace-failed", type: la.Ck.FAILURE, message: R.intl.string(R.t["8ihs9i"]) });
+        (0, lr.P)({ id: "performance-trace-failed", type: la.Ck.FAILURE, message: R.intl.string(R.t["8ihs9i"]) });
     }
 }
 async function lu() {
     var e;
     let t = nT.A.tracing;
     if (null == t) return;
-    (0, lr.P0)({ id: "performance-trace-capturing", type: la.Ck.MESSAGE, message: R.intl.string(R.t.qGRW8d) });
+    (0, lr.P)({ id: "performance-trace-capturing", type: la.Ck.MESSAGE, message: R.intl.string(R.t.qGRW8d) });
     let [n, i, s] = await Promise.all([
             t.capturePerformanceTrace({ durationMs: 3e4 }),
             nT.A.processUtils.getSystemInfo(),
@@ -2961,7 +2961,7 @@ async function lu() {
         o = `Discord-Trace-${n.startedAtISO.replace(/:/g, "-").replace(/\..*$/, "")}.zip`,
         { filePath: u } = await t.saveTraceToDownloads(a, o);
     (nT.A.fileManager.showItemInFolder(u),
-        (0, lr.P0)({ id: "performance-trace-saved", type: la.Ck.SUCCESS, message: R.intl.string(R.t.gpCRFS) }));
+        (0, lr.P)({ id: "performance-trace-saved", type: la.Ck.SUCCESS, message: R.intl.string(R.t.gpCRFS) }));
 }
 let ld = (0, d.Tf)(c.X.CAPTURE_PERFORMANCE_TRACE, {
     useTitle: () => R.intl.string(R.t.o6Qr6n),
@@ -11670,7 +11670,7 @@ function hy(e) {
         p = h.useCallback(
             (e) => {
                 (0, uV.C)((0, hS.yA)(n), () => {
-                    ((0, lr.P0)({
+                    ((0, lr.P)({
                         id: "experiment-link-copied",
                         message: "Copied experiment link",
                         type: la.Ck.SUCCESS,
@@ -12038,7 +12038,7 @@ let hj = (0, d.E2)(c.X.EXPERIMENTS_SETTING, {
                                         size: "sm",
                                         onClick: () => {
                                             (0, uV.C)(r, () => {
-                                                (0, lr.P0)((0, hA.o)("Installation ID copied!", la.Ck.SUCCESS));
+                                                (0, lr.P)((0, hA.o)("Installation ID copied!", la.Ck.SUCCESS));
                                             });
                                         },
                                         text: "Copy",
@@ -17923,7 +17923,7 @@ async function _P() {
     try {
         await fi.A.confirmViewBackupCodes(e, !0);
     } catch (e) {
-        (0, lr.P0)({
+        (0, lr.P)({
             message: e.body?.message ?? R.intl.string(R.t.F8FvUy),
             type: la.Ck.FAILURE,
             id: "backup-code-regen-failed",
@@ -17951,11 +17951,7 @@ function _G(e) {
               },
               onClick: function () {
                   ((0, uV.C)(i),
-                      (0, lr.P0)({
-                          message: R.intl.string(R.t.mGZ66D),
-                          type: la.Ck.SUCCESS,
-                          id: "backup-code-copied",
-                      }));
+                      (0, lr.P)({ message: R.intl.string(R.t.mGZ66D), type: la.Ck.SUCCESS, id: "backup-code-copied" }));
               },
               children: l,
           })

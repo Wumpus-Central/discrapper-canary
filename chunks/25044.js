@@ -4,7 +4,7 @@ var i = n(477900),
     a = n(91871),
     s = n.n(a),
     l = n(477782),
-    o = n(691540),
+    o = n(376357),
     d = n(97483),
     c = n(241326),
     u = n(583650),
@@ -47,7 +47,7 @@ function m(e) {
                                 action: () => {
                                     let e = (0, _.yA)(t);
                                     (0, f.C)(e, () => {
-                                        (0, o.P0)({
+                                        (0, o.P)({
                                             id: "experiment-link-copied",
                                             message: "Copied experiment link",
                                             type: d.Ck.SUCCESS,

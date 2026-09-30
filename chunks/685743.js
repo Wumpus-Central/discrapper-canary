@@ -1,6 +1,6 @@
 n.d(t, { A: () => c });
 var l = n(582128),
-    i = n(691540),
+    i = n(376357),
     r = n(857250),
     s = n(97483),
     a = n(957565),
@@ -16,7 +16,7 @@ function c(e, t, n, c) {
                 null != _.current && clearTimeout(_.current),
                 (0, u.ed)(e, t, n),
                 (0, a.C)(c ?? ""),
-                (0, i.P0)((0, r.o)(d.intl.string(d.t["+5kSoW"]), s.Ck.SUCCESS)),
+                (0, i.P)((0, r.o)(d.intl.string(d.t["+5kSoW"]), s.Ck.SUCCESS)),
                 S(!0),
                 (_.current = setTimeout(() => {
                     S(!1);

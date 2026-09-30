@@ -6,7 +6,7 @@ var l = i(477900),
     r = i(17928),
     u = i(189213),
     g = i(750943),
-    o = i(691540),
+    o = i(376357),
     c = i(857250),
     d = i(97483),
     f = i(270003),
@@ -148,7 +148,7 @@ function M(e) {
                 let i = (await J.current?.getOriginalMd5()) ?? null;
                 (await (0, R.p9)({ guildId: s, body: e, platform: "web", originalMd5: i }),
                     K(!0),
-                    (0, o.P0)((0, c.o)(B.intl.string(B.t.QR85gd), d.Ck.SUCCESS)));
+                    (0, o.P)((0, c.o)(B.intl.string(B.t.QR85gd), d.Ck.SUCCESS)));
             }
             i();
         } catch (e) {

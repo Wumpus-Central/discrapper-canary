@@ -3,7 +3,7 @@ var a = i(477900),
     s = i(582128),
     n = i(834730),
     l = i(173936),
-    o = i(691540),
+    o = i(376357),
     r = i(857250),
     c = i(97483),
     d = i(148494),
@@ -86,9 +86,9 @@ function P(e) {
                                 location: S.Hx.SOCIAL_LAYER_STOREFRONT,
                             }));
                     }
-                    (0, o.P0)((0, r.o)(w.intl.string(w.t.kwmYkt), c.Ck.SUCCESS));
+                    (0, o.P)((0, r.o)(w.intl.string(w.t.kwmYkt), c.Ck.SUCCESS));
                 } catch (e) {
-                    (0, o.P0)((0, r.o)(w.intl.string(w.t.iufib1), c.Ck.FAILURE));
+                    (0, o.P)((0, r.o)(w.intl.string(w.t.iufib1), c.Ck.FAILURE));
                 } finally {
                     s(!1);
                 }
@@ -110,7 +110,7 @@ function P(e) {
                             location_stack: P,
                         }),
                             (0, f.C)((0, N.OY)(i, t), () =>
-                                (0, o.P0)((0, r.o)(w.intl.string(w.t["L/PwZf"]), c.Ck.SUCCESS)),
+                                (0, o.P)((0, r.o)(w.intl.string(w.t["L/PwZf"]), c.Ck.SUCCESS)),
                             ));
                     },
                     icon: l.LinkIcon,

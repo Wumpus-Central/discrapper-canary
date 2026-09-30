@@ -397,7 +397,7 @@ var ey = n(284009),
     ek = n(34188),
     eM = n(408278),
     eL = n(173936),
-    eO = n(691540),
+    eO = n(376357),
     eP = n(857250),
     eD = n(97483),
     eU = n(939249),
@@ -681,7 +681,7 @@ function e5(e) {
                             size: "sm",
                             onClick: () => {
                                 (0, eY.C)(l, () => {
-                                    ((0, eO.P0)((0, eP.o)(X.intl.string(X.t["L/PwZf"]), eD.Ck.SUCCESS)), o());
+                                    ((0, eO.P)((0, eP.o)(X.intl.string(X.t["L/PwZf"]), eD.Ck.SUCCESS)), o());
                                 });
                             },
                             variant: "icon-only",

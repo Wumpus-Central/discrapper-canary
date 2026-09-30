@@ -848,7 +848,7 @@ var nI = t(568598),
     nv = t(939249),
     nN = t(408278),
     n_ = t(624479),
-    nT = t(691540),
+    nT = t(376357),
     nS = t(857250),
     nR = t(97483),
     nL = t(534890),
@@ -1050,7 +1050,7 @@ let nV = ["high", "medium", "low"],
                             onClick: (e) => {
                                 (e.stopPropagation(),
                                     (0, nU.C)(JSON.stringify(n, null, 2), () =>
-                                        (0, nT.P0)((0, nS.o)("Copied conversation JSON", nR.Ck.SUCCESS)),
+                                        (0, nT.P)((0, nS.o)("Copied conversation JSON", nR.Ck.SUCCESS)),
                                     ));
                             },
                         }),
@@ -5023,6 +5023,7 @@ let dl = () => (
         className: di.kL,
         children: [
             (0, l.jsxs)(ln.A, {
+                keepToastsBelow: !0,
                 toolbar: (0, l.jsx)(s.Fragment, {}),
                 children: [
                     (0, l.jsx)(ln.A.Icon, { icon: dt.N, "aria-hidden": !0 }),
@@ -5605,6 +5606,7 @@ class dy extends s.PureComponent {
                                 className: r()(dA.DD, a, { [dA.zh]: e.type === ed.rbe.GROUP_DM }),
                                 transparent: x,
                                 hidden: c,
+                                keepToastsBelow: !0,
                                 "aria-label": Y.intl.string(Y.t.BIYAqa),
                                 children: [
                                     h && (0, l.jsx)(tL.i$, { channel: e, guild: i, caretPosition: "right" }),

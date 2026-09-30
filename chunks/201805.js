@@ -18,7 +18,7 @@ var r = n(477900),
     u = n(17928),
     a = n(717421),
     o = n(663417),
-    c = n(691540),
+    c = n(376357),
     d = n(857250),
     C = n(97483),
     f = n(59520),
@@ -325,7 +325,7 @@ function et(e) {
     let { isShareable: t, questId: n, trackingCtx: r } = e;
     return (0, f.I)(
         i.useCallback(() => {
-            t && ((0, O.Xm)(n, r), (0, c.P0)((0, d.o)(G.intl.string(G.t["+5kSoW"]), C.Ck.SUCCESS)));
+            t && ((0, O.Xm)(n, r), (0, c.P)((0, d.o)(G.intl.string(G.t["+5kSoW"]), C.Ck.SUCCESS)));
         }, [t, n, r]),
         3e3,
         [],

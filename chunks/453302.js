@@ -1,7 +1,7 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => p });
 var l = n(477900);
 n(582128);
-var i = n(691540),
+var i = n(376357),
     s = n(857250),
     r = n(97483),
     a = n(192308),
@@ -9,8 +9,8 @@ var i = n(691540),
     u = n(863922),
     c = n(652215),
     d = n(670455),
-    h = n(375708);
-function m(e, t, n) {
+    m = n(375708);
+function h(e, t, n) {
     let { rating: l, problem: a, feedback: d } = n;
     (!(function (e) {
         let {
@@ -46,9 +46,9 @@ function m(e, t, n) {
         location: "Summary divider",
         rating: l,
     }),
-        (0, i.P0)((0, s.o)(h.intl.string(h.t["d9+vQ8"]), r.Ck.SUCCESS)));
+        (0, i.P)((0, s.o)(m.intl.string(m.t["d9+vQ8"]), r.Ck.SUCCESS)));
 }
-function f(e) {
+function p(e) {
     let { summary: t, channel: i, rating: s } = e;
     null != t &&
         (s === d.P0.BAD
@@ -64,7 +64,7 @@ function f(e) {
                       n.e("326484"),
                       n.e("600352"),
                   ]).then(n.bind(n, 447696));
-                  return (n) => (0, l.jsx)(e, { ...n, onSubmit: (e) => m(t, i, e), startRating: s });
+                  return (n) => (0, l.jsx)(e, { ...n, onSubmit: (e) => h(t, i, e), startRating: s });
               })
-            : m(t, i, { rating: s, problem: null, feedback: "", dontShowAgain: !1 }));
+            : h(t, i, { rating: s, problem: null, feedback: "", dontShowAgain: !1 }));
 }

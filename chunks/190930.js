@@ -6,7 +6,7 @@ var a = n(477900),
     s = n(17928),
     o = n(189213),
     c = n(834730),
-    d = n(691540),
+    d = n(376357),
     u = n(857250),
     p = n(97483),
     m = n(289873),
@@ -194,11 +194,11 @@ function q(e) {
             try {
                 (await Promise.all(en.map(i)),
                     null != Q &&
-                        (0, d.P0)(
+                        (0, d.P)(
                             (0, u.o)(O.intl.formatToPlainString(O.t.jQULqL, { applicationName: Q.name }), p.Ck.SUCCESS),
                         ));
             } catch (e) {
-                throw ((0, d.P0)((0, u.o)(O.intl.string(O.t.PanA4J), p.Ck.FAILURE)), e);
+                throw ((0, d.P)((0, u.o)(O.intl.string(O.t.PanA4J), p.Ck.FAILURE)), e);
             }
             eo();
         }, [Y, Q, t, en, z, eo, W]),

@@ -1,7 +1,7 @@
 n.d(t, { _: () => p, U: () => N });
 var i = n(477900),
     l = n(582128),
-    r = n(691540),
+    r = n(376357),
     s = n(857250),
     a = n(97483),
     o = n(228366),
@@ -115,7 +115,7 @@ function p(e) {
 function N(e, t) {
     let n = (0, d.vM)(e);
     null != n &&
-        (0, r.P0)(
+        (0, r.P)(
             (0, s.o)(T.intl.string(T.t.MPpEUA), a.Ck.CUSTOM, {
                 position: a.xJ.BOTTOM,
                 component: (0, i.jsx)(I, { achievement: n, unlocked: t }),

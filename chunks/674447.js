@@ -38,7 +38,7 @@ let M = {
 };
 var D = n(646911),
     C = n(174459),
-    G = n(691540),
+    G = n(376357),
     T = n(857250),
     v = n(97483),
     L = n(834730),
@@ -512,7 +512,7 @@ function tP(e) {
                                 n(!0);
                                 let s = a ?? (0, j.getAvailableLocales)().find((e) => e.value === r)?.name ?? r;
                                 (tA.has(e.id) || tA.set(e.id, e.content),
-                                    (0, G.P0)(
+                                    (0, G.P)(
                                         (0, T.o)(
                                             j.intl.formatToPlainString(j.t.Znl8Z8, { targetLanguage: s }),
                                             v.Ck.AI,
@@ -529,7 +529,7 @@ function tP(e) {
                                             type: "MESSAGE_UPDATE",
                                             message: { id: e.id, channel_id: e.channel_id, content: t.body.content },
                                         }),
-                                        (0, G.P0)(
+                                        (0, G.P)(
                                             (0, T.o)(
                                                 j.intl.formatToPlainString(j.t.FtVUqm, { targetLanguage: s }),
                                                 v.Ck.SUCCESS,
@@ -946,8 +946,8 @@ function tP(e) {
                 (await r(n, f),
                     p(n),
                     null != o
-                        ? (0, G.P0)((0, T.o)(j.intl.string(j.t.wH6L0r), v.Ck.FAILURE))
-                        : (0, G.P0)((0, T.o)(j.intl.string(j.t["0rdYm2"]), v.Ck.SUCCESS)));
+                        ? (0, G.P)((0, T.o)(j.intl.string(j.t.wH6L0r), v.Ck.FAILURE))
+                        : (0, G.P)((0, T.o)(j.intl.string(j.t["0rdYm2"]), v.Ck.SUCCESS)));
             }
             let S = (0, l.jsx)(s.Dr, { id: "automod-rules-loading", label: j.intl.string(j.t.ZTNur7) });
             return (

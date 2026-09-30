@@ -2,16 +2,16 @@ n.d(t, { ExperimentEmbed: () => _ });
 var l = n(477900),
     i = n(582128),
     s = n(17928),
-    r = n(691540),
+    r = n(376357),
     a = n(97483),
     o = n(939249),
     u = n(173936),
     c = n(834730),
     d = n(331322),
-    h = n(776078),
-    m = n(821609),
-    f = n(280450),
-    p = n(287809),
+    m = n(776078),
+    h = n(821609),
+    p = n(280450),
+    f = n(287809),
     g = n(957565),
     x = n(100392),
     A = n(102609),
@@ -25,7 +25,7 @@ function N(e) {
     let { url: t } = e,
         n = i.useCallback(() => {
             (0, g.C)(t, () =>
-                (0, r.P0)({ id: "experiment-link-copied", message: "Copied experiment link", type: a.Ck.SUCCESS }),
+                (0, r.P)({ id: "experiment-link-copied", message: "Copied experiment link", type: a.Ck.SUCCESS }),
             );
         }, [t]);
     return (0, l.jsx)(o.D, {
@@ -46,21 +46,21 @@ function _(e) {
             else if (null != o[n]) return o[n];
             else if (null != g[n]) return g[n];
         }, [o, g, n]),
-        b = f.default.getId(),
+        b = p.default.getId(),
         T = (0, I.Fm)(_, b),
         R = i.useMemo(() => (0, x.GI)(_, T), [T, _]),
-        O = (0, s.bG)([p.default], () => {
-            let e = p.default.getCurrentUser();
+        O = (0, s.bG)([f.default], () => {
+            let e = f.default.getCurrentUser();
             return e?.isStaff() || e?.isStaffPersonal();
         });
     if (null == n || null == _) return null;
-    let M = (0, x.hp)(_).find((e) => e.value === r),
-        L = null != M ? S.Ps.EXPERIMENT_TREATMENT : S.Ps.EXPERIMENT,
-        k = null != j && null != M && j.variantId === M.value,
+    let L = (0, x.hp)(_).find((e) => e.value === r),
+        M = null != L ? S.Ps.EXPERIMENT_TREATMENT : S.Ps.EXPERIMENT,
+        k = null != j && null != L && j.variantId === L.value,
         w = (0, l.jsx)(N, { url: t }),
         P = null;
-    return (L === S.Ps.EXPERIMENT_TREATMENT && null != M
-        ? (P = (0, l.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: M.label }))
+    return (M === S.Ps.EXPERIMENT_TREATMENT && null != L
+        ? (P = (0, l.jsx)(c.E, { variant: "text-xs/normal", color: "text-muted", children: L.label }))
         : null != T &&
           (P = (0, l.jsxs)(c.E, { variant: "text-xs/normal", color: "text-muted", children: ["Server Config: ", R] })),
     O)
@@ -78,7 +78,7 @@ function _(e) {
                                       direction: "horizontal",
                                       gap: 8,
                                       children: [
-                                          (0, l.jsx)(h.g, { size: "lg" }),
+                                          (0, l.jsx)(m.g, { size: "lg" }),
                                           (0, l.jsxs)(d.B, {
                                               direction: "vertical",
                                               gap: 0,
@@ -94,15 +94,15 @@ function _(e) {
                           }),
                       }),
                   }),
-                  null != M
-                      ? (0, l.jsx)(m.$, {
+                  null != L
+                      ? (0, l.jsx)(h.$, {
                             fullWidth: !0,
                             variant: k ? "critical-primary" : "primary",
-                            text: k ? `Clear Treatment ${M.value}` : `Apply Treatment ${M.value}`,
+                            text: k ? `Clear Treatment ${L.value}` : `Apply Treatment ${L.value}`,
                             onClick: function () {
                                 null == n ||
                                     null == _ ||
-                                    (null != M && (k ? (0, A.t$)(_.system, n, null) : (0, A.t$)(_.system, n, M.value)));
+                                    (null != L && (k ? (0, A.t$)(_.system, n, null) : (0, A.t$)(_.system, n, L.value)));
                             },
                         })
                       : (0, l.jsx)("div", {

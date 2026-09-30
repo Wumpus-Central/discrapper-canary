@@ -1,7 +1,7 @@
 e.d(i, { default: () => h });
 var n = e(477900),
     s = e(582128),
-    r = e(691540),
+    r = e(376357),
     l = e(857250),
     a = e(97483),
     c = e(732159),
@@ -23,7 +23,7 @@ function h(t) {
         { title: g, subtitle: k, confirmText: S, toastContent: m } = (0, o.vz)(v, h),
         A = (0, s.useMemo)(
             () => () => {
-                (d._Z.updateSetting(j), (0, o.gF)(i, e), (0, r.P0)((0, l.o)(m, a.Ck.SUCCESS)));
+                (d._Z.updateSetting(j), (0, o.gF)(i, e), (0, r.P)((0, l.o)(m, a.Ck.SUCCESS)));
             },
             [j, i, e, m],
         ),

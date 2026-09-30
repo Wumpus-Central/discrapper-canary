@@ -35,7 +35,7 @@ var i,
     k = n.n(M),
     U = n(435558),
     P = n.n(U),
-    w = n(691540),
+    w = n(376357),
     F = n(857250),
     B = n(97483),
     H = n(404778),
@@ -531,7 +531,7 @@ function te(e) {
                 (0, eX.zV)(ei.HAw.GUILD_RAID_ALERTS_SETUP, n);
             }
         } catch (e) {
-            ((0, w.P0)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE)), o(!r));
+            ((0, w.P)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE)), o(!r));
         }
     }
     return (0, p.jsxs)("div", {
@@ -603,7 +603,7 @@ function tt(e) {
                 (0, eX.zV)(ei.HAw.GUILD_RAID_ALERTS_SETUP, n);
             }
         } catch (e) {
-            ((0, w.P0)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE)), i(s));
+            ((0, w.P)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE)), i(s));
         }
     }
     return (0, p.jsx)("div", {
@@ -655,7 +655,7 @@ function tl(e) {
                     (await et.default.saveGuild(t.id, { verificationLevel: n }),
                         et.default.updateGuild({ verificationLevel: n }));
                 } catch (e) {
-                    (0, w.P0)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE));
+                    (0, w.P)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE));
                 }
             },
             [t],
@@ -706,7 +706,7 @@ function ts(e) {
                     (await et.default.saveGuild(t.id, { explicitContentFilter: n }),
                         et.default.updateGuild({ explicitContentFilter: n }));
                 } catch (e) {
-                    (0, w.P0)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE));
+                    (0, w.P)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE));
                 }
             },
             [t.id],
@@ -818,7 +818,7 @@ function to(e) {
             try {
                 await eH(t, e);
             } catch (e) {
-                ((0, w.P0)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE)), a(s));
+                ((0, w.P)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE)), a(s));
             }
         },
         [t, s],
@@ -12543,7 +12543,7 @@ function uv(e) {
             try {
                 await eH(t, e);
             } catch (e) {
-                ((0, w.P0)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE)), r(l));
+                ((0, w.P)((0, F.o)(el.intl.string(el.t["46Rs3v"]), B.Ck.FAILURE)), r(l));
             }
         },
         [t, l],
@@ -17750,7 +17750,7 @@ function xR(e) {
                     let t = await xv(l, e, f);
                     (o(t.id), a(c4.T$.DISPLAY), et.default.selectRole(t.id));
                 } catch {
-                    (0, w.P0)((0, F.o)(el.intl.string(el.t.F8FvUy), B.Ck.FAILURE));
+                    (0, w.P)((0, F.o)(el.intl.string(el.t.F8FvUy), B.Ck.FAILURE));
                 }
             },
             [l, f, o, a],
@@ -19161,7 +19161,7 @@ function hV(e) {
                 let n = await xv(t, e, r);
                 (s(n.id), l(c4.T$.DISPLAY), i(n.id));
             } catch {
-                (0, w.P0)((0, F.o)(el.intl.string(el.t.F8FvUy), B.Ck.FAILURE));
+                (0, w.P)((0, F.o)(el.intl.string(el.t.F8FvUy), B.Ck.FAILURE));
             }
         },
         [t, r, i, s, l],
@@ -19715,7 +19715,7 @@ function h8(e) {
                     let t = await xv(i, e, l);
                     (h(t.id), x(c4.T$.DISPLAY), g(t.id));
                 } catch {
-                    (0, w.P0)((0, F.o)(el.intl.string(el.t.F8FvUy), B.Ck.FAILURE));
+                    (0, w.P)((0, F.o)(el.intl.string(el.t.F8FvUy), B.Ck.FAILURE));
                 }
             },
             [i, l, g, h, x],

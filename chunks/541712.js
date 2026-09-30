@@ -3,7 +3,7 @@ var i = n(477900),
     l = n(582128),
     a = n(189213),
     s = n(192308),
-    r = n(691540),
+    r = n(376357),
     c = n(857250),
     o = n(97483),
     u = n(289873),
@@ -347,7 +347,7 @@ function eg(e) {
                                 {},
                             i = f.A.getGuild(t?.guild_id);
                         null != (await (0, j.A)({ command: V, optionValues: n, context: { channel: t, guild: i } })) &&
-                            (0, r.P0)((0, c.o)(el.intl.string(el.t["5WjJcl"]), o.Ck.MESSAGE));
+                            (0, r.P)((0, c.o)(el.intl.string(el.t["5WjJcl"]), o.Ck.MESSAGE));
                     }),
                     S(!0),
                     eh());

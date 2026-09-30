@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => O, In: () => m });
+n.d(t, { Ay: () => y, In: () => N });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -11,12 +11,15 @@ var i = n(477900),
     _ = n(866665),
     E = n(320448),
     A = n(921853),
-    h = n(559106),
-    I = n(107361),
-    f = n(573435),
-    p = n(640708),
-    T = n(114640);
-let m = r.forwardRef(function (e, t) {
+    h = n(335144),
+    I = n(8062),
+    f = n(559106),
+    p = n(107361),
+    T = n(573435),
+    m = n(640708),
+    g = n(267102),
+    S = n(114640);
+let N = r.forwardRef(function (e, t) {
     let {
             className: n,
             iconClassName: r,
@@ -31,10 +34,10 @@ let m = r.forwardRef(function (e, t) {
             iconSize: I = 24,
             onClick: f,
             onContextMenu: p,
-            tooltip: m = null,
-            tooltipPosition: S = "bottom",
-            tooltipAlign: N,
-            tooltipDisabled: C,
+            tooltip: T = null,
+            tooltipPosition: m = "bottom",
+            tooltipAlign: g,
+            tooltipDisabled: N,
             tooltipSpacing: O,
             role: R,
             "aria-label": L,
@@ -52,7 +55,7 @@ let m = r.forwardRef(function (e, t) {
             width: I,
             height: I,
             size: "custom",
-            className: s()(r, T.Kk),
+            className: s()(r, S.Kk),
             colorClass: E ?? void 0,
             color: c ?? "currentColor",
             "aria-hidden": e,
@@ -61,19 +64,19 @@ let m = r.forwardRef(function (e, t) {
     }
     let w = L;
     return (
-        null == w && "string" == typeof m && (w = m),
+        null == w && "string" == typeof T && (w = T),
         (0, i.jsx)(_.m, {
-            __unsupportedReactNodeAsText: m,
-            position: S,
-            align: N,
-            shouldShow: !C,
+            __unsupportedReactNodeAsText: T,
+            position: m,
+            align: g,
+            shouldShow: !N,
             spacing: O,
             ariaHidden: !0,
             children:
                 null == f
                     ? (0, i.jsx)("div", {
                           ref: t,
-                          className: s()(n, T.P0, { [T.Ir]: o }),
+                          className: s()(n, S.P0, { [S.Ir]: o }),
                           "aria-label": w,
                           children: U(y),
                       })
@@ -82,7 +85,7 @@ let m = r.forwardRef(function (e, t) {
                           tag: "div",
                           onClick: o ? void 0 : f,
                           onContextMenu: o ? void 0 : p,
-                          className: s()(n, { [T.P0]: !0, [T.vk]: !o && null != f, [T.wH]: l, [T.Ir]: o }),
+                          className: s()(n, { [S.P0]: !0, [S.vk]: !o && null != f, [S.wH]: l, [S.Ir]: o }),
                           role: R,
                           "aria-label": w,
                           "aria-hidden": y,
@@ -92,16 +95,16 @@ let m = r.forwardRef(function (e, t) {
                           "aria-expanded": v,
                           tabIndex: o || null == f ? -1 : 0,
                           "data-jump-section": M,
-                          children: [(0, i.jsx)(g, { iconSize: I, badge: d, children: U(void 0) }), a],
+                          children: [(0, i.jsx)(C, { iconSize: I, badge: d, children: U(void 0) }), a],
                       }),
         })
     );
 });
-function g(e) {
+function C(e) {
     let { badge: t } = e;
-    return null == t ? e.children : (0, i.jsx)(S, { ...e, badge: t });
+    return null == t ? e.children : (0, i.jsx)(O, { ...e, badge: t });
 }
-function S(e) {
+function O(e) {
     let { badge: t, iconSize: n, children: a } = e,
         { width: l, offset: o } = r.useMemo(() => {
             let e = t.text?.length ?? 0;
@@ -110,8 +113,8 @@ function S(e) {
         d = r.useMemo(() => ({ "--__badgeWidth": l + "px", "--__badgeOffset": o + "px" }), [l, o]);
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(f.Ay, {
-                mask: "top" === t.position ? f.Ay.Masks.HEADER_BAR_BADGE_TOP : f.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
+            (0, i.jsx)(T.Ay, {
+                mask: "top" === t.position ? T.Ay.Masks.HEADER_BAR_BADGE_TOP : T.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
                 height: n + o,
                 width: n + o,
                 rightOverhang: -o,
@@ -120,21 +123,21 @@ function S(e) {
             }),
             (0, i.jsx)("span", {
                 style: d,
-                className: s()(T.bG, "top" === t.position ? T.uZ : T.kl, {
-                    [T.E1]: (t.text?.length ?? 0) > 0,
-                    [T.Uy]: "important" === t.type,
-                    [T.VF]: "unread" === t.type,
+                className: s()(S.bG, "top" === t.position ? S.uZ : S.kl, {
+                    [S.E1]: (t.text?.length ?? 0) > 0,
+                    [S.Uy]: "important" === t.type,
+                    [S.VF]: "unread" === t.type,
                 }),
                 children: (t.text?.length ?? 0) > 0 ? t.text : null,
             }),
         ],
     });
 }
-let N = r.forwardRef(function (e, t) {
+let R = r.forwardRef(function (e, t) {
     let { className: n, ...r } = e;
-    return (0, i.jsx)(m, { ...r, className: s()(T.p, n), ref: t });
+    return (0, i.jsx)(N, { ...r, className: s()(S.p, n), ref: t });
 });
-function C(e) {
+function L(e) {
     let {
             className: t,
             innerClassName: n,
@@ -145,42 +148,45 @@ function C(e) {
             onDoubleClick: _,
             "aria-label": E,
             "aria-labelledby": A,
-            role: f,
-            scrollable: p,
-            transparent: m = !1,
-            hidden: g = !1,
-            disableFocusRingScope: S = !1,
+            role: T,
+            scrollable: m,
+            transparent: N = !1,
+            hidden: C = !1,
+            disableFocusRingScope: O = !1,
+            keepToastsBelow: R = !1,
         } = e,
-        N = r.useRef(null),
-        C = r.useContext(I.A),
-        O = (0, i.jsxs)(i.Fragment, {
-            children: [
-                (0, i.jsxs)("div", {
-                    className: T.cM,
-                    children: [
-                        (0, i.jsxs)("div", {
-                            className: s()(T.Y_, n, { [T.lE]: p }),
-                            onDoubleClick: _,
-                            children: [o.Fr && null != C ? (0, i.jsx)(l._, { onClick: C, className: T.cz }) : null, d],
-                        }),
-                        null != u ? (0, i.jsx)("div", { className: s()(T.KE, a), children: u }) : null,
-                    ],
-                }),
-                c,
-            ],
-        });
+        L = r.useRef(null),
+        y = r.useContext(p.A),
+        D = (0, g.Us)();
+    (0, h.g)(I.a[D], L, R && !C && !N);
+    let v = (0, i.jsxs)(i.Fragment, {
+        children: [
+            (0, i.jsxs)("div", {
+                className: S.cM,
+                children: [
+                    (0, i.jsxs)("div", {
+                        className: s()(S.Y_, n, { [S.lE]: m }),
+                        onDoubleClick: _,
+                        children: [o.Fr && null != y ? (0, i.jsx)(l._, { onClick: y, className: S.cz }) : null, d],
+                    }),
+                    null != u ? (0, i.jsx)("div", { className: s()(S.KE, a), children: u }) : null,
+                ],
+            }),
+            c,
+        ],
+    });
     return (0, i.jsx)("section", {
-        className: s()(t, T.kL, { [T.Sp]: !m, [T.JO]: m, [T.GY]: o.Fr, [T.R]: g }),
+        className: s()(t, S.kL, { [S.Sp]: !N, [S.JO]: N, [S.GY]: o.Fr, [S.R]: C }),
         "aria-label": E,
         "aria-labelledby": A,
-        role: f,
-        ref: N,
-        children: S ? O : (0, i.jsx)(h.xp, { containerRef: N, children: O }),
+        role: T,
+        ref: L,
+        children: O ? v : (0, i.jsx)(f.xp, { containerRef: L, children: v }),
     });
 }
-((C.Icon = m),
-    (C.ChannelIcon = N),
-    (C.Title = function (e) {
+((L.Icon = N),
+    (L.ChannelIcon = R),
+    (L.Title = function (e) {
         let {
                 className: t,
                 wrapperClassName: n,
@@ -195,9 +201,9 @@ function C(e) {
                 id: I,
                 muted: f = !1,
                 level: p = 1,
-                ref: m,
-                role: g,
-                tabIndex: S,
+                ref: T,
+                role: m,
+                tabIndex: g,
                 "aria-label": N,
                 "aria-selected": C,
                 "aria-controls": O,
@@ -208,14 +214,14 @@ function C(e) {
                 children: (0, i.jsx)(c.D, {
                     variant: "text-md/medium",
                     color: f ? "text-default" : void 0,
-                    className: s()(t, T.DD, { [T.NP]: null != l }),
+                    className: s()(t, S.DD, { [S.NP]: null != l }),
                     id: I,
                     children: r,
                 }),
             });
         return null != l
             ? (0, i.jsx)(u.D, {
-                  innerRef: m,
+                  innerRef: T,
                   onClick: l,
                   onContextMenu: a,
                   onKeyDown: o,
@@ -223,9 +229,9 @@ function C(e) {
                   onMouseLeave: E,
                   onFocus: A,
                   onBlur: h,
-                  className: s()(n, T.oB),
-                  role: g,
-                  tabIndex: S,
+                  className: s()(n, S.oB),
+                  role: m,
+                  tabIndex: g,
                   "aria-label": N,
                   "aria-selected": C,
                   "aria-controls": O,
@@ -233,15 +239,15 @@ function C(e) {
                   children: L,
               })
             : (0, i.jsx)("div", {
-                  ref: m,
-                  className: s()(n, T.oB),
+                  ref: T,
+                  className: s()(n, S.oB),
                   onContextMenu: a,
                   onKeyDown: o,
                   onMouseEnter: _,
                   onMouseLeave: E,
                   onFocus: A,
                   onBlur: h,
-                  role: g,
+                  role: m,
                   "aria-label": N,
                   "aria-selected": C,
                   "aria-controls": O,
@@ -249,14 +255,14 @@ function C(e) {
                   children: L,
               });
     }),
-    (C.Divider = function (e) {
+    (L.Divider = function (e) {
         let { className: t } = e;
-        return (0, i.jsx)(p.A, { className: s()(T.Om, t) });
+        return (0, i.jsx)(m.A, { className: s()(S.Om, t) });
     }),
-    (C.Caret = function (e) {
+    (L.Caret = function (e) {
         let { direction: t = "right", className: n } = e;
         return "right" === t
-            ? (0, i.jsx)(E._, { size: "md", color: "currentColor", className: s()(T.OW, n) })
-            : (0, i.jsx)(A.n, { size: "md", color: "currentColor", className: s()(T.OW, n) });
+            ? (0, i.jsx)(E._, { size: "md", color: "currentColor", className: s()(S.OW, n) })
+            : (0, i.jsx)(A.n, { size: "md", color: "currentColor", className: s()(S.OW, n) });
     }));
-let O = C;
+let y = L;

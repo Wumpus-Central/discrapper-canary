@@ -5,7 +5,7 @@ var l = n(477900),
     a = n(933832),
     s = n(661531),
     u = n(834730),
-    o = n(691540),
+    o = n(376357),
     c = n(857250),
     d = n(97483),
     f = n(375708),
@@ -25,5 +25,5 @@ function m() {
     });
 }
 function g() {
-    (0, o.P0)((0, c.o)("", d.Ck.CUSTOM, { component: (0, l.jsx)(m, {}) }));
+    (0, o.P)((0, c.o)("", d.Ck.CUSTOM, { component: (0, l.jsx)(m, {}) }));
 }

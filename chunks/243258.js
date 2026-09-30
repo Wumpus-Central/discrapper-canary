@@ -7,7 +7,7 @@ var s = l(477900),
     c = l(834730),
     o = l(176781),
     d = l(661531),
-    h = l(691540),
+    h = l(376357),
     u = l(857250),
     m = l(97483),
     p = l(148494),
@@ -115,7 +115,7 @@ function V(e) {
                     }
                     let g = (await Promise.all(e.map(k.pk))).filter(N.Vq).filter((e) => (0, I.t)(e));
                     if (0 === g.length) {
-                        ((0, h.P0)((0, u.o)(S.intl.string(S.t.iufib1), m.Ck.FAILURE)), i(!1));
+                        ((0, h.P)((0, u.o)(S.intl.string(S.t.iufib1), m.Ck.FAILURE)), i(!1));
                         return;
                     }
                     for (let e of (o && l(), g)) {
@@ -132,7 +132,7 @@ function V(e) {
                     }
                     a && 1 === g.length && ((0, y.iN)(g[0], { openTextInVoiceIfVoiceChannel: !0 }), r.closeAllModals());
                 } catch (e) {
-                    (0, h.P0)((0, u.o)(S.intl.string(S.t.iufib1), m.Ck.FAILURE));
+                    (0, h.P)((0, u.o)(S.intl.string(S.t.iufib1), m.Ck.FAILURE));
                 } finally {
                     i(!1);
                 }

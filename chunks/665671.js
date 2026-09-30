@@ -1,7 +1,7 @@
 n.d(t, { A: () => p });
 var a = n(477900),
     l = n(192308),
-    s = n(691540),
+    s = n(376357),
     i = n(857250),
     o = n(97483),
     r = n(464477),
@@ -21,6 +21,6 @@ async function p() {
         });
     } catch (e) {
         e.message !== h.intl.string(h.t.N2yb9a) &&
-            ((0, r.Os)(e), (0, s.P0)((0, i.o)(h.intl.string(h.t.xSCvBf), o.Ck.FAILURE)));
+            ((0, r.Os)(e), (0, s.P)((0, i.o)(h.intl.string(h.t.xSCvBf), o.Ck.FAILURE)));
     }
 }

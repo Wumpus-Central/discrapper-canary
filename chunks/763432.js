@@ -319,7 +319,7 @@ function eh(e) {
           })
         : (0, n.jsx)(ef, { lastEdit: t, buttonRef: i, disabled: l, cropAndUpload: s, onChangeImage: a });
 }
-var ep = i(691540),
+var ep = i(376357),
     eI = i(857250),
     eA = i(97483),
     ej = i(192308),
@@ -354,9 +354,7 @@ function ey(e) {
                         m({ filename: s, localDataUri: e, originalHash: a }));
                 } catch (e) {
                     if (o.current !== l) return;
-                    (c(null),
-                        (0, ep.P0)((0, eI.o)(V.intl.string(V.t.F4Neqh), eA.Ck.FAILURE)),
-                        ek.A.captureException(e));
+                    (c(null), (0, ep.P)((0, eI.o)(V.intl.string(V.t.F4Neqh), eA.Ck.FAILURE)), ek.A.captureException(e));
                 }
             },
             [m],
@@ -369,7 +367,7 @@ function ey(e) {
                     { imageUri: s, file: a, transform: r } = e,
                     o = (0, eS.aU)(s);
                 o.size > 0xa00000
-                    ? (0, ep.P0)((0, eI.o)(V.intl.string(V.t.YbdEFK), eA.Ck.FAILURE))
+                    ? (0, ep.P)((0, eI.o)(V.intl.string(V.t.YbdEFK), eA.Ck.FAILURE))
                     : f(
                           s,
                           new File(
@@ -1029,7 +1027,7 @@ async function tE(e, t, i, n, l) {
                 crop: e.editMetadata?.crop,
                 trackTypes: e.tracks?.map((e) => e.type),
             }),
-            (0, ep.P0)((0, eI.o)(V.intl.string(V.t.iufib1), eA.Ck.FAILURE)),
+            (0, ep.P)((0, eI.o)(V.intl.string(V.t.iufib1), eA.Ck.FAILURE)),
             r({
                 action: "exporting" === o ? "CLIP_EXPORT_FAILED" : "CLIP_UPLOAD_FAILED",
                 widgetEdited: b.x.CLIPS_GALLERY,
@@ -1670,7 +1668,7 @@ function ic(e) {
             (e, t) => {
                 let i = (function (e, t) {
                     if (null == e.applicationId)
-                        return ((0, ep.P0)((0, eI.o)(V.intl.string(V.t.xcLXWy), eA.Ck.FAILURE)), null);
+                        return ((0, ep.P)((0, eI.o)(V.intl.string(V.t.xcLXWy), eA.Ck.FAILURE)), null);
                     let i = (0, tp.m)();
                     if (
                         !(0, F.$C)({

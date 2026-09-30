@@ -4,7 +4,7 @@ if (588245 != t.j) var a = t(462180);
 var l = t(882035),
     i = t(121894),
     o = t(506774),
-    s = t(691540),
+    s = t(376357),
     u = t(857250),
     c = t(97483),
     p = t(87558);
@@ -15,7 +15,7 @@ let f = "__DEBUG_PROFILE_EFFECTS_STORE",
             o.w.set(f, e.profileEffects);
         } catch (e) {
             (console.error(e),
-                (0, s.P0)(
+                (0, s.P)(
                     (0, u.o)(
                         "This file is too large to save into localstorage. You will be able to view but not persist these changes.",
                         c.Ck.FAILURE,

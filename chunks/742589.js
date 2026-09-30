@@ -56,6 +56,7 @@ function _(e) {
         hideSearch: N,
         disableDoubleClick: S,
         disableFocusRingScope: O,
+        keepToastsBelow: f,
     } = e;
     return (0, i.jsx)(u.Ay, {
         className: n,
@@ -82,6 +83,7 @@ function _(e) {
         role: p,
         scrollable: T,
         disableFocusRingScope: O,
+        keepToastsBelow: f,
         children: t,
     });
 }
@@ -94,6 +96,7 @@ function g(e) {
         role: s,
         disableDoubleClick: a,
         disableFocusRingScope: o,
+        keepToastsBelow: d,
     } = e;
     return (0, i.jsx)(u.Ay, {
         className: n,
@@ -102,6 +105,7 @@ function g(e) {
         "aria-labelledby": r,
         role: s,
         disableFocusRingScope: o,
+        keepToastsBelow: d,
         children: t,
     });
 }

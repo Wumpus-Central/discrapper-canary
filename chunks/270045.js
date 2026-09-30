@@ -3,7 +3,7 @@ var i = n(477900),
     l = n(582128),
     r = n(323889),
     s = n(17928),
-    a = n(691540),
+    a = n(376357),
     o = n(857250),
     c = n(97483),
     E = n(477782),
@@ -76,7 +76,7 @@ function X(e) {
             ),
         });
     function ee(e) {
-        return (0, a.P0)((0, o.o)(new N.A(e, e.status).message, c.Ck.FAILURE));
+        return (0, a.P)((0, o.o)(new N.A(e, e.status).message, c.Ck.FAILURE));
     }
     function et() {
         return (0, f.CV)(e.quest.id).catch(ee);

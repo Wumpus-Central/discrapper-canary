@@ -4,7 +4,7 @@ var i = n(439372),
     a = n(309010),
     s = n(477900),
     l = n(582128),
-    o = n(691540),
+    o = n(376357),
     d = n(857250),
     c = n(97483),
     u = n(192308),
@@ -21,7 +21,7 @@ var i = n(439372),
 function S(e) {
     let { guildId: t, channelId: n, channelName: i } = e,
         r = l.useCallback(() => {
-            ((0, o.VD)(), (0, p.i)(t, n));
+            ((0, o.V)(), (0, p.i)(t, n));
         }, [t, n]);
     return (0, s.jsxs)("div", {
         className: A()(g.oR, m.oR),
@@ -925,7 +925,7 @@ function N(e) {
         i.channel_id !== a.Ay.getCurrentlySelectedChannelId() &&
             ((t = i.channel_id),
             null != (e = _.A.getChannel(t)?.name) &&
-                (0, o.P0)(
+                (0, o.P)(
                     (0, d.o)("", c.Ck.CUSTOM, {
                         component: (0, s.jsx)(S, { guildId: E, channelId: t, channelName: e }),
                         duration: 6e3,

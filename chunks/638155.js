@@ -6,7 +6,7 @@ var a = l(477900),
     o = l(331322),
     s = l(738188),
     u = l(834730),
-    d = l(691540),
+    d = l(376357),
     c = l(857250),
     g = l(97483),
     m = l(95477),
@@ -80,9 +80,9 @@ function v(t) {
         })(v);
     async function G() {
         try {
-            (await D(), (0, d.P0)((0, c.o)(S.intl.string(b.default["2WKfG1"]), g.Ck.SUCCESS)), l());
+            (await D(), (0, d.P)((0, c.o)(S.intl.string(b.default["2WKfG1"]), g.Ck.SUCCESS)), l());
         } catch {
-            (0, d.P0)((0, c.o)(S.intl.string(b.default.Wu8BK2), g.Ck.FAILURE));
+            (0, d.P)((0, c.o)(S.intl.string(b.default.Wu8BK2), g.Ck.FAILURE));
         }
     }
     let R = [

@@ -10,7 +10,7 @@ var n = a(477900),
     m = a(534890),
     c = a(646270),
     p = a(31300),
-    h = a(691540),
+    h = a(376357),
     f = a(857250),
     g = a(97483),
     y = a(834730),
@@ -338,7 +338,7 @@ var e2 = a(379307),
     e6 = a(629584),
     e1 = a(753514),
     e9 = a(491920);
-function e8(e) {
+function e7(e) {
     let { modes: t, mode: a, onChange: i, className: l } = e,
         r = s.useMemo(() => t.map((e) => ({ value: e, name: (0, e1.kZ)(e), "aria-controls": (0, e1.z3)(e) })), [t]),
         d = s.useCallback(
@@ -359,7 +359,7 @@ function e8(e) {
               onChange: d,
           });
 }
-var e7 = a(663417),
+var e8 = a(663417),
     e3 = a(70688),
     e4 = a(173936),
     e5 = a(473935),
@@ -376,7 +376,7 @@ var tr = a(976814),
     tu = a(793712);
 let tm = [];
 function tc(e) {
-    (0, h.P0)((0, f.o)(e, g.Ck.FAILURE));
+    (0, h.P)((0, f.o)(e, g.Ck.FAILURE));
 }
 function tp(e) {
     let {
@@ -492,8 +492,8 @@ function tp(e) {
                                         null != v
                                             ? (0, n.jsx)(eU.Dr, {
                                                   id: "refresh",
-                                                  icon: e7.RefreshIcon,
-                                                  leadingAccessory: { type: "icon", icon: e7.RefreshIcon },
+                                                  icon: e8.RefreshIcon,
+                                                  leadingAccessory: { type: "icon", icon: e8.RefreshIcon },
                                                   label: X.intl.string(K.default.xKexN1),
                                                   disabled: j,
                                                   action: v,
@@ -591,7 +591,7 @@ function tp(e) {
                                                   leadingAccessory: { type: "icon", icon: e4.LinkIcon },
                                                   action: () =>
                                                       (0, ts.C)((0, tn.n)(i, td.VV.VIBEGRATIONS, t), () =>
-                                                          (0, h.P0)(
+                                                          (0, h.P)(
                                                               (0, f.o)(X.intl.string(X.t["L/PwZf"]), g.Ck.SUCCESS),
                                                           ),
                                                       ),
@@ -604,7 +604,7 @@ function tp(e) {
                                             leadingAccessory: { type: "icon", icon: e5.L },
                                             action: () =>
                                                 (0, ts.C)(t, () =>
-                                                    (0, h.P0)((0, f.o)(X.intl.string(K.default.WOKsTg), g.Ck.SUCCESS)),
+                                                    (0, h.P)((0, f.o)(X.intl.string(K.default.WOKsTg), g.Ck.SUCCESS)),
                                                 ),
                                         }),
                                     ],
@@ -633,7 +633,7 @@ function tp(e) {
                                                     variant: "critical",
                                                     onConfirm: () => {
                                                         (0, Z.K)(t, () =>
-                                                            (0, h.P0)(
+                                                            (0, h.P)(
                                                                 (0, f.o)(X.intl.string(K.default.tqKZCi), g.Ck.FAILURE),
                                                             ),
                                                         );
@@ -858,7 +858,7 @@ let t1 = {
         (0, ek.openModal)((t) => (0, n.jsx)(tG, { ...t, reason: e }));
     },
     openPublishNotes: tz.A,
-    showError: (e) => (0, h.P0)((0, f.o)(e, g.Ck.FAILURE)),
+    showError: (e) => (0, h.P)((0, f.o)(e, g.Ck.FAILURE)),
     openProfile: (e) => {
         (0, F.openUserProfileModal)({ userId: e });
     },
@@ -892,12 +892,12 @@ function t9(e) {
             (m = s.useCallback(() => {
                 l.current ||
                     ((l.current = !0),
-                    (0, h.P0)((0, f.o)(X.intl.formatToPlainString(K.default.u9TapG, { name: i }), g.Ck.MESSAGE)),
+                    (0, h.P)((0, f.o)(X.intl.formatToPlainString(K.default.u9TapG, { name: i }), g.Ck.MESSAGE)),
                     eW(a, i)
                         .catch((e) => {
                             let t;
                             (console.error("[vibegrations] project export failed", a, e),
-                                (0, h.P0)(
+                                (0, h.P)(
                                     (0, f.o)(
                                         409 === (t = e instanceof q._v ? e.status : null)
                                             ? X.intl.string(K.default.uB40Hz)
@@ -919,7 +919,7 @@ function t9(e) {
                         (e) => {
                             let t = eX(e);
                             null != t
-                                ? (0, h.P0)((0, f.o)(t, g.Ck.FAILURE))
+                                ? (0, h.P)((0, f.o)(t, g.Ck.FAILURE))
                                 : (0, u.A)({
                                       title: X.intl.formatToPlainString(K.default.XYZqZK, { name: i }),
                                       subtitle: X.intl.string(K.default["6syXoH"]),
@@ -930,7 +930,7 @@ function t9(e) {
                                           try {
                                               await eK(a, e, X.intl.string(K.default.C7GU2r));
                                           } catch {
-                                              (0, h.P0)((0, f.o)(X.intl.string(K.default["02GpNr"]), g.Ck.FAILURE));
+                                              (0, h.P)((0, f.o)(X.intl.string(K.default["02GpNr"]), g.Ck.FAILURE));
                                           }
                                       },
                                   });
@@ -1109,7 +1109,7 @@ function t9(e) {
         ],
     });
 }
-function t8(e) {
+function t7(e) {
     var t;
     let { project: i, projectsLoaded: o, onBack: l, guildId: r } = e,
         [m, c] = s.useState(!0),
@@ -1201,7 +1201,7 @@ function t8(e) {
                                 a() &&
                                     (E({ entry: e, status: "failed" }),
                                     console.error("[vibegrations] version restore failed", t, n),
-                                    (0, h.P0)((0, f.o)(X.intl.string(K.default.q6iZ84), g.Ck.FAILURE)));
+                                    (0, h.P)((0, f.o)(X.intl.string(K.default.q6iZ84), g.Ck.FAILURE)));
                             },
                         )
                         .finally(() => {
@@ -1232,7 +1232,7 @@ function t8(e) {
                     let t = i.id,
                         a = eX(e);
                     null != a
-                        ? (0, h.P0)((0, f.o)(a, g.Ck.FAILURE))
+                        ? (0, h.P)((0, f.o)(a, g.Ck.FAILURE))
                         : (0, u.A)({
                               title: X.intl.formatToPlainString(K.default.XYZqZK, { name: i.name }),
                               subtitle: X.intl.string(K.default["6syXoH"]),
@@ -1243,7 +1243,7 @@ function t8(e) {
                                   try {
                                       await eK(t, e, X.intl.string(K.default.C7GU2r));
                                   } catch {
-                                      (0, h.P0)((0, f.o)(X.intl.string(K.default["02GpNr"]), g.Ck.FAILURE));
+                                      (0, h.P)((0, f.o)(X.intl.string(K.default["02GpNr"]), g.Ck.FAILURE));
                                   }
                               },
                           });
@@ -1333,7 +1333,7 @@ function t8(e) {
                     : (0, n.jsxs)("div", {
                           className: tJ.FO,
                           children: [
-                              et.showModeSwitch ? (0, n.jsx)(e8, { modes: et.modes, mode: en, onChange: es }) : null,
+                              et.showModeSwitch ? (0, n.jsx)(e7, { modes: et.modes, mode: en, onChange: es }) : null,
                               (0, n.jsx)(z.A.Icon, {
                                   icon: eP ? t6 : t2,
                                   tooltip: eE,
@@ -1486,7 +1486,7 @@ function t8(e) {
         ],
     });
 }
-function t7(e) {
+function t8(e) {
     let {
             projects: t,
             idea: i,
@@ -1622,7 +1622,7 @@ function t7(e) {
             (e) => {
                 "user" === e.install_scope || (0, eu.X0)(e, l)
                     ? A(e.id)
-                    : (0, h.P0)((0, f.o)(X.intl.string(K.default["wY7I+H"]), g.Ck.MESSAGE));
+                    : (0, h.P)((0, f.o)(X.intl.string(K.default["wY7I+H"]), g.Ck.MESSAGE));
             },
             [l, A],
         ),
@@ -2172,7 +2172,7 @@ function t3(e) {
         L = s.useCallback(
             async (e, t) => {
                 let n = eX(e);
-                if (null != n) return void (0, h.P0)((0, f.o)(n, g.Ck.FAILURE));
+                if (null != n) return void (0, h.P)((0, f.o)(n, g.Ck.FAILURE));
                 F(!0);
                 let s = null;
                 try {
@@ -2184,7 +2184,7 @@ function t3(e) {
                         E(null));
                 } catch {
                     (null != s && (await (0, Z.xx)(s).catch(() => void 0)),
-                        (0, h.P0)((0, f.o)(X.intl.string(K.default["02GpNr"]), g.Ck.FAILURE)));
+                        (0, h.P)((0, f.o)(X.intl.string(K.default["02GpNr"]), g.Ck.FAILURE)));
                 } finally {
                     F(!1);
                 }
@@ -2214,8 +2214,8 @@ function t3(e) {
         ),
         ea = (0, d.bG)([eg.Ay], () => eg.Ay.hasFetchedGuildProjects(a), [a]);
     return null != c
-        ? (0, n.jsx)(t8, { project: ee, projectsLoaded: ea, onBack: $, guildId: a }, c)
-        : (0, n.jsx)(t7, {
+        ? (0, n.jsx)(t7, { project: ee, projectsLoaded: ea, onBack: $, guildId: a }, c)
+        : (0, n.jsx)(t8, {
               projects: o,
               modelSettings: P,
               onModelSettingsChange: E,

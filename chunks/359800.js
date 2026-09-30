@@ -2,7 +2,7 @@ n.d(t, { z: () => m });
 var i = n(477900),
     r = n(582128),
     l = n(192308),
-    s = n(691540),
+    s = n(376357),
     u = n(97483),
     a = n(475743),
     o = n(942370),
@@ -38,7 +38,7 @@ function m(e, t) {
         r.useEffect(() => {
             if (E && !1 === _ && !0 === t) {
                 function e() {
-                    (0, s.P0)({
+                    (0, s.P)({
                         id: "account-linked-toast",
                         message: d.intl.string(c.default.uG6teD),
                         type: u.Ck.SUCCESS,

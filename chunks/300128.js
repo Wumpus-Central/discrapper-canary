@@ -4,7 +4,7 @@ var i = n(228366),
     a = n(477900);
 n(582128);
 var s = n(834730),
-    l = n(691540),
+    l = n(376357),
     o = n(857250),
     d = n(97483),
     c = n(625075),
@@ -50,7 +50,7 @@ class m extends r.A {
             e.context !== T.x.DEFAULT ||
             f.hasShownBanner() ||
             c.k.getConfig({ location: "VideoGuardBannerManager" }).videoEnabled ||
-            ((0, l.P0)((0, o.o)("", d.Ck.CUSTOM, { position: d.xJ.TOP, component: (0, a.jsx)(E, {}), duration: 6e3 })),
+            ((0, l.P)((0, o.o)("", d.Ck.CUSTOM, { position: d.xJ.TOP, component: (0, a.jsx)(E, {}), duration: 6e3 })),
             i.h.dispatch({ type: "VIDEO_GUARD_BANNER_SHOWN" }));
     };
 }

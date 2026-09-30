@@ -15,7 +15,7 @@ var i = n(477900),
     g = n.n(h),
     p = n(231483),
     E = n(661531),
-    f = n(691540),
+    f = n(376357),
     j = n(857250),
     y = n(97483),
     N = n(939249),
@@ -47,7 +47,7 @@ function D(e) {
             (e, s) => {
                 l?.feedback_type !== e &&
                     ((0, C.v2)(t, n, e),
-                    (0, f.P0)((0, j.o)(T.intl.string(T.t["gd/Yqs"]), y.Ck.CUSTOM, { component: (0, i.jsx)(k, {}) })),
+                    (0, f.P)((0, j.o)(T.intl.string(T.t["gd/Yqs"]), y.Ck.CUSTOM, { component: (0, i.jsx)(k, {}) })),
                     (0, _._$)({ channelId: t, warningId: n, senderId: a, warningType: l?.type, cta: s }));
             },
             [l, t, n, a],

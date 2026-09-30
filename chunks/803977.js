@@ -3,7 +3,7 @@ var s = l(477900),
     a = l(582128),
     n = l(17928),
     r = l(189213),
-    i = l(691540),
+    i = l(376357),
     u = l(857250),
     c = l(97483),
     d = l(834730),
@@ -315,7 +315,7 @@ ${n}`;
                         null != l &&
                             (await m.A.sendMessage(e, b.Ay.parse(l, t), !1, { location: er.Hx.ACTIVITY_SHARE }));
                     }),
-                    (0, i.P0)(
+                    (0, i.P)(
                         (0, u.o)(S.intl.formatToPlainString(S.t.jQULqL, { applicationName: _.name }), c.Ck.SUCCESS),
                     ),
                     P(!0),
@@ -325,7 +325,7 @@ ${n}`;
         ),
         $ = a.useCallback(() => {
             (0, j.C)(G, () => {
-                (L(), (0, i.P0)((0, u.o)(S.intl.string(S.t.t5VZ88), c.Ck.SUCCESS)));
+                (L(), (0, i.P)((0, u.o)(S.intl.string(S.t.t5VZ88), c.Ck.SUCCESS)));
             });
         }, [G, L]),
         Y =

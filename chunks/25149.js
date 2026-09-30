@@ -192,7 +192,7 @@ var D = n(596034),
     A = n(939249),
     S = n(307301),
     P = n(661531),
-    k = n(691540),
+    k = n(376357),
     G = n(857250),
     R = n(97483),
     w = n(459357),
@@ -227,7 +227,7 @@ function z(e) {
                       initialCode: s ?? "",
                       onComplete: (e) => {
                           let n = (0, M.$g)(e.amount, e.currency);
-                          ((0, k.P0)(
+                          ((0, k.P)(
                               (0, G.o)(T.intl.formatToPlainString(F.default["66Wi6B"], { price: n }), R.Ck.SUCCESS, {
                                   position: R.xJ.TOP,
                               }),

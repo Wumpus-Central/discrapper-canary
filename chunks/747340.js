@@ -4,7 +4,7 @@ var l,
     r = n(477900),
     a = n(582128),
     s = n(17928),
-    o = n(691540),
+    o = n(376357),
     u = n(857250),
     c = n(97483),
     d = n(228366),
@@ -1660,7 +1660,7 @@ function tD(e) {
     let J = a.useCallback(
             (e) => {
                 (z(e),
-                    (0, o.P0)(
+                    (0, o.P)(
                         (0, u.o)(void 0 !== P ? P : Y.intl.string(Y.t["VJPg+l"]), c.Ck.SUCCESS, {
                             position: c.xJ.BOTTOM,
                         }),

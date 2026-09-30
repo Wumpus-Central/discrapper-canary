@@ -150,7 +150,7 @@ function x(e) {
         ee = (0, C.k5)("RootThemeContextProvider"),
         et = (0, C.lV)("RootThemeContextProvider"),
         en = (0, O.c)("RootThemeContextProvider"),
-        ei = (0, N.D)("RootThemeContextProvider"),
+        ei = (0, N.D2)("RootThemeContextProvider"),
         er = (0, T.m2)({ isPopoutWindow: l }),
         ea = (function (e) {
             let { theme: t, saturation: n, enabledExperiments: i, focused: r, mainWindowVisible: l, locale: o } = e,
