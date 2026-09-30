@@ -84,7 +84,7 @@ class N extends l.PureComponent {
                 (o || t !== D.BEX.EMOJI) &&
                 (o || t !== D.BEX.STICKERS) &&
                 (o || t !== D.BEX.SOUNDBOARD) &&
-                (c || t !== D.BEX.BANS) &&
+                (c || d || t !== D.BEX.BANS) &&
                 (g || t !== D.BEX.MEMBERS)) ||
                 (0, s.jH)());
     }

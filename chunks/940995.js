@@ -27802,7 +27802,7 @@ let { getSectionDefinition: IW } = {
                         impressionName: A.ImpressionNames.GUILD_SETTINGS_BANS,
                         label: el.intl.string(el.t.ZbeITS),
                         element: EE,
-                        predicate: () => t.canManageBans,
+                        predicate: () => t.canManageBans || t.canViewAuditLog,
                     };
                 case ei.BEX.COMMUNITY:
                     let a = el.intl.string(el.t.ElKTeb);
