@@ -335,7 +335,7 @@ class j extends P {
     }
     maybeStartNtpClock() {
         let { useNtpClock: e } = U.getConfig({ location: "ClipsManager#handlePostConnectionOpen" });
-        e && s.A.ntpClock?.start().catch(() => {});
+        e && s.A?.ntpClock?.start().catch(() => {});
     }
 }
 async function W() {
