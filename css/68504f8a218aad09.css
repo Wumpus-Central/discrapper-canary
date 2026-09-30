@@ -318,34 +318,6 @@
     border-color: var(--control-secondary-border-hover)
 }
 
-.accountAddWrapper__41de9 {
-    position: relative
-}
-
-.accountAddInner__41de9 {
-    align-items: center;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: 28px 28px;
-    border-radius: var(--radius-sm);
-    color: var(--control-secondary-icon-default);
-    display: flex;
-    height: 44px;
-    justify-content: center;
-    width: 44px
-}
-
-.accountAddInner__41de9:hover {
-    background-color: var(--control-secondary-background-hover);
-    border-color: var(--control-secondary-border-hover);
-    cursor: pointer
-}
-
-.accountAddInner__41de9:disabled {
-    opacity: .5;
-    pointer-events: none
-}
-
 .connectionList__41de9 {
     display: grid;
     grid-gap: 24px
@@ -1144,4 +1116,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=99ac6e7fea60bfd1.css.map*/
+/*# sourceMappingURL=68504f8a218aad09.css.map*/

@@ -1,8 +1,6 @@
 e.exports = {
     lA: "connectionsContainer__41de9",
     U$: "accountButtonInner__41de9",
-    ej: "accountAddWrapper__41de9",
-    R8: "accountAddInner__41de9",
     V: "connectionList__41de9",
     FI: "connection__41de9",
     Il: "connectionHeader__41de9",

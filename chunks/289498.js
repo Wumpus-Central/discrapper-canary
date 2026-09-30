@@ -14,11 +14,11 @@ var i = n(503698),
     m = n(652215),
     N = n(397270);
 let v = function (e) {
-    let { disabled: t = !1, type: n, className: i, innerClassName: v, onConnect: A } = e,
-        b = (0, d.Ay)(),
-        k = o.A.get((0, p.ML)(n));
+    let { disabled: t = !1, type: n, className: i, innerClassName: v, onConnect: A, location: b } = e,
+        k = (0, d.Ay)(),
+        x = o.A.get((0, p.ML)(n));
     return (0, a.jsx)(c.m, {
-        text: k.name,
+        text: x.name,
         children: (0, a.jsx)("div", {
             className: s()(N.iE, i),
             children: (0, a.jsx)(r.vN, {
@@ -26,7 +26,7 @@ let v = function (e) {
                     className: s()(N.vW, v),
                     type: "button",
                     disabled: t,
-                    style: { backgroundImage: `url('${(0, l.M)(b) ? k.icon.darkSVG : k.icon.lightSVG}')` },
+                    style: { backgroundImage: `url('${(0, l.M)(k) ? x.icon.darkSVG : x.icon.lightSVG}')` },
                     onClick:
                         null != A
                             ? A
@@ -34,7 +34,7 @@ let v = function (e) {
                                   let e;
                                   return (
                                       (e = o.A.get(n)),
-                                      void ((0, u.A)({ platformType: e.type, location: "Friends List" }),
+                                      void ((0, u.A)({ platformType: e.type, location: b ?? "Friends List" }),
                                       h.default.track(m.HAw.ACCOUNT_LINK_STEP, {
                                           previous_step: "desktop connections",
                                           current_step: "desktop oauth",
@@ -42,7 +42,7 @@ let v = function (e) {
                                       }))
                                   );
                               },
-                    "aria-label": k.name,
+                    "aria-label": x.name,
                 }),
             }),
         }),
