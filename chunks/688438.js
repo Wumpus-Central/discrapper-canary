@@ -2033,30 +2033,32 @@ let n4 = i.memo(function (e) {
                             a = (0, h.bG)([tm.A], () => tm.A.getGuildAffinity(e.guild_id)?.score),
                             r = (0, h.bG)([th.A], () => th.A.hasConsented(ew.YAq.PERSONALIZATION)),
                             o = (0, tE.A)(),
-                            [c] = (0, tu.Wl)(td.M.FIRST_BOOSTER_UPSELL_OVERSEER, {
+                            c = i.useMemo(
+                                () =>
+                                    !(
+                                        !r ||
+                                        null == a ||
+                                        a <= 17.06 ||
+                                        e.type !== ew.rbe.GUILD_TEXT ||
+                                        null == t ||
+                                        tx.default.age(t.id) < tS ||
+                                        null == t.premiumSubscriberCount ||
+                                        0 !== t.premiumSubscriberCount ||
+                                        n < 10 ||
+                                        l?.id == null ||
+                                        tx.default.age(l.id) > tI
+                                    ) &&
+                                    (s || o),
+                                [r, e.type, t, n, a, l?.id, s, o],
+                            ),
+                            [d, u] = i.useState(() => new Set());
+                        c && !d.has(e.id) && u(new Set(d).add(e.id));
+                        let m = c || d.has(e.id),
+                            [g] = (0, tu.Wl)(m ? td.M.FIRST_BOOSTER_UPSELL_OVERSEER : null, {
                                 cooldownDurationMs: 0,
                                 numTimesToRecur: 3,
-                            }),
-                            d = c === td.M.FIRST_BOOSTER_UPSELL_OVERSEER;
-                        return i.useMemo(
-                            () =>
-                                !(
-                                    !d ||
-                                    !r ||
-                                    null == a ||
-                                    a <= 17.06 ||
-                                    e.type !== ew.rbe.GUILD_TEXT ||
-                                    null == t ||
-                                    tx.default.age(t.id) < tS ||
-                                    null == t.premiumSubscriberCount ||
-                                    0 !== t.premiumSubscriberCount ||
-                                    n < 10 ||
-                                    l?.id == null ||
-                                    tx.default.age(l.id) > tI
-                                ) &&
-                                (s || o),
-                            [d, r, e.type, t, n, a, l?.id, s, o],
-                        );
+                            });
+                        return g === td.M.FIRST_BOOSTER_UPSELL_OVERSEER;
                     })(e);
                 t && s && n.push(td.M.FIRST_BOOSTER_UPSELL);
                 let [a, r] = (0, tu.ww)(n, l?.id ?? ew.eGj);

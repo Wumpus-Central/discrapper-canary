@@ -11,12 +11,13 @@ var i = n(582128),
     _ = n(966971);
 let E = function () {
     let e = (0, s.bG)([c.A], () => c.A.getMarketingBySurface(r.R.DESKTOP_SHOP_BUTTON)),
-        t = !(0, o.hasAnyModalOpen)(),
-        [n, E] = (0, d.RF)(t ? l.M.COLLECTIBLES_SHOP_ENTRY_MARKETING : null, e?.version ?? 0, void 0, !0),
+        [t, n] = (0, d.RF)(l.M.COLLECTIBLES_SHOP_ENTRY_MARKETING, e?.version ?? 0, void 0, !0),
+        E = (0, o.useHasAnyModalOpen)(),
         A = (0, u.bv)(e),
         h =
-            null != n
-                ? (function (e, t) {
+            null == t || E
+                ? null
+                : (function (e, t) {
                       if (t?.type === a.G.BADGE)
                           return {
                               type: _.FF.BADGE,
@@ -73,13 +74,12 @@ let E = function () {
                                 showHoverGradient: t.showHoverGradient,
                             }
                           : null;
-                  })(A, e)
-                : null,
+                  })(A, e),
         I = i.useCallback(
             (e) => {
-                null != h && E(e);
+                null != h && n(e);
             },
-            [h, E],
+            [h, n],
         );
     return { shopButtonDisplayOptions: h, dismissShopButtonDC: I };
 };
