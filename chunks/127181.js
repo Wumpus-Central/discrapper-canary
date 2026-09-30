@@ -587,6 +587,13 @@ let n = [
             "On phones, your own profile offers Custom card: describe a public source and Conjure builds a profile card from it.",
     },
     {
+        date: "2026-09-29",
+        time: "22:14",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Once your app is live, a small tip under Conjure's latest reply says when the live version is out of date, with a link to update it.",
+    },
+    {
         date: "2026-09-02",
         time: "00:04",
         platforms: ["desktop", "mobile"],

@@ -26450,6 +26450,7 @@
   "gOv8LL": "Ship {projectName}",
   "x71ku3": "Needs Manage Server in {server}",
   "ogEl54": "[{name}]({name}) is live.",
+  "AcWS6c": "The live version is out of date. [{action}]({action})",
   "tg9fgb": "I updated your live app [{name}]({name}).",
   "ncJb2S": "I updated your live bot [{name}]({name}).",
   "M3cBMT": "I updated your live rule [{name}]({name}).",

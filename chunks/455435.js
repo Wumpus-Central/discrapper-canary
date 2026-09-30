@@ -23,8 +23,8 @@ var n = l(582128),
     w = l(976860),
     A = l(345942),
     S = l(287809),
-    C = l(652215),
-    E = l(165610),
+    E = l(652215),
+    C = l(165610),
     I = l(522250),
     M = l(58551),
     T = l(759967),
@@ -117,6 +117,7 @@ function _(e) {
             destination: u.destination,
             navigatesOnPublish: !1,
             upToDate: !0,
+            isUpdate: !1,
             disabledReason: null,
         };
     let d = "guild" === t && !1 === i ? P.intl.formatToPlainString(T.default.x71ku3, { server: a ?? "" }) : null,
@@ -126,18 +127,19 @@ function _(e) {
             integrationInstalled: n?.integration_installed ?? null,
             botPermissionsChanged: n?.bot_permissions_changed === !0,
         }),
-        f = {
+        f = "changes" === l.state && !o,
+        m = {
             intent: c ? "consent_then_publish" : "publish",
             destination: u?.destination ?? null,
             upToDate: !1,
+            isUpdate: f,
             disabledReason: d,
         },
-        m = "changes" === l.state && !o,
-        h = null != u && (m ? u.navigatesOnUpdate : u.navigatesOnFirstPublish);
+        h = null != u && (f ? u.navigatesOnUpdate : u.navigatesOnFirstPublish);
     if (c && n?.bot_permissions_changed === !0)
-        return { ...f, label: P.intl.string(T.default.zFcLHP), action: "review_permissions", navigatesOnPublish: h };
+        return { ...m, label: P.intl.string(T.default.zFcLHP), action: "review_permissions", navigatesOnPublish: h };
     let g = u?.update ?? P.intl.string(T.default["91710b"]);
-    return { ...f, label: m ? g : P.intl.string(T.default["5gU57O"]), action: "publish", navigatesOnPublish: h };
+    return { ...m, label: f ? g : P.intl.string(T.default["5gU57O"]), action: "publish", navigatesOnPublish: h };
 }
 var R = l(145216);
 let L = n.createContext(null);
@@ -161,7 +163,7 @@ function D(e, t) {
             guildName: r?.name ?? null,
             appChannelName: null == a ? null : (d.A.getChannel(a)?.name ?? null),
             appChannelPending: x.Ay.isAppChannelPending(e),
-            canManageGuild: null == r ? null : m.A.can(C.xBc.MANAGE_GUILD, r),
+            canManageGuild: null == r ? null : m.A.can(E.xBc.MANAGE_GUILD, r),
             botInGuild: (function (e, t) {
                 if (null == t) return null;
                 let l = o.A.getMutualGuilds(F(e));
@@ -182,7 +184,7 @@ function O(e, t, l) {
         switch (e) {
             case "launch":
                 if ((0, N.x)(u.A.getApplication(n)))
-                    return (k.A.launchFrame({ applicationId: n, surface: E.sd }).catch(() => {}), Promise.resolve());
+                    return (k.A.launchFrame({ applicationId: n, surface: C.sd }).catch(() => {}), Promise.resolve());
                 break;
             case "profile": {
                 let e = S.default.getCurrentUser()?.id;
@@ -190,7 +192,7 @@ function O(e, t, l) {
                 break;
             }
             case "channel":
-                if (null != a && null != r) return ((0, w.pX)(C.BVt.CHANNEL(a, r)), Promise.resolve());
+                if (null != a && null != r) return ((0, w.pX)(E.BVt.CHANNEL(a, r)), Promise.resolve());
                 break;
             case "automod":
                 if (null != a && null != s) return (s(a), Promise.resolve());
@@ -198,7 +200,7 @@ function O(e, t, l) {
         if ("dm" !== e && null != a) {
             let e;
             return (
-                null != (e = c.Ay.getDefaultChannel(a)?.id) ? (0, w.pX)(C.BVt.CHANNEL(a, e)) : (0, A.u)(a),
+                null != (e = c.Ay.getDefaultChannel(a)?.id) ? (0, w.pX)(E.BVt.CHANNEL(a, e)) : (0, A.u)(a),
                 Promise.resolve()
             );
         }
@@ -235,7 +237,7 @@ function z(e, t, l) {
         i = n.id,
         s = t.navigatesOnPublish ? t.destination : null,
         u = "user" === n.install_scope || null != s ? null : (0, g.$C)(i);
-    (u?.catch(() => {}), "channel" === s && G(i, !0));
+    (u?.catch(() => {}), "channel" === s && U(i, !0));
     let o = (0, g.TV)(i).then((e) => {
             if (!0 !== e.ok) {
                 let t;
@@ -261,13 +263,13 @@ function z(e, t, l) {
                     null != s &&
                         (q.has(s) && (0, I.cP)(i),
                         d
-                            .then(() => ("channel" === s ? U(i, r) : void 0))
-                            .finally(() => G(i, !1))
+                            .then(() => ("channel" === s ? G(i, r) : void 0))
+                            .finally(() => U(i, !1))
                             .then(() => O(D(i, r) ?? e, s, a))
                             .catch(() => {})));
             },
             (e) => {
-                (G(i, !1), a.showError(e instanceof Error ? e.message : P.intl.string(T.default.fNP6Cd)));
+                (U(i, !1), a.showError(e instanceof Error ? e.message : P.intl.string(T.default.fNP6Cd)));
             },
         ),
         null != u && null != e.guildId)
@@ -284,10 +286,10 @@ function z(e, t, l) {
             }));
     }
 }
-function G(e, t) {
+function U(e, t) {
     r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING", projectId: e, pending: t });
 }
-async function U(e, t) {
+async function G(e, t) {
     let l = Date.now() + 5e3;
     for (; D(e, t)?.appChannelId == null && Date.now() < l;) await new Promise((e) => setTimeout(e, 250));
 }
@@ -407,11 +409,11 @@ function K(e, t) {
                       },
             [g, v, b, j, y, k, N, w, A],
         ),
-        C = S?.status?.state ?? null,
-        E = S?.installScope === "guild" && S.status?.surface === "bot";
+        E = S?.status?.state ?? null,
+        C = S?.installScope === "guild" && S.status?.surface === "bot";
     n.useEffect(() => {
-        null != g && null != p && E && null != C && "unpublished" !== C && B(g);
-    }, [g?.id, p, E, C]);
+        null != g && null != p && C && null != E && "unpublished" !== E && B(g);
+    }, [g?.id, p, C, E]);
     let I = n.useMemo(() => (null == S ? null : _(S)), [S]),
         M = n.useCallback(
             (t) => {
