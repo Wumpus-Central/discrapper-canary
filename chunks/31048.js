@@ -4,5 +4,5 @@ function r() {
     return i.Ay.getMediaEngine().getSystemSteadyClockNowMs() ?? Date.now();
 }
 function a(e) {
-    return Date.now() + (e ?? 0) - r();
+    return Math.round(Date.now() + (e ?? 0) - r());
 }
