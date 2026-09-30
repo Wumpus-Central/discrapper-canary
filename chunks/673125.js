@@ -1,6 +1,6 @@
 l.d(t, { Ay: () => E, EB: () => C, Y0: () => m });
-var n,
-    a,
+var a,
+    n,
     s = l(17928),
     i = l(228366),
     r = l(287809),
@@ -28,13 +28,14 @@ function d() {
         nitroGatedOrbMultiplier: null,
         achievementUnreadState: null,
         lastFetchedPremiumType: void 0,
+        userOpenedWalletViaProfileDCF: !1,
     };
 }
 var m =
         588245 != l.j
-            ? (((n = {}).NEW_ACHIEVEMENT = "new_achievement"), (n.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), n)
+            ? (((a = {}).NEW_ACHIEVEMENT = "new_achievement"), (a.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), a)
             : null,
-    C = (((a = {}).CLAIM_CHALLENGE = "claim_challenge"), (a.FETCH_CHALLENGES = "fetch_challenges"), a);
+    C = (((n = {}).CLAIM_CHALLENGE = "claim_challenge"), (n.FETCH_CHALLENGES = "fetch_challenges"), n);
 class _ extends s.Ay.Store {
     static displayName = "OrbChallengesStore";
     state = d();
@@ -120,6 +121,9 @@ class _ extends s.Ay.Store {
             ? void this.setAchievementUnreadState({ has_unclaimed_achievements: !0 })
             : (t.type, !1);
     }
+    setUserOpenedWalletViaProfileDCF(e) {
+        this.state.userOpenedWalletViaProfileDCF = e;
+    }
     get orbChallengesDisplayError() {
         let { fetchChallengesError: e, claimChallengeErrorMap: t } = this.state,
             l = Object.values(t).find((e) => null != e);
@@ -128,6 +132,9 @@ class _ extends s.Ay.Store {
             : null != e
               ? { error: e, errorType: "fetch_challenges" }
               : null;
+    }
+    get userOpenedWalletViaProfileDCF() {
+        return this.state.userOpenedWalletViaProfileDCF;
     }
     get orbRewardMultiplier() {
         return this.state.orbRewardMultiplier;

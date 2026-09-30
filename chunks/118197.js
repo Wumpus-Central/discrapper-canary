@@ -137,11 +137,12 @@ var Z = l(939249),
     J = l(342296),
     ee = l(518782);
 function et(e) {
-    let t = Math.floor(Math.max(e, 0) / O.A.Seconds.MINUTE);
-    return g.intl.formatToPlainString(Q.default["6Y8H0A"], {
-        hours: Math.floor(t / O.A.Minutes.HOUR),
-        minutes: t % O.A.Minutes.HOUR,
-    });
+    let t = Math.floor(Math.max(e, 0) / O.A.Seconds.MINUTE),
+        l = Math.floor(t / O.A.Minutes.HOUR),
+        n = t % O.A.Minutes.HOUR;
+    return 0 === l
+        ? g.intl.formatToPlainString(Q.default.DdzvGL, { minutes: n })
+        : g.intl.formatToPlainString(Q.default["6Y8H0A"], { hours: l, minutes: n });
 }
 function el(e, t) {
     switch (t) {
@@ -903,9 +904,9 @@ function e1(e, t, l) {
 }
 var e2 = l(868602),
     e3 = l(445187),
-    e7 = l(650583),
-    e4 = l(684343);
-function e6(e) {
+    e4 = l(650583),
+    e6 = l(684343);
+function e7(e) {
     let { label: t, tabs: l, selectedId: n, panelId: s, getTabId: r, onSelect: d } = e,
         c = a.useCallback((e) => {
             let t,
@@ -916,18 +917,18 @@ function e6(e) {
                 a = i.indexOf(l);
             if (-1 !== a && 0 !== i.length) {
                 switch (e.key) {
-                    case e7.dh.ARROW_RIGHT:
-                    case e7.dh.ARROW_DOWN:
+                    case e4.dh.ARROW_RIGHT:
+                    case e4.dh.ARROW_DOWN:
                         t = (a + 1) % i.length;
                         break;
-                    case e7.dh.ARROW_LEFT:
-                    case e7.dh.ARROW_UP:
+                    case e4.dh.ARROW_LEFT:
+                    case e4.dh.ARROW_UP:
                         t = (a - 1 + i.length) % i.length;
                         break;
-                    case e7.dh.HOME:
+                    case e4.dh.HOME:
                         t = 0;
                         break;
-                    case e7.dh.END:
+                    case e4.dh.END:
                         t = i.length - 1;
                         break;
                     default:
@@ -937,7 +938,7 @@ function e6(e) {
             }
         }, []);
     return (0, i.jsx)("div", {
-        className: e4.vR,
+        className: e6.vR,
         role: "tablist",
         "aria-label": t,
         children: l.map((e) => {
@@ -948,14 +949,14 @@ function e6(e) {
                     type: "button",
                     role: "tab",
                     id: r(e.id),
-                    className: e4.Mf,
+                    className: e6.Mf,
                     "aria-selected": t,
                     "aria-controls": s,
                     tabIndex: t ? 0 : -1,
                     onClick: () => d(e.id),
                     onKeyDown: c,
                     children: (0, i.jsx)(f.E, {
-                        className: e4.Pf,
+                        className: e6.Pf,
                         tag: "span",
                         variant: "text-xs/medium",
                         color: "none",
@@ -1225,8 +1226,8 @@ function tn(e) {
                             l.e("199328"),
                             l.e("444795"),
                             l.e("455924"),
+                            l.e("462276"),
                             l.e("88160"),
-                            l.e("732672"),
                             l.e("403813"),
                             l.e("177104"),
                             l.e("844780"),
@@ -1918,20 +1919,20 @@ function t2(e) {
 function t3(e) {
     return t0((t) => t.byWidgetId[e]?.isCompact ?? tJ.isCompact);
 }
-function t7(e) {
+function t4(e) {
     return t0((t) => t.byWidgetId[e]?.selectedTrackId ?? tJ.selectedTrackId);
 }
-function t4(e, t) {
+function t6(e, t) {
     (t0.getState().byWidgetId[e] ?? tJ).view !== t && t1(e, { view: t, selectedTrackId: null });
 }
-function t6(e) {
+function t7(e) {
     return e.track_external_id;
 }
 function t8(e) {
     var t;
     let l,
         { guildId: n, widgetId: s, isCompact: r, data: d } = e,
-        c = t7(s),
+        c = t4(s),
         o = t0((e) => e.byWidgetId[s]?.canShowEmbed ?? tJ.canShowEmbed),
         u = a.useCallback(
             (e) => {
@@ -1957,7 +1958,7 @@ function t8(e) {
                 label: tS(tE.TOP_SONGS),
                 items: d.ranked_songs,
                 isCompact: r,
-                getItemKey: t6,
+                getItemKey: t7,
                 renderItem: m,
             }),
             null != x
@@ -2096,7 +2097,7 @@ function ld(e) {
         selectedId: a,
         menuLabel: g.intl.string(Q.default.hFYyGU),
         triggerLabel: g.intl.formatToPlainString(Q.default["/sw0JL"], { widgetName: l, viewName: tS(a) }),
-        onSelect: (e) => t4(t, e),
+        onSelect: (e) => t6(t, e),
     });
 }
 var lc = l(756936),
@@ -2358,7 +2359,7 @@ let lP = {
                     n),
                 x = t3(c.id),
                 h = t2(c.id),
-                f = t7(c.id),
+                f = t4(c.id),
                 g = !x && "view" === u,
                 j =
                     o?.status === "success" && h !== tE.TOP_LISTENERS
@@ -2420,13 +2421,13 @@ let lP = {
                 a = t2(t.id);
             return n
                 ? null
-                : (0, i.jsx)(e6, {
+                : (0, i.jsx)(e7, {
                       label: l,
                       tabs: tb.map((e) => ({ id: e, label: tS(e) })),
                       selectedId: a,
                       panelId: tC(t.id),
                       getTabId: (e) => ty(t.id, e),
-                      onSelect: (e) => t4(t.id, e),
+                      onSelect: (e) => t6(t.id, e),
                   });
         },
     },

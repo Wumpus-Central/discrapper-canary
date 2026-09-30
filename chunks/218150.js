@@ -114,11 +114,11 @@ function L(e) {
             if (null == t || !Number.isFinite(t) || t < 0) return null;
             switch (e.winningStat) {
                 case h.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED: {
-                    let e = Math.floor(t / d.A.Millis.MINUTE);
-                    return _.intl.formatToPlainString(N.default.GC7N5H, {
-                        hours: Math.floor(e / d.A.Minutes.HOUR),
-                        minutes: e % d.A.Minutes.HOUR,
-                    });
+                    let e = Math.floor(t / d.A.Millis.MINUTE),
+                        n = Math.floor(e / d.A.Minutes.HOUR),
+                        l = e % d.A.Minutes.HOUR;
+                    if (0 === n) return _.intl.formatToPlainString(N.default["/272et"], { minutes: l });
+                    return _.intl.formatToPlainString(N.default.GC7N5H, { hours: n, minutes: l });
                 }
                 case h.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
                     return _.intl.formatToPlainString(N.default.IXdbVJ, { days: t });

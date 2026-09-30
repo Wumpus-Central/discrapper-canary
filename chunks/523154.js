@@ -27,25 +27,28 @@ function o(e, t, n) {
 }
 function d(e, t) {
     let n,
-        o = (function (e) {
+        o,
+        d,
+        c = (function (e) {
             let { event: t, stat: n } = e;
             return t === r.zu.UNSPECIFIED || n === r.RE.GAMING_LEADERBOARD_STAT_UNSPECIFIED
                 ? null
                 : { event: t, stat: n };
         })(e);
-    return null == o
+    return null == c
         ? null
         : {
-              message: l[o.event][o.stat],
+              message: l[c.event][c.stat],
               values:
-                  ((n = Math.floor(Math.max(e.value, 0) / i.A.Millis.MINUTE)),
+                  ((o = Math.floor((n = Math.floor(Math.max(e.value, 0) / i.A.Millis.MINUTE)) / i.A.Minutes.HOUR)),
+                  (d = n % i.A.Minutes.HOUR),
                   {
                       ...t,
                       value: e.value,
-                      gameTime: s.intl.formatToPlainString(a.default["Sa+h68"], {
-                          hours: Math.floor(n / i.A.Minutes.HOUR),
-                          minutes: n % i.A.Minutes.HOUR,
-                      }),
+                      gameTime:
+                          0 === o
+                              ? s.intl.formatToPlainString(a.default["5AjG8l"], { minutes: d })
+                              : s.intl.formatToPlainString(a.default["Sa+h68"], { hours: o, minutes: d }),
                   }),
           };
 }
