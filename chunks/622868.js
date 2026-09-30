@@ -321,7 +321,7 @@ var eu = l(870136),
     ex = l(297264),
     eA = l(821609),
     ej = l(964486),
-    ep = l(966245),
+    ep = l(684519),
     ev = l(448290),
     ef = l(309010),
     eN = l(933884);
@@ -575,8 +575,8 @@ let e8 = function (e) {
     });
 };
 var e6 = l(812299),
-    e2 = l(109054),
-    e7 = l(318626);
+    e7 = l(109054),
+    e2 = l(318626);
 function e3(e) {
     let {
         avatarSrc: n,
@@ -604,10 +604,10 @@ function e3(e) {
                 onMouseLeave: d,
                 src: n,
                 "aria-hidden": !0,
-                className: s()(m, e7.my, { [e7.oE]: i, [e7.vk]: null != a, [e7.uU]: h }),
+                className: s()(m, e2.my, { [e2.oE]: i, [e2.vk]: null != a, [e2.uU]: h }),
                 alt: " ",
             }),
-            null == l || i ? null : (0, t.jsx)("img", { className: e7.M, src: l, alt: " ", "aria-hidden": !0 }),
+            null == l || i ? null : (0, t.jsx)("img", { className: e2.M, src: l, alt: " ", "aria-hidden": !0 }),
         ],
     });
 }
@@ -656,13 +656,13 @@ let e4 = i.memo(function (e) {
                                 clickTrap: !0,
                                 children: (e) => {
                                     let { onClick: n } = e;
-                                    return (0, t.jsx)(eM.A, { ref: E, ...o, className: e7.UT, onClick: n });
+                                    return (0, t.jsx)(eM.A, { ref: E, ...o, className: e2.UT, onClick: n });
                                 },
                             },
                             "role-icon-children",
                         )
                       : 2 === M
-                        ? (0, t.jsx)(eM.A, { ...o, className: e7.UT }, "role-icon-children")
+                        ? (0, t.jsx)(eM.A, { ...o, className: e2.UT }, "role-icon-children")
                         : null,
             [M, o, y],
         ),
@@ -714,7 +714,7 @@ let e4 = i.memo(function (e) {
                   }),
                   r &&
                       (0, t.jsxs)(t.Fragment, {
-                          children: [(0, t.jsx)("i", { className: e7.me, children: ":" }), " "],
+                          children: [(0, t.jsx)("i", { className: e2.me, children: ":" }), " "],
                       }),
               ],
           });
@@ -747,7 +747,7 @@ function e5(e, n, l) {
                 decorations: l,
                 preview: !0,
             }),
-            r && (0, t.jsxs)(t.Fragment, { children: [(0, t.jsx)("i", { className: e7.me, children: ":" }), " "] }),
+            r && (0, t.jsxs)(t.Fragment, { children: [(0, t.jsx)("i", { className: e2.me, children: ":" }), " "] }),
         ],
     });
 }
@@ -773,7 +773,7 @@ function e9(e) {
         children: [
             !c && l,
             (0, t.jsxs)(u.H, {
-                className: s()(e7.wx, x),
+                className: s()(e2.wx, x),
                 "aria-describedby": g,
                 "aria-labelledby": m,
                 children: [
@@ -793,7 +793,7 @@ function e9(e) {
                     d &&
                         !c &&
                         (0, t.jsx)(eY.A, { id: (0, eF.xl)(n), timestamp: n.timestamp, className: A, application: f }),
-                    null != p && p.length > 0 ? (0, t.jsx)("div", { className: e7.cV, children: p }) : null,
+                    null != p && p.length > 0 ? (0, t.jsx)("div", { className: e2.cV, children: p }) : null,
                 ],
             }),
         ],
@@ -853,7 +853,7 @@ let nn = i.memo(function (e) {
                 { analyticsLocations: b } = (0, A.Ay)(x.A.AVATAR),
                 C = eU.aM.useSetting(),
                 E = n.displayCompactAvatars ?? C,
-                y = (0, e2.A)(c),
+                y = (0, e7.A)(c),
                 M = u ? 32 : 80,
                 {
                     avatarSrc: _,
@@ -1000,7 +1000,7 @@ let nn = i.memo(function (e) {
                         text: en.intl.string(en.t["AeYyL+"]),
                         children: (0, t.jsxs)(t.Fragment, {
                             children: [
-                                (0, t.jsx)(m.g, { size: "xxs", color: "currentColor", className: a ? e7.EI : e7.bu }),
+                                (0, t.jsx)(m.g, { size: "xxs", color: "currentColor", className: a ? e2.EI : e2.bu }),
                                 (0, t.jsx)(g.A, { children: en.intl.string(en.t.AmHag5) }),
                             ],
                         }),
@@ -1019,7 +1019,7 @@ let nn = i.memo(function (e) {
             ],
         }),
         usernameSpanId: (0, eF.d$)(n, p),
-        usernameClassName: s()(e7.TK, { [e7.yF]: 0 !== O || G, [e7.hB]: null != w || P.length > 0 }),
+        usernameClassName: s()(e2.TK, { [e2.yF]: 0 !== O || G, [e2.hB]: null != w || P.length > 0 }),
         compact: a,
         showTimestamp: !0 !== v,
         showTimestampOnHover: u,
