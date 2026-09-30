@@ -1,5 +1,4 @@
 !(function (a) {
-    "use strict";
     var e = "nolla yksi kaksi kolme nelj\xe4 viisi kuusi seitsem\xe4n kahdeksan yhdeks\xe4n".split(" "),
         u = ["nolla", "yhden", "kahden", "kolmen", "nelj\xe4n", "viiden", "kuuden", e[7], e[8], e[9]];
     function n(a, n, s, t) {

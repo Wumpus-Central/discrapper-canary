@@ -697,6 +697,13 @@ let n = [
             "Project, app, secrets, and model settings now live together in one Settings dialog, one tab each; the gear beside the chat is gone.",
     },
     {
+        date: "2026-09-30",
+        time: "00:13",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Publish now tells you which server permissions you're missing when you can't publish an app into its server.",
+    },
+    {
         date: "2026-09-01",
         time: "00:02",
         platforms: ["desktop", "mobile"],
