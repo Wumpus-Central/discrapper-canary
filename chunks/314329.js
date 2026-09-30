@@ -10,6 +10,12 @@ function r(e) {
         videoPreview: (0, i.Zf)(e.video_preview),
         imagePreview: (0, i.Zf)(e.image_preview),
         videoHls: (0, i.dv)(e.video_hls),
+        videoRenditions: (function (e) {
+            if (null == e) return;
+            let t = {};
+            for (let [n, r] of Object.entries(e)) t[n] = (0, i.dv)(r);
+            return Object.keys(t).length > 0 ? t : void 0;
+        })(e.video_renditions),
         cta: {
             url: (t = e.cta).url,
             buttonLabel: t.button_label,
