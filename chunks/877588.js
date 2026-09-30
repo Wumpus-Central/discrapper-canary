@@ -1,8 +1,8 @@
 (i.r(t), i.d(t, { default: () => h }), i(321073));
 var l = i(19575),
     n = i(696016),
-    r = i(801344),
-    a = i(375708);
+    a = i(801344),
+    r = i(375708);
 async function s(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = await l.Ay.fetchRiotGamesLiveClientData(e, t);
@@ -11,7 +11,7 @@ async function s(e) {
 }
 function o(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        i = r.j3[e],
+        i = a.j3[e],
         l = t.triggerOverride ?? i.triggerClipCandidate;
     return {
         type: n.Gy.GAME_EVENT,
@@ -68,7 +68,7 @@ class m {
                 n.nx.info(
                     `[LoL] connected to Live Client API \u{2014} game started (player=${this.activePlayerName ?? "?"})`,
                 ),
-                this.emitLifecycleEvent(r.rS, a.intl.string(a.t["94Kji7"]), a.intl.string(a.t.fyCsox))),
+                this.emitLifecycleEvent(a.n_.GameStart, r.intl.string(r.t["94Kji7"]), r.intl.string(r.t.fyCsox))),
             (this.currentHealthFraction = (function (e) {
                 let { currentHealth: t, maxHealth: i } = e.championStats;
                 return i <= 0 ? 1 : Math.max(0, Math.min(1, t / i));
@@ -80,7 +80,7 @@ class m {
             n.nx.info(`[LoL] active-player poll failed (${this.consecutiveFailures}/10)`),
             this.consecutiveFailures >= 10 &&
                 (n.nx.info("[LoL] game ended (no API response)"),
-                this.emitLifecycleEvent(r.oy, a.intl.string(a.t.hlOYoA), a.intl.string(a.t.NxavgD)),
+                this.emitLifecycleEvent(a.n_.GameEnd, r.intl.string(r.t.hlOYoA), r.intl.string(r.t.NxavgD)),
                 this.resetGameState()));
     }
     async pollPlayerState(e) {
@@ -105,7 +105,7 @@ class m {
     updateDeadState(e) {
         e !== this.isDead &&
             ((this.isDead = e),
-            e || this.emitLifecycleEvent(r.Ou, a.intl.string(a.t.ebbBDl), a.intl.string(a.t.CCiFY7)));
+            e || this.emitLifecycleEvent(a.n_.Respawn, r.intl.string(r.t.ebbBDl), r.intl.string(r.t.CCiFY7)));
     }
     emitLifecycleEvent(e, t, i) {
         (n.nx.info(`[LoL] lifecycle marker: ${e}`),
@@ -197,46 +197,46 @@ class m {
             switch (e.type) {
                 case "ChampionKill":
                     if (e.playerIsKiller)
-                        return o(r.WU, {
-                            title: a.intl.string(a.t.ky6syM),
-                            description: a.intl.formatToPlainString(a.t["2sxvfW"], { name: e.victimName }),
+                        return o(a.n_.ChampionKill, {
+                            title: r.intl.string(r.t.ky6syM),
+                            description: r.intl.formatToPlainString(r.t["2sxvfW"], { name: e.victimName }),
                         });
                     if (e.playerIsAssister)
-                        return o(r.ve, {
-                            title: a.intl.string(a.t["3CK6jo"]),
-                            description: a.intl.formatToPlainString(a.t.NyJvKf, { name: e.victimName }),
+                        return o(a.n_.ChampionAssist, {
+                            title: r.intl.string(r.t["3CK6jo"]),
+                            description: r.intl.formatToPlainString(r.t.NyJvKf, { name: e.victimName }),
                         });
                     if (e.victimIsActivePlayer)
-                        return o(r.Wi, {
-                            title: a.intl.string(a.t["C/WqTT"]),
-                            description: a.intl.formatToPlainString(a.t["wZ/IFO"], { name: e.killerName }),
+                        return o(a.n_.ChampionDeath, {
+                            title: r.intl.string(r.t["C/WqTT"]),
+                            description: r.intl.formatToPlainString(r.t["wZ/IFO"], { name: e.killerName }),
                         });
                     return null;
                 case "Multikill":
                     if (e.killerIsActivePlayer) {
                         let t = Math.max(2, Math.min(5, e.killStreak)),
-                            i = r.Br[t],
+                            i = a.Br[t],
                             { title: l, description: n } = (() => {
                                 switch (t) {
                                     case 2:
                                         return {
-                                            title: a.intl.string(a.t["+K7bbR"]),
-                                            description: a.intl.string(a.t["+zq0aZ"]),
+                                            title: r.intl.string(r.t["+K7bbR"]),
+                                            description: r.intl.string(r.t["+zq0aZ"]),
                                         };
                                     case 3:
                                         return {
-                                            title: a.intl.string(a.t.fzI1wr),
-                                            description: a.intl.string(a.t.brXPUX),
+                                            title: r.intl.string(r.t.fzI1wr),
+                                            description: r.intl.string(r.t.brXPUX),
                                         };
                                     case 4:
                                         return {
-                                            title: a.intl.string(a.t.ntn0Eu),
-                                            description: a.intl.string(a.t.GcWpwl),
+                                            title: r.intl.string(r.t.ntn0Eu),
+                                            description: r.intl.string(r.t.GcWpwl),
                                         };
                                     case 5:
                                         return {
-                                            title: a.intl.string(a.t.JMxzCr),
-                                            description: a.intl.string(a.t["9yXGOS"]),
+                                            title: r.intl.string(r.t.JMxzCr),
+                                            description: r.intl.string(r.t["9yXGOS"]),
                                         };
                                     default:
                                         return { title: void 0, description: void 0 };
@@ -246,61 +246,73 @@ class m {
                     }
                     return null;
                 case "LevelUp":
-                    return o(r.Ur, {
-                        title: a.intl.string(a.t["cp+kpc"]),
-                        description: a.intl.formatToPlainString(a.t["le5/P1"], { level: e.newLevel }),
+                    return o(a.n_.LevelUp, {
+                        title: r.intl.string(r.t["cp+kpc"]),
+                        description: r.intl.formatToPlainString(r.t["le5/P1"], { level: e.newLevel }),
                     });
                 case "ItemPurchase":
-                    return o(r.Zv, {
-                        title: a.intl.string(a.t["89CDAj"]),
-                        description: a.intl.formatToPlainString(a.t.cpRNkD, { itemName: e.itemName }),
+                    return o(a.n_.ItemPurchase, {
+                        title: r.intl.string(r.t["89CDAj"]),
+                        description: r.intl.formatToPlainString(r.t.cpRNkD, { itemName: e.itemName }),
                         hiddenFromTimeline: !0,
                     });
                 case "TurretKill":
                     if (e.playerHelpedKill)
-                        return o(r.Nv, { title: a.intl.string(a.t["SoivN/"]), description: a.intl.string(a.t.eZ1OSn) });
+                        return o(a.n_.TurretKill, {
+                            title: r.intl.string(r.t["SoivN/"]),
+                            description: r.intl.string(r.t.eZ1OSn),
+                        });
                     return null;
                 case "InhibitorKill":
                     if (e.playerHelpedKill)
-                        return o(r.fH, { title: a.intl.string(a.t["0Ttct6"]), description: a.intl.string(a.t.Pewjjq) });
+                        return o(a.n_.InhibitorKill, {
+                            title: r.intl.string(r.t["0Ttct6"]),
+                            description: r.intl.string(r.t.Pewjjq),
+                        });
                     return null;
                 case "DragonKill":
                     if (e.playerHelpedKill) {
                         if (e.stolen)
-                            return o(r.d4, {
-                                title: a.intl.formatToPlainString(a.t.DUQK8U, { drakeName: e.drakeName }),
-                                description: a.intl.formatToPlainString(a.t["8qsedd"], { killerName: e.killerName }),
+                            return o(a.n_.DragonSteal, {
+                                title: r.intl.formatToPlainString(r.t.DUQK8U, { drakeName: e.drakeName }),
+                                description: r.intl.formatToPlainString(r.t["8qsedd"], { killerName: e.killerName }),
                             });
-                        return o(r.Cq, {
-                            title: a.intl.formatToPlainString(a.t["AjNN1/"], { drakeName: e.drakeName }),
-                            description: a.intl.formatToPlainString(a.t.HlopAO, { killerName: e.killerName }),
+                        return o(a.n_.DragonKill, {
+                            title: r.intl.formatToPlainString(r.t["AjNN1/"], { drakeName: e.drakeName }),
+                            description: r.intl.formatToPlainString(r.t.HlopAO, { killerName: e.killerName }),
                         });
                     }
                     return null;
                 case "BaronKill":
                     if (e.playerHelpedKill) {
                         if (e.stolen)
-                            return o(r.oB, {
-                                title: a.intl.string(a.t["+WhzbK"]),
-                                description: a.intl.formatToPlainString(a.t.FUBbYu, { killerName: e.killerName }),
+                            return o(a.n_.BaronSteal, {
+                                title: r.intl.string(r.t["+WhzbK"]),
+                                description: r.intl.formatToPlainString(r.t.FUBbYu, { killerName: e.killerName }),
                             });
-                        return o(r.zy, {
-                            title: a.intl.string(a.t.KohKss),
-                            description: a.intl.formatToPlainString(a.t["4yYLUi"], { killerName: e.killerName }),
+                        return o(a.n_.BaronKill, {
+                            title: r.intl.string(r.t.KohKss),
+                            description: r.intl.formatToPlainString(r.t["4yYLUi"], { killerName: e.killerName }),
                         });
                     }
                     return null;
                 case "GameEnd":
                     if (e.win)
-                        return o(r.aP, { title: a.intl.string(a.t.vS7yZW), description: a.intl.string(a.t.qkARs9) });
-                    return o(r.j7, { title: a.intl.string(a.t["+sdglm"]), description: a.intl.string(a.t.xdsqBt) });
+                        return o(a.n_.Victory, {
+                            title: r.intl.string(r.t.vS7yZW),
+                            description: r.intl.string(r.t.qkARs9),
+                        });
+                    return o(a.n_.Defeat, {
+                        title: r.intl.string(r.t["+sdglm"]),
+                        description: r.intl.string(r.t.xdsqBt),
+                    });
                 default:
                     return null;
             }
         })(e);
         null != t &&
             (t.type === n.Gy.GAME_EVENT &&
-                (t.eventName === r.WU && (t.additionalData = { [r.kt]: this.currentHealthFraction }),
+                (t.eventName === a.n_.ChampionKill && (t.additionalData = { [a.kt]: this.currentHealthFraction }),
                 n.nx.info(`[LoL] emit event: ${t.eventName} score=${t.score?.toFixed(2)} importance=${t.importance}`)),
             this.emitSignal(t));
     }

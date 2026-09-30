@@ -13,14 +13,14 @@ var i = n(439372),
     A = n(399091),
     h = n(526233);
 let I = (0, n(945810).mj)({
-        kind: "user",
-        name: "2026-08-rocketleague-events",
-        defaultConfig: { enableRocketLeagueEvents: !1 },
-        variations: { 1: { enableRocketLeagueEvents: !0 } },
-    }),
-    f = n(786661).E.applicationIds["0"],
-    p = "356875988589740042";
-var T = n(876474),
+    kind: "user",
+    name: "2026-08-rocketleague-events",
+    defaultConfig: { enableRocketLeagueEvents: !1 },
+    variations: { 1: { enableRocketLeagueEvents: !0 } },
+});
+var f = n(171251),
+    p = n(826685),
+    T = n(876474),
     m = n(190443);
 let g = "Clip signal handler registration";
 function S(e) {
@@ -65,15 +65,15 @@ class N extends i.A {
                 {
                     type: "application",
                     name: "cs2-gsi",
-                    applicationId: f,
-                    isEnabled: () => S(f) && _.A.getConfig({ location: g }).enableCs2Gsi,
+                    applicationId: f.w,
+                    isEnabled: () => S(f.w) && _.A.getConfig({ location: g }).enableCs2Gsi,
                     importHandler: () => Promise.all([n.e("772493"), n.e("860838")]).then(n.bind(n, 525509)),
                 },
                 {
                     type: "application",
                     name: "dota-gsi",
-                    applicationId: p,
-                    isEnabled: () => S(p) && A.A.getConfig({ location: g }).enableDotaGsi,
+                    applicationId: p.b,
+                    isEnabled: () => S(p.b) && A.A.getConfig({ location: g }).enableDotaGsi,
                     importHandler: () => Promise.all([n.e("772493"), n.e("677980")]).then(n.bind(n, 250263)),
                 },
                 {

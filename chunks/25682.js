@@ -22,9 +22,9 @@ var n = l(477900),
     k = l(765548),
     A = l(775602),
     N = l(793574),
-    w = l(688810),
-    P = l(139286),
-    E = l(429913),
+    E = l(688810),
+    w = l(139286),
+    P = l(429913),
     L = l(769015),
     S = l(27620),
     I = l(540999),
@@ -34,7 +34,7 @@ var n = l(477900),
     _ = l(614584),
     R = l(362081),
     F = l(282207),
-    H = l(620957),
+    H = l(96065),
     z = l(245116),
     O = l(352527),
     U = l(280483),
@@ -156,9 +156,9 @@ var ex = l(621466),
     ek = l(22231),
     eA = l(983851),
     eN = l(31300),
-    ew = l(442433),
-    eP = l(587895),
-    eE = l(549973),
+    eE = l(442433),
+    ew = l(587895),
+    eP = l(549973),
     eL = l(549685),
     eS = l(174459),
     eI = l(403362),
@@ -172,7 +172,7 @@ var ex = l(621466),
     ez = l(284009),
     eO = l.n(ez),
     eU = l(460905),
-    eG = l(713608),
+    eG = l(869036),
     eK = l(696016),
     eV = l(153511);
 function e$(e) {
@@ -228,12 +228,15 @@ function eB(e) {
                 text: eo.intl.string(er.default["3gqpuo"]),
                 tooltipText: eo.intl.string(er.default["ry+jxm"]),
             });
-        case eK.Gy.GAME_EVENT:
+        case eK.Gy.GAME_EVENT: {
+            let e = (0, eG.u)(t.applicationId, eK.Gy.GAME_EVENT, t.decision.signal.eventName);
+            if (null == e) return null;
             return (0, n.jsx)(eq, {
-                icon: eG.q,
+                icon: e,
                 text: t.decision.signal.title ?? "",
                 tooltipText: eo.intl.string(er.default["347DBb"]),
             });
+        }
         default:
             return null;
     }
@@ -254,20 +257,20 @@ function eJ(e) {
         u = (0, eD.Y_)(),
         m = !0 === u.pending,
         h = t || m,
-        { analyticsLocations: x } = (0, w.Ay)(N.A.CLIPS_GALLERY_ITEM),
+        { analyticsLocations: x } = (0, E.Ay)(N.A.CLIPS_GALLERY_ITEM),
         { selectedClipIds: f, toggleClipSelection: g, isMultiSelectMode: p, picker: j } = a.useContext(eQ.$),
         v = j?.allowMultiSelect ?? !0,
         y = null != j ? (0, eX.$)(j.action).label : void 0,
         [C, b] = a.useState(!1),
-        [k, P] = a.useState(!1),
-        [E, L] = a.useState(!1),
+        [k, w] = a.useState(!1),
+        [P, L] = a.useState(!1),
         [S, I] = a.useState(!1),
         [M, D] = a.useState(0),
         _ = f.has(u.id),
         R = u.type === eK.nQ.SCREENSHOT,
         F = "auto" === u.clipMethod,
         H = (0, d.bG)([A.Ay], () => A.Ay.keyboardModeEnabled),
-        z = (k || C || (E && H)) && !_,
+        z = (k || C || (P && H)) && !_,
         O = a.useCallback(() => L(!0), []),
         U = a.useCallback((e) => {
             e.currentTarget.contains(e.relatedTarget) || L(!1);
@@ -302,7 +305,7 @@ function eJ(e) {
                               .map((e) => T.Ay.getClipById(e))
                               .filter(eI.Vq)
                         : [u];
-                (0, ew.L3)(
+                (0, eE.L3)(
                     e,
                     async () => {
                         let { default: e } = await Promise.all([
@@ -393,7 +396,7 @@ function eJ(e) {
             },
             [h, v, p, g, u, r],
         );
-    return (0, n.jsx)(w.f5, {
+    return (0, n.jsx)(E.f5, {
         value: x,
         children: (0, n.jsx)("div", {
             className: eW.hl,
@@ -408,8 +411,8 @@ function eJ(e) {
                 buttonRef: c?.ref,
                 onFocus: c?.onFocus,
                 className: s()(eW.Nr, { [eW.r9]: h, [eW.in]: C, [eW.wH]: _ }),
-                onMouseEnter: () => P(!0),
-                onMouseLeave: () => P(!1),
+                onMouseEnter: () => w(!0),
+                onMouseLeave: () => w(!1),
                 children: (0, n.jsx)("div", {
                     className: eW.w7,
                     children: (0, n.jsxs)(e0, {
@@ -554,7 +557,7 @@ function e2(e) {
                 e.currentTarget.hasPointerCapture(e.pointerId) && e.currentTarget.releasePointerCapture(e.pointerId));
         }, []),
         j = (0, d.yK)([M.default], () => o.users.map((e) => M.default.getUser(e)).filter(eI.Vq)),
-        v = (0, eE.e)({ timestamp: o.createdAt }),
+        v = (0, eP.e)({ timestamp: o.createdAt }),
         y = o.decision?.signal?.type,
         C = null != y && y !== eK.Gy.MANUAL,
         b =
@@ -714,7 +717,7 @@ function e5() {
 }
 function e8() {
     let e = (0, eD.Y_)(),
-        t = (0, d.bG)([eP.A], () => (null != e.applicationId ? eP.A.getApplication(e.applicationId) : null)),
+        t = (0, d.bG)([ew.A], () => (null != e.applicationId ? ew.A.getApplication(e.applicationId) : null)),
         l = t?.getIconURL(32);
     return (0, n.jsx)("div", {
         className: eW.Gt,
@@ -792,8 +795,8 @@ function te(e) {
             );
         }, [t.length, C, 48]),
         N = (0, q.GV)(),
-        w = a.useRef(null),
-        P = a.useMemo(() => {
+        E = a.useRef(null),
+        w = a.useMemo(() => {
             let e = Math.max(1, k),
                 t = [];
             for (let l of v) {
@@ -802,10 +805,10 @@ function te(e) {
             }
             return t;
         }, [v, k]),
-        E = a.useCallback(
+        P = a.useCallback(
             (e, t, l) =>
                 new Promise((e) => {
-                    w.current?.scrollRowIntoView(t);
+                    E.current?.scrollRowIntoView(t);
                     let n = 0;
                     requestAnimationFrame(function t() {
                         null != document.querySelector(l) || n >= 10 ? e() : (n++, requestAnimationFrame(t));
@@ -817,7 +820,7 @@ function te(e) {
             getContainerProps: L,
             getItemProps: S,
             getRowProps: I,
-        } = (0, K.A)({ navId: N, columnCounts: P, prepareFocus: E }),
+        } = (0, K.A)({ navId: N, columnCounts: w, prepareFocus: P }),
         M = a.useMemo(() => v.map((e) => Math.ceil(e.clips.length / k)), [v, k]),
         D = a.useMemo(() => M.reduce((e, t) => e + t, 0), [M]),
         _ = Math.floor(b / eh) + 20,
@@ -915,7 +918,7 @@ function te(e) {
     if (!r && 0 === v.length) return (0, n.jsx)(em, { isEmptyBecauseQuery: l > 0 });
     if (r && 0 === v.length) return (0, n.jsx)("div", { className: e4.dc, children: (0, n.jsx)(V.y, {}) });
     let U = (0, n.jsx)($.A, {
-            ref: w,
+            ref: E,
             role: "none presentation",
             className: e4.Vb,
             listPadding: y,
@@ -1049,11 +1052,11 @@ function tN(e) {
     let t = new Date(e);
     return new tC.ng(t.getFullYear(), t.getMonth() + 1, t.getDate());
 }
-let tw = new Intl.DateTimeFormat(void 0, { month: "short", day: "numeric", year: "numeric" });
-function tP(e) {
-    return tw.format(new Date(e));
+let tE = new Intl.DateTimeFormat(void 0, { month: "short", day: "numeric", year: "numeric" });
+function tw(e) {
+    return tE.format(new Date(e));
 }
-function tE(e) {
+function tP(e) {
     switch (e.preset) {
         case "today":
             return eo.intl.string(er.default.yOAWWM);
@@ -1066,8 +1069,8 @@ function tE(e) {
         case "last-year":
             return eo.intl.string(er.default.Nwj9v0);
         case "custom": {
-            let t = null != e.after ? tP(e.after) : null,
-                l = null != e.before ? tP(e.before) : null;
+            let t = null != e.after ? tw(e.after) : null,
+                l = null != e.before ? tw(e.before) : null;
             if (null != t && null != l)
                 return eo.intl.formatToPlainString(er.default["9pwQ/F"], { after: t, before: l });
             if (null != t) return eo.intl.formatToPlainString(er.default.k1FkTL, { date: t });
@@ -1160,12 +1163,12 @@ function tS(e) {
             (d(null), m(null), i(null));
         }, [i]),
         N = null != c || null != u,
-        w = a.useRef(null),
-        P = a.useCallback(() => Array.from(w.current?.querySelectorAll('[role="button"]') ?? []), []),
-        E = a.useCallback(
+        E = a.useRef(null),
+        w = a.useCallback(() => Array.from(E.current?.querySelectorAll('[role="button"]') ?? []), []),
+        P = a.useCallback(
             (e) => {
                 if ("ArrowDown" !== e.key && "ArrowUp" !== e.key) return;
-                let t = P();
+                let t = w();
                 if (0 === t.length) return;
                 (e.preventDefault(), e.stopPropagation());
                 let l = t.indexOf(e.target);
@@ -1173,7 +1176,7 @@ function tS(e) {
                 let n = Math.min(t.length - 1, Math.max(0, l + ("ArrowDown" === e.key ? 1 : -1)));
                 t[n]?.focus();
             },
-            [P],
+            [w],
         ),
         L = a.useCallback(
             (e) => {
@@ -1198,9 +1201,9 @@ function tS(e) {
                             children: eo.intl.string(er.default.upqksT),
                         }),
                         (0, n.jsxs)("div", {
-                            ref: w,
+                            ref: E,
                             className: tL.eF,
-                            onKeyDown: E,
+                            onKeyDown: P,
                             children: [
                                 h.map((e) =>
                                     (0, n.jsx)(
@@ -1432,7 +1435,7 @@ let tO = { all: er.default.lscwjQ, auto: er.default.xrOIkz, manual: er.default.D
 function tU() {
     let e = (0, e9.P)((e) => e.dateFilter),
         t = a.useRef(null),
-        l = null != e ? tE(e) : eo.intl.string(er.default.upqksT);
+        l = null != e ? tP(e) : eo.intl.string(er.default.upqksT);
     return (0, n.jsx)(tr.Y, {
         position: "bottom",
         align: "left",
@@ -1581,11 +1584,11 @@ function tV(e) {
         k = (0, e9.P)((e) => e.setSelectedGuildId),
         A = (0, e9.P)((e) => e.setSelectedActivity),
         N = (0, e9.P)((e) => e.setDateFilter),
-        w = (0, e9.P)((e) => e.clearFilters);
+        E = (0, e9.P)((e) => e.clearFilters);
     a.useEffect(() => {
         o && (d.current?.focus(), c(!1));
     }, [o, c]);
-    let P = a.useRef(null);
+    let w = a.useRef(null);
     a.useEffect(() => {
         let e = {
             type_filter: "all" !== m ? m : "",
@@ -1607,14 +1610,14 @@ function tV(e) {
                 e.filtered_by_activity
             )
         ) {
-            P.current = null;
+            w.current = null;
             return;
         }
         let t = JSON.stringify(e);
-        t !== P.current && ((P.current = t), eS.default.track(es.HAw.CLIPS_FILTER_CHANGED, e));
+        t !== w.current && ((w.current = t), eS.default.track(es.HAw.CLIPS_FILTER_CHANGED, e));
     }, [m, x, g, y, j, f, p, u, v]);
     let S = a.useMemo(() => l.map((e) => e.key), [l]),
-        I = (0, E.A)(S),
+        I = (0, P.A)(S),
         D = a.useMemo(() => new Map(I.map((e) => [e?.id, e])), [I]),
         T = a.useMemo(
             () =>
@@ -1718,7 +1721,7 @@ function tV(e) {
                             `game-${e}`,
                         );
                     }),
-                null != y && (0, n.jsx)(tH, { label: tE(y), onRemove: () => N(null) }, "date"),
+                null != y && (0, n.jsx)(tH, { label: tP(y), onRemove: () => N(null) }, "date"),
                 null != j &&
                     (0, n.jsx)(
                         tH,
@@ -1812,7 +1815,7 @@ function tV(e) {
                             size: "sm",
                             variant: "primary",
                             text: eo.intl.string(eo.t.O8k7O4),
-                            onClick: w,
+                            onClick: E,
                         }),
                     ],
                 }),
@@ -1970,13 +1973,13 @@ function t2(e) {
             C ? b() : v(G.oH.ALL_CLIPS);
         }, [C, b, v]),
         N = a.useMemo(() => (null == h ? null : (h.getBannerURL(1024) ?? h.screenshotUrls?.[0] ?? null)), [h]),
-        w = (0, d.yK)([M.default], () => {
+        E = (0, d.yK)([M.default], () => {
             let e = new Set();
             for (let l of t.clips) for (let t of l.users) e.add(t);
             return Array.from(e, (e) => M.default.getUser(e)).filter(eI.Vq);
         }),
-        P = a.useMemo(() => t.clips.filter((e) => "auto" === e.clipMethod).length, [t.clips]),
-        E = (0, eE.e)({ timestamp: t.startedAt }),
+        w = a.useMemo(() => t.clips.filter((e) => "auto" === e.clipMethod).length, [t.clips]),
+        P = (0, eP.e)({ timestamp: t.startedAt }),
         [S, I] = a.useState(800),
         D = (0, k.A)((e) => {
             I(e.target.clientWidth);
@@ -2067,24 +2070,24 @@ function t2(e) {
                                         color: "text-muted",
                                         children: eo.intl.format(er.default["+YIqQM"], { count: t.clips.length }),
                                     }),
-                                    P > 0 &&
+                                    w > 0 &&
                                         (0, n.jsxs)(n.Fragment, {
                                             children: [
                                                 (0, n.jsx)("span", { className: t1.TG, "aria-hidden": "true" }),
                                                 (0, n.jsx)(p.E, {
                                                     variant: "text-xs/normal",
                                                     color: "text-muted",
-                                                    children: eo.intl.format(er.default.eRrt7X, { count: P }),
+                                                    children: eo.intl.format(er.default.eRrt7X, { count: w }),
                                                 }),
                                             ],
                                         }),
                                     (0, n.jsx)("span", { className: t1.TG, "aria-hidden": "true" }),
-                                    (0, n.jsx)(p.E, { variant: "text-xs/normal", color: "text-muted", children: E }),
-                                    w.length > 0 &&
+                                    (0, n.jsx)(p.E, { variant: "text-xs/normal", color: "text-muted", children: P }),
+                                    E.length > 0 &&
                                         (0, n.jsxs)(n.Fragment, {
                                             children: [
                                                 (0, n.jsx)("span", { className: t1.TG, "aria-hidden": "true" }),
-                                                (0, n.jsx)(eg.A, { users: w, maxUsers: 5, size: eC._3.SIZE_16 }),
+                                                (0, n.jsx)(eg.A, { users: E, maxUsers: 5, size: eC._3.SIZE_16 }),
                                             ],
                                         }),
                                 ],
@@ -2338,16 +2341,16 @@ function ls(e) {
             (0, et.openUserSettings)(ee.X.CLIPS_PANEL);
         }, []),
         k = a.useMemo(() => t.map((e) => e.key), [t]),
-        A = (0, E.A)(k),
+        A = (0, P.A)(k),
         N = a.useMemo(() => new Map(A.map((e) => [e?.id, e])), [A]),
-        w = (0, q.GV)(),
-        P = (0, ln.A)(w),
-        { setFocus: S } = P,
+        E = (0, q.GV)(),
+        w = (0, ln.A)(E),
+        { setFocus: S } = w,
         I = o ?? r;
     a.useEffect(() => {
         S(I);
     }, [S, I]);
-    let { ref: M, onKeyDown: D, ...T } = (0, t8.LT)(P),
+    let { ref: M, onKeyDown: D, ...T } = (0, t8.LT)(w),
         _ = a.useCallback(
             (e) => {
                 j.current = e.key === t9.D$.ENTER || e.key === t9.D$.SPACE;
@@ -2360,7 +2363,7 @@ function ls(e) {
             [D],
         );
     return (0, n.jsx)(t8.hD, {
-        navigator: P,
+        navigator: w,
         children: (0, n.jsxs)("div", {
             className: la.H$,
             ...T,
@@ -2462,7 +2465,7 @@ function lc(e) {
         ...B
     } = e;
     (0, U.A)();
-    let { analyticsLocations: Y } = (0, w.Ay)(N.A.CLIPS_GALLERY),
+    let { analyticsLocations: Y } = (0, E.Ay)(N.A.CLIPS_GALLERY),
         Q = K?.onPick,
         X = K?.allowMultiSelect ?? !0,
         [W, Z] = a.useState(new Set()),
@@ -2518,15 +2521,15 @@ function lc(e) {
         ek = a.useRef(null),
         eA = (0, e9.P)((e) => e.gameFacet),
         eN = (0, e9.P)((e) => e.clippedWithFacet),
-        ew = (0, e9.P)((e) => e.activeMainLink),
-        eP = (0, e9.P)((e) => e.currentPage),
-        eE = eP === G.fB.HOME,
-        { ref: eL, height: eS = 64 } = (0, b.Ay)(eP),
+        eE = (0, e9.P)((e) => e.activeMainLink),
+        ew = (0, e9.P)((e) => e.currentPage),
+        eP = ew === G.fB.HOME,
+        { ref: eL, height: eS = 64 } = (0, b.Ay)(ew),
         eI = 68 + eS,
-        eM = eE ? 68 : eI - 16;
+        eM = eP ? 68 : eI - 16;
     a.useLayoutEffect(() => {
         ee(0);
-    }, [eP, ee]);
+    }, [ew, ee]);
     let eD = (0, e9.P)((e) => e.pendingContentFocus),
         eT = (0, e9.P)((e) => e.setPendingContentFocus),
         e_ = a.useRef(null);
@@ -2561,15 +2564,15 @@ function lc(e) {
             "all" !== e.clipMethodFilter,
     );
     a.useEffect(() => {
-        ew === G.oH.HOME && eR && e9.P.getState().setActiveMainLink(G.oH.ALL_CLIPS);
-    }, [ew, eR]);
+        eE === G.oH.HOME && eR && e9.P.getState().setActiveMainLink(G.oH.ALL_CLIPS);
+    }, [eE, eR]);
     let eF = a.useMemo(() => (null != eA ? [eA] : []), [eA]),
-        eH = (0, E.A)(eF)[0] ?? null,
+        eH = (0, P.A)(eF)[0] ?? null,
         ez = (0, d.bG)([M.default], () => (null != eN ? M.default.getUser(eN) : null), [eN]),
         eO = a.useMemo(() => {
             if (null != eA) return et.find((e) => e.key === eA)?.name ?? eo.intl.string(eo.t.dPVrEv);
             if (null != eN) return null != ez ? (ez.globalName ?? ez.username) : eN;
-            switch (ew) {
+            switch (eE) {
                 case G.oH.FAVORITES:
                     return eo.intl.string(eo.t["9rlCk1"]);
                 case G.oH.AUTO_CLIPS:
@@ -2579,11 +2582,11 @@ function lc(e) {
                 default:
                     return eo.intl.string(eo.t.dPVrEv);
             }
-        }, [eA, eN, ew, et, ez]),
+        }, [eA, eN, eE, et, ez]),
         eU = a.useMemo(() => {
             if (null != eA) return et.find((e) => e.key === eA)?.count ?? 0;
             if (null != eN) return el.find((e) => e.key === eN)?.count ?? 0;
-            switch (ew) {
+            switch (eE) {
                 case G.oH.HOME:
                     return null;
                 case G.oH.AUTO_CLIPS:
@@ -2593,7 +2596,7 @@ function lc(e) {
                 default:
                     return ea.allClips;
             }
-        }, [eA, eN, ew, et, el, ea]),
+        }, [eA, eN, eE, et, el, ea]),
         eG = a.useCallback(() => {
             (ef("editing"), A.Ay.useReducedMotion && eb(h.ip.ENTERED));
         }, []),
@@ -2722,11 +2725,11 @@ function lc(e) {
                     num_autoclips_loaded: e,
                     num_distributed_clips_loaded: t,
                     num_manual_clips_loaded: l,
-                    gallery_page: ew,
+                    gallery_page: eE,
                 }
             );
-        }, [es, ew]);
-    (0, P.A)(
+        }, [es, eE]);
+    (0, w.A)(
         { type: r.ImpressionTypes.MODAL, name: r.ImpressionNames.CLIP_GALLERY_VIEWED, properties: e2 },
         { disableTrack: ed },
         [e2, ed],
@@ -2742,7 +2745,7 @@ function lc(e) {
         }),
         [W, eV, eB, eY, K, X, eZ],
     );
-    return (0, n.jsx)(w.f5, {
+    return (0, n.jsx)(E.f5, {
         value: Y,
         children: (0, n.jsx)(eQ.$.Provider, {
             value: e3,
@@ -2769,7 +2772,7 @@ function lc(e) {
                                     children: [
                                         (0, n.jsxs)("div", {
                                             ref: J,
-                                            className: s()(lo.$Q, !eE && lo.iF),
+                                            className: s()(lo.$Q, !eP && lo.iF),
                                             children: [
                                                 (0, n.jsxs)("div", {
                                                     className: lo.ev,
@@ -2789,7 +2792,7 @@ function lc(e) {
                                                         }),
                                                         null == eA &&
                                                             null == eN &&
-                                                            ew === G.oH.AUTO_CLIPS &&
+                                                            eE === G.oH.AUTO_CLIPS &&
                                                             (0, n.jsx)(f.E, {
                                                                 icon: g.t,
                                                                 type: "early_access",
@@ -2839,7 +2842,7 @@ function lc(e) {
                                                 }),
                                             ],
                                         }),
-                                        eE
+                                        eP
                                             ? (0, n.jsx)(t5, {
                                                   filteredClips: en,
                                                   totalClipCount: es.length,
