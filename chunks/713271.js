@@ -16,4 +16,5 @@ var i,
         (i.ORB_MULTIPLIER = "orbMultiplier"),
         (i.COMBINED_ORBS = "combinedOrbs"),
         (i.YOUTUBE = "youtube"),
+        (i.XBOX_PARTNER_PASS = "xboxPartnerPass"),
         i);
