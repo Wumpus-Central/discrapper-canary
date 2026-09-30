@@ -54,11 +54,32 @@
 }
 
 .heroDetails__8e688 {
-    display: flex;
     flex-direction: column;
     gap: var(--space-4);
-    justify-content: flex-end;
+    justify-content: flex-end
+}
+
+.heroDetails__8e688,
+.titleRow__8e688 {
+    display: flex;
     min-width: 0
+}
+
+.titleRow__8e688 {
+    align-items: flex-end;
+    gap: var(--space-8)
+}
+
+.wavingWumpus__8e688 {
+    flex-shrink: 0;
+    height: 36px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 42px
+}
+
+.surpriseCover__8e688 {
+    cursor: pointer
 }
 
 .gameRankPill__8e688 {
@@ -560,4 +581,4 @@
     text-decoration: var(--link-decoration)
 }
 
-/*# sourceMappingURL=a10a07374cf43d35.css.map*/
+/*# sourceMappingURL=20bf186f79c80c2b.css.map*/
