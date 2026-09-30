@@ -233,7 +233,7 @@ let C = {
     showManualReviewDecidedTeenModal: function (e) {
         (0, a.openModalLazy)(
             async () => {
-                let { default: t } = await Promise.all([n.e("417886"), n.e("272647")]).then(n.bind(n, 986362));
+                let { default: t } = await Promise.all([n.e("417886"), n.e("226945")]).then(n.bind(n, 941656));
                 return (n) => (0, i.jsx)(t, { ...n, teenAgeRange: e });
             },
             { modalKey: T.xO },
