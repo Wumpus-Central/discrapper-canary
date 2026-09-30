@@ -1,4 +1,4 @@
-(r.d(t, { Ay: () => _, I: () => h, _5: () => y, _g: () => D, hY: () => A, pk: () => E }), r(321073));
+(r.d(t, { Ay: () => S, I: () => h, _5: () => y, _g: () => D, hY: () => A, pk: () => E }), r(321073));
 var n = r(435558),
     u = r(308528),
     l = r(115718),
@@ -43,16 +43,16 @@ function g(e) {
         return null != t ? { type: l.rD.USER, record: t, score: 0 } : null;
     }
 }
-function C(e, t) {
+function U(e, t) {
     return e.type === l.rD.USER
-        ? t || null != s.A.getDMChannelFromUserId(e.record.id)
+        ? !e.record.isSystemUser() && (!!t || null != s.A.getDMChannelFromUserId(e.record.id))
         : e.type === l.rD.GROUP_DM ||
               (e.record.type !== p.rbe.GUILD_FORUM &&
                   e.record.type !== p.rbe.GUILD_MEDIA &&
                   d.A.can(p.xBc.VIEW_CHANNEL, e.record) &&
                   d.A.can(p.xBc.SEND_MESSAGES, e.record));
 }
-function R(e, t) {
+function C(e, t) {
     let r,
         n = new Set();
     if (null != t) for (let e of t) n.add(e);
@@ -66,11 +66,11 @@ function R(e, t) {
         }
     return u;
 }
-function U(e, t) {
-    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : C;
+function R(e, t) {
+    let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : U;
     return e.filter((e) => (0, f.Vq)(e) && (e.type === l.rD.HEADER || ((0, a.N)(e) && r(e, t))));
 }
-function _(e) {
+function S(e) {
     let {
         results: t,
         hasQuery: r,
@@ -83,19 +83,19 @@ function _(e) {
         channelFilter: a,
         includeMissingDMs: p,
     } = e;
-    if (r) return R(U(t, p, a));
+    if (r) return C(R(t, p, a));
     let y = null != o && o.length > 0 ? o.map((e) => g(e)) : [],
         A = c.A.getChannelHistory(),
         h = A.length > 0 ? A.map((e) => (0, i.A)(e)) : [],
         D = l.length > 0 ? l.map((e) => (0, i.A)(e.id)) : [],
-        E = U([...y, null != s ? g(s) : null, ...h, ...D], p, a),
-        C = d?.find((e) => (0, n.isEqual)(e, f)) != null,
-        _ = null == f || C ? [] : [f.id];
+        E = R([...y, null != s ? g(s) : null, ...h, ...D], p, a),
+        U = d?.find((e) => (0, n.isEqual)(e, f)) != null,
+        S = null == f || U ? [] : [f.id];
     return null != u
-        ? R(
+        ? C(
               E.filter((e) => e.type === u),
-              _,
+              S,
           )
-        : R(E, _).slice(0, 15);
+        : C(E, S).slice(0, 15);
 }
 r(375708);
