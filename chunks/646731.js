@@ -16,12 +16,12 @@ var n = l(477900),
     A = l(166403),
     g = l(174459),
     f = l(124861),
-    p = l(318346),
-    L = l(362862),
+    L = l(318346),
+    p = l(362862),
     x = l(478996),
-    b = l(923138),
-    v = l(12510),
-    O = l(673125),
+    v = l(923138),
+    O = l(12510),
+    b = l(673125),
     R = l(821609),
     T = l(661531),
     N = l(403581),
@@ -48,14 +48,7 @@ function K(e) {
         a = t === f.x.COMPLETED || t === f.x.CLAIMED,
         s = (0, n.jsx)("div", {
             className: i()(Y.TK, { [Y.AM]: a }),
-            children: (0, n.jsx)(w.x, {
-                className: Y.t9,
-                staticAsset:
-                    "https://cdn.discordapp.com/assets/content/c25ca35dc2175b9ce33ad5bd427fb4c458cbb6cc6e8b01e592e70dd7472bfa0d.png",
-                webmAsset: V.A,
-                animationState: l,
-                assetAltText: "",
-            }),
+            children: (0, n.jsx)(w.x, { className: Y.t9, webmAsset: V.A, animationState: l, assetAltText: "" }),
         });
     return a
         ? (0, n.jsxs)("div", {
@@ -85,8 +78,8 @@ function Q(e) {
         null != c && (E(!0), await c(t).finally(() => E(!1)));
     }
     let g = null != o && r !== f.x.COMPLETED,
-        p = i()(Y.of, { [Y.o4]: d, [Y.D8]: m, [Y.or]: g }),
-        L = (0, n.jsxs)(n.Fragment, {
+        L = i()(Y.of, { [Y.o4]: d, [Y.D8]: m, [Y.or]: g }),
+        p = (0, n.jsxs)(n.Fragment, {
             children: [
                 (0, n.jsxs)("div", {
                     className: Y.Ub,
@@ -129,10 +122,10 @@ function Q(e) {
         x = a.useMemo(() => ({ onMouseEnter: () => C(!0), onMouseLeave: () => C(!1) }), []);
     return g
         ? (0, n.jsxs)(n.Fragment, {
-              children: [(0, n.jsx)(h.D, { className: p, ...x, onClick: o, children: L }), !u && (0, n.jsx)(X, {})],
+              children: [(0, n.jsx)(h.D, { className: L, ...x, onClick: o, children: p }), !u && (0, n.jsx)(X, {})],
           })
         : (0, n.jsxs)(n.Fragment, {
-              children: [(0, n.jsx)("div", { className: p, ...x, children: L }), !u && (0, n.jsx)(X, {})],
+              children: [(0, n.jsx)("div", { className: L, ...x, children: p }), !u && (0, n.jsx)(X, {})],
           });
 }
 var q = l(652215),
@@ -398,33 +391,33 @@ var ec = l(554146),
     eA = l(617986),
     eg = l(758836),
     ef = l(202541);
-function ep(e) {
+function eL(e) {
     let { analyticsLocations: t = [], shopTab: l = eg.G2.ORBS } = e;
     (0, em.Cz)({ tab: l, analyticsLocations: t, analyticsSource: d.A.ORBS_BALANCE_MENU });
 }
-function eL() {
+function ep() {
     (0, eA.mA)({ fromContent: ed.u.ORBS_BALANCE_MENU });
 }
 function ex(e) {
     let { analyticsLocations: t = [] } = e;
     (0, eC.A)({ subscriptionTier: ef.pe.TIER_2, analyticsLocations: t });
 }
-let eb = {
+let ev = {
     "1531422538125676707": (e) => {
         let { analyticsLocations: t } = e;
-        ep({ analyticsLocations: t, shopTab: eg.G2.HOME });
+        eL({ analyticsLocations: t, shopTab: eg.G2.HOME });
     },
     "1531422538125676708": (e) => {
         let { analyticsLocations: t } = e;
-        ep({ analyticsLocations: t, shopTab: eg.G2.HOME });
+        eL({ analyticsLocations: t, shopTab: eg.G2.HOME });
     },
     "1531422538125676709": (e) => {
         let { analyticsLocations: t } = e;
         ex({ analyticsLocations: t });
     },
 };
-var ev = l(49999),
-    eO = l(600676);
+var eO = l(49999),
+    eb = l(600676);
 function eR(e) {
     let {
         title: t,
@@ -439,11 +432,11 @@ function eR(e) {
         className: d,
     } = e;
     return (0, n.jsxs)("div", {
-        className: i()(eO.Vm, d),
+        className: i()(eb.Vm, d),
         children: [
             null != u
                 ? (0, n.jsx)("div", {
-                      className: eO.Fx,
+                      className: eb.Fx,
                       children: (0, n.jsx)(eo.K, {
                           icon: eh.P,
                           "aria-label": z.intl.string(z.t.cpT0Cq),
@@ -454,15 +447,15 @@ function eR(e) {
                   })
                 : null,
             (0, n.jsxs)("div", {
-                className: eO.iH,
+                className: eb.iH,
                 children: [
-                    null != l && (0, n.jsx)("img", { alt: a, src: l, className: eO.db }),
+                    null != l && (0, n.jsx)("img", { alt: a, src: l, className: eb.db }),
                     (0, n.jsxs)("div", {
                         children: [
                             (0, n.jsx)(S.E, {
                                 variant: "text-md/bold",
                                 color: "text-default",
-                                className: eO.L8,
+                                className: eb.L8,
                                 children: t,
                             }),
                             null != s &&
@@ -478,15 +471,15 @@ function eR(e) {
 function eT(e, t) {
     let { ctaClickHandler: l, dismissibleContent: n, ctaObject: s } = t,
         { analyticsPage: i = d.A.ORB_WALLET, forceVisible: r, onClose: c, onCloseWallet: o } = e,
-        [h, u] = (0, eu.kn)([n], ev.m.ORB_WALLET, !0),
+        [h, u] = (0, eu.kn)([n], eO.m.ORB_WALLET, !0),
         m = a.useCallback(() => {
-            ((0, p.Y)({ pageType: i, sectionType: d.A.ORB_WALLET_PRIMARY_CARD, ctaObject: s }),
+            ((0, L.Y)({ pageType: i, sectionType: d.A.ORB_WALLET_PRIMARY_CARD, ctaObject: s }),
                 l(),
-                r || u(ev.i.TAKE_ACTION),
+                r || u(eO.i.TAKE_ACTION),
                 o());
         }, [i, u, r, o, l, s]),
         C = a.useCallback(() => {
-            (r || u(ev.i.DISMISS), c());
+            (r || u(eO.i.DISMISS), c());
         }, [r, u, c]);
     return { onCtaClick: m, shouldHideCard: null == h && !r, onClose: C };
 }
@@ -501,7 +494,7 @@ function eN(e) {
             { analyticsPage: i, forceVisible: r, onClose: t, onCloseWallet: s },
             {
                 ctaClickHandler: a.useCallback(() => {
-                    ep({ analyticsLocations: c });
+                    eL({ analyticsLocations: c });
                 }, [c]),
                 dismissibleContent: ec.M.ORB_WALLET_SHOP_CTA_CARD,
                 ctaObject: d.A.ORB_WALLET_SHOP_CTA,
@@ -538,8 +531,8 @@ function ey(e) {
                 ctaObject: d.A.ORB_WALLET_PRIMARY_CARD_NITRO_UPSELL_CTA,
             },
         ),
-        { nitroGatedOrbMultiplier: _ } = (0, o.cf)([O.Ay], () => ({
-            nitroGatedOrbMultiplier: O.Ay.nitroGatedOrbMultiplier,
+        { nitroGatedOrbMultiplier: _ } = (0, o.cf)([b.Ay], () => ({
+            nitroGatedOrbMultiplier: b.Ay.nitroGatedOrbMultiplier,
         })),
         E = a.useMemo(() => z.intl.format(G.default["Ba/7wO"], { multiplier: _ }), [_]);
     return null == _ || h
@@ -554,7 +547,7 @@ function ey(e) {
               buttonVariant: "expressive",
               onCtaClick: u,
               onClose: C,
-              className: eO.ml,
+              className: eb.ml,
           });
 }
 var ej = l(123576);
@@ -651,8 +644,8 @@ function eP(e) {
             onClaim: eU,
         }),
         orbWalletFooter: (0, n.jsx)(ei, {
-            onQuestsClick: () => eL(),
-            onShopClick: () => ep({ analyticsLocations: [] }),
+            onQuestsClick: () => ep(),
+            onShopClick: () => eL({ analyticsLocations: [] }),
             totalOrbsRedeemed: r,
         }),
     });
@@ -671,11 +664,11 @@ function ek() {
 }
 function ew(e) {
     let { analyticsPage: t = d.A.ORB_WALLET, analyticsLocations: l = [], onCloseWallet: s = q.tEg } = e,
-        { challengesForOrbWallet: i, hasFetchedChallenges: r, refetch: c } = (0, b.z)({ shouldFetch: !0 }),
+        { challengesForOrbWallet: i, hasFetchedChallenges: r, refetch: c } = (0, v.z)({ shouldFetch: !0 }),
         h = (0, C.L)(ef.PremiumTypes.TIER_2),
-        { nitroGatedOrbMultiplier: u, orbChallengesDisplayError: m } = (0, o.cf)([O.Ay], () => ({
-            nitroGatedOrbMultiplier: O.Ay.nitroGatedOrbMultiplier,
-            orbChallengesDisplayError: O.Ay.orbChallengesDisplayError,
+        { nitroGatedOrbMultiplier: u, orbChallengesDisplayError: m } = (0, o.cf)([b.Ay], () => ({
+            nitroGatedOrbMultiplier: b.Ay.nitroGatedOrbMultiplier,
+            orbChallengesDisplayError: b.Ay.orbChallengesDisplayError,
         })),
         _ = a.useMemo(
             () =>
@@ -683,7 +676,7 @@ function ew(e) {
                     ? {
                           type: "warning",
                           message:
-                              m.errorType === O.EB.CLAIM_CHALLENGE
+                              m.errorType === b.EB.CLAIM_CHALLENGE
                                   ? z.intl.string(G.default.FYb5rH)
                                   : z.intl.format(G.default.ggLzeg, {
                                         underlineHook: (e) => (0, n.jsx)(eF, { text: e, onClick: c }),
@@ -694,7 +687,7 @@ function ew(e) {
         ),
         E = a.useCallback(
             () => (
-                (0, p.Y)({ pageType: t, sectionType: d.A.ORB_WALLET, ctaObject: d.A.ORB_WALLET_NITRO_BADGE_CLICK }),
+                (0, L.Y)({ pageType: t, sectionType: d.A.ORB_WALLET, ctaObject: d.A.ORB_WALLET_NITRO_BADGE_CLICK }),
                 s(),
                 (function (e) {
                     let { nitroGatedOrbMultiplier: t, userIsPremiumTier2: l } = e;
@@ -711,12 +704,12 @@ function ew(e) {
         A = a.useMemo(
             () =>
                 i.map((e) => {
-                    let n = null != e.achievementDefinitionId ? eb[e.achievementDefinitionId] : null,
+                    let n = null != e.achievementDefinitionId ? ev[e.achievementDefinitionId] : null,
                         a = { analyticsLocations: l },
                         i =
                             null != n
                                 ? () => {
-                                      ((0, p.Y)({
+                                      ((0, L.Y)({
                                           pageType: t,
                                           sectionType: d.A.ORB_WALLET,
                                           ctaObject: d.A.ORB_CHALLENGE_DISCOVERY_CLICK,
@@ -734,7 +727,7 @@ function ew(e) {
         isLoading: !r,
         inlineNoticeProps: _,
         challenges: A,
-        onClaim: v.Xz,
+        onClaim: O.Xz,
         onClickBadge: E,
         badgeText: z.intl.format(h ? G.default.OHLdjq : G.default.WOMrJf, { multiplier: u }),
         badgeAccessibilityLabel: eD(h, u),
@@ -749,27 +742,27 @@ function eG(e) {
             isProfilePopout: r,
         } = e,
         { balance: h } = (0, x.W0)(),
-        u = (0, L.H)({ location: "StatefulOrbWallet" }),
+        u = (0, p.H)({ location: "StatefulOrbWallet" }),
         { totalRedeemed: E } = (0, x.rQ)({ disableFetch: !u }),
         A = (0, C.L)(ef.PremiumTypes.TIER_2),
-        { analyticsLocations: b } = (0, m.Ay)(d.A.ORB_WALLET);
+        { analyticsLocations: v } = (0, m.Ay)(d.A.ORB_WALLET);
     a.useEffect(() => {
-        u && (0, v.eX)();
+        u && (0, O.eX)();
     }, [u]);
     let R = a.useCallback(() => {
-            ((0, p.Y)({ pageType: s, sectionType: d.A.ORB_WALLET_FOOTER, ctaObject: d.A.ORB_WALLET_SHOP_CTA }),
-                ep({ analyticsLocations: b }),
+            ((0, L.Y)({ pageType: s, sectionType: d.A.ORB_WALLET_FOOTER, ctaObject: d.A.ORB_WALLET_SHOP_CTA }),
+                eL({ analyticsLocations: v }),
                 i());
-        }, [b, s, i]),
+        }, [v, s, i]),
         T = a.useCallback(() => {
-            ((0, p.Y)({ pageType: s, sectionType: d.A.ORB_WALLET_FOOTER, ctaObject: d.A.ORB_WALLET_QUEST_HOME_CTA }),
-                eL(),
+            ((0, L.Y)({ pageType: s, sectionType: d.A.ORB_WALLET_FOOTER, ctaObject: d.A.ORB_WALLET_QUEST_HOME_CTA }),
+                ep(),
                 i());
         }, [s, i]),
         N = a.useMemo(() => eM(A, h), [A, h]),
-        { challengesForOrbWallet: S, hasFetchedChallenges: y } = (0, o.cf)([O.Ay], () => ({
-            challengesForOrbWallet: O.Ay.challengesForOrbWallet,
-            hasFetchedChallenges: O.Ay.hasFetchedChallenges,
+        { challengesForOrbWallet: S, hasFetchedChallenges: y } = (0, o.cf)([b.Ay], () => ({
+            challengesForOrbWallet: b.Ay.challengesForOrbWallet,
+            hasFetchedChallenges: b.Ay.hasFetchedChallenges,
         })),
         j = a.useRef(!1);
     a.useEffect(() => {
@@ -777,7 +770,7 @@ function eG(e) {
         let e = S.map((e) => e.achievementIdentifier),
             t = S.filter((e) => e.achievementStatus === f.x.COMPLETED).map((e) => e.achievementIdentifier);
         (g.default.track(q.HAw.ORB_WALLET_VIEWED, {
-            location_stack: b,
+            location_stack: v,
             location_page: s,
             location_section: d.A.ORB_WALLET,
             location_object: d.A.ORB_WALLET,
@@ -786,7 +779,7 @@ function eG(e) {
             wallet_visible_completed_achievements: t,
         }),
             (j.current = !0));
-    }, [y, S, N, b, s]);
+    }, [y, S, N, v, s]);
     let { pathname: I } = (0, c.zy)(),
         U = I.startsWith(q.BVt.COLLECTIBLES_SHOP),
         M = (0, _.p)(),
@@ -805,7 +798,7 @@ function eG(e) {
                   let { onClose: t } = e;
                   return eB({ userHasPremium: A, onClose: t, orbBalance: h, analyticsPage: s, onCloseWallet: i });
               },
-              orbChallengesCard: (0, n.jsx)(ew, { analyticsPage: s, analyticsLocations: b, onCloseWallet: i }),
+              orbChallengesCard: (0, n.jsx)(ew, { analyticsPage: s, analyticsLocations: v, onCloseWallet: i }),
               orbWalletFooter: (0, n.jsx)(ei, { ...B, totalOrbsRedeemed: E }),
           })
         : null;
