@@ -1,4 +1,4 @@
-n.d(t, { MX: () => v, Ay: () => J });
+n.d(t, { A: () => J });
 var i = n(515029),
     r = n.n(i),
     a = n(226782),
@@ -34,10 +34,10 @@ var S = n(135598),
     O = n(457699),
     R = n(811602),
     L = n(282108),
-    y = n(652215),
-    D = n(355097);
-let v = 3e3,
-    b = {};
+    y = n(961440),
+    D = n(652215),
+    v = n(355097);
+let b = {};
 function M(e) {
     return `${e.channel_id}:${e.id}`;
 }
@@ -116,7 +116,7 @@ function x(e, t) {
                             });
                         }
                     })(e);
-                }, v),
+                }, y.MX),
             }));
     });
     let a = n || new Set(r.map((e) => e.channel_id)).size > 1;
@@ -327,7 +327,7 @@ function z(e) {
 }
 function X(e) {
     let { settings: t, local: n } = e;
-    if (!n || t.type !== D.oD.PRELOADED_USER_SETTINGS) return !1;
+    if (!n || t.type !== v.oD.PRELOADED_USER_SETTINGS) return !1;
     let i = f.Ay.getChannelId();
     return null != i && Z(i);
 }
@@ -352,7 +352,7 @@ function Z(e) {
                 } = ((t = e.filter((e) => g(e) && 0 !== (0, L.Fg)(e))),
                 (n = e
                     .map((e) => {
-                        if (y.sl8.has(e.type) && null != e.messageReference) {
+                        if (D.sl8.has(e.type) && null != e.messageReference) {
                             let t = _.A.getMessageByReference(e.messageReference);
                             if (
                                 t.state === _.a.LOADED &&

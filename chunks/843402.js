@@ -13,4 +13,4 @@ function A() {
     if (!(0, o.isDesktop)()) throw Error("Attempted to stop observing candidate games on a non-desktop platform");
     (p.Ay.clearCandidateGamesCallback(), s.h.dispatch({ type: "GAME_DETECTION_WATCH_CANDIDATE_GAMES_STOP" }));
 }
-e(223273).Lb.ALL;
+e(970917).L.ALL;

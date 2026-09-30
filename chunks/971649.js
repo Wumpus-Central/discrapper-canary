@@ -1,46 +1,46 @@
-n.d(t, { RC: () => d, go: () => A, iY: () => c, vU: () => f, wW: () => E });
-var i = n(582128),
-    r = n(323889),
-    s = n(17928),
-    o = n(475743),
-    u = n(859703),
-    a = n(590202),
-    l = n(266569);
-function d(e) {
+n.d(t, { RC: () => c, go: () => E, iY: () => d, vU: () => A, wW: () => _ });
+var r = n(582128),
+    u = n(323889),
+    l = n(17928),
+    i = n(475743),
+    o = n(859703),
+    s = n(590202),
+    a = n(653819);
+function c(e) {
     var t, n;
-    let s =
+    let l =
             ((t = "questOrQuests" in e ? e.questOrQuests : void 0),
             (n = "adContentId" in e ? e.adContentId : void 0),
-            i.useMemo(
+            r.useMemo(
                 () => (null != n ? [n] : null != t ? (Array.isArray(t) ? t.map((e) => e.id) : [t.id]) : []),
                 [t, n],
             )),
-        o = "questOrQuests" in e ? r.p.QUEST : e.adCreativeType;
-    return i.useMemo(() => {
+        i = "questOrQuests" in e ? u.p.QUEST : e.adCreativeType;
+    return r.useMemo(() => {
         let t = (function (e) {
             let { adContentIds: t, questContent: n } = e;
             return `${[...t].sort().join("_")}_${n}`;
-        })({ adContentIds: s, questContent: e.questContent });
-        return (r.p.QUEST, { adContentIds: s, adCreativeType: o, key: t });
-    }, [s, e.questContent, o]);
+        })({ adContentIds: l, questContent: e.questContent });
+        return (u.p.QUEST, { adContentIds: l, adCreativeType: i, key: t });
+    }, [l, e.questContent, i]);
 }
-function c(e) {
+function d(e) {
     let { adContentIds: t, adCreativeType: n } = e,
-        l = (0, s.bG)([u.A], () => (n !== r.p.QUEST || 1 !== t.length ? null : u.A.getQuest(t[0])), [t, n]),
-        d = i.useMemo(() => (null == l ? null : (0, a.NI)(l)), [l]),
-        c = (0, o.Ay)(d);
-    return d !== c;
-}
-function C() {
-    return i.useContext(l.n0);
+        a = (0, l.bG)([o.A], () => (n !== u.p.QUEST || 1 !== t.length ? null : o.A.getQuest(t[0])), [t, n]),
+        c = r.useMemo(() => (null == a ? null : (0, s.NI)(a)), [a]),
+        d = (0, i.Ay)(c);
+    return c !== d;
 }
 function f() {
-    return C()?.current;
+    return r.useContext(a.n);
 }
 function A() {
-    return f()?.getId();
+    return f()?.current;
 }
 function E() {
-    let e = C();
-    return i.useCallback(() => e?.current?.getId(), [e]);
+    return A()?.getId();
+}
+function _() {
+    let e = f();
+    return r.useCallback(() => e?.current?.getId(), [e]);
 }

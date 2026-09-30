@@ -421,7 +421,7 @@ function el(e) {
                           onUpsellClick: function () {
                               (0, a.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
-                                      s.e("392028"),
+                                      s.e("118864"),
                                       s.e("629972"),
                                       s.e("334168"),
                                       s.e("935205"),

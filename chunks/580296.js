@@ -1,4 +1,4 @@
-n.d(t, { openRestrictedHoursModal: () => C, k: () => O });
+n.d(t, { openRestrictedHoursModal: () => N, k: () => C });
 var i = n(477900),
     r = n(582128),
     a = n(361158),
@@ -13,13 +13,12 @@ var i = n(477900),
     A = n(287809),
     h = n(375708),
     I = n(695515),
-    f = n(425116),
-    p = n(652215),
-    T = n(273665),
-    m = n(785613);
-function g(e) {
+    f = n(652215),
+    p = n(273665),
+    T = n(785613);
+function m(e) {
     let { onClose: t } = e,
-        n = (0, l.bG)([A.default, I.A], f.$),
+        n = (0, l.bG)([A.default, I.A], () => I.A.isCurrentUserInRestrictedHours()),
         a = (0, l.bG)([A.default], () => {
             let e = A.default.getCurrentUser()?.restrictedSchedule?.getNextEndTime();
             return null == e
@@ -31,57 +30,57 @@ function g(e) {
                   }).format(e);
         }),
         s = (0, l.bG)([A.default], () => A.default.getCurrentUser()?.username ?? ""),
-        g = r.useRef(!1),
-        S = r.useCallback(() => {
-            ((g.current = !0), (0, E.pX)(p.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours"));
+        m = r.useRef(!1),
+        g = r.useCallback(() => {
+            ((m.current = !0), (0, E.pX)(f.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours"));
         }, []);
     r.useEffect(() => {
-        n || g.current || t();
+        n || m.current || t();
     }, [n, t]);
-    let N = null != a ? h.intl.format(T.default.VfqJvY, { endTime: a }) : h.intl.string(T.default.abikhN);
+    let S = null != a ? h.intl.format(p.default.VfqJvY, { endTime: a }) : h.intl.string(p.default.abikhN);
     return (0, i.jsxs)("div", {
-        className: m.Tp,
+        className: T.Tp,
         children: [
-            (0, i.jsx)("div", { className: m.gh, "aria-hidden": !0 }),
-            (0, i.jsx)("div", { className: m.zX, "aria-hidden": !0, children: (0, i.jsx)("div", { className: m.cU }) }),
+            (0, i.jsx)("div", { className: T.gh, "aria-hidden": !0 }),
+            (0, i.jsx)("div", { className: T.zX, "aria-hidden": !0, children: (0, i.jsx)("div", { className: T.cU }) }),
             (0, i.jsxs)(o.B, {
                 direction: "vertical",
                 align: "center",
                 gap: 16,
-                className: `${m.kL} ${m.vx}`,
+                className: `${T.kL} ${T.vx}`,
                 children: [
                     (0, i.jsx)(d.w, {
                         artboard: "Teen Screen Time Illo",
                         stateMachine: "State Machine 1",
-                        className: m.jw,
+                        className: T.jw,
                     }),
                     (0, i.jsx)(c.E, {
                         variant: "text-lg/medium",
                         color: "text-overlay-light",
-                        className: m.h_,
-                        children: N,
+                        className: T.h_,
+                        children: S,
                     }),
                 ],
             }),
             (0, i.jsx)("div", {
-                className: `${m.qr} ${m.vx}`,
+                className: `${T.qr} ${T.vx}`,
                 children: (0, i.jsx)(c.E, {
                     variant: "text-sm/medium",
                     color: "text-subtle",
-                    children: h.intl.format(T.default.iqeKDz, {
+                    children: h.intl.format(p.default.iqeKDz, {
                         username: s,
-                        loginHook: (e, t) => (0, i.jsx)(u.Anchor, { onClick: S, children: e }, t),
+                        loginHook: (e, t) => (0, i.jsx)(u.Anchor, { onClick: g, children: e }, t),
                     }),
                 }),
             }),
         ],
     });
 }
-var S = n(191627);
-let N = !1;
-function C() {
-    N || ((N = !0), (0, a.B8)(() => (0, i.jsx)(g, { onClose: () => O() }), { layerKey: S.Uy, Layer: s.Ay }));
+var g = n(191627);
+let S = !1;
+function N() {
+    S || ((S = !0), (0, a.B8)(() => (0, i.jsx)(m, { onClose: () => C() }), { layerKey: g.Uy, Layer: s.Ay }));
 }
-function O() {
-    ((N = !1), (0, a.dF)(S.Uy));
+function C() {
+    ((S = !1), (0, a.dF)(g.Uy));
 }

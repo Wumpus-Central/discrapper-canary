@@ -34,8 +34,8 @@ function E(e) {
                     n.e("770940"),
                     n.e("302033"),
                     n.e("482911"),
-                    n.e("140817"),
-                ]).then(n.bind(n, 511144));
+                    n.e("291017"),
+                ]).then(n.bind(n, 578864));
                 return (n) => (0, o.jsx)(e, { channelId: t, warningId: i, senderId: r, warningType: a, modalProps: n });
             },
             {

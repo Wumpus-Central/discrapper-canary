@@ -14,7 +14,7 @@ var i,
 function h() {
     if (E.Fr) return null;
     let { default: e } = n(773371),
-        { default: t } = n(184809),
+        { default: t } = n(309913),
         { DEV_PID: i, getPID: r } = n(9302),
         a = e.isFocusedPidOutOfProcess() || e.isCurrentPidOutOfProcess(),
         s = t.isPinned(A.uss.TEXT);

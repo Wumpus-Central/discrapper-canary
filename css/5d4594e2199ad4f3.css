@@ -1,0 +1,18 @@
+.bannerFrame__63723 {
+    display: inline-block;
+    padding-bottom: var(--space-48);
+    position: relative
+}
+
+.roundedBanner__63723 {
+    border-radius: var(--radius-md);
+    overflow: hidden
+}
+
+.avatarOverlay__63723 {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    z-index: 1
+}
+
+/*# sourceMappingURL=5d4594e2199ad4f3.css.map*/

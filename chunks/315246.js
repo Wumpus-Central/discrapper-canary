@@ -13,14 +13,14 @@ var l = n(477900),
     p = n(692969),
     f = n(243949),
     g = n(20805),
-    x = n(438692),
+    x = n(903134),
     A = n(375708),
     C = n(495602);
 let E = "content-inventory-context";
 function I(e) {
     let { user: t, guildId: n, channel: I, entry: y, onSelect: S, disableGameProfileLinks: v } = e,
         N = i.useRef(null),
-        _ = i.useContext(x.Jd),
+        _ = i.useContext(x.J),
         j = (0, f.A)({ userId: t.id, guildId: n, channelId: I?.id, onAction: _ }),
         b = (0, m.A)({ id: t.id, label: A.intl.string(A.t["/AXYnE"]) }),
         T = "application_id" in y.extra ? y.extra.application_id : null,

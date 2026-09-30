@@ -7,7 +7,7 @@ var e = i(17928),
     a = i(496431),
     o = i(859703),
     d = i(738822),
-    u = i(73473),
+    u = i(657792),
     c = i(375708);
 function p(t) {
     let { transitionState: n, onClose: i, questEnrollmentBlockedUntil: e } = t,

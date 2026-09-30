@@ -4,7 +4,7 @@ var l = n(477900),
     s = n(702841),
     r = n(859703),
     a = n(639214),
-    o = n(73473);
+    o = n(657792);
 let u = function (e) {
     let { applicationId: t, children: n, questContent: u } = e,
         c = (0, s.bG)([r.A], () => r.A.quests),

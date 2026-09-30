@@ -123,7 +123,7 @@ t.d(e, {
 var n = t(477900),
     a = t(192308),
     o = t(391048),
-    l = t(529427),
+    l = t(589078),
     s = t(174459),
     d = t(832163);
 let c = "slayer-eligibility-check-modal";

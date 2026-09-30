@@ -1,4 +1,4 @@
-n.d(t, { F: () => f });
+n.d(t, { F: () => _ });
 var i = n(419954),
     s = n(780964),
     l = n(477900),
@@ -9,15 +9,16 @@ var i = n(419954),
     d = n(817281),
     c = n(773669),
     g = n(766075),
-    m = n(375708),
-    A = n(536854),
-    h = n(72290);
-function E() {
+    m = n(941933),
+    A = n(375708),
+    h = n(536854),
+    E = n(72290);
+function S() {
     let e = (0, a.bG)([c.default], () => c.default.locale),
         [t, i] = r.useState(e),
-        E = r.useMemo(
+        S = r.useMemo(
             () =>
-                (0, m.getAvailableLocales)().map((e) => {
+                (0, A.getAvailableLocales)().map((e) => {
                     let t;
                     try {
                         t = n(579832)(`./${e.value}.png`);
@@ -29,49 +30,48 @@ function E() {
                         value: e.value,
                         label: e.name,
                         leading: (0, l.jsx)("div", {
-                            className: A.Jt,
+                            className: h.Jt,
                             "aria-hidden": !0,
-                            children: (0, l.jsx)("img", { alt: "", src: t, className: A.Eb }),
+                            children: (0, l.jsx)("img", { alt: "", src: t, className: h.Eb }),
                         }),
-                        trailing: (0, l.jsx)("span", { className: A.hI, children: m.intl.string(e.localizedName) }),
+                        trailing: (0, l.jsx)("span", { className: h.hI, children: A.intl.string(e.localizedName) }),
                     };
                 }),
             [],
         ),
-        S = r.useCallback((e) => {
+        x = r.useCallback((e) => {
             (i(e),
-                h.nextTick(() => {
+                E.nextTick(() => {
                     (d.Ay.updateLocale(e),
-                        (0, o.closeModal)(g.USER_SETTINGS_MODAL_KEY) &&
-                            (0, g.openUserSettings)(s.X.LANGUAGE_AND_TIME_PANEL));
+                        (0, o.closeModal)(m.y) && (0, g.openUserSettings)(s.X.LANGUAGE_AND_TIME_PANEL));
                 }));
         }, []);
     return (0, l.jsx)(u.Z, {
         selectionMode: "single",
-        label: m.intl.string(m.t["mx+sp7"]),
-        description: m.intl.string(m.t.rTPlcq),
+        label: A.intl.string(A.t["mx+sp7"]),
+        description: A.intl.string(A.t.rTPlcq),
         value: t,
-        options: E,
-        onSelectionChange: S,
+        options: S,
+        onSelectionChange: x,
     });
 }
-let S = (0, i.E2)(s.X.LANGUAGE_SELECT_SETTING, {
-    useSearchTerms: () => [m.intl.string(m.t.IHMsPn)],
-    Component: () => (0, l.jsx)(E, {}),
+let x = (0, i.E2)(s.X.LANGUAGE_SELECT_SETTING, {
+    useSearchTerms: () => [A.intl.string(A.t.IHMsPn)],
+    Component: () => (0, l.jsx)(S, {}),
 });
-var x = n(873298),
-    p = n(885386);
-let T = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
-        useSearchTerms: () => [m.intl.string(m.t.dyamEI), m.intl.string(m.t.p8NOwi), m.intl.string(m.t["+o/sOo"])],
-        useTitle: () => m.intl.string(m.t.dyamEI),
-        useValue: () => p.PZ.useSetting(),
-        setValue: (e) => p.PZ.updateSetting(e),
+var p = n(873298),
+    T = n(885386);
+let f = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
+        useSearchTerms: () => [A.intl.string(A.t.dyamEI), A.intl.string(A.t.p8NOwi), A.intl.string(A.t["+o/sOo"])],
+        useTitle: () => A.intl.string(A.t.dyamEI),
+        useValue: () => T.PZ.useSetting(),
+        setValue: (e) => T.PZ.updateSetting(e),
         useOptions: function () {
             return [
-                { name: m.intl.string(m.t.FMWYvb), value: x.PZ.AUTO },
-                { name: m.intl.string(m.t.p8NOwi), value: x.PZ.H12 },
-                { name: m.intl.string(m.t["+o/sOo"]), value: x.PZ.H23 },
+                { name: A.intl.string(A.t.FMWYvb), value: p.PZ.AUTO },
+                { name: A.intl.string(A.t.p8NOwi), value: p.PZ.H12 },
+                { name: A.intl.string(A.t["+o/sOo"]), value: p.PZ.H23 },
             ];
         },
     }),
-    f = (0, i.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [S, T] });
+    _ = (0, i.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [x, f] });

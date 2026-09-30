@@ -1,10 +1,10 @@
-(s.r(t), s.d(t, { VideoQuestModalContext: () => O.a, VideoQuestConfigContext: () => O.l, default: () => en }));
+(s.r(t), s.d(t, { default: () => en }));
 var n = s(477900),
     a = s(582128),
     l = s(503698),
     i = s.n(l),
-    o = s(284009),
-    r = s.n(o),
+    r = s(284009),
+    o = s.n(r),
     u = s(412703),
     c = s(17928),
     d = s(935462),
@@ -13,11 +13,11 @@ var n = s(477900),
     h = s(613373),
     p = s(859703),
     g = s(738822),
-    C = s(192444),
+    j = s(192444),
     f = s(866157),
-    j = s(792620),
+    C = s(792620),
     A = s(753386),
-    S = s(73473),
+    S = s(657792),
     v = s(441512),
     N = s(55759),
     O = s(795068),
@@ -41,35 +41,35 @@ function P() {
     return (0, n.jsx)(T.A, { quest: e, questContent: g.uF.QUEST_HOME_DESKTOP, sourceQuestContent: t, onClose: s });
 }
 var b = s(866665),
-    V = s(939249),
-    k = s(297264),
-    I = s(628284),
+    k = s(939249),
+    I = s(297264),
+    V = s(628284),
     q = s(661531),
-    Q = s(713517),
-    L = s(240248),
+    L = s(713517),
+    Q = s(240248),
     R = s(375708),
     w = s(248627),
     G = s(862649);
 function F() {
     let { quest: e, sourceQuestContent: t, isPortrait: s, onClose: l } = a.useContext(O.a),
-        o = (0, f.LS)(e),
-        r = a.useRef(null),
-        { isHoveringOrFocusing: u } = (0, Q.A)(r),
+        r = (0, f.LS)(e),
+        o = a.useRef(null),
+        { isHoveringOrFocusing: u } = (0, L.A)(o),
         c = (0, M.H)({ quest: e, onClose: l, sourceQuestContent: t }),
         d = e.config.ctaConfig.subtitle,
-        m = void 0 !== d && !(0, L.uJ)(d);
+        m = void 0 !== d && !(0, Q.uJ)(d);
     return (0, n.jsx)(b.m, {
         text: R.intl.string(R.t.EuHF34),
-        children: (0, n.jsx)(V.D, {
+        children: (0, n.jsx)(k.D, {
             onClick: () => c(g.uF.VIDEO_MODAL, D.Cy.OPEN_GAME_LINK),
             className: w._S,
             children: (0, n.jsxs)("div", {
-                className: i()(G.hA, w.t8, { [w.Mc]: o }),
-                ref: r,
+                className: i()(G.hA, w.t8, { [w.Mc]: r }),
+                ref: o,
                 children: [
                     (0, n.jsx)("div", {
                         className: w.sB,
-                        children: (0, n.jsx)(k.D, {
+                        children: (0, n.jsx)(I.D, {
                             variant: "heading-md/medium",
                             color: "text-strong",
                             className: i()(w.xw, { [w._L]: s }),
@@ -82,12 +82,12 @@ function F() {
                         children: [
                             (0, n.jsx)("div", {
                                 className: i()(w.PV, { [w.WV]: s, [w.mq]: s }),
-                                children: (0, n.jsx)(I.y, {
+                                children: (0, n.jsx)(V.y, {
                                     size: "xs",
                                     color: u ? q.A.colors.ICON_STRONG.css : q.A.colors.ICON_MUTED.css,
                                 }),
                             }),
-                            (0, n.jsx)(k.D, {
+                            (0, n.jsx)(I.D, {
                                 variant: "heading-sm/medium",
                                 className: i()(w.PV, { [w.WV]: s, [w.mq]: s }),
                                 color: u ? "text-strong" : "text-subtle",
@@ -101,7 +101,7 @@ function F() {
                                               "aria-hidden": "true",
                                               className: i()(w.SC, { [w.b2]: s }),
                                           }),
-                                          (0, n.jsx)(k.D, {
+                                          (0, n.jsx)(I.D, {
                                               className: i()(w.xw, { [w._L]: s }),
                                               variant: "heading-sm/medium",
                                               lineClamp: s ? void 0 : 1,
@@ -134,19 +134,19 @@ async function ee() {
 }
 function et() {
     let { quest: e, sourceQuestContent: t, onClose: s, maxProgressSec: l, targetSec: i } = a.useContext(O.a),
-        [o, r] = a.useState(!1),
+        [r, o] = a.useState(!1),
         u = (0, c.bG)([W.Ay], () => W.Ay.useReducedMotion),
         d = (0, c.bG)([K.default], () => K.default.locale),
         m = (0, c.bG)([z.default], () => z.default.getCurrentUser()),
         x = a.useRef(e.userStatus?.completedAt),
         [h, p] = a.useState(!1),
-        C = (0, Y.mq)(e.config, m),
+        j = (0, Y.mq)(e.config, m),
         f = e.userStatus?.completedAt != null,
-        j = i > 0 ? Math.min(l / i, 0.99) : 0,
-        A = f ? 1 : j,
+        C = i > 0 ? Math.min(l / i, 0.99) : 0,
+        A = f ? 1 : C,
         S = (0, H.l9)(d, A, { roundingMode: "floor" }),
         v = e.userStatus?.claimedAt != null,
-        N = R.intl.formatToPlainString(f && !v ? R.t.NRp4K4 : R.t["12IWP2"], { rewardName: C });
+        N = R.intl.formatToPlainString(f && !v ? R.t.NRp4K4 : R.t["12IWP2"], { rewardName: j });
     a.useEffect(() => {
         (null == x.current && e.userStatus?.completedAt != null && p(!0), (x.current = e.userStatus?.completedAt));
     }, [e.userStatus?.completedAt]);
@@ -165,12 +165,12 @@ function et() {
                 position: "top",
                 text: N,
                 onTooltipShow: function () {
-                    r(!0);
+                    o(!0);
                 },
                 onTooltipHide: function () {
-                    r(!1);
+                    o(!1);
                 },
-                children: (0, n.jsx)(V.D, {
+                children: (0, n.jsx)(k.D, {
                     className: Z.md,
                     style: f ? { cursor: "pointer" } : void 0,
                     onClick: () => {
@@ -179,7 +179,7 @@ function et() {
                     children: (0, n.jsx)(B.A, {
                         size: 48,
                         percentComplete: A,
-                        overlayText: o ? S : void 0,
+                        overlayText: r ? S : void 0,
                         overlayTextVariant: "text-sm/medium",
                         children: (0, n.jsx)(X.A, {
                             fullWidth: !0,
@@ -200,13 +200,13 @@ function es(e) {
             transitionState: t,
             onClose: s,
             quest: l,
-            autoplay: o,
+            autoplay: r,
             videoSessionId: c,
             impressionRef: h,
             parentModalOpenStartClockTime: p,
             sourceQuestContent: g,
         } = e,
-        S = (0, j.Yh)(l),
+        S = (0, C.Yh)(l),
         E = (0, f.LS)(l),
         { maxProgressSec: D, trackProgress: _ } = (function (e) {
             let { initialProgressSec: t, targetSec: s, completedAt: n } = e,
@@ -223,35 +223,35 @@ function es(e) {
             completedAt: l.userStatus?.completedAt,
         }),
         [T, b] = a.useState(142),
-        [V, k] = a.useState(!1),
-        I = l.config.taskConfigV2?.tasks?.[u.n.WATCH_VIDEO];
-    r()(null != I, "VideoQuestModal: videoTask must not be null");
-    let q = (0, A.eG)(I),
-        Q = "portrait" === q,
-        L = (0, x.A)((e) => {
+        [k, I] = a.useState(!1),
+        V = l.config.taskConfigV2?.tasks?.[u.n.WATCH_VIDEO];
+    o()(null != V, "VideoQuestModal: videoTask must not be null");
+    let q = (0, A.eG)(V),
+        L = "portrait" === q,
+        Q = (0, x.A)((e) => {
             b(e.target.offsetHeight);
         }),
-        R = (0, m.w)(L),
-        { enabled: H } = C.n6.useConfig({ location: J.rE.VIDEO_MODAL }),
+        R = (0, m.w)(Q),
+        { enabled: H } = j.n6.useConfig({ location: J.rE.VIDEO_MODAL }),
         U = (0, M.H)({ quest: l, onClose: s, sourceQuestContent: g }),
         W = a.useMemo(
             () => ({
                 quest: l,
                 sourceQuestContent: g,
                 videoSessionId: c,
-                isPortrait: Q,
+                isPortrait: L,
                 onClose: s,
-                isFullscreenEnabled: V,
-                setIsFullscreenEnabled: k,
+                isFullscreenEnabled: k,
+                setIsFullscreenEnabled: I,
                 maxProgressSec: D,
                 targetSec: S.targetSeconds,
             }),
-            [l, g, c, Q, s, V, k, D, S.targetSeconds],
+            [l, g, c, L, s, k, I, D, S.targetSeconds],
         );
     return (0, n.jsx)(O.a.Provider, {
         value: W,
         children: (0, n.jsx)("div", {
-            style: Q ? { "--custom-portrait-footer-height": `${T}px` } : void 0,
+            style: L ? { "--custom-portrait-footer-height": `${T}px` } : void 0,
             children: (0, n.jsx)(d.EO, {
                 "data-migration-pending": !0,
                 transitionState: t,
@@ -272,22 +272,22 @@ function es(e) {
                             children: [
                                 H
                                     ? (0, n.jsx)(v.A, {
-                                          targetTimeSec: I.target,
+                                          targetTimeSec: V.target,
                                           parentTransitionState: t,
                                           onOptimisticProgressUpdate: _,
-                                          autoplay: o,
+                                          autoplay: r,
                                           openedAtMs: p,
                                           orientation: q,
                                       })
                                     : (0, n.jsx)(N.A, {
-                                          targetTimeSec: I.target,
+                                          targetTimeSec: V.target,
                                           parentTransitionState: t,
                                           onOptimisticProgressUpdate: _,
-                                          autoplay: o,
+                                          autoplay: r,
                                           openedAtMs: p,
                                           orientation: q,
                                       }),
-                                Q
+                                L
                                     ? (0, n.jsxs)("div", {
                                           ref: R,
                                           className: w.uh,
@@ -336,10 +336,10 @@ function es(e) {
     });
 }
 function en(e) {
-    let { questId: t, overrideQuest: s, autoplay: l, openStartClockTime: i, ...o } = e,
-        r = (0, c.bG)([p.A], () => p.A.getQuest(t)),
+    let { questId: t, overrideQuest: s, autoplay: l, openStartClockTime: i, ...r } = e,
+        o = (0, c.bG)([p.A], () => p.A.getQuest(t)),
         u = (0, c.bG)([p.A], () => p.A.getQuestConfig(t)),
-        d = s ?? r,
+        d = s ?? o,
         m = null != s ? s.config : u,
         x = a.useMemo(() => (null != m ? { questConfig: m } : null), [m]);
     return null != d && null != m && null != x
@@ -350,10 +350,10 @@ function en(e) {
                   questContent: g.uF.VIDEO_MODAL,
                   minViewTimeSeconds: h.bq,
                   trackGuildAndChannelMetadata: !0,
-                  sourceQuestContent: o.sourceQuestContent,
+                  sourceQuestContent: r.sourceQuestContent,
                   children: (e) =>
                       (0, n.jsx)(es, {
-                          ...o,
+                          ...r,
                           parentModalOpenStartClockTime: i,
                           impressionRef: e,
                           quest: d,

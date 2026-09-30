@@ -179,7 +179,7 @@ var i,
     _ = n(941426),
     E = n(506774),
     A = n(56562),
-    h = n(223273),
+    h = n(970917),
     I = n(229531),
     f = n(723702),
     p = n(998218),
@@ -400,7 +400,7 @@ let K = {
             this.getDiscordUtils().setObserverDebugCallback((t) => e(t), t, n);
         },
         clearObserverDebugCallback() {
-            this.getDiscordUtils().setObserverDebugCallback(null, h.Lb.NONE, 0);
+            this.getDiscordUtils().setObserverDebugCallback(null, h.L.NONE, 0);
         },
         shouldDisplayNotifications() {
             return this.getDiscordUtils().shouldDisplayNotifications();

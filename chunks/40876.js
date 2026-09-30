@@ -130,7 +130,7 @@ let r = {
             "CHANNEL_RTC_UPDATE_CHAT_OPEN",
             "SIDEBAR_VIEW_CHANNEL",
         ],
-        inlineRequire: () => n(183041).Ay,
+        inlineRequire: () => n(183041).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     FeedbackManager: {
