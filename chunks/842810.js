@@ -1,28 +1,30 @@
-n.d(i, { default: () => m });
+n.d(i, { default: () => _ });
 var t = n(477900),
-    a = n(582128),
-    o = n(980707),
+    o = n(582128),
+    a = n(980707),
     d = n(477782),
     c = n(885574),
     s = n(548411),
     l = n(554830),
-    r = n(952270),
-    g = n(442433),
-    b = n(643056),
-    u = n(988341),
-    h = n(234e3),
-    f = n(327791),
-    p = n(470739),
+    r = n(39623),
+    g = n(952270),
+    b = n(442433),
+    u = n(643056),
+    h = n(988341),
+    f = n(234e3),
+    p = n(327791),
+    y = n(470739),
     x = n(577931),
-    _ = n(375708);
-function m(e) {
-    let { badge: i, onClosePopout: n, onAction: m, onSelect: y } = e,
-        { reorderableBadges: C, hiddenBadges: I } = (0, x.A)(),
-        { tenureBadgeHideable: j } = b.A.useConfig({ location: "BadgeCustomizationContextMenu" }),
-        v = a.useMemo(() => (0, u.jg)({ tenureBadgeHideable: j }), [j]),
-        A = (0, f.A)(),
-        B = v.has(i.badge_id),
-        k = a.useMemo(
+    I = n(375708);
+function _(e) {
+    let { badge: i, onClosePopout: n, onAction: _, onSelect: m } = e,
+        { reorderableBadges: C, hiddenBadges: j } = (0, x.A)(),
+        { tenureBadgeHideable: A } = u.A.useConfig({ location: "BadgeCustomizationContextMenu" }),
+        v = o.useMemo(() => (0, h.jg)({ tenureBadgeHideable: A }), [A]),
+        B = (0, p.A)(),
+        k = v.has(i.badge_id),
+        D = i.hidden ?? !1,
+        L = o.useMemo(
             () =>
                 C.map((e) => {
                     let { badge_id: i } = e;
@@ -30,15 +32,28 @@ function m(e) {
                 }),
             [C],
         ),
-        w = k.indexOf(i.badge_id),
-        D = A && -1 !== w,
-        L = 0 === w,
-        S = w === k.length - 1;
-    return (0, t.jsx)(o.W, {
+        w = L.indexOf(i.badge_id),
+        E = B && -1 !== w,
+        S = 0 === w,
+        K = w === L.length - 1;
+    function M(e) {
+        (_(i.badge_id),
+            (0, f.RC)({
+                badgeId: i.badge_id,
+                hidden: e,
+                reorderableBadgeIds: L,
+                hiddenBadgeIds: j.map((e) => {
+                    let { badge_id: i } = e;
+                    return i;
+                }),
+                canReorder: B,
+            }));
+    }
+    return (0, t.jsx)(a.W, {
         navId: "badge-customization-context",
-        onClose: g.Z_,
-        "aria-label": _.intl.string(_.t["2ia+9V"]),
-        onSelect: y,
+        onClose: b.Z_,
+        "aria-label": I.intl.string(I.t["2ia+9V"]),
+        onSelect: m,
         children: (0, t.jsxs)(d.rX, {
             label: i.name,
             children: [
@@ -46,54 +61,50 @@ function m(e) {
                     id: "view-badge-details",
                     iconLeft: c.CircleInformationIcon,
                     leadingAccessory: { type: "icon", icon: c.CircleInformationIcon },
-                    label: _.intl.string(_.t["2ia+9V"]),
-                    subtext: B ? _.intl.string((0, u.hK)(i.badge_id)) : void 0,
+                    label: I.intl.string(I.t["2ia+9V"]),
+                    subtext: k ? I.intl.string((0, h.hK)(i.badge_id)) : void 0,
                     action: function () {
-                        (n(), (0, p._)({ initialBadgeId: i.badge_id, viewingCurrentUserBadges: !0 }));
+                        (n(), (0, y._)({ initialBadgeId: i.badge_id, viewingCurrentUserBadges: !0 }));
                     },
                 }),
-                D &&
-                    !L &&
+                E &&
+                    !S &&
                     (0, t.jsx)(d.Dr, {
                         id: "move-badge-to-front",
                         iconLeft: s.Z,
                         leadingAccessory: { type: "icon", icon: s.Z },
-                        label: _.intl.string(_.t.BpXa17),
+                        label: I.intl.string(I.t.BpXa17),
                         action: function () {
-                            (0, h.hB)((0, h.i1)(k, w, 0));
+                            (0, f.hB)((0, f.i1)(L, w, 0));
                         },
                     }),
-                D &&
-                    !S &&
+                E &&
+                    !K &&
                     (0, t.jsx)(d.Dr, {
                         id: "move-badge-to-back",
                         iconLeft: l.K,
                         leadingAccessory: { type: "icon", icon: l.K },
-                        label: _.intl.string(_.t["4/7x+3"]),
+                        label: I.intl.string(I.t["4/7x+3"]),
                         action: function () {
-                            (0, h.hB)((0, h.i1)(k, w, k.length - 1));
+                            (0, f.hB)((0, f.i1)(L, w, L.length - 1));
                         },
                     }),
-                !B &&
-                    (0, t.jsx)(d.Dr, {
-                        id: "hide-badge",
-                        iconLeft: r.EyeSlashIcon,
-                        leadingAccessory: { type: "icon", icon: r.EyeSlashIcon },
-                        label: _.intl.string(_.t.xSWJPo),
-                        action: function () {
-                            (m(i.badge_id),
-                                (0, h.RC)({
-                                    badgeId: i.badge_id,
-                                    hidden: !0,
-                                    reorderableBadgeIds: k,
-                                    hiddenBadgeIds: I.map((e) => {
-                                        let { badge_id: i } = e;
-                                        return i;
-                                    }),
-                                    canReorder: A,
-                                }));
-                        },
-                    }),
+                D
+                    ? (0, t.jsx)(d.Dr, {
+                          id: "unhide-badge",
+                          iconLeft: r.EyeIcon,
+                          leadingAccessory: { type: "icon", icon: r.EyeIcon },
+                          label: I.intl.string(I.t.RXOPc3),
+                          action: () => M(!1),
+                      })
+                    : !k &&
+                      (0, t.jsx)(d.Dr, {
+                          id: "hide-badge",
+                          iconLeft: g.EyeSlashIcon,
+                          leadingAccessory: { type: "icon", icon: g.EyeSlashIcon },
+                          label: I.intl.string(I.t.xSWJPo),
+                          action: () => M(!0),
+                      }),
             ],
         }),
     });

@@ -195,6 +195,8 @@
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-round);
     box-shadow: var(--shadow-low);
+    box-sizing: border-box;
+    cursor: pointer;
     height: 24px;
     inset-block-start: -6px;
     inset-inline-end: -6px;
@@ -203,25 +205,20 @@
     width: 24px
 }
 
-.overflowButton_f18413,
-.unhideButton_f18413 {
+.hiddenIndicator_f18413,
+.overflowButton_f18413 {
     align-items: center;
-    box-sizing: border-box;
     color: var(--icon-default);
-    cursor: pointer;
     display: flex;
     justify-content: center;
     position: absolute
 }
 
-.unhideButton_f18413 {
-    background: none;
-    border: none;
-    border-radius: var(--radius-round);
+.hiddenIndicator_f18413 {
     height: 20px;
     inset-block-start: 4px;
     inset-inline-end: 4px;
-    padding: 0;
+    pointer-events: none;
     width: 20px
 }
 
@@ -297,4 +294,4 @@
     color: var(--badge-mythic-text)
 }
 
-/*# sourceMappingURL=363189.34092247a6b860b4.css.map*/
+/*# sourceMappingURL=363189.d0de82a87cbdcf24.css.map*/

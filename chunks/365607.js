@@ -115,25 +115,23 @@ function ei(e) {
     });
 }
 function es(e) {
-    let { badge: t, index: r, onClose: i, onAction: s, controlRef: o, onUnhide: d } = e,
-        [c, u] = l.useState(!1),
-        f = l.useRef(null),
-        m = (0, E.A)(f, o);
-    function g(e) {
-        (u(!0),
+    let { badge: t, index: r, onClose: i, onAction: s, controlRef: o } = e,
+        [d, c] = l.useState(!1);
+    function u(e) {
+        (c(!0),
             (0, F.L3)(
                 e,
                 async () => {
                     let { default: e } = await Promise.all([n.e("918024"), n.e("787847")]).then(n.bind(n, 842810));
                     return (n) => (0, a.jsx)(e, { ...n, badge: t, onClosePopout: i, onAction: s });
                 },
-                { onClose: () => u(!1) },
+                { onClose: () => c(!1) },
             ));
     }
-    let h = t.hidden ?? !1;
+    let f = t.hidden ?? !1;
     return (0, a.jsxs)("div", {
-        className: p()(ea.fw, c && ea.HV),
-        onContextMenu: h ? void 0 : g,
+        className: p()(ea.fw, d && ea.HV),
+        onContextMenu: u,
         children: [
             (0, a.jsx)("div", {
                 className: ea.yk,
@@ -144,42 +142,30 @@ function es(e) {
                         alt: "",
                         "aria-hidden": !0,
                         draggable: !1,
-                        className: p()(ea.pC, h && ea.jx),
+                        className: p()(ea.pC, f && ea.jx),
                     }),
             }),
-            h
-                ? (0, a.jsx)(v.m, {
-                      position: "top",
-                      text: Q.intl.string(Q.t.RXOPc3),
-                      asContainer: !0,
-                      ariaHidden: !0,
-                      anchorRef: f,
-                      children: (0, a.jsx)(x.vN, {
-                          children: (0, a.jsx)("button", {
-                              ref: m,
-                              type: "button",
-                              className: ea.KJ,
-                              "aria-label": Q.intl.formatToPlainString(Q.t.GhK5nf, {
-                                  badgeName: t.name,
-                                  position: r + 1,
-                              }),
-                              onClick: () => d?.(t),
-                              children: (0, a.jsx)(k.EyeSlashIcon, { size: "refresh_sm", color: "currentColor" }),
-                          }),
-                      }),
-                  })
-                : (0, a.jsx)(x.vN, {
-                      children: (0, a.jsx)("button", {
-                          ref: o,
-                          type: "button",
-                          className: ea.lv,
-                          "aria-haspopup": "menu",
-                          "aria-expanded": c,
-                          "aria-label": Q.intl.formatToPlainString(Q.t.Ci7gvp, { badgeName: t.name, position: r + 1 }),
-                          onClick: g,
-                          children: (0, a.jsx)(L.MoreHorizontalIcon, { size: "xs", color: "currentColor" }),
-                      }),
-                  }),
+            f &&
+                (0, a.jsx)("div", {
+                    className: ea.Gf,
+                    "aria-hidden": !0,
+                    children: (0, a.jsx)(k.EyeSlashIcon, { size: "refresh_sm", color: "currentColor" }),
+                }),
+            (0, a.jsx)(x.vN, {
+                children: (0, a.jsx)("button", {
+                    ref: o,
+                    type: "button",
+                    className: ea.lv,
+                    "aria-haspopup": "menu",
+                    "aria-expanded": d,
+                    "aria-label": Q.intl.formatToPlainString(f ? Q.t["3Uwmdt"] : Q.t.Ci7gvp, {
+                        badgeName: t.name,
+                        position: r + 1,
+                    }),
+                    onClick: u,
+                    children: (0, a.jsx)(L.MoreHorizontalIcon, { size: "xs", color: "currentColor" }),
+                }),
+            }),
         ],
     });
 }
@@ -242,54 +228,41 @@ function ed(e) {
     function I(e) {
         requestAnimationFrame(() => v.current.get(e)?.focus());
     }
-    function j(e) {
-        (I(e.badge_id),
-            (0, c.RC)({
-                badgeId: e.badge_id,
-                hidden: !1,
-                reorderableBadgeIds: N,
-                hiddenBadgeIds: h.map((e) => {
-                    let { badge_id: t } = e;
-                    return t;
-                }),
-                canReorder: x,
-            }));
-    }
-    let T = g.length + E.length + h.length,
-        y = (0, i.bG)([s.Ay, f.default], () => {
+    let j = g.length + E.length + h.length,
+        T = (0, i.bG)([s.Ay, f.default], () => {
             let e = f.default.getCurrentUser()?.id;
             return null != e && s.Ay.hasCatalogFor(e);
         });
-    function C(e, t) {
+    function y(e, t) {
         (0, c.hB)((0, c.i1)(N, e, t));
     }
-    let M = (0, K.w9)({ listType: el, itemType: er, onFallbackDrop: (e) => C(e.index, N.length - 1) }),
-        P = (0, K.w9)({ listType: el, itemType: er });
+    let C = (0, K.w9)({ listType: el, itemType: er, onFallbackDrop: (e) => y(e.index, N.length - 1) }),
+        M = (0, K.w9)({ listType: el, itemType: er });
     l.useLayoutEffect(() => {
         if (A)
             return (
-                P(document.body),
+                M(document.body),
                 () => {
-                    P(null);
+                    M(null);
                 }
             );
-    }, [P, A]);
-    let U = T > 0,
-        O = y && !U,
-        B = !x && !O,
-        k = x ? Q.t.VHaYM7 : Q.t["7Qs/YX"];
-    function L() {
+    }, [M, A]);
+    let P = j > 0,
+        U = T && !P,
+        O = !x && !U,
+        B = x ? Q.t.VHaYM7 : Q.t["7Qs/YX"];
+    function k() {
         (null != r && (r.current = !0), t());
     }
     return (0, a.jsxs)("div", {
         ref: o,
-        className: p()(ea.SW, O && ea.B2),
+        className: p()(ea.SW, U && ea.B2),
         role: "dialog",
         tabIndex: -1,
         "aria-labelledby": d,
         children: [
             (0, a.jsxs)("div", {
-                className: p()(ea.Qs, B && ea.bY),
+                className: p()(ea.Qs, O && ea.bY),
                 children: [
                     (0, a.jsxs)("div", {
                         className: ea.wx,
@@ -306,23 +279,23 @@ function ed(e) {
                                     }),
                                 ],
                             }),
-                            !O &&
+                            !U &&
                                 (0, a.jsx)(b.E, {
                                     variant: "text-xs/normal",
                                     color: "text-subtle",
-                                    children: Q.intl.string(k),
+                                    children: Q.intl.string(B),
                                 }),
                         ],
                     }),
-                    B && (0, a.jsx)(ee, { onClose: t }),
-                    O &&
+                    O && (0, a.jsx)(ee, { onClose: t }),
+                    U &&
                         (0, a.jsx)(b.E, {
                             className: ea.p$,
                             variant: "text-xs/normal",
                             color: "text-subtle",
                             children: Q.intl.string(Q.t.VT02mI),
                         }),
-                    U &&
+                    P &&
                         (0, a.jsxs)("div", {
                             className: p()(ea.yq, A && ea.T0),
                             role: "group",
@@ -331,7 +304,7 @@ function ed(e) {
                                 x &&
                                     (0, a.jsx)("div", {
                                         ref: (e) => {
-                                            M(e);
+                                            C(e);
                                         },
                                         className: ea.u$,
                                         "aria-hidden": !0,
@@ -339,14 +312,7 @@ function ed(e) {
                                 g.map((e, t) =>
                                     (0, a.jsx)(
                                         es,
-                                        {
-                                            badge: e,
-                                            index: t,
-                                            onClose: L,
-                                            onAction: I,
-                                            controlRef: R(e.badge_id),
-                                            onUnhide: j,
-                                        },
+                                        { badge: e, index: t, onClose: k, onAction: I, controlRef: R(e.badge_id) },
                                         e.badge_id,
                                     ),
                                 ),
@@ -357,11 +323,11 @@ function ed(e) {
                                               {
                                                   badge: e,
                                                   index: g.length + t,
-                                                  onClose: L,
+                                                  onClose: k,
                                                   onAction: I,
                                                   controlRef: R(e.badge_id),
                                                   reorderableIndex: t,
-                                                  onReorder: C,
+                                                  onReorder: y,
                                               },
                                               e.badge_id,
                                           )
@@ -370,7 +336,7 @@ function ed(e) {
                                               {
                                                   badge: e,
                                                   index: g.length + t,
-                                                  onClose: L,
+                                                  onClose: k,
                                                   onAction: I,
                                                   controlRef: R(e.badge_id),
                                               },
@@ -383,10 +349,9 @@ function ed(e) {
                                         {
                                             badge: e,
                                             index: g.length + E.length + t,
-                                            onClose: L,
+                                            onClose: k,
                                             onAction: I,
                                             controlRef: R(e.badge_id),
-                                            onUnhide: j,
                                         },
                                         e.badge_id,
                                     ),
@@ -403,7 +368,7 @@ function ed(e) {
                 text: Q.intl.string(Q.t.fN2how),
                 onClick: function () {
                     (m({ action: "PRESS_VIEW_BADGES", analyticsLocations: u }),
-                        L(),
+                        k(),
                         (0, et._)({ viewingCurrentUserBadges: !0 }));
                 },
             }),

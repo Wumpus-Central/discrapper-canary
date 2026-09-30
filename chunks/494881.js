@@ -22,5 +22,5 @@ e.exports = {
     pC: "badgeTileIcon_f18413",
     jx: "badgeTileIconHidden_f18413",
     lv: "overflowButton_f18413",
-    KJ: "unhideButton_f18413",
+    Gf: "hiddenIndicator_f18413",
 };
