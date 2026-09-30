@@ -2,6 +2,7 @@ n.d(t, { A: () => s, Y: () => a });
 var i = n(315069),
     r = n(874638);
 class a extends i.A {
+    id;
     total;
     subtotal;
     currency;
@@ -9,6 +10,7 @@ class a extends i.A {
     invoiceItems;
     static createFromServer(e) {
         return new a({
+            id: e.id,
             total: e.total,
             subtotal: e.subtotal,
             tax: e.tax,
@@ -40,6 +42,7 @@ class a extends i.A {
     }
     constructor(e) {
         (super(),
+            (this.id = e.id),
             (this.total = e.total),
             (this.subtotal = e.subtotal),
             (this.tax = e.tax),

@@ -196,6 +196,7 @@
 .guildProductDetail_e9cb00 {}
 
 .date_e9cb00 {
+    flex-shrink: 0;
     width: 20%
 }
 
@@ -450,4 +451,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=311992.80e310cf6618e171.css.map*/
+/*# sourceMappingURL=311992.b8815a6e479a3a68.css.map*/
