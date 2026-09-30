@@ -305,7 +305,7 @@ ${R}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "626325", versionHash: "3026e4bd51a9411d25e4ec09ee4ee624a8f06e01" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "626330", versionHash: "80db63bee2922b9c5c757c9860bdc3aec900d7dc" }, void 0, 2)}
 
     ChannelStore:
     ${JSON.stringify(I.A.getDebugInfo(), void 0, 2)}
