@@ -11889,7 +11889,7 @@ function us() {
                                       className: un.kL,
                                       children: (0, p.jsx)("div", {
                                           className: un.rb,
-                                          children: (0, p.jsx)(dE, { featureKey: N }),
+                                          children: (0, p.jsx)(dE, { guildId: t.id, featureKey: N, disabled: !s }),
                                       }),
                                   }),
                               }),
