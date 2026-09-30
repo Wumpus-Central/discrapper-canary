@@ -3305,47 +3305,6 @@
     }
   },
   {
-    "name": "2026-06-wysiwyg-show-dns-to-non-nitro",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
-    "name": "2026-06-wysiwyg-user-profile-premium-try-it-out",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false,
-      "showPresetName": false,
-      "clientThemeAdaptedColorsEnabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true,
-        "showPresetName": true,
-        "clientThemeAdaptedColorsEnabled": false
-      },
-      "2": {
-        "enabled": true,
-        "showPresetName": false,
-        "clientThemeAdaptedColorsEnabled": true
-      }
-    }
-  },
-  {
     "name": "2026-07-ad-recheck-interval-experiment",
     "kind": "user",
     "defaultConfig": {
