@@ -234,7 +234,7 @@ let T = [
         guild_id: A,
         name: "playground-channel",
     });
-function D() {
+function N() {
     n.useEffect(() => {
         let e = {
             id: x,
@@ -249,13 +249,12 @@ function D() {
         g.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e });
     }, []);
 }
-function N() {
+function V() {
     n.useEffect(() => {
         (g.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
             config: {
                 promotionalSkuIds: [],
-                promotionEndDatetime: null,
                 storefronts: [
                     {
                         guildId: A,
@@ -265,7 +264,6 @@ function N() {
                         excludedPlatforms: [],
                         disableMobileAccountLinking: !1,
                         allowOrbsSpending: !1,
-                        promotionEndDatetime: null,
                     },
                 ],
                 announcementModalConfig: null,
@@ -288,8 +286,8 @@ function N() {
             }));
     }, []);
 }
-let V = "/assets/863cb535889630a2.svg";
-var w = l(50777),
+let w = "/assets/863cb535889630a2.svg";
+var D = l(50777),
     L = l(467884);
 let U = {
     name: "Shop Card",
@@ -321,14 +319,14 @@ let U = {
             daysUntilExpiry: c ? p : null,
             isEligible: m,
         }),
-            D());
+            N());
         let g = n.useCallback((e) => {
             e.preventDefault();
         }, []);
         return t === L.s6.EMBEDDED
             ? (0, o.jsx)("div", {
                   style: { padding: 16 },
-                  children: (0, o.jsx)(w.A, { applicationId: x, guildId: A, skuId: v, channel: O }),
+                  children: (0, o.jsx)(D.A, { applicationId: x, guildId: A, skuId: v, channel: O }),
               })
             : (0, o.jsx)("div", {
                   style: { maxWidth: t === L.s6.SMALL ? 220 : 300, padding: 16 },
@@ -358,7 +356,7 @@ let U = {
         isEligible: { label: "Purchase Eligible", type: "boolean", defaultValue: !0 },
     },
 };
-var M = l(439325);
+var M = l(213113);
 (l(323874), l(14289), l(35956));
 var k = l(366523);
 let B = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
@@ -473,7 +471,7 @@ let en = {
                                 daysUntilExpiry: b ? f : null,
                                 isEligible: g,
                             }),
-                            N(),
+                            V(),
                             S)
                                 ? (0, o.jsx)(M.default, {
                                       transitionState: d.ip.ENTERED,
@@ -548,7 +546,7 @@ let en = {
                                 feature2Subtitle: b,
                                 buttonText: f,
                             } = e;
-                            N();
+                            V();
                             let [g, y] = n.useState(!1),
                                 h = n.useRef(null),
                                 S = [t, l].filter((e) => "" !== e);
@@ -564,8 +562,8 @@ let en = {
                                       titles: S,
                                       subtitle: a,
                                       features: [
-                                          { assetUrl: V, title: c, subtitle: p },
-                                          { assetUrl: V, title: m, subtitle: b },
+                                          { assetUrl: w, title: c, subtitle: p },
+                                          { assetUrl: w, title: m, subtitle: b },
                                       ],
                                       buttonText: f,
                                       onClose: () => Promise.resolve(y(!1)),
@@ -728,7 +726,6 @@ let en = {
                                             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                             config: {
                                                 promotionalSkuIds: l,
-                                                promotionEndDatetime: null,
                                                 storefronts: [
                                                     {
                                                         guildId: A,
@@ -738,7 +735,6 @@ let en = {
                                                         excludedPlatforms: [],
                                                         disableMobileAccountLinking: !1,
                                                         allowOrbsSpending: c ?? !1,
-                                                        promotionEndDatetime: new Date("2030-06-30T00:00:00Z"),
                                                     },
                                                 ],
                                                 announcementModalConfig: null,
@@ -847,7 +843,7 @@ let en = {
                                 requiresAnnualPlan: i,
                                 isOnQualifyingPlan: s,
                             } = e;
-                            D();
+                            N();
                             let d = (0, J.i)((e) => e.setOverrideNitroEligibilityForSocialLayerStorefront),
                                 u = (0, J.i)((e) => e.setIsNitroEligibleForSocialLayerStorefront),
                                 c = (0, J.i)((e) => e.setOverrideCurrentPremiumPlanId),
@@ -867,7 +863,6 @@ let en = {
                                         type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                         config: {
                                             promotionalSkuIds: [],
-                                            promotionEndDatetime: null,
                                             storefronts: [
                                                 {
                                                     guildId: A,
@@ -877,7 +872,6 @@ let en = {
                                                     excludedPlatforms: [],
                                                     disableMobileAccountLinking: !1,
                                                     allowOrbsSpending: !1,
-                                                    promotionEndDatetime: null,
                                                 },
                                             ],
                                             announcementModalConfig: null,
@@ -1039,13 +1033,12 @@ let en = {
                                 daysUntilExpiry: null,
                                 isEligible: !0,
                             }),
-                                D(),
+                                N(),
                                 n.useEffect(() => {
                                     (g.h.dispatch({
                                         type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                         config: {
                                             promotionalSkuIds: [],
-                                            promotionEndDatetime: null,
                                             storefronts: [
                                                 {
                                                     guildId: A,
@@ -1055,7 +1048,6 @@ let en = {
                                                     excludedPlatforms: [],
                                                     disableMobileAccountLinking: !1,
                                                     allowOrbsSpending: !1,
-                                                    promotionEndDatetime: null,
                                                 },
                                             ],
                                             announcementModalConfig: null,

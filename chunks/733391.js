@@ -226,43 +226,25 @@ async function w() {
         try {
             a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_START" });
             let e = (await r.Bo.get({ url: _.Rsh.SOCIAL_LAYER_STOREFRONT_CONFIG, rejectWithError: !0 })).body,
-                t = null;
-            if (null != e.promotion_end_datetime) {
-                let n = new Date(e.promotion_end_datetime);
-                Number.isNaN(n.getTime()) || (t = n);
-            }
-            let n =
-                    e.storefronts?.map((e) => {
-                        let t = null,
-                            n = null != e.promotion_end_datetime ? new Date(e.promotion_end_datetime) : null;
-                        return (
-                            null == n || Number.isNaN(n.getTime()) || (t = n),
-                            {
-                                guildId: e.guild_id,
-                                applicationId: e.application_id,
-                                gameId: e.game_id,
-                                collectiblesShopNavigationEnabled: !0 === e.collectibles_shop_navigation_enabled,
-                                excludedPlatforms: e.excluded_platforms ?? [],
-                                disableMobileAccountLinking: !0 === e.disable_mobile_account_linking,
-                                promotionEndDatetime: t,
-                                allowOrbsSpending: !0 === e.allow_orbs_spending,
-                            }
-                        );
-                    }) ?? [],
-                i = null;
+                t =
+                    e.storefronts?.map((e) => ({
+                        guildId: e.guild_id,
+                        applicationId: e.application_id,
+                        gameId: e.game_id,
+                        collectiblesShopNavigationEnabled: !0 === e.collectibles_shop_navigation_enabled,
+                        excludedPlatforms: e.excluded_platforms ?? [],
+                        disableMobileAccountLinking: !0 === e.disable_mobile_account_linking,
+                        allowOrbsSpending: !0 === e.allow_orbs_spending,
+                    })) ?? [],
+                n = null;
             (null != e.announcement_modal_config &&
-                (i = {
+                (n = {
                     version: e.announcement_modal_config.version,
                     applicationId: e.announcement_modal_config.application_id,
                 }),
                 a.h.dispatch({
                     type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
-                    config: {
-                        promotionalSkuIds: e.promotional_sku_ids,
-                        promotionEndDatetime: t,
-                        storefronts: n,
-                        announcementModalConfig: i,
-                    },
+                    config: { promotionalSkuIds: e.promotional_sku_ids, storefronts: t, announcementModalConfig: n },
                 }));
         } catch {
             a.h.dispatch({ type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_FAILURE" });
