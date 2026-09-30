@@ -8,6 +8,7 @@ var i,
         (i[(i.GUILD_HOME = 3)] = "GUILD_HOME"),
         (i[(i.GUILD_ONBOARDING_QUESTION = 4)] = "GUILD_ONBOARDING_QUESTION"),
         (i[(i.MESSAGE_REQUESTS = 5)] = "MESSAGE_REQUESTS"),
+        (i[(i.CONJURING_PROJECT = 6)] = "CONJURING_PROJECT"),
         i),
     s =
         (((r = {})[(r.UNSET = 0)] = "UNSET"),

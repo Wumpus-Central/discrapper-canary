@@ -1,4 +1,4 @@
-a.d(t, { B: () => o, MZ: () => l, TH: () => i, tn: () => s });
+a.d(t, { B: () => o, MZ: () => l, TH: () => s, tn: () => i });
 let n = [
     {
         date: "2026-09-07",
@@ -208,6 +208,13 @@ let n = [
         platforms: ["desktop", "mobile"],
         summary:
             "Conjure now follows the AGENTS.md notes in your project and the skills you add under .discord/skills, including running their JavaScript helpers.",
+    },
+    {
+        date: "2026-09-25",
+        time: "09:50",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Conjure now tells you when it finishes or needs your answer, even after you step away, and marks those projects in your list, calling out the ones waiting on you.",
     },
     {
         date: "2026-09-26",
@@ -1065,14 +1072,14 @@ let n = [
             ? -1
             : +(e.summary > t.summary);
 });
-function i(e) {
-    return s(e).slice(0, 3);
-}
 function s(e) {
+    return i(e).slice(0, 3);
+}
+function i(e) {
     return n.filter((t) => t.platforms.includes(e));
 }
 function o(e) {
-    return s(e).length > 3;
+    return i(e).length > 3;
 }
 function l(e) {
     return 1 === e.platforms.length;

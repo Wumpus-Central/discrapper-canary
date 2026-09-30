@@ -42,7 +42,7 @@ class T extends s.A {
             if (0 === e) return;
             (0, a.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([
-                    n.e("57388"),
+                    n.e("74979"),
                     n.e("645499"),
                     n.e("858514"),
                     n.e("741678"),

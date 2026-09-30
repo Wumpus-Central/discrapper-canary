@@ -45,6 +45,7 @@
   "ROBLOX_APPLICATIONS_SUPPLEMENTAL_DATA": "/roblox-applications-supplemental-data",
   "GUILD_FEATURE_ACK": "/guilds/:param/ack/:param/:param",
   "USER_NON_CHANNEL_ACK": "/users/@me/:param/:param/ack",
+  "VIBEGRATIONS_PROJECT_ACK": "/conjuring/projects/:param/ack/:param",
   "BULK_ACK": "/read-states/ack-bulk",
   "DM_SETTINGS_UPSELL_ACK": "/users/@me/guilds/:param/member/ack-dm-upsell-settings",
   "GUILD_CHANNELS": "/guilds/:param/channels",

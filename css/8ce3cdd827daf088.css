@@ -350,9 +350,10 @@
 }
 
 .projectsSidebarList_f8194a {
+    --custom-vibegrations-projects-inset: var(--space-8);
     flex: 1;
     min-height: 0;
-    padding: var(--space-8)
+    padding: var(--custom-vibegrations-projects-inset)
 }
 
 .projectInfo_f8194a,
@@ -417,6 +418,19 @@
 .projectCardDeleting_f8194a {
     opacity: .5;
     pointer-events: none
+}
+
+.projectUnreadPill_f8194a {
+    background-color: var(--interactive-text-active);
+    border-end-end-radius: var(--radius-xs);
+    border-start-end-radius: var(--radius-xs);
+    height: var(--space-8);
+    inset-inline-start: calc(var(--custom-vibegrations-projects-inset)*-1);
+    margin-top: calc(var(--space-4)*-1);
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    width: var(--space-4)
 }
 
 .projectCardSelect_f8194a {
@@ -543,6 +557,11 @@
     flex: 0 0 auto
 }
 
+.projectMentionBadge_f8194a {
+    flex: 0 0 auto;
+    margin-inline-end: var(--space-32)
+}
+
 .projectMetadataSeparator_f8194a {
     color: var(--text-subtle);
     flex: 0 0 auto
@@ -586,4 +605,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=bbd15a811a002182.css.map*/
+/*# sourceMappingURL=8ce3cdd827daf088.css.map*/

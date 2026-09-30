@@ -948,6 +948,16 @@ function eq(e) {
     eV(["USER_NON_CHANNEL_ACK"], (e) => {
         eW({ type: "USER_NON_CHANNEL_ACK", ackType: e.ack_type, ackedId: e.entity_id });
     }),
+    eV(["CONJURING_TURN_SETTLED"], (e) => {
+        eW({
+            type: "VIBEGRATIONS_TURN_SETTLED",
+            projectId: e.project_id,
+            guildId: e.guild_id,
+            entityId: e.entity_id,
+            title: e.title,
+            body: e.body,
+        });
+    }),
     eH(
         ["CHANNEL_PINS_ACK"],
         (e) => I.D.loadGuildIds([e.guild_id]),

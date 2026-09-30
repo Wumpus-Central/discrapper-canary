@@ -774,6 +774,9 @@ class eU {
                 case el.P.MESSAGE_REQUESTS:
                     e = ei.Rsh.USER_NON_CHANNEL_ACK(t, i);
                     break;
+                case el.P.CONJURING_PROJECT:
+                    e = ei.Rsh.VIBEGRATIONS_PROJECT_ACK(n, t);
+                    break;
                 default:
                     return;
             }
@@ -1277,6 +1280,9 @@ class e2 extends o.Ay.Store {
     }
     getMentionChannelIds() {
         return eU.getMentionChannelIds();
+    }
+    getResourceIds(e) {
+        return Array.from(eU._readStates.get(e)?.keys() ?? []);
     }
     getNonChannelAckId(e) {
         let t = et.default.getCurrentUser()?.id;
@@ -1927,6 +1933,22 @@ let e3 = new e2(_.h, {
             let n = eU.get(t, el.P.MESSAGE_REQUESTS);
             if (null == n.ackMessageId) return !1;
             n.ackMessageId = void 0;
+        },
+        VIBEGRATIONS_TURN_SETTLED: function (e) {
+            let { projectId: t, entityId: n } = e,
+                i = eU.get(t, el.P.CONJURING_PROJECT);
+            ((i._persisted = !0), (i.ackMessageId = n), i.mentionCount++);
+        },
+        VIBEGRATIONS_PROJECT_ACK: function (e) {
+            let { projectId: t } = e,
+                n = eU.getIfExists(t, el.P.CONJURING_PROJECT);
+            if (null == n || 0 === n.mentionCount) return !1;
+            let i = j.default.fromTimestamp(Date.now());
+            return n.ack({ messageId: i, isExplicitUserAction: !0, trackAnalytics: !1, immediate: !0 });
+        },
+        VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
+            let { projectId: t } = e;
+            return eU.clear(t, el.P.CONJURING_PROJECT);
         },
         APP_STATE_UPDATE: function (e) {
             let { state: t } = e;

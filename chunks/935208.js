@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { DISCORD_EPOCH: () => l, default: () => u, SnowflakeSequence: () => c }));
+(n.r(t), n.d(t, { DISCORD_EPOCH: () => l, default: () => _, SnowflakeSequence: () => u }));
 var i = n(435558),
     r = n.n(i),
     a = n(824120),
@@ -11,7 +11,8 @@ function d(e) {
     let t = e - l;
     return t <= 0 ? "0" : s()(t).shiftLeft(22).toString();
 }
-class c {
+let c = s()(1).shiftLeft(22).minus(1);
+class u {
     seq;
     constructor() {
         this.seq = 0;
@@ -27,12 +28,18 @@ class c {
         this.seq = 0;
     }
 }
-let u = {
+let _ = {
     age: function (e) {
         return Date.now() - o(e);
     },
     extractTimestamp: function (e) {
         return o(e);
+    },
+    getNonTimestampBits: function (e) {
+        return s()(e).and(c).toJSNumber();
+    },
+    setNonTimestampBits: function (e, t) {
+        return s()(e).and(c.not()).or(s()(t).and(c)).toString();
     },
     compare: function (e, t) {
         return e === t

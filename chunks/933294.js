@@ -11,10 +11,10 @@ var d = n(141931),
     c = n(941426),
     f = n(475735),
     h = n(25578),
-    p = n(731854);
-let _ = new c.Vy("VibegrationsNativeCapture");
+    _ = n(731854);
+let p = new c.Vy("VibegrationsNativeCapture");
 function g(e, t) {
-    return (_.verbose(`native capture not used: ${e}`, t ?? {}), null);
+    return (p.verbose(`native capture not used: ${e}`, t ?? {}), null);
 }
 function w(e) {
     let t = e.getBoundingClientRect();
@@ -41,7 +41,7 @@ async function E(e) {
         l = Math.ceil(window.outerWidth * r),
         o = Math.ceil(window.outerHeight * r),
         s = h.Ay.getMediaEngine();
-    if (s.supports(p.O5.WINDOW_PREVIEWS))
+    if (s.supports(_.O5.WINDOW_PREVIEWS))
         try {
             let e = f.O.getConfig({ location: "vibegrationsNativeCapture" }).enabled,
                 t = await s.getSingleWindowPreview(i, l, o, e);
@@ -64,7 +64,7 @@ async function T() {
         () => e.remove()
     );
 }
-async function m(e, t, n) {
+async function I(e, t, n) {
     let i = new Image();
     if (((i.decoding = "async"), (i.src = e), await i.decode(), 0 === i.naturalWidth || 0 === i.naturalHeight))
         return g("window still decoded empty");
@@ -104,19 +104,19 @@ async function m(e, t, n) {
     let c = Math.min(1, 1568 / Math.max(a, d), Math.sqrt(115e4 / (a * d))),
         f = Math.max(1, Math.round(a * c)),
         h = Math.max(1, Math.round(d * c)),
-        p = document.createElement("canvas");
-    ((p.width = f), (p.height = h));
-    let _ = p.getContext("2d");
-    if (null == _) return g("no 2d context");
-    _.drawImage(i, s, u, a, d, 0, 0, f, h);
-    let w = await new Promise((e) => p.toBlob(e, "image/webp", 0.92));
+        _ = document.createElement("canvas");
+    ((_.width = f), (_.height = h));
+    let p = _.getContext("2d");
+    if (null == p) return g("no 2d context");
+    p.drawImage(i, s, u, a, d, 0, 0, f, h);
+    let w = await new Promise((e) => _.toBlob(e, "image/webp", 0.92));
     return null == w || "image/webp" !== w.type
         ? g("webp encode failed")
         : w.size > 5242880
           ? g("encoded capture too large", { bytes: w.size })
           : { blob: w, scale: (f / t.width + h / t.height) / 2 };
 }
-async function I(e, t) {
+async function m(e, t) {
     try {
         var n, i, r;
         let l;
@@ -186,7 +186,7 @@ async function I(e, t) {
             Math.abs(a.height - o.height) > 1
         )
             return g("frame moved or resized during capture");
-        let d = await m(l, o, s);
+        let d = await I(l, o, s);
         if (null == d) return null;
         let c = (function (e) {
             try {
@@ -219,10 +219,10 @@ async function I(e, t) {
             };
         (null != t.build && (h["x-vibegrations-build"] = t.build),
             null != t.uploadToken && (h["x-vibegrations-capture-token"] = t.uploadToken));
-        let p = await fetch(c, { method: "POST", headers: h, body: d.blob });
-        if (!p.ok) return g("upload refused", { status: p.status });
+        let _ = await fetch(c, { method: "POST", headers: h, body: d.blob });
+        if (!_.ok) return g("upload refused", { status: _.status });
         return (
-            _.verbose("native capture uploaded", { id: t.captureId, bytes: d.blob.size, scale: f.scale }),
+            p.verbose("native capture uploaded", { id: t.captureId, bytes: d.blob.size, scale: f.scale }),
             { status: "accepted" }
         );
     } catch (e) {
@@ -236,15 +236,15 @@ var A = n(120426),
     y = n(171936),
     v = n(809685),
     b = n(777977),
-    N = n(484697);
+    C = n(484697);
 (n(321073), n(667532));
-var P = n(112420),
-    C = n(652215);
+var N = n(112420),
+    P = n(652215);
 function k(e) {
     return "string" == typeof e && "" !== e ? e : void 0;
 }
 let M = {
-    [C.e$_.OPEN_CONTEXT_MENU]: (e, t) => {
+    [P.e$_.OPEN_CONTEXT_MENU]: (e, t) => {
         let n = "custom" === e.args.type,
             i = n
                 ? (function e(t) {
@@ -272,7 +272,7 @@ let M = {
                     }
             : { result: { opened: !0 }, answered: "opened, no selection to make" };
     },
-    [C.e$_.SHOW_CONFIRM_MODAL]: (e, t) => {
+    [P.e$_.SHOW_CONFIRM_MODAL]: (e, t) => {
         let n = !0 === t.confirm,
             i = k(e.args.title);
         return {
@@ -281,24 +281,24 @@ let M = {
             subject: i,
         };
     },
-    [C.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
+    [P.e$_.OPEN_EXTERNAL_LINK]: (e) => ({
         result: { opened: !1 },
         answered: "cancelled \u2014 an agent may not open external links",
         subject: k(e.args.url),
     }),
-    [C.e$_.SHARE_CONTENT]: (e) => ({
+    [P.e$_.SHARE_CONTENT]: (e) => ({
         result: { success: !1, didCopyLink: !1, didSendMessage: !1 },
         answered: "closed without sharing \u2014 an agent may not send a message for the user",
         subject: k(e.args.preview_title) ?? k(e.args.content),
     }),
-    [C.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [C.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [C.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [C.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
-    [C.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
-    [C.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
-    [C.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
-    [C.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [P.e$_.OPEN_USER_PROFILE]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [P.e$_.OPEN_USER_POPOUT]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [P.e$_.SHOW_TOOLTIP]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [P.e$_.HIDE_TOOLTIP]: () => ({ result: { hidden: !0 }, answered: "hidden" }),
+    [P.e$_.OPEN_MEDIA_VIEWER]: () => ({ result: { opened: !0 }, answered: "opened" }),
+    [P.e$_.SHOW_TOAST]: () => ({ result: { shown: !0 }, answered: "shown" }),
+    [P.e$_.OPEN_INVITE_DIALOG]: () => ({ result: void 0, answered: "opened" }),
+    [P.e$_.OPEN_SHARE_MOMENT_DIALOG]: () => ({ result: void 0, answered: "opened" }),
 };
 Object.keys(M);
 let B = { drain: () => [], end: () => {}, iframeId: null },
@@ -322,7 +322,7 @@ function G(e) {
 }
 function D(e) {
     let t = e.contentWindow;
-    return null == t ? null : ((0, N.lw)(t) ?? null);
+    return null == t ? null : ((0, C.lw)(t) ?? null);
 }
 function V(e, t, n) {
     var i = D(e);
@@ -330,13 +330,13 @@ function V(e, t, n) {
     let r = { iframeId: i, answers: t ?? {}, recorded: [] };
     return (
         n?.beneathBatches === !0 ? L.push(r) : L.unshift(r),
-        1 === L.length && (0, P.C)(G),
+        1 === L.length && (0, N.C)(G),
         {
             iframeId: i,
             drain: () => r.recorded.splice(0, r.recorded.length),
             end: () => {
                 let e = L.indexOf(r);
-                -1 !== e && (L.splice(e, 1), 0 === L.length && (0, P.C)(null));
+                -1 !== e && (L.splice(e, 1), 0 === L.length && (0, N.C)(null));
             },
         }
     );
@@ -410,10 +410,10 @@ async function z(e, t, n) {
     if (null == s) return { status: "unavailable" };
     let u = null == o ? { uploadToken: void 0 } : await o();
     if (null == u) return { status: "unavailable" };
-    let a = await I(s, { captureId: t, spec: r, build: l, uploadToken: u.uploadToken });
+    let a = await m(s, { captureId: t, spec: r, build: l, uploadToken: u.uploadToken });
     return null != a ? a : await (0, A.x)(s, t, r, u.uploadToken);
 }
-async function Y(e, t, n, i) {
+async function K(e, t, n, i) {
     if (!(0, y.EA)(e)) return { status: "unavailable" };
     let r = (0, W.t_)(e);
     try {
@@ -429,7 +429,7 @@ async function Y(e, t, n, i) {
         try {
             let i = await (0, S.S)(r, t, n);
             if ("completed" !== i.status) return i;
-            let l = [...K.drain(e), ...o.drain()];
+            let l = [...Y.drain(e), ...o.drain()];
             if (0 === l.length) return i;
             return { ...i, response: { ...i.response, native: l } };
         } finally {
@@ -439,7 +439,7 @@ async function Y(e, t, n, i) {
         r();
     }
 }
-let K = (function (e) {
+let Y = (function (e) {
     let t = new Map();
     function n(e) {
         let n = t.get(e);
@@ -483,7 +483,7 @@ let K = (function (e) {
                   (function (e) {
                       let t = e.contentWindow;
                       if (null == t) return;
-                      let n = (0, N.lw)(t);
+                      let n = (0, C.lw)(t);
                       null != n && ((0, v.ir)(n), (0, b.OR)(n));
                   })(t),
               open: () => V(t, void 0, { beneathBatches: !0 }),
@@ -505,32 +505,31 @@ let X = {
         return u.A.isFocused();
     },
     areTurnNotificationsDisabled: function () {
-        return s.A.getDesktopType() === C.nRU.NEVER;
+        return s.A.getDesktopType() === P.nRU.NEVER;
     },
     presentTurnNotification: function (e) {
-        let { projectId: t, title: r, body: l, route: s, sound: u, volume: d } = e;
+        let { title: t, body: r, route: l, sound: s, volume: u } = e;
         i.default.showNotification(
             n(608598),
+            t,
             r,
-            l,
             { notif_type: "VIBEGRATIONS_ASSISTANT_FINISHED" },
             {
-                tag: `vibegrations-${t}`,
-                sound: u,
-                volume: d,
-                fallbackDeepLink: null == s ? void 0 : (0, a.I)(s),
-                onClick: null == s ? void 0 : () => (0, o.pX)(s),
+                sound: s,
+                volume: u,
+                fallbackDeepLink: null == l ? void 0 : (0, a.I)(l),
+                onClick: null == l ? void 0 : () => (0, o.pX)(l),
                 isUserAvatar: !1,
             },
         );
     },
     relayPreviewCapture: z,
-    relayPreviewControl: Y,
+    relayPreviewControl: K,
     beginPreviewOperation: function (e) {
-        K.begin(e);
+        Y.begin(e);
     },
     endPreviewOperation: function (e) {
-        K.end(e);
+        Y.end(e);
     },
     releasePreviewControl: function (e) {
         (0, W.xm)(e);
