@@ -116,8 +116,8 @@ class A extends r.EventEmitter {
             (this._file = { ...this._file, currentSize: t, progress: r, rate: a }),
             this.emit("progress", this._file));
     };
-    _handleException = (e) => {
-        this._handleError({ reason: { type: _.ty.ERROR_SOURCE_UNKNOWN, msg: e.toString() } });
+    _handleException = (e, t) => {
+        this._handleError({ code: t, reason: { type: _.ty.ERROR_SOURCE_UNKNOWN, msg: e.toString() } });
     };
     _handleAborted = () => {
         this.clearProcessingMessageInterval();
@@ -156,8 +156,8 @@ class A extends r.EventEmitter {
         let n = this.files.indexOf(t);
         ((this.files = [...this.files.slice(0, n), ...this.files.slice(n + 1)]),
             (this._file = { ...this._file, items: this.files }),
-            await (0, o.sm)(t),
             t.cancel(),
+            await (0, o.sm)(t),
             this.emit("cancel-upload-item", this._file),
             0 === this.files.length && this.cancel());
     }

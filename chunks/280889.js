@@ -466,7 +466,11 @@ class w extends O.Ay {
             "compressTimeMs",
             async () => await (0, m.Si)(this, this.reactNativeFileIndex ?? 0),
         );
-        if (null == e || null == e.file) return (v.error(`Failed to get compressed file for ${this.id}`), this);
+        if (null == e || null == e.file)
+            throw (
+                v.error(`Failed to get compressed file for ${this.id}`),
+                Error(`Failed to get compressed file for ${this.id}`)
+            );
         let t = e.uri,
             n = e.file.name;
         if (
