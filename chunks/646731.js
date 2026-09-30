@@ -97,7 +97,7 @@ function Q(e) {
                                         orbIconHook: () =>
                                             (0, a.jsx)(k.C, {
                                                 className: V.fN,
-                                                size: "xs",
+                                                size: "xxs",
                                                 color: T.A.colors.ICON_SUBTLE,
                                             }),
                                     }),
