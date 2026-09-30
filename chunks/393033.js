@@ -1,8 +1,8 @@
 n.d(t, {
+    $r: () => m,
     Jn: () => h,
     Q7: () => E,
     Tk: () => T,
-    UI: () => m,
     W$: () => g,
     _W: () => _,
     _g: () => p,
@@ -65,6 +65,7 @@ function T(e) {
     return e === c.t02.DSA_APPEAL_REQUEST_DEFLECTION ? u.intl.string(u.t["0qyXXH"]) : u.intl.string(u.t.aPmsx3);
 }
 function m(e) {
+    if (e.actions.some((e) => e.action_type === o.X2.BAN)) return null;
     let t = e.max_expiration_time;
     if (null == t) return null;
     try {

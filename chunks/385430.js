@@ -21,8 +21,8 @@ var t = e(477900),
     N = e(306537),
     L = e(462924),
     v = e(807393),
-    I = e(773669),
-    k = e(174459),
+    k = e(773669),
+    I = e(174459),
     T = e(67521),
     C = e(739010),
     U = e(207913),
@@ -56,7 +56,7 @@ function M(n) {
 }
 function V(n) {
     let { actions: i, classificationExpiration: e, plainHeader: l } = n,
-        a = (0, A.bG)([I.default], () => I.default.locale);
+        a = (0, A.bG)([k.default], () => k.default.locale);
     return 0 === i.filter((n) => n.descriptions.length > 0).length && null == e
         ? null
         : (0, t.jsxs)("div", {
@@ -281,8 +281,8 @@ let nn = (n) => {
         f = (0, G.v)(),
         _ = !!r?.is_coppa && h.includes(C.RH.AGE_VERIFY_ELIGIBLE),
         g = !!r?.is_coppa && h.includes(C.RH.AGE_VERIFY_GLOBAL_ELIGIBLE),
-        I = (0, L.M)(N.q1.AUTOMATED_UNDERAGE_APPEALS),
-        R = g && I,
+        k = (0, L.M)(N.q1.AUTOMATED_UNDERAGE_APPEALS),
+        R = g && k,
         F = (0, A.bG)([U.A], () => U.A.getIsManualReviewDecidedUnderage()),
         M = !!r?.is_coppa && F,
         Y = {
@@ -295,7 +295,7 @@ let nn = (n) => {
         },
         $ = l.useRef(Y);
     function B() {
-        (k.default.track(w.HAw.SAFETY_HUB_ACTION, {
+        (I.default.track(w.HAw.SAFETY_HUB_ACTION, {
             action: b.ZU.ClickLetUsKnow,
             account_standing: j.state,
             classification_ids: [Number(i)],
@@ -323,7 +323,7 @@ let nn = (n) => {
             violationType: a,
         } = $.current;
         f &&
-            k.default.track(w.HAw.SAFETY_HUB_ACTION, {
+            I.default.track(w.HAw.SAFETY_HUB_ACTION, {
                 action: b.ZU.ViewViolationDetail,
                 account_standing: n.state,
                 classification_ids: [Number(i)],
@@ -357,7 +357,7 @@ let nn = (n) => {
                                       children: [
                                           (0, t.jsx)(V, {
                                               actions: r.actions,
-                                              classificationExpiration: (0, o.UI)(r),
+                                              classificationExpiration: (0, o.$r)(r),
                                               plainHeader: R,
                                           }),
                                           R
