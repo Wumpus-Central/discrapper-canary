@@ -5,8 +5,8 @@ var i = n(477900),
     a = n(268218);
 let o = r.lazy(() =>
         (0, a.sq)({
-            createPromise: () => Promise.resolve().then(n.bind(n, 664111)),
-            webpackId: 664111,
+            createPromise: () => Promise.resolve().then(n.bind(n, 266546)),
+            webpackId: 266546,
             name: "DiscordVideoPlayer",
         }),
     ),

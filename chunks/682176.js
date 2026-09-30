@@ -24,8 +24,8 @@ var a = i(477900),
     f = i(375708),
     k = i(324973);
 let x = (0, u.qT)({
-    createPromise: () => Promise.resolve().then(i.bind(i, 664111)),
-    webpackId: 664111,
+    createPromise: () => Promise.resolve().then(i.bind(i, 266546)),
+    webpackId: 266546,
     name: "DiscordVideoPlayer",
     renderLoader: () => (0, a.jsx)("div", { className: k.Lq }),
 });

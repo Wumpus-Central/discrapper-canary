@@ -1,4 +1,4 @@
-(i.d(t, { Cr: () => C, I1: () => I, Nj: () => M, UB: () => E, SX: () => k, R6: () => w }), i(938796));
+(i.d(t, { Cr: () => C, I1: () => y, Nj: () => M, UB: () => z, SX: () => k, R6: () => w }), i(938796));
 var a = i(477900),
     n = i(582128),
     l = i(665260);
@@ -37,7 +37,7 @@ function C(e) {
         analyticsSource: "ImageComponentForMessageAttachment",
     });
 }
-function I(e) {
+function y(e) {
     let t = e.item.originalItem,
         i = (0, l.Lt)(t.flags ?? 0, c.sbO.IS_CLIP),
         n = p.A.toURLSafe(t.proxy_url);
@@ -73,9 +73,9 @@ function I(e) {
             })
           : (0, f.T)(e.naturalWidth, e.naturalHeight)
             ? (0, a.jsx)(x, { attachmentProps: e, posterUrl: n.toString() })
-            : y(e, n.toString());
+            : I(e, n.toString());
 }
-function y(e, t) {
+function I(e, t) {
     let i = e.item.originalItem;
     return (0, _.$o)({
         ...e,
@@ -127,6 +127,7 @@ function x(e) {
                             alt: s,
                             src: n.url,
                             poster: i,
+                            fileSizeBytes: n.size,
                             posterPlaceholder: n.placeholder,
                             posterPlaceholderVersion: n.placeholder_version,
                             initialActive: !1,
@@ -164,7 +165,7 @@ function x(e) {
             ],
         });
     }
-    return y(t, i);
+    return I(t, i);
 }
 function M(e) {
     let t = e.item.originalItem;
@@ -231,7 +232,7 @@ function w(e) {
     let t = e.item.originalItem;
     return (0, _._d)({ ...e, url: t.url, fileName: (0, g.A)(t), fileSize: t.size, contentType: t.content_type });
 }
-function E(e) {
+function z(e) {
     let t = e.item.originalItem;
     return (0, _.Dk)({ ...e, url: t.url, fileName: (0, g.A)(t), fileSize: t.size });
 }
