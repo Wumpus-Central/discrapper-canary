@@ -853,15 +853,15 @@ var eX = i(702841),
     e1 = i(554146),
     e8 = i(43105),
     e2 = i(131607),
-    e7 = i(518477),
-    e5 = i(49999);
+    e5 = i(518477),
+    e7 = i(49999);
 function e3() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = e$.A.useConfig({ location: "PersonalWidgetUpsellCoachmark" }).enabled,
         [i, n] = (0, e2.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
     return [i === e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, n];
 }
-function e6(e) {
+function e4(e) {
     let { targetElementRef: t, isVisible: i, markAsDismissed: l } = e,
         { trackUserProfileEditAction: s } = (0, eQ.NJ)();
     return i
@@ -879,7 +879,7 @@ function e6(e) {
               gradientColor: "nitro-pink",
               title: V.intl.string(V.t.KKGxNt),
               body: V.intl.string(V.t["IS+QTV"]),
-              onRequestClose: () => l(e5.i.USER_DISMISS),
+              onRequestClose: () => l(e7.i.USER_DISMISS),
               actions: [
                   {
                       text: V.intl.string(V.t.RCy7Px),
@@ -888,23 +888,23 @@ function e6(e) {
                           let e = (0, I.g0)();
                           ((0, F.Y5)(e),
                               s({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
-                              (0, e0.XA)(e7.jM.WIDGET_ADDED));
+                              (0, e0.XA)(e5.jM.WIDGET_ADDED));
                       },
                   },
               ],
           })
         : null;
 }
-var e4 = i(410453);
+var e6 = i(410453);
 function e9(e) {
     let { buttonRef: t, isCoachmarkVisible: i, markCoachmarkAsDismissed: s } = e,
         { trackUserProfileEditAction: a } = (0, eQ.NJ)(),
         r = l.useCallback(() => {
-            i && s(e5.i.TAKE_ACTION);
+            i && s(e7.i.TAKE_ACTION);
             let e = (0, I.g0)();
             ((0, F.Y5)(e),
                 a({ action: "WIDGET_ADDED", ...e.getProfileEditAnalyticsOptions() }),
-                (0, e0.XA)(e7.jM.WIDGET_ADDED));
+                (0, e0.XA)(e5.jM.WIDGET_ADDED));
         }, [a, i, s]);
     return (0, n.jsx)(eK.$, {
         icon: eq.t,
@@ -932,7 +932,7 @@ function te(e) {
         })(),
         m = (0, eZ.c)("UserProfileWidgetEditingHeader"),
         x = l.useCallback(() => {
-            (c && u(e5.i.TAKE_ACTION),
+            (c && u(e7.i.TAKE_ACTION),
                 s({ action: "PRESS_ADD_WIDGET" }),
                 (0, ej.openModalLazy)(
                     async () => {
@@ -945,10 +945,10 @@ function te(e) {
                 ));
         }, [s, c, u]);
     return (0, n.jsxs)("div", {
-        className: a()(e4.w, t),
+        className: a()(e6.w, t),
         children: [
             (0, n.jsx)(d.E, {
-                className: e4.D,
+                className: e6.D,
                 variant: m ? "text-sm/semibold" : "text-xs/semibold",
                 color: "text-subtle",
                 children: V.intl.string(V.t.OYlggR),
@@ -962,7 +962,7 @@ function te(e) {
                 onClick: x,
                 buttonRef: r,
             }),
-            (0, n.jsx)(e6, { targetElementRef: g ? o : r, isVisible: c, markAsDismissed: u }),
+            (0, n.jsx)(e4, { targetElementRef: g ? o : r, isVisible: c, markAsDismissed: u }),
         ],
     });
 }
@@ -1014,7 +1014,7 @@ async function tE(e, t, i, n, l) {
             c = await E.A.uploadWidgetClip(d, { onProgress: (e) => (0, tI.Fj)(t, e), signal: n.signal });
         if (!(0, F.WX)(t, c)) return;
         r({
-            action: a === e7.IE.PICKER ? "CLIP_ADDED_FROM_PICKER" : "CLIP_ADDED_FROM_SUGGESTED",
+            action: a === e5.IE.PICKER ? "CLIP_ADDED_FROM_PICKER" : "CLIP_ADDED_FROM_SUGGESTED",
             widgetEdited: b.x.CLIPS_GALLERY,
             gameId: i,
         });
@@ -1068,7 +1068,7 @@ var tS = i(305866),
     tk = i(229087),
     ty = i(753437),
     tT = i(382701),
-    tN = i(630900);
+    tN = i(408519);
 function tR(e) {
     let { clipId: t, tags: i, allowEditing: s, disableInteraction: a = !1, onEditingChange: r } = e,
         o = s && !a,
@@ -1507,18 +1507,18 @@ function t1(e) {
 }
 var t8 = i(769015),
     t2 = i(409626),
-    t7 = i(692969),
-    t5 = i(202163),
+    t5 = i(692969),
+    t7 = i(202163),
     t3 = i(207803),
-    t6 = i(591179),
-    t4 = i(485745),
+    t4 = i(591179),
+    t6 = i(485745),
     t9 = i(308766);
 function ie(e) {
     let { gameId: t, userId: i, className: s } = e,
-        { gameRecord: r } = (0, t5.A)(t),
-        o = !(0, t6.X)("WidgetClipGameIcon"),
-        d = (0, t4.A)(o),
-        c = (0, t7.A)({
+        { gameRecord: r } = (0, t7.A)(t),
+        o = !(0, t4.X)("WidgetClipGameIcon"),
+        d = (0, t6.A)(o),
+        c = (0, t5.A)({
             location: "WidgetClipGameIcon",
             applicationId: t,
             source: t2.GameProfileSources.UserProfile,
@@ -1688,7 +1688,7 @@ function ic(e) {
             },
             [_],
         ),
-        ea = l.useCallback((e) => es(e, e7.IE.SUGGESTED), [es]),
+        ea = l.useCallback((e) => es(e, e5.IE.SUGGESTED), [es]),
         er = l.useCallback(() => {
             (_({ action: "PRESS_ADD_CLIP", widgetEdited: b.x.CLIPS_GALLERY }),
                 (0, ej.openModalLazy)(
@@ -1744,7 +1744,7 @@ function ic(e) {
                                 initialMainLink: td.oH.ALL_CLIPS,
                                 picker: {
                                     onPick: (e) => {
-                                        (((e) => es(e, e7.IE.PICKER))(e), t.onClose());
+                                        (((e) => es(e, e5.IE.PICKER))(e), t.onClose());
                                     },
                                     action: td.qh.UPLOAD,
                                     filterClip: it,
@@ -1864,7 +1864,7 @@ function iI(e) {
             null != r &&
                 ((0, F.Y5)(r),
                 a({ action: "WIDGET_ADDED", ...r.getProfileEditAnalyticsOptions() }),
-                (0, e0.XA)(e7.jM.WIDGET_ADDED));
+                (0, e0.XA)(e5.jM.WIDGET_ADDED));
         }, [r, a]);
     return (0, n.jsx)(_.A, {
         user: t,
@@ -1886,7 +1886,7 @@ function iI(e) {
                             icon: tx.P,
                             "aria-label": V.intl.string(V.t.WAI6xu),
                             onClick: () => {
-                                s(e5.i.USER_DISMISS);
+                                s(e7.i.USER_DISMISS);
                             },
                         }),
                     }),
@@ -1899,7 +1899,7 @@ function iI(e) {
                             icon: ip.U,
                             "aria-label": V.intl.formatToPlainString(V.t.KfGahB, { applicationName: i.name }),
                             onClick: () => {
-                                (s(e5.i.TAKE_ACTION), o());
+                                (s(e7.i.TAKE_ACTION), o());
                             },
                         }),
                     }),
@@ -2361,7 +2361,7 @@ function i2(e) {
             }),
     });
 }
-function i7(e) {
+function i5(e) {
     let { widgetType: t, allowEditing: i, disableInteraction: l = !1, games: s } = e,
         { getManageButtonForWidget: a } = (0, tt.r)(),
         r = a(t),
@@ -2383,7 +2383,7 @@ function i7(e) {
           })
         : g;
 }
-function i5(e) {
+function i7(e) {
     let { user: t, widget: i, guildId: l, channelId: s, allowEditing: a, disableInteraction: r, ...o } = e;
     return (0, n.jsx)(W.A, {
         userId: t.id,
@@ -2393,7 +2393,7 @@ function i5(e) {
         ...o,
         children:
             i.games.length > 0
-                ? (0, n.jsx)(i7, {
+                ? (0, n.jsx)(i5, {
                       userId: t.id,
                       widgetType: i.type,
                       games: i.games,
@@ -2415,7 +2415,7 @@ function i3(e) {
         ...o,
         children:
             i.games.length > 0
-                ? (0, n.jsx)(i7, {
+                ? (0, n.jsx)(i5, {
                       userId: t.id,
                       widgetType: i.type,
                       games: i.games,
@@ -2427,8 +2427,8 @@ function i3(e) {
                 : (0, n.jsx)(iG, { widget: i }),
     });
 }
-var i6 = i(875620);
-function i4(e) {
+var i4 = i(875620);
+function i6(e) {
     let { gameId: t, userId: i, onClick: l } = e,
         { coverImageUrl: s, gameName: a, isLoading: o } = (0, iJ.A)(t),
         d = (0, r.bG)([v.A], () => v.A.suggestedFetchIsLoading),
@@ -2439,19 +2439,19 @@ function i4(e) {
               text: c,
               ariaHidden: !0,
               children: (0, n.jsxs)(H.D, {
-                  className: i6.c9,
+                  className: i4.c9,
                   onClick: l,
                   "aria-label": c,
                   children: [
                       (0, n.jsx)(iZ.A, {
-                          className: i6.Iv,
+                          className: i4.Iv,
                           imageSrc: s,
                           gameName: a,
                           gameId: t,
                           userId: i,
                           disableInteraction: !0,
                       }),
-                      (0, n.jsx)(tG.PlusLargeIcon, { size: "md", className: i6.Xv, color: e_.A.colors.WHITE }),
+                      (0, n.jsx)(tG.PlusLargeIcon, { size: "md", className: i4.Xv, color: e_.A.colors.WHITE }),
                   ],
               }),
           });
@@ -2473,10 +2473,10 @@ function i9(e) {
     return (0, n.jsx)(tQ, {
         ...s,
         children: (0, n.jsx)("ul", {
-            className: i6.Vg,
+            className: i4.Vg,
             children: a.map((e) => {
                 let { gameId: i } = e;
-                return (0, n.jsx)("li", { children: (0, n.jsx)(i4, { onClick: () => c(i), userId: t, gameId: i }) }, i);
+                return (0, n.jsx)("li", { children: (0, n.jsx)(i6, { onClick: () => c(i), userId: t, gameId: i }) }, i);
             }),
         }),
     });
@@ -2492,7 +2492,7 @@ function nt(e) {
         case b.x.WANT_TO_PLAY_GAMES:
             return (0, n.jsx)(i3, { widget: t, ...i });
         case b.x.PLAYED_GAMES:
-            return (0, n.jsx)(i5, { widget: t, ...i });
+            return (0, n.jsx)(i7, { widget: t, ...i });
         default:
             return null;
     }
@@ -2742,7 +2742,7 @@ function nf(e) {
                                       trackUserProfileEditAction: s,
                                   })
                                 : (0, n.jsx)(nm, { personalWidgetOptionRef: o, trackUserProfileEditAction: s }),
-                            (0, n.jsx)(e6, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
+                            (0, n.jsx)(e4, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
                         ],
                     }),
             ],

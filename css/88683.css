@@ -1,0 +1,63 @@
+.modalHeader__1e290 {
+    background-image: linear-gradient(var(--modal-background), var(--modal-background));
+    background-position: 0 10px;
+    background-repeat: no-repeat;
+    background-size: 100% calc(100% - 20px);
+    margin-bottom: -20px;
+    overflow: clip;
+    padding-bottom: 0
+}
+
+.manaModalHeaderCompatible__1e290 {
+    margin-top: calc(var(--custom-modal-padding-top)*-1)
+}
+
+.modalHeaderCustomGift__1e290 {
+    align-items: center;
+    background-image: unset;
+    background-size: unset;
+    border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0;
+    padding-bottom: 0
+}
+
+.closeButton__1e290 {
+    margin-inline-start: auto;
+    padding: 0
+}
+
+.closeButtonInner__1e290 {
+    height: 24px
+}
+
+.header__1e290 {
+    flex-shrink: 0
+}
+
+body .headerAnimation__1e290 {
+    border-start-end-radius: 4px;
+    border-start-start-radius: 4px;
+    position: absolute;
+    top: 0;
+    inset-inline: 50% 0;
+    bottom: -22px;
+    min-width: 440px;
+    overflow: hidden;
+    transform: translateX(-50%);
+    width: 100%
+}
+
+@media (max-width:485px) {
+    .headerAnimation__1e290 {
+        min-width: auto !important
+    }
+}
+
+.headerAnimation__1e290 {
+    border-start-end-radius: calc(var(--radius-md) - 1px);
+    border-start-start-radius: calc(var(--radius-md) - 1px)
+}
+
+/*# sourceMappingURL=88683.d36b3e170f0fa520.css.map*/

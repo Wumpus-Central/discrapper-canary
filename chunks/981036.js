@@ -7,8 +7,8 @@ var t = l(477900),
     i = l(696208),
     o = l(364840),
     c = l(866665),
-    d = l(999784),
-    u = l(683433),
+    d = l(820287),
+    u = l(999784),
     m = l(429308);
 function p(a) {
     let { onClick: e, loading: l, disabled: r, text: s, tooltipText: n, ...i } = a,
@@ -19,14 +19,14 @@ function p(a) {
 function x(a) {
     let { primaryCTAButtonProps: e, showLockIcon: l, onBackClick: s } = a,
         h = r.useMemo(() => [e], [e]),
-        c = r.useMemo(() => (null != s ? (0, t.jsx)(u.A, { onClick: s }) : void 0), [s]);
+        c = r.useMemo(() => (null != s ? (0, t.jsx)(d.A, { onClick: s }) : void 0), [s]);
     return null != e.tooltipText || l
         ? (0, t.jsx)(o.j, {
               children: (0, t.jsxs)("div", {
                   className: n()(m.wm, null != s ? m.LT : m.Ub),
                   children: [
-                      null != s ? (0, t.jsx)(u.A, { onClick: s }) : null,
-                      l && (0, t.jsx)(d.A, {}),
+                      null != s ? (0, t.jsx)(d.A, { onClick: s }) : null,
+                      l && (0, t.jsx)(u.A, {}),
                       (0, t.jsx)(p, { ...e }),
                   ],
               }),

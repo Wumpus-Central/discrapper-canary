@@ -23,7 +23,7 @@ function f(e) {
     S.h.dispatch({ type: "DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS", skuId: e });
 }
 var p = n(912851);
-let g =
+let D =
     221552 == n.j
         ? {
               clearRemoteDisconnectVoiceChannelId() {
@@ -34,7 +34,7 @@ let g =
               },
           }
         : null;
-var D = n(730852),
+var g = n(730852),
     P = n(785796),
     h = n(55619),
     M = n(246605),
@@ -168,8 +168,8 @@ function eS(e) {
 }
 var ef = n(976860),
     ep = n(780964),
-    eg = n(718446),
-    eD = n(766075),
+    eD = n(718446),
+    eg = n(766075),
     eP = n(879945),
     eh = n(379848),
     eM = n(355097),
@@ -308,7 +308,7 @@ function ey(e) {
                                         location_section: ed.JJy.NOTIFICATION_BAR,
                                         location_object: ed.ZSU.BUTTON_CTA,
                                     }),
-                                        (0, eD.openUserSettings)(ep.X.NITRO_PANEL));
+                                        (0, eg.openUserSettings)(ep.X.NITRO_PANEL));
                                 },
                                 children: F.intl.string(F.t["8JC5e/"]),
                             }),
@@ -339,7 +339,7 @@ function ey(e) {
                             (0, i.jsx)(A.Z_, {
                                 noticeType: l,
                                 onClick: () => {
-                                    (r(e_.i.TAKE_ACTION), (0, eD.openUserSettings)(ep.X.NITRO_PANEL));
+                                    (r(e_.i.TAKE_ACTION), (0, eg.openUserSettings)(ep.X.NITRO_PANEL));
                                 },
                                 children: F.intl.string(F.t.pyYSiO),
                             }),
@@ -354,7 +354,7 @@ function ey(e) {
                             (0, i.jsx)(A.Z_, {
                                 noticeType: l,
                                 onClick: () => {
-                                    (0, ef.pX)((0, eg.settingsPathToRoute)(eM.od.ACCOUNT));
+                                    (0, ef.pX)((0, eD.settingsPathToRoute)(eM.od.ACCOUNT));
                                 },
                                 children: F.intl.string(F.t.Vm8akB),
                             }),
@@ -419,7 +419,7 @@ function eX(e) {
         r = (0, E.bG)([el.default], () => !eq.Ay.isPremium(el.default.getCurrentUser())),
         s = l.useCallback(() => {
             (er.default.track(ed.HAw.OUTBOUND_PROMOTION_NOTICE_CLICKED),
-                (0, eD.openUserSettings)(ep.X.GIFT_PANEL),
+                (0, eg.openUserSettings)(ep.X.GIFT_PANEL),
                 eb.Ay.dismissOutboundPromotionNotice());
         }, []);
     return null == n
@@ -678,8 +678,8 @@ function tS(e) {
 }
 var tf = n(468689),
     tp = n(699609);
-if (221552 == n.j) var tg = n(862482);
-var tD = n(66834),
+if (221552 == n.j) var tD = n(862482);
+var tg = n(66834),
     tP = n(449054),
     th = n(451543);
 let tM =
@@ -693,7 +693,7 @@ let tM =
                   if (null != t) {
                       r(!0);
                       try {
-                          (tP.cf(t.id), await tD.A.joinGuild(t.id, { source: ed.Q4z.NOTICE_BAR }));
+                          (tP.cf(t.id), await tg.A.joinGuild(t.id, { source: ed.Q4z.NOTICE_BAR }));
                       } catch {
                           r(!1);
                       }
@@ -702,10 +702,10 @@ let tM =
               return (0, i.jsxs)("div", {
                   className: to()(th.lm, tR.lm),
                   children: [
-                      (0, i.jsxs)(tg.$n, {
-                          look: tg.$n.Looks.OUTLINED,
-                          color: tg.$n.Colors.WHITE,
-                          size: tg.$n.Sizes.NONE,
+                      (0, i.jsxs)(tD.$n, {
+                          look: tD.$n.Looks.OUTLINED,
+                          color: tD.$n.Colors.WHITE,
+                          size: tD.$n.Sizes.NONE,
                           className: to()(th.x6, th.aX),
                           innerClassName: th.gb,
                           onClick: function () {
@@ -721,11 +721,11 @@ let tM =
                           variant: "text-sm/normal",
                           children: F.intl.string(F.t["N/y2WE"]),
                       }),
-                      (0, i.jsx)(tg.$n, {
+                      (0, i.jsx)(tD.$n, {
                           className: th.x6,
-                          look: tg.$n.Looks.OUTLINED,
-                          color: tg.$n.Colors.WHITE,
-                          size: tg.$n.Sizes.NONE,
+                          look: tD.$n.Looks.OUTLINED,
+                          color: tD.$n.Colors.WHITE,
+                          size: tD.$n.Sizes.NONE,
                           submitting: n,
                           onClick: s,
                           children: F.intl.format(F.t.uHN7ny, { guild: t.name }),
@@ -752,7 +752,7 @@ function tj(e) {
     let n = l.useCallback(() => {
         (er.default.track(ed.HAw.PARENTAL_CONSENT_WARNING_BANNER_TAPPED, { days_remaining: t }),
             ty.Ay.selectTab(tL.u9.REQUESTS),
-            (0, eD.openUserSettings)(ep.X.FAMILY_CENTER_PANEL));
+            (0, eg.openUserSettings)(ep.X.FAMILY_CENTER_PANEL));
     }, [t]);
     return (0, i.jsx)(A.$T, {
         color: A.Hv.CUSTOM,
@@ -935,7 +935,7 @@ function t4() {
             (0, i.jsx)(A.Z_, {
                 noticeType: ed.kqX.PTT_NO_KEYBIND_WARNING,
                 onClick: function () {
-                    (0, eD.openUserSettings)(ep.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING);
+                    (0, eg.openUserSettings)(ep.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING);
                 },
                 children: F.intl.string(F.t["UgQN+9"]),
             }),
@@ -1033,7 +1033,7 @@ function nA(e) {
             F.intl.string(F.t.Up0ApK),
             (0, i.jsx)(nd, { error: eF.iy.VIDEO_BACKGROUND_UNAVAILABLE }),
             (0, i.jsx)(A.zr, {
-                onClick: () => (0, eD.openUserSettings)(ep.X.CAMERA_CATEGORY),
+                onClick: () => (0, eg.openUserSettings)(ep.X.CAMERA_CATEGORY),
                 children: F.intl.string(F.t.kRwxfi),
             }),
         ],
@@ -1067,7 +1067,7 @@ function nI(e) {
                   (c = !0),
                   (n = (0, i.jsx)(A.zr, {
                       onClick: () => {
-                          (0, eD.openUserSettings)(ep.X.VOICE_AND_VIDEO_PANEL);
+                          (0, eg.openUserSettings)(ep.X.VOICE_AND_VIDEO_PANEL);
                       },
                       children: F.intl.string(F.t.I6YlB4),
                   })))
@@ -1272,7 +1272,7 @@ let nC =
                           children: [
                               (0, i.jsx)(A.PM, {
                                   onClick: () => {
-                                      (g.clearRemoteDisconnectVoiceChannelId(), nR());
+                                      (D.clearRemoteDisconnectVoiceChannelId(), nR());
                                   },
                                   noticeType: r.type,
                               }),
@@ -1280,7 +1280,7 @@ let nC =
                               (0, i.jsx)(A.Z_, {
                                   onClick: () => {
                                       let e = nl.A.getRemoteDisconnectVoiceChannelId();
-                                      null != e && null != tZ.A.getChannel(e) && D.default.selectVoiceChannel(e);
+                                      null != e && null != tZ.A.getChannel(e) && g.default.selectVoiceChannel(e);
                                   },
                                   noticeType: r.type,
                                   children: F.intl.string(F.t.vD60Pv),
@@ -1293,7 +1293,7 @@ let nC =
                           children: [
                               (0, i.jsx)(A.PM, {
                                   onClick: () => {
-                                      (g.clearLastSessionVoiceChannelId(), nR());
+                                      (D.clearLastSessionVoiceChannelId(), nR());
                                   },
                                   noticeType: r.type,
                               }),
@@ -1301,7 +1301,7 @@ let nC =
                               (0, i.jsx)(A.Z_, {
                                   onClick: () => {
                                       let e = nl.A.getLastSessionVoiceChannelId();
-                                      null != e && null != tZ.A.getChannel(e) && D.default.selectVoiceChannel(e);
+                                      null != e && null != tZ.A.getChannel(e) && g.default.selectVoiceChannel(e);
                                   },
                                   noticeType: r.type,
                                   children: F.intl.string(F.t.vD60Pv),
@@ -1321,7 +1321,7 @@ let nC =
                               }),
                               F.intl.string(F.t.D8Cp76),
                               (0, i.jsx)(A.Z_, {
-                                  onClick: () => (0, eD.openUserSettings)(ep.X.VOICE_AND_VIDEO_PANEL),
+                                  onClick: () => (0, eg.openUserSettings)(ep.X.VOICE_AND_VIDEO_PANEL),
                                   noticeType: r.type,
                                   children: F.intl.string(F.t.NiTd0e),
                               }),
@@ -1446,7 +1446,7 @@ let nC =
                                               n.e("679157"),
                                               n.e("1955"),
                                               n.e("341161"),
-                                              n.e("401696"),
+                                              n.e("410526"),
                                               n.e("202985"),
                                               n.e("603619"),
                                               n.e("661630"),
@@ -1462,7 +1462,7 @@ let nC =
                                               n.e("472847"),
                                               n.e("870088"),
                                               n.e("989649"),
-                                              n.e("307395"),
+                                              n.e("925420"),
                                               n.e("586662"),
                                               n.e("758053"),
                                               n.e("247471"),
@@ -1476,11 +1476,11 @@ let nC =
                                               n.e("807432"),
                                               n.e("873532"),
                                               n.e("279774"),
-                                              n.e("307158"),
-                                              n.e("410470"),
+                                              n.e("590088"),
+                                              n.e("125298"),
                                               n.e("295570"),
-                                              n.e("765208"),
-                                              n.e("711562"),
+                                              n.e("728824"),
+                                              n.e("71169"),
                                               n.e("906470"),
                                               n.e("736663"),
                                               n.e("419121"),
@@ -1498,15 +1498,15 @@ let nC =
                                               n.e("724086"),
                                               n.e("358937"),
                                               n.e("448738"),
-                                              n.e("548938"),
+                                              n.e("383670"),
                                               n.e("258407"),
                                               n.e("894292"),
                                               n.e("153302"),
-                                              n.e("836576"),
-                                              n.e("661779"),
+                                              n.e("88683"),
+                                              n.e("363874"),
                                               n.e("923981"),
                                               n.e("750370"),
-                                              n.e("479368"),
+                                              n.e("612162"),
                                               n.e("466592"),
                                               n.e("73946"),
                                               n.e("282050"),
@@ -1514,7 +1514,7 @@ let nC =
                                               n.e("976888"),
                                               n.e("387970"),
                                               n.e("847445"),
-                                              n.e("919659"),
+                                              n.e("547510"),
                                               n.e("966366"),
                                               n.e("983513"),
                                               n.e("76928"),
@@ -1542,7 +1542,7 @@ let nC =
                                               n.e("77333"),
                                               n.e("264572"),
                                               n.e("11735"),
-                                              n.e("262156"),
+                                              n.e("477175"),
                                               n.e("960235"),
                                               n.e("402368"),
                                               n.e("190779"),
@@ -1564,9 +1564,9 @@ let nC =
                                               n.e("293159"),
                                               n.e("186212"),
                                               n.e("755936"),
-                                              n.e("10065"),
-                                              n.e("890375"),
-                                              n.e("88131"),
+                                              n.e("209338"),
+                                              n.e("509398"),
+                                              n.e("927875"),
                                               n.e("833703"),
                                               n.e("55252"),
                                               n.e("692990"),
@@ -1576,9 +1576,9 @@ let nC =
                                               n.e("481987"),
                                               n.e("595653"),
                                               n.e("958038"),
-                                              n.e("171202"),
+                                              n.e("532039"),
                                               n.e("719466"),
-                                              n.e("907533"),
+                                              n.e("99799"),
                                               n.e("576909"),
                                               n.e("406174"),
                                               n.e("715555"),
@@ -1591,7 +1591,7 @@ let nC =
                                               n.e("830938"),
                                               n.e("821924"),
                                               n.e("538513"),
-                                              n.e("975041"),
+                                              n.e("370112"),
                                               n.e("73536"),
                                               n.e("147864"),
                                               n.e("50097"),
@@ -1824,7 +1824,7 @@ let nC =
                                                   n.e("586662"),
                                                   n.e("1955"),
                                                   n.e("341161"),
-                                                  n.e("401696"),
+                                                  n.e("410526"),
                                                   n.e("661630"),
                                                   n.e("202985"),
                                                   n.e("603619"),
@@ -1833,7 +1833,7 @@ let nC =
                                                   n.e("894292"),
                                                   n.e("153302"),
                                                   n.e("758053"),
-                                                  n.e("836576"),
+                                                  n.e("88683"),
                                                   n.e("983513"),
                                                   n.e("419121"),
                                                   n.e("162775"),
@@ -1846,8 +1846,8 @@ let nC =
                                                   n.e("82937"),
                                                   n.e("679157"),
                                                   n.e("987221"),
-                                                  n.e("410470"),
-                                                  n.e("479368"),
+                                                  n.e("125298"),
+                                                  n.e("612162"),
                                                   n.e("76428"),
                                                   n.e("77473"),
                                                   n.e("25279"),
@@ -1867,7 +1867,7 @@ let nC =
                                                   n.e("325675"),
                                                   n.e("996481"),
                                                   n.e("41298"),
-                                                  n.e("10065"),
+                                                  n.e("209338"),
                                                   n.e("523276"),
                                                   n.e("812042"),
                                                   n.e("102328"),
@@ -1911,7 +1911,7 @@ let nC =
                                   noticeType: ed.kqX.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                                   analyticsLocation: k.A.PAST_DUE_ONE_TIME_PAYMENT_NOTICE,
                                   onFallback: () => {
-                                      (nR(eu), (0, eD.openUserSettings)(ep.X.SUBSCRIPTIONS_PANEL));
+                                      (nR(eu), (0, eg.openUserSettings)(ep.X.SUBSCRIPTIONS_PANEL));
                                   },
                                   children: F.intl.string(F.t.q8rxeS),
                               }),
@@ -1933,7 +1933,7 @@ let nC =
                                   analyticsLocation: k.A.PAST_DUE_INVALID_PAYMENT_NOTICE,
                                   onFallback: () => {
                                       (nR(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                          (0, eD.openUserSettings)(ep.X.SUBSCRIPTIONS_PANEL));
+                                          (0, eg.openUserSettings)(ep.X.SUBSCRIPTIONS_PANEL));
                                   },
                                   children: F.intl.string(F.t["Zpd+Yq"]),
                               }),
@@ -1955,7 +1955,7 @@ let nC =
                                   analyticsLocation: k.A.PAST_DUE_MISSING_PAYMENT_NOTICE,
                                   onFallback: () => {
                                       (nR(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                          (0, eD.openUserSettings)(ep.X.SUBSCRIPTIONS_PANEL));
+                                          (0, eg.openUserSettings)(ep.X.SUBSCRIPTIONS_PANEL));
                                   },
                                   children: F.intl.string(F.t.U5pKWA),
                               }),
@@ -1980,7 +1980,7 @@ let nC =
                                   noticeType: ed.kqX.PREMIUM_MISSING_PAYMENT,
                                   onClick: () => {
                                       (nR(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                          (0, eD.openUserSettings)(ep.X.SUBSCRIPTIONS_PANEL));
+                                          (0, eg.openUserSettings)(ep.X.SUBSCRIPTIONS_PANEL));
                                   },
                                   children:
                                       j === eE.PremiumTypes.TIER_1

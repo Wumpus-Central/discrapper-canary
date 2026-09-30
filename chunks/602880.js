@@ -32,7 +32,7 @@ var N = n(319437),
     O = n(989790),
     R = n(511484),
     U = n(251913),
-    x = n(344159),
+    x = n(436102),
     W = n(478996),
     F = n(97352),
     H = n(45938),
@@ -190,12 +190,12 @@ function ee(e) {
             if (null != e0) return e0.options;
         }, [e0]),
         e5 = (0, A.qv)(),
-        e8 = "sm";
-    ef ? (e8 = "xl") : (eA || e1 === T.pn.ADD_PAYMENT_STEPS) && (e8 = "md");
-    let e6 = null != e2 ? e2.modalSizeGetter : void 0,
+        e6 = "sm";
+    ef ? (e6 = "xl") : (eA || e1 === T.pn.ADD_PAYMENT_STEPS) && (e6 = "md");
+    let e8 = null != e2 ? e2.modalSizeGetter : void 0,
         e4 = (0, w.O)(),
-        e9 = null != X && !eZ && (0, R.U9)(e4, X),
-        [e3, e7] = l.useState({
+        e3 = null != X && !eZ && (0, R.U9)(e4, X),
+        [e9, e7] = l.useState({
             load_id: eO.loadId,
             discovery_session_id: eO.discoverySessionId,
             payment_type: C.frM[eF],
@@ -211,7 +211,7 @@ function ee(e) {
             guild_id: e_,
             payment_modal_version: ey,
             activity_session_id: eq,
-            eligible_for_discount: e9,
+            eligible_for_discount: e3,
             sku_product_line: eK?.productLine,
             quantity: eG,
             checkout_design: _.r.UNIFIED,
@@ -245,7 +245,7 @@ function ee(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 (k.default.track(C.HAw.PAYMENT_FLOW_STARTED, e, t), D.trigger());
             })({
-                ...e3,
+                ...e9,
                 virtual_currency_balance: ti,
                 continue_session_initial_step: ev,
                 custom_checkout_flow: eY,
@@ -261,7 +261,7 @@ function ee(e) {
             let e = (0, H.lo)(eB) === H.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();
             k.default.track(C.HAw.PAYMENT_FLOW_SUCCEEDED, {
-                ...e3,
+                ...e9,
                 is_custom_message_edited: eZ && e && null != eQ ? eQ !== B.intl.string(B.t.ZkOo1U) : void 0,
                 is_custom_emoji_sound_available: eZ && e,
                 emoji_name: eZ && e && eX?.id == null ? eX?.surrogates : void 0,
@@ -272,7 +272,7 @@ function ee(e) {
                 gift_card_currency: tn,
                 virtual_currency_balance: ti,
             });
-        }, [e3, eX, eQ, eB, eZ, e$, eO.startTime, te, tt, tn, ti]),
+        }, [e9, eX, eQ, eB, eZ, e$, eO.startTime, te, tt, tn, ti]),
         ts = l.useCallback(() => {
             let e = null != P ? (0, b.NE)(P) : null;
             eZ && null != eB && null != e && (0, g.Yd)(eB.id, e);
@@ -289,13 +289,13 @@ function ee(e) {
                 let c = null != n ? n : e1;
                 null === c || a
                     ? k.default.track(C.HAw.PAYMENT_FLOW_LOADED, {
-                          ...e3,
+                          ...e9,
                           initial_step: c ?? e,
                           continue_session_initial_step: ev,
                           has_saved_payment_source: eC,
                       })
                     : k.default.track(C.HAw.PAYMENT_FLOW_STEP, {
-                          ...e3,
+                          ...e9,
                           ...i,
                           from_step: c,
                           to_step: e === T.pn.ADD_PAYMENT_STEPS ? T.pn.PAYMENT_ELEMENT : e,
@@ -305,7 +305,7 @@ function ee(e) {
                           gift_card_currency: tn,
                       });
             },
-            [e5, eE, eU, e1, ev, e3, tr, eO.startTime, ta, z, ts, eI, tu, eC, tt, tn],
+            [e5, eE, eU, e1, ev, e9, tr, eO.startTime, ta, z, ts, eI, tu, eC, tt, tn],
         );
     return (
         (0, U.b)(e1, eV, to, ew, !1, void 0, ek),
@@ -333,9 +333,9 @@ function ee(e) {
                 isGift: eZ,
                 giftRecipient: eB,
                 returnRef: eh,
-                manaModalSize: e8,
+                manaModalSize: e6,
                 modalSizeOverride: eT,
-                modalSizeGetter: e6,
+                modalSizeGetter: e8,
                 handleClose: tu,
                 children: (0, i.jsx)(K.Ay, {
                     disableDefaultSlideTransformStyling: em,
@@ -345,7 +345,7 @@ function ee(e) {
                         subscriptionTier: X,
                         handleStepChange: to,
                         handleClose: tu,
-                        analyticsData: e3,
+                        analyticsData: e9,
                         setAnalyticsData: e7,
                         trialId: et,
                         reviewWarningMessage: en,

@@ -1,0 +1,105 @@
+.container__949a0 {
+    flex-direction: row;
+    justify-content: space-between
+}
+
+.body__949a0,
+.container__949a0 {
+    align-items: center;
+    display: flex
+}
+
+.body__949a0 {
+    flex-direction: column
+}
+
+.description__949a0 {
+    margin-top: 8px;
+    text-align: center
+}
+
+.icon__1e4d0 {
+    inset-inline-start: 8px;
+    margin: auto auto 25px;
+    top: 9px;
+    z-index: 1
+}
+
+.connectionInstructions__1e4d0 {
+    margin-top: 8px;
+    text-align: center
+}
+
+.flexColumn__5d0ab {
+    display: flex;
+    flex-direction: column
+}
+
+.infoNotice__5d0ab {
+    margin-bottom: 16px
+}
+
+.paymentRequestButton__5d0ab {
+    display: flex;
+    flex: 1;
+    flex-direction: row
+}
+
+.paymentModalBreadcrumbs__5d0ab:after {
+    padding: 0
+}
+
+.paymentModalError__5d0ab {
+    background-color: var(--modal-background);
+    margin-bottom: var(--space-16);
+    padding-top: 12px
+}
+
+.giftCardRedemptionLink__5d0ab {
+    margin-top: 16px
+}
+
+.bodyWrapper__233ed {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    height: 100%;
+    min-height: 0;
+    position: relative
+}
+
+.errorBlockWrapper__233ed {
+    padding-bottom: 16px
+}
+
+.errorBlockWrapperLegacy__233ed {
+    padding: 16px
+}
+
+.paymentNote__233ed {
+    padding: 0 16px
+}
+
+.loadingBlock__233ed {
+    height: 192px
+}
+
+.sequencer__233ed,
+.sequencerStatic__233ed {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column
+}
+
+.sequencerStatic__233ed {
+    flex: 1 1 auto
+}
+
+.sequencerAnimatedNode__233ed {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0
+}
+
+/*# sourceMappingURL=590088.884a818cb7e3b6ba.css.map*/

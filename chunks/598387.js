@@ -5394,7 +5394,7 @@ let un = (0, d.E2)(c.X.GIFT_BLOCKED_PAYMENTS_SETTING, {
     }),
     ui = (0, d.zZ)(c.X.GIFT_BLOCKED_PAYMENTS_CATEGORY, { buildLayout: () => [un] });
 var us = n(982240),
-    ul = n(788833),
+    ul = n(5755),
     ur = n(914410),
     ua = n(95769),
     uo = n(573343);
@@ -5588,7 +5588,7 @@ class uj extends h.PureComponent {
         return (0, A.jsx)("div", { className: ic()(ub.Nr, t), onMouseEnter: n, onMouseLeave: i, children: e });
     }
 }
-var uO = n(165191),
+var uO = n(180522),
     uL = n(871123),
     uR = n(366523),
     uD = n(280450),

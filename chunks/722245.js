@@ -325,8 +325,8 @@ var eb = n(554146),
     e1 = n(429433),
     e2 = n(95701),
     e3 = n(324688);
-let e6 = (0, e2.createChannelRecord)({ id: "1", type: ee.rbe.DM });
-function e8(e) {
+let e8 = (0, e2.createChannelRecord)({ id: "1", type: ee.rbe.DM });
+function e6(e) {
     let {
             placeholder: t,
             onEnter: n,
@@ -350,7 +350,7 @@ function e8(e) {
         showRemainingCharsAfterCount: -1,
         allowNewLines: !1,
         maxCharacterCount: 200,
-        channel: d ?? e6,
+        channel: d ?? e8,
         onChange: (e, t, n) => {
             (p(t), g(n));
         },
@@ -417,7 +417,7 @@ function e5(e) {
                             ref: u,
                             children: (0, l.jsx)(e1.C, {
                                 messageId: ee.dJq,
-                                channel: e6,
+                                channel: e8,
                                 closePopout: () => {
                                     o(!1);
                                 },
@@ -646,7 +646,7 @@ let t3 = (0, te.Fe)({
                 n.e("679157"),
                 n.e("1955"),
                 n.e("341161"),
-                n.e("401696"),
+                n.e("410526"),
                 n.e("202985"),
                 n.e("603619"),
                 n.e("661630"),
@@ -659,7 +659,7 @@ let t3 = (0, te.Fe)({
                 n.e("472847"),
                 n.e("870088"),
                 n.e("989649"),
-                n.e("307395"),
+                n.e("925420"),
                 n.e("586662"),
                 n.e("758053"),
                 n.e("247471"),
@@ -675,11 +675,11 @@ let t3 = (0, te.Fe)({
                 n.e("807432"),
                 n.e("873532"),
                 n.e("279774"),
-                n.e("307158"),
-                n.e("410470"),
+                n.e("590088"),
+                n.e("125298"),
                 n.e("295570"),
-                n.e("765208"),
-                n.e("711562"),
+                n.e("728824"),
+                n.e("71169"),
                 n.e("906470"),
                 n.e("736663"),
                 n.e("730931"),
@@ -708,15 +708,15 @@ let t3 = (0, te.Fe)({
                 n.e("724086"),
                 n.e("358937"),
                 n.e("448738"),
-                n.e("548938"),
+                n.e("383670"),
                 n.e("258407"),
                 n.e("894292"),
                 n.e("153302"),
-                n.e("836576"),
-                n.e("661779"),
+                n.e("88683"),
+                n.e("363874"),
                 n.e("923981"),
                 n.e("750370"),
-                n.e("479368"),
+                n.e("612162"),
                 n.e("466592"),
                 n.e("73946"),
                 n.e("282050"),
@@ -724,7 +724,7 @@ let t3 = (0, te.Fe)({
                 n.e("976888"),
                 n.e("387970"),
                 n.e("847445"),
-                n.e("919659"),
+                n.e("547510"),
                 n.e("966366"),
                 n.e("983513"),
                 n.e("76928"),
@@ -755,7 +755,7 @@ let t3 = (0, te.Fe)({
                 n.e("77333"),
                 n.e("264572"),
                 n.e("11735"),
-                n.e("262156"),
+                n.e("477175"),
                 n.e("960235"),
                 n.e("402368"),
                 n.e("190779"),
@@ -777,9 +777,9 @@ let t3 = (0, te.Fe)({
                 n.e("293159"),
                 n.e("186212"),
                 n.e("755936"),
-                n.e("10065"),
-                n.e("890375"),
-                n.e("88131"),
+                n.e("209338"),
+                n.e("509398"),
+                n.e("927875"),
                 n.e("833703"),
                 n.e("55252"),
                 n.e("692990"),
@@ -789,9 +789,9 @@ let t3 = (0, te.Fe)({
                 n.e("481987"),
                 n.e("595653"),
                 n.e("958038"),
-                n.e("171202"),
+                n.e("532039"),
                 n.e("719466"),
-                n.e("907533"),
+                n.e("99799"),
                 n.e("576909"),
                 n.e("406174"),
                 n.e("715555"),
@@ -812,7 +812,7 @@ let t3 = (0, te.Fe)({
                 n.e("837687"),
                 n.e("538513"),
                 n.e("896137"),
-                n.e("975041"),
+                n.e("370112"),
                 n.e("348900"),
                 n.e("182069"),
                 n.e("35485"),
@@ -865,14 +865,14 @@ let t3 = (0, te.Fe)({
             ]).then(n.bind(n, 316725)),
         webpackId: 316725,
     }),
-    t6 = i.createContext(void 0);
-function t8(e) {
+    t8 = i.createContext(void 0);
+function t6(e) {
     let { children: t } = e,
         n = i.useRef(null),
         s = i.useId();
     return (
         (0, eO.tj)(n),
-        (0, l.jsx)(t6.Provider, {
+        (0, l.jsx)(t8.Provider, {
             value: s,
             children: (0, l.jsx)("div", {
                 ref: n,
@@ -1205,7 +1205,7 @@ function t4(e) {
             (0, l.jsxs)("div", {
                 className: L ? t2.P2 : t2.VE,
                 children: [
-                    (0, l.jsx)(e8, {
+                    (0, l.jsx)(e6, {
                         placeholder: P,
                         onEnter: V,
                         setEditorRef: (e) => C(e),
@@ -1416,7 +1416,7 @@ function nn(e) {
         }),
         N = (0, m.bG)([tc.A], () => tc.A.getDetectableIdsToApplicationIds()),
         _ = C ? y : void 0,
-        j = i.useContext(t6);
+        j = i.useContext(t8);
     return (0, l.jsxs)("div", {
         className: t2.au,
         children: [
@@ -1520,7 +1520,7 @@ function nl(e) {
         { largeImage: _, smallImage: j } = (0, tO.D8)(S, v ?? N),
         { largeImage: b } = (0, tO.nO)({ entry: x, trackingSource: "memberlist_streaming_content_popout" }),
         T = (0, m.bG)([tc.A], () => tc.A.getDetectableIdsToApplicationIds()),
-        R = i.useContext(t6);
+        R = i.useContext(t8);
     return (0, l.jsxs)("div", {
         className: t2.au,
         children: [
@@ -1668,7 +1668,7 @@ let ns = function (e) {
                       icon: ex.k,
                   }),
         E = [A, g && !r ? x : C].filter(D.Vq);
-    return (0, l.jsxs)(t8, {
+    return (0, l.jsxs)(t6, {
         children: [
             f,
             (0, l.jsx)(t7, {
@@ -1842,7 +1842,7 @@ let nv = [...nr.n, eN.Yq],
                     : null,
                 T,
             ].filter(D.Vq);
-        return (0, l.jsxs)(t8, {
+        return (0, l.jsxs)(t6, {
             children: [
                 b,
                 (0, l.jsx)(t7, {
@@ -2034,7 +2034,7 @@ function nz(e) {
         badges: null,
         children: c.timestamps?.start != null && (0, l.jsx)(nK, { activity: c }),
     });
-    return (0, l.jsxs)(t8, {
+    return (0, l.jsxs)(t6, {
         children: [
             E,
             (0, l.jsx)(t7, {
@@ -2096,7 +2096,7 @@ let n2 = function (e) {
                 : nH.RQ.WEB_OPEN(e, n.extra.media.external_parent_id);
         window.open(t);
     }
-    return (0, l.jsxs)(t8, {
+    return (0, l.jsxs)(t6, {
         children: [
             (0, l.jsx)(nn, {
                 onClickTitle: h,
@@ -2129,14 +2129,14 @@ let n2 = function (e) {
     });
 };
 var n3 = n(977001);
-let n6 = function (e) {
+let n8 = function (e) {
     let { channel: t, entry: n, disableGameProfileLinks: i, onReaction: s, onVoiceChannelPreview: r } = e,
         { user: a, details: o, appName: u } = (0, ni.u)(n),
         c = (0, ev.ty)(n),
         d = (0, ev.TQ)(n);
     if (null == a || null == c || null == d || !(0, n3._E)(d)) return null;
     let m = null != n.extra.platform ? nN[n.extra.platform] : null;
-    return (0, l.jsxs)(t8, {
+    return (0, l.jsxs)(t6, {
         children: [
             (0, l.jsx)(nn, {
                 channel: t,
@@ -2158,7 +2158,7 @@ let n6 = function (e) {
         ],
     });
 };
-var n8 = n(514243),
+var n6 = n(514243),
     n5 = n(347306),
     n7 = n(123917),
     n4 = n(998218);
@@ -2173,7 +2173,7 @@ let n9 = function (e) {
     }
     return null == r
         ? null
-        : (0, l.jsxs)(t8, {
+        : (0, l.jsxs)(t6, {
               children: [
                   (0, l.jsx)(nn, {
                       channel: t,
@@ -2188,7 +2188,7 @@ let n9 = function (e) {
                       }),
                       badges: (0, l.jsx)(eN.mG, {
                           location: eN.N5.POPOUT,
-                          children: n8.R.map((e, t) => (0, l.jsx)(e, { entry: n }, t)),
+                          children: n6.R.map((e, t) => (0, l.jsx)(e, { entry: n }, t)),
                       }),
                       onClickTitle: o,
                       onClickThumbnail: o,
@@ -2218,7 +2218,7 @@ function lt(e) {
         case j.ContentInventoryEntryType.PLAYED_GAME:
             return (0, l.jsx)(nr.A, { ...n, entry: t });
         case j.ContentInventoryEntryType.WATCHED_MEDIA:
-            return (0, l.jsx)(n8.A, { ...n, entry: t });
+            return (0, l.jsx)(n6.A, { ...n, entry: t });
         case j.ContentInventoryEntryType.TOP_GAME:
             return (0, l.jsx)(n3.Ay, { ...n, entry: t });
         case j.ContentInventoryEntryType.TOP_ARTIST:
@@ -2265,7 +2265,7 @@ function li(e) {
         case j.ContentInventoryEntryType.WATCHED_MEDIA:
             return (0, l.jsx)(n9, { ...n, entry: t });
         case j.ContentInventoryEntryType.TOP_GAME:
-            return (0, l.jsx)(n6, { ...n, entry: t });
+            return (0, l.jsx)(n8, { ...n, entry: t });
         case j.ContentInventoryEntryType.TOP_ARTIST:
             return (0, l.jsx)(n2, { ...n, entry: t });
         case j.ContentInventoryEntryType.LISTENED_SESSION:
