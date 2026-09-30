@@ -80,8 +80,8 @@ function H(e) {
         : null;
 }
 var V = n(315982),
-    Y = n(235986),
-    K = n(626584),
+    K = n(235986),
+    Y = n(626584),
     W = n(554146);
 if (221552 == n.j) var Q = n(376357);
 if (221552 == n.j) var Z = n(857250);
@@ -234,23 +234,6 @@ function ey(e) {
                             (0, i.jsx)(A.Z_, {
                                 onClick: () => (0, ee.A)({ platformType: ed.fg2.SPOTIFY, location: "Notice Bar" }),
                                 noticeType: l,
-                                children: F.intl.string(F.t.S0W8Z5),
-                            }),
-                        ],
-                    });
-                case W.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION:
-                    return (0, i.jsxs)(A.$T, {
-                        color: A.Hv.PLAYSTATION,
-                        children: [
-                            (0, i.jsx)(A.PM, { noticeType: l, onClick: () => r(e_.i.UNKNOWN) }),
-                            (0, i.jsx)("img", {
-                                alt: "",
-                                className: eU.tV,
-                                src: x.A.get(ed.fg2.PLAYSTATION).icon.whiteSVG,
-                            }),
-                            F.intl.string(F.t.WHWgoY),
-                            (0, i.jsx)(A.zr, {
-                                onClick: () => (0, ee.A)({ platformType: ed.fg2.PLAYSTATION, location: "Notice Bar" }),
                                 children: F.intl.string(F.t.S0W8Z5),
                             }),
                         ],
@@ -460,8 +443,8 @@ var ew = n(532205),
     eF = n(487329),
     eH = n(102609),
     eV = n(736056);
-if (221552 == n.j) var eY = n(194261);
-var eK = n(548118),
+if (221552 == n.j) var eK = n(194261);
+var eY = n(548118),
     eW = n(134413),
     eQ = n(221950),
     eZ = n(71393),
@@ -503,7 +486,7 @@ function e3(e) {
             });
         }
     }
-    let R = (0, i.jsx)(eK.Ay, { className: e5.$f, guild: o, size: eK.Ay.Sizes.MINI }),
+    let R = (0, i.jsx)(eY.Ay, { className: e5.$f, guild: o, size: eY.Ay.Sizes.MINI }),
         C = (0, e1.ql)(u, o.name);
     if (null != (u.dmsDisabledUntil ?? u.invitesDisabledUntil) && d)
         return (0, i.jsxs)(A.$T, {
@@ -519,7 +502,7 @@ function e3(e) {
                     children: (0, i.jsxs)("div", {
                         className: e5.rx,
                         children: [
-                            (0, i.jsx)(eY.LockIcon, { size: "xs", color: "currentColor" }),
+                            (0, i.jsx)(eK.LockIcon, { size: "xs", color: "currentColor" }),
                             (0, i.jsx)("span", { children: F.intl.string(F.t["c+7oa7"]) }),
                         ],
                     }),
@@ -808,7 +791,7 @@ function tw(e) {
 var tF = n(378974),
     tH = n(396813),
     tV = n(14594);
-function tY() {
+function tK() {
     let [e, t] = (0, ek.Wl)(W.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK, { cooldownDurationMs: tV.aH });
     return e !== W.M.NAGBAR_NOTICE_IGNORE_USER_FEEDBACK
         ? null
@@ -839,7 +822,7 @@ function tY() {
               ],
           });
 }
-if (221552 == n.j) var tK = n(825484);
+if (221552 == n.j) var tY = n(825484);
 var tW = n(379257),
     tQ = n(306537),
     tZ = n(734057),
@@ -887,7 +870,7 @@ function t3() {
               children: [
                   F.intl.string(F.t.Ul1RJQ),
                   (0, i.jsx)(t5, { channelId: e.id }),
-                  (0, i.jsxs)(tK.e, {
+                  (0, i.jsxs)(tY.e, {
                       size: "sm",
                       className: t1.GC,
                       children: [
@@ -976,7 +959,7 @@ var ni = n(25578),
     no = n(325278),
     nc = n(831502),
     nE = n(731854);
-let nu = new K.A("Notice");
+let nu = new Y.A("Notice");
 function nd(e) {
     let { error: t, allowClick: n = !1 } = e,
         l = (0, eF.B1)(t)?.errorCode,
@@ -1199,10 +1182,10 @@ let nC =
                       });
                   case ed.kqX.MACOS_DEPRECATED_MESSAGE:
                       let { dismissUntil: H } = r.metadata,
-                          K = parseInt(L.A?.os.release.split(".")[0]),
+                          Y = parseInt(L.A?.os.release.split(".")[0]),
                           W = ed.MVz.MACOS_19_DEPRECATE;
                       return (
-                          21 === K ? (W = ed.MVz.MACOS_21_DEPRECATE) : 20 === K && (W = ed.MVz.MACOS_20_DEPRECATE),
+                          21 === Y ? (W = ed.MVz.MACOS_21_DEPRECATE) : 20 === Y && (W = ed.MVz.MACOS_20_DEPRECATE),
                           (0, i.jsxs)(A.$T, {
                               color: A.Hv.WARNING,
                               children: [
@@ -1742,8 +1725,8 @@ let nC =
                                   onClick: () => nR(),
                                   noticeType: ed.kqX.DISPATCH_INSTALL_SCRIPT_PROGRESS,
                               }),
-                              (0, i.jsxs)(Y.A, {
-                                  justify: Y.A.Justify.CENTER,
+                              (0, i.jsxs)(K.A, {
+                                  justify: K.A.Justify.CENTER,
                                   children: [
                                       null != eo
                                           ? F.intl.formatToPlainString(F.t["pHj+z4"], {
@@ -1763,9 +1746,9 @@ let nC =
                           return (0, i.jsx)(A.$T, {
                               color: A.Hv.WARNING,
                               className: eU.i9,
-                              children: (0, i.jsxs)(Y.A, {
-                                  justify: Y.A.Justify.CENTER,
-                                  align: Y.A.Align.CENTER,
+                              children: (0, i.jsxs)(K.A, {
+                                  justify: K.A.Justify.CENTER,
+                                  align: K.A.Align.CENTER,
                                   children: [
                                       (0, i.jsx)("div", {
                                           children: F.intl.format(F.t["1qxVe4"], {
@@ -1779,9 +1762,9 @@ let nC =
                       return (0, i.jsx)(A.$T, {
                           color: A.Hv.WARNING,
                           className: eU.i9,
-                          children: (0, i.jsxs)(Y.A, {
-                              justify: Y.A.Justify.CENTER,
-                              align: Y.A.Align.CENTER,
+                          children: (0, i.jsxs)(K.A, {
+                              justify: K.A.Justify.CENTER,
+                              align: K.A.Align.CENTER,
                               children: [
                                   (0, i.jsx)("div", {
                                       children: F.intl.format(F.t.Fv5HrE, {
@@ -2102,7 +2085,7 @@ let nC =
                           ],
                       });
                   case ed.kqX.IGNORE_USER_FEEDBACK_NAGBAR:
-                      return (0, i.jsx)(tY, {});
+                      return (0, i.jsx)(tK, {});
                   case ed.kqX.PREMIUM_MARKETING_NAGBAR:
                       return (0, i.jsx)(tb.A, {});
                   case ed.kqX.SYSTEM_SERVICE_WARNING:

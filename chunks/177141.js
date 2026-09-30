@@ -21,8 +21,8 @@ var i = n(536637),
     S = n(952818),
     f = n(597643),
     p = n(652896),
-    g = n(585510),
-    D = n(610136),
+    D = n(585510),
+    g = n(610136),
     P = n(229527),
     h = n(93474),
     M = n(164956),
@@ -61,8 +61,8 @@ var w = n(220038),
     F = n(810498),
     H = n(264779),
     V = n(412260),
-    Y = n(852218),
-    K = n(256150),
+    K = n(852218),
+    Y = n(256150),
     W = n(859703),
     Q = n(541315),
     Z = n(655116),
@@ -153,8 +153,8 @@ let em = new eO(E.h, {
 var eS = n(696451),
     ef = n(317525),
     ep = n(71393),
-    eg = n(25578),
-    eD = n(803224),
+    eD = n(25578),
+    eg = n(803224),
     eP = n(576705),
     eh = n(362790),
     eM = n(763827),
@@ -175,14 +175,13 @@ var eS = n(696451),
     eH = n(422033),
     eV = n(966846);
 n(436317);
-var eY = n(202541),
-    eK = n(190107),
+var eK = n(202541),
+    eY = n(190107),
     eW = n(818348),
     eQ = n(731854);
 let eZ = {
         [eA.kqX.DOWNLOAD_NAG]: o.M.NAGBAR_NOTICE_DOWNLOAD,
         [eA.kqX.CONNECT_SPOTIFY]: o.M.NAGBAR_NOTICE_CONNECT_SPOTIFY,
-        [eA.kqX.CONNECT_PLAYSTATION]: o.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION,
         [eA.kqX.PASSKEY_BACKUP]: o.M.NAGBAR_NOTICE_PASSKEY_BACKUP,
         [eA.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: o.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING,
         [eA.kqX.PREMIUM_REACTIVATE]: o.M.NAGBAR_NOTICE_PREMIUM_REACTIVATE,
@@ -344,7 +343,6 @@ let tt = [
     eA.kqX.QUEST_APP_UPSELL,
     eA.kqX.DOWNLOAD_NAG,
     eA.kqX.CONNECT_SPOTIFY,
-    eA.kqX.CONNECT_PLAYSTATION,
     eA.kqX.SURVEY,
     eA.kqX.BLOCK_USER_FEEDBACK_NAGBAR,
     eA.kqX.IGNORE_USER_FEEDBACK_NAGBAR,
@@ -369,7 +367,7 @@ let tt = [
 let tn = {
     [eA.kqX.GIFTING_PROMOTION_REMINDER]: { predicate: () => (0, F.MD)() },
     [eA.kqX.GUILD_RAID_NOTIFICATION]: {
-        predicate: () => (0, g.dj)().show && !te(eA.kqX.GUILD_RAID_NOTIFICATION),
+        predicate: () => (0, D.dj)().show && !te(eA.kqX.GUILD_RAID_NOTIFICATION),
         metadata: () => ({ dismissUntil: l()().add(3, "hours").toDate() }),
     },
     [eA.kqX.AUTOMOD_QUARANTINED_USER_PROFILE]: {
@@ -417,9 +415,9 @@ let tn = {
     [eA.kqX.NO_INPUT_DEVICES_DETECTED]: { predicate: () => O.A.hasActiveErrorOfType(C.iy.NO_INPUT_DEVICES) },
     [eA.kqX.VIDEO_BACKGROUND_UNAVAILABLE]: { predicate: () => eM.A.isConnected() && ee.A.videoBackgroundUnavailable },
     [eA.kqX.HARDWARE_MUTE]: {
-        predicate: () => eM.A.isConnected() && eg.Ay.isHardwareMute() && eg.Ay.isHardwareMuteNoticeEnabled(),
+        predicate: () => eM.A.isConnected() && eD.Ay.isHardwareMute() && eD.Ay.isHardwareMuteNoticeEnabled(),
         metadata: () => {
-            let e = eg.Ay.getInputDeviceId(),
+            let e = eD.Ay.getInputDeviceId(),
                 t = el.A.getVendor(e),
                 n = el.A.getModel(e);
             if (null != t && null != n) return { vendor: t, model: n };
@@ -428,8 +426,8 @@ let tn = {
     [eA.kqX.PTT_NO_KEYBIND_WARNING]: {
         predicate: () =>
             !!eM.A.isConnected() &&
-            eg.Ay.getMode() === eA.TBI.PUSH_TO_TALK &&
-            !(eg.Ay.getSettings().modeOptions.shortcut.length > 0),
+            eD.Ay.getMode() === eA.TBI.PUSH_TO_TALK &&
+            !(eD.Ay.getSettings().modeOptions.shortcut.length > 0),
     },
     [eA.kqX.DISPATCH_ERROR]: {
         predicate: () => null != eF.A.getLastError(),
@@ -468,7 +466,7 @@ let tn = {
             return (
                 null != t &&
                 ej.A.hasVideo(t) &&
-                !eg.Ay.supports(eQ.O5.VIDEO) &&
+                !eD.Ay.supports(eQ.O5.VIDEO) &&
                 y.k.getConfig({ location: "NoticeStore.VIDEO_UNSUPPORTED_BROWSER" }).videoEnabled &&
                 !te(eA.kqX.VIDEO_UNSUPPORTED_BROWSER)
             );
@@ -551,12 +549,6 @@ let tn = {
         },
         metadata: () => ({ dismissUntil: l()().add(5, "days").toDate() }),
     },
-    [eA.kqX.CONNECT_PLAYSTATION]: {
-        predicate: () =>
-            es.A.isSuggestedAccountType(eA.fg2.PLAYSTATION) &&
-            null == es.A.getAccount(null, eA.fg2.PLAYSTATION) &&
-            !te(eA.kqX.CONNECT_PLAYSTATION),
-    },
     [eA.kqX.PASSKEY_BACKUP]: {
         predicate: (e) => {
             let { currentUser: t } = e;
@@ -565,17 +557,17 @@ let tn = {
     },
     [eA.kqX.PREMIUM_TIER_2_TRIAL_ENDING]: {
         predicate: () =>
-            eq.A.getAlmostExpiringTrialOffersForReminder([eY.pe.TIER_2]).length > 0 &&
+            eq.A.getAlmostExpiringTrialOffersForReminder([eK.pe.TIER_2]).length > 0 &&
             !te(eA.kqX.PREMIUM_TIER_2_TRIAL_ENDING),
     },
     [eA.kqX.PREMIUM_TIER_0_TRIAL_ENDING]: {
         predicate: () =>
-            eq.A.getAlmostExpiringTrialOffersForReminder([eY.pe.TIER_0]).length > 0 &&
+            eq.A.getAlmostExpiringTrialOffersForReminder([eK.pe.TIER_0]).length > 0 &&
             !te(eA.kqX.PREMIUM_TIER_0_TRIAL_ENDING),
     },
     [eA.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING]: {
         predicate: () =>
-            eq.A.getAlmostExpiringDiscountOffersForReminder([eY.pe.TIER_2]).length > 0 &&
+            eq.A.getAlmostExpiringDiscountOffersForReminder([eK.pe.TIER_2]).length > 0 &&
             !te(eA.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING),
     },
     [eA.kqX.PREMIUM_UNCANCEL]: {
@@ -593,7 +585,7 @@ let tn = {
                     !s &&
                     i <= 7 &&
                     i >= 0 &&
-                    (0, b.YE)(n, eY.PremiumTypes.TIER_2) &&
+                    (0, b.YE)(n, eK.PremiumTypes.TIER_2) &&
                     !r &&
                     !n.hasFreePremium() &&
                     !t.isPurchasedExternally;
@@ -612,8 +604,8 @@ let tn = {
                 i = null != t ? l()(t.currentPeriodEnd).diff(l()().startOf("day"), "days") : 0,
                 r = null != t ? l()(t.currentPeriodEnd).diff(l()(t.currentPeriodStart).startOf("day"), "days") : 0,
                 s = null != t && l()(t.currentPeriodEnd).isBefore(l()()),
-                a = ed.A.applicationIdsFetched.has(eY.tv),
-                o = ed.A.getForApplication(eY.tv),
+                a = ed.A.applicationIdsFetched.has(eK.tv),
+                o = ed.A.getForApplication(eK.tv),
                 c = null != t ? (0, b.EL)(t) : null,
                 E = null != c ? b.Ay.getSkuIdForPlan(c.planId) : null,
                 u =
@@ -744,7 +736,7 @@ let tn = {
             if (null == e) return !1;
             let t = (0, p._z)(e),
                 n = W.A.getStreamHeartbeatFailure(t);
-            return null != n && Date.now() - n.firstFailedAt >= eK.tZ;
+            return null != n && Date.now() - n.firstFailedAt >= eY.tZ;
         },
         metadata: () => {
             let e = en.A.getCurrentUserActiveStream();
@@ -763,7 +755,7 @@ let tn = {
             let e = V.A.getMarketingComponentByType(r.C.NAGBAR);
             if (null == e) return !1;
             if (null == e.promotionId) return !0;
-            let t = V.A.getPromotionByTypeAndId(Y.pt.MARKETING_MOMENT, e.promotionId);
+            let t = V.A.getPromotionByTypeAndId(K.pt.MARKETING_MOMENT, e.promotionId);
             return (
                 !(null != t && t.endDate < new Date()) &&
                 !(0, I.u$)(o.M.PREMIUM_MARKETING_MOMENT_NAGBAR_UPSELL, e.promotionId).isDismissed
@@ -779,7 +771,7 @@ let tn = {
     [eA.kqX.YOUTUBE_3P_NAGBAR]: {
         predicate: (e) => {
             let { currentUser: t } = e;
-            return !te(eA.kqX.YOUTUBE_3P_NAGBAR) && (0, K.MC)(t, "NoticeStore.YOUTUBE_3P_NAGBAR");
+            return !te(eA.kqX.YOUTUBE_3P_NAGBAR) && (0, Y.MC)(t, "NoticeStore.YOUTUBE_3P_NAGBAR");
         },
     },
     [eA.kqX.BLOCK_USER_FEEDBACK_NAGBAR]: {
@@ -794,7 +786,7 @@ let tn = {
                 te(eA.kqX.SYSTEM_SERVICE_WARNING) ||
                 !(0, $.yA)(S.Ay) ||
                 null == t ||
-                eg.Ay.getMode() !== eA.TBI.PUSH_TO_TALK
+                eD.Ay.getMode() !== eA.TBI.PUSH_TO_TALK
             )
                 return !1;
             let n = S.Ay.getVisibleGame();
@@ -804,7 +796,7 @@ let tn = {
     [eA.kqX.E2EE_UPDATE_REQUIRED]: {
         predicate: () => {
             if (te(eA.kqX.E2EE_UPDATE_REQUIRED) || !eM.A.isConnected()) return !1;
-            let e = eg.Ay.getMediaEngine();
+            let e = eD.Ay.getMediaEngine();
             return 1 !== (e.getSupportedSecureFramesProtocolVersion?.() ?? 0);
         },
         metadata: () => ({ dismissUntil: l()().add(5, "days").toDate() }),
@@ -816,7 +808,7 @@ let tn = {
                 u.A?.process.platform !== "win32" ||
                 te(eA.kqX.WINDOWS_MEDIA_PACK_REQUIRED) ||
                 ew.Ay.getEnableHardwareAcceleration()
-            ) && !1 === eg.Ay.isH264MfDecodeAvailable(),
+            ) && !1 === eD.Ay.isH264MfDecodeAvailable(),
     },
     [eA.kqX.RIOT_MIGRATION]: {
         predicate: () => {
@@ -904,7 +896,7 @@ class tr extends s.Ay.Store {
     static displayName = "NoticeStore";
     initialize() {
         (this.syncWith(
-            [O.A, ek.Ay, eh.A, em, ey.A, V.A, eq.A, L.default, es.A, J.A, D.A, W.A, en.A, S.Ay, et.A, O.A, T.A, x.A],
+            [O.A, ek.Ay, eh.A, em, ey.A, V.A, eq.A, L.default, es.A, J.A, g.A, W.A, en.A, S.Ay, et.A, O.A, T.A, x.A],
             ti,
         ),
             this.waitFor(
@@ -925,15 +917,15 @@ class tr extends s.Ay.Store {
                 m.A,
                 f.A,
                 h.A,
-                D.A,
+                g.A,
                 eS.Ay,
                 T.A,
                 ef.A,
                 ep.A,
                 M.A,
                 U.A,
-                eg.Ay,
-                eD.A,
+                eD.Ay,
+                eg.A,
                 x.A,
                 eG.A,
                 eP.A,

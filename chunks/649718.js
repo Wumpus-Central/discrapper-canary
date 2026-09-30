@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 626180, Version Hash: eb99673dbb5d5d893ea17badded0d65d993115db`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 626186, Version Hash: 98ee2ec67391b2d47cc5c14971d1ebf279a45399`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -22093,7 +22093,7 @@ let Ca = "isHideDevBanner",
                     className: to()(Cr.Wz, Cr.mr),
                     children: [
                         (0, y.jsx)(Ci, { className: Cr.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "626180" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "626186" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -44905,12 +44905,11 @@ let GU = [
             return (
                 eP.w.get("hideNag") && GM(e, rT.M.NAGBAR_NOTICE_DOWNLOAD) && (t = !0),
                 eP.w.get("hideConnectSpotify") && GM(e, rT.M.NAGBAR_NOTICE_CONNECT_SPOTIFY) && (t = !0),
-                eP.w.get("hideConnectPlayStation") && GM(e, rT.M.NAGBAR_NOTICE_CONNECT_PLAYSTATION) && (t = !0),
                 t
             );
         },
         cleanup() {
-            (eP.w.remove("hideNag"), eP.w.remove("hideConnectSpotify"), eP.w.remove("hideConnectPlayStation"));
+            (eP.w.remove("hideNag"), eP.w.remove("hideConnectSpotify"));
         },
     },
     {
