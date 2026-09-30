@@ -19,6 +19,7 @@ function E(e) {
                 optionNameToLastResults: new Map(),
                 optionNameToNonce: new Map(),
                 optionNameToLastQuery: new Map(),
+                optionNameToContextKey: new Map(),
                 lastErrored: !1,
                 lastResponseNonce: void 0,
             }),
@@ -44,6 +45,7 @@ function f(e, t) {
             (i.optionNameToLastResults.clear(),
             i.optionNameToNonce.clear(),
             i.optionNameToLastQuery.clear(),
+            i.optionNameToContextKey.clear(),
             i.optionNameToAutocompleteQueries.clear()),
         (i.lastErrored = !1),
         (i.commandId = t),
@@ -75,21 +77,29 @@ let T = new p(r.h, {
     LOGOUT: A,
     CHANNEL_SELECT: A,
     APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST: function (e) {
-        let { nonce: t, channelId: n, query: i, name: r } = e,
-            a = E(n);
-        if (a.optionNameToLastQuery.get(r) === i) return !1;
-        a.optionNameToLastQuery.set(r, i);
-        let s = a.optionNameToAutocompleteQueries.get(r)?.get(i);
-        if (null != s) return ((a.lastErrored = !1), a.optionNameToLastResults.set(r, s), !0);
-        let l = a.optionNameToNonce.get(r);
+        let { nonce: t, channelId: n, query: i, name: r, contextKey: a } = e,
+            s = E(n);
         if (
-            (null != l && c.delete(l),
+            (s.optionNameToContextKey.get(r) !== a &&
+                (s.optionNameToContextKey.set(r, a),
+                s.optionNameToAutocompleteQueries.delete(r),
+                s.optionNameToLastResults.delete(r),
+                s.optionNameToLastQuery.delete(r)),
+            s.optionNameToLastQuery.get(r) === i)
+        )
+            return !1;
+        s.optionNameToLastQuery.set(r, i);
+        let l = s.optionNameToAutocompleteQueries.get(r)?.get(i);
+        if (null != l) return ((s.lastErrored = !1), s.optionNameToLastResults.set(r, l), !0);
+        let o = s.optionNameToNonce.get(r);
+        if (
+            (null != o && c.delete(o),
             c.set(t, { channelId: n, query: i, name: r }),
             _.set(t, new Date()),
-            a.optionNameToNonce.set(r, t),
-            a.lastErrored)
+            s.optionNameToNonce.set(r, t),
+            s.lastErrored)
         )
-            return ((a.lastErrored = !1), !0);
+            return ((s.lastErrored = !1), !0);
     },
     APPLICATION_COMMAND_AUTOCOMPLETE_RESPONSE: function (e) {
         let { choices: t, nonce: n } = e,

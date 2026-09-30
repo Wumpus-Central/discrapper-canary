@@ -1,4 +1,4 @@
-n.d(t, { Gf: () => E, H2: () => h, WL: () => p, _y: () => I, e0: () => A, yL: () => f });
+n.d(t, { Gf: () => A, H2: () => I, WL: () => T, _y: () => f, e0: () => h, yL: () => p });
 var i = n(284009),
     r = n.n(i),
     a = n(636537),
@@ -8,8 +8,9 @@ var i = n(284009),
     d = n(935208),
     c = n(166862),
     u = n(392054),
-    _ = n(652215);
-function E(e) {
+    _ = n(168186),
+    E = n(652215);
+function A(e) {
     let {
         channelId: t,
         command: n,
@@ -41,14 +42,14 @@ function E(e) {
             commandOrigin: h,
         }));
 }
-function A(e, t) {
+function h(e, t) {
     s.h.dispatch({ type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND", channelId: e, commandId: t });
 }
-function h(e, t) {
+function I(e, t) {
     s.h.dispatch({ type: "APPLICATION_COMMAND_UPDATE_OPTIONS", channelId: e, changedOptionStates: t });
 }
-function I(e, t) {
-    h(
+function f(e, t) {
+    I(
         e,
         Object.fromEntries(
             Object.entries(t).map((e) => {
@@ -58,28 +59,32 @@ function I(e, t) {
         ),
     );
 }
-function f(e, t, n, i) {
+function p(e, t, n, i) {
     return a.Bo.put({
         body: { permissions: i },
-        url: _.Rsh.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n),
+        url: E.Rsh.APPLICATION_BOT_GUILD_COMMAND_PERMISSIONS(e, t, n),
         rejectWithError: !1,
     });
 }
-function p(e, t, n) {
+function T(e, t, n) {
     r()(null != t.autocomplete, "Missing autocomplete context");
     let { query: i, name: u } = t.autocomplete,
-        E = d.default.fromTimestamp(Date.now());
+        A = "";
+    for (let e of (0, _.Ez)(n).interactionOptions ?? [])
+        ("focused" in e && e.focused) || (A += `${e.name}=${String(e.value)}\0`);
+    let h = d.default.fromTimestamp(Date.now());
     null == t.channel ||
         (s.h.dispatch({
             type: "APPLICATION_COMMAND_AUTOCOMPLETE_REQUEST",
-            nonce: E,
+            nonce: h,
             channelId: t.channel.id,
             query: i,
             name: u,
+            contextKey: A,
         }),
         null == c.A.getAutocompleteChoices(t.channel.id, u, i) &&
             a.Bo.post({
-                url: _.Rsh.INTERACTIONS,
+                url: E.Rsh.INTERACTIONS,
                 body: {
                     type: l.G4.APPLICATION_COMMAND_AUTOCOMPLETE,
                     application_id: e.applicationId,
@@ -87,11 +92,11 @@ function p(e, t, n) {
                     channel_id: t.channel.id,
                     session_id: o.default.getSessionId(),
                     data: n,
-                    nonce: E,
+                    nonce: h,
                 },
                 timeout: 3e3,
                 rejectWithError: !0,
             }).catch(() => {
-                s.h.dispatch({ type: "INTERACTION_FAILURE", nonce: E });
+                s.h.dispatch({ type: "INTERACTION_FAILURE", nonce: h });
             }));
 }
