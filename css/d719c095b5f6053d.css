@@ -434,7 +434,19 @@
 }
 
 .pointerColumnEnd_fe7668 {
+    display: none
+}
+
+.column_fe7668:last-child .pointerColumnEnd_fe7668 {
+    display: block;
     min-height: max(var(--space-64), 40vh)
 }
 
-/*# sourceMappingURL=772584e374e9b84a.css.map*/
+@container guild-space-page (min-width: 800px) {
+    .pointerColumnEnd_fe7668 {
+        display: block;
+        min-height: max(var(--space-64), 40vh)
+    }
+}
+
+/*# sourceMappingURL=d719c095b5f6053d.css.map*/
