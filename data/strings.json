@@ -89,6 +89,8 @@
   "Lx0P8k": "Free",
   "bFIg0R": "+{count}",
   "3/DOFo": "Updates daily showing last 7 days",
+  "ZMJ8Mt": "Last listened to $[{trackTitle}](highlightHook)",
+  "QqaqBg": "Last listened to $[{trackTitle}](highlightHook) by $[{artistName}](highlightHook)",
   "jUr+wF": "Open in Spotify",
   "7X+3f8": "{count, plural,one {# play}other {# plays}",
   "7hHUIS": "$[{count, plural,one {# play}other {# plays}](countHook){trend, select, up {trending up}down {trending down}other {}}",

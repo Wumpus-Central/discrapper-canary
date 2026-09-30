@@ -1,4 +1,4 @@
-(a.r(t), a.d(t, { playgroundConfig: () => F, guildSpaceCollection: () => V }));
+(a.r(t), a.d(t, { playgroundConfig: () => Q, guildSpaceCollection: () => $ }));
 var s = a(477900),
     l = a(582128),
     n = a(503698),
@@ -93,7 +93,7 @@ let y = [
         }),
         g("right-2", _.a.IMAGE_TEXT, 1, 1, { title: "Events", body: "Game night every Friday." }),
     ],
-    A = y
+    f = y
         .filter((e) => {
             let { requires_hydration: t } = e;
             return t;
@@ -102,7 +102,7 @@ let y = [
             let { id: t } = e;
             return t;
         }),
-    f = {
+    A = {
         stat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         week_start_ts: 1756512e3,
         next_stat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
@@ -157,7 +157,7 @@ let y = [
                                         type: "GUILD_SPACE_HYDRATE_START",
                                         guildId: t,
                                         requestId: e,
-                                        widgetIds: A,
+                                        widgetIds: f,
                                     }),
                                     "loading" !== n)
                                 ) {
@@ -172,9 +172,9 @@ let y = [
                                         type: "GUILD_SPACE_HYDRATE_SUCCESS",
                                         guildId: t,
                                         requestId: e,
-                                        widgets: A.map((e) => ({
+                                        widgets: f.map((e) => ({
                                             id: e,
-                                            data: "success" === n ? { type: _.a.LEADERBOARD, ...f } : null,
+                                            data: "success" === n ? { type: _.a.LEADERBOARD, ...A } : null,
                                         })),
                                     });
                                 }
@@ -218,42 +218,42 @@ var x = a(17928),
     S = a(994500),
     E = a(711014),
     w = a(287809),
-    R = a(427262),
-    D = a(539888),
-    I = a(927813);
-let k = a(282435).sx.slice(0, 10),
-    T = [
-        { days: 7, totalSeconds: 38 * I.A.Seconds.HOUR + 900, gameIndexes: [0, 1, 2, 3, 4, 5, 6, 7] },
-        { days: 7, totalSeconds: 32 * I.A.Seconds.HOUR + 2400, gameIndexes: [1, 2, 3, 4, 5, 6, 8] },
-        { days: 5, totalSeconds: 26 * I.A.Seconds.HOUR + 3e3, gameIndexes: [0, 2, 4, 6, 8, 9] },
-        { days: 4, totalSeconds: 21 * I.A.Seconds.HOUR + 600, gameIndexes: [1, 3, 5, 7, 9] },
-        { days: 3, totalSeconds: 14 * I.A.Seconds.HOUR + 2100, gameIndexes: [0, 1, 2, 3, 4] },
-        { days: 2, totalSeconds: 9 * I.A.Seconds.HOUR + 2880, gameIndexes: [2, 4, 6, 8] },
-        { days: 2, totalSeconds: 8 * I.A.Seconds.HOUR + 720, gameIndexes: [0, 3, 5, 9] },
-        { days: 1, totalSeconds: 7 * I.A.Seconds.HOUR + 2280, gameIndexes: [1, 4, 7] },
-        { days: 1, totalSeconds: 6 * I.A.Seconds.HOUR + 720, gameIndexes: [0, 2, 8] },
-        { days: 1, totalSeconds: 5 * I.A.Seconds.HOUR + 1140, gameIndexes: [3, 6] },
-        { days: 1, totalSeconds: 4 * I.A.Seconds.HOUR + 3420, gameIndexes: [1, 9] },
-        { days: 1, totalSeconds: 4 * I.A.Seconds.HOUR + 2760, gameIndexes: [0, 5] },
-        { days: 1, totalSeconds: 3 * I.A.Seconds.HOUR + 2100, gameIndexes: [4] },
-        { days: 1, totalSeconds: 2 * I.A.Seconds.HOUR + 3060, gameIndexes: [7] },
-        { days: 1, totalSeconds: +I.A.Seconds.HOUR + 1320, gameIndexes: [2] },
+    k = a(427262),
+    I = a(539888),
+    R = a(927813);
+let D = a(282435).sx.slice(0, 10),
+    G = [
+        { days: 7, totalSeconds: 38 * R.A.Seconds.HOUR + 900, gameIndexes: [0, 1, 2, 3, 4, 5, 6, 7] },
+        { days: 7, totalSeconds: 32 * R.A.Seconds.HOUR + 2400, gameIndexes: [1, 2, 3, 4, 5, 6, 8] },
+        { days: 5, totalSeconds: 26 * R.A.Seconds.HOUR + 3e3, gameIndexes: [0, 2, 4, 6, 8, 9] },
+        { days: 4, totalSeconds: 21 * R.A.Seconds.HOUR + 600, gameIndexes: [1, 3, 5, 7, 9] },
+        { days: 3, totalSeconds: 14 * R.A.Seconds.HOUR + 2100, gameIndexes: [0, 1, 2, 3, 4] },
+        { days: 2, totalSeconds: 9 * R.A.Seconds.HOUR + 2880, gameIndexes: [2, 4, 6, 8] },
+        { days: 2, totalSeconds: 8 * R.A.Seconds.HOUR + 720, gameIndexes: [0, 3, 5, 9] },
+        { days: 1, totalSeconds: 7 * R.A.Seconds.HOUR + 2280, gameIndexes: [1, 4, 7] },
+        { days: 1, totalSeconds: 6 * R.A.Seconds.HOUR + 720, gameIndexes: [0, 2, 8] },
+        { days: 1, totalSeconds: 5 * R.A.Seconds.HOUR + 1140, gameIndexes: [3, 6] },
+        { days: 1, totalSeconds: 4 * R.A.Seconds.HOUR + 3420, gameIndexes: [1, 9] },
+        { days: 1, totalSeconds: 4 * R.A.Seconds.HOUR + 2760, gameIndexes: [0, 5] },
+        { days: 1, totalSeconds: 3 * R.A.Seconds.HOUR + 2100, gameIndexes: [4] },
+        { days: 1, totalSeconds: 2 * R.A.Seconds.HOUR + 3060, gameIndexes: [7] },
+        { days: 1, totalSeconds: +R.A.Seconds.HOUR + 1320, gameIndexes: [2] },
         { days: 1, totalSeconds: 3480, gameIndexes: [5] },
         { days: 1, totalSeconds: 2820, gameIndexes: [8] },
         { days: 1, totalSeconds: 2160, gameIndexes: [0] },
         { days: 1, totalSeconds: 1440, gameIndexes: [6] },
         { days: 1, totalSeconds: 660, gameIndexes: [9] },
     ];
-var G = a(546184);
+var T = a(546184);
 let L = g("leaderboard", _.a.LEADERBOARD, 0, 0);
 function P(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${G.Gt} ${a}`,
+        className: `${T.Gt} ${a}`,
         children: [(0, s.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-let N = {
+let U = {
     name: "Gaming Leaderboard",
     id: "guild-space-gaming-leaderboard",
     component: function (e) {
@@ -269,7 +269,7 @@ let N = {
                         t
                             .flatMap((e) => {
                                 let t = w.default.getUser(e);
-                                return null == t ? [] : [{ id: e, name: R.Ay.getName(t) }];
+                                return null == t ? [] : [{ id: e, name: k.Ay.getName(t) }];
                             })
                             .sort((e, t) => e.name.localeCompare(t.name))
                             .slice(0, 30)
@@ -288,20 +288,20 @@ let N = {
         let _ = (function (e) {
                 let {
                         memberIds: t,
-                        gameIds: a = k,
+                        gameIds: a = D,
                         stat: s = p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
-                        entryCount: l = T.length,
+                        entryCount: l = G.length,
                         ended: n = !1,
                     } = e,
-                    r = 0 === t.length ? [] : T.slice(0, l),
+                    r = 0 === t.length ? [] : G.slice(0, l),
                     i = Math.floor(Date.now() / 1e3);
                 return {
                     stat: s,
-                    week_start_ts: i - (n ? 8 : 3) * I.A.Seconds.DAY,
+                    week_start_ts: i - (n ? 8 : 3) * R.A.Seconds.DAY,
                     next_stat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
                     previous_winner: t[0],
                     streak_count: 3,
-                    computed_at: new Date((i - I.A.Seconds.DAY) * 1e3).toISOString(),
+                    computed_at: new Date((i - R.A.Seconds.DAY) * 1e3).toISOString(),
                     entries: r.map((e, l) => {
                         let n;
                         return {
@@ -345,12 +345,12 @@ let N = {
                     : "error" === n
                       ? { status: "error" }
                       : { status: "success", data: g }));
-        let b = (0, s.jsx)(D.P, { guildId: u, widget: L, guildSpaceMode: "view", hydration: a });
+        let b = (0, s.jsx)(I.P, { guildId: u, widget: L, guildSpaceMode: "view", hydration: a });
         return (0, s.jsxs)("div", {
-            className: G.Zp,
+            className: T.Zp,
             children: [
-                (0, s.jsx)(P, { label: "Narrow column (380px)", className: G.sc, children: b }),
-                (0, s.jsx)(P, { label: "Wide column (685px)", className: G.U, children: b }),
+                (0, s.jsx)(P, { label: "Narrow column (380px)", className: T.sc, children: b }),
+                (0, s.jsx)(P, { label: "Wide column (685px)", className: T.U, children: b }),
             ],
         });
     },
@@ -390,9 +390,11 @@ let N = {
         },
     },
 };
-var U = a(343508);
-let H = g("popular-music", _.a.POPULAR_MUSIC, 0, 0),
-    O = ["1330000000000000101", "1330000000000000102", "1330000000000000103"],
+var N = a(343508);
+let H = [32, 21, 15, 14, 9],
+    O = [3, 2, 0, 3, 1],
+    C = g("popular-music", _.a.POPULAR_MUSIC, 0, 0),
+    j = ["1330000000000000101", "1330000000000000102", "1330000000000000103"],
     M = {
         ranked_songs: [
             {
@@ -404,7 +406,7 @@ let H = g("popular-music", _.a.POPULAR_MUSIC, 0, 0),
                 plays: 21,
                 unique_listeners: 8,
                 plays_change_percent: 2,
-                facepile_user_ids: O,
+                facepile_user_ids: j,
             },
             {
                 track_external_id: "4eCwFoinvpIQi1kBEoAzQO",
@@ -415,7 +417,7 @@ let H = g("popular-music", _.a.POPULAR_MUSIC, 0, 0),
                 plays: 17,
                 unique_listeners: 6,
                 plays_change_percent: -4,
-                facepile_user_ids: O,
+                facepile_user_ids: j,
             },
             {
                 track_external_id: "1BxfuPKGuaTgP7aM0Bbdwr",
@@ -425,7 +427,7 @@ let H = g("popular-music", _.a.POPULAR_MUSIC, 0, 0),
                 cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f003",
                 plays: 14,
                 unique_listeners: 5,
-                facepile_user_ids: O,
+                facepile_user_ids: j,
             },
             {
                 track_external_id: "0V3wPSX9ygBnCm8psDIegu",
@@ -445,7 +447,7 @@ let H = g("popular-music", _.a.POPULAR_MUSIC, 0, 0),
                 cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f005",
                 plays: 9,
                 unique_listeners: 4,
-                facepile_user_ids: O,
+                facepile_user_ids: j,
             },
             {
                 track_external_id: "2takcwOaAZWiXQijPHIx7B",
@@ -495,7 +497,7 @@ let H = g("popular-music", _.a.POPULAR_MUSIC, 0, 0),
                 unique_listeners: 2,
             },
         ],
-        top_listeners: [{ user_id: "1330000000000000101", plays: 84 }],
+        top_listeners: [],
         summary: {
             listening_time_ms: 7704e4,
             distinct_songs: 482,
@@ -505,7 +507,7 @@ let H = g("popular-music", _.a.POPULAR_MUSIC, 0, 0),
         },
         computed_at: null,
     },
-    j = {
+    B = {
         ranked_songs: M.ranked_songs.map((e) => ({
             track_external_id: e.track_external_id,
             track_title: null,
@@ -521,28 +523,66 @@ let H = g("popular-music", _.a.POPULAR_MUSIC, 0, 0),
             plays: e.plays,
             unique_listeners: e.unique_listeners,
         })),
-        top_listeners: M.top_listeners,
+        top_listeners: [],
         computed_at: null,
     },
-    C = { ranked_songs: [], ranked_artists: [], top_listeners: [], computed_at: null };
-function B(e) {
+    W = { ranked_songs: [], ranked_artists: [], top_listeners: [], computed_at: null },
+    Y = [
+        {
+            artist_external_id: "1vCWHaC5f2uS3yhpwWbIA6",
+            artist_name: "Dayseeker",
+            artist_image_hash: "ab6761610000e5ebd2e5f0b0e0b0a0c0d0e0f001",
+        },
+        {
+            artist_external_id: "06HL4z0CvFAxyc27GXpf02",
+            artist_name: "Taylor Swift",
+            artist_image_hash: "ab6761610000e5ebd2e5f0b0e0b0a0c0d0e0f002",
+        },
+        { artist_external_id: "6mEQK9m2krja6X1cfsAjfl", artist_name: "Ado", artist_image_hash: null },
+    ];
+function q(e, t, a) {
+    return {
+        ...e,
+        top_listeners: t.map((e, t) => {
+            let s;
+            return a
+                ? ((s = M.ranked_songs[t % M.ranked_songs.length]),
+                  {
+                      user_id: e,
+                      plays: H[t] ?? 1,
+                      last_track:
+                          3 === t
+                              ? null
+                              : {
+                                    track_external_id: s.track_external_id,
+                                    track_title: s.track_title,
+                                    artist_name: s.artist_name,
+                                },
+                      recent_artists: Y.slice(0, O[t] ?? 0),
+                      artist_count: 0 === t ? 5 : null,
+                  })
+                : { user_id: e, plays: H[t] ?? 1 };
+        }),
+    };
+}
+function F(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${U.Gt} ${a}`,
+        className: `${N.Gt} ${a}`,
         children: [(0, s.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-function Y(e) {
+function V(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${G.Gt} ${a}`,
+        className: `${T.Gt} ${a}`,
         children: [(0, s.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-function W(e) {
+function X(e) {
     let { mode: t, hydration: a, type: n, initialConfig: r, successData: i } = e,
         [d, o] = l.useState(r),
-        u = (0, s.jsx)(D.P, {
+        u = (0, s.jsx)(I.P, {
             guildId: "widget-slot-story-guild",
             widget: { id: "1", type: n, config: d },
             guildSpaceMode: t,
@@ -560,18 +600,18 @@ function W(e) {
             onCommitConfig: o,
         });
     return (0, s.jsxs)("div", {
-        className: G.Zp,
+        className: T.Zp,
         children: [
-            (0, s.jsx)(Y, { label: "Narrow column (380px)", className: G.sc, children: u }),
-            (0, s.jsx)(Y, { label: "Wide column (685px)", className: G.U, children: u }),
+            (0, s.jsx)(V, { label: "Narrow column (380px)", className: T.sc, children: u }),
+            (0, s.jsx)(V, { label: "Wide column (685px)", className: T.U, children: u }),
         ],
     });
 }
-let q = {
+let K = {
         text: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
         image_hash: "some_hash",
     },
-    V = {
+    $ = {
         id: "guild-space",
         name: "Server Hub",
         groups: [
@@ -585,11 +625,11 @@ let q = {
                         id: "guild-space-widget-slot-image-text",
                         docs: "ImageText reference widget (no hydration) across view/edit and each mock hydration state. In edit mode the pencil opens the framework-owned Edit modal; Save commits config through onCommitConfig, Cancel/close discards.",
                         component: function (e) {
-                            return (0, s.jsx)(W, {
+                            return (0, s.jsx)(X, {
                                 ...e,
                                 type: _.a.IMAGE_TEXT,
                                 title: "Image + Text",
-                                initialConfig: q,
+                                initialConfig: K,
                                 successData: void 0,
                             });
                         },
@@ -619,7 +659,7 @@ let q = {
                     },
                 ],
             },
-            { title: "Server Hub Gaming Leaderboard", stories: [N] },
+            { title: "Server Hub Gaming Leaderboard", stories: [U] },
             {
                 title: "Server Hub Popular Music",
                 stories: [
@@ -628,51 +668,62 @@ let q = {
                         id: "guild-space-popular-music",
                         docs: "Shows the Popular Music widget at wide, narrow, and minimum widths across populated, minimal, empty, loading, and error states.",
                         component: function (e) {
-                            let { state: t, mode: a } = e,
-                                l = (function (e) {
+                            let t,
+                                a,
+                                { state: n, mode: r, viewerPlacement: i } = e,
+                                d = (0, x.bG)([E.Ay], () => E.Ay.getFlattenedGuildIds()[0]),
+                                o = (function (e, t) {
                                     switch (e) {
                                         case "populated":
-                                            return { status: "success", data: M };
+                                            return { status: "success", data: q(M, t, !0) };
                                         case "minimal":
-                                            return { status: "success", data: j };
+                                            return { status: "success", data: q(B, t, !1) };
                                         case "empty":
-                                            return { status: "success", data: C };
+                                            return { status: "success", data: W };
                                         case "loading":
                                             return { status: "loading" };
                                         case "error":
                                             return { status: "error" };
                                     }
-                                })(t);
-                            function n(e) {
+                                })(
+                                    n,
+                                    ((t = (0, x.bG)([w.default], () => w.default.getCurrentUser()?.id)),
+                                    (a = (0, x.yK)([S.A], () => S.A.getFriendIDs())),
+                                    l.useMemo(() => {
+                                        let e = a.filter((e) => null != w.default.getUser(e)).slice(0, 5);
+                                        return ("listed" === i && null != t && e.splice(1, 1, t), e);
+                                    }, [a, t, i])),
+                                );
+                            function u(e) {
                                 return (0, s.jsx)(
-                                    D.P,
+                                    I.P,
                                     {
-                                        guildId: "popular-music-story-guild",
-                                        widget: { ...H, id: `${H.id}-${e}` },
-                                        guildSpaceMode: a,
-                                        hydration: l,
+                                        guildId: d ?? "popular-music-story-guild",
+                                        widget: { ...C, id: `${C.id}-${e}` },
+                                        guildSpaceMode: r,
+                                        hydration: o,
                                         onRemove: () => {},
                                     },
                                     e,
                                 );
                             }
                             return (0, s.jsxs)("div", {
-                                className: U.Zp,
+                                className: N.Zp,
                                 children: [
-                                    (0, s.jsx)(B, {
+                                    (0, s.jsx)(F, {
                                         label: "Wide column (685px)",
-                                        className: U.U,
-                                        children: n("wide"),
+                                        className: N.U,
+                                        children: u("wide"),
                                     }),
-                                    (0, s.jsx)(B, {
+                                    (0, s.jsx)(F, {
                                         label: "Narrow column (380px)",
-                                        className: U.sc,
-                                        children: n("narrow"),
+                                        className: N.sc,
+                                        children: u("narrow"),
                                     }),
-                                    (0, s.jsx)(B, {
+                                    (0, s.jsx)(F, {
                                         label: "Minimum width (320px)",
-                                        className: U.Bp,
-                                        children: n("minimum"),
+                                        className: N.Bp,
+                                        children: u("minimum"),
                                     }),
                                 ],
                             });
@@ -699,6 +750,15 @@ let q = {
                                     { label: "Edit", value: "edit" },
                                 ],
                             },
+                            viewerPlacement: {
+                                label: "Your placement",
+                                type: "select",
+                                defaultValue: "unlisted",
+                                options: [
+                                    { label: "Outside the top listeners", value: "unlisted" },
+                                    { label: "In the top listeners (rank 2)", value: "listed" },
+                                ],
+                            },
                         },
                     },
                 ],
@@ -706,4 +766,4 @@ let q = {
         ],
         tags: ["Server Hub", "Widgets", "GuildSpace", "Publish", "Leaderboard", "Popular Music"],
     },
-    F = { playgroundBaseUrl: "guild-space", collections: [V] };
+    Q = { playgroundBaseUrl: "guild-space", collections: [$] };
