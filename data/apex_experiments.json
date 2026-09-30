@@ -5418,7 +5418,8 @@
     "name": "2026-09-server-onboarding-setup-progress",
     "kind": "user",
     "defaultConfig": {
-      "showSetupProgressRow": false
+      "showSetupProgressRow": false,
+      "boostBeforeAddApp": false
     },
     "variations": {
       "0": {
@@ -5426,7 +5427,12 @@
         "variant": 0
       },
       "1": {
-        "showSetupProgressRow": true
+        "showSetupProgressRow": true,
+        "boostBeforeAddApp": false
+      },
+      "2": {
+        "showSetupProgressRow": true,
+        "boostBeforeAddApp": true
       }
     }
   },

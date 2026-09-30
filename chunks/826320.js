@@ -2,7 +2,7 @@ n.d(t, { A: () => en });
 var i = n(477900),
     l = n(582128),
     s = n(38021),
-    r = n(877123),
+    r = n(268090),
     a = n(796637),
     o = n(117600);
 n(321073);
@@ -10,8 +10,8 @@ var d = n(17928),
     c = n(115718),
     u = n(280157),
     h = n(513520),
-    g = n(130100),
-    m = n(151054),
+    m = n(130100),
+    g = n(151054),
     A = n(219271),
     f = n(427358),
     p = n(734057),
@@ -23,17 +23,17 @@ function x(e) {
 function N(e) {
     return p.A.getDMFromUserId(e.otherUserId);
 }
-function S() {
+function _() {
     let e = (function () {
         let e,
             t,
             n = (0, C.A)(),
-            { results: i } = (0, m.R)({ channelFilter: n, includeFrecency: !1 }),
+            { results: i } = (0, g.R)({ channelFilter: n, includeFrecency: !1 }),
             s =
                 (l.useEffect(() => {
                     (0, h.I)();
                 }, []),
-                (e = (0, d.bG)([g.A], () => g.A.getChannelAffinities())),
+                (e = (0, d.bG)([m.A], () => m.A.getChannelAffinities())),
                 l.useMemo(() => e.slice().sort((e, t) => t.score - e.score), [e])),
             r =
                 (l.useEffect(() => {
@@ -95,7 +95,7 @@ function S() {
         null
     );
 }
-let _ = l.memo(function () {
+let S = l.memo(function () {
     let { isEligible: e, isSelected: t } = (0, o.lK)(),
         n = l.useRef(!1);
     return (l.useLayoutEffect(() => {
@@ -106,25 +106,25 @@ let _ = l.memo(function () {
         (n.current || !e) && ((n.current = !1), (0, o.CU)(o.E9));
     }, [e, t]),
     t)
-        ? (0, i.jsx)(S, {})
+        ? (0, i.jsx)(_, {})
         : null;
 });
 var I = n(192308),
     b = n(834730),
     G = n(276293),
     j = n(661531),
-    R = n(983851),
-    v = n(534890),
+    v = n(983851),
+    R = n(534890),
     y = n(331322),
-    T = n(297264),
-    L = n(93055),
+    L = n(297264),
+    T = n(93055),
     M = n(17839),
     U = n(384539),
     D = n(375708),
     O = n(27948);
 function P() {
     let e = l.useCallback(() => {
-        let { hasAccess: e } = (0, L.ad)();
+        let { hasAccess: e } = (0, T.ad)();
         e
             ? (0, M.A)({ source: "favorites_empty_sidebar" })
             : (0, I.openModalLazy)(async () => {
@@ -138,7 +138,7 @@ function P() {
         children: D.intl.format(U.default.LyZZLX, { onClick: e }),
     });
 }
-function w() {
+function V() {
     return (0, i.jsxs)("div", {
         className: O.v0,
         "aria-hidden": "true",
@@ -153,21 +153,21 @@ function w() {
             (0, i.jsxs)("div", {
                 className: O._f,
                 children: [
-                    (0, i.jsx)(R.H, { size: "xs", color: j.A.colors.ICON_MUTED }),
+                    (0, i.jsx)(v.H, { size: "xs", color: j.A.colors.ICON_MUTED }),
                     (0, i.jsx)("div", { className: O.VG }),
                 ],
             }),
             (0, i.jsxs)("div", {
                 className: O._f,
                 children: [
-                    (0, i.jsx)(v.ChatIcon, { size: "xs", color: j.A.colors.ICON_MUTED }),
+                    (0, i.jsx)(R.ChatIcon, { size: "xs", color: j.A.colors.ICON_MUTED }),
                     (0, i.jsx)("div", { className: O.D_ }),
                 ],
             }),
         ],
     });
 }
-function V() {
+function w() {
     let e = (0, o.fj)();
     return (0, i.jsxs)(y.B, {
         gap: 8,
@@ -178,13 +178,13 @@ function V() {
                 padding: { top: 16, right: 16, bottom: 0, left: 16 },
                 fullWidth: !1,
                 children: [
-                    (0, i.jsx)(T.D, { variant: "heading-md/semibold", children: D.intl.string(U.default["1n0TGE"]) }),
+                    (0, i.jsx)(L.D, { variant: "heading-md/semibold", children: D.intl.string(U.default["1n0TGE"]) }),
                     (0, i.jsx)(P, {}),
                 ],
             }),
             e
                 ? null
-                : (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { className: O.yF }), (0, i.jsx)(w, {})] }),
+                : (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { className: O.yF }), (0, i.jsx)(V, {})] }),
         ],
     });
 }
@@ -192,8 +192,8 @@ var H = n(866665),
     k = n(939249),
     B = n(789645),
     F = n(821609),
-    K = n(47167),
-    z = n(485947),
+    z = n(47167),
+    K = n(485947),
     W = n(61916),
     Y = n(446244),
     X = n(994500),
@@ -219,7 +219,7 @@ function ee(e) {
                           (0, i.jsxs)("div", {
                               className: Q.wx,
                               children: [
-                                  (0, i.jsx)(z.A, { className: Q.TK, children: D.intl.string(U.default.oHWnLy) }),
+                                  (0, i.jsx)(K.A, { className: Q.TK, children: D.intl.string(U.default.oHWnLy) }),
                                   (0, i.jsx)(H.m, {
                                       text: D.intl.string(D.t.WAI6xu),
                                       children: (0, i.jsx)(k.D, {
@@ -252,7 +252,7 @@ function ee(e) {
                                                   name:
                                                       e.type === c.rD.USER
                                                           ? Z.Ay.getName(e.record)
-                                                          : (0, K.m1)(e.record, q.default, X.A),
+                                                          : (0, z.m1)(e.record, q.default, X.A),
                                               }),
                                               onClick: () => J((0, Y.hY)(e)),
                                           }),
@@ -275,9 +275,9 @@ function en(e) {
         { density: o } = (0, s.wR)();
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(_, {}),
+            (0, i.jsx)(S, {}),
             n
-                ? (0, i.jsxs)("div", { className: et.XG, children: [(0, i.jsx)(ee, {}), (0, i.jsx)(V, {})] })
+                ? (0, i.jsxs)("div", { className: et.XG, children: [(0, i.jsx)(ee, {}), (0, i.jsx)(w, {})] })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)("div", { className: Q._I, children: (0, i.jsx)(ee, { withDivider: !l }) }),
