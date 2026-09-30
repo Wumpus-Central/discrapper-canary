@@ -684,22 +684,24 @@ function t_(t) {
             seedCategoryStore: !0,
             flattenVariants: a.flattenProductVariants,
         }),
-        d = (0, I.A)(() => ({ cardId: (0, s.A)() })),
-        u = tE(n),
-        x = r.useMemo(() => ({ ...a, productOverride: c ?? void 0, standalonePreview: !0 }), [a, c]);
-    return u
+        d = (0, K.Vm)(n),
+        u = c ?? ("loading" === o ? d : void 0),
+        x = (0, I.A)(() => ({ cardId: (0, s.A)() })),
+        k = tE(n),
+        p = r.useMemo(() => ({ ...a, productOverride: u, standalonePreview: !0 }), [a, u]);
+    return k
         ? null
-        : "loading" === o
-          ? (0, i.jsx)(tg.A, {})
-          : null == c
-            ? null
-            : (0, i.jsx)(b.R9, {
-                  newValue: d,
-                  children: (0, i.jsx)(K.v3.Provider, {
-                      value: x,
-                      children: (0, i.jsx)(tL, { product: c, ...e, cardClassName: l()(e.cardClassName, tS.w) }),
-                  }),
-              });
+        : null == u
+          ? "loading" === o
+              ? (0, i.jsx)(tg.A, {})
+              : null
+          : (0, i.jsx)(b.R9, {
+                newValue: x,
+                children: (0, i.jsx)(K.v3.Provider, {
+                    value: p,
+                    children: (0, i.jsx)(tL, { product: u, ...e, cardClassName: l()(e.cardClassName, tS.w) }),
+                }),
+            });
 }
 let tR = function (t) {
     return (0, f.$)("product_card") ? (0, i.jsx)(t_, { ...t }) : (0, i.jsx)(tN, { ...t });
