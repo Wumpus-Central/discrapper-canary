@@ -212,6 +212,13 @@
     background-color: var(--brand-500)
 }
 
+.trailingContainer__41d67 {
+    align-items: center;
+    color: var(--interactive-text-default);
+    display: flex;
+    height: 100%
+}
+
 .container__877f0 {
     position: relative
 }
@@ -698,4 +705,4 @@
     background-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=ab0010ac9302510a.css.map*/
+/*# sourceMappingURL=e40cb09314fed636.css.map*/

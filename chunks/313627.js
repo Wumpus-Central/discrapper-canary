@@ -8,16 +8,19 @@ var i = n(17928),
 function d(e) {
     return (0, i.bG)([a.A], () => null != e && a.A.can(o.xBc.MANAGE_GUILD, e), [e]);
 }
-function c(e) {
-    let t = e.guildSpaceSettings;
-    return null != t && t.enabled && t.publish_status === l.B.PUBLISHED;
+function c(e, t) {
+    let n;
+    return (
+        e.guildSpaceSettings?.enabled !== !1 &&
+        (t || (null != (n = e.guildSpaceSettings) && n.enabled && n.publish_status === l.B.PUBLISHED))
+    );
 }
 function u(e, t) {
-    return null != e && !!(0, s.aA)(e.id, t) && ((null != e && a.A.can(o.xBc.MANAGE_GUILD, e)) || c(e));
+    return null != e && !!(0, s.aA)(e.id, t) && c(e, null != e && a.A.can(o.xBc.MANAGE_GUILD, e));
 }
 function _(e, t) {
     let n = (0, s.fX)(e ?? void 0, t),
         a = (0, i.bG)([r.A], () => r.A.getGuild(e), [e]),
         l = d(a);
-    return null != a && !!n && (l || c(a));
+    return null != a && !!n && c(a, l);
 }
