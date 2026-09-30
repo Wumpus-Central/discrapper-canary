@@ -1,8 +1,9 @@
-n.d(t, { D3: () => l, IJ: () => s, wJ: () => o });
+n.d(t, { D3: () => o, IJ: () => l, wJ: () => d, yk: () => c });
 var i,
     r,
     a,
-    s =
+    s,
+    l =
         (((i = {}).ACCOUNT_REVERT_CHANGE_PASSWORD = "impression_account_revert_change_password"),
         (i.ACCOUNT_REVERT_EXPLAINER = "impression_account_revert_explainer"),
         (i.ACCOUNT_REVERT_SUCCESS = "impression_account_revert_success"),
@@ -271,7 +272,7 @@ var i,
         (i.VOICE_USER_ACTIVITY_POPOUT = "impression_voice_user_activity_popout"),
         (i.WISHLIST_ITEM = "impression_wishlist_item"),
         i),
-    l =
+    o =
         (((r = {}).ACCOUNT_REVERT = "network_action_account_revert"),
         (r.APPLE_JWT_TOKEN_CREATE = "network_action_apple_jwt_token_create"),
         (r.AUTH_SESSIONS_LOGGED_OUT = "network_action_auth_sessions_logged_out"),
@@ -340,4 +341,5 @@ var i,
         (r.USER_VERIFY_RESEND = "network_action_user_verify_resend"),
         (r.WEBAUTHN_REGISTER = "network_action_webauthn_register"),
         r),
-    o = (((a = {}).CHANNEL = "span_tti_channel"), a);
+    d = (((a = {}).CHANNEL = "span_tti_channel"), a),
+    c = (((s = {}).CHANNEL = "span_component_channel"), s);

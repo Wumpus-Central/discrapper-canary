@@ -3,6 +3,7 @@ let i, r, a, s, l, o, d, c;
     n.d(t, {
         encodeProperties: () => I,
         isThrottled: () => em,
+        SpanComponentNames: () => Q.yk,
         analyticsTrackingStoreMaker: () => q,
         getOS: () => ed,
         SpanTtiNames: () => Q.wJ,
@@ -494,7 +495,7 @@ eh(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("626114", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("626125", 10))) || (l.client_build_number = d),
     null == (c = eo?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {

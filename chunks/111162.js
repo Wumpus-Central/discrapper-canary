@@ -51,6 +51,7 @@ let E = (() => {
         logGatewayEvents: !1,
         logOverlayEvents: !1,
         logAnalyticsEvents: !1,
+        logInteractionTTIAnalytics: !1,
         sourceMapsEnabled: !1,
         axeEnabled: !1,
         cssDebuggingEnabled: !1,
@@ -96,6 +97,9 @@ class g extends a.Ay.Store {
     }
     get isLoggingAnalyticsEvents() {
         return I.logAnalyticsEvents;
+    }
+    get isLoggingInteractionTTIAnalytics() {
+        return I.logInteractionTTIAnalytics;
     }
     get isAxeEnabled() {
         return I.axeEnabled;
