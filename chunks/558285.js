@@ -18,17 +18,26 @@ async function r(e) {
     }
 }
 async function c(e, a) {
-    let { key: t, videoURL: i, thumbnailURL: s, title: c, spritesheetImageURL: d, spritesheetVttURL: o } = e,
-        { width: u, height: m } = await r(s);
+    let { key: t, gameId: i, videoURL: s, thumbnailURL: c, title: d, spritesheetImageURL: o, spritesheetVttURL: u } = e,
+        { width: m, height: h } = await r(c);
     return {
         type: "VIDEO",
-        url: i,
-        proxyUrl: i,
-        poster: s,
-        width: u,
-        height: m,
-        alt: c,
-        clip: { id: t, url: i, width: u, height: m, title: c, spritesheet_image_url: d, spritesheet_vtt_url: o },
+        url: s,
+        proxyUrl: s,
+        poster: c,
+        width: m,
+        height: h,
+        alt: d,
+        clip: {
+            id: t,
+            url: s,
+            width: m,
+            height: h,
+            title: d,
+            application: { id: i },
+            spritesheet_image_url: o,
+            spritesheet_vtt_url: u,
+        },
         onEnded: a ? () => n._.dispatch(l.jej.MODAL_CAROUSEL_NEXT) : void 0,
     };
 }
