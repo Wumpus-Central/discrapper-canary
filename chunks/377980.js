@@ -43,7 +43,7 @@ var h = t(834730),
     g = t(107384),
     p = t(176524);
 t(321073);
-var v = t(122590);
+var v = t(355903);
 function y(e) {
     let { persistentBadge: n, dismissibleBadges: t } = e;
     return (function (e) {
@@ -1078,7 +1078,7 @@ function e9(e) {
         children: (0, l.jsx)(t, {}),
     });
 }
-function e2(e) {
+function e3(e) {
     let { notice: n, children: t, useObscuredNotice: i } = e,
         s = r.useRef(null),
         a = i?.();
@@ -1103,7 +1103,7 @@ function e2(e) {
               }),
           });
 }
-function e3(e) {
+function e2(e) {
     let { layout: n, decoration: t } = e;
     return (0, l.jsxs)("div", {
         className: e5.LZ,
@@ -1132,11 +1132,11 @@ function e4(e) {
         { layout: t } = n;
     if ((0, i.zS)(t))
         return (0, l.jsx)(
-            e2,
+            e3,
             {
                 notice: n.notice,
                 useObscuredNotice: n.useObscuredNotice,
-                children: (0, l.jsx)(e3, { layout: t, decoration: n.decoration }),
+                children: (0, l.jsx)(e2, { layout: t, decoration: n.decoration }),
             },
             n.key,
         );
