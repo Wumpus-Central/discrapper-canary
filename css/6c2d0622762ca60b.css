@@ -1,0 +1,286 @@
+.settingsCard__750bc {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    width: 100%;
+    word-break: break-word
+}
+
+.settingsCardHeader__750bc {
+    justify-content: space-between
+}
+
+.settingsCardActions__750bc,
+.settingsCardHeader__750bc {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.settingsCardActions__750bc {
+    justify-content: flex-end;
+    margin-top: var(--space-4)
+}
+
+.card__97796 {
+    margin-inline-end: 0
+}
+
+.card__97796 .headerCollapsed__97796 {
+    border-bottom: none;
+    border-radius: var(--radius-md)
+}
+
+.trailing__97796 {
+    gap: var(--space-4)
+}
+
+.toggle__97796,
+.trailing__97796 {
+    align-items: center;
+    display: flex
+}
+
+.toggle__97796 {
+    border-radius: var(--radius-xs);
+    color: var(--icon-muted);
+    justify-content: center
+}
+
+.toggle__97796:hover {
+    color: var(--icon-strong)
+}
+
+.body__97796 {
+    max-width: 100%;
+    min-width: 0;
+    overflow-wrap: anywhere;
+    padding: var(--space-16);
+    word-break: break-word
+}
+
+.list__97796 {
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.item__97796,
+.list__97796 {
+    display: flex;
+    gap: var(--space-8);
+    max-width: 100%;
+    min-width: 0
+}
+
+.item__97796 {
+    align-items: center
+}
+
+.textCell__97796 {
+    max-width: 100%;
+    min-width: 0
+}
+
+.text__97796 {
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0 58%;
+    background-repeat: no-repeat;
+    background-size: 0 2px;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone
+}
+
+.itemCompleted__97796 .text__97796 {
+    background-size: 100% 2px
+}
+
+.marker__97796 {
+    background: transparent;
+    border: 1px solid var(--checkbox-border-default);
+    border-radius: var(--radius-xs);
+    box-sizing: border-box;
+    display: grid;
+    flex-shrink: 0;
+    place-content: center;
+    place-items: center
+}
+
+.marker__97796,
+.markerSpinner__97796 {
+    height: var(--space-20);
+    width: var(--space-20)
+}
+
+.markerSpinner__97796 {
+    grid-area: 1/1;
+    opacity: 0;
+    transform: scale(.5)
+}
+
+.marker__97796 .markerSpinnerPath__97796 {
+    stroke: var(--checkbox-icon-active)
+}
+
+.marker__97796.markerInProgress__97796 {
+    background: color-mix(in oklab, var(--background-brand) 30%, transparent);
+    border-color: var(--checkbox-border-selected-default)
+}
+
+.marker__97796.markerInProgress__97796 .markerSpinner__97796 {
+    opacity: 1;
+    transform: scale(.625)
+}
+
+.marker__97796.markerCompleted__97796 {
+    background: var(--checkbox-background-selected-default);
+    border-color: var(--checkbox-border-selected-default)
+}
+
+.marker__97796.markerUnfinished__97796 {
+    border-color: var(--border-strong);
+    border-style: dashed
+}
+
+.markerCheck__97796 {
+    grid-area: 1/1;
+    height: 10px;
+    overflow: visible;
+    width: 10px
+}
+
+.markerCheckPath__97796 {
+    fill: none;
+    stroke: var(--checkbox-icon-active);
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    stroke-dasharray: 15;
+    stroke-dashoffset: 15
+}
+
+.markerCompleted__97796 .markerCheckPath__97796 {
+    stroke-dashoffset: 0
+}
+
+.agents__97796 {
+    gap: var(--space-8);
+    margin-inline-start: auto
+}
+
+.agent__97796,
+.agents__97796 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto
+}
+
+.agent__97796 {
+    max-width: var(--space-16);
+    overflow: hidden
+}
+
+.agentOverflow__97796 {
+    margin-inline-start: var(--space-4)
+}
+
+.full-motion .agents__97796 {
+    --custom-icon-swap-dur: 250ms;
+    filter: blur(2px);
+    opacity: 0;
+    transform: scale(.25);
+    transition: opacity var(--custom-icon-swap-dur) ease-in-out, filter var(--custom-icon-swap-dur) ease-in-out, transform var(--custom-icon-swap-dur) ease-in-out
+}
+
+.full-motion .agents__97796[data-shown=true] {
+    filter: blur(0);
+    opacity: 1;
+    transform: scale(1)
+}
+
+.full-motion .item__97796 {
+    filter: blur(0);
+    opacity: 1;
+    transform: translateY(0);
+    transition: transform .15s ease-in-out, filter .15s ease-in-out, opacity .15s ease-in-out
+}
+
+.full-motion .item__97796[data-arriving=true] {
+    filter: blur(2px);
+    opacity: 0;
+    transform: translateY(calc(var(--space-4)*-1));
+    transition: none
+}
+
+.full-motion .agent__97796 {
+    transition: max-width .2s ease-in-out, margin-inline-start .2s ease-in-out, opacity .2s ease-in-out, transform .2s ease-in-out
+}
+
+.full-motion .agent__97796[data-leaving=true] {
+    margin-inline-start: calc(var(--space-8)*-1);
+    max-width: 0;
+    opacity: 0;
+    transform: scale(.25)
+}
+
+.full-motion .marker__97796 {
+    transition: background-color .2s ease-out, border-color .2s ease-out
+}
+
+.full-motion .markerSpinner__97796 {
+    transition: opacity .2s ease-out, transform .2s ease-out
+}
+
+.full-motion .text__97796 {
+    transition: background-size .3s ease-out
+}
+
+.full-motion .markerCompleted__97796 {
+    transition: background-color .15s cubic-bezier(.22, 1, .36, 1), border-color .15s cubic-bezier(.22, 1, .36, 1)
+}
+
+.full-motion .markerCheckPath__97796 {
+    transition: stroke-dashoffset .15s cubic-bezier(.22, 1, .36, 1)
+}
+
+.full-motion .markerCompleted__97796 .markerCheckPath__97796 {
+    transition: stroke-dashoffset .35s cubic-bezier(.22, 1, .36, 1)
+}
+
+.awaitingSurface__7777f {
+    border-color: var(--background-brand);
+    position: relative
+}
+
+.awaitingSurface__7777f:after {
+    border-radius: inherit;
+    box-shadow: 0 0 0 var(--space-4) var(--background-brand);
+    content: "";
+    inset: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute
+}
+
+.full-motion .awaitingSurface__7777f:after {
+    animation: vibegrationsAwaitingPulse__7777f 2s ease-in-out infinite
+}
+
+@keyframes vibegrationsAwaitingPulse__7777f {
+
+    0%,
+    to {
+        opacity: 0
+    }
+
+    50% {
+        opacity: .35
+    }
+}
+
+/*# sourceMappingURL=6c2d0622762ca60b.css.map*/

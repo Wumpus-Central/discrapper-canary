@@ -122,7 +122,7 @@ function N(e) {
 var R = i(600761),
     w = i(667049),
     L = i(389667),
-    _ = i(479299),
+    _ = i(58216),
     P = i(869484),
     O = i(315629),
     D = i(465794),
@@ -861,7 +861,7 @@ function e3() {
         [i, n] = (0, e2.kn)(e && t ? [e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK] : []);
     return [i === e1.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, n];
 }
-function e4(e) {
+function e6(e) {
     let { targetElementRef: t, isVisible: i, markAsDismissed: l } = e,
         { trackUserProfileEditAction: s } = (0, eQ.NJ)();
     return i
@@ -895,7 +895,7 @@ function e4(e) {
           })
         : null;
 }
-var e6 = i(410453);
+var e4 = i(410453);
 function e9(e) {
     let { buttonRef: t, isCoachmarkVisible: i, markCoachmarkAsDismissed: s } = e,
         { trackUserProfileEditAction: a } = (0, eQ.NJ)(),
@@ -945,10 +945,10 @@ function te(e) {
                 ));
         }, [s, c, u]);
     return (0, n.jsxs)("div", {
-        className: a()(e6.w, t),
+        className: a()(e4.w, t),
         children: [
             (0, n.jsx)(d.E, {
-                className: e6.D,
+                className: e4.D,
                 variant: m ? "text-sm/semibold" : "text-xs/semibold",
                 color: "text-subtle",
                 children: V.intl.string(V.t.OYlggR),
@@ -962,7 +962,7 @@ function te(e) {
                 onClick: x,
                 buttonRef: r,
             }),
-            (0, n.jsx)(e4, { targetElementRef: g ? o : r, isVisible: c, markAsDismissed: u }),
+            (0, n.jsx)(e6, { targetElementRef: g ? o : r, isVisible: c, markAsDismissed: u }),
         ],
     });
 }
@@ -1510,14 +1510,14 @@ var t8 = i(769015),
     t7 = i(692969),
     t5 = i(202163),
     t3 = i(207803),
-    t4 = i(591179),
-    t6 = i(485745),
+    t6 = i(591179),
+    t4 = i(485745),
     t9 = i(308766);
 function ie(e) {
     let { gameId: t, userId: i, className: s } = e,
         { gameRecord: r } = (0, t5.A)(t),
-        o = !(0, t4.X)("WidgetClipGameIcon"),
-        d = (0, t6.A)(o),
+        o = !(0, t6.X)("WidgetClipGameIcon"),
+        d = (0, t4.A)(o),
         c = (0, t7.A)({
             location: "WidgetClipGameIcon",
             applicationId: t,
@@ -2427,8 +2427,8 @@ function i3(e) {
                 : (0, n.jsx)(iG, { widget: i }),
     });
 }
-var i4 = i(875620);
-function i6(e) {
+var i6 = i(875620);
+function i4(e) {
     let { gameId: t, userId: i, onClick: l } = e,
         { coverImageUrl: s, gameName: a, isLoading: o } = (0, iJ.A)(t),
         d = (0, r.bG)([v.A], () => v.A.suggestedFetchIsLoading),
@@ -2439,19 +2439,19 @@ function i6(e) {
               text: c,
               ariaHidden: !0,
               children: (0, n.jsxs)(H.D, {
-                  className: i4.c9,
+                  className: i6.c9,
                   onClick: l,
                   "aria-label": c,
                   children: [
                       (0, n.jsx)(iZ.A, {
-                          className: i4.Iv,
+                          className: i6.Iv,
                           imageSrc: s,
                           gameName: a,
                           gameId: t,
                           userId: i,
                           disableInteraction: !0,
                       }),
-                      (0, n.jsx)(tG.PlusLargeIcon, { size: "md", className: i4.Xv, color: e_.A.colors.WHITE }),
+                      (0, n.jsx)(tG.PlusLargeIcon, { size: "md", className: i6.Xv, color: e_.A.colors.WHITE }),
                   ],
               }),
           });
@@ -2473,10 +2473,10 @@ function i9(e) {
     return (0, n.jsx)(tQ, {
         ...s,
         children: (0, n.jsx)("ul", {
-            className: i4.Vg,
+            className: i6.Vg,
             children: a.map((e) => {
                 let { gameId: i } = e;
-                return (0, n.jsx)("li", { children: (0, n.jsx)(i6, { onClick: () => c(i), userId: t, gameId: i }) }, i);
+                return (0, n.jsx)("li", { children: (0, n.jsx)(i4, { onClick: () => c(i), userId: t, gameId: i }) }, i);
             }),
         }),
     });
@@ -2742,7 +2742,7 @@ function nf(e) {
                                       trackUserProfileEditAction: s,
                                   })
                                 : (0, n.jsx)(nm, { personalWidgetOptionRef: o, trackUserProfileEditAction: s }),
-                            (0, n.jsx)(e4, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
+                            (0, n.jsx)(e6, { targetElementRef: o, isVisible: u, markAsDismissed: g }),
                         ],
                     }),
             ],

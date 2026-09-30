@@ -1,4 +1,4 @@
-a.d(t, { B: () => o, MZ: () => l, TH: () => s, tn: () => i });
+a.d(t, { B: () => o, MZ: () => l, TH: () => i, tn: () => s });
 let n = [
     {
         date: "2026-09-07",
@@ -254,6 +254,13 @@ let n = [
         time: "01:17",
         platforms: ["desktop"],
         summary: "Drop images and files anywhere on the chat to bring them along, not just onto the message box.",
+    },
+    {
+        date: "2026-09-30",
+        time: "07:31",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Edit App at the top of your app\u2019s DM opens it in the builder, instead of offering to disconnect it.",
     },
     {
         date: "2026-09-20",
@@ -1058,14 +1065,14 @@ let n = [
             ? -1
             : +(e.summary > t.summary);
 });
-function s(e) {
-    return i(e).slice(0, 3);
-}
 function i(e) {
+    return s(e).slice(0, 3);
+}
+function s(e) {
     return n.filter((t) => t.platforms.includes(e));
 }
 function o(e) {
-    return i(e).length > 3;
+    return s(e).length > 3;
 }
 function l(e) {
     return 1 === e.platforms.length;
