@@ -11,11 +11,11 @@ var i = n(477900),
     g = n(28863),
     m = n(289873),
     A = n(331322),
-    E = n(683071),
-    h = n(391048),
+    h = n(683071),
+    E = n(391048),
     S = n(158032),
-    x = n(362111),
-    p = n(457287),
+    p = n(362111),
+    x = n(457287),
     T = n(637141),
     f = n(688810),
     _ = n(277984),
@@ -121,10 +121,10 @@ function k(e) {
     }
     let ee = () => {
         (0, d.openModalLazy)(
-            async () => (e) => (0, i.jsx)(x.default, { ...e, onAddPaymentSource: $, analyticsLocation: a }),
+            async () => (e) => (0, i.jsx)(p.default, { ...e, onAddPaymentSource: $, analyticsLocation: a }),
             {
                 onCloseCallback: () => {
-                    (0, h.ET)();
+                    (0, E.ET)();
                 },
                 onCloseRequest: G.tEg,
             },
@@ -174,11 +174,11 @@ function k(e) {
                     : (0, i.jsx)(T.Ay, { ...n })),
                 null == t.paymentSourceId || d
                     ? null
-                    : (0, i.jsx)(p.f, {
+                    : (0, i.jsx)(x.f, {
                           currencies: a,
                           children: (0, i.jsx)("div", {
                               className: r()(U.Gl, V.Uu, V.Hu),
-                              children: (0, i.jsx)(p.A, {
+                              children: (0, i.jsx)(x.A, {
                                   label: M.intl.string(M.t["0YjaXf"]),
                                   selectedCurrency: Z,
                                   currencies: a,
@@ -197,7 +197,7 @@ function k(e) {
             align: "start",
             gap: 8,
             children: [
-                (0, i.jsx)(E.w, { type: "critical", children: M.intl.string(M.t["5mlOCW"]) }),
+                (0, i.jsx)(h.w, { type: "critical", children: M.intl.string(M.t["5mlOCW"]) }),
                 (0, i.jsx)(c.$, {
                     variant: "secondary",
                     onClick: () => (0, _.$o)(),

@@ -28,8 +28,8 @@ function C(e) {
         x = (0, r.bG)([y.Ay], () => y.Ay.getSettings(t)),
         [p, b] = a.useState(S),
         [k, C] = a.useState({}),
-        [I, M] = a.useState(!1),
-        [T, P] = a.useState(!1),
+        [I, T] = a.useState(!1),
+        [M, P] = a.useState(!1),
         _ = a.useCallback((e, t) => {
             (P(!1), b((l) => ({ ...l, values: { ...l.values, [e]: t } })));
         }, []),
@@ -47,8 +47,8 @@ function C(e) {
         $ = new Map(D.map((e) => [e.name, e])),
         q = (l ?? []).filter((e) => O.some((t) => t.key === e) || $.has(e)),
         z = q.length > 0,
-        G = q.some((e) => $.has(e)),
-        U = a.useMemo(() => {
+        U = q.some((e) => $.has(e)),
+        G = a.useMemo(() => {
             let e = {};
             for (let [t, l] of Object.entries(p.values)) {
                 let n = L.find((e) => e.key === t);
@@ -63,12 +63,12 @@ function C(e) {
                 ...(Object.keys(t).length > 0 ? { secrets: t } : {}),
             };
         }, [p, L, F]),
-        B = null != U.values || null != U.secrets,
+        B = null != G.values || null != G.secrets,
         V = a.useCallback(async () => {
             if (!B || I) return !0;
-            (M(!0), P(!1));
+            (T(!0), P(!1));
             try {
-                let { rebuildRequired: e } = await (0, y.nU)(t, U);
+                let { rebuildRequired: e } = await (0, y.nU)(t, G);
                 return (
                     m || j.Ay.hasPendingSettingsRequest(t)
                         ? (0, y.dv)(t, w.intl.string(N.default.gqJFu0))
@@ -82,9 +82,9 @@ function C(e) {
             } catch {
                 return (P(!0), !1);
             } finally {
-                M(!1);
+                T(!1);
             }
-        }, [B, m, t, I, U]);
+        }, [B, m, t, I, G]);
     function H(e) {
         let t = [
             e?.hint != null && "" !== e.hint ? e.hint : void 0,
@@ -218,7 +218,7 @@ function C(e) {
                   e.name,
               );
     }
-    let X = T
+    let X = M
             ? (0, n.jsx)(s.E, {
                   variant: "text-xs/normal",
                   color: "text-feedback-critical",
@@ -246,7 +246,7 @@ function C(e) {
                     : z
                       ? (0, n.jsxs)(n.Fragment, {
                             children: [
-                                G
+                                U
                                     ? (0, n.jsx)(s.E, {
                                           variant: "text-xs/normal",
                                           color: "text-muted",

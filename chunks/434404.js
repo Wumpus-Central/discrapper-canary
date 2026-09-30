@@ -11,11 +11,11 @@ var i = n(419954),
     g = n(766075),
     m = n(375708),
     A = n(536854),
-    E = n(72290);
-function h() {
+    h = n(72290);
+function E() {
     let e = (0, a.bG)([c.default], () => c.default.locale),
         [t, i] = r.useState(e),
-        h = r.useMemo(
+        E = r.useMemo(
             () =>
                 (0, m.getAvailableLocales)().map((e) => {
                     let t;
@@ -40,7 +40,7 @@ function h() {
         ),
         S = r.useCallback((e) => {
             (i(e),
-                E.nextTick(() => {
+                h.nextTick(() => {
                     (d.Ay.updateLocale(e),
                         (0, o.closeModal)(g.USER_SETTINGS_MODAL_KEY) &&
                             (0, g.openUserSettings)(s.X.LANGUAGE_AND_TIME_PANEL));
@@ -51,26 +51,26 @@ function h() {
         label: m.intl.string(m.t["mx+sp7"]),
         description: m.intl.string(m.t.rTPlcq),
         value: t,
-        options: h,
+        options: E,
         onSelectionChange: S,
     });
 }
 let S = (0, i.E2)(s.X.LANGUAGE_SELECT_SETTING, {
     useSearchTerms: () => [m.intl.string(m.t.IHMsPn)],
-    Component: () => (0, l.jsx)(h, {}),
+    Component: () => (0, l.jsx)(E, {}),
 });
-var x = n(873298),
-    p = n(885386);
+var p = n(873298),
+    x = n(885386);
 let T = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
         useSearchTerms: () => [m.intl.string(m.t.dyamEI), m.intl.string(m.t.p8NOwi), m.intl.string(m.t["+o/sOo"])],
         useTitle: () => m.intl.string(m.t.dyamEI),
-        useValue: () => p.PZ.useSetting(),
-        setValue: (e) => p.PZ.updateSetting(e),
+        useValue: () => x.PZ.useSetting(),
+        setValue: (e) => x.PZ.updateSetting(e),
         useOptions: function () {
             return [
-                { name: m.intl.string(m.t.FMWYvb), value: x.PZ.AUTO },
-                { name: m.intl.string(m.t.p8NOwi), value: x.PZ.H12 },
-                { name: m.intl.string(m.t["+o/sOo"]), value: x.PZ.H23 },
+                { name: m.intl.string(m.t.FMWYvb), value: p.PZ.AUTO },
+                { name: m.intl.string(m.t.p8NOwi), value: p.PZ.H12 },
+                { name: m.intl.string(m.t["+o/sOo"]), value: p.PZ.H23 },
             ];
         },
     }),

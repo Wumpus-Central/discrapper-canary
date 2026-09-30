@@ -29,42 +29,42 @@ function y(e) {
             () => ({ searchOptions: { blacklist: new Set([`user:${h}`]), frecencyBoosters: !0, userFilters: null } }),
             [h],
         ),
-        { search: E, query: g, results: C } = (0, f.A)(D),
-        [R, U] = n.useState(p("")),
-        _ = n.useCallback((e) => U(p(e)), [U]),
-        { queryMode: M } = R,
-        S = n.useRef(null),
+        { search: E, query: g, results: U } = (0, f.A)(D),
+        [C, R] = n.useState(p("")),
+        S = n.useCallback((e) => R(p(e)), [R]),
+        { queryMode: _ } = C,
+        M = n.useRef(null),
         b = n.useRef(r),
-        I = g !== S.current ? r : b.current;
+        m = g !== M.current ? r : b.current;
     (n.useEffect(() => {
-        (g !== S.current && (b.current = r), (S.current = g));
+        (g !== M.current && (b.current = r), (M.current = g));
     }, [g, r]),
         n.useLayoutEffect(() => {
-            let { query: e, resultTypes: t } = R;
+            let { query: e, resultTypes: t } = C;
             E({ query: e, resultTypes: t });
-        }, [E, R]),
+        }, [E, C]),
         (0, c.k)(A));
-    let N = (0, u.bG)([d.A], () => d.A.getFrequentlyWithoutFetchingLatest()),
-        k = (0, u.bG)([l.A], () => l.A.isConnected()),
-        m = "" !== g;
+    let I = (0, u.bG)([d.A], () => d.A.getFrequentlyWithoutFetchingLatest()),
+        N = (0, u.bG)([l.A], () => l.A.isConnected()),
+        k = "" !== g;
     return {
         results: n.useMemo(
             () =>
                 (0, o.Ay)({
-                    results: C,
-                    hasQuery: m,
-                    queryMode: M,
+                    results: U,
+                    hasQuery: k,
+                    queryMode: _,
                     targetDestination: t,
-                    frequentChannels: N,
+                    frequentChannels: I,
                     selectedDestinations: r,
-                    pinnedDestinations: I,
+                    pinnedDestinations: m,
                     originDestination: i,
                     channelFilter: a,
                     includeMissingDMs: y,
-                    isConnected: k,
+                    isConnected: N,
                 }),
-            [C, m, M, t, N, r, I, i, a, y, k],
+            [U, k, _, t, I, r, m, i, a, y, N],
         ),
-        updateSearchText: _,
+        updateSearchText: S,
     };
 }

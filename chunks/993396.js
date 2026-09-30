@@ -1,5 +1,5 @@
 (a.d(t, {
-    Bl: () => s,
+    Bl: () => i,
     Bp: () => m,
     I6: () => c,
     In: () => l,
@@ -13,8 +13,8 @@
     a(321073),
     a(683180));
 var n = a(759967),
-    i = a(375708);
-function s(e, t) {
+    s = a(375708);
+function i(e, t) {
     return !t.some((t) => t.id === e);
 }
 function o(e, t) {
@@ -25,7 +25,7 @@ function l(e, t) {
     return null != e && (!0 === e.optional || "" !== (t ?? "").trim());
 }
 function r(e) {
-    return i.intl.formatToPlainString(n.default["4lZNuo"], { templateName: e, locale: i.intl.currentLocale });
+    return s.intl.formatToPlainString(n.default["4lZNuo"], { templateName: e, locale: s.intl.currentLocale });
 }
 function d(e) {
     for (let t = e.length - 1; t >= 0; t--) {
@@ -47,7 +47,7 @@ function u(e) {
           };
 }
 function m(e) {
-    return e?.server ?? { title: i.intl.string(n.default.WQCnSf), hint: i.intl.string(n.default.KLTQfQ) };
+    return e?.server ?? { title: s.intl.string(n.default.WQCnSf), hint: s.intl.string(n.default.KLTQfQ) };
 }
 function c(e) {
     return e?.questions ?? [];
@@ -59,11 +59,11 @@ function h(e, t) {
     let a = [];
     return (
         e.forEach((e, n) => {
-            let i = (t[n] ?? "").trim();
-            ("" !== i || !0 !== e.optional) &&
-                (i.includes("\n")
-                    ? a.push(`${n + 1}. ${e.title} \u{2192}`, '"""', i, '"""')
-                    : a.push(`${n + 1}. ${e.title} \u{2192} ${i}`));
+            let s = (t[n] ?? "").trim();
+            ("" !== s || !0 !== e.optional) &&
+                (s.includes("\n")
+                    ? a.push(`${n + 1}. ${e.title} \u{2192}`, '"""', s, '"""')
+                    : a.push(`${n + 1}. ${e.title} \u{2192} ${s}`));
         }),
         a.join("\n")
     );

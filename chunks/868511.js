@@ -1,4 +1,4 @@
-n.d(t, { A: () => p });
+n.d(t, { A: () => x });
 var i = n(477900),
     s = n(582128),
     l = n(17928),
@@ -11,14 +11,14 @@ var i = n(477900),
     g = n(956518),
     m = n(235986),
     A = n(147964),
-    E = n(375708),
-    h = n(479381),
+    h = n(375708),
+    E = n(479381),
     S = n(221851);
-let x = /^\d+$|^$/;
-function p(e) {
+let p = /^\d+$|^$/;
+function x(e) {
     let { onClose: t, transitionState: n } = e,
         {
-            authorizedApplicationId: p,
+            authorizedApplicationId: x,
             authorizationError: T,
             authorizing: f,
         } = (0, l.cf)([A.A], () => ({
@@ -26,10 +26,10 @@ function p(e) {
             authorizationError: A.A.error,
             authorizing: A.A.isFetchingAuthorization,
         })),
-        [_, I] = s.useState(p ?? ""),
+        [_, I] = s.useState(x ?? ""),
         [N, C] = s.useState("8080"),
         [b, y] = s.useState("localhost"),
-        v = x.test(_);
+        v = p.test(_);
     async function j() {
         c.SH();
         let e = (function (e, t, n) {
@@ -44,7 +44,7 @@ function p(e) {
         null != (await c.q1(_, e)) && t();
     }
     s.useEffect(() => () => d.h.wait(() => c.SH()), []);
-    let O = null != p && p === _,
+    let O = null != x && x === _,
         L = O
             ? function () {
                   (c.cL(), I(""), y(null));
@@ -56,15 +56,15 @@ function p(e) {
                     loading: f,
                     disabled: !v || 0 === _.length || ("localhost" === b && 0 === N.length),
                     variant: O ? "critical-primary" : "active",
-                    text: O ? E.intl.string(E.t.d6TR3I) : E.intl.string(E.t.qwuK5I),
+                    text: O ? h.intl.string(h.t.d6TR3I) : h.intl.string(h.t.qwuK5I),
                     onClick: L,
                 },
             ],
             [_.length, f, O, v, N.length, L, b],
         );
     return (0, i.jsxs)(r.a, {
-        title: E.intl.string(E.t.f8fzky),
-        subtitle: E.intl.string(E.t.a6Vill),
+        title: h.intl.string(h.t.f8fzky),
+        subtitle: h.intl.string(h.t.a6Vill),
         actions: R,
         onClose: t,
         transitionState: n,
@@ -77,13 +77,13 @@ function p(e) {
                 align: m.A.Align.START,
                 children: [
                     (0, i.jsx)("div", {
-                        className: h.I,
+                        className: E.I,
                         children: (0, i.jsx)(o.k, {
-                            label: E.intl.string(E.t.P6TzgI),
+                            label: h.intl.string(h.t.P6TzgI),
                             required: !0,
                             value: _,
                             maxLength: 19,
-                            error: v ? null : E.intl.string(E.t.gPNgKO),
+                            error: v ? null : h.intl.string(h.t.gPNgKO),
                             onChange: function (e) {
                                 I(e);
                             },
@@ -91,15 +91,15 @@ function p(e) {
                         }),
                     }),
                     (0, i.jsx)("div", {
-                        className: h.I,
+                        className: E.I,
                         children: (0, i.jsx)(u.l, {
                             selectionMode: "single",
-                            label: E.intl.string(E.t["/GTqXG"]),
+                            label: h.intl.string(h.t["/GTqXG"]),
                             disabled: !v || "" === _,
                             value: b,
                             options: [
-                                { value: "localhost", label: E.intl.string(E.t["+Y9Y6r"]), id: "localhost" },
-                                { value: "proxy", label: E.intl.string(E.t.uaksyW), id: "proxy" },
+                                { value: "localhost", label: h.intl.string(h.t["+Y9Y6r"]), id: "localhost" },
+                                { value: "proxy", label: h.intl.string(h.t.uaksyW), id: "proxy" },
                             ],
                             onSelectionChange: function (e) {
                                 y(e);
@@ -110,10 +110,10 @@ function p(e) {
                     "localhost" !== b
                         ? null
                         : (0, i.jsx)("div", {
-                              className: h.I,
+                              className: E.I,
                               children: (0, i.jsx)(o.k, {
                                   required: !0,
-                                  label: E.intl.string(E.t.fF4zxq),
+                                  label: h.intl.string(h.t.fF4zxq),
                                   value: N,
                                   maxLength: 5,
                                   onChange: (e) => C(e),

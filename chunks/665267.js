@@ -11,11 +11,11 @@ var i = n(477900),
     g = n(793943),
     m = n(10392),
     A = n(82498),
-    E = n(724651),
-    h = n(732280),
+    h = n(724651),
+    E = n(732280),
     S = n(792656),
-    x = n(511484),
-    p = n(811611),
+    p = n(511484),
+    x = n(811611),
     T = n(174459),
     f = n(830543),
     _ = n(652215),
@@ -27,8 +27,8 @@ function y() {
     ((0, g.nf)(g.HP.CLIENT_THEMES), (0, f.default)());
 }
 function v() {
-    let e = (0, E.O)(),
-        t = (0, x.U9)(e, N.pe.TIER_2)
+    let e = (0, h.O)(),
+        t = (0, p.U9)(e, N.pe.TIER_2)
             ? C.intl.formatToPlainString(C.t.bkQ4bH, { percent: e?.discount.amount })
             : C.intl.string(C.t.mr4K7D);
     return (0, i.jsx)(S.A, {
@@ -40,7 +40,7 @@ function v() {
 }
 function j() {
     let e = (0, l.bG)([d.A], () => d.A.isPreview),
-        t = (0, h.V)()?.subscriptionTrial?.skuId === N.pe.TIER_2;
+        t = (0, E.V)()?.subscriptionTrial?.skuId === N.pe.TIER_2;
     return !e || t
         ? null
         : (0, i.jsxs)("div", {
@@ -69,7 +69,7 @@ function O(e) {
 }
 function L() {
     let e = (0, l.bG)([d.A], () => d.A.isPreview),
-        t = (0, h.V)()?.subscriptionTrial?.skuId === N.pe.TIER_2;
+        t = (0, E.V)()?.subscriptionTrial?.skuId === N.pe.TIER_2;
     return e && t
         ? (0, i.jsxs)("div", {
               children: [
@@ -83,7 +83,7 @@ function L() {
                       }),
                   }),
                   (0, i.jsx)("div", { className: b.BU }),
-                  (0, i.jsx)(p.Ay, { type: N.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: N.pe.TIER_2 }),
+                  (0, i.jsx)(x.Ay, { type: N.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: N.pe.TIER_2 }),
               ],
           })
         : null;

@@ -77,16 +77,16 @@ function f() {
                         C = S.width > 0 ? S.width / f : 1,
                         E = r.getBoundingClientRect(),
                         I = (E.left - S.left) / C,
-                        M = (1 - Math.min(1, Math.abs(I + E.width / C / 2 - i) / 16)) * b;
-                    if (M < 0.01) {
+                        T = (1 - Math.min(1, Math.abs(I + E.width / C / 2 - i) / 16)) * b;
+                    if (T < 0.01) {
                         (v && l.clearRect(0, 0, f, m), (v = !1));
                         return;
                     }
                     (v || (j = a), (v = !0), l.clearRect(0, 0, f, m));
-                    let T = I - 1 - (1 - M) * 16,
+                    let M = I - 1 - (1 - T) * 16,
                         P = (a - y) / 1e3,
                         _ = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (a - j) / 1500))) ** 3),
-                        R = Math.ceil(T / g);
+                        R = Math.ceil(M / g);
                     l.fillStyle = n;
                     for (let e = 0; e < 3; e++) {
                         let t = 72 * (0.825 + 0.35 * c(e, 11)),
@@ -103,9 +103,9 @@ function f() {
                             x = Math.abs(u - m / 2) < f;
                         for (let t = 0; t < R; t++) {
                             let a,
-                                o = T - (t * g + h / 2);
+                                o = M - (t * g + h / 2);
                             if (o < 0) break;
-                            let d = (T - o) / n;
+                            let d = (M - o) / n;
                             if (d >= 1) break;
                             let m = Math.min(6, Math.floor(7 * (1 - d ** r)));
                             ((a =
@@ -121,7 +121,7 @@ function f() {
                                             let t = Math.min(1, Math.max(0, e));
                                             return t * t * (3 - 2 * t);
                                         })((1 - d) / 0.34) *
-                                        M),
+                                        T),
                                     l.fillText(a, o, u)));
                         }
                     }

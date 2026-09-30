@@ -20,11 +20,11 @@ n(582128);
 var g = n(503698),
     m = n.n(g),
     A = n(562708),
-    E = n(821609),
-    h = n(297264),
+    h = n(821609),
+    E = n(297264),
     S = n(834730),
-    x = n(688810),
-    p = n(139286),
+    p = n(688810),
+    x = n(139286),
     T = n(793943),
     f = n(996254),
     _ = n(830543),
@@ -34,8 +34,8 @@ var g = n(503698),
     b = n(114149);
 function y(e) {
     let { className: t } = e,
-        { analyticsLocations: n } = (0, x.Ay)();
-    (0, p.A)({
+        { analyticsLocations: n } = (0, p.Ay)();
+    (0, x.A)({
         name: A.ImpressionNames.CUSTOM_THEMES_APPEARANCE_SETTINGS_BANNER,
         type: A.ImpressionTypes.VIEW,
         properties: { location_stack: n },
@@ -48,13 +48,13 @@ function y(e) {
             (0, c.jsxs)("div", {
                 className: C.P_,
                 children: [
-                    (0, c.jsx)(h.D, { variant: "heading-lg/semibold", color: "text-strong", children: i }),
+                    (0, c.jsx)(E.D, { variant: "heading-lg/semibold", color: "text-strong", children: i }),
                     (0, c.jsx)(S.E, { variant: "text-sm/normal", children: u.intl.string(N.default.nla4RG) }),
                 ],
             }),
             (0, c.jsx)("div", {
                 className: C.UD,
-                children: (0, c.jsx)(E.$, {
+                children: (0, c.jsx)(h.$, {
                     variant: "primary",
                     text: u.intl.string(u.t.uw9zI7),
                     onClick: function () {
@@ -124,7 +124,7 @@ let w = (0, i.E2)(s.X.APPEARANCE_DEFAULT_THEMES, {
         return (0, c.jsxs)(V.Ay, {
             type: V.v0.SETTINGS,
             children: [
-                (0, c.jsx)(h.D, {
+                (0, c.jsx)(E.D, {
                     variant: "heading-md/semibold",
                     color: "text-default",
                     children: u.intl.string(u.t["0EzVst"]),
@@ -152,7 +152,7 @@ let W = (0, i.E2)(s.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     useSearchTerms: () => [u.intl.string(u.t.Ksh3ik), u.intl.string(u.t.NoFvjZ), u.intl.string(u.t["EgvHH/"])],
     Component: function () {
         var e;
-        let { analyticsLocations: t } = (0, x.Ay)(B.A.CLIENT_THEMES_THEME_SELECTOR),
+        let { analyticsLocations: t } = (0, p.Ay)(B.A.CLIENT_THEMES_THEME_SELECTOR),
             [n, i, s, a, o] = (0, l.yK)([D.A, r.A], () => [
                 D.A.themePreferenceForSystemTheme(Y.Fc.LIGHT),
                 D.A.themePreferenceForSystemTheme(Y.Fc.DARK),
@@ -173,7 +173,7 @@ let W = (0, i.E2)(s.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                 (0, c.jsxs)(V.Ay, {
                     type: V.v0.SETTINGS,
                     children: [
-                        (0, c.jsx)(h.D, {
+                        (0, c.jsx)(E.D, {
                             variant: "heading-md/semibold",
                             color: "text-default",
                             children: u.intl.string(u.t.NoFvjZ),
@@ -210,7 +210,7 @@ let W = (0, i.E2)(s.X.APPEARANCE_DUAL_THEME_SELECTOR, {
                 (0, c.jsxs)(V.Ay, {
                     type: V.v0.SETTINGS,
                     children: [
-                        (0, c.jsx)(h.D, {
+                        (0, c.jsx)(E.D, {
                             variant: "heading-md/semibold",
                             color: "text-default",
                             children: u.intl.string(u.t["EgvHH/"]),
