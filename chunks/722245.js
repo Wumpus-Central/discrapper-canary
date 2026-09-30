@@ -326,7 +326,7 @@ var eb = n(554146),
     e2 = n(95701),
     e3 = n(324688);
 let e8 = (0, e2.createChannelRecord)({ id: "1", type: ee.rbe.DM });
-function e6(e) {
+function e5(e) {
     let {
             placeholder: t,
             onEnter: n,
@@ -378,7 +378,7 @@ function e6(e) {
         renderAttachButton: o,
     });
 }
-function e5(e) {
+function e6(e) {
     var t;
     let { onSelectEmoji: n, onClick: s } = e,
         r = (0, eJ.Ay)(),
@@ -857,8 +857,8 @@ let t3 = (0, te.Fe)({
                 n.e("661832"),
                 n.e("93461"),
                 n.e("474907"),
-                n.e("437961"),
                 n.e("604172"),
+                n.e("437961"),
                 n.e("949013"),
                 n.e("309763"),
                 n.e("820667"),
@@ -866,7 +866,7 @@ let t3 = (0, te.Fe)({
         webpackId: 316725,
     }),
     t8 = i.createContext(void 0);
-function t6(e) {
+function t5(e) {
     let { children: t } = e,
         n = i.useRef(null),
         s = i.useId();
@@ -886,7 +886,7 @@ function t6(e) {
         })
     );
 }
-function t5(e) {
+function t6(e) {
     let { children: t, backgroundImgSrc: n, className: i, style: s = {} } = e,
         { primaryColor: a, secondaryColor: o } = (0, tV.A)(n);
     return (
@@ -1198,14 +1198,14 @@ function t4(e) {
                         className: t2.T7,
                         children: [
                             (0, l.jsx)(t9, { channel: o, onClickSuggestion: U }),
-                            (0, l.jsx)(e5, { onSelectEmoji: U }),
+                            (0, l.jsx)(e6, { onSelectEmoji: U }),
                         ],
                     }),
                 }),
             (0, l.jsxs)("div", {
                 className: L ? t2.P2 : t2.VE,
                 children: [
-                    (0, l.jsx)(e6, {
+                    (0, l.jsx)(e5, {
                         placeholder: P,
                         onEnter: V,
                         setEditorRef: (e) => C(e),
@@ -1421,7 +1421,7 @@ function nn(e) {
         className: t2.au,
         children: [
             (0, l.jsx)(ne, { disableGameProfileLinks: h, ...x, onUserPopoutClosed: f }),
-            (0, l.jsxs)(t5, {
+            (0, l.jsxs)(t6, {
                 backgroundImgSrc: S?.src,
                 children: [
                     (0, l.jsxs)("div", {
@@ -1525,7 +1525,7 @@ function nl(e) {
         className: t2.au,
         children: [
             (0, l.jsx)(ne, { ...p, onUserPopoutClosed: d }),
-            (0, l.jsxs)(t5, {
+            (0, l.jsxs)(t6, {
                 backgroundImgSrc: b?.src,
                 className: t2.uR,
                 children: [
@@ -1668,7 +1668,7 @@ let ns = function (e) {
                       icon: ex.k,
                   }),
         E = [A, g && !r ? x : C].filter(D.Vq);
-    return (0, l.jsxs)(t6, {
+    return (0, l.jsxs)(t5, {
         children: [
             f,
             (0, l.jsx)(t7, {
@@ -1842,7 +1842,7 @@ let nv = [...nr.n, eN.Yq],
                     : null,
                 T,
             ].filter(D.Vq);
-        return (0, l.jsxs)(t6, {
+        return (0, l.jsxs)(t5, {
             children: [
                 b,
                 (0, l.jsx)(t7, {
@@ -2034,7 +2034,7 @@ function nz(e) {
         badges: null,
         children: c.timestamps?.start != null && (0, l.jsx)(nK, { activity: c }),
     });
-    return (0, l.jsxs)(t6, {
+    return (0, l.jsxs)(t5, {
         children: [
             E,
             (0, l.jsx)(t7, {
@@ -2096,7 +2096,7 @@ let n2 = function (e) {
                 : nH.RQ.WEB_OPEN(e, n.extra.media.external_parent_id);
         window.open(t);
     }
-    return (0, l.jsxs)(t6, {
+    return (0, l.jsxs)(t5, {
         children: [
             (0, l.jsx)(nn, {
                 onClickTitle: h,
@@ -2136,7 +2136,7 @@ let n8 = function (e) {
         d = (0, ev.TQ)(n);
     if (null == a || null == c || null == d || !(0, n3._E)(d)) return null;
     let m = null != n.extra.platform ? nN[n.extra.platform] : null;
-    return (0, l.jsxs)(t6, {
+    return (0, l.jsxs)(t5, {
         children: [
             (0, l.jsx)(nn, {
                 channel: t,
@@ -2158,8 +2158,8 @@ let n8 = function (e) {
         ],
     });
 };
-var n6 = n(514243),
-    n5 = n(347306),
+var n5 = n(514243),
+    n6 = n(347306),
     n7 = n(123917),
     n4 = n(998218);
 let n9 = function (e) {
@@ -2173,7 +2173,7 @@ let n9 = function (e) {
     }
     return null == r
         ? null
-        : (0, l.jsxs)(t6, {
+        : (0, l.jsxs)(t5, {
               children: [
                   (0, l.jsx)(nn, {
                       channel: t,
@@ -2183,12 +2183,12 @@ let n9 = function (e) {
                       subtitle: n.extra.media_subtitle,
                       headerIcons: (0, l.jsx)(nS.A, {
                           onClick: a,
-                          Icon: n5.k,
+                          Icon: n6.k,
                           "aria-label": et.intl.string(et.t.jdJYXw),
                       }),
                       badges: (0, l.jsx)(eN.mG, {
                           location: eN.N5.POPOUT,
-                          children: n6.R.map((e, t) => (0, l.jsx)(e, { entry: n }, t)),
+                          children: n5.R.map((e, t) => (0, l.jsx)(e, { entry: n }, t)),
                       }),
                       onClickTitle: o,
                       onClickThumbnail: o,
@@ -2218,7 +2218,7 @@ function lt(e) {
         case j.ContentInventoryEntryType.PLAYED_GAME:
             return (0, l.jsx)(nr.A, { ...n, entry: t });
         case j.ContentInventoryEntryType.WATCHED_MEDIA:
-            return (0, l.jsx)(n6.A, { ...n, entry: t });
+            return (0, l.jsx)(n5.A, { ...n, entry: t });
         case j.ContentInventoryEntryType.TOP_GAME:
             return (0, l.jsx)(n3.Ay, { ...n, entry: t });
         case j.ContentInventoryEntryType.TOP_ARTIST:
