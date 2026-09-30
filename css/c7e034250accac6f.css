@@ -278,6 +278,10 @@
     max-height: calc(var(--space-40)*14)
 }
 
+.list__95c51.hasBottomBar__95c51 {
+    padding-bottom: var(--space-64)
+}
+
 .floatingRowBackground__95c51 {
     height: 90px;
     inset-inline-end: 0;
@@ -356,10 +360,12 @@
 }
 
 .activityBar__95c51 {
+    inset-block-end: var(--space-8);
+    inset-inline-end: var(--space-4);
+    inset-inline-start: var(--space-4);
+    position: absolute;
     z-index: 4;
     justify-content: space-between;
-    margin: var(--space-4);
-    margin-block-start: 0;
     padding: var(--space-8)
 }
 
@@ -404,6 +410,10 @@
 
 .activityBarRight__95c51 {
     flex-shrink: 0
+}
+
+.emptyLeaderboardContainer__95c51 {
+    position: relative
 }
 
 .badge__2906f {
@@ -454,4 +464,4 @@
     min-height: 0
 }
 
-/*# sourceMappingURL=bd32c6366c693847.css.map*/
+/*# sourceMappingURL=c7e034250accac6f.css.map*/
