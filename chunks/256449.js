@@ -51,28 +51,29 @@ function v(e) {
         stickerNodeMargin: a = 0,
         stickerNodeWidth: c,
         stickersCategories: d,
+        collapsePremiumSearchSection: h = !1,
     } = e;
     return l.useMemo(() => {
         let e = Math.floor((r - i + a) / (c + a)),
             l = Math.floor(Math.max(a, (r - i - c * e) / (e - 1))),
-            h = [],
             p = [],
             f = [],
-            g = 0,
+            g = [],
             x = 0,
-            E = 0;
+            E = 0,
+            y = 0;
         if (0 !== r) {
-            function y(t, n) {
+            function S(t, n) {
                 let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
                     i = (0, C.Xw)(t[0]) ? o.A.getGuild(t[0].guild_id) : void 0,
                     { canCreateExpressions: r } = (0, s.ie)(i),
                     a = u.A.getGuildId(),
                     c = d.findIndex((e) => e.type === A.Z2.FAVORITE),
-                    y = d.findIndex((e) => e.type === A.Z2.RECENT),
+                    h = d.findIndex((e) => e.type === A.Z2.RECENT),
                     S = t.length;
                 null != i && a === i.id && r && t.length < (0, m.aG)(i.premiumTier) && S++;
                 let v = Math.ceil(S / e);
-                p[x] = l ? 0 : v;
+                f[E] = l ? 0 : v;
                 for (let s = 0; s < v; s++) {
                     let r = s * e,
                         a = r + e,
@@ -82,41 +83,41 @@ function v(e) {
                                 type: A.op.STICKER,
                                 sticker: e,
                                 packId: (0, C.FD)(e) ? e.pack_id : "TODO - fix",
-                                gridSectionIndex: x,
-                                rowIndex: g,
+                                gridSectionIndex: E,
+                                rowIndex: x,
                                 columnIndex: t,
-                                visibleRowIndex: E,
+                                visibleRowIndex: y,
                                 category: n,
                             }));
-                    (x > y &&
-                        x > c &&
+                    (E > h &&
+                        E > c &&
                         null != i &&
                         S > t.length &&
                         o.push({
                             type: A.op.CREATE_STICKER,
                             guild_id: i.id,
                             name: I.intl.string(I.t["UwF+Cw"]),
-                            gridSectionIndex: x,
-                            rowIndex: g,
+                            gridSectionIndex: E,
+                            rowIndex: x,
                             columnIndex: o.length,
-                            visibleRowIndex: E,
+                            visibleRowIndex: y,
                         }),
-                        l || (E++, f.push(o), h.push(o.length)),
-                        g++);
+                        l || (y++, g.push(o), p.push(o.length)),
+                        x++);
                 }
-                x++;
+                E++;
             }
             if (null == n)
                 for (let e of d)
                     e.stickers.length > 0
-                        ? (g++, y(e.stickers, e.type, t?.has(e.id) === !0))
-                        : e.type === A.Z2.EMPTY_GUILD_UPSELL && ((p[x] = 0), x++);
+                        ? (x++, S(e.stickers, e.type, t?.has(e.id) === !0))
+                        : e.type === A.Z2.EMPTY_GUILD_UPSELL && ((f[E] = 0), E++);
             else
-                (n.sendable.length > 0 && y(n.sendable, A.Z2.SEARCH_RESULTS),
-                    n.sendableWithPremium.length > 0 && y(n.sendableWithPremium, A.Z2.SEARCH_RESULTS));
+                (n.sendable.length > 0 && S(n.sendable, A.Z2.SEARCH_RESULTS),
+                    n.sendableWithPremium.length > 0 && S(n.sendableWithPremium, A.Z2.SEARCH_RESULTS, h));
         }
-        return { rowCount: g, rowCountBySection: p, stickersGrid: f, gutterWidth: l, columnCounts: h };
-    }, [t, n, i, r, a, c, d]);
+        return { rowCount: x, rowCountBySection: f, stickersGrid: g, gutterWidth: l, columnCounts: p };
+    }, [t, n, i, r, a, c, d, h]);
 }
 function N(e) {
     return !0;

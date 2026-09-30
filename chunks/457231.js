@@ -1,6 +1,13 @@
 e.exports = {
     iE: "wrapper_e94b8c",
     jH: "packHeader_e94b8c",
+    cW: "categorySectionNitroLocked_e94b8c",
+    M0: "bleedHeader_e94b8c",
+    RA: "inactiveNitroHeader_e94b8c",
+    sp: "activeNitroHeader_e94b8c",
+    $2: "nitroTopDivider_e94b8c",
+    fV: "categorySectionNitroEnd_e94b8c",
+    pQ: "nitroBottomDivider_e94b8c",
     yI: "sticker_e94b8c",
     yF: "divider_e94b8c",
     yB: "searchSuggestions_e94b8c",

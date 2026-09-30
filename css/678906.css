@@ -268,6 +268,45 @@
     top: 0
 }
 
+.categorySectionNitroLocked_e94b8c {
+    background: linear-gradient(90deg, var(--expressive-gradient-nitro-pink-start) 0, var(--expressive-gradient-nitro-pink-end) 100%);
+    display: flow-root;
+    margin-inline-start: calc(var(--custom-stickers-constants-stickers-list-padding-left)*-1);
+    padding-inline-start: var(--custom-stickers-constants-stickers-list-padding-left)
+}
+
+.theme-light .categorySectionNitroLocked_e94b8c {
+    background: linear-gradient(90deg, color-mix(in srgb, var(--expressive-gradient-nitro-pink-start) 40%, transparent), color-mix(in srgb, var(--expressive-gradient-nitro-pink-end) 40%, transparent))
+}
+
+.bleedHeader_e94b8c {
+    margin-inline-start: calc(var(--custom-stickers-constants-stickers-list-padding-left)*-1);
+    padding-inline-start: var(--custom-stickers-constants-stickers-list-padding-left)
+}
+
+.inactiveNitroHeader_e94b8c {
+    background-color: transparent !important
+}
+
+.activeNitroHeader_e94b8c {
+    background-color: var(--background-surface-high)
+}
+
+.nitroTopDivider_e94b8c {
+    margin-inline-start: calc(var(--custom-stickers-constants-stickers-list-padding-left)*-1)
+}
+
+.categorySectionNitroEnd_e94b8c {
+    margin-bottom: var(--space-16)
+}
+
+.nitroBottomDivider_e94b8c {
+    background: var(--border-normal);
+    height: 1px;
+    margin-top: var(--space-16);
+    margin-inline-start: calc(var(--custom-stickers-constants-stickers-list-padding-left)*-1)
+}
+
 .packHeaderShopWrapper_e94b8c {
     -moz-column-gap: 12px;
     column-gap: 12px;
@@ -625,4 +664,4 @@
     gap: var(--space-4)
 }
 
-/*# sourceMappingURL=678906.824786c144f2dd9f.css.map*/
+/*# sourceMappingURL=678906.cdacbf4ebd674b82.css.map*/
