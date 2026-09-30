@@ -3,13 +3,13 @@ n.d(t, {
     Sk: () => t4,
     Zx: () => tQ,
     v7: () => t8,
-    L0: () => t7,
+    L0: () => t5,
     N_: () => t3,
     MD: () => t9,
     Ay: () => nt,
     uW: () => ne,
     NO: () => t1,
-    ck: () => t5,
+    ck: () => t7,
     ml: () => t6,
     Vu: () => t0,
 });
@@ -57,25 +57,25 @@ let R = { width: 500, height: j.$V },
                 n.e("507528"),
                 n.e("76428"),
                 n.e("834552"),
-                n.e("397270"),
                 n.e("993103"),
+                n.e("397270"),
                 n.e("571210"),
                 n.e("27773"),
                 n.e("88342"),
                 n.e("132191"),
                 n.e("171273"),
-                n.e("437065"),
                 n.e("311802"),
-                n.e("37977"),
+                n.e("437065"),
                 n.e("698965"),
+                n.e("37977"),
                 n.e("943780"),
                 n.e("682337"),
                 n.e("280854"),
                 n.e("335395"),
+                n.e("235313"),
                 n.e("371133"),
                 n.e("454625"),
                 n.e("538887"),
-                n.e("235313"),
                 n.e("408362"),
                 n.e("252229"),
                 n.e("918024"),
@@ -516,8 +516,8 @@ var eL = n(931664),
     e3 = n(935063),
     e6 = n(73392),
     e8 = n(650019),
-    e7 = n(763754),
-    e5 = n(967144),
+    e5 = n(763754),
+    e7 = n(967144),
     e4 = n(118517),
     e9 = n(976860),
     te = n(747926),
@@ -586,8 +586,8 @@ function to(e) {
             colorRoleName: A,
             authorId: C,
             displayNameStyles: E,
-        } = (0, e7.Ay)(u),
-        I = (0, e5.gn)(p, C, x),
+        } = (0, e5.Ay)(u),
+        I = (0, e7.gn)(p, C, x),
         y = (0, e6.a)({ displayNameStyles: E }),
         S = (0, e8.A)(m, u.attachments),
         v =
@@ -1228,12 +1228,12 @@ function t8() {
         }, []);
     return { autocompleteRef: e, handleMaybeShowAutocomplete: t, handleHideAutocomplete: n };
 }
-function t7(e) {
+function t5(e) {
     let t = i.useRef(null);
     if (null != e && "function" == typeof e) throw Error("Only Ref objects are supported");
     return null == e ? t : e;
 }
-function t5(e) {
+function t7(e) {
     let [t, n] = i.useState(0);
     return {
         editorHeight: t,
@@ -1350,7 +1350,7 @@ let nt = i.memo(
             } = e;
         u()(null != T, "chat input type must be set");
         let { analyticsLocations: eu } = (0, I.Ay)(E.A.CHANNEL_TEXT_AREA),
-            ec = t7(t),
+            ec = t5(t),
             em = i.useRef(null),
             eC = i.useRef(null),
             eE = i.useRef(null),
@@ -1392,15 +1392,15 @@ let nt = i.memo(
             { fontSize: e6 } = (0, h.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
             e8 = (0, h.bG)([eF.A], () => eF.A.isEnabled());
         t3(T, eW, b.id);
-        let { eventEmitter: e7, handleEditorSelectionChanged: e5 } = t6(eE, a, o),
+        let { eventEmitter: e5, handleEditorSelectionChanged: e7 } = t6(eE, a, o),
             e4 = i.useRef(a);
         e4.current = a;
         let e9 = i.useCallback(
                 (e, t, n) => {
-                    ("/" === t && "" === e4.current && T.commands?.enabled && e7.emit("command-sentinel-typed"),
+                    ("/" === t && "" === e4.current && T.commands?.enabled && e5.emit("command-sentinel-typed"),
                         U?.(e, t, n));
                 },
-                [U, T.commands?.enabled, e7],
+                [U, T.commands?.enabled, e5],
             ),
             { submitting: te, submit: tt, handleSubmit: tn } = tQ(H, T, eE, eS, b.id),
             { autocompleteRef: tl, handleMaybeShowAutocomplete: ti, handleHideAutocomplete: ts } = t8(),
@@ -1426,7 +1426,7 @@ let nt = i.memo(
                 [eE, b.id, b.guild_id],
             ),
             th = i.useCallback(() => eS?.current?.hide(), []),
-            { editorHeight: tp, handleResize: tf } = t5(V),
+            { editorHeight: tp, handleResize: tf } = t7(V),
             {
                 handleTab: tx,
                 handleEnter: tA,
@@ -1475,7 +1475,7 @@ let nt = i.memo(
                     ),
                     n
                 );
-            })(e7, eE),
+            })(e5, eE),
             { handleAutocompleteVisibilityChange: tM } = ne(T, b.id),
             tk = (function (e) {
                 let { type: t, channelId: n } = e;
@@ -1489,9 +1489,9 @@ let nt = i.memo(
                 );
             })({ type: T, channelId: b.id }),
             tw = i.useCallback(() => {
-                e7.emit("submit-failure");
-            }, [e7]);
-        (0, eJ.R)(e7, b.guild_id, b.id);
+                e5.emit("submit-failure");
+            }, [e5]);
+        (0, eJ.R)(e5, b.guild_id, b.id);
         let tP = null != D,
             tK = (eW && !((eG || eB) && eQ)) || (te && T.submit?.useDisabledStylesOnSubmit),
             tz = null;
@@ -1592,7 +1592,7 @@ let nt = i.memo(
                 R && eZ._.dispatch(ea.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: b.id });
             }, [R, b.id]),
             (0, l.jsx)(eg.Sv, {
-                value: e7,
+                value: e5,
                 children: (0, l.jsxs)(I.f5, {
                     value: eu,
                     children: [
@@ -1671,7 +1671,7 @@ let nt = i.memo(
                                                         onEnter: tA,
                                                         onSpace: tE,
                                                         onMoveSelection: ty,
-                                                        onSelectionChanged: e5,
+                                                        onSelectionChanged: e7,
                                                         onMaybeShowAutocomplete: ti,
                                                         onHideAutocomplete: ts,
                                                         promptToUpload: W,

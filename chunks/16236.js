@@ -4,13 +4,12 @@ n.d(t, {
     w6: () => K,
     od: () => $,
     Ub: () => Z,
-    JD: () => ee,
     zN: () => J,
-    tV: () => en,
+    tV: () => et,
     _2: () => Q,
-    kG: () => ei,
+    kG: () => en,
     Ye: () => q,
-    uM: () => et,
+    uM: () => ee,
     nR: () => z,
     i_: () => Y,
 });
@@ -284,14 +283,7 @@ function J(e) {
             },
         });
 }
-function ee(e, t) {
-    B({
-        update: (n) => {
-            ((n.favoriteChannels[e].parentId = t ?? v.O8), w(n.favoriteChannels, e), (0, N.P)());
-        },
-    });
-}
-function et() {
+function ee() {
     for (let e of (B({
         update: (e) => {
             ((e.favoriteChannels = {}), (e.guildVisible = void 0), (e.muted = !1), (e.autoAddJoinedThreads = !1));
@@ -303,7 +295,7 @@ function et() {
     T.dt))
         (0, u.xB)(e);
 }
-function en(e) {
+function et(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "settings_page";
     B({
         update: (n) => {
@@ -312,6 +304,6 @@ function en(e) {
         },
     });
 }
-function ei(e) {
-    (en(e, "settings_page"), !e && (0, S.ai)(I.A.getGuildId()) && (0, c.pX)(b.BVt.ME));
+function en(e) {
+    (et(e, "settings_page"), !e && (0, S.ai)(I.A.getGuildId()) && (0, c.pX)(b.BVt.ME));
 }

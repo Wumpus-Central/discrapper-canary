@@ -1,6 +1,4 @@
-(n.d(t, { Af: () => f, DZ: () => T, TW: () => A, ad: () => h, e4: () => m, ft: () => I, m_: () => p }),
-    n(321073),
-    n(97378));
+(n.d(t, { DZ: () => p, TW: () => A, ad: () => h, e4: () => T, ft: () => I, m_: () => f }), n(321073), n(97378));
 var i = n(17928),
     r = n(873298),
     a = n(967198),
@@ -44,10 +42,7 @@ function I() {
         n = (0, i.bG)([o.A], () => o.A.getFavoritesCountAgainstLimit());
     return { shouldShowUpsell: e && !__OVERLAY__, favoriteCount: n, favoriteLimit: t, isAtLimit: t > 0 && n >= t };
 }
-function f(e) {
-    return (0, i.bG)([o.A], () => o.A.getFavorite(e));
-}
-function p() {
+function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.A.getFavoriteChannels(),
         t = [{ id: null, name: "" }];
     for (let n in e) {
@@ -56,12 +51,12 @@ function p() {
     }
     return (t.sort((t, n) => (e[t.id]?.order ?? 0) - (e[n.id]?.order ?? 0)), t);
 }
-function T() {
+function p() {
     let e = (0, i.bG)([a.A], () => a.A.getGuildId());
     return (0, c.ai)(e);
 }
-function m(e, t) {
-    let n = T(),
+function T(e, t) {
+    let n = p(),
         { hasAccess: r } = A(t),
         a = (0, i.bG)([o.A], () => null != e && o.A.isChannelOrParentFavorited(e), [e]);
     return n && (!r || !a || e?.isCategory()) ? null : (e ?? null);

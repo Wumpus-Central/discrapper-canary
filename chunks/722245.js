@@ -378,7 +378,7 @@ function e8(e) {
         renderAttachButton: o,
     });
 }
-function e7(e) {
+function e5(e) {
     var t;
     let { onSelectEmoji: n, onClick: s } = e,
         r = (0, eJ.Ay)(),
@@ -446,7 +446,7 @@ function e7(e) {
         })
     );
 }
-var e5 = n(47167),
+var e7 = n(47167),
     e4 = n(262763),
     e9 = n(402216),
     te = n(268218),
@@ -886,7 +886,7 @@ function t8(e) {
         })
     );
 }
-function t7(e) {
+function t5(e) {
     let { children: t, backgroundImgSrc: n, className: i, style: s = {} } = e,
         { primaryColor: a, secondaryColor: o } = (0, tV.A)(n);
     return (
@@ -898,7 +898,7 @@ function t7(e) {
         })
     );
 }
-function t5(e) {
+function t7(e) {
     let { children: t } = e;
     return (0, l.jsx)("div", { className: t2.$m, children: t });
 }
@@ -920,7 +920,7 @@ function t4(e) {
         { voiceBar: N, joinVoiceButton: _ } = (function (e) {
             let { channel: t, entry: n, onVoiceChannelPreview: s } = e,
                 { streamPreviewUrl: r, channel: a } = (0, tU.A)(n),
-                o = (0, e5.Ay)(a),
+                o = (0, e7.Ay)(a),
                 { needSubscriptionToAccess: u } = (0, to.A)(t?.id),
                 c = (0, m.bG)([tS.A], () => (null != a ? tS.A.getGuild(a.guild_id) : void 0)),
                 d = (0, m.yK)([tb.Ay], () => (null != a ? tb.Ay.getVoiceStatesForChannel(a) : []), [a]),
@@ -1053,7 +1053,7 @@ function t4(e) {
             (n = (0, m.bG)([tS.A], () => tS.A.getGuild((0, eq.D)(t?.location)))),
             (s = (0, m.bG)([ty.A], () => ty.A.getChannel((0, eq.H)(t?.location)))),
             (r = (0, m.yK)([eo.default], () => t?.participants?.map((e) => eo.default.getUser(e.userId)) ?? [])),
-            (a = (0, e5.Ay)(s)),
+            (a = (0, e7.Ay)(s)),
             null != t && null != n && null != s && e2.k3.has(s.type)
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
@@ -1113,7 +1113,7 @@ function t4(e) {
         O = T.length >= 2,
         [L, M] = i.useState(!R),
         k = tR.Ay.getName(o?.guild_id, o?.id, u),
-        w = (0, e5.Ay)(o, !0),
+        w = (0, e7.Ay)(o, !0),
         P =
             null != o && g
                 ? et.intl.formatToPlainString(et.t["8lzR/R"], { channel: w })
@@ -1198,7 +1198,7 @@ function t4(e) {
                         className: t2.T7,
                         children: [
                             (0, l.jsx)(t9, { channel: o, onClickSuggestion: U }),
-                            (0, l.jsx)(e7, { onSelectEmoji: U }),
+                            (0, l.jsx)(e5, { onSelectEmoji: U }),
                         ],
                     }),
                 }),
@@ -1421,7 +1421,7 @@ function nn(e) {
         className: t2.au,
         children: [
             (0, l.jsx)(ne, { disableGameProfileLinks: h, ...x, onUserPopoutClosed: f }),
-            (0, l.jsxs)(t7, {
+            (0, l.jsxs)(t5, {
                 backgroundImgSrc: S?.src,
                 children: [
                     (0, l.jsxs)("div", {
@@ -1525,7 +1525,7 @@ function nl(e) {
         className: t2.au,
         children: [
             (0, l.jsx)(ne, { ...p, onUserPopoutClosed: d }),
-            (0, l.jsxs)(t7, {
+            (0, l.jsxs)(t5, {
                 backgroundImgSrc: b?.src,
                 className: t2.uR,
                 children: [
@@ -1671,7 +1671,7 @@ let ns = function (e) {
     return (0, l.jsxs)(t8, {
         children: [
             f,
-            (0, l.jsx)(t5, {
+            (0, l.jsx)(t7, {
                 children: (0, l.jsx)(t4, {
                     onReaction: i,
                     onVoiceChannelPreview: s,
@@ -1845,7 +1845,7 @@ let nv = [...nr.n, eN.Yq],
         return (0, l.jsxs)(t8, {
             children: [
                 b,
-                (0, l.jsx)(t5, {
+                (0, l.jsx)(t7, {
                     children: (0, l.jsx)(t4, {
                         onReaction: s,
                         onVoiceChannelPreview: r,
@@ -2037,7 +2037,7 @@ function nz(e) {
     return (0, l.jsxs)(t8, {
         children: [
             E,
-            (0, l.jsx)(t5, {
+            (0, l.jsx)(t7, {
                 children: (0, l.jsx)(t4, {
                     onReaction: o,
                     onVoiceChannelPreview: u,
@@ -2122,7 +2122,7 @@ let n2 = function (e) {
                     children: nX.map((e, t) => (0, l.jsx)(e, { entry: n }, t)),
                 }),
             }),
-            (0, l.jsx)(t5, {
+            (0, l.jsx)(t7, {
                 children: (0, l.jsx)(t4, { onReaction: i, onVoiceChannelPreview: s, user: u, channel: t, entry: n }),
             }),
         ],
@@ -2152,15 +2152,15 @@ let n6 = function (e) {
                 }),
                 disableGameProfileLinks: i,
             }),
-            (0, l.jsx)(t5, {
+            (0, l.jsx)(t7, {
                 children: (0, l.jsx)(t4, { onReaction: s, onVoiceChannelPreview: r, user: a, channel: t, entry: n }),
             }),
         ],
     });
 };
 var n8 = n(514243),
-    n7 = n(347306),
-    n5 = n(123917),
+    n5 = n(347306),
+    n7 = n(123917),
     n4 = n(998218);
 let n9 = function (e) {
     let { channel: t, entry: n, onReaction: i, onVoiceChannelPreview: s } = e,
@@ -2169,7 +2169,7 @@ let n9 = function (e) {
     function o() {
         if (null == n.extra.url) return;
         let e = n4.A.safeParseWithQuery(n.extra.url);
-        null != e && null != e.protocol && null != e.hostname && (0, n5.h)({ href: n4.A.format(e), trusted: !1 });
+        null != e && null != e.protocol && null != e.hostname && (0, n7.h)({ href: n4.A.format(e), trusted: !1 });
     }
     return null == r
         ? null
@@ -2183,7 +2183,7 @@ let n9 = function (e) {
                       subtitle: n.extra.media_subtitle,
                       headerIcons: (0, l.jsx)(nS.A, {
                           onClick: a,
-                          Icon: n7.k,
+                          Icon: n5.k,
                           "aria-label": et.intl.string(et.t.jdJYXw),
                       }),
                       badges: (0, l.jsx)(eN.mG, {
@@ -2193,7 +2193,7 @@ let n9 = function (e) {
                       onClickTitle: o,
                       onClickThumbnail: o,
                   }),
-                  (0, l.jsx)(t5, {
+                  (0, l.jsx)(t7, {
                       children: (0, l.jsx)(t4, {
                           onReaction: i,
                           onVoiceChannelPreview: s,
@@ -2477,49 +2477,49 @@ let lM = n(19575).Ay.getEnableHardwareAcceleration(),
                                 n.e("463317"),
                                 n.e("326692"),
                                 n.e("834552"),
-                                n.e("708757"),
                                 n.e("993103"),
+                                n.e("708757"),
                                 n.e("585968"),
                                 n.e("893190"),
                                 n.e("21921"),
-                                n.e("676418"),
                                 n.e("571210"),
+                                n.e("676418"),
+                                n.e("189673"),
                                 n.e("166495"),
                                 n.e("88342"),
-                                n.e("189673"),
                                 n.e("311802"),
-                                n.e("869853"),
                                 n.e("229787"),
                                 n.e("698965"),
                                 n.e("882073"),
                                 n.e("797558"),
-                                n.e("682337"),
+                                n.e("869853"),
                                 n.e("691994"),
+                                n.e("682337"),
+                                n.e("576665"),
+                                n.e("235313"),
                                 n.e("371133"),
                                 n.e("454625"),
                                 n.e("538887"),
-                                n.e("235313"),
-                                n.e("576665"),
                                 n.e("436564"),
                                 n.e("939171"),
                                 n.e("624198"),
                                 n.e("252229"),
-                                n.e("856753"),
                                 n.e("245996"),
+                                n.e("856753"),
                                 n.e("700792"),
                                 n.e("592822"),
-                                n.e("214461"),
-                                n.e("449145"),
                                 n.e("529422"),
                                 n.e("823427"),
+                                n.e("214461"),
+                                n.e("309291"),
+                                n.e("449145"),
+                                n.e("307059"),
                                 n.e("349644"),
                                 n.e("365826"),
                                 n.e("649520"),
                                 n.e("493014"),
-                                n.e("309291"),
                                 n.e("242204"),
                                 n.e("825486"),
-                                n.e("307059"),
                                 n.e("522261"),
                                 n.e("678195"),
                                 n.e("713708"),
@@ -2908,7 +2908,7 @@ class lV extends i.Component {
                                     children: (0, l.jsx)(f.H, {
                                         id: a,
                                         children: et.intl.format(et.t.JBQxV6, {
-                                            channel: (0, e5.m1)(n, eo.default, tN.A),
+                                            channel: (0, e7.m1)(n, eo.default, tN.A),
                                         }),
                                     }),
                                 }),
