@@ -19,7 +19,7 @@ let n = [
         time: "00:00",
         platforms: ["desktop", "mobile"],
         summary:
-            "A new Rust Sphere template: a spinning, lit 3D globe drawn by Rust running as WebAssembly, ready to clone into your own renderer.",
+            "A new Rust Sphere recipe: a spinning, lit 3D globe drawn by Rust running as WebAssembly, ready to clone into your own renderer.",
     },
     {
         date: "2026-09-29",
@@ -508,7 +508,7 @@ let n = [
         time: "00:02",
         platforms: ["mobile"],
         summary:
-            "On phones, new projects start from a Create button in the header, with templates, starter prompts, who the app is for, and the Effort scale, and the landing leads with what is new.",
+            "On phones, new projects start from a Create button in the header, with recipes, starter prompts, who the app is for, and the Effort scale, and the landing leads with what is new.",
     },
     {
         date: "2026-09-18",
@@ -653,7 +653,7 @@ let n = [
         time: "23:06",
         platforms: ["desktop", "mobile"],
         summary:
-            "Picking a template shows it running in a few seconds, instead of after Conjure has rebuilt it from scratch.",
+            "Picking a recipe shows it running in a few seconds, instead of after Conjure has rebuilt it from scratch.",
     },
     {
         date: "2026-09-26",
@@ -762,7 +762,7 @@ let n = [
         time: "02:09",
         platforms: ["desktop", "mobile"],
         summary:
-            "Starting from a template shows its progress as one Putting it in the preview step, the same as every other change.",
+            "Starting from a recipe shows its progress as one Putting it in the preview step, the same as every other change.",
     },
     {
         date: "2026-09-26",
@@ -776,6 +776,12 @@ let n = [
         platforms: ["desktop", "mobile"],
         summary:
             "Task lists stop spinning once Conjure finishes or you press Stop, and an earlier list folds away with its unfinished tasks marked when a new one starts.",
+    },
+    {
+        date: "2026-09-30",
+        time: "11:30",
+        platforms: ["desktop", "mobile"],
+        summary: "Templates are now called recipes.",
     },
     {
         date: "2026-09-28",
@@ -863,6 +869,12 @@ let n = [
         summary: "The publish card is now just a button, with the server's icon and name beside it.",
     },
     {
+        date: "2026-09-22",
+        time: "00:01",
+        platforms: ["desktop"],
+        summary: "The recipe and starter cards light up under your cursor.",
+    },
+    {
         date: "2026-09-05",
         time: "00:02",
         platforms: ["desktop", "mobile"],
@@ -874,12 +886,6 @@ let n = [
         time: "00:00",
         platforms: ["desktop", "mobile"],
         summary: "The rune usage panel now shows Deciding, the quick checks that keep an eye on your builds.",
-    },
-    {
-        date: "2026-09-22",
-        time: "00:01",
-        platforms: ["desktop"],
-        summary: "The template and starter cards light up under your cursor.",
     },
     {
         date: "2026-09-18",
