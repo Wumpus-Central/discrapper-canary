@@ -126,12 +126,16 @@
 }
 
 .container__898a6 {
+    min-height: var(--space-32)
+}
+
+.ctaContainer__898a6 {
     gap: var(--space-10);
     justify-content: space-between;
     width: 100%
 }
 
-.container__898a6,
+.ctaContainer__898a6,
 .textContainer__898a6 {
     align-items: center;
     display: flex;
@@ -233,4 +237,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=9525614c17ab8c43.css.map*/
+/*# sourceMappingURL=57ef8fce5bce7ba3.css.map*/

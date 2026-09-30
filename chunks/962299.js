@@ -1,68 +1,71 @@
-t.d(e, { M: () => v });
+t.d(e, { M: () => f });
 var n = t(477900),
     s = t(582128),
-    i = t(403581),
-    c = t(834730),
-    l = t(821609),
-    o = t(812095),
-    a = t(75678),
-    d = t(871123),
-    u = t(831024),
-    x = t(906383),
-    p = t(421108),
-    k = t(647474),
-    h = t(202541),
-    m = t(375708),
-    j = t(279673);
-function v(r) {
+    i = t(503698),
+    c = t.n(i),
+    l = t(403581),
+    o = t(834730),
+    a = t(821609),
+    d = t(812095),
+    u = t(75678),
+    x = t(871123),
+    k = t(831024),
+    p = t(906383),
+    m = t(421108),
+    h = t(647474),
+    j = t(202541),
+    v = t(375708),
+    C = t(279673);
+function f(r) {
     let { applicationId: e, analyticsLocations: t } = r,
-        v = (0, u.u)({ surface: "storefront_banner", applicationId: e }),
-        C = (0, x.Pc)(v),
-        f = v?.endsAt ?? null,
-        b = (0, p.tm)(f),
+        i = (0, k.u)({ surface: "storefront_banner", applicationId: e }),
+        f = (0, p.Pc)(i),
+        b = i?.endsAt ?? null,
+        N = (0, m.tm)(b),
         A = s.useCallback(() => {
-            (0, a.A)({
-                subscriptionTier: h.pe.TIER_2,
+            (0, u.A)({
+                subscriptionTier: j.pe.TIER_2,
                 analyticsLocations: t,
                 applicationId: e,
-                ...(0, d.zl)(v?.rewardRequirements ?? []),
+                ...(0, x.zl)(i?.rewardRequirements ?? []),
             });
-        }, [t, e, v]);
-    if (null == v || b) return null;
-    if ((0, x.ad)(C))
-        return (0, n.jsx)(k.A, {
+        }, [t, e, i]);
+    if (null == i || N) return null;
+    if ((0, p.ad)(f))
+        return (0, n.jsx)(h.A, {
             color: "nitro-pink",
             sticky: !0,
             children: (0, n.jsxs)("div", {
-                className: j.kL,
+                className: c()(C.kL, C.OQ),
                 children: [
                     (0, n.jsxs)("div", {
-                        className: j.FS,
+                        className: C.FS,
                         children: [
-                            (0, n.jsx)(i.t, { size: "xs", color: "currentColor", className: j.Kk }),
-                            (0, n.jsx)(c.E, {
+                            (0, n.jsx)(l.t, { size: "xs", color: "currentColor", className: C.Kk }),
+                            (0, n.jsx)(o.E, {
                                 variant: "text-sm/normal",
                                 color: "currentColor",
-                                children: (0, o.U)(v.text),
+                                children: (0, d.U)(i.text),
                             }),
                         ],
                     }),
-                    (0, n.jsx)(l.$, {
+                    (0, n.jsx)(a.$, {
                         variant: "expressive",
                         size: "sm",
-                        icon: i.t,
-                        text: m.intl.string(m.t.pj0XBN),
+                        icon: l.t,
+                        text: v.intl.string(v.t.pj0XBN),
                         onClick: A,
                     }),
                 ],
             }),
         });
-    let N = "nitro" === v.flavor;
-    return (0, n.jsx)(k.e, {
+    let _ = "nitro" === i.flavor;
+    return (0, n.jsx)(h.e, {
+        contentClassName: C.kL,
         sticky: !0,
-        Icon: N ? i.t : v.Icon,
-        endDatetime: v.endsAt,
-        color: N ? "nitro-pink" : void 0,
-        children: (0, n.jsx)(c.E, { variant: "text-sm/normal", color: "currentColor", children: (0, o.U)(v.text) }),
+        Icon: _ ? l.t : i.Icon,
+        endDatetime: i.endsAt,
+        color: _ ? "nitro-pink" : void 0,
+        children: (0, n.jsx)(o.E, { variant: "text-sm/normal", color: "currentColor", children: (0, d.U)(i.text) }),
     });
 }

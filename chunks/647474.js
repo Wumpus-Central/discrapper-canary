@@ -55,25 +55,25 @@ function g(t) {
     });
 }
 function N(t) {
-    let { Icon: e, children: n, endDatetime: c, ...l } = t,
-        [o, a] = s.useState(() => (0, x.ZH)(c));
-    function u() {
+    let { Icon: e, children: n, contentClassName: c, endDatetime: o, ...a } = t,
+        [u, d] = s.useState(() => (0, x.ZH)(o));
+    function m() {
         return (0, r.jsxs)("div", {
-            className: v.lt,
+            className: l()(v.lt, c),
             children: [null != e && (0, r.jsx)(e, { size: "xs", color: "currentColor", className: v.Kk }), n],
         });
     }
     return ((0, h.A)(() => {
-        let t = (0, x.ZH)(c);
-        a((e) => (null == t ? null : null != e && (0, i.A)(e, t) ? e : t));
+        let t = (0, x.ZH)(o);
+        d((e) => (null == t ? null : null != e && (0, i.A)(e, t) ? e : t));
     }, 1e3),
-    null != o)
-        ? o.days > 0
-            ? (0, r.jsxs)(g, { ...l, children: [u(), (0, r.jsx)(p, { days: o.days })] })
-            : (0, r.jsxs)(g, { ...l, children: [u(), (0, r.jsx)(k, { timeLeft: o })] })
-        : null != c
+    null != u)
+        ? u.days > 0
+            ? (0, r.jsxs)(g, { ...a, children: [m(), (0, r.jsx)(p, { days: u.days })] })
+            : (0, r.jsxs)(g, { ...a, children: [m(), (0, r.jsx)(k, { timeLeft: u })] })
+        : null != o
           ? null
-          : (0, r.jsx)(g, { ...l, children: u() });
+          : (0, r.jsx)(g, { ...a, children: m() });
 }
 function p(t) {
     let { days: e } = t;
