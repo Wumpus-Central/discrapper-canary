@@ -13,7 +13,7 @@ var i = n(562708),
     A = n(854492),
     h = n(398884),
     I = n(700241),
-    f = n(658128),
+    f = n(956615),
     p = n(976860),
     T = n(288254),
     m = n(280450),
@@ -110,7 +110,7 @@ let x = {
     waitForGuild: G,
     async transitionToGuildSync(e, t, n, i) {
         var r;
-        let a = ((r = (await G(e)).id), null != n ? n : (0, f.W)(r)),
+        let a = ((r = (await G(e)).id), null != n ? n : (0, f.q)(r)[0]),
             s = t;
         (t?.hasOwnProperty("welcomeModalChannelId") &&
             null == t.welcomeModalChannelId &&

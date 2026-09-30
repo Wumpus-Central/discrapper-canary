@@ -2004,7 +2004,7 @@ function ib(e) {
 }
 var iM = n(607399),
     iP = n(702841),
-    iU = n(658128),
+    iU = n(956615),
     iw = n(976860),
     iG = n(676279);
 function ix(e) {
@@ -2999,7 +2999,7 @@ let i0 = s.memo(function (e) {
         }, [D, l]),
         ee = s.useCallback(() => {
             if (null != l || null == d || h || !C) return;
-            let e = (0, iU.W)(d.id);
+            let [e] = (0, iU.q)(d.id);
             null != e && w.A.preload(d.id, e);
         }, [l, d, h, C]),
         et = (0, iP.bG)([ex.Ay], () => ex.Ay.isCurrentUserGuest(D)),

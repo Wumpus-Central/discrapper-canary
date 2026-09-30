@@ -22,6 +22,13 @@ let n = [
             "A new Rust Sphere template: a spinning, lit 3D globe drawn by Rust running as WebAssembly, ready to clone into your own renderer.",
     },
     {
+        date: "2026-09-29",
+        time: "04:10",
+        platforms: ["desktop"],
+        summary:
+            "Returning to a server takes you back to the app you were building there, if that is where you left off.",
+    },
+    {
         date: "2026-09-02",
         time: "00:02",
         platforms: ["desktop"],
