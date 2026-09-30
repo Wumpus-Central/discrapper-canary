@@ -442,7 +442,7 @@ function ez(e) {
             ((r = ea.intl.formatToPlainString(ea.t.hVGjEW, { name: e2 })),
             (l = ea.intl.format(ea.t.IK1Qvs, { name: e2 }))),
             (0, S.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("446215"), n.e("137803")]).then(n.bind(n, 148166));
+                let { default: e } = await Promise.all([n.e("446215"), n.e("137803")]).then(n.bind(n, 925785));
                 return (t) => (0, i.jsx)(e, { title: r, body: l, onSubmit: e6, ...t });
             }));
     }

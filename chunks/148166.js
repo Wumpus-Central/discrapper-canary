@@ -1,35 +1,34 @@
-e.d(t, { default: () => o });
-var i = e(477900),
-    s = e(582128),
-    r = e(732159),
-    c = e(834730),
-    l = e(150934),
-    a = e(375708),
-    d = e(551802);
-function o(n) {
-    let { title: t, body: e, onSubmit: o, ...u } = n,
-        [h, p] = s.useState(!1);
-    return (0, i.jsxs)(r.u, {
-        title: t,
-        confirmText: a.intl.string(a.t["26C4oi"]),
-        cancelText: a.intl.string(a.t["ETE/oC"]),
-        onConfirm: function () {
-            o(null, h);
-        },
-        ...u,
-        children: [
-            (0, i.jsx)(c.E, { variant: "text-md/normal", children: e }),
-            (0, i.jsx)("div", {
-                className: d.k,
-                children: (0, i.jsx)(l.S, {
-                    checked: h,
-                    onChange: function () {
-                        return p((n) => !n);
-                    },
-                    label: a.intl.string(a.t.bq3JXs),
-                    labelType: "secondary",
-                }),
-            }),
-        ],
-    });
+l.d(t, { R: () => c });
+var n = l(477900),
+    i = l(582128),
+    a = l(503698),
+    s = l.n(a),
+    r = l(661531),
+    d = l(605810);
+function c(e) {
+    let { src: t, isCircular: l, FallbackIcon: a, children: c } = e,
+        [o, u] = i.useState(t),
+        [m, x] = i.useState(!1);
+    return (
+        o !== t && (u(t), x(!1)),
+        (0, n.jsxs)("span", {
+            className: s()(d.xX, { [d.A6]: l }),
+            children: [
+                null == t || m
+                    ? (0, n.jsx)("span", {
+                          className: d.zf,
+                          children: (0, n.jsx)(a, { size: "md", color: r.A.colors.ICON_MUTED, "aria-hidden": !0 }),
+                      })
+                    : (0, n.jsx)("img", {
+                          className: d.wb,
+                          src: t,
+                          alt: "",
+                          "aria-hidden": !0,
+                          loading: "lazy",
+                          onError: () => x(!0),
+                      }),
+                c,
+            ],
+        })
+    );
 }

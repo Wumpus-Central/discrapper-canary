@@ -232,6 +232,45 @@
     margin-inline-start: 16px
 }
 
+.forwardPreview__7edef {
+    align-items: center;
+    display: flex;
+    gap: var(--space-12);
+    height: 100%;
+    justify-content: space-between;
+    margin-inline-end: var(--space-16);
+    padding-inline-start: var(--space-16);
+    position: relative;
+    width: calc(100% - 16px)
+}
+
+.forwardPreview__7edef:before {
+    background-color: var(--border-subtle);
+    border-radius: var(--radius-xs);
+    content: "";
+    flex-shrink: 0;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 4px
+}
+
+.linkContainer__7edef {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.artworkContainer__7edef {
+    --custom-popular-music-cover-size: 68px;
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    justify-content: center
+}
+
 .forwardPreview__0d4ce {
     align-items: center;
     display: flex;
@@ -297,4 +336,4 @@
     width: 40px
 }
 
-/*# sourceMappingURL=ccf8db13afd97012.css.map*/
+/*# sourceMappingURL=20faaa370d872ccb.css.map*/

@@ -1,8 +1,9 @@
-_.exports = {
+e.exports = {
     Nr: "card_b71362",
     MT: "surface_b71362",
     tY: "surfaceSelected_b71362",
     xX: "artwork_b71362",
+    A6: "artworkCircular_b71362",
     wb: "artworkImage_b71362",
     zf: "artworkFallback_b71362",
     Lw: "overlay_b71362",

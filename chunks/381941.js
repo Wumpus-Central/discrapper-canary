@@ -84,5 +84,6 @@ var S =
     (r.COLLECTIBLES_SHOP = "collectibles_shop"),
     (r.GAME_SERVER_SHOP = "game_server_shop"),
     (r.MEDIA_MENTION = "media_mention"),
+    (r.GUILD_SPACE = "guild_space"),
     (r.OTHER = "other"),
     r);
