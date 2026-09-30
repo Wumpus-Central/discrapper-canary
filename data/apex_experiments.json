@@ -1139,22 +1139,6 @@
     }
   },
   {
-    "name": "2026-02-private-profiles",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-02-process-boost-on-voice",
     "kind": "user",
     "defaultConfig": {
@@ -1666,50 +1650,6 @@
       },
       "3": {
         "keybindOverride": "ctrl+l"
-      }
-    }
-  },
-  {
-    "name": "2026-03-private-profiles-strict",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      },
-      "2": {
-        "enabled": true
-      },
-      "3": {
-        "enabled": true
-      }
-    }
-  },
-  {
-    "name": "2026-03-private-profiles-strict-gb",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      },
-      "2": {
-        "enabled": true
-      },
-      "3": {
-        "enabled": true
       }
     }
   },
