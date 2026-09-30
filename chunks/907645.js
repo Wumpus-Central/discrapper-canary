@@ -1,53 +1,65 @@
-n.d(t, { f: () => u });
-var i = n(744230),
-    r = n(113267),
-    a = n(743738),
-    s = n(885386),
-    l = n(10716),
-    o = n(795816),
-    d = n(652215),
-    c = n(375708);
-async function u(e, t) {
+n.d(t, { f: () => E });
+var i = n(830215),
+    r = n(744230),
+    a = n(113267),
+    s = n(743738),
+    l = n(121780),
+    o = n(885386),
+    d = n(10716),
+    c = n(795816),
+    u = n(652215),
+    _ = n(375708);
+async function E(e, t) {
     let n,
-        u,
-        _,
-        E = c.intl.string(c.t["IOy+I5"]);
-    if (e instanceof i.A) {
-        ((n = 0), (_ = e.reason));
-        let r = l.A.getFetchState();
-        switch ((s.Q_.getSetting() && r !== l.$.LOADED && (await (0, o.SE)()), e.reason)) {
-            case i.A.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
-                l.A.inDevModeForApplication(t) && (E = c.intl.string(c.t.hXRXfz));
+        E,
+        A,
+        h = _.intl.string(_.t["IOy+I5"]);
+    if (e instanceof r.A) {
+        ((n = 0), (A = e.reason));
+        let i = d.A.getFetchState();
+        switch ((o.Q_.getSetting() && i !== d.$.LOADED && (await (0, c.SE)()), e.reason)) {
+            case r.A.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
+                d.A.inDevModeForApplication(t) && (h = _.intl.string(_.t.hXRXfz));
                 break;
-            case i.A.Reasons.INVALID_CHANNEL:
-                E = c.intl.string(c.t.j29zCr);
+            case r.A.Reasons.INVALID_CHANNEL:
+                h = _.intl.string(_.t.j29zCr);
                 break;
-            case i.A.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED:
-                u = e.detailCode;
+            case r.A.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED:
+                E = e.detailCode;
         }
-    } else if (e instanceof r.A) ((n = 1), (_ = e.reason), (E = (0, a.sW)(e.reason, t) ?? E));
+    } else if (e instanceof a.A) ((n = 1), (A = e.reason), (h = (0, s.sW)(e.reason, t) ?? h));
     else
-        switch (((n = 2), (u = e.status), (_ = e.code), e.code)) {
-            case d.t02.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
-                E = c.intl.string(c.t.GyzcrS);
+        switch (((n = 2), (E = e.status), (A = e.code), e.code)) {
+            case u.t02.INVALID_ACTIVITY_LAUNCH_NO_ACCESS:
+                h = _.intl.string(_.t.GyzcrS);
                 break;
-            case d.t02.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
-                E = c.intl.string(c.t.zxv7EF);
+            case u.t02.INVALID_ACTIVITY_LAUNCH_PREMIUM_TIER:
+                h = _.intl.string(_.t.zxv7EF);
                 break;
-            case d.t02.INVALID_PERMISSIONS:
-                E = c.intl.string(c.t.hHGrWz);
+            case u.t02.INVALID_PERMISSIONS:
+                h = _.intl.string(_.t.hHGrWz);
                 break;
-            case d.t02.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
-                E = c.intl.string(c.t.j29zCr);
+            case u.t02.INVALID_ACTIVITY_LAUNCH_AFK_CHANNEL:
+                h = _.intl.string(_.t.j29zCr);
                 break;
-            case d.t02.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
-                E = c.intl.string(c.t["4WuFRE"]);
+            case u.t02.INVALID_ACTIVITY_LAUNCH_AGE_GATED:
+                h = _.intl.string(_.t["4WuFRE"]);
                 break;
-            case d.t02.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
-                E = c.intl.string(c.t.RvkXdb);
+            case u.t02.INVALID_ACTIVITY_LAUNCH_DEV_PREVIEW_GUILD_SIZE:
+                h = _.intl.string(_.t.RvkXdb);
                 break;
-            case d.t02.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM:
-                E = c.intl.string(c.t.uGDCcw);
+            case u.t02.ACTIVITY_CONFIGURATION_DOES_NOT_SUPPORT_PLATFORM:
+                h = _.intl.string(_.t.uGDCcw);
         }
-    return { message: E, errorType: n, errorStatus: u, errorCode: _ };
+    return (
+        ((1 === n && A === a.A.ReasonCodes.ACTIVITY_LAUNCH_INVALID_USER_REGION_FOR_APPLICATION) ||
+            (2 === n && 20060 === A)) &&
+            (null == l.A.getCountryCode() && (await i.A.getLocationMetadata()),
+            l.A.getCountryCode()?.alpha2 === "BR" &&
+                (h = _.intl.formatToPlainString(_.t.GJ27pD, {
+                    supportArticleUrl:
+                        "https://support.discord.com/hc/en-us/articles/42704051358359-Why-video-features-are-currently-unavailable-in-Brazil",
+                }))),
+        { message: h, errorType: n, errorStatus: E, errorCode: A }
+    );
 }
