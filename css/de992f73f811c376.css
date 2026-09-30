@@ -1,0 +1,43 @@
+.header__2e856 {
+    align-items: center;
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-16);
+    margin: calc((var(--custom-modal-padding-top, var(--space-16)) + 1.5px)*-1) -1.5px 0;
+    padding: var(--space-24);
+    position: relative;
+    text-align: center
+}
+
+.closeButtonSlot__2e856 {
+    inset-inline-end: var(--space-16);
+    position: absolute;
+    top: var(--space-16)
+}
+
+.heroImage__2e856 {
+    display: block;
+    height: 162px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 288px
+}
+
+.title__2e856 {
+    margin: 0
+}
+
+.subtitle__2e856 {
+    margin: 0;
+    max-width: 320px
+}
+
+.spinnerContainer__2e856 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    padding: var(--space-24)
+}
+
+/*# sourceMappingURL=de992f73f811c376.css.map*/
