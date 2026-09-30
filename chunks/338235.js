@@ -6,7 +6,7 @@ c.exports = {
     uk: "infoContainerExclusive__38ccf",
     Td: "infoBottomSection__38ccf",
     t7: "infoBottomSectionBorder__38ccf",
-    K3: "exclusiveBadge__38ccf",
+    Od: "statusBadge__38ccf",
     r$: "logoContainer__38ccf",
     wm: "logo__38ccf",
     zD: "infoContentSection__38ccf",
