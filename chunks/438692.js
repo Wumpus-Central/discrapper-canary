@@ -39,8 +39,8 @@ var D = n(554146),
     V = n(342952),
     G = n(315710),
     F = n(43990),
-    H = n(866665),
-    B = n(276293),
+    B = n(866665),
+    H = n(276293),
     W = n(935063),
     K = n(789645),
     z = n(778712),
@@ -171,7 +171,7 @@ function eA(e) {
                         }),
                 }),
             children: () =>
-                (0, l.jsx)(H.m, {
+                (0, l.jsx)(B.m, {
                     text: ef.intl.string(ef.t.lfIHs4),
                     children: (0, l.jsx)("div", {
                         ref: d,
@@ -252,8 +252,8 @@ function eF(e) {
         eU.Ay.getByName("fork_and_knife"),
         eU.Ay.getByName("yum"),
     ].filter(R.Vq));
-var eH = n(636585),
-    eB = n(734057),
+var eB = n(636585),
+    eH = n(734057),
     eW = n(71393),
     eK = n(576705),
     ez = n(994500),
@@ -270,8 +270,8 @@ var eH = n(636585),
     e3 = n(428249),
     e8 = n(327098),
     e5 = n(576757),
-    e7 = n(202195),
-    e6 = n(140651),
+    e6 = n(202195),
+    e7 = n(140651),
     e4 = n(43105),
     e9 = n(131607),
     te = n(49999),
@@ -627,7 +627,7 @@ function tA(e) {
 }
 function tC(e) {
     let { children: t, backgroundImgSrc: n, className: i, style: s = {} } = e,
-        { primaryColor: r, secondaryColor: a } = (0, e6.A)(n);
+        { primaryColor: r, secondaryColor: a } = (0, e7.A)(n);
     return (
         null != n && (s.background = `linear-gradient(45deg, ${r}, ${a})`),
         (0, l.jsx)(F.N, {
@@ -658,7 +658,7 @@ function tI(e) {
         [_, j] = i.useState(!1),
         { voiceBar: b, joinVoiceButton: T } = (function (e) {
             let { channel: t, entry: n, onVoiceChannelPreview: s } = e,
-                { streamPreviewUrl: r, channel: a } = (0, e7.A)(n),
+                { streamPreviewUrl: r, channel: a } = (0, e6.A)(n),
                 o = (0, eC.Ay)(a),
                 { needSubscriptionToAccess: c } = (0, eR.A)(t?.id),
                 h = (0, u.bG)([eW.A], () => (null != a ? eW.A.getGuild(a.guild_id) : void 0)),
@@ -666,7 +666,7 @@ function tI(e) {
                 f = (0, u.bG)([eY.A], () => eY.A.isInChannel(a?.id)),
                 p = i.useMemo(() => {
                     for (let e of m) {
-                        let t = eB.A.getDMFromUserId(e.user.id),
+                        let t = eH.A.getDMFromUserId(e.user.id),
                             n = null != t && eZ.Ay.isChannelMuted(null, t),
                             l = ez.A.isBlockedOrIgnored(e.user.id);
                         if (n || l) return !0;
@@ -691,7 +691,7 @@ function tI(e) {
                           })
                         : n;
                 return (0, l.jsx)(
-                    H.m,
+                    B.m,
                     {
                         "aria-label": i ? ef.intl.string(ef.t.d6DpXI) : (n ?? !1),
                         __unsupportedReactNodeAsText: s,
@@ -737,7 +737,7 @@ function tI(e) {
                                         ],
                                     }),
                                 }),
-                                (0, l.jsx)(eH.A, {
+                                (0, l.jsx)(eB.A, {
                                     guildId: h.id,
                                     users: m,
                                     max: 3,
@@ -790,7 +790,7 @@ function tI(e) {
         O =
             ((t = R),
             (n = (0, u.bG)([eW.A], () => eW.A.getGuild((0, es.D)(t?.location)))),
-            (s = (0, u.bG)([eB.A], () => eB.A.getChannel((0, es.H)(t?.location)))),
+            (s = (0, u.bG)([eH.A], () => eH.A.getChannel((0, es.H)(t?.location)))),
             (r = (0, u.yK)([g.default], () => t?.participants?.map((e) => g.default.getUser(e.userId)) ?? [])),
             (a = (0, eC.Ay)(s)),
             null != t && null != n && null != s && eh.k3.has(s.type)
@@ -811,7 +811,7 @@ function tI(e) {
                                               active: !0,
                                           }),
                                           (0, l.jsx)(J._, { size: "xxs", color: U.A.colors.INTERACTIVE_TEXT_DEFAULT }),
-                                          (0, l.jsx)(B.N, { size: "xs", color: U.A.colors.TEXT_DEFAULT }),
+                                          (0, l.jsx)(H.N, { size: "xs", color: U.A.colors.TEXT_DEFAULT }),
                                           (0, l.jsx)(q.E, {
                                               variant: "text-sm/medium",
                                               color: "text-default",
@@ -820,7 +820,7 @@ function tI(e) {
                                           }),
                                       ],
                                   }),
-                                  (0, l.jsx)(eH.A, {
+                                  (0, l.jsx)(eB.A, {
                                       guildId: n.id,
                                       users: r,
                                       max: 3,
@@ -876,7 +876,7 @@ function tI(e) {
                 (P()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o));
             else {
                 let e = await et.A.getOrEnsurePrivateChannel(c.id);
-                t = eB.A.getChannel(e) ?? null;
+                t = eH.A.getChannel(e) ?? null;
             }
             return (
                 P()(null != t, "Send channel must be defined"),
@@ -901,7 +901,7 @@ function tI(e) {
             (P()(null != o, "shareToChannelMode should only be true if a valid channel is passed"), (t = o));
         else {
             let e = await et.A.openPrivateChannel({ recipientIds: c.id }),
-                n = eB.A.getChannel(e);
+                n = eH.A.getChannel(e);
             (P()(null != n, "DM channel must be defined"), (t = n));
         }
         let n = t.type === em.rbe.DM ? th.PA.DM_REACTION_MESSAGE_SENT : th.PA.CHANNEL_REACTION_MESSAGE_SENT;
@@ -954,13 +954,13 @@ function tI(e) {
                         autoFocus: !1,
                         renderAttachButton: S
                             ? () =>
-                                  (0, l.jsx)(H.m, {
+                                  (0, l.jsx)(B.m, {
                                       text: el,
                                       children: (0, l.jsx)(d.D, {
                                           className: tp.wD,
                                           onClick: eu,
                                           children: A
-                                              ? (0, l.jsx)(B.N, { size: "custom", width: 20, height: 20 })
+                                              ? (0, l.jsx)(H.N, { size: "custom", width: 20, height: 20 })
                                               : (0, l.jsx)(W.X, { size: "custom", width: 20, height: 20 }),
                                       }),
                                   })
@@ -1022,7 +1022,7 @@ let ty = (e) => {
                 ? (0, l.jsx)(
                       "div",
                       {
-                          children: (0, l.jsx)(H.m, {
+                          children: (0, l.jsx)(B.m, {
                               asContainer: !0,
                               text: ef.intl.formatToPlainString(ef.t.kilW3l, { emojiName: t.name }),
                               position: "top",
@@ -1047,7 +1047,7 @@ function tS(e) {
         a = t?.guild_id,
         { displayParticipants: o, participant1: c, participant2: d, numOtherParticipants: h } = (0, e5.A)(i, 3),
         m = (0, u.bG)([g.default], () => g.default.getUser(i.author_id)),
-        { streamPreviewUrl: f } = (0, e7.A)(i),
+        { streamPreviewUrl: f } = (0, e6.A)(i),
         p = [c, d];
     return (0, l.jsxs)("div", {
         className: tp.MH,
@@ -1454,8 +1454,8 @@ function tU(e) {
 var tV = n(601007),
     tG = n(648246),
     tF = n(308335),
-    tH = n(790381),
-    tB = n(266080),
+    tB = n(790381),
+    tH = n(266080),
     tW = n(968309),
     tK = n(30370);
 function tz(e) {
@@ -1475,8 +1475,8 @@ let tY = [...tT.n, M.Yq],
         [tR.Y.NINTENDO]: null,
         [tR.Y.IOS]: null,
         [tR.Y.ANDROID]: null,
-        [tR.Y.XBOX]: tB.A,
-        [tR.Y.PLAYSTATION]: tH.A,
+        [tR.Y.XBOX]: tH.A,
+        [tR.Y.PLAYSTATION]: tB.A,
     },
     tJ = function (e) {
         let {
@@ -1489,7 +1489,7 @@ let tY = [...tT.n, M.Yq],
                 trackRankingItemInteraction: o,
             } = e,
             { user: u, details: c, appName: d, activity: h, embeddedActivity: m } = (0, tj.u)(n),
-            { streamPreviewUrl: f, stream: p } = (0, e7.A)(n),
+            { streamPreviewUrl: f, stream: p } = (0, e6.A)(n),
             g = n.extra.platform,
             x = n.extra.application_id,
             A = null != g ? tq[g] : null,
@@ -1663,8 +1663,8 @@ var t1 = n(205327),
     t3 = n(835723),
     t8 = n(172710),
     t5 = n(655116),
-    t7 = n(763758),
-    t6 = n(286617),
+    t6 = n(763758),
+    t7 = n(286617),
     t4 = n(533207),
     t9 = n(280450),
     ne = n(121090),
@@ -1710,7 +1710,7 @@ function nr(e) {
         g = tz(em.fg2.SPOTIFY),
         x = (0, u.bG)(
             [t5.A, t9.default],
-            () => (d?.type === em.$pd.LISTENING && null != p ? (0, t6.A)(t5.A, t9.default, p, d) : void 0),
+            () => (d?.type === em.$pd.LISTENING && null != p ? (0, t7.A)(t5.A, t9.default, p, d) : void 0),
             [d, p],
             t2.A,
         );
@@ -1727,7 +1727,7 @@ function nr(e) {
         (t = () => {
             null != g ? g() : (0, t8.Mp)(d);
         }),
-        (A = (0, l.jsx)(t7.A, {
+        (A = (0, l.jsx)(t6.A, {
             artists: m,
             canOpen: null != d.sync_id,
             linkClassName: tp.zA,

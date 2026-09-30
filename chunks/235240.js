@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     BK: "text-sm/medium__250d5",
     Nr: "card__250d5",
     s7: "skeletonCard__250d5",

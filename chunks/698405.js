@@ -1,60 +1,60 @@
 n.d(t, { A: () => I, w: () => N });
 var i,
     l = n(477900),
-    a = n(582128),
-    r = n(17928),
-    o = n(862482),
+    o = n(582128),
+    a = n(17928),
+    r = n(862482),
     s = n(305866),
-    u = n(297264),
-    c = n(834730),
+    c = n(297264),
+    u = n(834730),
     d = n(821609),
     m = n(66834),
-    h = n(915089),
-    p = n(403362),
-    g = n(857071),
-    f = n(652215),
+    f = n(915089),
+    g = n(403362),
+    h = n(857071),
+    p = n(652215),
     A = n(375708),
     E = n(299409),
     N = (((i = {})[(i.CHAT = 0)] = "CHAT"), (i[(i.REACTIONS = 1)] = "REACTIONS"), i);
 let I = function (e) {
     let { type: t, guild: i, closePopout: N, ctaRef: I } = e,
-        x = (0, h.GV)(),
-        [j, v] = a.useState(!1),
-        T = (0, r.bG)([g.A], () => g.A.isLurking(i.id), [i.id]);
-    a.useEffect(() => {
-        j && !T && N();
-    }, [j, T, N]);
-    let R = null,
-        b = A.intl.string(A.t.d7b1p6);
+        T = (0, f.GV)(),
+        [j, R] = o.useState(!1),
+        x = (0, a.bG)([h.A], () => h.A.isLurking(i.id), [i.id]);
+    o.useEffect(() => {
+        j && !x && N();
+    }, [j, x, N]);
+    let b = null,
+        v = A.intl.string(A.t.d7b1p6);
     switch (t) {
         case 0:
-            R = A.intl.string(A.t.Xiwf1Q);
+            b = A.intl.string(A.t.Xiwf1Q);
             break;
         case 1:
-            R = A.intl.string(A.t.GXvlU9);
+            b = A.intl.string(A.t.GXvlU9);
             break;
         default:
-            return (0, p.xb)(t);
+            return (0, g.xb)(t);
     }
-    if (null == R) return null;
-    async function S() {
-        v(!0);
+    if (null == b) return null;
+    async function C() {
+        R(!0);
         try {
-            (await m.A.joinGuild(i.id, { source: f.Q4z.CHAT_INPUT_BLOCKER }), N());
+            (await m.A.joinGuild(i.id, { source: p.Q4z.CHAT_INPUT_BLOCKER }), N());
         } catch {
-            v(!1);
+            R(!1);
         }
     }
     return (0, l.jsxs)(s.l, {
         className: E.kL,
-        "aria-labelledby": x,
+        "aria-labelledby": T,
         children: [
             (0, l.jsx)("img", { alt: "", className: E.Sl, src: n(303528) }),
             (0, l.jsxs)("div", {
                 className: E.Qs,
                 children: [
-                    (0, l.jsx)(u.D, { variant: "heading-md/semibold", id: x, children: R }),
-                    (0, l.jsx)(c.E, { color: "text-default", variant: "text-sm/normal", children: b }),
+                    (0, l.jsx)(c.D, { variant: "heading-md/semibold", id: T, children: b }),
+                    (0, l.jsx)(u.E, { color: "text-default", variant: "text-sm/normal", children: v }),
                     (0, l.jsxs)("div", {
                         className: E.UD,
                         children: [
@@ -62,12 +62,12 @@ let I = function (e) {
                                 variant: "primary",
                                 text: A.intl.string(A.t["9VLmlZ"]),
                                 buttonRef: I,
-                                onClick: S,
+                                onClick: C,
                                 loading: j,
                             }),
-                            (0, l.jsx)(o.$n, {
+                            (0, l.jsx)(r.$n, {
                                 onClick: N,
-                                look: o.$n.Looks.BLANK,
+                                look: r.$n.Looks.BLANK,
                                 className: E.ZT,
                                 children: A.intl.string(A.t["2m+Sqk"]),
                             }),

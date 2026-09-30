@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => p });
 var i = n(477900),
     s = n(582128),
     l = n(17928),
@@ -14,11 +14,11 @@ var i = n(477900),
     h = n(375708),
     E = n(479381),
     S = n(221851);
-let p = /^\d+$|^$/;
-function x(e) {
+let x = /^\d+$|^$/;
+function p(e) {
     let { onClose: t, transitionState: n } = e,
         {
-            authorizedApplicationId: x,
+            authorizedApplicationId: p,
             authorizationError: T,
             authorizing: f,
         } = (0, l.cf)([A.A], () => ({
@@ -26,10 +26,10 @@ function x(e) {
             authorizationError: A.A.error,
             authorizing: A.A.isFetchingAuthorization,
         })),
-        [_, I] = s.useState(x ?? ""),
+        [_, I] = s.useState(p ?? ""),
         [N, C] = s.useState("8080"),
         [b, y] = s.useState("localhost"),
-        v = p.test(_);
+        v = x.test(_);
     async function j() {
         c.SH();
         let e = (function (e, t, n) {
@@ -44,7 +44,7 @@ function x(e) {
         null != (await c.q1(_, e)) && t();
     }
     s.useEffect(() => () => d.h.wait(() => c.SH()), []);
-    let O = null != x && x === _,
+    let O = null != p && p === _,
         L = O
             ? function () {
                   (c.cL(), I(""), y(null));

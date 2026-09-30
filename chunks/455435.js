@@ -259,7 +259,7 @@ function G(e, t, l) {
         i = n.id,
         s = t.navigatesOnPublish ? t.destination : null,
         u = "user" === n.install_scope || null != s ? null : (0, x.$C)(i);
-    (u?.catch(() => {}), "channel" === s && U(i, !0));
+    (u?.catch(() => {}), "channel" === s && B(i, !0));
     let o = (0, x.TV)(i).then((e) => {
             if (!0 !== e.ok) {
                 let t;
@@ -285,13 +285,13 @@ function G(e, t, l) {
                     null != s &&
                         (z.has(s) && (0, M.cP)(i),
                         d
-                            .then(() => ("channel" === s ? B(i, r) : void 0))
-                            .finally(() => U(i, !1))
+                            .then(() => ("channel" === s ? U(i, r) : void 0))
+                            .finally(() => B(i, !1))
                             .then(() => $(O(i, r) ?? e, s, a))
                             .catch(() => {})));
             },
             (e) => {
-                (U(i, !1), a.showError(e instanceof Error ? e.message : _.intl.string(P.default.fNP6Cd)));
+                (B(i, !1), a.showError(e instanceof Error ? e.message : _.intl.string(P.default.fNP6Cd)));
             },
         ),
         null != u && null != e.guildId)
@@ -308,10 +308,10 @@ function G(e, t, l) {
             }));
     }
 }
-function U(e, t) {
+function B(e, t) {
     r.h.dispatch({ type: "VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING", projectId: e, pending: t });
 }
-async function B(e, t) {
+async function U(e, t) {
     let l = Date.now() + 5e3;
     for (; O(e, t)?.appChannelId == null && Date.now() < l;) await new Promise((e) => setTimeout(e, 250));
 }

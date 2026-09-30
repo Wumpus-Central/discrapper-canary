@@ -1,4 +1,4 @@
-n.d(t, { A: () => eB, Y: () => eV });
+n.d(t, { A: () => eH, Y: () => eV });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -38,8 +38,8 @@ let P = "content-inventory-feed",
 var V = n(652215),
     G = n(375708),
     F = n(569709),
-    H = n(4577);
-let B = i.memo(function (e) {
+    B = n(4577);
+let H = i.memo(function (e) {
         let t,
             { title: s, onToggleExpand: r, expanded: o, expandedCount: c } = e,
             d = (0, h.bG)([k.A], () => k.A.hidden),
@@ -53,7 +53,7 @@ let B = i.memo(function (e) {
             }, []),
             x = i.useCallback(() => (d ? (0, L.Il)() : c > 3 ? r() : (0, V.tEg)()), [d, c, r]);
         return (0, l.jsxs)(M.A, {
-            className: H.lL,
+            className: B.lL,
             children: [
                 (0, l.jsx)(m.A, { children: G.intl.format(G.t.Uaqbke, { title: s, count: c }) }),
                 (0, l.jsxs)("div", {
@@ -301,7 +301,7 @@ let ew = eL.Ay.getEnableHardwareAcceleration(),
                 let { onClick: n, onMouseDown: i, ...a } = e;
                 return (0, l.jsx)(I.A, {
                     ref: b,
-                    className: H.Dc,
+                    className: B.Dc,
                     onContextMenu: L,
                     shouldAnimateStatus: ew,
                     user: c,
@@ -364,22 +364,22 @@ let ew = eL.Ay.getEnableHardwareAcceleration(),
                 [u?.src],
             );
         return t === V.clD.UNKNOWN
-            ? (0, l.jsx)("div", { className: o, children: (0, l.jsx)("div", { className: H.k1 }) })
+            ? (0, l.jsx)("div", { className: o, children: (0, l.jsx)("div", { className: B.k1 }) })
             : (0, l.jsxs)(M.A, {
                   className: o,
                   children: [
                       (0, l.jsx)(m.A, { children: null == r ? s : G.intl.format(G.t.Uaqbke, { title: s, count: r }) }),
                       (0, l.jsxs)("div", {
-                          className: H.CN,
+                          className: B.CN,
                           "aria-hidden": !0,
                           children: [
                               null != u
                                   ? (0, l.jsx)("span", {
                                         onContextMenu: d,
-                                        children: (0, l.jsx)(eE.A, { className: H.UT, ...u }),
+                                        children: (0, l.jsx)(eE.A, { className: B.UT, ...u }),
                                     })
                                   : null,
-                              (0, l.jsx)("span", { className: H.iy, children: s }),
+                              (0, l.jsx)("span", { className: B.iy, children: s }),
                               null == c ? null : (0, l.jsxs)("span", { children: ["\xa0\u2014 ", c] }),
                           ],
                       }),
@@ -418,7 +418,7 @@ class eF extends i.Component {
         let { section: t } = e,
             { groups: n, channel: s } = this.props,
             r = n[t];
-        if (r?.id === P) return (0, i.createElement)(B, { ...r, key: `section-${t}` });
+        if (r?.id === P) return (0, i.createElement)(H, { ...r, key: `section-${t}` });
         if (0 === t) {
             let { key: e } = r;
             return (0, l.jsx)(
@@ -431,13 +431,13 @@ class eF extends i.Component {
                         ...r,
                         key: `section-${e}`,
                         guildId: s.guild_id,
-                        className: H.lL,
+                        className: B.lL,
                     }),
                 },
                 `section-${t}`,
             );
         }
-        return (0, i.createElement)(eV, { ...r, key: `section-${t}`, guildId: s.guild_id, className: H.lL });
+        return (0, i.createElement)(eV, { ...r, key: `section-${t}`, guildId: s.guild_id, className: B.lL });
     };
     getRowProps = (e) => {
         let { groups: t, rows: n } = this.props,
@@ -617,7 +617,7 @@ class eF extends i.Component {
                 (0, l.jsx)(ex.V0, {
                     children: (a) =>
                         (0, l.jsx)("aside", {
-                            className: r()(H.yg, H.ML),
+                            className: r()(B.yg, B.ML),
                             "aria-labelledby": a,
                             children: (0, l.jsx)(p.F, {
                                 component: (0, l.jsx)(m.A, {
@@ -641,7 +641,7 @@ class eF extends i.Component {
                                                         (this.props.listRef.current = e),
                                                         (a.current = e?.getScrollerNode() ?? null));
                                                 },
-                                                className: r()(H.ol, { [H.Ij]: d.Fr }),
+                                                className: r()(B.ol, { [B.Ij]: d.Fr }),
                                                 paddingTop: 0,
                                                 sectionHeight: i,
                                                 rowHeight: this.getRowHeightComputer(),
@@ -663,7 +663,7 @@ class eF extends i.Component {
         });
     }
 }
-function eH(e) {
+function eB(e) {
     let { channel: t, className: n } = e,
         { analyticsLocations: s } = (0, N.Ay)(S.A.MEMBER_LIST),
         a = (0, h.bG)([y.Ay], () => y.Ay.keyboardModeEnabled),
@@ -895,7 +895,7 @@ function eH(e) {
         children: (0, l.jsx)("div", {
             ref: A,
             tabIndex: -1,
-            className: r()(H.kL, n),
+            className: r()(B.kL, n),
             children: (0, l.jsx)(u.hD, {
                 navigator: j,
                 children: (0, l.jsx)(eF, {
@@ -913,8 +913,8 @@ function eH(e) {
         }),
     });
 }
-function eB(e) {
+function eH(e) {
     let { channel: t, className: n } = e,
         s = i.useDeferredValue(t);
-    return i.useMemo(() => (0, l.jsx)(_.r$, { children: (0, l.jsx)(eH, { channel: s, className: n }) }), [s, n]);
+    return i.useMemo(() => (0, l.jsx)(_.r$, { children: (0, l.jsx)(eB, { channel: s, className: n }) }), [s, n]);
 }

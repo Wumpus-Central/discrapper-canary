@@ -17,41 +17,41 @@ var n = l(477900),
     p = l(915667),
     v = l(451395),
     _ = l(328006),
-    A = l(857909),
-    I = l(334840),
-    N = l(393750);
+    N = l(857909),
+    A = l(334840),
+    I = l(393750);
 let E = [
     { avatar: _.A, topBarWidth: "68%", bottomBarWidths: ["26%", "55%"] },
-    { avatar: A.A, topBarWidth: "48%", bottomBarWidths: ["26%", "100%"] },
-    { avatar: I.A, topBarWidth: "96%", bottomBarWidths: ["26%", "24%"] },
+    { avatar: N.A, topBarWidth: "48%", bottomBarWidths: ["26%", "100%"] },
+    { avatar: A.A, topBarWidth: "96%", bottomBarWidths: ["26%", "24%"] },
 ];
 function b(e) {
     let { width: t } = e;
-    return (0, n.jsx)("div", { className: N.M0, style: { width: t } });
+    return (0, n.jsx)("div", { className: I.M0, style: { width: t } });
 }
 function S(e) {
     let { rank: t, row: l } = e;
     return (0, n.jsxs)("div", {
-        className: N.nM,
+        className: I.nM,
         children: [
             (0, n.jsx)("div", {
-                className: N.Tm,
+                className: I.Tm,
                 "aria-hidden": !0,
                 children: (0, n.jsx)(x.E, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: N._k,
+                    className: I._k,
                     children: t,
                 }),
             }),
-            (0, n.jsx)("img", { className: N.my, src: l.avatar, alt: "", "aria-hidden": !0 }),
+            (0, n.jsx)("img", { className: I.my, src: l.avatar, alt: "", "aria-hidden": !0 }),
             (0, n.jsxs)("div", {
-                className: N.n_,
+                className: I.n_,
                 "aria-hidden": !0,
                 children: [
                     (0, n.jsx)(b, { width: l.topBarWidth }),
                     (0, n.jsxs)("div", {
-                        className: N.O3,
+                        className: I.O3,
                         children: [
                             (0, n.jsx)(b, { width: l.bottomBarWidths[0] }),
                             (0, n.jsx)(b, { width: l.bottomBarWidths[1] }),
@@ -63,7 +63,7 @@ function S(e) {
     });
 }
 function y() {
-    return (0, n.jsx)("div", { className: N.kL, children: E.map((e, t) => (0, n.jsx)(S, { rank: t + 1, row: e }, t)) });
+    return (0, n.jsx)("div", { className: I.kL, children: E.map((e, t) => (0, n.jsx)(S, { rank: t + 1, row: e }, t)) });
 }
 var C = l(562073),
     T = l(189213),
@@ -265,9 +265,9 @@ function G(e) {
         }, [l, m, d, u]);
     if (null == m) return null;
     let { View: h, Edit: f, HeaderAccessory: g, HeaderActions: j, Title: p, TitleIcon: v, ViewHeaderTrailing: _ } = m,
-        A = "edit" === a,
-        I = null != f && null != d && null == u,
-        N = null != g ? (0, n.jsx)(g, { hydration: s }) : null,
+        N = "edit" === a,
+        A = null != f && null != d && null == u,
+        I = null != g ? (0, n.jsx)(g, { hydration: s }) : null,
         E = null != v ? (0, n.jsx)(v, { hydration: s }) : null,
         b = null == u && null != j ? (0, n.jsx)(j, { hydration: s, guildId: t }) : null,
         S = l.default_title ?? "",
@@ -278,22 +278,22 @@ function G(e) {
     return (0, n.jsxs)("div", {
         className: M.kL,
         children: [
-            A
+            N
                 ? (0, n.jsx)(U, {
                       title: y,
                       widgetName: S,
                       titleIcon: E,
-                      accessory: N,
+                      accessory: I,
                       disabled: o,
                       dragHandleRef: c,
-                      canEdit: I,
+                      canEdit: A,
                       onEdit: x,
                       onRemove: r,
                   })
                 : (0, n.jsx)(P, {
                       title: y,
                       titleIcon: E,
-                      accessory: N,
+                      accessory: I,
                       trailing: null != _ && null == u ? (0, n.jsx)(_, { widget: l, hydration: s, title: S }) : null,
                       actions: b,
                   }),

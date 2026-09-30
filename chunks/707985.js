@@ -5,19 +5,19 @@ function i(e) {
             canChat: n,
             renderReactions: i,
             canAddNewReactions: l,
-            isLurking: a,
-            communicationDisabled: r,
-            isActiveChannelOrUnarchivableThread: o,
+            isLurking: o,
+            communicationDisabled: a,
+            isActiveChannelOrUnarchivableThread: r,
             isAutomodQuarantined: s,
         } = e,
-        u = t.isPrivate(),
-        c = t.isSystemDM(),
+        c = t.isPrivate(),
+        u = t.isSystemDM(),
         d = t.isMediaThread(),
-        m = (!0 === l || u) && !c && o && !d,
-        h = (n || u) && o && !d;
+        m = (!0 === l || c) && !u && r && !d,
+        f = (n || c) && r && !d;
     return {
         disableReactionReads: !i,
-        disableReactionCreates: a || !h || !m,
-        disableReactionUpdates: c || a || !h || !0 === r || !0 === s,
+        disableReactionCreates: o || !f || !m,
+        disableReactionUpdates: u || o || !f || !0 === a || !0 === s,
     };
 }

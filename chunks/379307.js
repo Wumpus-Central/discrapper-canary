@@ -49,8 +49,8 @@ function N(e) {
         C = h.ks.indexOf(t.tier),
         E = w ? s.t : u._,
         I = h.ks.map(g.eQ),
-        T = (0, g.is)(t.tier),
-        { text: M, phase: P } = (0, v.Q)(T);
+        M = (0, g.is)(t.tier),
+        { text: T, phase: P } = (0, v.Q)(M);
     return (0, n.jsx)("div", {
         className: y.qd,
         "data-placement": f ?? void 0,
@@ -98,7 +98,7 @@ function N(e) {
                                     variant: "text-sm/normal",
                                     color: "text-muted",
                                     className: i()(y.Z, { [y.xQ]: "exit" === P, [y.lm]: "enter" === P }),
-                                    children: M,
+                                    children: T,
                                 }),
                             ],
                         }),

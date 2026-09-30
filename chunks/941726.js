@@ -114,7 +114,7 @@ function I(e) {
                                 D.length > 0 && d.P.fetchMany(...D.map((e) => [e]));
                             }, [D]),
                             { identitiesByUserId: T, isLoadingIdentities: R }),
-                        { profilesByUserId: F, isLoadingProfiles: H } =
+                        { profilesByUserId: F, isLoadingProfiles: B } =
                             ((O = (0, a.cf)([f.A], () =>
                                 Object.fromEntries(D.map((e) => [e, f.A.getUserProfile(e) ?? null]).filter(x.QE)),
                             )),
@@ -126,19 +126,19 @@ function I(e) {
                                 for (let e of M) (0, p.A)(e);
                             }, [M]),
                             { profilesByUserId: O, isLoadingProfiles: M.length > 0 || L }),
-                        B = (0, a.cf)(
+                        H = (0, a.cf)(
                             [C.A],
                             () => Object.fromEntries([...k].map((e) => [e, C.A.getConfig(e)]).filter(x.QE)),
                             [k],
                         ),
-                        W = w || U || G || H,
+                        W = w || U || G || B,
                         K = i.useMemo(() => {
                             if (!W && void 0 !== e)
                                 return e.map((e) => {
                                     if (e.content_type !== r.ContentInventoryEntryType.PLAYED_GAME) return e;
                                     let t = P[e.extra.application_id] ?? null;
                                     if (null == t) return e;
-                                    let n = B[t.id] ?? null;
+                                    let n = H[t.id] ?? null;
                                     if (null == n || null == n.surfaces[s.m.ACTIVITY_ACCESSORY]) return e;
                                     let l = V[e.author_id]?.find((e) => e.application_id === t.id) ?? null;
                                     if (l?.profile == null) return e;
@@ -148,7 +148,7 @@ function I(e) {
                                         applicationWidgetPreview: { widgetApplicationId: t.id, hasWidget: i },
                                     };
                                 });
-                        }, [W, e, P, B, V, F]),
+                        }, [W, e, P, H, V, F]),
                         [z, Z] = i.useState(K);
                     return (
                         i.useEffect(() => {

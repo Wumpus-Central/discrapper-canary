@@ -1,6 +1,6 @@
-i.d(t, { A: () => p, m: () => h });
-var s = i(477900),
-    n = i(582128),
+i.d(t, { A: () => h, m: () => A });
+var n = i(477900),
+    s = i(582128),
     r = i(503698),
     l = i.n(r),
     a = i(297264),
@@ -13,7 +13,7 @@ var s = i(477900),
     g = i(652215),
     _ = i(375708),
     E = i(462150);
-let h = [
+let A = [
     { getQuestion: () => _.intl.string(_.t.C4J8UB), getAnswer: () => _.intl.string(_.t.nhkk6k) },
     {
         getQuestion: () => _.intl.string(_.t.ai4ym2),
@@ -27,50 +27,50 @@ let h = [
     { getQuestion: () => _.intl.string(_.t["6EN+TZ"]), getAnswer: () => _.intl.string(_.t.NZax1u) },
     { getQuestion: () => _.intl.string(_.t.f5B4EW), getAnswer: () => _.intl.string(_.t.Aje8Pb) },
 ];
-function p(e) {
+function h(e) {
     let { className: t } = e,
-        [i, r] = n.useState(null),
-        [T, g] = n.useState(null);
-    return (0, s.jsxs)("div", {
+        [i, r] = s.useState(null),
+        [T, g] = s.useState(null);
+    return (0, n.jsxs)("div", {
         className: l()(E.iE, t),
         children: [
-            (0, s.jsx)(a.D, { className: E.R_, variant: "heading-xxl/semibold", children: _.intl.string(_.t.HPJ6Nj) }),
-            (0, s.jsx)(o.h, { size: 32 }),
-            (0, s.jsx)("ul", {
+            (0, n.jsx)(a.D, { className: E.R_, variant: "heading-xxl/semibold", children: _.intl.string(_.t.HPJ6Nj) }),
+            (0, n.jsx)(o.h, { size: 32 }),
+            (0, n.jsx)("ul", {
                 className: E.p_,
-                children: h.map((e, t) => {
-                    let n = i === t,
+                children: A.map((e, t) => {
+                    let s = i === t,
                         a = T === t,
-                        o = n || a ? "text-default" : "text-muted";
-                    return (0, s.jsxs)(
+                        o = s || a ? "text-default" : "text-muted";
+                    return (0, n.jsxs)(
                         c.D,
                         {
                             tag: "li",
-                            className: l()(E.Aw, { [E.$K]: n }),
+                            className: l()(E.Aw, { [E.$K]: s }),
                             onClick: () => r((e) => (e === t ? null : t)),
                             onMouseEnter: () => g(t),
                             onMouseLeave: () => g(null),
                             children: [
-                                (0, s.jsxs)("div", {
+                                (0, n.jsxs)("div", {
                                     className: E.k7,
                                     children: [
-                                        (0, s.jsx)(d.E, {
+                                        (0, n.jsx)(d.E, {
                                             className: E.b1,
                                             color: o,
                                             variant: "heading-md/semibold",
                                             tag: "span",
                                             children: e.getQuestion(),
                                         }),
-                                        (0, s.jsx)(u.a, {
+                                        (0, n.jsx)(u.a, {
                                             size: "sm",
                                             color: m.A.colors.INTERACTIVE_ICON_DEFAULT,
                                             className: E.q4,
-                                            style: { transform: n ? "rotate(180deg)" : "rotate(0deg)" },
+                                            style: { transform: s ? "rotate(180deg)" : "rotate(0deg)" },
                                         }),
                                     ],
                                 }),
-                                n &&
-                                    (0, s.jsx)(d.E, {
+                                s &&
+                                    (0, n.jsx)(d.E, {
                                         className: E.ZF,
                                         color: "text-muted",
                                         variant: "text-sm/medium",

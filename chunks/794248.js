@@ -263,7 +263,7 @@ function F(e) {
         ],
     });
 }
-function H() {
+function B() {
     let { surfaceConfig: e } = en();
     return (0, i.jsxs)("div", {
         className: G.zr,
@@ -275,7 +275,7 @@ function H() {
         ],
     });
 }
-var B = n(141255);
+var H = n(141255);
 function W() {
     let { surfaceConfig: e, resolveFieldValue: t } = en(),
         n = s.useId(),
@@ -286,28 +286,28 @@ function W() {
         u = t(e.components.progress?.fields.max, [v.o.NUMBER]),
         c = (0, m.eq)(o, u);
     return (0, i.jsxs)("div", {
-        className: B.zr,
+        className: H.zr,
         children: [
             null != l
-                ? (0, i.jsx)("img", { src: l.media.url, className: B.Sl, alt: "" })
-                : (0, i.jsx)(S, { className: B.Sl }),
+                ? (0, i.jsx)("img", { src: l.media.url, className: H.Sl, alt: "" })
+                : (0, i.jsx)(S, { className: H.Sl }),
             (0, i.jsxs)("div", {
-                className: B.Qs,
+                className: H.Qs,
                 children: [
                     (0, i.jsx)("div", {
-                        className: B.L$,
+                        className: H.L$,
                         role: "progressbar",
                         "aria-labelledby": n,
                         "aria-valuenow": o?.value ?? 0,
                         "aria-valuemax": u?.value ?? 1,
                         "aria-valuetext": null != u && null != o ? `${o.value} of ${u.value}` : void 0,
-                        children: (0, i.jsx)("div", { className: B.qB, style: { "--custom-progress": `${c}%` } }),
+                        children: (0, i.jsx)("div", { className: H.qB, style: { "--custom-progress": `${c}%` } }),
                     }),
                     (0, i.jsxs)("div", {
-                        className: B.P_,
+                        className: H.P_,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: B.n_,
+                                className: H.n_,
                                 children: [
                                     null != r
                                         ? (0, i.jsx)(h.E, {
@@ -332,7 +332,7 @@ function W() {
                                 ? (0, i.jsx)(h.E, {
                                       variant: "text-sm/medium",
                                       lineClamp: 1,
-                                      className: B.l_,
+                                      className: H.l_,
                                       children: null != u ? `${o.value}/${u.value}` : `${(0, m.rr)(o.value)}%`,
                                   })
                                 : (0, i.jsx)(x, { variant: "text-sm/medium", width: "4ch" }),
@@ -496,7 +496,7 @@ let el = {
     [a.m.WIDGET_BOTTOM]: {
         [o.WIDGET_BOTTOM_STATS]: () => (0, i.jsx)(Y, {}),
         [o.WIDGET_BOTTOM_PROGRESS]: () => (0, i.jsx)(W, {}),
-        [o.WIDGET_BOTTOM_COLLECTION]: () => (0, i.jsx)(H, {}),
+        [o.WIDGET_BOTTOM_COLLECTION]: () => (0, i.jsx)(B, {}),
     },
     [a.m.MINI_PROFILE]: {
         [o.MINI_PROFILE_HERO_STAT]: () => (0, i.jsx)(V, {}),

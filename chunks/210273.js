@@ -1,6 +1,6 @@
 i.d(t, { X: () => _ });
-var s = i(460905),
-    n = i(7807),
+var n = i(460905),
+    s = i(7807),
     r = i(391242),
     l = i(597601),
     a = i(183623),
@@ -14,9 +14,9 @@ var s = i(460905),
 function _(e) {
     switch (e) {
         case g.TP.EMOJI:
-            return s.n;
+            return n.n;
         case g.TP.SOUNDBOARD:
-            return n.J;
+            return s.J;
         case g.TP.ANIMATED:
             return r.O;
         case g.TP.AUDIO:
@@ -36,6 +36,6 @@ function _(e) {
         case g.TP.STICKER:
             return T.t;
         default:
-            return s.n;
+            return n.n;
     }
 }

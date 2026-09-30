@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Aw: "listItem__650eb",
     yk: "unavailableBadge__650eb",
     bG: "iconBadge__650eb",

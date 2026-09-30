@@ -1,23 +1,23 @@
-n.d(e, { TrophyIcon: () => s });
-var t = n(477900);
-n(582128);
-var r = n(661531),
-    a = n(996682),
-    o = n(27989);
-function s(l) {
+e.d(n, { TrophyIcon: () => o });
+var t = e(477900);
+e(582128);
+var a = e(661531),
+    r = e(996682),
+    s = e(27989);
+function o(l) {
     let {
-            size: e = "md",
-            width: n,
-            height: s,
-            color: i = r.A.colors.INTERACTIVE_ICON_DEFAULT,
+            size: n = "md",
+            width: e,
+            height: o,
+            color: i = a.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: u = "",
             ...c
         } = l,
-        d = (0, o.J)(e),
-        h = d?.width ?? n,
-        A = d?.height ?? s;
+        d = (0, s.J)(n),
+        h = d?.width ?? e,
+        A = d?.height ?? o;
     return (0, t.jsx)("svg", {
-        ...(0, a.A)(c),
+        ...(0, r.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
         width: h,
         height: A,

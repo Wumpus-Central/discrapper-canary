@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     os: "heroBlock__908d6",
     vK: "banner__908d6",
     no: "responsive__908d6",

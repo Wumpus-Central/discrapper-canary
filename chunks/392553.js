@@ -261,8 +261,8 @@ class V extends i.PureComponent {
 }
 var G = n(95561),
     F = n(625494),
-    H = n(317681),
-    B = n(186306),
+    B = n(317681),
+    H = n(186306),
     W = n(655098),
     K = n(323350),
     z = n(35277),
@@ -283,7 +283,7 @@ function el(e, t) {
 }
 function ei(e, t, n, l) {
     let i = Z.VW.areStylesDisabled(e) || null == n ? t : n;
-    B.o.withSingleEntry(e, () => {
+    H.o.withSingleEntry(e, () => {
         z.b.insertText(e, l ? i + " " : i);
     });
 }
@@ -460,7 +460,7 @@ let eC = i.forwardRef(function (e, t) {
                         }
                         ((0, et.eF)(e, f.guild_id, f.id), (i = void 0));
                     }
-                    ("undo" !== t && void 0 !== l && l !== s && B.o.insertEntry(e, "other", !1, s, r), (a = !0));
+                    ("undo" !== t && void 0 !== l && l !== s && H.o.insertEntry(e, "other", !1, s, r), (a = !0));
                 }
                 if ((null == i || Z.Ot.isValid(e, i) || (i = void 0), (a || !Z.Ot.isValid(e, r)) && void 0 === i)) {
                     let t = Z.VW.end(e, []);
@@ -469,14 +469,14 @@ let eC = i.forwardRef(function (e, t) {
                 let o = null != i && !Z.Ot.equals(i, r);
                 if (null != i && o) {
                     e.selection = i;
-                    let t = B.o.currentEntry(e);
+                    let t = H.o.currentEntry(e);
                     (null != t && (t.selection = i), (a = !0));
                 }
-                let u = H.n$(e);
+                let u = B.n$(e);
                 if (
                     (null != u &&
                         u[0].command.id !== p.A.getActiveCommand(f.id)?.id &&
-                        B.o.withMergedEntry(e, () => {
+                        H.o.withMergedEntry(e, () => {
                             (0, ec.t)(e, f.id, null, !0);
                         }),
                     a)
@@ -498,24 +498,24 @@ let eC = i.forwardRef(function (e, t) {
             ew.current = !0;
         }, []),
         eF = (0, J.A)({ channel: f, chatInputType: h, onChangeStart: eV, onChangeEnd: eG, updateState: eU }),
-        eH = i.useCallback(
+        eB = i.useCallback(
             (e, t) => {
-                let n = H.SQ(eF, e, f.id),
-                    l = H.cd(e, f.guild_id, f.id, n, t);
+                let n = B.SQ(eF, e, f.id),
+                    l = B.cd(e, f.guild_id, f.id, n, t);
                 return { values: n, results: l };
             },
             [f.guild_id, f.id, eF],
         ),
-        eB = i.useCallback(() => {
+        eH = i.useCallback(() => {
             let e,
                 t = Z.VW.getNodesOfType(eF, ["gameMentionInput", "timestampMentionInput"]),
                 n = null != t ? [...t] : null,
                 l = eE ? p.A.getActiveCommand(f.id) : null,
                 i = !1;
             if (null != l && null != l.options) {
-                let t = eH(l, !1);
+                let t = eB(l, !1);
                 e = t.values;
-                let n = H.O7(eF)
+                let n = B.O7(eF)
                     .filter((e) => !t.results[e].success)
                     .map((e) => (l.options ?? []).find((t) => t.name === e));
                 for (let e of l.options)
@@ -540,13 +540,13 @@ let eC = i.forwardRef(function (e, t) {
                 return;
             }
             V?.((0, K.WO)(Z.VW.richValue(eF), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
-        }, [f.id, eF, V, $, eH, eE]);
+        }, [f.id, eF, V, $, eB, eE]);
     (i.useImperativeHandle(
         t,
         () => ({
             getSlateEditor: () => eF,
             submit(e) {
-                (e?.preventDefault(), eB());
+                (e?.preventDefault(), eH());
             },
             focus() {
                 Z.VW.focus(eF);
@@ -598,35 +598,35 @@ let eC = i.forwardRef(function (e, t) {
             },
             getFirstText: () => Z.VW.getFirstText(eF)?.text ?? "",
             getCurrentCommandOption() {
-                let e = H.M3(eF);
+                let e = B.M3(eF);
                 return null == e ? null : e[0].optionName;
             },
             getCurrentCommandOptionValue() {
-                let e = H.M3(eF);
+                let e = B.M3(eF);
                 if (null == e) return [];
                 let t = p.A.getActiveCommand(f.id),
                     n = t?.options?.find((t) => t.name === e[0].optionName);
-                return null == n ? [] : H.FV(eF, n, e[0], f.id);
+                return null == n ? [] : B.FV(eF, n, e[0], f.id);
             },
             getCommandOptionValues() {
                 let e = p.A.getActiveCommand(f.id);
-                return null == e ? {} : H.SQ(eF, e, f.id);
+                return null == e ? {} : B.SQ(eF, e, f.id);
             },
             insertText(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                     n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-                B.o.withSingleEntry(eF, () => {
-                    let l = H.M3(eF),
+                H.o.withSingleEntry(eF, () => {
+                    let l = B.M3(eF),
                         i = null != l && el(f, l[0]);
                     if (
                         (null != t && i && (z.b.removeInlineChildren(eF, l), (n = !1)), ei(eF, e, t, n), null != t && i)
                     ) {
-                        let e = H.n$(eF);
+                        let e = B.n$(eF);
                         if (((l = Z.cv.updateElement(eF, l)), null != e)) {
                             let t = Z.cv.markdown(e[0], f.guild_id);
                             (0, et.lE)(eF, l, f.id, t) && (l = Z.cv.updateElement(eF, l));
                         }
-                        (H.ke(eF, f.guild_id, f.id, Z.cv.updateElement(eF, l), !1), z.b.selectNextCommandOption(eF));
+                        (B.ke(eF, f.guild_id, f.id, Z.cv.updateElement(eF, l), !1), z.b.selectNextCommandOption(eF));
                     }
                 });
             },
@@ -634,8 +634,8 @@ let eC = i.forwardRef(function (e, t) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
                     { addSpace: n = !0, replaceFullWord: l = !1 } =
                         arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
-                B.o.withSingleEntry(eF, () => {
-                    let i = H.M3(eF),
+                H.o.withSingleEntry(eF, () => {
+                    let i = B.M3(eF),
                         s = null != i && el(f, i[0]);
                     if (s) (z.b.removeInlineChildren(eF, i), (n = !1));
                     else {
@@ -653,7 +653,7 @@ let eC = i.forwardRef(function (e, t) {
                 });
             },
             insertInlineAutocompleteInput(e) {
-                B.o.withSingleEntry(eF, () => {
+                H.o.withSingleEntry(eF, () => {
                     let { word: t } = this.getCurrentWord();
                     (null != t &&
                         t.length > 0 &&
@@ -662,7 +662,7 @@ let eC = i.forwardRef(function (e, t) {
                 });
             },
             replaceInlineAutocompleteInput(e, t, n) {
-                B.o.withSingleEntry(eF, () => {
+                H.o.withSingleEntry(eF, () => {
                     var t, l, i;
                     let s = Z.VW.getSelectedParentOfType(eF, [e]);
                     (X()(null != s, `Cannot replace inline input of type ${e} when none is selected`),
@@ -670,21 +670,21 @@ let eC = i.forwardRef(function (e, t) {
                         (t = eF),
                         (l = n),
                         (i = !0),
-                        B.o.withSingleEntry(t, () => {
+                        H.o.withSingleEntry(t, () => {
                             z.b.insertText(t, i ? l + " " : l);
                         }));
                 });
             },
             insertEmoji(e) {
                 let { emoji: t, addSpace: n = !1 } = e;
-                B.o.withSingleEntry(eF, () => {
+                H.o.withSingleEntry(eF, () => {
                     let e = t.animated ? "a" : "",
                         l = t.originalName ?? t.name ?? "";
                     ei(eF, `:${t.name}:`, null != t.id ? `<${e}:${l.replace(/:/g, "")}:${t.id}>` : null, n);
                 });
             },
         }),
-        [eF, f, eB],
+        [eF, f, eH],
     ),
         (n = i.useRef(null)),
         (s = i.useRef(null)),
@@ -804,7 +804,7 @@ let eC = i.forwardRef(function (e, t) {
             onEnter: w,
             onSpace: U,
             allowNewLines: eS,
-            submit: eB,
+            submit: eH,
             hideAutocomplete: ed,
             moveSelection: eh,
         }),
@@ -847,10 +847,10 @@ let eC = i.forwardRef(function (e, t) {
         i.useEffect(() => {
             function e() {
                 let e = p.A.getActiveCommand(f.id) ?? null;
-                null !== e && null != e.options && eH(e, !0);
+                null !== e && null != e.options && eB(e, !0);
             }
             return (A.A.addChangeListener(e), () => A.A.removeChangeListener(e));
-        }, [f, eF, eH]));
+        }, [f, eF, eB]));
     let eJ = i.useCallback(
             (e) => [
                 ...(0, q.A)(eF, e, f.guild_id),
@@ -885,7 +885,7 @@ let eC = i.forwardRef(function (e, t) {
                                 o = 0,
                                 u = 0;
                             if (null != a && a.id === r.command.id) {
-                                let t = H.O7(e);
+                                let t = B.O7(e);
                                 for (let e of a.options ?? []) t.includes(e.name) ? u++ : o++;
                             }
                             let c = {};

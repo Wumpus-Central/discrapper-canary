@@ -14,8 +14,8 @@ var i = n(477900),
     h = n(683071),
     E = n(391048),
     S = n(158032),
-    p = n(362111),
-    x = n(457287),
+    x = n(362111),
+    p = n(457287),
     T = n(637141),
     f = n(688810),
     _ = n(277984),
@@ -121,7 +121,7 @@ function k(e) {
     }
     let ee = () => {
         (0, d.openModalLazy)(
-            async () => (e) => (0, i.jsx)(p.default, { ...e, onAddPaymentSource: $, analyticsLocation: a }),
+            async () => (e) => (0, i.jsx)(x.default, { ...e, onAddPaymentSource: $, analyticsLocation: a }),
             {
                 onCloseCallback: () => {
                     (0, E.ET)();
@@ -174,11 +174,11 @@ function k(e) {
                     : (0, i.jsx)(T.Ay, { ...n })),
                 null == t.paymentSourceId || d
                     ? null
-                    : (0, i.jsx)(x.f, {
+                    : (0, i.jsx)(p.f, {
                           currencies: a,
                           children: (0, i.jsx)("div", {
                               className: r()(U.Gl, V.Uu, V.Hu),
-                              children: (0, i.jsx)(x.A, {
+                              children: (0, i.jsx)(p.A, {
                                   label: M.intl.string(M.t["0YjaXf"]),
                                   selectedCurrency: Z,
                                   currencies: a,

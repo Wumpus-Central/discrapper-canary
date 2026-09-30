@@ -1,13 +1,13 @@
 (i.d(t, { L: () => u, j: () => r }), i(899898));
-var s = i(621466);
-let n = { root: null, rootMargin: "0px", threshold: 0.5 };
+var n = i(621466);
+let s = { root: null, rootMargin: "0px", threshold: 0.5 };
 class r {
     _observer;
     _options;
     _nodes = new WeakMap();
     _components = new WeakMap();
     _visibleComponents = new WeakSet();
-    constructor(e = n) {
+    constructor(e = s) {
         ((this._options = e),
             null != window.IntersectionObserver &&
                 (this._observer = new window.IntersectionObserver(this._handleEntries, e)));
@@ -42,8 +42,8 @@ class r {
         let i = this._observer;
         if (null == i) return;
         this.unobserve(e);
-        let n = t.current;
-        (0, s.vq)(n, HTMLElement) && (this._nodes.set(n, e), this._components.set(e, n), i.observe(n));
+        let s = t.current;
+        (0, n.vq)(s, HTMLElement) && (this._nodes.set(s, e), this._components.set(e, s), i.observe(s));
     }
     unobserve(e) {
         let t = this._observer;
@@ -70,10 +70,10 @@ class u extends l.Component {
     };
     constructor(e) {
         super(e);
-        const { root: t, rootMargin: i, threshold: s } = e;
+        const { root: t, rootMargin: i, threshold: n } = e;
         t ? (c.has(t) ? (this.elementId = c.get(t) || "") : c.set(t, (0, a.A)())) : (this.elementId = o);
-        const n = this.getVisibilityObserverId();
-        d.has(n) || d.set(n, new r({ root: t, rootMargin: i, threshold: s }));
+        const s = this.getVisibilityObserverId();
+        d.has(s) || d.set(s, new r({ root: t, rootMargin: i, threshold: n }));
     }
     componentDidMount() {
         if (this.props.active) {

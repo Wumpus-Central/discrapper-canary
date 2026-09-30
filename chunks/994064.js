@@ -385,8 +385,8 @@ class F {
         this.stopTracking();
     }
 }
-var H = n(834730),
-    B = n(866665),
+var B = n(834730),
+    H = n(866665),
     W = n(624479),
     K = n(789645),
     z = n(957565),
@@ -465,11 +465,11 @@ function $(e) {
             (0, l.jsxs)("div", {
                 className: Z.wx,
                 children: [
-                    (0, l.jsx)(H.E, { variant: "text-md/bold", color: "none", children: "Stats for Nerds" }),
+                    (0, l.jsx)(B.E, { variant: "text-md/bold", color: "none", children: "Stats for Nerds" }),
                     (0, l.jsxs)("div", {
                         className: Z.Pz,
                         children: [
-                            (0, l.jsx)(B.m, {
+                            (0, l.jsx)(H.m, {
                                 text: d ? J : q,
                                 children: (0, l.jsx)(h.D, {
                                     className: Z.cL,
@@ -479,7 +479,7 @@ function $(e) {
                                     children: (0, l.jsx)(W.CopyIcon, { size: "md", color: "currentColor" }),
                                 }),
                             }),
-                            (0, l.jsx)(B.m, {
+                            (0, l.jsx)(H.m, {
                                 text: Y,
                                 children: (0, l.jsx)(h.D, {
                                     className: Z.b,

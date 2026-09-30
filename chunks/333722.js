@@ -1,8 +1,8 @@
 i.d(t, { s: () => T, A: () => g });
-var s = i(477900);
+var n = i(477900);
 i(582128);
-var n = i(503698),
-    r = i.n(n),
+var s = i(503698),
+    r = i.n(s),
     l = i(104510),
     a = i(957485),
     o = i(926268),
@@ -15,7 +15,7 @@ let T = [
     {
         icon: function (e) {
             let { className: t } = e;
-            return (0, s.jsx)("img", { className: r()(t, m.Dp), src: "/assets/185ece790f20d870.svg", alt: "" });
+            return (0, n.jsx)("img", { className: r()(t, m.Dp), src: "/assets/185ece790f20d870.svg", alt: "" });
         },
         getText: () => u.intl.string(u.t.hjQuV2),
     },
@@ -24,21 +24,21 @@ let T = [
 ];
 function g(e) {
     let { className: t } = e;
-    return (0, s.jsxs)("div", {
+    return (0, n.jsxs)("div", {
         className: r()(m.iE, t),
         children: [
-            (0, s.jsx)(c.D, { className: m.R_, variant: "heading-xxl/semibold", children: u.intl.string(u.t.IzKs3o) }),
-            (0, s.jsx)("div", {
+            (0, n.jsx)(c.D, { className: m.R_, variant: "heading-xxl/semibold", children: u.intl.string(u.t.IzKs3o) }),
+            (0, n.jsx)("div", {
                 className: m.kR,
                 children: T.map((e, t) => {
                     let i = e.icon;
-                    return (0, s.jsxs)(
+                    return (0, n.jsxs)(
                         "div",
                         {
                             className: m.Nr,
                             children: [
-                                (0, s.jsx)(i, { className: m.Kk }),
-                                (0, s.jsx)(d.E, {
+                                (0, n.jsx)(i, { className: m.Kk }),
+                                (0, n.jsx)(d.E, {
                                     className: m.h_,
                                     color: "text-muted",
                                     variant: "text-md/medium",

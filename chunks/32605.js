@@ -1,23 +1,23 @@
-n.d(t, { default: () => c, z: () => d });
+n.d(t, { default: () => u, z: () => d });
 var i = n(477900);
 n(582128);
 var l = n(192308),
-    a = n(780964),
-    r = n(766075),
-    o = n(831318),
+    o = n(780964),
+    a = n(766075),
+    r = n(831318),
     s = n(375708),
-    u = n(271110);
-function c(e) {
+    c = n(271110);
+function u(e) {
     let { onClose: t, ...n } = e,
         l = s.intl.format(s.t["JmbS+T"], {
             onClick: () => {
-                ((0, r.openUserSettings)(a.X.NITRO_PANEL), t());
+                ((0, a.openUserSettings)(o.X.NITRO_PANEL), t());
             },
         });
-    return (0, i.jsx)(o.A, {
+    return (0, i.jsx)(r.A, {
         title: s.intl.string(s.t.N4SCJ0),
         subtitle: l,
-        graphic: { src: u, type: "image" },
+        graphic: { src: c, type: "image" },
         onSecondaryClick: t,
         secondaryCTA: s.intl.string(s.t.f3Pet9),
         onClose: t,

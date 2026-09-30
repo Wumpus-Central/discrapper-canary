@@ -1,7 +1,7 @@
 i.d(t, { A: () => g });
-var s = i(477900),
-    n = i(503698),
-    r = i.n(n),
+var n = i(477900),
+    s = i(503698),
+    r = i.n(s),
     l = i(462887),
     a = i(866665),
     o = i(834730),
@@ -13,12 +13,12 @@ var s = i(477900),
 let g = function (e) {
     let { alwaysWhite: t = !1 } = e,
         i = (0, c.DP)(),
-        n = (0, l.q)(i);
-    return (0, s.jsx)(a.m, {
+        s = (0, l.q)(i);
+    return (0, n.jsx)(a.m, {
         text: m.intl.formatToPlainString(u.default["5xN/C1"], { premiumGroupProductName: (0, d.DP)() }),
-        children: (0, s.jsx)("div", {
-            className: r()(T.bE, { [T._k]: !t && n }),
-            children: (0, s.jsx)(o.E, {
+        children: (0, n.jsx)("div", {
+            className: r()(T.bE, { [T._k]: !t && s }),
+            children: (0, n.jsx)(o.E, {
                 variant: "eyebrow",
                 color: t ? "text-overlay-light" : void 0,
                 className: T.gp,

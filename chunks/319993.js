@@ -44,8 +44,8 @@ var U = n(375708),
         l),
     G = n(202541),
     F = n(652215),
-    H = n(653131);
-function B(e) {
+    B = n(653131);
+function H(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: l } = e,
         r = s.useCallback(async () => {
             if ((n(), null != t))
@@ -154,12 +154,12 @@ function W(e) {
     return G
         ? (0, i.jsx)(O.Y0, {})
         : (0, i.jsxs)("div", {
-              className: H.op,
+              className: B.op,
               children: [
                   (0, i.jsxs)(O.Uq, {
                       children: [
                           (0, i.jsxs)("div", {
-                              className: H.g4,
+                              className: B.g4,
                               children: [
                                   (0, i.jsx)(k.Ay, {
                                       buttonOverlay: L.If.NONE,
@@ -173,16 +173,16 @@ function W(e) {
                           }),
                           null != F &&
                               (0, i.jsxs)("div", {
-                                  className: H.Qe,
+                                  className: B.Qe,
                                   children: [
                                       (0, i.jsx)(d.E, {
                                           variant: "eyebrow",
                                           color: "text-muted",
-                                          className: H.x$,
+                                          className: B.x$,
                                           children: x ? U.intl.string(U.t.tGDabk) : U.intl.string(U.t.rnOmOa),
                                       }),
                                       (0, i.jsx)("div", {
-                                          className: H.Ff,
+                                          className: B.Ff,
                                           children: (0, i.jsx)(R.G7, {
                                               expressionSourceGuild: F,
                                               hasJoinedExpressionSourceGuild: x,
@@ -190,12 +190,12 @@ function W(e) {
                                               closePopout: h,
                                           }),
                                       }),
-                                      (0, i.jsx)(B, { buttonType: j, discoverableGuildId: A?.id, closePopout: h }),
+                                      (0, i.jsx)(H, { buttonType: j, discoverableGuildId: A?.id, closePopout: h }),
                                   ],
                               }),
                       ],
                   }),
-                  (0, i.jsx)(m.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.aZ }),
+                  (0, i.jsx)(m.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: B.aZ }),
               ],
           });
 }
@@ -212,11 +212,11 @@ function z() {
         };
     })();
     return (0, i.jsxs)(c.D, {
-        className: H.xJ,
+        className: B.xJ,
         onClick: (e) => e.stopPropagation(),
         children: [
             (0, i.jsx)(d.E, { variant: "text-sm/normal", children: U.intl.string(U.t["2JbvKw"]) }),
-            (0, i.jsx)(h.A, { onValueChange: t, className: H.aw, initialValue: (0, y.M)(e), maxValue: 100 }),
+            (0, i.jsx)(h.A, { onValueChange: t, className: B.aw, initialValue: (0, y.M)(e), maxValue: 100 }),
         ],
     });
 }
@@ -226,22 +226,22 @@ function Z(e) {
         s = (0, o.bG)([I.default], () => S.Ay.canUseSoundboardEverywhere(I.default.getCurrentUser())),
         r = (0, o.bG)([E.A], () => E.A.getGuildId());
     return n || s || "0" === t.guildId || t.guildId === r || !l
-        ? (0, i.jsx)(m.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.aZ })
+        ? (0, i.jsx)(m.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: B.aZ })
         : (0, i.jsxs)("div", {
-              className: H.Mq,
+              className: B.Mq,
               children: [
-                  (0, i.jsx)("div", { className: H.Nh }),
+                  (0, i.jsx)("div", { className: B.Nh }),
                   (0, i.jsxs)("div", {
-                      className: H.Pc,
+                      className: B.Pc,
                       children: [
-                          (0, i.jsx)(f.t, { size: "xxs", color: "white", className: H.aJ }),
+                          (0, i.jsx)(f.t, { size: "xxs", color: "white", className: B.aJ }),
                           (0, i.jsx)(d.E, {
                               variant: "text-xs/medium",
                               color: "text-overlay-light",
-                              className: H.sD,
+                              className: B.sD,
                               children: U.intl.string(U.t["BMw+7I"]),
                           }),
-                          (0, i.jsx)(m.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: H.KD }),
+                          (0, i.jsx)(m.Lp, { text: "BETA", color: u.A.colors.BACKGROUND_BRAND.css, className: B.KD }),
                       ],
                   }),
               ],
@@ -250,21 +250,21 @@ function Z(e) {
 function Y(e) {
     let { sound: t } = e;
     return (0, i.jsxs)("div", {
-        className: a()(H.op, H.kX),
+        className: a()(B.op, B.kX),
         children: [
             (0, i.jsx)(Z, { sound: t }),
             (0, i.jsxs)("div", {
-                className: H.Br,
+                className: B.Br,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: H.tn,
+                        className: B.tn,
                         children: [
-                            (0, i.jsx)(p.J, { size: "sm", className: H.nR }),
+                            (0, i.jsx)(p.J, { size: "sm", className: B.nR }),
                             (0, i.jsx)(d.E, { variant: "text-md/semibold", color: "text-strong", children: t.name }),
                         ],
                     }),
                     (0, i.jsx)("div", {
-                        className: H.tn,
+                        className: B.tn,
                         children: (0, i.jsx)(d.E, { variant: "text-sm/normal", children: U.intl.string(U.t.D6eYmf) }),
                     }),
                 ],

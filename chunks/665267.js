@@ -14,8 +14,8 @@ var i = n(477900),
     h = n(724651),
     E = n(732280),
     S = n(792656),
-    p = n(511484),
-    x = n(811611),
+    x = n(511484),
+    p = n(811611),
     T = n(174459),
     f = n(830543),
     _ = n(652215),
@@ -28,7 +28,7 @@ function y() {
 }
 function v() {
     let e = (0, h.O)(),
-        t = (0, p.U9)(e, N.pe.TIER_2)
+        t = (0, x.U9)(e, N.pe.TIER_2)
             ? C.intl.formatToPlainString(C.t.bkQ4bH, { percent: e?.discount.amount })
             : C.intl.string(C.t.mr4K7D);
     return (0, i.jsx)(S.A, {
@@ -83,7 +83,7 @@ function L() {
                       }),
                   }),
                   (0, i.jsx)("div", { className: b.BU }),
-                  (0, i.jsx)(x.Ay, { type: N.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: N.pe.TIER_2 }),
+                  (0, i.jsx)(p.Ay, { type: N.e.PREMIUM_CLIENT_THEME_SETTINGS_UPSELL, subscriptionTier: N.pe.TIER_2 }),
               ],
           })
         : null;

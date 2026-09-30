@@ -42,10 +42,10 @@ function U(e) {
             user: V,
             onGameJoin: G,
             onClose: F,
-            location: H,
-            supportsAskToJoin: B = !0,
+            location: B,
+            supportsAskToJoin: H = !0,
         } = e,
-        { analyticsLocations: W } = (0, E.Ay)(H ?? []),
+        { analyticsLocations: W } = (0, E.Ay)(B ?? []),
         [K, z] = l.useState(!1),
         Z = U?.applicationId ?? n?.application_id,
         Y = null != U || (0, A.A)(n),
@@ -184,7 +184,7 @@ function U(e) {
         }
     }
     if (
-        (es === p.o.CANNOT_JOIN && !B) ||
+        (es === p.o.CANNOT_JOIN && !H) ||
         (es === p.o.CANNOT_JOIN && (0, y.n)(en, w.gfo.EMBEDDED)) ||
         (!ed && !K && null == t)
     )

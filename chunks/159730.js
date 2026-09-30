@@ -1,4 +1,4 @@
-n.d(t, { A: () => W, Y: () => B });
+n.d(t, { A: () => W, Y: () => H });
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -401,8 +401,8 @@ function G() {
     return (0, l.jsx)(l.Fragment, { children: D.intl.format(D.t.oQuG3K, { serverName: t }) });
 }
 var F = n(79858),
-    H = n(303634);
-class B extends i.PureComponent {
+    B = n(303634);
+class H extends i.PureComponent {
     state = { offsetX: null, offsetY: null };
     contentRef = i.createRef();
     componentDidMount() {
@@ -500,7 +500,7 @@ class B extends i.PureComponent {
             A = { left: null != g ? i.x + g : void 0, top: null != x ? i.y + x : void 0 };
         function C(e) {
             let t = n && !e;
-            return { [H.bW]: t, [H.EO]: !t, [H.TX]: c };
+            return { [B.bW]: t, [B.EO]: !t, [B.TX]: c };
         }
         let E = this.getTutorialPopoutText();
         return (0, l.jsx)(p.Ay, {
@@ -522,23 +522,23 @@ class B extends i.PureComponent {
                 return (0, l.jsx)(d.D, {
                     ...e,
                     "aria-label": D.intl.string(D.t.IyCzIF),
-                    className: H.q3,
+                    className: B.q3,
                     style: A,
                     innerRef: this.contentRef,
                     children: (0, l.jsxs)("div", {
-                        className: r()(H.Mp, C(s)),
+                        className: r()(B.Mp, C(s)),
                         children: [
                             ((i = n && !s),
                             !0 !== c
                                 ? null
                                 : (0, l.jsxs)("div", {
                                       children: [
-                                          (0, l.jsx)("div", { className: r()(H.Mn, { [H.bW]: i, [H.EO]: !i }) }),
-                                          (0, l.jsx)("div", { className: r()(H.sQ, { [H.bW]: i, [H.EO]: !i }) }),
+                                          (0, l.jsx)("div", { className: r()(B.Mn, { [B.bW]: i, [B.EO]: !i }) }),
+                                          (0, l.jsx)("div", { className: r()(B.sQ, { [B.bW]: i, [B.EO]: !i }) }),
                                       ],
                                   })),
-                            (0, l.jsx)("div", { className: r()(H.r6, C(s)) }),
-                            (0, l.jsx)("div", { className: r()(H.CY, C(s)) }),
+                            (0, l.jsx)("div", { className: r()(B.r6, C(s)) }),
+                            (0, l.jsx)("div", { className: r()(B.CY, C(s)) }),
                         ],
                     }),
                 });
@@ -567,7 +567,7 @@ let W =
                                 r = t[i];
                             return (
                                 o()(null != r, `Missing tutorial definition for ${i}`),
-                                (0, l.jsx)(B, { tutorialId: i, tutorialDefinition: r, focused: n, ...s }, i)
+                                (0, l.jsx)(H, { tutorialId: i, tutorialDefinition: r, focused: n, ...s }, i)
                             );
                         }),
                     })

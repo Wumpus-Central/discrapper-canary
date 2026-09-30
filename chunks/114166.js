@@ -1,55 +1,55 @@
-n.d(t, { A: () => h, x: () => m });
-var i,
-    l = n(477900),
-    a = n(582128),
+n.d(t, { A: () => m, x: () => h });
+var l,
+    i = n(477900),
+    s = n(582128),
     r = n(435558),
-    o = n.n(r),
-    s = n(615300),
+    a = n.n(r),
+    o = n(615300),
     u = n(531685),
-    c = (((i = c || {})[(i.ABOVE = 0)] = "ABOVE"), (i[(i.VISIBLE = 1)] = "VISIBLE"), (i[(i.BELOW = 2)] = "BELOW"), i);
+    c = (((l = c || {})[(l.ABOVE = 0)] = "ABOVE"), (l[(l.VISIBLE = 1)] = "VISIBLE"), (l[(l.BELOW = 2)] = "BELOW"), l);
 function d(e, t) {
-    return { toValue: e, duration: t ?? 300, easing: s.A.Easing.inOut(s.A.Easing.back()) };
+    return { toValue: e, duration: t ?? 300, easing: o.A.Easing.inOut(o.A.Easing.back()) };
 }
-function m(e, t, n) {
+function h(e, t, n) {
     if (null != t) {
-        let i = Math.ceil(Math.log10(e + 1));
-        return null != n && n > 0 ? Math.min(i, n) * t : i * t;
+        let l = Math.ceil(Math.log10(e + 1));
+        return null != n && n > 0 ? Math.min(l, n) * t : l * t;
     }
 }
-class h extends a.PureComponent {
+class m extends s.PureComponent {
     static Positions = c;
     prevAnimate;
     currAnimate;
     constructor(e) {
         (super(e),
             (this.state = { prevValue: null, currValue: e.value, nextValue: null }),
-            (this.prevAnimate = new s.A.Value(0)),
-            (this.currAnimate = new s.A.Value(1)));
+            (this.prevAnimate = new o.A.Value(0)),
+            (this.currAnimate = new o.A.Value(1)));
     }
     static getDerivedStateFromProps(e, t) {
-        let { prevValue: n, currValue: i, nextValue: l } = t;
-        return null == n && i !== e.value
-            ? { prevValue: u.A.isFocused() ? i : null, currValue: e.value }
-            : null != l && l !== e.value
+        let { prevValue: n, currValue: l, nextValue: i } = t;
+        return null == n && l !== e.value
+            ? { prevValue: u.A.isFocused() ? l : null, currValue: e.value }
+            : null != i && i !== e.value
               ? { nextValue: e.value }
               : null;
     }
     componentDidUpdate(e, t) {
-        let { prevValue: n, currValue: i } = this.state;
-        n !== t.prevValue && null != n && this.animateBetween(n, i);
+        let { prevValue: n, currValue: l } = this.state;
+        n !== t.prevValue && null != n && this.animateBetween(n, l);
     }
     animateBetween(e, t) {
         let n,
-            { forcePosition: i, animationSpeed: l } = this.props;
+            { forcePosition: l, animationSpeed: i } = this.props;
         (this.prevAnimate.setValue(1),
-            null != i
-                ? 0 === i
+            null != l
+                ? 0 === l
                     ? (this.currAnimate.setValue(0), (n = 2))
-                    : 2 === i && (this.currAnimate.setValue(2), (n = 0))
+                    : 2 === l && (this.currAnimate.setValue(2), (n = 0))
                 : e > t
                   ? (this.currAnimate.setValue(0), (n = 2))
                   : (this.currAnimate.setValue(2), (n = 0)),
-            s.A.parallel([s.A.timing(this.prevAnimate, d(n, l)), s.A.timing(this.currAnimate, d(1, l))]).start(
+            o.A.parallel([o.A.timing(this.prevAnimate, d(n, i)), o.A.timing(this.currAnimate, d(1, i))]).start(
                 this.animateNext,
             ));
     }
@@ -73,7 +73,7 @@ class h extends a.PureComponent {
     }
     getMinWidth(e) {
         let { digitWidth: t, padStartLength: n } = this.props;
-        return m(e, t, n);
+        return h(e, t, n);
     }
     padValue(e) {
         let { padStartLength: t } = this.props;
@@ -81,30 +81,30 @@ class h extends a.PureComponent {
     }
     render() {
         let { prevValue: e, currValue: t } = this.state,
-            { color: n, formatString: i } = this.props,
-            a = o().omit(this.props, ["value", "digitWidth", "padStartLength", "forcePosition"]);
+            { color: n, formatString: l } = this.props,
+            s = a().omit(this.props, ["value", "digitWidth", "padStartLength", "forcePosition"]);
         if (null == e)
-            return (0, l.jsx)("div", {
-                ...a,
+            return (0, i.jsx)("div", {
+                ...s,
                 style: { color: n, minWidth: this.getMinWidth(t) },
-                children: null != i ? i(this.padValue(t)) : this.padValue(t),
+                children: null != l ? l(this.padValue(t)) : this.padValue(t),
             });
         let r = Math.max(e, t);
-        return (0, l.jsxs)("div", {
-            ...a,
+        return (0, i.jsxs)("div", {
+            ...s,
             style: { color: n, position: "relative", overflow: "hidden" },
             children: [
-                (0, l.jsx)("div", {
+                (0, i.jsx)("div", {
                     style: { visibility: "hidden", minWidth: this.getMinWidth(r) },
                     children: this.padValue(r),
                 }),
-                (0, l.jsx)(s.A.div, {
+                (0, i.jsx)(o.A.div, {
                     style: { color: n, ...this.getAnimatedStyle(this.prevAnimate) },
-                    children: null != i ? i(this.padValue(e)) : this.padValue(e),
+                    children: null != l ? l(this.padValue(e)) : this.padValue(e),
                 }),
-                (0, l.jsx)(s.A.div, {
+                (0, i.jsx)(o.A.div, {
                     style: { color: n, ...this.getAnimatedStyle(this.currAnimate) },
-                    children: null != i ? i(this.padValue(t)) : this.padValue(t),
+                    children: null != l ? l(this.padValue(t)) : this.padValue(t),
                 }),
             ],
         });

@@ -1,35 +1,35 @@
-n.d(t, { A: () => i, o: () => a });
-var r = n(477900),
-    l = n(582128),
-    u = n(461782);
+n.d(t, { A: () => s, o: () => a });
+var l = n(477900),
+    r = n(582128),
+    i = n(461782);
 function a(e) {
-    let { onPreventIdle: t, onAllowIdle: n, onActive: r } = l.useContext(u.k3);
+    let { onPreventIdle: t, onAllowIdle: n, onActive: l } = r.useContext(i.k3);
     return {
-        preventIdle: l.useCallback(() => {
+        preventIdle: r.useCallback(() => {
             t(e);
         }, [e, t]),
-        allowIdle: l.useCallback(() => {
+        allowIdle: r.useCallback(() => {
             n(e);
         }, [e, n]),
-        onActive: r,
+        onActive: l,
     };
 }
-function i(e) {
+function s(e) {
     let { children: t, className: n } = e,
-        { preventIdle: u, allowIdle: i } = a("interact-hover"),
-        { preventIdle: s, allowIdle: c } = a("interact-focus");
-    l.useEffect(
+        { preventIdle: i, allowIdle: s } = a("interact-hover"),
+        { preventIdle: u, allowIdle: o } = a("interact-focus");
+    r.useEffect(
         () => () => {
-            (i(), c());
+            (s(), o());
         },
-        [i, c],
+        [s, o],
     );
-    let o = l.useCallback(
+    let c = r.useCallback(
         (e) => {
             let t = e.target.ownerDocument ?? document;
-            e.currentTarget.contains(t.activeElement) || c();
+            e.currentTarget.contains(t.activeElement) || o();
         },
-        [c],
+        [o],
     );
-    return (0, r.jsx)("div", { className: n, onMouseEnter: u, onMouseLeave: i, onFocus: s, onBlur: o, children: t });
+    return (0, l.jsx)("div", { className: n, onMouseEnter: i, onMouseLeave: s, onFocus: u, onBlur: c, children: t });
 }

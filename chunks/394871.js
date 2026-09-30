@@ -242,10 +242,10 @@ function F(e) {
         w = n?.find((e) => e.name === j?.name),
         D = t?.bot === !0,
         F = (0, o.bG)([E.A], () => E.A.isBlockedOrIgnored(t?.id)),
-        H = b?.state != null,
-        B = null != _,
-        W = !B && null != u,
-        K = M.length + (B || W ? 1 : 0),
+        B = b?.state != null,
+        H = null != _,
+        W = !H && null != u,
+        K = M.length + (H || W ? 1 : 0),
         z = K > 1,
         Z = b?.state != null && "xs" === x;
     if (F) return null;
@@ -289,7 +289,7 @@ function F(e) {
         return (0, l.jsx)(V, {
             textVariant: `text-${x}/medium`,
             className: p,
-            hasCustomStatusText: H,
+            hasCustomStatusText: B,
             totalActivityCount: K,
         });
     }

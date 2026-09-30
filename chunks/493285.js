@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     qf: "placeholder_ca96ab",
     x6: "button_ca96ab",
     nz: "buttonSm_ca96ab",
