@@ -1,4 +1,4 @@
-a.d(t, { B: () => o, MZ: () => l, TH: () => s, tn: () => i });
+a.d(t, { B: () => o, MZ: () => l, TH: () => i, tn: () => s });
 let n = [
     {
         date: "2026-09-07",
@@ -8,18 +8,65 @@ let n = [
             "A Priority toggle arrives in the model picker: on models that offer it, replies come back sooner for more runes, and the Speedrun stop now runs it by default.",
     },
     {
-        date: "2026-09-28",
-        time: "19:34",
-        platforms: ["desktop", "mobile"],
-        summary:
-            "A clone of another project, or one you link to another app, goes straight to building instead of asking you to approve a plan.",
-    },
-    {
         date: "2026-09-11",
         time: "00:00",
         platforms: ["desktop", "mobile"],
         summary:
-            "A new Rust Sphere recipe: a spinning, lit 3D globe drawn by Rust running as WebAssembly, ready to clone into your own renderer.",
+            "A new Rust Sphere recipe: a spinning, lit 3D globe drawn by Rust running as WebAssembly, ready to remix into your own renderer.",
+    },
+    {
+        date: "2026-09-28",
+        time: "19:34",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "A remix of another project, or one you link to another app, goes straight to building instead of asking you to approve a plan.",
+    },
+    {
+        date: "2026-10-01",
+        time: "00:00",
+        platforms: ["desktop", "mobile"],
+        summary: "Clone is called Remix again: same button, same copy of the app to make your own.",
+    },
+    {
+        date: "2026-09-06",
+        time: "00:01",
+        platforms: ["desktop"],
+        summary:
+            "Collaborators on an app shared with their server can now remix it into a copy of their own, with no need for the owner to turn sharing on first.",
+    },
+    {
+        date: "2026-09-15",
+        time: "00:00",
+        platforms: ["mobile"],
+        summary:
+            "On phones, a project has the same menu as desktop: remix it, export or import it, get its coding tool link, browse version history and rewind its data from the chat menu, and copy its link or ID, open its settings or delete it from the landing.",
+    },
+    {
+        date: "2026-09-12",
+        time: "00:00",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Plans for an app you imported or remixed no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
+    },
+    {
+        date: "2026-09-03",
+        time: "00:01",
+        platforms: ["desktop"],
+        summary: "Remix an app and Conjure builds your copy first, so the ideas it suggests are ones you can try.",
+    },
+    {
+        date: "2026-09-06",
+        time: "00:00",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Remixed an app? When the original improves, Conjure offers to update your copy while keeping every change you made, only checking with you on the rare spot it cannot keep both. You can also ask it to inherit updates from another app by its project id, even for a project you imported rather than remixed.",
+    },
+    {
+        date: "2026-09-25",
+        time: "15:51",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Remixing an app shows your copy running in a few seconds, before Conjure has even finished looking it over.",
     },
     {
         date: "2026-09-29",
@@ -149,38 +196,11 @@ let n = [
             "Claude Opus 5.5 now powers the Big Brain effort stop, and each effort stop runs the same models in every project.",
     },
     {
-        date: "2026-09-03",
-        time: "00:01",
-        platforms: ["desktop"],
-        summary: "Clone an app and Conjure builds your copy first, so the ideas it suggests are ones you can try.",
-    },
-    {
-        date: "2026-09-06",
-        time: "00:00",
-        platforms: ["desktop", "mobile"],
-        summary:
-            "Cloned an app? When the original improves, Conjure offers to update your copy while keeping every change you made, only checking with you on the rare spot it cannot keep both. You can also ask it to inherit updates from another app by its project id, even for a project you imported rather than cloned.",
-    },
-    {
         date: "2026-09-27",
         time: "09:51",
         platforms: ["desktop", "mobile"],
         summary:
             "Coding tools you connect to an app can now search and script its files, read the Mana docs, set its settings, public pages and icon, use your uploads, and bring in updates from the original, and a broken manifest edit is caught before it deploys.",
-    },
-    {
-        date: "2026-09-25",
-        time: "15:51",
-        platforms: ["desktop", "mobile"],
-        summary:
-            "Cloning an app shows your copy running in a few seconds, before Conjure has even finished looking it over.",
-    },
-    {
-        date: "2026-09-06",
-        time: "00:01",
-        platforms: ["desktop"],
-        summary:
-            "Collaborators on an app shared with their server can now clone it for themselves, with no need for the owner to turn sharing on first.",
     },
     {
         date: "2026-09-28",
@@ -464,13 +484,6 @@ let n = [
             "On phones, a conjured card on your own profile has a refresh button, so a fresh build shows up without waiting.",
     },
     {
-        date: "2026-09-15",
-        time: "00:00",
-        platforms: ["mobile"],
-        summary:
-            "On phones, a project has the same menu as desktop: clone it, export or import it, get its coding tool link, browse version history and rewind its data from the chat menu, and copy its link or ID, open its settings or delete it from the landing.",
-    },
-    {
         date: "2026-09-18",
         time: "00:06",
         platforms: ["mobile"],
@@ -708,13 +721,6 @@ let n = [
         time: "00:03",
         platforms: ["desktop", "mobile"],
         summary: "Plan proposals come with a wireframe sketch, so you can see the shape of the app before you say go.",
-    },
-    {
-        date: "2026-09-12",
-        time: "00:00",
-        platforms: ["desktop", "mobile"],
-        summary:
-            "Plans for an app you imported or cloned no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
     },
     {
         date: "2026-09-27",
@@ -1092,14 +1098,14 @@ let n = [
             ? -1
             : +(e.summary > t.summary);
 });
-function s(e) {
-    return i(e).slice(0, 3);
-}
 function i(e) {
+    return s(e).slice(0, 3);
+}
+function s(e) {
     return n.filter((t) => t.platforms.includes(e));
 }
 function o(e) {
-    return i(e).length > 3;
+    return s(e).length > 3;
 }
 function l(e) {
     return 1 === e.platforms.length;
