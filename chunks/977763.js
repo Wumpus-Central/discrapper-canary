@@ -220,24 +220,24 @@ var x = a(17928),
     w = a(287809),
     k = a(427262),
     I = a(539888),
-    R = a(927813);
-let D = a(282435).sx.slice(0, 10),
+    D = a(927813);
+let R = a(282435).sx.slice(0, 10),
     G = [
-        { days: 7, totalSeconds: 38 * R.A.Seconds.HOUR + 900, gameIndexes: [0, 1, 2, 3, 4, 5, 6, 7] },
-        { days: 7, totalSeconds: 32 * R.A.Seconds.HOUR + 2400, gameIndexes: [1, 2, 3, 4, 5, 6, 8] },
-        { days: 5, totalSeconds: 26 * R.A.Seconds.HOUR + 3e3, gameIndexes: [0, 2, 4, 6, 8, 9] },
-        { days: 4, totalSeconds: 21 * R.A.Seconds.HOUR + 600, gameIndexes: [1, 3, 5, 7, 9] },
-        { days: 3, totalSeconds: 14 * R.A.Seconds.HOUR + 2100, gameIndexes: [0, 1, 2, 3, 4] },
-        { days: 2, totalSeconds: 9 * R.A.Seconds.HOUR + 2880, gameIndexes: [2, 4, 6, 8] },
-        { days: 2, totalSeconds: 8 * R.A.Seconds.HOUR + 720, gameIndexes: [0, 3, 5, 9] },
-        { days: 1, totalSeconds: 7 * R.A.Seconds.HOUR + 2280, gameIndexes: [1, 4, 7] },
-        { days: 1, totalSeconds: 6 * R.A.Seconds.HOUR + 720, gameIndexes: [0, 2, 8] },
-        { days: 1, totalSeconds: 5 * R.A.Seconds.HOUR + 1140, gameIndexes: [3, 6] },
-        { days: 1, totalSeconds: 4 * R.A.Seconds.HOUR + 3420, gameIndexes: [1, 9] },
-        { days: 1, totalSeconds: 4 * R.A.Seconds.HOUR + 2760, gameIndexes: [0, 5] },
-        { days: 1, totalSeconds: 3 * R.A.Seconds.HOUR + 2100, gameIndexes: [4] },
-        { days: 1, totalSeconds: 2 * R.A.Seconds.HOUR + 3060, gameIndexes: [7] },
-        { days: 1, totalSeconds: +R.A.Seconds.HOUR + 1320, gameIndexes: [2] },
+        { days: 7, totalSeconds: 7 * D.A.Seconds.DAY - 60, gameIndexes: [0, 1, 2, 3, 4, 5, 6, 7] },
+        { days: 7, totalSeconds: 32 * D.A.Seconds.HOUR + 2400, gameIndexes: [1, 2, 3, 4, 5, 6, 8] },
+        { days: 5, totalSeconds: 26 * D.A.Seconds.HOUR + 3e3, gameIndexes: [0, 2, 4, 6, 8, 9] },
+        { days: 4, totalSeconds: 21 * D.A.Seconds.HOUR, gameIndexes: [1, 3, 5, 7, 9] },
+        { days: 3, totalSeconds: 14 * D.A.Seconds.HOUR, gameIndexes: [0, 1, 2, 3, 4] },
+        { days: 2, totalSeconds: 9 * D.A.Seconds.HOUR + 2880, gameIndexes: [2, 4, 6, 8] },
+        { days: 2, totalSeconds: 8 * D.A.Seconds.HOUR + 720, gameIndexes: [0, 3, 5, 9] },
+        { days: 1, totalSeconds: 7 * D.A.Seconds.HOUR + 2280, gameIndexes: [1, 4, 7] },
+        { days: 1, totalSeconds: 6 * D.A.Seconds.HOUR + 720, gameIndexes: [0, 2, 8] },
+        { days: 1, totalSeconds: 5 * D.A.Seconds.HOUR + 1140, gameIndexes: [3, 6] },
+        { days: 1, totalSeconds: 4 * D.A.Seconds.HOUR + 3420, gameIndexes: [1, 9] },
+        { days: 1, totalSeconds: 4 * D.A.Seconds.HOUR + 2760, gameIndexes: [0, 5] },
+        { days: 1, totalSeconds: 3 * D.A.Seconds.HOUR + 2100, gameIndexes: [4] },
+        { days: 1, totalSeconds: 2 * D.A.Seconds.HOUR + 3060, gameIndexes: [7] },
+        { days: 1, totalSeconds: +D.A.Seconds.HOUR + 1320, gameIndexes: [2] },
         { days: 1, totalSeconds: 3480, gameIndexes: [5] },
         { days: 1, totalSeconds: 2820, gameIndexes: [8] },
         { days: 1, totalSeconds: 2160, gameIndexes: [0] },
@@ -253,7 +253,7 @@ function P(e) {
         children: [(0, s.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-let U = {
+let N = {
     name: "Gaming Leaderboard",
     id: "guild-space-gaming-leaderboard",
     component: function (e) {
@@ -288,7 +288,7 @@ let U = {
         let _ = (function (e) {
                 let {
                         memberIds: t,
-                        gameIds: a = D,
+                        gameIds: a = R,
                         stat: s = p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
                         entryCount: l = G.length,
                         ended: n = !1,
@@ -297,11 +297,11 @@ let U = {
                     i = Math.floor(Date.now() / 1e3);
                 return {
                     stat: s,
-                    week_start_ts: i - (n ? 8 : 3) * R.A.Seconds.DAY,
+                    week_start_ts: i - (n ? 8 : 3) * D.A.Seconds.DAY,
                     next_stat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
                     previous_winner: t[0],
                     streak_count: 3,
-                    computed_at: new Date((i - R.A.Seconds.DAY) * 1e3).toISOString(),
+                    computed_at: new Date((i - D.A.Seconds.DAY) * 1e3).toISOString(),
                     entries: r.map((e, l) => {
                         let n;
                         return {
@@ -390,7 +390,7 @@ let U = {
         },
     },
 };
-var N = a(343508);
+var U = a(343508);
 let H = [32, 21, 15, 14, 9],
     O = [3, 2, 0, 3, 1],
     C = g("popular-music", _.a.POPULAR_MUSIC, 0, 0),
@@ -526,8 +526,8 @@ let H = [32, 21, 15, 14, 9],
         top_listeners: [],
         computed_at: null,
     },
-    W = { ranked_songs: [], ranked_artists: [], top_listeners: [], computed_at: null },
-    Y = [
+    Y = { ranked_songs: [], ranked_artists: [], top_listeners: [], computed_at: null },
+    W = [
         {
             artist_external_id: "1vCWHaC5f2uS3yhpwWbIA6",
             artist_name: "Dayseeker",
@@ -558,7 +558,7 @@ function q(e, t, a) {
                                     track_title: s.track_title,
                                     artist_name: s.artist_name,
                                 },
-                      recent_artists: Y.slice(0, O[t] ?? 0),
+                      recent_artists: W.slice(0, O[t] ?? 0),
                       artist_count: 0 === t ? 5 : null,
                   })
                 : { user_id: e, plays: H[t] ?? 1 };
@@ -568,7 +568,7 @@ function q(e, t, a) {
 function F(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${N.Gt} ${a}`,
+        className: `${U.Gt} ${a}`,
         children: [(0, s.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
@@ -659,7 +659,7 @@ let K = {
                     },
                 ],
             },
-            { title: "Server Hub Gaming Leaderboard", stories: [U] },
+            { title: "Server Hub Gaming Leaderboard", stories: [N] },
             {
                 title: "Server Hub Popular Music",
                 stories: [
@@ -679,7 +679,7 @@ let K = {
                                         case "minimal":
                                             return { status: "success", data: q(B, t, !1) };
                                         case "empty":
-                                            return { status: "success", data: W };
+                                            return { status: "success", data: Y };
                                         case "loading":
                                             return { status: "loading" };
                                         case "error":
@@ -708,21 +708,21 @@ let K = {
                                 );
                             }
                             return (0, s.jsxs)("div", {
-                                className: N.Zp,
+                                className: U.Zp,
                                 children: [
                                     (0, s.jsx)(F, {
                                         label: "Wide column (685px)",
-                                        className: N.U,
+                                        className: U.U,
                                         children: u("wide"),
                                     }),
                                     (0, s.jsx)(F, {
                                         label: "Narrow column (380px)",
-                                        className: N.sc,
+                                        className: U.sc,
                                         children: u("narrow"),
                                     }),
                                     (0, s.jsx)(F, {
                                         label: "Minimum width (320px)",
-                                        className: N.Bp,
+                                        className: U.Bp,
                                         children: u("minimum"),
                                     }),
                                 ],

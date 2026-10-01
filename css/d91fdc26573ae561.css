@@ -87,8 +87,7 @@
 
 .metric__86e10 {
     align-items: flex-start;
-    cursor: pointer;
-    width: 110px
+    cursor: pointer
 }
 
 .metricPrimary__86e10 {
@@ -265,13 +264,29 @@
     width: 100%
 }
 
+.body__95c51 {
+    position: relative
+}
+
+.metricMeasure__95c51 {
+    display: flex;
+    flex-direction: column;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    pointer-events: none;
+    position: absolute;
+    visibility: hidden;
+    width: -moz-max-content;
+    width: max-content
+}
+
 .listArea__95c51 {
     position: relative
 }
 
 .list__95c51 {
     max-height: calc(var(--space-40)*8);
-    padding: var(--space-4)
+    padding: var(--space-8)
 }
 
 .list__95c51.inModal__95c51 {
@@ -309,8 +324,9 @@
 }
 
 .floatingRow__95c51 {
-    inset-inline-end: var(--space-4);
-    inset-inline-start: var(--space-4);
+    cursor: pointer;
+    inset-inline-end: var(--space-8);
+    inset-inline-start: var(--space-8);
     position: absolute;
     z-index: 3
 }
@@ -361,8 +377,8 @@
 
 .activityBar__95c51 {
     inset-block-end: var(--space-8);
-    inset-inline-end: var(--space-4);
-    inset-inline-start: var(--space-4);
+    inset-inline-end: var(--space-8);
+    inset-inline-start: var(--space-8);
     position: absolute;
     z-index: 4;
     justify-content: space-between;
@@ -456,4 +472,4 @@
     min-height: 0
 }
 
-/*# sourceMappingURL=8083809467ae3621.css.map*/
+/*# sourceMappingURL=d91fdc26573ae561.css.map*/
