@@ -1640,12 +1640,15 @@ function tF(e) {
 var tB = (((n = {})[(n.OLD_MESSAGES = 0)] = "OLD_MESSAGES"), (n[(n.REPLY = 1)] = "REPLY"), n);
 let tH = (e) => {
     let { type: t = 0, onClick: s, className: n } = e;
+    function l(e) {
+        (e.stopPropagation(), s?.());
+    }
     return (0, a.jsx)(O.Y.Consumer, {
         children: (e) =>
             e.disableInteractions
                 ? null
                 : (0, a.jsxs)("div", {
-                      onClick: s,
+                      onClick: l,
                       className: r()(tI.Sg2, n),
                       children: [
                           (0, a.jsx)("div", {
@@ -1677,7 +1680,7 @@ let tH = (e) => {
                                                     return (0, eB.xb)(e);
                                             }
                                         })(t),
-                                        onClick: s,
+                                        onClick: l,
                                     }),
                                 })
                               : (0, a.jsx)(g.y, {
