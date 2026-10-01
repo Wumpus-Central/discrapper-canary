@@ -1,22 +1,22 @@
 n.d(t, { A: () => k });
 var l = n(477900),
     i = n(582128),
-    s = n(17928),
-    a = n(922016),
-    r = n(683063),
-    o = n(369606),
-    u = n(939249),
-    d = n(696451),
-    c = n(927813),
-    m = n(251812),
-    x = n(518782),
+    s = n(922016),
+    a = n(683063),
+    r = n(369606),
+    o = n(939249),
+    u = n(927813),
+    d = n(251812),
+    c = n(518782),
+    m = n(32090),
+    x = n(17928),
     h = n(964486),
     j = n(309010),
     g = n(287809),
     p = n(174459),
     f = n(562153),
-    N = n(297264),
-    A = n(834730),
+    A = n(297264),
+    N = n(834730),
     I = n(821609),
     v = n(378570),
     b = n(49303),
@@ -27,7 +27,7 @@ var l = n(477900),
     y = n(121051);
 function O(e) {
     let { guildId: t, leaderboardWinnerData: n, title: i, detailText: s, onClose: a } = e,
-        r = n.winningStreak,
+        o = n.winningStreak,
         u = (0, S.Uq)(t, "LeaderboardWinnerBadgePopout");
     return (0, l.jsxs)("div", {
         className: y.Nr,
@@ -37,7 +37,7 @@ function O(e) {
                 children: [
                     (0, l.jsx)("div", {
                         className: y.zc,
-                        children: (0, l.jsx)(o.TrophyIcon, {
+                        children: (0, l.jsx)(r.TrophyIcon, {
                             size: "custom",
                             color: "var(--text-feedback-warning)",
                             width: 40,
@@ -48,16 +48,16 @@ function O(e) {
                     (0, l.jsxs)("div", {
                         className: y.C,
                         children: [
-                            (0, l.jsx)(N.D, { variant: "heading-md/semibold", children: i }),
+                            (0, l.jsx)(A.D, { variant: "heading-md/semibold", children: i }),
                             null != s
-                                ? (0, l.jsx)(A.E, { variant: "text-sm/normal", color: "text-muted", children: s })
+                                ? (0, l.jsx)(N.E, { variant: "text-sm/normal", color: "text-muted", children: s })
                                 : null,
-                            null != r && r > 1
-                                ? (0, l.jsx)(A.E, {
+                            null != o && o > 1
+                                ? (0, l.jsx)(N.E, {
                                       variant: "text-sm/normal",
                                       color: "text-muted",
                                       className: y.AR,
-                                      children: T.intl.format(T.t.ltaxJz, { streakCount: r }),
+                                      children: T.intl.format(T.t.ltaxJz, { streakCount: o }),
                                   })
                                 : null,
                         ],
@@ -86,71 +86,71 @@ function O(e) {
 }
 var _ = n(652215);
 function R(e) {
-    let { guildId: t, userId: n, onClose: i, leaderboardWinnerData: a, detailText: r } = e,
-        o = (0, s.bG)([j.Ay], () => j.Ay.getChannelId(t)),
-        u = (0, s.bG)([g.default], () => g.default.getUser(n)),
-        d = f.Ay.useName(t, o, u);
+    let { guildId: t, userId: n, onClose: i, leaderboardWinnerData: s, detailText: a } = e,
+        r = (0, x.bG)([j.Ay], () => j.Ay.getChannelId(t)),
+        o = (0, x.bG)([g.default], () => g.default.getUser(n)),
+        u = f.Ay.useName(t, r, o);
     (0, h.Ay)(() => {
-        p.default.track(_.HAw.OPEN_POPOUT, { type: "Leaderboard Winner Badge Popout", guild_id: t, channel_id: o });
+        p.default.track(_.HAw.OPEN_POPOUT, { type: "Leaderboard Winner Badge Popout", guild_id: t, channel_id: r });
     });
-    let c = (0, m.K)(a?.winningStat).name;
+    let c = (0, d.K)(s?.winningStat).name;
     return (0, l.jsx)("div", {
         role: "dialog",
-        "aria-label": T.intl.formatToPlainString(T.t["LRh/OJ"], { username: d, statName: c }),
-        children: (0, l.jsx)(O, { guildId: t, leaderboardWinnerData: a, title: c, detailText: r, onClose: i }),
+        "aria-label": T.intl.formatToPlainString(T.t["LRh/OJ"], { username: u, statName: c }),
+        children: (0, l.jsx)(O, { guildId: t, leaderboardWinnerData: s, title: c, detailText: a, onClose: i }),
     });
 }
 var G = n(631949);
 function k(e) {
     let { guildId: t, userId: n } = e,
-        h = i.useRef(null),
-        [j, g] = i.useState(!1),
-        p = (0, s.bG)([d.Ay], () => d.Ay.getMember(t, n)?.gamingLeaderboardData),
-        f = i.useCallback(() => g(!1), []),
-        N = i.useCallback((e) => {
-            (e.preventDefault(), e.stopPropagation(), g((e) => !e));
+        x = i.useRef(null),
+        [h, j] = i.useState(!1),
+        g = (0, m.A)(t, n),
+        p = i.useCallback(() => j(!1), []),
+        f = i.useCallback((e) => {
+            (e.preventDefault(), e.stopPropagation(), j((e) => !e));
         }, []);
-    if (null == p) return null;
-    let A = (0, m.K)(p.winningStat).name,
-        I = (function (e) {
+    if (null == g) return null;
+    let A = (0, d.K)(g.winningStat).name,
+        N = (function (e) {
             let t = e.winningValue;
             if (null == t || !Number.isFinite(t) || t < 0) return null;
             switch (e.winningStat) {
-                case x.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED: {
-                    let e = Math.floor(t / c.A.Millis.MINUTE),
-                        n = Math.floor(e / c.A.Minutes.HOUR),
-                        l = e % c.A.Minutes.HOUR;
+                case c.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED: {
+                    let e = Math.floor(t / u.A.Millis.MINUTE),
+                        n = Math.floor(e / u.A.Minutes.HOUR),
+                        l = e % u.A.Minutes.HOUR;
                     if (0 === n) return T.intl.formatToPlainString(C.default["/272et"], { minutes: l });
                     return T.intl.formatToPlainString(C.default.GC7N5H, { hours: n, minutes: l });
                 }
-                case x.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
+                case c.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED:
                     return T.intl.formatToPlainString(C.default.IXdbVJ, { days: t });
-                case x.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
+                case c.RE.GAMING_LEADERBOARD_STAT_UNIQUE_GAMES_PLAYED:
                     return T.intl.formatToPlainString(C.default["/VAMco"], { count: t });
                 default:
                     return null;
             }
-        })(p),
-        v = null != I ? `${A}. ${I}` : A;
-    return (0, l.jsx)(a.Y, {
-        targetElementRef: h,
-        animation: a.Y.Animation.TRANSLATE,
+        })(g),
+        I = null != N ? `${A}. ${N}` : A;
+    return (0, l.jsx)(s.Y, {
+        targetElementRef: x,
+        animation: s.Y.Animation.TRANSLATE,
         align: "center",
         autoInvert: !0,
         nudgeAlignIntoViewport: !0,
         position: "top",
-        shouldShow: j,
-        onRequestClose: f,
+        shouldShow: h,
+        onRequestClose: p,
         clickTrap: !0,
         renderPopout: (e) => {
             let { closePopout: i } = e;
-            return (0, l.jsx)(R, { guildId: t, userId: n, onClose: i, leaderboardWinnerData: p, detailText: I });
+            return (0, l.jsx)(R, { guildId: t, userId: n, onClose: i, leaderboardWinnerData: g, detailText: N });
         },
         children: () =>
-            (0, l.jsx)(r.u, {
+            (0, l.jsx)(a.u, {
                 title: A,
                 body: T.intl.string(C.default["BX+8uG"]),
-                asset: (0, l.jsx)(o.TrophyIcon, {
+                asset: (0, l.jsx)(r.TrophyIcon, {
                     size: "lg",
                     color: "var(--text-feedback-warning)",
                     "aria-hidden": !0,
@@ -158,16 +158,16 @@ function k(e) {
                 assetSize: 32,
                 position: "top",
                 ariaHidden: !0,
-                shouldShow: !j,
-                children: (0, l.jsx)(u.D, {
+                shouldShow: !h,
+                children: (0, l.jsx)(o.D, {
                     tag: "span",
-                    innerRef: h,
+                    innerRef: x,
                     className: G.M,
-                    "aria-label": v,
+                    "aria-label": I,
                     "aria-haspopup": "dialog",
-                    "aria-expanded": j,
-                    onClick: N,
-                    children: (0, l.jsx)(o.TrophyIcon, { size: "xs", color: "currentColor", "aria-hidden": !0 }),
+                    "aria-expanded": h,
+                    onClick: f,
+                    children: (0, l.jsx)(r.TrophyIcon, { size: "xs", color: "currentColor", "aria-hidden": !0 }),
                 }),
             }),
     });
