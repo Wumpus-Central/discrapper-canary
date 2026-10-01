@@ -269,6 +269,13 @@ let n = [
         summary: "Drop images and files anywhere on the chat to bring them along, not just onto the message box.",
     },
     {
+        date: "2026-10-01",
+        time: "05:02",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Each call Conjure makes to a connected tool service names the tool and service again, under its plain-words label.",
+    },
+    {
         date: "2026-09-30",
         time: "07:31",
         platforms: ["desktop", "mobile"],
