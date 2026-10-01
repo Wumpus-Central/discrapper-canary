@@ -73,7 +73,7 @@ function er(e, n, t) {
 }
 var ed = t(297264),
     ec = t(789645),
-    eo = t(367727),
+    eo = t(501419),
     eu = t(468689),
     eh = t(174998),
     ex = t(395504),
@@ -607,9 +607,9 @@ var eR = t(202776),
     e5 = t(669953),
     e6 = t(817818),
     e9 = t(591552),
-    e2 = t(961973),
-    e8 = t(435558),
-    e7 = t.n(e8),
+    e8 = t(961973),
+    e2 = t(435558),
+    e7 = t.n(e2),
     e3 = t(665260),
     ne = t(355097);
 function nn(e) {
@@ -841,8 +841,8 @@ function nN(e) {
         [s, d] = i.useState(null),
         [c, o] = i.useState(new Set()),
         u = n?.options?.filter((e) => c.has(e.id)),
-        x = (0, e2.a)(u),
-        m = (0, e2.vV)(u),
+        x = (0, e8.a)(u),
+        m = (0, e8.vV)(u),
         C = (0, r.yK)([e9.A], () => e9.A.getOnboardingResponsesForPrompt(t.id, n.id)),
         { helpText: g, helpTextAdditional: A } = (0, ni.W)({
             guild: t,
@@ -936,8 +936,8 @@ function np(e) {
         [s, d] = i.useState(null),
         [c, o] = i.useState(new Set()),
         u = n?.options?.filter((e) => c.has(e.id)),
-        x = (0, e2.a)(u),
-        m = (0, e2.vV)(u),
+        x = (0, e8.a)(u),
+        m = (0, e8.vV)(u),
         C = (0, r.yK)([e9.A], () => e9.A.getOnboardingResponsesForPrompt(t.id, n.id)),
         { helpText: g, helpTextAdditional: A } = (0, ni.W)({
             guild: t,

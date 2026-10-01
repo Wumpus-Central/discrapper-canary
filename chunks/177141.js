@@ -13,7 +13,7 @@ var i = n(536637),
     T = n(587895),
     I = n(145643),
     d = n(826673),
-    N = n(367727),
+    N = n(501419),
     R = n(532205),
     O = n(487329),
     S = n(161518),
@@ -240,29 +240,29 @@ let e$ = {
     e5 = {},
     e3 = Object.freeze({ id: null, message: null, buttonText: null, callback: void 0, metadata: null }),
     e7 = null;
-function e6(e) {
+function e9(e) {
     return e0[e] + "-untilAtLeast";
 }
-function e9(e, t, n) {
+function e8(e, t, n) {
     if (null == e) return;
     let i = e0[e];
     (null == i || t || o.w.set(i, !0), e1.has(e) && (e2[e] = !0), null != n && null != i)
-        ? o.w.set(e6(e), n.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
-        : o.w.remove(e6(e));
+        ? o.w.set(e9(e), n.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
+        : o.w.remove(e9(e));
 }
-let e8 = null;
+let e6 = null;
 function e4() {
-    if (null != e8) return e8;
+    if (null != e6) return e6;
     try {
         let e = document.createElement("canvas").getContext("2d"),
             t = "\uE700\uE701\uE702\uE703\uE704\uE705\uE706\uE707";
         e.font = "16px monospace";
         let n = e.measureText(t).width;
-        ((e.font = '16px "Segoe MDL2 Assets", monospace'), (e8 = e.measureText(t).width !== n));
+        ((e.font = '16px "Segoe MDL2 Assets", monospace'), (e6 = e.measureText(t).width !== n));
     } catch (e) {
-        e8 = !1;
+        e6 = !1;
     }
-    return e8;
+    return e6;
 }
 function te(e) {
     if (null == e) return !1;
@@ -276,7 +276,7 @@ function te(e) {
     let i = e0[e];
     if (null != i) {
         let t,
-            n = null != (t = o.w.get(e6(e))) ? l()(t) : null;
+            n = null != (t = o.w.get(e9(e))) ? l()(t) : null;
         if (null != n) return n?.isAfter(l()());
     }
     let r = e2[e];
@@ -1034,11 +1034,11 @@ let ts = new tr(c.h, {
         e7 = e.notice;
     },
     NOTICE_DISMISS: function (e) {
-        return null != e7 && (null == e.id || e.id === e7.id) && (e9(e7.type, e.isTemporary, e.untilAtLeast), ti());
+        return null != e7 && (null == e.id || e.id === e7.id) && (e8(e7.type, e.isTemporary, e.untilAtLeast), ti());
     },
     NOTICE_DISABLE: function (e) {
         let { noticeType: t } = e;
-        return (e9(t), ti());
+        return (e8(t), ti());
     },
     LOGOUT: function () {
         ((e2 = {}), (e5 = {}), (e7 = null));

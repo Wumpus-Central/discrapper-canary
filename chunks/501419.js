@@ -1,33 +1,33 @@
 n.d(t, {
-    $l: () => K,
-    D4: () => x,
-    D8: () => G,
-    En: () => b,
-    FZ: () => M,
-    G4: () => D,
-    J8: () => Y,
+    rw: () => g,
     NZ: () => F,
-    R2: () => R,
+    ss: () => N,
+    D8: () => G,
     Sx: () => W,
+    En: () => b,
+    G4: () => D,
+    YV: () => V,
+    uh: () => z,
+    j6: () => P,
+    fb: () => v,
+    D4: () => x,
+    $l: () => K,
+    iC: () => U,
     Tg: () => m,
-    Uu: () => C,
+    cN: () => w,
+    R2: () => R,
+    X0: () => H,
+    bQ: () => S,
+    d6: () => j,
     Vh: () => B,
     Wx: () => X,
-    X0: () => H,
-    YV: () => V,
-    bQ: () => S,
-    cN: () => w,
-    d6: () => j,
-    fb: () => v,
+    Uu: () => C,
     gG: () => L,
-    iC: () => U,
-    j6: () => P,
     qr: () => $,
-    rZ: () => y,
-    rw: () => g,
-    ss: () => N,
-    uh: () => z,
+    J8: () => Y,
     wH: () => O,
+    FZ: () => M,
+    rZ: () => y,
 });
 var i = n(17928),
     r = n(554146),
@@ -44,8 +44,8 @@ var i = n(17928),
     h = n(256787),
     I = n(958872),
     f = n(853735),
-    p = n(49999),
-    T = n(652215);
+    p = n(652215),
+    T = n(49999);
 let g = 2592e6;
 function m(e) {
     let t = l.A.settings.userContent?.recurringDismissibleContentStates[e];
@@ -207,14 +207,30 @@ function B(e, t, n, i) {
 function V(e, t) {
     (((0, A.dD)(e) || t.forceTrack) &&
         (function (e, t) {
+            t?.dismissAction === T.i.TAKE_ACTION &&
+                (function (e) {
+                    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
+                        [n] = (0, A.oF)(),
+                        i = E.A.getRenderedAtTimestamp(e);
+                    o.default.track(p.HAw.DISMISSIBLE_CONTENT_ACTIONED, {
+                        type: r.M[e],
+                        content_count: n,
+                        group_name: t.groupName,
+                        bypass_fatigue: u.C.has(e),
+                        guild_id: t.guildId,
+                        shown_duration: null == i ? null : Date.now() - i,
+                        version: t.version,
+                        snowflake_id: t.snowflakeId,
+                    });
+                })(e, t);
             let [n] = (0, A.oF)(),
                 i = E.A.getRenderedAtTimestamp(e),
                 a = new Date(),
                 s = null == i ? null : a.getTime() - i,
                 l = t?.guildId != null ? W(e, t.guildId) : Y(e, t ?? {});
-            o.default.track(T.HAw.DISMISSIBLE_CONTENT_DISMISSED, {
+            o.default.track(p.HAw.DISMISSIBLE_CONTENT_DISMISSED, {
                 type: r.M[e],
-                action: t?.dismissAction ?? p.i.UNKNOWN,
+                action: t?.dismissAction ?? T.i.UNKNOWN,
                 content_count: n,
                 group_name: t?.groupName,
                 bypass_fatigue: u.C.has(e),
@@ -259,7 +275,7 @@ async function z(e, t) {
 function X(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : null,
         [i, a] = (0, A.oF)();
-    o.default.track(T.HAw.DISMISSIBLE_CONTENT_SHOWN, {
+    o.default.track(p.HAw.DISMISSIBLE_CONTENT_SHOWN, {
         type: r.M[e],
         unselected_content_types: n?.map((e) => r.M[e]) ?? null,
         content_count: i,

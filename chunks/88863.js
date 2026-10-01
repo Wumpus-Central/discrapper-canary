@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 627038, Version Hash: 89dbb129126438eda829ed9f9fbdce4ad6574205`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 627039, Version Hash: c2f6da22fad0cde992fb95b4881f854e14b5b8b3`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -22103,7 +22103,7 @@ let Ca = "isHideDevBanner",
                     className: to()(Cr.Wz, Cr.mr),
                     children: [
                         (0, y.jsx)(Ci, { className: Cr.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "627038" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "627039" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -33714,7 +33714,7 @@ class DO extends nt.A {
     }
 }
 let DR = new DO();
-var DL = n(367727),
+var DL = n(501419),
     Dy = n(853742);
 class DD extends nt.A {
     _initialize() {

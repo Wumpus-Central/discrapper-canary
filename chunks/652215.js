@@ -4434,6 +4434,7 @@ var rb =
         (ew.PREMIUM_UPSELL_INTERACTED = "premium_upsell_interacted"),
         (ew.DISMISSIBLE_CONTENT_SHOWN = "dismissible_content_shown"),
         (ew.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN = "dismissible_content_shown_before_connection_open"),
+        (ew.DISMISSIBLE_CONTENT_ACTIONED = "dismissible_content_actioned"),
         (ew.DISMISSIBLE_CONTENT_DISMISSED = "dismissible_content_dismissed"),
         (ew.DISMISSIBLE_CONTENT_DISMISSED_BEFORE_CONNECTION_OPEN =
             "dismissible_content_dismissed_before_connection_open"),
