@@ -400,7 +400,7 @@ function ep(e) {
         s = n.guild_id,
         r = (0, eE.Nu)(t.guildSpaceData?.leaderboard),
         o = (0, c.bG)([v.default], () =>
-            (0, eA.U_)(r, v.default.getUser(r?.userId), v.default.getUser(r?.previousUserId)),
+            (0, eA.U_)(r, v.default.getUser(r?.userId), v.default.getUser(r?.secondaryUserId)),
         ),
         d = o?.subject ?? null,
         u = o?.previousLeader ?? null,

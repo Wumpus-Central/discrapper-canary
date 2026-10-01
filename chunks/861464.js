@@ -200,7 +200,7 @@ let L = {
                     : (0, a.$)(o.intl.formatToParts(o.t.axmbpm, { username: C, guildName: w.name }));
             case l.lAJ.GUILD_SPACE_MESSAGE: {
                 let n = (0, u.Nu)(e instanceof I.Ay ? e.guildSpaceData?.leaderboard : e.guild_space_data?.leaderboard),
-                    i = (0, c.U_)(n, m.default.getUser(n?.userId), m.default.getUser(n?.previousUserId));
+                    i = (0, c.U_)(n, m.default.getUser(n?.userId), m.default.getUser(n?.secondaryUserId));
                 if (null == i) return e.content;
                 let r = t.getGuildId(),
                     a = (0, c.Sx)(i.data, {

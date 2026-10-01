@@ -27,7 +27,7 @@ function l(e) {
               event: e.event,
               stat: e.stat,
               userId: e.user_id,
-              previousUserId: e.previous_user_id ?? null,
+              secondaryUserId: e.secondary_user_id ?? null,
               value: e.value,
           }
         : null;
