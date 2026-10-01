@@ -4748,6 +4748,7 @@ var rb =
         (ew.CANCELLATION_FLOW_DISCOUNT_OFFER_PROMPT_VIEWED = "cancellation_flow_discount_offer_prompt_viewed"),
         (ew.ATTACHMENT_UPLOAD_STARTED = "attachment_upload_started"),
         (ew.ATTACHMENT_UPLOAD_FINISHED = "attachment_upload_finished"),
+        (ew.MEDIA_DRAFT_EDITED = "media_draft_edited"),
         (ew.IMAGE_LOADING_COMPLETED = "image_loading_completed"),
         (ew.MEDIA_PLAY_FINISHED = "media_play_finished"),
         (ew.MESSAGE_SENT_WITH_ATTACHMENTS = "message_sent_with_attachments"),

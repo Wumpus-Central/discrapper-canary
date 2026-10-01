@@ -308,7 +308,9 @@ function O(e) {
                     ? (0, l.jsx)(b.A, {
                           className: s()({ [T.action]: k }),
                           tooltip: j ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzA),
-                          onClick: () => f.A.update(t, o.id, r, { spoiler: !o.spoiler }),
+                          onClick: () => {
+                              f.A.update(t, o.id, r, { spoiler: !o.spoiler });
+                          },
                           children: o.spoiler
                               ? (0, l.jsx)(c.EyeSlashIcon, {
                                     size: "md",
