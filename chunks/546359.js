@@ -56,8 +56,9 @@ function M(e) {
 function P(e, t) {
     switch (t) {
         case p.Vj.ACTIVE_NOW:
+            if ((0, T.iX)(e.status)) return N;
             if (null != e.gameName || null != e.voiceChannelId) return m;
-            return (0, T.iX)(e.status) ? N : S;
+            return S;
         case p.Vj.GAME:
             if (null != e.gameName)
                 return {

@@ -29,9 +29,9 @@ var d = n(761929),
     y = n(954376),
     w = n(454932),
     D = n(287809),
-    G = n(902902);
-function P() {
-    return (0, p.cf)([G.A], () => ({ incoming: G.A.getIncomingRequests(), outgoing: G.A.getOutgoingRequests() }));
+    P = n(902902);
+function G() {
+    return (0, p.cf)([P.A], () => ({ incoming: P.A.getIncomingRequests(), outgoing: P.A.getOutgoingRequests() }));
 }
 var T = n(376357),
     M = n(857250),
@@ -73,7 +73,7 @@ var T = n(376357),
     ep = n(788868);
 let ej = "Friends Sidebar Add Friend Popout";
 function eI() {
-    let { incoming: e, outgoing: t } = P(),
+    let { incoming: e, outgoing: t } = G(),
         n = l.useMemo(() => [...e, ...t], [e, t]);
     return ((0, ec.y)(n), 0 === n.length)
         ? null
@@ -406,7 +406,7 @@ function ey(e) {
 }
 var ew = n(499516);
 let eD = { sending: !1, success: null, error: null };
-function eG(e, t) {
+function eP(e, t) {
     switch (t.type) {
         case "RESET":
             return eD;
@@ -418,8 +418,8 @@ function eG(e, t) {
             return { ...eD, sending: !1, error: t.text };
     }
 }
-function eP() {
-    let [e, t] = l.useReducer(eG, eD),
+function eG() {
+    let [e, t] = l.useReducer(eP, eD),
         { sending: n, success: s, error: r } = e,
         [a, o] = l.useState(""),
         [c, u] = l.useState(""),
@@ -563,14 +563,14 @@ function eT(e) {
             position: t,
             spacing: s,
             ignoreModalClicks: !0,
-            renderPopout: () => (0, i.jsx)(eP, {}),
+            renderPopout: () => (0, i.jsx)(eG, {}),
             children: () => r({ buttonRef: a, onClick: () => c(!o) }),
         })
     );
 }
 var eM = n(669850);
 function e_() {
-    let { incoming: e } = P(),
+    let { incoming: e } = G(),
         t = (0, g.c)(),
         n = l.useMemo(
             () =>
@@ -1125,25 +1125,24 @@ function tE() {
     });
 }
 var tS = n(983851),
-    tk = n(177953),
-    ty = n(730852),
-    tw = n(47167),
-    tD = n(977997),
-    tG = n(798350);
+    tk = n(730852),
+    ty = n(47167),
+    tw = n(977997),
+    tD = n(798350);
 function tP(e) {
     let { row: t, sectionType: n } = e,
         l = (0, p.bG)([e7.A], () => e7.A.getChannel(t.channelId), [t.channelId]),
-        s = (0, tw.Ay)(l) ?? eg.intl.string(eg.t.BVZqJl),
+        s = (0, ty.Ay)(l) ?? eg.intl.string(eg.t.BVZqJl),
         a = (0, eY.gU)(l) ?? tS.H,
-        o = (0, p.bG)([tD.A], () => tD.A.isInChannel(t.channelId)) ? null : (0, i.jsx)(tT, { channelId: t.channelId });
+        o = (0, p.bG)([tw.A], () => tw.A.isInChannel(t.channelId)) ? null : (0, i.jsx)(tG, { channelId: t.channelId });
     return (0, i.jsxs)(j.B, {
         gap: 4,
         padding: { top: 16, bottom: 16 },
-        className: r()(tG.Os, tG.aW),
+        className: r()(tD.Os, tD.aW),
         role: "group",
         "aria-label": s,
         children: [
-            (0, i.jsx)("b", { className: tG.h_ }),
+            (0, i.jsx)("b", { className: tD.h_ }),
             (0, i.jsx)(td, {
                 leading: () => (0, i.jsx)(a, { size: "xs", color: "var(--icon-voice-connected)", "aria-hidden": !0 }),
                 trailing: () => o,
@@ -1153,36 +1152,40 @@ function tP(e) {
             (0, i.jsx)("div", {
                 children: t.rows.map((e) => (0, i.jsx)(tt, { row: e, sectionType: n, inVoiceSubgroup: !0 }, e.userId)),
             }),
-            t.extraMemberCount > 0 &&
-                (0, i.jsxs)(j.B, {
-                    direction: "horizontal",
-                    align: "center",
-                    fullWidth: !1,
-                    gap: 4,
-                    padding: { top: 4, bottom: 4 },
-                    children: [
-                        (0, i.jsx)("b", { className: tG.hF }),
-                        (0, i.jsx)(tk.n, { size: "custom", width: 10, height: 10, color: "var(--icon-muted)" }),
-                        (0, i.jsx)(N.E, {
-                            variant: "text-xs/medium",
-                            color: "text-muted",
-                            children: eg.intl.formatToPlainString(ef.default.d90MfZ, { count: t.extraMemberCount }),
-                        }),
-                    ],
-                }),
+            t.extraMemberCount > 0 && (0, i.jsx)(tT, { count: t.extraMemberCount }),
         ],
     });
 }
-function tT(e) {
+function tG(e) {
     let { channelId: t } = e;
     return (0, i.jsx)("div", {
-        className: tG.PD,
+        className: tD.PD,
         children: (0, i.jsx)(W.$, {
             text: eg.intl.string(eg.t.VJlc0S),
             variant: "active",
             size: "sm",
-            onClick: () => ty.default.selectVoiceChannel(t),
+            onClick: () => tk.default.selectVoiceChannel(t),
         }),
+    });
+}
+function tT(e) {
+    let { count: t } = e,
+        n = (0, g.c)();
+    return (0, i.jsxs)(j.B, {
+        direction: "horizontal",
+        align: "center",
+        justify: n ? "center" : "start",
+        fullWidth: !1,
+        gap: 4,
+        padding: { top: 4, bottom: 4 },
+        children: [
+            !n && (0, i.jsx)("b", { className: tD.hF }),
+            (0, i.jsx)(N.E, {
+                variant: "text-xs/medium",
+                color: "text-muted",
+                children: eg.intl.formatToPlainString(n ? ef.default.SWPwHW : ef.default.d90MfZ, { count: t }),
+            }),
+        ],
     });
 }
 var tM = n(182927);
