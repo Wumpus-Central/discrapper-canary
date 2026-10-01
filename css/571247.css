@@ -108,6 +108,12 @@
 }
 
 .listbox_ac381c {
+    background-color: var(--background-surface-higher);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-sm);
+    box-shadow: 0 2px 8px 0 var(--opacity-black-16);
+    box-sizing: border-box;
+    padding: var(--space-8);
     width: 280px
 }
 
@@ -115,7 +121,11 @@
     font-style: italic
 }
 
-.listbox_ac381c [role=option]:not([aria-selected=true])>:last-child {
+.listbox_ac381c [role=listbox] {
+    padding-inline: 0
+}
+
+.listbox_ac381c [role=option]>:last-child {
     min-width: 0;
     padding: 0
 }
@@ -962,4 +972,4 @@
     display: none
 }
 
-/*# sourceMappingURL=571247.08b28b916406688d.css.map*/
+/*# sourceMappingURL=571247.c7ff4fa7423e0da4.css.map*/
