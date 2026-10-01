@@ -33,7 +33,7 @@ function i(e, t, n, c, i) {
                           if (!(0, u.wT)(t)) return;
                           let i = n === s.NJ.LIGHT,
                               o = i ? t.lightBackground : t.darkBackground;
-                          if (c === a.u.MEMBER_LIST || c === a.u.CHANNEL) {
+                          if (c === a.u.MEMBER_LIST || c === a.u.CHANNEL || c === a.u.FRIENDS_LIST) {
                               let e = `${l ? "80" : r && c === a.u.MEMBER_LIST ? "4D" : "33"}`;
                               return `linear-gradient(90deg, transparent 0%, ${o}14 20%, ${o}14 50%, ${o}${e} 100%)`;
                           }

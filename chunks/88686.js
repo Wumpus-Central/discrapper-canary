@@ -23,4 +23,5 @@ var i,
         (r.PREVIEW = "preview"),
         (r.MINI_PREVIEW = "mini_preview"),
         (r.MUTUAL_FRIENDS_LIST = "mutual_friends_list"),
+        (r.FRIENDS_LIST = "friends_list"),
         r);

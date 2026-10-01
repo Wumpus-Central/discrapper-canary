@@ -203,13 +203,21 @@
 }
 
 .row__79ea5 {
+    align-items: center;
     border-radius: var(--radius-sm);
     cursor: pointer;
-    height: var(--custom-friend-row-height)
+    display: flex;
+    height: var(--custom-friend-row-height);
+    padding: var(--space-8);
+    position: relative
 }
 
 .row__79ea5:hover {
     background-color: var(--background-mod-subtle)
+}
+
+.content__79ea5 {
+    min-width: 0
 }
 
 .asset__79ea5 {
@@ -219,6 +227,13 @@
 .body__79ea5 {
     flex: 2 1 auto;
     min-width: 0
+}
+
+.name__79ea5 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
 }
 
 .eyebrow__49f30 {
@@ -2491,4 +2506,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=e50f3ffeca9e0de9.css.map*/
+/*# sourceMappingURL=0a71d9ef67e20424.css.map*/
