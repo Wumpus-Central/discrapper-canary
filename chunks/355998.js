@@ -1746,7 +1746,7 @@ function nb(e) {
 var nN = n(746080),
     nv = n(307731),
     nE = n(37411),
-    ny = n(590930);
+    ny = n(35692);
 let nS = {
         popoutLocation: {
             page: eZ.liQ.CHANNEL_SETTINGS,

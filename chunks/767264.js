@@ -41,7 +41,7 @@ var d = n(761929),
     B = n(287809),
     W = n(240248),
     U = n(652215),
-    V = n(347932),
+    V = n(682530),
     H = n(375708),
     Z = n(604506);
 function $(e) {
@@ -737,8 +737,8 @@ function e2(e) {
     });
 }
 n(321073);
-var e4 = n(602853),
-    e8 = n(308528),
+var e8 = n(602853),
+    e4 = n(308528),
     e7 = n(565860),
     e9 = n(723690),
     e5 = n(976860),
@@ -762,7 +762,7 @@ function tn(e) {
         onMouseLeave: () => o(!1),
         onClick: function () {
             let e = O.A.getDMFromUserId(t.user.id);
-            (null != e ? (0, e5.pX)(U.BVt.CHANNEL(U.ME, e)) : e8.A.openPrivateChannel({ recipientIds: t.user.id }),
+            (null != e ? (0, e5.pX)(U.BVt.CHANNEL(U.ME, e)) : e4.A.openPrivateChannel({ recipientIds: t.user.id }),
                 s?.());
         },
         children: (0, l.jsx)(e9.A, {
@@ -779,8 +779,8 @@ function tn(e) {
 }
 function tl(e) {
     let { searchResults: t, closePopout: n } = e,
-        i = (0, e4.r)(ef.A.space.SPACE_XS),
-        s = (0, e4.r)(ef.A.space.SPACE_XXS),
+        i = (0, e8.r)(ef.A.space.SPACE_XS),
+        s = (0, e8.r)(ef.A.space.SPACE_XXS),
         r = 36 + 2 * i,
         a = [t.length];
     return (0, l.jsx)(C.OZ, {

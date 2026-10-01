@@ -372,7 +372,7 @@ function e6(e) {
 }
 let e9 = G._3.SIZE_32,
     e4 = [et.iq, et.tR, et.K7, et.sp, et.MK];
-function e8(e) {
+function e7(e) {
     let t,
         { channel: n, textVariant: l, activities: u, applicationStream: o } = e,
         d = (0, s.bG)([a.default], () => a.default.getCurrentUser()),
@@ -452,7 +452,7 @@ function e8(e) {
         ],
     });
 }
-function e7(e) {
+function e8(e) {
     let {
             user: t,
             activities: n,
@@ -531,7 +531,7 @@ function e7(e) {
                     let { type: t } = e;
                     return t === eX.$pd.PLAYING;
                 }) == null && null != S
-                    ? (0, i.jsx)(e8, {
+                    ? (0, i.jsx)(e7, {
                           channel: S,
                           textVariant: "text-xs/medium",
                           activities: n ?? [],
@@ -607,7 +607,7 @@ let tt = r.memo((e) => {
             currentUserPlayingActivities: v,
             renderSubtext: R,
             renderUserContextMenu: D,
-        } = e7({
+        } = e8({
             user: t,
             activities: n,
             relationshipType: E,
@@ -742,7 +742,7 @@ let tn = r.memo((e) => {
             status: x,
             renderSubtext: T,
             renderUserContextMenu: _,
-        } = e7({
+        } = e8({
             user: t,
             activities: n,
             relationshipType: l,
@@ -1076,7 +1076,7 @@ function tM(e, t) {
         i = r.useCallback(() => l(t), [t]);
     return ((0, ty.RT)(e, t, l, tk), [n, i]);
 }
-var tO = n(25448),
+var tO = n(671210),
     tw = n(690132);
 function tF(e) {
     let {
@@ -2036,8 +2036,8 @@ function t9(e) {
 }
 t5.displayName = "OverlayVoiceCallElapsedTime";
 var t4 = n(594831),
-    t8 = n(645959),
-    t7 = n(812993),
+    t7 = n(645959),
+    t8 = n(812993),
     ne = n(602853),
     nt = n(713654),
     nn = n(636537),
@@ -2653,7 +2653,7 @@ function nz(e) {
     );
 }
 function nX(e) {
-    return (0, i.jsx)(t7.hV, { count: e });
+    return (0, i.jsx)(t8.hV, { count: e });
 }
 function nB(e) {
     let { channelId: t, listItemId: n, mentionCount: l, unread: r } = e,
@@ -2942,10 +2942,10 @@ function n1() {
         c =
             ((e = (0, t4.Dz)()),
             (0, s.yK)(
-                [t8.A, eI.A],
+                [t7.A, eI.A],
                 () => {
                     let t = [];
-                    for (let e of t8.A.getPrivateChannelIds()) {
+                    for (let e of t7.A.getPrivateChannelIds()) {
                         let n = eI.A.getChannel(e);
                         null != n && t.push({ channel: n, voiceStates: [] });
                     }
@@ -3239,8 +3239,8 @@ var n3 = n(776096),
     n6 = n(342952),
     n9 = n(676923),
     n4 = n(342296),
-    n8 = n(669335),
-    n7 = n(956123);
+    n7 = n(669335),
+    n8 = n(956123);
 let le = r.memo(function (e) {
     let { channelId: t, guildId: n, userId: l, onDoubleClick: u, onContextMenu: o } = e,
         d = r.useRef(null),
@@ -3280,14 +3280,14 @@ let le = r.memo(function (e) {
                   (0, i.jsx)(E.D, {
                       ...e,
                       innerRef: d,
-                      className: n7.gD,
+                      className: n8.gD,
                       onDoubleClick: u,
                       onContextMenu: x,
                       onClick: (e) => {
                           (e.preventDefault(), e.stopPropagation(), h(!0));
                       },
                       children: (0, i.jsxs)("div", {
-                          className: n7.h6,
+                          className: n8.h6,
                           children: [
                               (0, i.jsx)(U.eu, {
                                   src: g.getAvatarURL(n ?? void 0, 24),
@@ -3295,7 +3295,7 @@ let le = r.memo(function (e) {
                                   "aria-label": N,
                               }),
                               (0, i.jsxs)(p.E, {
-                                  className: n7.rg,
+                                  className: n8.rg,
                                   variant: "text-sm/medium",
                                   color: "text-subtle",
                                   children: [
@@ -3303,21 +3303,21 @@ let le = r.memo(function (e) {
                                           userName: N,
                                           displayNameStyles: I,
                                           effectDisplayType: er.G.STATIC,
-                                          textClassName: n7.m2,
+                                          textClassName: n8.m2,
                                       }),
                                       (0, i.jsx)(ed.Ay, { userId: l, disableGuildProfile: !0 }),
                                   ],
                               }),
                               (0, i.jsx)("div", {
-                                  className: n7.ZA,
+                                  className: n8.ZA,
                                   onDoubleClick: u,
-                                  children: (0, i.jsx)(n8.Kc, {
+                                  children: (0, i.jsx)(n7.Kc, {
                                       guildId: n ?? void 0,
                                       user: g,
                                       video: m.selfVideo,
                                       isStreaming: A,
-                                      className: n7.ZA,
-                                      iconClassName: n7.Ow,
+                                      className: n8.ZA,
+                                      iconClassName: n8.Ow,
                                       isWatching: !1,
                                       localMute: !1,
                                       localVideoDisabled: !1,
@@ -3328,7 +3328,7 @@ let le = r.memo(function (e) {
                                       disabled: !1,
                                   }),
                               }),
-                              null != S ? (0, i.jsx)(ea.A, { game: S, size: ea.M.XSMALL, className: n7.IV }) : null,
+                              null != S ? (0, i.jsx)(ea.A, { game: S, size: ea.M.XSMALL, className: n8.IV }) : null,
                           ],
                       }),
                   }),
@@ -3366,7 +3366,7 @@ function ll(e) {
     return 0 === l.length
         ? null
         : (0, i.jsx)("div", {
-              className: n7.X0,
+              className: n8.X0,
               children: (0, i.jsx)(n6.A, {
                   users: l,
                   guildId: n ?? void 0,
@@ -3522,12 +3522,12 @@ function li(e) {
                 secondaryText:
                     null != T
                         ? (0, i.jsxs)("div", {
-                              className: n7.z2,
+                              className: n8.z2,
                               children: [
                                   (0, i.jsx)(tV.GameControllerIcon, {
                                       size: "xxs",
                                       color: "currentColor",
-                                      className: n7.AE,
+                                      className: n8.AE,
                                   }),
                                   (0, i.jsx)(p.E, { variant: "text-xs/normal", color: "text-muted", children: T }),
                               ],
@@ -3540,7 +3540,7 @@ function li(e) {
                         case !x:
                             return e
                                 ? (0, i.jsxs)("div", {
-                                      className: n7.YT,
+                                      className: n8.YT,
                                       onDoubleClick: ln,
                                       children: [z(), (0, i.jsx)(ey.j, { tab: o.x.VOICE, targetId: n })],
                                   })
@@ -3550,7 +3550,7 @@ function li(e) {
                                 children: [
                                     d
                                         ? (0, i.jsxs)("div", {
-                                              className: n7.YT,
+                                              className: n8.YT,
                                               onDoubleClick: ln,
                                               children: [z(), (0, i.jsx)(ey.j, { tab: o.x.VOICE, targetId: n })],
                                           })
@@ -3565,7 +3565,7 @@ function li(e) {
             }),
             d && N.length > 0
                 ? (0, i.jsx)("div", {
-                      className: n7.Nz,
+                      className: n8.Nz,
                       children: N.slice(0, 25).map((e) =>
                           (0, i.jsx)(
                               le,

@@ -887,8 +887,8 @@ var e0 = t(435558),
     e3 = t(837381),
     e2 = t(847374),
     e4 = t(912592),
-    e6 = t(821609),
-    e8 = t(475825),
+    e8 = t(821609),
+    e6 = t(475825),
     e9 = t(928039),
     e7 = t(625494);
 let e5 = { [eR.Ur.UNREAD]: !0, [eR.Ur.TODAY]: !0, [eR.Ur.YESTERDAY]: !1, [eR.Ur.OLDER]: !1 },
@@ -911,7 +911,7 @@ let e5 = { [eR.Ur.UNREAD]: !0, [eR.Ur.TODAY]: !0, [eR.Ur.YESTERDAY]: !1, [eR.Ur.
                     e({ lastInitializedWithUnreads: t, messageCategoryOpenStates: t ? ne : e5 }));
         },
     }));
-var nt = t(645617),
+var nt = t(871423),
     ns = t(875436);
 function ni(e) {
     e.stopPropagation();
@@ -965,7 +965,7 @@ function nr() {
                         }),
                     ],
                 }),
-                (0, s.jsx)(e6.$, {
+                (0, s.jsx)(e8.$, {
                     variant: "secondary",
                     onClick: () => (0, k.tZ)(e),
                     text: eL.intl.string(nt.default.klSpfs),
@@ -1155,7 +1155,7 @@ function no(e) {
                         children: (0, s.jsx)(e3.PR, {
                             children: (e) => {
                                 let { ref: n, ...t } = e;
-                                return (0, s.jsx)(e8.OZ, {
+                                return (0, s.jsx)(e6.OZ, {
                                     ref: (e) => {
                                         ((p.current = e), (n.current = e?.getScrollerNode() ?? null));
                                     },

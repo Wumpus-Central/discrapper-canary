@@ -13,7 +13,7 @@ var s = i(477900),
     h = i(153488),
     p = i(71393),
     b = i(115063),
-    f = i(104129),
+    f = i(61567),
     k = i(375708);
 function A(t) {
     let { guildId: e, transitionState: i, onClose: A } = t,

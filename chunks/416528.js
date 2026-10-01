@@ -36,7 +36,7 @@ var i = n(477900),
     D = n(195007),
     V = n(806931),
     k = n(375708),
-    G = n(977241),
+    G = n(270103),
     B = n(547368);
 function F(e) {
     let { channelId: t, guildId: n } = e,

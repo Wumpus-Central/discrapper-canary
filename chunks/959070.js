@@ -2,7 +2,7 @@ n.d(t, {
     C: () => t2,
     Sk: () => t4,
     Zx: () => tQ,
-    v7: () => t5,
+    v7: () => t8,
     L0: () => t6,
     N_: () => t3,
     MD: () => t9,
@@ -10,7 +10,7 @@ n.d(t, {
     uW: () => ne,
     NO: () => t1,
     ck: () => t7,
-    ml: () => t8,
+    ml: () => t5,
     Vu: () => t0,
 });
 var l = n(477900),
@@ -514,8 +514,8 @@ var eL = n(931664),
     e1 = n(176781),
     e2 = n(463930),
     e3 = n(935063),
-    e8 = n(73392),
-    e5 = n(650019),
+    e5 = n(73392),
+    e8 = n(650019),
     e6 = n(763754),
     e7 = n(967144),
     e4 = n(118517),
@@ -588,8 +588,8 @@ function to(e) {
             displayNameStyles: E,
         } = (0, e6.Ay)(u),
         I = (0, e7.gn)(p, C, x),
-        y = (0, e8.a)({ displayNameStyles: E }),
-        S = (0, e5.A)(m, u.attachments),
+        y = (0, e5.a)({ displayNameStyles: E }),
+        S = (0, e8.A)(m, u.attachments),
         v =
             ((t = o.id),
             (n = u.id),
@@ -1072,7 +1072,7 @@ function tQ(e, t, s, r, a) {
                                 n.e("858337"),
                                 n.e("979630"),
                                 n.e("968763"),
-                                n.e("898377"),
+                                n.e("824547"),
                                 n.e("935948"),
                                 n.e("126437"),
                                 n.e("24922"),
@@ -1204,7 +1204,7 @@ function t3(e, t, n) {
         (0, ez.Vo)({ event: ea.jej.TOGGLE_GIF_PICKER, handler: s }),
         (0, ez.Vo)({ event: ea.jej.TOGGLE_STICKER_PICKER, handler: r }));
 }
-function t8(e, t, n) {
+function t5(e, t, n) {
     let [l] = i.useState(() => new a.EventEmitter());
     return (
         i.useEffect(() => {
@@ -1218,7 +1218,7 @@ function t8(e, t, n) {
         }
     );
 }
-function t5() {
+function t8() {
     let e = i.useRef(null),
         t = i.useCallback(() => {
             e.current?.onMaybeShowAutocomplete();
@@ -1389,10 +1389,10 @@ let nt = i.memo(
             e1 = !eP.D_.useSetting() && !(0, eq.isAndroidWeb)() && null != window.ResizeObserver,
             e2 = !e1 || !T.commands?.enabled || !R || "/" !== a,
             e3 = (0, ey.A)(),
-            { fontSize: e8 } = (0, h.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
-            e5 = (0, h.bG)([eF.A], () => eF.A.isEnabled());
+            { fontSize: e5 } = (0, h.cf)([C.Ay], () => ({ fontSize: C.Ay.fontSize })),
+            e8 = (0, h.bG)([eF.A], () => eF.A.isEnabled());
         t3(T, eW, b.id);
-        let { eventEmitter: e6, handleEditorSelectionChanged: e7 } = t8(eE, a, o),
+        let { eventEmitter: e6, handleEditorSelectionChanged: e7 } = t5(eE, a, o),
             e4 = i.useRef(a);
         e4.current = a;
         let e9 = i.useCallback(
@@ -1403,7 +1403,7 @@ let nt = i.memo(
                 [U, T.commands?.enabled, e6],
             ),
             { submitting: te, submit: tt, handleSubmit: tn } = tQ(H, T, eE, eS, b.id),
-            { autocompleteRef: tl, handleMaybeShowAutocomplete: ti, handleHideAutocomplete: ts } = t5(),
+            { autocompleteRef: tl, handleMaybeShowAutocomplete: ti, handleHideAutocomplete: ts } = t8(),
             ta = t0(tt, T, eE),
             tu = t1(eE),
             tc = t2({ editorRef: eE, disabled: eW, textValue: a, channelId: b.id, chatInputType: T, submit: H }),
@@ -1675,8 +1675,8 @@ let nt = i.memo(
                                                         onMaybeShowAutocomplete: ti,
                                                         onHideAutocomplete: ts,
                                                         promptToUpload: W,
-                                                        fontSize: e8,
-                                                        spellcheckEnabled: e5,
+                                                        fontSize: e5,
+                                                        spellcheckEnabled: e8,
                                                         canOnlyUseTextCommands: tP,
                                                         className: r()(
                                                             {

@@ -23,7 +23,7 @@ var n = l(477900),
     w = l(869146),
     A = l(742023),
     S = l(697744),
-    C = l(759967),
+    C = l(50617),
     E = l(375708),
     I = l(296167);
 function T(e) {
@@ -551,8 +551,8 @@ function e0(e, t) {
     }));
 var e1 = l(66708),
     e2 = l(74029),
-    e7 = l(215181),
-    e5 = l(717447),
+    e5 = l(215181),
+    e7 = l(717447),
     e4 = l(29080),
     e3 = l(46054),
     e6 = l(76275);
@@ -1482,8 +1482,8 @@ function t0(e) {
 }
 var t1 = l(683063),
     t2 = l(705754),
-    t7 = l(883455),
-    t5 = l(13699);
+    t5 = l(883455),
+    t7 = l(13699);
 function t4(e) {
     let { projectId: t, lane: l, Illocon: a, tint: r, name: i, connectsDown: s } = e,
         u = l.task,
@@ -1527,10 +1527,10 @@ function t4(e) {
                       children: [
                           l.steps.length > 0
                               ? (0, n.jsx)("ol", {
-                                    className: t5.dO,
+                                    className: t7.dO,
                                     children: l.steps.map((e) =>
                                         (0, n.jsx)(
-                                            t7.A,
+                                            t5.A,
                                             { projectId: t, node: e, presentation: "detail", active: o && e === d },
                                             e.id,
                                         ),
@@ -1541,7 +1541,7 @@ function t4(e) {
                               (0, n.jsx)(
                                   "div",
                                   {
-                                      className: t5.iq,
+                                      className: t7.iq,
                                       children: (0, n.jsx)(t2.A, { text: e, variant: "text-sm/normal" }),
                                   },
                                   t,
@@ -1558,7 +1558,7 @@ function t4(e) {
             body: e8(u),
             position: "left",
             children: (0, n.jsx)("span", {
-                className: t5.nC,
+                className: t7.nC,
                 children: (0, n.jsx)(a, { size: 24, alt: "", ariaHidden: !0 }),
             }),
         }),
@@ -1868,7 +1868,7 @@ function lo(e) {
         );
     if (o)
         return (0, n.jsx)("ol", {
-            className: t5.pj,
+            className: t7.pj,
             "data-live": !1,
             children: (0, n.jsx)(tW.A, {
                 glyph: (0, n.jsx)(e4.w, { size: "custom", width: 20, height: 20, color: "currentColor" }),
@@ -1888,10 +1888,10 @@ function lo(e) {
     return (0, n.jsx)(tW.l.Provider, {
         value: k.length,
         children: (0, n.jsxs)("ol", {
-            className: t5.pj,
+            className: t7.pj,
             "data-live": w,
             children: [
-                (0, n.jsx)(e5.A, {
+                (0, n.jsx)(e7.A, {
                     projectId: t,
                     steps: v.steps,
                     fallbackLabel: k.find((e) => null != e.task.groupLabel)?.task.groupLabel,
@@ -1921,7 +1921,7 @@ function lo(e) {
                 }),
                 y
                     ? (0, n.jsx)("li", {
-                          className: t5.YO,
+                          className: t7.YO,
                           children: (0, n.jsx)(la, { todos: j, provisional: c, agents: A, live: i, superseded: s }),
                       })
                     : null,
@@ -1958,7 +1958,7 @@ function ld(e) {
         T = (b ? j : void 0) ?? N.attachmentsHost,
         M = S && !b,
         _ = null == o ? null : (0, n.jsx)(to.A, { projectId: t, attachments: o }),
-        P = null == _ ? null : (0, n.jsx)("div", { className: t5.MT, children: _ }),
+        P = null == _ ? null : (0, n.jsx)("div", { className: t7.MT, children: _ }),
         R = p
             ? (0, n.jsx)(v.E, {
                   variant: "text-xs/normal",
@@ -1967,18 +1967,18 @@ function ld(e) {
               })
             : null;
     return (0, n.jsxs)("div", {
-        className: t5.ue,
+        className: t7.ue,
         children: [
             w.length > 0 && !b
                 ? (0, n.jsx)("ol", {
-                      className: t5.dO,
+                      className: t7.dO,
                       children: w
                           .filter((e) => "todos" !== e.type)
                           .map((e) =>
                               (0, n.jsxs)(
                                   "li",
                                   {
-                                      className: t5.DV,
+                                      className: t7.DV,
                                       children: [
                                           (0, n.jsx)("div", {
                                               className: ls.PT,
@@ -2000,10 +2000,10 @@ function ld(e) {
                 ? (0, n.jsx)(ty, { projectId: t, proposal: s, onApprove: x })
                 : M
                   ? (0, n.jsxs)("div", {
-                        className: i()(t5.ky, li.XR),
+                        className: i()(t7.ky, li.XR),
                         children: [
                             (0, n.jsx)("div", {
-                                className: i()(ls.PT, t5.cW),
+                                className: i()(ls.PT, t7.cW),
                                 children: e3.A.parse(I, !0, { allowList: !0, allowHeading: !0, allowLinks: !0 }),
                             }),
                             "closing" === T ? P : null,
@@ -2013,13 +2013,13 @@ function ld(e) {
                   : null,
             null != d
                 ? (0, n.jsx)("div", {
-                      className: i()(t5.ky, li.XR, { [lr.O]: null != c }),
+                      className: i()(t7.ky, li.XR, { [lr.O]: null != c }),
                       children: (0, n.jsx)(tG, { projectId: t, request: d, awaiting: c }),
                   })
                 : null,
             null != f
                 ? (0, n.jsx)("div", {
-                      className: i()(t5.ky, li.XR),
+                      className: i()(t7.ky, li.XR),
                       children: (0, n.jsx)(tK, { projectId: t, request: f }),
                   })
                 : null,
@@ -2730,8 +2730,8 @@ var lV = l(442433),
     l0 = l(448368),
     l1 = l(837528),
     l2 = l(439762),
-    l7 = l(715628),
-    l5 = l(752636),
+    l5 = l(715628),
+    l7 = l(752636),
     l4 = l(9842),
     l3 = l(589022),
     l6 = l(95701),
@@ -2946,7 +2946,7 @@ function nv(e, t, l) {
         ? null
         : null != l
           ? (0, n.jsx)(lZ.Ay, { className: l, message: e, content: r, compact: !1 })
-          : (0, l7.A)(i, r);
+          : (0, l5.A)(i, r);
 }
 function nb(e) {
     let [t, l] = a.useState({ usernameProfile: !1, avatarProfile: !1 }),
@@ -3137,7 +3137,7 @@ function nw(e) {
                     null == v
                         ? null
                         : (0, n.jsx)(nj, { baseMessage: j, referenced: v, selected: p?.label, onJumpToReplied: s }),
-                childrenHeader: (0, l5.A)({ message: j, channel: nh, author: h, guildId: void 0, isGroupStart: u }),
+                childrenHeader: (0, l7.A)({ message: j, channel: nh, author: h, guildId: void 0, isGroupStart: u }),
                 childrenMessageContent: y,
                 childrenAccessories: nx(r, "" !== c),
                 disableInteraction: !0,
@@ -4173,8 +4173,8 @@ function n0(e) {
 }
 var n1 = l(621466),
     n2 = l(658675),
-    n7 = l(22231),
-    n5 = l(900797),
+    n5 = l(22231),
+    n7 = l(900797),
     n4 = l(123292);
 function n3(e, t, l) {
     return l < e.questions.length - 1
@@ -4286,7 +4286,7 @@ function at(e) {
                     (0, n.jsx)("span", {
                         className: n8.Gy,
                         "aria-hidden": !0,
-                        children: (0, n.jsx)(n7.PencilIcon, {
+                        children: (0, n.jsx)(n5.PencilIcon, {
                             size: "custom",
                             width: 20,
                             height: 20,
@@ -4523,7 +4523,7 @@ function al(e) {
                                       children: (0, n.jsx)(td.m, {
                                           text: W,
                                           children: (0, n.jsx)(tB.K, {
-                                              icon: O ? n5.t : t3.a,
+                                              icon: O ? n7.t : t3.a,
                                               size: "sm",
                                               variant: "icon-only",
                                               onClick: () => F({ id: L.id, expanded: !O }),
@@ -4610,7 +4610,7 @@ function al(e) {
                                                 (0, n.jsx)("span", {
                                                     className: n8.Gy,
                                                     "aria-hidden": !0,
-                                                    children: (0, n.jsx)(n7.PencilIcon, {
+                                                    children: (0, n.jsx)(n5.PencilIcon, {
                                                         size: "custom",
                                                         width: 20,
                                                         height: 20,
@@ -4763,7 +4763,7 @@ function ai(e) {
                       children: [
                           null == d
                               ? (0, n.jsx)("ol", {
-                                    className: i()(ar.Rk, t5.pj),
+                                    className: i()(ar.Rk, t7.pj),
                                     "data-live": "true",
                                     children: (0, n.jsx)(tW.A, {
                                         glyph: (0, n.jsx)(aa.A, {}),
@@ -4777,7 +4777,7 @@ function ai(e) {
                                     onClick: d,
                                     "aria-label": E.intl.string(C.default.tYjQFG),
                                     children: (0, n.jsx)("ol", {
-                                        className: i()(ar.Rk, t5.pj),
+                                        className: i()(ar.Rk, t7.pj),
                                         "data-live": "true",
                                         children: (0, n.jsx)(tW.A, {
                                             glyph: (0, n.jsx)(aa.A, {}),
@@ -4906,7 +4906,7 @@ function am(e) {
         a.useEffect(() => {
             (0, f.Hc)(r);
         }, [r]),
-        (0, e7.v6)(r),
+        (0, e5.v6)(r),
         a.useEffect(
             () => () =>
                 (function (e) {
@@ -5058,7 +5058,7 @@ function am(e) {
             );
             return (l.observe(t), () => l.disconnect());
         }, [ec, ed?.steps]));
-    let eb = a.useMemo(() => (null != ed ? (0, e5.b)(ed.steps) : ""), [ed]),
+    let eb = a.useMemo(() => (null != ed ? (0, e7.b)(ed.steps) : ""), [ed]),
         ej = a.useMemo(() => (null != ed ? ((0, eA.lt)(ed.steps) ?? ed.todos) : void 0), [ed]),
         ey = ed?.provisionalTodo,
         eI = null != ed && eC(ed),
@@ -5616,8 +5616,8 @@ function a2(e) {
                   }),
     });
 }
-var a7 = l(522652);
-let a5 = [];
+var a5 = l(522652);
+let a7 = [];
 function a4(e) {
     let t,
         { call: l } = e,
@@ -5634,20 +5634,20 @@ function a4(e) {
                 bad: t,
             });
     return (0, n.jsxs)("div", {
-        className: a7.p5,
+        className: a5.p5,
         children: [
             (0, n.jsx)(v.E, {
                 tag: "span",
                 variant: "text-xs/normal",
                 color: "text-subtle",
-                className: a7.Q5,
+                className: a5.Q5,
                 children: aq(l.observedAt),
             }),
             (0, n.jsxs)(v.E, {
                 tag: "span",
                 variant: "text-xs/normal",
                 color: "text-default",
-                className: a7.qN,
+                className: a5.qN,
                 children: [l.role, " \xb7 ", l.model],
             }),
             (0, n.jsx)(v.E, {
@@ -5674,13 +5674,13 @@ function a6(e) {
         c = (0, F.bG)([aF], () => aF.getForceCompactionState(t), [t]),
         m = a.useCallback(() => (0, f.Lj)(t), [t]),
         h = a.useCallback(() => (0, f.Lj)(t, !0), [t]),
-        g = (0, F.bG)([aF], () => (s ? a5 : aF.getModelCalls(t)), [t, s]),
+        g = (0, F.bG)([aF], () => (s ? a7 : aF.getModelCalls(t)), [t, s]),
         x = l?.agent?.lifetime ?? null,
         p = l?.agent?.limits ?? null,
         b = l?.agent?.session ?? null,
         j = o?.promptCeiling ?? p?.context_window_tokens ?? null;
     return (0, n.jsxs)("div", {
-        className: a7.Mf,
+        className: a5.Mf,
         children: [
             (0, n.jsx)(aX, { generatedAt: l?.generated_at ?? null, fetchState: r, onRefresh: i }),
             (0, n.jsx)(aZ, {
@@ -5778,7 +5778,7 @@ function a6(e) {
                             hint: E.intl.formatToPlainString(C.default.KHK44U, { time: aU(d.observedAt) }),
                         }),
                     (0, n.jsxs)("div", {
-                        className: a7.Lj,
+                        className: a5.Lj,
                         children: [
                             (0, n.jsx)(Q.$, {
                                 variant: "secondary",
@@ -6443,7 +6443,7 @@ function rm(e) {
 function rh(e) {
     let { status: t, fetchState: l, onRefresh: a } = e;
     return (0, n.jsxs)("div", {
-        className: a7.Mf,
+        className: a5.Mf,
         children: [
             (0, n.jsx)(aX, { generatedAt: t?.generated_at ?? null, fetchState: l, onRefresh: a }),
             null != t &&
@@ -7679,8 +7679,8 @@ function rJ(e) {
 var r0 = l(333007),
     r1 = l(103557),
     r2 = l(97808),
-    r7 = l(778712),
-    r5 = l(365912),
+    r5 = l(778712),
+    r7 = l(365912),
     r4 = l(775121),
     r3 = l(486020),
     r6 = l(277437);
@@ -8181,7 +8181,7 @@ function ic(e) {
                 s?.current?.contains(t) !== !0 &&
                 !(function (e) {
                     try {
-                        return ((0, r5.J$)(e), !0);
+                        return ((0, r7.J$)(e), !0);
                     } catch {
                         return !1;
                     }
@@ -8496,7 +8496,7 @@ function im(e) {
         l = (0, F.bG)([eo.default], () => eo.default.getUser(t), [t]);
     return (0, n.jsx)(r2.eu, {
         src: null == l ? null : r3.Ay.getUserAvatarURL(l),
-        size: r7._3.SIZE_16,
+        size: r5._3.SIZE_16,
         "aria-hidden": !0,
     });
 }

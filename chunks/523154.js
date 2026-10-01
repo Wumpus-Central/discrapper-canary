@@ -1,7 +1,7 @@
 n.d(t, { Sx: () => d, U_: () => o });
 var i = n(927813),
     r = n(518782),
-    a = n(104129),
+    a = n(61567),
     s = n(375708);
 let l = {
     [r.zu.COMPETITION_ENDED]: {

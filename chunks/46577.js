@@ -1076,7 +1076,7 @@ var tb = t(259065),
     ty = t(898985),
     tN = t(922301),
     tE = t(660184),
-    tS = t(763052),
+    tS = t(701974),
     tk = t(523312);
 let tP = "heading-xl/semibold";
 function tT(e) {

@@ -5,7 +5,7 @@ var l = n(512750),
     i = n(645619),
     o = n(939981),
     s = n(456124),
-    A = n(356863),
+    A = n(25525),
     _ = n(375708);
 function E(e, t) {
     let n = (0, u.bG)([i.A], () => i.A.getStateForGuild(e)),

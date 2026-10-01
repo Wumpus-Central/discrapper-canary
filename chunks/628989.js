@@ -684,7 +684,7 @@ var ek = l(269115),
     eP = l(758836),
     eH = l(49999),
     eB = l(818348),
-    eU = l(344045),
+    eU = l(394107),
     eF = l(196064);
 let eV = "GAME_SERVER_HOSTING_BANNER";
 function eG(e) {
@@ -1015,8 +1015,8 @@ let e4 = function (e) {
         ],
     });
 };
-var e6 = l(449543),
-    e9 = l(197935),
+var e9 = l(449543),
+    e6 = l(197935),
     e8 = l(275161),
     e7 = l(554661);
 function te(e) {
@@ -1079,7 +1079,7 @@ let tl = function (e) {
                             ],
                         }),
                         f
-                            ? (0, i.jsx)(e9.A, {
+                            ? (0, i.jsx)(e6.A, {
                                   gap: "xl",
                                   edgeFade: v ? "sm" : void 0,
                                   items: p,
@@ -1098,7 +1098,7 @@ let tl = function (e) {
                                           e.skuId,
                                       ),
                               })
-                            : (0, i.jsx)(e6.A, {
+                            : (0, i.jsx)(e9.A, {
                                   gap: "xl",
                                   edgeFade: v ? "sm" : void 0,
                                   children: p.map((e, l) =>

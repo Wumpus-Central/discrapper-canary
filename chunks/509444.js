@@ -129,7 +129,7 @@ function Q(e) {
                 l.e("863443"),
                 l.e("273084"),
                 l.e("821403"),
-                l.e("525416"),
+                l.e("215890"),
                 l.e("210413"),
                 l.e("785888"),
                 l.e("758219"),
@@ -139,7 +139,7 @@ function Q(e) {
         { modalKey: "guild-space-leaderboard-sharing" },
     );
 }
-var V = l(104129),
+var V = l(61567),
     X = l(823353);
 function Z(e) {
     let { guildId: t, onActivitySharingClick: l } = e,
@@ -1075,8 +1075,8 @@ function e3(e, t, l) {
         "jpg" === i && (c.quality = "lossless"), "webp" === i && n && (c.animated = !0), (d += `?${e0.stringify(c)}`)
     );
 }
-var e4 = l(868602),
-    e6 = l(445187),
+var e6 = l(868602),
+    e4 = l(445187),
     e7 = l(650583),
     e8 = l(684343);
 function e5(e) {
@@ -1218,7 +1218,7 @@ function ta(e) {
                             l.e("644289"),
                             l.e("460915"),
                             l.e("675582"),
-                            l.e("79324"),
+                            l.e("856943"),
                             l.e("192388"),
                             l.e("165994"),
                             l.e("652091"),
@@ -1278,7 +1278,7 @@ function ta(e) {
                             l.e("349619"),
                             l.e("264236"),
                             l.e("543039"),
-                            l.e("117268"),
+                            l.e("136022"),
                             l.e("740428"),
                             l.e("832817"),
                             l.e("398125"),
@@ -1295,8 +1295,8 @@ function ta(e) {
                             l.e("431011"),
                             l.e("561216"),
                             l.e("707826"),
-                            l.e("141432"),
-                            l.e("475166"),
+                            l.e("343550"),
+                            l.e("552712"),
                             l.e("829177"),
                             l.e("199999"),
                             l.e("106943"),
@@ -1306,7 +1306,7 @@ function ta(e) {
                             l.e("611523"),
                             l.e("313681"),
                             l.e("588940"),
-                            l.e("772493"),
+                            l.e("556967"),
                             l.e("401518"),
                             l.e("444376"),
                             l.e("170653"),
@@ -1322,11 +1322,11 @@ function ta(e) {
                             l.e("418943"),
                             l.e("784103"),
                             l.e("317225"),
-                            l.e("390098"),
+                            l.e("643612"),
                             l.e("499941"),
                             l.e("776750"),
                             l.e("34472"),
-                            l.e("757364"),
+                            l.e("652898"),
                             l.e("53374"),
                             l.e("710638"),
                             l.e("696123"),
@@ -1368,8 +1368,8 @@ function ta(e) {
                             l.e("314805"),
                             l.e("173547"),
                             l.e("599141"),
-                            l.e("757238"),
-                            l.e("398082"),
+                            l.e("631608"),
+                            l.e("278424"),
                             l.e("515572"),
                             l.e("225990"),
                             l.e("858821"),
@@ -2087,10 +2087,10 @@ function t3(e, t) {
         return { byWidgetId: { ...l.byWidgetId, [e]: { ...n, ...t } } };
     });
 }
-function t4(e) {
+function t6(e) {
     return t2((t) => t.byWidgetId[e]?.view ?? t1.view);
 }
-function t6(e) {
+function t4(e) {
     return t2((t) => t.byWidgetId[e]?.isCompact ?? t1.isCompact);
 }
 function t7(e) {
@@ -2251,8 +2251,8 @@ function lc(e) {
 }
 function lo(e) {
     let { widgetId: t, title: l } = e,
-        n = t6(t),
-        a = t4(t);
+        n = t4(t),
+        a = t6(t);
     if (!n)
         return (0, i.jsxs)("div", {
             className: ld.$,
@@ -2329,14 +2329,14 @@ let lG = {
                 r = "edit" === l ? t.config.image : void 0,
                 d = void 0 !== r ? r : null != s ? e3(n, t.id, s) : null;
             return (0, i.jsxs)("div", {
-                className: e6.kL,
+                className: e4.kL,
                 children: [
-                    null != d && (0, i.jsx)("img", { className: e6.Sl, src: d, alt: "" }),
+                    null != d && (0, i.jsx)("img", { className: e4.Sl, src: d, alt: "" }),
                     null != a &&
                         (0, i.jsx)(g.E, {
                             variant: "text-md/normal",
                             color: "text-subtle",
-                            className: e6.Qq,
+                            className: e4.Qq,
                             children: a,
                         }),
                 ],
@@ -2370,7 +2370,7 @@ let lG = {
                             direction: "horizontal",
                             align: "center",
                             justify: "space-between",
-                            className: e4.B,
+                            className: e6.B,
                             children: [
                                 (0, i.jsxs)(W.B, {
                                     gap: 8,
@@ -2400,7 +2400,7 @@ let lG = {
                                             }),
                                     ],
                                 }),
-                                null != _ && (0, i.jsx)("img", { className: e4.V, src: _, alt: "" }),
+                                null != _ && (0, i.jsx)("img", { className: e6.V, src: _, alt: "" }),
                             ],
                         }),
                     }),
@@ -2554,8 +2554,8 @@ let lG = {
                         [t],
                     ),
                     n),
-                x = t6(c.id),
-                h = t4(c.id),
+                x = t4(c.id),
+                h = t6(c.id),
                 f = t7(c.id),
                 g = !x && "view" === u,
                 j =
@@ -2614,8 +2614,8 @@ let lG = {
         },
         ViewHeaderTrailing: function (e) {
             let { widget: t, title: l } = e,
-                n = t6(t.id),
-                a = t4(t.id);
+                n = t4(t.id),
+                a = t6(t.id);
             return n
                 ? null
                 : (0, i.jsx)(e5, {

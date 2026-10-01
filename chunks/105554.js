@@ -67,21 +67,21 @@ class N extends i.A {
                     name: "cs2-gsi",
                     applicationId: f.w,
                     isEnabled: () => S(f.w) && _.A.getConfig({ location: g }).enableCs2Gsi,
-                    importHandler: () => Promise.all([n.e("772493"), n.e("860838")]).then(n.bind(n, 525509)),
+                    importHandler: () => Promise.all([n.e("556967"), n.e("860838")]).then(n.bind(n, 525509)),
                 },
                 {
                     type: "application",
                     name: "dota-gsi",
                     applicationId: p.b,
                     isEnabled: () => S(p.b) && A.A.getConfig({ location: g }).enableDotaGsi,
-                    importHandler: () => Promise.all([n.e("772493"), n.e("677980")]).then(n.bind(n, 250263)),
+                    importHandler: () => Promise.all([n.e("556967"), n.e("677980")]).then(n.bind(n, 250263)),
                 },
                 {
                     type: "application",
                     name: "rocket-league",
                     applicationId: m.e,
                     isEnabled: () => S(m.e) && I.getConfig({ location: g }).enableRocketLeagueEvents,
-                    importHandler: () => Promise.all([n.e("772493"), n.e("182150")]).then(n.bind(n, 446885)),
+                    importHandler: () => Promise.all([n.e("556967"), n.e("182150")]).then(n.bind(n, 446885)),
                 },
             ]))
                 switch (e.type) {

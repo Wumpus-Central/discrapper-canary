@@ -1072,7 +1072,7 @@ var ea = a(356118),
     el = a(652215),
     en = a(758836),
     er = a(375708),
-    es = a(346148);
+    es = a(855494);
 let eo = {
         name: "Remote Layouts",
         id: "remote-layouts",

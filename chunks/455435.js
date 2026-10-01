@@ -28,7 +28,7 @@ var n = l(582128),
     I = l(165610),
     T = l(522250),
     M = l(58551),
-    _ = l(759967),
+    _ = l(50617),
     P = l(375708);
 function R(e) {
     let { installScope: t, status: l, integrationStatus: n, guildName: a, appChannelName: r } = e;

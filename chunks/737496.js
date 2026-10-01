@@ -1,7 +1,3 @@
-a.exports = {
-    Nr: "card__83361",
-    P0: "iconWrapper__83361",
-    Tc: "tag__83361",
-    yF: "divider__83361",
-    pf: "rolePills__83361",
-};
+e.exports = JSON.parse(
+    '{"au4mU4":["Vriend(in) toevoegen"],"JZCSRZ":["Vriendenlijst invouwen"],"OZj923":["Blijf op de hoogte van wat ze uitspoken en maak samen plezier."],"4fvi9I":["Je vrienden, in \xe9\xe9n oogopslag."],"Dr/+ku":["Vriendenlijst uitvouwen"],"7kJd9e":["Vrienden"],"/lMTzd":["Nu actief"],"eVxFX3":["Alfabetisch"],"aKZ12v":["Game"],"i+986w":["Vriendenlijst-opties"],"F3+Xei":["Grootte vriendenlijst wijzigen"],"8ALChp":["In spraakkanaal"],"60M8Ae":["Vrienden zoeken"],"ZsAL7q":["Vriendenlijst verbergen"],"0usxBd":["Je kunt vrienden zoeken aan de hand van hun weergave- of gebruikersnamen."],"VH2HXW":["Er komen geen vrienden overeen met die zoekopdracht."],"sgse8P":["Vriendenlijst tonen"]}',
+);

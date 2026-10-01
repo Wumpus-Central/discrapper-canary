@@ -54,7 +54,7 @@ var M = n(806163),
     ee = n(75678),
     et = n(202541),
     en = n(818348),
-    es = n(344045),
+    es = n(394107),
     el = n(375708),
     ea = n(876564);
 function ei() {
@@ -414,22 +414,22 @@ var eV = n(933832),
     eJ = n(342942),
     e0 = n(294454),
     e1 = n(625903),
-    e4 = n(445927),
-    e8 = n(376205);
+    e8 = n(445927),
+    e4 = n(376205);
 function e5(e) {
     let { server: t, onOpenSettings: n } = e,
         s = t.instance.subscriptionId,
         l = (0, y.bG)(
             [K.A],
             () =>
-                (0, e8.Yg)({
+                (0, e4.Yg)({
                     subscriptionId: s,
                     hasFetchedSubscriptions: K.A.hasFetchedSubscriptions(),
                     getSubscriptionById: (e) => K.A.getSubscriptionById(e),
                 }),
             [s],
         ),
-        a = (0, e4.A)(t.instance) && l,
+        a = (0, e8.A)(t.instance) && l,
         c = r.useCallback(() => {
             n(t);
         }, [n, t]);
@@ -1437,12 +1437,12 @@ var tX = n(177366),
     tJ = n(401864),
     t0 = n(124987),
     t1 = n(691885),
-    t4 = n(783857),
-    t8 = n(878278);
+    t8 = n(783857),
+    t4 = n(878278);
 let t5 = function () {
     let { sort: e, onSetSort: t, hasRelevanceFilters: n } = (0, R.v)(),
         s = (0, A.uM)(),
-        l = (0, t4.yB)("CollectiblesSortSelect"),
+        l = (0, t8.yB)("CollectiblesSortSelect"),
         a = n(),
         c = r.useMemo(() => tu.QB.filter((e) => e.sortType !== t0.$.RELEVANCE || a), [a]),
         d = r.useCallback((e) => {
@@ -1486,7 +1486,7 @@ let t5 = function () {
         ),
         g = d(e);
     return (0, i.jsx)("div", {
-        className: o()(t8.k, { [t4.jP]: l }),
+        className: o()(t4.k, { [t8.jP]: l }),
         children: (0, i.jsx)(t1.l, {
             label: el.intl.string(el.t.uaX705),
             hideLabel: !0,
@@ -2495,8 +2495,8 @@ function nJ(e) {
 }
 var n0 = n(626148),
     n1 = n(235939),
-    n4 = n(976860),
-    n8 = n(870308),
+    n8 = n(976860),
+    n4 = n(870308),
     n5 = n(650583);
 function n2(e) {
     let { children: t, shouldAddEventListener: n, onClose: s } = e,
@@ -2517,7 +2517,7 @@ let n6 = function (e) {
     let n = (0, E.A)((0, d.A)()),
         s = (0, u.bG)([S.default], () => S.default.getCurrentUser());
     (0, j.pE)();
-    let l = (0, t4.yB)("CollectiblesShop"),
+    let l = (0, t8.yB)("CollectiblesShop"),
         { onClose: a } = (function () {
             let { search: e } = (0, M.zy)(),
                 t = (0, M.g)(),
@@ -2526,10 +2526,10 @@ let n6 = function (e) {
             return {
                 onClose: r.useCallback(() => {
                     if (0 === s) {
-                        ((0, n4.aX)(), (0, z.openUserSettings)());
+                        ((0, n8.aX)(), (0, z.openUserSettings)());
                         return;
                     }
-                    (0, n4.EL)() ? (0, n4.aX)() : (0, n4.pX)(e2.BVt.APP);
+                    (0, n8.EL)() ? (0, n8.aX)() : (0, n8.pX)(e2.BVt.APP);
                 }, [s]),
                 source: s,
                 ...t,
@@ -2553,7 +2553,7 @@ let n6 = function (e) {
         }, []),
         { selectedTab: Y, transitionState: W, transitionToTab: $ } = (0, T.o)(y);
     ((0, x.HU)({ location: el.intl.string(el.t.pWG4ze) }), (0, L.uS)(n, Y, H, W, U), (0, L.N0)(Y, s));
-    let { dismissShopButtonDC: Z } = (0, n8.A)();
+    let { dismissShopButtonDC: Z } = (0, n4.A)();
     (r.useEffect(() => {
         Z(e7.i.AUTO_DISMISS);
     }, [Z]),
@@ -2567,7 +2567,7 @@ let n6 = function (e) {
     (r.useEffect(() => {
         Q.current?.focus();
     }, []),
-        (0, t4.gB)());
+        (0, t8.gB)());
     let { analyticsLocations: J } = (0, L.lC)(Y);
     return (0, i.jsx)(f.f5, {
         value: J,
@@ -2579,7 +2579,7 @@ let n6 = function (e) {
                     onClose: a,
                     shouldAddEventListener: !1,
                     children: (0, i.jsxs)("div", {
-                        className: o()(tG.bx, { [t4.jP]: l }),
+                        className: o()(tG.bx, { [t8.jP]: l }),
                         ref: Q,
                         inert: X,
                         tabIndex: -1,
