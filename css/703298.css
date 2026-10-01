@@ -145,6 +145,10 @@
     pointer-events: none
 }
 
+.scroller_ef3116:has([data-guilds-bar-home] :focus-visible) {
+    padding-top: 8px !important
+}
+
 .platform-osx .scroller_ef3116,
 .platform-win .scroller_ef3116 {
     padding-top: 4px
@@ -241,4 +245,4 @@
     bottom: 76px
 }
 
-/*# sourceMappingURL=703298.ba68463cb147f17c.css.map*/
+/*# sourceMappingURL=703298.3a6bc42d000fc604.css.map*/

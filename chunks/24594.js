@@ -1323,6 +1323,7 @@ function ny(e) {
         });
     return (0, a.jsx)("div", {
         className: nR.Uq,
+        "data-guilds-bar-home": !0,
         children: (0, a.jsx)(tP.A, {
             inlineSpecs: nL,
             tutorialId: "friends-list",
