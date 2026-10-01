@@ -306,11 +306,8 @@ function er(e) {
             () =>
                 null == u
                     ? null
-                    : (0, a.jsx)("div", {
-                          className: i()($.re, { [$.Oi]: d }),
-                          children: (0, a.jsx)(y.w, { ...u, children: u.message }),
-                      }),
-            [u, d],
+                    : (0, a.jsx)("div", { className: $.re, children: (0, a.jsx)(y.w, { ...u, children: u.message }) }),
+            [u],
         );
     return (0, a.jsxs)("div", { className: $.E6, "aria-busy": s, children: [C, m] });
 }

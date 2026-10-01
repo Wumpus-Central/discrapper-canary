@@ -12,7 +12,6 @@ e.exports = {
     BA: "orbChallengesCardContainer__81c60",
     E6: "orbChallengesCard__81c60",
     re: "orbChallengesNoticeContainer__81c60",
-    Oi: "orbChallengesNoticeContainerSpacing__81c60",
     GN: "orbChallengesCardEmptyContainer__81c60",
     Up: "orbChallengesList__81c60",
     tJ: "orbChallengesListItem__81c60",
