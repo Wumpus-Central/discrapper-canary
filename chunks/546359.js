@@ -1,4 +1,4 @@
-(n.d(t, { A: () => Z }), n(321073));
+(n.d(t, { A: () => Q }), n(321073));
 var i = n(17928),
     r = n(52133),
     a = n(228366),
@@ -56,7 +56,7 @@ function M(e) {
 function P(e, t) {
     switch (t) {
         case p.Vj.ACTIVE_NOW:
-            if (null != e.gameName) return g;
+            if (null != e.gameName || null != e.voiceChannelId) return g;
             return (0, T.iX)(e.status) ? N : S;
         case p.Vj.GAME:
             if (null != e.gameName)
@@ -76,12 +76,15 @@ function P(e, t) {
     }
 }
 function U(e) {
-    return R ? e.voiceChannelId : null;
+    return R && (0, T.kR)(O) ? e.voiceChannelId : null;
 }
-function w(e) {
-    ((e.snapshot = null), (b = null));
+function w(e, t) {
+    return (0, T.fz)(e, t, !(0, T.kR)(O));
 }
 function G(e) {
+    ((e.snapshot = null), (b = null));
+}
+function x(e) {
     let t = {
         key: e.key,
         type: e.type,
@@ -95,7 +98,7 @@ function G(e) {
     };
     return (D.set(t.key, t), I.Yr(v, t, T.Ut), (b = null), t);
 }
-function x(e, t) {
+function k(e, t) {
     let n = e.groupsByChannelId.get(t);
     return (
         null == n &&
@@ -105,16 +108,16 @@ function x(e, t) {
         n
     );
 }
-function k() {
+function F() {
     for (let e of (D.clear(), (v = []), (b = null), y.values())) {
         let t = P(e, O),
-            n = D.get(t.key) ?? G(t),
+            n = D.get(t.key) ?? x(t),
             i = U(e);
-        null != i ? x(n, i).rows.push(e) : n.rows.push(e);
+        null != i ? k(n, i).rows.push(e) : n.rows.push(e);
     }
-    for (let e of v) for (let t of (e.rows.sort(T.fz), e.groups)) t.rows.sort(T.fz);
+    for (let e of v) for (let t of (e.rows.sort(w), e.groups)) t.rows.sort(w);
 }
-function F(e) {
+function B(e) {
     if (null == e.snapshot) {
         let t = [],
             n = e.rows;
@@ -130,7 +133,7 @@ function F(e) {
                         }),
                     i.snapshot),
                 );
-            else (n === e.rows && (n = e.rows.slice()), I.Yr(n, i.rows[0], T.fz));
+            else (n === e.rows && (n = e.rows.slice()), I.Yr(n, i.rows[0], w));
         e.snapshot = {
             key: e.key,
             type: e.type,
@@ -142,23 +145,23 @@ function F(e) {
     }
     return e.snapshot;
 }
-function B(e) {
+function V(e) {
     return !!L && e();
 }
-function V() {
+function H() {
     if (!L) {
         for (let e of (y.clear(), u.A.getFriendIDs())) {
             let t = M(e);
             null != t && y.set(e, t);
         }
-        (k(), (L = !0));
+        (F(), (L = !0));
     }
 }
-function H() {
+function j() {
     let e = L;
     return ((L = !1), y.clear(), D.clear(), (v = []), (b = null), e);
 }
-function j(e) {
+function W(e) {
     let t = y.get(e),
         n = M(e);
     if ((null == t && null == n) || (null != t && null != n && (0, r.A)(t, n))) return !1;
@@ -172,13 +175,13 @@ function j(e) {
                 let r = U(e);
                 if (null != r) {
                     let t = i.groupsByChannelId.get(r);
-                    if (null == t || !I.TF(t.rows, e, T.fz)) return;
+                    if (null == t || !I.TF(t.rows, e, w)) return;
                     ((t.snapshot = null),
                         0 === t.rows.length &&
                             (i.groupsByChannelId.delete(t.channelId),
                             I.TF(i.groups, t, (e, t) => h.default.compare(e.channelId, t.channelId))));
-                } else if (!I.TF(i.rows, e, T.fz)) return;
-                (w(i),
+                } else if (!I.TF(i.rows, e, w)) return;
+                (G(i),
                     0 === i.rows.length &&
                         0 === i.groups.length &&
                         (D.delete(i.key), -1 !== (t = v.indexOf(i)) && v.splice(t, 1), (b = null)));
@@ -187,60 +190,60 @@ function j(e) {
     ) {
         y.set(e, n);
         let t = P(n, O),
-            i = D.get(t.key) ?? G(t),
+            i = D.get(t.key) ?? x(t),
             r = U(n);
         if (null != r) {
-            let e = x(i, r);
-            (I.Yr(e.rows, n, T.fz), (e.snapshot = null));
-        } else I.Yr(i.rows, n, T.fz);
-        w(i);
+            let e = k(i, r);
+            (I.Yr(e.rows, n, w), (e.snapshot = null));
+        } else I.Yr(i.rows, n, w);
+        G(i);
     } else y.delete(e);
     return !0;
 }
-function W(e) {
+function Y(e) {
     let t = !1;
-    for (let n of e) u.A.isFriend(n) && (t = j(n) || t);
+    for (let n of e) u.A.isFriend(n) && (t = W(n) || t);
     return t;
 }
-function Y() {
-    return B(() =>
+function K() {
+    return V(() =>
         (function () {
             let e = !1;
-            for (let t of u.A.getFriendIDs()) e = j(t) || e;
+            for (let t of u.A.getFriendIDs()) e = W(t) || e;
             return e;
         })(),
     );
 }
-function K(e) {
-    let { relationship: t } = e;
-    return B(() => j(t.id));
-}
 function $(e) {
-    return B(() => {
+    let { relationship: t } = e;
+    return V(() => W(t.id));
+}
+function z(e) {
+    return V(() => {
         let t = !1;
-        for (let n of y.values()) n.voiceChannelId === e && (t = j(n.userId) || t);
+        for (let n of y.values()) n.voiceChannelId === e && (t = W(n.userId) || t);
         return t;
     });
 }
-function z() {
-    return B(() => {
+function X() {
+    return V(() => {
         let e = !1;
         for (let t of Array.from(y.values()))
-            E.A.getVoiceStateForUser(t.userId)?.channelId != null && (e = j(t.userId) || e);
+            E.A.getVoiceStateForUser(t.userId)?.channelId != null && (e = W(t.userId) || e);
         return e;
     });
 }
-function X() {
-    return B(() => {
-        k();
+function q() {
+    return V(() => {
+        F();
     });
 }
-class q extends i.Ay.Store {
+class Z extends i.Ay.Store {
     static displayName = "FriendRowStore";
     initialize() {
         (this.waitFor(o.A, l.default, d.A, c.A, u.A, _.default, E.A),
-            this.syncWith([l.default], X),
-            this.syncWith([d.A], z));
+            this.syncWith([l.default], q),
+            this.syncWith([d.A], X));
     }
     getGroupingMode() {
         return O;
@@ -249,72 +252,72 @@ class q extends i.Ay.Store {
         return R;
     }
     getSections() {
-        return (V(), null == b && (b = 0 === v.length ? C : v.map(F)), b);
+        return (H(), null == b && (b = 0 === v.length ? C : v.map(B)), b);
     }
     getRow(e) {
-        return (V(), y.get(e));
+        return (H(), y.get(e));
     }
 }
-let Z = new q(a.h, {
-    CONNECTION_OPEN: H,
-    OVERLAY_INITIALIZE: H,
-    LOGOUT: H,
-    CONNECTION_OPEN_SUPPLEMENTAL: Y,
-    PRESENCES_REPLACE: Y,
-    GUILD_CREATE: Y,
-    GUILD_DELETE: Y,
+let Q = new Z(a.h, {
+    CONNECTION_OPEN: j,
+    OVERLAY_INITIALIZE: j,
+    LOGOUT: j,
+    CONNECTION_OPEN_SUPPLEMENTAL: K,
+    PRESENCES_REPLACE: K,
+    GUILD_CREATE: K,
+    GUILD_DELETE: K,
     PRESENCE_UPDATES: function (e) {
         let { updates: t } = e;
-        return B(() => {
+        return V(() => {
             let e = !1;
             for (let n of t) {
                 let t = n.user?.id;
-                null != t && u.A.isFriend(t) && (e = j(t) || e);
+                null != t && u.A.isFriend(t) && (e = W(t) || e);
             }
             return e;
         });
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { user: t } = e;
-        return B(() => !!u.A.isFriend(t.id) && j(t.id));
+        return V(() => !!u.A.isFriend(t.id) && W(t.id));
     },
-    RELATIONSHIP_ADD: K,
-    RELATIONSHIP_UPDATE: K,
-    RELATIONSHIP_REMOVE: K,
+    RELATIONSHIP_ADD: $,
+    RELATIONSHIP_UPDATE: $,
+    RELATIONSHIP_REMOVE: $,
     USER_UPDATE: function (e) {
         let { user: t } = e;
-        return B(() => !!u.A.isFriend(t.id) && j(t.id));
+        return V(() => !!u.A.isFriend(t.id) && W(t.id));
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
-        return B(() => {
+        return V(() => {
             let e = !1;
-            for (let n of t) u.A.isFriend(n.userId) && (e = j(n.userId) || e);
+            for (let n of t) u.A.isFriend(n.userId) && (e = W(n.userId) || e);
             return e;
         });
     },
     PASSIVE_UPDATE_V2: function (e) {
         let { voiceStates: t, removedVoiceStateUsers: n } = e;
-        return B(() => {
-            let e = W(t.map((e) => e.userId));
-            return W(n) || e;
+        return V(() => {
+            let e = Y(t.map((e) => e.userId));
+            return Y(n) || e;
         });
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        return $(t.id);
+        return z(t.id);
     },
     CALL_DELETE: function (e) {
         let { channelId: t } = e;
-        return $(t);
+        return z(t);
     },
     FRIENDS_LIST_SET_GROUPING_MODE: function (e) {
         let { mode: t } = e;
         return (
             t !== O &&
             ((O = t),
-            B(() => {
-                k();
+            V(() => {
+                F();
             }))
         );
     },
@@ -323,8 +326,8 @@ let Z = new q(a.h, {
         return (
             t !== R &&
             ((R = t),
-            B(() => {
-                k();
+            V(() => {
+                F();
             }))
         );
     },
