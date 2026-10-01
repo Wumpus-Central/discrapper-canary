@@ -3,6 +3,7 @@ b.exports = {
     zc: "iconContainer_bbc786",
     w1: "methodRowDisabled_bbc786",
     Qq: "text_bbc786",
+    h_: "description_bbc786",
     Vp: "vendor_bbc786",
     ai: "chevron_bbc786",
     qr: "footer_bbc786",

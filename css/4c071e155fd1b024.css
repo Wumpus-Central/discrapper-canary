@@ -4,8 +4,7 @@
 }
 
 [data-mana-component=modal]:has([data-expressive-v2-graphic]) div:has(>div>div>img) {
-    padding-bottom: var(--space-4);
-    padding-top: 0
+    padding-bottom: var(--space-4)
 }
 
 [data-mana-component=modal]:has([data-expressive-v2-graphic]) header {
@@ -56,9 +55,13 @@
 
 .text_bbc786 {
     display: flex;
-    flex: 0 0 332px;
+    flex: 0 0 322px;
     flex-direction: column;
     gap: 2px
+}
+
+.description_bbc786 {
+    margin-top: 2px
 }
 
 .vendor_bbc786 {
@@ -69,7 +72,7 @@
     align-self: center;
     color: var(--icon-subtle);
     flex-shrink: 0;
-    margin-inline-start: -2px
+    margin-inline-start: var(--space-12)
 }
 
 .footer_bbc786 {
@@ -92,9 +95,9 @@
 .rowSpinner_bbc786 {
     align-self: center;
     flex-shrink: 0;
-    height: var(--space-24);
-    margin-inline-start: -2px;
-    width: var(--space-24)
+    height: var(--space-20);
+    margin-inline-start: var(--space-12);
+    width: var(--space-20)
 }
 
 @media (max-height:550px) and (pointer:coarse),
@@ -117,4 +120,4 @@
     }
 }
 
-/*# sourceMappingURL=ca35c4f22a6fa770.css.map*/
+/*# sourceMappingURL=4c071e155fd1b024.css.map*/

@@ -236,10 +236,13 @@ let H = function (e) {
                                                 color: "text-strong",
                                                 children: e.title,
                                             }),
-                                            (0, s.jsx)(_.E, {
-                                                variant: "text-sm/normal",
-                                                color: "text-muted",
-                                                children: e.description,
+                                            (0, s.jsx)("div", {
+                                                className: U.h_,
+                                                children: (0, s.jsx)(_.E, {
+                                                    variant: "text-sm/normal",
+                                                    color: "text-muted",
+                                                    children: e.description,
+                                                }),
                                             }),
                                             null != e.providedBy &&
                                                 (0, s.jsx)("div", {
@@ -254,7 +257,7 @@ let H = function (e) {
                                     }),
                                     r
                                         ? (0, s.jsx)(E.y, { type: E.t.SPINNING_CIRCLE_SIMPLE, className: U.wt })
-                                        : (0, s.jsx)(R._, { className: U.ai }),
+                                        : (0, s.jsx)(R._, { size: "refresh_sm", className: U.ai }),
                                 ],
                             },
                             l,
