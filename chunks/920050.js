@@ -21,6 +21,7 @@
         QUEST_ORB_MULTIPLIER_CARD_ID: () => v,
         RECURRING_3P_PROMOTIONS_CARD_ID: () => p,
         RIOT_CREDIT_CAMPAIGN_PERK_CARD_ID: () => M,
+        RUST_3PP_CARD_ID: () => U,
         SERVER_BOOSTS_CARD_ID: () => C,
         SPECIAL_MEMBER_PRICING_CARD_ID: () => E,
         SPECIAL_STICKERS_CARD_ID: () => A,
@@ -60,4 +61,5 @@ let l = "badge",
     P = "callOfDuty3PPExpired",
     L = "youtube3PP",
     y = "nitroFileUpload1gb",
-    M = "riotCreditCampaign";
+    M = "riotCreditCampaign",
+    U = "rust3PP";
