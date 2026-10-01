@@ -1,4 +1,4 @@
-(a.r(t), a.d(t, { playgroundConfig: () => $, guildSpaceCollection: () => K }));
+(a.r(t), a.d(t, { playgroundConfig: () => Q, guildSpaceCollection: () => $ }));
 var s = a(477900),
     l = a(582128),
     n = a(503698),
@@ -102,7 +102,7 @@ let f = [
             let { id: t } = e;
             return t;
         }),
-    A = {
+    v = {
         stat: p.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED,
         week_start_ts: 1756512e3,
         next_stat: p.RE.GAMING_LEADERBOARD_STAT_DAYS_PLAYED,
@@ -138,7 +138,7 @@ let f = [
             },
         ],
     },
-    v = {
+    A = {
         title: "Server Hub Page",
         stories: [
             {
@@ -174,7 +174,7 @@ let f = [
                                         requestId: e,
                                         widgets: y.map((e) => ({
                                             id: e,
-                                            data: "success" === n ? { type: _.a.LEADERBOARD, ...A } : null,
+                                            data: "success" === n ? { type: _.a.LEADERBOARD, ...v } : null,
                                         })),
                                     });
                                 }
@@ -498,16 +498,23 @@ let U = [32, 21, 15, 14, 9],
             },
         ],
         top_listeners: [],
-        summary: {
-            listening_time_ms: 7704e4,
-            distinct_songs: 482,
-            distinct_artists: 6,
-            listener_count: 14,
-            plays_change_percent: 2,
-        },
+        plays_total: 1204,
+        distinct_listeners: 14,
+        distinct_songs: 482,
+        distinct_artists: 6,
+        listening_time_ms: 7704e4,
+        plays_trend_pct: 0.02,
         computed_at: null,
     },
     B = {
+        plays_total: 0,
+        distinct_listeners: 0,
+        distinct_songs: 0,
+        distinct_artists: 0,
+        listening_time_ms: 0,
+        plays_trend_pct: null,
+    },
+    Y = {
         ranked_songs: O.ranked_songs.map((e) => ({
             track_external_id: e.track_external_id,
             track_title: null,
@@ -524,10 +531,11 @@ let U = [32, 21, 15, 14, 9],
             unique_listeners: e.unique_listeners,
         })),
         top_listeners: [],
+        ...B,
         computed_at: null,
     },
-    Y = { ranked_songs: [], ranked_artists: [], top_listeners: [], computed_at: null },
-    W = [
+    W = { ranked_songs: [], ranked_artists: [], top_listeners: [], ...B, computed_at: null },
+    q = [
         {
             artist_external_id: "1vCWHaC5f2uS3yhpwWbIA6",
             artist_name: "Dayseeker",
@@ -540,7 +548,7 @@ let U = [32, 21, 15, 14, 9],
         },
         { artist_external_id: "6mEQK9m2krja6X1cfsAjfl", artist_name: "Ado", artist_image_hash: null },
     ];
-function q(e, t, a) {
+function F(e, t, a) {
     return {
         ...e,
         top_listeners: t.map((e, t) => {
@@ -550,36 +558,40 @@ function q(e, t, a) {
                   {
                       user_id: e,
                       plays: U[t] ?? 1,
-                      last_track:
-                          3 === t
-                              ? null
-                              : {
-                                    track_external_id: s.track_external_id,
-                                    track_title: s.track_title,
-                                    artist_name: s.artist_name,
-                                },
-                      recent_artists: W.slice(0, j[t] ?? 0),
+                      latest_track_external_id: 3 === t ? null : s.track_external_id,
+                      latest_track_title: 3 === t ? null : s.track_title,
+                      latest_artist_name: 3 === t ? null : s.artist_name,
+                      latest_cover_art_hash: 3 === t ? null : s.cover_art_hash,
+                      artists: q.slice(0, j[t] ?? 0),
                       artist_count: 0 === t ? 5 : null,
                   })
-                : { user_id: e, plays: U[t] ?? 1 };
+                : {
+                      user_id: e,
+                      plays: U[t] ?? 1,
+                      latest_track_external_id: null,
+                      latest_track_title: null,
+                      latest_artist_name: null,
+                      latest_cover_art_hash: null,
+                      artists: [],
+                  };
         }),
     };
 }
-function F(e) {
+function V(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
         className: `${C.Gt} ${a}`,
         children: [(0, s.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-function V(e) {
+function X(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
         className: `${G.Gt} ${a}`,
         children: [(0, s.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-function X(e) {
+function Z(e) {
     let { mode: t, hydration: a, type: n, initialConfig: r, successData: i } = e,
         [d, o] = l.useState(r),
         u = (0, s.jsx)(D.P, {
@@ -602,20 +614,20 @@ function X(e) {
     return (0, s.jsxs)("div", {
         className: G.Zp,
         children: [
-            (0, s.jsx)(V, { label: "Narrow column (380px)", className: G.sc, children: u }),
-            (0, s.jsx)(V, { label: "Wide column (685px)", className: G.U, children: u }),
+            (0, s.jsx)(X, { label: "Narrow column (380px)", className: G.sc, children: u }),
+            (0, s.jsx)(X, { label: "Wide column (685px)", className: G.U, children: u }),
         ],
     });
 }
-let Z = {
+let K = {
         text: "Drop in, say hi, and check the pinned posts for the rules and event schedule.",
         image_hash: "some_hash",
     },
-    K = {
+    $ = {
         id: "guild-space",
         name: "Server Hub",
         groups: [
-            v,
+            A,
             u,
             {
                 title: "Server Hub Widget Framework",
@@ -625,11 +637,11 @@ let Z = {
                         id: "guild-space-widget-slot-image-text",
                         docs: "ImageText reference widget (no hydration) across view/edit and each mock hydration state. In edit mode the pencil opens the framework-owned Edit modal; Save commits config through onCommitConfig, Cancel/close discards.",
                         component: function (e) {
-                            return (0, s.jsx)(X, {
+                            return (0, s.jsx)(Z, {
                                 ...e,
                                 type: _.a.IMAGE_TEXT,
                                 title: "Image + Text",
-                                initialConfig: Z,
+                                initialConfig: K,
                                 successData: void 0,
                             });
                         },
@@ -675,11 +687,11 @@ let Z = {
                                 o = (function (e, t) {
                                     switch (e) {
                                         case "populated":
-                                            return { status: "success", data: q(O, t, !0) };
+                                            return { status: "success", data: F(O, t, !0) };
                                         case "minimal":
-                                            return { status: "success", data: q(B, t, !1) };
+                                            return { status: "success", data: F(Y, t, !1) };
                                         case "empty":
-                                            return { status: "success", data: Y };
+                                            return { status: "success", data: W };
                                         case "loading":
                                             return { status: "loading" };
                                         case "error":
@@ -710,17 +722,17 @@ let Z = {
                             return (0, s.jsxs)("div", {
                                 className: C.Zp,
                                 children: [
-                                    (0, s.jsx)(F, {
+                                    (0, s.jsx)(V, {
                                         label: "Wide column (685px)",
                                         className: C.U,
                                         children: u("wide"),
                                     }),
-                                    (0, s.jsx)(F, {
+                                    (0, s.jsx)(V, {
                                         label: "Narrow column (380px)",
                                         className: C.sc,
                                         children: u("narrow"),
                                     }),
-                                    (0, s.jsx)(F, {
+                                    (0, s.jsx)(V, {
                                         label: "Minimum width (320px)",
                                         className: C.Bp,
                                         children: u("minimum"),
@@ -766,4 +778,4 @@ let Z = {
         ],
         tags: ["Server Hub", "Widgets", "GuildSpace", "Publish", "Leaderboard", "Popular Music"],
     },
-    $ = { playgroundBaseUrl: "guild-space", collections: [K] };
+    Q = { playgroundBaseUrl: "guild-space", collections: [$] };

@@ -17,31 +17,30 @@
 }
 
 .aggregate__05302 {
+    display: flex;
     flex: 1;
     flex-direction: column;
-    gap: var(--space-4)
+    gap: var(--space-4);
+    min-width: 0
 }
 
-.aggregate__05302,
-.detail__05302 {
-    display: flex;
-    min-width: 0
+.songAggregate__05302 {
+    gap: var(--space-8)
 }
 
 .detail__05302 {
     flex-wrap: wrap;
-    gap: var(--space-6)
+    min-width: 0
 }
 
 .detail__05302,
 .trend__05302 {
-    align-items: center
+    align-items: center;
+    display: flex
 }
 
 .trend__05302 {
-    display: flex;
-    flex-shrink: 0;
-    gap: var(--space-4)
+    flex-shrink: 0
 }
 
 .trendUp__05302 {
@@ -59,7 +58,7 @@
 
 .overflow__05302 {
     align-items: center;
-    background-color: var(--background-mod-subtle);
+    background-color: var(--background-mod-strong);
     border-radius: var(--radius-round);
     display: flex;
     height: var(--space-24);
@@ -3335,6 +3334,10 @@
     padding: var(--space-4) var(--space-8)
 }
 
+.list_d7ac50.listHasUpsell_d7ac50 {
+    padding-bottom: var(--space-64)
+}
+
 .floatingRowBackground_d7ac50 {
     height: calc(var(--space-64) + var(--space-24));
     inset-inline-end: 0;
@@ -3362,6 +3365,23 @@
     inset-inline-start: var(--space-8);
     position: absolute;
     z-index: 3
+}
+
+.floatingUpsell_d7ac50 {
+    inset-block-end: var(--space-4);
+    inset-inline: 0;
+    position: absolute;
+    z-index: 3
+}
+
+.floatingUpsell_d7ac50:before {
+    background: var(--background-surface-high);
+    border-radius: var(--radius-sm);
+    content: "";
+    inset-block: 0;
+    inset-inline: var(--space-12);
+    position: absolute;
+    z-index: -1
 }
 
 .floatingRowTop_d7ac50 {
@@ -3559,17 +3579,22 @@
 
 .ambientArt_d19f2b {
     bottom: 0;
-    filter: blur(64px);
     height: 272px;
-    inset-inline-start: 0;
+    inset-inline: 0;
     -webkit-mask-image: linear-gradient(0deg, #000 0, transparent);
     mask-image: linear-gradient(0deg, #000 0, transparent);
     max-height: 100%;
+    pointer-events: none;
+    position: absolute
+}
+
+.ambientArtImage_d19f2b {
+    display: block;
+    filter: blur(64px);
+    height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
     opacity: .4;
-    pointer-events: none;
-    position: absolute;
     width: 272px
 }
 
@@ -3799,4 +3824,4 @@
     display: none
 }
 
-/*# sourceMappingURL=e8cdae114c7a6d30.css.map*/
+/*# sourceMappingURL=51468f7b336d5d8b.css.map*/
