@@ -323,7 +323,6 @@ let eZ = {
     enabled: !0,
     spatialBlend: 1,
     reflectionsEnabled: !1,
-    roomSize: 25,
     distanceAttenuationEnabled: !1,
     mode: "arc",
     spread: 2,
@@ -1030,15 +1029,16 @@ function nx(e) {
     return !0 === e.enabled && t && tr.supports(eJ.O5.SPATIAL_AUDIO);
 }
 function nk(e) {
-    ((tj = nx(e)),
-        tr.setAudioMixerOptions({
-            isSpatial: tj,
-            enabled: tj,
-            spatialBlend: e.spatialBlend,
-            reflectionsEnabled: e.reflectionsEnabled,
-            roomSize: e.roomSize,
-            distanceAttenuationEnabled: e.distanceAttenuationEnabled,
-        }));
+    tj = nx(e);
+    let { distanceAttenuationEnabled: t } = e;
+    tr.setAudioMixerOptions({
+        isSpatial: tj,
+        enabled: tj,
+        binaural: { spatialBlend: e.spatialBlend },
+        distanceAttenuation: { enabled: t },
+        airAbsorption: { enabled: t },
+        reflections: { enabled: e.reflectionsEnabled },
+    });
 }
 function nF(e) {
     let t = nn(),
