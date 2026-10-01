@@ -1,4 +1,4 @@
-(n.d(t, { A: () => U }), n(321073));
+(n.d(t, { A: () => k }), n(321073));
 var i = n(451988),
     r = n(228366),
     a = n(817281),
@@ -12,80 +12,88 @@ var i = n(451988),
     E = n(188321),
     A = n(25202);
 n(974477);
-var h = n(823894),
-    I = n(355097);
-let f = {
-        gifAutoPlay: { value: !1, reasonKey: I._A.GAME_MODE },
-        animateEmoji: { value: !1, reasonKey: I._A.GAME_MODE },
-        animateStickers: { value: h.BJ.ANIMATE_ON_INTERACTION, reasonKey: I._A.GAME_MODE },
+var h = n(392164),
+    I = n(823894),
+    f = n(355097);
+let p = {
+        gifAutoPlay: { value: !1, reasonKey: f._A.GAME_MODE },
+        animateEmoji: { value: !1, reasonKey: f._A.GAME_MODE },
+        animateStickers: { value: I.BJ.ANIMATE_ON_INTERACTION, reasonKey: f._A.GAME_MODE },
     },
-    p = Object.keys(f),
-    T = new i.Ep(),
+    T = Object.keys(p),
     m = new i.Ep(),
     g = new i.Ep(),
-    S = 0,
-    N = !1;
-function C() {
+    S = new i.Ep(),
+    N = 0,
+    C = 0,
+    O = null,
+    R = !1;
+function L() {
     r.h.dispatch({ type: "GAME_MODE_DISCORD_FOCUS_CHANGE", focused: _.A.isFocused() });
 }
-function O(e) {
+function y(e) {
     r.h.dispatch({ type: "GAME_MODE_DISCORD_HOVER_CHANGE", hovered: e });
 }
-function R() {
-    (m.stop(), O(!0));
-}
-function L() {
-    m.start(2e3, () => O(!1));
-}
-function y() {
-    ((N = !1),
-        m.stop(),
-        document.documentElement.removeEventListener("mouseenter", R),
-        document.documentElement.removeEventListener("mouseleave", L));
-}
-function D(e) {
-    S !== e && ((S = e), l.A?.window?.setFrameRate?.(null, e));
+function D() {
+    (g.stop(), y(!0));
 }
 function v() {
+    g.start(2e3, () => y(!1));
+}
+function b() {
+    ((R = !1),
+        g.stop(),
+        document.documentElement.removeEventListener("mouseenter", D),
+        document.documentElement.removeEventListener("mouseleave", v));
+}
+function M(e) {
+    N !== e && ((N = e), l.A?.window?.setFrameRate?.(null, e));
+}
+function P(e) {
+    let t = c.A.isWindowFullyInitialized(h.f) ? (c.A.getWindow(h.f) ?? null) : null;
+    (t !== O && ((O = t), (C = 0)), null != t && C !== e && ((C = e), l.A?.window?.setFrameRate?.(h.f, e)));
+}
+function U() {
     let e;
-    ((e = E.A.enabled && E.A.hasRunningGame) !== N &&
+    ((e = E.A.enabled && E.A.hasRunningGame) !== R &&
         (e
-            ? ((N = !0),
-              document.documentElement.addEventListener("mouseenter", R),
-              document.documentElement.addEventListener("mouseleave", L),
-              O(document.documentElement.matches(":hover")))
-            : (y(), O(!1))),
-        D((0, A.A)()));
+            ? ((R = !0),
+              document.documentElement.addEventListener("mouseenter", D),
+              document.documentElement.addEventListener("mouseleave", v),
+              y(document.documentElement.matches(":hover")))
+            : (b(), y(!1))),
+        M((0, A.A)()),
+        P((0, A.j)()));
     let t = E.A.isThrottling,
         n = {},
         i = [];
-    for (let e of p) {
+    for (let e of T) {
         let r = u.A.getOverride(e);
-        t ? null == r && (n[e] = f[e]) : r?.reasonKey === I._A.GAME_MODE && i.push(e);
+        t ? null == r && (n[e] = p[e]) : r?.reasonKey === f._A.GAME_MODE && i.push(e);
     }
     (Object.keys(n).length > 0 && a.Ay.applySettingsOverride(n), i.length > 0 && a.Ay.clearSettingsOverride(...i));
 }
-function b() {
-    r.h.isDispatching() ? g.start(0, v, !1) : v();
+function w() {
+    r.h.isDispatching() ? S.start(0, U, !1) : U();
 }
-function M() {
-    (y(), T.stop(), g.stop(), D(0));
+function G() {
+    (b(), m.stop(), S.stop(), M(0), P(0));
 }
-class P extends s.A {
+class x extends s.A {
     actions = {
         POST_CONNECTION_OPEN: () => {
-            g.start(0, () => {
-                (C(), v());
+            S.start(0, () => {
+                (L(), U());
             });
         },
         WINDOW_FOCUS: () => {
-            T.start(2e3, C);
+            m.start(2e3, L);
         },
-        LOGOUT: () => M(),
+        LOGOUT: () => G(),
     };
-    stores = new Map().set(E.A, b).set(o.A, b).set(d.A, b).set(c.A, b).set(u.A, b);
+    stores = new Map().set(E.A, w).set(o.A, w).set(d.A, w).set(c.A, w).set(u.A, w);
     _terminate() {
-        M();
+        G();
     }
 }
-let U = new P();
+let k = new x();

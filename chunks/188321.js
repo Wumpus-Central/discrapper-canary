@@ -30,8 +30,11 @@ class _ extends i.Ay.DeviceSettingsStore {
     get hasRunningGame() {
         return d;
     }
+    get isActive() {
+        return !!o.enabled && !!d && (0, s.v)({ location: "GameModeStore" }).enabled;
+    }
     get isThrottling() {
-        return !!o.enabled && !!d && !!(0, s.v)({ location: "GameModeStore" }).enabled && !c && !u;
+        return this.isActive && !c && !u;
     }
     get isDiscordFocused() {
         return c;
