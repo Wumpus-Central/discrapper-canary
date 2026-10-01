@@ -423,14 +423,6 @@
     padding: 0 var(--space-4)
 }
 
-.modal__50a6a {
-    display: flex;
-    flex-direction: column;
-    max-height: 100%;
-    min-height: 0;
-    overflow: hidden
-}
-
 .header__50a6a {
     border-bottom: 1px solid var(--border-subtle);
     justify-content: space-between;
@@ -464,4 +456,4 @@
     min-height: 0
 }
 
-/*# sourceMappingURL=7ab7935e748d3175.css.map*/
+/*# sourceMappingURL=8083809467ae3621.css.map*/
