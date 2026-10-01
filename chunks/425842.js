@@ -1,4 +1,4 @@
-n.d(t, { default: () => iT });
+n.d(t, { default: () => iy });
 var l,
     i,
     a = n(477900),
@@ -21,8 +21,8 @@ var l,
     I = n(146779),
     N = n(793574),
     b = n(688810),
-    k = n(139286),
-    C = n(206828),
+    C = n(139286),
+    k = n(206828),
     S = n(587895),
     T = n(590703),
     y = n(180170),
@@ -95,8 +95,8 @@ var ef = n(155718),
     eI = n(383233),
     eN = n(998218),
     eb = n(375708);
-let ek = /^#{1,3}\s+(.+)$/,
-    eC = /^https?:\/\/\S+$/;
+let eC = /^#{1,3}\s+(.+)$/,
+    ek = /^https?:\/\/\S+$/;
 var eS = n(60465),
     eT = n(158390),
     ey = n(636537),
@@ -158,7 +158,7 @@ async function eD(e, t) {
                                 .map((e) => e.content)
                                 .join("\n");
                         let t = e.content;
-                        return 0 === t.length || eC.test(t.trim())
+                        return 0 === t.length || ek.test(t.trim())
                             ? ((function (e) {
                                   let t = e.embeds[0];
                                   if (null == t) return null;
@@ -217,7 +217,7 @@ async function eD(e, t) {
                     })(l),
                     { title: r, body: c } =
                         ((t = a.indexOf("\n")),
-                        (n = (-1 === t ? a : a.slice(0, t)).match(ek)),
+                        (n = (-1 === t ? a : a.slice(0, t)).match(eC)),
                         null != n
                             ? { title: n[1].trim(), body: -1 === t ? "" : a.slice(t + 1).trimStart() }
                             : { body: a }),
@@ -777,13 +777,13 @@ var tA = n(998445),
     tI = n(488225),
     tN = n(967492),
     tb = n(72265),
-    tk = n(454346),
-    tC = n(37948),
+    tC = n(454346),
+    tk = n(37948),
     tS = n(750013);
 let tT = { size: "xs", colorClass: tS.wP };
 function ty(e) {
     let { website: t, trackAction: n } = e,
-        l = (0, tC.A)(),
+        l = (0, tk.A)(),
         {
             action: i,
             icon: r,
@@ -834,7 +834,7 @@ function ty(e) {
                     };
                 case td.V.TWITCH:
                     return {
-                        icon: (0, a.jsx)(tk.a, { ...t }),
+                        icon: (0, a.jsx)(tC.a, { ...t }),
                         action: _.GameProfileTrackActionActions.TwitchLink,
                         title: eb.intl.string(eb.t["7xtz4G"]),
                     };
@@ -1610,11 +1610,11 @@ function nA(e) {
             [j, p],
         ),
         [N, b] = s.useState(!1),
-        k = s.useRef(null),
-        C = s.useCallback(() => {
+        C = s.useRef(null),
+        k = s.useCallback(() => {
             n(E ? _.GameProfileTrackActionActions.ClickTrailer : _.GameProfileTrackActionActions.ClickImage);
             let e = d.current,
-                t = k.current,
+                t = C.current,
                 l = null != e && !e.paused,
                 a = e?.muted ?? !0,
                 s = e?.currentTime ?? 0;
@@ -1634,7 +1634,7 @@ function nA(e) {
                 onIndexChange: i,
                 onClose: () => {
                     let e = x.current,
-                        t = k.current,
+                        t = C.current,
                         n = null != e ? !e.paused : l;
                     (e?.pause(),
                         null != t && null != e
@@ -1649,9 +1649,9 @@ function nA(e) {
         y = s.useCallback(() => c(null), []),
         R = s.useCallback(
             (e) => {
-                e && C();
+                e && k();
             },
-            [C],
+            [k],
         );
     return 0 === j.length
         ? null
@@ -1668,7 +1668,7 @@ function nA(e) {
                                     reducedMotion: h,
                                     autoPlay: !h && !g,
                                     videoRef: d,
-                                    mediaPlayerRef: k,
+                                    mediaPlayerRef: C,
                                     onPlay: S,
                                     onPause: T,
                                     onFullscreenChange: R,
@@ -1693,7 +1693,7 @@ function nA(e) {
                                 (0, a.jsx)("div", { className: nd.QN }),
                                 (0, a.jsx)(ei.D, {
                                     className: nd.gv,
-                                    onClick: C,
+                                    onClick: k,
                                     children: (0, a.jsx)("div", {
                                         className: nd.cs,
                                         children: (0, a.jsx)(
@@ -1797,8 +1797,8 @@ var nb =
         (l[(l.FAIR = 3)] = "FAIR"),
         (l[(l.WEAK = 4)] = "WEAK"),
         l),
-    nk = n(778591);
-function nC(e) {
+    nC = n(778591);
+function nk(e) {
     let { rating: t, strokeColor: n } = e,
         l = 2 * Math.PI * 16,
         i = Math.min(Math.max(t, 0), 100) / 100,
@@ -1822,7 +1822,7 @@ function nC(e) {
 var nS = n(255417);
 function nT(e) {
     let { url: t, trackAction: n, title: l, rating: i, ratingCount: r, tooltipVariant: c = "all" } = e,
-        o = (0, tC.A)(),
+        o = (0, tk.A)(),
         u = nI(i, r, "recent" === c),
         d = nN(u),
         m = s.useCallback(() => {
@@ -1919,7 +1919,7 @@ function ny(e) {
         o = r.topCriticRating ?? -1,
         u = r.topCriticRatingCount ?? -1,
         d = (o <= 0 || u <= 0) && null == c,
-        m = (0, tC.A)(),
+        m = (0, tk.A)(),
         x = s.useCallback(() => {
             (l(_.GameProfileTrackActionActions.OpenCriticReviews), m(n));
         }, [m, l, n]);
@@ -2019,7 +2019,7 @@ function nL(e) {
                 className: nS.TE,
                 style: { backgroundColor: i },
                 children: [
-                    (0, a.jsx)(nC, { rating: t, strokeColor: l }),
+                    (0, a.jsx)(nk, { rating: t, strokeColor: l }),
                     (0, a.jsx)(es.E, {
                         variant: "text-xs/bold",
                         color: "text-overlay-light",
@@ -2035,7 +2035,7 @@ function nL(e) {
 let nP = function (e) {
     let { game: t, trackAction: n } = e,
         l = (0, tc.c)("GameProfileReviews"),
-        i = (0, nk.I)(t.id),
+        i = (0, nC.I)(t.id),
         s = t.opencriticUrl,
         r = t.steamReleaseStatus !== d.Y.RETIRED_ABANDONED && null != i,
         c = t.reviews?.steam,
@@ -2425,7 +2425,7 @@ function ls(e) {
         i,
         a,
         r =
-            ((t = (0, nk.I)(e?.id)),
+            ((t = (0, nC.I)(e?.id)),
             (n = (function (e) {
                 if (null == e) return null;
                 let t = e.thirdPartySkus.find((e) => e.distributor === eM.d3x.XBOX_GAME_PASS && !(0, tu.uJ)(e.id));
@@ -2454,7 +2454,7 @@ function ls(e) {
 }
 function lr(e) {
     let { data: t, trackAction: n } = e,
-        l = (0, tC.A)();
+        l = (0, tk.A)();
     return (0, a.jsx)(li, {
         icon: t.icon,
         text: t.text,
@@ -2557,8 +2557,8 @@ var ld = n(109112),
     lI = n(173936),
     lN = n(365199),
     lb = n(789645),
-    lk = n(442433),
-    lC = n(50268),
+    lC = n(442433),
+    lk = n(50268),
     lS = n(44724),
     lT = n(676924),
     ly = n(957565),
@@ -2589,7 +2589,7 @@ function lK(e) {
         { game: i, className: r, trackAction: c, activeTab: o } = e,
         u = s.useRef(null),
         d = s.useRef(null),
-        x = (0, lC.A)({ id: i.id, label: eb.intl.string(eb.t.SHQGPj) }),
+        x = (0, lk.A)({ id: i.id, label: eb.intl.string(eb.t.SHQGPj) }),
         f =
             ((t = i.id),
             (l = s.useCallback(() => {
@@ -2770,10 +2770,10 @@ function lK(e) {
         b = s.useCallback(() => {
             null != E && (0, lS.G)({ applicationId: E });
         }, [E]),
-        k = s.useCallback(() => {
+        C = s.useCallback(() => {
             null != E && (c(_.GameProfileTrackActionActions.GameShop), (0, lS.default)({ applicationId: E }), p());
         }, [E, c, p]),
-        C = s.useCallback(() => p(!1), [p]),
+        k = s.useCallback(() => p(!1), [p]),
         S = s.useCallback(() => {
             c(_.GameProfileTrackActionActions.CopyLink);
             let e = `${location.protocol}${window.GLOBAL_ENV.WEBAPP_ENDPOINT}${eM.BVt.GAME_PROFILE(i.id)}`;
@@ -2802,7 +2802,7 @@ function lK(e) {
                         return (0, a.jsx)(lj.W, {
                             navId: "game-profile-add-to-profile",
                             onClose: () => {
-                                ((0, lk.Z_)(), t());
+                                ((0, lC.Z_)(), t());
                             },
                             "aria-label": eb.intl.string(eb.t.sidPSo),
                             onSelect: () => {},
@@ -2831,7 +2831,7 @@ function lK(e) {
                         size: "sm",
                         "aria-label": eb.intl.string(eb.t.apFNLU),
                         onMouseDown: b,
-                        onClick: k,
+                        onClick: C,
                     }),
                 }),
             o !== lR.COMMERCE &&
@@ -2857,7 +2857,7 @@ function lK(e) {
                         return (0, a.jsx)(lj.W, {
                             navId: "game-profile-context",
                             onClose: () => {
-                                ((0, lk.Z_)(), t());
+                                ((0, lC.Z_)(), t());
                             },
                             "aria-label": eb.intl.string(eb.t.PNeFgW),
                             onSelect: () => {},
@@ -2885,7 +2885,7 @@ function lK(e) {
                 icon: lb.P,
                 variant: "overlay-secondary",
                 size: "sm",
-                onClick: C,
+                onClick: k,
                 "aria-label": eb.intl.string(eb.t.cpT0Cq),
             }),
         ],
@@ -2942,45 +2942,44 @@ function l3(e) {
             className: t,
             label: n,
             navigation: l,
-            trackAction: i,
-            commercePages: r,
-            selectedCommercePageIndex: c,
-            selectCommercePage: o,
+            commercePages: i,
+            selectedCommercePageIndex: r,
+            selectCommercePage: c,
         } = e,
-        { selectedTab: u, selectTab: d } = l,
-        m = s.useRef(null),
-        { isHovered: x, setIsHovered: h, onMouseEnter: g, onMouseLeave: f, cancelTimers: j } = (0, l0.A)(100, 100),
-        A = eb.intl.string(eb.t["J3/JCl"]),
-        p = s.useCallback(
+        { selectedTab: o, selectTab: u } = l,
+        d = s.useRef(null),
+        { isHovered: m, setIsHovered: x, onMouseEnter: h, onMouseLeave: g, cancelTimers: f } = (0, l0.A)(100, 100),
+        j = eb.intl.string(eb.t["J3/JCl"]),
+        A = s.useCallback(
             (e) => {
-                (j(), h(e));
+                (f(), x(e));
             },
-            [j, h],
+            [f, x],
         );
     return (0, a.jsx)(lf.Y, {
-        targetElementRef: m,
-        shouldShow: x,
+        targetElementRef: d,
+        shouldShow: m,
         position: "bottom",
         align: "left",
         useMouseEnter: !0,
-        onRequestOpen: () => p(!0),
-        onRequestClose: () => p(!1),
+        onRequestOpen: () => A(!0),
+        onRequestClose: () => A(!1),
         renderPopout: (e) => {
             let { closePopout: t } = e;
             return (0, a.jsx)("div", {
-                onMouseEnter: g,
-                onMouseLeave: f,
+                onMouseEnter: h,
+                onMouseLeave: g,
                 children: (0, a.jsx)(lj.W, {
                     navId: "game-profile-commerce-pages",
-                    "aria-label": A,
+                    "aria-label": j,
                     onClose: t,
                     onSelect: void 0,
                     children: (0, a.jsx)(lA.rX, {
-                        children: r.map((e, t) => {
+                        children: i.map((e, t) => {
                             var n;
                             let l,
-                                s = u === lR.COMMERCE && t === c,
-                                r =
+                                i = o === lR.COMMERCE && t === r,
+                                s =
                                     ((n = e.title),
                                     null != (l = n?.trim()) && l.length > 0
                                         ? l
@@ -2989,12 +2988,10 @@ function l3(e) {
                                 lA.Dr,
                                 {
                                     id: `commerce-page-${t}`,
-                                    label: r,
-                                    color: s ? "brand" : "default",
-                                    trailingIndicator: s ? { type: "icon", icon: lQ.U } : void 0,
-                                    action: () => {
-                                        (i(_.GameProfileTrackActionActions.GameShop), o(t));
-                                    },
+                                    label: s,
+                                    color: i ? "brand" : "default",
+                                    trailingIndicator: i ? { type: "icon", icon: lQ.U } : void 0,
+                                    action: () => c(t),
                                 },
                                 t,
                             );
@@ -3004,30 +3001,30 @@ function l3(e) {
             });
         },
         children: (e, l) => {
-            let { isShown: s } = l,
-                r = s ? lq.t : lZ.a;
+            let { isShown: i } = l,
+                s = i ? lq.t : lZ.a;
             return (0, a.jsx)(lm.V.Item, {
                 ...e,
                 id: lR.COMMERCE,
                 look: "brand",
                 disableItemStyles: !0,
-                selectedItem: u === lR.COMMERCE ? lR.COMMERCE : void 0,
+                selectedItem: o === lR.COMMERCE ? lR.COMMERCE : void 0,
                 onClick: (t) => {
-                    (i(_.GameProfileTrackActionActions.GameShop), d(lR.COMMERCE), e.onClick(t));
+                    (u(lR.COMMERCE), e.onClick(t));
                 },
-                onMouseLeave: f,
+                onMouseLeave: g,
                 clickableRef: (e) => {
-                    m.current = e?.ref ?? null;
+                    d.current = e?.ref ?? null;
                 },
                 className: t,
-                "aria-label": A,
+                "aria-label": j,
                 "aria-haspopup": "menu",
                 children: (0, a.jsx)(es.E, {
                     variant: l4,
                     color: "none",
                     children: (0, a.jsx)(l2, {
                         label: n,
-                        chevron: (0, a.jsx)(r, { size: "xs", color: "currentColor" }),
+                        chevron: (0, a.jsx)(s, { size: "xs", color: "currentColor" }),
                     }),
                 }),
             });
@@ -3035,14 +3032,14 @@ function l3(e) {
     });
 }
 function l5(e) {
-    let { className: t, navigation: n, trackAction: l } = e,
+    let { className: t, navigation: n } = e,
         {
-            selectedTab: i,
-            selectTab: r,
-            hasCommerceTab: c,
-            commercePages: o,
-            selectedCommercePageIndex: u,
-            selectCommercePage: d,
+            selectedTab: l,
+            selectTab: i,
+            hasCommerceTab: r,
+            commercePages: c,
+            selectedCommercePageIndex: o,
+            selectCommercePage: u,
         } = (function (e) {
             let { selectedTab: t, selectTab: n } = e,
                 { hasCommerceTab: l, commerceStorefront: i } = Z(),
@@ -3066,29 +3063,26 @@ function l5(e) {
                 selectCommercePage: m,
             };
         })(n);
-    if (!c) return null;
-    let m = eb.intl.string(eb.t.apFNLU);
-    return o.length > 1
+    if (!r) return null;
+    let d = eb.intl.string(eb.t.apFNLU);
+    return c.length > 1
         ? (0, a.jsx)(l3, {
               className: t,
-              label: m,
+              label: d,
               navigation: n,
-              trackAction: l,
-              commercePages: o,
-              selectedCommercePageIndex: u,
-              selectCommercePage: d,
+              commercePages: c,
+              selectedCommercePageIndex: o,
+              selectCommercePage: u,
           })
         : (0, a.jsx)(lm.V.Item, {
               id: lR.COMMERCE,
               look: "brand",
               disableItemStyles: !0,
-              selectedItem: i,
-              onClick: () => {
-                  (l(_.GameProfileTrackActionActions.GameShop), r(lR.COMMERCE));
-              },
+              selectedItem: l,
+              onClick: () => i(lR.COMMERCE),
               className: t,
-              "aria-label": m,
-              children: (0, a.jsx)(es.E, { variant: l4, color: "none", children: (0, a.jsx)(l2, { label: m }) }),
+              "aria-label": d,
+              children: (0, a.jsx)(es.E, { variant: l4, color: "none", children: (0, a.jsx)(l2, { label: d }) }),
           });
 }
 var l6 = n(510954);
@@ -3125,7 +3119,7 @@ function l7(e) {
                             "aria-label": m,
                             children: (0, a.jsx)(es.E, { variant: "text-md/medium", color: "none", children: m }),
                         }),
-                        (0, a.jsx)(l5, { className: l6.Mf, navigation: l, trackAction: n }),
+                        (0, a.jsx)(l5, { className: l6.Mf, navigation: l }),
                     ],
                 }),
                 (0, a.jsx)(lK, { game: t, className: l6.HK, trackAction: n, activeTab: i }),
@@ -3255,8 +3249,10 @@ function iv(e) {
         { analyticsLocations: o } = (0, b.Ay)([N.A.GAME_PROFILE]),
         u = s.useCallback(() => {
             if (l?.application != null) {
-                if ((t(_.GameProfileTrackActionActions.GameShop), r)) return void n(lR.COMMERCE);
-                (c(), (0, lS.default)({ applicationId: l.application.id }));
+                if (r) return void n(lR.COMMERCE);
+                (t(_.GameProfileTrackActionActions.GameShop),
+                    c(),
+                    (0, lS.default)({ applicationId: l.application.id }));
             }
         }, [l, t, r, n, c]),
         d = s.useCallback(
@@ -3292,7 +3288,11 @@ function iv(e) {
         ],
     });
 }
-let iE = s.memo(function (e) {
+let iE = {
+        [lR.OVERVIEW]: _.GameProfileTrackActionActions.Overview,
+        [lR.COMMERCE]: _.GameProfileTrackActionActions.GameShop,
+    },
+    iI = s.memo(function (e) {
         let { game: t, trackAction: n, selectTab: l } = e;
         return (0, a.jsxs)("div", {
             className: tM.oC,
@@ -3311,7 +3311,7 @@ let iE = s.memo(function (e) {
             ],
         });
     }),
-    iI = s.memo(function (e) {
+    iN = s.memo(function (e) {
         let { game: t, trackAction: n, analyticsLocations: l, selectTab: i } = e,
             s = t.steamReleaseStatus !== d.Y.RETIRED_ABANDONED;
         return (0, a.jsxs)("div", {
@@ -3342,10 +3342,10 @@ let iE = s.memo(function (e) {
             ],
         });
     });
-function iN(e) {
+function ib(e) {
     let { onCloudPlayClick: t, analyticsLocations: n, trackAction: l } = e,
         { closeModal: i } = Z();
-    (0, k.A)({
+    (0, C.A)({
         name: o.ImpressionNames.CLOUD_PLAY_CTA,
         type: o.ImpressionTypes.VIEW,
         properties: { location_stack: n },
@@ -3365,14 +3365,14 @@ function iN(e) {
         }),
     });
 }
-function ib(e) {
+function iC(e) {
     let { gameId: t, cloudPlayAppId: n, analyticsLocations: l, trackAction: i } = e,
         s = (0, I.rC)({ applicationId: n, sourceApplicationId: t, analyticsLocations: l });
     return null == s
         ? null
         : (0, a.jsx)("div", {
               className: tM.NC,
-              children: (0, a.jsx)(iN, { onCloudPlayClick: s, analyticsLocations: l, trackAction: i }),
+              children: (0, a.jsx)(ib, { onCloudPlayClick: s, analyticsLocations: l, trackAction: i }),
           });
 }
 function ik(e) {
@@ -3387,7 +3387,7 @@ function ik(e) {
         children: [
             null == i || s || r
                 ? null
-                : (0, a.jsx)(ib, { gameId: t.id, cloudPlayAppId: i, analyticsLocations: l, trackAction: n }),
+                : (0, a.jsx)(iC, { gameId: t.id, cloudPlayAppId: i, analyticsLocations: l, trackAction: n }),
             (0, a.jsxs)("div", {
                 className: tM.V0,
                 children: [
@@ -3401,7 +3401,7 @@ function ik(e) {
         ],
     });
 }
-function iC(e) {
+function iS(e) {
     let {
         game: t,
         isTwoColumn: n,
@@ -3420,7 +3420,7 @@ function iC(e) {
                     ? (0, a.jsxs)("div", {
                           className: tM.jC,
                           children: [
-                              (0, a.jsx)(iE, { game: t, trackAction: c, selectTab: l }),
+                              (0, a.jsx)(iI, { game: t, trackAction: c, selectTab: l }),
                               (0, a.jsx)(ik, {
                                   game: t,
                                   appContext: i,
@@ -3433,13 +3433,13 @@ function iC(e) {
                       })
                     : (0, a.jsx)("div", {
                           className: tM.b9,
-                          children: (0, a.jsx)(iI, { game: t, trackAction: c, analyticsLocations: o, selectTab: l }),
+                          children: (0, a.jsx)(iN, { game: t, trackAction: c, analyticsLocations: o, selectTab: l }),
                       }),
             }),
         ],
     });
 }
-function iS(e) {
+function iT(e) {
     let {
             gameId: t,
             source: n,
@@ -3453,7 +3453,7 @@ function iS(e) {
         } = e,
         [f, j] = s.useState(!0),
         [E, I] = s.useState(null),
-        { clientThemesClassName: k } = (0, T.Ay)(),
+        { clientThemesClassName: C } = (0, T.Ay)(),
         P = (0, m.bG)([O.default], () => O.default.locale),
         V = s.useMemo(() => (0, _.generateViewId)(), []),
         { analyticsLocations: D } = (0, b.Ay)(N.A.GAME_PROFILE),
@@ -3475,7 +3475,7 @@ function iS(e) {
             fetched: eo,
             startAuthorization: eu,
             connectionApp: ed,
-        } = (0, C.RD)(Z),
+        } = (0, k.RD)(Z),
         { invite: em, isMember: ex, isResolving: eh } = (0, H.Ay)(Z, I),
         { socialLayerStorefrontRecommendationsData: eg, socialLayerStorefrontRecommendationsLoading: ef } = (function (
             e,
@@ -3590,19 +3590,29 @@ function iS(e) {
             [r],
         ),
         eb = s.useCallback(() => eN(!1), [eN]),
-        { navigation: ek, scrollerRef: eC } = (function () {
-            let e = s.useRef(null),
-                [t, n] = s.useState(lR.OVERVIEW),
-                l = s.useCallback(
-                    (t) => {
-                        (n(t), e.current?.getScrollerNode()?.scrollTo({ top: 0, behavior: "instant" }));
+        { navigation: eC, scrollerRef: ek } = (function (e) {
+            let t = s.useRef(null),
+                [n, l] = s.useState(lR.OVERVIEW),
+                i = s.useCallback(
+                    (e) => {
+                        (l(e), t.current?.getScrollerNode()?.scrollTo({ top: 0, behavior: "instant" }));
                     },
-                    [e],
+                    [t],
+                ),
+                a = s.useCallback(
+                    (t) => {
+                        if (t !== n) {
+                            let n = iE[t];
+                            null != n && e(n);
+                        }
+                        i(t);
+                    },
+                    [n, i, e],
                 );
-            return { navigation: s.useMemo(() => ({ selectedTab: t, selectTab: l }), [t, l]), scrollerRef: e };
-        })(),
-        { selectedTab: eS } = ek,
-        eT = s.useCallback(() => eC.current?.getScrollerNode()?.scrollTop ?? 0, [eC]),
+            return { navigation: s.useMemo(() => ({ selectedTab: n, selectTab: a }), [n, a]), scrollerRef: t };
+        })(ev),
+        { selectedTab: eS } = eC,
+        eT = s.useCallback(() => ek.current?.getScrollerNode()?.scrollTop ?? 0, [ek]),
         ey = s.useMemo(
             () => ({
                 isTwoColumn: f,
@@ -3630,7 +3640,7 @@ function iS(e) {
         ),
         eR = s.useRef(null);
     s.useEffect(() => {
-        null != h && h > 0 && eC.current?.getScrollerNode()?.scrollTo({ top: h, behavior: "instant" });
+        null != h && h > 0 && ek.current?.getScrollerNode()?.scrollTo({ top: h, behavior: "instant" });
     }, []);
     let eL = s.useCallback((e) => {
         if (null != eR.current) {
@@ -3648,7 +3658,7 @@ function iS(e) {
                   children: (0, a.jsx)(q.Provider, {
                       value: ey,
                       children: (0, a.jsx)("div", {
-                          className: c()(k, tM.kL),
+                          className: c()(C, tM.kL),
                           ref: eI,
                           children: (0, a.jsxs)(G.A, {
                               obscured: ea,
@@ -3656,15 +3666,15 @@ function iS(e) {
                               children: [
                                   eS === lR.OVERVIEW && (0, a.jsx)(t0, { game: Z, ref: eR }),
                                   (0, a.jsxs)(p.Ch, {
-                                      ref: eC,
+                                      ref: ek,
                                       className: tM.XG,
                                       onScroll: eL,
                                       children: [
-                                          (0, a.jsx)(l7, { game: Z, trackAction: ev, navigation: ek }),
+                                          (0, a.jsx)(l7, { game: Z, trackAction: ev, navigation: eC }),
                                           eS === lR.OVERVIEW &&
-                                              (0, a.jsx)(iC, {
+                                              (0, a.jsx)(iS, {
                                                   game: Z,
-                                                  selectTab: ek.selectTab,
+                                                  selectTab: eC.selectTab,
                                                   isTwoColumn: f,
                                                   appContext: o,
                                                   source: n,
@@ -3681,7 +3691,7 @@ function iS(e) {
               }),
           });
 }
-let iT = function (e) {
+let iy = function (e) {
     let { gameId: t, source: n, sourceUserId: l, initialScrollOffset: i, ...r } = e,
         [c, o] = s.useState({ gameId: t, source: n, sourceUserId: l, initialScrollOffset: i }),
         u = c.gameId,
@@ -3692,7 +3702,7 @@ let iT = function (e) {
             [u],
         );
     return (0, a.jsx)(
-        iS,
+        iT,
         {
             gameId: c.gameId,
             source: c.source,

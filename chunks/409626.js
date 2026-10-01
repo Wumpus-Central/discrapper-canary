@@ -63,6 +63,7 @@ var i,
         (r[(r.Feedback = 37)] = "Feedback"),
         (r[(r.XboxGamePassStoreLink = 38)] = "XboxGamePassStoreLink"),
         (r[(r.CopyLink = 39)] = "CopyLink"),
+        (r[(r.Overview = 40)] = "Overview"),
         r),
     A =
         (((a = {}).ActivityCard = "activity_card"),
