@@ -16,8 +16,8 @@ var i = n(503698),
     g = n(922288),
     p = n(986226),
     f = n(56059),
-    N = n(781481),
-    A = n(760911),
+    A = n(781481),
+    N = n(760911),
     I = n(534890),
     v = n(855473),
     b = n(740426),
@@ -147,7 +147,7 @@ let k = function (e) {
             });
             break;
         case "forum-nsfw":
-            i = (0, l.jsx)(N.f, {
+            i = (0, l.jsx)(A.f, {
                 size: "md",
                 color: "currentColor",
                 className: G.Kk,
@@ -155,7 +155,7 @@ let k = function (e) {
             });
             break;
         case "forum-spoiler":
-            i = (0, l.jsx)(A.H, {
+            i = (0, l.jsx)(N.H, {
                 size: "md",
                 color: "currentColor",
                 className: G.Kk,

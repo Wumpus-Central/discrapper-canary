@@ -327,10 +327,10 @@ function H(e, t) {
     })?.destination;
     null != n && $(l, n, t.platform).catch(() => {});
 }
-let K = new Set();
-async function W(e, t, l) {
+let W = new Set();
+async function K(e, t, l) {
     let { guildId: n, platform: a } = l;
-    if (!0 === l.busy || K.has(e)) return;
+    if (!0 === l.busy || W.has(e)) return;
     let r = O(e, n);
     if (null == r || p.Ay.isProjectPublishing(e)) return;
     let i = R(r.input);
@@ -351,11 +351,11 @@ async function W(e, t, l) {
         if (null == i.disabledReason) {
             if (r.input.integrationStatus?.preview_ready !== !0) return void a.showPublishBlocked(L.H.NO_PREVIEW);
             if ("consent_then_publish" === i.intent) {
-                K.add(e);
+                W.add(e);
                 try {
                     await (a.requestConsent ?? ((e) => z(e, n)))(e);
                 } finally {
-                    K.delete(e);
+                    W.delete(e);
                 }
                 if (p.Ay.isProjectPublishing(e)) return;
                 let t = O(e, n),
@@ -447,7 +447,7 @@ function Y(e, t) {
             (t) => {
                 null != e &&
                     null != r &&
-                    W(e, t, r).catch((t) => {
+                    K(e, t, r).catch((t) => {
                         console.error("[vibegrations] publish action failed", e, t);
                     });
             },

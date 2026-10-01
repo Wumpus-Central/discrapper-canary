@@ -15,8 +15,8 @@ var l = n(477900),
     g = n(866665),
     p = n(66834),
     f = n(565645),
-    N = n(793574),
-    A = n(688810),
+    A = n(793574),
+    N = n(688810),
     I = n(139286),
     v = n(235986),
     b = n(573435),
@@ -32,8 +32,8 @@ var l = n(477900),
     k = n(714991),
     P = n(492494),
     M = n(384684),
-    L = n(985242),
-    D = n(87719),
+    D = n(985242),
+    L = n(87719),
     w = n(465794),
     U = n(976860),
     z = n(309010),
@@ -306,7 +306,7 @@ function el(e) {
             [T, U],
         ),
         ea = !!el && (0, S.tE)(T?.guildId),
-        { analyticsLocations: er } = (0, A.Ay)(N.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
+        { analyticsLocations: er } = (0, N.Ay)(A.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL);
     (0, I.A)(
         {
             type: r.ImpressionTypes.MODAL,
@@ -333,7 +333,7 @@ function el(e) {
                         location_page: ee.page,
                         location_section: ee.section,
                     }),
-                    (0, D.e)());
+                    (0, L.e)());
             },
         }),
         ed = J && el && !ea && ((z && en) || !z),
@@ -417,7 +417,7 @@ function el(e) {
                                 })
                               : void 0,
                         ed &&
-                            (0, l.jsx)(L.A, {
+                            (0, l.jsx)(D.A, {
                                 text: es ? $.intl.string($.t.yma8Vp) : $.intl.string($.t.nN2DIo),
                                 size: "sm",
                                 fullWidth: !0,
@@ -428,7 +428,7 @@ function el(e) {
                                                 b.id,
                                                 {
                                                     sourceLocationStack: [
-                                                        N.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL,
+                                                        A.A.GUILD_ROLE_SUBSCRIPTION_EMOJI_TEXT_POPOVER_UPSELL,
                                                     ],
                                                 },
                                                 X.VV.ROLE_SUBSCRIPTIONS,

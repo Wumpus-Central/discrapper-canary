@@ -15,8 +15,8 @@ var l,
     g = n(306537),
     p = n(36149),
     f = n(390248),
-    N = n(338717),
-    A = n(403362),
+    A = n(338717),
+    N = n(403362),
     I = n(375708),
     v = n(881013),
     b = (((l = b || {}).TEXT = "text"), (l.ATTACHMENT = "attachment"), (l.EMBED = "embed"), l);
@@ -45,23 +45,23 @@ function E(e) {
     });
 }
 function C(e) {
-    let { reason: t = N.Oc.SPOILER, className: n, isSingleMosaicItem: l = !1 } = e;
+    let { reason: t = A.Oc.SPOILER, className: n, isSingleMosaicItem: l = !1 } = e;
     switch (t) {
-        case N.Oc.SPOILER:
+        case A.Oc.SPOILER:
             return (0, i.jsx)(S, { className: n });
-        case N.Oc.EXPLICIT_CONTENT:
-        case N.Oc.GORE_CONTENT:
-        case N.Oc.SELF_HARM_CONTENT:
+        case A.Oc.EXPLICIT_CONTENT:
+        case A.Oc.GORE_CONTENT:
+        case A.Oc.SELF_HARM_CONTENT:
             return (0, i.jsx)(E, { isSingleMosaicItem: l, className: n });
-        case N.Oc.POTENTIAL_EXPLICIT_CONTENT:
+        case A.Oc.POTENTIAL_EXPLICIT_CONTENT:
             return (0, i.jsx)(E, { isSingleMosaicItem: l, className: n, obscureOnly: !0 });
         default:
-            return (0, A.xb)(t);
+            return (0, N.xb)(t);
     }
 }
 function T(e) {
     let { obscureReason: t, isVisible: n, handleToggleObscurity: l, obscurityControlClassName: s } = e;
-    return t !== N.Oc.EXPLICIT_CONTENT && t !== N.Oc.GORE_CONTENT && t !== N.Oc.SELF_HARM_CONTENT
+    return t !== A.Oc.EXPLICIT_CONTENT && t !== A.Oc.GORE_CONTENT && t !== A.Oc.SELF_HARM_CONTENT
         ? null
         : (0, i.jsx)("div", {
               className: r()(v.fA, s),
@@ -110,7 +110,7 @@ class O extends s.PureComponent {
                 className: n,
                 containerStyles: l,
                 obscured: s = !0,
-                reason: a = N.Oc.SPOILER,
+                reason: a = A.Oc.SPOILER,
                 isSingleMosaicItem: o = !1,
                 obscurityControlClassName: u,
                 isVerifiedTeen: d,
@@ -119,7 +119,7 @@ class O extends s.PureComponent {
             x = (0, i.jsx)(y.Consumer, {
                 children: (x) => {
                     let h = x || m || !s;
-                    return N._K.has(a) && !t
+                    return A._K.has(a) && !t
                         ? (0, i.jsxs)("div", {
                               "aria-label": h ? void 0 : this.ariaLabel,
                               "aria-expanded": h,
@@ -164,14 +164,14 @@ class O extends s.PureComponent {
                 containerStyles: n,
                 isSingleMosaicItem: l,
                 obscurityControlClassName: s,
-                reason: a = N.Oc.SPOILER,
+                reason: a = A.Oc.SPOILER,
                 isVerifiedTeen: o,
             } = this.props,
             { visible: u } = this.state;
         return (0, i.jsx)(y.Consumer, {
             children: (d) => {
                 let m = d || u;
-                return N._K.has(a)
+                return A._K.has(a)
                     ? (0, i.jsxs)("div", {
                           "aria-label": u ? void 0 : this.ariaLabel,
                           "aria-expanded": m,
@@ -243,44 +243,44 @@ class O extends s.PureComponent {
             case "embed":
                 return this.renderObscuredEmbed();
             default:
-                return (0, A.xb)(e);
+                return (0, N.xb)(e);
         }
     }
     get ariaLabel() {
-        let { reason: e = N.Oc.SPOILER } = this.props;
+        let { reason: e = A.Oc.SPOILER } = this.props;
         switch (e) {
-            case N.Oc.SPOILER:
+            case A.Oc.SPOILER:
                 return I.intl.string(I.t["F+x38C"]);
-            case N.Oc.EXPLICIT_CONTENT:
-            case N.Oc.GORE_CONTENT:
-            case N.Oc.SELF_HARM_CONTENT:
+            case A.Oc.EXPLICIT_CONTENT:
+            case A.Oc.GORE_CONTENT:
+            case A.Oc.SELF_HARM_CONTENT:
                 return I.intl.string(I.t.mlJ8Vf);
-            case N.Oc.POTENTIAL_EXPLICIT_CONTENT:
+            case A.Oc.POTENTIAL_EXPLICIT_CONTENT:
                 return I.intl.string(I.t.MRdR7z);
             default:
-                return (0, A.xb)(e);
+                return (0, N.xb)(e);
         }
     }
     get tooltipText() {
-        let { reason: e = N.Oc.SPOILER } = this.props;
+        let { reason: e = A.Oc.SPOILER } = this.props;
         switch (e) {
-            case N.Oc.SPOILER:
+            case A.Oc.SPOILER:
                 return I.intl.string(I.t["F+x38C"]);
-            case N.Oc.EXPLICIT_CONTENT:
-            case N.Oc.GORE_CONTENT:
-            case N.Oc.SELF_HARM_CONTENT:
+            case A.Oc.EXPLICIT_CONTENT:
+            case A.Oc.GORE_CONTENT:
+            case A.Oc.SELF_HARM_CONTENT:
                 return I.intl.string(I.t.mlJ8Vf);
-            case N.Oc.POTENTIAL_EXPLICIT_CONTENT:
+            case A.Oc.POTENTIAL_EXPLICIT_CONTENT:
                 return I.intl.string(I.t.MRdR7z);
             default:
-                return (0, A.xb)(e);
+                return (0, N.xb)(e);
         }
     }
 }
 function _(e) {
-    let t = (0, f._R)() && null != e.reason && N.tY.has(e.reason),
+    let t = (0, f._R)() && null != e.reason && A.tY.has(e.reason),
         n = (0, p.yM)();
     return (0, i.jsx)(O, { ...e, shouldAgeVerify: t, isVerifiedTeen: n });
 }
-((_.Types = b), (_.Reasons = N.Oc));
+((_.Types = b), (_.Reasons = A.Oc));
 let R = _;

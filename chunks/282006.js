@@ -13,17 +13,17 @@ var l = n(477900),
     h = n(4577);
 let j = i.memo(function (e) {
     let { id: t, title: j, count: g, guildId: p, className: f } = e,
-        N = (0, u.Xx)({ roleId: t, guildId: p, size: 16 }),
-        A = (0, s.bG)([c.default], () => (null == g ? null : new Intl.NumberFormat(c.default.locale).format(g)), [g]),
+        A = (0, u.Xx)({ roleId: t, guildId: p, size: 16 }),
+        N = (0, s.bG)([c.default], () => (null == g ? null : new Intl.NumberFormat(c.default.locale).format(g)), [g]),
         I = i.useCallback(
             (e) => {
-                N?.src != null &&
+                A?.src != null &&
                     (0, r.L3)(e, async () => {
                         let { default: e } = await Promise.all([n.e("95340"), n.e("733743")]).then(n.bind(n, 455538));
-                        return (t) => (0, l.jsx)(e, { ...t, imageUrl: N.src });
+                        return (t) => (0, l.jsx)(e, { ...t, imageUrl: A.src });
                     });
             },
-            [N?.src],
+            [A?.src],
         );
     return t === m.clD.UNKNOWN
         ? (0, l.jsx)("div", { className: f, children: (0, l.jsx)("div", { className: h.k1 }) })
@@ -35,14 +35,14 @@ let j = i.memo(function (e) {
                       className: h.CN,
                       "aria-hidden": !0,
                       children: [
-                          null != N
+                          null != A
                               ? (0, l.jsx)("span", {
                                     onContextMenu: I,
-                                    children: (0, l.jsx)(d.A, { className: h.UT, ...N }),
+                                    children: (0, l.jsx)(d.A, { className: h.UT, ...A }),
                                 })
                               : null,
                           (0, l.jsx)("span", { className: h.iy, children: j }),
-                          null == A ? null : (0, l.jsxs)("span", { children: ["\xa0\u2014 ", A] }),
+                          null == N ? null : (0, l.jsxs)("span", { children: ["\xa0\u2014 ", N] }),
                       ],
                   }),
               ],

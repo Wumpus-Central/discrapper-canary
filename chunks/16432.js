@@ -535,9 +535,9 @@ function e3(e) {
     });
 }
 var e7 = n(995786),
-    e6 = n(206835),
-    e9 = n(280450),
-    e8 = n(696451),
+    e9 = n(206835),
+    e8 = n(280450),
+    e6 = n(696451),
     e4 = n(229527),
     te = n(81400),
     tt = n(340837);
@@ -549,7 +549,7 @@ function tn(e) {
     return (0, i.jsxs)(T.$T, { color: T.Hv.DANGER, children: [s, (0, i.jsx)(T.zr, { onClick: l, children: a })] });
 }
 function ti() {
-    let e = (0, e6.A)({ scrollPosition: eg._F.GUILD_TAG });
+    let e = (0, e9.A)({ scrollPosition: eg._F.GUILD_TAG });
     return (0, i.jsxs)(T.$T, {
         color: T.Hv.DANGER,
         children: [V.intl.string(V.t.Zqlecb), (0, i.jsx)(T.zr, { onClick: e, children: V.intl.string(V.t.SJehVW) })],
@@ -559,11 +559,11 @@ function tl(e) {
     let { analyticsLocations: t, ...n } = e,
         { analyticsLocations: l } = (0, G.Ay)(t, x.A.AUTOMOD_NAGBAR_NOTICE),
         r = (0, c.bG)(
-            [e9.default, e8.Ay],
+            [e8.default, e6.Ay],
             () => {
                 if (null == n.guildId) return new Set();
-                let e = e9.default.getId();
-                return (0, e4.wj)(e8.Ay.getMember(n.guildId, e));
+                let e = e8.default.getId();
+                return (0, e4.wj)(e6.Ay.getMember(n.guildId, e));
             },
             [n.guildId],
         );
@@ -890,11 +890,11 @@ function t3() {
           });
 }
 var t7 = n(952818),
-    t6 = n(935671);
-function t9() {
-    (0, t6.sL)("nagbar");
-}
+    t9 = n(935671);
 function t8() {
+    (0, t9.sL)("nagbar");
+}
+function t6() {
     return null == (0, c.bG)([t7.Ay], () => t7.Ay.getVisibleGame())
         ? null
         : (0, i.jsxs)(T.$T, {
@@ -903,7 +903,7 @@ function t8() {
                   (0, i.jsx)(T.PM, { noticeType: eu.kqX.SYSTEM_SERVICE_WARNING, onClick: () => nR() }),
                   V.intl.string(V.t["5rPt+j"]),
                   (0, i.jsx)(T.Z_, {
-                      onClick: t9,
+                      onClick: t8,
                       noticeType: eu.kqX.SYSTEM_SERVICE_WARNING,
                       children: V.intl.string(V.t["1iI46O"]),
                   }),
@@ -2092,7 +2092,7 @@ let nO =
                   case eu.kqX.PREMIUM_MARKETING_NAGBAR:
                       return (0, i.jsx)(tv.A, {});
                   case eu.kqX.SYSTEM_SERVICE_WARNING:
-                      return (0, i.jsx)(t8, {});
+                      return (0, i.jsx)(t6, {});
                   default:
                       return null;
               }

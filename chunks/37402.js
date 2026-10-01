@@ -25,7 +25,7 @@ function g(e) {
             n(u);
         }, [n, u]));
 }
-function p(e) {
+function k(e) {
     var t;
     let r,
         s,
@@ -65,7 +65,7 @@ function p(e) {
         (0, n.jsx)(m, { ...v, size: "custom", className: h.E$, useLottieDefaultColors: !0 })
     );
 }
-function j(e) {
+function C(e) {
     var t;
     let r,
         s,
@@ -105,12 +105,12 @@ function j(e) {
         (0, n.jsx)(m, { ...v, size: "custom", className: h.E$, useLottieDefaultColors: !0 })
     );
 }
-let k = function (e) {
+let p = function (e) {
     let t = (0, x.Ay)();
-    return (0, m.q)(t) ? (0, n.jsx)(j, { ...e }) : (0, n.jsx)(p, { ...e });
+    return (0, m.q)(t) ? (0, n.jsx)(C, { ...e }) : (0, n.jsx)(k, { ...e });
 };
-var A = a(375708);
-function C() {
+var j = a(375708);
+function A() {
     return (0, n.jsx)("div", { className: h.V8, "aria-hidden": !0 });
 }
 let E = (0, l.forwardRef)(function (e, t) {
@@ -124,8 +124,8 @@ let E = (0, l.forwardRef)(function (e, t) {
             onMouseDown: x,
             disabled: v,
             isInModalOverlay: g,
-            ariaExpanded: p,
-            clickableRef: j,
+            ariaExpanded: k,
+            clickableRef: C,
             className: E,
         } = e,
         [R, b] = (0, l.useState)(!1),
@@ -160,17 +160,17 @@ let E = (0, l.forwardRef)(function (e, t) {
             [B, P],
         );
     return (0, n.jsx)(i.D, {
-        innerRef: j,
+        innerRef: C,
         onClick: M ? void 0 : m,
-        "aria-expanded": p,
-        "aria-haspopup": null != p ? "dialog" : void 0,
+        "aria-expanded": k,
+        "aria-haspopup": null != k ? "dialog" : void 0,
         "aria-label": (function (e) {
             let { loading: t, balance: a, hasUnread: n } = e;
             return t
-                ? A.intl.string(A.t.y0WGqP)
+                ? j.intl.string(j.t.y0WGqP)
                 : n
-                  ? A.intl.formatToPlainString(A.t.AgMngw, { balance: a })
-                  : A.intl.formatToPlainString(A.t.zPaLL9, { balance: a });
+                  ? j.intl.formatToPlainString(j.t.AgMngw, { balance: a })
+                  : j.intl.formatToPlainString(j.t.zPaLL9, { balance: a });
         })({ loading: M, balance: w ?? 0, hasUnread: !0 === f }),
         "aria-busy": M,
         className: s()(h.vk, { [h.r9]: v }),
@@ -184,7 +184,7 @@ let E = (0, l.forwardRef)(function (e, t) {
             children: [
                 (0, n.jsx)("div", {
                     className: s()(h.hr, M ? h.nr : void 0),
-                    children: (0, n.jsx)(k, {
+                    children: (0, n.jsx)(p, {
                         currentAnimationType: P,
                         animationTypeRef: F,
                         onSetAnimationDurationMS: T,
@@ -198,7 +198,7 @@ let E = (0, l.forwardRef)(function (e, t) {
                     className: M ? h.F : void 0,
                     textColor: "overlay-secondary" === c ? "text-overlay-light" : void 0,
                 }),
-                f && (0, n.jsx)(C, {}),
+                f && (0, n.jsx)(A, {}),
             ],
         }),
     });

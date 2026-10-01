@@ -1,4 +1,4 @@
-l.d(n, { A: () => G, T: () => O });
+l.d(n, { A: () => k, T: () => O });
 var t = l(477900),
     i = l(582128),
     a = l(17928),
@@ -19,8 +19,8 @@ var t = l(477900),
     f = l(790535),
     N = l(575731),
     I = l(616356),
-    b = l(977997),
-    C = l(47167),
+    C = l(977997),
+    b = l(47167),
     E = l(475889),
     y = l(262763),
     M = l(402216),
@@ -28,9 +28,9 @@ var t = l(477900),
     S = l(971718);
 let R = function (e) {
     let { channel: n } = e,
-        l = (0, a.bG)([b.A], () => b.A.isInChannel(n.id)),
+        l = (0, a.bG)([C.A], () => C.A.isInChannel(n.id)),
         i = (0, N.A)(n),
-        s = (0, C.Ay)(n),
+        s = (0, b.Ay)(n),
         r = (0, E.H)(n),
         o = (0, a.bG)([I.A], () => I.A.getAllApplicationStreamsForChannel(n.id)[0]);
     return (0, t.jsxs)(v.Uq, {
@@ -151,7 +151,7 @@ function O(e) {
         children: () => (0, t.jsx)("div", { className: a, ref: o, onMouseEnter: m, onMouseLeave: g, children: l }),
     });
 }
-function G(e) {
+function k(e) {
     let { guild: n, message: l } = e,
         { voiceState: i, voiceChannel: s } = (0, o.Ay)({ userId: l.author.id, guildId: n.id }),
         r = (0, a.bG)([u.A], () => u.A.getChannel(l.channel_id)?.isVocal()),

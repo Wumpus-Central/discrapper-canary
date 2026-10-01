@@ -9,21 +9,21 @@ var l = n(503698),
     o = n(717398),
     u = n(994500),
     c = n(946356),
-    A = n(652215),
-    m = n(375708),
+    m = n(652215),
+    A = n(375708),
     f = n(342528);
 function E(t) {
     let { user: e, className: n } = t,
         {
             isPendingIncoming: l,
             isBlocked: E,
-            isIgnored: g,
+            isIgnored: x,
         } = (0, r.cf)([u.A], () => ({
-            isPendingIncoming: u.A.getRelationshipType(e.id) === A.eA$.PENDING_INCOMING,
+            isPendingIncoming: u.A.getRelationshipType(e.id) === m.eA$.PENDING_INCOMING,
             isBlocked: u.A.isBlocked(e.id),
             isIgnored: u.A.isIgnored(e.id),
         }));
-    return E || (g && !l)
+    return E || (x && !l)
         ? (0, i.jsxs)(c.A.Overlay, {
               className: s()(f.k, n),
               children: [
@@ -31,15 +31,15 @@ function E(t) {
                       (0, i.jsx)(a.E, {
                           variant: "text-sm/semibold",
                           color: "text-default",
-                          children: m.intl.string(m.t["oC/fU6"]),
+                          children: A.intl.string(A.t["oC/fU6"]),
                       }),
-                  g &&
+                  x &&
                       (0, i.jsxs)(i.Fragment, {
                           children: [
                               (0, i.jsx)(a.E, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: m.intl.string(m.t.HXz5An),
+                                  children: A.intl.string(A.t.HXz5An),
                               }),
                               (0, i.jsxs)(i.Fragment, {
                                   children: [
@@ -51,7 +51,7 @@ function E(t) {
                                       (0, i.jsx)(a.E, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
-                                          children: m.intl.format(m.t.PrtAqy, {
+                                          children: A.intl.format(A.t.PrtAqy, {
                                               unignoreHook: (t, n) =>
                                                   (0, i.jsx)(
                                                       d.Anchor,

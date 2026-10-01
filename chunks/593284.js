@@ -15,8 +15,8 @@ var l = n(477900),
     g = n(775602),
     p = n(793574),
     f = n(688810),
-    N = n(282006),
-    A = n(485947),
+    A = n(282006),
+    N = n(485947),
     I = n(386784),
     v = n(545868),
     b = n(332173),
@@ -32,8 +32,8 @@ var l = n(477900),
     k = n(427262),
     P = n(375708),
     M = n(165648),
-    L = n(778724);
-function D(e) {
+    D = n(778724);
+function L(e) {
     let { member: t, guildId: s, channelId: a, role: r } = e,
         u = i.useRef(null),
         d = (0, o.bG)([R.A], () => R.A.getGuild(s)?.ownerId, [s]),
@@ -219,7 +219,7 @@ function w(e) {
         f = i.useMemo(
             () =>
                 null != g
-                    ? h.map((e) => (0, l.jsx)(D, { member: e, guildId: s, channelId: r, role: g }, e.userId))
+                    ? h.map((e) => (0, l.jsx)(L, { member: e, guildId: s, channelId: r, role: g }, e.userId))
                     : [],
             [r, s, g, h],
         );
@@ -234,11 +234,11 @@ function w(e) {
                   children: (0, l.jsxs)(d.Ip, {
                       className: M.bY,
                       children: [
-                          (0, l.jsx)(N.Y, { id: n, guildId: s, title: g.name, count: p, className: M.sd }),
+                          (0, l.jsx)(A.Y, { id: n, guildId: s, title: g.name, count: p, className: M.sd }),
                           f,
                           null == p || p <= f.length
                               ? null
-                              : (0, l.jsx)(A.A, {
+                              : (0, l.jsx)(N.A, {
                                     className: M.sd,
                                     children: P.intl.formatToPlainString(P.t["9oMmZC"], { count: p - f.length }),
                                 }),
@@ -252,11 +252,11 @@ function U(e) {
         { analyticsLocations: x } = (0, f.Ay)(p.A.ROLE_MENTION),
         h = (0, o.bG)([g.Ay], () => g.Ay.roleStyle),
         j = (0, o.bG)([_.A], () => (null == a || null == t ? null : _.A.getRole(a, t))),
-        N = (0, E.jV)(a, j),
-        A = !d && null != j && !(0, S.Qv)(j),
-        I = A && "dot" === h,
-        C = A && "username" === h,
-        T = N && null != j ? j.colorStrings : null,
+        A = (0, E.jV)(a, j),
+        N = !d && null != j && !(0, S.Qv)(j),
+        I = N && "dot" === h,
+        C = N && "username" === h,
+        T = A && null != j ? j.colorStrings : null,
         y = i.useRef(null);
     function O(e) {
         return (0, l.jsxs)(b.A, {
@@ -271,7 +271,7 @@ function U(e) {
                     (0, l.jsx)(c.W, {
                         color: (0, r.Hl)(j.color),
                         colors: T,
-                        className: L.m,
+                        className: D.m,
                         background: !1,
                         tooltip: !1,
                     }),

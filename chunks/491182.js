@@ -24,8 +24,8 @@ let A = function (e) {
             childrenExecutedCommand: f,
             childrenHeader: N,
             childrenSystemMessage: I,
-            childrenButtons: b,
-            childrenMessageContent: C,
+            childrenButtons: C,
+            childrenMessageContent: b,
             childrenAccessories: E,
             messageRef: y,
             focusProps: M = { offset: { left: 4, right: 4 } },
@@ -35,12 +35,12 @@ let A = function (e) {
             author: T,
             onMouseEnter: w,
             onMouseLeave: O,
-            ...G
+            ...k
         } = e,
-        k = (0, r.bG)([g.A], () =>
+        G = (0, r.bG)([g.A], () =>
             T?.guildId == null || T?.colorRoleId == null ? null : g.A.getRole(T.guildId, T.colorRoleId),
         ),
-        P = (0, m.jV)(T?.guildId, k) && (0, h.kz)(T),
+        P = (0, m.jV)(T?.guildId, G) && (0, h.kz)(T),
         [D, L] = i.useState(!1),
         U = i.useCallback(
             (e) => {
@@ -74,16 +74,16 @@ let A = function (e) {
                         [x.h8]: R,
                     }),
                     ref: y,
-                    ...G,
+                    ...k,
                     role: "article",
                     onMouseEnter: U,
                     onMouseLeave: V,
                     children: [
                         v,
                         f,
-                        (0, t.jsxs)("div", { className: x.PG, children: [I, N, null == I && C] }),
+                        (0, t.jsxs)("div", { className: x.PG, children: [I, N, null == I && b] }),
                         E,
-                        null != b ? (0, t.jsx)("div", { className: x.UD, children: b }) : null,
+                        null != C ? (0, t.jsx)("div", { className: x.UD, children: C }) : null,
                     ],
                 }),
             }),

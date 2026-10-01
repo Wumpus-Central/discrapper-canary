@@ -20,8 +20,8 @@ let x = function (e) {
         decorators: g,
         onClick: p,
         hovered: f,
-        selected: N,
-        muted: A,
+        selected: A,
+        muted: N,
         to: I,
         avatarClassName: v,
         selectedClassName: b,
@@ -32,20 +32,20 @@ let x = function (e) {
         ...y
     } = e;
     ((y.className = a()(y.className, m.kL, {
-        [m.wH]: N,
+        [m.wH]: A,
         [m.mr]: C,
-        [b ?? ""]: N,
-        [m.vk]: !N && (null != I || null != p),
+        [b ?? ""]: A,
+        [m.vk]: !A && (null != I || null != p),
     })),
-        (y["aria-selected"] = y["aria-selected"] ?? N));
+        (y["aria-selected"] = y["aria-selected"] ?? A));
     let O = i.useRef(null),
         _ = (0, l.jsxs)("div", {
             className: a()(m.sn, { [m.EY]: null != x }),
             children: [
-                (0, l.jsx)(c.A, { nameplate: x, hovered: f, selected: N, content: O, placement: d.u.MEMBER_LIST }),
+                (0, l.jsx)(c.A, { nameplate: x, hovered: f, selected: A, content: O, placement: d.u.MEMBER_LIST }),
                 (0, l.jsxs)("div", {
                     ref: O,
-                    className: a()(S, m.Zp, { [m.SU]: !N && A, [m.Ib]: E }),
+                    className: a()(S, m.Zp, { [m.SU]: !A && N, [m.Ib]: E }),
                     children: [
                         (0, l.jsx)("div", { className: a()(m.my, v), children: n }),
                         (0, l.jsxs)("div", {

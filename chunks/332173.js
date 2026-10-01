@@ -20,23 +20,23 @@ let m = function (e) {
             onMouseLeave: g,
             ...p
         } = e,
-        [f, N] = i.useState(!1),
-        { gradientStyle: A, gradientClassname: I } = (0, o.v5)({
+        [f, A] = i.useState(!1),
+        { gradientStyle: N, gradientClassname: I } = (0, o.v5)({
             colorStrings: x ?? null,
             roleStyle: "username",
             animateGradient: f,
         }),
         v = i.useCallback(
             (e) => {
-                (N(!0), j?.(e));
+                (A(!0), j?.(e));
             },
-            [N, j],
+            [A, j],
         ),
         b = i.useCallback(
             (e) => {
-                (N(!1), g?.(e));
+                (A(!1), g?.(e));
             },
-            [N, g],
+            [A, g],
         ),
         S = {};
     return (
@@ -54,7 +54,7 @@ let m = function (e) {
                 null != h
                     ? (0, l.jsx)(d.A, { iconType: h, children: n })
                     : null != x
-                      ? (0, l.jsx)("span", { style: { ...A }, className: I, children: n })
+                      ? (0, l.jsx)("span", { style: { ...N }, className: I, children: n })
                       : n,
         })
     );

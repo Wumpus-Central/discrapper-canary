@@ -16,7 +16,7 @@ var l = n(477900),
     p = n(823854);
 n(851883);
 var f = n(607013);
-function N(e) {
+function A(e) {
     let t,
         {
             customStatusActivity: n,
@@ -25,8 +25,8 @@ function N(e) {
             userId: c,
             textSize: m = "xs",
             animateEmoji: x = !0,
-            hideEmoji: N = !1,
-            hideTooltip: A = !1,
+            hideEmoji: A = !1,
+            hideTooltip: N = !1,
         } = e,
         I = n?.emoji,
         v = (function (e) {
@@ -42,7 +42,7 @@ function N(e) {
         b = v.statusTextOverride ?? n?.state,
         S = null != b && "" !== b,
         E = null;
-    null == I || N || (E = (0, l.jsx)(j.A, { emoji: I, animate: x, className: s, hideTooltip: A || S }));
+    null == I || A || (E = (0, l.jsx)(j.A, { emoji: I, animate: x, className: s, hideTooltip: N || S }));
     let C = S ? (null != E ? ` ${b}` : b) : null;
     return null == n
         ? null
@@ -51,15 +51,15 @@ function N(e) {
               color: "none",
               className: a()(f.ps, r),
               children:
-                  ((t = null != I && !N && !S),
-                  A || t
+                  ((t = null != I && !A && !S),
+                  N || t
                       ? (0, l.jsxs)(l.Fragment, { children: [E, C] })
                       : null != v.presence
                         ? (0, l.jsx)(d.m, { delay: 150, children: (0, l.jsxs)("span", { children: [E, C] }) })
                         : (0, l.jsxs)("span", { children: [E, C] })),
           });
 }
-var A = n(994500),
+var N = n(994500),
     I = n(577473),
     v = n(661531);
 function b(e) {
@@ -129,7 +129,7 @@ function k(e) {
         g = null != x && "" !== x,
         p = null;
     null == h || c || (p = (0, l.jsx)(j.A, { emoji: h, animate: d, className: s, hideTooltip: m || g }));
-    let N = g && (null != p ? ` ${x}` : x);
+    let A = g && (null != p ? ` ${x}` : x);
     return (0, l.jsx)(u.E, {
         variant: `text-${o}/medium`,
         color: "none",
@@ -137,19 +137,19 @@ function k(e) {
         children:
             ((t = null != h && !c && !g),
             m || t
-                ? (0, l.jsxs)(l.Fragment, { children: [p, N] })
+                ? (0, l.jsxs)(l.Fragment, { children: [p, A] })
                 : (0, l.jsxs)(R.A, {
                       delay: 150,
                       tooltipClassName: r,
                       className: f.Nu,
-                      children: [p, !1 !== N && (0, l.jsx)("span", { className: f.ps, children: N })],
+                      children: [p, !1 !== A && (0, l.jsx)("span", { className: f.ps, children: A })],
                   })),
     });
 }
 var P = n(835072),
     M = n(935154),
-    L = n(652215),
-    D = n(10862);
+    D = n(652215),
+    L = n(10862);
 function w(e) {
     let {
             channel: t,
@@ -161,7 +161,7 @@ function w(e) {
             canTruncate: u = !0,
             showChannelName: d = !1,
         } = e,
-        c = (0, M.S3)(L.clD.ONLINE),
+        c = (0, M.S3)(D.clD.ONLINE),
         m = (0, E.Ay)(t),
         x = t.isDM() || t.isGroupDM(),
         h = x
@@ -172,7 +172,7 @@ function w(e) {
         j = null != m ? `${h} (${m})` : h,
         g = d ? j : h;
     return (0, l.jsx)(y.A, {
-        icon: (0, l.jsx)(D.A, { size: "custom", color: c, channel: t, className: a()(f.Kk, s) }),
+        icon: (0, l.jsx)(L.A, { size: "custom", color: c, channel: t, className: a()(f.Kk, s) }),
         text: g,
         tooltipText: o ? void 0 : r ? j : x || d ? void 0 : (m ?? void 0),
         textVariant: n,
@@ -216,7 +216,7 @@ function B(e) {
         y = i.useMemo(() => {
             let e = n?.find((e) => {
                 let { type: t } = e;
-                return t === L.$pd.CUSTOM_STATUS;
+                return t === D.$pd.CUSTOM_STATUS;
             });
             if (null == e) return null;
             let t = e.state?.trim() ?? null;
@@ -229,7 +229,7 @@ function B(e) {
                 (0, r.uniqWith)(
                     n?.filter((e) => {
                         let { type: t, name: n } = e;
-                        return t !== L.$pd.CUSTOM_STATUS && t !== L.$pd.HANG_STATUS && n !== T?.name;
+                        return t !== D.$pd.CUSTOM_STATUS && t !== D.$pd.HANG_STATUS && n !== T?.name;
                     }) ?? [],
                     (e, t) =>
                         (null != e.application_id &&
@@ -240,8 +240,8 @@ function B(e) {
             [n, T?.name],
         ),
         M = n?.find((e) => e.name === T?.name),
-        D = t?.bot === !0,
-        B = (0, o.bG)([A.A], () => A.A.isBlockedOrIgnored(t?.id)),
+        L = t?.bot === !0,
+        B = (0, o.bG)([N.A], () => N.A.isBlockedOrIgnored(t?.id)),
         V = y?.state != null,
         F = null != C,
         H = !F && null != u,
@@ -260,7 +260,7 @@ function B(e) {
                 textClassName: j,
                 iconClassName: g,
                 hideText: K,
-                hideIcon: D,
+                hideIcon: L,
                 hideTooltip: t,
             });
         let n = G?.[0];
@@ -271,7 +271,7 @@ function B(e) {
                   textClassName: j,
                   iconClassName: g,
                   hideText: K,
-                  hideIcon: D,
+                  hideIcon: L,
                   hideTooltip: t,
               })
             : null != u
@@ -295,7 +295,7 @@ function B(e) {
     }
     function q() {
         if (0 === J) return null;
-        if (W && !D) {
+        if (W && !L) {
             let e, t;
             return E
                 ? (0, l.jsxs)("div", { className: a()(f.ht, K && f.e7), children: [Y(), $()] })
@@ -331,7 +331,7 @@ function B(e) {
               children: [
                   null == R
                       ? null
-                      : (0, l.jsx)(N, {
+                      : (0, l.jsx)(A, {
                             customStatusActivity: y,
                             textSize: p,
                             animateEmoji: I,

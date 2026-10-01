@@ -16,7 +16,7 @@ function j(e, t) {
         j = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : h.a.DEFAULT,
         { audioRef: g } = l.useContext(r.A),
         [p, f] = l.useState(!1),
-        N = (0, i.bG)([d.A], () => d.A.isPlayingSound(e.soundId), [e]);
+        A = (0, i.bG)([d.A], () => d.A.isPlayingSound(e.soundId), [e]);
     return {
         playSoundboardSound: l.useCallback(
             (n) => {
@@ -24,7 +24,7 @@ function j(e, t) {
             },
             [e, g, t],
         ),
-        isPlayingSound: N,
+        isPlayingSound: A,
         previewSound: l.useCallback(async () => {
             let t = (0, m.A)(e.soundId),
                 l = new (await (0, a.A)(t))();
