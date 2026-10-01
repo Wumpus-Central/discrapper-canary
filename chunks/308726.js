@@ -33,8 +33,8 @@ var n = i(477900),
     M = i(927813),
     U = i(935208),
     V = i(20805),
-    P = i(583846);
-let j = M.A.Millis.WEEK;
+    j = i(583846);
+let P = M.A.Millis.WEEK;
 function w(t) {
     let e = (0, R.s)(t),
         i = (0, c.cf)([k.A], () => k.A.getUserAffinitiesMap());
@@ -44,7 +44,7 @@ function w(t) {
                 ? []
                 : e
                       .filter(
-                          (e) => (0, V.zD)(e) && (0, V.P)(e) && e.extra.application_id === t && U.default.age(e.id) < j,
+                          (e) => (0, V.zD)(e) && (0, V.P)(e) && e.extra.application_id === t && U.default.age(e.id) < P,
                       )
                       .sort((t, e) => G(i, e) - G(i, t)),
         [e, t, i],
@@ -62,7 +62,7 @@ function G(t, e) {
         ),
         l = Math.exp(-((U.default.age(e.id) / 1e3 / K) * 0.01)),
         a = e.traits.some((t) => t.type !== u.K.DURATION_SECONDS),
-        r = (0, P.I5)(e);
+        r = (0, j.I5)(e);
     return n * l * (1 + 0.6 * (a && !r ? 1 : 0));
 }
 var F = i(474397),

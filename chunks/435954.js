@@ -1,4 +1,4 @@
-(l.r(t), l.d(t, { default: () => $ }));
+(l.r(t), l.d(t, { default: () => P }));
 var r = l(477900),
     n = l(582128),
     s = l(17928),
@@ -7,9 +7,9 @@ var r = l(477900),
     o = l(380610);
 l(321073);
 var c = l(503698),
-    d = l.n(c),
-    u = l(284009),
-    h = l.n(u),
+    u = l.n(c),
+    d = l(284009),
+    h = l.n(d),
     m = l(939249),
     p = l(173936),
     g = l(834730),
@@ -83,7 +83,7 @@ function T(e) {
         n.useEffect(() => () => clearTimeout(i.current), []),
         y.p5
             ? (0, r.jsxs)(m.D, {
-                  className: d()(I.S, l ? I.pG : null),
+                  className: u()(I.S, l ? I.pG : null),
                   onClick: a,
                   children: [
                       (0, r.jsx)(p.LinkIcon, { size: "md", color: "currentColor", className: I.n7 }),
@@ -118,12 +118,12 @@ function A(e) {
 }
 let S = function (e) {
     let { loading: t = !1, currentOverrides: l, linkMeta: s, url: i, applyBuildOverride: a, clearBuildOverride: o } = e,
-        [c, u] = n.useState(!1),
+        [c, d] = n.useState(!1),
         m = n.useCallback(() => {
-            c || (u(!0), a().catch(() => u(!1)));
+            c || (d(!0), a().catch(() => d(!1)));
         }, [a, c]),
         p = n.useCallback(() => {
-            c || (u(!0), o().catch(() => u(!1)));
+            c || (d(!0), o().catch(() => d(!1)));
         }, [o, c]);
     return (0, r.jsxs)("div", {
         className: I.iE,
@@ -162,7 +162,7 @@ let S = function (e) {
                                   (0, r.jsxs)("div", {
                                       className: I.NT,
                                       children: [
-                                          (0, r.jsx)("div", { className: d()(I.Pz, I.w9) }),
+                                          (0, r.jsx)("div", { className: u()(I.Pz, I.w9) }),
                                           (0, r.jsx)("div", { className: I.Pz }),
                                       ],
                                   }),
@@ -182,7 +182,7 @@ let S = function (e) {
                                   } = e,
                                   c = ["discord_web"];
                               N.isPlatformEmbedded || c.push("discord_marketing", "discord_developers");
-                              let d = (function (e, t) {
+                              let u = (function (e, t) {
                                   if (null == e || null == t) return { valid: !1, reason: B.intl.string(B.t.d34xi4) };
                                   let {
                                           releaseChannel: l,
@@ -226,15 +226,15 @@ let S = function (e) {
                                         ? { valid: !1, reason: B.intl.string(B.t.qZgV0a) }
                                         : { valid: !0 };
                               })(s, c);
-                              if (!d.valid) {
-                                  var u;
+                              if (!u.valid) {
+                                  var d;
                                   return (
-                                      (u = d.reason),
+                                      (d = u.reason),
                                       A({
                                           subHead: B.intl.string(B.t.ODXApH),
                                           variant: "secondary",
                                           buttonText: "Invalid",
-                                          buildDetails: u,
+                                          buildDetails: d,
                                           disabled: !0,
                                       })
                                   );
@@ -299,12 +299,12 @@ async function D(e) {
 async function Z() {
     (await (0, i.iD)(), window.location.reload(!0));
 }
-let $ = n.memo(function (e) {
+let P = n.memo(function (e) {
     let { url: t } = e,
         l = (0, s.cf)([a.A], () => a.A.getCurrentBuildOverride()),
         i = (0, s.bG)([a.A], () => a.A.getBuildOverride(t)),
-        { payload: c, validatedURL: d } = i,
-        u = l.state === a.U.Resolving || i.state === a.U.Resolving,
+        { payload: c, validatedURL: u } = i,
+        d = l.state === a.U.Resolving || i.state === a.U.Resolving,
         h = n.useCallback(
             () =>
                 (0, o.h4)(i.url) && null != i.override
@@ -314,14 +314,14 @@ let $ = n.memo(function (e) {
                       : ((0, H.R)(i.override, c), R(c)),
             [c, i],
         );
-    return null != d
+    return null != u
         ? (0, r.jsx)(S, {
-              loading: u,
+              loading: d,
               linkMeta: i.override,
               currentOverrides: l.overrides,
               applyBuildOverride: h,
               clearBuildOverride: Z,
-              url: d,
+              url: u,
           })
         : null;
 });

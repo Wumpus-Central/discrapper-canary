@@ -1,18 +1,18 @@
-n.d(s, { A: () => d });
-var t = n(582128),
-    i = n(17928),
-    l = n(287809),
-    a = n(639935),
-    r = n(249203),
-    u = n(695904);
+t.d(l, { A: () => d });
+var s = t(582128),
+    n = t(17928),
+    i = t(287809),
+    a = t(639935),
+    r = t(249203),
+    u = t(695904);
 function d(e) {
-    let s = (0, u.bq)(),
-        n = (0, i.bG)(
-            [r.A, l.default],
-            () => null != s && e.id !== l.default.getCurrentUser()?.id && null == r.A.getEntry(e.id),
-            [e, s],
+    let l = (0, u.bq)(),
+        t = (0, n.bG)(
+            [r.A, i.default],
+            () => null != l && e.id !== i.default.getCurrentUser()?.id && null == r.A.getEntry(e.id),
+            [e, l],
         );
-    t.useEffect(() => {
-        n && (0, a.b)(e.id);
-    }, [n, e.id]);
+    s.useEffect(() => {
+        t && (0, a.b)(e.id);
+    }, [t, e.id]);
 }

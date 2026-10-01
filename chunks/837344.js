@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Hu: "alignCenter__31873",
     Vl: "alignLeft__31873",
     BU: "horizontalPaginationItemContainer__31873",

@@ -1,8 +1,8 @@
-e.d(n, { A: () => N });
-var i = e(477900),
-    l = e(554146),
-    a = e(661531),
-    r = e(812993),
+e.d(n, { A: () => g });
+var l = e(477900),
+    i = e(554146),
+    r = e(661531),
+    a = e(812993),
     s = e(834730),
     o = e(146779),
     c = e(793574),
@@ -12,40 +12,40 @@ var i = e(477900),
     x = e(308335),
     p = e(21241),
     f = e(939496),
-    _ = e(985629),
-    m = e(996988),
+    m = e(985629),
+    _ = e(996988),
     T = e(375708),
     E = e(41821);
-function N(t) {
-    let { applicationId: n, onAction: e, onClose: N, activity: g } = t,
+function g(t) {
+    let { applicationId: n, onAction: e, onClose: g, activity: N } = t,
         { analyticsLocations: C } = (0, u.Ay)(c.A.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
         { data: I } = (0, d.YY)(n),
-        j = (0, o.JC)(I),
-        { themeType: y } = (0, f.E)(),
-        O = y === m.d.MODAL || y === m.d.MODAL_V2,
-        S = (0, x.o)(g?.application_id ?? n),
-        h = j && O && null != I && !S,
-        P = h ? [l.M.CLOUD_PLAY_NEW_BADGE] : [],
-        [v] = (0, A.kn)(P);
+        y = (0, o.JC)(I),
+        { themeType: j } = (0, f.E)(),
+        O = j === _.d.MODAL || j === _.d.MODAL_V2,
+        S = (0, x.o)(N?.application_id ?? n),
+        h = y && O && null != I && !S,
+        v = h ? [i.M.CLOUD_PLAY_NEW_BADGE] : [],
+        [P] = (0, A.kn)(v);
     return h
-        ? (0, i.jsxs)(i.Fragment, {
+        ? (0, l.jsxs)(l.Fragment, {
               children: [
-                  (0, i.jsx)(p.A, { className: E.Xl }),
-                  (0, i.jsxs)("div", {
+                  (0, l.jsx)(p.A, { className: E.Xl }),
+                  (0, l.jsxs)("div", {
                       className: E.DK,
                       children: [
-                          (0, i.jsxs)("div", {
+                          (0, l.jsxs)("div", {
                               className: E.tJ,
                               children: [
-                                  v === l.M.CLOUD_PLAY_NEW_BADGE &&
-                                      (0, i.jsx)(r.Lp, {
+                                  P === i.M.CLOUD_PLAY_NEW_BADGE &&
+                                      (0, l.jsx)(a.Lp, {
                                           text: T.intl.string(T.t.y2b7CA),
-                                          color: a.A.colors.BACKGROUND_BRAND.css,
+                                          color: r.A.colors.BACKGROUND_BRAND.css,
                                       }),
-                                  (0, i.jsx)(s.E, { variant: "text-xs/medium", children: T.intl.string(T.t.IQjdmV) }),
+                                  (0, l.jsx)(s.E, { variant: "text-xs/medium", children: T.intl.string(T.t.IQjdmV) }),
                               ],
                           }),
-                          (0, i.jsx)(_.A, { application: I, onAction: e, onClose: N, analyticsLocations: C }),
+                          (0, l.jsx)(m.A, { application: I, onAction: e, onClose: g, analyticsLocations: C }),
                       ],
                   }),
               ],

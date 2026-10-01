@@ -1,6 +1,6 @@
 i.d(t, { A: () => u });
-var n = i(17928),
-    s = i(228366),
+var s = i(17928),
+    n = i(228366),
     r = i(628049);
 let l = [],
     a = r.qL;
@@ -12,7 +12,7 @@ function c(e) {
     null != t ||
         (l = -1 === l.findIndex((e) => e.id === i.id) ? [...l, i] : l.map((e) => (e.id === i.id ? o(i, e) : e)));
 }
-class d extends n.Ay.Store {
+class d extends s.Ay.Store {
     static displayName = "OwnedGameServersStore";
     getGameServers() {
         return l;
@@ -21,7 +21,7 @@ class d extends n.Ay.Store {
         return a;
     }
 }
-let u = new d(s.h, {
+let u = new d(n.h, {
     LOGOUT: function () {
         ((l = []), (a = r.qL));
     },

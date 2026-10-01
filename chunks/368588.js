@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     l3: "slideAnimator_f8824b",
     hw: "hideButton_f8824b",
     KF: "sliderLabel_f8824b",

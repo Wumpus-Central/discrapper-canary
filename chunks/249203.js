@@ -1,40 +1,40 @@
-l.d(e, { A: () => d });
-var i = l(17928),
-    n = l(228366);
-let r = {};
-function s(t) {
-    (null == r[t] &&
+n.d(e, { A: () => d });
+var i = n(17928),
+    l = n(228366);
+let s = {};
+function r(t) {
+    (null == s[t] &&
         (function () {
-            let t = Object.keys(r);
+            let t = Object.keys(s);
             if (t.length < 500) return;
-            let e = t.sort((t, e) => r[t].lastViewedAt - r[e].lastViewedAt).slice(t.length - 499),
-                l = {};
-            for (let t of e) l[t] = r[t];
-            r = l;
+            let e = t.sort((t, e) => s[t].lastViewedAt - s[e].lastViewedAt).slice(t.length - 499),
+                n = {};
+            for (let t of e) n[t] = s[t];
+            s = n;
         })(),
-        (r = { ...r, [t]: { lastViewedAt: Date.now() } }));
+        (s = { ...s, [t]: { lastViewedAt: Date.now() } }));
 }
-class u extends i.Ay.PersistedStore {
+class a extends i.Ay.PersistedStore {
     static displayName = "ProfileReadStateStore";
     static persistKey = "ProfileReadStateStore";
     initialize(t) {
-        r = { ...(t?.entries ?? {}) };
+        s = { ...(t?.entries ?? {}) };
     }
     getState() {
-        return { entries: { ...r } };
+        return { entries: { ...s } };
     }
     getEntry(t) {
-        return r[t] ?? null;
+        return s[t] ?? null;
     }
 }
-let d = new u(n.h, {
+let d = new a(l.h, {
     PROFILE_READ_STATE_MARK_VIEWED: function (t) {
         let { userId: e } = t;
-        s(e);
+        r(e);
     },
     PROFILE_READ_STATE_SEED_VIEWED: function (t) {
         let { userId: e } = t;
-        if (null != r[e]) return !1;
-        s(e);
+        if (null != s[e]) return !1;
+        r(e);
     },
 });

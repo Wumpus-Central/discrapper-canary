@@ -1,9 +1,9 @@
-e.d(n, { A: () => P, k: () => h });
-var i = e(477900);
+e.d(n, { A: () => v, k: () => h });
+var l = e(477900);
 e(582128);
-var l = e(17928),
-    a = e(3026),
-    r = e(342952),
+var i = e(17928),
+    r = e(3026),
+    a = e(342952),
     s = e(866665),
     o = e(834730),
     c = e(939249),
@@ -13,95 +13,95 @@ var l = e(17928),
     x = e(730852),
     p = e(963027),
     f = e(47167),
-    _ = e(548118),
-    m = e(378570),
+    m = e(548118),
+    _ = e(378570),
     T = e(345942),
     E = e(576705),
-    N = e(575731),
-    g = e(21241),
+    g = e(575731),
+    N = e(21241),
     C = e(939496),
     I = e(10862),
-    j = e(652215),
-    y = e(996988),
+    y = e(652215),
+    j = e(996988),
     O = e(375708),
     S = e(260155);
 let h = 3;
-function P(t) {
-    let { user: n, guild: e, channel: P, onAction: v, onClose: R } = t,
+function v(t) {
+    let { user: n, guild: e, channel: v, onAction: P, onClose: R } = t,
         { themeType: L } = (0, C.E)(),
-        U = (0, N.A)(P),
-        b = (0, f.Ay)(P),
-        { canViewChannel: M, canConnect: D } = (0, l.cf)([E.A], () => ({
-            canViewChannel: E.A.can(j.xBc.VIEW_CHANNEL, P),
-            canConnect: P.isPrivate() || E.A.can(j.xBc.CONNECT, P),
+        U = (0, g.A)(v),
+        b = (0, f.Ay)(v),
+        { canViewChannel: M, canConnect: D } = (0, i.cf)([E.A], () => ({
+            canViewChannel: E.A.can(y.xBc.VIEW_CHANNEL, v),
+            canConnect: v.isPrivate() || E.A.can(y.xBc.CONNECT, v),
         }));
     if (!M) return null;
-    let G = L !== y.d.MODAL && L !== y.d.MODAL_V2 && L !== y.d.SIDEBAR;
-    return (0, i.jsxs)(i.Fragment, {
+    let G = L !== j.d.MODAL && L !== j.d.MODAL_V2 && L !== j.d.SIDEBAR;
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, i.jsx)(g.A, { className: S.Ph }),
-            (0, i.jsxs)("div", {
+            (0, l.jsx)(N.A, { className: S.Ph }),
+            (0, l.jsxs)("div", {
                 className: S.gx,
                 children: [
-                    (0, i.jsx)(s.m, {
+                    (0, l.jsx)(s.m, {
                         asContainer: !0,
                         text: e.name,
                         "aria-label": !1,
-                        children: (0, i.jsx)(_.Ay, {
+                        children: (0, l.jsx)(m.Ay, {
                             guild: e,
-                            size: _.Ay.Sizes.SMOL,
+                            size: m.Ay.Sizes.SMOL,
                             className: S.$f,
                             onClick: (t) => {
-                                (t.stopPropagation(), (0, T.u)(e.id), v?.({ action: "OPEN_VOICE_GUILD" }), R?.());
+                                (t.stopPropagation(), (0, T.u)(e.id), P?.({ action: "OPEN_VOICE_GUILD" }), R?.());
                             },
                         }),
                     }),
-                    (0, i.jsx)(u._, { size: "xxs", color: d.A.colors.TEXT_SUBTLE }),
-                    (0, i.jsxs)("div", {
+                    (0, l.jsx)(u._, { size: "xxs", color: d.A.colors.TEXT_SUBTLE }),
+                    (0, l.jsxs)("div", {
                         className: S.FH,
                         children: [
-                            (0, i.jsx)(I.A, {
-                                channel: P,
+                            (0, l.jsx)(I.A, {
+                                channel: v,
                                 size: "xxs",
                                 color: d.A.colors.TEXT_SUBTLE,
                                 className: S.Ow,
                             }),
                             D
-                                ? (0, i.jsx)(c.D, {
+                                ? (0, l.jsx)(c.D, {
                                       onClick: (t) => {
                                           (t.stopPropagation(),
-                                              x.default.selectVoiceChannel(P.id),
-                                              (0, m.iN)(P.id),
-                                              v?.({ action: "OPEN_VOICE_CHANNEL" }),
+                                              x.default.selectVoiceChannel(v.id),
+                                              (0, _.iN)(v.id),
+                                              P?.({ action: "OPEN_VOICE_CHANNEL" }),
                                               R?.());
                                       },
                                       className: S.sd,
-                                      "aria-label": (0, p.Ay)({ channel: P }),
-                                      children: (0, i.jsx)(o.E, {
+                                      "aria-label": (0, p.Ay)({ channel: v }),
+                                      children: (0, l.jsx)(o.E, {
                                           variant: "text-xs/normal",
                                           color: "text-subtle",
                                           lineClamp: 1,
-                                          children: (0, i.jsx)(a.A, { children: b }),
+                                          children: (0, l.jsx)(r.A, { children: b }),
                                       }),
                                   })
-                                : (0, i.jsx)(o.E, {
+                                : (0, l.jsx)(o.E, {
                                       variant: "text-xs/normal",
                                       color: "text-subtle",
                                       lineClamp: 1,
-                                      children: (0, i.jsx)(a.A, { children: b }),
+                                      children: (0, l.jsx)(r.A, { children: b }),
                                   }),
                         ],
                     }),
-                    (0, i.jsx)(r.A, {
+                    (0, l.jsx)(a.A, {
                         users: U,
                         guildId: e.id,
-                        channelId: P.id,
+                        channelId: v.id,
                         maxUsers: h,
                         size: A._3.SIZE_16,
                         overflowCountColor: "text-subtle",
                         overflowCountClassName: S.NS,
                         onClickOverflow: (t) => {
-                            (t.stopPropagation(), v?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" }));
+                            (t.stopPropagation(), P?.({ action: "PRESS_VOICE_CHANNEL_AVATARS" }));
                         },
                         onUserClick: (t) => t.stopPropagation(),
                         disableUserPopout: !!G || ((t) => t === n.id),

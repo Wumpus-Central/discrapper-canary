@@ -1,13 +1,13 @@
 (i.d(t, { A: () => c }), i(321073));
-var n = i(17928),
-    s = i(412260),
+var s = i(17928),
+    n = i(412260),
     r = i(852218),
     l = i(421108),
     a = i(773669),
     o = i(375708);
 function c(e) {
-    let t = (0, n.bG)([s.A], () => s.A.getPromotionByTypeAndId(r.pt.MARKETING_MOMENT, e) ?? null),
-        i = (0, n.bG)([a.default], () => a.default.locale),
+    let t = (0, s.bG)([n.A], () => n.A.getPromotionByTypeAndId(r.pt.MARKETING_MOMENT, e) ?? null),
+        i = (0, s.bG)([a.default], () => a.default.locale),
         c = t?.boostBogoMaxCredits ?? null,
         d = t?.endDate ?? null,
         u = (0, l.dA)(d),

@@ -1,12 +1,12 @@
-n.d(t, { Ar: () => c, dB: () => l });
-var r = n(477900),
-    i = n(582128);
-let s = i.createContext(null);
+n.d(t, { Ar: () => c, dB: () => u });
+var i = n(477900),
+    r = n(582128);
+let s = r.createContext(null);
 function c() {
-    return i.useContext(s);
+    return r.useContext(s);
 }
-function l(e) {
+function u(e) {
     let { newValue: t, children: n } = e,
-        i = { ...c(), ...t };
-    return (0, r.jsx)(s.Provider, { value: i, children: n });
+        r = { ...c(), ...t };
+    return (0, i.jsx)(s.Provider, { value: r, children: n });
 }

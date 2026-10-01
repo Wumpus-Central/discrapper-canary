@@ -15,8 +15,8 @@ function h(e) {
             className: n,
             innerClassName: l,
             renderIcon: h,
-            text: g,
-            selected: m,
+            text: m,
+            selected: g,
             trailing: A,
             background: f,
             showUnread: p = !1,
@@ -24,7 +24,7 @@ function h(e) {
             ...E
         } = e,
         x = (0, r.rm)(t),
-        N = (0, a.O)(g) ?? "";
+        N = (0, a.O)(m) ?? "";
     return (0, i.jsx)("li", {
         ref: C,
         children: (0, i.jsxs)(o.s, {
@@ -39,7 +39,7 @@ function h(e) {
                     : (e) => {
                           e.stopPropagation();
                       },
-            className: s()(c.fx, u.iE, { [u.J1]: m }, n),
+            className: s()(c.fx, u.iE, { [u.J1]: g }, n),
             children: [
                 f,
                 p ? (0, i.jsx)("div", { className: s()(u.gy, u.WS) }) : null,
@@ -52,7 +52,7 @@ function h(e) {
                             variant: "text-md/medium",
                             className: u.UU,
                             "aria-hidden": !0,
-                            children: g,
+                            children: m,
                         }),
                         A,
                     ],

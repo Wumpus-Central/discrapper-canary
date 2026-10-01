@@ -12,12 +12,12 @@ function g(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
         g = (0, i.uM)(),
         m = (0, l.bG)([o.A], () => o.A.getProduct(e)),
-        E = (0, c.i)(),
-        _ = a.Ay.canUseShopDiscounts(E),
+        _ = (0, c.i)(),
+        E = a.Ay.canUseShopDiscounts(_),
         C = n.useRef(null),
         p = n.useCallback(() => {
-            let n = null != m ? (0, u.Br)(m, _, !1) : null,
-                l = null != m ? (0, u.c7)(m, _, !1) : void 0;
+            let n = null != m ? (0, u.Br)(m, E, !1) : null,
+                l = null != m ? (0, u.c7)(m, E, !1) : void 0;
             s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                 collectibles_shop_session_id: g?.sessionId,
                 sku_id: e,
@@ -31,7 +31,7 @@ function g(e, t) {
                 type: r,
                 category_position: g?.categoryPosition,
             });
-        }, [g?.sessionId, g?.categoryPosition, g?.pageCategory, g?.pageSection, g?.tilePosition, _, t, m, e, r]),
+        }, [g?.sessionId, g?.categoryPosition, g?.pageCategory, g?.pageSection, g?.tilePosition, E, t, m, e, r]),
         h = n.useCallback(
             (e) => {
                 e

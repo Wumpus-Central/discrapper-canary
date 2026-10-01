@@ -1,8 +1,8 @@
-i.d(t, { B: () => c, r: () => d });
-var n = i(477900),
-    l = i(582128),
-    s = i(775602),
-    a = i(818348);
+n.d(t, { B: () => c, r: () => d });
+var i = n(477900),
+    l = n(582128),
+    s = n(775602),
+    a = n(818348);
 let r = l.createContext(null),
     o = {
         registerItemRef: () => a.tE,
@@ -14,16 +14,16 @@ function d() {
     return l.useContext(r) ?? o;
 }
 function c(e) {
-    let { children: t, emptyListFallbackRef: i } = e,
+    let { children: t, emptyListFallbackRef: n } = e,
         a = l.useRef(new Map()),
         o = l.useRef(new Map()),
         d = l.useRef([]),
         c = l.useCallback(() => {
             d.current = Array.from(a.current.keys()).sort((e, t) => {
-                let i = a.current.get(e),
-                    n = a.current.get(t);
-                if (null == i || null == n) return 0;
-                let l = i.compareDocumentPosition(n);
+                let n = a.current.get(e),
+                    i = a.current.get(t);
+                if (null == n || null == i) return 0;
+                let l = n.compareDocumentPosition(i);
                 return (l & Node.DOCUMENT_POSITION_FOLLOWING) != 0
                     ? -1
                     : +((l & Node.DOCUMENT_POSITION_PRECEDING) != 0);
@@ -48,14 +48,14 @@ function c(e) {
                     t?.focus();
                 });
         }, []),
-        x = l.useCallback(
+        f = l.useCallback(
             (e) => {
                 if (!s.Ay.keyboardModeEnabled) return;
                 c();
                 let t = d.current,
-                    n = t.indexOf(e);
-                if (-1 === n) return;
-                let l = n + 1 < t.length ? n + 1 : n - 1;
+                    i = t.indexOf(e);
+                if (-1 === i) return;
+                let l = i + 1 < t.length ? i + 1 : i - 1;
                 if (l >= 0) {
                     let e = t[l];
                     requestAnimationFrame(() => {
@@ -64,14 +64,14 @@ function c(e) {
                     });
                 } else
                     requestAnimationFrame(() => {
-                        i?.focus();
+                        n?.focus();
                     });
             },
-            [i, c],
+            [n, c],
         ),
-        f = l.useMemo(
-            () => ({ registerDragHandleRef: u, registerItemRef: g, manageFocusOnReorder: m, manageFocusOnDelete: x }),
-            [u, g, m, x],
+        x = l.useMemo(
+            () => ({ registerDragHandleRef: u, registerItemRef: g, manageFocusOnReorder: m, manageFocusOnDelete: f }),
+            [u, g, m, f],
         );
-    return (0, n.jsx)(r.Provider, { value: f, children: t });
+    return (0, i.jsx)(r.Provider, { value: x, children: t });
 }

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     vv: "backContainer__951af",
     Kk: "icon__951af",
     N1: "headerContainer__951af",

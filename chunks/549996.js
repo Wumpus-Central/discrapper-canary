@@ -1,31 +1,31 @@
 i.d(t, { c: () => c });
-var n = i(582128),
-    s = i(17928),
+var s = i(582128),
+    n = i(17928),
     r = i(354670),
     l = i(962644),
     a = i(412260),
     o = i(852218);
 function c(e) {
-    n.useEffect(() => {
+    s.useEffect(() => {
         (0, l.BE)();
     }, []);
-    let t = (0, s.bG)([a.A, r.A], () => {
+    let t = (0, n.bG)([a.A, r.A], () => {
             let t = a.A.getMarketingComponentByType(e);
             if (null == t) return null;
             let i = t.promotionId,
-                n = a.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, i);
-            if (n?.trialId != null) {
-                let e = r.A.getUserTrialOffer(n.trialId);
+                s = a.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, i);
+            if (s?.trialId != null) {
+                let e = r.A.getUserTrialOffer(s.trialId);
                 if (null == e || e.hasExpired) return null;
             }
             return t;
         }),
-        i = (0, s.bG)([a.A], () => a.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, t?.promotionId ?? "")),
+        i = (0, n.bG)([a.A], () => a.A.getPromotionByTypeAndId(o.pt.MARKETING_MOMENT, t?.promotionId ?? "")),
         c = i?.endDate,
-        [d, u] = n.useState(!1),
-        m = n.useRef(null);
+        [d, u] = s.useState(!1),
+        m = s.useRef(null);
     return (
-        n.useEffect(() => {
+        s.useEffect(() => {
             if (null != c) {
                 let e = c.getTime() - Date.now();
                 return (

@@ -1,15 +1,15 @@
-n.d(t, { Q: () => a, f: () => l });
+n.d(t, { Q: () => l, f: () => a });
 var i = n(582128),
-    r = n(202091);
-let l = (0, i.createContext)({
-    scale: new r.SpringValue(1),
-    x: new r.SpringValue(0),
-    y: new r.SpringValue(0),
+    o = n(202091);
+let a = (0, i.createContext)({
+    scale: new o.SpringValue(1),
+    x: new o.SpringValue(0),
+    y: new o.SpringValue(0),
     setScale() {},
     setOffset() {},
     zoomed: !1,
     setZoomed() {},
 });
-function a() {
-    return (0, i.useContext)(l);
+function l() {
+    return (0, i.useContext)(a);
 }

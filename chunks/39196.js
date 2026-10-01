@@ -13,18 +13,18 @@ function u(e, t, r, l) {
     let g,
         m = o(e, t);
     if (null == e || null == m) return t;
-    let E = (0, i.Q7)(m, r),
-        _ = {
+    let _ = (0, i.Q7)(m, r),
+        E = {
             locale: l,
             endsAt: e.endsAt,
             redemptionEndsAt: e.redemptionEndsAt,
             helpCenterId: m.shared.helpCenter?.id,
         },
-        C = E?.title != null && "" !== E.title ? (0, n.U)((0, s.wJ)(E.title, _)) : t.title,
-        p = E?.description != null && "" !== E.description ? (0, n.U)((0, s.wJ)(E.description, _)) : t.summary,
+        C = _?.title != null && "" !== _.title ? (0, n.U)((0, s.wJ)(_.title, E)) : t.title,
+        p = _?.description != null && "" !== _.description ? (0, n.U)((0, s.wJ)(_.description, E)) : t.summary,
         h =
-            null != E
-                ? ((u = E.rewardStates),
+            null != _
+                ? ((u = _.rewardStates),
                   (c = e.rewardStatus),
                   (d = e.progress?.current ?? 0),
                   null != (g = (0, a.x)(u, c, d)?.heroUrl) && "" !== g ? g : void 0)

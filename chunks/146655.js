@@ -1,34 +1,34 @@
-n.d(t, { A: () => g });
-var i = n(582128),
-    l = n(17928),
-    r = n(87664),
-    s = n(517164),
-    u = n(20805),
-    a = n(83971),
-    c = n(583846),
-    d = n(25578),
-    o = n(290863),
-    p = n(343129),
-    A = n(731854);
-let h = [],
-    b = [];
-function g(e) {
-    let t = (0, l.bG)([d.Ay], () => d.Ay.supports(A.O5.VIDEO)),
-        n = (0, r.A)(e),
-        g = (0, l.bG)([o.A], () => o.A.getActivities(e)),
-        f = (0, l.bG)([s.A], () => s.A.getUserOutbox(e)),
-        { live: v, recent: k } = (0, i.useMemo)(() => {
-            let e = (0, p.U)(g),
-                t = f?.entries.filter(
-                    (t) =>
-                        !(0, c.Hd)(t) &&
-                        ((0, u.Tq)(t)
-                            ? t.extra.entries.length > 0 && !e.some((e) => null != e && (0, a.qb)(t, e))
-                            : (0, u.Lf)(t)
-                              ? !e.some((e) => null != e && (0, a.SU)(t, e))
-                              : (0, u.$R)(t)),
+t.d(i, { A: () => m });
+var n = t(582128),
+    l = t(17928),
+    s = t(87664),
+    r = t(517164),
+    a = t(20805),
+    u = t(83971),
+    o = t(583846),
+    d = t(25578),
+    A = t(290863),
+    c = t(343129),
+    h = t(731854);
+let p = [],
+    g = [];
+function m(e) {
+    let i = (0, l.bG)([d.Ay], () => d.Ay.supports(h.O5.VIDEO)),
+        t = (0, s.A)(e),
+        m = (0, l.bG)([A.A], () => A.A.getActivities(e)),
+        f = (0, l.bG)([r.A], () => r.A.getUserOutbox(e)),
+        { live: v, recent: I } = (0, n.useMemo)(() => {
+            let e = (0, c.U)(m),
+                i = f?.entries.filter(
+                    (i) =>
+                        !(0, o.Hd)(i) &&
+                        ((0, a.Tq)(i)
+                            ? i.extra.entries.length > 0 && !e.some((e) => null != e && (0, u.qb)(i, e))
+                            : (0, a.Lf)(i)
+                              ? !e.some((e) => null != e && (0, u.SU)(i, e))
+                              : (0, a.$R)(i)),
                 );
-            return { live: 0 === e.length ? h : e, recent: null == t || 0 === t.length ? b : t };
-        }, [g, f?.entries]);
-    return { live: v, recent: k, stream: t ? n : null, outbox: f };
+            return { live: 0 === e.length ? p : e, recent: null == i || 0 === i.length ? g : i };
+        }, [m, f?.entries]);
+    return { live: v, recent: I, stream: i ? t : null, outbox: f };
 }

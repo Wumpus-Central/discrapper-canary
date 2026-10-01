@@ -1,17 +1,17 @@
 n.d(t, { A: () => m });
 var l = n(477900),
     a = n(582128),
-    i = n(256905),
-    s = n(673724),
+    s = n(256905),
+    i = n(673724),
     r = n(277977),
     o = n(590380),
-    u = n(759967),
-    d = n(375708),
+    d = n(759967),
+    u = n(375708),
     c = n(375068);
 function m(e) {
     let { projectId: t, attachments: n } = e,
-        i = n.filter(f),
-        [s, r] = a.useState(() => new Set()),
+        s = n.filter(f),
+        [i, r] = a.useState(() => new Set()),
         o = a.useCallback((e) => {
             r((t) => (t.has(e) ? t : new Set(t).add(e)));
         }, []);
@@ -25,9 +25,9 @@ function m(e) {
                         p,
                         {
                             projectId: t,
-                            viewableImages: i,
-                            viewerIndex: i.indexOf(e),
-                            unavailableIds: s,
+                            viewableImages: s,
+                            viewerIndex: s.indexOf(e),
+                            unavailableIds: i,
                             markUnavailable: o,
                         },
                         n,
@@ -37,16 +37,16 @@ function m(e) {
     });
 }
 function f(e) {
-    return null != e.id && s.Wb.has(e.content_type);
+    return null != e.id && i.Wb.has(e.content_type);
 }
 function h(e) {
     let { name: t, unavailable: n = !1 } = e,
-        a = n ? d.intl.formatToPlainString(u.default.OBr7WW, { name: t }) : t;
+        a = n ? u.intl.formatToPlainString(d.default.OBr7WW, { name: t }) : t;
     return (0, l.jsx)(o.p, { name: a, compact: !0 });
 }
 function x(e) {
-    let { projectId: t, id: n, name: i } = e,
-        [s, c] = a.useState(!1),
+    let { projectId: t, id: n, name: s } = e,
+        [i, c] = a.useState(!1),
         m = a.useCallback(() => {
             (0, r.n6)(t, n)
                 .then(async (e) => {
@@ -59,27 +59,27 @@ function x(e) {
                 })
                 .catch(() => {});
         }, [t, n]);
-    return s
-        ? (0, l.jsx)(h, { name: i, unavailable: !0 })
+    return i
+        ? (0, l.jsx)(h, { name: s, unavailable: !0 })
         : (0, l.jsx)(o.n, {
-              name: i,
+              name: s,
               thumbSrc: null,
-              ariaLabel: d.intl.formatToPlainString(u.default.gV5YcR, { name: i }),
+              ariaLabel: u.intl.formatToPlainString(d.default.gV5YcR, { name: s }),
               onClick: m,
           });
 }
 function p(e) {
-    let { projectId: t, viewableImages: n, viewerIndex: s, unavailableIds: c, markUnavailable: m } = e,
-        { id: f, name: x } = n[s],
-        [p, k] = a.useState(null),
-        g = c.has(f),
+    let { projectId: t, viewableImages: n, viewerIndex: i, unavailableIds: c, markUnavailable: m } = e,
+        { id: f, name: x } = n[i],
+        [p, g] = a.useState(null),
+        k = c.has(f),
         [v, j] = a.useState(0);
     a.useEffect(() => {
         let e = !1;
         return (
             (0, r.PK)(t, f).then(
                 (t) => {
-                    e || k(t);
+                    e || g(t);
                 },
                 () => {},
             ),
@@ -93,26 +93,26 @@ function p(e) {
             n.map(async (e) => (c.has(e.id) ? null : { type: "IMAGE", url: await (0, r.PK)(t, e.id), alt: e.name })),
         ).then(
             (e) => {
-                null != e[s] &&
-                    (0, i.R)({
+                null != e[i] &&
+                    (0, s.R)({
                         items: e.filter((e) => null != e),
-                        startingIndex: e.slice(0, s).filter((e) => null != e).length,
+                        startingIndex: e.slice(0, i).filter((e) => null != e).length,
                         shouldHideMediaOptions: !0,
                         location: "VibegrationsChat",
                     });
             },
             () => {},
         );
-    }, [t, n, s, c]);
-    return g
+    }, [t, n, i, c]);
+    return k
         ? (0, l.jsx)(h, { name: x, unavailable: !0 })
         : (0, l.jsx)(o.n, {
               name: x,
               thumbSrc: p,
-              ariaLabel: d.intl.formatToPlainString(u.default.QUFLUq, { name: x }),
+              ariaLabel: u.intl.formatToPlainString(d.default.QUFLUq, { name: x }),
               onClick: b,
               onThumbError: () => {
-                  (k(null),
+                  (g(null),
                       (0, r.n6)(t, f).then(
                           (e) => {
                               e ? 0 === v && j(1) : m(f);

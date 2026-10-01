@@ -1,8 +1,8 @@
 e.d(n, { A: () => f });
-var i = e(788733),
-    l = e(82149),
-    a = e(573648),
-    r = e(541806),
+var l = e(788733),
+    i = e(82149),
+    r = e(573648),
+    a = e(541806),
     s = e(90644),
     o = e(652215),
     c = e(141639),
@@ -16,62 +16,62 @@ function f(t) {
         e = (function (t) {
             let n = (0, d.A)(t.session_id);
             if (null != n) return n;
-            if ((0, s.A)(t)) return a.A.get(o.fg2.SPOTIFY);
-            if ((0, r.A)(t)) return a.A.get(o.fg2.CRUNCHYROLL);
-            if ((0, u.A)(t)) return a.A.get(o.fg2.XBOX);
-            if ((0, c.A)(t)) return a.A.get(o.fg2.PLAYSTATION);
-            if (t?.platform === o.yTV.META_QUEST || (0, i.A)(t)) return a.A.get(o.fg2.META_QUEST_OR_HORIZON);
-            let e = a.A.find((n) => {
+            if ((0, s.A)(t)) return r.A.get(o.fg2.SPOTIFY);
+            if ((0, a.A)(t)) return r.A.get(o.fg2.CRUNCHYROLL);
+            if ((0, u.A)(t)) return r.A.get(o.fg2.XBOX);
+            if ((0, c.A)(t)) return r.A.get(o.fg2.PLAYSTATION);
+            if (t?.platform === o.yTV.META_QUEST || (0, l.A)(t)) return r.A.get(o.fg2.META_QUEST_OR_HORIZON);
+            let e = r.A.find((n) => {
                 let { name: e } = n;
                 return e === t.name;
             });
             return null != e && A.has(e.type) ? e : null;
         })(t),
         f = e?.icon,
-        _ = e?.name ?? "";
+        m = e?.name ?? "";
     if (t.type === o.$pd.PLAYING && e?.type === o.fg2.XBOX)
         return {
             text: p.intl.formatToPlainString(p.t.A17aM8, { platform: p.intl.string(p.t.Nfvo72) }),
             platformIcon: f,
-            platformLabel: _,
+            platformLabel: m,
         };
     if (t.type === o.$pd.PLAYING && e?.type === o.fg2.PLAYSTATION)
         return {
             text: p.intl.formatToPlainString(p.t.A17aM8, { platform: p.intl.string(p.t.fFl4jo) }),
             platformIcon: f,
-            platformLabel: _,
+            platformLabel: m,
         };
     if (t.type === o.$pd.PLAYING && e?.type === o.fg2.META_QUEST_OR_HORIZON)
         return {
             text: p.intl.formatToPlainString(p.t.A17aM8, {
-                platform: (0, i.A)(t) ? p.intl.string(p.t.BrHQaq) : p.intl.string(p.t.p6vL0e),
+                platform: (0, l.A)(t) ? p.intl.string(p.t.BrHQaq) : p.intl.string(p.t.p6vL0e),
             }),
             platformIcon: f,
-            platformLabel: _,
+            platformLabel: m,
         };
     if (t.type === o.$pd.WATCHING && e?.type === o.fg2.META_QUEST_OR_HORIZON)
         return {
             text: p.intl.formatToPlainString(p.t.ENbTKQ, {
-                platform: (0, i.A)(t) ? p.intl.string(p.t.BrHQaq) : p.intl.string(p.t.p6vL0e),
+                platform: (0, l.A)(t) ? p.intl.string(p.t.BrHQaq) : p.intl.string(p.t.p6vL0e),
             }),
             platformIcon: f,
-            platformLabel: _,
+            platformLabel: m,
         };
     if (t.type === o.$pd.STREAMING && e?.type === o.fg2.TWITCH)
         return {
             text: p.intl.formatToPlainString(p.t["4CQq9Q"], { name: p.intl.string(p.t.q4pBG3) }),
             platformIcon: f,
-            platformLabel: _,
+            platformLabel: m,
         };
     if (t.type === o.$pd.STREAMING && e?.type === o.fg2.YOUTUBE)
         return {
             text: p.intl.formatToPlainString(p.t["4CQq9Q"], { name: p.intl.string(p.t.aS6cK4) }),
             platformIcon: f,
-            platformLabel: _,
+            platformLabel: m,
         };
     if (null != n) {
         let e,
-            i = (0, x.A)(n, t);
+            l = (0, x.A)(n, t);
         switch (t.type) {
             case o.$pd.PLAYING:
                 e = p.t.A17aM8;
@@ -89,33 +89,33 @@ function f(t) {
                 e = p.t.Dzgz4u;
         }
         if (void 0 !== e)
-            return { text: p.intl.formatToPlainString(e, { platform: i }), platformIcon: f, platformLabel: _ };
+            return { text: p.intl.formatToPlainString(e, { platform: l }), platformIcon: f, platformLabel: m };
     }
     return t.type === o.$pd.PLAYING
-        ? { text: p.intl.string(p.t.BMTj28), platformIcon: f, platformLabel: _ }
+        ? { text: p.intl.string(p.t.BMTj28), platformIcon: f, platformLabel: m }
         : t.type === o.$pd.STREAMING
-          ? { text: p.intl.string(p.t["Jpkr/q"]), platformIcon: f, platformLabel: _ }
-          : (0, l.Cy)(t)
+          ? { text: p.intl.string(p.t["Jpkr/q"]), platformIcon: f, platformLabel: m }
+          : (0, i.Cy)(t)
             ? { text: p.intl.formatToPlainString(p.t.pW3Ip3, { name: t.name }) }
             : t.type === o.$pd.LISTENING && null != t.details
-              ? { text: p.intl.formatToPlainString(p.t["b+lA5+"], { name: t.name }), platformIcon: f, platformLabel: _ }
+              ? { text: p.intl.formatToPlainString(p.t["b+lA5+"], { name: t.name }), platformIcon: f, platformLabel: m }
               : t.type === o.$pd.LISTENING
-                ? { text: p.intl.string(p.t.dBISa6), platformIcon: f, platformLabel: _ }
+                ? { text: p.intl.string(p.t.dBISa6), platformIcon: f, platformLabel: m }
                 : t.type === o.$pd.WATCHING && null != t.details
                   ? {
                         text: p.intl.formatToPlainString(p.t.mqdfDc, { name: t.name }),
                         platformIcon: f,
-                        platformLabel: _,
+                        platformLabel: m,
                     }
                   : t.type === o.$pd.WATCHING
-                    ? { text: p.intl.string(p.t.GpNXjC), platformIcon: f, platformLabel: _ }
+                    ? { text: p.intl.string(p.t.GpNXjC), platformIcon: f, platformLabel: m }
                     : t.type === o.$pd.COMPETING && null != t.details
                       ? {
                             text: p.intl.formatToPlainString(p.t.oHF7Ch, { name: t.name }),
                             platformIcon: f,
-                            platformLabel: _,
+                            platformLabel: m,
                         }
                       : t.type === o.$pd.COMPETING
-                        ? { text: p.intl.string(p.t.OzCsIA), platformIcon: f, platformLabel: _ }
-                        : { text: void 0, platformIcon: f, platformLabel: _ };
+                        ? { text: p.intl.string(p.t.OzCsIA), platformIcon: f, platformLabel: m }
+                        : { text: void 0, platformIcon: f, platformLabel: m };
 }

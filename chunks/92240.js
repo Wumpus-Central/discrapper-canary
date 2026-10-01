@@ -1,20 +1,20 @@
 e.d(n, { A: () => c });
-var i = e(582128),
-    l = e(17928),
-    a = e(688810),
-    r = e(517164),
+var l = e(582128),
+    i = e(17928),
+    r = e(688810),
+    a = e(517164),
     s = e(183555),
     o = e(47675);
 function c(t) {
     let { user: n, display: e, activity: c, entry: u, stream: d, voiceChannelId: A, analyticsLocations: x } = t,
         { context: p, trackUserProfileAction: f } = (0, s.NJ)(),
-        { analyticsLocations: _ } = (0, a.Ay)(),
-        m = x ?? _,
-        T = (0, l.bG)([r.A], () => r.A.getUserOutbox(n.id));
-    return (0, i.useCallback)(
+        { analyticsLocations: m } = (0, r.Ay)(),
+        _ = x ?? m,
+        T = (0, i.bG)([a.A], () => a.A.getUserOutbox(n.id));
+    return (0, l.useCallback)(
         (t) => {
             let { action: n } = t;
-            (f({ action: n, analyticsLocations: m }),
+            (f({ action: n, analyticsLocations: _ }),
                 (0, o.Tu)({
                     action: n,
                     display: e,
@@ -23,10 +23,10 @@ function c(t) {
                     stream: d,
                     outbox: T,
                     voiceChannelId: A,
-                    analyticsLocations: m,
+                    analyticsLocations: _,
                     ...p,
                 }));
         },
-        [f, p, e, c, d, u, T, A, m],
+        [f, p, e, c, d, u, T, A, _],
     );
 }

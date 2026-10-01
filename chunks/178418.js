@@ -1,6 +1,6 @@
-n.d(t, { c: () => l });
-var i = n(734057);
-function l(e, t) {
-    let n = i.A.getChannel(t);
-    return null != n && e.bot && n.isPrivate() && null == n.rawRecipients.find((t) => t.id === e.id);
+t.d(i, { c: () => l });
+var n = t(734057);
+function l(e, i) {
+    let t = n.A.getChannel(i);
+    return null != t && e.bot && t.isPrivate() && null == t.rawRecipients.find((i) => i.id === e.id);
 }

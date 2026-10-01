@@ -1,31 +1,31 @@
-t.d(e, { A: () => A, V: () => c });
-var s = t(775602),
-    a = t(267102),
-    n = t(256905),
-    l = t(536763),
-    r = t(531685),
+t.d(i, { A: () => c, V: () => A });
+var n = t(775602),
+    l = t(267102),
+    s = t(256905),
+    r = t(536763),
+    a = t(531685),
     u = t(365971),
     o = t(652215);
-function d(i) {
-    let { user: e, guildId: t, alt: n } = i,
-        l = e.getAvatarURL(t, o.XAf, !s.Ay.useReducedMotion),
+function d(e) {
+    let { user: i, guildId: t, alt: s } = e,
+        r = i.getAvatarURL(t, o.XAf, !n.Ay.useReducedMotion),
         d = (function () {
-            let i = (0, a.rH)(),
-                { width: e, height: t } = r.A.windowSize(null != i ? (0, u.Q2)(i.renderWindow) : void 0);
-            return Math.min(o.XAf, Math.round(0.7 * Math.min(e, t)));
+            let e = (0, l.rH)(),
+                { width: i, height: t } = a.A.windowSize(null != e ? (0, u.Q2)(e.renderWindow) : void 0);
+            return Math.min(o.XAf, Math.round(0.7 * Math.min(i, t)));
         })();
-    return { type: "IMAGE", url: l, original: l, width: d, height: d, alt: n };
+    return { type: "IMAGE", url: r, original: r, width: d, height: d, alt: s };
 }
-function c(i) {
-    let { user: e, guildId: t } = i,
-        s = d({ user: e, guildId: t });
-    (0, l.A)({ src: s.url, width: s.width ?? o.XAf, height: s.height ?? o.XAf, options: s });
+function A(e) {
+    let { user: i, guildId: t } = e,
+        n = d({ user: i, guildId: t });
+    (0, r.A)({ src: n.url, width: n.width ?? o.XAf, height: n.height ?? o.XAf, options: n });
 }
-function A(i) {
-    let { user: e, guildId: t, alt: s } = i;
-    (0, n.R)({
+function c(e) {
+    let { user: i, guildId: t, alt: n } = e;
+    (0, s.R)({
         location: "user_profile_avatar",
-        items: [d({ user: e, guildId: t, alt: s })],
+        items: [d({ user: i, guildId: t, alt: n })],
         shouldHideMediaOptions: !0,
     });
 }

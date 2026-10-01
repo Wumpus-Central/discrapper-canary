@@ -1,8 +1,8 @@
 e.d(n, { A: () => W });
-var i = e(477900),
-    l = e(582128),
-    a = e(866665),
-    r = e(939249),
+var l = e(477900),
+    i = e(582128),
+    r = e(866665),
+    a = e(939249),
     s = e(365199),
     o = e(661531),
     c = e(922016),
@@ -12,21 +12,21 @@ var i = e(477900),
     x = e(688810),
     p = e(315246),
     f = e(92240),
-    _ = e(679492),
-    m = e(243949),
+    m = e(679492),
+    _ = e(243949),
     T = e(939496),
     E = e(17928),
-    N = e(573648),
-    g = e(541806),
+    g = e(573648),
+    N = e(541806),
     C = e(261020),
     I = e(83971),
-    j = e(780964),
-    y = e(766075),
+    y = e(780964),
+    j = e(766075),
     O = e(30370),
     S = e(652215),
     h = e(375708),
-    P = e(754495),
-    v = e(534465),
+    v = e(754495),
+    P = e(534465),
     R = e(939075),
     L = e(20805),
     U = e(655116),
@@ -39,130 +39,130 @@ function Y(t) {
     let {
             children: n,
             user: e,
-            activity: a,
-            entry: r,
+            activity: r,
+            entry: a,
             display: s,
             onSelect: o,
             onClose: Y,
             appContext: k,
             targetElementRef: W,
         } = t,
-        [B, H] = l.useState(!1),
+        [H, B] = i.useState(!1),
         { analyticsLocations: z } = (0, x.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        w = (0, f.A)({ display: s, user: e, activity: a, entry: r, analyticsLocations: z }),
-        $ = (0, _.NR)(),
-        F = l.useRef(null),
-        X = $?.interactionPopoutTargetRef ?? F,
+        $ = (0, f.A)({ display: s, user: e, activity: r, entry: a, analyticsLocations: z }),
+        w = (0, m.NR)(),
+        F = i.useRef(null),
+        X = w?.interactionPopoutTargetRef ?? F,
         Q = (function (t) {
             let { onAction: n } = t,
                 { themeType: e } = (0, T.E)(),
-                l = (0, m.A)({
+                i = (0, _.A)({
                     userId: t.user.id,
                     tabSection: G.RP.ACTIVITY,
                     label: h.intl.string(h.t.pD1L1u),
                     onAction: () => n?.({ action: "PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM" }),
                 });
             return [
-                e === V.d.POPOUT ? l : null,
+                e === V.d.POPOUT ? i : null,
                 (function (t) {
-                    let { user: n, entry: e, display: l, onAction: a, onClose: r } = t,
+                    let { user: n, entry: e, display: i, onAction: r, onClose: a } = t,
                         s = (0, E.bG)([b.default], () => b.default.getCurrentUser()?.id === n.id),
                         o = (0, E.bG)([U.A], () => U.A.hasConnectedAccount());
-                    if ("recent" !== l || !(0, I.F3)(e)) return null;
+                    if ("recent" !== i || !(0, I.F3)(e)) return null;
                     if (!o)
-                        return (0, i.jsx)(d.Dr, {
+                        return (0, l.jsx)(d.Dr, {
                             id: "connect-spotify",
                             label: h.intl.formatToPlainString(h.t.XWSHTb, { platform: M.HD }),
                             action: () => {
-                                (a?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
-                                    (0, y.openUserSettings)(j.X.CONNECTIONS_CATEGORY),
-                                    r?.());
+                                (r?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
+                                    (0, j.openUserSettings)(y.X.CONNECTIONS_CATEGORY),
+                                    a?.());
                             },
                         });
                     if (s) return null;
                     let c = (0, L.Tq)(e) ? e.extra.entries[0]?.media : e.extra.media;
                     return null == c
                         ? null
-                        : (0, i.jsx)(d.Dr, {
+                        : (0, l.jsx)(d.Dr, {
                               id: "play-on-spotify",
                               label: h.intl.string(h.t.rRffNz),
                               action: () => {
-                                  (a?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }),
+                                  (r?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }),
                                       (0, C.n)(M.M0.TRACK, c.external_id));
                               },
                           });
                 })(t),
-                (0, v.Ay)(t),
-                (0, v.gA)(t),
+                (0, P.Ay)(t),
+                (0, P.gA)(t),
                 (function (t) {
-                    let { display: n, entry: e, onAction: l, onClose: a } = t,
-                        r = (0, L.yl)(e),
-                        s = (0, D.A)({ applicationId: r ? e.extra.application_id : void 0, onClose: a });
-                    return "recent" === n && r
-                        ? (0, i.jsx)(d.Dr, {
+                    let { display: n, entry: e, onAction: i, onClose: r } = t,
+                        a = (0, L.yl)(e),
+                        s = (0, D.A)({ applicationId: a ? e.extra.application_id : void 0, onClose: r });
+                    return "recent" === n && a
+                        ? (0, l.jsx)(d.Dr, {
                               id: "view-activity",
                               label: h.intl.string(h.t.GDWYR8),
                               action: () => {
-                                  (l?.({ action: "PRESS_VIEW_ACTIVITY_MENU_ITEM" }), s());
+                                  (i?.({ action: "PRESS_VIEW_ACTIVITY_MENU_ITEM" }), s());
                               },
                           })
                         : null;
                 })(t),
                 (0, R.A)(t),
                 (function (t) {
-                    let { activity: n, entry: e, display: l, onAction: a, onClose: r } = t,
+                    let { activity: n, entry: e, display: i, onAction: r, onClose: a } = t,
                         s = (0, E.bG)([O.A], () => null != O.A.getAccount(null, S.fg2.CRUNCHYROLL));
-                    if (!(0, g.A)(n) && !(0, I.CU)(e)) return null;
+                    if (!(0, N.A)(n) && !(0, I.CU)(e)) return null;
                     if (!s)
-                        return (0, i.jsx)(d.Dr, {
+                        return (0, l.jsx)(d.Dr, {
                             id: "connect-crunchyroll",
                             label: h.intl.formatToPlainString(h.t.XWSHTb, {
-                                platform: N.A.get(S.fg2.CRUNCHYROLL).name,
+                                platform: g.A.get(S.fg2.CRUNCHYROLL).name,
                             }),
                             action: () => {
-                                (a?.({ action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM" }),
-                                    (0, y.openUserSettings)(j.X.CONNECTIONS_CATEGORY),
-                                    r?.());
+                                (r?.({ action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM" }),
+                                    (0, j.openUserSettings)(y.X.CONNECTIONS_CATEGORY),
+                                    a?.());
                             },
                         });
-                    if ("recent" !== l || !(0, I.CU)(e)) return null;
+                    if ("recent" !== i || !(0, I.CU)(e)) return null;
                     let o = e.extra.url;
                     return null == o || "" === o
                         ? null
-                        : (0, i.jsx)(d.Dr, {
+                        : (0, l.jsx)(d.Dr, {
                               id: "watch-on-crunchyroll",
                               label: h.intl.string(h.t.OpxQVH),
                               action: () => {
-                                  (a?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, C.C)(o));
+                                  (r?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, C.C)(o));
                               },
                           });
                 })(t),
-                (0, P.s)(t),
+                (0, v.s)(t),
             ].filter((t) => null != t);
-        })({ entry: r, activity: a, user: e, display: s, onClose: Y, onAction: w, isMenuOpen: B, appContext: k });
+        })({ entry: a, activity: r, user: e, display: s, onClose: Y, onAction: $, isMenuOpen: H, appContext: k });
     return 0 === Q.length || e.bot
         ? null
-        : (0, i.jsx)(c.Y, {
+        : (0, l.jsx)(c.Y, {
               targetElementRef: W ?? X,
               align: "top",
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  (w({ action: "OPEN_MENU" }), H(!0));
+                  ($({ action: "OPEN_MENU" }), B(!0));
               },
               renderPopout: (t) => {
                   let { closePopout: n } = t;
-                  return (0, i.jsx)("div", {
+                  return (0, l.jsx)("div", {
                       onClick: (t) => t.stopPropagation(),
-                      children: (0, i.jsx)(u.W, {
+                      children: (0, l.jsx)(u.W, {
                           "data-menu-migrated-auto": !0,
                           navId: p.n,
                           onClose: () => {
-                              (n(), H(!1));
+                              (n(), B(!1));
                           },
                           "aria-label": h.intl.string(h.t.PlAQz1),
                           onSelect: o,
-                          children: (0, i.jsx)(d.rX, { children: Q }),
+                          children: (0, l.jsx)(d.rX, { children: Q }),
                       }),
                   });
               },
@@ -171,16 +171,16 @@ function Y(t) {
 }
 var k = e(260155);
 function W(t) {
-    let n = l.useRef(null);
-    return (0, i.jsx)(Y, {
+    let n = i.useRef(null);
+    return (0, l.jsx)(Y, {
         ...t,
         targetElementRef: n,
         children: (t) =>
-            (0, i.jsx)(a.m, {
+            (0, l.jsx)(r.m, {
                 targetElementRef: n,
                 text: h.intl.string(h.t["UKOtz+"]),
                 ariaHidden: !0,
-                children: (0, i.jsx)(r.D, {
+                children: (0, l.jsx)(a.D, {
                     ...t,
                     innerRef: n,
                     "aria-label": h.intl.string(h.t["UKOtz+"]),
@@ -191,7 +191,7 @@ function W(t) {
                         (n.preventDefault(), t.onClick(n));
                     },
                     className: k.He,
-                    children: (0, i.jsx)(s.MoreHorizontalIcon, {
+                    children: (0, l.jsx)(s.MoreHorizontalIcon, {
                         color: o.A.colors.INTERACTIVE_TEXT_DEFAULT,
                         size: "xs",
                     }),

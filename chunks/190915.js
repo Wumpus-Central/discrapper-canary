@@ -1,15 +1,15 @@
-e.d(n, { A: () => u });
+e.d(n, { A: () => a });
 var l = e(788733),
-    r = e(652215),
-    s = e(375708);
-function u(t, n) {
+    i = e(652215),
+    r = e(375708);
+function a(t, n) {
     switch (t.type) {
-        case r.fg2.XBOX:
-            return s.intl.string(s.t.Nfvo72);
-        case r.fg2.PLAYSTATION:
-            return s.intl.string(s.t.fFl4jo);
-        case r.fg2.META_QUEST_OR_HORIZON:
-            return (0, l.A)(n) ? s.intl.string(s.t.BrHQaq) : s.intl.string(s.t.p6vL0e);
+        case i.fg2.XBOX:
+            return r.intl.string(r.t.Nfvo72);
+        case i.fg2.PLAYSTATION:
+            return r.intl.string(r.t.fFl4jo);
+        case i.fg2.META_QUEST_OR_HORIZON:
+            return (0, l.A)(n) ? r.intl.string(r.t.BrHQaq) : r.intl.string(r.t.p6vL0e);
         default:
             return t.name;
     }

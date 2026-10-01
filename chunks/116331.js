@@ -1,43 +1,43 @@
-l.d(e, { A: () => c });
-var i = l(17928),
-    n = l(107563),
-    r = l(594832),
-    s = l(287809),
-    u = l(249203),
-    d = l(419731),
-    a = l(321191),
-    A = l(695904),
-    f = l(419341);
-let o = { hasNewWishlistItems: !1, newWishlistItemCount: 0, shouldLogExposure: !1 };
-function c(t) {
-    let e = (0, A.bq)(),
-        l = (0, f.A)(t),
-        c = (0, i.bG)(
-            [a.A, u.A, s.default],
+n.d(e, { A: () => A });
+var i = n(17928),
+    l = n(107563),
+    s = n(594832),
+    r = n(287809),
+    a = n(249203),
+    d = n(419731),
+    o = n(321191),
+    u = n(695904),
+    c = n(419341);
+let m = { hasNewWishlistItems: !1, newWishlistItemCount: 0, shouldLogExposure: !1 };
+function A(t) {
+    let e = (0, u.bq)(),
+        n = (0, c.A)(t),
+        A = (0, i.bG)(
+            [o.A, a.A, r.default],
             () => {
-                if (null == e || t.id === s.default.getCurrentUser()?.id) return null;
-                let l = a.A.getFirstWishlistId(t.id);
-                if (null == l) return null;
-                let i = a.A.getWishlistSettings(t.id, l);
-                return (0, d.ds)(i, u.A.getEntry(t.id)) ? l : null;
+                if (null == e || t.id === r.default.getCurrentUser()?.id) return null;
+                let n = o.A.getFirstWishlistId(t.id);
+                if (null == n) return null;
+                let i = o.A.getWishlistSettings(t.id, n);
+                return (0, d.ds)(i, a.A.getEntry(t.id)) ? n : null;
             },
             [t, e],
         );
     return (
-        (0, r.fw)({ wishlistId: c, userId: t.id }),
+        (0, s.fw)({ wishlistId: A, userId: t.id }),
         (0, i.cf)(
-            [a.A, u.A, s.default, n.A],
+            [o.A, a.A, r.default, l.A],
             () => {
-                if (null == e || t.id === s.default.getCurrentUser()?.id) return o;
-                let i = u.A.getEntry(t.id);
-                if (null == i) return o;
-                let r = l ? a.A.getFirstWishlistId(t.id) : null,
-                    A = (null != r ? (n.A.getWishlist(r)?.items ?? []) : []).filter((t) =>
+                if (null == e || t.id === r.default.getCurrentUser()?.id) return m;
+                let i = a.A.getEntry(t.id);
+                if (null == i) return m;
+                let s = n ? o.A.getFirstWishlistId(t.id) : null,
+                    u = (null != s ? (l.A.getWishlist(s)?.items ?? []) : []).filter((t) =>
                         (0, d.f3)(t.addedAt, i.lastViewedAt),
                     ).length;
-                return { hasNewWishlistItems: e.enabled && A > 0, newWishlistItemCount: A, shouldLogExposure: A > 0 };
+                return { hasNewWishlistItems: e.enabled && u > 0, newWishlistItemCount: u, shouldLogExposure: u > 0 };
             },
-            [t, e, l],
+            [t, e, n],
         )
     );
 }

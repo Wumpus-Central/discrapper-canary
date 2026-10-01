@@ -1,4 +1,4 @@
-n.d(t, { K7: () => u, LG: () => g, Sq: () => c, W6: () => f, je: () => p, lr: () => m });
+n.d(t, { K7: () => u, LG: () => m, Sq: () => c, W6: () => f, je: () => p, lr: () => g });
 var i = n(488428),
     l = n(17928),
     s = n(776231),
@@ -27,10 +27,10 @@ function u(e) {
     return e.startsWith("//") ? `https:${e}` : e;
 }
 let h = /\.(webm|mp4)(\?|$)/i;
-function g(e) {
+function m(e) {
     return h.test(e);
 }
-function m(e) {
+function g(e) {
     return e.voiceHangout?.banner_hash != null;
 }
 let A = [d.xB.SET_VOICE_CHANNEL_STATUS, d.xB.CONNECT, d.xB.VIEW_CHANNEL];

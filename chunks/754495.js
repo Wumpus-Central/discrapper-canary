@@ -1,9 +1,9 @@
 e.d(n, { W: () => d, s: () => A });
-var i = e(477900);
+var l = e(477900);
 e(582128);
-var l = e(17928),
-    a = e(192308),
-    r = e(477782),
+var i = e(17928),
+    r = e(192308),
+    a = e(477782),
     s = e(20805),
     o = e(287809),
     c = e(301736),
@@ -20,22 +20,22 @@ function d(t) {
 function A(t) {
     let { user: n, entry: u, display: A, onAction: x } = t,
         p = (0, c.A)(),
-        f = (0, l.bG)([o.default], () => o.default.getCurrentUser());
+        f = (0, i.bG)([o.default], () => o.default.getCurrentUser());
     return n.id === f?.id && "recent" === A && (0, s.$R)(u)
-        ? (0, i.jsx)(r.Dr, {
+        ? (0, l.jsx)(a.Dr, {
               id: "delete-entry-history",
               label: d(u),
               action: () => {
                   (x?.({ action: "PRESS_DELETE_HISTORY_MENU_ITEM" }),
                       (0, s.$R)(u) &&
-                          (0, a.openModalLazy)(async () => {
+                          (0, r.openModalLazy)(async () => {
                               let { default: t } = await Promise.all([
                                   e.e("492936"),
                                   e.e("819119"),
                                   e.e("436946"),
                               ]).then(e.bind(e, 839785));
                               return (e) =>
-                                  (0, i.jsx)(t, { entry: u, user: n, onAction: x, onOpenGameSettings: p, ...e });
+                                  (0, l.jsx)(t, { entry: u, user: n, onAction: x, onOpenGameSettings: p, ...e });
                           }));
               },
               color: "danger",

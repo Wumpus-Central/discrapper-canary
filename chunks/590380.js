@@ -2,26 +2,26 @@ n.d(t, { n: () => f, p: () => m });
 var l = n(477900);
 n(582128);
 var a = n(503698),
-    i = n.n(a),
-    s = n(514042),
+    s = n.n(a),
+    i = n(514042),
     r = n(834730),
     o = n(939249),
-    u = n(298668);
-function d(e) {
-    return i()(u._B, { [u.ND]: e });
+    d = n(298668);
+function u(e) {
+    return s()(d._B, { [d.ND]: e });
 }
 function c(e) {
-    let { name: t, thumbSrc: n = null, compact: a = !1, subText: i, children: o, onThumbError: d } = e;
+    let { name: t, thumbSrc: n = null, compact: a = !1, subText: s, children: o, onThumbError: u } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
             null != n
-                ? (0, l.jsx)("img", { src: n, alt: "", className: u.gJ, onError: d })
-                : (0, l.jsx)(s.FileIcon, { size: a ? "xs" : "sm", color: "currentColor" }),
+                ? (0, l.jsx)("img", { src: n, alt: "", className: d.gJ, onError: u })
+                : (0, l.jsx)(i.FileIcon, { size: a ? "xs" : "sm", color: "currentColor" }),
             (0, l.jsxs)("div", {
-                className: u.Wd,
+                className: d.Wd,
                 children: [
-                    (0, l.jsx)(r.E, { variant: "text-sm/medium", color: "text-default", className: u.Rr, children: t }),
-                    i,
+                    (0, l.jsx)(r.E, { variant: "text-sm/medium", color: "text-default", className: d.Rr, children: t }),
+                    s,
                 ],
             }),
             o,
@@ -29,13 +29,13 @@ function c(e) {
     });
 }
 function m(e) {
-    return (0, l.jsx)("div", { className: d(e.compact ?? !1), children: c(e) });
+    return (0, l.jsx)("div", { className: u(e.compact ?? !1), children: c(e) });
 }
 function f(e) {
-    let { name: t, thumbSrc: n, ariaLabel: a, onClick: s, onThumbError: r } = e;
+    let { name: t, thumbSrc: n, ariaLabel: a, onClick: i, onThumbError: r } = e;
     return (0, l.jsx)(o.D, {
-        className: i()(d(!0), u.w8),
-        onClick: s,
+        className: s()(u(!0), d.w8),
+        onClick: i,
         "aria-label": a,
         children: c({ name: t, thumbSrc: n, compact: !0, onThumbError: r }),
     });

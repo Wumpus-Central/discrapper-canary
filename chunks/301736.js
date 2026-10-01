@@ -1,12 +1,12 @@
 e.d(n, { A: () => s });
-var i = e(688810),
-    l = e(999834),
-    a = e(230837),
-    r = e(99206);
+var l = e(688810),
+    i = e(999834),
+    r = e(230837),
+    a = e(99206);
 function s() {
-    let { analyticsLocations: t } = (0, i.Ay)();
-    if ((0, l.Pi)())
+    let { analyticsLocations: t } = (0, l.Ay)();
+    if ((0, i.Pi)())
         return () => {
-            (0, a.A)(r.J.ACTIVITY_PRIVACY, { analyticsLocations: t });
+            (0, r.A)(a.J.ACTIVITY_PRIVACY, { analyticsLocations: t });
         };
 }

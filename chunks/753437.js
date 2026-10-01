@@ -1,18 +1,18 @@
-i.d(t, { Pb: () => h, me: () => f, PT: () => m, W3: () => x });
-var n,
+n.d(t, { Pb: () => h, me: () => x, PT: () => m, W3: () => f });
+var i,
     l,
-    s = i(761915),
-    a = i(877784),
-    r = i(53788),
-    o = i(148795),
-    d = i(214947),
-    c = i(375708),
+    s = n(761915),
+    a = n(877784),
+    r = n(53788),
+    o = n(148795),
+    d = n(214947),
+    c = n(375708),
     u =
-        (((n = {}).RIBBON = "ribbon"),
-        (n.THUMBS_UP = "thumbsUp"),
-        (n.THUMBS_DOWN = "thumbsDown"),
-        (n.FRIENDS = "friends"),
-        n);
+        (((i = {}).RIBBON = "ribbon"),
+        (i.THUMBS_UP = "thumbsUp"),
+        (i.THUMBS_DOWN = "thumbsDown"),
+        (i.FRIENDS = "friends"),
+        i);
 let g = {
         [s.X.BETTER_THAN_YOU]: { getText: () => c.intl.string(c.t.jbIRBE), iconRole: "ribbon" },
         [s.X.CASUAL]: { getText: () => c.intl.string(c.t.xcFFv6), iconRole: "ribbon" },
@@ -31,17 +31,17 @@ let g = {
     },
     m = (function (e) {
         let t = {};
-        for (let i of Object.keys(g)) {
-            let n = g[i];
-            null != n && (t[i] = { getText: n.getText, icon: e[n.iconRole] });
+        for (let n of Object.keys(g)) {
+            let i = g[n];
+            null != i && (t[n] = { getText: i.getText, icon: e[i.iconRole] });
         }
         return t;
     })({ [u.RIBBON]: a.q, [u.THUMBS_UP]: r.G, [u.THUMBS_DOWN]: o.d, [u.FRIENDS]: d.$ });
-function x(e) {
+function f(e) {
     let t = m[e];
     return null != t ? t : null;
 }
-var f = (((l = {}).RADIO = "radio"), (l.CHECKBOX = "checkbox"), l);
+var x = (((l = {}).RADIO = "radio"), (l.CHECKBOX = "checkbox"), l);
 let h = {
     skill_level: {
         getLabel: () => c.intl.string(c.t.MKqADM),

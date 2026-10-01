@@ -1,66 +1,66 @@
-s.d(e, { A: () => h });
-var n = s(477900);
-s(582128);
-var a = s(503698),
-    i = s.n(a),
-    l = s(17928),
-    r = s(834730),
-    o = s(28863),
-    c = s(717398),
-    d = s(994500),
-    m = s(946356),
-    x = s(652215),
-    u = s(375708),
-    E = s(342528);
-function h(t) {
-    let { user: e, className: s } = t,
+n.d(e, { A: () => g });
+var i = n(477900);
+n(582128);
+var l = n(503698),
+    s = n.n(l),
+    r = n(17928),
+    a = n(834730),
+    d = n(28863),
+    o = n(717398),
+    u = n(994500),
+    c = n(946356),
+    m = n(652215),
+    A = n(375708),
+    f = n(342528);
+function g(t) {
+    let { user: e, className: n } = t,
         {
-            isPendingIncoming: a,
-            isBlocked: h,
-            isIgnored: j,
-        } = (0, l.cf)([d.A], () => ({
-            isPendingIncoming: d.A.getRelationshipType(e.id) === x.eA$.PENDING_INCOMING,
-            isBlocked: d.A.isBlocked(e.id),
-            isIgnored: d.A.isIgnored(e.id),
+            isPendingIncoming: l,
+            isBlocked: g,
+            isIgnored: E,
+        } = (0, r.cf)([u.A], () => ({
+            isPendingIncoming: u.A.getRelationshipType(e.id) === m.eA$.PENDING_INCOMING,
+            isBlocked: u.A.isBlocked(e.id),
+            isIgnored: u.A.isIgnored(e.id),
         }));
-    return h || (j && !a)
-        ? (0, n.jsxs)(m.A.Overlay, {
-              className: i()(E.k, s),
+    return g || (E && !l)
+        ? (0, i.jsxs)(c.A.Overlay, {
+              className: s()(f.k, n),
               children: [
-                  h &&
-                      (0, n.jsx)(r.E, {
+                  g &&
+                      (0, i.jsx)(a.E, {
                           variant: "text-sm/semibold",
                           color: "text-default",
-                          children: u.intl.string(u.t["oC/fU6"]),
+                          children: A.intl.string(A.t["oC/fU6"]),
                       }),
-                  j &&
-                      (0, n.jsxs)(n.Fragment, {
+                  E &&
+                      (0, i.jsxs)(i.Fragment, {
                           children: [
-                              (0, n.jsx)(r.E, {
+                              (0, i.jsx)(a.E, {
                                   variant: "text-sm/semibold",
                                   color: "text-default",
-                                  children: u.intl.string(u.t.HXz5An),
+                                  children: A.intl.string(A.t.HXz5An),
                               }),
-                              (0, n.jsxs)(n.Fragment, {
+                              (0, i.jsxs)(i.Fragment, {
                                   children: [
-                                      (0, n.jsx)(r.E, {
+                                      (0, i.jsx)(a.E, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
                                           children: "\u2022",
                                       }),
-                                      (0, n.jsx)(r.E, {
+                                      (0, i.jsx)(a.E, {
                                           variant: "text-sm/semibold",
                                           color: "text-default",
-                                          children: u.intl.format(u.t.PrtAqy, {
-                                              unignoreHook: (t, s) =>
-                                                  (0, n.jsx)(
-                                                      o.Anchor,
+                                          children: A.intl.format(A.t.PrtAqy, {
+                                              unignoreHook: (t, n) =>
+                                                  (0, i.jsx)(
+                                                      d.Anchor,
                                                       {
                                                           onClick: () =>
-                                                              c.A.unignoreUser(e.id, "UserProfileRemediatedNotice"),
+                                                              o.A.unignoreUser(e.id, "UserProfileRemediatedNotice"),
                                                           children: t,
                                                       },
-                                                      s,
+                                                      n,
                                                   ),
                                           }),
                                       }),

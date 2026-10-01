@@ -1,8 +1,8 @@
 e.d(n, { A: () => x });
-var i = e(477900),
-    l = e(562708),
-    a = e(866665),
-    r = e(414499),
+var l = e(477900),
+    i = e(562708),
+    r = e(866665),
+    a = e(414499),
     s = e(146779),
     o = e(139286),
     c = e(939496),
@@ -12,23 +12,23 @@ var i = e(477900),
 function x(t) {
     let { application: n, analyticsLocations: e, onAction: x, onClose: p } = t,
         { themeType: f } = (0, c.E)(),
-        _ = (0, s.Ay)({ application: n, analyticsLocations: e });
+        m = (0, s.Ay)({ application: n, analyticsLocations: e });
     return ((0, o.A)(
-        { name: l.ImpressionNames.CLOUD_PLAY_CTA, type: l.ImpressionTypes.VIEW, properties: { location_stack: e } },
-        { disableTrack: null == _ },
-        [_],
+        { name: i.ImpressionNames.CLOUD_PLAY_CTA, type: i.ImpressionTypes.VIEW, properties: { location_stack: e } },
+        { disableTrack: null == m },
+        [m],
     ),
-    null == _)
+    null == m)
         ? null
-        : (0, i.jsx)(a.m, {
+        : (0, l.jsx)(r.m, {
               text: A.intl.string(A.t.JVwWva),
               position: "top",
-              children: (0, i.jsx)(u.FD, {
-                  icon: r.h,
+              children: (0, l.jsx)(u.FD, {
+                  icon: a.h,
                   text: A.intl.string(A.t["jaYS/h"]),
                   size: "sm",
                   onClick: (t) => {
-                      (t.stopPropagation(), x?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), _(), p?.());
+                      (t.stopPropagation(), x?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), m(), p?.());
                   },
                   fullWidth: f !== d.d.MODAL_V2,
               }),

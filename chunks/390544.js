@@ -1,12 +1,12 @@
-i.d(t, { M: () => s });
-var n,
-    s =
-        (((n = {}).STARTING = "starting"),
-        (n.STARTUP_FAILED = "startup_failed"),
-        (n.MISSING_STOCK = "missing_stock"),
-        (n.SLEEPING = "sleeping"),
-        (n.OFFLINE = "offline"),
-        (n.ONLINE = "online"),
-        (n.DELETED = "deleted"),
-        (n.PROVIDER_ERRORED = "provider_errored"),
-        n);
+i.d(t, { M: () => n });
+var s,
+    n =
+        (((s = {}).STARTING = "starting"),
+        (s.STARTUP_FAILED = "startup_failed"),
+        (s.MISSING_STOCK = "missing_stock"),
+        (s.SLEEPING = "sleeping"),
+        (s.OFFLINE = "offline"),
+        (s.ONLINE = "online"),
+        (s.DELETED = "deleted"),
+        (s.PROVIDER_ERRORED = "provider_errored"),
+        s);

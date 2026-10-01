@@ -1,37 +1,37 @@
-e.d(a, { A: () => A });
-var t = e(477900);
-e(582128);
-var i = e(702841),
-    s = e(834730),
-    n = e(866665),
-    r = e(111159),
-    c = e(370480),
-    d = e(548118),
-    m = e(773669),
-    u = e(696451),
-    o = e(71393),
-    p = e(935208),
-    x = e(375708),
-    h = e(972529);
-function A(l) {
-    let { userId: a, guildId: e, textClassName: A, tooltipDelay: j } = l,
-        f = (0, i.bG)([m.default], () => m.default.locale),
-        v = (0, i.bG)([o.A], () => (null != e ? o.A.getGuild(e) : null)),
-        N = (0, i.bG)([u.Ay], () => (null != e ? u.Ay.getMember(e, a) : null)),
-        g = (0, c.An)(p.default.extractTimestamp(a), f),
-        y = (0, c.An)(N?.joinedAt, f);
-    return null == v || null == N
-        ? (0, t.jsx)(s.E, { variant: "text-sm/normal", className: A, children: g })
-        : (0, t.jsxs)("div", {
+t.d(l, { A: () => p });
+var s = t(477900);
+t(582128);
+var n = t(702841),
+    i = t(834730),
+    a = t(866665),
+    r = t(111159),
+    u = t(370480),
+    d = t(548118),
+    c = t(773669),
+    o = t(696451),
+    m = t(71393),
+    A = t(935208),
+    f = t(375708),
+    h = t(972529);
+function p(e) {
+    let { userId: l, guildId: t, textClassName: p, tooltipDelay: x } = e,
+        v = (0, n.bG)([c.default], () => c.default.locale),
+        g = (0, n.bG)([m.A], () => (null != t ? m.A.getGuild(t) : null)),
+        j = (0, n.bG)([o.Ay], () => (null != t ? o.Ay.getMember(t, l) : null)),
+        E = (0, u.An)(A.default.extractTimestamp(l), v),
+        N = (0, u.An)(j?.joinedAt, v);
+    return null == g || null == j
+        ? (0, s.jsx)(i.E, { variant: "text-sm/normal", className: p, children: E })
+        : (0, s.jsxs)("div", {
               className: h.y9,
               children: [
-                  (0, t.jsxs)("div", {
+                  (0, s.jsxs)("div", {
                       className: h.R1,
                       children: [
-                          (0, t.jsx)(n.m, {
-                              text: x.intl.string(x.t.uvGmCx),
-                              delay: j,
-                              children: (0, t.jsx)(r.p, {
+                          (0, s.jsx)(a.m, {
+                              text: f.intl.string(f.t.uvGmCx),
+                              delay: x,
+                              children: (0, s.jsx)(r.p, {
                                   size: "custom",
                                   width: 28,
                                   height: 28,
@@ -39,19 +39,19 @@ function A(l) {
                                   className: h.Mg,
                               }),
                           }),
-                          (0, t.jsx)(s.E, { variant: "text-sm/normal", className: A, children: g }),
+                          (0, s.jsx)(i.E, { variant: "text-sm/normal", className: p, children: E }),
                       ],
                   }),
-                  (0, t.jsx)("div", { className: h.yF }),
-                  (0, t.jsxs)("div", {
+                  (0, s.jsx)("div", { className: h.yF }),
+                  (0, s.jsxs)("div", {
                       className: h.R1,
                       children: [
-                          (0, t.jsx)(n.m, {
-                              text: v.name,
-                              delay: j,
-                              children: (0, t.jsx)(d.Ay, { guild: v, size: d.Ay.Sizes.SMOL, className: h.$f }),
+                          (0, s.jsx)(a.m, {
+                              text: g.name,
+                              delay: x,
+                              children: (0, s.jsx)(d.Ay, { guild: g, size: d.Ay.Sizes.SMOL, className: h.$f }),
                           }),
-                          (0, t.jsx)(s.E, { variant: "text-sm/normal", className: A, children: y }),
+                          (0, s.jsx)(i.E, { variant: "text-sm/normal", className: p, children: N }),
                       ],
                   }),
               ],

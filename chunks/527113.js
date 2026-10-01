@@ -1,8 +1,8 @@
 i.d(t, { A: () => h });
-var n = i(477900);
+var s = i(477900);
 i(582128);
-var s = i(503698),
-    r = i.n(s),
+var n = i(503698),
+    r = i.n(n),
     l = i(933832),
     a = i(789645),
     o = i(834730),
@@ -11,8 +11,8 @@ var s = i(503698),
     u = i(652215),
     m = i(202541),
     T = i(375708),
-    g = i(608251);
-let _ = [
+    _ = i(608251);
+let E = [
     {
         getPerkLabel: () => T.intl.string(T.t.tIiwuj),
         getTier0Value: () => m.TG[u.TVA.NONE].limits.emoji,
@@ -121,13 +121,13 @@ let _ = [
         getTier3Value: () => !0,
     },
 ];
-function E(e) {
+function g(e) {
     let { value: t, isBoosted: i = !1 } = e;
     return "boolean" == typeof t
         ? t
-            ? (0, n.jsx)(l.CheckmarkLargeIcon, { size: "md", color: "currentColor", className: g.oE })
-            : (0, n.jsx)(a.P, { size: "md", color: "currentColor", className: g.i3 })
-        : (0, n.jsx)(o.E, {
+            ? (0, s.jsx)(l.CheckmarkLargeIcon, { size: "md", color: "currentColor", className: _.oE })
+            : (0, s.jsx)(a.P, { size: "md", color: "currentColor", className: _.i3 })
+        : (0, s.jsx)(o.E, {
               color: i ? "text-strong" : "text-muted",
               variant: i ? "text-md/bold" : "text-md/medium",
               children: t,
@@ -149,10 +149,10 @@ function A(e) {
         })(t);
     return null == i
         ? null
-        : (0, n.jsx)("div", {
-              className: r()(g.ER, { [g.GH]: i === u.TVA.TIER_2, [g.z5]: i === u.TVA.TIER_3 }),
-              children: (0, n.jsx)(o.E, {
-                  className: g.uQ,
+        : (0, s.jsx)("div", {
+              className: r()(_.ER, { [_.GH]: i === u.TVA.TIER_2, [_.z5]: i === u.TVA.TIER_3 }),
+              children: (0, s.jsx)(o.E, {
+                  className: _.uQ,
                   color: "text-overlay-light",
                   variant: "text-xs/bold",
                   children: t === u.TVA.TIER_3 ? T.intl.string(T.t.d849Up) : T.intl.string(T.t.dZeX1z),
@@ -160,44 +160,44 @@ function A(e) {
           });
 }
 function h(e) {
-    let { className: t, guild: i, hideHeading: s = !1, hideTier0: l = !1 } = e;
-    return (0, n.jsxs)("div", {
-        className: r()(g.iE, t),
+    let { className: t, guild: i, hideHeading: n = !1, hideTier0: l = !1 } = e;
+    return (0, s.jsxs)("div", {
+        className: r()(_.iE, t),
         children: [
-            !s &&
-                (0, n.jsx)(c.D, {
-                    className: g.R_,
+            !n &&
+                (0, s.jsx)(c.D, {
+                    className: _.R_,
                     variant: "heading-xxl/semibold",
                     children: T.intl.string(T.t["9GGb9k"]),
                 }),
-            (0, n.jsxs)("div", {
-                className: g.wY,
+            (0, s.jsxs)("div", {
+                className: _.wY,
                 children: [
-                    null != i && (0, n.jsx)(A, { currentTier: i.premiumTier }),
-                    (0, n.jsxs)("div", {
-                        className: g.tp,
+                    null != i && (0, s.jsx)(A, { currentTier: i.premiumTier }),
+                    (0, s.jsxs)("div", {
+                        className: _.tp,
                         children: [
-                            (0, n.jsxs)("div", {
-                                className: r()(g.nM, g.U1),
+                            (0, s.jsxs)("div", {
+                                className: r()(_.nM, _.U1),
                                 children: [
-                                    (0, n.jsx)("div", {
-                                        className: r()(g.Hn, g.DV),
-                                        children: (0, n.jsx)(c.D, {
+                                    (0, s.jsx)("div", {
+                                        className: r()(_.Hn, _.DV),
+                                        children: (0, s.jsx)(c.D, {
                                             color: "text-default",
                                             variant: "heading-lg/semibold",
                                             children: T.intl.string(T.t.F5MY0k),
                                         }),
                                     }),
                                     !l &&
-                                        (0, n.jsxs)("div", {
-                                            className: r()(g.Hn, g.pU),
+                                        (0, s.jsxs)("div", {
+                                            className: r()(_.Hn, _.pU),
                                             children: [
-                                                (0, n.jsx)(c.D, {
+                                                (0, s.jsx)(c.D, {
                                                     color: "text-default",
                                                     variant: "heading-lg/semibold",
                                                     children: T.intl.string(T.t.mx8j2m),
                                                 }),
-                                                (0, n.jsx)(o.E, {
+                                                (0, s.jsx)(o.E, {
                                                     color: "text-muted",
                                                     variant: "text-sm/medium",
                                                     children: T.intl.format(T.t["pob/cL"], {
@@ -206,15 +206,15 @@ function h(e) {
                                                 }),
                                             ],
                                         }),
-                                    (0, n.jsxs)("div", {
-                                        className: r()(g.Hn, g.pU),
+                                    (0, s.jsxs)("div", {
+                                        className: r()(_.Hn, _.pU),
                                         children: [
-                                            (0, n.jsx)(c.D, {
+                                            (0, s.jsx)(c.D, {
                                                 color: "text-default",
                                                 variant: "heading-lg/semibold",
                                                 children: T.intl.string(T.t.nzXtaS),
                                             }),
-                                            (0, n.jsx)(o.E, {
+                                            (0, s.jsx)(o.E, {
                                                 color: "text-muted",
                                                 variant: "text-sm/medium",
                                                 children: T.intl.format(T.t["pob/cL"], {
@@ -223,15 +223,15 @@ function h(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, n.jsxs)("div", {
-                                        className: r()(g.Hn, g.pU),
+                                    (0, s.jsxs)("div", {
+                                        className: r()(_.Hn, _.pU),
                                         children: [
-                                            (0, n.jsx)(c.D, {
+                                            (0, s.jsx)(c.D, {
                                                 color: "text-default",
                                                 variant: "heading-lg/semibold",
                                                 children: T.intl.string(T.t["h33/uW"]),
                                             }),
-                                            (0, n.jsx)(o.E, {
+                                            (0, s.jsx)(o.E, {
                                                 color: "text-muted",
                                                 variant: "text-sm/medium",
                                                 children: T.intl.format(T.t["pob/cL"], {
@@ -240,15 +240,15 @@ function h(e) {
                                             }),
                                         ],
                                     }),
-                                    (0, n.jsxs)("div", {
-                                        className: r()(g.Hn, g.pU),
+                                    (0, s.jsxs)("div", {
+                                        className: r()(_.Hn, _.pU),
                                         children: [
-                                            (0, n.jsx)(c.D, {
+                                            (0, s.jsx)(c.D, {
                                                 color: "text-default",
                                                 variant: "heading-lg/semibold",
                                                 children: T.intl.string(T.t.BfF6ED),
                                             }),
-                                            (0, n.jsx)(o.E, {
+                                            (0, s.jsx)(o.E, {
                                                 color: "text-muted",
                                                 variant: "text-sm/medium",
                                                 children: T.intl.format(T.t["pob/cL"], {
@@ -259,36 +259,36 @@ function h(e) {
                                     }),
                                 ],
                             }),
-                            _.map((e, t) =>
-                                (0, n.jsxs)(
+                            E.map((e, t) =>
+                                (0, s.jsxs)(
                                     "div",
                                     {
-                                        className: r()(g.nM, { [g.fW]: t === _.length - 1 }),
+                                        className: r()(_.nM, { [_.fW]: t === E.length - 1 }),
                                         children: [
-                                            (0, n.jsx)("div", {
-                                                className: r()(g.Hn, g.DV),
-                                                children: (0, n.jsx)(o.E, {
+                                            (0, s.jsx)("div", {
+                                                className: r()(_.Hn, _.DV),
+                                                children: (0, s.jsx)(o.E, {
                                                     color: "text-muted",
                                                     variant: "text-md/medium",
                                                     children: e.getPerkLabel(),
                                                 }),
                                             }),
                                             !l &&
-                                                (0, n.jsx)("div", {
-                                                    className: r()(g.Hn, g.pU),
-                                                    children: (0, n.jsx)(E, { value: e.getTier0Value() }),
+                                                (0, s.jsx)("div", {
+                                                    className: r()(_.Hn, _.pU),
+                                                    children: (0, s.jsx)(g, { value: e.getTier0Value() }),
                                                 }),
-                                            (0, n.jsx)("div", {
-                                                className: r()(g.Hn, g.pU),
-                                                children: (0, n.jsx)(E, { value: e.getTier1Value(), isBoosted: !0 }),
+                                            (0, s.jsx)("div", {
+                                                className: r()(_.Hn, _.pU),
+                                                children: (0, s.jsx)(g, { value: e.getTier1Value(), isBoosted: !0 }),
                                             }),
-                                            (0, n.jsx)("div", {
-                                                className: r()(g.Hn, g.pU),
-                                                children: (0, n.jsx)(E, { value: e.getTier2Value(), isBoosted: !0 }),
+                                            (0, s.jsx)("div", {
+                                                className: r()(_.Hn, _.pU),
+                                                children: (0, s.jsx)(g, { value: e.getTier2Value(), isBoosted: !0 }),
                                             }),
-                                            (0, n.jsx)("div", {
-                                                className: r()(g.Hn, g.pU),
-                                                children: (0, n.jsx)(E, { value: e.getTier3Value(), isBoosted: !0 }),
+                                            (0, s.jsx)("div", {
+                                                className: r()(_.Hn, _.pU),
+                                                children: (0, s.jsx)(g, { value: e.getTier3Value(), isBoosted: !0 }),
                                             }),
                                         ],
                                     },

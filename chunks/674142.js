@@ -1,8 +1,8 @@
-r.d(t, { o: () => i });
-var l = r(357758),
-    n = r(17928),
-    s = r(351906),
-    a = r(5990);
-function i(e) {
-    return (0, n.bG)([s.A], () => (0, a.XG)(e, [s.A]), [e], l._);
+l.d(t, { o: () => s });
+var r = l(357758),
+    n = l(17928),
+    a = l(351906),
+    u = l(5990);
+function s(e) {
+    return (0, n.bG)([a.A], () => (0, u.XG)(e, [a.A]), [e], r._);
 }

@@ -1,45 +1,45 @@
-n.d(t, { A: () => u });
-var i = n(477900),
-    r = n(582128),
-    l = n(876230),
-    a = n(268218);
-let o = r.lazy(() =>
-        (0, a.sq)({
-            createPromise: () => Promise.resolve().then(n.bind(n, 266546)),
+s.d(r, { A: () => c });
+var t = s(477900),
+    a = s(582128),
+    i = s(876230),
+    n = s(268218);
+let u = a.lazy(() =>
+        (0, n.sq)({
+            createPromise: () => Promise.resolve().then(s.bind(s, 266546)),
             webpackId: 266546,
             name: "DiscordVideoPlayer",
         }),
     ),
-    s = { width: "100%", height: "100%", objectFit: "contain" };
-function u(e) {
-    let { onPlay: t, autoplay: n, playable: a = !0, ...u } = e,
-        d = r.useRef(!1),
-        c = r.useRef(!1),
-        h = r.useCallback(
-            (e, n) => {
-                d.current && ((d.current = !1), t?.(c.current, e, n));
+    l = { width: "100%", height: "100%", objectFit: "contain" };
+function c(e) {
+    let { onPlay: r, autoplay: s, playable: n = !0, ...c } = e,
+        o = a.useRef(!1),
+        d = a.useRef(!1),
+        p = a.useCallback(
+            (e, s) => {
+                o.current && ((o.current = !1), r?.(d.current, e, s));
             },
-            [t],
+            [r],
         ),
-        m = r.useCallback(
-            (e, t) => {
-                e === l.Q6.PLAYING
-                    ? t !== l.KB.BUFFERING_RECOVERY && ((d.current = !0), (c.current = t !== l.KB.USER))
-                    : h(0, 0);
+        h = a.useCallback(
+            (e, r) => {
+                e === i.Q6.PLAYING
+                    ? r !== i.KB.BUFFERING_RECOVERY && ((o.current = !0), (d.current = r !== i.KB.USER))
+                    : p(0, 0);
             },
-            [h],
+            [p],
         ),
-        g = r.useCallback(
-            (e, t) => {
-                h(1e3 * e, Number.isFinite(t) ? 1e3 * t : 0);
+        b = a.useCallback(
+            (e, r) => {
+                p(1e3 * e, Number.isFinite(r) ? 1e3 * r : 0);
             },
-            [h],
+            [p],
         ),
-        p = null != u.poster ? (0, i.jsx)("img", { src: u.poster, alt: "", style: s }) : null;
-    return a
-        ? (0, i.jsx)(r.Suspense, {
-              fallback: p,
-              children: (0, i.jsx)(o, { ...u, autoplay: n, onPlayerStateChange: m, onProgressUpdate: g }),
+        k = null != c.poster ? (0, t.jsx)("img", { src: c.poster, alt: "", style: l }) : null;
+    return n
+        ? (0, t.jsx)(a.Suspense, {
+              fallback: k,
+              children: (0, t.jsx)(u, { ...c, autoplay: s, onPlayerStateChange: h, onProgressUpdate: b }),
           })
-        : p;
+        : k;
 }

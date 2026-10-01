@@ -16,14 +16,14 @@ let E = "GUILD_SPACE_NUX_MODAL";
 function p(e) {
     let { guildId: t, markAsDismissed: n, transitionState: E, onClose: p } = e,
         x = (0, i.bG)([o.A], () => o.A.getGuildId()),
-        A = r.useRef(x === t);
+        C = r.useRef(x === t);
     ((0, d.Ay)(() => {
-        A.current && n(g.i.AUTO_DISMISS);
+        C.current && n(g.i.AUTO_DISMISS);
     }),
         r.useEffect(() => {
             x !== t && p();
         }, [t, p, x]));
-    let C = r.useCallback(async () => {
+    let A = r.useCallback(async () => {
             ((0, f.Wd)(t), await p());
         }, [t, p]),
         _ = r.useCallback(async () => {
@@ -45,7 +45,7 @@ function p(e) {
               title: h.intl.string(m.default.x9aorn),
               subtitle: h.intl.string(m.default.HXmZlY),
               actions: [
-                  { text: h.intl.string(m.default.KcOpCm), variant: "secondary", onClick: C },
+                  { text: h.intl.string(m.default.KcOpCm), variant: "secondary", onClick: A },
                   { text: h.intl.string(h.t.RzWDqY), variant: "primary", onClick: _ },
               ],
               children: (0, l.jsxs)(s.B, {

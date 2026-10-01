@@ -6,8 +6,8 @@ var r = l(582128),
     a = l(181370),
     o = l.n(a),
     c = l(52133),
-    d = l(38405),
-    u = l(938855);
+    u = l(38405),
+    d = l(938855);
 let h = /^[a-z0-9_+\-.#]+$/,
     m = new (i())({ max: 256 }),
     p = new (i())({ max: 256 }),
@@ -152,7 +152,7 @@ function j(e) {
     if (null != l && f.has(l)) return l;
 }
 function x(e, t) {
-    let l = r.use((0, u.W9)(e ?? "")),
+    let l = r.use((0, d.W9)(e ?? "")),
         n = r.useMemo(() => o()(`${e}\0${t}`), [e, t]),
         s = r.useCallback(
             function () {
@@ -179,7 +179,7 @@ function x(e, t) {
                     r = l.highlightToHtml(i);
                 } catch (t) {
                     (p.set(n, !0),
-                        d.A.captureException(t instanceof Error ? t : Error(String(t)), {
+                        u.A.captureException(t instanceof Error ? t : Error(String(t)), {
                             tags: { app_context: "syntax_highlighting" },
                             extra: { lang: e },
                         }));
@@ -199,7 +199,7 @@ function x(e, t) {
             if (null == e || 0 === e.length) return;
             let t = !1;
             for (let l of e)
-                (0, u.W9)(l).then(() => {
+                (0, d.W9)(l).then(() => {
                     t ||
                         a((e) => {
                             let t = s(!0);

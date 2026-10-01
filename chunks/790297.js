@@ -1,4 +1,4 @@
-r.d(t, { N0: () => p, lC: () => _, uS: () => C });
+r.d(t, { N0: () => p, lC: () => E, uS: () => C });
 var n = r(582128),
     l = r(17928),
     s = r(793574),
@@ -10,8 +10,8 @@ var n = r(582128),
     d = r(870216),
     g = r(758836),
     m = r(652215),
-    E = r(202541);
-function _(e) {
+    _ = r(202541);
+function E(e) {
     let { analyticsSource: t, analyticsLocations: r } = (0, l.cf)([d.A], () => d.A.getAnalytics()),
         n = (function (e) {
             switch (e) {
@@ -47,7 +47,7 @@ function _(e) {
     return { analyticsSource: t, analyticsLocations: i, newestAnalyticsLocation: o, currentTabLocation: n };
 }
 function C(e, t, r, l, s) {
-    let { analyticsLocations: a, analyticsSource: i, currentTabLocation: o, newestAnalyticsLocation: c } = _(t);
+    let { analyticsLocations: a, analyticsSource: i, currentTabLocation: o, newestAnalyticsLocation: c } = E(t);
     n.useEffect(() => {
         if (l !== g.Pf.VISIBLE || c !== o) return;
         let n = t === g.G2.CATALOG ? s : i;
@@ -61,11 +61,11 @@ function C(e, t, r, l, s) {
     }, [a, e, t, r, o, l, s, i, c]);
 }
 function p(e, t) {
-    let { analyticsLocations: r } = _(e);
+    let { analyticsLocations: r } = E(e);
     n.useEffect(() => {
         null == t ||
             c.Ay.canUseCollectibles(t) ||
-            (u.default.track(m.HAw.PREMIUM_UPSELL_VIEWED, { type: E.e.COLLECTIBLES_SHOP, location_stack: r }),
-            (0, i.sq)(m.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, o.uq)(E.e.COLLECTIBLES_SHOP)));
+            (u.default.track(m.HAw.PREMIUM_UPSELL_VIEWED, { type: _.e.COLLECTIBLES_SHOP, location_stack: r }),
+            (0, i.sq)(m.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, o.uq)(_.e.COLLECTIBLES_SHOP)));
     }, [r, t]);
 }

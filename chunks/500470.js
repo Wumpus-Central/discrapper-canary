@@ -1,11 +1,11 @@
-n.d(t, { k: () => s, x: () => i });
-var u = n(702841),
+n.d(e, { k: () => a, x: () => i });
+var r = n(702841),
     l = n(287809),
-    r = n(695515);
+    u = n(695515);
 function i() {
-    let e = (0, u.bG)([r.A], () => r.A.getSelectedTeenId());
-    return (0, u.bG)([l.default], () => (null !== e ? l.default.getUser(e) : void 0));
+    let t = (0, r.bG)([u.A], () => u.A.getSelectedTeenId());
+    return (0, r.bG)([l.default], () => (null !== t ? l.default.getUser(t) : void 0));
 }
-function s() {
-    return (0, u.bG)([r.A], () => r.A.getSelectedTeenId());
+function a() {
+    return (0, r.bG)([u.A], () => u.A.getSelectedTeenId());
 }

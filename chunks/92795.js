@@ -1,4 +1,4 @@
-e.exports = {
+t.exports = {
     Ie: "empty_e766f2",
     FS: "textContainer_e766f2",
     HU: "connectionPlatforms_e766f2",

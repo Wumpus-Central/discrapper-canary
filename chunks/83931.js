@@ -1,8 +1,8 @@
-n.d(e, { W: () => s });
-var t = n(922590),
-    i = n(652215);
-function s(r) {
-    let e = (0, t.KL)(r, i.eA$.FRIEND),
-        n = (0, t.KL)(r, i.eA$.PENDING_INCOMING);
-    return e || n;
+l.d(t, { W: () => n });
+var C = l(922590),
+    a = l(652215);
+function n(e) {
+    let t = (0, C.KL)(e, a.eA$.FRIEND),
+        l = (0, C.KL)(e, a.eA$.PENDING_INCOMING);
+    return t || l;
 }

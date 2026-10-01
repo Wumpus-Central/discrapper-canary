@@ -1,19 +1,19 @@
-n.d(e, { A: () => u });
-var t = n(477900);
-n(582128);
-var i = n(17928),
-    s = n(683071),
-    c = n(321191),
-    l = n(83931),
-    a = n(375708);
-function u(r) {
-    let { userId: e, className: n } = r,
-        u = (0, l.W)(e),
-        d = (0, i.bG)([c.A], () => c.A.getUserProfile(e)?.fetchError);
-    return u || null == d
+l.d(t, { A: () => c });
+var C = l(477900);
+l(582128);
+var a = l(17928),
+    n = l(683071),
+    r = l(321191),
+    i = l(83931),
+    s = l(375708);
+function c(e) {
+    let { userId: t, className: l } = e,
+        c = (0, i.W)(t),
+        u = (0, a.bG)([r.A], () => r.A.getUserProfile(t)?.fetchError);
+    return c || null == u
         ? null
-        : (0, t.jsx)("div", {
-              className: n,
-              children: (0, t.jsx)(s.w, { type: "warning", children: a.intl.string(a.t.L9wE7H) }),
+        : (0, C.jsx)("div", {
+              className: l,
+              children: (0, C.jsx)(n.w, { type: "warning", children: s.intl.string(s.t.L9wE7H) }),
           });
 }

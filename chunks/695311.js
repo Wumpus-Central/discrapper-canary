@@ -1,8 +1,8 @@
 e.d(n, { A: () => x });
-var i = e(17928),
-    l = e(688810),
-    a = e(211401),
-    r = e(500049),
+var l = e(17928),
+    i = e(688810),
+    r = e(211401),
+    a = e(500049),
     s = e(975412),
     o = e(355622),
     c = e(267102),
@@ -11,8 +11,8 @@ var i = e(17928),
     A = e(652215);
 function x(t) {
     let { applicationId: n, onClose: e } = t,
-        { newestAnalyticsLocation: x } = (0, l.Ay)(),
-        p = (0, i.bG)([u.A, d.Ay], () => u.A.getChannel(d.Ay.getChannelId())),
+        { newestAnalyticsLocation: x } = (0, i.Ay)(),
+        p = (0, l.bG)([u.A, d.Ay], () => u.A.getChannel(d.Ay.getChannelId())),
         f = (0, c.Us)() === A.BRT.POPOUT;
     return () => {
         (e?.(),
@@ -23,6 +23,6 @@ function x(t) {
                       openInPopout: f,
                       initialState: { applicationId: n },
                   })
-                : (0, a.R)(r.s4.TEXT, o.oU.NORMAL, { applicationId: n }, p.id));
+                : (0, r.R)(a.s4.TEXT, o.oU.NORMAL, { applicationId: n }, p.id));
     };
 }

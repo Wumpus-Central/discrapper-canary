@@ -10,8 +10,8 @@ var l = n(17928),
     c = n(771640),
     u = n(976860),
     h = n(309010),
-    g = n(519480),
-    m = n(370876),
+    m = n(519480),
+    g = n(370876),
     A = n(573163),
     f = n(935208),
     p = n(652215),
@@ -73,15 +73,15 @@ let E = [
         let { guild: t, channel: n } = e,
             s = (0, l.bG)([h.Ay], () => null != n && h.Ay.getChannelId() === n.id),
             r = (0, l.bG)(
-                [g.A, A.Ay],
+                [m.A, A.Ay],
                 () => {
                     if (null == n) return 0;
                     let e = A.Ay.ackMessageId(n.id);
                     if (null == e) return 0;
-                    let t = Object.values(g.A.getDirectoryEntries(n.id) ?? {}).filter(
+                    let t = Object.values(m.A.getDirectoryEntries(n.id) ?? {}).filter(
                         (t) => new Date(t.createdAt).getTime() > f.default.extractTimestamp(e),
                     );
-                    return Math.min(m.zP, t.length);
+                    return Math.min(g.zP, t.length);
                 },
                 [n],
             );
@@ -89,18 +89,18 @@ let E = [
             children: E.map((e) => {
                 let { key: l, getName: a, handler: o, renderIcon: u } = e,
                     h = s && "JOIN_SERVERS" === l,
-                    g = `${l}-${t.id}`;
+                    m = `${l}-${t.id}`;
                 return (0, i.jsx)(
                     d.G,
                     {
-                        id: g,
+                        id: m,
                         renderIcon: u,
                         text: a(),
                         selected: h,
                         onClick: null != n ? () => o(t, n) : void 0,
                         trailing: "JOIN_SERVERS" === l && r > 0 ? (0, c.wN)(r) : null,
                     },
-                    g,
+                    m,
                 );
             }),
         });

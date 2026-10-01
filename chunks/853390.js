@@ -1,9 +1,9 @@
-n.d(t, { Ar: () => c, Ay: () => u, fU: () => d });
+n.d(t, { Ar: () => u, Ay: () => d, fU: () => c });
 var a = n(582128),
     i = n(451988),
-    l = n(583846),
+    o = n(583846),
     r = n(927813);
-function o(e) {
+function l(e) {
     let t = Math.floor(e) % r.A.Seconds.MINUTE,
         n = Math.floor(e / r.A.Seconds.MINUTE) % r.A.Seconds.MINUTE;
     return { hours: Math.floor(e / r.A.Seconds.HOUR), minutes: n, seconds: t };
@@ -11,20 +11,20 @@ function o(e) {
 function s(e) {
     return String(e).padStart(2, "0");
 }
-function d(e) {
-    let { hours: t, minutes: n, seconds: a } = o(e);
+function c(e) {
+    let { hours: t, minutes: n, seconds: a } = l(e);
     return 0 === t ? `${s(n)}:${s(a)}` : `${s(t)}:${s(n)}:${s(a)}`;
 }
-function c(e) {
-    let { hours: t, minutes: n, seconds: a } = o(e);
-    return (0, l.XK)({ hours: t, minutes: n, seconds: a });
-}
 function u(e) {
+    let { hours: t, minutes: n, seconds: a } = l(e);
+    return (0, o.XK)({ hours: t, minutes: n, seconds: a });
+}
+function d(e) {
     let { start: t, end: n } = e,
-        [l] = (0, a.useState)(new i.IX()),
-        [o, s] = (0, a.useState)(() => Date.now());
-    (0, a.useEffect)(() => (l.start(r.A.Millis.HALF_SECOND, () => s(Date.now())), () => l.stop()), [l]);
-    let d = (n - t) / r.A.Millis.SECOND,
-        c = Math.max(Math.min((o - t) / r.A.Millis.SECOND, d), 0);
-    return { elapsed: c, duration: d, percentage: Math.max(Math.min(c / d, 1), 0) };
+        [o] = (0, a.useState)(new i.IX()),
+        [l, s] = (0, a.useState)(() => Date.now());
+    (0, a.useEffect)(() => (o.start(r.A.Millis.HALF_SECOND, () => s(Date.now())), () => o.stop()), [o]);
+    let c = (n - t) / r.A.Millis.SECOND,
+        u = Math.max(Math.min((l - t) / r.A.Millis.SECOND, c), 0);
+    return { elapsed: u, duration: c, percentage: Math.max(Math.min(u / c, 1), 0) };
 }

@@ -1,8 +1,8 @@
-e.d(n, { A: () => m });
-var i = e(477900),
-    l = e(582128),
-    a = e(503698),
-    r = e.n(a),
+e.d(n, { A: () => _ });
+var l = e(477900),
+    i = e(582128),
+    r = e(503698),
+    a = e.n(r),
     s = e(890856),
     o = e(688810),
     c = e(183555),
@@ -12,42 +12,42 @@ var i = e(477900),
     x = e(518477),
     p = e(996988),
     f = e(375708),
-    _ = e(260155);
-let m = l.forwardRef(function (t, n) {
+    m = e(260155);
+let _ = i.forwardRef(function (t, n) {
     let {
             children: e,
-            className: l,
-            profileModalScrollTarget: a,
-            onAction: m,
+            className: i,
+            profileModalScrollTarget: r,
+            onAction: _,
             onClose: T,
             "aria-labelledby": E,
-            ...N
+            ...g
         } = t,
-        { themeType: g } = (0, A.E)(),
+        { themeType: N } = (0, A.E)(),
         { analyticsLocations: C } = (0, o.Ay)(),
         { context: I } = (0, c.NJ)();
-    return g === p.d.MODAL || g === p.d.MODAL_V2 || I?.userId == null
-        ? (0, i.jsx)("article", {
+    return N === p.d.MODAL || N === p.d.MODAL_V2 || I?.userId == null
+        ? (0, l.jsx)("article", {
               "aria-labelledby": E,
-              children: (0, i.jsx)(d.A.Overlay, { ref: n, className: r()(_.Nr, l), ...N, children: e }),
+              children: (0, l.jsx)(d.A.Overlay, { ref: n, className: a()(m.Nr, i), ...g, children: e }),
           })
-        : (0, i.jsx)("article", {
+        : (0, l.jsx)("article", {
               "aria-labelledby": E,
-              children: (0, i.jsx)(s.s, {
-                  className: _.OV,
+              children: (0, l.jsx)(s.s, {
+                  className: m.OV,
                   "aria-label": f.intl.string(f.t.pD1L1u),
                   focusProps: { ringTarget: n },
                   onClick: () => {
-                      (m?.({ action: "PRESS_CARD" }),
+                      (_?.({ action: "PRESS_CARD" }),
                           (0, u.openUserProfileModal)({
                               tabSection: x.RP.ACTIVITY,
                               sourceAnalyticsLocations: C,
-                              scrollTarget: a,
+                              scrollTarget: r,
                               ...I,
                           }),
                           T?.());
                   },
-                  children: (0, i.jsx)(d.A.Overlay, { ref: n, className: r()(_.Nr, l), ...N, children: e }),
+                  children: (0, l.jsx)(d.A.Overlay, { ref: n, className: a()(m.Nr, i), ...g, children: e }),
               }),
           });
 });
