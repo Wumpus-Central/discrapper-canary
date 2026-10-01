@@ -3,8 +3,8 @@ var a = n(477900);
 n(582128);
 var l = n(503698),
     r = n.n(l),
-    i = n(834730),
-    s = n(939249),
+    s = n(834730),
+    i = n(939249),
     o = n(140735),
     d = n(866665),
     c = n(297413),
@@ -24,16 +24,16 @@ function N(e) {
             user: t,
             guildId: n,
             displayName: l,
-            size: s = "sm",
+            size: i = "sm",
             pendingDisplayNameStyles: o,
             shouldUnderlineOnHover: d = !1,
             displayNameTrailing: c,
             className: u,
         } = e,
         f = (0, m.A)({ userId: t.id, guildId: n, pendingDisplayNameStyles: o }),
-        E = A[s];
+        E = A[i];
     return null != f
-        ? (0, a.jsx)(i.E, {
+        ? (0, a.jsx)(s.E, {
               variant: E,
               className: u,
               children: (0, a.jsx)(p.A, {
@@ -48,14 +48,14 @@ function N(e) {
                   appendedInlineContent: null != c ? (0, a.jsxs)(a.Fragment, { children: [" ", c] }) : null,
               }),
           })
-        : (0, a.jsxs)(i.E, { className: r()(_.QC, _.O2, u), variant: E, children: [l, " ", c] });
+        : (0, a.jsxs)(s.E, { className: r()(_.QC, _.O2, u), variant: E, children: [l, " ", c] });
 }
 function v(e) {
     let {
             user: t,
             guildId: n,
             displayName: l,
-            trailing: i,
+            trailing: s,
             size: o = "sm",
             pendingDisplayNameStyles: d,
             onClickDisplayName: c,
@@ -74,14 +74,14 @@ function v(e) {
     return (0, a.jsxs)("div", {
         className: r()(_.K$, "lg" === o && _.lg),
         children: [
-            null != c ? (0, a.jsx)(s.D, { onClick: c, className: _.vk, children: p }) : p,
-            null != i && !1 !== i && (0, a.jsx)("div", { className: _.MU, children: i }),
+            null != c ? (0, a.jsx)(i.D, { onClick: c, className: _.vk, children: p }) : p,
+            null != s && !1 !== s && (0, a.jsx)("div", { className: _.MU, children: s }),
         ],
     });
 }
 function R(e) {
     let { pronouns: t, className: n } = e;
-    return (0, a.jsxs)(i.E, {
+    return (0, a.jsxs)(s.E, {
         className: r()(_.hI, n),
         variant: "text-sm/medium",
         color: "text-strong",
@@ -99,14 +99,14 @@ function j(e) {
             user: t,
             usernameIcon: n,
             onClickUsername: l,
-            pronouns: i,
+            pronouns: s,
             primaryGuild: o,
             contextGuildId: f,
             trailing: m,
             onClose: g,
         } = e,
         p = (0, h.j)({ location: "UserProfileUserInfo" }),
-        A = null != i && i.length > 0,
+        A = null != s && s.length > 0,
         N = (0, u.r)(t),
         v = t.isProvisional
             ? null
@@ -122,7 +122,7 @@ function j(e) {
     return (0, a.jsxs)("div", {
         className: r()(_.AK, { [_.j6]: A, [_.w2]: null != N }),
         children: [
-            null != v && null != l ? (0, a.jsx)(s.D, { onClick: l, className: _.vk, children: v }) : v,
+            null != v && null != l ? (0, a.jsx)(i.D, { onClick: l, className: _.vk, children: v }) : v,
             A &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
@@ -131,7 +131,7 @@ function j(e) {
                             text: x.intl.string(x.t.GI2A8C),
                             delay: b.In,
                             ariaHidden: !0,
-                            children: (0, a.jsx)("span", { className: _.Ez, children: (0, a.jsx)(R, { pronouns: i }) }),
+                            children: (0, a.jsx)("span", { className: _.Ez, children: (0, a.jsx)(R, { pronouns: s }) }),
                         }),
                     ],
                 }),
@@ -153,8 +153,8 @@ function T(e) {
         guildId: n,
         className: l,
         onClickName: r,
-        displayName: i,
-        displayNameSize: s,
+        displayName: s,
+        displayNameSize: i,
         pendingDisplayNameStyles: o,
         displayNameTrailing: d,
         usernameIcon: c,
@@ -170,8 +170,8 @@ function T(e) {
             (0, a.jsx)(v, {
                 user: t,
                 guildId: n,
-                displayName: i,
-                size: s,
+                displayName: s,
+                size: i,
                 pendingDisplayNameStyles: o,
                 onClickDisplayName: r,
                 trailing: d,

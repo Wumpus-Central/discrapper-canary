@@ -1,9 +1,9 @@
 n.d(t, {
-    $r: () => m,
+    $r: () => g,
     Jn: () => h,
     Q7: () => E,
     Tk: () => T,
-    W$: () => g,
+    W$: () => m,
     _W: () => _,
     _g: () => p,
     eu: () => f,
@@ -64,7 +64,7 @@ function p(e) {
 function T(e) {
     return e === c.t02.DSA_APPEAL_REQUEST_DEFLECTION ? u.intl.string(u.t["0qyXXH"]) : u.intl.string(u.t.aPmsx3);
 }
-function m(e) {
+function g(e) {
     if (e.actions.some((e) => e.action_type === o.X2.BAN)) return null;
     let t = e.max_expiration_time;
     if (null == t) return null;
@@ -74,7 +74,7 @@ function m(e) {
         return null;
     }
 }
-function g() {
+function m() {
     return null != (0, a.bG)([l.default], () => l.default.getSuspendedUserToken());
 }
 function S() {

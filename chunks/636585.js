@@ -1,52 +1,52 @@
-(n.d(t, { A: () => f }), n(321073));
-var l = n(477900),
-    i = n(582128),
-    s = n(503698),
-    r = n.n(s),
-    a = n(778712),
-    o = n(97808),
-    u = n(983851),
-    c = n(889227),
-    d = n(621531),
-    m = n(440155);
-function h(e, t, n) {
-    return (0, l.jsx)("div", { className: t, children: e }, n);
+(r.d(s, { A: () => f }), r(321073));
+var l = r(477900),
+    n = r(582128),
+    t = r(503698),
+    i = r.n(t),
+    a = r(778712),
+    h = r(97808),
+    u = r(983851),
+    c = r(889227),
+    d = r(621531),
+    o = r(440155);
+function p(e, s, r) {
+    return (0, l.jsx)("div", { className: s, children: e }, r);
 }
-class p extends i.PureComponent {
+class m extends n.PureComponent {
     _ref;
-    static defaultProps = { max: 10, renderMoreUsers: h, size: a._3.SIZE_24 };
-    defaultRenderUser = (e, t, n, i) => {
-        let { onClick: s, size: u, guildId: h } = this.props,
-            p = e instanceof c.A ? e : null != e ? e.user : null;
-        return null == p
-            ? (0, l.jsx)("div", { className: r()(d.F2, t), style: { width: (0, a.FT)(u), height: (0, a.FT)(u) } }, n)
+    static defaultProps = { max: 10, renderMoreUsers: p, size: a._3.SIZE_24 };
+    defaultRenderUser = (e, s, r, n) => {
+        let { onClick: t, size: u, guildId: p } = this.props,
+            m = e instanceof c.A ? e : null != e ? e.user : null;
+        return null == m
+            ? (0, l.jsx)("div", { className: i()(d.F2, s), style: { width: (0, a.FT)(u), height: (0, a.FT)(u) } }, r)
             : (0, l.jsx)(
-                  o.eu,
+                  h.eu,
                   {
                       tabIndex: 0,
-                      src: p.getAvatarURL(h, (0, a.FT)(u)),
+                      src: m.getAvatarURL(p, (0, a.FT)(u)),
                       size: u,
-                      "aria-label": p.username,
-                      className: r()(t, m.or),
-                      onClick: (e) => (null != s ? s(e, p, this._ref) : null),
+                      "aria-label": m.username,
+                      className: i()(s, o.or),
+                      onClick: (e) => (null != t ? t(e, m, this._ref) : null),
                   },
-                  p.id,
+                  m.id,
               );
     };
     renderUsers() {
-        let { users: e, max: t, renderUser: n = this.defaultRenderUser, renderMoreUsers: l } = this.props,
-            i = [],
-            s = e.length === t ? e.length : t - 1,
-            r = 0;
-        for (; r < s && r < e.length;) {
-            let t = r === e.length - 1;
-            (i.push(n(e[r] || null, t ? null : d.hC, `user-${r}`, t)), r++);
+        let { users: e, max: s, renderUser: r = this.defaultRenderUser, renderMoreUsers: l } = this.props,
+            n = [],
+            t = e.length === s ? e.length : s - 1,
+            i = 0;
+        for (; i < t && i < e.length;) {
+            let s = i === e.length - 1;
+            (n.push(r(e[i] || null, s ? null : d.hC, `user-${i}`, s)), i++);
         }
-        if (r < e.length) {
-            let t = Math.min(e.length - r, 99);
-            i.push(l(`+${t}`, d.In, "more-users", t));
+        if (i < e.length) {
+            let s = Math.min(e.length - i, 99);
+            n.push(l(`+${s}`, d.In, "more-users", s));
         }
-        return i;
+        return n;
     }
     renderIcon() {
         return this.props.icon
@@ -59,7 +59,7 @@ class p extends i.PureComponent {
     render() {
         let { className: e } = this.props;
         return (0, l.jsxs)("div", {
-            className: r()(e, d.kL),
+            className: i()(e, d.kL),
             ref: (e) => {
                 this._ref = e;
             },
@@ -67,4 +67,4 @@ class p extends i.PureComponent {
         });
     }
 }
-let f = p;
+let f = m;

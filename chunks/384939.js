@@ -281,8 +281,8 @@ class p extends l.G {
     }
 }
 let T = new p();
-var m = n(414525),
-    g =
+var g = n(414525),
+    m =
         (((i = {})[(i.UNSPECIFIED = 0)] = "UNSPECIFIED"),
         (i[(i.FIRST = 1)] = "FIRST"),
         (i[(i.SECOND = 2)] = "SECOND"),
@@ -299,14 +299,14 @@ class S extends l.G {
             { no: 7, name: "themed_asset_field", kind: "message", T: () => c.i },
             { no: 8, name: "help_article_field", kind: "message", T: () => o.O },
             { no: 9, name: "cta_field", kind: "message", T: () => f.$ },
-            { no: 10, name: "gradient_field", kind: "message", T: () => m.H },
+            { no: 10, name: "gradient_field", kind: "message", T: () => g.H },
             {
                 no: 11,
                 name: "select_field",
                 kind: "enum",
                 T: () => [
                     "discord_protos.premium_marketing.v1.AdminEditorTestSelectOption",
-                    g,
+                    m,
                     "ADMIN_EDITOR_TEST_SELECT_OPTION_",
                 ],
             },
@@ -354,7 +354,7 @@ class S extends l.G {
                     a.ctaField = f.$.internalBinaryRead(e, e.uint32(), n, a.ctaField);
                     break;
                 case 10:
-                    a.gradientField = m.H.internalBinaryRead(e, e.uint32(), n, a.gradientField);
+                    a.gradientField = g.H.internalBinaryRead(e, e.uint32(), n, a.gradientField);
                     break;
                 case 11:
                     a.selectField = e.int32();
@@ -384,7 +384,7 @@ class S extends l.G {
                 o.O.internalBinaryWrite(e.helpArticleField, t.tag(8, r.O0.LengthDelimited).fork(), n).join(),
             e.ctaField && f.$.internalBinaryWrite(e.ctaField, t.tag(9, r.O0.LengthDelimited).fork(), n).join(),
             e.gradientField &&
-                m.H.internalBinaryWrite(e.gradientField, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
+                g.H.internalBinaryWrite(e.gradientField, t.tag(10, r.O0.LengthDelimited).fork(), n).join(),
             0 !== e.selectField && t.tag(11, r.O0.Varint).int32(e.selectField));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
@@ -891,7 +891,7 @@ class W extends l.G {
             { no: 1, name: "box_animation_url", kind: "scalar", T: 9 },
             { no: 2, name: "trinket_animation_url", kind: "scalar", T: 9 },
             { no: 3, name: "trinket_glow_animation_url", kind: "scalar", T: 9 },
-            { no: 4, name: "gradient", kind: "message", T: () => m.H },
+            { no: 4, name: "gradient", kind: "message", T: () => g.H },
         ]);
     }
     create(e) {
@@ -918,7 +918,7 @@ class W extends l.G {
                     a.trinketGlowAnimationUrl = e.string();
                     break;
                 case 4:
-                    a.gradient = m.H.internalBinaryRead(e, e.uint32(), n, a.gradient);
+                    a.gradient = g.H.internalBinaryRead(e, e.uint32(), n, a.gradient);
                     break;
                 default:
                     let s = n.readUnknownField;
@@ -934,7 +934,7 @@ class W extends l.G {
         ("" !== e.boxAnimationUrl && t.tag(1, r.O0.LengthDelimited).string(e.boxAnimationUrl),
             "" !== e.trinketAnimationUrl && t.tag(2, r.O0.LengthDelimited).string(e.trinketAnimationUrl),
             "" !== e.trinketGlowAnimationUrl && t.tag(3, r.O0.LengthDelimited).string(e.trinketGlowAnimationUrl),
-            e.gradient && m.H.internalBinaryWrite(e.gradient, t.tag(4, r.O0.LengthDelimited).fork(), n).join());
+            e.gradient && g.H.internalBinaryWrite(e.gradient, t.tag(4, r.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
@@ -1089,8 +1089,8 @@ class X extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let q = new X();
-var Z = n(670474);
+let Z = new X();
+var q = n(670474);
 class Q extends l.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.PremiumTab", [
@@ -1174,8 +1174,8 @@ class et extends l.G {
             { no: 1, name: "placeholder", kind: "scalar", oneof: "properties", T: 9 },
             { no: 2, name: "announcement_modal_variant_1", kind: "message", oneof: "properties", T: () => ee.ih },
             { no: 4, name: "premium_tab", kind: "message", oneof: "properties", T: () => J },
-            { no: 5, name: "marketing_page_banner", kind: "message", oneof: "properties", T: () => Z.C },
-            { no: 6, name: "payment_modal_banner", kind: "message", oneof: "properties", T: () => q },
+            { no: 5, name: "marketing_page_banner", kind: "message", oneof: "properties", T: () => q.C },
+            { no: 6, name: "payment_modal_banner", kind: "message", oneof: "properties", T: () => Z },
             { no: 7, name: "mobile_bottom_sheet", kind: "message", oneof: "properties", T: () => z },
             { no: 8, name: "gift_icon", kind: "message", oneof: "properties", T: () => Y },
             { no: 9, name: "gift_icon_coachmark", kind: "message", oneof: "properties", T: () => j.l },
@@ -1236,13 +1236,13 @@ class et extends l.G {
                 case 5:
                     a.properties = {
                         oneofKind: "marketingPageBanner",
-                        marketingPageBanner: Z.C.internalBinaryRead(e, e.uint32(), n, a.properties.marketingPageBanner),
+                        marketingPageBanner: q.C.internalBinaryRead(e, e.uint32(), n, a.properties.marketingPageBanner),
                     };
                     break;
                 case 6:
                     a.properties = {
                         oneofKind: "paymentModalBanner",
-                        paymentModalBanner: q.internalBinaryRead(e, e.uint32(), n, a.properties.paymentModalBanner),
+                        paymentModalBanner: Z.internalBinaryRead(e, e.uint32(), n, a.properties.paymentModalBanner),
                     };
                     break;
                 case 7:
@@ -1428,13 +1428,13 @@ class et extends l.G {
             "premiumTab" === e.properties.oneofKind &&
                 J.internalBinaryWrite(e.properties.premiumTab, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
             "marketingPageBanner" === e.properties.oneofKind &&
-                Z.C.internalBinaryWrite(
+                q.C.internalBinaryWrite(
                     e.properties.marketingPageBanner,
                     t.tag(5, r.O0.LengthDelimited).fork(),
                     n,
                 ).join(),
             "paymentModalBanner" === e.properties.oneofKind &&
-                q.internalBinaryWrite(e.properties.paymentModalBanner, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
+                Z.internalBinaryWrite(e.properties.paymentModalBanner, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
             "mobileBottomSheet" === e.properties.oneofKind &&
                 z.internalBinaryWrite(e.properties.mobileBottomSheet, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
             "giftIcon" === e.properties.oneofKind &&

@@ -16,8 +16,8 @@ var i = n(435558),
     f = n(403362),
     p = n(439174),
     T = n(633075),
-    m = n(646976),
-    g = n(289173),
+    g = n(646976),
+    m = n(289173),
     S = n(210598);
 function N(e) {
     let t, n;
@@ -60,13 +60,13 @@ function x(e) {
         case s.x.WANT_TO_PLAY_GAMES:
             let n = e.data.games.map((e) => ({ gameId: e.game_id, comment: e.comment, tags: e.tags })),
                 i = r().uniqBy(n, "gameId");
-            return new g.Yy({ id: e.id, type: t, games: i });
+            return new m.Yy({ id: e.id, type: t, games: i });
         case s.x.APPLICATION:
             return new T.R({ id: e.id, applicationId: e.data.application_id });
         case s.x.PERSONAL:
             return new S.Tu({ id: e.id, header: e.data.header ?? "", sections: (0, S.wv)(e.data.sections) });
         case s.x.CLIPS_GALLERY:
-            return new m.kM({
+            return new g.kM({
                 id: e.id,
                 clips: e.data.clips
                     .map((e) =>
@@ -99,7 +99,7 @@ function k(e) {
         case s.x.PLAYED_GAMES:
         case s.x.WANT_TO_PLAY_GAMES: {
             let { id: t, type: n, games: i } = e;
-            return new g.Yy({ id: t, type: n, games: i });
+            return new m.Yy({ id: t, type: n, games: i });
         }
         case s.x.APPLICATION: {
             let { id: t, applicationId: n } = e;
@@ -111,7 +111,7 @@ function k(e) {
         }
         case s.x.CLIPS_GALLERY: {
             let { id: t, clips: n } = e;
-            return new m.kM({ id: t, clips: n });
+            return new g.kM({ id: t, clips: n });
         }
         default:
             e.type;
@@ -299,7 +299,7 @@ function X(e) {
     }
     i && y.add(t);
 }
-function q(e) {
+function Z(e) {
     let { userId: t, guildId: n, apiError: i, fetchStartedAt: r } = e;
     (L.get(t)?.delete(n ?? R), y.delete(t));
     let a = D.get(t) ?? {
@@ -326,7 +326,7 @@ function q(e) {
     }
     i?.status === 404 && (P.set(t, 0), M.set(t, w), U.set(t, G));
 }
-function Z(e) {
+function q(e) {
     F = !0;
 }
 function Q(e) {
@@ -435,9 +435,9 @@ class eo extends A.A {
         super({
             CACHE_LOADED_LAZY: () => this.loadCache(),
             USER_PROFILE_FETCH_START: X,
-            USER_PROFILE_FETCH_FAILURE: q,
+            USER_PROFILE_FETCH_FAILURE: Z,
             USER_PROFILE_FETCH_SUCCESS: $,
-            USER_PROFILE_UPDATE_START: Z,
+            USER_PROFILE_UPDATE_START: q,
             USER_PROFILE_UPDATE_SUCCESS: Q,
             USER_PROFILE_UPDATE_FAILURE: J,
             WIDGET_PENDING_SAVE_SUCCESS: ee,

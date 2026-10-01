@@ -15,27 +15,27 @@ function u(e) {
             placeholderText: d,
             soloEmojiClassName: c,
             animate: h = !0,
-            hideTooltip: g = !1,
-            hideEmoji: f = !1,
-            children: A,
+            hideTooltip: f = !1,
+            hideEmoji: g = !1,
+            children: C,
         } = e,
-        E = (0, a.G)(t?.state);
+        A = (0, a.G)(t?.state);
     if (null == t) return null;
     let { emoji: p } = t,
-        m = null != E && "" !== E ? E : d;
+        m = null != A && "" !== A ? A : d;
     return (0, i.jsxs)("div", {
         className: r()(o.__invalid_container, n),
         children: [
-            f || null == p
+            g || null == p
                 ? null
                 : (0, i.jsx)(s.A, {
                       emoji: p,
                       className: r()(o.Z, l, null != c ? { [c]: null == m || "" === m } : null),
                       animate: h,
-                      hideTooltip: g,
+                      hideTooltip: f,
                   }),
             null != m && m.length > 0 ? (0, i.jsx)("span", { className: u, children: m }) : null,
-            A,
+            C,
         ],
     });
 }

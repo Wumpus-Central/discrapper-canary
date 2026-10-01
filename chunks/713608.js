@@ -1,19 +1,19 @@
-l.d(e, { q: () => c });
+l.d(a, { q: () => c });
 var t = l(477900);
 l(582128);
 var n = l(661531),
     s = l(996682),
     i = l(27989);
-function c(a) {
+function c(e) {
     let {
-            size: e = "md",
+            size: a = "md",
             width: l,
             height: c,
             color: h = n.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: o = "",
             ...r
-        } = a,
-        d = (0, i.J)(e),
+        } = e,
+        d = (0, i.J)(a),
         p = d?.width ?? l,
         u = d?.height ?? c;
     return (0, t.jsxs)("svg", {

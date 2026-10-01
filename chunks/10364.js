@@ -1,10 +1,10 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => I });
 var i = n(477900);
 n(582128);
 var l = n(284009),
     s = n.n(l),
-    a = n(109026),
-    r = n(455207),
+    r = n(109026),
+    a = n(455207),
     o = n(866665),
     d = n(297264),
     c = n(834730),
@@ -18,7 +18,7 @@ let g = function () {
         direction: u.A.Direction.VERTICAL,
         className: h.SW,
         children: [
-            (0, i.jsx)("img", { alt: "", src: (0, r.NB)(), className: h.my }),
+            (0, i.jsx)("img", { alt: "", src: (0, a.NB)(), className: h.my }),
             (0, i.jsxs)(u.A, {
                 align: u.A.Align.CENTER,
                 justify: u.A.Justify.CENTER,
@@ -54,12 +54,12 @@ var p = n(589022),
     A = n(734057),
     x = n(287809),
     f = n(943667);
-function E(e, t) {
-    if ((0, r.MZ)(t)) return (0, i.jsx)(g, {});
+function I(e, t) {
+    if ((0, a.MZ)(t)) return (0, i.jsx)(g, {});
     if ((0, f.A)(t)) {
         let n = (t?.author?.username ?? "").split(" ").slice(0, -1).join(" "),
             { guild_id: l } = t.messageReference;
-        if (null != l) return (0, i.jsx)(a.default, { setPopoutRef: e.setPopoutRef, guildId: l, name: n });
+        if (null != l) return (0, i.jsx)(r.default, { setPopoutRef: e.setPopoutRef, guildId: l, name: n });
     }
     if (null != t.interaction && "SENDING" === t.state) return (0, i.jsx)(i.Fragment, {});
     let n = null != t.webhookId ? t.author : (x.default.getUser(t.author.id) ?? t.author);

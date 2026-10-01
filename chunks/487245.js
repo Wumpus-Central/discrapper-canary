@@ -16,8 +16,8 @@ var i,
     f = n(775602),
     p = n(793574),
     T = n(688810),
-    m = n(793943),
-    g = n(915089),
+    g = n(793943),
+    m = n(915089),
     S = n(87719),
     N = n(732280),
     C = n(811611),
@@ -80,7 +80,7 @@ function X() {
         ],
     });
 }
-function q(e) {
+function Z(e) {
     let t,
         { isDisabled: n, onSelect: i, size: s, ariaDescribedBy: o } = e,
         c = D.eh.useSetting().customUserThemeSettings,
@@ -120,15 +120,15 @@ function q(e) {
                 { background: `var(--background-gradient), ${n}` }
             );
         }, [I, c, f]),
-        m = p ? G.A.unsafe_rawColors.WHITE.css : void 0,
-        g = a.useCallback(() => {
+        g = p ? G.A.unsafe_rawColors.WHITE.css : void 0,
+        m = a.useCallback(() => {
             (u && _(), i?.());
         }, [u, _, i]);
     return (0, r.jsxs)("div", {
         className: z.fC,
         children: [
             (0, r.jsxs)(H.S4, {
-                onSelect: n ? void 0 : g,
+                onSelect: n ? void 0 : m,
                 isSelected: !1,
                 showSelectionCircle: I,
                 size: s,
@@ -142,7 +142,7 @@ function q(e) {
                 children: [
                     !E && !p && (0, r.jsx)(X, {}),
                     (0, r.jsx)("div", { className: z.JU }),
-                    (0, r.jsx)(U.PaintPaletteIcon, { color: m, className: z.vL }),
+                    (0, r.jsx)(U.PaintPaletteIcon, { color: g, className: z.vL }),
                 ],
             }),
             u &&
@@ -154,7 +154,7 @@ function q(e) {
         ],
     });
 }
-var Z = n(385803),
+var q = n(385803),
     Q = n(652215),
     J = n(202541),
     ee = n(185928),
@@ -253,7 +253,7 @@ function eu(e) {
         [N, C] = a.useState(-1),
         O = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
         L = "SETTINGS" === s,
-        y = (0, g.GV)(),
+        y = (0, m.GV)(),
         D = L && u ? y : void 0,
         b = L ? y : void 0;
     function U(e, t) {
@@ -262,7 +262,7 @@ function eu(e) {
             ((0, M.bc)(e.id),
             el({ isPersisted: !u, analyticsLocations: o, themeName: c.ju[e.id] }),
             u && "SETTINGS" === s
-                ? ((n = e), (0, R.GQ)(n.theme), (0, m.nf)(m.HP.CLIENT_THEMES), (0, v.default)())
+                ? ((n = e), (0, R.GQ)(n.theme), (0, g.nf)(g.HP.CLIENT_THEMES), (0, v.default)())
                 : u
                   ? (0, R.GQ)(e.theme)
                   : (0, I.u_)({ backgroundGradientPresetId: e.id, theme: e.theme }, l),
@@ -274,23 +274,23 @@ function eu(e) {
     }
     return (
         a.useEffect(() => {
-            ((N === Z.Jm.length - 2 && "EDITOR" === s) || _ === c.ju.EASTER_EGG) && S(!0);
+            ((N === q.Jm.length - 2 && "EDITOR" === s) || _ === c.ju.EASTER_EGG) && S(!0);
         }, [N, s, _]),
         (0, r.jsxs)(r.Fragment, {
             children: [
                 L && (0, r.jsx)(A.A, { id: y, children: $.intl.string($.t.JIZSqz) }),
-                (0, r.jsx)(q, {
+                (0, r.jsx)(Z, {
                     size: i,
                     isDisabled: t,
                     ariaDescribedBy: b,
                     onSelect: () => {
-                        ((0, m.nf)(m.HP.CUSTOM_THEME, {
-                            from: "SETTINGS" === s ? m.xv.SETTING : m.xv.CLIENT_THEMES_EDITOR,
+                        ((0, g.nf)(g.HP.CUSTOM_THEME, {
+                            from: "SETTINGS" === s ? g.xv.SETTING : g.xv.CLIENT_THEMES_EDITOR,
                         }),
                             "SETTINGS" === s && (0, v.default)());
                     },
                 }),
-                Z.Jm.filter(Z.Qm).map((e, n) =>
+                q.Jm.filter(q.Qm).map((e, n) =>
                     (0, r.jsx)(
                         H.MX,
                         {
@@ -309,7 +309,7 @@ function eu(e) {
                 ),
                 (function () {
                     if (!h) return null;
-                    let e = Z.ag[c.ju.EASTER_EGG];
+                    let e = q.ag[c.ju.EASTER_EGG];
                     if (null == e) return null;
                     async function t() {
                         let { default: e } = await n.e("103408").then(n.t.bind(n, 707827, 19));
@@ -365,7 +365,7 @@ function e_(e) {
                 onSelect: () => _(en.NJ.LIGHT),
                 tabIndex: E ? void 0 : 0,
             }),
-            Z.f5.map((e) =>
+            q.f5.map((e) =>
                 (0, r.jsx)(H.zy, { size: t, theme: e, isSelected: c && !u && o === e, onSelect: () => _(e) }, e),
             ),
             !i && !n && (0, r.jsx)(H.zy, { size: t, theme: "system", isSelected: c && u, onSelect: () => _("system") }),
@@ -374,7 +374,7 @@ function e_(e) {
 }
 function eE(e) {
     let { type: t, children: n } = e,
-        i = (0, g.GV)(),
+        i = (0, m.GV)(),
         { ref: s, ...l } = (0, u._u)({ orientation: "horizontal", labelledBy: i }),
         o = a.useMemo(() => ({ type: t, delay: ea[t] }), [t]);
     return (0, r.jsx)(es.Provider, {

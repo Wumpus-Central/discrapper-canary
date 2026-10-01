@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     iE: "wrapper__83b1d",
     o1: "actions__83b1d",
     Qs: "content__83b1d",

@@ -1,4 +1,4 @@
-(t.d(r, { Ay: () => i, GT: () => s, Mz: () => u, XG: () => c, fB: () => f, qH: () => o, rs: () => p }),
+(t.d(r, { Ay: () => a, GT: () => f, Mz: () => u, XG: () => s, fB: () => p, qH: () => i, rs: () => c }),
     t(323874),
     t(14289),
     t(35956),
@@ -11,9 +11,9 @@
     t(767709),
     t(65162));
 var n,
-    a = t(115943),
-    l = t.n(a);
-async function i(e, r, t) {
+    o = t(115943),
+    l = t.n(o);
+async function a(e, r, t) {
     var n;
     return {
         src: e,
@@ -29,8 +29,8 @@ async function i(e, r, t) {
         name: r.name,
     };
 }
-var o = (((n = {}).THUMBNAIL = "Thumbnail"), (n.STATIC = "Static"), (n.REDUCED_MOTION = "Reduced Motion"), n);
-function s(e, r) {
+var i = (((n = {}).THUMBNAIL = "Thumbnail"), (n.STATIC = "Static"), (n.REDUCED_MOTION = "Reduced Motion"), n);
+function f(e, r) {
     return { name: r.name, src: URL.createObjectURL(r), base64: e };
 }
 function u(e, r) {
@@ -41,18 +41,18 @@ function u(e, r) {
     }),
         t.readAsDataURL(e));
 }
-function c(e) {
+function s(e) {
     if (null == e) return "";
     let r = e.split("/").pop() ?? e;
     return r.endsWith(".png.png") ? r.replace(/\.png\.png$/, ".png") : r;
 }
-function p(e) {
+function c(e) {
     return (
         "PASTE THIS INTO THE DROP JSON:\n\n[\n" +
         e
             .map((e) => {
-                let r = c(e.name),
-                    t = e.randomizedSources?.map((e) => c(e.filename ?? e.src));
+                let r = s(e.name),
+                    t = e.randomizedSources?.map((e) => s(e.filename ?? e.src));
                 return JSON.stringify(
                     {
                         path: r,
@@ -74,14 +74,14 @@ function p(e) {
         "\n]"
     );
 }
-function f(e) {
+function p(e) {
     let r = (function (e) {
         let [r, t] = e.split(","),
             n = atob(t),
-            a = r.split(";")[0],
+            o = r.split(";")[0],
             l = new Uint8Array(n.length);
         for (let e = 0; e < n.length; e++) l[e] = n.charCodeAt(e);
-        return new Blob([l], { type: a });
+        return new Blob([l], { type: o });
     })(e);
     return URL.createObjectURL(r);
 }

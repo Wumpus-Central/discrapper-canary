@@ -1,30 +1,30 @@
-n.d(t, { A: () => o });
-var l = n(582128),
-    i = n(17928),
-    s = n(287809),
-    r = n(403362);
-let a = [];
-function o(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
-        n = (0, i.yK)(
-            [s.default],
+l.d(e, { A: () => d });
+var n = l(582128),
+    i = l(17928),
+    r = l(287809),
+    a = l(403362);
+let u = [];
+function d(t) {
+    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3,
+        l = (0, i.yK)(
+            [r.default],
             () => {
-                let t = e.participants.map((e) => s.default.getUser(e)).filter(r.Vq),
-                    n = t.find((t) => t.id === e.author_id),
-                    l = t.filter((t) => t.id !== e.author_id);
-                return null == n ? a : [...l, n];
+                let e = t.participants.map((t) => r.default.getUser(t)).filter(a.Vq),
+                    l = e.find((e) => e.id === t.author_id),
+                    n = e.filter((e) => e.id !== t.author_id);
+                return null == l ? u : [...n, l];
             },
-            [e],
+            [t],
         ),
-        o = l.useMemo(() => n.slice(-t), [t, n]),
-        u = o[o.length - 1],
-        c = o[o.length - 2],
-        d = Math.max(n.length - 1, 0);
+        d = n.useMemo(() => l.slice(-e), [e, l]),
+        s = d[d.length - 1],
+        h = d[d.length - 2],
+        c = Math.max(l.length - 1, 0);
     return {
-        orderedParticipants: n,
-        displayParticipants: o,
-        participant1: u,
-        participant2: c,
-        numOtherParticipants: d,
+        orderedParticipants: l,
+        displayParticipants: d,
+        participant1: s,
+        participant2: h,
+        numOtherParticipants: c,
     };
 }

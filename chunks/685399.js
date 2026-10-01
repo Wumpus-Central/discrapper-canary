@@ -1,85 +1,85 @@
-(n.d(t, { Ay: () => d, IQ: () => h, Rz: () => p, a1: () => m }), n(321073));
-var l = n(582128),
-    i = n(17928),
-    s = n(429913),
-    r = n(290863),
-    a = n(287809),
-    o = n(403362),
-    u = n(933958),
-    c = n(969151);
-function d(e, t) {
-    return h(
-        (0, i.yK)([u.Ay], () =>
-            null != e && null != e.id && "" !== e.id ? u.Ay.getEmbeddedActivitiesForChannel(e.id) : u.Am,
+(l.d(t, { Ay: () => p, IQ: () => f, Rz: () => A, a1: () => c }), l(321073));
+var n = l(582128),
+    i = l(17928),
+    u = l(429913),
+    r = l(290863),
+    d = l(287809),
+    a = l(403362),
+    o = l(933958),
+    s = l(969151);
+function p(e, t) {
+    return f(
+        (0, i.yK)([o.Ay], () =>
+            null != e && null != e.id && "" !== e.id ? o.Ay.getEmbeddedActivitiesForChannel(e.id) : o.Am,
         ),
         t,
     );
 }
-function m(e) {
-    let t = h((0, i.bG)([u.Ay], () => (null != e ? u.Ay.getEmbeddedActivitiesForGuild(e) : u.Am)));
-    return l.useMemo(() => {
+function c(e) {
+    let t = f((0, i.bG)([o.Ay], () => (null != e ? o.Ay.getEmbeddedActivitiesForGuild(e) : o.Am)));
+    return n.useMemo(() => {
         let e = new Map();
         return (
             t.forEach((t) => {
-                let n = (0, c.H)(t.embeddedActivity.location);
-                if (null == n) return;
-                let l = e.get(n) ?? [];
-                (l.push(t), e.set(n, l));
+                let l = (0, s.H)(t.embeddedActivity.location);
+                if (null == l) return;
+                let n = e.get(l) ?? [];
+                (n.push(t), e.set(l, n));
             }),
             e
         );
     }, [t]);
 }
-function h(e, t) {
-    let n = e.map((e) => e.applicationId),
-        r = (0, s.A)(n),
-        u = new Set([]);
-    for (let t of e) for (let e of t.userIds) u.add(e);
-    let c = (0, i.yK)(
-        [a.default],
+function f(e, t) {
+    let l = e.map((e) => e.applicationId),
+        r = (0, u.A)(l),
+        o = new Set([]);
+    for (let t of e) for (let e of t.userIds) o.add(e);
+    let s = (0, i.yK)(
+        [d.default],
         () => {
             let e = [];
-            for (let t of u) e.push(a.default.getUser(t));
+            for (let t of o) e.push(d.default.getUser(t));
             return e;
         },
-        [u],
+        [o],
     );
-    return l.useMemo(() => {
-        let n = new Map();
+    return n.useMemo(() => {
+        let l = new Map();
         return (
-            c.forEach((e) => {
-                null != e && n.set(e.id, e);
+            s.forEach((e) => {
+                null != e && l.set(e.id, e);
             }),
             e
-                .map((e, l) => {
-                    let i = r[l],
-                        s = [];
-                    if (null != s)
-                        for (let l of e.userIds) {
-                            let e = n.get(l);
+                .map((e, n) => {
+                    let i = r[n],
+                        u = [];
+                    if (null != u)
+                        for (let n of e.userIds) {
+                            let e = l.get(n);
                             if (null != e && null != t) {
-                                let n = t(e);
-                                null != n && s.push(n);
+                                let l = t(e);
+                                null != l && u.push(l);
                             }
                         }
-                    return null == i ? null : { embeddedActivity: e, application: i, userParticipantAvatarUrls: s };
+                    return null == i ? null : { embeddedActivity: e, application: i, userParticipantAvatarUrls: u };
                 })
-                .filter(o.Vq)
+                .filter(a.Vq)
         );
-    }, [e, r, c, t]);
+    }, [e, r, s, t]);
 }
-function p(e) {
+function A(e) {
     return (0, i.bG)(
         [r.A],
         () => {
             let t = new Map();
             return (
                 e.forEach((e) => {
-                    let n = r.A.findActivity(
+                    let l = r.A.findActivity(
                         e?.embeddedActivity.userIds.values().next().value,
                         (t) => t.application_id === e?.application?.id,
                     );
-                    t.set(e?.application?.id, { ...e, presenceActivity: n });
+                    t.set(e?.application?.id, { ...e, presenceActivity: l });
                 }),
                 t
             );

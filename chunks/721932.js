@@ -1,10 +1,10 @@
-r.d(e, { $: () => s, A: () => l });
+r.d(e, { $: () => n, A: () => l });
 var i = r(32731),
-    n = r(520606);
-function s(t) {
+    s = r(520606);
+function n(t) {
     return t instanceof l;
 }
-class l extends n.A {
+class l extends s.A {
     sku;
     constructor(t) {
         (super(t), (this.skuProductLine = t.sku.productLine), (this.sku = t.sku));

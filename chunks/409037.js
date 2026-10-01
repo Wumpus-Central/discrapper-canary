@@ -1,5 +1,5 @@
-n.d(t, { c: () => i });
-class i {
+s.d(t, { c: () => r });
+class r {
     searchFetchers = new Map();
     cleanUp(e) {
         (this.cancel(e), this.delete(e));

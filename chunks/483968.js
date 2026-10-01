@@ -13,7 +13,7 @@ var l = n(477900),
 let A = function (t) {
     let { skuId: e, canUsePremiumCollectibles: n, isPurchaseSection: A, isPremiumSection: h } = t,
         E = (0, d.aT)(e),
-        L = (0, r.bG)([c.A, u.A], () => {
+        f = (0, r.bG)([c.A, u.A], () => {
             let t = c.A.getProduct(e),
                 n = u.A.getPurchase(e);
             return null != n ? (0, d.gA)(n) : (0, d.G0)(t);
@@ -32,11 +32,11 @@ let A = function (t) {
                 }),
             })
           : (0, l.jsx)(s.fk, {
-                icon: L
+                icon: f
                     ? () => (0, l.jsx)(o.t, { size: "custom", color: "currentColor", width: 14, height: 14 })
                     : () => (0, l.jsx)(a.LockIcon, { size: "xxs", color: "currentColor" }),
                 color: i.A.colors.ICON_OVERLAY_DARK.css,
                 className: x.bG,
-                "aria-label": L ? m.intl.string(m.t.X3Ekj8) : m.intl.string(m.t.Ac5fm1),
+                "aria-label": f ? m.intl.string(m.t.X3Ekj8) : m.intl.string(m.t.Ac5fm1),
             });
 };

@@ -1,5 +1,5 @@
-n.d(t, { A: () => i });
+n.d(e, { A: () => i });
 var l = n(652215);
-function i(e) {
-    return e?.platform === l.yTV.PS4 || e?.platform === l.yTV.PS5;
+function i(t) {
+    return t?.platform === l.yTV.PS4 || t?.platform === l.yTV.PS5;
 }

@@ -1,119 +1,119 @@
-n.d(t, { JC: () => N, Ay: () => _, rC: () => j });
+n.d(i, { JC: () => O, Ay: () => k, rC: () => v });
 var l = n(582128),
-    i = n(554146),
-    s = n(522305),
-    r = n(735991),
-    a = n(627363),
-    o = n(20015),
-    u = n(826673),
-    c = n(17928),
-    d = n(830215),
-    m = n(121780),
-    h = n(652215);
-let p = (0, c.UT)(m.A, {
-    getQueryId: h.fic.USER_COUNTRY_CODE,
-    get: () => m.A.getCountryCode(),
+    a = n(554146),
+    e = n(522305),
+    o = n(735991),
+    d = n(627363),
+    u = n(20015),
+    c = n(826673),
+    r = n(17928),
+    _ = n(830215),
+    s = n(121780),
+    p = n(652215);
+let A = (0, r.UT)(s.A, {
+    getQueryId: p.fic.USER_COUNTRY_CODE,
+    get: () => s.A.getCountryCode(),
     load: async () => {
-        await d.A.getLocationMetadata();
+        await _.A.getLocationMetadata();
     },
 });
-var f = n(174459),
-    g = n(881698),
-    x = n(49999);
-let A = new Set();
-function C(e) {
-    return (0, o.n)(e, h.gfo.CLOUD_GAMING_DEMO) && (0, o.n)(e, h.gfo.EMBEDDED);
+var C = n(174459),
+    f = n(881698),
+    b = n(49999);
+let D = new Set();
+function L(t) {
+    return (0, u.n)(t, p.gfo.CLOUD_GAMING_DEMO) && (0, u.n)(t, p.gfo.EMBEDDED);
 }
-function E() {
-    ((0, u.Dr)(i.M.CLOUD_PLAY_NEW_BADGE, { dismissAction: x.i.TAKE_ACTION }),
-        (0, u.Dr)(i.M.CLOUD_PLAY_POPOVER, { dismissAction: x.i.TAKE_ACTION }));
+function g() {
+    ((0, c.Dr)(a.M.CLOUD_PLAY_NEW_BADGE, { dismissAction: b.i.TAKE_ACTION }),
+        (0, c.Dr)(a.M.CLOUD_PLAY_POPOVER, { dismissAction: b.i.TAKE_ACTION }));
 }
-function I(e) {
-    let { countryCode: t, activity: n } = e;
+function y(t) {
+    let { countryCode: i, activity: n } = t;
     return (
-        null == t ||
-        (!n.blocked_locales.includes(t) && (!(n.supported_locales.length > 0) || !!n.supported_locales.includes(t)))
+        null == i ||
+        (!n.blocked_locales.includes(i) && (!(n.supported_locales.length > 0) || !!n.supported_locales.includes(i)))
     );
 }
-function y(e, t) {
+function E(t, i) {
     return (
-        e?.bot != null &&
-        !!(0, r.Ag)(e) &&
-        (null == e.embeddedActivityConfig || I({ countryCode: t, activity: e.embeddedActivityConfig }))
+        t?.bot != null &&
+        !!(0, o.Ag)(t) &&
+        (null == t.embeddedActivityConfig || y({ countryCode: i, activity: t.embeddedActivityConfig }))
     );
 }
-function S(e) {
-    let { data: t, refetch: n } = (0, a.YY)(e);
+function I(t) {
+    let { data: i, refetch: n } = (0, d.YY)(t);
     return (
         l.useEffect(() => {
-            null == e || null == t || null != t.bot || A.has(e) || (n(), A.add(e));
-        }, [e, t, n]),
-        t
+            null == t || null == i || null != i.bot || D.has(t) || (n(), D.add(t));
+        }, [t, i, n]),
+        i
     );
 }
-function v(e) {
-    return S((0, g.A)(e?.linkedGames)?.id);
+function h(t) {
+    return I((0, f.A)(t?.linkedGames)?.id);
 }
-function N(e) {
-    let { data: t } = p(),
-        n = v(e);
+function O(t) {
+    let { data: i } = A(),
+        n = h(t);
     return (
-        null != e &&
-        (e?.embeddedActivityConfig == null || !!I({ countryCode: t?.alpha2, activity: e.embeddedActivityConfig })) &&
-        (!!C(e) || y(n, t?.alpha2))
+        null != t &&
+        (t?.embeddedActivityConfig == null || !!y({ countryCode: i?.alpha2, activity: t.embeddedActivityConfig })) &&
+        (!!L(t) || E(n, i?.alpha2))
     );
 }
-function _(e) {
-    let { application: t, analyticsLocations: n } = e,
-        i = N(t),
-        { bot: r } = t ?? { bot: null },
-        a = v(t),
-        { bot: o } = a ?? { bot: null },
-        u = a?.id,
-        c = o?.id;
+function k(t) {
+    let { application: i, analyticsLocations: n } = t,
+        a = O(i),
+        { bot: o } = i ?? { bot: null },
+        d = h(i),
+        { bot: u } = d ?? { bot: null },
+        c = d?.id,
+        r = u?.id;
     return l.useMemo(
         () =>
-            i && null != t
-                ? C(t) && null != r
+            a && null != i
+                ? L(i) && null != o
                     ? () => {
-                          (E(),
-                              f.default.track(h.HAw.CLOUD_PLAY_CTA_CLICKED, {
-                                  source_application_id: t.id,
-                                  launching_application_id: t.id,
+                          (g(),
+                              C.default.track(p.HAw.CLOUD_PLAY_CTA_CLICKED, {
+                                  source_application_id: i.id,
+                                  launching_application_id: i.id,
                                   location_stack: n,
                               }),
-                              (0, s.Q)({ appId: t.id, botId: r.id, analyticsLocations: n ?? [] }));
+                              (0, e.Q)({ appId: i.id, botId: o.id, analyticsLocations: n ?? [] }));
                       }
-                    : null != u && null != c
+                    : null != c && null != r
                       ? () => {
-                            (E(),
-                                f.default.track(h.HAw.CLOUD_PLAY_CTA_CLICKED, {
-                                    source_application_id: t.id,
-                                    launching_application_id: u,
+                            (g(),
+                                C.default.track(p.HAw.CLOUD_PLAY_CTA_CLICKED, {
+                                    source_application_id: i.id,
+                                    launching_application_id: c,
                                     location_stack: n,
                                 }),
-                                (0, s.Q)({ appId: u, botId: c, analyticsLocations: n ?? [] }));
+                                (0, e.Q)({ appId: c, botId: r, analyticsLocations: n ?? [] }));
                         }
                       : void 0
                 : null,
-        [i, t, r, u, c, n],
+        [a, i, o, c, r, n],
     );
 }
-function j(e) {
-    let { applicationId: t, sourceApplicationId: n, analyticsLocations: i } = e,
-        { data: r } = p(),
-        a = S(t);
+function v(t) {
+    let { applicationId: i, sourceApplicationId: n, analyticsLocations: a } = t,
+        { data: o } = A(),
+        d = I(i);
     return l.useMemo(() => {
-        if (a?.bot == null || !y(a, r?.alpha2)) return null;
-        let e = a.bot;
+        if (d?.bot == null || !E(d, o?.alpha2)) return null;
+        let t = d.bot;
         return () => {
-            (E(),
-                f.default.track(h.HAw.CLOUD_PLAY_CTA_CLICKED, {
-                    source_application_id: n ?? a.id,
-                    launching_application_id: a.id,
-                    location_stack: i,
+            (g(),
+                C.default.track(p.HAw.CLOUD_PLAY_CTA_CLICKED, {
+                    source_application_id: n ?? d.id,
+                    launching_application_id: d.id,
+                    location_stack: a,
                 }),
-                (0, s.Q)({ appId: a.id, botId: e.id, analyticsLocations: i ?? [] }));
+                (0, e.Q)({ appId: d.id, botId: t.id, analyticsLocations: a ?? [] }));
         };
-    }, [a, r, n, i]);
+    }, [d, o, n, a]);
 }

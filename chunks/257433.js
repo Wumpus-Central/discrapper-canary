@@ -1,25 +1,25 @@
-n.d(t, { Fm: () => o, iN: () => a });
-var l = n(17928),
-    i = n(102609),
-    s = n(736056),
-    r = n(710195);
-function a(e, t) {
-    return (0, l.bG)([s.A, r.A], () =>
-        e.system === i.l5.LEGACY
-            ? s.A.getUserExperimentDescriptor(e.name)?.bucket
-            : r.A.getAssignment(e.kind, t, e.name)?.variantId,
+t.d(n, { Fm: () => s, iN: () => o });
+var l = t(17928),
+    r = t(102609),
+    a = t(736056),
+    i = t(710195);
+function o(e, n) {
+    return (0, l.bG)([a.A, i.A], () =>
+        e.system === r.l5.LEGACY
+            ? a.A.getUserExperimentDescriptor(e.name)?.bucket
+            : i.A.getAssignment(e.kind, n, e.name)?.variantId,
     );
 }
-function o(e, t) {
-    return (0, l.bG)([s.A, r.A], () =>
-        (function (e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [s.A, r.A],
-                [l, a] = n;
+function s(e, n) {
+    return (0, l.bG)([a.A, i.A], () =>
+        (function (e, n) {
+            let t = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [a.A, i.A],
+                [l, o] = t;
             return null == e
                 ? null
-                : e.system === i.l5.LEGACY
+                : e.system === r.l5.LEGACY
                   ? l.getLoadedUserExperiment(e.name)
-                  : a.getServerAssignment(e.kind, t, e.name);
-        })(e, t, [s.A, r.A]),
+                  : o.getServerAssignment(e.kind, n, e.name);
+        })(e, n, [a.A, i.A]),
     );
 }

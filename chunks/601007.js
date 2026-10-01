@@ -1,135 +1,135 @@
-(n.d(t, { A: () => C }), n(321073));
+(n.d(e, { A: () => I }), n(321073));
 var l,
     i = n(477900),
-    s = n(582128),
+    a = n(582128),
     r = n(821609),
-    a = n(477782),
+    s = n(477782),
     o = n(922016),
-    u = n(980707),
-    c = n(900797),
+    c = n(980707),
+    u = n(900797),
     d = n(847374),
-    m = n(964486),
-    h = n(37948),
+    A = n(964486),
+    f = n(37948),
     p = n(174459),
-    f = n(652215),
-    g = (((l = {}).PRIMARY = "primary"), (l.SECONDARY = "secondary"), l);
-function x(e) {
-    let { analyticsLocations: t, distributor: n, gameId: l, level: i } = e;
-    p.default.track(f.HAw.PLAY_CTA_IMPRESSION, { location_stack: t, distributor: n, game_id: l, level: i });
+    g = n(652215),
+    m = (((l = {}).PRIMARY = "primary"), (l.SECONDARY = "secondary"), l);
+function x(t) {
+    let { analyticsLocations: e, distributor: n, gameId: l, level: i } = t;
+    p.default.track(g.HAw.PLAY_CTA_IMPRESSION, { location_stack: e, distributor: n, game_id: l, level: i });
 }
-var A = n(375708);
-function C(e) {
+var _ = n(375708);
+function I(t) {
     let {
-            distributorCTAConfigs: t,
+            distributorCTAConfigs: e,
             applicationId: n,
             analyticsLocations: l,
-            buttonVariant: C = "secondary",
-            fullWidth: E = !0,
-            stopPropagation: I = !1,
-            onAction: y,
-            onClose: S,
-        } = e,
-        v = (0, h.A)(),
-        N = s.useRef(null),
-        [_, j] = s.useState(!1);
+            buttonVariant: I = "secondary",
+            fullWidth: N = !0,
+            stopPropagation: E = !1,
+            onAction: T,
+            onClose: C,
+        } = t,
+        S = (0, f.A)(),
+        h = a.useRef(null),
+        [y, O] = a.useState(!1);
     if (
-        ((0, m.Ay)(() => {
-            0 !== t.length &&
-                (!(function (e) {
-                    let { analyticsLocations: t, gameId: n, distributors: l } = e;
-                    p.default.track(f.HAw.PLAY_CTA_DISPLAYED, { location_stack: t, game_id: n, distributors: l });
+        ((0, A.Ay)(() => {
+            0 !== e.length &&
+                (!(function (t) {
+                    let { analyticsLocations: e, gameId: n, distributors: l } = t;
+                    p.default.track(g.HAw.PLAY_CTA_DISPLAYED, { location_stack: e, game_id: n, distributors: l });
                 })({
                     analyticsLocations: l,
                     gameId: n,
-                    distributors: t.map((e) => {
-                        let { ctaConfig: t } = e;
-                        return t.distributor;
+                    distributors: e.map((t) => {
+                        let { ctaConfig: e } = t;
+                        return e.distributor;
                     }),
                 }),
-                1 === t.length &&
-                    x({ analyticsLocations: l, distributor: t[0].ctaConfig.distributor, gameId: n, level: g.PRIMARY }));
+                1 === e.length &&
+                    x({ analyticsLocations: l, distributor: e[0].ctaConfig.distributor, gameId: n, level: m.PRIMARY }));
         }),
-        0 === t.length)
+        0 === e.length)
     )
         return null;
-    function b(e, t, i, s) {
-        (!(function (e) {
-            let { analyticsLocations: t, distributor: n, gameId: l, level: i } = e;
-            p.default.track(f.HAw.PLAY_CTA_CLICKED, { location_stack: t, distributor: n, game_id: l, level: i });
-        })({ analyticsLocations: l, distributor: t, gameId: n, level: s }),
-            y?.({ action: i }),
-            S?.(),
-            v(e));
+    function v(t, e, i, a) {
+        (!(function (t) {
+            let { analyticsLocations: e, distributor: n, gameId: l, level: i } = t;
+            p.default.track(g.HAw.PLAY_CTA_CLICKED, { location_stack: e, distributor: n, game_id: l, level: i });
+        })({ analyticsLocations: l, distributor: e, gameId: n, level: a }),
+            T?.({ action: i }),
+            C?.(),
+            S(t));
     }
-    if (1 === t.length) {
-        let { ctaConfig: e, skuId: n } = t[0];
+    if (1 === e.length) {
+        let { ctaConfig: t, skuId: n } = e[0];
         return (0, i.jsx)(r.$, {
-            variant: C,
+            variant: I,
             size: "sm",
-            icon: e.icon,
-            text: e.getLabel(),
-            fullWidth: E,
-            onClick: (t) => {
-                (I && t.stopPropagation(), b(e.getStoreUrl(n), e.distributor, e.analyticsAction, g.PRIMARY));
+            icon: t.icon,
+            text: t.getLabel(),
+            fullWidth: N,
+            onClick: (e) => {
+                (E && e.stopPropagation(), v(t.getStoreUrl(n), t.distributor, t.analyticsAction, m.PRIMARY));
             },
         });
     }
-    let T = t.flatMap((e, t) => {
-        let { ctaConfig: n, skuId: l } = e,
-            s = [];
+    let j = e.flatMap((t, e) => {
+        let { ctaConfig: n, skuId: l } = t,
+            a = [];
         return (
-            t > 0 && s.push((0, i.jsx)(a.bX, {}, `sep-${n.distributor}`)),
-            s.push(
+            e > 0 && a.push((0, i.jsx)(s.bX, {}, `sep-${n.distributor}`)),
+            a.push(
                 (0, i.jsx)(
-                    a.Dr,
+                    s.Dr,
                     {
                         id: `distributor-${n.distributor}`,
                         label: n.getStoreName(),
                         iconLeft: n.icon,
                         leadingAccessory: { type: "icon", icon: n.icon },
-                        action: () => b(n.getStoreUrl(l), n.distributor, n.analyticsAction, g.SECONDARY),
+                        action: () => v(n.getStoreUrl(l), n.distributor, n.analyticsAction, m.SECONDARY),
                     },
                     n.distributor,
                 ),
             ),
-            s
+            a
         );
     });
     return (0, i.jsx)(o.Y, {
-        targetElementRef: N,
+        targetElementRef: h,
         position: "bottom",
         onRequestOpen: function () {
-            for (let { ctaConfig: e } of (j(!0), t))
-                x({ analyticsLocations: l, distributor: e.distributor, gameId: n, level: g.SECONDARY });
+            for (let { ctaConfig: t } of (O(!0), e))
+                x({ analyticsLocations: l, distributor: t.distributor, gameId: n, level: m.SECONDARY });
         },
-        onRequestClose: () => j(!1),
-        renderPopout: (e) => {
-            let { closePopout: t } = e;
+        onRequestClose: () => O(!1),
+        renderPopout: (t) => {
+            let { closePopout: e } = t;
             return (0, i.jsx)("div", {
-                onClick: (e) => e.stopPropagation(),
-                style: { width: "fit-content", minWidth: N.current?.offsetWidth },
-                children: (0, i.jsx)(u.W, {
+                onClick: (t) => t.stopPropagation(),
+                style: { width: "fit-content", minWidth: h.current?.offsetWidth },
+                children: (0, i.jsx)(c.W, {
                     "data-menu-migrated": !0,
                     navId: "play-on-distributor-menu",
-                    onClose: t,
+                    onClose: e,
                     onSelect: void 0,
-                    "aria-label": A.intl.string(A.t["3XhYOS"]),
-                    children: (0, i.jsx)(a.rX, { children: T }),
+                    "aria-label": _.intl.string(_.t["3XhYOS"]),
+                    children: (0, i.jsx)(s.rX, { children: j }),
                 }),
             });
         },
-        children: (e) =>
+        children: (t) =>
             (0, i.jsx)(r.$, {
-                buttonRef: N,
-                variant: C,
+                buttonRef: h,
+                variant: I,
                 size: "sm",
-                icon: _ ? c.t : d.a,
+                icon: y ? u.t : d.a,
                 iconPosition: "end",
-                text: A.intl.string(A.t.nSHoxC),
-                fullWidth: E,
-                ...e,
-                onClick: (t) => {
-                    (I && t.stopPropagation(), e.onClick?.(t));
+                text: _.intl.string(_.t.nSHoxC),
+                fullWidth: N,
+                ...t,
+                onClick: (e) => {
+                    (E && e.stopPropagation(), t.onClick?.(e));
                 },
             }),
     });

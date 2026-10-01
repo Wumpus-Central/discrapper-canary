@@ -1,23 +1,23 @@
 (r.d(e, { A: () => I }), r(321073));
 var i = r(575593),
-    n = r(898461),
-    s = r(474012),
+    s = r(898461),
+    n = r(474012),
     l = r(837015),
-    a = r(203632),
-    u = r(892118),
-    o = r(32731),
+    u = r(203632),
+    o = r(892118),
+    a = r(32731),
     d = r(520606),
     c = r(652215);
 function S(t) {
     switch (t.type) {
         case i.R.AVATAR_DECORATION:
-            return n.A.fromServer(t);
+            return s.A.fromServer(t);
         case i.R.PROFILE_EFFECT:
-            return a.Ay.fromServer(t);
+            return u.Ay.fromServer(t);
         case i.R.NAMEPLATE:
             return l.A.fromServer(t);
         case i.R.PROFILE_FRAME:
-            return u.A.fromServer(t);
+            return o.A.fromServer(t);
         default:
             return null;
     }
@@ -42,10 +42,10 @@ class I extends d.A {
             throw Error("Collectibles wishlist item missing both collectibles_item and bundle_items");
     }
     static fromServer(t) {
-        return new I({ ...t, sku: null != t.sku ? o.A.createFromServer(t.sku) : void 0 });
+        return new I({ ...t, sku: null != t.sku ? a.A.createFromServer(t.sku) : void 0 });
     }
     static fromSKU(t) {
-        let e = (0, s.T7)(t);
+        let e = (0, n.T7)(t);
         if (null == e) return null;
         let r = new I({
             sku_id: t.id,

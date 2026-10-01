@@ -22,8 +22,8 @@
     wF: () => L,
     wU: () => h,
     wV: () => I,
-    x5: () => g,
-    yr: () => m,
+    x5: () => m,
+    yr: () => g,
 }),
     n(938796));
 let i = 25,
@@ -73,11 +73,11 @@ function I(e, t) {
 let f = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
     p = 10,
     T = 36e5;
-function m(e) {
+function g(e) {
     return f.has(e) ? 5242880 : 0x3200000;
 }
-function g(e, t) {
-    return e <= m(t);
+function m(e, t) {
+    return e <= g(t);
 }
 function S(e) {
     return `${Math.round(e / 1048576)} MB`;

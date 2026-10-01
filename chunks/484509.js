@@ -1,22 +1,22 @@
-t.d(n, { A: () => d });
-var l = t(582128),
-    i = t(17928),
-    r = t(573648),
-    s = t(874490),
-    a = t(321191);
+n.d(t, { A: () => u });
+var i = n(582128),
+    l = n(17928),
+    r = n(573648),
+    s = n(874490),
+    a = n(321191);
 let o = [];
-function d(e) {
-    let n = (0, s.dq)({ forUserProfile: !0 }),
-        t = (0, i.bG)([a.A], () => a.A.getUserProfile(e));
-    return (0, l.useMemo)(
+function u(e) {
+    let t = (0, s.dq)({ forUserProfile: !0 }),
+        n = (0, l.bG)([a.A], () => a.A.getUserProfile(e));
+    return (0, i.useMemo)(
         () =>
-            t?.connectedAccounts == null
+            n?.connectedAccounts == null
                 ? o
-                : t.connectedAccounts.filter((e) => {
-                      let { type: t } = e,
-                          l = r.A.get(t);
-                      return null != l && r.A.isSupported(t) && n(l);
+                : n.connectedAccounts.filter((e) => {
+                      let { type: n } = e,
+                          i = r.A.get(n);
+                      return null != i && r.A.isSupported(n) && t(i);
                   }),
-        [t?.connectedAccounts, n],
+        [n?.connectedAccounts, t],
     );
 }

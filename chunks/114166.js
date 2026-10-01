@@ -1,22 +1,22 @@
-n.d(t, { A: () => h, x: () => m });
+n.d(t, { A: () => m, x: () => h });
 var l,
     i = n(477900),
-    s = n(582128),
-    r = n(435558),
-    a = n.n(r),
+    r = n(582128),
+    s = n(435558),
+    a = n.n(s),
     o = n(615300),
     u = n(531685),
     c = (((l = c || {})[(l.ABOVE = 0)] = "ABOVE"), (l[(l.VISIBLE = 1)] = "VISIBLE"), (l[(l.BELOW = 2)] = "BELOW"), l);
 function d(e, t) {
     return { toValue: e, duration: t ?? 300, easing: o.A.Easing.inOut(o.A.Easing.back()) };
 }
-function m(e, t, n) {
+function h(e, t, n) {
     if (null != t) {
         let l = Math.ceil(Math.log10(e + 1));
         return null != n && n > 0 ? Math.min(l, n) * t : l * t;
     }
 }
-class h extends s.PureComponent {
+class m extends r.PureComponent {
     static Positions = c;
     prevAnimate;
     currAnimate;
@@ -73,7 +73,7 @@ class h extends s.PureComponent {
     }
     getMinWidth(e) {
         let { digitWidth: t, padStartLength: n } = this.props;
-        return m(e, t, n);
+        return h(e, t, n);
     }
     padValue(e) {
         let { padStartLength: t } = this.props;
@@ -82,21 +82,21 @@ class h extends s.PureComponent {
     render() {
         let { prevValue: e, currValue: t } = this.state,
             { color: n, formatString: l } = this.props,
-            s = a().omit(this.props, ["value", "digitWidth", "padStartLength", "forcePosition"]);
+            r = a().omit(this.props, ["value", "digitWidth", "padStartLength", "forcePosition"]);
         if (null == e)
             return (0, i.jsx)("div", {
-                ...s,
+                ...r,
                 style: { color: n, minWidth: this.getMinWidth(t) },
                 children: null != l ? l(this.padValue(t)) : this.padValue(t),
             });
-        let r = Math.max(e, t);
+        let s = Math.max(e, t);
         return (0, i.jsxs)("div", {
-            ...s,
+            ...r,
             style: { color: n, position: "relative", overflow: "hidden" },
             children: [
                 (0, i.jsx)("div", {
-                    style: { visibility: "hidden", minWidth: this.getMinWidth(r) },
-                    children: this.padValue(r),
+                    style: { visibility: "hidden", minWidth: this.getMinWidth(s) },
+                    children: this.padValue(s),
                 }),
                 (0, i.jsx)(o.A.div, {
                     style: { color: n, ...this.getAnimatedStyle(this.prevAnimate) },

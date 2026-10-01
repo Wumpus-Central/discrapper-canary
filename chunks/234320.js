@@ -1,11 +1,11 @@
-n.d(t, { Ah: () => c, EG: () => m, EH: () => u, Vo: () => d });
+n.d(t, { Ah: () => c, EG: () => h, EH: () => u, Vo: () => d });
 var l = n(477900),
     i = n(582128),
-    s = n(143236),
-    r = n(444927),
+    r = n(143236),
+    s = n(444927),
     a = n(625494);
 class o {
-    emitter = new s.EventEmitter();
+    emitter = new r.EventEmitter();
     subscribe(e, t) {
         (a._.subscribe(e, t), this.emitter.on(e, t));
     }
@@ -29,23 +29,23 @@ let u = i.createContext(
     ),
     c = i.forwardRef(function (e, t) {
         let { children: n } = e,
-            s = (0, r.A)(() => new o());
-        return (i.useImperativeHandle(t, () => s, [s]), (0, l.jsx)(u.Provider, { value: s, children: n }));
+            r = (0, s.A)(() => new o());
+        return (i.useImperativeHandle(t, () => r, [r]), (0, l.jsx)(u.Provider, { value: r, children: n }));
     });
 function d(e) {
     let { event: t, handler: n } = e,
         l = i.useContext(u),
-        s = i.useRef(n);
+        r = i.useRef(n);
     i.useEffect(() => {
-        s.current = n;
+        r.current = n;
     }, [n]);
-    let r = null == n;
+    let s = null == n;
     return (
         i.useEffect(() => {
-            if (r) return;
+            if (s) return;
             let e = function () {
                 for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                s.current?.(...t);
+                r.current?.(...t);
             };
             return (
                 l.subscribe(t, e),
@@ -53,10 +53,10 @@ function d(e) {
                     l.unsubscribe(t, e);
                 }
             );
-        }, [l, t, r]),
+        }, [l, t, s]),
         null
     );
 }
-function m(e) {
+function h(e) {
     return (d(e), null);
 }

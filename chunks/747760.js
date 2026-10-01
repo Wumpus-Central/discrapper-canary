@@ -1,8 +1,8 @@
-e.exports = {
+a.exports = {
     kL: "container__7a78a",
-    Yi: "placeholderDetailsCard__7a78a " + _(442248).H,
+    Yi: "placeholderDetailsCard__7a78a " + r(442248).H,
     RC: "placeholderText__7a78a",
     h$: "placeholderBar__7a78a",
-    Nu: "placeholderCoverGrid__7a78a " + _(442248).H,
+    Nu: "placeholderCoverGrid__7a78a " + r(442248).H,
     LH: "placeholderCover__7a78a",
 };

@@ -1,4 +1,4 @@
-(n.d(t, { A: () => t7 }), n(321073));
+(n.d(t, { A: () => t8 }), n(321073));
 var i,
     l = n(477900),
     s = n(582128),
@@ -999,8 +999,8 @@ function e2(e) {
 var e3 = n(573648);
 (n(323874), n(14289), n(35956));
 var e1 = n(536637),
-    e8 = n.n(e1),
-    e7 = n(788373),
+    e7 = n.n(e1),
+    e8 = n(788373),
     e5 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
         (i[(i.THREE_DAYS = 3)] = "THREE_DAYS"),
@@ -1037,9 +1037,9 @@ function tr(e) {
         }, [i, h]),
         N = s.useCallback(() => {
             if (!i.syncing)
-                if (b || i.expire_behavior !== e7.F.KICK) {
+                if (b || i.expire_behavior !== e8.F.KICK) {
                     let e =
-                        i.expire_behavior === e7.F.REMOVE_ROLE
+                        i.expire_behavior === e8.F.REMOVE_ROLE
                             ? Z.intl.string(Z.t["6kpw4i"])
                             : Z.intl.string(Z.t.fQUQIJ);
                     (0, eL.A)({
@@ -1103,7 +1103,7 @@ function tr(e) {
                 syncDescriptionText:
                     i.revoked && null != t
                         ? Z.intl.formatToPlainString(Z.t.G16Wji, { user: i.user, platformName: t.name })
-                        : Z.intl.formatToPlainString(Z.t.unl3AP, { datetime: e8()(i.synced_at).calendar() }),
+                        : Z.intl.formatToPlainString(Z.t.unl3AP, { datetime: e7()(i.synced_at).calendar() }),
             };
         }, [P, v, i.revoked, i.synced_at, i.type, i.user]),
         D = (0, o.bG)([eT.A], () => eT.A.getSortedRoles(n.id)),
@@ -1283,12 +1283,12 @@ function tr(e) {
                                         options: [
                                             {
                                                 id: "remove-role",
-                                                value: e7.F.REMOVE_ROLE.toString(),
+                                                value: e8.F.REMOVE_ROLE.toString(),
                                                 label: Z.intl.string(Z.t["6kpw4i"]),
                                             },
                                             {
                                                 id: "kick",
-                                                value: e7.F.KICK.toString(),
+                                                value: e8.F.KICK.toString(),
                                                 label: Z.intl.string(Z.t.fQUQIJ),
                                             },
                                         ],
@@ -1328,7 +1328,7 @@ function tr(e) {
                         },
                     }),
                     !b &&
-                        a.expire_behavior === e7.F.KICK &&
+                        a.expire_behavior === e8.F.KICK &&
                         (0, l.jsx)(I.E, {
                             className: ts.Ce,
                             color: "text-feedback-critical",
@@ -2252,7 +2252,7 @@ function t3(e) {
 }
 n(46121);
 var t1 = n(494192);
-function t8(e, t) {
+function t7(e, t) {
     switch (e) {
         case eG.wLn.APPLICATION:
             return t?.application.name ?? "";
@@ -2272,7 +2272,7 @@ function t8(e, t) {
             return "";
     }
 }
-let t7 = s.memo(function (e) {
+let t8 = s.memo(function (e) {
     let {
             section: t,
             sectionId: n,
@@ -2484,10 +2484,10 @@ let t7 = s.memo(function (e) {
                 className: t1.jD,
                 children:
                     t === eG.wLn.OVERVIEW
-                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t8(eG.wLn.OVERVIEW) })
+                        ? (0, l.jsx)(c.D, { variant: "heading-lg/semibold", children: t7(eG.wLn.OVERVIEW) })
                         : (0, l.jsx)(d.A, {
                               activeId: t.toString(),
-                              breadcrumbs: [eG.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t8(e, G[R]) })),
+                              breadcrumbs: [eG.wLn.OVERVIEW, t].map((e) => ({ id: e.toString(), label: t7(e, G[R]) })),
                               onBreadcrumbClick: (e) => {
                                   t !== parseInt(e.id) && W(parseInt(e.id));
                               },

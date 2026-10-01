@@ -2,8 +2,8 @@ n.d(t, { A: () => b, j: () => h });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
-    i = n.n(r),
-    s = n(273875),
+    s = n.n(r),
+    i = n(273875),
     o = n(208756),
     d = n(798618),
     c = n(916845),
@@ -66,8 +66,8 @@ function h(e) {
         M = l.useCallback((e) => {
             y(e);
         }, []),
-        P = N ? p.caretHoverable : void 0,
-        U = {
+        U = N ? p.caretHoverable : void 0,
+        P = {
             targetElementRef: j.targetElementRef,
             shouldShow: j.shouldShow,
             hasVideo: j.hasVideo,
@@ -86,15 +86,15 @@ function h(e) {
                 ? { alignmentStrategy: "edge", align: j.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, a.jsx)(s.x, {
-        ...U,
+    return (0, a.jsx)(i.x, {
+        ...P,
         children: (0, a.jsxs)("div", {
             "data-mana-component": "popover",
             children: [
                 A && (0, a.jsx)(c.q, { onClick: D, variant: null != g ? "color-mix" : void 0 }),
                 null != r &&
                     (0, a.jsx)("div", {
-                        className: i()(p.graphic, { [p[`graphic--${u}`]]: null != u }),
+                        className: s()(p.graphic, { [p[`graphic--${u}`]]: null != u }),
                         children: (0, a.jsx)(m.v, {
                             ...r,
                             aspectRatio: r.aspectRatio ?? ("sm" === u ? "2/1" : "16/9"),
@@ -102,7 +102,7 @@ function h(e) {
                     }),
                 (0, a.jsx)(E, { title: t, body: n }),
                 null != f && f.length > 0 ? (0, a.jsx)(o.Z, { actions: f, className: p.actionBar }) : null,
-                null != C && (0, a.jsx)(d.F, { className: P }),
+                null != C && (0, a.jsx)(d.F, { className: U }),
             ],
         }),
     });

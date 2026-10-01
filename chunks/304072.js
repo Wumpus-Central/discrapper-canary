@@ -1,15 +1,15 @@
 n.d(t, { A: () => r });
-var l = n(582128),
-    i = n(451988),
-    s = n(444927);
+var i = n(582128),
+    s = n(451988),
+    l = n(444927);
 function r(e, t) {
-    let [n, r] = (0, l.useState)(e),
-        a = (0, s.A)(() => new i.Ep());
+    let [n, r] = (0, i.useState)(e),
+        a = (0, l.A)(() => new s.Ep());
     return (
-        (0, l.useEffect)(() => () => a.stop(), [a]),
+        (0, i.useEffect)(() => () => a.stop(), [a]),
         [
             n,
-            (0, l.useCallback)(
+            (0, i.useCallback)(
                 (n) => {
                     (r(n), n !== e && a.start(t, () => r(e)));
                 },

@@ -1,34 +1,34 @@
-n.d(t, { K: () => a });
-var l = n(477900);
-n(582128);
-var i = n(661531),
-    s = n(996682),
-    r = n(27989);
-function a(e) {
+e.d(h, { K: () => c });
+var s = e(477900);
+e(582128);
+var i = e(661531),
+    l = e(996682),
+    t = e(27989);
+function c(a) {
     let {
-            size: t = "md",
-            width: n,
-            height: a,
-            color: o = i.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: u = "",
-            ...c
-        } = e,
-        d = (0, r.J)(t),
-        m = d?.width ?? n,
-        h = d?.height ?? a;
-    return (0, l.jsx)("svg", {
-        ...(0, s.A)(c),
+            size: h = "md",
+            width: e,
+            height: c,
+            color: d = i.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: n = "",
+            ...o
+        } = a,
+        p = (0, t.J)(h),
+        r = p?.width ?? e,
+        v = p?.height ?? c;
+    return (0, s.jsx)("svg", {
+        ...(0, l.A)(o),
         xmlns: "http://www.w3.org/2000/svg",
-        width: m,
-        height: h,
+        width: r,
+        height: v,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, l.jsx)("path", {
-            fill: "string" == typeof o ? o : o.css,
+        children: (0, s.jsx)("path", {
+            fill: "string" == typeof d ? d : d.css,
             fillRule: "evenodd",
             d: "M3.11 8H6v10.82c0 .86.37 1.68 1 2.27.46.43 1.02.71 1.63.84A1 1 0 0 0 9 22h10a4 4 0 0 0 4-4v-1a2 2 0 0 0-2-2h-1V5a3 3 0 0 0-3-3H4.67c-.87 0-1.7.32-2.34.9-.63.6-1 1.42-1 2.28 0 .71.3 1.35.52 1.75a5.35 5.35 0 0 0 .48.7l.01.01h.01L3.11 7l-.76.65a1 1 0 0 0 .76.35Zm1.56-4c-.38 0-.72.14-.97.37-.24.23-.37.52-.37.81a1.69 1.69 0 0 0 .3.82H6v-.83c0-.29-.13-.58-.37-.8C5.4 4.14 5.04 4 4.67 4Zm5 13a3.58 3.58 0 0 1 0 3H19a2 2 0 0 0 2-2v-1H9.66ZM3.86 6.35ZM11 8a1 1 0 1 0 0 2h5a1 1 0 0 0 0-2h-5Zm-1 5a1 1 0 0 1 1-1h5a1 1 0 0 1 0 2h-5a1 1 0 0 1-1-1Z",
             clipRule: "evenodd",
-            className: u,
+            className: n,
         }),
     });
 }

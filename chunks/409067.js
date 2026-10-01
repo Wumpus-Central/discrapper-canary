@@ -32,8 +32,8 @@ function h(e) {
             c = new Map(),
             p = new Map(),
             T = new Map(),
-            m = { allClips: 0, autoClips: 0, favorites: 0 },
-            g = new Map(),
+            g = { allClips: 0, autoClips: 0, favorites: 0 },
+            m = new Map(),
             S = { allClips: 0, autoClips: 0, favorites: 0 };
         for (let e of s) {
             if (
@@ -90,14 +90,14 @@ function h(e) {
                     }
                     return !0;
                 })(e, h) && o.push(e),
-                (m.allClips += 1),
-                "auto" === e.clipMethod && (m.autoClips += 1),
-                e.isFavorite && (m.favorites += 1),
+                (g.allClips += 1),
+                "auto" === e.clipMethod && (g.autoClips += 1),
+                e.isFavorite && (g.favorites += 1),
                 l.has(e.id) &&
                     ((S.allClips += 1),
                     "auto" === e.clipMethod && (S.autoClips += 1),
                     e.isFavorite && (S.favorites += 1),
-                    null != e.applicationId && g.set(e.applicationId, (g.get(e.applicationId) ?? 0) + 1)),
+                    null != e.applicationId && m.set(e.applicationId, (m.get(e.applicationId) ?? 0) + 1)),
                 null != e.applicationId)
             ) {
                 let t = c.get(e.applicationId);
@@ -124,7 +124,7 @@ function h(e) {
                         count: r ? C : i,
                         isSelected: r,
                         isDisabled: !1,
-                        newCount: g.get(t) ?? 0,
+                        newCount: m.get(t) ?? 0,
                     };
                 })
                 .sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
@@ -158,9 +158,9 @@ function h(e) {
             participantsFacet: y,
             distributedClipInitiatorsFacet: D,
             mainLinkCounts: {
-                allClips: v && h.activeMainLink === d.oH.ALL_CLIPS ? C : m.allClips,
-                autoClips: v && h.activeMainLink === d.oH.AUTO_CLIPS ? C : m.autoClips,
-                favorites: v && h.activeMainLink === d.oH.FAVORITES ? C : m.favorites,
+                allClips: v && h.activeMainLink === d.oH.ALL_CLIPS ? C : g.allClips,
+                autoClips: v && h.activeMainLink === d.oH.AUTO_CLIPS ? C : g.autoClips,
+                favorites: v && h.activeMainLink === d.oH.FAVORITES ? C : g.favorites,
             },
             mainLinkNewCounts: S,
         };

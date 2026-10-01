@@ -1,4 +1,4 @@
-l.d(s, { D3: () => u, SH: () => p, Yb: () => d, hj: () => c });
+l.d(s, { D3: () => c, SH: () => p, Yb: () => d, hj: () => u });
 var t = l(582128),
     i = l(17928),
     a = l(131607),
@@ -18,7 +18,7 @@ let d = {
         perGameCooldownBackoffBase: 1,
         perGameMaxCooldownMs: 1 / 0,
     };
-function u(e) {
+function c(e) {
     let {
             application: s,
             disabled: l = !1,
@@ -27,7 +27,7 @@ function u(e) {
             bypassAutoDismiss: n = !1,
             cooldownConfig: o,
         } = e,
-        { eligibleToShow: m, markAsDismissed: r } = c({
+        { eligibleToShow: m, markAsDismissed: r } = u({
             applications: (0, t.useMemo)(() => (null != s ? [s] : []), [s]),
             disabled: l,
             dismissibleContent: i,
@@ -42,17 +42,17 @@ function u(e) {
         },
     };
 }
-function c(e) {
+function u(e) {
     let {
             applications: s,
             disabled: l = !1,
             dismissibleContent: d,
             dismissibleContentGroupName: p,
-            bypassAutoDismiss: u = !1,
-            cooldownConfig: c,
+            bypassAutoDismiss: c = !1,
+            cooldownConfig: u,
         } = e,
         f = (0, i.yK)([m.A], () => s.map((e) => m.A.getGameUpsellDismissal(e.id, d))),
-        [g, h] = (0, t.useState)(() => new Set());
+        [h, g] = (0, t.useState)(() => new Set());
     (0, t.useEffect)(() => {
         let e = s.map((e, s) => {
                 var l;
@@ -64,9 +64,9 @@ function c(e) {
                             ? 0
                             : l.dismissedAt +
                               Math.min(
-                                  c.perGameInitialCooldownMs *
-                                      Math.pow(c.perGameCooldownBackoffBase, l.timesDismissed - 1),
-                                  c.perGameMaxCooldownMs,
+                                  u.perGameInitialCooldownMs *
+                                      Math.pow(u.perGameCooldownBackoffBase, l.timesDismissed - 1),
+                                  u.perGameMaxCooldownMs,
                               )),
                 };
             }),
@@ -74,7 +74,7 @@ function c(e) {
         return (
             !(function s() {
                 let t = Date.now();
-                h(
+                g(
                     new Set(
                         e
                             .filter((e) => {
@@ -97,23 +97,23 @@ function c(e) {
             })(),
             () => clearTimeout(l)
         );
-    }, [s, f, c]);
-    let M = l ? [] : s.filter((e) => g.has(e.id)).map((e) => e.id),
-        [S, w] = (0, a.Wl)(M.length > 0 ? d : null, { cooldownDurationMs: c.globalCooldownMs }, p, u),
-        D = S === d ? M : [],
-        U = s.map((e) => e.id).join(","),
-        C = D.join(",");
+    }, [s, f, u]);
+    let w = l ? [] : s.filter((e) => h.has(e.id)).map((e) => e.id),
+        [M, S] = (0, a.Wl)(w.length > 0 ? d : null, { cooldownDurationMs: u.globalCooldownMs }, p, c),
+        D = M === d ? w : [],
+        C = s.map((e) => e.id).join(","),
+        U = D.join(",");
     return (
         (0, t.useEffect)(() => {
-            let e = U.length > 0 ? U.split(",") : [],
-                s = new Set(C.length > 0 ? C.split(",") : []),
-                t = S !== d,
+            let e = C.length > 0 ? C.split(",") : [],
+                s = new Set(U.length > 0 ? U.split(",") : []),
+                t = M !== d,
                 i = {};
             for (let a of e)
                 !s.has(a) &&
                     (l
                         ? (i[a] = "disabled")
-                        : g.has(a)
+                        : h.has(a)
                           ? t && (i[a] = "global-cooldown")
                           : (i[a] = "per-game-cooldown"));
             (0, o.v)({
@@ -124,11 +124,11 @@ function c(e) {
                 disabled: l,
                 excludedReasons: i,
             });
-        }, [U, C, d, l, g, S]),
+        }, [C, U, d, l, h, M]),
         {
             eligibleToShow: D,
             markAsDismissed: function (e, s) {
-                ((0, n.M)(e, d), w(s));
+                ((0, n.M)(e, d), S(s));
             },
         }
     );

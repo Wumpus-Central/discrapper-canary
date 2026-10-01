@@ -1,13 +1,13 @@
-n.d(t, { XJ: () => r, dK: () => i, td: () => o, vq: () => a });
-var r = function (e) {
+r.d(t, { XJ: () => u, dK: () => n, td: () => o, vq: () => a });
+var u = function (e) {
         return e instanceof SVGElement && "getBBox" in e;
     },
-    i = function (e) {
-        if (r(e)) {
+    n = function (e) {
+        if (u(e)) {
             var t = e.getBBox(),
-                n = t.width,
-                i = t.height;
-            return !n && !i;
+                r = t.width,
+                n = t.height;
+            return !r && !n;
         }
         var a = e.offsetWidth,
             o = e.offsetHeight;
@@ -16,8 +16,8 @@ var r = function (e) {
     a = function (e) {
         if (e instanceof Element) return !0;
         var t,
-            n = null == (t = null == e ? void 0 : e.ownerDocument) ? void 0 : t.defaultView;
-        return !!(n && e instanceof n.Element);
+            r = null == (t = null == e ? void 0 : e.ownerDocument) ? void 0 : t.defaultView;
+        return !!(r && e instanceof r.Element);
     },
     o = function (e) {
         switch (e.tagName) {

@@ -1,23 +1,23 @@
-e.d(n, { TrophyIcon: () => o });
+e.d(n, { TrophyIcon: () => s });
 var t = e(477900);
 e(582128);
-var a = e(661531),
-    r = e(996682),
-    s = e(27989);
-function o(l) {
+var r = e(661531),
+    a = e(996682),
+    o = e(27989);
+function s(l) {
     let {
             size: n = "md",
             width: e,
-            height: o,
-            color: i = a.A.colors.INTERACTIVE_ICON_DEFAULT,
+            height: s,
+            color: i = r.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: u = "",
             ...c
         } = l,
-        d = (0, s.J)(n),
+        d = (0, o.J)(n),
         h = d?.width ?? e,
-        A = d?.height ?? o;
+        A = d?.height ?? s;
     return (0, t.jsx)("svg", {
-        ...(0, r.A)(c),
+        ...(0, a.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
         width: h,
         height: A,

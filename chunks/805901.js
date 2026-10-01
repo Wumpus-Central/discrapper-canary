@@ -1,13 +1,13 @@
-n.d(t, { c: () => a });
-var l = n(477900),
-    i = n(582128),
-    s = n(202091),
-    r = n(844222);
-function a(e) {
-    let { shouldAnimate: t = "respect-motion-settings", ...n } = e,
-        a = i.useContext(r.C).reducedMotion.enabled;
-    return (0, l.jsx)(s.Spring, {
-        ...n,
-        immediate: !("animate-always" === t || ("respect-motion-settings" === t && !a)),
+o.d(t, { c: () => r });
+var i = o(477900),
+    n = o(582128),
+    s = o(202091),
+    a = o(844222);
+function r(e) {
+    let { shouldAnimate: t = "respect-motion-settings", ...o } = e,
+        r = n.useContext(a.C).reducedMotion.enabled;
+    return (0, i.jsx)(s.Spring, {
+        ...o,
+        immediate: !("animate-always" === t || ("respect-motion-settings" === t && !r)),
     });
 }

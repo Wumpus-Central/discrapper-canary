@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     sq: "forwardPreview__0d4ce",
     kx: "linkContainer__0d4ce",
     wP: "linkIcon__0d4ce",

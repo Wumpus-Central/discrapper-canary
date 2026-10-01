@@ -1,70 +1,70 @@
-n.d(t, { m: () => u });
-var r = n(243399),
-    i = n(206311),
-    a = n(411211),
-    o = n(501974);
-function u(e, t) {
-    let n = [],
+t.d(n, { m: () => o });
+var i = t(243399),
+    r = t(206311),
+    a = t(411211),
+    s = t(501974);
+function o(e, n) {
+    let t = [],
+        o = !1,
         u = !1,
-        s = !1,
-        l = (0, o.n)(e),
+        l = (0, s.n)(e),
         d = l.dataLocale,
         c = a.Y.localeData[d];
     if (!c) throw TypeError("Invalid locale");
     let f = l.numberingSystem,
-        h = c.digitalFormat[f];
-    for (let e = 0; e < i.u.length && !u; e++) {
-        let a = i.u[e],
-            o = t[a.valueField],
+        p = c.digitalFormat[f];
+    for (let e = 0; e < r.u.length && !o; e++) {
+        let a = r.u[e],
+            s = n[a.valueField],
             d = l[a.styleSlot],
             c = l[a.displaySlot],
-            { unit: f, numberFormatUnit: p } = a,
-            m = Object.create(null);
+            { unit: f, numberFormatUnit: h } = a,
+            _ = Object.create(null);
         ("seconds" === f || "milliseconds" === f || "microseconds" === f) &&
             "numeric" === ("seconds" === f ? l.milliseconds : "milliseconds" === f ? l.microseconds : l.nanoseconds) &&
             ("seconds" === f
-                ? (o += t.milliseconds / 1e3 + t.microseconds / 1e6 + t.nanoseconds / 1e9)
+                ? (s += n.milliseconds / 1e3 + n.microseconds / 1e6 + n.nanoseconds / 1e9)
                 : "milliseconds" === f
-                  ? (o += t.microseconds / 1e3 + t.nanoseconds / 1e6)
-                  : (o += t.nanoseconds / 1e3),
+                  ? (s += n.microseconds / 1e3 + n.nanoseconds / 1e6)
+                  : (s += n.nanoseconds / 1e3),
             void 0 === l.fractionalDigits
-                ? ((m.maximumFractionDigits = 9), (m.minimumFractionDigits = 0))
-                : ((m.maximumFractionDigits = l.fractionalDigits), (m.minimumFractionDigits = l.fractionalDigits)),
-            (m.roundingMode = "trunc"),
-            (u = !0));
-        if (0 !== o || "auto" !== c) {
+                ? ((_.maximumFractionDigits = 9), (_.minimumFractionDigits = 0))
+                : ((_.maximumFractionDigits = l.fractionalDigits), (_.minimumFractionDigits = l.fractionalDigits)),
+            (_.roundingMode = "trunc"),
+            (o = !0));
+        if (0 !== s || "auto" !== c) {
             let e;
-            ((m.numberingSystem = l.numberingSystem),
-                "2-digit" === d && (m.minimumIntegerDigits = 2),
-                "2-digit" !== d && "numeric" !== d && ((m.style = "unit"), (m.unit = p), (m.unitDisplay = d)));
-            let t = (0, r.Nt)(l.locale, m);
-            (s ? (e = n[n.length - 1]).push({ type: "literal", value: h }) : (e = []),
-                t.formatToParts(o).forEach(({ type: t, value: n }) => {
-                    e.push({ type: t, value: n, unit: p });
+            ((_.numberingSystem = l.numberingSystem),
+                "2-digit" === d && (_.minimumIntegerDigits = 2),
+                "2-digit" !== d && "numeric" !== d && ((_.style = "unit"), (_.unit = h), (_.unitDisplay = d)));
+            let n = (0, i.Nt)(l.locale, _);
+            (u ? (e = t[t.length - 1]).push({ type: "literal", value: p }) : (e = []),
+                n.formatToParts(s).forEach(({ type: n, value: t }) => {
+                    e.push({ type: n, value: t, unit: h });
                 }),
-                s || (("2-digit" === d || "numeric" === d) && (s = !0), n.push(e)));
-        } else s = !1;
+                u || (("2-digit" === d || "numeric" === d) && (u = !0), t.push(e)));
+        } else u = !1;
     }
-    let p = Object.create(null);
-    p.type = "unit";
-    let m = l.style;
-    ("digital" === m && (m = "short"), (p.style = m));
-    let v = (0, r.A4)(l.locale, p),
-        _ = [];
-    for (let e of n) {
-        let t = "";
-        for (let { value: n } of e) t += n;
-        _.push(t);
+    let h = Object.create(null);
+    h.type = "unit";
+    let _ = l.style;
+    ("digital" === _ && (_ = "short"), (h.style = _));
+    let m = (0, i.A4)(l.locale, h),
+        y = [];
+    for (let e of t) {
+        let n = "";
+        for (let { value: t } of e) n += t;
+        y.push(n);
     }
-    let g = v.formatToParts(_),
-        y = 0,
-        b = n.length,
-        D = [];
-    for (let { type: e, value: t } of g)
+    let g = m.formatToParts(y),
+        w = 0,
+        v = t.length,
+        b = [];
+    for (let { type: e, value: n } of g)
         if ("element" === e) {
-            for (let e of ((0, r.V1)(y < b, "Index out of bounds"), n[y])) D.push(e);
-            y++;
-        } else ((0, r.V1)("literal" === e, "Type must be literal"), D.push({ type: "literal", value: t }));
-    return D;
+            for (let e of ((0, i.V1)(w < v, "Index out of bounds"), t[w])) b.push(e);
+            w++;
+        } else ((0, i.V1)("literal" === e, "Type must be literal"), b.push({ type: "literal", value: n }));
+    return b;
 }
-n(632459);
+t(632459);

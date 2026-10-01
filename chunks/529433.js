@@ -1,4 +1,4 @@
-n.d(t, { pJ: () => a.pJ, $l: () => a.$l, Ay: () => f });
+n.d(t, { pJ: () => a.pJ, $l: () => a.$l, Ay: () => g });
 var i,
     l,
     r = n(477900),
@@ -18,7 +18,7 @@ var i,
 function h(e) {
     return (t, n) => (null == n ? "" : u.intl.format(e(), { time: t, ...n }));
 }
-let g = {
+let f = {
         ACTIVITY_FEED: {
             START: {
                 [a.pJ.SECONDS]: () => u.intl.string(u.t["ahzZr+"]),
@@ -106,7 +106,7 @@ let g = {
             },
         },
     },
-    f = (function (e) {
+    g = (function (e) {
         return class extends s.PureComponent {
             static Locations = d;
             static Types = c;
@@ -135,7 +135,7 @@ let g = {
             getTimeUnit(e, t, n) {
                 let i = (0, a.Ul)(e, (e) =>
                     (function (e, t, n) {
-                        let i = g[n];
+                        let i = f[n];
                         if (null != i) {
                             let n = i[t];
                             if (null != n) return null != n[e];
@@ -159,7 +159,7 @@ let g = {
                     o = this.getType();
                 if (null == o) return null;
                 let u = this.getTimeUnit(s, t, o),
-                    d = g[t][o];
+                    d = f[t][o];
                 if (null == d) return null;
                 let c = d[u],
                     h = Math.floor((0, a.eZ)(s, u));

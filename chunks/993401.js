@@ -61,10 +61,10 @@ function A(e) {
             onClick: v,
             buttonRef: A,
             disabled: C = !1,
-            onMouseEnter: y,
-            onMouseLeave: p,
+            onMouseEnter: p,
+            onMouseLeave: N,
             loading: x = !1,
-            ...N
+            ...y
         } = e,
         b = h({ action: f, onClick: v }),
         j = c ?? n;
@@ -82,9 +82,9 @@ function A(e) {
             "aria-label": j,
             "aria-disabled": C,
             "aria-busy": x,
-            onMouseEnter: y,
-            onMouseLeave: p,
-            ...N,
+            onMouseEnter: p,
+            onMouseLeave: N,
+            ...y,
             children: x
                 ? (0, t.jsx)(d.y, { className: m.u1, itemClassName: m.KL, type: d.t.SPINNING_CIRCLE })
                 : (0, t.jsx)(r, { size: "xs", color: "currentColor" }),

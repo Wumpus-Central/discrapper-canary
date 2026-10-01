@@ -2,8 +2,8 @@ n.d(t, { A: () => g });
 var i = n(284009),
     l = n.n(i),
     s = n(702841),
-    a = n(71393),
-    r = n(250627),
+    r = n(71393),
+    a = n(250627),
     o = n(871109),
     d = n(391048),
     c = n(120700),
@@ -13,9 +13,9 @@ var i = n(284009),
 function g(e) {
     let { guildId: t, guildProductListingId: n, sourceAnalyticsLocations: i } = e,
         g = (0, s.bG)([o.A], () => o.A.getGuildProduct(n)),
-        p = (0, s.bG)([a.A], () => a.A.getGuild(t), [t]),
+        p = (0, s.bG)([r.A], () => r.A.getGuild(t), [t]),
         A = (0, m.A)({ guildId: t, productId: n });
-    return (l()(null != p, "guild cannot be null"), l()(null != g, "guildProductListing cannot be null"), (0, r.BB)(p))
+    return (l()(null != p, "guild cannot be null"), l()(null != g, "guildProductListing cannot be null"), (0, a.BB)(p))
         ? { variant: "primary", text: h.intl.string(h.t.xUi3BL), disabled: !0 }
         : g.has_entitlement
           ? null != g.attachments

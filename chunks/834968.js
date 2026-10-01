@@ -1,30 +1,30 @@
-n.d(t, { A: () => c });
-var l = n(477900);
-n(582128);
-var i = n(503698),
-    s = n.n(i),
-    r = n(633018),
-    a = n(406810),
-    o = n(73510),
-    u = n(374248);
-function c(e) {
-    let { section: t, className: n, width: i, height: c, padding: d, isSelected: m, selectable: h = !1, ...p } = e,
-        f = (function (e) {
+i.d(s, { A: () => d });
+var t = i(477900);
+i(582128);
+var l = i(503698),
+    a = i.n(l),
+    n = i(633018),
+    c = i(406810),
+    o = i(73510),
+    r = i(374248);
+function d(e) {
+    let { section: s, className: i, width: l, height: d, padding: u, isSelected: h, selectable: p = !1, ...A } = e,
+        b = (function (e) {
             switch (e.id) {
                 case o.Ik.BUILT_IN:
-                    return r.k;
+                    return n.k;
                 case o.Ik.FRECENCY:
-                    return a.ClockIcon;
+                    return c.ClockIcon;
                 default:
                     return;
             }
-        })(t);
-    return (0, l.jsx)("div", {
-        className: s()(u.iE, n, { [u.rb]: h, [u.wH]: h && m }),
-        style: { width: i, height: c, padding: d ?? 0 },
+        })(s);
+    return (0, t.jsx)("div", {
+        className: a()(r.iE, i, { [r.rb]: p, [r.wH]: p && h }),
+        style: { width: l, height: d, padding: u ?? 0 },
         children:
-            null != f
-                ? (0, l.jsx)(f, { className: u.Kk, color: "currentColor", size: "custom", width: i, height: c, ...p })
+            null != b
+                ? (0, t.jsx)(b, { className: r.Kk, color: "currentColor", size: "custom", width: l, height: d, ...A })
                 : null,
     });
 }

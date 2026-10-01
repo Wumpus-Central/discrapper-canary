@@ -1,14 +1,14 @@
-e.d(n, { A: () => s });
-var l = e(17928),
-    i = e(517164),
-    r = e(99753),
-    a = e(424994);
+n.d(e, { A: () => s });
+var l = n(17928),
+    i = n(517164),
+    a = n(99753),
+    r = n(424994);
 function s(t) {
-    let { activity: n, user: e } = t,
-        s = (0, l.bG)([r.A], () => r.A.getMatchingInboxEntry({ activity: n, userId: e.id, feedId: a.X1.GLOBAL_FEED }), [
-            n,
-            e.id,
+    let { activity: e, user: n } = t,
+        s = (0, l.bG)([a.A], () => a.A.getMatchingInboxEntry({ activity: e, userId: n.id, feedId: r.X1.GLOBAL_FEED }), [
+            e,
+            n.id,
         ]),
-        o = (0, l.bG)([i.A], () => i.A.getMatchingOutboxEntry({ activity: n, userId: e.id }), [n, e.id]);
+        o = (0, l.bG)([i.A], () => i.A.getMatchingOutboxEntry({ activity: e, userId: n.id }), [e, n.id]);
     return s ?? o;
 }

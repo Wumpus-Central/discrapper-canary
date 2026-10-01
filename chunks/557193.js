@@ -1,21 +1,21 @@
-function n(e, r) {
+function t(e, n) {
     return (
         null != e &&
-        null != r &&
-        (e.tag !== r.tag ||
-            e.badge !== r.badge ||
-            e.badgeColorPrimary !== r.badgeColorPrimary ||
-            e.badgeColorSecondary !== r.badgeColorSecondary)
+        null != n &&
+        (e.tag !== n.tag ||
+            e.badge !== n.badge ||
+            e.badgeColorPrimary !== n.badgeColorPrimary ||
+            e.badgeColorSecondary !== n.badgeColorSecondary)
     );
 }
-(t.d(r, { HU: () => n }),
-    t(685073),
-    t(71393),
-    t(576705),
-    (0, t(945810).mj)({
+(l.d(n, { HU: () => t }),
+    l(685073),
+    l(71393),
+    l(576705),
+    (0, l(945810).mj)({
         name: "2026-06-mobile-server-tag",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    t(652215));
+    l(652215));

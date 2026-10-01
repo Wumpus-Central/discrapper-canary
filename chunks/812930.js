@@ -1,8 +1,8 @@
-(n.d(t, { A: () => a }), n(938796));
+(n.d(t, { A: () => r }), n(938796));
 var i = n(665260),
     l = n(427930),
     s = n(652215);
-function a(e) {
+function r(e) {
     return !(
         e.type !== s.lAJ.DEFAULT ||
         null != e.poll ||

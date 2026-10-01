@@ -1,8 +1,8 @@
-n.d(t, { g: () => r, t: () => s });
-var l,
-    i,
-    s =
-        (((l = {})[(l.GRID_NAVIGATOR_EVENT = 0)] = "GRID_NAVIGATOR_EVENT"),
-        (l[(l.MOUSE_EVENT = 1)] = "MOUSE_EVENT"),
-        l),
-    r = (((i = {}).EMOJI = "emoji"), (i.STICKER = "sticker"), (i.PACK_ICON = "pack-icon"), i);
+n.d(t, { g: () => r, t: () => l });
+var i,
+    s,
+    l =
+        (((i = {})[(i.GRID_NAVIGATOR_EVENT = 0)] = "GRID_NAVIGATOR_EVENT"),
+        (i[(i.MOUSE_EVENT = 1)] = "MOUSE_EVENT"),
+        i),
+    r = (((s = {}).EMOJI = "emoji"), (s.STICKER = "sticker"), (s.PACK_ICON = "pack-icon"), s);

@@ -1,40 +1,40 @@
-n.d(t, { A: () => a });
-var l = n(477900),
-    i = n(582128),
-    s = n(28863);
-class r extends i.PureComponent {
+e.d(t, { A: () => l });
+var i = e(477900),
+    n = e(582128),
+    p = e(28863);
+class r extends n.PureComponent {
     render() {
-        let { text: e, lastItem: t, className: n } = this.props;
-        return (0, l.jsxs)("span", {
-            children: [(0, l.jsx)(s.Anchor, { className: n, onClick: this.handleClick, children: e }), t ? "" : ", "],
+        let { text: s, lastItem: t, className: e } = this.props;
+        return (0, i.jsxs)("span", {
+            children: [(0, i.jsx)(p.Anchor, { className: e, onClick: this.handleClick, children: s }), t ? "" : ", "],
         });
     }
     handleClick = () => {
-        let { onClick: e, index: t } = this.props;
-        e?.(t);
+        let { onClick: s, index: t } = this.props;
+        s?.(t);
     };
 }
-class a extends i.PureComponent {
+class l extends n.PureComponent {
     render() {
-        let e = this.props.artists.split("; ");
-        if (!this.props.canOpen) return e.join(", ");
-        let t = e.length - 1;
-        return e.map((e, n) =>
-            (0, l.jsx)(
+        let s = this.props.artists.split("; ");
+        if (!this.props.canOpen) return s.join(", ");
+        let t = s.length - 1;
+        return s.map((s, e) =>
+            (0, i.jsx)(
                 r,
                 {
-                    text: e,
-                    index: n,
-                    lastItem: n === t,
+                    text: s,
+                    index: e,
+                    lastItem: e === t,
                     onClick: this.handleOpenSpotifyArtist,
                     className: this.props.linkClassName,
                 },
-                `spotify-artist-${n}`,
+                `spotify-artist-${e}`,
             ),
         );
     }
-    handleOpenSpotifyArtist = (e) => {
+    handleOpenSpotifyArtist = (s) => {
         let { onOpenSpotifyArtist: t } = this.props;
-        t?.(e);
+        t?.(s);
     };
 }

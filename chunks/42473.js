@@ -3,8 +3,8 @@ var i = n(477900);
 n(582128);
 var l = n(503698),
     a = n.n(l),
-    s = n(84571),
-    r = n(862482),
+    r = n(84571),
+    s = n(862482),
     o = n(866665),
     d = n(900002),
     c = n(573435),
@@ -14,7 +14,7 @@ function m(e) {
             children: t,
             onContextMenu: n,
             onClick: l,
-            onMouseDown: s,
+            onMouseDown: r,
             disabled: o,
             icon: d,
             iconForeground: m,
@@ -29,16 +29,16 @@ function m(e) {
             plated: C,
             ref: _,
         } = e,
-        I =
+        T =
             "function" == typeof d
                 ? (0, i.jsx)(d, { width: 20, height: 20, size: "custom", colorClass: m ?? "", color: "currentColor" })
                 : d;
-    return (0, i.jsxs)(r.$n, {
+    return (0, i.jsxs)(s.$n, {
         "data-migration-pending": !0,
         "aria-label": x,
         buttonRef: _,
-        look: r.$n.Looks.BLANK,
-        size: r.$n.Sizes.NONE,
+        look: s.$n.Looks.BLANK,
+        size: s.$n.Sizes.NONE,
         disabled: o,
         innerClassName: h,
         wrapperClassName: a()(u.x6, f),
@@ -46,7 +46,7 @@ function m(e) {
         onClick: (e) => {
             null != l && l(e);
         },
-        onMouseDown: s,
+        onMouseDown: r,
         onMouseEnter: g,
         onMouseLeave: A,
         onContextMenu: n,
@@ -54,7 +54,7 @@ function m(e) {
         "aria-checked": v,
         focusProps: { offset: { left: -1, top: -1, right: 1, bottom: 1 } },
         children: [
-            null != t ? (0, i.jsx)(c.Ay, { width: 20, height: 20, mask: c.Ay.Masks.PANEL_BUTTON, children: I }) : I,
+            null != t ? (0, i.jsx)(c.Ay, { width: 20, height: 20, mask: c.Ay.Masks.PANEL_BUTTON, children: T }) : T,
             t,
         ],
     });
@@ -66,11 +66,11 @@ let h = function (e) {
                 tooltipForceOpen: n,
                 tooltipShouldShow: l,
                 tooltipPositionKey: a,
-                "aria-label": r,
+                "aria-label": s,
                 ...d
             } = e,
-            c = (0, s.O)(t),
-            u = r ?? c;
+            c = (0, r.O)(t),
+            u = s ?? c;
         return (0, i.jsx)(o.m, {
             text: t,
             forceOpen: n,
@@ -86,8 +86,8 @@ let h = function (e) {
             tooltipForceOpen: n,
             tooltipShouldShow: l,
             tooltipPositionKey: a,
-            onClick: s,
-            onMouseEnter: r,
+            onClick: r,
+            onMouseEnter: s,
             onMouseLeave: o,
             onContextMenu: c,
             onFocus: h,
@@ -117,10 +117,10 @@ let h = function (e) {
                 } = e;
                 return (0, i.jsx)(m, {
                     onClick: (e) => {
-                        (t?.(), s?.(e));
+                        (t?.(), r?.(e));
                     },
                     onMouseEnter: () => {
-                        (n?.(), r?.());
+                        (n?.(), s?.());
                     },
                     onMouseLeave: () => {
                         (l?.(), o?.());

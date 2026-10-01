@@ -1,3 +1,3 @@
-n.d(t, { _: () => r });
+n.d(t, { _: () => l });
 var i,
-    r = (((i = {}).RPC = "rpc"), (i.WEB = "web"), i);
+    l = (((i = {}).RPC = "rpc"), (i.WEB = "web"), i);

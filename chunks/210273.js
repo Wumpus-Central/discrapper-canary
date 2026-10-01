@@ -1,40 +1,40 @@
 i.d(t, { X: () => E });
 var s = i(460905),
-    n = i(7807),
-    r = i(391242),
-    l = i(597601),
-    a = i(183623),
+    r = i(7807),
+    n = i(391242),
+    a = i(597601),
+    l = i(183623),
     o = i(95635),
     c = i(957485),
     d = i(477262),
     u = i(27232),
     m = i(451394),
-    T = i(797285),
-    _ = i(202541);
+    g = i(797285),
+    T = i(202541);
 function E(e) {
     switch (e) {
-        case _.TP.EMOJI:
+        case T.TP.EMOJI:
             return s.n;
-        case _.TP.SOUNDBOARD:
-            return n.J;
-        case _.TP.ANIMATED:
-            return r.O;
-        case _.TP.AUDIO:
-            return l.L;
-        case _.TP.STREAM:
-            return a.F;
-        case _.TP.UPLOAD:
+        case T.TP.SOUNDBOARD:
+            return r.J;
+        case T.TP.ANIMATED:
+            return n.O;
+        case T.TP.AUDIO:
+            return a.L;
+        case T.TP.STREAM:
+            return l.F;
+        case T.TP.UPLOAD:
             return o.UploadIcon;
-        case _.TP.CUSTOM_ROLE_ICON:
+        case T.TP.CUSTOM_ROLE_ICON:
             return c.i;
-        case _.TP.CUSTOMIZATION:
+        case T.TP.CUSTOMIZATION:
             return d.s;
-        case _.TP.VANITY:
+        case T.TP.VANITY:
             return u.StarIcon;
-        case _.TP.STAGE_VIDEO:
+        case T.TP.STAGE_VIDEO:
             return m.q;
-        case _.TP.STICKER:
-            return T.t;
+        case T.TP.STICKER:
+            return g.t;
         default:
             return s.n;
     }

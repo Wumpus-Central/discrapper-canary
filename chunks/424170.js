@@ -1,8 +1,8 @@
 (n.d(t, { M1: () => d }), n(321073));
 var l = n(582128),
     i = n(17928),
-    s = n(157559),
-    r = n(773669);
+    r = n(157559),
+    s = n(773669);
 n(723702);
 var a = n(375708);
 let o = ["png", "gif", "jpg", "jpeg", "jfif", "webp", "avif"],
@@ -25,7 +25,7 @@ function d(e) {
             [e],
         ),
         d =
-            ((t = (0, i.bG)([r.default], () => r.default.locale)),
+            ((t = (0, i.bG)([s.default], () => s.default.locale)),
             l.useMemo(
                 () =>
                     (function (e, t) {
@@ -42,12 +42,12 @@ function d(e) {
                     })(e, t),
                 [e, t],
             )),
-        m = l.useCallback(
+        h = l.useCallback(
             (e) => 0 === n.length || e.every((e) => n.some((t) => e.toLowerCase().endsWith(`.${t}`))),
             [n],
         ),
-        h = l.useCallback(() => {
-            s.A.show({
+        m = l.useCallback(() => {
+            r.A.show({
                 title: a.intl.string(a.t.azO1Pe),
                 body: a.intl.formatToPlainString(a.t["5U9LSo"], { types: d }),
             });
@@ -56,8 +56,8 @@ function d(e) {
     return {
         allowedExtensions: n,
         typesFormattedString: d,
-        validateFilenames: m,
-        showInvalidFileTypeAlert: h,
+        validateFilenames: h,
+        showInvalidFileTypeAlert: m,
         mediaFilesAllowed: p,
     };
 }

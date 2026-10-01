@@ -16,8 +16,8 @@ var i = n(385244),
     f = n(280450),
     p = n(734057),
     T = n(71393),
-    m = n(994500),
-    g = n(287809),
+    g = n(994500),
+    m = n(287809),
     S = n(562153),
     N = n(935208);
 let C = {
@@ -54,9 +54,9 @@ let L = {
                 return null == t
                     ? null
                     : "object" == typeof t
-                      ? (g.default.getUser(t.id) ?? null)
+                      ? (m.default.getUser(t.id) ?? null)
                       : "string" == typeof t
-                        ? (g.default.getUser(t) ?? null)
+                        ? (m.default.getUser(t) ?? null)
                         : null;
             })(e),
             N = e.channel_id,
@@ -118,7 +118,7 @@ let L = {
             case l.lAJ.THREAD_STARTER_MESSAGE:
                 return o.intl.formatToPlainString(o.t["B8H+Cl"], {
                     username: C,
-                    threadName: (0, s.m1)(t, g.default, m.A),
+                    threadName: (0, s.m1)(t, m.default, g.A),
                 });
             case l.lAJ.ROLE_SUBSCRIPTION_PURCHASE:
                 if (e instanceof I.Ay) return null;
@@ -200,7 +200,7 @@ let L = {
                     : (0, a.$)(o.intl.formatToParts(o.t.axmbpm, { username: C, guildName: w.name }));
             case l.lAJ.GUILD_SPACE_MESSAGE: {
                 let n = (0, u.Nu)(e instanceof I.Ay ? e.guildSpaceData?.leaderboard : e.guild_space_data?.leaderboard),
-                    i = (0, c.U_)(n, g.default.getUser(n?.userId), g.default.getUser(n?.previousUserId));
+                    i = (0, c.U_)(n, m.default.getUser(n?.userId), m.default.getUser(n?.previousUserId));
                 if (null == i) return e.content;
                 let r = t.getGuildId(),
                     a = (0, c.Sx)(i.data, {

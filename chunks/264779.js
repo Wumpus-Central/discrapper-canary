@@ -8,8 +8,8 @@
     Wl: () => L,
     eN: () => R,
     g_: () => C,
-    kc: () => g,
-    kd: () => m,
+    kc: () => m,
+    kd: () => g,
 }),
     n(938796));
 var i = n(665260),
@@ -38,7 +38,7 @@ function p(e, t) {
 function T(e) {
     return { code: e.code, userId: e.user_id, claimedAt: e.claimed_at, promotion: d.A.createFromServer(e.promotion) };
 }
-async function m(e) {
+async function g(e) {
     let t,
         { promotionId: n, promotionTitle: i, partnerId: a, analyticsLocations: s } = e,
         l = await r.Bo.post({ url: I.Rsh.CLAIM_OUTBOUND_PROMOTION_CODE(n), rejectWithError: (0, r.fT)() }),
@@ -56,7 +56,7 @@ async function m(e) {
         T(o)
     );
 }
-function g(e, t) {
+function m(e, t) {
     return null != t.outboundRedemptionUrlFormat && "" !== t.outboundRedemptionUrlFormat
         ? t.outboundRedemptionUrlFormat.replace("{code}", encodeURIComponent(e))
         : (t.outboundRedemptionPageLink ?? "");

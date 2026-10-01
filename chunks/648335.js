@@ -1,8 +1,8 @@
 n.d(t, { Dd: () => s, R8: () => c, Wn: () => m, eI: () => h, eX: () => A, mr: () => o });
 var a = n(166532),
     r = n(818348),
-    l = n(375708);
-let i = new Set([
+    i = n(375708);
+let l = new Set([
         ...new Set([r.he.CARD, r.he.PAYMENT_REQUEST, r.he.PAYPAL]),
         ...new Set([
             r.he.IDEAL,
@@ -23,62 +23,62 @@ let i = new Set([
     u = {
         [r.he.PAYPAL]: {
             paymentSourceType: r.he.PAYPAL,
-            subtitleTranslationKey: l.t.Djzd7L,
+            subtitleTranslationKey: i.t.Djzd7L,
             isRegionalPaymentMethod: !1,
             toStep: a.pn.PAYPAL_INFORMATION,
         },
         [r.he.VENMO]: {
             paymentSourceType: r.he.VENMO,
-            subtitleTranslationKey: l.t["4KoTLM"],
+            subtitleTranslationKey: i.t["4KoTLM"],
             isRegionalPaymentMethod: !0,
             toStep: a.pn.VENMO_INFORMATION,
         },
         [r.he.CASH_APP]: {
             paymentSourceType: r.he.CASH_APP,
-            subtitleTranslationKey: l.t["9ALP8w"],
+            subtitleTranslationKey: i.t["9ALP8w"],
             isRegionalPaymentMethod: !0,
             toStep: a.pn.CASH_APP_INFORMATION,
         },
         [r.he.GOPAY_WALLET]: {
             paymentSourceType: r.he.GOPAY_WALLET,
-            subtitleTranslationKey: l.t["43J8JK"],
+            subtitleTranslationKey: i.t["43J8JK"],
             isRegionalPaymentMethod: !0,
             isStaffOnly: !0,
         },
         [r.he.KAKAOPAY]: {
             paymentSourceType: r.he.KAKAOPAY,
-            subtitleTranslationKey: l.t.CSVexi,
+            subtitleTranslationKey: i.t.CSVexi,
             isRegionalPaymentMethod: !0,
         },
         [r.he.GCASH]: {
             paymentSourceType: r.he.GCASH,
-            subtitleTranslationKey: l.t.PjehcF,
+            subtitleTranslationKey: i.t.PjehcF,
             isRegionalPaymentMethod: !0,
         },
         [r.he.PAYSAFE_CARD]: {
             paymentSourceType: r.he.PAYSAFE_CARD,
-            subtitleTranslationKey: l.t.boznHN,
+            subtitleTranslationKey: i.t.boznHN,
             isRegionalPaymentMethod: !0,
         },
         [r.he.GRABPAY_MY]: {
             paymentSourceType: r.he.GRABPAY_MY,
-            subtitleTranslationKey: l.t.T5davE,
+            subtitleTranslationKey: i.t.T5davE,
             isRegionalPaymentMethod: !0,
         },
         [r.he.MOMO_WALLET]: {
             paymentSourceType: r.he.MOMO_WALLET,
-            subtitleTranslationKey: l.t.J0A1Vk,
+            subtitleTranslationKey: i.t.J0A1Vk,
             isRegionalPaymentMethod: !0,
         },
         [r.he.PRZELEWY24]: {
             paymentSourceType: r.he.PRZELEWY24,
-            subtitleTranslationKey: l.t.u25uL0,
+            subtitleTranslationKey: i.t.u25uL0,
             isRegionalPaymentMethod: !0,
             toStep: a.pn.PRZELEWY24_INFORMATION,
         },
         [r.he.EPS]: {
             paymentSourceType: r.he.EPS,
-            subtitleTranslationKey: l.t["5BSDU6"],
+            subtitleTranslationKey: i.t["5BSDU6"],
             isRegionalPaymentMethod: !0,
             toStep: a.pn.EPS_INFORMATION,
         },
@@ -89,7 +89,7 @@ function s(e) {
         options: {
             type: "static",
             subtitle:
-                e.payment_source_type in u ? l.intl.string(u[e.payment_source_type].subtitleTranslationKey) : void 0,
+                e.payment_source_type in u ? i.intl.string(u[e.payment_source_type].subtitleTranslationKey) : void 0,
         },
     }));
 }
@@ -125,5 +125,5 @@ function m(e, t) {
     return e in t ? t[e] : null;
 }
 function A(e) {
-    return i.has(e);
+    return l.has(e);
 }

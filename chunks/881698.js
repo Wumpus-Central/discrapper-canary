@@ -1,5 +1,5 @@
-n.d(t, { A: () => i });
+n.d(i, { A: () => a });
 var l = n(155718);
-function i(e) {
-    return e?.find((e) => e.type === l.Mh.NVIDIA) ?? null;
+function a(t) {
+    return t?.find((t) => t.type === l.Mh.NVIDIA) ?? null;
 }

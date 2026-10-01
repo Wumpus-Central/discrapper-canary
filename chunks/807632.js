@@ -4,9 +4,9 @@
     Ij: () => R,
     Qq: () => y,
     WP: () => D,
-    YG: () => g,
+    YG: () => m,
     YS: () => T,
-    Zu: () => m,
+    Zu: () => g,
     _k: () => C,
     n5: () => N,
     t4: () => L,
@@ -31,11 +31,11 @@ var i = n(582128),
 n(253913);
 let p = "No Mic",
     T = 120;
-function m(e) {
+function g(e) {
     let t = e.trim().split("\n")[0] ?? "";
     return (0, A.A)(t.slice(0, I.Ign), !0);
 }
-function g(e) {
+function m(e) {
     return (0, s.bG)(
         [h.A],
         () =>
@@ -47,7 +47,7 @@ function g(e) {
 }
 function S(e) {
     let t = (0, u.kt)(e);
-    return !!g(e) && !t.some((e) => e.name === p);
+    return !!m(e) && !t.some((e) => e.name === p);
 }
 function N(e, t) {
     return (0, c.OA)(e, { enabled: t, allowArchived: !0 });

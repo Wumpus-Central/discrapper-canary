@@ -16,8 +16,8 @@ var i,
     f,
     p,
     T,
-    m,
-    g = n(852015),
+    g,
+    m = n(852015),
     S = n(144367),
     N = n(428420),
     C = n(535384),
@@ -83,16 +83,16 @@ class L extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        ("0" !== e.seconds && t.tag(1, g.O0.Varint).int64(e.seconds),
-            0 !== e.nanos && t.tag(2, g.O0.Varint).int32(e.nanos));
+        ("0" !== e.seconds && t.tag(1, m.O0.Varint).int64(e.seconds),
+            0 !== e.nanos && t.tag(2, m.O0.Varint).int32(e.nanos));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let y = new L();
@@ -162,22 +162,22 @@ class M extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.type && t.tag(1, g.O0.Varint).int32(e.type);
+        0 !== e.type && t.tag(1, m.O0.Varint).int32(e.type);
         for (let i = 0; i < e.filters.length; i++)
-            x.internalBinaryWrite(e.filters[i], t.tag(2, g.O0.LengthDelimited).fork(), n).join();
-        (e.override && w.internalBinaryWrite(e.override, t.tag(3, g.O0.LengthDelimited).fork(), n).join(),
-            !1 !== e.isSunsetRule && t.tag(4, g.O0.Varint).bool(e.isSunsetRule),
-            0 !== e.subtype && t.tag(5, g.O0.Varint).int32(e.subtype),
-            "" !== e.hash && t.tag(6, g.O0.LengthDelimited).string(e.hash),
-            e.title && D.hU.internalBinaryWrite(e.title, t.tag(7, g.O0.LengthDelimited).fork(), n).join());
+            x.internalBinaryWrite(e.filters[i], t.tag(2, m.O0.LengthDelimited).fork(), n).join();
+        (e.override && w.internalBinaryWrite(e.override, t.tag(3, m.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.isSunsetRule && t.tag(4, m.O0.Varint).bool(e.isSunsetRule),
+            0 !== e.subtype && t.tag(5, m.O0.Varint).int32(e.subtype),
+            "" !== e.hash && t.tag(6, m.O0.LengthDelimited).string(e.hash),
+            e.title && D.hU.internalBinaryWrite(e.title, t.tag(7, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let P = new M();
@@ -206,15 +206,15 @@ class U extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.variationId && t.tag(1, g.O0.Varint).int32(e.variationId);
+        0 !== e.variationId && t.tag(1, m.O0.Varint).int32(e.variationId);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let w = new U();
@@ -227,7 +227,7 @@ class G extends C.G {
             { no: 5, name: "user_in_guild", kind: "message", oneof: "filter", T: () => V },
             { no: 6, name: "user_ids", kind: "message", oneof: "filter", T: () => j },
             { no: 7, name: "client_locale", kind: "message", oneof: "filter", T: () => $ },
-            { no: 8, name: "client_location", kind: "message", oneof: "filter", T: () => Z },
+            { no: 8, name: "client_location", kind: "message", oneof: "filter", T: () => q },
             { no: 9, name: "client_ip", kind: "message", oneof: "filter", T: () => ed },
             { no: 10, name: "user_locale", kind: "message", oneof: "filter", T: () => Y },
             { no: 11, name: "bot", kind: "message", oneof: "filter", T: () => ew },
@@ -238,7 +238,7 @@ class G extends C.G {
             { no: 16, name: "client_release_channel", kind: "message", oneof: "filter", T: () => e$ },
             { no: 17, name: "always", kind: "message", oneof: "filter", T: () => eX },
             { no: 18, name: "client_system_locale", kind: "message", oneof: "filter", T: () => X },
-            { no: 19, name: "unit_id_in_experiment", kind: "message", oneof: "filter", T: () => eZ },
+            { no: 19, name: "unit_id_in_experiment", kind: "message", oneof: "filter", T: () => eq },
             { no: 20, name: "user_premium_type", kind: "message", oneof: "filter", T: () => eJ },
             { no: 21, name: "unit_id_matches_filter_snapshot", kind: "message", oneof: "filter", T: () => e1 },
             { no: 22, name: "guild_ids", kind: "message", oneof: "filter", T: () => e3 },
@@ -302,7 +302,7 @@ class G extends C.G {
                 case 8:
                     r.filter = {
                         oneofKind: "clientLocation",
-                        clientLocation: Z.internalBinaryRead(e, e.uint32(), n, r.filter.clientLocation),
+                        clientLocation: q.internalBinaryRead(e, e.uint32(), n, r.filter.clientLocation),
                     };
                     break;
                 case 9:
@@ -365,7 +365,7 @@ class G extends C.G {
                 case 19:
                     r.filter = {
                         oneofKind: "unitIdInExperiment",
-                        unitIdInExperiment: eZ.internalBinaryRead(e, e.uint32(), n, r.filter.unitIdInExperiment),
+                        unitIdInExperiment: eq.internalBinaryRead(e, e.uint32(), n, r.filter.unitIdInExperiment),
                     };
                     break;
                 case 20:
@@ -441,79 +441,79 @@ class G extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         ("clientVersion" === e.filter.oneofKind &&
-            eN.internalBinaryWrite(e.filter.clientVersion, t.tag(2, g.O0.LengthDelimited).fork(), n).join(),
+            eN.internalBinaryWrite(e.filter.clientVersion, t.tag(2, m.O0.LengthDelimited).fork(), n).join(),
             "clientOs" === e.filter.oneofKind &&
-                eE.internalBinaryWrite(e.filter.clientOs, t.tag(3, g.O0.LengthDelimited).fork(), n).join(),
+                eE.internalBinaryWrite(e.filter.clientOs, t.tag(3, m.O0.LengthDelimited).fork(), n).join(),
             "staff" === e.filter.oneofKind &&
-                F.internalBinaryWrite(e.filter.staff, t.tag(4, g.O0.LengthDelimited).fork(), n).join(),
+                F.internalBinaryWrite(e.filter.staff, t.tag(4, m.O0.LengthDelimited).fork(), n).join(),
             "userInGuild" === e.filter.oneofKind &&
-                V.internalBinaryWrite(e.filter.userInGuild, t.tag(5, g.O0.LengthDelimited).fork(), n).join(),
+                V.internalBinaryWrite(e.filter.userInGuild, t.tag(5, m.O0.LengthDelimited).fork(), n).join(),
             "userIds" === e.filter.oneofKind &&
-                j.internalBinaryWrite(e.filter.userIds, t.tag(6, g.O0.LengthDelimited).fork(), n).join(),
+                j.internalBinaryWrite(e.filter.userIds, t.tag(6, m.O0.LengthDelimited).fork(), n).join(),
             "clientLocale" === e.filter.oneofKind &&
-                $.internalBinaryWrite(e.filter.clientLocale, t.tag(7, g.O0.LengthDelimited).fork(), n).join(),
+                $.internalBinaryWrite(e.filter.clientLocale, t.tag(7, m.O0.LengthDelimited).fork(), n).join(),
             "clientLocation" === e.filter.oneofKind &&
-                Z.internalBinaryWrite(e.filter.clientLocation, t.tag(8, g.O0.LengthDelimited).fork(), n).join(),
+                q.internalBinaryWrite(e.filter.clientLocation, t.tag(8, m.O0.LengthDelimited).fork(), n).join(),
             "clientIp" === e.filter.oneofKind &&
-                ed.internalBinaryWrite(e.filter.clientIp, t.tag(9, g.O0.LengthDelimited).fork(), n).join(),
+                ed.internalBinaryWrite(e.filter.clientIp, t.tag(9, m.O0.LengthDelimited).fork(), n).join(),
             "userLocale" === e.filter.oneofKind &&
-                Y.internalBinaryWrite(e.filter.userLocale, t.tag(10, g.O0.LengthDelimited).fork(), n).join(),
+                Y.internalBinaryWrite(e.filter.userLocale, t.tag(10, m.O0.LengthDelimited).fork(), n).join(),
             "bot" === e.filter.oneofKind &&
-                ew.internalBinaryWrite(e.filter.bot, t.tag(11, g.O0.LengthDelimited).fork(), n).join(),
+                ew.internalBinaryWrite(e.filter.bot, t.tag(11, m.O0.LengthDelimited).fork(), n).join(),
             "userAgeRange" === e.filter.oneofKind &&
-                ex.internalBinaryWrite(e.filter.userAgeRange, t.tag(12, g.O0.LengthDelimited).fork(), n).join(),
+                ex.internalBinaryWrite(e.filter.userAgeRange, t.tag(12, m.O0.LengthDelimited).fork(), n).join(),
             "userIdRange" === e.filter.oneofKind &&
-                eV.internalBinaryWrite(e.filter.userIdRange, t.tag(13, g.O0.LengthDelimited).fork(), n).join(),
+                eV.internalBinaryWrite(e.filter.userIdRange, t.tag(13, m.O0.LengthDelimited).fork(), n).join(),
             "userHasFlag" === e.filter.oneofKind &&
-                ej.internalBinaryWrite(e.filter.userHasFlag, t.tag(14, g.O0.LengthDelimited).fork(), n).join(),
+                ej.internalBinaryWrite(e.filter.userHasFlag, t.tag(14, m.O0.LengthDelimited).fork(), n).join(),
             "unitIdInRangeByHash" === e.filter.oneofKind &&
-                eY.internalBinaryWrite(e.filter.unitIdInRangeByHash, t.tag(15, g.O0.LengthDelimited).fork(), n).join(),
+                eY.internalBinaryWrite(e.filter.unitIdInRangeByHash, t.tag(15, m.O0.LengthDelimited).fork(), n).join(),
             "clientReleaseChannel" === e.filter.oneofKind &&
-                e$.internalBinaryWrite(e.filter.clientReleaseChannel, t.tag(16, g.O0.LengthDelimited).fork(), n).join(),
+                e$.internalBinaryWrite(e.filter.clientReleaseChannel, t.tag(16, m.O0.LengthDelimited).fork(), n).join(),
             "always" === e.filter.oneofKind &&
-                eX.internalBinaryWrite(e.filter.always, t.tag(17, g.O0.LengthDelimited).fork(), n).join(),
+                eX.internalBinaryWrite(e.filter.always, t.tag(17, m.O0.LengthDelimited).fork(), n).join(),
             "clientSystemLocale" === e.filter.oneofKind &&
-                X.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, g.O0.LengthDelimited).fork(), n).join(),
+                X.internalBinaryWrite(e.filter.clientSystemLocale, t.tag(18, m.O0.LengthDelimited).fork(), n).join(),
             "unitIdInExperiment" === e.filter.oneofKind &&
-                eZ.internalBinaryWrite(e.filter.unitIdInExperiment, t.tag(19, g.O0.LengthDelimited).fork(), n).join(),
+                eq.internalBinaryWrite(e.filter.unitIdInExperiment, t.tag(19, m.O0.LengthDelimited).fork(), n).join(),
             "userPremiumType" === e.filter.oneofKind &&
-                eJ.internalBinaryWrite(e.filter.userPremiumType, t.tag(20, g.O0.LengthDelimited).fork(), n).join(),
+                eJ.internalBinaryWrite(e.filter.userPremiumType, t.tag(20, m.O0.LengthDelimited).fork(), n).join(),
             "unitIdMatchesFilterSnapshot" === e.filter.oneofKind &&
                 e1
                     .internalBinaryWrite(
                         e.filter.unitIdMatchesFilterSnapshot,
-                        t.tag(21, g.O0.LengthDelimited).fork(),
+                        t.tag(21, m.O0.LengthDelimited).fork(),
                         n,
                     )
                     .join(),
             "guildIds" === e.filter.oneofKind &&
-                e3.internalBinaryWrite(e.filter.guildIds, t.tag(22, g.O0.LengthDelimited).fork(), n).join(),
+                e3.internalBinaryWrite(e.filter.guildIds, t.tag(22, m.O0.LengthDelimited).fork(), n).join(),
             "guildIdRange" === e.filter.oneofKind &&
-                e7.internalBinaryWrite(e.filter.guildIdRange, t.tag(23, g.O0.LengthDelimited).fork(), n).join(),
+                e7.internalBinaryWrite(e.filter.guildIdRange, t.tag(23, m.O0.LengthDelimited).fork(), n).join(),
             "guildMemberCountRange" === e.filter.oneofKind &&
                 e6
-                    .internalBinaryWrite(e.filter.guildMemberCountRange, t.tag(25, g.O0.LengthDelimited).fork(), n)
+                    .internalBinaryWrite(e.filter.guildMemberCountRange, t.tag(25, m.O0.LengthDelimited).fork(), n)
                     .join(),
             "guildHasFeature" === e.filter.oneofKind &&
-                e9.internalBinaryWrite(e.filter.guildHasFeature, t.tag(26, g.O0.LengthDelimited).fork(), n).join(),
+                e9.internalBinaryWrite(e.filter.guildHasFeature, t.tag(26, m.O0.LengthDelimited).fork(), n).join(),
             "userLocation" === e.filter.oneofKind &&
-                ea.internalBinaryWrite(e.filter.userLocation, t.tag(27, g.O0.LengthDelimited).fork(), n).join(),
+                ea.internalBinaryWrite(e.filter.userLocation, t.tag(27, m.O0.LengthDelimited).fork(), n).join(),
             "userIp" === e.filter.oneofKind &&
-                eu.internalBinaryWrite(e.filter.userIp, t.tag(28, g.O0.LengthDelimited).fork(), n).join(),
+                eu.internalBinaryWrite(e.filter.userIp, t.tag(28, m.O0.LengthDelimited).fork(), n).join(),
             "installationIds" === e.filter.oneofKind &&
-                tt.internalBinaryWrite(e.filter.installationIds, t.tag(29, g.O0.LengthDelimited).fork(), n).join(),
+                tt.internalBinaryWrite(e.filter.installationIds, t.tag(29, m.O0.LengthDelimited).fork(), n).join(),
             "userStoreCountry" === e.filter.oneofKind &&
-                el.internalBinaryWrite(e.filter.userStoreCountry, t.tag(31, g.O0.LengthDelimited).fork(), n).join(),
-            !1 !== e.negate && t.tag(30, g.O0.Varint).bool(e.negate));
+                el.internalBinaryWrite(e.filter.userStoreCountry, t.tag(31, m.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.negate && t.tag(30, m.O0.Varint).bool(e.negate));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let x = new G();
@@ -553,16 +553,16 @@ class k extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (!1 !== e.workAccounts && t.tag(1, g.O0.Varint).bool(e.workAccounts),
-            !1 !== e.personalAccounts && t.tag(2, g.O0.Varint).bool(e.personalAccounts));
+        (!1 !== e.workAccounts && t.tag(1, m.O0.Varint).bool(e.workAccounts),
+            !1 !== e.personalAccounts && t.tag(2, m.O0.Varint).bool(e.personalAccounts));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let F = new k();
@@ -588,7 +588,7 @@ class B extends C.G {
         for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t)
-                if (i === g.O0.LengthDelimited)
+                if (i === m.O0.LengthDelimited)
                     for (let t = e.int32() + e.pos; e.pos < t;) r.guildIds.push(e.fixed64().toString());
                 else r.guildIds.push(e.fixed64().toString());
             else {
@@ -596,19 +596,19 @@ class B extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         if (e.guildIds.length) {
-            t.tag(1, g.O0.LengthDelimited).fork();
+            t.tag(1, m.O0.LengthDelimited).fork();
             for (let n = 0; n < e.guildIds.length; n++) t.fixed64(e.guildIds[n]);
             t.join();
         }
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let V = new B();
@@ -634,7 +634,7 @@ class H extends C.G {
         for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t)
-                if (i === g.O0.LengthDelimited)
+                if (i === m.O0.LengthDelimited)
                     for (let t = e.int32() + e.pos; e.pos < t;) r.userIds.push(e.fixed64().toString());
                 else r.userIds.push(e.fixed64().toString());
             else {
@@ -642,19 +642,19 @@ class H extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         if (e.userIds.length) {
-            t.tag(1, g.O0.LengthDelimited).fork();
+            t.tag(1, m.O0.LengthDelimited).fork();
             for (let n = 0; n < e.userIds.length; n++) t.fixed64(e.userIds[n]);
             t.join();
         }
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let j = new H();
@@ -685,15 +685,15 @@ class W extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        for (let n = 0; n < e.locales.length; n++) t.tag(1, g.O0.LengthDelimited).string(e.locales[n]);
+        for (let n = 0; n < e.locales.length; n++) t.tag(1, m.O0.LengthDelimited).string(e.locales[n]);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let Y = new W();
@@ -724,15 +724,15 @@ class K extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        for (let n = 0; n < e.locales.length; n++) t.tag(1, g.O0.LengthDelimited).string(e.locales[n]);
+        for (let n = 0; n < e.locales.length; n++) t.tag(1, m.O0.LengthDelimited).string(e.locales[n]);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let $ = new K();
@@ -763,19 +763,19 @@ class z extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        for (let n = 0; n < e.locales.length; n++) t.tag(1, g.O0.LengthDelimited).string(e.locales[n]);
+        for (let n = 0; n < e.locales.length; n++) t.tag(1, m.O0.LengthDelimited).string(e.locales[n]);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let X = new z();
-class q extends C.G {
+class Z extends C.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.ClientLocation",
@@ -802,19 +802,19 @@ class q extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.locations.length; i++)
-            ei.internalBinaryWrite(e.locations[i], t.tag(1, g.O0.LengthDelimited).fork(), n).join();
+            ei.internalBinaryWrite(e.locations[i], t.tag(1, m.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let Z = new q();
+let q = new Z();
 class Q extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.ClientLocation.Place", [
@@ -851,17 +851,17 @@ class Q extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        ("" !== e.city && t.tag(1, g.O0.LengthDelimited).string(e.city),
-            "" !== e.subdivision && t.tag(2, g.O0.LengthDelimited).string(e.subdivision),
-            "" !== e.country && t.tag(3, g.O0.LengthDelimited).string(e.country));
+        ("" !== e.city && t.tag(1, m.O0.LengthDelimited).string(e.city),
+            "" !== e.subdivision && t.tag(2, m.O0.LengthDelimited).string(e.subdivision),
+            "" !== e.country && t.tag(3, m.O0.LengthDelimited).string(e.country));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let J = new Q();
@@ -897,16 +897,16 @@ class ee extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        ("" !== e.isoCountry && t.tag(1, g.O0.LengthDelimited).string(e.isoCountry),
-            "" !== e.isoSubdivision && t.tag(2, g.O0.LengthDelimited).string(e.isoSubdivision));
+        ("" !== e.isoCountry && t.tag(1, m.O0.LengthDelimited).string(e.isoCountry),
+            "" !== e.isoSubdivision && t.tag(2, m.O0.LengthDelimited).string(e.isoSubdivision));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let et = new ee();
@@ -952,19 +952,19 @@ class en extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         ("isoRegion" === e.location.oneofKind &&
-            et.internalBinaryWrite(e.location.isoRegion, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
-            "isEu" === e.location.oneofKind && t.tag(2, g.O0.Varint).bool(e.location.isEu),
+            et.internalBinaryWrite(e.location.isoRegion, t.tag(1, m.O0.LengthDelimited).fork(), n).join(),
+            "isEu" === e.location.oneofKind && t.tag(2, m.O0.Varint).bool(e.location.isEu),
             "place" === e.location.oneofKind &&
-                J.internalBinaryWrite(e.location.place, t.tag(3, g.O0.LengthDelimited).fork(), n).join());
+                J.internalBinaryWrite(e.location.place, t.tag(3, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ei = new en();
@@ -1004,17 +1004,17 @@ class er extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.locations.length; i++)
-            ei.internalBinaryWrite(e.locations[i], t.tag(1, g.O0.LengthDelimited).fork(), n).join();
-        !1 !== e.preferClientIp && t.tag(2, g.O0.Varint).bool(e.preferClientIp);
+            ei.internalBinaryWrite(e.locations[i], t.tag(1, m.O0.LengthDelimited).fork(), n).join();
+        !1 !== e.preferClientIp && t.tag(2, m.O0.Varint).bool(e.preferClientIp);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ea = new er();
@@ -1045,15 +1045,15 @@ class es extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        for (let n = 0; n < e.isoCountries.length; n++) t.tag(1, g.O0.LengthDelimited).string(e.isoCountries[n]);
+        for (let n = 0; n < e.isoCountries.length; n++) t.tag(1, m.O0.LengthDelimited).string(e.isoCountries[n]);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let el = new es();
@@ -1084,15 +1084,15 @@ class eo extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        for (let n = 0; n < e.blocks.length; n++) t.tag(1, g.O0.LengthDelimited).string(e.blocks[n]);
+        for (let n = 0; n < e.blocks.length; n++) t.tag(1, m.O0.LengthDelimited).string(e.blocks[n]);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ed = new eo();
@@ -1132,16 +1132,16 @@ class ec extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        for (let n = 0; n < e.blocks.length; n++) t.tag(1, g.O0.LengthDelimited).string(e.blocks[n]);
-        !1 !== e.preferClientIp && t.tag(2, g.O0.Varint).bool(e.preferClientIp);
+        for (let n = 0; n < e.blocks.length; n++) t.tag(1, m.O0.LengthDelimited).string(e.blocks[n]);
+        !1 !== e.preferClientIp && t.tag(2, m.O0.Varint).bool(e.preferClientIp);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eu = new ec();
@@ -1201,24 +1201,24 @@ class e_ extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.iosVersion && eh.internalBinaryWrite(e.iosVersion, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
+        (e.iosVersion && eh.internalBinaryWrite(e.iosVersion, t.tag(1, m.O0.LengthDelimited).fork(), n).join(),
             e.androidVersion &&
-                eh.internalBinaryWrite(e.androidVersion, t.tag(2, g.O0.LengthDelimited).fork(), n).join(),
-            e.macosVersion && eh.internalBinaryWrite(e.macosVersion, t.tag(3, g.O0.LengthDelimited).fork(), n).join(),
+                eh.internalBinaryWrite(e.androidVersion, t.tag(2, m.O0.LengthDelimited).fork(), n).join(),
+            e.macosVersion && eh.internalBinaryWrite(e.macosVersion, t.tag(3, m.O0.LengthDelimited).fork(), n).join(),
             e.windowsVersion &&
-                eh.internalBinaryWrite(e.windowsVersion, t.tag(4, g.O0.LengthDelimited).fork(), n).join(),
+                eh.internalBinaryWrite(e.windowsVersion, t.tag(4, m.O0.LengthDelimited).fork(), n).join(),
             e.playstationVersion &&
-                eh.internalBinaryWrite(e.playstationVersion, t.tag(5, g.O0.LengthDelimited).fork(), n).join(),
-            e.xboxVersion && eh.internalBinaryWrite(e.xboxVersion, t.tag(6, g.O0.LengthDelimited).fork(), n).join(),
-            e.linuxVersion && eh.internalBinaryWrite(e.linuxVersion, t.tag(7, g.O0.LengthDelimited).fork(), n).join());
+                eh.internalBinaryWrite(e.playstationVersion, t.tag(5, m.O0.LengthDelimited).fork(), n).join(),
+            e.xboxVersion && eh.internalBinaryWrite(e.xboxVersion, t.tag(6, m.O0.LengthDelimited).fork(), n).join(),
+            e.linuxVersion && eh.internalBinaryWrite(e.linuxVersion, t.tag(7, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eE = new e_();
@@ -1254,17 +1254,17 @@ class eA extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.ranges.length; i++)
-            ef.internalBinaryWrite(e.ranges[i], t.tag(1, g.O0.LengthDelimited).fork(), n).join();
-        !1 !== e.workAroundPyotoBug && t.tag(2, g.O0.Varint).bool(e.workAroundPyotoBug);
+            ef.internalBinaryWrite(e.ranges[i], t.tag(1, m.O0.LengthDelimited).fork(), n).join();
+        !1 !== e.workAroundPyotoBug && t.tag(2, m.O0.Varint).bool(e.workAroundPyotoBug);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eh = new eA();
@@ -1300,23 +1300,23 @@ class eI extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.lowerBound && eT.internalBinaryWrite(e.lowerBound, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
-            e.upperBound && eT.internalBinaryWrite(e.upperBound, t.tag(2, g.O0.LengthDelimited).fork(), n).join());
+        (e.lowerBound && eT.internalBinaryWrite(e.lowerBound, t.tag(1, m.O0.LengthDelimited).fork(), n).join(),
+            e.upperBound && eT.internalBinaryWrite(e.upperBound, t.tag(2, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ef = new eI();
 class ep extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.SDKVersionRangeBound", [
-            { no: 1, name: "version", kind: "message", T: () => eg },
+            { no: 1, name: "version", kind: "message", T: () => em },
             { no: 2, name: "inclusive", kind: "scalar", T: 8 },
         ]);
     }
@@ -1335,7 +1335,7 @@ class ep extends C.G {
             let [t, i] = e.tag();
             switch (t) {
                 case 1:
-                    r.version = eg.internalBinaryRead(e, e.uint32(), n, r.version);
+                    r.version = em.internalBinaryRead(e, e.uint32(), n, r.version);
                     break;
                 case 2:
                     r.inclusive = e.bool();
@@ -1345,20 +1345,20 @@ class ep extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.version && eg.internalBinaryWrite(e.version, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
-            !1 !== e.inclusive && t.tag(2, g.O0.Varint).bool(e.inclusive));
+        (e.version && em.internalBinaryWrite(e.version, t.tag(1, m.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.inclusive && t.tag(2, m.O0.Varint).bool(e.inclusive));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eT = new ep();
-class em extends C.G {
+class eg extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.SDKVersionSpecifier", [
             { no: 1, name: "version", kind: "scalar", T: 5 },
@@ -1383,18 +1383,18 @@ class em extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.version && t.tag(1, g.O0.Varint).int32(e.version);
+        0 !== e.version && t.tag(1, m.O0.Varint).int32(e.version);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eg = new em();
+let em = new eg();
 class eS extends C.G {
     constructor() {
         super(
@@ -1447,22 +1447,22 @@ class eS extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.iosVersion && eO.internalBinaryWrite(e.iosVersion, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
+        (e.iosVersion && eO.internalBinaryWrite(e.iosVersion, t.tag(1, m.O0.LengthDelimited).fork(), n).join(),
             e.androidVersion &&
-                eO.internalBinaryWrite(e.androidVersion, t.tag(2, g.O0.LengthDelimited).fork(), n).join(),
-            e.webVersion && eO.internalBinaryWrite(e.webVersion, t.tag(3, g.O0.LengthDelimited).fork(), n).join(),
-            e.nativeVersion && eO.internalBinaryWrite(e.nativeVersion, t.tag(4, g.O0.LengthDelimited).fork(), n).join(),
-            !1 !== e.allowNonNativeWeb && t.tag(6, g.O0.Varint).bool(e.allowNonNativeWeb),
+                eO.internalBinaryWrite(e.androidVersion, t.tag(2, m.O0.LengthDelimited).fork(), n).join(),
+            e.webVersion && eO.internalBinaryWrite(e.webVersion, t.tag(3, m.O0.LengthDelimited).fork(), n).join(),
+            e.nativeVersion && eO.internalBinaryWrite(e.nativeVersion, t.tag(4, m.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.allowNonNativeWeb && t.tag(6, m.O0.Varint).bool(e.allowNonNativeWeb),
             e.clientRequiredChanges &&
-                eP.internalBinaryWrite(e.clientRequiredChanges, t.tag(5, g.O0.LengthDelimited).fork(), n).join());
+                eP.internalBinaryWrite(e.clientRequiredChanges, t.tag(5, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eN = new eS();
@@ -1498,17 +1498,17 @@ class eC extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.ranges.length; i++)
-            eL.internalBinaryWrite(e.ranges[i], t.tag(1, g.O0.LengthDelimited).fork(), n).join();
-        !1 !== e.workAroundPyotoBug && t.tag(2, g.O0.Varint).bool(e.workAroundPyotoBug);
+            eL.internalBinaryWrite(e.ranges[i], t.tag(1, m.O0.LengthDelimited).fork(), n).join();
+        !1 !== e.workAroundPyotoBug && t.tag(2, m.O0.Varint).bool(e.workAroundPyotoBug);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eO = new eC();
@@ -1544,16 +1544,16 @@ class eR extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.lowerBound && eD.internalBinaryWrite(e.lowerBound, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
-            e.upperBound && eD.internalBinaryWrite(e.upperBound, t.tag(2, g.O0.LengthDelimited).fork(), n).join());
+        (e.lowerBound && eD.internalBinaryWrite(e.lowerBound, t.tag(1, m.O0.LengthDelimited).fork(), n).join(),
+            e.upperBound && eD.internalBinaryWrite(e.upperBound, t.tag(2, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eL = new eR();
@@ -1589,16 +1589,16 @@ class ey extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.version && eb.internalBinaryWrite(e.version, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
-            !1 !== e.inclusive && t.tag(2, g.O0.Varint).bool(e.inclusive));
+        (e.version && eb.internalBinaryWrite(e.version, t.tag(1, m.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.inclusive && t.tag(2, m.O0.Varint).bool(e.inclusive));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eD = new ey();
@@ -1638,17 +1638,17 @@ class ev extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (0 !== e.major && t.tag(1, g.O0.Varint).uint32(e.major),
-            e.minor && D.ZQ.internalBinaryWrite(e.minor, t.tag(2, g.O0.LengthDelimited).fork(), n).join(),
-            e.build && D.ol.internalBinaryWrite(e.build, t.tag(3, g.O0.LengthDelimited).fork(), n).join());
+        (0 !== e.major && t.tag(1, m.O0.Varint).uint32(e.major),
+            e.minor && D.ZQ.internalBinaryWrite(e.minor, t.tag(2, m.O0.LengthDelimited).fork(), n).join(),
+            e.build && D.ol.internalBinaryWrite(e.build, t.tag(3, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eb = new ev();
@@ -1677,7 +1677,7 @@ class eM extends C.G {
                     r.commitHashes.push(e.string());
                     break;
                 case 2:
-                    if (i === g.O0.LengthDelimited)
+                    if (i === m.O0.LengthDelimited)
                         for (let t = e.int32() + e.pos; e.pos < t;) r.prNumbers.push(e.int32());
                     else r.prNumbers.push(e.int32());
                     break;
@@ -1686,20 +1686,20 @@ class eM extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        for (let n = 0; n < e.commitHashes.length; n++) t.tag(1, g.O0.LengthDelimited).string(e.commitHashes[n]);
+        for (let n = 0; n < e.commitHashes.length; n++) t.tag(1, m.O0.LengthDelimited).string(e.commitHashes[n]);
         if (e.prNumbers.length) {
-            t.tag(2, g.O0.LengthDelimited).fork();
+            t.tag(2, m.O0.LengthDelimited).fork();
             for (let n = 0; n < e.prNumbers.length; n++) t.int32(e.prNumbers[n]);
             t.join();
         }
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eP = new eM();
@@ -1730,15 +1730,15 @@ class eU extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        !1 !== e.isBot && t.tag(1, g.O0.Varint).bool(e.isBot);
+        !1 !== e.isBot && t.tag(1, m.O0.Varint).bool(e.isBot);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ew = new eU();
@@ -1778,16 +1778,16 @@ class eG extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.minAgeYears && D.ZQ.internalBinaryWrite(e.minAgeYears, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
-            e.maxAgeYears && D.ZQ.internalBinaryWrite(e.maxAgeYears, t.tag(2, g.O0.LengthDelimited).fork(), n).join());
+        (e.minAgeYears && D.ZQ.internalBinaryWrite(e.minAgeYears, t.tag(1, m.O0.LengthDelimited).fork(), n).join(),
+            e.maxAgeYears && D.ZQ.internalBinaryWrite(e.maxAgeYears, t.tag(2, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ex = new eG();
@@ -1816,15 +1816,15 @@ class ek extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        "0" !== e.value && t.tag(1, g.O0.Bit64).fixed64(e.value);
+        "0" !== e.value && t.tag(1, m.O0.Bit64).fixed64(e.value);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eF = new ek();
@@ -1864,16 +1864,16 @@ class eB extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.minId && eF.internalBinaryWrite(e.minId, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
-            e.maxId && eF.internalBinaryWrite(e.maxId, t.tag(2, g.O0.LengthDelimited).fork(), n).join());
+        (e.minId && eF.internalBinaryWrite(e.minId, t.tag(1, m.O0.LengthDelimited).fork(), n).join(),
+            e.maxId && eF.internalBinaryWrite(e.maxId, t.tag(2, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eV = new eB();
@@ -1904,15 +1904,15 @@ class eH extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        "0" !== e.mask && t.tag(1, g.O0.Bit64).fixed64(e.mask);
+        "0" !== e.mask && t.tag(1, m.O0.Bit64).fixed64(e.mask);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let ej = new eH();
@@ -1956,17 +1956,17 @@ class eW extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        ("" !== e.hashKey && t.tag(1, g.O0.LengthDelimited).string(e.hashKey),
-            0 !== e.stopRingPosition && t.tag(2, g.O0.Varint).uint32(e.stopRingPosition),
-            0 !== e.startRingPosition && t.tag(3, g.O0.Varint).uint32(e.startRingPosition));
+        ("" !== e.hashKey && t.tag(1, m.O0.LengthDelimited).string(e.hashKey),
+            0 !== e.stopRingPosition && t.tag(2, m.O0.Varint).uint32(e.stopRingPosition),
+            0 !== e.startRingPosition && t.tag(3, m.O0.Varint).uint32(e.startRingPosition));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eY = new eW();
@@ -1997,15 +1997,15 @@ class eK extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        for (let n = 0; n < e.releaseChannels.length; n++) t.tag(1, g.O0.LengthDelimited).string(e.releaseChannels[n]);
+        for (let n = 0; n < e.releaseChannels.length; n++) t.tag(1, m.O0.LengthDelimited).string(e.releaseChannels[n]);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e$ = new eK();
@@ -2034,19 +2034,19 @@ class ez extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        !1 !== e.value && t.tag(1, g.O0.Varint).bool(e.value);
+        !1 !== e.value && t.tag(1, m.O0.Varint).bool(e.value);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eX = new ez();
-class eq extends C.G {
+class eZ extends C.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.UnitIdInExperiment",
@@ -2078,7 +2078,7 @@ class eq extends C.G {
                     r.experimentId = e.fixed64().toString();
                     break;
                 case 2:
-                    if (i === g.O0.LengthDelimited)
+                    if (i === m.O0.LengthDelimited)
                         for (let t = e.int32() + e.pos; e.pos < t;) r.variationIds.push(e.int32());
                     else r.variationIds.push(e.int32());
                     break;
@@ -2087,22 +2087,22 @@ class eq extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        if (("0" !== e.experimentId && t.tag(1, g.O0.Bit64).fixed64(e.experimentId), e.variationIds.length)) {
-            t.tag(2, g.O0.LengthDelimited).fork();
+        if (("0" !== e.experimentId && t.tag(1, m.O0.Bit64).fixed64(e.experimentId), e.variationIds.length)) {
+            t.tag(2, m.O0.LengthDelimited).fork();
             for (let n = 0; n < e.variationIds.length; n++) t.int32(e.variationIds[n]);
             t.join();
         }
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let eZ = new eq();
+let eq = new eZ();
 class eQ extends C.G {
     constructor() {
         super(
@@ -2125,7 +2125,7 @@ class eQ extends C.G {
         for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t)
-                if (i === g.O0.LengthDelimited)
+                if (i === m.O0.LengthDelimited)
                     for (let t = e.int32() + e.pos; e.pos < t;) r.premiumTypes.push(e.int32());
                 else r.premiumTypes.push(e.int32());
             else {
@@ -2133,19 +2133,19 @@ class eQ extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         if (e.premiumTypes.length) {
-            t.tag(1, g.O0.LengthDelimited).fork();
+            t.tag(1, m.O0.LengthDelimited).fork();
             for (let n = 0; n < e.premiumTypes.length; n++) t.int32(e.premiumTypes[n]);
             t.join();
         }
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let eJ = new eQ();
@@ -2178,7 +2178,7 @@ class e0 extends C.G {
                     r.filterSnapshotName = e.string();
                     break;
                 case 2:
-                    if (i === g.O0.LengthDelimited)
+                    if (i === m.O0.LengthDelimited)
                         for (let t = e.int32() + e.pos; e.pos < t;) r.targetFilterValues.push(e.fixed64().toString());
                     else r.targetFilterValues.push(e.fixed64().toString());
                     break;
@@ -2187,22 +2187,22 @@ class e0 extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         if (
-            ("" !== e.filterSnapshotName && t.tag(1, g.O0.LengthDelimited).string(e.filterSnapshotName),
+            ("" !== e.filterSnapshotName && t.tag(1, m.O0.LengthDelimited).string(e.filterSnapshotName),
             e.targetFilterValues.length)
         ) {
-            t.tag(2, g.O0.LengthDelimited).fork();
+            t.tag(2, m.O0.LengthDelimited).fork();
             for (let n = 0; n < e.targetFilterValues.length; n++) t.fixed64(e.targetFilterValues[n]);
             t.join();
         }
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e1 = new e0();
@@ -2231,7 +2231,7 @@ class e2 extends C.G {
         for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t)
-                if (i === g.O0.LengthDelimited)
+                if (i === m.O0.LengthDelimited)
                     for (let t = e.int32() + e.pos; e.pos < t;) r.guildIds.push(e.fixed64().toString());
                 else r.guildIds.push(e.fixed64().toString());
             else {
@@ -2239,19 +2239,19 @@ class e2 extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         if (e.guildIds.length) {
-            t.tag(1, g.O0.LengthDelimited).fork();
+            t.tag(1, m.O0.LengthDelimited).fork();
             for (let n = 0; n < e.guildIds.length; n++) t.fixed64(e.guildIds[n]);
             t.join();
         }
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e3 = new e2();
@@ -2294,16 +2294,16 @@ class e5 extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.minCount && D.ZQ.internalBinaryWrite(e.minCount, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
-            e.maxCount && D.ZQ.internalBinaryWrite(e.maxCount, t.tag(2, g.O0.LengthDelimited).fork(), n).join());
+        (e.minCount && D.ZQ.internalBinaryWrite(e.minCount, t.tag(1, m.O0.LengthDelimited).fork(), n).join(),
+            e.maxCount && D.ZQ.internalBinaryWrite(e.maxCount, t.tag(2, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e6 = new e5();
@@ -2346,16 +2346,16 @@ class e4 extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (e.minId && eF.internalBinaryWrite(e.minId, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
-            e.maxId && eF.internalBinaryWrite(e.maxId, t.tag(2, g.O0.LengthDelimited).fork(), n).join());
+        (e.minId && eF.internalBinaryWrite(e.minId, t.tag(1, m.O0.LengthDelimited).fork(), n).join(),
+            e.maxId && eF.internalBinaryWrite(e.maxId, t.tag(2, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e7 = new e4();
@@ -2389,15 +2389,15 @@ class e8 extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        for (let n = 0; n < e.features.length; n++) t.tag(1, g.O0.LengthDelimited).string(e.features[n]);
+        for (let n = 0; n < e.features.length; n++) t.tag(1, m.O0.LengthDelimited).string(e.features[n]);
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let e9 = new e8();
@@ -2423,7 +2423,7 @@ class te extends C.G {
         for (; e.pos < a;) {
             let [t, i] = e.tag();
             if (1 === t)
-                if (i === g.O0.LengthDelimited)
+                if (i === m.O0.LengthDelimited)
                     for (let t = e.int32() + e.pos; e.pos < t;) r.installationIds.push(e.fixed64().toString());
                 else r.installationIds.push(e.fixed64().toString());
             else {
@@ -2431,19 +2431,19 @@ class te extends C.G {
                 if ("throw" === a)
                     throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                 let s = e.skip(i);
-                !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         if (e.installationIds.length) {
-            t.tag(1, g.O0.LengthDelimited).fork();
+            t.tag(1, m.O0.LengthDelimited).fork();
             for (let n = 0; n < e.installationIds.length; n++) t.fixed64(e.installationIds[n]);
             t.join();
         }
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tt = new te();
@@ -2539,14 +2539,14 @@ var tn = n(335871),
         (T[(T.COMPLETED = 4)] = "COMPLETED"),
         T),
     tp =
-        (((m = {})[(m.UNSPECIFIED = 0)] = "UNSPECIFIED"),
-        (m[(m.DRAFT = 1)] = "DRAFT"),
-        (m[(m.MEASUREMENT = 2)] = "MEASUREMENT"),
-        (m[(m.ROLLING_OUT = 4)] = "ROLLING_OUT"),
-        (m[(m.ARCHIVED = 6)] = "ARCHIVED"),
-        (m[(m.AA_MODE = 7)] = "AA_MODE"),
-        (m[(m.PAUSED = 8)] = "PAUSED"),
-        m);
+        (((g = {})[(g.UNSPECIFIED = 0)] = "UNSPECIFIED"),
+        (g[(g.DRAFT = 1)] = "DRAFT"),
+        (g[(g.MEASUREMENT = 2)] = "MEASUREMENT"),
+        (g[(g.ROLLING_OUT = 4)] = "ROLLING_OUT"),
+        (g[(g.ARCHIVED = 6)] = "ARCHIVED"),
+        (g[(g.AA_MODE = 7)] = "AA_MODE"),
+        (g[(g.PAUSED = 8)] = "PAUSED"),
+        g);
 class tT extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Experiment", [
@@ -2629,7 +2629,7 @@ class tT extends C.G {
             { no: 37, name: "growthbook_tags", kind: "scalar", repeat: 2, T: 9 },
             { no: 38, name: "allocate_right_to_left", kind: "scalar", T: 8 },
             { no: 39, name: "is_managed", kind: "scalar", T: 8 },
-            { no: 43, name: "number_line_settings", kind: "message", T: () => tg },
+            { no: 43, name: "number_line_settings", kind: "message", T: () => tm },
             {
                 no: 42,
                 name: "eligibility_persistence",
@@ -2744,7 +2744,7 @@ class tT extends C.G {
                     r.phase = e.int32();
                     break;
                 case 19:
-                    if (i === g.O0.LengthDelimited)
+                    if (i === m.O0.LengthDelimited)
                         for (let t = e.int32() + e.pos; e.pos < t;) r.surfaces.push(e.int32());
                     else r.surfaces.push(e.int32());
                     break;
@@ -2784,7 +2784,7 @@ class tT extends C.G {
                     r.isTemplate = e.bool();
                     break;
                 case 28:
-                    if (i === g.O0.LengthDelimited)
+                    if (i === m.O0.LengthDelimited)
                         for (let t = e.int32() + e.pos; e.pos < t;) r.fieldNumbersToCopy.push(e.int32());
                     else r.fieldNumbersToCopy.push(e.int32());
                     break;
@@ -2813,7 +2813,7 @@ class tT extends C.G {
                     r.customUnitPrefix = e.int32();
                     break;
                 case 45:
-                    if (i === g.O0.LengthDelimited)
+                    if (i === m.O0.LengthDelimited)
                         for (let t = e.int32() + e.pos; e.pos < t;) r.exposurePoints.push(e.int32());
                     else r.exposurePoints.push(e.int32());
                     break;
@@ -2830,7 +2830,7 @@ class tT extends C.G {
                     r.isManaged = e.bool();
                     break;
                 case 43:
-                    r.numberLineSettings = tg.internalBinaryRead(e, e.uint32(), n, r.numberLineSettings);
+                    r.numberLineSettings = tm.internalBinaryRead(e, e.uint32(), n, r.numberLineSettings);
                     break;
                 case 42:
                     r.eligibilityPersistence = e.int32();
@@ -2843,89 +2843,89 @@ class tT extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        ("0" !== e.id && t.tag(1, g.O0.Bit64).fixed64(e.id),
-            "" !== e.name && t.tag(2, g.O0.LengthDelimited).string(e.name),
-            e.createdAt && tn.D.internalBinaryWrite(e.createdAt, t.tag(3, g.O0.LengthDelimited).fork(), n).join(),
-            "0" !== e.creatorId && t.tag(4, g.O0.Bit64).fixed64(e.creatorId),
-            0 !== e.version && t.tag(5, g.O0.Varint).int32(e.version),
-            e.editedAt && tn.D.internalBinaryWrite(e.editedAt, t.tag(6, g.O0.LengthDelimited).fork(), n).join(),
-            "0" !== e.editorId && t.tag(7, g.O0.Bit64).fixed64(e.editorId),
-            "" !== e.title && t.tag(8, g.O0.LengthDelimited).string(e.title),
-            "" !== e.description && t.tag(9, g.O0.LengthDelimited).string(e.description),
-            e.hypothesis && D.hU.internalBinaryWrite(e.hypothesis, t.tag(10, g.O0.LengthDelimited).fork(), n).join(),
+        ("0" !== e.id && t.tag(1, m.O0.Bit64).fixed64(e.id),
+            "" !== e.name && t.tag(2, m.O0.LengthDelimited).string(e.name),
+            e.createdAt && tn.D.internalBinaryWrite(e.createdAt, t.tag(3, m.O0.LengthDelimited).fork(), n).join(),
+            "0" !== e.creatorId && t.tag(4, m.O0.Bit64).fixed64(e.creatorId),
+            0 !== e.version && t.tag(5, m.O0.Varint).int32(e.version),
+            e.editedAt && tn.D.internalBinaryWrite(e.editedAt, t.tag(6, m.O0.LengthDelimited).fork(), n).join(),
+            "0" !== e.editorId && t.tag(7, m.O0.Bit64).fixed64(e.editorId),
+            "" !== e.title && t.tag(8, m.O0.LengthDelimited).string(e.title),
+            "" !== e.description && t.tag(9, m.O0.LengthDelimited).string(e.description),
+            e.hypothesis && D.hU.internalBinaryWrite(e.hypothesis, t.tag(10, m.O0.LengthDelimited).fork(), n).join(),
             e.techSpecLink &&
-                D.hU.internalBinaryWrite(e.techSpecLink, t.tag(11, g.O0.LengthDelimited).fork(), n).join(),
-            0 !== e.revision && t.tag(12, g.O0.Varint).int32(e.revision),
-            "" !== e.hashKey && t.tag(13, g.O0.LengthDelimited).string(e.hashKey),
-            0 !== e.unitType && t.tag(14, g.O0.Varint).int32(e.unitType));
+                D.hU.internalBinaryWrite(e.techSpecLink, t.tag(11, m.O0.LengthDelimited).fork(), n).join(),
+            0 !== e.revision && t.tag(12, m.O0.Varint).int32(e.revision),
+            "" !== e.hashKey && t.tag(13, m.O0.LengthDelimited).string(e.hashKey),
+            0 !== e.unitType && t.tag(14, m.O0.Varint).int32(e.unitType));
         for (let i = 0; i < e.variations.length; i++)
-            tN.internalBinaryWrite(e.variations[i], t.tag(15, g.O0.LengthDelimited).fork(), n).join();
+            tN.internalBinaryWrite(e.variations[i], t.tag(15, m.O0.LengthDelimited).fork(), n).join();
         for (let i = 0; i < e.rules.length; i++)
-            P.internalBinaryWrite(e.rules[i], t.tag(16, g.O0.LengthDelimited).fork(), n).join();
-        if ((0 !== e.phase && t.tag(18, g.O0.Varint).int32(e.phase), e.surfaces.length)) {
-            t.tag(19, g.O0.LengthDelimited).fork();
+            P.internalBinaryWrite(e.rules[i], t.tag(16, m.O0.LengthDelimited).fork(), n).join();
+        if ((0 !== e.phase && t.tag(18, m.O0.Varint).int32(e.phase), e.surfaces.length)) {
+            t.tag(19, m.O0.LengthDelimited).fork();
             for (let n = 0; n < e.surfaces.length; n++) t.int32(e.surfaces[n]);
             t.join();
         }
         if (
-            ("" !== e.owningTeamId && t.tag(20, g.O0.LengthDelimited).string(e.owningTeamId),
-            "0" !== e.cachedNotificationChannelId && t.tag(21, g.O0.Bit64).fixed64(e.cachedNotificationChannelId),
-            0 !== e.exposureTracking && t.tag(22, g.O0.Varint).int32(e.exposureTracking),
-            0 !== e.assignmentMode && t.tag(25, g.O0.Varint).int32(e.assignmentMode),
-            !1 !== e.enableEditRawJsonUi && t.tag(23, g.O0.Varint).bool(e.enableEditRawJsonUi),
+            ("" !== e.owningTeamId && t.tag(20, m.O0.LengthDelimited).string(e.owningTeamId),
+            "0" !== e.cachedNotificationChannelId && t.tag(21, m.O0.Bit64).fixed64(e.cachedNotificationChannelId),
+            0 !== e.exposureTracking && t.tag(22, m.O0.Varint).int32(e.exposureTracking),
+            0 !== e.assignmentMode && t.tag(25, m.O0.Varint).int32(e.assignmentMode),
+            !1 !== e.enableEditRawJsonUi && t.tag(23, m.O0.Varint).bool(e.enableEditRawJsonUi),
             e.dynamicConfigSizeLimitOverride &&
                 D.as
-                    .internalBinaryWrite(e.dynamicConfigSizeLimitOverride, t.tag(46, g.O0.LengthDelimited).fork(), n)
+                    .internalBinaryWrite(e.dynamicConfigSizeLimitOverride, t.tag(46, m.O0.LengthDelimited).fork(), n)
                     .join(),
-            0 !== e.winningVariationId && t.tag(24, g.O0.Varint).int32(e.winningVariationId),
-            "" !== e.extraOutcomeContext && t.tag(34, g.O0.LengthDelimited).string(e.extraOutcomeContext),
-            0 !== e.type && t.tag(26, g.O0.Varint).int32(e.type),
-            !1 !== e.isTemplate && t.tag(27, g.O0.Varint).bool(e.isTemplate),
+            0 !== e.winningVariationId && t.tag(24, m.O0.Varint).int32(e.winningVariationId),
+            "" !== e.extraOutcomeContext && t.tag(34, m.O0.LengthDelimited).string(e.extraOutcomeContext),
+            0 !== e.type && t.tag(26, m.O0.Varint).int32(e.type),
+            !1 !== e.isTemplate && t.tag(27, m.O0.Varint).bool(e.isTemplate),
             e.fieldNumbersToCopy.length)
         ) {
-            t.tag(28, g.O0.LengthDelimited).fork();
+            t.tag(28, m.O0.LengthDelimited).fork();
             for (let n = 0; n < e.fieldNumbersToCopy.length; n++) t.int32(e.fieldNumbersToCopy[n]);
             t.join();
         }
         for (let n = 0; n < e.engineFeatureFlags.length; n++)
-            t.tag(29, g.O0.LengthDelimited).string(e.engineFeatureFlags[n]);
+            t.tag(29, m.O0.LengthDelimited).string(e.engineFeatureFlags[n]);
         if (
-            (e.debugConfig && tD.internalBinaryWrite(e.debugConfig, t.tag(30, g.O0.LengthDelimited).fork(), n).join(),
+            (e.debugConfig && tD.internalBinaryWrite(e.debugConfig, t.tag(30, m.O0.LengthDelimited).fork(), n).join(),
             e.expectedEndDate &&
-                tn.D.internalBinaryWrite(e.expectedEndDate, t.tag(31, g.O0.LengthDelimited).fork(), n).join(),
-            !1 !== e.isAutomatedChange && t.tag(32, g.O0.Varint).bool(e.isAutomatedChange),
-            !1 !== e.suppressEditorMention && t.tag(44, g.O0.Varint).bool(e.suppressEditorMention),
-            e.archiveAt && tn.D.internalBinaryWrite(e.archiveAt, t.tag(33, g.O0.LengthDelimited).fork(), n).join(),
+                tn.D.internalBinaryWrite(e.expectedEndDate, t.tag(31, m.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.isAutomatedChange && t.tag(32, m.O0.Varint).bool(e.isAutomatedChange),
+            !1 !== e.suppressEditorMention && t.tag(44, m.O0.Varint).bool(e.suppressEditorMention),
+            e.archiveAt && tn.D.internalBinaryWrite(e.archiveAt, t.tag(33, m.O0.LengthDelimited).fork(), n).join(),
             e.guildExperimentVersion &&
-                D.as.internalBinaryWrite(e.guildExperimentVersion, t.tag(35, g.O0.LengthDelimited).fork(), n).join(),
-            0 !== e.customUnitPrefix && t.tag(36, g.O0.Varint).int32(e.customUnitPrefix),
+                D.as.internalBinaryWrite(e.guildExperimentVersion, t.tag(35, m.O0.LengthDelimited).fork(), n).join(),
+            0 !== e.customUnitPrefix && t.tag(36, m.O0.Varint).int32(e.customUnitPrefix),
             e.exposurePoints.length)
         ) {
-            t.tag(45, g.O0.LengthDelimited).fork();
+            t.tag(45, m.O0.LengthDelimited).fork();
             for (let n = 0; n < e.exposurePoints.length; n++) t.int32(e.exposurePoints[n]);
             t.join();
         }
-        "" !== e.dynamicConfigModel && t.tag(47, g.O0.LengthDelimited).string(e.dynamicConfigModel);
-        for (let n = 0; n < e.growthbookTags.length; n++) t.tag(37, g.O0.LengthDelimited).string(e.growthbookTags[n]);
-        (!1 !== e.allocateRightToLeft && t.tag(38, g.O0.Varint).bool(e.allocateRightToLeft),
-            !1 !== e.isManaged && t.tag(39, g.O0.Varint).bool(e.isManaged),
+        "" !== e.dynamicConfigModel && t.tag(47, m.O0.LengthDelimited).string(e.dynamicConfigModel);
+        for (let n = 0; n < e.growthbookTags.length; n++) t.tag(37, m.O0.LengthDelimited).string(e.growthbookTags[n]);
+        (!1 !== e.allocateRightToLeft && t.tag(38, m.O0.Varint).bool(e.allocateRightToLeft),
+            !1 !== e.isManaged && t.tag(39, m.O0.Varint).bool(e.isManaged),
             e.numberLineSettings &&
-                tg.internalBinaryWrite(e.numberLineSettings, t.tag(43, g.O0.LengthDelimited).fork(), n).join(),
-            0 !== e.eligibilityPersistence && t.tag(42, g.O0.Varint).int32(e.eligibilityPersistence),
+                tm.internalBinaryWrite(e.numberLineSettings, t.tag(43, m.O0.LengthDelimited).fork(), n).join(),
+            0 !== e.eligibilityPersistence && t.tag(42, m.O0.Varint).int32(e.eligibilityPersistence),
             e.lifecyclePlan &&
-                tb.internalBinaryWrite(e.lifecyclePlan, t.tag(48, g.O0.LengthDelimited).fork(), n).join());
+                tb.internalBinaryWrite(e.lifecyclePlan, t.tag(48, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 new tT();
-class tm extends C.G {
+class tg extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Experiment.NumberLineSettings", [
             {
@@ -2966,20 +2966,20 @@ class tm extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (0 !== e.mode && t.tag(1, g.O0.Varint).int32(e.mode),
-            "0" !== e.linkedId && t.tag(2, g.O0.Bit64).fixed64(e.linkedId),
-            !1 !== e.sharedControl && t.tag(3, g.O0.Varint).bool(e.sharedControl));
+        (0 !== e.mode && t.tag(1, m.O0.Varint).int32(e.mode),
+            "0" !== e.linkedId && t.tag(2, m.O0.Bit64).fixed64(e.linkedId),
+            !1 !== e.sharedControl && t.tag(3, m.O0.Varint).bool(e.sharedControl));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tg = new tm();
+let tm = new tg();
 class tS extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Variation", [
@@ -3049,24 +3049,24 @@ class tS extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (0 !== e.id && t.tag(1, g.O0.Varint).int32(e.id),
-            "" !== e.label && t.tag(2, g.O0.LengthDelimited).string(e.label),
-            0 !== e.targetAllocation && t.tag(3, g.O0.Varint).int32(e.targetAllocation));
+        (0 !== e.id && t.tag(1, m.O0.Varint).int32(e.id),
+            "" !== e.label && t.tag(2, m.O0.LengthDelimited).string(e.label),
+            0 !== e.targetAllocation && t.tag(3, m.O0.Varint).int32(e.targetAllocation));
         for (let i = 0; i < e.buckets.length; i++)
-            tO.internalBinaryWrite(e.buckets[i], t.tag(4, g.O0.LengthDelimited).fork(), n).join();
-        (0 !== e.type && t.tag(5, g.O0.Varint).int32(e.type),
+            tO.internalBinaryWrite(e.buckets[i], t.tag(4, m.O0.LengthDelimited).fork(), n).join();
+        (0 !== e.type && t.tag(5, m.O0.Varint).int32(e.type),
             e.configuration &&
-                D.hU.internalBinaryWrite(e.configuration, t.tag(6, g.O0.LengthDelimited).fork(), n).join(),
-            "0" !== e.owningExperimentId && t.tag(7, g.O0.Bit64).fixed64(e.owningExperimentId),
-            0 !== e.owningSlotId && t.tag(8, g.O0.Varint).int32(e.owningSlotId));
+                D.hU.internalBinaryWrite(e.configuration, t.tag(6, m.O0.LengthDelimited).fork(), n).join(),
+            "0" !== e.owningExperimentId && t.tag(7, m.O0.Bit64).fixed64(e.owningExperimentId),
+            0 !== e.owningSlotId && t.tag(8, m.O0.Varint).int32(e.owningSlotId));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tN = new tS();
@@ -3129,19 +3129,19 @@ class tC extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (0 !== e.start && t.tag(1, g.O0.Varint).int32(e.start),
-            0 !== e.stop && t.tag(2, g.O0.Varint).int32(e.stop),
-            0 !== e.type && t.tag(3, g.O0.Varint).int32(e.type),
-            0 !== e.assignmentMode && t.tag(5, g.O0.Varint).int32(e.assignmentMode),
-            0 !== e.exposureMode && t.tag(6, g.O0.Varint).int32(e.exposureMode));
+        (0 !== e.start && t.tag(1, m.O0.Varint).int32(e.start),
+            0 !== e.stop && t.tag(2, m.O0.Varint).int32(e.stop),
+            0 !== e.type && t.tag(3, m.O0.Varint).int32(e.type),
+            0 !== e.assignmentMode && t.tag(5, m.O0.Varint).int32(e.assignmentMode),
+            0 !== e.exposureMode && t.tag(6, m.O0.Varint).int32(e.exposureMode));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tO = new tC();
@@ -3162,7 +3162,7 @@ class tR extends C.G {
     }
     internalBinaryWrite(e, t, n) {
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 new tR();
@@ -3183,7 +3183,7 @@ class tL extends C.G {
     }
     internalBinaryWrite(e, t, n) {
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 new tL();
@@ -3242,20 +3242,20 @@ class ty extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        (!1 !== e.enableDecisionLogging && t.tag(1, g.O0.Varint).bool(e.enableDecisionLogging),
-            0 !== e.metricsSampleRate && t.tag(2, g.O0.Bit64).double(e.metricsSampleRate),
-            !1 !== e.logContextOnFailure && t.tag(3, g.O0.Varint).bool(e.logContextOnFailure),
-            !1 !== e.logRawHeaders && t.tag(4, g.O0.Varint).bool(e.logRawHeaders),
-            !1 !== e.tagFilterMetrics && t.tag(5, g.O0.Varint).bool(e.tagFilterMetrics),
-            0 !== e.decisionLogSampleRate && t.tag(6, g.O0.Bit64).double(e.decisionLogSampleRate));
+        (!1 !== e.enableDecisionLogging && t.tag(1, m.O0.Varint).bool(e.enableDecisionLogging),
+            0 !== e.metricsSampleRate && t.tag(2, m.O0.Bit64).double(e.metricsSampleRate),
+            !1 !== e.logContextOnFailure && t.tag(3, m.O0.Varint).bool(e.logContextOnFailure),
+            !1 !== e.logRawHeaders && t.tag(4, m.O0.Varint).bool(e.logRawHeaders),
+            !1 !== e.tagFilterMetrics && t.tag(5, m.O0.Varint).bool(e.tagFilterMetrics),
+            0 !== e.decisionLogSampleRate && t.tag(6, m.O0.Bit64).double(e.decisionLogSampleRate));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tD = new ty();
@@ -3291,17 +3291,17 @@ class tv extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         (e.measurementPlan &&
-            tP.internalBinaryWrite(e.measurementPlan, t.tag(1, g.O0.LengthDelimited).fork(), n).join(),
-            e.rolloutPlan && tw.internalBinaryWrite(e.rolloutPlan, t.tag(2, g.O0.LengthDelimited).fork(), n).join());
+            tP.internalBinaryWrite(e.measurementPlan, t.tag(1, m.O0.LengthDelimited).fork(), n).join(),
+            e.rolloutPlan && tw.internalBinaryWrite(e.rolloutPlan, t.tag(2, m.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tb = new tv();
@@ -3342,17 +3342,17 @@ class tM extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.status && t.tag(1, g.O0.Varint).int32(e.status);
+        0 !== e.status && t.tag(1, m.O0.Varint).int32(e.status);
         for (let i = 0; i < e.rampSteps.length; i++)
-            tx.internalBinaryWrite(e.rampSteps[i], t.tag(2, g.O0.LengthDelimited).fork(), n).join();
+            tx.internalBinaryWrite(e.rampSteps[i], t.tag(2, m.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tP = new tM();
@@ -3393,17 +3393,17 @@ class tU extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.status && t.tag(1, g.O0.Varint).int32(e.status);
+        0 !== e.status && t.tag(1, m.O0.Varint).int32(e.status);
         for (let i = 0; i < e.rampSteps.length; i++)
-            tx.internalBinaryWrite(e.rampSteps[i], t.tag(2, g.O0.LengthDelimited).fork(), n).join();
+            tx.internalBinaryWrite(e.rampSteps[i], t.tag(2, m.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tw = new tU();
@@ -3456,20 +3456,20 @@ class tG extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
         for (let i = 0; i < e.variationBuckets.length; i++)
-            tF.internalBinaryWrite(e.variationBuckets[i], t.tag(1, g.O0.LengthDelimited).fork(), n).join();
-        (e.holdDuration && y.internalBinaryWrite(e.holdDuration, t.tag(2, g.O0.LengthDelimited).fork(), n).join(),
-            !1 !== e.requireManualApproval && t.tag(3, g.O0.Varint).bool(e.requireManualApproval),
-            e.startedAt && tn.D.internalBinaryWrite(e.startedAt, t.tag(4, g.O0.LengthDelimited).fork(), n).join(),
-            0 !== e.status && t.tag(5, g.O0.Varint).int32(e.status));
+            tF.internalBinaryWrite(e.variationBuckets[i], t.tag(1, m.O0.LengthDelimited).fork(), n).join();
+        (e.holdDuration && y.internalBinaryWrite(e.holdDuration, t.tag(2, m.O0.LengthDelimited).fork(), n).join(),
+            !1 !== e.requireManualApproval && t.tag(3, m.O0.Varint).bool(e.requireManualApproval),
+            e.startedAt && tn.D.internalBinaryWrite(e.startedAt, t.tag(4, m.O0.LengthDelimited).fork(), n).join(),
+            0 !== e.status && t.tag(5, m.O0.Varint).int32(e.status));
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tx = new tG();
@@ -3505,17 +3505,17 @@ class tk extends C.G {
                     if ("throw" === a)
                         throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
                     let s = e.skip(i);
-                    !1 !== a && (!0 === a ? g.f$.onRead : a)(this.typeName, r, t, i, s);
+                    !1 !== a && (!0 === a ? m.f$.onRead : a)(this.typeName, r, t, i, s);
             }
         }
         return r;
     }
     internalBinaryWrite(e, t, n) {
-        0 !== e.variationId && t.tag(1, g.O0.Varint).int32(e.variationId);
+        0 !== e.variationId && t.tag(1, m.O0.Varint).int32(e.variationId);
         for (let i = 0; i < e.buckets.length; i++)
-            tO.internalBinaryWrite(e.buckets[i], t.tag(2, g.O0.LengthDelimited).fork(), n).join();
+            tO.internalBinaryWrite(e.buckets[i], t.tag(2, m.O0.LengthDelimited).fork(), n).join();
         let i = n.writeUnknownFields;
-        return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
+        return (!1 !== i && (!0 == i ? m.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
 let tF = new tk();

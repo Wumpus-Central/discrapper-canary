@@ -1,7 +1,7 @@
-function l(e, t, n) {
-    return "string" == typeof e.content || void 0 === e.content ? e.content : t(e.content, n);
+function l(e, n, t) {
+    return "string" == typeof e.content || void 0 === e.content ? e.content : n(e.content, t);
 }
-function i(e) {
+function r(e) {
     return "home" === e || "browse" === e || "customize" === e || "guide" === e || "linked-roles" === e;
 }
-n.d(t, { d: () => i, t: () => l });
+t.d(n, { d: () => r, t: () => l });

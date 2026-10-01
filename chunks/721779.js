@@ -34,8 +34,8 @@ let h = n.n(A)().v4().source,
 function T(e) {
     return e.replace(p, "");
 }
-var m = n(652215),
-    g = n(758836);
+var g = n(652215),
+    m = n(758836);
 let S = /^\/([a-zA-Z0-9-]+)$/,
     N = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
     C = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
@@ -56,9 +56,9 @@ let S = /^\/([a-zA-Z0-9-]+)$/,
     F = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     B = X(window.GLOBAL_ENV.INVITE_HOST),
     V = X(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-    H = X(window.GLOBAL_ENV.WEBAPP_ENDPOINT ?? `//canary.${m.U2_}`),
-    j = X(`//canary.${m.U2_}`),
-    W = X(`//ptb.${m.U2_}`),
+    H = X(window.GLOBAL_ENV.WEBAPP_ENDPOINT ?? `//canary.${g.U2_}`),
+    j = X(`//canary.${g.U2_}`),
+    W = X(`//ptb.${g.U2_}`),
     Y = X("discordapp.com"),
     K = X("discord.com"),
     $ = [
@@ -77,11 +77,11 @@ function X(e) {
     }
     return { host: e, pathPrefix: null };
 }
-function q(e, t) {
+function Z(e, t) {
     return t.host?.replace(/^www[.]/i, "") === e.host;
 }
-function Z(e, t) {
-    if (!q(e, t)) return null;
+function q(e, t) {
+    if (!Z(e, t)) return null;
     let n = t.pathname ?? "",
         i = e.pathPrefix ?? "";
     if (!n.startsWith(i)) return null;
@@ -89,7 +89,7 @@ function Z(e, t) {
     return "" === r ? null : r;
 }
 function Q(e) {
-    return Z(H, e) ?? Z(j, e) ?? Z(W, e) ?? Z(Y, e) ?? Z(K, e);
+    return q(H, e) ?? q(j, e) ?? q(W, e) ?? q(Y, e) ?? q(K, e);
 }
 function J(e) {
     let t = ea(e);
@@ -100,17 +100,17 @@ function J(e) {
             templateHostRemainingPath: null,
             primaryHostRemainingPath: null,
         };
-    let n = Z(B, t),
-        i = Z(V, t),
-        r = Z(H, t) ?? Z(j, t) ?? Z(W, t) ?? Z(Y, t) ?? Z(K, t);
+    let n = q(B, t),
+        i = q(V, t),
+        r = q(H, t) ?? q(j, t) ?? q(W, t) ?? q(Y, t) ?? q(K, t);
     return { url: t, inviteHostRemainingPath: n, templateHostRemainingPath: i, primaryHostRemainingPath: r };
 }
 function ee(e) {
     if (e.includes("\\")) {
         let t = ea(e);
         if (null == t) return !1;
-        if (q(B, t)) return !0;
-        if ([H, j, W, Y, K].some((e) => q(e, t))) return t.pathname?.toUpperCase().includes(E.I.INVITE) ?? !1;
+        if (Z(B, t)) return !0;
+        if ([H, j, W, Y, K].some((e) => Z(e, t))) return t.pathname?.toUpperCase().includes(E.I.INVITE) ?? !1;
     }
     return !1;
 }
@@ -182,10 +182,10 @@ function et(e) {
                 let e = T[2];
                 r(E.I.APP_DIRECTORY_PROFILE, e);
             }
-            let m = h?.match(L);
-            if (null != m) {
-                let e = m[2],
-                    t = m[3];
+            let g = h?.match(L);
+            if (null != g) {
+                let e = g[2],
+                    t = g[3];
                 if (null != t) {
                     let n = (0, s.L)(e, t);
                     r(E.I.APP_DIRECTORY_STOREFRONT_SKU, n);
@@ -219,7 +219,7 @@ function et(e) {
                 let t = null != I ? (0, i.parse)(I) : null,
                     n = t?.tab,
                     a = t?.applicationId,
-                    s = n === g.G2.GAME_SHOPS && "string" == typeof a ? en(t?.skuId, t) : [];
+                    s = n === m.G2.GAME_SHOPS && "string" == typeof a ? en(t?.skuId, t) : [];
                 if ("string" == typeof a && s.length > 0) r(E.I.SOCIAL_LAYER_STOREFRONT_APP, (0, c.m5)(s, a));
                 else {
                     let t = e.hash?.match(k);

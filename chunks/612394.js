@@ -1,8 +1,8 @@
-n.d(t, { AR: () => m, So: () => p, fh: () => f, uA: () => h });
+n.d(t, { AR: () => h, So: () => p, fh: () => f, uA: () => m });
 var l = n(95561),
     i = n(597184),
-    s = n(194004),
-    r = n(885386),
+    r = n(194004),
+    s = n(885386),
     a = n(174459),
     o = n(652215);
 let u = new Map(),
@@ -13,12 +13,12 @@ function d() {
         a.default.track(o.HAw.DETECTABLE_GAME_SEARCHED_BATCHED, { surface: e, search_count: t, interval: 1 });
     u.clear();
 }
-function m(e, t) {
-    if (!r.BQ.getSetting() || e !== i.DB.GAME) return;
+function h(e, t) {
+    if (!s.BQ.getSetting() || e !== i.DB.GAME) return;
     let n = "game_mention_autocomplete";
     (u.set(n, (u.get(n) ?? 0) + 1), null == c && (c = setTimeout(d, 1e3)));
 }
-function h(e, t, n) {
+function m(e, t, n) {
     a.default.track(o.HAw.CHANNEL_AUTOCOMPLETE_OPEN, {
         ...(0, l.dI)(t),
         ...(0, l.H$)(t.guild_id),
@@ -51,11 +51,11 @@ function f(e) {
         replaced: l,
         source: (function (e) {
             switch (e) {
-                case s.D6.AUTOCOMPLETE:
+                case r.D6.AUTOCOMPLETE:
                     return "autocomplete";
-                case s.D6.STICKER_PICKER:
+                case r.D6.STICKER_PICKER:
                     return "picker";
-                case s.D6.BUILT_IN_INTEGRATION:
+                case r.D6.BUILT_IN_INTEGRATION:
                     return "built_in_integration";
                 default:
                     return null;

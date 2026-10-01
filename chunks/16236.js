@@ -3,12 +3,12 @@ n.d(t, {
     S_: () => W,
     w6: () => K,
     od: () => $,
-    Ub: () => Z,
+    Ub: () => q,
     zN: () => J,
     tV: () => et,
     _2: () => Q,
     kG: () => en,
-    Ye: () => q,
+    Ye: () => Z,
     uM: () => ee,
     nR: () => z,
     i_: () => Y,
@@ -30,8 +30,8 @@ var i = n(435558),
     f = n(935208),
     p = n(181079),
     T = n(676168),
-    m = n(796637),
-    g = n(93055),
+    g = n(796637),
+    m = n(93055),
     S = n(5180),
     N = n(635233),
     C = n(771959),
@@ -86,7 +86,7 @@ function G(e) {
 }
 function x(e, t) {
     if ((U(e), r().size(e) >= v.lj)) return { limit: v.lj, canUpsell: !1 };
-    let { favoriteLimit: n, canUpsellFavoriteLimit: i } = (0, g.ad)();
+    let { favoriteLimit: n, canUpsellFavoriteLimit: i } = (0, m.ad)();
     return n <= 0 || t === a.Ip.CATEGORY || G(e) < n ? null : { limit: n, canUpsell: i };
 }
 function k(e) {
@@ -169,7 +169,7 @@ function Y(e) {
                     b.BVt.CHANNEL(
                         t,
                         0 ===
-                            (a = (i = (n = (0, m.g)())
+                            (a = (i = (n = (0, g.g)())
                                 .getSections()
                                 .flatMap((e, t) =>
                                     r()
@@ -227,16 +227,16 @@ async function z(e) {
 function X(e) {
     Y(e);
 }
-async function q(e) {
+async function Z(e) {
     if (!p.A.autoAddJoinedThreads || p.A.isFavorite(e)) return;
     let t = E.A.getChannel(e);
     null != t &&
         t.isThread() &&
         (t.isPrivate() || A.A.can(M.xB.VIEW_CHANNEL, t)) &&
-        (0, g.ad)().hasAccess &&
+        (0, m.ad)().hasAccess &&
         (await j([e], { categoryName: v.A }, "auto_thread_join", { silent: !0 }));
 }
-function Z(e) {
+function q(e) {
     B({
         update: (t) => {
             if (

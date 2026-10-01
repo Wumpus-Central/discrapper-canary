@@ -17,8 +17,8 @@ var l = n(395504),
     f = n(576705),
     p = n(573163),
     T = n(309010),
-    m = n(543465),
-    g = n(287809),
+    g = n(543465),
+    m = n(287809),
     S = n(652215),
     N = n(746080),
     C = n(790782);
@@ -47,7 +47,7 @@ function b(e) {
     (t.sentinel++, y++);
 }
 function M(e, t, n) {
-    return null != e.guild_id && n && !((0, u.fT)(e.type) || m.Ay.isChannelRecordOrParentOptedIn(e)) && 0 === t;
+    return null != e.guild_id && n && !((0, u.fT)(e.type) || g.Ay.isChannelRecordOrParentOptedIn(e)) && 0 === t;
 }
 function P(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0,
@@ -59,11 +59,11 @@ function P(e) {
             e.hasFlag(N.lx.IS_GUILD_RESOURCE_CHANNEL) ||
             ((0 === t || n) &&
                 (e.isThread()
-                    ? d.A.isMuted(e.id) || m.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.parent_id)
-                    : m.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id))) ||
+                    ? d.A.isMuted(e.id) || g.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.parent_id)
+                    : g.Ay.isGuildOrCategoryOrChannelMuted(e.guild_id, e.id))) ||
             (!e.isPrivate() && (M(e, t, (0, l.WW)(e.guild_id)) || !f.A.can(e.accessPermissions, e)))
         ) &&
-        (t > 0 || m.Ay.resolveUnreadSetting(e) === C.e.ALL_MESSAGES)
+        (t > 0 || g.Ay.resolveUnreadSetting(e) === C.e.ALL_MESSAGES)
     );
 }
 function U(e) {
@@ -78,7 +78,7 @@ function U(e) {
 }
 function w(e, t) {
     let n = p.Ay.hasUnread(e, t);
-    return t !== C.P.GUILD_EVENT ? n : !(m.Ay.isMuted(e) || m.Ay.isMuteScheduledEventsEnabled(e)) && n;
+    return t !== C.P.GUILD_EVENT ? n : !(g.Ay.isMuted(e) || g.Ay.isMuteScheduledEventsEnabled(e)) && n;
 }
 function G(e, t) {
     let n = D(e);
@@ -148,10 +148,10 @@ function H(e, t) {
                 (i.mentionCounts[n.id] = { count: r, isMentionLowImportance: !1 }));
         }
     } else {
-        let e = m.Ay.isMuted(n);
+        let e = g.Ay.isMuted(n);
         if (e && !1 === t) return !1;
-        let c = m.Ay.getMutedChannels(n),
-            _ = m.Ay.getChannelOverrides(n),
+        let c = g.Ay.getMutedChannels(n),
+            _ = g.Ay.getChannelOverrides(n),
             E = (0, l.WW)(n),
             h = A.A.getMutableBasicGuildChannelsForGuild(n);
         for (let t in h) {
@@ -166,15 +166,15 @@ function H(e, t) {
                 } = p.Ay.getGuildChannelUnreadState(n, E, _, l, o),
                 T = d > 0;
             if (!T && l) continue;
-            let g = !o && (!l || T) && A;
-            (g || T) &&
+            let m = !o && (!l || T) && A;
+            (m || T) &&
                 ((r = n),
                 (a = d),
                 (s = E),
                 !(((0, u.ay)(r.type) && 0 === a) || !f.A.canBasicChannel((0, u.pd)(r.type), r) || M(r, a, s)) &&
                     !("flags" in r && r.hasFlag(N.lx.IS_GUILD_RESOURCE_CHANNEL)) &&
-                    (a > 0 || m.Ay.resolveUnreadSetting(r) === C.e.ALL_MESSAGES)) &&
-                (g && ((i.unreadByType[C.P.CHANNEL] = !0), (i.unreadChannelId = t)),
+                    (a > 0 || g.Ay.resolveUnreadSetting(r) === C.e.ALL_MESSAGES)) &&
+                (m && ((i.unreadByType[C.P.CHANNEL] = !0), (i.unreadChannelId = t)),
                 T &&
                     (I ? (i.lowImportanceMentionCount += d) : (i.highImportanceMentionCount += d),
                     (i.mentionCounts[n.id] = { count: d, isMentionLowImportance: I })));
@@ -251,11 +251,11 @@ function X() {
     let e = A.A.getChannel(T.Ay.getChannelId());
     return null != e && B(e.getGuildId(), [e.id]);
 }
-function q(e) {
+function Z(e) {
     let { user: t, guildId: n } = e;
     return t.id === E.default.getId() && H(n);
 }
-function Z(e) {
+function q(e) {
     let { channelId: t } = e,
         n = A.A.getChannel(t);
     return null != n && B(n.getGuildId(), [n.id]);
@@ -269,7 +269,7 @@ function Q(e) {
         if (
             ((n.isThread()
                 ? !d.A.hasJoined(n.id) || d.A.isMuted(n.id)
-                : m.Ay.isGuildOrCategoryOrChannelMuted(n.guild_id, n.id)) ||
+                : g.Ay.isGuildOrCategoryOrChannelMuted(n.guild_id, n.id)) ||
                 e.unreadByType[C.P.CHANNEL]) &&
             0 === p.Ay.getMentionCount(t)
         )
@@ -386,9 +386,9 @@ class ef extends I.A {
             GUILD_CREATE: K,
             GUILD_DELETE: $,
             MESSAGE_CREATE: Q,
-            MESSAGE_ACK: Z,
+            MESSAGE_ACK: q,
             BULK_ACK: en,
-            UPDATE_CHANNEL_DIMENSIONS: Z,
+            UPDATE_CHANNEL_DIMENSIONS: q,
             CHANNEL_SELECT: J,
             CHANNEL_DELETE: z,
             WINDOW_FOCUS: X,
@@ -405,7 +405,7 @@ class ef extends I.A {
             THREAD_MEMBER_UPDATE: el,
             THREAD_MEMBERS_UPDATE: eo,
             PASSIVE_UPDATE_V2: ec,
-            GUILD_MEMBER_UPDATE: q,
+            GUILD_MEMBER_UPDATE: Z,
             USER_GUILD_SETTINGS_FULL_UPDATE: eE,
             USER_GUILD_SETTINGS_CHANNEL_UPDATE: eh,
             USER_GUILD_SETTINGS_CHANNEL_UPDATE_BULK: eh,
@@ -415,22 +415,22 @@ class ef extends I.A {
             GUILD_SCHEDULED_EVENT_CREATE: er,
             GUILD_SCHEDULED_EVENT_UPDATE: er,
             GUILD_SCHEDULED_EVENT_DELETE: ea,
-            CHANNEL_RTC_UPDATE_CHAT_OPEN: Z,
-            LOAD_MESSAGES_SUCCESS: Z,
-            CHANNEL_ACK: Z,
-            CHANNEL_LOCAL_ACK: Z,
+            CHANNEL_RTC_UPDATE_CHAT_OPEN: q,
+            LOAD_MESSAGES_SUCCESS: q,
+            CHANNEL_ACK: q,
+            CHANNEL_LOCAL_ACK: q,
             NOTIFICATION_SETTINGS_UPDATE: Y,
             RECOMPUTE_READ_STATES: Y,
-            VOICE_CHANNEL_SELECT: Z,
-            ENABLE_AUTOMATIC_ACK: Z,
-            RESORT_THREADS: Z,
+            VOICE_CHANNEL_SELECT: q,
+            ENABLE_AUTOMATIC_ACK: q,
+            RESORT_THREADS: q,
             NOTIFICATION_CENTER_CLEAR_GUILD_MENTIONS: eA,
-            TRY_ACK: Z,
+            TRY_ACK: q,
             LOAD_RECENT_MENTIONS_SUCCESS: eI,
         });
     }
     initialize() {
-        this.waitFor(A.A, T.Ay, p.Ay, f.A, E.default, g.default, m.Ay, o.A, d.A, s.Ay);
+        this.waitFor(A.A, T.Ay, p.Ay, f.A, E.default, m.default, g.Ay, o.A, d.A, s.Ay);
     }
     loadCache() {
         let e = this.readSnapshot(ef.LATEST_SNAPSHOT_VERSION);

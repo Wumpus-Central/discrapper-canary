@@ -1,12 +1,12 @@
-n.d(t, { A: () => a, J: () => r });
+n.d(t, { A: () => r, J: () => a });
 var i = n(477900);
 n(582128);
 var l = n(21878),
     s = n(230797);
-function a(e) {
+function r(e) {
     let {
-        channelMessageProps: { message: t, channel: n, compact: a = !1 },
-        hasSpoilerEmbeds: r,
+        channelMessageProps: { message: t, channel: n, compact: r = !1 },
+        hasSpoilerEmbeds: a,
         hasBailedAst: o,
         handleContextMenu: d,
         isInteracting: c,
@@ -18,19 +18,19 @@ function a(e) {
         hideInviteEmbedBanner: A,
         hideActivityInvite: x,
         disableComponentInteractivity: f,
-        className: E,
+        className: I,
     } = e;
     return u
         ? null
         : (0, i.jsx)(l.A, {
               message: t,
               children: (0, i.jsx)(s.Ay, {
-                  className: E,
+                  className: I,
                   isInteracting: c,
                   message: t,
                   channel: n,
-                  compact: a,
-                  hasSpoilerEmbeds: r,
+                  compact: r,
+                  hasSpoilerEmbeds: a,
                   hasBailedAst: o,
                   isMessageSnapshot: m,
                   onMediaItemContextMenu: d,
@@ -43,19 +43,19 @@ function a(e) {
               }),
           });
 }
-function r(e, t, n) {
+function a(e, t, n) {
     let {
         message: l,
-        channel: a,
-        compact: r = !1,
+        channel: r,
+        compact: a = !1,
         renderThreadAccessory: o,
         disableReactionCreates: d,
         disableReactionUpdates: c,
     } = e;
     return (0, i.jsx)(s.OC, {
         message: l,
-        channel: a,
-        compact: r,
+        channel: r,
+        compact: a,
         hasSpoilerEmbeds: t,
         hasBailedAst: n,
         renderThreadAccessory: o,

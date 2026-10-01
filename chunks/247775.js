@@ -5,7 +5,7 @@ let i, r;
         getAnalyticsToken: () => S,
         getToken: () => N,
         hideToken: () => L,
-        init: () => m,
+        init: () => g,
         removeAnalyticsToken: () => v,
         removeToken: () => D,
         setAnalyticsToken: () => C,
@@ -47,7 +47,7 @@ function p(e) {
 function T(e) {
     return c?.isEncryptionAvailable() && !e.startsWith(l) ? `${l}${c.encryptString(e)}` : e;
 }
-function m() {
+function g() {
     if (I) return;
     ((r = a.w.get(s.il)), (A = a.w.get(s.zy) || {}));
     let { decryptedToken: e, wasEncrypted: t } = p(r);
@@ -67,32 +67,32 @@ function m() {
         )),
         (I = !0));
 }
-function g() {
-    I || m();
+function m() {
+    I || g();
 }
 function S() {
     return N(o);
 }
 function N(e) {
-    return (m(), null != e) ? E[e] : i;
+    return (g(), null != e) ? E[e] : i;
 }
 function C(e) {
-    null == e ? D(o) : (g(), R(e, o));
+    null == e ? D(o) : (m(), R(e, o));
 }
 function O(e, t) {
-    null == e ? D(t) : (g(), (i = e), R(e, t));
+    null == e ? D(t) : (m(), (i = e), R(e, t));
 }
 function R(e, t) {
     (null != t && (E[t] = e), _ ? b() : ((r = i), (A = E), f()));
 }
 function L() {
-    h || (g(), (h = !0), f());
+    h || (m(), (h = !0), f());
 }
 function y() {
-    h && (g(), (h = !1), f());
+    h && (m(), (h = !1), f());
 }
 function D(e) {
-    g();
+    m();
     let t = i;
     return (
         null != e && ((t = E[e]), delete E[e], delete A[e]),
@@ -105,7 +105,7 @@ function v() {
     return D(o);
 }
 function b() {
-    (g(),
+    (m(),
         c?.isEncryptionAvailable()
             ? (null != i && (r = T(i)),
               (A = d(

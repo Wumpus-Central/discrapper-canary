@@ -1,74 +1,74 @@
-n.d(t, { A: () => p });
-var l = n(477900),
-    i = n(582128),
-    s = n(503698),
-    r = n.n(s),
-    a = n(17928),
-    o = n(573435),
-    u = n(696451),
-    c = n(486020),
-    d = n(392054),
-    m = n(125805),
-    h = n(532406);
-function p(e) {
+i.d(s, { A: () => A });
+var t = i(477900),
+    l = i(582128),
+    a = i(503698),
+    n = i.n(a),
+    c = i(17928),
+    o = i(573435),
+    r = i(696451),
+    d = i(486020),
+    u = i(392054),
+    h = i(125805),
+    p = i(532406);
+function A(e) {
     let {
-            section: t,
-            channel: { guild_id: n },
-            isSelected: s,
-            width: p,
-            height: f,
+            section: s,
+            channel: { guild_id: i },
+            isSelected: a,
+            width: A,
+            height: b,
             className: g,
-            selectable: x = !1,
-            isSquircle: A,
+            selectable: k = !1,
+            isSquircle: w,
             onFocus: C,
-            onBlur: E,
-            onMouseOver: I,
-            onMouseLeave: y,
-            ...S
+            onBlur: I,
+            onMouseOver: m,
+            onMouseLeave: v,
+            ...N
         } = e,
-        [v, N] = i.useState(!1),
-        _ = i.useCallback(() => {
-            (N(!0), C?.());
+        [f, x] = l.useState(!1),
+        E = l.useCallback(() => {
+            (x(!0), C?.());
         }, [C]),
-        j = i.useCallback(() => {
-            (N(!1), E?.());
-        }, [E]),
-        b = i.useCallback(() => {
-            (N(!0), I?.());
+        L = l.useCallback(() => {
+            (x(!1), I?.());
         }, [I]),
-        T = i.useCallback(() => {
-            (N(!1), y?.());
-        }, [y]),
-        R = (0, a.bG)([u.Ay], () =>
-            t.application?.bot?.id != null ? u.Ay.getMember(n, t.application?.bot?.id) : null,
+        y = l.useCallback(() => {
+            (x(!0), m?.());
+        }, [m]),
+        j = l.useCallback(() => {
+            (x(!1), v?.());
+        }, [v]),
+        T = (0, c.bG)([r.Ay], () =>
+            s.application?.bot?.id != null ? r.Ay.getMember(i, s.application?.bot?.id) : null,
         ),
-        O = i.useMemo(
+        _ = l.useMemo(
             () =>
-                t.type === d.Hf.APPLICATION
-                    ? c.Ay.getApplicationIconURL({
-                          id: t.id,
-                          icon: t.icon,
-                          bot: t.application?.bot,
+                s.type === u.Hf.APPLICATION
+                    ? d.Ay.getApplicationIconURL({
+                          id: s.id,
+                          icon: s.icon,
+                          bot: s.application?.bot,
                           botIconFirst: !0,
-                          guildMember: R,
-                          size: p,
+                          guildMember: T,
+                          size: A,
                       })
-                    : h,
-            [t, p, R],
+                    : p,
+            [s, A, T],
         );
-    return (0, l.jsx)("div", {
-        ...S,
-        className: r()(m.iE, g, { [m.rb]: x, [m.wH]: x && s }),
-        onFocus: _,
-        onBlur: j,
-        onMouseOver: b,
-        onMouseLeave: T,
-        children: (0, l.jsx)(o.Ay, {
-            className: m.dK,
-            mask: A || (x && (s || v)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
-            width: p,
-            height: f,
-            children: (0, l.jsx)("img", { alt: "", className: m.Kk, style: { width: p, height: f }, src: O }),
+    return (0, t.jsx)("div", {
+        ...N,
+        className: n()(h.iE, g, { [h.rb]: k, [h.wH]: k && a }),
+        onFocus: E,
+        onBlur: L,
+        onMouseOver: y,
+        onMouseLeave: j,
+        children: (0, t.jsx)(o.Ay, {
+            className: h.dK,
+            mask: w || (k && (a || f)) ? o.hW.SQUIRCLE : o.hW.AVATAR_DEFAULT,
+            width: A,
+            height: b,
+            children: (0, t.jsx)("img", { alt: "", className: h.Kk, style: { width: A, height: b }, src: _ }),
         }),
     });
 }

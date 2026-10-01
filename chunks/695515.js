@@ -16,8 +16,8 @@ let c = null,
     f = null,
     p = P(),
     T = !1,
-    m = !1,
-    g = null,
+    g = !1,
+    m = null,
     S = null,
     N = [],
     C = [],
@@ -113,7 +113,7 @@ function V(e) {
     v = e.reduce((e, t) => ((e[t.entitlement_id] = t), e), {});
 }
 function H() {
-    m = !0;
+    g = !0;
 }
 function j(e) {
     let { linkedUsers: t, familyCenterTeenActivity: n, ageGroup: i } = e,
@@ -147,8 +147,8 @@ function j(e) {
         (L = I ?? null),
         (y = f ?? null),
         (b = i ?? null),
-        (m = !1),
-        (g = l.default.fromTimestamp(Date.now())),
+        (g = !1),
+        (m = l.default.fromTimestamp(Date.now())),
         (T = !0));
 }
 function W(e) {
@@ -186,8 +186,8 @@ function K(e) {
         null != h && V(h),
         (N = o),
         (C = d),
-        (m = !1),
-        (g = l.default.fromTimestamp(Date.now())),
+        (g = !1),
+        (m = l.default.fromTimestamp(Date.now())),
         (O = _),
         (R = E),
         (L = I ?? null),
@@ -206,11 +206,11 @@ function X(e) {
     let { linkedUsers: t } = e;
     G(t, !0);
 }
-function q(e) {
+function Z(e) {
     let { linkCode: t, expiresAt: n } = e;
     ((I = t), (f = n));
 }
-function Z(e) {
+function q(e) {
     let { tab: t } = e;
     p = t;
 }
@@ -243,8 +243,8 @@ function et() {
         (A = U()),
         (h = w()),
         (M = {}),
-        (m = !1),
-        (g = null),
+        (g = !1),
+        (m = null),
         (p = P()),
         (E = !1),
         (N = []),
@@ -274,8 +274,8 @@ class en extends r.A {
             FAMILY_CENTER_REQUEST_LINK_SUCCESS: Y,
             FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS: z,
             FAMILY_CENTER_REQUEST_LINK_REMOVE_SUCCESS: X,
-            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: q,
-            FAMILY_CENTER_HANDLE_TAB_SELECT: Z,
+            FAMILY_CENTER_LINK_CODE_FETCH_SUCCESS: Z,
+            FAMILY_CENTER_HANDLE_TAB_SELECT: q,
             SET_LOCATION_METADATA: ee,
             LOGOUT: et,
         });
@@ -362,7 +362,7 @@ class en extends r.A {
         return S;
     }
     isLoading() {
-        return m;
+        return g;
     }
     getTopUserActivities() {
         return N;
@@ -403,7 +403,7 @@ class en extends r.A {
         return b;
     }
     canRefetch() {
-        return null === g || l.default.age(g) > d.fD;
+        return null === m || l.default.age(m) > d.fD;
     }
     isCurrentUserInRestrictedHours() {
         let e = a.default.getCurrentUser();

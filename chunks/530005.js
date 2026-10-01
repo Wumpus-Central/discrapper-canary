@@ -1,34 +1,34 @@
-s.d(a, { F: () => d });
-var e = s(477900);
-s(582128);
-var t = s(661531),
-    i = s(996682),
-    h = s(27989);
+t.d(s, { F: () => d });
+var a = t(477900);
+t(582128);
+var e = t(661531),
+    i = t(996682),
+    h = t(27989);
 function d(l) {
     let {
-            size: a = "md",
-            width: s,
+            size: s = "md",
+            width: t,
             height: d,
-            color: n = t.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: c = "",
-            ...o
+            color: n = e.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: r = "",
+            ...c
         } = l,
-        r = (0, h.J)(a),
-        v = r?.width ?? s,
-        w = r?.height ?? d;
-    return (0, e.jsx)("svg", {
-        ...(0, i.A)(o),
+        o = (0, h.J)(s),
+        w = o?.width ?? t,
+        p = o?.height ?? d;
+    return (0, a.jsx)("svg", {
+        ...(0, i.A)(c),
         xmlns: "http://www.w3.org/2000/svg",
-        width: v,
-        height: w,
+        width: w,
+        height: p,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, e.jsx)("path", {
+        children: (0, a.jsx)("path", {
             fill: "string" == typeof n ? n : n.css,
             fillRule: "evenodd",
             d: "M10 4a2 2 0 1 0 4 0 2 2 0 0 0-4 0Zm2 10a2 2 0 1 1 0-4 2 2 0 0 1 0 4Zm0 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4Z",
             clipRule: "evenodd",
-            className: c,
+            className: r,
         }),
     });
 }

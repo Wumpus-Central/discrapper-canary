@@ -21,8 +21,8 @@ function f() {
 n(321073);
 var p = n(869431),
     T = n(594615);
-let m = c.A.modules.select.OPTION_HEIGHT.resolve(),
-    g = m + 4,
+let g = c.A.modules.select.OPTION_HEIGHT.resolve(),
+    m = g + 4,
     S = [];
 function N(e) {
     return null != e.description && "" !== e.description;
@@ -87,7 +87,7 @@ function C(e) {
                 }
             });
         }, [B, v]));
-    let { activeIndex: X, handleKeyDown: q } = R(k, H);
+    let { activeIndex: X, handleKeyDown: Z } = R(k, H);
     r.useEffect(() => {
         if (null != X && k && -1 !== a) {
             let e = (0, o.t$)(B, f(B, X)),
@@ -95,7 +95,7 @@ function C(e) {
             t?.focus();
         }
     }, [X, H, k, B, a]);
-    let Z = r.useCallback(
+    let q = r.useCallback(
             (e, t) =>
                 N(
                     H[
@@ -106,8 +106,8 @@ function C(e) {
                         })(C, e, t)
                     ],
                 )
-                    ? g
-                    : m,
+                    ? m
+                    : g,
             [H, C],
         ),
         Q = r.useCallback(
@@ -160,7 +160,7 @@ function C(e) {
                 height:
                     null != U
                         ? `${
-                              H.slice(0, U).reduce((e, t) => e + (N(t) ? g : m), 0) +
+                              H.slice(0, U).reduce((e, t) => e + (N(t) ? m : g), 0) +
                               26 *
                                   (function (e, t) {
                                       let n = 0,
@@ -173,7 +173,7 @@ function C(e) {
             },
             role: void 0,
             tabIndex: a,
-            rowHeight: Z,
+            rowHeight: q,
             sections: e ? C.map((e) => e.count) : [H.length],
             sectionHeight: 26 * !!e,
             renderSection: e
@@ -235,7 +235,7 @@ function C(e) {
                     "aria-busy": w,
                     ref: n,
                     onKeyDown: (e) => {
-                        (r?.(e), q(e));
+                        (r?.(e), Z(e));
                     },
                     ...l,
                     role: "listbox",

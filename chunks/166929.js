@@ -4,7 +4,7 @@
     aV: () => C,
     dg: () => R,
     eq: () => p,
-    iF: () => g,
+    iF: () => m,
     kZ: () => S,
     s7: () => N,
     tH: () => O,
@@ -138,7 +138,7 @@ let T = Object.freeze({
         "mediafoundation hw": "wmf_hw",
         "mediafoundation direct3d": "wmf_direct_3d",
     }),
-    m = Object.freeze({
+    g = Object.freeze({
         videotoolbox: "videotoolbox",
         libvpx: "vp8_libvpx",
         electron: "electron",
@@ -155,7 +155,7 @@ let T = Object.freeze({
         "c2.android": "android",
         "omx.google": "android",
     });
-var g =
+var m =
     (((s = {})[(s.None = 0)] = "None"),
     (s[(s.ClientSideDisableVideo = 1)] = "ClientSideDisableVideo"),
     (s[(s.SenderStopped = 2)] = "SenderStopped"),
@@ -167,7 +167,7 @@ function S(e) {
 }
 function N(e) {
     if (null == e) return "unknown";
-    for (let t of Object.keys(m)) if (e.toLowerCase().includes(t)) return m[t];
+    for (let t of Object.keys(g)) if (e.toLowerCase().includes(t)) return g[t];
     return "uncategorized";
 }
 function C(e) {
@@ -491,13 +491,13 @@ class R {
             this.statsWindow.length < 6)
         )
             return;
-        let { bytes: p, framesCodec: T, timestamp: m } = this.statsWindow[this.statsWindow.length - 3];
+        let { bytes: p, framesCodec: T, timestamp: g } = this.statsWindow[this.statsWindow.length - 3];
         _.forEach((e) => {
             s <= e && (this.resolutionBuckets[e] += f);
         });
-        let g = (a - m) / 1e3,
-            S = ((i - p) * 8) / g,
-            N = (r - T) / g;
+        let m = (a - g) / 1e3,
+            S = ((i - p) * 8) / m,
+            N = (r - T) / m;
         (c.forEach((e) => {
             S <= e && (this.bitrateBuckets[e] += f);
         }),

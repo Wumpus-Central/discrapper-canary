@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => f });
 var i = n(17928),
     l = n(616356),
     r = n(25578),
@@ -9,14 +9,14 @@ var i = n(17928),
     d = n(652215),
     c = n(268378),
     h = n(375708);
-function g() {
+function f() {
     let e = (0, u.E)(),
         t = (0, i.bG)([o.Ay], () => o.Ay.getLastClipsError()),
         n = (0, i.bG)(
             [r.Ay, l.A],
             () => r.Ay.hasClipsSource() || l.A.getCurrentUserActiveStream()?.state === d.XYD.ACTIVE,
         ),
-        g = (0, i.bG)([s.Ay], () => s.Ay.getKeybindForAction(d.hCu.SAVE_CLIP));
+        f = (0, i.bG)([s.Ay], () => s.Ay.getKeybindForAction(d.hCu.SAVE_CLIP));
     return {
         tooltip:
             null != t
@@ -24,8 +24,8 @@ function g() {
                 : e && !n
                   ? h.intl.string(c.default["+QNUov"])
                   : e
-                    ? null != g
-                        ? h.intl.formatToPlainString(h.t.HIMcv1, { hotkey: a.dI(g?.shortcut, !0) })
+                    ? null != f
+                        ? h.intl.formatToPlainString(h.t.HIMcv1, { hotkey: a.dI(f?.shortcut, !0) })
                         : h.intl.string(h.t.s52pju)
                     : h.intl.string(c.default.Jc3hn1),
         clipsInitError: t,

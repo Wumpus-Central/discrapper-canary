@@ -1,7 +1,7 @@
 n.d(t, { A: () => o });
-var l = n(887129),
-    i = n(17928),
-    s = n(775602);
+var i = n(887129),
+    s = n(17928),
+    l = n(775602);
 function r() {
     return Promise.resolve();
 }
@@ -10,6 +10,6 @@ function a(e) {
     null != t && t.focus();
 }
 function o(e, t) {
-    let n = (0, i.bG)([s.Ay], () => s.Ay.keyboardModeEnabled);
-    return (0, l.Ay)({ id: e, isEnabled: n, orientation: t, setFocus: a, scrollToStart: r, scrollToEnd: r });
+    let n = (0, s.bG)([l.Ay], () => l.Ay.keyboardModeEnabled);
+    return (0, i.Ay)({ id: e, isEnabled: n, orientation: t, setFocus: a, scrollToStart: r, scrollToEnd: r });
 }

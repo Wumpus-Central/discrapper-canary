@@ -1,20 +1,20 @@
-e.d(Y, { A: () => I });
-var t = e(780964),
-    E = e(766075),
-    s = e(99206);
-function I(A) {
-    let Y = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    (0, E.openUserSettings)(
-        (function (A) {
-            switch (A) {
-                case s.J.MY_GAMES:
-                    return t.X.REGISTERED_GAMES_PANEL;
-                case s.J.OVERLAY:
-                    return t.X.OVERLAY_PANEL;
-                case s.J.ACTIVITY_PRIVACY:
-                    return t.X.ACTIVITY_PRIVACY_PANEL;
+n.d(e, { A: () => r });
+var l = n(780964),
+    i = n(766075),
+    a = n(99206);
+function r(t) {
+    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    (0, i.openUserSettings)(
+        (function (t) {
+            switch (t) {
+                case a.J.MY_GAMES:
+                    return l.X.REGISTERED_GAMES_PANEL;
+                case a.J.OVERLAY:
+                    return l.X.OVERLAY_PANEL;
+                case a.J.ACTIVITY_PRIVACY:
+                    return l.X.ACTIVITY_PRIVACY_PANEL;
             }
-        })(A),
-        Y,
+        })(t),
+        e,
     );
 }

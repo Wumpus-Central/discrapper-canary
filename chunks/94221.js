@@ -1,7 +1,7 @@
-n.d(t, { I: () => i, p: () => a });
+n.d(t, { I: () => a, p: () => r });
 var l = n(842209),
-    r = n(458524);
-function i(e, t) {
+    i = n(458524);
+function a(e, t) {
     if (null == e) return null;
     let n = (function (e, t) {
         for (let n of [e.displayName, e.untranslatedName]) {
@@ -12,9 +12,9 @@ function i(e, t) {
     })(e, t);
     return null == n ? null : { commandId: e.id, applicationId: e.applicationId, commandText: n };
 }
-function a(e, t, n) {
-    if (null == n || !(0, r.l)(n, t)) return null;
-    let { command: i, section: a } = l.EW({ channel: e, type: "channel" }, n.commandId, n.applicationId);
-    return null == i ? null : { command: i, section: a ?? null };
+function r(e, t, n) {
+    if (null == n || !(0, i.l)(n, t)) return null;
+    let { command: a, section: r } = l.EW({ channel: e, type: "channel" }, n.commandId, n.applicationId);
+    return null == a ? null : { command: a, section: r ?? null };
 }
 n(827669);

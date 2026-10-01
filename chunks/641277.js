@@ -1,109 +1,109 @@
-n.d(t, { B: () => o });
-var r = n(26232);
-function i(e) {
+t.d(n, { B: () => s });
+var i = t(26232);
+function r(e) {
     return Intl.getCanonicalLocales(e)[0];
 }
-var a = n(183580);
-function o(e, t, n, o, u, s) {
+var a = t(183580);
+function s(e, n, t, s, o, u) {
     let l, d;
-    if ("lookup" === n.localeMatcher)
-        l = (function (e, t, n) {
-            let i = { locale: "" };
-            for (let n of t) {
-                let t = n.replace(r.KB, ""),
-                    o = (0, a.q)(e, t);
-                if (o) return ((i.locale = o), n !== t && (i.extension = n.slice(t.length, n.length)), i);
+    if ("lookup" === t.localeMatcher)
+        l = (function (e, n, t) {
+            let r = { locale: "" };
+            for (let t of n) {
+                let n = t.replace(i.KB, ""),
+                    s = (0, a.q)(e, n);
+                if (s) return ((r.locale = s), t !== n && (r.extension = t.slice(n.length, t.length)), r);
             }
-            return ((i.locale = n()), i);
-        })(Array.from(e), t, s);
+            return ((r.locale = t()), r);
+        })(Array.from(e), n, u);
     else {
         var c;
-        let n, i, a, o, u;
+        let t, r, a, s, o;
         ((c = Array.from(e)),
             (a = []),
-            (o = t.reduce((e, t) => {
-                let n = t.replace(r.KB, "");
-                return (a.push(n), (e[n] = t), e);
+            (s = n.reduce((e, n) => {
+                let t = n.replace(i.KB, "");
+                return (a.push(t), (e[t] = n), e);
             }, {})),
-            (u = (0, r.B4)(a, c)).matchedSupportedLocale &&
-                u.matchedDesiredLocale &&
-                ((n = u.matchedSupportedLocale),
-                (i = o[u.matchedDesiredLocale].slice(u.matchedDesiredLocale.length) || void 0)),
-            (l = n ? { locale: n, extension: i } : { locale: s() }));
+            (o = (0, i.B4)(a, c)).matchedSupportedLocale &&
+                o.matchedDesiredLocale &&
+                ((t = o.matchedSupportedLocale),
+                (r = s[o.matchedDesiredLocale].slice(o.matchedDesiredLocale.length) || void 0)),
+            (l = t ? { locale: t, extension: r } : { locale: u() }));
     }
-    null == l && (l = { locale: s(), extension: "" });
+    null == l && (l = { locale: u(), extension: "" });
     let f = l.locale,
-        h = u[f],
-        p = { locale: "en", dataLocale: f };
+        p = o[f],
+        h = { locale: "en", dataLocale: f };
     d = l.extension
         ? (function (e) {
-              let t;
-              ((0, r.V1)(e === e.toLowerCase(), "Expected extension to be lowercase"),
-                  (0, r.V1)("-u-" === e.slice(0, 3), "Expected extension to be a Unicode locale extension"));
-              let n = [],
-                  i = [],
+              let n;
+              ((0, i.V1)(e === e.toLowerCase(), "Expected extension to be lowercase"),
+                  (0, i.V1)("-u-" === e.slice(0, 3), "Expected extension to be a Unicode locale extension"));
+              let t = [],
+                  r = [],
                   a = e.length,
-                  o = 3;
-              for (; o < a;) {
-                  let u,
-                      s = e.indexOf("-", o);
-                  u = -1 === s ? a - o : s - o;
-                  let l = e.slice(o, o + u);
-                  ((0, r.V1)(u >= 2, "Expected a subtag to have at least 2 characters"),
-                      void 0 === t && 2 != u
-                          ? -1 === n.indexOf(l) && n.push(l)
-                          : 2 === u
-                            ? ((t = { key: l, value: "" }), void 0 === i.find((e) => e.key === t?.key) && i.push(t))
-                            : t?.value === ""
-                              ? (t.value = l)
-                              : ((0, r.V1)(void 0 !== t, "Expected keyword to be defined"), (t.value += "-" + l)),
-                      (o += u + 1));
+                  s = 3;
+              for (; s < a;) {
+                  let o,
+                      u = e.indexOf("-", s);
+                  o = -1 === u ? a - s : u - s;
+                  let l = e.slice(s, s + o);
+                  ((0, i.V1)(o >= 2, "Expected a subtag to have at least 2 characters"),
+                      void 0 === n && 2 != o
+                          ? -1 === t.indexOf(l) && t.push(l)
+                          : 2 === o
+                            ? ((n = { key: l, value: "" }), void 0 === r.find((e) => e.key === n?.key) && r.push(n))
+                            : n?.value === ""
+                              ? (n.value = l)
+                              : ((0, i.V1)(void 0 !== n, "Expected keyword to be defined"), (n.value += "-" + l)),
+                      (s += o + 1));
               }
-              return { attributes: n, keywords: i };
+              return { attributes: t, keywords: r };
           })(l.extension).keywords
         : [];
-    let m = [];
-    for (let e of o) {
-        let t,
-            i = h?.[e] ?? [];
-        (0, r.V1)(Array.isArray(i), `keyLocaleData for ${e} must be an array`);
-        let a = i[0];
-        (0, r.V1)(void 0 === a || "string" == typeof a, "value must be a string or undefined");
-        let o = d.find((t) => t.key === e);
-        if (o) {
-            let n = o.value;
-            "" !== n
-                ? i.indexOf(n) > -1 && (t = { key: e, value: (a = n) })
-                : i.indexOf("true") > -1 && (t = { key: e, value: (a = "true") });
+    let _ = [];
+    for (let e of s) {
+        let n,
+            r = p?.[e] ?? [];
+        (0, i.V1)(Array.isArray(r), `keyLocaleData for ${e} must be an array`);
+        let a = r[0];
+        (0, i.V1)(void 0 === a || "string" == typeof a, "value must be a string or undefined");
+        let s = d.find((n) => n.key === e);
+        if (s) {
+            let t = s.value;
+            "" !== t
+                ? r.indexOf(t) > -1 && (n = { key: e, value: (a = t) })
+                : r.indexOf("true") > -1 && (n = { key: e, value: (a = "true") });
         }
-        let u = n[e];
-        ((0, r.V1)(null == u || "string" == typeof u, "optionsValue must be a string or undefined"),
-            "string" == typeof u &&
+        let o = t[e];
+        ((0, i.V1)(null == o || "string" == typeof o, "optionsValue must be a string or undefined"),
+            "string" == typeof o &&
                 "" ===
-                    (u = (function (e, t) {
-                        let n = t.toLowerCase();
-                        return ((0, r.V1)(void 0 !== e, "ukey must be defined"), n);
-                    })(e.toLowerCase(), u)) &&
-                (u = "true"),
-            u !== a && i.indexOf(u) > -1 && ((a = u), (t = void 0)),
-            t && m.push(t),
-            (p[e] = a));
+                    (o = (function (e, n) {
+                        let t = n.toLowerCase();
+                        return ((0, i.V1)(void 0 !== e, "ukey must be defined"), t);
+                    })(e.toLowerCase(), o)) &&
+                (o = "true"),
+            o !== a && r.indexOf(o) > -1 && ((a = o), (n = void 0)),
+            n && _.push(n),
+            (h[e] = a));
     }
     return (
-        m.length > 0 &&
-            (f = (function (e, t, n) {
-                (0, r.V1)(-1 === e.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
+        _.length > 0 &&
+            (f = (function (e, n, t) {
+                (0, i.V1)(-1 === e.indexOf("-u-"), "Expected locale to not have a Unicode locale extension");
                 let a = "-u";
-                for (let e of t) a += `-${e}`;
-                for (let e of n) {
-                    let { key: t, value: n } = e;
-                    ((a += `-${t}`), "" !== n && (a += `-${n}`));
+                for (let e of n) a += `-${e}`;
+                for (let e of t) {
+                    let { key: n, value: t } = e;
+                    ((a += `-${n}`), "" !== t && (a += `-${t}`));
                 }
-                if ("-u" === a) return i(e);
-                let o = e.indexOf("-x-");
-                return i(-1 === o ? e + a : e.slice(0, o) + a + e.slice(o));
-            })(f, [], m)),
-        (p.locale = f),
-        p
+                if ("-u" === a) return r(e);
+                let s = e.indexOf("-x-");
+                return r(-1 === s ? e + a : e.slice(0, s) + a + e.slice(s));
+            })(f, [], _)),
+        (h.locale = f),
+        h
     );
 }

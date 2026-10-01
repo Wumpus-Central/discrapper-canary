@@ -1,32 +1,32 @@
-n.d(t, { DownloadIcon: () => s });
-var r = n(477900);
-n(582128);
-var l = n(661531),
-    a = n(996682),
-    i = n(27989);
-function s(e) {
+i.d(t, { DownloadIcon: () => l });
+var a = i(477900);
+i(582128);
+var n = i(661531),
+    r = i(996682),
+    s = i(27989);
+function l(e) {
     let {
             size: t = "md",
-            width: n,
-            height: s,
-            color: u = l.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: o = "",
-            ...c
+            width: i,
+            height: l,
+            color: o = n.A.colors.INTERACTIVE_ICON_DEFAULT,
+            colorClass: u = "",
+            ...d
         } = e,
-        d = (0, i.J)(t),
-        m = d?.width ?? n,
-        h = d?.height ?? s;
-    return (0, r.jsx)("svg", {
-        ...(0, a.A)(c),
+        h = (0, s.J)(t),
+        c = h?.width ?? i,
+        f = h?.height ?? l;
+    return (0, a.jsx)("svg", {
+        ...(0, r.A)(d),
         xmlns: "http://www.w3.org/2000/svg",
-        width: m,
-        height: h,
+        width: c,
+        height: f,
         fill: "none",
         viewBox: "0 0 24 24",
-        children: (0, r.jsx)("path", {
-            fill: "string" == typeof u ? u : u.css,
+        children: (0, a.jsx)("path", {
+            fill: "string" == typeof o ? o : o.css,
             d: "M12 2a1 1 0 0 1 1 1v10.59l3.3-3.3a1 1 0 1 1 1.4 1.42l-5 5a1 1 0 0 1-1.4 0l-5-5a1 1 0 1 1 1.4-1.42l3.3 3.3V3a1 1 0 0 1 1-1ZM3 20a1 1 0 1 0 0 2h18a1 1 0 1 0 0-2H3Z",
-            className: o,
+            className: u,
         }),
     });
 }

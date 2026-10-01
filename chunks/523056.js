@@ -15,12 +15,12 @@ function a(e) {
         } = e,
         c = (0, s.J)(t),
         h = c?.width ?? n,
-        g = c?.height ?? a;
+        f = c?.height ?? a;
     return (0, i.jsx)("svg", {
         ...(0, r.A)(d),
         xmlns: "http://www.w3.org/2000/svg",
         width: h,
-        height: g,
+        height: f,
         fill: "none",
         viewBox: "0 0 24 24",
         children: (0, i.jsx)("path", {

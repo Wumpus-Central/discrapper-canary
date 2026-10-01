@@ -1,16 +1,16 @@
-n.d(t, { l: () => r });
+n.d(t, { l: () => s });
 var l = n(582128),
     i = n(267102),
-    s = n(597184);
-function r(e) {
-    let { editorHeight: t, type: n, state: r } = e,
+    r = n(597184);
+function s(e) {
+    let { editorHeight: t, type: n, state: s } = e,
         [a, o] = l.useState(void 0),
-        u = r?.query,
-        c = r?.isVisible,
+        u = s?.query,
+        c = s?.isVisible,
         { renderWindow: d } = l.useContext(i.Ay),
-        m = l.useCallback(() => {
-            if (null != r && (null == u || !c)) return void o(void 0);
-            if (u?.type === s.DB.GIFS || (null != n && !n.autocomplete?.alwaysUseLayer)) return void o(null);
+        h = l.useCallback(() => {
+            if (null != s && (null == u || !c)) return void o(void 0);
+            if (u?.type === r.DB.GIFS || (null != n && !n.autocomplete?.alwaysUseLayer)) return void o(null);
             let e = d.document.getSelection(),
                 t = null != e && e.rangeCount > 0 ? e.getRangeAt(0) : null;
             if (null == t) return;
@@ -28,20 +28,20 @@ function r(e) {
             if (null == l) return;
             let a = d.document.createRange();
             (a.setStart(l, i), a.setEnd(l, i));
-            let m = a.getBoundingClientRect();
-            m?.height !== 0 && o(m ?? null);
-        }, [d.document, r, c, u, n]);
+            let h = a.getBoundingClientRect();
+            h?.height !== 0 && o(h ?? null);
+        }, [d.document, s, c, u, n]);
     return (
         l.useEffect(
             () => (
-                d.document.addEventListener("selectionchange", m),
-                () => d.document.removeEventListener("selectionchange", m)
+                d.document.addEventListener("selectionchange", h),
+                () => d.document.removeEventListener("selectionchange", h)
             ),
-            [d.document, m],
+            [d.document, h],
         ),
         l.useEffect(() => {
-            m();
-        }, [m, t]),
+            h();
+        }, [h, t]),
         a
     );
 }

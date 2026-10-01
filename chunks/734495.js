@@ -1,17 +1,17 @@
-n.d(t, { A: () => d });
-var i = n(477900);
-n(582128);
-var l = n(477782),
-    a = n(624479),
-    r = n(437517),
-    s = n(383233),
-    o = n(957565),
-    c = n(375708);
+t.d(n, { A: () => d });
+var i = t(477900);
+t(582128);
+var l = t(477782),
+    a = t(624479),
+    r = t(437517),
+    s = t(383233),
+    o = t(957565),
+    c = t(375708);
 function d(e) {
     if (!o.p5) return null;
-    let t = e.getContentMessage(),
-        n = (0, s._c)(t) ? (0, r.kC)(t.components) : t.content;
-    return null == n || 0 === n.length
+    let n = e.getContentMessage(),
+        t = (0, s._c)(n) ? (0, r.kC)(n.components) : n.content;
+    return null == t || 0 === t.length
         ? null
         : (0, i.jsx)(l.Dr, {
               id: "copy-text",
@@ -19,7 +19,7 @@ function d(e) {
               leadingAccessory: { type: "icon", icon: a.CopyIcon },
               icon: a.CopyIcon,
               action: () => {
-                  (0, o.C)(n);
+                  (0, o.C)(t);
               },
           });
 }

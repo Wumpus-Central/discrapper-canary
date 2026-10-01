@@ -1,9 +1,9 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => P });
 var i = n(477900),
     l = n(582128),
     a = n(562708),
-    s = n(17928),
-    r = n(636537),
+    r = n(17928),
+    s = n(636537),
     o = n(192308),
     d = n(830215),
     c = n(398590),
@@ -19,37 +19,37 @@ var i = n(477900),
     E = n(503698),
     C = n.n(E),
     _ = n(607399),
-    I = n(821609),
-    b = n(331322),
-    S = n(297264),
-    j = n(834730),
-    T = n(700525),
-    N = n(975571),
-    y = n(652215),
+    T = n(821609),
+    I = n(331322),
+    b = n(297264),
+    S = n(834730),
+    j = n(700525),
+    y = n(975571),
+    N = n(652215),
     R = n(375708),
     M = n(690807);
-let O = N.A.getArticleURL(y.MVz.VERIFICATION_FAQ);
-class k extends l.PureComponent {
-    static defaultProps = { types: [y.Fz7.CAPTCHA], onCaptchaVerify: y.tEg, onLogout: y.tEg };
+let O = y.A.getArticleURL(N.MVz.VERIFICATION_FAQ);
+class w extends l.PureComponent {
+    static defaultProps = { types: [N.Fz7.CAPTCHA], onCaptchaVerify: N.tEg, onLogout: N.tEg };
     renderFields() {
         let { types: e, captchaKey: t, theme: n, onCaptchaVerify: l } = this.props;
         return (0, i.jsx)(i.Fragment, {
             children: e.map((e) =>
-                e === y.Fz7.CAPTCHA
-                    ? (0, i.jsx)(T.A, { onVerify: l, theme: n }, t)
-                    : (0, i.jsx)(I.$, { onClick: () => this.handleClick(e), text: v.A.getButtonTitle(e) }, e),
+                e === N.Fz7.CAPTCHA
+                    ? (0, i.jsx)(j.A, { onVerify: l, theme: n }, t)
+                    : (0, i.jsx)(T.$, { onClick: () => this.handleClick(e), text: v.A.getButtonTitle(e) }, e),
             ),
         });
     }
     render() {
-        return (0, i.jsxs)(b.B, {
+        return (0, i.jsxs)(I.B, {
             gap: 16,
             className: M.Ot,
             align: "center",
             direction: "vertical",
             justify: "center",
             children: [
-                (0, i.jsxs)(b.B, {
+                (0, i.jsxs)(I.B, {
                     gap: 16,
                     fullWidth: !1,
                     className: C()(M.kL, { [M.Fr]: _.Fr }),
@@ -57,25 +57,25 @@ class k extends l.PureComponent {
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsxs)(b.B, {
+                        (0, i.jsxs)(I.B, {
                             align: "center",
                             direction: "vertical",
                             justify: "center",
                             gap: 16,
                             children: [
                                 (0, i.jsx)("div", { className: M.Sl }),
-                                (0, i.jsxs)(b.B, {
+                                (0, i.jsxs)(I.B, {
                                     className: M.FS,
                                     gap: 4,
                                     align: "center",
                                     direction: "vertical",
                                     justify: "center",
                                     children: [
-                                        (0, i.jsx)(S.D, {
+                                        (0, i.jsx)(b.D, {
                                             variant: "heading-xl/normal",
                                             children: R.intl.string(R.t.Iz0kDg),
                                         }),
-                                        (0, i.jsx)(j.E, {
+                                        (0, i.jsx)(S.E, {
                                             variant: "text-md/normal",
                                             children: R.intl.format(R.t["0rqMV5"], { helpCenterURL: O }),
                                         }),
@@ -83,7 +83,7 @@ class k extends l.PureComponent {
                                 }),
                             ],
                         }),
-                        (0, i.jsx)(b.B, {
+                        (0, i.jsx)(I.B, {
                             gap: 16,
                             direction: "vertical",
                             justify: "center",
@@ -92,30 +92,30 @@ class k extends l.PureComponent {
                         }),
                     ],
                 }),
-                (0, i.jsxs)(b.B, {
+                (0, i.jsxs)(I.B, {
                     gap: 8,
                     align: "center",
                     direction: "vertical",
                     justify: "center",
                     children: [
-                        (0, i.jsx)(j.E, {
+                        (0, i.jsx)(S.E, {
                             variant: "text-sm/normal",
                             className: M.qr,
                             children: R.intl.string(R.t.qqYun3),
                         }),
-                        (0, i.jsxs)(b.B, {
+                        (0, i.jsxs)(I.B, {
                             gap: 8,
                             align: "center",
                             direction: "horizontal",
                             justify: "center",
                             children: [
-                                (0, i.jsx)(j.E, {
+                                (0, i.jsx)(S.E, {
                                     variant: "text-sm/semibold",
                                     className: M.qr,
-                                    children: R.intl.format(R.t.WL51ZR, { supportURL: N.A.getSubmitRequestURL() }),
+                                    children: R.intl.format(R.t.WL51ZR, { supportURL: y.A.getSubmitRequestURL() }),
                                 }),
                                 (0, i.jsx)("div", { className: C()(M.qr, M.mf), children: "\u2022" }),
-                                (0, i.jsx)(j.E, {
+                                (0, i.jsx)(S.E, {
                                     variant: "text-sm/semibold",
                                     className: M.qr,
                                     children: R.intl.format(R.t.Hv7ztc, { logoutOnClick: this.props.onLogout }),
@@ -132,14 +132,14 @@ class k extends l.PureComponent {
         t?.(e);
     };
 }
-var w = n(87404),
-    P = n(53516);
-function L() {
-    let { action: e, theme: t } = (0, s.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
+var k = n(87404),
+    L = n(53516);
+function P() {
+    let { action: e, theme: t } = (0, r.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
         E = v.A.getVerificationTypes(e),
         [C, _] = l.useState(0),
-        I = (0, m.Ay)(E);
-    function b() {
+        T = (0, m.Ay)(E);
+    function I() {
         ((0, u.Cw)(),
             (0, o.openModalLazy)(
                 async () => {
@@ -148,7 +148,7 @@ function L() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: w.H1, Layer: p.Ay },
+                { modalKey: k.H1, Layer: p.Ay },
             ));
     }
     return (
@@ -171,8 +171,8 @@ function L() {
             [],
         ),
         l.useEffect(() => {
-            I?.[0] === y.Fz7.PHONE &&
-                E?.[0] === y.Fz7.EMAIL &&
+            T?.[0] === N.Fz7.PHONE &&
+                E?.[0] === N.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { Alert: e } = await Promise.all([n.e("844331"), n.e("21553")]).then(n.bind(n, 381512));
@@ -184,15 +184,15 @@ function L() {
                                 confirmText: R.intl.string(R.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: w.Pr, Layer: p.Ay, onCloseCallback: b },
+                    { modalKey: k.Pr, Layer: p.Ay, onCloseCallback: I },
                 );
-        }, [E, I]),
-        (0, i.jsx)(k, {
+        }, [E, T]),
+        (0, i.jsx)(w, {
             types: E,
             captchaKey: C,
             onCaptchaVerify: function (e) {
-                r.Bo.post({
-                    url: y.Rsh.CAPTCHA,
+                s.Bo.post({
+                    url: N.Rsh.CAPTCHA,
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
@@ -202,8 +202,8 @@ function L() {
             },
             theme: t,
             onClick: (e) => {
-                e === y.Fz7.EMAIL_OR_PHONE || e === y.Fz7.EMAIL || e === y.Fz7.REVERIFY_EMAIL
-                    ? b()
+                e === N.Fz7.EMAIL_OR_PHONE || e === N.Fz7.EMAIL || e === N.Fz7.REVERIFY_EMAIL
+                    ? I()
                     : (0, o.openModalLazy)(
                           async () => {
                               let { default: e } = await Promise.all([
@@ -218,7 +218,7 @@ function L() {
                               return (t) =>
                                   (0, i.jsx)(e, { layerContext: p.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: P.V, Layer: p.Ay },
+                          { modalKey: L.V, Layer: p.Ay },
                       );
             },
             onLogout: function () {

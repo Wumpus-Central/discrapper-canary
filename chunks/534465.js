@@ -1,75 +1,75 @@
-e.d(n, { Ay: () => p, UE: () => A, gA: () => x });
-var l = e(477900);
-e(582128);
-var i = e(192308),
-    r = e(477782),
-    a = e(672979),
-    s = e(20805),
-    o = e(409626),
-    c = e(692969),
-    u = e(652215),
-    d = e(375708);
+n.d(e, { Ay: () => p, UE: () => A, gA: () => f });
+var l = n(477900);
+n(582128);
+var i = n(192308),
+    a = n(477782),
+    r = n(672979),
+    s = n(20805),
+    o = n(409626),
+    c = n(692969),
+    u = n(652215),
+    d = n(375708);
 function A(t) {
-    let { user: n, activity: e, entry: l } = t;
+    let { user: e, activity: n, entry: l } = t;
     return null != l
         ? { applicationId: (0, s.zD)(l) ? l.extra.application_id : void 0, sourceUserId: l.author_id }
-        : null != e
+        : null != n
           ? {
-                applicationId: e.type === u.$pd.PLAYING && null != e.application_id ? e.application_id : void 0,
-                sourceUserId: n.id,
+                applicationId: n.type === u.$pd.PLAYING && null != n.application_id ? n.application_id : void 0,
+                sourceUserId: e.id,
             }
           : { applicationId: void 0, sourceUserId: void 0 };
 }
-function x(t) {
-    let { activity: n, entry: o } = t,
-        c = null != n && (0, a.A)(n),
+function f(t) {
+    let { activity: e, entry: o } = t,
+        c = null != e && (0, r.A)(e),
         u = null != o && (0, s.zD)(o);
     return c || u
-        ? (0, l.jsx)(r.Dr, {
+        ? (0, l.jsx)(a.Dr, {
               id: "game-detection-report-issue",
               label: d.intl.string(d.t.qP2cXd),
               action: function () {
                   return (0, i.openModalLazy)(async () => {
                       let { default: t } = await Promise.all([
-                          e.e("142753"),
-                          e.e("568035"),
-                          e.e("268582"),
-                          e.e("733771"),
-                          e.e("946039"),
-                          e.e("627495"),
-                      ]).then(e.bind(e, 651930));
-                      return null != n
-                          ? (e) => (0, l.jsx)(t, { ...e, detected: { name: n.name, applicationId: n.application_id } })
+                          n.e("142753"),
+                          n.e("568035"),
+                          n.e("268582"),
+                          n.e("733771"),
+                          n.e("946039"),
+                          n.e("627495"),
+                      ]).then(n.bind(n, 651930));
+                      return null != e
+                          ? (n) => (0, l.jsx)(t, { ...n, detected: { name: e.name, applicationId: e.application_id } })
                           : null != o && (0, s.zD)(o)
-                            ? (n) =>
+                            ? (e) =>
                                   (0, l.jsx)(t, {
-                                      ...n,
+                                      ...e,
                                       detected: { name: o.extra.game_name, applicationId: o.extra.application_id },
                                   })
-                            : (n) => (0, l.jsx)(t, { ...n });
+                            : (e) => (0, l.jsx)(t, { ...e });
                   });
               },
           })
         : null;
 }
 function p(t) {
-    let { user: n, activity: e, entry: i, onAction: a, isMenuOpen: s, appContext: u } = t,
-        { applicationId: x, sourceUserId: p } = A({ activity: e, entry: i, user: n }),
-        f = (0, c.A)({
+    let { user: e, activity: n, entry: i, onAction: r, isMenuOpen: s, appContext: u } = t,
+        { applicationId: f, sourceUserId: p } = A({ activity: n, entry: i, user: e }),
+        g = (0, c.A)({
             location: "UserProfileActivityContextMenu",
             source: o.GameProfileSources.UserProfileCardContextMenu,
             trackEntryPointImpression: s,
-            applicationId: x,
+            applicationId: f,
             sourceUserId: p,
             appContext: u,
         });
-    return null == f
+    return null == g
         ? null
-        : (0, l.jsx)(r.Dr, {
+        : (0, l.jsx)(a.Dr, {
               id: "game-profile",
               label: d.intl.string(d.t.ajHoOr),
               action: (t) => {
-                  (a?.({ action: "PRESS_VIEW_GAME_PROFILE_MENU_ITEM" }), f(t));
+                  (r?.({ action: "PRESS_VIEW_GAME_PROFILE_MENU_ITEM" }), g(t));
               },
           });
 }

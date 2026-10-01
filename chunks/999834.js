@@ -1,9 +1,9 @@
-e.d(n, { Pi: () => a, b_: () => s });
-var l = e(17928),
-    i = e(614455),
-    r = e(723702);
-function a() {
-    return r.isPlatformEmbedded;
+n.d(e, { Pi: () => r, b_: () => s });
+var l = n(17928),
+    i = n(614455),
+    a = n(723702);
+function r() {
+    return a.isPlatformEmbedded;
 }
 function s() {
     return (0, l.bG)([i.A], () => i.A.isSupported) || !1;

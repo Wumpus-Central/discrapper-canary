@@ -2,8 +2,8 @@ n.d(t, { $: () => E, m: () => p });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
-    i = n.n(r),
-    s = n(202091),
+    s = n.n(r),
+    i = n(202091),
     o = n(17928),
     d = n(866323),
     c = n(765178),
@@ -49,11 +49,11 @@ function E(e) {
             },
         })((e, n) =>
             n
-                ? (0, a.jsx)(s.animated.div, {
+                ? (0, a.jsx)(i.animated.div, {
                       style: e,
                       children: (0, a.jsxs)("footer", {
                           ...(!0 === t ? { [p]: "" } : null),
-                          className: i()(g.Qs, { [g.hO]: x }),
+                          className: s()(g.Qs, { [g.hO]: x }),
                           "aria-labelledby": r,
                           children: [
                               (0, a.jsx)(u.E, {

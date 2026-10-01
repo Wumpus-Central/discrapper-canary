@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     qV: "inspector_aeaaeb",
     FZ: "graphicPrimary_aeaaeb",
     vK: "graphicSecondary_aeaaeb",

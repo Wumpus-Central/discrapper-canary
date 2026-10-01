@@ -1,4 +1,4 @@
-_.exports = {
+o.exports = {
     qS: "badge__86331",
     f7: "badgeVerifiedIcon__86331",
     S3: "roleName__86331",

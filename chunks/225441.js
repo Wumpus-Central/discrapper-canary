@@ -1,5 +1,5 @@
-n.d(t, { P: () => r });
-let r = [
+t.d(n, { P: () => i });
+let i = [
     "adlm",
     "ahom",
     "arab",

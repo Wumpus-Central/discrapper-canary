@@ -1,24 +1,24 @@
-n.d(t, { A: () => o });
-var l = n(477900);
-n(582128);
-var i = n(821609),
-    s = n(908289),
-    r = n(960076),
-    a = n(375708);
-function o(e) {
-    let { activity: t, onAction: n, variant: o = "secondary", size: u = "sm", ...c } = e;
-    return (0, r.A)(t)
-        ? (0, l.jsx)(i.$, {
+i.d(t, { A: () => o });
+var e = i(477900);
+i(582128);
+var l = i(821609),
+    r = i(908289),
+    a = i(960076),
+    s = i(375708);
+function o(n) {
+    let { activity: t, onAction: i, variant: o = "secondary", size: d = "sm", ...u } = n;
+    return (0, a.A)(t)
+        ? (0, e.jsx)(l.$, {
               variant: o,
-              size: u,
-              text: a.intl.string(a.t.I6JG46),
+              size: d,
+              text: s.intl.string(s.t.I6JG46),
               onClick: function () {
-                  n?.();
-                  let e = (0, s.A)(t);
-                  return window.open(null != e ? e : void 0);
+                  i?.();
+                  let n = (0, r.A)(t);
+                  return window.open(null != n ? n : void 0);
               },
               fullWidth: !0,
-              ...c,
+              ...u,
           })
         : null;
 }

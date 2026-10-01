@@ -1,21 +1,21 @@
-r.d(t, { A: () => l });
-var n = r(582128);
-function s(e, t, r) {
-    return Math.min(Math.max(Math.floor(e / t), 1), r);
+s.d(t, { A: () => l });
+var r = s(582128);
+function n(e, t, s) {
+    return Math.min(Math.max(Math.floor(e / t), 1), s);
 }
-let l = (0, r(456412).A)(
-    class extends n.Component {
+let l = (0, s(456412).A)(
+    class extends r.Component {
         static defaultProps = { desiredItemWidth: 200 };
         static getDerivedStateFromProps(e, t) {
-            let { width: r, desiredItemWidth: n, maxColumns: l } = e,
-                i = s(r, n, l);
+            let { width: s, desiredItemWidth: r, maxColumns: l } = e,
+                i = n(s, r, l);
             return i !== t.columns ? { columns: i } : null;
         }
-        state = { columns: s(this.props.width, this.props.desiredItemWidth, this.props.maxColumns) };
+        state = { columns: n(this.props.width, this.props.desiredItemWidth, this.props.maxColumns) };
         render() {
-            let { width: e, height: t, children: r } = this.props,
-                { columns: n } = this.state;
-            return r(n, e, t);
+            let { width: e, height: t, children: s } = this.props,
+                { columns: r } = this.state;
+            return s(r, e, t);
         }
     },
 );

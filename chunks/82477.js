@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     $f: "guildIcon__0fa6d",
     dK: "mask__0fa6d",
     Hj: "guildAcronym__0fa6d",

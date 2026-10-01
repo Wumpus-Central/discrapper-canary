@@ -1,4 +1,4 @@
-_.exports = {
+a.exports = {
     iE: "wrapper__920ab",
     Sl: "image__920ab",
     QR: "infoWrapper__920ab",

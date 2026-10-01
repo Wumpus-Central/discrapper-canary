@@ -2,9 +2,9 @@ n.d(t, { A: () => A });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
-    i = n.n(r),
-    s = n(282802),
-    o = n.n(s),
+    s = n.n(r),
+    i = n(282802),
+    o = n.n(i),
     d = n(661531),
     c = n(866665),
     u = n(140735),
@@ -26,7 +26,7 @@ function A(e) {
             children: t,
             heading: n,
             headingClassName: r,
-            headingVariant: s = "text-xs/semibold",
+            headingVariant: i = "text-xs/semibold",
             headingColor: o = "text-default",
             headingIcon: c,
             hideHeading: A = !1,
@@ -42,7 +42,7 @@ function A(e) {
     let C = "function" == typeof c ? { icon: c } : c;
     return (0, a.jsxs)("section", {
         ref: y ? j : void 0,
-        className: i()(b.uW, v),
+        className: s()(b.uW, v),
         "aria-labelledby": I,
         children: [
             A
@@ -55,7 +55,7 @@ function A(e) {
                               style: { color: d.A.colors[x[o]]?.css },
                               children: [
                                   (0, a.jsx)(m.D, {
-                                      variant: s,
+                                      variant: i,
                                       color: "currentColor",
                                       className: r,
                                       id: I,

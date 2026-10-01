@@ -1,12 +1,12 @@
-n.d(t, { A: () => s });
-var i = n(177068),
-    r = n(409037);
-class a extends r.c {
+s.d(t, { A: () => i });
+var r = s(177068),
+    a = s(409037);
+class n extends a.c {
     create(e) {
-        let { id: t, searchType: n, searchQuery: r } = e;
+        let { id: t, searchType: s, searchQuery: a } = e;
         this.cancel(t);
-        let a = new i.MS(t, n, r);
-        return (this.set(t, a), a);
+        let n = new r.MS(t, s, a);
+        return (this.set(t, n), n);
     }
 }
-let s = new a();
+let i = new n();

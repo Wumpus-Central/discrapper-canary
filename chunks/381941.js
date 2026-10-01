@@ -5,8 +5,8 @@ n.d(t, {
     Hx: () => S,
     MO: () => I,
     N0: () => _,
-    VP: () => m,
-    ZG: () => g,
+    VP: () => g,
+    ZG: () => m,
     aj: () => f,
     cZ: () => p,
     k8: () => E,
@@ -54,8 +54,8 @@ var T =
     (i.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = "UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR"),
     (i.EXPLICIT_CONTENT = "EXPLICIT_CONTENT"),
     i);
-let m = 0xc800000,
-    g = { timeout: 60 * s.A.Millis.SECOND, retries: 3, backoff: new a.A() };
+let g = 0xc800000,
+    m = { timeout: 60 * s.A.Millis.SECOND, retries: 3, backoff: new a.A() };
 var S =
     (((r = {}).PUSH_NOTIFICATION = "push_notification"),
     (r.CHAT_INPUT = "chat_input"),

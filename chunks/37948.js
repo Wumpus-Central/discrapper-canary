@@ -1,19 +1,19 @@
 (n.d(t, { A: () => d }), n(323874), n(14289), n(35956));
 var l = n(582128),
-    i = n(975807),
-    s = n(853022),
-    r = n(738533);
-let a = "steam",
-    o = /^\/app\/(\d+)(?:\/)?/,
+    r = n(975807),
+    o = n(853022),
+    a = n(738533);
+let i = "steam",
+    s = /^\/app\/(\d+)(?:\/)?/,
     u = /^\/games\/store\/title\/([^/]+)/;
 async function c(e) {
-    if ("store.steampowered.com" === e.hostname && (await r.A.isProtocolRegistered(a))) {
-        let t = e.pathname.match(o)?.[1];
-        if (null != t) return `${a}://store/${t}`;
+    if ("store.steampowered.com" === e.hostname && (await a.A.isProtocolRegistered(i))) {
+        let t = e.pathname.match(s)?.[1];
+        if (null != t) return `${i}://store/${t}`;
     }
-    if (e.hostname === s.bH && (await r.A.isProtocolRegistered("msxbox"))) {
+    if (e.hostname === o.bH && (await a.A.isProtocolRegistered("msxbox"))) {
         let t = e.pathname.match(u)?.[1];
-        if (null != t) return (0, s.b9)(decodeURIComponent(t));
+        if (null != t) return (0, o.b9)(decodeURIComponent(t));
     }
     return null;
 }
@@ -21,29 +21,29 @@ function d(e) {
     let [t, n] = l.useState(!1);
     return l.useCallback(
         async (l) => {
-            let s;
+            let o;
             if (null == l) return;
             try {
-                s = new URL(l);
+                o = new URL(l);
             } catch {
                 return;
             }
-            let r = await c(s);
+            let a = await c(o);
             if (
-                (null != r && t && (r = null),
-                s.searchParams.set("utm_source", "discord"),
-                (l = s.toString()),
+                (null != a && t && (a = null),
+                o.searchParams.set("utm_source", "discord"),
+                (l = o.toString()),
                 null != e)
             )
                 e(l);
-            else if (null != r) {
-                var a;
+            else if (null != a) {
+                var i;
                 let e;
-                ((a = r),
+                ((i = a),
                     (e = setTimeout(() => n(!0), 5e3)),
                     window.addEventListener("blur", () => clearTimeout(e), { once: !0 }),
-                    (0, i.A)(a));
-            } else (0, i.A)(l);
+                    (0, r.A)(i));
+            } else (0, r.A)(l);
         },
         [e, t],
     );

@@ -1,52 +1,52 @@
-e.d(n, { A: () => p });
-var l = e(477900);
-e(582128);
-var i = e(889137),
-    r = e(20805),
-    a = e(506326),
-    s = e(365185),
-    o = e(82149),
-    c = e(78871),
-    u = e(652215);
+n.d(e, { A: () => p });
+var l = n(477900);
+n(582128);
+var i = n(889137),
+    a = n(20805),
+    r = n(506326),
+    s = n(365185),
+    o = n(82149),
+    c = n(78871),
+    u = n(652215);
 function d(t) {
-    let { entry: n } = t;
+    let { entry: e } = t;
     return (0, l.jsx)(l.Fragment, {
-        children: [a.$X, a.tR, a.K7, a.fg, a.sp, a.MK].map((t, e) => (0, l.jsx)(t, { entry: n }, `entry-${e}`)),
+        children: [r.$X, r.tR, r.K7, r.fg, r.sp, r.MK].map((t, n) => (0, l.jsx)(t, { entry: e }, `entry-${n}`)),
     });
 }
 function A(t) {
-    let { entry: n } = t;
-    return (0, l.jsx)(l.Fragment, { children: [a.Xr].map((t, e) => (0, l.jsx)(t, { entry: n }, `entry-${e}`)) });
+    let { entry: e } = t;
+    return (0, l.jsx)(l.Fragment, { children: [r.Xr].map((t, n) => (0, l.jsx)(t, { entry: e }, `entry-${n}`)) });
 }
-function x(t) {
-    let { entry: n } = t;
-    return (0, l.jsx)(l.Fragment, { children: [a.Y8].map((t, e) => (0, l.jsx)(t, { entry: n }, `entry-${e}`)) });
+function f(t) {
+    let { entry: e } = t;
+    return (0, l.jsx)(l.Fragment, { children: [r.Y8].map((t, n) => (0, l.jsx)(t, { entry: e }, `entry-${n}`)) });
 }
 function p(t) {
-    let { user: n, activity: e, className: p } = t,
-        f = (0, s.A)({ activity: e, user: n }),
-        m = (0, o.Cy)(e)
+    let { user: e, activity: n, className: p } = t,
+        g = (0, s.A)({ activity: n, user: e }),
+        m = (0, o.Cy)(n)
             ? []
-            : e.type === u.$pd.PLAYING
+            : n.type === u.$pd.PLAYING
               ? [c.cy, c.QA]
-              : e.type === u.$pd.LISTENING
+              : n.type === u.$pd.LISTENING
                 ? [c.QA]
-                : e.type === u.$pd.WATCHING
+                : n.type === u.$pd.WATCHING
                   ? [c.QA, c.Rq]
-                  : e.type === u.$pd.COMPETING
+                  : n.type === u.$pd.COMPETING
                     ? [c.QA]
                     : [];
     return 0 === m.length
         ? null
-        : (0, l.jsxs)(a.mG, {
-              location: a.N5.USER_PROFILE,
+        : (0, l.jsxs)(r.mG, {
+              location: r.N5.USER_PROFILE,
               className: p,
               children: [
-                  m.map((t, n) => (0, l.jsx)(t, { activity: e }, `activity-${n}`)),
-                  (0, i.YW)(f)
-                      .when(r.qQ, (t) => (0, l.jsx)(d, { entry: t }))
-                      .when(r.UQ, (t) => (0, l.jsx)(A, { entry: t }))
-                      .when(r.p6, (t) => (0, l.jsx)(x, { entry: t }))
+                  m.map((t, e) => (0, l.jsx)(t, { activity: n }, `activity-${e}`)),
+                  (0, i.YW)(g)
+                      .when(a.qQ, (t) => (0, l.jsx)(d, { entry: t }))
+                      .when(a.UQ, (t) => (0, l.jsx)(A, { entry: t }))
+                      .when(a.p6, (t) => (0, l.jsx)(f, { entry: t }))
                       .otherwise(() => null),
               ],
           });

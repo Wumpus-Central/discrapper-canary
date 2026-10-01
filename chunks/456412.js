@@ -1,34 +1,34 @@
-r.d(t, { A: () => u });
-var n = r(477900),
-    s = r(582128),
-    l = r(770178),
-    i = r(765548);
-let a = { width: "100%", height: "100%", display: "flex" },
-    o = { width: "100%", height: "100%", flex: 1 };
+i.d(t, { A: () => u });
+var h = i(477900),
+    n = i(582128),
+    d = i(770178),
+    r = i(765548);
+let l = { width: "100%", height: "100%", display: "flex" },
+    s = { width: "100%", height: "100%", flex: 1 };
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return s.forwardRef(function (r, u) {
-        let [c, h] = s.useState({ width: 0, height: 0 }),
-            d = (0, i.A)((e) => {
+    return n.forwardRef(function (i, u) {
+        let [c, a] = n.useState({ width: 0, height: 0 }),
+            g = (0, r.A)((e) => {
                 if (null != e) {
-                    let { width: t, height: r } = e;
-                    h({ width: t, height: r });
+                    let { width: t, height: i } = e;
+                    a({ width: t, height: i });
                 }
             }),
-            m = (0, i.A)((e) => {
-                d(e.contentRect);
+            p = (0, r.A)((e) => {
+                g(e.contentRect);
             }),
-            p = (0, l.w)(m, [], t);
+            w = (0, d.w)(p, [], t);
         return (
-            s.useImperativeHandle(u, () => ({
+            n.useImperativeHandle(u, () => ({
                 triggerResize: () => {
-                    d(p.current?.getBoundingClientRect());
+                    g(w.current?.getBoundingClientRect());
                 },
             })),
-            (0, n.jsx)("div", {
-                ref: p,
-                style: a,
-                children: (0, n.jsx)(e, { ...r, width: c.width, height: c.height, style: o }),
+            (0, h.jsx)("div", {
+                ref: w,
+                style: l,
+                children: (0, h.jsx)(e, { ...i, width: c.width, height: c.height, style: s }),
             })
         );
     });

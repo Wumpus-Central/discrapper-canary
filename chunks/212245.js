@@ -1,6 +1,6 @@
-o.d(e, { p: () => r });
-var s = o(582128),
-    n = o(174459);
-function r() {
-    return s.useContext(n.AnalyticsContext);
+n.d(s, { p: () => e });
+var p = n(582128),
+    c = n(174459);
+function e() {
+    return p.useContext(c.AnalyticsContext);
 }

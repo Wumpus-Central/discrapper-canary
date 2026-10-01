@@ -1,5 +1,5 @@
-n.d(t, { J: () => l });
-let l = (0, n(945810).mj)({
+t.d(n, { J: () => i });
+let i = (0, t(945810).mj)({
     name: "2026-04-gift-promotion-reminder",
     kind: "user",
     defaultConfig: { enabled: !1 },

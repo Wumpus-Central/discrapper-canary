@@ -1,20 +1,20 @@
-n.d(t, { O: () => a });
+n.d(e, { O: () => s });
 var l = n(477900),
     i = n(28863),
-    s = n(123917),
+    a = n(123917),
     r = n(824062);
-function a(e) {
-    let { children: t, href: n } = e;
+function s(t) {
+    let { children: e, href: n } = t;
     return null == n
-        ? t
+        ? e
         : (0, l.jsx)(i.Anchor, {
               className: r.n,
               href: n,
-              onClick: (e) => {
-                  (e.stopPropagation(), s.h({ href: n }, e));
+              onClick: (t) => {
+                  (t.stopPropagation(), a.h({ href: n }, t));
               },
               target: "_blank",
               rel: "noopener noreferrer",
-              children: t,
+              children: e,
           });
 }

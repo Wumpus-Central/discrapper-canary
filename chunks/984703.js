@@ -64,43 +64,43 @@ function f(e) {
         let _, E, A, h, f;
         if (null == e) return I;
         let T = [],
-            { type: m, data: g } = e;
+            { type: g, data: m } = e;
         return (
-            "minimal" === m
-                ? null != g.discord_classifications && T.push(p(a.DISCORD_CLASSIFICATION, g.discord_classifications))
-                : null != g.manual_classifications
-                  ? T.push(p(a.MANUAL_CLASSIFICATION, g.manual_classifications))
-                  : null != g.automated_classifications &&
-                    T.push(p(a.AUTOMATED_CLASSIFICATION, g.automated_classifications)),
-            null != g.agency_ratings &&
-                (null != g.agency_ratings.esrb &&
+            "minimal" === g
+                ? null != m.discord_classifications && T.push(p(a.DISCORD_CLASSIFICATION, m.discord_classifications))
+                : null != m.manual_classifications
+                  ? T.push(p(a.MANUAL_CLASSIFICATION, m.manual_classifications))
+                  : null != m.automated_classifications &&
+                    T.push(p(a.AUTOMATED_CLASSIFICATION, m.automated_classifications)),
+            null != m.agency_ratings &&
+                (null != m.agency_ratings.esrb &&
                     T.push(
-                        ((t = g.agency_ratings.esrb),
+                        ((t = m.agency_ratings.esrb),
                         (_ = o.IS_ADULT_ONLY.has(t.rating) ? s.Y.ADULT : s.Y.EVERYONE),
                         { source: a.AGENCY_CLASSIFICATION_ESRB, status: _ }),
                     ),
-                null != g.agency_ratings.pegi &&
+                null != m.agency_ratings.pegi &&
                     T.push(
-                        ((n = g.agency_ratings.pegi),
+                        ((n = m.agency_ratings.pegi),
                         (E = u.IS_ADULT_ONLY.has(n.rating) ? s.Y.ADULT : s.Y.EVERYONE),
                         { source: a.AGENCY_CLASSIFICATION_PEGI, status: E }),
                     ),
-                null != g.agency_ratings.gop &&
+                null != m.agency_ratings.gop &&
                     T.push(
-                        ((i = g.agency_ratings.gop),
+                        ((i = m.agency_ratings.gop),
                         (A = d.IS_ADULT.has(i.classification) ? s.Y.ADULT : s.Y.EVERYONE),
                         { source: a.AGENCY_CLASSIFICATION_GOP, status: A }),
                     ),
-                null != g.agency_ratings.igdb &&
+                null != m.agency_ratings.igdb &&
                     T.push(
-                        ((h = (g.agency_ratings.igdb.themes ?? []).some((e) => c.ADULT_THEMES.has(e))
+                        ((h = (m.agency_ratings.igdb.themes ?? []).some((e) => c.ADULT_THEMES.has(e))
                             ? s.Y.ADULT
                             : s.Y.EVERYONE),
                         { source: a.AGENCY_CLASSIFICATION_IGDB, status: h }),
                     ),
-                null != g.agency_ratings.apple &&
+                null != m.agency_ratings.apple &&
                     T.push(
-                        ((r = g.agency_ratings.apple),
+                        ((r = m.agency_ratings.apple),
                         (f = l.IS_ADULT_ONLY.has(r.rating) ? s.Y.ADULT : s.Y.EVERYONE),
                         { source: a.AGENCY_CLASSIFICATION_APPLE, status: f }),
                     )),

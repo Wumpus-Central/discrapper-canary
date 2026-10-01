@@ -1,6 +1,6 @@
-let r;
-n.d(t, { KB: () => u, B4: () => p, V1: () => s });
-var i = n(315847);
+let i;
+t.d(n, { KB: () => o, B4: () => h, V1: () => u });
+var r = t(315847);
 let a = {
         "written-new": [
             { paradigmLocales: { _locales: "en en_GB es es_419 pt_BR pt_PT" } },
@@ -384,7 +384,7 @@ let a = {
             { "*-*-*": { _desired: "*-*-*", _distance: "4" } },
         ],
     },
-    o = {
+    s = {
         "001": [
             "001",
             "001-status-grouping",
@@ -1545,60 +1545,60 @@ let a = {
             "ZW",
         ],
     },
-    u = /-u(?:-[0-9a-z]{2,8})+/gi;
-function s(e, t, n = Error) {
-    if (!e) throw new n(t);
+    o = /-u(?:-[0-9a-z]{2,8})+/gi;
+function u(e, n, t = Error) {
+    if (!e) throw new t(n);
 }
-function l(e, t, n) {
-    let [r, i, a] = t.split("-"),
-        u = !0;
+function l(e, n, t) {
+    let [i, r, a] = n.split("-"),
+        o = !0;
     if (a && "$" === a[0]) {
-        let t = "!" !== a[1],
-            r = (t ? n[a.slice(1)] : n[a.slice(2)]).map((e) => o[e] || [e]).reduce((e, t) => [...e, ...t], []);
-        u &&= r.indexOf(e.region || "") > -1 == t;
-    } else u &&= !e.region || "*" === a || a === e.region;
-    return ((u &&= !e.script || "*" === i || i === e.script), (u &&= !e.language || "*" === r || r === e.language));
+        let n = "!" !== a[1],
+            i = (n ? t[a.slice(1)] : t[a.slice(2)]).map((e) => s[e] || [e]).reduce((e, n) => [...e, ...n], []);
+        o &&= i.indexOf(e.region || "") > -1 == n;
+    } else o &&= !e.region || "*" === a || a === e.region;
+    return ((o &&= !e.script || "*" === r || r === e.script), (o &&= !e.language || "*" === i || i === e.language));
 }
 function d(e) {
     return [e.language, e.script, e.region].filter(Boolean).join("-");
 }
-function c(e, t, n) {
-    for (let r of n.matches) {
-        let i = l(e, r.desired, n.matchVariables) && l(t, r.supported, n.matchVariables);
-        if ((r.oneway || i || (i = l(e, r.supported, n.matchVariables) && l(t, r.desired, n.matchVariables)), i)) {
-            let i = 10 * r.distance;
-            if (n.paradigmLocales.indexOf(d(e)) > -1 != n.paradigmLocales.indexOf(d(t)) > -1) return i - 1;
-            return i;
+function c(e, n, t) {
+    for (let i of t.matches) {
+        let r = l(e, i.desired, t.matchVariables) && l(n, i.supported, t.matchVariables);
+        if ((i.oneway || r || (r = l(e, i.supported, t.matchVariables) && l(n, i.desired, t.matchVariables)), r)) {
+            let r = 10 * i.distance;
+            if (t.paradigmLocales.indexOf(d(e)) > -1 != t.paradigmLocales.indexOf(d(n)) > -1) return r - 1;
+            return r;
         }
     }
     throw Error("No matching distance found");
 }
-let f = (0, i.B)(
-        function (e, t) {
-            let n = new Intl.Locale(e).maximize(),
-                i = new Intl.Locale(t).maximize(),
-                o = { language: n.language, script: n.script || "", region: n.region || "" },
-                u = { language: i.language, script: i.script || "", region: i.region || "" },
-                s = 0,
+let f = (0, r.B)(
+        function (e, n) {
+            let t = new Intl.Locale(e).maximize(),
+                r = new Intl.Locale(n).maximize(),
+                s = { language: t.language, script: t.script || "", region: t.region || "" },
+                o = { language: r.language, script: r.script || "", region: r.region || "" },
+                u = 0,
                 l = (function () {
-                    if (!r) {
+                    if (!i) {
                         let e = a["written-new"]["0"]?.paradigmLocales?._locales.split(" "),
-                            t = a["written-new"].slice(1, 5);
-                        r = {
+                            n = a["written-new"].slice(1, 5);
+                        i = {
                             matches: a["written-new"].slice(5).map((e) => {
-                                let t = Object.keys(e)[0],
-                                    n = e[t];
+                                let n = Object.keys(e)[0],
+                                    t = e[n];
                                 return {
-                                    supported: t,
-                                    desired: n._desired,
-                                    distance: +n._distance,
-                                    oneway: "true" === n.oneway,
+                                    supported: n,
+                                    desired: t._desired,
+                                    distance: +t._distance,
+                                    oneway: "true" === t.oneway,
                                 };
                             }, {}),
-                            matchVariables: t.reduce((e, t) => {
-                                let n = Object.keys(t)[0],
-                                    r = t[n];
-                                return ((e[n.slice(1)] = r._value.split("+")), e);
+                            matchVariables: n.reduce((e, n) => {
+                                let t = Object.keys(n)[0],
+                                    i = n[t];
+                                return ((e[t.slice(1)] = i._value.split("+")), e);
                             }, {}),
                             paradigmLocales: [
                                 ...e,
@@ -1606,82 +1606,82 @@ let f = (0, i.B)(
                             ],
                         };
                     }
-                    return r;
+                    return i;
                 })();
             return (
-                o.language !== u.language &&
-                    (s += c(
-                        { language: n.language, script: "", region: "" },
-                        { language: i.language, script: "", region: "" },
+                s.language !== o.language &&
+                    (u += c(
+                        { language: t.language, script: "", region: "" },
+                        { language: r.language, script: "", region: "" },
                         l,
                     )),
-                o.script !== u.script &&
-                    (s += c(
-                        { language: n.language, script: o.script, region: "" },
-                        { language: i.language, script: u.script, region: "" },
+                s.script !== o.script &&
+                    (u += c(
+                        { language: t.language, script: s.script, region: "" },
+                        { language: r.language, script: o.script, region: "" },
                         l,
                     )),
-                o.region !== u.region && (s += c(o, u, l)),
-                s
+                s.region !== o.region && (u += c(s, o, l)),
+                u
             );
         },
         { serializer: (e) => `${e[0]}|${e[1]}` },
     ),
-    h = new WeakMap();
-function p(e, t, n = 838) {
-    let r = 1 / 0,
-        i = { matchedDesiredLocale: "", distances: {} },
-        a = h.get(t);
+    p = new WeakMap();
+function h(e, n, t = 838) {
+    let i = 1 / 0,
+        r = { matchedDesiredLocale: "", distances: {} },
+        a = p.get(n);
     a ||
-        ((a = t.map((e) => {
+        ((a = n.map((e) => {
             try {
                 return Intl.getCanonicalLocales([e])[0] || e;
             } catch {
                 return e;
             }
         })),
-        h.set(t, a));
-    let o = new Set(a);
-    for (let t = 0; t < e.length; t++) {
-        let n = e[t];
-        if (o.has(n)) {
-            let e = 0 + 40 * t;
+        p.set(n, a));
+    let s = new Set(a);
+    for (let n = 0; n < e.length; n++) {
+        let t = e[n];
+        if (s.has(t)) {
+            let e = 0 + 40 * n;
             if (
-                ((i.distances[n] = { [n]: e }),
-                e < r && ((r = e), (i.matchedDesiredLocale = n), (i.matchedSupportedLocale = n)),
-                0 === t)
+                ((r.distances[t] = { [t]: e }),
+                e < i && ((i = e), (r.matchedDesiredLocale = t), (r.matchedSupportedLocale = t)),
+                0 === n)
             )
-                return i;
+                return r;
         }
     }
-    for (let t = 0; t < e.length; t++) {
-        let n = e[t];
+    for (let n = 0; n < e.length; n++) {
+        let t = e[n];
         try {
-            let e = new Intl.Locale(n).maximize().toString();
-            if (e !== n) {
+            let e = new Intl.Locale(t).maximize().toString();
+            if (e !== t) {
                 let a = (function (e) {
-                    let t = [],
-                        n = e;
-                    for (; n;) {
-                        t.push(n);
-                        let e = n.lastIndexOf("-");
+                    let n = [],
+                        t = e;
+                    for (; t;) {
+                        n.push(t);
+                        let e = t.lastIndexOf("-");
                         if (-1 === e) break;
-                        n = n.substring(0, e);
+                        t = t.substring(0, e);
                     }
-                    return t;
+                    return n;
                 })(e);
-                for (let u = 0; u < a.length; u++) {
-                    let s = a[u];
-                    if (s !== n && o.has(s)) {
+                for (let o = 0; o < a.length; o++) {
+                    let u = a[o];
+                    if (u !== t && s.has(u)) {
                         let a;
                         try {
-                            a = new Intl.Locale(s).maximize().toString() === e ? 0 + 40 * t : 10 * u + 40 * t;
+                            a = new Intl.Locale(u).maximize().toString() === e ? 0 + 40 * n : 10 * o + 40 * n;
                         } catch {
-                            a = 10 * u + 40 * t;
+                            a = 10 * o + 40 * n;
                         }
-                        (i.distances[n] || (i.distances[n] = {}),
-                            (i.distances[n][s] = a),
-                            a < r && ((r = a), (i.matchedDesiredLocale = n), (i.matchedSupportedLocale = s)));
+                        (r.distances[t] || (r.distances[t] = {}),
+                            (r.distances[t][u] = a),
+                            a < i && ((i = a), (r.matchedDesiredLocale = t), (r.matchedSupportedLocale = u)));
                         break;
                     }
                 }
@@ -1689,17 +1689,17 @@ function p(e, t, n = 838) {
         } catch {}
     }
     return (
-        (i.matchedSupportedLocale && 0 === r) ||
-            (e.forEach((e, n) => {
-                (i.distances[e] || (i.distances[e] = {}),
-                    a.forEach((a, o) => {
-                        let u = t[o],
-                            s = f(e, a) + 0 + 40 * n;
-                        ((i.distances[e][u] = s),
-                            s < r && ((r = s), (i.matchedDesiredLocale = e), (i.matchedSupportedLocale = u)));
+        (r.matchedSupportedLocale && 0 === i) ||
+            (e.forEach((e, t) => {
+                (r.distances[e] || (r.distances[e] = {}),
+                    a.forEach((a, s) => {
+                        let o = n[s],
+                            u = f(e, a) + 0 + 40 * t;
+                        ((r.distances[e][o] = u),
+                            u < i && ((i = u), (r.matchedDesiredLocale = e), (r.matchedSupportedLocale = o)));
                     }));
             }),
-            r >= n && ((i.matchedDesiredLocale = void 0), (i.matchedSupportedLocale = void 0))),
-        i
+            i >= t && ((r.matchedDesiredLocale = void 0), (r.matchedSupportedLocale = void 0))),
+        r
     );
 }

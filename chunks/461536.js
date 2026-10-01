@@ -3,8 +3,8 @@ var a = n(477900);
 n(582128);
 var l = n(503698),
     r = n.n(l),
-    i = n(536001),
-    s = n(194981),
+    s = n(536001),
+    i = n(194981),
     o = n(331322),
     d = n(834730),
     c = n(297264),
@@ -23,25 +23,25 @@ function N(e) {
     let { rarity: t, className: n } = e,
         l = (function (e) {
             switch (e) {
-                case i.x.COMMON:
+                case s.x.COMMON:
                     return { Icon: E.p, className: A.e8, label: _.intl.string(_.t.L0K5ci) };
-                case i.x.RARE:
+                case s.x.RARE:
                     return { Icon: h.A, className: A.D3, label: _.intl.string(_.t["sTx/5z"]) };
-                case i.x.EPIC:
+                case s.x.EPIC:
                     return { Icon: b.b, className: A.mk, label: _.intl.string(_.t.RD8RiN) };
-                case i.x.MYTHIC:
+                case s.x.MYTHIC:
                     return { Icon: x.O, className: A.nM, label: _.intl.string(_.t.vqc1ol) };
                 default:
                     return null;
             }
         })(t);
     if (null == l) return null;
-    let { Icon: s, className: o, label: d } = l;
+    let { Icon: i, className: o, label: d } = l;
     return (0, a.jsx)("div", {
         role: "img",
         "aria-label": d,
         className: r()(A.Tc, o, n),
-        children: (0, a.jsx)(s, { size: "xxs", color: "currentColor" }),
+        children: (0, a.jsx)(i, { size: "xxs", color: "currentColor" }),
     });
 }
 var v = n(140049),
@@ -67,11 +67,11 @@ function j(e) {
         D = j && null == _,
         {
             tooltipId: M,
-            isVisible: P,
-            targetElementRef: U,
+            isVisible: U,
+            targetElementRef: P,
             trigger: O,
-        } = (0, s.D)({ children: t, targetElementRef: T, delay: R.In, onTooltipShow: y, shouldShow: S }),
-        B = null != A && A !== i.x.COMMON,
+        } = (0, i.D)({ children: t, targetElementRef: T, delay: R.In, onTooltipShow: y, shouldShow: S }),
+        B = null != A && A !== s.x.COMMON,
         G = (0, a.jsxs)("div", {
             className: I.Qs,
             "data-mana-component": "mini-premium-tooltip",
@@ -119,14 +119,14 @@ function j(e) {
             ],
         }),
         w = null != E ? `${x}. ${E}` : x,
-        k = (0, u.j)({ shouldShow: P })((e, t) =>
+        k = (0, u.j)({ shouldShow: U })((e, t) =>
             t
                 ? (0, a.jsx)(f.Bc, {
                       isRichTooltip: !0,
                       children: (0, a.jsx)(m.R, {
-                          isVisible: P,
+                          isVisible: U,
                           isRendered: !0,
-                          targetElementRef: U,
+                          targetElementRef: P,
                           content: G,
                           position: C,
                           align: "center",

@@ -6,7 +6,7 @@ n.d(t, {
     H1: () => L,
     Hi: () => E,
     MS: () => F,
-    P1: () => g,
+    P1: () => m,
     Pf: () => f,
     QB: () => k,
     Tq: () => A,
@@ -23,7 +23,7 @@ n.d(t, {
     rr: () => T,
     sH: () => B,
     tD: () => S,
-    uY: () => m,
+    uY: () => g,
     x3: () => v,
 });
 var i,
@@ -48,12 +48,12 @@ var f =
     r);
 let p = 24,
     T = 225;
-var m =
+var g =
     (((a = {}).SEARCH_ICON = "search icon"),
     (a.SEARCH_BAR = "search bar"),
     (a.SEARCH_BAR_CLEAR = "search bar clear"),
     a);
-let g = "category",
+let m = "category",
     S = "game_server_game_id";
 var N =
     (((s = {}).HOME = "home"),

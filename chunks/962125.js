@@ -24,8 +24,8 @@ let u = r.memo(
                 rowCount: f,
                 rowCountBySection: p,
                 rowHeight: T,
-                sectionMarginBottom: m,
-                sectionHeaderHeight: g,
+                sectionMarginBottom: g,
+                sectionHeaderHeight: m,
                 sectionFooterHeight: S,
                 listHeaderHeight: N,
                 stickyHeaders: C = !1,
@@ -54,10 +54,10 @@ let u = r.memo(
             ),
             F = r.useCallback(
                 (e) => {
-                    let t = "function" == typeof g ? g(e) : g;
+                    let t = "function" == typeof m ? m(e) : m;
                     return null == t ? 0 : t;
                 },
-                [g],
+                [m],
             ),
             B = r.useCallback(
                 (e) => {
@@ -68,10 +68,10 @@ let u = r.memo(
             ),
             V = r.useCallback(
                 (e) => {
-                    let t = "function" == typeof m ? m(e) : m;
+                    let t = "function" == typeof g ? g(e) : g;
                     return null == t ? 0 : t;
                 },
-                [m],
+                [g],
             ),
             H = r.useRef([]),
             j = r.useRef([]),
@@ -180,7 +180,7 @@ let u = r.memo(
             }),
             [F, C, W, M],
         );
-        let { visibleItems: X, listOffset: q } = r.useMemo(() => {
+        let { visibleItems: X, listOffset: Z } = r.useMemo(() => {
                 if (-1 === M || -1 === v) return { visibleItems: null, listOffset: 0 };
                 let e = v + M,
                     t = 0,
@@ -215,13 +215,13 @@ let u = r.memo(
                             ((I += i), f++, t++);
                         }
                         let T = s + d + I,
-                            m = T + c >= v && T <= e;
-                        (null != h && m && l.push(h(r)), null != E ? i.push(E(r, l)) : (i = [...i, ...l]));
+                            g = T + c >= v && T <= e;
+                        (null != h && g && l.push(h(r)), null != E ? i.push(E(r, l)) : (i = [...i, ...l]));
                     } else break;
                 }
                 return { visibleItems: i, listOffset: n };
             }, [k, B, F, V, u, _, E, h, A, v, K, C, I, x, M]),
-            Z = r.useMemo(() => ({ top: q, right: u?.[1] ?? 0, bottom: u?.[2] ?? 0, left: u?.[3] ?? 0 }), [q, u]),
+            q = r.useMemo(() => ({ top: Z, right: u?.[1] ?? 0, bottom: u?.[2] ?? 0, left: u?.[3] ?? 0 }), [Z, u]),
             Q = r.useMemo(() => ({ height: W }), [W]),
             J = R ? l.zC : l.Ch;
         return (0, i.jsxs)(J, {
@@ -230,7 +230,7 @@ let u = r.memo(
             ref: U,
             onScroll: z,
             children: [
-                (0, i.jsx)("div", { role: D, className: d.Dw, style: Z, children: X }),
+                (0, i.jsx)("div", { role: D, className: d.Dw, style: q, children: X }),
                 (0, i.jsx)("div", { className: d.W7, style: Q }),
             ],
         });

@@ -158,7 +158,7 @@ let T = new Set([
     p.n_.DragonSteal,
     p.n_.BaronSteal,
 ]);
-class m {
+class g {
     gameEvents;
     gameAxisScoreThreshold = 0.17;
     gameStateTimeline = [];
@@ -235,7 +235,7 @@ class m {
         return null != e.eventName && T.has(e.eventName);
     }
 }
-let g = { applicationIds: [f.m], create: (e) => new m(e) };
+let m = { applicationIds: [f.m], create: (e) => new g(e) };
 function S(e, t) {
     let n = e.findLast((e) => e.timestamp_ms <= t);
     return (r()(null != n, "bad timeline!"), n);
@@ -300,7 +300,7 @@ var v = n(45926),
     b = n(557329),
     M = n(781183),
     P = n(696016);
-let U = [u, { applicationIds: ["356875988589740042"], create: (e) => new h(e) }, g, y];
+let U = [u, { applicationIds: ["356875988589740042"], create: (e) => new h(e) }, m, y];
 function w(e, t) {
     if (null == e) return;
     let n = U.find((t) => t.applicationIds.includes(e));
@@ -339,10 +339,10 @@ function k(e, t, n, i) {
         let t = new Map(e.map((e) => [e.timestamp_ms, e.modifier]));
         return (e) => t.get(1e3 * Math.floor(e / 1e3)) ?? 1;
     })(s);
-    function m(e) {
+    function g(e) {
         return h?.eventScoreMultiplier?.(e) ?? 1;
     }
-    function g(e) {
+    function m(e) {
         return h?.canAnchorReaction(e) ?? !1;
     }
     for (let i of e) {
@@ -422,7 +422,7 @@ function k(e, t, n, i) {
             { userIds: A, pLaughter: h, pShouting: f, rms: p, gridStartMs: N, chunkCount: C } = S(l, o),
             O = A.indexOf(n),
             R = (0, a.p)(I, l, o),
-            L = R.filter(g);
+            L = R.filter(m);
         null != N &&
             C > 0 &&
             L.length > 0 &&
@@ -459,9 +459,9 @@ function k(e, t, n, i) {
                         anchors: p,
                         events: T,
                     } = (0, b.aT)({ laughter: _, shouting: E }, { laughter: h, shouting: I }, s, t),
-                    m = t.gameEventsAsReactionAnchors && null != l ? l.map((e) => ({ tStart: e, tEnd: e })) : [],
-                    g = (0, b.Mf)([...p, ...m], t.eventChainGapChunks),
-                    S = (0, b.tf)(g, h, I, s, t),
+                    g = t.gameEventsAsReactionAnchors && null != l ? l.map((e) => ({ tStart: e, tEnd: e })) : [],
+                    m = (0, b.Mf)([...p, ...g], t.eventChainGapChunks),
+                    S = (0, b.tf)(m, h, I, s, t),
                     { laughter: N, shouting: C } = (0, b.Lj)(d, c, a, t),
                     { coOccurrenceScore: O, coContribPerChunk: R } = (0, b.k0)(N, C, t),
                     L = f,
@@ -486,7 +486,7 @@ function k(e, t, n, i) {
                         intensityShouting: I,
                         rmsWeighted: A,
                         mainEvents: T,
-                        reactionAnchors: g,
+                        reactionAnchors: m,
                         coContribPerChunk: R,
                     },
                 };
@@ -499,7 +499,7 @@ function k(e, t, n, i) {
                     i += (r.score ?? 0) * e * a;
                 }
                 return i;
-            })(R, T, m),
+            })(R, T, g),
             v = (0.5 + (0, M.ry)(y.audioScore)) * (1 + Math.tanh(D / u.gameSquashScale)) - 0.5,
             U = S(s, i.decision.timestamp),
             w = U.gridStartMs,

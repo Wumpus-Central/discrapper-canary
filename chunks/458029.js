@@ -1,4 +1,4 @@
-t.r(
+_.r(
     (d.exports = {
         formText: "formText_ddd181",
         default: "default_ddd181 formText_ddd181",

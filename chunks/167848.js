@@ -1,4 +1,4 @@
-e.exports = {
+d.exports = {
     ek: "textPrimary__8e577",
     c1: "textSecondary__8e577",
     Y: "headerIcons__8e577",

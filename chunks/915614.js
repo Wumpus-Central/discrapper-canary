@@ -2,8 +2,8 @@ n.d(t, { A: () => R, o: () => v });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
-    i = n.n(r),
-    s = n(317097),
+    s = n.n(r),
+    i = n(317097),
     o = n(17928),
     d = n(661531),
     c = n(602853),
@@ -36,7 +36,7 @@ function v(e) {
             pendingAccentColor: D,
             animateOnHoverOrFocusOnly: M = !1,
         } = e,
-        [P, U] = l.useState(!1),
+        [U, P] = l.useState(!1),
         O = (0, o.bG)([p.A], () => p.A.isFocused()),
         B = g.kt.getSetting(),
         G = (0, h.Nx)(),
@@ -44,24 +44,24 @@ function v(e) {
             displayProfile: n,
             pendingBanner: A,
             size: y,
-            canAnimate: M || !B ? P : O,
+            canAnimate: M || !B ? U : O,
         }),
         L = G ? null : (w ?? null),
         H = (0, c.r)(d.A.unsafe_rawColors.PRIMARY_800).hex(),
         V = t.getAvatarURL(r, (0, u.FT)(I)),
-        $ = (0, s.LX)((0, f.Ay)(V, H, !1)),
+        $ = (0, i.LX)((0, f.Ay)(V, H, !1)),
         F = (0, m.A)(D ?? n?.primaryColor ?? $).hex,
         z = { align: "start", insetStart: j - S, insetBottom: T + S, radius: (0, _.A)(I) };
     return (0, a.jsx)(x.A, {
-        fillClassName: i()(N.v, R),
+        fillClassName: s()(N.v, R),
         bannerSrc: L,
         backgroundColor: "COMPLETE" === k || G ? F : d.A.unsafe_rawColors.PRIMARY_800.css,
         showGifTag: !B && (0, E.o4)(L),
         height: C,
         cutout: z,
         overlay: v,
-        onInteractionStart: () => U(!0),
-        onInteractionEnd: () => U(!1),
+        onInteractionStart: () => P(!0),
+        onInteractionEnd: () => P(!1),
     });
 }
 function R(e) {
@@ -70,11 +70,11 @@ function R(e) {
             user: n,
             displayProfile: l,
             canUsePremiumProfileCustomization: r = !1,
-            specOverrides: i,
-            ...s
+            specOverrides: s,
+            ...i
         } = e,
         o = A.T[t],
-        d = null != i ? { ...o, ...i } : o,
+        d = null != s ? { ...o, ...s } : o,
         c = !(0, h.Qq)() && (r || l?.canUsePremiumProfileCustomization || !1);
-    return (0, a.jsx)(v, { ...s, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
+    return (0, a.jsx)(v, { ...i, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
 }

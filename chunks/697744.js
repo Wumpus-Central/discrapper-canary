@@ -1,8 +1,8 @@
 n.d(t, { c: () => a });
 var l = n(477900),
     i = n(582128),
-    s = n(744682);
-let r = { hover: { name: "hover", start: 0, duration: 59 }, click: { name: "click", start: 68, duration: 26 } };
+    r = n(744682);
+let s = { hover: { name: "hover", start: 0, duration: 59 }, click: { name: "click", start: 68, duration: 26 } };
 function a() {
     let e = i.useRef(null),
         t = i.useCallback(() => {
@@ -15,7 +15,7 @@ function a() {
             null != e.current && e.current.stopIfPlaying("hover");
         }, []),
         u = i.useCallback(
-            (t) => (0, l.jsx)(s.P, { ...t, src: () => n.e("57830").then(n.t.bind(n, 695941, 19)), ref: e, markers: r }),
+            (t) => (0, l.jsx)(r.P, { ...t, src: () => n.e("57830").then(n.t.bind(n, 695941, 19)), ref: e, markers: s }),
             [],
         );
     return {

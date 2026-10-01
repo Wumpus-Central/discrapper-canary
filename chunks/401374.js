@@ -2,8 +2,8 @@ n.d(t, { c: () => x, O: () => A });
 var i,
     l = n(477900),
     s = n(582128),
-    a = n(984703),
-    r = n(381438),
+    r = n(984703),
+    a = n(381438),
     o = n(17928),
     d = n(287809),
     c =
@@ -31,7 +31,7 @@ function p(e) {
                 })(n),
             [n],
         ),
-        a = s.useMemo(
+        r = s.useMemo(
             () =>
                 (function (e, t) {
                     switch (e) {
@@ -49,23 +49,23 @@ function p(e) {
         className: g.E,
         children: [
             (0, l.jsx)(m.E, { variant: "text-xs/semibold", color: "text-default", children: i }),
-            (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", children: a }),
+            (0, l.jsx)(m.E, { variant: "text-sm/normal", color: "text-muted", children: r }),
         ],
     });
 }
 function A(e) {
     let { applicationId: t, channel: n, variant: i, children: s } = e,
-        { data: a } = (0, u.YY)(t);
-    return null == a
+        { data: r } = (0, u.YY)(t);
+    return null == r
         ? null
-        : (0, l.jsx)(x, { contentClassification: a?.contentClassification, channel: n, variant: i, children: s(a) });
+        : (0, l.jsx)(x, { contentClassification: r?.contentClassification, channel: n, variant: i, children: s(r) });
 }
 function x(e) {
     let t,
         { contentClassification: n, channel: i, variant: s, children: u } = e,
         m =
             ((t = (0, o.bG)([d.default], () => d.default.getCurrentUser()?.nsfwAllowed)),
-            null == n || (0, a.U1)({ type: a.fS.MINIMAL, data: n }) !== r.Y.ADULT
+            null == n || (0, r.U1)({ type: r.fS.MINIMAL, data: n }) !== a.Y.ADULT
                 ? "display"
                 : !0 !== t
                   ? "block_underage"

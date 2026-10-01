@@ -1,8 +1,8 @@
 (n.d(t, {
     C5: () => H,
     CQ: () => U,
-    D6: () => q,
-    DA: () => Z,
+    D6: () => Z,
+    DA: () => q,
     EG: () => G,
     Fj: () => K,
     Nu: () => W,
@@ -40,8 +40,8 @@ var i = n(582128),
     f = n(174459),
     p = n(927813),
     T = n(690521),
-    m = n(474090),
-    g = n(818645),
+    g = n(474090),
+    m = n(818645),
     S = n(316884),
     N = n(732139),
     C = n(652215),
@@ -82,11 +82,11 @@ function P(e, t) {
         E = $(n),
         f = z(n),
         { topEmojis: p, newlyAddedEmojis: C } = (0, S.A)(n, e),
-        { allEmojis: R } = (0, g.A)({ topEmojis: p, newlyAddedEmojis: C }),
+        { allEmojis: R } = (0, m.A)({ topEmojis: p, newlyAddedEmojis: C }),
         L = (0, s.bG)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(n), [n]),
         D = (0, s.bG)([A.A], () => A.A.getGuild(n)?.name),
         v = (0, s.bG)([I.default], () => I.default.getCurrentUser()),
-        b = (0, m.ki)(v),
+        b = (0, g.ki)(v),
         M = (0, _.Ym)({ location: "useEmojiCategories" }),
         P = i.useMemo(() => {
             let i = L.getGroupedCustomEmoji(),
@@ -424,7 +424,7 @@ function X(e, t) {
         )
     );
 }
-function q(e) {
+function Z(e) {
     return (
         i.useEffect(() => {
             E.bW.loadIfNecessary();
@@ -432,7 +432,7 @@ function q(e) {
         (0, s.yK)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(e).getEmojiInPriorityOrderWithoutFetchingLatest())
     );
 }
-function Z(e, t, n) {
+function q(e, t, n) {
     if (null == n) return N.tm.NONE;
     let i = e.map((e) => e.id ?? e.uniqueName ?? e.name),
         r = t.map((e) => e.id);

@@ -1,45 +1,45 @@
-t.d(r, { Mf: () => p, R9: () => o, Y_: () => _, h4: () => c, ui: () => m });
-var n = t(102607),
-    a = t(754474),
-    l = t(374380);
-let i = "responsive",
-    o = { foreground: a.u.FRONT, background: a.u.BACK },
-    s = new Set([l.O.STAPLE, l.O.RAIL, l.O.BORDER]),
-    u = new Set([n.T.TOP, n.T.BOTTOM, n.T.CENTER]),
-    c = {
+n.d(e, { Mf: () => O, R9: () => o, Y_: () => s, h4: () => d, ui: () => h });
+var t = n(102607),
+    l = n(754474),
+    i = n(374380);
+let a = "responsive",
+    o = { foreground: l.u.FRONT, background: l.u.BACK },
+    u = new Set([i.O.STAPLE, i.O.RAIL, i.O.BORDER]),
+    p = new Set([t.T.TOP, t.T.BOTTOM, t.T.CENTER]),
+    d = {
         wrong_part_count: "wrong filename format",
         invalid_index: "invalid index",
-        invalid_type: `invalid type (expected: ${[...s].join(", ")})`,
-        invalid_anchor: `invalid anchor (expected: ${[...u].join(", ")})`,
-        invalid_responsive: `invalid suffix (expected '${i}')`,
+        invalid_type: `invalid type (expected: ${[...u].join(", ")})`,
+        invalid_anchor: `invalid anchor (expected: ${[...p].join(", ")})`,
+        invalid_responsive: `invalid suffix (expected '${a}')`,
         border_has_anchor: "border layers must omit the anchor",
     };
-function p(e) {
-    var r;
-    let t = e.replace(/\.\w+$/, "").split("_");
-    if (t.length < 2 || t.length > 4) return { parsed: null, errorType: "wrong_part_count" };
-    let [a, o, ...c] = t;
-    if (!/^\d+$/.test(a)) return { parsed: null, errorType: "invalid_index" };
-    if (!s.has(o)) return { parsed: null, errorType: "invalid_type" };
-    if (o === l.O.BORDER) {
-        if (c.length > 0 && ((r = c[0]), u.has(r))) return { parsed: null, errorType: "border_has_anchor" };
-        if (c.length > 1) return { parsed: null, errorType: "wrong_part_count" };
-        if (1 === c.length && c[0] !== i) return { parsed: null, errorType: "invalid_responsive" };
-        let e = 1 === c.length;
-        return { parsed: { index: Number(a), type: o, anchor: n.T.CENTER, responsive: e }, errorType: null };
+function O(r) {
+    var e;
+    let n = r.replace(/\.\w+$/, "").split("_");
+    if (n.length < 2 || n.length > 4) return { parsed: null, errorType: "wrong_part_count" };
+    let [l, o, ...d] = n;
+    if (!/^\d+$/.test(l)) return { parsed: null, errorType: "invalid_index" };
+    if (!u.has(o)) return { parsed: null, errorType: "invalid_type" };
+    if (o === i.O.BORDER) {
+        if (d.length > 0 && ((e = d[0]), p.has(e))) return { parsed: null, errorType: "border_has_anchor" };
+        if (d.length > 1) return { parsed: null, errorType: "wrong_part_count" };
+        if (1 === d.length && d[0] !== a) return { parsed: null, errorType: "invalid_responsive" };
+        let r = 1 === d.length;
+        return { parsed: { index: Number(l), type: o, anchor: t.T.CENTER, responsive: r }, errorType: null };
     }
-    let p = c[0];
-    if (null == p || !u.has(p)) return { parsed: null, errorType: "invalid_anchor" };
-    if (c.length > 2) return { parsed: null, errorType: "wrong_part_count" };
-    if (2 === c.length && c[1] !== i) return { parsed: null, errorType: "invalid_responsive" };
-    let f = 2 === c.length || o === l.O.RAIL;
-    return { parsed: { index: Number(a), type: o, anchor: p, responsive: f }, errorType: null };
+    let O = d[0];
+    if (null == O || !p.has(O)) return { parsed: null, errorType: "invalid_anchor" };
+    if (d.length > 2) return { parsed: null, errorType: "wrong_part_count" };
+    if (2 === d.length && d[1] !== a) return { parsed: null, errorType: "invalid_responsive" };
+    let T = 2 === d.length || o === i.O.RAIL;
+    return { parsed: { index: Number(l), type: o, anchor: O, responsive: T }, errorType: null };
 }
-let f = { [a.u.FRONT]: 0, [a.u.BACK]: 1 };
-function m(e, r) {
-    let t = f[e.order] - f[r.order];
-    return 0 !== t ? t : e.index - r.index;
+let T = { [l.u.FRONT]: 0, [l.u.BACK]: 1 };
+function h(r, e) {
+    let n = T[r.order] - T[e.order];
+    return 0 !== n ? n : r.index - e.index;
 }
-function _(e) {
-    return "preview" === e.replace(/\.\w+$/, "");
+function s(r) {
+    return "preview" === r.replace(/\.\w+$/, "");
 }

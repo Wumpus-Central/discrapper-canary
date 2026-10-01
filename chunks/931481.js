@@ -8,18 +8,18 @@ var i = n(477900),
     o = n(688810),
     u = n(429913),
     c = n(769015),
-    m = n(390848),
-    A = n(17928),
+    A = n(390848),
+    m = n(17928),
     f = n(39623),
-    g = n(994500),
-    E = n(420825),
+    E = n(994500),
+    g = n(420825),
     x = n(22212),
     h = n(375708),
     I = n(266600);
 function v(t) {
     let { userId: e, analyticsLocation: n } = t,
-        s = (0, E.q)(),
-        r = (0, A.bG)([g.A], () => g.A.getNote(e)),
+        s = (0, g.q)(),
+        r = (0, m.bG)([E.A], () => E.A.getNote(e)),
         [o, u] = l.useState(!1),
         c = l.useCallback(() => {
             (u(!0), (0, x.Yq)({ analyticsLocation: n, noteLength: r?.length ?? 0 }));
@@ -52,34 +52,34 @@ function v(t) {
 }
 var p = n(562153),
     C = n(183555),
-    y = n(939496),
-    N = n(996988),
-    j = n(216057);
+    N = n(939496),
+    j = n(996988),
+    y = n(216057);
 function _(t) {
-    let { user: e, guildId: n, channelId: s, applicationId: A, isGameRelationship: f = !1, className: g } = t,
-        { themeType: E } = (0, y.E)(),
-        x = E === N.d.MODAL_V2,
+    let { user: e, guildId: n, channelId: s, applicationId: m, isGameRelationship: f = !1, className: E } = t,
+        { themeType: g } = (0, N.E)(),
+        x = g === j.d.MODAL_V2,
         I = p.Ay.getName(n, s, e),
         { trackUserProfileAction: _ } = (0, C.NJ)(),
         { newestAnalyticsLocation: R } = (0, o.Ay)(),
-        { acceptFriendRequest: b, cancelFriendRequest: S } = (0, m.I)({
+        { acceptFriendRequest: S, cancelFriendRequest: b } = (0, A.I)({
             userId: e.id,
-            applicationId: A,
+            applicationId: m,
             isGameRelationship: f,
             location: R,
         }),
         P = l.useCallback(() => {
-            (b(), _({ action: f ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" }));
-        }, [b, f, _]),
-        k = l.useCallback(() => {
-            (S(), _({ action: f ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" }));
+            (S(), _({ action: f ? "ACCEPT_GAME_FRIEND_REQUEST" : "ACCEPT_FRIEND_REQUEST" }));
         }, [S, f, _]),
-        L = null != A,
-        T = (0, u.h)(A);
+        k = l.useCallback(() => {
+            (b(), _({ action: f ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" }));
+        }, [b, f, _]),
+        L = null != m,
+        T = (0, u.h)(m);
     return L && null == T
         ? null
         : (0, i.jsxs)("div", {
-              className: r()(j.kL, g),
+              className: r()(y.kL, E),
               children: [
                   L
                       ? (0, i.jsx)(a.E, {
@@ -87,7 +87,7 @@ function _(t) {
                             children: h.intl.format(f ? h.t.syHjLL : h.t.V15uUI, {
                                 username: I,
                                 applicationIcon: () =>
-                                    (0, i.jsx)(c.A, { className: j.Gt, game: T, size: c.M.XXSMALL }, T?.id),
+                                    (0, i.jsx)(c.A, { className: y.Gt, game: T, size: c.M.XXSMALL }, T?.id),
                                 applicationName: T?.name,
                             }),
                         })
@@ -97,7 +97,7 @@ function _(t) {
                         }),
                   (0, i.jsx)(v, { userId: e.id, analyticsLocation: "User Profile" }),
                   (0, i.jsxs)("div", {
-                      className: j.UD,
+                      className: y.UD,
                       children: [
                           (0, i.jsx)(d.$, {
                               variant: x ? "secondary" : "primary",

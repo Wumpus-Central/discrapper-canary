@@ -1,8 +1,8 @@
-n.d(t, { o: () => i });
-var l,
-    i =
-        (((l = {}).DATA = "data"),
-        (l.CUSTOM_STRING = "custom_string"),
-        (l.APPLICATION_ASSET = "application_asset"),
-        (l.APPLICATION_LOCALIZED_STRING = "application_localized_string"),
-        l);
+l.d(t, { o: () => a });
+var n,
+    a =
+        (((n = {}).DATA = "data"),
+        (n.CUSTOM_STRING = "custom_string"),
+        (n.APPLICATION_ASSET = "application_asset"),
+        (n.APPLICATION_LOCALIZED_STRING = "application_localized_string"),
+        n);

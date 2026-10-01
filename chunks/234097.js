@@ -1,6 +1,6 @@
-n.d(t, { J: () => V });
-var r,
-    i = [],
+r.d(t, { J: () => P });
+var u,
+    n = [],
     a = "ResizeObserver loop completed with undelivered notifications.",
     o = function () {
         var e;
@@ -9,84 +9,84 @@ var r,
             : ((e = document.createEvent("Event")).initEvent("error", !1, !1), (e.message = a)),
             window.dispatchEvent(e));
     },
-    u = n(522816),
-    s = n(916784),
+    i = r(522816),
+    s = r(916784),
     l = function (e) {
         if ((0, s.dK)(e)) return 1 / 0;
-        for (var t = 0, n = e.parentNode; n;) ((t += 1), (n = n.parentNode));
+        for (var t = 0, r = e.parentNode; r;) ((t += 1), (r = r.parentNode));
         return t;
     },
-    d = n(623577),
-    c = function () {
+    c = r(623577),
+    f = function () {
         var e = 1 / 0,
             t = [];
-        i.forEach(function (n) {
-            if (0 !== n.activeTargets.length) {
-                var r = [];
-                (n.activeTargets.forEach(function (t) {
-                    var n = new u.Z(t.target),
-                        i = l(t.target);
-                    (r.push(n), (t.lastReportedSize = (0, d.P)(t.target, t.observedBox)), i < e && (e = i));
+        n.forEach(function (r) {
+            if (0 !== r.activeTargets.length) {
+                var u = [];
+                (r.activeTargets.forEach(function (t) {
+                    var r = new i.Z(t.target),
+                        n = l(t.target);
+                    (u.push(r), (t.lastReportedSize = (0, c.P)(t.target, t.observedBox)), n < e && (e = n));
                 }),
                     t.push(function () {
-                        n.callback.call(n.observer, r, n.observer);
+                        r.callback.call(r.observer, u, r.observer);
                     }),
-                    n.activeTargets.splice(0, n.activeTargets.length));
+                    r.activeTargets.splice(0, r.activeTargets.length));
             }
         });
-        for (var n = 0; n < t.length; n++) (0, t[n])();
+        for (var r = 0; r < t.length; r++) (0, t[r])();
         return e;
     },
-    f = function (e) {
-        i.forEach(function (t) {
+    d = function (e) {
+        n.forEach(function (t) {
             (t.activeTargets.splice(0, t.activeTargets.length),
                 t.skippedTargets.splice(0, t.skippedTargets.length),
-                t.observationTargets.forEach(function (n) {
-                    n.isActive() && (l(n.target) > e ? t.activeTargets.push(n) : t.skippedTargets.push(n));
+                t.observationTargets.forEach(function (r) {
+                    r.isActive() && (l(r.target) > e ? t.activeTargets.push(r) : t.skippedTargets.push(r));
                 }));
         });
     },
-    h = function () {
+    D = function () {
         var e = 0;
         for (
-            f(0);
-            i.some(function (e) {
+            d(0);
+            n.some(function (e) {
                 return e.activeTargets.length > 0;
             });
         )
-            f((e = c()));
+            d((e = f()));
         return (
-            i.some(function (e) {
+            n.some(function (e) {
                 return e.skippedTargets.length > 0;
             }) && o(),
             e > 0
         );
     },
-    p = n(717205),
-    m = [],
+    h = r(717205),
+    C = [],
     v = function (e) {
-        if (!r) {
+        if (!u) {
             var t = 0,
-                n = document.createTextNode("");
+                r = document.createTextNode("");
             (new MutationObserver(function () {
-                return m.splice(0).forEach(function (e) {
+                return C.splice(0).forEach(function (e) {
                     return e();
                 });
-            }).observe(n, { characterData: !0 }),
-                (r = function () {
-                    n.textContent = "".concat(t ? t-- : t++);
+            }).observe(r, { characterData: !0 }),
+                (u = function () {
+                    r.textContent = "".concat(t ? t-- : t++);
                 }));
         }
-        (m.push(e), r());
+        (C.push(e), u());
     },
-    _ = function (e) {
+    p = function (e) {
         v(function () {
             requestAnimationFrame(e);
         });
     },
     g = 0,
-    y = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
-    b = [
+    B = { attributes: !0, characterData: !0, childList: !0, subtree: !0 },
+    E = [
         "resize",
         "load",
         "transitionend",
@@ -102,11 +102,11 @@ var r,
         "blur",
         "focus",
     ],
-    D = function (e) {
+    A = function (e) {
         return (void 0 === e && (e = 0), Date.now() + e);
     },
-    w = !1,
-    E = new ((function () {
+    F = !1,
+    m = new ((function () {
         function e() {
             var e = this;
             ((this.stopped = !0),
@@ -117,16 +117,16 @@ var r,
         return (
             (e.prototype.run = function (e) {
                 var t = this;
-                if ((void 0 === e && (e = 250), !w)) {
-                    w = !0;
-                    var n = D(e);
-                    _(function () {
-                        var r = !1;
+                if ((void 0 === e && (e = 250), !F)) {
+                    F = !0;
+                    var r = A(e);
+                    p(function () {
+                        var u = !1;
                         try {
-                            r = h();
+                            u = D();
                         } finally {
-                            if (((w = !1), (e = n - D()), !g)) return;
-                            r ? t.run(1e3) : e > 0 ? t.run(e) : t.start();
+                            if (((F = !1), (e = r - A()), !g)) return;
+                            u ? t.run(1e3) : e > 0 ? t.run(e) : t.start();
                         }
                     });
                 }
@@ -137,9 +137,9 @@ var r,
             (e.prototype.observe = function () {
                 var e = this,
                     t = function () {
-                        return e.observer && e.observer.observe(document.body, y);
+                        return e.observer && e.observer.observe(document.body, B);
                     };
-                document.body ? t() : p.S.addEventListener("DOMContentLoaded", t);
+                document.body ? t() : h.S.addEventListener("DOMContentLoaded", t);
             }),
             (e.prototype.start = function () {
                 var e = this;
@@ -147,36 +147,36 @@ var r,
                     ((this.stopped = !1),
                     (this.observer = new MutationObserver(this.listener)),
                     this.observe(),
-                    b.forEach(function (t) {
-                        return p.S.addEventListener(t, e.listener, !0);
+                    E.forEach(function (t) {
+                        return h.S.addEventListener(t, e.listener, !0);
                     }));
             }),
             (e.prototype.stop = function () {
                 var e = this;
                 this.stopped ||
                     (this.observer && this.observer.disconnect(),
-                    b.forEach(function (t) {
-                        return p.S.removeEventListener(t, e.listener, !0);
+                    E.forEach(function (t) {
+                        return h.S.removeEventListener(t, e.listener, !0);
                     }),
                     (this.stopped = !0));
             }),
             e
         );
     })())(),
-    C = function (e) {
-        (!g && e > 0 && E.start(), (g += e) || E.stop());
+    b = function (e) {
+        (!g && e > 0 && m.start(), (g += e) || m.stop());
     },
-    A = n(838259),
-    B = (function () {
+    w = r(838259),
+    y = (function () {
         function e(e, t) {
             ((this.target = e),
-                (this.observedBox = t || A.U.CONTENT_BOX),
+                (this.observedBox = t || w.U.CONTENT_BOX),
                 (this.lastReportedSize = { inlineSize: 0, blockSize: 0 }));
         }
         return (
             (e.prototype.isActive = function () {
                 var e,
-                    t = (0, d.P)(this.target, this.observedBox, !0);
+                    t = (0, c.P)(this.target, this.observedBox, !0);
                 return (
                     (e = this.target),
                     (0, s.XJ)(e) ||
@@ -189,44 +189,44 @@ var r,
             e
         );
     })(),
-    k = function (e, t) {
+    x = function (e, t) {
         ((this.activeTargets = []),
             (this.skippedTargets = []),
             (this.observationTargets = []),
             (this.observer = e),
             (this.callback = t));
     },
-    F = new WeakMap(),
-    T = function (e, t) {
-        for (var n = 0; n < e.length; n += 1) if (e[n].target === t) return n;
+    O = new WeakMap(),
+    k = function (e, t) {
+        for (var r = 0; r < e.length; r += 1) if (e[r].target === t) return r;
         return -1;
     },
-    V = (function () {
+    P = (function () {
         function e() {}
         return (
             (e.connect = function (e, t) {
-                var n = new k(e, t);
-                F.set(e, n);
+                var r = new x(e, t);
+                O.set(e, r);
             }),
-            (e.observe = function (e, t, n) {
-                var r = F.get(e),
-                    a = 0 === r.observationTargets.length;
-                0 > T(r.observationTargets, t) &&
-                    (a && i.push(r), r.observationTargets.push(new B(t, n && n.box)), C(1), E.schedule());
+            (e.observe = function (e, t, r) {
+                var u = O.get(e),
+                    a = 0 === u.observationTargets.length;
+                0 > k(u.observationTargets, t) &&
+                    (a && n.push(u), u.observationTargets.push(new y(t, r && r.box)), b(1), m.schedule());
             }),
             (e.unobserve = function (e, t) {
-                var n = F.get(e),
-                    r = T(n.observationTargets, t),
-                    a = 1 === n.observationTargets.length;
-                r >= 0 && (a && i.splice(i.indexOf(n), 1), n.observationTargets.splice(r, 1), C(-1));
+                var r = O.get(e),
+                    u = k(r.observationTargets, t),
+                    a = 1 === r.observationTargets.length;
+                u >= 0 && (a && n.splice(n.indexOf(r), 1), r.observationTargets.splice(u, 1), b(-1));
             }),
             (e.disconnect = function (e) {
                 var t = this,
-                    n = F.get(e);
-                (n.observationTargets.slice().forEach(function (n) {
-                    return t.unobserve(e, n.target);
+                    r = O.get(e);
+                (r.observationTargets.slice().forEach(function (r) {
+                    return t.unobserve(e, r.target);
                 }),
-                    n.activeTargets.splice(0, n.activeTargets.length));
+                    r.activeTargets.splice(0, r.activeTargets.length));
             }),
             e
         );

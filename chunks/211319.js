@@ -1,4 +1,4 @@
-_.exports = {
+a.exports = {
     UX: "upsell__98044",
     gm: "emojis__98044",
     j3: "emojiMask__98044",

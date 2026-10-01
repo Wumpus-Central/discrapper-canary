@@ -1,16 +1,16 @@
 (i.d(t, { A: () => c }), i(321073));
 var s = i(17928),
-    n = i(412260),
-    r = i(852218),
-    l = i(421108),
-    a = i(773669),
+    r = i(412260),
+    n = i(852218),
+    a = i(421108),
+    l = i(773669),
     o = i(375708);
 function c(e) {
-    let t = (0, s.bG)([n.A], () => n.A.getPromotionByTypeAndId(r.pt.MARKETING_MOMENT, e) ?? null),
-        i = (0, s.bG)([a.default], () => a.default.locale),
+    let t = (0, s.bG)([r.A], () => r.A.getPromotionByTypeAndId(n.pt.MARKETING_MOMENT, e) ?? null),
+        i = (0, s.bG)([l.default], () => l.default.locale),
         c = t?.boostBogoMaxCredits ?? null,
         d = t?.endDate ?? null,
-        u = (0, l.dA)(d),
+        u = (0, a.dA)(d),
         m = [];
     return (
         null != c && m.push(o.intl.formatToPlainString(o.t["JR+Zws"], { maxCredits: c })),

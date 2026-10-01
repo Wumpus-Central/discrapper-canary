@@ -1,11 +1,11 @@
-(n.d(t, { B8: () => f, wb: () => p, xx: () => m, z5: () => h }), n(321073));
+(n.d(t, { B8: () => p, wb: () => h, xx: () => m, z5: () => f }), n(321073));
 var r = n(477900),
     l = n(582128),
     a = n(61491),
     i = n(834730),
-    s = n(584669),
-    u = n(984212),
-    o = n(42388);
+    u = n(584669),
+    o = n(984212),
+    s = n(42388);
 let c = /#xywh=(\d+),(\d+),(\d+),(\d+)/i,
     d = [];
 function m(e) {
@@ -16,9 +16,9 @@ function m(e) {
         ? null
         : { imageUrl: n, x: parseInt(t[1], 10), y: parseInt(t[2], 10), w: parseInt(t[3], 10), h: parseInt(t[4], 10) };
 }
-function h(e, t, n, r) {
+function f(e, t, n, r) {
     let [a, i] = l.useState(null),
-        [s, o] = l.useState(null);
+        [u, s] = l.useState(null);
     return (
         l.useEffect(() => {
             if (null == n || 0 === n.length || !e) return;
@@ -36,7 +36,7 @@ function h(e, t, n, r) {
                     l = [];
                 for (let e = 0; e < t.length; e++) {
                     let n = t[e];
-                    if (!(0, u.C)(n)) continue;
+                    if (!(0, o.C)(n)) continue;
                     let r = m(n.text);
                     null != r && l.push({ startSec: n.startTime, endSec: n.endTime, ...r });
                 }
@@ -47,17 +47,17 @@ function h(e, t, n, r) {
             if (null == r || 0 === r.length || !e) return;
             let t = new Image();
             return (
-                (t.onload = () => o(r)),
+                (t.onload = () => s(r)),
                 (t.src = r),
                 () => {
                     t.onload = null;
                 }
             );
         }, [r, e]),
-        null != a && a?.url === n && s === r ? a.cues : d
+        null != a && a?.url === n && u === r ? a.cues : d
     );
 }
-function f(e, t) {
+function p(e, t) {
     if (0 === e.length) return null;
     let n = 0,
         r = e.length - 1;
@@ -72,21 +72,21 @@ function f(e, t) {
     }
     return e[Math.max(0, Math.min(n, e.length - 1))];
 }
-function p(e) {
-    let { cue: t, timeSec: n, cursorXPx: l, timelineWidthPx: u } = e;
+function h(e) {
+    let { cue: t, timeSec: n, cursorXPx: l, timelineWidthPx: o } = e;
     if (t.w <= 0 || t.h <= 0) return null;
     let c = t.w / 2,
         d = 8 + c,
-        m = Math.max(d, u - 8 - c),
-        h = Math.max(d, Math.min(l, m));
+        m = Math.max(d, o - 8 - c),
+        f = Math.max(d, Math.min(l, m));
     return (0, r.jsxs)("div", {
-        className: o.kL,
+        className: s.kL,
         "aria-hidden": !0,
-        style: { left: `${h}px`, bottom: "16px", width: `${t.w}px` },
+        style: { left: `${f}px`, bottom: "16px", width: `${t.w}px` },
         children: [
-            (0, r.jsx)("div", { className: o.FF, style: (0, s.u)(t) }),
+            (0, r.jsx)("div", { className: s.FF, style: (0, u.u)(t) }),
             (0, r.jsx)(i.E, {
-                className: o.Sp,
+                className: s.Sp,
                 variant: "text-xs/normal",
                 color: "text-overlay-light",
                 tabularNumbers: !0,

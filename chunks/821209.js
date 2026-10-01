@@ -1,68 +1,68 @@
-n.d(t, { A: () => h });
-var l = n(477900);
-n(582128);
-var i = n(503698),
-    s = n.n(i),
-    r = n(782134),
-    a = n(939249),
-    o = n(692051),
-    u = n(953727);
-function c(e) {
-    let { width: t = 16, height: n = 16, color: i = "currentColor", foreground: s, ...r } = e;
-    return (0, l.jsx)("svg", {
-        ...(0, u.A)(r),
+s.d(t, { A: () => m });
+var n = s(477900);
+s(582128);
+var a = s(503698),
+    l = s.n(a),
+    i = s(782134),
+    r = s(939249),
+    o = s(692051),
+    u = s(953727);
+function d(e) {
+    let { width: t = 16, height: s = 16, color: a = "currentColor", foreground: l, ...i } = e;
+    return (0, n.jsx)("svg", {
+        ...(0, u.A)(i),
         width: t,
-        height: n,
+        height: s,
         viewBox: "0 0 24 24",
-        children: (0, l.jsx)("path", {
-            className: s,
-            fill: i,
+        children: (0, n.jsx)("path", {
+            className: l,
+            fill: a,
             transform: "translate(3.000000, 4.000000)",
             d: "M16 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h4v-2H2V4h14v10h-4v2h4c1.1 0 2-.9 2-2V2a2 2 0 0 0-2-2zM9 6l-4 4h3v6h2v-6h3L9 6z",
         }),
     });
 }
-var d = n(375708),
-    m = n(621634);
-let h = function (e) {
+var c = s(375708),
+    h = s(621634);
+let m = function (e) {
     let {
         onPlay: t,
-        externalURL: n,
-        className: i,
+        externalURL: s,
+        className: a,
         renderLinkComponent: u,
-        inactive: h,
+        inactive: m,
         messageId: p,
         channelId: f,
     } = e;
-    return (0, l.jsx)(o.Y.Consumer, {
+    return (0, n.jsx)(o.Y.Consumer, {
         children: (e) =>
-            (0, l.jsxs)("div", {
-                className: s()(i, m.iE, { [m.y7]: e.disableInteractions }),
+            (0, n.jsxs)("div", {
+                className: l()(a, h.iE, { [h.y7]: e.disableInteractions }),
                 children: [
-                    h && null == t
-                        ? (0, l.jsx)("div", {
-                              className: m.P0,
-                              children: (0, l.jsx)(r.PlayIcon, { size: "xs", color: "currentColor", className: m._R }),
+                    m && null == t
+                        ? (0, n.jsx)("div", {
+                              className: h.P0,
+                              children: (0, n.jsx)(i.PlayIcon, { size: "xs", color: "currentColor", className: h._R }),
                           })
                         : null,
                     null != t
-                        ? (0, l.jsx)(a.D, {
+                        ? (0, n.jsx)(r.D, {
                               onClick: t,
-                              className: m.Rw,
-                              tabIndex: h ? -1 : 0,
-                              "aria-label": d.intl.string(d.t.RscU7I),
-                              children: (0, l.jsx)(r.PlayIcon, { size: "xs", color: "currentColor", className: m._R }),
+                              className: h.Rw,
+                              tabIndex: m ? -1 : 0,
+                              "aria-label": c.intl.string(c.t.RscU7I),
+                              children: (0, n.jsx)(i.PlayIcon, { size: "xs", color: "currentColor", className: h._R }),
                           })
                         : null,
-                    null != n
+                    null != s
                         ? u({
-                              href: n,
+                              href: s,
                               target: "_blank",
                               rel: "noreferrer noopener",
-                              className: m.Rw,
-                              children: (0, l.jsx)(c, {
-                                  "aria-label": d.intl.string(d.t.wuRE8M),
-                                  className: null != t ? m._L : m.Zl,
+                              className: h.Rw,
+                              children: (0, n.jsx)(d, {
+                                  "aria-label": c.intl.string(c.t.wuRE8M),
+                                  className: null != t ? h._L : h.Zl,
                               }),
                               messageId: p,
                               channelId: f,

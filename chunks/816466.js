@@ -1,4 +1,4 @@
-t.exports = {
+_.exports = {
     x6: "button__46219",
     rK: "separatorDot__46219",
     _C: "guildIconContainer__46219",

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     nM: "row__93d4a",
     vO: "soundEditContainer__93d4a",
     Ns: "soundPreviewIcon__93d4a",

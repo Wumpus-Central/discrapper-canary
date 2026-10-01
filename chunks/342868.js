@@ -1,1 +1,1 @@
-_.exports = { q: "badge__6ba43" };
+o.exports = { q: "badge__6ba43" };

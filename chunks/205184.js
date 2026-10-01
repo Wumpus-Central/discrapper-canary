@@ -1,27 +1,27 @@
-n.d(e, { s: () => _ });
-var i = n(582128),
-    r = n(435558),
-    a = n.n(r),
-    d = n(681154),
-    o = n(808323),
-    p = n(935208),
-    u = n(424994);
-let c = new Set([d.ContentInventoryEntryType.PLAYED_GAME, d.ContentInventoryEntryType.LAUNCHED_ACTIVITY]);
-function s(t) {
-    return c.has(t.content_type);
+n.d(t, { s: () => p });
+var r = n(582128),
+    i = n(435558),
+    u = n.n(i),
+    a = n(681154),
+    l = n(808323),
+    s = n(935208),
+    o = n(424994);
+let d = new Set([a.ContentInventoryEntryType.PLAYED_GAME, a.ContentInventoryEntryType.LAUNCHED_ACTIVITY]);
+function c(e) {
+    return d.has(e.content_type);
 }
-function _(t) {
-    let e = (0, o.A)({ id: u.X1.GLOBAL_FEED }),
-        n = (0, o.A)({ id: u.X1.GLOBAL_FEED, unrankedEntries: !0 });
-    return i.useMemo(
+function p(e) {
+    let t = (0, l.A)({ id: o.X1.GLOBAL_FEED }),
+        n = (0, l.A)({ id: o.X1.GLOBAL_FEED, unrankedEntries: !0 });
+    return r.useMemo(
         () =>
-            a()(n)
-                .unionBy(e, (t) => t.id)
-                .filter(s)
-                .filter((e) => e.extra.application_id === t)
-                .orderBy((t) => p.default.extractTimestamp(t.id), "desc")
-                .uniqWith((t, e) => t.author_id === e.author_id && t.extra.application_id === e.extra.application_id)
+            u()(n)
+                .unionBy(t, (e) => e.id)
+                .filter(c)
+                .filter((t) => t.extra.application_id === e)
+                .orderBy((e) => s.default.extractTimestamp(e.id), "desc")
+                .uniqWith((e, t) => e.author_id === t.author_id && e.extra.application_id === t.extra.application_id)
                 .value(),
-        [n, t, e],
+        [n, e, t],
     );
 }

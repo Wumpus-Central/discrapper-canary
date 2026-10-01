@@ -1,5 +1,5 @@
 n.d(t, {
-    CW: () => C,
+    CW: () => b,
     Eo: () => E,
     GG: () => H,
     HV: () => V,
@@ -7,13 +7,13 @@ n.d(t, {
     Is: () => g,
     K: () => M,
     M7: () => P,
-    Ru: () => N,
+    Ru: () => C,
     U1: () => O,
     Zq: () => D,
     dm: () => B,
     gA: () => y,
     hF: () => m,
-    oB: () => b,
+    oB: () => N,
     tZ: () => L,
     xx: () => k,
 });
@@ -128,13 +128,13 @@ async function v(e, t) {
     let n = await i.Bo.patch({ url: _.Rsh.VIBEGRATIONS_PROJECT(e), body: t, rejectWithError: !1 });
     return (n.ok && l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: n.body }), n);
 }
-function b(e, t) {
+function N(e, t) {
     return v(e, { name: t });
 }
-function C(e, t) {
+function b(e, t) {
     return v(e, t);
 }
-async function N(e, t) {
+async function C(e, t) {
     let n = await v(e, { icon: t });
     if (n.ok) {
         let e = n.body.preview_application_id;

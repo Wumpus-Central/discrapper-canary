@@ -2,8 +2,8 @@ n.d(t, { E: () => N, A: () => A });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
-    i = n.n(r),
-    s = n(834730),
+    s = n.n(r),
+    i = n(834730),
     o = n(28863),
     d = n(174459),
     c = n(559868),
@@ -55,8 +55,8 @@ function A(e) {
     return null == m
         ? null
         : (0, a.jsx)("div", {
-              className: i()(n, _.PT, x.z),
-              children: (0, a.jsx)(s.E, {
+              className: s()(n, _.PT, x.z),
+              children: (0, a.jsx)(i.E, {
                   variant: "text-sm/normal",
                   lineClamp: c ? d : void 0,
                   color: void 0 !== u ? u : void 0,

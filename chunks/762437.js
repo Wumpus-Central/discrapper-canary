@@ -1,5 +1,5 @@
-n.d(t, { N: () => r });
-let r = {
+t.d(n, { N: () => i });
+let i = {
     default: ":",
     localeData: {
         aa: { nu: ["latn"] },

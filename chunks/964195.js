@@ -1,76 +1,76 @@
-n.d(t, { A: () => C, F: () => I });
+n.d(e, { A: () => I, F: () => E });
 var l = n(477900),
     i = n(582128),
-    s = n(503698),
-    r = n.n(s),
-    a = n(589812),
+    a = n(503698),
+    r = n.n(a),
+    s = n(589812),
     o = n(598748),
-    u = n(17928),
-    c = n(939249),
+    c = n(17928),
+    u = n(939249),
     d = n(554830),
-    m = n(975460),
-    h = n(531913),
+    A = n(975460),
+    f = n(531913),
     p = n(633075),
-    f = n(321191),
-    g = n(903209),
+    g = n(321191),
+    m = n(903209),
     x = n(375708),
-    A = n(374129);
-function C(e) {
-    let t = (0, m.g)(e.activityApplication);
-    return null == t ? null : (0, l.jsx)(E, { ...e, widgetApplication: t });
+    _ = n(374129);
+function I(t) {
+    let e = (0, A.g)(t.activityApplication);
+    return null == e ? null : (0, l.jsx)(N, { ...t, widgetApplication: e });
 }
-function E(e) {
-    var t, n;
-    let s,
-        { hasWidget: r, isLoadingProfile: a } =
-            ((t = e.userId),
-            (n = e.widgetApplication),
-            (s = (0, u.bG)([f.A], () => f.A.getUserProfile(t))),
+function N(t) {
+    var e, n;
+    let a,
+        { hasWidget: r, isLoadingProfile: s } =
+            ((e = t.userId),
+            (n = t.widgetApplication),
+            (a = (0, c.bG)([g.A], () => g.A.getUserProfile(e))),
             i.useEffect(() => {
-                let e = new AbortController();
-                return ((0, g.A)(t, void 0, { abortSignal: e.signal }), () => e.abort());
-            }, [t]),
+                let t = new AbortController();
+                return ((0, m.A)(e, void 0, { abortSignal: t.signal }), () => t.abort());
+            }, [e]),
             i.useMemo(
                 () => ({
-                    hasWidget: null != s && null != s.widgets && s.widgets.some((e) => (0, p.E)(e, n?.id)),
-                    isLoadingProfile: null == s,
+                    hasWidget: null != a && null != a.widgets && a.widgets.some((t) => (0, p.E)(t, n?.id)),
+                    isLoadingProfile: null == a,
                 }),
-                [s, n],
+                [a, n],
             ));
-    return a
+    return s
         ? null
-        : (0, l.jsx)(I, {
-              className: e.className,
-              userId: e.userId,
-              widgetApplicationId: e.widgetApplication.id,
+        : (0, l.jsx)(E, {
+              className: t.className,
+              userId: t.userId,
+              widgetApplicationId: t.widgetApplication.id,
               hasWidget: r,
-              onClickViewMore: e.onClickViewMore,
+              onClickViewMore: t.onClickViewMore,
           });
 }
-function I(e) {
+function E(t) {
     let {
-            className: t,
+            className: e,
             userId: n,
             widgetApplicationId: i,
-            hasWidget: s,
-            compactViewMore: u = !1,
-            onClickViewMore: m,
-        } = e,
-        p = (0, h.A)(n, i),
-        f = p.surfaceConfigs[o.m.ACTIVITY_ACCESSORY];
-    return null != f && p.hasIdentity
+            hasWidget: a,
+            compactViewMore: c = !1,
+            onClickViewMore: A,
+        } = t,
+        p = (0, f.A)(n, i),
+        g = p.surfaceConfigs[o.m.ACTIVITY_ACCESSORY];
+    return null != g && p.hasIdentity
         ? (0, l.jsxs)("div", {
-              className: r()(A.kL, t),
+              className: r()(_.kL, e),
               children: [
                   (0, l.jsx)("div", {
-                      className: A.Qs,
-                      children: (0, l.jsx)(a.kH, { ...p, surface: o.m.ACTIVITY_ACCESSORY, surfaceConfig: f }),
+                      className: _.Qs,
+                      children: (0, l.jsx)(s.kH, { ...p, surface: o.m.ACTIVITY_ACCESSORY, surfaceConfig: g }),
                   }),
-                  s &&
-                      (0, l.jsx)(c.D, {
+                  a &&
+                      (0, l.jsx)(u.D, {
                           "aria-label": x.intl.string(x.t["OBCR+p"]),
-                          className: r()(A.NO, { [A.O7]: u }),
-                          onClick: m,
+                          className: r()(_.NO, { [_.O7]: c }),
+                          onClick: A,
                           children: (0, l.jsx)(d.K, { size: "xxs" }),
                       }),
               ],

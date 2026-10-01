@@ -1,26 +1,26 @@
-t.d(n, { e: () => g, l: () => m });
-var l = t(477900),
-    i = t(582128),
-    r = t(192308),
-    s = t(534890),
-    a = t(308528),
-    o = t(993401),
-    d = t(518477),
-    u = t(375708);
+n.d(t, { e: () => g, l: () => f });
+var i = n(477900),
+    l = n(582128),
+    r = n(192308),
+    s = n(534890),
+    a = n(308528),
+    o = n(993401),
+    u = n(518477),
+    d = n(375708);
 function c(e) {
-    let { userId: n, onClose: t } = e,
-        l = i.useCallback(() => {
-            (a.A.openPrivateChannel({ recipientIds: n }), t?.(), (0, r.closeAllModals)());
-        }, [n, t]);
-    return { action: d.pt.SEND_MESSAGE, icon: s.ChatIcon, onClick: l, text: u.intl.string(u.t.zROXEV) };
+    let { userId: t, onClose: n } = e,
+        i = l.useCallback(() => {
+            (a.A.openPrivateChannel({ recipientIds: t }), n?.(), (0, r.closeAllModals)());
+        }, [t, n]);
+    return { action: u.pt.SEND_MESSAGE, icon: s.ChatIcon, onClick: i, text: d.intl.string(d.t.zROXEV) };
 }
 function g(e) {
-    let { userId: n, onClose: t, variant: i = "primary", ...r } = e,
-        s = c({ userId: n, onClose: t });
-    return (0, l.jsx)(o.FD, { variant: i, ...s, ...r });
+    let { userId: t, onClose: n, variant: l = "primary", ...r } = e,
+        s = c({ userId: t, onClose: n });
+    return (0, i.jsx)(o.FD, { variant: l, ...s, ...r });
 }
-function m(e) {
-    let { userId: n, onClose: t, variant: i = "primary", ...r } = e,
-        { text: s, ...a } = c({ userId: n, onClose: t });
-    return (0, l.jsx)(o.q3, { tooltipText: s, "aria-label": s, variant: i, ...a, ...r });
+function f(e) {
+    let { userId: t, onClose: n, variant: l = "primary", ...r } = e,
+        { text: s, ...a } = c({ userId: t, onClose: n });
+    return (0, i.jsx)(o.q3, { tooltipText: s, "aria-label": s, variant: l, ...a, ...r });
 }

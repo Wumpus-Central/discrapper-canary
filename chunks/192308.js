@@ -7,8 +7,8 @@
         doesTopModalAllowNavigation: () => M,
         getInteractingModalContext: () => _,
         getOpenModalKeys: () => S,
-        hasAnyModalOpen: () => g,
-        hasAnyModalOpenSelector: () => m,
+        hasAnyModalOpen: () => m,
+        hasAnyModalOpenSelector: () => g,
         hasModalOpen: () => v,
         hasModalOpenSelector: () => D,
         hasModalOpenedSince: () => N,
@@ -195,15 +195,15 @@ function T(e, t, n, i) {
         );
     });
 }
-function m(e) {
+function g(e) {
     for (let t of u) {
         let n = e[t];
         if (null != n && n.length > 0) return !0;
     }
     return !1;
 }
-function g() {
-    return m(A.getState());
+function m() {
+    return g(A.getState());
 }
 function S() {
     let e = A.getState(),
@@ -220,7 +220,7 @@ function C(e) {
     return A.subscribe(e);
 }
 function O() {
-    return m(A());
+    return g(A());
 }
 function R(e) {
     let { default: t, popout: n } = A();

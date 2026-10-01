@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(267102),
     p = n(712687),
     T = n(38405),
-    m = n(292036),
-    g = n(652215);
+    g = n(292036),
+    m = n(652215);
 let S = Symbol("POPOUT_PREVENT_CLOSE"),
     N = new Set(["Spacebar", " ", "Enter"]);
 class C extends r.Component {
@@ -25,7 +25,7 @@ class C extends r.Component {
         autoInvert: !1,
         nudgeAlignIntoViewport: !1,
         spacing: 0,
-        loadingComponent: (0, i.jsx)(m.s, {}),
+        loadingComponent: (0, i.jsx)(g.s, {}),
         closeOnClickOutside: !0,
     };
     domElementRef = r.createRef();
@@ -83,7 +83,7 @@ class C extends r.Component {
         return e;
     }
     get closeAction() {
-        return this.props.ignoreModalClicks ? g.jej.POPOUT_CLOSE_AFTER_MODALS : g.jej.POPOUT_CLOSE;
+        return this.props.ignoreModalClicks ? m.jej.POPOUT_CLOSE_AFTER_MODALS : m.jej.POPOUT_CLOSE;
     }
     setupShowPopout() {
         let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
@@ -119,8 +119,8 @@ class C extends r.Component {
             e.ownerDocument?.removeEventListener("mouseup", this.handleDocumentMouseUp, !0),
             e.ownerDocument?.removeEventListener("scroll", this.handleScroll, !0),
             e.ownerDocument?.removeEventListener("scroll", this.handleStickyScroll, !0)),
-            this.context.windowDispatch.unsubscribe(g.jej.POPOUT_CLOSE, this.handleEscapeClose),
-            this.context.windowDispatch.unsubscribe(g.jej.POPOUT_CLOSE_AFTER_MODALS, this.handleEscapeClose),
+            this.context.windowDispatch.unsubscribe(m.jej.POPOUT_CLOSE, this.handleEscapeClose),
+            this.context.windowDispatch.unsubscribe(m.jej.POPOUT_CLOSE_AFTER_MODALS, this.handleEscapeClose),
             this.resizeObserver?.disconnect(),
             this.unsubscribeModalChanges?.(),
             (this.unsubscribeModalChanges = null));
@@ -197,10 +197,10 @@ class C extends r.Component {
               });
     }
     handlePopoutShow = () => {
-        this.context.windowDispatch.dispatch(g.jej.POPOUT_SHOW, this.props.popoutKey);
+        this.context.windowDispatch.dispatch(m.jej.POPOUT_SHOW, this.props.popoutKey);
     };
     handlePopoutHide = () => {
-        this.context.windowDispatch.dispatch(g.jej.POPOUT_HIDE, this.props.popoutKey);
+        this.context.windowDispatch.dispatch(m.jej.POPOUT_HIDE, this.props.popoutKey);
     };
     handleSetPopoutRef = (e) => {
         let t = e?.ownerDocument.defaultView;

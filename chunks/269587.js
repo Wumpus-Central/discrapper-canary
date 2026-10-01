@@ -1,107 +1,107 @@
-e.d(n, { A: () => W });
-var l = e(477900),
-    i = e(582128),
-    r = e(866665),
-    a = e(939249),
-    s = e(365199),
-    o = e(661531),
-    c = e(922016),
-    u = e(980707),
-    d = e(477782),
-    A = e(793574),
-    x = e(688810),
-    p = e(315246),
-    f = e(92240),
-    m = e(679492),
-    _ = e(243949),
-    T = e(939496),
-    E = e(17928),
-    g = e(573648),
-    N = e(541806),
-    C = e(261020),
-    I = e(83971),
-    y = e(780964),
-    j = e(766075),
-    O = e(30370),
-    S = e(652215),
-    h = e(375708),
-    v = e(754495),
-    P = e(534465),
-    R = e(939075),
-    L = e(20805),
-    U = e(655116),
-    b = e(287809),
-    M = e(272984),
-    D = e(695311),
-    G = e(518477),
-    V = e(996988);
-function Y(t) {
+n.d(e, { A: () => w });
+var l = n(477900),
+    i = n(582128),
+    a = n(866665),
+    r = n(939249),
+    s = n(365199),
+    o = n(661531),
+    c = n(922016),
+    u = n(980707),
+    d = n(477782),
+    A = n(793574),
+    f = n(688810),
+    p = n(315246),
+    g = n(92240),
+    m = n(679492),
+    x = n(243949),
+    _ = n(939496),
+    I = n(17928),
+    N = n(573648),
+    E = n(541806),
+    T = n(261020),
+    C = n(83971),
+    S = n(780964),
+    h = n(766075),
+    y = n(30370),
+    O = n(652215),
+    v = n(375708),
+    j = n(754495),
+    P = n(534465),
+    R = n(939075),
+    L = n(20805),
+    b = n(655116),
+    M = n(287809),
+    U = n(272984),
+    D = n(695311),
+    G = n(518477),
+    Y = n(996988);
+function V(t) {
     let {
-            children: n,
-            user: e,
-            activity: r,
-            entry: a,
+            children: e,
+            user: n,
+            activity: a,
+            entry: r,
             display: s,
             onSelect: o,
-            onClose: Y,
+            onClose: V,
             appContext: k,
-            targetElementRef: W,
+            targetElementRef: w,
         } = t,
-        [H, B] = i.useState(!1),
-        { analyticsLocations: z } = (0, x.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        $ = (0, f.A)({ display: s, user: e, activity: r, entry: a, analyticsLocations: z }),
-        w = (0, m.NR)(),
+        [B, W] = i.useState(!1),
+        { analyticsLocations: H } = (0, f.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        z = (0, g.A)({ display: s, user: n, activity: a, entry: r, analyticsLocations: H }),
+        X = (0, m.NR)(),
         F = i.useRef(null),
-        X = w?.interactionPopoutTargetRef ?? F,
+        $ = X?.interactionPopoutTargetRef ?? F,
         Q = (function (t) {
-            let { onAction: n } = t,
-                { themeType: e } = (0, T.E)(),
-                i = (0, _.A)({
+            let { onAction: e } = t,
+                { themeType: n } = (0, _.E)(),
+                i = (0, x.A)({
                     userId: t.user.id,
                     tabSection: G.RP.ACTIVITY,
-                    label: h.intl.string(h.t.pD1L1u),
-                    onAction: () => n?.({ action: "PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM" }),
+                    label: v.intl.string(v.t.pD1L1u),
+                    onAction: () => e?.({ action: "PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM" }),
                 });
             return [
-                e === V.d.POPOUT ? i : null,
+                n === Y.d.POPOUT ? i : null,
                 (function (t) {
-                    let { user: n, entry: e, display: i, onAction: r, onClose: a } = t,
-                        s = (0, E.bG)([b.default], () => b.default.getCurrentUser()?.id === n.id),
-                        o = (0, E.bG)([U.A], () => U.A.hasConnectedAccount());
-                    if ("recent" !== i || !(0, I.F3)(e)) return null;
+                    let { user: e, entry: n, display: i, onAction: a, onClose: r } = t,
+                        s = (0, I.bG)([M.default], () => M.default.getCurrentUser()?.id === e.id),
+                        o = (0, I.bG)([b.A], () => b.A.hasConnectedAccount());
+                    if ("recent" !== i || !(0, C.F3)(n)) return null;
                     if (!o)
                         return (0, l.jsx)(d.Dr, {
                             id: "connect-spotify",
-                            label: h.intl.formatToPlainString(h.t.XWSHTb, { platform: M.HD }),
+                            label: v.intl.formatToPlainString(v.t.XWSHTb, { platform: U.HD }),
                             action: () => {
-                                (r?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
-                                    (0, j.openUserSettings)(y.X.CONNECTIONS_CATEGORY),
-                                    a?.());
+                                (a?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
+                                    (0, h.openUserSettings)(S.X.CONNECTIONS_CATEGORY),
+                                    r?.());
                             },
                         });
                     if (s) return null;
-                    let c = (0, L.Tq)(e) ? e.extra.entries[0]?.media : e.extra.media;
+                    let c = (0, L.Tq)(n) ? n.extra.entries[0]?.media : n.extra.media;
                     return null == c
                         ? null
                         : (0, l.jsx)(d.Dr, {
                               id: "play-on-spotify",
-                              label: h.intl.string(h.t.rRffNz),
+                              label: v.intl.string(v.t.rRffNz),
                               action: () => {
-                                  (r?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }),
-                                      (0, C.n)(M.M0.TRACK, c.external_id));
+                                  (a?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }),
+                                      (0, T.n)(U.M0.TRACK, c.external_id));
                               },
                           });
                 })(t),
                 (0, P.Ay)(t),
                 (0, P.gA)(t),
                 (function (t) {
-                    let { display: n, entry: e, onAction: i, onClose: r } = t,
-                        a = (0, L.yl)(e),
-                        s = (0, D.A)({ applicationId: a ? e.extra.application_id : void 0, onClose: r });
-                    return "recent" === n && a
+                    let { display: e, entry: n, onAction: i, onClose: a } = t,
+                        r = (0, L.yl)(n),
+                        s = (0, D.A)({ applicationId: r ? n.extra.application_id : void 0, onClose: a });
+                    return "recent" === e && r
                         ? (0, l.jsx)(d.Dr, {
                               id: "view-activity",
-                              label: h.intl.string(h.t.GDWYR8),
+                              label: v.intl.string(v.t.GDWYR8),
                               action: () => {
                                   (i?.({ action: "PRESS_VIEW_ACTIVITY_MENU_ITEM" }), s());
                               },
@@ -110,85 +110,85 @@ function Y(t) {
                 })(t),
                 (0, R.A)(t),
                 (function (t) {
-                    let { activity: n, entry: e, display: i, onAction: r, onClose: a } = t,
-                        s = (0, E.bG)([O.A], () => null != O.A.getAccount(null, S.fg2.CRUNCHYROLL));
-                    if (!(0, N.A)(n) && !(0, I.CU)(e)) return null;
+                    let { activity: e, entry: n, display: i, onAction: a, onClose: r } = t,
+                        s = (0, I.bG)([y.A], () => null != y.A.getAccount(null, O.fg2.CRUNCHYROLL));
+                    if (!(0, E.A)(e) && !(0, C.CU)(n)) return null;
                     if (!s)
                         return (0, l.jsx)(d.Dr, {
                             id: "connect-crunchyroll",
-                            label: h.intl.formatToPlainString(h.t.XWSHTb, {
-                                platform: g.A.get(S.fg2.CRUNCHYROLL).name,
+                            label: v.intl.formatToPlainString(v.t.XWSHTb, {
+                                platform: N.A.get(O.fg2.CRUNCHYROLL).name,
                             }),
                             action: () => {
-                                (r?.({ action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM" }),
-                                    (0, j.openUserSettings)(y.X.CONNECTIONS_CATEGORY),
-                                    a?.());
+                                (a?.({ action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM" }),
+                                    (0, h.openUserSettings)(S.X.CONNECTIONS_CATEGORY),
+                                    r?.());
                             },
                         });
-                    if ("recent" !== i || !(0, I.CU)(e)) return null;
-                    let o = e.extra.url;
+                    if ("recent" !== i || !(0, C.CU)(n)) return null;
+                    let o = n.extra.url;
                     return null == o || "" === o
                         ? null
                         : (0, l.jsx)(d.Dr, {
                               id: "watch-on-crunchyroll",
-                              label: h.intl.string(h.t.OpxQVH),
+                              label: v.intl.string(v.t.OpxQVH),
                               action: () => {
-                                  (r?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, C.C)(o));
+                                  (a?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, T.C)(o));
                               },
                           });
                 })(t),
-                (0, v.s)(t),
+                (0, j.s)(t),
             ].filter((t) => null != t);
-        })({ entry: a, activity: r, user: e, display: s, onClose: Y, onAction: $, isMenuOpen: H, appContext: k });
-    return 0 === Q.length || e.bot
+        })({ entry: r, activity: a, user: n, display: s, onClose: V, onAction: z, isMenuOpen: B, appContext: k });
+    return 0 === Q.length || n.bot
         ? null
         : (0, l.jsx)(c.Y, {
-              targetElementRef: W ?? X,
+              targetElementRef: w ?? $,
               align: "top",
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  ($({ action: "OPEN_MENU" }), B(!0));
+                  (z({ action: "OPEN_MENU" }), W(!0));
               },
               renderPopout: (t) => {
-                  let { closePopout: n } = t;
+                  let { closePopout: e } = t;
                   return (0, l.jsx)("div", {
                       onClick: (t) => t.stopPropagation(),
                       children: (0, l.jsx)(u.W, {
                           "data-menu-migrated-auto": !0,
                           navId: p.n,
                           onClose: () => {
-                              (n(), B(!1));
+                              (e(), W(!1));
                           },
-                          "aria-label": h.intl.string(h.t.PlAQz1),
+                          "aria-label": v.intl.string(v.t.PlAQz1),
                           onSelect: o,
                           children: (0, l.jsx)(d.rX, { children: Q }),
                       }),
                   });
               },
-              children: n,
+              children: e,
           });
 }
-var k = e(260155);
-function W(t) {
-    let n = i.useRef(null);
-    return (0, l.jsx)(Y, {
+var k = n(260155);
+function w(t) {
+    let e = i.useRef(null);
+    return (0, l.jsx)(V, {
         ...t,
-        targetElementRef: n,
+        targetElementRef: e,
         children: (t) =>
-            (0, l.jsx)(r.m, {
-                targetElementRef: n,
-                text: h.intl.string(h.t["UKOtz+"]),
+            (0, l.jsx)(a.m, {
+                targetElementRef: e,
+                text: v.intl.string(v.t["UKOtz+"]),
                 ariaHidden: !0,
-                children: (0, l.jsx)(a.D, {
+                children: (0, l.jsx)(r.D, {
                     ...t,
-                    innerRef: n,
-                    "aria-label": h.intl.string(h.t["UKOtz+"]),
-                    onClick: (n) => {
-                        (n.stopPropagation(), t.onClick(n));
+                    innerRef: e,
+                    "aria-label": v.intl.string(v.t["UKOtz+"]),
+                    onClick: (e) => {
+                        (e.stopPropagation(), t.onClick(e));
                     },
-                    onContextMenu: (n) => {
-                        (n.preventDefault(), t.onClick(n));
+                    onContextMenu: (e) => {
+                        (e.preventDefault(), t.onClick(e));
                     },
                     className: k.He,
                     children: (0, l.jsx)(s.MoreHorizontalIcon, {

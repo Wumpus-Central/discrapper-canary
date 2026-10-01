@@ -1,18 +1,18 @@
-t.d(i, { g: () => o, t: () => r });
-var l = t(582128),
-    e = t(155718),
-    u = t(587895),
-    p = t(429913),
-    a = t(395671),
-    c = t(705751);
-function r(n) {
-    if (null == n) return null;
-    if (n.type !== c.S7.GAME) return n;
-    let i = n.linkedGames?.find((n) => n.type === e.Mh.OFFICIAL);
-    return i?.application ?? u.A.getApplication(i?.id) ?? null;
+n.d(t, { g: () => s, t: () => c });
+var i = n(582128),
+    l = n(155718),
+    r = n(587895),
+    o = n(429913),
+    u = n(395671),
+    a = n(705751);
+function c(e) {
+    if (null == e) return null;
+    if (e.type !== a.S7.GAME) return e;
+    let t = e.linkedGames?.find((e) => e.type === l.Mh.OFFICIAL);
+    return t?.application ?? r.A.getApplication(t?.id) ?? null;
 }
-function o(n) {
-    let i = null == n || n instanceof a.Ay ? void 0 : n.getOfficialApplicationId(),
-        t = (0, p.h)(i);
-    return l.useMemo(() => (null == n ? null : n instanceof a.Ay ? r(n) : (t ?? null)), [n, t]);
+function s(e) {
+    let t = null == e || e instanceof u.Ay ? void 0 : e.getOfficialApplicationId(),
+        n = (0, o.h)(t);
+    return i.useMemo(() => (null == e ? null : e instanceof u.Ay ? c(e) : (n ?? null)), [e, n]);
 }

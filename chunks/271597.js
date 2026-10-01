@@ -1,14 +1,14 @@
-n.d(t, { p: () => r });
+n.d(t, { p: () => s });
 var i = n(477900);
 n(582128);
 var l = n(192308),
     a = n(792852),
-    s = n(696016);
-function r() {
+    r = n(696016);
+function s() {
     let { initialEditingClipId: e, selectedGameId: t } =
             arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        { resetAll: r, setGameFacet: o } = a.P.getState();
-    (r(),
+        { resetAll: s, setGameFacet: o } = a.P.getState();
+    (s(),
         null != t && o(t),
         (0, l.openModalLazy)(
             async () => {
@@ -47,6 +47,6 @@ function r() {
                 ]).then(n.bind(n, 25682));
                 return (n) => (0, i.jsx)(t, { initialEditingClipId: e, ...n });
             },
-            { modalKey: s.nm },
+            { modalKey: r.nm },
         ));
 }

@@ -1,4 +1,4 @@
-n.d(t, { N: () => i, I: () => s });
+n.d(t, { N: () => s, I: () => i });
 var a = n(202541),
     l = n(714206);
 let r = {
@@ -59,9 +59,9 @@ let r = {
             "https://cdn.discordapp.com/assets/content/7fbfa17e5011425252d9ff6c1f286f41560c8acc58cb543b3c895031ffda5289.png",
     },
 };
-function i(e) {
+function s(e) {
     return null != e ? r[e] : null;
 }
-function s(e) {
+function i(e) {
     return r[e];
 }

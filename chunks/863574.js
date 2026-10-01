@@ -3,11 +3,11 @@ var i = n(477900);
 n(582128);
 var l = n(503698),
     s = n.n(l),
-    a = n(622413),
-    r = n(255314);
+    r = n(622413),
+    a = n(255314);
 let o = 660;
 function d(e) {
-    return (0, i.jsx)(a.A, { ...e, className: s()(e.className, { [r.sN]: !e.isHorizontal, [r.wO]: e.isHorizontal }) });
+    return (0, i.jsx)(r.A, { ...e, className: s()(e.className, { [a.sN]: !e.isHorizontal, [a.wO]: e.isHorizontal }) });
 }
 let c = (e) => {
     let { isHorizontal: t } = e;
@@ -15,15 +15,15 @@ let c = (e) => {
         ...e,
         media: function () {
             return (0, i.jsx)("div", {
-                className: r.FR,
+                className: a.FR,
                 children: (0, i.jsx)("div", {
-                    className: s()(r.Wv, { [r._n]: t }),
-                    children: (0, i.jsx)("div", { className: r.h$ }),
+                    className: s()(a.Wv, { [a._n]: t }),
+                    children: (0, i.jsx)("div", { className: a.h$ }),
                 }),
             });
         },
         title: function () {
-            return (0, i.jsx)("div", { className: s()(r.GE, { [r.E9]: t }) });
+            return (0, i.jsx)("div", { className: s()(a.GE, { [a.E9]: t }) });
         },
     });
 };

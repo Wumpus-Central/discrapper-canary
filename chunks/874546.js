@@ -1,15 +1,15 @@
-i.d(n, { Ay: () => u, _C: () => o });
+i.d(t, { Ay: () => a, _C: () => u });
 var e = i(574381),
-    l = i(809733),
-    r = i(55730),
-    a = i(652215);
-function o(t) {
-    return null != t && !!(0, r.A)(t, a.jUm.JOIN) && t.type === a.$pd.PLAYING;
+    r = i(809733),
+    l = i(55730),
+    o = i(652215);
+function u(n) {
+    return null != n && !!(0, l.A)(n, o.jUm.JOIN) && n.type === o.$pd.PLAYING;
 }
-function u(t) {
-    if (!o(t)) return !1;
-    let n = (0, e.un)() ? a.yTV.IOS : (0, l.IA)() ? a.yTV.META_QUEST : (0, e.m0)() ? a.yTV.ANDROID : a.yTV.DESKTOP;
-    if ((t?.platform != null ? t.platform : a.yTV.DESKTOP) === n) return !0;
-    let i = t?.supported_platforms;
-    return null != i && 0 !== i.length && i.includes(n);
+function a(n) {
+    if (!u(n)) return !1;
+    let t = (0, e.un)() ? o.yTV.IOS : (0, r.IA)() ? o.yTV.META_QUEST : (0, e.m0)() ? o.yTV.ANDROID : o.yTV.DESKTOP;
+    if ((n?.platform != null ? n.platform : o.yTV.DESKTOP) === t) return !0;
+    let i = n?.supported_platforms;
+    return null != i && 0 !== i.length && i.includes(t);
 }

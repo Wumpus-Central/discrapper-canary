@@ -1,18 +1,18 @@
-n.d(t, { A: () => m });
-var l = n(477900);
-n(582128);
-var i = n(17928),
-    s = n(86147),
-    r = n(729475),
-    a = n(869146),
-    o = n(531685),
-    u = n(475815),
-    c = n(204651),
-    d = n(375708);
-function m(e) {
-    let { node: t, guestWindow: n, ...m } = e,
-        h = (0, i.bG)([o.A, a.A], () => (0, u._U)(t, n?.document), [t, n]),
-        p = h ? d.intl.string(d.t.Z7MyNB) : d.intl.string(d.t.OIDkcp),
-        f = h ? s.z : r.T;
-    return (0, l.jsx)(c.A, { label: p, iconComponent: f, ...m });
+s.d(t, { A: () => h });
+var n = s(477900);
+s(582128);
+var a = s(17928),
+    l = s(86147),
+    i = s(729475),
+    r = s(869146),
+    o = s(531685),
+    u = s(475815),
+    d = s(204651),
+    c = s(375708);
+function h(e) {
+    let { node: t, guestWindow: s, ...h } = e,
+        m = (0, a.bG)([o.A, r.A], () => (0, u._U)(t, s?.document), [t, s]),
+        p = m ? c.intl.string(c.t.Z7MyNB) : c.intl.string(c.t.OIDkcp),
+        f = m ? l.z : i.T;
+    return (0, n.jsx)(d.A, { label: p, iconComponent: f, ...h });
 }

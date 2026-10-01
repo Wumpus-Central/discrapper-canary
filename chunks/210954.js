@@ -17,12 +17,12 @@ var r = n(503698),
     f = n(113192),
     p = n(165610),
     T = n(652215),
-    m = n(411801),
-    g = n(967481),
+    g = n(411801),
+    m = n(967481),
     S = n(969426);
 function N(e) {
     let { onActive: t, onForceIdle: n } = e;
-    return (0, i.jsx)("div", { onMouseMove: t, onMouseDown: t, onMouseLeave: n, className: m.IU });
+    return (0, i.jsx)("div", { onMouseMove: t, onMouseDown: t, onMouseLeave: n, className: g.IU });
 }
 function C() {
     let e = (0, s.bG)([A.A], () => (0, p.ny)(A.A.getMainFrame())),
@@ -38,14 +38,14 @@ function C() {
         children: (t) => {
             let { idle: n, onActive: s, onForceIdle: l } = t;
             return (0, i.jsxs)(u.A, {
-                className: a()(m.zr, { [m.NW]: o, [S.a8]: o, [g.N7]: n, [m.p0]: o, [m.R]: r, [m.Gq]: C }),
+                className: a()(g.zr, { [g.NW]: o, [S.a8]: o, [m.N7]: n, [g.p0]: o, [g.R]: r, [g.Gq]: C }),
                 noBorder: !o,
                 children: [
                     o ? (0, i.jsx)(N, { onActive: s, onForceIdle: l }) : null,
                     (0, i.jsx)(I.A, {
                         frameId: e.id,
                         level: h.A.AboveAppContent,
-                        className: a()(m.pU, { [m.p0]: o }),
+                        className: a()(g.pU, { [g.p0]: o }),
                         overlay: o
                             ? (0, i.jsx)("div", {
                                   className: "theme-dark",

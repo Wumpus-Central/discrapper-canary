@@ -1,12 +1,12 @@
-n.d(t, { r: () => a });
-var l = n(582128),
-    i = n(17928),
-    s = n(696451),
-    r = n(780898);
-function a(e) {
-    let { user: t, guildId: n } = e,
-        a = (0, i.bG)([s.Ay], () => (null != n && null != t ? s.Ay.getMember(n, t.id) : null));
-    return l.useMemo(() => {
-        if (null != t) return (0, r.WK)(a?.collectibles?.nameplate) ?? t.nameplate;
-    }, [a, t]);
+n.d(l, { r: () => i });
+var t = n(582128),
+    u = n(17928),
+    r = n(696451),
+    a = n(780898);
+function i(e) {
+    let { user: l, guildId: n } = e,
+        i = (0, u.bG)([r.Ay], () => (null != n && null != l ? r.Ay.getMember(n, l.id) : null));
+    return t.useMemo(() => {
+        if (null != l) return (0, a.WK)(i?.collectibles?.nameplate) ?? l.nameplate;
+    }, [i, l]);
 }

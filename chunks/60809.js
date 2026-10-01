@@ -4,18 +4,18 @@ n.d(t, {
     KG: () => a,
     TY: () => c,
     Ug: () => i,
-    Wx: () => s,
-    gS: () => r,
+    Wx: () => r,
+    gS: () => s,
     qp: () => u,
-    sK: () => m,
+    sK: () => h,
 });
 var l,
     i = (((l = {})[(l.POPULAR = 0)] = "POPULAR"), (l[(l.ALPHABETICAL = 1)] = "ALPHABETICAL"), l);
-let s = "app-launcher-element",
-    r = "app-launcher-modal",
+let r = "app-launcher-element",
+    s = "app-launcher-modal",
     a = "app-launcher-entrypoint",
     o = "app-launcher-app-dm-entrypoint",
     u = "app-launcher-app-details-more-menu",
     c = "app-launcher-profile-friend-activity-entry",
     d = "min(100vh, 680px)",
-    m = { "--custom-app-launcher-width": "500px", "--custom-app-launcher-height": d };
+    h = { "--custom-app-launcher-width": "500px", "--custom-app-launcher-height": d };

@@ -1,8 +1,8 @@
-(n.d(t, { H: () => s }), n(321073));
+(n.d(t, { H: () => r }), n(321073));
 var i = n(696016),
     l = n(731854);
 let a = { speakingUserIds: [], activeSoundboards: [] };
-class s {
+class r {
     timeline;
     userSpeakingStates;
     activeSoundboards;
@@ -38,7 +38,7 @@ class s {
                 this.appendSnapshot(e.timestamp));
     }
     static fromAttachmentTimeline(e) {
-        return new s(
+        return new r(
             e
                 .filter((e) => null != e.speaking)
                 .map((e) => ({

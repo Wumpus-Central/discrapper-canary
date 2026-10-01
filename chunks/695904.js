@@ -1,4 +1,4 @@
-n.d(e, { aS: () => u, bq: () => c, kM: () => m });
+n.d(e, { aS: () => u, bq: () => c, kM: () => A });
 var i = n(17928),
     l = n(945810),
     s = n(710195),
@@ -15,7 +15,7 @@ function u() {
 function c() {
     return (0, i.bG)([r.default, s.A], u);
 }
-function m(t) {
+function A(t) {
     let { location: e } = t;
     return (o.useConfig({ location: e }), null);
 }

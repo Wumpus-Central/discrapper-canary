@@ -1,58 +1,58 @@
-n.d(t, { a: () => k, A: () => M });
+n.d(t, { a: () => L, A: () => O });
 var l = n(582128),
     i = n(143236),
-    s = n(719442),
-    r = n(264322),
+    r = n(719442),
+    s = n(264322),
     a = n(861382),
     o = n(267102),
     u = n(853145),
     c = n(885386),
     d = n(408018),
-    m = n(870748),
-    h = n(186306),
+    h = n(870748),
+    m = n(186306),
     p = n(35277),
     f = n(820066),
     g = n(407315);
 let x = new Set(["line", "blockQuote"]);
-var A = n(155718);
-let C = ["applicationCommand"],
-    E = ["gameMentionInput", "timestampMentionInput"];
-function I(e) {
+var S = n(155718);
+let E = ["applicationCommand"],
+    y = ["gameMentionInput", "timestampMentionInput"];
+function C(e) {
     let t = f.VW.getCurrentBlock(e),
         n = f.VW.getCurrentInline(e);
-    return null != t && !C.includes(t[0].type) && !E.includes(n?.[0]?.type);
+    return null != t && !E.includes(t[0].type) && !y.includes(n?.[0]?.type);
 }
-function y(e) {
-    return null != e && "applicationCommandOption" === e.type && e.optionType === A.n4.STRING;
+function A(e) {
+    return null != e && "applicationCommandOption" === e.type && e.optionType === S.n4.STRING;
 }
-function S(e) {
-    return y(f.VW.getCurrentInline(e)?.[0]);
+function b(e) {
+    return A(f.VW.getCurrentInline(e)?.[0]);
 }
-function v(e, t, n) {
+function I(e, t, n) {
     let l,
         i,
-        s,
-        r = f.VW.getCurrentInline(e);
-    (s = n
-        ? (i = (l = f.VW.string(e, { anchor: f.Kh.start(r), focus: t })).lastIndexOf("\n")) < 0
+        r,
+        s = f.VW.getCurrentInline(e);
+    (r = n
+        ? (i = (l = f.VW.string(e, { anchor: f.Kh.start(s), focus: t })).lastIndexOf("\n")) < 0
             ? l.length
             : l.length - i - 1
-        : (i = (l = f.VW.string(e, { anchor: t, focus: f.Kh.end(r) })).indexOf("\n")) < 0
+        : (i = (l = f.VW.string(e, { anchor: t, focus: f.Kh.end(s) })).indexOf("\n")) < 0
           ? l.length
-          : i) > 0 && p.b.delete(e, { distance: s, unit: "offset", reverse: n });
+          : i) > 0 && p.b.delete(e, { distance: r, unit: "offset", reverse: n });
 }
-function N(e) {
+function v(e) {
     return { type: "other", mergeable: !1, createdAt: Date.now(), value: f.VW.richValue(e), selection: e.selection };
 }
-var _ = n(113001),
-    j = n(2368);
-function b(e, t, n) {
+var N = n(113001),
+    T = n(2368);
+function j(e, t, n) {
     let l = f.VW.getCurrentInline(e);
     if ("block" === t) return !0;
     let i = f.VW.getCurrentText(e);
     if (null == i) return !0;
-    let [s, r] = i,
-        [a, o] = f.VW.edges(e, r),
+    let [r, s] = i,
+        [a, o] = f.VW.edges(e, s),
         u = f.ZF.toPoint(e.selection);
     if (null == u) return !0;
     if (null != l) {
@@ -62,20 +62,20 @@ function b(e, t, n) {
     if ("line" === t)
         if (null == l) return !1;
         else {
-            let [i, s] = f.VW.edges(e, l[1]);
-            return (p.b.delete(e, { at: u, unit: t, reverse: n, select: !0, bounds: { anchor: i, focus: s } }), !0);
+            let [i, r] = f.VW.edges(e, l[1]);
+            return (p.b.delete(e, { at: u, unit: t, reverse: n, select: !0, bounds: { anchor: i, focus: r } }), !0);
         }
     let c = f.VW.getParentBlock(e, u);
     if (null == c) return !0;
     let d = c[1],
-        m = l;
+        h = l;
     if (f.Kh.equals(u, n ? a : o))
         for (;;) {
             let t = (n ? f.VW.before : f.VW.after)(e, u);
             if (null == t) return !0;
             if (!f.PW.isDescendant(t.path, d)) break;
-            if (((u = t), null != (m = f.VW.getParentInline(e, t)))) {
-                let [t, n] = m;
+            if (((u = t), null != (h = f.VW.getParentInline(e, t)))) {
+                let [t, n] = h;
                 if (f.VW.isEmpty(e, t) || f.VW.isVoid(e, t)) {
                     let t = f.VW.before(e, n);
                     return (null != t && p.b.select(e, t), p.b.removeInline(e, n), !0);
@@ -83,26 +83,26 @@ function b(e, t, n) {
             }
             let l = f.VW.node(e, t.path);
             if (null == l || !f.l5.isText(l[0])) return !0;
-            if ((([s, r] = l), 0 !== s.text.length)) {
-                [a, o] = f.VW.edges(e, r);
+            if ((([r, s] = l), 0 !== r.text.length)) {
+                [a, o] = f.VW.edges(e, s);
                 break;
             }
         }
     return (p.b.delete(e, { at: u, unit: t, reverse: n, select: !0 }), !0);
 }
-var T = n(694403),
-    R = n(323350),
-    O = n(235599),
-    L = n(551483);
-function M(e) {
+var k = n(694403),
+    _ = n(323350),
+    R = n(235599),
+    w = n(551483);
+function O(e) {
     let t = l.useContext(o.Ay),
         n = c.SI.useSetting(),
         [i] = l.useState(() => {
-            let l = (0, s.ie)();
+            let l = (0, r.ie)();
             return (
                 (l.children = (0, d.x7)("")),
-                (l.selection = { anchor: L.K, focus: L.K }),
-                k({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
+                (l.selection = { anchor: w.K, focus: w.K }),
+                L({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
                 l
             );
         });
@@ -113,10 +113,10 @@ function M(e) {
             }
             return (
                 a.A.addChangeListener(e),
-                r.Ay.addChangeListener(e),
+                s.Ay.addChangeListener(e),
                 u.A.addChangeListener(e),
                 () => {
-                    (a.A.removeChangeListener(e), r.Ay.removeChangeListener(e), u.A.removeChangeListener(e));
+                    (a.A.removeChangeListener(e), s.Ay.removeChangeListener(e), u.A.removeChangeListener(e));
                 }
             );
         }, [i]),
@@ -126,46 +126,46 @@ function M(e) {
         i
     );
 }
-function k(e) {
+function L(e) {
     var t;
     let {
             editor: n,
             chatInputType: l,
-            channel: r,
+            channel: s,
             windowContext: a,
             previewMarkdown: o,
             forTests: u,
             onChangeStart: c,
             onChangeEnd: d,
-            updateState: A,
+            updateState: S,
         } = e,
-        C = n,
-        { onChange: E } = C;
-    ((C.chatInputType = l),
-        (C.windowContext = a),
-        (C.previewMarkdown = o),
-        (C.composition = null),
-        (C.events = new i.EventEmitter()),
-        (C.isMac = "MacIntel" === navigator.platform),
-        (C.onChange = () => {
-            (C.events.emit("onChange"), E());
+        E = n,
+        { onChange: y } = E;
+    ((E.chatInputType = l),
+        (E.windowContext = a),
+        (E.previewMarkdown = o),
+        (E.composition = null),
+        (E.events = new i.EventEmitter()),
+        (E.isMac = "MacIntel" === navigator.platform),
+        (E.onChange = () => {
+            (E.events.emit("onChange"), y());
         }),
-        ((t = C =
+        ((t = E =
             (function (e, t) {
                 let {
                     addMark: n,
                     removeMark: l,
                     deleteBackward: i,
-                    deleteForward: s,
-                    setFragmentData: r,
+                    deleteForward: r,
+                    setFragmentData: s,
                     insertData: a,
                     insertFragmentData: o,
                     insertTextData: u,
                 } = e;
                 return (
-                    ((e = (0, O.o$)(e)).addMark = n),
+                    ((e = (0, R.o$)(e)).addMark = n),
                     (e.removeMark = l),
-                    (e.setFragmentData = r),
+                    (e.setFragmentData = s),
                     (e.insertData = a),
                     (e.insertFragmentData = o),
                     (e.insertTextData = u),
@@ -199,13 +199,13 @@ function k(e) {
                                 }
                             }
                         }
-                        s(n);
+                        r(n);
                     }),
                     e
                 );
-            })(C, !0 === u)).setFragmentData = (e) => {
+            })(E, !0 === u)).setFragmentData = (e) => {
             if (null != t.selection && !f.Kh.equals(t.selection.anchor, t.selection.focus)) {
-                let n = (0, R.WO)(f.VW.richValue(t), { mode: "plain", range: t.selection, preventEmojiSurrogates: !0 });
+                let n = (0, _.WO)(f.VW.richValue(t), { mode: "plain", range: t.selection, preventEmojiSurrogates: !0 });
                 e.setData("text/plain", n);
             }
         }),
@@ -217,9 +217,9 @@ function k(e) {
             let n = e.getData("text/plain");
             if (0 === n.length) return !1;
             if (null != t.selection && f.ZF.isExpanded(t.selection)) {
-                let e = s.KE.string(t, t.selection),
-                    l = (0, T.W1)(n),
-                    i = (0, T.W1)(e);
+                let e = r.KE.string(t, t.selection),
+                    l = (0, k.W1)(n),
+                    i = (0, k.W1)(e);
                 if (null != l && null == i) {
                     let [e, n] = f.ZF.edges(t.selection);
                     return (
@@ -238,8 +238,8 @@ function k(e) {
             }
             return (t.insertText(n), !0);
         }),
-        (C = (function (e) {
-            let { apply: t, deleteBackward: n, deleteForward: l, deleteFragment: i, insertText: s } = e;
+        (E = (function (e) {
+            let { apply: t, deleteBackward: n, deleteForward: l, deleteFragment: i, insertText: r } = e;
             return (
                 (e.apply = (n) => {
                     if (
@@ -256,31 +256,31 @@ function k(e) {
                     t(n);
                 }),
                 (e.insertText = (t) => {
-                    null != e.selection && null != f.VW.getCurrentInline(e) ? p.b.insertText(e, t) : s(t);
+                    null != e.selection && null != f.VW.getCurrentInline(e) ? p.b.insertText(e, t) : r(t);
                 }),
                 (e.deleteBackward = (t) => {
-                    b(e, t, !0) || n(t);
+                    j(e, t, !0) || n(t);
                 }),
                 (e.deleteForward = (t) => {
-                    b(e, t, !1) || l(t);
+                    j(e, t, !1) || l(t);
                 }),
                 (e.deleteFragment = (t) => {
                     if (null != e.selection && f.ZF.isExpanded(e.selection)) {
                         let n = e.selection.anchor,
                             l = e.selection.focus,
-                            s = f.VW.getParentInline(e, n),
-                            r = f.VW.getParentInline(e, l);
-                        if (null != s && null != r && f.PW.equals(s[1], r[1])) return void i(t);
+                            r = f.VW.getParentInline(e, n),
+                            s = f.VW.getParentInline(e, l);
+                        if (null != r && null != s && f.PW.equals(r[1], s[1])) return void i(t);
                         let a = f.ZF.isForward(e.selection);
-                        if (null != s) {
-                            let [, t] = s,
+                        if (null != r) {
+                            let [, t] = r,
                                 [l, i] = f.VW.edges(e, t);
                             a && f.Kh.equals(n, l)
                                 ? (n = f.VW.before(e, l) ?? f.VW.start(e, []))
                                 : !a && f.Kh.equals(n, i) && (n = f.VW.after(e, i) ?? f.VW.end(e, []));
                         }
-                        if (null != r) {
-                            let [, t] = r,
+                        if (null != s) {
+                            let [, t] = s,
                                 [n, i] = f.VW.edges(e, t);
                             !a && f.Kh.equals(l, n)
                                 ? (l = f.VW.before(e, n) ?? f.VW.start(e, []))
@@ -296,11 +296,11 @@ function k(e) {
                 }),
                 e
             );
-        })((C = t))),
-        l.commands?.enabled && (C = (0, m.A)(C, r)),
-        (C = (0, j.Ay)(C, r.guild_id, r.id)),
+        })((E = t))),
+        l.commands?.enabled && (E = (0, h.A)(E, s)),
+        (E = (0, T.Ay)(E, s.guild_id, s.id)),
         l.markdown?.disableBlockQuotes ||
-            (C = (function (e) {
+            (E = (function (e) {
                 let { deleteBackward: t, deleteFragment: n, insertBreak: l, onChange: i } = e;
                 ((e.deleteBackward = (n) => {
                     let l = f.VW.getCurrentBlock(e);
@@ -314,14 +314,14 @@ function k(e) {
                     (e.deleteFragment = (t) => {
                         if (null != e.selection) {
                             let [l, i] = f.ZF.edges(e.selection),
-                                s = [l.path[0]],
-                                r = f.VW.node(e, s),
+                                r = [l.path[0]],
+                                s = f.VW.node(e, r),
                                 a = [i.path[0]],
-                                o = f.PW.equals(s, a) ? null : f.VW.node(e, a);
-                            h.o.withSingleEntry(e, () => {
-                                (r?.[0].type === "blockQuote" &&
-                                    f.Kh.isAtStart(l, r) &&
-                                    p.b.setNodes(e, { type: "line" }, { at: s }),
+                                o = f.PW.equals(r, a) ? null : f.VW.node(e, a);
+                            m.o.withSingleEntry(e, () => {
+                                (s?.[0].type === "blockQuote" &&
+                                    f.Kh.isAtStart(l, s) &&
+                                    p.b.setNodes(e, { type: "line" }, { at: r }),
                                     o?.[0].type === "blockQuote" &&
                                         f.Kh.isAtEnd(i, o) &&
                                         p.b.setNodes(e, { type: "line" }, { at: a }),
@@ -353,31 +353,31 @@ function k(e) {
                         }
                         l();
                     }));
-                let s = null,
-                    r = !0;
+                let r = null,
+                    s = !0;
                 return (
                     (e.onChange = () => {
                         let t = f.VW.richValue(e);
-                        ((t !== s || e.previewMarkdown !== r) &&
-                            (h.o.withMergedEntry(e, () => {
+                        ((t !== r || e.previewMarkdown !== s) &&
+                            (m.o.withMergedEntry(e, () => {
                                 f.VW.withoutNormalizing(e, () =>
                                     (function (e) {
                                         let t = !1;
                                         for (let n of f.VW.blocks(e)) {
                                             let [l, i] = n;
                                             if (!x.has(l.type)) continue;
-                                            let s = { path: f.PW.child(i, 0), offset: 0 };
-                                            if ((0, g.W)(e, s)) {
+                                            let r = { path: f.PW.child(i, 0), offset: 0 };
+                                            if ((0, g.W)(e, r)) {
                                                 "blockQuote" === l.type &&
                                                     (p.b.setNodes(e, { type: "line" }, { at: i }),
-                                                    p.b.insertText(e, "> ", { at: s }));
+                                                    p.b.insertText(e, "> ", { at: r }));
                                                 continue;
                                             }
                                             if ("blockQuote" === l.type || f.VW.areStylesDisabled(e)) continue;
-                                            let r = l.children[0];
-                                            if (!f.l5.isText(r)) continue;
-                                            let a = r.text.match(/^\s*>>> /),
-                                                o = r.text.match(/^\s*> /);
+                                            let s = l.children[0];
+                                            if (!f.l5.isText(s)) continue;
+                                            let a = s.text.match(/^\s*>>> /),
+                                                o = s.text.match(/^\s*> /);
                                             if (
                                                 (null != o || null != a || t) &&
                                                 (p.b.setNodes(e, { type: "blockQuote" }, { at: i }), !t)
@@ -396,45 +396,45 @@ function k(e) {
                                     })(e),
                                 );
                             }),
-                            (s = t),
-                            (r = e.previewMarkdown)),
+                            (r = t),
+                            (s = e.previewMarkdown)),
                             i());
                     }),
                     e
                 );
-            })(C)),
-        l.markdown?.disableCodeBlocks || (C = (0, g.Ay)(C)),
+            })(E)),
+        l.markdown?.disableCodeBlocks || (E = (0, g.Ay)(E)),
         u &&
-            (C = (function (e) {
+            (E = (function (e) {
                 let { isInline: t, isVoid: n } = e;
                 return (
                     (e.isInline = (e) => "testInline" === e.type || "testInlineVoid" === e.type || t(e)),
                     (e.isVoid = (e) => "testInlineVoid" === e.type || n(e)),
                     e
                 );
-            })(C)),
-        (C = (function (e, t) {
+            })(E)),
+        (E = (function (e, t) {
             let {
                 apply: n,
                 deleteBackward: l,
                 deleteForward: i,
-                deleteFragment: s,
-                insertData: r,
+                deleteFragment: r,
+                insertData: s,
                 insertText: a,
                 onChange: o,
             } = e;
             function u(n) {
-                let l = h.o.currentEntry(e);
+                let l = m.o.currentEntry(e);
                 if ((null != l && (l.mergeable = !1), n >= e.history.stack.length)) return;
                 e.history.index = n;
-                let i = h.o.currentEntry(e);
+                let i = m.o.currentEntry(e);
                 t({ newValue: i.value, newSelection: i.selection });
             }
             ((e.history = { index: 0, stack: [] }),
                 (e.onChange = () => {
                     let { history: t } = e;
-                    (0 === t.stack.length && ((t.stack = [N(e)]), (t.index = 0)),
-                        null != e.selection && (h.o.currentEntry(e).selection = e.selection),
+                    (0 === t.stack.length && ((t.stack = [v(e)]), (t.index = 0)),
+                        null != e.selection && (m.o.currentEntry(e).selection = e.selection),
                         (d = null),
                         o());
                 }),
@@ -446,92 +446,92 @@ function k(e) {
                 }));
             let c = null,
                 d = null,
-                m = null;
+                h = null;
             return (
                 (e.apply = (t) => {
                     let { history: l } = e;
                     n(t);
                     let i = f.VW.richValue(e);
-                    i !== m &&
-                        (0 === l.stack.length && ((l.stack = [N(e)]), (l.index = 0)),
-                        h.o.isSaving(e) &&
+                    i !== h &&
+                        (0 === l.stack.length && ((l.stack = [v(e)]), (l.index = 0)),
+                        m.o.isSaving(e) &&
                             ((function (e, t, n) {
                                 var l, i;
-                                let s,
-                                    { selection: r } = e,
-                                    a = h.o.currentEntry(e),
+                                let r,
+                                    { selection: s } = e,
+                                    a = m.o.currentEntry(e),
                                     o = !0,
                                     u = !0;
                                 if (
                                     ("insert_text" === t.type && 1 === t.text.length
-                                        ? ((s = "insert"),
+                                        ? ((r = "insert"),
                                           (u = !(
                                               ("" === t.text || t.text.endsWith(" ")) &&
                                               n?.type === "insert_text" &&
                                               !("" === n.text && n.text.endsWith(" "))
                                           )))
                                         : "split_node" === t.type
-                                          ? (s = "insert")
+                                          ? (r = "insert")
                                           : "remove_text" === t.type && 1 === t.text.length
-                                            ? (s = "delete")
-                                            : ((s = "other"), (o = !1), (u = !1)),
+                                            ? (r = "delete")
+                                            : ((r = "other"), (o = !1), (u = !1)),
                                     "set_selection" === t.type && null != a)
                                 ) {
-                                    a.selection = r;
+                                    a.selection = s;
                                     return;
                                 }
-                                o && ((l = a), (i = s), !(l?.type !== i || Date.now() - l.createdAt >= 4e3))
-                                    ? h.o.insertOrMergeEntry(e, s, u)
-                                    : h.o.insertEntry(e, s, u);
+                                o && ((l = a), (i = r), !(l?.type !== i || Date.now() - l.createdAt >= 4e3))
+                                    ? m.o.insertOrMergeEntry(e, r, u)
+                                    : m.o.insertEntry(e, r, u);
                             })(e, t, c),
                             (c = t)),
                         (d = t),
-                        (m = i));
+                        (h = i));
                 }),
                 (e.deleteBackward = (t) => {
-                    h.o.withSingleEntry(e, () => l(t));
+                    m.o.withSingleEntry(e, () => l(t));
                 }),
                 (e.deleteForward = (t) => {
-                    h.o.withSingleEntry(e, () => i(t));
+                    m.o.withSingleEntry(e, () => i(t));
                 }),
                 (e.deleteFragment = (t) => {
-                    h.o.withSingleEntry(e, () => s(t));
+                    m.o.withSingleEntry(e, () => r(t));
                 }),
                 (e.insertText = (t) => {
                     1 === t.length && d?.type === "remove_text"
-                        ? h.o.withMergedEntry(e, () => a(t))
+                        ? m.o.withMergedEntry(e, () => a(t))
                         : null != e.selection && f.ZF.isExpanded(e.selection)
-                          ? h.o.withSingleEntry(e, () => a(t))
+                          ? m.o.withSingleEntry(e, () => a(t))
                           : a(t);
                 }),
                 (e.insertData = (t) => {
-                    d?.type === "remove_text" ? h.o.withMergedEntry(e, () => r(t)) : h.o.withSingleEntry(e, () => r(t));
+                    d?.type === "remove_text" ? m.o.withMergedEntry(e, () => s(t)) : m.o.withSingleEntry(e, () => s(t));
                 }),
                 e
             );
         })(
-            (C = (function (e, t, n) {
+            (E = (function (e, t, n) {
                 let { onChange: l } = e,
                     i = !1,
-                    s = !1;
+                    r = !1;
                 return (
                     (e.onChange = () => {
                         if (i) {
-                            s = !0;
+                            r = !0;
                             return;
                         }
                         i = !0;
                         try {
                             let e = 0;
                             do {
-                                if (((s = !1), e++ >= 5)) break;
+                                if (((r = !1), e++ >= 5)) break;
                                 t?.();
                                 try {
                                     l();
                                 } finally {
                                     n?.();
                                 }
-                            } while (s);
+                            } while (r);
                         } finally {
                             i = !1;
                         }
@@ -539,7 +539,7 @@ function k(e) {
                     e
                 );
             })(
-                (C = (function (e) {
+                (E = (function (e) {
                     let { apply: t, onChange: n } = e;
                     return (
                         (e.apply = (n) => {
@@ -562,18 +562,18 @@ function k(e) {
                                 let t,
                                     n,
                                     [l, i] = f.ZF.edges(e.selection),
-                                    s = !1;
+                                    r = !1;
                                 for (
                                     ;
-                                    null != l && null != (t = f.VW.getParentVoid(e, l)) && !L.XR.includes(t[0].type);
+                                    null != l && null != (t = f.VW.getParentVoid(e, l)) && !w.XR.includes(t[0].type);
                                 )
-                                    ((l = f.VW.before(e, l, { unit: "offset" })), (s = !0));
+                                    ((l = f.VW.before(e, l, { unit: "offset" })), (r = !0));
                                 for (
                                     ;
-                                    null != i && null != (n = f.VW.getParentVoid(e, i)) && !L.XR.includes(n[0].type);
+                                    null != i && null != (n = f.VW.getParentVoid(e, i)) && !w.XR.includes(n[0].type);
                                 )
-                                    ((i = f.VW.after(e, i, { unit: "offset" })), (s = !0));
-                                s &&
+                                    ((i = f.VW.after(e, i, { unit: "offset" })), (r = !0));
+                                r &&
                                     null != l &&
                                     null != i &&
                                     (f.ZF.isForward(e.selection)
@@ -585,31 +585,31 @@ function k(e) {
                         e
                     );
                 })(
-                    (C = (function (e) {
+                    (E = (function (e) {
                         let { deleteBackward: t, deleteForward: n, insertBreak: l, insertText: i } = e;
                         return (
-                            (e.rendersTrailingNewline = y),
+                            (e.rendersTrailingNewline = A),
                             (e.insertBreak = () => {
-                                S(e) ? i("\n") : I(e) && l();
+                                b(e) ? i("\n") : C(e) && l();
                             }),
                             (e.insertSoftBreak = () => {
                                 e.insertBreak();
                             }),
                             (e.deleteBackward = (n) => {
                                 let l = f.ZF.toPoint(e.selection);
-                                "line" === n && null != l && S(e) ? v(e, l, !0) : t(n);
+                                "line" === n && null != l && b(e) ? I(e, l, !0) : t(n);
                             }),
                             (e.deleteForward = (t) => {
                                 let l = f.ZF.toPoint(e.selection);
-                                "line" === t && null != l && S(e) ? v(e, l, !1) : n(t);
+                                "line" === t && null != l && b(e) ? I(e, l, !1) : n(t);
                             }),
                             (e.insertText = (t) => {
                                 if (0 > t.indexOf("\r") && 0 > t.indexOf("\n")) return void i(t);
                                 let n = t.split(/\r\n|\r|\n/);
-                                S(e)
+                                b(e)
                                     ? i(n.join("\n"))
-                                    : I(e)
-                                      ? h.o.withSingleEntry(e, () => {
+                                    : C(e)
+                                      ? m.o.withSingleEntry(e, () => {
                                             let t = !1;
                                             for (let l of n) (t && p.b.splitNodes(e, { always: !0 }), i(l), (t = !0));
                                         })
@@ -617,14 +617,14 @@ function k(e) {
                             }),
                             e
                         );
-                    })((C = (0, _.A)(C)))),
+                    })((E = (0, N.A)(E)))),
                 )),
                 c,
                 d,
             )),
             (e) => {
                 let { newValue: t, newSelection: n } = e;
-                return A(C, "undo", { value: t, selection: n });
+                return S(E, "undo", { value: t, selection: n });
             },
         )));
 }

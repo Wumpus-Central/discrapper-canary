@@ -2,8 +2,8 @@ n.d(t, { L: () => c, A: () => u });
 var a = n(477900),
     l = n(582128),
     r = n(844222),
-    i = n(775602),
-    s = n(350535),
+    s = n(775602),
+    i = n(350535),
     o = n(642481),
     d = n(650583);
 function c(e) {
@@ -39,10 +39,10 @@ function c(e) {
                     let n = e.current.getBoundingClientRect(),
                         a = window.innerWidth,
                         l = window.innerHeight,
-                        i = { top: n.top, bottom: l - n.bottom, left: n.left, right: a - n.right },
-                        s = ["top", "bottom", "right", "left"];
-                    for (let e of s) if (i[e] >= t) return void r(e);
-                    r(s.reduce((e, t) => (i[t] > i[e] ? t : e), "top"));
+                        s = { top: n.top, bottom: l - n.bottom, left: n.left, right: a - n.right },
+                        i = ["top", "bottom", "right", "left"];
+                    for (let e of i) if (s[e] >= t) return void r(e);
+                    r(i.reduce((e, t) => (s[t] > s[e] ? t : e), "top"));
                 }, [e, t, n]),
                 a
             );
@@ -57,14 +57,14 @@ function c(e) {
             [D],
         );
     l.useEffect(() => D, [D]);
-    let P = l.useCallback(() => {
+    let U = l.useCallback(() => {
             ("closed" === _ || "closing" === _) && (D(), A("opening-mouse"));
         }, [D, _]),
-        U = l.useCallback(() => {
+        P = l.useCallback(() => {
             R && M(!1);
         }, [M, R]),
         O = l.useCallback(() => {
-            if (v.current || !i.Ay.keyboardModeEnabled || ("closed" !== _ && "closing" !== _)) {
+            if (v.current || !s.Ay.keyboardModeEnabled || ("closed" !== _ && "closing" !== _)) {
                 v.current = !1;
                 return;
             }
@@ -128,8 +128,8 @@ function c(e) {
             C(e);
         }, []);
     return (0, a.jsxs)("div", {
-        onMouseEnter: P,
-        onMouseLeave: U,
+        onMouseEnter: U,
+        onMouseLeave: P,
         onFocus: O,
         onBlur: B,
         children: [
@@ -152,7 +152,7 @@ function c(e) {
                 caretConfig: { align: "custom", customOffset: y },
                 onNudgeChange: w,
                 onRequestClose: (e) => {
-                    M(null != e && (0, s.sg)(e));
+                    M(null != e && (0, i.sg)(e));
                 },
             }),
         ],

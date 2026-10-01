@@ -1,36 +1,36 @@
-e.d(n, { A: () => x });
-var l = e(477900),
-    i = e(562708),
-    r = e(866665),
-    a = e(414499),
-    s = e(146779),
-    o = e(139286),
-    c = e(939496),
-    u = e(993401),
-    d = e(996988),
-    A = e(375708);
-function x(t) {
-    let { application: n, analyticsLocations: e, onAction: x, onClose: p } = t,
-        { themeType: f } = (0, c.E)(),
-        m = (0, s.Ay)({ application: n, analyticsLocations: e });
+n.d(e, { A: () => f });
+var l = n(477900),
+    i = n(562708),
+    a = n(866665),
+    r = n(414499),
+    s = n(146779),
+    o = n(139286),
+    c = n(939496),
+    u = n(993401),
+    d = n(996988),
+    A = n(375708);
+function f(t) {
+    let { application: e, analyticsLocations: n, onAction: f, onClose: p } = t,
+        { themeType: g } = (0, c.E)(),
+        m = (0, s.Ay)({ application: e, analyticsLocations: n });
     return ((0, o.A)(
-        { name: i.ImpressionNames.CLOUD_PLAY_CTA, type: i.ImpressionTypes.VIEW, properties: { location_stack: e } },
+        { name: i.ImpressionNames.CLOUD_PLAY_CTA, type: i.ImpressionTypes.VIEW, properties: { location_stack: n } },
         { disableTrack: null == m },
         [m],
     ),
     null == m)
         ? null
-        : (0, l.jsx)(r.m, {
+        : (0, l.jsx)(a.m, {
               text: A.intl.string(A.t.JVwWva),
               position: "top",
               children: (0, l.jsx)(u.FD, {
-                  icon: a.h,
+                  icon: r.h,
                   text: A.intl.string(A.t["jaYS/h"]),
                   size: "sm",
                   onClick: (t) => {
-                      (t.stopPropagation(), x?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), m(), p?.());
+                      (t.stopPropagation(), f?.({ action: "PRESS_CLOUD_PLAY_BUTTON" }), m(), p?.());
                   },
-                  fullWidth: f !== d.d.MODAL_V2,
+                  fullWidth: g !== d.d.MODAL_V2,
               }),
           });
 }

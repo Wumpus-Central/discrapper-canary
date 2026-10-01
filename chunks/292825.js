@@ -22,8 +22,8 @@ function T(e) {
         children: (0, i.jsx)("div", { className: p.enterExitClip, children: n }),
     });
 }
-let m = "experimental/body-sm/semibold",
-    g = "experimental/body-sm/normal";
+let g = "experimental/body-sm/semibold",
+    m = "experimental/body-sm/normal";
 function S(e) {
     let { type: t, title: n, message: a, onDismiss: S, action: N, role: C, hidden: O } = e,
         { i18n: R } = (0, I.G9)(),
@@ -52,7 +52,7 @@ function S(e) {
                     className: p.iconAndTextContainer,
                     children: [
                         (0, i.jsx)(f.E, {
-                            variant: null != n ? m : g,
+                            variant: null != n ? g : m,
                             color: "none",
                             className: p.iconContainer,
                             children: D,
@@ -83,10 +83,10 @@ function S(e) {
                                         }),
                                         null == n
                                             ? null
-                                            : (0, i.jsx)(f.E, { id: y, variant: m, color: "text-strong", children: n }),
+                                            : (0, i.jsx)(f.E, { id: y, variant: g, color: "text-strong", children: n }),
                                         (0, i.jsx)(f.E, {
                                             id: null == n ? y : void 0,
-                                            variant: g,
+                                            variant: m,
                                             color: "text-strong",
                                             children: a,
                                         }),

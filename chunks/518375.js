@@ -1,17 +1,17 @@
-n.d(t, { W: () => i });
-var r = n(120330);
-function i(e, t, n, i, a) {
+t.d(n, { W: () => r });
+var i = t(120330);
+function r(e, n, t, r, a) {
     if ("object" != typeof e) throw TypeError("Options must be an object");
-    let o = e[t];
-    if (void 0 !== o) {
-        if ("boolean" !== n && "string" !== n) throw TypeError("invalid type");
+    let s = e[n];
+    if (void 0 !== s) {
+        if ("boolean" !== t && "string" !== t) throw TypeError("invalid type");
         if (
-            ("boolean" === n && (o = !!o),
-            "string" === n && (o = (0, r.bf)(o)),
-            void 0 !== i && !i.filter((e) => e == o).length)
+            ("boolean" === t && (s = !!s),
+            "string" === t && (s = (0, i.bf)(s)),
+            void 0 !== r && !r.filter((e) => e == s).length)
         )
-            throw RangeError(`${o} is not within ${i.join(", ")}`);
-        return o;
+            throw RangeError(`${s} is not within ${r.join(", ")}`);
+        return s;
     }
     return a;
 }

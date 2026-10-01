@@ -1,59 +1,59 @@
-n.d(t, { z: () => d });
-var r = n(582128),
-    l = n(139033),
-    o = n(192308),
-    i = n(626584),
-    a = n(38405),
-    s = n(794400),
-    u = n(375708);
-let c = new i.A("RevenueErrorBoundary.tsx");
-class d extends r.PureComponent {
+t.d(e, { z: () => h });
+var n = t(582128),
+    o = t(139033),
+    s = t(192308),
+    a = t(626584),
+    i = t(38405),
+    l = t(794400),
+    c = t(375708);
+let u = new a.A("RevenueErrorBoundary.tsx");
+class h extends n.PureComponent {
     state = { error: null, info: null };
-    getSentryTags(e, t) {
-        return { app_context: this.getSentryAppContext(), ...(t ? { crashed: "true" } : {}) };
+    getSentryTags(r, e) {
+        return { app_context: this.getSentryAppContext(), ...(e ? { crashed: "true" } : {}) };
     }
-    getSentryExtras(e) {
-        return e instanceof s.v && null != e.extraSentryInformation ? { ...e.extraSentryInformation } : {};
+    getSentryExtras(r) {
+        return r instanceof l.v && null != r.extraSentryInformation ? { ...r.extraSentryInformation } : {};
     }
-    onErrorCaught(e, t, n) {}
+    onErrorCaught(r, e, t) {}
     closeAndShowAlert() {
-        ((0, o.closeAllModals)(),
-            (0, l.A)({
-                title: u.intl.string(u.t.iufib1),
-                subtitle: u.intl.string(u.t.ZUEGFn),
-                confirmText: u.intl.string(u.t.TyCVIq),
+        ((0, s.closeAllModals)(),
+            (0, o.A)({
+                title: c.intl.string(c.t.iufib1),
+                subtitle: c.intl.string(c.t.ZUEGFn),
+                confirmText: c.intl.string(c.t.TyCVIq),
             }));
     }
-    getErrorHandlingBehavior(e) {
-        return e instanceof s.v ? e.errorHandlingBehavior : this.props.errorHandlingBehavior;
+    getErrorHandlingBehavior(r) {
+        return r instanceof l.v ? r.errorHandlingBehavior : this.props.errorHandlingBehavior;
     }
-    getCrashedFlag(e) {
-        return "rethrow" === this.getErrorHandlingBehavior(e);
+    getCrashedFlag(r) {
+        return "rethrow" === this.getErrorHandlingBehavior(r);
     }
-    emitSentryException(e, t) {
-        let n,
-            { additionalAnalyticsData: r } = this.props,
-            l = this.getCrashedFlag(e),
-            o = this.getSentryExtras(e),
-            i = {
-                tags: this.getSentryTags(e, l),
-                extra: { ...o, ...(r ?? {}), ...(null != t ? { reactErrorInfo: t } : {}) },
+    emitSentryException(r, e) {
+        let t,
+            { additionalAnalyticsData: n } = this.props,
+            o = this.getCrashedFlag(r),
+            s = this.getSentryExtras(r),
+            a = {
+                tags: this.getSentryTags(r, o),
+                extra: { ...s, ...(n ?? {}), ...(null != e ? { reactErrorInfo: e } : {}) },
             };
         return (
-            (e instanceof s.v && e.skipReportingToSentry) || (n = a.A.captureException(e, i)),
-            c.error("Revenue error occurred:", { error: e, additionalErrorContext: o }),
-            { sentryErrorOptions: i, sentryEventId: n }
+            (r instanceof l.v && r.skipReportingToSentry) || (t = i.A.captureException(r, a)),
+            u.error("Revenue error occurred:", { error: r, additionalErrorContext: s }),
+            { sentryErrorOptions: a, sentryEventId: t }
         );
     }
-    componentDidCatch(e, t) {
-        let { sentryErrorOptions: n, sentryEventId: r } = this.emitSentryException(e, t);
+    componentDidCatch(r, e) {
+        let { sentryErrorOptions: t, sentryEventId: n } = this.emitSentryException(r, e);
         if (
-            (this.onErrorCaught(e, t, r),
-            this.setState({ error: e, info: t }),
-            null != this.props.onErrorReported && this.props.onErrorReported(e, t, n),
-            "rethrow" === this.getErrorHandlingBehavior(e))
+            (this.onErrorCaught(r, e, n),
+            this.setState({ error: r, info: e }),
+            null != this.props.onErrorReported && this.props.onErrorReported(r, e, t),
+            "rethrow" === this.getErrorHandlingBehavior(r))
         )
-            throw e;
+            throw r;
         this.closeAndShowAlert();
     }
     render() {

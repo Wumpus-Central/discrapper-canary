@@ -1,11 +1,11 @@
-var i = t(649852),
-    e = t(980320);
-r.exports = function (r, n, t) {
+var i = n(649852),
+    r = n(980320);
+e.exports = function (e, t, n) {
     var o = !0,
-        u = !0;
-    if ("function" != typeof r) throw TypeError("Expected a function");
+        s = !0;
+    if ("function" != typeof e) throw TypeError("Expected a function");
     return (
-        e(t) && ((o = "leading" in t ? !!t.leading : o), (u = "trailing" in t ? !!t.trailing : u)),
-        i(r, n, { leading: o, maxWait: n, trailing: u })
+        r(n) && ((o = "leading" in n ? !!n.leading : o), (s = "trailing" in n ? !!n.trailing : s)),
+        i(e, t, { leading: o, maxWait: t, trailing: s })
     );
 };

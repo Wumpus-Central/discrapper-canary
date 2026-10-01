@@ -1,19 +1,19 @@
-n.d(t, { A: () => r });
+n.d(t, { A: () => a });
 var i = n(582128),
     l = n(625494),
     s = n(652215);
-function a(e) {
+function r(e) {
     return Object.keys(e).some((t) => e[t]);
 }
-function r(e, t) {
-    let [n, r] = i.useState(t),
-        [o, d] = i.useState(a(n)),
+function a(e, t) {
+    let [n, a] = i.useState(t),
+        [o, d] = i.useState(r(n)),
         c = i.useRef(o),
         u = i.useRef(null),
         m = i.useCallback((e) => {
-            r((t) => {
+            a((t) => {
                 let n = { ...t, ...e },
-                    i = a(n);
+                    i = r(n);
                 return (
                     i !== c.current &&
                         ((c.current = i),

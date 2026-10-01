@@ -19,10 +19,10 @@ let o = r.forwardRef(function (e, t) {
             ...g
         } = e,
         j = r.useId(),
-        v = r.useId(),
-        C = f ?? j,
-        N = null != x ? v : void 0,
-        [I, A] = r.useState(void 0),
+        C = r.useId(),
+        v = f ?? j,
+        N = null != x ? C : void 0,
+        [A, I] = r.useState(void 0),
         [E, y] = r.useState(void 0),
         S = void 0 !== E;
     return (0, l.jsx)("div", {
@@ -31,11 +31,11 @@ let o = r.forwardRef(function (e, t) {
         style: h ?? void 0,
         children: (0, l.jsx)(a.hN, {
             "data-migration-pending": !0,
-            titleId: C,
+            titleId: v,
             errorId: N,
             error: x ?? void 0,
-            isFocused: I,
-            setIsFocused: A,
+            isFocused: A,
+            setIsFocused: I,
             hasValue: E,
             setHasValue: y,
             children: (0, l.jsxs)("div", {
@@ -49,7 +49,7 @@ let o = r.forwardRef(function (e, t) {
                               required: m,
                               error: x,
                               className: c,
-                              id: C,
+                              id: v,
                               errorId: N,
                               ...g,
                               children: p,

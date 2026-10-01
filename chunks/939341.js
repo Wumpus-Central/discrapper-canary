@@ -1,147 +1,147 @@
-n.d(t, { C4: () => I, D8: () => _, XN: () => v, nO: () => y });
+n.d(e, { C4: () => E, D8: () => y, XN: () => S, nO: () => T });
 var l = n(582128),
     i = n(17928),
-    s = n(573648),
+    a = n(573648),
     r = n(541806),
-    a = n(141639),
+    s = n(141639),
     o = n(61330),
-    u = n(587895),
-    c = n(429913),
+    c = n(587895),
+    u = n(429913),
     d = n(569926),
-    m = n(82149),
-    h = n(174459),
+    A = n(82149),
+    f = n(174459),
     p = n(970928),
-    f = n(486020),
-    g = n(20805),
+    g = n(486020),
+    m = n(20805),
     x = n(327098),
-    A = n(652215),
-    C = n(818023),
-    E = n(375708);
-function I(e) {
-    let t = e?.getIconURL(C.iu.LARGE),
-        n = e?.name;
-    if (null != t)
+    _ = n(652215),
+    I = n(818023),
+    N = n(375708);
+function E(t) {
+    let e = t?.getIconURL(I.iu.LARGE),
+        n = t?.name;
+    if (null != e)
         return {
-            src: t,
+            src: e,
             alt:
                 null == n
-                    ? E.intl.string(E.t["2B/phM"])
-                    : E.intl.formatToPlainString(E.t.tiKyYg, { applicationName: n }),
+                    ? N.intl.string(N.t["2B/phM"])
+                    : N.intl.formatToPlainString(N.t.tiKyYg, { applicationName: n }),
         };
 }
-function y(e) {
-    let t,
-        { entry: n, showCoverImage: l = !0, trackingSource: i } = e,
-        { activity: s, activityApplication: r, fallbackApplication: a } = (0, x.A)(n),
-        o = a ?? r,
-        { largeImage: u, smallImage: c } = _(s, r),
-        { largeImage: m } = S(s, o),
-        h = o?.getCanonicalGameId(),
-        { data: f } = (0, d.I)(h),
-        A = f?.getCoverURL(),
-        E =
-            (0, g.Tq)(n) && n.extra.entries.length > 0
+function T(t) {
+    let e,
+        { entry: n, showCoverImage: l = !0, trackingSource: i } = t,
+        { activity: a, activityApplication: r, fallbackApplication: s } = (0, x.A)(n),
+        o = s ?? r,
+        { largeImage: c, smallImage: u } = y(a, r),
+        { largeImage: A } = C(a, o),
+        f = o?.getCanonicalGameId(),
+        { data: g } = (0, d.I)(f),
+        _ = g?.getCoverURL(),
+        N =
+            (0, m.Tq)(n) && n.extra.entries.length > 0
                 ? { src: n.extra.entries[0].media.image_url }
-                : (0, g.Lf)(n)
+                : (0, m.Lf)(n)
                   ? {
-                        src: (0, p.uD)(n.extra.application_id, n.extra.media_assets_large_image, C.iu.LARGE),
+                        src: (0, p.uD)(n.extra.application_id, n.extra.media_assets_large_image, I.iu.LARGE),
                         alt: n.extra.media_title,
                     }
-                  : (0, g.p6)(n)
+                  : (0, m.p6)(n)
                     ? { src: n.extra.media.image_url }
                     : void 0;
     return (
-        (t =
-            null != u
-                ? { largeImage: u, smallImage: c }
-                : null != E
-                  ? { largeImage: E, smallImage: void 0 }
-                  : null != A && l
-                    ? { largeImage: { src: A }, smallImage: void 0 }
-                    : { largeImage: m, smallImage: void 0 }),
-        N({ activity: s, application: a ?? r, largeImageSrc: t.largeImage?.src, trackingSource: i }),
-        t
+        (e =
+            null != c
+                ? { largeImage: c, smallImage: u }
+                : null != N
+                  ? { largeImage: N, smallImage: void 0 }
+                  : null != _ && l
+                    ? { largeImage: { src: _ }, smallImage: void 0 }
+                    : { largeImage: A, smallImage: void 0 }),
+        h({ activity: a, application: s ?? r, largeImageSrc: e.largeImage?.src, trackingSource: i }),
+        e
     );
 }
-function S(e, t) {
-    let { largeImage: n, smallImage: l } = _(e, t);
-    return (function (e) {
-        let { activity: t, application: n, largeImage: l, smallImage: i } = e;
+function C(t, e) {
+    let { largeImage: n, smallImage: l } = y(t, e);
+    return (function (t) {
+        let { activity: e, application: n, largeImage: l, smallImage: i } = t;
         if (null != l) return { largeImage: l, smallImage: i };
-        if ((0, m.Cy)(t)) {
-            let e = (0, m.UW)(t),
+        if ((0, A.Cy)(e)) {
+            let t = (0, A.UW)(e),
                 n =
-                    null != e
-                        ? f.Ay.getGuildIconURL({ id: e.guildId, icon: t?.assets?.small_image, size: C.iu.SMALL })
+                    null != t
+                        ? g.Ay.getGuildIconURL({ id: t.guildId, icon: e?.assets?.small_image, size: I.iu.SMALL })
                         : void 0;
             return { largeImage: null != n ? { src: n } : void 0, smallImage: void 0 };
         }
-        if ((0, o.A)(t))
+        if ((0, o.A)(e))
             return {
-                largeImage: { src: s.A.get(A.fg2.XBOX).icon.customPNG, alt: E.intl.string(E.t.Nfvo72) },
+                largeImage: { src: a.A.get(_.fg2.XBOX).icon.customPNG, alt: N.intl.string(N.t.Nfvo72) },
                 smallImage: void 0,
             };
-        if (null == i && (0, a.A)(t))
+        if (null == i && (0, s.A)(e))
             return {
-                largeImage: { src: s.A.get(A.fg2.PLAYSTATION).icon.lightPNG, alt: E.intl.string(E.t.fFl4jo) },
+                largeImage: { src: a.A.get(_.fg2.PLAYSTATION).icon.lightPNG, alt: N.intl.string(N.t.fFl4jo) },
                 smallImage: void 0,
             };
-        let r = I(n);
+        let r = E(n);
         return null != r ? { largeImage: r, smallImage: i } : { largeImage: i, smallImage: void 0 };
-    })({ activity: e, application: t, largeImage: n, smallImage: l });
+    })({ activity: t, application: e, largeImage: n, smallImage: l });
 }
-function v(e, t, n) {
-    let l = S(e, t);
-    return (N({ activity: e, application: t, largeImageSrc: l.largeImage?.src, trackingSource: n }), l);
+function S(t, e, n) {
+    let l = C(t, e);
+    return (h({ activity: t, application: e, largeImageSrc: l.largeImage?.src, trackingSource: n }), l);
 }
-function N(e) {
-    let { activity: t, application: n, largeImageSrc: s, trackingSource: r } = e,
-        a = t?.application_id,
-        o = (0, c.h)(a),
-        d = (0, i.bG)([u.A], () => null != a && u.A.didFetchingApplicationFail(a)),
-        m = null == a || null != o || d,
+function h(t) {
+    let { activity: e, application: n, largeImageSrc: a, trackingSource: r } = t,
+        s = e?.application_id,
+        o = (0, u.h)(s),
+        d = (0, i.bG)([c.A], () => null != s && c.A.didFetchingApplicationFail(s)),
+        A = null == s || null != o || d,
         p = null != o || null != n,
-        f = null == s,
-        g = t?.name,
-        x = t?.type,
-        C = t?.session_id,
-        E = t?.assets?.large_image != null || t?.assets?.small_image != null,
-        I = null != t;
+        g = null == a,
+        m = e?.name,
+        x = e?.type,
+        I = e?.session_id,
+        N = e?.assets?.large_image != null || e?.assets?.small_image != null,
+        E = null != e;
     (0, l.useEffect)(() => {
-        I &&
-            m &&
-            f &&
-            h.default.track(A.HAw.ACTIVITY_DEFAULT_ICON_SHOWN, {
+        E &&
+            A &&
+            g &&
+            f.default.track(_.HAw.ACTIVITY_DEFAULT_ICON_SHOWN, {
                 source: r,
-                application_id: a,
-                activity_name: g,
+                application_id: s,
+                activity_name: m,
                 activity_type: x,
-                activity_session_id: C,
+                activity_session_id: I,
                 application_found: p,
-                has_rich_assets: E,
+                has_rich_assets: N,
             });
-    }, [r, I, m, f, a, g, x, C, p, E]);
+    }, [r, E, A, g, s, m, x, I, p, N]);
 }
-function _(e, t) {
-    let n = (0, c.h)(e?.application_id);
-    if (null == e) return { largeImage: void 0, smallImage: void 0 };
-    let l = e?.assets?.large_image,
+function y(t, e) {
+    let n = (0, u.h)(t?.application_id);
+    if (null == t) return { largeImage: void 0, smallImage: void 0 };
+    let l = t?.assets?.large_image,
         i =
             null != l
                 ? {
-                      src: (0, p.uD)(e.application_id, l, [C.iu.LARGE, C.iu.LARGE]),
-                      text: e.assets?.large_text?.trim(),
-                      url: e.assets?.large_url,
+                      src: (0, p.uD)(t.application_id, l, [I.iu.LARGE, I.iu.LARGE]),
+                      text: t.assets?.large_text?.trim(),
+                      url: t.assets?.large_url,
                   }
                 : void 0,
-        s = (0, r.A)(e) ? void 0 : e?.assets?.small_image,
-        a =
-            null != s
+        a = (0, r.A)(t) ? void 0 : t?.assets?.small_image,
+        s =
+            null != a
                 ? {
-                      src: (0, p.uD)(e.application_id, s, [C.iu.LARGE, C.iu.LARGE]),
-                      text: e.assets?.small_text?.trim(),
-                      url: e.assets?.small_url,
+                      src: (0, p.uD)(t.application_id, a, [I.iu.LARGE, I.iu.LARGE]),
+                      text: t.assets?.small_text?.trim(),
+                      url: t.assets?.small_url,
                   }
                 : void 0;
-    return { largeImage: i ?? I(t ?? n), smallImage: a };
+    return { largeImage: i ?? E(e ?? n), smallImage: s };
 }

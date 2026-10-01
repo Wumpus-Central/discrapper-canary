@@ -1,72 +1,72 @@
-let r;
-l.d(t, { F: () => p, Q4: () => g, W9: () => m });
-var n = l(915639);
-let s = new Map(),
-    i = new Map(),
-    a = new Set(),
+let n;
+l.d(t, { F: () => d, Q4: () => f, W9: () => m });
+var s = l(915639);
+let r = new Map(),
+    a = new Map(),
+    c = new Set(),
     o = Promise.resolve();
-function c(e) {
-    let t = s.get(e);
+function i(e) {
+    let t = r.get(e);
     if (null != t) return t;
-    if (!(e in n.pb)) {
+    if (!(e in s.pb)) {
         let t = Promise.resolve(null);
-        return (s.set(e, t), t);
+        return (r.set(e, t), t);
     }
     return (
         (o = (t = o
             .then(async () => {
-                let t = await (null == r &&
-                    (r = Promise.resolve()
-                        .then(() => (0, n.A)())
+                let t = await (null == n &&
+                    (n = Promise.resolve()
+                        .then(() => (0, s.A)())
                         .catch(() => null)
-                        .then((e) => (null == e && (r = void 0), e))),
-                r);
-                return null == t ? null : t.loadGrammar(n.pb[e]);
+                        .then((e) => (null == e && (n = void 0), e))),
+                n);
+                return null == t ? null : t.loadGrammar(s.pb[e]);
             })
             .then((t) => {
-                if (null == t) return (s.delete(e), i.delete(e), null);
-                for (let l of (i.set(e, t), a)) l(e);
+                if (null == t) return (r.delete(e), a.delete(e), null);
+                for (let l of (a.set(e, t), c)) l(e);
                 return t;
             })
-            .catch(() => (s.delete(e), i.delete(e), null))).then(
+            .catch(() => (r.delete(e), a.delete(e), null))).then(
             () => {},
             () => {},
         )),
-        s.set(e, t),
+        r.set(e, t),
         t
     );
 }
-function u(e) {
+function h(e) {
     return {
         highlightToHtml(t) {
             let l = e.createSession();
             try {
                 l.setText(t);
-                let { html: e, missingInjections: r } = l.highlightToHtml();
-                return { html: e, missingInjections: r.sort() };
+                let { html: e, missingInjections: n } = l.highlightToHtml();
+                return { html: e, missingInjections: n.sort() };
             } finally {
                 l.free();
             }
         },
     };
 }
-let d = new Map();
-async function h(e) {
+let u = new Map();
+async function p(e) {
     try {
-        let t = await c(e);
-        return null == t ? null : u(t);
+        let t = await i(e);
+        return null == t ? null : h(t);
     } catch {
         return null;
     }
 }
 function m(e) {
-    let t = d.get(e);
-    return (null == t && ((t = h(e)), d.set(e, t)), t);
+    let t = u.get(e);
+    return (null == t && ((t = p(e)), u.set(e, t)), t);
 }
-function p(e) {
-    let t = i.has(e) ? (i.get(e) ?? null) : (c(e), null);
-    return null != t ? u(t) : null;
+function d(e) {
+    let t = a.has(e) ? (a.get(e) ?? null) : (i(e), null);
+    return null != t ? h(t) : null;
 }
-function g(e) {
-    return (a.add(e), () => a.delete(e));
+function f(e) {
+    return (c.add(e), () => c.delete(e));
 }

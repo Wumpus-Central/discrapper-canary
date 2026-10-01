@@ -1,16 +1,16 @@
-n.d(t, { z: () => c });
+n.d(t, { z: () => d });
 var i = n(975571),
-    l = n(852218),
+    a = n(852218),
     r = n(239016),
-    s = n(652215),
-    a = n(762359),
-    o = n(375708);
-function c(e) {
+    l = n(652215),
+    o = n(762359),
+    s = n(375708);
+function d(e) {
     (0, r.P)({
         analyticsLocations: e,
-        partnerIds: [l.NC],
+        partnerIds: [a.NC],
         isLocked: !0,
-        title: o.intl.string(a.default.TDZUui),
-        subtitle: o.intl.format(a.default.BTLkvw, { helpCenterUrl: i.A.getArticleURL(s.MVz.YOUTUBE_PROMOTION) }),
+        title: s.intl.string(o.default.TDZUui),
+        subtitle: s.intl.format(o.default.BTLkvw, { helpCenterUrl: i.A.getArticleURL(l.MVz.YOUTUBE_PROMOTION) }),
     });
 }

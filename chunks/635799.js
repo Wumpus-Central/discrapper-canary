@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     ij: "wishlistButton__61424",
     YJ: "sectionDimmed__61424",
     hd: "sectionContainer__61424",

@@ -1,4 +1,4 @@
-n.d(t, { W: () => i, j: () => s });
+n.d(t, { W: () => i, j: () => r });
 let l = (0, n(945810).mj)({
     kind: "guild",
     name: "2026-09-soundboard-echo",
@@ -8,6 +8,6 @@ let l = (0, n(945810).mj)({
 function i(e, t) {
     return l.useConfig({ guildId: e, location: t });
 }
-function s(e, t) {
+function r(e, t) {
     return l.getConfig({ guildId: e, location: t });
 }

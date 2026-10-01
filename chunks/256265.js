@@ -1,192 +1,192 @@
-(n.d(t, { $2: () => L, Ky: () => T, L_: () => R, no: () => j, vV: () => y, xz: () => O, yC: () => b }), n(938796));
+(t.d(n, { $2: () => w, Ky: () => T, L_: () => D, no: () => C, vV: () => E, xz: () => v, yC: () => N }), t(938796));
 var l,
-    i = n(582128),
-    s = n(665260),
-    r = n(155718),
-    a = n(437517),
-    o = n(731068),
-    u = n(59318),
-    c = n(456874),
-    d = n(885386),
-    m = n(734057),
-    h = n(232835),
-    p = n(287809),
-    f = n(403362),
-    g = n(935208),
-    x = n(998218),
-    A = n(652215);
-function C(e) {
-    if (null == e) return !1;
-    let { filename: t, height: n, width: l } = e;
-    return (0, u.u)(t) && null != n && n > 0 && null != l && l > 0;
-}
-function E(e) {
-    return null != e && null != e && (0, u.AE)(e.filename) && null != e.proxy_url;
-}
-function I(e) {
-    return C(e) || E(e);
-}
-var y = (((l = {}).EMBED = "embed"), (l.ATTACHMENT = "attachment"), (l.COMPONENT = "component"), l);
+    r = t(582128),
+    i = t(665260),
+    s = t(155718),
+    u = t(437517),
+    a = t(731068),
+    o = t(59318),
+    c = t(456874),
+    d = t(885386),
+    f = t(734057),
+    m = t(232835),
+    g = t(287809),
+    p = t(403362),
+    h = t(935208),
+    I = t(998218),
+    A = t(652215);
 function S(e) {
+    if (null == e) return !1;
+    let { filename: n, height: t, width: l } = e;
+    return (0, o.u)(n) && null != t && t > 0 && null != l && l > 0;
+}
+function M(e) {
+    return null != e && null != e && (0, o.AE)(e.filename) && null != e.proxy_url;
+}
+function V(e) {
+    return S(e) || M(e);
+}
+var E = (((l = {}).EMBED = "embed"), (l.ATTACHMENT = "attachment"), (l.COMPONENT = "component"), l);
+function L(e) {
     return (function (e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.X6.getSetting();
-        if (!t) return [];
-        let n =
+        let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : d.X6.getSetting();
+        if (!n) return [];
+        let t =
             e?.messageSnapshots[0]?.moderatorReport != null
                 ? e?.messageSnapshots[0]?.message.attachments
                 : e?.attachments;
-        return null == e || null == n
+        return null == e || null == t
             ? []
-            : n
-                  .filter(I)
-                  .map((e, t) => {
+            : t
+                  .filter(V)
+                  .map((e, n) => {
                       let {
-                          proxy_url: n,
+                          proxy_url: t,
                           url: l,
-                          description: i,
-                          flags: r,
-                          width: a,
-                          height: o,
+                          description: r,
+                          flags: s,
+                          width: u,
+                          height: a,
                           filename: c,
                           content_scan_version: d,
                       } = e;
-                      if (null == a || null == o) return null;
-                      let m = (0, u.AE)(c),
-                          h = null != e.flags && (0, s.Lt)(e.flags, A.sbO.IS_THUMBNAIL),
-                          p = n ?? l;
-                      if (m) {
-                          let e = x.A.toURLSafe(n);
+                      if (null == u || null == a) return null;
+                      let f = (0, o.AE)(c),
+                          m = null != e.flags && (0, i.Lt)(e.flags, A.sbO.IS_THUMBNAIL),
+                          g = t ?? l;
+                      if (f) {
+                          let e = I.A.toURLSafe(t);
                           if (null == e) return null;
-                          (e.searchParams.append("format", "webp"), (p = e.toString()));
+                          (e.searchParams.append("format", "webp"), (g = e.toString()));
                       }
                       return {
                           type: "attachment",
-                          src: p,
-                          width: a,
-                          height: o,
-                          spoiler: (0, s.Lt)(r ?? 0, A.sbO.IS_SPOILER),
-                          flags: r,
+                          src: g,
+                          width: u,
+                          height: a,
+                          spoiler: (0, i.Lt)(s ?? 0, A.sbO.IS_SPOILER),
+                          flags: s,
                           contentScanVersion: d,
-                          alt: i,
-                          isVideo: m,
-                          isThumbnail: h,
+                          alt: r,
+                          isVideo: f,
+                          isThumbnail: m,
                           attachmentId: e.id,
-                          mediaIndex: t,
-                          srcIsAnimated: (0, s.Lt)(e.flags ?? 0, A.sbO.IS_ANIMATED),
+                          mediaIndex: n,
+                          srcIsAnimated: (0, i.Lt)(e.flags ?? 0, A.sbO.IS_ANIMATED),
                       };
                   })
-                  .filter(f.Vq);
+                  .filter(p.Vq);
     })(e, d.X6.useSetting());
 }
-function v(e, t) {
-    let n = d.hD.useSetting(),
+function _(e, n) {
+    let t = d.hD.useSetting(),
         l = d.rs.useSetting();
     if (null == e) return [];
-    let i = e.messageSnapshots[0]?.moderatorReport != null ? e.messageSnapshots[0]?.message.embeds : e.embeds;
-    return n && l && null != i
-        ? i
-              .map((e, n) => {
+    let r = e.messageSnapshots[0]?.moderatorReport != null ? e.messageSnapshots[0]?.message.embeds : e.embeds;
+    return t && l && null != r
+        ? r
+              .map((e, t) => {
                   let l = e.image ?? e.thumbnail;
                   if ((null == l && null != e.images && (l = e.images[0]), null != l && null != l.url)) {
-                      let { height: i, proxyURL: r, url: a, width: o, flags: c } = l,
-                          d = null != r && (0, u.r1)(r);
+                      let { height: r, proxyURL: s, url: u, width: a, flags: c } = l,
+                          d = null != s && (0, o.r1)(s);
                       return {
                           type: "embed",
-                          src: null != r && "" !== r ? r : a,
-                          height: i,
-                          width: o,
-                          spoiler: t,
+                          src: null != s && "" !== s ? s : u,
+                          height: r,
+                          width: a,
+                          spoiler: n,
                           flags: e.flags,
                           contentScanVersion: e.contentScanVersion,
                           isVideo: d,
-                          mediaIndex: n,
-                          srcIsAnimated: (0, s.Lt)(c ?? 0, A.qNw.IS_ANIMATED),
+                          mediaIndex: t,
+                          srcIsAnimated: (0, i.Lt)(c ?? 0, A.qNw.IS_ANIMATED),
                       };
                   }
               })
-              .filter(f.Vq)
+              .filter(p.Vq)
         : [];
 }
-function N(e) {
-    let t = d.hD.useSetting();
+function b(e) {
+    let n = d.hD.useSetting();
     if (null == e) return [];
-    let n = e.components;
-    return t && null != n
-        ? Array.from((0, a.p4)(n).values())
+    let t = e.components;
+    return n && null != t
+        ? Array.from((0, u.p4)(t).values())
               .flatMap((e) => {
                   switch (e.type) {
-                      case r.I5.THUMBNAIL:
-                          return _(e.media, e.spoiler ?? !1);
-                      case r.I5.MEDIA_GALLERY:
-                          return e.items.map((e) => _(e.media, e.spoiler ?? !1));
+                      case s.I5.THUMBNAIL:
+                          return y(e.media, e.spoiler ?? !1);
+                      case s.I5.MEDIA_GALLERY:
+                          return e.items.map((e) => y(e.media, e.spoiler ?? !1));
                   }
                   return null;
               })
-              .filter(f.Vq)
+              .filter(p.Vq)
         : [];
 }
-function _(e, t) {
-    let n = (0, o.FE)(e);
-    return "INVALID" === n
+function y(e, n) {
+    let t = (0, a.FE)(e);
+    return "INVALID" === t
         ? null
         : {
               type: "component",
               src: e.proxyUrl,
               height: e.height ?? 0,
               width: e.width ?? 0,
-              spoiler: t,
+              spoiler: n,
               contentScanVersion: e.contentScanMetadata?.version,
               flags: 0,
-              srcIsAnimated: (0, s.Lt)(e.flags, o.e5.IS_ANIMATED),
-              isVideo: "VIDEO" === n,
+              srcIsAnimated: (0, i.Lt)(e.flags, a.e5.IS_ANIMATED),
+              isVideo: "VIDEO" === t,
               mediaIndex: 0,
               srcUnfurledMediaItem: e,
           };
 }
-function j(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
-        l = b(e, n);
-    return i.useMemo(() => {
-        if (null == t) return [];
-        if (!t.isMediaChannel()) return l;
+function C(e, n) {
+    let t = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+        l = N(e, t);
+    return r.useMemo(() => {
+        if (null == n) return [];
+        if (!n.isMediaChannel()) return l;
         {
             let e = l.find((e) => e.isThumbnail);
             return null != e ? [e] : l;
         }
-    }, [t, l]);
+    }, [n, l]);
 }
-function b(e, t) {
-    return [...S(e), ...v(e, t), ...N(e)];
+function N(e, n) {
+    return [...L(e), ..._(e, n), ...b(e)];
 }
-function T(e, t) {
-    let n = S(e),
-        l = v(e, t),
-        i = N(e);
-    return n[0] ?? l[0] ?? i[0] ?? null;
+function T(e, n) {
+    let t = L(e),
+        l = _(e, n),
+        r = b(e);
+    return t[0] ?? l[0] ?? r[0] ?? null;
 }
-function R(e, t) {
-    let n = S(e),
-        l = v(e, t),
-        i = N(e);
-    return null == n[0] && null == i[0] && null != l[0];
+function D(e, n) {
+    let t = L(e),
+        l = _(e, n),
+        r = b(e);
+    return null == t[0] && null == r[0] && null != l[0];
 }
-function O(e, t) {
-    let n = m.A.getChannel(t);
-    if (null == n) return !1;
-    let l = h.A.getMessage(n.id, g.default.castChannelIdAsMessageId(n.id));
+function v(e, n) {
+    let t = f.A.getChannel(n);
+    if (null == t) return !1;
+    let l = m.A.getMessage(t.id, h.default.castChannelIdAsMessageId(t.id));
     return (
         null != l &&
         e.length > 0 &&
         null != e.find((e) => e.isImage || e.isVideo) &&
-        n.isForumPost() &&
-        n.ownerId === p.default.getCurrentUser()?.id &&
-        0 === c.A.getCount(n.id) &&
-        (0 === l.attachments.length || null == l.attachments.find((e) => C(e) || E(e)))
+        t.isForumPost() &&
+        t.ownerId === g.default.getCurrentUser()?.id &&
+        0 === c.A.getCount(t.id) &&
+        (0 === l.attachments.length || null == l.attachments.find((e) => S(e) || M(e)))
     );
 }
-function L(e) {
+function w(e) {
     return e.reduce(
-        (e, t) => ({ containsVideo: e.containsVideo || t.isVideo, containsGif: e.containsGif || (0, u.ge)(t.src) }),
+        (e, n) => ({ containsVideo: e.containsVideo || n.isVideo, containsGif: e.containsGif || (0, o.ge)(n.src) }),
         { containsVideo: !1, containsGif: !1 },
     );
 }

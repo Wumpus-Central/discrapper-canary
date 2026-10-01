@@ -29,8 +29,8 @@ var h = n(808728),
     f = n(287809),
     p = n(802842),
     T = n(695184),
-    m = n(240248),
-    g = n(998218),
+    g = n(240248),
+    m = n(998218),
     S = n(450827),
     N = n(989133),
     C = n(926140);
@@ -290,7 +290,7 @@ class L {
             }));
     }
     refreshGameProfiles() {
-        !(0, m.uJ)(this.query.trim()) &&
+        !(0, g.uJ)(this.query.trim()) &&
             this._include(C.rD.GAME_PROFILE) &&
             ((this._gameProfileResults = this.queryGameProfiles(this.query, this._limit)), this.updateAllResults());
     }
@@ -307,8 +307,8 @@ class L {
             return [];
         }
         let { pathname: a, hostname: d = "", host: c } = n,
-            u = g.A.isDiscordHostname(d) || window.location.host === c;
-        return null !== a && u && g.A.isAppRoute(a)
+            u = m.A.isDiscordHostname(d) || window.location.host === c;
+        return null !== a && u && m.A.isAppRoute(a)
             ? [{ type: C.rD.LINK, record: A.fromPath(a), score: (0, p.zy)(11) }]
             : [];
     }

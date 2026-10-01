@@ -1,5 +1,5 @@
-n.d(t, { C: () => i, Q: () => l });
-let l = new Set([
+l.d(a, { C: () => e, Q: () => c });
+let c = new Set([
     "1c",
     "4d",
     "abnf",
@@ -387,6 +387,6 @@ let l = new Set([
     "zephir",
     "zep",
 ]);
-function i(e) {
-    return l.has(e.split(".").slice(-1)[0]);
+function e(s) {
+    return c.has(s.split(".").slice(-1)[0]);
 }

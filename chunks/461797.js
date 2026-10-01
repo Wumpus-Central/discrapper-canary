@@ -1,4 +1,4 @@
-a.d(t, { B$: () => p, Wt: () => f, jB: () => o });
+a.d(t, { B$: () => l, Wt: () => i, jB: () => o });
 var d,
     c = a(508425),
     n = a(559949),
@@ -72,10 +72,10 @@ let o = {
         getBannerAltText: () => s.intl.string(s.t.si7znt),
     },
 };
-function f(e) {
+function i(e) {
     return o[e];
 }
-function p(e) {
+function l(e) {
     let t = Object.values(r),
         a = null == e ? t : t.filter((t) => t !== e);
     return a[Math.floor(Math.random() * a.length)];

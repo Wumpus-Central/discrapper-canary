@@ -1,9 +1,9 @@
-n.d(t, { F: () => I, t: () => C });
+n.d(t, { F: () => E, t: () => v });
 var i = n(582128),
     l = n(17928),
     s = n(735991),
-    a = n(482030),
-    r = n(837057),
+    r = n(482030),
+    a = n(837057),
     o = n(310419),
     d = n(734057),
     c = n(576705),
@@ -15,9 +15,9 @@ var i = n(582128),
     A = n(652215),
     x = n(488995),
     f = n(375708);
-function E(e) {
-    let { isDiscoverable: t, customInstallUrl: n, installParams: i, integrationTypesConfig: a } = e,
-        r = (0, g.Ie)({ customInstallUrl: n, installParams: i, integrationTypesConfig: a }),
+function I(e) {
+    let { isDiscoverable: t, customInstallUrl: n, installParams: i, integrationTypesConfig: r } = e,
+        a = (0, g.Ie)({ customInstallUrl: n, installParams: i, integrationTypesConfig: r }),
         o = (0, l.bG)([m.A], () => m.A.getGuildId() ?? void 0),
         h = (0, l.bG)(
             [d.A, c.A, u.Ay],
@@ -32,14 +32,14 @@ function E(e) {
         isDiscoverable: t,
         customInstallUrl: n,
         installParams: i,
-        integrationTypesConfig: a,
+        integrationTypesConfig: r,
         canViewApp: t || p,
         canOpenAppLauncher: p,
-        isInstallable: r,
+        isInstallable: a,
         selectedGuildId: o,
     };
 }
-function I(e, t) {
+function E(e, t) {
     let {
         canViewApp: n,
         canOpenAppLauncher: l,
@@ -48,14 +48,14 @@ function I(e, t) {
         installParams: c,
         integrationTypesConfig: u,
         selectedGuildId: m,
-    } = E(e);
+    } = I(e);
     return i.useMemo(
         () =>
             n
                 ? () => {
                       (t?.(), l)
-                          ? (0, a.hg)(e.id)
-                          : (0, r.transitionToGlobalDiscovery)({
+                          ? (0, r.hg)(e.id)
+                          : (0, a.transitionToGlobalDiscovery)({
                                 tab: x.GlobalDiscoveryTab.APPS,
                                 applicationId: e.id,
                                 newSessionState: { entrypoint: { name: o.sW.APPLICATION_MESSAGE_EMBED } },
@@ -77,9 +77,9 @@ function I(e, t) {
         [e.id, l, n, d, c, u, s, t, m],
     );
 }
-function C(e) {
-    let { canViewApp: t, isInstallable: n } = E(e),
-        l = I(e);
+function v(e) {
+    let { canViewApp: t, isInstallable: n } = I(e),
+        l = E(e);
     return i.useMemo(
         () =>
             t && null != l

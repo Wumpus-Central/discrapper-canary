@@ -1,4 +1,4 @@
-_.exports = {
+a.exports = {
     iE: "wrapper__44df5",
     Qs: "content__44df5",
     Sl: "image__44df5",

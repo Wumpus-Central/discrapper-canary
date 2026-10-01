@@ -1,8 +1,8 @@
-r.d(n, { A: () => l });
-var i = r(427262),
-    a = r(272984),
-    e = r(375708);
-function l(t, n, r) {
+i.d(n, { A: () => l });
+var r = i(427262),
+    a = i(272984),
+    e = i(375708);
+function l(t, n, i) {
     switch (n) {
         case a.Qp.USER_ACTIVITY_PLAY:
             if (t.isCurrentUser) return e.intl.string(e.t.ZpDeUC);
@@ -13,7 +13,7 @@ function l(t, n, r) {
             if (t.isCurrentUser) return e.intl.string(e.t["AOU/CR"]);
             if (t.syncingWithUser || t.syncingWithParty) return e.intl.string(e.t.m8CScv);
             if (t.notPlayable) return e.intl.formatToPlainString(e.t.SqJBnN, { name: a.HD });
-            return e.intl.formatToPlainString(e.t.CT9xYI, { name: r ?? i.Ay.getName(t.user) });
+            return e.intl.formatToPlainString(e.t.CT9xYI, { name: i ?? r.Ay.getName(t.user) });
         case a.Qp.EMBED_SYNC:
             if (t.notPlayable) return e.intl.formatToPlainString(e.t.SqJBnN, { name: a.HD });
             return;

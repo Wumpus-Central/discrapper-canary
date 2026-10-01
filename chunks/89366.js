@@ -1,19 +1,19 @@
-n.d(t, { QQ: () => o, Us: () => u, qD: () => c });
-var l = n(17928),
-    i = n(287809),
-    s = n(166403),
+n.d(t, { QQ: () => o, Us: () => c, qD: () => u });
+var i = n(17928),
+    s = n(287809),
+    l = n(166403),
     r = n(354670),
     a = n(202541);
 function o() {
-    let e = (0, l.bG)([s.A], () => s.A.getPremiumTypeSubscription());
+    let e = (0, i.bG)([l.A], () => l.A.getPremiumTypeSubscription());
     return !!e?.hasActiveTrial;
 }
-function u() {
-    let e = (0, l.bG)([s.A], () => s.A.getPremiumTypeSubscription()),
-        t = (0, l.bG)([i.default], () => i.default.getCurrentUser());
+function c() {
+    let e = (0, i.bG)([l.A], () => l.A.getPremiumTypeSubscription()),
+        t = (0, i.bG)([s.default], () => s.default.getCurrentUser());
     return e?.hasActiveTrial ? t?.premiumType : null;
 }
-function c() {
+function u() {
     return a.MB.map((e) => r.A.getUserTrialOffer(e))
         .filter((e) => null != e && !e.hasExpired)
         .shift();

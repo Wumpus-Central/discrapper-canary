@@ -1,15 +1,15 @@
-n.d(t, { L: () => g, A: () => A });
+n.d(t, { L: () => g, A: () => S });
 var l,
     i = n(477900),
-    s = n(582128),
-    r = n(503698),
-    a = n.n(r),
+    r = n(582128),
+    s = n(503698),
+    a = n.n(s),
     o = n(837381),
     u = n(559106),
     c = n(608299),
     d = n(101555),
-    m = n(625494),
-    h = n(652215),
+    h = n(625494),
+    m = n(652215),
     p = n(375708),
     f = n(33720),
     g =
@@ -21,32 +21,32 @@ var l,
 function x(e) {
     e.stopPropagation();
 }
-let A = s.forwardRef(function (e, t) {
+let S = r.forwardRef(function (e, t) {
     let {
             id: n,
             channelId: l,
-            className: r,
+            className: s,
             children: g,
-            actions: A,
-            handleEditModal: C,
-            keyboardModeEnabled: E,
-            onKeyDown: I,
-            draftType: y,
-            size: S = 1,
+            actions: S,
+            handleEditModal: E,
+            keyboardModeEnabled: y,
+            onKeyDown: C,
+            draftType: A,
+            size: b = 1,
         } = e,
-        v = s.useRef(null),
-        { onFocus: N, ..._ } = (0, o.rm)(n),
-        { handleFocus: j, handleBlur: b } = (function (e) {
-            let [t, n] = (0, s.useState)(!1);
+        I = r.useRef(null),
+        { onFocus: v, ...N } = (0, o.rm)(n),
+        { handleFocus: T, handleBlur: j } = (function (e) {
+            let [t, n] = (0, r.useState)(!1);
             return {
-                handleFocus: (0, s.useCallback)(
+                handleFocus: (0, r.useCallback)(
                     (t) => {
                         ((t.target === t.currentTarget || t.currentTarget.contains(document.activeElement)) && n(!0),
                             null != e && e(t));
                     },
                     [e],
                 ),
-                handleBlur: (0, s.useCallback)(
+                handleBlur: (0, r.useCallback)(
                     (e) => {
                         (e.target !== e.currentTarget && e.currentTarget.contains(document.activeElement)) || n(!1);
                     },
@@ -54,56 +54,56 @@ let A = s.forwardRef(function (e, t) {
                 ),
                 isFocused: t,
             };
-        })(N),
-        T = 0 === S,
-        R = null != A;
+        })(v),
+        k = 0 === b,
+        _ = null != S;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
-            ..._,
-            onFocus: j,
-            onBlur: b,
+            ...N,
+            onFocus: T,
+            onBlur: j,
             onClick: function (e) {
-                if (0 === e.detail && null != v.current) {
-                    let e = v.current.querySelector('[role="button"], button');
+                if (0 === e.detail && null != I.current) {
+                    let e = I.current.querySelector('[role="button"], button');
                     e?.click();
                 }
             },
             onKeyDown: function (e) {
-                if (E) {
+                if (y) {
                     switch (e.which) {
-                        case h.Ks6.D:
-                            (e.preventDefault(), c.A.remove(l, n, y));
+                        case m.Ks6.D:
+                            (e.preventDefault(), c.A.remove(l, n, A));
                             return;
-                        case h.Ks6.E:
-                            null != C && (e.preventDefault(), C(e));
+                        case m.Ks6.E:
+                            null != E && (e.preventDefault(), E(e));
                             return;
-                        case h.Ks6.BACKSPACE:
+                        case m.Ks6.BACKSPACE:
                             e.ctrlKey
-                                ? (e.preventDefault(), c.A.clearAll(l, y))
-                                : (e.preventDefault(), c.A.remove(l, n, y));
+                                ? (e.preventDefault(), c.A.clearAll(l, A))
+                                : (e.preventDefault(), c.A.remove(l, n, A));
                             return;
-                        case h.Ks6.ARROW_UP:
+                        case m.Ks6.ARROW_UP:
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
-                            (e.preventDefault(), m._.dispatchToLastSubscribed(h.jej.FOCUS_MESSAGES, { atEnd: !0 }));
+                            (e.preventDefault(), h._.dispatchToLastSubscribed(m.jej.FOCUS_MESSAGES, { atEnd: !0 }));
                     }
-                    I?.(e);
+                    C?.(e);
                 }
             },
-            className: a()(f.Se, r),
+            className: a()(f.Se, s),
             ref: t,
             children: (0, i.jsxs)("div", {
                 className: f.PO,
-                ref: v,
+                ref: I,
                 children: [
                     g,
-                    R
+                    _
                         ? (0, i.jsx)("div", {
                               className: f.TC,
                               children: (0, i.jsx)("div", {
-                                  className: a()(f.KY, { [f.BN]: T }),
+                                  className: a()(f.KY, { [f.BN]: k }),
                                   onContextMenu: x,
                                   "aria-label": p.intl.string(p.t["8Lu3Du"]),
-                                  children: (0, i.jsx)(d.Ay, { className: a()({ [f.BX]: T }), children: A }),
+                                  children: (0, i.jsx)(d.Ay, { className: a()({ [f.BX]: k }), children: S }),
                               }),
                           })
                         : null,

@@ -32,7 +32,7 @@ function T(e) {
     let { positionKey: t, position: n, align: i } = e;
     return null != t ? t : `${n}:${i}`;
 }
-function m(e, t, n, i, r) {
+function g(e, t, n, i, r) {
     switch (e) {
         case "top":
             return (
@@ -51,7 +51,7 @@ function m(e, t, n, i, r) {
             throw Error(`Unexpected position: ${e}`);
     }
 }
-function g(e) {
+function m(e) {
     switch (e) {
         case "top":
             return "bottom";
@@ -205,15 +205,15 @@ class N extends r.Component {
         let r = (0, A.J$)(i),
             { style: a, nudge: s } = this.calculatePositionStyle(e, i, r),
             l = { position: e, style: a, nudge: s },
-            d = m(e, a, i, r, n),
+            d = g(e, a, i, r, n),
             c = d,
             u = null,
             _ = 0;
         if (t && d < 0) {
-            let t = g(e),
+            let t = m(e),
                 a = this.calculatePositionStyle(t, i, r);
             ((u = a.style), (_ = a.nudge));
-            let s = m(t, u, i, r, n);
+            let s = g(t, u, i, r, n);
             if ((s > d && ((l = { position: t, style: u, nudge: _ }), (c = s)), d < 0 && s < 0)) {
                 let a,
                     s = l.position;
@@ -227,7 +227,7 @@ class N extends r.Component {
                     a !== t
                 ) {
                     let e = this.calculatePositionStyle(a, i, r, s),
-                        t = m(g(s), e.style, i, r, n);
+                        t = g(m(s), e.style, i, r, n);
                     t > c && ((l = { position: s, ...e }), (c = t));
                 }
             }

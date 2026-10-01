@@ -1,7 +1,7 @@
-n.d(t, { Dl: () => l, K: () => r, XR: () => o, Xg: () => i, fP: () => s, ug: () => a });
+n.d(t, { Dl: () => l, K: () => s, XR: () => o, Xg: () => i, fP: () => r, ug: () => a });
 let l = [],
     i = [0],
-    s = [0, 0],
-    r = { path: [0, 0], offset: 0 },
+    r = [0, 0],
+    s = { path: [0, 0], offset: 0 },
     a = /(\t|\s)/,
     o = ["applicationCommandOption"];

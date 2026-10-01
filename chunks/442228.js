@@ -1,8 +1,8 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => T });
 var l = n(477900),
     i = n(582128),
-    a = n(503698),
-    r = n.n(a),
+    r = n(503698),
+    a = n.n(r),
     s = n(123292),
     o = n(688810),
     u = n(183555),
@@ -11,22 +11,22 @@ var l = n(477900),
     f = n(900179),
     A = n(375708),
     S = n(975316);
-let h = i.memo(function (e) {
+let T = i.memo(function (e) {
     let {
             userId: t,
             userBio: n,
-            onClose: a,
-            animateOnHoverOrFocusOnly: h = !1,
-            isHoveringOrFocusing: T = !1,
+            onClose: r,
+            animateOnHoverOrFocusOnly: T = !1,
+            isHoveringOrFocusing: h = !1,
             hidePersonalInformation: m = !1,
             hideRestrictedProfile: g = !1,
             viewFullBioDisabled: x = !1,
         } = e,
         { context: E } = (0, u.NJ)(),
-        { analyticsLocations: p } = (0, o.Ay)(),
-        [R, y] = i.useState(!1),
-        [C, v] = i.useState(!1),
-        j = i.useRef(null);
+        { analyticsLocations: R } = (0, o.Ay)(),
+        [p, C] = i.useState(!1),
+        [y, j] = i.useState(!1),
+        v = i.useRef(null);
     return m || null == n || "" === n
         ? null
         : (0, l.jsxs)(f.A, {
@@ -35,28 +35,28 @@ let h = i.memo(function (e) {
               children: [
                   (0, l.jsx)("div", {
                       ref: (e) => {
-                          ((j.current = e),
+                          ((v.current = e),
                               null == e ||
-                                  (y(!C && e.scrollHeight - e.clientHeight > 1),
-                                  e.getBoundingClientRect().height > 57.75 && v(!0)));
+                                  (C(!y && e.scrollHeight - e.clientHeight > 1),
+                                  e.getBoundingClientRect().height > 57.75 && j(!0)));
                       },
-                      className: r()(S.mA, C && S.Em),
+                      className: a()(S.mA, y && S.Em),
                       onBlur: function (e) {
-                          null == j.current ||
-                              j.current.contains(e.relatedTarget) ||
-                              (null == j.current.querySelector('[aria-expanded="true"][aria-controls]') &&
-                                  (j.current.scrollTop = 0));
+                          null == v.current ||
+                              v.current.contains(e.relatedTarget) ||
+                              (null == v.current.querySelector('[aria-expanded="true"][aria-controls]') &&
+                                  (v.current.scrollTop = 0));
                       },
                       children: (0, l.jsx)(d.A, {
                           userId: t,
                           userBio: n,
                           setLineClamp: !1,
                           textColor: "text-strong",
-                          animateOnHoverOrFocusOnly: h,
-                          isHoveringOrFocusing: T,
+                          animateOnHoverOrFocusOnly: T,
+                          isHoveringOrFocusing: h,
                       }),
                   }),
-                  (R || C) &&
+                  (p || y) &&
                       (0, l.jsx)("div", {
                           className: S.HV,
                           children: (0, l.jsx)(s.Q, {
@@ -65,12 +65,12 @@ let h = i.memo(function (e) {
                               variant: "secondary",
                               text: A.intl.string(A.t.YDiPq8),
                               onClick: function () {
-                                  (a?.(),
+                                  (r?.(),
                                       (0, c.openUserProfileModal)({
                                           ...E,
                                           userId: t,
                                           hideRestrictedProfile: g,
-                                          sourceAnalyticsLocations: p,
+                                          sourceAnalyticsLocations: R,
                                       }));
                               },
                               disabled: x,

@@ -1,26 +1,26 @@
-n.d(t, { A: () => C, J: () => g });
-var l = n(477900),
-    i = n(582128),
-    s = n(503698),
-    r = n.n(s),
+n.d(t, { A: () => _, J: () => g });
+var i = n(477900),
+    s = n(582128),
+    l = n(503698),
+    r = n.n(l),
     a = n(837381),
     o = n(962125),
-    u = n(151271),
-    c = n(887129),
+    c = n(151271),
+    u = n(887129),
     d = n(602034),
     m = n(17928),
-    h = n(775602);
-function p(e) {
+    f = n(775602);
+function E(e) {
     let t = document.activeElement?.getAttribute(d.eM);
     return null == t ? null : e((0, d.HP)(t));
 }
-function f(e, t, n) {
-    let l = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 8,
-        i = arguments.length > 4 ? arguments[4] : void 0,
-        s = i ?? ++n.current;
-    if (s !== n.current) return;
+function I(e, t, n) {
+    let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 8,
+        s = arguments.length > 4 ? arguments[4] : void 0,
+        l = s ?? ++n.current;
+    if (l !== n.current) return;
     let r = document.querySelector((0, d.Mz)((0, d.t$)(e, t)));
-    null != r ? r.focus() : l > 0 && requestAnimationFrame(() => f(e, t, n, l - 1, s));
+    null != r ? r.focus() : i > 0 && requestAnimationFrame(() => I(e, t, n, i - 1, l));
 }
 function g(e) {
     return {
@@ -29,86 +29,86 @@ function g(e) {
             if (null == t || !t.startsWith(e)) return null;
             let n = t.slice(e.length);
             if ("" === n) return null;
-            let l = Number(n);
-            return Number.isInteger(l) ? l : null;
+            let i = Number(n);
+            return Number.isInteger(i) ? i : null;
         },
     };
 }
-var x = n(652215),
+var h = n(652215),
     A = n(14753);
-let C = function (e) {
+let _ = function (e) {
     let {
             categoryListRef: t,
             expressionsListRef: n,
-            categories: s,
+            categories: l,
             store: d,
-            children: C,
-            className: E,
-            listPadding: I,
-            rowCount: y,
-            getScrollOffsetForIndex: S,
-            categoryHeight: v,
-            onScroll: N,
-            renderCategoryListItem: _,
-            rowCountBySection: j,
-            renderSection: b,
-            navId: T,
-            itemIdPrefix: R,
+            children: _,
+            className: p,
+            listPadding: N,
+            rowCount: C,
+            getScrollOffsetForIndex: O,
+            categoryHeight: S,
+            onScroll: x,
+            renderCategoryListItem: T,
+            rowCountBySection: y,
+            renderSection: j,
+            navId: R,
+            itemIdPrefix: b,
         } = e,
-        O = d.useStore((e) => e.activeCategoryIndex),
-        L = null != T && null != R,
-        { itemIdForIndex: M, parseIndex: k } = i.useMemo(() => g(R ?? "expression-category-"), [R]),
-        w = (function (e) {
+        L = d.useStore((e) => e.activeCategoryIndex),
+        v = null != R && null != b,
+        { itemIdForIndex: M, parseIndex: D } = s.useMemo(() => g(b ?? "expression-category-"), [b]),
+        P = (function (e) {
             let {
                     navId: t,
                     categoryListRef: n,
-                    itemIdForIndex: l,
-                    parseIndex: s,
+                    itemIdForIndex: i,
+                    parseIndex: l,
                     rowCount: r,
                     activeIndex: a,
                     getScrollOffsetForIndex: o,
-                    enabled: u = !0,
+                    enabled: c = !0,
                 } = e,
-                d = (0, m.bG)([h.Ay], () => h.Ay.keyboardModeEnabled),
-                g = i.useRef(null),
-                x = i.useRef(0),
-                A = u && d;
-            i.useEffect(
+                d = (0, m.bG)([f.Ay], () => f.Ay.keyboardModeEnabled),
+                g = s.useRef(null),
+                h = s.useRef(0),
+                A = c && d;
+            s.useEffect(
                 () => () => {
-                    x.current += 1;
+                    h.current += 1;
                 },
                 [],
             );
-            let C = i.useCallback(
+            let _ = s.useCallback(
                     (e, t) => {
-                        let l = o?.(e, t) ?? 0;
-                        n.current?.scrollRowIntoView(e, { animate: !1, offset: l });
+                        let i = o?.(e, t) ?? 0;
+                        n.current?.scrollRowIntoView(e, { animate: !1, offset: i });
                     },
                     [n, o],
                 ),
-                E = i.useCallback(
+                p = s.useCallback(
                     (e, n) => {
-                        let i = s(n);
-                        if (null != i) {
-                            let e = p(s) ?? g.current;
-                            (C(i, null == e || i >= e), (g.current = i));
+                        let s = l(n);
+                        if (null != s) {
+                            let e = E(l) ?? g.current;
+                            (_(s, null == e || s >= e), (g.current = s));
                         }
                         let r = document.querySelector(e);
                         if (null != r) {
-                            ((x.current += 1), r.focus());
+                            ((h.current += 1), r.focus());
                             return;
                         }
-                        null != i && f(t, l(i), x);
+                        null != s && I(t, i(s), h);
                     },
-                    [l, t, s, C],
+                    [i, t, l, _],
                 ),
-                I = i.useCallback(
+                N = s.useCallback(
                     (e, n) => {
-                        (C(e, n), (g.current = e), f(t, l(e), x));
+                        (_(e, n), (g.current = e), I(t, i(e), h));
                     },
-                    [l, t, C],
+                    [i, t, _],
                 ),
-                y = i.useCallback(
+                C = s.useCallback(
                     () =>
                         new Promise((e) => {
                             (n.current?.scrollTo(0),
@@ -118,7 +118,7 @@ let C = function (e) {
                         }),
                     [n],
                 ),
-                S = i.useCallback(
+                O = s.useCallback(
                     () =>
                         new Promise((e) => {
                             let t = n.current?.getListDimensions().totalHeight ?? Number.MAX_SAFE_INTEGER;
@@ -129,101 +129,101 @@ let C = function (e) {
                         }),
                     [n],
                 ),
-                v = i.useCallback(() => {
-                    let e = p(s) ?? g.current;
-                    null == e || e >= r - 1 || I(e + 1, !0);
-                }, [I, s, r]),
-                N = i.useCallback(() => {
-                    let e = p(s) ?? g.current;
-                    null == e || e <= 0 || I(e - 1, !1);
-                }, [I, s]),
-                _ = (0, c.Ay)({
+                S = s.useCallback(() => {
+                    let e = E(l) ?? g.current;
+                    null == e || e >= r - 1 || N(e + 1, !0);
+                }, [N, l, r]),
+                x = s.useCallback(() => {
+                    let e = E(l) ?? g.current;
+                    null == e || e <= 0 || N(e - 1, !1);
+                }, [N, l]),
+                T = (0, u.Ay)({
                     id: t,
                     isEnabled: A,
-                    setFocus: E,
-                    scrollToStart: y,
-                    scrollToEnd: S,
-                    onNavigateNextAtEnd: v,
-                    onNavigatePreviousAtStart: N,
+                    setFocus: p,
+                    scrollToStart: C,
+                    scrollToEnd: O,
+                    onNavigateNextAtEnd: S,
+                    onNavigatePreviousAtStart: x,
                 }),
-                j = _.setFocus;
+                y = T.setFocus;
             return (
-                i.useEffect(() => {
-                    if (!u || a < 0 || a >= r) return;
+                s.useEffect(() => {
+                    if (!c || a < 0 || a >= r) return;
                     let e = n.current?.getScrollerNode();
                     if (null != e && e.contains(document.activeElement)) return;
                     let t = 0,
-                        i = requestAnimationFrame(() => {
+                        s = requestAnimationFrame(() => {
                             t = requestAnimationFrame(() => {
-                                ((g.current = a), j(l(a)));
+                                ((g.current = a), y(i(a)));
                             });
                         });
                     return () => {
-                        (cancelAnimationFrame(i), cancelAnimationFrame(t));
+                        (cancelAnimationFrame(s), cancelAnimationFrame(t));
                     };
-                }, [a, n, u, l, j, r]),
-                _
+                }, [a, n, c, i, y, r]),
+                T
             );
         })({
-            navId: T ?? "expression-picker-categories-disabled",
+            navId: R ?? "expression-picker-categories-disabled",
             categoryListRef: t,
             itemIdForIndex: M,
-            parseIndex: k,
-            rowCount: y,
-            activeIndex: O,
-            getScrollOffsetForIndex: S,
-            enabled: L,
+            parseIndex: D,
+            rowCount: C,
+            activeIndex: L,
+            getScrollOffsetForIndex: O,
+            enabled: v,
         });
     !(function (e) {
-        let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: l } = e,
-            s = i.useRef(x.An1),
-            r = i.useRef(t);
-        i.useEffect(() => {
+        let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: i } = e,
+            l = s.useRef(h.An1),
+            r = s.useRef(t);
+        s.useEffect(() => {
             null != t &&
                 t !== r.current &&
-                (s.current !== x.An1 && window.cancelAnimationFrame(s.current),
-                (s.current = window.requestAnimationFrame(() => {
+                (l.current !== h.An1 && window.cancelAnimationFrame(l.current),
+                (l.current = window.requestAnimationFrame(() => {
                     if (null == n.current) return;
                     let e = t > (r.current ?? -1),
-                        i = null != l ? l(t, e) : 0;
-                    (n.current.scrollRowIntoView(t, { animate: !0, offset: i }), (s.current = x.An1), (r.current = t));
+                        s = null != i ? i(t, e) : 0;
+                    (n.current.scrollRowIntoView(t, { animate: !0, offset: s }), (l.current = h.An1), (r.current = t));
                 })));
-        }, [t, n, l]);
-    })({ activeIndex: O, categoryListRef: t, getScrollOffsetForIndex: S });
-    let P = i.useCallback(
+        }, [t, n, i]);
+    })({ activeIndex: L, categoryListRef: t, getScrollOffsetForIndex: O });
+    let w = s.useCallback(
             (e) => {
-                let { searchQuery: t } = u.RQ.getState();
-                (d.setActiveCategoryIndex(e), "" !== t ? (0, u.Ri)("") : n.current?.scrollToSectionTop(e));
+                let { searchQuery: t } = c.RQ.getState();
+                (d.setActiveCategoryIndex(e), "" !== t ? (0, c.Ri)("") : n.current?.scrollToSectionTop(e));
             },
             [n, d],
         ),
-        D = i.useCallback((e) => _(s[e], e, () => P(e), O === e), [O, s, P, _]),
-        U = i.useMemo(() => ("function" == typeof v ? (e) => v(s[e], e) : v), [s, v]),
-        V = (0, l.jsx)(o.A, {
-            listPadding: I,
-            onScroll: N,
+        U = s.useCallback((e) => T(l[e], e, () => w(e), L === e), [L, l, w, T]),
+        G = s.useMemo(() => ("function" == typeof S ? (e) => S(l[e], e) : S), [l, S]),
+        k = (0, i.jsx)(o.A, {
+            listPadding: N,
+            onScroll: x,
             ref: t,
-            renderRow: D,
-            rowCount: y,
-            rowHeight: U,
+            renderRow: U,
+            rowCount: C,
+            rowHeight: G,
             hideScrollbar: !0,
-            rowCountBySection: j,
-            renderSection: b,
-            role: L ? "none presentation" : void 0,
+            rowCountBySection: y,
+            renderSection: j,
+            role: v ? "none presentation" : void 0,
         }),
-        G = (0, l.jsxs)("div", {
-            className: r()(A.i, E),
+        F = (0, i.jsxs)("div", {
+            className: r()(A.i, p),
             children: [
-                L
-                    ? (0, l.jsx)(a.PR, {
+                v
+                    ? (0, i.jsx)(a.PR, {
                           children: (e) => {
                               let { ref: t, ...n } = e;
-                              return (0, l.jsx)("div", { className: A.e, ...n, ref: t, children: V });
+                              return (0, i.jsx)("div", { className: A.e, ...n, ref: t, children: k });
                           },
                       })
-                    : V,
-                C?.(P),
+                    : k,
+                _?.(w),
             ],
         });
-    return L ? (0, l.jsx)(a.hD, { navigator: w, children: G }) : G;
+    return v ? (0, i.jsx)(a.hD, { navigator: P, children: F }) : F;
 };

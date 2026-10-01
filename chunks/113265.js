@@ -1,42 +1,42 @@
-r.d(e, { z: () => u });
-var i = r(582128),
-    n = r(575593),
-    s = r(466459),
-    l = r(116833),
-    a = r(152472);
-function u(t) {
-    let { userId: e, product: r, selectedVariantIndex: u, location: o, onError: d } = t,
-        c = i.useMemo(
-            () => (r.type === n.R.VARIANTS_GROUP && null != u && r.variants?.[u] != null ? r.variants[u] : r),
-            [r, u],
+n.d(t, { z: () => d });
+var a = n(582128),
+    i = n(575593),
+    l = n(466459),
+    s = n(116833),
+    r = n(152472);
+function d(e) {
+    let { userId: t, product: n, selectedVariantIndex: d, location: c, onError: u } = e,
+        o = a.useMemo(
+            () => (n.type === i.R.VARIANTS_GROUP && null != d && n.variants?.[d] != null ? n.variants[d] : n),
+            [n, d],
         ),
-        S = c.skuId,
-        I = (0, a.c)({
-            userId: e,
-            skuId: S,
-            nuxGraphic: (function (t) {
-                let { product: e } = t,
-                    r = "6/4";
-                switch (e.type) {
-                    case n.R.NAMEPLATE:
-                    case n.R.AVATAR_DECORATION:
-                        r = "16/9";
+        h = o.skuId,
+        f = (0, r.c)({
+            userId: t,
+            skuId: h,
+            nuxGraphic: (function (e) {
+                let { product: t } = e,
+                    n = "6/4";
+                switch (t.type) {
+                    case i.R.NAMEPLATE:
+                    case i.R.AVATAR_DECORATION:
+                        n = "16/9";
                         break;
-                    case n.R.BUNDLE:
-                    case n.R.PROFILE_EFFECT:
+                    case i.R.BUNDLE:
+                    case i.R.PROFILE_EFFECT:
                     default:
-                        r = "6/4";
+                        n = "6/4";
                 }
                 return {
                     type: "dynamic",
-                    component: l.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
-                    aspectRatio: r,
-                    props: { product: e, forCollectedModal: !0 },
+                    component: s.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
+                    aspectRatio: n,
+                    props: { product: t, forCollectedModal: !0 },
                 };
-            })({ product: c }),
-            location: o,
-            onError: d,
+            })({ product: o }),
+            location: c,
+            onError: u,
         }),
-        { isPurchased: h } = (0, s.h)(c);
-    return { ...I, specificProductOrVariant: c, isPurchased: h };
+        { isPurchased: m } = (0, l.h)(o);
+    return { ...f, specificProductOrVariant: o, isPurchased: m };
 }

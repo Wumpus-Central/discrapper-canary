@@ -1,11 +1,11 @@
-function r(e) {
+function u(e) {
     return "[object Object]" === Object.prototype.toString.call(e);
 }
-function i(e) {
-    var t, n;
+function n(e) {
+    var t, r;
     return (
-        !1 !== r(e) &&
-        (void 0 === (t = e.constructor) || (!1 !== r((n = t.prototype)) && !1 !== n.hasOwnProperty("isPrototypeOf")))
+        !1 !== u(e) &&
+        (void 0 === (t = e.constructor) || (!1 !== u((r = t.prototype)) && !1 !== r.hasOwnProperty("isPrototypeOf")))
     );
 }
-n.d(t, { Q: () => i });
+r.d(t, { Q: () => n });

@@ -3,7 +3,7 @@ let i;
     Ay: () => K,
     Bo: () => B,
     F_: () => v,
-    QB: () => m,
+    QB: () => g,
     V0: () => $,
     VI: () => H,
     _O: () => N,
@@ -37,8 +37,8 @@ let h = /^data:/,
     p = i.DEFAULT_AVATARS_SMALL_MAX_SIZE ?? 0,
     T = i.DEFAULT_PROVISIONAL_AVATARS;
 i.DEFAULT_GROUP_DM_AVATARS;
-let m = i.canUseWebp(),
-    g = (0, c.isAndroid)();
+let g = i.canUseWebp(),
+    m = (0, c.isAndroid)();
 function S(e) {
     let t,
         {
@@ -51,7 +51,7 @@ function S(e) {
             canAnimate: c = !1,
             keepAspectRatio: u,
             format: _ = null,
-            canWebP: E = m,
+            canWebP: E = g,
         } = e;
     if (null == r || null == a) return;
     let A = _ ?? (c && H(a) ? z(E) : "jpg");
@@ -75,11 +75,11 @@ function S(e) {
 }
 function N(e) {
     let { id: t, animated: i, size: r, forcePNG: a = !1 } = e,
-        s = m ? "webp" : "png",
-        l = m ? "webp" : "gif",
+        s = g ? "webp" : "png",
+        l = g ? "webp" : "gif",
         o = a ? "png" : i ? l : s,
-        c = m && i ? "&animated=true" : "",
-        u = `size=${(0, d.kr)(r * (0, d.mZ)(), g)}`,
+        c = g && i ? "&animated=true" : "",
+        u = `size=${(0, d.kr)(r * (0, d.mZ)(), m)}`,
         E = !1;
     try {
         let { getForceSdrEmojisStickersConfig: e } = n(796272);
@@ -106,7 +106,7 @@ function O(e) {
         s = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         l = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.eQT,
         o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-        d = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : m;
+        d = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : g;
     if (a) {
         let e = i.BOT_AVATARS[n];
         if (e) return e;
@@ -127,12 +127,12 @@ function R(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _.eQT,
         i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
-        r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : m;
+        r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : g;
     return O(e, t, n, i, r) ?? C(e.id, e.discriminator, e.isProvisional, n);
 }
 function L(e) {
     let t,
-        { guildId: n, userId: i, avatar: r, canAnimate: a = !1, size: l = _.eQT, canWebP: o = m } = e,
+        { guildId: n, userId: i, avatar: r, canAnimate: a = !1, size: l = _.eQT, canWebP: o = g } = e,
         c = a && H(r) ? z(o) : "jpg",
         { CDN_HOST: u } = window.GLOBAL_ENV;
     null != u
@@ -151,7 +151,7 @@ function D(e) {
         { id: n, banner: i, canAnimate: r, size: a } = e;
     if (null == i) return;
     let l = window.GLOBAL_ENV.CDN_HOST,
-        o = r && H(i) ? z(m) : "png";
+        o = r && H(i) ? z(g) : "png";
     t =
         null != l
             ? `https://${l}/banners/${n}/${i}.${o}`
@@ -176,7 +176,7 @@ function v(e) {
         c = _.Rsh.AVATAR_DECORATION_PRESETS(a),
         u = new URL(null != s ? `https://${s}${c}` : `${location.protocol}${l}${c}`);
     return (
-        u.searchParams.set("size", `${(0, d.kr)(i * (0, d.mZ)(), g)}`),
+        u.searchParams.set("size", `${(0, d.kr)(i * (0, d.mZ)(), m)}`),
         u.searchParams.set("passthrough", `${r}`),
         u.toString()
     );
@@ -186,7 +186,7 @@ function b(e) {
         { id: n, guildId: i, banner: r, canAnimate: a, size: l } = e;
     if (null == r || null == i) return;
     let o = window.GLOBAL_ENV.CDN_HOST,
-        c = a && H(r) ? z(m) : "png",
+        c = a && H(r) ? z(g) : "png",
         u = _.Rsh.GUILD_MEMBER_BANNER(i, n, r, c);
     t = null != o ? `https://${o}${u}` : location.protocol + window.GLOBAL_ENV.API_ENDPOINT + u;
     let E = { size: (0, d.kr)(l * (0, d.mZ)()) };
@@ -209,8 +209,8 @@ function P(e) {
         r = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (null == i) return null;
     let a = (0, d.kr)(360 * (0, d.mZ)()),
-        l = m ? "webp" : "jpg",
-        o = r && H(i) ? z(m) : l,
+        l = g ? "webp" : "jpg",
+        o = r && H(i) ? z(g) : l,
         c = window.GLOBAL_ENV.CDN_HOST;
     t =
         null != c
@@ -255,7 +255,7 @@ function G(e) {
         size: i,
         canAnimate: r,
         lossless: a,
-        canWebP: m,
+        canWebP: g,
     });
 }
 function x(e) {

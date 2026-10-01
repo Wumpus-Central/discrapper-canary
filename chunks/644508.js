@@ -1,14 +1,14 @@
-n.d(t, { f: () => u });
-var l = n(477900),
-    i = n(192308),
-    s = n(174459),
+n.d(t, { f: () => c });
+var i = n(477900),
+    s = n(192308),
+    l = n(174459),
     r = n(80569),
     a = n(308295),
     o = n(652215);
-async function u(e) {
-    let { analyticsLocation: t = null, ...u } = e;
-    (s.default.track(o.HAw.OPEN_MODAL, { type: "Emoji Studio", source: t }),
-        await (0, i.openModalLazy)(
+async function c(e) {
+    let { analyticsLocation: t = null, ...c } = e;
+    (l.default.track(o.HAw.OPEN_MODAL, { type: "Emoji Studio", source: t }),
+        await (0, s.openModalLazy)(
             async () => {
                 let { EmojiStudioModal: e } = await Promise.all([
                     n.e("684954"),
@@ -21,7 +21,7 @@ async function u(e) {
                     n.e("534936"),
                     n.e("195903"),
                 ]).then(n.bind(n, 227780));
-                return (t) => (0, l.jsx)(e, { ...t, ...u });
+                return (t) => (0, i.jsx)(e, { ...t, ...c });
             },
             {
                 modalKey: r.y,

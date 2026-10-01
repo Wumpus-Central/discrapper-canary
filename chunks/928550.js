@@ -1,45 +1,45 @@
-n.d(t, { L_: () => d, au: () => p, dB: () => h });
-var l = n(17928),
-    i = n(627363),
-    s = n(651743),
-    r = n(134861),
-    a = n(760751),
-    o = n(189081),
-    u = n(340829),
-    c = n(144914);
-function d(e) {
-    return (0, l.yK)(
-        [o.A, s.A, u.A, r.A],
+l.d(t, { L_: () => o, au: () => f, dB: () => s });
+var a = l(17928),
+    e = l(627363),
+    i = l(651743),
+    u = l(134861),
+    A = l(760751),
+    c = l(189081),
+    r = l(340829),
+    p = l(144914);
+function o(n) {
+    return (0, a.yK)(
+        [c.A, i.A, r.A, u.A],
         () => [
-            null != e &&
-                (0, c.A)({
-                    LibraryApplicationStore: o.A,
-                    LaunchableGameStore: s.A,
-                    DispatchApplicationStore: u.A,
-                    ConnectedAppsStore: r.A,
-                    applicationId: e,
+            null != n &&
+                (0, p.A)({
+                    LibraryApplicationStore: c.A,
+                    LaunchableGameStore: i.A,
+                    DispatchApplicationStore: r.A,
+                    ConnectedAppsStore: u.A,
+                    applicationId: n,
                 }),
-            null != e && s.A.isLaunchableLoading(e),
+            null != n && i.A.isLaunchableLoading(n),
         ],
-        [e],
+        [n],
     );
 }
-function m(e, t) {
-    let [n] = d(e),
-        [l] = d(t?.id);
-    return null != e && n ? e : null != t && l ? t.id : null;
+function d(n, t) {
+    let [l] = o(n),
+        [a] = o(t?.id);
+    return null != n && l ? n : null != t && a ? t.id : null;
 }
-function h(e) {
-    let { data: t } = (0, i.YY)(e);
-    return m(
-        e,
-        (0, l.bG)([a.A], () => (null != t ? (a.A.getOfficialGame(t) ?? a.A.getGameByApplication(t)) : null), [t]),
+function s(n) {
+    let { data: t } = (0, e.YY)(n);
+    return d(
+        n,
+        (0, a.bG)([A.A], () => (null != t ? (A.A.getOfficialGame(t) ?? A.A.getGameByApplication(t)) : null), [t]),
     );
 }
-function p(e) {
-    let { data: t } = (0, i.YY)(e);
-    return m(
-        e,
-        (0, l.bG)([a.A], () => (null != t ? a.A.getOfficialGame(t) : null), [t]),
+function f(n) {
+    let { data: t } = (0, e.YY)(n);
+    return d(
+        n,
+        (0, a.bG)([A.A], () => (null != t ? A.A.getOfficialGame(t) : null), [t]),
     );
 }

@@ -1,6 +1,6 @@
-n.d(t, { W: () => i });
-var l = n(621466);
-function i(e) {
+p.d(t, { W: () => c });
+var u = p(621466);
+function c(e) {
     let t = getComputedStyle(document.documentElement).getPropertyValue(`--space-${e}`);
-    return (0, l.xI)(t);
+    return (0, u.xI)(t);
 }

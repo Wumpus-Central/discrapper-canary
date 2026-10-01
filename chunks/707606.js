@@ -1,11 +1,11 @@
-n.d(t, { A: () => r });
-var l = n(477900),
-    i = n(582128),
-    s = n(174459);
-function r(e) {
-    let t = i.forwardRef((t, n) =>
-        (0, l.jsx)(s.AnalyticsContext.Consumer, {
-            children: (i) => (0, l.jsx)(e, { ...t, ref: n, analyticsContext: i }),
+s.d(t, { A: () => i });
+var n = s(477900),
+    a = s(582128),
+    l = s(174459);
+function i(e) {
+    let t = a.forwardRef((t, s) =>
+        (0, n.jsx)(l.AnalyticsContext.Consumer, {
+            children: (a) => (0, n.jsx)(e, { ...t, ref: s, analyticsContext: a }),
         }),
     );
     return ((t.displayName = `withAnalyticsContext(${e.displayName ?? e.name})`), t);

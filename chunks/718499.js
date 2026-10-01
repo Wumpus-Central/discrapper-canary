@@ -1,32 +1,32 @@
-n.d(t, { Ay: () => c, Bu: () => o, OJ: () => u, XY: () => s });
+n.d(t, { Ay: () => c, Bu: () => s, OJ: () => o, XY: () => u });
 var r = n(582128),
     l = n(876230),
     a = n(614269),
     i = n(53200);
-let s = 8e5,
-    u = 20,
-    o = 30;
+let u = 8e5,
+    o = 20,
+    s = 30;
 function c(e, t) {
-    let { src: n, initialTimeSec: c = 0, onError: d, onHlsInstance: m, crossOrigin: h = "anonymous" } = t,
-        f = r.useRef(null),
-        [p, v] = r.useState(null),
-        g = r.useRef(c);
-    g.current = c;
-    let x = r.useRef(d),
+    let { src: n, initialTimeSec: c = 0, onError: d, onHlsInstance: m, crossOrigin: f = "anonymous" } = t,
+        p = r.useRef(null),
+        [h, x] = r.useState(null),
+        v = r.useRef(c);
+    v.current = c;
+    let g = r.useRef(d),
         E = r.useRef(m),
-        b = r.useRef(h);
-    ((b.current = h),
+        b = r.useRef(f);
+    ((b.current = f),
         r.useEffect(() => {
-            x.current = d;
+            g.current = d;
         }, [d]),
         r.useEffect(() => {
             E.current = m;
         }, [m]));
-    let [S, C] = r.useState(!1),
-        y = !S && a.u.isHlsUrl(n) && (0, i.Ap)();
+    let [y, S] = r.useState(!1),
+        C = !y && a.u.isHlsUrl(n) && (0, i.Ap)();
     return (
         r.useEffect(() => {
-            if (!y || null == n || null == e.current) return;
+            if (!C || null == n || null == e.current) return;
             let t = e.current,
                 r = !1,
                 a = null,
@@ -34,11 +34,11 @@ function c(e, t) {
             return (
                 (0, i.E)().then((e) => {
                     if (r) return;
-                    if (!e.isSupported()) return void C(!0);
+                    if (!e.isSupported()) return void S(!0);
                     let i = (a = new e({
-                        backBufferLength: u,
-                        maxBufferLength: o,
-                        startPosition: g.current,
+                        backBufferLength: o,
+                        maxBufferLength: s,
+                        startPosition: v.current,
                         startFragPrefetch: !0,
                         startLevel: -1,
                         xhrSetup: (e) => {
@@ -57,7 +57,7 @@ function c(e, t) {
                             new Request(e.url, t)
                         ),
                     }));
-                    ((f.current = i), v(i), E.current?.(i));
+                    ((p.current = i), x(i), E.current?.(i));
                     let d = 0;
                     ((c = () => {
                         i.mainForwardBufferInfo?.len === 0 &&
@@ -68,11 +68,11 @@ function c(e, t) {
                             });
                     }),
                         i.on(e.Events.FRAG_LOADING, function () {
-                            i.config.minAutoBitrate !== s && (i.config.minAutoBitrate = s);
+                            i.config.minAutoBitrate !== u && (i.config.minAutoBitrate = u);
                         }),
                         i.on(e.Events.ERROR, function (t, n) {
                             if (
-                                (x.current?.(
+                                (g.current?.(
                                     (function (e, t) {
                                         switch (t) {
                                             case e.ErrorTypes.NETWORK_ERROR:
@@ -92,7 +92,7 @@ function c(e, t) {
                                 n.fatal)
                             ) {
                                 if (d >= 3) {
-                                    (i.destroy(), (f.current = null), v(null), E.current?.(null));
+                                    (i.destroy(), (p.current = null), x(null), E.current?.(null));
                                     return;
                                 }
                                 switch ((d++, n.type)) {
@@ -103,7 +103,7 @@ function c(e, t) {
                                         i.recoverMediaError();
                                         break;
                                     default:
-                                        (i.destroy(), (f.current = null), E.current?.(null));
+                                        (i.destroy(), (p.current = null), E.current?.(null));
                                 }
                             }
                         }),
@@ -115,12 +115,12 @@ function c(e, t) {
                     ((r = !0),
                         null != c && t.removeEventListener("seeking", c),
                         null != a &&
-                            (f.current === a && (a.destroy(), (f.current = null), v(null), E.current?.(null)),
+                            (p.current === a && (a.destroy(), (p.current = null), x(null), E.current?.(null)),
                             t.removeAttribute("src"),
                             t.load()));
                 }
             );
-        }, [y, n, e]),
-        { isHlsActive: y, hlsRef: f, hls: p }
+        }, [C, n, e]),
+        { isHlsActive: C, hlsRef: p, hls: h }
     );
 }

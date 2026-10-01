@@ -1,33 +1,33 @@
-n.d(t, { A: () => h });
+n.d(e, { A: () => C });
 var l = n(17928),
-    i = n(6161),
-    s = n(890615),
-    r = n(450149),
+    r = n(6161),
+    i = n(890615),
+    o = n(450149),
     a = n(616356),
-    o = n(734057),
+    s = n(734057),
     u = n(576705),
     c = n(290863),
     d = n(977997),
-    m = n(583846);
-function h(e) {
-    let t = (0, m.JM)(e),
+    x = n(583846);
+function C(t) {
+    let e = (0, x.JM)(t),
         n = (0, l.bG)(
-            [d.A, o.A, u.A],
+            [d.A, s.A, u.A],
             () => {
-                if (!t || e.author_type !== i.ContentInventoryAuthorType.USER) return null;
-                let n = d.A.getVoiceStateForUser(e.author_id),
-                    l = o.A.getChannel(n?.channelId),
-                    r = "channel_id" in e ? e.channel_id : null;
-                return (null == r || r === n?.channelId) && (null == l || (0, s.A)(l, u.A)) ? l : null;
+                if (!e || t.author_type !== r.ContentInventoryAuthorType.USER) return null;
+                let n = d.A.getVoiceStateForUser(t.author_id),
+                    l = s.A.getChannel(n?.channelId),
+                    o = "channel_id" in t ? t.channel_id : null;
+                return (null == o || o === n?.channelId) && (null == l || (0, i.A)(l, u.A)) ? l : null;
             },
-            [e, t],
+            [t, e],
         ),
-        h = (0, l.bG)([c.A], () => (null != t ? c.A.getPrimaryActivity(e.author_id, n?.guild_id) : null), [
+        C = (0, l.bG)([c.A], () => (null != e ? c.A.getPrimaryActivity(t.author_id, n?.guild_id) : null), [
             n,
-            e.author_id,
-            t,
+            t.author_id,
+            e,
         ]),
-        p = (0, l.bG)([a.A], () => (t ? a.A.getStreamForUser(e.author_id, n?.guild_id) : null), [n, e.author_id, t]),
-        { previewUrl: f } = (0, r.A)(p?.guildId, p?.channelId, p?.ownerId);
-    return { channel: n, activity: h, streamPreviewUrl: f, stream: p };
+        A = (0, l.bG)([a.A], () => (e ? a.A.getStreamForUser(t.author_id, n?.guild_id) : null), [n, t.author_id, e]),
+        { previewUrl: h } = (0, o.A)(A?.guildId, A?.channelId, A?.ownerId);
+    return { channel: n, activity: C, streamPreviewUrl: h, stream: A };
 }

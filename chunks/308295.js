@@ -1,14 +1,14 @@
-n.d(t, { $: () => c, p: () => u });
-var l = n(192308),
-    i = n(486020),
-    s = n(339143),
+n.d(t, { $: () => u, p: () => c });
+var i = n(192308),
+    s = n(486020),
+    l = n(339143),
     r = n(80569),
     a = n(157559),
     o = n(375708);
-function u() {
+function c() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    if (!(0, s.W)()) {
-        ((0, l.closeModal)(r.y), e.onClose?.());
+    if (!(0, l.W)()) {
+        ((0, i.closeModal)(r.y), e.onClose?.());
         return;
     }
     !(function (e) {
@@ -26,28 +26,28 @@ function u() {
         });
     })({
         onConfirm: () => {
-            ((0, l.closeModal)(r.y), e.onClose?.());
+            ((0, i.closeModal)(r.y), e.onClose?.());
         },
     });
 }
-async function c(e) {
-    let t = i.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: 128, forcePNG: !0 }),
+async function u(e) {
+    let t = s.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: 128, forcePNG: !0 }),
         n = await fetch(t),
-        l = await n.blob(),
-        s = l.type;
-    (null == s || "application/octet-stream" === s) &&
-        (s = t.includes(".gif")
+        i = await n.blob(),
+        l = i.type;
+    (null == l || "application/octet-stream" === l) &&
+        (l = t.includes(".gif")
             ? "image/gif"
             : t.includes(".webp")
               ? "image/webp"
               : e.animated
                 ? "image/gif"
                 : "image/png");
-    let r = new File([l], `${e.name}.${s.split("/")[1]}`, { type: s });
+    let r = new File([i], `${e.name}.${l.split("/")[1]}`, { type: l });
     return {
         data: await new Promise((e, t) => {
             let n = new FileReader();
-            ((n.onloadend = () => e(n.result)), (n.onerror = t), n.readAsDataURL(l));
+            ((n.onloadend = () => e(n.result)), (n.onerror = t), n.readAsDataURL(i));
         }),
         file: r,
         image: null,

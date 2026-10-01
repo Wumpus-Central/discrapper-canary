@@ -1,20 +1,20 @@
-function r(e, t, n) {
-    return n * (Math.max(e, 0) / t.width);
+function n(t, r, e) {
+    return e * (Math.max(t, 0) / r.width);
 }
-function l(e, t, n) {
-    return a((e / t) * 100, n);
+function i(t, r, e) {
+    return u((t / r) * 100, e);
 }
-function a(e, t) {
-    return (e / 100) * t.width;
+function u(t, r) {
+    return (t / 100) * r.width;
 }
-function i(e) {
-    let t = e < 0 ? "-" : "",
-        n = 0 | (e = Math.abs(e)),
-        r = Math.floor(n / 3600),
-        l = Math.floor((n % 3600) / 60),
-        a = n % 60;
-    return r > 0
-        ? `${t}${r}:${String(l).padStart(2, "0")}:${String(a).padStart(2, "0")}`
-        : `${t}${l}:${String(a).padStart(2, "0")}`;
+function o(t) {
+    let r = t < 0 ? "-" : "",
+        e = 0 | (t = Math.abs(t)),
+        n = Math.floor(e / 3600),
+        i = Math.floor((e % 3600) / 60),
+        u = e % 60;
+    return n > 0
+        ? `${r}${n}:${String(i).padStart(2, "0")}:${String(u).padStart(2, "0")}`
+        : `${r}${i}:${String(u).padStart(2, "0")}`;
 }
-n.d(t, { DX: () => l, TO: () => a, hc: () => r, rB: () => i });
+e.d(r, { DX: () => i, TO: () => u, hc: () => n, rB: () => o });

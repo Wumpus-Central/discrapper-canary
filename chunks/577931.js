@@ -2,17 +2,17 @@ n.d(t, { A: () => u });
 var a = n(582128),
     l = n(17928),
     r = n(287809),
-    i = n(982240),
-    s = n(988341),
+    s = n(982240),
+    i = n(988341),
     o = n(234e3),
     d = n(248284),
     c = n(555149);
 function u() {
     let e = r.default.getCurrentUser()?.id,
-        t = (0, l.yK)([i.Ay], () => (null == e ? [] : i.Ay.getBadges(e)), [e]),
+        t = (0, l.yK)([s.Ay], () => (null == e ? [] : s.Ay.getBadges(e)), [e]),
         { pendingBadgeDisplayOrder: n, pendingBadgeHiddenBadges: u } = (0, c.A)(),
         f = a.useMemo(
-            () => (0, s.Cw)((0, o.S0)(t, { pendingBadgeDisplayOrder: n, pendingBadgeHiddenBadges: u })),
+            () => (0, i.Cw)((0, o.S0)(t, { pendingBadgeDisplayOrder: n, pendingBadgeHiddenBadges: u })),
             [t, n, u],
         ),
         m = (0, d.A)((e) => e.hiddenOrder),

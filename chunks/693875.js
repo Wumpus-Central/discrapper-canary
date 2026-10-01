@@ -1,10 +1,10 @@
-n.d(t, { A: () => a });
-var l = n(477900);
-n(582128);
-var i = n(503698),
-    s = n.n(i),
-    r = n(425601);
-function a(e) {
-    let { className: t, ...n } = e;
-    return (0, l.jsx)("div", { className: s()(r.p, t), ...n });
+p.d(a, { A: () => d });
+var c = p(477900);
+p(582128);
+var i = p(503698),
+    r = p.n(i),
+    t = p(425601);
+function d(s) {
+    let { className: a, ...p } = s;
+    return (0, c.jsx)("div", { className: r()(t.p, a), ...p });
 }

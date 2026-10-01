@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     g: "keybindHint__46002",
     L5: "keybindHintText__46002",
     QW: "warningIcon__46002",

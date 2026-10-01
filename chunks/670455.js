@@ -1,13 +1,13 @@
 n.d(t, {
     AO: () => N,
     CW: () => O,
-    Eq: () => m,
+    Eq: () => g,
     MW: () => E.iL,
     P0: () => A,
     Rj: () => p,
     UV: () => L,
     X: () => S,
-    bO: () => g,
+    bO: () => m,
     fs: () => T,
     h0: () => I,
     j6: () => C,
@@ -46,7 +46,7 @@ let f = [
     ].reduce((e, t, n) => ({ ...e, [t]: n }), {}),
     p = ["bad", "neutral", "good"],
     T = 864e13;
-var m =
+var g =
         (((a = {}).CONNECTION = "CONNECTION"),
         (a.AUDIO = "AUDIO"),
         (a.VIDEO = "VIDEO"),
@@ -55,7 +55,7 @@ var m =
         (a.PEOPLE = "PEOPLE"),
         (a.VIBEGRATIONS = "VIBEGRATIONS"),
         a),
-    g =
+    m =
         (((s = {}).FREEFORM = "FREEFORM"),
         (s.COULD_NOT_CONNECT = "COULD_NOT_CONNECT"),
         (s.HIGH_TTC = "HIGH_TTC"),

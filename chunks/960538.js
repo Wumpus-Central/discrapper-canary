@@ -1,10 +1,10 @@
-(n.d(t, { t: () => N }), n(938796));
+(n.d(t, { t: () => j }), n(938796));
 var i = n(477900),
     l = n(582128),
     s = n(503698),
-    a = n.n(s),
-    r = n(649852),
-    o = n.n(r),
+    r = n.n(s),
+    a = n(649852),
+    o = n.n(a),
     d = n(665260),
     c = n(305866),
     u = n(922016),
@@ -15,12 +15,12 @@ var i = n(477900),
     A = n(649963),
     x = n(815807),
     f = n(429433),
-    E = n(652215),
-    I = n(307731),
-    C = n(375708),
-    _ = n(356974),
-    v = n(988626);
-class N extends l.Component {
+    I = n(652215),
+    E = n(307731),
+    v = n(375708),
+    C = n(356974),
+    _ = n(988626);
+class j extends l.Component {
     state = { isReactionPickerActive: !1 };
     ref = l.createRef();
     onAddReaction = (e, t) => {
@@ -50,27 +50,27 @@ class N extends l.Component {
         return (0, i.jsx)(c.M.Consumer, {
             children: (e) => {
                 let { inDialog: t } = e;
-                return t ? (0, i.jsx)(c.l, { "aria-label": C.intl.string(C.t["7Xqzdj"]), children: s }) : s;
+                return t ? (0, i.jsx)(c.l, { "aria-label": v.intl.string(v.t["7Xqzdj"]), children: s }) : s;
             },
         });
     };
     render() {
         let { message: e, className: t, children: n, useChatFontScaling: l, tabIndex: s = 0 } = this.props,
-            { isReactionPickerActive: r } = this.state;
-        if (e.state === E.cmJ.SENDING || (0, d.Lt)(e.flags, E.pr7.EPHEMERAL)) return null;
-        let o = l ? v : _,
+            { isReactionPickerActive: a } = this.state;
+        if (e.state === I.cmJ.SENDING || (0, d.Lt)(e.flags, I.pr7.EPHEMERAL)) return null;
+        let o = l ? _ : C,
             c = { size: "sm", color: "currentColor", className: o.icon };
         return (0, i.jsx)(u.Y, {
             targetElementRef: this.ref,
-            shouldShow: r,
+            shouldShow: a,
             onRequestClose: this.handleReactionPickerToggle,
             renderPopout: this.renderReactionPopout,
             position: "right",
             children: (e, l) => {
-                let { isShown: r } = l;
+                let { isShown: a } = l;
                 return (0, i.jsx)(m.m, {
                     asContainer: !0,
-                    text: C.intl.string(C.t.lfIHs4),
+                    text: v.intl.string(v.t.lfIHs4),
                     children: (0, i.jsxs)(h.D, {
                         ...e,
                         innerRef: this.ref,
@@ -78,9 +78,9 @@ class N extends l.Component {
                         onClick: (e) => {
                             this.handleAddReactionClick(e);
                         },
-                        onMouseEnter: () => (0, p.K)(I.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
-                        onFocus: () => (0, p.K)(I.EmojiInteractionPoint.AddReactionPopoutFocused),
-                        className: a()(o.reactionBtn, { [o.active]: r }, t),
+                        onMouseEnter: () => (0, p.K)(E.EmojiInteractionPoint.AddReactionPopoutMouseEntered),
+                        onFocus: () => (0, p.K)(E.EmojiInteractionPoint.AddReactionPopoutFocused),
+                        className: r()(o.reactionBtn, { [o.active]: a }, t),
                         children: [(0, i.jsx)(g.n, { ...c }), n],
                     }),
                 });

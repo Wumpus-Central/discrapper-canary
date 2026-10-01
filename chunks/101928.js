@@ -12,19 +12,19 @@ var t = n(317097),
 function h(e) {
     let { user: r, displayProfile: n, pendingThemeColors: h, pendingAvatarSrc: f, isPreview: v, forceUserTheme: A } = e,
         C = (0, s.Ay)(),
-        y = (0, c.Wd)(),
-        p = (0, l.bG)([o.Ay], () => o.Ay.syncProfileThemeWithUserTheme),
+        p = (0, c.Wd)(),
+        N = (0, l.bG)([o.Ay], () => o.Ay.syncProfileThemeWithUserTheme),
         x = f ?? r?.getAvatarURL(n?.guildId, 80),
-        N = (0, i.nt)("PRIMARY_530", { saturation: 1 }),
-        [b, j] = (0, u.rh)(x, N, !1);
-    if (null != y) return y;
+        y = (0, i.nt)("PRIMARY_530", { saturation: 1 }),
+        [b, j] = (0, u.rh)(x, y, !1);
+    if (null != p) return p;
     if (!n?.canEditThemes && !v) return { theme: C, primaryColor: null, secondaryColor: null };
-    let T = n?.getPreviewThemeColors(h),
-        R = T?.[0] ?? (0, t.LX)(b),
-        g = T?.[1] ?? (0, t.LX)(j),
-        w = p || A ? C : ((0, d.tM)(R) ?? C);
+    let R = n?.getPreviewThemeColors(h),
+        T = R?.[0] ?? (0, t.LX)(b),
+        g = R?.[1] ?? (0, t.LX)(j),
+        w = N || A ? C : ((0, d.tM)(T) ?? C);
     return (
         w === m.NJ8.ASH && (0, a.M)(C) ? (w = C) : w === m.NJ8.ASH && (0, a.q)(C) && (w = m.NJ8.DARK),
-        { theme: w, primaryColor: R, secondaryColor: g }
+        { theme: w, primaryColor: T, secondaryColor: g }
     );
 }

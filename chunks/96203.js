@@ -1,32 +1,32 @@
 r.d(e, { A: () => c });
 var i = r(582128),
-    n = r(435558),
-    s = r(17928),
+    s = r(435558),
+    n = r(17928),
     l = r(633075),
-    a = r(289173),
-    u = r(999291),
-    o = r(832163),
+    u = r(289173),
+    o = r(999291),
+    a = r(832163),
     d = r(501838);
 function c(t) {
     let { userId: e } = t,
-        r = (0, u.Ay)(e),
+        r = (0, o.Ay)(e),
         c = i.useMemo(() => (r?.userId != null ? [r.userId] : []), [r]),
         S = (0, d.w)({ userIds: c }),
         I = (0, d.mn)({ userIds: c }),
-        h = (0, d.tR)(c),
-        p = (0, s.yK)(
-            [o.A],
+        _ = (0, d.tR)(c),
+        p = (0, n.yK)(
+            [a.A],
             () => {
                 if (r?.widgets == null) return [];
                 let t = new Set();
                 for (let e of r?.widgets ?? [])
-                    if (e instanceof a.Yy)
+                    if (e instanceof u.Yy)
                         e.games.forEach((e) => {
-                            let r = o.A.getApplicationIdFromDetectableId(e.gameId);
+                            let r = a.A.getApplicationIdFromDetectableId(e.gameId);
                             null != r && t.add(r);
                         });
                     else if (e instanceof l.R) {
-                        let r = o.A.getApplicationIdFromDetectableId(e.applicationId);
+                        let r = a.A.getApplicationIdFromDetectableId(e.applicationId);
                         null != r && t.add(r);
                     }
                 return Array.from(t).sort();
@@ -34,7 +34,7 @@ function c(t) {
             [r],
         );
     return i.useMemo(
-        () => (r?.application != null ? [] : (0, n.uniq)([...S, ...I, ...h, ...p])),
-        [r?.application, S, I, h, p],
+        () => (r?.application != null ? [] : (0, s.uniq)([...S, ...I, ..._, ...p])),
+        [r?.application, S, I, _, p],
     );
 }

@@ -1,41 +1,41 @@
-n.d(t, { J: () => o, o: () => r });
-var l,
-    i = n(894279),
-    s = n(500620),
-    r = (((l = {}).STRING = "string"), (l.NUMBER = "number"), (l.MEDIA = "media"), l);
-let a = { [i.P.TEXT]: ["string"], [i.P.NUMBER]: ["number"], [i.P.IMAGE]: ["media"], [i.P.DURATION]: ["number"] };
+l.d(t, { J: () => o, o: () => i });
+var n,
+    a = l(894279),
+    s = l(500620),
+    i = (((n = {}).STRING = "string"), (n.NUMBER = "number"), (n.MEDIA = "media"), n);
+let r = { [a.P.TEXT]: ["string"], [a.P.NUMBER]: ["number"], [a.P.IMAGE]: ["media"], [a.P.DURATION]: ["number"] };
 function o(e) {
-    return function (t, n) {
-        return (function e(t, n, l) {
-            let { data: r, applicationAssets: o, getApplicationAssetUrl: u } = l;
+    return function (t, l) {
+        return (function e(t, l, n) {
+            let { data: i, applicationAssets: o, getApplicationAssetUrl: u } = n;
             if (null == t) return null;
             if (t.value_type === s.o.DATA) {
-                let s = r[t.value],
+                let s = i[t.value],
                     o = t.presentation_type;
-                return null != s && a[o]?.includes(s.type) && n.includes(s.type)
-                    ? "playtime_hours" === t.value && "number" === s.type && o === i.P.DURATION
+                return null != s && r[o]?.includes(s.type) && l.includes(s.type)
+                    ? "playtime_hours" === t.value && "number" === s.type && o === a.P.DURATION
                         ? { type: s.type, value: Math.floor(60 * s.value * 6e4), presentationType: o }
                         : { ...s, presentationType: o }
                     : "fallback" in t && null != t.fallback
-                      ? e(t.fallback, n, l)
+                      ? e(t.fallback, l, n)
                       : null;
             }
             if (t.value_type === s.o.CUSTOM_STRING)
-                return t.presentation_type === i.P.TEXT && n.includes("string")
-                    ? { type: "string", value: t.value, presentationType: i.P.TEXT }
+                return t.presentation_type === a.P.TEXT && l.includes("string")
+                    ? { type: "string", value: t.value, presentationType: a.P.TEXT }
                     : null;
             if (t.value_type === s.o.APPLICATION_ASSET) {
-                if (!n.includes("media")) return null;
+                if (!l.includes("media")) return null;
                 let e = o.find((e) => e.key === t.value);
                 return null == e
                     ? null
                     : {
                           type: "media",
                           media: { url: u(e), width: e.metadata.width, height: e.metadata.height },
-                          presentationType: i.P.IMAGE,
+                          presentationType: a.P.IMAGE,
                       };
             }
             return null;
-        })(t, n, e);
+        })(t, l, e);
     };
 }

@@ -1,16 +1,16 @@
-n.d(t, { A: () => i });
-var a = n(582128),
-    l = n(17928),
-    r = n(775602);
-function i(e, t) {
-    let n = (0, l.bG)([r.Ay], () => r.Ay.useReducedMotion);
-    a.useEffect(() => {
+r.d(t, { A: () => u });
+var n = r(582128),
+    i = r(17928),
+    o = r(775602);
+function u(e, t) {
+    let r = (0, i.bG)([o.Ay], () => o.Ay.useReducedMotion);
+    n.useEffect(() => {
         if (!t) return;
-        let a = e.current;
-        if (null == a) return;
-        let l = requestAnimationFrame(() => {
-            a.scrollIntoView({ behavior: n ? "auto" : "smooth" });
+        let n = e.current;
+        if (null == n) return;
+        let i = requestAnimationFrame(() => {
+            n.scrollIntoView({ behavior: r ? "auto" : "smooth" });
         });
-        return () => cancelAnimationFrame(l);
-    }, [e, t, n]);
+        return () => cancelAnimationFrame(i);
+    }, [e, t, r]);
 }

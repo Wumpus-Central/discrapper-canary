@@ -1,1 +1,1 @@
-p.exports = { or: "cursorPointer_c8743f" };
+r.exports = { or: "cursorPointer_c8743f" };

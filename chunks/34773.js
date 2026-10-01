@@ -1,4 +1,4 @@
-a.exports = {
+i.exports = {
     Ql: "nowPlayingNotification__81a05",
     VG: "nowPlayingNotificationAnimationWrapper__81a05",
     dn: "nowPlayingNotificationContainer__81a05",

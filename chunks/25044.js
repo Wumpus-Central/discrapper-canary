@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(91871),
@@ -16,7 +16,7 @@ var i = n(477900),
     f = n(957565),
     p = n(96919),
     T = n(375708);
-function m(e) {
+function g(e) {
     let { id: t, experiment: n, currentBucket: r, system: a } = e,
         s = (0, I.h)(n);
     return (0, i.jsxs)(
@@ -70,7 +70,7 @@ function m(e) {
         t,
     );
 }
-function g() {
+function m() {
     let { experiments: e, overridesInfo: t } = (0, h.hI)(),
         { experiments: n, overridesInfo: a } = (0, A.op)(),
         o = r.useMemo(() => {
@@ -102,8 +102,8 @@ function g() {
                 }),
             [_],
         ),
-        g = r.useMemo(() => I.map(m), [I]),
-        S = r.useMemo(() => f.map(m), [f]),
+        m = r.useMemo(() => I.map(g), [I]),
+        S = r.useMemo(() => f.map(g), [f]),
         N = (0, i.jsx)(
             l.aK,
             {
@@ -113,9 +113,9 @@ function g() {
             },
             "experiments-search",
         );
-    return g.length > 0
+    return m.length > 0
         ? [
-              (0, i.jsx)(l.rX, { label: "Overridden Experiments", children: g }, "overridden-group"),
+              (0, i.jsx)(l.rX, { label: "Overridden Experiments", children: m }, "overridden-group"),
               (0, i.jsx)(l.bX, {}, "separator-2"),
               (0, i.jsxs)(
                   l.Dr,

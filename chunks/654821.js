@@ -1,16 +1,16 @@
-(n.r(t), n.d(t, { hasDomParent: () => i, isDOMRangeCollapsed: () => s, normalizeDOMPoint: () => r }));
+(n.r(t), n.d(t, { hasDomParent: () => i, isDOMRangeCollapsed: () => r, normalizeDOMPoint: () => s }));
 var l = n(235599);
 {
     l.rL.toSlateRange = (e, t, n) => {
         var i;
-        let r,
+        let s,
             { exactMatch: a, suppressThrow: o } = n,
             {
                 anchorNode: u,
                 anchorOffset: d,
-                focusNode: m,
-                focusOffset: h,
-            } = null != (r = (i = t) && i.anchorNode && c(i.anchorNode)) && i instanceof r.Selection
+                focusNode: h,
+                focusOffset: m,
+            } = null != (s = (i = t) && i.anchorNode && c(i.anchorNode)) && i instanceof s.Selection
                 ? {
                       anchorNode: t.anchorNode,
                       anchorOffset: t.anchorOffset,
@@ -23,23 +23,23 @@ var l = n(235599);
                       focusNode: t.endContainer,
                       focusOffset: t.endOffset,
                   },
-            p = s(u, d, m, h);
-        if (null == u || null == m || null == d || null == h) {
+            p = r(u, d, h, m);
+        if (null == u || null == h || null == d || null == m) {
             if (o) return null;
             throw Error("Cannot resolve a Slate range from DOM range");
         }
         let f = l.rL.toSlatePoint(e, [u, d], { exactMatch: a, suppressThrow: o }),
-            g = p ? f : l.rL.toSlatePoint(e, [m, h], { exactMatch: a, suppressThrow: o });
+            g = p ? f : l.rL.toSlatePoint(e, [h, m], { exactMatch: a, suppressThrow: o });
         return null != f && null != g ? { anchor: f, focus: g } : null;
     };
     let e = l.rL.toSlatePoint;
     l.rL.toSlatePoint = (t, n, l) => {
-        let { exactMatch: i, suppressThrow: s, direction: a = "forward" } = l;
-        i || (n = r(n, a));
+        let { exactMatch: i, suppressThrow: r, direction: a = "forward" } = l;
+        i || (n = s(n, a));
         try {
-            return e(t, n, { exactMatch: !0, suppressThrow: s });
+            return e(t, n, { exactMatch: !0, suppressThrow: r });
         } catch (e) {
-            if (s) return null;
+            if (r) return null;
             throw e;
         }
     };
@@ -52,10 +52,10 @@ function i(e, t) {
     }
     return !1;
 }
-function s(e, t, n, l) {
+function r(e, t, n, l) {
     return e === n && t === l;
 }
-function r(e, t) {
+function s(e, t) {
     let n,
         [l, i] = e;
     if (!o(l) || 0 === l.childNodes.length) return e;
@@ -70,34 +70,34 @@ function r(e, t) {
         let e = "backward" === t ? l.childNodes.length - 1 : 0;
         l = a(l, e, t)[0];
     }
-    let s = "backward" === t && null != l.textContent ? l.textContent.length : 0;
-    return [l, s];
+    let r = "backward" === t && null != l.textContent ? l.textContent.length : 0;
+    return [l, r];
 }
 function a(e, t, n) {
     var l;
     let { childNodes: i } = e,
-        s = i[t],
-        r = t,
+        r = i[t],
+        s = t,
         a = !1,
         c = !1;
     for (
         ;
-        ((u((l = s)) && 8 === l.nodeType) ||
-            (o(s) && 0 === s.childNodes.length) ||
-            (o(s) && "false" === s.getAttribute("contenteditable"))) &&
+        ((u((l = r)) && 8 === l.nodeType) ||
+            (o(r) && 0 === r.childNodes.length) ||
+            (o(r) && "false" === r.getAttribute("contenteditable"))) &&
         (!a || !c);
     ) {
-        if (r >= i.length) {
-            ((a = !0), (r = t - 1), (n = "backward"));
+        if (s >= i.length) {
+            ((a = !0), (s = t - 1), (n = "backward"));
             continue;
         }
-        if (r < 0) {
-            ((c = !0), (r = t + 1), (n = "forward"));
+        if (s < 0) {
+            ((c = !0), (s = t + 1), (n = "forward"));
             continue;
         }
-        ((s = i[r]), (t = r), (r += "forward" === n ? 1 : -1));
+        ((r = i[s]), (t = s), (s += "forward" === n ? 1 : -1));
     }
-    return [s, t];
+    return [r, t];
 }
 function o(e) {
     return u(e) && 1 === e.nodeType;

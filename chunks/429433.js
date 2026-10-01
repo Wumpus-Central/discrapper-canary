@@ -1,11 +1,11 @@
 n.d(t, { C: () => r });
-var l = n(477900);
+var i = n(477900);
 n(582128);
-var i = n(267889),
+var l = n(267889),
     s = n(307731);
 function r(e) {
     let { channel: t, closePopout: n, analyticsOverride: r, onSelectEmoji: a, messageId: o } = e;
-    return (0, l.jsx)(i.A, {
+    return (0, i.jsx)(l.A, {
         closePopout: n,
         channel: t,
         onSelectEmoji: a,

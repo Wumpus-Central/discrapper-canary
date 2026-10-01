@@ -1,32 +1,32 @@
-function r(e, t) {
-    let n = t && t.cache ? t.cache : s,
-        r = t && t.serializer ? t.serializer : o;
+function i(e, n) {
+    let t = n && n.cache ? n.cache : u,
+        i = n && n.serializer ? n.serializer : s;
     return (
-        t && t.strategy
-            ? t.strategy
-            : function (e, t) {
-                  var n, r;
-                  let o = 1 === e.length ? i : a;
-                  return ((n = t.cache.create()), (r = t.serializer), o.bind(this, e, n, r));
+        n && n.strategy
+            ? n.strategy
+            : function (e, n) {
+                  var t, i;
+                  let s = 1 === e.length ? r : a;
+                  return ((t = n.cache.create()), (i = n.serializer), s.bind(this, e, t, i));
               }
-    )(e, { cache: n, serializer: r });
+    )(e, { cache: t, serializer: i });
 }
-function i(e, t, n, r) {
-    let i = null == r || "number" == typeof r || "boolean" == typeof r ? r : n(r),
-        a = t.get(i);
-    return (void 0 === a && ((a = e.call(this, r)), t.set(i, a)), a);
+function r(e, n, t, i) {
+    let r = null == i || "number" == typeof i || "boolean" == typeof i ? i : t(i),
+        a = n.get(r);
+    return (void 0 === a && ((a = e.call(this, i)), n.set(r, a)), a);
 }
-function a(e, t, n) {
-    let r = Array.prototype.slice.call(arguments, 3),
-        i = n(r),
-        a = t.get(i);
-    return (void 0 === a && ((a = e.apply(this, r)), t.set(i, a)), a);
+function a(e, n, t) {
+    let i = Array.prototype.slice.call(arguments, 3),
+        r = t(i),
+        a = n.get(r);
+    return (void 0 === a && ((a = e.apply(this, i)), n.set(r, a)), a);
 }
-n.d(t, { B: () => r, W: () => l });
-let o = function () {
+t.d(n, { B: () => i, W: () => l });
+let s = function () {
     return JSON.stringify(arguments);
 };
-class u {
+class o {
     cache;
     constructor() {
         this.cache = Object.create(null);
@@ -34,22 +34,22 @@ class u {
     get(e) {
         return this.cache[e];
     }
-    set(e, t) {
-        this.cache[e] = t;
+    set(e, n) {
+        this.cache[e] = n;
     }
 }
-let s = {
+let u = {
         create: function () {
-            return new u();
+            return new o();
         },
     },
     l = {
-        variadic: function (e, t) {
-            var n, r;
-            return ((n = t.cache.create()), (r = t.serializer), a.bind(this, e, n, r));
+        variadic: function (e, n) {
+            var t, i;
+            return ((t = n.cache.create()), (i = n.serializer), a.bind(this, e, t, i));
         },
-        monadic: function (e, t) {
-            var n, r;
-            return ((n = t.cache.create()), (r = t.serializer), i.bind(this, e, n, r));
+        monadic: function (e, n) {
+            var t, i;
+            return ((t = n.cache.create()), (i = n.serializer), r.bind(this, e, t, i));
         },
     };

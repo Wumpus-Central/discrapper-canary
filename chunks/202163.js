@@ -1,11 +1,11 @@
-(n.d(t, { A: () => s }), n(582128), n(17928));
-var l = n(429913);
-(n(403362), n(311043));
-var i = n(569926);
+(a.d(t, { A: () => s }), a(582128), a(17928));
+var i = a(429913);
+(a(403362), a(311043));
+var n = a(569926);
 function s(e) {
-    let t = (0, l.h)(e),
-        n = null != e && null == t,
+    let t = (0, i.h)(e),
+        a = null != e && null == t,
         s = t?.getCanonicalGameId() ?? null,
-        { data: r, isLoading: a } = (0, i.I)(s);
-    return { gameId: s, gameRecord: r ?? null, isLoading: n || a };
+        { data: d, isLoading: l } = (0, n.I)(s);
+    return { gameId: s, gameRecord: d ?? null, isLoading: a || l };
 }

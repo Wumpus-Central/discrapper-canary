@@ -1,6 +1,6 @@
-(n.d(t, { s: () => l }), n(321073));
-var r = n(265486);
-class l {
+(i.d(t, { s: () => n }), i(321073));
+var a = i(265486);
+class n {
     videoElement;
     updateInterval = null;
     updateCallback = null;
@@ -21,9 +21,9 @@ class l {
         let e = "" !== this.videoElement.src ? this.videoElement.src : this.videoElement.currentSrc;
         if (null == e || "" === e || null != this.codecInfoPromise) return;
         let t = this.codecInfoFetchId;
-        this.codecInfoPromise = (0, r.K)(e);
-        let n = await this.codecInfoPromise;
-        this.codecInfoFetchId === t && (this.cachedCodecInfo = n);
+        this.codecInfoPromise = (0, a.K)(e);
+        let i = await this.codecInfoPromise;
+        this.codecInfoFetchId === t && (this.cachedCodecInfo = i);
     }
     resetCodecInfo(e) {
         (this.codecInfoFetchId++,
@@ -41,80 +41,80 @@ class l {
     getStats() {
         let e,
             t,
-            n,
-            r = this.videoElement;
+            i,
+            a = this.videoElement;
         this.cachedCodecInfo?.videoWidth != null && this.cachedCodecInfo?.videoHeight != null
-            ? ((e = this.cachedCodecInfo.videoWidth), (t = this.cachedCodecInfo.videoHeight), (n = `${e}x${t}`))
-            : ((e = 0 !== r.videoWidth ? r.videoWidth : 0),
-              (t = 0 !== r.videoHeight ? r.videoHeight : 0),
-              (n = e > 0 && t > 0 ? `${e}x${t}` : "Unknown"));
-        let l = Math.round(r.clientWidth),
-            a = Math.round(r.clientHeight),
-            i = [],
-            s = 0,
-            u = r.currentTime;
-        for (let e = 0; e < r.buffered.length; e++) {
-            let t = r.buffered.start(e),
-                n = r.buffered.end(e);
-            (i.push({ start: t, end: n }), n > u && (t <= u ? (s += n - u) : (s += n - t)));
+            ? ((e = this.cachedCodecInfo.videoWidth), (t = this.cachedCodecInfo.videoHeight), (i = `${e}x${t}`))
+            : ((e = 0 !== a.videoWidth ? a.videoWidth : 0),
+              (t = 0 !== a.videoHeight ? a.videoHeight : 0),
+              (i = e > 0 && t > 0 ? `${e}x${t}` : "Unknown"));
+        let n = Math.round(a.clientWidth),
+            r = Math.round(a.clientHeight),
+            s = [],
+            l = 0,
+            o = a.currentTime;
+        for (let e = 0; e < a.buffered.length; e++) {
+            let t = a.buffered.start(e),
+                i = a.buffered.end(e);
+            (s.push({ start: t, end: i }), i > o && (t <= o ? (l += i - o) : (l += i - t)));
         }
-        let o = 0,
-            c = 0,
+        let u = 0,
             d = 0,
-            m = null;
-        if ("function" == typeof r.getVideoPlaybackQuality) {
-            let e = r.getVideoPlaybackQuality();
-            ((o = e.droppedVideoFrames), (d = (c = e.totalVideoFrames) > 0 ? (o / c) * 100 : 0));
+            h = 0,
+            c = null;
+        if ("function" == typeof a.getVideoPlaybackQuality) {
+            let e = a.getVideoPlaybackQuality();
+            ((u = e.droppedVideoFrames), (h = (d = e.totalVideoFrames) > 0 ? (u / d) * 100 : 0));
         }
-        if (this.cachedCodecInfo?.frameRate != null) m = this.cachedCodecInfo.frameRate;
-        else if ("function" == typeof r.getVideoPlaybackQuality) {
-            if (null !== this.lockedFrameRate) m = this.lockedFrameRate;
-            else if (Math.abs(r.currentTime - this.lastCurrentTime) > 1.5 && this.lastCurrentTime > 0)
+        if (this.cachedCodecInfo?.frameRate != null) c = this.cachedCodecInfo.frameRate;
+        else if ("function" == typeof a.getVideoPlaybackQuality) {
+            if (null !== this.lockedFrameRate) c = this.lockedFrameRate;
+            else if (Math.abs(a.currentTime - this.lastCurrentTime) > 1.5 && this.lastCurrentTime > 0)
                 if (this.recentFrameRates.length >= 3) {
                     let e = this.recentFrameRates.reduce((e, t) => e + t, 0) / this.recentFrameRates.length;
                     ((this.lockedFrameRate = Math.round(e)),
-                        (m = this.lockedFrameRate),
+                        (c = this.lockedFrameRate),
                         (this.lastKnownFrameRate = this.lockedFrameRate));
                 } else
-                    ((this.baselineFrames = c),
-                        (this.baselineTime = r.currentTime),
+                    ((this.baselineFrames = d),
+                        (this.baselineTime = a.currentTime),
                         (this.recentFrameRates = []),
-                        (m = this.lastKnownFrameRate));
+                        (c = this.lastKnownFrameRate));
             else {
-                let e = c - this.baselineFrames,
-                    t = r.currentTime - this.baselineTime;
+                let e = d - this.baselineFrames,
+                    t = a.currentTime - this.baselineTime;
                 t >= 1 && e > 0
                     ? (this.recentFrameRates.push(e / t),
                       this.recentFrameRates.length > 5 && this.recentFrameRates.shift(),
-                      (m = Math.round(this.recentFrameRates.reduce((e, t) => e + t, 0) / this.recentFrameRates.length)),
-                      (this.lastKnownFrameRate = m))
-                    : null !== this.lastKnownFrameRate && (m = this.lastKnownFrameRate);
+                      (c = Math.round(this.recentFrameRates.reduce((e, t) => e + t, 0) / this.recentFrameRates.length)),
+                      (this.lastKnownFrameRate = c))
+                    : null !== this.lastKnownFrameRate && (c = this.lastKnownFrameRate);
             }
-            this.lastCurrentTime = r.currentTime;
+            this.lastCurrentTime = a.currentTime;
         }
-        let h = r.error?.code ?? null,
-            f = r.error?.message ?? null;
+        let f = a.error?.code ?? null,
+            m = a.error?.message ?? null;
         return (
             null == this.codecInfoPromise && this.fetchCodecInfo(),
             {
-                resolution: n,
+                resolution: i,
                 videoWidth: e,
                 videoHeight: t,
-                viewportWidth: l,
-                viewportHeight: a,
-                currentTime: r.currentTime,
-                duration: r.duration,
-                bufferedRanges: i,
-                bufferedSeconds: s,
-                droppedFrames: o,
-                totalFrames: c,
-                droppedFramesPercent: d,
-                frameRate: m,
-                src: r.src,
+                viewportWidth: n,
+                viewportHeight: r,
+                currentTime: a.currentTime,
+                duration: a.duration,
+                bufferedRanges: s,
+                bufferedSeconds: l,
+                droppedFrames: u,
+                totalFrames: d,
+                droppedFramesPercent: h,
+                frameRate: c,
+                src: a.src,
                 fileSizeBytes: this.fileSizeBytes,
                 codecInfo: this.cachedCodecInfo,
-                errorCode: h,
-                errorMessage: f,
+                errorCode: f,
+                errorMessage: m,
             }
         );
     }

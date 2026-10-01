@@ -54,8 +54,8 @@ function I(e) {
 var f = n(775602),
     p = n(989395),
     T = n(71855),
-    m = n(267102),
-    g = n(652215);
+    g = n(267102),
+    m = n(652215);
 let S = ["Shift", "Alt", "Meta", "Control"];
 var N = n(973283),
     C = n(534409),
@@ -108,9 +108,9 @@ function x(e) {
             alwaysShowLinkDecorations: f.Ay.alwaysShowLinkDecorations,
             highContrastMode: f.Ay.isHighContrastModeEnabled,
         })),
-        q = (function (e, t) {
+        Z = (function (e, t) {
             let [n, i] = a.useState(0),
-                r = (0, m.aL)();
+                r = (0, g.aL)();
             a.useEffect(() => {
                 function e() {
                     return i((e) => e + 1);
@@ -119,10 +119,10 @@ function x(e) {
                     return i((e) => Math.max(0, e - 1));
                 }
                 return (
-                    r.subscribe(g.jej.POPOUT_SHOW, e),
-                    r.subscribe(g.jej.POPOUT_HIDE, t),
+                    r.subscribe(m.jej.POPOUT_SHOW, e),
+                    r.subscribe(m.jej.POPOUT_HIDE, t),
                     () => {
-                        (r.unsubscribe(g.jej.POPOUT_SHOW, e), r.unsubscribe(g.jej.POPOUT_HIDE, t));
+                        (r.unsubscribe(m.jej.POPOUT_SHOW, e), r.unsubscribe(m.jej.POPOUT_HIDE, t));
                     }
                 );
             }, [r]);
@@ -143,8 +143,8 @@ function x(e) {
                 t && 0 === n && s
             );
         })(F, __OVERLAY__ || x),
-        Z = 0;
-    1 !== j && (Z |= _.REDUCE_SATURATION_ENABLED);
+        q = 0;
+    1 !== j && (q |= _.REDUCE_SATURATION_ENABLED);
     let Q = (0, M.C)(),
         J = (0, C.qK)("RootThemeContextProvider"),
         ee = (0, C.k5)("RootThemeContextProvider"),
@@ -283,7 +283,7 @@ function x(e) {
         value: ea,
         children: (0, r.jsx)(I, {
             theme: h,
-            flags: Z,
+            flags: q,
             saturation: j,
             density: Q,
             children: (0, r.jsx)(P.fs, {
@@ -294,7 +294,7 @@ function x(e) {
                 fontScale: B,
                 fontScaleClass: V,
                 keyboardModeEnabled: H,
-                mouseMode: q,
+                mouseMode: Z,
                 saturation: j,
                 desaturateUserColors: W,
                 useForcedColors: Y,

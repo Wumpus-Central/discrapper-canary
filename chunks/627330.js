@@ -1,50 +1,50 @@
-n.d(t, { D: () => d });
-var r = n(477900),
-    a = n(503698),
-    l = n.n(a),
-    o = n(508770),
-    s = n(297264),
-    i = n(28863),
-    c = n(834730),
-    u = n(489387);
-function d(e) {
-    let { title: t, body: n, badge: a, className: o, textLink: d } = e,
-        h = d?.external ?? !0;
+l.d(e, { D: () => u });
+var r = l(477900),
+    i = l(503698),
+    a = l.n(i),
+    t = l(508770),
+    s = l(297264),
+    d = l(28863),
+    c = l(834730),
+    o = l(489387);
+function u(n) {
+    let { title: e, body: l, badge: i, className: t, textLink: u } = n,
+        m = u?.external ?? !0;
     return (0, r.jsxs)("div", {
-        className: l()(u.header, o),
+        className: a()(o.header, t),
         children: [
             (0, r.jsxs)("div", {
                 children: [
-                    (0, r.jsx)(f, { badge: a }),
-                    (0, r.jsx)(s.D, { variant: "heading-md/semibold", className: u.title, children: t }),
+                    (0, r.jsx)(h, { badge: i }),
+                    (0, r.jsx)(s.D, { variant: "heading-md/semibold", className: o.title, children: e }),
                 ],
             }),
-            (0, r.jsx)(p, { body: n }),
-            null != d &&
-                (0, r.jsx)(i.Anchor, {
-                    onClick: d.onClick,
-                    href: d.link,
-                    target: h && null != d.link ? "_blank" : void 0,
-                    rel: h && null != d.link ? "noopener noreferrer" : void 0,
-                    children: (0, r.jsx)(c.E, { variant: "text-sm/normal", className: u.footerLink, children: d.text }),
+            (0, r.jsx)(x, { body: l }),
+            null != u &&
+                (0, r.jsx)(d.Anchor, {
+                    onClick: u.onClick,
+                    href: u.link,
+                    target: m && null != u.link ? "_blank" : void 0,
+                    rel: m && null != u.link ? "noopener noreferrer" : void 0,
+                    children: (0, r.jsx)(c.E, { variant: "text-sm/normal", className: o.footerLink, children: u.text }),
                 }),
         ],
     });
 }
-function f(e) {
-    let { badge: t } = e;
-    if (null == t) return null;
-    let n = (0, o.U)(t);
-    return (0, r.jsx)("div", { className: u.badgeContainer, children: (0, r.jsx)(o.E, { variant: "brand", ...n }) });
+function h(n) {
+    let { badge: e } = n;
+    if (null == e) return null;
+    let l = (0, t.U)(e);
+    return (0, r.jsx)("div", { className: o.badgeContainer, children: (0, r.jsx)(t.E, { variant: "brand", ...l }) });
 }
-function p(e) {
-    let { body: t } = e;
-    if (null == t) return null;
-    let n = Array.isArray(t) ? t : [t];
-    return 0 === n.length || n.every((e) => null == e || "" === e)
+function x(n) {
+    let { body: e } = n;
+    if (null == e) return null;
+    let l = Array.isArray(e) ? e : [e];
+    return 0 === l.length || l.every((n) => null == n || "" === n)
         ? null
         : (0, r.jsx)("div", {
-              className: u.headerBody,
-              children: n.map((e, t) => (0, r.jsx)(c.E, { variant: "text-sm/normal", color: "none", children: e }, t)),
+              className: o.headerBody,
+              children: l.map((n, e) => (0, r.jsx)(c.E, { variant: "text-sm/normal", color: "none", children: n }, e)),
           });
 }

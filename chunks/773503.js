@@ -2,8 +2,8 @@ n.d(t, { A: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(435558),
-    s = n.n(a),
-    r = n(17928),
+    r = n.n(a),
+    s = n(17928),
     o = n(97808),
     d = n(778712),
     c = n(834730),
@@ -50,7 +50,7 @@ function v(e) {
 }
 let E = l.memo(function (e) {
     let { speakingUserIds: t, activeSoundboards: n, userIds: l, guildId: a, channelId: o } = e,
-        d = (0, r.cf)([f.default], () => s().pick(f.default.getUsers(), l));
+        d = (0, s.cf)([f.default], () => r().pick(f.default.getUsers(), l));
     return (0, i.jsxs)("div", {
         className: g.zr,
         children: [

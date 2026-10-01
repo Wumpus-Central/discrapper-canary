@@ -1,9 +1,9 @@
-n.d(t, { E: () => T, O: () => g });
+n.d(t, { E: () => C, O: () => g });
 var a = n(477900),
     r = n(582128),
-    l = n(643909),
-    i = n(503698),
-    u = n.n(i),
+    i = n(643909),
+    l = n(503698),
+    u = n.n(l),
     s = n(277984),
     o = n(942340),
     c = n(97352),
@@ -16,18 +16,18 @@ var a = n(477900),
     P = n(375708),
     S = n(969933);
 let E = { [y.WT.DAY]: "day", [y.WT.MONTH]: "month", [y.WT.YEAR]: "year" };
-function C(e) {
-    let { makePurchase: t, isSubmitting: n, setIsSubmitting: i } = e,
-        o = (0, l.useElements)(),
+function T(e) {
+    let { makePurchase: t, isSubmitting: n, setIsSubmitting: l } = e,
+        o = (0, i.useElements)(),
         y = (0, d.S)(),
-        [C, T] = r.useState(null),
+        [T, C] = r.useState(null),
         g = r.useRef(null),
         b = r.useRef(null),
         {
             checkoutInvoicePreview: _,
-            checkoutPaymentSources: f,
-            hasFiatCheckoutPaymentSources: M,
-            expressCheckoutSubmitting: R,
+            checkoutPaymentSources: M,
+            hasFiatCheckoutPaymentSources: R,
+            expressCheckoutSubmitting: f,
             setExpressCheckoutSubmitting: O,
         } = (0, p.t4)((e) => ({
             checkoutInvoicePreview: e.checkoutInvoicePreview,
@@ -36,15 +36,15 @@ function C(e) {
             expressCheckoutSubmitting: e.expressCheckoutSubmitting,
             setExpressCheckoutSubmitting: e.setExpressCheckoutSubmitting,
         })),
-        I = n || R,
+        I = n || f,
         k = r.useCallback(
             (e) => {
-                (i(e), O(e));
+                (l(e), O(e));
             },
-            [i, O],
+            [l, O],
         ),
         L = r.useCallback(() => {
-            (T(null), (g.current = null), k(!1));
+            (C(null), (g.current = null), k(!1));
         }, [k]),
         N = r.useCallback(
             async (e) => {
@@ -57,14 +57,14 @@ function C(e) {
             [t, k],
         ),
         Y = r.useCallback(() => {
-            if (null != C && null != f && null != _ && f.some((e) => e.id === C.id)) {
-                if (g.current !== C.id) ((g.current = C.id), b.current !== _.total ? k(!1) : N(C));
+            if (null != T && null != M && null != _ && M.some((e) => e.id === T.id)) {
+                if (g.current !== T.id) ((g.current = T.id), b.current !== _.total ? k(!1) : N(T));
             }
-        }, [C, f, _, N, k]),
+        }, [T, M, _, N, k]),
         x = r.useCallback(
             async (e, t) => {
                 let { stripe: n, elements: a, currentInvoiceTotal: r } = t;
-                function l(t) {
+                function i(t) {
                     (L(),
                         e.paymentFailed({
                             reason: "invalid_payment_data",
@@ -75,31 +75,31 @@ function C(e) {
                     (k(!0), (b.current = r));
                     let { error: e } = await a.submit();
                     if (null != e) {
-                        (console.error("elements.submit failed: ", e), l(e.message));
+                        (console.error("elements.submit failed: ", e), i(e.message));
                         return;
                     }
-                    let { paymentMethod: t, error: i } = await n.createPaymentMethod({ elements: a });
+                    let { paymentMethod: t, error: l } = await n.createPaymentMethod({ elements: a });
                     if (null == t) {
                         (console.error("createPaymentMethod failed to return payment method: ", {
                             paymentMethod: t,
-                            error: i,
+                            error: l,
                         }),
-                            l());
+                            i());
                         return;
                     }
                     let { billingAddressInfo: u } = (0, m.uK)(t),
                         o = t.id,
                         c = await (0, s.IC)({ stripePaymentMethodId: o, billingAddress: u });
-                    T(c);
+                    C(c);
                 } catch (e) {
-                    (console.error("handleExpressCheckoutConfirm failed: ", e), l());
+                    (console.error("handleExpressCheckoutConfirm failed: ", e), i());
                 }
             },
-            [k, T, L],
+            [k, C, L],
         );
     r.useEffect(() => {
-        null != C && Y();
-    }, [C, Y]);
+        null != T && Y();
+    }, [T, Y]);
     let v = r.useMemo(() => {
         if (null == _) return {};
         let e = (function (e) {
@@ -107,11 +107,11 @@ function C(e) {
             if (null == t) return null;
             let n = c.A.get(t.subscriptionPlanId);
             if (null == n) return null;
-            let { subtotal: a, tax: r, total: l, taxInclusive: i } = e,
+            let { subtotal: a, tax: r, total: i, taxInclusive: l } = e,
                 u = E[n.interval],
                 s = n.intervalCount,
                 o = (0, h.Mn)(n.id),
-                m = i ? l - r : a;
+                m = l ? i - r : a;
             return {
                 lineItems:
                     r > 0
@@ -138,14 +138,14 @@ function C(e) {
         let { lineItems: t, applePay: n } = e;
         return { billingAddressRequired: !0, lineItems: t, applePay: n };
     }, [_]);
-    return null == y || null == o || null == _ || (M && !R)
+    return null == y || null == o || null == _ || (R && !f)
         ? null
         : (0, a.jsxs)(a.Fragment, {
               children: [
                   I && (0, a.jsx)(A.Ig, {}),
                   (0, a.jsx)("div", {
                       className: u()({ [S.X]: I }),
-                      children: (0, a.jsx)(l.ExpressCheckoutElement, {
+                      children: (0, a.jsx)(i.ExpressCheckoutElement, {
                           onConfirm: (e) => x(e, { stripe: y, elements: o, currentInvoiceTotal: _.total }),
                           onCancel: L,
                           options: v,
@@ -154,8 +154,8 @@ function C(e) {
               ],
           });
 }
-function T(e) {
-    let { makePurchase: t, isSubmitting: n, setIsSubmitting: i } = e,
+function C(e) {
+    let { makePurchase: t, isSubmitting: n, setIsSubmitting: l } = e,
         u = (0, d.S)(),
         { elementsAppearance: s } = (0, o.E)(),
         c = (0, p.t4)((e) => e.checkoutInvoicePreview),
@@ -174,20 +174,20 @@ function T(e) {
         );
     return null == u || null == h
         ? null
-        : (0, a.jsx)(l.Elements, {
+        : (0, a.jsx)(i.Elements, {
               stripe: u,
               options: h,
-              children: (0, a.jsx)(C, { makePurchase: t, isSubmitting: n, setIsSubmitting: i }),
+              children: (0, a.jsx)(T, { makePurchase: t, isSubmitting: n, setIsSubmitting: l }),
           });
 }
 function g(e) {
     let { stripeExpressCheckoutComponent: t, primaryCheckoutButton: n } = e,
-        { hasFiatCheckoutPaymentSources: r, expressCheckoutSubmitting: l } = (0, p.t4)((e) => ({
+        { hasFiatCheckoutPaymentSources: r, expressCheckoutSubmitting: i } = (0, p.t4)((e) => ({
             hasFiatCheckoutPaymentSources: e.get("hasFiatCheckoutPaymentSources"),
             expressCheckoutSubmitting: e.expressCheckoutSubmitting,
         })),
-        i = l || !r;
+        l = i || !r;
     return (0, a.jsxs)(a.Fragment, {
-        children: [(0, a.jsx)("div", { className: u()(S.n, { [S.X]: !i }), children: t }), !i && n],
+        children: [(0, a.jsx)("div", { className: u()(S.n, { [S.X]: !l }), children: t }), !l && n],
     });
 }

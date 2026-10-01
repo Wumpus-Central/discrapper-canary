@@ -1,11 +1,11 @@
-i.d(o, { C: () => p, n: () => c });
-var e = i(210528),
-    s = i(723702),
-    t = i(272984);
-function p(n) {
-    let o = null;
-    ((0, s.isDesktop)() || (o = window.open("", "_blank")), null != o ? (o.location.href = n) : window.open(n));
+n.d(e, { C: () => o, n: () => a });
+var l = n(210528),
+    r = n(723702),
+    i = n(272984);
+function o(t) {
+    let e = null;
+    ((0, r.isDesktop)() || (e = window.open("", "_blank")), null != e ? (e.location.href = t) : window.open(t));
 }
-function c(n, o) {
-    p(e.A.isProtocolRegistered() ? t.RQ.PLAYER_OPEN(n, o) : t.RQ.WEB_OPEN(n, o));
+function a(t, e) {
+    o(l.A.isProtocolRegistered() ? i.RQ.PLAYER_OPEN(t, e) : i.RQ.WEB_OPEN(t, e));
 }

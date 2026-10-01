@@ -1,6 +1,6 @@
 e.exports = {
     hs: "text-sm/normal_e1364f",
-    Nr: "card_e1364f " + _(442248).H,
+    Nr: "card_e1364f " + t(442248).H,
     vS: "removeGameButton_e1364f",
     BU: "dragHandle_e1364f",
     Id: "isDragging_e1364f",

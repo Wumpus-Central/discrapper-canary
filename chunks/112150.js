@@ -2,12 +2,12 @@ n.d(t, { f: () => d });
 var i = n(582128),
     l = n(435582),
     s = n(283488),
-    a = n(735991),
-    r = n(486020),
+    r = n(735991),
+    a = n(486020),
     o = n(572211);
 function d(e) {
     let { bot: t } = e,
-        n = (0, a.Ag)(e),
+        n = (0, r.Ag)(e),
         { url: d } = (0, s.A)({ applicationId: n ? e.id : void 0, size: 600, names: ["embedded_cover"] });
     return i.useMemo(() => {
         let i,
@@ -15,11 +15,11 @@ function d(e) {
             c = o.u.BOT;
         if (null != t) {
             let { banner: e } = t;
-            ((i = (0, r.z)({ id: t.id, banner: e, size: 512, canAnimate: !1 })),
-                (0, r.VI)(e) && null == d && (s = (0, r.z)({ id: t.id, banner: e, size: 512, canAnimate: !0 })));
+            ((i = (0, a.z)({ id: t.id, banner: e, size: 512, canAnimate: !1 })),
+                (0, a.VI)(e) && null == d && (s = (0, a.z)({ id: t.id, banner: e, size: 512, canAnimate: !0 })));
         }
         if (n) {
-            let t = (0, a.Cx)(e);
+            let t = (0, r.Cx)(e);
             null != d && ((i = d), (c = o.u.ACTIVITY));
             let n = t?.activity_preview_video_asset_id;
             null != n && ((s = (0, l.A)(e.id, n)), (c = o.u.ACTIVITY));

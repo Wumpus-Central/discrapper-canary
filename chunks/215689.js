@@ -12,15 +12,15 @@ let h = function (e) {
     let { user: t, guildId: n, size: h, avatarDecorationOverride: m, onlyAnimateOnHoverOrFocus: g = !1 } = e,
         [f, p] = i.useState(!1),
         { canAnimate: x } = (0, o.T)(f, g),
-        A = (0, l.bG)([r.Ay], () => (null != n && null != t ? r.Ay.getMember(n, t.id) : null)),
-        E = (0, u.A)((0, s.lw)({ userValue: t?.avatarDecoration, guildValue: A?.avatarDecoration, guildId: n })),
+        E = (0, l.bG)([r.Ay], () => (null != n && null != t ? r.Ay.getMember(n, t.id) : null)),
+        A = (0, u.A)((0, s.lw)({ userValue: t?.avatarDecoration, guildValue: E?.avatarDecoration, guildId: n })),
         _ = (0, c.VU)(),
         j = i.useMemo(
             () =>
                 null != _ && "" !== _
                     ? _
-                    : (0, a.F_)({ avatarDecoration: void 0 !== m ? m : E, canAnimate: x, size: h }),
-            [_, m, E, x, h],
+                    : (0, a.F_)({ avatarDecoration: void 0 !== m ? m : A, canAnimate: x, size: h }),
+            [_, m, A, x, h],
         );
     return {
         avatarPlaceholderSrc: d,

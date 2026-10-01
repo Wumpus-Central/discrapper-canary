@@ -1,5 +1,6 @@
 !(function () {
     var t = function (e) {
+        "use strict";
         e = e || {};
         var t,
             r,
@@ -12,9 +13,9 @@
             c,
             u,
             h,
+            d,
             p,
             f,
-            d,
             m,
             g,
             b = {
@@ -29,14 +30,14 @@
                 dataUrl: !1,
                 win: window,
             };
-        (((f = {}).ff = "u" > typeof InstallTrigger),
-            (f.chrome = !!window.chrome),
-            (f.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
-            (f.ie = !1),
-            (f.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
-            (f.supported = f.chrome || f.ff || f.opera));
+        (((p = {}).ff = "u" > typeof InstallTrigger),
+            (p.chrome = !!window.chrome),
+            (p.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
+            (p.ie = !1),
+            (p.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
+            (p.supported = p.chrome || p.ff || p.opera));
         var y = [];
-        ((h = function () {}), (l = p = !1));
+        ((h = function () {}), (l = d = !1));
         var v = {};
         ((v.ready = function () {
             ((l = !0), v.reset(), h());
@@ -49,7 +50,7 @@
                     i.clearRect(0, 0, a, n),
                     i.drawImage(s, 0, 0, a, n),
                     x.setIcon(o),
-                    window.clearTimeout(d),
+                    window.clearTimeout(f),
                     window.clearTimeout(m));
             }),
             (v.start = function () {
@@ -65,7 +66,7 @@
                                     e in y[0].options && (t[e] = y[0].options[e]);
                                 },
                             ),
-                                S.run(
+                                R.run(
                                     y[0].options,
                                     function () {
                                         e();
@@ -74,7 +75,7 @@
                                 ));
                         };
                         c
-                            ? S.run(
+                            ? R.run(
                                   c.options,
                                   function () {
                                       r();
@@ -98,13 +99,13 @@
                 );
             };
         function M(e) {
-            if (e.paused || e.ended || p) return !1;
+            if (e.paused || e.ended || d) return !1;
             try {
                 (i.clearRect(0, 0, a, n), i.drawImage(e, 0, 0, a, n));
             } catch (e) {}
             ((m = setTimeout(function () {
                 M(e);
-            }, S.duration)),
+            }, R.duration)),
                 x.setIcon(o));
         }
         ((w.circle = function (e) {
@@ -175,7 +176,7 @@
             var t = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(e);
             return !!t && { r: parseInt(t[1], 16), g: parseInt(t[2], 16), b: parseInt(t[3], 16) };
         }
-        function R(e, t) {
+        function S(e, t) {
             var r,
                 n = {};
             for (r in e) n[r] = e[r];
@@ -214,10 +215,10 @@
                 else if (t.elementId) {
                     var a = g.getElementById(t.elementId);
                     (a.setAttribute("href", n), a.setAttribute("src", n));
-                } else if (f.ff || f.opera) {
+                } else if (p.ff || p.opera) {
                     var o = r;
                     ((r = g.createElement("link")),
-                        f.opera && r.setAttribute("rel", "icon"),
+                        p.opera && r.setAttribute("rel", "icon"),
                         r.setAttribute("rel", "icon"),
                         r.setAttribute("type", "image/png"),
                         g.getElementsByTagName("head")[0].appendChild(r),
@@ -225,10 +226,10 @@
                         o.parentNode && o.parentNode.removeChild(o));
                 } else r.setAttribute("href", n);
             }));
-        var S = {};
-        ((S.duration = 40),
-            (S.types = {}),
-            (S.types.fade = [
+        var R = {};
+        ((R.duration = 40),
+            (R.types = {}),
+            (R.types.fade = [
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0.1 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0.2 },
@@ -241,8 +242,8 @@
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0.9 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (S.types.none = [{ x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 }]),
-            (S.types.pop = [
+            (R.types.none = [{ x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 }]),
+            (R.types.pop = [
                 { x: 1, y: 1, w: 0, h: 0, o: 1 },
                 { x: 0.9, y: 0.9, w: 0.1, h: 0.1, o: 1 },
                 { x: 0.8, y: 0.8, w: 0.2, h: 0.2, o: 1 },
@@ -251,7 +252,7 @@
                 { x: 0.5, y: 0.5, w: 0.5, h: 0.5, o: 1 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (S.types.popFade = [
+            (R.types.popFade = [
                 { x: 0.75, y: 0.75, w: 0, h: 0, o: 0 },
                 { x: 0.65, y: 0.65, w: 0.1, h: 0.1, o: 0.2 },
                 { x: 0.6, y: 0.6, w: 0.2, h: 0.2, o: 0.4 },
@@ -260,7 +261,7 @@
                 { x: 0.45, y: 0.45, w: 0.5, h: 0.5, o: 0.9 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (S.types.slide = [
+            (R.types.slide = [
                 { x: 0.4, y: 1, w: 0.6, h: 0.6, o: 1 },
                 { x: 0.4, y: 0.9, w: 0.6, h: 0.6, o: 1 },
                 { x: 0.4, y: 0.9, w: 0.6, h: 0.6, o: 1 },
@@ -270,31 +271,31 @@
                 { x: 0.4, y: 0.5, w: 0.6, h: 0.6, o: 1 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (S.run = function (e, r, n, a) {
-                var i = S.types[g.hidden || g.msHidden || g.webkitHidden || g.mozHidden ? "none" : t.animation];
+            (R.run = function (e, r, n, a) {
+                var i = R.types[g.hidden || g.msHidden || g.webkitHidden || g.mozHidden ? "none" : t.animation];
                 ((a = !0 === n ? (void 0 !== a ? a : i.length - 1) : void 0 !== a ? a : 0),
                 (r = r || function () {}),
                 a < i.length && a >= 0)
-                    ? (w[t.type](R(e, i[a])),
-                      (d = setTimeout(function () {
-                          (n ? (a -= 1) : (a += 1), S.run(e, r, n, a));
-                      }, S.duration)),
+                    ? (w[t.type](S(e, i[a])),
+                      (f = setTimeout(function () {
+                          (n ? (a -= 1) : (a += 1), R.run(e, r, n, a));
+                      }, R.duration)),
                       x.setIcon(o))
                     : r();
             }),
-            ((t = R(b, e)).bgColor = C(t.bgColor)),
+            ((t = S(b, e)).bgColor = C(t.bgColor)),
             (t.textColor = C(t.textColor)),
             (t.position = t.position.toLowerCase()),
-            (t.animation = S.types["" + t.animation] ? t.animation : b.animation),
+            (t.animation = R.types["" + t.animation] ? t.animation : b.animation),
             (g = t.win.document));
         var E = t.position.indexOf("up") > -1,
             A = t.position.indexOf("left") > -1;
         if (E || A)
-            for (var T = 0; T < S.types["" + t.animation].length; T++) {
-                var P = S.types["" + t.animation][T];
-                (E && (P.y < 0.6 ? (P.y = P.y - 0.4) : (P.y = P.y - 2 * P.y + (1 - P.w))),
-                    A && (P.x < 0.6 ? (P.x = P.x - 0.4) : (P.x = P.x - 2 * P.x + (1 - P.h))),
-                    (S.types["" + t.animation][T] = P));
+            for (var T = 0; T < R.types["" + t.animation].length; T++) {
+                var k = R.types["" + t.animation][T];
+                (E && (k.y < 0.6 ? (k.y = k.y - 0.4) : (k.y = k.y - 2 * k.y + (1 - k.w))),
+                    A && (k.x < 0.6 ? (k.x = k.x - 0.4) : (k.x = k.x - 2 * k.x + (1 - k.h))),
+                    (R.types["" + t.animation][T] = k));
             }
         return (
             (t.type = w["" + t.type] ? t.type : b.type),
@@ -332,7 +333,7 @@
                                     var r = { type: "badge", options: { n: e } };
                                     if (
                                         ("animation" in t &&
-                                            S.types["" + t.animation] &&
+                                            R.types["" + t.animation] &&
                                             (r.options.animation = "" + t.animation),
                                         "type" in t && w["" + t.type] && (r.options.type = "" + t.type),
                                         ["bgColor", "textColor"].forEach(function (e) {
@@ -357,7 +358,7 @@
                     ((h = function () {
                         try {
                             if ("stop" === e) {
-                                ((p = !0), v.reset(), (p = !1));
+                                ((d = !0), v.reset(), (d = !1));
                                 return;
                             }
                             e.addEventListener(
@@ -400,7 +401,7 @@
                             (window.URL.createObjectURL = function (e) {
                                 return e;
                             })),
-                        f.supported)
+                        p.supported)
                     ) {
                         var t = !1;
                         ((navigator.getUserMedia =
@@ -412,7 +413,7 @@
                             (h = function () {
                                 try {
                                     if ("stop" === e) {
-                                        ((p = !0), v.reset(), (p = !1));
+                                        ((d = !0), v.reset(), (d = !1));
                                         return;
                                     }
                                     (((t = document.createElement("video")).width = a),
@@ -432,7 +433,7 @@
                     }
                 },
                 reset: v.reset,
-                browser: { supported: f.supported },
+                browser: { supported: p.supported },
             }
         );
     };

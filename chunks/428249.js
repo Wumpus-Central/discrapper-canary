@@ -1,17 +1,17 @@
-n.d(t, { J: () => r, d: () => s });
-var l = n(148494),
-    i = n(451909);
-function s(e) {
-    let { channel: t, content: n, entry: s, whenReady: r, doNotNotifyOnError: a, location: o } = e,
-        u = i.Ay.parse(t, n);
-    return l.A.sendMessage(t.id, u, r, {
-        contentInventoryEntry: { unverified_content: s },
+n.d(t, { J: () => i, d: () => o });
+var r = n(148494),
+    u = n(451909);
+function o(e) {
+    let { channel: t, content: n, entry: o, whenReady: i, doNotNotifyOnError: a, location: s } = e,
+        l = u.Ay.parse(t, n);
+    return r.A.sendMessage(t.id, l, i, {
+        contentInventoryEntry: { unverified_content: o },
         doNotNotifyOnError: a,
-        location: o,
+        location: s,
     });
 }
-function r(e) {
-    let { channel: t, content: n, whenReady: s, doNotNotifyOnError: r, location: a } = e,
-        o = i.Ay.parse(t, n);
-    return l.A.sendMessage(t.id, o, s, { doNotNotifyOnError: r, location: a });
+function i(e) {
+    let { channel: t, content: n, whenReady: o, doNotNotifyOnError: i, location: a } = e,
+        s = u.Ay.parse(t, n);
+    return r.A.sendMessage(t.id, s, o, { doNotNotifyOnError: i, location: a });
 }

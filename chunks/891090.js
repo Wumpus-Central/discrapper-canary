@@ -1,87 +1,87 @@
-n.d(t, { Dt: () => c, Fg: () => d, HA: () => m, Qz: () => f, nQ: () => h, p4: () => u, ry: () => p });
-var l = n(95561),
-    i = n(174459),
-    s = n(194004),
-    r = n(652215),
-    a = n(698279),
-    o = n(202541);
-function u(e) {
-    let { containerWidth: t, favoriteStickers: n, frequentlyUsedStickers: i, guildStickers: o, stickersTotal: u } = e;
-    l.Ay.trackWithMetadata(r.HAw.EXPRESSION_PICKER_OPENED, {
+i.d(t, { Dt: () => a, Fg: () => _, HA: () => o, Qz: () => E, nQ: () => f, p4: () => c, ry: () => p });
+var n = i(95561),
+    r = i(174459),
+    s = i(194004),
+    l = i(652215),
+    u = i(698279),
+    d = i(202541);
+function c(e) {
+    let { containerWidth: t, favoriteStickers: i, frequentlyUsedStickers: r, guildStickers: d, stickersTotal: c } = e;
+    n.Ay.trackWithMetadata(l.HAw.EXPRESSION_PICKER_OPENED, {
         width: t,
-        tab: a.kx.STICKER,
+        tab: u.kx.STICKER,
         badged: !1,
-        num_expressions_favorites: n.length,
-        num_animated_expressions_favorites: n.filter((e) => (0, s.Tw)(e.format_type)).length,
-        num_custom_expressions_favorites: n.filter((e) => (0, s.zN)(e.type)).length,
-        num_standard_expressions_favorites: n.filter((e) => !(0, s.zN)(e.type)).length,
-        num_expressions_frecent: i.length,
-        num_custom_expressions_frecent: i.filter((e) => (0, s.zN)(e.type)).length,
-        num_animated_expressions_frecent: i.filter((e) => (0, s.Tw)(e.format_type)).length,
-        num_standard_expressions_frecent: i.filter((e) => !(0, s.zN)(e.type)).length,
-        num_current_guild_expressions: o.length,
-        num_custom_expressions_total: u,
+        num_expressions_favorites: i.length,
+        num_animated_expressions_favorites: i.filter((e) => (0, s.Tw)(e.format_type)).length,
+        num_custom_expressions_favorites: i.filter((e) => (0, s.zN)(e.type)).length,
+        num_standard_expressions_favorites: i.filter((e) => !(0, s.zN)(e.type)).length,
+        num_expressions_frecent: r.length,
+        num_custom_expressions_frecent: r.filter((e) => (0, s.zN)(e.type)).length,
+        num_animated_expressions_frecent: r.filter((e) => (0, s.Tw)(e.format_type)).length,
+        num_standard_expressions_frecent: r.filter((e) => !(0, s.zN)(e.type)).length,
+        num_current_guild_expressions: d.length,
+        num_custom_expressions_total: c,
     });
 }
-function c(e) {
+function a(e) {
     let t,
-        { sticker: n, location: i } = e;
-    (n.type === s.NL.GUILD && (t = n.guild_id),
-        l.Ay.trackWithMetadata(r.HAw.EXPRESSION_FAVORITED, {
-            location: i,
-            expression_type: a.kx.STICKER,
-            expression_id: n.id,
-            expression_name: n.name,
+        { sticker: i, location: r } = e;
+    (i.type === s.NL.GUILD && (t = i.guild_id),
+        n.Ay.trackWithMetadata(l.HAw.EXPRESSION_FAVORITED, {
+            location: r,
+            expression_type: u.kx.STICKER,
+            expression_id: i.id,
+            expression_name: i.name,
             expression_guild_id: t,
-            is_animated: (0, s.Tw)(n.format_type),
-            is_custom: (0, s.zN)(n.type),
+            is_animated: (0, s.Tw)(i.format_type),
+            is_custom: (0, s.zN)(i.type),
         }));
 }
-function d() {
-    i.default.track(r.HAw.SEARCH_STARTED, { search_type: r.I4_.STICKER });
+function _() {
+    r.default.track(l.HAw.SEARCH_STARTED, { search_type: l.I4_.STICKER });
 }
-function m(e, t, n) {
-    l.Ay.trackWithMetadata(r.HAw.SEARCH_RESULT_VIEWED, {
-        search_type: r.I4_.STICKER,
+function o(e, t, i) {
+    n.Ay.trackWithMetadata(l.HAw.SEARCH_RESULT_VIEWED, {
+        search_type: l.I4_.STICKER,
         total_results: t,
         query: e,
-        is_suggestion: n,
+        is_suggestion: i,
     });
 }
-function h(e, t, n) {
-    let i,
-        { sticker: a } = e;
-    (a.type === s.NL.GUILD && (i = a.guild_id),
-        l.Ay.trackWithMetadata(r.HAw.SEARCH_RESULT_SELECTED, {
-            load_id: a.id,
-            search_type: r.I4_.STICKER,
+function f(e, t, i) {
+    let r,
+        { sticker: u } = e;
+    (u.type === s.NL.GUILD && (r = u.guild_id),
+        n.Ay.trackWithMetadata(l.HAw.SEARCH_RESULT_SELECTED, {
+            load_id: u.id,
+            search_type: l.I4_.STICKER,
             source_object: "Sticker Picker",
-            total_results: n,
-            expression_guild_id: i,
-            sticker_id: a.id,
+            total_results: i,
+            expression_guild_id: r,
+            sticker_id: u.id,
             query: t,
         }));
 }
 function p(e) {
     let t,
-        { sticker: n, category: i } = e;
-    (n.type === s.NL.GUILD && (t = n.guild_id),
-        l.Ay.trackWithMetadata(r.HAw.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
-            type: o.e.EMOJI_PICKER_STICKER_CLICKED,
-            expression_id: n.id,
-            expression_name: n.name,
-            expression_picker_section: i,
+        { sticker: i, category: r } = e;
+    (i.type === s.NL.GUILD && (t = i.guild_id),
+        n.Ay.trackWithMetadata(l.HAw.EXPRESSION_PICKER_EXPRESSION_SELECTED, {
+            type: d.e.EMOJI_PICKER_STICKER_CLICKED,
+            expression_id: i.id,
+            expression_name: i.name,
+            expression_picker_section: r,
             expression_guild_id: t,
-            is_animated: (0, s.Tw)(n.format_type),
-            is_custom: (0, s.zN)(n.type),
+            is_animated: (0, s.Tw)(i.format_type),
+            is_custom: (0, s.zN)(i.type),
         }));
 }
-function f(e) {
+function E(e) {
     null != e &&
         "" !== e &&
-        l.Ay.trackWithMetadata(r.HAw.SEARCH_RESULT_EMPTY, {
+        n.Ay.trackWithMetadata(l.HAw.SEARCH_RESULT_EMPTY, {
             query: e,
-            search_type: r.I4_.STICKER,
+            search_type: l.I4_.STICKER,
             source_object: "Sticker Picker",
         });
 }

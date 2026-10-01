@@ -1,20 +1,20 @@
-r.d(e, { T: () => l, q: () => a });
-var i = r(575593),
-    n = r(993408),
-    s = r(375708);
-function l(t) {
-    var e = t.name;
-    switch (t.tenantMetadata?.collectibles?.type) {
-        case i.R.AVATAR_DECORATION:
-            return s.intl.formatToPlainString(s.t.lvBzLi, { product: e });
-        case i.R.PROFILE_EFFECT:
-            return s.intl.formatToPlainString(s.t.eR7moP, { product: e });
-        case i.R.NAMEPLATE:
-            return s.intl.formatToPlainString(s.t.YFOwHj, { product: e });
+n.d(t, { T: () => s, q: () => r });
+var a = n(575593),
+    i = n(993408),
+    l = n(375708);
+function s(e) {
+    var t = e.name;
+    switch (e.tenantMetadata?.collectibles?.type) {
+        case a.R.AVATAR_DECORATION:
+            return l.intl.formatToPlainString(l.t.lvBzLi, { product: t });
+        case a.R.PROFILE_EFFECT:
+            return l.intl.formatToPlainString(l.t.eR7moP, { product: t });
+        case a.R.NAMEPLATE:
+            return l.intl.formatToPlainString(l.t.YFOwHj, { product: t });
         default:
-            return e;
+            return t;
     }
 }
-function a(t) {
-    return !(0, n.G0)(t) && t.type !== i.R.EXTERNAL_SKU;
+function r(e) {
+    return !(0, i.G0)(e) && e.type !== a.R.EXTERNAL_SKU;
 }

@@ -1,15 +1,15 @@
-t.d(n, { A: () => a });
-var l = t(477900);
-t(582128);
-var i = t(408278),
-    r = t(789645),
-    s = t(375708);
+n.d(t, { A: () => a });
+var i = n(477900);
+n(582128);
+var l = n(408278),
+    r = n(789645),
+    s = n(375708);
 function a(e) {
-    let { onClose: n } = e;
-    return (0, l.jsx)(i.K, {
+    let { onClose: t } = e;
+    return (0, i.jsx)(l.K, {
         "aria-label": s.intl.string(s.t.cpT0Cq),
         icon: r.P,
-        onClick: n,
+        onClick: t,
         variant: "secondary",
         size: "sm",
     });

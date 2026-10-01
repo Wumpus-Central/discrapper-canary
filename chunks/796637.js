@@ -16,8 +16,8 @@ var i = n(582128),
     f = n(945886),
     p = n(576705),
     T = n(573163),
-    m = n(309010),
-    g = n(543465),
+    g = n(309010),
+    m = n(543465),
     S = n(403362),
     N = n(181079),
     C = n(93055),
@@ -25,7 +25,7 @@ var i = n(582128),
     R = n(349828),
     L = n(281405),
     y = n(818348);
-let D = [l.Ay, N.A, o.A, d.Ay, u.A, _.A, h.A, I.A, p.A, T.Ay, m.Ay, g.Ay];
+let D = [l.Ay, N.A, o.A, d.Ay, u.A, _.A, h.A, I.A, p.A, T.Ay, g.Ay, m.Ay];
 function v(e) {
     let { limit: t, includeLoading: n } = e,
         i = N.A.getFavoriteChannels(),
@@ -87,10 +87,10 @@ function b() {
 function M(e) {
     let { withSuggestionsNotice: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = e ?? N.A.getFavoriteChannels(),
-        i = g.Ay.isGuildCollapsed(R.Vc),
-        r = m.Ay.getChannelId(),
+        i = m.Ay.isGuildCollapsed(R.Vc),
+        r = g.Ay.getChannelId(),
         l = I.A.getChannel(r),
-        o = m.Ay.getVoiceChannelId(),
+        o = g.Ay.getVoiceChannelId(),
         d = [],
         E = {};
     for (let e in n) {
@@ -117,8 +117,8 @@ function M(e) {
                             ? u.A.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id)
                             : u.A.getActiveJoinedUnreadThreadsForParent(e.guild_id, e.id)) ?? {},
                     I = (0, c.wF)(e, h, l, o, i),
-                    m = f.A.isCollapsed(e.id),
-                    S = e.isThread() ? _.A.isMuted(e.id) : g.Ay.isChannelMuted(e.guild_id, e.id),
+                    g = f.A.isCollapsed(e.id),
+                    S = e.isThread() ? _.A.isMuted(e.id) : m.Ay.isChannelMuted(e.guild_id, e.id),
                     N = {
                         id: e.id,
                         record: e,
@@ -126,10 +126,10 @@ function M(e) {
                         position: n[e.id].order,
                         threadIds: I,
                         threadCount: a().size(I),
-                        isCollapsed: m,
+                        isCollapsed: g,
                         isMuted: S,
                         isFirstVoiceChannel: !1,
-                        subtitle: (0, c.go)(e, m, !1),
+                        subtitle: (0, c.go)(e, g, !1),
                     };
                 return d || E || !a().isEmpty(h) || T.Ay.getMentionCount(e.id) > 0
                     ? N
@@ -162,7 +162,7 @@ function M(e) {
                     i = N.A.getCategoryRecord(t);
                 if (null == i) return null;
                 let r = E[t] ?? [],
-                    a = g.Ay.isChannelMuted(R.Vc, t),
+                    a = m.Ay.isChannelMuted(R.Vc, t),
                     s = h.A.isCollapsed(t),
                     l = null;
                 return {

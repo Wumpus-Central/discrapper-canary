@@ -1,20 +1,20 @@
-(n.d(t, { Ay: () => h, UD: () => d }), n(321073));
-var l = n(477900),
-    i = n(582128),
-    s = n(192308),
+(n.d(t, { Ay: () => f, UD: () => d }), n(321073));
+var i = n(477900),
+    s = n(582128),
+    l = n(192308),
     r = n(780777),
     a = n(946274),
     o = n(73621),
-    u = n(693591);
-async function c(e) {
+    c = n(693591);
+async function u(e) {
     try {
         let t = await new Promise((t, n) => {
                 if (null != e) {
-                    let l = new FileReader();
-                    ((l.onload = (e) => {
+                    let i = new FileReader();
+                    ((i.onload = (e) => {
                         "string" == typeof e.target?.result ? t(e.target.result) : n(Error("Failed to read file"));
                     }),
-                        l.readAsDataURL(e));
+                        i.readAsDataURL(e));
                 }
             }),
             n = new Image();
@@ -24,43 +24,43 @@ async function c(e) {
     }
 }
 async function d(e, t) {
-    var i;
+    var s;
     let r = [];
     for (let n = 0; n < e.length; n++) {
-        let l = e[n];
+        let i = e[n];
         try {
-            let { image: e, dataURI: n } = await c(l),
-                i = l.type === u.a.MP4 ? await t(n, l) : await t(n, l, e);
-            null != i && r.push({ type: i, filename: l.name });
+            let { image: e, dataURI: n } = await u(i),
+                s = i.type === c.a.MP4 ? await t(n, i) : await t(n, i, e);
+            null != s && r.push({ type: s, filename: i.name });
         } catch (e) {
-            r.push({ type: e, filename: l.name });
+            r.push({ type: e, filename: i.name });
         }
     }
     r.length > 0 &&
-        ((i = r),
-        (0, s.openModalLazy)(async () => {
+        ((s = r),
+        (0, l.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e("223685"), n.e("484981")]).then(n.bind(n, 940372));
-            return (t) => (0, l.jsx)(e, { errors: i, ...t });
+            return (t) => (0, i.jsx)(e, { errors: s, ...t });
         }));
 }
-let m = i.forwardRef((e, t) => {
+let m = s.forwardRef((e, t) => {
     let {
             onChange: o,
-            multiple: u = !0,
-            disabled: c,
+            multiple: c = !0,
+            disabled: u,
             className: m,
-            tabIndex: h = -1,
-            "aria-label": p,
-            filters: f,
+            tabIndex: f = -1,
+            "aria-label": E,
+            filters: I,
             setLoading: g,
-            title: x,
+            title: h,
         } = e,
-        A = i.useRef(null),
-        [C, E] = i.useState(!1);
-    async function I(e) {
-        (g?.(!0), await d(e, o), E(!0), g?.(!1));
+        A = s.useRef(null),
+        [_, p] = s.useState(!1);
+    async function N(e) {
+        (g?.(!0), await d(e, o), p(!0), g?.(!1));
     }
-    async function y(e) {
+    async function C(e) {
         if (
             (e.stopPropagation(),
             e.preventDefault(),
@@ -68,27 +68,27 @@ let m = i.forwardRef((e, t) => {
         )
             return;
         let t = e.currentTarget.files;
-        A.current = await (0, s.openModalLazy)(async () => {
+        A.current = await (0, l.openModalLazy)(async () => {
             let { default: e } = await Promise.all([n.e("886895"), n.e("817259")]).then(n.bind(n, 897126));
-            return (n) => (0, l.jsx)(e, { processFiles: () => I(t), ...n });
+            return (n) => (0, i.jsx)(e, { processFiles: () => N(t), ...n });
         });
     }
     return (
-        i.useEffect(() => {
-            C && null !== A.current && ((0, s.closeModal)(A.current), (A.current = null));
-        }, [C]),
-        (0, l.jsx)(r.A, {
+        s.useEffect(() => {
+            _ && null !== A.current && ((0, l.closeModal)(A.current), (A.current = null));
+        }, [_]),
+        (0, i.jsx)(r.A, {
             ref: t,
-            onChange: y,
-            filters: f ?? (0, a.gA)(),
-            multiple: u,
-            disabled: c,
+            onChange: C,
+            filters: I ?? (0, a.gA)(),
+            multiple: c,
+            disabled: u,
             className: m,
-            tabIndex: h,
-            "aria-label": p,
-            title: x,
+            tabIndex: f,
+            "aria-label": E,
+            title: h,
         })
     );
 });
 m.displayName = "ImageInputWithModals";
-let h = m;
+let f = m;

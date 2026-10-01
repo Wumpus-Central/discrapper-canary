@@ -1,5 +1,5 @@
-t.d(r, { x: () => i });
-var n = t(652215);
+l.d(n, { x: () => i });
+var t = l(652215);
 function i() {
-    return n.BEX.PROFILE;
+    return t.BEX.PROFILE;
 }

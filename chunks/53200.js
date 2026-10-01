@@ -1,4 +1,4 @@
-n.d(t, { Ap: () => s, E: () => a, LA: () => i });
+n.d(t, { Ap: () => u, E: () => a, LA: () => i });
 let r = null,
     l = null;
 function a() {
@@ -10,7 +10,7 @@ function a() {
 function i() {
     return r;
 }
-function s() {
+function u() {
     if (null != r) return r.isSupported();
     let e = window.ManagedMediaSource ?? window.MediaSource;
     return (

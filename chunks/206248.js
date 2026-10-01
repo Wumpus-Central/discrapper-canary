@@ -1,116 +1,116 @@
-t.d(n, { H: () => M });
-var a = t(477900),
-    l = t(582128),
-    i = t(941861),
-    r = t(844222),
-    d = t(460890),
-    s = t(978495),
-    _ = t(353795),
-    c = t(80687),
-    o = t(607470),
-    u = t(256905),
-    E = t(273875),
-    m = t(208756),
-    p = t(798618),
-    h = t(627330),
-    I = t(478542),
-    S = t(818348),
-    g = t(422411),
-    b = t(375708),
-    A = t(594024);
-function M(e) {
+l.d(a, { H: () => f });
+var t = l(477900),
+    n = l(582128),
+    r = l(941861),
+    s = l(844222),
+    i = l(460890),
+    c = l(978495),
+    u = l(353795),
+    o = l(80687),
+    d = l(607470),
+    g = l(256905),
+    h = l(273875),
+    p = l(208756),
+    x = l(798618),
+    b = l(627330),
+    v = l(478542),
+    y = l(818348),
+    C = l(422411),
+    j = l(375708),
+    m = l(594024);
+function f(e) {
     let {
-            title: n,
-            body: t,
-            assetUrl: M,
-            previewUrl: O = M,
-            disableMediaViewer: k = !1,
-            action: D,
-            caretConfig: C = { align: "center" },
-            badge: T,
-            textLink: y,
-            onWatchVideo: P,
-            onRequestClose: R,
-            popoverRef: f,
-            position: w,
-            ...N
+            title: a,
+            body: l,
+            assetUrl: f,
+            previewUrl: k = f,
+            disableMediaViewer: E = !1,
+            action: R,
+            caretConfig: w = { align: "center" },
+            badge: S,
+            textLink: _,
+            onWatchVideo: A,
+            onRequestClose: B,
+            popoverRef: L,
+            position: N,
+            ...P
         } = e,
-        { reducedMotion: v } = l.useContext(r.C),
-        x = (0, i.R)(),
-        V = (0, d.G9)().isWindowFocused?.() ?? x,
-        L = l.useRef(null),
-        j = (0, s.RJ)(O),
-        B = (0, s.gA)(O),
-        H = l.useCallback(
-            () => ({ type: "VIDEO", url: M, proxyUrl: M, alt: n, width: 1280, height: 720, className: A.$_ }),
-            [M, n],
+        { reducedMotion: T } = n.useContext(s.C),
+        I = (0, r.R)(),
+        D = (0, i.G9)().isWindowFocused?.() ?? I,
+        O = n.useRef(null),
+        U = (0, c.RJ)(k),
+        V = (0, c.gA)(k),
+        F = n.useCallback(
+            () => ({ type: "VIDEO", url: f, proxyUrl: f, alt: a, width: 1280, height: 720, className: m.$_ }),
+            [f, a],
         );
-    l.useEffect(() => {
-        null != L.current && (!v.enabled && V ? L.current?.play().catch(S.tE) : L.current?.pause());
-    }, [V, v.enabled]);
-    let W = l.useCallback(() => {
-            (null !== L.current && L.current.pause(), R?.());
-        }, [R]),
-        U = l.useCallback(() => {
-            (null !== L.current && L.current.pause(), R?.());
-        }, [R]),
-        G = l.useCallback(() => {
-            null !== L.current && L.current.pause();
-            let e = H();
-            ((0, u.R)({ items: [e], startingIndex: 0, location: "VideoPopover", shouldHideMediaOptions: !0 }),
-                R?.(),
-                P?.());
-        }, [H, P, R]),
-        z = (0, a.jsxs)(a.Fragment, {
+    n.useEffect(() => {
+        null != O.current && (!T.enabled && D ? O.current?.play().catch(y.tE) : O.current?.pause());
+    }, [D, T.enabled]);
+    let q = n.useCallback(() => {
+            (null !== O.current && O.current.pause(), B?.());
+        }, [B]),
+        z = n.useCallback(() => {
+            (null !== O.current && O.current.pause(), B?.());
+        }, [B]),
+        G = n.useCallback(() => {
+            null !== O.current && O.current.pause();
+            let e = F();
+            ((0, g.R)({ items: [e], startingIndex: 0, location: "VideoPopover", shouldHideMediaOptions: !0 }),
+                B?.(),
+                A?.());
+        }, [F, A, B]),
+        H = (0, t.jsxs)(t.Fragment, {
             children: [
-                j || B
-                    ? (0, a.jsx)(_.v, { type: "image", src: O })
-                    : (0, a.jsx)(o.A, {
-                          ref: L,
-                          src: O,
+                U || V
+                    ? (0, t.jsx)(u.v, { type: "image", src: k })
+                    : (0, t.jsx)(d.A, {
+                          ref: O,
+                          src: k,
                           width: 232,
                           height: 131,
-                          autoPlay: !v.enabled && V,
+                          autoPlay: !T.enabled && D,
                           muted: !0,
                           loop: !0,
                           playsInline: !0,
                           controls: !1,
                           preload: "metadata",
                       }),
-                !k &&
-                    (0, a.jsx)("div", {
-                        className: A.Rr,
-                        children: (0, a.jsx)(c.D, {
+                !E &&
+                    (0, t.jsx)("div", {
+                        className: m.Rr,
+                        children: (0, t.jsx)(o.D, {
                             playing: !1,
                             size: "sm",
-                            "aria-label": b.intl.string(g.default.YpT3kk),
+                            "aria-label": j.intl.string(C.default.YpT3kk),
                             onClick: G,
                         }),
                     }),
             ],
         }),
-        K = {
-            targetElementRef: N.targetElementRef,
-            shouldShow: N.shouldShow,
-            scrollBehavior: N.scrollBehavior,
-            position: w,
-            onRequestClose: W,
+        J = {
+            targetElementRef: P.targetElementRef,
+            shouldShow: P.shouldShow,
+            scrollBehavior: P.scrollBehavior,
+            position: N,
+            onRequestClose: q,
             hasVideo: !0,
-            caretConfig: C,
-            ...("edge" === N.alignmentStrategy
-                ? { alignmentStrategy: "edge", align: N.align }
+            caretConfig: w,
+            ...("edge" === P.alignmentStrategy
+                ? { alignmentStrategy: "edge", align: P.align }
                 : { alignmentStrategy: "trigger-center" }),
         };
-    return (0, a.jsx)(E.x, {
-        ...K,
-        children: (0, a.jsxs)("div", {
-            ref: f,
+    return (0, t.jsx)(h.x, {
+        ...J,
+        children: (0, t.jsxs)("div", {
+            ref: L,
             children: [
-                (0, a.jsx)(I.p, { onClick: U }),
-                (0, a.jsx)(p.F, {}),
-                (0, a.jsx)("div", { className: A.s, children: z }),
-                (0, a.jsx)(h.D, { title: n, body: t, badge: T, textLink: y }),
-                null != D ? (0, a.jsx)(m.Z, { actions: [D] }) : null,
+                (0, t.jsx)(v.p, { onClick: z }),
+                (0, t.jsx)(x.F, {}),
+                (0, t.jsx)("div", { className: m.s, children: H }),
+                (0, t.jsx)(b.D, { title: a, body: l, badge: S, textLink: _ }),
+                null != R ? (0, t.jsx)(p.Z, { actions: [R] }) : null,
             ],
         }),
     });
