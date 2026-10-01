@@ -1,4 +1,4 @@
-(l.r(t), l.d(t, { default: () => tU }));
+(l.r(t), l.d(t, { default: () => tP }));
 var n = l(477900),
     i = l(582128),
     s = l(562708),
@@ -11,102 +11,102 @@ var n = l(477900),
     m = l(363487);
 (l(321073), l(323874), l(14289), l(35956));
 var p = l(503698),
-    g = l.n(p),
-    x = l(192308),
+    x = l.n(p),
+    g = l(192308),
     f = l(104510),
     A = l(364522),
     h = l(297264),
-    E = l(834730),
-    I = l(942857),
+    I = l(834730),
+    E = l(942857),
     v = l(793574),
-    b = l(37537),
-    j = l(131607),
+    j = l(37537),
+    b = l(131607),
     _ = l(831617),
     S = l(289704),
-    y = l(821609),
-    w = l(612400),
-    C = l(661531);
-function N(e) {
+    w = l(821609),
+    y = l(612400),
+    N = l(661531);
+function C(e) {
     return e
-        ? { textColor: "text-default", iconColor: C.A.colors.TEXT_DEFAULT }
-        : { textColor: "text-muted", iconColor: C.A.colors.TEXT_MUTED };
+        ? { textColor: "text-default", iconColor: N.A.colors.TEXT_DEFAULT }
+        : { textColor: "text-muted", iconColor: N.A.colors.TEXT_MUTED };
 }
-var T = l(475669),
-    R = l(948134),
-    G = l(904629);
-function L(e) {
-    let t = (0, r.bG)([T.A], () => T.A.getStateForGuild(e));
+var G = l(475669),
+    T = l(948134),
+    k = l(904629);
+function P(e) {
+    let t = (0, r.bG)([G.A], () => G.A.getStateForGuild(e));
     return i.useMemo(() => {
         let e = Object.values(t?.entitlements ?? {});
-        return 0 === e.length ? [] : (0, G.k)(e);
+        return 0 === e.length ? [] : (0, k.k)(e);
     }, [t?.entitlements]);
 }
-var k = l(375708),
-    P = l(25525),
+var R = l(375708),
+    L = l(25525),
     D = l(144977),
     O = l(628049),
     U = l(568065),
-    V = l(394107),
-    B = l(929729),
+    B = l(394107),
+    V = l(929729),
     M = l(517826);
 function W(e) {
     let t,
         l,
         { guildId: s } = e,
         o = i.useRef(null),
-        { state: a, lowestGameServerCost: u } = (0, r.cf)([T.A], () => ({
-            state: T.A.getStateForGuild(s),
-            lowestGameServerCost: T.A.getLowestGameCostForGuild(s),
+        { state: a, lowestGameServerCost: u } = (0, r.cf)([G.A], () => ({
+            state: G.A.getStateForGuild(s),
+            lowestGameServerCost: G.A.getLowestGameCostForGuild(s),
         })),
         d =
-            ((t = (0, r.bG)([T.A], () => T.A.getStateForGuild(s)?.entitlements, [s])),
-            (l = L(s)),
+            ((t = (0, r.bG)([G.A], () => G.A.getStateForGuild(s)?.entitlements, [s])),
+            (l = P(s)),
             i.useMemo(() => {
                 if (0 !== Object.values(t ?? {}).length)
                     return l.length > 0
                         ? { type: "expiring", expiringAt: l[0].ends_at }
-                        : { type: "active", statusText: k.intl.string(P.default.FFLkmx) };
+                        : { type: "active", statusText: R.intl.string(L.default.FFLkmx) };
             }, [l, t])),
-        { gameName: c, gameName2: m } = (0, R.A)(),
-        { textColor: p } = N(d?.type === "active");
+        { gameName: c, gameName2: m } = (0, T.A)(),
+        { textColor: p } = C(d?.type === "active");
     return null == a
         ? null
-        : (0, n.jsxs)(w.NI, {
-              label: k.intl.string(V.default["B3OfL/"]),
+        : (0, n.jsxs)(y.NI, {
+              label: R.intl.string(B.default["B3OfL/"]),
               badge: U.ys[O.W5],
               isActive: d?.type === "active",
               isWarning: d?.type === "expiring",
               onClick: () => (0, D.A)({ guildId: s, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }),
               children: [
                   (0, n.jsx)("div", {
-                      className: g()(B.ZS, M.Sl),
+                      className: x()(V.ZS, M.Sl),
                       children: (0, n.jsx)(S.E, {
                           withReducedMotion: "halt",
                           eventTargetRef: o,
-                          className: B.Sl,
+                          className: V.Sl,
                           fit: "contain",
                           stateMachine: "SM_Main_Int",
                       }),
                   }),
-                  (0, n.jsx)(w.Ft, {
-                      title: k.intl.string(V.default["B3OfL/"]),
+                  (0, n.jsx)(y.Ft, {
+                      title: R.intl.string(B.default["B3OfL/"]),
                       textColor: p,
-                      footer: (0, n.jsx)(w.$L, { cost: u ?? 0, costDecorator: "+", status: d }),
-                      children: (0, n.jsx)(E.E, {
+                      footer: (0, n.jsx)(y.$L, { cost: u ?? 0, costDecorator: "+", status: d }),
+                      children: (0, n.jsx)(I.E, {
                           className: M.h_,
                           color: p,
                           variant: "text-sm/medium",
-                          children: k.intl.format(V.default["+UqyGU"], { gameName: c, gameName2: m }),
+                          children: R.intl.format(B.default["+UqyGU"], { gameName: c, gameName2: m }),
                       }),
                   }),
-                  (0, n.jsx)(w.kd, {
-                      children: (0, n.jsx)(y.$, {
+                  (0, n.jsx)(y.kd, {
+                      children: (0, n.jsx)(w.$, {
                           variant: "primary",
                           fullWidth: !0,
                           text:
                               Object.values(a.entitlements).length > 0
-                                  ? k.intl.string(V.default.PuvU5b)
-                                  : k.intl.string(V.default.b62EHM),
+                                  ? R.intl.string(B.default.PuvU5b)
+                                  : R.intl.string(B.default.b62EHM),
                           onClick: (e) => {
                               (e.stopPropagation(),
                                   (0, D.A)({ guildId: s, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }));
@@ -118,15 +118,15 @@ function W(e) {
 }
 var F = l(742589),
     K = l(645619),
-    z = l(512750),
-    $ = l(554146),
+    $ = l(512750),
+    z = l(554146),
     X = l(939981),
     J = l(456124),
     H = l(914732),
     Q = l(498480),
     Z = l(868652);
 l(667532);
-let q = { guildTagsBadgePacks: [z.tv, z.OJ, z.Ht, z.jF] },
+let q = { guildTagsBadgePacks: [$.tv, $.OJ, $.Ht, $.jF] },
     Y = Object.entries(q).reduce((e, t) => {
         let [l, n] = t;
         for (let t of n) e[t] = l;
@@ -156,14 +156,14 @@ function ec(e) {
                 componentType: et.C.GUILD_BOOST_TAB_BANNER,
                 componentId: t,
                 promotionId: l,
-                dismissibleContent: $.M.GUILD_BOOST_TAB_BANNER,
+                dismissibleContent: z.M.GUILD_BOOST_TAB_BANNER,
             }),
             (0, n.jsx)("div", {
-                className: g()(ed.X8, "theme-dark"),
+                className: x()(ed.X8, "theme-dark"),
                 children: (0, n.jsx)(el.K, {
                     variant: "icon-only",
                     size: "md",
-                    "aria-label": k.intl.string(k.t.WAI6xu),
+                    "aria-label": R.intl.string(R.t.WAI6xu),
                     onClick: s,
                     icon: en.P,
                 }),
@@ -183,11 +183,11 @@ function ec(e) {
                                     color: "currentColor",
                                     className: ed.y,
                                 }),
-                                (0, n.jsx)(E.E, { variant: "text-xs/semibold", color: "text-default", children: o }),
+                                (0, n.jsx)(I.E, { variant: "text-xs/semibold", color: "text-default", children: o }),
                             ],
                         }),
-                    (0, n.jsx)(E.E, { variant: "text-md/semibold", color: "text-default", children: i.header }),
-                    (0, n.jsxs)(E.E, {
+                    (0, n.jsx)(I.E, { variant: "text-md/semibold", color: "text-default", children: i.header }),
+                    (0, n.jsxs)(I.E, {
                         variant: "text-sm/medium",
                         color: "text-muted",
                         children: [
@@ -208,8 +208,8 @@ function ec(e) {
 }
 var em = l(182859),
     ep = l(652215);
-let eg = { page: ep.liQ.GUILD_POWERUPS_OVERVIEW, section: ep.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR, object: ep.ZSU.CARD };
-function ex(e) {
+let ex = { page: ep.liQ.GUILD_POWERUPS_OVERVIEW, section: ep.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR, object: ep.ZSU.CARD };
+function eg(e) {
     let { slot: t, guildId: l } = e,
         { content: i, variant: s } = t;
     if (null == i) return null;
@@ -225,7 +225,7 @@ function ex(e) {
             return (0, n.jsx)(em.A, {
                 guildId: l,
                 variant: s,
-                analyticsLocation: eg,
+                analyticsLocation: ex,
                 onDismiss: i.onDismiss ?? void 0,
             });
     }
@@ -233,143 +233,63 @@ function ex(e) {
 var ef = l(210273),
     eA = l(998418),
     eh = l(722523),
-    eE = l(172218),
     eI = l(294384),
-    ev = l(813847),
-    eb = l(43105),
-    ej = l(186111),
-    e_ = l(621466),
-    eS = l(49999);
-function ey(e) {
-    let { powerup: t, targetRef: l, isCardVisible: s } = e,
-        o = (0, r.bG)([ej.A], () => ej.A.hasLayers()),
-        a = (0, x.useHasAnyModalOpen)(),
-        u =
-            t.skuId === z.FB
-                ? {
-                      title: k.intl.string(P.default.YWo6VL),
-                      body: k.intl.string(P.default.gXVvKc),
-                      dismissibleContentType: $.M.VANITY_URL_POWERUP_EDUCATIONAL_POPOVER,
-                  }
-                : null,
-        d = [];
-    null == u || o || !s || a || d.push(u.dismissibleContentType);
-    let [c, m] = (0, j.kn)(d);
-    return (!(function (e) {
-        let { targetRef: t, onShouldClose: l, topThreshold: n = 40, bottomThreshold: s = 60, enabled: r = !0 } = e;
-        i.useEffect(() => {
-            if (!r || t?.current == null) return;
-            let e = null;
-            function i(i) {
-                if (t?.current == null || !(0, e_.vq)(i.target, HTMLElement)) return;
-                let r = i.target;
-                if (!r.contains(t.current)) return;
-                let o = r.scrollTop;
-                if (null === e) {
-                    e = o;
-                    return;
-                }
-                let a = o - e,
-                    u = Math.abs(a);
-                ((a < 0 && u > n) || (a > 0 && u > s)) && l();
-            }
-            return (
-                document.addEventListener("scroll", i, { passive: !0, capture: !0 }),
-                () => {
-                    document.removeEventListener("scroll", i, { capture: !0 });
-                }
-            );
-        }, [r, t, l, n, s]);
-    })({
-        targetRef: l,
-        onShouldClose: i.useCallback(() => {
-            m(eS.i.INDIRECT_ACTION);
-        }, [m]),
-        enabled: null != c,
-    }),
-    null == u || null == c)
-        ? null
-        : (0, n.jsx)(eb.A, {
-              targetElementRef: l,
-              shouldShow: !0,
-              position: "right",
-              align: "top",
-              size: "sm",
-              caretConfig: { align: "start" },
-              title: u.title,
-              body: u.body,
-              onRequestClose: () => {
-                  m(eS.i.USER_DISMISS);
-              },
-          });
-}
-var ew = l(224331);
-function eC(e) {
+    eE = l(813847),
+    ev = l(224331);
+function ej(e) {
     let { guildId: t, powerup: l, className: i } = e,
         s = (0, eA.Ay)(t, l),
         r = s.type !== U.b_.LEVEL_ACTIVATED,
         o = (0, eI.Ay)(t, l, "GuildPowerupCardBodyFooter"),
-        a = (0, ev.e)(l, s, o);
-    return (0, n.jsx)(w.$L, { status: a, cost: r ? l.cost : void 0, className: i });
+        a = (0, eE.e)(l, s, o);
+    return (0, n.jsx)(y.$L, { status: a, cost: r ? l.cost : void 0, className: i });
 }
-function eN(e) {
-    let { guildId: t, powerup: l, badge: s, className: r, onHover: o, children: a } = e,
-        u = (0, m.A)(t),
-        d = (0, eA.Ay)(t, l),
-        c = d.type !== U.b_.INACTIVE,
-        p = d.sourceEntitlement?.ends_at != null,
-        g = (0, eI.Ay)(t, l, "GuildPowerupCard"),
-        x = i.useRef(null),
-        f = (0, ew.A)(t, l),
-        [A, h] = i.useState(!1),
-        E = (0, eE.K)(h, 1);
-    return (0, n.jsxs)(n.Fragment, {
-        children: [
-            (0, n.jsx)(w.NI, {
-                label: l.title,
-                isActive: c,
-                isWarning: p,
-                badge: s,
-                canRollback: g,
-                onClick: f,
-                onMouseOver: () => o?.(!0),
-                onMouseLeave: () => o?.(!1),
-                className: r,
-                ref: (e) => {
-                    ((x.current = e), (E.current = e));
-                },
-                children: a,
-            }),
-            !g && u && (0, n.jsx)(ey, { powerup: l, targetRef: x, isCardVisible: A }),
-        ],
+function eb(e) {
+    let { guildId: t, powerup: l, badge: i, className: s, onHover: r, children: o } = e,
+        a = (0, eA.Ay)(t, l),
+        u = a.type !== U.b_.INACTIVE,
+        d = a.sourceEntitlement?.ends_at != null,
+        c = (0, eI.Ay)(t, l, "GuildPowerupCard"),
+        m = (0, ev.A)(t, l);
+    return (0, n.jsx)(y.NI, {
+        label: l.title,
+        isActive: u,
+        isWarning: d,
+        badge: i,
+        canRollback: c,
+        onClick: m,
+        onMouseOver: () => r?.(!0),
+        onMouseLeave: () => r?.(!1),
+        className: s,
+        children: o,
     });
 }
-var eT = l(867060),
-    eR = l(508155),
-    eG = l(695578);
-function eL(e) {
+var e_ = l(867060),
+    eS = l(508155),
+    ew = l(695578);
+function ey(e) {
     let t,
         { active: l, nextActive: i, position: s } = e;
     return (
         (t = l && !1 !== i ? U.z0.FULL : l && !1 === i ? U.z0.HALF : U.z0.NONE),
         (0, n.jsxs)("div", {
-            className: eG.progressContainer,
+            className: ew.progressContainer,
             children: [
-                (0, n.jsx)("div", { className: g()(eG.progress, eG[s], eG[t]) }),
+                (0, n.jsx)("div", { className: x()(ew.progress, ew[s], ew[t]) }),
                 (0, n.jsx)("div", {
-                    className: g()(eG.boostContainer, M.JD, { [eG.boostContainerActive]: l, [M.vu]: l }),
-                    children: (0, n.jsx)(f._, { size: "sm", color: C.A.colors.ICON_STRONG }),
+                    className: x()(ew.boostContainer, M.JD, { [ew.boostContainerActive]: l, [M.vu]: l }),
+                    children: (0, n.jsx)(f._, { size: "sm", color: N.A.colors.ICON_STRONG }),
                 }),
             ],
         })
     );
 }
-function ek(e) {
+function eN(e) {
     let { isActive: t, index: l } = e,
-        { textColor: s, iconColor: r } = N(t),
-        o = (0, b.c)("GuildPowerupLevelBody"),
+        { textColor: s, iconColor: r } = C(t),
+        o = (0, j.c)("GuildPowerupLevelBody"),
         a = i.useMemo(() => {
-            let e = eR.t[l];
+            let e = eS.t[l];
             if (null == e) return [];
             let t = e.tier === ep.TVA.TIER_3 ? e.perks.slice(0, -1) : e.perks;
             return t?.map((e, t) => {
@@ -377,11 +297,11 @@ function ek(e) {
                 return (0, n.jsxs)(
                     "div",
                     {
-                        className: eG.perkRow,
+                        className: ew.perkRow,
                         children: [
                             (0, n.jsx)(i, { color: r, size: "sm" }),
-                            (0, n.jsx)(E.E, {
-                                className: eG.perkText,
+                            (0, n.jsx)(I.E, {
+                                className: ew.perkText,
                                 color: s,
                                 variant: o ? "text-sm/normal" : "text-sm/medium",
                                 children: e.getCopy(),
@@ -393,21 +313,21 @@ function ek(e) {
             });
         }, [l, r, o, s]);
     return (0, n.jsxs)("div", {
-        className: eG.perkRowContainer,
+        className: ew.perkRowContainer,
         children: [
             a,
             (0, n.jsx)("div", {
-                className: eG.perkRow,
-                children: (0, n.jsx)(E.E, {
+                className: ew.perkRow,
+                children: (0, n.jsx)(I.E, {
                     color: s,
                     variant: o ? "text-sm/normal" : "text-sm/medium",
-                    children: k.intl.string(P.default.nIj3LZ),
+                    children: R.intl.string(L.default.nIj3LZ),
                 }),
             }),
         ],
     });
 }
-function eP(e) {
+function eC(e) {
     let t,
         { guildId: l, index: s, powerup: r, nextPowerup: o } = e,
         a = (0, eA.Ay)(l, r),
@@ -415,36 +335,36 @@ function eP(e) {
         d = a.type !== U.b_.INACTIVE,
         c = u.type !== U.b_.INACTIVE,
         m = a.type === U.b_.TIER_OVERRIDE_ACTIVATED,
-        [p, g] = i.useState(void 0);
-    ((0, eT.A)(p), (t = 0 === s ? U.At.START : null == o ? U.At.END : U.At.MIDDLE));
-    let { textColor: x } = N(d);
-    return (0, n.jsxs)(eN, {
+        [p, x] = i.useState(void 0);
+    ((0, e_.A)(p), (t = 0 === s ? U.At.START : null == o ? U.At.END : U.At.MIDDLE));
+    let { textColor: g } = C(d);
+    return (0, n.jsxs)(eb, {
         guildId: l,
         powerup: r,
-        className: eG.card,
+        className: ew.card,
         children: [
-            (0, n.jsx)(eL, { position: t, active: d, nextActive: null != o ? c : void 0 }),
-            (0, n.jsx)(w.Ft, {
+            (0, n.jsx)(ey, { position: t, active: d, nextActive: null != o ? c : void 0 }),
+            (0, n.jsx)(y.Ft, {
                 title: r.title,
-                textColor: x,
-                footer: !m && (0, n.jsx)(eC, { className: eG.footer, guildId: l, powerup: r }),
-                children: (0, n.jsx)(ek, { isActive: d, index: s }),
+                textColor: g,
+                footer: !m && (0, n.jsx)(ej, { className: ew.footer, guildId: l, powerup: r }),
+                children: (0, n.jsx)(eN, { isActive: d, index: s }),
             }),
-            !m && (0, n.jsx)(w.kd, { children: (0, n.jsx)(eh.Ay, { guildId: l, powerup: r, onError: g }) }),
+            !m && (0, n.jsx)(y.kd, { children: (0, n.jsx)(eh.Ay, { guildId: l, powerup: r, onError: x }) }),
         ],
     });
 }
-var eD = l(866665),
-    eO = l(775602),
-    eU = l(468689),
-    eV = l(685073),
-    eB = l(915667);
-function eM(e, t) {
+var eG = l(866665),
+    eT = l(775602),
+    ek = l(468689),
+    eP = l(685073),
+    eR = l(915667);
+function eL(e, t) {
     let s = (0, m.A)(t) ?? !1,
         o = (0, r.bG)([K.A], () => K.A.getStateForGuild(t)?.allPowerups),
         a = (0, r.bG)([c.A], () => {
             let e = c.A.getGuild(t);
-            return null != e && (0, eV.Rg)(e);
+            return null != e && (0, eP.Rg)(e);
         });
     return i.useMemo(() => {
         let i = {};
@@ -453,20 +373,20 @@ function eM(e, t) {
                 "guildTagsBadgePacks" === r
                     ? (function (e) {
                           let { guildId: t, canUseBoosts: i, allPowerups: s, hasServerTags: r } = e,
-                              o = k.intl.string(P.default.KC9HRW),
-                              a = k.intl.string(P.default.GJiSmP),
-                              u = s?.[z.SL],
-                              d = k.intl.string(P.default["/egwJA"]),
-                              c = r ? void 0 : k.intl.string(P.default.W6Vwn3),
-                              m = r ? void 0 : k.intl.string(P.default.lvk1Gc),
-                              p = r ? k.intl.string(P.default["9CfkLO"]) : k.intl.string(k.t["+7XY31"]),
-                              g = r ? "secondary" : "expressive",
+                              o = R.intl.string(L.default.KC9HRW),
+                              a = R.intl.string(L.default.GJiSmP),
+                              u = s?.[$.SL],
+                              d = R.intl.string(L.default["/egwJA"]),
+                              c = r ? void 0 : R.intl.string(L.default.W6Vwn3),
+                              m = r ? void 0 : R.intl.string(L.default.lvk1Gc),
+                              p = r ? R.intl.string(L.default["9CfkLO"]) : R.intl.string(R.t["+7XY31"]),
+                              x = r ? "secondary" : "expressive",
                               A = i
                                   ? () => {
                                         (r
-                                            ? eU.default.open(t, ep.BEX.TAG, ep.JJy.GUILD_POWERUPS_OVERVIEW_CARD)
-                                            : null != u && (0, eB.A)(t, u),
-                                            (0, x.closeAllModals)());
+                                            ? ek.default.open(t, ep.BEX.TAG, ep.JJy.GUILD_POWERUPS_OVERVIEW_CARD)
+                                            : null != u && (0, eR.A)(t, u),
+                                            (0, g.closeAllModals)());
                                     }
                                   : void 0;
                           return {
@@ -474,7 +394,7 @@ function eM(e, t) {
                               description: a,
                               openModal: function (e) {
                                   let s = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-                                  (0, x.openModalLazy)(
+                                  (0, g.openModalLazy)(
                                       async () => {
                                           let { default: s } = await Promise.all([l.e("991051"), l.e("875295")]).then(
                                               l.bind(l, 289634),
@@ -483,16 +403,16 @@ function eM(e, t) {
                                               (0, n.jsx)(s, {
                                                   guildId: t,
                                                   title: o,
-                                                  description: k.intl.string(P.default.BBRFRd),
+                                                  description: R.intl.string(L.default.BBRFRd),
                                                   powerups: e,
                                                   forceStaticImages: !0,
                                                   footerInfoText: m,
                                                   footerAction:
                                                       i && null != A && null != p
                                                           ? {
-                                                                variant: g,
+                                                                variant: x,
                                                                 text: p,
-                                                                icon: "expressive" === g ? f._ : void 0,
+                                                                icon: "expressive" === x ? f._ : void 0,
                                                                 onClick: A,
                                                             }
                                                           : void 0,
@@ -519,12 +439,12 @@ function eM(e, t) {
         return i;
     }, [e, t, s, o, a]);
 }
-var eW = l(625361);
-function eF(e) {
+var eD = l(625361);
+function eO(e) {
     let { guildId: t, group: l, powerups: s } = e,
         [o, a] = i.useState(!1),
-        u = (0, r.bG)([eO.Ay], () => eO.Ay.useReducedMotion),
-        d = eM([l], t)[l],
+        u = (0, r.bG)([eT.Ay], () => eT.Ay.useReducedMotion),
+        d = eL([l], t)[l],
         c = !u && o ? d?.image?.animatedUrl : d?.image?.staticUrl,
         m = (function (e) {
             let t,
@@ -542,7 +462,7 @@ function eF(e) {
             );
             null != r
                 ? (t = { type: "expiring", expiringAt: r })
-                : s && (t = { type: "active", statusText: k.intl.string(P.default.FFLkmx) });
+                : s && (t = { type: "active", statusText: R.intl.string(L.default.FFLkmx) });
             let o = i.reduce((e, t) => {
                     let { type: l, powerup: n } = t;
                     return l === U.b_.POWERUP_ACTIVATED ? e + n.cost : e;
@@ -567,73 +487,74 @@ function eF(e) {
                 totalCost: u,
             };
         })({ guildId: t, powerups: s }),
-        { textColor: p } = N(m?.isActive ?? !1),
-        g = (0, b.c)("GuildPowerupMultiPerkCard");
+        { textColor: p } = C(m?.isActive ?? !1),
+        x = (0, j.c)("GuildPowerupMultiPerkCard");
     if (null == m || null == d) return null;
-    let { status: x, cost: f, costDecorator: A } = m;
-    return (0, n.jsxs)(w.NI, {
+    let { status: g, cost: f, costDecorator: A } = m;
+    return (0, n.jsxs)(y.NI, {
         label: d.title,
-        isActive: x?.type === "active",
-        isWarning: x?.type === "expiring",
+        isActive: g?.type === "active",
+        isWarning: g?.type === "expiring",
         badge: d.badge,
         onClick: () => d.openModal(s),
         onMouseOver: () => a(!0),
         onMouseLeave: () => a(!1),
         children: [
-            (0, n.jsx)("img", { alt: "", src: c, className: eW.S }),
-            (0, n.jsx)(w.Ft, {
+            (0, n.jsx)("img", { alt: "", src: c, className: eD.S }),
+            (0, n.jsx)(y.Ft, {
                 title: d.title,
                 textColor: p,
-                footer: (0, n.jsx)(w.$L, { status: x, cost: f, costDecorator: A }),
-                children: (0, n.jsx)(E.E, {
-                    className: eW.h,
+                footer: (0, n.jsx)(y.$L, { status: g, cost: f, costDecorator: A }),
+                children: (0, n.jsx)(I.E, {
+                    className: eD.h,
                     color: p,
-                    variant: g ? "text-sm/normal" : "text-sm/medium",
+                    variant: x ? "text-sm/normal" : "text-sm/medium",
                     children: d.description,
                 }),
             }),
-            (0, n.jsx)(w.kd, {
+            (0, n.jsx)(y.kd, {
                 children:
                     d?.viewCtaTooltip != null
-                        ? (0, n.jsx)(eD.m, {
+                        ? (0, n.jsx)(eG.m, {
                               asContainer: !0,
                               text: d.viewCtaTooltip,
                               delay: 100,
-                              children: (0, n.jsx)(y.$, { text: d.viewCta, fullWidth: !0 }),
+                              children: (0, n.jsx)(w.$, { text: d.viewCta, fullWidth: !0 }),
                           })
-                        : (0, n.jsx)(y.$, { text: d.viewCta, fullWidth: !0 }),
+                        : (0, n.jsx)(w.$, { text: d.viewCta, fullWidth: !0 }),
             }),
         ],
     });
 }
-var eK = l(403362),
-    ez = l(639060),
-    e$ = l(425138);
-function eX(e) {
+var eU = l(403362),
+    eB = l(639060),
+    eV = l(49999),
+    eM = l(425138);
+function eW(e) {
     let { markAsDismissed: t } = e,
-        l = (0, b.c)("GuildPowerupInfoCard");
+        l = (0, j.c)("GuildPowerupInfoCard");
     return (0, n.jsxs)("div", {
-        className: e$.kL,
+        className: eM.kL,
         children: [
-            (0, n.jsx)("img", { alt: "", className: e$.Sl, src: "/assets/73b70c7aab95c776.svg" }),
-            (0, n.jsx)(E.E, {
+            (0, n.jsx)("img", { alt: "", className: eM.Sl, src: "/assets/73b70c7aab95c776.svg" }),
+            (0, n.jsx)(I.E, {
                 color: "text-overlay-light",
                 variant: "text-md/semibold",
-                children: k.intl.string(P.default.diMhWc),
+                children: R.intl.string(L.default.diMhWc),
             }),
-            (0, n.jsx)(E.E, {
+            (0, n.jsx)(I.E, {
                 color: "text-overlay-light",
                 variant: l ? "text-sm/normal" : "text-sm/medium",
-                children: k.intl.string(P.default.pycxTr),
+                children: R.intl.string(L.default.pycxTr),
             }),
             (0, n.jsx)("div", {
-                className: e$.VN,
+                className: eM.VN,
                 children: (0, n.jsx)(el.K, {
                     variant: "icon-only",
                     size: "md",
-                    "aria-label": k.intl.string(k.t.cpT0Cq),
+                    "aria-label": R.intl.string(R.t.cpT0Cq),
                     onClick: () => {
-                        t(eS.i.USER_DISMISS);
+                        t(eV.i.USER_DISMISS);
                     },
                     icon: en.P,
                 }),
@@ -641,45 +562,45 @@ function eX(e) {
         ],
     });
 }
-var eJ = l(972213),
-    eH = l(695366),
-    eQ = l(168691);
-function eZ(e) {
+var eF = l(972213),
+    eK = l(695366),
+    e$ = l(168691);
+function ez(e) {
     let { notificationConfig: t, markAsDismissed: l } = e,
-        i = (0, b.c)("GuildPowerupRollbackNotification");
+        i = (0, j.c)("GuildPowerupRollbackNotification");
     return (0, n.jsxs)("div", {
-        className: eQ.kL,
+        className: e$.kL,
         children: [
             (0, n.jsx)("div", {
-                className: eQ.VN,
+                className: e$.VN,
                 children: (0, n.jsx)(el.K, {
                     variant: "icon-only",
                     size: "md",
-                    "aria-label": k.intl.string(k.t.cpT0Cq),
+                    "aria-label": R.intl.string(R.t.cpT0Cq),
                     onClick: () => {
-                        l(eS.i.USER_DISMISS);
+                        l(eV.i.USER_DISMISS);
                     },
-                    icon: eJ.XLargeIcon,
+                    icon: eF.XLargeIcon,
                 }),
             }),
-            (0, n.jsx)(eH.E, { color: C.A.colors.TEXT_FEEDBACK_WARNING, className: eQ.Kk }),
-            (0, n.jsx)(E.E, { variant: "text-md/semibold", color: "text-feedback-warning", children: t.title }),
-            (0, n.jsx)(E.E, { variant: i ? "text-sm/normal" : "text-sm/medium", children: t.description }),
+            (0, n.jsx)(eK.E, { color: N.A.colors.TEXT_FEEDBACK_WARNING, className: e$.Kk }),
+            (0, n.jsx)(I.E, { variant: "text-md/semibold", color: "text-feedback-warning", children: t.title }),
+            (0, n.jsx)(I.E, { variant: i ? "text-sm/normal" : "text-sm/medium", children: t.description }),
         ],
     });
 }
-var eq = l(859241),
-    eY = l(864310),
-    e0 = l(620019);
-function e1(e) {
+var eX = l(859241),
+    eJ = l(864310),
+    eH = l(620019);
+function eQ(e) {
     let { guildId: t, powerupNames: l, warnings: s } = e,
         {
             shouldShow: o,
             title: a,
             description: u,
         } = (function (e, t) {
-            let { spent: l } = (0, eY.A)(e),
-                n = (0, r.bG)([eq.A], () => eq.A.getAppliedGuildBoostsForGuild(e), [e]),
+            let { spent: l } = (0, eJ.A)(e),
+                n = (0, r.bG)([eX.A], () => eX.A.getAppliedGuildBoostsForGuild(e), [e]),
                 s = l - i.useMemo(() => n?.filter?.((e) => !e.ended && null == e.endsAt)?.length ?? 0, [n]);
             return i.useMemo(
                 () =>
@@ -687,8 +608,8 @@ function e1(e) {
                         ? { shouldShow: !1, title: "", description: "", requiredBoostCount: 0 }
                         : {
                               shouldShow: !0,
-                              title: k.intl.string(P.default.n5hQhc),
-                              description: k.intl.formatToPlainString(P.default.iAaAiG, {
+                              title: R.intl.string(L.default.n5hQhc),
+                              description: R.intl.formatToPlainString(L.default.iAaAiG, {
                                   boostCount: s,
                                   perksString: t.join(", "),
                               }),
@@ -697,24 +618,24 @@ function e1(e) {
                 [s, t],
             );
         })(t, l),
-        d = (0, b.c)("GuildPowerupsWarning");
+        d = (0, j.c)("GuildPowerupsWarning");
     return o
         ? (0, n.jsxs)("div", {
-              className: e0.kL,
+              className: eH.kL,
               children: [
-                  (0, n.jsx)(eH.E, { color: C.A.colors.TEXT_FEEDBACK_WARNING, className: e0.Kk }),
-                  (0, n.jsx)(E.E, { variant: "text-md/semibold", color: "text-feedback-warning", children: a }),
-                  (0, n.jsxs)(E.E, {
+                  (0, n.jsx)(eK.E, { color: N.A.colors.TEXT_FEEDBACK_WARNING, className: eH.Kk }),
+                  (0, n.jsx)(I.E, { variant: "text-md/semibold", color: "text-feedback-warning", children: a }),
+                  (0, n.jsxs)(I.E, {
                       variant: d ? "text-sm/normal" : "text-sm/medium",
                       children: [
                           u,
                           s?.map((e, t) =>
                               (0, n.jsx)(
-                                  E.E,
+                                  I.E,
                                   {
                                       variant: d ? "text-sm/normal" : "text-sm/medium",
                                       color: "text-feedback-warning",
-                                      className: e0.$e,
+                                      className: eH.$e,
                                       children: e,
                                   },
                                   `warning-${t}`,
@@ -726,22 +647,22 @@ function e1(e) {
           })
         : null;
 }
-var e8 = l(826673),
-    e6 = l(549996),
-    e9 = l(412260);
-function e5(e) {
+var eZ = l(826673),
+    eq = l(549996),
+    eY = l(412260);
+function e0(e) {
     let t = (function () {
-            let e = (0, e6.c)(et.C.GUILD_BOOST_TAB_BANNER),
+            let e = (0, eq.c)(et.C.GUILD_BOOST_TAB_BANNER),
                 t =
                     null != e && "guildBoostTabBanner" === e.properties.properties.oneofKind
                         ? e.properties.properties.guildBoostTabBanner
                         : null,
-                [l, n] = (0, j.Cc)(null != t ? $.M.GUILD_BOOST_TAB_BANNER : null, e?.promotionId ?? "", void 0, !0),
+                [l, n] = (0, b.Cc)(null != t ? z.M.GUILD_BOOST_TAB_BANNER : null, e?.promotionId ?? "", void 0, !0),
                 s = i.useCallback(() => {
-                    n(eS.i.USER_DISMISS);
+                    n(eV.i.USER_DISMISS);
                 }, [n]),
-                { isDismissed: r } = (0, e8.u$)($.M.GUILD_BOOST_TAB_BANNER, e?.promotionId ?? "");
-            return null == e || null == t || l !== $.M.GUILD_BOOST_TAB_BANNER
+                { isDismissed: r } = (0, eZ.u$)(z.M.GUILD_BOOST_TAB_BANNER, e?.promotionId ?? "");
+            return null == e || null == t || l !== z.M.GUILD_BOOST_TAB_BANNER
                 ? { isBannerEligible: null != t && !r, shouldShow: !1 }
                 : {
                       isBannerEligible: !0,
@@ -752,11 +673,11 @@ function e5(e) {
                       markAsDismissed: s,
                   };
         })(),
-        l = (0, r.bG)([e9.A], () => e9.A.isFetchingActivePromotions),
-        n = "admin" !== e || t.isBannerEligible || l ? [] : [$.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_VIDEO_CARD],
-        [s, o] = (0, j.kn)(n),
+        l = (0, r.bG)([eY.A], () => eY.A.isFetchingActivePromotions),
+        n = "admin" !== e || t.isBannerEligible || l ? [] : [z.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_VIDEO_CARD],
+        [s, o] = (0, b.kn)(n),
         a = i.useCallback(() => {
-            o(eS.i.USER_DISMISS);
+            o(eV.i.USER_DISMISS);
         }, [o]),
         u = null;
     t.shouldShow
@@ -768,24 +689,24 @@ function e5(e) {
               onDismiss: t.markAsDismissed,
           })
         : "member" !== e || t.isBannerEligible || l
-          ? s === $.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_VIDEO_CARD && (u = { kind: "video", onDismiss: a })
+          ? s === z.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_VIDEO_CARD && (u = { kind: "video", onDismiss: a })
           : (u = { kind: "video", onDismiss: null });
     let d = l || t.isBannerEligible || u?.kind === "video";
     return { variant: e, content: u, isReserved: d };
 }
-var e2 = l(463080);
-function e7(e) {
+var e8 = l(463080);
+function e1(e) {
     let { text: t } = e,
-        l = (0, b.c)("Tier3OverrideNotice");
+        l = (0, j.c)("Tier3OverrideNotice");
     return (0, n.jsx)("div", {
-        className: e2.ac,
-        children: (0, n.jsx)(E.E, { variant: l ? "text-sm/normal" : "text-sm/medium", children: t }),
+        className: e8.ac,
+        children: (0, n.jsx)(I.E, { variant: l ? "text-sm/normal" : "text-sm/medium", children: t }),
     });
 }
-function e3(e) {
+function e6(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)?.features.has(ep.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) === !0)
-            ? { shouldShow: !0, text: k.intl.string(P.default.l9n4QZ) }
+            ? { shouldShow: !0, text: R.intl.string(L.default.l9n4QZ) }
             : { shouldShow: !1, text: "" },
         s = (function (e) {
             let t,
@@ -794,117 +715,117 @@ function e3(e) {
                     i.useMemo(() => {
                         if (null == t) return [];
                         let { allPowerups: e, unlockedPowerups: l } = t;
-                        return (0, G.k)(Object.values(l))
+                        return (0, k.k)(Object.values(l))
                             .map((t) => e[t.sku_id])
-                            .filter(eK.Vq);
+                            .filter(eU.Vq);
                     }, [t])),
-                n = L(e),
+                n = P(e),
                 s = l.length > 0 || n.length > 0;
             if (!s) return { shouldShow: !1, expiringPowerups: [], expiringPowerupNames: [], warnings: [] };
-            let o = n.length > 0 ? k.intl.string(V.default["B3OfL/"]) : void 0,
+            let o = n.length > 0 ? R.intl.string(B.default["B3OfL/"]) : void 0,
                 a = [...l.map((e) => e.title), ...(null != o ? [o] : [])],
                 u = [];
             return (
-                l.some((e) => e.skuId === z.FB) && u.push(k.intl.string(P.default.Sfr0Jw)),
-                n.length > 0 && u.push(k.intl.string(V.default.wiungr)),
+                l.some((e) => e.skuId === $.FB) && u.push(R.intl.string(L.default.Sfr0Jw)),
+                n.length > 0 && u.push(R.intl.string(B.default.wiungr)),
                 { shouldShow: s, expiringPowerups: l, expiringPowerupNames: a, warnings: u }
             );
         })(t),
         o = (function (e) {
-            let t = (0, ez.A)(e, "GuildPowerupNotificationContainer"),
+            let t = (0, eB.A)(e, "GuildPowerupNotificationContainer"),
                 l = [];
             null != t && l.push(t.dismissibleContent);
-            let [n, i] = (0, j.ww)(l, e);
+            let [n, i] = (0, b.ww)(l, e);
             return { shouldShow: null != t && n === t.dismissibleContent, notificationConfig: t, markAsDismissed: i };
         })(t),
-        a = e5("admin"),
+        a = e0("admin"),
         u = (function (e) {
             let t = [];
-            e || t.push($.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK);
-            let [l, n] = (0, j.kn)(t);
-            return { shouldShow: null != l && l === $.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK, markAsDismissed: n };
+            e || t.push(z.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK);
+            let [l, n] = (0, b.kn)(t);
+            return { shouldShow: null != l && l === z.M.GUILD_POWERUPS_OVERVIEW_SIDEBAR_COACHMARK, markAsDismissed: n };
         })(s.shouldShow || o.shouldShow || a.isReserved),
-        d = (0, b.c)("GuildPowerupNotificationContainer");
+        d = (0, j.c)("GuildPowerupNotificationContainer");
     return l.shouldShow || s.shouldShow || o.shouldShow || u.shouldShow || null != a.content
         ? (0, n.jsxs)("div", {
-              className: e2.kL,
+              className: e8.kL,
               children: [
-                  (0, n.jsx)(E.E, {
+                  (0, n.jsx)(I.E, {
                       variant: d ? "experimental/heading-sm/semibold" : "eyebrow",
                       color: d ? "text-strong" : "text-subtle",
-                      children: k.intl.string(P.default["3FRirU"]),
+                      children: R.intl.string(L.default["3FRirU"]),
                   }),
-                  l.shouldShow && (0, n.jsx)(e7, { text: l.text }),
+                  l.shouldShow && (0, n.jsx)(e1, { text: l.text }),
                   s.shouldShow &&
-                      (0, n.jsx)(e1, { guildId: t, powerupNames: s.expiringPowerupNames, warnings: s.warnings }),
+                      (0, n.jsx)(eQ, { guildId: t, powerupNames: s.expiringPowerupNames, warnings: s.warnings }),
                   o.shouldShow &&
                       null != o.notificationConfig &&
-                      (0, n.jsx)(eZ, { notificationConfig: o.notificationConfig, markAsDismissed: o.markAsDismissed }),
-                  (0, n.jsx)(ex, { slot: a, guildId: t }),
-                  u.shouldShow && (0, n.jsx)(eX, { markAsDismissed: u.markAsDismissed }),
+                      (0, n.jsx)(ez, { notificationConfig: o.notificationConfig, markAsDismissed: o.markAsDismissed }),
+                  (0, n.jsx)(eg, { slot: a, guildId: t }),
+                  u.shouldShow && (0, n.jsx)(eW, { markAsDismissed: u.markAsDismissed }),
               ],
           })
         : null;
 }
-var e4 = l(490557);
-function te(e) {
+var e9 = l(490557);
+function e5(e) {
     let { guildId: t, powerup: l, badge: s } = e,
         [r, o] = i.useState(void 0);
-    (0, eT.A)(r);
+    (0, e_.A)(r);
     let [a, u] = i.useState(!1),
-        { textColor: d } = N((0, eA.Ay)(t, l).type !== U.b_.INACTIVE),
-        c = (0, b.c)("GuildPowerupPerkCard");
-    return (0, n.jsxs)(eN, {
+        { textColor: d } = C((0, eA.Ay)(t, l).type !== U.b_.INACTIVE),
+        c = (0, j.c)("GuildPowerupPerkCard");
+    return (0, n.jsxs)(eb, {
         onHover: (e) => u(e),
         guildId: t,
         powerup: l,
         badge: s,
         children: [
-            (0, n.jsx)(e4.l, { className: M.Sl, powerup: l, isHovering: a }),
-            (0, n.jsx)(w.Ft, {
+            (0, n.jsx)(e9.l, { className: M.Sl, powerup: l, isHovering: a }),
+            (0, n.jsx)(y.Ft, {
                 title: l.title,
                 textColor: d,
-                footer: (0, n.jsx)(eC, { guildId: t, powerup: l }),
-                children: (0, n.jsx)(E.E, {
+                footer: (0, n.jsx)(ej, { guildId: t, powerup: l }),
+                children: (0, n.jsx)(I.E, {
                     className: M.h_,
                     color: d,
                     variant: c ? "text-sm/normal" : "text-sm/medium",
                     children: l.description,
                 }),
             }),
-            (0, n.jsx)(w.kd, { children: (0, n.jsx)(eh.Ay, { guildId: t, powerup: l, onError: o }) }),
+            (0, n.jsx)(y.kd, { children: (0, n.jsx)(eh.Ay, { guildId: t, powerup: l, onError: o }) }),
         ],
     });
 }
-var tt = l(862482),
-    tl = l(944304),
-    tn = l(975571),
-    ti = l(380572);
-function ts(e) {
+var e2 = l(862482),
+    e3 = l(944304),
+    e7 = l(975571),
+    e4 = l(380572);
+function te(e) {
     let { count: t, type: l } = e,
-        i = (0, b.c)("GuildPowerupsBoostInfo"),
+        i = (0, j.c)("GuildPowerupsBoostInfo"),
         s = (function (e, t) {
             switch (t) {
                 case U.yG.AVAILABLE:
-                    return k.intl.formatToPlainString(P.default.BdRXZA, { boostCount: e });
+                    return R.intl.formatToPlainString(L.default.BdRXZA, { boostCount: e });
                 case U.yG.SPENT:
-                    return k.intl.formatToPlainString(P.default.xvgIVG, { boostCount: e });
+                    return R.intl.formatToPlainString(L.default.xvgIVG, { boostCount: e });
                 case U.yG.TOTAL:
-                    return k.intl.string(P.default["/F7Z2y"]);
+                    return R.intl.string(L.default["/F7Z2y"]);
             }
         })(t, l);
     return (0, n.jsxs)("div", {
-        className: ti.k,
+        className: e4.k,
         role: "img",
         "aria-label": `${t}, ${s}`,
         children: [
             (0, n.jsxs)("div", {
-                className: ti.N,
+                className: e4.N,
                 "aria-hidden": "true",
                 children: [
                     (0, n.jsx)(f._, {
                         size: "sm",
-                        color: l !== U.yG.AVAILABLE ? C.A.colors.TEXT_MUTED : C.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                        color: l !== U.yG.AVAILABLE ? N.A.colors.TEXT_MUTED : N.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
                     }),
                     (0, n.jsx)(h.D, {
                         color: l !== U.yG.AVAILABLE ? "text-muted" : "text-strong",
@@ -913,7 +834,7 @@ function ts(e) {
                     }),
                 ],
             }),
-            (0, n.jsx)(E.E, {
+            (0, n.jsx)(I.E, {
                 "aria-hidden": "true",
                 color: "text-muted",
                 variant: i ? "text-sm/normal" : "text-sm/medium",
@@ -922,106 +843,106 @@ function ts(e) {
         ],
     });
 }
-var tr = l(690118);
-function to(e) {
+var tt = l(690118);
+function tl(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)),
-        { available: i, spent: s, total: o } = (0, eY.A)(t),
-        a = (0, b.c)("GuildPowerupsBoostInfoContainerAdmin");
+        { available: i, spent: s, total: o } = (0, eJ.A)(t),
+        a = (0, j.c)("GuildPowerupsBoostInfoContainerAdmin");
     if (null != l)
         return (0, n.jsxs)("div", {
-            className: tr.kL,
+            className: tt.kL,
             children: [
                 (0, n.jsxs)("div", {
-                    className: tr.N1,
+                    className: tt.N1,
                     children: [
-                        (0, n.jsx)(E.E, {
+                        (0, n.jsx)(I.E, {
                             variant: a ? "experimental/heading-sm/semibold" : "eyebrow",
                             color: a ? "text-strong" : "text-subtle",
-                            children: k.intl.string(P.default.hjvcLO),
+                            children: R.intl.string(L.default.hjvcLO),
                         }),
-                        (0, n.jsx)(E.E, {
-                            className: tr.C2,
+                        (0, n.jsx)(I.E, {
+                            className: tt.C2,
                             variant: a ? "experimental/body-sm/medium" : "text-xs/semibold",
-                            children: k.intl.format(P.default.fXE30d, {
-                                helpDeskArticle: tn.A.getArticleURL(ep.MVz.GUILD_BOOSTING_FAQ),
+                            children: R.intl.format(L.default.fXE30d, {
+                                helpDeskArticle: e7.A.getArticleURL(ep.MVz.GUILD_BOOSTING_FAQ),
                             }),
                         }),
                     ],
                 }),
                 (0, n.jsxs)("div", {
-                    className: tr.hQ,
+                    className: tt.hQ,
                     children: [
-                        (0, n.jsx)(ts, { count: i, type: U.yG.AVAILABLE }),
-                        (0, n.jsx)(ts, { count: s, type: U.yG.SPENT }),
-                        (0, n.jsx)(ts, { count: o, type: U.yG.TOTAL }),
+                        (0, n.jsx)(te, { count: i, type: U.yG.AVAILABLE }),
+                        (0, n.jsx)(te, { count: s, type: U.yG.SPENT }),
+                        (0, n.jsx)(te, { count: o, type: U.yG.TOTAL }),
                     ],
                 }),
-                (0, n.jsx)(tl.A, {
-                    className: tr.S6,
+                (0, n.jsx)(e3.A, {
+                    className: tt.S6,
                     guild: l,
                     analyticsLocation: {
                         page: ep.liQ.GUILD_POWERUPS_OVERVIEW,
                         section: ep.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                     },
-                    color: tt.XD.CUSTOM,
-                    size: tt.lO.LARGE,
+                    color: e2.XD.CUSTOM,
+                    size: e2.lO.LARGE,
                     icon: (0, n.jsx)(f._, {
-                        className: tr.Ng,
+                        className: tt.Ng,
                         size: "sm",
-                        color: C.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                        color: N.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
                     }),
                 }),
             ],
         });
 }
-var ta = l(97808),
-    tu = l(778712),
-    td = l(463930),
-    tc = l(730134),
-    tm = l(878678),
-    tp = l(483625),
-    tg = l(854627),
-    tx = l(696451),
-    tf = l(317525),
-    tA = l(287809),
-    th = l(562153),
-    tE = l(19575),
-    tI = l(985827);
-let tv = tE.Ay.getEnableHardwareAcceleration() ? ta.Js : tc.A;
-function tb(e) {
+var tn = l(97808),
+    ti = l(778712),
+    ts = l(463930),
+    tr = l(730134),
+    to = l(878678),
+    ta = l(483625),
+    tu = l(854627),
+    td = l(696451),
+    tc = l(317525),
+    tm = l(287809),
+    tp = l(562153),
+    tx = l(19575),
+    tg = l(985827);
+let tf = tx.Ay.getEnableHardwareAcceleration() ? tn.Js : tr.A;
+function tA(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)),
-        i = (0, r.bG)([tf.A], () => tf.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
-        s = (0, r.bG)([tA.default], () => tA.default.getCurrentUser()),
+        i = (0, r.bG)([tc.A], () => tc.A.getSortedRoles(t).find((e) => e.tags?.premium_subscriber === null)),
+        s = (0, r.bG)([tm.default], () => tm.default.getCurrentUser()),
         o = s?.id,
-        a = (0, r.bG)([tx.Ay], () => (null != o ? tx.Ay.getMember(t, o) : void 0), [o, t]),
+        a = (0, r.bG)([td.Ay], () => (null != o ? td.Ay.getMember(t, o) : void 0), [o, t]),
         u = a?.premiumSince != null,
-        d = (0, r.bG)([eO.Ay], () => eO.Ay.useReducedMotion),
+        d = (0, r.bG)([eT.Ay], () => eT.Ay.useReducedMotion),
         {
             avatarDecorationSrc: m,
             avatarSrc: p,
-            eventHandlers: x,
-        } = (0, tg.A)({ userId: s?.id, guildId: t, size: tu._3.SIZE_40, animateOnHover: !d }),
-        A = (0, b.c)("GuildPowerupsBoostInfoContainerMember");
+            eventHandlers: g,
+        } = (0, tu.A)({ userId: s?.id, guildId: t, size: ti._3.SIZE_40, animateOnHover: !d }),
+        A = (0, j.c)("GuildPowerupsBoostInfoContainerMember");
     return null == l || null == a || null == s
         ? null
         : (0, n.jsxs)("div", {
-              className: tI.ft,
+              className: tg.ft,
               children: [
                   (0, n.jsxs)("div", {
-                      className: tI.FS,
+                      className: tg.FS,
                       children: [
-                          (0, n.jsx)(E.E, {
+                          (0, n.jsx)(I.E, {
                               variant: "text-md/semibold",
                               color: A ? "text-strong" : void 0,
-                              children: k.intl.string(u ? P.default.KSWK1U : P.default.XXXX5l),
+                              children: R.intl.string(u ? L.default.KSWK1U : L.default.XXXX5l),
                           }),
-                          (0, n.jsx)(E.E, {
+                          (0, n.jsx)(I.E, {
                               variant: A ? "text-sm/normal" : "text-sm/medium",
-                              children: k.intl.format(u ? P.default["7fWTg4"] : P.default["7PXeeQ"], {
+                              children: R.intl.format(u ? L.default["7fWTg4"] : L.default["7PXeeQ"], {
                                   onClick: () => {
-                                      (0, tm.K4)({
+                                      (0, to.K4)({
                                           guildId: t,
                                           location: {
                                               section: ep.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
@@ -1035,54 +956,54 @@ function tb(e) {
                   }),
                   null != i &&
                       !u &&
-                      (0, n.jsx)(tp.V, {
-                          avatar: (0, n.jsx)(tv, {
-                              ...x,
+                      (0, n.jsx)(ta.V, {
+                          avatar: (0, n.jsx)(tf, {
+                              ...g,
                               user: s,
                               src: p,
                               avatarDecoration: m,
-                              size: tu._3.SIZE_40,
+                              size: ti._3.SIZE_40,
                               "aria-hidden": !0,
                               animate: !0,
                           }),
-                          username: (0, n.jsx)(td.g, {
+                          username: (0, n.jsx)(ts.g, {
                               variant: "text-md/semibold",
-                              name: th.Ay.getName(t, null, s),
+                              name: tp.Ay.getName(t, null, s),
                               colorString: i.colorString,
                               colorStrings: i.colorStrings,
                           }),
-                          className: g()(tI.Qs, tI.cX),
-                          message: k.intl.string(k.t["6OSasb"]),
+                          className: x()(tg.Qs, tg.cX),
+                          message: R.intl.string(R.t["6OSasb"]),
                           decorations: (0, n.jsx)(f._, {
-                              color: C.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
-                              className: tI.$J,
+                              color: N.A.unsafe_rawColors.GUILD_BOOSTING_PINK,
+                              className: tg.$J,
                           }),
                       }),
-                  (0, n.jsx)(tl.A, {
+                  (0, n.jsx)(e3.A, {
                       guild: l,
-                      className: tI.Qs,
+                      className: tg.Qs,
                       analyticsLocation: {
                           page: ep.liQ.GUILD_POWERUPS_OVERVIEW,
                           section: ep.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                       },
-                      color: tt.XD.BRAND,
-                      size: tt.lO.MEDIUM,
+                      color: e2.XD.BRAND,
+                      size: e2.lO.MEDIUM,
                       fullWidth: !0,
                       icon: (0, n.jsx)(f._, { color: "currentColor", size: "sm" }),
                   }),
               ],
           });
 }
-var tj = l(820739),
-    t_ = l(860071),
-    tS = l(935208),
-    ty = l(492349),
-    tw = l(606049),
-    tC = l(58703),
-    tN = l(967144),
-    tT = l(262001),
-    tR = l(736541);
-function tG(e) {
+var th = l(820739),
+    tI = l(860071),
+    tE = l(935208),
+    tv = l(492349),
+    tj = l(606049),
+    tb = l(58703),
+    t_ = l(967144),
+    tS = l(262001),
+    tw = l(736541);
+function ty(e) {
     let t,
         { boost: l, phase: i, sortKey: s } = e,
         {
@@ -1090,18 +1011,18 @@ function tG(e) {
             roleColor: a,
             roleColorStrings: u,
         } = (function (e) {
-            let t = new Date(tS.default.extractTimestamp(e.id)),
+            let t = new Date(tE.default.extractTimestamp(e.id)),
                 {
                     username: l,
                     roleColor: n,
                     roleColorStrings: i,
                 } = (0, r.cf)(
-                    [tx.Ay],
+                    [td.Ay],
                     () => {
-                        let t = tx.Ay.getMember(e.guildId, e.userId);
+                        let t = td.Ay.getMember(e.guildId, e.userId);
                         return {
                             username:
-                                tx.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? k.intl.string(k.t["30mdIx"]),
+                                td.Ay.getNick(e.guildId, e.userId) ?? e.user?.username ?? R.intl.string(R.t["30mdIx"]),
                             roleColor: t?.colorString ?? null,
                             roleColorStrings: t?.colorStrings ?? null,
                         };
@@ -1110,37 +1031,37 @@ function tG(e) {
                 );
             return { timestamp: t, username: l, roleColor: n, roleColorStrings: i };
         })(l),
-        d = (0, tN.gn)(l.guildId, l.userId, u ?? null),
-        c = (0, b.c)("GuildPowerupsRecentActivityRow"),
+        d = (0, t_.gn)(l.guildId, l.userId, u ?? null),
+        c = (0, j.c)("GuildPowerupsRecentActivityRow"),
         m = new Date(s),
-        { Icon: p, color: x } = (function (e) {
+        { Icon: p, color: g } = (function (e) {
             switch (e) {
                 case "gave":
-                    return { Icon: f._, color: C.A.colors.ICON_MUTED };
+                    return { Icon: f._, color: N.A.colors.ICON_MUTED };
                 case "expiring":
-                    return { Icon: ty.x, color: C.A.colors.ICON_FEEDBACK_WARNING };
+                    return { Icon: tv.x, color: N.A.colors.ICON_FEEDBACK_WARNING };
                 case "expired":
-                    return { Icon: ty.x, color: C.A.colors.ICON_FEEDBACK_CRITICAL };
+                    return { Icon: tv.x, color: N.A.colors.ICON_FEEDBACK_CRITICAL };
             }
         })(i);
     return (0, n.jsxs)("div", {
-        className: tT.og,
+        className: tS.og,
         children: [
-            (0, n.jsx)(p, { color: x, size: "sm" }),
+            (0, n.jsx)(p, { color: g, size: "sm" }),
             (0, n.jsxs)("span", {
-                className: tT.x$,
+                className: tS.x$,
                 children: [
-                    (0, n.jsx)(E.E, {
+                    (0, n.jsx)(I.E, {
                         tag: "span",
                         variant: "text-md/medium",
                         lineClamp: 1,
-                        className: tT.IP,
-                        children: (0, n.jsx)(eD.m, {
+                        className: tS.IP,
+                        children: (0, n.jsx)(eG.m, {
                             text: o,
                             shouldShow: !0,
                             asContainer: !0,
                             delay: 1e3,
-                            children: (0, n.jsx)(td.g, {
+                            children: (0, n.jsx)(ts.g, {
                                 variant: "text-md/semibold",
                                 name: o,
                                 colorString: a ?? null,
@@ -1148,42 +1069,42 @@ function tG(e) {
                             }),
                         }),
                     }),
-                    (0, n.jsx)(E.E, {
+                    (0, n.jsx)(I.E, {
                         tag: "span",
                         variant: "text-md/normal",
                         color: c ? void 0 : "text-muted",
-                        className: tT.CC,
+                        className: tS.CC,
                         children: (function (e) {
                             switch (e.phase) {
                                 case "gave":
-                                    return k.intl.string(P.default.plwH8d);
+                                    return R.intl.string(L.default.plwH8d);
                                 case "expiring":
-                                    return k.intl.formatToPlainString(P.default.vct4l8, { date: e.endsAt.valueOf() });
+                                    return R.intl.formatToPlainString(L.default.vct4l8, { date: e.endsAt.valueOf() });
                                 case "expired":
-                                    return k.intl.string(P.default.hSXjlI);
+                                    return R.intl.string(L.default.hSXjlI);
                             }
                         })(e),
                     }),
                 ],
             }),
-            (0, n.jsx)(tw.A, {
+            (0, n.jsx)(tj.A, {
                 timestamp: m,
                 timestampFormat:
-                    0 === (t = (0, tC.m_)(m, new Date()))
-                        ? `[${k.intl.string(k.t.mbs4NX)}]`
+                    0 === (t = (0, tb.m_)(m, new Date()))
+                        ? `[${R.intl.string(R.t.mbs4NX)}]`
                         : -1 === t
-                          ? `[${k.intl.string(k.t.ZdDLO0)}]`
+                          ? `[${R.intl.string(R.t.ZdDLO0)}]`
                           : "L",
-                className: g()(tR[c ? "text-xs/medium" : "text-xs/semibold"], tT.vE),
+                className: x()(tw[c ? "text-xs/medium" : "text-xs/semibold"], tS.vE),
             }),
         ],
     });
 }
-var tL = l(834205);
-function tk(e) {
+var tN = l(834205);
+function tC(e) {
     let { guildId: t } = e,
         l = (function (e) {
-            let t = (0, r.yK)([eq.A], () => eq.A.getAppliedGuildBoostsForGuild(e) ?? [], [e]),
+            let t = (0, r.yK)([eX.A], () => eX.A.getAppliedGuildBoostsForGuild(e) ?? [], [e]),
                 [l] = i.useState(() => Date.now()),
                 n = i.useMemo(
                     () =>
@@ -1198,11 +1119,11 @@ function tk(e) {
                                     n = (function (e, t) {
                                         switch (t.phase) {
                                             case "gave":
-                                                return tS.default.extractTimestamp(e.id);
+                                                return tE.default.extractTimestamp(e.id);
                                             case "expiring":
                                                 return t.endsAt.getTime() - 2592e5;
                                             case "expired":
-                                                return e.endsAt?.getTime() ?? tS.default.extractTimestamp(e.id);
+                                                return e.endsAt?.getTime() ?? tE.default.extractTimestamp(e.id);
                                         }
                                     })(e, t);
                                 return "expiring" === t.phase
@@ -1214,13 +1135,13 @@ function tk(e) {
                     [t, void 0, l],
                 ),
                 s = (0, r.yK)(
-                    [tx.Ay],
+                    [td.Ay],
                     () => {
                         let t = new Set();
                         return (
                             n.forEach((l) => {
                                 let { boost: n } = l;
-                                null == tx.Ay.getMember(e, n.userId) && t.add(n.userId);
+                                null == td.Ay.getMember(e, n.userId) && t.add(n.userId);
                             }),
                             Array.from(t)
                         );
@@ -1228,47 +1149,47 @@ function tk(e) {
                     [e, n],
                 );
             i.useEffect(() => {
-                s.length > 0 && s.forEach((t) => t_.A.requestMember(e, t));
+                s.length > 0 && s.forEach((t) => tI.A.requestMember(e, t));
             }, [e, s]);
             let o = (0, r.bG)([c.A], () => c.A.getGuild(e)?.premiumSubscriberCount),
                 a = i.useMemo(() => t.filter((e) => !e.ended).length, [t]),
-                u = (0, r.bG)([eq.A], () => null != eq.A.getLastFetchedAtForGuild(e), [e]);
+                u = (0, r.bG)([eX.A], () => null != eX.A.getLastFetchedAtForGuild(e), [e]);
             return (
                 i.useEffect(() => {
-                    (o === a && u) || (0, tj.VU)(e, { includeEnded: !0 });
+                    (o === a && u) || (0, th.VU)(e, { includeEnded: !0 });
                 }, [e, o, a, u]),
                 n
             );
         })(t),
-        s = (0, b.c)("GuildPowerupsRecentActivity");
+        s = (0, j.c)("GuildPowerupsRecentActivity");
     return 0 === l.length
         ? null
         : (0, n.jsxs)(n.Fragment, {
               children: [
                   (0, n.jsx)(h.D, {
-                      className: tL.w,
+                      className: tN.w,
                       variant: s ? "experimental/heading-sm/semibold" : "eyebrow",
                       color: s ? "text-strong" : "text-subtle",
-                      children: k.intl.string(k.t.yM9Krm),
+                      children: R.intl.string(R.t.yM9Krm),
                   }),
                   (0, n.jsx)(A.Ip, {
-                      className: tL.k,
+                      className: tN.k,
                       fade: !0,
-                      children: l.map((e) => (0, n.jsx)(tG, { ...e }, `boost-${e.boost.id}`)),
+                      children: l.map((e) => (0, n.jsx)(ty, { ...e }, `boost-${e.boost.id}`)),
                   }),
               ],
           });
 }
-var tP = l(726724);
-function tD(e) {
+var tG = l(726724);
+function tT(e) {
     let { guildId: t } = e,
-        l = e5("member");
+        l = e0("member");
     return (0, n.jsxs)("div", {
-        className: tP.CG,
-        children: [(0, n.jsx)(ex, { slot: l, guildId: t }), (0, n.jsx)(tb, { guildId: t })],
+        className: tG.CG,
+        children: [(0, n.jsx)(eg, { slot: l, guildId: t }), (0, n.jsx)(tA, { guildId: t })],
     });
 }
-function tO(e) {
+function tk(e) {
     let t,
         s,
         o,
@@ -1276,30 +1197,30 @@ function tO(e) {
         u,
         p,
         S,
-        y,
         w,
-        { guildId: C, powerupListingId: N } = e;
-    ((t = (0, _.C$)(C, "useLoadGuildPowerups")),
+        y,
+        { guildId: N, powerupListingId: C } = e;
+    ((t = (0, _.C$)(N, "useLoadGuildPowerups")),
         i.useEffect(() => {
-            t && (0, Q.z9)(C);
-        }, [C, t]),
+            t && (0, Q.z9)(N);
+        }, [N, t]),
         i.useEffect(() => {
-            ((0, Z.AK)(C), (0, Z.Xd)(C));
-        }, [C]));
-    let T = (0, _.C$)(C, "GuildPowerupsOverview"),
-        R = (0, b.c)("GuildPowerupsOverview");
-    (0, H.Pq)(C);
-    let G = (0, r.bG)([K.A], () => K.A.getStateForGuild(C)),
-        L = (0, m.A)(C),
-        V = i.useRef(!1),
-        { shouldShow: B, modalConfig: M } =
-            ((s = (0, r.bG)([c.A], () => c.A.getGuild(C))),
-            (o = (0, m.A)(C) ?? !1),
-            (a = (0, r.bG)([K.A], () => K.A.getStateForGuild(C))),
-            (u = a?.allPowerups?.[z.d0]),
-            (p = (0, J.E)(C, "GuildPowerupsOverview")),
+            ((0, Z.AK)(N), (0, Z.Xd)(N));
+        }, [N]));
+    let G = (0, _.C$)(N, "GuildPowerupsOverview"),
+        T = (0, j.c)("GuildPowerupsOverview");
+    (0, H.Pq)(N);
+    let k = (0, r.bG)([K.A], () => K.A.getStateForGuild(N)),
+        P = (0, m.A)(N),
+        B = i.useRef(!1),
+        { shouldShow: V, modalConfig: M } =
+            ((s = (0, r.bG)([c.A], () => c.A.getGuild(N))),
+            (o = (0, m.A)(N) ?? !1),
+            (a = (0, r.bG)([K.A], () => K.A.getStateForGuild(N))),
+            (u = a?.allPowerups?.[$.d0]),
+            (p = (0, J.E)(N, "GuildPowerupsOverview")),
             (S = o && p && null != s),
-            (y = i.useMemo(
+            (w = i.useMemo(
                 () =>
                     S
                         ? (function (e) {
@@ -1307,10 +1228,10 @@ function tO(e) {
                               if (null == e || null == t) return null;
                               let l = (0, X.A)(t);
                               return {
-                                  dismissibleContent: $.M.GUILD_THEME_POWERUP_ROLLBACK_MODAL,
-                                  header: `${e.title} ${k.intl.formatToPlainString(P.default["6e2ry1"], { dateString: l })}`,
+                                  dismissibleContent: z.M.GUILD_THEME_POWERUP_ROLLBACK_MODAL,
+                                  header: `${e.title} ${R.intl.formatToPlainString(L.default["6e2ry1"], { dateString: l })}`,
                                   bodies: [
-                                      k.intl.formatToPlainString(P.default.jd8fki, {
+                                      R.intl.formatToPlainString(L.default.jd8fki, {
                                           startDate: l,
                                           endDate: l,
                                           perkName: e.title,
@@ -1323,18 +1244,18 @@ function tO(e) {
                         : null,
                 [S, u],
             )),
-            { shouldShow: S, modalConfig: y }),
-        et = (0, I.A)(),
-        el = null == N && !et && null != M,
+            { shouldShow: S, modalConfig: w }),
+        et = (0, E.A)(),
+        el = null == C && !et && null != M,
         en = [];
-    B && el && en.push(M.dismissibleContent);
-    let [ei, es] = (0, j.kn)(en),
+    V && el && en.push(M.dismissibleContent);
+    let [ei, es] = (0, b.kn)(en),
         er =
-            ((w = (0, r.bG)([K.A], () => K.A.getStateForGuild(C))),
+            ((y = (0, r.bG)([K.A], () => K.A.getStateForGuild(N))),
             i.useMemo(
                 () =>
                     ee.reduce((e, t) => {
-                        let l = w?.powerupCatalog[t];
+                        let l = y?.powerupCatalog[t];
                         if (null == l) return e;
                         let n = (function (e, t, l) {
                             let n = [],
@@ -1364,7 +1285,7 @@ function tO(e) {
                             return (
                                 l && e === U.o9.PERK && n.push({ type: "gameServer" }),
                                 (function (e) {
-                                    let t = e.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === z.SL),
+                                    let t = e.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === $.SL),
                                         l = e.findIndex(
                                             (e) =>
                                                 "multiPerk" === e.type &&
@@ -1373,13 +1294,13 @@ function tO(e) {
                                     if (-1 !== t && -1 !== l && l !== t + 1) {
                                         let t = [...e],
                                             [n] = t.splice(l, 1),
-                                            i = t.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === z.SL);
+                                            i = t.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === $.SL);
                                         return (t.splice(i + 1, 0, n), t);
                                     }
                                     return e;
                                 })(
                                     (function (e) {
-                                        let t = e.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === z.d0);
+                                        let t = e.findIndex((e) => "singlePerk" === e.type && e.powerup.skuId === $.d0);
                                         if (t <= 0) return e;
                                         let l = [...e],
                                             [n] = l.splice(t, 1);
@@ -1387,28 +1308,28 @@ function tO(e) {
                                     })(n),
                                 )
                             );
-                        })(t, l, T);
+                        })(t, l, G);
                         return (e.push({ type: t, listings: n }), e);
                     }, []),
-                [w?.powerupCatalog, T],
+                [y?.powerupCatalog, G],
             )),
-        eo = eM(
+        eo = eL(
             er
                 .flatMap((e) => e.listings)
                 .filter((e) => "multiPerk" === e.type)
                 .map((e) => e.group),
-            C,
+            N,
         );
     return (i.useEffect(() => {
-        if (null != N && !V.current)
+        if (null != C && !B.current)
             for (let e of er)
                 for (let t of e.listings) {
-                    if (("singleLevel" === t.type || "singlePerk" === t.type) && t.powerup.skuId === N) {
-                        ((0, eB.A)(C, t.powerup), (V.current = !0));
+                    if (("singleLevel" === t.type || "singlePerk" === t.type) && t.powerup.skuId === C) {
+                        ((0, eR.A)(N, t.powerup), (B.current = !0));
                         return;
                     }
-                    if ("multiPerk" === t.type && (t.group === N || t.powerups.some((e) => e.skuId === N))) {
-                        V.current = !0;
+                    if ("multiPerk" === t.type && (t.group === C || t.powerups.some((e) => e.skuId === C))) {
+                        B.current = !0;
                         let e = eo[t.group];
                         if (null == e) return;
                         e.openModal(t.powerups, {
@@ -1416,63 +1337,63 @@ function tO(e) {
                                 let e = new URL(window.location.href);
                                 e.searchParams.delete(U.G0);
                                 let t = e.pathname + e.search + e.hash;
-                                ((0, d.bG)(t), (V.current = !1));
+                                ((0, d.bG)(t), (B.current = !1));
                             },
                         });
                         return;
                     }
-                    if ("gameServer" === t.type && N === O.W5) {
-                        ((0, D.A)({ guildId: C, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }), (V.current = !0));
+                    if ("gameServer" === t.type && C === O.W5) {
+                        ((0, D.A)({ guildId: N, analyticsLocation: v.A.GUILD_POWERUPS_OVERVIEW }), (B.current = !0));
                         return;
                     }
                 }
-    }, [C, N, er, eo]),
+    }, [N, C, er, eo]),
     i.useEffect(() => {
         if (null != ei && null != M) {
             let e = {
                 onCloseCallback: () => {
-                    es(eS.i.USER_DISMISS);
+                    es(eV.i.USER_DISMISS);
                 },
                 modalKey: `dismissible_content_${ei}`,
             };
-            (0, x.openModalLazy)(async () => {
+            (0, g.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([l.e("239592"), l.e("586618")]).then(l.bind(l, 442241));
                 return (t) => (0, n.jsx)(e, { modalConfig: M, markAsDismissed: es, ...t });
             }, e);
         }
-    }, [C, ei, es, M]),
-    G?.powerupCatalog == null)
+    }, [N, ei, es, M]),
+    k?.powerupCatalog == null)
         ? null
         : (0, n.jsxs)("div", {
-              className: tP.kL,
+              className: tG.kL,
               children: [
                   (0, n.jsxs)(F.A, {
-                      className: tP.KE,
+                      className: tG.KE,
                       hideSearch: !0,
                       toolbar: (0, n.jsx)("div", {}),
                       children: [
                           (0, n.jsx)(F.A.Icon, { icon: f._, "aria-label": "" }),
-                          (0, n.jsx)(F.A.Title, { children: k.intl.string(P.default.yv3DJJ) }),
+                          (0, n.jsx)(F.A.Title, { children: R.intl.string(L.default.yv3DJJ) }),
                       ],
                   }),
                   (0, n.jsxs)("div", {
-                      className: tP.hQ,
+                      className: tG.hQ,
                       children: [
                           (0, n.jsx)(A.Ip, {
-                              className: tP.DO,
+                              className: tG.DO,
                               children: er.map((e) => {
                                   let { type: t, listings: l } = e,
                                       { title: i, description: s } = (function (e) {
                                           switch (e) {
                                               case U.o9.LEVEL:
                                                   return {
-                                                      title: k.intl.string(P.default["TXY/b0"]),
-                                                      description: k.intl.string(P.default.aJv4PB),
+                                                      title: R.intl.string(L.default["TXY/b0"]),
+                                                      description: R.intl.string(L.default.aJv4PB),
                                                   };
                                               case U.o9.PERK:
                                                   return {
-                                                      title: k.intl.string(P.default.TV3Vm8),
-                                                      description: k.intl.string(P.default.STx9hp),
+                                                      title: R.intl.string(L.default.TV3Vm8),
+                                                      description: R.intl.string(L.default.STx9hp),
                                                   };
                                           }
                                       })(t),
@@ -1480,34 +1401,34 @@ function tO(e) {
                                   return (0, n.jsxs)(
                                       "div",
                                       {
-                                          className: tP.lt,
+                                          className: tG.lt,
                                           children: [
                                               (0, n.jsxs)("div", {
-                                                  className: tP.kn,
+                                                  className: tG.kn,
                                                   children: [
                                                       (0, n.jsx)(h.D, {
                                                           color: "text-strong",
                                                           variant: "heading-lg/semibold",
                                                           children: i,
                                                       }),
-                                                      (0, n.jsx)(E.E, {
-                                                          color: R ? void 0 : "text-muted",
-                                                          variant: R ? "text-sm/normal" : "text-sm/medium",
+                                                      (0, n.jsx)(I.E, {
+                                                          color: T ? void 0 : "text-muted",
+                                                          variant: T ? "text-sm/normal" : "text-sm/medium",
                                                           children: s,
                                                       }),
                                                   ],
                                               }),
                                               (0, n.jsx)(r, {
                                                   orientation: "horizontal",
-                                                  className: g()(tP.qJ, tP.kn, { [tP.dU]: t === U.o9.LEVEL }),
+                                                  className: x()(tG.qJ, tG.kn, { [tG.dU]: t === U.o9.LEVEL }),
                                                   fade: !0,
                                                   children: l.map((e, t) => {
                                                       switch (e.type) {
                                                           case "singleLevel":
                                                               return (0, n.jsx)(
-                                                                  eP,
+                                                                  eC,
                                                                   {
-                                                                      guildId: C,
+                                                                      guildId: N,
                                                                       index: t,
                                                                       powerup: e.powerup,
                                                                       nextPowerup: l[t + 1]?.powerup,
@@ -1516,20 +1437,20 @@ function tO(e) {
                                                               );
                                                           case "singlePerk":
                                                               return (0, n.jsx)(
-                                                                  te,
-                                                                  { guildId: C, powerup: e.powerup, badge: e.badge },
+                                                                  e5,
+                                                                  { guildId: N, powerup: e.powerup, badge: e.badge },
                                                                   `powerup-${e.powerup.skuId}`,
                                                               );
                                                           case "multiPerk":
                                                               return (0, n.jsx)(
-                                                                  eF,
-                                                                  { guildId: C, group: e.group, powerups: e.powerups },
+                                                                  eO,
+                                                                  { guildId: N, group: e.group, powerups: e.powerups },
                                                                   `powerup-group-${e.group}`,
                                                               );
                                                           case "gameServer":
                                                               return (0, n.jsx)(
                                                                   W,
-                                                                  { guildId: C },
+                                                                  { guildId: N },
                                                                   "powerup-game-server",
                                                               );
                                                       }
@@ -1542,14 +1463,14 @@ function tO(e) {
                               }),
                           }),
                           (0, n.jsxs)("div", {
-                              className: tP.so,
+                              className: tG.so,
                               children: [
-                                  L
+                                  P
                                       ? (0, n.jsxs)(n.Fragment, {
-                                            children: [(0, n.jsx)(to, { guildId: C }), (0, n.jsx)(e3, { guildId: C })],
+                                            children: [(0, n.jsx)(tl, { guildId: N }), (0, n.jsx)(e6, { guildId: N })],
                                         })
-                                      : (0, n.jsx)(tD, { guildId: C }),
-                                  (0, n.jsx)(tk, { guildId: C }),
+                                      : (0, n.jsx)(tT, { guildId: N }),
+                                  (0, n.jsx)(tC, { guildId: N }),
                               ],
                           }),
                       ],
@@ -1557,14 +1478,14 @@ function tO(e) {
               ],
           });
 }
-function tU(e) {
+function tP(e) {
     let { guildId: t, powerupListingId: l } = e,
         i = (0, r.bG)([c.A], () => c.A.getGuild(t)),
         p = (0, r.bG)([u.A], () => u.A.hasLoadedExperiments),
-        g = (0, m.A)(t),
-        x = (0, d.PR)(),
-        f = !p || null == g || null == i,
-        A = (0, o.Ay)(null != x ? x : []);
+        x = (0, m.A)(t),
+        g = (0, d.PR)(),
+        f = !p || null == x || null == i,
+        A = (0, o.Ay)(null != g ? g : []);
     return ((0, a.A)(
         {
             type: s.ImpressionTypes.VIEW,
@@ -1575,5 +1496,5 @@ function tU(e) {
     ),
     f)
         ? null
-        : (0, n.jsx)(tO, { guildId: t, powerupListingId: l });
+        : (0, n.jsx)(tk, { guildId: t, powerupListingId: l });
 }

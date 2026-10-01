@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 626818, Version Hash: 00c36f786f414cfcc367f06cbba5deff48fd454c`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 626823, Version Hash: 56b32d9fc25fc3ecc5c3a164679a8bb7930bb099`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -22102,7 +22102,7 @@ let Ca = "isHideDevBanner",
                     className: to()(Cr.Wz, Cr.mr),
                     children: [
                         (0, y.jsx)(Ci, { className: Cr.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "626818" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "626823" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -27340,8 +27340,8 @@ let R2 = (0, tj.Fe)({
                 n.e("135016"),
                 n.e("263651"),
                 n.e("788615"),
-            ]).then(n.bind(n, 723574)),
-        webpackId: 723574,
+            ]).then(n.bind(n, 442336)),
+        webpackId: 442336,
         name: "GuildPowerupsPage",
         renderLoader: ir.Ru,
     }),
