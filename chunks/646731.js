@@ -17,8 +17,8 @@ var a = l(477900),
     A = l(174459),
     f = l(124861),
     p = l(318346),
-    L = l(362862),
-    x = l(478996),
+    x = l(362862),
+    L = l(478996),
     v = l(923138),
     O = l(12510),
     b = l(673125),
@@ -79,7 +79,7 @@ function Q(e) {
     }
     let A = null != o && r !== f.x.COMPLETED,
         p = i()(V.of, { [V.o4]: d, [V.D8]: m, [V.or]: A }),
-        L = (0, a.jsxs)(a.Fragment, {
+        x = (0, a.jsxs)(a.Fragment, {
             children: [
                 (0, a.jsxs)("div", {
                     className: V.Ub,
@@ -107,25 +107,25 @@ function Q(e) {
                     ],
                 }),
                 (function (e, t) {
-                    let { isHovered: l, isClaiming: n, handleClaim: s, hasDiscoveryClick: i } = t,
-                        r = (0, a.jsx)(R.$, {
-                            variant: l || n ? "expressive" : "secondary",
+                    let { isClaiming: l, handleClaim: n, hasDiscoveryClick: s } = t,
+                        i = (0, a.jsx)(R.$, {
+                            variant: "expressive",
                             size: "sm",
                             text: z.intl.string(G.default.WmfVjs),
-                            loading: n,
-                            onClick: s,
+                            loading: l,
+                            onClick: n,
                         });
-                    return e === f.x.COMPLETED || n ? r : i ? (0, a.jsx)(W._, { size: "sm", "aria-hidden": !0 }) : null;
+                    return e === f.x.COMPLETED || l ? i : s ? (0, a.jsx)(W._, { size: "sm", "aria-hidden": !0 }) : null;
                 })(r, { isHovered: m, isClaiming: _, handleClaim: g, hasDiscoveryClick: A }),
             ],
         }),
-        x = n.useMemo(() => ({ onMouseEnter: () => C(!0), onMouseLeave: () => C(!1) }), []);
+        L = n.useMemo(() => ({ onMouseEnter: () => C(!0), onMouseLeave: () => C(!1) }), []);
     return A
         ? (0, a.jsxs)(a.Fragment, {
-              children: [(0, a.jsx)(h.D, { className: p, ...x, onClick: o, children: L }), !u && (0, a.jsx)(X, {})],
+              children: [(0, a.jsx)(h.D, { className: p, ...L, onClick: o, children: x }), !u && (0, a.jsx)(X, {})],
           })
         : (0, a.jsxs)(a.Fragment, {
-              children: [(0, a.jsx)("div", { className: p, ...x, children: L }), !u && (0, a.jsx)(X, {})],
+              children: [(0, a.jsx)("div", { className: p, ...L, children: x }), !u && (0, a.jsx)(X, {})],
           });
 }
 var q = l(652215),
@@ -219,7 +219,7 @@ function en(e) {
                     children: [
                         (0, a.jsx)("div", { className: i()(J.DO, J.VR) }),
                         (0, a.jsxs)("div", {
-                            className: J.hG,
+                            className: J.A3,
                             children: [
                                 (0, a.jsx)("div", { className: i()(J.DO, J.Iz) }),
                                 (0, a.jsx)("div", { className: i()(J.DO, J.D_) }),
@@ -372,9 +372,14 @@ function er(e) {
         returnRef: h,
         "aria-label": z.intl.string(G.default.XKj5L9),
         children: [
-            (0, a.jsx)(el, { orbBalance: t, headerTagsContent: l }),
-            u ? null : s({ onClose: () => d(!0) }),
-            r,
+            (0, a.jsxs)("div", {
+                className: J.hG,
+                children: [
+                    (0, a.jsx)(el, { orbBalance: t, headerTagsContent: l }),
+                    u ? null : s({ onClose: () => d(!0) }),
+                ],
+            }),
+            (0, a.jsx)("div", { className: J.BA, children: r }),
             c,
         ],
     });
@@ -395,10 +400,10 @@ function ep(e) {
     let { analyticsLocations: t = [], shopTab: l = eA.G2.ORBS } = e;
     (0, em.Cz)({ tab: l, analyticsLocations: t, analyticsSource: d.A.ORBS_BALANCE_MENU });
 }
-function eL() {
+function ex() {
     (0, eg.mA)({ fromContent: ed.u.ORBS_BALANCE_MENU });
 }
-function ex(e) {
+function eL(e) {
     let { analyticsLocations: t = [] } = e;
     (0, eC.A)({ subscriptionTier: ef.pe.TIER_2, analyticsLocations: t });
 }
@@ -413,7 +418,7 @@ let ev = {
     },
     "1531422538125676709": (e) => {
         let { analyticsLocations: t } = e;
-        ex({ analyticsLocations: t });
+        eL({ analyticsLocations: t });
     },
 };
 var eO = l(49999),
@@ -525,7 +530,7 @@ function ey(e) {
             { analyticsPage: i, forceVisible: r, onClose: t, onCloseWallet: s },
             {
                 ctaClickHandler: n.useCallback(() => {
-                    ex({ analyticsLocations: c });
+                    eL({ analyticsLocations: c });
                 }, [c]),
                 dismissibleContent: ec.M.ORB_WALLET_NITRO_UPSELL_CTA_CARD,
                 ctaObject: d.A.ORB_WALLET_PRIMARY_CARD_NITRO_UPSELL_CTA,
@@ -644,7 +649,7 @@ function eP(e) {
             onClaim: eU,
         }),
         orbWalletFooter: (0, a.jsx)(ei, {
-            onQuestsClick: () => eL(),
+            onQuestsClick: () => ex(),
             onShopClick: () => ep({ analyticsLocations: [] }),
             totalOrbsRedeemed: r,
         }),
@@ -741,9 +746,9 @@ function eG(e) {
             onCloseWallet: i = q.tEg,
             isProfilePopout: r,
         } = e,
-        { balance: h } = (0, x.W0)(),
-        u = (0, L.H)({ location: "StatefulOrbWallet" }),
-        { totalRedeemed: E } = (0, x.rQ)({ disableFetch: !u }),
+        { balance: h } = (0, L.W0)(),
+        u = (0, x.H)({ location: "StatefulOrbWallet" }),
+        { totalRedeemed: E } = (0, L.rQ)({ disableFetch: !u }),
         g = (0, C.L)(ef.PremiumTypes.TIER_2),
         { analyticsLocations: v } = (0, m.Ay)(d.A.ORB_WALLET);
     n.useEffect(() => {
@@ -756,7 +761,7 @@ function eG(e) {
         }, [v, s, i]),
         T = n.useCallback(() => {
             ((0, p.Y)({ pageType: s, sectionType: d.A.ORB_WALLET_FOOTER, ctaObject: d.A.ORB_WALLET_QUEST_HOME_CTA }),
-                eL(),
+                ex(),
                 i("navigation"));
         }, [s, i]),
         N = n.useMemo(() => eM(g, h), [g, h]),

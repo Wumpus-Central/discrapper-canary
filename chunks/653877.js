@@ -1,5 +1,6 @@
 e.exports = {
     ql: "orbWalletContainer__81c60",
+    hG: "orbWalletSectionContainer__81c60",
     Ut: "orbWalletContainerLayout__81c60",
     SZ: "orbWalletHeader__81c60",
     ZX: "orbWalletHeaderContent__81c60",
@@ -8,6 +9,7 @@ e.exports = {
     Cb: "orbAsset__81c60",
     w9: "cusorPointer__81c60",
     lh: "nitroMultiplierPill__81c60",
+    BA: "orbChallengesCardContainer__81c60",
     E6: "orbChallengesCard__81c60",
     re: "orbChallengesNoticeContainer__81c60",
     Oi: "orbChallengesNoticeContainerSpacing__81c60",
@@ -24,7 +26,7 @@ e.exports = {
     gW: "skeletonChallengesCard__81c60",
     US: "skeletonRow__81c60",
     VR: "skeletonIcon__81c60",
-    hG: "skeletonText__81c60",
+    A3: "skeletonText__81c60",
     Iz: "skeletonTitle__81c60",
     D_: "skeletonSubtext__81c60",
     F4: "orbBalanceCounterText__81c60",

@@ -107,6 +107,11 @@
     box-shadow: var(--shadow-high)
 }
 
+.orbWalletSectionContainer__81c60 {
+    padding-inline: var(--space-16);
+    padding-inline-end: var(--space-16)
+}
+
 .orbWalletContainerLayout__81c60 {
     align-items: flex-start;
     align-self: start;
@@ -114,7 +119,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: var(--space-16);
+    padding-bottom: var(--space-16);
+    padding-top: var(--space-16);
     width: 340px
 }
 
@@ -175,13 +181,22 @@
     padding-inline: var(--space-6) var(--space-8)
 }
 
+.orbChallengesCardContainer__81c60 {
+    align-self: stretch;
+    border-bottom: 1px solid var(--border-subtle);
+    border-top: 1px solid var(--border-subtle);
+    margin-bottom: var(--space-16);
+    margin-top: var(--space-16);
+    padding-inline: var(--space-16);
+    padding-inline-end: var(--space-16)
+}
+
 .orbChallengesCard__81c60 {
     align-items: flex-start;
     align-self: stretch;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding-bottom: var(--space-16);
     padding-top: var(--space-16)
 }
 
@@ -232,6 +247,8 @@
 }
 
 .orbWalletFooterSection__81c60 {
+    padding-inline: var(--space-16);
+    padding-inline-end: var(--space-16);
     row-gap: var(--space-16)
 }
 
@@ -332,4 +349,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=40271.160dae194304a46d.css.map*/
+/*# sourceMappingURL=40271.a1464a36c141fb90.css.map*/
