@@ -9,13 +9,13 @@ async function s() {
     if (null == e) throw Error("Stripe is not loaded");
     return e;
 }
-async function o(e, t) {
+async function c(e, t) {
     let { error: r, paymentIntent: n } = await e.retrievePaymentIntent(t);
     if (null != r) throw Error(`Could not retrieve the payment intent: ${r.message}`);
     if (null == n) throw Error("Payment intent does not exist");
     return n;
 }
-async function c(e, t, r) {
+async function o(e, t, r) {
     let { error: n } = await e.confirmCardPayment(t, r);
     if (null != n) throw Error(`Card authentication failed: ${n.message}`);
 }
@@ -23,7 +23,7 @@ async function u(e) {
     let { client_secret: t, payment_method_id: r } = e;
     if (null == t) throw Error("Stripe 3DS context has no client secret");
     let n = await s(),
-        a = await o(n, t);
+        a = await c(n, t);
     switch (a.status) {
         case "succeeded":
         case "processing":
@@ -31,7 +31,7 @@ async function u(e) {
         case "requires_payment_method":
         case "requires_confirmation":
         case "requires_action":
-            return c(
+            return o(
                 n,
                 t,
                 (function (e, t) {
@@ -58,10 +58,10 @@ var _ = r(26279),
     E = r(375708);
 function R(e) {
     let { order: t, errorSource: r, onSignFailure: d, onError: s } = e,
-        [o, c] = (0, n.useState)(null),
+        [c, o] = (0, n.useState)(null),
         u = (0, n.useCallback)(
             (e) => {
-                (c(e), s?.(e));
+                (o(e), s?.(e));
             },
             [s],
         ),
@@ -82,7 +82,7 @@ function R(e) {
                     errorExtra: n,
                 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if (null == t) return (u(new a.Ay("Order not created yet")), { type: "failed" });
-                c(null);
+                o(null);
                 try {
                     let l = await (0, i.Ub)({ orderId: t.id, loadId: e, purchaseToken: r });
                     if (l.status === _.Re.SIGNED) return { type: "signed", order: l };
@@ -95,18 +95,14 @@ function R(e) {
                         }
                         return { type: "pending", order: l };
                     }
-                    if (null != l.errors && l.errors.includes(_.lD.SMITE_TOKEN_AUTHORIZATION_REQUIRED))
-                        return (
-                            u(
-                                new a.Ay(
-                                    E.intl.string(E.t.Y3fdOp),
-                                    a.Ay.ErrorCodes.PURCHASE_TOKEN_AUTHORIZATION_REQUIRED,
-                                ),
-                            ),
-                            { type: "failed" }
-                        );
-                    if (null != l.errors && l.errors.length > 0)
-                        throw Error(`Order signing failed with errors: ${l.errors.join(", ")}`);
+                    let d = (function (e) {
+                        let { error: t } = e;
+                        return null == t || t.code === _.lD.UNKNOWN_ERROR_CODE
+                            ? null
+                            : new a.Ay(t.message, t.billing_error_code);
+                    })(l);
+                    if (null != d) return (u(d), { type: "failed" });
+                    if (null != l.error) throw Error(`Order signing failed with error: ${l.error.code}`);
                     throw Error(`Unexpected order status: ${l.status}`);
                 } catch (e) {
                     if (e instanceof i.FY) return (d?.(e.order), u(e), { type: "failed" });
@@ -115,5 +111,5 @@ function R(e) {
             },
             [t, d, R, u],
         );
-    return { error: o, signOrder: C, reportError: R };
+    return { error: c, signOrder: C, reportError: R };
 }

@@ -2480,11 +2480,11 @@ Payment source changed.`);
         a(!0);
         try {
             let e = await lh(r);
-            if (null == e.errors) {
+            if (null == e.error) {
                 (i(`Order signed successfully! Order ID: ${r}`), o(null));
                 return;
             }
-            let t = e.errors[0];
+            let t = e.error.code;
             if (1e3 === t)
                 (i(`Order signing in progress!
 Order ID: ${r}
