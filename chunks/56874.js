@@ -3257,8 +3257,10 @@ function n_(e) {
                   if ("changes" !== t) return null;
                   for (let t = e.length - 1; t >= 0; t--) {
                       let l = e[t];
-                      if ("user" !== l.role && "publish_notice" !== l.kind && !0 !== l.interrupted)
-                          return (0, eS.BL)(l) ? l.render_id : null;
+                      if ("user" !== l.role && "publish_notice" !== l.kind && !0 !== l.interrupted) {
+                          if ((0, eS.BL)(l)) return l.render_id;
+                          if (!(0, eS.B0)(e, t)) break;
+                      }
                   }
                   return null;
               })(l, k)
