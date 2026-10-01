@@ -258,6 +258,11 @@
     bottom: 0
 }
 
+.listWrapper_e94b8c {
+    min-height: 0;
+    position: relative
+}
+
 .footerActions_e94b8c {
     margin-bottom: var(--custom-stickers-constants-sticker-picker-preview-margin)
 }
@@ -664,4 +669,4 @@
     gap: var(--space-4)
 }
 
-/*# sourceMappingURL=678906.cdacbf4ebd674b82.css.map*/
+/*# sourceMappingURL=678906.9086ceaa8d5b3f81.css.map*/
