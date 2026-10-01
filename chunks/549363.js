@@ -980,7 +980,7 @@ class te extends s.PureComponent {
                       null != l
                           ? s.push(N.intl.formatToPlainString(N.t["0wL/VI"], { tier: c?.name }))
                           : s.push(N.intl.string(N.t["9czSYu"])))
-                    : g.type;
+                    : (g.type, M.rzx.GAME_SERVER, g.type);
             ((t = 0 !== s.length ? s.join(", ") : u.description),
                 null == e &&
                     (e = (0, i.jsx)(ef.A, {

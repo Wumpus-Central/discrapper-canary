@@ -233,6 +233,7 @@ var ea = (((d = {})[(d.NEW = 1)] = "NEW"), (d[(d.FAILED_ADDRESS = 16)] = "FAILED
         (u[(u.GUILD = 2)] = "GUILD"),
         (u[(u.APPLICATION = 3)] = "APPLICATION"),
         (u[(u.GAME_SERVER = 4)] = "GAME_SERVER"),
+        (u[(u.GIFT = 5)] = "GIFT"),
         u),
     eo =
         (((_ = {}).PAYPAL_POPUP_CLOSED = "PAYPAL_POPUP_CLOSED"),
