@@ -942,6 +942,13 @@ let n = [
         summary: "The rune usage panel now shows Deciding, the quick checks that keep an eye on your builds.",
     },
     {
+        date: "2026-10-01",
+        time: "05:13",
+        platforms: ["desktop"],
+        summary:
+            "The settings form above the chat box now matches the question panel, and its channel list opens in full instead of being cut off.",
+    },
+    {
         date: "2026-09-18",
         time: "00:01",
         platforms: ["desktop", "mobile"],

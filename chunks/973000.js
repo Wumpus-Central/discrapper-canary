@@ -1,1 +1,1 @@
-_.exports = { Mk: "settingsCard__750bc", TS: "settingsCardHeader__750bc", p0: "settingsCardActions__750bc" };
+e.exports = { Mk: "settingsCard__750bc", p0: "settingsCardActions__750bc", DQ: "dockedBody__750bc" };
