@@ -383,11 +383,6 @@
     padding: 12px 16px
 }
 
-.upsellImage__73000 {
-    filter: saturate(var(--saturation-factor, 1));
-    margin-inline-end: 16px
-}
-
 .upsellHeader__73000 {
     margin-bottom: 8px
 }
@@ -875,4 +870,4 @@
     background-image: url(/assets/b00e3f0a7090b61f.svg)
 }
 
-/*# sourceMappingURL=4c3c5e1e334d1391.css.map*/
+/*# sourceMappingURL=7e85d81fde221122.css.map*/

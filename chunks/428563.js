@@ -10819,29 +10819,18 @@ function cP(e) {
         : (0, p.jsxs)("div", {
               className: cM.Zj,
               children: [
-                  (0, p.jsxs)("div", {
+                  (0, p.jsx)("div", {
                       className: cM.xw,
-                      children: [
-                          (0, p.jsx)("img", {
-                              src: "/assets/6faec807754b7e45.svg",
-                              alt: "",
-                              width: 60,
-                              className: cM.Tn,
-                          }),
-                          (0, p.jsxs)("div", {
-                              children: [
-                                  (0, p.jsx)(D.D, {
-                                      variant: "heading-md/semibold",
-                                      className: cM.$P,
-                                      children: el.intl.string(el.t["pR/Bge"]),
-                                  }),
-                                  (0, p.jsx)(G.E, {
-                                      variant: "text-sm/normal",
-                                      children: el.intl.string(el.t["V+Yo1l"]),
-                                  }),
-                              ],
-                          }),
-                      ],
+                      children: (0, p.jsxs)("div", {
+                          children: [
+                              (0, p.jsx)(D.D, {
+                                  variant: "heading-md/semibold",
+                                  className: cM.$P,
+                                  children: el.intl.string(el.t["pR/Bge"]),
+                              }),
+                              (0, p.jsx)(G.E, { variant: "text-sm/normal", children: el.intl.string(el.t["V+Yo1l"]) }),
+                          ],
+                      }),
                   }),
                   (0, p.jsx)("div", {
                       className: cM.kz,
@@ -16056,31 +16045,28 @@ function gG(e) {
 }
 function gD() {
     let e = "\u2022 ";
-    return (0, p.jsxs)("div", {
+    return (0, p.jsx)("div", {
         className: gR.lm,
-        children: [
-            (0, p.jsx)("img", { className: gR.kX, src: n(903702), alt: "wumpus" }),
-            (0, p.jsxs)("div", {
-                children: [
-                    (0, p.jsx)(D.D, {
-                        variant: "heading-md/semibold",
-                        color: "text-strong",
-                        className: gR.wx,
-                        children: el.intl.string(el.t.WslWRL),
-                    }),
-                    (0, p.jsxs)(G.E, {
-                        variant: "text-sm/medium",
-                        color: "text-default",
-                        children: [e, el.intl.string(el.t.z9k21H)],
-                    }),
-                    (0, p.jsxs)(G.E, {
-                        variant: "text-sm/medium",
-                        color: "text-default",
-                        children: [e, el.intl.string(el.t.t1Lele)],
-                    }),
-                ],
-            }),
-        ],
+        children: (0, p.jsxs)("div", {
+            children: [
+                (0, p.jsx)(D.D, {
+                    variant: "heading-md/semibold",
+                    color: "text-strong",
+                    className: gR.wx,
+                    children: el.intl.string(el.t.WslWRL),
+                }),
+                (0, p.jsxs)(G.E, {
+                    variant: "text-sm/medium",
+                    color: "text-default",
+                    children: [e, el.intl.string(el.t.z9k21H)],
+                }),
+                (0, p.jsxs)(G.E, {
+                    variant: "text-sm/medium",
+                    color: "text-default",
+                    children: [e, el.intl.string(el.t.t1Lele)],
+                }),
+            ],
+        }),
     });
 }
 function gO(e) {

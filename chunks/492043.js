@@ -3,7 +3,6 @@ e.exports = {
     m_: "subheader_a9b452",
     yj: "help_a9b452",
     RY: "helpSeparator_a9b452",
-    kX: "wumpus_a9b452",
     lm: "notice_a9b452",
     Qs: "content_a9b452",
     NQ: "review_a9b452",
