@@ -1,4 +1,4 @@
-(n.d(t, { A: () => V }), n(321073), n(938796));
+(n.d(t, { A: () => F }), n(321073), n(938796));
 var i = n(812729),
     r = n.n(i),
     a = n(435558),
@@ -10,75 +10,84 @@ var i = n(812729),
     u = n(182892),
     _ = n(587895),
     E = n(685396),
-    A = n(952818);
-let h = [n(732755).A],
-    I = [];
-function f() {
+    A = n(952818),
+    h = n(765741),
+    I = n(863160);
+let f = [n(732755).A],
+    p = [];
+function T() {
     let e = [];
-    for (let t of h) {
+    for (let t of f) {
         let n = t.getActivity();
         null != n && e.push(n);
     }
-    return !r()(e, I) && ((I = e), !0);
+    return !r()(e, p) && ((p = e), !0);
 }
-class p extends o.Ay.Store {
+class m extends o.Ay.Store {
     static displayName = "FirstPartyRichPresenceStore";
     initialize() {
-        this.syncWith(h, f);
+        this.syncWith(f, T);
     }
     getActivities() {
-        return I;
+        return p;
     }
 }
-let T = new p(d.h);
-var m = n(155718),
-    g = n(871633),
-    S = n(655116),
-    N = n(885386),
-    C = n(617617),
-    O = n(616356),
-    R = n(734057),
-    L = n(760751),
-    y = n(794383),
-    D = n(309010),
-    v = n(528767),
-    b = n(652215);
-let M = [],
-    P = {},
-    U = {},
-    w = 0,
-    G = {},
-    x = {},
-    k = null;
-function F() {
+let g = new m(d.h);
+var S = n(155718),
+    N = n(871633),
+    C = n(655116),
+    O = n(885386),
+    R = n(617617),
+    L = n(616356),
+    y = n(734057),
+    D = n(760751),
+    v = n(794383),
+    b = n(309010),
+    M = n(528767),
+    P = n(652215);
+let U = [],
+    w = {},
+    G = null;
+function x() {
     let e = [],
-        t = N.G2.getSetting();
+        t = O.G2.getSetting();
     null != t &&
         ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) &&
         e.push((0, E.F)(t));
-    let n = T.getActivities();
+    let n = g.getActivities();
     e.push(...n);
-    let i = y.A.getStream();
-    null != i && e.push({ type: b.$pd.STREAMING, ...i });
+    let i = v.A.getStream();
+    null != i && e.push({ type: P.$pd.STREAMING, ...i });
     let a = new Set();
-    s().forEach(P, (t) => {
+    s().forEach(w, (t) => {
         let [, n] = t;
         null != n.application_id && (a.add(n.name), e.push(n));
     });
-    let l = null != O.A.getCurrentUserActiveStream(),
+    let l = null != L.A.getCurrentUserActiveStream(),
         o = A.Ay.getVisibleGame();
     if (l) {
-        let e = O.A.getStreamerActiveStreamMetadata(),
+        let e = L.A.getStreamerActiveStreamMetadata(),
             t = A.Ay.getVisibleRunningGames(),
             n = null;
         (e?.pid != null && (n = t.find((t) => t.pid === e.pid) ?? null),
             null == n && e?.id != null && (n = t.find((t) => t.id === e.id) ?? null),
-            null != n ? (null == k && (k = n.start ?? Date.now()), (o = n)) : (k = null));
-    } else k = null;
-    let d =
+            null != n ? (null == G && (G = n.start ?? Date.now()), (o = n)) : (G = null));
+    } else G = null;
+    let d = null != o ? A.Ay.getSdkResolutionForPID(o.pid) : void 0,
+        c = null != d && d.type !== I.r.UNRESOLVED ? d.game.id : void 0,
+        u = M.A.getRemoteActivities(),
+        h =
+            null != c &&
+            [...e, ...u].some(
+                (e) =>
+                    e.application_id === c ||
+                    _.A.getApplication(e.application_id ?? void 0)?.getCanonicalGameId() === c,
+            ),
+        f =
             null != o &&
             null != o.name &&
-            (a.has(o.name) ||
+            (h ||
+                a.has(o.name) ||
                 (function (e, t) {
                     if (null === e.id || void 0 === e.id) return !1;
                     let n = _.A.getApplication(e.id);
@@ -90,122 +99,106 @@ function F() {
                             n.linkedGames.find((e) => {
                                 var n;
                                 return (
-                                    e.type === m.Mh.LINKED &&
+                                    e.type === S.Mh.LINKED &&
                                     ((n = e.id), null != t.find((e) => e.application_id === n))
                                 );
                             })
                     );
-                })(o, [...e, ...v.A.getRemoteActivities()])),
-        c = null != o && o.isLauncher;
-    if (null != o && null != o.name && !(d || (c && !l))) {
-        let t = L.A.findGame(o);
+                })(o, [...e, ...u])),
+        p = null != o && o.isLauncher;
+    if (null != o && null != o.name && !(f || (p && !l))) {
+        let t = D.A.findGame(o);
         e.push({
-            type: b.$pd.PLAYING,
+            type: P.$pd.PLAYING,
             name: o.name,
             application_id: o.id ?? t?.id,
-            timestamps: { start: k ?? o.start },
-            ...(0, g.CO)(o),
+            timestamps: { start: G ?? o.start },
+            ...(0, N.CO)(o),
         });
     }
-    let u = S.A.getActivity();
-    (null != u && e.push({ type: b.$pd.LISTENING, ...u }), r()(M, e) || (M = e));
+    let T = C.A.getActivity();
+    return (null != T && e.push({ type: P.$pd.LISTENING, ...T }), !r()(U, e) && ((U = e), !0));
 }
-class B extends o.Ay.Store {
+class k extends o.Ay.Store {
     static displayName = "LocalActivityStore";
     initialize() {
-        (this.waitFor(_.A, O.A, R.A, c.Ay, y.A, T, L.A, A.Ay, D.Ay, v.A, S.A, C.A), this.syncWith([T], () => F()));
+        (this.waitFor(_.A, L.A, y.A, c.Ay, v.A, g, D.A, A.Ay, b.Ay, M.A, h.A, C.A, R.A), this.syncWith([g], () => x()));
     }
     getActivities() {
-        return M;
+        return U;
     }
     getPrimaryActivity() {
-        return M[0];
+        return U[0];
     }
     getApplicationActivity(e) {
         return this.findActivity((t) => t.application_id === e);
     }
     getCustomStatusActivity() {
-        return this.findActivity((e) => e.type === b.$pd.CUSTOM_STATUS);
+        return this.findActivity((e) => e.type === P.$pd.CUSTOM_STATUS);
     }
     findActivity(e) {
-        return M.find(e);
+        return U.find(e);
     }
     getApplicationActivities() {
-        return P;
+        return w;
     }
     getActivityForPID(e) {
-        for (let [t, n] of Object.values(P)) if (t === e) return n;
+        for (let [t, n] of Object.values(w)) if (t === e) return n;
         return null;
     }
-    getApplicationIdForPID(e) {
-        let t = x[e];
-        for (let [n, [i, r]] of Object.entries(U))
-            if (i === e) {
-                let e = G[n];
-                if (null == t || e === t) return r;
-            }
-    }
 }
-let V = new B(d.h, {
-    ROBLOX_SUBGAME_UPDATE: F,
-    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: F,
+let F = new k(d.h, {
+    ROBLOX_SUBGAME_UPDATE: x,
+    ROBLOX_SUBGAME_APPLICATION_FETCH_SUCCESS: x,
     OVERLAY_INITIALIZE: function (e) {
         let { localActivities: t } = e;
-        ((P = { ...t }), F());
+        ((w = { ...t }), x());
     },
     START_SESSION: function () {
-        ((P = {}), (U = {}), (w = 0), (G = {}), (x = {}), F());
+        ((w = {}), x());
     },
     LOCAL_ACTIVITY_UPDATE: function (e) {
-        let { socketId: t, pid: n, applicationId: i, activity: a, partyPrivacy: s } = e,
-            l = G[t];
-        null == l && ((l = ++w), (G[t] = l));
-        let o = !1;
-        if (null != n) {
-            let e = x[n],
-                t = null != e && Object.keys(U).some((t) => G[t] === e);
-            (null == e || l >= e || !t) && ((o = l !== e), (x[n] = l));
-        }
-        let d = null == a ? null == P[t] : r()(P[t], [n, a, s]),
-            c = null == i || r()(U[t], [n, i]);
-        if (d && c && !o) return !1;
-        (null != i && (U[t] = [n, i]), null != a ? (P[t] = [n, a, s]) : delete P[t], F());
-    },
-    RPC_APP_CONNECTED: function (e) {
-        let { socketId: t } = e;
-        G[t] = ++w;
+        let { socketId: t, pid: n, activity: i, partyPrivacy: a } = e,
+            s = null == i ? null == w[t] : r()(w[t], [n, i, a]);
+        s || (null != i ? (w[t] = [n, i, a]) : delete w[t]);
+        let l = x();
+        return !s || l;
     },
     RPC_APP_DISCONNECTED: function (e) {
         let { socketId: t } = e;
-        (delete P[t], delete U[t], F());
+        (delete w[t], x());
     },
-    RUNNING_GAMES_CHANGE: F,
-    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: F,
-    SPOTIFY_PLAYER_STATE: F,
-    SPOTIFY_PLAYER_PLAY: F,
-    STREAMING_UPDATE: F,
-    USER_CONNECTIONS_UPDATE: F,
-    STREAM_START: F,
-    STREAM_STOP: F,
+    RUNNING_GAMES_CHANGE: x,
+    SOCIAL_SDK_GAMES_UPDATE: x,
+    APPLICATION_FETCH_SUCCESS: x,
+    APPLICATIONS_FETCH_SUCCESS: x,
+    GAMES_DATABASE_UPDATE: x,
+    LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: x,
+    SPOTIFY_PLAYER_STATE: x,
+    SPOTIFY_PLAYER_PLAY: x,
+    STREAMING_UPDATE: x,
+    USER_CONNECTIONS_UPDATE: x,
+    STREAM_START: x,
+    STREAM_STOP: x,
     USER_SETTINGS_PROTO_UPDATE: function () {
         (!(function () {
             let e = {},
                 t = !1;
-            for (let [n, [i, r, a]] of Object.entries(P)) {
+            for (let [n, [i, r, a]] of Object.entries(w)) {
                 let s = r.flags ?? 0,
                     o = (0, u.E)(
                         r,
-                        (0, l.Lt)(r?.flags ?? 0, b.jUm.INSTANCE),
-                        r.platform === b.yTV.EMBEDDED,
+                        (0, l.Lt)(r?.flags ?? 0, P.jUm.INSTANCE),
+                        r.platform === P.yTV.EMBEDDED,
                         (0, u.e)(r),
                         a,
                     );
                 o !== s ? ((e[n] = [i, { ...r, flags: o }, a]), (t = !0)) : (e[n] = [i, r, a]);
             }
-            t && (P = e);
+            t && (w = e);
         })(),
-            F());
+            x());
     },
-    EMBEDDED_ACTIVITY_CLOSE: F,
-    RUNNING_GAME_TOGGLE_DETECTION: F,
+    EMBEDDED_ACTIVITY_CLOSE: x,
+    RUNNING_GAME_TOGGLE_DETECTION: x,
 });

@@ -658,7 +658,15 @@ let r = {
         neverLoadBeforeConnectionOpen: !0,
     },
     DetectableGamesManager: {
-        actions: ["POST_CONNECTION_OPEN", "RUNNING_GAMES_CHANGE", "LOCAL_ACTIVITY_UPDATE"],
+        actions: [
+            "POST_CONNECTION_OPEN",
+            "RUNNING_GAMES_CHANGE",
+            "LOCAL_ACTIVITY_UPDATE",
+            "START_SESSION",
+            "RPC_APP_DISCONNECTED",
+            "APPLICATION_FETCH_SUCCESS",
+            "APPLICATIONS_FETCH_SUCCESS",
+        ],
         inlineRequire: () => n(296797).A,
         neverLoadBeforeConnectionOpen: !0,
     },

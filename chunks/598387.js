@@ -14750,7 +14750,7 @@ function xS(e) {
                     (0, A.jsxs)("div", {
                         className: ic()(xh.$K, xE.Vd),
                         children: [
-                            o.verified && !s
+                            null != o.processGame || (o.verified && !s)
                                 ? (0, A.jsxs)("div", {
                                       className: xh.HS,
                                       children: [

@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 626748, Version Hash: 435f409863797c58668dadb90e2cc5c4ca5c75b0`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 626749, Version Hash: 7b7ac48972508de36bffed4e22ab4a1aa47eca1d`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -22101,7 +22101,7 @@ let Ca = "isHideDevBanner",
                     className: to()(Cr.Wz, Cr.mr),
                     children: [
                         (0, y.jsx)(Ci, { className: Cr.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "626748" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "626749" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -31423,7 +31423,7 @@ var L6 = n(159730),
     ys = n(635233),
     yl = n(953384),
     yo = n(973522),
-    yd = n(605404),
+    yd = n(863160),
     yc = n(136722),
     yu = n(808728),
     y_ = n(698441),
@@ -31453,48 +31453,49 @@ async function yO(e) {
             voiceChannelGuildId: c,
             reportedGameId: u,
             reportedGameName: _,
-            verified: E,
+            detectedGameId: E,
+            verified: A,
         } = e,
-        [A, h] = await Promise.all([
+        [h, I] = await Promise.all([
             (0, yp.E1)(t.pid),
             nO.Ay.canCollectExecutableFingerprintsForRunningGames()
                 ? ex.Ay.getExecutableFingerprintForProcess(t.pid)
                 : Promise.resolve(null),
         ]),
-        { gameName: I, gameId: f, exe: p, distributor: T, rawExePath: m } = (0, yo.wH)(t),
-        g = r.enabledLegacy || r.enabledOOP,
-        S = yh.x.legacyEnabled || yh.x.oopEnabled,
-        N = r.source;
+        { gameName: f, gameId: p, exe: T, distributor: m, rawExePath: g } = (0, yo.wH)(t),
+        S = r.enabledLegacy || r.enabledOOP,
+        N = yh.x.legacyEnabled || yh.x.oopEnabled,
+        C = r.source;
     (B.default.track(F.HAw.LAUNCH_GAME, {
-        game: _ ?? I,
-        game_id: u ?? f,
-        verified: E ?? (null != n && (0, yo.PQ)(m, n?.executables)),
+        game: _ ?? f,
+        game_id: u ?? p,
+        verified: A ?? (null != n && (0, yo.PQ)(g, n?.executables)),
         elevated: t.elevated,
         is_launcher: t?.isLauncher ?? !1,
         game_platform: F.yTV.DESKTOP,
         detection_method: i,
-        distributor: T,
-        is_overlay_enabled: S,
-        is_overlay_game_enabled: g,
-        is_overlay_game_source: N,
-        fullscreen_type: null != A ? L7.aI[A] : L7.aI.UNKNOWN.toString(),
+        distributor: m,
+        is_overlay_enabled: N,
+        is_overlay_game_enabled: S,
+        is_overlay_game_source: C,
+        fullscreen_type: null != h ? L7.aI[h] : L7.aI.UNKNOWN.toString(),
         hardware_display_count: (await ef.A?.hardware?.getDisplayCount?.()) ?? null,
         overlay_method: yI.Ue[a] ?? (__OVERLAY__ ? yI.Ue[yI.Ue.Hook] : null),
         activity_status_enabled: eS.tz.getSetting(),
         activity_status_shared_guilds: s,
         current_user_status: nz.A.getStatus(),
         game_detection_enabled: (0, nO.Xr)(t),
-        executable_path: p,
+        executable_path: T,
         voice_channel_id: l,
         voice_channel_type: o,
         voice_channel_bitrate: d,
         voice_channel_guild_id: c,
         distributor_game_id: t.sku,
         hidden_by_distributor: t.hidden,
-        game_metadata: (0, yo.EQ)(t, null != u, f),
-        executable_fingerprint: h ?? t.executableFingerprint,
+        game_metadata: (0, yo.EQ)(t, null != u, E),
+        executable_fingerprint: I ?? t.executableFingerprint,
     }),
-        null != p && nO.Ay.addExecutableTrackedByAnalytics(p));
+        null != T && nO.Ay.addExecutableTrackedByAnalytics(T));
 }
 async function yR(e) {
     let {
@@ -31527,7 +31528,8 @@ async function yR(e) {
 }
 class yL extends eE.PureComponent {
     isMessageRequestsInitialized = !1;
-    launchGameScheduler = new yd.Gl();
+    pendingDetectedLaunchTimeouts = new Map();
+    launchIdentityKeys = new Map();
     debouncedRobloxAnalytics = nw().debounce(yO, 5e3);
     scheduleLaunchGameAnalytics(e) {
         let {
@@ -31536,48 +31538,51 @@ class yL extends eE.PureComponent {
                 detectionMethod: i,
                 reportedGameId: r,
                 reportedGameName: a,
-                verified: s,
-                debounceRoblox: l = !1,
-                identityKey: o,
-                usesSocialSdk: d,
+                detectedGameId: s,
+                verified: l,
+                debounceRoblox: o = !1,
+                identityKey: d,
+                usesSocialSdk: c,
             } = e,
-            { voiceChannelId: c, voiceChannelGuildId: u, voiceChannelType: _, voiceChannelBitrate: E } = this.props,
-            A = eZ.A.getGuildIds(),
-            h = eS.JG.getSetting(),
-            I = A.filter((e) => !h.includes(e)).slice(0, 200),
-            f = yf.default.getTrackedGameByPid(t.pid),
-            p = (0, nO.hw)(t),
-            T = {
-                enabledOOP: f?.oopEnabled ?? p.enabledOOP,
-                enabledLegacy: f?.legacyEnabled ?? p.enabledLegacy,
-                overlayMethod: f?.overlayMethod ?? p.overlayMethod,
-                source: f?.source ?? p.source,
+            { voiceChannelId: u, voiceChannelGuildId: _, voiceChannelType: E, voiceChannelBitrate: A } = this.props,
+            h = eZ.A.getGuildIds(),
+            I = eS.JG.getSetting(),
+            f = h.filter((e) => !I.includes(e)).slice(0, 200),
+            p = yf.default.getTrackedGameByPid(t.pid),
+            T = (0, nO.hw)(t),
+            m = {
+                enabledOOP: p?.oopEnabled ?? T.enabledOOP,
+                enabledLegacy: p?.legacyEnabled ?? T.enabledLegacy,
+                overlayMethod: p?.overlayMethod ?? T.overlayMethod,
+                source: p?.source ?? T.source,
                 reason: "ChatAutoAnalytics",
             },
-            m = yf.default.getOverlayMethod(t.pid) ?? T.overlayMethod;
-        this.launchGameScheduler.schedule({
-            pid: t.pid,
-            identityKey: o,
-            usesSocialSdk: d,
-            delayMs: 1e4,
-            callback: () => {
-                (l && t.distributor === F.d3x.ROBLOX ? this.debouncedRobloxAnalytics : yO)({
-                    runningGame: t,
-                    game: n,
-                    detectionMethod: i,
-                    overlayStatus: T,
-                    overlayMethod: m,
-                    sharedGuildIds: I,
-                    voiceChannelId: c,
-                    voiceChannelType: _,
-                    voiceChannelBitrate: E,
-                    voiceChannelGuildId: u,
-                    reportedGameId: r,
-                    reportedGameName: a,
-                    verified: s,
-                });
-            },
-        });
+            g = yf.default.getOverlayMethod(t.pid) ?? m.overlayMethod,
+            { pid: S } = t,
+            N = setTimeout(() => {
+                (this.pendingDetectedLaunchTimeouts.get(S) === N && this.pendingDetectedLaunchTimeouts.delete(S),
+                    (o && t.distributor === F.d3x.ROBLOX ? this.debouncedRobloxAnalytics : yO)({
+                        runningGame: t,
+                        game: n,
+                        detectionMethod: i,
+                        overlayStatus: m,
+                        overlayMethod: g,
+                        sharedGuildIds: f,
+                        voiceChannelId: u,
+                        voiceChannelType: E,
+                        voiceChannelBitrate: A,
+                        voiceChannelGuildId: _,
+                        reportedGameId: r,
+                        reportedGameName: a,
+                        detectedGameId: s,
+                        verified: l,
+                    }));
+            }, 1e4);
+        if (c) {
+            let e = this.pendingDetectedLaunchTimeouts.get(S);
+            null != e && (clearTimeout(e), this.pendingDetectedLaunchTimeouts.delete(S));
+        } else this.pendingDetectedLaunchTimeouts.set(S, N);
+        this.launchIdentityKeys.set(S, d);
     }
     componentDidUpdate(e) {
         let {
@@ -31589,13 +31594,10 @@ class yL extends eE.PureComponent {
             isScreenSharing: s,
             runningGame: l,
             runningGamePid: o,
-            sdkApplicationId: d,
-            sdkCanonicalGameId: c,
-            sdkCanonicalGameName: u,
-            runningNonGame: _,
-            selectedChannelId: E,
-            selectedGuildId: A,
-            connected: h,
+            runningNonGame: d,
+            selectedChannelId: c,
+            selectedGuildId: u,
+            connected: _,
         } = this.props;
         if (e.voiceChannelId !== t && null != e.voiceChannelId) {
             let t = nO.Ay.getCurrentGameForAnalytics(),
@@ -31653,57 +31655,49 @@ class yL extends eE.PureComponent {
                     ...(0, aE.JK)(n, t, a),
                 }));
         }
-        let I =
-                l?.distributor === e.runningGame?.distributor &&
-                l?.sku === e.runningGame?.sku &&
-                l?.name === e.runningGame?.name,
-            f = null != e.runningGame && null != l && e.runningGame.isLauncher !== l.isLauncher,
-            p = e.runningGame !== l && null != l && !l.isLauncher && (!I || f),
-            T = e.sdkApplicationId !== d || e.sdkCanonicalGameId !== c || e.sdkCanonicalGameName !== u;
+        let E = null != l ? (0, yd.Un)(l) : l,
+            A = null != e.runningGame ? (0, yd.Un)(e.runningGame) : e.runningGame,
+            h = E?.distributor === A?.distributor && E?.sku === A?.sku && E?.name === A?.name,
+            I = null != A && null != E && A.isLauncher !== E.isLauncher,
+            f = e.runningGame !== l && null != l && !l.isLauncher && (!h || I);
         if (
-            (null != e.runningGame &&
-                e.runningGame.pid !== l?.pid &&
-                this.launchGameScheduler.clearIdentity(e.runningGame.pid),
+            (null != e.runningGame && e.runningGame.pid !== l?.pid && this.launchIdentityKeys.delete(e.runningGame.pid),
             null != l && !l.isLauncher)
         ) {
-            let e = (0, yd.ME)(l),
-                t = (0, yd.Xv)(e),
-                n = e.usesSocialSdk && T && this.launchGameScheduler.getIdentityKey(l.pid) !== t;
-            if (p || n) {
-                let n,
-                    i = e.usesSocialSdk || null == e.gameId ? null : ym.A.getDetectableGame(e.gameId),
-                    r = nO.Ay.getOverrideForGame(l);
-                ((n = e.usesSocialSdk
-                    ? "social_sdk"
-                    : null != r
-                      ? "custom_override"
-                      : null != i
-                        ? "verified_game"
-                        : "launcher"),
+            let t = null != l.processGame,
+                { gameId: n, gameName: i } = (0, yo.wH)(l),
+                r = null != n ? `id:${n}` : `name:${i ?? ""}`,
+                a = t && e.runningGame !== l && this.launchIdentityKeys.get(l.pid) !== r;
+            if (f || a) {
+                let e,
+                    a = t || null == n ? null : ym.A.getDetectableGame(n),
+                    s = nO.Ay.getOverrideForGame(l);
+                ((e = t ? "social_sdk" : null != s ? "custom_override" : null != a ? "verified_game" : "launcher"),
                     this.scheduleLaunchGameAnalytics({
                         runningGame: l,
-                        game: i,
-                        detectionMethod: n,
-                        reportedGameId: e.usesSocialSdk ? e.gameId : void 0,
-                        reportedGameName: e.usesSocialSdk ? e.gameName : void 0,
-                        verified: !!e.usesSocialSdk || void 0,
-                        debounceRoblox: !e.usesSocialSdk,
-                        identityKey: t,
-                        usesSocialSdk: e.usesSocialSdk,
+                        game: a,
+                        detectionMethod: e,
+                        reportedGameId: t ? n : void 0,
+                        reportedGameName: t ? i : void 0,
+                        detectedGameId: t ? (0, yo.wH)(E).gameId : void 0,
+                        verified: !!t || void 0,
+                        debounceRoblox: !t,
+                        identityKey: r,
+                        usesSocialSdk: t,
                     }));
             }
         }
-        if (p && null != l && null != l.name && null != o && ym.A.shouldReport(l)) {
-            let e = l.name;
+        if (f && null != E && null != E.name && null != o && ym.A.shouldReport(E)) {
+            let e = E.name;
             oc.Ay.identifyGame(o, e)
                 .then((e) => oc.Ay.reportUnverifiedGame(e))
                 .catch((e) => new eW.A("AutoAnalytics").error("Cannot identify game", e));
         }
-        if (e.runningNonGame !== _ && _?.id != null && e.runningNonGame?.id !== _.id) {
-            let e = yl.A.getById(_.id);
+        if (e.runningNonGame !== d && d?.id != null && e.runningNonGame?.id !== d.id) {
+            let e = yl.A.getById(d.id);
             null != e &&
                 yR({
-                    runningNonGame: _,
+                    runningNonGame: d,
                     nonGameApplication: e,
                     voiceChannelId: t,
                     voiceChannelType: i,
@@ -31726,7 +31720,7 @@ class yL extends eE.PureComponent {
                     ...(0, aE.QS)(t),
                 }));
         }
-        if (h && null != E && (!e.connected || E !== e.selectedChannelId || A !== e.selectedGuildId)) {
+        if (_ && null != c && (!e.connected || c !== e.selectedChannelId || u !== e.selectedGuildId)) {
             let t = e.selectedChannelId,
                 n = n$.A.getChannel(t),
                 i = eZ.A.getGuild(n?.getGuildId());
@@ -31786,19 +31780,15 @@ function yy() {
             }),
             [],
         ),
-        T = (0, ed.bG)([oT.A], () => (null != f ? oT.A.getApplicationIdForPID(f.pid) : null), [f]),
-        m = (0, aA.h)(T),
-        g = m?.getCanonicalGameId() ?? null,
-        S = (0, ed.bG)([ym.A], () => ym.A.getDetectableGame(g) ?? null, [g]),
-        N =
+        T =
             0 === (e = (0, ed.bG)([yu.Ay], () => yu.Ay.getChannels(l)[yu.I6] ?? [], [l])).length
                 ? 0
                 : e.filter((e) => {
                       let { channel: t } = e;
                       return om.A.can(yc.kg(F.xBc.SEND_MESSAGES, F.xBc.VIEW_CHANNEL), t);
                   }).length,
-        C = (0, ed.bG)([gP.A], () => gP.A.getMessageRequestsCount(), []),
-        O = {
+        m = (0, ed.bG)([gP.A], () => gP.A.getMessageRequestsCount(), []),
+        g = {
             selectedChannelId: n,
             isNSFWChannel: a,
             selectedGuildId: l,
@@ -31813,9 +31803,6 @@ function yy() {
             voiceChannelBitrate: s?.bitrate,
             runningGame: f,
             runningGamePid: null != f ? f.pid : null,
-            sdkApplicationId: T,
-            sdkCanonicalGameId: g,
-            sdkCanonicalGameName: S?.name ?? null,
             runningNonGame: p,
             gamePlatform: (0, oU.A)(I),
             gameName: null != I ? I.name : null,
@@ -31823,9 +31810,9 @@ function yy() {
             gameExeName: null != f ? f.exeName : null,
             hasPreviewEnabled: o?.features.has(F.GuildFeatures.PREVIEW_ENABLED),
             isMemberPending: c,
-            postableChannelCount: N,
+            postableChannelCount: T,
             isTextInVoice: r,
-            numMessageRequests: C,
+            numMessageRequests: m,
         };
     return (
         !(function (e) {
@@ -31936,8 +31923,8 @@ function yy() {
                         num_message_requests: t.current.numMessageRequests,
                     }));
             }, [n, l, r]);
-        })(O),
-        (0, y.jsx)(yL, { ...O })
+        })(g),
+        (0, y.jsx)(yL, { ...g })
     );
 }
 var yD = n(844222),
