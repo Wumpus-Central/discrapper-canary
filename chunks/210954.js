@@ -11,8 +11,8 @@ var r = n(503698),
     u = n(272812),
     _ = n(461782),
     E = n(334463),
-    A = n(91242),
-    h = n(812901),
+    A = n(343030),
+    h = n(91242),
     I = n(317608),
     f = n(113192),
     p = n(165610),
@@ -25,7 +25,7 @@ function N(e) {
     return (0, i.jsx)("div", { onMouseMove: t, onMouseDown: t, onMouseLeave: n, className: g.IU });
 }
 function C() {
-    let e = (0, s.bG)([A.A], () => (0, p.ny)(A.A.getMainFrame())),
+    let e = (0, s.bG)([h.A], () => (0, p.ny)(h.A.getMainFrame())),
         t = (0, d.h)(e?.applicationId),
         n = (0, s.bG)([c.A], () => c.A.getWindowOpen(T.MLl.ACTIVITY_POPOUT)),
         r = (0, s.bG)([E.A], () => E.A.isFrameHidden());
@@ -44,7 +44,7 @@ function C() {
                     o ? (0, i.jsx)(N, { onActive: s, onForceIdle: l }) : null,
                     (0, i.jsx)(I.A, {
                         frameId: e.id,
-                        level: h.A.AboveAppContent,
+                        level: A.A.AboveAppContent,
                         className: a()(g.pU, { [g.p0]: o }),
                         overlay: o
                             ? (0, i.jsx)("div", {

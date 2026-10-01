@@ -569,7 +569,7 @@ class eC extends u.A {
         let { nonce: t, applicationId: n } = e;
         eE(n, t);
     };
-    superHandleRPCDisconnect = (e) => {
+    handleRPCDisconnect = (e) => {
         let { reason: t, application: n } = e,
             i = n.id;
         if (null != i && null != t) {

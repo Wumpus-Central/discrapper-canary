@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 627334, Version Hash: c5ad1a1db4e4ac599715ef2645c9d75428ffb3d8`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 627336, Version Hash: 97686cd53ce9bfad2c4023d82c98558b4bf17cae`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -22101,7 +22101,7 @@ let Cd = "isHideDevBanner",
                     className: to()(Co.Wz, Co.mr),
                     children: [
                         (0, y.jsx)(Cl, { className: Co.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "627334" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "627336" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -43668,12 +43668,9 @@ class wy extends et.EventEmitter {
         var e = this;
         return function (t, n) {
             let i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-            (e.emit("disconnect", t, i ? void 0 : n), t.close(n.code, n.message ?? "Unknown"));
-            let [r] = Array.from(wO.entries()).find((e) => {
-                let [n, i] = e;
-                return i === t;
-            }) ?? [null, null];
-            null != r && wO.delete(r);
+            (e.emit("disconnect", t, i ? void 0 : n),
+                i || t.close(n.code, n.message ?? "Unknown"),
+                wO.delete(t.source.iframeId));
         };
     })();
     handleIFrameMount = (e) => {
@@ -43694,13 +43691,8 @@ class wy extends et.EventEmitter {
     handleIFrameUnmount = (e) => {
         let { id: t } = e;
         wR.delete(t);
-        let [n, i] = Array.from(wO.entries()).find((e) => {
-            let [n, i] = e;
-            return i.source.iframeId === t;
-        }) ?? [null, null];
-        null != i &&
-            null != n &&
-            (this.disconnectSocket(i, { code: F.YI$.CLOSE_NORMAL, message: "iFrame gone" }, !0), wO.delete(n));
+        let n = wO.get(t);
+        null != n && this.disconnectSocket(n, { code: F.YI$.CLOSE_NORMAL, message: "iFrame gone" }, !0);
     };
     handleMessage = (e, t, n) => {
         let i = wO.get(t.iframeId);
@@ -49796,7 +49788,7 @@ var F0 = n(670735),
     F5 = n(256693),
     F6 = n(51250),
     F4 = n(908700),
-    F7 = n(649248);
+    F7 = n(558960);
 function F8(e) {
     let [t] = eE.useState(() => {
             let t = document.createElement("div");
@@ -49806,8 +49798,8 @@ function F8(e) {
         r = eE.useCallback(
             (n) => {
                 null != n
-                    ? (F7.A.registerPoolEntry(e, { container: t, overlay: n }), i(!0))
-                    : (F7.A.removePoolEntry(e), i(!1));
+                    ? (F7.A.registerFrameEntry(e, { container: t, overlay: n }), i(!0))
+                    : (F7.A.removeFrameEntry(e), i(!1));
             },
             [t, e],
         );

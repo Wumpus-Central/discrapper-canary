@@ -71,10 +71,6 @@ class O extends h.Ay {
             i = (0, T.A)(t.id, n);
         (0, p.bK)(i);
     }
-    handleRPCDisconnect = (e) => {
-        let { reason: t, application: n } = e;
-        this.superHandleRPCDisconnect({ reason: t, application: n });
-    };
     releaseWebView() {}
     handlePopoutWindowOpen = (e) => {
         let { key: t } = e;
