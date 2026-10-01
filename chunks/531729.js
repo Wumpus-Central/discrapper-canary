@@ -1,4 +1,4 @@
-n.d(t, { default: () => z, d: () => F });
+n.d(t, { default: () => V, d: () => H });
 var l = n(477900),
     i = n(582128),
     s = n(189213),
@@ -11,47 +11,51 @@ var l = n(477900),
     m = n(408018),
     h = n(479909),
     x = n(376310),
-    g = n(747926),
-    f = n(55294),
-    j = n(807632),
-    v = n(17928),
-    p = n(454292),
-    A = n(985253),
-    C = n(659617),
-    N = n(480595),
-    b = n(461213),
-    E = n(652215),
-    S = n(834730),
-    y = n(123292),
-    T = n(688810),
-    I = n(359800),
-    _ = n(206828),
-    k = n(769015),
-    M = n(490094),
-    R = n(375708),
-    w = n(425256);
-function L(e) {
+    g = n(230397),
+    f = n(747926),
+    j = n(55294),
+    v = n(807632),
+    p = n(17928),
+    A = n(454292),
+    C = n(960850),
+    N = n(985253),
+    b = n(659617),
+    E = n(480595),
+    S = n(461213),
+    y = n(101392),
+    T = n(652215),
+    I = n(746080),
+    _ = n(834730),
+    k = n(123292),
+    M = n(688810),
+    R = n(359800),
+    w = n(206828),
+    L = n(769015),
+    P = n(490094),
+    D = n(375708),
+    O = n(425256);
+function G(e) {
     let t,
         { application: n, size: i = "md", analyticsLocation: s = d.A.GAME_INVITE_CHANNEL_ACCOUNT_LINK_BANNER } = e,
-        { analyticsLocations: a } = (0, T.Ay)(s),
-        { canStartAuthorization: r, hasAlreadyLinked: o, startAuthorization: c, fetched: u } = (0, _.RD)(n),
-        m = (0, I.z)(c, o);
+        { analyticsLocations: a } = (0, M.Ay)(s),
+        { canStartAuthorization: r, hasAlreadyLinked: o, startAuthorization: c, fetched: u } = (0, w.RD)(n),
+        m = (0, R.z)(c, o);
     if (!u || !r || o) return null;
     let h = !1;
     return (
         "sm" === i
-            ? (t = R.intl.format(M.default.vznMVa, { onClick: () => m({ analyticsLocations: a }) }))
-            : ((t = R.intl.string(M.default.UHF2Zn)), (h = !0)),
+            ? (t = D.intl.format(P.default.vznMVa, { onClick: () => m({ analyticsLocations: a }) }))
+            : ((t = D.intl.string(P.default.UHF2Zn)), (h = !0)),
         (0, l.jsxs)("div", {
-            className: w._,
+            className: O._,
             children: [
-                (0, l.jsx)(k.A, { game: n, size: k.M.MEDIUM }),
-                (0, l.jsx)(S.E, { variant: "text-sm/medium", color: "text-default", className: w.d, children: t }),
+                (0, l.jsx)(L.A, { game: n, size: L.M.MEDIUM }),
+                (0, l.jsx)(_.E, { variant: "text-sm/medium", color: "text-default", className: O.d, children: t }),
                 h
-                    ? (0, l.jsx)(y.Q, {
+                    ? (0, l.jsx)(k.Q, {
                           variant: "primary",
                           size: "sm",
-                          text: R.intl.string(M.default.EBSaL4),
+                          text: D.intl.string(P.default.EBSaL4),
                           onClick: () => m({ analyticsLocations: a }),
                       })
                     : null,
@@ -60,56 +64,62 @@ function L(e) {
     );
 }
 n(253913);
-var P = n(548759);
-let D = u.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
-    O = "create-game-invite-post";
-function F(e) {
+var F = n(548759);
+let z = u.oU.CREATE_GAME_INVITE_POST_DESCRIPTION,
+    U = "create-game-invite-post";
+function H(e) {
     (0, a.openModalLazy)(
         async () => {
             let { default: t } = await Promise.resolve().then(n.bind(n, 531729));
             return (n) => (0, l.jsx)(t, { ...n, parentChannel: e });
         },
-        { modalKey: O },
+        { modalKey: U },
     );
 }
-let G = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
-function z(e) {
+let B = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
+function V(e) {
     let { parentChannel: t, transitionState: n, onClose: a } = e,
         u = i.useMemo(() => t.availableTags ?? [], [t.availableTags]),
-        [{ textValue: S, richValue: y }, T] = i.useState(() => (0, m.N3)()),
-        [I, _] = i.useState(!1),
-        [k, w] = i.useState(() => new Set()),
-        F = (0, j.t4)(k),
+        [{ textValue: _, richValue: k }, M] = i.useState(() => (0, m.N3)()),
+        [R, w] = i.useState(!1),
+        [L, O] = i.useState(() => new Set()),
+        H = (0, v.t4)(L),
         {
-            application: z,
-            noMicTag: U,
-            voiceChatEnabled: H,
-            voiceToggleDisabled: B,
-            submitting: V,
-            canSubmit: W,
-            submit: $,
+            application: V,
+            noMicTag: W,
+            voiceChatEnabled: $,
+            voiceToggleDisabled: q,
+            isTagRequired: K,
+            hasTagRequiredError: Y,
+            isSlowmodeEnabled: Q,
+            rateLimitPerUser: X,
+            slowmodeCooldownGuess: J,
+            isBypassSlowmode: Z,
+            submitting: ee,
+            canSubmit: et,
+            submit: en,
         } = (function (e) {
             let { parentChannel: t, description: n, appliedTagIds: l, upload: s, onThreadCreated: a } = e,
-                { application: r } = (0, j._k)(t.id),
-                o = (0, A.T)(t.gameId),
-                c = (0, v.bG)(
-                    [N.A, b.A],
+                { application: r } = (0, v._k)(t.id),
+                o = (0, N.T)(t.gameId),
+                c = (0, p.bG)(
+                    [E.A, S.A],
                     () => {
                         for (let e of o) {
-                            let t = (0, p.A)(N.A, b.A, e);
-                            if (null != t && (0, j.Ij)(t)) return t;
+                            let t = (0, A.A)(E.A, S.A, e);
+                            if (null != t && (0, v.Ij)(t)) return t;
                         }
                         return null;
                     },
                     [o],
                 ),
-                { noMicTag: d, voiceChatEnabled: u, voiceToggleDisabled: m } = (0, j.Qq)(t.availableTags ?? [], l),
+                { noMicTag: d, voiceChatEnabled: u, voiceToggleDisabled: m } = (0, v.Qq)(t.availableTags ?? [], l),
                 h = i.useMemo(() => {
-                    if (null != c && (0, j.Ij)(c)) return { type: E.xL.JOIN, activity: c };
+                    if (null != c && (0, v.Ij)(c)) return { type: T.xL.JOIN, activity: c };
                 }, [c]),
-                x = (0, C.w0)({
+                x = (0, b.w0)({
                     parentChannel: t,
-                    name: (0, j.Zu)(n),
+                    name: (0, v.Zu)(n),
                     appliedTags: l,
                     activityAction: h,
                     applicationId: r?.id,
@@ -117,102 +127,118 @@ function z(e) {
                     upload: s,
                     onThreadCreated: a,
                 }),
-                [g, f] = i.useState(!1),
-                S = !g && n.trim().length > 0 && n.length <= j.YS,
-                y = i.useCallback(async () => {
-                    if (S) {
-                        f(!0);
+                g = t.hasFlag(I.lx.REQUIRE_TAG),
+                f = g && 0 === l.size,
+                { rateLimitPerUser: j } = t,
+                _ = j > 0,
+                k = (0, p.bG)([y.A], () => y.A.getSlowmodeCooldownGuess(t.id, y.R.CreateThread)),
+                M = (0, C._i)(t),
+                [R, w] = i.useState(!1),
+                [L, P] = i.useState(!1),
+                D = !R && n.trim().length > 0 && n.length <= v.YS && !(_ && !M && k > 0),
+                O = i.useCallback(async () => {
+                    if (D) {
+                        if (f) return void P(!0);
+                        w(!0);
                         try {
                             await x(n);
                         } catch {
-                            f(!1);
+                            w(!1);
                         }
                     }
-                }, [S, x, n]);
+                }, [D, f, x, n]);
             return {
                 application: r,
                 noMicTag: d,
                 voiceChatEnabled: u,
                 voiceToggleDisabled: m,
-                submitting: g,
-                canSubmit: S,
-                submit: y,
+                isTagRequired: g,
+                hasTagRequiredError: L && f,
+                isSlowmodeEnabled: _,
+                rateLimitPerUser: j,
+                slowmodeCooldownGuess: k,
+                isBypassSlowmode: M,
+                submitting: R,
+                canSubmit: D,
+                submit: O,
             };
         })({
             parentChannel: t,
-            description: S,
-            appliedTagIds: k,
-            upload: f.Se,
+            description: _,
+            appliedTagIds: L,
+            upload: j.Se,
             onThreadCreated: (e) => {
-                ((0, g.JA)(e), a());
+                ((0, f.JA)(e), a());
             },
         }),
-        q = i.useCallback((e, t, n) => {
-            T({ textValue: t, richValue: n });
+        el = i.useCallback((e, t, n) => {
+            M({ textValue: t, richValue: n });
         }, []),
-        K = i.useCallback((e) => {
-            w((t) => {
+        ei = i.useCallback((e) => {
+            O((t) => {
                 let n = new Set(t);
                 return (n.has(e) ? n.delete(e) : n.add(e), n);
             });
         }, []),
-        Y = i.useCallback(
+        es = i.useCallback(
             (e) => {
-                null != U &&
-                    w((t) => {
+                null != W &&
+                    O((t) => {
                         let n = new Set(t);
-                        return (e ? n.delete(U.id) : n.add(U.id), n);
+                        return (e ? n.delete(W.id) : n.add(W.id), n);
                     });
             },
-            [U],
+            [W],
         );
     return (0, l.jsx)(s.a, {
-        title: R.intl.string(M.default.tOsHsu),
+        title: D.intl.string(P.default.tOsHsu),
         transitionState: n,
         onClose: a,
         actions: [
-            { variant: "secondary", text: R.intl.string(R.t["ETE/oC"]), onClick: a, disabled: V },
-            { variant: "primary", text: R.intl.string(R.t.CumH4u), onClick: $, disabled: !W, loading: V },
+            { variant: "secondary", text: D.intl.string(D.t["ETE/oC"]), onClick: a, disabled: ee },
+            { variant: "primary", text: D.intl.string(D.t.CumH4u), onClick: en, disabled: !et, loading: ee },
         ],
         children: (0, l.jsxs)("div", {
-            className: P.rf,
+            className: F.rf,
             children: [
                 (0, l.jsx)(r.D, {
                     required: !0,
-                    label: R.intl.string(M.default["/mEbGf"]),
+                    label: D.intl.string(P.default["/mEbGf"]),
                     children: (0, l.jsx)(h.Ay, {
-                        type: D,
+                        type: z,
                         channel: t,
-                        placeholder: R.intl.string(M.default["SU/IAE"]),
-                        textValue: S,
-                        richValue: y,
-                        focused: I,
-                        onChange: q,
-                        onFocus: () => _(!0),
-                        onBlur: () => _(!1),
-                        onSubmit: G,
-                        parentModalKey: O,
+                        placeholder: D.intl.string(P.default["SU/IAE"]),
+                        textValue: _,
+                        richValue: k,
+                        focused: R,
+                        onChange: el,
+                        onFocus: () => w(!0),
+                        onBlur: () => w(!1),
+                        onSubmit: B,
+                        parentModalKey: U,
                         disableThemedBackground: !0,
-                        maxCharacterCount: j.YS,
-                        showRemainingCharsAfterCount: j.YS,
-                        editorClassName: P.s7,
+                        maxCharacterCount: v.YS,
+                        showRemainingCharsAfterCount: v.YS,
+                        editorClassName: F.s7,
                     }),
                 }),
                 u.length > 0
                     ? (0, l.jsx)(r.D, {
-                          label: R.intl.string(R.t.KM6lRG),
-                          description: R.intl.formatToPlainString(M.default["yoIAe/"], { tagsMax: 5 }),
+                          label: D.intl.string(D.t.KM6lRG),
+                          required: K,
+                          errorMessage: Y ? D.intl.string(D.t.xPfNQi) : void 0,
+                          description: D.intl.formatToPlainString(P.default["yoIAe/"], { tagsMax: 5 }),
                           children: (0, l.jsx)("div", {
-                              className: P.GA,
+                              className: F.GA,
                               children: u.map((e) =>
                                   (0, l.jsx)(
                                       x.Ay,
                                       {
                                           tag: e,
                                           size: x.Ay.Sizes.SMALL,
-                                          selected: k.has(e.id),
-                                          onClick: !F || k.has(e.id) ? () => K(e.id) : void 0,
-                                          disabled: !k.has(e.id) && F,
+                                          selected: L.has(e.id),
+                                          onClick: !H || L.has(e.id) ? () => ei(e.id) : void 0,
+                                          disabled: !L.has(e.id) && H,
                                       },
                                       e.id,
                                   ),
@@ -222,21 +248,32 @@ function z(e) {
                     : null,
                 (0, l.jsx)(r.D, {
                     layout: "horizontal",
-                    label: R.intl.string(M.default.Xd2NFi),
-                    description: R.intl.string(M.default.G91SYQ),
+                    label: D.intl.string(P.default.Xd2NFi),
+                    description: D.intl.string(P.default.G91SYQ),
                     children: (0, l.jsx)(o.m, {
-                        text: R.intl.formatToPlainString(M.default["0s2ICk"], { noMicTagName: j.Dg }),
-                        shouldShow: null == U,
+                        text: D.intl.formatToPlainString(P.default["0s2ICk"], { noMicTagName: v.Dg }),
+                        shouldShow: null == W,
                         asContainer: !0,
-                        children: (0, l.jsx)(c.d, { checked: H, onChange: Y, disabled: B }),
+                        children: (0, l.jsx)(c.d, { checked: $, onChange: es, disabled: q }),
                     }),
                 }),
-                null != z &&
-                    (0, l.jsx)(L, {
-                        application: z,
+                null != V &&
+                    (0, l.jsx)(G, {
+                        application: V,
                         size: "md",
                         analyticsLocation: d.A.GAME_INVITE_CHANNEL_POST_CREATION,
                     }),
+                Q
+                    ? (0, l.jsx)("div", {
+                          className: F.Vw,
+                          children: (0, l.jsx)(g.A, {
+                              rateLimitPerUser: X,
+                              slowmodeCooldownGuess: J,
+                              isBypassSlowmode: Z,
+                              leadingIcon: !0,
+                          }),
+                      })
+                    : null,
             ],
         }),
     });

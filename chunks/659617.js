@@ -163,18 +163,19 @@ function W(e) {
             let g,
                 N,
                 O,
-                R = 0,
-                [L, y] = (0, m.Ay)(e);
-            L && ((e = y), (R = (0, a.UI)(R, U.pr7.SUPPRESS_NOTIFICATIONS)));
-            let b = (0, v.Gl)(t, null),
-                M = U.Rsh.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
-                P = {
+                R,
+                L = 0,
+                [y, b] = (0, m.Ay)(e);
+            y && ((e = b), (L = (0, a.UI)(L, U.pr7.SUPPRESS_NOTIFICATIONS)));
+            let M = (0, v.Gl)(t, null),
+                P = U.Rsh.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
+                G = {
                     name: n,
-                    auto_archive_duration: b,
+                    auto_archive_duration: M,
                     applied_tags: i,
-                    message: { content: e, sticker_ids: r, flags: 0 !== R ? R : void 0 },
+                    message: { content: e, sticker_ids: r, flags: 0 !== L ? L : void 0 },
                 },
-                G =
+                x =
                     null != u
                         ? null == (N = null != (g = (T = u).activity.session_id) ? g : S.default.getSessionId())
                             ? null
@@ -186,14 +187,14 @@ function W(e) {
                               }
                         : null;
             if (
-                (null != G &&
+                (null != x &&
                     null != u &&
-                    ((P.message.application_id = u.activity.application_id), (P.message.activity = G)),
+                    ((G.message.application_id = u.activity.application_id), (G.message.activity = x)),
                 null != I && I.length > 0)
             )
                 try {
                     let e = await d(I);
-                    ((O = e.uploaderFile), (P.message.attachments = e.files.map((e, t) => (0, D.OW)(e, t))));
+                    ((O = e.uploaderFile), (G.message.attachments = e.files.map((e, t) => (0, D.OW)(e, t))));
                 } catch (r) {
                     let { file: e, code: n, reason: i } = r;
                     throw (
@@ -201,7 +202,16 @@ function W(e) {
                         r
                     );
                 }
-            let x = await Y(t, l, O, () => s.Bo.post({ url: M, body: P, rejectWithError: (0, s.fT)() }));
+            function k() {
+                return Y(t, l, O, () => s.Bo.post({ url: P, body: G, rejectWithError: (0, s.fT)() }));
+            }
+            try {
+                R = await k();
+            } catch (e) {
+                if (e?.body?.code === U.t02.UNKNOWN_SESSION && null != x)
+                    (delete G.message.activity, delete G.message.application_id, (R = await k()));
+                else throw e;
+            }
             return (
                 c.A.clearDraft(t.id, C.C.ThreadSettings),
                 c.A.clearDraft(t.id, C.C.FirstThreadMessage),
@@ -209,21 +219,21 @@ function W(e) {
                 (0, f.Lj)({
                     guildId: t.guild_id,
                     channelId: t.id,
-                    postId: x.id,
+                    postId: R.id,
                     applicationId: A,
                     voiceChatEnabled: h,
                 }),
-                null != P.message.application_id &&
+                null != G.message.application_id &&
                     E.Ay.trackWithMetadata(U.HAw.INVITE_SENT, {
                         location: w.Hx.THREAD_CREATION,
                         invite_type: U.G2g.APPLICATION,
-                        application_id: P.message.application_id,
+                        application_id: G.message.application_id,
                         guild_id: t.getGuildId(),
-                        channel_id: x.id,
-                        message_id: x.id,
+                        channel_id: R.id,
+                        message_id: R.id,
                     }),
-                o?.(x),
-                x
+                o?.(R),
+                R
             );
         },
         [t, n, i, o, l, d, u, h, A],
@@ -263,6 +273,7 @@ async function Y(e, t, i, r) {
             });
         else if (P.$j.has(r.body?.code)) throw r;
         else if (r.body?.code === U.t02.INVALID_FORM_BODY && r.body?.errors?.name != null) throw r;
+        else if (r.body?.code === U.t02.UNKNOWN_SESSION) throw r;
         else if (P.F4.has(r.body?.code)) {
             if (null != i)
                 if (r.body?.code === U.t02.EXPLICIT_CONTENT) {

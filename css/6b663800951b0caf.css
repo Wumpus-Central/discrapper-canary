@@ -62,24 +62,6 @@
     margin: 0 4px 8px
 }
 
-.cooldownWrapper__7391f {
-    align-items: center;
-    display: flex;
-    margin-inline-start: auto;
-    overflow: hidden;
-    white-space: nowrap
-}
-
-.slowModeIcon__7391f {
-    color: var(--text-muted);
-    display: block;
-    margin-inline-start: 4px
-}
-
-.leadingIcon__7391f {
-    margin-inline: 0 4px
-}
-
 .heading-sm\/normal_d9be46 {
     font-family: var(--font-primary);
     font-size: 14px;
@@ -2952,4 +2934,4 @@
     width: 180px
 }
 
-/*# sourceMappingURL=d789b346e07e7d8c.css.map*/
+/*# sourceMappingURL=6b663800951b0caf.css.map*/

@@ -2277,6 +2277,7 @@ var iY =
         (ea[(ea.UNKNOWN_USER = 10013)] = "UNKNOWN_USER"),
         (ea[(ea.UNKNOWN_EMOJI = 10014)] = "UNKNOWN_EMOJI"),
         (ea[(ea.UNKNOWN_WEBHOOK = 10015)] = "UNKNOWN_WEBHOOK"),
+        (ea[(ea.UNKNOWN_SESSION = 10020)] = "UNKNOWN_SESSION"),
         (ea[(ea.UNKNOWN_GIFT_CODE = 10038)] = "UNKNOWN_GIFT_CODE"),
         (ea[(ea.UNKNOWN_TIDA_CONTENT = 10134)] = "UNKNOWN_TIDA_CONTENT"),
         (ea[(ea.BOT_DISALLOWED = 20001)] = "BOT_DISALLOWED"),
