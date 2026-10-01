@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => F, H_: () => d, PV: () => s, jf: () => a }), n(321073));
+(n.d(t, { Ay: () => J, H_: () => d, PV: () => s, jf: () => a }), n(321073));
 var i = n(17928),
     r = n(73153),
     l = n(287809),
@@ -21,46 +21,58 @@ let c = new Map(),
     _ = new Set(),
     p = new Set(),
     g = new Map(),
-    w = new Set(),
-    E = null,
-    T = new Set(),
-    I = new Map(),
-    m = [],
-    A = new Map(),
-    S = 0,
-    R = new Map(),
+    E = new Set(),
+    w = !1,
+    T = null,
+    I = !1,
+    m = null,
+    A = new Set(),
+    S = new Map(),
+    R = [],
     O = new Map(),
-    y = [],
+    y = 0,
     v = new Map(),
-    N = new Map();
-function b(e, t, n) {
-    return null != t && N.get(e)?.get(t) === n;
+    C = new Map(),
+    P = [],
+    N = new Map(),
+    b = new Map();
+function k(e, t, n) {
+    return null != t && b.get(e)?.get(t) === n;
 }
-function C(e, t, n) {
+function M(e, t, n) {
     if (null == t) return;
-    let i = N.get(e);
-    for (null == i && ((i = new Map()), N.set(e, i)), i.set(t, n); i.size > 800;) {
+    let i = b.get(e);
+    for (null == i && ((i = new Map()), b.set(e, i)), i.set(t, n); i.size > 800;) {
         let e = i.keys().next();
         if (!0 === e.done) break;
         i.delete(e.value);
     }
 }
-let P = { status: "idle", truncated: !1, count: 0 },
-    k = new Map();
-function M(e, t, n) {
-    let i = k.get(e);
-    (null == i && ((i = new Map()), k.set(e, i)), i.set(t, n));
+let B = { status: "idle", truncated: !1, count: 0 },
+    L = new Map();
+function G(e, t, n) {
+    let i = L.get(e);
+    (null == i && ((i = new Map()), L.set(e, i)), i.set(t, n));
 }
-function B(e, t, n) {
+function D(e, t, n) {
     let i = t.concat(n);
-    v.set(e, i.length > 400 ? i.slice(-400) : i);
+    N.set(e, i.length > 400 ? i.slice(-400) : i);
 }
-class L extends i.Ay.Store {
+class V extends i.Ay.Store {
     initialize() {
         this.waitFor(l.default);
     }
     getOwnedProjects() {
         return Array.from(c.values()).filter(s);
+    }
+    hasFetchedOwnedProjects() {
+        return w;
+    }
+    getMaxProjects() {
+        return T;
+    }
+    hasFetchedProjectLimit() {
+        return I;
     }
     getProject(e) {
         return c.get(e) ?? null;
@@ -87,60 +99,60 @@ class L extends i.Ay.Store {
         return p.has(e);
     }
     isProjectDeleting(e) {
-        return w.has(e);
+        return E.has(e);
     }
     getSelectedProjectId(e) {
         return g.get(e) ?? null;
     }
     getLogs(e) {
-        return A.get(e) ?? m;
+        return O.get(e) ?? R;
     }
     getUnreadLogErrorCount(e) {
-        let t = A.get(e);
+        let t = O.get(e);
         if (null == t) return 0;
-        let n = O.get(e) ?? 0,
+        let n = C.get(e) ?? 0,
             i = 0;
         for (let e of t) e.key > n && "error" === e.log.level && !0 !== e.log.historical && (i += 1);
         return i;
     }
     getTrace(e) {
-        return v.get(e) ?? y;
+        return N.get(e) ?? P;
     }
     getHistoryState(e, t) {
-        return k.get(e)?.get(t) ?? P;
+        return L.get(e)?.get(t) ?? B;
     }
     getProjectsFetchState() {
-        return E;
+        return m;
     }
     hasFetchedGuildProjects(e) {
-        return T.has(e);
+        return A.has(e);
     }
     getGuildProjectsFetchState(e) {
-        return I.get(e) ?? "unattempted";
+        return S.get(e) ?? "unattempted";
     }
     isVibegrationsProjectApplication(e) {
         return null != e && null != this.findProjectByApplicationId(e);
     }
 }
-function G(e) {
+function H(e) {
     let { project: t } = e;
     c.set(t.id, t);
 }
-let D = new Map();
-function V(e, t) {
+let U = new Map();
+function x(e, t) {
     return `${e}:${t}`;
 }
-function H(e, t, n) {
-    D.get(e)?.touched.add(V(t, n));
+function F(e, t, n) {
+    U.get(e)?.touched.add(x(t, n));
 }
-function U(e, t, n) {
+function j(e, t, n) {
     return e.findIndex((e) => e.kind === t && e.id === n);
 }
-function x(e, t, n, i) {
+function W(e, t, n, i) {
     let r = t.slice();
-    ((r[n] = i), v.set(e, r));
+    ((r[n] = i), N.set(e, r));
 }
-let F = new L(r.h, {
+let J = new V(r.h, {
     LOGOUT: function () {
         if (
             0 === c.size &&
@@ -149,13 +161,15 @@ let F = new L(r.h, {
             0 === _.size &&
             0 === p.size &&
             0 === g.size &&
-            0 === w.size &&
+            0 === E.size &&
+            0 === O.size &&
             0 === A.size &&
-            0 === T.size &&
-            0 === v.size &&
-            0 === k.size &&
             0 === N.size &&
-            null == E
+            0 === L.size &&
+            0 === b.size &&
+            null == m &&
+            null == T &&
+            !I
         )
             return !1;
         (c.clear(),
@@ -164,38 +178,45 @@ let F = new L(r.h, {
             _.clear(),
             p.clear(),
             g.clear(),
-            w.clear(),
-            A.clear(),
-            T.clear(),
-            I.clear(),
-            R.clear(),
+            E.clear(),
             O.clear(),
+            A.clear(),
+            S.clear(),
             v.clear(),
-            k.clear(),
+            C.clear(),
             N.clear(),
-            (E = null),
-            D.clear());
+            L.clear(),
+            b.clear(),
+            (m = null),
+            (w = !1),
+            (T = null),
+            (I = !1),
+            U.clear());
     },
     VIBEGRATIONS_PROJECTS_FETCH_START: function (e) {
         let { guildId: t } = e;
-        (null != t && I.set(t, "loading"), (E = { type: "loading" }));
+        (null != t && S.set(t, "loading"), (m = { type: "loading" }));
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
             i = new Set(t.map((e) => e.id));
         for (let [e, t] of c) !i.has(e) && (s(t) || (null != n && t.guild_id === n)) && c.delete(e);
         for (let e of t) c.set(e.id, e);
-        for (let e of (null != n && (T.add(n), I.set(n, "success")), f.keys())) c.has(e) || f.delete(e);
+        for (let e of (null != n && (A.add(n), S.set(n, "success")), f.keys())) c.has(e) || f.delete(e);
         for (let e of h.keys()) c.has(e) || h.delete(e);
         for (let [e, t] of g) c.has(t) || g.delete(e);
-        E = { type: "success", fetchedAt: Date.now() };
+        ((w = !0), (m = { type: "success", fetchedAt: Date.now() }));
     },
     VIBEGRATIONS_PROJECTS_FETCH_FAIL: function (e) {
         let { guildId: t } = e;
-        (null != t && I.set(t, "error"), (E = { type: "error", fetchedAt: Date.now() }));
+        (null != t && S.set(t, "error"), (m = { type: "error", fetchedAt: Date.now() }));
     },
-    VIBEGRATIONS_PROJECT_CREATE_SUCCESS: G,
-    VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: G,
+    VIBEGRATIONS_PROJECT_LIMIT_FETCH_SETTLE: function (e) {
+        let { maxProjects: t } = e;
+        ((T = t), (I = !0));
+    },
+    VIBEGRATIONS_PROJECT_CREATE_SUCCESS: H,
+    VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: H,
     VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE: function (e) {
         let { projectId: t, integrationStatus: n } = e;
         f.set(t, n);
@@ -222,28 +243,28 @@ let F = new L(r.h, {
     },
     VIBEGRATIONS_PROJECT_DELETE_START: function (e) {
         let { projectId: t } = e;
-        w.add(t);
+        E.add(t);
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        for (let [e, n] of (w.delete(t),
+        for (let [e, n] of (E.delete(t),
         c.delete(t),
         f.delete(t),
         h.delete(t),
         _.delete(t),
         p.delete(t),
-        A.delete(t),
-        R.delete(t),
         O.delete(t),
         v.delete(t),
-        k.delete(t),
+        C.delete(t),
         N.delete(t),
+        L.delete(t),
+        b.delete(t),
         g))
             n === t && g.delete(e);
     },
     VIBEGRATIONS_PROJECT_DELETE_FAIL: function (e) {
         let { projectId: t } = e;
-        return w.delete(t);
+        return E.delete(t);
     },
     VIBEGRATIONS_PROJECT_SELECT: function (e) {
         let { guildId: t, projectId: n } = e;
@@ -252,51 +273,51 @@ let F = new L(r.h, {
     },
     VIBEGRATIONS_TRACE_REPLAY_STARTING: function (e) {
         let { projectId: t } = e;
-        D.set(t, { snapshot: new Set((v.get(t) ?? y).map((e) => V(e.kind, e.id))), touched: new Set() });
+        U.set(t, { snapshot: new Set((N.get(t) ?? P).map((e) => x(e.kind, e.id))), touched: new Set() });
     },
     VIBEGRATIONS_HISTORY_LOAD_SETTLE: function (e) {
         let { projectId: t, scope: n, status: i, count: r, truncated: l } = e,
-            o = "trace" === n ? D.get(t) : void 0;
-        if (("trace" === n && D.delete(t), "failed" === i)) {
-            let e = k.get(t)?.get(n);
-            M(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
+            o = "trace" === n ? U.get(t) : void 0;
+        if (("trace" === n && U.delete(t), "failed" === i)) {
+            let e = L.get(t)?.get(n);
+            G(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
             return;
         }
         if (null != o) {
-            let e = v.get(t);
+            let e = N.get(t);
             null != e &&
-                v.set(
+                N.set(
                     t,
-                    e.filter((e) => !o.snapshot.has(V(e.kind, e.id)) || o.touched.has(V(e.kind, e.id))),
+                    e.filter((e) => !o.snapshot.has(x(e.kind, e.id)) || o.touched.has(x(e.kind, e.id))),
                 );
         }
-        M(t, n, { status: "loaded", truncated: l, count: r });
+        G(t, n, { status: "loaded", truncated: l, count: r });
     },
     VIBEGRATIONS_LOG_APPEND: function (e) {
         let { projectId: t, log: n } = e,
             i = n.seq;
         if (null != i) {
-            let e = R.get(t);
+            let e = v.get(t);
             if (null != e && i <= e) return !1;
-            R.set(t, i);
+            v.set(t, i);
         }
-        let r = { key: ++S, log: n },
-            l = A.get(t),
+        let r = { key: ++y, log: n },
+            l = O.get(t),
             o = null == l ? [r] : l.concat(r);
-        A.set(t, o.length > 500 ? o.slice(-500) : o);
+        O.set(t, o.length > 500 ? o.slice(-500) : o);
     },
     VIBEGRATIONS_LOGS_SEEN: function (e) {
         let { projectId: t } = e,
-            n = A.get(t),
+            n = O.get(t),
             i = null == n || 0 === n.length ? 0 : n[n.length - 1].key;
-        if ((O.get(t) ?? 0) >= i) return !1;
-        O.set(t, i);
+        if ((C.get(t) ?? 0) >= i) return !1;
+        C.set(t, i);
     },
     VIBEGRATIONS_TOOL_CALL_APPEND: function (e) {
         let { projectId: t, toolCall: n } = e;
-        if ((H(t, "tool", n.id), b(t, n.entry_id, n.status))) return !1;
-        let i = v.get(t) ?? y,
-            r = U(i, "tool", n.id),
+        if ((F(t, "tool", n.id), k(t, n.entry_id, n.status))) return !1;
+        let i = N.get(t) ?? P,
+            r = j(i, "tool", n.id),
             l = -1 === r ? null : i[r],
             o = n.summary ?? l?.summary,
             s = n.fields ?? l?.fields,
@@ -324,13 +345,13 @@ let F = new L(r.h, {
                 ...(null != n.error ? { error: n.error } : {}),
                 startedAt: l?.startedAt ?? n.ts,
             };
-        (C(t, n.entry_id, n.status), null != l) ? x(t, i, r, f) : B(t, i, f);
+        (M(t, n.entry_id, n.status), null != l) ? W(t, i, r, f) : D(t, i, f);
     },
     VIBEGRATIONS_MODEL_CALL_APPEND: function (e) {
         let { projectId: t, modelCall: n } = e;
-        if ((H(t, "model", n.id), b(t, n.entry_id, n.status))) return !1;
-        let i = v.get(t) ?? y,
-            r = U(i, "model", n.id),
+        if ((F(t, "model", n.id), k(t, n.entry_id, n.status))) return !1;
+        let i = N.get(t) ?? P,
+            r = j(i, "model", n.id),
             l = -1 === r ? null : i[r],
             o = {
                 kind: "model",
@@ -365,6 +386,6 @@ let F = new L(r.h, {
                 ...(null != n.error ? { error: n.error } : {}),
                 startedAt: l?.startedAt ?? n.ts,
             };
-        (C(t, n.entry_id, n.status), null != l) ? x(t, i, r, o) : B(t, i, o);
+        (M(t, n.entry_id, n.status), null != l) ? W(t, i, r, o) : D(t, i, o);
     },
 });

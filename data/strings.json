@@ -433,6 +433,8 @@
   "dIE9zO": "Conjuring is using this Frame right now, so your clicks are paused to keep them from colliding with its own.",
   "WOKsTg": "Project ID copied",
   "b4TqpT": "Copy Project ID",
+  "336dtK": "{count, plural,one {# app slot left}other {# app slots left}",
+  "JQU61N": "No app slots left",
   "KKkp5Y": "Couldn’t start that one. Try again.",
   "Asusmn": "You’ve hit the max number of projects.",
   "DT6qly": "Did you cast Haste? Wait a moment, then try again.",

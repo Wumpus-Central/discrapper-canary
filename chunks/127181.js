@@ -885,6 +885,12 @@ let n = [
         summary: "The create screen greets you with a little more magic.",
     },
     {
+        date: "2026-09-29",
+        time: "20:59",
+        platforms: ["desktop", "mobile"],
+        summary: "The create screen shows how many app slots you have left.",
+    },
+    {
         date: "2026-09-28",
         time: "17:34",
         platforms: ["desktop", "mobile"],
