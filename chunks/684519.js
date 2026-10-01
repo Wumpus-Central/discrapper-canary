@@ -796,8 +796,8 @@ var eQ = n(885386),
     e1 = n(782134),
     e2 = n(775602),
     e3 = n(228366),
-    e8 = n(713021);
-let e5 = s.forwardRef(function (e, t) {
+    e5 = n(713021);
+let e8 = s.forwardRef(function (e, t) {
     let n,
         l,
         { muted: r, volume: a, playing: o, playbackRate: u, ...c } = e,
@@ -1165,8 +1165,8 @@ let tE = s.memo(function (e) {
             playbackCacheKey: C,
         } = e,
         E = s.useRef(null),
-        I = s.useMemo(() => (null != C ? e8.Ay.getPlaybackPosition(C) : 0), [C]),
-        y = (0, d.bG)([e8.Ay], () => e8.Ay.getPlaybackRate(e8.k0.VOICE_MESSAGE)),
+        I = s.useMemo(() => (null != C ? e5.Ay.getPlaybackPosition(C) : 0), [C]),
+        y = (0, d.bG)([e5.Ay], () => e5.Ay.getPlaybackRate(e5.k0.VOICE_MESSAGE)),
         [S, v] = s.useState(I > 0),
         [N, _] = s.useState(I),
         [j, b] = s.useState(c),
@@ -1320,7 +1320,7 @@ let tE = s.memo(function (e) {
                       playbackRate: y,
                   }),
               })
-            : (0, i.jsx)(e5, {
+            : (0, i.jsx)(e8, {
                   ref: E,
                   className: tx.Zn,
                   controls: !1,
@@ -1371,7 +1371,7 @@ let tE = s.memo(function (e) {
                     return (
                         (n = (tu.indexOf(y) + 1) % tu.length),
                         void ((e = tu[n]),
-                        (t = e8.k0.VOICE_MESSAGE),
+                        (t = e5.k0.VOICE_MESSAGE),
                         e3.h.dispatch({ type: "MEDIA_PLAYBACK_RATE_UPDATE", rate: e, playbackType: t }))
                     );
                 },

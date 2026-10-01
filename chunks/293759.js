@@ -442,8 +442,8 @@ var ez = n(404778),
     e1 = n(468689),
     e2 = n(931991),
     e3 = n(473145),
-    e8 = n(625633),
-    e5 = n(136123);
+    e5 = n(625633),
+    e8 = n(136123);
 let e6 = function (e) {
     let { className: t, guildId: n, channel: s, shouldTrackUpsellViewed: a, setTrackedUpsellViewed: o } = e,
         { location: u } = (0, w.p)(),
@@ -467,13 +467,13 @@ let e6 = function (e) {
     null != m && h)
         ? p
             ? (0, l.jsxs)("div", {
-                  className: r()(e5.UX, t),
+                  className: r()(e8.UX, t),
                   onKeyDown: (e) => e.stopPropagation(),
                   children: [
-                      (0, l.jsx)(eX.v, { size: "md", color: "currentColor", className: e5.Kk }),
+                      (0, l.jsx)(eX.v, { size: "md", color: "currentColor", className: e8.Kk }),
                       (0, l.jsx)(ek.E, {
                           color: "interactive-text-default",
-                          className: e5.rf,
+                          className: e8.rf,
                           variant: "text-sm/normal",
                           children: eE.intl.format(eE.t.AXWla1, { count: (0, e3.aG)(eA.TVA.TIER_1) }),
                       }),
@@ -486,26 +486,26 @@ let e6 = function (e) {
                                       analyticsLocations: c,
                                       analyticsSourceLocation: u,
                                       guild: m,
-                                      perks: (0, e8.q5)(),
+                                      perks: (0, e5.q5)(),
                                   });
                           },
                       }),
                   ],
               })
             : (0, l.jsxs)("div", {
-                  className: r()(e5.UX, t),
+                  className: r()(e8.UX, t),
                   onKeyDown: (e) => e.stopPropagation(),
                   children: [
                       (0, l.jsx)(eo.t, {
                           size: "custom",
                           color: "currentColor",
-                          className: e5.Kk,
+                          className: e8.Kk,
                           width: 20,
                           height: 20,
                       }),
                       (0, l.jsx)(ek.E, {
                           color: "interactive-text-default",
-                          className: e5.rf,
+                          className: e8.rf,
                           variant: "text-sm/normal",
                           children: eE.intl.string(eE.t.S83wgh),
                       }),
@@ -1466,8 +1466,8 @@ let t$ = (0, q.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     t1 = (0, q.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
     t2 = (0, q.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
     t3 = (0, q.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
-    t8 = O()(et.Qz, 200),
-    t5 = O()(et.HA, 200),
+    t5 = O()(et.Qz, 200),
+    t8 = O()(et.HA, 200),
     t6 = i.forwardRef(function (e, t) {
         let { containerWidth: s, channel: r, onSelectSticker: a, closePopout: o } = e,
             u = tk.useConfig({ location: "StickerPicker" }).padding,
@@ -1670,7 +1670,7 @@ let t$ = (0, q.xI)(M.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 ("" === y.current && "" !== E && (0, et.Fg)(), (y.current = E));
             }, [E]),
             i.useEffect(() => {
-                0 === J ? t8(E) : t5(E, J, I);
+                0 === J ? t5(E) : t8(E, J, I);
             }, [E, J, I]),
             i.useLayoutEffect(() => {
                 A.current?.focus();

@@ -604,7 +604,7 @@ function e3(e) {
         m = (0, G.TW)(d, eO.PremiumTypes.TIER_2),
         h = i.useCallback(
             (e, t, n, i) => {
-                let r = s && e8(e.categoryInfo, m, o);
+                let r = s && e5(e.categoryInfo, m, o);
                 return (0, l.jsx)(e2, {
                     category: e,
                     categoryIndex: t,
@@ -639,10 +639,10 @@ function e3(e) {
         itemIdPrefix: e$,
     });
 }
-function e8(e, t, n) {
+function e5(e, t, n) {
     return (null == n && e.type === ec.Cx.GUILD && !t) || (e.type === ec.Cx.GUILD && e.guild.id !== n && !t);
 }
-var e5 = n(191023),
+var e8 = n(191023),
     e6 = n(192308),
     e7 = n(28863),
     e4 = n(695366),
@@ -670,7 +670,7 @@ function tc(e) {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
                     ? (0, l.jsx)(tt.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: tu.Zg })
-                    : (0, l.jsx)(e5.ImageIcon, { size: "md", color: "currentColor", className: tu.Zg }),
+                    : (0, l.jsx)(e8.ImageIcon, { size: "md", color: "currentColor", className: tu.Zg }),
             graphicSecondary: null != a ? (0, l.jsx)(w.A, { guild: a, shouldAnimate: !o && u }) : null,
             titlePrimary: t.name,
             titleSecondary: a?.name,
@@ -1225,7 +1225,7 @@ function t_(e) {
         e1 = i.useCallback(
             (e, n, i, a, o) => {
                 let u = eH[i.sectionIndex],
-                    c = f && e8(u.categoryInfo, B, t) && eK,
+                    c = f && e5(u.categoryInfo, B, t) && eK,
                     d = Y && u.categoryInfo.type === ec.Cx.FAVORITES;
                 return (0, l.jsx)(
                     "ul",
@@ -1281,20 +1281,20 @@ function t_(e) {
                 if (e <= 0 || !f) return !1;
                 let n = eH[e],
                     l = eH[e - 1],
-                    i = e8(n.categoryInfo, B, t),
-                    s = e8(l.categoryInfo, B, t);
+                    i = e5(n.categoryInfo, B, t),
+                    s = e5(l.categoryInfo, B, t);
                 return i && !s;
             },
             [eH, f, B],
         ),
-        e5 = i.useCallback(() => {
+        e8 = i.useCallback(() => {
             let e = g.A.getSoundById("3");
             null != e && V(e);
         }, []),
         e6 = i.useCallback(() => {
             let e = (0, G.Dd)(eO.PremiumTypes.TIER_2);
-            return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e5 });
-        }, [e5]),
+            return eG.intl.format(eG.t["tw/SSq"], { nitroTierName: e, onClick: e8 });
+        }, [e8]),
         e7 = i.useCallback((e) => (e2(e, t) ? tI : 32), [t, e2]),
         e4 = i.useCallback(
             (e) => {
@@ -1313,7 +1313,7 @@ function t_(e) {
         te = i.useCallback(
             (e, n) => {
                 let i = `${e.key}`,
-                    s = f && e8(e.categoryInfo, B, t),
+                    s = f && e5(e.categoryInfo, B, t),
                     r = e2(n, t),
                     a = eq.has(i);
                 return (0, l.jsx)(
