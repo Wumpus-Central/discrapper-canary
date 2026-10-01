@@ -2464,6 +2464,10 @@
     visibility: hidden
 }
 
+.modeSelectContent_b5f5a6 {
+    height: 20px
+}
+
 .controlsPopout_b5f5a6 {
     background-color: var(--background-surface-high);
     border-radius: var(--radius-md);
@@ -2506,4 +2510,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=0a71d9ef67e20424.css.map*/
+/*# sourceMappingURL=ae70f7db0d356765.css.map*/
