@@ -917,7 +917,7 @@
 }
 
 .dot_bc2923 {
-    animation: css-dots-pulse_bc2923 1.2s cubic-bezier(.45, 0, .55, 1) infinite;
+    animation: css-dots-pulse_bc2923 1.2s steps(12) infinite;
     background-color: currentColor;
     border-radius: 50%;
     opacity: .32;
@@ -956,7 +956,7 @@
 
 .reduce-motion .dot_bc2923 {
     animation-duration: 2.4s;
-    animation-timing-function: linear
+    animation-timing-function: steps(24)
 }
 
 .reduce-motion .dot_bc2923:first-child {
@@ -6157,4 +6157,4 @@ svg.radioIcon_c1e9c4 {
     color: var(--text-strong)
 }
 
-/*# sourceMappingURL=858942.b7df89a6a67f28c9.css.map*/
+/*# sourceMappingURL=858942.e9bfbbe9876b6345.css.map*/

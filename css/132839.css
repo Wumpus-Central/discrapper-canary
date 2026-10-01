@@ -179,7 +179,7 @@
 }
 
 .dot_b88801 {
-    animation: typing-dot-pulse_b88801 1.2s cubic-bezier(.45, 0, .55, 1) infinite;
+    animation: typing-dot-pulse_b88801 1.2s steps(12) infinite;
     background: currentColor;
     border-radius: 50%;
     height: 7px;
@@ -216,7 +216,7 @@
 
 .reduce-motion .dot_b88801 {
     animation-duration: 2.4s;
-    animation-timing-function: linear
+    animation-timing-function: steps(24)
 }
 
 .reduce-motion .dot_b88801:first-child {
@@ -309,4 +309,4 @@
     background-image: url(/assets/6ad5446be34bb27a.svg)
 }
 
-/*# sourceMappingURL=132839.c760fb6709712dc7.css.map*/
+/*# sourceMappingURL=132839.76cddaf42a9ba6fd.css.map*/
