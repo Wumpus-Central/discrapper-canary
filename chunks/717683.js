@@ -1,0 +1,16 @@
+_.exports = {
+    U6: "pulse_e475bb",
+    qV: "skeleton_e475bb",
+    Dk: "carousel_e475bb",
+    yI: "carouselCompact_e475bb",
+    Nr: "card_e475bb",
+    om: "block_e475bb",
+    xX: "artwork_e475bb",
+    Qq: "text_e475bb",
+    DD: "title_e475bb",
+    VA: "subtitle_e475bb",
+    yp: "band_e475bb",
+    Fl: "bandCompact_e475bb",
+    Pl: "headline_e475bb",
+    _0: "detail_e475bb",
+};
