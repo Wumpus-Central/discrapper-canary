@@ -5431,6 +5431,25 @@
     }
   },
   {
+    "name": "2026-09-safety-flows-legacy-required-actions",
+    "kind": "user",
+    "defaultConfig": null,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null
+    }
+  },
+  {
     "name": "2026-09-server-onboarding-setup-progress",
     "kind": "user",
     "defaultConfig": {
