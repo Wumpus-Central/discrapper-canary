@@ -4035,10 +4035,11 @@ class tA extends p.A {
         };
     }
     _handleClientConnect(e) {
-        (e.forEach((e) => {
+        let t = e.filter((e) => e !== this.userId);
+        (t.forEach((e) => {
             (this._userIds.add(e), this._connection?.createUser(e, 0));
         }),
-            this.emit(ep.q.ClientConnect, e),
+            this.emit(ep.q.ClientConnect, t),
             this._videoQuality?.updateCallUserIdsCount(this._userIds.size),
             this._localMediaSinkWantsManager?.updateCallUserIds(this._userIds));
     }

@@ -1875,8 +1875,10 @@ class ej extends p.A {
             (this.encryptionWorker = this.setupEncryptionWorker()));
     }
     createUser(e) {
-        (this.recognizedUserIds.add(e),
-            this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, eB.DECRYPT));
+        e === this.userId
+            ? this.logger.error("Refusing to create a decryptor for the local user ID")
+            : (this.recognizedUserIds.add(e),
+              this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, eB.DECRYPT));
     }
     destroyUser(e) {
         (this.recognizedUserIds.delete(e), this.encryptionWorker.postMessage({ type: eF.DESTROY_USER, userId: e }));
@@ -2108,6 +2110,7 @@ class eQ extends eA {
             this.handleNegotiationNeeded());
     }
     createUser(e, t, n) {
+        if (e === this.userId) return void this.logger.error("Refusing to create remote user for the local user ID");
         if ((this.daveSessionManager?.createUser(e), 0 === t))
             return void this.logger.warn(`Attempting to create user ${e} with 0 audio SSRC`);
         this.logger.info(`Creating user: ${e} with audio SSRC: ${t} and video SSRCs: ${n?.join(",") ?? 0}`);
