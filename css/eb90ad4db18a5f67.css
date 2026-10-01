@@ -1,20 +1,3 @@
-.body__3efc7 {
-    text-align: start
-}
-
-.body__3efc7,
-.bullets__3efc7 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4)
-}
-
-.bullets__3efc7 {
-    list-style: disc;
-    margin: 0;
-    padding-inline-start: var(--space-16)
-}
-
 .field__574ce {
     display: none
 }
@@ -859,4 +842,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=2f4ff69232bdd622.css.map*/
+/*# sourceMappingURL=eb90ad4db18a5f67.css.map*/
