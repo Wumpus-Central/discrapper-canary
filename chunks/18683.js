@@ -9,7 +9,10 @@ let d = null;
 function c() {
     if (!(0, i.xd)() || (0, o.hw)()) return;
     let e = {};
-    for (let t of o.ML) e[t.id] = t.getCurrentConfig();
+    for (let t of o.ML) {
+        let n = t.getCurrentConfig({ autoTrackExposure: !1 });
+        ((e[t.id] = n), t.trackExposureIfCachedConfigMatches(n));
+    }
     (null != d && (0, r.A)(d, e)) || ((0, i.Ih)().flushToCache(JSON.stringify(e)), (d = e));
 }
 class u extends a.A {

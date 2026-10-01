@@ -28,11 +28,16 @@ class u {
     setExperiment(e) {
         this.inner = e;
     }
-    getCurrentConfig() {
-        return (r()(null != this.inner, "experiment must be set before calling getCurrentConfig"),
-        "getCurrentConfig" in this.inner)
-            ? this.inner.getCurrentConfig({ location: "default" })
-            : this.inner.getConfig({ location: "default" });
+    getCurrentConfig(e) {
+        r()(null != this.inner, "experiment must be set before reading the current config");
+        let t = e?.autoTrackExposure ?? !0;
+        return "getCurrentConfig" in this.inner
+            ? this.inner.getCurrentConfig({ location: "default" }, { autoTrackExposure: t })
+            : this.inner.getConfig({ location: "default" }, { autoTrackExposure: t });
+    }
+    trackExposureIfCachedConfigMatches(e) {
+        let t = this.getCachedConfig();
+        t?.treatmentId === e.treatmentId && this.getCurrentConfig();
     }
 }
 class _ extends u {

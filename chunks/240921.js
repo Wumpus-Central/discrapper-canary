@@ -57,28 +57,29 @@ function c(e) {
                     ? u
                     : T;
             },
-            getConfig: function (e) {
-                let i = n(d, e),
-                    r = "guild" === d ? n("user", { location: e.location }) : void 0,
-                    [a, s] = t.getEvaluationAndAssignment(d, i, o, r),
-                    l = s?.variantId,
-                    c = s?.trackedVariantId ?? l,
-                    _ = s?.revision,
-                    A = s?.isOverride,
-                    h = s?.exposureTrackingEnabled,
-                    I = s?.useAsEligibility,
-                    f = E(s);
-                return (null != a &&
-                    null != c &&
+            getConfig: function (e, i) {
+                let r = n(d, e),
+                    a = "guild" === d ? n("user", { location: e.location }) : void 0,
+                    [s, l] = t.getEvaluationAndAssignment(d, r, o, a),
+                    c = l?.variantId,
+                    _ = l?.trackedVariantId ?? c,
+                    A = l?.revision,
+                    h = l?.isOverride,
+                    I = l?.exposureTrackingEnabled,
+                    f = l?.useAsEligibility,
+                    p = E(l);
+                return (i?.autoTrackExposure !== !1 &&
+                    null != s &&
                     null != _ &&
-                    !1 === A &&
-                    !0 === h &&
-                    !0 !== I &&
-                    null != f &&
-                    t.trackExperimentExposure(a, o, e.location, d, _, c, i),
-                null == l || !0 === I || null == f)
+                    null != A &&
+                    !1 === h &&
+                    !0 === I &&
+                    !0 !== f &&
+                    null != p &&
+                    t.trackExperimentExposure(s, o, e.location, d, A, _, r),
+                null == c || !0 === f || null == p)
                     ? u
-                    : f;
+                    : p;
             },
         };
     })(e, d.A, u, _);
