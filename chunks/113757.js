@@ -5,6 +5,4 @@ _.exports = {
     G9: "rowTitle__5ae41",
     CZ: "rowSelected__5ae41",
     f1: "rowInert__5ae41",
-    NX: "ideas-offer-enter__5ae41",
-    x: "offer__5ae41",
 };

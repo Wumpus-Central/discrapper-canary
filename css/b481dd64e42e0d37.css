@@ -853,20 +853,6 @@
     color: var(--text-muted)
 }
 
-@keyframes ideas-offer-enter__5ae41 {
-    0% {
-        opacity: 0
-    }
-
-    to {
-        opacity: 1
-    }
-}
-
-.full-motion .offer__5ae41 {
-    animation: ideas-offer-enter__5ae41 .18s ease-out
-}
-
 .body_af6837 {
     gap: var(--space-16);
     overflow-wrap: anywhere;
@@ -1105,4 +1091,4 @@
     margin-top: var(--space-4)
 }
 
-/*# sourceMappingURL=b44f6291e45595c9.css.map*/
+/*# sourceMappingURL=b481dd64e42e0d37.css.map*/
