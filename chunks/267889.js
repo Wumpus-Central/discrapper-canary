@@ -444,7 +444,7 @@ let tp = (e) => {
             );
         })({ sectionDescriptors: l, emojiListRef: n }),
         f = (0, A.p)(),
-        g = (0, ed.ss)(i, a, a?.guild_id ?? u, c),
+        g = (0, ed.ss)(i, a, { guildId: a?.guild_id ?? u, shouldShowSoundmojiInEmojiPicker: c }),
         x = r.useMemo(() => (d ? (0, ed.CQ)() : g), [g, d]),
         C = r.useRef(null),
         E = (0, m.bG)([eU.A], () => eU.A.isFocused()),
