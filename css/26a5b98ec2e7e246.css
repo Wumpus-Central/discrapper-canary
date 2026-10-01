@@ -1,21 +1,28 @@
 .container__3167a {
     align-items: center;
-    background: var(--background-base-low)
-}
-
-.container__3167a,
-.pageContainer__3167a {
+    background: var(--background-base-low);
+    box-sizing: border-box;
     display: flex;
     flex-direction: column;
     height: 100%;
     width: 100%
 }
 
+.platform-linux .container__3167a,
+.platform-osx .container__3167a,
+.platform-win .container__3167a {
+    padding-top: var(--custom-app-top-bar-height)
+}
+
 .pageContainer__3167a {
+    display: flex;
+    flex-direction: column;
     gap: 32px;
+    height: 100%;
     max-width: 740px;
     overflow: auto;
-    padding: var(--space-64) var(--space-40) var(--space-80)
+    padding: var(--space-64) var(--space-40) var(--space-80);
+    width: 100%
 }
 
 .nagbar__3167a {
@@ -33,4 +40,4 @@
     display: flex
 }
 
-/*# sourceMappingURL=62c40ec21055ccc3.css.map*/
+/*# sourceMappingURL=26a5b98ec2e7e246.css.map*/
