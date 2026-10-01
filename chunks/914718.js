@@ -160,7 +160,7 @@ function ed(e) {
         a = (0, eo.r)(eu.f[t].primaryColor).hex();
     return (0, l.jsx)("img", { alt: "", style: { backgroundColor: a }, width: 56, height: 56, src: (0, ec.OW)(t) });
 }
-var eh = t(532294);
+var eh = t(443155);
 function em(e) {
     let { checkpointData: n } = e;
     switch (n.version) {
