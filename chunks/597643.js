@@ -956,6 +956,7 @@ function eZ(e) {
             entityId: e.entity_id,
             title: e.title,
             body: e.body,
+            nonce: e.nonce ?? null,
         });
     }),
     eH(
