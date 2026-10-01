@@ -1,2 +1,2 @@
 n.d(t, { Y: () => i });
-let i = { enabled: !1, promptSuppressedGameIds: [] };
+let i = { enabled: !1, promptSuppressedGameIds: [], hasDetectedGame: !1 };

@@ -1,10 +1,15 @@
-i.d(e, { T: () => r, W: () => a });
-var n = i(723702),
-    l = i(57757);
-function a(t) {
-    let e = (0, l.a)({ location: t });
-    return n.isPlatformEmbedded && e.enabled;
+i.d(e, { T: () => u, W: () => o });
+var n = i(17928),
+    l = i(710195),
+    a = i(723702),
+    r = i(57757),
+    s = i(188321);
+function o(t) {
+    return (0, n.bG)(
+        [s.A, l.A],
+        () => a.isPlatformEmbedded && s.A.hasDetectedGame && (0, r.v)({ location: t }).enabled,
+    );
 }
-function r(t) {
-    return n.isPlatformEmbedded && (0, l.v)({ location: t }).enabled;
+function u(t) {
+    return a.isPlatformEmbedded && s.A.hasDetectedGame && (0, r.v)({ location: t }).enabled;
 }

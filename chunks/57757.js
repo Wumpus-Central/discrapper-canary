@@ -1,4 +1,4 @@
-n.d(t, { a: () => a, v: () => r });
+n.d(t, { v: () => r });
 let i = (0, n(945810).mj)({
     name: "2026-08-game-mode",
     kind: "user",
@@ -8,8 +8,4 @@ let i = (0, n(945810).mj)({
 function r(e) {
     let { location: t } = e;
     return i.getConfig({ location: t });
-}
-function a(e) {
-    let { location: t } = e;
-    return i.useConfig({ location: t });
 }

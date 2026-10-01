@@ -1,71 +1,86 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => I });
 var i = n(17928),
     r = n(73153),
-    a = n(952818),
-    s = n(57757),
-    l = n(974477);
-let o = { ...l.Y },
-    d = !1,
+    a = n(710195),
+    s = n(952818),
+    l = n(57757),
+    o = n(974477);
+let d = { ...o.Y },
     c = !1,
-    u = !1;
-class _ extends i.Ay.DeviceSettingsStore {
+    u = !1,
+    _ = !1;
+function E() {
+    let e = s.Ay.getVisibleRunningGames().some((e) => !0 !== e.isLauncher);
+    return (
+        e !== c && ((c = e) && ((d = { ...d, hasDetectedGame: !0 }), (0, l.v)({ location: "GameModeRunningGame" })), !0)
+    );
+}
+function A() {
+    return (c && (0, l.v)({ location: "GameModeExperimentAssignment" }), !1);
+}
+class h extends i.Ay.DeviceSettingsStore {
     static displayName = "GameModeStore";
     static persistKey = "GameModeStore";
     initialize(e) {
-        ((o = {
-            enabled: e?.enabled ?? l.Y.enabled,
-            promptSuppressedGameIds: e?.promptSuppressedGameIds ?? l.Y.promptSuppressedGameIds,
-        }),
-            this.syncWith([a.Ay], () => {
-                let e = a.Ay.getVisibleRunningGames().some((e) => !0 !== e.isLauncher);
-                return e !== d && ((d = e), !0);
-            }));
+        return (
+            (d = {
+                enabled: e?.enabled ?? o.Y.enabled,
+                promptSuppressedGameIds: e?.promptSuppressedGameIds ?? o.Y.promptSuppressedGameIds,
+                hasDetectedGame: e?.hasDetectedGame ?? o.Y.hasDetectedGame,
+            }),
+            this.syncWith([s.Ay], E),
+            this.syncWith([a.A], A),
+            E()
+        );
     }
     getUserAgnosticState() {
-        return o;
-    }
-    get enabled() {
-        return o.enabled;
-    }
-    get hasRunningGame() {
         return d;
     }
-    get isActive() {
-        return !!o.enabled && !!d && (0, s.v)({ location: "GameModeStore" }).enabled;
+    get enabled() {
+        return d.enabled;
     }
-    get isThrottling() {
-        return this.isActive && !c && !u;
-    }
-    get isDiscordFocused() {
+    get hasRunningGame() {
         return c;
     }
-    get isDiscordHovered() {
+    get hasDetectedGame() {
+        return d.hasDetectedGame;
+    }
+    get isActive() {
+        return !!d.enabled && !!c && (0, l.v)({ location: "GameModeStore" }).enabled;
+    }
+    get isThrottling() {
+        return this.isActive && !u && !_;
+    }
+    get isDiscordFocused() {
         return u;
     }
+    get isDiscordHovered() {
+        return _;
+    }
     get suppressedPromptGameCount() {
-        return o.promptSuppressedGameIds.length;
+        return d.promptSuppressedGameIds.length;
     }
     isPromptSuppressedForGame(e) {
-        return o.promptSuppressedGameIds.includes(e);
+        return d.promptSuppressedGameIds.includes(e);
     }
 }
-let E = new _(r.h, {
+let I = new h(r.h, {
     GAME_MODE_SET_ENABLED: function (e) {
-        return o.enabled !== e.enabled && ((o = { ...o, enabled: e.enabled }), !0);
+        return d.enabled !== e.enabled && ((d = { ...d, enabled: e.enabled }), !0);
     },
     GAME_MODE_SUPPRESS_PROMPT: function (e) {
         return (
-            !o.promptSuppressedGameIds.includes(e.gameId) &&
-            ((o = { ...o, promptSuppressedGameIds: [...o.promptSuppressedGameIds, e.gameId] }), !0)
+            !d.promptSuppressedGameIds.includes(e.gameId) &&
+            ((d = { ...d, promptSuppressedGameIds: [...d.promptSuppressedGameIds, e.gameId] }), !0)
         );
     },
     GAME_MODE_RESET_PROMPT_SUPPRESSION: function () {
-        return 0 !== o.promptSuppressedGameIds.length && ((o = { ...o, promptSuppressedGameIds: [] }), !0);
+        return 0 !== d.promptSuppressedGameIds.length && ((d = { ...d, promptSuppressedGameIds: [] }), !0);
     },
     GAME_MODE_DISCORD_FOCUS_CHANGE: function (e) {
-        return c !== e.focused && ((c = e.focused), !0);
+        return u !== e.focused && ((u = e.focused), !0);
     },
     GAME_MODE_DISCORD_HOVER_CHANGE: function (e) {
-        return u !== e.hovered && ((u = e.hovered), !0);
+        return _ !== e.hovered && ((_ = e.hovered), !0);
     },
 });
