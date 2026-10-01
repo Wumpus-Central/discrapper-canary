@@ -63,7 +63,9 @@ let A = new d.A("ConnectedAccounts"),
             return this.update(e, t, { friend_sync: n });
         },
         setShowActivity(e, t, n) {
-            return this.update(e, t, { show_activity: n });
+            return this.update(e, t, { show_activity: n }).then(
+                (i) => (a.h.dispatch({ type: "USER_CONNECTION_UPDATE", platformType: e, id: t, showActivity: n }), i),
+            );
         },
         update: (e, t, n) =>
             _.A.patch({

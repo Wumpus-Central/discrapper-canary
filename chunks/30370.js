@@ -111,10 +111,10 @@ let m = new g(r.h, {
         h[e.integrationId] = e.joining;
     },
     USER_CONNECTION_UPDATE: function (e) {
-        let { platformType: t, id: n, revoked: i, accessToken: r } = e,
-            a = E.find((e) => e.id === n && e.type === t);
-        if (null == a) return !1;
-        (null != i && (a.revoked = i), null != r && (a.accessToken = r));
+        let { platformType: t, id: n, revoked: i, accessToken: r, showActivity: a } = e,
+            s = E.find((e) => e.id === n && e.type === t);
+        if (null == s) return !1;
+        (null != i && (s.revoked = i), null != r && (s.accessToken = r), null != a && (s.showActivity = a));
     },
     USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function (e) {
         p[e.integrationId] = void 0 !== e.error ? e.error : "";

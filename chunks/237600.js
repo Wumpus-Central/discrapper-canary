@@ -479,10 +479,10 @@ function et(e) {
                                   (0, a.openModalLazy)(async () => {
                                       let { default: e } = await Promise.all([
                                           i.e("684986"),
-                                          i.e("705871"),
                                           i.e("759174"),
-                                          i.e("523638"),
+                                          i.e("705871"),
                                           i.e("340346"),
+                                          i.e("523638"),
                                           i.e("943534"),
                                           i.e("273084"),
                                           i.e("821403"),
@@ -530,10 +530,10 @@ function et(e) {
                                         (0, a.openModalLazy)(async () => {
                                             let { default: e } = await Promise.all([
                                                 i.e("684986"),
-                                                i.e("705871"),
                                                 i.e("759174"),
-                                                i.e("523638"),
+                                                i.e("705871"),
                                                 i.e("340346"),
+                                                i.e("523638"),
                                                 i.e("943534"),
                                                 i.e("273084"),
                                                 i.e("821403"),

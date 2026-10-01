@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => e6 }));
+(n.r(t), n.d(t, { default: () => e3 }));
 var l = n(477900),
     r = n(582128),
     i = n(17928),
@@ -530,7 +530,7 @@ function eS(e, t, n, l) {
     }
     (r.addEventListener("scrollend", l, { once: !0 }), r.scrollTo({ top: u, behavior: "smooth" }));
 }
-var eD = n(38983);
+var eD = n(694187);
 function ej(e) {
     let { column: t, disabled: n, onInsert: r } = e,
         i = X.intl.formatToPlainString(1 === t ? V.default.U0SqHk : V.default["9Ctu9P"], { positionNumber: 1 });
@@ -1353,9 +1353,9 @@ var eQ = n(554146),
     e0 = n(131607),
     e1 = n(967198),
     e2 = n(725041),
-    e8 = n(49999),
-    e3 = n(312152);
-function e6(e) {
+    e6 = n(49999),
+    e8 = n(312152);
+function e3(e) {
     let t,
         { guildId: m } = e,
         h = r.useRef(null),
@@ -1395,7 +1395,7 @@ function e6(e) {
         let a = (0, z.useHasModalOpen)(e2.J),
             u = (0, i.bG)([e1.A], () => e1.A.getGuildId()),
             s = (0, eZ.A)(),
-            [c, d] = (0, e0.kn)(t && u === e && !s ? [eQ.M.GUILD_SPACE_NUX_MODAL] : [], e8.m.GUILD_SPACE_NUX, !0),
+            [c, d] = (0, e0.kn)(t && u === e && !s ? [eQ.M.GUILD_SPACE_NUX_MODAL] : [], e6.m.GUILD_SPACE_NUX, !0),
             o = r.useRef(!1),
             f = c === eQ.M.GUILD_SPACE_NUX_MODAL;
         (r.useEffect(() => {
@@ -1467,9 +1467,9 @@ function e6(e) {
     }, [m, L, V, Y]),
     null == L || null == q)
         ? (0, l.jsx)("div", {
-              className: e3.MY,
+              className: e8.MY,
               children: (0, l.jsx)("div", {
-                  className: e3.F,
+                  className: e8.F,
                   children:
                       "error" !== N || P
                           ? (0, l.jsx)(u.y, { type: u.y.Type.SPINNING_CIRCLE, "aria-label": X.intl.string(X.t.ZTNur7) })
@@ -1483,13 +1483,13 @@ function e6(e) {
           })
         : (0, l.jsx)(et, {
               children: (0, l.jsxs)("div", {
-                  className: e3.MY,
+                  className: e8.MY,
                   children: [
                       (0, l.jsx)(s.Ch, {
                           ref: E,
-                          className: e3.XG,
+                          className: e8.XG,
                           children: (0, l.jsxs)("div", {
-                              className: e3.Qs,
+                              className: e8.Qs,
                               children: [
                                   U && B ? (0, l.jsx)(R.A, { onPublish: O }) : null,
                                   (0, l.jsx)(eJ, {
