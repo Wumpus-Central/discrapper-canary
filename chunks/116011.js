@@ -180,10 +180,11 @@ function k(e) {
             onClaim: d,
             onClaimError: _,
             isClaiming: N,
+            hideClaimButton: R = !1,
         } = e,
-        [R, C] = r.useState(t.code),
-        [m, S] = r.useState(!1),
-        f = null == R;
+        [C, m] = r.useState(t.code),
+        [S, f] = r.useState(!1),
+        g = null == C;
     return (0, l.jsxs)("div", {
         className: h.lA,
         children: [
@@ -209,11 +210,11 @@ function k(e) {
                                             (0, l.jsx)(A.D, {
                                                 variant: "heading-sm/medium",
                                                 color: "text-subtle",
-                                                children: m
+                                                children: S
                                                     ? P.intl.format(P.t.i2EuFO, {
                                                           helpdeskArticle: O.A.getArticleURL(D.MVz.RECURRING_PROMOTION),
                                                       })
-                                                    : f
+                                                    : g
                                                       ? t.body
                                                       : null != t.bodyClaimed
                                                         ? P.intl.format(t.bodyClaimed, { date: t.endDate })
@@ -233,12 +234,13 @@ function k(e) {
                                 ],
                             }),
                             "inline" === c &&
+                                !1 === R &&
                                 (0, l.jsx)(L, {
                                     recurrence: t,
-                                    canBeClaimed: f,
-                                    hasClaimError: m,
-                                    setCode: C,
-                                    setHasClaimError: S,
+                                    canBeClaimed: g,
+                                    hasClaimError: S,
+                                    setCode: m,
+                                    setHasClaimError: f,
                                     analyticsLocations: u,
                                     onClaim: d,
                                     onClaimError: _,
@@ -261,16 +263,17 @@ function k(e) {
                 ],
             }),
             "footer" === c && E,
-            null != R && (0, l.jsx)(y, { recurrence: { ...t, code: R }, analyticsLocations: u }),
+            null != C && (0, l.jsx)(y, { recurrence: { ...t, code: C }, analyticsLocations: u }),
             "footer" === c &&
-                null == R &&
+                null == C &&
+                !1 === R &&
                 (0, l.jsx)(U, {
                     children: (0, l.jsx)(L, {
                         recurrence: t,
-                        canBeClaimed: f,
-                        hasClaimError: m,
-                        setCode: C,
-                        setHasClaimError: S,
+                        canBeClaimed: g,
+                        hasClaimError: S,
+                        setCode: m,
+                        setHasClaimError: f,
                         className: h.qx,
                         analyticsLocations: u,
                         onClaim: d,

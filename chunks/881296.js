@@ -129,9 +129,7 @@ function I(e) {
         ? null
         : (0, i.jsx)(n.a, {
               title: C.intl.string(R.default.r97mLn),
-              subtitle: C.intl.formatToPlainString(T.default.ieA3V0, {
-                  termsUrl: c.A.getArticleURL(E.MVz.RIOT_CREDIT_CAMPAIGN),
-              }),
+              subtitle: C.intl.format(T.default.ieA3V0, { termsUrl: c.A.getArticleURL(E.MVz.RIOT_CREDIT_CAMPAIGN) }),
               actions: [],
               transitionState: I,
               onClose: _,
@@ -147,6 +145,7 @@ function I(e) {
                                 onClaim: U,
                                 onClaimError: k,
                                 isClaiming: O,
+                                hideClaimButton: 3 === l,
                                 analyticsLocations: v,
                             },
                             l,
