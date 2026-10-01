@@ -38,6 +38,11 @@ var i,
         (i.CLIPBOARD_COPY = "DISCORD_CLIPBOARD_COPY"),
         (i.CLIPBOARD_CUT = "DISCORD_CLIPBOARD_CUT"),
         (i.CLIPBOARD_PASTE = "DISCORD_CLIPBOARD_PASTE"),
+        (i.CLIPBOARD_WRITE_TEXT = "DISCORD_CLIPBOARD_WRITE_TEXT"),
+        (i.CLIPBOARD_WRITE_IMAGE = "DISCORD_CLIPBOARD_WRITE_IMAGE"),
+        (i.CLIPBOARD_WRITE_FILE = "DISCORD_CLIPBOARD_WRITE_FILE"),
+        (i.CLIPBOARD_READ_TEXT = "DISCORD_CLIPBOARD_READ_TEXT"),
+        (i.CLIPBOARD_HAS_MIXED_CONTENT = "DISCORD_CLIPBOARD_HAS_MIXED_CONTENT"),
         (i.LOAD_CLIP = "DISCORD_LOAD_CLIP"),
         (i.LOAD_CLIPS_DIRECTORY = "DISCORD_LOAD_CLIPS_DIRECTORY"),
         (i.DELETE_CLIP = "DISCORD_DELETE_CLIP"),
@@ -510,8 +515,8 @@ let K = {
             if (!f.isPlatformEmbedded) return [];
             return m.os.release.split(".").map((e) => parseInt(e, 10));
         },
-        copy(e) {
-            f.isPlatformEmbedded && m.clipboard.copy(e);
+        async copy(e) {
+            f.isPlatformEmbedded && (await m.clipboard.copy(e));
         },
         async copyImage(e, t) {
             (l()(f.isPlatformEmbedded, "Copy image method called outside native app"),
@@ -519,15 +524,15 @@ let K = {
             let n = await V(e),
                 i = (0, I.U)(e, t);
             if (null != i && N.has(i)) {
-                ((n = await H(n, t ?? `image/${i}`)), m.clipboard.copyImage(g.from(n), "image.png"));
+                ((n = await H(n, t ?? `image/${i}`)), await m.clipboard.copyImage(g.from(n), "image.png"));
                 return;
             }
             let r = null != i && S.has(i) ? `image.${i}` : e;
-            m.clipboard.copyImage(g.from(n), r);
+            await m.clipboard.copyImage(g.from(n), r);
         },
         async copyImageBlob(e, t) {
             let n = await e.arrayBuffer();
-            m.clipboard.copyImage(g.from(n), t);
+            await m.clipboard.copyImage(g.from(n), t);
         },
         canSaveImage(e, t) {
             if (null == e || !f.isPlatformEmbedded) return !1;

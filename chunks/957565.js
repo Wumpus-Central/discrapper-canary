@@ -8,7 +8,7 @@ let s = i.isPlatformEmbedded && null != a.Ay.copy,
 async function d(e, t, n) {
     if (!o) return void n?.(Error("Clipboard API not supported."));
     try {
-        (s ? a.Ay.copy(e) : await window.navigator.clipboard.writeText(e), t?.());
+        (s ? await a.Ay.copy(e) : await window.navigator.clipboard.writeText(e), t?.());
     } catch (e) {
         (n?.(e), r.A.captureException(e));
     }
