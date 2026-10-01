@@ -280,6 +280,13 @@ function k(e, t, n, i) {
                     pttQueueLatencyMicrosSamples: e.pttQueueLatencyMicrosSamples,
                     sampleRateMismatchPercent: e.sampleRateMismatchPercent,
                     currentSampleRate: e.currentSampleRate,
+                    captureProcessingDelayMs: e.captureProcessingDelayMs,
+                    captureProcessingFrameCount: e.captureProcessingFrameCount,
+                    apmProcessTimeMs: e.apmProcessTimeMs,
+                    apmFrameCount: e.apmFrameCount,
+                    sendDelayMs: e.sendDelayMs,
+                    sendPacketCount: e.sendPacketCount,
+                    totalPacketSendDelayMs: e.totalPacketSendDelayMs,
                 })),
             null != i)
         )
@@ -344,6 +351,8 @@ function k(e, t, n, i) {
                         decryptAttempts: a.decryptAttempts,
                         decryptMissingKeyCount: a.decryptMissingKeyCount,
                         decryptInvalidNonceCount: a.decryptInvalidNonceCount,
+                        audioReceiverDelayMs: d?.audioReceiverDelayMs,
+                        audioReceiverPacketCount: d?.audioReceiverPacketCount,
                         ...(null != d
                             ? w({
                                   audioJitterBuffer: d.audioJitterBuffer,
@@ -390,7 +399,9 @@ function k(e, t, n, i) {
         (u.inboundBitrateEstimate = d.inboundBitrateEstimate ?? 0),
         (u.packetsReceived = d.packetsReceived),
         (u.packetsSent = d.packetsSent),
-        null != d.secureFramesProtocolVersion && (u.secureFramesProtocolVersion = d.secureFramesProtocolVersion)),
+        null != d.secureFramesProtocolVersion && (u.secureFramesProtocolVersion = d.secureFramesProtocolVersion),
+        (u.transportDelayMs = d.transportDelayMs),
+        (u.transportPacketCount = d.transportPacketCount)),
         (d?.bytesReceived == null && (null == r || Number.isNaN(r))) ||
             (u.bytesReceived = d?.bytesReceived ?? r ?? void 0),
         (d?.bytesSent == null && (null == a || Number.isNaN(a))) || (u.bytesSent = d?.bytesSent ?? a ?? void 0));
