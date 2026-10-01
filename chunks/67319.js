@@ -1640,7 +1640,7 @@ function nW(e) {
                     graphic: { type: "image", src: nY.A },
                     gradientColor: "blue",
                     title: eg.intl.string(eg.t.zvubnM),
-                    body: eg.intl.string(eg.t["/wx+J2"]),
+                    body: void 0,
                     shouldShow: !x,
                     actions: [
                         {
