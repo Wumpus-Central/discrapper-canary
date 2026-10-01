@@ -1,1 +1,1 @@
-s.exports = { N: "note_f37d39" };
+c.exports = { N: "note_f37d39" };

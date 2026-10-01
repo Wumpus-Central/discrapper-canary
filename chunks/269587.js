@@ -1,4 +1,4 @@
-n.d(e, { A: () => w });
+n.d(e, { A: () => k });
 var l = n(477900),
     i = n(582128),
     a = n(866665),
@@ -18,13 +18,13 @@ var l = n(477900),
     I = n(17928),
     N = n(573648),
     E = n(541806),
-    T = n(261020),
-    C = n(83971),
-    S = n(780964),
-    h = n(766075),
-    y = n(30370),
-    O = n(652215),
-    v = n(375708),
+    h = n(261020),
+    T = n(83971),
+    C = n(780964),
+    S = n(766075),
+    v = n(30370),
+    y = n(652215),
+    O = n(375708),
     j = n(754495),
     P = n(534465),
     R = n(939075),
@@ -44,22 +44,22 @@ function V(t) {
             display: s,
             onSelect: o,
             onClose: V,
-            appContext: k,
-            targetElementRef: w,
+            appContext: w,
+            targetElementRef: k,
         } = t,
         [B, W] = i.useState(!1),
         { analyticsLocations: H } = (0, f.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
         z = (0, g.A)({ display: s, user: n, activity: a, entry: r, analyticsLocations: H }),
         X = (0, m.NR)(),
-        F = i.useRef(null),
-        $ = X?.interactionPopoutTargetRef ?? F,
+        $ = i.useRef(null),
+        F = X?.interactionPopoutTargetRef ?? $,
         Q = (function (t) {
             let { onAction: e } = t,
                 { themeType: n } = (0, _.E)(),
                 i = (0, x.A)({
                     userId: t.user.id,
                     tabSection: G.RP.ACTIVITY,
-                    label: v.intl.string(v.t.pD1L1u),
+                    label: O.intl.string(O.t.pD1L1u),
                     onAction: () => e?.({ action: "PRESS_VIEW_ALL_ACTIVITY_MENU_ITEM" }),
                 });
             return [
@@ -68,14 +68,14 @@ function V(t) {
                     let { user: e, entry: n, display: i, onAction: a, onClose: r } = t,
                         s = (0, I.bG)([M.default], () => M.default.getCurrentUser()?.id === e.id),
                         o = (0, I.bG)([b.A], () => b.A.hasConnectedAccount());
-                    if ("recent" !== i || !(0, C.F3)(n)) return null;
+                    if ("recent" !== i || !(0, T.F3)(n)) return null;
                     if (!o)
                         return (0, l.jsx)(d.Dr, {
                             id: "connect-spotify",
-                            label: v.intl.formatToPlainString(v.t.XWSHTb, { platform: U.HD }),
+                            label: O.intl.formatToPlainString(O.t.XWSHTb, { platform: U.HD }),
                             action: () => {
                                 (a?.({ action: "PRESS_CONNECT_SPOTIFY_MENU_ITEM" }),
-                                    (0, h.openUserSettings)(S.X.CONNECTIONS_CATEGORY),
+                                    (0, S.openUserSettings)(C.X.CONNECTIONS_CATEGORY),
                                     r?.());
                             },
                         });
@@ -85,10 +85,10 @@ function V(t) {
                         ? null
                         : (0, l.jsx)(d.Dr, {
                               id: "play-on-spotify",
-                              label: v.intl.string(v.t.rRffNz),
+                              label: O.intl.string(O.t.rRffNz),
                               action: () => {
                                   (a?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }),
-                                      (0, T.n)(U.M0.TRACK, c.external_id));
+                                      (0, h.n)(U.M0.TRACK, c.external_id));
                               },
                           });
                 })(t),
@@ -101,7 +101,7 @@ function V(t) {
                     return "recent" === e && r
                         ? (0, l.jsx)(d.Dr, {
                               id: "view-activity",
-                              label: v.intl.string(v.t.GDWYR8),
+                              label: O.intl.string(O.t.GDWYR8),
                               action: () => {
                                   (i?.({ action: "PRESS_VIEW_ACTIVITY_MENU_ITEM" }), s());
                               },
@@ -111,39 +111,39 @@ function V(t) {
                 (0, R.A)(t),
                 (function (t) {
                     let { activity: e, entry: n, display: i, onAction: a, onClose: r } = t,
-                        s = (0, I.bG)([y.A], () => null != y.A.getAccount(null, O.fg2.CRUNCHYROLL));
-                    if (!(0, E.A)(e) && !(0, C.CU)(n)) return null;
+                        s = (0, I.bG)([v.A], () => null != v.A.getAccount(null, y.fg2.CRUNCHYROLL));
+                    if (!(0, E.A)(e) && !(0, T.CU)(n)) return null;
                     if (!s)
                         return (0, l.jsx)(d.Dr, {
                             id: "connect-crunchyroll",
-                            label: v.intl.formatToPlainString(v.t.XWSHTb, {
-                                platform: N.A.get(O.fg2.CRUNCHYROLL).name,
+                            label: O.intl.formatToPlainString(O.t.XWSHTb, {
+                                platform: N.A.get(y.fg2.CRUNCHYROLL).name,
                             }),
                             action: () => {
                                 (a?.({ action: "PRESS_CONNECT_CRUNCHYROLL_MENU_ITEM" }),
-                                    (0, h.openUserSettings)(S.X.CONNECTIONS_CATEGORY),
+                                    (0, S.openUserSettings)(C.X.CONNECTIONS_CATEGORY),
                                     r?.());
                             },
                         });
-                    if ("recent" !== i || !(0, C.CU)(n)) return null;
+                    if ("recent" !== i || !(0, T.CU)(n)) return null;
                     let o = n.extra.url;
                     return null == o || "" === o
                         ? null
                         : (0, l.jsx)(d.Dr, {
                               id: "watch-on-crunchyroll",
-                              label: v.intl.string(v.t.OpxQVH),
+                              label: O.intl.string(O.t.OpxQVH),
                               action: () => {
-                                  (a?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, T.C)(o));
+                                  (a?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, h.C)(o));
                               },
                           });
                 })(t),
                 (0, j.s)(t),
             ].filter((t) => null != t);
-        })({ entry: r, activity: a, user: n, display: s, onClose: V, onAction: z, isMenuOpen: B, appContext: k });
+        })({ entry: r, activity: a, user: n, display: s, onClose: V, onAction: z, isMenuOpen: B, appContext: w });
     return 0 === Q.length || n.bot
         ? null
         : (0, l.jsx)(c.Y, {
-              targetElementRef: w ?? $,
+              targetElementRef: k ?? F,
               align: "top",
               position: "right",
               disablePointerEvents: !1,
@@ -160,7 +160,7 @@ function V(t) {
                           onClose: () => {
                               (e(), W(!1));
                           },
-                          "aria-label": v.intl.string(v.t.PlAQz1),
+                          "aria-label": O.intl.string(O.t.PlAQz1),
                           onSelect: o,
                           children: (0, l.jsx)(d.rX, { children: Q }),
                       }),
@@ -169,8 +169,8 @@ function V(t) {
               children: e,
           });
 }
-var k = n(260155);
-function w(t) {
+var w = n(260155);
+function k(t) {
     let e = i.useRef(null);
     return (0, l.jsx)(V, {
         ...t,
@@ -178,19 +178,19 @@ function w(t) {
         children: (t) =>
             (0, l.jsx)(a.m, {
                 targetElementRef: e,
-                text: v.intl.string(v.t["UKOtz+"]),
+                text: O.intl.string(O.t["UKOtz+"]),
                 ariaHidden: !0,
                 children: (0, l.jsx)(r.D, {
                     ...t,
                     innerRef: e,
-                    "aria-label": v.intl.string(v.t["UKOtz+"]),
+                    "aria-label": O.intl.string(O.t["UKOtz+"]),
                     onClick: (e) => {
                         (e.stopPropagation(), t.onClick(e));
                     },
                     onContextMenu: (e) => {
                         (e.preventDefault(), t.onClick(e));
                     },
-                    className: k.He,
+                    className: w.He,
                     children: (0, l.jsx)(s.MoreHorizontalIcon, {
                         color: o.A.colors.INTERACTIVE_TEXT_DEFAULT,
                         size: "xs",

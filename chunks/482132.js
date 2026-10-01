@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => I, UX: () => y, dZ: () => S });
+n.d(t, { Ay: () => I, UX: () => S, dZ: () => y });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
@@ -10,9 +10,9 @@ var l = n(477900),
     d = n(71804),
     f = n(883645),
     h = n(601194),
-    p = n(263532),
+    m = n(263532),
     C = n(573359),
-    m = n(166532),
+    p = n(166532),
     E = n(819252);
 function I(e) {
     let {
@@ -24,9 +24,9 @@ function I(e) {
             return { header: t, disableDefaultSlideTransformStyling: n, stepProps: l };
         })(e),
         { step: a, stepConfigs: I } = (0, f.Ay)(),
-        { setBodyNode: S, setFooterNode: y, setModalOverlayNode: g } = (0, h.Gm)(),
+        { setBodyNode: y, setFooterNode: S, setModalOverlayNode: g } = (0, h.Gm)(),
         _ = (0, u.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: P, unifiedCheckoutFlow: A } = (0, p.t4)((e) => ({
+        { setReadySlideId: P, unifiedCheckoutFlow: A } = (0, m.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
@@ -44,12 +44,12 @@ function I(e) {
     let M = R?.options?.hideSlider ?? !1,
         v = R?.options?.hideDefaultModalBody ?? !1,
         T = R?.options?.sliderBodyClassName,
-        x = a === m.pn.REVIEW,
+        x = a === p.pn.REVIEW,
         L = r.useCallback(
             (e, t) => {
-                t === a && S(e);
+                t === a && y(e);
             },
-            [a, S],
+            [a, y],
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -86,7 +86,7 @@ function I(e) {
                                         ),
                                     }),
                                 }),
-                          (0, l.jsx)("div", { ref: (e) => y(e) }),
+                          (0, l.jsx)("div", { ref: (e) => S(e) }),
                           (0, l.jsx)("div", {
                               ref: (e) => {
                                   g(e);
@@ -97,12 +97,12 @@ function I(e) {
         ],
     });
 }
-function S(e) {
+function y(e) {
     let { children: t } = e,
         { bodyNode: n } = (0, h.Gm)();
     return null == n ? null : a.createPortal(t, n);
 }
-function y(e) {
+function S(e) {
     let { children: t } = e,
         { footerNode: n } = (0, h.Gm)();
     return null == n ? null : a.createPortal(t, n);

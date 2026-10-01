@@ -18,16 +18,16 @@ var l = n(477900),
     I = n(41821);
 function N(t) {
     let { applicationId: e, onAction: n, onClose: N, activity: E } = t,
-        { analyticsLocations: T } = (0, u.Ay)(c.A.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
-        { data: C } = (0, d.YY)(e),
-        S = (0, o.JC)(C),
-        { themeType: h } = (0, g.E)(),
-        y = h === x.d.MODAL || h === x.d.MODAL_V2,
-        O = (0, f.o)(E?.application_id ?? e),
-        v = S && y && null != C && !O,
-        j = v ? [i.M.CLOUD_PLAY_NEW_BADGE] : [],
+        { analyticsLocations: h } = (0, u.Ay)(c.A.USER_PROFILE_ACTIVITY_CLOUD_PLAY_SECTION),
+        { data: T } = (0, d.YY)(e),
+        C = (0, o.JC)(T),
+        { themeType: S } = (0, g.E)(),
+        v = S === x.d.MODAL || S === x.d.MODAL_V2,
+        y = (0, f.o)(E?.application_id ?? e),
+        O = C && v && null != T && !y,
+        j = O ? [i.M.CLOUD_PLAY_NEW_BADGE] : [],
         [P] = (0, A.kn)(j);
-    return v
+    return O
         ? (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsx)(p.A, { className: I.Xl }),
@@ -45,7 +45,7 @@ function N(t) {
                                   (0, l.jsx)(s.E, { variant: "text-xs/medium", children: _.intl.string(_.t.IQjdmV) }),
                               ],
                           }),
-                          (0, l.jsx)(m.A, { application: C, onAction: n, onClose: N, analyticsLocations: T }),
+                          (0, l.jsx)(m.A, { application: T, onAction: n, onClose: N, analyticsLocations: h }),
                       ],
                   }),
               ],

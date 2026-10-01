@@ -1,6 +1,6 @@
-s.d(t, { Ay: () => g, Be: () => v, Nj: () => I, y3: () => m });
-var n,
-    r = s(477900),
+s.d(t, { Ay: () => I, Be: () => v, Nj: () => g, y3: () => x });
+var r,
+    n = s(477900),
     a = s(582128),
     l = s(503698),
     i = s.n(l),
@@ -10,38 +10,38 @@ var n,
     d = s(352224),
     p = s(509115),
     v =
-        (((n = {}).UNKNOWN = "unknown"),
-        (n.VISA = "visa"),
-        (n.DISCOVER = "discover"),
-        (n.MASTERCARD = "mastercard"),
-        (n.AMEX = "amex"),
-        (n.PAYPAL = "paypal"),
-        (n.PAYMENT_REQUEST = "paymentRequest"),
-        (n.G_PAY = "gPay"),
-        (n.DINERS = "diners"),
-        (n.JCB = "jcb"),
-        (n.UNIONPAY = "unionpay"),
-        (n.SOFORT = "sofort"),
-        (n.PRZELEWY24 = "przelewy24"),
-        (n.GIROPAY = "giropay"),
-        (n.PAYSAFECARD = "paysafecard"),
-        (n.GCASH = "gcash"),
-        (n.GRABPAY = "grabpay"),
-        (n.MOMO_WALLET = "momo_wallet"),
-        (n.VENMO = "venmo"),
-        (n.KAKAOPAY = "kakaopay"),
-        (n.GOPAY_WALLET = "gopay_wallet"),
-        (n.BANCONTACT = "bancontact"),
-        (n.EPS = "eps"),
-        (n.IDEAL = "ideal"),
-        (n.CASH_APP = "cash_app"),
-        (n.APPLE = "apple"),
-        (n.APPLE_LIGHT = "apple_light"),
-        (n.BANK = "bank"),
-        (n.GIFT_CARD = "gift_card"),
-        (n.PIX = "pix"),
-        n);
-function I(e) {
+        (((r = {}).UNKNOWN = "unknown"),
+        (r.VISA = "visa"),
+        (r.DISCOVER = "discover"),
+        (r.MASTERCARD = "mastercard"),
+        (r.AMEX = "amex"),
+        (r.PAYPAL = "paypal"),
+        (r.PAYMENT_REQUEST = "paymentRequest"),
+        (r.G_PAY = "gPay"),
+        (r.DINERS = "diners"),
+        (r.JCB = "jcb"),
+        (r.UNIONPAY = "unionpay"),
+        (r.SOFORT = "sofort"),
+        (r.PRZELEWY24 = "przelewy24"),
+        (r.GIROPAY = "giropay"),
+        (r.PAYSAFECARD = "paysafecard"),
+        (r.GCASH = "gcash"),
+        (r.GRABPAY = "grabpay"),
+        (r.MOMO_WALLET = "momo_wallet"),
+        (r.VENMO = "venmo"),
+        (r.KAKAOPAY = "kakaopay"),
+        (r.GOPAY_WALLET = "gopay_wallet"),
+        (r.BANCONTACT = "bancontact"),
+        (r.EPS = "eps"),
+        (r.IDEAL = "ideal"),
+        (r.CASH_APP = "cash_app"),
+        (r.APPLE = "apple"),
+        (r.APPLE_LIGHT = "apple_light"),
+        (r.BANK = "bank"),
+        (r.GIFT_CARD = "gift_card"),
+        (r.PIX = "pix"),
+        r);
+function g(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "dark";
     if ("light" === t) {
         if ("apple" === e) return s(685430);
@@ -98,29 +98,29 @@ function I(e) {
             return s(511403);
     }
 }
-let m = { SMALL: p.cardIconSmall, MEDIUM: p.cardIconMedium, LARGE: p.cardIconLarge, XLARGE: p.cardIconXLarge };
-class E extends a.PureComponent {
+let x = { SMALL: p.cardIconSmall, MEDIUM: p.cardIconMedium, LARGE: p.cardIconLarge, XLARGE: p.cardIconXLarge };
+class m extends a.PureComponent {
     static Types = v;
-    static Sizes = m;
+    static Sizes = x;
     static getType(e) {
         return null == e ? "unknown" : v[e.replace(/[^a-z0-9_]/gi, "").toUpperCase()] || "unknown";
     }
-    static defaultProps = { size: m.SMALL, flipped: !1 };
+    static defaultProps = { size: x.SMALL, flipped: !1 };
     render() {
-        let { flipped: e, type: t, className: s, size: n } = this.props;
+        let { flipped: e, type: t, className: s, size: r } = this.props;
         return "bank" === t
-            ? (0, r.jsx)(c.M, { className: s })
+            ? (0, n.jsx)(c.M, { className: s })
             : "gift_card" === t
-              ? (0, r.jsx)(u._, { className: s, size: "lg" })
+              ? (0, n.jsx)(u._, { className: s, size: "lg" })
               : "pix" === t
-                ? (0, r.jsx)(o.W, { className: s, size: "lg" })
+                ? (0, n.jsx)(o.W, { className: s, size: "lg" })
                 : "ideal" === t
-                  ? (0, r.jsx)(d.E, { className: s, size: "lg" })
-                  : (0, r.jsx)("div", {
+                  ? (0, n.jsx)(d.E, { className: s, size: "lg" })
+                  : (0, n.jsx)("div", {
                         "aria-hidden": !0,
-                        className: i()(n, p[t], s, { [p.flipped]: e }),
+                        className: i()(r, p[t], s, { [p.flipped]: e }),
                         children: t,
                     });
     }
 }
-let g = E;
+let I = m;

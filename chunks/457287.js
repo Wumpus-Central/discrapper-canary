@@ -1,11 +1,11 @@
 s.d(t, { f: () => l, A: () => i });
-var n = s(477900);
+var r = s(477900);
 s(582128);
-var r = s(691885),
+var n = s(691885),
     a = s(375708);
 function l(e) {
-    let { currencies: t, className: s, children: r } = e;
-    return t.length < 2 ? null : (0, n.jsx)("div", { className: s, children: r });
+    let { currencies: t, className: s, children: n } = e;
+    return t.length < 2 ? null : (0, r.jsx)("div", { className: s, children: n });
 }
 let i = function (e) {
     let { label: t, currencies: s, onChange: l, selectedCurrency: i, disabled: c = !1 } = e;
@@ -76,7 +76,7 @@ let i = function (e) {
             }
         })(e)}`,
     }));
-    return (0, n.jsx)(r.l, {
+    return (0, r.jsx)(n.l, {
         selectionMode: "single",
         label: t,
         value: i,

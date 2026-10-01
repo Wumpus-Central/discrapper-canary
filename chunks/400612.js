@@ -1,21 +1,21 @@
 s.d(t, { KY: () => u, ME: () => c, u$: () => i });
-var n,
-    r = s(582128),
+var r,
+    n = s(582128),
     a = s(800471),
     l = s(263532),
     i =
-        (((n = {}).PREMIUM_GIFT = "PREMIUM_GIFT"),
-        (n.PREMIUM_WITH_TRIAL = "PREMIUM_WITH_TRIAL"),
-        (n.SUBSCRIPTION_NEW_PURCHASE = "SUBSCRIPTION_NEW_PURCHASE"),
-        (n.SUBSCRIPTION_SWITCH_PLAN = "SUBSCRIPTION_SWITCH_PLAN"),
-        (n.LOADING = "LOADING"),
-        n);
+        (((r = {}).PREMIUM_GIFT = "PREMIUM_GIFT"),
+        (r.PREMIUM_WITH_TRIAL = "PREMIUM_WITH_TRIAL"),
+        (r.SUBSCRIPTION_NEW_PURCHASE = "SUBSCRIPTION_NEW_PURCHASE"),
+        (r.SUBSCRIPTION_SWITCH_PLAN = "SUBSCRIPTION_SWITCH_PLAN"),
+        (r.LOADING = "LOADING"),
+        r);
 let c = new Set(["SUBSCRIPTION_NEW_PURCHASE", "SUBSCRIPTION_SWITCH_PLAN"]);
 function u(e) {
     let {
             invoiceTypeDiscriminator: t,
             subscriptionPlan: s,
-            invoiceError: n,
+            invoiceError: r,
             shouldSetPurchasePreviewErrorFromInvoice: i,
         } = e,
         {
@@ -27,38 +27,38 @@ function u(e) {
             renewalInvoicePreview: e.renewalInvoicePreview,
             setPurchasePreviewError: e.setPurchasePreviewError,
         })),
-        d = r.useMemo(() => (0, a.U)(c, s), [c, s]);
+        d = n.useMemo(() => (0, a.U)(c, s), [c, s]);
     return (
-        r.useEffect(() => {
-            i && o(n);
-        }, [n, i, o]),
+        n.useEffect(() => {
+            i && o(r);
+        }, [r, i, o]),
         {
-            discriminatedInvoicePreview: r.useMemo(
+            discriminatedInvoicePreview: n.useMemo(
                 () =>
                     (function (e) {
                         let {
                             error: t,
                             invoiceTypeDiscriminator: s,
-                            proratedInvoicePreview: n,
-                            renewalInvoicePreview: r,
+                            proratedInvoicePreview: r,
+                            renewalInvoicePreview: n,
                             planSwitchLoading: a,
                         } = e;
                         if (null != t) return null;
                         if (a);
-                        else if ("PREMIUM_GIFT" === s && null != n) return { type: "PREMIUM_GIFT", invoicePreview: n };
-                        else if ("PREMIUM_WITH_TRIAL" === s && null != n)
-                            return { type: "PREMIUM_WITH_TRIAL", invoicePreview: n, renewalInvoicePreview: r };
-                        else if (null != n && null != r)
-                            return { type: "SUBSCRIPTION_NEW_PURCHASE", invoicePreview: n, renewalInvoicePreview: r };
+                        else if ("PREMIUM_GIFT" === s && null != r) return { type: "PREMIUM_GIFT", invoicePreview: r };
+                        else if ("PREMIUM_WITH_TRIAL" === s && null != r)
+                            return { type: "PREMIUM_WITH_TRIAL", invoicePreview: r, renewalInvoicePreview: n };
+                        else if (null != r && null != n)
+                            return { type: "SUBSCRIPTION_NEW_PURCHASE", invoicePreview: r, renewalInvoicePreview: n };
                         return { type: "LOADING", invoicePreview: null };
                     })({
                         invoiceTypeDiscriminator: t,
-                        error: n,
+                        error: r,
                         proratedInvoicePreview: c,
                         renewalInvoicePreview: u,
                         planSwitchLoading: d,
                     }),
-                [t, n, c, u, d],
+                [t, r, c, u, d],
             ),
         }
     );

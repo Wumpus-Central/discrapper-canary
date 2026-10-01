@@ -1,4 +1,4 @@
-n.d(t, { Ar: () => p, Xv: () => f, Z0: () => _, qs: () => h, xA: () => u });
+n.d(t, { Ar: () => _, Xv: () => f, Z0: () => p, qs: () => h, xA: () => u });
 var i = n(587895),
     r = n(174459),
     l = n(972786),
@@ -69,7 +69,7 @@ function h(e, t) {
         ...c(e, n),
     });
 }
-function _(e, t) {
+function p(e, t) {
     let { location: n, code: i, message: l, details: o, isPreview: u = !0 } = t;
     r.default.track(s.HAw.VIBEGRATION_ERRORED, {
         ...d(e),
@@ -81,7 +81,7 @@ function _(e, t) {
         error_details: a(o),
     });
 }
-function p(e, t) {
+function _(e, t) {
     let { entryPoint: n, publishState: i, surface: o, installScope: u, action: a } = t,
         d = l.Ay.getProject(e);
     r.default.track(s.HAw.VIBEGRATION_PUBLISH_ACTION_CLICKED, {

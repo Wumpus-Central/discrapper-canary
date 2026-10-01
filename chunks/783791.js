@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => et, B0: () => H, BL: () => A, bi: () => X }), n(667532), n(321073));
+(n.d(t, { Ay: () => et, B0: () => H, BL: () => A, bi: () => Y }), n(667532), n(321073));
 var i = n(17928),
     r = n(73153),
     l = n(695515),
@@ -10,14 +10,14 @@ var i = n(17928),
     c = n(461213),
     f = n(935208),
     h = n(933294),
-    _ = n(683180),
-    p = n(972786),
-    g = n(652215),
-    w = n(746080),
+    p = n(683180),
+    _ = n(972786),
+    w = n(652215),
+    g = n(746080),
     E = n(50617),
-    T = n(375708);
+    m = n(375708);
 let I = "bit_message1",
-    m = new Set(["reply", "plan_proposed", "terminal_error"]);
+    T = new Set(["reply", "plan_proposed", "terminal_error"]);
 function A(e) {
     return (
         !0 === e.finished ||
@@ -26,20 +26,20 @@ function A(e) {
         null != e.proposal ||
         null != e.clarification ||
         null != e.intake ||
-        e.steps.some((e) => m.has(e.kind))
+        e.steps.some((e) => T.has(e.kind))
     );
 }
 let S = new Map(),
-    R = new Map(),
-    O = new Map(),
-    y = [],
     v = new Map(),
-    N = new Map(),
-    b = new Set(),
+    y = new Map(),
+    R = [],
+    O = new Map(),
+    b = new Map(),
+    N = new Set(),
     C = new Map(),
     P = 0,
-    k = [],
-    M = 0;
+    M = [],
+    k = 0;
 function B(e, t) {
     let {
             ts: n,
@@ -48,7 +48,7 @@ function B(e, t) {
             attachments: l,
             turnId: o,
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        s = i ?? `m${++M}`;
+        s = i ?? `m${++k}`;
     return {
         id: s,
         render_id: s,
@@ -62,7 +62,7 @@ function B(e, t) {
     };
 }
 let L = "turn:";
-function G(e) {
+function D(e) {
     let t = B(e.role, e.content, { ts: e.ts, id: e.id, userId: e.user_id, attachments: e.attachments }),
         n = (function (e) {
             let t = e?.startsWith(L) === !0 ? e.slice(L.length) : e;
@@ -98,12 +98,12 @@ function G(e) {
         "awaiting_user" === i.kind && "secrets" === i.action && (t.awaitingUser = { action: i.action });
     return t;
 }
-function D(e, t) {
+function G(e, t) {
     return e.turn_id === t || e.id === `${L}${t}`;
 }
 function V(e, t) {
     if (null == t) return -1;
-    for (let n = e.length - 1; n >= 0; n--) if (D(e[n], t)) return n;
+    for (let n = e.length - 1; n >= 0; n--) if (G(e[n], t)) return n;
     return -1;
 }
 function H(e, t) {
@@ -113,11 +113,11 @@ function H(e, t) {
     for (let n = t - 1; n >= 0; n--) {
         let t = e[n];
         if ("user" === t.role) break;
-        if (D(t, i)) return A(t);
+        if (G(t, i)) return A(t);
     }
     return !1;
 }
-function U(e, t) {
+function x(e, t) {
     let n = V(e, t);
     if (-1 !== n) return n;
     for (let t = e.length - 1; t >= 0; t--) {
@@ -126,19 +126,19 @@ function U(e, t) {
     }
     return -1;
 }
-function x(e, t, n) {
+function U(e, t, n) {
     let i = S.get(e);
     if (null == i) return;
-    let r = U(i, t);
+    let r = x(i, t);
     if (-1 === r) return void S.set(e, [...i, n(B("assistant", "", null != t ? { turnId: t } : {}))]);
     let l = i[r],
-        o = null == t || null != l.turn_id || D(l, t) ? l : { ...l, turn_id: t };
+        o = null == t || null != l.turn_id || G(l, t) ? l : { ...l, turn_id: t };
     S.set(e, [...i.slice(0, r), n(o), ...i.slice(r + 1)]);
 }
 function F(e) {
     return "side_reply" === e.kind || "publish_notice" === e.kind;
 }
-function j(e) {
+function W(e) {
     if (null == e) return !1;
     let t = !1;
     for (let n = e.length - 1; n >= 0; n--) {
@@ -147,8 +147,8 @@ function j(e) {
     }
     return !1;
 }
-function W(e) {
-    return j(S.get(e));
+function j(e) {
+    return W(S.get(e));
 }
 function q(e, t, n, i, r) {
     if (null != r) {
@@ -157,7 +157,7 @@ function q(e, t, n, i, r) {
     }
     if (
         h.A.areTurnNotificationsDisabled() ||
-        c.A.getStatus() === g.clD.DND ||
+        c.A.getStatus() === w.clD.DND ||
         s.NO.getSetting() ||
         l.A.isCurrentUserInRestrictedHours()
     )
@@ -166,31 +166,31 @@ function q(e, t, n, i, r) {
         E = d.A.getGuildId();
     if (
         null != E &&
-        p.Ay.getSelectedProjectId(E) === e &&
-        a.Ay.getChannelId() === w.VV.VIBEGRATIONS &&
+        _.Ay.getSelectedProjectId(E) === e &&
+        a.Ay.getChannelId() === g.VV.VIBEGRATIONS &&
         h.A.isWindowFocused()
     ) {
         f && (0, o.Ak)(I, 0.4);
         return;
     }
-    let T = t ?? (0, _.$X)("VibegrationsChatStore");
+    let m = t ?? (0, p.$X)("VibegrationsChatStore");
     h.A.presentTurnNotification({
         projectId: e,
-        guildId: T,
+        guildId: m,
         title: n,
         body: i,
-        route: null == T ? null : g.BVt.CHANNEL(T, w.VV.VIBEGRATIONS, e),
+        route: null == m ? null : w.BVt.CHANNEL(m, g.VV.VIBEGRATIONS, e),
         sound: f ? I : void 0,
         volume: 0.4,
     });
 }
-function J(e) {
-    let t = O.get(e) ?? !1,
-        n = W(e);
+function $(e) {
+    let t = y.get(e) ?? !1,
+        n = j(e);
     if (t === n) return;
-    O.set(e, n);
-    let i = y.indexOf(e);
-    if ((-1 !== i && y.splice(i, 1), y.unshift(e), n)) R.delete(e);
+    y.set(e, n);
+    let i = R.indexOf(e);
+    if ((-1 !== i && R.splice(i, 1), R.unshift(e), n)) v.delete(e);
     else {
         let t;
         (null !=
@@ -204,9 +204,9 @@ function J(e) {
             null != t.proposal ||
             null != t.clarification ||
             null != t.intake ||
-            t.steps.some((e) => m.has(e.kind) && "terminal_error" !== e.kind))
-            ? R.set(e, Date.now())
-            : R.delete(e),
+            t.steps.some((e) => T.has(e.kind) && "terminal_error" !== e.kind))
+            ? v.set(e, Date.now())
+            : v.delete(e),
             !(function (e) {
                 let t = S.get(e);
                 if (null != t)
@@ -221,24 +221,24 @@ function J(e) {
             })(e));
     }
 }
-function $(e) {
+function J(e) {
     let t = S.delete(e),
         n = K.delete(e),
-        i = Y.delete(e),
-        r = R.delete(e),
-        l = O.delete(e),
-        o = v.delete(e),
-        s = N.delete(e),
-        u = b.delete(e),
-        a = y.indexOf(e);
-    return (-1 !== a && y.splice(a, 1), t || n || i || r || l || o || s || u || -1 !== a);
+        i = X.delete(e),
+        r = v.delete(e),
+        l = y.delete(e),
+        o = O.delete(e),
+        s = b.delete(e),
+        u = N.delete(e),
+        a = R.indexOf(e);
+    return (-1 !== a && R.splice(a, 1), t || n || i || r || l || o || s || u || -1 !== a);
 }
 class z extends i.Ay.Store {
     initialize() {
-        this.waitFor(l.A, u.A, a.Ay, d.A, c.A, p.Ay);
+        this.waitFor(l.A, u.A, a.Ay, d.A, c.A, _.Ay);
     }
     getMessages(e) {
-        return S.get(e) ?? k;
+        return S.get(e) ?? M;
     }
     hasPendingSettingsRequest(e) {
         let t = this.getMessages(e),
@@ -246,31 +246,31 @@ class z extends i.Ay.Store {
         return null != n && "assistant" === n.role && null != n.settingsRequest;
     }
     isThinking(e) {
-        return W(e);
+        return j(e);
     }
     hasLoadedHistory(e) {
         return K.has(e);
     }
     isHistoryUnavailable(e) {
-        return Y.has(e);
+        return X.has(e);
     }
     getFinishedAt(e) {
-        return W(e) ? null : (R.get(e) ?? null);
+        return j(e) ? null : (v.get(e) ?? null);
     }
     getProjectUsage(e) {
-        return v.get(e) ?? null;
+        return O.get(e) ?? null;
     }
     getThinkingActivity(e) {
-        return N.get(e) ?? null;
+        return b.get(e) ?? null;
     }
     isCompacting(e) {
-        return b.has(e);
+        return N.has(e);
     }
     getSidebarWidth() {
         return P;
     }
     getActivityOrderedProjectIds() {
-        return y.slice();
+        return R.slice();
     }
     isAnyThinking() {
         for (let e of S.keys()) if (this.isThinking(e)) return !0;
@@ -278,8 +278,8 @@ class z extends i.Ay.Store {
     }
 }
 let K = new Map(),
-    Y = new Set();
-function X(e) {
+    X = new Set();
+function Y(e) {
     return K.get(e) ?? null;
 }
 function Z() {
@@ -313,40 +313,40 @@ let et = new z(r.h, {
         if (
             (C.clear(),
             0 === S.size &&
-                0 === R.size &&
-                0 === O.size &&
                 0 === v.size &&
-                0 === N.size &&
+                0 === y.size &&
+                0 === O.size &&
                 0 === b.size &&
+                0 === N.size &&
                 0 === K.size &&
-                0 === Y.size &&
-                0 === y.length &&
+                0 === X.size &&
+                0 === R.length &&
                 0 === P)
         )
             return !1;
         (S.clear(),
-            R.clear(),
-            O.clear(),
             v.clear(),
-            N.clear(),
+            y.clear(),
+            O.clear(),
             b.clear(),
+            N.clear(),
             K.clear(),
-            Y.clear(),
-            (y.length = 0),
+            X.clear(),
+            (R.length = 0),
             (P = 0));
     },
     VIBEGRATIONS_CHAT_HISTORY_SET: function (e) {
         let { projectId: t, entries: n, cursor: i, degraded: r } = e;
-        (K.set(t, i ?? null), !0 === r ? Y.add(t) : Y.delete(t), N.delete(t), b.delete(t));
+        (K.set(t, i ?? null), !0 === r ? X.add(t) : X.delete(t), b.delete(t), N.delete(t));
         let l = new Set(),
             o = n.filter((e) => null == e.id || (!l.has(e.id) && (l.add(e.id), !0)));
-        (S.set(t, o.map(G)), J(t));
+        (S.set(t, o.map(D)), $(t));
     },
     VIBEGRATIONS_CHAT_HISTORY_PREPEND: function (e) {
         let { projectId: t, entries: n, cursor: i } = e;
         if ((K.set(t, i), 0 === n.length)) return;
         let r = S.get(t) ?? [],
-            l = n.map(G),
+            l = n.map(D),
             o = new Set(r.flatMap((e) => (null == e.id ? [] : [e.id]))),
             s = l.filter((e) => null == e.id || !o.has(e.id));
         S.set(t, [...s, ...r]);
@@ -358,11 +358,11 @@ let et = new z(r.h, {
         let a = B("user", n, { ts: o, id: i, userId: l, attachments: s }),
             d = null == r ? -1 : u.findIndex((e) => e.id === r);
         if (-1 !== d) {
-            ((a.render_id = u[d].render_id), S.set(t, [...u.slice(0, d), a, ...u.slice(d + 1)]), J(t));
+            ((a.render_id = u[d].render_id), S.set(t, [...u.slice(0, d), a, ...u.slice(d + 1)]), $(t));
             return;
         }
         let c = [...u, a];
-        (j(c) || c.push(B("assistant", "")), S.set(t, c), J(t));
+        (W(c) || c.push(B("assistant", "")), S.set(t, c), $(t));
     },
     VIBEGRATIONS_CHAT_MESSAGE_DISPOSITION: function (e) {
         let { projectId: t, id: n, activeTurnId: i, disposition: r } = e,
@@ -373,11 +373,11 @@ let et = new z(r.h, {
         let s = l[o].disposition === r ? l : [...l.slice(0, o), { ...l[o], disposition: r }, ...l.slice(o + 1)],
             u = "steered" === r ? V(s, i) : -1;
         if ("steered" === r && -1 === u && null != i) {
-            let e = U(s, i);
+            let e = x(s, i);
             if (-1 !== e && e < o) {
                 let n = { ...s[e], turn_id: i };
                 if (0 === n.steps.length) {
-                    (S.set(t, [...s.slice(0, e), ...s.slice(e + 1, o + 1), n, ...s.slice(o + 1)]), J(t));
+                    (S.set(t, [...s.slice(0, e), ...s.slice(e + 1, o + 1), n, ...s.slice(o + 1)]), $(t));
                     return;
                 }
                 ((s = [...s.slice(0, e), n, ...s.slice(e + 1)]), (u = e));
@@ -391,7 +391,7 @@ let et = new z(r.h, {
             B("assistant", "", { turnId: i }),
             ...s.slice(o + 1),
         ]),
-            J(t));
+            $(t));
     },
     VIBEGRATIONS_CHAT_SIDE_REPLY: function (e) {
         let { projectId: t, id: n, inReplyTo: i, content: r, timestamp: l } = e,
@@ -413,12 +413,12 @@ let et = new z(r.h, {
     },
     VIBEGRATIONS_CHAT_STEP_APPEND: function (e) {
         let { projectId: t, step: n, turnId: i } = e;
-        (x(t, i, (e) => {
+        (U(t, i, (e) => {
             var t;
             let i;
             return { ...e, steps: ((t = e.steps), Q((i = Z(t)), n), i.steps) };
         }),
-            J(t));
+            $(t));
     },
     VIBEGRATIONS_CHAT_TURN_FINISHED: function (e) {
         let { projectId: t, summary: n, turnId: i } = e,
@@ -433,15 +433,15 @@ let et = new z(r.h, {
                     return n;
                 }),
             ),
-            x(t, i, (e) => ({
+            U(t, i, (e) => ({
                 ...e,
                 finished: !0,
                 finished_at: Date.now(),
                 provisionalTodo: void 0,
                 content: "" !== e.content ? e.content : (n ?? ""),
             })),
-            W(t) || (N.delete(t), b.delete(t)),
-            J(t));
+            j(t) || (b.delete(t), N.delete(t)),
+            $(t));
     },
     VIBEGRATIONS_CHAT_INTERRUPTED: function (e) {
         let { projectId: t } = e,
@@ -475,25 +475,25 @@ let et = new z(r.h, {
         let { projectId: t, turnId: n, sourceSha: i } = e,
             r = S.get(t);
         if (null == r) return !1;
-        let l = r.map((e) => ("assistant" === e.role && e.sourceSha !== i && D(e, n) ? { ...e, sourceSha: i } : e));
+        let l = r.map((e) => ("assistant" === e.role && e.sourceSha !== i && G(e, n) ? { ...e, sourceSha: i } : e));
         if (l.every((e, t) => e === r[t])) return !1;
         S.set(t, l);
     },
     VIBEGRATIONS_CHAT_THINKING_SET: function (e) {
         let { projectId: t, activity: n } = e;
-        if (null == n) return !!N.delete(t) && void 0;
-        let i = N.get(t);
+        if (null == n) return !!b.delete(t) && void 0;
+        let i = b.get(t);
         if (null != i && n.session === i.session && n.seq <= i.seq) return !1;
-        N.set(t, n);
+        b.set(t, n);
     },
     VIBEGRATIONS_CHAT_COMPACTING_SET: function (e) {
         let { projectId: t, compacting: n } = e;
-        if (n === b.has(t)) return !1;
-        n ? b.add(t) : b.delete(t);
+        if (n === N.has(t)) return !1;
+        n ? N.add(t) : N.delete(t);
     },
     VIBEGRATIONS_CHAT_USAGE_SET: function (e) {
         let { projectId: t, project: n } = e;
-        v.set(t, n);
+        O.set(t, n);
     },
     VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET: function (e) {
         let { width: t } = e;
@@ -502,17 +502,17 @@ let et = new z(r.h, {
     },
     VIBEGRATIONS_CHAT_TURN_PATCH: function (e) {
         let { projectId: t, patch: n, turnId: i } = e;
-        (x(t, i, (e) => {
+        (U(t, i, (e) => {
             let t = { ...e, ...n };
             return ("todos" in n && (t.provisionalTodo = void 0), t);
         }),
-            J(t));
+            $(t));
     },
     VIBEGRATIONS_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if ("closed" !== n && "failed" !== n) return !1;
-        let i = b.delete(t),
-            r = N.delete(t),
+        let i = N.delete(t),
+            r = b.delete(t),
             l = S.get(t);
         if (null == l || !l.some((e) => "assistant" === e.role && !A(e))) return (!!r || !!i) && void 0;
         (S.set(
@@ -529,12 +529,12 @@ let et = new z(r.h, {
                           provisionalTodo: void 0,
                           steps: [
                               ...e.steps,
-                              { type: "step", kind: "terminal_error", message: T.intl.string(E.default["wjWm+/"]) },
+                              { type: "step", kind: "terminal_error", message: m.intl.string(E.default["wjWm+/"]) },
                           ],
                       };
             }),
         ),
-            J(t));
+            $(t));
     },
     VIBEGRATIONS_PROJECT_CREATE_SUCCESS: function (e) {
         let { project: t } = e;
@@ -543,12 +543,12 @@ let et = new z(r.h, {
     },
     VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        if (!$(t)) return !1;
+        if (!J(t)) return !1;
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
-        let t = new Set([...S.keys(), ...K.keys(), ...R.keys(), ...O.keys(), ...v.keys()]),
+        let t = new Set([...S.keys(), ...K.keys(), ...v.keys(), ...y.keys(), ...O.keys()]),
             n = !1;
-        for (let e of t) null == p.Ay.getProject(e) && $(e) && (n = !0);
+        for (let e of t) null == _.Ay.getProject(e) && J(e) && (n = !0);
         if (!n) return !1;
     },
     VIBEGRATIONS_TURN_SETTLED: function (e) {
@@ -557,7 +557,7 @@ let et = new z(r.h, {
     },
     VIBEGRATIONS_TURN_NOTIFICATION: function (e) {
         let { projectId: t, body: n, nonce: i } = e,
-            r = p.Ay.getProject(t);
+            r = _.Ay.getProject(t);
         return (null != r && q(t, r.guild_id ?? r.preview_guild_id ?? null, r.name, n, i), !1);
     },
 });

@@ -1,7 +1,7 @@
 s.d(t, { S: () => o });
-var n = s(477900);
+var r = s(477900);
 s(582128);
-var r = s(355522),
+var n = s(355522),
     a = s(352224),
     l = s(834730),
     i = s(866665),
@@ -12,14 +12,14 @@ function o(e) {
         d =
             null != s
                 ? s === c.Be.BANK
-                    ? (0, n.jsx)(r.M, { className: u.s7 })
+                    ? (0, r.jsx)(n.M, { className: u.s7 })
                     : s === c.Be.IDEAL
-                      ? (0, n.jsx)(a.E, { className: u.s7 })
-                      : (0, n.jsx)("img", { src: (0, c.Nj)(s), alt: "", className: u.s7 })
+                      ? (0, r.jsx)(a.E, { className: u.s7 })
+                      : (0, r.jsx)("img", { src: (0, c.Nj)(s), alt: "", className: u.s7 })
                 : void 0,
-        p = (0, n.jsxs)("div", {
+        p = (0, r.jsxs)("div", {
             className: u.kL,
-            children: [d, (0, n.jsx)(l.E, { variant: "text-md/normal", className: u.Pf, children: t })],
+            children: [d, (0, r.jsx)(l.E, { variant: "text-md/normal", className: u.Pf, children: t })],
         });
-    return null != o ? (0, n.jsx)(i.m, { text: o, asContainer: !0, children: p }) : p;
+    return null != o ? (0, r.jsx)(i.m, { text: o, asContainer: !0, children: p }) : p;
 }

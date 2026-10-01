@@ -17,33 +17,33 @@ function r(e, t, n, r) {
         c = r.sourceMatch ?? "window",
         f = r.id ?? `${t}-${++l}-${Date.now()}`;
     return new Promise((l, h) => {
-        let _ = 0,
-            p = o,
-            g = window.setTimeout(() => {
-                (T(), h(new i.fq(t, r.timeoutMs)));
+        let p = 0,
+            _ = o,
+            w = window.setTimeout(() => {
+                (m(), h(new i.fq(t, r.timeoutMs)));
             }, r.timeoutMs),
-            w = null != r.retryMs ? window.setInterval(I, r.retryMs) : null;
+            g = null != r.retryMs ? window.setInterval(I, r.retryMs) : null;
         function E() {
-            null != w && window.clearInterval(w);
+            null != g && window.clearInterval(g);
         }
-        function T() {
-            (window.clearTimeout(g), E(), window.removeEventListener("message", m));
+        function m() {
+            (window.clearTimeout(w), E(), window.removeEventListener("message", T));
         }
         function I() {
-            (_ += 1) > 1 &&
+            (p += 1) > 1 &&
                 console.debug("[vibegrations] re-offering call to the preview frame", {
                     call: r.label ?? t,
                     id: f,
-                    attempt: _,
+                    attempt: p,
                 });
             let i = { type: u, id: f, ...n };
-            ((p = e.contentWindow), e.contentWindow?.postMessage(i, s));
+            ((_ = e.contentWindow), e.contentWindow?.postMessage(i, s));
         }
-        function m(e) {
-            ("window" === c ? e.source !== p : e.origin !== s) ||
-                ((0, i.YX)(e.data, d, f) ? E() : (0, i.YX)(e.data, a, f) && (T(), l(e.data)));
+        function T(e) {
+            ("window" === c ? e.source !== _ : e.origin !== s) ||
+                ((0, i.YX)(e.data, d, f) ? E() : (0, i.YX)(e.data, a, f) && (m(), l(e.data)));
         }
-        (window.addEventListener("message", m), I());
+        (window.addEventListener("message", T), I());
     });
 }
 let l = 0;

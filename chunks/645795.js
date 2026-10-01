@@ -10,13 +10,13 @@ var l,
     d = n(821609),
     f = n(830382),
     h = n(71804),
-    p = n(263532),
+    m = n(263532),
     C = n(614662),
-    m = n(951305),
+    p = n(951305),
     E = n(419212),
     I = n(97352),
-    S = n(67480),
-    y = n(975571),
+    y = n(67480),
+    S = n(975571),
     g = n(158045),
     _ = n(615396),
     P = n(573359),
@@ -167,7 +167,7 @@ function B(e) {
             startingPremiumSubscriptionPlanId: s,
             onClose: h,
             followupSKUInfo: C,
-            isDowngrade: m,
+            isDowngrade: p,
             hideClose: E,
             postSuccessGuild: A,
             paymentSourceType: M,
@@ -179,13 +179,13 @@ function B(e) {
             isPremiumGroupPurchase: G,
             customCheckoutFlow: B,
             startingIsInPastDueCheckout: Z,
-        } = (0, p.t4)((e) => ({
+        } = (0, m.t4)((e) => ({
             isPremiumGroupPurchase: e.get("isPremiumGroupPurchase"),
             customCheckoutFlow: e.customCheckoutFlow,
             startingIsInPastDueCheckout: e.startingIsInPastDueCheckout,
         })),
         { theme: K } = (0, o.wR)(),
-        W = (0, u.bG)([S.A], () => (null != C ? S.A.get(C.id) : null)),
+        W = (0, u.bG)([y.A], () => (null != C ? y.A.get(C.id) : null)),
         Y = (0, _.b2)(v),
         q = B === H.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
     function Q(e) {
@@ -231,7 +231,7 @@ function B(e) {
             className: D.Qq,
             children: w.intl.format(w.t["tsQOs+"], { skuName: W.name }),
         });
-    else if (Y && !m) {
+    else if (Y && !p) {
         let e = I.A.get(l);
         (a()(null != e, "Missing plan"),
             e.skuId === N.pe.TIER_0
@@ -243,7 +243,7 @@ function B(e) {
                           (0, r.jsx)("p", { children: w.intl.string(w.t["L9lcG/"]) }),
                           (0, r.jsx)("p", {
                               children: w.intl.format(w.t.EoDFuN, {
-                                  helpCenterLink: y.A.getArticleURL(k.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: S.A.getArticleURL(k.MVz.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
@@ -257,7 +257,7 @@ function B(e) {
                           (0, r.jsx)("p", { children: w.intl.string(w.t.UPpbP3) }),
                           (0, r.jsx)("p", {
                               children: w.intl.format(w.t.EoDFuN, {
-                                  helpCenterLink: y.A.getArticleURL(k.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: S.A.getArticleURL(k.MVz.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
@@ -310,7 +310,7 @@ function B(e) {
               ? w.intl.string(w.t.sRApon)
               : null != W
                 ? w.intl.formatToPlainString(w.t["1qGgm4"], { skuName: W.name })
-                : m
+                : p
                   ? w.intl.string(w.t.QJ9EyM)
                   : null != A
                     ? w.intl.string(w.t.ta3cXY)
@@ -342,19 +342,19 @@ function Z(e) {
             hasSentMessage: c,
             giftMessageError: o,
             isSendingMessage: d,
-        } = (0, m.Pv)(),
+        } = (0, p.Pv)(),
         f = (0, u.bG)([I.A], () => I.A.get(t));
     a()(null != f, "Missing plan");
     let h = (0, u.bG)([E.A], () => E.A.getGiftCode(f.skuId)),
-        { quantity: S, checkoutSessionId: y } = (0, p.t4)((e) => ({
+        { quantity: y, checkoutSessionId: S } = (0, m.t4)((e) => ({
             quantity: e.quantity,
             checkoutSessionId: e.contextMetadata.loadId,
         })),
-        g = (0, u.bG)([E.A], () => E.A.isGiftCodeDeliveryReady(y), [y]);
+        g = (0, u.bG)([E.A], () => E.A.isGiftCodeDeliveryReady(S), [S]);
     return (0, r.jsx)(C.A, {
         giftCode: h,
-        giftCount: S,
-        checkoutSessionId: y,
+        giftCount: y,
+        checkoutSessionId: S,
         giftCodeDeliveryReady: g,
         shouldUsePostPurchaseRecipientDelivery: l,
         subscriptionPlan: f,

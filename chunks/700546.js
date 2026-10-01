@@ -10,12 +10,12 @@ var l = n(477900),
     d = n(287809),
     f = n(676279),
     h = n(573359),
-    p = n(659746),
+    m = n(659746),
     C = n(375708),
-    m = n(902062);
+    p = n(902062);
 let E = function (e) {
-    let { type: t, text: n, buttonText: r, buttonLoading: E, hideClose: I, onClose: S } = e,
-        y = (0, s.bG)([d.default], () => {
+    let { type: t, text: n, buttonText: r, buttonLoading: E, hideClose: I, onClose: y } = e,
+        S = (0, s.bG)([d.default], () => {
             let e = d.default.getCurrentUser();
             return (i()(null != e, "UserSettingsProfileCustomization: user cannot be undefined"), e);
         }),
@@ -25,48 +25,48 @@ let E = function (e) {
             : "https://cdn.discordapp.com/assets/content/2688d55b4d0db6d6e603fdc61131d6e8d8c691bd159952078f166ea177fc970b.webm",
         P = (function (e) {
             switch (e) {
-                case p.Or.PREMIUM_UPDATED:
+                case m.Or.PREMIUM_UPDATED:
                     return C.intl.string(C.t["75Wt0E"]);
-                case p.Or.PREMIUM_ACTIVATED:
+                case m.Or.PREMIUM_ACTIVATED:
                     return C.intl.string(C.t.QWljxE);
                 default:
                     return C.intl.string(C.t.X79Az5);
             }
         })(t);
     return (0, l.jsxs)("div", {
-        className: m.kL,
+        className: p.kL,
         children: [
-            (0, l.jsx)(u.D, { className: m.wx, variant: "nitro-lg", color: "text-strong", children: P }),
+            (0, l.jsx)(u.D, { className: p.wx, variant: "nitro-lg", color: "text-strong", children: P }),
             (0, l.jsxs)("div", {
-                className: m.Dz,
+                className: p.Dz,
                 children: [
                     (0, l.jsx)(o.A, {
                         fallbackImage:
                             "https://cdn.discordapp.com/assets/content/3ce3d676b7d77ce5184982326720c020ad6ba69d47068473e0096a62472a81d6.png",
-                        className: m.d9,
+                        className: p.d9,
                         children: (0, l.jsx)("source", { src: _ }),
                     }),
                     (0, l.jsx)(c.A, {
-                        user: y,
+                        user: S,
                         isHighlighted: !0,
                         nameplate: null,
-                        nameplateData: y.nameplate,
-                        className: m.M4,
+                        nameplateData: S.nameplate,
+                        className: p.M4,
                         nameplatePreviewSize: "large",
                         pendingDisplayNameStyles: g?.displayNameStyles,
                         pendingAvatar: g?.avatar,
                     }),
                 ],
             }),
-            (0, l.jsx)("div", { className: m.FS, children: n }),
+            (0, l.jsx)("div", { className: p.FS, children: n }),
             !I &&
                 (0, l.jsx)("div", {
-                    className: m.qr,
+                    className: p.qr,
                     children: (0, l.jsx)(a.$, {
                         variant: "expressive",
                         fullWidth: !0,
                         text: r,
-                        onClick: S,
+                        onClick: y,
                         loading: E,
                     }),
                 }),

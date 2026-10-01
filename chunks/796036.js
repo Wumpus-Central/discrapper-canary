@@ -1,4 +1,4 @@
-n.d(t, { h: () => w, s: () => g });
+n.d(t, { h: () => g, s: () => w });
 var i = n(343030),
     r = n(91242),
     l = n(558960),
@@ -10,11 +10,11 @@ var i = n(343030),
     c = n(171936),
     f = n(165610),
     h = n(600732);
-let _ = new Map(),
-    p = !1;
-function g() {
-    p ||
-        ((p = !0),
+let p = new Map(),
+    _ = !1;
+function w() {
+    _ ||
+        ((_ = !0),
         u.Ay.addChangeListener(E),
         a.Ay.addChangeListener(E),
         r.A.addChangeListener(E),
@@ -22,8 +22,8 @@ function g() {
         (0, o.FQ)(E),
         E());
 }
-function w(e) {
-    return _.has(e);
+function g(e) {
+    return p.has(e);
 }
 function E() {
     let e = new Map();
@@ -37,33 +37,33 @@ function E() {
         })(t);
         null != n && e.set(t, n);
     }
-    for (let [i, r] of [..._]) {
+    for (let [i, r] of [...p]) {
         var t, n;
         e.get(i) !== r.frameId &&
             ((t = i),
             (n = r),
-            _.delete(t),
+            p.delete(t),
             n.unregisterLookup(),
             l.A.removeFrameTarget(n.frameId, n.element),
             n.element.remove());
     }
     for (let [t, n] of e)
-        _.has(t) ||
+        p.has(t) ||
             (function (e, t) {
                 let n = document.createElement("div");
                 ((n.className = h.tF),
                     n.setAttribute("inert", ""),
                     n.setAttribute("aria-hidden", "true"),
-                    T(n, s.A.isBuilderPreviewMobile()),
+                    m(n, s.A.isBuilderPreviewMobile()),
                     document.body.appendChild(n));
                 let r = { frameId: t, element: n, unregisterLookup: () => {} };
-                (_.set(e, r),
+                (p.set(e, r),
                     (r.unregisterLookup = (0, c.mn)(e, () => (0, d.F)(n, t))),
                     l.A.registerFrameTarget(t, n, i.A.Backstage, void 0));
             })(t, n);
-    let p = s.A.isBuilderPreviewMobile();
-    for (let e of _.values()) T(e.element, p);
+    let _ = s.A.isBuilderPreviewMobile();
+    for (let e of p.values()) m(e.element, _);
 }
-function T(e, t) {
+function m(e, t) {
     (e.classList.toggle(h.lZ, t), e.classList.toggle(h.L_, !t));
 }

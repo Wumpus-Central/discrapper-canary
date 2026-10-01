@@ -1,13 +1,13 @@
-(t.d(s, { Ay: () => o, BQ: () => f, Gf: () => u, Z8: () => C, qv: () => p, s2: () => x }), t(321073));
+(t.d(s, { Ay: () => o, BQ: () => f, Gf: () => u, Z8: () => C, qv: () => L, s2: () => x }), t(321073));
 var n = t(477900),
-    i = t(582128),
-    r = t(284009),
-    a = t.n(r),
+    r = t(582128),
+    i = t(284009),
+    a = t.n(i),
     l = t(196765);
-let c = i.createContext(null);
+let c = r.createContext(null);
 function u(e) {
-    let { stepConfigs: s, breadcrumbs: t, children: r } = e,
-        a = i.useMemo(() => {
+    let { stepConfigs: s, breadcrumbs: t, children: i } = e,
+        a = r.useMemo(() => {
             var e, n;
             return (
                 (e = s),
@@ -33,10 +33,10 @@ function u(e) {
                 }))
             );
         }, [s, t]);
-    return (0, n.jsx)(c, { value: a, children: r });
+    return (0, n.jsx)(c, { value: a, children: i });
 }
 function o(e) {
-    let s = i.useContext(c);
+    let s = r.useContext(c);
     return (a()(null != s, "useSteps must be used inside CheckoutStepContext"), s(e));
 }
 function m(e) {
@@ -52,12 +52,12 @@ function C() {
 function x() {
     return o(m);
 }
-function p() {
+function L() {
     return o(d);
 }
-function L(e) {
+function p(e) {
     return e.stepsHistory;
 }
 function f() {
-    return o(L);
+    return o(p);
 }

@@ -26,12 +26,12 @@ function I(t) {
             buttonVariant: I = "secondary",
             fullWidth: N = !0,
             stopPropagation: E = !1,
-            onAction: T,
-            onClose: C,
+            onAction: h,
+            onClose: T,
         } = t,
-        S = (0, f.A)(),
-        h = a.useRef(null),
-        [y, O] = a.useState(!1);
+        C = (0, f.A)(),
+        S = a.useRef(null),
+        [v, y] = a.useState(!1);
     if (
         ((0, A.Ay)(() => {
             0 !== e.length &&
@@ -52,14 +52,14 @@ function I(t) {
         0 === e.length)
     )
         return null;
-    function v(t, e, i, a) {
+    function O(t, e, i, a) {
         (!(function (t) {
             let { analyticsLocations: e, distributor: n, gameId: l, level: i } = t;
             p.default.track(g.HAw.PLAY_CTA_CLICKED, { location_stack: e, distributor: n, game_id: l, level: i });
         })({ analyticsLocations: l, distributor: e, gameId: n, level: a }),
-            T?.({ action: i }),
-            C?.(),
-            S(t));
+            h?.({ action: i }),
+            T?.(),
+            C(t));
     }
     if (1 === e.length) {
         let { ctaConfig: t, skuId: n } = e[0];
@@ -70,7 +70,7 @@ function I(t) {
             text: t.getLabel(),
             fullWidth: N,
             onClick: (e) => {
-                (E && e.stopPropagation(), v(t.getStoreUrl(n), t.distributor, t.analyticsAction, m.PRIMARY));
+                (E && e.stopPropagation(), O(t.getStoreUrl(n), t.distributor, t.analyticsAction, m.PRIMARY));
             },
         });
     }
@@ -87,7 +87,7 @@ function I(t) {
                         label: n.getStoreName(),
                         iconLeft: n.icon,
                         leadingAccessory: { type: "icon", icon: n.icon },
-                        action: () => v(n.getStoreUrl(l), n.distributor, n.analyticsAction, m.SECONDARY),
+                        action: () => O(n.getStoreUrl(l), n.distributor, n.analyticsAction, m.SECONDARY),
                     },
                     n.distributor,
                 ),
@@ -96,18 +96,18 @@ function I(t) {
         );
     });
     return (0, i.jsx)(o.Y, {
-        targetElementRef: h,
+        targetElementRef: S,
         position: "bottom",
         onRequestOpen: function () {
-            for (let { ctaConfig: t } of (O(!0), e))
+            for (let { ctaConfig: t } of (y(!0), e))
                 x({ analyticsLocations: l, distributor: t.distributor, gameId: n, level: m.SECONDARY });
         },
-        onRequestClose: () => O(!1),
+        onRequestClose: () => y(!1),
         renderPopout: (t) => {
             let { closePopout: e } = t;
             return (0, i.jsx)("div", {
                 onClick: (t) => t.stopPropagation(),
-                style: { width: "fit-content", minWidth: h.current?.offsetWidth },
+                style: { width: "fit-content", minWidth: S.current?.offsetWidth },
                 children: (0, i.jsx)(c.W, {
                     "data-menu-migrated": !0,
                     navId: "play-on-distributor-menu",
@@ -120,10 +120,10 @@ function I(t) {
         },
         children: (t) =>
             (0, i.jsx)(r.$, {
-                buttonRef: h,
+                buttonRef: S,
                 variant: I,
                 size: "sm",
-                icon: y ? u.t : d.a,
+                icon: v ? u.t : d.a,
                 iconPosition: "end",
                 text: _.intl.string(_.t.nSHoxC),
                 fullWidth: N,

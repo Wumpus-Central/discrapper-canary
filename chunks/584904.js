@@ -24,9 +24,9 @@ let x = i.forwardRef(function (t, e) {
             ...N
         } = t,
         { themeType: E } = (0, A.E)(),
-        { analyticsLocations: T } = (0, o.Ay)(),
-        { context: C } = (0, c.NJ)();
-    return E === p.d.MODAL || E === p.d.MODAL_V2 || C?.userId == null
+        { analyticsLocations: h } = (0, o.Ay)(),
+        { context: T } = (0, c.NJ)();
+    return E === p.d.MODAL || E === p.d.MODAL_V2 || T?.userId == null
         ? (0, l.jsx)("article", {
               "aria-labelledby": I,
               children: (0, l.jsx)(d.A.Overlay, { ref: e, className: r()(m.Nr, i), ...N, children: n }),
@@ -41,9 +41,9 @@ let x = i.forwardRef(function (t, e) {
                       (x?.({ action: "PRESS_CARD" }),
                           (0, u.openUserProfileModal)({
                               tabSection: f.RP.ACTIVITY,
-                              sourceAnalyticsLocations: T,
+                              sourceAnalyticsLocations: h,
                               scrollTarget: a,
-                              ...C,
+                              ...T,
                           }),
                           _?.());
                   },

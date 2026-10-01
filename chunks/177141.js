@@ -243,26 +243,26 @@ let e$ = {
 function e9(e) {
     return e0[e] + "-untilAtLeast";
 }
-function e8(e, t, n) {
+function e6(e, t, n) {
     if (null == e) return;
     let i = e0[e];
     (null == i || t || o.w.set(i, !0), e1.has(e) && (e2[e] = !0), null != n && null != i)
         ? o.w.set(e9(e), n.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
         : o.w.remove(e9(e));
 }
-let e6 = null;
+let e8 = null;
 function e4() {
-    if (null != e6) return e6;
+    if (null != e8) return e8;
     try {
         let e = document.createElement("canvas").getContext("2d"),
             t = "\uE700\uE701\uE702\uE703\uE704\uE705\uE706\uE707";
         e.font = "16px monospace";
         let n = e.measureText(t).width;
-        ((e.font = '16px "Segoe MDL2 Assets", monospace'), (e6 = e.measureText(t).width !== n));
+        ((e.font = '16px "Segoe MDL2 Assets", monospace'), (e8 = e.measureText(t).width !== n));
     } catch (e) {
-        e6 = !1;
+        e8 = !1;
     }
-    return e6;
+    return e8;
 }
 function te(e) {
     if (null == e) return !1;
@@ -1034,11 +1034,11 @@ let ts = new tr(c.h, {
         e7 = e.notice;
     },
     NOTICE_DISMISS: function (e) {
-        return null != e7 && (null == e.id || e.id === e7.id) && (e8(e7.type, e.isTemporary, e.untilAtLeast), ti());
+        return null != e7 && (null == e.id || e.id === e7.id) && (e6(e7.type, e.isTemporary, e.untilAtLeast), ti());
     },
     NOTICE_DISABLE: function (e) {
         let { noticeType: t } = e;
-        return (e8(t), ti());
+        return (e6(t), ti());
     },
     LOGOUT: function () {
         ((e2 = {}), (e5 = {}), (e7 = null));

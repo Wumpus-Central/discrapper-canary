@@ -1,4 +1,4 @@
-l.d(t, { Ay: () => E, EB: () => C, Y0: () => m });
+l.d(t, { Ay: () => _, EB: () => C, Y0: () => m });
 var a,
     n,
     s = l(17928),
@@ -36,7 +36,7 @@ var m =
             ? (((a = {}).NEW_ACHIEVEMENT = "new_achievement"), (a.UNCLAIMED_ACHIEVEMENT = "unclaimed_achievement"), a)
             : null,
     C = (((n = {}).CLAIM_CHALLENGE = "claim_challenge"), (n.FETCH_CHALLENGES = "fetch_challenges"), n);
-class _ extends s.Ay.Store {
+class E extends s.Ay.Store {
     static displayName = "OrbChallengesStore";
     state = d();
     constructor() {
@@ -175,4 +175,4 @@ class _ extends s.Ay.Store {
         return this.state.fetchChallengesError;
     }
 }
-let E = new _();
+let _ = new E();
