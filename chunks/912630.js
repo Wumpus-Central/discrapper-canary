@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => S });
 var i = n(17928),
     r = n(205693),
     a = n(73153),
@@ -11,10 +11,11 @@ var i = n(17928),
 let _ = !1,
     E = null,
     A = !1,
-    h = {},
-    I = !1,
-    f = !1;
-function p(e) {
+    h = !1,
+    I = {},
+    f = !1,
+    p = !1;
+function T(e) {
     let t = c.default.getCurrentUser();
     if (null == t) return !1;
     let n = e;
@@ -23,16 +24,16 @@ function p(e) {
         null != d.Ay.getVoiceChannelId() && o.Ay.isVideoEnabled() && null != n
     );
 }
-function T() {
-    (E !== d.Ay.getVoiceChannelId() && ((A = !1), (I = !1), (f = !1)), p() && (A = !0), (E = d.Ay.getVoiceChannelId()));
+function g() {
+    (E !== d.Ay.getVoiceChannelId() && ((A = !1), (f = !1), (p = !1)), T() && (A = !0), (E = d.Ay.getVoiceChannelId()));
 }
-class g extends i.Ay.Store {
+class m extends i.Ay.Store {
     static displayName = "VideoBackgroundStore";
     initialize() {
-        (this.waitFor(o.Ay, d.Ay, s.Ay, l.A, c.default), this.syncWith([d.Ay, o.Ay], T));
+        (this.waitFor(o.Ay, d.Ay, s.Ay, l.A, c.default), this.syncWith([d.Ay, o.Ay], g));
     }
     get videoFilterAssets() {
-        return h;
+        return I;
     }
     get hasBeenApplied() {
         return _;
@@ -40,40 +41,45 @@ class g extends i.Ay.Store {
     get hasUsedBackgroundInCall() {
         return A;
     }
-    get videoBackgroundUnavailable() {
-        return I;
+    get liveBackgroundEnabled() {
+        return h;
     }
-    get videoBackgroundPreviewUnavailable() {
+    get videoBackgroundUnavailable() {
         return f;
     }
+    get videoBackgroundPreviewUnavailable() {
+        return p;
+    }
 }
-let m = new g(a.h, {
+let S = new m(a.h, {
     VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function (e) {
         let { assets: t } = e,
             n = {};
-        (t.forEach((e) => (n[e.id] = e)), (h = n));
+        (t.forEach((e) => (n[e.id] = e)), (I = n));
     },
     VIDEO_FILTER_ASSET_UPLOAD_SUCCESS: function (e) {
         let { videoFilterAsset: t } = e;
-        h = { ...h, [t.id]: t };
+        I = { ...I, [t.id]: t };
     },
     VIDEO_FILTER_ASSET_DELETE_SUCCESS: function (e) {
         let { videoFilterAsset: t } = e;
-        ((h = { ...h }), delete h[t.id]);
+        ((I = { ...I }), delete I[t.id]);
     },
     VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION: function (e) {
         let { backgroundOption: t } = e;
-        p(t) && (A = !0);
+        T(t) && (A = !0);
     },
     MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS: function (e) {
         let { settings: t } = e;
-        (r.Tr.CAMERA_BACKGROUND_LIVE in t && ((_ = !0), (I = !1)), r.Tr.CAMERA_BACKGROUND_PREVIEW in t && (f = !1));
+        (r.Tr.CAMERA_BACKGROUND_LIVE in t &&
+            ((_ = !0), (f = !1), (h = t[r.Tr.CAMERA_BACKGROUND_LIVE]?.graph !== r.gO.NONE)),
+            r.Tr.CAMERA_BACKGROUND_PREVIEW in t && (p = !1));
     },
     MEDIA_ENGINE_VIDEO_FILTER_ERROR: function (e) {
         let { target: t } = e;
-        "live" === t ? (I = !0) : (f = !0);
+        "live" === t ? ((f = !0), (h = !1)) : (p = !0);
     },
     LOGOUT: function () {
-        ((_ = !1), (A = !1), (E = null), (h = {}), (I = !1), (f = !1));
+        ((_ = !1), (A = !1), (E = null), (I = {}), (f = !1), (p = !1), (h = !1));
     },
 });
