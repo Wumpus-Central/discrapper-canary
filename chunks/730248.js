@@ -442,6 +442,7 @@ var eU =
     (a.Disconnect = "disconnect"),
     (a.Resuming = "resuming"),
     (a.Ready = "ready"),
+    (a.SelectProtocolAck = "select-protocol-ack"),
     (a.SfuUpdate = "sfu-update"),
     (a.Speaking = "speaking"),
     (a.Video = "video"),
@@ -562,8 +563,9 @@ class ew extends p.A {
                         this.handleResumed(i);
                         break;
                     case 4:
-                        (i.bandwidth_estimation_experiment &&
-                            this.emit("bandwidth-estimation-experiment", i.bandwidth_estimation_experiment),
+                        (this.emit("select-protocol-ack"),
+                            i.bandwidth_estimation_experiment &&
+                                this.emit("bandwidth-estimation-experiment", i.bandwidth_estimation_experiment),
                             this.emit("codecs", i.audio_codec, i.video_codec),
                             i.media_session_id && this.emit("media-session-id", i.media_session_id),
                             i.sdp ? this.emit("sdp", i.sdp) : i.mode && this.emit("encryption", i.mode, i.secret_key),
@@ -2745,6 +2747,8 @@ class tA extends p.A {
     _connecting;
     _voiceConnectionSuccessTracked;
     _mediaEngineConnectDuration;
+    _selectProtocolSentAt;
+    _selectProtocolAckAt;
     _encountered_socket_failure;
     _inputDetected;
     _encryptionMode;
@@ -2840,6 +2844,8 @@ class tA extends p.A {
             (this._voiceConnectionSuccessTracked = !1),
             (this._hasCodecs = !1),
             (this._mediaEngineConnectDuration = 0),
+            (this._selectProtocolSentAt = null),
+            (this._selectProtocolAckAt = null),
             (this._encountered_socket_failure = !1),
             (this._inputDetected = !1),
             (this._selectedExperiments = []),
@@ -2959,6 +2965,7 @@ class tA extends p.A {
             r.on(eU.Disconnect, this._handleDisconnect.bind(this, r)),
             r.on(eU.Resuming, this._handleResuming.bind(this, r)),
             r.on(eU.Ready, this._handleReady.bind(this, r)),
+            r.on(eU.SelectProtocolAck, this._handleSelectProtocolAck.bind(this)),
             r.on(eU.SfuUpdate, this._handleSfuUpdate.bind(this, r)),
             r.on(eU.Speaking, this._handleSpeaking.bind(this, r)),
             r.on(eU.Video, this._handleVideo.bind(this, r)),
@@ -3553,6 +3560,9 @@ class tA extends p.A {
     _handleResuming(e) {
         (this._connection?.fastUdpReconnect(), this._connection?.clearAllSpeaking());
     }
+    _handleSelectProtocolAck() {
+        this._selectProtocolAckAt = performance.now();
+    }
     _handleReady(e, t, n, i, r, a, s) {
         (this._chooseExperiments(s ?? []),
             0 === a.length &&
@@ -3709,11 +3719,15 @@ class tA extends p.A {
                             n.once(eU.Encryption, (e, t) => {
                                 u === this._connection && (u.setEncryption(e, t), (this._encryptionMode = e));
                             }),
+                            (this._selectProtocolAckAt = null),
+                            (this._selectProtocolSentAt = performance.now()),
                             n.selectProtocol(t, this.getRTCConnectionId(), i, this._selectedExperiments));
                         break;
                     case "webrtc":
                         (this.logger.info("Sending local SDP to RTC server."),
                             n.once(eU.SDP, this._handleSDP.bind(this)),
+                            (this._selectProtocolAckAt = null),
+                            (this._selectProtocolSentAt = performance.now()),
                             n.selectProtocol(t, this.getRTCConnectionId(), i));
                         break;
                     default:
@@ -4121,6 +4135,7 @@ class tA extends p.A {
             rtc_connecting_native_connect: l(e.onConnectCallbackAt, e.beginInitializeAt),
             rtc_connecting_native_codecs: l(e.onVideoCodecsCallbackAt, e.onConnectCallbackAt),
             rtc_connecting_native_crypto_modes: l(e.onEncryptionModesCallbackAt, e.onVideoCodecsCallbackAt),
+            select_protocol_duration_ms: l(this._selectProtocolAckAt, this._selectProtocolSentAt),
         });
     }
     _handleSDP(e) {
