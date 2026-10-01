@@ -333,6 +333,34 @@
     overflow: hidden
 }
 
+.container_a5f01b {
+    align-items: flex-start;
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+    padding: 16px
+}
+
+.echoSoundContainer_a5f01b {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 12px
+}
+
+.textContainer_a5f01b {
+    width: 208px
+}
+
+.emoji_a5f01b {
+    height: 40px;
+    width: 40px
+}
+
 .echoList_effefc {
     bottom: calc(100% + 12px);
     flex-direction: column;
@@ -455,4 +483,4 @@
     border-bottom: 1px solid CanvasText
 }
 
-/*# sourceMappingURL=304527.d06850c0db1e3445.css.map*/
+/*# sourceMappingURL=403651.0d60c18cc9951a42.css.map*/
