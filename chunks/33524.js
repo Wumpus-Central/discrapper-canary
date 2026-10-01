@@ -12,82 +12,88 @@ function s(e) {
     let {} = e;
     return !1;
 }
-function l(e, t) {
+function l(e) {
+    return [];
+}
+function o(e, t) {}
+function d(e, t) {
     return !1;
 }
-function o(e) {
+function c(e) {
     return !1;
 }
-function d() {
+function u() {
     return !1;
 }
-function c() {}
-function u() {}
-function _(e, t) {
+function _() {}
+function E() {}
+function A(e, t) {
     return !1;
 }
-function E(e, t) {
+function h(e, t) {
     return !1;
 }
-function A(e) {
+function I(e) {
     return !1;
 }
-function h(e) {
+function f(e) {
     return !1;
 }
-function I(e) {}
-function f(e) {}
 function p(e) {}
 function T(e) {}
 function m(e) {}
 function g(e) {}
 function S(e) {}
-function N(e) {
+function N(e) {}
+function C(e) {}
+function O(e) {
     return !1;
 }
-function C(e) {
+function R(e) {
     return !1;
 }
-function O() {}
-function R() {}
 function L() {}
 function y() {}
-function D() {
+function D() {}
+function v() {}
+function b() {
     return [];
 }
-function v(e) {}
-function b(e) {}
 function M(e) {}
+function P(e) {}
+function U(e) {}
 (n.r(t),
     n.d(t, {
-        coerceChannelRoute: () => f,
-        coerceGuildsRoute: () => m,
-        coerceICYMIRoute: () => g,
-        coerceMainRoute: () => I,
-        coerceModalRoute: () => S,
-        coerceSidebarRoute: () => p,
-        coerceTabsRoute: () => T,
-        getCurrentNavigationRouteName: () => L,
-        getCurrentRouteParents: () => D,
-        getICYMIRouteIfActive: () => b,
-        getOpenModalKey: () => O,
-        getSelectedChannelFromRoute: () => u,
-        getSelectedGuildFromRoute: () => c,
-        getTabsRouteIfActive: () => v,
-        isModalOpen: () => N,
+        coerceChannelRoute: () => T,
+        coerceGuildsRoute: () => S,
+        coerceICYMIRoute: () => N,
+        coerceMainRoute: () => p,
+        coerceModalRoute: () => C,
+        coerceSidebarRoute: () => m,
+        coerceTabsRoute: () => g,
+        getCurrentNavigationRouteName: () => D,
+        getCurrentRouteParents: () => b,
+        getICYMIRouteIfActive: () => P,
+        getOpenModalKey: () => L,
+        getSelectedChannelFromRoute: () => E,
+        getSelectedGuildFromRoute: () => _,
+        getTabsRouteIfActive: () => M,
+        isModalOpen: () => O,
+        modalRoutesAboveMain: () => l,
         navigateToChannel: () => i,
-        navigateToContextMenuCommands: () => A,
-        navigateToCreateThread: () => E,
-        navigateToNewGroupDM: () => _,
+        navigateToContextMenuCommands: () => I,
+        navigateToCreateThread: () => h,
+        navigateToNewGroupDM: () => A,
         navigateToRootTab: () => r,
-        popAllModals: () => d,
-        popModal: () => l,
-        popModalsAboveKey: () => o,
-        popScreens: () => h,
+        popAllModals: () => u,
+        popModal: () => d,
+        popModalsAboveKey: () => c,
+        popScreens: () => f,
         pushModal: () => s,
         resetToAuthRoute: () => a,
-        setHomeDrawerState: () => M,
-        useCurrentNavigationRouteName: () => y,
-        useIsModalOpen: () => C,
-        useOpenModalKey: () => R,
+        routesBelowFirstRemoved: () => o,
+        setHomeDrawerState: () => U,
+        useCurrentNavigationRouteName: () => v,
+        useIsModalOpen: () => R,
+        useOpenModalKey: () => y,
     }));
