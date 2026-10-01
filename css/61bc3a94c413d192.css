@@ -191,6 +191,16 @@
     min-width: 0
 }
 
+.publishChannelIcon_f8194a {
+    height: 1em;
+    margin-bottom: .2rem;
+    margin-inline: var(--space-4) calc(var(--space-4)/2);
+    position: relative;
+    top: .05em;
+    vertical-align: middle;
+    width: 1em
+}
+
 .projectHeaderDivider_f8194a {
     background-color: var(--border-subtle);
     height: 20px;
@@ -605,4 +615,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=8ce3cdd827daf088.css.map*/
+/*# sourceMappingURL=61bc3a94c413d192.css.map*/

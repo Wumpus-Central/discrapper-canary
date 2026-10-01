@@ -780,6 +780,7 @@
   "jnwfvk": "Go to {server}",
   "c4LI5t": "Launch",
   "Nfs5wk": "Open #{channel}",
+  "W95rrI": "Open $[](channelIconHook){channel}",
   "BceUWe": "Open DM",
   "zFcLHP": "Review permissions",
   "91710b": "Update app",

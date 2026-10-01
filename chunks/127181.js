@@ -648,6 +648,13 @@ let n = [
             "Once your app is live, a small tip under Conjure's latest reply says when the live version is out of date, with a link to update it.",
     },
     {
+        date: "2026-10-01",
+        time: "18:25",
+        platforms: ["desktop"],
+        summary:
+            "Once your server app is live, the builder\u2019s Open button shows its channel\u2019s own icon in place of the #.",
+    },
+    {
         date: "2026-09-02",
         time: "00:04",
         platforms: ["desktop", "mobile"],

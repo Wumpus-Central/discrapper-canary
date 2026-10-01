@@ -386,16 +386,17 @@ function Y(e, t) {
             publishing: h,
             project: g,
             guildId: x,
-            installScope: v,
-            status: b,
-            integrationStatus: j,
-            guildName: y,
-            appChannelName: k,
-            appChannelPending: N,
-            canManageGuild: w,
-            canManageChannels: A,
-            usesNativeAppChannels: S,
-            botInGuild: C,
+            appChannelId: v,
+            installScope: b,
+            status: j,
+            integrationStatus: y,
+            guildName: k,
+            appChannelName: N,
+            appChannelPending: w,
+            canManageGuild: A,
+            canManageChannels: S,
+            usesNativeAppChannels: C,
+            botInGuild: E,
         } = (0, a.cf)(
             [p.Ay, f.A, c.Ay, d.A, m.A, o.A, u.A],
             () => {
@@ -404,6 +405,7 @@ function Y(e, t) {
                     canPublish: null != t && (0, p.jf)(t.project),
                     project: t?.project ?? null,
                     guildId: t?.guildId ?? null,
+                    appChannelId: t?.appChannelId ?? null,
                     publishing: null != e && p.Ay.isProjectPublishing(e),
                     installScope: t?.input.installScope ?? null,
                     status: t?.input.status ?? null,
@@ -419,31 +421,31 @@ function Y(e, t) {
             },
             [e, i],
         ),
-        E = n.useMemo(
+        I = n.useMemo(
             () =>
                 null == g
                     ? null
                     : {
-                          installScope: v,
-                          status: b,
-                          integrationStatus: j,
-                          guildName: y,
-                          appChannelName: k,
-                          appChannelPending: N,
-                          canManageGuild: w,
-                          canManageChannels: A,
-                          usesNativeAppChannels: S,
-                          botInGuild: C,
+                          installScope: b,
+                          status: j,
+                          integrationStatus: y,
+                          guildName: k,
+                          appChannelName: N,
+                          appChannelPending: w,
+                          canManageGuild: A,
+                          canManageChannels: S,
+                          usesNativeAppChannels: C,
+                          botInGuild: E,
                       },
-            [g, v, b, j, y, k, N, w, A, S, C],
+            [g, b, j, y, k, N, w, A, S, C, E],
         ),
-        I = E?.status?.state ?? null,
-        T = E?.installScope === "guild" && E.status?.surface === "bot";
+        T = I?.status?.state ?? null,
+        M = I?.installScope === "guild" && I.status?.surface === "bot";
     n.useEffect(() => {
-        null != g && null != x && T && null != I && "unpublished" !== I && V(g);
-    }, [g?.id, x, T, I]);
-    let M = n.useMemo(() => (null == E ? null : R(E)), [E]),
-        _ = n.useCallback(
+        null != g && null != x && M && null != T && "unpublished" !== T && V(g);
+    }, [g?.id, x, M, T]);
+    let _ = n.useMemo(() => (null == I ? null : R(I)), [I]),
+        P = n.useCallback(
             (t) => {
                 null != e &&
                     null != r &&
@@ -453,14 +455,15 @@ function Y(e, t) {
             },
             [e, r],
         );
-    return null != r && s && null != M
+    return null != r && s && null != _
         ? {
-              ...M,
-              status: E?.status ?? null,
+              ..._,
+              status: I?.status ?? null,
               guildId: x,
+              appChannelId: v,
               publishing: h,
-              disabled: h || !0 === r.busy || null != M.disabledReason,
-              run: _,
+              disabled: h || !0 === r.busy || null != _.disabledReason,
+              run: P,
           }
         : null;
 }

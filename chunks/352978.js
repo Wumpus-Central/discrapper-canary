@@ -10,6 +10,7 @@ a.exports = {
     JX: "chatBody_f8194a",
     FO: "projectHeaderIconActions_f8194a",
     As: "publishAction_f8194a",
+    Y2: "publishChannelIcon_f8194a",
     YJ: "projectHeaderDivider_f8194a",
     j5: "projectMainFallback_f8194a",
     sD: "projectUnavailable_f8194a",
