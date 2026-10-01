@@ -14,14 +14,14 @@ function m(e) {
     let { nameplate: t, hovered: n, selected: a, content: s, placement: c } = e,
         o = (0, d._)(s, t, n, a, c),
         m = (0, i.i)(n, a),
-        E = l.useRef(null == t);
+        I = l.useRef(null == t);
     return (l.useEffect(() => {
-        E.current || null != t || (E.current = !0);
+        I.current || null != t || (I.current = !0);
     }, [t]),
     null == t)
         ? null
         : (0, r.jsx)("div", {
-              className: u()(f.kL, { [f.qG]: E.current, [f.WB]: c === p.u.ACCOUNT }),
+              className: u()(f.kL, { [f.qG]: I.current, [f.WB]: c === p.u.ACCOUNT }),
               style: { background: o.background },
               "aria-hidden": !0,
               children: (0, r.jsx)(g, {
@@ -46,7 +46,7 @@ function g(e) {
         { preload: p } = c.A.getConfig({ location: "Nameplate_Asset" });
     if (null == s) return null;
     if (null != d)
-        return (0, r.jsx)(E, {
+        return (0, r.jsx)(I, {
             animatedAsset: d,
             staticAsset: s,
             animate: a,
@@ -56,9 +56,9 @@ function g(e) {
             className: n,
         });
     let f = a && null != i ? i : s;
-    return (0, r.jsx)(I, { asset: f, className: n, style: l });
+    return (0, r.jsx)(E, { asset: f, className: n, style: l });
 }
-function E(e) {
+function I(e) {
     let { staticAsset: t, animatedAsset: n, animate: a, loop: u, preload: c, className: i, style: o } = e,
         d = l.useRef(null);
     return (
@@ -87,7 +87,7 @@ function E(e) {
         })
     );
 }
-function I(e) {
+function E(e) {
     let { asset: t, className: n, style: l } = e;
     return (0, r.jsx)("img", { src: t, className: n, style: l, alt: "" });
 }

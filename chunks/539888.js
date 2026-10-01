@@ -19,39 +19,39 @@ var n = l(477900),
     _ = l(328006),
     N = l(857909),
     A = l(334840),
-    E = l(393750);
-let b = [
+    b = l(393750);
+let E = [
     { avatar: _.A, topBarWidth: "68%", bottomBarWidths: ["26%", "55%"] },
     { avatar: N.A, topBarWidth: "48%", bottomBarWidths: ["26%", "100%"] },
     { avatar: A.A, topBarWidth: "96%", bottomBarWidths: ["26%", "24%"] },
 ];
 function I(e) {
     let { width: t } = e;
-    return (0, n.jsx)("div", { className: E.M0, style: { width: t } });
+    return (0, n.jsx)("div", { className: b.M0, style: { width: t } });
 }
 function S(e) {
     let { rank: t, row: l } = e;
     return (0, n.jsxs)("div", {
-        className: E.nM,
+        className: b.nM,
         children: [
             (0, n.jsx)("div", {
-                className: E.Tm,
+                className: b.Tm,
                 "aria-hidden": !0,
                 children: (0, n.jsx)(x.E, {
                     variant: "text-xs/medium",
                     color: "text-muted",
-                    className: E._k,
+                    className: b._k,
                     children: t,
                 }),
             }),
-            (0, n.jsx)("img", { className: E.my, src: l.avatar, alt: "", "aria-hidden": !0 }),
+            (0, n.jsx)("img", { className: b.my, src: l.avatar, alt: "", "aria-hidden": !0 }),
             (0, n.jsxs)("div", {
-                className: E.n_,
+                className: b.n_,
                 "aria-hidden": !0,
                 children: [
                     (0, n.jsx)(I, { width: l.topBarWidth }),
                     (0, n.jsxs)("div", {
-                        className: E.O3,
+                        className: b.O3,
                         children: [
                             (0, n.jsx)(I, { width: l.bottomBarWidths[0] }),
                             (0, n.jsx)(I, { width: l.bottomBarWidths[1] }),
@@ -63,13 +63,13 @@ function S(e) {
     });
 }
 function C() {
-    return (0, n.jsx)("div", { className: E.kL, children: b.map((e, t) => (0, n.jsx)(S, { rank: t + 1, row: e }, t)) });
+    return (0, n.jsx)("div", { className: b.kL, children: E.map((e, t) => (0, n.jsx)(S, { rank: t + 1, row: e }, t)) });
 }
 var y = l(562073),
     T = l(189213),
     k = l(192308),
-    R = l(694187),
-    w = l(61567),
+    w = l(694187),
+    R = l(61567),
     D = l(375708),
     M = l(397462);
 function L(e) {
@@ -99,7 +99,7 @@ function L(e) {
                                 className: M.BU,
                                 children: (0, n.jsx)(p.jV, {
                                     iconSize: "xs",
-                                    "aria-label": D.intl.formatToPlainString(w.default.NV85DR, { widgetName: l }),
+                                    "aria-label": D.intl.formatToPlainString(R.default.NV85DR, { widgetName: l }),
                                 }),
                             }),
                         null != i && (0, n.jsx)("div", { className: M.gr, children: i }),
@@ -133,7 +133,7 @@ function L(e) {
                                 "aria-label":
                                     "" === l
                                         ? D.intl.string(D.t.Mm07Yc)
-                                        : D.intl.formatToPlainString(w.default.hmNYxk, { widgetName: l }),
+                                        : D.intl.formatToPlainString(R.default.hmNYxk, { widgetName: l }),
                                 disabled: r,
                                 onClick: f,
                             }),
@@ -187,7 +187,7 @@ function G(e) {
                             (0, n.jsx)(x.E, {
                                 variant: "text-md/semibold",
                                 color: "text-default",
-                                children: D.intl.formatToPlainString(w.default.G5zCGV, { widgetName: t }),
+                                children: D.intl.formatToPlainString(R.default.G5zCGV, { widgetName: t }),
                             }),
                             null != l &&
                                 l > 0 &&
@@ -204,7 +204,7 @@ function G(e) {
                                         (0, n.jsx)(x.E, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
-                                            children: D.intl.format(w.default["8wD0Un"], { boostPrice: l }),
+                                            children: D.intl.format(R.default["8wD0Un"], { boostPrice: l }),
                                         }),
                                     ],
                                 }),
@@ -238,7 +238,7 @@ function P(e) {
             disabled: o = !1,
             lock: u,
         } = e,
-        m = R.m[l.type],
+        m = w.m[l.type],
         x = i.useCallback(() => {
             m?.Edit != null &&
                 null != d &&
@@ -267,8 +267,8 @@ function P(e) {
     let { View: h, Edit: f, HeaderAccessory: g, HeaderActions: j, Title: v, TitleIcon: p, ViewHeaderTrailing: _ } = m,
         N = "edit" === a,
         A = null != f && null != d && null == u,
-        E = null != g ? (0, n.jsx)(g, { hydration: s }) : null,
-        b = null != p ? (0, n.jsx)(p, { hydration: s }) : null,
+        b = null != g ? (0, n.jsx)(g, { hydration: s }) : null,
+        E = null != p ? (0, n.jsx)(p, { hydration: s }) : null,
         I = null == u && null != j ? (0, n.jsx)(j, { hydration: s, guildId: t }) : null,
         S = l.default_title ?? "",
         C =
@@ -283,8 +283,8 @@ function P(e) {
                 ? (0, n.jsx)(L, {
                       title: C,
                       widgetName: S,
-                      titleIcon: b,
-                      accessory: E,
+                      titleIcon: E,
+                      accessory: b,
                       disabled: o,
                       dragHandleRef: c,
                       canEdit: A,
@@ -293,8 +293,8 @@ function P(e) {
                   })
                 : (0, n.jsx)(U, {
                       title: C,
-                      titleIcon: b,
-                      accessory: E,
+                      titleIcon: E,
+                      accessory: b,
                       trailing: null != _ && null == u ? (0, n.jsx)(_, { widget: l, hydration: s, title: S }) : null,
                       actions: I,
                   }),

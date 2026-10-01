@@ -2,17 +2,17 @@ n.d(t, {
     G_: () => O,
     Hl: () => N,
     IM: () => A,
-    Mw: () => b,
-    OY: () => U,
+    Mw: () => C,
+    OY: () => L,
     Op: () => I,
     TP: () => D,
     Zv: () => v,
     bo: () => h,
     gP: () => R,
     ks: () => y,
-    lJ: () => C,
+    lJ: () => b,
     m9: () => T,
-    q: () => p,
+    q: () => U,
     zC: () => g,
 });
 var i,
@@ -29,7 +29,7 @@ var i,
     m = n(652215),
     S = n(835002);
 async function T(e, t) {
-    let n = L(e),
+    let n = p(e),
         i = await l.Bo.get({
             url: m.Rsh.GET_REPORT_MENU(n),
             query: t?.variant != null ? { variant: t.variant } : void 0,
@@ -49,7 +49,7 @@ async function I(e, t) {
     return _.body ?? JSON.parse(_.text);
 }
 async function A(e, t) {
-    let n = G(e),
+    let n = f(e),
         i = await l.Bo.get({
             url: m.Rsh.GET_UNAUTHENTICATED_REPORT_MENU(n),
             query: t?.variant != null ? { variant: t.variant } : void 0,
@@ -58,11 +58,11 @@ async function A(e, t) {
     return i.body ?? JSON.parse(i.text);
 }
 async function R(e, t) {
-    let n = L(e),
+    let n = p(e),
         i = await T(e, t);
     await l.Bo.post({
         url: m.Rsh.SUBMIT_REPORT_MENU(n),
-        body: f(i, e, [{ nodeRef: i.root_node_id, destination: ["", i.success_node_id] }]),
+        body: G(i, e, [{ nodeRef: i.root_node_id, destination: ["", i.success_node_id] }]),
         rejectWithError: !1,
     });
 }
@@ -129,12 +129,12 @@ function g(e, t, n) {
           : ((a = e),
             (_ = t),
             (u = n),
-            l.Bo.post({ url: m.Rsh.SUBMIT_REPORT_MENU(L(_)), body: f(a, _, u), rejectWithError: !1 }));
+            l.Bo.post({ url: m.Rsh.SUBMIT_REPORT_MENU(p(_)), body: G(a, _, u), rejectWithError: !1 }));
 }
 function h(e, t, n, i) {
     if (s.Ay.get("iar_skip_api_report_submit")) return Promise.resolve();
-    let a = G(t);
-    return l.Bo.post({ url: m.Rsh.SUBMIT_UNAUTHENTICATED_REPORT_MENU(a), body: f(e, t, n, i), rejectWithError: !0 });
+    let a = f(t);
+    return l.Bo.post({ url: m.Rsh.SUBMIT_UNAUTHENTICATED_REPORT_MENU(a), body: G(e, t, n, i), rejectWithError: !0 });
 }
 function D(e, t) {
     return l.Bo.post({
@@ -157,24 +157,24 @@ async function O(e, t, n) {
         })
     ).body;
 }
-async function U() {
+async function L() {
     let { capabilities: e, media_takedown_regulation: t } = (
         await l.Bo.get({ url: m.Rsh.DSA_CAPABILITIES, rejectWithError: !1 })
     ).body;
     return { capabilities: e, media_takedown_regulation: (0, E.c7)(t) ? t : null };
 }
-async function p(e) {
+async function U(e) {
     return (await l.Bo.post({ url: m.Rsh.SUBMIT_REPORT_SECOND_LOOK, body: { token: e }, rejectWithError: !1 })).body;
 }
-function G(e) {
+function f(e) {
     let t = e.name;
     return (r()(Object.values(E.tY).includes(t), `Invalid report type ${e.name}`), t);
 }
-function L(e) {
+function p(e) {
     let t = e.name;
     return (r()(Object.values(E.t0).includes(t), `Invalid report type ${e.name}`), t);
 }
-function f(e, t, n, i) {
+function G(e, t, n, i) {
     let { version: a, variant: _, language: r } = e,
         d = {
             channel_id: void 0,
@@ -297,12 +297,12 @@ function y(e, t) {
         (d?.should_submit_data === !0 && (l?.[d.name] == null || l?.[d.name].value === "" || !l?.[d.name]?.isValid))
     );
 }
-var C =
+var b =
     (((i = {}).SETTINGS_UPSELLS_VIEWED = "SETTINGS_UPSELLS_VIEWED"),
     (i.SETTINGS_UPSELLS_APPLY_CLICKED = "SETTINGS_UPSELLS_APPLY_CLICKED"),
     (i.SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED = "SETTINGS_UPSELLS_GO_TO_SETTINGS_LINK_CLICKED"),
     i);
-function b(e, t, n) {
+function C(e, t, n) {
     return a.useCallback(
         (i) => (a) => {
             u.Ay.trackWithMetadata(m.HAw.IAR_SETTINGS_UPSELLS_ACTION, {

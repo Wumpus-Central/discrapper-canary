@@ -1,29 +1,29 @@
-E.d(e, { GL: () => o, IM: () => S, JJ: () => s, RE: () => u, V2: () => r, go: () => a, x8: () => c });
-var _ = E(636537),
-    i = E(73153),
-    l = E(268429),
-    d = E(61310),
-    n = E(652215);
-async function o(t, e) {
+i.d(t, { GL: () => s, IM: () => S, JJ: () => o, RE: () => u, V2: () => a, go: () => r, x8: () => c });
+var E = i(636537),
+    _ = i(73153),
+    l = i(268429),
+    d = i(61310),
+    n = i(652215);
+async function s(e, t) {
     let {
-        nick: E,
-        avatar: o,
-        avatarDescription: s,
-        avatarId: r,
-        avatarDecoration: a,
+        nick: i,
+        avatar: s,
+        avatarDescription: o,
+        avatarId: a,
+        avatarDecoration: r,
         nameplate: u,
         displayNameStyles: S,
         vadColors: c,
         avatarOriginalMd5: I,
-    } = e;
-    if (null == t) throw Error("Need guildId");
-    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT", guildId: t });
+    } = t;
+    if (null == e) throw Error("Need guildId");
+    _.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT", guildId: e });
     let R = {
-        nick: E,
-        avatar: o,
-        avatar_description: s,
-        avatar_id: r,
-        avatar_decoration_sku_id: void 0 !== a ? (a?.skuId ?? null) : void 0,
+        nick: i,
+        avatar: s,
+        avatar_description: o,
+        avatar_id: a,
+        avatar_decoration_sku_id: void 0 !== r ? (r?.skuId ?? null) : void 0,
         collectibles: void 0 !== u ? { nameplate: null === u ? null : { sku_id: u.skuId } } : void 0,
         display_name_font_id: void 0 !== S ? (null !== S ? S.fontId : null) : void 0,
         display_name_effect_id: void 0 !== S ? (null !== S ? S.effectId : null) : void 0,
@@ -31,44 +31,44 @@ async function o(t, e) {
         vad_colors: c,
     };
     try {
-        let e = await _.Bo.patch({
-                url: n.Rsh.SET_GUILD_MEMBER(t),
+        let t = await E.Bo.patch({
+                url: n.Rsh.SET_GUILD_MEMBER(e),
                 body: R,
                 headers: l.A.buildHeadersForMd5({ [d.f.USER_GUILD_PROFILE_AVATAR]: I }),
                 oldFormErrors: !0,
                 rejectWithError: !1,
             }),
-            E = e.body;
+            i = t.body;
         return (
-            i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS", guildId: t }),
-            i.h.dispatch({ type: "GUILD_MEMBER_PROFILE_UPDATE", guildMember: E, guildId: t }),
-            (null != o || null != r) && i.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
-            e
+            _.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_SUCCESS", guildId: e }),
+            _.h.dispatch({ type: "GUILD_MEMBER_PROFILE_UPDATE", guildMember: i, guildId: e }),
+            (null != s || null != a) && _.h.dispatch({ type: "RECENT_AVATARS_UPDATE" }),
+            t
         );
-    } catch (E) {
-        let e = E.body;
+    } catch (i) {
+        let t = i.body;
         return (
-            e?.username != null && ((e.nick = e.username), delete e.username),
-            i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", guildId: t, errors: E.body }),
-            E
+            t?.username != null && ((t.nick = t.username), delete t.username),
+            _.h.dispatch({ type: "USER_PROFILE_SETTINGS_SUBMIT_FAILURE", guildId: e, errors: i.body }),
+            i
         );
     }
 }
-function s(t) {
-    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_GUILD", guildId: t });
+function o(e) {
+    _.h.dispatch({ type: "USER_PROFILE_SETTINGS_SET_GUILD", guildId: e });
 }
-function r(t) {
-    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_INIT", guildId: t });
+function a(e) {
+    _.h.dispatch({ type: "USER_PROFILE_SETTINGS_INIT", guildId: e });
 }
-function a() {
-    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
+function r() {
+    _.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_ACCOUNT_CHANGES" });
 }
 function u() {
-    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
+    _.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 }
 function S() {
-    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
+    _.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES" });
 }
 function c() {
-    i.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
+    _.h.dispatch({ type: "USER_PROFILE_SETTINGS_CLEAR_ERRORS" });
 }

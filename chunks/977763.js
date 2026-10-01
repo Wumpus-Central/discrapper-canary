@@ -253,7 +253,7 @@ function N(e) {
         children: [(0, s.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-let P = {
+let C = {
     name: "Gaming Leaderboard",
     id: "guild-space-gaming-leaderboard",
     component: function (e) {
@@ -390,7 +390,7 @@ let P = {
         },
     },
 };
-var C = a(343508);
+var P = a(343508);
 let U = [32, 21, 15, 14, 9],
     j = [3, 2, 0, 3, 1],
     M = g("popular-music", _.a.POPULAR_MUSIC, 0, 0),
@@ -580,7 +580,7 @@ function F(e, t, a) {
 function V(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${C.Gt} ${a}`,
+        className: `${P.Gt} ${a}`,
         children: [(0, s.jsx)(i.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
@@ -671,7 +671,7 @@ let K = {
                     },
                 ],
             },
-            { title: "Server Hub Gaming Leaderboard", stories: [P] },
+            { title: "Server Hub Gaming Leaderboard", stories: [C] },
             {
                 title: "Server Hub Popular Music",
                 stories: [
@@ -720,21 +720,21 @@ let K = {
                                 );
                             }
                             return (0, s.jsxs)("div", {
-                                className: C.Zp,
+                                className: P.Zp,
                                 children: [
                                     (0, s.jsx)(V, {
                                         label: "Wide column (685px)",
-                                        className: C.U,
+                                        className: P.U,
                                         children: u("wide"),
                                     }),
                                     (0, s.jsx)(V, {
                                         label: "Narrow column (380px)",
-                                        className: C.sc,
+                                        className: P.sc,
                                         children: u("narrow"),
                                     }),
                                     (0, s.jsx)(V, {
                                         label: "Minimum width (320px)",
-                                        className: C.Bp,
+                                        className: P.Bp,
                                         children: u("minimum"),
                                     }),
                                 ],

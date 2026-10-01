@@ -36,8 +36,8 @@ var n = i(284009),
     j = i(489277),
     P = i(897720),
     w = i(243612),
-    K = i(780907),
-    G = i(581730),
+    G = i(780907),
+    K = i(581730),
     F = i(672396),
     Y = i(375708),
     H = i(486020),
@@ -51,7 +51,7 @@ var n = i(284009),
     Q = i(350535),
     Z = i(696016);
 function tt(t) {
-    let { trackView: e, trackClick: i } = (0, G.Y9)(t, { notif_type: t });
+    let { trackView: e, trackClick: i } = (0, K.Y9)(t, { notif_type: t });
     return {
         icon: (0, B.jsx)($.x, { size: "lg", color: "currentColor" }),
         onNotificationShow: () => e(),
@@ -67,7 +67,7 @@ function ti() {
 var tn = i(572164),
     tl = i(22802);
 function ta(t) {
-    let { trackView: e, trackClick: i } = (0, G.Y9)(F.KS.ClipsNotification, { notif_type: F.KS.ClipsNotification });
+    let { trackView: e, trackClick: i } = (0, K.Y9)(F.KS.ClipsNotification, { notif_type: F.KS.ClipsNotification });
     return {
         title: t,
         icon: (0, B.jsx)($.x, { size: "lg", color: "currentColor" }),
@@ -117,8 +117,8 @@ var tp = i(387755),
     tj = i(521981),
     tP = i(976860),
     tw = i(400492),
-    tK = i(625494),
-    tG = i(723702),
+    tG = i(625494),
+    tK = i(723702),
     tF = i(19575),
     tY = i(366032),
     tH = i(148494),
@@ -400,7 +400,7 @@ function eS() {
                                               }),
                                           ],
                                       }),
-                                      { trackView: p, trackClick: y } = (0, G.Y9)(F.KS.NowPlayingNotification, {
+                                      { trackView: p, trackClick: y } = (0, K.Y9)(F.KS.NowPlayingNotification, {
                                           notif_type: F.KS.NowPlayingNotification,
                                           notif_user_id: n.id,
                                           activity_type: i.type,
@@ -487,7 +487,7 @@ function eC(t) {
                     i = Y.intl.string(Y.t.ssrVzG),
                     n = (0, tm.Y)(t),
                     l = (0, tg.A)(t),
-                    { trackView: a, trackClick: r } = (0, G.Y9)(F.KS.IncomingCall, {
+                    { trackView: a, trackClick: r } = (0, K.Y9)(F.KS.IncomingCall, {
                         notif_type: F.KS.IncomingCall,
                         notif_user_id: l,
                         guild_id: t.guild_id,
@@ -586,7 +586,7 @@ let eT = new eh(s.h, {
                 if (V.A.isNotificationDisabled(F.KS.WelcomeNudge)) return null;
                 t3.Ay.supports(et.O5.VIDEO) ||
                     (e = e.filter((t) => t.type !== F.Jr.GO_LIVE_VOICE && t.type !== F.Jr.GO_LIVE_NON_VOICE));
-                let { trackView: n, trackClick: l } = (0, G.Y9)(F.KS.WelcomeNudge, {
+                let { trackView: n, trackClick: l } = (0, K.Y9)(F.KS.WelcomeNudge, {
                         notif_type: F.KS.WelcomeNudge,
                         secondary_notif_types: e.map((t) => F.Jr[t.type]),
                     }),
@@ -650,7 +650,7 @@ let eT = new eh(s.h, {
                             : (0, B.jsx)("img", { src: i(513653), className: ee.Kk, alt: "" }),
                     title: s,
                     hint: function () {
-                        return (0, t1.sI)((0, G.Jn)(), Y.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });
+                        return (0, t1.sI)((0, K.Jn)(), Y.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });
                     },
                     ...a,
                     onNotificationShow: (t) => {
@@ -759,7 +759,7 @@ let eT = new eh(s.h, {
                                 r = n.session_id;
                             if (null == r) return null;
                             let { icon: s, title: u, body: c } = (0, p.TB)(t, e, i),
-                                { trackView: d, trackClick: f } = (0, G.Y9)(F.KS.ActivityInvite, {
+                                { trackView: d, trackClick: f } = (0, K.Y9)(F.KS.ActivityInvite, {
                                     notif_type: F.KS.ActivityInvite,
                                     notif_user_id: i.id,
                                     message_id: e.id,
@@ -779,7 +779,7 @@ let eT = new eh(s.h, {
                                 },
                                 confirmText: Y.intl.string(Y.t.VJlc0S),
                                 onConfirmClick: (n, a) => {
-                                    (K.Ay.join({
+                                    (G.Ay.join({
                                         userId: i.id,
                                         sessionId: r,
                                         applicationId: l,
@@ -801,7 +801,7 @@ let eT = new eh(s.h, {
                             let l = e.username,
                                 a = Y.intl.format(Y.t.VDODnv, { username: "", game: i.name }),
                                 r = e.getAvatarURL(t.guild_id, 80),
-                                { trackView: s, trackClick: u } = (0, G.Y9)(F.KS.ActivityInvite, {
+                                { trackView: s, trackClick: u } = (0, K.Y9)(F.KS.ActivityInvite, {
                                     notif_type: F.KS.ActivityInvite,
                                     notif_user_id: e.id,
                                     activity_type: J.xL.JOIN_REQUEST,
@@ -856,7 +856,7 @@ let eT = new eh(s.h, {
                             let l = e.username,
                                 a = Y.intl.format(tU.default.jTbTAF, { username: "", game: i.name }),
                                 r = e.getAvatarURL(t.guild_id, 80),
-                                { trackView: s, trackClick: u } = (0, G.Y9)(F.KS.RequestToStream, {
+                                { trackView: s, trackClick: u } = (0, K.Y9)(F.KS.RequestToStream, {
                                     notif_type: F.KS.RequestToStream,
                                     notif_user_id: e.id,
                                     activity_type: J.xL.STREAM_REQUEST,
@@ -924,7 +924,7 @@ let eT = new eh(s.h, {
                 let { hasChat: l } = (0, M.NI)("textChatNotification");
                 if (V.A.isNotificationDisabled(F.KS.TextChat)) return (t5(!0), null);
                 let { icon: a, title: r, body: s } = (0, p.TB)(t, e, i),
-                    { trackView: u, trackClick: c } = (0, G.Y9)(F.KS.TextChat, {
+                    { trackView: u, trackClick: c } = (0, K.Y9)(F.KS.TextChat, {
                         notif_type: F.KS.TextChat,
                         notif_user_id: e.author?.id,
                         message_id: e.id,
@@ -945,7 +945,7 @@ let eT = new eh(s.h, {
                     hint: (t, e) =>
                         t || !e || (!l && (0, tY.$)())
                             ? null
-                            : (0, t1.sI)((0, G.Jn)(), l ? t2.default.VMcw8s : Y.t.ykjOAJ),
+                            : (0, t1.sI)((0, K.Jn)(), l ? t2.default.VMcw8s : Y.t.ykjOAJ),
                     maxBodyLines: 2,
                     renderFooter: (i, n, a) =>
                         l || (0, tY.$)()
@@ -984,7 +984,7 @@ let eT = new eh(s.h, {
                             }),
                                 tT.A.isInputLocked(a) ? (c("unlock"), o.A.setInputLocked(!1, a)) : c("jump"),
                                 requestAnimationFrame(() => {
-                                    tK._.dispatchToLastSubscribed(J.jej.TEXTAREA_FOCUS, { channelId: t.id });
+                                    tG._.dispatchToLastSubscribed(J.jej.TEXTAREA_FOCUS, { channelId: t.id });
                                 }),
                                 o.A.updateNotificationStatus(n, J.yFH.DISMISSED));
                             return;
@@ -993,7 +993,7 @@ let eT = new eh(s.h, {
                             ? (c("unlock"), o.A.setInputLocked(!1, a))
                             : (c("jump"),
                               (0, tP.pX)(J.BVt.CHANNEL(t.guild_id, t.id, e.id)),
-                              tG.isPlatformEmbedded && tF.Ay.focus());
+                              tK.isPlatformEmbedded && tF.Ay.focus());
                     },
                     onDismissClick: () => {
                         c("dismiss");
@@ -1036,7 +1036,7 @@ let eT = new eh(s.h, {
                         n = Y.intl.format(Y.t["Yk+uYG"], { username: "" }),
                         l = (0, H.ku)(t),
                         a = Y.intl.string(Y.t.WRj1Wn),
-                        { trackView: r, trackClick: s } = (0, G.Y9)(F.KS.ActivityUserJoin, {
+                        { trackView: r, trackClick: s } = (0, K.Y9)(F.KS.ActivityUserJoin, {
                             notif_type: F.KS.ActivityUserJoin,
                             notif_user_id: t.id,
                             activity_type: J.xL.JOIN,
@@ -1210,7 +1210,7 @@ let eT = new eh(s.h, {
     STREAM_START: function (t) {
         let e = (function () {
             if (V.A.isNotificationDisabled(F.KS.ClipsReminderNotification)) return null;
-            let { trackView: t, trackClick: e } = (0, G.Y9)(F.KS.ClipsReminderNotification, {
+            let { trackView: t, trackClick: e } = (0, K.Y9)(F.KS.ClipsReminderNotification, {
                     notif_type: F.KS.ClipsReminderNotification,
                 }),
                 i = q.Ay.getKeybindForAction(J.hCu.SAVE_CLIP),

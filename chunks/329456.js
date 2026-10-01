@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     Nr: "card__97796",
     RG: "headerCollapsed__97796",
     ZY: "trailing__97796",

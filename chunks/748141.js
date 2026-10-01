@@ -1,4 +1,4 @@
-a.exports = {
+e.exports = {
     MY: "avatarUploader_e04502",
     O7: "avatarUploaderDisabled_e04502",
     f3: "avatarUploaderInnerSquare_e04502",

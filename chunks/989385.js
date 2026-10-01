@@ -1,4 +1,5 @@
 e.exports = (() => {
+    "use strict";
     var e,
         t,
         r,

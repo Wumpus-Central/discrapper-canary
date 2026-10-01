@@ -1,4 +1,4 @@
-i.d(t, { A: () => l });
+i.d(t, { A: () => s });
 class n {
     visibility = new Map();
     listeners = new Set();
@@ -26,4 +26,4 @@ class n {
         for (let e of this.listeners) e();
     }
 }
-let l = new n();
+let s = new n();

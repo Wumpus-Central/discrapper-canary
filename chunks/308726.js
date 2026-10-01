@@ -46,12 +46,12 @@ function w(t) {
                       .filter(
                           (e) => (0, V.zD)(e) && (0, V.P)(e) && e.extra.application_id === t && U.default.age(e.id) < P,
                       )
-                      .sort((t, e) => G(i, e) - G(i, t)),
+                      .sort((t, e) => K(i, e) - K(i, t)),
         [e, t, i],
     );
 }
-let K = 30 * M.A.Seconds.MINUTE;
-function G(t, e) {
+let G = 30 * M.A.Seconds.MINUTE;
+function K(t, e) {
     let i = e.participants;
     if (0 === i.length) return 0;
     let n = Math.max(
@@ -60,7 +60,7 @@ function G(t, e) {
                 return (i?.communicationProbability ?? 0) + 1e-4;
             }),
         ),
-        l = Math.exp(-((U.default.age(e.id) / 1e3 / K) * 0.01)),
+        l = Math.exp(-((U.default.age(e.id) / 1e3 / G) * 0.01)),
         a = e.traits.some((t) => t.type !== u.K.DURATION_SECONDS),
         r = (0, j.I5)(e);
     return n * l * (1 + 0.6 * (a && !r ? 1 : 0));

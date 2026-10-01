@@ -18,8 +18,8 @@ var n = a(477900),
     w = a(323384),
     k = a(939249),
     v = a(866665),
-    j = a(140735),
-    x = a(289873),
+    x = a(140735),
+    j = a(289873),
     C = a(821609),
     A = a(92446),
     I = a(625903),
@@ -72,11 +72,11 @@ var n = a(477900),
     ew = a(215181),
     ek = a(805332),
     ev = a(972786);
-function ej(e) {
+function ex(e) {
     let { idea: t, installScope: a, submitting: n } = e;
     return n ? "submitting" : "" === t.trim() ? "idea" : null == a ? "scope" : null;
 }
-var ex = a(58703),
+var ej = a(58703),
     eC = a(127181),
     eA = a(192308);
 function eI() {
@@ -121,7 +121,7 @@ function eS() {
                                     color: "text-muted",
                                     className: eN.VO,
                                     children: [
-                                        (0, ex.i$)(r()(e.date, "YYYY-MM-DD"), "LL"),
+                                        (0, ej.i$)(r()(e.date, "YYYY-MM-DD"), "LL"),
                                         (0, eC.MZ)(e) ? ` \xb7 ${J.intl.string(Q.default.vvxuUI)}` : null,
                                     ],
                                 }),
@@ -398,8 +398,8 @@ function tb(e) {
             onVersionHistory: b,
             onRestorePoints: w,
             onRefresh: k,
-            isRefreshing: j = !1,
-            onClose: x,
+            isRefreshing: x = !1,
+            onClose: j,
             refreshApplicationId: C,
             previewProjectId: A,
             trigger: N = "header",
@@ -476,7 +476,7 @@ function tb(e) {
         z = D || null != d || G || null != h || null != b || null != w,
         B = td.p5 && null != i,
         F = td.p5;
-    return null != k || null != x || z || F || l
+    return null != k || null != j || z || F || l
         ? (0, n.jsx)(eK.Y, {
               targetElementRef: S,
               position: "bottom",
@@ -491,7 +491,7 @@ function tb(e) {
                       onClose: s,
                       onSelect: s,
                       children: [
-                          null != k || null != x
+                          null != k || null != j
                               ? (0, n.jsxs)(eW.rX, {
                                     children: [
                                         null != k
@@ -500,17 +500,17 @@ function tb(e) {
                                                   icon: tt.RefreshIcon,
                                                   leadingAccessory: { type: "icon", icon: tt.RefreshIcon },
                                                   label: J.intl.string(Q.default.xKexN1),
-                                                  disabled: j,
+                                                  disabled: x,
                                                   action: k,
                                               })
                                             : null,
-                                        null != x
+                                        null != j
                                             ? (0, n.jsx)(eW.Dr, {
                                                   id: "close",
                                                   icon: ta.DoorExitIcon,
                                                   leadingAccessory: { type: "icon", icon: ta.DoorExitIcon },
                                                   label: J.intl.string(Q.default.Ea0Wrr),
-                                                  action: x,
+                                                  action: j,
                                               })
                                             : null,
                                     ],
@@ -689,11 +689,11 @@ function tb(e) {
 var tw = a(778712),
     tk = a(97808),
     tv = a(104171),
-    tj = a(889227),
-    tx = a(350086);
+    tx = a(889227),
+    tj = a(350086);
 let tC = tw._3.SIZE_16;
 function tA(e) {
-    return e instanceof tj.A
+    return e instanceof tx.A
         ? (0, n.jsx)(tk.eu, { src: e.getAvatarURL(void 0, (0, tw.FT)(tC)), size: tC, "aria-hidden": !0 })
         : null;
 }
@@ -702,7 +702,7 @@ function tI(e) {
         s = [t.creator, ...t.collaborators],
         i = s.length - 3;
     return (0, n.jsxs)("div", {
-        className: o()(tx.c, a),
+        className: o()(tj.c, a),
         "aria-hidden": !0,
         children: [
             (0, n.jsx)(tv.Ay, { users: s.slice(0, 3), max: 3, size: tv.DN.SIZE_16, renderUser: tA }),
@@ -1060,7 +1060,7 @@ function t5(e) {
                                               className: t1.fs,
                                               children: [
                                                   (0, n.jsx)(L.A, { mentionsCount: 1 }),
-                                                  (0, n.jsx)(j.A, { children: J.intl.string(Q.default.V3e2Yd) }),
+                                                  (0, n.jsx)(x.A, { children: J.intl.string(Q.default.V3e2Yd) }),
                                               ],
                                           }),
                                 ],
@@ -1097,11 +1097,11 @@ function t5(e) {
                     }),
                 ],
             }),
-            null != U ? (0, n.jsx)(j.A, { id: Y, children: U.label }) : null,
+            null != U ? (0, n.jsx)(x.A, { id: Y, children: U.label }) : null,
             (0, n.jsx)("div", {
                 className: t1.M2,
                 children: V
-                    ? (0, n.jsx)(x.y, { type: x.t.SPINNING_CIRCLE_SIMPLE })
+                    ? (0, n.jsx)(j.y, { type: j.t.SPINNING_CIRCLE_SIMPLE })
                     : (0, n.jsxs)("div", {
                           className: t1.Pl,
                           children: [
@@ -1130,7 +1130,7 @@ function t4(e) {
         [d, c] = s.useState(!0),
         [p, h] = s.useState(!1),
         [w, k] = s.useState(!1),
-        [j, x] = s.useState(!1),
+        [x, j] = s.useState(!1),
         S = Y.Q_.useSetting(),
         [P, E] = s.useState(null),
         [T, R] = s.useState(null),
@@ -1172,30 +1172,30 @@ function t4(e) {
             integrationInstalled: K?.integration_installed ?? null,
             botPermissionsChanged: K?.bot_permissions_changed === !0,
         }),
-        eu = d && !j && !p && !w,
+        eu = d && !x && !p && !w,
         em = J.intl.string(eu ? Q.default.YdgE0j : Q.default.aWVf4j),
         ec = s.useCallback(() => {
-            if (j || p || w) {
-                (x(!1), h(!1), k(!1), c(!0));
+            if (x || p || w) {
+                (j(!1), h(!1), k(!1), c(!0));
                 return;
             }
             c((e) => !e);
-        }, [j, p, w]),
+        }, [x, p, w]),
         ew = s.useCallback(() => c(!1), []),
-        { active: ej } = (0, eg.Q_)(M),
-        ex = s.useRef(null),
+        { active: ex } = (0, eg.Q_)(M),
+        ej = s.useRef(null),
         eC = (0, ey.o4)(M),
-        eI = J.intl.string(eC ? Q.default.bfQ4Ki : ej ? Q.default.rfNEHn : Q.default.lXcEa2),
+        eI = J.intl.string(eC ? Q.default.bfQ4Ki : ex ? Q.default.rfNEHn : Q.default.lXcEa2),
         eN = s.useCallback(() => {
             if (null != M) {
-                if (ej) return void (0, eg.PS)(M);
-                (x(!1), h(!1), k(!1), c(!0), (0, eg.nI)(M));
+                if (ex) return void (0, eg.PS)(M);
+                (j(!1), h(!1), k(!1), c(!0), (0, eg.nI)(M));
             }
-        }, [M, ej]),
+        }, [M, ex]),
         eS = s.useCallback(() => {
-            x((e) => !e && (c(!0), h(!1), k(!1), !0));
+            j((e) => !e && (c(!0), h(!1), k(!1), !0));
         }, []),
-        eE = s.useCallback(() => x(!1), []),
+        eE = s.useCallback(() => j(!1), []),
         eT = s.useCallback(
             (e) => {
                 if (null == i || L.current) return;
@@ -1369,11 +1369,11 @@ function t4(e) {
                                   onClick: e_,
                               }),
                               (0, n.jsx)(V.A.Icon, {
-                                  ref: ex,
+                                  ref: ej,
                                   icon: tP.A,
                                   tooltip: eI,
                                   "aria-label": eI,
-                                  selected: ej,
+                                  selected: ex,
                                   disabled: eC,
                                   onClick: eN,
                               }),
@@ -1384,7 +1384,7 @@ function t4(e) {
                                         icon: A.BugIcon,
                                         tooltip: J.intl.string(Q.default["8MLfBT"]),
                                         "aria-label": J.intl.string(Q.default["8MLfBT"]),
-                                        selected: j,
+                                        selected: x,
                                         onClick: eS,
                                     })
                                   : null,
@@ -1424,10 +1424,10 @@ function t4(e) {
                                       P?.status === "restoring"
                                           ? void 0
                                           : () => {
-                                                (c(!0), x(!1), k(!1), h(!0));
+                                                (c(!0), j(!1), k(!1), h(!0));
                                             },
                                   onRestorePoints: () => {
-                                      (c(!0), x(!1), h(!1), k(!0));
+                                      (c(!0), j(!1), h(!1), k(!0));
                                   },
                                   refreshApplicationId:
                                       en.modes.includes("widget") &&
@@ -1482,7 +1482,7 @@ function t4(e) {
                                   eP.A,
                                   {
                                       projectId: i.id,
-                                      designFeedbackToggleRef: ex,
+                                      designFeedbackToggleRef: ej,
                                       applicationId: i.preview_application_id,
                                       previewApplicationId: i.preview_application_id,
                                       surface: t6.sd,
@@ -1495,7 +1495,7 @@ function t4(e) {
                                       restorePointsOpen: w,
                                       onCloseRestorePoints: () => k(!1),
                                       installScope: i.install_scope,
-                                      debugOpen: S && j,
+                                      debugOpen: S && x,
                                       onCloseDebug: eE,
                                       onRestoreVersion: eT,
                                       restoreState: P,
@@ -1527,7 +1527,7 @@ function ae(e) {
             onNativeAppChannelsChange: w,
             eligibleGuilds: k,
             modelSettings: v,
-            onModelSettingsChange: j,
+            onModelSettingsChange: x,
             onSelectProject: A,
             onIdeaChange: I,
             onCreate: N,
@@ -1720,12 +1720,12 @@ function ae(e) {
         ey = (0, u.bG)([ev.Ay], () => ev.Ay.getGuildProjectsFetchState(l), [l]),
         [eb, ew] = s.useState(t0),
         ek = s.useMemo(() => tQ.w.get(t2(l)) ?? !1, [l]),
-        ej = "success" === ey,
-        ex = (0, u.yK)([ev.Ay], () => ev.Ay.getSharedProjects(l), [l]).length > 0 || t.some((e) => t$(e, l)),
-        eC = eb ?? (!!ex || "error" === ey || (!ej && ek));
+        ex = "success" === ey,
+        ej = (0, u.yK)([ev.Ay], () => ev.Ay.getSharedProjects(l), [l]).length > 0 || t.some((e) => t$(e, l)),
+        eC = eb ?? (!!ej || "error" === ey || (!ex && ek));
     s.useEffect(() => {
-        ej && tQ.w.set(t2(l), ex);
-    }, [ej, ex, l]);
+        ex && tQ.w.set(t2(l), ej);
+    }, [ex, ej, l]);
     let eI = s.useCallback((e) => {
             (tQ.w.set(tJ, e), ew(e));
         }, []),
@@ -1918,7 +1918,7 @@ function ae(e) {
                                                       }
                                                     : ee.S8,
                                                 disabled: r,
-                                                onChange: j,
+                                                onChange: x,
                                             }),
                                             (0, n.jsx)(C.$, {
                                                 variant: "primary",
@@ -1979,7 +1979,7 @@ function ae(e) {
                                     children: J.intl.string(Q.default.YnAFtT),
                                 }),
                                 ("unattempted" === eg || "loading" === eg) && 0 === es.length
-                                    ? (0, n.jsx)("div", { className: t1.E8, children: (0, n.jsx)(x.y, {}) })
+                                    ? (0, n.jsx)("div", { className: t1.E8, children: (0, n.jsx)(j.y, {}) })
                                     : "error" === eg && 0 === es.length
                                       ? (0, n.jsxs)("div", {
                                             className: t1.E8,
@@ -2093,12 +2093,12 @@ function at(e) {
         [p, h] = s.useState(!1),
         [b, w] = s.useState(null),
         k = (0, ec._)("VibegrationsScreen"),
-        [v, j] = s.useState(null);
+        [v, x] = s.useState(null);
     s.useEffect(() => {
-        j(null);
+        x(null);
     }, [a]);
-    let x = s.useMemo(() => (k.some((e) => e.id === a) ? a : tY), [k, a]),
-        C = v ?? x,
+    let j = s.useMemo(() => (k.some((e) => e.id === a) ? a : tY), [k, a]),
+        C = v ?? j,
         A = C === tY ? "user" : "guild",
         I = C === tY ? a : C,
         [N, S] = s.useState(!1),
@@ -2124,7 +2124,7 @@ function at(e) {
         R = s.useCallback(
             async (e) => {
                 let t = (e ?? d).trim(),
-                    a = ej({ idea: t, installScope: A, submitting: p });
+                    a = ex({ idea: t, installScope: A, submitting: p });
                 if ("idea" !== a && "submitting" !== a) {
                     (null != e && m(e), h(!0), w(null));
                     try {
@@ -2247,7 +2247,7 @@ function at(e) {
               guildId: a,
               submitting: p,
               createError: b,
-              createDisabled: "idea" === (t = ej({ idea: d, installScope: A, submitting: p })) || "submitting" === t,
+              createDisabled: "idea" === (t = ex({ idea: d, installScope: A, submitting: p })) || "submitting" === t,
               onSelectProject: L,
               onIdeaChange: U,
               onCreate: R,
@@ -2259,7 +2259,7 @@ function at(e) {
               onImportNewProject: F,
               importing: z,
               conjureTarget: C,
-              onConjureTargetChange: j,
+              onConjureTargetChange: x,
               nativeAppChannels: "guild" === A ? N : null,
               onNativeAppChannelsChange: S,
               eligibleGuilds: k,
