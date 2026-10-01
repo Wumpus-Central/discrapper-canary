@@ -5518,6 +5518,25 @@
     }
   },
   {
+    "name": "2026-09-server-tooltip-notification-context",
+    "kind": "user",
+    "defaultConfig": {
+      "mode": "disabled"
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "mode": "latest"
+      },
+      "2": {
+        "mode": "mentions_first"
+      }
+    }
+  },
+  {
     "name": "2026-09-silp-app-opened-direct-to-discoverable",
     "kind": "installation",
     "defaultConfig": {

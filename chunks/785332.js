@@ -8,6 +8,7 @@ _.exports = {
     _I: "stageListenerCount_b1f768",
     cN: "guildNameText_b1f768",
     BT: "viewAsRolesWarning_b1f768",
+    T5: "notificationContext_b1f768",
     NT: "guildNameTextLimitedSize_b1f768",
     LM: "muteText_b1f768",
     Sx: "muteTextWithActivity_b1f768",

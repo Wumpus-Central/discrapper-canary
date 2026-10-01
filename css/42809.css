@@ -234,6 +234,14 @@
     margin: 8px 0 4px
 }
 
+.notificationContext_b1f768 {
+    margin-top: var(--space-4)
+}
+
+.notificationContext_b1f768+.row_b1f768 {
+    margin-top: var(--space-6)
+}
+
 .guildNameTextLimitedSize_b1f768 {
     display: -webkit-box;
     -webkit-line-clamp: 2;
@@ -345,4 +353,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=42809.ba3498bcf671e8fe.css.map*/
+/*# sourceMappingURL=42809.7f532ec49e402315.css.map*/
