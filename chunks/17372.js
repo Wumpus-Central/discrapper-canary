@@ -24,7 +24,12 @@ var i,
         (_.GUILD = "guild_urf"),
         (_.MEDIA_TAKEDOWN = "media_takedown"),
         _),
-    c = /^2(2155|7706)2$/.test(n.j) ? (((r = {}).TIDA = "tida"), (r.UK_STOPNCII = "uk_stopncii"), r) : null;
+    c = /^2(2155|7706)2$/.test(n.j)
+        ? (((r = {}).TIDA = "tida"),
+          (r.UK_STOPNCII = "uk_stopncii"),
+          (r.BRAZIL_ONLINE_SAFETY_OF_WOMEN = "brazil_online_safety_of_women"),
+          r)
+        : null;
 function E(e) {
     return Object.values(c).includes(e);
 }
