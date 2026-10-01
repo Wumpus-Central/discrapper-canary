@@ -6,7 +6,7 @@ var i = n(649852),
     l = n(400492),
     o = n(386723),
     d = n(855302),
-    c = n(712711),
+    c = n(312987),
     u = n(347481),
     _ = n(734057),
     E = n(25578),
@@ -340,7 +340,7 @@ let R = r()((e, t, n) => {
                 a.h.dispatch({ type: "AUDIO_SET_SUBSYSTEM", subsystem: e }));
         },
         setVideoEnabled(e) {
-            ((0, c.PX)(), a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled: e }));
+            (e && (0, c.PX)(), a.h.dispatch({ type: "MEDIA_ENGINE_SET_VIDEO_ENABLED", enabled: e }));
         },
         setGoLiveSource(e) {
             (e?.qualityOptions != null &&

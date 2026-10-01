@@ -1,4 +1,4 @@
-(n.d(t, { S1: () => g, gB: () => T, PX: () => m }),
+(n.d(t, { S1: () => S, gB: () => m, PX: () => N }),
     n(393431),
     n(532706),
     n(42231),
@@ -17,21 +17,28 @@ var i = n(205693),
     u = n(284009),
     _ = n.n(u),
     E = n(577718),
-    A = n(767262),
-    h = n(652215);
-async function I(e) {
+    A = n(723702);
+let h = (0, n(945810).mj)({
+    name: "2026-08-virtual-backgrounds-ios",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+var I = n(463951),
+    f = n(652215);
+async function p(e) {
     let t = await fetch(e),
         n = await t.blob();
     return new Uint8ClampedArray(await n.arrayBuffer());
 }
-function f(e, t, n, i, r) {
+function T(e, t, n, i, r) {
     (0, l.wq)({ [e]: { graph: n, target: t, image: i, blob: r } });
 }
-async function p(e, t, n) {
+async function g(e, t, n) {
     let r,
         s = !1;
-    if (null == n) return f(e, t, i.gO.NONE);
-    if ("blur" === n) return f(e, t, i.gO.BACKGROUND_BLUR);
+    if (null == n) return T(e, t, i.gO.NONE);
+    if ("blur" === n) return T(e, t, i.gO.BACKGROUND_BLUR);
     if ("string" == typeof n || "number" == typeof n) {
         let e = (0, c.A)()[n];
         ((s = e.isVideo ?? !1), (r = e.source));
@@ -66,25 +73,29 @@ async function p(e, t, n) {
                               (n.onerror = (e) => t(e)),
                               (n.src = o));
                       })),
-                a = s ? await I(r) : void 0;
-            f(e, t, i.gO.BACKGROUND_REPLACEMENT, n, a);
+                a = s ? await p(r) : void 0;
+            T(e, t, i.gO.BACKGROUND_REPLACEMENT, n, a);
         } catch (e) {
             (0, l.Mj)();
         }
 }
-async function T(e, t) {
+async function m(e, t) {
     let { track: n = !0, location: r } = t;
-    (await p(i.Tr.CAMERA_BACKGROUND_LIVE, { type: i.Qo.INPUT_DEVICE }, e), n && (0, d.Uz)(e, r, "Enabled"));
+    (await g(i.Tr.CAMERA_BACKGROUND_LIVE, { type: i.Qo.INPUT_DEVICE }, e), n && (0, d.Uz)(e, r, "Enabled"));
 }
-async function g(e, t, n) {
+async function S(e, t, n) {
     let { track: r = !0, location: a } = n;
     ((0, l.Oo)(),
-        await p(i.Tr.CAMERA_BACKGROUND_PREVIEW, { type: i.Qo.STREAM, streamId: t }, e),
+        await g(i.Tr.CAMERA_BACKGROUND_PREVIEW, { type: i.Qo.STREAM, streamId: t }, e),
         r && (0, d.Uz)(e, a, "Preview"));
 }
-function m() {
+function N() {
     let e = r.default.getCurrentUser();
     if (null == e) return;
     let t = (0, s.i)(e);
-    (0, A.A)() && !o.A.hasBeenApplied && null != t && T(t, { track: !1 }).catch(h.tEg);
+    (0, I.A)() &&
+        (!(0, A.isIOS)() || h.getConfig({ location: "applyBackgroundOption" }).enabled) &&
+        !o.A.hasBeenApplied &&
+        null != t &&
+        m(t, { track: !1 }).catch(f.tEg);
 }
