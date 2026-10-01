@@ -1,143 +1,171 @@
-n.d(t, { A: () => V, Y: () => U });
+n.d(t, { A: () => U, Y: () => w });
 var l = n(477900),
     i = n(582128),
     s = n(435558),
-    r = n.n(s),
-    a = n(317097),
+    a = n.n(s),
+    r = n(317097),
     o = n(17928),
     u = n(473193),
-    c = n(364522),
-    d = n(545442),
+    d = n(364522),
+    c = n(545442),
     m = n(922016),
-    h = n(442433),
-    p = n(589158),
-    f = n(964486),
+    x = n(442433),
+    h = n(589158),
+    j = n(964486),
     g = n(775602),
-    x = n(793574),
-    A = n(688810),
-    C = n(722245),
-    E = n(485947),
+    p = n(793574),
+    f = n(688810),
+    N = n(282006),
+    A = n(485947),
     I = n(386784),
-    y = n(545868),
-    S = n(332173),
-    v = n(176201),
-    N = n(676608),
-    _ = n(342296),
-    j = n(260509),
-    b = n(734057),
-    T = n(696451),
-    R = n(317525),
-    O = n(71393),
-    L = n(287809),
-    M = n(427262),
-    k = n(375708),
-    w = n(165648),
-    P = n(778724);
+    v = n(545868),
+    b = n(332173),
+    S = n(176201),
+    E = n(676608),
+    C = n(342296),
+    T = n(260509),
+    y = n(734057),
+    O = n(696451),
+    _ = n(317525),
+    R = n(71393),
+    G = n(287809),
+    k = n(427262),
+    P = n(375708),
+    M = n(165648),
+    L = n(778724);
 function D(e) {
-    let { member: t, guildId: s, channelId: r, role: a } = e,
+    let { member: t, guildId: s, channelId: a, role: r } = e,
         u = i.useRef(null),
-        c = (0, o.bG)([O.A], () => O.A.getGuild(s)?.ownerId, [s]),
-        d = (0, o.bG)([L.default], () => L.default.getUser(t.userId), [t.userId]),
-        m = (0, o.bG)([b.A], () => b.A.getChannel(r), [r]);
-    return null == d || null == m
+        d = (0, o.bG)([R.A], () => R.A.getGuild(s)?.ownerId, [s]),
+        c = (0, o.bG)([G.default], () => G.default.getUser(t.userId), [t.userId]),
+        m = (0, o.bG)([y.A], () => y.A.getChannel(a), [a]);
+    return null == c || null == m
         ? null
         : (0, l.jsx)(
-              _.A,
+              C.A,
               {
                   targetElementRef: u,
                   userId: t.userId,
                   guildId: s,
-                  channelId: r,
-                  roleId: a.id,
+                  channelId: a,
+                  roleId: r.id,
                   spacing: 14,
                   children: (e, i) => {
-                      let { isShown: r } = i;
+                      let { isShown: a } = i;
                       return (0, l.jsx)(
-                          p.A,
+                          h.A,
                           {
                               ref: u,
-                              selected: r,
+                              selected: a,
                               colorString: t.colorString,
                               colorStrings: t.colorStrings,
-                              colorRoleName: a.name,
-                              user: d,
-                              isOwner: t.userId === c,
+                              colorRoleName: r.name,
+                              user: c,
+                              isOwner: t.userId === d,
                               nick: t.nick,
                               premiumSince: null == t.premiumSince ? null : new Date(t.premiumSince),
                               channel: m,
                               guildId: s,
                               onContextMenu: (e) => {
-                                  (0, h.L3)(e, async () => {
+                                  (0, x.L3)(e, async () => {
                                       let { default: e } = await Promise.all([
+                                          n.e("147119"),
                                           n.e("403382"),
                                           n.e("597981"),
+                                          n.e("896691"),
+                                          n.e("779367"),
+                                          n.e("992956"),
+                                          n.e("7452"),
+                                          n.e("60002"),
+                                          n.e("189423"),
                                           n.e("622936"),
                                           n.e("216947"),
                                           n.e("463317"),
                                           n.e("326692"),
-                                          n.e("993103"),
                                           n.e("834552"),
+                                          n.e("993103"),
                                           n.e("708757"),
                                           n.e("585968"),
                                           n.e("893190"),
                                           n.e("21921"),
-                                          n.e("571210"),
-                                          n.e("676418"),
+                                          n.e("695445"),
                                           n.e("189673"),
+                                          n.e("571210"),
+                                          n.e("890027"),
+                                          n.e("536200"),
+                                          n.e("676418"),
+                                          n.e("638221"),
                                           n.e("166495"),
+                                          n.e("592028"),
+                                          n.e("425906"),
                                           n.e("88342"),
-                                          n.e("311802"),
-                                          n.e("698965"),
+                                          n.e("123216"),
                                           n.e("882073"),
                                           n.e("797558"),
-                                          n.e("931319"),
-                                          n.e("229787"),
+                                          n.e("147786"),
+                                          n.e("428296"),
+                                          n.e("936320"),
                                           n.e("691994"),
-                                          n.e("682337"),
+                                          n.e("311802"),
+                                          n.e("229787"),
+                                          n.e("698965"),
+                                          n.e("482861"),
+                                          n.e("931319"),
                                           n.e("576665"),
                                           n.e("235313"),
-                                          n.e("371133"),
-                                          n.e("454625"),
+                                          n.e("682337"),
                                           n.e("538887"),
+                                          n.e("843719"),
+                                          n.e("454625"),
+                                          n.e("332470"),
+                                          n.e("371133"),
+                                          n.e("41991"),
+                                          n.e("959669"),
                                           n.e("436564"),
-                                          n.e("939171"),
+                                          n.e("715038"),
                                           n.e("624198"),
-                                          n.e("252229"),
+                                          n.e("939171"),
+                                          n.e("680986"),
                                           n.e("245996"),
-                                          n.e("856753"),
+                                          n.e("252229"),
                                           n.e("700792"),
                                           n.e("592822"),
+                                          n.e("190889"),
                                           n.e("529422"),
                                           n.e("823427"),
+                                          n.e("856753"),
+                                          n.e("114518"),
                                           n.e("309291"),
-                                          n.e("449145"),
-                                          n.e("214461"),
+                                          n.e("331203"),
                                           n.e("307059"),
-                                          n.e("365826"),
+                                          n.e("449145"),
+                                          n.e("255302"),
                                           n.e("493014"),
-                                          n.e("242204"),
-                                          n.e("649520"),
                                           n.e("349644"),
+                                          n.e("649520"),
                                           n.e("825486"),
+                                          n.e("242204"),
                                           n.e("522261"),
+                                          n.e("873786"),
                                           n.e("678195"),
+                                          n.e("951811"),
                                           n.e("343116"),
-                                          n.e("713708"),
                                           n.e("139103"),
+                                          n.e("713708"),
                                           n.e("470314"),
-                                          n.e("774021"),
                                           n.e("70515"),
                                           n.e("404524"),
                                           n.e("654148"),
-                                          n.e("830221"),
+                                          n.e("774021"),
                                           n.e("666939"),
+                                          n.e("830221"),
                                           n.e("324240"),
                                           n.e("221879"),
                                           n.e("717334"),
                                           n.e("184841"),
                                       ]).then(n.bind(n, 107632));
                                       return (t) =>
-                                          (0, l.jsx)(e, { ...t, user: d, guildId: s, channel: m, showMediaItems: !0 });
+                                          (0, l.jsx)(e, { ...t, user: c, guildId: s, channel: m, showMediaItems: !0 });
                                   });
                               },
                               ...e,
@@ -149,101 +177,101 @@ function D(e) {
               t.userId,
           );
 }
-function U(e) {
-    let { popoutProps: t, roleId: n, guildId: s, channelId: a } = e,
-        d = i.useRef(null);
-    ((0, f.Ay)(() => {
-        t.setPopoutRef?.(d.current);
+function w(e) {
+    let { popoutProps: t, roleId: n, guildId: s, channelId: r } = e,
+        c = i.useRef(null);
+    ((0, j.Ay)(() => {
+        t.setPopoutRef?.(c.current);
     }),
-        (0, f.l0)(() => {
+        (0, j.l0)(() => {
             t.setPopoutRef?.(null);
         }));
     let m = (0, I.A)(s),
-        h = (0, o.bG)(
-            [O.A],
+        x = (0, o.bG)(
+            [R.A],
             () => {
-                let e = O.A.getGuild(s);
-                return null == e ? null : (0, j.af)(e);
+                let e = R.A.getGuild(s);
+                return null == e ? null : (0, T.af)(e);
             },
             [s],
         ),
-        p = (0, o.yK)(
-            [T.Ay, L.default],
+        h = (0, o.yK)(
+            [O.Ay, G.default],
             () => {
-                let e = T.Ay.getMembers(s),
-                    t = null == n || n === h ? e : e.filter((e) => e.roles.includes(n));
-                return r()(t)
-                    .filter((e) => null != L.default.getUser(e.userId))
-                    .sortBy((e) => e.nick ?? M.Ay.getName(L.default.getUser(e.userId)))
+                let e = O.Ay.getMembers(s),
+                    t = null == n || n === x ? e : e.filter((e) => e.roles.includes(n));
+                return a()(t)
+                    .filter((e) => null != G.default.getUser(e.userId))
+                    .sortBy((e) => e.nick ?? k.Ay.getName(G.default.getUser(e.userId)))
                     .value();
             },
-            [s, n, h],
+            [s, n, x],
         ),
         g = (0, o.bG)(
-            [R.A],
+            [_.A],
             () => {
-                let e = n ?? h;
-                return null == e ? null : R.A.getRole(s, e);
+                let e = n ?? x;
+                return null == e ? null : _.A.getRole(s, e);
             },
-            [s, n, h],
+            [s, n, x],
         ),
-        x = null == n ? null : m?.[n],
-        A = i.useMemo(
+        p = null == n ? null : m?.[n],
+        f = i.useMemo(
             () =>
                 null != g
-                    ? p.map((e) => (0, l.jsx)(D, { member: e, guildId: s, channelId: a, role: g }, e.userId))
+                    ? h.map((e) => (0, l.jsx)(D, { member: e, guildId: s, channelId: r, role: g }, e.userId))
                     : [],
-            [a, s, g, p],
+            [r, s, g, h],
         );
     return null == g
         ? null
         : (0, l.jsx)(u.C.Provider, {
               value: void 0,
               children: (0, l.jsx)("div", {
-                  className: w.qm,
-                  ref: d,
+                  className: M.qm,
+                  ref: c,
                   ...t,
-                  children: (0, l.jsxs)(c.Ip, {
-                      className: w.bY,
+                  children: (0, l.jsxs)(d.Ip, {
+                      className: M.bY,
                       children: [
-                          (0, l.jsx)(C.Y, { id: n, guildId: s, title: g.name, count: x, className: w.sd }),
-                          A,
-                          null == x || x <= A.length
+                          (0, l.jsx)(N.Y, { id: n, guildId: s, title: g.name, count: p, className: M.sd }),
+                          f,
+                          null == p || p <= f.length
                               ? null
-                              : (0, l.jsx)(E.A, {
-                                    className: w.sd,
-                                    children: k.intl.formatToPlainString(k.t["9oMmZC"], { count: x - A.length }),
+                              : (0, l.jsx)(A.A, {
+                                    className: M.sd,
+                                    children: P.intl.formatToPlainString(P.t["9oMmZC"], { count: p - f.length }),
                                 }),
                       ],
                   }),
               }),
           });
 }
-function V(e) {
-    let { roleId: t, channelId: n, roleName: s, guildId: r, children: u, inlinePreview: c = !1 } = e,
-        { analyticsLocations: h } = (0, A.Ay)(x.A.ROLE_MENTION),
-        p = (0, o.bG)([g.Ay], () => g.Ay.roleStyle),
-        f = (0, o.bG)([R.A], () => (null == r || null == t ? null : R.A.getRole(r, t))),
-        C = (0, N.jV)(r, f),
-        E = !c && null != f && !(0, v.Qv)(f),
-        I = E && "dot" === p,
-        _ = E && "username" === p,
-        j = C && null != f ? f.colorStrings : null,
-        b = i.useRef(null);
-    function T(e) {
-        return (0, l.jsxs)(S.A, {
-            ref: b,
-            className: w.Dz,
-            color: _ ? f.color : null,
-            roleColors: _ ? j : null,
+function U(e) {
+    let { roleId: t, channelId: n, roleName: s, guildId: a, children: u, inlinePreview: d = !1 } = e,
+        { analyticsLocations: x } = (0, f.Ay)(p.A.ROLE_MENTION),
+        h = (0, o.bG)([g.Ay], () => g.Ay.roleStyle),
+        j = (0, o.bG)([_.A], () => (null == a || null == t ? null : _.A.getRole(a, t))),
+        N = (0, E.jV)(a, j),
+        A = !d && null != j && !(0, S.Qv)(j),
+        I = A && "dot" === h,
+        C = A && "username" === h,
+        T = N && null != j ? j.colorStrings : null,
+        y = i.useRef(null);
+    function O(e) {
+        return (0, l.jsxs)(b.A, {
+            ref: y,
+            className: M.Dz,
+            color: C ? j.color : null,
+            roleColors: C ? T : null,
             ...e,
             children: [
                 I &&
-                    null != f.color &&
-                    (0, l.jsx)(d.W, {
-                        color: (0, a.Hl)(f.color),
-                        colors: j,
-                        className: P.m,
+                    null != j.color &&
+                    (0, l.jsx)(c.W, {
+                        color: (0, r.Hl)(j.color),
+                        colors: T,
+                        className: L.m,
                         background: !1,
                         tooltip: !1,
                     }),
@@ -251,18 +279,18 @@ function V(e) {
             ],
         });
     }
-    return c || null == n || null == r || (null == t && "@everyone" !== s)
-        ? (0, l.jsx)(A.f5, { value: h, children: T() })
-        : (0, l.jsx)(A.f5, {
-              value: h,
+    return d || null == n || null == a || (null == t && "@everyone" !== s)
+        ? (0, l.jsx)(f.f5, { value: x, children: O() })
+        : (0, l.jsx)(f.f5, {
+              value: x,
               children: (0, l.jsx)(m.Y, {
-                  targetElementRef: b,
+                  targetElementRef: y,
                   preload: async () => {
-                      null != t && (await (0, y.a)(r, t));
+                      null != t && (await (0, v.a)(a, t));
                   },
-                  renderPopout: (e) => (0, l.jsx)(U, { guildId: r, channelId: n, roleId: t, popoutProps: e }),
+                  renderPopout: (e) => (0, l.jsx)(w, { guildId: a, channelId: n, roleId: t, popoutProps: e }),
                   position: "right",
-                  children: T,
+                  children: O,
               }),
           });
 }

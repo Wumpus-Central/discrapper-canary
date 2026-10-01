@@ -1,9 +1,9 @@
 n.d(t, { $: () => f, A: () => p });
-var i = n(228366),
+var i = n(73153),
     l = n(376728),
     a = n(842241),
-    s = n(976860),
-    r = n(280450),
+    r = n(976860),
+    s = n(280450),
     o = n(174459),
     d = n(723702),
     c = n(19575),
@@ -24,7 +24,7 @@ async function f(e, t) {
                 received_installation_id: n.installationId,
                 location: "openInviteFromRPC",
             }),
-        r.default.isAuthenticated()
+        s.default.isAuthenticated()
             ? i.h.dispatch({
                   type: "INVITE_MODAL_OPEN",
                   invite: A,
@@ -34,7 +34,7 @@ async function f(e, t) {
               })
             : (n?.installationId != null &&
                   l.Ay.setReceivedInstallationIdForInviteCode(A.code, String(n.installationId)),
-              (0, s.bG)(h.BVt.INVITE(g))),
+              (0, r.bG)(h.BVt.INVITE(g))),
         d.isPlatformEmbedded && c.Ay.focus(),
         { invite: A, code: e }
     );

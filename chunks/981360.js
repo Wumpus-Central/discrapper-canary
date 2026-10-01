@@ -1332,7 +1332,7 @@ var tK = n(529756),
     tJ = n(139146),
     tQ = n(60465),
     t0 = n(976860),
-    t1 = n(402860),
+    t1 = n(38145),
     t2 = n(365491),
     t8 = n(668953),
     t6 = n(881636),
@@ -1397,7 +1397,7 @@ function t7(e) {
                             sku_id: n.skuId,
                             cta_name: i,
                         }),
-                        (0, t1.closeUserProfileModal)(),
+                        (0, t1.M)(),
                         (0, tQ.p)(),
                         !0 !== n.isOrbsExclusive)
                     )

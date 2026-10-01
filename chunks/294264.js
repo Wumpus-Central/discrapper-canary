@@ -6,7 +6,7 @@ var a = n(477900),
     d = n(289873),
     l = n(297264),
     c = n(636537),
-    o = n(228366),
+    o = n(73153),
     E = n(652215);
 async function u(t) {
     let e = await c.Bo.get({ url: E.Rsh.STORE_EULA(t), oldFormErrors: !0, rejectWithError: (0, c.fT)() });

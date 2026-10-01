@@ -18,7 +18,7 @@ var i = n(582128),
     l = n.n(s),
     o = n(683588),
     d = n(17928),
-    c = n(228366),
+    c = n(73153),
     u = n(66834),
     _ = n(155718),
     E = n(630248),
@@ -28,8 +28,8 @@ var i = n(582128),
     f = n(594061),
     p = n(280450),
     T = n(734057),
-    m = n(696451),
-    g = n(71393),
+    g = n(696451),
+    m = n(71393),
     S = n(287809),
     N = n(174459),
     C = n(917012),
@@ -104,15 +104,15 @@ async function X(e) {
         }
         return n;
     }
-    return (await q(e), ee.indices[t] ?? V);
+    return (await Z(e), ee.indices[t] ?? V);
 }
-async function q(e) {
+async function Z(e) {
     let t = new AbortController(),
         n = new o.K();
     (K(e, { fetchState: { fetching: !0, abort: t, promise: n.promise } }, !0),
         await (0, L.E)(e, t).then(n.resolve).catch(n.reject));
 }
-function Z(e) {
+function q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         { target: n, index: i } = e,
         r = S.default.getCurrentUser()?.id;
@@ -196,7 +196,7 @@ class J extends d.Ay.Store {
     collator = new Intl.Collator(I.default.locale, H);
     initialize() {
         (this.waitFor(I.default),
-            this.waitFor(R.Ay, E.A, p.default, T.A, m.Ay, g.A, S.default),
+            this.waitFor(R.Ay, E.A, p.default, T.A, g.Ay, m.A, S.default),
             this.syncWith([I.default], () => {
                 let e;
                 (e = I.default.locale) !== ee.oldLocale &&
@@ -292,15 +292,15 @@ let ee = new J(c.h, {
         LOGOUT: z,
         CONNECTION_OPEN: function () {
             for (let e of Object.values(ee.indices)) e.serverVersion = x;
-            for (let e of W) Z(e);
+            for (let e of W) q(e);
             ((W = []), (j = !0));
         },
         APPLICATION_COMMAND_INDEX_FETCH_REQUEST: function (e) {
             let { target: t } = e,
                 n = Y(t);
-            eu(ee.indices[n] ?? V) && q(t);
+            eu(ee.indices[n] ?? V) && Z(t);
         },
-        APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: Z,
+        APPLICATION_COMMAND_INDEX_FETCH_SUCCESS: q,
         APPLICATION_COMMAND_INDEX_FETCH_FAILURE: function (e) {
             let { target: t } = e;
             K(t, { fetchState: { fetching: !1, retryAfter: Date.now() + 5e3 } });
@@ -519,7 +519,7 @@ function eo(e) {
         I = a?.toLowerCase(),
         p = I?.split(" "),
         T = s === y.n.ONLY_TEXT,
-        m = s !== y.n.DENY ? (0, C.Ez)(h, !0, T) : [],
+        g = s !== y.n.DENY ? (0, C.Ez)(h, !0, T) : [],
         S = [],
         N = {
             permissionContext: t,
@@ -593,15 +593,15 @@ function eo(e) {
             }
             return eh(e.section.name, t.section.name);
         }),
-        m.length > 0 || !0 === c)
+        g.length > 0 || !0 === c)
     ) {
-        let e = ed(C.gZ[P.Ik.BUILT_IN], m, !0, !0, N);
+        let e = ed(C.gZ[P.Ik.BUILT_IN], g, !0, !0, N);
         null != e && S.push(e);
     }
     let b = S.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
     if (u === y.M.COMMAND_ONLY || u === y.M.COMMAND_OR_APPLICATION) {
         let e = t.context,
-            n = g.A.getGuild(t?.context?.guild_id),
+            n = m.A.getGuild(t?.context?.guild_id),
             i = S.some((e) => e.section.id !== P.Ik.BUILT_IN && e.data.length > 0);
         _.commands.useFrecency && i && f.bW.loadIfNecessary();
         let r = null != e ? { channel: e, guild: n } : void 0;

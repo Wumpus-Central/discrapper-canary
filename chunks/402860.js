@@ -1,6 +1,6 @@
-(n.r(t), n.d(t, { openUserProfileModal: () => f, closeUserProfileModal: () => p }));
+(n.r(t), n.d(t, { openUserProfileModal: () => f }));
 var i = n(778712),
-    r = n(228366),
+    r = n(73153),
     a = n(803306),
     s = n(927813),
     l = n(86070),
@@ -41,8 +41,8 @@ async function f(e) {
             tabSection: f,
             scrollTarget: p,
             hideRestrictedProfile: T,
-            sourceAnalyticsLocations: m,
-            appContext: g,
+            sourceAnalyticsLocations: g,
+            appContext: m,
             customStatusPrompt: S = null,
             onModalOpen: N,
         } = e,
@@ -97,11 +97,8 @@ async function f(e) {
         tabSection: f,
         scrollTarget: p,
         hideRestrictedProfile: T,
-        sourceAnalyticsLocations: m,
-        appContext: g,
+        sourceAnalyticsLocations: g,
+        appContext: m,
         onModalOpen: N,
     });
-}
-function p() {
-    r.h.dispatch({ type: "USER_PROFILE_MODAL_CLOSE" });
 }

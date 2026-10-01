@@ -1,6 +1,6 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => g });
 var i = n(17928),
-    l = n(228366),
+    l = n(73153),
     r = n(320095),
     s = n(287809),
     a = n(380335),
@@ -16,7 +16,7 @@ function h(e, t) {
     let i = null == t ? null : (0, r.rh)(t);
     u[e] = { loaded: !0, error: n, message: i };
 }
-class g extends i.Ay.Store {
+class f extends i.Ay.Store {
     static displayName = "MessageRequestPreviewStore";
     initialize() {
         this.waitFor(a.A, o.A, s.default);
@@ -28,7 +28,7 @@ class g extends i.Ay.Store {
         return (e in u || (u[e] = { loaded: !1, error: !1, message: null }), u[e]);
     }
 }
-let f = new g(l.h, {
+let g = new f(l.h, {
     CONNECTION_OPEN: function () {
         ((u = {}), d.clear());
     },

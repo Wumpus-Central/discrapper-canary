@@ -1,17 +1,7 @@
-(n.d(t, { A: () => s, i: () => l }), n(582128));
-var i = n(940622);
-function l(e) {
-    return {
-        profileFrameStyle: {
-            "--custom-profile-frame-container-width": e.innerWidth,
-            "--custom-profile-frame-overflow-top": e.overflowTop,
-            "--custom-profile-frame-overflow-bottom": e.overflowBottom,
-            "--custom-profile-frame-overflow-horizontal": e.overflowHorizontal,
-        },
-        profileFrameClassName: "custom-profile-frame",
-    };
-}
+r.d(i, { A: () => s });
+var a = r(940622),
+    p = r(163697);
 function s(e) {
-    let t = (0, i.lM)();
-    return null == e ? { profileFrameStyle: void 0, profileFrameClassName: void 0 } : (t ?? l(e));
+    let i = (0, a.lM)();
+    return null == e ? { profileFrameStyle: void 0, profileFrameClassName: void 0 } : (i ?? (0, p.i)(e));
 }

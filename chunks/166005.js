@@ -27,9 +27,9 @@ var t = n(477900),
     w = n(967144),
     k = n(69282),
     I = n(657048),
-    E = n(885386),
-    L = n(34457),
-    P = n(696451),
+    P = n(885386),
+    E = n(34457),
+    L = n(696451),
     _ = n(576705),
     G = n(287809),
     T = n(488926),
@@ -135,7 +135,7 @@ function $(e) {
     let { userId: l, guild: n, showLabel: r = !1, onAddRole: o, buttonRef: a } = e,
         d = (0, u.bG)([G.default], () => G.default.getCurrentUser()),
         c = null != d ? T.HJ(n, d.id) : null,
-        x = (0, u.bG)([P.Ay], () => P.Ay.getMember(n.id, l)),
+        x = (0, u.bG)([L.Ay], () => L.Ay.getMember(n.id, l)),
         g = x?.roles ?? [],
         h = (0, u.bG)([N.Ay], () => N.Ay.roleStyle),
         b = i.useRef(null),
@@ -143,14 +143,14 @@ function $(e) {
         p = i.useCallback(
             (e) => {
                 o?.();
-                let t = P.Ay.getMember(n.id, l),
+                let t = L.Ay.getMember(n.id, l),
                     i = t?.roles ?? [];
                 (i.includes(e) || (i = [...i, e]), S.default.updateMemberRoles(n.id, l, i, [e], []));
             },
             [n.id, l, o],
         );
     function y(e) {
-        return !(0, L.Oy)(e) && !e.managed && _.A.isRoleHigher(n, c, e) && -1 === g.indexOf(e.id);
+        return !(0, E.Oy)(e) && !e.managed && _.A.isRoleHigher(n, c, e) && -1 === g.indexOf(e.id);
     }
     return (0, t.jsx)(C.Y, {
         targetElementRef: R,
@@ -186,7 +186,7 @@ function $(e) {
 function B(e) {
     let { userId: l, guild: n, roles: t, allowEditing: r, readOnly: s } = e,
         o = (0, u.bG)([G.default], () => G.default.getCurrentUser()),
-        a = E.Q_.useSetting(),
+        a = P.Q_.useSetting(),
         [d] = (0, u.yK)([_.A], () => [_.A.can(D.xBc.MANAGE_ROLES, n), _.A.getGuildVersion(n.id)]),
         c = null != o ? T.HJ(n, o.id) : null,
         x = i.useMemo(() => {
@@ -214,7 +214,7 @@ function Q(e, l, n) {
     return i.useCallback(
         (t) => {
             n?.();
-            let i = P.Ay.getMember(l, e),
+            let i = L.Ay.getMember(l, e),
                 r = (i?.roles ?? []).filter((e) => e !== t.id);
             t.tags?.guild_connections === null
                 ? A.A.unassignGuildRoleConnection(l, t.id)
@@ -226,7 +226,7 @@ function Q(e, l, n) {
 function U() {
     return i.useCallback((e, l) => {
         (0, y.L3)(e, async () => {
-            let { default: e } = await n.e("715687").then(n.bind(n, 646938));
+            let { default: e } = await Promise.all([n.e("638221"), n.e("715687")]).then(n.bind(n, 646938));
             return (n) => (0, t.jsx)(e, { ...n, id: l, label: H.intl.string(H.t.sMsaLg) });
         });
     }, []);
@@ -368,13 +368,13 @@ function q(e) {
             }
             (y(n.length !== p.length || n.some((e, l) => e.id !== p[l]?.id) ? n : p), N(t), I.current++);
         }, [r, p, M]));
-    let E = M ? r : p;
-    function L() {
+    let P = M ? r : p;
+    function E() {
         M ? (c?.(), S(!1)) : (u?.(), S(!0));
     }
-    function P() {
+    function L() {
         return p.length < r.length
-            ? (0, t.jsx)(K, { isExpanded: M, overflowCount: r.length - p.length, onClick: L, buttonRef: w })
+            ? (0, t.jsx)(K, { isExpanded: M, overflowCount: r.length - p.length, onClick: E, buttonRef: w })
             : null;
     }
     function _() {
@@ -391,7 +391,7 @@ function q(e) {
                       ? (0, t.jsxs)(Y, {
                             roleCount: r.length,
                             children: [
-                                E.map((e, l) =>
+                                P.map((e, l) =>
                                     (0, t.jsx)(
                                         W,
                                         {
@@ -406,7 +406,7 @@ function q(e) {
                                         e.id,
                                     ),
                                 ),
-                                P(),
+                                L(),
                                 h ? _() : null,
                             ],
                         })
@@ -415,7 +415,7 @@ function q(e) {
                                 (0, t.jsx)("ul", {
                                     className: O.nt,
                                     "aria-label": H.intl.string(H.t["LPJmL/"]),
-                                    children: E.map((e, l) =>
+                                    children: P.map((e, l) =>
                                         (0, t.jsx)(
                                             "li",
                                             {
@@ -430,7 +430,7 @@ function q(e) {
                                         ),
                                     ),
                                 }),
-                                P(),
+                                L(),
                             ],
                         }),
           });

@@ -1,0 +1,12 @@
+.icon_bd6d20 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    flex-shrink: 0
+}
+
+.placeholder_bd6d20 {
+    background-color: var(--background-mod-subtle)
+}
+
+/*# sourceMappingURL=0dddaa3c18f445a4.css.map*/

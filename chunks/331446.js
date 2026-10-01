@@ -1,40 +1,40 @@
-n.d(t, { w: () => c });
-var l = n(477900),
-    i = n(582128),
-    s = n(922016),
-    r = n(939249),
-    a = n(834730),
-    o = n(7834);
-let u = i.lazy(() =>
-    Promise.all([n.e("353604"), n.e("446054")])
-        .then(n.bind(n, 680901))
+a.d(t, { w: () => o });
+var i = a(477900),
+    n = a(582128),
+    s = a(922016),
+    d = a(939249),
+    l = a(834730),
+    r = a(7834);
+let h = n.lazy(() =>
+    Promise.all([a.e("608500"), a.e("201074"), a.e("353604"), a.e("124006"), a.e("177104"), a.e("446054")])
+        .then(a.bind(a, 680901))
         .then((e) => ({ default: e.ClipParticipantsList })),
 );
-function c(e) {
-    let { participants: t, maxVisibleParticipants: n, guildId: c, layerContext: d } = e,
-        m = i.useRef(null),
-        h = (0, i.useCallback)(
-            () => (0, l.jsx)(i.Suspense, { fallback: null, children: (0, l.jsx)(u, { users: t, guildId: c }) }),
-            [t, c],
+function o(e) {
+    let { participants: t, maxVisibleParticipants: a, guildId: o, layerContext: u } = e,
+        c = n.useRef(null),
+        p = (0, n.useCallback)(
+            () => (0, i.jsx)(n.Suspense, { fallback: null, children: (0, i.jsx)(h, { users: t, guildId: o }) }),
+            [t, o],
         );
-    return (0, l.jsx)(s.Y, {
-        renderPopout: h,
-        layerContext: d,
-        targetElementRef: m,
+    return (0, i.jsx)(s.Y, {
+        renderPopout: p,
+        layerContext: u,
+        targetElementRef: c,
         position: "right",
         children: (e) =>
-            (0, l.jsx)(r.D, {
+            (0, i.jsx)(d.D, {
                 ...e,
-                innerRef: m,
-                className: o.x,
+                innerRef: c,
+                className: r.x,
                 onClick: (t) => {
                     (t.stopPropagation(), e.onClick?.(t));
                 },
-                children: (0, l.jsxs)(a.E, {
-                    className: o.s,
+                children: (0, i.jsxs)(l.E, {
+                    className: r.s,
                     variant: "text-xs/medium",
                     color: "interactive-text-default",
-                    children: ["+", t.length - n],
+                    children: ["+", t.length - a],
                 }),
             }),
     });

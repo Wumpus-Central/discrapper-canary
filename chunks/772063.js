@@ -39,9 +39,11 @@ let y = function (e) {
                                 color: "danger",
                                 action: () =>
                                     (0, s.openModalLazy)(async () => {
-                                        let { default: e } = await Promise.all([i.e("420282"), i.e("802504")]).then(
-                                            i.bind(i, 333179),
-                                        );
+                                        let { default: e } = await Promise.all([
+                                            i.e("420282"),
+                                            i.e("691671"),
+                                            i.e("802504"),
+                                        ]).then(i.bind(i, 333179));
                                         return (n) => (0, a.jsx)(e, { ...n, guildId: I, user: y });
                                     }),
                             },

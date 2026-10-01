@@ -4,7 +4,7 @@ var i = n(284009),
     a = n(435558),
     s = n.n(a),
     l = n(17928),
-    o = n(228366),
+    o = n(73153),
     d = n(933958),
     c = n(626584),
     u = n(643501),
@@ -16,8 +16,8 @@ var i = n(284009),
     f = n(290863),
     p = n(309010),
     T = n(485296),
-    m = n(287809),
-    g = n(803301),
+    g = n(287809),
+    m = n(803301),
     S = n(977997),
     N = n(568598);
 let C = (0, n(240921).Ay)({
@@ -124,7 +124,7 @@ function z(e) {
 function X(e) {
     (delete b[e], delete M[e], delete U[e], delete w[e], delete F[e]);
 }
-function q() {
+function Z() {
     let e, t, n, i, r, a;
     return H(
         (e) => e.rebuild(),
@@ -140,7 +140,7 @@ function q() {
         a),
     );
 }
-function Z(e, t) {
+function q(e, t) {
     t ? v.add(e) : v.delete(e);
 }
 function Q() {
@@ -176,9 +176,9 @@ class ea extends l.Ay.PersistedStore {
     static displayName = "ChannelRTCStore";
     static persistKey = "ChannelRTCStore";
     initialize(e) {
-        (this.waitFor(E.A, A.default, h.A, I.A, d.Ay, u.default, f.A, p.Ay, T.A, m.default, g.A, S.A),
+        (this.waitFor(E.A, A.default, h.A, I.A, d.Ay, u.default, f.A, p.Ay, T.A, g.default, m.A, S.A),
             this.syncWith([d.Ay], Q),
-            this.syncWith([u.default], q),
+            this.syncWith([u.default], Z),
             e?.voiceParticipantsHidden !== void 0 && Object.assign(x, e?.voiceParticipantsHidden));
     }
     getState() {
@@ -271,11 +271,11 @@ class ea extends l.Ay.PersistedStore {
 let es = new ea(o.h, {
     CONNECTION_OPEN: function () {
         for (let e of D) X(e);
-        q();
+        Z();
     },
-    CONNECTION_OPEN_SUPPLEMENTAL: q,
-    THREAD_LIST_SYNC: q,
-    OVERLAY_INITIALIZE: q,
+    CONNECTION_OPEN_SUPPLEMENTAL: Z,
+    THREAD_LIST_SYNC: Z,
+    OVERLAY_INITIALIZE: Z,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t, currentVoiceChannelId: n } = e,
             i = !1;
@@ -286,17 +286,17 @@ let es = new ea(o.h, {
                 delete k[n],
                 K(n));
         t !== n && null != n && (i = H((e) => e.rebuild(), [n]));
-        let r = q();
+        let r = Z();
         return i || r;
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t, messageId: n } = e,
-            i = q();
+            i = Z();
         if (null == t || null == n || v.has(t)) return i;
         let r = I.A.getChannel(t);
-        return null != r && r.isGuildVocal() ? (Z(t, !0), !0) : i;
+        return null != r && r.isGuildVocal() ? (q(t, !0), !0) : i;
     },
-    CHANNEL_RTC_ACTIVE_CHANNELS: q,
+    CHANNEL_RTC_ACTIVE_CHANNELS: Z,
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t, initial: n } = e;
         return t.reduce((e, t) => {
@@ -387,7 +387,7 @@ let es = new ea(o.h, {
     },
     CHANNEL_RTC_UPDATE_CHAT_OPEN: function (e) {
         let { channelId: t, chatOpen: n } = e;
-        Z(t, n);
+        q(t, n);
     },
     RTC_CONNECTION_VIDEO: function (e) {
         let { channelId: t, userId: n } = e;

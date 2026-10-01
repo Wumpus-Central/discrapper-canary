@@ -1,74 +1,71 @@
-n.d(t, { A: () => C, MemberListContentSettingsMenu: () => A });
-var l = n(477900),
-    i = n(582128),
+n.d(t, { A: () => I, MemberListContentSettingsMenu: () => f });
+var i = n(477900),
+    l = n(582128),
     s = n(17928),
     r = n(980707),
     a = n(477782),
     o = n(885574),
-    u = n(192308),
+    d = n(192308),
     c = n(952270),
-    d = n(922016),
-    m = n(939249),
-    h = n(625903),
-    p = n(180170),
-    f = n(435738),
+    u = n(922016),
+    h = n(939249),
+    m = n(625903),
+    A = n(180170),
+    p = n(435738),
     g = n(652215),
     x = n(375708);
-function A(e) {
+function f(e) {
     let { closePopout: t } = e,
-        i = (0, s.bG)([f.A], () => f.A.hidden);
-    return (0, l.jsx)(r.W, {
+        l = (0, s.bG)([p.A], () => p.A.hidden);
+    return (0, i.jsx)(r.W, {
         "data-menu-migrated": !0,
         onSelect: () => {},
         navId: "member-list-settings-menu",
         onClose: null != t ? t : g.tEg,
         "aria-label": x.intl.string(x.t.w2jvOf),
-        children: (0, l.jsxs)(a.rX, {
+        children: (0, i.jsxs)(a.rX, {
             children: [
-                (0, l.jsx)(a.Dr, {
+                (0, i.jsx)(a.Dr, {
                     id: "about",
                     label: x.intl.string(x.t.pWLGnF),
                     leadingAccessory: { type: "icon", icon: o.CircleInformationIcon },
                     icon: o.CircleInformationIcon,
                     action: () => {
-                        ((0, u.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([
-                                n.e("742445"),
-                                n.e("451778"),
-                                n.e("186262"),
-                                n.e("190309"),
-                            ]).then(n.bind(n, 643460));
-                            return (t) => (0, l.jsx)(e, { ...t });
+                        ((0, d.openModalLazy)(async () => {
+                            let { default: e } = await Promise.all([n.e("742445"), n.e("190309")]).then(
+                                n.bind(n, 643460),
+                            );
+                            return (t) => (0, i.jsx)(e, { ...t });
                         }),
                             t?.());
                     },
                 }),
-                (0, l.jsx)(a.sL, {
+                (0, i.jsx)(a.sL, {
                     id: "hide",
                     label: x.intl.string(x.t.AhNYuY),
-                    checked: i,
+                    checked: l,
                     leadingAccessory: { type: "icon", icon: c.EyeSlashIcon },
                     action: () => {
-                        ((0, p.Il)(), t?.());
+                        ((0, A.Il)(), t?.());
                     },
                 }),
             ],
         }),
     });
 }
-let C = function (e) {
-    let t = i.useRef(null);
-    return (0, l.jsx)(d.Y, {
+let I = function (e) {
+    let t = l.useRef(null);
+    return (0, i.jsx)(u.Y, {
         targetElementRef: t,
-        animation: d.Y.Animation.NONE,
+        animation: u.Y.Animation.NONE,
         position: "bottom",
         align: "right",
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, l.jsx)(A, { closePopout: t });
+            return (0, i.jsx)(f, { closePopout: t });
         },
         children: (n) =>
-            (0, l.jsx)(m.D, {
+            (0, i.jsx)(h.D, {
                 ...n,
                 ...e,
                 innerRef: t,
@@ -77,7 +74,7 @@ let C = function (e) {
                     (e.stopPropagation(), n.onClick(e));
                 },
                 style: { width: "12px", height: "12px", display: "flex" },
-                children: (0, l.jsx)(h.SettingsIcon, { size: "xxs" }),
+                children: (0, i.jsx)(m.SettingsIcon, { size: "xxs" }),
             }),
     });
 };

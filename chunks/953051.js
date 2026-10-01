@@ -1,4 +1,4 @@
-function l(e) {
-    return 1 === e.length && e >= "0" && e <= "9";
+t.d(s, { A: () => c });
+function c(p) {
+    return 1 === p.length && p >= "0" && p <= "9";
 }
-n.d(t, { A: () => l });

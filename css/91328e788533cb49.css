@@ -1,0 +1,24 @@
+.container_f85df1 {
+    align-items: center;
+    display: flex;
+    gap: 0 12px;
+    justify-content: center;
+    padding: 16px 0;
+    text-align: center
+}
+
+.singleGameContainer_f85df1 {
+    align-items: center;
+    padding: 8px 0;
+    text-align: start
+}
+
+.singleGameContainer_f85df1>:last-child {
+    grid-column: 2/-1
+}
+
+.notice_fde3ce {
+    margin: 8px 0
+}
+
+/*# sourceMappingURL=91328e788533cb49.css.map*/

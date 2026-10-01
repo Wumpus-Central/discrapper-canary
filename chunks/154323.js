@@ -1,6 +1,6 @@
 n.d(t, { A: () => o });
 var i = n(17928),
-    r = n(228366);
+    r = n(73153);
 let a = {
         highlight_mana_buttons: "Highlight mana buttons",
         highlight_mana_components: "Highlight mana components",

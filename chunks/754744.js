@@ -716,7 +716,7 @@ var ej = n(863610),
     eb = n(462180),
     ey = n(882035),
     eB = n(121894),
-    eV = n(228366),
+    eV = n(73153),
     eH = n(177068),
     ew = n(736130),
     eW = (((r = {}).MESSAGES = "messages"), (r.LINKS = "links"), (r.MEDIA = "media"), (r.ALL_COUNTS = "all_counts"), r);
@@ -786,8 +786,8 @@ var e$ = n(452027),
     e5 = n(111159),
     e7 = n(241541),
     e4 = n(854378),
-    e8 = n(589935),
-    e9 = n(309010);
+    e9 = n(589935),
+    e8 = n(309010);
 function te(e) {
     let t,
         n,
@@ -926,12 +926,12 @@ function te(e) {
                               description: (0, a.jsx)(eE.E, {
                                   variant: "text-sm/medium",
                                   color: "text-default",
-                                  children: (0, a.jsx)(e8.Ay, {
+                                  children: (0, a.jsx)(e9.Ay, {
                                       userId: c.userId,
                                       guildId: c.guildId,
                                       showJoinMethodContextAsFooter: !0,
                                       onClickInviter: (e) => {
-                                          let t = e9.Ay.getChannelId();
+                                          let t = e8.Ay.getChannelId();
                                           (0, U.z)(c.guildId, e.id, t ?? Q.dJq);
                                       },
                                   }),
@@ -2092,8 +2092,8 @@ function t2(e) {
 var t5 = n(97808),
     t7 = n(778712),
     t4 = n(789645),
-    t8 = n(192308),
-    t9 = n(905499),
+    t9 = n(192308),
+    t8 = n(905499),
     ne = n(215026),
     nt = n(473935),
     nn = n(308528),
@@ -2232,14 +2232,14 @@ function nG(e) {
                     disabled: !u,
                     text: j.intl.string(j.t["3glT6Z"]),
                     onClick: () => {
-                        (0, t8.openModalLazy)(async () => {
-                            let { default: e } = await Promise.all([n.e("253335"), n.e("140243")]).then(
+                        (0, t9.openModalLazy)(async () => {
+                            let { default: e } = await Promise.all([n.e("253335"), n.e("691671"), n.e("140243")]).then(
                                 n.bind(n, 547166),
                             );
                             return (n) => (0, a.jsx)(e, { ...n, location: A, guildId: r, user: t, modReportId: s });
                         });
                     },
-                    children: (0, a.jsx)(t9.N, {
+                    children: (0, a.jsx)(t8.N, {
                         size: "custom",
                         width: 24,
                         height: 24,
@@ -2250,8 +2250,10 @@ function nG(e) {
                 disabled: !o,
                 text: j.intl.string(j.t["5MBJ5M"]),
                 onClick: () => {
-                    (0, t8.openModalLazy)(async () => {
-                        let { default: e } = await Promise.all([n.e("420282"), n.e("802504")]).then(n.bind(n, 333179));
+                    (0, t9.openModalLazy)(async () => {
+                        let { default: e } = await Promise.all([n.e("420282"), n.e("691671"), n.e("802504")]).then(
+                            n.bind(n, 333179),
+                        );
                         return (n) => (0, a.jsx)(e, { ...n, location: A, guildId: r, user: t, modReportId: s });
                     });
                 },

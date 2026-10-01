@@ -4,7 +4,7 @@ var s = r(582128),
     i = r(736056),
     c = r(815996),
     u = r(4227),
-    a = r(315949);
+    a = r(579151);
 function o() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
         t = (0, n.bG)([i.A], () => i.A.hasLoadedExperiments),
@@ -20,17 +20,17 @@ function o() {
     (0, s.useEffect)(() => {
         A.current = f;
     }, [f]);
-    let g = (0, s.useRef)(u.A.fetchError);
+    let d = (0, s.useRef)(u.A.fetchError);
     (0, s.useEffect)(() => {
-        g.current = o;
+        d.current = o;
     }, [o]);
-    let d = (0, s.useRef)(u.A.isFetching);
+    let g = (0, s.useRef)(u.A.isFetching);
     return (
         (0, s.useEffect)(() => {
-            d.current = r;
+            g.current = r;
         }, [r]),
         (0, s.useEffect)(() => {
-            !t || d.current || (!0 === e && A.current && null == g.current) || (0, c.gB)();
+            !t || g.current || (!0 === e && A.current && null == d.current) || (0, c.gB)();
         }, [e, t]),
         { isClaiming: a, fetchPurchasesError: o, claimError: h, isFetching: r, purchases: l, hasPreviouslyFetched: f }
     );
@@ -61,7 +61,7 @@ function l(e, t) {
             claimError: l,
             isFetching: f,
             purchases: A,
-            hasPreviouslyFetched: g,
+            hasPreviouslyFetched: d,
         } = o(e?.stalePurchasesOK);
     return {
         isFetching: s || f,
@@ -74,7 +74,7 @@ function l(e, t) {
         fetchPurchasesError: h,
         claimError: l,
         refreshCategories: c,
-        hasPreviouslyFetched: g,
+        hasPreviouslyFetched: d,
     };
 }
 function f(e) {

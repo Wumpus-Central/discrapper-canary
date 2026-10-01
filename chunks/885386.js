@@ -20,8 +20,8 @@ n.d(t, {
     SY: () => M,
     _8: () => tt,
     j7: () => e_,
-    JG: () => eZ,
-    XZ: () => eg,
+    JG: () => eq,
+    XZ: () => em,
     Q_: () => eW,
     aM: () => eA,
     he: () => ey,
@@ -45,7 +45,7 @@ n.d(t, {
     WY: () => es,
     Zk: () => e5,
     vL: () => eu,
-    hV: () => Z,
+    hV: () => q,
     tz: () => eD,
     on: () => eR,
     b0: () => Y,
@@ -64,7 +64,7 @@ n.d(t, {
     Zr: () => er,
     eh: () => eK,
     uB: () => J,
-    wv: () => q,
+    wv: () => Z,
     jP: () => eM,
     tP: () => W,
     PZ: () => ti,
@@ -104,7 +104,7 @@ var i = n(435558),
     d = n(461012),
     c = n(207560),
     u = n(350503),
-    _ = n(228366),
+    _ = n(73153),
     E = n(284016),
     A = n(594061),
     h = n(617617),
@@ -115,7 +115,7 @@ function f(e, t, n, i) {
         l = () => n(h.A.settings[e]?.[t]);
     return {
         getSetting: l,
-        updateSetting: g(l, (n) =>
+        updateSetting: m(l, (n) =>
             A.wc.updateAsync(
                 e,
                 (e) => {
@@ -143,7 +143,7 @@ function p(e, t, n) {
                 }) ?? i
             );
         },
-        updateSetting: g(i, function (i) {
+        updateSetting: m(i, function (i) {
             return E.A.shouldSync(t)
                 ? e.updateSetting(i)
                 : (_.h.dispatch({
@@ -164,13 +164,13 @@ function T(e, t, n, i) {
             let t = e.useSetting();
             return i() ?? t;
         },
-        updateSetting: g(
+        updateSetting: m(
             r,
             (n) => (_.h.dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: [t] }), e.updateSetting(n)),
         ),
     };
 }
-function m(e) {
+function g(e) {
     let {
         baseSetting: t,
         isEligible: n,
@@ -192,7 +192,7 @@ function m(e) {
         updateSetting: (e) => t.updateSetting(e),
     };
 }
-function g(e, t) {
+function m(e, t) {
     return function (n) {
         return "function" == typeof n ? t(n(e())) : t(n);
     };
@@ -376,13 +376,13 @@ let F = f(
         (e) => e?.value,
         (e) => l._t.create({ value: e }),
     ),
-    q = f(
+    Z = f(
         "notifications",
         "notifyFriendsOnGoLive",
         (e) => e?.value,
         (e) => l._t.create({ value: e }),
     ),
-    Z = f(
+    q = f(
         "notifications",
         "notifyFriendsOnComeOnline",
         (e) => e?.value ?? !0,
@@ -533,11 +533,11 @@ let ec = f(
         (e) => e?.value ?? !1,
         (e) => l._t.create({ value: e }),
     ),
-    em = [],
-    eg = f(
+    eg = [],
+    em = f(
         "privacy",
         "adTopicOptOuts",
-        (e) => e ?? em,
+        (e) => e ?? eg,
         (e) => e,
     );
 f(
@@ -833,17 +833,17 @@ let eW = p(
         () => S.A.getOverride("animateStickers")?.value,
         () => (0, a.bG)([S.A], () => S.A.getOverride("animateStickers")?.value),
     ),
-    eq = [],
-    eZ = f(
+    eZ = [],
+    eq = f(
         "privacy",
         "activityRestrictedGuildIds",
-        (e) => e ?? eq,
+        (e) => e ?? eZ,
         (e) => e,
     ),
     eQ = f(
         "privacy",
         "activityRestrictedGuildIds",
-        (e) => e ?? eq,
+        (e) => e ?? eZ,
         (e) => e,
         { delay: I.Sb.FREQUENT_USER_ACTION },
     ),
@@ -854,7 +854,7 @@ let eW = p(
         (e) => e ?? eJ,
         (e) => e,
     );
-m({
+g({
     baseSetting: f(
         "privacy",
         "defaultGuildsActivityRestricted",
@@ -866,7 +866,7 @@ m({
     ineligibleDefault: s.AN.OFF,
     eligibleDefault: () => s.AN.ON_FOR_LARGE_GUILDS,
 });
-let e1 = m({
+let e1 = g({
         baseSetting: f(
             "privacy",
             "defaultGuildsActivityRestrictedV2",

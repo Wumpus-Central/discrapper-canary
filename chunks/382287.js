@@ -1,6 +1,6 @@
 (i.d(t, { LJ: () => u, WQ: () => p, fJ: () => m }), i(321073));
-var r = i(565150),
-    n = i(409481),
+var r = i(409481),
+    n = i(274652),
     l = i(820465),
     o = i(453771),
     a = i(158045),
@@ -15,11 +15,11 @@ function p(e, t, i) {
           : d.intl.formatToPlainString(d.t.fxEKdS, { maxSize: r });
 }
 function m(e) {
-    let { files: t, guildId: i, canDeferSizeChecks: r = !0 } = e;
-    if (r && (0, l.M)()) return !1;
-    let a = (0, n.C)(o.o2(i));
+    let { files: t, guildId: i, canDeferSizeChecks: n = !0 } = e;
+    if (n && (0, l.M)()) return !1;
+    let a = (0, r.C)(o.o2(i));
     return Array.from(t).some((e) => e.size > a) || o.Aw(t);
 }
 function u(e) {
-    return e.reduce((e, t) => (t.item.platform === r.xz.WEB && e.push(t.item.file), e), []);
+    return e.reduce((e, t) => (t.item.platform === n.x.WEB && e.push(t.item.file), e), []);
 }

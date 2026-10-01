@@ -2,7 +2,7 @@ n.d(t, { A: () => G });
 var i = n(132500),
     r = n(141931),
     a = n(451988),
-    s = n(228366),
+    s = n(73153),
     l = n(439372),
     o = n(626584),
     d = n(206885),
@@ -16,7 +16,7 @@ var i = n(132500),
     f = n(927813),
     p = n(973522),
     T = n(19575);
-class m {
+class g {
     pids = new Set();
     enabled = !1;
     enable() {
@@ -44,7 +44,7 @@ class m {
             : Promise.resolve(null);
     }
 }
-let g = new m();
+let m = new g();
 var S = n(952818),
     N = n(687658),
     C = n(321034);
@@ -186,13 +186,13 @@ class w extends l.A {
     };
     handleSystemServiceInitialize(e) {
         let { status: t, modules: n } = e;
-        n.includes("tool-service") && ("running" === t.state ? g.enable() : g.reset());
+        n.includes("tool-service") && ("running" === t.state ? m.enable() : m.reset());
     }
     _terminate() {
-        (this.heartbeatInterval.stop(), g.disable(), D.disable(), this.disableWindowTracking());
+        (this.heartbeatInterval.stop(), m.disable(), D.disable(), this.disableWindowTracking());
     }
     handleLogout() {
-        (g.disable(),
+        (m.disable(),
             D.disable(),
             this.disableWindowTracking(),
             this.gameSessions.clear(),
@@ -256,7 +256,7 @@ class w extends l.A {
         this.scheduleHeartbeatTracking();
     };
     stopMonitoringPidIfInactive(e) {
-        [...this.gameSessions.values()].some((t) => t.runningGame.pid === e) || g.stopMonitoringPid(e);
+        [...this.gameSessions.values()].some((t) => t.runningGame.pid === e) || m.stopMonitoringPid(e);
     }
     logHeartbeat(e, t, n, i, a) {
         let s = e.runningGame,
@@ -288,13 +288,13 @@ class w extends l.A {
                     overlay_version: _.A.getNativeModule()?.version() ?? 0,
                 };
             })(s.pid),
-            m = { discord_window_state: U() };
-        return g
+            g = { discord_window_state: U() };
+        return m
             .getSnapshot(s.pid)
             .then((e) => {
                 I.default.track(b.HAw.RUNNING_GAME_HEARTBEAT, {
                     ...f,
-                    ...m,
+                    ...g,
                     ...(a ?? {}),
                     ...(e ?? {}),
                     ...(i ?? {}),
@@ -305,7 +305,7 @@ class w extends l.A {
                 (t || e instanceof r.Fh || M.warn(`Failed to get performance snapshot for game ${s.id}`, e.message),
                     I.default.track(b.HAw.RUNNING_GAME_HEARTBEAT, {
                         ...f,
-                        ...m,
+                        ...g,
                         ...(a ?? {}),
                         ...(i ?? {}),
                         ...(T ?? {}),
@@ -333,7 +333,7 @@ class w extends l.A {
                     let s = n.runningGame.pid,
                         l = { sessionId: (0, i.A)(), lastHeartbeatTime: t, runningGame: a };
                     (this.gameSessions.set(e, l),
-                        g.startMonitoringPid(a.pid),
+                        m.startMonitoringPid(a.pid),
                         this.logHeartbeat(n, !1, !0, null, r).finally(() => {
                             this.stopMonitoringPidIfInactive(s);
                         }),
@@ -341,7 +341,7 @@ class w extends l.A {
                 } else n.runningGame = a;
             } else {
                 let n = { sessionId: (0, i.A)(), lastHeartbeatTime: t, runningGame: a };
-                (this.gameSessions.set(e, n), g.startMonitoringPid(a.pid), this.logHeartbeat(n, !0, !1, null, null));
+                (this.gameSessions.set(e, n), m.startMonitoringPid(a.pid), this.logHeartbeat(n, !0, !1, null, null));
             }
         }
         for (let [e, t] of this.gameSessions)

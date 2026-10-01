@@ -34,7 +34,7 @@ function y(e, t) {
 }
 var D = (((l = {}).PREPARING = "PREPARING"), (l.READY_TO_UPLOAD = "READY_TO_UPLOAD"), (l.ERROR = "ERROR"), l),
     O = n(608299),
-    T = n(565150),
+    T = n(274652),
     L = n(31717);
 async function _(e, t, n) {
     let l = y(t, n),
@@ -42,7 +42,7 @@ async function _(e, t, n) {
     return (U(e, t, new File([await a.blob()], l, { type: "image/gif" })), n);
 }
 function U(e, t, n) {
-    let l = { id: t, channelId: e, file: n, platform: T.xz.WEB, origin: "unknown:poll_attachment" };
+    let l = { id: t, channelId: e, file: n, platform: T.x.WEB, origin: "unknown:poll_attachment" };
     O.A.addFile({ file: l, channelId: e, draftType: L.C.Poll });
 }
 async function K(e, t, n) {
@@ -58,10 +58,10 @@ function q(e, t) {
 }
 var G = n(95561),
     M = n(652215),
-    z = n(503698),
-    B = n.n(z),
-    H = n(17928),
-    V = n(980707),
+    B = n(503698),
+    H = n.n(B),
+    V = n(17928),
+    z = n(980707),
     $ = n(477782),
     X = n(289873),
     Z = n(460905),
@@ -103,7 +103,7 @@ function ed(e) {
     let { onSelect: t, onEditMedia: n, onDeleteMedia: l, closePopout: i } = e;
     return (0, a.jsx)("div", {
         className: eu.li,
-        children: (0, a.jsx)(V.W, {
+        children: (0, a.jsx)(z.W, {
             "data-menu-migrated-auto": !0,
             navId: "poll-media-edit-menu",
             onClose: i,
@@ -136,7 +136,7 @@ function ef(e) {
             containerRef: m,
         } = e,
         d = i.useRef(null),
-        f = (0, H.bG)([er.A], () => er.A.getChannel(t)),
+        f = (0, V.bG)([er.A], () => er.A.getChannel(t)),
         {
             emoji: g,
             isLoadingMedia: h,
@@ -147,7 +147,7 @@ function ef(e) {
             let { channelId: t, localCreationAnswerId: n, image: l } = e,
                 a = l?.emoji,
                 r = l?.mediaAttachmentState?.status === D.PREPARING,
-                o = (0, H.bG)([eo.A], () => eo.A.getUpload(t, n, L.C.Poll)),
+                o = (0, V.bG)([eo.A], () => eo.A.getUpload(t, n, L.C.Poll)),
                 [s, c] = i.useState(),
                 [u, m] = i.useState("");
             return (
@@ -210,12 +210,12 @@ function ef(e) {
                   hasUpload: C,
                   mediaUrl: b,
                   mediaFilename: p,
-                  imageClassName: B()(eu.$_, eu.qX),
+                  imageClassName: H()(eu.$_, eu.qX),
                   emoji: g,
-                  emojiClassName: B()(eu.$_, eu.qZ),
+                  emojiClassName: H()(eu.$_, eu.qZ),
                   fallback: (0, a.jsx)(Z.n, { size: "sm", color: "currentColor", className: eu.vr }),
               }),
-        k = B()(ec.VQ, eu.GB, { [eu.ZV]: A });
+        k = H()(ec.VQ, eu.GB, { [eu.ZV]: A });
     return (0, a.jsx)(Q.Y, {
         targetElementRef: m,
         renderPopout: w,
@@ -388,11 +388,11 @@ function eA(e) {
         { channel: l, transitionState: r, onClose: u, initialQuestion: m, initialAnswers: O, initialDuration: T } = e;
     (0, w.A)({ type: eh.z.MODAL, name: s.IJ.POLL_EDITOR_VIEWED });
     let L = i.useRef(null),
-        z = i.useRef([]),
-        B = i.useRef(null),
+        B = i.useRef([]),
+        H = i.useRef(null),
         {
-            answers: H,
-            question: V,
+            answers: V,
+            question: z,
             allowMultiSelect: $,
             setAllowMultiSelect: X,
             duration: Z,
@@ -464,7 +464,7 @@ function eA(e) {
                     },
                     [r],
                 ),
-                z = i.useCallback(
+                B = i.useCallback(
                     async (e, t, n) => {
                         let l = r[t].localCreationAnswerId;
                         (M(e, t), G(q(n, D.PREPARING), t), null == (await _(e, l, n)))
@@ -473,7 +473,7 @@ function eA(e) {
                     },
                     [r, G, M],
                 ),
-                B = i.useCallback(
+                H = i.useCallback(
                     (e, t, n) => {
                         let l = r[t].localCreationAnswerId,
                             a = URL.createObjectURL(n);
@@ -481,13 +481,13 @@ function eA(e) {
                     },
                     [r, G, M],
                 ),
-                H = i.useCallback(
+                V = i.useCallback(
                     (e, t) => {
                         (M(a, t), G({ emoji: e, stickerId: void 0, mediaAttachmentState: void 0 }, t));
                     },
                     [a, G, M],
                 ),
-                V = i.useCallback((e) => {
+                z = i.useCallback((e) => {
                     o((t) => {
                         let n = [...t];
                         return ((n[e] = { ...n[e], image: void 0 }), n);
@@ -561,12 +561,12 @@ function eA(e) {
                 canRemoveMoreAnswers: O,
                 handleQuestionChange: T,
                 handleAnswerTextChange: L,
-                handleGifSelect: z,
-                handleEmojiSelect: H,
-                handleCustomUpload: B,
+                handleGifSelect: B,
+                handleEmojiSelect: V,
+                handleCustomUpload: H,
                 handleAddAnswer: $,
                 handleRemoveAnswer: X,
-                handleRemoveAnswerImage: V,
+                handleRemoveAnswerImage: z,
                 fieldErrors: C,
                 createPoll: Q,
                 handleSubmitPoll: J,
@@ -580,7 +580,7 @@ function eA(e) {
             u,
             i.useCallback((e) => {
                 let { indexToRemove: t, numberOfAnswers: n } = e;
-                n === N.FW + 1 ? B.current?.focus() : z.current[t === n - 1 ? t - 1 : t + 1]?.focusDeleteButton();
+                n === N.FW + 1 ? H.current?.focus() : B.current[t === n - 1 ? t - 1 : t + 1]?.focusDeleteButton();
             }, []),
             { initialQuestion: m, initialAnswers: O, initialDuration: T },
         ),
@@ -589,7 +589,7 @@ function eA(e) {
                 let e = 0,
                     t = 0,
                     n = 0;
-                (H.forEach((l) => {
+                (V.forEach((l) => {
                     let a = l.image;
                     null != a &&
                         (null != a.emoji
@@ -599,22 +599,22 @@ function eA(e) {
                               : null != a.mediaAttachmentState && (e += 1));
                 }),
                     G.Ay.trackWithMetadata(M.HAw.POLL_CREATION_CANCELLED, {
-                        answers_count: H.length,
+                        answers_count: V.length,
                         attachments_count: e,
                         emojis_count: t,
                         stickers_count: n,
                         allow_multiselect: $,
                         layout_type: S.Z.DEFAULT,
                     }));
-            }, [H, $]),
+            }, [V, $]),
         },
         ew = (0, k.Sc)(),
-        eE = i.useRef(H.length),
+        eE = i.useRef(V.length),
         ex = i.useCallback(() => {
             (ej(), u());
         }, [u, ej]),
         ek = i.useCallback(() => {
-            (0, I.Wn)(V, H)
+            (0, I.Wn)(z, V)
                 ? ex()
                 : j.A.show({
                       title: W.intl.string(W.t.HMrgcp),
@@ -626,23 +626,23 @@ function eA(e) {
                           ex();
                       },
                   });
-        }, [ex, H, V]);
+        }, [ex, V, z]);
     (i.useEffect(() => {
         (0, d.updateModal)(N.sm, (e) => (0, a.jsx)(eA, { ...e, channel: l }), ek);
     }, [ek, l]),
         i.useEffect(() => {
-            (H.length > eE.current && z.current[H.length - 1]?.focusInput(), (eE.current = H.length));
-        }, [H.length]),
+            (V.length > eE.current && B.current[V.length - 1]?.focusInput(), (eE.current = V.length));
+        }, [V.length]),
         i.useEffect(() => {
             if (ef) {
                 if (em?.question != null) L.current?.focus();
                 else {
-                    let e = H.findIndex((e) => !!em[`answer-${e.localCreationAnswerId}`]);
-                    -1 !== e && z.current[e]?.focusInput();
+                    let e = V.findIndex((e) => !!em[`answer-${e.localCreationAnswerId}`]);
+                    -1 !== e && B.current[e]?.focusInput();
                 }
                 eR(!1);
             }
-        }, [em, H, ef, eR, z]));
+        }, [em, V, ef, eR, B]));
     let ev = i.useCallback(() => {
             r === f.ip.ENTERED && eu();
         }, [eu, r]),
@@ -706,31 +706,31 @@ function eA(e) {
             onKeyDown: eS,
             children: [
                 null != ec && (0, a.jsx)(C.w, { type: "critical", children: ec.getAnyErrorMessage() }),
-                (0, a.jsx)(eb, { question: V, onChange: et, error: em?.question, inputRef: L }),
+                (0, a.jsx)(eb, { question: z, onChange: et, error: em?.question, inputRef: L }),
                 (0, a.jsx)(b.h, { size: 26 }),
                 (0, a.jsxs)(p.D, {
                     role: "group",
                     label: W.intl.string(W.t.oMBfeS),
                     children: [
-                        H.map((e, t) =>
+                        V.map((e, t) =>
                             (0, a.jsx)(
                                 eg,
                                 {
                                     answer: e,
                                     channelId: l.id,
                                     index: t,
-                                    isLastAnswer: t === H.length - 1,
+                                    isLastAnswer: t === V.length - 1,
                                     onEmojiSelect: el,
                                     onEmojiRemove: ei,
                                     onAnswerTextChange: en,
                                     onRemoveAnswer: es,
                                     addAnswer: eo,
                                     submitPoll: ev,
-                                    answerRowRefs: z,
+                                    answerRowRefs: B,
                                     error: em?.[`answer-${e.localCreationAnswerId}`],
                                     canRemoveAnswer: er,
                                     ref: (e) => {
-                                        z.current[t] = e;
+                                        B.current[t] = e;
                                     },
                                 },
                                 e.localCreationAnswerId,
@@ -744,7 +744,7 @@ function eA(e) {
                                     variant: "secondary",
                                     onClick: eo,
                                     "aria-label": W.intl.string(W.t.B2Uvme),
-                                    buttonRef: B,
+                                    buttonRef: H,
                                     text: W.intl.string(W.t.B2Uvme),
                                 }),
                             }),

@@ -1,7 +1,7 @@
-(n.d(t, { A: () => m }), n(321073));
+(n.d(t, { A: () => g }), n(321073));
 var i = n(17928),
     r = n(713402),
-    a = n(228366),
+    a = n(73153),
     s = n(994500),
     l = n(652215);
 let o = (e, t) => `${t}-${e}`,
@@ -80,7 +80,7 @@ class T extends i.Ay.Store {
         return _.version;
     }
 }
-let m = new T(a.h, {
+let g = new T(a.h, {
     CONNECTION_OPEN: function (e) {
         (_.clear(),
             e.gameRelationships.forEach((e) => {

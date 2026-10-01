@@ -1,5 +1,5 @@
-n.d(t, { GH: () => I, Zi: () => A, c1: () => f });
-var i = n(228366),
+n.d(t, { GH: () => h, c1: () => I });
+var i = n(73153),
     r = n(386406),
     a = n(56562),
     s = n(952818),
@@ -8,14 +8,11 @@ var i = n(228366),
     d = n(174459),
     c = n(723702),
     u = n(19575),
-    _ = n(652215);
-let E = { development: [0, 0, 0, 0], canary: [1, 0, 30, 10], ptb: [1, 0, 1005, 2], stable: [1, 0, 9001, 2] };
-function A() {
-    return !u.Ay?.isModuleVersionAtLeast?.("discord_hook", E);
-}
-async function h() {
+    _ = n(9302),
+    E = n(652215);
+async function A() {
     if (!(0, c.isWindows)()) return Promise.reject(Error("Hook is only available on Windows"));
-    if (A()) return Promise.reject(Error("Hook module is too old"));
+    if ((0, _.isHookModuleTooOld)()) return Promise.reject(Error("Hook module is too old"));
     await u.Ay.ensureModule("discord_hook");
     let e = await u.Ay.requireModule("discord_hook");
     return (
@@ -28,28 +25,28 @@ async function h() {
         e
     );
 }
-function I(e, t) {
-    return h().then((n) => {
+function h(e, t) {
+    return A().then((n) => {
         let o = s.Ay.getGameForPID(e),
             c = o?.name,
             u = null != o ? l.A.findGame(o) : null,
-            E = null;
+            _ = null;
         return new Promise((l) => {
             function o(e, n) {
-                (d.default.track(_.HAw.HOOK_RESULT, {
+                (d.default.track(E.HAw.HOOK_RESULT, {
                     game_name: c,
                     game_id: null == u ? null : u.id,
                     success: n,
                     error: e,
                     ...t,
                 }),
-                    null != E && (clearTimeout(E), (E = null)),
+                    null != _ && (clearTimeout(_), (_ = null)),
                     n ? l() : l((e = e ?? "Unknown hook error")));
             }
             let A = s.Ay.getOverlayOptionsForPID(e),
                 h = { ...a.gH, ...A, elevate: s.Ay.shouldElevateProcessForPID(e) };
             null == h.allowHook || h.allowHook
-                ? ((E = setTimeout(() => {
+                ? ((_ = setTimeout(() => {
                       (n.cancelAttachToProcess(e), o("Timed out waiting for hook response", !1));
                   }, 12e4)),
                   n.attachToProcess(e, h, o),
@@ -58,8 +55,8 @@ function I(e, t) {
         });
     });
 }
-function f(e) {
-    return h().then((t) => {
+function I(e) {
+    return A().then((t) => {
         t.cancelAttachToProcess(e);
     });
 }

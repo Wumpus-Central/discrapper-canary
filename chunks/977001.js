@@ -1,42 +1,45 @@
-n.d(t, { Ay: () => f, _E: () => p, ac: () => m });
-var l = n(477900),
-    i = n(582128),
-    s = n(56121),
-    r = n(939341),
-    a = n(263577),
-    o = n(583846),
-    u = n(506326),
-    c = n(868065),
-    d = n(804779);
-let m = [u.Xr],
-    h = [s.j.WEEK];
-function p(e) {
-    return null != e && h.includes(e);
+t.d(i, { Ay: () => _, _E: () => j, ac: () => m });
+var n = t(477900),
+    l = t(582128),
+    r = t(56121),
+    s = t(939341),
+    a = t(263577),
+    c = t(583846),
+    d = t(506326),
+    o = t(868065),
+    x = t(804779);
+let m = [d.Xr],
+    u = [r.j.WEEK];
+function j(e) {
+    return null != e && u.includes(e);
 }
-let f = i.memo(function (e) {
-    let { entry: t, channel: n, selected: i } = e,
-        { largeImage: s } = (0, r.nO)({
-            entry: t,
-            showCoverImage: !1,
-            trackingSource: "memberlist_top_game_content_row",
-        }),
-        h = (0, o.TQ)(t);
-    return null != h && p(h)
-        ? (0, l.jsxs)(c.Zp, {
-              selected: i,
-              children: [
-                  (0, l.jsxs)(c.UA, {
-                      children: [
-                          (0, l.jsx)(c.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                          (0, l.jsx)(c.ZB, { children: t.extra.game_name }),
-                          (0, l.jsx)(u.mG, {
-                              location: u.N5.CARD,
-                              children: m.map((e, n) => (0, l.jsx)(e, { entry: t }, n)),
-                          }),
-                      ],
+let _ =
+    221552 == t.j
+        ? l.memo(function (e) {
+              let { entry: i, channel: t, selected: l } = e,
+                  { largeImage: r } = (0, s.nO)({
+                      entry: i,
+                      showCoverImage: !1,
+                      trackingSource: "memberlist_top_game_content_row",
                   }),
-                  (0, l.jsx)(a.V, { src: s?.src, size: 48, className: d.xn, alt: s?.alt }),
-              ],
+                  u = (0, c.TQ)(i);
+              return null != u && j(u)
+                  ? (0, n.jsxs)(o.Zp, {
+                        selected: l,
+                        children: [
+                            (0, n.jsxs)(o.UA, {
+                                children: [
+                                    (0, n.jsx)(o.Hp, { entry: i, channelId: t.id, guildId: t.guild_id }),
+                                    (0, n.jsx)(o.ZB, { children: i.extra.game_name }),
+                                    (0, n.jsx)(d.mG, {
+                                        location: d.N5.CARD,
+                                        children: m.map((e, t) => (0, n.jsx)(e, { entry: i }, t)),
+                                    }),
+                                ],
+                            }),
+                            (0, n.jsx)(a.V, { src: r?.src, size: 48, className: x.xn, alt: r?.alt }),
+                        ],
+                    })
+                  : null;
           })
         : null;
-});

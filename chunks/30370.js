@@ -1,10 +1,11 @@
 n.d(t, { A: () => m });
 var i = n(17928),
-    r = n(228366),
-    a = n(77468),
-    s = n(573648),
-    l = n(315069);
-class o extends l.A {
+    r = n(73153),
+    a = n(573648),
+    s = n(888363),
+    l = n(306677),
+    o = n(315069);
+class d extends o.A {
     id;
     type;
     name;
@@ -38,88 +39,88 @@ class o extends l.A {
         return this.name;
     }
 }
-var d = n(149790);
-let c = new Set([n(652215).fg2.CONTACTS]),
-    u = !0,
-    _ = [],
+var c = n(149790);
+let u = new Set([n(652215).fg2.CONTACTS]),
+    _ = !0,
     E = [],
-    A = {},
-    h = new Set(),
-    I = {},
-    f = {};
-function p(e) {
-    ((_ = e.filter((e) => !c.has(e.type) && s.A.isSupported(e.type))), (E = e.filter((e) => c.has(e.type))), (u = !1));
+    A = [],
+    h = {},
+    I = new Set(),
+    f = {},
+    p = {};
+function T(e) {
+    ((E = e.filter((e) => !u.has(e.type) && a.A.isSupported(e.type))), (A = e.filter((e) => u.has(e.type))), (_ = !1));
 }
-class T extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "ConnectedAccountsStore";
     isJoining(e) {
-        return A[e] || !1;
+        return h[e] || !1;
     }
     joinErrorMessage(e) {
-        return f[e];
+        return p[e];
     }
     isFetching() {
-        return u;
-    }
-    getAccounts() {
         return _;
     }
-    getLocalAccounts() {
+    getAccounts() {
         return E;
     }
+    getLocalAccounts() {
+        return A;
+    }
     getAccount(e, t) {
-        return _.find((n) => (null == e || n.id === e) && n.type === t);
+        return E.find((n) => (null == e || n.id === e) && n.type === t);
     }
     getLocalAccount(e) {
-        return E.find((t) => t.type === e);
+        return A.find((t) => t.type === e);
     }
     isSuggestedAccountType(e) {
-        return I[e] || !1;
+        return f[e] || !1;
     }
     addPendingAuthorizedState(e) {
-        h.add(e);
+        I.add(e);
     }
     deletePendingAuthorizedState(e) {
-        h.delete(e);
+        I.delete(e);
     }
     hasPendingAuthorizedState(e) {
-        return h.has(e);
+        return I.has(e);
     }
 }
-let m = new T(r.h, {
+let m = new g(r.h, {
     CONNECTION_OPEN: function (e) {
-        p(e.connectedAccounts.map((e) => new o(e)));
+        T(e.connectedAccounts.map((e) => new d(e)));
     },
     USER_CONNECTIONS_UPDATE: function (e) {
         e.local && null != e.accounts
-            ? p(
+            ? T(
                   e.accounts.map(
                       (e) =>
-                          new o({
+                          new d({
                               ...e,
                               integrations: e.integrations.map((e) => ({
                                   ...e,
-                                  guild: (0, d.yF)({ ...e.guild, features: [] }),
+                                  guild: (0, c.yF)({ ...e.guild, features: [] }),
                               })),
                           }),
                   ),
               )
-            : a.A.fetch();
+            : (0, s.q)();
     },
     USER_CONNECTIONS_INTEGRATION_JOINING: function (e) {
-        A[e.integrationId] = e.joining;
+        h[e.integrationId] = e.joining;
     },
     USER_CONNECTION_UPDATE: function (e) {
         let { platformType: t, id: n, revoked: i, accessToken: r } = e,
-            a = _.find((e) => e.id === n && e.type === t);
+            a = E.find((e) => e.id === n && e.type === t);
         if (null == a) return !1;
         (null != i && (a.revoked = i), null != r && (a.accessToken = r));
     },
     USER_CONNECTIONS_INTEGRATION_JOINING_ERROR: function (e) {
-        f[e.integrationId] = void 0 !== e.error ? e.error : "";
+        p[e.integrationId] = void 0 !== e.error ? e.error : "";
     },
     USER_CONNECTIONS_CALLBACK: function (e) {
         let { code: t, state: n, openid_params: i, provider: r } = e;
-        a.A.callback(r, { code: t, state: n, openid_params: i });
+        (0, l.Q)(r, { code: t, state: n, openid_params: i });
     },
 });

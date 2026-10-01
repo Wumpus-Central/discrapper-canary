@@ -2,7 +2,7 @@ n.d(t, { A: () => k });
 var i = n(962929),
     r = n.n(i),
     a = n(17928),
-    s = n(228366),
+    s = n(73153),
     l = n(739010),
     o = n(239093);
 let d = {},
@@ -16,8 +16,8 @@ let d = {},
     f = !1,
     p = [],
     T = !1,
-    m = !1,
     g = !1,
+    m = !1,
     S = !1,
     N = !1,
     C = null,
@@ -49,8 +49,8 @@ function G() {
         (O = o.Iv.DIDNT_VIOLATE_POLICY),
         (R = ""),
         (p = []),
-        (m = !1),
         (g = !1),
+        (m = !1),
         (M = o.qN.NONE),
         (D = 0),
         (P = null));
@@ -94,10 +94,10 @@ class x extends a.Ay.Store {
         return T;
     }
     getShowExpressiveModalSubtitleAlt() {
-        return m;
+        return g;
     }
     getIsManualReviewFallbackEnabled() {
-        return g;
+        return m;
     }
     getIsManualReviewDecidedUnderage() {
         return S;
@@ -163,8 +163,8 @@ let k = new x(s.h, {
             (L = s),
             (p = l),
             (T = o),
-            (m = c),
-            (g = h),
+            (g = c),
+            (m = h),
             (S = N));
     },
     SAFETY_HUB_FETCH_FAILURE: function (e) {

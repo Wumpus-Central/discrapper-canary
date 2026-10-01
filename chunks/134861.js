@@ -2,7 +2,7 @@ n.d(t, { A: () => d });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
-    s = n(228366);
+    s = n(73153);
 let l = {};
 class o extends a.Ay.Store {
     static displayName = "ConnectedAppsStore";

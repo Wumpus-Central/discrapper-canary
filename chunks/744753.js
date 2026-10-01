@@ -21,7 +21,7 @@ var i = n(477900),
     h = n(976860),
     T = n(967198),
     m = n(183555),
-    v = n(402860),
+    v = n(38145),
     L = n(873298),
     M = n(834730),
     O = n(28863),
@@ -29,8 +29,8 @@ var i = n(477900),
     j = n(840387),
     k = n(885386),
     p = n(780964),
-    U = n(766075),
-    F = n(49999),
+    F = n(766075),
+    U = n(49999),
     C = n(375708),
     g = n(547522);
 function y() {
@@ -65,14 +65,14 @@ function b(e) {
                     privacySettingsLink: (e, t) =>
                         (0, i.jsx)(
                             O.Anchor,
-                            { onClick: () => (0, U.openUserSettings)(p.X.PROFILE_PRIVACY_CATEGORY), children: e },
+                            { onClick: () => (0, F.openUserSettings)(p.X.PROFILE_PRIVACY_CATEGORY), children: e },
                             t,
                         ),
                 }),
             }),
             (0, i.jsx)(u.D, {
                 "aria-label": C.intl.string(C.t.WAI6xu),
-                onClick: () => r(F.i.USER_DISMISS),
+                onClick: () => r(U.i.USER_DISMISS),
                 className: g.b,
                 children: (0, i.jsx)(d.P, { size: "sm", color: "currentColor" }),
             }),
@@ -113,7 +113,7 @@ function q(e) {
                           icon: _.t,
                           text: C.intl.string(C.t["0Q61kF"]),
                           onClick: () => {
-                              ((0, h.pX)(z.BVt.APPLICATION_STORE), (0, v.closeUserProfileModal)(), l?.());
+                              ((0, h.pX)(z.BVt.APPLICATION_STORE), (0, v.M)(), l?.());
                           },
                       })
                     : (0, i.jsx)(x.A, {
@@ -178,7 +178,7 @@ function J(e) {
         x = (0, i.jsx)(K, {
             onClose: () => {
                 (0, P.Dr)(a.M.USER_PROFILE_PREMIUM_AND_SHOP_ENTRY_POINTS, {
-                    dismissAction: F.i.USER_DISMISS,
+                    dismissAction: U.i.USER_DISMISS,
                     guildId: N,
                     forceTrack: !0,
                 });

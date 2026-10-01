@@ -18,6 +18,7 @@ let o = "social-layer-storefront-item-claimed-successfully-modal",
                     n.e("572963"),
                     n.e("493014"),
                     n.e("672877"),
+                    n.e("520491"),
                     n.e("361684"),
                     n.e("180307"),
                 ]).then(n.bind(n, 472734));

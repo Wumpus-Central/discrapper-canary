@@ -1,5 +1,5 @@
 n.d(t, { Je: () => r, Lk: () => a, sk: () => s });
-var i = n(228366);
+var i = n(73153);
 function r(e) {
     i.h.dispatch({ type: "FRIENDS_LIST_SET_GROUPING_MODE", mode: e });
 }

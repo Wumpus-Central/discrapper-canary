@@ -3,7 +3,7 @@ var i = n(435558),
     r = n.n(i),
     a = n(665260),
     s = n(17928),
-    l = n(228366),
+    l = n(73153),
     o = n(155718),
     d = n(868207),
     c = n(779185),
@@ -19,8 +19,8 @@ var I = n(164956),
     f = n(931480),
     p = n(320095),
     T = n(697470),
-    m = (n(763754), n(491001)),
-    g = n(815807),
+    g = (n(763754), n(491001)),
+    m = n(815807),
     S = n(773669),
     N = n(935208),
     C = n(280450),
@@ -143,7 +143,7 @@ function z() {
 function X(e) {
     let { type: t, channelId: n, messageId: i, userId: r, emoji: a, reactionType: s } = e,
         l = d.A.get(n);
-    if (null == l || !(0, g.vp)(e)) return !1;
+    if (null == l || !(0, m.vp)(e)) return !1;
     let o = O.A.getBasicChannel(n)?.type === w.rbe.DM,
         c = C.default.getId() === r;
     ((l = l.update(i, (n) =>
@@ -153,7 +153,7 @@ function X(e) {
     )),
         d.A.commit(l));
 }
-function q(e) {
+function Z(e) {
     let { type: t, messageData: n } = e,
         { message: i } = n,
         r = (0, c.cR)(n),
@@ -170,7 +170,7 @@ function q(e) {
     )),
         d.A.commit(l));
 }
-class Z extends s.Ay.Store {
+class q extends s.Ay.Store {
     static displayName = "MessageStore";
     initialize() {
         (this.waitFor(C.default, O.A, R.A, f.A, L.Ay, y.Ay, D.A, I.A, S.default, v.A, b.A, M.Ay, P.A, U.default),
@@ -255,7 +255,7 @@ class Z extends s.Ay.Store {
         return F;
     }
 }
-let Q = new Z(l.h, {
+let Q = new q(l.h, {
         BACKGROUND_SYNC_CHANNEL_MESSAGES: function (e) {
             let { changesByChannelId: t } = e;
             for (let e in t) {
@@ -373,7 +373,7 @@ let Q = new Z(l.h, {
                 s = d.A.getOrCreate(t),
                 l = n(597643).A.isConnected();
             return a
-                ? (0, m.K)()
+                ? (0, g.K)()
                     ? (H(t, i, l), !1)
                     : (k.log("Inserting message tapped on from a push notification", i.id, i.channel_id),
                       void d.A.commit(s.receivePushNotification(i, l)))
@@ -408,7 +408,7 @@ let Q = new Z(l.h, {
                       )),
                 d.A.commit(r));
         },
-        MESSAGE_SEND_FAILED_AUTOMOD: q,
+        MESSAGE_SEND_FAILED_AUTOMOD: Z,
         AUTO_MODERATION_CONTENT_DELETED: function (e) {
             let { message: t, thread: n, notice: i } = e;
             if (null == t || null != n) return !1;
@@ -419,7 +419,7 @@ let Q = new Z(l.h, {
                 d.A.commit(s),
                 x.set(t.id, i));
         },
-        MESSAGE_EDIT_FAILED_AUTOMOD: q,
+        MESSAGE_EDIT_FAILED_AUTOMOD: Z,
         MESSAGE_UPDATE: function (e) {
             let t = e.message.id,
                 n = e.message.channel_id,

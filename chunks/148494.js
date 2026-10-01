@@ -4,7 +4,7 @@ var i = n(889137),
     a = n(665260),
     s = n(636537),
     l = n(765178),
-    o = n(228366),
+    o = n(73153),
     d = n(155718),
     c = n(868207),
     u = n(779185),
@@ -16,8 +16,8 @@ var i = n(889137),
     f = n(695870),
     p = n(53677),
     T = n(892768),
-    m = n(167189),
-    g = n(721779),
+    g = n(167189),
+    m = n(721779),
     S = n(626584),
     N = n(390248),
     C = n(597643),
@@ -72,14 +72,14 @@ var j = n(521427),
     $ = n(734057),
     z = n(498642),
     X = n(544180);
-let q = new S.A("MessageRoundtripTrackerStore");
-function Z(e) {
+let Z = new S.A("MessageRoundtripTrackerStore");
+function q(e) {
     return null != e.apiResponseTimestamp && null != e.gatewaySeenTimestamp;
 }
 function Q(e) {
     let t = $.A.getBasicChannel(e.channelId);
     if (null == t)
-        return void q.warn(`Ignoring a messageData for channel ${e.channelId} because we can't find that channel.`);
+        return void Z.warn(`Ignoring a messageData for channel ${e.channelId} because we can't find that channel.`);
     if (Math.random() > 0.1) return;
     let n = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         i = null == e.gatewaySeenTimestamp ? null : e.gatewaySeenTimestamp - e.initialSendTimestamp,
@@ -122,14 +122,14 @@ class J extends W.Ay.Store {
         let t = this.pendingMessages.get(e);
         if (null != t) {
             let n = { ...t, apiResponseTimestamp: Date.now() };
-            Z(n) ? (Q(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            q(n) ? (Q(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
     recordGatewayResponse(e) {
         let t = this.pendingMessages.get(e);
         if (null != t) {
             let n = { ...t, gatewaySeenTimestamp: Date.now() };
-            Z(n) ? (Q(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
+            q(n) ? (Q(n), this.pendingMessages.delete(e)) : this.pendingMessages.set(e, n);
         }
     }
 }
@@ -164,8 +164,8 @@ var eA = n(9842),
     ef = n(750385),
     ep = n(677413),
     eT = n(867455),
-    em = n(464578),
-    eg = n(616356),
+    eg = n(464578),
+    em = n(616356),
     eS = n(280450);
 n(580745);
 var eN = n(71393),
@@ -223,7 +223,7 @@ function eK(e) {
                 (t.invite_channel_type = n.type),
                 null != o.inviter && (t.invite_inviter_id = o.inviter.id),
                 null != o.target_application && (t.application_id = o.target_application.id));
-            let i = eg.A.getLastActiveStream();
+            let i = em.A.getLastActiveStream();
             if (null != i && i.channelId === n.id) {
                 ((e = D.G2g.STREAM), (t.destination_user_id = i.ownerId));
                 let n = (0, b.Ee)(i, eL.A);
@@ -538,7 +538,7 @@ let e$ = {
                 } = e,
                 p = $.A.getChannel(t),
                 T = C.A.isConnectedOrOverlay(),
-                m = Date.now();
+                g = Date.now();
             if (null != p && p.type === D.rbe.GUILD_STORE) return !1;
             if (
                 t === f.E ||
@@ -554,15 +554,15 @@ let e$ = {
                 }))
             )
                 return;
-            (em.A.fetchMessages.recordStart(), F.A.recordChannelFetchStart(t, I ?? m, n, i, r));
-            let g = a ?? void 0;
-            null == g && null != l && (g = { ...l });
-            let S = c.A.getOrCreate(t).loadStart(g);
+            (eg.A.fetchMessages.recordStart(), F.A.recordChannelFetchStart(t, I ?? g, n, i, r));
+            let m = a ?? void 0;
+            null == m && null != l && (m = { ...l });
+            let S = c.A.getOrCreate(t).loadStart(m);
             (c.A.commit(S), o.h.dispatch({ type: "LOAD_MESSAGES" }));
-            let N = g?.messageId,
+            let N = m?.messageId,
                 O = new eY();
             return (
-                u || this.fetchLocalMessages(t, I ?? m, n, i, r, O),
+                u || this.fetchLocalMessages(t, I ?? g, n, i, r, O),
                 s.Bo.get({
                     url: D.Rsh.MESSAGES(t),
                     query: { before: n, after: i, limit: r, around: N, preload: d, feature: h },
@@ -571,8 +571,8 @@ let e$ = {
                     rejectWithError: (0, s.fT)(),
                 }).then(
                     (e) => (
-                        em.A.fetchMessages.recordEnd(),
-                        em.A.dispatchMessages.measure(() => {
+                        eg.A.fetchMessages.recordEnd(),
+                        eg.A.dispatchMessages.measure(() => {
                             let s = e.body,
                                 l = null != n,
                                 d = null != i,
@@ -610,12 +610,12 @@ let e$ = {
                                     limit: r,
                                     jump: a,
                                     forICYMI: E,
-                                    isStale: !T || C.A.lastTimeConnectedChanged() >= m,
+                                    isStale: !T || C.A.lastTimeConnectedChanged() >= g,
                                     truncate: _,
                                     avoidInitialScroll: A,
-                                    requestStartTime: m,
+                                    requestStartTime: g,
                                 }),
-                                F.A.recordChannelFetchedNetwork(t, I ?? m, n, i, r, s));
+                                F.A.recordChannelFetchedNetwork(t, I ?? g, n, i, r, s));
                         }),
                         !0
                     ),
@@ -631,15 +631,15 @@ let e$ = {
             let s = $.A.getBasicChannel(e),
                 l = c.A.getOrCreate(e),
                 d = E.A.database();
-            if (null == d || null == s || null != n || null != i) return void em.A.addLocalMessages(e, -1);
-            if (l.ready && !l.cached) return void em.A.addLocalMessages(e, -2);
+            if (null == d || null == s || null != n || null != i) return void eg.A.addLocalMessages(e, -1);
+            if (l.ready && !l.cached) return void eg.A.addLocalMessages(e, -2);
             let u = await (0, A.kk)(() => h.Ay.load(d, e, r));
-            if (null == u) return void em.A.addLocalMessages(e, -3);
+            if (null == u) return void eg.A.addLocalMessages(e, -3);
             if (
                 (eH.log(
                     `fetched ${u.messages.length} messages from local database (channel_id: ${e}, remote_fetch_completed: ${a.completed})`,
                 ),
-                em.A.addLocalMessages(e, u.messages.length),
+                eg.A.addLocalMessages(e, u.messages.length),
                 !a.completed && u.messages.length > 0)
             ) {
                 let a = u.messages.length >= r && u.connectionId === C.A.lastTimeConnectedChanged();
@@ -902,9 +902,9 @@ ${a}`),
                 [K, z] = (0, ep.Ay)(l);
             K && ((l = z), (Y = (0, a.UI)(Y, D.pr7.SUPPRESS_NOTIFICATIONS)));
             let X = $.A.getChannel(e),
-                q = eN.A.getGuild(X?.guild_id);
-            (0, j.Zv)(q, X, "_sendMessage") && (Y = (0, a.UI)(Y, D.pr7.IS_GUILD_OFFICIAL));
-            let Z = !1,
+                Z = eN.A.getGuild(X?.guild_id);
+            (0, j.Zv)(Z, X, "_sendMessage") && (Y = (0, a.UI)(Y, D.pr7.IS_GUILD_OFFICIAL));
+            let q = !1,
                 Q = n.messageReference?.type === D.SH7.FORWARD;
             if (
                 "" === l &&
@@ -919,7 +919,7 @@ ${a}`),
                 (null == t.components || 0 === t.components.length)
             )
                 if (null == x || !(x.length > 0)) return Promise.resolve();
-                else Z = !0;
+                else q = !0;
             let J = null != C ? D.lAJ.REPLY : D.lAJ.DEFAULT,
                 ea = n.nonce ?? (0, ei.m)(),
                 ed = (0, en.Ay)({
@@ -1006,7 +1006,7 @@ ${a}`),
                     });
                     if (null == t) return;
                     let r = t.attachments;
-                    if (((i = t.uploader), Z && (null == r || 0 === r.length))) return;
+                    if (((i = t.uploader), q && (null == r || 0 === r.length))) return;
                     null != r && (ec.message.attachments = r.map((e, t) => (0, eG.OW)(e, t)));
                 } catch (r) {
                     let { file: e, code: t, reason: n, responseBody: i } = r;
@@ -1087,28 +1087,28 @@ ${a}`),
                                                 overrideProperties: l = {},
                                             } = e,
                                             o = eS.default.getId();
-                                        (0, g.Ay)(t).forEach((e) => {
+                                        (0, m.Ay)(t).forEach((e) => {
                                             let { type: t, code: d, url: c } = e;
                                             if ((0, T.Yf)(t)) {
                                                 let e = (0, T.kK)(t, d, c);
                                                 if (null == e) return;
                                                 let { applicationId: n } = e;
                                                 switch (e.type) {
-                                                    case m.I.APP_DIRECTORY_PROFILE:
+                                                    case g.I.APP_DIRECTORY_PROFILE:
                                                         (v(n), (0, I.KL)(d, ek.J.APP_DISCOVERY, o));
                                                         break;
-                                                    case m.I.APP_DIRECTORY_STOREFRONT:
+                                                    case g.I.APP_DIRECTORY_STOREFRONT:
                                                         v(n, "storefront");
                                                         break;
-                                                    case m.I.APP_DIRECTORY_STOREFRONT_SKU:
+                                                    case g.I.APP_DIRECTORY_STOREFRONT_SKU:
                                                         v(n, "storefront_sku");
                                                         break;
-                                                    case m.I.ACTIVITY_BOOKMARK: {
+                                                    case g.I.ACTIVITY_BOOKMARK: {
                                                         let { params: t } = e;
                                                         (0, I.KL)(n, ek.J.ACTIVITY, t.referrerId ?? o, t.customId);
                                                         break;
                                                     }
-                                                    case m.I.APP_OAUTH2_LINK:
+                                                    case g.I.APP_OAUTH2_LINK:
                                                         ((0, I.KL)(n, ek.J.OAUTH, o),
                                                             _.Ay.trackWithMetadata(
                                                                 D.HAw.APP_OAUTH2_LINK_EMBED_URL_SENT,
@@ -1117,7 +1117,7 @@ ${a}`),
                                                 }
                                             } else
                                                 switch (t) {
-                                                    case m.I.INVITE:
+                                                    case g.I.INVITE:
                                                         eK({
                                                             inviteKey: d,
                                                             channelId: n,
@@ -1127,7 +1127,7 @@ ${a}`),
                                                             overrideProperties: l,
                                                         });
                                                         break;
-                                                    case m.I.TEMPLATE: {
+                                                    case g.I.TEMPLATE: {
                                                         let e = w.A.getGuildTemplate(d);
                                                         if (null == e || e.state === eF.QB.RESOLVING) return;
                                                         _.Ay.trackWithMetadata(D.HAw.GUILD_TEMPLATE_LINK_SENT, {
@@ -1138,21 +1138,21 @@ ${a}`),
                                                         });
                                                         break;
                                                     }
-                                                    case m.I.BUILD_OVERRIDE:
-                                                    case m.I.EXPERIMENT:
-                                                    case m.I.MANUAL_BUILD_OVERRIDE:
-                                                    case m.I.EVENT:
-                                                    case m.I.CHANNEL_LINK:
+                                                    case g.I.BUILD_OVERRIDE:
+                                                    case g.I.EXPERIMENT:
+                                                    case g.I.MANUAL_BUILD_OVERRIDE:
+                                                    case g.I.EVENT:
+                                                    case g.I.CHANNEL_LINK:
                                                         break;
-                                                    case m.I.EMBEDDED_ACTIVITY_INVITE:
+                                                    case g.I.EMBEDDED_ACTIVITY_INVITE:
                                                         (0, I.KL)(d, ek.J.ACTIVITY_INVITE, o);
                                                         break;
-                                                    case m.I.GUILD_PRODUCT:
-                                                    case m.I.SERVER_SHOP:
-                                                    case m.I.SOCIAL_LAYER_STOREFRONT:
-                                                    case m.I.SOCIAL_LAYER_STOREFRONT_APP:
+                                                    case g.I.GUILD_PRODUCT:
+                                                    case g.I.SERVER_SHOP:
+                                                    case g.I.SOCIAL_LAYER_STOREFRONT:
+                                                    case g.I.SOCIAL_LAYER_STOREFRONT_APP:
                                                         break;
-                                                    case m.I.QUESTS_EMBED: {
+                                                    case g.I.QUESTS_EMBED: {
                                                         let e = (0, eE.L4)(r.u.QUESTS_EMBED);
                                                         (0, e_.av)({
                                                             questId: d,
@@ -1163,12 +1163,12 @@ ${a}`),
                                                         });
                                                         break;
                                                     }
-                                                    case m.I.GAME_PROFILE:
+                                                    case g.I.GAME_PROFILE:
                                                         y.default.track(D.HAw.GAME_PROFILE_LINK_EMBED_SENT, {
                                                             game_id: d,
                                                         });
                                                         break;
-                                                    case m.I.USER_PROFILE:
+                                                    case g.I.USER_PROFILE:
                                                         _.Ay.trackWithMetadata(D.HAw.USER_PROFILE_LINK_EMBED_SENT, {
                                                             linked_user_id: d,
                                                             channel_id: n,
@@ -1177,9 +1177,9 @@ ${a}`),
                                                             is_own_profile: d === o,
                                                         });
                                                         break;
-                                                    case m.I.COLLECTIBLES_SHOP:
-                                                    case m.I.GAME_SERVER_SHARE:
-                                                    case m.I.GAME_ORGANIZATION_INVITE:
+                                                    case g.I.COLLECTIBLES_SHOP:
+                                                    case g.I.GAME_SERVER_SHARE:
+                                                    case g.I.GAME_ORGANIZATION_INVITE:
                                                         break;
                                                     default:
                                                         throw Error(`Unknown coded link type: ${t}`);

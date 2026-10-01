@@ -1,54 +1,56 @@
-n.d(t, { A: () => m });
-var l = n(477900);
-n(582128);
-var i = n(192308),
-    s = n(442433),
-    r = n(332173),
-    a = n(37632),
-    o = n(734057),
-    u = n(706083),
-    c = n(143145),
-    d = n(652215);
+t.d(n, { A: () => m });
+var l = t(477900);
+t(582128);
+var r = t(192308),
+    a = t(442433),
+    i = t(332173),
+    o = t(37632),
+    s = t(734057),
+    c = t(706083),
+    u = t(143145),
+    d = t(652215);
 function m(e) {
     return {
-        react(t, m, h) {
-            let p = o.A.getChannel(t.channelId),
-                f = h.noStyleAndInteraction
+        react(n, m, h) {
+            let p = s.A.getChannel(n.channelId),
+                g = h.noStyleAndInteraction
                     ? void 0
-                    : (n) => {
-                          (e.shouldStopPropagation && n?.stopPropagation(),
-                              (0, u.o)(t.guildId, t.channelId, t.messageId),
-                              e.shouldCloseDefaultModals && (0, i.closeAllModals)());
+                    : (t) => {
+                          (e.shouldStopPropagation && t?.stopPropagation(),
+                              (0, c.o)(n.guildId, n.channelId, n.messageId),
+                              e.shouldCloseDefaultModals && (0, r.closeAllModals)());
                       },
-                g =
-                    h.noStyleAndInteraction || null == t.channelId || (null == p && null == t.originalLink)
+                f =
+                    h.noStyleAndInteraction || null == n.channelId || (null == p && null == n.originalLink)
                         ? d.tEg
                         : (e) => {
-                              (0, s.L3)(e, async () => {
-                                  let { default: e } = await Promise.all([n.e("343266"), n.e("404391")]).then(
-                                      n.bind(n, 254106),
-                                  );
-                                  return (n) =>
+                              (0, a.L3)(e, async () => {
+                                  let { default: e } = await Promise.all([
+                                      t.e("638221"),
+                                      t.e("343266"),
+                                      t.e("404391"),
+                                  ]).then(t.bind(t, 254106));
+                                  return (t) =>
                                       (0, l.jsx)(e, {
-                                          ...n,
+                                          ...t,
                                           channel: p,
-                                          channelId: p?.id ?? t.channelId,
-                                          originalLink: t.originalLink,
-                                          messageId: t.messageId,
+                                          channelId: p?.id ?? n.channelId,
+                                          originalLink: n.originalLink,
+                                          messageId: n.messageId,
                                       });
                               });
                           };
             return (0, l.jsxs)(
-                r.A,
+                i.A,
                 {
                     role: "link",
-                    onClick: f,
-                    onContextMenu: g,
+                    onClick: g,
+                    onContextMenu: f,
                     className: "channelMention",
                     children: [
-                        null != t.inContent ? m(t.inContent, h) : null,
-                        null != t.inContent ? (0, l.jsx)(a.A, {}) : null,
-                        (0, c.t)(t, m, h),
+                        null != n.inContent ? m(n.inContent, h) : null,
+                        null != n.inContent ? (0, l.jsx)(o.A, {}) : null,
+                        (0, u.t)(n, m, h),
                     ],
                 },
                 h.key,

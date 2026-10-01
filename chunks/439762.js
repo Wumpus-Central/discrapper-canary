@@ -220,7 +220,9 @@ function eN(e) {
             onContextMenu: function (e) {
                 let r = K.A.getChannel(n);
                 (0, B.L3)(e, async () => {
-                    let { default: e } = await Promise.all([t.e("343266"), t.e("404391")]).then(t.bind(t, 254106));
+                    let { default: e } = await Promise.all([t.e("638221"), t.e("343266"), t.e("404391")]).then(
+                        t.bind(t, 254106),
+                    );
                     return (t) =>
                         (0, l.jsx)(e, { ...t, channel: r, channelId: r?.id ?? n, originalLink: null, messageId: i });
                 });

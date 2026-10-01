@@ -22,7 +22,7 @@ var u = n(477900),
     N = n(625903),
     M = n(847374),
     R = n(376728),
-    j = n(228366),
+    j = n(73153),
     w = n(219271),
     G = n(989133),
     O = n(174768),
@@ -379,8 +379,8 @@ var eP = n(747007),
     eX = n(85448),
     e0 = n(571694),
     e1 = n(10862),
-    e2 = n(408278),
-    e4 = n(562153),
+    e4 = n(408278),
+    e2 = n(562153),
     e3 = n(960027),
     e7 = n(978940),
     e8 = n(387755),
@@ -390,7 +390,7 @@ var eP = n(747007),
 function te(e) {
     let { user: t, channel: n, location: i } = e,
         l = (0, I.bG)([ex.Ay], () => ex.Ay.getVoiceChannelId() === n.id),
-        s = (0, e4.tx)(n.guild_id, n.id, t),
+        s = (0, e2.tx)(n.guild_id, n.id, t),
         {
             icon: a,
             iconColor: r,
@@ -435,7 +435,7 @@ function te(e) {
         : (0, u.jsx)(b.m, {
               text: o,
               children: (0, u.jsx)("div", {
-                  children: (0, u.jsx)(e2.K, {
+                  children: (0, u.jsx)(e4.K, {
                       variant: "icon-only",
                       icon: () => (0, u.jsx)(a, { size: "sm", color: r }),
                       "aria-label": eU.intl.formatToPlainString(eU.t["3IPBG1"], { username: s }),

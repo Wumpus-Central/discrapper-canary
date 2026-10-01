@@ -1,33 +1,36 @@
-n.d(t, { $: () => c, A: () => d });
-var l = n(477900),
-    i = n(582128),
-    s = n(939341),
-    r = n(263577),
-    a = n(506326),
-    o = n(868065),
-    u = n(804779);
-let c = [a.iq, a.Zc, a.Xy, a.$X, a.fg, a.MK],
-    d = i.memo(function (e) {
-        let { entry: t, channel: n, selected: i, hovered: d } = e,
-            { largeImage: m } = (0, s.nO)({
-                entry: t,
-                showCoverImage: !1,
-                trackingSource: "memberlist_activity_content_row",
-            });
-        return (0, l.jsxs)(o.Zp, {
-            selected: i,
-            children: [
-                (0, l.jsxs)(o.UA, {
-                    children: [
-                        (0, l.jsx)(o.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                        (0, l.jsx)(o.ZB, { children: t.extra.activity_name }),
-                        (0, l.jsx)(a.mG, {
-                            location: a.N5.CARD,
-                            children: c.map((e, n) => (0, l.jsx)(e, { entry: t, hovered: d }, n)),
-                        }),
-                    ],
-                }),
-                (0, l.jsx)(r.V, { alt: m?.alt, src: m?.src, size: 48, className: u.xn }),
-            ],
-        });
-    });
+t.d(i, { $: () => o, A: () => x });
+var n = t(477900),
+    l = t(582128),
+    r = t(939341),
+    s = t(263577),
+    a = t(506326),
+    c = t(868065),
+    d = t(804779);
+let o = [a.iq, a.Zc, a.Xy, a.$X, a.fg, a.MK],
+    x =
+        221552 == t.j
+            ? l.memo(function (e) {
+                  let { entry: i, channel: t, selected: l, hovered: x } = e,
+                      { largeImage: m } = (0, r.nO)({
+                          entry: i,
+                          showCoverImage: !1,
+                          trackingSource: "memberlist_activity_content_row",
+                      });
+                  return (0, n.jsxs)(c.Zp, {
+                      selected: l,
+                      children: [
+                          (0, n.jsxs)(c.UA, {
+                              children: [
+                                  (0, n.jsx)(c.Hp, { entry: i, channelId: t.id, guildId: t.guild_id }),
+                                  (0, n.jsx)(c.ZB, { children: i.extra.activity_name }),
+                                  (0, n.jsx)(a.mG, {
+                                      location: a.N5.CARD,
+                                      children: o.map((e, t) => (0, n.jsx)(e, { entry: i, hovered: x }, t)),
+                                  }),
+                              ],
+                          }),
+                          (0, n.jsx)(s.V, { alt: m?.alt, src: m?.src, size: 48, className: d.xn }),
+                      ],
+                  });
+              })
+            : null;

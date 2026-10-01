@@ -1,7 +1,7 @@
-(n.r(t), n.d(t, { default: () => q }));
+(n.r(t), n.d(t, { default: () => Z }));
 var i = n(17928),
     r = n(506774),
-    a = n(228366),
+    a = n(73153),
     s = n(350723),
     l = n(996308),
     o = n(211753);
@@ -50,7 +50,7 @@ async function T(e, t) {
             3 === p && E.error("Too many RPC send failures, suppressing further error logs"));
     }
 }
-function m(e) {
+function g(e) {
     if (0 === e.length) return e;
     let t = [];
     for (let n = 0; n < e.length; n++) {
@@ -64,7 +64,7 @@ function m(e) {
     }
     return t;
 }
-function g(e) {
+function m(e) {
     if (null === e) return "null";
     if (void 0 === e) return "undefined";
     if ("string" == typeof e) return e;
@@ -145,8 +145,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((f.log(...t), null != A))
                         try {
-                            let e = m(t)
-                                .map((e) => g(e))
+                            let e = g(t)
+                                .map((e) => m(e))
                                 .join(" ");
                             A.log(e);
                         } catch (e) {
@@ -157,8 +157,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((f.info(...t), null != A))
                         try {
-                            let e = m(t)
-                                .map((e) => g(e))
+                            let e = g(t)
+                                .map((e) => m(e))
                                 .join(" ");
                             A.info(e);
                         } catch (e) {
@@ -169,8 +169,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((f.warn(...t), null != A))
                         try {
-                            let e = m(t)
-                                .map((e) => g(e))
+                            let e = g(t)
+                                .map((e) => m(e))
                                 .join(" ");
                             A.warn(e);
                         } catch (e) {
@@ -181,8 +181,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((f.error(...t), null != A))
                         try {
-                            let e = m(t)
-                                .map((e) => g(e))
+                            let e = g(t)
+                                .map((e) => m(e))
                                 .join(" ");
                             A.error(e);
                         } catch (e) {}
@@ -564,7 +564,7 @@ class X extends i.Ay.PersistedStore {
         return z.get(e) ?? null;
     }
 }
-let q = new X(a.h, {
+let Z = new X(a.h, {
     LOGOUT: function (e) {
         e.isSwitchingAccount || (P = {});
     },

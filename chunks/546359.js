@@ -1,7 +1,7 @@
 (n.d(t, { A: () => Q }), n(321073));
 var i = n(17928),
     r = n(52133),
-    a = n(228366),
+    a = n(73153),
     s = n(714114),
     l = n(773669),
     o = n(734057),
@@ -16,8 +16,8 @@ var i = n(17928),
     f = n(427262),
     p = n(736347),
     T = n(303911),
-    m = n(652215);
-let g = { key: "active_now", type: p.ik.ACTIVE_NOW },
+    g = n(652215);
+let m = { key: "active_now", type: p.ik.ACTIVE_NOW },
     S = { key: "online", type: p.ik.ONLINE },
     N = { key: "offline", type: p.ik.OFFLINE },
     C = Object.freeze([]),
@@ -36,7 +36,7 @@ function M(e) {
         i = c.A.getActivities(e),
         r = i.findIndex((e) => {
             let { type: t } = e;
-            return t === m.$pd.PLAYING || t === m.$pd.COMPETING;
+            return t === g.$pd.PLAYING || t === g.$pd.COMPETING;
         }),
         a = -1 !== r ? i[r] : null,
         l = a?.assets?.large_image ?? a?.assets?.small_image,
@@ -56,7 +56,7 @@ function M(e) {
 function P(e, t) {
     switch (t) {
         case p.Vj.ACTIVE_NOW:
-            if (null != e.gameName || null != e.voiceChannelId) return g;
+            if (null != e.gameName || null != e.voiceChannelId) return m;
             return (0, T.iX)(e.status) ? N : S;
         case p.Vj.GAME:
             if (null != e.gameName)
@@ -233,16 +233,16 @@ function X() {
         return e;
     });
 }
-function q() {
+function Z() {
     return V(() => {
         F();
     });
 }
-class Z extends i.Ay.Store {
+class q extends i.Ay.Store {
     static displayName = "FriendRowStore";
     initialize() {
         (this.waitFor(o.A, l.default, d.A, c.A, u.A, _.default, E.A),
-            this.syncWith([l.default], q),
+            this.syncWith([l.default], Z),
             this.syncWith([d.A], X));
     }
     getGroupingMode() {
@@ -258,7 +258,7 @@ class Z extends i.Ay.Store {
         return (H(), y.get(e));
     }
 }
-let Q = new Z(a.h, {
+let Q = new q(a.h, {
     CONNECTION_OPEN: j,
     OVERLAY_INITIALIZE: j,
     LOGOUT: j,

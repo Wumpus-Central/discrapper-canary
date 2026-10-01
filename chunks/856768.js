@@ -78,9 +78,11 @@ function b(e) {
                                   location: "MemberSafetyPageActionNotice",
                               }),
                                   (0, d.openModalLazy)(async () => {
-                                      let { default: e } = await Promise.all([l.e("420282"), l.e("802504")]).then(
-                                          l.bind(l, 333179),
-                                      );
+                                      let { default: e } = await Promise.all([
+                                          l.e("420282"),
+                                          l.e("691671"),
+                                          l.e("802504"),
+                                      ]).then(l.bind(l, 333179));
                                       return (l) =>
                                           (0, n.jsx)(e, {
                                               ...l,

@@ -141,7 +141,7 @@ let r = {
             "VIDEO_BACKGROUND_SHOW_FEEDBACK",
             "IN_APP_REPORTS_SHOW_FEEDBACK",
         ],
-        inlineRequire: () => n(651649).A,
+        inlineRequire: () => n(106430).A,
     },
     ForumGuidelinesManager: { inlineRequire: () => n(774812).A, loadAfterConnectionOpen: !0 },
     ForumManager: { actions: ["CHANNEL_PRELOAD"], inlineRequire: () => n(820431).A, neverLoadBeforeConnectionOpen: !0 },

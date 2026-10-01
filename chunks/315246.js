@@ -1,82 +1,82 @@
-n.d(t, { A: () => I, n: () => E });
-var l = n(477900),
-    i = n(582128),
-    s = n(922016),
-    r = n(980707),
-    a = n(477782),
-    o = n(866665),
-    u = n(939249),
-    c = n(365199),
-    d = n(442433),
-    m = n(50268),
+n.d(i, { A: () => A, n: () => m });
+var e = n(477900),
+    r = n(582128);
+if (221552 == n.j) var a = n(922016);
+if (221552 == n.j) var o = n(980707);
+if (221552 == n.j) var l = n(477782);
+if (221552 == n.j) var s = n(866665);
+if (221552 == n.j) var d = n(939249);
+if (221552 == n.j) var c = n(365199);
+var u = n(442433),
+    p = n(50268),
     h = n(409626),
-    p = n(692969),
-    f = n(243949),
-    g = n(20805),
-    x = n(903134),
-    A = n(375708),
+    x = n(692969),
+    j = n(243949),
+    v = n(20805),
+    f = n(903134),
+    g = n(375708),
     C = n(495602);
-let E = "content-inventory-context";
-function I(e) {
-    let { user: t, guildId: n, channel: I, entry: y, onSelect: S, disableGameProfileLinks: v } = e,
-        N = i.useRef(null),
-        _ = i.useContext(x.J),
-        j = (0, f.A)({ userId: t.id, guildId: n, channelId: I?.id, onAction: _ }),
-        b = (0, m.A)({ id: t.id, label: A.intl.string(A.t["/AXYnE"]) }),
-        T = "application_id" in y.extra ? y.extra.application_id : null,
-        R = (0, m.A)({ id: T, label: A.intl.string(A.t["FfCL+6"]) }),
-        O = (0, g.zD)(y),
-        L = (0, p.A)({
+let m = "content-inventory-context";
+function A(t) {
+    let { user: i, guildId: n, channel: A, entry: b, onSelect: I, disableGameProfileLinks: _ } = t,
+        P = r.useRef(null),
+        k = r.useContext(f.J),
+        w = (0, j.A)({ userId: i.id, guildId: n, channelId: A?.id, onAction: k }),
+        z = (0, p.A)({ id: i.id, label: g.intl.string(g.t["/AXYnE"]) }),
+        E = "application_id" in b.extra ? b.extra.application_id : null,
+        y = (0, p.A)({ id: E, label: g.intl.string(g.t["FfCL+6"]) }),
+        D = (0, v.zD)(b),
+        J = (0, x.A)({
             location: "ContentPopoutContextMenu",
-            applicationId: O && !0 !== v ? y.extra?.application_id : void 0,
+            applicationId: D && !0 !== _ ? b.extra?.application_id : void 0,
             source: h.GameProfileSources.ActivityCardContextMenu,
             trackEntryPointImpression: !0,
-            sourceUserId: y.author_id,
+            sourceUserId: b.author_id,
         });
-    return (0, l.jsx)(s.Y, {
-        targetElementRef: N,
+    return (0, e.jsx)(a.Y, {
+        targetElementRef: P,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
-        renderPopout: (e) => {
-            let { closePopout: t } = e;
-            return (0, l.jsx)(r.W, {
+        renderPopout: (t) => {
+            let { closePopout: i } = t;
+            return (0, e.jsx)(o.W, {
                 "data-menu-migrated-auto": !0,
-                navId: E,
+                navId: m,
                 onClose: () => {
-                    ((0, d.Z_)(), t());
+                    ((0, u.Z_)(), i());
                 },
-                "aria-label": A.intl.string(A.t.liqwPJ),
-                onSelect: S,
-                children: (0, l.jsxs)(l.Fragment, {
+                "aria-label": g.intl.string(g.t.liqwPJ),
+                onSelect: I,
+                children: (0, e.jsxs)(e.Fragment, {
                     children: [
-                        (0, l.jsxs)(a.rX, {
+                        (0, e.jsxs)(l.rX, {
                             children: [
-                                j,
-                                null != L &&
-                                    (0, l.jsx)(a.Dr, {
+                                w,
+                                null != J &&
+                                    (0, e.jsx)(l.Dr, {
                                         id: "game-profile",
-                                        label: A.intl.string(A.t.f7aVGn),
-                                        action: (e) => {
-                                            (L(e), _?.());
+                                        label: g.intl.string(g.t.f7aVGn),
+                                        action: (t) => {
+                                            (J(t), k?.());
                                         },
                                     }),
                             ],
                         }),
-                        (0, l.jsxs)(a.rX, { children: [b, R] }),
+                        (0, e.jsxs)(l.rX, { children: [z, y] }),
                     ],
                 }),
             });
         },
-        children: (e) =>
-            (0, l.jsx)(o.m, {
+        children: (t) =>
+            (0, e.jsx)(s.m, {
                 asContainer: !0,
-                text: A.intl.string(A.t["UKOtz+"]),
-                children: (0, l.jsx)(u.D, {
-                    innerRef: N,
+                text: g.intl.string(g.t["UKOtz+"]),
+                children: (0, e.jsx)(d.D, {
+                    innerRef: P,
                     className: C.r,
-                    ...e,
-                    children: (0, l.jsx)(c.MoreHorizontalIcon, {
+                    ...t,
+                    children: (0, e.jsx)(c.MoreHorizontalIcon, {
                         color: "currentColor",
                         size: "custom",
                         width: 16,

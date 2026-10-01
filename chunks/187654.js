@@ -82,11 +82,15 @@ class H extends a.PureComponent {
             (e.stopPropagation(),
             (0, $.L3)(e, async () => {
                 let { default: e } = await Promise.all([
+                    n.e("587308"),
+                    n.e("292699"),
+                    n.e("691671"),
                     n.e("295998"),
+                    n.e("527687"),
                     n.e("81189"),
                     n.e("200203"),
                     n.e("944801"),
-                    n.e("720045"),
+                    n.e("812663"),
                     n.e("480419"),
                 ]).then(n.bind(n, 847342));
                 return (n) => (0, l.jsx)(e, { ...n, message: t, channel: r });

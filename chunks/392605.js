@@ -1,36 +1,36 @@
-n.d(t, { i: () => c });
-var l = n(228366),
-    i = n(976860),
-    s = n(696451),
-    r = n(317525),
-    a = n(71393),
-    o = n(652215),
-    u = n(746080);
-function c(e, t, n) {
-    let c = a.A.getGuild(e);
-    if (null != e && null != c)
-        switch (t) {
+t.d(n, { i: () => u });
+var l = t(73153),
+    r = t(976860),
+    a = t(696451),
+    i = t(317525),
+    o = t(71393),
+    s = t(652215),
+    c = t(746080);
+function u(e, n, t) {
+    let u = o.A.getGuild(e);
+    if (null != e && null != u)
+        switch (n) {
             case "home":
             case "guide":
-                d(u.VV.GUILD_HOME);
+                d(c.VV.GUILD_HOME);
                 break;
             case "browse":
-                d(u.VV.CHANNEL_BROWSER);
+                d(c.VV.CHANNEL_BROWSER);
                 break;
             case "customize":
-                d(u.VV.CUSTOMIZE_COMMUNITY);
+                d(c.VV.CUSTOMIZE_COMMUNITY);
                 break;
             case "linked-roles":
-                if (null != n) {
-                    let t = s.Ay.getSelfMember(e);
-                    if (null == t) return;
-                    let i = r.A.getRole(e, n);
-                    null == i || t.roles.includes(i.id)
+                if (null != t) {
+                    let n = a.Ay.getSelfMember(e);
+                    if (null == n) return;
+                    let r = i.A.getRole(e, t);
+                    null == r || n.roles.includes(r.id)
                         ? l.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e })
-                        : l.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e, role: i });
+                        : l.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e, role: r });
                 } else l.h.dispatch({ type: "GUILD_ROLE_CONNECTIONS_MODAL_SHOW", guildId: e });
         }
-    function d(t) {
-        null != e && null != c && c.features.has(o.GuildFeatures.COMMUNITY) && (0, i.pX)(o.BVt.CHANNEL(e, t));
+    function d(n) {
+        null != e && null != u && u.features.has(s.GuildFeatures.COMMUNITY) && (0, r.pX)(s.BVt.CHANNEL(e, n));
     }
 }

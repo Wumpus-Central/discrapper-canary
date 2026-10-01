@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => e9 }));
+(n.r(t), n.d(t, { default: () => e3 }));
 var l = n(477900),
     r = n(582128),
     i = n(17928),
@@ -11,7 +11,7 @@ var l = n(477900),
     f = n(71393),
     g = n(473953),
     m = n(636537),
-    h = n(228366),
+    h = n(73153),
     E = n(652215);
 async function p(e) {
     h.h.dispatch({ type: "GUILD_SPACE_CATALOG_FETCH_START", guildId: e });
@@ -1355,7 +1355,7 @@ var eQ = n(554146),
     e2 = n(725041),
     e6 = n(49999),
     e8 = n(312152);
-function e9(e) {
+function e3(e) {
     let t,
         { guildId: m } = e,
         h = r.useRef(null),

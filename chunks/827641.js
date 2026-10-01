@@ -34,7 +34,7 @@ var s = t(477900),
     U = t(713132),
     O = t(59318),
     T = t(636537),
-    k = t(228366),
+    k = t(73153),
     z = t(652215);
 async function H(e, l) {
     k.h.dispatch({ type: "LOAD_OFFICIAL_MESSAGES", guildId: e, before: l });

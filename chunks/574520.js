@@ -1,76 +1,76 @@
-n.d(t, { $: () => x, A: () => I });
-var l = n(435558),
-    i = n.n(l),
-    s = n(6161),
-    r = n(681154),
+n.d(e, { $: () => I, A: () => T });
+var i = n(435558),
+    r = n.n(i),
+    o = n(6161),
+    s = n(681154),
     a = n(17928),
-    o = n(228366),
-    u = n(290863),
-    c = n(99753),
-    d = n(20805),
-    m = n(83971),
-    h = n(583846),
-    p = n(652215);
-let f = new Set([r.ContentInventoryEntryType.LISTENED_SESSION]),
-    g = new Map();
-function x(e) {
-    return `${e.author_id}:${e.id}`;
+    d = n(73153),
+    c = n(290863),
+    l = n(99753),
+    u = n(20805),
+    f = n(83971),
+    E = n(583846),
+    y = n(652215);
+let h = new Set([s.ContentInventoryEntryType.LISTENED_SESSION]),
+    p = new Map();
+function I(t) {
+    return `${t.author_id}:${t.id}`;
 }
-function A(e) {
-    let t = new Set(),
+function S(t) {
+    let e = new Set(),
         n = new Set();
-    for (let l of e) {
-        let e = (function (e) {
-            return (0, h.I5)(e)
+    for (let i of t) {
+        let t = (function (t) {
+            return (0, E.I5)(t)
                 ? null
-                : (0, h.JM)(e) && e.author_type === s.ContentInventoryAuthorType.USER
-                  ? u.A.getActivities(e.author_id).find((t) =>
-                        t.type === p.$pd.PLAYING && (0, d.P)(e)
-                            ? (0, m.fp)(e, t)
-                            : !!(t.type === p.$pd.LISTENING && (0, d.Tq)(e)) && (0, m.qb)(e, t),
+                : (0, E.JM)(t) && t.author_type === o.ContentInventoryAuthorType.USER
+                  ? c.A.getActivities(t.author_id).find((e) =>
+                        e.type === y.$pd.PLAYING && (0, u.P)(t)
+                            ? (0, f.fp)(t, e)
+                            : !!(e.type === y.$pd.LISTENING && (0, u.Tq)(t)) && (0, f.qb)(t, e),
                     )
                   : void 0;
-        })(l.content);
-        if (void 0 !== e) {
-            let i = x(l.content);
-            (n.add(i), e !== g.get(i) && (t.add(i), g.set(i, e)));
+        })(i.content);
+        if (void 0 !== t) {
+            let r = I(i.content);
+            (n.add(r), t !== p.get(r) && (e.add(r), p.set(r, t)));
         }
     }
-    return { updatedKeys: t, matchedKeys: n };
+    return { updatedKeys: e, matchedKeys: n };
 }
-function C() {
-    let e = !1,
-        t = Array.from(g.keys()),
+function A() {
+    let t = !1,
+        e = Array.from(p.keys()),
         n = new Set(),
-        l = new Set();
-    for (let t of c.A.getFeeds().values()) {
-        let { updatedKeys: i, matchedKeys: s } = A(
-            n.size > 0 ? t.entries.filter((e) => !n.has(x(e.content))) : t.entries,
+        i = new Set();
+    for (let e of l.A.getFeeds().values()) {
+        let { updatedKeys: r, matchedKeys: o } = S(
+            n.size > 0 ? e.entries.filter((t) => !n.has(I(t.content))) : e.entries,
         );
-        for (let e of i) n.add(e);
-        for (let e of s) l.add(e);
-        e = e || i.size > 0;
+        for (let t of r) n.add(t);
+        for (let t of o) i.add(t);
+        t = t || r.size > 0;
     }
-    for (let n of i().difference(t, [...l])) (g.delete(n), (e = !0));
-    return e;
+    for (let n of r().difference(e, [...i])) (p.delete(n), (t = !0));
+    return t;
 }
-class E extends a.Ay.Store {
+class N extends a.Ay.Store {
     static displayName = "ContentInventoryActivityStore";
     initialize() {
-        (this.waitFor(c.A, u.A), this.syncWith([u.A], C));
+        (this.waitFor(l.A, c.A), this.syncWith([c.A], A));
     }
-    canRenderContent = (e) => !(0, h.I5)(e) && (!f.has(e.content_type) || null != this.getMatchingActivity(e));
-    getMatchingActivity(e) {
-        return (0, h.I5)(e) ? null : g.get(x(e));
+    canRenderContent = (t) => !(0, E.I5)(t) && (!h.has(t.content_type) || null != this.getMatchingActivity(t));
+    getMatchingActivity(t) {
+        return (0, E.I5)(t) ? null : p.get(I(t));
     }
 }
-let I = new E(o.h, {
+let T = new N(d.h, {
     CONNECTION_OPEN: function () {
-        g.clear();
+        p.clear();
     },
-    CONTENT_INVENTORY_SET_FEED: function (e) {
-        let { feed: t } = e,
-            { updatedKeys: n } = A(t.entries);
+    CONTENT_INVENTORY_SET_FEED: function (t) {
+        let { feed: e } = t,
+            { updatedKeys: n } = S(e.entries);
         return n.size > 0;
     },
 });

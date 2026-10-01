@@ -17,7 +17,7 @@ let i;
 var r,
     a = n(17928),
     s = n(499979),
-    l = n(228366),
+    l = n(73153),
     o = n(387755),
     d = n(780907),
     c = n(391973),
@@ -30,12 +30,12 @@ var r,
     f = n(736056),
     p = n(952818);
 let T = [],
-    m = null;
-function g() {
+    g = null;
+function m() {
     0 !== T.length &&
         (l.h.dispatch({ type: "OVERLAY_ADD_LOGS_BATCH", logs: T }),
         (T = []),
-        null != m && (clearTimeout(m), (m = null)));
+        null != g && (clearTimeout(g), (g = null)));
 }
 var S = n(777334),
     N = n(211753),
@@ -77,8 +77,8 @@ let K = !1,
     $ = !1,
     z = null,
     X = new Set(),
-    q = "",
-    Z = new Set();
+    Z = "",
+    q = new Set();
 class Q {
     isDispatching = !1;
     timeout;
@@ -345,7 +345,7 @@ function ed(e, t) {
                     (en.error("tryUploadDiscordHookCrashes", e), (0, S.pj)(e));
                 }
             })()),
-        Z.delete(e),
+        q.delete(e),
         en.info(`pid=${e} status transition ${i ?? "DISCONNECTED"} -> ${t ?? "DISCONNECTED"}`, W));
 }
 async function ec(e) {
@@ -542,7 +542,7 @@ function eT(e, t, n) {
             : (u.A.updateOverlayState(e, C.AR.OVERLAY_CRASHED, "onConnectComplete"),
               ed(e, "CONNECT_FAILED", "CONNECTING")));
 }
-function em() {
+function eg() {
     let e = M.default.getToken(),
         t = M.default.getId();
     null != e &&
@@ -553,7 +553,7 @@ function em() {
             payloads: [{ type: "UPDATE_TOKEN", token: e, userId: t }],
         });
 }
-function eg(e) {
+function em(e) {
     return (
         null != e &&
         (function (e, t) {
@@ -561,7 +561,7 @@ function eg(e) {
                 i = Math.min(e.length, t.length);
             for (let r = 0; r < i; r++) n |= e.charCodeAt(r) ^ t.charCodeAt(r);
             return 0 === n && e.length === t.length;
-        })(e, q)
+        })(e, Z)
     );
 }
 function eS(e) {
@@ -605,10 +605,10 @@ function eS(e) {
             ((i = e.payload),
                 T.push(i),
                 T.length >= 100
-                    ? g()
-                    : null == m &&
-                      (m = setTimeout(() => {
-                          g();
+                    ? m()
+                    : null == g &&
+                      (g = setTimeout(() => {
+                          m();
                       }, 1e3)));
     }
 }
@@ -638,8 +638,8 @@ class eL extends a.Ay.Store {
             __OVERLAY__ ||
             (this.waitFor(M.default, f.A, P.A, U.A, R.default, D.A, v.A, y.A, p.Ay),
             this.syncWith([f.A], eR),
-            h.Le(eS, eg),
-            M.default.addChangeListener(em),
+            h.Le(eS, em),
+            M.default.addChangeListener(eg),
             l.h.addInterceptor(J.queueDispatch));
     }
     isFocusedPidInputLocked() {
@@ -647,13 +647,13 @@ class eL extends a.Ay.Store {
         return null != e && this.isInputLocked(e);
     }
     isInputLocked(e) {
-        return R.default.isOverlayOOPEnabledForPid(e) ? D.A.isInputLocked(e) : !Z.has(e);
+        return R.default.isOverlayOOPEnabledForPid(e) ? D.A.isInputLocked(e) : !q.has(e);
     }
     DEV_isInputLockedV3(e) {
         return D.A.isInputLocked(e);
     }
     DEV_isInputLocked(e) {
-        return !Z.has(e);
+        return !q.has(e);
     }
     isSupported() {
         return (0, k.supportsLegacy)() || !1;
@@ -741,7 +741,7 @@ let ey = new eL(
                           (t || "READY" === i || "CRASHED" === i)
                       ) {
                           if (
-                              (t ? Z.delete(n) : Z.add(n), et.clear(), null != eO && (clearTimeout(eO), (eO = null), t))
+                              (t ? q.delete(n) : q.add(n), et.clear(), null != eO && (clearTimeout(eO), (eO = null), t))
                           )
                               return;
                           t
@@ -760,11 +760,11 @@ let ey = new eL(
                   },
                   RPC_SERVER_READY: function (e) {
                       let { port: t } = e;
-                      q = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
+                      Z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "56b32d9fc25fc3ecc5c3a164679a8bb7930bb099"),
+                      (n.append("build_id", "301b79bfd595382fd13282739d8a0a821290933c"),
                           n.append("rpc", String(t)),
-                          n.append("rpc_auth_token", q),
+                          n.append("rpc_auth_token", Z),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));
                   },
                   OVERLAY_CALL_PRIVATE_CHANNEL: function (e) {

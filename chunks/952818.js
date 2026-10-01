@@ -7,7 +7,7 @@ var r = n(435558),
     o = n(167789),
     d = n(17928),
     c = n(506774),
-    u = n(228366),
+    u = n(73153),
     _ = n(56562),
     E = n(573648),
     A = n(306044),
@@ -16,8 +16,8 @@ var r = n(435558),
     f = n(108822),
     p = n(311043),
     T = n(830012),
-    m = n(810412),
-    g = n(211753),
+    g = n(810412),
+    m = n(211753),
     S = n(206885),
     N = n(41984),
     C = n(439372),
@@ -100,8 +100,8 @@ let j = new h.A("RunningGameStore"),
     ],
     z = [],
     X = !0,
-    q = { "input-service": { state: "unknown" }, "tool-service": { state: "unknown" } },
-    Z = new Set(),
+    Z = { "input-service": { state: "unknown" }, "tool-service": { state: "unknown" } },
+    q = new Set(),
     Q = [],
     J = [],
     ee = [],
@@ -124,8 +124,8 @@ let j = new h.A("RunningGameStore"),
     ef = {},
     ep = {},
     eT = new Set(),
-    em = new Set(),
-    eg = null,
+    eg = new Set(),
+    em = null,
     eS = null,
     eN = null,
     eC = new Map(),
@@ -256,7 +256,7 @@ function eB(e) {
     }
     let o = (0, k.supportsOutOfProcess)() && !n,
         d = eG("id" in (t = l ?? s) ? (t.id ?? null) : (D.A.findGame(t)?.id ?? null)),
-        c = g.x.legacyEnabled,
+        c = m.x.legacyEnabled,
         u = o && !d,
         _ = eu.enableOverlay[eU(s)],
         E = eu.enableOverlayV3[eU(s)];
@@ -334,7 +334,7 @@ function eY() {
                 if (null == i) return t;
                 for (let r of M.A.getLaunchOptions(n.id, n.branchId)) {
                     let a = `${n.id}:${n.branchId}`;
-                    Z.has(a) || ((e = !0), Z.add(a));
+                    q.has(a) || ((e = !0), q.add(a));
                     let { fullExecutablePath: s } = r,
                         l = s.replace(/\\/g, "/").toLowerCase();
                     ((ed[l] = i.id),
@@ -417,7 +417,7 @@ function e$(e) {
         }),
         eu.gamesSeen.sort((e, t) => t.lastFocused - e.lastFocused),
         ej(),
-        w.A.setRecentGames(ez().map((e) => eW(e, eZ, D.A, v.A))));
+        w.A.setRecentGames(ez().map((e) => eW(e, eq, D.A, v.A))));
 }
 function ez() {
     let e = a().values(eu.gameOverrides);
@@ -592,7 +592,7 @@ if (Y) {
             (null != eE && eE(),
             (eE = (0, o.O)(
                 () => {
-                    ((eE = null), e(), eZ.emitChange());
+                    ((eE = null), e(), eq.emitChange());
                 },
                 { timeout: 2e3 },
             )),
@@ -603,7 +603,7 @@ if (Y) {
 function eX() {
     I.A.hasLoadedExperiments && K.length > 0 && (e$(K), (K = []));
 }
-class eq extends d.Ay.Store {
+class eZ extends d.Ay.Store {
     static displayName = "RunningGameStore";
     initialize() {
         let e = c.w.get(W) ?? {
@@ -766,16 +766,16 @@ class eq extends d.Ay.Store {
         return eV(e);
     }
     addExecutableTrackedByAnalytics(e) {
-        em.add((0, A.v)(e) ?? e);
+        eg.add((0, A.v)(e) ?? e);
     }
     getSystemServiceStatus(e) {
-        return q[e] ?? { state: "unknown" };
+        return Z[e] ?? { state: "unknown" };
     }
     isSystemServiceInitialized(e) {
-        return q[e]?.state === "running";
+        return Z[e]?.state === "running";
     }
 }
-let eZ = new eq(u.h, {
+let eq = new eZ(u.h, {
         RUNNING_GAMES_CHANGE: function (e) {
             e$(ee);
         },
@@ -824,8 +824,8 @@ let eZ = new eq(u.h, {
                 ej(),
                 !__OVERLAY__ &&
                     null != (null != r.id ? D.A.getDetectableGame(r.id) : null) &&
-                    (a && (0, m.Q3)(n, m.OverlayToggledClientSettingType.LEGACY_GAME, r.id ?? null),
-                    s && null != i && (0, m.Q3)(i, m.OverlayToggledClientSettingType.OOP_GAME, r.id ?? null)));
+                    (a && (0, g.Q3)(n, g.OverlayToggledClientSettingType.LEGACY_GAME, r.id ?? null),
+                    s && null != i && (0, g.Q3)(i, g.OverlayToggledClientSettingType.OOP_GAME, r.id ?? null)));
         },
         RUNNING_GAME_TOGGLE_DETECTION: function (e) {
             let { game: t } = e,
@@ -898,16 +898,16 @@ let eZ = new eq(u.h, {
             eK();
         },
         GAME_DETECTION_DEBUGGING_START: function (e) {
-            ((eg = e.level), (eS = e.intervalSeconds));
+            ((em = e.level), (eS = e.intervalSeconds));
         },
         GAME_DETECTION_DEBUGGING_STOP: function () {
-            ((eg = null), (eS = null), eT.clear());
+            ((em = null), (eS = null), eT.clear());
         },
         GAME_DETECTION_DEBUGGING_TICK: function (e) {
             let t = e.processes
                 .map((e) => ({ pid: e.pid, cleanedExePath: (0, A.v)(e.exePath) ?? e.exePath }))
                 .filter((e) => {
-                    if (eT.has(e.pid) || em.has(e.cleanedExePath)) return !1;
+                    if (eT.has(e.pid) || eg.has(e.cleanedExePath)) return !1;
                     let t = z.some((t) => e.cleanedExePath.includes(t));
                     return (t && eT.add(e.pid), t);
                 })
@@ -916,13 +916,13 @@ let eZ = new eq(u.h, {
                 P.default.track(H.HAw.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
                     keywords: z,
                     paths: t,
-                    debugging_level: eg,
+                    debugging_level: em,
                     interval_seconds: eS,
                 });
         },
         SYSTEM_SERVICE_INITIALIZE: function (e) {
             let { status: t, modules: n } = e;
-            for (let e of n) q[e] = t;
+            for (let e of n) Z[e] = t;
         },
         RUNNING_GAME_SET_DEBUG_GAME: function (e) {
             (null != et && (ee = ee.filter((e) => e !== et)), null != (et = e.game) && (ee = [et, ...ee]), eP());
@@ -932,4 +932,4 @@ let eZ = new eq(u.h, {
             return (ea.setCanonicalGameIds(t), eM());
         },
     }),
-    eQ = eZ;
+    eQ = eq;

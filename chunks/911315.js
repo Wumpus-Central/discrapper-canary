@@ -9,7 +9,7 @@ var i = t(284009),
     p = t(386467),
     c = t(979186),
     h = t(734057),
-    o = t(67319);
+    o = t(883396);
 function s(e) {
     let { windowKey: n, channelId: t } = e,
         i = (0, r.bG)([h.A], () => h.A.getChannel(t));

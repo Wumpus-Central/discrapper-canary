@@ -1,4 +1,4 @@
-(n.d(t, { S1: () => m, gB: () => T, PX: () => g }),
+(n.d(t, { S1: () => g, gB: () => T, PX: () => m }),
     n(393431),
     n(532706),
     n(42231),
@@ -6,7 +6,7 @@
     n(949626),
     n(767709),
     n(65162));
-var i = n(459838),
+var i = n(205693),
     r = n(287809),
     a = n(486020),
     s = n(329551),
@@ -76,13 +76,13 @@ async function T(e, t) {
     let { track: n = !0, location: r } = t;
     (await p(i.Tr.CAMERA_BACKGROUND_LIVE, { type: i.Qo.INPUT_DEVICE }, e), n && (0, d.Uz)(e, r, "Enabled"));
 }
-async function m(e, t, n) {
+async function g(e, t, n) {
     let { track: r = !0, location: a } = n;
     ((0, l.Oo)(),
         await p(i.Tr.CAMERA_BACKGROUND_PREVIEW, { type: i.Qo.STREAM, streamId: t }, e),
         r && (0, d.Uz)(e, a, "Preview"));
 }
-function g() {
+function m() {
     let e = r.default.getCurrentUser();
     if (null == e) return;
     let t = (0, s.i)(e);

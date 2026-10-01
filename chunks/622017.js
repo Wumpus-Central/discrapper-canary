@@ -1,7 +1,7 @@
 s.d(t, { A: () => r });
 var i = s(582128),
     n = s(17928),
-    a = s(228366),
+    a = s(73153),
     l = s(233317);
 function r(e) {
     let { useCachedData: t = !1, fetch: s = !0 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},

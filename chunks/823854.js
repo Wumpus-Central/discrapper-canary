@@ -1,8 +1,8 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => r });
 var l = n(17928),
-    i = n(228366),
+    i = n(73153),
     s = n(280450);
-class r extends l.Ay.Store {
+class a extends l.Ay.Store {
     static displayName = "VoiceDareTrackingStore";
     initialize() {
         this.waitFor(s.default);
@@ -23,4 +23,4 @@ class r extends l.Ay.Store {
         return null;
     }
 }
-let a = new r(i.h, {});
+let r = new a(i.h, {});

@@ -1,9 +1,9 @@
 let i;
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var r = n(435558),
     a = n(17928),
     s = n(873298),
-    l = n(228366),
+    l = n(73153),
     o = n(617617),
     d = n(95701),
     c = n(349828),
@@ -102,4 +102,4 @@ class T extends a.Ay.Store {
         return !(0, r.isEmpty)(this.getFavoriteChannels());
     }
 }
-let m = new T(l.h, {});
+let g = new T(l.h, {});

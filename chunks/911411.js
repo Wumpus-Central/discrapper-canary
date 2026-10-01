@@ -1,7 +1,7 @@
-(n.d(t, { A: () => A }), n(321073));
+(n.d(t, { A: () => C }), n(321073));
 var i = n(17928),
     l = n(451988),
-    r = n(228366),
+    r = n(73153),
     s = n(308368),
     a = n(290863),
     o = n(818023);
@@ -17,10 +17,10 @@ function h(e) {
     let i = ((t = e.applicationId), (n = e.partyId), `${t}:${n}`);
     return i in u || i in d;
 }
-function g() {
+function f() {
     ((u = {}), (d = {}));
 }
-class f extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "PresenceSubscriptionsStore";
     initialize() {
         this.waitFor(a.A);
@@ -29,7 +29,7 @@ class f extends i.Ay.Store {
         return h(e);
     }
 }
-let A = new f(r.h, {
+let C = new g(r.h, {
     PRESENCE_SUBSCRIPTIONS_ADD: function (e) {
         let { subscription: t } = e,
             n = (function () {
@@ -39,18 +39,18 @@ let A = new f(r.h, {
                 for (let [n, i] of Object.entries(d)) i.expiresAt < t && (delete d[n], (e = !0));
                 return e;
             })(),
-            { userId: i, applicationId: l, partyId: r, messageId: s, channelId: a, inviteTime: g } = t;
-        if (h(t) || g + o.dm < Date.now()) return n;
-        let f = `${l}:${r}`,
-            A = o.dm + Date.now();
+            { userId: i, applicationId: l, partyId: r, messageId: s, channelId: a, inviteTime: f } = t;
+        if (h(t) || f + o.dm < Date.now()) return n;
+        let g = `${l}:${r}`,
+            C = o.dm + Date.now();
         return (
-            (d[f] = { userId: i, applicationId: l, partyId: r, messageId: s, channelId: a, expiresAt: A }),
+            (d[g] = { userId: i, applicationId: l, partyId: r, messageId: s, channelId: a, expiresAt: C }),
             c.delay(),
             !0
         );
     },
-    CONNECTION_OPEN: g,
-    CONNECTION_RESUMED: g,
+    CONNECTION_OPEN: f,
+    CONNECTION_RESUMED: f,
     LOGOUT: function () {
         ((u = {}), (d = {}));
     },

@@ -1,6 +1,6 @@
 let i, r;
 n.d(t, { A: () => T });
-var a = n(228366),
+var a = n(73153),
     s = n(274593),
     l = n(626584),
     o = n(287809),
@@ -37,7 +37,7 @@ let T = {
                     )
                   : Promise.reject(Error("not desktop client"))
             ).then((e) => {
-                let i = { environment: window.GLOBAL_ENV.RELEASE_CHANNEL, build_number: "626823" },
+                let i = { environment: window.GLOBAL_ENV.RELEASE_CHANNEL, build_number: "626834" },
                     u = o.default.getCurrentUser();
                 null != u && ((i.user_id = u.id), (i.user_name = u.tag), null != u.email && (i.email = u.email));
                 let _ = {

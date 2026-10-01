@@ -1,5 +1,5 @@
 n.d(t, { default: () => U });
-var i = n(228366),
+var i = n(73153),
     r = n(323073),
     a = n(469802),
     s = n(643501),
@@ -16,8 +16,8 @@ var i = n(228366),
     f = n(96566),
     p = n(712711),
     T = n(95561),
-    m = n(329551),
-    g = n(912630),
+    g = n(329551),
+    m = n(912630),
     S = n(965162),
     N = n(763827),
     C = n(309010),
@@ -83,30 +83,32 @@ let U = {
                               return (0, E.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
                                       n.e("196063"),
-                                      n.e("118864"),
+                                      n.e("392028"),
                                       n.e("424199"),
                                       n.e("454048"),
                                       n.e("543039"),
+                                      n.e("266900"),
+                                      n.e("901555"),
                                       n.e("721690"),
                                       n.e("136022"),
                                       n.e("832817"),
+                                      n.e("425544"),
                                       n.e("416143"),
-                                      n.e("295366"),
-                                      n.e("901555"),
                                       n.e("844695"),
+                                      n.e("92124"),
                                       n.e("988077"),
                                       n.e("561216"),
+                                      n.e("165595"),
+                                      n.e("313681"),
                                       n.e("343550"),
                                       n.e("552712"),
                                       n.e("829177"),
                                       n.e("106943"),
                                       n.e("232551"),
                                       n.e("892340"),
+                                      n.e("14962"),
                                       n.e("786751"),
-                                      n.e("313681"),
                                       n.e("588940"),
-                                      n.e("34472"),
-                                      n.e("165595"),
                                       n.e("643568"),
                                   ]).then(n.bind(n, 717523));
                                   return (t) => e({ channel: o, ...t });
@@ -139,11 +141,11 @@ let U = {
                                               duration_muted_ms: r?.duration_muted_ms ?? null,
                                               output_audio_route_type: R.A.getCurrentRouteType(),
                                           });
-                                  if ((e(), g.A.hasUsedBackgroundInCall)) {
+                                  if ((e(), m.A.hasUsedBackgroundInCall)) {
                                       let e,
                                           t = {
                                               ...s,
-                                              ...((e = (0, m.i)(O.default.getCurrentUser())),
+                                              ...((e = (0, g.i)(O.default.getCurrentUser())),
                                               {
                                                   video_device_name:
                                                       u.Ay.getVideoDevices()[u.Ay.getVideoDeviceId()]?.name,

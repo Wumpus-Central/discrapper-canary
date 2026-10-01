@@ -5,7 +5,7 @@ var i = n(477900),
     s = n.n(a),
     l = n(17928),
     o = n(289873),
-    d = n(228366),
+    d = n(73153),
     c = n(367513),
     u = n(951001),
     _ = n(398590),
@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(198052),
     p = n(446243),
     T = n(558076),
-    m = n(360729),
-    g = n(976860),
+    g = n(360729),
+    m = n(976860),
     S = n(272812),
     N = n(461782),
     C = n(334463),
@@ -53,9 +53,9 @@ function j(e) {
             let e = C.A.pipWindow;
             return { dockedRect: null != e ? C.A.getDockedRect(e.id) : null, isHidden: C.A.isEmbeddedActivityHidden() };
         }),
-        q = (0, D.xi)({ channelId: t?.id }),
+        Z = (0, D.xi)({ channelId: t?.id }),
         {
-            activityParticipant: Z,
+            activityParticipant: q,
             selectedParticipant: Q,
             participantsOpen: J,
         } = (0, l.cf)([f.A], () => ({
@@ -69,11 +69,11 @@ function j(e) {
             selectedParticipant: null != t ? f.A.getSelectedParticipant(t.id) : null,
             participantsOpen: null != t && f.A.getParticipantsOpen(t.id),
         })),
-        ee = $ || null != q,
+        ee = $ || null != Z,
         et = (0, M.A)(t?.id),
         en = t?.id,
         ei = t?.getGuildId(),
-        { enabled: er } = (0, m.mf)({ guildId: ei ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
+        { enabled: er } = (0, g.mf)({ guildId: ei ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
         ea = (0, l.bG)([T.A], () => null != en && T.A.isVisible(en), [en]),
         es = et && er && ea,
         el = et && Q?.type !== F.lp.ACTIVITY,
@@ -89,9 +89,9 @@ function j(e) {
                 ),
                 es && (0, p.UV)(!0, t.id));
             let e = t.getGuildId() ?? k.ME;
-            (u.A.channelListScrollTo(e, t.id), (0, g.uh)(e, t.id));
+            (u.A.channelListScrollTo(e, t.id), (0, m.uh)(e, t.id));
         }
-        null == q && (0, _.bz)();
+        null == Z && (0, _.bz)();
     }
     function e_() {
         E(!a);
@@ -103,7 +103,7 @@ function j(e) {
                 d.h.dispatch({ type: "ACTIVITY_LAYOUT_MODE_UPDATE", layoutMode: e, applicationId: v });
             }
         }, [v, ed]),
-        null == A || null == K || ((0, M.A)(t?.id) && null == Z) || null == Y || !0 === A.renderInFramePool)
+        null == A || null == K || ((0, M.A)(t?.id) && null == q) || null == Y || !0 === A.renderInFramePool)
     )
         return null;
     let eE = Array.from(A.userIds)
@@ -130,7 +130,7 @@ function j(e) {
                         className: "theme-dark",
                         children: (function (e) {
                             let { onActive: n, onForceIdle: r, idle: s, isActivityInTextChannel: l, users: o } = e;
-                            return ed && null != A && (Z?.type === F.lp.ACTIVITY || l)
+                            return ed && null != A && (q?.type === F.lp.ACTIVITY || l)
                                 ? A.config?.useInteractivePIP
                                     ? (0, i.jsx)(U.tM, {
                                           onJumpToChannel: eu,
@@ -159,7 +159,7 @@ function j(e) {
                                             users: o,
                                             embeddedActivity: A,
                                         })
-                                      : null == Z
+                                      : null == q
                                         ? null
                                         : (0, i.jsxs)(i.Fragment, {
                                               children: [
@@ -178,7 +178,7 @@ function j(e) {
                                                       onJumpToChannel: eu,
                                                       channel: t,
                                                       applicationId: A.applicationId,
-                                                      selectedParticipant: Z,
+                                                      selectedParticipant: q,
                                                       embeddedActivity: A,
                                                   }),
                                               ],

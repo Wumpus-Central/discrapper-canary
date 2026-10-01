@@ -26,9 +26,15 @@ function r(n, t) {
     }
     (0, a.openModalLazy)(
         async () => {
-            let { default: a } = await Promise.all([e.e("55994"), e.e("841567"), e.e("695067"), e.e("442455")]).then(
-                e.bind(e, 66442),
-            );
+            let { default: a } = await Promise.all([
+                e.e("638781"),
+                e.e("55994"),
+                e.e("841567"),
+                e.e("188941"),
+                e.e("958428"),
+                e.e("695067"),
+                e.e("442455"),
+            ]).then(e.bind(e, 66442));
             return (e) =>
                 (0, i.jsx)(a, {
                     closeOrShowDiscardChangesAlert: u,

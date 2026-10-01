@@ -1,39 +1,39 @@
-n.d(t, { Ay: () => h, dx: () => u, k0: () => o });
-var l,
-    i = n(635377),
-    s = n.n(i),
-    r = n(17928),
-    a = n(228366),
-    o = (((l = {}).VOICE_MESSAGE = "voice_message"), l);
+s.d(t, { Ay: () => m, dx: () => u, k0: () => o });
+var n,
+    a = s(635377),
+    l = s.n(a),
+    i = s(17928),
+    r = s(73153),
+    o = (((n = {}).VOICE_MESSAGE = "voice_message"), n);
 function u(e, t) {
     return `${e}-${t}`;
 }
-let c = { rates: { voice_message: 1 }, positions: new (s())({ max: 25 }) },
-    d = { ...c };
-class m extends r.Ay.DeviceSettingsStore {
+let d = { rates: { voice_message: 1 }, positions: new (l())({ max: 25 }) },
+    c = { ...d };
+class h extends i.Ay.DeviceSettingsStore {
     static displayName = "MediaPlaybackStore";
     static persistKey = "MediaPlaybackStore";
     initialize(e) {
-        let { positions: t, ...n } = e ?? {};
-        ((d = { ...c, ...n }), null != t && d.positions.load(t));
+        let { positions: t, ...s } = e ?? {};
+        ((c = { ...d, ...s }), null != t && c.positions.load(t));
     }
     getUserAgnosticState() {
-        return { rates: d.rates, positions: d.positions.dump() };
+        return { rates: c.rates, positions: c.positions.dump() };
     }
     getPlaybackRate(e) {
-        return d.rates[e] ?? 1;
+        return c.rates[e] ?? 1;
     }
     getPlaybackPosition(e) {
-        return d.positions.get(e) ?? 0;
+        return c.positions.get(e) ?? 0;
     }
 }
-let h = new m(a.h, {
+let m = new h(r.h, {
     MEDIA_PLAYBACK_RATE_UPDATE: function (e) {
-        let { rate: t, playbackType: n } = e;
-        d = { ...d, rates: { ...d.rates, [n]: t } };
+        let { rate: t, playbackType: s } = e;
+        c = { ...c, rates: { ...c.rates, [s]: t } };
     },
     MEDIA_PLAYBACK_POSITION_UPDATE: function (e) {
-        let { cacheKey: t, position: n, duration: l } = e;
-        n > 0.5 && n < 0.95 * l ? d.positions.set(t, n) : d.positions.del(t);
+        let { cacheKey: t, position: s, duration: n } = e;
+        s > 0.5 && s < 0.95 * n ? c.positions.set(t, s) : c.positions.del(t);
     },
 });

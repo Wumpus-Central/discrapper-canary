@@ -5,8 +5,8 @@ n.d(t, {
     zK: () => b,
     c6: () => w,
     tB: () => x,
-    WQ: () => m,
-    AQ: () => g,
+    WQ: () => g,
+    AQ: () => m,
     Dr: () => D,
     z5: () => P,
     zD: () => C,
@@ -20,7 +20,7 @@ n.d(t, {
 var i = n(750459),
     r = n(517846),
     a = n(636537),
-    s = n(228366),
+    s = n(73153),
     l = n(27620),
     o = n(280450),
     d = n(935208),
@@ -74,10 +74,10 @@ function T(e, t) {
     (s.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: o.default.getId(), roomId: t }),
         t !== e && (0, c.e6)({ guildId: e, channelId: t }));
 }
-function m(e, t) {
+function g(e, t) {
     s.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: e, roomId: t });
 }
-async function g(e, t, n) {
+async function m(e, t, n) {
     let i = _.A.getRoom(t),
         r = _.A.getRoomUsers(t),
         l = _.A.getRoomObjects(t);

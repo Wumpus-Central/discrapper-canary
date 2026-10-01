@@ -10,7 +10,7 @@ var t = l(477900),
     o = l(746002),
     h = l(855915),
     m = l(940622),
-    f = l(875741),
+    f = l(163697),
     g = l(459872);
 function p(e) {
     let { skuId: a, layer: l, data: r, fadeIn: s, containerWidth: i, containerHeight: u } = e,

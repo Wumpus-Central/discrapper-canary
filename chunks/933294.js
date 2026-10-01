@@ -517,7 +517,7 @@ let X = {
             {
                 sound: s,
                 volume: u,
-                fallbackDeepLink: null == l ? void 0 : (0, a.I)(l),
+                fallbackDeepLink: null == l ? void 0 : (0, a.Id)(l),
                 onClick: null == l ? void 0 : () => (0, o.pX)(l),
                 isUserAvatar: !1,
             },

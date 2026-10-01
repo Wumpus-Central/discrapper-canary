@@ -1,7 +1,7 @@
 let i;
-n.d(t, { A: () => q });
+n.d(t, { A: () => Z });
 var r = n(506774),
-    a = n(228366),
+    a = n(73153),
     s = n(157559),
     l = n(148494),
     o = n(56562),
@@ -17,8 +17,8 @@ var u = n(343328),
     f = n(95701),
     p = n(761640),
     T = n(734057),
-    m = n(71393),
-    g = n(573163),
+    g = n(71393),
+    m = n(573163),
     S = n(309010),
     N = n(967198),
     C = n(927813),
@@ -56,9 +56,9 @@ function M(e) {
         (!d || E.A.isConnected() || p.loadingMore
             ? p.loadingMore || (p.ready && !p.cached)
                 ? null != a && (S = !0)
-                : (null == t || null != m.A.getGuild(t)) && (S = !0)
+                : (null == t || null != g.A.getGuild(t)) && (S = !0)
             : (S = !0),
-        (0, u.A)(n) && g.Ay.hasUnread(n) && (S = !0),
+        (0, u.A)(n) && m.Ay.hasUnread(n) && (S = !0),
         S)
     )
         if ((c.A.commit(p.mutate({ loadingMore: !0 })), null != a))
@@ -75,7 +75,7 @@ function M(e) {
             if (
                 f?.isThread() &&
                 (function (e) {
-                    if (g.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
+                    if (m.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
                     i[e] = Date.now();
                     let t = Date.now() - P;
                     for (let e in i) i[e] < t && delete i[e];
@@ -94,7 +94,7 @@ function M(e) {
                         fetchKey: I,
                     })
                 );
-            if (!(f?.isThread() && g.Ay.hasTrackedUnread(f.id)) || p.ready)
+            if (!(f?.isThread() && m.Ay.hasTrackedUnread(f.id)) || p.ready)
                 return l.A.fetchMessages({
                     channelId: n,
                     limit: (0, R.h)("MessageManager.initialFetch"),
@@ -104,7 +104,7 @@ function M(e) {
                     avoidInitialScroll: h,
                     fetchKey: I,
                 });
-            let e = g.Ay.getTrackedAckMessageId(f.id);
+            let e = m.Ay.getTrackedAckMessageId(f.id);
             return (
                 b.log(`Jumping to most recent message in thread ${f.id} - ${e}`),
                 l.A.fetchMessages({
@@ -252,4 +252,4 @@ class X extends d.A {
         a.h.unsubscribe("CONNECTION_OPEN", w);
     }
 }
-let q = new X();
+let Z = new X();

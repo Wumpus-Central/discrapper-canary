@@ -1,19 +1,19 @@
-n.d(t, { A: () => S });
-var l = n(477900),
-    i = n(582128),
-    s = n(192308),
-    r = n(866665),
-    a = n(442433),
-    o = n(442247),
-    u = n(60465),
-    c = n(409626),
-    d = n(106191),
-    m = n(332173),
-    h = n(936755),
-    p = n(827669);
-let f = 0,
-    g = "data-mention-game-id",
-    x = new Set([
+t.d(n, { A: () => C });
+var l = t(477900),
+    r = t(582128),
+    a = t(192308),
+    i = t(866665),
+    o = t(442433),
+    s = t(442247),
+    c = t(60465),
+    u = t(409626),
+    d = t(106191),
+    m = t(332173),
+    h = t(936755),
+    p = t(827669);
+let g = 0,
+    f = "data-mention-game-id",
+    A = new Set([
         "DIV",
         "P",
         "LI",
@@ -32,147 +32,153 @@ let f = 0,
         "ARTICLE",
         "SECTION",
     ]);
-function A(e) {
-    let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
-    return t?.closest('[contenteditable="true"]') != null;
+function y(e) {
+    let n = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
+    return n?.closest('[contenteditable="true"]') != null;
 }
-function C(e) {
-    let t = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
-    return t?.closest(`[${g}]`) ?? null;
+function x(e) {
+    let n = e.nodeType === Node.ELEMENT_NODE ? e : e.parentElement;
+    return n?.closest(`[${f}]`) ?? null;
 }
 function E(e) {
-    let t;
+    let n;
     if (null == e.clipboardData) return;
-    let n = window.getSelection();
-    if (null == n || 0 === n.rangeCount) return;
+    let t = window.getSelection();
+    if (null == t || 0 === t.rangeCount) return;
     try {
-        t = n.getRangeAt(0);
+        n = t.getRangeAt(0);
     } catch {
         return;
     }
-    if (t.collapsed || A(t.startContainer) || A(t.endContainer)) return;
-    let l = t.cloneContents(),
-        i = null != l.querySelector(`[${g}]`),
-        s = C(t.startContainer),
-        r = C(t.endContainer),
-        a = !i && null != s && s === r;
-    if (i || a) {
-        let t, n;
-        if (a) {
-            let t = s.getAttribute(g);
-            if (null == t || "" === t) return;
-            (e.preventDefault(), e.clipboardData.setData("text/plain", (0, p.KW)(t)));
+    if (n.collapsed || y(n.startContainer) || y(n.endContainer)) return;
+    let l = n.cloneContents(),
+        r = null != l.querySelector(`[${f}]`),
+        a = x(n.startContainer),
+        i = x(n.endContainer),
+        o = !r && null != a && a === i;
+    if (r || o) {
+        let n, t;
+        if (o) {
+            let n = a.getAttribute(f);
+            if (null == n || "" === n) return;
+            (e.preventDefault(), e.clipboardData.setData("text/plain", (0, p.KW)(n)));
             return;
         }
         (e.preventDefault(),
             e.clipboardData.setData(
                 "text/plain",
                 (function (e) {
-                    let t = "";
-                    for (let n = 0; n < e.childNodes.length; n++)
-                        t += (function e(t) {
-                            let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
-                            if (n > 200) return "";
-                            if (t.nodeType === Node.TEXT_NODE) return t.textContent ?? "";
-                            if (t.nodeType !== Node.ELEMENT_NODE) return "";
-                            let l = t.getAttribute(g);
+                    let n = "";
+                    for (let t = 0; t < e.childNodes.length; t++)
+                        n += (function e(n) {
+                            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
+                            if (t > 200) return "";
+                            if (n.nodeType === Node.TEXT_NODE) return n.textContent ?? "";
+                            if (n.nodeType !== Node.ELEMENT_NODE) return "";
+                            let l = n.getAttribute(f);
                             if (null != l) return (0, p.KW)(l);
-                            let i = t.tagName.toUpperCase();
-                            if ("IMG" === i) {
-                                let e = t.getAttribute("alt");
+                            let r = n.tagName.toUpperCase();
+                            if ("IMG" === r) {
+                                let e = n.getAttribute("alt");
                                 return null != e && "" !== e ? e : "";
                             }
-                            if (("string" == typeof t.className ? t.className : "").includes("hiddenVisually"))
+                            if (("string" == typeof n.className ? n.className : "").includes("hiddenVisually"))
                                 return "";
-                            if ("BR" === i) return "\n";
-                            let s = "";
-                            for (let l = 0; l < t.childNodes.length; l++) s += e(t.childNodes[l], n + 1);
-                            return (x.has(i) && "" !== s && !s.endsWith("\n") && (s += "\n"), s);
-                        })(e.childNodes[n]);
-                    return t.endsWith("\n") ? t.slice(0, -1) : t;
+                            if ("BR" === r) return "\n";
+                            let a = "";
+                            for (let l = 0; l < n.childNodes.length; l++) a += e(n.childNodes[l], t + 1);
+                            return (A.has(r) && "" !== a && !a.endsWith("\n") && (a += "\n"), a);
+                        })(e.childNodes[t]);
+                    return n.endsWith("\n") ? n.slice(0, -1) : n;
                 })(l),
             ),
             e.clipboardData.setData(
                 "text/html",
-                ((t = l.cloneNode(!0)).querySelectorAll(`[${g}]`).forEach((e) => {
-                    let t = e.getAttribute(g);
-                    if (null == t || "" === t) return;
-                    let n = e.ownerDocument ?? document;
-                    e.parentNode?.replaceChild(n.createTextNode((0, p.KW)(t)), e);
+                ((n = l.cloneNode(!0)).querySelectorAll(`[${f}]`).forEach((e) => {
+                    let n = e.getAttribute(f);
+                    if (null == n || "" === n) return;
+                    let t = e.ownerDocument ?? document;
+                    e.parentNode?.replaceChild(t.createTextNode((0, p.KW)(n)), e);
                 }),
-                (n = document.createElement("div")).appendChild(t),
-                n.innerHTML),
+                (t = document.createElement("div")).appendChild(n),
+                t.innerHTML),
             ));
     }
 }
-var I = n(375708),
-    y = n(379961);
-let S = function (e) {
-    let { gameId: t, authorId: p } = e,
-        g = (0, o.K)(t),
-        x = null != g,
-        A = g?.gameName ?? I.intl.string(I.t["11pdXZ"]),
-        C = g?.gameIcon;
-    i.useEffect(
+var j = t(375708),
+    I = t(379961);
+let C = function (e) {
+    let { gameId: n, authorId: p } = e,
+        f = (0, s.K)(n),
+        A = null != f,
+        y = f?.gameName ?? j.intl.string(j.t["11pdXZ"]),
+        x = f?.gameIcon;
+    r.useEffect(
         () => (
-            1 === (f += 1) && document.addEventListener("copy", E),
+            1 === (g += 1) && document.addEventListener("copy", E),
             () => {
-                0 == (f -= 1) && document.removeEventListener("copy", E);
+                0 == (g -= 1) && document.removeEventListener("copy", E);
             }
         ),
         [],
     );
-    let S = i.useCallback(
+    let C = r.useCallback(
             (e) => {
-                x &&
-                    (0, a.L3)(e, async () => {
-                        let { default: e } = await Promise.all([n.e("926132"), n.e("146652"), n.e("738392")]).then(
-                            n.bind(n, 55947),
-                        );
-                        return (n) => (0, l.jsx)(e, { ...n, gameId: t, gameName: A, authorId: p });
+                A &&
+                    (0, o.L3)(e, async () => {
+                        let { default: e } = await Promise.all([
+                            t.e("926132"),
+                            t.e("146652"),
+                            t.e("638221"),
+                            t.e("482861"),
+                            t.e("466322"),
+                            t.e("951811"),
+                            t.e("738392"),
+                        ]).then(t.bind(t, 55947));
+                        return (t) => (0, l.jsx)(e, { ...t, gameId: n, gameName: y, authorId: p });
                     });
             },
-            [x, t, A, p],
+            [A, n, y, p],
         ),
-        v = i.useCallback(() => {
-            (0, s.openModalLazy)(async () => {
-                let { default: e } = await n.e("256466").then(n.bind(n, 188841));
-                return (t) => (0, l.jsx)(e, { ...t });
+        k = r.useCallback(() => {
+            (0, a.openModalLazy)(async () => {
+                let { default: e } = await t.e("256466").then(t.bind(t, 188841));
+                return (n) => (0, l.jsx)(e, { ...n });
             });
         }, []),
-        N = i.useCallback(
+        v = r.useCallback(
             (e) => {
-                (e.stopPropagation(), e.preventDefault(), x)
-                    ? u.default.openGameProfileModal({
-                          gameId: t,
-                          gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: t },
-                          source: c.GameProfileSources.GameMention,
+                (e.stopPropagation(), e.preventDefault(), A)
+                    ? c.default.openGameProfileModal({
+                          gameId: n,
+                          gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: n },
+                          source: u.GameProfileSources.GameMention,
                           sourceUserId: p,
                       })
-                    : v();
+                    : k();
             },
-            [t, x, v, p],
+            [n, A, k, p],
         ),
-        _ = x ? `@game ${A}` : void 0;
-    return (0, l.jsx)(r.m, {
+        N = A ? `@game ${y}` : void 0;
+    return (0, l.jsx)(i.m, {
         asContainer: !0,
         tag: "span",
-        text: _,
-        "aria-label": _,
+        text: N,
+        "aria-label": N,
         delay: 750,
         children: (0, l.jsxs)(m.A, {
-            "data-mention-game-id": t,
-            onContextMenu: S,
-            onClick: N,
+            "data-mention-game-id": n,
+            onContextMenu: C,
+            onClick: v,
             children: [
                 (0, l.jsx)(h.A, {
                     children: (0, l.jsx)("span", {
                         "aria-hidden": "true",
-                        className: y.P0,
-                        children: (0, l.jsx)(d.A, { game: { id: t, icon: C }, iconClassName: y.Kk, allowFetch: !1 }),
+                        className: I.P0,
+                        children: (0, l.jsx)(d.A, { game: { id: n, icon: x }, iconClassName: I.Kk, allowFetch: !1 }),
                     }),
                 }),
-                (0, l.jsx)("span", { className: y.UU, children: A }),
+                (0, l.jsx)("span", { className: I.UU, children: y }),
             ],
         }),
     });

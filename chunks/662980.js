@@ -1,5 +1,5 @@
 n.d(t, { T: () => s, Y: () => l });
-var i = n(228366),
+var i = n(73153),
     a = n(595332);
 function s(e, t) {
     a.A.isChatOpen(e) !== t && i.h.dispatch({ type: "VIBEGRATIONS_APP_CHANNEL_CHAT_SET", channelId: e, open: t });

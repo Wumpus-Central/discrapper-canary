@@ -5,8 +5,8 @@ var i,
     s = n(136722),
     l = n(17928),
     o = n(506774),
-    d = n(228366),
-    c = n(246605),
+    d = n(73153),
+    c = n(374042),
     u = n(927813),
     _ = n(498642),
     E = n(71393),
@@ -16,8 +16,8 @@ var i,
     f = n(652215);
 let p = { hiddenSurveys: {}, surveyOverride: null, lastFetched: null, lastSeen: null, lastActionTriggered: null },
     T = p,
-    m = {},
-    g = null,
+    g = {},
+    m = null,
     S = !1,
     N = null,
     C = u.A.Millis.DAY,
@@ -37,7 +37,7 @@ function y() {
     return null == T.lastFetched || Date.now() - T.lastFetched >= C;
 }
 function D() {
-    !S && (y() || null != T.surveyOverride) && ((S = !0), (0, c.BC)(T.surveyOverride, !0));
+    !S && (y() || null != T.surveyOverride) && ((S = !0), (0, c.B)(T.surveyOverride, !0));
 }
 function v(e) {
     return (function (e) {
@@ -76,7 +76,7 @@ function v(e) {
                 d = o?.id === l.ownerId,
                 c = A.A.can(f.xBc.ADMINISTRATOR, l);
             if ((t.includes("is_owner") && !d) || (t.includes("is_admin") && !c)) continue;
-            null == (m = m ?? {})[e.key] && (m[e.key] = e);
+            null == (g = g ?? {})[e.key] && (g[e.key] = e);
             let u = h.A.getGuildId(),
                 E = null != u && u === l.id;
             if ((!t.includes("is_viewing") || E) && !r) return !0;
@@ -94,14 +94,14 @@ function b(e) {
     let r = null != n,
         s = r && null == T.hiddenSurveys[n.key],
         l = r && v(n);
-    (null == (t = o.w.get(f.gT8)) || a()().diff(t, "day"), (g = s && l && 1 ? n : null));
+    (null == (t = o.w.get(f.gT8)) || a()().diff(t, "day"), (m = s && l && 1 ? n : null));
 }
 function M() {
     let e;
-    if (null != g && (v(g) || ((g = null), 0))) return !1;
-    null != (e = Object.values((m = m ?? {}))[0]) && v(e)
+    if (null != m && (v(m) || ((m = null), 0))) return !1;
+    null != (e = Object.values((g = g ?? {}))[0]) && v(e)
         ? b({ type: "SURVEY_FETCHED", survey: e })
-        : null == g || (g = null);
+        : null == m || (m = null);
 }
 class P extends l.Ay.PersistedStore {
     static displayName = "SurveyStore";
@@ -128,7 +128,7 @@ class P extends l.Ay.PersistedStore {
         return T;
     }
     getCurrentSurvey() {
-        return y() ? null : g;
+        return y() ? null : m;
     }
     getSurveyOverride() {
         return T.surveyOverride;
@@ -149,7 +149,7 @@ let U = new P(d.h, {
     SURVEY_FETCHED: b,
     SURVEY_HIDE: function (e) {
         let { key: t } = e;
-        ((T.hiddenSurveys[t] = !0), (g = null), (m = m ?? {}), delete m[t]);
+        ((T.hiddenSurveys[t] = !0), (m = null), (g = g ?? {}), delete g[t]);
     },
     SURVEY_OVERRIDE: function (e) {
         let { id: t, isActionTriggered: n } = e;
@@ -157,7 +157,7 @@ let U = new P(d.h, {
             ((N = t), null != t && delete T.hiddenSurveys[t]);
             return;
         }
-        ((N = null), (T.surveyOverride = t), null != t && delete T.hiddenSurveys[t], (0, c.BC)(T.surveyOverride, !0));
+        ((N = null), (T.surveyOverride = t), null != t && delete T.hiddenSurveys[t], (0, c.B)(T.surveyOverride, !0));
     },
     PUSH_NOTIFICATION_CLICK: function () {},
     DISPLAYED_INVITE_SHOW: function () {},

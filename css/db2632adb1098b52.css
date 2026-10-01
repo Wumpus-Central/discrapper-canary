@@ -1,0 +1,27 @@
+.gameWidgetGrid__7f3a7 {
+    --custom-game-widget-grid-row-size: 3;
+    --custom-game-widget-grid-gap: var(--space-8);
+
+    @container (min-width: 192px) {
+        --custom-game-widget-grid-gap: var(--space-12)
+    }
+
+    @container (min-width: 266px) {
+        --custom-game-widget-grid-gap: var(--space-16)
+    }
+
+    @container (min-width: 324px) {
+        --custom-game-widget-grid-row-size: 4;
+        --custom-game-widget-grid-gap: var(--space-12)
+    }
+
+    @container (min-width: 360px) {
+        --custom-game-widget-grid-gap: var(--space-16)
+    }
+
+    display:grid;
+    gap:var(--custom-game-widget-grid-gap);
+    grid-template-columns:repeat(var(--custom-game-widget-grid-row-size), 1fr)
+}
+
+/*# sourceMappingURL=db2632adb1098b52.css.map*/

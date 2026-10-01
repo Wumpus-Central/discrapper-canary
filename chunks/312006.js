@@ -2,7 +2,7 @@ n.d(t, { Ay: () => C });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
-    s = n(228366),
+    s = n(73153),
     l = n(734057),
     o = n(696451),
     d = n(317525),
@@ -41,12 +41,12 @@ function T(e, t) {
     })(e, t, n);
     return ((f[t][e] = i), i);
 }
-function m(e) {
+function g(e) {
     let t = Object.values(l.A.getMutableGuildChannelsForGuild(e)).filter((e) => e.isGuildStageVoice());
     for (let e of t) delete f[e.id];
     return t.length > 0;
 }
-function g(e) {
+function m(e) {
     let { guildId: t, user: n } = e;
     if (null == n || null == t) return !1;
     var i = n.id;
@@ -96,14 +96,14 @@ let C = new N(s.h, {
     CONNECTION_OPEN: function () {
         f = {};
     },
-    GUILD_MEMBER_REMOVE: g,
-    GUILD_MEMBER_UPDATE: g,
+    GUILD_MEMBER_REMOVE: m,
+    GUILD_MEMBER_UPDATE: m,
     GUILD_ROLE_UPDATE: function (e) {
         let { guildId: t } = e;
-        m(t);
+        g(t);
     },
     PASSIVE_UPDATE_V2: function (e) {
-        return m(e.guildId);
+        return g(e.guildId);
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;

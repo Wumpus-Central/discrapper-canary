@@ -47,9 +47,13 @@ function E(e) {
                   x.dispatch(M.jej.POPOUT_CLOSE),
                   (0, r.closeAllModals)())
                 : (0, r.openModalLazy)(async () => {
-                      let { default: e } = await Promise.all([l.e("462408"), l.e("928662"), l.e("448635")]).then(
-                          l.bind(l, 752118),
-                      );
+                      let { default: e } = await Promise.all([
+                          l.e("611137"),
+                          l.e("638781"),
+                          l.e("188941"),
+                          l.e("928662"),
+                          l.e("448635"),
+                      ]).then(l.bind(l, 752118));
                       return (l) =>
                           (0, n.jsx)(e, { ...l, guildId: t, user: I, analyticsSource: N, analyticsLocations: f });
                   });

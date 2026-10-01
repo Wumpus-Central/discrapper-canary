@@ -1,8 +1,8 @@
 n.d(t, {
     EW: () => y,
     Go: () => O,
-    Gr: () => m,
-    RE: () => g,
+    Gr: () => g,
+    RE: () => m,
     VQ: () => f,
     XQ: () => S,
     a: () => L,
@@ -14,7 +14,7 @@ n.d(t, {
 });
 var i = n(636537),
     r = n(765178),
-    a = n(228366),
+    a = n(73153),
     s = n(913122),
     l = n(268429),
     o = n(61310),
@@ -59,11 +59,11 @@ async function T(e, t, n) {
         return (a.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: n, apiError: e }), i);
     }
 }
-function m(e, t) {
+function g(e, t) {
     let n = c.default.getCurrentUser()?.id;
     null != n && a.h.dispatch({ type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: e, ttlInSeconds: t, userId: n });
 }
-function g() {
+function m() {
     a.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 }
 function S() {

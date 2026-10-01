@@ -1,8 +1,8 @@
 n.d(t, { N: () => l, t: () => s });
-var i = n(565150),
+var i = n(274652),
     r = n(452661);
 function a(e) {
-    return e.platform !== i.xz.WEB || !0 === e.imageConversionEvaluated || null == e.file
+    return e.platform !== i.x.WEB || !0 === e.imageConversionEvaluated || null == e.file
         ? null
         : (0, r.E5)(e.file)
           ? "heic"
@@ -15,7 +15,7 @@ function s(e) {
 }
 async function l(e) {
     let t = a(e);
-    if (null == t || e.platform !== i.xz.WEB) return e;
+    if (null == t || e.platform !== i.x.WEB) return e;
     try {
         let [
                 { convertFileToJpeg: i },

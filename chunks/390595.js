@@ -3,7 +3,7 @@ var i = n(132500),
     r = n(71931),
     a = n(17928),
     s = n(506774),
-    l = n(228366),
+    l = n(73153),
     o = n(311964),
     d = n(626584),
     c = n(597643);
@@ -18,8 +18,8 @@ var _ = n(280450),
     f = n(38405),
     p = n(70298),
     T = n(973522),
-    m = n(952818),
-    g = n(321034),
+    g = n(952818),
+    m = n(321034),
     S = n(789999),
     N = n(976860),
     C = n(569745);
@@ -79,10 +79,10 @@ async function Y() {
         client_heartbeat_version: 31,
         ...{
             ...((e = {}),
-            null != (t = g.A.getMemoryUsageElectronRenderer()) && (e.client_heartbeat_renderer_memory = t),
-            null != (n = g.A.getMemoryUsageElectronRendererUsedHeapSize()) &&
+            null != (t = m.A.getMemoryUsageElectronRenderer()) && (e.client_heartbeat_renderer_memory = t),
+            null != (n = m.A.getMemoryUsageElectronRendererUsedHeapSize()) &&
                 (e.client_heartbeat_renderer_memory_used_heap = n),
-            null != (i = g.A.getMemoryUsageElectronProcessTypeDetails()) &&
+            null != (i = m.A.getMemoryUsageElectronProcessTypeDetails()) &&
                 ((e.electron_process_memory_private = [
                     i.unknown?.wss_priv_kb ?? -1,
                     i.main?.wss_priv_kb ?? -1,
@@ -103,7 +103,7 @@ async function Y() {
                 ])),
             e),
             ...((r = {}),
-            null != (a = m.Ay.getCurrentGameForAnalytics()) &&
+            null != (a = g.Ay.getCurrentGameForAnalytics()) &&
                 ((r.client_heartbeat_current_game_id = a.id),
                 (r.client_heartbeat_current_game_name = a.name),
                 (r.client_heartbeat_current_game_executable = (0, T.Ic)(a.exePath)),
@@ -163,11 +163,11 @@ function X(e) {
           ? (U.warn(`Throwing away client session with invalid version: ${e.version}, expected ${R.Ir}`), null)
           : e;
 }
-async function q() {
+async function Z() {
     let e = await er(!1);
     null != e && c.A.getSocket()?.handleUpdateTimeSpentSessionId(e.createdAtTimestamp, e.uuid, r.C);
 }
-function Z() {
+function q() {
     let e = _.default.getToken();
     (j !== e && ((j = e), s.w.remove(M), (F = { state: "loaded", session: null }), W(), (k = 0)), z());
 }
@@ -189,15 +189,15 @@ function et(e) {
     V !== n && ((V = n), z());
 }
 function en() {
-    ((B = A.A.getState()), (V = (0, S.R)()), (H = O()), Z());
+    ((B = A.A.getState()), (V = (0, S.R)()), (H = O()), q());
 }
 function ei() {
     (f.A.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" }),
         A.A.addChangeListener(Q),
-        _.default.addChangeListener(Z),
+        _.default.addChangeListener(q),
         l.h.subscribe("WINDOW_FOCUS", J),
         l.h.subscribe("APP_STATE_UPDATE", et),
-        l.h.subscribe("CONNECTION_OPEN", q),
+        l.h.subscribe("CONNECTION_OPEN", Z),
         (0, N.JK)().listen(ee),
         z(),
         null == G &&

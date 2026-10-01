@@ -2,7 +2,7 @@
     $J: () => L,
     IG: () => w,
     Ps: () => G,
-    UR: () => N,
+    UR: () => h,
     W1: () => P,
     WU: () => b,
     _Q: () => U,
@@ -22,7 +22,7 @@ var r,
     u = n(132500),
     l = n(323889),
     i = n(412703),
-    o = n(228366),
+    o = n(73153),
     s = n(975807),
     a = n(274670),
     c = n(144779),
@@ -39,8 +39,8 @@ var r,
     S = n(792620),
     O = n(190107),
     g = n(652215),
-    h = n(375708);
-function N(e) {
+    N = n(375708);
+function h(e) {
     let t = (0, S.t)({ quest: e }) || (0, S.fE)({ quest: e }) || (0, S.I6)(e),
         n = (0, S.uD)(e),
         r = [];
@@ -90,7 +90,7 @@ function R(e, t) {
         (0, A.A)({ platformType: n, location: t.ctaContent }));
 }
 function w(e) {
-    return L(e) === g.fg2.XBOX ? h.t["mytEv+"] : h.t.iDiwby;
+    return L(e) === g.fg2.XBOX ? N.t["mytEv+"] : N.t.iDiwby;
 }
 function y(e) {
     if (((0, p.isIOS)() || "ios" === (0, p.getOS)()) && e.ios?.iosAppId != null) {

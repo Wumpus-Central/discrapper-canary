@@ -1,8 +1,8 @@
-t.d(n, { A: () => r });
-var i = t(17928),
-    l = t(228366);
+n.d(t, { A: () => a });
+var i = n(17928),
+    l = n(73153);
 let s = new Set();
-class a extends i.Ay.PersistedStore {
+class r extends i.Ay.PersistedStore {
     static displayName = "ForumChannelAdminOnboardingGuideStore";
     static persistKey = "ForumChannelAdminOnboardingGuideStore";
     initialize(e) {
@@ -15,9 +15,9 @@ class a extends i.Ay.PersistedStore {
         return s;
     }
 }
-let r = new a(l.h, {
+let a = new r(l.h, {
     ADMIN_ONBOARDING_GUIDE_HIDE: function (e) {
-        let { channelId: n, hide: t } = e;
-        t ? s.add(n) : s.delete(n);
+        let { channelId: t, hide: n } = e;
+        n ? s.add(t) : s.delete(t);
     },
 });

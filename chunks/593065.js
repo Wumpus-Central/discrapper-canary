@@ -1,4 +1,4 @@
-n.d(t, { A: () => Z });
+n.d(t, { A: () => q });
 var i = n(477900),
     r = n(582128),
     a = n(64015),
@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(793574),
     p = n(95561),
     T = n(688810),
-    m = n(660387),
-    g = n(343328),
+    g = n(660387),
+    m = n(343328),
     S = n(485947),
     N = n(915089),
     C = n(840251),
@@ -50,10 +50,11 @@ function B(e) {
                 action: () => {
                     (0, x.openModalLazy)(async () => {
                         let { default: e } = await Promise.all([
-                            n.e("769281"),
+                            n.e("866475"),
                             n.e("367675"),
                             n.e("844780"),
                             n.e("766031"),
+                            n.e("510630"),
                             n.e("564828"),
                         ]).then(n.bind(n, 378455));
                         return (t) => (0, i.jsx)(e, { ...t });
@@ -130,7 +131,7 @@ let X = r.memo(function () {
         ],
     });
 });
-class q extends r.Component {
+class Z extends r.Component {
     static getDerivedStateFromProps(e) {
         let { children: t, privateChannelIds: n } = e;
         if (null == t) return { preRenderedChildren: 0, nonNullChildren: [], totalRowCount: n.length };
@@ -179,7 +180,7 @@ class q extends r.Component {
         let a = Math.round((e.offsetHeight - 44 * i) / 44),
             s = a > t.length ? t.slice(0, a + 1) : t,
             l = s.map((e) => (null != n[e] ? n[e].getRecipientId() : null)),
-            o = t.some((e) => (0, g.A)(e)),
+            o = t.some((e) => (0, m.A)(e)),
             d = {
                 num_users_visible: s.length,
                 num_users_visible_with_mobile_indicator: l.filter((e) => null != e && W.A.isMobileOnline(e)).length,
@@ -187,7 +188,7 @@ class q extends r.Component {
         ((this.hasReportedAnalytics = !0),
             p.Ay.trackWithMetadata($.HAw.DM_LIST_VIEWED, {
                 ...d,
-                ...(0, m.F)(),
+                ...(0, g.F)(),
                 visible_user_ids: l.filter((e) => null != e),
                 changelog_dm_visible: o,
             }));
@@ -301,7 +302,7 @@ class q extends r.Component {
         });
     }
 }
-let Z = function (e) {
+let q = function (e) {
     let { density: t } = (0, A.wR)(),
         { version: n, theme: a, children: s, listScrollerRef: c } = e,
         u = r.Children.count(s),
@@ -313,8 +314,8 @@ let Z = function (e) {
         });
     (0, L.P)(R);
     let { analyticsLocations: p } = (0, T.Ay)(f.A.CONTACTS_LIST),
-        m = (0, H.NC)(),
-        { keyboardModeEnabled: g, version: S } = (0, d.cf)([I.Ay, j.A], () => ({
+        g = (0, H.NC)(),
+        { keyboardModeEnabled: m, version: S } = (0, d.cf)([I.Ay, j.A], () => ({
             keyboardModeEnabled: I.Ay.keyboardModeEnabled,
             version: null != n ? `${n}:${j.A.getPrivateChannelsVersion()}` : j.A.getPrivateChannelsVersion(),
         })),
@@ -360,7 +361,7 @@ let Z = function (e) {
         U = (0, N.GV)(),
         w = (0, o.Ay)({
             id: `private-channels-${U}`,
-            isEnabled: g,
+            isEnabled: m,
             scrollToStart: M,
             scrollToEnd: P,
             defaultFocused: (u + 1).toString(),
@@ -370,13 +371,13 @@ let Z = function (e) {
         value: p,
         children: (0, i.jsx)(l.hD, {
             navigator: w,
-            children: (0, i.jsx)(q, {
+            children: (0, i.jsx)(Z, {
                 ...e,
                 density: t,
                 channels: E,
                 privateChannelIds: h,
                 listRef: O,
-                theme: m ?? a,
+                theme: g ?? a,
                 version: S,
             }),
         }),

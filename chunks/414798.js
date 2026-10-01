@@ -1,10 +1,10 @@
-n.d(t, { A: () => l });
-var i = n(228366);
-let l = {
-    startTyping(e) {
-        i.h.dispatch({ type: "TYPING_START_LOCAL", channelId: e });
+s.d(t, { A: () => i });
+var h = s(73153);
+let i = {
+    startTyping(p) {
+        h.h.dispatch({ type: "TYPING_START_LOCAL", channelId: p });
     },
-    stopTyping(e) {
-        i.h.dispatch({ type: "TYPING_STOP_LOCAL", channelId: e });
+    stopTyping(p) {
+        h.h.dispatch({ type: "TYPING_STOP_LOCAL", channelId: p });
     },
 };

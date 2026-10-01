@@ -38,7 +38,7 @@ var t = l(477900),
     U = l(696451),
     V = l(174459),
     H = l(370480),
-    $ = l(228366);
+    $ = l(73153);
 let z = new Map();
 class B extends c.Ay.Store {
     static displayName = "GuildRoleConnectionEligibilityStore";
@@ -321,7 +321,7 @@ var eu = l(870136),
     ex = l(297264),
     eA = l(821609),
     ej = l(964486),
-    ep = l(684519),
+    ep = l(188645),
     ev = l(448290),
     ef = l(309010),
     eN = l(933884);
@@ -574,8 +574,8 @@ let e8 = function (e) {
         }),
     });
 };
-var e6 = l(812299),
-    e7 = l(109054),
+var e7 = l(812299),
+    e6 = l(109054),
     e2 = l(318626);
 function e3(e) {
     let {
@@ -632,7 +632,7 @@ let e4 = i.memo(function (e) {
         } = e,
         b = (0, ez.Ay)(n, l),
         C = i.useMemo(
-            () => (0, e6.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
+            () => (0, e7.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
             [n, a, r],
         ),
         E = i.useRef(null),
@@ -853,7 +853,7 @@ let nn = i.memo(function (e) {
                 { analyticsLocations: b } = (0, A.Ay)(x.A.AVATAR),
                 C = eU.aM.useSetting(),
                 E = n.displayCompactAvatars ?? C,
-                y = (0, e7.A)(c),
+                y = (0, e6.A)(c),
                 M = u ? 32 : 80,
                 {
                     avatarSrc: _,
@@ -967,7 +967,7 @@ let nn = i.memo(function (e) {
         R = eU.aM.useSetting(),
         T = e.displayCompactAvatars ?? R,
         w = i.useMemo(
-            () => (0, e6.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
+            () => (0, e7.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
             [n, I, a],
         ),
         O = (0, c.bG)([eV.A], () => ne(a, T, j, eV.A.getGuild(e.guildId)), [a, T, j, e.guildId]),

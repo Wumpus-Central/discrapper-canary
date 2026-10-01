@@ -12,7 +12,7 @@ var i,
     E = n(847374),
     h = n(922016),
     m = n(192308),
-    I = n(228366),
+    I = n(73153),
     g = n(442433),
     C = n(793574),
     _ = n(688810),
@@ -264,13 +264,13 @@ var eM = n(875317),
     eJ = n(498470),
     e0 = n(807098),
     e1 = n(637706),
-    e6 = n(788883),
-    e3 = n(7667);
+    e3 = n(788883),
+    e6 = n(7667);
 function e8(e) {
     let { guildId: t, componentId: n, promotionId: i, coachmark: r, targetElementRef: a, markAsDismissed: o } = e,
         { analyticsLocations: u } = (0, _.Ay)(),
         c = (0, e0.T)(r.asset),
-        { terms: A } = (0, e3.A)(i),
+        { terms: A } = (0, e6.A)(i),
         E = l.useCallback(() => {
             o(ea.i.DISMISS);
         }, [o]),
@@ -291,7 +291,7 @@ function e8(e) {
         C = r.button?.copy ?? "";
     return (0, s.jsxs)(s.Fragment, {
         children: [
-            (0, s.jsx)(e6.A, {
+            (0, s.jsx)(e3.A, {
                 componentType: el.C.GUILD_HEADER_COACHMARK,
                 componentId: n,
                 promotionId: i,
@@ -313,20 +313,20 @@ function e8(e) {
     });
 }
 var e5 = n(562708),
-    e7 = n(702841),
-    e2 = n(139286),
+    e2 = n(702841),
+    e7 = n(139286),
     e9 = n(468689),
     e4 = n(375708),
     te = n(330766);
 function tt(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
-        l = (0, e7.bG)([v.A, eI.default], () => {
+        l = (0, e2.bG)([v.A, eI.default], () => {
             let e = eI.default.getCurrentUser(),
                 n = v.A.getGuild(t);
             return null != n && (0, em.bM)(n, e);
         });
     return (
-        (0, e2.A)({
+        (0, e7.A)({
             type: e5.ImpressionTypes.POPOUT,
             name: e5.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: l },
@@ -792,12 +792,12 @@ var tZ = n(503698),
     tJ = n(933832),
     t0 = n(782603),
     t1 = n(81466),
-    t6 = n(116085),
-    t3 = n(597601),
+    t3 = n(116085),
+    t6 = n(597601),
     t8 = n(451394),
     t5 = n(104171),
-    t7 = n(47167),
-    t2 = n(713654),
+    t2 = n(47167),
+    t7 = n(713654),
     t9 = n(976860),
     t4 = n(790535),
     ne = n(110618),
@@ -881,7 +881,7 @@ let nm = l.memo(function (e) {
 });
 function nI(e) {
     let { guildEvent: t, channel: n } = e,
-        i = (0, t7.Ay)(n),
+        i = (0, t2.Ay)(n),
         l = (0, o.yK)(
             [D.Ay],
             () =>
@@ -891,7 +891,7 @@ function nI(e) {
                 }),
             [n],
         ),
-        r = (0, t2.gU)(n);
+        r = (0, t7.gU)(n);
     return (0, s.jsx)(nm, {
         onClickCloseIcon: () => (0, na.iF)({ eventId: t?.id }),
         heading: e4.intl.string(e4.t["X2K3/4"]),
@@ -926,8 +926,8 @@ function nC(e) {
         i = (0, nc.oF)(t),
         r = null != i ? (0, nd.y)(i, !0) : null,
         a = (0, nc.WN)(t),
-        o = (0, t7.Ay)(a),
-        d = (0, t2.gU)(a),
+        o = (0, t2.Ay)(a),
+        d = (0, t7.gU)(a),
         { startTime: u, endTime: c } = (0, nu.Ay)(t),
         { startDateTimeString: A, upcomingEvent: E, diffMinutes: h } = (0, nA.CC)(u.toISOString(), c?.toISOString()),
         m = E
@@ -992,7 +992,7 @@ function nC(e) {
                     children: [
                         null != d
                             ? (0, s.jsx)(d, { size: "xs", color: "currentColor", className: nh.uE })
-                            : (0, s.jsx)(t6.B, {
+                            : (0, s.jsx)(t3.B, {
                                   size: "custom",
                                   color: "currentColor",
                                   width: 16,
@@ -1022,7 +1022,7 @@ function n_(e) {
               heading: e4.intl.string(e4.t["1+boPi"]),
               topic: t.name,
               location: (0, nd.y)(n, !0),
-              locationIcon: (0, s.jsx)(t6.B, {
+              locationIcon: (0, s.jsx)(t3.B, {
                   size: "custom",
                   color: "currentColor",
                   width: 16,
@@ -1067,7 +1067,7 @@ function np(e) {
 }
 function nS(e) {
     let { stageInstance: t, channel: n } = e,
-        i = (0, t7.Ay)(n),
+        i = (0, t2.Ay)(n),
         l = (0, o.yK)([p.A], () => [...new Set(p.A.getMutableParticipants(n.id, S.ip.SPEAKER).map((e) => e.user))], [
             n.id,
         ]),
@@ -1078,7 +1078,7 @@ function nS(e) {
         heading: e4.intl.string(e4.t["X2K3/4"]),
         location: i,
         details: a,
-        detailsIcon: (0, s.jsx)(t3.L, {
+        detailsIcon: (0, s.jsx)(t6.L, {
             size: "custom",
             color: "currentColor",
             width: 14,
@@ -1203,7 +1203,7 @@ function nD(e) {
         onClick: function () {
             (0, m.openModalLazy)(async () => {
                 let { default: e } = await Promise.all([
-                    n.e("722514"),
+                    n.e("638781"),
                     n.e("197804"),
                     n.e("807265"),
                     n.e("797641"),
@@ -1441,13 +1441,13 @@ let nJ = new n$(I.h),
         { type: B.n5X.LINKED_ROLES_ADMIN, dismissibleContentType: d.M.LINKED_ROLE_ADMIN_GUILD },
         { type: B.n5X.GAME_CLAIM, dismissibleContentType: d.M.GAME_CLAIM_COACHMARK },
     ],
-    n6 = n1.map((e) => e.store).filter(ns.Vq),
-    n3 = new Set([d.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, d.M.CHANNEL_NOTICE_GUILD_BANNER]);
+    n3 = n1.map((e) => e.store).filter(ns.Vq),
+    n6 = new Set([d.M.CHANNEL_NOTICE_PREMIUM_GUILD_SUBSCRIPTION, d.M.CHANNEL_NOTICE_GUILD_BANNER]);
 function n8(e) {
     e.stopPropagation();
 }
 let n5 = [];
-function n7(e) {
+function n2(e) {
     var t, n;
     let i,
         r,
@@ -1475,14 +1475,14 @@ function n7(e) {
         [I, g] = (0, $.ww)(m, A.id, ea.m.CHANNEL_NOTICES, !0),
         C = null != I,
         _ = (0, o.yK)(
-            n6,
+            n3,
             () =>
                 C
                     ? []
                     : n1
                           .filter((e) => {
                               let { dismissibleContentType: t, store: n } = e;
-                              return !0 === n?.channelNoticePredicate(A, E) && !n3.has(t);
+                              return !0 === n?.channelNoticePredicate(A, E) && !n6.has(t);
                           })
                           .map((e) => e.dismissibleContentType),
             [A, E, C],
@@ -1520,7 +1520,7 @@ function n7(e) {
         })();
     return null == f ? null : (0, s.jsx)("div", { onContextMenu: n8, children: f });
 }
-let n2 = function (e) {
+let n7 = function (e) {
     let { guild: t } = e;
     switch (Q(t)) {
         case Y.ENABLE_PUBLIC_GUILD:
@@ -1536,7 +1536,7 @@ let n2 = function (e) {
         case Y.APPLICATION_SUBSCRIPTION_EXPIRATION:
             return (0, s.jsx)(nG, { guild: t });
     }
-    return ny.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n7, { guild: e.guild });
+    return ny.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n2, { guild: e.guild });
 };
 var n9 = n(883476);
 function n4(e) {
@@ -1547,7 +1547,7 @@ function n4(e) {
             let e = i.current;
             null != e && n(e.childNodes.length > 0);
         }),
-        (0, s.jsx)("div", { className: n9.k, ref: i, children: (0, s.jsx)(n2, { guild: t }) })
+        (0, s.jsx)("div", { className: n9.k, ref: i, children: (0, s.jsx)(n7, { guild: t }) })
     );
 }
 var ie = n(66933),
@@ -1651,7 +1651,9 @@ class ir extends l.PureComponent {
                     n.e("774550"),
                     n.e("923981"),
                     n.e("618416"),
-                    n.e("366313"),
+                    n.e("902654"),
+                    n.e("706073"),
+                    n.e("227512"),
                     n.e("262564"),
                     n.e("71866"),
                     n.e("891473"),
@@ -1708,8 +1710,8 @@ class ir extends l.PureComponent {
                     n.e("724086"),
                     n.e("358937"),
                     n.e("448738"),
-                    n.e("383670"),
-                    n.e("258407"),
+                    n.e("680431"),
+                    n.e("338332"),
                     n.e("894292"),
                     n.e("153302"),
                     n.e("88683"),
@@ -1753,18 +1755,22 @@ class ir extends l.PureComponent {
                     n.e("684231"),
                     n.e("570690"),
                     n.e("886631"),
-                    n.e("74336"),
-                    n.e("978898"),
+                    n.e("435860"),
+                    n.e("426782"),
                     n.e("406322"),
                     n.e("942571"),
                     n.e("464759"),
                     n.e("763343"),
                     n.e("194704"),
                     n.e("403643"),
-                    n.e("166741"),
+                    n.e("323223"),
+                    n.e("830560"),
                     n.e("526575"),
-                    n.e("270076"),
-                    n.e("703728"),
+                    n.e("588035"),
+                    n.e("165291"),
+                    n.e("109383"),
+                    n.e("818291"),
+                    n.e("243794"),
                     n.e("519435"),
                     n.e("10985"),
                     n.e("171206"),
@@ -1782,7 +1788,7 @@ class ir extends l.PureComponent {
                     n.e("914175"),
                     n.e("529366"),
                     n.e("990185"),
-                    n.e("357712"),
+                    n.e("444038"),
                     n.e("849162"),
                     n.e("660201"),
                     n.e("571247"),
@@ -1812,10 +1818,6 @@ class ir extends l.PureComponent {
                     n.e("845486"),
                     n.e("58353"),
                     n.e("17256"),
-                    n.e("903758"),
-                    n.e("76283"),
-                    n.e("792513"),
-                    n.e("292699"),
                     n.e("377016"),
                     n.e("385504"),
                     n.e("269714"),
@@ -1848,7 +1850,8 @@ class ir extends l.PureComponent {
                     n.e("259465"),
                     n.e("655327"),
                     n.e("335532"),
-                    n.e("56955"),
+                    n.e("138545"),
+                    n.e("536490"),
                     n.e("463455"),
                     n.e("403655"),
                     n.e("317615"),
@@ -1856,6 +1859,9 @@ class ir extends l.PureComponent {
                     n.e("877730"),
                     n.e("611899"),
                     n.e("527552"),
+                    n.e("903758"),
+                    n.e("76283"),
+                    n.e("792513"),
                     n.e("769266"),
                     n.e("487873"),
                     n.e("765626"),
@@ -1893,7 +1899,9 @@ class ir extends l.PureComponent {
                     n.e("863232"),
                     n.e("25279"),
                     n.e("364827"),
+                    n.e("834552"),
                     n.e("517888"),
+                    n.e("993103"),
                     n.e("811133"),
                     n.e("959880"),
                     n.e("174016"),
@@ -1904,6 +1912,7 @@ class ir extends l.PureComponent {
                     n.e("784569"),
                     n.e("861060"),
                     n.e("77333"),
+                    n.e("708757"),
                     n.e("56366"),
                     n.e("11735"),
                     n.e("477175"),
@@ -1915,13 +1924,11 @@ class ir extends l.PureComponent {
                     n.e("678157"),
                     n.e("646271"),
                     n.e("325675"),
-                    n.e("993103"),
                     n.e("996481"),
                     n.e("331988"),
                     n.e("40291"),
                     n.e("733115"),
                     n.e("397270"),
-                    n.e("834552"),
                     n.e("373122"),
                     n.e("217951"),
                     n.e("793716"),
@@ -1944,44 +1951,44 @@ class ir extends l.PureComponent {
                     n.e("719466"),
                     n.e("99799"),
                     n.e("576909"),
-                    n.e("708757"),
+                    n.e("585968"),
                     n.e("27355"),
                     n.e("393336"),
-                    n.e("585968"),
                     n.e("481647"),
-                    n.e("776602"),
                     n.e("776273"),
+                    n.e("776602"),
                     n.e("140402"),
-                    n.e("407170"),
                     n.e("391763"),
-                    n.e("811310"),
                     n.e("21921"),
+                    n.e("407170"),
+                    n.e("811310"),
+                    n.e("571210"),
+                    n.e("676418"),
                     n.e("307575"),
-                    n.e("554241"),
-                    n.e("724303"),
-                    n.e("521930"),
                     n.e("942724"),
                     n.e("913823"),
                     n.e("393766"),
+                    n.e("166495"),
                     n.e("401518"),
-                    n.e("571210"),
+                    n.e("88342"),
                     n.e("187110"),
                     n.e("854461"),
                     n.e("139970"),
-                    n.e("676418"),
+                    n.e("554241"),
                     n.e("940258"),
+                    n.e("724303"),
                     n.e("198329"),
+                    n.e("521930"),
                     n.e("292583"),
+                    n.e("308555"),
                     n.e("53102"),
                     n.e("110327"),
                     n.e("586127"),
                     n.e("173764"),
                     n.e("875842"),
-                    n.e("166495"),
+                    n.e("311802"),
                     n.e("9205"),
                     n.e("25949"),
-                    n.e("308555"),
-                    n.e("88342"),
                     n.e("146070"),
                     n.e("836863"),
                     n.e("854622"),
@@ -1989,66 +1996,60 @@ class ir extends l.PureComponent {
                     n.e("344502"),
                     n.e("617249"),
                     n.e("88599"),
-                    n.e("311802"),
                     n.e("179049"),
                     n.e("95340"),
                     n.e("362422"),
                     n.e("590365"),
+                    n.e("37977"),
                     n.e("136149"),
                     n.e("470068"),
-                    n.e("171273"),
+                    n.e("354044"),
                     n.e("817989"),
                     n.e("437065"),
-                    n.e("37977"),
                     n.e("720590"),
-                    n.e("691671"),
                     n.e("709640"),
                     n.e("23055"),
                     n.e("147626"),
+                    n.e("756055"),
                     n.e("952548"),
                     n.e("613867"),
                     n.e("164776"),
-                    n.e("892471"),
                     n.e("203589"),
-                    n.e("756055"),
+                    n.e("636373"),
+                    n.e("255580"),
                     n.e("294857"),
+                    n.e("726033"),
                     n.e("480830"),
                     n.e("179745"),
-                    n.e("96680"),
                     n.e("64504"),
-                    n.e("868214"),
                     n.e("553984"),
                     n.e("280854"),
                     n.e("335395"),
-                    n.e("943780"),
+                    n.e("608557"),
                     n.e("884601"),
                     n.e("782969"),
                     n.e("154469"),
                     n.e("945413"),
                     n.e("146844"),
-                    n.e("255580"),
                     n.e("163235"),
                     n.e("212055"),
                     n.e("486672"),
-                    n.e("661814"),
-                    n.e("75029"),
                     n.e("14035"),
+                    n.e("75029"),
                     n.e("564850"),
                     n.e("170104"),
                     n.e("491793"),
                     n.e("474610"),
                     n.e("902564"),
                     n.e("981004"),
-                    n.e("608557"),
                     n.e("428967"),
                     n.e("92935"),
+                    n.e("631908"),
                     n.e("67878"),
                     n.e("568156"),
                     n.e("758946"),
                     n.e("214285"),
                     n.e("248330"),
-                    n.e("612287"),
-                    n.e("588070"),
                     n.e("803332"),
                     n.e("859546"),
                     n.e("938149"),
@@ -2060,7 +2061,7 @@ class ir extends l.PureComponent {
                     n.e("204744"),
                     n.e("737021"),
                     n.e("695164"),
-                    n.e("631908"),
+                    n.e("114308"),
                     n.e("818465"),
                     n.e("971430"),
                     n.e("976516"),
@@ -2071,32 +2072,42 @@ class ir extends l.PureComponent {
                     n.e("473384"),
                     n.e("487062"),
                     n.e("282783"),
-                    n.e("305557"),
                     n.e("859991"),
                     n.e("368062"),
                     n.e("844780"),
-                    n.e("793438"),
-                    n.e("36227"),
                     n.e("386317"),
                     n.e("709371"),
-                    n.e("310235"),
-                    n.e("288534"),
+                    n.e("924691"),
+                    n.e("217802"),
                     n.e("939171"),
+                    n.e("96680"),
+                    n.e("868214"),
+                    n.e("661814"),
                     n.e("713567"),
+                    n.e("612287"),
+                    n.e("588070"),
+                    n.e("793438"),
+                    n.e("305557"),
+                    n.e("36227"),
+                    n.e("322422"),
                     n.e("444567"),
                     n.e("229666"),
+                    n.e("92295"),
                     n.e("589916"),
                     n.e("695170"),
                     n.e("460773"),
                     n.e("309004"),
+                    n.e("883952"),
                     n.e("28676"),
                     n.e("458273"),
                     n.e("208018"),
                     n.e("968763"),
+                    n.e("449145"),
                     n.e("278045"),
-                    n.e("883952"),
                     n.e("26001"),
+                    n.e("159957"),
                     n.e("599976"),
+                    n.e("174192"),
                     n.e("414591"),
                     n.e("652111"),
                     n.e("434786"),
@@ -2104,34 +2115,35 @@ class ir extends l.PureComponent {
                     n.e("982730"),
                     n.e("708536"),
                     n.e("411353"),
-                    n.e("449145"),
                     n.e("49716"),
                     n.e("506045"),
-                    n.e("159957"),
-                    n.e("368530"),
                     n.e("618706"),
                     n.e("203930"),
                     n.e("800872"),
                     n.e("903663"),
                     n.e("452531"),
                     n.e("201243"),
+                    n.e("573330"),
+                    n.e("728136"),
                     n.e("65393"),
                     n.e("338601"),
+                    n.e("368530"),
+                    n.e("343116"),
                     n.e("215920"),
-                    n.e("728136"),
+                    n.e("216084"),
+                    n.e("66580"),
                     n.e("978046"),
                     n.e("127659"),
                     n.e("610943"),
-                    n.e("66580"),
-                    n.e("216084"),
-                    n.e("343116"),
                     n.e("283230"),
                     n.e("582486"),
                     n.e("273669"),
                     n.e("507775"),
+                    n.e("284819"),
                     n.e("466147"),
                     n.e("50342"),
                     n.e("428235"),
+                    n.e("369501"),
                     n.e("303710"),
                     n.e("161058"),
                     n.e("134504"),
@@ -2140,7 +2152,6 @@ class ir extends l.PureComponent {
                     n.e("409391"),
                     n.e("645830"),
                     n.e("115368"),
-                    n.e("284819"),
                     n.e("810262"),
                     n.e("741786"),
                     n.e("995602"),
@@ -2165,7 +2176,7 @@ class ir extends l.PureComponent {
                     n.e("779348"),
                     n.e("647011"),
                     n.e("269178"),
-                    n.e("331203"),
+                    n.e("553584"),
                     n.e("466913"),
                     n.e("983947"),
                     n.e("71719"),
@@ -2180,6 +2191,7 @@ class ir extends l.PureComponent {
                     n.e("37786"),
                     n.e("886692"),
                     n.e("916373"),
+                    n.e("528038"),
                     n.e("81398"),
                     n.e("324484"),
                     n.e("925172"),
@@ -2630,19 +2642,19 @@ function ia(e) {
     ie.A.useConfig({ guildId: R, location: "guild_sidebar" });
     let e0 = (0, ei.C$)(R, "GuildSidebar"),
         e1 = (0, o.bG)([v.A], () => v.A.getGuild(R)?.features.has(B.GuildFeatures.GAME_SERVERS) ?? !1, [R]),
-        e6 = e0 && !e1 && !1 === e$,
-        e3 = (0, eb.A)(),
+        e3 = e0 && !e1 && !1 === e$,
+        e6 = (0, eb.A)(),
         e8 = (0, eO.A)(R),
-        e5 = !1 === e$ && e3 && null != e8,
-        e7 = (0, eG.A)(R),
-        e2 = !1 === e$ && e3 && null != e7,
+        e5 = !1 === e$ && e6 && null != e8,
+        e2 = (0, eG.A)(R),
+        e7 = !1 === e$ && e6 && null != e2,
         e9 = [];
     (e_ && e9.push(d.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
         eC && e9.push(d.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
         eN && e9.push(d.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
         !1 === e$ && e9.push(d.M.GUILD_POWERUP_PERKS_COACHMARK),
         eJ && e9.push(d.M.GUILD_THEME_MEMBER_COACHMARK),
-        e6 && e9.push(d.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        e3 && e9.push(d.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
         eK && e9.push(d.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
     let [e4, te] = (0, $.kn)(e9, ea.m.GUILD_HEADER_TOOLTIPS),
         [tt, tn] = (0, ex.vB)(e0 && !1 === e$ && !(0, ee.ai)(R), ea.m.GUILD_HEADER_TOOLTIPS),
@@ -2653,7 +2665,7 @@ function ia(e) {
             ea.m.GUILD_HEADER_TOOLTIPS,
         ),
         [tl, tr] = (0, $.D8)(
-            e2 ? d.M.EXPIRING_POWERUP_COACHMARK : null,
+            e7 ? d.M.EXPIRING_POWERUP_COACHMARK : null,
             R,
             { cooldownDurationMs: eR.mD },
             ea.m.GUILD_HEADER_TOOLTIPS,
@@ -2678,8 +2690,8 @@ function ia(e) {
                         ? { contentType: tt, data: null, markAsDismissed: tn }
                         : ti === d.M.BOOST_TO_UNLOCK_COACHMARK && null != e8
                           ? { contentType: ti, data: { featuredPowerup: e8 }, markAsDismissed: ts }
-                          : tl === d.M.EXPIRING_POWERUP_COACHMARK && null != e7
-                            ? { contentType: tl, data: { featuredExpiringPowerup: e7 }, markAsDismissed: tr }
+                          : tl === d.M.EXPIRING_POWERUP_COACHMARK && null != e2
+                            ? { contentType: tl, data: { featuredExpiringPowerup: e2 }, markAsDismissed: tr }
                             : null,
             [
                 Z.shouldShow,
@@ -2692,7 +2704,7 @@ function ia(e) {
                 ti,
                 tl,
                 e8,
-                e7,
+                e2,
                 te,
                 tn,
                 ts,

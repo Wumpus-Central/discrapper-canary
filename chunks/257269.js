@@ -1,7 +1,7 @@
-n.d(t, { Py: () => c, VP: () => d, d9: () => o });
+n.d(t, { Py: () => d, d9: () => o });
 var i = n(526218),
     r = n(636537),
-    a = n(228366);
+    a = n(73153);
 n(582388);
 var s = n(652215);
 async function l(e, t) {
@@ -38,10 +38,7 @@ async function o(e, t, n) {
         return { customId: void 0 };
     }
 }
-function d(e) {
-    if (null != e) return `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/attachments-quick-links/${e}`;
-}
-async function c(e, t) {
+async function d(e, t) {
     if (null == e || null == t) return Promise.reject("appId or linkId null");
     let n = await l(e, t);
     if (null == n) return Promise.reject("fetchCustomActivityLink body is null");

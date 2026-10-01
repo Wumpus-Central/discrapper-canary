@@ -1,10 +1,9 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => c });
 var i = n(17928),
-    r = n(228366),
+    r = n(73153),
     a = n(526218),
-    s = n(970928),
-    l = n(257269);
-class o {
+    s = n(970928);
+class l {
     type;
     applicationId;
     linkId;
@@ -28,23 +27,26 @@ class o {
         return this.type === a.G.MANAGED
             ? (0, s.uD)(this.applicationId, this.assetId, 512)
             : this.type === a.G.QUICK
-              ? (0, l.VP)(this.assetPath)
+              ? (function (e) {
+                    if (null != e)
+                        return `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/attachments-quick-links/${e}`;
+                })(this.assetPath)
               : void 0;
     }
 }
-let d = {};
-class c extends i.Ay.Store {
+let o = {};
+class d extends i.Ay.Store {
     static displayName = "CustomActivityLinksStore";
     getOne(e, t) {
-        if (null != d[e]) return d[e][t];
+        if (null != o[e]) return o[e][t];
     }
 }
-let u = new c(r.h, {
+let c = new d(r.h, {
     CUSTOM_ACTIVITY_LINK_FETCH_SUCCESS: function (e) {
         let { applicationId: t, link: n } = e;
-        (null == d[t] && (d[t] = Object.create(null)), (d[t][n.link_id] = new o(n)));
+        (null == o[t] && (o[t] = Object.create(null)), (o[t][n.link_id] = new l(n)));
     },
     LOGOUT: function () {
-        d = {};
+        o = {};
     },
 });

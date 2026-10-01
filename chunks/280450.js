@@ -4,7 +4,7 @@ var a = n(247775),
     s = n(80703),
     l = n(17928),
     o = n(506774),
-    d = n(228366),
+    d = n(73153),
     c = n(181658),
     u = n(155718);
 new (n(683588).K)();
@@ -18,8 +18,8 @@ var _ = n(15552),
 let T = function () {
     return !0;
 };
-var m = n(252919),
-    g = n(174459),
+var g = n(252919),
+    m = n(174459),
     S = n(612181),
     N = n(38405),
     C = n(115036),
@@ -48,8 +48,8 @@ let L = new A.A("AuthenticationStore"),
     $ = null,
     z = null,
     X = !1,
-    q = !1,
-    Z = [];
+    Z = !1,
+    q = [];
 function Q(e) {
     let t = null != a.getToken(),
         n = null != o.w.get(f.ilC);
@@ -72,7 +72,7 @@ function ee() {
 function et(e) {
     let { withGuildExperiments: t } = e,
         n = {},
-        i = g.default.getSuperPropertiesBase64();
+        i = m.default.getSuperPropertiesBase64();
     return (
         null != i && (n["X-Super-Properties"] = i),
         null != w && (n["X-Fingerprint"] = w),
@@ -125,7 +125,7 @@ function es() {
         Y && e.push({ type: "totp" }),
         K && e.push({ type: "backup" }),
         j && e.push({ type: "sms" }),
-        (Z = e));
+        (q = e));
 }
 function el(e) {
     let { installation: t } = e;
@@ -173,7 +173,7 @@ function ed(e) {
         (W = null),
         (j = !1),
         (X = !1),
-        (q = !1),
+        (Z = !1),
         es());
 }
 class ec extends l.Ay.Store {
@@ -225,7 +225,7 @@ class ec extends l.Ay.Store {
         return H;
     }
     getMFAMethods() {
-        return Z;
+        return q;
     }
     getLoginInstanceId() {
         return r;
@@ -247,7 +247,7 @@ class ec extends l.Ay.Store {
         return X;
     }
     attemptedPasswordLogin() {
-        return q;
+        return Z;
     }
 }
 let eu = new ec(
@@ -264,7 +264,7 @@ let eu = new ec(
                 apexExperiments: l,
             } = e;
             (Q("handleConnectionOpen called"),
-                N.A.setUser(t.id, t.username, t.email ?? void 0, (0, m.A)(t)),
+                N.A.setUser(t.id, t.username, t.email ?? void 0, (0, g.A)(t)),
                 (M = n),
                 (P = i),
                 (U = s),
@@ -276,7 +276,7 @@ let eu = new ec(
         },
         OVERLAY_INITIALIZE: function (e) {
             let { user: t, sessionId: n, analyticsToken: i, token: r } = e;
-            (N.A.setUser(t.id, t.username, t.email ?? void 0, (0, m.A)(t)),
+            (N.A.setUser(t.id, t.username, t.email ?? void 0, (0, g.A)(t)),
                 (M = n),
                 (k = i),
                 ei(r, t.id),
@@ -291,7 +291,7 @@ let eu = new ec(
             let i = n(192308).hasModalOpen;
             if (4004 === t) {
                 if (B || i(R.jc) || i(R.Uy)) return void eo();
-                (g.default.track(f.HAw.APP_USER_DEAUTHENTICATED, { user_id: o.w.get(v) }),
+                (m.default.track(f.HAw.APP_USER_DEAUTHENTICATED, { user_id: o.w.get(v) }),
                     ed(),
                     setImmediate(() => (0, p.pX)(f.BVt.DEFAULT_LOGGED_OUT)));
             }
@@ -302,7 +302,7 @@ let eu = new ec(
         },
         LOGIN: function (e) {
             let { isPasswordAttempt: t } = e;
-            ((F = f.aUe.LOGGING_IN), (q = q || !0 === t));
+            ((F = f.aUe.LOGGING_IN), (Z = Z || !0 === t));
         },
         LOGIN_SUCCESS: function (e) {
             let { token: t } = e;
@@ -352,7 +352,7 @@ let eu = new ec(
             let t = e.fingerprint;
             null == w
                 ? null != t
-                    ? (g.default.track(f.HAw.USER_FINGERPRINT_CHANGED, {
+                    ? (m.default.track(f.HAw.USER_FINGERPRINT_CHANGED, {
                           old_fingerprint: null != G ? (0, s.d)(G) : null,
                           new_fingerprint: (0, s.d)(t),
                       }),
@@ -362,7 +362,7 @@ let eu = new ec(
                     : ee()
                 : null != t &&
                   w !== t &&
-                  g.default.track(f.HAw.EXTERNAL_FINGERPRINT_DROPPED, {
+                  m.default.track(f.HAw.EXTERNAL_FINGERPRINT_DROPPED, {
                       fingerprint: (0, s.d)(w),
                       dropped_fingerprint: (0, s.d)(t),
                   });

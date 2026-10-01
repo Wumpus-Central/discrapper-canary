@@ -281,7 +281,7 @@ function e_(e) {
 var eN = (((r = {}).ROW = "row"), (r.GROUP = "group"), r);
 l(667532);
 var eF = l(506774),
-    eO = l(228366);
+    eO = l(73153);
 let ek = ef.nC,
     eM = !1,
     eP = {};
@@ -1027,8 +1027,8 @@ function e5(e, t) {
     }
     return !1;
 }
-let e6 = { whiteSpace: "pre", wordWrap: "normal" };
-function e2(e) {
+let e3 = { whiteSpace: "pre", wordWrap: "normal" };
+function e6(e) {
     let [t, l] = e,
         r = [];
     if (!j.EY.isText(t) || 0 === t.text.length) return r;
@@ -1039,7 +1039,7 @@ function e2(e) {
     }
     return r;
 }
-function e3(e) {
+function e2(e) {
     return (0, n.jsx)(eZ, { ...e });
 }
 function e7(e) {
@@ -1064,10 +1064,10 @@ let e9 = s.memo(function (e) {
         onChange: i,
         children: (0, n.jsx)(L.Fo, {
             className: eX.E,
-            style: e6,
+            style: e3,
             placeholder: r,
-            decorate: e2,
-            renderLeaf: e3,
+            decorate: e6,
+            renderLeaf: e2,
             renderPlaceholder: e7,
             onKeyDown: o,
             onFocus: c,

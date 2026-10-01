@@ -1,4 +1,4 @@
-n.d(t, { y0: () => X, Ni: () => q, t4: () => Q, Q9: () => Z, y$: () => J });
+n.d(t, { y0: () => X, Ni: () => Z, t4: () => Q, Q9: () => q, y$: () => J });
 var i = n(462180),
     r = n(882035),
     a = n(428865),
@@ -224,8 +224,8 @@ class p extends s.A {
     }
 }
 var T = n(566980),
-    m = n(511484),
-    g = n(786300),
+    g = n(511484),
+    m = n(786300),
     S = n(563020),
     N = n(826469),
     C = n(158045),
@@ -252,7 +252,7 @@ var D = n(652215),
     v = n(504275),
     b = n(219538);
 let M = { lastOrderUpdateRevision: 0 };
-var P = n(228366),
+var P = n(73153),
     U = n(158032),
     w = n(830382),
     G = n(136857),
@@ -278,10 +278,10 @@ var j = n(811315),
     $ = n(403362),
     z = n(427262);
 let X = 1,
-    [q, Z] = (0, g.A)();
+    [Z, q] = (0, m.A)();
 function Q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return Z()(e, t);
+    return q()(e, t);
 }
 function J(e) {
     let {
@@ -606,7 +606,7 @@ function J(e) {
             renewalInvoicePreview: null,
             renewalInvoiceError: null,
             setRenewalInvoicePreview: (t, n) => e({ renewalInvoicePreview: t ?? null, renewalInvoiceError: n ?? null }),
-            premiumDiscountInfo: m.TI,
+            premiumDiscountInfo: g.TI,
             setPremiumDiscountInfo: (t) => e({ premiumDiscountInfo: t }),
             entitlementsGranted: [],
             setEntitlementsGranted: (t) => e({ entitlementsGranted: t }),

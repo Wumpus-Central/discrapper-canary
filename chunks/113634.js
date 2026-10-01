@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => tt });
+n.d(t, { A: () => tn });
 var r,
     a,
     s,
@@ -45,10 +45,10 @@ var h = n(582128),
     f = n.n(I),
     p = n(972347),
     T = n(738239),
-    m = n.n(T),
-    g = n(941426),
+    g = n.n(T),
+    m = n(941426),
     S = n(904986),
-    N = n(459838),
+    N = n(651139),
     C = n(70909),
     O = n(782425),
     R = n(143236),
@@ -164,7 +164,7 @@ class V {
     }
 }
 var H = n(818348);
-let j = new g.Vy("Output"),
+let j = new m.Vy("Output"),
     W = new B();
 class Y extends R.EventEmitter {
     stream;
@@ -362,20 +362,21 @@ class Y extends R.EventEmitter {
         }
     }
 }
+var K = n(935172);
 n(142703);
-var K = n(434933),
-    $ = n.n(K),
-    z = n(811315),
-    X = n.n(z),
+var $ = n(434933),
+    z = n.n($),
+    X = n(811315),
+    Z = n.n(X),
     q = n(201327);
-let Z = new B();
-class Q extends R.EventEmitter {
+let Q = new B();
+class J extends R.EventEmitter {
     stream = new MediaStream();
     sourceId = D.qe;
     streamId = null;
     destroyed = !1;
     destroy() {
-        (null != this.stream && (Z.release(this.stream), (this.stream = null)),
+        (null != this.stream && (Q.release(this.stream), (this.stream = null)),
             null != this.streamId && (0, q.it)(this.streamId),
             (this.destroyed = !0));
     }
@@ -385,14 +386,14 @@ class Q extends R.EventEmitter {
     async setSource(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
         if (this.sourceId === e) return this.stream;
-        ((this.sourceId = e), null != this.stream && (Z.release(this.stream), (this.stream = null)));
+        ((this.sourceId = e), null != this.stream && (Q.release(this.stream), (this.stream = null)));
         let n = await k();
         if (this.sourceId === D.qe) return this.setStream(new MediaStream());
         let i = { width: 1280, ...t };
         n.some((e) => e.id === this.sourceId) && (i.deviceId = this.sourceId);
         try {
-            let e = await Z.acquire({ audio: !1, video: i });
-            if (this.destroyed) throw (Z.release(e), Error("VideoInput: Already destroyed"));
+            let e = await Q.acquire({ audio: !1, video: i });
+            if (this.destroyed) throw (Q.release(e), Error("VideoInput: Already destroyed"));
             return (this.emit("permission", !0), this.setStream(e));
         } catch (e) {
             if ("string" != typeof e)
@@ -423,7 +424,7 @@ class Q extends R.EventEmitter {
         );
     }
 }
-var J =
+var ee =
     (((r = {}).Stream = "stream"),
     (r.Video = "video"),
     (r.Mute = "mute"),
@@ -434,9 +435,9 @@ var J =
     (r.VideoPermission = "video-permission"),
     (r.AddVideoTrack = "add-video-track"),
     r);
-class ee extends p.A {
+class et extends p.A {
     audio;
-    video = new Q();
+    video = new J();
     desktop = null;
     stream;
     constructor(e) {
@@ -548,9 +549,9 @@ class ee extends p.A {
         this.emit("video-permission", e);
     };
 }
-let et = new g.Vy("Output");
-var en = (((a = {}).InteractionRequired = "interactionrequired"), (a.Speaking = "speaking"), (a.Video = "video"), a);
-class ei extends p.A {
+let en = new m.Vy("Output");
+var ei = (((a = {}).InteractionRequired = "interactionrequired"), (a.Speaking = "speaking"), (a.Video = "video"), a);
+class er extends p.A {
     id;
     _speakingFlags = D.ME.NONE;
     _mute = !1;
@@ -596,7 +597,7 @@ class ei extends p.A {
                     }),
                     null != this.streamSourceNode && this.streamSourceNode.connect(this.levelNode));
             } catch (e) {
-                et.warn(`Output#Failed to setup speaking indicator: ${e}`);
+                en.warn(`Output#Failed to setup speaking indicator: ${e}`);
             }
         }
         return (
@@ -655,7 +656,7 @@ class ei extends p.A {
         }
     }
 }
-class er {
+class ea {
     inboundVideoBitrate = {};
     inboundDecodeFps = {};
     outboundVideoBitrate = {};
@@ -678,42 +679,42 @@ class er {
     static getCalculatorOrCreate(e, t, n, i) {
         let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0,
             a = e[t.ssrc];
-        return (null == a && ((a = new el(n, i, r)), (e[t.ssrc] = a)), a);
+        return (null == a && ((a = new eo(n, i, r)), (e[t.ssrc] = a)), a);
     }
     getInboundBytesRecevierCalculator(e) {
-        return er.getCalculatorOrCreate(this.inboundVideoBitrate, e, "bytesReceived", "timestamp", 3);
+        return ea.getCalculatorOrCreate(this.inboundVideoBitrate, e, "bytesReceived", "timestamp", 3);
     }
     getInboundFrameDecodeRateCalculator(e) {
-        return er.getCalculatorOrCreate(this.inboundDecodeFps, e, "framesDecoded", "timestamp", 5);
+        return ea.getCalculatorOrCreate(this.inboundDecodeFps, e, "framesDecoded", "timestamp", 5);
     }
     getOutboundBytesSentCalculator(e) {
-        return er.getCalculatorOrCreate(this.outboundVideoBitrate, e, "bytesSent", "timestamp", 3);
+        return ea.getCalculatorOrCreate(this.outboundVideoBitrate, e, "bytesSent", "timestamp", 3);
     }
     getOutboundEncodeRateCalculator(e) {
-        return er.getCalculatorOrCreate(this.outboundEncodeFps, e, "framesEncoded", "timestamp", 5);
+        return ea.getCalculatorOrCreate(this.outboundEncodeFps, e, "framesEncoded", "timestamp", 5);
     }
 }
-var ea =
-    (((s = ea || {})[(s.NONE = 0)] = "NONE"),
+var es =
+    (((s = es || {})[(s.NONE = 0)] = "NONE"),
     (s[(s.MILLISECONDS_FROM_SECONDS = 1)] = "MILLISECONDS_FROM_SECONDS"),
     (s[(s.BYTES_TO_BITS = 2)] = "BYTES_TO_BITS"),
     (s[(s.ROUND = 4)] = "ROUND"),
     s);
-let es = {
+let el = {
     0: { multiplier: 1 },
     1: { postfix: "_in_ms", multiplier: 1e3 },
     2: { bitrate: !0, postfix: "", multiplier: 8 },
 };
-class el {
+class eo {
     accumulativeMetricKey;
     samplesMetricKey;
     previous;
     multiplier = 1;
     round = !1;
     constructor(e, t, n = 0) {
-        for (const i in ((this.accumulativeMetricKey = e), (this.samplesMetricKey = t), ea)) {
+        for (const i in ((this.accumulativeMetricKey = e), (this.samplesMetricKey = t), es)) {
             const e = Number(i);
-            !isNaN(e) && (n & e) != 0 && i in es && (this.multiplier *= es[i]?.multiplier ?? 1);
+            !isNaN(e) && (n & e) != 0 && i in el && (this.multiplier *= el[i]?.multiplier ?? 1);
         }
         this.round = (4 & n) != 0;
     }
@@ -732,21 +733,21 @@ class el {
         return this.round ? Math.round(l) : l;
     }
 }
-var eo = n(752163);
-function ed(e) {
+var ed = n(752163);
+function ec(e) {
     return { id: e.payloadType, name: e.mimeType.split("/").slice(1)[0] };
 }
-class ec {
+class eu {
     jitterStatsMap = new Map();
 }
-var eu = n(396574),
-    e_ =
+var e_ = n(396574),
+    eE =
         (((l = {})[(l.AUDIO_BITRATE = 0)] = "AUDIO_BITRATE"),
         (l[(l.VIDEO_RESOLUTION_SCALE = 1)] = "VIDEO_RESOLUTION_SCALE"),
         (l[(l.VIDEO_BITRATE = 2)] = "VIDEO_BITRATE"),
         (l[(l.VIDEO_FRAMERATE = 3)] = "VIDEO_FRAMERATE"),
         l);
-class eE extends S.A {
+class eA extends S.A {
     input;
     silenced = !1;
     interacted = !1;
@@ -754,26 +755,26 @@ class eE extends S.A {
     sinkId = D.dx;
     lastPingTime = 0;
     outputs = {};
-    webrtcStats = new er();
+    webrtcStats = new ea();
     silenceThreshold = -100;
-    transformStatsState = new ec();
+    transformStatsState = new eu();
     canHavePriority = new Set();
     prioritySpeakers = new Set();
     audioContext;
     constructor(e) {
         (super(e.context, e.userId),
-            (this.input = new ee(e.audioContext)),
+            (this.input = new et(e.audioContext)),
             e.audioContext.addEventListener("statechange", this.handleAudioContextStateChange),
             (this.audioContext = e.audioContext),
-            this.input.on(J.AudioPermission, this.handleAudioPermission),
-            this.input.on(J.VideoPermission, this.handleVideoPermission),
-            this.input.on(J.Video, this.handleVideo),
-            this.input.on(J.Mute, (e) => this.emit(N.yq.Mute, e)),
-            this.input.on(J.Stream, this.handleStream),
-            this.input.on(J.DesktopSourceEnd, this.handleDesktopSourceEnd),
-            this.input.on(J.Speaking, this.handleInputSpeaking),
-            this.input.on(J.AddVideoTrack, this.handleAddVideoTrack),
-            this.input.on(J.Video, this.handleAddVideoTrack),
+            this.input.on(ee.AudioPermission, this.handleAudioPermission),
+            this.input.on(ee.VideoPermission, this.handleVideoPermission),
+            this.input.on(ee.Video, this.handleVideo),
+            this.input.on(ee.Mute, (e) => this.emit(K.y.Mute, e)),
+            this.input.on(ee.Stream, this.handleStream),
+            this.input.on(ee.DesktopSourceEnd, this.handleDesktopSourceEnd),
+            this.input.on(ee.Speaking, this.handleInputSpeaking),
+            this.input.on(ee.AddVideoTrack, this.handleAddVideoTrack),
+            this.input.on(ee.Video, this.handleAddVideoTrack),
             this.on("newListener", this.handleNewListener),
             this.initializeStreamParameters(e.streamParameters));
     }
@@ -787,7 +788,7 @@ class eE extends S.A {
         this.input.destroy(e);
     }
     async getStats() {
-        if (!eu.fA) return null;
+        if (!e_.fA) return null;
         let e = await this.getRawStats(),
             t = null !== this.input.getVideoStreamId();
         return (function (e, t, n, i, r, a) {
@@ -819,9 +820,9 @@ class eE extends S.A {
                     type: e.kind,
                     ssrc: e.ssrc,
                     timestamp: e.timestamp,
-                    sinkWant: (0, eo.D)(n, e.ssrc, "video" === e.kind),
-                    sinkWantAsInt: (0, eo.q)(n, e.ssrc),
-                    codec: ed(t),
+                    sinkWant: (0, ed.D)(n, e.ssrc, "video" === e.kind),
+                    sinkWantAsInt: (0, ed.q)(n, e.ssrc),
+                    codec: ec(t),
                     bytesSent: e.bytesSent,
                     packetsSent: e.packetsSent,
                     bitrateTarget: e.targetBitrate,
@@ -862,11 +863,11 @@ class eE extends S.A {
                     type: e.kind,
                     ssrc: e.ssrc,
                     timestamp: e.timestamp,
-                    sinkWant: (0, eo.D)(n, e.ssrc, "video" === e.kind),
-                    sinkWantAsInt: (0, eo.q)(n, e.ssrc),
-                    sinkWantLocal: (0, eo.D)(i, e.ssrc, "video" === e.kind),
-                    sinkWantLocalAsInt: (0, eo.q)(i, e.ssrc),
-                    codec: ed(r),
+                    sinkWant: (0, ed.D)(n, e.ssrc, "video" === e.kind),
+                    sinkWantAsInt: (0, ed.q)(n, e.ssrc),
+                    sinkWantLocal: (0, ed.D)(i, e.ssrc, "video" === e.kind),
+                    sinkWantLocalAsInt: (0, ed.q)(i, e.ssrc),
+                    codec: ec(r),
                     bytesReceived: e.bytesReceived,
                     packetsReceived: e.packetsReceived,
                     packetsLost: e.packetsLost,
@@ -990,7 +991,7 @@ class eE extends S.A {
         };
     })();
     setSelfMute = (e) => {
-        ((this.selfMute = e), this.input.setMute(e), this.emit(N.yq.Mute, e));
+        ((this.selfMute = e), this.input.setMute(e), this.emit(K.y.Mute, e));
     };
     setNoiseCancellationDuringProcessing(e) {}
     setSkipNoiseCancellationIfMuted(e) {}
@@ -1003,7 +1004,7 @@ class eE extends S.A {
     }
     setSelfDeaf(e) {
         for (let t of ((this.selfDeaf = e), Object.keys(this.outputs))) this.outputs[t].mute = e || this.localMutes[t];
-        this.emit(N.yq.Deafen, e);
+        this.emit(K.y.Deafen, e);
     }
     getSelfDeaf() {
         return this.selfDeaf;
@@ -1011,7 +1012,7 @@ class eE extends S.A {
     setLocalMute(e, t) {
         ((this.localMutes[e] = t),
             null != this.outputs[e] && (this.outputs[e].mute = this.selfDeaf || t),
-            this.emit(N.yq.LocalMute, e, t));
+            this.emit(K.y.LocalMute, e, t));
     }
     fastUdpReconnect() {}
     setUdpEndpoint() {}
@@ -1068,11 +1069,11 @@ class eE extends S.A {
     handleAddVideoTrack = () => {
         this.updateVideoQuality();
     };
-    handleAudioPermission = (e) => this.emit(N.yq.AudioPermission, e);
-    handleVideoPermission = (e) => this.emit(N.yq.VideoPermission, e);
+    handleAudioPermission = (e) => this.emit(K.y.AudioPermission, e);
+    handleVideoPermission = (e) => this.emit(K.y.VideoPermission, e);
     handleVideo = (e) =>
         this.emit(
-            N.yq.Video,
+            K.y.Video,
             this.userId,
             e,
             this.audioSSRC,
@@ -1080,31 +1081,31 @@ class eE extends S.A {
             this.videoStreamParameters[0].rtxSsrc ?? 0,
             this.videoStreamParameters,
         );
-    handleDesktopSourceEnd = () => this.emit(N.yq.DesktopSourceEnd);
+    handleDesktopSourceEnd = () => this.emit(K.y.DesktopSourceEnd);
     handleStream = (e) => this.setStream(e);
     handleVoiceActivity = (e) => {
         let t = e <= this.silenceThreshold;
-        this.silenced === t || this.input.mute() || ((this.silenced = t), this.emit(N.yq.Silence, t));
+        this.silenced === t || this.input.mute() || ((this.silenced = t), this.emit(K.y.Silence, t));
     };
     handleNewListener = (e) => {
         switch (e) {
-            case N.yq.Video:
+            case K.y.Video:
                 this.videoReady && setImmediate(() => this.handleVideo(this.input.getVideoStreamId()));
                 break;
-            case N.yq.ConnectionStateChange:
+            case K.y.ConnectionStateChange:
                 this.emit(e, this.connectionState);
                 break;
-            case N.yq.InteractionRequired:
+            case K.y.InteractionRequired:
                 this.interacted || "suspended" !== this.input.getAudioState() || setImmediate(() => this.emit(e, !0));
         }
     };
     handleInputSpeaking = (e) => {
-        this.emit(N.yq.Speaking, this.userId, e ? D.ME.VOICE : D.ME.NONE, this.audioSSRC);
+        this.emit(K.y.Speaking, this.userId, e ? D.ME.VOICE : D.ME.NONE, this.audioSSRC);
     };
     handleAudioContextStateChange = () => {
         this.interacted ||
             "running" !== this.input.getAudioState() ||
-            (this.interact(), this.emit(N.yq.InteractionRequired, !1));
+            (this.interact(), this.emit(K.y.InteractionRequired, !1));
     };
     setCanHavePriority(e, t) {
         let n = this.canHavePriority.size;
@@ -1136,14 +1137,14 @@ class eE extends S.A {
             for (let t of this.videoStreamParameters) {
                 let i = e.findIndex((e) => e.rid === t.rid);
                 if (-1 === i) return void n(Error("Invalid rid"));
-                X()(this.videoStreamParameters[i], e[i]) || (this.videoStreamParameters[i] = { ...e[i] });
+                Z()(this.videoStreamParameters[i], e[i]) || (this.videoStreamParameters[i] = { ...e[i] });
             }
             t();
         });
     }
     recalculatePrioritySpeakers() {
         ((this.prioritySpeakers = new Set(Array.from(this.wantsPriority).filter((e) => this.canHavePriority.has(e)))),
-            $()(this.outputs, (e, t) => {
+            z()(this.outputs, (e, t) => {
                 e.volume = this.computeLocalVolume(t);
             }));
     }
@@ -1169,12 +1170,12 @@ class eE extends S.A {
             return void this.logger.info(`BaseWebRTCConnection.createOutput: ignoring track being torn down: ${t.id}`);
         let n = this.outputs[e];
         (null == n &&
-            (((n = new ei(e, this.audioContext)).mute = this.selfDeaf || this.localMutes[e]),
+            (((n = new er(e, this.audioContext)).mute = this.selfDeaf || this.localMutes[e]),
             (n.volume = this.computeLocalVolume(e)),
-            n.on(en.Speaking, (t) => this.emit(N.yq.Speaking, e, t, this.audioSSRC)),
-            n.on(en.Video, (t) =>
+            n.on(ei.Speaking, (t) => this.emit(K.y.Speaking, e, t, this.audioSSRC)),
+            n.on(ei.Video, (t) =>
                 this.emit(
-                    N.yq.Video,
+                    K.y.Video,
                     e,
                     t,
                     this.audioSSRC,
@@ -1183,7 +1184,7 @@ class eE extends S.A {
                     this.videoStreamParameters,
                 ),
             ),
-            n.on(en.InteractionRequired, (e) => this.emit(N.yq.InteractionRequired, e)),
+            n.on(ei.InteractionRequired, (e) => this.emit(K.y.InteractionRequired, e)),
             n.setSpeakingFlags(this.localSpeakingFlags[e] ?? D.ME.NONE),
             n.setSinkId(this.sinkId),
             (this.outputs[e] = n)),
@@ -1195,12 +1196,12 @@ class eE extends S.A {
     }
     handleStats = (e) => {
         this.connectionState === D.$I.DISCONNECTED
-            ? this.off(N.yq.Stats, this.handleStats)
+            ? this.off(K.y.Stats, this.handleStats)
             : null != e &&
               (this.webrtcStats.update(e),
               (this.stats = e),
               Date.now() - this.lastPingTime >= D.n8 &&
-                  (this.emit(N.yq.Ping, e.transport.ping), (this.lastPingTime = Date.now())));
+                  (this.emit(K.y.Ping, e.transport.ping), (this.lastPingTime = Date.now())));
     };
     setSilenceThreshold(e) {
         this.silenceThreshold = e;
@@ -1237,20 +1238,20 @@ class eE extends S.A {
     getMLSPairwiseFingerprint(e, t, n) {}
 }
 n(775443);
-var eA = n(800754),
-    eh = n.n(eA),
-    eI = n(226782),
-    ef = n.n(eI),
-    ep = n(316179);
-let eT = new g.Vy("SDP");
+var eh = n(800754),
+    eI = n.n(eh),
+    ef = n(226782),
+    ep = n.n(ef),
+    eT = n(316179);
+let eg = new m.Vy("SDP");
 var em =
     (((o = {}).SENDRECV = "sendrecv"),
     (o.SENDONLY = "sendonly"),
     (o.RECVONLY = "recvonly"),
     (o.INACTIVE = "inactive"),
     o);
-let eg = "UDP/TLS/RTP/SAVPF";
-function eS(e) {
+let eS = "UDP/TLS/RTP/SAVPF";
+function eN(e) {
     switch (e) {
         case "recvonly":
             return "sendonly";
@@ -1262,7 +1263,7 @@ function eS(e) {
             return "inactive";
     }
 }
-function eN(e, t, n) {
+function eC(e, t, n) {
     let i = `${e}-${t}`,
         r = `${n}${i}`;
     return [
@@ -1272,8 +1273,8 @@ function eN(e, t, n) {
         { attribute: "label", id: t, value: r },
     ];
 }
-function eC(e) {
-    return ep.write({
+function eO(e) {
+    return eT.write({
         version: 0,
         timing: { start: 0, stop: 0 },
         origin: {
@@ -1298,7 +1299,7 @@ function eC(e) {
         media: e,
     });
 }
-function eO(e) {
+function eR(e) {
     let {
         mid: t,
         type: n,
@@ -1314,24 +1315,24 @@ function eO(e) {
         sendingVideo: _,
         enableAudioNack: E,
     } = e;
-    if ("inactive" === r && !eu.PF)
+    if ("inactive" === r && !e_.PF)
         return {
             connection: { ip: "0.0.0.0", version: 4 },
             direction: "inactive",
             fmtp: [],
             payloads: l,
             port: 0,
-            protocol: eg,
+            protocol: eS,
             rtp: [{ codec: "NULL", payload: l, rate: 0 }],
             mid: void 0,
             type: n,
         };
     let {
         media: [h],
-    } = ep.parse(a);
+    } = eT.parse(a);
     if (
         ((h.type = n),
-        (h.protocol = eg),
+        (h.protocol = eS),
         (h.payloads = l),
         (h.setup = i),
         (h.mid = t),
@@ -1340,17 +1341,17 @@ function eO(e) {
         (h.ssrcs = d),
         d.length > 0 &&
             (null != u &&
-                ((h.ssrcGroups = eh()(d, 4).map((e) => {
+                ((h.ssrcGroups = eI()(d, 4).map((e) => {
                     let t = e[0].id;
                     return { semantics: "FID", ssrcs: `${t} ${t + 1}` };
                 })),
-                (h.ssrcs = eh()(d, 4)
+                (h.ssrcs = eI()(d, 4)
                     .map((e) => {
                         let t = e.map((e) => ((e = { ...e }), (e.id += 1), e));
                         return [...e, ...t];
                     })
                     .flat())),
-            eu.PF || "Firefox" === A().name))
+            e_.PF || "Firefox" === A().name))
     ) {
         let e = d.find((e) => "msid" === e.attribute);
         if (null == e) throw Error("msid missing");
@@ -1401,7 +1402,7 @@ function eO(e) {
     }
     return h;
 }
-function eR(e, t, n, i, r) {
+function eL(e, t, n, i, r) {
     let a = e.find((e) => e.codec === i);
     if (null == a) return null;
     let s = t.find((e) => RegExp(`^apt=${a.payload}`).test(e.config)),
@@ -1412,15 +1413,15 @@ function eR(e, t, n, i, r) {
     }
     return { type: n, name: i, priority: r + 1, payloadType: a.payload, rtxPayloadType: l };
 }
-function eL(e, t) {
-    let n = ep.parse(e).media.reduce(
+function ey(e, t) {
+    let n = eT.parse(e).media.reduce(
         (e, n) => {
             let i,
                 { type: r, rtp: a, ssrcs: s, fmtp: l, direction: o, mid: d } = n;
             switch ((e.outboundStreams.push({ type: r, direction: o, mid: d }), r)) {
                 case "audio":
                     ([D.UK.OPUS].forEach((t, n) => {
-                        let i = eR(a, l, r, t, n);
+                        let i = eL(a, l, r, t, n);
                         null != i && e.codecs.push(i);
                     }),
                         "sendrecv" === o &&
@@ -1430,48 +1431,48 @@ function eL(e, t) {
                 case "video":
                     ((t ? [D.UK.H265, D.UK.H264, D.UK.VP8, D.UK.VP9] : [D.UK.H264, D.UK.VP8, D.UK.VP9]).forEach(
                         (t, n) => {
-                            let i = eR(a, l, r, t, n);
+                            let i = eL(a, l, r, t, n);
                             null != i && e.codecs.push(i);
                         },
                     ),
                         "sendrecv" === o &&
                             (null != (i = s?.find((e) => "cname" === e.attribute)) && (e.videoSSRC = i.id),
                             null != (i = s?.findLast((e) => "cname" === e.attribute)) &&
-                                (i.id === e.videoSSRC && eT.warn("Unable to find a unique rtx SSRC!"),
+                                (i.id === e.videoSSRC && eg.warn("Unable to find a unique rtx SSRC!"),
                                 (e.rtxSSRC = i.id))));
             }
             return e;
         },
         { outboundStreams: [], codecs: [], audioSSRC: 0, videoSSRC: 0, rtxSSRC: 0 },
     );
-    return ((n.codecs = ef()(n.codecs, X())), n);
+    return ((n.codecs = ep()(n.codecs, Z())), n);
 }
-function ey(e, t) {
-    let { codecs: n } = eL(e, t),
+function eD(e, t) {
+    let { codecs: n } = ey(e, t),
         i = n.find((e) => e.name === D.UK.VP8),
         r = RegExp(`^a=ice|a=extmap|a=fingerprint|opus|VP8|${i?.rtxPayloadType ?? 0} rtx`, "i");
     return { sdp: [...new Set(e.split(/\r\n/).filter((e) => r.test(e)))].join("\n"), codecs: n };
 }
-function eD(e) {
-    if (!e.includes("a=fingerprint")) return (eT.error("Remote SDP does not include fingerprint!"), !1);
-    if (!e.includes("a=ice-ufrag")) return (eT.error("Remote SDP does not include ICE user name!"), !1);
-    if (!e.includes("a=ice-pwd")) return (eT.error("Remote SDP does not include ICE password!"), !1);
-    if (!e.includes("a=candidate")) return (eT.error("Remote SDP does not include ICE candidate!"), !1);
-    if (!e.includes("c=")) return (eT.error("Remote SDP does not include c-line!"), !1);
+function ev(e) {
+    if (!e.includes("a=fingerprint")) return (eg.error("Remote SDP does not include fingerprint!"), !1);
+    if (!e.includes("a=ice-ufrag")) return (eg.error("Remote SDP does not include ICE user name!"), !1);
+    if (!e.includes("a=ice-pwd")) return (eg.error("Remote SDP does not include ICE password!"), !1);
+    if (!e.includes("a=candidate")) return (eg.error("Remote SDP does not include ICE candidate!"), !1);
+    if (!e.includes("c=")) return (eg.error("Remote SDP does not include c-line!"), !1);
     let t = e
         .split("\n")
         .filter((e) => e.startsWith("c="))
         .join()
         .trim();
-    return !(t.split(" ").length < 3) || (eT.error(`Incorrect c-line: ${t}`), !1);
+    return !(t.split(" ").length < 3) || (eg.error(`Incorrect c-line: ${t}`), !1);
 }
-function ev(e) {
+function eb(e) {
     return [...new Set(e.split(/\r\n/).filter((e) => e.startsWith("a=extmap:")))].map((e) => {
         let t = e.split(" ");
         return { value: parseInt(t[0].split("/")[0].substr(9), 10), uri: t[1] };
     });
 }
-class eb extends R.EventEmitter {
+class eM extends R.EventEmitter {
     audioCodec = null;
     audioPayloadType = null;
     videoCodec = null;
@@ -1517,7 +1518,7 @@ class eb extends R.EventEmitter {
         return this._sdp;
     }
     set sdp(e) {
-        if (!eD(e)) throw Error(`Incorrect SDP received from rtc-worker: ${e}`);
+        if (!ev(e)) throw Error(`Incorrect SDP received from rtc-worker: ${e}`);
         ((this._sdp = e),
             this.createAnswer(),
             (this.connected = !0),
@@ -1547,7 +1548,7 @@ class eb extends R.EventEmitter {
             return [i, n, r, a === i || s === i ? this.direction : em.INACTIVE, l];
         });
         if ("Firefox" !== A().name) return this.connected ? t : [];
-        let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, eS(e.direction), `${e.type}_outbound_${t}`]);
+        let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, eN(e.direction), `${e.type}_outbound_${t}`]);
         if ("answer" !== e) return n.concat(t);
         {
             let e = n.length - t.length;
@@ -1557,7 +1558,7 @@ class eb extends R.EventEmitter {
                 .slice(0, n.length)
                 .map((e, t) => {
                     let [n, i, r, a, s] = e;
-                    return [n, i, r, eS(this.outboundStreams[t].direction), this.outboundStreams[t].mid];
+                    return [n, i, r, eN(this.outboundStreams[t].direction), this.outboundStreams[t].mid];
                 });
         }
     }
@@ -1588,13 +1589,13 @@ class eb extends R.EventEmitter {
                     extensions: _,
                 } = e,
                 E = [];
-            if ((eT.info(`generateSessionDescription: ${JSON.stringify(u)}`), "Firefox" === A().name)) {
+            if ((eg.info(`generateSessionDescription: ${JSON.stringify(u)}`), "Firefox" === A().name)) {
                 let e = "answer" === t ? "passive" : "active";
                 u.forEach((t) => {
                     let [i, u, A, h, I] = t;
                     ("video" === A && (0 === o || 0 === c)) ||
                         E.push(
-                            eO({
+                            eR({
                                 mid: I,
                                 type: A,
                                 setup: e,
@@ -1603,7 +1604,7 @@ class eb extends R.EventEmitter {
                                 codec: "audio" === A ? r : l,
                                 payload: "audio" === A ? a : o,
                                 bitrate: "audio" === A ? s : d,
-                                ssrcs: eN(u, i, "audio" === A ? "a" : "v"),
+                                ssrcs: eC(u, i, "audio" === A ? "a" : "v"),
                                 extensions: _,
                             }),
                         );
@@ -1617,11 +1618,11 @@ class eb extends R.EventEmitter {
                         })
                         .map((e) => {
                             let [t, n] = e;
-                            return eN(n, t, "a");
+                            return eC(n, t, "a");
                         });
                 if (
                     (E.push(
-                        eO({
+                        eR({
                             mid: "audio",
                             type: "audio",
                             setup: e,
@@ -1643,10 +1644,10 @@ class eb extends R.EventEmitter {
                         })
                         .map((e) => {
                             let [t, n] = e;
-                            return eN(n, t, "v");
+                            return eC(n, t, "v");
                         });
                     E.push(
-                        eO({
+                        eR({
                             mid: "video",
                             type: "video",
                             setup: e,
@@ -1662,7 +1663,7 @@ class eb extends R.EventEmitter {
                     );
                 }
             }
-            return new RTCSessionDescription({ type: t, sdp: eC(E) });
+            return new RTCSessionDescription({ type: t, sdp: eO(E) });
         })({
             type: e,
             baseSDP: s,
@@ -1680,8 +1681,8 @@ class eb extends R.EventEmitter {
         return (this.emit(e, l), Promise.resolve(l));
     }
 }
-let eM = new g.Vy("PeerConnection");
-class eP extends R.EventEmitter {
+let eP = new m.Vy("PeerConnection");
+class eU extends R.EventEmitter {
     bitrate;
     pc;
     stream = null;
@@ -1691,20 +1692,20 @@ class eP extends R.EventEmitter {
     constructor(e) {
         (super(), (this.bitrate = e));
         const t = (this.pc = new RTCPeerConnection({ sdpSemantics: "plan-b" }));
-        (eu.LU
+        (e_.LU
             ? ((t.onconnectionstatechange = this.handlePeerConnectionStateChange),
               (t.oniceconnectionstatechange = this.handlePeerConnectionStateChange))
             : (t.oniceconnectionstatechange = this.handleIceConnectionStateChange),
             (t.onsignalingstatechange = this.handleSignalingStateChange),
             (t.onicegatheringstatechange = this.handleIceGatheringStateChange),
             (t.ontrack = this.handleTrack.bind(this)),
-            eM.info("Constructed RTCPeerConnection"));
+            eP.info("Constructed RTCPeerConnection"));
     }
     setBitRate(e) {
         this.bitrate !== e && ((this.bitrate = e), this.negotiationNeeded());
     }
     close() {
-        (eM.info("Close RTCPeerConnection"),
+        (eP.info("Close RTCPeerConnection"),
             "closed" !== this.signalingState && this.pc.close(),
             this.removeAllListeners());
     }
@@ -1751,7 +1752,7 @@ class eP extends R.EventEmitter {
                 return (this.emit("offer", t), t);
             })
             .catch((t) => {
-                if ("have-remote-offer" === e.signalingState) return (eM.error(t), this.createOffer());
+                if ("have-remote-offer" === e.signalingState) return (eP.error(t), this.createOffer());
                 throw t;
             });
     }
@@ -1767,7 +1768,7 @@ class eP extends R.EventEmitter {
             })
             .catch((t) => {
                 throw (
-                    eM.warn(
+                    eP.warn(
                         `PeerConnection#createAnswer: Attempted to set local description in state: ${e.signalingState}`,
                     ),
                     t
@@ -1788,7 +1789,7 @@ class eP extends R.EventEmitter {
         return this.pc.getStats();
     }
     makeOfferAnswerOptions() {
-        return { offerToReceiveAudio: !0, offerToReceiveVideo: eu.g7, iceRestart: !1 };
+        return { offerToReceiveAudio: !0, offerToReceiveVideo: e_.g7, iceRestart: !1 };
     }
     mungeLocalDescription(e) {
         let t = e.sdp.split("\n");
@@ -1810,7 +1811,7 @@ class eP extends R.EventEmitter {
     }
     handlePeerConnectionStateChange = () => {
         let e = this.peerConnectionState;
-        (eM.info("peerConnectionState =>", e),
+        (eP.info("peerConnectionState =>", e),
             "connecting" === e
                 ? "connected" === this.iceConnectionState
                     ? this.emit(e)
@@ -1819,27 +1820,27 @@ class eP extends R.EventEmitter {
     };
     handleIceConnectionStateChange = () => {
         let e = this.iceConnectionState;
-        (eM.info("iceConnectionState =>", e), "completed" === e && (e = "connected"), this.emit(e));
+        (eP.info("iceConnectionState =>", e), "completed" === e && (e = "connected"), this.emit(e));
     };
     handleSignalingStateChange = () => {
-        (eM.info(`signalingState => ${this.signalingState}, negotiation needed: ${this._negotiationNeeded.toString()}`),
+        (eP.info(`signalingState => ${this.signalingState}, negotiation needed: ${this._negotiationNeeded.toString()}`),
             "stable" === this.signalingState &&
                 ((this.negotiating = !1), this._negotiationNeeded && this.negotiationNeeded()));
     };
     handleIceGatheringStateChange = () => {
-        eM.info("iceGatheringState =>", this.iceGatheringState);
+        eP.info("iceGatheringState =>", this.iceGatheringState);
     };
     handleTrack = (e) => {
         this.emitTrack(e.streams[0].id, e.track);
     };
 }
 n(667532);
-var eU = n(429874),
-    ew = n.n(eU),
-    eG = n(480664),
-    ex = n.n(eG);
+var ew = n(429874),
+    eG = n.n(ew),
+    ex = n(480664),
+    ek = n.n(ex);
 (n(323874), n(14289), n(35956));
-var ek =
+var eF =
         (((d = {})[(d.INITIALIZE = 0)] = "INITIALIZE"),
         (d[(d.RTC_TRANSFORM = 1)] = "RTC_TRANSFORM"),
         (d[(d.SET_KEY_RATCHET = 2)] = "SET_KEY_RATCHET"),
@@ -1847,10 +1848,10 @@ var ek =
         (d[(d.UPDATE_CODECS = 4)] = "UPDATE_CODECS"),
         (d[(d.DESTROY_USER = 5)] = "DESTROY_USER"),
         d),
-    eF = (((c = {})[(c.ENCRYPT = 0)] = "ENCRYPT"), (c[(c.DECRYPT = 1)] = "DECRYPT"), c),
-    eB = (((u = {})[(u.PROTOCOL_VERSION_CHANGED = 0)] = "PROTOCOL_VERSION_CHANGED"), u),
-    eV = n(264572).Buffer;
-class eH extends p.A {
+    eB = (((c = {})[(c.ENCRYPT = 0)] = "ENCRYPT"), (c[(c.DECRYPT = 1)] = "DECRYPT"), c),
+    eV = (((u = {})[(u.PROTOCOL_VERSION_CHANGED = 0)] = "PROTOCOL_VERSION_CHANGED"), u),
+    eH = n(264572).Buffer;
+class ej extends p.A {
     logger;
     dave;
     transientKeys;
@@ -1864,27 +1865,27 @@ class eH extends p.A {
     lastSecureFramesStateUpdate = null;
     constructor(e, t, n) {
         (super(),
-            (this.logger = new g.Vy("DaveSessionManager")),
+            (this.logger = new m.Vy("DaveSessionManager")),
             (this.dave = e),
             (this.transientKeys = t),
             (this.userId = n),
             (this.mlsSession = new e.Session("", "", (e, t) => {
-                this.emit(N.yq.MLSFailure, e, t);
+                this.emit(K.y.MLSFailure, e, t);
             })),
             (this.encryptionWorker = this.setupEncryptionWorker()));
     }
     createUser(e) {
         (this.recognizedUserIds.add(e),
-            this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, eF.DECRYPT));
+            this.setupKeyRatchetForUser(e, this.latestPreparedTransitionVersion, eB.DECRYPT));
     }
     destroyUser(e) {
-        (this.recognizedUserIds.delete(e), this.encryptionWorker.postMessage({ type: ek.DESTROY_USER, userId: e }));
+        (this.recognizedUserIds.delete(e), this.encryptionWorker.postMessage({ type: eF.DESTROY_USER, userId: e }));
     }
     updateLocalUserCodecs(e, t) {
-        this.encryptionWorker.postMessage({ type: ek.UPDATE_CODECS, audioCodec: e, videoCodec: t });
+        this.encryptionWorker.postMessage({ type: eF.UPDATE_CODECS, audioCodec: e, videoCodec: t });
     }
     updateSsrcs(e, t, n) {
-        this.encryptionWorker.postMessage({ type: ek.UPDATE_SSRC, userId: e, audioSsrc: t, videoSsrcs: n });
+        this.encryptionWorker.postMessage({ type: eF.UPDATE_SSRC, userId: e, audioSsrc: t, videoSsrcs: n });
     }
     setupEncodedTransformsForTransceiver(e) {
         (this.setupEncodedTransforms(e.sender), this.setupEncodedTransforms(e.receiver));
@@ -1906,7 +1907,7 @@ class eH extends p.A {
         let t = this.secureFramesTransitions.get(e);
         (this.secureFramesTransitions.delete(e),
             t === this.dave.kDisabledVersion && this.mlsSession.Reset(),
-            this.setupKeyRatchetForUser(this.userId, t, eF.ENCRYPT),
+            this.setupKeyRatchetForUser(this.userId, t, eB.ENCRYPT),
             this.onSecureFramesStateChanged());
     }
     getMLSKeyPackage(e) {
@@ -1938,7 +1939,7 @@ class eH extends p.A {
         return (
             (e.onmessage = (e) => {
                 let { data: t } = e;
-                t.type === eB.PROTOCOL_VERSION_CHANGED
+                t.type === eV.PROTOCOL_VERSION_CHANGED
                     ? ((this.currentEncryptorProtocolVersion = t.protocolVersion), this.onSecureFramesStateChanged())
                     : this.logger.warn("Unknown message type from encryption worker", t);
             }),
@@ -1948,7 +1949,7 @@ class eH extends p.A {
             (e.onmessageerror = (e) => {
                 this.logger.error("Encryption worker message error", e);
             }),
-            e.postMessage({ type: ek.INITIALIZE }),
+            e.postMessage({ type: eF.INITIALIZE }),
             e
         );
     }
@@ -1962,13 +1963,13 @@ class eH extends p.A {
         if ("transform" in e) e.transform = new RTCRtpScriptTransform(this.encryptionWorker, {});
         else if ("createEncodedStreams" in e) {
             let { readable: t, writable: n } = e.createEncodedStreams();
-            this.encryptionWorker.postMessage({ type: ek.RTC_TRANSFORM, readable: t, writable: n }, [t, n]);
+            this.encryptionWorker.postMessage({ type: eF.RTC_TRANSFORM, readable: t, writable: n }, [t, n]);
         } else throw Error("Encoded transforms not supported");
     }
     setupKeyRatchetForUser(e, t, n) {
         let i = this.makeUserKeyRatchet(e, t);
         this.encryptionWorker.postMessage({
-            type: ek.SET_KEY_RATCHET,
+            type: eF.SET_KEY_RATCHET,
             userId: e,
             operation: n,
             protocolVersion: t,
@@ -1976,9 +1977,9 @@ class eH extends p.A {
         });
     }
     prepareSecureFramesRatchets(e, t) {
-        for (let e of this.getRecognizedUserIDs()) e !== this.userId && this.setupKeyRatchetForUser(e, t, eF.DECRYPT);
+        for (let e of this.getRecognizedUserIDs()) e !== this.userId && this.setupKeyRatchetForUser(e, t, eB.DECRYPT);
         (e === this.dave.kInitTransitionId
-            ? (this.setupKeyRatchetForUser(this.userId, t, eF.ENCRYPT), this.onSecureFramesStateChanged())
+            ? (this.setupKeyRatchetForUser(this.userId, t, eB.ENCRYPT), this.onSecureFramesStateChanged())
             : this.secureFramesTransitions.set(e, t),
             (this.latestPreparedTransitionVersion = t));
     }
@@ -1986,33 +1987,33 @@ class eH extends p.A {
         let e = { version: this.currentEncryptorProtocolVersion ?? this.dave.kDisabledVersion, epochAuthenticator: "" };
         if (e.version !== this.dave.kDisabledVersion) {
             let t = this.mlsSession.GetLastEpochAuthenticator();
-            e.epochAuthenticator = eV.from(t).toString("base64");
+            e.epochAuthenticator = eH.from(t).toString("base64");
         }
         (null == this.lastSecureFramesStateUpdate ||
             this.lastSecureFramesStateUpdate.version !== e.version ||
             this.lastSecureFramesStateUpdate.epochAuthenticator !== e.epochAuthenticator) &&
             (this.logger.info(`DAVE protocol state update: ${JSON.stringify(e)}`),
-            this.emit(N.yq.SecureFramesUpdate, e),
+            this.emit(K.y.SecureFramesUpdate, e),
             (this.lastSecureFramesStateUpdate = e));
     }
 }
-let ej = new g.Vy("LibDaveManager"),
-    eW = null,
+let eW = new m.Vy("LibDaveManager"),
     eY = null,
     eK = null,
-    e$ = {
+    e$ = null,
+    ez = {
         onRuntimeInitialized: () => {
-            ej.info("DAVE loaded");
+            eW.info("DAVE loaded");
         },
     };
-function ez() {
-    return ("Firefox" !== A().name || !(eu.It < 142)) && eu.PF && eu.zU;
+function eX() {
+    return ("Firefox" !== A().name || !(e_.It < 142)) && e_.PF && e_.zU;
 }
-let eX = A().name?.toLowerCase().includes("firefox");
+let eZ = A().name?.toLowerCase().includes("firefox");
 function eq(e, t) {
     (e.sender.replaceTrack(t), (e.direction = null != t ? "sendrecv" : "recvonly"));
 }
-class eZ extends eE {
+class eQ extends eA {
     pc;
     sdp = null;
     negotiating = !1;
@@ -2036,26 +2037,26 @@ class eZ extends eE {
     daveSessionManager = null;
     logger;
     constructor(e) {
-        (super(e), (this.logger = new g.Vy(`UnifiedConnection(${e.context})`)));
+        (super(e), (this.logger = new m.Vy(`UnifiedConnection(${e.context})`)));
         let t = e.dave;
         (null == t ||
-            ez() ||
+            eX() ||
             (this.logger.warn("DAVE is initialized but encoded transforms are not supported"), (t = null)),
             null != t &&
-                ((this.daveSessionManager = new eH(t, e.transientKeys, this.userId)),
-                this.daveSessionManager.on(N.yq.MLSFailure, (e, t) => {
-                    this.emit(N.yq.MLSFailure, e, t);
+                ((this.daveSessionManager = new ej(t, e.transientKeys, this.userId)),
+                this.daveSessionManager.on(K.y.MLSFailure, (e, t) => {
+                    this.emit(K.y.MLSFailure, e, t);
                 }),
-                this.daveSessionManager.on(N.yq.SecureFramesUpdate, (e) => {
-                    this.emit(N.yq.SecureFramesUpdate, e);
+                this.daveSessionManager.on(K.y.SecureFramesUpdate, (e) => {
+                    this.emit(K.y.SecureFramesUpdate, e);
                 })),
-            (this.videoSupported = eu.g7));
+            (this.videoSupported = e_.g7));
         const n = (this.pc = new RTCPeerConnection({
             bundlePolicy: "max-bundle",
             sdpSemantics: "unified-plan",
             encodedInsertableStreams: null != this.daveSessionManager,
         }));
-        (eu.LU
+        (e_.LU
             ? ((n.onconnectionstatechange = this.handlePeerConnectionStateChange),
               (n.oniceconnectionstatechange = this.handlePeerConnectionStateChange))
             : (n.oniceconnectionstatechange = this.handleIceConnectionStateChange),
@@ -2119,7 +2120,7 @@ class eZ extends eE {
                 s = 10 * !this.experimentFlags.has(D.fd.BROWSER_TRANSCEIVER_PADDING_REMOVAL) + a - n;
             this.addTransceivers("audio", "recvonly", s);
         }
-        if (this.videoSupported && void 0 !== n && (!eX || void 0 === r.videoSSRC)) {
+        if (this.videoSupported && void 0 !== n && (!eZ || void 0 === r.videoSSRC)) {
             let t = null != n && n.length > 0 ? n[0] : 0;
             if (t > 0) {
                 if (r.videoSSRC !== t) {
@@ -2155,13 +2156,13 @@ class eZ extends eE {
     getUserIdBySsrc = (e) => this.userIdsBySsrc.get(e);
     setBitRate(e) {
         this.voiceBitrate !== e &&
-            (super.setBitRate(e), this.setAudioEncoderParameters([{ parameter: e_.AUDIO_BITRATE, value: e }]));
+            (super.setBitRate(e), this.setAudioEncoderParameters([{ parameter: eE.AUDIO_BITRATE, value: e }]));
     }
     setRemoteAudioHistory(e) {
         this.enableAudioNack = e > 0;
     }
     setSDP(e) {
-        if (!eD(e)) throw Error(`Incorrect SDP received from rtc-worker: ${e}`);
+        if (!ev(e)) throw Error(`Incorrect SDP received from rtc-worker: ${e}`);
         if ("have-local-offer" !== this.signalingState) throw Error(`Invalid signaling state ${this.signalingState}`);
         let { outboundStreams: t } = this.parseLocalDescription();
         ((this.sdp = e), this.setRemoteAnswer(t, [], [], new Map()));
@@ -2233,7 +2234,7 @@ class eZ extends eE {
             .catch((e) => a(e));
     }
     setAudioEncoderParameters(e) {
-        let t = { [e_.AUDIO_BITRATE]: "maxBitrate" },
+        let t = { [eE.AUDIO_BITRATE]: "maxBitrate" },
             n = [];
         for (let { parameter: i, value: r } of e) {
             let e = t[i];
@@ -2245,9 +2246,9 @@ class eZ extends eE {
     }
     setVideoEncoderParameters(e) {
         let t = {
-                [e_.VIDEO_BITRATE]: "maxBitrate",
-                [e_.VIDEO_RESOLUTION_SCALE]: "scaleResolutionDownBy",
-                [e_.VIDEO_FRAMERATE]: "maxFramerate",
+                [eE.VIDEO_BITRATE]: "maxBitrate",
+                [eE.VIDEO_RESOLUTION_SCALE]: "scaleResolutionDownBy",
+                [eE.VIDEO_FRAMERATE]: "maxFramerate",
             },
             n = [];
         for (let { parameter: i, value: r } of e) {
@@ -2274,8 +2275,8 @@ class eZ extends eE {
                 audioSSRC: r,
                 videoSSRC: a,
                 rtxSSRC: s,
-            } = eL(t, this.experimentFlags.has(D.fd.BROWSER_HEVC)),
-            l = ev(t);
+            } = ey(t, this.experimentFlags.has(D.fd.BROWSER_HEVC)),
+            l = eb(t);
         return { sdp: t, outboundStreams: n, codecs: i, audioSSRC: r, videoSSRC: a, rtxSSRC: s, extensions: l };
     }
     addTransceivers(e, t, n, i) {
@@ -2314,7 +2315,7 @@ class eZ extends eE {
                         -1 !== c &&
                         ((l = o.pop()), d.splice(c, 1), this.assignedStreams.set(r, l)),
                     null == l && (l = { ssrc: -1, cname: "" }),
-                    { ssrc: l.ssrc, cname: l.cname, type: a, direction: eS(s), mid: r }
+                    { ssrc: l.ssrc, cname: l.cname, type: a, direction: eN(s), mid: r }
                 );
             }),
             remainingAudioStreams: t,
@@ -2364,10 +2365,10 @@ class eZ extends eE {
                         let t,
                             { ssrc: u, cname: I, type: f, direction: p, mid: T } = e;
                         ("" !== I
-                            ? (t = eN(I, u, "audio" === f ? "a" : "v"))
+                            ? (t = eC(I, u, "audio" === f ? "a" : "v"))
                             : ((t = []), "sendonly" === p ? (p = "inactive") : "sendrecv" === p && (p = "recvonly")),
                             A.push(
-                                eO({
+                                eR({
                                     mid: T,
                                     type: f,
                                     setup: h,
@@ -2384,7 +2385,7 @@ class eZ extends eE {
                                 }),
                             ));
                     }),
-                    new RTCSessionDescription({ type: t, sdp: eC(A) })
+                    new RTCSessionDescription({ type: t, sdp: eO(A) })
                 );
             })({
                 type: "answer",
@@ -2410,7 +2411,7 @@ class eZ extends eE {
             await r.setRemoteDescription(a);
         } catch (e) {
             (this.logger.warn(`Failed to set remote answer: ${e}, type: ${a.type}`),
-                this.emit(N.yq.SdpError, "setRemoteDescription", e.message, a.type));
+                this.emit(K.y.SdpError, "setRemoteDescription", e.message, a.type));
         }
         (this.unassignedStreams.audio.unshift(...s),
             this.unassignedStreams.video.unshift(...l),
@@ -2423,8 +2424,8 @@ class eZ extends eE {
     setConnected() {
         (this.input.reset(),
             this.setConnectionState(D.$I.CONNECTED),
-            this.on(N.yq.Stats, this.handleStats),
-            this.input.on(J.VoiceActivity, this.handleVoiceActivity));
+            this.on(K.y.Stats, this.handleStats),
+            this.input.on(ee.VoiceActivity, this.handleVoiceActivity));
     }
     async handleNegotiationNeeded() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
@@ -2433,9 +2434,9 @@ class eZ extends eE {
             return;
         }
         ((this.negotiating = !0), (this.negotiationNeeded = !1));
-        let t = ew()(this.unassignedStreams.audio),
-            n = ew()(this.unassignedStreams.video),
-            i = ex()(this.users);
+        let t = eG()(this.unassignedStreams.audio),
+            n = eG()(this.unassignedStreams.video),
+            i = ek()(this.users);
         ((this.unassignedStreams.audio = []), (this.unassignedStreams.video = []));
         let r = this.pc,
             a = await r.createOffer(this.makeOfferAnswerOptions());
@@ -2443,7 +2444,7 @@ class eZ extends eE {
             await r.setLocalDescription(a);
         } catch (e) {
             (this.logger.warn(`Failed to set local offer: ${e}, type: ${a.type}, sdp: ${a.sdp}`),
-                this.emit(N.yq.SdpError, "setLocalDescription", e.message, a.type));
+                this.emit(K.y.SdpError, "setLocalDescription", e.message, a.type));
         }
         let {
             sdp: s,
@@ -2467,7 +2468,7 @@ class eZ extends eE {
                 (this.videoStreamParameters[0].rtxSsrc = 0 === u ? this.videoStreamParameters[0].rtxSsrc : u),
                 (this.videoStreamParameters[0].active = this.videoReady),
                 this.emit(
-                    N.yq.Video,
+                    K.y.Video,
                     this.userId,
                     this.input.getVideoStreamId(),
                     this.audioSSRC,
@@ -2476,7 +2477,7 @@ class eZ extends eE {
                     this.videoStreamParameters,
                 )),
             null == this.sdp
-                ? this.emit(N.yq.Connected, "webrtc", ey(s, this.experimentFlags.has(D.fd.BROWSER_HEVC)))
+                ? this.emit(K.y.Connected, "webrtc", eD(s, this.experimentFlags.has(D.fd.BROWSER_HEVC)))
                 : this.setRemoteAnswer(l, t, n, i));
     }
     handlePeerConnectionStateChange = () => {
@@ -2539,17 +2540,17 @@ class eZ extends eE {
         }
     };
 }
-function eQ(e) {
+function eJ(e) {
     return e.split("-")[0];
 }
-class eJ extends eE {
+class e0 extends eA {
     pc;
     fpc;
     codecs = [];
     logger;
     constructor(e) {
-        (super(e), (this.logger = new g.Vy(`Connection(${e.context})`)));
-        const t = new eb();
+        (super(e), (this.logger = new m.Vy(`Connection(${e.context})`)));
+        const t = new eM();
         (t.on("answer", (e) =>
             this.pc
                 .setRemoteDescription(e)
@@ -2564,14 +2565,14 @@ class eJ extends eE {
             }),
             (t.direction = null != this.input.stream ? em.SENDRECV : em.SENDONLY),
             (this.fpc = t));
-        const n = new eP(this.voiceBitrate);
-        (n.on("addtrack", (e, t) => this.createOutput(eQ(e), t)),
-            n.on("removetrack", (e, t) => this.destroyOutput(eQ(e), t)),
+        const n = new eU(this.voiceBitrate);
+        (n.on("addtrack", (e, t) => this.createOutput(eJ(e), t)),
+            n.on("removetrack", (e, t) => this.destroyOutput(eJ(e), t)),
             n.once("connected", () => {
                 (this.input.reset(),
                     this.setConnectionState(D.$I.CONNECTED),
-                    this.on(N.yq.Stats, this.handleStats),
-                    this.input.on(J.VoiceActivity, this.handleVoiceActivity));
+                    this.on(K.y.Stats, this.handleStats),
+                    this.input.on(ee.VoiceActivity, this.handleVoiceActivity));
             }),
             n.on("connecting", () => this.setConnectionState(D.$I.DTLS_CONNECTING)),
             n.on("checking", () => this.setConnectionState(D.$I.ICE_CHECKING)),
@@ -2580,9 +2581,9 @@ class eJ extends eE {
             n.on("closed", () => this.setConnectionState(D.$I.DISCONNECTED)),
             n.on("offer", (e) => {
                 let { sdp: n } = e,
-                    { outboundStreams: i, codecs: r, audioSSRC: a, videoSSRC: s, rtxSSRC: l } = eL(n, !1);
+                    { outboundStreams: i, codecs: r, audioSSRC: a, videoSSRC: s, rtxSSRC: l } = ey(n, !1);
                 this.codecs = r;
-                let o = ev(n);
+                let o = eb(n);
                 ((t.outboundStreams = i),
                     (this.audioSSRC = a),
                     (t.extensions = o),
@@ -2592,7 +2593,7 @@ class eJ extends eE {
                         ((this.videoStreamParameters[0].ssrc = s),
                         (this.videoStreamParameters[0].rtxSsrc = l),
                         this.emit(
-                            N.yq.Video,
+                            K.y.Video,
                             this.userId,
                             this.input.getVideoStreamId(),
                             this.audioSSRC,
@@ -2604,7 +2605,7 @@ class eJ extends eE {
             }),
             n.once("offer", (e) => {
                 let { sdp: t } = e;
-                this.emit(N.yq.Connected, "webrtc", ey(t, !1));
+                this.emit(K.y.Connected, "webrtc", eD(t, !1));
             }),
             null != this.input.stream ? n.setStream(this.input.stream) : n.negotiationNeeded(),
             (this.pc = n));
@@ -2649,9 +2650,9 @@ class eJ extends eE {
     }
     setVideoEncoderParameters(e) {}
 }
-let e0 = n.p + "worklet.8d84a64a97f8451a.js",
-    e1 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
-class e2 extends R.EventEmitter {
+let e1 = n.p + "worklet.8d84a64a97f8451a.js",
+    e2 = { voiceActivityDetection: !0, offerToReceiveAudio: !0, offerToReceiveVideo: !1, iceRestart: !1 };
+class e3 extends R.EventEmitter {
     userId;
     sinkId;
     input;
@@ -2695,7 +2696,7 @@ class e2 extends R.EventEmitter {
     createOutput(e, t) {
         let n = this.outputs[e];
         (null == n &&
-            (((n = new ei(this.userId, this.audioContext)).mute = !1),
+            (((n = new er(this.userId, this.audioContext)).mute = !1),
             (n.volume = 100),
             n.setSpeakingFlags(D.ME.VOICE),
             n.setSinkId(this.sinkId),
@@ -2708,7 +2709,7 @@ class e2 extends R.EventEmitter {
         null != n && (null == t || 0 === n.removeTrack(t)) && (n.destroy(), delete this.outputs[e]);
     }
     handshake() {
-        this.pc1.createOffer(e1).then((e) => {
+        this.pc1.createOffer(e2).then((e) => {
             this.pc1
                 .setLocalDescription(
                     (function (e) {
@@ -2746,7 +2747,7 @@ class e2 extends R.EventEmitter {
         });
     };
 }
-class e3 extends R.EventEmitter {
+class e5 extends R.EventEmitter {
     id;
     stream;
     pool;
@@ -2757,7 +2758,7 @@ class e3 extends R.EventEmitter {
             video: { ...e, frameRate: 30 },
         };
         if (navigator.mediaDevices?.getDisplayMedia != null)
-            return new e3(await navigator.mediaDevices.getDisplayMedia(i), n);
+            return new e5(await navigator.mediaDevices.getDisplayMedia(i), n);
         throw Error("UNKNOWN");
     }
     constructor(e, t) {
@@ -2791,10 +2792,10 @@ class e3 extends R.EventEmitter {
         );
     }
 }
-class e5 {
+class e6 {
     pool = {};
     async acquire(e, t) {
-        let n = await e3.get(e, t, this);
+        let n = await e5.get(e, t, this);
         return ((this.pool[n.id] = n), n);
     }
     get(e) {
@@ -2806,10 +2807,10 @@ class e5 {
         this.pool[e.id] = e;
     }
 }
-var e6 = n(935399),
-    e4 = n(503698),
-    e7 = n.n(e4);
-function e8(e) {
+var e4 = n(935399),
+    e7 = n(503698),
+    e8 = n.n(e7);
+function e9(e) {
     let { streamId: t, paused: n = !1, onReady: i, onResize: r, className: a, ...s } = e,
         l = h.useRef(null),
         o = h.useRef({ width: 0, height: 0 });
@@ -2856,7 +2857,7 @@ function e8(e) {
             [n],
         );
     return (0, _.jsx)("video", {
-        className: e7()("media-engine-video", a),
+        className: e8()("media-engine-video", a),
         ref: l,
         autoPlay: !0,
         onPause: u,
@@ -2865,10 +2866,10 @@ function e8(e) {
         ...s,
     });
 }
-function e9(e) {
+function te(e) {
     let { deviceId: t = D.qe, width: n = 320, height: i = 180, disabled: r = !1, onDeviceChange: a } = e,
         [s, l] = h.useState(null),
-        o = h.useMemo(() => new Q(), []);
+        o = h.useMemo(() => new J(), []);
     return (
         h.useEffect(
             () => (
@@ -2880,7 +2881,7 @@ function e9(e) {
             ),
             [o, a],
         ),
-        (0, e6.l0)(() => {
+        (0, e4.l0)(() => {
             o.destroy();
         }),
         h.useEffect(() => {
@@ -2894,13 +2895,13 @@ function e9(e) {
         }, [t, n, i, r, o]),
         null == s
             ? (0, _.jsx)("div", { className: "media-engine-video", style: { width: n, height: i } })
-            : (0, _.jsx)(e8, { streamId: s, style: { width: n, height: i } })
+            : (0, _.jsx)(e9, { streamId: s, style: { width: n, height: i } })
     );
 }
-let te = new g.Vy("MediaEngineWebRTC");
-class tt extends p.A {
-    Video = e8;
-    Camera = (e) => (0, _.jsx)(e9, { ...e, onDeviceChange: this.handleDeviceChange });
+let tt = new m.Vy("MediaEngineWebRTC");
+class tn extends p.A {
+    Video = e9;
+    Camera = (e) => (0, _.jsx)(te, { ...e, onDeviceChange: this.handleDeviceChange });
     _audioContext = null;
     outputVolume = D.Hz;
     sourceId = D.dx;
@@ -2911,7 +2912,7 @@ class tt extends p.A {
     interacted = !1;
     loopback = null;
     voiceActivityInput = null;
-    desktopInputPool = new e5();
+    desktopInputPool = new e6();
     enablePromise = null;
     dave = null;
     transientKeys = null;
@@ -2927,7 +2928,7 @@ class tt extends p.A {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         (null != this.voiceActivityInput && (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null)),
             this.eachConnection((t) => t.destroy(e)),
-            this.emit(N.bg.Destroy),
+            this.emit(N.b.Destroy),
             this.removeAllListeners());
     }
     interact() {
@@ -2937,9 +2938,9 @@ class tt extends p.A {
     static supported() {
         return (
             !__OVERLAY__ &&
-            (eu.Hz && null != window.AudioContext && null != window.RTCPeerConnection
+            (e_.Hz && null != window.AudioContext && null != window.RTCPeerConnection
                 ? (n(528416), !0)
-                : (te.info("WebRTC is not supported on", A().name, A().version), !1))
+                : (tt.info("WebRTC is not supported on", A().name, A().version), !1))
         );
     }
     supported() {
@@ -2952,21 +2953,21 @@ class tt extends p.A {
             case D.O5.AUDIO_OUTPUT_DEVICE:
                 return b;
             case D.O5.VIDEO:
-                return eu.g7;
+                return e_.g7;
             case D.O5.DESKTOP_CAPTURE:
                 return navigator.mediaDevices?.getDisplayMedia != null;
             case D.O5.VOICE_PROCESSING:
                 return "Chrome" === A().name;
             case D.O5.NATIVE_PING:
             case D.O5.DIAGNOSTICS:
-                return eu.fA;
+                return e_.fA;
             case D.O5.DESKTOP_CAPTURE_APPLICATIONS:
             case D.O5.LOOPBACK:
             case D.O5.NOISE_SUPPRESSION:
             case D.O5.AUTOMATIC_GAIN_CONTROL:
                 return "Safari" !== A().name;
             case D.O5.NOISE_CANCELLATION:
-                return m()();
+                return g()();
             case D.O5.QOS:
             case D.O5.ATTENUATION:
             case D.O5.AUTOMATIC_VAD:
@@ -3007,21 +3008,21 @@ class tt extends p.A {
                     experiments: _,
                 }),
                 (r = `${null != A().name && "" !== A().name ? A().name : "unknown"} ${null != A().version && "" !== A().version ? A().version : "unknown"}`),
-                (a = new g.Vy(`Connection(${i.context})`)),
-                eu.PF ? (a.info(`Using Unified Plan (${r})`), new eZ(i)) : (a.info(`Using Plan B (${r})`), new eJ(i)));
+                (a = new m.Vy(`Connection(${i.context})`)),
+                e_.PF ? (a.info(`Using Unified Plan (${r})`), new eQ(i)) : (a.info(`Using Plan B (${r})`), new e0(i)));
         return (
             (E.streamUserId = c),
             E.setOutputVolume(this.outputVolume),
             E.setSinkId(this.sinkId),
             E.once(S.y.Destroy, (e) => this.connections.delete(e)),
-            E.on(S.y.Silence, (e) => this.emit(N.bg.Silence, e)),
+            E.on(S.y.Silence, (e) => this.emit(N.b.Silence, e)),
             E.on(S.y.DesktopSourceEnd, this.handleDesktopSourceEnd),
             E.on(S.y.AudioPermission, this.handleAudioPermission),
             E.on(S.y.VideoPermission, this.handleVideoPermission),
             this.interacted && E.interact(),
             e === D.x.DEFAULT && (E.setAudioSource(this.sourceId), this.enabled && E.input.enableAudioInput()),
             this.connections.add(E),
-            this.emit(N.bg.Connection, E),
+            this.emit(N.b.Connection, E),
             E
         );
     }
@@ -3044,7 +3045,7 @@ class tt extends p.A {
     }
     async _enable() {
         if (this.enabled) return;
-        await this.getAudioContext().audioWorklet.addModule(e0);
+        await this.getAudioContext().audioWorklet.addModule(e1);
         let e = new Y(this.getAudioContext());
         e.on("permission", this.handleAudioPermission);
         try {
@@ -3076,7 +3077,7 @@ class tt extends p.A {
             this.eachConnection((t) => t.setAudioSource(e), D.x.DEFAULT),
             this.voiceActivityInput?.setSource(e),
             this.loopback?.setAudioSource(e),
-            this.emit(N.bg.SelectedDeviceChange, D.oh.AUDIO_INPUT, t, e));
+            this.emit(N.b.SelectedDeviceChange, D.oh.AUDIO_INPUT, t, e));
     }
     getAudioOutputDevices() {
         return x();
@@ -3086,7 +3087,7 @@ class tt extends p.A {
         ((this.sinkId = e),
             this.connections.forEach((t) => t.setSinkId(e)),
             this.loopback?.setAudioSink(e),
-            this.emit(N.bg.SelectedDeviceChange, D.oh.AUDIO_OUTPUT, t, e));
+            this.emit(N.b.SelectedDeviceChange, D.oh.AUDIO_OUTPUT, t, e));
     }
     getVideoInputDevices() {
         return k();
@@ -3180,7 +3181,7 @@ class tt extends p.A {
     setLoopback(e, t) {
         e && null == this.loopback
             ? (this.enable(),
-              (this.loopback = new e2(this.getAudioContext(), this.sourceId, this.sinkId)),
+              (this.loopback = new e3(this.getAudioContext(), this.sourceId, this.sinkId)),
               this.loopback.setNoiseCancellation(t.noiseCancellation))
             : e || null == this.loopback || (this.loopback.stop(), (this.loopback = null));
     }
@@ -3246,14 +3247,14 @@ class tt extends p.A {
     showSystemCaptureConfigurationUI(e) {}
     fetchAsyncResources(e) {
         return e.fetchDave
-            ? ez()
+            ? eX()
                 ? "object" != typeof WebAssembly
                     ? ((this.maxSupportedProtocolVersion = 0),
                       Promise.reject(Error("WebAssembly is not supported on this platform.")))
                     : new Promise((e, t) => {
-                          (null != eW
-                              ? eW
-                              : (eW = new Promise((e, t) => {
+                          (null != eY
+                              ? eY
+                              : (eY = new Promise((e, t) => {
                                     Promise.all([
                                         n.e("95625"),
                                         n.e("174086"),
@@ -3264,27 +3265,27 @@ class tt extends p.A {
                                         .then(n.bind(n, 22389))
                                         .then((n) => {
                                             let { DaveModuleFactory: i } = n;
-                                            i(e$)
+                                            i(ez)
                                                 .then((t) => {
-                                                    (ej.info("Successfully initialized DAVE"), (eY = t), e(t));
+                                                    (eW.info("Successfully initialized DAVE"), (eK = t), e(t));
                                                 })
                                                 .catch((e) => {
-                                                    (ej.error("Failed to initialize DAVE", e), t(e));
+                                                    (eW.error("Failed to initialize DAVE", e), t(e));
                                                 });
                                         })
                                         .catch((e) => {
-                                            (ej.error("Failed to load DAVE module", e), t(e));
+                                            (eW.error("Failed to load DAVE module", e), t(e));
                                         });
                                 }))
                           )
                               .then((t) => {
                                   ((this.dave = t),
                                       (this.transientKeys = (function () {
-                                          if (null == eY) throw Error("DAVE module not loaded");
-                                          return (null == eK && (eK = new eY.TransientKeys()), eK);
+                                          if (null == eK) throw Error("DAVE module not loaded");
+                                          return (null == e$ && (e$ = new eK.TransientKeys()), e$);
                                       })()),
                                       (this.maxSupportedProtocolVersion = t.MaxSupportedProtocolVersion()),
-                                      te.info(
+                                      tt.info(
                                           "Successfully initialized DAVE, version:",
                                           this.maxSupportedProtocolVersion,
                                       ),
@@ -3292,7 +3293,7 @@ class tt extends p.A {
                               })
                               .catch((e) => {
                                   ((this.maxSupportedProtocolVersion = 0),
-                                      te.error("Failed to initialize DAVE", e),
+                                      tt.error("Failed to initialize DAVE", e),
                                       t(e));
                               });
                       })
@@ -3316,7 +3317,7 @@ class tt extends p.A {
     };
     handleNewListener = (e) => {
         switch (e) {
-            case N.bg.DeviceChange:
+            case N.b.DeviceChange:
                 null != navigator.mediaDevices &&
                     null == navigator.mediaDevices.ondevicechange &&
                     ((navigator.mediaDevices.ondevicechange = () => {
@@ -3324,7 +3325,7 @@ class tt extends p.A {
                     }),
                     this.handleDeviceChange());
                 break;
-            case N.bg.VoiceActivity:
+            case N.b.VoiceActivity:
                 null == this.voiceActivityInput &&
                     ((this.voiceActivityInput = new Y(this.getAudioContext())),
                     this.voiceActivityInput.setSource(this.sourceId),
@@ -3334,31 +3335,31 @@ class tt extends p.A {
     };
     handleRemoveListener = (e) => {
         switch (e) {
-            case N.bg.DeviceChange:
+            case N.b.DeviceChange:
                 navigator.mediaDevices?.ondevicechange != null &&
-                    0 === this.listenerCount(N.bg.DeviceChange) &&
+                    0 === this.listenerCount(N.b.DeviceChange) &&
                     (navigator.mediaDevices.ondevicechange = null);
                 break;
-            case N.bg.VoiceActivity:
+            case N.b.VoiceActivity:
                 null != this.voiceActivityInput &&
-                    0 === this.listenerCount(N.bg.VoiceActivity) &&
+                    0 === this.listenerCount(N.b.VoiceActivity) &&
                     (this.voiceActivityInput.destroy(), (this.voiceActivityInput = null));
         }
     };
     handleDeviceChange = async () => {
         let [e, t, n] = await F();
-        this.emit(N.bg.DeviceChange, e, t, n);
+        this.emit(N.b.DeviceChange, e, t, n);
     };
     handleVoiceActivity = (e) => {
-        this.emit(N.bg.VoiceActivity, e, 0);
+        this.emit(N.b.VoiceActivity, e, 0);
     };
     handleDesktopSourceEnd = () => {
-        this.emit(N.bg.DesktopSourceEnd);
+        this.emit(N.b.DesktopSourceEnd);
     };
     handleAudioPermission = (e) => {
-        (this.emit(N.bg.AudioPermission, e), this.handleDeviceChange());
+        (this.emit(N.b.AudioPermission, e), this.handleDeviceChange());
     };
     handleVideoPermission = (e) => {
-        (this.emit(N.bg.VideoPermission, e), this.handleDeviceChange());
+        (this.emit(N.b.VideoPermission, e), this.handleDeviceChange());
     };
 }

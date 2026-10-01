@@ -30,7 +30,7 @@ var l,
     L = n(569926),
     P = n(928550),
     G = n(570962),
-    M = n(402860),
+    M = n(38145),
     O = n(773669),
     _ = n(409626),
     w = n(422069),
@@ -53,7 +53,7 @@ var Y = n(733391),
     H = n(957807),
     X = n(49491),
     K = n(429913),
-    J = n(594832),
+    J = n(820847),
     $ = n(862772),
     Q = n(287809);
 let q = s.createContext(void 0);
@@ -100,7 +100,7 @@ let eC = /^#{1,3}\s+(.+)$/,
 var eS = n(60465),
     eT = n(158390),
     ey = n(636537),
-    eR = n(228366),
+    eR = n(73153),
     eL = n(103348),
     eP = n(927813),
     eG = n(371794),
@@ -3497,7 +3497,7 @@ function iT(e) {
                     applicationIds: c,
                     userIds: n,
                     numItems: 6,
-                    source: J.B5.USER_PROFILE,
+                    source: J.B.USER_PROFILE,
                 }),
                 d = s.useMemo(
                     () =>
@@ -3585,7 +3585,7 @@ function iT(e) {
         eN = s.useCallback(
             function () {
                 let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
-                e ? ((0, A.closeAllModals)(), (0, M.closeUserProfileModal)()) : r();
+                e ? ((0, A.closeAllModals)(), (0, M.M)()) : r();
             },
             [r],
         ),

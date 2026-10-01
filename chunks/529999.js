@@ -12,12 +12,12 @@ var l = i(477900),
     m = i(173936),
     f = i(148494),
     g = i(280889),
-    p = i(565150),
-    x = i(342384),
-    v = i(429913),
-    k = i(573435),
-    C = i(914718),
-    A = i(619517),
+    p = i(342384),
+    x = i(429913),
+    v = i(573435),
+    k = i(914718),
+    C = i(619517),
+    A = i(274652),
     j = i(823099),
     w = i(451909),
     y = i(135621),
@@ -45,8 +45,8 @@ function I(t) {
                 (u = (0, l.jsxs)("div", {
                     className: F.EW,
                     children: [
-                        (0, l.jsx)(k.Ay, {
-                            mask: k.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
+                        (0, l.jsx)(v.Ay, {
+                            mask: v.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                             width: 56,
                             height: 56,
                             children: u,
@@ -83,7 +83,7 @@ function I(t) {
                 null != n &&
                     (0, l.jsx)("div", {
                         className: F.cR,
-                        children: (0, l.jsx)(A.Ay, { src: n, alt: "", width: 56, height: 56 }),
+                        children: (0, l.jsx)(C.Ay, { src: n, alt: "", width: 56, height: 56 }),
                     }),
                 u,
             ],
@@ -98,8 +98,8 @@ function W(t) {
             content: s,
             link: o,
             customId: c,
-            linkId: k,
-            imageUrl: A,
+            linkId: v,
+            imageUrl: C,
             files: T,
             previewTitle: F,
             previewSubtitle: W,
@@ -108,7 +108,7 @@ function W(t) {
             onShare: M,
             ...O
         } = t,
-        [V] = (0, v.A)([a]),
+        [V] = (0, x.A)([a]),
         q = (0, r.bG)([R.default], () => R.default.getCurrentUser()),
         H = T?.[0],
         Z = n.useMemo(() => (null != H ? URL.createObjectURL(H) : void 0), [H]);
@@ -116,10 +116,10 @@ function W(t) {
         if (null != Z) return () => URL.revokeObjectURL(Z);
     }, [Z]);
     let G = n.useMemo(
-            () => o ?? (0, x.W)({ applicationId: a, referrerId: q?.id, customId: c, linkId: k }),
-            [o, a, q?.id, c, k],
+            () => o ?? (0, p.W)({ applicationId: a, referrerId: q?.id, customId: c, linkId: v }),
+            [o, a, q?.id, c, v],
         ),
-        z = n.useCallback(
+        B = n.useCallback(
             async (t, e, i) => {
                 let l,
                     { withMessage: n, closeAfterSend: a } = e;
@@ -138,7 +138,7 @@ function W(t) {
                         .filter(b.Vq);
                     if (((o = t.length - e.length), 0 === e.length))
                         return void (0, d.P)((0, u.o)(S.intl.string(S.t.iufib1), h.Ck.FAILURE));
-                    let i = [A, s, n]
+                    let i = [C, s, n]
                         .filter(b.Vq)
                         .join("\n")
                         .slice(0, (0, y.a)());
@@ -154,7 +154,7 @@ function W(t) {
                                                   new g.bK(
                                                       {
                                                           file: new File([e], e.name, { type: e.type }),
-                                                          platform: p.xz.WEB,
+                                                          platform: A.x.WEB,
                                                           origin: "unknown:activity_share",
                                                       },
                                                       t.id,
@@ -186,9 +186,9 @@ function W(t) {
                     (l(r > 0), i(!1));
                 }
             },
-            [s, T, A, N, M],
+            [s, T, C, N, M],
         ),
-        B = n.useMemo(
+        D = n.useMemo(
             () => [
                 {
                     variant: "secondary",
@@ -204,13 +204,13 @@ function W(t) {
             ],
             [_, G],
         ),
-        D = V?.name ?? "";
-    return (0, l.jsx)(C.ForwardModal, {
+        J = V?.name ?? "";
+    return (0, l.jsx)(k.ForwardModal, {
         ...O,
         onClose: N,
         source: "frame",
         customPreview: (0, l.jsx)(I, {
-            title: F ?? D,
+            title: F ?? J,
             subtitle:
                 W ??
                 (null != T && T.length > 0
@@ -224,12 +224,12 @@ function W(t) {
                               ? S.intl.formatToPlainString(S.t.h4pFfU, { count: e })
                               : S.intl.formatToPlainString(S.t["89ihS8"], { count: T.length }))
                     : void 0),
-            imageUrl: A,
+            imageUrl: C,
             fileUrl: Z,
             isVideo: H?.type.startsWith("video/") ?? !1,
             overflowCount: Math.max((T?.length ?? 1) - 1, 0),
         }),
-        customSendHandler: z,
-        additionalActions: B,
+        customSendHandler: B,
+        additionalActions: D,
     });
 }

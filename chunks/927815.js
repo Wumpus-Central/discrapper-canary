@@ -1,5 +1,5 @@
 n.d(t, { A: () => _ });
-var i = n(228366),
+var i = n(73153),
     r = n(256311),
     a = n(439372),
     s = n(773669),
@@ -15,9 +15,9 @@ class u extends a.A {
                 t = await r.A.fetchChangelogConfig(),
                 n = t.body,
                 a =
-                    ((e = parseInt("626823")),
+                    ((e = parseInt("626834")),
                     Number.isNaN(e) &&
-                        (d.A.captureMessage("Trying to open a changelog for an invalid build number 626823"), (e = 0)),
+                        (d.A.captureMessage("Trying to open a changelog for an invalid build number 626834"), (e = 0)),
                     e),
                 u = (function (e, t) {
                     let n = 0,

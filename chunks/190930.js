@@ -15,12 +15,12 @@ var a = n(477900),
     g = n(308528),
     y = n(148494),
     C = n(608299),
-    f = n(565150),
-    _ = n(928039),
-    I = n(139286),
-    S = n(429913),
-    E = n(115718),
-    x = n(61916),
+    f = n(928039),
+    _ = n(139286),
+    I = n(429913),
+    S = n(115718),
+    E = n(61916),
+    x = n(274652),
     w = n(823099),
     M = n(451909),
     T = n(151054),
@@ -39,9 +39,9 @@ var a = n(477900),
     O = n(375708),
     G = n(868494);
 let V = (e, t) =>
-    e.type === E.rD.USER
+    e.type === S.rD.USER
         ? t || null != v.A.getDMChannelFromUserId(e.record.id)
-        : e.type === E.rD.GROUP_DM ||
+        : e.type === S.rD.GROUP_DM ||
           (e.record.type !== F.rbe.GUILD_FORUM &&
               e.record.type !== F.rbe.GUILD_MEDIA &&
               U.A.can(F.xBc.VIEW_CHANNEL, e.record) &&
@@ -58,14 +58,14 @@ function B() {
     });
 }
 function q(e) {
-    let { applicationId: t, mediaUrl: n, onClose: E, transitionState: U, ...q } = e,
+    let { applicationId: t, mediaUrl: n, onClose: S, transitionState: U, ...q } = e,
         Y = (0, s.bG)([P.Ay], () => P.Ay.getCurrentEmbeddedActivity());
-    (0, I.A)({
+    (0, _.A)({
         type: l.ImpressionTypes.MODAL,
         name: l.ImpressionNames.ACTIVITY_SHARE_MOMENT_MODAL,
         properties: { application_id: t, activity_session_id: Y?.compositeInstanceId },
     });
-    let [Q] = (0, S.A)([t]),
+    let [Q] = (0, I.A)([t]),
         W = (0, s.bG)([D.default], () => D.default.getCurrentUser()),
         [z, J] = i.useState(null),
         [K, X] = i.useState(null),
@@ -109,8 +109,8 @@ function q(e) {
             );
         }, [Z]));
     let eo = i.useCallback(async () => {
-            await E();
-        }, [E]),
+            await S();
+        }, [S]),
         ec = i.useCallback(async () => {
             (R.default.track(F.HAw.ACTIVITY_SHARE_MOMENT_COPY, {
                 user_id: W?.id,
@@ -153,7 +153,7 @@ function q(e) {
                 if (null != z) {
                     let e = new File([z], z.name, { type: z.type });
                     C.A.addFile({
-                        file: { file: e, platform: f.xz.WEB, origin: "unknown:activity_share" },
+                        file: { file: e, platform: x.x.WEB, origin: "unknown:activity_share" },
                         channelId: n,
                         draftType: k.C.ChannelMessage,
                     });
@@ -202,9 +202,9 @@ function q(e) {
             }
             eo();
         }, [Y, Q, t, en, z, eo, W]),
-        ep = (0, x.s)({ rowData: el, selectedDestinations: en, handleToggleDestination: ed, disableSelection: ei }),
+        ep = (0, E.s)({ rowData: el, selectedDestinations: en, handleToggleDestination: ed, disableSelection: ei }),
         em = i.useRef(null),
-        eA = (0, _.A)("activity-share-moment-modal", em),
+        eA = (0, f.A)("activity-share-moment-modal", em),
         eh = i.useMemo(
             () =>
                 el.length > 0

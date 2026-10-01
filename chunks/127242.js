@@ -4,7 +4,7 @@ var r = n(812729),
     a = n.n(r),
     s = n(17928),
     l = n(713402),
-    o = n(228366),
+    o = n(73153),
     d = n(935208),
     c = n(206885),
     u = n(181435),
@@ -26,7 +26,7 @@ function T(e) {
         return (f.reset(), d.default.fromTimestampWithSequence(t, f));
     }
 }
-let m = new l.J(
+let g = new l.J(
         function (e) {
             let t = [e.type, e.pid?.toString() ?? "null-pid"],
                 n = p(e);
@@ -36,9 +36,9 @@ let m = new l.J(
             return -e.timestamp;
         },
     ),
-    g = 0;
+    m = 0;
 function S(e) {
-    return m.set(e.id, e);
+    return g.set(e.id, e);
 }
 class N extends s.Ay.Store {
     static displayName = "Overlay-v3-Native-Debug-Module-Store";
@@ -55,7 +55,7 @@ class N extends s.Ay.Store {
         return A;
     }
     getOverlayLoggingBreadcrumbs(e) {
-        return [m.values(e, !0), m.version];
+        return [g.values(e, !0), g.version];
     }
     isModuleLoggingEnabled() {
         return null != I;
@@ -129,15 +129,15 @@ let C = new N(
                               ? null == I &&
                                 (I = setInterval(() => {
                                     let e = E?.getLastAssociatedPID() ?? null;
-                                    E?.getNativeBreadcrumbs({ minBreadcrumbId: g }, (t) => {
+                                    E?.getNativeBreadcrumbs({ minBreadcrumbId: m }, (t) => {
                                         let { breadcrumbs: n } = t;
                                         for (let t of n)
                                             !(function (e, t, n) {
                                                 let i,
                                                     r = p(e);
                                                 if (null == r) throw Error("Native breadcrumb has no native id");
-                                                m.size(r) > 0 ||
-                                                    ((g = Math.max(g, Number(e.id))),
+                                                g.size(r) > 0 ||
+                                                    ((m = Math.max(m, Number(e.id))),
                                                     S({
                                                         id: (i = T(e.timestamp)),
                                                         key: i,

@@ -1,6 +1,6 @@
 n.d(t, { A: () => l });
 var i = n(941426),
-    r = n(459838),
+    r = n(935172),
     a = n(731854);
 let s = new i.Vy("ConnectionEventFramerateReducer");
 class l {
@@ -11,8 +11,8 @@ class l {
         ((this.connection = e),
             (this.sinkWants = t),
             s.enableNativeLogger(!0),
-            e.on(r.yq.Speaking, this.handleSpeaking),
-            e.on(r.yq.Mute, this.handleSelfMute),
+            e.on(r.y.Speaking, this.handleSpeaking),
+            e.on(r.y.Mute, this.handleSelfMute),
             this.initialize());
     }
     initialize() {

@@ -1,0 +1,201 @@
+.chrome_e22cd8 {
+    background-color: var(--background-surface-high);
+    border-radius: var(--radius-sm);
+    box-shadow: inset 0 0 0 1px var(--border-subtle), var(--shadow-high);
+    position: relative
+}
+
+.nonInteractive_e22cd8 {
+    pointer-events: none
+}
+
+.tooltipContent_e22cd8 {
+    box-sizing: border-box;
+    max-width: 272px
+}
+
+.tooltipTextColumn_e22cd8 {
+    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0
+}
+
+.textLineHeight_e22cd8 {
+    line-height: 22px
+}
+
+.preview_ca5185 {
+    aspect-ratio: 16/9;
+    cursor: pointer;
+    position: absolute;
+    transform-origin: 0 0;
+    width: 100%
+}
+
+.previewSurface_ca5185,
+.previewViewport_ca5185 {
+    inset: 0;
+    position: absolute
+}
+
+.previewViewport_ca5185 {
+    overflow: hidden
+}
+
+.previewSlide_ca5185 {
+    inset: 0;
+    position: absolute
+}
+
+.previewImage_ca5185 {
+    height: 100%;
+    width: 100%
+}
+
+.previewViewport_ca5185:after {
+    background-color: #000;
+    content: "";
+    inset: 0;
+    opacity: .4;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .15s ease-out
+}
+
+.preview_ca5185:has(.previewSurface_ca5185:focus-visible) .previewViewport_ca5185:after,
+.preview_ca5185:hover .previewViewport_ca5185:after {
+    opacity: 0
+}
+
+.showingLiveStream_ca5185 .controlsLayer_ca5185,
+.showingLiveStream_ca5185 .liveIndicator_ca5185,
+.showingLiveStream_ca5185 .previewViewport_ca5185:after {
+    opacity: 0
+}
+
+.showingLiveStream_ca5185:has(:focus-visible) .previewViewport_ca5185:after,
+.showingLiveStream_ca5185:hover .previewViewport_ca5185:after {
+    opacity: .4
+}
+
+.showingLiveStream_ca5185:has(:focus-visible) .controlsLayer_ca5185,
+.showingLiveStream_ca5185:has(:focus-visible) .liveIndicator_ca5185,
+.showingLiveStream_ca5185:hover .controlsLayer_ca5185,
+.showingLiveStream_ca5185:hover .liveIndicator_ca5185 {
+    opacity: 1
+}
+
+.controlsLayer_ca5185 {
+    inset: 0;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .15s ease-out
+}
+
+.controls_ca5185,
+.controlsLayer_ca5185 {
+    align-items: center;
+    display: flex
+}
+
+.controls_ca5185 {
+    flex-shrink: 0;
+    position: relative
+}
+
+.watchButton_ca5185 {
+    background-color: var(--control-overlay-secondary-background-default);
+    border-radius: var(--radius-sm)
+}
+
+.full-motion .nextStreamButton_ca5185,
+.full-motion .watchButton_ca5185 {
+    transition: opacity .15s ease-out, transform .15s ease-out
+}
+
+.preview_ca5185:has(.previewSurface_ca5185:focus-visible) .watchButton_ca5185 button,
+.preview_ca5185:hover .watchButton_ca5185 button {
+    background-color: var(--control-overlay-secondary-background-hover);
+    border-color: var(--control-overlay-secondary-border-hover);
+    color: var(--control-overlay-secondary-text-hover)
+}
+
+.nextStreamSlot_ca5185 {
+    inset-inline-start: 100%;
+    margin-inline-start: var(--space-8);
+    position: absolute
+}
+
+.nextStreamButton_ca5185 {
+    background-color: var(--control-overlay-secondary-background-default);
+    border-radius: var(--radius-sm);
+    opacity: 0;
+    pointer-events: auto
+}
+
+.nextStreamButton_ca5185 button:active {
+    background-color: var(--control-overlay-secondary-background-hover);
+    border-color: var(--control-overlay-secondary-border-hover);
+    color: var(--control-overlay-secondary-text-hover)
+}
+
+.preview_ca5185:has(:focus-visible) .controls_ca5185 .watchButton_ca5185,
+.preview_ca5185:hover .controls_ca5185 .watchButton_ca5185 {
+    transform: scale(1.05)
+}
+
+.preview_ca5185:has(:focus-visible) .controls_ca5185 .nextStreamButton_ca5185,
+.preview_ca5185:hover .controls_ca5185 .nextStreamButton_ca5185 {
+    opacity: 1;
+    transform: scale(1.05)
+}
+
+.preview_ca5185:has(:focus-visible) .controls_ca5185 .nextStreamButton_ca5185:active,
+.preview_ca5185:hover .controls_ca5185 .nextStreamButton_ca5185:active {
+    transform: scale(.98)
+}
+
+.liveIndicator_ca5185 {
+    inset-inline-end: 5%;
+    pointer-events: none;
+    position: absolute;
+    top: 5%;
+    transform-origin: top right;
+    transition: opacity .15s ease-out
+}
+
+.seat__80369 {
+    border-radius: var(--radius-round);
+    cursor: pointer;
+    position: absolute
+}
+
+.graphic__80369 {
+    box-sizing: border-box;
+    display: block;
+    height: 100%;
+    width: 100%
+}
+
+.seat__80369:focus-visible .glow__80369,
+.seat__80369:hover .glow__80369 {
+    filter: none;
+    opacity: 1
+}
+
+.seat__80369:focus-visible .fill__80369,
+.seat__80369:hover .fill__80369 {
+    r: 40px;
+    fill: var(--background-mod-subtle)
+}
+
+.seat__80369:focus-visible .graphic__80369,
+.seat__80369:hover .graphic__80369 {
+    border: 2px solid #fff;
+    border-radius: var(--radius-round)
+}
+
+/*# sourceMappingURL=859821.5553ce36b2b5c264.css.map*/

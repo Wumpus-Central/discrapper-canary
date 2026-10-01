@@ -1,57 +1,33 @@
-n.d(t, { BC: () => E, oX: () => A, pX: () => _, xr: () => u });
+n.d(t, { oX: () => A, pX: () => u, xr: () => _ });
 var i = n(562708),
-    r = n(636537),
-    a = n(933681),
-    s = n(228366),
-    l = n(274184),
-    o = n(174459),
-    d = n(499785),
+    l = n(636537),
+    r = n(933681),
+    s = n(73153),
+    a = n(274184),
+    E = n(174459),
+    o = n(499785),
     c = n(652215);
-function u(e, t) {
+function _(e, t) {
     s.h.dispatch({ type: "SURVEY_OVERRIDE", id: e, isActionTriggered: t });
 }
-function _(e, t) {
+function u(e, t) {
     (s.h.dispatch({ type: "SURVEY_HIDE", key: e }),
         t
-            ? o.default.track(c.HAw.APP_NOTICE_CLOSED, { notice_type: c.kqX.SURVEY, survey_id: e, dismissed: t })
-            : o.default.track(c.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: c.kqX.SURVEY }));
-}
-function E(e, t) {
-    var n = {};
-    return (
-        null != e && (n.survey_override = e),
-        null != t && (n.disable_auto_seen = t),
-        d.A.get({
-            url: c.Rsh.USER_SURVEY,
-            query: n,
-            trackedActionData: {
-                event: i.NetworkActionNames.USER_SURVEY_FETCH,
-                properties: (e) => {
-                    let t = e?.body?.survey;
-                    return (0, a.e0)({ key: t?.key });
-                },
-            },
-            rejectWithError: (0, r.fT)(),
-        }).then(
-            (e) => (s.h.dispatch({ type: "SURVEY_FETCHED", survey: e?.body?.survey }), e?.body?.survey),
-            () => {
-                s.h.dispatch({ type: "SURVEY_FETCHED", survey: null });
-            },
-        )
-    );
+            ? E.default.track(c.HAw.APP_NOTICE_CLOSED, { notice_type: c.kqX.SURVEY, survey_id: e, dismissed: t })
+            : E.default.track(c.HAw.APP_NOTICE_PRIMARY_CTA_OPENED, { notice_type: c.kqX.SURVEY }));
 }
 function A(e) {
-    let t = l.Ay.getLastSeenTimestamp();
-    if (null === t || (null != t && Date.now() - t >= l.bh))
+    let t = a.Ay.getLastSeenTimestamp();
+    if (null === t || (null != t && Date.now() - t >= a.bh))
         return (
             s.h.dispatch({ type: "SURVEY_SEEN", key: e }),
-            d.A.post({
+            o.A.post({
                 url: c.Rsh.USER_SURVEY_SEEN(e),
                 trackedActionData: {
                     event: i.NetworkActionNames.USER_SURVEY_SEEN,
-                    properties: (t) => (0, a.e0)({ key: e }),
+                    properties: (t) => (0, r.e0)({ key: e }),
                 },
-                rejectWithError: (0, r.fT)(),
+                rejectWithError: (0, l.fT)(),
             })
         );
 }

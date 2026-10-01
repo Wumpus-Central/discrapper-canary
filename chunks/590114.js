@@ -9,7 +9,7 @@ var i = n(477900),
     d = n(503698),
     h = n.n(d),
     u = n(689175),
-    p = n(228366),
+    p = n(73153),
     A = n(944791),
     m = n(712963),
     g = n(661439),
@@ -855,14 +855,14 @@ function t0(t) {
     return (0, i.jsx)("div", { className: e, onContextMenu: (t) => l(t, s), children: n });
 }
 let t1 = [tj.A.unsafe_rawColors.BLUE_345.css, tj.A.colors.INTERACTIVE_TEXT_DEFAULT.css],
-    t4 = (t) => {
+    t5 = (t) => {
         let { tooltip: e, onClick: n, icon: l } = t;
         return (0, i.jsx)(X.m, {
             text: e,
             children: (0, i.jsx)(t_.K, { "aria-label": e, variant: "secondary", icon: l, onClick: n, size: "sm" }),
         });
     };
-function t5(t, e) {
+function t4(t, e) {
     switch (e) {
         case w.OQC.POST_INSTALL_SCRIPTS:
         case w.OQC.PLANNING:
@@ -902,7 +902,7 @@ let t6 = {
             v.intl.formatToPlainString(v.t["3VG9s1"], { percent: t, progress: e, total: n, timeRemaining: i }),
     },
 };
-function t2(t, e, n, i, l) {
+function t3(t, e, n, i, l) {
     let s = t6[e],
         a = null != s ? Object.keys(s) : [],
         { unit: r, time: o } = (0, tt.$l)(null != t ? t / 60 : null, a);
@@ -912,10 +912,10 @@ function t2(t, e, n, i, l) {
     }
     return null;
 }
-function t3(t) {
+function t2(t) {
     let { type: e, stage: n, percent: i, progress: l, total: s, secondsRemaining: a } = t,
-        r = t5(s, n),
-        o = t5(l, n);
+        r = t4(s, n),
+        o = t4(l, n);
     switch (n) {
         case w.OQC.QUEUED:
             if (0 === l) return v.intl.string(v.t.RpfBqd);
@@ -925,7 +925,7 @@ function t3(t) {
         case w.OQC.ALLOCATING_DISK:
             return v.intl.formatToPlainString(v.t.XigoJ9, { percent: i });
         case w.OQC.PATCHING:
-            return t2(a, e, i, o, r);
+            return t3(a, e, i, o, r);
         case w.OQC.FINALIZING:
             return v.intl.formatToPlainString(v.t["6PHDUN"], { percent: i });
         case w.OQC.PAUSING:
@@ -935,7 +935,7 @@ function t3(t) {
         case w.OQC.POST_INSTALL_SCRIPTS:
             return v.intl.formatToPlainString(v.t.c5vRUo, { percent: i, progress: o, total: r });
         case w.OQC.REPAIRING:
-            if (e === w.WTw.REPAIRING) return t2(a, e, i, o, r);
+            if (e === w.WTw.REPAIRING) return t3(a, e, i, o, r);
             return v.intl.formatToPlainString(v.t.OCzETT, { percent: i, progress: o, total: r });
     }
     throw Error("Invalid Dispatch stage");
@@ -1005,8 +1005,8 @@ class t7 extends l.PureComponent {
         if (null != n) {
             let { progress: i, total: l, stage: s } = n;
             if (null != i && null != l) {
-                let n = t5(l, s),
-                    a = t5(i, s),
+                let n = t4(l, s),
+                    a = t4(i, s),
                     r = Math.floor((e = te.uA(i, l)));
                 t =
                     s === w.OQC.PAUSING
@@ -1061,7 +1061,7 @@ class t7 extends l.PureComponent {
             c = te.uA(r ?? 0, s),
             d = (t[t.length - 1] / e) * 1e3,
             h = s - l,
-            u = t3({
+            u = t2({
                 type: a,
                 stage: i,
                 percent: Math.floor(o),
@@ -1087,7 +1087,7 @@ class t7 extends l.PureComponent {
             a = Math.floor(s);
         return this.renderBody({
             percent: s,
-            message: t3({ type: l, stage: i, percent: a, progress: n, total: e }),
+            message: t2({ type: l, stage: i, percent: a, progress: n, total: e }),
             foregroundColor: tj.A.unsafe_rawColors.BLUE_345.css,
         });
     }
@@ -1115,14 +1115,14 @@ class t7 extends l.PureComponent {
     }
 }
 function t9() {
-    return (0, i.jsx)(t4, { icon: tb.PlayIcon, tooltip: v.intl.string(v.t.YGm6SZ), onClick: () => tO.U() });
+    return (0, i.jsx)(t5, { icon: tb.PlayIcon, tooltip: v.intl.string(v.t.YGm6SZ), onClick: () => tO.U() });
 }
 function t8() {
-    return (0, i.jsx)(t4, { icon: tD.PauseIcon, tooltip: v.intl.string(v.t.TVAd5J), onClick: () => tO.v7() });
+    return (0, i.jsx)(t5, { icon: tD.PauseIcon, tooltip: v.intl.string(v.t.TVAd5J), onClick: () => tO.v7() });
 }
 let et = (t) => {
         let { item: e } = t;
-        return (0, i.jsx)(t4, {
+        return (0, i.jsx)(t5, {
             icon: tM.z,
             tooltip: v.intl.string(v.t["Eqb+LN"]),
             onClick: () => tO.BO(e.applicationId, e.branchId),
@@ -1130,7 +1130,7 @@ let et = (t) => {
     },
     ee = (t) => {
         let { item: e } = t;
-        return (0, i.jsx)(t4, {
+        return (0, i.jsx)(t5, {
             icon: tB.P,
             tooltip: v.intl.string(v.t["0lFmC9"]),
             onClick: () => tO.ZT(e.applicationId, e.branchId),

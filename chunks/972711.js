@@ -1,11 +1,11 @@
 n.d(t, { YL: () => o, gd: () => c, gp: () => u, nd: () => d, ph: () => l });
 var i = n(636537),
     r = n(306173),
-    a = n(509929),
-    s = n(565150);
+    a = n(274652),
+    s = n(509929);
 function l(e, t) {
     if (t.id === e.uri || (null != t.id && t.id === e.id)) return !0;
-    if (t.item.platform === s.xz.REACT_NATIVE) {
+    if (t.item.platform === a.x.REACT_NATIVE) {
         let { item: n } = t,
             { filename: i } = e;
         if (n.originalUri === e.uri || (null != i && n.originalUri?.includes(i))) return !0;
@@ -24,7 +24,7 @@ class d {
     }
 }
 function c(e) {
-    return e.platform === s.xz.REACT_NATIVE && null != e.uri && (0, a.a$)(e.uri) && (0, r.xd)();
+    return e.platform === a.x.REACT_NATIVE && null != e.uri && (0, s.a$)(e.uri) && (0, r.xd)();
 }
 class u {
     constructor() {

@@ -6,8 +6,8 @@ let i;
     Ak: () => K,
     Au: () => Y,
     CZ: () => $,
-    Dv: () => q,
-    un: () => Z,
+    Dv: () => Z,
+    un: () => q,
     fh: () => z,
     Ir: () => W,
     wH: () => H,
@@ -15,7 +15,7 @@ let i;
     n(321073));
 var r = n(702841),
     a = n(554146),
-    s = n(228366),
+    s = n(73153),
     l = n(95561),
     o = n(693806),
     d = n(885386),
@@ -29,17 +29,17 @@ var r = n(702841),
     f = n(807348),
     p = n(952818),
     T = n(734057),
-    m = n(763827),
-    g = n(309010),
+    g = n(763827),
+    m = n(309010),
     S = n(174459);
 n(980504);
 var N = n(652215),
     C = n(202541);
 function O(e, t, n, i, r) {
-    let a = T.A.getChannel(g.Ay.getVoiceChannelId()),
+    let a = T.A.getChannel(m.Ay.getVoiceChannelId()),
         s = a?.getGuildId(),
-        l = m.A.getMediaSessionId(),
-        o = m.A.getRTCConnectionId(),
+        l = g.A.getMediaSessionId(),
+        o = g.A.getRTCConnectionId(),
         d = p.Ay.getCurrentGameForAnalytics()?.name,
         c = s !== n.guildId && "0" !== n.guildId,
         u = "0" === n.guildId ? "default" : c ? "custom-external" : "custom";
@@ -81,7 +81,7 @@ var v = n(104142);
 function b(e) {
     let t = new AbortController(),
         n = (0, E.throttle)((n) => {
-            g.Ay.getVoiceChannelId() !== e && t.abort();
+            m.Ay.getVoiceChannelId() !== e && t.abort();
         }, 1e3);
     return { abortController: t, onRequestProgress: n };
 }
@@ -194,7 +194,7 @@ function X(e) {
     }
     return i;
 }
-function q(e, t) {
+function Z(e, t) {
     (0, c.TG)(
         e,
         (n) => {
@@ -203,7 +203,7 @@ function q(e, t) {
         c.Sb.INFREQUENT_USER_ACTION,
     );
 }
-function Z(e, t, n) {
+function q(e, t, n) {
     (0, c.TG)(
         e,
         (i) => {

@@ -853,32 +853,32 @@ let e3 = (e) => {
               ],
           });
 };
-var e4 = l(486020),
-    e8 = l(695451);
+var e8 = l(486020),
+    e4 = l(695451);
 let e2 = (e) => {
     let { entry: t } = e,
         l = (0, V.c)("GuildDiscoveryPreviewElement"),
         { id: i, icon: a, name: s } = t,
-        r = e4.Ay.getGuildIconURL({ id: i, icon: a, size: 32 }) ?? void 0;
+        r = e8.Ay.getGuildIconURL({ id: i, icon: a, size: 32 }) ?? void 0;
     return (0, n.jsxs)("div", {
-        className: e8.kL,
+        className: e4.kL,
         children: [
             (0, n.jsx)(p.D, {
-                className: e8.wx,
+                className: e4.wx,
                 variant: l ? "heading-sm/medium" : "heading-sm/semibold",
                 children: T.intl.string(T.t.nTe4HC),
             }),
             (0, n.jsx)("div", {
-                className: e8.bo,
+                className: e4.bo,
                 children: (0, n.jsxs)("div", {
-                    className: e8.OA,
+                    className: e4.OA,
                     children: [
                         (0, n.jsx)(B.Ay, {
                             mask: B.Ay.Masks.SQUIRCLE,
                             width: 32,
                             height: 32,
-                            className: e8.$d,
-                            children: (0, n.jsx)("img", { src: r, alt: "", className: e8.$f }),
+                            className: e4.$d,
+                            children: (0, n.jsx)("img", { src: r, alt: "", className: e4.$f }),
                         }),
                         (0, n.jsx)(P.E, { color: "text-default", variant: "text-sm/normal", children: s }),
                     ],
@@ -1489,8 +1489,8 @@ function t3(e) {
           })
         : null;
 }
-var t4 = l(957565),
-    t8 = l(65489);
+var t8 = l(957565),
+    t4 = l(65489);
 function t2(e) {
     let {
             element: {
@@ -1501,34 +1501,34 @@ function t2(e) {
         u = i.useRef(e_.A.reactParserFor(e_.A.defaultRules));
     return s
         ? (0, n.jsxs)("div", {
-              className: t8.kL,
+              className: t4.kL,
               children: [
                   (0, n.jsx)(p.D, {
                       variant: "heading-sm/semibold",
                       color: "text-default",
-                      className: t8.wx,
+                      className: t4.wx,
                       children: t,
                   }),
-                  (0, n.jsx)(P.E, { variant: "text-sm/normal", className: t8.G3, children: u.current(l) }),
+                  (0, n.jsx)(P.E, { variant: "text-sm/normal", className: t4.G3, children: u.current(l) }),
                   (0, n.jsx)("div", {
                       children: (0, n.jsxs)("div", {
-                          className: ed()(t8.GH, { [t8.pG]: r }),
+                          className: ed()(t4.GH, { [t4.pG]: r }),
                           children: [
                               (0, n.jsx)(P.E, {
                                   variant: "text-md/normal",
                                   selectable: !0,
-                                  className: t8.Kk,
+                                  className: t4.Kk,
                                   children: a,
                               }),
                               (0, n.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
-                                  className: t8.__invalid_trailingButton,
+                                  className: t4.__invalid_trailingButton,
                                   children: (0, n.jsx)(O.$, {
                                       variant: "secondary",
                                       size: "sm",
                                       text: r ? T.intl.string(T.t.t5VZ88) : T.intl.string(T.t.OpuAlK),
                                       onClick: function () {
-                                          (0, t4.C)(a, () => d(!0));
+                                          (0, t8.C)(a, () => d(!0));
                                       },
                                   }),
                               }),
@@ -1580,7 +1580,7 @@ let t9 = (e) => {
         ],
     });
 };
-var le = l(763432),
+var le = l(182636),
     lt = l(287809),
     ll = l(818972);
 let ln = (e) => {

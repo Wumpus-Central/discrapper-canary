@@ -5,8 +5,8 @@ var r = n(284009),
     s = n(435558),
     l = n.n(s),
     o = n(17928),
-    d = n(459838),
-    c = n(228366),
+    d = n(205693),
+    c = n(73153),
     u = n(952818),
     _ = n(499979),
     E = n(451988),
@@ -74,8 +74,8 @@ class I {
 var f = n(915725),
     p = n(572164),
     T = n(680725),
-    m = n(973522),
-    g = n(967347),
+    g = n(973522),
+    m = n(967347),
     S = n(929921),
     N = n(280450),
     C = n(734057),
@@ -348,19 +348,19 @@ class j extends A.A {
                                 this.screenshareFinishedCount,
                             );
                             this.screenshareFinishedCount++;
-                            let { gameName: D, gameId: M, exe: U, distributor: w } = (0, m.wH)(y),
+                            let { gameName: D, gameId: M, exe: U, distributor: w } = (0, g.wH)(y),
                                 G = this.getMediaSessionId(),
                                 x = this.getRTCConnectionId(),
                                 k = (d ?? 0) + (c ?? 0) + (u ?? 0) + (_ ?? 0) + (E ?? 0);
-                            (0, g.w)().then((m) => {
-                                let g =
-                                        null != m
+                            (0, m.w)().then((g) => {
+                                let m =
+                                        null != g
                                             ? {
-                                                  cpu_brand: m.cpu_brand,
-                                                  cpu_vendor: m.cpu_vendor,
-                                                  cpu_memory: m.cpu_memory,
-                                                  gpu_brand: m.gpu_brand,
-                                                  gpu_memory: m.gpu_memory,
+                                                  cpu_brand: g.cpu_brand,
+                                                  cpu_vendor: g.cpu_vendor,
+                                                  cpu_memory: g.cpu_memory,
+                                                  gpu_brand: g.gpu_brand,
+                                                  gpu_memory: g.gpu_memory,
                                               }
                                             : null,
                                     y =
@@ -416,7 +416,7 @@ class j extends A.A {
                                     pipewire_frames: O,
                                     x11_frames: R,
                                     videohook_backend: L,
-                                    ...g,
+                                    ...m,
                                 });
                             });
                         },
@@ -604,7 +604,7 @@ class j extends A.A {
         let { streamRegion: e, streamApplication: t, streamSourceType: n, actionContext: i } = this.analyticsContext,
             { ownerId: r, guildId: a } = this.streamContext,
             s = D.A.getRegion(y.A.getHostname()),
-            { gameName: l, gameId: o, exe: d, distributor: c, sku: u, gameMetadata: _ } = (0, m.wH)(t);
+            { gameName: l, gameId: o, exe: d, distributor: c, sku: u, gameMetadata: _ } = (0, g.wH)(t);
         return {
             channel_id: this.channelId,
             rtc_connection_id: this.getRTCConnectionId(),
@@ -735,8 +735,8 @@ var W = n(834757),
     $ = n(290863),
     z = n(325278);
 let X = {},
-    q = {},
     Z = {},
+    q = {},
     Q = {},
     J = {},
     ee = {},
@@ -880,12 +880,12 @@ let es = new ea(
                       }),
                       null == a && (a = o),
                       (Q[E] = s),
-                      (Z[E] = a),
+                      (q[E] = a),
                       null != a)
                   ) {
                       let e = u.Ay.getGameForPID(a);
                       (null != e &&
-                          (q[E] = {
+                          (Z[E] = {
                               name: e.name,
                               id: e.id,
                               exe: e.exeName,
@@ -893,7 +893,7 @@ let es = new ea(
                               sku: e.sku,
                               gameMetadata: e.gameMetadata,
                           }),
-                          en[E]?.analyticsContext.updateStreamApplication(q[E]));
+                          en[E]?.analyticsContext.updateStreamApplication(Z[E]));
                   } else en[E]?.analyticsContext.updateStreamApplication(null);
                   null != c ? (J[E] = c) : delete J[E];
               },
@@ -905,7 +905,7 @@ let es = new ea(
                           (n.setActionContext(t), i && n.trackEnd());
                       }),
                       (Q[n] = null),
-                      (Z[n] = null),
+                      (q[n] = null),
                       delete J[n]);
               },
               STREAM_CREATE: function (e) {
@@ -913,10 +913,10 @@ let es = new ea(
                       o = en[t],
                       d = (0, G.Iy)(t);
                   if (null == o && null != n) {
-                      (null == Z[t] && (q[t] = null), null == q[t] && null == Q[t] && (q[t] = (0, W.Ee)(d, $.A)));
+                      (null == q[t] && (Z[t] = null), null == Z[t] && null == Q[t] && (Z[t] = (0, W.Ee)(d, $.A)));
                       let e = new H({
                           streamRegion: s,
-                          streamApplication: q[t],
+                          streamApplication: Z[t],
                           streamSourceType: (function (e) {
                               if (null == e) return "unknown";
                               if (K.isPlatformEmbedded || platform?.name === "Chrome") {

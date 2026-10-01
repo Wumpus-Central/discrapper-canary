@@ -1,22 +1,23 @@
-(s.d(t, { A: () => l }), s(321073));
-var r = s(822382),
-    n = s(145331),
+(s.d(t, { A: () => d }), s(321073));
+var r = s(95561),
+    a = s(822382),
+    n = s(963144),
     i = s(132500);
-function a() {
+function _() {
     return { sessionId: (0, i.A)(), searchQueryId: null };
 }
-class _ {
+class c {
     sessions = new Map();
     getSession(e) {
-        return this.sessions.get((0, r.bS)(e)) ?? null;
+        return this.sessions.get((0, a.bS)(e)) ?? null;
     }
     setSession(e, t) {
-        let s = (0, r.bS)(e),
-            n = this.sessions.get(s) ?? a();
-        this.sessions.set(s, { ...n, ...t });
+        let s = (0, a.bS)(e),
+            r = this.sessions.get(s) ?? _();
+        this.sessions.set(s, { ...r, ...t });
     }
     deleteSession(e) {
-        this.sessions.delete((0, r.bS)(e));
+        this.sessions.delete((0, a.bS)(e));
     }
     getSessionId(e) {
         return this.getSession(e)?.sessionId ?? null;
@@ -37,41 +38,42 @@ class _ {
     transferSession(e, t) {
         this._transferSession(e, t);
         let s = this.getSession(e);
-        (this.sessions.set((0, r.bS)(t), s ?? a()), this.deleteSession(e));
+        (this.sessions.set((0, a.bS)(t), s ?? _()), this.deleteSession(e));
     }
 }
-class c extends _ {
+var l = s(652215);
+class h extends c {
     viewStates = new Map();
     pendingTimeouts = new Map();
     pendingEvents = new Map();
     _initialize(e) {}
     _terminate(e) {
-        let t = (0, r.bS)(e);
+        let t = (0, a.bS)(e);
         (clearTimeout(this.pendingTimeouts.get(t)),
             this.pendingTimeouts.delete(t),
             this.viewStates.delete(t),
             this.pendingEvents.delete(t));
     }
     _transferSession(e, t) {
-        let s = (0, r.bS)(e),
-            n = (0, r.bS)(t),
-            i = this.getViewState(e);
-        (this.setViewState(t, i), this.viewStates.delete(s));
-        let a = this.pendingTimeouts.get(s);
-        null != a && (clearTimeout(a), this.pendingTimeouts.delete(s), this.schedule(t));
+        let s = (0, a.bS)(e),
+            r = (0, a.bS)(t),
+            n = this.getViewState(e);
+        (this.setViewState(t, n), this.viewStates.delete(s));
+        let i = this.pendingTimeouts.get(s);
+        null != i && (clearTimeout(i), this.pendingTimeouts.delete(s), this.schedule(t));
         let _ = this.pendingEvents.get(s);
-        null != _ && (this.pendingEvents.set(n, _), this.pendingEvents.delete(s));
+        null != _ && (this.pendingEvents.set(r, _), this.pendingEvents.delete(s));
     }
     getViewState(e) {
-        let t = (0, r.bS)(e);
+        let t = (0, a.bS)(e);
         return this.viewStates.get(t) ?? { isFocused: !1, isSidebarOpen: !1, isFiltersModalOpen: !1, didTrackOpen: !1 };
     }
     setViewState(e, t) {
-        let s = (0, r.bS)(e);
+        let s = (0, a.bS)(e);
         this.viewStates.set(s, { ...this.getViewState(e), ...t });
     }
     schedule(e) {
-        let t = (0, r.bS)(e);
+        let t = (0, a.bS)(e);
         clearTimeout(this.pendingTimeouts.get(t));
         let s = setTimeout(() => {
             (this.pendingTimeouts.delete(t), this.evaluateViewState(e));
@@ -82,8 +84,25 @@ class c extends _ {
         let t = this.getViewState(e),
             s = t.isFocused || t.isSidebarOpen || t.isFiltersModalOpen;
         s && !t.didTrackOpen
-            ? (this.setViewState(e, { didTrackOpen: !0 }), (0, n.pY)({ searchContext: e }), this.flushPendingEvents(e))
-            : !s && t.didTrackOpen && (0, n.gp)({ searchContext: e });
+            ? (this.setViewState(e, { didTrackOpen: !0 }), this.trackSearchOpened(e), this.flushPendingEvents(e))
+            : !s && t.didTrackOpen && this.trackSearchClosed(e);
+    }
+    trackSearchOpened(e) {
+        (this.initialize(e),
+            r.Ay.trackWithMetadata(l.HAw.SEARCH_OPENED, {
+                search_id: (0, n.l)(e),
+                search_session_id: this.getSessionId(e),
+                search_type: e.type,
+            }));
+    }
+    trackSearchClosed(e) {
+        (r.Ay.trackWithMetadata(l.HAw.SEARCH_CLOSED, {
+            search_id: (0, n.l)(e),
+            search_session_id: this.getSessionId(e),
+            search_query_id: this.getQueryId(e),
+            search_type: e.type,
+        }),
+            this.terminate(e));
     }
     setFocused(e, t) {
         (this.setViewState(e, { isFocused: t }), this.schedule(e));
@@ -95,14 +114,14 @@ class c extends _ {
         (this.setViewState(e, { isFiltersModalOpen: t }), this.schedule(e));
     }
     enqueueEvent(e, t) {
-        let s = (0, r.bS)(e),
-            n = this.pendingEvents.get(s) ?? [];
-        (n.push(t), this.pendingEvents.set(s, n));
+        let s = (0, a.bS)(e),
+            r = this.pendingEvents.get(s) ?? [];
+        (r.push(t), this.pendingEvents.set(s, r));
     }
     flushPendingEvents(e) {
-        let t = (0, r.bS)(e),
+        let t = (0, a.bS)(e),
             s = this.pendingEvents.get(t);
         (null != s && s.forEach((e) => e()), this.pendingEvents.delete(t));
     }
 }
-let l = new c();
+let d = new h();

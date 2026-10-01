@@ -3,7 +3,7 @@ var i = n(398590),
     r = n(790271),
     a = n(186111),
     s = n(944771),
-    l = n(764451),
+    l = n(101715),
     o = n(652215);
 async function d(e, t, n) {
     if (!(0, r.mz)("playground_open")) return !1;
@@ -33,7 +33,7 @@ async function d(e, t, n) {
                   })(c, t, d)
                 : null;
     return (
-        l.PlaygroundStore.setState({
+        l.x.setState({
             selectedCollection: c,
             selectedStory: u,
             controlOverrides: null != u && null != n ? n : null,

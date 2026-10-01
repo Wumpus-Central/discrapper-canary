@@ -1,6 +1,6 @@
 n.d(t, { OW: () => d, YK: () => l, dm: () => c, jS: () => o, ly: () => u });
-var i = n(565150),
-    r = n(762555),
+var i = n(762555),
+    r = n(274652),
     a = n(219882);
 let s = [
         { reName: /\.jpe?g$/i, name: (e) => `image${e}.jpg`, type: "image/jpeg" },
@@ -40,14 +40,14 @@ function d(e) {
             ((a.is_clip = !0),
             (a.title = e.clip.name),
             (a.application_id = e.clip.applicationId),
-            (a.clip_created_at = (0, r.Uq)(e.clip.createdAt)),
-            (a.clip_participant_ids = (0, r.gD)(e.clip.users)),
+            (a.clip_created_at = (0, i.Uq)(e.clip.createdAt)),
+            (a.clip_participant_ids = (0, i.gD)(e.clip.users)),
             (a.clip_remote_id = e.clip.remoteClipId),
-            (a.clip_events_timeline = (0, r.lz)(e.clip)),
-            (a.clip_sync_timestamp = (0, r.Ae)(e.clip))),
+            (a.clip_events_timeline = (0, i.lz)(e.clip)),
+            (a.clip_sync_timestamp = (0, i.Ae)(e.clip))),
         "item" in e &&
             null != e.item &&
-            e.item.platform === i.xz.WEB &&
+            e.item.platform === r.x.WEB &&
             "mimeType" in e &&
             null != e.mimeType &&
             (a.original_content_type = e.mimeType),

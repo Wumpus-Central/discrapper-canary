@@ -34,7 +34,7 @@ let y = (0, N.mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var b = a(228366),
+var b = a(73153),
     O = a(482876),
     B = a(787301);
 let k = function (e) {

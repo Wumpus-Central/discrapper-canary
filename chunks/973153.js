@@ -1,6 +1,6 @@
 n.d(t, { A: () => p });
 var i = n(17928),
-    l = n(228366),
+    l = n(73153),
     r = n(640631),
     s = n(626584),
     a = n(734057),
@@ -9,7 +9,7 @@ var i = n(17928),
     d = n(383233),
     c = n(573163),
     h = n(935208);
-class g {
+class f {
     localNeeded = !0;
     messages = new Map();
     isLatest(e, t) {
@@ -60,9 +60,9 @@ class g {
         this.messages.delete(e);
     }
 }
-let f = -1 / 0,
-    A = new s.A("MessagePreviewStore");
-class E extends i.Ay.Store {
+let g = -1 / 0,
+    C = new s.A("MessagePreviewStore");
+class A extends i.Ay.Store {
     initialize() {
         this.waitFor(a.A, o.A);
     }
@@ -95,7 +95,7 @@ class E extends i.Ay.Store {
         return this.guilds.get(e)?.messageRecord(t) ?? null;
     }
     data(e) {
-        return (this.guilds.has(e) || this.guilds.set(e, new g()), this.guilds.get(e));
+        return (this.guilds.has(e) || this.guilds.set(e, new f()), this.guilds.get(e));
     }
     handleOneGuildCreate(e) {
         let t = this.data(e.id);
@@ -146,21 +146,21 @@ class E extends i.Ay.Store {
     }
     handleLocalMessagesLoaded(e) {
         let t = a.A.getBasicChannel(e.channelId);
-        null != t && ((0, r.D)(e.messages), this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, f));
+        null != t && ((0, r.D)(e.messages), this.data(t.guild_id).putNew(e.channelId, e.messages[0] ?? null, g));
     }
     handleMessagePreviewsLoaded(e) {
-        A.verbose(`adding remote previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
+        C.verbose(`adding remote previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
         let t = this.data(e.guildId);
         for (let n of e.messages) t.isLatest(n.channel_id, this.generation) || t.put(n.channel_id, n, this.generation);
     }
     handleMessagePreviewsLocallyLoaded(e) {
-        A.verbose(`adding local previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
+        C.verbose(`adding local previews (guildId: ${e.guildId}, messages: ${e.messages.length})`);
         let t = this.data(e.guildId);
-        for (let [n, i] of e.messages) t.has(n) || t.put(n, i, f);
+        for (let [n, i] of e.messages) t.has(n) || t.put(n, i, g);
         t.localNeeded = !1;
     }
     handleLogout(e) {
         this.guilds.clear();
     }
 }
-let p = new E();
+let p = new A();

@@ -5,7 +5,7 @@ var i = n(812729),
     s = n.n(a),
     l = n(665260),
     o = n(17928),
-    d = n(228366),
+    d = n(73153),
     c = n(933958),
     u = n(182892),
     _ = n(587895),
@@ -23,7 +23,7 @@ function T() {
     }
     return !r()(e, p) && ((p = e), !0);
 }
-class m extends o.Ay.Store {
+class g extends o.Ay.Store {
     static displayName = "FirstPartyRichPresenceStore";
     initialize() {
         this.syncWith(f, T);
@@ -32,7 +32,7 @@ class m extends o.Ay.Store {
         return p;
     }
 }
-let g = new m(d.h);
+let m = new g(d.h);
 var S = n(155718),
     N = n(871633),
     C = n(655116),
@@ -54,7 +54,7 @@ function x() {
     null != t &&
         ("0" === t.expiresAtMs || new Date(Number(t.expiresAtMs)).getTime() - new Date().getTime() > 0) &&
         e.push((0, E.F)(t));
-    let n = g.getActivities();
+    let n = m.getActivities();
     e.push(...n);
     let i = v.A.getStream();
     null != i && e.push({ type: P.$pd.STREAMING, ...i });
@@ -122,7 +122,7 @@ function x() {
 class k extends o.Ay.Store {
     static displayName = "LocalActivityStore";
     initialize() {
-        (this.waitFor(_.A, L.A, y.A, c.Ay, v.A, g, D.A, A.Ay, b.Ay, M.A, h.A, C.A, R.A), this.syncWith([g], () => x()));
+        (this.waitFor(_.A, L.A, y.A, c.Ay, v.A, m, D.A, A.Ay, b.Ay, M.A, h.A, C.A, R.A), this.syncWith([m], () => x()));
     }
     getActivities() {
         return U;

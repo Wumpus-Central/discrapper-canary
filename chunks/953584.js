@@ -1,7 +1,7 @@
-n.d(t, { Ay: () => s, FM: () => u, Vh: () => o, ke: () => c });
-var r = n(17928),
-    l = n(228366);
-class a extends r.il {
+i.d(t, { Ay: () => l, FM: () => o, Vh: () => u, ke: () => d });
+var a = i(17928),
+    n = i(73153);
+class r extends a.il {
     videoStatsEnabled = new Map();
     isVideoStatsEnabled(e) {
         return this.videoStatsEnabled.get(e) ?? !1;
@@ -22,7 +22,7 @@ class a extends r.il {
         ) {
             let e = this.videoStatsEnabled.size - 10,
                 t = this.videoStatsEnabled.keys();
-            for (let n = 0; n < e; n++) {
+            for (let i = 0; i < e; i++) {
                 let e = t.next().value;
                 null != e && this.videoStatsEnabled.delete(e);
             }
@@ -33,14 +33,14 @@ class a extends r.il {
         this.videoStatsEnabled.delete(e) && this.emitChange();
     }
 }
-let i = new a(l.h, {}),
-    s = i;
-function u(e) {
-    i.toggleVideoStats(e);
+let s = new r(n.h, {}),
+    l = s;
+function o(e) {
+    s.toggleVideoStats(e);
 }
-function o(e, t) {
-    i.setVideoStats(e, t);
+function u(e, t) {
+    s.setVideoStats(e, t);
 }
-function c(e) {
-    i.clearVideoStats(e);
+function d(e) {
+    s.clearVideoStats(e);
 }

@@ -102,7 +102,9 @@ function k(e) {
                         f.p5 &&
                         t &&
                         (0, b.L3)(e, async () => {
-                            let { default: e } = await i.e("432612").then(i.bind(i, 960015));
+                            let { default: e } = await Promise.all([i.e("638221"), i.e("432612")]).then(
+                                i.bind(i, 960015),
+                            );
                             return (i) => (0, n.jsx)(e, { ...i, tag: l });
                         })
                     )

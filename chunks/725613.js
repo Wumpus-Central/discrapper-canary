@@ -1,47 +1,47 @@
-e.d(a, { A: () => f });
-var t = e(478437),
-    i = e(17928),
-    s = e(228366),
-    n = e(597643),
-    c = e(927813);
-let o = new Set(),
-    r = {};
+a.d(e, { A: () => g });
+var t = a(478437),
+    n = a(17928),
+    i = a(73153),
+    s = a(597643),
+    c = a(927813);
+let r = new Set(),
+    o = {};
 function d(l) {
     return new Date(l * c.A.Millis.SECOND).getTime();
 }
 function h() {
-    o.clear();
+    r.clear();
 }
 function v(l) {
-    o.delete(l.guild.id);
+    r.delete(l.guild.id);
 }
-class u extends i.Ay.Store {
+class u extends n.Ay.Store {
     initialize() {
-        this.waitFor(n.A);
+        this.waitFor(s.A);
     }
     static displayName = "VoiceChannelStartTimeStore";
     getStartTime(l) {
-        if (null != l && null != l.guild_id && l.type === t.r.GUILD_VOICE) return r[l.guild_id]?.[l.id];
+        if (null != l && null != l.guild_id && l.type === t.r.GUILD_VOICE) return o[l.guild_id]?.[l.id];
     }
     hasRequestedStartTimes(l) {
-        return o.has(l);
+        return r.has(l);
     }
 }
-let f = new u(s.h, {
+let g = new u(i.h, {
     GUILD_CREATE: v,
     GUILD_DELETE: v,
     CONNECTION_RESUMED: h,
     CONNECTION_OPEN: h,
     VOICE_CHANNEL_START_TIME_UPDATE: function (l) {
-        let { guildId: a, id: e, voiceStartTime: t } = l;
-        (null == r[a] && (r[a] = {}), (r[a][e] = null != t ? d(t) : void 0));
+        let { guildId: e, id: a, voiceStartTime: t } = l;
+        (null == o[e] && (o[e] = {}), (o[e][a] = null != t ? d(t) : void 0));
     },
     CHANNEL_INFO: function (l) {
-        let { guildId: a, channels: e } = l;
-        for (let { id: l, voiceStartTime: t } of ((r[a] = {}), e)) r[a][l] = null != t ? d(t) : void 0;
+        let { guildId: e, channels: a } = l;
+        for (let { id: l, voiceStartTime: t } of ((o[e] = {}), a)) o[e][l] = null != t ? d(t) : void 0;
     },
     FETCH_CHANNEL_INFO: function (l) {
-        let { guildId: a } = l;
-        o.add(a);
+        let { guildId: e } = l;
+        r.add(e);
     },
 });

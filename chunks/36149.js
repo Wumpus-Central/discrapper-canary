@@ -4,8 +4,8 @@ n.d(t, {
     NI: () => P,
     Ny: () => z,
     Q9: () => W,
-    ST: () => Z,
-    Sr: () => q,
+    ST: () => q,
+    Sr: () => Z,
     Wv: () => B,
     Y2: () => k,
     YU: () => V,
@@ -27,7 +27,7 @@ var i,
     a = n(582128),
     s = n(687123),
     l = n(17928),
-    o = n(228366),
+    o = n(73153),
     d = n(155718),
     c = n(475743),
     u = n(138054);
@@ -41,9 +41,9 @@ var _ = n(207560),
     p = n(306537);
 n(787301);
 var T = n(295972),
-    m = n(757319);
+    g = n(757319);
 n(96358);
-var g = n(40449),
+var m = n(40449),
     S = n(652215),
     N = n(204925),
     C = n(835002),
@@ -134,7 +134,7 @@ function H(e, t) {
     let i = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return (
         i?.rawValue.split(",").includes("request_manual_review") === !0 &&
-        (0, m._)("isAgeVerificationMessageWithManualReviewCta")
+        (0, g._)("isAgeVerificationMessageWithManualReviewCta")
     );
 }
 function j(e, t) {
@@ -237,10 +237,10 @@ function X(e) {
         (s || o) && e();
     }, [e, s, o]);
 }
-function q(e) {
-    return null != e && g.zn.has(e);
-}
 function Z(e) {
+    return null != e && m.zn.has(e);
+}
+function q(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return L.has(e) ? R.intl.string(R.t.lSWVTM) : t ? R.intl.string(O.default["/kgWIg"]) : R.intl.string(R.t.xYXsr6);
 }

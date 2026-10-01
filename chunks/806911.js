@@ -6,7 +6,7 @@ var i = n(477900),
     l = n(435558),
     o = n.n(l),
     d = n(17928),
-    c = n(459838),
+    c = n(205693),
     u = n(834730),
     _ = n(778712),
     E = n(827343),
@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(793574),
     p = n(95561),
     T = n(198052),
-    m = n(94247),
-    g = n(520698),
+    g = n(94247),
+    m = n(520698),
     S = n(525788),
     N = n(384059),
     C = n(47167),
@@ -46,8 +46,8 @@ var i = n(477900),
     $ = n(531685),
     z = n(174459),
     X = n(562153),
-    q = n(427262),
-    Z = n(712577),
+    Z = n(427262),
+    q = n(712577),
     Q = n(566331),
     J = n(768088),
     ee = n(256195),
@@ -211,7 +211,7 @@ class eo extends r.PureComponent {
     renderParticipantName() {
         let { channel: e, participantOnScreen: t } = this.props;
         if (t?.type === ea.lp.STREAM || t?.type === ea.lp.USER) {
-            let n = X.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? q.Ay.getName(t.user);
+            let n = X.Ay.getNickname(e.getGuildId(), e.id, t.user) ?? Z.Ay.getName(t.user);
             return (0, i.jsx)(u.E, {
                 variant: "text-md/normal",
                 color: "text-overlay-light",
@@ -234,7 +234,7 @@ class eo extends r.PureComponent {
                 (null != o
                     ? (c = o)
                     : (n?.type === ea.lp.USER || n?.type === ea.lp.STREAM) &&
-                      (c = (0, i.jsx)(Z.A, {
+                      (c = (0, i.jsx)(q.A, {
                           paused: this.streamerPaused,
                           streamId: t,
                           component: j.Ay.getVideoComponent(),
@@ -270,14 +270,14 @@ class eo extends r.PureComponent {
 }
 function ed(e) {
     let { channel: t, width: n } = e,
-        r = (0, d.bG)([m.A], () => m.A.getSpeaker(t.id)),
+        r = (0, d.bG)([g.A], () => g.A.getSpeaker(t.id)),
         a = (0, d.bG)([T.A], () => T.A.getParticipant(t.id, r), [t.id, r]),
         s = (0, d.bG)([j.Ay], () => o()(j.Ay.getVideoDevices()).values().first()),
         l = (0, d.bG)(
             [K.A],
             () =>
                 null != a && a.type !== ea.lp.ACTIVITY && a.type !== ea.lp.HIDDEN_STREAM
-                    ? K.A.getStreamId(a.user.id, t.getGuildId(), (0, g.A)(a.type))
+                    ? K.A.getStreamId(a.user.id, t.getGuildId(), (0, m.A)(a.type))
                     : null,
             [a, t],
         ),

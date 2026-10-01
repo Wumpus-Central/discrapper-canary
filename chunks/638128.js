@@ -3,44 +3,44 @@ var l = n(377941),
     r = n.n(l),
     i = n(17928),
     a = n(506774),
-    s = n(228366),
-    u = n(724066),
-    o = n(900582);
+    u = n(73153),
+    o = n(724066),
+    s = n(900582);
 let c = "SpellcheckStore",
-    d = !0,
-    f = new Set();
-function h() {
-    a.w.set(c, { enabled: d, learnedWords: f });
+    f = !0,
+    d = new Set();
+function p() {
+    a.w.set(c, { enabled: f, learnedWords: d });
 }
-class p extends i.Ay.Store {
+class h extends i.Ay.Store {
     static displayName = "SpellcheckStore";
     initialize() {
         let e = a.w.get(c);
-        (null != e && ((d = e.enabled), (f = new Set(e.learnedWords)), (0, o.kv)(d), (0, o.d1)(f)), (0, u.I)(o.Av));
+        (null != e && ((f = e.enabled), (d = new Set(e.learnedWords)), (0, s.kv)(f), (0, s.d1)(d)), (0, o.I)(s.Av));
     }
     isEnabled() {
-        return d;
+        return f;
     }
     hasLearnedWord(e) {
-        return f.has(e.toLocaleLowerCase());
+        return d.has(e.toLocaleLowerCase());
     }
     findLearnedWordIn(e) {
-        if ("" === e || 0 === f.size) return null;
+        if ("" === e || 0 === d.size) return null;
         let t = e.toLocaleLowerCase();
-        for (let e of f) if (RegExp(`(?<![\\p{L}\\p{N}_])${r()(e)}(?![\\p{L}\\p{N}_])`, "u").test(t)) return e;
+        for (let e of d) if (RegExp(`(?<![\\p{L}\\p{N}_])${r()(e)}(?![\\p{L}\\p{N}_])`, "u").test(t)) return e;
         return null;
     }
 }
-let m = new p(s.h, {
+let m = new h(u.h, {
     SPELLCHECK_TOGGLE() {
-        ((d = !d), (0, o.kv)(d), h());
+        ((f = !f), (0, s.kv)(f), p());
     },
     SPELLCHECK_LEARN_WORD(e) {
         let { word: t } = e;
-        (f.add(t.toLocaleLowerCase()), (0, o.d1)(f), h());
+        (d.add(t.toLocaleLowerCase()), (0, s.d1)(d), p());
     },
     SPELLCHECK_UNLEARN_WORD(e) {
         let { word: t } = e;
-        (f.delete(t.toLocaleLowerCase()), (0, o.d1)(f), h());
+        (d.delete(t.toLocaleLowerCase()), (0, s.d1)(d), p());
     },
 });

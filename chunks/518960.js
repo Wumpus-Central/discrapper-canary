@@ -4,12 +4,12 @@ var r = i(367513),
     l = i(608299),
     o = i(494921),
     a = i(280889),
-    s = i(565150),
-    d = i(111542),
-    p = i(95561),
-    m = i(198052),
-    u = i(795129),
-    f = i(409481),
+    s = i(111542),
+    d = i(95561),
+    p = i(198052),
+    m = i(795129),
+    u = i(409481),
+    f = i(274652),
     g = i(346293),
     c = i(823099),
     h = i(522602),
@@ -27,15 +27,15 @@ function P(e, t, i) {
     let r = E.default.getCurrentUser(),
         n = e.guild_id,
         l = I.o2(n),
-        a = (0, f.C)(l),
+        a = (0, u.C)(l),
         s = Array.from(t).map((e) => e.size),
-        d = Array.from(t).map((e) => (null != e.type ? e.type : "unknown")),
+        p = Array.from(t).map((e) => (null != e.type ? e.type : "unknown")),
         m = s.reduce((e, t) => e + t, 0),
-        u = s.length > 0 ? Math.max(...s) : 0,
+        f = s.length > 0 ? Math.max(...s) : 0,
         c = s.length;
-    if (u > a) {
+    if (f > a) {
         let t = i?.reduce((e, t) => e + t, 0);
-        ((0, p.zV)(
+        ((0, d.zV)(
             S.HAw.FILE_SIZE_LIMIT_EXCEEDED,
             (0, g.s)({
                 channelId: e.id,
@@ -46,7 +46,7 @@ function P(e, t, i) {
                 preCompressionAggregateSize: m,
                 postCompressionFileSizes: i,
                 postCompressionAggregateSize: t,
-                attachmentMimeTypes: d,
+                attachmentMimeTypes: p,
                 errorType: C.ty.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR,
             }),
         ),
@@ -54,7 +54,7 @@ function P(e, t, i) {
                 title: w.intl.string(w.t["/tGlcj"]),
                 help: (0, y.WQ)(r, n, a),
                 showPremiumUpsell: !(0, T.YE)(r, U.PremiumTypes.TIER_2),
-                fileSize: u,
+                fileSize: f,
                 effectiveMaxSize: a,
             }));
         return;
@@ -68,30 +68,30 @@ function P(e, t, i) {
 }
 async function z(e, t, i) {
     let {
-        filesMetadata: p,
-        requireConfirm: f = !0,
+        filesMetadata: d,
+        requireConfirm: u = !0,
         isThumbnail: g = !1,
         origin: E,
     } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
     if (e.length < 1) return;
-    if (null != p && p.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
+    if (null != d && d.length !== e.length) throw Error("Unexpected mismatch between files and file metadata");
     let I = t.getGuildId(),
         T = Array.from(e),
         _ = T.map((e) => ({ originalContentType: e.type, preCompressionSize: e.size }));
     if (
         (await Promise.resolve(),
-        (await Promise.all(T.map(async (e) => !(e.size > 0) && (await (0, u._)(e)) === 0))).some(Boolean))
+        (await Promise.all(T.map(async (e) => !(e.size > 0) && (await (0, m._)(e)) === 0))).some(Boolean))
     )
         return void (0, o.openUploadError)({ title: w.intl.string(w.t.B3vFdU), help: w.intl.string(w.t["9ZpT2C"]) });
     let U = T.map((e, t) => ({
             file: e,
-            platform: s.xz.WEB,
+            platform: f.x.WEB,
             isThumbnail: g,
             origin: E,
             compressionMetadata: _[t],
-            ...p?.[t],
+            ...d?.[t],
         })),
-        z = await Promise.all(U.map(d.N)),
+        z = await Promise.all(U.map(s.N)),
         L = z.map((e) => e.file);
     if ((0, y.fJ)({ files: L, guildId: I })) return void P(t, L);
     if (h.A.getUploadCount(t.id, i) + z.length > S.XgB) {
@@ -107,9 +107,9 @@ async function z(e, t, i) {
     }
     if (
         ((t.type !== S.rbe.GUILD_VOICE && t.type !== S.rbe.GUILD_STAGE_VOICE) ||
-            m.A.getChatOpen(t.id) ||
+            p.A.getChatOpen(t.id) ||
             r.A.updateChatOpen(t.id, !0),
-        f)
+        u)
     )
         l.A.addFiles({ files: z, channelId: t.id, draftType: i });
     else {

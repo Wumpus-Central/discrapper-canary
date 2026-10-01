@@ -1,7 +1,7 @@
 let i;
 (n.d(t, { Am: () => R, Ay: () => et }), n(321073));
 var r = n(17928),
-    a = n(228366),
+    a = n(73153),
     s = n(155718),
     l = n(392054),
     o = n(159993),
@@ -16,8 +16,8 @@ var r = n(17928),
     f = n(956518),
     p = n(878549),
     T = n(969151),
-    m = n(847381),
-    g = n(108959),
+    g = n(847381),
+    m = n(108959),
     S = n(818023),
     N = n(5867),
     C = n(652215);
@@ -106,8 +106,8 @@ function X(e) {
             participants: e.participants.map(z),
             contentClassification: e.content_classification,
         },
-        m = (0, f.Ay)(r);
-    if (null == m) return;
+        g = (0, f.Ay)(r);
+    if (null == g) return;
     let S = (0, T.H)(o),
         O = 0 === (null != S ? (b.get(S)?.getItems("all") ?? R) : R).length,
         L = (M.get(o.id)?.getItems("all") ?? R).find((e) => e.applicationId === r),
@@ -124,7 +124,7 @@ function X(e) {
             location: o,
             launchId: s,
             compositeInstanceId: l,
-            url: m,
+            url: g,
             userIds: new Set(y),
             participants: A,
             contentClassification: I,
@@ -137,7 +137,7 @@ function X(e) {
         o.id === F.location.id &&
         r === F.applicationId &&
         ((!G && Array.from(F.userIds).some((e) => e === w)) || !k)
-            ? Z(F)
+            ? q(F)
             : G &&
               (null == F || F.applicationId !== r || F.location.id !== o.id) &&
               (x === d.default.getSessionId() &&
@@ -152,7 +152,7 @@ function X(e) {
                               isStart: A,
                               referrerId: I,
                               customId: p,
-                              inviterUserId: m,
+                              inviterUserId: g,
                               proxyTicket: S,
                               renderInFramePool: O,
                           } = e,
@@ -186,7 +186,7 @@ function X(e) {
                               isStart: A,
                               participants: l,
                               embeddedActivity: M,
-                              inviterUserId: m,
+                              inviterUserId: g,
                           }));
                       let P = (0, h.f)();
                       (!0 === O
@@ -196,7 +196,7 @@ function X(e) {
                               a.h.wait(() => {
                                   a.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
                               }))
-                            : (j = y !== u.Ay.getChannelId() || (0, g.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
+                            : (j = y !== u.Ay.getChannelId() || (0, m.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
                           H.set(
                               (function (e, t) {
                                   return `${e}:${t}`;
@@ -222,12 +222,12 @@ function X(e) {
         $(M, o.id).upsert(r, o.id, t),
         null != (n = (0, T.H)(o)) && ($(b, n).upsert(r, o.id, t), $(v, K((0, T.D)(o))).upsert(r, o.id, t)));
 }
-function q(e) {
+function Z(e) {
     e.activity_instances?.forEach((e) => {
         X(e);
     });
 }
-function Z(e) {
+function q(e) {
     (D.delete(e.applicationId), E._.dispatch(C.jej.RELEASE_ACTIVITY_WEB_VIEW));
 }
 function Q(e) {
@@ -392,18 +392,18 @@ let ee = new J(a.h, {
         },
         CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
             let { guilds: t } = e;
-            (b.clear(), v.clear(), M.clear(), t.forEach((e) => q(e)));
+            (b.clear(), v.clear(), M.clear(), t.forEach((e) => Z(e)));
             let n = d.default.getId();
             for (let e of Array.from(D.values()))
                 ee
                     .getEmbeddedActivitiesForLocationIncludingHidden(e.location)
                     .some(
                         (t) => t.applicationId === e.applicationId && t.launchId === e.launchId && t.userIds.has(n),
-                    ) || Z(e);
+                    ) || q(e);
         },
         GUILD_CREATE: function (e) {
             let { guild: t } = e;
-            q(t);
+            Z(t);
         },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e,
@@ -496,7 +496,7 @@ let ee = new J(a.h, {
             let r = Date.now();
             (!(function (e) {
                 let { activities: t, now: n } = e,
-                    i = (0, m.A)((0, A.getOS)()),
+                    i = (0, g.A)((0, A.getOS)()),
                     r = t.reduce((e, t) => {
                         let r = t.client_platform_config[i];
                         if (null == r.label_from || null == r.label_until) return e;

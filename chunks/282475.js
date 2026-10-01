@@ -12,12 +12,12 @@ var i,
     E = n(70298),
     A = n(17928),
     h = n(636537),
-    I = n(228366),
+    I = n(73153),
     f = n(766034),
     p = n(314732),
     T = n(214771),
-    m = n(937724),
-    g = n(626584),
+    g = n(937724),
+    m = n(626584),
     S = n(807393),
     N = n(464578),
     C = n(111162),
@@ -173,7 +173,7 @@ class j {
                     n = this._pako,
                     i = this._inflate;
                 if (null == i)
-                    return void new g.A("GatewayCompressionHandler").error(
+                    return void new m.A("GatewayCompressionHandler").error(
                         "flush end happened on closed compression adapter",
                     );
                 if (e !== n.Z_OK) throw Error(`zlib error, ${e}, ${i.strm.msg}`);
@@ -287,8 +287,8 @@ let K = BigInt(0),
     $ = BigInt(8),
     z = BigInt(16),
     X = BigInt(32),
-    q = BigInt(64),
-    Z = BigInt(128),
+    Z = BigInt(64),
+    q = BigInt(128),
     Q = BigInt(256),
     J = BigInt(65536),
     ee = BigInt(0x1000000),
@@ -520,7 +520,7 @@ let eI = new (class {
                             (this._u[this._i] = 110),
                             (this._u[this._i + 2] = +!!t),
                             this._v.setBigUint64(this._i + 3, n & es, !0),
-                            this._v.setBigUint64(this._i + 11, n >> q, !0));
+                            this._v.setBigUint64(this._i + 11, n >> Z, !0));
                         for (let e = 18; e > 10; e--)
                             if (0 !== this._u[this._i + e]) {
                                 ((this._u[this._i + 1] = e - 2), (this._i += e + 1));
@@ -528,12 +528,12 @@ let eI = new (class {
                             }
                     } else if (n < eu) {
                         (this._expand(35), (this._u[this._i] = 110), (this._u[this._i + 2] = +!!t));
-                        let e = n >> Z,
+                        let e = n >> q,
                             i = n & eo;
                         (this._v.setBigUint64(this._i + 3, i & es, !0),
-                            this._v.setBigUint64(this._i + 11, i >> q, !0),
+                            this._v.setBigUint64(this._i + 11, i >> Z, !0),
                             this._v.setBigUint64(this._i + 19, e & es, !0),
-                            this._v.setBigUint64(this._i + 27, e >> q, !0));
+                            this._v.setBigUint64(this._i + 27, e >> Z, !0));
                         for (let e = 34; e > 18; e--)
                             if (0 !== this._u[this._i + e]) {
                                 ((this._u[this._i + 1] = e - 2), (this._i += e + 1));
@@ -544,15 +544,15 @@ let eI = new (class {
                             i = [];
                         for (; e > ec;) {
                             let t = e & ec,
-                                n = t >> Z,
+                                n = t >> q,
                                 r = t & eo;
-                            (i.push(r & es, r >> q, n & es, n >> q), (e >>= Q));
+                            (i.push(r & es, r >> Z, n & es, n >> Z), (e >>= Q));
                         }
                         if (e > eo) {
-                            let t = e >> Z,
+                            let t = e >> q,
                                 n = e & eo;
-                            i.push(n & es, n >> q, t & es, t >> q);
-                        } else e > es ? i.push(e & es, e >> q) : e > K && i.push(e);
+                            i.push(n & es, n >> Z, t & es, t >> Z);
+                        } else e > es ? i.push(e & es, e >> Z) : e > K && i.push(e);
                         let r = i[i.length - 1],
                             a =
                                 8 * i.length -
@@ -964,7 +964,7 @@ let eI = new (class {
                         let e = t;
                         for (n = K; e > 0;)
                             e >= 8
-                                ? ((n <<= q), (n += this._v.getBigUint64(this._i + (e -= 8), !0)))
+                                ? ((n <<= Z), (n += this._v.getBigUint64(this._i + (e -= 8), !0)))
                                 : e >= 4
                                   ? ((n <<= X), (n += BigInt(this._v.getUint32(this._i + (e -= 4), !0))))
                                   : e >= 2
@@ -1077,7 +1077,7 @@ let eI = new (class {
                             } catch (n) {
                                 throw (
                                     D.A.captureException(n, { tags: { app_context: "WetfParser" } }),
-                                    new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
+                                    new m.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
                                         erlpackUnpackError: n,
                                         erlpackDataPreview: null != t ? Array.from(e.slice(0, 32)) : null,
                                         erlpackDataLength: e.length,
@@ -1091,7 +1091,7 @@ let eI = new (class {
                             return e.unpack(t);
                         } catch (e) {
                             throw (
-                                new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
+                                new m.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
                                     erlpackUnpackError: e,
                                     erlpackDataPreview: null != t ? Array.from(t.slice(0, 32)) : null,
                                     erlpackDataLength: null != t ? t.length : null,
@@ -1125,9 +1125,9 @@ class eT {
         return !0;
     }
 }
-let em = void 0 !== ep ? ep : eT;
-G.P.isDiscordGatewayPlaintextSet() && (em = eT);
-let eg = em;
+let eg = void 0 !== ep ? ep : eT;
+G.P.isDiscordGatewayPlaintextSet() && (eg = eT);
+let em = eg;
 n(423034);
 var eS = n(287809),
     eN = n(652215);
@@ -1306,7 +1306,7 @@ class eH {
         };
     }
 }
-let ej = new g.A("DispatcherWorkScheduler");
+let ej = new m.A("DispatcherWorkScheduler");
 class eW {
     _flushTimeoutHandler = null;
     _flushIdleHandler = null;
@@ -1483,8 +1483,8 @@ let eX = (0, eE.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    eq = new g.A("GatewaySocket"),
-    eZ = new Set(["INITIAL_GUILD", "READY"]),
+    eZ = new m.A("GatewaySocket"),
+    eq = new Set(["INITIAL_GUILD", "READY"]),
     eQ = new Set(["READY", "INITIAL_GUILD"]),
     eJ = new Set(["VOICE_SERVER_UPDATE", "STREAM_SERVER_UPDATE"]),
     e0 = new Set(["READY", "READY_SUPPLEMENTAL", "RESUMED"]),
@@ -1546,7 +1546,7 @@ class e3 {
         (this.queue.push(i), this.maybePreload(i) || this.scheduleFlush(t));
     }
     maybePreload(e) {
-        if (this.paused && !eZ.has(e.type)) return !1;
+        if (this.paused && !eq.has(e.type)) return !1;
         if (0 === e.status) {
             let t = this.getDispatchHandler(e.type)?.preload(e.data);
             if (((e.status = null == t ? 2 : 1), (e.preloadPromise = t), null != t))
@@ -1581,7 +1581,7 @@ class e3 {
             r = this.dispatchMultiple(i, e);
         r && this.scheduler.telemetry.timeEnd(eb.TIME_TO_QUEUE_EMPTY);
         let a = performance.now() - t;
-        return (a > eF && !r && eq.log(`Dispatched ${i.length} messages in ${a}ms`), r);
+        return (a > eF && !r && eZ.log(`Dispatched ${i.length} messages in ${a}ms`), r);
     };
     getDispatchTimings() {
         return e2;
@@ -1692,8 +1692,8 @@ class e3 {
                         f = [],
                         p = [],
                         T = [],
-                        m = [],
                         g = [],
+                        m = [],
                         S = [];
                     return (
                         n.forEach((e) => {
@@ -1705,8 +1705,8 @@ class e3 {
                                 f.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
                                 p.push(i),
                                 T.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
-                                m.push(t),
-                                g.push(r),
+                                g.push(t),
+                                m.push(r),
                                 S.push(a, n));
                         }),
                         {
@@ -1726,8 +1726,8 @@ class e3 {
                             guild_emojis_size: JSON.stringify(f).length,
                             guild_threads_size: JSON.stringify(p).length,
                             guild_stickers_size: JSON.stringify(T).length,
-                            guild_events_size: JSON.stringify(g).length,
-                            guild_features_size: JSON.stringify(m).length,
+                            guild_events_size: JSON.stringify(m).length,
+                            guild_features_size: JSON.stringify(g).length,
                             guild_remaining_data_size: JSON.stringify(S).length,
                             size_metrics_duration_ms: Date.now() - t,
                         }
@@ -2161,15 +2161,15 @@ class t_ extends ta.G {
 new t_();
 var tE = n(767589),
     tA = n(458244);
-let th = new g.A("QOS"),
-    tI = new g.A("GatewaySocket"),
-    tf = new eg(),
+let th = new m.A("QOS"),
+    tI = new m.A("GatewaySocket"),
+    tf = new em(),
     tp = null;
 function tT(e) {
     tp = e;
 }
-function tm() {}
-let tg = 30 * L.A.Millis.SECOND,
+function tg() {}
+let tm = 30 * L.A.Millis.SECOND,
     tS = 3 * L.A.Millis.MINUTE,
     tN = +L.A.Millis.MINUTE;
 function tC(e) {
@@ -2296,7 +2296,7 @@ class tR extends e8 {
                 let e = Date.now() - this.connectionStartTime;
                 (this._handleClose(!1, 0, `The connection timed out after ${e} ms - did not receive OP_HELLO in time.`),
                     this.setResumeUrl(null));
-            }, tg)));
+            }, tm)));
         let d = new URL(l);
         (d.searchParams.append("encoding", s),
             d.searchParams.append("v", o.toString()),
@@ -2644,7 +2644,7 @@ class tR extends e8 {
         (A.Ay.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout());
         let t = this.webSocket;
         ((this.webSocket = null),
-            null != t && ((t.onopen = tm), (t.onmessage = tm), (t.onerror = tm), (t.onclose = tm), e?.(t)),
+            null != t && ((t.onopen = tg), (t.onmessage = tg), (t.onerror = tg), (t.onclose = tg), e?.(t)),
             this.gatewayBackoff.cancel(),
             this.compressionHandler.close(),
             (this.compressionHandler = Y(tf)));
@@ -2663,9 +2663,9 @@ class tR extends e8 {
         let t = Date.now();
         this.identifyStartTime = t;
         let [n, i, r] = await Promise.all([
-                (0, m.O)() ? f.A.getCommittedVersions() : {},
-                (0, m.O)() ? T.A.getCommittedVersions() : {},
-                !!(0, m.O)() && p.A.canUseGuildVersions(),
+                (0, g.O)() ? f.A.getCommittedVersions() : {},
+                (0, g.O)() ? T.A.getCommittedVersions() : {},
+                !!(0, g.O)() && p.A.canUseGuildVersions(),
             ]),
             a = (function (e, t) {
                 let n;

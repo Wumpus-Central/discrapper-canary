@@ -9,7 +9,7 @@ var n = t(477900),
     u = t(95477),
     d = t(103557),
     p = t(150934),
-    f = t(565150),
+    f = t(274652),
     m = t(465856),
     g = t(644447),
     x = t(652215),
@@ -39,7 +39,7 @@ function S(e) {
 }
 function C(e) {
     let { upload: i } = e;
-    return i.item.platform !== f.xz.WEB
+    return i.item.platform !== f.x.WEB
         ? null
         : i.isImage
           ? (0, n.jsx)(S, { file: i.item.file })

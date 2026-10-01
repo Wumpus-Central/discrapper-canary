@@ -1,10 +1,10 @@
 let i;
-(n.d(t, { ms: () => eS, iG: () => eN, Ay: () => eC, Pd: () => em, DV: () => eg }), n(321073));
+(n.d(t, { ms: () => eS, iG: () => eN, Ay: () => eC, Pd: () => eg, DV: () => em }), n(321073));
 var r = n(132500),
     a = n(344351),
     s = n(731738),
     l = n(636537),
-    o = n(228366),
+    o = n(73153),
     d = n(367513),
     c = n(155718),
     u = n(272355),
@@ -16,8 +16,8 @@ var r = n(132500),
     f = n(198052),
     p = n(655087),
     T = n(625180),
-    m = n(807393),
-    g = n(859703),
+    g = n(807393),
+    m = n(859703),
     S = n(639214),
     N = n(95701),
     C = n(280450),
@@ -61,8 +61,8 @@ var k = n(795816),
     $ = n(977997),
     z = n(62583),
     X = n(170148),
-    q = n(550151),
-    Z = n(375708);
+    Z = n(550151),
+    q = n(375708);
 async function Q(e) {
     let {
             channelId: t,
@@ -99,29 +99,29 @@ async function Q(e) {
     !(function (e) {
         let { embeddedActivityJoinability: t, handleCanJoin: n } = e;
         switch (t) {
-            case q.Gy.CAN_JOIN:
+            case Z.Gy.CAN_JOIN:
                 n?.();
                 break;
-            case q.Gy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
+            case Z.Gy.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION:
                 (0, j.i)();
                 break;
-            case q.Gy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
-                H.A.show({ title: Z.intl.string(Z.t.PtobXW), body: Z.intl.string(Z.t.UXoQTp), hideActionSheet: !1 });
+            case Z.Gy.ACTIVITIES_FEATURE_NOT_ENABLED_FOR_OS:
+                H.A.show({ title: q.intl.string(q.t.PtobXW), body: q.intl.string(q.t.UXoQTp), hideActionSheet: !1 });
                 break;
-            case q.Gy.ACTIVITY_NOT_SUPPORTED_ON_OS:
-                H.A.show({ title: Z.intl.string(Z.t.PtobXW), body: Z.intl.string(Z.t.uGDCcw), hideActionSheet: !1 });
+            case Z.Gy.ACTIVITY_NOT_SUPPORTED_ON_OS:
+                H.A.show({ title: q.intl.string(q.t.PtobXW), body: q.intl.string(q.t.uGDCcw), hideActionSheet: !1 });
                 break;
-            case q.Gy.ACTIVITY_AGE_GATED:
-                H.A.show({ title: Z.intl.string(Z.t.PtobXW), body: Z.intl.string(Z.t["4WuFRE"]), hideActionSheet: !1 });
+            case Z.Gy.ACTIVITY_AGE_GATED:
+                H.A.show({ title: q.intl.string(q.t.PtobXW), body: q.intl.string(q.t["4WuFRE"]), hideActionSheet: !1 });
                 break;
-            case q.Gy.NO_CHANNEL_CONNECT_PERMISSION:
-            case q.Gy.CHANNEL_FULL:
-            case q.Gy.NO_CHANNEL:
-            case q.Gy.NO_USER:
-                H.A.show({ title: Z.intl.string(Z.t.PtobXW), body: Z.intl.string(Z.t.FUCQco), hideActionSheet: !1 });
+            case Z.Gy.NO_CHANNEL_CONNECT_PERMISSION:
+            case Z.Gy.CHANNEL_FULL:
+            case Z.Gy.NO_CHANNEL:
+            case Z.Gy.NO_USER:
+                H.A.show({ title: q.intl.string(q.t.PtobXW), body: q.intl.string(q.t.FUCQco), hideActionSheet: !1 });
         }
     })({
-        embeddedActivityJoinability: (0, q.Ay)({
+        embeddedActivityJoinability: (0, Z.Ay)({
             userId: u?.id,
             application: c,
             channelId: t,
@@ -244,9 +244,9 @@ function ef(e) {
         h = O.A.getChannel(_);
     if ((i && null != h && h.isPrivate() && n && null == u && d.A.selectParticipant(h.id, null), null == u)) return;
     let I = R.A.getMediaSessionId(),
-        m = s.compositeInstanceId,
-        g = null == I && h?.isVocal() === !0 && h?.isPrivate() === !1;
-    if (null == m || g) return;
+        g = s.compositeInstanceId,
+        m = null == I && h?.isVocal() === !0 && h?.isPrivate() === !1;
+    if (null == g || m) return;
     let S = (0, r.A)(),
         N = "location" in s ? 2 : 1,
         L = y.default.getCurrentUser();
@@ -259,7 +259,7 @@ function ef(e) {
         G = p.A.getRawThermalState(),
         k = null != I ? [I] : [],
         V = {
-            activitySessionId: m,
+            activitySessionId: g,
             activityUserSessionId: S,
             launchId: s.launchId,
             mediaSessionIds: k,
@@ -272,7 +272,7 @@ function ef(e) {
             channel_id: _,
             guild_id: A,
             media_session_id: k[0],
-            activity_session_id: m,
+            activity_session_id: g,
             application_id: t,
             location_stack: H?.locations,
             user_premium_tier: L.premiumType,
@@ -322,14 +322,14 @@ function ep(e, t) {
 function eT(e, t) {
     let n = h.A.getApplication(e);
     if (!(0, I.n)(n, el.gfo.QUEST)) return;
-    let i = (0, S.jm)(g.A.quests, e, !0);
+    let i = (0, S.jm)(m.A.quests, e, !0);
     if (i.length > 0) {
         let n = [`application_id:${e}`],
             r = i.find((e) => e.userStatus?.enrolledAt != null)?.id;
-        (null != r && n.push(`quest_id:${r}`), m.A.increment({ name: t, tags: n }));
+        (null != r && n.push(`quest_id:${r}`), g.A.increment({ name: t, tags: n }));
     }
 }
-function em(e, t) {
+function eg(e, t) {
     let n = ep(e, t);
     if (null == n) return;
     let {
@@ -346,8 +346,8 @@ function em(e, t) {
         I = y.default.getCurrentUser();
     if (null == I) return;
     let T = null != o ? O.A.getChannel(o) : null,
-        m = n.guildId ?? T?.getGuildId() ?? null,
-        g = n.locationKind ?? (null == T ? void 0 : null != m ? a.T.GUILD_CHANNEL : a.T.PRIVATE_CHANNEL),
+        g = n.guildId ?? T?.getGuildId() ?? null,
+        m = n.locationKind ?? (null == T ? void 0 : null != g ? a.T.GUILD_CHANNEL : a.T.PRIVATE_CHANNEL),
         S = R.A.getMediaSessionId(),
         N = null != S ? [S] : [],
         C = (0, r.A)();
@@ -359,10 +359,10 @@ function em(e, t) {
         activitiesInfraVersion: u,
         connectedSince: Date.now(),
         frameChannelId: o,
-        frameGuildId: m,
-        frameLocationKind: g,
+        frameGuildId: g,
+        frameLocationKind: m,
     };
-    let L = F.Ay.getShelfActivities(m),
+    let L = F.Ay.getShelfActivities(g),
         v = x.getState().shelfOrder,
         b = (0, B.A)({ applicationId: e, activityConfigs: L }),
         M = 1 + v.findIndex((t) => t === e),
@@ -370,7 +370,7 @@ function em(e, t) {
         U = p.A.getRawThermalState();
     (D.default.track(el.HAw.ACTIVITY_SESSION_JOINED, {
         channel_id: o,
-        guild_id: m,
+        guild_id: g,
         media_session_id: N[0],
         activity_session_id: c,
         application_id: e,
@@ -388,14 +388,14 @@ function em(e, t) {
         command_context_type: null != T ? (0, E.ud)(T, e) : null,
         invite_inviter_id: l,
         interaction_id: h,
-        embedded_activity_location_kind: g,
+        embedded_activity_location_kind: m,
     }),
         eT(e, s.K.FRAME_SESSION_JOIN),
         D.default.track(el.HAw.ACTIVITY_IFRAME_MOUNT, {
             location_stack: _,
             channel_id: o,
             channel_type: T?.type,
-            guild_id: m,
+            guild_id: g,
             application_id: e,
             instance_id: d,
             initial_media_session_id: N[0],
@@ -405,10 +405,10 @@ function em(e, t) {
             shelf_rank: b?.activity?.shelf_rank,
             shelf_sorted_rank: M > 0 ? M : null,
             activities_infra_version: u,
-            embedded_activity_location_kind: g,
+            embedded_activity_location_kind: m,
         }));
 }
-function eg(e) {
+function em(e) {
     return eo[e];
 }
 async function eS(e, t, n) {
@@ -605,9 +605,9 @@ class eC extends u.A {
         let l = F.Ay.getSelfEmbeddedActivityForChannel(t);
         if (l?.applicationId === n) return;
         let o = await A.Ay.fetchApplication(n);
-        if (!(0, X.A)()) return void this.showLaunchErrorModal(Z.intl.string(Z.t.UXoQTp));
+        if (!(0, X.A)()) return void this.showLaunchErrorModal(q.intl.string(q.t.UXoQTp));
         if (!(0, ei.A)(o?.embedded_activity_config?.supported_platforms))
-            return void this.showLaunchErrorModal(Z.intl.string(Z.t.uGDCcw));
+            return void this.showLaunchErrorModal(q.intl.string(q.t.uGDCcw));
         let d = s?.getGuildId() ?? void 0,
             { activityConfigs: c, applications: u } = await (0, k.LV)({ guildId: d });
         if (null == (0, B.A)({ applicationId: n, activityConfigs: c, applications: u })) {

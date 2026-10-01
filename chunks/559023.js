@@ -1,7 +1,7 @@
 s.d(t, { init: () => I });
 var r = s(626584);
 s(321073);
-var i = s(228366),
+var i = s(73153),
     a = s(723702),
     n = s(290805);
 function o(e) {
@@ -110,8 +110,8 @@ class p {
             branch_name: this.mode.branchName,
             commit_date: this.mode.commitDate,
             timestamp: new Date().toISOString(),
-            build_number: "626823",
-            built_at: "1790875110195",
+            build_number: "626834",
+            built_at: "1790875585202",
             release_channel: n.y ?? "unknown",
             meticulous_perf_version: 6,
             browser_version: this.mode.browserVersion,
@@ -264,8 +264,8 @@ class y {
                 branch_name: e.branchName,
                 commit_date: e.commitDate,
                 timestamp: i,
-                build_number: "626823",
-                built_at: "1790875110195",
+                build_number: "626834",
+                built_at: "1790875585202",
                 release_channel: n.y ?? "unknown",
                 meticulous_perf_version: 6,
                 browser_version: e.browserVersion,

@@ -198,8 +198,8 @@ let ey = function (e) {
                                         n.e("189673"),
                                         n.e("882073"),
                                         n.e("797558"),
-                                        n.e("229787"),
                                         n.e("691994"),
+                                        n.e("229787"),
                                         n.e("576665"),
                                         n.e("624198"),
                                         n.e("532418"),
@@ -240,7 +240,7 @@ n(536637);
 var eK = n(707539),
     eB = n(573163),
     eZ = n(978914),
-    eX = n(228366),
+    eX = n(73153),
     eJ = n(321191),
     eY = n(903209),
     e$ = n(346055),
@@ -248,11 +248,11 @@ var eK = n(707539),
     e7 = n(521981),
     e3 = n(448368),
     e8 = n(302031),
-    e6 = n(885386),
-    e9 = n(576705),
+    e9 = n(885386),
+    e6 = n(576705),
     e1 = n(652215),
-    e2 = n(838541),
-    e4 = n(282573),
+    e4 = n(838541),
+    e2 = n(282573),
     e5 = n(165648);
 let te = s.memo(function (e) {
     let { channel: t } = e,
@@ -265,8 +265,8 @@ let te = s.memo(function (e) {
             }),
             [r],
         ),
-        u = (0, o.bG)([e9.A], () => e9.A.can(e1.xBc.MANAGE_MESSAGES, t)),
-        h = e6.gs.useSetting(),
+        u = (0, o.bG)([e6.A], () => e6.A.can(e1.xBc.MANAGE_MESSAGES, t)),
+        h = e9.gs.useSetting(),
         { content: m } = s.useMemo(
             () =>
                 r?.content != null && "" !== r.content
@@ -277,7 +277,7 @@ let te = s.memo(function (e) {
         A = null;
     if (i)
         A = (0, l.jsx)(E.E, {
-            className: e4.G4,
+            className: e2.G4,
             variant: "text-sm/normal",
             color: "text-muted",
             children: K.intl.string(K.t.BZHld2),
@@ -285,37 +285,37 @@ let te = s.memo(function (e) {
     else if (n)
         if (null != r && c)
             A = (0, l.jsx)(E.E, {
-                className: e4.G4,
+                className: e2.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: K.intl.string(K.t["WPe+xL"]),
             });
         else if (null != r && d)
             A = (0, l.jsx)(E.E, {
-                className: e4.G4,
+                className: e2.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: K.intl.string(K.t.uxrh1O),
             });
         else if (null != r) {
-            let { contentPlaceholder: e, renderedContent: t } = (0, e3.o)(r, m, c, d, a()(e4.BK, e5.tZ), {
-                leadingIconClass: e4.AF,
-                trailingIconClass: e4.AF,
-                iconSize: e2.eJ,
+            let { contentPlaceholder: e, renderedContent: t } = (0, e3.o)(r, m, c, d, a()(e2.BK, e5.tZ), {
+                leadingIconClass: e2.AF,
+                trailingIconClass: e2.AF,
+                iconSize: e4.eJ,
             });
             A =
                 null != t
-                    ? (0, l.jsx)(E.E, { variant: "text-sm/normal", color: "text-muted", className: e4.BK, children: t })
+                    ? (0, l.jsx)(E.E, { variant: "text-sm/normal", color: "text-muted", className: e2.BK, children: t })
                     : (0, l.jsx)(E.E, {
                           tag: "span",
                           variant: "text-sm/normal",
                           color: "text-muted",
-                          className: e4.G4,
+                          className: e2.G4,
                           children: e,
                       });
         } else
             A = (0, l.jsx)(E.E, {
-                className: e4.G4,
+                className: e2.G4,
                 variant: "text-sm/normal",
                 color: "text-muted",
                 children: K.intl.string(K.t["0KfDxM"]),
@@ -323,7 +323,7 @@ let te = s.memo(function (e) {
     else A = null;
     return (0, l.jsx)(e8.Bs.Provider, {
         value: (0, e0.A)(h, u),
-        children: (0, l.jsx)(e$.M, { className: e4.JY, children: A }),
+        children: (0, l.jsx)(e$.M, { className: e2.JY, children: A }),
     });
 });
 var tt = n(599036);

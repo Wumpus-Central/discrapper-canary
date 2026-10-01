@@ -1,0 +1,132 @@
+.fieldWrapper_ce6bbd {
+    padding-top: 4px;
+    position: relative
+}
+
+.formItem__1b11b {
+    width: 100%
+}
+
+.noDrag_e9ca56 {
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none
+}
+
+.container_e9ca56 {
+    position: relative;
+    width: 380px
+}
+
+.card_e9ca56 {
+    gap: 8px
+}
+
+.card_e9ca56,
+.footer_e9ca56 {
+    display: flex;
+    padding: var(--space-8)
+}
+
+.footer_e9ca56 {
+    justify-content: space-between
+}
+
+.title_e9ca56 {
+    color: #000;
+    font-size: 16px;
+    text-transform: uppercase
+}
+
+.asset_e9ca56,
+.title_e9ca56 {}
+
+.asset_e9ca56 {
+    background-blend-mode: color-burn;
+    background-image: url(https://cdn.discordapp.com/assets/content/7f5bafad92c161f4e3f0aead83b84dfafeacea91a5eb442f49ed5711470b7887.png);
+    background-size: cover;
+    height: 120px;
+    padding-inline: var(--space-8);
+    padding-bottom: var(--space-16);
+    padding-top: var(--space-16)
+}
+
+.stats_e9ca56 {
+    flex-direction: column;
+    overflow: hidden
+}
+
+.stat_e9ca56,
+.stats_e9ca56 {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.stat_e9ca56 {
+    align-items: center
+}
+
+.statImage_e9ca56 {
+    background-color: #000;
+    border: 1px solid #000;
+    border-radius: 0;
+    flex-shrink: 0;
+    height: 14px;
+    width: 14px
+}
+
+.statText_e9ca56 {
+    color: #000;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.cta_e9ca56 {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.ctaText_e9ca56 {
+    color: #000;
+    text-transform: uppercase
+}
+
+.mana-type-consolidation .ctaText_e9ca56 {
+    text-transform: none
+}
+
+.powerContainer_e9ca56 {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), calc(100% - 12px) 100%, 0 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    inset-inline-start: 0;
+    padding-inline-end: var(--space-12);
+    padding-bottom: var(--space-4);
+    padding-top: var(--space-8);
+    padding-inline-start: var(--space-8);
+    position: absolute;
+    top: 0
+}
+
+.powerText_e9ca56 {
+    display: flex;
+    gap: 4px
+}
+
+.powerBar_e9ca56 {
+    display: flex;
+    gap: 2px
+}
+
+.container__6c21f {
+    border: 1px solid var(--status-warning);
+    border-radius: var(--radius-md);
+    padding: var(--space-16)
+}
+
+/*# sourceMappingURL=323223.d29dbfdc20cef64d.css.map*/

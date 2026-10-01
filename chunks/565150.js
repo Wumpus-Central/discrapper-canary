@@ -1,22 +1,21 @@
-n.d(t, { Ay: () => A, Cj: () => E, Sm: () => _, xz: () => u });
+n.d(t, { Ay: () => E, Cj: () => _, Sm: () => u });
 var i,
-    r,
-    a = n(143236),
-    s = n(435558),
-    l = n.n(s),
-    o = n(132500),
+    r = n(143236),
+    a = n(435558),
+    s = n.n(a),
+    l = n(132500),
+    o = n(274652),
     d = n(453771),
-    c = n(292348),
-    u = (((i = {})[(i.REACT_NATIVE = 0)] = "REACT_NATIVE"), (i[(i.WEB = 1)] = "WEB"), i);
-function _(e) {
+    c = n(292348);
+function u(e) {
     return void 0 !== e.isVideo && void 0 !== e.isImage;
 }
-var E =
-    (((r = {})[(r.FILE_ATTACHMENT = 0)] = "FILE_ATTACHMENT"),
-    (r[(r.IMAGE_PICKER = 1)] = "IMAGE_PICKER"),
-    (r[(r.IMAGE_EDITOR = 2)] = "IMAGE_EDITOR"),
-    r);
-class A extends a.EventEmitter {
+var _ =
+    (((i = {})[(i.FILE_ATTACHMENT = 0)] = "FILE_ATTACHMENT"),
+    (i[(i.IMAGE_PICKER = 1)] = "IMAGE_PICKER"),
+    (i[(i.IMAGE_EDITOR = 2)] = "IMAGE_EDITOR"),
+    i);
+class E extends r.EventEmitter {
     id;
     uniqueId;
     filename;
@@ -35,7 +34,7 @@ class A extends a.EventEmitter {
     clip;
     allowOptimization = !0;
     constructor(e) {
-        if ((super(), (this.item = e), 0 === e.platform)) {
+        if ((super(), (this.item = e), e.platform === o.x.REACT_NATIVE)) {
             this.id = e.id ?? e.uri;
             const t = (0, c.ly)({ uri: e.uri, overrideFilename: e.filename, overrideType: e.mimeType });
             ((this.filename = t.filename),
@@ -46,7 +45,7 @@ class A extends a.EventEmitter {
                 (this.durationSecs = e.durationSecs),
                 (this.waveform = e.waveform));
         } else
-            ((this.id = e.id ?? l().uniqueId("upload")),
+            ((this.id = e.id ?? s().uniqueId("upload")),
                 (this.classification = d.TX(e.file)),
                 (this.isImage = "image" === this.classification),
                 (this.isVideo = "video" === this.classification),
@@ -55,7 +54,7 @@ class A extends a.EventEmitter {
                 (this.origin = e.origin));
         ((this.isThumbnail = e.isThumbnail),
             (this.clip = e.clip),
-            (this.uniqueId = (0, o.A)()),
+            (this.uniqueId = (0, l.A)()),
             (this.spoiler = !1),
             (this.description = null));
     }

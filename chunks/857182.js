@@ -1,8 +1,8 @@
-n.d(t, { A: () => a });
+n.d(t, { A: () => r });
 var i = n(636537),
-    l = n(228366),
+    l = n(73153),
     s = n(652215);
-let a = {
+let r = {
     createChannelFollower: (e, t) =>
         i.Bo.post({
             url: s.Rsh.CHANNEL_FOLLOWERS(t),

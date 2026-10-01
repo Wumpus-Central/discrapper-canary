@@ -1,0 +1,28 @@
+.popout__91e7a {
+    background-color: var(--background-surface-high);
+    border-radius: 8px;
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    padding: 0 16px
+}
+
+.clickable__4337d {
+    cursor: pointer
+}
+
+.container__4337d {
+    align-items: center;
+    display: flex
+}
+
+.truncatedText__4337d {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.usersHeader__4337d {
+    display: flex;
+    white-space: pre
+}
+
+/*# sourceMappingURL=109383.a1551970fb1e7252.css.map*/

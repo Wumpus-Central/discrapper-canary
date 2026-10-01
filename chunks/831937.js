@@ -31,7 +31,7 @@ var n = e(477900),
     P = e(668639),
     W = e(140735),
     Q = e(408018),
-    z = e(959070),
+    z = e(479909),
     Z = e(95701),
     L = e(31717),
     S = e(652215),
@@ -145,19 +145,19 @@ var D = e(465932),
     $ = e(218394),
     AA = e(636537),
     At = e(765178),
-    Ae = e(228366),
+    Ae = e(73153),
     An = e(913122),
     Ar = e(280889),
-    Al = e(565150),
-    Aa = e(787458),
-    Ai = e(395780),
-    As = e(626584),
+    Al = e(787458),
+    Aa = e(395780),
+    Ai = e(626584),
+    As = e(274652),
     Ao = e(71393),
     Ad = e(292348),
     Au = e(535736),
     Ag = e(871109),
     Aq = e(253141);
-let Ac = new As.A("ProductAttachmentManager");
+let Ac = new Ai.A("ProductAttachmentManager");
 class Am {
     guildId;
     editSkuId;
@@ -174,7 +174,7 @@ class Am {
                 let e = new Ar.bK(
                     {
                         id: t.id,
-                        platform: Al.xz.WEB,
+                        platform: As.x.WEB,
                         origin: "unknown:guild_product_attachment",
                         file: { name: t.filename, lastModified: 0, size: t.size ?? 0 },
                     },
@@ -195,7 +195,7 @@ class Am {
                 At.O.announce(O.intl.formatToPlainString(O.t["0QDZ4J"], { maxAttachmentsCount: e })),
                 Error("Too many attachments")
             );
-        A.target = Aa.m.GUILD_PRODUCT_ATTACHMENT;
+        A.target = Al.m.GUILD_PRODUCT_ATTACHMENT;
         let n = new Ar.bK(A, this.guildId);
         (n.upload(),
             n.on("error", (e) => {
@@ -231,7 +231,7 @@ class Am {
             i = this.uploads
                 .filter((A) => this.existingAttachmentIds.has(A.id))
                 .map((A) => ({ filename: A.item.file?.name, id: A.id })),
-            s = new Ai.A(),
+            s = new Aa.A(),
             o = (await s.uploadFiles(a)).map((A, t) => (0, Ad.OW)(A, t)),
             d = null != this.editSkuId ? AA.Bo.patch : AA.Bo.post,
             u =
@@ -411,7 +411,7 @@ function AW(A) {
         d = r.useRef(!1);
     function u(A) {
         try {
-            for (let t of A) i({ platform: Al.xz.WEB, file: t, origin: "unknown:guild_product_attachment" });
+            for (let t of A) i({ platform: As.x.WEB, file: t, origin: "unknown:guild_product_attachment" });
             d.current = !0;
         } catch {}
     }

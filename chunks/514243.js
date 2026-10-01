@@ -1,29 +1,32 @@
-n.d(t, { A: () => d, R: () => c });
-var l = n(477900),
-    i = n(582128),
-    s = n(939341),
-    r = n(263577),
-    a = n(506326),
-    o = n(868065),
-    u = n(804779);
-let c = [a.zi, a.Rq],
-    d = i.memo(function (e) {
-        let { entry: t, channel: n, selected: i } = e,
-            { largeImage: d } = (0, s.nO)({ entry: t, trackingSource: "memberlist_watch_content_row" });
-        return (0, l.jsxs)(o.Zp, {
-            selected: i,
-            children: [
-                (0, l.jsxs)(o.UA, {
-                    children: [
-                        (0, l.jsx)(o.Hp, { entry: t, channelId: n.id, guildId: n.guild_id }),
-                        (0, l.jsx)(o.ZB, { children: t.extra.media_title }),
-                        (0, l.jsx)(a.mG, {
-                            location: a.N5.CARD,
-                            children: c.map((e, n) => (0, l.jsx)(e, { entry: t }, n)),
-                        }),
-                    ],
-                }),
-                (0, l.jsx)(r.V, { src: d?.src, size: 48, className: u.xn, alt: d?.alt }),
-            ],
-        });
-    });
+t.d(i, { A: () => x, R: () => o });
+var n = t(477900),
+    l = t(582128),
+    r = t(939341),
+    s = t(263577),
+    a = t(506326),
+    c = t(868065),
+    d = t(804779);
+let o = [a.zi, a.Rq],
+    x =
+        221552 == t.j
+            ? l.memo(function (e) {
+                  let { entry: i, channel: t, selected: l } = e,
+                      { largeImage: x } = (0, r.nO)({ entry: i, trackingSource: "memberlist_watch_content_row" });
+                  return (0, n.jsxs)(c.Zp, {
+                      selected: l,
+                      children: [
+                          (0, n.jsxs)(c.UA, {
+                              children: [
+                                  (0, n.jsx)(c.Hp, { entry: i, channelId: t.id, guildId: t.guild_id }),
+                                  (0, n.jsx)(c.ZB, { children: i.extra.media_title }),
+                                  (0, n.jsx)(a.mG, {
+                                      location: a.N5.CARD,
+                                      children: o.map((e, t) => (0, n.jsx)(e, { entry: i }, t)),
+                                  }),
+                              ],
+                          }),
+                          (0, n.jsx)(s.V, { src: x?.src, size: 48, className: d.xn, alt: x?.alt }),
+                      ],
+                  });
+              })
+            : null;

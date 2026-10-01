@@ -1,7 +1,7 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(17928),
-    r = n(459838),
-    a = n(228366),
+    r = n(205693),
+    a = n(73153),
     s = n(742023),
     l = n(617617),
     o = n(25578),
@@ -26,7 +26,7 @@ function p(e) {
 function T() {
     (E !== d.Ay.getVoiceChannelId() && ((A = !1), (I = !1), (f = !1)), p() && (A = !0), (E = d.Ay.getVoiceChannelId()));
 }
-class m extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "VideoBackgroundStore";
     initialize() {
         (this.waitFor(o.Ay, d.Ay, s.Ay, l.A, c.default), this.syncWith([d.Ay, o.Ay], T));
@@ -47,7 +47,7 @@ class m extends i.Ay.Store {
         return f;
     }
 }
-let g = new m(a.h, {
+let m = new g(a.h, {
     VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function (e) {
         let { assets: t } = e,
             n = {};

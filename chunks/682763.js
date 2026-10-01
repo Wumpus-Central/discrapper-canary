@@ -6,10 +6,10 @@ n.d(t, {
     Mq: () => s,
     P_: () => o,
     _r: () => S,
-    aS: () => m,
+    aS: () => g,
     bF: () => f,
     cS: () => N,
-    dK: () => g,
+    dK: () => m,
     hJ: () => A,
     i0: () => R,
     lo: () => I,
@@ -22,7 +22,7 @@ n.d(t, {
     wb: () => u,
     x8: () => a,
 });
-var i = n(228366),
+var i = n(73153),
     r = n(181435);
 function a(e, t) {
     return i.h.dispatch({ type: "OVERLAY_SET_LIMITED_INTERACTION_OVERRIDE", applicationId: e, enabled: t });
@@ -79,18 +79,18 @@ function T(e, t, n) {
     let { crashType: r, isCrashedDisabled: a } = n;
     return i.h.dispatch({ type: "OVERLAY_CRASHED", pid: e, error: t, crashType: r, isCrashedDisabled: a });
 }
-function m(e) {
+function g(e) {
     let { pid: t, name: n, type: a, data: s, logType: l = r.QJ.Info } = e;
     return i.h.dispatch({
         type: "OVERLAY_ADD_DEBUG_BREADCRUMB",
         breadcrumb: { pid: t, type: a, name: n, data: s, logType: l },
     });
 }
-function g(e, t, n, i) {
-    return m({ pid: e, name: t, type: r.ON.Flux, data: n, logType: i });
+function m(e, t, n, i) {
+    return g({ pid: e, name: t, type: r.ON.Flux, data: n, logType: i });
 }
 function S(e, t, n, i) {
-    return m({ pid: e, name: t, type: r.ON.OOPModule, data: n, logType: i });
+    return g({ pid: e, name: t, type: r.ON.OOPModule, data: n, logType: i });
 }
 function N(e, t, n) {
     return i.h.dispatch({ type: "OVERLAY_V3_NATIVE_FOCUS_GAINED", pid: e, windowHandle: t, windowClass: n });

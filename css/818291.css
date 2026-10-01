@@ -1,0 +1,17 @@
+.container__264ae {
+    align-items: center;
+    border-radius: 32px;
+    display: flex;
+    filter: brightness(.7);
+    flex-direction: column
+}
+
+.container__264ae[role=button] {
+    cursor: pointer
+}
+
+.container__264ae[role=button]:hover {
+    filter: brightness(1)
+}
+
+/*# sourceMappingURL=818291.2c8c6e87aedb2afc.css.map*/

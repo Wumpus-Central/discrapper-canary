@@ -3,7 +3,7 @@ var i,
     r,
     a = n(284009),
     s = n.n(a),
-    l = n(228366),
+    l = n(73153),
     o = (((i = {}).FORUM_CHANNEL = "forum_channel"), i),
     d =
         (((r = {})[(r.IMMEDIATE = 0)] = "IMMEDIATE"),

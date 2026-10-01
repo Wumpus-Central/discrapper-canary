@@ -1,4 +1,4 @@
-n.d(t, { Ok: () => l, Zc: () => s, _u: () => o, gk: () => d });
+n.d(t, { Ok: () => l, Zc: () => s, mS: () => u, y9: () => c });
 var i = n(540185),
     r = n(587895),
     a = n(375708);
@@ -22,3 +22,9 @@ let s = [
     },
     o = [i.x.FAVORITE_GAMES],
     d = [i.x.CURRENT_GAMES, i.x.FAVORITE_GAMES, i.x.CLIPS_GALLERY];
+function c(e) {
+    return o.includes(e);
+}
+function u(e) {
+    return d.includes(e);
+}

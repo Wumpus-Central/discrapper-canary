@@ -1,86 +1,77 @@
 n.d(t, {
     $6: () => k,
-    $C: () => M,
-    AD: () => V,
-    BF: () => O,
-    FM: () => g,
-    Fo: () => F,
-    L: () => m,
-    N5: () => x,
-    QN: () => U,
-    R_: () => K,
-    Un: () => $,
-    WX: () => w,
-    XX: () => Q,
-    Y5: () => D,
-    cv: () => C,
-    ef: () => z,
+    $C: () => N,
+    AD: () => K,
+    BF: () => S,
+    FM: () => T,
+    Fo: () => b,
+    L: () => A,
+    N5: () => F,
+    QN: () => w,
+    R_: () => H,
+    Un: () => X,
+    WX: () => C,
+    XX: () => z,
+    Y5: () => R,
+    cv: () => y,
+    ef: () => j,
     ew: () => Y,
-    g1: () => Z,
-    iu: () => P,
-    mC: () => B,
-    mI: () => G,
-    mS: () => N,
-    oc: () => W,
-    qA: () => v,
-    s1: () => H,
-    tg: () => j,
-    uA: () => X,
-    y9: () => S,
+    iu: () => U,
+    mC: () => M,
+    mI: () => L,
+    oc: () => q,
+    qA: () => W,
+    s1: () => v,
+    tg: () => B,
+    uA: () => V,
 });
 var i = n(926675),
-    r = n(761915),
-    a = n(540185),
-    s = n(554146),
-    l = n(501592),
-    o = n(826673),
-    d = n(569926),
-    c = n(287809),
-    u = n(646976),
+    l = n(761915),
+    s = n(540185),
+    r = n(554146),
+    d = n(501592),
+    u = n(826673),
+    g = n(569926),
+    a = n(287809),
+    o = n(646976),
     _ = n(289173),
-    E = n(210598),
-    A = n(321191),
-    h = n(958805),
-    I = n(61881),
-    f = n(229231),
-    p = n(49999);
+    c = n(210598),
+    E = n(321191),
+    p = n(958805),
+    f = n(61881),
+    m = n(229231),
+    h = n(49999);
 n(600253);
-var T = n(375708);
-function m(e) {
-    return f.Ok[e.type](e);
+var I = n(375708);
+function A(e) {
+    return m.Ok[e.type](e);
 }
-function g(e, t) {
+function T(e, t) {
     let { showEditingControls: n } = t,
-        r = e.games.length > 0;
-    if (n && r)
-        return 1 === i.u[e.type] ? T.intl.string(T.t.wiXdEa) : T.intl.format(T.t["zR1+0/"], { numGames: i.u[e.type] });
+        l = e.games.length > 0;
+    if (n && l)
+        return 1 === i.u[e.type] ? I.intl.string(I.t.wiXdEa) : I.intl.format(I.t["zR1+0/"], { numGames: i.u[e.type] });
 }
-function S(e) {
-    return f._u.includes(e);
-}
-function N(e) {
-    return f.gk.includes(e);
-}
-function C(e) {
+function y(e) {
     return e in i.u ? i.u[e] : 0;
 }
-function O() {
-    let e = c.default.getCurrentUser(),
-        t = null != e ? A.A.getUserProfile(e.id) : null;
+function S() {
+    let e = a.default.getCurrentUser(),
+        t = null != e ? E.A.getUserProfile(e.id) : null;
     return t?.widgets ?? [];
 }
-function R() {
-    return I.A.hasPendingChanges() ? (I.A.getPendingWidgets() ?? []) : O();
+function G() {
+    return f.A.hasPendingChanges() ? (f.A.getPendingWidgets() ?? []) : S();
 }
-function L(e) {
+function P(e) {
     return (
-        R()
+        G()
             .filter(_.fu)
             .find((t) => t.type === e) ?? null
     );
 }
-function y(e) {
-    let t = R(),
+function O(e) {
+    let t = G(),
         n = t.findIndex((t) => t.getUniqueKey() === e.getUniqueKey());
     if (-1 === n) return [e, ...t];
     {
@@ -88,80 +79,80 @@ function y(e) {
         return ((i[n] = e), i);
     }
 }
-function D(e) {
-    let t = R();
+function R(e) {
+    let t = G();
     null == t.find((t) => t.getUniqueKey() === e.getUniqueKey()) &&
-        (e.type === a.x.PERSONAL &&
-            ((0, o.Dr)(s.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, { dismissAction: p.i.INDIRECT_ACTION }),
-            (0, o.Dr)(s.M.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, { dismissAction: p.i.INDIRECT_ACTION })),
-        h.A.setPendingWidgets([e, ...t]));
+        (e.type === s.x.PERSONAL &&
+            ((0, u.Dr)(r.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK, { dismissAction: h.i.INDIRECT_ACTION }),
+            (0, u.Dr)(r.M.USER_PROFILE_PERSONAL_WIDGET_NEW_BADGE, { dismissAction: h.i.INDIRECT_ACTION })),
+        p.A.setPendingWidgets([e, ...t]));
 }
-function v(e) {
-    let t = R().filter((t) => t.getUniqueKey() !== e.getUniqueKey());
-    h.A.setPendingWidgets(t);
+function W(e) {
+    let t = G().filter((t) => t.getUniqueKey() !== e.getUniqueKey());
+    p.A.setPendingWidgets(t);
 }
-function b() {
-    return R().find((e) => e instanceof u.kM) ?? null;
+function D() {
+    return G().find((e) => e instanceof o.kM) ?? null;
 }
-function M(e) {
-    let t = b(),
+function N(e) {
+    let t = D(),
         n = t?.clips ?? [];
     if (n.length >= 4 || n.some((t) => "uploading" === t.status && t.localClipId === e.localClipId)) return !1;
-    let i = new u.kM({ id: t?.id, clips: [...n, e] });
-    return (h.A.setPendingWidgets(y(i)), !0);
+    let i = new o.kM({ id: t?.id, clips: [...n, e] });
+    return (p.A.setPendingWidgets(O(i)), !0);
 }
-function P(e) {
-    return b()?.clips.some((t) => t.id === e && "uploading" === t.status) ?? !1;
-}
-function U(e, t) {
-    let n = b(),
-        i = n?.clips.find((t) => t.id === e);
-    if (null == n || null == i || "saved" === i.status) return;
-    let r = new u.kM({ id: n.id, clips: n.clips.map((e) => (e === i ? { ...i, thumbnail: t } : e)) });
-    h.A.setPendingWidgets(y(r));
+function U(e) {
+    return D()?.clips.some((t) => t.id === e && "uploading" === t.status) ?? !1;
 }
 function w(e, t) {
-    let n = b(),
+    let n = D(),
+        i = n?.clips.find((t) => t.id === e);
+    if (null == n || null == i || "saved" === i.status) return;
+    let l = new o.kM({ id: n.id, clips: n.clips.map((e) => (e === i ? { ...i, thumbnail: t } : e)) });
+    p.A.setPendingWidgets(O(l));
+}
+function C(e, t) {
+    let n = D(),
         i = n?.clips.find((t) => t.id === e);
     if (null == n || i?.status !== "uploading") return !1;
-    let r = new u.kM({
+    let l = new o.kM({
         id: n.id,
         clips: n.clips.map((e) => (e === i ? { ...i, status: "pending", uploadFilename: t } : e)),
     });
-    return (h.A.setPendingWidgets(y(r)), !0);
+    return (p.A.setPendingWidgets(O(l)), !0);
 }
-function G(e, t) {
-    let n = b();
+function L(e, t) {
+    let n = D();
     if (null == n) return;
     let i = t.trim(),
-        r = new u.kM({
+        l = new o.kM({
             id: n.id,
             clips: n.clips.map((t) => (t.id === e ? { ...t, title: "" === i ? void 0 : i } : t)),
         });
-    h.A.setPendingWidgets(y(r));
+    p.A.setPendingWidgets(O(l));
 }
-function x(e, t) {
-    let n = b();
+function F(e, t) {
+    let n = D();
     if (null == n || e === t) return;
     let i = [...n.clips];
     if (e < 0 || e >= i.length || t < 0 || t >= i.length) return;
-    let [r] = i.splice(e, 1);
-    i.splice(t, 0, r);
-    let a = new u.kM({ id: n.id, clips: i });
-    h.A.setPendingWidgets(y(a));
+    let [l] = i.splice(e, 1);
+    i.splice(t, 0, l);
+    let s = new o.kM({ id: n.id, clips: i });
+    p.A.setPendingWidgets(O(s));
 }
 function k(e, t) {
     if (t.length > 20) return;
-    let n = b();
+    let n = D();
     if (null == n) return;
-    let i = new u.kM({
+    let i = new o.kM({
         id: n.id,
         clips: n.clips.map((n) => (n.id === e ? { ...n, tags: t.length > 0 ? t : void 0 } : n)),
     });
-    h.A.setPendingWidgets(y(i));
+    p.A.setPendingWidgets(O(i));
 }
-function F(e, t) {
-    let n = b();
+function b(e, t) {
+    let n = D();
     if (null == n) return;
     let i = n.clips.find((t) => t.id === e);
     i?.tags != null &&
@@ -171,112 +162,89 @@ function F(e, t) {
             i.tags.filter((e) => e !== t),
         );
 }
-function B(e) {
-    let t = b();
+function M(e) {
+    let t = D();
     if (null == t || !t.clips.some((t) => t.id === e)) return;
-    let n = new u.kM({ id: t.id, clips: t.clips.filter((t) => t.id !== e) });
-    h.A.setPendingWidgets(y(n));
+    let n = new o.kM({ id: t.id, clips: t.clips.filter((t) => t.id !== e) });
+    p.A.setPendingWidgets(O(n));
 }
-function V(e) {
-    let t = y(e(R().find((e) => e instanceof E.Tu) ?? null ?? (0, E.g0)()));
-    h.A.setPendingWidgets(t);
+function K(e) {
+    let t = O(e(G().find((e) => e instanceof c.Tu) ?? null ?? (0, c.g0)()));
+    p.A.setPendingWidgets(t);
 }
-function H(e, t, n) {
-    let i = Object.values(r.X).length;
+function v(e, t, n) {
+    let i = Object.values(l.X).length;
     if (n.length > i) return;
-    let a = L(e);
-    if (null == a) return;
-    let s = a.games.find((e) => e.gameId === t);
+    let s = P(e);
     if (null == s) return;
-    let l = { ...s, tags: n },
-        o = a.games.map((e) => (e.gameId === t ? l : e)),
-        d = y(new _.Yy({ ...a, games: o }));
-    h.A.setPendingWidgets(d);
+    let r = s.games.find((e) => e.gameId === t);
+    if (null == r) return;
+    let d = { ...r, tags: n },
+        u = s.games.map((e) => (e.gameId === t ? d : e)),
+        g = O(new _.Yy({ ...s, games: u }));
+    p.A.setPendingWidgets(g);
 }
-function j(e, t, n) {
-    let i = L(e);
+function B(e, t, n) {
+    let i = P(e);
     if (null == i) return;
-    let r = i.games.find((e) => e.gameId === t);
-    if (null == r || null == r.tags || 0 === r.tags.length) return;
-    let a = r.tags.filter((e) => e !== n);
-    H(i.type, t, a.length > 0 ? a : []);
+    let l = i.games.find((e) => e.gameId === t);
+    if (null == l || null == l.tags || 0 === l.tags.length) return;
+    let s = l.tags.filter((e) => e !== n);
+    v(i.type, t, s.length > 0 ? s : []);
 }
-function W(e, t, n) {
-    let i = L(e);
+function q(e, t, n) {
+    let i = P(e);
     if (null == i) return;
-    let r = i.games.find((e) => e.gameId === t);
-    if (null == r || n === r.comment) return;
-    let a = { ...r, comment: n },
-        s = i.games.map((e) => (e.gameId === t ? a : e)),
-        l = y(new _.Yy({ ...i, games: s }));
-    h.A.setPendingWidgets(l);
+    let l = i.games.find((e) => e.gameId === t);
+    if (null == l || n === l.comment) return;
+    let s = { ...l, comment: n },
+        r = i.games.map((e) => (e.gameId === t ? s : e)),
+        d = O(new _.Yy({ ...i, games: r }));
+    p.A.setPendingWidgets(d);
 }
 function Y(e) {
     let t,
-        { widgetType: n, game: i, ignoreMaxGames: r = !1 } = e,
-        a = L(n),
-        s = C(n);
-    if (null != a) {
-        let e = a.games?.length ?? 0;
-        if ((!r && e >= s) || (a.games ?? []).some((e) => e.gameId === i.gameId)) return;
+        { widgetType: n, game: i, ignoreMaxGames: l = !1 } = e,
+        s = P(n),
+        r = y(n);
+    if (null != s) {
+        let e = s.games?.length ?? 0;
+        if ((!l && e >= r) || (s.games ?? []).some((e) => e.gameId === i.gameId)) return;
     }
-    let l = { gameId: i.gameId, comment: i.comment, tags: i.tags };
-    t = null != a ? [l, ...(a.games ?? [])] : [l];
-    let o = y(new _.Yy({ ...(a ?? { type: n }), games: t }));
-    (h.A.setPendingWidgets(o), d.I.fetchMany([i.gameId]));
+    let d = { gameId: i.gameId, comment: i.comment, tags: i.tags };
+    t = null != s ? [d, ...(s.games ?? [])] : [d];
+    let u = O(new _.Yy({ ...(s ?? { type: n }), games: t }));
+    (p.A.setPendingWidgets(u), g.I.fetchMany([i.gameId]));
 }
-function K(e, t) {
+function H(e, t) {
     if (e === t) return;
-    let n = R();
+    let n = G();
     if (e < 0 || e >= n.length || t < 0 || t >= n.length) return;
     let i = [...n],
-        [r] = i.splice(e, 1);
-    (i.splice(t, 0, r), h.A.setPendingWidgets(i));
+        [l] = i.splice(e, 1);
+    (i.splice(t, 0, l), p.A.setPendingWidgets(i));
 }
-function $(e, t, n) {
-    let i = L(e);
+function X(e, t, n) {
+    let i = P(e);
     if (null == i || null == i.games || t === n) return;
-    let r = [...i.games];
-    if (t < 0 || t >= r.length || n < 0 || n >= r.length) return;
-    let [a] = r.splice(t, 1);
-    r.splice(n, 0, a);
-    let s = y(new _.Yy({ ...i, games: r }));
-    h.A.setPendingWidgets(s);
+    let l = [...i.games];
+    if (t < 0 || t >= l.length || n < 0 || n >= l.length) return;
+    let [s] = l.splice(t, 1);
+    l.splice(n, 0, s);
+    let r = O(new _.Yy({ ...i, games: l }));
+    p.A.setPendingWidgets(r);
 }
-function z(e, t) {
-    let n = L(e);
+function j(e, t) {
+    let n = P(e);
     if (null == n) return;
     let i = (null != n.games ? n.games : []).filter((e) => e.gameId !== t),
-        r = y(new _.Yy({ ...n, games: i }));
-    h.A.setPendingWidgets(r);
+        l = O(new _.Yy({ ...n, games: i }));
+    p.A.setPendingWidgets(l);
 }
-function X(e) {
-    let t = C(e.type);
+function V(e) {
+    let t = y(e.type);
     return e.games.length >= t;
 }
-function q(e) {
-    return null == e || "" === e || (Array.isArray(e) && 0 === e.length) ? null : e;
-}
-function Z(e, t, n) {
-    return (
-        e.length === t.length &&
-        e.every((e, i) =>
-            (function (e, t, n) {
-                if (e.gameId !== t.gameId || (S(n) && q(e.comment) !== q(t.comment))) return !1;
-                if (N(n)) {
-                    let n = q(e.tags),
-                        i = q(t.tags);
-                    if (
-                        (null === n) != (null === i) ||
-                        (null !== n && null !== i && (n.length !== i.length || !n.every((e, t) => e === i[t])))
-                    )
-                        return !1;
-                }
-                return !0;
-            })(e, t[i], n),
-        )
-    );
-}
-function Q(e) {
-    return !(0, l.K)(e.contentClassification) && !i.Z.has(e.id);
+function z(e) {
+    return !(0, d.K)(e.contentClassification) && !i.Z.has(e.id);
 }

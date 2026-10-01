@@ -1,0 +1,66 @@
+.forwardPreview__0d4ce {
+    align-items: center;
+    display: flex;
+    gap: 12px;
+    height: 100%;
+    justify-content: space-between;
+    margin-inline-end: 16px;
+    padding-inline-start: 16px;
+    position: relative;
+    width: calc(100% - 16px)
+}
+
+.forwardPreview__0d4ce:before {
+    background-color: var(--border-subtle);
+    border-radius: 2px;
+    content: "";
+    flex-shrink: 0;
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    width: 4px
+}
+
+.linkContainer__0d4ce {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0
+}
+
+.linkIcon__0d4ce {
+    color: var(--text-muted)
+}
+
+.applicationInfo__0d4ce {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 4px
+}
+
+.previewImageStack__0d4ce {
+    display: flex;
+    flex-shrink: 0
+}
+
+.previewImageContainer__0d4ce {
+    box-shadow: 0 0 0 2px var(--background-surface-high);
+    max-width: 40px;
+    min-width: 40px;
+    width: 40px;
+    z-index: 0
+}
+
+.previewImageContainer__0d4ce:not(:first-child) {
+    margin-inline-start: -12px
+}
+
+.previewImageLayer__0d4ce {
+    max-width: 40px;
+    min-width: 40px;
+    width: 40px
+}
+
+/*# sourceMappingURL=777e991f833ab92f.css.map*/

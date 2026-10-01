@@ -1,4 +1,4 @@
-function r(e) {
+t.d(n, { N: () => i });
+function i(e) {
     return Intl.getCanonicalLocales(e);
 }
-n.d(t, { N: () => r });

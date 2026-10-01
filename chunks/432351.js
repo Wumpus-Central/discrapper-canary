@@ -1,6 +1,6 @@
 n.d(t, { A: () => o });
 var i = n(972347),
-    r = n(459838),
+    r = n(651139),
     a = n(731854);
 function s(e) {
     return null;
@@ -12,7 +12,7 @@ class o extends i.A {
     Video = s;
     Camera = l;
     destroy() {
-        (this.emit(r.bg.Destroy), this.removeAllListeners());
+        (this.emit(r.b.Destroy), this.removeAllListeners());
     }
     interact() {}
     supported() {

@@ -4,7 +4,7 @@ var i = n(515029),
     a = n(226782),
     s = n.n(a),
     l = n(731738),
-    o = n(228366),
+    o = n(73153),
     d = n(439372),
     c = n(320095),
     u = n(807393),
@@ -16,17 +16,17 @@ var i = n(515029),
     f = n(309010),
     p = n(967198),
     T = n(935208);
-function m(e) {
+function g(e) {
     return (
         (null != e.attachments && e.attachments.length > 0) ||
         (null != e.embeds && e.embeds.length > 0) ||
         (null != e.components && e.components.length > 0)
     );
 }
-function g(e) {
+function m(e) {
     if (null == e) return !1;
     let t = "messageSnapshots" in e ? e.messageSnapshots : e.message_snapshots;
-    return m(e) || (null != t && t?.some((e) => m(e.message)));
+    return g(e) || (null != t && t?.some((e) => g(e.message)));
 }
 var S = n(135598),
     N = n(930125),
@@ -193,7 +193,7 @@ function F(e, t) {
             attributesByChannelId: d,
             attributesByMessageId: c,
         } = ((n = e.filter((e) => {
-            let t = g(e),
+            let t = m(e),
                 n = 0 !== (0, L.Fg)(e);
             return t && n;
         })),
@@ -203,7 +203,7 @@ function F(e, t) {
                     null != e &&
                     "referenced_message" in e &&
                     null != e.referenced_message &&
-                    g(e.referenced_message) &&
+                    m(e.referenced_message) &&
                     0 !== (0, L.Fg)(e.referenced_message)
                 )
                     return e.referenced_message;
@@ -319,23 +319,23 @@ function K(e) {
 }
 function $(e) {
     let { channelId: t } = e;
-    return null != t && Z(t);
+    return null != t && q(t);
 }
 function z(e) {
     let { channelId: t } = e;
-    return null != t && t === f.Ay.getChannelId() && Z(t);
+    return null != t && t === f.Ay.getChannelId() && q(t);
 }
 function X(e) {
     let { settings: t, local: n } = e;
     if (!n || t.type !== v.oD.PRELOADED_USER_SETTINGS) return !1;
     let i = f.Ay.getChannelId();
-    return null != i && Z(i);
-}
-function q(e) {
-    let { channelId: t, chatOpen: n } = e;
-    return !!n && Z(t);
+    return null != i && q(i);
 }
 function Z(e) {
+    let { channelId: t, chatOpen: n } = e;
+    return !!n && q(t);
+}
+function q(e) {
     let t = I.A.getMessages(e);
     return (
         0 !== t.length &&
@@ -349,7 +349,7 @@ function Z(e) {
                     messagesPendingScan: l,
                     attributesByChannelId: o,
                     attributesByMessageId: d,
-                } = ((t = e.filter((e) => g(e) && 0 !== (0, L.Fg)(e))),
+                } = ((t = e.filter((e) => m(e) && 0 !== (0, L.Fg)(e))),
                 (n = e
                     .map((e) => {
                         if (D.sl8.has(e.type) && null != e.messageReference) {
@@ -357,7 +357,7 @@ function Z(e) {
                             if (
                                 t.state === _.a.LOADED &&
                                 null != t.message &&
-                                g(t.message) &&
+                                m(t.message) &&
                                 0 !== (0, L.Fg)(t.message)
                             )
                                 return t.message;
@@ -420,7 +420,7 @@ class Q extends d.A {
         CHANNEL_SELECT: z,
         LOAD_PINNED_MESSAGES_SUCCESS: W,
         USER_SETTINGS_PROTO_UPDATE: X,
-        CHANNEL_RTC_UPDATE_CHAT_OPEN: q,
+        CHANNEL_RTC_UPDATE_CHAT_OPEN: Z,
     };
 }
 let J = new Q();

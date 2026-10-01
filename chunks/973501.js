@@ -81,7 +81,7 @@ var w = t(939249),
     J = t(736653),
     q = t(885386),
     z = t(636537),
-    K = t(228366),
+    K = t(73153),
     Q = t(652215);
 async function X() {
     K.h.dispatch({ type: "DEVELOPER_APPLICATIONS_FETCH_START" });

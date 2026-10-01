@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => n6 }));
+(n.r(t), n.d(t, { default: () => n2 }));
 var s,
     l,
     a,
@@ -442,11 +442,11 @@ function e5(e) {
         tooltip: el.intl.string(es.default["feUiM/"]),
     });
 }
-var e2 = n(652215),
-    e6 = n(628049),
+var e6 = n(652215),
+    e2 = n(628049),
     e7 = n(49999),
-    e9 = n(684644);
-let e3 = [eD.M.STARTUP_FAILED, eD.M.MISSING_STOCK, eD.M.PROVIDER_ERRORED, eD.M.DELETED];
+    e3 = n(684644);
+let e9 = [eD.M.STARTUP_FAILED, eD.M.MISSING_STOCK, eD.M.PROVIDER_ERRORED, eD.M.DELETED];
 function te(e) {
     return `game-server-owned-card-${e}`;
 }
@@ -456,7 +456,7 @@ function tt(e) {
             (0, eq.Kz)(t).catch(() => {});
         }, [t]);
     return (0, i.jsx)("div", {
-        className: e9.y7,
+        className: e3.y7,
         children: (0, i.jsx)(X.$, {
             fullWidth: !0,
             text: el.intl.string(es.default.TMzy7d),
@@ -474,7 +474,7 @@ function tn() {
                     .finally(() => t(!1)));
         }, []);
     return (0, i.jsx)("div", {
-        className: e9.y7,
+        className: e3.y7,
         children: (0, i.jsx)(X.$, {
             fullWidth: !0,
             text: el.intl.string(es.default.BLEx3k),
@@ -495,7 +495,7 @@ let ts = r.memo(function (e) {
                 month: "numeric",
                 day: "numeric",
             });
-            return t.status === e2.Dmq.CANCELED
+            return t.status === e6.Dmq.CANCELED
                 ? { text: el.intl.formatToPlainString(es.default["3aEgK6"], { date: n }), type: "cancellation" }
                 : null != t.renewalMutations
                   ? { text: el.intl.formatToPlainString(es.default.KFSA3M, { date: n }), type: "downgrade" }
@@ -531,13 +531,13 @@ let ts = r.memo(function (e) {
                 (0, m.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([
-                            n.e("267732"),
+                            n.e("385663"),
                             n.e("225307"),
                             n.e("332165"),
                             n.e("618416"),
                             n.e("524434"),
                             n.e("90343"),
-                            n.e("769281"),
+                            n.e("866475"),
                             n.e("279926"),
                             n.e("481647"),
                             n.e("776602"),
@@ -563,9 +563,9 @@ let ts = r.memo(function (e) {
                 );
             })({ server: t, source: "game-server-shop" });
         }, [t]),
-        A = (0, eX.A)(t.instance.providerType, t.instance.gameServerPanelUrl) ?? e6.qb[f],
+        A = (0, eX.A)(t.instance.providerType, t.instance.gameServerPanelUrl) ?? e2.qb[f],
         b = null != t.instance.gameServerPanelUrl,
-        I = null != t.instance.status && e3.includes(t.instance.status),
+        I = null != t.instance.status && e9.includes(t.instance.status),
         N = r.useCallback(() => {
             (0, V.h)({ href: A });
         }, [A]),
@@ -595,7 +595,7 @@ let ts = r.memo(function (e) {
         T = r.useMemo(
             () =>
                 (0, i.jsx)(eG.D, {
-                    className: o()(e9.wC, e9.QV),
+                    className: o()(e3.wC, e3.QV),
                     onClick: j,
                     "aria-label": el.intl.string(es.default["fQCcM/"]),
                     children: (0, i.jsx)(Q.E, {
@@ -609,7 +609,7 @@ let ts = r.memo(function (e) {
         R = r.useMemo(
             () =>
                 (0, i.jsxs)(eG.D, {
-                    className: o()(e9.wC, e9.y2, { [e9.Gz]: !b }),
+                    className: o()(e3.wC, e3.y2, { [e3.Gz]: !b }),
                     onClick: b ? S : void 0,
                     "aria-disabled": !b,
                     "aria-label": el.intl.string(es.default.tkbVdf),
@@ -631,7 +631,7 @@ let ts = r.memo(function (e) {
                 case eD.M.STARTUP_FAILED:
                 case eD.M.MISSING_STOCK:
                     return (0, i.jsx)("div", {
-                        className: e9.y7,
+                        className: e3.y7,
                         children: (0, i.jsx)(X.$, {
                             fullWidth: !0,
                             text: el.intl.string(es.default.gWMqnI),
@@ -646,7 +646,7 @@ let ts = r.memo(function (e) {
                     return (0, i.jsxs)(i.Fragment, {
                         children: [
                             (0, i.jsx)("div", {
-                                className: e9.y7,
+                                className: e3.y7,
                                 children: (0, i.jsx)(X.$, {
                                     fullWidth: !0,
                                     text: el.intl.string(es.default.bBkeMs),
@@ -665,19 +665,19 @@ let ts = r.memo(function (e) {
         }, [t.instance.status, t.id, b, T, R, S, N]);
     return (0, i.jsxs)("div", {
         id: te(t.id),
-        className: o()(e9.Nr, { [e9.mr]: c }),
+        className: o()(e3.Nr, { [e3.mr]: c }),
         children: [
-            c && (0, i.jsx)("div", { className: e9._8, "aria-hidden": !0 }),
+            c && (0, i.jsx)("div", { className: e3._8, "aria-hidden": !0 }),
             (0, i.jsxs)("div", {
-                className: e9.Nk,
+                className: e3.Nk,
                 "aria-hidden": !0,
                 children: [
-                    null != d && (0, i.jsx)("img", { className: e9.QC, src: d, alt: "" }),
-                    (0, i.jsx)("div", { className: e9.jc }),
+                    null != d && (0, i.jsx)("img", { className: e3.QC, src: d, alt: "" }),
+                    (0, i.jsx)("div", { className: e3.jc }),
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: e9.AQ,
+                className: e3.AQ,
                 children: [
                     (0, i.jsx)(eK, {
                         color: ez.SECONDARY,
@@ -690,29 +690,29 @@ let ts = r.memo(function (e) {
                 ],
             }),
             (0, i.jsxs)("div", {
-                className: e9.rf,
+                className: e3.rf,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: e9.U1,
+                        className: e3.U1,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: e9.oL,
+                                className: e3.oL,
                                 children: [
                                     null != d
-                                        ? (0, i.jsx)("img", { className: e9.vT, src: d, alt: "" })
+                                        ? (0, i.jsx)("img", { className: e3.vT, src: d, alt: "" })
                                         : (0, i.jsx)("div", {
-                                              className: e9.iv,
+                                              className: e3.iv,
                                               children: (0, i.jsx)(Q.E, {
                                                   variant: "text-xs/semibold",
                                                   color: "text-muted",
                                                   children: t.gameName,
                                               }),
                                           }),
-                                    (0, i.jsx)("div", { className: e9.iB, "aria-hidden": !0 }),
+                                    (0, i.jsx)("div", { className: e3.iB, "aria-hidden": !0 }),
                                 ],
                             }),
                             (0, i.jsxs)("div", {
-                                className: e9.VQ,
+                                className: e3.VQ,
                                 children: [
                                     (0, i.jsx)(Q.E, {
                                         variant: "text-md/semibold",
@@ -738,13 +738,13 @@ let ts = r.memo(function (e) {
                         ],
                     }),
                     (0, i.jsxs)("div", {
-                        className: e9.M1,
+                        className: e3.M1,
                         children: [
                             (0, i.jsxs)("div", {
-                                className: e9.N8,
+                                className: e3.N8,
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: e9.bi,
+                                        className: e3.bi,
                                         children: [
                                             (0, i.jsx)(Q.E, {
                                                 variant: "text-xs/semibold",
@@ -761,7 +761,7 @@ let ts = r.memo(function (e) {
                                         ],
                                     }),
                                     (0, i.jsxs)("div", {
-                                        className: e9.gv,
+                                        className: e3.gv,
                                         children: [
                                             (0, i.jsx)(Q.E, {
                                                 variant: "text-xs/semibold",
@@ -771,7 +771,7 @@ let ts = r.memo(function (e) {
                                             }),
                                             E
                                                 ? (0, i.jsxs)("div", {
-                                                      className: e9.Yb,
+                                                      className: e3.Yb,
                                                       children: [
                                                           (0, i.jsx)(Q.E, {
                                                               variant: "text-sm/medium",
@@ -781,7 +781,7 @@ let ts = r.memo(function (e) {
                                                           }),
                                                           "" !== t.serverIp &&
                                                               (0, i.jsx)(eG.D, {
-                                                                  className: e9.cL,
+                                                                  className: e3.cL,
                                                                   onClick: p,
                                                                   "aria-label": el.intl.string(el.t.OpuAlK),
                                                                   children: C
@@ -809,10 +809,10 @@ let ts = r.memo(function (e) {
                                 ],
                             }),
                             (0, i.jsxs)("div", {
-                                className: e9.N8,
+                                className: e3.N8,
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: e9.bi,
+                                        className: e3.bi,
                                         children: [
                                             (0, i.jsx)(Q.E, {
                                                 variant: "text-xs/semibold",
@@ -821,11 +821,11 @@ let ts = r.memo(function (e) {
                                                 children: el.intl.string(es.default["n+ZX7y"]),
                                             }),
                                             (0, i.jsxs)("div", {
-                                                className: e9.Yb,
+                                                className: e3.Yb,
                                                 children: [
                                                     (t.isOnline || I) &&
                                                         (0, i.jsx)("span", {
-                                                            className: o()(e9.kg, { [e9.rU]: I }),
+                                                            className: o()(e3.kg, { [e3.rU]: I }),
                                                             "aria-hidden": !0,
                                                         }),
                                                     (0, i.jsx)(Q.E, {
@@ -839,7 +839,7 @@ let ts = r.memo(function (e) {
                                         ],
                                     }),
                                     (0, i.jsxs)("div", {
-                                        className: e9.gv,
+                                        className: e3.gv,
                                         children: [
                                             (0, i.jsx)(Q.E, {
                                                 variant: "text-xs/semibold",
@@ -861,7 +861,7 @@ let ts = r.memo(function (e) {
                     }),
                 ],
             }),
-            (0, i.jsx)("div", { className: e9.qr, children: M }),
+            (0, i.jsx)("div", { className: e3.qr, children: M }),
         ],
     });
 });
@@ -1257,7 +1257,7 @@ function tq(e) {
         o = (0, A.uM)(),
         d = r.useCallback(() => {
             var e;
-            (tA.default.track(e2.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            (tA.default.track(e6.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: o?.sessionId,
                 sku_id: t.skuId,
                 page_type: tu.G2.CATALOG,
@@ -1270,7 +1270,7 @@ function tq(e) {
                 (e = t.skuId),
                 (tW = e),
                 null != e && null != n && t$.set(e, n),
-                c.push(e2.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(t.skuId)));
+                c.push(e6.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(t.skuId)));
         }, [o?.pageIndex, o?.pageSection, o?.pageSize, o?.sessionId, t.name, t.skuId, n, c]);
     return (0, i.jsxs)("div", {
         className: tG.EF,
@@ -1293,7 +1293,7 @@ function tQ(e) {
             let { page: t, pageSize: n, includeUnpublished: s, noCache: l, enabled: a = !0 } = e,
                 i = r.useMemo(
                     () => ({
-                        applicationId: e2.FYj,
+                        applicationId: e6.FYj,
                         offset: (t - 1) * n,
                         limit: n,
                         useShopOrdering: !0,
@@ -1471,7 +1471,7 @@ let t5 = function () {
         m = r.useCallback(
             (e) => {
                 let n = d(u(e));
-                (tA.default.track(e2.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                (tA.default.track(e6.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: s?.sessionId,
                     page_section: s?.pageSection,
                     page_category: s?.pageCategory,
@@ -1498,7 +1498,7 @@ let t5 = function () {
         }),
     });
 };
-var t2 =
+var t6 =
         (((l = {}).BLUE = "COLLECTIBLES_COLOR_BLUE"),
         (l.GREEN = "COLLECTIBLES_COLOR_GREEN"),
         (l.PINK = "COLLECTIBLES_COLOR_PINK"),
@@ -1510,7 +1510,7 @@ var t2 =
         (l.BLACK = "COLLECTIBLES_COLOR_BLACK"),
         (l.WHITE = "COLLECTIBLES_COLOR_WHITE"),
         l),
-    t6 =
+    t2 =
         (((a = {}).ANIME = "COLLECTIBLES_THEME_ANIME"),
         (a.GAMING = "COLLECTIBLES_THEME_GAMING"),
         (a.CUTE_COZY = "COLLECTIBLES_THEME_CUTE_COZY"),
@@ -1523,8 +1523,8 @@ var t2 =
         (a.SCI_FI = "COLLECTIBLES_THEME_SCI_FI"),
         a),
     t7 = n(150934),
-    t9 = n(508770),
-    t3 = n(278416),
+    t3 = n(508770),
+    t9 = n(278416),
     ne = n(602853),
     nt = n(661531),
     nn = n(947641),
@@ -1559,7 +1559,7 @@ function nx() {
         h = (0, tN.HH)(),
         E = r.useCallback(
             (e) => {
-                tA.default.track(e2.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                tA.default.track(e6.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: m?.sessionId,
                     page_section: m?.pageSection,
                     page_category: m?.pageCategory,
@@ -1600,7 +1600,7 @@ function nx() {
                                     },
                                     label: el.intl.string(el.t.hY8Ft1),
                                 }),
-                                (0, i.jsx)(t9.E, { type: { text: el.intl.string(el.t["nb5PC/"]) }, icon: t3.TagIcon }),
+                                (0, i.jsx)(t3.E, { type: { text: el.intl.string(el.t["nb5PC/"]) }, icon: t9.TagIcon }),
                             ],
                         }),
                     tu._6.map((e) => (0, i.jsx)(np, { filter: e, trackFilterAction: E }, e)),
@@ -1651,21 +1651,21 @@ function nC(e) {
     let { trackFilterAction: t } = e,
         n = r.useMemo(
             () => [
-                { color: "#9B59B6", label: el.intl.string(el.t.kqUD4P), enum: t2.PURPLE },
-                { color: "#3498DB", label: el.intl.string(el.t.qQTRae), enum: t2.BLUE },
-                { color: "#2ECC71", label: el.intl.string(el.t["f/Ylk6"]), enum: t2.GREEN },
-                { color: "#A0522D", label: el.intl.string(el.t["Sd/BMa"]), enum: t2.BROWN },
-                { color: "#F1C40F", label: el.intl.string(el.t["0fevYz"]), enum: t2.YELLOW },
+                { color: "#9B59B6", label: el.intl.string(el.t.kqUD4P), enum: t6.PURPLE },
+                { color: "#3498DB", label: el.intl.string(el.t.qQTRae), enum: t6.BLUE },
+                { color: "#2ECC71", label: el.intl.string(el.t["f/Ylk6"]), enum: t6.GREEN },
+                { color: "#A0522D", label: el.intl.string(el.t["Sd/BMa"]), enum: t6.BROWN },
+                { color: "#F1C40F", label: el.intl.string(el.t["0fevYz"]), enum: t6.YELLOW },
             ],
             [],
         ),
         s = r.useMemo(
             () => [
-                { color: "#E67E22", label: el.intl.string(el.t.ZE7weD), enum: t2.ORANGE },
-                { color: "#E74C3C", label: el.intl.string(el.t.hKJGOM), enum: t2.RED },
-                { color: "#EC407A", label: el.intl.string(el.t.HvLEGM), enum: t2.PINK },
-                { color: "#FFFFFF", label: el.intl.string(el.t["CB+lNO"]), enum: t2.WHITE },
-                { color: "#262626", label: el.intl.string(el.t["dMey+v"]), enum: t2.BLACK },
+                { color: "#E67E22", label: el.intl.string(el.t.ZE7weD), enum: t6.ORANGE },
+                { color: "#E74C3C", label: el.intl.string(el.t.hKJGOM), enum: t6.RED },
+                { color: "#EC407A", label: el.intl.string(el.t.HvLEGM), enum: t6.PINK },
+                { color: "#FFFFFF", label: el.intl.string(el.t["CB+lNO"]), enum: t6.WHITE },
+                { color: "#262626", label: el.intl.string(el.t["dMey+v"]), enum: t6.BLACK },
             ],
             [],
         );
@@ -1749,53 +1749,53 @@ function n_(e) {
             () => [
                 {
                     name: el.intl.string(el.t.aVBOKh),
-                    icon: (0, i.jsx)(ns.E, { size: "xs", color: c(t6.ANIME) }),
-                    enum: t6.ANIME,
+                    icon: (0, i.jsx)(ns.E, { size: "xs", color: c(t2.ANIME) }),
+                    enum: t2.ANIME,
                 },
                 {
                     name: el.intl.string(el.t["3WoZBc"]),
-                    icon: (0, i.jsx)(nl._, { size: "xs", color: c(t6.GAMING) }),
-                    enum: t6.GAMING,
+                    icon: (0, i.jsx)(nl._, { size: "xs", color: c(t2.GAMING) }),
+                    enum: t2.GAMING,
                 },
                 {
                     name: el.intl.string(el.t.yuEmLj),
-                    icon: (0, i.jsx)(na.C, { size: "xs", color: c(t6.CUTE_COZY) }),
-                    enum: t6.CUTE_COZY,
+                    icon: (0, i.jsx)(na.C, { size: "xs", color: c(t2.CUTE_COZY) }),
+                    enum: t2.CUTE_COZY,
                 },
                 {
                     name: el.intl.string(el.t.mMvCHo),
-                    icon: (0, i.jsx)(ni.L, { size: "xs", color: c(t6.SCI_FI) }),
-                    enum: t6.SCI_FI,
+                    icon: (0, i.jsx)(ni.L, { size: "xs", color: c(t2.SCI_FI) }),
+                    enum: t2.SCI_FI,
                 },
                 {
                     name: el.intl.string(el.t.TlhOQC),
-                    icon: (0, i.jsx)(nr.L, { size: "xs", color: c(t6.FOOD_DRINKS) }),
-                    enum: t6.FOOD_DRINKS,
+                    icon: (0, i.jsx)(nr.L, { size: "xs", color: c(t2.FOOD_DRINKS) }),
+                    enum: t2.FOOD_DRINKS,
                 },
                 {
                     name: el.intl.string(el.t["4IaUIM"]),
-                    icon: (0, i.jsx)(nc.f, { size: "xs", color: c(t6.FANTASY) }),
-                    enum: t6.FANTASY,
+                    icon: (0, i.jsx)(nc.f, { size: "xs", color: c(t2.FANTASY) }),
+                    enum: t2.FANTASY,
                 },
                 {
                     name: el.intl.string(el.t["w0nSG/"]),
-                    icon: (0, i.jsx)(no.N, { size: "xs", color: c(t6.ANIMALS_PETS) }),
-                    enum: t6.ANIMALS_PETS,
+                    icon: (0, i.jsx)(no.N, { size: "xs", color: c(t2.ANIMALS_PETS) }),
+                    enum: t2.ANIMALS_PETS,
                 },
                 {
                     name: el.intl.string(el.t.cJng7v),
-                    icon: (0, i.jsx)(nd.p, { size: "xs", color: c(t6.NATURE) }),
-                    enum: t6.NATURE,
+                    icon: (0, i.jsx)(nd.p, { size: "xs", color: c(t2.NATURE) }),
+                    enum: t2.NATURE,
                 },
                 {
                     name: el.intl.string(el.t["5mUvyM"]),
-                    icon: (0, i.jsx)(nu.T, { size: "xs", color: c(t6.MOVIES_TV_SHOWS) }),
-                    enum: t6.MOVIES_TV_SHOWS,
+                    icon: (0, i.jsx)(nu.T, { size: "xs", color: c(t2.MOVIES_TV_SHOWS) }),
+                    enum: t2.MOVIES_TV_SHOWS,
                 },
                 {
                     name: el.intl.string(el.t.MB9H5Z),
-                    icon: (0, i.jsx)(nm.e, { size: "xs", color: c(t6.DARK_MOODY) }),
-                    enum: t6.DARK_MOODY,
+                    icon: (0, i.jsx)(nm.e, { size: "xs", color: c(t2.DARK_MOODY) }),
+                    enum: t2.DARK_MOODY,
                 },
             ],
             [c],
@@ -1832,16 +1832,16 @@ function nA(e) {
         { themeFilters: n, onToggleTheme: s } = (0, R.v)(),
         l = r.useMemo(
             () => [
-                { name: el.intl.string(el.t.aVBOKh), icon: ns.E, enum: t6.ANIME },
-                { name: el.intl.string(el.t["3WoZBc"]), icon: nl._, enum: t6.GAMING },
-                { name: el.intl.string(el.t.yuEmLj), icon: na.C, enum: t6.CUTE_COZY },
-                { name: el.intl.string(el.t.mMvCHo), icon: ni.L, enum: t6.SCI_FI },
-                { name: el.intl.string(el.t.TlhOQC), icon: nr.L, enum: t6.FOOD_DRINKS },
-                { name: el.intl.string(el.t["4IaUIM"]), icon: nc.f, enum: t6.FANTASY },
-                { name: el.intl.string(el.t["w0nSG/"]), icon: no.N, enum: t6.ANIMALS_PETS },
-                { name: el.intl.string(el.t.cJng7v), icon: nd.p, enum: t6.NATURE },
-                { name: el.intl.string(el.t["5mUvyM"]), icon: nu.T, enum: t6.MOVIES_TV_SHOWS },
-                { name: el.intl.string(el.t.MB9H5Z), icon: nm.e, enum: t6.DARK_MOODY },
+                { name: el.intl.string(el.t.aVBOKh), icon: ns.E, enum: t2.ANIME },
+                { name: el.intl.string(el.t["3WoZBc"]), icon: nl._, enum: t2.GAMING },
+                { name: el.intl.string(el.t.yuEmLj), icon: na.C, enum: t2.CUTE_COZY },
+                { name: el.intl.string(el.t.mMvCHo), icon: ni.L, enum: t2.SCI_FI },
+                { name: el.intl.string(el.t.TlhOQC), icon: nr.L, enum: t2.FOOD_DRINKS },
+                { name: el.intl.string(el.t["4IaUIM"]), icon: nc.f, enum: t2.FANTASY },
+                { name: el.intl.string(el.t["w0nSG/"]), icon: no.N, enum: t2.ANIMALS_PETS },
+                { name: el.intl.string(el.t.cJng7v), icon: nd.p, enum: t2.NATURE },
+                { name: el.intl.string(el.t["5mUvyM"]), icon: nu.T, enum: t2.MOVIES_TV_SHOWS },
+                { name: el.intl.string(el.t.MB9H5Z), icon: nm.e, enum: t2.DARK_MOODY },
             ],
             [],
         ),
@@ -1936,7 +1936,7 @@ function nT(e) {
     }, [O]);
     let B = r.useCallback(
         (e) => {
-            (tA.default.track(e2.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+            (tA.default.track(e6.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                 collectibles_shop_session_id: l?.sessionId,
                 page_section: l?.pageSection,
                 page_category: l?.pageCategory,
@@ -2019,7 +2019,7 @@ function nM(e) {
     let { tab: t, categories: n, initialCategoryId: s, showFilterInitially: l = !0, onUnmount: a } = e,
         c = (0, tS.A)("shop_include_unpublished");
     (!(function () {
-        let e = (0, y.bG)([tI.A], () => "success" === tI.A.getFetchState(e2.FYj)),
+        let e = (0, y.bG)([tI.A], () => "success" === tI.A.getFetchState(e6.FYj)),
             t = null != (0, tN.HH)(),
             { offerEligible: n, clearFilters: s } = (0, R.v)();
         r.useEffect(() => {
@@ -2064,7 +2064,7 @@ function nM(e) {
                                   className: nR.en,
                                   children: (0, i.jsx)("div", {
                                       className: nR.pf,
-                                      children: (0, i.jsx)(t_.Z_, { tenantId: e2.FYj, templateId: tb.b.BACK_CATALOG }),
+                                      children: (0, i.jsx)(t_.Z_, { tenantId: e6.FYj, templateId: tb.b.BACK_CATALOG }),
                                   }),
                               })
                             : (0, i.jsx)(nk, {
@@ -2113,7 +2113,7 @@ function nk(e) {
         })(a),
         x = r.useCallback(
             (e) => {
-                (tA.default.track(e2.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                (tA.default.track(e6.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                     collectibles_shop_session_id: h?.sessionId,
                     page_section: h?.pageSection,
                     page_category: h?.pageCategory,
@@ -2137,7 +2137,7 @@ function nk(e) {
                     null === p.current ||
                     m.current.contains(t) ||
                     p.current.contains(t) ||
-                    (tA.default.track(e2.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                    (tA.default.track(e6.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                         collectibles_shop_session_id: h?.sessionId,
                         page_section: h?.pageSection,
                         page_category: h?.pageCategory,
@@ -2176,7 +2176,7 @@ function nk(e) {
                                         children: (0, i.jsx)(X.$, {
                                             onClick: function () {
                                                 let e = !n;
-                                                (tA.default.track(e2.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                (tA.default.track(e6.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                     collectibles_shop_session_id: h?.sessionId,
                                                     page_section: h?.pageSection,
                                                     page_category: h?.pageCategory,
@@ -2276,12 +2276,12 @@ function nW(e) {
         return t !== k.HOME || d || s
             ? null
             : (0, i.jsx)(t_.Z_, {
-                  tenantId: e2.FYj,
+                  tenantId: e6.FYj,
                   templateId: tb.b.SHOP_HOME,
                   requestParams: o,
                   overrides: nH[tb.b.SHOP_HOME],
               });
-    let u = (0, i.jsx)(t_.Qs, { tenantId: e2.FYj, layoutId: n, overrides: nz[n] });
+    let u = (0, i.jsx)(t_.Qs, { tenantId: e6.FYj, layoutId: n, overrides: nz[n] });
     return (0, i.jsxs)(i.Fragment, {
         children: [
             t === k.ORBS && (0, i.jsx)(nU, {}),
@@ -2357,7 +2357,7 @@ let nZ = function (e) {
                                             text: el.intl.string(el.t.AfrvRD),
                                             onClick: () => {
                                                 (t({ sourceButton: "shop all button", shouldAnimate: !0 }),
-                                                    tA.default.track(e2.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
+                                                    tA.default.track(e6.HAw.COLLECTIBLES_SHOP_ELEMENT_CLICKED, {
                                                         collectibles_shop_session_id: l?.sessionId,
                                                         page_type: n,
                                                         page_category: n === k.HOME ? void 0 : l?.pageCategory,
@@ -2461,7 +2461,7 @@ function nJ(e) {
                     isInternalShopDeeplink: i,
                     isOrbsExclusive: r,
                 } = e;
-                if ((a(t, n), null != n && i && !r)) return void m.push(e2.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(n));
+                if ((a(t, n), null != n && i && !r)) return void m.push(e6.BVt.COLLECTIBLES_SHOP_COLLECTION_DETAIL(n));
                 let c = l && !u,
                     o = r ? tu.G2.ORBS : tu.G2.CATALOG;
                 (f(n), p(!i), s(o, c));
@@ -2482,7 +2482,7 @@ function nJ(e) {
                 : t === tu.G2.GAME_SERVERS
                   ? d
                       ? (0, i.jsx)(tg, { isGameServerHostingInShopEnabled: d })
-                      : (0, i.jsx)(M.rd, { to: e2.BVt.COLLECTIBLES_SHOP_WITH_TAB(tu.G2.HOME) })
+                      : (0, i.jsx)(M.rd, { to: e6.BVt.COLLECTIBLES_SHOP_WITH_TAB(tu.G2.HOME) })
                   : (0, i.jsx)(nM, {
                         tab: t,
                         categories: v,
@@ -2498,7 +2498,7 @@ var n0 = n(626148),
     n8 = n(976860),
     n4 = n(870308),
     n5 = n(650583);
-function n2(e) {
+function n6(e) {
     let { children: t, shouldAddEventListener: n, onClose: s } = e,
         l = (0, m.useHasAnyModalOpen)();
     return (
@@ -2511,7 +2511,7 @@ function n2(e) {
         t
     );
 }
-let n6 = function (e) {
+let n2 = function (e) {
     let { tab: t = tu.G2.HOME } = e;
     (0, C.P)(p.a);
     let n = (0, E.A)((0, d.A)()),
@@ -2529,7 +2529,7 @@ let n6 = function (e) {
                         ((0, n8.aX)(), (0, z.openUserSettings)());
                         return;
                     }
-                    (0, n8.EL)() ? (0, n8.aX)() : (0, n8.pX)(e2.BVt.APP);
+                    (0, n8.EL)() ? (0, n8.aX)() : (0, n8.pX)(e6.BVt.APP);
                 }, [s]),
                 source: s,
                 ...t,
@@ -2537,7 +2537,7 @@ let n6 = function (e) {
         })(),
         { currentTab: c, hasFilters: k } = (0, R.v)(),
         y = r.useMemo(() => (t === tu.G2.HOME && null != c && k() ? c : t), [t, c, k]);
-    (0, v.A)(e2.FYj);
+    (0, v.A)(e6.FYj);
     let P = (0, N.$)("collectibles_shop"),
         { categories: D, refreshCategories: B } = (0, O.Ay)({ logPerf: !0, skipFetch: P }, { sessionId: n, tab: y });
     r.useEffect(() => {
@@ -2558,7 +2558,7 @@ let n6 = function (e) {
         Z(e7.i.AUTO_DISMISS);
     }, [Z]),
         r.useEffect(() => {
-            (0, h.I)(e2.BVt.COLLECTIBLES_SHOP);
+            (0, h.I)(e6.BVt.COLLECTIBLES_SHOP);
         }, []));
     let q = r.useRef(null),
         Q = r.useRef(null);
@@ -2575,7 +2575,7 @@ let n6 = function (e) {
             newValue: { sessionId: n, pageCategory: H, pageSize: tu.l5 },
             children: (0, i.jsx)(I.iM, {
                 tab: Y,
-                children: (0, i.jsx)(n2, {
+                children: (0, i.jsx)(n6, {
                     onClose: a,
                     shouldAddEventListener: !1,
                     children: (0, i.jsxs)("div", {

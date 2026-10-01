@@ -1,0 +1,154 @@
+.cardList__2357e {
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.grid__9a5c3 {}
+
+.container_a62a28 {
+    position: relative
+}
+
+.dragHandleContainer_a62a28 {
+    border-radius: 8px;
+    color: var(--white);
+    cursor: grab;
+    position: relative
+}
+
+.dragHandleContainer_a62a28:has(.dragHandle_a62a28:focus-visible):after {
+    background: var(--opacity-black-72);
+    border-radius: inherit;
+    content: "";
+    inset: 0;
+    position: absolute
+}
+
+.dragHandle_a62a28 {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: flex-start;
+    opacity: 0;
+    padding-inline-start: 2px;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.dragHandle_a62a28:focus-visible {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.removeGameButton_a62a28 {
+    inset-inline-end: 4px;
+    opacity: 0;
+    position: absolute;
+    top: 4px;
+    transition: opacity 50ms ease-in;
+    z-index: 10
+}
+
+.container_a62a28:hover .removeGameButton_a62a28,
+.removeGameButton_a62a28:focus-within,
+.keyboard-mode .container_a62a28:focus-within .removeGameButton_a62a28 {
+    opacity: 1;
+    transition: opacity .15s ease-out
+}
+
+.isDragging_a62a28.container_a62a28 .removeGameButton_a62a28,
+.isDragging_a62a28.container_a62a28:hover .removeGameButton_a62a28,
+.keyboard-mode .isDragging_a62a28.container_a62a28:focus-within .removeGameButton_a62a28 {
+    opacity: 0
+}
+
+.dropIndicatorAfter_a62a28:after,
+.dropIndicatorBefore_a62a28:before {
+    background-color: var(--icon-strong);
+    border-radius: 4px;
+    bottom: 0;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    width: 2px
+}
+
+.dropIndicatorBefore_a62a28:before {
+    inset-inline-start: -8px
+}
+
+.dropIndicatorAfter_a62a28:after {
+    inset-inline-end: -8px
+}
+
+.isDragging_a62a28 {
+    opacity: .15
+}
+
+.grid__96b3f {
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: repeat(5, 1fr);
+
+    @container (min-width: 266px) {
+        gap: var(--space-12)
+    }
+
+    @container (min-width: 324px) {
+        gap: var(--space-8);
+        grid-template-columns: repeat(6, 1fr)
+    }
+
+    @container (min-width: 360px) {
+        gap: var(--space-12)
+    }
+}
+
+.grid__96b3f>:nth-child(n+6) {
+    display: none
+}
+
+.grid__96b3f>:nth-child(n+6) {
+    @container (min-width: 324px) {
+        display: revert
+    }
+}
+
+.cover__96b3f {}
+
+.addButton__96b3f {
+    border-radius: 8px;
+    cursor: pointer;
+    position: relative
+}
+
+.addButton__96b3f:focus-visible .cover__96b3f:before,
+.addButton__96b3f:hover .cover__96b3f:before {
+    background: linear-gradient(150deg, hsla(0, 0%, 100%, .2), hsla(0, 0%, 100%, 0) 40%), linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6));
+    transition: background .15s ease-out
+}
+
+.addButton__96b3f .addIcon__96b3f {
+    inset-inline-start: 50%;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 50ms ease-in
+}
+
+.addButton__96b3f:focus-visible .addIcon__96b3f,
+.addButton__96b3f:hover .addIcon__96b3f {
+    opacity: 1;
+    transition: opacity .15s ease-out
+}
+
+.suggestedGames_dbb349 {
+    margin-top: 4px
+}
+
+/*# sourceMappingURL=fddd8a203fdb58a6.css.map*/

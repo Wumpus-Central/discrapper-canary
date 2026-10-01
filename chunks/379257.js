@@ -3,7 +3,7 @@ var i = n(477900);
 n(582128);
 var r = n(892491),
     a = n(192308),
-    s = n(228366),
+    s = n(73153),
     l = n(80556),
     o = n(207560),
     d = n(287809),
@@ -31,10 +31,10 @@ var I = n(36149),
     f = n(462924),
     p = n(895595),
     T = n(40449);
-function m(e) {
+function g(e) {
     if (null != e) return (0, I.Sr)(e) ? r.F.LIGHTBOX : void 0;
 }
-function g(e) {
+function m(e) {
     var t;
     let { entryPoint: r, onClose: s, onComplete: o, onCancel: d, incodeParameters: c } = e,
         u = (t = c?.method) === T.VF.FACIAL_AGE_ESTIMATION || t === T.VF.ID_VERIFICATION ? c.method : null,
@@ -50,7 +50,7 @@ function g(e) {
     (0, a.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
-                n.e("722514"),
+                n.e("638781"),
                 n.e("520957"),
                 n.e("792783"),
                 n.e("832637"),
@@ -78,7 +78,7 @@ function g(e) {
                       })
                     : (0, i.jsx)(e, { pickerMode: !0, entryPoint: r, onComplete: o, onCancel: d, ...t });
         },
-        { modalKey: T.SW, onCloseCallback: s, backdropStyle: m(r), Layer: l.Ay },
+        { modalKey: T.SW, onCloseCallback: s, backdropStyle: g(r), Layer: l.Ay },
     );
 }
 function S(e) {
@@ -99,12 +99,12 @@ function S(e) {
                     (e) => "string" == typeof c[e] && c[e].length > 0,
                 )
             ) &&
-            (g({ entryPoint: r, onClose: t, onComplete: u.onComplete, onCancel: u.onCancel, incodeParameters: c }), !0)
+            (m({ entryPoint: r, onClose: t, onComplete: u.onComplete, onCancel: u.onCancel, incodeParameters: c }), !0)
         );
     if (null == o) return !1;
     let _ = s || E(r),
         A = _ && (0, f.d)(r),
-        I = { modalKey: T.SW, onCloseCallback: t, backdropStyle: m(r), Layer: l.Ay, dismissable: !A };
+        I = { modalKey: T.SW, onCloseCallback: t, backdropStyle: g(r), Layer: l.Ay, dismissable: !A };
     return (
         _
             ? (0, a.openModalLazy)(async () => {
@@ -115,7 +115,7 @@ function S(e) {
               }, I)
             : (0, a.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
-                      n.e("722514"),
+                      n.e("638781"),
                       n.e("387132"),
                       n.e("188941"),
                       n.e("669464"),
@@ -132,7 +132,7 @@ function N(e, t) {
             let { default: e } = await Promise.all([n.e("164776"), n.e("409609")]).then(n.bind(n, 475376));
             return (t) => (0, i.jsx)(e, { ...t });
         },
-        { modalKey: T.NC, backdropStyle: m(e), Layer: l.Ay, onCloseCallback: t },
+        { modalKey: T.NC, backdropStyle: g(e), Layer: l.Ay, onCloseCallback: t },
     );
 }
 let C = {
@@ -145,7 +145,7 @@ let C = {
                 s.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: e });
             }
             (s.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" }),
-                g({
+                m({
                     entryPoint: r,
                     onClose: () => {
                         (c(), t?.());
@@ -170,7 +170,7 @@ let C = {
                           ]).then(n.bind(n, 188602));
                           return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                       },
-                      { modalKey: T.NC, backdropStyle: m(r), Layer: l.Ay, onCloseCallback: t },
+                      { modalKey: T.NC, backdropStyle: g(r), Layer: l.Ay, onCloseCallback: t },
                   );
               })()
             : (0, I.Q9)() && (0, o.u0)()
@@ -186,13 +186,13 @@ let C = {
                         ]).then(n.bind(n, 297102));
                         return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                     },
-                    { modalKey: T.NC, backdropStyle: m(r), Layer: l.Ay, onCloseCallback: t },
+                    { modalKey: T.NC, backdropStyle: g(r), Layer: l.Ay, onCloseCallback: t },
                 )
               : E(r)
                 ? (0, a.openModalLazy)(
                       async () => {
                           let { default: e } = await Promise.all([
-                              n.e("722514"),
+                              n.e("638781"),
                               n.e("847727"),
                               n.e("262546"),
                               n.e("454048"),
@@ -203,7 +203,7 @@ let C = {
                           ]).then(n.bind(n, 595746));
                           return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                       },
-                      { modalKey: T.NC, backdropStyle: m(r), Layer: l.Ay, onCloseCallback: t },
+                      { modalKey: T.NC, backdropStyle: g(r), Layer: l.Ay, onCloseCallback: t },
                   )
                 : (0, a.openModalLazy)(
                       async () => {
@@ -217,7 +217,7 @@ let C = {
                           ]).then(n.bind(n, 654041));
                           return (t) => (0, i.jsx)(e, { ...t, entryPoint: r });
                       },
-                      { modalKey: T.NC, backdropStyle: m(r), Layer: l.Ay, onCloseCallback: t },
+                      { modalKey: T.NC, backdropStyle: g(r), Layer: l.Ay, onCloseCallback: t },
                   );
     },
     showManualReviewWebview: function (e, t) {

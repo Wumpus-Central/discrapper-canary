@@ -3,14 +3,14 @@ var t = s(477900),
     a = s(582128),
     i = s(876230),
     n = s(268218);
-let u = a.lazy(() =>
+let l = a.lazy(() =>
         (0, n.sq)({
-            createPromise: () => Promise.resolve().then(s.bind(s, 266546)),
+            createPromise: () => Promise.all([s.e("216870"), s.e("643612"), s.e("334127")]).then(s.bind(s, 266546)),
             webpackId: 266546,
             name: "DiscordVideoPlayer",
         }),
     ),
-    l = { width: "100%", height: "100%", objectFit: "contain" };
+    u = { width: "100%", height: "100%", objectFit: "contain" };
 function c(e) {
     let { onPlay: r, autoplay: s, playable: n = !0, ...c } = e,
         o = a.useRef(!1),
@@ -35,11 +35,11 @@ function c(e) {
             },
             [p],
         ),
-        k = null != c.poster ? (0, t.jsx)("img", { src: c.poster, alt: "", style: l }) : null;
+        k = null != c.poster ? (0, t.jsx)("img", { src: c.poster, alt: "", style: u }) : null;
     return n
         ? (0, t.jsx)(a.Suspense, {
               fallback: k,
-              children: (0, t.jsx)(u, { ...c, autoplay: s, onPlayerStateChange: h, onProgressUpdate: b }),
+              children: (0, t.jsx)(l, { ...c, autoplay: s, onPlayerStateChange: h, onProgressUpdate: b }),
           })
         : k;
 }
