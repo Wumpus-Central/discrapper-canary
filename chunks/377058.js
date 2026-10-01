@@ -291,7 +291,7 @@ function N(e) {
         children: [
             (0, l.jsxs)(a.D, {
                 label: c,
-                children: [et && en, !er && eo, !et && en, !ea && !er && void 0 !== J && (0, l.jsx)(_.q, { ...J })],
+                children: [et && en, !er && eo, !et && en, !ea && !el && void 0 !== J && (0, l.jsx)(_.q, { ...J })],
             }),
             O ? (0, l.jsx)(I, { onGiftCardRedeemed: K }) : null,
             (0, l.jsx)(g, { onPaymentSourceAdd: f }),
