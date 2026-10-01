@@ -1044,6 +1044,12 @@ let n = [
         summary: "While Conjure works on your phone, a side quest may be offered when a video quest is available.",
     },
     {
+        date: "2026-09-29",
+        time: "20:42",
+        platforms: ["desktop", "mobile"],
+        summary: "While you have a project open, your status shows Conjuring so friends can see what you are up to.",
+    },
+    {
         date: "2026-09-12",
         time: "00:01",
         platforms: ["desktop", "mobile"],

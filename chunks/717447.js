@@ -2,12 +2,12 @@ n.d(t, { A: () => x, b: () => h });
 var l = n(477900);
 n(582128);
 var a = n(683063),
-    s = n(76275),
-    i = n(313265),
+    i = n(76275),
+    s = n(313265),
     r = n(903586),
     o = n(191521),
-    d = n(196582),
-    u = n(883455),
+    u = n(196582),
+    d = n(883455),
     c = n(50617),
     m = n(375708),
     f = n(13699);
@@ -24,35 +24,35 @@ function x(e) {
             steps: n,
             fallbackLabel: h,
             live: x,
-            durationMs: p,
-            connectsDown: g = !1,
-            closed: k = !1,
+            durationMs: k,
+            connectsDown: p = !1,
+            closed: g = !1,
             tier: v,
         } = e,
         j = (0, r.SY)(n),
-        b = (0, i.Q7)(m.intl.string(c.default.ZnvpQR), v),
-        _ = x ? void 0 : p,
-        S = null != _ ? (0, s.nY)(_) : null != j ? (0, r.WQ)(j) : (h ?? m.intl.string(c.default.nv6pUM)),
-        N = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
-    return (0, l.jsx)(d.A, {
+        b = (0, s.Q7)(m.intl.string(c.default.ZnvpQR), v),
+        _ = x ? void 0 : k,
+        S = null != _ ? (0, i.nY)(_) : null != j ? (0, r.WQ)(j) : (h ?? m.intl.string(c.default.nv6pUM)),
+        y = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
+    return (0, l.jsx)(u.A, {
         glyph: (0, l.jsx)(a.u, {
-            asset: (0, l.jsx)(o.A, { size: 32 }),
+            asset: (0, l.jsx)(o.Ay, { size: 32 }),
             assetSize: 32,
             title: b.title,
             body: b.body,
             position: "left",
-            children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(o.A, {}) }),
+            children: (0, l.jsx)("span", { className: f.nC, children: (0, l.jsx)(o.Ay, {}) }),
         }),
         line: S,
         anchor: !0,
         live: x,
-        settled: null != _ || (!x && k),
-        connectsDown: g,
-        detail: N
+        settled: null != _ || (!x && g),
+        connectsDown: p,
+        detail: y
             ? (0, l.jsx)("ol", {
                   className: f.dO,
                   children: n.map((e) =>
-                      (0, l.jsx)(u.A, { projectId: t, node: e, presentation: "detail", active: x && e === j }, e.id),
+                      (0, l.jsx)(d.A, { projectId: t, node: e, presentation: "detail", active: x && e === j }, e.id),
                   ),
               })
             : void 0,
