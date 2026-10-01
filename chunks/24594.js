@@ -2160,9 +2160,14 @@ function iX(e) {
             [u, t, n],
         )),
         (f = (0, A.yK)(
-            [G.Ay],
+            [G.Ay, W.A],
             () => {
-                let e = G.Ay.getEmbeddedActivitiesForGuild(t).flatMap((e) => Array.from(e.userIds));
+                let e = G.Ay.getEmbeddedActivitiesForGuild(t)
+                    .filter((e) => {
+                        let t = W.A.getBasicChannel((0, x.H)(e.location));
+                        return t?.type !== eS.rbe.GUILD_SPACE;
+                    })
+                    .flatMap((e) => Array.from(e.userIds));
                 return (0, ta.F7)(e, u);
             },
             [t, u],
@@ -2214,9 +2219,9 @@ function iX(e) {
                           }),
                       ],
                   }),
-        x = i$(eE.F, M, y),
-        k = i$(eA.k, P, y),
-        { isMuted: F, muteConfig: B } = (0, A.cf)(
+        k = i$(eE.F, M, y),
+        F = i$(eA.k, P, y),
+        { isMuted: B, muteConfig: V } = (0, A.cf)(
             [en.Ay],
             () => ({ isMuted: en.Ay.isMuted(y), muteConfig: en.Ay.getMuteConfig(y) }),
             [y],
@@ -2225,9 +2230,9 @@ function iX(e) {
         children: [
             w,
             U,
-            x,
             k,
-            F ? (0, a.jsx)(iz, { muteConfig: B, className: o()(eN.LM, { [eN.Sx]: null != U || null != x }) }) : null,
+            F,
+            B ? (0, a.jsx)(iz, { muteConfig: V, className: o()(eN.LM, { [eN.Sx]: null != U || null != k }) }) : null,
         ],
     });
 }
