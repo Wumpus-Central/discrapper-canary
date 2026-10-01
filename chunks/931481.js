@@ -1,4 +1,4 @@
-n.d(e, { A: () => _ });
+n.d(e, { A: () => j });
 var i = n(477900),
     l = n(582128),
     s = n(503698),
@@ -8,63 +8,60 @@ var i = n(477900),
     o = n(688810),
     u = n(429913),
     c = n(769015),
-    A = n(390848),
-    m = n(17928),
-    f = n(39623),
-    E = n(994500),
-    g = n(420825),
-    x = n(22212),
-    h = n(375708),
-    I = n(266600);
-function v(t) {
+    m = n(390848),
+    A = n(39623),
+    f = n(420825),
+    E = n(22212),
+    x = n(375708),
+    g = n(266600);
+function h(t) {
     let { userId: e, analyticsLocation: n } = t,
-        s = (0, g.q)(),
-        r = (0, m.bG)([E.A], () => E.A.getNote(e)),
-        [o, u] = l.useState(!1),
-        c = l.useCallback(() => {
-            (u(!0), (0, x.Yq)({ analyticsLocation: n, noteLength: r?.length ?? 0 }));
-        }, [n, r]);
-    return s || null == r || "" === r
+        s = (0, f.z)(e),
+        [r, o] = l.useState(!1),
+        u = l.useCallback(() => {
+            (o(!0), (0, E.Yq)({ analyticsLocation: n, noteLength: s?.length ?? 0 }));
+        }, [n, s]);
+    return null == s
         ? null
         : (0, i.jsxs)("div", {
-              className: I.kL,
+              className: g.kL,
               children: [
-                  o
+                  r
                       ? null
                       : (0, i.jsx)("div", {
-                            className: I.p6,
+                            className: g.p6,
                             children: (0, i.jsx)(d.$, {
-                                icon: f.EyeIcon,
+                                icon: A.EyeIcon,
                                 variant: "secondary",
                                 size: "sm",
-                                onClick: c,
-                                text: h.intl.string(h.t.sB0q4C),
+                                onClick: u,
+                                text: x.intl.string(x.t.sB0q4C),
                             }),
                         }),
                   (0, i.jsx)(a.E, {
-                      className: o ? void 0 : I.R,
-                      "aria-label": o ? r : "",
+                      className: r ? void 0 : g.R,
+                      "aria-label": r ? s : "",
                       variant: "redesign/message-preview/normal",
-                      children: r,
+                      children: s,
                   }),
               ],
           });
 }
-var p = n(562153),
-    C = n(183555),
-    N = n(939496),
-    j = n(996988),
-    y = n(216057);
-function _(t) {
-    let { user: e, guildId: n, channelId: s, applicationId: m, isGameRelationship: f = !1, className: E } = t,
-        { themeType: g } = (0, N.E)(),
-        x = g === j.d.MODAL_V2,
-        I = p.Ay.getName(n, s, e),
-        { trackUserProfileAction: _ } = (0, C.NJ)(),
+var I = n(562153),
+    v = n(183555),
+    p = n(939496),
+    C = n(996988),
+    N = n(216057);
+function j(t) {
+    let { user: e, guildId: n, channelId: s, applicationId: A, isGameRelationship: f = !1, className: E } = t,
+        { themeType: g } = (0, p.E)(),
+        j = g === C.d.MODAL_V2,
+        y = I.Ay.getName(n, s, e),
+        { trackUserProfileAction: _ } = (0, v.NJ)(),
         { newestAnalyticsLocation: R } = (0, o.Ay)(),
-        { acceptFriendRequest: S, cancelFriendRequest: b } = (0, A.I)({
+        { acceptFriendRequest: S, cancelFriendRequest: b } = (0, m.I)({
             userId: e.id,
-            applicationId: m,
+            applicationId: A,
             isGameRelationship: f,
             location: R,
         }),
@@ -74,42 +71,42 @@ function _(t) {
         k = l.useCallback(() => {
             (b(), _({ action: f ? "IGNORE_GAME_FRIEND_REQUEST" : "IGNORE_FRIEND_REQUEST" }));
         }, [b, f, _]),
-        L = null != m,
-        T = (0, u.h)(m);
+        L = null != A,
+        T = (0, u.h)(A);
     return L && null == T
         ? null
         : (0, i.jsxs)("div", {
-              className: r()(y.kL, E),
+              className: r()(N.kL, E),
               children: [
                   L
                       ? (0, i.jsx)(a.E, {
                             variant: "text-sm/normal",
-                            children: h.intl.format(f ? h.t.syHjLL : h.t.V15uUI, {
-                                username: I,
+                            children: x.intl.format(f ? x.t.syHjLL : x.t.V15uUI, {
+                                username: y,
                                 applicationIcon: () =>
-                                    (0, i.jsx)(c.A, { className: y.Gt, game: T, size: c.M.XXSMALL }, T?.id),
+                                    (0, i.jsx)(c.A, { className: N.Gt, game: T, size: c.M.XXSMALL }, T?.id),
                                 applicationName: T?.name,
                             }),
                         })
                       : (0, i.jsx)(a.E, {
                             variant: "text-sm/normal",
-                            children: h.intl.format(h.t.uIomXw, { username: I }),
+                            children: x.intl.format(x.t.uIomXw, { username: y }),
                         }),
-                  (0, i.jsx)(v, { userId: e.id, analyticsLocation: "User Profile" }),
+                  (0, i.jsx)(h, { userId: e.id, analyticsLocation: "User Profile" }),
                   (0, i.jsxs)("div", {
-                      className: y.UD,
+                      className: N.UD,
                       children: [
                           (0, i.jsx)(d.$, {
-                              variant: x ? "secondary" : "primary",
+                              variant: j ? "secondary" : "primary",
                               size: "sm",
                               onClick: P,
-                              text: h.intl.string(h.t.Zcibdf),
+                              text: x.intl.string(x.t.Zcibdf),
                           }),
                           (0, i.jsx)(d.$, {
                               variant: "secondary",
                               size: "sm",
                               onClick: k,
-                              text: h.intl.string(h.t.xuio0C),
+                              text: x.intl.string(x.t.xuio0C),
                           }),
                       ],
                   }),
