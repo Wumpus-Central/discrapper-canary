@@ -101,10 +101,11 @@ function N(e) {
             giftCardsEnabled: O,
             giftCardCheckboxProps: M,
             walletCoversSubtotal: L,
-            basePaymentSourceDropdownProps: k,
-            isSubscriptionPaidByWallet: w,
-            hidePersonalInformation: D,
-            isSplitPaymentMode: U,
+            walletCoversTotal: k,
+            basePaymentSourceDropdownProps: w,
+            isSubscriptionPaidByWallet: D,
+            hidePersonalInformation: U,
+            isSplitPaymentMode: G,
         } = (function (e) {
             let {
                     paymentSourceId: t,
@@ -130,12 +131,13 @@ function N(e) {
                     handleDropdownPaymentSourceChange: y,
                     giftCardCheckboxProps: A,
                     walletCoversSubtotal: I,
-                    isSubscriptionPaidByWallet: g,
-                    giftCardWallet: P,
-                    isGiftCardCreditsChecked: v,
-                    isWalletBalanceLoaded: x,
-                    handleGiftCardCreditsToggle: _,
-                    isSplitPaymentMode: T,
+                    walletCoversTotal: g,
+                    isSubscriptionPaidByWallet: P,
+                    giftCardWallet: v,
+                    isGiftCardCreditsChecked: x,
+                    isWalletBalanceLoaded: _,
+                    handleGiftCardCreditsToggle: T,
+                    isSplitPaymentMode: N,
                 } = (0, o.Y0)({
                     checkoutPaymentSources: m,
                     paymentSourceId: t,
@@ -178,38 +180,39 @@ function N(e) {
                     }
                 }, [c, t, p, n, l, a, s, o, d]);
             })({
-                giftCardWallet: P,
-                isWalletBalanceLoaded: x,
+                giftCardWallet: v,
+                isWalletBalanceLoaded: _,
                 walletCoversSubtotal: I,
-                isGiftCardCreditsChecked: v,
+                isGiftCardCreditsChecked: x,
                 subscriptionPaymentSourceId: a,
-                handleGiftCardCreditsToggle: _,
+                handleGiftCardCreditsToggle: T,
                 pendingGiftCardWalletSelection: s,
                 setPendingGiftCardWalletSelection: c,
             });
-            let N = i.useMemo(() => {
+            let b = i.useMemo(() => {
                     let e = f.find((e) => e.isDefault);
                     return null != e ? e.id : void 0;
                 }, [f]),
-                b = (0, r.bG)([d.A], () => d.A.hidePersonalInformation ?? !1);
+                j = (0, r.bG)([d.A], () => d.A.hidePersonalInformation ?? !1);
             return {
                 giftCardsEnabled: S,
                 giftCardCheckboxProps: A,
                 walletCoversSubtotal: I,
+                walletCoversTotal: g,
                 basePaymentSourceDropdownProps: i.useMemo(
                     () => ({
                         selectedPaymentSourceId: E,
                         paymentSources: f,
-                        defaultPaymentSourceId: N,
-                        hidePersonalInformation: b,
+                        defaultPaymentSourceId: b,
+                        hidePersonalInformation: j,
                         onChange: y,
                         dropdownLoading: p,
                     }),
-                    [E, f, N, b, y, p],
+                    [E, f, b, j, y, p],
                 ),
-                isSubscriptionPaidByWallet: g,
-                hidePersonalInformation: b,
-                isSplitPaymentMode: T,
+                isSubscriptionPaidByWallet: P,
+                hidePersonalInformation: j,
+                isSplitPaymentMode: N,
             };
         })({
             paymentSourceId: b,
@@ -220,64 +223,77 @@ function N(e) {
             setPendingGiftCardWalletSelection: R,
         }),
         {
-            priceOptions: G,
-            setCurrency: F,
-            expressCheckoutSubmitting: B,
-            isOrderLocked: H,
+            priceOptions: F,
+            setCurrency: B,
+            expressCheckoutSubmitting: H,
+            isOrderLocked: W,
         } = (0, C.t4)((e) => ({
             priceOptions: e.checkoutPriceOptions,
             setCurrency: e.setCheckoutCurrency,
             expressCheckoutSubmitting: e.expressCheckoutSubmitting,
             isOrderLocked: e.get("isOrderLocked"),
         })),
-        { dropdownCurrencies: W, displayCurrency: Y } = (0, P.Jn)(),
-        V = i.useCallback(() => R(!0), []),
-        K = i.useMemo(() => H || B || (m ?? !1), [H, B, m]),
-        { giftCardCheckboxProps: q, disabled: Z } = i.useMemo(
+        { dropdownCurrencies: Y, displayCurrency: V } = (0, P.Jn)(),
+        K = i.useCallback(() => R(!0), []),
+        q = i.useMemo(() => W || H || (m ?? !1), [W, H, m]),
+        { giftCardCheckboxProps: Z, disabled: z } = i.useMemo(
             () =>
                 null != A
-                    ? A({ giftCardCheckboxProps: M, disabled: K }, { isSubscriptionPaidByWallet: w })
-                    : { giftCardCheckboxProps: M, disabled: K },
-            [K, A, M, w],
+                    ? A({ giftCardCheckboxProps: M, disabled: q }, { isSubscriptionPaidByWallet: D })
+                    : { giftCardCheckboxProps: M, disabled: q },
+            [q, A, M, D],
         ),
-        z = null != q && !0 === q.locked,
-        $ = i.useMemo(() => {
+        $ = null != Z && !0 === Z.locked,
+        Q = i.useMemo(() => {
             if (null != x)
                 return x({
-                    isSubscriptionPaidByWallet: w,
-                    selectedSource: k.paymentSources.find((e) => e.id === k.selectedPaymentSourceId),
-                    hidePersonalInformation: D,
+                    isSubscriptionPaidByWallet: D,
+                    selectedSource: w.paymentSources.find((e) => e.id === w.selectedPaymentSourceId),
+                    hidePersonalInformation: U,
                 });
-        }, [x, w, k, D]),
-        Q = i.useMemo(() => {
+        }, [x, D, w, U]),
+        J = i.useMemo(() => {
             if (!y)
                 return {
                     label: E.intl.string(E.t["/AAR02"]),
-                    selectedCurrency: G.currency ?? Y,
-                    currencies: W,
-                    onChange: F,
-                    disabled: Z,
+                    selectedCurrency: F.currency ?? V,
+                    currencies: Y,
+                    onChange: B,
+                    disabled: z,
                 };
-        }, [y, G.currency, Y, W, F, Z]),
-        J = i.useMemo(() => ({ ...k, ...p, onPaymentSourceAdd: f }), [k, f, p]),
-        X = null != q && q.checked,
-        ee = !U && (L || z),
-        et = i.useMemo(() => {
-            if (!O || null == q) return null;
-            let e = ee ? T.r : T.K,
-                t = q.disabled || Z;
-            return (0, l.jsx)(v.o, { ...q, className: e, disabled: t });
-        }, [O, q, ee, Z]),
-        en = ee && O && X,
-        el = null != $,
-        ei = i.useMemo(() => (null != $ ? $ : (0, l.jsx)(s.Ay, { ...J, disabled: Z })), [$, Z, J]);
+        }, [y, F.currency, V, Y, B, z]),
+        X = i.useMemo(() => ({ ...w, ...p, onPaymentSourceAdd: f }), [w, f, p]),
+        ee = null != Z && Z.checked,
+        et = G || L || $,
+        en = i.useMemo(() => {
+            if (!O || null == Z) return null;
+            let e = et ? T.r : T.K,
+                t = Z.disabled || z;
+            return (0, l.jsx)(v.o, { ...Z, className: e, disabled: t });
+        }, [O, Z, et, z]),
+        el = O && ee,
+        ei = el && G && k,
+        er = el && !G && et,
+        ea = null != Q,
+        es = ei && X.paymentSources.length > 0,
+        eo = i.useMemo(
+            () =>
+                null != Q
+                    ? Q
+                    : (0, l.jsx)(s.Ay, {
+                          ...X,
+                          disabled: z || es,
+                          addPaymentSourceVariant: ei ? "secondary" : "primary",
+                      }),
+            [Q, z, es, ei, X],
+        );
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(a.D, {
                 label: c,
-                children: [ee && et, !en && ei, !ee && et, !el && !en && void 0 !== Q && (0, l.jsx)(_.q, { ...Q })],
+                children: [et && en, !er && eo, !et && en, !ea && !er && void 0 !== J && (0, l.jsx)(_.q, { ...J })],
             }),
-            O ? (0, l.jsx)(I, { onGiftCardRedeemed: V }) : null,
+            O ? (0, l.jsx)(I, { onGiftCardRedeemed: K }) : null,
             (0, l.jsx)(g, { onPaymentSourceAdd: f }),
         ],
     });
