@@ -95,7 +95,7 @@
 .outer_bf9399:after {
     background: linear-gradient(to bottom, var(--background-surface-higher), transparent);
     content: "";
-    height: 20px;
+    height: 32px;
     inset-inline-end: -1px;
     inset-inline-start: -1px;
     pointer-events: none;
@@ -103,10 +103,28 @@
     top: 100%
 }
 
-.custom-theme-background .outer_bf9399:after {
-    background: var(--background-gradient-chat, var(--background-base-lower));
-    -webkit-mask-image: linear-gradient(180deg, #000, transparent);
-    mask-image: linear-gradient(180deg, #000, transparent)
+.custom-theme-background .outer_bf9399 {
+    border-color: transparent
 }
 
-/*# sourceMappingURL=464838.f33ad58e8b46da44.css.map*/
+.custom-theme-background .outer_bf9399:before {
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-subtle);
+    border-bottom: none;
+    border-radius: 8px 8px 0 0;
+    bottom: -32px;
+    content: "";
+    inset-inline-end: -1px;
+    inset-inline-start: -1px;
+    mask-image: linear-gradient(180deg, #000 calc(100% - 32px), transparent);
+    -webkit-mask-image: linear-gradient(180deg, #000 calc(100% - 32px), transparent);
+    pointer-events: none;
+    position: absolute;
+    top: 0
+}
+
+.custom-theme-background .outer_bf9399:after {
+    content: none
+}
+
+/*# sourceMappingURL=464838.442dfa024573313b.css.map*/

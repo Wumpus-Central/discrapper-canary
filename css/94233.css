@@ -234,10 +234,11 @@
 }
 
 .topFade_e4bf2f {
-    background: linear-gradient(to top, transparent, var(--background-surface-higher) 80px, var(--background-surface-higher) 100%);
-    height: 102px;
+    background: linear-gradient(to top, transparent, var(--background-surface-higher) 100%);
+    height: 56px;
     inset-inline-end: 0;
     inset-inline-start: 0;
+    opacity: 0;
     pointer-events: none;
     position: absolute;
     top: 0;
@@ -246,8 +247,8 @@
 
 .custom-theme-background .topFade_e4bf2f {
     background: linear-gradient(var(--background-mod-subtle), var(--background-mod-subtle)), var(--background-gradient-chat, var(--background-surface-higher));
-    -webkit-mask-image: linear-gradient(0deg, transparent 0, #000 80px, #000);
-    mask-image: linear-gradient(0deg, transparent 0, #000 80px, #000)
+    -webkit-mask-image: linear-gradient(0deg, transparent 0, #000);
+    mask-image: linear-gradient(0deg, transparent 0, #000)
 }
 
 .bottomFade_e4bf2f {
@@ -741,4 +742,4 @@
     overflow: hidden
 }
 
-/*# sourceMappingURL=94233.3622af20216e2665.css.map*/
+/*# sourceMappingURL=94233.ed9402c591300dd8.css.map*/
