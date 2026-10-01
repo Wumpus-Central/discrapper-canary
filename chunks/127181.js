@@ -1,4 +1,4 @@
-a.d(t, { B: () => o, MZ: () => l, TH: () => i, tn: () => s });
+a.d(t, { B: () => o, MZ: () => l, TH: () => s, tn: () => i });
 let n = [
     {
         date: "2026-09-07",
@@ -831,6 +831,13 @@ let n = [
             "The Conjuring MCP panel now gives you an Authorization header to add alongside the link, so the link itself no longer carries your key.",
     },
     {
+        date: "2026-10-01",
+        time: "01:21",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "The agent can batch several workspace and MCP tool calls into one short script, so multi-step checks and lookups finish in a single step.",
+    },
+    {
         date: "2026-09-09",
         time: "00:00",
         platforms: ["desktop"],
@@ -1098,14 +1105,14 @@ let n = [
             ? -1
             : +(e.summary > t.summary);
 });
-function i(e) {
-    return s(e).slice(0, 3);
-}
 function s(e) {
+    return i(e).slice(0, 3);
+}
+function i(e) {
     return n.filter((t) => t.platforms.includes(e));
 }
 function o(e) {
-    return s(e).length > 3;
+    return i(e).length > 3;
 }
 function l(e) {
     return 1 === e.platforms.length;
