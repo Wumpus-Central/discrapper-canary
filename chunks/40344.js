@@ -1,4 +1,4 @@
-i.d(t, { default: () => eu });
+i.d(t, { default: () => eo });
 var s,
     r = i(477900),
     n = i(582128),
@@ -99,56 +99,63 @@ i(321073);
 var J = i(702841),
     Z = i(590180),
     X = i(4227),
-    q = (((s = {}).PURCHASE = "purchase"), (s.PREMIUM_PURCHASE = "premium_purchase"), (s.PREVIEW = "preview"), s);
-let F = { skuId: "None" },
-    W = { skuId: "Shop" },
-    B = function () {
+    q = i(341879),
+    F = (((s = {}).PURCHASE = "purchase"), (s.PREMIUM_PURCHASE = "premium_purchase"), (s.PREVIEW = "preview"), s);
+let W = { skuId: "None" },
+    B = { skuId: "Shop" },
+    Y = function () {
         let e = (0, J.bG)([X.A], () => X.A.purchases),
-            [t, i] = (0, J.yK)([Z.A], () => [Z.A.categories, Z.A.products]);
-        return (0, n.useMemo)(() => {
-            let s = (0, k.ps)(e, t).reduce(
-                (t, s) => {
-                    let r = e.get(s.skuId);
-                    return (
-                        (null != r ? (0, k.gA)(r) : (0, k.G0)(i.get(s.skuId)))
-                            ? t.premium_purchase.push(s)
-                            : null != r
-                              ? t.purchase.push(s)
-                              : t.preview.push(s),
-                        t
-                    );
-                },
-                { purchase: [], premium_purchase: [], preview: [] },
-            );
-            return [
-                { section: "purchase", items: [F, W, ...s.purchase], height: 12, header: O.intl.string(O.t.VqmVqE) },
-                {
-                    section: "premium_purchase",
-                    items: s.premium_purchase,
-                    height: 12,
-                    header: O.intl.string(O.t.TiLCgw),
-                },
-                { section: "preview", items: s.preview, height: 12, header: O.intl.string(O.t["1vbbee"]) },
-            ].filter((e) => {
-                let { items: t } = e;
-                return t.length > 0;
-            });
-        }, [t, i, e]);
+            [t, i] = (0, J.yK)([Z.A], () => [Z.A.categories, Z.A.products]),
+            s = (0, n.useMemo)(() => {
+                let s = (0, k.ps)(e, t).reduce(
+                    (t, s) => {
+                        let r = e.get(s.skuId);
+                        return (
+                            (null != r ? (0, k.gA)(r) : (0, k.G0)(i.get(s.skuId)))
+                                ? t.premium_purchase.push(s)
+                                : null != r
+                                  ? t.purchase.push(s)
+                                  : t.preview.push(s),
+                            t
+                        );
+                    },
+                    { purchase: [], premium_purchase: [], preview: [] },
+                );
+                return [
+                    {
+                        section: "purchase",
+                        items: [W, B, ...s.purchase],
+                        height: 12,
+                        header: O.intl.string(O.t.VqmVqE),
+                    },
+                    {
+                        section: "premium_purchase",
+                        items: s.premium_purchase,
+                        height: 12,
+                        header: O.intl.string(O.t.TiLCgw),
+                    },
+                    { section: "preview", items: s.preview, height: 12, header: O.intl.string(O.t["1vbbee"]) },
+                ].filter((e) => {
+                    let { items: t } = e;
+                    return t.length > 0;
+                });
+            }, [t, i, e]);
+        return (0, q.A)(s, "preview");
     };
-var Y = i(215689),
-    Q = i(876298);
-let ee = () => 80;
-function et(e) {
+var Q = i(215689),
+    ee = i(876298);
+let et = () => 80;
+function ei(e) {
     let { children: t, className: i, onSelect: s, isSelected: n, ...a } = e;
     return (0, r.jsx)(H.D, {
         "aria-pressed": n,
-        className: _()(Q.eA, n ? Q.wH : void 0, i),
+        className: _()(ee.eA, n ? ee.wH : void 0, i),
         ...a,
         onClick: s,
         children: t,
     });
 }
-function ei(e) {
+function es(e) {
     let {
             user: t,
             avatarDecoration: i,
@@ -160,28 +167,28 @@ function ei(e) {
         } = e,
         c = n.useRef(null),
         { isHoveringOrFocusing: d } = (0, V.A)(s ?? c),
-        { avatarDecorationSrc: m } = (0, Y.A)({
+        { avatarDecorationSrc: m } = (0, Q.A)({
             user: t,
             avatarDecorationOverride: i,
             size: 80,
             onlyAnimateOnHoverOrFocus: !d,
         });
-    return (0, r.jsxs)(et, {
+    return (0, r.jsxs)(ei, {
         innerRef: s ?? c,
         isSelected: u,
         ...o,
         children: [
-            null != m && (0, r.jsx)("img", { className: Q.Pw, src: m, alt: i.label }),
+            null != m && (0, r.jsx)("img", { className: ee.Pw, src: m, alt: i.label }),
             (0, r.jsx)(L.A, {
                 skuId: i.skuId,
                 canUsePremiumCollectibles: l,
-                isPurchaseSection: a === q.PURCHASE,
-                isPremiumSection: a === q.PREMIUM_PURCHASE,
+                isPurchaseSection: a === F.PURCHASE,
+                isPremiumSection: a === F.PREMIUM_PURCHASE,
             }),
         ],
     });
 }
-let es = function (e) {
+let er = function (e) {
     let {
             user: t,
             guild: i,
@@ -190,11 +197,11 @@ let es = function (e) {
             onSelect: a,
             onOpenShop: l,
         } = e,
-        u = B(),
+        u = Y(),
         c = j.Ay.canUseCollectibles(t);
     return (0, r.jsx)(G.f, {
         fade: !0,
-        className: Q.p_,
+        className: ee.p_,
         columns: 3,
         sections: u.map((e) => {
             let { items: t } = e;
@@ -208,15 +215,15 @@ let es = function (e) {
         renderItem: (e, o, d, m) => {
             let { section: h, items: p } = u[e],
                 g = p[o];
-            if (g === F)
+            if (g === W)
                 return (0, r.jsxs)(
-                    et,
+                    ei,
                     {
                         style: { ...d },
                         isSelected: null === s,
                         onSelect: () => a(null),
                         children: [
-                            (0, r.jsx)(M.K, { size: "md", color: "currentColor", className: Q.Kk }),
+                            (0, r.jsx)(M.K, { size: "md", color: "currentColor", className: ee.Kk }),
                             (0, r.jsx)(z.E, {
                                 variant: "text-xs/normal",
                                 color: "text-strong",
@@ -226,9 +233,9 @@ let es = function (e) {
                     },
                     m,
                 );
-            if (g === W)
+            if (g === B)
                 return (0, r.jsxs)(
-                    et,
+                    ei,
                     {
                         style: d,
                         onSelect: () => l(),
@@ -238,7 +245,7 @@ let es = function (e) {
                                 width: 23,
                                 height: 23,
                                 color: "currentColor",
-                                className: Q.sV,
+                                className: ee.sV,
                             }),
                             (0, r.jsx)(z.E, {
                                 variant: "text-xs/normal",
@@ -252,7 +259,7 @@ let es = function (e) {
             if ((0, K.T)(g)) {
                 let e = s?.skuId === g.skuId;
                 return (0, r.jsx)(
-                    ei,
+                    es,
                     {
                         style: { ...d },
                         user: t,
@@ -271,20 +278,20 @@ let es = function (e) {
         renderSection: (e, t) => {
             let { header: i } = u[e];
             return (0, r.jsx)("div", {
-                className: Q.so,
+                className: ee.so,
                 style: { ...t, position: "absolute" },
                 children: (0, r.jsx)(o.D, { variant: "heading-md/semibold", children: i }),
             });
         },
         getSectionHeight: (e) => u[e].height,
         getItemKey: (e, t) => u[e].items[t].skuId,
-        getItemHeight: ee,
+        getItemHeight: et,
     });
 };
-var er = i(652215),
-    en = i(202541),
-    ea = i(806457);
-function el(e) {
+var en = i(652215),
+    ea = i(202541),
+    el = i(806457);
+function eu(e) {
     let {
             user: t,
             categories: i,
@@ -341,18 +348,18 @@ function el(e) {
             (0, r.jsxs)(l.rQ, {
                 "data-migration-pending": !0,
                 separator: !1,
-                className: ea.Hc,
+                className: el.Hc,
                 children: [
                     (0, r.jsx)(o.D, { id: m, variant: "heading-lg/semibold", children: O.intl.string(O.t.HykynS) }),
-                    (0, r.jsx)(l.s_, { "data-migration-pending": !0, className: ea.iT, onClick: x }),
+                    (0, r.jsx)(l.s_, { "data-migration-pending": !0, className: el.iT, onClick: x }),
                 ],
             }),
             (0, r.jsxs)(l.$m, {
                 "data-migration-pending": !0,
-                className: ea.jE,
+                className: el.jE,
                 scrollbarType: "none",
                 children: [
-                    (0, r.jsx)(es, {
+                    (0, r.jsx)(er, {
                         user: t,
                         guild: y,
                         pendingAvatarDecoration: b,
@@ -363,7 +370,7 @@ function el(e) {
                         onOpenShop: K,
                     }),
                     (0, r.jsx)(P, {
-                        className: ea.kk,
+                        className: el.kk,
                         user: t,
                         guildId: y?.id,
                         avatarDecoration: R,
@@ -373,7 +380,7 @@ function el(e) {
             }),
             (0, r.jsxs)(l.jl, {
                 "data-migration-pending": !0,
-                className: ea.Hx,
+                className: el.Hx,
                 children: [
                     (null != H && (z || !M)) || null === b
                         ? (0, r.jsx)(u.$, {
@@ -391,7 +398,7 @@ function el(e) {
                                 text: O.intl.string(O.t.fYfGgK),
                             })
                           : (0, r.jsx)(p.A, {
-                                subscriptionTier: en.pe.TIER_2,
+                                subscriptionTier: ea.pe.TIER_2,
                                 showGradient: !z,
                                 textOptions: {
                                     textOverride: j.Ay.isPremium(t)
@@ -409,7 +416,7 @@ function el(e) {
         ],
     });
 }
-function eu(e) {
+function eo(e) {
     let {
             transitionState: t,
             analyticsLocations: i,
@@ -426,7 +433,7 @@ function eu(e) {
         f = n.useId();
     return (
         n.useEffect(() => {
-            I.default.track(er.HAw.OPEN_MODAL, { type: er.JJy.AVATAR_DECORATION_CUSTOMIZATION, location_stack: A });
+            I.default.track(en.HAw.OPEN_MODAL, { type: en.JJy.AVATAR_DECORATION_CUSTOMIZATION, location_stack: A });
         }, [A]),
         null == g
             ? null
@@ -434,7 +441,7 @@ function eu(e) {
                   value: A,
                   children: (0, r.jsx)(l.EO, {
                       transitionState: t,
-                      className: ea.yl,
+                      className: el.yl,
                       size: C ? l.rI.DYNAMIC : l.rI.MEDIUM,
                       parentComponent: "AvatarDecorationModal",
                       returnRef: p,
@@ -442,8 +449,8 @@ function eu(e) {
                       "aria-labelledby": C ? void 0 : f,
                       "data-migration-pending": !0,
                       children: C
-                          ? (0, r.jsx)(c.y, { className: ea.u1, type: c.y.Type.SPINNING_CIRCLE })
-                          : (0, r.jsx)(el, {
+                          ? (0, r.jsx)(c.y, { className: el.u1, type: c.y.Type.SPINNING_CIRCLE })
+                          : (0, r.jsx)(eu, {
                                 user: g,
                                 guild: h,
                                 categories: v,

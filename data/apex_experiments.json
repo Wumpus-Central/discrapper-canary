@@ -4908,6 +4908,22 @@
     }
   },
   {
+    "name": "2026-09-edit-profile-collectibles-ordering",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-09-friends-sidebar",
     "kind": "user",
     "defaultConfig": {
