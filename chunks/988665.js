@@ -1,5 +1,5 @@
 (n.d(t, { Ay: () => d, dL: () => r, ou: () => o }), n(938796), n(321073));
-let i = /.+/g,
+let i = /[\s\S]+/,
     r = "NON_TOKEN";
 function a(e, t, n) {
     if (null == t) return null;
@@ -87,7 +87,8 @@ class o {
               (this.type = e.type),
               null != e._data && (this._data = e._data))
             : (null != e
-                  ? ((this.match = [...e]), (this.start = "string" == typeof e ? 0 : (e.index ?? 0)))
+                  ? ((this.match = "string" == typeof e ? [e] : [...e]),
+                    (this.start = "string" == typeof e ? 0 : (e.index ?? 0)))
                   : ((this.match = []), (this.start = 0)),
               (this.type = t));
     }
@@ -95,7 +96,7 @@ class o {
         return this.start + this.length;
     }
     get length() {
-        return this.match[0].length;
+        return this.match[0]?.length ?? 0;
     }
     valueOf() {
         return this.match[0];
