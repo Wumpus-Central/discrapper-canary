@@ -2785,11 +2785,7 @@ function lK(e) {
         className: r,
         children: [
             o === lR.COMMERCE &&
-                (0, a.jsx)(lT.A, {
-                    location: N.A.GAME_PROFILE,
-                    onNavigateToQuestHome: p,
-                    variant: "overlay-secondary",
-                }),
+                (0, a.jsx)(lT.A, { location: N.A.GAME_PROFILE, onNavigate: p, variant: "overlay-secondary" }),
             null != j &&
                 o !== lR.COMMERCE &&
                 (0, a.jsx)(lf.Y, {

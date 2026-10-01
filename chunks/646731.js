@@ -19,8 +19,8 @@ var a = l(477900),
     p = l(318346),
     L = l(362862),
     x = l(478996),
-    O = l(923138),
-    v = l(12510),
+    v = l(923138),
+    O = l(12510),
     b = l(673125),
     R = l(821609),
     T = l(661531),
@@ -402,7 +402,7 @@ function ex(e) {
     let { analyticsLocations: t = [] } = e;
     (0, eC.A)({ subscriptionTier: ef.pe.TIER_2, analyticsLocations: t });
 }
-let eO = {
+let ev = {
     "1531422538125676707": (e) => {
         let { analyticsLocations: t } = e;
         ep({ analyticsLocations: t, shopTab: eA.G2.HOME });
@@ -416,7 +416,7 @@ let eO = {
         ex({ analyticsLocations: t });
     },
 };
-var ev = l(49999),
+var eO = l(49999),
     eb = l(600676);
 function eR(e) {
     let {
@@ -471,15 +471,15 @@ function eR(e) {
 function eT(e, t) {
     let { ctaClickHandler: l, dismissibleContent: a, ctaObject: s } = t,
         { analyticsPage: i = d.A.ORB_WALLET, forceVisible: r, onClose: c, onCloseWallet: o } = e,
-        [h, u] = (0, eu.kn)([a], ev.m.ORB_WALLET, !0),
+        [h, u] = (0, eu.kn)([a], eO.m.ORB_WALLET, !0),
         m = n.useCallback(() => {
             ((0, p.Y)({ pageType: i, sectionType: d.A.ORB_WALLET_PRIMARY_CARD, ctaObject: s }),
                 l(),
-                r || u(ev.i.TAKE_ACTION),
-                o());
+                r || u(eO.i.TAKE_ACTION),
+                o("navigation"));
         }, [i, u, r, o, l, s]),
         C = n.useCallback(() => {
-            (r || u(ev.i.DISMISS), c());
+            (r || u(eO.i.DISMISS), c());
         }, [r, u, c]);
     return { onCtaClick: m, shouldHideCard: null == h && !r, onClose: C };
 }
@@ -664,7 +664,7 @@ function ek() {
 }
 function ew(e) {
     let { analyticsPage: t = d.A.ORB_WALLET, analyticsLocations: l = [], onCloseWallet: s = q.tEg } = e,
-        { challengesForOrbWallet: i, hasFetchedChallenges: r, refetch: c } = (0, O.z)({ shouldFetch: !0 }),
+        { challengesForOrbWallet: i, hasFetchedChallenges: r, refetch: c } = (0, v.z)({ shouldFetch: !0 }),
         h = (0, C.L)(ef.PremiumTypes.TIER_2),
         { nitroGatedOrbMultiplier: u, orbChallengesDisplayError: m } = (0, o.cf)([b.Ay], () => ({
             nitroGatedOrbMultiplier: b.Ay.nitroGatedOrbMultiplier,
@@ -688,7 +688,7 @@ function ew(e) {
         E = n.useCallback(
             () => (
                 (0, p.Y)({ pageType: t, sectionType: d.A.ORB_WALLET, ctaObject: d.A.ORB_WALLET_NITRO_BADGE_CLICK }),
-                s(),
+                s("navigation"),
                 (function (e) {
                     let { nitroGatedOrbMultiplier: t, userIsPremiumTier2: l } = e;
                     if (null == t) return void (0, e_.x)();
@@ -704,7 +704,7 @@ function ew(e) {
         g = n.useMemo(
             () =>
                 i.map((e) => {
-                    let a = null != e.achievementDefinitionId ? eO[e.achievementDefinitionId] : null,
+                    let a = null != e.achievementDefinitionId ? ev[e.achievementDefinitionId] : null,
                         n = { analyticsLocations: l },
                         i =
                             null != a
@@ -715,7 +715,7 @@ function ew(e) {
                                           ctaObject: d.A.ORB_CHALLENGE_DISCOVERY_CLICK,
                                       }),
                                           a(n),
-                                          s());
+                                          s("navigation"));
                                   }
                                 : void 0;
                     return { ...e, onDiscoveryClick: i };
@@ -727,7 +727,7 @@ function ew(e) {
         isLoading: !r,
         inlineNoticeProps: _,
         challenges: g,
-        onClaim: v.Xz,
+        onClaim: O.Xz,
         onClickBadge: E,
         badgeText: z.intl.format(h ? G.default.OHLdjq : G.default.WOMrJf, { multiplier: u }),
         badgeAccessibilityLabel: eD(h, u),
@@ -745,19 +745,19 @@ function eG(e) {
         u = (0, L.H)({ location: "StatefulOrbWallet" }),
         { totalRedeemed: E } = (0, x.rQ)({ disableFetch: !u }),
         g = (0, C.L)(ef.PremiumTypes.TIER_2),
-        { analyticsLocations: O } = (0, m.Ay)(d.A.ORB_WALLET);
+        { analyticsLocations: v } = (0, m.Ay)(d.A.ORB_WALLET);
     n.useEffect(() => {
-        u && (0, v.eX)();
+        u && (0, O.eX)();
     }, [u]);
     let R = n.useCallback(() => {
             ((0, p.Y)({ pageType: s, sectionType: d.A.ORB_WALLET_FOOTER, ctaObject: d.A.ORB_WALLET_SHOP_CTA }),
-                ep({ analyticsLocations: O }),
-                i());
-        }, [O, s, i]),
+                ep({ analyticsLocations: v }),
+                i("navigation"));
+        }, [v, s, i]),
         T = n.useCallback(() => {
             ((0, p.Y)({ pageType: s, sectionType: d.A.ORB_WALLET_FOOTER, ctaObject: d.A.ORB_WALLET_QUEST_HOME_CTA }),
                 eL(),
-                i());
+                i("navigation"));
         }, [s, i]),
         N = n.useMemo(() => eM(g, h), [g, h]),
         { challengesForOrbWallet: S, hasFetchedChallenges: y } = (0, o.cf)([b.Ay], () => ({
@@ -770,7 +770,7 @@ function eG(e) {
         let e = S.map((e) => e.achievementIdentifier),
             t = S.filter((e) => e.achievementStatus === f.x.COMPLETED).map((e) => e.achievementIdentifier);
         (A.default.track(q.HAw.ORB_WALLET_VIEWED, {
-            location_stack: O,
+            location_stack: v,
             location_page: s,
             location_section: d.A.ORB_WALLET,
             location_object: d.A.ORB_WALLET,
@@ -779,7 +779,7 @@ function eG(e) {
             wallet_visible_completed_achievements: t,
         }),
             (j.current = !0));
-    }, [y, S, N, O, s]);
+    }, [y, S, N, v, s]);
     let { pathname: I } = (0, c.zy)(),
         U = I.startsWith(q.BVt.COLLECTIBLES_SHOP),
         M = (0, _.p)(),
@@ -798,7 +798,7 @@ function eG(e) {
                   let { onClose: t } = e;
                   return eF({ userHasPremium: g, onClose: t, orbBalance: h, analyticsPage: s, onCloseWallet: i });
               },
-              orbChallengesCard: (0, a.jsx)(ew, { analyticsPage: s, analyticsLocations: O, onCloseWallet: i }),
+              orbChallengesCard: (0, a.jsx)(ew, { analyticsPage: s, analyticsLocations: v, onCloseWallet: i }),
               orbWalletFooter: (0, a.jsx)(ei, { ...F, totalOrbsRedeemed: E }),
           })
         : null;
@@ -811,7 +811,7 @@ function ez(e) {
         ),
         h = n.useCallback(
             (e, t) => {
-                "user:escape" === t && null != c && c();
+                "user:escape" === t && null != c && c("direct_close");
             },
             [c],
         );
