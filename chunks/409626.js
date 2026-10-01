@@ -8,8 +8,8 @@
         getGuildIdAndVerifiedFromInvite: () => S,
         trackGameProfileAction: () => T,
         trackGameProfileClose: () => p,
-        trackGameProfileEmbedAction: () => g,
-        trackGameProfileFeedback: () => m,
+        trackGameProfileEmbedAction: () => m,
+        trackGameProfileFeedback: () => g,
         trackGameProfileOpen: () => f,
     }));
 var i,
@@ -64,6 +64,7 @@ var i,
         (r[(r.XboxGamePassStoreLink = 38)] = "XboxGamePassStoreLink"),
         (r[(r.CopyLink = 39)] = "CopyLink"),
         (r[(r.Overview = 40)] = "Overview"),
+        (r[(r.Communities = 41)] = "Communities"),
         r),
     A =
         (((a = {}).ActivityCard = "activity_card"),
@@ -165,7 +166,7 @@ function T(e) {
         source: u,
     });
 }
-function m(e) {
+function g(e) {
     let {
         viewId: t,
         applicationId: n,
@@ -183,7 +184,7 @@ function m(e) {
         submitted: s,
     });
 }
-function g(e) {
+function m(e) {
     let { gameName: t, gameId: n, action: i } = e;
     d.default.track(c.HAw.GAME_PROFILE_EMBED_ACTION, { game_name: t, application_id: n, action: i });
 }

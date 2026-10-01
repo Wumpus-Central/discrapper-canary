@@ -776,10 +776,10 @@ function Q(e) {
                         n.e("238672"),
                         n.e("243710"),
                         n.e("631951"),
-                        n.e("31343"),
+                        n.e("787195"),
                         n.e("86454"),
                         n.e("937028"),
-                    ]).then(n.bind(n, 425842));
+                    ]).then(n.bind(n, 137142));
                     return (t) =>
                         (0, r.jsx)(e, {
                             gameId: i.gameId,
