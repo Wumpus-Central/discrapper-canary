@@ -201,6 +201,17 @@ class w extends l.A {
             i = Math.round(3e4);
         return { startMs: n - i, endMs: n + i, trimStartMs: t, trimEndMs: e };
     }
+    calculateWindowedAutoclipRequest(e) {
+        let t = e.endMs - e.startMs <= 3e4 ? (e.startMs + e.endMs + 3e4) / 2 : e.endMs,
+            n = Math.max(Math.min(t + 15e3, e.startMs + 6e4), t, (0, m.l)()),
+            i = n - 6e4;
+        return {
+            startMs: Math.round(i),
+            endMs: Math.round(n),
+            trimStartMs: Math.round(Math.max(t - 3e4, i)),
+            trimEndMs: Math.round(t),
+        };
+    }
     adjustTrimForRms(e) {
         let { startMs: t, endMs: n } = e,
             { trimStartMs: i, trimEndMs: a } = e,
@@ -246,27 +257,32 @@ class w extends l.A {
             case P.Gy.SHOUTING:
             case P.Gy.LAUGHTER:
             case P.Gy.GAME_EVENT: {
-                let n = 0;
+                let n,
+                    i = null;
                 if (e.type === P.Gy.GAME_EVENT) {
                     if ((this.decisionSignals.gameEventData.push({ ...e, timestamp_ms: t }), 1 !== e.importance)) break;
-                    n = Math.max((0, m.l)(), t + 1e4);
-                } else n = (0, m.l)() + 1e4;
+                    n =
+                        null != (i = e.clipWindow ?? null)
+                            ? this.calculateWindowedAutoclipRequest(i)
+                            : this.calculateAutoclipRequest(Math.max((0, m.l)(), t + 1e4));
+                } else n = this.calculateAutoclipRequest((0, m.l)() + 1e4);
                 if (
                     this.scheduledClips.some(
                         (e) =>
                             (e.signal.type === P.Gy.GAME_EVENT ||
                                 e.signal.type === P.Gy.LAUGHTER ||
                                 e.signal.type === P.Gy.SHOUTING) &&
-                            t >= e.request.trimStartMs &&
-                            t <= e.request.trimEndMs,
+                            (null != i
+                                ? i.startMs >= e.request.trimStartMs && i.endMs <= e.request.trimEndMs
+                                : t >= e.request.trimStartMs && t <= e.request.trimEndMs),
                     )
                 ) {
                     P.nx.info(
-                        `decider: suppressing ${e.type} clip \u{2014} timestamp ${t} falls within an existing scheduled candidate's trimmed range`,
+                        `decider: suppressing ${e.type} clip \u{2014} already covered by an existing scheduled candidate's trimmed range`,
                     );
                     break;
                 }
-                this.scheduleClip(e, this.calculateAutoclipRequest(n), !0, !0);
+                this.scheduleClip(e, n, !0, !0);
             }
         }
     }

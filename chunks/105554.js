@@ -60,7 +60,7 @@ class N extends i.A {
                     name: "league-of-legends",
                     applicationId: T.m,
                     isEnabled: () => S(T.m) && h.A.getConfig({ location: m }).enableLeagueEvents,
-                    importHandler: () => n.e("618549").then(n.bind(n, 877588)),
+                    importHandler: () => n.e("747868").then(n.bind(n, 75159)),
                 },
                 {
                     type: "application",
