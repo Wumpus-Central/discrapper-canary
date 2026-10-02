@@ -1177,16 +1177,15 @@ class nz extends y.Ay.Store {
                 let n = nn();
                 (e.setAttenuation(n.attenuation, n.attenuateWhileSpeakingSelf, n.attenuateWhileSpeakingOthers),
                     e.setQoS(n.qos),
-                    (0, p.isWindows)()
-                        ? (e.setExperimentFlag(eJ.fd.H265_HARDWARE_ONLY, !0),
-                          (null != t$
+                    (0, p.isWindows)() || (0, p.isLinux)()
+                        ? (null != t$
                               ? t$
                               : "u" > typeof window
                                 ? (t$ = ne().then((e) => ((tK = e), e)))
                                 : Promise.resolve(!1)
                           ).then((t) => {
                               e.setExperimentFlag(eJ.fd.H265_HARDWARE_DECODE_AVAILABLE, t);
-                          }))
+                          })
                         : (0, p.isMac)() && e.setExperimentFlag(eJ.fd.H265_HARDWARE_DECODE_AVAILABLE, !0),
                     (0, p.isLinux)() && n.openH264Enabled && e.setExperimentFlag(eJ.fd.USE_LIBOPENH264_DECODER, !0),
                     (function (e) {
@@ -1224,7 +1223,8 @@ class nz extends y.Ay.Store {
                 } else
                     ((0, p.isIOS)() || (0, p.isAndroid)()) &&
                         (e.setExperimentFlag(eJ.fd.SIGNAL_AV1_DECODE, !0),
-                        e.setExperimentFlag(eJ.fd.SIGNAL_AV1_HARDWARE_DECODE, !0));
+                        e.setExperimentFlag(eJ.fd.SIGNAL_AV1_HARDWARE_DECODE, !0),
+                        e.setExperimentFlag(eJ.fd.H265_HARDWARE_DECODE_AVAILABLE, !0));
                 if ((0, p.isWeb)()) {
                     let { enabled: t } = J.getConfig({ location: "MediaEngineStore" });
                     e.setExperimentFlag(eJ.fd.BROWSER_HEVC, t);

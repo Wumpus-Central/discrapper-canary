@@ -248,7 +248,6 @@ var ed =
         (f.BROWSER_HEVC = "browser_hevc"),
         (f.LOW_LATENCY_RATE_CONTROL = "low_latency_rate_control"),
         (f.H265_DISABLE_ENCODE = "h265_disable_encode"),
-        (f.H265_HARDWARE_ONLY = "h265_hardware_only"),
         (f.H265_HARDWARE_DECODE_AVAILABLE = "h265_hardware_decode_available"),
         (f.WMF_GPU_ENCODE = "wmf_gpu_encode"),
         (f.USE_LIBOPENH264_DECODER = "use_libopenh264_decoder"),

@@ -55,7 +55,7 @@ function y(e) {
         t.push({
             name: "H265",
             encode: !e.has(O.fd.H265_DISABLE_ENCODE),
-            decode: !e?.has(O.fd.H265_HARDWARE_ONLY) || e?.has(O.fd.H265_HARDWARE_DECODE_AVAILABLE),
+            decode: e.has(O.fd.H265_HARDWARE_DECODE_AVAILABLE),
         }),
         t
     );
@@ -1413,8 +1413,7 @@ class W extends N.A {
                 this.experimentFlags.has(O.fd.SOFTWARE_FALLBACK_ON_CONSECUTIVE_ERRORS) &&
                     (n.params["fallback-on-consecutive-errors"] = "1"),
                 this.experimentFlags.has(O.fd.SIGNAL_AV1_HARDWARE_DECODE) && (n.params["hardware-av1-decode"] = "1"),
-                "H265" === n.name &&
-                    (n.params["software-h265"] = this.experimentFlags.has(O.fd.H265_HARDWARE_ONLY) ? "0" : "1"),
+                "H265" === n.name && (n.params["software-h265"] = "0"),
                 (n.params["hardware-h264"] = this.useElectronVideo ? "1" : "0"),
                 this.experimentFlags.has(O.fd.USE_LIBOPENH264_DECODER))
             ) {
