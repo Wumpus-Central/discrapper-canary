@@ -12,8 +12,8 @@ var n = a(477900),
     p = a(646270),
     h = a(31300),
     f = a(376357),
-    g = a(857250),
-    y = a(97483),
+    y = a(857250),
+    g = a(97483),
     b = a(834730),
     w = a(323384),
     k = a(939249),
@@ -66,8 +66,8 @@ var n = a(477900),
     ep = a(725592),
     eh = a(459514),
     ef = a(455435),
-    eg = a(808728),
-    ey = a(683180),
+    ey = a(808728),
+    eg = a(683180),
     eb = a(74029),
     ew = a(559676),
     ek = a(58551),
@@ -148,7 +148,7 @@ function eP() {
         ],
     });
 }
-var eE = a(788878);
+var eE = a(340479);
 function eT(e) {
     let { className: t, ariaLabel: a, disabled: s, onClick: i, children: o } = e;
     return (0, n.jsx)(k.D, { "aria-disabled": s, "aria-label": a, className: t, onClick: s ? void 0 : i, children: o });
@@ -275,11 +275,11 @@ function e6(e) {
 }
 var e1 = a(950305),
     e9 = a(664121);
-let e8 = [
+let e3 = [
     { value: "user", icon: e1.UserIcon, nameMessage: J.default.iqXIRN },
     { value: "guild", icon: e9.R, nameMessage: J.default.LdgKdI },
 ];
-function e3(e) {
+function e8(e) {
     let { importing: t, onImport: a } = e,
         i = s.useRef(null),
         o = e6(s.useCallback((e) => a(e, "user"), [a])),
@@ -302,7 +302,7 @@ function e3(e) {
                         onSelect: t,
                         children: (0, n.jsx)(eZ.rX, {
                             label: ee.intl.string(J.default.MLg0S8),
-                            children: e8
+                            children: e3
                                 .map((e) => ({
                                     id: `install-scope-${e.value}`,
                                     scope: e.value,
@@ -379,13 +379,13 @@ var ta = a(782603),
     tp = a(123917),
     th = a(557875);
 let tf = new Set();
-var tg = a(313007),
-    ty = a(976814),
+var ty = a(313007),
+    tg = a(976814),
     tb = a(746080),
     tw = a(793712);
 let tk = [];
 function tv(e) {
-    (0, f.P)((0, g.o)(e, y.Ck.FAILURE));
+    (0, f.P)((0, y.o)(e, g.Ck.FAILURE));
 }
 function tj(e) {
     let {
@@ -408,7 +408,7 @@ function tj(e) {
             previewProjectId: C,
             onCloseMenu: A,
         } = e,
-        S = (0, tg.$s)(t),
+        S = (0, ty.$s)(t),
         { pending: N, refresh: P } = (0, tu.A)(x ?? null),
         { pending: E, connect: T } = (function (e, t) {
             let [a, n] = s.useState(tf),
@@ -540,7 +540,7 @@ function tj(e) {
                     label: ee.intl.string(S ? J.default.ZTkrp3 : J.default.fwSfWU),
                     icon: F,
                     leadingAccessory: { type: "icon", icon: F },
-                    action: () => (0, tg.qQ)(t, !S),
+                    action: () => (0, ty.qQ)(t, !S),
                 }),
             }),
             G
@@ -594,7 +594,7 @@ function tj(e) {
                                     leadingAccessory: { type: "icon", icon: to.LinkIcon },
                                     action: () =>
                                         (0, tc.C)((0, tm.n)(i, tb.VV.VIBEGRATIONS, t), () =>
-                                            (0, f.P)((0, g.o)(ee.intl.string(ee.t["L/PwZf"]), y.Ck.SUCCESS)),
+                                            (0, f.P)((0, y.o)(ee.intl.string(ee.t["L/PwZf"]), g.Ck.SUCCESS)),
                                         ),
                                 })
                               : null,
@@ -605,7 +605,7 @@ function tj(e) {
                               leadingAccessory: { type: "icon", icon: tl.L },
                               action: () =>
                                   (0, tc.C)(t, () =>
-                                      (0, f.P)((0, g.o)(ee.intl.string(J.default.WOKsTg), y.Ck.SUCCESS)),
+                                      (0, f.P)((0, y.o)(ee.intl.string(J.default.WOKsTg), g.Ck.SUCCESS)),
                                   ),
                           }),
                       ],
@@ -619,7 +619,7 @@ function tj(e) {
                               label: ee.intl.string(J.default["xhcY+n"]),
                               icon: I.SettingsIcon,
                               leadingAccessory: { type: "icon", icon: I.SettingsIcon },
-                              action: () => (0, ty.A)(t, { guildId: o ?? i, initialTab: "project", isPreview: !0 }),
+                              action: () => (0, tg.A)(t, { guildId: o ?? i, initialTab: "project", isPreview: !0 }),
                           }),
                           (0, n.jsx)(eZ.Dr, {
                               id: "delete",
@@ -633,7 +633,7 @@ function tj(e) {
                                       variant: "critical",
                                       onConfirm: () => {
                                           (0, ea.K)(t, () =>
-                                              (0, f.P)((0, g.o)(ee.intl.string(J.default.tqKZCi), y.Ck.FAILURE)),
+                                              (0, f.P)((0, y.o)(ee.intl.string(J.default.tqKZCi), g.Ck.FAILURE)),
                                           );
                                       },
                                   });
@@ -757,12 +757,12 @@ function tF() {
                 isStaff: e,
                 guildId: t,
                 channelId: a,
-            } = (0, u.cf)([eu.default, W.A, eg.Ay, tD.A], () => {
+            } = (0, u.cf)([eu.default, W.A, ey.Ay, tD.A], () => {
                 let e = eu.default.getCurrentUser()?.isStaff() ?? !1;
                 if (!e) return { isStaff: e, guildId: null, channelId: null };
                 for (let t of W.A.getGuildsArray()) {
                     if (!t.features.has(tG.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)) continue;
-                    let a = eg.Ay.getSelectableChannels(t.id).find((e) => {
+                    let a = ey.Ay.getSelectableChannels(t.id).find((e) => {
                         let { channel: t } = e;
                         return (0, z.m1)(t, eu.default, tD.A) === tz;
                     });
@@ -844,10 +844,10 @@ function t6(e, t) {
 }
 var t1 = a(506774);
 let t9 = "VibegrationsProjectsPanelOpen";
-function t8() {
+function t3() {
     return t1.w.get(t9) ?? null;
 }
-function t3(e) {
+function t8(e) {
     return `VibegrationsProjectsPanel:${e}`;
 }
 var t7 = a(165610),
@@ -866,7 +866,7 @@ let aa = {
         (0, eI.openModal)((t) => (0, n.jsx)(tq, { ...t, reason: e }));
     },
     openPublishNotes: tK.A,
-    showError: (e) => (0, f.P)((0, g.o)(e, y.Ck.FAILURE)),
+    showError: (e) => (0, f.P)((0, y.o)(e, g.Ck.FAILURE)),
     openProfile: (e) => {
         (0, Y.openUserProfileModal)({ userId: e });
     },
@@ -900,19 +900,19 @@ function an(e) {
             (c = s.useCallback(() => {
                 l.current ||
                     ((l.current = !0),
-                    (0, f.P)((0, g.o)(ee.intl.formatToPlainString(J.default.u9TapG, { name: i }), y.Ck.MESSAGE)),
+                    (0, f.P)((0, y.o)(ee.intl.formatToPlainString(J.default.u9TapG, { name: i }), g.Ck.MESSAGE)),
                     e2(a, i)
                         .catch((e) => {
                             let t;
                             (console.error("[vibegrations] project export failed", a, e),
                                 (0, f.P)(
-                                    (0, g.o)(
+                                    (0, y.o)(
                                         409 === (t = e instanceof Q._v ? e.status : null)
                                             ? ee.intl.string(J.default.uB40Hz)
                                             : 404 === t
                                               ? ee.intl.string(J.default.wCq2jC)
                                               : ee.intl.string(J.default.G2GqyP),
-                                        y.Ck.FAILURE,
+                                        g.Ck.FAILURE,
                                     ),
                                 ));
                         })
@@ -927,7 +927,7 @@ function an(e) {
                         (e) => {
                             let t = e0(e);
                             null != t
-                                ? (0, f.P)((0, g.o)(t, y.Ck.FAILURE))
+                                ? (0, f.P)((0, y.o)(t, g.Ck.FAILURE))
                                 : (0, m.A)({
                                       title: ee.intl.formatToPlainString(J.default.XYZqZK, { name: i }),
                                       subtitle: ee.intl.string(J.default["6syXoH"]),
@@ -938,7 +938,7 @@ function an(e) {
                                           try {
                                               await eJ(a, e, ee.intl.string(J.default.C7GU2r));
                                           } catch {
-                                              (0, f.P)((0, g.o)(ee.intl.string(J.default["02GpNr"]), y.Ck.FAILURE));
+                                              (0, f.P)((0, y.o)(ee.intl.string(J.default["02GpNr"]), g.Ck.FAILURE));
                                           }
                                       },
                                   });
@@ -1220,7 +1220,7 @@ function as(e) {
                                 a() &&
                                     (E({ entry: e, status: "failed" }),
                                     console.error("[vibegrations] version restore failed", t, n),
-                                    (0, f.P)((0, g.o)(ee.intl.string(J.default.q6iZ84), y.Ck.FAILURE)));
+                                    (0, f.P)((0, y.o)(ee.intl.string(J.default.q6iZ84), g.Ck.FAILURE)));
                             },
                         )
                         .finally(() => {
@@ -1251,7 +1251,7 @@ function as(e) {
                     let t = i.id,
                         a = e0(e);
                     null != a
-                        ? (0, f.P)((0, g.o)(a, y.Ck.FAILURE))
+                        ? (0, f.P)((0, y.o)(a, g.Ck.FAILURE))
                         : (0, m.A)({
                               title: ee.intl.formatToPlainString(J.default.XYZqZK, { name: i.name }),
                               subtitle: ee.intl.string(J.default["6syXoH"]),
@@ -1262,7 +1262,7 @@ function as(e) {
                                   try {
                                       await eJ(t, e, ee.intl.string(J.default.C7GU2r));
                                   } catch {
-                                      (0, f.P)((0, g.o)(ee.intl.string(J.default["02GpNr"]), y.Ck.FAILURE));
+                                      (0, f.P)((0, y.o)(ee.intl.string(J.default["02GpNr"]), g.Ck.FAILURE));
                                   }
                               },
                           });
@@ -1295,7 +1295,7 @@ function as(e) {
         [eH],
     );
     let eU = (0, ei.H)(i ?? null, Y ?? null, r),
-        eY = ((t = i?.application_id ?? null), (0, u.bG)([eg.Ay], () => (null == t ? null : (0, ey.SH)(r, t)), [r, t])),
+        eY = ((t = i?.application_id ?? null), (0, u.bG)([ey.Ay], () => (null == t ? null : (0, eg.SH)(r, t)), [r, t])),
         eq = s.useMemo(() => (null == eY ? null : () => (0, U.pX)(tG.BVt.CHANNEL(r, eY))), [r, eY]),
         eK = s.useCallback(async () => {
             null != i && (await (0, ei.w)(i, eU));
@@ -1326,14 +1326,14 @@ function as(e) {
         e2 = (0, ef.Ay)(R, eQ),
         e1 = e2?.intent === "open" && "channel" === e2.destination ? e2.appChannelId : null,
         e9 = (0, u.bG)([K.A], () => (null == e1 ? null : K.A.getChannel(e1)), [e1]),
-        e8 = (0, z.Ay)(e9),
-        e3 = (0, B.gU)(e9),
+        e3 = (0, z.Ay)(e9),
+        e8 = (0, B.gU)(e9),
         e7 =
-            null != e8 && null != e3
+            null != e3 && null != e8
                 ? ee.intl.format(J.default.W95rrI, {
-                      channel: e8,
+                      channel: e3,
                       channelIconHook: (e, t) =>
-                          (0, n.jsx)(e3, { size: "xs", color: "currentColor", className: t4.Y2 }, t),
+                          (0, n.jsx)(e8, { size: "xs", color: "currentColor", className: t4.Y2 }, t),
                   })
                 : e2?.label,
         e4 = e2?.upToDate === !0 ? ee.intl.string(J.default["5U1fkv"]) : (e2?.disabledReason ?? null),
@@ -1396,7 +1396,7 @@ function as(e) {
                                   icon: I.SettingsIcon,
                                   tooltip: ee.intl.string(J.default.cWmjzs),
                                   "aria-label": ee.intl.string(J.default.cWmjzs),
-                                  onClick: () => (0, ty.A)(i.id, { guildId: r, isPreview: !0 }),
+                                  onClick: () => (0, tg.A)(i.id, { guildId: r, isPreview: !0 }),
                               }),
                               (0, n.jsx)(tx, {
                                   projectId: i.id,
@@ -1649,9 +1649,9 @@ function ai(e) {
         ),
         ei = s.useCallback(
             (e) => {
-                "user" === e.install_scope || (0, ey.X0)(e, l)
+                "user" === e.install_scope || (0, eg.X0)(e, l)
                     ? A(e.id)
-                    : (0, f.P)((0, g.o)(ee.intl.string(J.default["wY7I+H"]), y.Ck.MESSAGE));
+                    : (0, f.P)((0, y.o)(ee.intl.string(J.default["wY7I+H"]), g.Ck.MESSAGE));
             },
             [l, A],
         ),
@@ -1729,16 +1729,16 @@ function ai(e) {
             },
             [m, S],
         ),
-        eg = t2(q) ?? l,
-        eb = (0, u.bG)([er.Ay], () => er.Ay.getGuildProjectsFetchState(eg), [eg]),
+        ey = t2(q) ?? l,
+        eb = (0, u.bG)([er.Ay], () => er.Ay.getGuildProjectsFetchState(ey), [ey]),
         ew = (0, u.bG)([er.Ay], () => er.Ay.getGuildProjectsFetchState(l), [l]),
-        [ek, ev] = s.useState(t8),
-        ej = s.useMemo(() => t1.w.get(t3(l)) ?? !1, [l]),
+        [ek, ev] = s.useState(t3),
+        ej = s.useMemo(() => t1.w.get(t8(l)) ?? !1, [l]),
         ex = "success" === ew,
         eC = (0, u.yK)([er.Ay], () => er.Ay.getSharedProjects(l), [l]).length > 0 || t.some((e) => t6(e, l)),
         eA = ek ?? (!!eC || "error" === ew || (!ex && ej));
     s.useEffect(() => {
-        ex && t1.w.set(t3(l), eC);
+        ex && t1.w.set(t8(l), eC);
     }, [ex, eC, l]);
     let eS = s.useCallback((e) => {
             (t1.w.set(t9, e), ev(e));
@@ -1978,7 +1978,7 @@ function ai(e) {
                                 (0, n.jsxs)("div", {
                                     className: t4.Ss,
                                     children: [
-                                        (0, n.jsx)(e3, { importing: V, onImport: L }),
+                                        (0, n.jsx)(e8, { importing: V, onImport: L }),
                                         (0, n.jsx)(H.A.Icon, { icon: R.P, tooltip: eM, "aria-label": eM, onClick: eE }),
                                     ],
                                 }),
@@ -2020,7 +2020,7 @@ function ai(e) {
                                                     variant: "secondary",
                                                     size: "sm",
                                                     text: ee.intl.string(J.default["42EdIV"]),
-                                                    onClick: () => (0, ea.hF)(eg),
+                                                    onClick: () => (0, ea.hF)(ey),
                                                 }),
                                             ],
                                         })
@@ -2222,7 +2222,7 @@ function ao(e) {
         F = s.useCallback(
             async (e, t) => {
                 let n = e0(e);
-                if (null != n) return void (0, f.P)((0, g.o)(n, y.Ck.FAILURE));
+                if (null != n) return void (0, f.P)((0, y.o)(n, g.Ck.FAILURE));
                 B(!0);
                 let s = null;
                 try {
@@ -2234,7 +2234,7 @@ function ao(e) {
                         E(null));
                 } catch {
                     (null != s && (await (0, ea.xx)(s).catch(() => void 0)),
-                        (0, f.P)((0, g.o)(ee.intl.string(J.default["02GpNr"]), y.Ck.FAILURE)));
+                        (0, f.P)((0, y.o)(ee.intl.string(J.default["02GpNr"]), g.Ck.FAILURE)));
                 } finally {
                     B(!1);
                 }

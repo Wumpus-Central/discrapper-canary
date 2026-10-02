@@ -1124,4 +1124,36 @@ header.headerCollapsed_a99111 {
     margin-top: var(--space-4)
 }
 
-/*# sourceMappingURL=7f3e8af6aa126592.css.map*/
+.secretCardStatus__220b3 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4)
+}
+
+.secretCardStatusIcon__220b3 {
+    display: flex
+}
+
+@keyframes vibegrations-secret-card-enter__220b3 {
+    0% {
+        opacity: 0;
+        transform: translateY(-4px)
+    }
+}
+
+@keyframes vibegrations-secret-card-check-enter__220b3 {
+    0% {
+        opacity: 0;
+        transform: scale(.5)
+    }
+}
+
+.full-motion .secretCardEnter__220b3 {
+    animation: vibegrations-secret-card-enter__220b3 var(--motion-spring-subtle-duration) var(--motion-spring-subtle) both
+}
+
+.full-motion .secretCardEnter__220b3 .secretCardStatusIcon__220b3 {
+    animation: vibegrations-secret-card-check-enter__220b3 var(--motion-spring-subtle-duration) var(--motion-spring-subtle) both
+}
+
+/*# sourceMappingURL=04d8ac33534b6d2b.css.map*/

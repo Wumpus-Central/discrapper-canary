@@ -35,6 +35,13 @@ let n = [
             "Collaborators on an app shared with their server can now remix it into a copy of their own, with no need for the owner to turn sharing on first.",
     },
     {
+        date: "2026-10-02",
+        time: "01:08",
+        platforms: ["desktop", "mobile"],
+        summary:
+            'Key cards say "Keys received" once your keys are saved, and an older card folds away when Conjure asks for them again.',
+    },
+    {
         date: "2026-09-15",
         time: "00:00",
         platforms: ["mobile"],
