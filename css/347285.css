@@ -1,7 +1,7 @@
 .header_d9667a {
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
-    background-color: transparent;
+    background-color: color-mix(in oklab, transparent 50%, var(--background-base-lower));
     border-bottom: 1px solid var(--border-normal);
     position: relative;
     z-index: 2
@@ -185,4 +185,4 @@
     width: var(--size-20)
 }
 
-/*# sourceMappingURL=347285.e09f3c7034db1bf4.css.map*/
+/*# sourceMappingURL=347285.438373fd05b35912.css.map*/
