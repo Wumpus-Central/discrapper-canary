@@ -1,4 +1,4 @@
-e.d(l, { A: () => T, f: () => x });
+e.d(l, { A: () => N, f: () => T });
 var n = e(477900);
 e(582128);
 var a = e(451394),
@@ -8,29 +8,30 @@ var a = e(451394),
     s = e(748562),
     u = e(765379),
     p = e(82149),
-    d = e(566903),
-    c = e(864436),
-    A = e(200041),
-    m = e(652215);
-function x(t) {
+    d = e(879418),
+    c = e(566903),
+    A = e(864436),
+    m = e(200041),
+    x = e(652215);
+function T(t) {
     let l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (0, p.Cy)(t)
         ? a.q
-        : (0, u.A)(t)
+        : (0, u.A)(t) || (0, d.HL)(t)
           ? l
               ? i.GameControllerIcon
               : o.k
-          : t.type === m.$pd.PLAYING
+          : t.type === x.$pd.PLAYING
             ? i.GameControllerIcon
-            : t.type === m.$pd.LISTENING
+            : t.type === x.$pd.LISTENING
               ? r.T
-              : t.type === m.$pd.WATCHING || t.type === m.$pd.STREAMING
+              : t.type === x.$pd.WATCHING || t.type === x.$pd.STREAMING
                 ? s.U
-                : t.type === m.$pd.COMPETING
+                : t.type === x.$pd.COMPETING
                   ? i.GameControllerIcon
                   : null;
 }
-function T(t) {
+function N(t) {
     let {
             activity: l,
             textVariant: e,
@@ -41,17 +42,17 @@ function T(t) {
             hideTooltip: s = !1,
             canTruncate: u = !0,
         } = t,
-        { text: p, tooltip: m } = (0, d.A)(l, !0),
-        T = x(l),
-        N = null != T && !o;
-    return (0, n.jsx)(A.A, {
-        icon: N ? (0, n.jsx)(c.A, { icon: T, className: i }) : void 0,
+        { text: p, tooltip: d } = (0, c.A)(l, !0),
+        x = T(l),
+        N = null != x && !o;
+    return (0, n.jsx)(m.A, {
+        icon: N ? (0, n.jsx)(A.A, { icon: x, className: i }) : void 0,
         text: p ?? "",
         textVariant: e,
         textClassName: a,
         hideTooltip: s,
         canTruncate: u,
-        "aria-label": m ?? "",
+        "aria-label": d ?? "",
         hideText: r,
     });
 }
