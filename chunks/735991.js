@@ -38,8 +38,8 @@ var i = n(487899),
     f = n(395671),
     p = n(486020),
     T = n(723702),
-    m = n(989837),
-    g = n(500049),
+    g = n(989837),
+    m = n(500049),
     S = n(652215),
     N = n(73510),
     C = n(381941),
@@ -108,7 +108,7 @@ function G(e) {
                     maxSizeCallback: l,
                     commandOrigin: d,
                     sectionName: o,
-                    source: m.A.entrypoint(),
+                    source: g.A.entrypoint(),
                 });
                 if (t.inputType === c.y$.BUILT_IN_TEXT && null != e && null != i.channel) {
                     let t = I.Ay.parse(u, e.content);
@@ -148,7 +148,7 @@ function F(e) {
     return null != t && t.displays_advertisements;
 }
 function B(e) {
-    return e === g.s4.TEXT;
+    return e === m.s4.TEXT;
 }
 function V(e) {
     return null == e ? "" : (e.charAt(0).toLocaleUpperCase() + e.slice(1)).replaceAll("_", " ");

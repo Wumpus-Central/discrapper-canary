@@ -23,14 +23,14 @@ function p(e, t) {
 function T(e, t, n) {
     return ((E.get(e)?.get(t)?.flags ?? _.ME.NONE) & n) === n;
 }
-function m(e, t) {
+function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         i = E.get(e);
     if (null == i) return !1;
     for (let [e, { flags: r }] of i) if ((!n || e !== A) && (r & t) === t) return !0;
     return !1;
 }
-function g(e) {
+function m(e) {
     let { user: t, sessionId: n } = e;
     ((A = t.id), (h = n), (I = null));
 }
@@ -63,7 +63,7 @@ class S extends i.Ay.Store {
     }
     isAnyoneElseSpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;
-        return m(e, _.ME.VOICE, !0);
+        return g(e, _.ME.VOICE, !0);
     }
     isCurrentUserSpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;
@@ -74,7 +74,7 @@ class S extends i.Ay.Store {
     }
     isAnyonePrioritySpeaking() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;
-        return m(e, _.ME.VOICE | _.ME.PRIORITY);
+        return g(e, _.ME.VOICE | _.ME.PRIORITY);
     }
     isCurrentUserPrioritySpeaker() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _.x.DEFAULT;
@@ -91,8 +91,8 @@ class S extends i.Ay.Store {
     }
 }
 let N = new S(r.h, {
-    CONNECTION_OPEN: g,
-    OVERLAY_INITIALIZE: g,
+    CONNECTION_OPEN: m,
+    OVERLAY_INITIALIZE: m,
     SPEAKING: function (e) {
         let { context: t, userId: n, speakingFlags: i, voiceDb: r } = e;
         if ((i & _.ME.PRIORITY) === _.ME.PRIORITY) {

@@ -34,8 +34,8 @@ var i = n(284009),
     f = n(474090),
     p = n(935208),
     T = n(551640),
-    m = n(652215),
-    g = n(202541),
+    g = n(652215),
+    m = n(202541),
     S = n(853297),
     N = n(375708);
 let C = new d.A("Scheduled Messages");
@@ -55,26 +55,26 @@ let R = (0, c.mj)({
 function L(e) {
     let { content: t, flags: n } = e,
         [i, r] = (0, _.Ay)(t);
-    return i ? [r, (0, l.UI)(n ?? 0, m.pr7.SUPPRESS_NOTIFICATIONS)] : [t, n ?? 0];
+    return i ? [r, (0, l.UI)(n ?? 0, g.pr7.SUPPRESS_NOTIFICATIONS)] : [t, n ?? 0];
 }
 function y(e) {
     let { content: t, flags: n } = e;
-    return (0, l.Lt)(n ?? 0, m.pr7.SUPPRESS_NOTIFICATIONS) ? `${_.f5} ${t}` : t;
+    return (0, l.Lt)(n ?? 0, g.pr7.SUPPRESS_NOTIFICATIONS) ? `${_.f5} ${t}` : t;
 }
 function D(e) {
     let { entryPoint: t, isEditing: n, channelId: i } = e;
-    h.default.track(m.HAw.SCHEDULED_MESSAGE_TIME_PICKER_OPENED, { entry_point: t, is_editing: n, channel_id: i });
+    h.default.track(g.HAw.SCHEDULED_MESSAGE_TIME_PICKER_OPENED, { entry_point: t, is_editing: n, channel_id: i });
 }
 function v() {
     return R.useConfig({ location: "useCanUseScheduledMessages" }).enabled;
 }
 function b(e) {
     let t = v(),
-        n = (0, o.bG)([E.A], () => null != e && (!!e.isPrivate() || E.A.can(m.xBc.SEND_MESSAGES, e)));
+        n = (0, o.bG)([E.A], () => null != e && (!!e.isPrivate() || E.A.can(g.xBc.SEND_MESSAGES, e)));
     return t && n;
 }
 function M(e, t) {
-    return !!R.getConfig({ location: t }).enabled && (!!e.isPrivate() || E.A.can(m.xBc.SEND_MESSAGES, e));
+    return !!R.getConfig({ location: t }).enabled && (!!e.isPrivate() || E.A.can(g.xBc.SEND_MESSAGES, e));
 }
 function P() {
     let e = G(),
@@ -107,13 +107,13 @@ function x(e) {
     return s().min(t, n.add(S.a, "seconds"));
 }
 function k(e) {
-    let t = (0, f.ki)(A.default.getCurrentUser(), g.PremiumTypes.TIER_2);
+    let t = (0, f.ki)(A.default.getCurrentUser(), m.PremiumTypes.TIER_2);
     return B(R.getConfig({ location: e }), t);
 }
 function F(e) {
     return B(
         R.useConfig({ location: e }),
-        (0, o.bG)([A.default], () => (0, f.ki)(A.default.getCurrentUser(), g.PremiumTypes.TIER_2)),
+        (0, o.bG)([A.default], () => (0, f.ki)(A.default.getCurrentUser(), m.PremiumTypes.TIER_2)),
     );
 }
 function B(e, t) {

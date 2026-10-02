@@ -6,10 +6,10 @@ n.d(t, {
     KM: () => f,
     L7: () => O,
     Mq: () => C,
-    R7: () => m,
+    R7: () => g,
     RP: () => p,
     bk: () => T,
-    d6: () => g,
+    d6: () => m,
     dS: () => R,
     jM: () => y,
     pt: () => S,
@@ -52,7 +52,7 @@ var p =
         (r.NOTE = "NOTE"),
         (r.RECENT_ACTIVITY = "RECENT_ACTIVITY"),
         r),
-    m =
+    g =
         (((a = {}).POPOUT = "POPOUT"),
         (a.MODAL = "MODAL"),
         (a.MODAL_V2 = "MODAL_V2"),
@@ -62,7 +62,7 @@ var p =
         (a.YOU_SCREEN = "YOU_SCREEN"),
         (a.EMBED = "EMBED"),
         a),
-    g =
+    m =
         (((s = {})[(s.NICKNAME = 0)] = "NICKNAME"),
         (s[(s.PRONOUNS = 1)] = "PRONOUNS"),
         (s[(s.AVATAR = 2)] = "AVATAR"),

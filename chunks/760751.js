@@ -16,8 +16,8 @@ var r = n(17928),
     f = n(652215),
     p = n(705751);
 let T = "GameStoreReportedGames",
-    m = E.A.Millis.DAY,
-    g = new o.A(),
+    g = E.A.Millis.DAY,
+    m = new o.A(),
     S = new Map(),
     N = new Map(),
     C = a.w.get(T) ?? Object.create(null),
@@ -51,7 +51,7 @@ function H(e, t) {
 }
 function j(e) {
     let t = e instanceof d.xg ? B(e) : e;
-    for (let n of (g.set(e.id, t), H(t.id, t.name.toLowerCase()), e.aliases)) H(t.id, n.toLowerCase());
+    for (let n of (m.set(e.id, t), H(t.id, t.name.toLowerCase()), e.aliases)) H(t.id, n.toLowerCase());
     if ((0, h.isDesktop)()) for (let n of e.executables) N.set(n.name, t.id);
 }
 class W extends r.Ay.PersistedStore {
@@ -86,7 +86,7 @@ class W extends r.Ay.PersistedStore {
         return (0, h.isDesktop)()
             ? {
                   detectableGamesEtag: O,
-                  detectableGames: g.values(),
+                  detectableGames: m.values(),
                   blocklistEtag: v,
                   blocklistExecutables: b,
                   blocklistPatterns: M.map((e) => e.source),
@@ -100,10 +100,10 @@ class W extends r.Ay.PersistedStore {
               };
     }
     get games() {
-        return g.values();
+        return m.values();
     }
     getDetectableGame(e) {
-        return g.get(I.default.cast(e));
+        return m.get(I.default.cast(e));
     }
     searchGamesByName(e) {
         if (null == e) return [];
@@ -189,13 +189,13 @@ class W extends r.Ay.PersistedStore {
         return L;
     }
     get detectableGamesTtl() {
-        return m;
+        return g;
     }
     canFetchDetectableGames() {
-        return !0 !== i && (null == R || Date.now() >= R + m);
+        return !0 !== i && (null == R || Date.now() >= R + g);
     }
     canFetchExecutableBlocklist() {
-        return !D && (null == y || Date.now() >= y + m);
+        return !D && (null == y || Date.now() >= y + g);
     }
     getGameByExecutable(e) {
         if (null == e) return;
@@ -272,7 +272,7 @@ class W extends r.Ay.PersistedStore {
 let Y = new W(s.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { detectableApplications: t } = e;
-        for (let e of (g.clear(), S.clear(), N.clear(), t)) j(e);
+        for (let e of (m.clear(), S.clear(), N.clear(), t)) j(e);
     },
     GAMES_DATABASE_FETCH: function () {
         i = !0;
@@ -282,7 +282,7 @@ let Y = new W(s.h, {
     },
     GAMES_DATABASE_UPDATE: function (e) {
         let { games: t, etag: n } = e;
-        for (let e of (null != n && O !== n && (g.clear(), S.clear(), N.clear(), (O = n)), t))
+        for (let e of (null != n && O !== n && (m.clear(), S.clear(), N.clear(), (O = n)), t))
             j(
                 (function (e) {
                     let { executables: t, aliases: n, third_party_skus: i } = e;

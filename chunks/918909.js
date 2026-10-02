@@ -178,7 +178,7 @@ var A =
         (d[(d.BALLET = 13)] = "BALLET"),
         (d[(d.CYBER_STOMPERS = 14)] = "CYBER_STOMPERS"),
         d),
-    m =
+    g =
         (((c = {})[(c.NONE = 0)] = "NONE"),
         (c[(c.ANGEL_WINGS = 1)] = "ANGEL_WINGS"),
         (c[(c.STICKERS = 2)] = "STICKERS"),
@@ -323,20 +323,20 @@ var A =
     f.BRAIN,
     f.TRAFFIC_CONE,
     f.CROWN,
-    m.ANGEL_WINGS,
-    m.STICKERS,
-    m.TOTE,
-    m.WIZARD_STAFF,
-    m.SKATEBOARD,
-    m.TAKE_OUT_BAG,
-    m.PIXEL_WRENCH,
-    m.MECH_WINGS,
-    m.SWORD,
-    m.DEVIANT_TAIL,
-    m.MAGICAL_STAFF,
-    m.BUTTERFLY_WINGS,
-    m.CAT_BACKPACK,
-    m.DRAGON_WINGS,
+    g.ANGEL_WINGS,
+    g.STICKERS,
+    g.TOTE,
+    g.WIZARD_STAFF,
+    g.SKATEBOARD,
+    g.TAKE_OUT_BAG,
+    g.PIXEL_WRENCH,
+    g.MECH_WINGS,
+    g.SWORD,
+    g.DEVIANT_TAIL,
+    g.MAGICAL_STAFF,
+    g.BUTTERFLY_WINGS,
+    g.CAT_BACKPACK,
+    g.DRAGON_WINGS,
     A.BLAZE,
     A.BLOSSOM,
     A.PRISM,
@@ -351,7 +351,7 @@ var A =
     A.ELEMENTAL,
     A.SHIMMER,
     A.WITCHY);
-let g = (0, n(945810).mj)({
+let m = (0, n(945810).mj)({
     name: "2026-09-build-a-bear",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -364,7 +364,7 @@ var C = n(375708);
 function O(e) {
     var t, n;
     return !(function (e) {
-        let { enabled: t } = g.getConfig({ location: e });
+        let { enabled: t } = m.getConfig({ location: e });
         return t;
     })("transformCheckpoint2026CardComponent") ||
         (null == e.character && null == e.stats)

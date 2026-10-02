@@ -1,4 +1,4 @@
-n.d(t, { AC: () => m, Hb: () => C, Ol: () => D, e4: () => O, hp: () => N, jA: () => R, xl: () => L, zk: () => g });
+n.d(t, { AC: () => g, Hb: () => C, Ol: () => D, e4: () => O, hp: () => N, jA: () => R, xl: () => L, zk: () => m });
 var i = n(435558),
     r = n(665260),
     a = n(873298),
@@ -16,7 +16,7 @@ var i = n(435558),
     f = n(652215),
     p = n(355097),
     T = n(375708);
-function m(e, t, n, i) {
+function g(e, t, n, i) {
     if (null == e) return;
     if (c.A.isFullServerPreview(e)) return void (0, d.$u)(e, n ? [t] : [], n ? [] : [t]);
     let a = A.Ay.getChannelIdFlags(e, t);
@@ -34,7 +34,7 @@ function m(e, t, n, i) {
             location: i,
         }));
 }
-function g(e, t, n, i) {
+function m(e, t, n, i) {
     if (null == e) return;
     if (c.A.isFullServerPreview(e)) {
         ((0, d.$u)(e, n ? [t] : [], n ? [] : [t]), (0, d.Z$)(e, { optInEnabled: !0 }));

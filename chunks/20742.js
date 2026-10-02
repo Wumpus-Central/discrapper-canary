@@ -20,7 +20,7 @@ function T(e) {
         { dismissable: n, onClose: r } = (0, f.k)();
     return !1 === n ? null : (0, i.jsx)(d.J, { onClick: r, variant: t ? "color-mix" : void 0 });
 }
-function m(e) {
+function g(e) {
     let { leading: t, trailing: n, hasGradient: r, children: a } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -33,7 +33,7 @@ function m(e) {
         ],
     });
 }
-function g(e) {
+function m(e) {
     let { leading: t, trailing: n, hasGradient: r, children: a } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -136,7 +136,7 @@ function N(e) {
                 children: [
                     (0, i.jsx)("div", {
                         className: p.headerLayout,
-                        children: (0, i.jsx)(I ? (D ? g : S) : m, {
+                        children: (0, i.jsx)(I ? (D ? m : S) : g, {
                             leading: T,
                             trailing: N,
                             hasGradient: y,

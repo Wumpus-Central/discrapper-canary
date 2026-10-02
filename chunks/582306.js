@@ -13,9 +13,9 @@ var i = n(477900),
 function A(e) {
     let { value: t, onSelect: n, dateFormat: A = "ll", minDate: h, maxDate: I, disabled: f = !1, ...p } = e,
         { required: T } = p,
-        m = r.useRef(null);
+        g = r.useRef(null);
     return (0, i.jsx)(_.Y, {
-        targetElementRef: m,
+        targetElementRef: g,
         renderPopout: function (e) {
             let { closePopout: r } = e;
             return (0, i.jsx)(u.l, {
@@ -41,7 +41,7 @@ function A(e) {
                     (0, i.jsxs)(s.F, {
                         as: l.D,
                         tag: "div",
-                        innerRef: m,
+                        innerRef: g,
                         disabled: f,
                         "aria-disabled": f,
                         ...r,

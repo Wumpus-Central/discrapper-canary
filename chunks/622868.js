@@ -575,8 +575,8 @@ let e7 = function (e) {
         }),
     });
 };
-var e2 = l(812299),
-    e6 = l(109054),
+var e6 = l(812299),
+    e2 = l(109054),
     e3 = l(318626);
 function e4(e) {
     let {
@@ -633,7 +633,7 @@ let e5 = i.memo(function (e) {
         } = e,
         C = (0, eB.Ay)(n, l),
         b = i.useMemo(
-            () => (0, e2.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
+            () => (0, e6.y)({ message: n, channel: a, user: n?.author, compact: r, isRepliedMessage: !1 }),
             [n, a, r],
         ),
         E = i.useRef(null),
@@ -851,7 +851,7 @@ let nl = i.memo(function (e) {
                 { analyticsLocations: C } = (0, A.Ay)(x.A.AVATAR),
                 b = eV.aM.useSetting(),
                 E = n.displayCompactAvatars ?? b,
-                y = (0, e6.A)(c),
+                y = (0, e2.A)(c),
                 M = u ? 32 : 80,
                 {
                     avatarSrc: _,
@@ -965,7 +965,7 @@ let nl = i.memo(function (e) {
         R = eV.aM.useSetting(),
         T = e.displayCompactAvatars ?? R,
         w = i.useMemo(
-            () => (0, e2.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
+            () => (0, e6.k)({ message: n, channel: I, user: n?.author, compact: a, isRepliedMessage: !1 }),
             [n, I, a],
         ),
         O = (0, c.bG)([eH.A], () => nn(a, T, j, eH.A.getGuild(e.guildId)), [a, T, j, e.guildId]),

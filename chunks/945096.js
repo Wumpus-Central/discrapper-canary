@@ -6,10 +6,10 @@ n.d(t, {
     Xr: () => S,
     as: () => u,
     cf: () => I,
-    gN: () => m,
+    gN: () => g,
     mT: () => T,
     nO: () => f,
-    sx: () => g,
+    sx: () => m,
     xo: () => E,
 });
 var i = n(310784),
@@ -89,13 +89,13 @@ function p(e) {
 function T(e) {
     return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
 }
-function m(e, t) {
+function g(e, t) {
     let n = t[Math.floor(Math.random() * t.length)],
         i = e[Math.floor(Math.random() * e.length)],
         r = (0, o.ii)(n);
     return { fontId: i, effectId: n, colors: [...r[Math.floor(Math.random() * r.length)]] };
 }
-function g(e, t) {
+function m(e, t) {
     if (t || null == e) return e;
     let n = o._k.includes(e.fontId) ? s.x.DEFAULT : e.fontId,
         i = o.gz.includes(e.effectId) ? a.z.SOLID : e.effectId;

@@ -16,8 +16,8 @@ var r = n(435558),
     f = n(31717),
     p = n(808728),
     T = n(696451),
-    m = n(71393),
-    g = n(576705),
+    g = n(71393),
+    m = n(576705),
     S = n(573163),
     N = n(309010),
     C = n(967198),
@@ -53,7 +53,7 @@ let P = 0,
     V = [],
     H = null;
 function j() {
-    ((w = m.A.getGuildCount() >= 3 || a().size(I.A.getMutablePrivateChannels()) >= 20), (B = []));
+    ((w = g.A.getGuildCount() >= 3 || a().size(I.A.getMutablePrivateChannels()) >= 20), (B = []));
 }
 function W(e) {
     let t = (0, c.A)(e);
@@ -137,7 +137,7 @@ function K(e, t) {
                               let t = W(V[e]);
                               null != t &&
                                   ((t.type !== d.rD.TEXT_CHANNEL && t.type !== d.rD.VOICE_CHANNEL) ||
-                                      g.A.can(y.xBc.VIEW_CHANNEL, t.record)) &&
+                                      m.A.can(y.xBc.VIEW_CHANNEL, t.record)) &&
                                   (s.push(t), a.size < 3 && a.add(V[e]));
                           }
                           let l =
@@ -150,7 +150,7 @@ function K(e, t) {
                                   if (null != r) {
                                       if (
                                           (r.type === d.rD.TEXT_CHANNEL || r.type === d.rD.VOICE_CHANNEL) &&
-                                          !g.A.can(y.xBc.SEND_MESSAGES, r.record)
+                                          !m.A.can(y.xBc.SEND_MESSAGES, r.record)
                                       )
                                           return;
                                       t.push({ record: r, channelId: i });
@@ -213,7 +213,7 @@ function K(e, t) {
         switch (G) {
             case d.rD.USER_GLOBAL:
             case d.rD.USER: {
-                let e = G === d.rD.USER_GLOBAL ? null : m.A.getGuild(C.A.getGuildId());
+                let e = G === d.rD.USER_GLOBAL ? null : g.A.getGuild(C.A.getGuildId());
                 (n.unshift(
                     (0, d.jF)(
                         null != e
@@ -263,7 +263,7 @@ class X extends s.Ay.PersistedStore {
     static displayName = "QuickSwitcherStore";
     static persistKey = "QuickSwitcherStore";
     initialize(e) {
-        (this.waitFor(E.A, h.default, I.A, f.A, u.A, p.Ay, T.Ay, m.A, g.A, S.Ay, N.Ay, C.A, A.A, O.Ay),
+        (this.waitFor(E.A, h.default, I.A, f.A, u.A, p.Ay, T.Ay, g.A, m.A, S.Ay, N.Ay, C.A, A.A, O.Ay),
             this.syncWith([A.A], () => !0),
             (U = l.w.get(v) || !1),
             (V = e?.channelHistory ?? []));

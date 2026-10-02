@@ -161,8 +161,8 @@ var L = n(861382),
     Q = n(210978),
     Z = n(392054),
     X = n(168186),
-    J = n(866665),
-    Y = n(939249),
+    Y = n(866665),
+    J = n(939249),
     ee = n(88218),
     et = n(664929),
     en = n(934305);
@@ -208,11 +208,11 @@ function ei(e) {
                     {
                         className: en.uW,
                         children: [
-                            (0, l.jsx)(J.m, {
+                            (0, l.jsx)(Y.m, {
                                 text: i.name,
                                 position: "right",
                                 asContainer: !0,
-                                children: (0, l.jsx)(Y.D, {
+                                children: (0, l.jsx)(J.D, {
                                     "aria-label": i.name,
                                     onClick: () => {
                                         u(i);
@@ -528,8 +528,8 @@ var eD = n(194004),
     eQ = n(625494),
     eZ = n(488926),
     eX = n(723702),
-    eJ = n(486319),
-    eY = n(355622),
+    eY = n(486319),
+    eJ = n(355622),
     e0 = n(392553),
     e1 = n(834730),
     e2 = n(140735),
@@ -548,7 +548,7 @@ var eD = n(194004),
     tr = n(595347);
 function ts(e) {
     let { onClick: t, "aria-label": n } = e;
-    return (0, l.jsx)(Y.D, {
+    return (0, l.jsx)(J.D, {
         className: tr.b,
         onClick: t,
         "aria-label": n,
@@ -572,7 +572,7 @@ function tu(e) {
                 guild_id: t.guild_id,
             });
         }, [t]),
-        (0, l.jsxs)(Y.D, {
+        (0, l.jsxs)(J.D, {
             onClick: function () {
                 ((0, te.Jx)(t.id), (0, tn.Tv)(t, n, "Reply Chain Nudge"));
             },
@@ -639,7 +639,7 @@ function tc(e) {
                     className: ta.eU,
                     children: [
                         (0, l.jsx)(e2.A, { id: to, children: j.intl.formatToPlainString(j.t.EpJL4E, { username: f }) }),
-                        (0, l.jsx)(Y.D, {
+                        (0, l.jsx)(J.D, {
                             onClick: function () {
                                 return (0, tt.pX)(ea.BVt.CHANNEL(o.getGuildId(), o.id, u.id));
                             },
@@ -699,10 +699,10 @@ function tc(e) {
                                 d &&
                                     (0, l.jsxs)(l.Fragment, {
                                         children: [
-                                            (0, l.jsx)(J.m, {
+                                            (0, l.jsx)(Y.m, {
                                                 asContainer: !0,
                                                 text: c ? j.intl.string(j.t.DH2o6R) : j.intl.string(j.t.utGGIY),
-                                                children: (0, l.jsx)(Y.D, {
+                                                children: (0, l.jsx)(J.D, {
                                                     role: "switch",
                                                     "aria-checked": c,
                                                     onClick: function (e) {
@@ -760,7 +760,7 @@ let tp = i.memo(function (e) {
                               {
                                   className: tm.dp,
                                   children: [
-                                      (0, l.jsx)(Y.D, {
+                                      (0, l.jsx)(J.D, {
                                           onFocus: () => s(e.id),
                                           onBlur: () => s(null),
                                           className: tm.b,
@@ -950,7 +950,7 @@ function tU(e) {
             children: (0, l.jsxs)("div", {
                 className: tV.g3,
                 children: [
-                    (0, l.jsx)(Y.D, {
+                    (0, l.jsx)(J.D, {
                         className: tV.a3,
                         "aria-label": j.intl.string(j.t.SBcdAN),
                         onClick: function () {
@@ -1006,7 +1006,7 @@ var tB = n(123583),
     tQ = n(267889),
     tZ = n(307731),
     tX = n(9287);
-function tJ(e) {
+function tY(e) {
     let { getSlateEditor: t, onInsertEmoji: n, type: r, channel: s } = e,
         a = t(),
         o = i.useRef(null);
@@ -1052,7 +1052,7 @@ function tJ(e) {
               ],
           });
 }
-var tY = n(263582),
+var tJ = n(263582),
     t0 = n(698279);
 function t1(e, t, r, s, a) {
     let [o, u] = i.useState(!1),
@@ -1202,7 +1202,7 @@ function t1(e, t, r, s, a) {
 function t2(e, t, n) {
     return i.useCallback(
         (l, i) => {
-            if (i?.shiftKey === !0 || t === eY.oU.CREATE_FORUM_POST || t === eY.oU.CREATE_ANNOUNCEMENT_POST)
+            if (i?.shiftKey === !0 || t === eJ.oU.CREATE_FORUM_POST || t === eJ.oU.CREATE_ANNOUNCEMENT_POST)
                 n.current?.insertGIF(l);
             else {
                 let t = {
@@ -1235,8 +1235,8 @@ function t8(e) {
     return i.useCallback(
         (e, i) => {
             n ||
-                (s === eY.oU.CREATE_ANNOUNCEMENT_POST ||
-                s === eY.oU.CREATE_FORUM_POST ||
+                (s === eJ.oU.CREATE_ANNOUNCEMENT_POST ||
+                s === eJ.oU.CREATE_FORUM_POST ||
                 (function (e, t, n, l) {
                     if (eL.A.getUploadCount(n, l) > 0) return !0;
                     let i = ew.A.getStickerPreview(n, l);
@@ -1415,8 +1415,8 @@ let nl = i.memo(
                 showRemainingCharsAfterCount: Q,
                 allowNewLines: Z = !0,
                 characterCountClassName: X,
-                "aria-describedby": J,
-                "aria-labelledby": Y,
+                "aria-describedby": Y,
+                "aria-labelledby": J,
                 setEditorRef: ee,
                 autoCompletePosition: et,
                 children: en,
@@ -1463,7 +1463,7 @@ let nl = i.memo(
                 canCreateThreads: ez,
                 canEveryoneSendMessages: e$,
             } = ne(j, k, eP, v),
-            eZ = k.toolbarType === eY.O1.STATIC,
+            eZ = k.toolbarType === eJ.O1.STATIC,
             e1 = !eU.D_.useSetting() && !(0, eX.isAndroidWeb)() && null != window.ResizeObserver,
             e2 = !e1 || !k.commands?.enabled || !_ || "/" !== a,
             e5 = (0, eA.A)(),
@@ -1569,19 +1569,19 @@ let nl = i.memo(
             tP = i.useCallback(() => {
                 e6.emit("submit-failure");
             }, [e6]);
-        (0, eJ.R)(e6, j.guild_id, j.id);
+        (0, eY.R)(e6, j.guild_id, j.id);
         let tM = null != D,
             tD = (eB && !((eD || eV) && e$)) || (te && k.submit?.useDisabledStylesOnSubmit),
             tV = null;
         null != eP ? (tV = P?.(eP, eM, tW.g$)) : (!eB || ez) && (tV = w?.(tM, tW.g$));
-        let { isVisible: tq, showsUpsell: t$ } = (0, tY.A)({
+        let { isVisible: tq, showsUpsell: t$ } = (0, tJ.A)({
                 type: k,
                 textValue: a,
                 maxCharacterCount: $,
                 showRemainingCharsAfterCount: Q,
             }),
             tQ = e1 && null != o && !eB && k.showCharacterCount && null == eP,
-            tZ = e1 && !__OVERLAY__ && null != o && null == eP && k.toolbarType !== eY.O1.NONE && !eB,
+            tZ = e1 && !__OVERLAY__ && null != o && null == eP && k.toolbarType !== eJ.O1.NONE && !eB,
             tX = (function (e) {
                 let {
                         channel: t,
@@ -1610,7 +1610,7 @@ let nl = i.memo(
                         i = [];
                     return (
                         null != t.guild_id &&
-                            n === eY.oU.NORMAL &&
+                            n === eJ.oU.NORMAL &&
                             i.push((0, l.jsx)(tw.A, { guildId: t.guild_id, channel: t, className: tW.UW })),
                         null != r &&
                             e.push(
@@ -1639,9 +1639,9 @@ let nl = i.memo(
                 selectedAutocompleteInputError: t_,
             }),
             t0 = 0 === a.trim().length,
-            nl = null != D ? [J, to].filter(Boolean).join(" ") : J,
-            ni = k.layout === eY.wt.INLINE,
-            nr = k.layout === eY.wt.FLUSH,
+            nl = null != D ? [Y, to].filter(Boolean).join(" ") : Y,
+            ni = k.layout === eJ.wt.INLINE,
+            nr = k.layout === eJ.wt.FLUSH,
             ns = (0, l.jsx)("div", { ref: eE, className: tW.BW }),
             na = tL ? (0, l.jsx)(O, { align: "right", positionTargetRef: eE, channel: j }) : null,
             no =
@@ -1675,7 +1675,7 @@ let nl = i.memo(
                     value: eu,
                     children: [
                         tZ && eZ
-                            ? (0, l.jsx)(tJ, { getSlateEditor: eI, onInsertEmoji: ta, type: k, channel: j })
+                            ? (0, l.jsx)(tY, { getSlateEditor: eI, onInsertEmoji: ta, type: k, channel: j })
                             : tZ
                               ? (0, l.jsx)(tH.A, { ref: eb, getSlateEditor: eI, containerRef: eC, options: k.markdown })
                               : null,
@@ -1706,11 +1706,11 @@ let nl = i.memo(
                                         (0, l.jsxs)("div", {
                                             className: s()(tW.vW, {
                                                 [tW.BF]: tD,
-                                                [tW.RL]: k !== eY.oU.EDIT && (null != tV || (tD && null == tV) || eD),
-                                                [tW.fk]: k === eY.oU.THREAD_CREATION,
+                                                [tW.RL]: k !== eJ.oU.EDIT && (null != tV || (tD && null == tV) || eD),
+                                                [tW.fk]: k === eJ.oU.THREAD_CREATION,
                                                 [tW.TZ]:
-                                                    k === eY.oU.CREATE_FORUM_POST || k === eY.oU.FORWARD_MESSAGE_INPUT,
-                                                [tW.$i]: k === eY.oU.USER_PROFILE_REPLY,
+                                                    k === eJ.oU.CREATE_FORUM_POST || k === eJ.oU.FORWARD_MESSAGE_INPUT,
+                                                [tW.$i]: k === eJ.oU.USER_PROFILE_REPLY,
                                             }),
                                             onMouseDown: tN,
                                             children: [
@@ -1758,13 +1758,13 @@ let nl = i.memo(
                                                         canOnlyUseTextCommands: tM,
                                                         className: s()(
                                                             {
-                                                                [tW.QI]: k === eY.oU.THREAD_CREATION,
-                                                                [tW.AV]: k === eY.oU.PROFILE_BIO_INPUT,
-                                                                [tW.GR]: k === eY.oU.OVERLAY_INLINE_REPLY,
+                                                                [tW.QI]: k === eJ.oU.THREAD_CREATION,
+                                                                [tW.AV]: k === eJ.oU.PROFILE_BIO_INPUT,
+                                                                [tW.GR]: k === eJ.oU.OVERLAY_INLINE_REPLY,
                                                             },
                                                             p,
                                                         ),
-                                                        "aria-labelledby": Y,
+                                                        "aria-labelledby": J,
                                                         showValueWhenDisabled: eo,
                                                     }),
                                                 }),

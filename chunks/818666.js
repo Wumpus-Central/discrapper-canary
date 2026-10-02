@@ -55,10 +55,10 @@ var H = n(732280),
     Q = n(240248),
     Z = n(196765),
     X = n(121894);
-let J = Object.freeze({ showPremiumUpsell: !1 }),
-    Y = (0, Z.v)((e) => J);
+let Y = Object.freeze({ showPremiumUpsell: !1 }),
+    J = (0, Z.v)((e) => Y);
 function ee(e) {
-    (0, X.r)(() => Y.setState({ showPremiumUpsell: e }));
+    (0, X.r)(() => J.setState({ showPremiumUpsell: e }));
 }
 var et = n(891090),
     en = n(194004),
@@ -436,8 +436,8 @@ var ez = n(404778),
     eQ = n(286509),
     eZ = n(414872),
     eX = n(158045),
-    eJ = n(631576),
-    eY = n(369163),
+    eY = n(631576),
+    eJ = n(369163),
     e0 = n(123292),
     e1 = n(631305),
     e2 = n(468689),
@@ -471,7 +471,7 @@ let e7 = function (e) {
                   className: s()(e6.UX, t),
                   onKeyDown: (e) => e.stopPropagation(),
                   children: [
-                      (0, l.jsx)(eY.v, { size: "md", color: "currentColor", className: e6.Kk }),
+                      (0, l.jsx)(eJ.v, { size: "md", color: "currentColor", className: e6.Kk }),
                       (0, l.jsx)(eL.E, {
                           color: "interactive-text-default",
                           className: e6.rf,
@@ -890,8 +890,8 @@ let tV = i.forwardRef(function (e, t) {
                 renderSection: Q,
                 renderSectionFooter: Z,
                 sectionFooterHeight: X,
-                renderSectionHeader: J,
-                sectionHeaderHeight: Y,
+                renderSectionHeader: Y,
+                sectionHeaderHeight: J,
             } = (function (e) {
                 let {
                         collapsedStickersCategories: t,
@@ -939,9 +939,9 @@ let tV = i.forwardRef(function (e, t) {
                                         ? tg({ descriptor: e, currentUser: l, channel: n, onSelect: t })
                                         : i
                                           ? (0, ep.o1)(a.id)
-                                              ? (0, eJ.vr)(a.id)
+                                              ? (0, eY.vr)(a.id)
                                               : ((0, et.Dt)({ sticker: a, location: { ...o, object: eS.ZSU.STICKER } }),
-                                                (0, eJ.uK)(a.id))
+                                                (0, eY.uK)(a.id))
                                           : t(e);
                                 },
                                 [r.location, s, l, n, t],
@@ -1316,7 +1316,7 @@ let tV = i.forwardRef(function (e, t) {
                 listRef: b,
                 searchQuery: T,
                 categories: K,
-                sectionHeaderHeight: Y,
+                sectionHeaderHeight: J,
                 sectionFooterHeight: X,
             });
         i.useEffect(() => {
@@ -1403,12 +1403,12 @@ let tV = i.forwardRef(function (e, t) {
                                           onScroll: ed,
                                           renderRow: H,
                                           renderSection: Q,
-                                          renderSectionHeader: J,
+                                          renderSectionHeader: Y,
                                           renderSectionFooter: Z,
                                           rowCount: g,
                                           rowCountBySection: x,
                                           rowHeight: r > tS ? C + tk : tj + 2 * m + tk,
-                                          sectionHeaderHeight: Y,
+                                          sectionHeaderHeight: J,
                                           sectionFooterHeight: X,
                                           stickyHeaders: !0,
                                           ref: b,
@@ -1510,10 +1510,10 @@ var t$ = n(789645),
     tQ = n(964486),
     tZ = n(420136),
     tX = n(939383);
-function tJ() {
+function tY() {
     return ee(!1);
 }
-function tY(e) {
+function tJ(e) {
     let { onLearnMore: t } = e,
         { analyticsLocations: n } = (0, D.Ay)(M.A.PREMIUM_UPSELL);
     (0, i.useEffect)(() => {
@@ -1542,7 +1542,7 @@ function tY(e) {
                 ? (0, l.jsx)(eV.Ay, {
                       trialOffer: a,
                       discountOffer: o,
-                      onClose: tJ,
+                      onClose: tY,
                       type: eK.e.STICKER_PICKER_UPSELL,
                       subscriptionTier: a?.subscriptionTrial?.skuId ?? eK.pe.TIER_2,
                       children: u
@@ -1571,7 +1571,7 @@ function tY(e) {
             !c && (0, l.jsx)(eF, { analyticsSection: eS.JJy.EXPRESSION_PICKER }),
             (0, l.jsx)(p.D, {
                 className: tZ.kz,
-                onClick: tJ,
+                onClick: tY,
                 "aria-label": ey.intl.string(ey.t.cpT0Cq),
                 children: (0, l.jsx)(t$.P, { size: "md", color: "currentColor" }),
             }),
@@ -1598,7 +1598,7 @@ let t1 = (0, Q.xI)(O.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
             g = i.useRef(null),
             x = i.useRef(null),
             S = i.useRef(null),
-            E = Y((e) => e.showPremiumUpsell),
+            E = J((e) => e.showPremiumUpsell),
             [y, C] = (0, U.RQ)((e) => [e.searchQuery, e.isSearchSuggestion], w.x),
             A = i.useRef("");
         i.useImperativeHandle(t, () => ({ onPickerOpen: ep }));
@@ -1646,7 +1646,7 @@ let t1 = (0, Q.xI)(O.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 },
                 [a, y, Z],
             ),
-            J = null != v && v > t1,
+            Y = null != v && v > t1,
             {
                 rowCount: ee,
                 rowCountBySection: er,
@@ -1660,8 +1660,8 @@ let t1 = (0, Q.xI)(O.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 collapsePremiumSearchSection: c && T.has(tO),
                 listWidth: v,
                 listPaddingRight: t5,
-                stickerNodeMargin: J ? t8 : t3,
-                stickerNodeWidth: J ? t6 + 2 * u : t7 + 2 * u,
+                stickerNodeMargin: Y ? t8 : t3,
+                stickerNodeWidth: Y ? t6 + 2 * u : t7 + 2 * u,
             }),
             {
                 getItemProps: eu,
@@ -1842,7 +1842,7 @@ let t1 = (0, Q.xI)(O.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                               (0, l.jsx)(ew, { stickersListRef: x, channel: s }),
                           ],
                       }),
-                E && (c ? (0, l.jsx)(tq, { onUpsellClicked: o }) : (0, l.jsx)(tY, { onLearnMore: ef })),
+                E && (c ? (0, l.jsx)(tq, { onUpsellClicked: o }) : (0, l.jsx)(tJ, { onLearnMore: ef })),
             ],
         });
     }),
@@ -1968,14 +1968,14 @@ let nu = 498 + ns.as.MEDIUM,
             Q = (0, d.bG)([k.A], () => !k.A.hasLoadedStickerPacks),
             Z = (0, N.tj)({ location: "expression_picker" }),
             X = (0, d.bG)([nl.A], () => nl.A.isOpen()),
-            J = null != D,
-            Y = (0, m.useIsModalAtTop)(D ?? ""),
+            Y = null != D,
+            J = (0, m.useIsModalAtTop)(D ?? ""),
             ee = w.gifs?.allowSending && !u.Fr && null != r,
             et = w.stickers?.allowSending && null != p,
             en = !w.expressionPicker?.onlyEmojis && (ee || et),
             el = i.useCallback(
                 (e) => {
-                    if ((!J && (0, m.hasAnyModalOpen)()) || (J && !(Y && M)) || X || e.defaultPrevented) return;
+                    if ((!Y && (0, m.hasAnyModalOpen)()) || (Y && !(J && M)) || X || e.defaultPrevented) return;
                     let { target: t } = e;
                     if ((0, c.vq)(t) && null != t.closest("." + eE.VQ)) return;
                     for (; (0, c.vq)(t);) {
@@ -1992,7 +1992,7 @@ let nu = 498 + ns.as.MEDIUM,
                     let n = (0, c.BF)(e)?.activeElement;
                     (null == n || "BODY" === n.tagName) && ni._.dispatchToLastSubscribed(eS.jej.TEXTAREA_FOCUS);
                 },
-                [M, Y, J, X],
+                [M, J, Y, X],
             ),
             ei = i.useCallback(() => {
                 (0, U.v8)();
@@ -2030,8 +2030,8 @@ let nu = 498 + ns.as.MEDIUM,
                 (0, U.Ri)("");
             }, []),
             i.useEffect(() => {
-                ((!J && (0, m.hasAnyModalOpen)()) || (J && !Y)) && (0, U.v8)();
-            }, [Y, J]),
+                ((!Y && (0, m.hasAnyModalOpen)()) || (Y && !J)) && (0, U.v8)();
+            }, [J, Y]),
             i.useEffect(() => {
                 null != B.current &&
                     !W.current &&

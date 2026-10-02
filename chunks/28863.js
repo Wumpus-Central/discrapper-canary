@@ -21,8 +21,8 @@ function E(e) {
         title: f,
         style: p,
         focusProps: T,
-        ref: m,
-        role: g,
+        ref: g,
+        role: m,
         ...S
     } = e;
     null != t && null == n && (n = o.V.getDefaultLinkInterceptor(t));
@@ -39,6 +39,6 @@ function E(e) {
     return (null == t || (0, l.e)(t) || ((C.rel = "noreferrer noopener"), (C.target = "_blank")),
     N && delete C.href,
     null != n)
-        ? (0, i.jsx)(c.D, { tag: "a", ...S, ...C, onClick: n, focusProps: T, innerRef: m, role: "link", children: E })
-        : (0, i.jsx)(u.vN, { ...T, children: (0, i.jsx)("a", { ...S, ...C, ref: m, children: E }) });
+        ? (0, i.jsx)(c.D, { tag: "a", ...S, ...C, onClick: n, focusProps: T, innerRef: g, role: "link", children: E })
+        : (0, i.jsx)(u.vN, { ...T, children: (0, i.jsx)("a", { ...S, ...C, ref: g, children: E }) });
 }

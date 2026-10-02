@@ -28,12 +28,12 @@ function A(e) {
         ],
     });
 }
-function x(e) {
+function v(e) {
     let { user: t, guildId: n, channelId: l } = e,
         a = (0, p.tx)(n, l, t);
     return null == t ? null : (0, i.jsx)(A, { avatarURL: t.getAvatarURL(n, 24, !1), avatarLabel: a, text: a });
 }
-function v(e) {
+function x(e) {
     let { soundboard: t, user: n, guildId: l } = e;
     if (null == n) return null;
     let a =
@@ -56,12 +56,12 @@ let E = l.memo(function (e) {
         children: [
             t.map((e) => {
                 let t = d[e];
-                return (0, i.jsx)(x, { user: t, guildId: a, channelId: o }, e);
+                return (0, i.jsx)(v, { user: t, guildId: a, channelId: o }, e);
             }),
             n.map((e) => {
                 let t = d[e.userId];
                 return (0, i.jsx)(
-                    v,
+                    x,
                     { soundboard: e, user: t, guildId: a, channelId: o },
                     `${e.soundboardId}:${e.userId}`,
                 );

@@ -180,8 +180,8 @@ let W = i.forwardRef(function (e, t) {
         Z = r.autocomplete?.forceChatLayer ? S.Ay : x.Ay,
         X = (0, p.aI)(q.selectedIndex);
     (0, f.gf)(G, q.isVisible, X);
-    let J = (0, C.l)({ editorHeight: W, type: r, state: q }),
-        Y = (0, o.bG)(
+    let Y = (0, C.l)({ editorHeight: W, type: r, state: q }),
+        J = (0, o.bG)(
             [h.Ay],
             () => {
                 let e = h.Ay.getSelfEmbeddedActivityForChannel(n.id),
@@ -192,14 +192,14 @@ let W = i.forwardRef(function (e, t) {
         ),
         ee = i.useMemo(
             () =>
-                J?.top == null && J?.left == null && J?.bottom == null && J?.right == null ? "" : String(Date.now()),
-            [J?.top, J?.left, J?.bottom, J?.right],
+                Y?.top == null && Y?.left == null && Y?.bottom == null && Y?.right == null ? "" : String(Date.now()),
+            [Y?.top, Y?.left, Y?.bottom, Y?.right],
         );
     if (
         (i.useEffect(() => {
             F(q.isVisible);
         }, [F, q.isVisible]),
-        !q.isVisible || null == q.query || void 0 === J)
+        !q.isVisible || null == q.query || void 0 === Y)
     )
         return null;
     let et =
@@ -214,9 +214,9 @@ let W = i.forwardRef(function (e, t) {
             onClick: (e) => $.onResultClick(e),
         }) ?? null;
     if (null == et) return null;
-    let en = { [U.pK]: null == J, [U.YB]: null != J, [U.sQ]: null == J && "bottom" === e.position, [U.mO]: Y },
+    let en = { [U.pK]: null == Y, [U.YB]: null != Y, [U.sQ]: null == Y && "bottom" === e.position, [U.mO]: J },
         el = 490;
-    null != J && (el = r.autocomplete?.small ? 200 : q.query?.type === y.DB.EMOJIS_AND_STICKERS ? 490 : 245);
+    null != Y && (el = r.autocomplete?.small ? 200 : q.query?.type === y.DB.EMOJIS_AND_STICKERS ? 490 : 245);
     let ei = Math.max(W, B?.current?.clientHeight ?? 0),
         er = Math.min(0.5 * window.innerHeight, ei);
     el = Math.min(window.innerHeight - 120 - er - (K ?? 0), el);
@@ -248,11 +248,11 @@ let W = i.forwardRef(function (e, t) {
             }),
         }),
     });
-    return null != J
+    return null != Y
         ? (0, l.jsx)(Z, {
               children: (0, l.jsx)(c.Q, {
                   targetRef: e.targetRef,
-                  overrideTargetRect: J,
+                  overrideTargetRect: Y,
                   positionKey: ee,
                   position: e.position ?? "top",
                   align: "left",

@@ -30,8 +30,8 @@ var i = n(435558),
     f = n(935208),
     p = n(181079),
     T = n(676168),
-    m = n(796637),
-    g = n(93055),
+    g = n(796637),
+    m = n(93055),
     S = n(5180),
     N = n(635233),
     C = n(771959),
@@ -86,7 +86,7 @@ function G(e) {
 }
 function x(e, t) {
     if ((U(e), r().size(e) >= v.lj)) return { limit: v.lj, canUpsell: !1 };
-    let { favoriteLimit: n, canUpsellFavoriteLimit: i } = (0, g.ad)();
+    let { favoriteLimit: n, canUpsellFavoriteLimit: i } = (0, m.ad)();
     return n <= 0 || t === a.Ip.CATEGORY || G(e) < n ? null : { limit: n, canUpsell: i };
 }
 function k(e) {
@@ -169,7 +169,7 @@ function Y(e) {
                     b.BVt.CHANNEL(
                         t,
                         0 ===
-                            (a = (i = (n = (0, m.g)())
+                            (a = (i = (n = (0, g.g)())
                                 .getSections()
                                 .flatMap((e, t) =>
                                     r()
@@ -233,7 +233,7 @@ async function Z(e) {
     null != t &&
         t.isThread() &&
         (t.isPrivate() || A.A.can(M.xB.VIEW_CHANNEL, t)) &&
-        (0, g.ad)().hasAccess &&
+        (0, m.ad)().hasAccess &&
         (await j([e], { categoryName: v.A }, "auto_thread_join", { silent: !0 }));
 }
 function q(e) {

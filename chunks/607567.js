@@ -16,12 +16,12 @@ var i = n(435558),
     f = n(935208),
     p = n(427262),
     T = n(652215);
-let m = Object.freeze([]),
-    g = {},
+let g = Object.freeze([]),
+    m = {},
     S = null;
 function N(e) {
-    let t = g[e];
-    return (null == t && ((t = new y(e)), (g[e] = t)), t);
+    let t = m[e];
+    return (null == t && ((t = new y(e)), (m[e] = t)), t);
 }
 function C(e, t) {
     return A.Ay.getMember(e, t.id);
@@ -115,7 +115,7 @@ class y {
     getVoiceStatesForChannel(e) {
         this.processPending();
         let t = this._voiceStates.values(e);
-        return 0 === t.length ? m : t;
+        return 0 === t.length ? g : t;
     }
     countVoiceStatesForChannel(e) {
         return (this.processPending(), this._voiceStates.size(e));
@@ -131,7 +131,7 @@ class y {
     }
 }
 function D() {
-    return r().reduce(g, (e, t) => t.updateUsers() || e, !1);
+    return r().reduce(m, (e, t) => t.updateUsers() || e, !1);
 }
 function v() {
     let e = null != S;
@@ -142,7 +142,7 @@ function b() {
     return null != e && !!e.unknownChannels.some((e) => null != E.A.getChannel(e)) && ((S = null), !0);
 }
 function M() {
-    ((g = {}), (S = null));
+    ((m = {}), (S = null));
     let e = I.A.getAllVoiceStates();
     f.default.keys(e).forEach((t) => {
         Object.keys(e[t]).forEach((e) => {
@@ -172,7 +172,7 @@ class P extends a.Ay.Store {
                               e.unknownChannels.some((e) => null != E.A.getChannel(e))
                           )
                               return !1;
-                          for (let [t, n] of e.versions) if (g[t]?.getVersion() !== n) return !1;
+                          for (let [t, n] of e.versions) if (m[t]?.getVersion() !== n) return !1;
                           return !0;
                       })()
                   )
@@ -200,7 +200,7 @@ class P extends a.Ay.Store {
             : N(e ?? T.ME).getVoiceStates();
     }
     getAllVoiceStates() {
-        return g;
+        return m;
     }
     getVoiceStatesForChannel(e) {
         let t = e.getGuildId(),
@@ -220,7 +220,7 @@ class P extends a.Ay.Store {
 }
 let U = new P(o.h, {
     CONNECTION_OPEN: function () {
-        ((g = {}), (S = null));
+        ((m = {}), (S = null));
     },
     OVERLAY_INITIALIZE: function () {
         M();
@@ -243,15 +243,15 @@ let U = new P(o.h, {
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        delete g[t.id];
+        delete m[t.id];
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        delete g[t.id];
+        delete m[t.id];
     },
     PASSIVE_UPDATE_V2: function (e) {
         let t = !1,
-            n = new Set(g[e.guildId]?.getUserIds()),
+            n = new Set(m[e.guildId]?.getUserIds()),
             i = new Set(e.voiceStates?.map((e) => e.userId)),
             r = new Set(e.removedVoiceStateUsers);
         for (let r of new Set([...n, ...i])) t = N(e.guildId).updateVoiceState(r) || t;

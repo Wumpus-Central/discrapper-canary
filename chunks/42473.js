@@ -23,8 +23,8 @@ function m(e) {
             redGlow: p,
             onMouseEnter: g,
             onMouseLeave: A,
-            "aria-label": x,
-            "aria-checked": v,
+            "aria-label": v,
+            "aria-checked": x,
             role: E,
             plated: C,
             ref: _,
@@ -35,7 +35,7 @@ function m(e) {
                 : d;
     return (0, i.jsxs)(s.$n, {
         "data-migration-pending": !0,
-        "aria-label": x,
+        "aria-label": v,
         buttonRef: _,
         look: s.$n.Looks.BLANK,
         size: s.$n.Sizes.NONE,
@@ -51,7 +51,7 @@ function m(e) {
         onMouseLeave: A,
         onContextMenu: n,
         role: E,
-        "aria-checked": v,
+        "aria-checked": x,
         focusProps: { offset: { left: -1, top: -1, right: 1, bottom: 1 } },
         children: [
             null != t ? (0, i.jsx)(c.Ay, { width: 20, height: 20, mask: c.Ay.Masks.PANEL_BUTTON, children: T }) : T,

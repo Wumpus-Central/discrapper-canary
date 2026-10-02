@@ -15,7 +15,7 @@
     n5: () => Z,
     nG: () => K,
     nY: () => X,
-    pV: () => g,
+    pV: () => m,
     rG: () => W,
     sq: () => P,
     uV: () => Y,
@@ -44,8 +44,8 @@ var i = n(435558),
     f = n(79871),
     p = n(188275),
     T = n(652215),
-    m = n(758836);
-let g = A.QB ? "webp" : "jpg";
+    g = n(758836);
+let m = A.QB ? "webp" : "jpg";
 function S(e) {
     return null != e && e.productLine === T.EZt.SOCIAL_LAYER_GAME_ITEM;
 }
@@ -156,11 +156,11 @@ function G(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { size: n = 1024 } = t;
     if (e?.tenantMetadata?.socialLayer?.cardBackgroundImageAssetId != null && e?.applicationId != null)
-        return h.A.toURLSafe((0, A.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, n, g));
+        return h.A.toURLSafe((0, A.YE)(e.applicationId, e.tenantMetadata.socialLayer.cardBackgroundImageAssetId, n, m));
 }
 function x(e, t, n, i) {
     let { tab: r, applicationId: s, skuId: l } = (0, a.parse)(t);
-    return e.indexOf(T.BVt.COLLECTIBLES_SHOP) >= 0 && r === m.G2.GAME_SHOPS && s === n && (null == i || l === i);
+    return e.indexOf(T.BVt.COLLECTIBLES_SHOP) >= 0 && r === g.G2.GAME_SHOPS && s === n && (null == i || l === i);
 }
 function k(e, t) {
     return null == e || x(location.pathname, location.search, t.applicationId)

@@ -16,23 +16,23 @@ var i = n(439372),
     f = n(939249),
     p = n(265422),
     T = n(375708),
-    m = n(394272),
-    g = n(655214);
+    g = n(394272),
+    m = n(655214);
 function S(e) {
     let { guildId: t, channelId: n, channelName: i } = e,
         r = l.useCallback(() => {
             ((0, o.V)(), (0, p.i)(t, n));
         }, [t, n]);
     return (0, s.jsxs)("div", {
-        className: A()(g.oR, m.oR),
+        className: A()(m.oR, g.oR),
         children: [
-            (0, s.jsx)(h.ShieldIcon, { size: "sm", color: "currentColor", className: m.Kk }),
+            (0, s.jsx)(h.ShieldIcon, { size: "sm", color: "currentColor", className: g.Kk }),
             (0, s.jsx)(I.E, {
                 variant: "text-md/normal",
                 color: "text-strong",
                 children: T.intl.format(T.t["9U3Wb3"], {
                     channel: (0, s.jsx)(f.D, {
-                        className: m.Ix,
+                        className: g.Ix,
                         onClick: r,
                         role: "link",
                         children: (0, s.jsxs)(I.E, {

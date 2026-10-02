@@ -34,11 +34,11 @@ async function u(e) {
             onConfirmActivityLaunchChecksAlertOpen: p,
         } = e,
         T = (0, d.A)(),
-        m = r.default.getCurrentUser();
+        g = r.default.getCurrentUser();
     return (
         null != a &&
         null != i.A.getChannel(a) &&
-        null != m &&
+        null != g &&
         null != t &&
         (s.MJ(t.id),
         await (0, l.su)({

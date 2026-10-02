@@ -60,8 +60,8 @@ var h = n(626584),
     f = n(652215);
 let p = "https://i.scdn.co/image/",
     T = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
-    m = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
-    g = {
+    g = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
+    m = {
         [f.fg2.SPOTIFY]: { deserialize: (e) => `${p}${encodeURIComponent(e)}`, serialize: (e) => e.split(p)[1] },
         [f.fg2.TWITCH]: {
             deserialize: (e, t) => {
@@ -84,7 +84,7 @@ let p = "https://i.scdn.co/image/",
                 return ((t = encodeURIComponent(e)), `https://i.ytimg.com/vi/${t}/hqdefault_live.jpg`);
             },
             serialize: (e) => {
-                let t = e.match(m);
+                let t = e.match(g);
                 return null != t ? t[1] : null;
             },
         },
@@ -118,7 +118,7 @@ async function N(e) {
     );
 }
 function C(e, t) {
-    let n = g[e].serialize(t);
+    let n = m[e].serialize(t);
     return n ? `${e}:${n.toString()}` : null;
 }
 function O(e, t, n) {
@@ -128,9 +128,9 @@ function O(e, t, n) {
         return e === f.fg2.TWITCH
             ? null == n || "number" == typeof n
                 ? void new h.A("ApplicationAssetUtils").warn("getAssetImage: size must === [number, number] for Twitch")
-                : g[f.fg2.TWITCH].deserialize(i, n)
-            : Object.prototype.hasOwnProperty.call(g, e)
-              ? g[e].deserialize(i)
+                : m[f.fg2.TWITCH].deserialize(i, n)
+            : Object.prototype.hasOwnProperty.call(m, e)
+              ? m[e].deserialize(i)
               : void 0;
     }
     if (null == e || null == t) return;

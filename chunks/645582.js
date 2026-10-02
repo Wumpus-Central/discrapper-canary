@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(439372),
     r = n(183636),
     a = n(927813),
@@ -119,4 +119,4 @@ class T extends i.A {
         LOGOUT: this.handleLogout,
     };
 }
-let m = new T();
+let g = new T();

@@ -1,4 +1,4 @@
-(n.d(t, { I: () => g }), n(323874), n(14289), n(35956));
+(n.d(t, { I: () => m }), n(323874), n(14289), n(35956));
 var i = n(582128),
     r = n(806163),
     a = n(323889),
@@ -74,10 +74,10 @@ var I = n(396813),
 function T(e) {
     return null != e && "" !== e;
 }
-function m(e) {
+function g(e) {
     return T(e?.start) && T(e?.end);
 }
-function g() {
+function m() {
     let e = (0, p.T2)(),
         t = e?.id,
         { search: n } = (0, r.zy)(),
@@ -89,7 +89,7 @@ function g() {
             (function (e) {
                 if (null == e) return !1;
                 let t = T(e.tooltipTitle) && T(e.tooltipSubtitle);
-                return T(e.image) || m(e.linearGradient) || m(e.radialGradient) || t;
+                return T(e.image) || g(e.linearGradient) || g(e.radialGradient) || t;
             })(e?.questHomeEntrypoint) &&
             (o || !d),
         dismissQuestHomeHeroContent: i.useCallback(() => {

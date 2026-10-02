@@ -195,7 +195,7 @@ var U = n(524007),
     Q = n(307731),
     Z = n(202541),
     X = n(211319);
-let J = function (e) {
+let Y = function (e) {
     let { emojis: t } = e,
         { analyticsLocations: n } = (0, B.Ay)();
     i.useEffect(() => {
@@ -235,7 +235,7 @@ let J = function (e) {
         ],
     });
 };
-var Y = n(106191),
+var J = n(106191),
     ee = n(719067),
     et = n(785562),
     en = n(967144),
@@ -551,7 +551,7 @@ class ej extends ef {
 }
 class ek extends ef {
     renderContent() {
-        return (0, l.jsx)(J, { emojis: this.props.emojis });
+        return (0, l.jsx)(Y, { emojis: this.props.emojis });
     }
 }
 class e_ extends ef {
@@ -563,7 +563,7 @@ class eR extends ef {
     renderContent() {
         return (0, l.jsxs)(I, {
             children: [
-                (0, l.jsx)(N, { children: (0, l.jsx)(Y.A, { game: this.props.game, iconClassName: b.Kk }) }),
+                (0, l.jsx)(N, { children: (0, l.jsx)(J.A, { game: this.props.game, iconClassName: b.Kk }) }),
                 (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: this.props.game.name }) }),
                 (0, l.jsx)(ee.A, {
                     platforms: this.props.game.platformAvailability,

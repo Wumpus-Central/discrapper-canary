@@ -1,4 +1,4 @@
-(n.d(t, { D3: () => T, JO: () => S, TE: () => m, aK: () => h.A, hs: () => g, ju: () => p }), n(938796));
+(n.d(t, { D3: () => T, JO: () => S, TE: () => g, aK: () => h.A, hs: () => m, ju: () => p }), n(938796));
 var i = n(536637),
     r = n.n(i),
     a = n(665260),
@@ -21,10 +21,10 @@ function T() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "Modal";
     (0, l.zV)(f.HAw.OPEN_MODAL, { type: "Thread Browser", location_section: e });
 }
-function m() {
+function g() {
     u.default.track(f.HAw.OPEN_POPOUT, { type: "Active Threads Popout" });
 }
-function g(e, t) {
+function m(e, t) {
     let n = (0, o.C)(e);
     if (null == n) return;
     let i = e.getGuildId(),
@@ -43,9 +43,9 @@ function g(e, t) {
         E = l(d),
         h = A.A.isMuted(e.id),
         p = (0, _.DZ)(A.A.getMuteConfig(e.id)),
-        { can_send_message: T, parent_channel_type: m, ...g } = n,
+        { can_send_message: T, parent_channel_type: g, ...m } = n,
         S = {
-            ...g,
+            ...m,
             channel_id: e.id,
             guild_id: i,
             parent_id: r,

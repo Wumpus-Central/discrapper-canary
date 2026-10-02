@@ -16,8 +16,8 @@ var i = n(435558),
     f = n(613057);
 let p = [f.Hi.AUTHENTICATION_FAILED, f.Hi.NOT_ENTITLED],
     T = "DispatchManagerStore",
-    m = [],
     g = [],
+    m = [],
     S = !1,
     N = null,
     C = null,
@@ -26,11 +26,11 @@ let p = [f.Hi.AUTHENTICATION_FAILED, f.Hi.NOT_ENTITLED],
     L = !1,
     y = null;
 function D() {
-    let e = { queue: m, paused: S, userActions: Array.from(R) };
+    let e = { queue: g, paused: S, userActions: Array.from(R) };
     s.w.set(T, e);
 }
 function v() {
-    let e = m[0];
+    let e = g[0];
     if (null != e) {
         let { comboId: t, action: n } = e,
             { applicationId: i, branchId: r } = (0, _.r0)(t);
@@ -48,24 +48,24 @@ function v() {
 }
 function b(e, t) {
     let n = (0, _.gW)(e, t);
-    return m.findIndex((e) => e.comboId === n);
+    return g.findIndex((e) => e.comboId === n);
 }
 function M(e, t, n, i) {
     let r = (0, _.gW)(e, t),
         a = { comboId: r, action: i },
-        s = g.indexOf(r);
-    -1 !== s && g.splice(s, 1);
+        s = m.indexOf(r);
+    -1 !== s && m.splice(s, 1);
     let l = b(e, t);
-    (0 !== l && (n ? -1 === l && (m.push(a), v()) : (l > 0 && m.splice(l, 1), m.unshift(a), v())),
+    (0 !== l && (n ? -1 === l && (g.push(a), v()) : (l > 0 && g.splice(l, 1), g.unshift(a), v())),
         !n && S && E.A.resume(),
         D());
 }
 function P(e, t) {
     let n = (0, _.gW)(e, t),
-        i = g.indexOf(n);
-    -1 !== i && g.splice(i, 1);
+        i = m.indexOf(n);
+    -1 !== i && m.splice(i, 1);
     let r = b(e, t);
-    (-1 !== r && (m.splice(r, 1), D()), v());
+    (-1 !== r && (g.splice(r, 1), D()), v());
 }
 function U(e) {
     let { applicationId: t, branchId: n } = e;
@@ -74,8 +74,8 @@ function U(e) {
 function w(e) {
     let { applicationId: t, branchId: n } = e,
         i = (0, _.gW)(t, n),
-        r = g.indexOf(i);
-    -1 !== r && g.splice(r, 1);
+        r = m.indexOf(i);
+    -1 !== r && m.splice(r, 1);
 }
 function G() {
     let e = c.default.getToken(),
@@ -91,7 +91,7 @@ class k extends a.Ay.Store {
     static displayName = "DispatchManagerStore";
     initialize() {
         let e = s.w.get(T) ?? { queue: null, paused: null, userActions: null };
-        (null != e.queue && (m = e.queue.map((e) => ("string" == typeof e ? { comboId: e, action: "Patch" } : e))),
+        (null != e.queue && (g = e.queue.map((e) => ("string" == typeof e ? { comboId: e, action: "Patch" } : e))),
             null != e.paused && (S = e.paused),
             null != e.userActions && (R = new Map(Array.from(e.userActions))),
             this.waitFor(h.A, d.Ay),
@@ -99,13 +99,13 @@ class k extends a.Ay.Store {
             this.waitFor(u.A, c.default, h.A));
     }
     get activeItems() {
-        return m.map((e) => {
+        return g.map((e) => {
             let { comboId: t } = e;
             return (0, _.r0)(t);
         });
     }
     get finishedItems() {
-        return g.map(_.r0);
+        return m.map(_.r0);
     }
     get paused() {
         return S;
@@ -138,7 +138,7 @@ let F = new k(l.h, {
         let { applicationId: t, branchId: n } = e,
             i = b(t, n);
         if (i < 1) return !1;
-        (m.splice(0, 0, m.splice(i, 1)[0]), v(), S && E.A.resume(), D());
+        (g.splice(0, 0, g.splice(i, 1)[0]), v(), S && E.A.resume(), D());
     },
     DISPATCH_APPLICATION_REMOVE_FINISHED: w,
     DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
@@ -147,7 +147,7 @@ let F = new k(l.h, {
         let n = S;
         ((S = t.paused), (N = t.currentTask), (C = t.nextTask));
         let i = !1;
-        ((m = m.filter((e) => {
+        ((g = g.filter((e) => {
             let { comboId: t } = e,
                 { applicationId: n, branchId: a } = (0, _.r0)(t),
                 s = h.A.getState(n, a),
@@ -161,7 +161,7 @@ let F = new k(l.h, {
                 r().isEqual(s.manifestIds, s.targetManifestIds) &&
                 r().isEqual(s.manifestIds, d)
             ) {
-                if ((g.push(t), R.has(t))) {
+                if ((m.push(t), R.has(t))) {
                     switch (R.get(t)) {
                         case "Install":
                             o.BK(n, s);

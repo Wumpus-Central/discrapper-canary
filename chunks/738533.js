@@ -26,16 +26,16 @@ var I = n(962052),
     f = n(723702),
     p = n(998218),
     T = n(19575);
-let m = new r.A("Games"),
-    g = null;
+let g = new r.A("Games"),
+    m = null;
 function S() {
-    return null != g
-        ? Promise.resolve(g)
+    return null != m
+        ? Promise.resolve(m)
         : (0, f.isDesktop)()
           ? T.Ay.ensureModule("discord_game_utils").then(() => {
                 let e = T.Ay.getGameUtils();
                 return null != e && null != e.findLaunchable
-                    ? ((g = e), e)
+                    ? ((m = e), e)
                     : Promise.reject(Error("game utils not found"));
             })
           : Promise.reject(Error("not desktop client"));
@@ -83,7 +83,7 @@ function O(e, t, n) {
 }
 function R(e) {
     return (
-        m.info("launch", e),
+        g.info("launch", e),
         new Promise((t, n) => {
             null == p.A.safeParseWithQuery(e.launchTarget)
                 ? n(Error(`Failed to parse launch target. ${e.launchTarget}`))

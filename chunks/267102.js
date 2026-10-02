@@ -4,8 +4,8 @@ n.d(t, {
     Us: () => T,
     Uw: () => c,
     Wr: () => p,
-    _o: () => g,
-    aL: () => m,
+    _o: () => m,
+    aL: () => g,
     mU: () => E,
     rH: () => h,
     wp: () => A,
@@ -70,10 +70,10 @@ function p(e) {
 function T() {
     return r.useContext(u).appContext;
 }
-function m() {
+function g() {
     return r.useContext(u).windowDispatch;
 }
-function g() {
+function m() {
     return r.useContext(u).renderWindow;
 }
 let S = u;

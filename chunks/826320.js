@@ -116,15 +116,15 @@ var I = n(192308),
     v = n(983851),
     R = n(534890),
     y = n(331322),
-    L = n(297264),
-    T = n(93055),
+    T = n(297264),
+    L = n(93055),
     M = n(17839),
     U = n(22277),
     D = n(375708),
     O = n(27948);
 function P() {
     let e = l.useCallback(() => {
-        let { hasAccess: e } = (0, T.ad)();
+        let { hasAccess: e } = (0, L.ad)();
         e
             ? (0, M.A)({ source: "favorites_empty_sidebar" })
             : (0, I.openModalLazy)(async () => {
@@ -178,7 +178,7 @@ function w() {
                 padding: { top: 16, right: 16, bottom: 0, left: 16 },
                 fullWidth: !1,
                 children: [
-                    (0, i.jsx)(L.D, { variant: "heading-md/semibold", children: D.intl.string(U.default["1n0TGE"]) }),
+                    (0, i.jsx)(T.D, { variant: "heading-md/semibold", children: D.intl.string(U.default["1n0TGE"]) }),
                     (0, i.jsx)(P, {}),
                 ],
             }),

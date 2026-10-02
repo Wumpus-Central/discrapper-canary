@@ -65,8 +65,8 @@ class p {
     }
 }
 let T = p.empty(),
-    m = !1,
-    g = null,
+    g = !1,
+    m = null,
     S = new Map();
 function N(e, t, n) {
     return `${e}:${t}:${n}`;
@@ -84,7 +84,7 @@ function R() {
     });
 }
 function L() {
-    null != g && (g.destroy(), (g = null));
+    null != m && (m.destroy(), (m = null));
 }
 R();
 class y extends i.Ay.Store {
@@ -121,7 +121,7 @@ class y extends i.Ay.Store {
         return T;
     }
     shouldRecordNextConnection() {
-        return m;
+        return g;
     }
     getSimulcastDebugOverride(e, t) {
         let n = f(e, t);
@@ -147,7 +147,7 @@ let D = new y(a.h, {
         if ((L(), !n.supports(c.O5.CONNECTION_REPLAY) || 0 === t.length)) return;
         let i = n.createReplayConnection(c.x.DEFAULT, t);
         null != i &&
-            ((g = i),
+            ((m = i),
             i.on(r.yq.Video, (e, t, n, r, s) => {
                 a.h.dispatch({
                     type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
@@ -164,7 +164,7 @@ let D = new y(a.h, {
     },
     RTC_DEBUG_SET_RECORDING_FLAG: function (e) {
         let { value: t } = e;
-        m = t;
+        g = t;
     },
     RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function (e) {
         let { userId: t, context: n, quality: i } = e;

@@ -2,11 +2,11 @@ n.d(t, {
     $e: () => p,
     E0: () => T,
     I0: () => S,
-    Ll: () => m,
+    Ll: () => g,
     _e: () => h,
     iM: () => I,
     jQ: () => N,
-    pv: () => g,
+    pv: () => m,
     ui: () => A,
     vA: () => f,
 });
@@ -50,10 +50,10 @@ function p(e, t) {
 function T(e) {
     return e.sharePolicy !== i.i.NOT_SHAREABLE;
 }
-function m(e, t) {
+function g(e, t) {
     return null != e && null != t && (0, s.eo)(t, d.A, l.A, o.A, a.default)[0];
 }
-function g(e) {
+function m(e) {
     return (0, _.vv)({ config: e }) ? r.Z.VIDEO : r.Z.GAMEPLAY;
 }
 function S(e, t) {

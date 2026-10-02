@@ -16,8 +16,8 @@ var i = n(17928),
     f = n(427262),
     p = n(736347),
     T = n(303911),
-    m = n(652215);
-let g = { key: "active_now", type: p.ik.ACTIVE_NOW },
+    g = n(652215);
+let m = { key: "active_now", type: p.ik.ACTIVE_NOW },
     S = { key: "online", type: p.ik.ONLINE },
     N = { key: "offline", type: p.ik.OFFLINE },
     C = Object.freeze([]),
@@ -36,7 +36,7 @@ function M(e) {
         i = c.A.getActivities(e),
         r = i.findIndex((e) => {
             let { type: t } = e;
-            return t === m.$pd.PLAYING || t === m.$pd.COMPETING;
+            return t === g.$pd.PLAYING || t === g.$pd.COMPETING;
         }),
         a = -1 !== r ? i[r] : null,
         l = a?.assets?.large_image ?? a?.assets?.small_image,
@@ -57,7 +57,7 @@ function P(e, t) {
     switch (t) {
         case p.Vj.ACTIVE_NOW:
             if ((0, T.iX)(e.status)) return N;
-            if (null != e.gameName || null != e.voiceChannelId) return g;
+            if (null != e.gameName || null != e.voiceChannelId) return m;
             return S;
         case p.Vj.GAME:
             if (null != e.gameName)

@@ -32,8 +32,8 @@ var r = n(503698),
     f = n(548118),
     p = n(53505),
     T = n(975571),
-    m = n(652215),
-    g = n(375708),
+    g = n(652215),
+    m = n(375708),
     S = n(498206);
 let N = s.eu;
 function C(e) {
@@ -78,9 +78,9 @@ function v(e) {
             description: f,
             required: p,
             onFocus: T,
-            onBlur: m,
+            onBlur: g,
         } = e,
-        g = (0, I.GV)(),
+        m = (0, I.GV)(),
         S = (0, i.jsx)(c.k, {
             name: h,
             type: o,
@@ -93,9 +93,9 @@ function v(e) {
             autoFocus: _,
             maxLength: E,
             spellCheck: A,
-            id: g,
+            id: m,
             onFocus: T,
-            onBlur: m,
+            onBlur: g,
             label: t,
             error: n,
             required: p,
@@ -140,7 +140,7 @@ function w(e) {
                   className: a()(S.Io, S.L1, l && S.Z6),
                   children: [
                       (0, i.jsx)("i", { className: S._o }),
-                      d({ className: o, children: g.intl.format(g.t["LC+S+m"], { membersOnline: n }) }),
+                      d({ className: o, children: m.intl.format(m.t["LC+S+m"], { membersOnline: n }) }),
                   ],
               })),
           (0, i.jsxs)(h.A, {
@@ -152,7 +152,7 @@ function w(e) {
                       className: a()(S.Io, l && S.Z6),
                       children: [
                           (0, i.jsx)("i", { className: S.jk }),
-                          d({ className: o, children: g.intl.format(g.t.zRl6XR, { count: r }) }),
+                          d({ className: o, children: m.intl.format(m.t.zRl6XR, { count: r }) }),
                       ],
                   }),
               ],
@@ -169,7 +169,7 @@ function G(e) {
                       tag: "span",
                       variant: "text-md/normal",
                       color: "text-default",
-                      children: g.intl.string(g.t["/8WWvE"]),
+                      children: m.intl.string(m.t["/8WWvE"]),
                   }),
                   (0, i.jsx)(L, {
                       className: S.yj,
@@ -193,15 +193,15 @@ function x(e) {
         className: t,
         children: [
             (0, i.jsx)(u.$, {
-                text: g.intl.format(g.t.JoS1i3, { platform: (0, p.Vf)() }),
+                text: m.intl.format(m.t.JoS1i3, { platform: (0, p.Vf)() }),
                 variant: "secondary",
                 fullWidth: !0,
                 onClick: () => window.open((0, p.SU)()),
             }),
             (0, i.jsx)(M, {
                 className: S.UM,
-                children: g.intl.format(g.t.wO1VBk, {
-                    supportedBrowserURL: T.A.getArticleURL(m.MVz.SUPPORTED_BROWSERS),
+                children: m.intl.format(m.t.wO1VBk, {
+                    supportedBrowserURL: T.A.getArticleURL(g.MVz.SUPPORTED_BROWSERS),
                 }),
             }),
         ],
@@ -216,7 +216,7 @@ let k = function (e) {
         onSubmit: s,
         children: l,
         expanded: o = !1,
-        theme: d = m.NJ8.DARK,
+        theme: d = g.NJ8.DARK,
         style: c,
         transparent: u = !1,
     } = e;

@@ -8,7 +8,7 @@ n.d(t, {
     ND: () => R,
     VD: () => L,
     Wn: () => O,
-    YP: () => g,
+    YP: () => m,
     aw: () => v,
 });
 var i = n(435558),
@@ -28,8 +28,8 @@ var i = n(435558),
     f = n(562153),
     p = n(412136),
     T = n(652215),
-    m = n(375708);
-function g() {
+    g = n(375708);
+function m() {
     return { text: void 0, image: void 0, localCreationAnswerId: (0, a.A)() };
 }
 function S(e) {
@@ -79,7 +79,7 @@ function D(e) {
             ((t = p.TU),
             (n = e.embeds[0]?.fields?.find((e) => "poll_question_text" === e.rawName)?.rawValue ?? ""),
             null != t ? (0, s.EJ)(n, t) : n);
-    return m.intl.format(m.t.Vn97Ka, { username: i.nick, title: r });
+    return g.intl.format(g.t.Vn97Ka, { username: i.nick, title: r });
 }
 function v(e) {
     return e.reduce((e, t) => e + (t.count_details?.vote ?? 0), 0);
@@ -105,14 +105,14 @@ function b(e, t, n) {
     if (0 === I.length) return "";
     let T = Math.max(0, A - I.length);
     if (1 === I.length)
-        if (T > 0) return m.intl.formatToPlainString(m.t["SV/iZn"], { a: I[0], n: T });
+        if (T > 0) return g.intl.formatToPlainString(g.t["SV/iZn"], { a: I[0], n: T });
         else return I[0];
     if (2 === I.length)
-        if (T > 0) return m.intl.formatToPlainString(m.t.YBnZK0, { a: I[0], b: I[1], n: T });
-        else return m.intl.formatToPlainString(m.t["O5+f5c"], { a: I[0], b: I[1] });
+        if (T > 0) return g.intl.formatToPlainString(g.t.YBnZK0, { a: I[0], b: I[1], n: T });
+        else return g.intl.formatToPlainString(g.t["O5+f5c"], { a: I[0], b: I[1] });
     return 3 !== I.length
-        ? m.intl.formatToPlainString(m.t.yVX6kE, { n: T })
+        ? g.intl.formatToPlainString(g.t.yVX6kE, { n: T })
         : T > 0
-          ? m.intl.formatToPlainString(m.t["ThXp+N"], { a: I[0], b: I[1], c: I[2], n: T })
-          : m.intl.formatToPlainString(m.t["0UzBM3"], { a: I[0], b: I[1], c: I[2] });
+          ? g.intl.formatToPlainString(g.t["ThXp+N"], { a: I[0], b: I[1], c: I[2], n: T })
+          : g.intl.formatToPlainString(g.t["0UzBM3"], { a: I[0], b: I[1], c: I[2] });
 }

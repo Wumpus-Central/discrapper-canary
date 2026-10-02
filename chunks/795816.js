@@ -7,8 +7,8 @@ n.d(t, {
     SE: () => e_,
     Ue: () => ef,
     _H: () => eu,
-    gk: () => em,
-    i5: () => eg,
+    gk: () => eg,
+    i5: () => em,
     jp: () => eS,
     od: () => eC,
     rW: () => el,
@@ -32,8 +32,8 @@ var i = n(562708),
     f = n(545152),
     p = n(361926),
     T = n(587895),
-    m = n(972995),
-    g = n(878014),
+    g = n(972995),
+    m = n(878014),
     S = n(568598),
     N = n(198052),
     C = n(501419),
@@ -92,7 +92,7 @@ async function eo(e) {
             onExecutedCallback: I,
             referrerId: f,
             customId: p,
-            inviterUserId: m,
+            inviterUserId: g,
             renderInFramePool: S,
             onConfirmActivityLaunchChecksAlertOpen: N,
         } = e,
@@ -111,7 +111,7 @@ async function eo(e) {
             return (
                 (0, Z.j)(i, {
                     isStart: s,
-                    inviterUserId: m,
+                    inviterUserId: g,
                     channelId: t ?? null,
                     guildId: D ?? null,
                     locationKind: null != D ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL,
@@ -127,7 +127,7 @@ async function eo(e) {
             analyticsLocations: l,
             source: h,
             commandOrigin: _,
-            inviterUserId: m,
+            inviterUserId: g,
             launchParams: { customId: p, referrerId: f, renderInFramePool: S },
         });
         let e = await eN(i, t ?? void 0);
@@ -151,7 +151,7 @@ async function eo(e) {
                     analyticsLocations: l ?? [],
                     source: h,
                     referrerId: f,
-                    inviterUserId: m,
+                    inviterUserId: g,
                 }),
             s)
         ) {
@@ -163,7 +163,7 @@ async function eo(e) {
                 (x = C),
                 (e = x?.type === en.rbe.GUILD_VOICE),
                 (n = T.A.getApplication(G)),
-                (r = (0, g.W)(n, a.U.MAIN)),
+                (r = (0, m.W)(n, a.U.MAIN)),
                 (s = (0, j.AX)(x)),
                 (!e || !r) && !s)
             )
@@ -241,7 +241,7 @@ async function ed(e) {
     if (!(_ || ei.TR.includes(t))) {
         (null != i && (await (0, I.Zn)({ type: "channel", channelId: i })), await (0, I.Zn)({ type: "user" }));
         let e = w.A.getChannel(i),
-            { isAuthorized: n } = await (0, m.q)({
+            { isAuthorized: n } = await (0, g.q)({
                 applicationId: t,
                 channel: e,
                 commandIntegrationTypes: u.integration_types,
@@ -249,7 +249,7 @@ async function ed(e) {
         if (!n) return { result: "failure", reason: 2 };
     }
     let E = w.A.getChannel(i),
-        g = null != r ? G.A.getGuild(r) : null;
+        m = null != r ? G.A.getGuild(r) : null;
     if (null == E) return { result: "failure", reason: 3 };
     if (_) {
         let e,
@@ -277,7 +277,7 @@ async function ed(e) {
             (0, f.A)({
                 command: u,
                 optionValues: {},
-                context: { channel: E, guild: g },
+                context: { channel: E, guild: m },
                 commandOrigin: a,
                 sectionName: s,
                 source: l,
@@ -519,14 +519,14 @@ async function eT(e) {
         return !1;
     }
 }
-function em(e) {
+function eg(e) {
     o.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE", activityPanelMode: e });
 }
-function eg(e) {
+function em(e) {
     o.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT", focusedActivityLayout: e });
 }
 function eS() {
-    (em(et.Gd.ACTIVITY_POPOUT_WINDOW), o.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }));
+    (eg(et.Gd.ACTIVITY_POPOUT_WINDOW), o.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }));
 }
 async function eN(e, t) {
     let n = { use_stateless_ticket: !0 };

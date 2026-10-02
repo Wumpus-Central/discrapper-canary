@@ -9,9 +9,9 @@ n.d(t, {
     Ry: () => C,
     Ys: () => L,
     aG: () => S,
-    ax: () => g,
+    ax: () => m,
     fA: () => x,
-    fi: () => m,
+    fi: () => g,
     gb: () => O,
     k1: () => y,
     kN: () => V,
@@ -43,8 +43,8 @@ var E = n(652215),
     p = n(148155);
 Object.freeze({ 1: 1, 2: 2, 3: 3, 4: 6, 5: 9, 6: 12, 7: 15, 8: 18, 9: 24 });
 let T = [E.TVA.NONE, E.TVA.TIER_1, E.TVA.TIER_2, E.TVA.TIER_3],
-    m = T.slice().reverse();
-function g(e) {
+    g = T.slice().reverse();
+function m(e) {
     return e === E.TVA.NONE ? E.TVA.TIER_1 : U.find((t) => t.tier === e)?.nextTier;
 }
 function S(e, t) {
@@ -183,6 +183,6 @@ function B(e) {
     return e.subscription?.status === E.Dmq.CANCELED || e.canceled;
 }
 function V(e) {
-    return m.find((t) => e >= E.M2T[t]) ?? E.TVA.NONE;
+    return g.find((t) => e >= E.M2T[t]) ?? E.TVA.NONE;
 }
 (E.TVA.NONE, E.TVA.TIER_1, E.TVA.TIER_2, E.TVA.TIER_3);

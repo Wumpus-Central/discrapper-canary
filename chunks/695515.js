@@ -16,8 +16,8 @@ let c = null,
     f = null,
     p = P(),
     T = !1,
-    m = !1,
-    g = null,
+    g = !1,
+    m = null,
     S = null,
     N = [],
     C = [],
@@ -113,7 +113,7 @@ function V(e) {
     v = e.reduce((e, t) => ((e[t.entitlement_id] = t), e), {});
 }
 function H() {
-    m = !0;
+    g = !0;
 }
 function j(e) {
     let { linkedUsers: t, familyCenterTeenActivity: n, ageGroup: i } = e,
@@ -147,8 +147,8 @@ function j(e) {
         (L = I ?? null),
         (y = f ?? null),
         (b = i ?? null),
-        (m = !1),
-        (g = l.default.fromTimestamp(Date.now())),
+        (g = !1),
+        (m = l.default.fromTimestamp(Date.now())),
         (T = !0));
 }
 function W(e) {
@@ -186,8 +186,8 @@ function K(e) {
         null != h && V(h),
         (N = o),
         (C = d),
-        (m = !1),
-        (g = l.default.fromTimestamp(Date.now())),
+        (g = !1),
+        (m = l.default.fromTimestamp(Date.now())),
         (O = _),
         (R = E),
         (L = I ?? null),
@@ -243,8 +243,8 @@ function et() {
         (A = U()),
         (h = w()),
         (M = {}),
-        (m = !1),
-        (g = null),
+        (g = !1),
+        (m = null),
         (p = P()),
         (E = !1),
         (N = []),
@@ -362,7 +362,7 @@ class en extends r.A {
         return S;
     }
     isLoading() {
-        return m;
+        return g;
     }
     getTopUserActivities() {
         return N;
@@ -403,7 +403,7 @@ class en extends r.A {
         return b;
     }
     canRefetch() {
-        return null === g || l.default.age(g) > d.fD;
+        return null === m || l.default.age(m) > d.fD;
     }
     isCurrentUserInRestrictedHours() {
         let e = a.default.getCurrentUser();

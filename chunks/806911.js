@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(793574),
     p = n(95561),
     T = n(198052),
-    m = n(94247),
-    g = n(520698),
+    g = n(94247),
+    m = n(520698),
     S = n(525788),
     N = n(384059),
     C = n(47167),
@@ -270,14 +270,14 @@ class eo extends r.PureComponent {
 }
 function ed(e) {
     let { channel: t, width: n } = e,
-        r = (0, d.bG)([m.A], () => m.A.getSpeaker(t.id)),
+        r = (0, d.bG)([g.A], () => g.A.getSpeaker(t.id)),
         a = (0, d.bG)([T.A], () => T.A.getParticipant(t.id, r), [t.id, r]),
         s = (0, d.bG)([j.Ay], () => o()(j.Ay.getVideoDevices()).values().first()),
         l = (0, d.bG)(
             [K.A],
             () =>
                 null != a && a.type !== ea.lp.ACTIVITY && a.type !== ea.lp.HIDDEN_STREAM
-                    ? K.A.getStreamId(a.user.id, t.getGuildId(), (0, g.A)(a.type))
+                    ? K.A.getStreamId(a.user.id, t.getGuildId(), (0, m.A)(a.type))
                     : null,
             [a, t],
         ),

@@ -1,4 +1,4 @@
-(n.d(t, { Fc: () => C, Jm: () => y, m9: () => S, Uc: () => L, ZG: () => g, VP: () => b, VR: () => O, JS: () => N }),
+(n.d(t, { Fc: () => C, Jm: () => y, m9: () => S, Uc: () => L, ZG: () => m, VP: () => b, VR: () => O, JS: () => N }),
     n(321073));
 var i,
     r,
@@ -17,13 +17,13 @@ var i,
     f = n(350701),
     p = n(652215),
     T = n(375708);
-function m(e, t) {
+function g(e, t) {
     E.default.track(p.HAw.REMOTE_COMMAND_SENT, {
         command_type: e,
         remote_platform: _.A.getSessionById(t)?.clientInfo?.os,
     });
 }
-async function g() {
+async function m() {
     var e;
     let t = I.default.getAwaitingRemoteSessionInfo(),
         n = t?.nonce;
@@ -50,10 +50,10 @@ function N(e, t) {
         sessionId: e,
         payload: { type: "VOICE_STATE_UPDATE", self_mute: n, self_deaf: i },
     }),
-        m("VOICE_STATE_UPDATE", e));
+        g("VOICE_STATE_UPDATE", e));
 }
 function C(e) {
-    (o.h.dispatch({ type: "REMOTE_COMMAND", sessionId: e, payload: { type: "DISCONNECT" } }), m("DISCONNECT", e), g());
+    (o.h.dispatch({ type: "REMOTE_COMMAND", sessionId: e, payload: { type: "DISCONNECT" } }), g("DISCONNECT", e), m());
 }
 function O(e, t, n, i) {
     let r = (0, c.o)(n);
@@ -63,7 +63,7 @@ function O(e, t, n, i) {
             sessionId: e,
             payload: { type: "AUDIO_SETTINGS_UPDATE", context: r, id: t, ...i },
         }),
-        m("AUDIO_SETTINGS_UPDATE", e));
+        g("AUDIO_SETTINGS_UPDATE", e));
 }
 async function R() {
     let e;
@@ -139,7 +139,7 @@ async function v(e, t, n) {
     o.h.dispatch({ type: "GAME_CONSOLE_DEVICE_CANCEL_COMMAND_SUCCESS", platform: e, deviceId: t, commandId: n });
 }
 async function b(e, t, n) {
-    (await h.A.maybeShowPTTAlert(e), await g());
+    (await h.A.maybeShowPTTAlert(e), await m());
     let i = await R();
     (await D(e, t, n, i), (0, f.A)(n.id, e));
 }

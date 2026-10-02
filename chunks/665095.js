@@ -14,8 +14,8 @@ var i = n(477900),
     p = n(80556),
     g = n(557722),
     A = n(363195),
-    x = n(870570),
-    v = n(446868),
+    v = n(870570),
+    x = n(446868),
     E = n(503698),
     C = n.n(E),
     _ = n(607399),
@@ -37,7 +37,7 @@ class w extends l.PureComponent {
             children: e.map((e) =>
                 e === N.Fz7.CAPTCHA
                     ? (0, i.jsx)(j.A, { onVerify: l, theme: n }, t)
-                    : (0, i.jsx)(T.$, { onClick: () => this.handleClick(e), text: v.A.getButtonTitle(e) }, e),
+                    : (0, i.jsx)(T.$, { onClick: () => this.handleClick(e), text: x.A.getButtonTitle(e) }, e),
             ),
         });
     }
@@ -132,11 +132,11 @@ class w extends l.PureComponent {
         t?.(e);
     };
 }
-var k = n(87404),
-    L = n(53516);
+var L = n(87404),
+    k = n(53516);
 function P() {
-    let { action: e, theme: t } = (0, r.cf)([x.A, A.A], () => ({ action: x.A.getAction(), theme: A.A.theme })),
-        E = v.A.getVerificationTypes(e),
+    let { action: e, theme: t } = (0, r.cf)([v.A, A.A], () => ({ action: v.A.getAction(), theme: A.A.theme })),
+        E = x.A.getVerificationTypes(e),
         [C, _] = l.useState(0),
         T = (0, m.Ay)(E);
     function I() {
@@ -148,7 +148,7 @@ function P() {
                     );
                     return (t) => (0, i.jsx)(e, { ...t });
                 },
-                { modalKey: k.H1, Layer: p.Ay },
+                { modalKey: L.H1, Layer: p.Ay },
             ));
     }
     return (
@@ -184,7 +184,7 @@ function P() {
                                 confirmText: R.intl.string(R.t["3oK4qw"]),
                             });
                     },
-                    { modalKey: k.Pr, Layer: p.Ay, onCloseCallback: I },
+                    { modalKey: L.Pr, Layer: p.Ay, onCloseCallback: I },
                 );
         }, [E, T]),
         (0, i.jsx)(w, {
@@ -218,7 +218,7 @@ function P() {
                               return (t) =>
                                   (0, i.jsx)(e, { layerContext: p.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: L.V, Layer: p.Ay },
+                          { modalKey: k.V, Layer: p.Ay },
                       );
             },
             onLogout: function () {

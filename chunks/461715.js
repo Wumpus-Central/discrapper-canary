@@ -25,10 +25,10 @@ function h(e) {
     let f = (0, _.et)(t.thumbnail),
         p = !I && t.has_media_attachment,
         T = I ? A.intl.string(A.t.UsZEBI) : A.intl.string(A.t.ReFzYZ),
-        m = null != l ? u.Ay.getName(t.guild_id, t.channel_id, l) : void 0,
-        g = l?.getAvatarURL(n?.id, 40);
-    (null == g || h !== t.guild_id) &&
-        (g = c.Ay.getGuildIconURL({ id: t.guild_id, icon: t.guild_icon, size: 40, canAnimate: !1 }));
+        g = null != l ? u.Ay.getName(t.guild_id, t.channel_id, l) : void 0,
+        m = l?.getAvatarURL(n?.id, 40);
+    (null == m || h !== t.guild_id) &&
+        (m = c.Ay.getGuildIconURL({ id: t.guild_id, icon: t.guild_icon, size: 40, canAnimate: !1 }));
     let S =
             (function (e) {
                 if (null == e) return !1;
@@ -50,9 +50,9 @@ function h(e) {
         guildId: t.guild_id,
         guildName: n?.name ?? t.guild_name,
         authorId: t?.author_id,
-        authorName: m,
+        authorName: g,
         channelName: null != a ? (0, r.m1)(a, d.default, o.A) : void 0,
-        avatarUrl: g,
+        avatarUrl: m,
         shouldShowBlurredThumbnailImage: p,
         shouldContainMediaWithBackground: S,
         shouldSpoiler: N,

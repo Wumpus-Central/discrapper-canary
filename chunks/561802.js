@@ -1,4 +1,4 @@
-var i = {
+var _ = {
     dotIn: "dotIn__64e61",
     fillIn: "fillIn__64e61",
     dotOut: "dotOut__64e61",
@@ -17,4 +17,4 @@ var i = {
     description: "description__64e61",
     outerRadioBorderStroke: "outerRadioBorderStroke__64e61",
 };
-o.r((e.exports = i));
+o.r((e.exports = _));

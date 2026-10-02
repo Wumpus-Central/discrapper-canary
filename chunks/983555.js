@@ -16,8 +16,8 @@ var i = n(607399),
     f = n(167189),
     p = n(721779),
     T = n(707592),
-    m = n(698441),
-    g = n(268313),
+    g = n(698441),
+    m = n(268313),
     S = n(842241),
     N = n(376943),
     C = n(741231),
@@ -75,7 +75,7 @@ async function K(e, t) {
         }
     }
     if (null == e || "" === e) return void i();
-    let r = m.Ay.getGuildScheduledEvent(t);
+    let r = g.Ay.getGuildScheduledEvent(t);
     if (null == r)
         try {
             let { default: i } = await Promise.resolve().then(n.bind(n, 496092));
@@ -140,7 +140,7 @@ function z(e) {
                               t({
                                   tab: i.APPS,
                                   applicationId: a,
-                                  section: (0, g.A)(r, T.type === f.I.APP_DIRECTORY_PROFILE ? r.ABOUT : r.STORE),
+                                  section: (0, m.A)(r, T.type === f.I.APP_DIRECTORY_PROFILE ? r.ABOUT : r.STORE),
                                   skuId: s,
                               });
                           })),
@@ -307,8 +307,8 @@ function z(e) {
                 !0
             );
         };
-    let { host: m, hostname: S, pathname: M, search: P, hash: U } = V.A.toURLSafe(e) ?? {},
-        w = V.A.isDiscordHostname(S ?? null) || V.A.isDiscordLocalhost(m ?? null, S ?? null);
+    let { host: g, hostname: S, pathname: M, search: P, hash: U } = V.A.toURLSafe(e) ?? {},
+        w = V.A.isDiscordHostname(S ?? null) || V.A.isDiscordLocalhost(g ?? null, S ?? null);
     if (w && (M?.startsWith("/application-directory") || M?.startsWith("/discovery/applications"))) {
         let e = M.split("/"),
             t = M?.startsWith("/discovery/applications"),

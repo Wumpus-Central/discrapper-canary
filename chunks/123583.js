@@ -162,7 +162,7 @@ let $ = i.memo(
 var Q = n(365990),
     Z = n(559647),
     X = n(757261);
-let J = i.memo(function (e) {
+let Y = i.memo(function (e) {
     let { onClick: t, disabled: n = !1 } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -186,7 +186,7 @@ let J = i.memo(function (e) {
         ],
     });
 });
-var Y = n(744682);
+var J = n(744682);
 let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hover", start: 90, duration: 40 } },
     et = i.memo(
         i.forwardRef(function (e, t) {
@@ -217,7 +217,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 }, [])),
                 (u = i.useCallback(
                     (e) =>
-                        (0, l.jsx)(Y.P, {
+                        (0, l.jsx)(J.P, {
                             ...e,
                             src: () => n.e("2890").then(n.t.bind(n, 279825, 19)),
                             ref: r,
@@ -349,7 +349,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 ? j && K.push((0, l.jsx)(F, { disabled: S, type: x, channelId: E.id }, "emoji"))
                 : K.push((0, l.jsx)(B.A, { disabled: S, type: x, channel: E }, "expression"))),
         z && T && K.push((0, l.jsx)(_, { channelId: E.id, type: x }, "appLauncher")),
-        q && K.push((0, l.jsx)(J, { onClick: y, disabled: S || M }, "submit")),
+        q && K.push((0, l.jsx)(Y, { onClick: y, disabled: S || M }, "submit")),
         0 === K.length)
             ? null
             : (0, l.jsx)("div", { className: W.Uo, children: K });

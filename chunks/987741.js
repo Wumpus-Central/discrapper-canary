@@ -31,10 +31,10 @@ function T(e, t) {
     let a = t(r);
     return null != a && (i.messageByMessageId.set(e, a), (0, _.V)(i, e, a), !0);
 }
-function m(e) {
+function g(e) {
     return T(e.messageId, (t) => (0, _.y4)(e, t));
 }
-function g() {
+function m() {
     let e = !1;
     return (
         A.forEach((t) => {
@@ -155,8 +155,8 @@ let O = new C(s.h, {
             n = t.id;
         return null != n && T(n, (e) => (0, l.IU)(e, t));
     },
-    MESSAGE_REACTION_ADD: m,
-    MESSAGE_REACTION_REMOVE: m,
+    MESSAGE_REACTION_ADD: g,
+    MESSAGE_REACTION_REMOVE: g,
     MESSAGE_REACTION_ADD_MANY: function (e) {
         let { messageId: t, reactions: n } = e;
         return T(t, (e) => e.addReactionBatch(n, o.default.getId()));
@@ -179,9 +179,9 @@ let O = new C(s.h, {
         for (let e of t) S(e) && (n = !0);
         return n;
     },
-    RELATIONSHIP_ADD: g,
-    RELATIONSHIP_UPDATE: g,
-    RELATIONSHIP_REMOVE: g,
+    RELATIONSHIP_ADD: m,
+    RELATIONSHIP_UPDATE: m,
+    RELATIONSHIP_REMOVE: m,
     LOGOUT: function () {
         (A.reset(), h.clear(), I.clear());
     },

@@ -1,6 +1,6 @@
 (n.d(t, {
     E$: () => h,
-    VR: () => m,
+    VR: () => g,
     ZH: () => f,
     f0: () => T,
     iD: () => A,
@@ -106,6 +106,6 @@ function T() {
             a.h.dispatch({ type: "SPOTIFY_SET_PROTOCOL_REGISTERED", isRegistered: e });
         });
 }
-function m(e, t) {
+function g(e, t) {
     a.h.dispatch({ type: "SPOTIFY_SET_ACTIVE_DEVICE", accountId: e, deviceId: t });
 }

@@ -16,8 +16,8 @@ var i,
     f = n(707554),
     p = n(475825),
     T = n(862482),
-    m = n(305866),
-    g = n(989395),
+    g = n(305866),
+    m = n(989395),
     S = n(235986),
     N = n(231723),
     C = n(818348),
@@ -42,7 +42,7 @@ function v(e) {
             ...O
         } = e,
         L = t === N.ip.ENTERING || t === N.ip.ENTERED;
-    s.useContext(g.A)({
+    s.useContext(m.A)({
         type: c.ImpressionTypes.PAGE,
         name: c.ImpressionNames.MODAL_ROOT_LEGACY,
         properties: { variant: S },
@@ -65,7 +65,7 @@ function v(e) {
         G = s.useMemo(() => ({ headerId: w, headerIdIsManaged: P, transitionState: t }), [w, P, t]);
     return (0, a.jsx)(N.CP.Provider, {
         value: G,
-        children: (0, a.jsx)(m.l, {
+        children: (0, a.jsx)(g.l, {
             className: R.Gg,
             role: r,
             returnRef: p,

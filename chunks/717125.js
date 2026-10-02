@@ -32,7 +32,7 @@ function T(e) {
         )
     );
 }
-function m(e, t) {
+function g(e, t) {
     if (
         !t.features.has(I.GuildFeatures.CREATOR_MONETIZABLE) &&
         !t.features.has(I.GuildFeatures.CREATOR_MONETIZABLE_PROVISIONAL)
@@ -54,7 +54,7 @@ function m(e, t) {
     }
     return !1;
 }
-function g(e, t) {
+function m(e, t) {
     let n = f[e];
     if (null == n) return !1;
     let i = u.A.getChannel(t);
@@ -62,7 +62,7 @@ function g(e, t) {
     let r = A.A.getGuild(i.getGuildId());
     if (null == r) return !1;
     let a = n.has(t),
-        s = m(i, r);
+        s = g(i, r);
     return a !== s && (s ? n.add(t) : n.delete(t), !0);
 }
 function S() {
@@ -78,7 +78,7 @@ function C(e) {
 }
 function O(e) {
     let { channel: t } = e;
-    return null != t.guild_id && g(t.guild_id, t.id);
+    return null != t.guild_id && m(t.guild_id, t.id);
 }
 class R extends i.Ay.Store {
     static displayName = "GatedChannelStore";
@@ -98,7 +98,7 @@ class R extends i.Ay.Store {
                     let i = u.A.getMutableGuildChannelsForGuild(e);
                     for (let e in i) {
                         let r = i[e];
-                        m(r, t) && n.add(r.id);
+                        g(r, t) && n.add(r.id);
                     }
                 })(e),
                 (n = f[e])),
@@ -135,7 +135,7 @@ let L = new R(r.h, {
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
             n = !1;
-        for (let e of t) null != e.guild_id && g(e.guild_id, e.id) && (n = !0);
+        for (let e of t) null != e.guild_id && m(e.guild_id, e.id) && (n = !0);
         return n;
     },
     GUILD_ROLE_SUBSCRIPTIONS_FETCH_RESTRICTIONS_SUCCESS: function (e) {

@@ -1,5 +1,5 @@
 let i, r;
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var a = n(132500),
     s = n(17928),
     l = n(506774),
@@ -21,7 +21,7 @@ function p() {
 function T() {
     p();
 }
-class m extends s.Ay.Store {
+class g extends s.Ay.Store {
     static displayName = "BrowserHandoffStore";
     initialize() {
         !1 !== l.w.get(A) && (h = _.isPlatformEmbedded && "stable" === window.GLOBAL_ENV.RELEASE_CHANNEL);
@@ -33,7 +33,7 @@ class m extends s.Ay.Store {
         return r;
     }
 }
-let g = new m(d.h, {
+let m = new g(d.h, {
     RPC_SERVER_READY: function (e) {
         ((i = `${location.protocol}//${location.host}/handoff?rpc=${e.port}`), f());
     },

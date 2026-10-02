@@ -1,12 +1,12 @@
 (n.d(t, {
-    CP: () => g,
+    CP: () => m,
     DZ: () => T,
     G_: () => h,
     ME: () => S,
     Qe: () => I,
     Sq: () => f,
     Xh: () => N,
-    ct: () => m,
+    ct: () => g,
     fd: () => A,
 }),
     n(938796));
@@ -110,7 +110,7 @@ function f(e, t, n, i, l) {
         };
     }
     let d = o(n),
-        _ = o(g(e), t),
+        _ = o(m(e), t),
         A = p(d, _, "RETURN_PREVIOUS_WHEN_CHANGED"),
         h = A("guild_flags") ?? 0,
         f = (_.guild_flags ?? 0) ^ h,
@@ -141,7 +141,7 @@ function p(e, t, n) {
 function T(e) {
     return null != e && null != e.end_time ? new Date(e.end_time).getTime() : null;
 }
-function m(e) {
+function g(e) {
     let {
         updateType: t = u.Y.CHANNEL,
         guildId: n,
@@ -152,7 +152,7 @@ function m(e) {
         label: h,
         location: f,
     } = e;
-    function m(e) {
+    function g(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
             i = t.muted ?? e?.channel_is_muted,
             r = null != t.message_notifications ? I[t.message_notifications] : e?.channel_message_notification_settings,
@@ -165,9 +165,9 @@ function m(e) {
             channel_muted_until: T(t.mute_config),
         };
     }
-    let g = m(A),
-        N = m(S(n, i), _),
-        C = p(g, N, "RETURN_PREVIOUS_WHEN_CHANGED"),
+    let m = g(A),
+        N = g(S(n, i), _),
+        C = p(m, N, "RETURN_PREVIOUS_WHEN_CHANGED"),
         O = l.A.getChannel(i),
         R = C("channel_flags") ?? 0,
         L = (N.channel_flags ?? 0) ^ R,
@@ -192,7 +192,7 @@ function m(e) {
         application_id: d,
     });
 }
-function g(e) {
+function m(e) {
     let t = d.Ay.isMuted(e),
         n = d.Ay.getMuteConfig(e);
     return {

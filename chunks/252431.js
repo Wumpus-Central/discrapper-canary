@@ -56,14 +56,14 @@ function T(e) {
         applicationId: null != e.application ? e.application.id : void 0,
     };
 }
-function m(e) {
+function g(e) {
     let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? T(e.item) : e.item;
     if (!h.initialized || !I(t) || h.notifCenterIds.has(t.id)) return !1;
     (h.notifCenterIds.add(t.id),
         (h.notifCenterItems = [t, ...h.notifCenterItems]),
         h.notifCenterItems.sort((e, t) => u.default.compare(t.id, e.id)));
 }
-function g(e, t) {
+function m(e, t) {
     h.notifCenterItems = h.notifCenterItems.map((n) => (e.includes(n.id) ? { ...n, acked: t } : n)).filter(I);
 }
 function S(e, t, n) {
@@ -191,23 +191,23 @@ let L = new R(r.h, {
     LOGOUT: () => f(),
     NOTIFICATION_CENTER_ITEMS_ACK: function (e) {
         let { ids: t } = e;
-        g(t, !0);
+        m(t, !0);
     },
     NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: function (e) {
         let { ids: t } = e;
-        g(t, !1);
+        m(t, !1);
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: t } = e;
         O(t);
     },
-    NOTIFICATION_CENTER_ITEM_CREATE: m,
+    NOTIFICATION_CENTER_ITEM_CREATE: g,
     NOTIFICATION_CENTER_ITEM_DELETE: function (e) {
         let { id: t } = e;
         if (!h.notifCenterIds.has(t)) return !1;
         (h.notifCenterIds.delete(t), (h.notifCenterItems = h.notifCenterItems.filter((e) => e.id !== t)));
     },
-    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: m,
+    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: g,
     LOAD_NOTIFICATION_CENTER_ITEMS: function () {
         h.loading = !0;
     },

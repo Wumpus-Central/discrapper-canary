@@ -24,8 +24,8 @@ let u = new Map(),
     f = new Set(),
     p = !1,
     T = null,
-    m = !1,
-    g = null,
+    g = !1,
+    m = null,
     S = new Set(),
     N = new Map(),
     C = [],
@@ -72,7 +72,7 @@ class k extends i.Ay.Store {
         return T;
     }
     hasFetchedProjectLimit() {
-        return m;
+        return g;
     }
     getProject(e) {
         return u.get(e) ?? null;
@@ -122,7 +122,7 @@ class k extends i.Ay.Store {
         return w.get(e)?.get(t) ?? U;
     }
     getProjectsFetchState() {
-        return g;
+        return m;
     }
     hasFetchedGuildProjects(e) {
         return S.has(e);
@@ -167,9 +167,9 @@ let Y = new k(r.h, {
             0 === v.size &&
             0 === w.size &&
             0 === b.size &&
-            null == g &&
+            null == m &&
             null == T &&
-            !m
+            !g
         )
             return !1;
         (u.clear(),
@@ -187,15 +187,15 @@ let Y = new k(r.h, {
             v.clear(),
             w.clear(),
             b.clear(),
-            (g = null),
+            (m = null),
             (p = !1),
             (T = null),
-            (m = !1),
+            (g = !1),
             B.clear());
     },
     VIBEGRATIONS_PROJECTS_FETCH_START: function (e) {
         let { guildId: t } = e;
-        (null != t && N.set(t, "loading"), (g = { type: "loading" }));
+        (null != t && N.set(t, "loading"), (m = { type: "loading" }));
     },
     VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
@@ -205,15 +205,15 @@ let Y = new k(r.h, {
         for (let e of (null != n && (S.add(n), N.set(n, "success")), _.keys())) u.has(e) || _.delete(e);
         for (let e of E.keys()) u.has(e) || E.delete(e);
         for (let [e, t] of I) u.has(t) || I.delete(e);
-        ((p = !0), (g = { type: "success", fetchedAt: Date.now() }));
+        ((p = !0), (m = { type: "success", fetchedAt: Date.now() }));
     },
     VIBEGRATIONS_PROJECTS_FETCH_FAIL: function (e) {
         let { guildId: t } = e;
-        (null != t && N.set(t, "error"), (g = { type: "error", fetchedAt: Date.now() }));
+        (null != t && N.set(t, "error"), (m = { type: "error", fetchedAt: Date.now() }));
     },
     VIBEGRATIONS_PROJECT_LIMIT_FETCH_SETTLE: function (e) {
         let { maxProjects: t } = e;
-        ((T = t), (m = !0));
+        ((T = t), (g = !0));
     },
     VIBEGRATIONS_PROJECT_CREATE_SUCCESS: F,
     VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: F,

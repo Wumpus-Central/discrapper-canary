@@ -21,13 +21,13 @@ let _ = d.DISCONNECTED,
     f = null,
     p = !1,
     T = !1,
-    m = !1,
-    g = null;
+    g = !1,
+    m = null;
 function S(e) {
     let t = e.currencyCode.toLowerCase(),
         n = e.price / 100,
         i =
-            "BG" === g && t === u.Yr.EUR
+            "BG" === m && t === u.Yr.EUR
                 ? (0, o.ze)(n, { convertToMajorUnits: !1 })
                 : (0, o.Gp)(n, t, { convertToMajorUnits: !1 });
     return { ...e, price: e.price, currencyCode: t, priceString: i };
@@ -57,7 +57,7 @@ function N(e) {
             T = !1;
             break;
         case c.SUBSCRIPTION:
-            m = !1;
+            g = !1;
     }
 }
 class C extends a.Ay.Store {
@@ -90,13 +90,13 @@ class C extends a.Ay.Store {
         return f;
     }
     isFetchingGoogleSkus() {
-        return m || T;
+        return g || T;
     }
     isFetchingProducts() {
-        return m || T;
+        return g || T;
     }
     getUserCountry() {
-        return g;
+        return m;
     }
 }
 let O = new C(s.h, {
@@ -105,11 +105,11 @@ let O = new C(s.h, {
         _ = t;
     },
     GPLAY_FETCH_SUBSCRIPTION_SKUS_START: function () {
-        m = !0;
+        g = !0;
     },
     GPLAY_SUBSCRIPTION_SKUS_LOADED: N,
     GPLAY_FETCH_SUBSCRIPTION_SKUS_FAILED: function () {
-        m = !1;
+        g = !1;
     },
     GPLAY_FETCH_IN_APP_SKUS_START: function () {
         T = !0;
@@ -137,6 +137,6 @@ let O = new C(s.h, {
     },
     GPLAY_SET_USER_COUNTRY: function (e) {
         let { countryCode: t } = e;
-        g = t;
+        m = t;
     },
 });

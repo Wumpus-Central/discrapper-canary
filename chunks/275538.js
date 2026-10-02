@@ -31,8 +31,8 @@ var x = n(414121),
     C = n(636537),
     v = n(765548),
     S = n(626584),
-    j = n(751124),
-    _ = n(625494);
+    _ = n(751124),
+    j = n(625494);
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(508300));
 var b = n(284009),
     T = n.n(b),
@@ -91,8 +91,8 @@ let D = new (class {
     }
     release() {}
 })();
-var F = n(652215);
-let M = new S.A("useAuthWebsocket");
+var M = n(652215);
+let F = new S.A("useAuthWebsocket");
 var K = n(293731),
     W = n(280450),
     B = n(403362),
@@ -195,7 +195,7 @@ function X(e) {
                         (function (e) {
                             let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                                 n =
-                                    U.isPlatformEmbedded && H.Ay.supportsFeature(F.BYE.WEBAUTHN)
+                                    U.isPlatformEmbedded && H.Ay.supportsFeature(M.BYE.WEBAUTHN)
                                         ? H.Ay.webAuthnAuthenticate
                                         : K.J;
                             g.A.authenticatePasswordless({
@@ -272,13 +272,13 @@ function Y(e) {
                     (c({ step: I.INITIALIZING }),
                         t
                             ? r((e) => e + 1)
-                            : (M.info(
+                            : (F.info(
                                   "document is not visible, will defer reconnection when document becomes visible.",
                               ),
                               l(!0)));
                 }),
                 p = a.useCallback(() => {
-                    (M.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session."),
+                    (F.error("Could not complete Remote Auth login, trying to restart with a new Remote Auth session."),
                         c({ step: I.INITIALIZING }),
                         u.pending || u.fail(h));
                 }, [h, u]);
@@ -287,7 +287,7 @@ function Y(e) {
                     t &&
                         i &&
                         o.step === I.INITIALIZING &&
-                        (M.info("reconnecting, now that document is visible"), l(!1), r((e) => e + 1));
+                        (F.info("reconnecting, now that document is visible"), l(!1), r((e) => e + 1));
                 }, [o, t, i, l]),
                 a.useEffect(() => {
                     let t = Date.now();
@@ -295,12 +295,12 @@ function Y(e) {
                         return `[${Date.now() - t}ms] ${e}`;
                     }
                     function r(e) {
-                        return M.info(s(e));
+                        return F.info(s(e));
                     }
                     let a = `${window.GLOBAL_ENV.REMOTE_AUTH_ENDPOINT}/?v=2`;
                     a.startsWith("//") && (a = `wss:${a}`);
-                    let i = (0, j.A)(a);
-                    M.info(`[0ms] connecting to ${a}`);
+                    let i = (0, _.A)(a);
+                    F.info(`[0ms] connecting to ${a}`);
                     let l = null,
                         o = null,
                         m = null,
@@ -326,7 +326,7 @@ function Y(e) {
                                 return;
                             }
                             case "pending_remote_init": {
-                                (u.succeed(), _._.dispatch(F.jej.WAVE_EMPHASIZE));
+                                (u.succeed(), j._.dispatch(M.jej.WAVE_EMPHASIZE));
                                 let e = await D.publicKeyFingerprint(f());
                                 if (e !== l.fingerprint) throw Error(`bad fingerprint ${e} !== ${l.fingerprint}`);
                                 (r("handshake complete awaiting remote auth."),
@@ -338,7 +338,7 @@ function Y(e) {
                                 if (null == t) return void p();
                                 (c({ step: I.PENDING_LOGIN, ticket: t }),
                                     C.Bo.post({
-                                        url: F.Rsh.REMOTE_AUTH_LOGIN,
+                                        url: M.Rsh.REMOTE_AUTH_LOGIN,
                                         body: { ticket: t },
                                         oldFormErrors: !0,
                                         rejectWithError: !0,
@@ -353,7 +353,7 @@ function Y(e) {
                                 return;
                             }
                             case "pending_ticket": {
-                                (_._.dispatch(F.jej.WAVE_EMPHASIZE),
+                                (j._.dispatch(M.jej.WAVE_EMPHASIZE),
                                     r("remote auth handshake started, awaiting ticket/cancel."));
                                 let e = l.encrypted_user_payload,
                                     t = await P(f(), e);
@@ -378,7 +378,7 @@ function Y(e) {
                                 E = !0;
                                 return;
                             default:
-                                M.warn(s("received unsupported message"));
+                                F.warn(s("received unsupported message"));
                         }
                     }
                     async function x() {

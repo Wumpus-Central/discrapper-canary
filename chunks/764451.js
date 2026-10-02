@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(67811),
     p = n(28863),
     T = n(417098),
-    m = n(364522),
-    g = n(398590),
+    g = n(364522),
+    m = n(398590),
     S = n(58736),
     N = n(856488),
     C = n(269880),
@@ -553,7 +553,7 @@ function et(e) {
                                         icon: o.P,
                                         "aria-label": X.intl.string(X.t.cpT0Cq),
                                         variant: "icon-only",
-                                        onClick: g.jH,
+                                        onClick: m.jH,
                                     }),
                                 ],
                             }),
@@ -564,7 +564,7 @@ function et(e) {
                     (0, i.jsxs)("div", {
                         className: V.MY,
                         children: [
-                            (0, i.jsx)(m.Ip, {
+                            (0, i.jsx)(g.Ip, {
                                 fade: !0,
                                 className: V.pz,
                                 children:

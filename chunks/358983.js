@@ -1,4 +1,4 @@
-var i = {
+var _ = {
     button: "button__75098",
     buttonChildrenWrapper: "buttonChildrenWrapper__75098",
     buttonChildren: "buttonChildren__75098",
@@ -49,4 +49,4 @@ var i = {
     hasTrailing: "hasTrailing__75098",
     hasTags: "hasTags__75098",
 };
-o.r((e.exports = i));
+o.r((e.exports = _));

@@ -10,7 +10,7 @@ n.d(t, {
     ok: () => h,
     uA: () => c,
     vI: () => d,
-    wh: () => m,
+    wh: () => g,
 });
 var i = n(867051),
     r = n(329972),
@@ -92,7 +92,7 @@ function p(e, t) {
 function T(e, t) {
     return (0, i.hZ)(e, "gameApplicationIds", t);
 }
-function m(e) {
+function g(e) {
     return (
         null != e &&
         ((0, r.v)("guild_record") ? c.has(e.nsfwLevel) : c.has(e.ownerConfiguredContentLevel ?? o.ftr.DEFAULT))

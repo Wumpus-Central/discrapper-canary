@@ -16,22 +16,22 @@ var i = n(812729),
     f = n(732755),
     p = n(142346);
 let T = [f.A, p.Ay],
-    m = [];
-function g() {
+    g = [];
+function m() {
     let e = [];
     for (let t of T) {
         let n = t.getActivity();
         null != n && e.push(n);
     }
-    return !r()(e, m) && ((m = e), !0);
+    return !r()(e, g) && ((g = e), !0);
 }
 class S extends o.Ay.Store {
     static displayName = "FirstPartyRichPresenceStore";
     initialize() {
-        this.syncWith(T, g);
+        this.syncWith(T, m);
     }
     getActivities() {
-        return m;
+        return g;
     }
 }
 let N = new S(d.h);

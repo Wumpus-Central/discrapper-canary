@@ -49,7 +49,7 @@ var B = n(734057),
     Q = n(427262),
     Z = n(375708),
     X = n(307126);
-function J(e) {
+function Y(e) {
     let { emoji: t } = e;
     return (0, l.jsx)(C.m, {
         text: t.name,
@@ -58,7 +58,7 @@ function J(e) {
         children: (0, l.jsx)(N.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
     });
 }
-function Y(e) {
+function J(e) {
     let { emoji: t } = e;
     return (0, l.jsx)(C.m, {
         text: t.name,
@@ -282,13 +282,13 @@ class ex extends i.PureComponent {
                         return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
-                            children: [(0, l.jsx)(J, { emoji: o.emoji }), a],
+                            children: [(0, l.jsx)(Y, { emoji: o.emoji }), a],
                         });
                     case "customEmoji":
                         return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
-                            children: [(0, l.jsx)(Y, { emoji: o.emoji }), a],
+                            children: [(0, l.jsx)(J, { emoji: o.emoji }), a],
                         });
                     case "textMention":
                         return (0, l.jsxs)(ep, {

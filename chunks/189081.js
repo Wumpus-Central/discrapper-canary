@@ -18,10 +18,10 @@ let h = !1,
     f = {},
     p = new Set(),
     T = {},
-    m = {},
-    g = !1;
+    g = {},
+    m = !1;
 function S() {
-    l.w.set(E, { ...A(), activeLaunchOptionIds: m });
+    l.w.set(E, { ...A(), activeLaunchOptionIds: g });
 }
 function N() {
     l.w.set(E, { ...A(), activeLibraryApplicationBranchIds: T });
@@ -51,7 +51,7 @@ class y extends s.Ay.Store {
         this.waitFor(u.default);
         let e = l.w.get(E);
         null != e &&
-            (null == e.activeLaunchOptionIds ? S() : (m = e.activeLaunchOptionIds),
+            (null == e.activeLaunchOptionIds ? S() : (g = e.activeLaunchOptionIds),
             null == e.activeLibraryApplicationBranchIds ? N() : (T = e.activeLibraryApplicationBranchIds));
     }
     get libraryApplications() {
@@ -100,7 +100,7 @@ class y extends s.Ay.Store {
         return p.has((0, c.gW)(e, t));
     }
     getActiveLaunchOptionId(e, t) {
-        return m[(0, c.gW)(e, t)];
+        return g[(0, c.gW)(e, t)];
     }
     get fetched() {
         return h;
@@ -113,7 +113,7 @@ class y extends s.Ay.Store {
             .value();
     }
     get hasRemovedLibraryApplicationThisSession() {
-        return g;
+        return m;
     }
     whenInitialized(e) {
         this.addConditionalChangeListener(() => {
@@ -137,13 +137,13 @@ let D = new y(o.h, {
         let { applicationId: t, branchId: n, flags: i } = e,
             r = (0, c.gW)(t, n),
             s = R(t, n);
-        (null != s && !s.isHidden() && a.Lt(i, _.hM6.HIDDEN) && (g = !0), p.add(r));
+        (null != s && !s.isHidden() && a.Lt(i, _.hM6.HIDDEN) && (m = !0), p.add(r));
     },
     LIBRARY_APPLICATION_FLAGS_UPDATE_SUCCESS: O,
     LIBRARY_APPLICATION_UPDATE: O,
     LIBRARY_APPLICATION_ACTIVE_LAUNCH_OPTION_UPDATE: function (e) {
         let { applicationId: t, branchId: n, launchOptionId: i } = e;
-        ((m[(0, c.gW)(t, n)] = i), S());
+        ((g[(0, c.gW)(t, n)] = i), S());
     },
     LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE: function (e) {
         let { applicationId: t, branchId: n } = e;

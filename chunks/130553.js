@@ -17,8 +17,8 @@ var r = n(192308),
     f = n(498642),
     p = n(873985),
     T = n(309010),
-    m = n(116956),
-    g = n(287809),
+    g = n(116956),
+    m = n(287809),
     S = n(927813),
     N = n(652896),
     C = n(325278),
@@ -54,10 +54,10 @@ function x(e, t) {
 }
 function k(e, t) {
     let n = t ?? p.A.getPreferredRegion();
-    null != n && n !== p.A.getRegion(m.A.getHostname(e)) && (0, u.dA)(e, n);
+    null != n && n !== p.A.getRegion(g.A.getHostname(e)) && (0, u.dA)(e, n);
 }
 function F(e, t) {
-    if (m.A.getAllActiveStreamKeys().includes(e)) return;
+    if (g.A.getAllActiveStreamKeys().includes(e)) return;
     let n = y[e] ?? new d.Ep();
     ((y[e] = n),
         n.start(t ? b : v, () => {
@@ -87,7 +87,7 @@ class B extends _.A {
         let { streamKey: t } = e;
         (G(t), U());
         let { ownerId: n, guildId: i } = (0, N.Iy)(t);
-        if (null == i || null == n || n !== g.default.getCurrentUser()?.id) return;
+        if (null == i || null == n || n !== m.default.getCurrentUser()?.id) return;
         let r = f.A.getMemberCount(i);
         null == r || r <= C.oe || r > C.G1 || (h.wv.getSetting() && R(t));
     };

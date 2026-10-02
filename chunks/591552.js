@@ -35,7 +35,7 @@ function T(e) {
         a = p(n.prompts ?? A[t]?.prompts ?? [], i, r);
     A[t] = { ...A[t], ...n, prompts: a };
 }
-function m(e, t) {
+function g(e, t) {
     if (null == h[e]) return;
     let n = {};
     (Object.keys(h[e]).forEach((i) => {
@@ -48,7 +48,7 @@ function m(e, t) {
     }),
         (A[e] = { ...A[e], responses: i }));
 }
-let g = [],
+let m = [],
     S = [],
     N = [],
     C = [];
@@ -58,10 +58,10 @@ class O extends a.Ay.Store {
         this.waitFor(o.A, _.Ay, l.A);
     }
     getOnboardingPromptsForOnboarding(e) {
-        return A[e]?.onboardingPrompts ?? g;
+        return A[e]?.onboardingPrompts ?? m;
     }
     getOnboardingPrompts(e) {
-        return A[e]?.prompts ?? g;
+        return A[e]?.prompts ?? m;
     }
     getOnboardingResponses(e) {
         return l.A.isFullServerPreview(e) ? Array.from(l.A.getOnboardingResponses(e) ?? S) : (A[e]?.responses ?? S);
@@ -86,7 +86,7 @@ class O extends a.Ay.Store {
     }
     getEnabledOnboardingPrompts(e) {
         let t = A[e];
-        return l.A.isFullServerPreview(e) ? (t?.prompts ?? g) : null != t && t.enabled ? (t.prompts ?? g) : g;
+        return l.A.isFullServerPreview(e) ? (t?.prompts ?? m) : null != t && t.enabled ? (t.prompts ?? m) : m;
     }
     getDefaultChannelIds(e) {
         return A[e]?.defaultChannelIds ?? N;
@@ -182,7 +182,7 @@ let R = new O(s.h, {
             connections: c ?? [],
             additionalConnections: E ?? [],
         }),
-            h || m(t, a),
+            h || g(t, a),
             (I[t] = Date.now()));
     },
     GUILD_ONBOARDING_PROMPTS_FETCH_FAILURE: function () {
@@ -204,7 +204,7 @@ let R = new O(s.h, {
     },
     GUILD_ONBOARDING_UPDATE_RESPONSES_SUCCESS: function (e) {
         let { guildId: t, options: n, prompts_seen: i, options_seen: r } = e;
-        m(t, n);
+        g(t, n);
         let a = A[t];
         if (null == a) return !1;
         let s = p(a.prompts, i, r);

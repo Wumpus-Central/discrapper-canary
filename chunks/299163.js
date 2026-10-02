@@ -102,7 +102,7 @@ class T extends r.PureComponent {
                 stickToMarkers: f,
                 className: p,
                 children: T,
-                barStyles: g,
+                barStyles: m,
                 fillStyles: S,
                 mini: N,
                 hideBubble: C,
@@ -162,7 +162,7 @@ class T extends r.PureComponent {
         return (0, i.jsx)(A.D, {
             ...F,
             children: (r) =>
-                (0, i.jsx)(m, {
+                (0, i.jsx)(g, {
                     active: t,
                     keyboardFocused: n && this.context.keyboardModeEnabled,
                     children: (a) =>
@@ -207,7 +207,7 @@ class T extends r.PureComponent {
                                     (0, i.jsx)("div", { className: I.track, children: H }),
                                     (0, i.jsx)("div", {
                                         className: s()(I.bar, v),
-                                        style: g,
+                                        style: m,
                                         children: (0, i.jsx)("div", {
                                             className: I.barFill,
                                             style: { ...S, width: V },
@@ -409,7 +409,7 @@ class T extends r.PureComponent {
         (i?.(o), this.setState({ value: o }));
     };
 }
-function m(e) {
+function g(e) {
     let { active: t, keyboardFocused: n, children: i } = e,
         [a, s] = r.useState(!1);
     return i({

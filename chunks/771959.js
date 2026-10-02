@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => m, DA: () => T, QQ: () => f, UW: () => p, mj: () => I, zW: () => h });
+n.d(t, { Ay: () => g, DA: () => T, QQ: () => f, UW: () => p, mj: () => I, zW: () => h });
 var i = n(582128),
     r = n(196765),
     a = n(17928),
@@ -31,7 +31,7 @@ function T() {
         t = (0, l.mB)(s.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
     return e && t;
 }
-let m = i.memo(function () {
+let g = i.memo(function () {
     let { hasAccess: e, isFreemium: t } = (0, c.TW)("FavoritesGuildIntroPopover"),
         n = (0, a.bG)([d.A], () => !1 === d.A.favoriteGuildVisibleSetting),
         r = (0, u.A)(),

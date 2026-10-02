@@ -29,20 +29,20 @@ function I(e, t, n) {
 let f = {},
     p = !1,
     T = (e, t) => `guild-${e}-${t}`;
-function m(e) {
+function g(e) {
     let t,
         n = [];
     return (n.push(((t = e.joinRequestId), `guild-join-request=${t}`)), n.push(T(e.guildId, e.applicationStatus)), n);
 }
-let g = new s.J(m, (e) => `${e.joinRequestId}`),
-    S = new s.J(m, (e) => `${e.joinRequestId}`),
-    N = new s.J(m, (e) => `${e.actionedAt}`);
+let m = new s.J(g, (e) => `${e.joinRequestId}`),
+    S = new s.J(g, (e) => `${e.joinRequestId}`),
+    N = new s.J(g, (e) => `${e.actionedAt}`);
 function C(e) {
-    return g.get(e);
+    return m.get(e);
 }
 function O(e) {
     ((v[e.joinRequestId] = e),
-        g.set(e.joinRequestId, e),
+        m.set(e.joinRequestId, e),
         (0, c.ar)(e.applicationStatus) && (N.delete(e.joinRequestId), S.set(e.joinRequestId, e)),
         (0, c.mf)(e.applicationStatus) && (S.delete(e.joinRequestId), N.set(e.joinRequestId, e)));
 }
@@ -69,7 +69,7 @@ class M extends a.Ay.Store {
     }
     getRequests(e, t) {
         let n = T(e, t);
-        return (0, c.mf)(t) ? N.values(n) : (0, c.ar)(t) ? S.values(n) : g.values(n);
+        return (0, c.mf)(t) ? N.values(n) : (0, c.ar)(t) ? S.values(n) : m.values(n);
     }
     getSubmittedGuildJoinRequestTotal(e) {
         return A[e];
@@ -126,7 +126,7 @@ let P = new M(l.h, {
     GUILD_JOIN_REQUEST_DELETE: function (e) {
         let { id: t, guildId: n } = e,
             i = C(t);
-        null != i && (I(n, "DELETED", i.applicationStatus), delete v[t], g.delete(t), S.delete(t), N.delete(t));
+        null != i && (I(n, "DELETED", i.applicationStatus), delete v[t], m.delete(t), S.delete(t), N.delete(t));
     },
     GUILD_JOIN_REQUESTS_SET_APPLICATION_TAB: function (e) {
         let { guildId: t, applicationTab: n } = e;

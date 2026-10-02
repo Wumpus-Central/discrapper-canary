@@ -1,4 +1,4 @@
-n.d(t, { o: () => m, y: () => g });
+n.d(t, { o: () => g, y: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(132500),
@@ -16,7 +16,7 @@ var i = n(477900),
     f = n(427209),
     p = n(97483),
     T = n(655214);
-function m(e, t) {
+function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.jg,
         {
             position: i = p.jg.position,
@@ -26,7 +26,7 @@ function m(e, t) {
         } = n;
     return { message: e, id: (0, a.A)(), type: t, options: { position: i, component: r, duration: s, appContext: l } };
 }
-let g = r.memo(function (e) {
+let m = r.memo(function (e) {
     let { message: t, type: n, id: r, options: { component: a = p.jg.component } = p.jg } = e;
     return null != a
         ? a
