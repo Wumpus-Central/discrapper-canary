@@ -131,25 +131,10 @@
     inset: 0
 }
 
-.playsPill_b71362,
+.launch_b71362,
 .selectedGlyph_b71362 {
     background-color: var(--background-scrim);
     color: var(--white)
-}
-
-.playsPill_b71362 {
-    border-radius: var(--radius-round);
-    bottom: var(--space-4);
-    gap: var(--space-4);
-    inset-inline-start: var(--space-4);
-    min-height: var(--space-20);
-    opacity: 0;
-    padding: 0 var(--space-6)
-}
-
-.card_b71362:focus-within .playsPill_b71362,
-.card_b71362:hover .playsPill_b71362 {
-    opacity: 1
 }
 
 .launch_b71362 {
@@ -157,10 +142,8 @@
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
-    background-color: var(--background-scrim);
     border: 0;
     border-radius: var(--radius-round);
-    color: var(--white);
     cursor: pointer;
     display: flex;
     height: var(--space-24);
@@ -184,9 +167,7 @@
 }
 
 @media (hover:none) {
-
-    .launch_b71362,
-    .playsPill_b71362 {
+    .launch_b71362 {
         opacity: 1
     }
 }
@@ -204,4 +185,4 @@
     overflow-wrap: anywhere
 }
 
-/*# sourceMappingURL=af803fbd7f7fa127.css.map*/
+/*# sourceMappingURL=830d489e641c4493.css.map*/

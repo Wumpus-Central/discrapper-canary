@@ -8,7 +8,6 @@ e.exports = {
     zf: "artworkFallback_b71362",
     Lw: "overlay_b71362",
     Kp: "selectedGlyph_b71362",
-    vY: "playsPill_b71362",
     ql: "launch_b71362",
     Qq: "text_b71362",
     VA: "subtitle_b71362",
