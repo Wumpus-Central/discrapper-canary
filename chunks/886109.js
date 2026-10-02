@@ -1,39 +1,42 @@
-n.d(t, { A: () => M });
+n.d(t, { A: () => U });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
     s = n.n(r),
-    a = n(17928),
-    o = n(342952),
-    u = n(922016),
-    c = n(778712),
-    d = n(939249),
-    h = n(834730),
-    m = n(565645),
-    p = n(114166),
-    f = n(209932),
-    g = n(813564),
-    x = n(73153),
-    S = n(734057),
-    E = n(927813),
-    y = n(714736);
+    a = n(202091),
+    o = n(17928),
+    u = n(342952),
+    c = n(922016),
+    d = n(778712),
+    h = n(866665),
+    m = n(939249),
+    p = n(834730),
+    f = n(866323),
+    g = n(565645),
+    x = n(114166),
+    S = n(209932),
+    E = n(813564),
+    y = n(73153),
+    C = n(734057),
+    A = n(927813),
+    b = n(714736);
 n(980504);
-let C = 7.5 * E.A.Millis.SECOND,
-    A = new Map(),
-    b = new Map();
-class I extends a.Ay.Store {
+let I = 7.5 * A.A.Millis.SECOND,
+    v = new Map(),
+    N = new Map();
+class T extends o.Ay.Store {
     initialize() {
-        this.waitFor(S.A);
+        this.waitFor(C.A);
     }
     static displayName = "SoundboardEchoStore";
     getSoundboardEchoes() {
-        return Array.from(A.values()).sort((e, t) => e.lastPlayedAt - t.lastPlayedAt);
+        return v;
     }
     getSoundboardEcho(e) {
-        return A.get(e);
+        return v.get(e);
     }
 }
-let v = new I(x.h, {
+let j = new T(y.h, {
     VOICE_CHANNEL_EFFECT_SEND: function (e) {
         let {
             soundId: t,
@@ -47,9 +50,9 @@ let v = new I(x.h, {
             isEcho: u,
         } = e;
         if (null == t || null == s) return !1;
-        let c = S.A.getChannel(n)?.getGuildId();
+        let c = C.A.getChannel(n)?.getGuildId();
         if (null == c) return !1;
-        let { enabled: d } = (0, y.j)(c, "handleSoundPlayStart");
+        let { enabled: d } = (0, b.j)(c, "handleSoundPlayStart");
         if (!d) return !1;
         let h = {
             soundId: t,
@@ -66,9 +69,9 @@ let v = new I(x.h, {
             let t,
                 n,
                 { soundId: l, sound: i, authorId: r, playedByUserId: s, isEcho: a } = e,
-                o = A.get(l);
+                o = v.get(l);
             (null == o
-                ? A.set(l, {
+                ? v.set(l, {
                       sound: i,
                       count: 1,
                       authorId: r,
@@ -76,164 +79,231 @@ let v = new I(x.h, {
                       mostRecentPlayedByUserId: a ? s : null,
                       lastPlayedAt: Date.now(),
                   })
-                : A.set(l, {
+                : v.set(l, {
                       ...o,
                       count: o.count + 1,
                       playedByUserIds: o.playedByUserIds.add(s),
                       mostRecentPlayedByUserId: s === r ? o.mostRecentPlayedByUserId : s,
                       lastPlayedAt: Date.now(),
                   }),
-                null != (t = b.get(l)) && clearTimeout(t),
+                null != (t = N.get(l)) && clearTimeout(t),
                 (n = setTimeout(() => {
-                    x.h.dispatch({ type: "SOUNDBOARD_ECHO_EXPIRED", soundId: l });
-                }, C)),
-                b.set(l, n));
+                    y.h.dispatch({ type: "SOUNDBOARD_ECHO_EXPIRED", soundId: l });
+                }, I)),
+                N.set(l, n));
         })({ soundId: t, sound: h, authorId: i ?? l, playedByUserId: l, isEcho: u });
     },
     VOICE_CHANNEL_SELECT: function (e) {
-        (b.forEach(clearTimeout), b.clear(), A.clear());
+        (N.forEach(clearTimeout), N.clear(), v.clear());
     },
     SOUNDBOARD_ECHO_EXPIRED: function (e) {
         let { soundId: t } = e;
-        (b.delete(t), A.delete(t));
+        (N.delete(t), v.delete(t));
     },
 });
-var N = n(994500),
-    T = n(287809),
-    j = n(435558),
-    k = n.n(j),
-    _ = n(562153),
-    R = n(375708),
-    w = n(858981);
-function O(e) {
+var k = n(994500),
+    _ = n(287809),
+    R = n(435558),
+    w = n.n(R),
+    O = n(562153),
+    L = n(375708),
+    P = n(858981);
+function M(e) {
     let { guildId: t, channelId: n, sound: i, playedByUserIds: r } = e,
-        { emojiId: s, emojiName: o, emojiAnimated: u, name: c } = i,
+        { emojiId: s, emojiName: a, emojiAnimated: u, name: c } = i,
         d = (function (e) {
             let { playedByUserIds: t, guildId: n, channelId: l } = e,
                 i = t.size,
-                r = (0, a.yK)([T.default, N.A], () =>
-                    k()(Array.from(t))
-                        .reject((e) => N.A.isBlockedOrIgnored(e))
+                r = (0, o.yK)([_.default, k.A], () =>
+                    w()(Array.from(t))
+                        .reject((e) => k.A.isBlockedOrIgnored(e))
                         .take(3)
                         .map((e) => {
-                            let t = T.default.getUser(e);
-                            return _.Ay.getName(n, l, t);
+                            let t = _.default.getUser(e);
+                            return O.Ay.getName(n, l, t);
                         })
                         .value(),
                 ),
                 s = Math.max(0, i - r.length);
             if (1 === r.length)
-                if (s > 0) return R.intl.formatToPlainString(R.t.EXaquk, { a: r[0], n: s });
-                else return R.intl.formatToPlainString(R.t["DU+Rd+"], { a: r[0] });
+                if (s > 0) return L.intl.formatToPlainString(L.t.EXaquk, { a: r[0], n: s });
+                else return L.intl.formatToPlainString(L.t["DU+Rd+"], { a: r[0] });
             if (2 === r.length)
-                if (s > 0) return R.intl.formatToPlainString(R.t.EO8JM8, { a: r[0], b: r[1], n: s });
-                else return R.intl.formatToPlainString(R.t.qr8Cg3, { a: r[0], b: r[1] });
+                if (s > 0) return L.intl.formatToPlainString(L.t.EO8JM8, { a: r[0], b: r[1], n: s });
+                else return L.intl.formatToPlainString(L.t.qr8Cg3, { a: r[0], b: r[1] });
             return 3 !== r.length
-                ? R.intl.formatToPlainString(R.t.P5JeeM, { n: s })
+                ? L.intl.formatToPlainString(L.t.P5JeeM, { n: s })
                 : s > 0
-                  ? R.intl.formatToPlainString(R.t["+z+JUw"], { a: r[0], b: r[1], c: r[2], n: s })
-                  : R.intl.formatToPlainString(R.t["3Zq6FM"], { a: r[0], b: r[1], c: r[2] });
+                  ? L.intl.formatToPlainString(L.t["+z+JUw"], { a: r[0], b: r[1], c: r[2], n: s })
+                  : L.intl.formatToPlainString(L.t["3Zq6FM"], { a: r[0], b: r[1], c: r[2] });
         })({ playedByUserIds: r, guildId: t, channelId: n });
     return (0, l.jsx)("div", {
-        className: w.kL,
+        className: P.kL,
         children: (0, l.jsxs)("div", {
-            className: w.Yq,
+            className: P.Yq,
             children: [
-                (null != o || null != s) && (0, l.jsx)(m.A, { className: w.Zg, emojiId: s, emojiName: o, animated: u }),
+                (null != a || null != s) && (0, l.jsx)(g.A, { className: P.Zg, emojiId: s, emojiName: a, animated: u }),
                 (0, l.jsxs)("div", {
-                    className: w.FS,
+                    className: P.FS,
                     children: [
-                        (0, l.jsx)(h.E, { variant: "text-sm/medium", children: c }),
-                        (0, l.jsx)(h.E, { variant: "text-xs/medium", color: "text-muted", children: d }),
+                        (0, l.jsx)(p.E, { variant: "text-sm/medium", children: c }),
+                        (0, l.jsx)(p.E, { variant: "text-xs/medium", color: "text-muted", children: d }),
                     ],
                 }),
             ],
         }),
     });
 }
-var L = n(998812);
-function P(e) {
+var D = n(998812);
+function V(e) {
     let {
             guildId: t,
             channelId: n,
             sound: r,
-            authorId: x,
-            mostRecentPlayedByUserId: S,
-            count: E,
-            playedByUserIds: y,
+            authorId: a,
+            mostRecentPlayedByUserId: f,
+            count: y,
+            disabled: C,
+            playedByUserIds: A,
         } = e,
-        { authorUser: C, mostRecentPlayedUser: A } = (0, a.cf)([T.default, N.A], () => {
-            let e = N.A.isBlockedOrIgnored(S ?? void 0);
-            return { authorUser: T.default.getUser(x), mostRecentPlayedUser: e ? null : T.default.getUser(S) };
+        { authorUser: b, mostRecentPlayedUser: I } = (0, o.cf)([_.default, k.A], () => {
+            let e = k.A.isBlockedOrIgnored(f ?? void 0);
+            return {
+                authorUser: _.default.getUser(a),
+                mostRecentPlayedUser: e || a === f ? null : _.default.getUser(f),
+            };
         }),
-        [b, I] = i.useState(!1),
-        v = i.useRef(null),
+        [v, N] = i.useState(!1),
+        T = i.useRef(null),
         j = i.useRef(null);
-    i.useEffect(() => () => clearTimeout(v.current), []);
-    let k = i.useCallback(() => {
-            (clearTimeout(v.current), I(!0));
-        }, []),
-        _ = i.useCallback(() => {
-            (clearTimeout(v.current), (v.current = setTimeout(() => I(!1), 200)));
+    i.useEffect(() => () => clearTimeout(T.current), []);
+    let R = i.useCallback(() => {
+            (clearTimeout(T.current), N(!0));
         }, []),
         w = i.useCallback(() => {
-            (0, g.CZ)(r, n);
+            (clearTimeout(T.current), (T.current = setTimeout(() => N(!1), 200)));
+        }, []),
+        O = i.useCallback(() => {
+            (0, E.CZ)(r, n);
         }, [n, r]),
-        P = (0, a.bG)([f.A], () => f.A.isPlayingSound(r.soundId), [r]);
-    if (null == t || null == C) return null;
-    let { emojiId: M, emojiName: D, emojiAnimated: V, name: U } = r;
+        P = (0, o.bG)([S.A], () => S.A.isPlayingSound(r.soundId), [r]);
+    if (null == t || null == b) return null;
+    let { emojiId: V, emojiName: U, emojiAnimated: W, name: F } = r;
     return (0, l.jsxs)("div", {
-        className: L.Iv,
+        className: s()(D.Iv, { [D.E$]: C }),
+        style: { height: 36 },
         children: [
-            (0, l.jsx)(u.Y, {
+            (0, l.jsx)(c.Y, {
                 targetElementRef: j,
-                shouldShow: b,
+                shouldShow: v,
                 renderPopout: () =>
                     (0, l.jsx)("div", {
-                        onMouseEnter: k,
-                        onMouseLeave: _,
-                        children: (0, l.jsx)(O, { guildId: t, channelId: n, sound: r, playedByUserIds: y }),
+                        onMouseEnter: R,
+                        onMouseLeave: w,
+                        children: (0, l.jsx)(M, { guildId: t, channelId: n, sound: r, playedByUserIds: A }),
                     }),
                 position: "top",
                 align: "center",
                 children: () =>
                     (0, l.jsx)("div", {
                         ref: j,
-                        onMouseEnter: k,
-                        onMouseLeave: _,
-                        children: (0, l.jsx)(o.I, {
-                            size: c._3.SIZE_32,
+                        onMouseEnter: R,
+                        onMouseLeave: w,
+                        children: (0, l.jsx)(u.I, {
+                            size: d._3.SIZE_32,
                             guildId: t,
                             channelId: n,
-                            users: null == A ? [C] : [C, A],
+                            users: null == I ? [b] : [b, I],
                             maxUsers: 2,
                         }),
                     }),
             }),
-            (0, l.jsxs)(d.D, {
-                className: s()(L.nG, { [L.Tz]: P }),
-                onClick: w,
-                "aria-label": R.intl.formatToPlainString(R.t.VOmeSq, { name: U }),
-                children: [
-                    (null != D || null != M) &&
-                        (0, l.jsx)(m.A, { size: "reaction", className: L.FA, emojiId: M, emojiName: D, animated: V }),
-                    (0, l.jsx)(h.E, { variant: "text-md/medium", children: U }),
-                    (0, l.jsx)("div", { className: L.SU }),
-                    (0, l.jsxs)(h.E, {
-                        variant: "text-md/medium",
-                        className: L.Zi,
-                        children: ["x", (0, l.jsx)(p.A, { className: L.Zi, value: E, digitWidth: 8 })],
-                    }),
-                ],
+            (0, l.jsx)(h.m, {
+                text: C ? L.intl.string(L.t.VqNHoS) : null,
+                children: (0, l.jsxs)(m.D, {
+                    className: s()(D.nG, { [D.Tz]: P, [D.Jx]: C }),
+                    onClick: C ? () => null : O,
+                    "aria-label": L.intl.formatToPlainString(L.t.VOmeSq, { name: F }),
+                    children: [
+                        (null != U || null != V) &&
+                            (0, l.jsx)(g.A, {
+                                size: "reaction",
+                                className: D.FA,
+                                emojiId: V,
+                                emojiName: U,
+                                animated: W,
+                            }),
+                        (0, l.jsx)(p.E, { variant: "text-md/medium", children: F }),
+                        !C &&
+                            (0, l.jsxs)(l.Fragment, {
+                                children: [
+                                    (0, l.jsx)("div", { className: D.SU }),
+                                    (0, l.jsxs)(p.E, {
+                                        variant: "text-md/medium",
+                                        className: D.Zi,
+                                        children: ["x", (0, l.jsx)(x.A, { className: D.Zi, value: y, digitWidth: 8 })],
+                                    }),
+                                ],
+                            }),
+                    ],
+                }),
             }),
         ],
     });
 }
-function M(e) {
+function U(e) {
     let { guildId: t, channelId: n } = e,
-        i = (0, a.bG)([v], () => v.getSoundboardEchoes());
+        r = (0, o.cf)([j], () => Object.fromEntries(j.getSoundboardEchoes())),
+        [s, u] = i.useState({}),
+        [c, d] = i.useState(!1),
+        h = i.useCallback(() => {
+            (u(r), d(!0));
+        }, [r]),
+        m = i.useCallback(() => {
+            d(!1);
+        }, []),
+        p = i.useMemo(
+            () =>
+                (c
+                    ? Object.entries(s).map((e) => {
+                          let [t, n] = e;
+                          return null != r[t] ? r[t] : { ...n, disabled: !0 };
+                      })
+                    : Object.values(r)
+                )
+                    .slice(-3)
+                    .reverse(),
+            [s, r, c],
+        ),
+        g = i.useMemo(() => p.map((e, t) => ({ echo: e, y: 42 * t })), [p]),
+        x = (0, f.p)(g, {
+            keys: (e) => e.echo.sound.soundId,
+            from: () => ({ height: 0, opacity: 0 }),
+            enter: (e) => {
+                let { y: t } = e;
+                return { height: 36, opacity: 1, translateY: -t };
+            },
+            update: (e) => {
+                let { y: t } = e;
+                return { translateY: -t };
+            },
+            leave: (e) => {
+                let { y: t } = e;
+                return { height: 0, opacity: 0, translateY: -t - 36, pointerEvents: "none" };
+            },
+            config: a.config.gentle,
+        });
     return (0, l.jsx)("div", {
-        className: L.ei,
-        children: i.map((e) => (0, l.jsx)(P, { guildId: t, channelId: n, ...e }, e.sound.soundId)),
+        className: D.ei,
+        style: { height: 126 },
+        onMouseEnter: h,
+        onMouseLeave: m,
+        children: x((e, i) =>
+            (0, l.jsx)(a.animated.div, {
+                className: D.Ob,
+                style: e,
+                children: (0, l.jsx)(V, { guildId: t, channelId: n, ...i.echo, disabled: i.echo.disabled ?? !1 }),
+            }),
+        ),
     });
 }
