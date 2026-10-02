@@ -1784,6 +1784,24 @@
     margin-top: 8px
 }
 
+@media (max-width:485px) {
+    .authBox__921c5 .centeredContent__921c5 {
+        display: flex;
+        flex: 1 1 auto;
+        flex-direction: column;
+        justify-content: center;
+        min-height: 0
+    }
+}
+
+.is-mobile .authBox__921c5 .centeredContent__921c5 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 0
+}
+
 .container_dea1f0 {
     height: 100%;
     overflow: hidden;
@@ -6157,4 +6175,4 @@ svg.radioIcon_c1e9c4 {
     color: var(--text-strong)
 }
 
-/*# sourceMappingURL=858942.e9bfbbe9876b6345.css.map*/
+/*# sourceMappingURL=858942.fd475ea78d3e5e51.css.map*/

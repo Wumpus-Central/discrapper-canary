@@ -1,35 +1,34 @@
-n.d(t, { A: () => j });
+n.d(t, { A: () => S });
 var s = n(477900),
     r = n(582128),
-    a = n(503698),
-    i = n.n(a),
-    l = n(492462),
-    o = n(607399),
-    c = n(17928),
-    d = n(825484),
-    u = n(821609),
-    h = n(73153),
-    p = n(830215),
-    m = n(396681),
-    N = n(15552),
-    E = n(854378),
-    f = n(701273),
-    g = n(572469),
-    y = n(976860),
-    A = n(210714),
-    x = n(280450),
-    I = n(625494),
-    w = n(652215),
-    C = n(375708),
-    v = n(221851);
-c.Ay.initialize();
-class S extends r.PureComponent {
-    static defaultProps = { transitionTo: y.pX, replaceWith: y.bG };
+    a = n(492462),
+    i = n(607399),
+    l = n(17928),
+    o = n(825484),
+    c = n(821609),
+    d = n(73153),
+    u = n(830215),
+    h = n(396681),
+    p = n(15552),
+    m = n(854378),
+    N = n(701273),
+    E = n(572469),
+    f = n(976860),
+    g = n(210714),
+    y = n(280450),
+    A = n(625494),
+    x = n(652215),
+    I = n(375708),
+    w = n(498206),
+    C = n(221851);
+l.Ay.initialize();
+class v extends r.PureComponent {
+    static defaultProps = { transitionTo: f.pX, replaceWith: f.bG };
     constructor(e) {
         super(e);
         const t =
             this.props.location?.search != null && "" !== this.props.location.search
-                ? (0, l.parse)(this.props.location.search)
+                ? (0, a.parse)(this.props.location.search)
                 : null;
         this.state = {
             method: "",
@@ -43,18 +42,18 @@ class S extends r.PureComponent {
         };
     }
     componentDidMount() {
-        (0, A.d0)("reset_password");
+        (0, g.d0)("reset_password");
     }
     handleSubmit = async (e) => {
         let { location: t, onLoginSuccess: n, source: s, resetToken: r } = this.props,
             { password: a, error: i } = this.state;
         if ((e.preventDefault(), 0 === a.length)) {
-            (this.setState({ error: C.intl.string(C.t.R98xD5) }), I._.dispatch(w.jej.WAVE_EMPHASIZE));
+            (this.setState({ error: I.intl.string(I.t.R98xD5) }), A._.dispatch(x.jej.WAVE_EMPHASIZE));
             return;
         }
         null != i && this.setState({ error: null });
         let l = r;
-        if ((null != t && (l = (0, m.A)(t)), null != l)) {
+        if ((null != t && (l = (0, h.A)(t)), null != l)) {
             this.setState({ working: !0 });
             try {
                 let {
@@ -64,15 +63,15 @@ class S extends r.PureComponent {
                     ticket: i,
                     token: o,
                     totp: c,
-                    backup: d,
-                } = await p.A.resetPassword(l, a, s);
-                e === p.W.MFA
-                    ? h.h.dispatch({ type: "LOGIN_MFA_STEP", ticket: i, sms: t, webauthn: r, totp: c, backup: d })
+                    backup: h,
+                } = await u.A.resetPassword(l, a, s);
+                e === u.W.MFA
+                    ? d.h.dispatch({ type: "LOGIN_MFA_STEP", ticket: i, sms: t, webauthn: r, totp: c, backup: h })
                     : null != n
                       ? n(o)
-                      : (h.h.dispatch({ type: "LOGIN_SUCCESS", token: o }), this.handlePasswordChangeSuccess());
+                      : (d.h.dispatch({ type: "LOGIN_SUCCESS", token: o }), this.handlePasswordChangeSuccess());
             } catch (e) {
-                this.setState({ apiErrors: (0, N.p)(e) });
+                this.setState({ apiErrors: (0, p.p)(e) });
             }
             this.setState({ working: !1 });
         }
@@ -80,29 +79,29 @@ class S extends r.PureComponent {
     handleTokenSubmitMFAv2 = async (e, t) => {
         let { location: n, mfaTicket: s, onLoginSuccess: r, resetToken: a, source: i } = this.props,
             { password: l } = this.state;
-        if (0 === l.length) return (h.h.dispatch({ type: "LOGIN_RESET" }), Promise.reject());
+        if (0 === l.length) return (d.h.dispatch({ type: "LOGIN_RESET" }), Promise.reject());
         let o = a;
-        if ((null != n && (o = (0, m.A)(n)), null == o))
-            return (h.h.dispatch({ type: "LOGIN_RESET" }), Promise.reject());
+        if ((null != n && (o = (0, h.A)(n)), null == o))
+            return (d.h.dispatch({ type: "LOGIN_RESET" }), Promise.reject());
         this.setState({ working: !0 });
         try {
-            let n = await p.A.resetPasswordMFAv2({ method: e, code: t, ticket: s, password: l, token: o, source: i });
+            let n = await u.A.resetPasswordMFAv2({ method: e, code: t, ticket: s, password: l, token: o, source: i });
             if (null != r) return void r(n);
-            (h.h.dispatch({ type: "LOGIN_SUCCESS", token: n }), this.handlePasswordChangeSuccess());
+            (d.h.dispatch({ type: "LOGIN_SUCCESS", token: n }), this.handlePasswordChangeSuccess());
         } finally {
             this.setState({ working: !1 });
         }
     };
     handlePasswordChangeSuccess = () => {
         let { replaceWith: e } = this.props;
-        o.v1 || o.Fr ? this.setState({ success: !0 }) : e(w.BVt.APP);
+        i.v1 || i.Fr ? this.setState({ success: !0 }) : e(x.BVt.APP);
     };
     handleGoToLogin = () => {
         let { transitionTo: e } = this.props;
-        (p.A.loginReset(), e(w.BVt.LOGIN, { source: "reset_password" }));
+        (u.A.loginReset(), e(x.BVt.LOGIN, { source: "reset_password" }));
     };
     handleOpenApp = () => {
-        (0, f.A)("password_reset");
+        (0, N.A)("password_reset");
     };
     hasError = (e) => null != this.state.apiErrors[e] || null != this.state.error;
     renderError = (e) => {
@@ -116,37 +115,37 @@ class S extends r.PureComponent {
     renderPasswordReset() {
         let { password: e, error: t, hasCancel: r, working: a } = this.state,
             { theme: i, authBoxClassName: l } = this.props,
-            o = t ?? this.renderError("password");
-        return (0, s.jsxs)(E.Ay, {
+            d = t ?? this.renderError("password");
+        return (0, s.jsxs)(m.Ay, {
             onSubmit: this.handleSubmit,
             tag: "form",
             theme: i,
             className: l,
             children: [
-                (0, s.jsx)("img", { alt: "", src: null == o ? n(79418) : n(579656), className: v.SX }),
-                (0, s.jsx)(E.hE, { children: C.intl.string(C.t["1LV6Kq"]) }),
-                (0, s.jsxs)(E.eB, {
-                    className: v.QX,
+                (0, s.jsx)("img", { alt: "", src: null == d ? n(79418) : n(579656), className: C.SX }),
+                (0, s.jsx)(m.hE, { children: I.intl.string(I.t["1LV6Kq"]) }),
+                (0, s.jsxs)(m.eB, {
+                    className: C.QX,
                     children: [
-                        (0, s.jsx)(E.pd, {
-                            label: C.intl.string(C.t["8dM4FO"]),
-                            className: v.SX,
+                        (0, s.jsx)(m.pd, {
+                            label: I.intl.string(I.t["8dM4FO"]),
+                            className: C.SX,
                             name: "password",
                             value: e,
                             onChange: (e) => this.setState({ password: e }),
-                            error: o,
+                            error: d,
                             type: "password",
                             autoComplete: "new-password",
                             required: !0,
                         }),
-                        (0, s.jsxs)(d.e, {
+                        (0, s.jsxs)(o.e, {
                             direction: "vertical",
                             fullWidth: !0,
                             children: [
-                                (0, s.jsx)(u.$, { text: C.intl.string(C.t["FRep5/"]), type: "submit", loading: a }),
+                                (0, s.jsx)(c.$, { text: I.intl.string(I.t["FRep5/"]), type: "submit", loading: a }),
                                 r &&
-                                    (0, s.jsx)(u.$, {
-                                        text: C.intl.string(C.t["ETE/oC"]),
+                                    (0, s.jsx)(c.$, {
+                                        text: I.intl.string(I.t["ETE/oC"]),
                                         variant: "secondary",
                                         onClick: this.handleGoToLogin,
                                         loading: a,
@@ -164,28 +163,28 @@ class S extends r.PureComponent {
                 let { mfaType: t, data: n } = e;
                 return this.handleTokenSubmitMFAv2(t, n);
             };
-        return (0, s.jsx)(E.Ay, {
+        return (0, s.jsx)(m.Ay, {
             style: { padding: 0 },
             theme: n,
             className: r,
-            children: (0, s.jsx)(g.t, {
+            children: (0, s.jsx)(E.t, {
                 mfaFinish: a,
                 mfaChallenge: { ticket: e, methods: t },
                 onEarlyClose: () => {
-                    h.h.dispatch({ type: "LOGIN_RESET" });
+                    d.h.dispatch({ type: "LOGIN_RESET" });
                 },
             }),
         });
     }
     renderSucceeded() {
         let { theme: e, authBoxClassName: t } = this.props;
-        return (0, s.jsxs)(E.Ay, {
+        return (0, s.jsxs)(m.Ay, {
             theme: e,
             className: t,
+            contentClassName: w.oe,
             children: [
-                (0, s.jsx)("img", { alt: "", src: n(79418), className: i()(v.SX, o.Fr ? v.QX : "") }),
-                (0, s.jsx)(E.hE, { className: v.C2, children: C.intl.string(C.t.WAUOoK) }),
-                (0, s.jsx)(u.$, { text: C.intl.string(C.t["uJWIj/"]), fullWidth: !0, onClick: this.handleOpenApp }),
+                (0, s.jsx)(m.hE, { className: C.C2, children: I.intl.string(I.t.WAUOoK) }),
+                (0, s.jsx)(c.$, { text: I.intl.string(I.t["uJWIj/"]), fullWidth: !0, onClick: this.handleOpenApp }),
             ],
         });
     }
@@ -197,10 +196,10 @@ class S extends r.PureComponent {
               : this.renderPasswordReset();
     }
 }
-let j = function (e) {
-    let t = (0, c.cf)([x.default], () => ({
-        mfaTicket: x.default.getMFATicket(),
-        mfaMethods: x.default.getMFAMethods(),
+let S = function (e) {
+    let t = (0, l.cf)([y.default], () => ({
+        mfaTicket: y.default.getMFATicket(),
+        mfaMethods: y.default.getMFAMethods(),
     }));
-    return (0, s.jsx)(S, { ...e, ...t });
+    return (0, s.jsx)(v, { ...e, ...t });
 };

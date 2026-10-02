@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => rf }));
+(n.r(t), n.d(t, { default: () => rp }));
 var i,
     l,
     s,
@@ -5396,15 +5396,16 @@ let sJ = (0, n(600975).C)({
     ],
 });
 x.Ay.initialize();
-var s0 = n(163050);
+var s0 = n(163050),
+    s1 = n(498206);
 x.Ay.initialize();
-var s1 = n(701273);
-function s2(e) {
+var s2 = n(701273);
+function s3(e) {
     n.g.location.assign(e);
 }
 (x.Ay.initialize(), n(426620), x.Ay.initialize());
-let s3 = ij(lA),
-    s4 = ij(function (e) {
+let s4 = ij(lA),
+    s8 = ij(function (e) {
         let { transitionTo: t } = e,
             n = h.useCallback(
                 (e) => {
@@ -5443,7 +5444,7 @@ let s3 = ij(lA),
             ? (0, d.jsx)(P.Ay, { children: (0, d.jsx)(eG.y, {}) })
             : (0, d.jsx)(lA, { ...e, transitionTo: n });
     }),
-    s8 = ij(function (e) {
+    s5 = ij(function (e) {
         let { inviteKey: t, location: n, transitionTo: i, login: l } = e,
             s = h.useMemo(() => (0, e0.m0)(t), [t]),
             r = (0, x.bG)([tt.A], () => tt.A.getInvite(t)),
@@ -5669,7 +5670,7 @@ let s3 = ij(lA),
               })
             : null;
     }),
-    s5 = ij(function (e) {
+    s7 = ij(function (e) {
         let t = {
             guildTemplate: (0, x.bG)([eR.A], () => eR.A.getGuildTemplate(e.code)),
             nativeAppState: (0, x.bG)([iL.A], () => iL.A.getState(e.code)),
@@ -5678,8 +5679,8 @@ let s3 = ij(lA),
         };
         return (0, d.jsx)(lJ, { ...e, ...t });
     }),
-    s7 = ij(lK),
-    s9 = ij(function (e) {
+    s9 = ij(lK),
+    s6 = ij(function (e) {
         let { inviteKey: t, transitionTo: n } = e,
             i = (0, x.bG)([tt.A], () => tt.A.getInvite(t));
         return (
@@ -5702,8 +5703,8 @@ let s3 = ij(lA),
             })
         );
     }),
-    s6 = ij(lH),
-    re = ij(function (e) {
+    re = ij(lH),
+    rt = ij(function (e) {
         let { location: t, transitionTo: i = U.pX } = e,
             [l, s] = h.useState("submitting");
         function r() {
@@ -5715,43 +5716,49 @@ let s3 = ij(lA),
                       onClick: () => i(D.BVt.LOGIN, { source: "authorizeIPAdress" }),
                   });
         }
-        return ((0, l7.Ay)(() => {
-            (0, B.d0)("authorize_ip");
-            let e = (0, ex.A)(t);
-            null == e
-                ? s("failed")
-                : (async function () {
-                      if (null != e)
-                          try {
-                              (await A.A.authorizeIPAddress(e), s("succeeded"));
-                          } catch (e) {
-                              s("failed");
-                          }
-                  })();
-        }),
-        "failed" === l)
-            ? (0, d.jsxs)(P.Ay, {
-                  children: [
-                      (0, d.jsx)("img", { alt: "", src: n(792009), className: $.SX }),
-                      (0, d.jsx)(P.hE, { className: $.QB, children: X.intl.string(X.t["f/54az"]) }),
-                      (0, d.jsx)(P.tK, { className: $.C2, children: X.intl.string(X.t.i3ehMr) }),
-                      r(),
-                  ],
-              })
-            : "succeeded" === l
-              ? (0, d.jsxs)(P.Ay, {
-                    children: [
-                        (0, d.jsx)("img", { alt: "", src: n(841406), className: $.SX }),
-                        (0, d.jsx)(P.hE, { className: $.QB, children: X.intl.string(X.t.iG0SlK) }),
-                        (0, d.jsx)(P.tK, { className: $.C2, children: X.intl.string(X.t["Elv+qt"]) }),
-                        r(),
-                    ],
-                })
-              : (0, d.jsxs)(P.Ay, {
-                    children: [(0, d.jsx)(P.CK, {}), (0, d.jsx)(P.hE, { children: X.intl.string(X.t["9exy+V"]) })],
-                });
+        if (
+            ((0, l7.Ay)(() => {
+                (0, B.d0)("authorize_ip");
+                let e = (0, ex.A)(t);
+                null == e
+                    ? s("failed")
+                    : (async function () {
+                          if (null != e)
+                              try {
+                                  (await A.A.authorizeIPAddress(e), s("succeeded"));
+                              } catch (e) {
+                                  s("failed");
+                              }
+                      })();
+            }),
+            "failed" === l)
+        )
+            return (0, d.jsxs)(P.Ay, {
+                children: [
+                    (0, d.jsx)("img", { alt: "", src: n(792009), className: $.SX }),
+                    (0, d.jsx)(P.hE, { className: $.QB, children: X.intl.string(X.t["f/54az"]) }),
+                    (0, d.jsx)(P.tK, { className: $.C2, children: X.intl.string(X.t.i3ehMr) }),
+                    r(),
+                ],
+            });
+        if ("succeeded" === l) {
+            let e = r();
+            return (0, d.jsxs)(P.Ay, {
+                contentClassName: s1.oe,
+                children: [
+                    (0, d.jsx)(P.hE, { className: $.QB, children: X.intl.string(X.t.iG0SlK) }),
+                    (0, d.jsxs)(ew.B, {
+                        gap: 40,
+                        children: [(0, d.jsx)(P.tK, { children: X.intl.string(X.t["Elv+qt"]) }), e],
+                    }),
+                ],
+            });
+        }
+        return (0, d.jsxs)(P.Ay, {
+            children: [(0, d.jsx)(P.CK, {}), (0, d.jsx)(P.hE, { children: X.intl.string(X.t["9exy+V"]) })],
+        });
     }),
-    rt = ij(function (e) {
+    rn = ij(function (e) {
         let { location: t } = e,
             [i, l] = h.useState("submitting");
         return (h.useEffect(() => {
@@ -5788,8 +5795,8 @@ let s3 = ij(lA),
                     children: [(0, d.jsx)(P.CK, {}), (0, d.jsx)(P.hE, { children: X.intl.string(X.t.T3vC7n) })],
                 });
     }),
-    rn = ij(function (e) {
-        let { location: t, transitionTo: n = s2 } = e,
+    ri = ij(function (e) {
+        let { location: t, transitionTo: n = s3 } = e,
             [i, l] = h.useState("submitting"),
             s = h.useRef(void 0);
         (0, l7.Ay)(() => {
@@ -5812,7 +5819,7 @@ let s3 = ij(lA),
             }, [n]),
             a = h.useCallback(() => {
                 (L.default.track(D.HAw.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: s.current }),
-                    (0, s1.A)("verify_email"));
+                    (0, s2.A)("verify_email"));
             }, []);
         return "failed" === i
             ? (0, d.jsx)(eB, {
@@ -5834,7 +5841,7 @@ let s3 = ij(lA),
                     loading: !0,
                 });
     }),
-    ri = ij(function () {
+    rl = ij(function () {
         let [e, t] = h.useState(""),
             [i, l] = h.useState(""),
             [s, r] = h.useState(!1),
@@ -5916,10 +5923,10 @@ let s3 = ij(lA),
                   ],
               });
     }),
-    rl = ij(s0.A),
-    rs = ij(ib),
-    rr = ij(eA),
-    ra = ij(function (e) {
+    rs = ij(s0.A),
+    rr = ij(ib),
+    ra = ij(eA),
+    ro = ij(function (e) {
         let { location: t } = e,
             [n, i] = h.useState(!1),
             { verifySuccess: l, verifyErrors: s, redirectGuildId: r } = (0, x.bG)([eW], () => eW.getState());
@@ -5979,7 +5986,7 @@ let s3 = ij(lA),
                       loading: !0,
                   });
     }),
-    ro = ij(function (e) {
+    rc = ij(function (e) {
         let { match: t, location: n } = e;
         async function i(e, t) {
             await (0, iv.W)(nU.XK.CHANNEL, {
@@ -5991,7 +5998,7 @@ let s3 = ij(lA),
         }
         return (0, d.jsx)(iS, { match: t, location: n, attemptDeepLink: i });
     }),
-    rc = ij(function (e) {
+    ru = ij(function (e) {
         let { match: t, location: n } = e;
         async function i(e) {
             await (0, iv.W)(nU.XK.GAME_SHOP, {
@@ -6003,7 +6010,7 @@ let s3 = ij(lA),
         }
         return (0, d.jsx)(iS, { match: t, location: n, attemptDeepLink: i });
     }),
-    ru = ij(function (e) {
+    rd = ij(function (e) {
         let { match: t, location: n } = e;
         async function i(e, t) {
             await (0, iv.W)(nU.XK.PICK_GUILD_SETTINGS, {
@@ -6014,7 +6021,7 @@ let s3 = ij(lA),
         }
         return (0, d.jsx)(iS, { match: t, location: n, attemptDeepLink: i });
     }),
-    rd = ij(function (e) {
+    rh = ij(function (e) {
         let { location: t } = e,
             n = (0, x.bG)([eZ.default], () => eZ.default.isAuthenticated()),
             i = (0, x.bG)([ey.A], () => ey.A.hasLoadedExperiments),
@@ -6074,8 +6081,8 @@ let s3 = ij(lA),
                 })
         );
     }),
-    rh = ij(es),
-    rm = ij(function (e) {
+    rm = ij(es),
+    rg = ij(function (e) {
         let { match: t, location: i } = e,
             l = (0, m.parse)(i.search).token,
             [s, r] = h.useState("loading"),
@@ -6196,7 +6203,7 @@ let s3 = ij(lA),
         }
         return (0, d.jsx)(P.Ay, { children: (0, d.jsx)(P.CK, {}) });
     });
-class rg extends h.PureComponent {
+class rf extends h.PureComponent {
     state = { splash: null, redirectTo: null, backgroundId: null };
     hasTriggeredInviteResolve = !1;
     experimentFallbackTimeout = null;
@@ -6306,23 +6313,23 @@ class rg extends h.PureComponent {
         return (0, d.jsxs)(iN.A, {
             splash: e,
             children: [
-                (0, d.jsx)(er.A, { path: D.BVt.LOGIN_HANDOFF, render: (e) => (0, d.jsx)(s4, { ...e, redirectTo: t }) }),
-                (0, d.jsx)(er.A, { path: D.BVt.LOGIN_ONE_TIME, render: (e) => (0, d.jsx)(rm, { ...e }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.LOGIN_HANDOFF, render: (e) => (0, d.jsx)(s8, { ...e, redirectTo: t }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.LOGIN_ONE_TIME, render: (e) => (0, d.jsx)(rg, { ...e }) }),
                 (0, d.jsx)(er.A, {
                     impressionName: g.ImpressionNames.USER_LOGIN,
                     path: D.BVt.LOGIN,
-                    render: (e) => (0, d.jsx)(s3, { ...e, redirectTo: t }),
+                    render: (e) => (0, d.jsx)(s4, { ...e, redirectTo: t }),
                 }),
                 (0, d.jsx)(er.A, {
                     impressionName: g.ImpressionNames.USER_REGISTRATION,
                     path: D.BVt.REGISTER,
-                    render: (e) => (0, d.jsx)(s6, { ...e, redirectTo: t }),
+                    render: (e) => (0, d.jsx)(re, { ...e, redirectTo: t }),
                 }),
                 (0, d.jsx)(er.A, {
                     path: D.BVt.GIFT_CODE_LOGIN(":giftCode"),
-                    render: (e) => (0, d.jsx)(s7, { login: !0, ...e }),
+                    render: (e) => (0, d.jsx)(s9, { login: !0, ...e }),
                 }),
-                (0, d.jsx)(er.A, { path: D.BVt.GIFT_CODE(":giftCode"), render: (e) => (0, d.jsx)(s7, { ...e }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.GIFT_CODE(":giftCode"), render: (e) => (0, d.jsx)(s9, { ...e }) }),
                 (0, d.jsx)(er.A, {
                     path: [D.BVt.INVITE_LOGIN(":inviteCode"), D.BVt.INVITE(":inviteCode")],
                     render: (e) => {
@@ -6336,9 +6343,9 @@ class rg extends h.PureComponent {
                             } = e,
                             s = (0, e0.fB)(t, i.search);
                         return f.Fr || f.v1
-                            ? (0, d.jsx)(s9, { inviteKey: s, transitionTo: l }, s)
+                            ? (0, d.jsx)(s6, { inviteKey: s, transitionTo: l }, s)
                             : (0, d.jsx)(
-                                  s8,
+                                  s5,
                                   {
                                       inviteKey: s,
                                       location: i,
@@ -6365,7 +6372,7 @@ class rg extends h.PureComponent {
                         } = e;
                         return f.Fr || f.v1
                             ? (0, d.jsx)(l2, { code: t }, t)
-                            : (0, d.jsx)(s5, {
+                            : (0, d.jsx)(s7, {
                                   code: t,
                                   location: i,
                                   transitionTo: l,
@@ -6373,45 +6380,45 @@ class rg extends h.PureComponent {
                               });
                     },
                 }),
-                (0, d.jsx)(er.A, { path: D.BVt.VERIFY, render: (e) => (0, d.jsx)(rn, { ...e }) }),
-                (0, d.jsx)(er.A, { path: D.BVt.VERIFY_HUB_EMAIL, render: (e) => (0, d.jsx)(ra, { ...e }) }),
-                (0, d.jsx)(er.A, { path: D.BVt.VERIFY_REQUEST, render: (e) => (0, d.jsx)(ri, { ...e }) }),
-                (0, d.jsx)(er.A, { path: D.BVt.DISABLE_EMAIL_NOTIFICATIONS, render: (e) => (0, d.jsx)(rs, { ...e }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.VERIFY, render: (e) => (0, d.jsx)(ri, { ...e }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.VERIFY_HUB_EMAIL, render: (e) => (0, d.jsx)(ro, { ...e }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.VERIFY_REQUEST, render: (e) => (0, d.jsx)(rl, { ...e }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.DISABLE_EMAIL_NOTIFICATIONS, render: (e) => (0, d.jsx)(rr, { ...e }) }),
                 (0, d.jsx)(er.A, {
                     path: D.BVt.DISABLE_SERVER_HIGHLIGHT_NOTIFICATIONS,
-                    render: (e) => (0, d.jsx)(rr, { ...e }),
+                    render: (e) => (0, d.jsx)(ra, { ...e }),
                 }),
-                (0, d.jsx)(er.A, { path: D.BVt.AUTHORIZE_IP, render: (e) => (0, d.jsx)(re, { ...e }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.AUTHORIZE_IP, render: (e) => (0, d.jsx)(rt, { ...e }) }),
                 (0, d.jsx)(er.A, {
                     path: D.BVt.REJECT_IP,
-                    render: (e) => (0, d.jsx)(rl, { source: D.BVt.REJECT_IP, ...e }),
+                    render: (e) => (0, d.jsx)(rs, { source: D.BVt.REJECT_IP, ...e }),
                 }),
                 (0, d.jsx)(er.A, {
                     path: D.BVt.REJECT_MFA,
-                    render: (e) => (0, d.jsx)(rl, { source: D.BVt.REJECT_MFA, ...e }),
+                    render: (e) => (0, d.jsx)(rs, { source: D.BVt.REJECT_MFA, ...e }),
                 }),
-                (0, d.jsx)(er.A, { path: D.BVt.AUTHORIZE_PAYMENT, render: (e) => (0, d.jsx)(rt, { ...e }) }),
-                (0, d.jsx)(er.A, { path: D.BVt.RESET, render: (e) => (0, d.jsx)(rl, { source: D.BVt.RESET, ...e }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.AUTHORIZE_PAYMENT, render: (e) => (0, d.jsx)(rn, { ...e }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.RESET, render: (e) => (0, d.jsx)(rs, { source: D.BVt.RESET, ...e }) }),
                 (0, d.jsx)(er.A, {
                     path: D.BVt.PICK_GUILD_SETTINGS(":section?", ":subsection?"),
-                    render: (e) => (0, d.jsx)(ru, { ...e }),
+                    render: (e) => (0, d.jsx)(rd, { ...e }),
                 }),
                 (0, d.jsx)(er.A, {
                     path: D.BVt.CHANNELS_GAME_SHOP(nF.pv.guildId(), ":pageIndex", ":skuId", ":slug?"),
-                    render: (e) => (0, d.jsx)(rc, { ...e }),
+                    render: (e) => (0, d.jsx)(ru, { ...e }),
                 }),
                 (0, d.jsx)(er.A, {
                     path: D.BVt.CHANNEL(nF.pv.guildId(), nF.pv.channelId({ optional: !0 }), ":messageId?"),
-                    render: (e) => (0, d.jsx)(ro, { ...e }),
+                    render: (e) => (0, d.jsx)(rc, { ...e }),
                 }),
                 (0, d.jsx)(er.A, { path: D.BVt.REPORT, render: () => (0, d.jsx)(is, {}) }),
-                (0, d.jsx)(er.A, { path: D.BVt.REPORT_SECOND_LOOK, render: (e) => (0, d.jsx)(rd, { ...e }) }),
-                (0, d.jsx)(er.A, { path: D.BVt.ACCOUNT_REVERT(":token"), render: (e) => (0, d.jsx)(rh, { ...e }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.REPORT_SECOND_LOOK, render: (e) => (0, d.jsx)(rh, { ...e }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.ACCOUNT_REVERT(":token"), render: (e) => (0, d.jsx)(rm, { ...e }) }),
             ],
         });
     }
 }
-let rf = x.Ay.connectStores([eZ.default, tt.A, ir.A, ey.A, eR.A], (e) => {
+let rp = x.Ay.connectStores([eZ.default, tt.A, ir.A, ey.A, eR.A], (e) => {
     let { match: t, location: n } = e,
         i = t?.params?.inviteCode,
         l = null != i ? (0, e0.fB)(i, n.search) : void 0,
@@ -6427,4 +6434,4 @@ let rf = x.Ay.connectStores([eZ.default, tt.A, ir.A, ey.A, eR.A], (e) => {
         guildTemplate: null != r ? eR.A.getGuildTemplate(r) : null,
         hasLoadedExperiments: ey.A.hasLoadedExperiments,
     };
-})(rg);
+})(rf);

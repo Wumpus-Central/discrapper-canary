@@ -21,4 +21,5 @@ e.exports = {
     TP: "inviteIcon__921c5",
     yt: "inviteLargeIcon__921c5 inviteIcon__921c5",
     UM: "downloadButtonSubtext__921c5",
+    oe: "centeredContent__921c5",
 };
