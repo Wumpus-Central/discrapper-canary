@@ -1,123 +1,128 @@
-n.d(t, { A: () => T, I: () => C });
-var i = n(477900);
-n(582128);
-var l = n(607399),
-    r = n(793574),
-    s = n(688810),
-    a = n(268218),
-    o = n(335180),
-    d = n(723702),
-    c = n(19575),
-    u = n(58736),
-    A = n(746080),
-    E = n(549575);
-let h = (0, a.Fe)({
+l.d(a, { A: () => k, I: () => p });
+var i = l(477900);
+l(582128);
+var n = l(607399),
+    r = l(793574),
+    s = l(688810),
+    c = l(268218),
+    t = l(335180),
+    o = l(723702),
+    d = l(19575),
+    u = l(58736),
+    b = l(746080),
+    m = l(549575);
+let h = (0, c.Fe)({
     createPromise: () =>
         Promise.all([
-            n.e("207309"),
-            n.e("923972"),
-            n.e("369501"),
-            n.e("220803"),
-            n.e("966016"),
-            n.e("671367"),
-            n.e("781202"),
-            n.e("79171"),
-            n.e("417664"),
-            n.e("421225"),
-            n.e("183752"),
-        ]).then(n.bind(n, 239793)),
+            l.e("207309"),
+            l.e("90343"),
+            l.e("66554"),
+            l.e("24922"),
+            l.e("565617"),
+            l.e("744385"),
+            l.e("369501"),
+            l.e("508371"),
+            l.e("220803"),
+            l.e("966016"),
+            l.e("671367"),
+            l.e("781202"),
+            l.e("79171"),
+            l.e("417664"),
+            l.e("421225"),
+            l.e("183752"),
+        ]).then(l.bind(l, 239793)),
     webpackId: 239793,
     name: "Search",
-    renderLoader: o.O7,
+    renderLoader: t.O7,
 });
-async function C(e) {
-    if (!e && (0, d.isMac)() && d.isPlatformEmbedded) {
+async function p(e) {
+    if (!e && (0, o.isMac)() && o.isPlatformEmbedded) {
         let e = await window.DiscordNative.app.getDefaultDoubleClickAction();
-        "Minimize" === e ? c.Ay.minimize() : "Maximize" === e && c.Ay.maximize();
+        "Minimize" === e ? d.Ay.minimize() : "Maximize" === e && d.Ay.maximize();
     }
 }
-function _(e) {
+function y(e) {
     let {
-        children: t,
-        className: n,
+        children: a,
+        className: l,
         channelId: r,
         guildId: s,
-        innerClassname: a,
-        transparent: o = !1,
-        hidden: d = !1,
-        toolbar: c,
-        mobileToolbar: _,
-        "aria-label": g,
-        "aria-labelledby": I,
-        scrollable: T,
-        role: p,
-        hideSearch: N,
-        disableDoubleClick: S,
-        disableFocusRingScope: O,
-        keepToastsBelow: f,
+        innerClassname: c,
+        transparent: t = !1,
+        hidden: o = !1,
+        toolbar: d,
+        mobileToolbar: y,
+        "aria-label": A,
+        "aria-labelledby": f,
+        scrollable: k,
+        role: C,
+        hideSearch: x,
+        disableDoubleClick: N,
+        disableFocusRingScope: j,
+        keepToastsBelow: w,
     } = e;
     return (0, i.jsx)(u.Ay, {
-        className: n,
-        innerClassName: a,
+        className: l,
+        innerClassName: c,
         toolbar: (function () {
-            if (null == c) return null;
-            let e = null != r && !N;
-            return l.Fr
-                ? _
+            if (null == d) return null;
+            let e = null != r && !x;
+            return n.Fr
+                ? y
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
-                          c,
-                          e && !(0, A.jq)(r)
-                              ? (0, i.jsx)(h, { guildId: s, channelId: r, className: E.$P }, s ?? r)
+                          d,
+                          e && !(0, b.jq)(r)
+                              ? (0, i.jsx)(h, { guildId: s, channelId: r, className: m.$P }, s ?? r)
                               : null,
                       ],
                   });
         })(),
-        transparent: o,
-        hidden: d,
-        onDoubleClick: () => C(S),
-        "aria-label": g,
-        "aria-labelledby": I,
-        role: p,
-        scrollable: T,
-        disableFocusRingScope: O,
-        keepToastsBelow: f,
-        children: t,
+        transparent: t,
+        hidden: o,
+        onDoubleClick: () => p(N),
+        "aria-label": A,
+        "aria-labelledby": f,
+        role: C,
+        scrollable: k,
+        disableFocusRingScope: j,
+        keepToastsBelow: w,
+        children: a,
     });
 }
-function g(e) {
+function A(e) {
     let {
-        children: t,
-        className: n,
-        "aria-label": l,
+        children: a,
+        className: l,
+        "aria-label": n,
         "aria-labelledby": r,
         role: s,
-        disableDoubleClick: a,
-        disableFocusRingScope: o,
-        keepToastsBelow: d,
+        disableDoubleClick: c,
+        disableFocusRingScope: t,
+        keepToastsBelow: o,
     } = e;
     return (0, i.jsx)(u.Ay, {
-        className: n,
-        onDoubleClick: () => C(a),
-        "aria-label": l,
+        className: l,
+        onDoubleClick: () => p(c),
+        "aria-label": n,
         "aria-labelledby": r,
         role: s,
-        disableFocusRingScope: o,
-        keepToastsBelow: d,
-        children: t,
+        disableFocusRingScope: t,
+        keepToastsBelow: o,
+        children: a,
     });
 }
-function I(e) {
-    let { isAuthenticated: t = !0, ...n } = e,
-        { analyticsLocations: l } = (0, s.Ay)(r.A.HEADER_BAR);
+function f(e) {
+    let { isAuthenticated: a = !0, ...l } = e,
+        { analyticsLocations: n } = (0, s.Ay)(r.A.HEADER_BAR);
     return (0, i.jsx)(s.f5, {
-        value: l,
-        children: t ? (0, i.jsx)(_, { ...n, className: n.className }) : (0, i.jsx)(g, { ...n, className: n.className }),
+        value: n,
+        children: a ? (0, i.jsx)(y, { ...l, className: l.className }) : (0, i.jsx)(A, { ...l, className: l.className }),
     });
 }
-((I.Title = u.Ay.Title),
-    (I.Icon = u.Ay.Icon),
-    (I.ChannelIcon = u.Ay.ChannelIcon),
-    (I.Divider = u.Ay.Divider),
-    (I.Caret = u.Ay.Caret));
-let T = I;
+((f.Title = u.Ay.Title),
+    (f.Icon = u.Ay.Icon),
+    (f.ChannelIcon = u.Ay.ChannelIcon),
+    (f.Divider = u.Ay.Divider),
+    (f.Caret = u.Ay.Caret));
+let k = f;

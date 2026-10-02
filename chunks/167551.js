@@ -1,1 +1,1 @@
-n.exports = { k: "container__9c1cb" };
+n.exports = { r: "stickyPromotionBanner__9c1cb", k: "container__9c1cb" };

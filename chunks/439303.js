@@ -9,6 +9,7 @@ var r,
         (r.COLLECTIBLES_SHOP_BANNER = "collectibles_shop_banner"),
         (r.SLAYER_SERVER_SHOP = "slayer_server_shop"),
         (r.GAME_PROFILE = "game_profile"),
+        (r.GAME_PROFILE_GAME_SHOP = "game_profile_game_shop"),
         (r.EMBED = "embed"),
         (r.MULTI_SKU_EMBED = "multi_sku_embed"),
         r);

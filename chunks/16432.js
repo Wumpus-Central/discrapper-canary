@@ -22,8 +22,8 @@ var O = n(157559),
 function P(e) {
     D.h.dispatch({ type: "DETECTED_OFF_PLATFORM_PREMIUM_PERKS_DISMISS", skuId: e });
 }
-var p = n(912851);
-let M =
+var M = n(912851);
+let m =
     221552 == n.j
         ? {
               clearRemoteDisconnectVoiceChannelId() {
@@ -34,7 +34,7 @@ let M =
               },
           }
         : null;
-var m = n(730852),
+var p = n(730852),
     f = n(785796),
     U = n(55619),
     g = n(246605),
@@ -167,9 +167,9 @@ function eD(e) {
     });
 }
 var eP = n(976860),
-    ep = n(780964),
-    eM = n(718446),
-    em = n(766075),
+    eM = n(780964),
+    em = n(718446),
+    ep = n(766075),
     ef = n(879945),
     eU = n(379848),
     eg = n(355097),
@@ -291,7 +291,7 @@ function ek(e) {
                                         location_section: eu.JJy.NOTIFICATION_BAR,
                                         location_object: eu.ZSU.BUTTON_CTA,
                                     }),
-                                        (0, em.openUserSettings)(ep.X.NITRO_PANEL));
+                                        (0, ep.openUserSettings)(eM.X.NITRO_PANEL));
                                 },
                                 children: V.intl.string(V.t["8JC5e/"]),
                             }),
@@ -322,7 +322,7 @@ function ek(e) {
                             (0, i.jsx)(T.Z_, {
                                 noticeType: l,
                                 onClick: () => {
-                                    (r(eA.i.TAKE_ACTION), (0, em.openUserSettings)(ep.X.NITRO_PANEL));
+                                    (r(eA.i.TAKE_ACTION), (0, ep.openUserSettings)(eM.X.NITRO_PANEL));
                                 },
                                 children: V.intl.string(V.t.pyYSiO),
                             }),
@@ -337,7 +337,7 @@ function ek(e) {
                             (0, i.jsx)(T.Z_, {
                                 noticeType: l,
                                 onClick: () => {
-                                    (0, eP.pX)((0, eM.settingsPathToRoute)(eg.od.ACCOUNT));
+                                    (0, eP.pX)((0, em.settingsPathToRoute)(eg.od.ACCOUNT));
                                 },
                                 children: V.intl.string(V.t.Vm8akB),
                             }),
@@ -402,7 +402,7 @@ function eb(e) {
         r = (0, c.bG)([el.default], () => !eX.Ay.isPremium(el.default.getCurrentUser())),
         s = l.useCallback(() => {
             (er.default.track(eu.HAw.OUTBOUND_PROMOTION_NOTICE_CLICKED),
-                (0, em.openUserSettings)(ep.X.GIFT_PANEL),
+                (0, ep.openUserSettings)(eM.X.GIFT_PANEL),
                 ev.Ay.dismissOutboundPromotionNotice());
         }, []);
     return null == n
@@ -660,9 +660,9 @@ function tD(e) {
     });
 }
 var tP = n(468689),
-    tp = n(699609);
-if (221552 == n.j) var tM = n(862482);
-var tm = n(66834),
+    tM = n(699609);
+if (221552 == n.j) var tm = n(862482);
+var tp = n(66834),
     tf = n(449054),
     tU = n(451543);
 let tg =
@@ -676,7 +676,7 @@ let tg =
                   if (null != t) {
                       r(!0);
                       try {
-                          (tf.cf(t.id), await tm.A.joinGuild(t.id, { source: eu.Q4z.NOTICE_BAR }));
+                          (tf.cf(t.id), await tp.A.joinGuild(t.id, { source: eu.Q4z.NOTICE_BAR }));
                       } catch {
                           r(!1);
                       }
@@ -685,10 +685,10 @@ let tg =
               return (0, i.jsxs)("div", {
                   className: tE()(tU.lm, tR.lm),
                   children: [
-                      (0, i.jsxs)(tM.$n, {
-                          look: tM.$n.Looks.OUTLINED,
-                          color: tM.$n.Colors.WHITE,
-                          size: tM.$n.Sizes.NONE,
+                      (0, i.jsxs)(tm.$n, {
+                          look: tm.$n.Looks.OUTLINED,
+                          color: tm.$n.Colors.WHITE,
+                          size: tm.$n.Sizes.NONE,
                           className: tE()(tU.x6, tU.aX),
                           innerClassName: tU.gb,
                           onClick: function () {
@@ -704,11 +704,11 @@ let tg =
                           variant: "text-sm/normal",
                           children: V.intl.string(V.t["N/y2WE"]),
                       }),
-                      (0, i.jsx)(tM.$n, {
+                      (0, i.jsx)(tm.$n, {
                           className: tU.x6,
-                          look: tM.$n.Looks.OUTLINED,
-                          color: tM.$n.Colors.WHITE,
-                          size: tM.$n.Sizes.NONE,
+                          look: tm.$n.Looks.OUTLINED,
+                          color: tm.$n.Colors.WHITE,
+                          size: tm.$n.Sizes.NONE,
                           submitting: n,
                           onClick: s,
                           children: V.intl.format(V.t.uHN7ny, { guild: t.name }),
@@ -735,7 +735,7 @@ function tj(e) {
     let n = l.useCallback(() => {
         (er.default.track(eu.HAw.PARENTAL_CONSENT_WARNING_BANNER_TAPPED, { days_remaining: t }),
             tk.Ay.selectTab(ty.u9.REQUESTS),
-            (0, em.openUserSettings)(ep.X.FAMILY_CENTER_PANEL));
+            (0, ep.openUserSettings)(eM.X.FAMILY_CENTER_PANEL));
     }, [t]);
     return (0, i.jsx)(T.$T, {
         color: T.Hv.CUSTOM,
@@ -918,7 +918,7 @@ function t4() {
             (0, i.jsx)(T.Z_, {
                 noticeType: eu.kqX.PTT_NO_KEYBIND_WARNING,
                 onClick: function () {
-                    (0, em.openUserSettings)(ep.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING);
+                    (0, ep.openUserSettings)(eM.X.VOICE_PUSH_TO_TALK_KEYBIND_SETTING);
                 },
                 children: V.intl.string(V.t["UgQN+9"]),
             }),
@@ -1016,7 +1016,7 @@ function nT(e) {
             V.intl.string(V.t.Up0ApK),
             (0, i.jsx)(nu, { error: eV.iy.VIDEO_BACKGROUND_UNAVAILABLE }),
             (0, i.jsx)(T.zr, {
-                onClick: () => (0, em.openUserSettings)(ep.X.CAMERA_CATEGORY),
+                onClick: () => (0, ep.openUserSettings)(eM.X.CAMERA_CATEGORY),
                 children: V.intl.string(V.t.kRwxfi),
             }),
         ],
@@ -1050,7 +1050,7 @@ function nd(e) {
                   (o = !0),
                   (n = (0, i.jsx)(T.zr, {
                       onClick: () => {
-                          (0, em.openUserSettings)(ep.X.VOICE_AND_VIDEO_PANEL);
+                          (0, ep.openUserSettings)(eM.X.VOICE_AND_VIDEO_PANEL);
                       },
                       children: V.intl.string(V.t.I6YlB4),
                   })))
@@ -1086,7 +1086,7 @@ function nN() {
     });
 }
 function nR(e) {
-    p.A.dismiss(null != e ? { untilAtLeast: s()(e) } : void 0);
+    M.A.dismiss(null != e ? { untilAtLeast: s()(e) } : void 0);
 }
 let nO =
     221552 == n.j
@@ -1130,11 +1130,11 @@ let nO =
                   return null;
               let A = null != r.type ? ns.Re[r.type] : null,
                   D = null != r.type ? ns.rV[r.type] : null,
-                  p = null != r.type ? ns.f7[r.type] : null,
+                  M = null != r.type ? ns.f7[r.type] : null,
                   h = ns.pe[r.type];
               if (null != A) return (0, i.jsx)(eF.$, { dismissibleContent: A, noticeType: r.type });
               if (null != D) return (0, i.jsx)(ej, { dismissibleContent: D });
-              if (null != p) return (0, i.jsx)(eb, { dismissibleContent: p });
+              if (null != M) return (0, i.jsx)(eb, { dismissibleContent: M });
               if (null != h) return (0, i.jsx)(ek, { dismissibleContent: h, noticeType: r.type });
               let j = r.metadata?.premiumType;
               switch (r.type) {
@@ -1255,7 +1255,7 @@ let nO =
                           children: [
                               (0, i.jsx)(T.PM, {
                                   onClick: () => {
-                                      (M.clearRemoteDisconnectVoiceChannelId(), nR());
+                                      (m.clearRemoteDisconnectVoiceChannelId(), nR());
                                   },
                                   noticeType: r.type,
                               }),
@@ -1263,7 +1263,7 @@ let nO =
                               (0, i.jsx)(T.Z_, {
                                   onClick: () => {
                                       let e = nl.A.getRemoteDisconnectVoiceChannelId();
-                                      null != e && null != t$.A.getChannel(e) && m.default.selectVoiceChannel(e);
+                                      null != e && null != t$.A.getChannel(e) && p.default.selectVoiceChannel(e);
                                   },
                                   noticeType: r.type,
                                   children: V.intl.string(V.t.vD60Pv),
@@ -1276,7 +1276,7 @@ let nO =
                           children: [
                               (0, i.jsx)(T.PM, {
                                   onClick: () => {
-                                      (M.clearLastSessionVoiceChannelId(), nR());
+                                      (m.clearLastSessionVoiceChannelId(), nR());
                                   },
                                   noticeType: r.type,
                               }),
@@ -1284,7 +1284,7 @@ let nO =
                               (0, i.jsx)(T.Z_, {
                                   onClick: () => {
                                       let e = nl.A.getLastSessionVoiceChannelId();
-                                      null != e && null != t$.A.getChannel(e) && m.default.selectVoiceChannel(e);
+                                      null != e && null != t$.A.getChannel(e) && p.default.selectVoiceChannel(e);
                                   },
                                   noticeType: r.type,
                                   children: V.intl.string(V.t.vD60Pv),
@@ -1304,7 +1304,7 @@ let nO =
                               }),
                               V.intl.string(V.t.D8Cp76),
                               (0, i.jsx)(T.Z_, {
-                                  onClick: () => (0, em.openUserSettings)(ep.X.VOICE_AND_VIDEO_PANEL),
+                                  onClick: () => (0, ep.openUserSettings)(eM.X.VOICE_AND_VIDEO_PANEL),
                                   noticeType: r.type,
                                   children: V.intl.string(V.t.NiTd0e),
                               }),
@@ -1426,7 +1426,7 @@ let nO =
                                   onClick: async () => {
                                       try {
                                           let { openIAPPurchaseModal: e } = await Promise.all([
-                                              n.e("679157"),
+                                              n.e("412117"),
                                               n.e("1955"),
                                               n.e("341161"),
                                               n.e("410526"),
@@ -1778,7 +1778,7 @@ let nO =
                           }),
                       });
                   case eu.kqX.VIEWING_ROLES:
-                      return (0, i.jsx)(tp.A, {});
+                      return (0, i.jsx)(tM.A, {});
                   case eu.kqX.PREMIUM_UNCANCEL:
                       return (0, i.jsxs)(T.$T, {
                           color:
@@ -1829,7 +1829,7 @@ let nO =
                                                   n.e("70866"),
                                                   n.e("802890"),
                                                   n.e("82937"),
-                                                  n.e("679157"),
+                                                  n.e("412117"),
                                                   n.e("987221"),
                                                   n.e("125298"),
                                                   n.e("612162"),
@@ -1897,7 +1897,7 @@ let nO =
                                   noticeType: eu.kqX.PREMIUM_PAST_DUE_ONE_TIME_PAYMENT,
                                   analyticsLocation: x.A.PAST_DUE_ONE_TIME_PAYMENT_NOTICE,
                                   onFallback: () => {
-                                      (nR(e_), (0, em.openUserSettings)(ep.X.SUBSCRIPTIONS_PANEL));
+                                      (nR(e_), (0, ep.openUserSettings)(eM.X.SUBSCRIPTIONS_PANEL));
                                   },
                                   children: V.intl.string(V.t.q8rxeS),
                               }),
@@ -1919,7 +1919,7 @@ let nO =
                                   analyticsLocation: x.A.PAST_DUE_INVALID_PAYMENT_NOTICE,
                                   onFallback: () => {
                                       (nR(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                          (0, em.openUserSettings)(ep.X.SUBSCRIPTIONS_PANEL));
+                                          (0, ep.openUserSettings)(eM.X.SUBSCRIPTIONS_PANEL));
                                   },
                                   children: V.intl.string(V.t["Zpd+Yq"]),
                               }),
@@ -1941,7 +1941,7 @@ let nO =
                                   analyticsLocation: x.A.PAST_DUE_MISSING_PAYMENT_NOTICE,
                                   onFallback: () => {
                                       (nR(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                          (0, em.openUserSettings)(ep.X.SUBSCRIPTIONS_PANEL));
+                                          (0, ep.openUserSettings)(eM.X.SUBSCRIPTIONS_PANEL));
                                   },
                                   children: V.intl.string(V.t.U5pKWA),
                               }),
@@ -1966,7 +1966,7 @@ let nO =
                                   noticeType: eu.kqX.PREMIUM_MISSING_PAYMENT,
                                   onClick: () => {
                                       (nR(r.metadata?.premiumSubscription?.currentPeriodEnd),
-                                          (0, em.openUserSettings)(ep.X.SUBSCRIPTIONS_PANEL));
+                                          (0, ep.openUserSettings)(eM.X.SUBSCRIPTIONS_PANEL));
                                   },
                                   children:
                                       j === ec.PremiumTypes.TIER_1

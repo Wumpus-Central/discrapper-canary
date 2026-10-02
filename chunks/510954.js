@@ -1,5 +1,5 @@
 a.exports = {
-    ln: "stickyHeader_d9667a",
+    wx: "header_d9667a",
     ap: "navRow_d9667a",
     wE: "dockSlot_d9667a",
     FC: "dockLogo_d9667a",

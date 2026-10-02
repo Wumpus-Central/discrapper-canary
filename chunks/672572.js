@@ -6,6 +6,8 @@ _.exports = {
     V0: "sections__8e830",
     kL: "container__8e830",
     XG: "scroller__8e830",
+    sx: "persistentTopNav__8e830",
+    xY: "topNavSpacer__8e830",
     jC: "twoColumnMainContent__8e830",
     gF: "topColumnSideBarTopSpacingWithoutStoreLinks__8e830",
     sV: "topColumnSideBarTopSpacingWithStoreLinks__8e830",

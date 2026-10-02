@@ -2813,6 +2813,7 @@
 .container__8e830 {
     --custom-spacing: 12px;
     --custom-compact-bar-height: 56px;
+    --custom-top-nav-height: calc(var(--custom-compact-bar-height) + 1px);
     height: 100%;
     min-height: 0;
     overflow: hidden;
@@ -2822,6 +2823,19 @@
 
 .scroller__8e830 {
     scroll-padding-top: calc(var(--custom-compact-bar-height) + var(--space-4))
+}
+
+.persistentTopNav__8e830 {
+    inset-inline-end: var(--space-8);
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
+    z-index: 3
+}
+
+.topNavSpacer__8e830 {
+    flex: 0 0 var(--custom-top-nav-height);
+    height: var(--custom-top-nav-height)
 }
 
 .twoColumnMainContent__8e830 {
@@ -3834,4 +3848,4 @@
     display: none
 }
 
-/*# sourceMappingURL=0b513f0bf5b5a35f.css.map*/
+/*# sourceMappingURL=a0e512896f9aa8eb.css.map*/
