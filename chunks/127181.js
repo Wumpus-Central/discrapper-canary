@@ -355,6 +355,12 @@ let n = [
         summary: "Hand a project to a whole role in settings, rather than adding one person at a time.",
     },
     {
+        date: "2026-10-02",
+        time: "01:33",
+        platforms: ["desktop", "mobile"],
+        summary: "Helpers join a build only when you ask for them, and up to six can work side by side.",
+    },
+    {
         date: "2026-09-10",
         time: "00:00",
         platforms: ["desktop", "mobile"],
