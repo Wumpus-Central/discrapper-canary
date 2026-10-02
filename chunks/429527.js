@@ -21,36 +21,36 @@ var a = t(477900),
     v = t(815996),
     _ = t(792656),
     O = t(914410),
-    k = t(961250),
-    w = t(532309),
-    R = t(440005),
-    S = t(17843),
+    w = t(961250),
+    R = t(532309),
+    S = t(636592),
+    k = t(17843),
     C = t(555837),
     E = t(174459),
     y = t(975571),
     D = t(377368),
     X = t(652215),
-    M = t(202541),
-    I = t(181666),
-    P = t(375708),
-    T = t(521857);
-function K(e) {
+    I = t(202541),
+    M = t(181666),
+    T = t(375708),
+    K = t(521857);
+function P(e) {
     let { icon: s, title: t, description: c, footer: l, thumbnailSrc: r, thumbnailImageClassName: n } = e;
     return (0, a.jsxs)("div", {
-        className: T.nK,
+        className: K.nK,
         children: [
             (0, a.jsxs)("div", {
-                className: T.Yc,
+                className: K.Yc,
                 children: [
                     (0, a.jsxs)("div", {
-                        className: T.Jp,
+                        className: K.Jp,
                         children: [
-                            (0, a.jsx)("div", { className: T.kf, children: s }),
+                            (0, a.jsx)("div", { className: K.kf, children: s }),
                             (0, a.jsx)(o.D, { variant: "heading-lg/semibold", color: "text-strong", children: t }),
                         ],
                     }),
                     (0, a.jsx)("div", {
-                        className: T.jV,
+                        className: K.jV,
                         children: (0, a.jsx)(m.E, { variant: "text-sm/medium", color: "text-subtle", children: c }),
                     }),
                     l,
@@ -58,8 +58,8 @@ function K(e) {
             }),
             null != r &&
                 (0, a.jsx)("div", {
-                    className: T.t$,
-                    children: (0, a.jsx)("img", { className: i()(T.Q7, n), src: r, alt: "" }),
+                    className: K.t$,
+                    children: (0, a.jsx)("img", { className: i()(K.Q7, n), src: r, alt: "" }),
                 }),
         ],
     });
@@ -67,14 +67,14 @@ function K(e) {
 function z(e) {
     let { transitionState: s, onClose: t } = e,
         { analyticsLocations: l } = (0, A.Ay)(g.A.XBOX_PERKS_MODAL),
-        { programReward: o, totalDays: z } = (0, n.cf)([w.A], () => ({
-            programReward: w.A.getRewardForProgram(R.W.XBOX),
-            totalDays: w.A.getTotalDaysInDuration(R.W.XBOX),
+        { programReward: o, totalDays: z } = (0, n.cf)([R.A], () => ({
+            programReward: R.A.getRewardForProgram(S.W.XBOX),
+            totalDays: R.A.getTotalDaysInDuration(S.W.XBOX),
         })),
-        L = (0, S.J8)(o),
-        G = (0, C.G)({ location: "xboxPerksModal" });
+        L = (0, k.J8)(o),
+        G = (0, C.G)();
     c.useEffect(() => {
-        G && (L ? (0, k.uM)() : (0, k.Ay)());
+        G && (L ? (0, w.uM)() : (0, w.Ay)());
     }, [L, G]);
     let B = c.useRef(!1);
     c.useEffect(() => {
@@ -90,28 +90,28 @@ function z(e) {
             transitionState: s,
             onClose: t,
             size: "md",
-            "aria-label": P.intl.string(I.default.cRLw2a),
+            "aria-label": T.intl.string(M.default.cRLw2a),
             children: (0, a.jsx)(x.N, {
                 theme: X.NJ8.DARK,
                 children: (e) =>
                     (0, a.jsxs)("div", {
-                        className: i()(e, T.yl),
+                        className: i()(e, K.yl),
                         children: [
                             (0, a.jsxs)("div", {
-                                className: T.wx,
+                                className: K.wx,
                                 children: [
                                     (0, a.jsxs)("div", {
-                                        className: T.yp,
+                                        className: K.yp,
                                         children: [
                                             (0, a.jsx)("img", {
                                                 src: "https://cdn.discordapp.com/assets/content/be9c8221486fa97b56c4cb1c1392cb39d07ebd5836fe23f068f39cccef49c16f.png",
-                                                className: T.Fn,
+                                                className: K.Fn,
                                                 alt: "Xbox Game Pass",
                                             }),
                                             (0, a.jsx)(m.E, {
                                                 variant: "text-sm/medium",
                                                 color: "text-subtle",
-                                                className: T.NO,
+                                                className: K.NO,
                                                 children: "x",
                                             }),
                                             (0, a.jsx)(f.p, { size: "sm", color: d.A.colors.ICON_STRONG }),
@@ -121,26 +121,26 @@ function z(e) {
                                 ],
                             }),
                             (0, a.jsx)("div", {
-                                className: T.VA,
+                                className: K.VA,
                                 children: (0, a.jsx)(m.E, {
                                     variant: "text-sm/medium",
                                     color: "text-subtle",
-                                    children: P.intl.format(I.default["70kyQr"], {
+                                    children: T.intl.format(M.default["70kyQr"], {
                                         learnMoreLink: y.A.getArticleURL(X.MVz.XBOX_GAME_PASS_PERKS),
                                     }),
                                 }),
                             }),
                             (0, a.jsxs)(p.Ar, {
-                                className: T.rN,
+                                className: K.rN,
                                 children: [
-                                    (0, a.jsx)(K, {
+                                    (0, a.jsx)(P, {
                                         icon: (0, a.jsx)(j.C, { size: "sm", color: d.A.colors.ICON_STRONG }),
-                                        title: P.intl.string(I.default["+tdDeK"]),
-                                        description: P.intl.format(I.default.ZYc6Hv, { orbAmount: W, days: J }),
+                                        title: T.intl.string(M.default["+tdDeK"]),
+                                        description: T.intl.format(M.default.ZYc6Hv, { orbAmount: W, days: J }),
                                         footer:
                                             null != o
                                                 ? (0, a.jsx)("div", {
-                                                      className: T.hr,
+                                                      className: K.hr,
                                                       children: (0, a.jsx)(O.Ay, {
                                                           variant: O.qP.BLUE,
                                                           weight: O.fh.MEDIUM,
@@ -153,18 +153,18 @@ function z(e) {
                                         thumbnailSrc:
                                             "https://cdn.discordapp.com/assets/content/2733509d1c8c361c1a0125888c4a8c32d63471b71a304fe6aa37619f137d6d1a.png",
                                     }),
-                                    (0, a.jsx)(K, {
+                                    (0, a.jsx)(P, {
                                         icon: (0, a.jsx)(N.r, { size: "sm", color: d.A.colors.ICON_STRONG }),
-                                        title: P.intl.string(I.default["++kzl5"]),
-                                        description: P.intl.format(I.default.kc3Kvs, { multiplier: "1.2" }),
+                                        title: T.intl.string(M.default["++kzl5"]),
+                                        description: T.intl.format(M.default.kc3Kvs, { multiplier: "1.2" }),
                                         thumbnailSrc:
                                             "https://cdn.discordapp.com/assets/content/023eccf9a31b5e91537568fd5cf492e2e86beb668c90ffd86b013a674ae61f99.png",
-                                        thumbnailImageClassName: T.$T,
+                                        thumbnailImageClassName: K.$T,
                                     }),
-                                    (0, a.jsx)(K, {
+                                    (0, a.jsx)(P, {
                                         icon: (0, a.jsx)(b.TagIcon, { size: "sm", color: d.A.colors.ICON_STRONG }),
-                                        title: P.intl.string(I.default["a+PtZt"]),
-                                        description: P.intl.format(I.default.WgkpKK, {
+                                        title: T.intl.string(M.default["a+PtZt"]),
+                                        description: T.intl.format(M.default.WgkpKK, {
                                             onClick: () => {
                                                 ((0, v.Cz)({
                                                     analyticsLocations: l,
@@ -175,16 +175,16 @@ function z(e) {
                                         }),
                                         thumbnailSrc:
                                             "https://cdn.discordapp.com/assets/content/07b1bde7c3e4eab64c7d3419dd73ad737ab1f0730a1fa186d746e7880edd6209.png",
-                                        thumbnailImageClassName: T.Ly,
+                                        thumbnailImageClassName: K.Ly,
                                     }),
                                 ],
                             }),
                             (0, a.jsx)("div", {
-                                className: T.qr,
+                                className: K.qr,
                                 children: (0, a.jsx)(_.A, {
                                     fullWidth: !0,
-                                    defaultTextOverride: P.intl.string(I.default["4CdlUW"]),
-                                    subscriptionTier: M.pe.TIER_2,
+                                    defaultTextOverride: T.intl.string(M.default["4CdlUW"]),
+                                    subscriptionTier: I.pe.TIER_2,
                                 }),
                             }),
                         ],

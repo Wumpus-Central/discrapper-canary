@@ -12893,11 +12893,7 @@ function E2(e) {
     let n,
         i,
         { account: s } = e,
-        l =
-            ((t = s.id),
-            (n = (0, Ev.G)({ location: "useShouldShowXboxPerksReconnectUpsell" })),
-            (i = (0, Ey.L)(tZ.PremiumTypes.TIER_2)),
-            !n && !i && !/^\d+$/.test(t));
+        l = ((t = s.id), (n = (0, Ev.G)()), (i = (0, Ey.L)(tZ.PremiumTypes.TIER_2)), !n && !i && !/^\d+$/.test(t));
     return s.type === S.fg2.XBOX && l
         ? (0, A.jsx)(EZ, {})
         : s.twoWayLink
