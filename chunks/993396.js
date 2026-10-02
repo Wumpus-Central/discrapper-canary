@@ -1,40 +1,40 @@
-(a.d(t, {
+(n.d(t, {
     Bl: () => i,
-    Bp: () => m,
-    I6: () => c,
-    In: () => l,
-    NE: () => u,
-    _F: () => p,
+    Bp: () => c,
+    I6: () => m,
+    In: () => r,
+    NE: () => d,
+    _F: () => f,
     hU: () => h,
-    iZ: () => o,
-    rL: () => d,
-    v8: () => r,
+    iZ: () => s,
+    rL: () => u,
+    v8: () => o,
 }),
-    a(321073),
-    a(683180));
-var n = a(50617),
-    s = a(375708);
+    n(321073),
+    n(683180));
+var l = n(50617),
+    a = n(375708);
 function i(e, t) {
     return !t.some((t) => t.id === e);
 }
-function o(e, t) {
-    let a = Array.from({ length: Math.max(1, e.length) }, (e, t) => ({ kind: "question", index: t }));
-    return t ? ["about", "server", ...a] : ["about", ...a];
+function s(e, t) {
+    let n = Array.from({ length: Math.max(1, e.length) }, (e, t) => ({ kind: "question", index: t }));
+    return t ? ["about", "server", ...n] : ["about", ...n];
 }
-function l(e, t) {
+function r(e, t) {
     return null != e && (!0 === e.optional || "" !== (t ?? "").trim());
 }
-function r(e) {
-    return s.intl.formatToPlainString(n.default["4lZNuo"], { templateName: e, locale: s.intl.currentLocale });
+function o(e) {
+    return a.intl.formatToPlainString(l.default["4lZNuo"], { templateName: e, locale: a.intl.currentLocale });
 }
-function d(e) {
+function u(e) {
     for (let t = e.length - 1; t >= 0; t--) {
-        let a = e[t];
-        if ("assistant" === a.role && null != a.intake) return a.intake;
+        let n = e[t];
+        if ("assistant" === n.role && null != n.intake) return n.intake;
     }
     return null;
 }
-function u(e) {
+function d(e) {
     return null == e
         ? null
         : {
@@ -46,25 +46,25 @@ function u(e) {
               })),
           };
 }
-function m(e) {
-    return e?.server ?? { title: s.intl.string(n.default.WQCnSf), hint: s.intl.string(n.default.KLTQfQ) };
-}
 function c(e) {
+    return e?.server ?? { title: a.intl.string(l.default.WQCnSf), hint: a.intl.string(l.default.KLTQfQ) };
+}
+function m(e) {
     return e?.questions ?? [];
 }
-function p(e, t) {
-    return e.length > 0 && e.every((e, a) => !0 === e.optional || "" !== (t[a] ?? "").trim());
+function f(e, t) {
+    return e.length > 0 && e.every((e, n) => !0 === e.optional || "" !== (t[n] ?? "").trim());
 }
 function h(e, t) {
-    let a = [];
+    let n = [];
     return (
-        e.forEach((e, n) => {
-            let s = (t[n] ?? "").trim();
-            ("" !== s || !0 !== e.optional) &&
-                (s.includes("\n")
-                    ? a.push(`${n + 1}. ${e.title} \u{2192}`, '"""', s, '"""')
-                    : a.push(`${n + 1}. ${e.title} \u{2192} ${s}`));
+        e.forEach((e, l) => {
+            let a = (t[l] ?? "").trim();
+            ("" !== a || !0 !== e.optional) &&
+                (a.includes("\n")
+                    ? n.push(`${l + 1}. ${e.title} \u{2192}`, '"""', a, '"""')
+                    : n.push(`${l + 1}. ${e.title} \u{2192} ${a}`));
         }),
-        a.join("\n")
+        n.join("\n")
     );
 }

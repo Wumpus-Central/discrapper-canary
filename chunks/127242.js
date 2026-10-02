@@ -26,7 +26,7 @@ function T(e) {
         return (f.reset(), d.default.fromTimestampWithSequence(t, f));
     }
 }
-let g = new l.J(
+let m = new l.J(
         function (e) {
             let t = [e.type, e.pid?.toString() ?? "null-pid"],
                 n = p(e);
@@ -36,9 +36,9 @@ let g = new l.J(
             return -e.timestamp;
         },
     ),
-    m = 0;
+    g = 0;
 function S(e) {
-    return g.set(e.id, e);
+    return m.set(e.id, e);
 }
 class N extends s.Ay.Store {
     static displayName = "Overlay-v3-Native-Debug-Module-Store";
@@ -55,7 +55,7 @@ class N extends s.Ay.Store {
         return A;
     }
     getOverlayLoggingBreadcrumbs(e) {
-        return [g.values(e, !0), g.version];
+        return [m.values(e, !0), m.version];
     }
     isModuleLoggingEnabled() {
         return null != I;
@@ -129,15 +129,15 @@ let C = new N(
                               ? null == I &&
                                 (I = setInterval(() => {
                                     let e = E?.getLastAssociatedPID() ?? null;
-                                    E?.getNativeBreadcrumbs({ minBreadcrumbId: m }, (t) => {
+                                    E?.getNativeBreadcrumbs({ minBreadcrumbId: g }, (t) => {
                                         let { breadcrumbs: n } = t;
                                         for (let t of n)
                                             !(function (e, t, n) {
                                                 let i,
                                                     r = p(e);
                                                 if (null == r) throw Error("Native breadcrumb has no native id");
-                                                g.size(r) > 0 ||
-                                                    ((m = Math.max(m, Number(e.id))),
+                                                m.size(r) > 0 ||
+                                                    ((g = Math.max(g, Number(e.id))),
                                                     S({
                                                         id: (i = T(e.timestamp)),
                                                         key: i,

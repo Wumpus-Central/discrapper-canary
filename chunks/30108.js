@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => m, Zl: () => T, bF: () => p });
+n.d(t, { Ay: () => g, Zl: () => T, bF: () => p });
 var i = n(17928),
     r = n(439372),
     a = n(400492),
@@ -51,7 +51,7 @@ function T(e) {
         i = E.A.getStageInstanceByChannel(e);
     return t && null == i && !n;
 }
-class g extends r.A {
+class m extends r.A {
     actions = {
         VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
         LOGOUT: this.handleLogout,
@@ -90,4 +90,4 @@ class g extends r.A {
         f();
     }
 }
-let m = new g();
+let g = new m();

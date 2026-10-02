@@ -2,7 +2,7 @@ n.d(t, {
     BC: () => o,
     It: () => R,
     Qy: () => p,
-    U6: () => g,
+    U6: () => m,
     XY: () => N,
     Yt: () => f,
     Z8: () => l,
@@ -10,7 +10,7 @@ n.d(t, {
     _k: () => O,
     a0: () => d,
     iq: () => u,
-    kI: () => m,
+    kI: () => g,
     oE: () => T,
     sR: () => y,
     w3: () => C,
@@ -101,7 +101,7 @@ function p() {
 function T(e, t) {
     return t === s.NJ.LIGHT ? e.lightAppearance : e.darkAppearance;
 }
-function g(e, t) {
+function m(e, t) {
     let n = T(e, t),
         i = n.colors
             .map((e) => {
@@ -111,7 +111,7 @@ function g(e, t) {
             .join(", ");
     return `linear-gradient(${n.angle}deg, ${i})`;
 }
-function m(e, t) {
+function g(e, t) {
     let n = L(e, t),
         i = r()(n),
         a = t === s.NJ.LIGHT ? 0.2 : -0.2,

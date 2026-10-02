@@ -1,6 +1,6 @@
 n.d(t, {
     FD: () => D,
-    Id: () => g,
+    Id: () => m,
     NO: () => O,
     Qn: () => L,
     T5: () => R,
@@ -25,14 +25,14 @@ let { API_ENDPOINT: u, MEDIA_PROXY_ENDPOINT: _, PROJECT_ENV: E, ASSET_ENDPOINT: 
     f = decodeURIComponent(c.Rsh.STICKER_ASSET("[\\d]+", `(${I.join("|")})`)),
     p = RegExp(`(${location.protocol}${A}|${location.protocol}${_})(${f})`, "ig"),
     T = RegExp(`${location.protocol}${u}(${f})`, "ig");
-function g(e) {
+function m(e) {
     if (null != e.cover_sticker_id) {
         let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
         if (null != t) return t;
     }
     return e.stickers[0];
 }
-function m(e) {
+function g(e) {
     switch (e) {
         case o.TG.PNG:
             return s.QB ? o.y3.WEBP : o.y3.PNG;
@@ -62,14 +62,14 @@ function S(e) {
     }
 }
 function N(e) {
-    return null == e ? null : `${e.name}.${m(e.format_type)}`;
+    return null == e ? null : `${e.name}.${g(e.format_type)}`;
 }
 let C = function (e) {
     let { isPreview: t = !1, size: r = 160 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (null == e.format_type) return null;
     let a = e.format_type;
     e.format_type === o.TG.GIF && t && (a = o.TG.PNG);
-    let s = m(a),
+    let s = g(a),
         d = c.Rsh.STICKER_ASSET(e.id, s),
         u = !1;
     try {
@@ -92,7 +92,7 @@ function O(e) {
     return null != e.match("development" !== E ? p : T);
 }
 function R(e) {
-    return { type: o.Z2.PACK, id: e.id, name: e.name, stickers: e.stickers, previewSticker: g(e) };
+    return { type: o.Z2.PACK, id: e.id, name: e.name, stickers: e.stickers, previewSticker: m(e) };
 }
 function L(e, t) {
     return e === d.BJ.ANIMATE_ON_INTERACTION ? t : e !== d.BJ.NEVER_ANIMATE;

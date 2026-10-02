@@ -1,54 +1,54 @@
-e.d(n, { OI: () => P, lE: () => C, v6: () => O });
+e.d(n, { OI: () => O, lE: () => C, v6: () => a });
 var I = e(582128),
-    u = e(478104),
+    s = e(478104),
     N = e(17928),
-    s = e(73153),
-    E = e(617617),
-    c = e(573163),
-    l = e(935208),
-    i = e(335385),
-    o = e(313007),
-    r = e(790782);
-function A(t, n, e) {
+    u = e(73153),
+    c = e(617617),
+    r = e(573163),
+    o = e(935208),
+    l = e(335385),
+    A = e(313007),
+    E = e(790782);
+function i(t, n, e) {
     return e || 0 === t
         ? null
-        : null != n && (l.default.getNonTimestampBits(n) & u.I.NEEDS_INPUT) != 0
-          ? u.I.NEEDS_INPUT
-          : u.I.FINISHED;
+        : null != n && (o.default.getNonTimestampBits(n) & s.I.NEEDS_INPUT) != 0
+          ? s.I.NEEDS_INPUT
+          : s.I.FINISHED;
 }
 function C(t) {
     return (0, N.bG)(
-        [c.Ay, E.A],
+        [r.Ay, c.A],
         () =>
             null == t
                 ? null
-                : A(
-                      c.Ay.getMentionCount(t, r.P.CONJURING_PROJECT),
-                      c.Ay.ackMessageId(t, r.P.CONJURING_PROJECT),
-                      (0, o.cI)(E.A.settings, t),
+                : i(
+                      r.Ay.getMentionCount(t, E.P.CONJURING_PROJECT),
+                      r.Ay.ackMessageId(t, E.P.CONJURING_PROJECT),
+                      (0, A.cI)(c.A.settings, t),
                   ),
         [t],
     );
 }
-function P() {
-    return (0, N.cf)([c.Ay, E.A], () => {
+function O() {
+    return (0, N.cf)([r.Ay, c.A], () => {
         let t = !1,
             n = 0;
-        for (let e of c.Ay.getResourceIds(r.P.CONJURING_PROJECT)) {
-            let I = A(
-                c.Ay.getMentionCount(e, r.P.CONJURING_PROJECT),
-                c.Ay.ackMessageId(e, r.P.CONJURING_PROJECT),
-                (0, o.cI)(E.A.settings, e),
+        for (let e of r.Ay.getResourceIds(E.P.CONJURING_PROJECT)) {
+            let I = i(
+                r.Ay.getMentionCount(e, E.P.CONJURING_PROJECT),
+                r.Ay.ackMessageId(e, E.P.CONJURING_PROJECT),
+                (0, A.cI)(c.A.settings, e),
             );
-            null != I && ((t = !0), I === u.I.NEEDS_INPUT && n++);
+            null != I && ((t = !0), I === s.I.NEEDS_INPUT && n++);
         }
         return { hasUnread: t, badgeCount: n };
     });
 }
-function O(t) {
-    let n = (0, N.bG)([c.Ay], () => null != t && c.Ay.getMentionCount(t, r.P.CONJURING_PROJECT) > 0, [t]),
-        e = (0, i.A)();
+function a(t) {
+    let n = (0, N.bG)([r.Ay], () => null != t && r.Ay.getMentionCount(t, E.P.CONJURING_PROJECT) > 0, [t]),
+        e = (0, l.A)();
     I.useEffect(() => {
-        null != t && n && e && s.h.dispatch({ type: "VIBEGRATIONS_PROJECT_ACK", projectId: t });
+        null != t && n && e && u.h.dispatch({ type: "VIBEGRATIONS_PROJECT_ACK", projectId: t });
     }, [t, n, e]);
 }

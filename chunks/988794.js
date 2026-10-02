@@ -10,8 +10,8 @@ n.d(t, {
     XG: () => f,
     aj: () => y,
     al: () => R,
-    b8: () => g,
-    dD: () => m,
+    b8: () => m,
+    dD: () => g,
     lV: () => p,
     nN: () => v,
     o_: () => C,
@@ -49,8 +49,8 @@ var T =
         (r[(r.EXTERNAL = 3)] = "EXTERNAL"),
         (r[(r.PRIME_TIME = 4)] = "PRIME_TIME"),
         r),
-    g = (((a = {})[(a.EVENT_START = 1)] = "EVENT_START"), a),
-    m = (((s = {})[(s.PUBLIC = 1)] = "PUBLIC"), (s[(s.GUILD_ONLY = 2)] = "GUILD_ONLY"), s);
+    m = (((a = {})[(a.EVENT_START = 1)] = "EVENT_START"), a),
+    g = (((s = {})[(s.PUBLIC = 1)] = "PUBLIC"), (s[(s.GUILD_ONLY = 2)] = "GUILD_ONLY"), s);
 let S = new Set([1, 4]),
     N = { 1: u.rbe.GUILD_STAGE_VOICE, 2: u.rbe.GUILD_VOICE },
     C = new Set([3]),

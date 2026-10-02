@@ -1,5 +1,5 @@
 let i;
-(n.d(t, { ms: () => eS, iG: () => eN, Ay: () => eC, Pd: () => eg, DV: () => em }), n(321073));
+(n.d(t, { ms: () => eS, iG: () => eN, Ay: () => eC, Pd: () => em, DV: () => eg }), n(321073));
 var r = n(132500),
     a = n(344351),
     s = n(731738),
@@ -16,8 +16,8 @@ var r = n(132500),
     f = n(198052),
     p = n(655087),
     T = n(625180),
-    g = n(807393),
-    m = n(859703),
+    m = n(807393),
+    g = n(859703),
     S = n(639214),
     N = n(95701),
     C = n(280450),
@@ -244,9 +244,9 @@ function ef(e) {
         h = O.A.getChannel(_);
     if ((i && null != h && h.isPrivate() && n && null == u && d.A.selectParticipant(h.id, null), null == u)) return;
     let I = R.A.getMediaSessionId(),
-        g = s.compositeInstanceId,
-        m = null == I && h?.isVocal() === !0 && h?.isPrivate() === !1;
-    if (null == g || m) return;
+        m = s.compositeInstanceId,
+        g = null == I && h?.isVocal() === !0 && h?.isPrivate() === !1;
+    if (null == m || g) return;
     let S = (0, r.A)(),
         N = "location" in s ? 2 : 1,
         L = y.default.getCurrentUser();
@@ -259,7 +259,7 @@ function ef(e) {
         G = p.A.getRawThermalState(),
         k = null != I ? [I] : [],
         V = {
-            activitySessionId: g,
+            activitySessionId: m,
             activityUserSessionId: S,
             launchId: s.launchId,
             mediaSessionIds: k,
@@ -272,7 +272,7 @@ function ef(e) {
             channel_id: _,
             guild_id: A,
             media_session_id: k[0],
-            activity_session_id: g,
+            activity_session_id: m,
             application_id: t,
             location_stack: H?.locations,
             user_premium_tier: L.premiumType,
@@ -322,14 +322,14 @@ function ep(e, t) {
 function eT(e, t) {
     let n = h.A.getApplication(e);
     if (!(0, I.n)(n, el.gfo.QUEST)) return;
-    let i = (0, S.jm)(m.A.quests, e, !0);
+    let i = (0, S.jm)(g.A.quests, e, !0);
     if (i.length > 0) {
         let n = [`application_id:${e}`],
             r = i.find((e) => e.userStatus?.enrolledAt != null)?.id;
-        (null != r && n.push(`quest_id:${r}`), g.A.increment({ name: t, tags: n }));
+        (null != r && n.push(`quest_id:${r}`), m.A.increment({ name: t, tags: n }));
     }
 }
-function eg(e, t) {
+function em(e, t) {
     let n = ep(e, t);
     if (null == n) return;
     let {
@@ -346,8 +346,8 @@ function eg(e, t) {
         I = y.default.getCurrentUser();
     if (null == I) return;
     let T = null != o ? O.A.getChannel(o) : null,
-        g = n.guildId ?? T?.getGuildId() ?? null,
-        m = n.locationKind ?? (null == T ? void 0 : null != g ? a.T.GUILD_CHANNEL : a.T.PRIVATE_CHANNEL),
+        m = n.guildId ?? T?.getGuildId() ?? null,
+        g = n.locationKind ?? (null == T ? void 0 : null != m ? a.T.GUILD_CHANNEL : a.T.PRIVATE_CHANNEL),
         S = R.A.getMediaSessionId(),
         N = null != S ? [S] : [],
         C = (0, r.A)();
@@ -359,10 +359,10 @@ function eg(e, t) {
         activitiesInfraVersion: u,
         connectedSince: Date.now(),
         frameChannelId: o,
-        frameGuildId: g,
-        frameLocationKind: m,
+        frameGuildId: m,
+        frameLocationKind: g,
     };
-    let L = F.Ay.getShelfActivities(g),
+    let L = F.Ay.getShelfActivities(m),
         v = x.getState().shelfOrder,
         b = (0, B.A)({ applicationId: e, activityConfigs: L }),
         M = 1 + v.findIndex((t) => t === e),
@@ -370,7 +370,7 @@ function eg(e, t) {
         U = p.A.getRawThermalState();
     (D.default.track(el.HAw.ACTIVITY_SESSION_JOINED, {
         channel_id: o,
-        guild_id: g,
+        guild_id: m,
         media_session_id: N[0],
         activity_session_id: c,
         application_id: e,
@@ -388,14 +388,14 @@ function eg(e, t) {
         command_context_type: null != T ? (0, E.ud)(T, e) : null,
         invite_inviter_id: l,
         interaction_id: h,
-        embedded_activity_location_kind: m,
+        embedded_activity_location_kind: g,
     }),
         eT(e, s.K.FRAME_SESSION_JOIN),
         D.default.track(el.HAw.ACTIVITY_IFRAME_MOUNT, {
             location_stack: _,
             channel_id: o,
             channel_type: T?.type,
-            guild_id: g,
+            guild_id: m,
             application_id: e,
             instance_id: d,
             initial_media_session_id: N[0],
@@ -405,10 +405,10 @@ function eg(e, t) {
             shelf_rank: b?.activity?.shelf_rank,
             shelf_sorted_rank: M > 0 ? M : null,
             activities_infra_version: u,
-            embedded_activity_location_kind: m,
+            embedded_activity_location_kind: g,
         }));
 }
-function em(e) {
+function eg(e) {
     return eo[e];
 }
 async function eS(e, t, n) {

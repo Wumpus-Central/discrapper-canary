@@ -16,8 +16,8 @@ var r = n(435558),
     f = n(108822),
     p = n(311043),
     T = n(830012),
-    g = n(810412),
-    m = n(211753),
+    m = n(810412),
+    g = n(211753),
     S = n(206885),
     N = n(41984),
     C = n(439372),
@@ -124,8 +124,8 @@ let j = new h.A("RunningGameStore"),
     ef = {},
     ep = {},
     eT = new Set(),
-    eg = new Set(),
-    em = null,
+    em = new Set(),
+    eg = null,
     eS = null,
     eN = null,
     eC = new Map(),
@@ -256,7 +256,7 @@ function eB(e) {
     }
     let o = (0, k.supportsOutOfProcess)() && !n,
         d = eG("id" in (t = l ?? s) ? (t.id ?? null) : (D.A.findGame(t)?.id ?? null)),
-        c = m.x.legacyEnabled,
+        c = g.x.legacyEnabled,
         u = o && !d,
         _ = eu.enableOverlay[eU(s)],
         E = eu.enableOverlayV3[eU(s)];
@@ -766,7 +766,7 @@ class eZ extends d.Ay.Store {
         return eV(e);
     }
     addExecutableTrackedByAnalytics(e) {
-        eg.add((0, A.v)(e) ?? e);
+        em.add((0, A.v)(e) ?? e);
     }
     getSystemServiceStatus(e) {
         return Z[e] ?? { state: "unknown" };
@@ -824,8 +824,8 @@ let eq = new eZ(u.h, {
                 ej(),
                 !__OVERLAY__ &&
                     null != (null != r.id ? D.A.getDetectableGame(r.id) : null) &&
-                    (a && (0, g.Q3)(n, g.OverlayToggledClientSettingType.LEGACY_GAME, r.id ?? null),
-                    s && null != i && (0, g.Q3)(i, g.OverlayToggledClientSettingType.OOP_GAME, r.id ?? null)));
+                    (a && (0, m.Q3)(n, m.OverlayToggledClientSettingType.LEGACY_GAME, r.id ?? null),
+                    s && null != i && (0, m.Q3)(i, m.OverlayToggledClientSettingType.OOP_GAME, r.id ?? null)));
         },
         RUNNING_GAME_TOGGLE_DETECTION: function (e) {
             let { game: t } = e,
@@ -898,16 +898,16 @@ let eq = new eZ(u.h, {
             eK();
         },
         GAME_DETECTION_DEBUGGING_START: function (e) {
-            ((em = e.level), (eS = e.intervalSeconds));
+            ((eg = e.level), (eS = e.intervalSeconds));
         },
         GAME_DETECTION_DEBUGGING_STOP: function () {
-            ((em = null), (eS = null), eT.clear());
+            ((eg = null), (eS = null), eT.clear());
         },
         GAME_DETECTION_DEBUGGING_TICK: function (e) {
             let t = e.processes
                 .map((e) => ({ pid: e.pid, cleanedExePath: (0, A.v)(e.exePath) ?? e.exePath }))
                 .filter((e) => {
-                    if (eT.has(e.pid) || eg.has(e.cleanedExePath)) return !1;
+                    if (eT.has(e.pid) || em.has(e.cleanedExePath)) return !1;
                     let t = z.some((t) => e.cleanedExePath.includes(t));
                     return (t && eT.add(e.pid), t);
                 })
@@ -916,7 +916,7 @@ let eq = new eZ(u.h, {
                 P.default.track(H.HAw.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
                     keywords: z,
                     paths: t,
-                    debugging_level: em,
+                    debugging_level: eg,
                     interval_seconds: eS,
                 });
         },

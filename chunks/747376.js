@@ -16,7 +16,7 @@ var i = n(66834),
     f = n(272355),
     p = n(967198),
     T = n(403362);
-class g extends f.A {
+class m extends f.A {
     _initialize() {
         (I.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
             I.h.subscribe("LOGOUT", this.handleLogout));
@@ -41,7 +41,7 @@ class g extends f.A {
         (this.terminate(), this.handleDisconnectFromStageChannel(null));
     };
 }
-let m = new g();
+let g = new m();
 function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return new Promise(async (r) => {
@@ -51,7 +51,7 @@ function S(e, t) {
             await i.A.joinGuild(e, { lurker: !0 }),
             u.A.addConditionalChangeListener(() => {
                 let e = c.A.getChannel(t);
-                return null == e || (N(e), m.initialize(), r(e), !1);
+                return null == e || (N(e), g.initialize(), r(e), !1);
             }));
     });
 }

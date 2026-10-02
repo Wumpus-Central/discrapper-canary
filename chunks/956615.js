@@ -49,25 +49,25 @@ let p = new I(u.h, {
     },
 });
 var T = n(734057),
-    g = n(808728),
-    m = n(71393),
+    m = n(808728),
+    g = n(71393),
     S = n(309010);
 function N(e) {
     let t = p.getLastProjectId(e);
     if (null != t && C(e)) return [_.VV.VIBEGRATIONS, t];
     let n = S.Ay.getChannelId(e),
-        d = g.Ay.getDefaultChannel(e)?.id ?? void 0;
+        d = m.Ay.getDefaultChannel(e)?.id ?? void 0;
     if ((n === _.VV.GUILD_ONBOARDING && !a.Ay.shouldShowOnboarding(e)) || (n === _.VV.GUILD_HOME && !(0, s.K)(e)))
         return [d, null];
     if (n === _.VV.GUILD_SPACE)
-        return (0, l.tT)(m.A.getGuild(e), "getChannelIdForGuildTransition") ? [n, null] : [d, null];
+        return (0, l.tT)(g.A.getGuild(e), "getChannelIdForGuildTransition") ? [n, null] : [d, null];
     if (n === _.VV.GAME_SHOP && (0, o.Ye)(e)) return [n, null];
     if (n === _.VV.VIBEGRATIONS) return C(e) ? [n, null] : [d, null];
     let c = T.A.getChannel(n);
     return null == c || ((0, r.ai)(e) && !i.A.isChannelOrParentFavorited(c)) ? [d, null] : [n, null];
 }
 function C(e) {
-    let t = m.A.getGuild(e);
+    let t = g.A.getGuild(e);
     return null != t && (0, d.G2)(t, "getChannelIdForGuildTransition");
 }
 (n(645959), n(652215));

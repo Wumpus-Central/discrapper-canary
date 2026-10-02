@@ -16,7 +16,7 @@ var i = n(477900),
     f = n(652215),
     p = n(513687),
     T = n(785613);
-function g(e) {
+function m(e) {
     let { onClose: t } = e,
         n = (0, l.bG)([A.default, I.A], () => I.A.isCurrentUserInRestrictedHours()),
         a = (0, l.bG)([A.default], () => {
@@ -30,12 +30,12 @@ function g(e) {
                   }).format(e);
         }),
         s = (0, l.bG)([A.default], () => A.default.getCurrentUser()?.username ?? ""),
-        g = r.useRef(!1),
-        m = r.useCallback(() => {
-            ((g.current = !0), (0, E.pX)(f.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours"));
+        m = r.useRef(!1),
+        g = r.useCallback(() => {
+            ((m.current = !0), (0, E.pX)(f.BVt.DEFAULT_LOGGED_OUT), _.A.logout("restricted_hours"));
         }, []);
     r.useEffect(() => {
-        n || g.current || t();
+        n || m.current || t();
     }, [n, t]);
     let S = null != a ? h.intl.format(p.default.VfqJvY, { endTime: a }) : h.intl.string(p.default.abikhN);
     return (0, i.jsxs)("div", {
@@ -69,18 +69,18 @@ function g(e) {
                     color: "text-subtle",
                     children: h.intl.format(p.default.iqeKDz, {
                         username: s,
-                        loginHook: (e, t) => (0, i.jsx)(u.Anchor, { onClick: m, children: e }, t),
+                        loginHook: (e, t) => (0, i.jsx)(u.Anchor, { onClick: g, children: e }, t),
                     }),
                 }),
             }),
         ],
     });
 }
-var m = n(191627);
+var g = n(191627);
 let S = !1;
 function N() {
-    S || ((S = !0), (0, a.B8)(() => (0, i.jsx)(g, { onClose: () => C() }), { layerKey: m.Uy, Layer: s.Ay }));
+    S || ((S = !0), (0, a.B8)(() => (0, i.jsx)(m, { onClose: () => C() }), { layerKey: g.Uy, Layer: s.Ay }));
 }
 function C() {
-    ((S = !1), (0, a.dF)(m.Uy));
+    ((S = !1), (0, a.dF)(g.Uy));
 }

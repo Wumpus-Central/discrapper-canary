@@ -21,8 +21,8 @@ var h = n(838111),
     f = n(135621),
     p = n(268761),
     T = n(659617),
-    g = n(406704),
-    m = n(885386),
+    m = n(406704),
+    g = n(885386),
     S = n(734057),
     N = n(576705),
     C = n(287809),
@@ -179,7 +179,7 @@ let G = {
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return null != t && !t.isPrivate() && m.on.getSetting() && N.A.can(D.xBc.SEND_TTS_MESSAGES, t);
+                return null != t && !t.isPrivate() && g.on.getSetting() && N.A.can(D.xBc.SEND_TTS_MESSAGES, t);
             },
             execute: (e) => ({ content: w(e, "message") ?? "", tts: !0 }),
         },
@@ -334,7 +334,7 @@ let G = {
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return null != t && (0, g.D1)(t);
+                return null != t && (0, m.D1)(t);
             },
             execute: async (e, t) => {
                 let { channel: n } = t,

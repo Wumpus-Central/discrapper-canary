@@ -30,7 +30,7 @@ async function c(e) {
             channelId: f,
             integrationType: p,
             connectedAccountProvider: T,
-            nonce: g,
+            nonce: m,
         } = e;
     return (
         await r.Bo.post({
@@ -43,7 +43,7 @@ async function c(e) {
                 code_challenge_method: E,
                 scope: d.join(" "),
                 state: A,
-                nonce: g,
+                nonce: m,
             },
             body: {
                 guild_id: I,

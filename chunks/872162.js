@@ -1,4 +1,4 @@
-n.d(t, { C: () => m });
+n.d(t, { C: () => g });
 var i = n(477900);
 let r = { xs: "text-xs/normal", sm: "text-sm/normal", md: "text-md/normal" },
     a = { xs: "xxs", sm: "xs", md: "sm" };
@@ -34,13 +34,13 @@ var f = n(70074),
     p = n(132473);
 function T(e) {
     let { label: t, size: n, variant: s = "default", isDisabled: o, icon: d, accessibilityHint: h, ...T } = e,
-        g = [t, h].filter(Boolean).join(", ");
+        m = [t, h].filter(Boolean).join(", ");
     return (0, i.jsx)(l.vw, {
         ...T,
         "data-mana-component": "tag",
         className: c()(p.Tc, f.GA),
         "data-variant": s,
-        textValue: g,
+        textValue: m,
         isDisabled: o,
         children: (e) => {
             let { allowsRemoving: s } = e;
@@ -58,7 +58,7 @@ function T(e) {
         },
     });
 }
-function g(e) {
+function m(e) {
     let {
             listRef: t,
             label: n,
@@ -73,8 +73,8 @@ function g(e) {
             onRemove: h,
             children: I,
             selectedKeys: f,
-            onSelectionChange: g,
-            disallowEmptySelection: m,
+            onSelectionChange: m,
+            disallowEmptySelection: g,
         } = e,
         S = s.useContext(o._),
         N = s.useMemo(() => (r && "all" !== a ? new Set([...(a ?? []), ...A.map((e) => e.id)]) : a), [r, a, A]);
@@ -90,9 +90,9 @@ function g(e) {
         selectionMode: d,
         selectionBehavior: c,
         selectedKeys: f,
-        onSelectionChange: g,
+        onSelectionChange: m,
         disabledKeys: N,
-        disallowEmptySelection: m,
+        disallowEmptySelection: g,
         onRemove: h,
         children: [
             (0, i.jsx)(l.LY, {
@@ -104,7 +104,7 @@ function g(e) {
         ],
     });
 }
-function m(e) {
+function g(e) {
     let { mode: t, variant: n = "default", layout: r = "default", size: a = "inline" === r ? "sm" : "md", ...s } = e;
-    return (0, i.jsx)(g, { ...s, layout: r, size: a, variant: n });
+    return (0, i.jsx)(m, { ...s, layout: r, size: a, variant: n });
 }

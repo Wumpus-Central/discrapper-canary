@@ -1,17 +1,17 @@
-r.d(c, { A: () => e });
-var a = r(477900);
-r(582128);
-var i = r(661531),
-    o = r(812993),
-    d = r(146630);
-function e(s) {
-    let { mentionsCount: c, isMentionLowImportance: r } = s;
-    return (0, a.jsx)("div", {
-        className: d.R,
+e.d(n, { A: () => c });
+var I = e(477900);
+e(582128);
+var s = e(661531),
+    N = e(812993),
+    u = e(146630);
+function c(t) {
+    let { mentionsCount: n, isMentionLowImportance: e } = t;
+    return (0, I.jsx)("div", {
+        className: u.R,
         "aria-hidden": !0,
-        children: (0, a.jsx)(o.hV, {
-            count: c,
-            color: r ? i.A.colors.BACKGROUND_MOD_STRONG.css : i.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
+        children: (0, I.jsx)(N.hV, {
+            count: n,
+            color: e ? s.A.colors.BACKGROUND_MOD_STRONG.css : s.A.colors.BACKGROUND_FEEDBACK_NOTIFICATION.css,
         }),
     });
 }

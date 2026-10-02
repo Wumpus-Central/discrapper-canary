@@ -3,16 +3,16 @@ var l = n(582128);
 function a(e) {
     let [t, n] = l.useState(e),
         [a, i] = l.useState("idle"),
-        [s, r] = l.useState(e);
+        [r, s] = l.useState(e);
     return (
-        s !== e && (r(e), i(e === t ? "idle" : "exit")),
+        r !== e && (s(e), i(e === t ? "idle" : "exit")),
         l.useEffect(() => {
             if ("exit" !== a) return;
             let e = setTimeout(() => {
-                (n(s), i("enter"));
+                (n(r), i("enter"));
             }, 150);
             return () => clearTimeout(e);
-        }, [a, s]),
+        }, [a, r]),
         l.useEffect(() => {
             if ("enter" !== a) return;
             let e = 0,

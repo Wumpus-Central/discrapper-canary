@@ -16,8 +16,8 @@ let A = Object.freeze([]),
     f = {},
     p = {},
     T = {},
-    g = {},
-    m = {};
+    m = {},
+    g = {};
 function S(e, t) {
     let n = h[e];
     return null != n ? n[t] : null;
@@ -55,7 +55,7 @@ function R(e, t) {
     ((f[e] = t), (p[e] = O(t)));
 }
 function L(e) {
-    if ((delete I[e], delete f[e], delete p[e], delete T[e], delete g[e], null == h[e])) return;
+    if ((delete I[e], delete f[e], delete p[e], delete T[e], delete m[e], null == h[e])) return;
     let t = Object.values(h[e]),
         n = t.reduce((e, t) => {
             let n = t.processedAtTimestamp,
@@ -68,7 +68,7 @@ function L(e) {
         ? ((I[e] = n.status),
           R(e, n.activities),
           (T[e] = y(Object.values(t).flatMap((e) => e.hiddenActivities ?? []))),
-          null != n.clientStatus && (g[e] = n.clientStatus))
+          null != n.clientStatus && (m[e] = n.clientStatus))
         : s().every(
                 h[e],
                 (e) => e.status === E.clD.OFFLINE && (null == e.hiddenActivities || 0 === e.hiddenActivities.length),
@@ -90,7 +90,7 @@ function D(e) {
         ((I[e] = n.status),
         R(e, n.activities),
         (T[e] = n.hiddenActivities ?? []),
-        null != n.clientStatus && (g[e] = n.clientStatus));
+        null != n.clientStatus && (m[e] = n.clientStatus));
 }
 function v(e) {
     let {
@@ -117,7 +117,7 @@ function v(e) {
         ((s = null != d && r()(d.activities, e) ? d.activities : e),
             (c[t] = { status: i, clientStatus: a, activities: s, hiddenActivities: n, processedAtTimestamp: o }));
     }
-    return (delete m[n], L(n), !0);
+    return (delete g[n], L(n), !0);
 }
 function b(e) {
     let {
@@ -206,13 +206,13 @@ class U extends l.Ay.Store {
         return (i && (r = r.concat(this.getHiddenActivities(e, n))), r.find(t));
     }
     getActivityMetadata(e) {
-        return m[e];
+        return g[e];
     }
     getUserIds() {
         return c.default.keys(f);
     }
     isMobileOnline(e) {
-        let t = g[e];
+        let t = m[e];
         return (
             null != t &&
             t[E.xfJ.MOBILE] === E.clD.ONLINE &&
@@ -221,11 +221,11 @@ class U extends l.Ay.Store {
         );
     }
     isVROnline(e) {
-        let t = g[e];
+        let t = m[e];
         return null != t && t[E.xfJ.VR] === E.clD.ONLINE;
     }
     getClientStatus(e) {
-        return g[e];
+        return m[e];
     }
     getState() {
         return {
@@ -234,8 +234,8 @@ class U extends l.Ay.Store {
             activities: f,
             filteredActivities: p,
             hiddenActivities: T,
-            activityMetadata: m,
-            clientStatuses: g,
+            activityMetadata: g,
+            clientStatuses: m,
         };
     }
 }
@@ -247,12 +247,12 @@ let w = new U(o.h, {
         let { guilds: t, presences: n } = e,
             i = u.default.getId();
         ((h = {}),
-            (m = {}),
+            (g = {}),
             (I = { [i]: I[i] }),
             (f = { [i]: f[i] }),
             (p = { [i]: p[i] }),
             (T = { [i]: T[i] }),
-            (g = { [i]: {} }));
+            (m = { [i]: {} }));
         let r = new Set();
         (t.forEach((e) => {
             e.presences.forEach((t) => {
@@ -306,7 +306,7 @@ let w = new U(o.h, {
             (I = t.statuses),
             (f = t.activities),
             (T = t.hiddenActivities),
-            (m = t.activityMetadata));
+            (g = t.activityMetadata));
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
@@ -389,7 +389,7 @@ let w = new U(o.h, {
     },
     ACTIVITY_METADATA_UPDATE: function (e) {
         let { userId: t, metadata: n } = e;
-        return ((m[t] = n), !1);
+        return ((g[t] = n), !1);
     },
     THREAD_MEMBER_LIST_UPDATE: function (e) {
         let { guildId: t, members: n } = e;
@@ -424,6 +424,6 @@ let w = new U(o.h, {
     SELF_PRESENCE_STORE_UPDATE: function (e) {
         let t = u.default.getId();
         if (I[t] === e.status && f[t] === e.activities && T[t] === e.hiddenActivities) return !1;
-        ((I[t] = e.status), R(t, [...e.activities].sort(C)), (T[t] = [...e.hiddenActivities].sort(C)), delete m[t]);
+        ((I[t] = e.status), R(t, [...e.activities].sort(C)), (T[t] = [...e.hiddenActivities].sort(C)), delete g[t]);
     },
 });

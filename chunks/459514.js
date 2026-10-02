@@ -1,73 +1,73 @@
-(n.d(t, { T: () => h, _: () => m }), n(321073));
-var i = n(582128),
-    l = n(17928),
-    r = n(945810),
-    u = n(71393),
-    a = n(576705),
-    d = n(906786),
-    s = n(783791),
+(n.d(t, { T: () => x, _: () => g }), n(321073));
+var l = n(582128),
+    a = n(17928),
+    i = n(945810),
+    r = n(71393),
+    s = n(576705),
+    u = n(906786),
+    d = n(783791),
     o = n(972786),
     c = n(637708),
-    f = n(683180);
-function g(e, t) {
+    m = n(683180);
+function f(e, t) {
     return (
         e.nextExpiry === t.nextExpiry &&
         e.entries.length === t.entries.length &&
         e.entries.every((e, n) => {
-            let i = t.entries[n];
+            let l = t.entries[n];
             return (
-                null != i &&
-                e.projectId === i.projectId &&
-                e.activity === i.activity &&
-                e.name === i.name &&
-                e.guildId === i.guildId &&
-                e.guildName === i.guildName &&
-                e.guild === i.guild
+                null != l &&
+                e.projectId === l.projectId &&
+                e.activity === l.activity &&
+                e.name === l.name &&
+                e.guildId === l.guildId &&
+                e.guildName === l.guildName &&
+                e.guild === l.guild
             );
         })
     );
 }
-function p(e, t) {
+function h(e, t) {
     return e.length === t.length && e.every((e, n) => e === t[n]);
 }
-function h(e) {
-    let [t, n] = i.useState(0),
-        { entries: a, nextExpiry: f } = (0, l.bG)(
-            [o.Ay, s.Ay, u.A, r.Bt],
+function x(e) {
+    let [t, n] = l.useState(0),
+        { entries: s, nextExpiry: m } = (0, a.bG)(
+            [o.Ay, d.Ay, r.A, i.Bt],
             () =>
                 (function (e) {
                     let t = Date.now(),
                         n = new Map();
-                    function i(t) {
-                        let i = n.get(t);
-                        if (null != i) return i;
-                        let l = (0, d.ix)({ guildId: t, location: e });
-                        return (n.set(t, l), l);
+                    function l(t) {
+                        let l = n.get(t);
+                        if (null != l) return l;
+                        let a = (0, u.ix)({ guildId: t, location: e });
+                        return (n.set(t, a), a);
                     }
-                    let l = new Set(),
-                        r = [],
-                        a = null;
-                    function f(e) {
-                        if (l.has(e.id)) return;
+                    let a = new Set(),
+                        i = [],
+                        s = null;
+                    function m(e) {
+                        if (a.has(e.id)) return;
                         let n = (0, c.HC)(e);
-                        if (null != n && !i(n)) return;
-                        l.add(e.id);
-                        let d = s.Ay.isThinking(e.id),
-                            o = s.Ay.getFinishedAt(e.id),
-                            f = (0, c.rs)({ thinking: d, finishedAt: o, now: t });
-                        if ("done" === f && null != o) {
+                        if (null != n && !l(n)) return;
+                        a.add(e.id);
+                        let u = d.Ay.isThinking(e.id),
+                            o = d.Ay.getFinishedAt(e.id),
+                            m = (0, c.rs)({ thinking: u, finishedAt: o, now: t });
+                        if ("done" === m && null != o) {
                             let e = o + 6e4;
-                            a = null == a ? e : Math.min(a, e);
+                            s = null == s ? e : Math.min(s, e);
                         }
-                        let g = (null == n ? null : u.A.getGuild(n)) ?? null;
-                        r.push({
+                        let f = (null == n ? null : r.A.getGuild(n)) ?? null;
+                        i.push({
                             project: e,
                             projectId: e.id,
                             name: e.name,
                             guildId: n,
-                            guild: g,
-                            guildName: g?.name ?? null,
-                            activity: f,
+                            guild: f,
+                            guildName: f?.name ?? null,
+                            activity: m,
                             sortTime: (function (e, t) {
                                 if (null != t) return t;
                                 if (null == e.updated_at) return 0;
@@ -76,32 +76,32 @@ function h(e) {
                             })(e, o),
                         });
                     }
-                    for (let e of o.Ay.getOwnedProjects()) f(e);
-                    for (let e of Object.values(u.A.getGuilds()))
-                        if (o.Ay.hasFetchedGuildProjects(e.id) && i(e.id))
-                            for (let t of o.Ay.getSharedProjects(e.id)) f(t);
-                    return { entries: (0, c.io)(r), nextExpiry: a };
+                    for (let e of o.Ay.getOwnedProjects()) m(e);
+                    for (let e of Object.values(r.A.getGuilds()))
+                        if (o.Ay.hasFetchedGuildProjects(e.id) && l(e.id))
+                            for (let t of o.Ay.getSharedProjects(e.id)) m(t);
+                    return { entries: (0, c.io)(i), nextExpiry: s };
                 })(e),
             [e, t],
-            g,
+            f,
         );
     return (
-        i.useEffect(() => {
-            if (null == f) return;
-            let e = setTimeout(() => n((e) => e + 1), Math.max(0, f - Date.now()));
+        l.useEffect(() => {
+            if (null == m) return;
+            let e = setTimeout(() => n((e) => e + 1), Math.max(0, m - Date.now()));
             return () => clearTimeout(e);
-        }, [f, n]),
-        a
+        }, [m, n]),
+        s
     );
 }
-function m(e) {
-    return (0, l.bG)(
-        [u.A, r.Bt, a.A],
+function g(e) {
+    return (0, a.bG)(
+        [r.A, i.Bt, s.A],
         () =>
-            Object.values(u.A.getGuilds())
-                .filter((t) => (0, f.pG)(t, e))
+            Object.values(r.A.getGuilds())
+                .filter((t) => (0, m.pG)(t, e))
                 .sort((e, t) => e.name.localeCompare(t.name)),
         [e],
-        p,
+        h,
     );
 }

@@ -68,8 +68,8 @@ class d extends l.A {
             featured_block_url: f,
             logo_url: p,
             pdp_bg_url: T,
-            mobile_banner_url: g,
-            mobile_bg_url: m,
+            mobile_banner_url: m,
+            mobile_bg_url: g,
             ...S
         } = e;
         return new d({
@@ -90,8 +90,8 @@ class d extends l.A {
             featuredBlockUrl: f,
             logoUrl: p,
             pdpBgUrl: T,
-            mobileBannerUrl: g,
-            mobileBgUrl: m,
+            mobileBannerUrl: m,
+            mobileBgUrl: g,
             heroLogoDisplayConfig: (0, r.f6)(a),
             heroBannerDisplayConfig: (0, r.f6)(l),
         });

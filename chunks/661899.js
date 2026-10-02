@@ -16,15 +16,15 @@ let I = { lastOrderUpdateRevision: 0 };
 var f = n(73153),
     p = n(158032),
     T = n(830382),
-    g = n(136857),
-    m = n(739508),
+    m = n(136857),
+    g = n(739508),
     S = n(71532),
     N = n(375708);
 let C = [E.__0.COMPLETED, E.__0.FAILED, E.__0.CANCELED];
 async function O(e) {
     if (null == e) return;
     let { error: t } = await (0, S.ap)(e);
-    null != t && (0, m.pM)(Error(t), { extra: { authenticationError: t } });
+    null != t && (0, g.pM)(Error(t), { extra: { authenticationError: t } });
 }
 let R = {
     paymentAuthError: null,
@@ -51,7 +51,7 @@ function F(e) {
         checkoutInitParameters: t,
         startingValues: n,
         contextMetadata: c,
-        order: m,
+        order: g,
         initialPaymentSourceId: S,
         initialCurrency: L,
     } = e;
@@ -185,7 +185,7 @@ function F(e) {
                 handlePaymentFailure: (t) => {
                     let { error: n } = t,
                         { code: r, paymentId: a } = n;
-                    if (r !== g.tG.CONFIRMATION_REQUIRED && r !== g.tG.AUTHENTICATION_REQUIRED) {
+                    if (r !== m.tG.CONFIRMATION_REQUIRED && r !== m.tG.AUTHENTICATION_REQUIRED) {
                         i().isAwaitingPaymentAuthentication && e({ isAwaitingPaymentAuthentication: !1 });
                         return;
                     }
@@ -195,18 +195,18 @@ function F(e) {
                             awaitingPaymentId: a ?? null,
                             paymentAuthWasCancelled: !1,
                         }),
-                        r === g.tG.AUTHENTICATION_REQUIRED && O(a));
+                        r === m.tG.AUTHENTICATION_REQUIRED && O(a));
                 },
                 handlePaymentUpdate: (t) => {
                     let { payment: n } = t;
                     if (i().isAwaitingPaymentAuthentication && n.id === i().awaitingPaymentId && C.includes(n.status)) {
                         if (n.status === E.__0.FAILED) {
                             let t = n.metadata?.billing_error_code,
-                                i = t === g.tG.BILLING_INSUFFICIENT_FUNDS ? t : null;
+                                i = t === m.tG.BILLING_INSUFFICIENT_FUNDS ? t : null;
                             e({
                                 isAwaitingPaymentAuthentication: !1,
                                 awaitingPaymentId: null,
-                                paymentAuthError: new g.Ay(N.intl.string(N.t.khEaRI), i),
+                                paymentAuthError: new m.Ay(N.intl.string(N.t.khEaRI), i),
                             });
                             return;
                         }
@@ -300,8 +300,8 @@ function F(e) {
             ...(0, M.d)(e, i),
             get: (e) => (null != F[e] ? F[e]() : null),
             contextMetadata: c,
-            order: m,
-            orderRecord: null != m ? s.A.createFromServer(m) : null,
+            order: g,
+            orderRecord: null != g ? s.A.createFromServer(g) : null,
             setOrder: (t) => e((e) => (0, _.N4)(e, t)),
             selectedSkuId: void 0,
             selectedPlanId: void 0,
@@ -319,7 +319,7 @@ function F(e) {
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
             setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: (0, _.Rn)(t, i) }),
-            checkoutInvoicePreview: null == m || (0, a.L)(m) ? null : d.A.createFromOrder(m),
+            checkoutInvoicePreview: null == g || (0, a.L)(g) ? null : d.A.createFromOrder(g),
             checkoutInvoiceError: null,
             setCheckoutInvoicePreview: (t, n) =>
                 e((e) => ({

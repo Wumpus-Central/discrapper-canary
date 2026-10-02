@@ -24,13 +24,13 @@ function T(e) {
         null != d.Ay.getVoiceChannelId() && o.Ay.isVideoEnabled() && null != n
     );
 }
-function g() {
+function m() {
     (E !== d.Ay.getVoiceChannelId() && ((A = !1), (f = !1), (p = !1)), T() && (A = !0), (E = d.Ay.getVoiceChannelId()));
 }
-class m extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "VideoBackgroundStore";
     initialize() {
-        (this.waitFor(o.Ay, d.Ay, s.Ay, l.A, c.default), this.syncWith([d.Ay, o.Ay], g));
+        (this.waitFor(o.Ay, d.Ay, s.Ay, l.A, c.default), this.syncWith([d.Ay, o.Ay], m));
     }
     get videoFilterAssets() {
         return I;
@@ -51,7 +51,7 @@ class m extends i.Ay.Store {
         return p;
     }
 }
-let S = new m(a.h, {
+let S = new g(a.h, {
     VIDEO_FILTER_ASSETS_FETCH_SUCCESS: function (e) {
         let { assets: t } = e,
             n = {};

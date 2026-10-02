@@ -1,10 +1,10 @@
-l.d(t, { A: () => i });
-var n = l(477900);
-l(582128);
-var a = l(192308);
-function i(e, t) {
-    (0, a.openModalLazy)(async () => {
-        let { default: a } = await l.e("972529").then(l.bind(l, 444040));
-        return (l) => (0, n.jsx)(a, { ...l, project: e, currentGuildId: t });
+t.d(e, { A: () => u });
+var a = t(477900);
+t(582128);
+var n = t(192308);
+function u(r, e) {
+    (0, n.openModalLazy)(async () => {
+        let { default: n } = await t.e("972529").then(t.bind(t, 444040));
+        return (t) => (0, a.jsx)(n, { ...t, project: r, currentGuildId: e });
     });
 }

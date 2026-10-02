@@ -26,8 +26,8 @@ var h = n(400492),
     f = n(458640),
     p = n(734057),
     T = n(803224),
-    g = n(994500),
-    m = n(351906),
+    m = n(994500),
+    g = n(351906),
     S = n(287809),
     N = n(174459),
     C = n(486020),
@@ -200,7 +200,7 @@ async function X(e, t, n, i, r) {
         c = await G(),
         u = c?.authorizationStatus === "authorized" || c?.authorizationStatus === "provisional",
         _ = null != c ? u : await K(),
-        h = m.A.disableNotifications && null == r.overrideStreamerMode,
+        h = g.A.disableNotifications && null == r.overrideStreamerMode,
         I = !R.isPlatformEmbedded || ((0, R.isMac)() && u) || L.Ay.shouldDisplayNotifications(),
         f = { ...i, action: void 0, ping: void 0, banner: void 0, badge: void 0 };
     if (((i.banner = await Y()), !(!h && _ && I))) {
@@ -270,7 +270,7 @@ async function X(e, t, n, i, r) {
                 t = r.messageRecord.author;
             a.threadIdentifier = e;
             let n = p.A.getChannel(e);
-            null != n && (a.groupName = (0, d.m1)(n, S.default, g.A));
+            null != n && (a.groupName = (0, d.m1)(n, S.default, m.A));
             let i = n?.getGuildId();
             ((a.senderIdentifier = t.id),
                 (a.senderDisplayName = O.Ay.getName(i, e, t)),

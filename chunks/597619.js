@@ -25,8 +25,8 @@ function p(e) {
             lang: f,
             theme: p,
             density: T,
-            focused: g,
-            fontScale: m,
+            focused: m,
+            fontScale: g,
             fontScaleClass: S,
             mouseMode: N,
             keyboardModeEnabled: C,
@@ -83,7 +83,7 @@ function p(e) {
             );
         }, [j]));
     let W = (0, o.bG)([A.Ay], () => A.Ay.hdrDynamicRange),
-        Y = `font-size: ${m}%; --saturation-factor: ${O}; dynamic-range-limit: ${W}; ${x}`,
+        Y = `font-size: ${g}%; --saturation-factor: ${O}; dynamic-range-limit: ${W}; ${x}`,
         K = s()(
             ((t = ""),
             (0, _.isWindows)()
@@ -107,7 +107,7 @@ function p(e) {
                 "reduce-motion": D,
                 "full-motion": !D,
                 "is-mobile": l.Fr,
-                "app-focused": g,
+                "app-focused": m,
                 "desaturate-user-colors": R,
                 "disable-forced-colors": !L && "active" === y,
                 "enable-forced-colors": L,
@@ -124,7 +124,7 @@ function p(e) {
             },
             a,
         ),
-        $ = r.useMemo(() => ({ lang: f, style: Y, className: K, focused: g }), [f, Y, K, g]);
+        $ = r.useMemo(() => ({ lang: f, style: Y, className: K, focused: m }), [f, Y, K, m]);
     return (
         (0, c.Ay)(() => {
             h.Ay.setTrafficLightPosition({ x: 9, y: 9 });

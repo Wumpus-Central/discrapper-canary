@@ -1,8 +1,8 @@
 n.d(t, {
-    $X: () => m,
+    $X: () => g,
     Bp: () => L,
     G2: () => S,
-    RZ: () => g,
+    RZ: () => m,
     SH: () => p,
     X0: () => f,
     by: () => C,
@@ -52,13 +52,13 @@ function p(e, t) {
 function T(e, t) {
     return (0, u.ix)({ guildId: e.id, location: t }) && !e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
 }
-function g(e, t) {
+function m(e, t) {
     return e.filter((e) => T(e, t)).sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id)));
 }
-function m(e) {
+function g(e) {
     let t = d.A.getGuildId(),
         n = null == t ? null : l.A.getGuild(t);
-    return null != n && T(n, e) ? n.id : (g(l.A.getGuildsArray(), e)[0]?.id ?? null);
+    return null != n && T(n, e) ? n.id : (m(l.A.getGuildsArray(), e)[0]?.id ?? null);
 }
 function S(e, t) {
     return T(e, t);

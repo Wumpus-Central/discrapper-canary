@@ -3,7 +3,7 @@
     $b: () => J,
     Br: () => L,
     CE: () => ec,
-    D0: () => m,
+    D0: () => g,
     Dm: () => V,
     G0: () => O,
     HF: () => et,
@@ -57,8 +57,8 @@ var i,
     f = n(758836),
     p = n(652215),
     T = n(818348),
-    g = n(375708),
-    m = (((i = {}).NITRO = "nitro"), (i.THIRDPARTY = "thirdparty"), i);
+    m = n(375708),
+    g = (((i = {}).NITRO = "nitro"), (i.THIRDPARTY = "thirdparty"), i);
 let S = { nitro: "nitro", thirdparty: "xbox" };
 function N(e) {
     return null != e ? S[e] : null;
@@ -201,13 +201,13 @@ function B(e, t) {
 function V(e) {
     switch (e) {
         case a.R.AVATAR_DECORATION:
-            return g.intl.string(g.t["7v0T9P"]);
+            return m.intl.string(m.t["7v0T9P"]);
         case a.R.PROFILE_EFFECT:
-            return g.intl.string(g.t.wR5wOo);
+            return m.intl.string(m.t.wR5wOo);
         case a.R.NAMEPLATE:
-            return g.intl.string(g.t.x5CoXR);
+            return m.intl.string(m.t.x5CoXR);
         case a.R.PROFILE_FRAME:
-            return g.intl.string(g.t.GWrZOd);
+            return m.intl.string(m.t.GWrZOd);
         default:
             return null;
     }

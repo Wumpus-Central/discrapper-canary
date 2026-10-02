@@ -16,8 +16,8 @@ var i = n(435558),
     f = n(696451),
     p = n(71393),
     T = n(576705),
-    g = n(994500),
-    m = n(287809),
+    m = n(994500),
+    g = n(287809),
     S = n(652215);
 let N = "SELECTABLE",
     C = "VOCAL",
@@ -97,7 +97,7 @@ function k(e) {
         (a = {}),
         t[N].forEach((e) => {
             let { channel: t } = e,
-                n = (0, d.m1)(t, m.default, g.A),
+                n = (0, d.m1)(t, g.default, m.A),
                 r = Object.prototype.hasOwnProperty.call(a, n) ? a[n] : null;
             (null == r ? (a[n] = 1) : ((a[n] = r + 1), (n += `~${r}`)), (i[t.id] = { id: t.id, name: n }));
         }),
@@ -111,7 +111,7 @@ function k(e) {
             for (let { channel: t } of r) if (H(e, t)) return !0;
             for (let { channel: t } of a) if (H(e, t)) return !0;
             return !1;
-        })(m.default.getCurrentUser(), n)
+        })(g.default.getCurrentUser(), n)
             ? delete y[n]
             : (y[n] = !0),
         s
@@ -149,7 +149,7 @@ function W() {
 class Y extends s.Ay.Store {
     static displayName = "GuildChannelStore";
     initialize() {
-        (this.waitFor(h.default, I.A, c.A, o.A, f.Ay, p.A, T.A, m.default), this.syncWith([c.A], W));
+        (this.waitFor(h.default, I.A, c.A, o.A, f.Ay, p.A, T.A, g.default), this.syncWith([c.A], W));
     }
     getAllGuilds() {
         return R;

@@ -1,4 +1,4 @@
-i.exports = {
+a.exports = {
     t5: "qualityIndicator__30845",
     vk: "clickable__30845",
     Lc: "qualityIndicatorFullQuality__30845",

@@ -44,15 +44,15 @@ function f(e) {
 }
 var p = n(4227),
     T = n(870216),
-    g = n(993408),
-    m = n(442007),
+    m = n(993408),
+    g = n(442007),
     S = n(510801);
 class N {
     categories;
     collections;
     constructor(e) {
         ((this.categories = e.categories.map((e) => S.A.fromServer(e))),
-            (this.collections = e.collections.map((e) => m.A.fromServer(e))));
+            (this.collections = e.collections.map((e) => g.A.fromServer(e))));
     }
     static fromServer(e) {
         return new N(e);
@@ -420,8 +420,8 @@ class W {
             (this.heroLogoUrl = e.hero_logo_url),
             (this.mobileHeroUrl = e.mobile_hero_url),
             (this.mobileHeroAnimatedUrl = e.mobile_hero_animated_url),
-            (this.bannerDisplayConfig = (0, g.f6)(e.banner_display_config)),
-            (this.logoDisplayConfig = (0, g.f6)(e.logo_display_config)));
+            (this.bannerDisplayConfig = (0, m.f6)(e.banner_display_config)),
+            (this.logoDisplayConfig = (0, m.f6)(e.logo_display_config)));
     }
     static fromServer(e) {
         return new W(e);
@@ -688,7 +688,7 @@ async function ea(e, t) {
 }
 function es(e) {
     let t = Date.now();
-    for (let n of (0, g.XS)([e]))
+    for (let n of (0, m.XS)([e]))
         null == h.A.getProduct(n.skuId) &&
             o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: n.skuId, product: n, endedAt: t });
 }

@@ -20,22 +20,22 @@ function f(e) {
 }
 let p = null,
     T = !1,
-    g = !1,
-    m = {};
+    m = !1,
+    g = {};
 function S(e) {
     try {
         let t = a.A.getWindow(_.f);
         if (null == t || "function" != typeof t.requestAnimationFrame) return ((p = "OverlayNotAvailable"), A(e));
-        if (!g) return ((p = "MainWindowFocused"), A(e));
+        if (!m) return ((p = "MainWindowFocused"), A(e));
         if (!f(!0)) return ((p = "NoOverlayRendering"), A(e));
         let n = null !== u.A.getFocusedRunningGame(),
             i = s.A.isFocused((0, l.Q2)(t));
         if ((s.A.isFocused() && E.error("Main window is reported as focused when it should not be!"), n || i)) {
             p = n ? "OverlayGameFocused" : "OverlayWindowFocused";
             let i = t.requestAnimationFrame((t) => {
-                (delete m[i], e(t));
+                (delete g[i], e(t));
             });
-            return ((m[i] = e), i);
+            return ((g[i] = e), i);
         }
     } catch (e) {
         (E.error("RAF redirect failed, falling back to original. Cause:", e),
@@ -54,7 +54,7 @@ function C() {
     } catch (e) {
         E.warn("Unable to access overlay window cancelAnimationFrame, falling back to main window RAF callbacks", e);
     }
-    (Object.entries(m)
+    (Object.entries(g)
         .map((e) => {
             let [t, n] = e;
             return { timeoutId: Number(t), callback: n };
@@ -70,12 +70,12 @@ function C() {
                 }
             A(r);
         }),
-        (m = {}));
+        (g = {}));
 }
 function O(e) {
-    if (e === g) return;
-    let t = !e && g;
-    ((g = e), t && C());
+    if (e === m) return;
+    let t = !e && m;
+    ((m = e), t && C());
 }
 class R extends i.A {
     _initialize() {
@@ -102,7 +102,7 @@ class R extends i.A {
     handleOverlayRenderDebugMode(e) {
         let { enabled: t, mode: n } = e;
         n === d.x7.OverlayRafManagerForceEnabled &&
-            ((T = t), t ? (window.requestAnimationFrame = S) : g || ((window.requestAnimationFrame = A), C()));
+            ((T = t), t ? (window.requestAnimationFrame = S) : m || ((window.requestAnimationFrame = A), C()));
     }
     actions = {
         OVERLAY_UPDATE_OVERLAY_METHOD: this.handleUpdateOverlayMethod,

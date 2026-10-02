@@ -1,4 +1,4 @@
-n.d(t, { C$: () => I, S3: () => A, i0: () => S, nW: () => N, p8: () => m, pF: () => g, v: () => T, yi: () => h });
+n.d(t, { C$: () => I, S3: () => A, i0: () => S, nW: () => N, p8: () => g, pF: () => m, v: () => T, yi: () => h });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -181,7 +181,7 @@ function T(e) {
             };
     }
 }
-function g(e, t, n) {
+function m(e, t, n) {
     let {
         bgRadius: r,
         bgY: a,
@@ -214,7 +214,7 @@ function g(e, t, n) {
         ],
     });
 }
-function m(e, t) {
+function g(e, t) {
     let { isMobile: n, isTyping: i, isVR: r } = t;
     if (i) return c.Ay.Masks.STATUS_TYPING;
     switch (e) {
@@ -250,7 +250,7 @@ function N(e) {
         h = t === u.clD.ONLINE && r,
         I = A(t, d);
     return (0, i.jsx)(c.Ay, {
-        mask: m(t, { isMobile: _, isTyping: !1, isVR: h }),
+        mask: g(t, { isMobile: _, isTyping: !1, isVR: h }),
         className: a()(E.d, l),
         style: o,
         ...S(s, t, { isMobile: _, isTyping: !1, isVR: h }),

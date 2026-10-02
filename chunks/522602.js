@@ -1,4 +1,4 @@
-(n.d(t, { A: () => g }), n(321073));
+(n.d(t, { A: () => m }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -44,7 +44,7 @@ class T extends a.Ay.Store {
         return I(e, t).find(n);
     }
 }
-let g = new T(s.h, {
+let m = new T(s.h, {
     UPLOAD_ATTACHMENT_POP_FILE: function (e) {
         let { channelId: t } = e,
             n = [...I(t, u.C.ChannelMessage)];

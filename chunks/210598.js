@@ -28,7 +28,7 @@ function p() {
 function T(e) {
     return "" === e.title.trim() && "" === e.description.trim() && null == e.image;
 }
-function g(e) {
+function m(e) {
     switch (e.type) {
         case a.K.COVER:
             return "" === e.title.trim() && "" === e.subtitle.trim() && null == e.image;
@@ -36,12 +36,12 @@ function g(e) {
             return e.fields.every(T);
     }
 }
-function m(e) {
+function g(e) {
     if (null != e && "file_id" in e)
         return { fileId: e.file_id, width: e.width, height: e.height, isAnimated: e.is_animated ?? !1 };
 }
 function S(e) {
-    let t = m(e.image);
+    let t = g(e.image);
     return {
         key: h(),
         title: e.title ?? "",
@@ -63,7 +63,7 @@ function N(e) {
                                   type: e.type,
                                   title: e.title ?? "",
                                   subtitle: e.subtitle ?? "",
-                                  image: m(e.image),
+                                  image: g(e.image),
                               };
                           case a.K.FIELDS:
                               return { type: e.type, fields: e.fields.map(S) };
@@ -109,17 +109,17 @@ class R {
                 type: this.type,
                 header: this.header,
                 sections: this.sections
-                    .filter((e) => !g(e))
+                    .filter((e) => !m(e))
                     .map(O)
                     .filter(c.Vq),
             },
         };
     }
     isDiscardable() {
-        return this.sections.every(g);
+        return this.sections.every(m);
     }
     isValid() {
-        return "" !== this.header.trim() && this.sections.some((e) => !g(e));
+        return "" !== this.header.trim() && this.sections.some((e) => !m(e));
     }
     isUpdatable() {
         return (0, u.ki)(d.default.getCurrentUser(), _.PremiumTypes.TIER_2);

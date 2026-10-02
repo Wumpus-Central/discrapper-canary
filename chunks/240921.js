@@ -42,7 +42,7 @@ function c(e) {
                     f = c?.exposureTrackingEnabled,
                     p = c?.useAsEligibility,
                     T = E(c),
-                    g = null == T;
+                    m = null == T;
                 return ((0, i.useEffect)(() => {
                     null == l ||
                         null == A ||
@@ -50,9 +50,9 @@ function c(e) {
                         !1 !== I ||
                         !0 !== f ||
                         !0 === p ||
-                        g ||
+                        m ||
                         t.trackExperimentExposure(l, o, e.location, d, h, A, n);
-                }, [n, l, A, h, e.location, I, f, p, g]),
+                }, [n, l, A, h, e.location, I, f, p, m]),
                 null == _ || !0 === p || null == T)
                     ? u
                     : T;

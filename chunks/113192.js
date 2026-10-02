@@ -1,4 +1,4 @@
-n.d(t, { v: () => m });
+n.d(t, { v: () => g });
 var i = n(477900);
 n(582128);
 var r = n(646865),
@@ -17,20 +17,20 @@ var r = n(646865),
     f = n(165610),
     p = n(652215),
     T = n(977747),
-    g = n(967481);
-function m(e) {
-    let { frame: t, idle: n, onMouseDown: m, onMouseMove: S, onMouseLeave: N } = e,
+    m = n(967481);
+function g(e) {
+    let { frame: t, idle: n, onMouseDown: g, onMouseMove: S, onMouseLeave: N } = e,
         C = (0, o.h)(t.applicationId),
         O = (0, u.Us)() === p.BRT.POPOUT,
         { parentAnalyticsLocation: R } = (0, l.Ay)();
     return (0, i.jsxs)("div", {
-        className: g._v,
+        className: m._v,
         onMouseMove: S,
-        onMouseDown: m,
+        onMouseDown: g,
         onMouseLeave: N,
         children: [
             (0, i.jsx)("div", {
-                className: g.K1,
+                className: m.K1,
                 children: (0, i.jsx)(E.X, {
                     idle: n,
                     title: C?.name ?? "",
@@ -41,7 +41,7 @@ function m(e) {
                 }),
             }),
             (0, i.jsx)("div", {
-                className: g.q6,
+                className: m.q6,
                 children: (0, i.jsxs)(c.A, {
                     grow: 1,
                     shrink: 1,

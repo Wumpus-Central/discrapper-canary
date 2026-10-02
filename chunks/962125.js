@@ -24,8 +24,8 @@ let u = r.memo(
                 rowCount: f,
                 rowCountBySection: p,
                 rowHeight: T,
-                sectionMarginBottom: g,
-                sectionHeaderHeight: m,
+                sectionMarginBottom: m,
+                sectionHeaderHeight: g,
                 sectionFooterHeight: S,
                 listHeaderHeight: N,
                 stickyHeaders: C = !1,
@@ -54,10 +54,10 @@ let u = r.memo(
             ),
             F = r.useCallback(
                 (e) => {
-                    let t = "function" == typeof m ? m(e) : m;
+                    let t = "function" == typeof g ? g(e) : g;
                     return null == t ? 0 : t;
                 },
-                [m],
+                [g],
             ),
             B = r.useCallback(
                 (e) => {
@@ -68,10 +68,10 @@ let u = r.memo(
             ),
             V = r.useCallback(
                 (e) => {
-                    let t = "function" == typeof g ? g(e) : g;
+                    let t = "function" == typeof m ? m(e) : m;
                     return null == t ? 0 : t;
                 },
-                [g],
+                [m],
             ),
             H = r.useRef([]),
             j = r.useRef([]),
@@ -215,8 +215,8 @@ let u = r.memo(
                             ((I += i), f++, t++);
                         }
                         let T = s + d + I,
-                            g = T + c >= v && T <= e;
-                        (null != h && g && l.push(h(r)), null != E ? i.push(E(r, l)) : (i = [...i, ...l]));
+                            m = T + c >= v && T <= e;
+                        (null != h && m && l.push(h(r)), null != E ? i.push(E(r, l)) : (i = [...i, ...l]));
                     } else break;
                 }
                 return { visibleItems: i, listOffset: n };

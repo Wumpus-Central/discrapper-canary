@@ -16,8 +16,8 @@ var i,
     f = n(927813),
     p = n(935208),
     T = n(206885),
-    g = n(41984),
-    m = n(956753),
+    m = n(41984),
+    g = n(956753),
     S = n(489277),
     N = n(222506),
     C = n(614455),
@@ -76,7 +76,7 @@ function x() {
                 if (((D = t), !y.has(t))) {
                     let n = U(t),
                         i = c.A.getChannel(t)?.lastMessageId ?? void 0,
-                        r = w(t, g.B9.MANUAL, e, n, i);
+                        r = w(t, m.B9.MANUAL, e, n, i);
                     y.set(t, r);
                 }
             }
@@ -93,7 +93,7 @@ function x() {
                 if (null == r) continue;
                 let a = p.default.extractTimestamp(r);
                 if (e - a > P) continue;
-                let s = w(i, g.B9.MANUAL, e, a, r);
+                let s = w(i, m.B9.MANUAL, e, a, r);
                 (y.set(i, s), n++);
             }
         })(e),
@@ -152,7 +152,7 @@ class W extends a.Ay.Store {
     }
 }
 function Y(e) {
-    return (0, m.U5)(e, "OverlayTextChatStore");
+    return (0, g.U5)(e, "OverlayTextChatStore");
 }
 let K = new W(
     l.h,

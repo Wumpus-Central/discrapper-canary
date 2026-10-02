@@ -288,7 +288,7 @@ class f extends s.G {
     constructor() {
         super("discord_protos.discord_notifications.v1.DeclarativeSettings", [
             { no: 1, name: "versions", kind: "message", T: () => u.u },
-            { no: 2, name: "values", kind: "map", K: 13, V: { kind: "message", T: () => g } },
+            { no: 2, name: "values", kind: "map", K: 13, V: { kind: "message", T: () => m } },
         ]);
     }
     create(e) {
@@ -333,7 +333,7 @@ class f extends s.G {
                     a = t.uint32();
                     break;
                 case 2:
-                    s = g.internalBinaryRead(t, t.uint32(), n);
+                    s = m.internalBinaryRead(t, t.uint32(), n);
                     break;
                 default:
                     throw new globalThis.Error(
@@ -341,7 +341,7 @@ class f extends s.G {
                     );
             }
         }
-        e[a ?? 0] = s ?? g.create();
+        e[a ?? 0] = s ?? m.create();
     }
     internalBinaryWrite(e, t, n) {
         for (let r of (e.versions &&
@@ -349,7 +349,7 @@ class f extends s.G {
         Object.keys(e.values)))
             (t.tag(2, i.O0.LengthDelimited).fork().tag(1, i.O0.Varint).uint32(parseInt(r)),
                 t.tag(2, i.O0.LengthDelimited).fork(),
-                g.internalBinaryWrite(e.values[r], t, n),
+                m.internalBinaryWrite(e.values[r], t, n),
                 t.join().join());
         let r = n.writeUnknownFields;
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
@@ -400,8 +400,8 @@ class T extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let g = new T();
-class m extends s.G {
+let m = new T();
+class g extends s.G {
     constructor() {
         super("discord_protos.discord_notifications.v1.GuildNotificationSettings", [
             { no: 1, name: "suppress_everyone", kind: "scalar", T: 8 },
@@ -496,7 +496,7 @@ class m extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let S = new m();
+let S = new g();
 class N extends s.G {
     constructor() {
         super("discord_protos.discord_notifications.v1.ChannelNotificationSettings", [

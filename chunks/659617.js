@@ -16,8 +16,8 @@ var i,
     f = n(853742),
     p = n(823099),
     T = n(451909),
-    g = n(195880),
-    m = n(677413),
+    m = n(195880),
+    g = n(677413),
     S = n(280450),
     N = n(734057),
     C = n(31717),
@@ -90,8 +90,8 @@ function H(e) {
     } = e;
     return r.useCallback(
         async (e, r, A) => {
-            var h, I, f, p, g;
-            let m = null == n,
+            var h, I, f, p, m;
+            let g = null == n,
                 S = F(i, a),
                 O = i.name ?? "";
             if ("" === O && d) {
@@ -121,13 +121,13 @@ function H(e) {
                 (c.A.clearDraft(t.id, C.C.ThreadSettings),
                 c.A.clearDraft(t.id, C.C.FirstThreadMessage),
                 o?.(D),
-                (m || e.length > 0 || (null != r && r.length > 0) || (null != A && A.length > 0)) &&
+                (g || e.length > 0 || (null != r && r.length > 0) || (null != A && A.length > 0)) &&
                     ((h = D),
                     (I = e),
                     (f = r),
                     (p = A),
-                    null != (g = E) && null != p && p.length > 0
-                        ? g(h, p, I, f)
+                    null != (m = E) && null != p && p.length > 0
+                        ? m(h, p, I, f)
                         : null != f && f.length > 0
                           ? u.A.sendStickers(h.id, f, T.Ay.parse(h, I), { location: w.Hx.THREAD_CREATION })
                           : u.A.sendMessage(h.id, T.Ay.parse(h, I), void 0, { location: w.Hx.THREAD_CREATION }))),
@@ -160,12 +160,12 @@ function W(e) {
     return r.useCallback(
         async (e, r, I) => {
             var T;
-            let g,
+            let m,
                 N,
                 O,
                 R,
                 L = 0,
-                [y, b] = (0, m.Ay)(e);
+                [y, b] = (0, g.Ay)(e);
             y && ((e = b), (L = (0, a.UI)(L, U.pr7.SUPPRESS_NOTIFICATIONS)));
             let M = (0, v.Gl)(t, null),
                 P = U.Rsh.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
@@ -177,7 +177,7 @@ function W(e) {
                 },
                 x =
                     null != u
-                        ? null == (N = null != (g = (T = u).activity.session_id) ? g : S.default.getSessionId())
+                        ? null == (N = null != (m = (T = u).activity.session_id) ? m : S.default.getSessionId())
                             ? null
                             : {
                                   type: T.type,
@@ -277,7 +277,7 @@ async function Y(e, t, i, r) {
         else if (P.F4.has(r.body?.code)) {
             if (null != i)
                 if (r.body?.code === U.t02.EXPLICIT_CONTENT) {
-                    let t = (0, g.m)();
+                    let t = (0, m.m)();
                     if (null != r.body.attachments && r.body.attachments.length > 0) {
                         var c;
                         (o.h.dispatch({

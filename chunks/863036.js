@@ -1,4 +1,4 @@
-let r, l, i, a, u, o;
+let l, i, r, a, u, o;
 (n.d(t, { A: () => W }), n(938796));
 var s = n(435558),
     d = n.n(s),
@@ -67,17 +67,17 @@ function D(e, t, n) {
         case "defaultReactionEmoji":
             if (null == t) return null;
             if ((0, f.is)(t.emojiId)) return { emojiId: t.emojiId };
-            let r = t.emojiName;
-            return null == r || "" === r ? null : { emojiName: I.Ay.translateInlineEmojiToSurrogates(r) };
+            let l = t.emojiName;
+            return null == l || "" === l ? null : { emojiName: I.Ay.translateInlineEmojiToSurrogates(l) };
         default:
             return t;
     }
 }
 function b(e) {
-    ((r = e.section),
-        (l = e.subsection),
+    ((l = e.section),
+        (i = e.subsection),
         null != a &&
-            r === g.p_A.INSTANT_INVITES &&
+            l === g.p_A.INSTANT_INVITES &&
             ((R = !0),
             N.Bo.get({ url: g.Rsh.INSTANT_INVITES(a.id), oldFormErrors: !0, rejectWithError: !0 }).then(
                 (e) => {
@@ -87,22 +87,22 @@ function b(e) {
             )));
 }
 function M() {
-    ((U = !1), (y = g.XlH.CLOSED), (r = null), (a = i = null), (u = null), (O = {}));
+    ((U = !1), (y = g.XlH.CLOSED), (l = null), (a = r = null), (u = null), (O = {}));
 }
 let P = d().debounce(() => {
-    if (null == a || null == i) return !1;
+    if (null == a || null == r) return !1;
     let e = a.toJS(),
-        t = i.toJS(),
+        t = r.toJS(),
         n = e.type;
-    j.every((r) => {
-        let l = e[r],
-            i = t[r],
-            a = D(r, l, n),
-            u = D(r, i, n);
+    j.every((l) => {
+        let i = e[l],
+            r = t[l],
+            a = D(l, i, n),
+            u = D(l, r, n);
         return d().isEqual(a, u);
     }) &&
-        a !== i &&
-        ((a = i), k.emitChange());
+        a !== r &&
+        ((a = r), k.emitChange());
 }, 500);
 function w(e) {
     return new C.A({
@@ -123,19 +123,19 @@ function w(e) {
 function V(e) {
     return (
         !!(function (e) {
-            if (null == i || i.id !== e) return !1;
-            if (i === a) {
+            if (null == r || r.id !== e) return !1;
+            if (r === a) {
                 let t = L.A.getChannel(e);
                 if (null == t) return !1;
-                ((a = i = t), (u = L.A.getChannel(a.parent_id)));
+                ((a = r = t), (u = L.A.getChannel(a.parent_id)));
             } else {
                 let t = L.A.getChannel(e);
                 if (null == t) return !1;
-                ((i = t),
+                ((r = t),
                     null != a &&
                         ((a = a
-                            .set("permissionOverwrites", i.permissionOverwrites)
-                            .set("availableTags", i.availableTags)),
+                            .set("permissionOverwrites", r.permissionOverwrites)
+                            .set("availableTags", r.availableTags)),
                         (u = L.A.getChannel(a.parent_id))));
             }
             return !0;
@@ -154,13 +154,13 @@ class F extends S.Ay.Store {
         this.waitFor(L.A);
     }
     hasChanges() {
-        return a !== i;
+        return a !== r;
     }
     isOpen() {
         return U;
     }
     getSection() {
-        return r;
+        return l;
     }
     getInvites() {
         return { invites: O, loading: R };
@@ -182,8 +182,8 @@ class F extends S.Ay.Store {
             submitting: y === g.XlH.SUBMITTING,
             errors: H,
             channel: a,
-            section: r,
-            subsection: l,
+            section: l,
+            subsection: i,
             invites: O,
             selectedOverwriteId: o,
             hasChanges: this.hasChanges(),
@@ -196,26 +196,26 @@ let k = new F(h.h, {
             let t = L.A.getChannel(e.channelId);
             if (null == t) return M();
             ((y = g.XlH.OPEN),
-                (a = i = t),
+                (a = r = t),
                 (G = "location" in e && null != e.location ? e.location : null),
-                (l = "subsection" in e ? e.subsection : null),
+                (i = "subsection" in e ? e.subsection : null),
                 null != a && (a = a.set("nsfw", a.isNSFW())),
                 (u = L.A.getChannel(a.parent_id)),
                 (o = a.getGuildId()));
             let n = a.isModeratorReportChannel() ? g.p_A.PERMISSIONS : g.p_A.OVERVIEW;
-            return ((H = {}), b({ type: "CHANNEL_SETTINGS_SET_SECTION", section: r ?? n, subsection: l }), !0);
+            return ((H = {}), b({ type: "CHANNEL_SETTINGS_SET_SECTION", section: l ?? n, subsection: i }), !0);
         },
         CHANNEL_SETTINGS_SUBMIT: function () {
             ((y = g.XlH.SUBMITTING), (H = {}));
         },
         CHANNEL_SETTINGS_SUBMIT_SUCCESS: function () {
-            ((i = a), (y = g.XlH.OPEN));
+            ((r = a), (y = g.XlH.OPEN));
         },
         CHANNEL_SETTINGS_SUBMIT_FAILURE: function (e) {
             ((y = g.XlH.OPEN),
                 (H = Object.keys(e.errors ?? {}).reduce((t, n) => {
-                    let r = e.errors[n];
-                    return ((0, s.isArray)(r) ? (t[n] = r.join("\n")) : (t[n] = r), t);
+                    let l = e.errors[n];
+                    return ((0, s.isArray)(l) ? (t[n] = l.join("\n")) : (t[n] = l), t);
                 }, {})));
         },
         CHANNEL_SETTINGS_CLOSE: M,
@@ -229,9 +229,9 @@ let k = new F(h.h, {
             let {
                 name: t,
                 channelType: n,
-                topic: r,
-                bitrate: l,
-                userLimit: i,
+                topic: l,
+                bitrate: i,
+                userLimit: r,
                 nsfw: u,
                 flags: o,
                 rateLimitPerUser: s,
@@ -254,9 +254,9 @@ let k = new F(h.h, {
             } = e;
             if (null == a) return !1;
             (null != t && (a = a.set("name", t)),
-                null != r && (a = a.set("topic", r)),
-                null != l && (a = a.set("bitrate", l)),
-                null != i && (a = a.set("userLimit", i)),
+                null != l && (a = a.set("topic", l)),
+                null != i && (a = a.set("bitrate", i)),
+                null != r && (a = a.set("userLimit", r)),
                 null != u && (a = a.set("nsfw", u)),
                 null != o && (a = a.set("flags", o)),
                 null != s && (a = a.set("rateLimitPerUser", s)),

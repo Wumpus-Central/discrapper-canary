@@ -18,17 +18,17 @@ let u = {},
 function T() {
     ((f = l.XlH.OPEN), (p = {}));
 }
-function g() {
+function m() {
     ((f = l.XlH.CLOSED), (p = {}));
 }
-function m() {
+function g() {
     I = _;
 }
 function S() {
     ((h = {}), (p = {}));
 }
 function N() {
-    (S(), m(), g());
+    (S(), g(), m());
 }
 class C extends r.Ay.Store {
     static displayName = "UserProfileSettingsStore";
@@ -84,7 +84,7 @@ let O = new C(a.h, {
         let { guildId: t } = e;
         ((i = null == t || A.has(t) ? void 0 : t), (p = {}));
     },
-    USER_PROFILE_SETTINGS_CLOSE: g,
+    USER_PROFILE_SETTINGS_CLOSE: m,
     USER_PROFILE_SETTINGS_RESET_AND_CLOSE_FORM: N,
     USER_PROFILE_SETTINGS_SUBMIT: function () {
         ((f = l.XlH.SUBMITTING), (p = {}));
@@ -185,7 +185,7 @@ let O = new C(a.h, {
         );
     },
     USER_PROFILE_SETTINGS_RESET_PENDING_CHANGES: S,
-    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: m,
+    USER_PROFILE_SETTINGS_RESET_TRY_IT_OUT_CHANGES: g,
     USER_PROFILE_SETTINGS_RESET_PENDING_LEGACY_USERNAME_DISABLED: function () {
         if ((h[l.ME] ?? {})?.pendingLegacyUsernameDisabled === void 0) return !1;
         h[l.ME] = { ...h[l.ME], pendingLegacyUsernameDisabled: void 0 };

@@ -39,16 +39,16 @@ let I = class {
 var f = n(343328),
     p = n(235393),
     T = n(694403);
-let g = new Set(),
-    m = {
+let m = new Set(),
+    g = {
         show(e) {
             let { url: t, trustUrl: i, onConfirm: r, onCancel: a, isProtocol: s, contextKey: l } = e,
                 o = `masked-link-${t}`;
-            if (g.has(o)) return void a();
-            g.add(o);
+            if (m.has(o)) return void a();
+            m.add(o);
             let d = !1;
             function _(e) {
-                d || ((d = !0), g.delete(o), e ? r() : a());
+                d || ((d = !0), m.delete(o), e ? r() : a());
             }
             (0, u.openModalLazy)(
                 async () => {
@@ -159,8 +159,8 @@ function W(e, t) {
 function Y(e, t) {
     let i = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [],
         s = arguments.length > 3 ? arguments[3] : void 0,
-        { trusted: c, onClick: u, onConfirm: E, onCancel: g, shouldConfirm: L, messageId: y, channelId: D } = e,
-        b = g ?? (() => {}),
+        { trusted: c, onClick: u, onConfirm: E, onCancel: m, shouldConfirm: L, messageId: y, channelId: D } = e,
+        b = m ?? (() => {}),
         M = r().sanitizeUrl(e.href);
     if (null == M) {
         (null != t && t.preventDefault(),
@@ -255,10 +255,10 @@ function Y(e, t) {
                   sourceGuildId: k,
               }));
     if ((null != t && t.preventDefault(), Y))
-        m.show({ url: P, trustUrl: o, onConfirm: V, onCancel: b, isProtocol: !0, contextKey: s });
+        g.show({ url: P, trustUrl: o, onConfirm: V, onCancel: b, isProtocol: !0, contextKey: s });
     else {
         let e = (0, T.W1)(P),
             t = null != e ? e.displayTarget : P;
-        m.show({ url: t, trustUrl: l, onConfirm: V, onCancel: b, isProtocol: !1, contextKey: s });
+        g.show({ url: t, trustUrl: l, onConfirm: V, onCancel: b, isProtocol: !1, contextKey: s });
     }
 }

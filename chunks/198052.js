@@ -16,8 +16,8 @@ var i = n(284009),
     f = n(290863),
     p = n(309010),
     T = n(485296),
-    g = n(287809),
-    m = n(803301),
+    m = n(287809),
+    g = n(803301),
     S = n(977997),
     N = n(568598);
 let C = (0, n(240921).Ay)({
@@ -176,7 +176,7 @@ class ea extends l.Ay.PersistedStore {
     static displayName = "ChannelRTCStore";
     static persistKey = "ChannelRTCStore";
     initialize(e) {
-        (this.waitFor(E.A, A.default, h.A, I.A, d.Ay, u.default, f.A, p.Ay, T.A, g.default, m.A, S.A),
+        (this.waitFor(E.A, A.default, h.A, I.A, d.Ay, u.default, f.A, p.Ay, T.A, m.default, g.A, S.A),
             this.syncWith([d.Ay], Q),
             this.syncWith([u.default], Z),
             e?.voiceParticipantsHidden !== void 0 && Object.assign(x, e?.voiceParticipantsHidden));

@@ -1,4 +1,4 @@
-n.d(t, { BB: () => R, Go: () => y, Jf: () => D, ao: () => O, et: () => v, on: () => L, qN: () => m });
+n.d(t, { BB: () => R, Go: () => y, Jf: () => D, ao: () => O, et: () => v, on: () => L, qN: () => g });
 var i,
     r = n(636537),
     a = n(765178),
@@ -16,8 +16,8 @@ var i,
     f = n(690521),
     p = n(350593),
     T = n(652215),
-    g = n(375708),
-    m =
+    m = n(375708),
+    g =
         (((i = {}).MESSAGE = "Message"),
         (i.FORUM_TOOLBAR = "Forum Toolbar"),
         (i.MOBILE_MEDIA_VIEWER = "Mobile Media Viewer"),
@@ -40,9 +40,9 @@ function S(e, t, n) {
         switch (a && a.code) {
             case T.t02.TOO_MANY_REACTIONS:
                 l.A.show({
-                    title: g.intl.string(g.t.lFddsR),
-                    body: g.intl.string(g.t.h27eIm),
-                    confirmText: g.intl.string(g.t.BddRzS),
+                    title: m.intl.string(m.t.lFddsR),
+                    body: m.intl.string(m.t.h27eIm),
+                    confirmText: m.intl.string(m.t.BddRzS),
                 });
                 break;
             case T.t02.REACTION_BLOCKED:
@@ -102,17 +102,17 @@ async function R(e, t, n) {
     var i, s, u, h;
     let I,
         f = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "Message",
-        m = arguments.length > 4 ? arguments[4] : void 0,
-        O = null != m && !!m.burst,
-        L = null != m && !!m.isRetry;
+        g = arguments.length > 4 ? arguments[4] : void 0,
+        O = null != g && !!g.burst,
+        L = null != g && !!g.isRetry;
     if (
         !L &&
         ((i = e), (s = t), (u = n), (h = O), null != (I = E.A.getMessage(i, s)) && I.userHasReactedWithEmoji(u, h))
     )
         return void l.A.show({
-            title: g.intl.string(g.t["uaUU/g"]),
-            body: g.intl.string(g.t.psMorl),
-            confirmText: g.intl.string(g.t["NX+WJN"]),
+            title: m.intl.string(m.t["uaUU/g"]),
+            body: m.intl.string(m.t.psMorl),
+            confirmText: m.intl.string(m.t["NX+WJN"]),
         });
     let y = await b(n, O);
     return (
@@ -138,16 +138,16 @@ async function R(e, t, n) {
                     });
                 }
                 O
-                    ? (a.O.announce(g.intl.formatToPlainString(g.t["RJlG+R"], { name: n.name })),
+                    ? (a.O.announce(m.intl.formatToPlainString(m.t["RJlG+R"], { name: n.name })),
                       p.A.triggerFullscreenAnimation({ channelId: e, messageId: t, emoji: { ...n, animated: !1 } }))
-                    : a.O.announce(g.intl.formatToPlainString(g.t.ol4acF, { name: n.name }));
+                    : a.O.announce(m.intl.formatToPlainString(m.t.ol4acF, { name: n.name }));
             })
             .catch((i) => {
                 S(i, () => R(e, t, n, f, { burst: O, isRetry: !0 }), { isRetry: L }) &&
                     (N("MESSAGE_REACTION_REMOVE", e, t, n, { burst: O }),
                     O
-                        ? a.O.announce(g.intl.formatToPlainString(g.t.fJeu87, { name: n.name }))
-                        : a.O.announce(g.intl.formatToPlainString(g.t["UUn5V+"], { name: n.name })));
+                        ? a.O.announce(m.intl.formatToPlainString(m.t.fJeu87, { name: n.name }))
+                        : a.O.announce(m.intl.formatToPlainString(m.t["UUn5V+"], { name: n.name })));
             })
     );
 }
@@ -193,8 +193,8 @@ async function v(e) {
         })
             .then(() => {
                 o?.burst
-                    ? a.O.announce(g.intl.formatToPlainString(g.t["3l9f6u"], { name: i.name }))
-                    : a.O.announce(g.intl.formatToPlainString(g.t["DQxi+7"], { name: i.name }));
+                    ? a.O.announce(m.intl.formatToPlainString(m.t["3l9f6u"], { name: i.name }))
+                    : a.O.announce(m.intl.formatToPlainString(m.t["DQxi+7"], { name: i.name }));
             })
             .catch(async (e) => {
                 if (
@@ -215,8 +215,8 @@ async function v(e) {
                     let e = await b(i, u);
                     (N("MESSAGE_REACTION_ADD", t, n, i, { userId: l, burst: u, colors: e }),
                         o?.burst
-                            ? a.O.announce(g.intl.formatToPlainString(g.t.OamVbV, { name: i.name }))
-                            : a.O.announce(g.intl.formatToPlainString(g.t["tD9+b+"], { name: i.name })));
+                            ? a.O.announce(m.intl.formatToPlainString(m.t.OamVbV, { name: i.name }))
+                            : a.O.announce(m.intl.formatToPlainString(m.t["tD9+b+"], { name: i.name })));
                 }
             }));
 }

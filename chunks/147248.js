@@ -17,8 +17,8 @@ function I() {
 var f = n(95701),
     p = n(734057),
     T = n(287809),
-    g = n(158045),
-    m = n(427262),
+    m = n(158045),
+    g = n(427262),
     S = n(644235),
     N = n(385803);
 let C = !0,
@@ -28,7 +28,7 @@ function L() {
     (C && (i = void 0), (R = !1), (O = !1));
 }
 function y() {
-    let e = !g.Ay.canUseClientThemes(T.default.getCurrentUser());
+    let e = !m.Ay.canUseClientThemes(T.default.getCurrentUser());
     if (e === C) return !1;
     ((C = e), (R = !1));
 }
@@ -120,7 +120,7 @@ let U = new P(l.h, {
     CHANNEL_SELECT: function (e) {
         let { channelId: t, guildId: n } = e,
             i = T.default.getCurrentUser();
-        if (null == t || null == n || (0, o.k8)(s.M.CLIENT_THEMES_COACHMARK) || !(0, m.G2)(i)) return;
+        if (null == t || null == n || (0, o.k8)(s.M.CLIENT_THEMES_COACHMARK) || !(0, g.G2)(i)) return;
         let r = p.A.getChannel(t);
         null != r && (0, f.ke)(r.type) && (O = !0);
     },

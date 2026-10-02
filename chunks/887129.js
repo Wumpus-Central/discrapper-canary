@@ -42,8 +42,8 @@ function c(e) {
             preserveFocusPosition: f = !0,
             useVirtualFocus: p = !1,
             wrap: T = !1,
-            orientation: g = o.Gl.VERTICAL,
-            disableClickOnSpace: m = !1,
+            orientation: m = o.Gl.VERTICAL,
+            disableClickOnSpace: g = !1,
         } = e,
         S = i.useRef(n ? (0, s.t$)(t, n) : null),
         N = i.useRef(!1),
@@ -182,8 +182,8 @@ function c(e) {
         k = i.useCallback(
             (e) => {
                 if (!O.current || (!p && !U.current)) return;
-                let n = g === o.Gl.HORIZONTAL ? o.D$.RIGHT : o.D$.DOWN,
-                    i = g === o.Gl.HORIZONTAL ? o.D$.LEFT : o.D$.UP;
+                let n = m === o.Gl.HORIZONTAL ? o.D$.RIGHT : o.D$.DOWN,
+                    i = m === o.Gl.HORIZONTAL ? o.D$.LEFT : o.D$.UP;
                 switch (e.key) {
                     case n:
                         (e.stopPropagation(), e.preventDefault(), G());
@@ -211,7 +211,7 @@ function c(e) {
                         return;
                     case o.D$.SPACE:
                     case o.D$.ENTER: {
-                        if ((e.key === o.D$.SPACE && m) || e.repeat) return;
+                        if ((e.key === o.D$.SPACE && g) || e.repeat) return;
                         let t = S.current;
                         if (null != t) {
                             let n = R((0, s.Mz)(t)),
@@ -222,7 +222,7 @@ function c(e) {
                     }
                 }
             },
-            [G, x, t, g, _, u, v, p],
+            [G, x, t, m, _, u, v, p],
         ),
         F = i.useCallback(
             (e) => {
@@ -234,7 +234,7 @@ function c(e) {
         () => ({
             id: t,
             containerProps: { onKeyDown: k, ref: C, tabIndex: M && f ? -1 : 0 },
-            orientation: g,
+            orientation: m,
             setFocus: F,
             async focusLastVisibleItem() {
                 var e, n;
@@ -273,6 +273,6 @@ function c(e) {
                 return e ? (0, s.HP)(e) : null;
             },
         }),
-        [t, k, g, M, f, F, x, G, v],
+        [t, k, m, M, f, F, x, G, v],
     );
 }

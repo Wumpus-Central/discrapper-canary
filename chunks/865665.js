@@ -1,49 +1,49 @@
-o.d(e, { C: () => u });
-var i = o(477900),
-    n = o(582128),
-    s = o(844222),
-    p = o(402386),
-    d = o(661531);
-function u(t) {
+n.d(t, { C: () => u });
+var r = n(477900),
+    o = n(582128),
+    a = n(844222),
+    l = n(402386),
+    i = n(661531);
+function u(e) {
     let {
-            area: e = 0,
-            glyphSize: o = 16,
+            area: t = 0,
+            glyphSize: n = 16,
             radius: u = { x: 5, y: 5 },
-            color: r = d.A.colors.TEXT_DEFAULT,
-            fpsLimit: a = 30,
-            edgeBand: c = 3,
-        } = t,
-        l = n.useContext(s.C),
+            color: s = i.A.colors.TEXT_DEFAULT,
+            fpsLimit: c = 30,
+            edgeBand: d = 3,
+        } = e,
+        f = o.useContext(a.C),
         {
-            top: h = 0,
-            bottom: y = 0,
-            left: b = 0,
-            right: f = 0,
-        } = "number" == typeof e ? { top: e, bottom: e, left: e, right: e } : e;
-    return (0, i.jsx)(p.j, {
+            top: m = 0,
+            bottom: h = 0,
+            left: p = 0,
+            right: y = 0,
+        } = "number" == typeof t ? { top: t, bottom: t, left: t, right: t } : t;
+    return (0, r.jsx)(l.j, {
         fit: "layout",
         style: {
             position: "absolute",
-            left: -b,
-            top: -h,
-            width: `calc(100% + ${b}px + ${f}px)`,
-            height: `calc(100% + ${h}px + ${y}px)`,
+            left: -p,
+            top: -m,
+            width: `calc(100% + ${p}px + ${y}px)`,
+            height: `calc(100% + ${m}px + ${h}px)`,
             pointerEvents: "none",
         },
         listenOnDocumentBody: !0,
         withReducedMotion: "play",
         dataBinding: {
-            edgeBand: c,
-            insetTop: h,
-            insetBottom: y,
-            insetLeft: b,
-            insetRight: f,
-            color: r,
+            edgeBand: d,
+            insetTop: m,
+            insetBottom: h,
+            insetLeft: p,
+            insetRight: y,
+            color: s,
             radiusX: "number" == typeof u ? u : u.x,
             radiusY: "number" == typeof u ? u : u.y,
-            glyphSize: o,
-            fpsLimit: a,
-            reducedMotion: l.reducedMotion.enabled,
+            glyphSize: n,
+            fpsLimit: c,
+            reducedMotion: f.reducedMotion.enabled,
         },
     });
 }

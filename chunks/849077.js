@@ -4,12 +4,12 @@ n.d(t, {
     Io: () => S,
     Sp: () => I,
     Th: () => L,
-    Ur: () => m,
+    Ur: () => g,
     V$: () => f,
     VA: () => R,
     Ve: () => O,
     XU: () => A,
-    Yw: () => g,
+    Yw: () => m,
     j5: () => T,
     kR: () => y,
     v7: () => C,
@@ -32,7 +32,7 @@ let A = "Notifications Inbox",
     f = c.A.Millis.WEEK,
     p = 50,
     T = "notifications-inbox";
-function g(e) {
+function m(e) {
     let t;
     return (
         (t =
@@ -44,7 +44,7 @@ function g(e) {
         (0, u.yF)({ id: _.gNP, name: t, description: "", icon: void 0, features: [] })
     );
 }
-var m = (((i = {}).UNREAD = "UNREAD"), (i.TODAY = "TODAY"), (i.YESTERDAY = "YESTERDAY"), (i.OLDER = "OLDER"), i),
+var g = (((i = {}).UNREAD = "UNREAD"), (i.TODAY = "TODAY"), (i.YESTERDAY = "YESTERDAY"), (i.OLDER = "OLDER"), i),
     S = (((r = {}).ALL = "all"), (r.MENTIONS = "mentions"), (r.BOOKMARKS = "bookmarks"), r),
     N =
         (((a = {}).ALL_MESSAGES_CHANNEL = "ALL_MESSAGES_CHANNEL"),

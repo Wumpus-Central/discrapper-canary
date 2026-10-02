@@ -247,8 +247,8 @@ class p {
 function T(e, t) {
     Object.defineProperty(e, "name", { value: t });
 }
-var g = n(64015),
-    m = n.n(g),
+var m = n(64015),
+    g = n.n(m),
     S = n(506774);
 n(142703);
 class N {
@@ -539,7 +539,7 @@ class v extends L {
         let { persistKey: t } = this.getClass();
         (this.persist(), v._writePromises.delete(t), v._writeResolvers.delete(t), e());
     };
-    throttledCallback = m()((e) => this.callback(e), this.getClass().throttleDelay, { leading: !1 });
+    throttledCallback = g()((e) => this.callback(e), this.getClass().throttleDelay, { leading: !1 });
     asyncPersist() {
         let { persistKey: e, disableWrite: t, throttleDelay: n } = this.getClass();
         if (v.disableWrites || t) return Promise.resolve(!1);

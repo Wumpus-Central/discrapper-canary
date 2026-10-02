@@ -1,4 +1,4 @@
-(n.d(t, { tp: () => A, Yn: () => E, _g: () => I, rO: () => h, Rd: () => T, Dv: () => m, s2: () => _, S: () => p }),
+(n.d(t, { tp: () => A, Yn: () => E, _g: () => I, rO: () => h, Rd: () => T, Dv: () => g, s2: () => _, S: () => p }),
     n(801541));
 var i = n(889137),
     r = n(440703),
@@ -369,7 +369,7 @@ function T(e) {
         tier: e.tier ?? null,
     };
 }
-function g(e) {
+function m(e) {
     return {
         skuId: e.sku_id,
         tenantMetadata: (function (e) {
@@ -385,6 +385,6 @@ function g(e) {
         consumed: e.consumed,
     };
 }
-function m(e) {
-    return { claimedAt: e.claimed_at, items: e.entitlements.map(g), errors: e.errors };
+function g(e) {
+    return { claimedAt: e.claimed_at, items: e.entitlements.map(m), errors: e.errors };
 }

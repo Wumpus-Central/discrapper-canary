@@ -271,8 +271,8 @@ let T = r.memo(function (e) {
             appContext: I,
             roundCorners: f,
             resizeConfig: T,
-            className: g,
-            getDockedRectPositionY: m,
+            className: m,
+            getDockedRectPositionY: g,
         } = e,
         [S, N] = r.useState(!1),
         C = r.useMemo(
@@ -299,7 +299,7 @@ let T = r.memo(function (e) {
         ? (0, i.jsx)(c.Ay, { children: (0, i.jsx)("div", { className: E._I }) })
         : (0, i.jsx)(c.Ay, {
               children: (0, i.jsx)("div", {
-                  className: s()(E._I, { [E.cB]: S }, g),
+                  className: s()(E._I, { [E.cB]: S }, m),
                   children: (0, i.jsx)(p, {
                       appContext: I,
                       position: t.position,
@@ -313,7 +313,7 @@ let T = r.memo(function (e) {
                       maxY: o,
                       width: a,
                       dockedRect: A,
-                      getDockedRectPositionY: m,
+                      getDockedRectPositionY: g,
                       edgeOffsetTop: 80,
                       edgeOffsetBottom: 132,
                       edgeOffsetLeft: 80,

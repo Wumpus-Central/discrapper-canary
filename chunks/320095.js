@@ -36,8 +36,8 @@ var _ = n(383233),
     p = n(935208),
     T = n(451919);
 n(763754);
-var g = n(652215);
-let m = new c.A({ id: "???", username: "???" });
+var m = n(652215);
+let g = new c.A({ id: "???", username: "???" });
 function S(e) {
     return new _.go({
         ...e,
@@ -46,7 +46,7 @@ function S(e) {
         attachments: e.attachments ?? [],
         embeds: L(e),
         components: (0, s.ZV)(e.components ?? []),
-        codedLinks: g.MRS.NON_PARSED.has(e.type) ? [] : (0, a.Ay)(e.content),
+        codedLinks: m.MRS.NON_PARSED.has(e.type) ? [] : (0, a.Ay)(e.content),
     });
 }
 function N(e) {
@@ -60,19 +60,19 @@ function N(e) {
         I = e.message_reference,
         N =
             null == e.author
-                ? m
+                ? g
                 : null != e.webhook_id
                   ? new c.A(e.author)
                   : (h.default.getUser(e.author.id) ?? new c.A(e.author)),
         C = e?.gift_info,
         O = e.gifting_prompt,
         L = null != e.interaction ? u.createFromServer(e.interaction) : null,
-        v = e.type === g.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
+        v = e.type === m.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
         b = e.content;
     return (
-        e.type === g.lAJ.PREMIUM_REFERRAL &&
+        e.type === m.lAJ.PREMIUM_REFERRAL &&
             ((t = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (b = "")),
-        e.type === g.lAJ.PREMIUM_GROUP_INVITE &&
+        e.type === m.lAJ.PREMIUM_GROUP_INVITE &&
             ((n = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (b = "")),
         new _.Ay({
             ...e,
@@ -201,5 +201,5 @@ function v(e) {
     return 0 === (0, o.o6)(e).length || "" !== e.content;
 }
 function b(e) {
-    return e.hasFlag(g.pr7.EPHEMERAL) && e.type !== g.lAJ.IN_GAME_MESSAGE_NUX;
+    return e.hasFlag(m.pr7.EPHEMERAL) && e.type !== m.lAJ.IN_GAME_MESSAGE_NUX;
 }

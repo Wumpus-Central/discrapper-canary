@@ -24,7 +24,7 @@ function p(e, t) {
 function T() {
     return o.A.getConfig({ location: "FriendRequestsStore" }).sidebarEnabled;
 }
-function g(e) {
+function m(e) {
     if (!h) return !1;
     let t = { incoming: !1, outgoing: !1 };
     for (let n of e)
@@ -75,12 +75,12 @@ function g(e) {
         return (t && (E = i.sort(I)), n && (A = r.sort(I)), !0);
     })(t);
 }
-function m() {
+function g() {
     let e = u.size > 0;
     return (u.clear(), _.clear(), (E = []), (A = []), e);
 }
 function S() {
-    let e = m();
+    let e = g();
     if (!(h = T())) return e;
     let t = new Set();
     for (let e of (l.A.getMutableRelationships().forEach((e, n) => {
@@ -88,14 +88,14 @@ function S() {
     }),
     c))
         for (let { id: n } of s.A.getGameRelationshipsByType(e)) t.add(n);
-    return g(t) || e;
+    return m(t) || e;
 }
 function N() {
     return T() !== h && S();
 }
 function C(e) {
     let { relationship: t } = e;
-    return g([t.id]);
+    return m([t.id]);
 }
 class O extends i.Ay.Store {
     static displayName = "FriendRequestsStore";
@@ -117,11 +117,11 @@ let R = new O(r.h, {
     RELATIONSHIP_PENDING_INCOMING_REMOVED: S,
     GAME_RELATIONSHIP_ADD: function (e) {
         let { gameRelationship: t } = e;
-        return g([t.id]);
+        return m([t.id]);
     },
     GAME_RELATIONSHIP_REMOVE: function (e) {
         let { userId: t } = e;
-        return g([t]);
+        return m([t]);
     },
     APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { unknownApplicationIds: t } = e;
@@ -133,8 +133,8 @@ let R = new O(r.h, {
                 let { userId: t, applicationId: r, isGameRelationship: a } = e;
                 !a || (null != r && n.has(r) && i.add(t));
             }),
-            g(i)
+            m(i)
         );
     },
-    LOGOUT: m,
+    LOGOUT: g,
 });

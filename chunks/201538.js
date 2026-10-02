@@ -127,8 +127,8 @@ let I = new h();
 var f = n(696016);
 let p = { stable: 0.05, ptb: 1, canary: 1, development: 1 },
     T = !1,
-    g = null,
     m = null,
+    g = null,
     S = null,
     N = null;
 function C() {
@@ -137,9 +137,9 @@ function C() {
         n = e && (0, l.$i)("pushClipsMLFlagsToNative"),
         i = s.Ay.getEnableAutoclipping(),
         a = S !== i;
-    (m !== n || a) &&
-        (f.nx.info(`clips ml flags pushed: ml=${n} (was ${m}), autoclipping=${i} (was ${S})`),
-        (m = n),
+    (g !== n || a) &&
+        (f.nx.info(`clips ml flags pushed: ml=${n} (was ${g}), autoclipping=${i} (was ${S})`),
+        (g = n),
         (S = i),
         n
             ? (null === N &&
@@ -148,7 +148,7 @@ function C() {
                   (N = !1)),
               (async () => {
                   let { allAssetsDownloaded: e } = await I.start(),
-                      n = e && !0 === m && !0 === S;
+                      n = e && !0 === g && !0 === S;
                   N !== n &&
                       (f.nx.info(
                           `clips v3 ml flag set ml=${n} (was ${N}). allAssetsDownloaded=${e}, autoclipping=${S}`,
@@ -159,10 +159,10 @@ function C() {
             : !1 !== N && (f.nx.info(`clips v3 ml flag set ml=false (was ${N})`), t.setClipsV3MLEnabled(!1), (N = !1)));
 }
 function O() {
-    return null != g
-        ? g
+    return null != m
+        ? m
         : (C(),
-          (g = (async () => {
+          (m = (async () => {
               try {
                   await a.Ay.ensureModule("discord_clips");
                   let e = a.Ay.requireModule("discord_clips").getModulePath(),
@@ -178,7 +178,7 @@ function O() {
                       (T = !0),
                       f.nx.info("discord_clips module loaded, path: " + e));
               } catch (e) {
-                  ((g = null), f.nx.error("Failed to load discord_clips module", e));
+                  ((m = null), f.nx.error("Failed to load discord_clips module", e));
               }
           })()));
 }

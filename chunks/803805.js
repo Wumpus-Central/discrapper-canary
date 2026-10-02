@@ -7,7 +7,7 @@
     Zc: () => O,
     aw: () => u,
     cC: () => w,
-    gW: () => m,
+    gW: () => g,
     kc: () => P,
     tC: () => h,
     tQ: () => f,
@@ -29,7 +29,7 @@ class c extends l.G {
             { no: 2, name: "favorite_gifs", kind: "message", T: () => E },
             { no: 3, name: "favorite_stickers", kind: "message", T: () => f },
             { no: 4, name: "sticker_frecency", kind: "message", T: () => T },
-            { no: 5, name: "favorite_emojis", kind: "message", T: () => m },
+            { no: 5, name: "favorite_emojis", kind: "message", T: () => g },
             { no: 6, name: "emoji_frecency", kind: "message", T: () => N },
             { no: 7, name: "application_command_frecency", kind: "message", T: () => O },
             { no: 8, name: "favorite_soundboard_sounds", kind: "message", T: () => D },
@@ -67,7 +67,7 @@ class c extends l.G {
                     a.stickerFrecency = T.internalBinaryRead(e, e.uint32(), n, a.stickerFrecency);
                     break;
                 case 5:
-                    a.favoriteEmojis = m.internalBinaryRead(e, e.uint32(), n, a.favoriteEmojis);
+                    a.favoriteEmojis = g.internalBinaryRead(e, e.uint32(), n, a.favoriteEmojis);
                     break;
                 case 6:
                     a.emojiFrecency = N.internalBinaryRead(e, e.uint32(), n, a.emojiFrecency);
@@ -111,7 +111,7 @@ class c extends l.G {
             e.stickerFrecency &&
                 T.internalBinaryWrite(e.stickerFrecency, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
             e.favoriteEmojis &&
-                m.internalBinaryWrite(e.favoriteEmojis, t.tag(5, r.O0.LengthDelimited).fork(), n).join(),
+                g.internalBinaryWrite(e.favoriteEmojis, t.tag(5, r.O0.LengthDelimited).fork(), n).join(),
             e.emojiFrecency && N.internalBinaryWrite(e.emojiFrecency, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
             e.applicationCommandFrecency &&
                 O.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
@@ -370,7 +370,7 @@ class p extends l.G {
     }
 }
 let T = new p();
-class g extends l.G {
+class m extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.FavoriteEmojis", [
             { no: 1, name: "emojis", kind: "scalar", repeat: 2, T: 9 },
@@ -406,7 +406,7 @@ class g extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let m = new g();
+let g = new m();
 class S extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.EmojiFrecency", [

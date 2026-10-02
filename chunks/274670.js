@@ -81,10 +81,10 @@ async function T(e) {
     }
     await p(e);
 }
-async function g(e) {
+async function m(e) {
     await p(e);
 }
-function m(e) {
+function g(e) {
     let {
             surfaceId: t,
             sourceQuestContent: n,
@@ -96,8 +96,8 @@ function m(e) {
             shouldExtendSession: I,
             adUser: p,
             questContentPosition: T,
-            questContentRowIndex: g,
-            trackGuildAndChannelMetadata: m,
+            questContentRowIndex: m,
+            trackGuildAndChannelMetadata: g,
         } = e,
         S = {
             min_view_time_seconds: u,
@@ -109,14 +109,14 @@ function m(e) {
             ...(0, d.X)(t),
             impression_id: i,
             is_quest_enrollment_blocked: h,
-            ...(0, o.fF)(t, T, g),
+            ...(0, o.fF)(t, T, m),
         };
     if (e.adCreativeType === r.p.QUEST) {
         let t = e.adCreativeId;
         (0, l.av)({
             event: f.HAw.QUEST_CONTENT_VIEWED,
             questId: t,
-            trackGuildAndChannelMetadata: m,
+            trackGuildAndChannelMetadata: g,
             shouldExtendSession: I,
             sourceQuestContent: n,
             properties: {
@@ -133,7 +133,7 @@ function m(e) {
         adContentId: e.adCreativeId,
         relatedQuestId: e.relatedQuestId,
         adCreativeType: e.adCreativeType,
-        trackGuildAndChannelMetadata: m,
+        trackGuildAndChannelMetadata: g,
         shouldExtendSession: I,
         sourceQuestContent: n,
         properties: { ...S },
@@ -150,7 +150,7 @@ async function S(e) {
         });
         return;
     }
-    m(e);
+    g(e);
 }
 function N(e) {
     (0, u.L)().error("captureAdUserAction failed to report an ad user action", e);
@@ -202,13 +202,13 @@ function C(e) {
                 T(e).catch(N);
                 break;
             case I.F.CLICK_EXTERNAL_ADVERTISER_CTA:
-                g(e).catch(N);
+                m(e).catch(N);
                 break;
             case I.F.VIEW_INTERNAL_SURFACE_IMPRESSION:
                 S(e).catch(N);
                 break;
             case I.F.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION:
-                m(e);
+                g(e);
         }
     } catch (e) {
         N(e);

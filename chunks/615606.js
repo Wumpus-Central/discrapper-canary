@@ -1,7 +1,7 @@
-n.d(t, { q: () => r });
-var p = n(627363),
-    a = n(652215);
-function r(i) {
-    let t = i?.type === a.rbe.GUILD_APP ? i.application_id : void 0;
-    return (0, p.YY)(t).data;
+n.d(t, { q: () => a });
+var i = n(627363),
+    r = n(652215);
+function a(e) {
+    let t = e?.type === r.rbe.GUILD_APP ? e.application_id : void 0;
+    return (0, i.YY)(t).data;
 }

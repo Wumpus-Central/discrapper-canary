@@ -18,7 +18,7 @@ let I = new Set(),
 function T(e, t) {
     var n;
     o.A_.has(e.type) &&
-        g(
+        m(
             ((n = e).id in f ||
                 (f[n.id] = {
                     guildId: n.guild_id,
@@ -31,11 +31,11 @@ function T(e, t) {
             t,
         );
 }
-function g(e, t) {
+function m(e, t) {
     let n = (p[e.parentId] ?? 0) + 1;
     ((p[e.parentId] = n), t(e));
 }
-function m(e) {
+function g(e) {
     (e.threads?.forEach(N), e.threadMessages?.forEach(S));
 }
 function S(e) {
@@ -120,7 +120,7 @@ class D extends a.Ay.Store {
 }
 let v = new D(s.h, {
     CONNECTION_OPEN: function (e) {
-        ((p = {}), I.clear(), e.guilds.forEach(m));
+        ((p = {}), I.clear(), e.guilds.forEach(g));
     },
     OVERLAY_INITIALIZE: function (e) {
         let { threadMessages: t } = e;
@@ -131,7 +131,7 @@ let v = new D(s.h, {
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        m(t);
+        g(t);
     },
     GUILD_DELETE: function (e) {
         var t;
@@ -194,7 +194,7 @@ let v = new D(s.h, {
             n = f[t.channel_id],
             i = n?.mostRecentRawMessage ?? n?.mostRecentMessage;
         if (null == n || null == i || i.id !== t.id) return !1;
-        g(n, (e) => {
+        m(n, (e) => {
             (null != e.mostRecentMessage && (e.mostRecentMessage = (0, l.IU)(e.mostRecentMessage, t)),
                 null != e.mostRecentRawMessage && (e.mostRecentRawMessage = (0, l.SP)(e.mostRecentRawMessage, t)));
         });
@@ -205,7 +205,7 @@ let v = new D(s.h, {
         if (null == i) return !1;
         let r = E.default.castChannelIdAsMessageId(n) !== t,
             a = !I.has(t);
-        g(i, (e) => {
+        m(i, (e) => {
             let n = e.mostRecentRawMessage ?? e.mostRecentMessage;
             (null != n && n.id === t && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)),
                 (e.count = r && a ? Math.max(e.count - 1, 0) : e.count),
@@ -222,7 +222,7 @@ let v = new D(s.h, {
             return t && i;
         }).length;
         r > 0 &&
-            g(i, (e) => {
+            m(i, (e) => {
                 let n = e.mostRecentRawMessage ?? e.mostRecentMessage;
                 (null != n && t.includes(n.id) && ((e.mostRecentMessage = null), (e.mostRecentRawMessage = null)),
                     (e.count -= r),

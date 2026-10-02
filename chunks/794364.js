@@ -1,4 +1,4 @@
-n.d(t, { _z: () => m, Ld: () => g, QX: () => T, PU: () => p });
+n.d(t, { _z: () => g, Ld: () => m, QX: () => T, PU: () => p });
 var i = n(158390),
     r = n(636537),
     a = n(941426),
@@ -56,9 +56,9 @@ async function p() {
 async function T() {
     (I(), null != E && (h++, (E = null)), await f());
 }
-function g() {
+function m() {
     (h++, I(), (E = null), _.succeed());
 }
-function m() {
+function g() {
     s.h.dispatch({ type: "PARENTAL_CONSENT_WARNING_CLEARED" });
 }

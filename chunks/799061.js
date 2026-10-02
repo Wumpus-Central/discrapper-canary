@@ -17,13 +17,13 @@ var c = n(231723),
     f = n(240248),
     p = n(375708),
     T = n(969151),
-    g = n(817636),
-    m = n(574152),
+    m = n(817636),
+    g = n(574152),
     S = n(652215);
 async function N(e) {
     let { applicationId: t, channelId: n, guildId: s } = e;
     try {
-        return await (0, g.A)(t, n);
+        return await (0, m.A)(t, n);
     } catch (l) {
         let e = null != s ? i.T.GUILD_CHANNEL : i.T.PRIVATE_CHANNEL;
         r.h.dispatch({
@@ -59,7 +59,7 @@ async function C(e) {
                           cancelText: p.intl.string(p.t["ETE/oC"]),
                           confirmText: p.intl.string(p.t["cY+Oob"]),
                           onConfirm: () => {
-                              ((0, m.A)().leaveActivity({
+                              ((0, g.A)().leaveActivity({
                                   location: a.location,
                                   applicationId: t.id,
                                   shouldClosePopout: n,

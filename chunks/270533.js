@@ -69,19 +69,19 @@ var D = n(249286),
     V = n(652215),
     w = n(746080),
     H = n(49999),
-    k = n(628049),
-    B = n(25525),
+    B = n(628049),
+    k = n(25525),
     F = n(375708),
-    z = n(394107),
-    K = n(120336);
+    K = n(394107),
+    z = n(120336);
 let W =
     "https://cdn.discordapp.com/assets/content/a43712d53d007cf7433bb7934419b46aa86e2edaa3fabe5486e92f1d8cf23a83.png";
 function Y(e) {
     let { guildId: t, powerup: n, channelRowRef: l, markAsDismissed: s } = e;
     return (0, i.jsx)(el, {
-        asset: (0, i.jsx)(y.b, { className: r()(K.Sl, K.SV) }),
-        title: F.intl.formatToPlainString(B.default["Zg/m9K"], { perkName: n.title }),
-        body: F.intl.formatToPlainString(B.default["1EGXSK"], { perkName: n.title }),
+        asset: (0, i.jsx)(y.b, { className: r()(z.Sl, z.SV) }),
+        title: F.intl.formatToPlainString(k.default["Zg/m9K"], { perkName: n.title }),
+        body: F.intl.formatToPlainString(k.default["1EGXSK"], { perkName: n.title }),
         actions: [
             {
                 text: F.intl.string(F.t.RzWDqY),
@@ -106,8 +106,8 @@ function X(e) {
         scrollBehavior: r ? "close" : void 0,
         assetUrl:
             "https://cdn.discordapp.com/assets/content/ec10ea6e7609350fe848bf7497aba0ab1748521370f7e1f5fd257df714ff9c4c.gif",
-        title: F.intl.string(B.default.QpQBPQ),
-        body: F.intl.string(B.default["6hn0xF"]),
+        title: F.intl.string(k.default.QpQBPQ),
+        body: F.intl.string(k.default["6hn0xF"]),
         action: {
             text: F.intl.string(F.t.RzWDqY),
             variant: "primary",
@@ -126,26 +126,26 @@ function q(e) {
     if (((0, O.A)(u), 0 === n.length)) return;
     let m =
             n.length >= 3
-                ? F.intl.formatToPlainString(B.default["6Sv+3M"], {
+                ? F.intl.formatToPlainString(k.default["6Sv+3M"], {
                       perk: n[0].title,
                       perk2: n[1].title,
                       perk3: n[2].title,
                   })
                 : 2 === n.length
-                  ? F.intl.formatToPlainString(B.default.wcQOqC, { perks: `${n[0].title} & ${n[1].title}` })
-                  : F.intl.formatToPlainString(B.default.ZF8NT6, { perk: n[0].title }),
+                  ? F.intl.formatToPlainString(k.default.wcQOqC, { perks: `${n[0].title} & ${n[1].title}` })
+                  : F.intl.formatToPlainString(k.default.ZF8NT6, { perk: n[0].title }),
         A = 1 === n.length;
     return (0, i.jsx)(el, {
         size: 1 === n.length ? "video" : "lg",
         asset:
             n.length > 1
-                ? (0, i.jsx)(y.b, { className: r()(K.Sl, K.SV) })
-                : (0, i.jsx)("img", { alt: "", src: h, className: K.Sl }),
-        title: F.intl.formatToPlainString(B.default.LmpChE, { guildName: a }),
+                ? (0, i.jsx)(y.b, { className: r()(z.Sl, z.SV) })
+                : (0, i.jsx)("img", { alt: "", src: h, className: z.Sl }),
+        title: F.intl.formatToPlainString(k.default.LmpChE, { guildName: a }),
         body: m,
         actions: [
             {
-                text: A ? F.intl.string(B.default.gSxlHf) : F.intl.string(F.t.RzWDqY),
+                text: A ? F.intl.string(k.default.gSxlHf) : F.intl.string(F.t.RzWDqY),
                 variant: "primary",
                 onClick: (e) => {
                     (e.stopPropagation(), A ? d() : (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_PURCHASEABLE_PERKS));
@@ -168,7 +168,7 @@ function Z(e) {
             title: r.title,
             body: "string" == typeof r.description ? r.description : "",
             size: "video",
-            asset: (0, i.jsx)("img", { alt: "", src: o, className: K.Sl }),
+            asset: (0, i.jsx)("img", { alt: "", src: o, className: z.Sl }),
             actions: [
                 {
                     text: F.intl.string(F.t.RzWDqY),
@@ -183,8 +183,8 @@ function Z(e) {
     if (null != d)
         return (0, i.jsx)(el, {
             targetElementRef: l,
-            title: F.intl.string(B.default.Ygpx4Q),
-            body: F.intl.string(B.default.mmNkUA),
+            title: F.intl.string(k.default.Ygpx4Q),
+            body: F.intl.string(k.default.mmNkUA),
             size: "video",
             asset: "https://cdn.discordapp.com/assets/content/6ffaa21345f63322cf7ff8725e4e087b8c32968b8b7ba55822f0c369d7f0c03b.gif",
             actions: [
@@ -202,12 +202,12 @@ function Z(e) {
     if (null != c)
         return (0, i.jsx)(el, {
             targetElementRef: l,
-            title: F.intl.string(B.default["kA2c+n"]),
-            body: F.intl.string(B.default.TUilLj),
+            title: F.intl.string(k.default["kA2c+n"]),
+            body: F.intl.string(k.default.TUilLj),
             asset: (0, i.jsx)("img", {
                 alt: "",
                 src: "https://cdn.discordapp.com/assets/content/196e929b196180fe33dc1fca35f40478270ff03434e24f72ca3cc64ee94222b4.png",
-                className: K.Sl,
+                className: z.Sl,
             }),
             actions: [
                 {
@@ -224,12 +224,12 @@ function Z(e) {
     if (null != u)
         return (0, i.jsx)(el, {
             targetElementRef: l,
-            title: F.intl.string(B.default["kA2c+n"]),
-            body: F.intl.string(B.default.TUilLj),
+            title: F.intl.string(k.default["kA2c+n"]),
+            body: F.intl.string(k.default.TUilLj),
             asset: (0, i.jsx)("img", {
                 alt: "",
                 src: "https://cdn.discordapp.com/assets/content/477c3ad9764f37e0991cbcd8a222b8270988e9dd81e5bb3a88f47944fd5e1c4d.gif",
-                className: K.Sl,
+                className: z.Sl,
             }),
             actions: [
                 {
@@ -246,13 +246,13 @@ function Z(e) {
     return null != h
         ? (0, i.jsx)(el, {
               targetElementRef: l,
-              title: F.intl.string(B.default.rp0Ff1),
-              body: F.intl.string(B.default["3L/DZq"]),
+              title: F.intl.string(k.default.rp0Ff1),
+              body: F.intl.string(k.default["3L/DZq"]),
               size: "video",
               asset: (0, i.jsx)("img", {
                   alt: "",
                   src: "https://cdn.discordapp.com/assets/content/838731e8db0e1b209bb8b20d5acefb9effe09952f60a13067ab7ad92887b39ad.png",
-                  className: K.Sl,
+                  className: z.Sl,
               }),
               actions: [
                   {
@@ -278,14 +278,14 @@ function $(e) {
         asset: (0, i.jsx)(h.E, {
             withReducedMotion: "halt",
             fit: "contain",
-            className: K.Sl,
+            className: z.Sl,
             stateMachine: c ? "SM_Main_Int" : "SM_Auto",
         }),
-        title: F.intl.string(n === S.o.GAME_SERVER_HOSTING_AVAILABLE ? z.default.wXLChx : z.default["8z8RpY"]),
+        title: F.intl.string(n === S.o.GAME_SERVER_HOSTING_AVAILABLE ? K.default.wXLChx : K.default["8z8RpY"]),
         body:
             n === S.o.GAME_SERVER_HOSTING_AVAILABLE
-                ? F.intl.formatToPlainString(z.default["7KXp9J"], { gameName: a, gameName2: d })
-                : F.intl.format(z.default["IQ1E+d"], { boostCount: r }),
+                ? F.intl.formatToPlainString(K.default["7KXp9J"], { gameName: a, gameName2: d })
+                : F.intl.format(K.default["IQ1E+d"], { boostCount: r }),
         actions: [
             {
                 text: F.intl.string(F.t.RzWDqY),
@@ -305,11 +305,11 @@ function J(e) {
         asset: (0, i.jsx)(h.E, {
             withReducedMotion: "halt",
             fit: "contain",
-            className: K.Sl,
+            className: z.Sl,
             stateMachine: s ? "SM_Main_Int" : "SM_Auto",
         }),
-        title: F.intl.string(z.default["eX64+z"]),
-        body: F.intl.string(z.default.NpgfEB),
+        title: F.intl.string(K.default["eX64+z"]),
+        body: F.intl.string(K.default.NpgfEB),
         actions: [
             {
                 text: F.intl.string(F.t.RzWDqY),
@@ -336,14 +336,14 @@ function Q(e) {
         asset: (0, i.jsx)(h.E, {
             withReducedMotion: "halt",
             fit: "contain",
-            className: K.Sl,
+            className: z.Sl,
             stateMachine: a ? "SM_Main_Int" : "SM_Auto",
         }),
-        title: F.intl.string(z.default.t3LNW1),
-        body: F.intl.formatToPlainString(z.default.V9qFAU, { gameName: s, gameName2: r }),
+        title: F.intl.string(K.default.t3LNW1),
+        body: F.intl.formatToPlainString(K.default.V9qFAU, { gameName: s, gameName2: r }),
         actions: [
             {
-                text: F.intl.string(z.default.k0Y0BE),
+                text: F.intl.string(K.default.k0Y0BE),
                 variant: "primary",
                 onClick: () => {
                     (n(H.i.TAKE_ACTION),
@@ -372,9 +372,9 @@ function ee(e) {
         align: "center",
         alignmentStrategy: "edge",
         caretConfig: { align: "center" },
-        asset: (0, i.jsx)("img", { alt: "", src: r, className: K.Sl }),
-        title: F.intl.string(B.default.RK6NbY),
-        body: F.intl.string(B.default.xlAqGk),
+        asset: (0, i.jsx)("img", { alt: "", src: r, className: z.Sl }),
+        title: F.intl.string(k.default.RK6NbY),
+        body: F.intl.string(k.default.xlAqGk),
         actions: [
             {
                 text: F.intl.string(F.t.oPAx73),
@@ -403,22 +403,22 @@ function et(e) {
     return (0, i.jsx)(el, {
         targetElementRef: l,
         ...s,
-        asset: (0, i.jsx)(p.default, { gameId: k.Yh.FEATURED_GAME_ID }),
+        asset: (0, i.jsx)(p.default, { gameId: B.Yh.FEATURED_GAME_ID }),
         aspectRatio: "6/4",
-        title: F.intl.string(z.default["wy+j5s"]),
-        body: F.intl.formatToPlainString(z.default["7OETrT"], {
-            gameName: k.Yh.FEATURED_GAME_NAME,
-            gameName2: k.Yh.SECOND_GAME_NAME,
-            gameName3: k.Yh.THIRD_GAME_NAME,
+        title: F.intl.string(K.default["wy+j5s"]),
+        body: F.intl.formatToPlainString(K.default["7OETrT"], {
+            gameName: B.Yh.FEATURED_GAME_NAME,
+            gameName2: B.Yh.SECOND_GAME_NAME,
+            gameName3: B.Yh.THIRD_GAME_NAME,
         }),
         actions: [
             {
-                text: F.intl.string(z.default.k0Y0BE),
+                text: F.intl.string(K.default.k0Y0BE),
                 variant: "primary",
                 onClick: () => {
                     (n(H.i.TAKE_ACTION),
                         r
-                            ? (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES, k.W5)
+                            ? (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES, B.W5)
                             : (0, C.K4)({
                                   guildId: t,
                                   location: { section: V.JJy.GUILD_HEADER, object: V.ZSU.BUTTON_CTA },
@@ -441,10 +441,10 @@ function en(e) {
     return (0, i.jsx)(el, {
         asset:
             n.type === P.o9.LEVEL
-                ? (0, i.jsx)(U, { powerup: n, eventTargetRef: m, className: K.Lj })
-                : (0, i.jsx)("img", { alt: "", src: c, className: K.Sl }),
-        title: F.intl.string(B.default.n37JhA),
-        body: F.intl.formatToPlainString(h || n.type === P.o9.LEVEL ? B.default.Yr1ogl : B.default["7MZ2tu"], {
+                ? (0, i.jsx)(U, { powerup: n, eventTargetRef: m, className: z.Lj })
+                : (0, i.jsx)("img", { alt: "", src: c, className: z.Sl }),
+        title: F.intl.string(k.default.n37JhA),
+        body: F.intl.formatToPlainString(h || n.type === P.o9.LEVEL ? k.default.Yr1ogl : k.default["7MZ2tu"], {
             boostCount: d,
             perkName: n.title,
         }),
@@ -482,9 +482,9 @@ function ei(e) {
         C = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion);
     if (null == u && !n.isGameServer) return null;
     let x = n.isGameServer
-            ? F.intl.string(B.default["9L0pAN"])
-            : F.intl.formatToPlainString(B.default.gG8bI8, { perkName: n.name }),
-        S = 0 === n.daysUntilExpiry ? B.default.BNS5zl : B.default["Xla/TL"],
+            ? F.intl.string(k.default["9L0pAN"])
+            : F.intl.formatToPlainString(k.default.gG8bI8, { perkName: n.name }),
+        S = 0 === n.daysUntilExpiry ? k.default.BNS5zl : k.default["Xla/TL"],
         I = F.intl.formatToPlainString(S, { boostCount: n.numExpiringBoosts, days: n.daysUntilExpiry });
     return (0, i.jsx)(el, {
         size: n.isGameServer ? "video" : void 0,
@@ -492,12 +492,12 @@ function ei(e) {
             ? (0, i.jsx)(h.E, {
                   withReducedMotion: "halt",
                   fit: "contain",
-                  className: K.Sl,
+                  className: z.Sl,
                   stateMachine: C ? "SM_Main_Int" : "SM_Auto",
               })
             : u?.type === P.o9.LEVEL
-              ? (0, i.jsx)(U, { powerup: u, eventTargetRef: p, className: K.Lj })
-              : (0, i.jsx)("img", { alt: "", src: f, className: K.Sl }),
+              ? (0, i.jsx)(U, { powerup: u, eventTargetRef: p, className: z.Lj })
+              : (0, i.jsx)("img", { alt: "", src: f, className: z.Sl }),
         title: x,
         body: I,
         actions: [

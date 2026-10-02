@@ -1,4 +1,4 @@
-(n.d(t, { CI: () => S, XM: () => f, e0: () => m, fK: () => T, s: () => g, tu: () => p }), n(938796), n(321073));
+(n.d(t, { CI: () => S, XM: () => f, e0: () => g, fK: () => T, s: () => m, tu: () => p }), n(938796), n(321073));
 var i = n(477900),
     r = n(477782),
     a = n(192308),
@@ -35,7 +35,7 @@ async function T(e) {
         (0, c.Do)(e.message);
     }
 }
-function g(e) {
+function m(e) {
     let { channel: t } = e,
         n = (0, _.FF)().map((e) =>
             (0, i.jsx)(
@@ -58,7 +58,7 @@ function g(e) {
                         {
                             id: "custom-time",
                             label: I.intl.string(I.t.stHooC),
-                            action: () => m({ channel: t, entryPoint: u.t.ATTACH_MENU }),
+                            action: () => g({ channel: t, entryPoint: u.t.ATTACH_MENU }),
                         },
                         "custom-time",
                     ),
@@ -68,7 +68,7 @@ function g(e) {
         n
     );
 }
-function m(e) {
+function g(e) {
     let {
         channel: t,
         defaultValue: r = (0, _.US)(),
