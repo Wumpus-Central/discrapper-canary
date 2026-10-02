@@ -14,16 +14,16 @@ var l = n(582128),
     f = n(820066),
     g = n(407315);
 let x = new Set(["line", "blockQuote"]);
-var S = n(155718);
-let E = ["applicationCommand"],
+var E = n(155718);
+let S = ["applicationCommand"],
     y = ["gameMentionInput", "timestampMentionInput"];
 function C(e) {
     let t = f.VW.getCurrentBlock(e),
         n = f.VW.getCurrentInline(e);
-    return null != t && !E.includes(t[0].type) && !y.includes(n?.[0]?.type);
+    return null != t && !S.includes(t[0].type) && !y.includes(n?.[0]?.type);
 }
 function A(e) {
-    return null != e && "applicationCommandOption" === e.type && e.optionType === S.n4.STRING;
+    return null != e && "applicationCommandOption" === e.type && e.optionType === E.n4.STRING;
 }
 function b(e) {
     return A(f.VW.getCurrentInline(e)?.[0]);
@@ -137,20 +137,20 @@ function L(e) {
             forTests: u,
             onChangeStart: c,
             onChangeEnd: d,
-            updateState: S,
+            updateState: E,
         } = e,
-        E = n,
-        { onChange: y } = E;
-    ((E.chatInputType = l),
-        (E.windowContext = a),
-        (E.previewMarkdown = o),
-        (E.composition = null),
-        (E.events = new i.EventEmitter()),
-        (E.isMac = "MacIntel" === navigator.platform),
-        (E.onChange = () => {
-            (E.events.emit("onChange"), y());
+        S = n,
+        { onChange: y } = S;
+    ((S.chatInputType = l),
+        (S.windowContext = a),
+        (S.previewMarkdown = o),
+        (S.composition = null),
+        (S.events = new i.EventEmitter()),
+        (S.isMac = "MacIntel" === navigator.platform),
+        (S.onChange = () => {
+            (S.events.emit("onChange"), y());
         }),
-        ((t = E =
+        ((t = S =
             (function (e, t) {
                 let {
                     addMark: n,
@@ -203,7 +203,7 @@ function L(e) {
                     }),
                     e
                 );
-            })(E, !0 === u)).setFragmentData = (e) => {
+            })(S, !0 === u)).setFragmentData = (e) => {
             if (null != t.selection && !f.Kh.equals(t.selection.anchor, t.selection.focus)) {
                 let n = (0, _.WO)(f.VW.richValue(t), { mode: "plain", range: t.selection, preventEmojiSurrogates: !0 });
                 e.setData("text/plain", n);
@@ -238,7 +238,7 @@ function L(e) {
             }
             return (t.insertText(n), !0);
         }),
-        (E = (function (e) {
+        (S = (function (e) {
             let { apply: t, deleteBackward: n, deleteForward: l, deleteFragment: i, insertText: r } = e;
             return (
                 (e.apply = (n) => {
@@ -296,11 +296,11 @@ function L(e) {
                 }),
                 e
             );
-        })((E = t))),
-        l.commands?.enabled && (E = (0, h.A)(E, s)),
-        (E = (0, T.Ay)(E, s.guild_id, s.id)),
+        })((S = t))),
+        l.commands?.enabled && (S = (0, h.A)(S, s)),
+        (S = (0, T.Ay)(S, s.guild_id, s.id)),
         l.markdown?.disableBlockQuotes ||
-            (E = (function (e) {
+            (S = (function (e) {
                 let { deleteBackward: t, deleteFragment: n, insertBreak: l, onChange: i } = e;
                 ((e.deleteBackward = (n) => {
                     let l = f.VW.getCurrentBlock(e);
@@ -402,18 +402,18 @@ function L(e) {
                     }),
                     e
                 );
-            })(E)),
-        l.markdown?.disableCodeBlocks || (E = (0, g.Ay)(E)),
+            })(S)),
+        l.markdown?.disableCodeBlocks || (S = (0, g.Ay)(S)),
         u &&
-            (E = (function (e) {
+            (S = (function (e) {
                 let { isInline: t, isVoid: n } = e;
                 return (
                     (e.isInline = (e) => "testInline" === e.type || "testInlineVoid" === e.type || t(e)),
                     (e.isVoid = (e) => "testInlineVoid" === e.type || n(e)),
                     e
                 );
-            })(E)),
-        (E = (function (e, t) {
+            })(S)),
+        (S = (function (e, t) {
             let {
                 apply: n,
                 deleteBackward: l,
@@ -510,7 +510,7 @@ function L(e) {
                 e
             );
         })(
-            (E = (function (e, t, n) {
+            (S = (function (e, t, n) {
                 let { onChange: l } = e,
                     i = !1,
                     r = !1;
@@ -539,7 +539,7 @@ function L(e) {
                     e
                 );
             })(
-                (E = (function (e) {
+                (S = (function (e) {
                     let { apply: t, onChange: n } = e;
                     return (
                         (e.apply = (n) => {
@@ -585,7 +585,7 @@ function L(e) {
                         e
                     );
                 })(
-                    (E = (function (e) {
+                    (S = (function (e) {
                         let { deleteBackward: t, deleteForward: n, insertBreak: l, insertText: i } = e;
                         return (
                             (e.rendersTrailingNewline = A),
@@ -617,14 +617,14 @@ function L(e) {
                             }),
                             e
                         );
-                    })((E = (0, N.A)(E)))),
+                    })((S = (0, N.A)(S)))),
                 )),
                 c,
                 d,
             )),
             (e) => {
                 let { newValue: t, newSelection: n } = e;
-                return S(E, "undo", { value: t, selection: n });
+                return E(S, "undo", { value: t, selection: n });
             },
         )));
 }

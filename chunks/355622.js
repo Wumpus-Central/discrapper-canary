@@ -149,7 +149,7 @@ let c = {
         disableAutoFocus: !0,
         permissions: { requireSendMessages: !0 },
     },
-    S = {
+    E = {
         analyticsName: "create_game_invite_post_description",
         autocomplete: { alwaysUseLayer: !0, small: !0 },
         drafts: { type: s.C.FirstThreadMessage },
@@ -162,7 +162,7 @@ let c = {
         showCharacterCount: !0,
         layout: 1,
     },
-    E = {
+    S = {
         analyticsName: "create_forum_post",
         attachments: !0,
         drafts: { type: s.C.FirstThreadMessage },
@@ -262,8 +262,8 @@ let c = {
             disableAutoFocus: !0,
             hideAccessoryBar: !0,
         },
-        CREATE_FORUM_POST: E,
-        CREATE_GAME_INVITE_POST_DESCRIPTION: S,
+        CREATE_FORUM_POST: S,
+        CREATE_GAME_INVITE_POST_DESCRIPTION: E,
         CREATE_ANNOUNCEMENT_POST: x,
         CREATE_POLL: y,
         FORUM_CHANNEL_GUIDELINES: {

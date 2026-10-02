@@ -20,11 +20,11 @@ var l,
     I = n(375708),
     v = n(881013),
     b = (((l = b || {}).TEXT = "text"), (l.ATTACHMENT = "attachment"), (l.EMBED = "embed"), l);
-function S(e) {
+function E(e) {
     let { className: t } = e;
     return (0, i.jsx)("div", { className: r()(v.pR, t), children: I.intl.string(I.t["F+x38C"]) });
 }
-function E(e) {
+function S(e) {
     let { className: t, isSingleMosaicItem: n, obscureOnly: l } = e;
     return (0, i.jsx)("div", {
         className: r()(v.W5, t),
@@ -48,13 +48,13 @@ function C(e) {
     let { reason: t = A.Oc.SPOILER, className: n, isSingleMosaicItem: l = !1 } = e;
     switch (t) {
         case A.Oc.SPOILER:
-            return (0, i.jsx)(S, { className: n });
+            return (0, i.jsx)(E, { className: n });
         case A.Oc.EXPLICIT_CONTENT:
         case A.Oc.GORE_CONTENT:
         case A.Oc.SELF_HARM_CONTENT:
-            return (0, i.jsx)(E, { isSingleMosaicItem: l, className: n });
+            return (0, i.jsx)(S, { isSingleMosaicItem: l, className: n });
         case A.Oc.POTENTIAL_EXPLICIT_CONTENT:
-            return (0, i.jsx)(E, { isSingleMosaicItem: l, className: n, obscureOnly: !0 });
+            return (0, i.jsx)(S, { isSingleMosaicItem: l, className: n, obscureOnly: !0 });
         default:
             return (0, N.xb)(t);
     }

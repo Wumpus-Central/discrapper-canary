@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => E, eF: () => y, lE: () => b }), n(321073));
+(n.d(t, { Ay: () => S, eF: () => y, lE: () => b }), n(321073));
 var l = n(284009),
     i = n.n(l),
     r = n(155718),
@@ -26,8 +26,8 @@ let m =
     f = new Set(["textMention", "userMention", "roleMention", "channelMention"]),
     g = new Set(["gameMentionInput", "timestampMentionInput"]),
     x = new Set(["line", "blockQuote"]),
-    S = new Set(["applicationCommandOption"]);
-function E(e, t, n) {
+    E = new Set(["applicationCommandOption"]);
+function S(e, t, n) {
     let { isInline: l, isVoid: i, onChange: r } = e;
     ((e.isVoid = (e) => !!p.has(e.type) || i(e)), (e.isInline = (e) => !!(p.has(e.type) || g.has(e.type)) || l(e)));
     let s = null,
@@ -54,7 +54,7 @@ function y(e, t, n) {
             let [r, s] = i;
             for (let i = r.children.length - 1; i >= 0; i--) {
                 let a = r.children[i];
-                if (!h.l5.isText(a) && S.has(a.type)) {
+                if (!h.l5.isText(a) && E.has(a.type)) {
                     let r = [a, h.PW.child(s, i)];
                     l ? A(e, r, !0, null) : C(e, r, t, n);
                 }
@@ -75,7 +75,7 @@ function C(e, t, n, l) {
                         g = s.children[p];
                     if (!h.l5.isText(g)) continue;
                     let x = h.PW.child(o, p),
-                        S = [];
+                        E = [];
                     for (m.lastIndex = 0; null != (f = m.exec(g.text));) {
                         if (0 !== f.index && null == g.text.charAt(f.index - 1).match(/(\t|\s)/)) {
                             m.lastIndex = f.index + 1;
@@ -84,10 +84,10 @@ function C(e, t, n, l) {
                         if (N(c, { path: x, offset: f.index }, r)) continue;
                         let i = (0, a.p)(f[0], n, l);
                         null != i && T(e, l, t[0], i)
-                            ? S.push({ index: f.index, length: f[0].length, node: i })
+                            ? E.push({ index: f.index, length: f[0].length, node: i })
                             : (m.lastIndex = f.index + 1);
                     }
-                    for (let t of S.reverse())
+                    for (let t of E.reverse())
                         ((function (e, t, n, l, r) {
                             let [s, a] = t,
                                 o = { path: a, offset: n },

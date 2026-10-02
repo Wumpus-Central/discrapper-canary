@@ -41,8 +41,8 @@ var a = l(477900),
     z = l(635793),
     $ = l(362081),
     H = l(503698),
-    V = l.n(H),
-    F = l(31300),
+    F = l.n(H),
+    V = l(31300),
     X = l(646270),
     Z = l(748562),
     W = l(477155),
@@ -54,7 +54,7 @@ var a = l(477900),
     et = l(301187),
     el = l(367454);
 let ea = [
-    { preset: J.yz.ORIGINAL, icon: F.k, label: Q.default.CujCES },
+    { preset: J.yz.ORIGINAL, icon: V.k, label: Q.default.CujCES },
     { preset: J.yz.PORTRAIT_9_16, icon: X.u, label: Q.default["34PW6m"] },
     { preset: J.yz.LANDSCAPE_16_9, icon: Z.U, label: Q.default.ywAdnD },
 ];
@@ -99,7 +99,7 @@ function en() {
                                         q.D,
                                         {
                                             "aria-pressed": o,
-                                            className: V()(el.is, o && el.j5),
+                                            className: F()(el.is, o && el.j5),
                                             onClick: () => t(n),
                                             children: [
                                                 (0, a.jsx)(i, { size: "md" }),
@@ -216,7 +216,7 @@ function eh(e) {
                                         q.D,
                                         {
                                             "aria-pressed": r,
-                                            className: V()(el.is, r && el.j5),
+                                            className: F()(el.is, r && el.j5),
                                             onClick: () => l(t.id, (e) => ({ ...e, shadow: n })),
                                             children: (0, a.jsx)(s.E, {
                                                 variant: "text-sm/medium",
@@ -338,7 +338,7 @@ function eg(e) {
                                         q.D,
                                         {
                                             "aria-pressed": r,
-                                            className: V()(el.is, r && el.j5),
+                                            className: F()(el.is, r && el.j5),
                                             onClick: () =>
                                                 l(t.id, (e) => ({ ...e, style: { ...e.style, fontSize: n } })),
                                             children: (0, a.jsx)(s.E, {
@@ -389,7 +389,7 @@ function eg(e) {
                                         q.D,
                                         {
                                             "aria-pressed": r,
-                                            className: V()(el.is, r && el.j5),
+                                            className: F()(el.is, r && el.j5),
                                             onClick: () =>
                                                 l(t.id, (e) => ({ ...e, style: { ...e.style, strokeWidth: n } })),
                                             children: (0, a.jsx)(s.E, {
@@ -494,8 +494,8 @@ function eb(e) {
         {
             getEditedClip: O,
             voiceAudioEnabled: H,
-            setVoiceAudioEnabled: V,
-            applicationAudioEnabled: F,
+            setVoiceAudioEnabled: F,
+            applicationAudioEnabled: V,
             setApplicationAudioEnabled: X,
             soundboardAudioEnabled: Z,
             setSoundboardAudioEnabled: W,
@@ -715,7 +715,7 @@ function eb(e) {
                                                     ? (0, a.jsx)(T.A, { game: ev, size: T.M.XXSMALL })
                                                     : (0, a.jsx)(E.L, { size: "sm", color: "currentColor" }),
                                             label: eA,
-                                            enabled: F,
+                                            enabled: V,
                                             onToggle: X,
                                         }),
                                         (0, a.jsx)(ey, {
@@ -724,7 +724,7 @@ function eb(e) {
                                             count: eN,
                                             enabled: H,
                                             disabled: 0 === eN,
-                                            onToggle: V,
+                                            onToggle: F,
                                         }),
                                         (0, a.jsx)(ey, {
                                             icon: (0, a.jsx)(k.J, { size: "sm", color: "currentColor" }),

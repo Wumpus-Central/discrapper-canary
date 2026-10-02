@@ -1,4 +1,4 @@
-n.d(t, { L: () => g, A: () => S });
+n.d(t, { L: () => g, A: () => E });
 var l,
     i = n(477900),
     r = n(582128),
@@ -21,14 +21,14 @@ var l,
 function x(e) {
     e.stopPropagation();
 }
-let S = r.forwardRef(function (e, t) {
+let E = r.forwardRef(function (e, t) {
     let {
             id: n,
             channelId: l,
             className: s,
             children: g,
-            actions: S,
-            handleEditModal: E,
+            actions: E,
+            handleEditModal: S,
             keyboardModeEnabled: y,
             onKeyDown: C,
             draftType: A,
@@ -56,7 +56,7 @@ let S = r.forwardRef(function (e, t) {
             };
         })(v),
         k = 0 === b,
-        _ = null != S;
+        _ = null != E;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
             ...N,
@@ -75,7 +75,7 @@ let S = r.forwardRef(function (e, t) {
                             (e.preventDefault(), c.A.remove(l, n, A));
                             return;
                         case m.Ks6.E:
-                            null != E && (e.preventDefault(), E(e));
+                            null != S && (e.preventDefault(), S(e));
                             return;
                         case m.Ks6.BACKSPACE:
                             e.ctrlKey
@@ -103,7 +103,7 @@ let S = r.forwardRef(function (e, t) {
                                   className: a()(f.KY, { [f.BN]: k }),
                                   onContextMenu: x,
                                   "aria-label": p.intl.string(p.t["8Lu3Du"]),
-                                  children: (0, i.jsx)(d.Ay, { className: a()({ [f.BX]: k }), children: S }),
+                                  children: (0, i.jsx)(d.Ay, { className: a()({ [f.BX]: k }), children: E }),
                               }),
                           })
                         : null,

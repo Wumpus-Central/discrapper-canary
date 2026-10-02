@@ -20,15 +20,15 @@ var l = n(477900),
     I = n(821609),
     v = n(378570),
     b = n(49303),
-    S = n(313627),
-    E = n(746080),
+    E = n(313627),
+    S = n(746080),
     C = n(61567),
     T = n(375708),
     y = n(121051);
 function O(e) {
     let { guildId: t, leaderboardWinnerData: n, title: i, detailText: s, onClose: a } = e,
         o = n.winningStreak,
-        u = (0, S.Uq)(t, "LeaderboardWinnerBadgePopout");
+        u = (0, E.Uq)(t, "LeaderboardWinnerBadgePopout");
     return (0, l.jsxs)("div", {
         className: y.Nr,
         children: [
@@ -76,7 +76,7 @@ function O(e) {
                           onClick: function () {
                               (a(),
                                   (0, b.jb)(t, b.Rk.WINNER_BADGE),
-                                  (0, v.vn)(t, E.VV.GUILD_SPACE, { source: "Leaderboard Winner Badge Popout" }));
+                                  (0, v.vn)(t, S.VV.GUILD_SPACE, { source: "Leaderboard Winner Badge Popout" }));
                           },
                       }),
                   })

@@ -14,8 +14,8 @@ var l = n(477900),
     f = n(608299),
     g = n(478531),
     x = n(607470),
-    S = n(274652),
-    E = n(256905),
+    E = n(274652),
+    S = n(256905),
     y = n(302031),
     C = n(734057),
     A = n(515718),
@@ -104,14 +104,14 @@ function _(e) {
         ),
         g = i.useCallback(() => {
             null != c &&
-                (0, E.R)({
+                (0, S.R)({
                     location: "ChannelAttachmentUpload",
                     items: [{ type: "IMAGE", url: c }],
                     shouldHideMediaOptions: !0,
                 });
         }, [c]),
         x = t?.name != null ? t.name : v.intl.string(v.t.lduvqL),
-        S =
+        E =
             null != n && "" !== n
                 ? v.intl.formatToPlainString(v.t["8TRAzR"], { filename: x, alt: n })
                 : v.intl.formatToPlainString(v.t.lXoOEZ, { filename: x });
@@ -121,7 +121,7 @@ function _(e) {
         children: (0, l.jsx)(o.D, {
             onClick: g,
             className: T.clickableMedia,
-            "aria-label": S,
+            "aria-label": E,
             tabIndex: -1,
             children: (0, l.jsx)(k, { size: a, alt: n, spoiler: r, renderContent: f }),
         }),
@@ -193,9 +193,9 @@ function R(e) {
 function w(e) {
     let { upload: t, size: n = I.L.MEDIUM, onMouseEnter: r, clip: a, guildId: o } = e,
         [u, c] = i.useState(!1);
-    return t.isImage && t.item.platform === S.x.WEB
+    return t.isImage && t.item.platform === E.x.WEB
         ? (0, l.jsx)(_, { file: t.item.file, alt: t.description, spoiler: t.spoiler, size: n, onMouseEnter: r })
-        : !u && t.isVideo && t.item.platform === S.x.WEB
+        : !u && t.isVideo && t.item.platform === E.x.WEB
           ? (0, l.jsx)(R, {
                 file: t.item.file,
                 size: n,
@@ -228,13 +228,13 @@ function O(e) {
             upload: o,
             keyboardModeEnabled: g,
             label: x,
-            size: S = I.L.MEDIUM,
-            canEdit: E = !0,
+            size: E = I.L.MEDIUM,
+            canEdit: S = !0,
             hideFileName: y = !1,
             clip: A,
         } = e,
         j = null != A,
-        k = S === I.L.SMALL,
+        k = E === I.L.SMALL,
         _ = (0, a.bG)([C.A], () => C.A.getChannel(t)?.guild_id);
     function R() {
         f.A.remove(t, o.id, r);
@@ -304,7 +304,7 @@ function O(e) {
     return (0, l.jsxs)(I.A, {
         actions: (0, l.jsxs)(i.Fragment, {
             children: [
-                E
+                S
                     ? (0, l.jsx)(b.A, {
                           className: s()({ [T.action]: k }),
                           tooltip: j ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzA),
@@ -324,7 +324,7 @@ function O(e) {
                                 }),
                       })
                     : null,
-                E
+                S
                     ? (0, l.jsx)(b.A, {
                           className: s()({ [T.action]: k }),
                           tooltip: j ? v.intl.string(N.default.V8YlF7) : v.intl.string(v.t.Y8ujqr),
@@ -354,10 +354,10 @@ function O(e) {
         channelId: t,
         handleEditModal: O,
         keyboardModeEnabled: g,
-        size: S,
+        size: E,
         className: s()({ [T.attachmentItemSmall]: k }),
         children: [
-            (0, l.jsx)(w, { upload: o, size: S, clip: A, guildId: _ }),
+            (0, l.jsx)(w, { upload: o, size: E, clip: A, guildId: _ }),
             !y &&
                 (0, l.jsx)("div", {
                     className: T.filenameContainer,

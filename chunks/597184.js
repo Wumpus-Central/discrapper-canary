@@ -1,11 +1,11 @@
 n.d(t, {
-    DB: () => S,
+    DB: () => E,
     VN: () => h,
     Vf: () => m,
     Ze: () => g,
     e: () => y,
     eP: () => p,
-    kc: () => E,
+    kc: () => S,
     lg: () => x,
     xS: () => f,
 });
@@ -41,7 +41,7 @@ var l,
         (a[(a.NEW = 3)] = "NEW"),
         a),
     x = (((o = {})[(o.INSERT = 0)] = "INSERT"), (o[(o.SEND = 1)] = "SEND"), o),
-    S =
+    E =
         (((u = {}).MENTIONS = "MENTIONS"),
         (u.CHANNELS = "CHANNELS"),
         (u.EMOJIS_AND_STICKERS = "EMOJIS_AND_STICKERS"),
@@ -55,7 +55,7 @@ var l,
         (u.GAME = "GAME"),
         (u.TIMESTAMPS = "TIMESTAMPS"),
         u),
-    E =
+    S =
         (((c = {}).MENTION = "MENTION"),
         (c.CHANNEL = "CHANNEL"),
         (c.EMOJI = "EMOJI"),

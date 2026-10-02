@@ -11,21 +11,21 @@ if (221552 == n.j) var c = n(365199);
 var _ = n(442433),
     E = n(793574),
     S = n(363487),
-    A = n(123917),
-    f = n(981381),
+    f = n(123917),
+    A = n(981381),
     I = n(144977),
-    C = n(628049),
-    g = n(394107),
+    g = n(628049),
+    C = n(394107),
     h = n(375708),
     p = n(784420);
-let R = { steps: { [C.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
+let R = { steps: { [g.HS.SERVER_SETTINGS]: { onBack: { type: "close" }, onNext: { type: "save" } } } };
 function v(e) {
     let { guildId: t, instance: n } = e,
-        C = i.useRef(null),
-        v = (0, f.A)(n.providerType, n.gameServerPanelUrl);
+        g = i.useRef(null),
+        v = (0, A.A)(n.providerType, n.gameServerPanelUrl);
     return (0, S.A)(t)
         ? (0, l.jsx)(r.Y, {
-              targetElementRef: C,
+              targetElementRef: g,
               align: "top",
               position: "right",
               animationPosition: "bottom",
@@ -38,7 +38,7 @@ function v(e) {
                       onClose: () => {
                           ((0, _.Z_)(), i());
                       },
-                      "aria-label": h.intl.string(g.default["yb+ork"]),
+                      "aria-label": h.intl.string(C.default["yb+ork"]),
                       onSelect: void 0,
                       children: (0, l.jsxs)(a.rX, {
                           children: [
@@ -47,16 +47,16 @@ function v(e) {
                                       id: "get-support",
                                       icon: o.ChatIcon,
                                       leadingAccessory: { type: "icon", icon: o.ChatIcon },
-                                      label: h.intl.string(g.default.bBkeMs),
+                                      label: h.intl.string(C.default.bBkeMs),
                                       action: () => {
-                                          (0, A.h)({ href: v });
+                                          (0, f.h)({ href: v });
                                       },
                                   }),
                               (0, l.jsx)(a.Dr, {
                                   id: "settings",
                                   icon: u.SettingsIcon,
                                   leadingAccessory: { type: "icon", icon: u.SettingsIcon },
-                                  label: h.intl.string(g.default["feUiM/"]),
+                                  label: h.intl.string(C.default["feUiM/"]),
                                   action: () => {
                                       (0, I.A)({
                                           guildId: t,
@@ -75,7 +75,7 @@ function v(e) {
                       "aria-label": h.intl.string(h.t["UKOtz+"]),
                       className: p.v,
                       ...e,
-                      innerRef: C,
+                      innerRef: g,
                       children: (0, l.jsx)(c.MoreHorizontalIcon, { color: "currentColor", size: "sm" }),
                   }),
           })

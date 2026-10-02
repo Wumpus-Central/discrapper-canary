@@ -25,8 +25,8 @@ let x = function (e) {
         to: I,
         avatarClassName: v,
         selectedClassName: b,
-        innerClassName: S,
-        wrapContent: E,
+        innerClassName: E,
+        wrapContent: S,
         highlighted: C,
         focusProps: T,
         ...y
@@ -45,7 +45,7 @@ let x = function (e) {
                 (0, l.jsx)(c.A, { nameplate: x, hovered: f, selected: A, content: O, placement: d.u.MEMBER_LIST }),
                 (0, l.jsxs)("div", {
                     ref: O,
-                    className: a()(S, m.Zp, { [m.SU]: !A && N, [m.Ib]: E }),
+                    className: a()(E, m.Zp, { [m.SU]: !A && N, [m.Ib]: S }),
                     children: [
                         (0, l.jsx)("div", { className: a()(m.my, v), children: n }),
                         (0, l.jsxs)("div", {
@@ -54,7 +54,7 @@ let x = function (e) {
                                 (0, l.jsxs)("div", {
                                     className: m.BG,
                                     children: [
-                                        (0, l.jsx)("div", { className: a()(m.UU, { [m.to]: E }), children: s }),
+                                        (0, l.jsx)("div", { className: a()(m.UU, { [m.to]: S }), children: s }),
                                         g,
                                     ],
                                 }),

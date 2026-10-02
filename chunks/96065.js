@@ -202,11 +202,11 @@ let _ = n.forwardRef(function (e, t) {
         };
     }, []);
     let H = y.type === M.nQ.VOICE_CLIP,
-        V = !0 === i && !H && null != s;
+        F = !0 === i && !H && null != s;
     return (n.useLayoutEffect(() => {
         let e = E.current;
         if (null == e) return;
-        if (!V) {
+        if (!F) {
             ((e.style.width = ""), (e.style.height = ""));
             return;
         }
@@ -225,12 +225,12 @@ let _ = n.forwardRef(function (e, t) {
         if (null == l) return;
         let a = new ResizeObserver(t);
         return (a.observe(l), () => a.disconnect());
-    }, [V, s]),
+    }, [F, s]),
     null == d)
         ? null
         : (0, a.jsxs)("div", {
               ref: E,
-              className: p()(R.DV, V && R.Ln),
+              className: p()(R.DV, F && R.Ln),
               children: [
                   H
                       ? (0, a.jsxs)(a.Fragment, {
@@ -241,8 +241,8 @@ let _ = n.forwardRef(function (e, t) {
                         })
                       : (0, a.jsx)(C.A, {
                             onClick: B,
-                            className: p()(R.Ap, V && R.HU),
-                            style: V ? { aspectRatio: s } : void 0,
+                            className: p()(R.Ap, F && R.HU),
+                            style: F ? { aspectRatio: s } : void 0,
                             ref: K,
                             src: d,
                             muted: D(":all", {
@@ -307,8 +307,8 @@ var U = l(17928),
     z = l(778712),
     $ = l(429913),
     H = l(47167),
-    V = l(713654),
-    F = l(769015),
+    F = l(713654),
+    V = l(769015),
     X = l(145497),
     Z = l(734057),
     W = l(71393),
@@ -334,7 +334,7 @@ function el() {
         n = (0, U.bG)([W.A], () => (null != e.guildId ? W.A.getGuild(e.guildId) : null)),
         i = (0, U.bG)([Z.A], () => (null != e.channelId ? Z.A.getChannel(e.channelId) : null)),
         s = (0, H.Ay)(i),
-        r = null != i ? (0, V.gU)(i, n) : null,
+        r = null != i ? (0, F.gU)(i, n) : null,
         o = t?.name ?? e.applicationName,
         c =
             null != i && null != r
@@ -350,7 +350,7 @@ function el() {
                     null != o &&
                         "" !== o &&
                         (0, a.jsx)(et, {
-                            icon: null != t ? (0, a.jsx)(F.A, { game: t, size: F.M.XXSMALL }) : void 0,
+                            icon: null != t ? (0, a.jsx)(V.A, { game: t, size: V.M.XXSMALL }) : void 0,
                             label: o,
                         }),
                     null != n && (0, a.jsx)(et, { icon: (0, a.jsx)(X.Ay, { guild: n, iconSize: 16 }), label: n.name }),
@@ -980,8 +980,8 @@ let eH = n.memo(function (e) {
         }
     });
 });
-var eV = l(590936);
-let eF = n.memo(function (e) {
+var eF = l(590936);
+let eV = n.memo(function (e) {
     let { videoLength: t, clip: l, onMouseDown: i, noBottomMargin: s = !1, compact: r = !1 } = e,
         { timeNotches: o, subNotches: c } = n.useMemo(() => {
             let e;
@@ -1019,18 +1019,18 @@ let eF = n.memo(function (e) {
             return { timeNotches: l, subNotches: n };
         }, [t]);
     return (0, a.jsx)("div", {
-        className: p()(eV.ZX, { [eV.dZ]: s, [eV.oE]: r }),
+        className: p()(eF.ZX, { [eF.dZ]: s, [eF.oE]: r }),
         onMouseDown: i,
         children: (0, a.jsxs)("div", {
-            className: eV.QY,
+            className: eF.QY,
             children: [
                 c.map((e, t) =>
                     (0, a.jsx)(
                         "div",
                         {
-                            className: eV.MJ,
+                            className: eF.MJ,
                             style: { left: `${e.position}%` },
-                            children: (0, a.jsx)("div", { className: eV.p }),
+                            children: (0, a.jsx)("div", { className: eF.p }),
                         },
                         `sub-${t}`,
                     ),
@@ -1039,14 +1039,14 @@ let eF = n.memo(function (e) {
                     (0, a.jsxs)(
                         "div",
                         {
-                            className: eV.Cv,
+                            className: eF.Cv,
                             style: { left: `${e.position}%` },
                             children: [
-                                (0, a.jsx)("div", { className: eV.d9 }),
+                                (0, a.jsx)("div", { className: eF.d9 }),
                                 (0, a.jsxs)(K.E, {
                                     variant: "text-xxs/normal",
                                     color: "text-muted",
-                                    className: eV.Mz,
+                                    className: eF.Mz,
                                     children: [Math.round(e.time), "s"],
                                 }),
                             ],
@@ -1281,7 +1281,7 @@ function eQ(e) {
             let e = $.current;
             if (null != e) return (e.addEventListener("scroll", H), () => e.removeEventListener("scroll", H));
         }, [H]));
-    let V = n.useCallback(
+    let F = n.useCallback(
             (e, t) => {
                 if (null == s || null == _) return;
                 let l = (((0, x.clamp)(e, _.left, _.right) - _.left) / _.width) * s,
@@ -1292,7 +1292,7 @@ function eQ(e) {
             },
             [s, _, I, o, c, r, f, d, m, g],
         ),
-        F = n.useCallback(
+        V = n.useCallback(
             (e) => {
                 if (null == s) return;
                 let t = O(s, e.shiftKey),
@@ -1326,9 +1326,9 @@ function eQ(e) {
         ),
         Z = n.useCallback(
             (e) => {
-                V(e.clientX, !0);
+                F(e.clientX, !0);
             },
-            [V],
+            [F],
         ),
         W = n.useCallback(
             (e) => (t) => {
@@ -1338,9 +1338,9 @@ function eQ(e) {
         ),
         q = n.useCallback(
             (e) => {
-                V(e.clientX, !1);
+                F(e.clientX, !1);
             },
-            [V],
+            [F],
         ),
         Y = n.useCallback(() => {
             (D && h(), S(!1), L(null));
@@ -1445,7 +1445,7 @@ function eQ(e) {
                 className: eq.fL,
                 ref: $,
                 children: [
-                    (0, a.jsx)(eF, { onMouseDown: Z, videoLength: s, clip: C, noBottomMargin: !0, compact: !0 }),
+                    (0, a.jsx)(eV, { onMouseDown: Z, videoLength: s, clip: C, noBottomMargin: !0, compact: !0 }),
                     (0, a.jsx)(eD, {
                         onMouseDown: Z,
                         voiceAudioTracks: t,
@@ -1497,7 +1497,7 @@ function eQ(e) {
                                                         children: (0, a.jsxs)("button", {
                                                             className: eq.uI,
                                                             onMouseDown: W("start"),
-                                                            onKeyDown: F,
+                                                            onKeyDown: V,
                                                             role: "slider",
                                                             tabIndex: 0,
                                                             "aria-valuemin": 0,

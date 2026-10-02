@@ -1,4 +1,4 @@
-(n.d(t, { IQ: () => S, WO: () => g }), n(321073));
+(n.d(t, { IQ: () => E, WO: () => g }), n(321073));
 var l = n(284009),
     i = n.n(l),
     r = n(47167),
@@ -52,7 +52,7 @@ function x(e, t) {
     for (let t = c; t <= d; t++) {
         let r = e[t];
         if (s && p.l5.isText(r) && 0 === r.text.length) continue;
-        let a = S(r, {
+        let a = E(r, {
             mode: n,
             start: null != l && t === c ? { path: l.path.slice(1), offset: l.offset } : void 0,
             end: null != i && t === d ? { path: i.path.slice(1), offset: i.offset } : void 0,
@@ -63,8 +63,8 @@ function x(e, t) {
     }
     return g.join(r);
 }
-function S(e, t) {
-    let { mode: n, start: l, allowBlockQuotePrefix: g = !1, preventEmojiSurrogates: S = !1 } = t ?? {};
+function E(e, t) {
+    let { mode: n, start: l, allowBlockQuotePrefix: g = !1, preventEmojiSurrogates: E = !1 } = t ?? {};
     if (p.l5.isText(e))
         return (function (e, t) {
             let { start: n, end: l } = t ?? {};
@@ -88,7 +88,7 @@ function S(e, t) {
         }
         case "emoji": {
             let t = e.emoji;
-            if (!S && null != t.surrogate) return t.surrogate;
+            if (!E && null != t.surrogate) return t.surrogate;
             return t.name;
         }
         case "customEmoji": {

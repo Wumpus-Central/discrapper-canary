@@ -1,24 +1,24 @@
-i.d(n, { M$: () => u, M0: () => _, ZP: () => l, aP: () => A, hD: () => f });
-var e,
-    r = i(975571),
-    s = i(379257),
-    a = i(306537),
-    o = i(36149),
-    E = i(652215),
-    c = i(375708),
-    u = (((e = {}).ADULT = "adult"), (e.TEEN = "teen"), (e.UNVERIFIED = "unverified"), e);
-function l() {
-    let t = (0, o.b8)();
-    return (0, o.yM)() ? "teen" : t ? "adult" : "unverified";
+n.d(e, { M$: () => u, M0: () => E, ZP: () => d, aP: () => m, hD: () => f });
+var i,
+    r = n(975571),
+    s = n(379257),
+    a = n(306537),
+    l = n(36149),
+    o = n(652215),
+    c = n(375708),
+    u = (((i = {}).ADULT = "adult"), (i.TEEN = "teen"), (i.UNVERIFIED = "unverified"), i);
+function d() {
+    let t = (0, l.b8)();
+    return (0, l.yM)() ? "teen" : t ? "adult" : "unverified";
 }
-function _() {
-    s.A.openUrl(r.A.getArticleURL(E.MVz.TIGGER_PAWTECT_LEARN_MORE));
+function E() {
+    s.A.openUrl(r.A.getArticleURL(o.MVz.TIGGER_PAWTECT_LEARN_MORE));
 }
-function A() {
+function m() {
     s.A.showAgeVerificationGetStartedModal({ entryPoint: a.q1.ACCOUNT_AGE_GROUP });
 }
 function f() {
-    switch (l()) {
+    switch (d()) {
         case "adult":
             return c.intl.string(c.t.XxRj7f);
         case "teen":

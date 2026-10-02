@@ -14,8 +14,8 @@ var l = n(477900),
     f = n(579940),
     g = n(915089),
     x = n(750506),
-    S = n(513609),
-    E = n(71393),
+    E = n(513609),
+    S = n(71393),
     y = n(597184),
     C = n(105330),
     A = n(265431),
@@ -39,9 +39,9 @@ var V = n(5867),
 let W = i.forwardRef(function (e, t) {
     let { channel: n, type: r, editorHeight: W, onVisibilityChange: F, editorScrollerRef: B, barsHeight: K } = e,
         G = (0, g.GV)(),
-        H = (0, o.bG)([E.A], () => E.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
+        H = (0, o.bG)([S.A], () => S.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
         z = i.useRef(null),
-        [q, $, Q] = (function (e, t, n) {
+        [q, Q, $] = (function (e, t, n) {
             let { channel: l, type: r } = e,
                 [s, a] = i.useState(() => (0, R.Ur)()),
                 u = (0, A.A)(),
@@ -115,15 +115,15 @@ let W = i.forwardRef(function (e, t) {
                     );
                 })({ navId: "channel-autocomplete", scrollerRef: n, state: s, onFocus: (e) => V.setSelectedIndex(e) }),
                 x = e.editorRef.current?.getCurrentWord(),
-                S = e.editorRef.current?.getSlateEditor(),
-                E = null;
-            null != S && (E = N.VW.getSelectedParentOfType(S, R.mk)?.[0] ?? null);
+                E = e.editorRef.current?.getSlateEditor(),
+                S = null;
+            null != E && (S = N.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
             let C = {
                     ...e,
                     navigator: g,
                     activeCommand: m,
                     activeCommandOption: p,
-                    activeInlineAutocompleteInput: E,
+                    activeInlineAutocompleteInput: S,
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
                     hidePersonalInformation: h,
@@ -177,11 +177,11 @@ let W = i.forwardRef(function (e, t) {
                 [s, V, g]
             );
         })({ ...e, guild: H }, t, z),
-        Z = r.autocomplete?.forceChatLayer ? S.Ay : x.Ay,
+        Z = r.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
         X = (0, p.aI)(q.selectedIndex);
     (0, f.gf)(G, q.isVisible, X);
-    let Y = (0, C.l)({ editorHeight: W, type: r, state: q }),
-        J = (0, o.bG)(
+    let J = (0, C.l)({ editorHeight: W, type: r, state: q }),
+        Y = (0, o.bG)(
             [h.Ay],
             () => {
                 let e = h.Ay.getSelfEmbeddedActivityForChannel(n.id),
@@ -192,14 +192,14 @@ let W = i.forwardRef(function (e, t) {
         ),
         ee = i.useMemo(
             () =>
-                Y?.top == null && Y?.left == null && Y?.bottom == null && Y?.right == null ? "" : String(Date.now()),
-            [Y?.top, Y?.left, Y?.bottom, Y?.right],
+                J?.top == null && J?.left == null && J?.bottom == null && J?.right == null ? "" : String(Date.now()),
+            [J?.top, J?.left, J?.bottom, J?.right],
         );
     if (
         (i.useEffect(() => {
             F(q.isVisible);
         }, [F, q.isVisible]),
-        !q.isVisible || null == q.query || void 0 === Y)
+        !q.isVisible || null == q.query || void 0 === J)
     )
         return null;
     let et =
@@ -210,13 +210,13 @@ let W = i.forwardRef(function (e, t) {
             guild: H,
             query: q.query.queryText,
             options: q.query.options,
-            onHover: (e) => $.onResultHover(e),
-            onClick: (e) => $.onResultClick(e),
+            onHover: (e) => Q.onResultHover(e),
+            onClick: (e) => Q.onResultClick(e),
         }) ?? null;
     if (null == et) return null;
-    let en = { [U.pK]: null == Y, [U.YB]: null != Y, [U.sQ]: null == Y && "bottom" === e.position, [U.mO]: J },
+    let en = { [U.pK]: null == J, [U.YB]: null != J, [U.sQ]: null == J && "bottom" === e.position, [U.mO]: Y },
         el = 490;
-    null != Y && (el = r.autocomplete?.small ? 200 : q.query?.type === y.DB.EMOJIS_AND_STICKERS ? 490 : 245);
+    null != J && (el = r.autocomplete?.small ? 200 : q.query?.type === y.DB.EMOJIS_AND_STICKERS ? 490 : 245);
     let ei = Math.max(W, B?.current?.clientHeight ?? 0),
         er = Math.min(0.5 * window.innerHeight, ei);
     el = Math.min(window.innerHeight - 120 - er - (K ?? 0), el);
@@ -226,7 +226,7 @@ let W = i.forwardRef(function (e, t) {
         innerClassName: U.Fv,
         onMouseDown: (e) => e.preventDefault(),
         children: (0, l.jsx)(a.hD, {
-            navigator: Q,
+            navigator: $,
             children: (0, l.jsx)(a.PR, {
                 children: (e) => {
                     let { ref: t, ...n } = e;
@@ -248,11 +248,11 @@ let W = i.forwardRef(function (e, t) {
             }),
         }),
     });
-    return null != Y
+    return null != J
         ? (0, l.jsx)(Z, {
               children: (0, l.jsx)(c.Q, {
                   targetRef: e.targetRef,
-                  overrideTargetRect: Y,
+                  overrideTargetRect: J,
                   positionKey: ee,
                   position: e.position ?? "top",
                   align: "left",

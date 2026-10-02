@@ -40,10 +40,10 @@ function A(e) {
                 : { presence: null, progress: null, statusTextOverride: null };
         })({ customStatusActivity: n, statusOwnerId: c, location: "CustomStatusVoiceDare" }),
         b = v.statusTextOverride ?? n?.state,
-        S = null != b && "" !== b,
-        E = null;
-    null == I || A || (E = (0, l.jsx)(j.A, { emoji: I, animate: x, className: s, hideTooltip: N || S }));
-    let C = S ? (null != E ? ` ${b}` : b) : null;
+        E = null != b && "" !== b,
+        S = null;
+    null == I || A || (S = (0, l.jsx)(j.A, { emoji: I, animate: x, className: s, hideTooltip: N || E }));
+    let C = E ? (null != S ? ` ${b}` : b) : null;
     return null == n
         ? null
         : (0, l.jsx)(u.E, {
@@ -51,12 +51,12 @@ function A(e) {
               color: "none",
               className: a()(f.ps, r),
               children:
-                  ((t = null != I && !A && !S),
+                  ((t = null != I && !A && !E),
                   N || t
-                      ? (0, l.jsxs)(l.Fragment, { children: [E, C] })
+                      ? (0, l.jsxs)(l.Fragment, { children: [S, C] })
                       : null != v.presence
-                        ? (0, l.jsx)(d.m, { delay: 150, children: (0, l.jsxs)("span", { children: [E, C] }) })
-                        : (0, l.jsxs)("span", { children: [E, C] })),
+                        ? (0, l.jsx)(d.m, { delay: 150, children: (0, l.jsxs)("span", { children: [S, C] }) })
+                        : (0, l.jsxs)("span", { children: [S, C] })),
           });
 }
 var N = n(994500),
@@ -72,8 +72,8 @@ function b(e) {
         color: v.A.unsafe_rawColors.BRAND_345.css,
     });
 }
-var S = n(748562),
-    E = n(47167),
+var E = n(748562),
+    S = n(47167),
     C = n(734057),
     T = n(864436),
     y = n(200041),
@@ -92,13 +92,13 @@ function _(e) {
             showChannelName: m = !1,
         } = e,
         x = (0, o.bG)([C.A], () => C.A.getChannel(t.channelId)),
-        h = (0, E.Ay)(x),
+        h = (0, S.Ay)(x),
         j = n?.name === "" ? null : n?.name,
         g = null != j ? j : O.intl.string(O.t.eXan7B),
         p = null != h ? `${g} (${h})` : g,
         f = m ? p : g;
     return (0, l.jsx)(y.A, {
-        icon: r ? void 0 : (0, l.jsx)(T.A, { icon: S.U, className: a }),
+        icon: r ? void 0 : (0, l.jsx)(T.A, { icon: E.U, className: a }),
         text: f,
         tooltipText: d ? void 0 : u ? p : m ? void 0 : (h ?? void 0),
         textVariant: i,
@@ -162,7 +162,7 @@ function w(e) {
             showChannelName: d = !1,
         } = e,
         c = (0, M.S3)(D.clD.ONLINE),
-        m = (0, E.Ay)(t),
+        m = (0, S.Ay)(t),
         x = t.isDM() || t.isGroupDM(),
         h = x
             ? O.intl.string(O.t["9FaEzi"])
@@ -207,8 +207,8 @@ function B(e) {
         textSize: p = "xs",
         animateEmoji: I = !0,
         hasQuest: v = !1,
-        hideEmoji: S = !1,
-        hideTooltip: E = !1,
+        hideEmoji: E = !1,
+        hideTooltip: S = !1,
     } = e;
     (0, m.A)(t?.id);
     let C = s?.discoverable !== !1 ? s : null,
@@ -244,14 +244,14 @@ function B(e) {
         B = (0, o.bG)([N.A], () => N.A.isBlockedOrIgnored(t?.id)),
         V = y?.state != null,
         F = null != C,
-        H = !F && null != u,
-        J = G.length + (F || H ? 1 : 0),
-        W = J > 1,
+        J = !F && null != u,
+        H = G.length + (F || J ? 1 : 0),
+        W = H > 1,
         K = y?.state != null && "xs" === p;
     if (B) return null;
     function Y() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-            t = !0 === e || E;
+            t = !0 === e || S;
         if (null != C)
             return (0, l.jsx)(_, {
                 stream: C,
@@ -290,14 +290,14 @@ function B(e) {
             textVariant: `text-${p}/medium`,
             className: j,
             hasCustomStatusText: V,
-            totalActivityCount: J,
+            totalActivityCount: H,
         });
     }
     function q() {
-        if (0 === J) return null;
+        if (0 === H) return null;
         if (W && !L) {
             let e, t;
-            return E
+            return S
                 ? (0, l.jsxs)("div", { className: a()(f.ht, K && f.e7), children: [Y(), $()] })
                 : (0, l.jsx)(d.m, {
                       delay: 150,
@@ -317,7 +317,7 @@ function B(e) {
                           G.forEach((n, i) => {
                               e.push((0, l.jsx)(P.A, { activity: n, ...t }, `activity-${i}`));
                           }),
-                          H && e.push((0, l.jsx)(w, { channel: u, ...t, showChannelName: !0 }, "voice")),
+                          J && e.push((0, l.jsx)(w, { channel: u, ...t, showChannelName: !0 }, "voice")),
                           e),
                       children: (0, l.jsxs)("div", { className: a()(f.ht, K && f.e7), children: [Y(!0), $()] }),
                   });
@@ -335,14 +335,14 @@ function B(e) {
                             customStatusActivity: y,
                             textSize: p,
                             animateEmoji: I,
-                            hideEmoji: S,
-                            hideTooltip: E,
+                            hideEmoji: E,
+                            hideTooltip: S,
                             textClassName: j,
                             iconClassName: g,
                             tooltipClassName: X,
                             userId: t?.id,
                         }),
-                  J > 0 && (0, l.jsx)(z, { textVariant: `text-${p}/normal`, className: j }),
+                  H > 0 && (0, l.jsx)(z, { textVariant: `text-${p}/normal`, className: j }),
                   q(),
                   v && (0, l.jsx)(b, {}),
               ],
@@ -351,15 +351,15 @@ function B(e) {
               className: X,
               children: [
                   q(),
-                  null != y && J > 0 && (0, l.jsx)(z, { textVariant: `text-${p}/normal`, className: j }),
+                  null != y && H > 0 && (0, l.jsx)(z, { textVariant: `text-${p}/normal`, className: j }),
                   null == y
                       ? null
                       : (0, l.jsx)(k, {
                             customStatusActivity: y,
                             textSize: p,
                             animateEmoji: I,
-                            hideEmoji: S,
-                            hideTooltip: E,
+                            hideEmoji: E,
+                            hideTooltip: S,
                             textClassName: j,
                             iconClassName: g,
                             tooltipClassName: X,

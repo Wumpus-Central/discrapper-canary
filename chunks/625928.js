@@ -14,8 +14,8 @@ var l = n(477900),
     f = n(135621),
     g = n(287809),
     x = n(158045),
-    S = n(192308),
-    E = n(939249),
+    E = n(192308),
+    S = n(939249),
     y = n(404374),
     C = n(10392),
     A = n(82498),
@@ -26,7 +26,7 @@ var l = n(477900),
     T = n(375708),
     j = n(845210);
 function k() {
-    (0, S.openModalLazy)(async () => {
+    (0, E.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e("235257"), n.e("66920")]).then(n.bind(n, 220763));
         return (t) => (0, l.jsx)(e, { ...t });
     });
@@ -48,7 +48,7 @@ function _(e) {
                 (0, C.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, A.uq)("longer messages inline")));
         }, [r, a]),
         n
-            ? (0, l.jsx)(E.D, {
+            ? (0, l.jsx)(S.D, {
                   className: j.e7,
                   onClick: () => k(),
                   children: (0, l.jsx)(u.m, {
@@ -73,14 +73,14 @@ function _(e) {
 var R = n(263582),
     w = n(412028);
 function O(e) {
-    let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: S } = e,
-        E = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
+    let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: E } = e,
+        S = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
         y = (0, f.A)(),
         C = i ?? y,
         A = r ?? i ?? y / 10,
         b = n.length,
-        I = null != t.upsellLongMessages && (b ?? 0) > N.uvi && E,
-        v = null != t.upsellLongMessages && !E,
+        I = null != t.upsellLongMessages && (b ?? 0) > N.uvi && S,
+        v = null != t.upsellLongMessages && !S,
         j = C - b,
         k = j > A;
     (0, a.$)({ currentLength: b, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
@@ -97,7 +97,7 @@ function O(e) {
     return (0, l.jsx)(p.f5, {
         value: L,
         children: (0, l.jsxs)("div", {
-            className: s()(S, w.Dq),
+            className: s()(E, w.Dq),
             children: [
                 (0, l.jsxs)("div", {
                     className: w.SW,

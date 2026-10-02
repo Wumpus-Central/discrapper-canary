@@ -38,8 +38,8 @@ function v(e, t) {
     };
 }
 var b = n(209932),
-    S = n(807348),
-    E = n(817232),
+    E = n(807348),
+    S = n(817232),
     C = n(734057),
     T = n(375708),
     y = n(701144);
@@ -101,7 +101,7 @@ let G = function (e) {
             ? (0, l.jsx)(O, { playSound: T })
             : o && !u
               ? (0, l.jsx)(
-                    E.Ay,
+                    S.Ay,
                     {
                         containerClassName: y.Ti,
                         className: y.UX,
@@ -110,7 +110,7 @@ let G = function (e) {
                         onSelectItem: T,
                         isPlayingSoundOverride: N,
                         isSoundmoji: !0,
-                        buttonOverlay: S.If.SOUNDMOJI,
+                        buttonOverlay: E.If.SOUNDMOJI,
                         tooltipClassName: y.YL,
                         tooltipContentClassName: y.R3,
                         tooltipOverride: (0, l.jsx)(j.WE, { sound: x }),

@@ -38,9 +38,9 @@ let m = function (e) {
             },
             [A, g],
         ),
-        S = {};
+        E = {};
     return (
-        null != m && (S = { color: (0, r.Hl)(m), backgroundColor: f ? (0, r.gq)(m, 0.3) : (0, r.gq)(m, 0.1) }),
+        null != m && (E = { color: (0, r.Hl)(m), backgroundColor: f ? (0, r.gq)(m, 0.3) : (0, r.gq)(m, 0.1) }),
         (0, l.jsx)(u.D, {
             ...p,
             innerRef: t,
@@ -48,7 +48,7 @@ let m = function (e) {
             className: a()(s, { [c.i]: !0, interactive: p.onClick }),
             onMouseEnter: v,
             onMouseLeave: b,
-            style: S,
+            style: E,
             tabIndex: null != p.onClick ? 0 : -1,
             children:
                 null != h

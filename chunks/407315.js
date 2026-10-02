@@ -14,8 +14,8 @@ var l = n(635377),
     f = n(35277),
     g = n(820066),
     x = n(551483),
-    S = n(389437);
-let E = new a.Vy("withCodeBlocks"),
+    E = n(389437);
+let S = new a.Vy("withCodeBlocks"),
     y = new Set(["line"]),
     C = /^[a-z0-9_+\-.#]+$/i,
     A = null,
@@ -39,7 +39,7 @@ function I(e) {
                                 }),
                                     (l = g.VW.richValue(e)));
                             } catch (e) {
-                                E.warn("error applying arborium highlighting to editor", e);
+                                S.warn("error applying arborium highlighting to editor", e);
                             }
                         })));
             })
@@ -299,7 +299,7 @@ function v(e, t) {
 let N = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
     T = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
     j = new Map();
-for (let [e, t] of Object.entries(S)) e.startsWith("a-") && null != t && j.set(e, t);
+for (let [e, t] of Object.entries(E)) e.startsWith("a-") && null != t && j.set(e, t);
 let k = { max: 1 / 0, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
     _ = new (i())(k),
     R = new (i())(k),

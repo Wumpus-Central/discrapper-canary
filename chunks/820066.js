@@ -1,13 +1,13 @@
 (n.d(t, {
-    AS: () => $,
+    AS: () => Q,
     Ot: () => ee,
-    cv: () => Q,
+    cv: () => $,
     PW: () => X,
     l5: () => Z,
     e0: () => ei,
-    ZF: () => J,
+    ZF: () => Y,
     VW: () => q,
-    Kh: () => Y,
+    Kh: () => J,
 }),
     n(134528),
     n(947204));
@@ -27,8 +27,8 @@ var a = n(635377),
     f = n(551965),
     g = n(927813);
 let x = /^[a-z0-9_+\-.#]+$/i,
-    S = new d.A("MarkdownToSlate"),
-    E = {
+    E = new d.A("MarkdownToSlate"),
+    S = {
         link: { type: "skip" },
         highlight: { type: "skip" },
         blockQuote: { type: "skip" },
@@ -84,11 +84,11 @@ let x = /^[a-z0-9_+\-.#]+$/i,
     b = {},
     I = {};
 for (let e in m.Ay.RULES) {
-    if (!(e in E))
+    if (!(e in S))
         throw Error(
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
-    let t = E[e];
+    let t = S[e];
     ("skip" !== t.type && (b[e] = v(m.Ay.RULES[e])),
         "skip" !== t.type && "inlineObject" !== t.type && (I[e] = v("text" === e ? p.Ay : m.Ay.RULES[e])));
 }
@@ -141,7 +141,7 @@ let T = {
 function M(e, t, n, l, r) {
     let { content: s, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof s;
-    o && S.warn(`Slate: parser bailed out past MAX_PARSE_DEPTH, rendering ${s.length} chars as plain text`);
+    o && E.warn(`Slate: parser bailed out past MAX_PARSE_DEPTH, rendering ${s.length} chars as plain text`);
     let u = o ? [s] : n.originalMatch;
     switch ((i()(null != u, "Slate: originalMatch must be set " + JSON.stringify(n, void 0, 2)), a)) {
         case "newline":
@@ -227,7 +227,7 @@ function M(e, t, n, l, r) {
                     if ("inlineCode" === t) return { before: l[1], after: l[1] };
                     if ("em" === t && "_" === e.substring(n, n + 1)) return { before: "_", after: "_" };
                     if ("subtext" === t) return { before: j.exec(l.input)[1], after: "" };
-                    let i = E["link" === t ? "url" : t];
+                    let i = S["link" === t ? "url" : t];
                     if ("inlineStyle" === i.type) return i;
                     throw Error("Slate: rule must be an inlineStyle");
                 })(t, a, l, u),
@@ -328,7 +328,7 @@ function K(e, t) {
     return t;
 }
 function G(e, t, n) {
-    if (t.split("").some((e) => A.has(e))) return (S.error(e), n);
+    if (t.split("").some((e) => A.has(e))) return (E.error(e), n);
     throw Error(e);
 }
 function H(e, t, n, l) {
@@ -352,39 +352,39 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
             for (let n of e(t, i)) yield n;
             return;
         }
-        n = Y.isPoint(s)
+        n = J.isPoint(s)
             ? o
                 ? { anchor: s, focus: q.start(t, []) }
                 : { anchor: s, focus: q.end(t, []) }
             : q.range(t, s);
-        let [c, d] = J.edges(n),
+        let [c, d] = Y.edges(n),
             h = q.blocks(t),
             m = o ? -1 : 1,
             p = c.path[0] ?? 0,
             f = d.path[0] ?? h.length - 1,
             g = o ? f : p,
             x = o ? p : f,
-            S = !1;
+            E = !1;
         "line" === a && (yield o ? d : c);
-        for (let n = g; !S && (!o ? n <= x : n >= x); n += m)
+        for (let n = g; !E && (!o ? n <= x : n >= x); n += m)
             for (let s of (function* n(s) {
                 let [h, p] = s,
                     f = p.length,
                     g = X.isAncestor(p, c.path),
                     x = X.isAncestor(p, d.path),
-                    E = g ? c.path[f] : 0,
+                    S = g ? c.path[f] : 0,
                     y = x ? d.path[f] : h.children.length - 1,
-                    C = o ? y : E,
-                    A = o ? E : y;
-                for (let s = C; !S && (!o ? s <= A : s >= A); s += m) {
+                    C = o ? y : S,
+                    A = o ? S : y;
+                for (let s = C; !E && (!o ? s <= A : s >= A); s += m) {
                     let m = h.children[s],
                         f = X.child(p, s);
-                    if (Q.isElement(m)) {
+                    if ($.isElement(m)) {
                         let e = o ? d.path : c.path;
                         if (!(X.equals(f, e) || X.isAncestor(f, e))) {
                             let e = t.isVoid(m);
-                            if ("line" === a && Q.isElement(m) && !e) {
-                                (null != l && (yield l, (l = void 0)), (S = !0));
+                            if ("line" === a && $.isElement(m) && !e) {
+                                (null != l && (yield l, (l = void 0)), (E = !0));
                                 return;
                             }
                             if (!u && e) continue;
@@ -401,7 +401,7 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
                                 yield l;
                         }
                 }
-                "line" === a && Q.isElement(h) && !t.isVoid(h) && (null != l && (yield l, (l = void 0)), (S = !0));
+                "line" === a && $.isElement(h) && !t.isVoid(h) && (null != l && (yield l, (l = void 0)), (E = !0));
             })(h[n]))
                 yield s;
     };
@@ -414,12 +414,12 @@ let q = {
         ...s.rL,
         richValue: (e) => e.children,
         blocks: (e) => q.richValue(e).map((e, t) => [e, [t]]),
-        isBlock: (e, t) => Q.isElement(t) && r.KE.isBlock(e, t),
-        isInline: (e, t) => Q.isElement(t) && r.KE.isInline(e, t),
-        isVoid: (e, t) => Q.isElement(t) && r.KE.isVoid(e, t),
+        isBlock: (e, t) => $.isElement(t) && r.KE.isBlock(e, t),
+        isInline: (e, t) => $.isElement(t) && r.KE.isInline(e, t),
+        isVoid: (e, t) => $.isElement(t) && r.KE.isVoid(e, t),
         isEditorEmpty(e) {
             let t = q.richValue(e);
-            return !(t.length > 1) && (0 === t.length || ("line" === t[0].type && Q.isEmpty(t[0])));
+            return !(t.length > 1) && (0 === t.length || ("line" === t[0].type && $.isEmpty(t[0])));
         },
         getFirstText(e) {
             let t = q.node(e, z.fP);
@@ -438,31 +438,31 @@ let q = {
             return null == e.selection ? null : this.getParentVoid(e, e.selection);
         },
         getCurrentText(e) {
-            let t = null != e.selection ? J.toPoint(e.selection) : null;
+            let t = null != e.selection ? Y.toPoint(e.selection) : null;
             return null == t ? null : q.node(e, t.path);
         },
         getParentBlock: (e, t) =>
-            q.above(e, { at: t, match: (t) => Q.isElement(t) && q.isBlock(e, t), mode: "lowest" }) ?? null,
-        getParentElement: (e, t) => q.above(e, { at: t, match: (e) => Q.isElement(e), mode: "lowest" }) ?? null,
+            q.above(e, { at: t, match: (t) => $.isElement(t) && q.isBlock(e, t), mode: "lowest" }) ?? null,
+        getParentElement: (e, t) => q.above(e, { at: t, match: (e) => $.isElement(e), mode: "lowest" }) ?? null,
         getParentInline: (e, t) => q.above(e, { at: t, match: (t) => q.isInline(e, t), mode: "lowest" }) ?? null,
         getParentVoid: (e, t) => q.above(e, { at: t, match: (t) => q.isVoid(e, t), mode: "lowest" }) ?? null,
         getParentOfType: (e, t, n) =>
-            q.above(e, { at: t, match: (e) => Q.isElement(e) && n.includes(e.type), mode: "lowest" }) ?? null,
+            q.above(e, { at: t, match: (e) => $.isElement(e) && n.includes(e.type), mode: "lowest" }) ?? null,
         getSelectedParentOfType(e, t) {
             if (null == e.selection) return null;
-            let n = J.toPoint(e.selection);
+            let n = Y.toPoint(e.selection);
             return null == n ? null : q.getParentOfType(e, n, t);
         },
         getNodesOfType: (e, t) =>
-            q.nodes(e, { at: z.Dl, match: (e) => Q.isElement(e) && t.includes(e.type), mode: "highest" }),
+            q.nodes(e, { at: z.Dl, match: (e) => $.isElement(e) && t.includes(e.type), mode: "highest" }),
         getSelectedVoid(e) {
             let t;
             if (null == e.selection) return null;
-            if (J.isExpanded(e.selection)) {
-                let [n, l] = J.edges(e.selection),
+            if (Y.isExpanded(e.selection)) {
+                let [n, l] = Y.edges(e.selection),
                     i = q.after(e, n, { unit: "offset" }),
                     r = q.before(e, l, { unit: "offset" });
-                if (null == i || null == r || !Y.equals(i, r)) return null;
+                if (null == i || null == r || !J.equals(i, r)) return null;
                 t = i;
             } else t = e.selection.anchor;
             return null == t ? null : q.getParentVoid(e, t);
@@ -479,7 +479,7 @@ let q = {
             return null == n ? "" : this.getTextFromRange(e, n);
         },
         getTextFromRange(e, t) {
-            let [n, l] = J.edges(t),
+            let [n, l] = Y.edges(t),
                 i = q.nodes(e, { at: t, mode: "lowest", match: (e) => Z.isText(e) }),
                 r = "";
             for (let [e, t] of i) {
@@ -522,43 +522,43 @@ let q = {
             if (X.isPath(t)) {
                 let n = q.range(e, t),
                     [l] = q.node(e, t);
-                if (Q.isElement(l)) {
+                if ($.isElement(l)) {
                     let l = q.before(e, t),
                         i = q.after(e, t);
                     t = { anchor: l ?? n.anchor, focus: i ?? n.focus };
                 } else t = n;
             }
-            let [n, l] = J.edges(t),
+            let [n, l] = Y.edges(t),
                 i = null,
                 r = null;
             return (
-                Y.equals(e.selection.anchor, n)
+                J.equals(e.selection.anchor, n)
                     ? (i = "start")
-                    : Y.equals(e.selection.anchor, l)
+                    : J.equals(e.selection.anchor, l)
                       ? (i = "end")
-                      : J.includes(t, e.selection.anchor) && (i = "inside"),
-                Y.equals(e.selection.focus, n)
+                      : Y.includes(t, e.selection.anchor) && (i = "inside"),
+                J.equals(e.selection.focus, n)
                     ? (r = "start")
-                    : Y.equals(e.selection.focus, l)
+                    : J.equals(e.selection.focus, l)
                       ? (r = "end")
-                      : J.includes(t, e.selection.focus) && (r = "inside"),
+                      : Y.includes(t, e.selection.focus) && (r = "inside"),
                 { anchor: i, focus: r }
             );
         },
     },
-    $ = {
+    Q = {
         ...r.bP,
         isType: (e, t) => r.Hg.isElement(e) && e.type === t,
         isInTypes: (e, t) => r.Hg.isElement(e) && t.has(e.type),
     },
-    Q = {
+    $ = {
         ...r.Hg,
         updateElement(e, t) {
             let n = q.node(e, t[1]);
             return (
                 i()(!q.isEditor(t[0]), "Element is the root node"),
                 i()(null != n, "Failed to find element"),
-                i()(Q.isElement(n[0]), "Node at this path is no longer an element"),
+                i()($.isElement(n[0]), "Node at this path is no longer an element"),
                 i()(n[0].type === t[0].type, "Node at this path is a different type"),
                 n
             );
@@ -661,7 +661,7 @@ let q = {
         isFirstChild: (e, t) => X.equals(t, X.child(e, 0)),
         child: (e, t) => [...e, t],
     },
-    Y = {
+    J = {
         ...r.bR,
         start(e) {
             let [, t] = e;
@@ -673,19 +673,19 @@ let q = {
             return { path: X.child(n, t.children.length - 1), offset: Z.isText(l) ? l.text.length : 0 };
         },
         isAtStart(e, t) {
-            return Y.equals(e, this.start(t));
+            return J.equals(e, this.start(t));
         },
         isAtEnd(e, t) {
-            return Y.equals(e, this.end(t));
+            return J.equals(e, this.end(t));
         },
         clamp(e, t) {
-            let [n, l] = J.edges(t);
-            return (Y.isBefore(e, n) && (e = n), Y.isAfter(e, l) && (e = l), e);
+            let [n, l] = Y.edges(t);
+            return (J.isBefore(e, n) && (e = n), J.isAfter(e, l) && (e = l), e);
         },
     },
-    J = {
+    Y = {
         ...r.Q6,
-        toPoint: (e) => (null == e || J.isExpanded(e) ? null : e.anchor),
+        toPoint: (e) => (null == e || Y.isExpanded(e) ? null : e.anchor),
         children(e) {
             let [t, n] = e,
                 l = t.children[t.children.length - 1];
@@ -695,15 +695,15 @@ let q = {
             };
         },
         clamp(e, t) {
-            let [n, l] = J.edges(e),
-                [i, r] = J.edges(t);
-            return (Y.isBefore(n, i) && (n = i), Y.isAfter(l, r) && (l = r), J.isForward(e))
+            let [n, l] = Y.edges(e),
+                [i, r] = Y.edges(t);
+            return (J.isBefore(n, i) && (n = i), J.isAfter(l, r) && (l = r), Y.isForward(e))
                 ? { anchor: n, focus: l }
                 : { anchor: l, focus: n };
         },
     },
     ee = {
-        equals: (e, t) => (null == e && null == t) || (null != e && null != t && J.equals(e, t)),
+        equals: (e, t) => (null == e && null == t) || (null != e && null != t && Y.equals(e, t)),
         isValid(e, t) {
             if (null == t) return !1;
             let { anchor: n, focus: l } = t;
@@ -745,7 +745,7 @@ let ei = {
         let i = q.start(e, l[1]),
             r = Array.from(q.positions(e, { at: { anchor: i, focus: t } })),
             s = el(e, t, r, !0);
-        if (n && Y.equals(t, s) && !Y.isAtEnd(t, l)) {
+        if (n && J.equals(t, s) && !J.isAtEnd(t, l)) {
             let n = q.after(e, t);
             if (null == n) return s;
             s = el(e, n, r, !0);
@@ -758,7 +758,7 @@ let ei = {
         let i = q.end(e, l[1]),
             r = Array.from(q.positions(e, { at: { anchor: t, focus: i } })),
             s = el(e, t, r, !1);
-        if (n && Y.equals(t, s) && !Y.isAtEnd(t, l)) {
+        if (n && J.equals(t, s) && !J.isAtEnd(t, l)) {
             let n = q.after(e, t);
             if (null == n) return s;
             s = el(e, n, r, !1);

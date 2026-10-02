@@ -1,4 +1,4 @@
-n.d(t, { A: () => eS });
+n.d(t, { A: () => eE });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -14,8 +14,8 @@ var l = n(477900),
     f = n(186306),
     g = n(654821),
     x = n(35277),
-    S = n(820066),
-    E = n(112107),
+    E = n(820066),
+    S = n(112107),
     y = n(17928),
     C = n(866665),
     A = n(778712),
@@ -45,11 +45,11 @@ var B = n(734057),
     H = n(351906),
     z = n(287809),
     q = n(147036),
-    $ = n(562153),
-    Q = n(427262),
+    Q = n(562153),
+    $ = n(427262),
     Z = n(375708),
     X = n(307126);
-function Y(e) {
+function J(e) {
     let { emoji: t } = e;
     return (0, l.jsx)(C.m, {
         text: t.name,
@@ -58,7 +58,7 @@ function Y(e) {
         children: (0, l.jsx)(N.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
     });
 }
-function J(e) {
+function Y(e) {
     let { emoji: t } = e;
     return (0, l.jsx)(C.m, {
         text: t.name,
@@ -75,7 +75,7 @@ function et(e) {
     let { id: t, guildId: n, channelId: i } = e,
         r = (0, y.bG)([z.default], () => z.default.getUser(t)),
         s = (0, y.bG)([H.A], () => H.A.hidePersonalInformation),
-        a = $.Ay.useName(n, i, r),
+        a = Q.Ay.useName(n, i, r),
         o = (0, l.jsx)(V.A, { children: null == a ? `<@${t}>` : `@${a}` });
     if (null != r) {
         let e = s || r.hasUniqueUsername() ? null : `#${r.discriminator}`;
@@ -84,13 +84,13 @@ function et(e) {
                 className: X.fX,
                 children: [
                     (0, l.jsx)(T.A, { user: r, animate: !0, size: A._3.SIZE_16, className: X.my }),
-                    Q.Ay.getUserTag(r, { mode: "username", identifiable: s ? "never" : "always" }),
+                    $.Ay.getUserTag(r, { mode: "username", identifiable: s ? "never" : "always" }),
                     (0, l.jsx)("span", { className: X.D2, children: e }),
                 ],
             }),
             delay: 750,
             position: "top",
-            "aria-label": Q.Ay.getUserTag(r, { decoration: "never" }),
+            "aria-label": $.Ay.getUserTag(r, { decoration: "never" }),
             asContainer: !0,
             children: (0, l.jsx)(b.D, { tag: "span", children: o }),
         });
@@ -220,9 +220,9 @@ class ex extends i.PureComponent {
             (this.handleBlurCapture = this.handleBlurCapture.bind(this)),
             (this.handleContextMenu = this.handleContextMenu.bind(this)),
             (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
-            S.VW.isEditorEmpty(e.editor)
+            E.VW.isEditorEmpty(e.editor)
                 ? (this.state = { initialValue: (0, p.N3)().richValue, showPlaceholder: !0 })
-                : (this.state = { initialValue: S.VW.richValue(e.editor), showPlaceholder: !1 }));
+                : (this.state = { initialValue: E.VW.richValue(e.editor), showPlaceholder: !1 }));
     }
     componentDidMount() {
         this.props.editor.events.addListener("onChange", this.handleOnChange);
@@ -282,13 +282,13 @@ class ex extends i.PureComponent {
                         return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
-                            children: [(0, l.jsx)(Y, { emoji: o.emoji }), a],
+                            children: [(0, l.jsx)(J, { emoji: o.emoji }), a],
                         });
                     case "customEmoji":
                         return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
-                            children: [(0, l.jsx)(J, { emoji: o.emoji }), a],
+                            children: [(0, l.jsx)(Y, { emoji: o.emoji }), a],
                         });
                     case "textMention":
                         return (0, l.jsxs)(ep, {
@@ -324,7 +324,7 @@ class ex extends i.PureComponent {
                         return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
-                            children: [(0, l.jsx)(E.LF, { soundId: o.soundId }), a],
+                            children: [(0, l.jsx)(S.LF, { soundId: o.soundId }), a],
                         });
                     case "commandMention":
                         return (0, l.jsxs)(ep, {
@@ -360,8 +360,8 @@ class ex extends i.PureComponent {
                         { attributes: i, children: r, leaf: a, text: o } = t,
                         u = e.chatInputType.markdown?.disableLinks === !0,
                         c = !1,
-                        [d] = S.VW.node(e, S.PW.parent(S.VW.findPath(e, o)));
-                    switch (S.VW.isEditor(d) ? "editor" : d.type) {
+                        [d] = E.VW.node(e, E.PW.parent(E.VW.findPath(e, o)));
+                    switch (E.VW.isEditor(d) ? "editor" : d.type) {
                         case "line":
                         case "blockQuote": {
                             c = void 0;
@@ -398,10 +398,10 @@ class ex extends i.PureComponent {
     }
     handleOnChange() {
         let { editor: e } = this.props,
-            t = S.VW.isEditorEmpty(e) && null == e.composition;
+            t = E.VW.isEditorEmpty(e) && null == e.composition;
         if (
             (t !== this.state.showPlaceholder && this.setState({ showPlaceholder: t }),
-            this.props.onChange?.(S.VW.richValue(e)),
+            this.props.onChange?.(E.VW.richValue(e)),
             !1 === this.props.canFocus)
         ) {
             let t = a.rL.findDocumentOrShadowRoot(e).getSelection();
@@ -433,19 +433,19 @@ class ex extends i.PureComponent {
                 ("insertText" === e.inputType || "insertReplacementText" === e.inputType) &&
                 (null == i && (i = l), null != i)
             ) {
-                let n = S.VW.toSlateRange(t, i, { exactMatch: !1, suppressThrow: !0 });
+                let n = E.VW.toSlateRange(t, i, { exactMatch: !1, suppressThrow: !0 });
                 null != n &&
                     null != e.data &&
-                    (S.ZF.isExpanded(n)
+                    (E.ZF.isExpanded(n)
                         ? f.o.withSingleEntry(t, () => {
                               ((t.selection = n), t.deleteFragment(), t.insertText(e.data), e.preventDefault());
                           })
                         : (t.insertText(e.data), e.preventDefault()));
             }
             if (e.inputType.startsWith("deleteContent") && null != l && !l.collapsed) {
-                let n = S.VW.toSlateRange(t, l, { exactMatch: !0, suppressThrow: !0 });
+                let n = E.VW.toSlateRange(t, l, { exactMatch: !0, suppressThrow: !0 });
                 null != n &&
-                    S.ZF.isExpanded(n) &&
+                    E.ZF.isExpanded(n) &&
                     ((t.selection = n),
                     t.deleteFragment(e.inputType.endsWith("Backward") ? "backward" : "forward"),
                     e.preventDefault());
@@ -456,26 +456,26 @@ class ex extends i.PureComponent {
         let { editor: e } = this.props,
             t = { insertedPrefix: !1, startedInsideInline: !1 };
         this.state.showPlaceholder && this.setState({ showPlaceholder: !1 });
-        let n = null != e.selection && S.ZF.isCollapsed(e.selection) ? S.VW.leaf(e, e.selection.anchor.path) : null;
+        let n = null != e.selection && E.ZF.isCollapsed(e.selection) ? E.VW.leaf(e, e.selection.anchor.path) : null;
         if (null == n) {
             e.composition = t;
             return;
         }
         if (
             (null !=
-                (null != e.selection && S.ZF.isCollapsed(e.selection)
-                    ? S.VW.above(e, { at: n[1], match: (t) => S.VW.isInline(e, t), mode: "lowest" })
+                (null != e.selection && E.ZF.isCollapsed(e.selection)
+                    ? E.VW.above(e, { at: n[1], match: (t) => E.VW.isInline(e, t), mode: "lowest" })
                     : null) && (t.startedInsideInline = !0),
-            S.VW.isEditorEmpty(e))
+            E.VW.isEditorEmpty(e))
         ) {
             (x.b.insertNodes(e, { text: "\uFEFF" }, { select: !0 }), (t.insertedPrefix = !0), (e.composition = t));
             return;
         }
         let l = a.rL.findDocumentOrShadowRoot(this.props.editor).getSelection(),
             i = (l?.rangeCount ?? 0) > 0 ? l?.getRangeAt(0) : null;
-        if (null == (null != i ? S.VW.toSlateRange(e, i, { exactMatch: !0, suppressThrow: !0 }) : null) && null != i) {
-            let t = S.VW.toSlateRange(e, i, { exactMatch: !1, suppressThrow: !0 });
-            ((e.selection = null), null != t ? x.b.select(e, t) : x.b.select(e, S.VW.end(e, [])));
+        if (null == (null != i ? E.VW.toSlateRange(e, i, { exactMatch: !0, suppressThrow: !0 }) : null) && null != i) {
+            let t = E.VW.toSlateRange(e, i, { exactMatch: !1, suppressThrow: !0 });
+            ((e.selection = null), null != t ? x.b.select(e, t) : x.b.select(e, E.VW.end(e, [])));
         }
         e.composition = t;
     }
@@ -483,12 +483,12 @@ class ex extends i.PureComponent {
         let { editor: t } = this.props;
         if (null == t.composition) return;
         let { insertedPrefix: n } = t.composition;
-        if (n && null != t.selection && S.ZF.isCollapsed(t.selection)) {
+        if (n && null != t.selection && E.ZF.isCollapsed(t.selection)) {
             let e = t.selection.anchor.path,
-                n = S.AS.leaf(t, e);
-            S.VW.withoutNormalizing(t, () => {
+                n = E.AS.leaf(t, e);
+            E.VW.withoutNormalizing(t, () => {
                 let e = n.text.replace(/^\uFEFF/, "");
-                (x.b.delete(t, { unit: "offset", distance: n.text.length, reverse: !0 }), S.VW.insertText(t, e));
+                (x.b.delete(t, { unit: "offset", distance: n.text.length, reverse: !0 }), E.VW.insertText(t, e));
             });
         }
         t.composition = null;
@@ -574,7 +574,7 @@ class ex extends i.PureComponent {
                         (0, l.jsx)(e, {
                             ...n,
                             editor: t,
-                            text: S.VW.getSelectedText(t, !0),
+                            text: E.VW.getSelectedText(t, !0),
                             clipboardHasMixedContent: i,
                         });
                 },
@@ -611,8 +611,8 @@ class ex extends i.PureComponent {
             onBlur: f,
             onKeyDown: g,
             onKeyUp: x,
-            renderExtraElement: S,
-            renderExtraLeaf: E,
+            renderExtraElement: E,
+            renderExtraLeaf: S,
             ...y
         } = this.props;
         return (0, l.jsxs)("div", {
@@ -656,4 +656,4 @@ class ex extends i.PureComponent {
         });
     }
 }
-let eS = ex;
+let eE = ex;

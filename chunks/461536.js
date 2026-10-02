@@ -67,8 +67,8 @@ function j(e) {
         D = j && null == _,
         {
             tooltipId: M,
-            isVisible: U,
-            targetElementRef: P,
+            isVisible: P,
+            targetElementRef: U,
             trigger: O,
         } = (0, i.D)({ children: t, targetElementRef: T, delay: R.In, onTooltipShow: y, shouldShow: S }),
         B = null != A && A !== s.x.COMMON,
@@ -119,14 +119,14 @@ function j(e) {
             ],
         }),
         w = null != E ? `${x}. ${E}` : x,
-        k = (0, u.j)({ shouldShow: U })((e, t) =>
+        k = (0, u.j)({ shouldShow: P })((e, t) =>
             t
                 ? (0, a.jsx)(f.Bc, {
                       isRichTooltip: !0,
                       children: (0, a.jsx)(m.R, {
-                          isVisible: U,
+                          isVisible: P,
                           isRendered: !0,
-                          targetElementRef: P,
+                          targetElementRef: U,
                           content: G,
                           position: C,
                           align: "center",

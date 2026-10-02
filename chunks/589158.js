@@ -20,8 +20,8 @@ var l,
     I = n(714114),
     v = n(394871),
     b = n(296948),
-    S = n(709066),
-    E = n(235986),
+    E = n(709066),
+    S = n(235986),
     C = n(141504),
     T = (((l = T || {}).SINGLE_AVATAR = "1"), (l.MULTIPLE_AVATAR = "2"), l);
 let y = { [p._3.SIZE_32]: C.dT, [p._3.SIZE_40]: C.Jb };
@@ -35,21 +35,21 @@ class O extends s.Component {
             ? (0, i.jsxs)("div", {
                   className: r()(C.ce, C.jO, n),
                   children: [
-                      (0, i.jsxs)(E.A, {
+                      (0, i.jsxs)(S.A, {
                           children: [
                               (0, i.jsx)("div", { className: r()(C.RH, y[t], C.hC) }),
                               (0, i.jsx)("div", { className: r()(C.RH, y[t], C.hC) }),
                               (0, i.jsx)("div", { className: r()(C.RH, y[t]) }),
                           ],
                       }),
-                      (0, i.jsx)(E.A, { grow: 1, className: C.eC, style: { maxWidth: this.placeholderMaxWidth } }),
+                      (0, i.jsx)(S.A, { grow: 1, className: C.eC, style: { maxWidth: this.placeholderMaxWidth } }),
                   ],
               })
-            : (0, i.jsxs)(E.A, {
+            : (0, i.jsxs)(S.A, {
                   className: r()(C.qf, !s && C.lN, n),
                   children: [
                       (0, i.jsx)("div", { className: r()(C.RH, y[t], l) }),
-                      (0, i.jsx)(E.A, {
+                      (0, i.jsx)(S.A, {
                           grow: 1,
                           className: r()(C.gM, l),
                           style: { maxWidth: this.placeholderMaxWidth },
@@ -85,10 +85,10 @@ function F(e) {
         null
     );
 }
-function H(e) {
+function J(e) {
     return (0, i.jsx)(z.A, { confettiLocation: e.confettiLocation, children: (0, i.jsx)(F, { ...e }) });
 }
-var J = n(967144),
+var H = n(967144),
     W = n(859703),
     K = n(738822),
     Y = n(866157),
@@ -174,7 +174,7 @@ let el = s.memo(function (e) {
         let { user: t } = e;
         if (null == t) return null;
         let n = (0, b.r)(t);
-        return null == n ? null : (0, i.jsx)(S.A, { className: et.AO, type: n, verified: t.isVerifiedBot() });
+        return null == n ? null : (0, i.jsx)(E.A, { className: et.AO, type: n, verified: t.isVerifiedBot() });
     }),
     ea = s.memo(function (e) {
         let {
@@ -273,7 +273,7 @@ let el = s.memo(function (e) {
                         avatarDecoration: c,
                         typingIndicatorRef: m,
                     }),
-                    (0, i.jsx)(H, {
+                    (0, i.jsx)(J, {
                         confettiSpawnRef: x,
                         shouldFire: d && null != h && t.id !== h.id,
                         confettiLocation: Q.k.MEMBER_USER,
@@ -341,8 +341,8 @@ let el = s.memo(function (e) {
                 applicationStream: N,
                 status: v,
                 shouldAnimateStatus: b = !1,
-                isMobile: S,
-                isVR: E,
+                isMobile: E,
+                isVR: S,
                 premiumSince: C,
                 channel: T,
                 guildId: y,
@@ -359,7 +359,7 @@ let el = s.memo(function (e) {
                 "aria-controls": B,
                 "aria-expanded": V,
                 "aria-posinset": F,
-                "aria-setsize": H,
+                "aria-setsize": J,
                 id: q,
                 tabIndex: Q,
                 itemProps: ee,
@@ -379,8 +379,8 @@ let el = s.memo(function (e) {
                 eventHandlers: eI,
             } = (0, $.A)({ userId: ei, size: p._3.SIZE_32, animateOnHover: !(t || em), guildId: y }),
             { onFocus: ev, ...eb } = ee ?? {},
-            eS = (0, J.gn)(y, ei, l ?? null),
-            [eE, eC] = s.useState(!1);
+            eE = (0, H.gn)(y, ei, l ?? null),
+            [eS, eC] = s.useState(!1);
         s.useEffect(() => {
             t && eC(!1);
         }, [t]);
@@ -389,7 +389,7 @@ let el = s.memo(function (e) {
             eO = null != ey,
             e_ = eO ? ey : eT,
             eR = (0, Y.Yl)(eT, N, ei),
-            eG = (eO || eR) && t && !eE,
+            eG = (eO || eR) && t && !eS,
             ek = s.useCallback(() => {
                 ex(!0);
             }, []),
@@ -452,7 +452,7 @@ let el = s.memo(function (e) {
                                             colorRoleName: a,
                                             colorString: n ?? null,
                                             name: h ?? es,
-                                            colorStrings: eS,
+                                            colorStrings: eE,
                                             hideClanTag: k,
                                             user: j,
                                             guildId: y,
@@ -467,7 +467,7 @@ let el = s.memo(function (e) {
                                                 colorRoleName: a,
                                                 colorString: n ?? null,
                                                 name: h ?? es,
-                                                colorStrings: eS,
+                                                colorStrings: eE,
                                                 hideClanTag: k,
                                                 user: j,
                                                 guildId: y,
@@ -482,8 +482,8 @@ let el = s.memo(function (e) {
                               status: v,
                               eventHandlers: eI,
                               avatarSrc: eN,
-                              isMobile: S,
-                              isVR: E,
+                              isMobile: E,
+                              isVR: S,
                               isTyping: x,
                               avatarDecorationSrc: eA,
                               handleSetTypingRef: eL,
@@ -513,7 +513,7 @@ let el = s.memo(function (e) {
                           }),
                           "aria-controls": B,
                           "aria-expanded": V,
-                          "aria-setsize": H,
+                          "aria-setsize": J,
                           "aria-posinset": F,
                           id: q,
                           tabIndex: Q,

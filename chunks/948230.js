@@ -1,5 +1,5 @@
 n.d(t, {
-    CW: () => M,
+    CW: () => P,
     Eo: () => m,
     GG: () => F,
     HV: () => U,
@@ -14,7 +14,7 @@ n.d(t, {
     dm: () => G,
     gA: () => N,
     hF: () => A,
-    oB: () => P,
+    oB: () => M,
     tZ: () => V,
     xx: () => L,
 });
@@ -63,7 +63,7 @@ async function A(e) {
             query: null != e ? { guild_id: e } : void 0,
             rejectWithError: !0,
         });
-        (l.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: n, guildId: t }), v());
+        (l.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: n, guildId: t }), R());
     } catch {
         l.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL", guildId: t });
     }
@@ -71,12 +71,12 @@ async function A(e) {
     ((T = null), null != n && n !== t && A(n));
 }
 let S = !1;
-async function v() {
+async function R() {
     if (!S) {
         for (let e of ((S = !0), u.Ay.getResourceIds(g.P.CONJURING_PROJECT)))
             if (null == p.Ay.getProject(e)) {
                 if (0 === u.Ay.getMentionCount(e, g.P.CONJURING_PROJECT)) {
-                    y(e);
+                    v(e);
                     continue;
                 }
                 if ((await (0, r.yy)(5e3 * Math.random()), null == p.Ay.getProject(e)))
@@ -84,25 +84,25 @@ async function v() {
                         await b(e);
                     } catch (n) {
                         let t = (0, f.$k)(n);
-                        (403 === t || 404 === t) && y(e);
+                        (403 === t || 404 === t) && v(e);
                     }
             }
     }
 }
-function y(e) {
+function v(e) {
     l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: e });
 }
-let R = null;
+let y = null;
 async function O() {
     let e = a.default.getCurrentUser()?.id ?? null;
-    if (null == e || R === e || p.Ay.hasFetchedProjectLimit()) return;
-    R = e;
+    if (null == e || y === e || p.Ay.hasFetchedProjectLimit()) return;
+    y = e;
     let t = null;
     try {
         let { body: e } = await i.Bo.get({ url: _.Rsh.VIBEGRATIONS_PROJECT_LIMIT, rejectWithError: !0 });
         t = e.max_projects;
     } catch {}
-    (R === e && (R = null),
+    (y === e && (y = null),
         a.default.getCurrentUser()?.id === e &&
             l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_LIMIT_FETCH_SETTLE", maxProjects: t }));
 }
@@ -144,10 +144,10 @@ async function C(e, t) {
     let n = await i.Bo.patch({ url: _.Rsh.VIBEGRATIONS_PROJECT(e), body: t, rejectWithError: !1 });
     return (n.ok && l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: n.body }), n);
 }
-function P(e, t) {
+function M(e, t) {
     return C(e, { name: t });
 }
-function M(e, t) {
+function P(e, t) {
     return C(e, t);
 }
 async function k(e, t) {

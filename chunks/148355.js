@@ -14,8 +14,8 @@ var l = n(477900),
     f = n(717421),
     g = n(775602),
     x = n(776231),
-    S = n(750506),
-    E = n(218394),
+    E = n(750506),
+    S = n(218394),
     y = n(256449),
     C = n(194004),
     A = n(378058),
@@ -85,8 +85,8 @@ function R(e) {
             onError: f,
         } = e,
         g = i.useRef(null),
-        S = i.useRef(null),
-        [E, y] = i.useState(!0),
+        E = i.useRef(null),
+        [S, y] = i.useState(!0),
         [C, v] = i.useState(!1),
         N = i.useRef(!1);
     N.current = t && c;
@@ -102,7 +102,7 @@ function R(e) {
                 if (null == T) return;
                 let { default: e } = await Promise.all([n.e("570716"), n.e("709330")]).then(n.bind(n, 140521));
                 null != g.current &&
-                    ((S.current = new e({
+                    ((E.current = new e({
                         canvas: g.current,
                         animationId: s.id,
                         assetUrl: T,
@@ -114,16 +114,16 @@ function R(e) {
                             t || (y(!1), v(!0), f?.());
                         },
                     })),
-                    N.current && S.current.setState(!0));
+                    N.current && E.current.setState(!0));
             })(),
             () => {
-                (S.current?.drop(), (S.current = null), (t = !0));
+                (E.current?.drop(), (E.current = null), (t = !0));
             }
         );
     }, [T, r, s.id, u, f]),
     i.useEffect(() => {
         let e;
-        (t || (e = 0), S.current?.setState(t && c, e));
+        (t || (e = 0), E.current?.setState(t && c, e));
     }, [s, t, c]),
     null == T)
         ? null
@@ -134,7 +134,7 @@ function R(e) {
               ref: m,
               children: (0, l.jsx)(_, {
                   hasError: C,
-                  isLoading: E,
+                  isLoading: S,
                   maskAsset: h,
                   size: r,
                   withLoadingIndicator: p,
@@ -156,7 +156,7 @@ let w = (e) => {
             } = e,
             [p, f] = i.useState(!1),
             [g, x] = i.useState(!0),
-            [S, E] = i.useState(!1),
+            [E, S] = i.useState(!1),
             y = i.useRef(null),
             C = i.useRef(null),
             b = m ?? (0, A.zg)(n, { isPreview: !t || !p || !r, size: a }),
@@ -164,7 +164,7 @@ let w = (e) => {
                 x(!1);
             }, []),
             T = i.useCallback(() => {
-                E(!0);
+                S(!0);
             }, []);
         return (i.useEffect(() => {
             if (null != y.current) {
@@ -186,7 +186,7 @@ let w = (e) => {
                       className: s()(o, I.__invalid_pngImageWrapper),
                       ref: c,
                       children: (0, l.jsx)(_, {
-                          hasError: S,
+                          hasError: E,
                           isLoading: g,
                           maskAsset: u,
                           size: a,
@@ -220,8 +220,8 @@ let w = (e) => {
             } = e,
             h = (0, c.bG)([g.Ay], () => g.Ay.useReducedMotion),
             x = i.useRef(null),
-            E = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
-            y = (0, p.p)(s, { ref: x, from: E, enter: { transform: "scale(1)", opacity: 1 }, leave: E, config: N }),
+            S = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
+            y = (0, p.p)(s, { ref: x, from: S, enter: { transform: "scale(1)", opacity: 1 }, leave: S, config: N }),
             C = i.useRef(null),
             A = (0, f.z)(
                 { ref: C, transform: s || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!s, config: T },
@@ -232,7 +232,7 @@ let w = (e) => {
             y(
                 (e, i) =>
                     i &&
-                    (0, l.jsx)(S.nE, {
+                    (0, l.jsx)(E.nE, {
                         className: I.O2,
                         fixed: !0,
                         align: "center",
@@ -288,9 +288,9 @@ function L(e) {
             fileUri: p,
             onError: f,
         } = e,
-        g = (0, E.j)(),
+        g = (0, S.j)(),
         x = (0, y.Th)(t) && !n,
-        S = i.useRef(null);
+        E = i.useRef(null);
     if (null == c) return null;
     let A = c.format_type === C.TG.LOTTIE ? R : w;
     return (0, l.jsxs)(
@@ -304,7 +304,7 @@ function L(e) {
                     sticker: c,
                     className: d,
                     maskAsset: o,
-                    positionRef: S,
+                    positionRef: E,
                     withLoadingIndicator: h,
                     assetData: m,
                     fileUri: p,
@@ -316,7 +316,7 @@ function L(e) {
                         enlargeScaleFactor: a,
                         enlargeWithName: s,
                         isInteracting: t,
-                        positionRef: S,
+                        positionRef: E,
                         size: u,
                         sticker: c,
                     }),

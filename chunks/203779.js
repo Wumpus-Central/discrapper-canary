@@ -1,4 +1,4 @@
-n.d(t, { J: () => E });
+n.d(t, { J: () => S });
 var l = n(459016),
     i = n(392054),
     r = n(284009),
@@ -155,8 +155,8 @@ function g(e, t, n, l, i) {
 function x(e) {
     return e.toLocaleString(m.intl.currentLocale, { useGrouping: !1 });
 }
-var S = n(73510);
-function E(e) {
+var E = n(73510);
+function S(e) {
     let { option: t, content: n, guildId: r, channelId: s, allowEmptyValues: a, commandOrigin: o = i.iw.CHAT } = e,
         u = null != n ? (0, l.getString)({ content: n }, "content").trim() : "",
         c = t.required;
@@ -166,8 +166,8 @@ function E(e) {
             ? { success: !0 }
             : c
               ? { success: !1, error: m.intl.string(m.t.JZJQL2) }
-              : { success: !1, error: (0, S.tE)(t) };
+              : { success: !1, error: (0, E.tE)(t) };
     let d = n.length > 1 ? { type: "text", text: u } : n[0],
         h = p[t.type](d, t, s, r, o);
-    return (h.success || null != h.error || (h.error = (0, S.tE)(t)), h);
+    return (h.success || null != h.error || (h.error = (0, E.tE)(t)), h);
 }

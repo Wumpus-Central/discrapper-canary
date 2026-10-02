@@ -14,8 +14,8 @@ var l = n(477900),
     f = n(628284),
     g = n(775602),
     x = n(47167),
-    S = n(713654),
-    E = n(418842),
+    E = n(713654),
+    S = n(418842),
     y = n(734057),
     C = n(696451),
     A = n(71393),
@@ -48,7 +48,7 @@ function O(e) {
     let { channelId: t, emojiId: n, emojiName: i } = e,
         r = (0, o.bG)([y.A], () => y.A.getChannel(t));
     if (null == r) return null;
-    let s = (0, S.gU)(r) ?? c.N;
+    let s = (0, E.gU)(r) ?? c.N;
     return (0, l.jsx)(T.A, {
         emojiId: n,
         emojiName: i,
@@ -59,11 +59,11 @@ function O(e) {
 function L(e) {
     let { guildId: t, channel: n, className: r } = e,
         { channelAction: c, completed: x } = (0, v.j4)(t, n),
-        S = (0, v.Lr)(t, c?.channelId),
+        E = (0, v.Lr)(t, c?.channelId),
         y = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
         C = c?.actionType === I.NewMemberActionTypes.VIEW,
         A = (0, d.r)(h.A.colors.WHITE),
-        N = R[(0, E.C)()],
+        N = R[(0, S.C)()],
         [T, j] = i.useState(!1),
         [L] = i.useState(new a.A.Value(0)),
         [P] = i.useState(new a.A.Value(0));
@@ -78,14 +78,14 @@ function L(e) {
             x && T && a.A.timing(P, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
         }, [x, P, T, y]));
     let M = i.useCallback(() => {
-        null != S && (0, b.qo)(t, S.channelId);
-    }, [t, S]);
+        null != E && (0, b.qo)(t, E.channelId);
+    }, [t, E]);
     return null == c || (C && !T)
         ? null
         : (0, l.jsx)("div", {
               className: s()(_.kL, r),
               children:
-                  T && null != S
+                  T && null != E
                       ? (0, l.jsx)(a.A.div, {
                             style: { marginBottom: P.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
                             children: (0, l.jsxs)(m.D, {
@@ -93,9 +93,9 @@ function L(e) {
                                 onClick: M,
                                 children: [
                                     (0, l.jsx)(O, {
-                                        channelId: S.channelId,
-                                        emojiId: S.emoji?.id,
-                                        emojiName: S?.emoji?.name,
+                                        channelId: E.channelId,
+                                        emojiId: E.emoji?.id,
+                                        emojiName: E?.emoji?.name,
                                     }),
                                     (0, l.jsxs)("div", {
                                         className: _.Qq,
@@ -103,9 +103,9 @@ function L(e) {
                                             (0, l.jsx)(u.E, {
                                                 variant: "text-md/semibold",
                                                 color: "text-strong",
-                                                children: k.intl.format(k.t["/beONw"], { step: S.title }),
+                                                children: k.intl.format(k.t["/beONw"], { step: E.title }),
                                             }),
-                                            (0, l.jsx)(w, { action: S }),
+                                            (0, l.jsx)(w, { action: E }),
                                         ],
                                     }),
                                     (0, l.jsx)("div", {

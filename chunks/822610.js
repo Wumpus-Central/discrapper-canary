@@ -14,8 +14,8 @@ var l = n(477900),
     f = n(861382),
     g = n(522602),
     x = n(234320),
-    S = n(215497),
-    E = n(834730),
+    E = n(215497),
+    S = n(834730),
     y = n(939249),
     C = n(780777),
     A = n(424170),
@@ -82,8 +82,8 @@ function k(e) {
               draftType: I.C.SlashCommand,
               label: (0, l.jsxs)(i.Fragment, {
                   children: [
-                      (0, l.jsxs)(E.E, { tag: "span", variant: "text-md/normal", children: [n.displayName, ": "] }),
-                      (0, l.jsx)(E.E, {
+                      (0, l.jsxs)(S.E, { tag: "span", variant: "text-md/normal", children: [n.displayName, ": "] }),
+                      (0, l.jsx)(S.E, {
                           tag: "span",
                           variant: "text-md/normal",
                           color: "text-brand",
@@ -93,7 +93,7 @@ function k(e) {
               }),
               canEdit: !1,
           })
-        : (0, l.jsxs)(S.A, {
+        : (0, l.jsxs)(E.A, {
               id: n.name,
               channelId: t,
               keyboardModeEnabled: r,
@@ -112,7 +112,7 @@ function k(e) {
                           className: j.wi,
                           children: [
                               (0, l.jsx)("img", { src: "/assets/27c3681a77f271c6.svg", className: j.H9, alt: "" }),
-                              (0, l.jsx)(E.E, {
+                              (0, l.jsx)(S.E, {
                                   className: j.L,
                                   variant: "text-sm/normal",
                                   children:
@@ -141,7 +141,7 @@ var _ = n(652215),
     w = n(969490);
 let O = [];
 function L(e) {
-    let { channelId: t, type: n, ignoreUploadId: r, smallAttachments: E = !1 } = e,
+    let { channelId: t, type: n, ignoreUploadId: r, smallAttachments: S = !1 } = e,
         y = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled),
         C = (0, p.A)("attachments", o.Gl.HORIZONTAL),
         A = (0, u.bG)([g.A], () => g.A.getUploads(t, n.drafts.type)),
@@ -211,7 +211,7 @@ function L(e) {
                                             upload: e,
                                             keyboardModeEnabled: y,
                                             clip: e.clip,
-                                            size: E ? S.L.SMALL : S.L.MEDIUM,
+                                            size: S ? E.L.SMALL : E.L.MEDIUM,
                                         },
                                         e.id,
                                     ),
