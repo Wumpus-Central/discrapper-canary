@@ -22,8 +22,8 @@
     wF: () => L,
     wU: () => h,
     wV: () => I,
-    x5: () => m,
-    yr: () => g,
+    x5: () => g,
+    yr: () => m,
 }),
     n(938796));
 let i = 25,
@@ -73,11 +73,11 @@ function I(e, t) {
 let f = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
     p = 10,
     T = 36e5;
-function g(e) {
+function m(e) {
     return f.has(e) ? 5242880 : 0x3200000;
 }
-function m(e, t) {
-    return e <= g(t);
+function g(e, t) {
+    return e <= m(t);
 }
 function S(e) {
     return `${Math.round(e / 1048576)} MB`;
@@ -102,6 +102,6 @@ let N = ["simple", "balanced", "complex"],
     y = { tier: "balanced", provider: "openai" },
     D = {
         simple: { model: "gpt-6-luna", thinking: "high" },
-        balanced: { model: "gpt-6.1-sol", thinking: "high" },
+        balanced: { model: "claude-sonnet-5-5", thinking: "high" },
         complex: { model: "claude-opus-5-5", thinking: "high" },
     };
