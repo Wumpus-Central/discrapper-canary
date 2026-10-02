@@ -5086,6 +5086,22 @@
     }
   },
   {
+    "name": "2026-09-invite-accept-age-group-errors",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "name": "2026-09-invite-expiring-soon",
     "kind": "user",
     "defaultConfig": {
