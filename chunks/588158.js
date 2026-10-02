@@ -21,7 +21,7 @@ var l,
     I = n(554146),
     j = n(826673),
     y = n(501419),
-    v = n(597643),
+    v = n(595528),
     _ = n(31717),
     b = n(49999);
 let N = I.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;

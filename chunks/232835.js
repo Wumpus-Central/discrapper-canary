@@ -371,7 +371,7 @@ let Q = new q(l.h, {
         MESSAGE_CREATE: function (e) {
             let { channelId: t, message: i, optimistic: r, isPushNotification: a } = e,
                 s = d.A.getOrCreate(t),
-                l = n(597643).A.isConnected();
+                l = n(595528).A.isConnected();
             return a
                 ? (0, g.K)()
                     ? (H(t, i, l), !1)

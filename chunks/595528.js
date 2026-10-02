@@ -845,9 +845,9 @@ function eZ(e) {
                                   eW({
                                       type: "AD_PERSONALIZATION_TOGGLES_RESTRICTED",
                                       disabled: e.ad_personalization_toggles_disabled,
-                                  }),
-                              V.update(),
-                              H.update());
+                                  }));
+                          let d = void 0 ?? null;
+                          (null != d && eW(d), V.update(), H.update());
                       });
                   });
         },

@@ -42,7 +42,7 @@ var c = n(626584),
     A = n(317525),
     h = n(71393),
     I = n(935208),
-    f = n(597643);
+    f = n(595528);
 let p = new c.A("EntityVersionsManager");
 class T extends l.A {
     actions = { GUILD_CREATE: S, DELETED_ENTITY_IDS: g };

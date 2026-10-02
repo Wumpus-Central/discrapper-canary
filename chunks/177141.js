@@ -19,10 +19,10 @@ var i = n(536637),
     S = n(161518),
     C = n(736056),
     D = n(952818),
-    P = n(597643),
-    p = n(652896),
-    M = n(585510),
-    m = n(610136),
+    P = n(595528),
+    M = n(652896),
+    m = n(585510),
+    p = n(610136),
     f = n(229527),
     U = n(93474),
     g = n(164956),
@@ -152,9 +152,9 @@ let eC = new eS(c.h, {
 });
 var eD = n(696451),
     eP = n(317525),
-    ep = n(71393),
-    eM = n(25578),
-    em = n(803224),
+    eM = n(71393),
+    em = n(25578),
+    ep = n(803224),
     ef = n(576705),
     eU = n(362790),
     eg = n(763827),
@@ -367,7 +367,7 @@ let tt = [
 let tn = {
     [eT.kqX.GIFTING_PROMOTION_REMINDER]: { predicate: () => (0, V.MD)() },
     [eT.kqX.GUILD_RAID_NOTIFICATION]: {
-        predicate: () => (0, M.dj)().show && !te(eT.kqX.GUILD_RAID_NOTIFICATION),
+        predicate: () => (0, m.dj)().show && !te(eT.kqX.GUILD_RAID_NOTIFICATION),
         metadata: () => ({ dismissUntil: l()().add(3, "hours").toDate() }),
     },
     [eT.kqX.AUTOMOD_QUARANTINED_USER_PROFILE]: {
@@ -415,9 +415,9 @@ let tn = {
     [eT.kqX.NO_INPUT_DEVICES_DETECTED]: { predicate: () => S.A.hasActiveErrorOfType(O.iy.NO_INPUT_DEVICES) },
     [eT.kqX.VIDEO_BACKGROUND_UNAVAILABLE]: { predicate: () => eg.A.isConnected() && ee.A.videoBackgroundUnavailable },
     [eT.kqX.HARDWARE_MUTE]: {
-        predicate: () => eg.A.isConnected() && eM.Ay.isHardwareMute() && eM.Ay.isHardwareMuteNoticeEnabled(),
+        predicate: () => eg.A.isConnected() && em.Ay.isHardwareMute() && em.Ay.isHardwareMuteNoticeEnabled(),
         metadata: () => {
-            let e = eM.Ay.getInputDeviceId(),
+            let e = em.Ay.getInputDeviceId(),
                 t = el.A.getVendor(e),
                 n = el.A.getModel(e);
             if (null != t && null != n) return { vendor: t, model: n };
@@ -426,8 +426,8 @@ let tn = {
     [eT.kqX.PTT_NO_KEYBIND_WARNING]: {
         predicate: () =>
             !!eg.A.isConnected() &&
-            eM.Ay.getMode() === eT.TBI.PUSH_TO_TALK &&
-            !(eM.Ay.getSettings().modeOptions.shortcut.length > 0),
+            em.Ay.getMode() === eT.TBI.PUSH_TO_TALK &&
+            !(em.Ay.getSettings().modeOptions.shortcut.length > 0),
     },
     [eT.kqX.DISPATCH_ERROR]: {
         predicate: () => null != eV.A.getLastError(),
@@ -450,7 +450,7 @@ let tn = {
             return (
                 (null != t &&
                     null != n &&
-                    !ep.A.getGuild(t)?.features.has(eT.GuildFeatures.GUILD_ONBOARDING) &&
+                    !eM.A.getGuild(t)?.features.has(eT.GuildFeatures.GUILD_ONBOARDING) &&
                     eD.Ay.getMember(t, n.id)?.isPending) ??
                 !1
             );
@@ -466,7 +466,7 @@ let tn = {
             return (
                 null != t &&
                 ej.A.hasVideo(t) &&
-                !eM.Ay.supports(ez.O5.VIDEO) &&
+                !em.Ay.supports(ez.O5.VIDEO) &&
                 k.k.getConfig({ location: "NoticeStore.VIDEO_UNSUPPORTED_BROWSER" }).videoEnabled &&
                 !te(eT.kqX.VIDEO_UNSUPPORTED_BROWSER)
             );
@@ -711,7 +711,7 @@ let tn = {
     [eT.kqX.AUTO_MODERATION_MENTION_RAID_DETECTION]: {
         predicate: (e) => {
             let { selectedGuildId: t } = e,
-                n = null != t ? ep.A.getGuild(t) : null;
+                n = null != t ? eM.A.getGuild(t) : null;
             return (
                 (null != t &&
                     null != U.A.getMentionRaidDetected(t) &&
@@ -734,13 +734,13 @@ let tn = {
         predicate: () => {
             let e = en.A.getCurrentUserActiveStream();
             if (null == e) return !1;
-            let t = (0, p._z)(e),
+            let t = (0, M._z)(e),
                 n = W.A.getStreamHeartbeatFailure(t);
             return null != n && Date.now() - n.firstFailedAt >= eK.tZ;
         },
         metadata: () => {
             let e = en.A.getCurrentUserActiveStream();
-            return { streamKey: null != e ? (0, p._z)(e) : null };
+            return { streamKey: null != e ? (0, M._z)(e) : null };
         },
     },
     [eT.kqX.CHECKOUT_RECOVERY_NAGBAR]: {
@@ -786,7 +786,7 @@ let tn = {
                 te(eT.kqX.SYSTEM_SERVICE_WARNING) ||
                 !(0, Z.yA)(D.Ay) ||
                 null == t ||
-                eM.Ay.getMode() !== eT.TBI.PUSH_TO_TALK
+                em.Ay.getMode() !== eT.TBI.PUSH_TO_TALK
             )
                 return !1;
             let n = D.Ay.getVisibleGame();
@@ -796,7 +796,7 @@ let tn = {
     [eT.kqX.E2EE_UPDATE_REQUIRED]: {
         predicate: () => {
             if (te(eT.kqX.E2EE_UPDATE_REQUIRED) || !eg.A.isConnected()) return !1;
-            let e = eM.Ay.getMediaEngine();
+            let e = em.Ay.getMediaEngine();
             return 1 !== (e.getSupportedSecureFramesProtocolVersion?.() ?? 0);
         },
         metadata: () => ({ dismissUntil: l()().add(5, "days").toDate() }),
@@ -808,7 +808,7 @@ let tn = {
                 _.A?.process.platform !== "win32" ||
                 te(eT.kqX.WINDOWS_MEDIA_PACK_REQUIRED) ||
                 eF.Ay.getEnableHardwareAcceleration()
-            ) && !1 === eM.Ay.isH264MfDecodeAvailable(),
+            ) && !1 === em.Ay.isH264MfDecodeAvailable(),
     },
     [eT.kqX.RIOT_MIGRATION]: {
         predicate: () => {
@@ -896,7 +896,7 @@ class tr extends s.Ay.Store {
     static displayName = "NoticeStore";
     initialize() {
         (this.syncWith(
-            [S.A, ex.Ay, eU.A, eC, ek.A, w.A, eX.A, y.default, es.A, J.A, m.A, W.A, en.A, D.Ay, et.A, S.A, I.A, L.A],
+            [S.A, ex.Ay, eU.A, eC, ek.A, w.A, eX.A, y.default, es.A, J.A, p.A, W.A, en.A, D.Ay, et.A, S.A, I.A, L.A],
             ti,
         ),
             this.waitFor(
@@ -917,15 +917,15 @@ class tr extends s.Ay.Store {
                 C.A,
                 P.A,
                 U.A,
-                m.A,
+                p.A,
                 eD.Ay,
                 I.A,
                 eP.A,
-                ep.A,
+                eM.A,
                 g.A,
                 h.A,
-                eM.Ay,
-                em.A,
+                em.Ay,
+                ep.A,
                 L.A,
                 eq.A,
                 ef.A,
