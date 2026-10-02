@@ -1,4 +1,4 @@
-(n.d(t, { An: () => m, N8: () => T, RP: () => p, _g: () => g, iC: () => h, jO: () => I, vA: () => f }),
+(n.d(t, { An: () => g, N8: () => T, RP: () => p, _g: () => m, iC: () => h, jO: () => I, vA: () => f }),
     n(323874),
     n(14289),
     n(35956));
@@ -225,7 +225,7 @@ function p(e) {
 function T(e) {
     return e.some((e) => null === e.tags.guild_connections);
 }
-function g(e) {
+function m(e) {
     let { guildMember: t, guild: n, sortedGuildRoles: i, channel: r, onlyChannelConnectionRoles: a = !1 } = e;
     if (null == t || (null == n && null != r && (n = c.A.getGuild(r.getGuildId())), null == n)) return null;
     let { id: s } = n;
@@ -234,7 +234,7 @@ function g(e) {
         _ = l().intersection(u, (0, o.A)(r));
     return _.length > 0 ? (_[0] ?? null) : a ? null : (u[0] ?? null);
 }
-function m(e, t) {
+function g(e, t) {
     if (null == e || "" === e) return null;
     let n = new Date(e);
     return !(n instanceof Date) || isNaN(n.getTime())

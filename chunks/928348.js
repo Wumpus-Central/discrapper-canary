@@ -4,8 +4,8 @@ var r = n(582128),
     u = n(882035),
     a = n(121894),
     l = n(913122),
-    E = n(995786),
-    o = n(904813),
+    o = n(995786),
+    E = n(904813),
     s = n(243277),
     A = n(652215);
 let S = {},
@@ -16,13 +16,13 @@ let S = {},
         updateRule: (n) => {
             let { guildId: r, id: i, triggerType: u } = n,
                 { rules: l } = t(),
-                E = l[r] ?? {},
-                s = E[u] ?? [],
+                o = l[r] ?? {},
+                s = o[u] ?? [],
                 A = s.some((e) => e.id === i),
-                S = s.filter((e) => !(0, o.R)(e.id) || e.triggerType !== u),
+                S = s.filter((e) => !(0, E.R)(e.id) || e.triggerType !== u),
                 c = A ? S.map((e) => (e.id === i ? n : e)) : [...S, n];
             (0, a.r)(() => {
-                e({ rules: { ...l, [r]: { ...E, [u]: c } }, error: null });
+                e({ rules: { ...l, [r]: { ...o, [u]: c } }, error: null });
             });
         },
         removeRule: (n, r) => {
@@ -45,7 +45,7 @@ let S = {},
                 try {
                     let i,
                         u =
-                            ((r = await (0, E.H0)(n)),
+                            ((r = await (0, o.H0)(n)),
                             (i = {
                                 [s.uh.KEYWORD]: [],
                                 [s.uh.ML_SPAM]: [],

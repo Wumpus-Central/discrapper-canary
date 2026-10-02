@@ -12,7 +12,7 @@ function r(e) {
     EH: () => eB,
     FH: () => Q,
     FP: () => ef,
-    Fs: () => em,
+    Fs: () => eg,
     GQ: () => tE,
     GZ: () => x,
     Gu: () => tP,
@@ -38,7 +38,7 @@ function r(e) {
     Py: () => tG,
     QH: () => eu,
     QR: () => tb,
-    Qg: () => tg,
+    Qg: () => tm,
     Qn: () => tV,
     RG: () => ex,
     RK: () => eI,
@@ -72,12 +72,12 @@ function r(e) {
     cy: () => et,
     dS: () => eJ,
     dz: () => eh,
-    eF: () => tm,
+    eF: () => tg,
     eI: () => eL,
     eT: () => w,
     eW: () => eR,
     fb: () => td,
-    gG: () => eg,
+    gG: () => em,
     gM: () => z,
     gR: () => e_,
     hI: () => eF,
@@ -100,7 +100,7 @@ function r(e) {
     qN: () => tF,
     qv: () => tM,
     rO: () => tO,
-    rf: () => g,
+    rf: () => m,
     rk: () => tt,
     rl: () => tR,
     s5: () => eA,
@@ -235,10 +235,10 @@ function T(e, t, n, r) {
         };
     return ((s.original = a), p.register(s, a, a), s);
 }
-function g(e, t, n, r, a) {
+function m(e, t, n, r, a) {
     i.installLogCallback(e, t, n, r, a);
 }
-function m(e) {
+function g(e) {
     let t = i.__wbindgen_export_4.get(e);
     return (i.__externref_table_dealloc(e), t);
 }
@@ -296,14 +296,14 @@ class P {
             n = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
             r = a,
             s = i.blockeddomainsstore_isBlockedDomain(n, r);
-        if (s[3]) throw m(s[2]);
+        if (s[3]) throw g(s[2]);
         return (0 !== s[0] && ((t = A(s[0], s[1]).slice()), i.__wbindgen_free(s[0], +s[1], 1)), t);
     }
     static startFetchingBlockedDomains(e) {
         let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
             n = a,
             r = i.blockeddomainsstore_startFetchingBlockedDomains(t, n);
-        if (r[1]) throw m(r[0]);
+        if (r[1]) throw g(r[0]);
     }
 }
 let U =
@@ -323,18 +323,18 @@ class w {
         let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
             n = a,
             r = i.experimentcacher_getConfig(t, n);
-        if (r[2]) throw m(r[1]);
+        if (r[2]) throw g(r[1]);
         return 0 === r[0] ? void 0 : Y.__wrap(r[0]);
     }
     static clearCache() {
         let e = i.experimentcacher_clearCache();
-        if (e[1]) throw m(e[0]);
+        if (e[1]) throw g(e[0]);
     }
     static flushToCache(e) {
         let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
             n = a,
             r = i.experimentcacher_flushToCache(t, n);
-        if (r[1]) throw m(r[0]);
+        if (r[1]) throw g(r[0]);
     }
 }
 let G =
@@ -352,8 +352,8 @@ class x {
     }
     connectStore(e) {
         let t = i.fluxapi_connectStore(this.__wbg_ptr, e);
-        if (t[2]) throw m(t[1]);
-        return m(t[0]);
+        if (t[2]) throw g(t[1]);
+        return g(t[0]);
     }
     dispatchAction(e, t) {
         let n = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
@@ -587,7 +587,7 @@ function ep() {
 function eT(e) {
     return e.headers;
 }
-function eg(e) {
+function em(e) {
     let t;
     try {
         t = e instanceof ArrayBuffer;
@@ -596,7 +596,7 @@ function eg(e) {
     }
     return t;
 }
-function em(e) {
+function eg(e) {
     let t;
     try {
         t = e instanceof Cache;
@@ -853,10 +853,10 @@ function tp(e, t) {
 function tT(e) {
     return e;
 }
-function tg(e) {
+function tm(e) {
     return BigInt.asUintN(64, e);
 }
-function tm(e) {
+function tg(e) {
     return "boolean" == typeof e ? +!!e : 2;
 }
 function tS(e) {

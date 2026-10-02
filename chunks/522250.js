@@ -11,8 +11,8 @@ l.d(t, {
 });
 var n = l(506774),
     a = l(930932),
-    r = l(174459),
-    i = l(783791),
+    i = l(174459),
+    r = l(783791),
     s = l(972786),
     u = l(652215),
     o = l(670455),
@@ -35,7 +35,7 @@ function v(e) {
     t.includes(e) || n.w.set(f, [...t, e]);
 }
 function b(e) {
-    return i.Ay.getMessages(e).filter((e) => "assistant" === e.role && "side_reply" !== e.kind && (0, i.BL)(e)).length;
+    return r.Ay.getMessages(e).filter((e) => "assistant" === e.role && "side_reply" !== e.kind && (0, r.BL)(e)).length;
 }
 function j() {
     return {
@@ -56,16 +56,16 @@ function j() {
     };
 }
 function y() {
-    r.default.track(u.HAw.OPEN_MODAL, { type: "vibegrations", source: "Feedback Modal" });
+    i.default.track(u.HAw.OPEN_MODAL, { type: "vibegrations", source: "Feedback Modal" });
 }
 function k(e, t, l, n) {
-    let { rating: i, reason: d, feedback: c, dontShowAgain: f } = l;
+    let { rating: r, reason: d, feedback: c, dontShowAgain: f } = l;
     (!0 === f && (0, a.n3)({ feedbackType: o.MW.VIBEGRATIONS, location: n }),
-        null != i &&
-            r.default.track(u.HAw.VIBEGRATIONS_FEEDBACK, {
+        null != r &&
+            i.default.track(u.HAw.VIBEGRATIONS_FEEDBACK, {
                 project_id: e,
                 application_id: s.Ay.getProject(e)?.application_id ?? null,
-                rating: i,
+                rating: r,
                 reason: d?.value ?? null,
                 feedback: c,
                 prompt_count: t,

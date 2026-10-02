@@ -23,8 +23,8 @@ function I(e) {
             icon: f,
             name: p,
             ariaLabel: T,
-            className: g,
-            style: m,
+            className: m,
+            style: g,
             to: S,
             onClick: N,
             selected: C = !1,
@@ -48,8 +48,8 @@ function I(e) {
     return (0, i.jsxs)(o.D, {
         ...O,
         onClick: L,
-        className: s()(g, E.iE, { [E.wH]: C }),
-        style: { ...m, fontSize: n },
+        className: s()(m, E.iE, { [E.wH]: C }),
+        style: { ...g, fontSize: n },
         focusProps: { enabled: !1 },
         children: [
             (0, i.jsx)(d.A, { children: null != T && "" !== T ? T : (p ?? "") }),

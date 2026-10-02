@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(158045),
     p = n(447404),
     T = n(204651),
-    g = n(806931),
-    m = n(202541),
+    m = n(806931),
+    g = n(202541),
     S = n(375708),
     N = n(138302);
 function C(e) {
@@ -37,7 +37,7 @@ function R(e) {
     let { hideBadges: t = !1, stream: n, location: s, ...u } = e,
         I = r.useRef(null),
         { analyticsLocations: N, parentAnalyticsLocation: R } = (0, o.Ay)(),
-        L = (0, a.bG)([h.default], () => f.Ay.isPremium(h.default.getCurrentUser(), m.PremiumTypes.TIER_1)),
+        L = (0, a.bG)([h.default], () => f.Ay.isPremium(h.default.getCurrentUser(), g.PremiumTypes.TIER_1)),
         y = (0, a.bG)([A.A], () => A.A.getChannel(n?.channelId)),
         D = r.useMemo(() => (null != n ? [n] : []), [n]),
         v = r.useCallback(() => {
@@ -60,7 +60,7 @@ function R(e) {
                         onClose: t,
                         showReportOption: !0,
                         handleGoLive: v,
-                        onInteraction: (0, c.s)("ManageStreamsButton", R ?? s, { entrypoint: g.GK.OTHER_BUTTON }),
+                        onInteraction: (0, c.s)("ManageStreamsButton", R ?? s, { entrypoint: m.GK.OTHER_BUTTON }),
                     }),
                 });
             },

@@ -38,9 +38,9 @@ var l = n(477900),
     V = n(544441),
     w = n(146779),
     k = n(540185),
-    B = n(569926),
+    H = n(569926),
     W = n(289173),
-    H = n(735321),
+    B = n(735321),
     z = n(999291),
     X = n(993401),
     $ = n(280450),
@@ -51,7 +51,7 @@ function J(t) {
         r = (0, b.bG)([$.default], () => $.default.getId()),
         s = (0, z.Ay)(r, null),
         o = e.getCanonicalGameId(),
-        { data: c } = (0, B.I)(o),
+        { data: c } = (0, H.I)(o),
         u = i.useMemo(
             () =>
                 !(
@@ -61,7 +61,7 @@ function J(t) {
                         (t) =>
                             t instanceof W.Yy && t.type === k.x.CURRENT_GAMES && t.games?.some((t) => t.gameId === o),
                     )
-                ) && (0, H.XX)(c),
+                ) && (0, B.XX)(c),
             [o, s?.widgets, c],
         ),
         d = i.useCallback(
@@ -69,7 +69,7 @@ function J(t) {
                 null != o &&
                     (t.stopPropagation(),
                     n?.({ action: "PRESS_ADD_TO_CURRENT_GAMES_WIDGET" }),
-                    (0, H.ew)({ widgetType: k.x.CURRENT_GAMES, game: { gameId: o }, ignoreMaxGames: !0 }),
+                    (0, B.ew)({ widgetType: k.x.CURRENT_GAMES, game: { gameId: o }, ignoreMaxGames: !0 }),
                     (0, P.openUserProfileModal)({
                         userId: r,
                         tabSection: F.RP.WIDGETS,
@@ -373,9 +373,9 @@ var tY = n(282197),
     tV = n(624951),
     tw = n(584904),
     tk = n(351638),
-    tB = n(531648),
+    tH = n(531648),
     tW = n(910607),
-    tH = n(753713),
+    tB = n(753713),
     tz = n(269587),
     tX = n(409626),
     t$ = n(692969),
@@ -397,9 +397,9 @@ function tJ(t) {
         V = (0, h.GV)(),
         { analyticsLocations: w } = (0, m.Ay)(g.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: k } = (0, R.E)(),
-        B = (0, E.A)({ activity: i, user: e }),
-        W = (0, v.A)({ display: "live", user: e, activity: i, entry: B, analyticsLocations: w }),
-        H = (0, y.A)({ userId: e.id, onAction: W }),
+        H = (0, E.A)({ activity: i, user: e }),
+        W = (0, v.A)({ display: "live", user: e, activity: i, entry: H, analyticsLocations: w }),
+        B = (0, y.A)({ userId: e.id, onAction: W }),
         z = (0, x.Ay)(M),
         X = (0, O.A)(i),
         $ = null != X.text && "" !== X.text,
@@ -427,7 +427,7 @@ function tJ(t) {
             currentUser: n,
             activity: i,
             application: a,
-            entry: B,
+            entry: H,
             onClose: D,
         });
     function K() {
@@ -436,23 +436,23 @@ function tJ(t) {
                   className: tr.FH,
                   children: [
                       (0, l.jsx)(o.H, { size: "xxs", color: c.A.colors.TEXT_DEFAULT, className: tr.Ow }),
-                      (0, l.jsx)(tB.Q, { variant: "heading-sm/semibold", text: z, id: Y }),
+                      (0, l.jsx)(tH.Q, { variant: "heading-sm/semibold", text: z, id: Y }),
                   ],
               })
             : (0, f.A)(i) || (0, S.Cy)(i)
-              ? (0, l.jsx)(tB.Q, { variant: "heading-sm/semibold", text: i.name, id: Y })
+              ? (0, l.jsx)(tH.Q, { variant: "heading-sm/semibold", text: i.name, id: Y })
               : null != i.details
                 ? (0, l.jsx)(I.O, {
                       href: i.details_url,
-                      children: (0, l.jsx)(tB.Q, { variant: "heading-sm/semibold", text: i.details, id: Y }),
+                      children: (0, l.jsx)(tH.Q, { variant: "heading-sm/semibold", text: i.details, id: Y }),
                   })
-                : (0, l.jsx)(tB.Q, { variant: "heading-sm/semibold", text: i.name, id: Y });
+                : (0, l.jsx)(tH.Q, { variant: "heading-sm/semibold", text: i.name, id: Y });
     }
     function tt() {
         return i.type === tE.$pd.HANG_STATUS
             ? null
             : (0, p.A)(i) && null != b
-              ? (0, l.jsx)(tB.A, {
+              ? (0, l.jsx)(tH.A, {
                     variant: "text-xs/normal",
                     text: Q.intl.formatToPlainString(Q.t["hq/Qze"], { guildName: b.name }),
                     onClick: () => {
@@ -462,13 +462,13 @@ function tJ(t) {
               : (0, f.A)(i)
                 ? (0, l.jsx)(I.O, {
                       href: i.details_url,
-                      children: (0, l.jsx)(tB.A, { variant: "text-xs/normal", text: i.details }),
+                      children: (0, l.jsx)(tH.A, { variant: "text-xs/normal", text: i.details }),
                   })
                 : (0, S.Cy)(i)
-                  ? (0, l.jsx)(tB.A, { variant: "text-xs/normal", text: i?.assets?.small_text })
+                  ? (0, l.jsx)(tH.A, { variant: "text-xs/normal", text: i?.assets?.small_text })
                   : (0, l.jsx)(I.O, {
                         href: i.state_url,
-                        children: (0, l.jsx)(tB.A, { variant: "text-xs/normal", text: i.state }),
+                        children: (0, l.jsx)(tH.A, { variant: "text-xs/normal", text: i.state }),
                     });
     }
     function te() {
@@ -480,9 +480,9 @@ function tJ(t) {
                       children: [
                           (0, l.jsx)(I.O, {
                               href: i.state_url,
-                              children: (0, l.jsx)(tB.A, { variant: "text-xs/normal", text: i.state }),
+                              children: (0, l.jsx)(tH.A, { variant: "text-xs/normal", text: i.state }),
                           }),
-                          (0, l.jsx)(tB.A, {
+                          (0, l.jsx)(tH.A, {
                               variant: "text-xs/normal",
                               text: Q.intl.formatToPlainString(Q.t["u//9By"], {
                                   count: "0",
@@ -497,9 +497,9 @@ function tJ(t) {
                         children: [
                             (0, l.jsx)(I.O, {
                                 href: i.state_url,
-                                children: (0, l.jsx)(tB.A, { variant: "text-xs/normal", text: i.state }),
+                                children: (0, l.jsx)(tH.A, { variant: "text-xs/normal", text: i.state }),
                             }),
-                            (0, l.jsx)(tB.A, {
+                            (0, l.jsx)(tH.A, {
                                 variant: "text-xs/normal",
                                 text:
                                     0 === i.party.size[1]
@@ -514,7 +514,7 @@ function tJ(t) {
                   : null == i.party
                     ? (0, l.jsx)(I.O, {
                           href: i.state_url,
-                          children: (0, l.jsx)(tB.A, { variant: "text-xs/normal", text: i.state }),
+                          children: (0, l.jsx)(tH.A, { variant: "text-xs/normal", text: i.state }),
                       })
                     : null;
         if ((0, S.Cy)(i) && i.party?.size != null && i.party?.size.length >= 2) {
@@ -522,12 +522,12 @@ function tJ(t) {
                 numSpeakers: i.party?.size[0],
                 numListeners: i.party?.size[1] - i.party?.size[0],
             });
-            return (0, l.jsx)(tB.A, { variant: "text-xs/normal", text: t });
+            return (0, l.jsx)(tH.A, { variant: "text-xs/normal", text: t });
         }
         return i.assets?.large_text != null
             ? (0, l.jsx)(I.O, {
                   href: i.assets?.large_url,
-                  children: (0, l.jsx)(tB.A, { text: i.assets?.large_text, variant: "text-xs/normal" }),
+                  children: (0, l.jsx)(tH.A, { text: i.assets?.large_text, variant: "text-xs/normal" }),
               })
             : null;
     }
@@ -544,7 +544,7 @@ function tJ(t) {
     return (0, l.jsx)(m.f5, {
         value: w,
         children: (0, l.jsxs)(tw.A, {
-            ref: H,
+            ref: B,
             className: r()(tr.Nr, U),
             onAction: W,
             onClose: D,
@@ -557,7 +557,7 @@ function tJ(t) {
                         display: "live",
                         user: e,
                         activity: i,
-                        entry: B,
+                        entry: H,
                         onClose: D,
                         appContext: G,
                     }),
@@ -611,7 +611,7 @@ function tJ(t) {
                                                 (function () {
                                                     if (!(0, j.A)(i)) return null;
                                                     let { start: t, end: e } = i.timestamps;
-                                                    return (0, l.jsx)(tH.A, { start: t, end: e });
+                                                    return (0, l.jsx)(tB.A, { start: t, end: e });
                                                 })(),
                                                 k === ta.d.MODAL_V2 && tn(),
                                             ],

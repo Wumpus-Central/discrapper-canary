@@ -66,26 +66,26 @@ function T() {
         A ? (0, c.openRestrictedHoursModal)() : (0, c.k)(),
         p());
 }
-function g() {
+function m() {
     ((A = !1),
         (f = null),
         i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: !1 }),
         (0, c.k)(),
         null != I && (clearTimeout(I), (I = null)));
 }
-function m() {
+function g() {
     (T(), p());
 }
 function S() {
     p();
 }
 class N extends r.A {
-    stores = new Map().set(s.default, m).set(d.A, m);
+    stores = new Map().set(s.default, g).set(d.A, g);
     actions = {
-        POST_CONNECTION_OPEN: m,
-        CURRENT_USER_UPDATE: m,
+        POST_CONNECTION_OPEN: g,
+        CURRENT_USER_UPDATE: g,
         NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: S,
-        LOGOUT: g,
+        LOGOUT: m,
     };
     _initialize() {
         ((A = E()),

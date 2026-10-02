@@ -1,7 +1,7 @@
-l.d(t, { Qg: () => u, Qs: () => i, Xm: () => r, yZ: () => s });
+l.d(t, { Qg: () => u, Qs: () => r, Xm: () => i, yZ: () => s });
 var n = l(753514);
 let a = { frame: (e) => e.hasFrame, widget: (e) => e.hasProfileWidget, bot: (e) => !0 === e.hasBotDm };
-function r(e) {
+function i(e) {
     let t = n.uZ.filter((t) => a[t](e));
     return {
         modes: t,
@@ -13,7 +13,7 @@ function r(e) {
         })(e),
     };
 }
-function i(e, t) {
+function r(e, t) {
     return null != e && t.modes.includes(e) ? e : t.defaultMode;
 }
 function s(e) {

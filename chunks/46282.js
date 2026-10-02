@@ -8,8 +8,8 @@ var n = i(477900),
     u = i(192308),
     c = i(258585),
     d = i(279250),
-    f = i(880144),
-    A = i(560595),
+    A = i(880144),
+    f = i(560595),
     p = i(929921),
     y = i(734057),
     m = i(71393),
@@ -31,14 +31,14 @@ function h(t) {
         } = t,
         u = (0, a.bG)([I.Ay], () => I.Ay.getVoiceChannelId()),
         c = (0, a.bG)([y.A], () => y.A.getChannel(u), [u]),
-        A = (0, a.bG)([_.default], () => _.default.getCurrentUser()),
-        p = (0, a.bG)([E.Ay], () => (0, f.A)(E.Ay)),
+        f = (0, a.bG)([_.default], () => _.default.getCurrentUser()),
+        p = (0, a.bG)([E.Ay], () => (0, A.A)(E.Ay)),
         N = (0, a.bG)([m.A, g.A], () => null != c && (0, d.vz)(c, m.A, g.A));
     return l.useCallback(async () => {
         await v({
             pid: e,
             voiceChannelId: u,
-            user: A,
+            user: f,
             canGoLive: p,
             canStream: N,
             analyticsLocation: i,
@@ -47,7 +47,7 @@ function h(t) {
             onOneClickGoLive: s,
             appContext: o,
         });
-    }, [e, u, A, p, N, i, n, r, s, o]);
+    }, [e, u, f, p, N, i, n, r, s, o]);
 }
 async function T(t) {
     let {
@@ -62,12 +62,12 @@ async function T(t) {
         o = y.A.getChannel(s),
         u = _.default.getCurrentUser(),
         c = null != o && (0, d.vz)(o, m.A, g.A),
-        A = (0, f.A)(E.Ay);
+        f = (0, A.A)(E.Ay);
     await v({
         pid: e,
         voiceChannelId: s,
         user: u,
-        canGoLive: A,
+        canGoLive: f,
         canStream: c,
         analyticsLocation: i,
         allowOneClickGoLive: n,
@@ -82,20 +82,20 @@ async function v(t) {
         voiceChannelId: l,
         user: a,
         canGoLive: d,
-        canStream: f,
+        canStream: A,
         allowOneClickGoLive: y,
         onBeforeShowModal: m,
         onOneClickGoLive: E,
         appContext: g,
     } = t;
-    if (d && f) {
+    if (d && A) {
         if (y && null !== l) {
             let t = p.A.getState().preset;
             if (t === S.jQ.PRESET_DOCUMENTS) {
                 let { allowAutoQuality: e } = (0, c.eO)({ location: "overlay _goLive" });
                 t = e ? S.jQ.PRESET_AUTO : S.jQ.PRESET_VIDEO;
             }
-            let [i] = await (0, A.A)(e, { preset: t });
+            let [i] = await (0, f.A)(e, { preset: t });
             if (i) return void E?.();
         }
         if (null == a)

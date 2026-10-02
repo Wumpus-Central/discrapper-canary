@@ -1,10 +1,10 @@
 let l;
-(s.r(t), s.d(t, { default: () => x, renderChangelogMessageMarkup: () => A }));
+(s.r(t), s.d(t, { default: () => A, renderChangelogMessageMarkup: () => x }));
 var a = s(478676),
     n = s.n(a),
     r = s(873879),
-    o = s(683412),
-    u = s(704726),
+    u = s(683412),
+    o = s(704726),
     c = s(46054);
 let i = n().defaultRules.lheading,
     p = n().defaultRules.heading,
@@ -41,7 +41,7 @@ function y(e) {
         link: { ...d, ...("function" == typeof l.customRules.link ? l.customRules.link(e) : l.customRules.link) },
         list: { ...m, ...("function" == typeof l.customRules.list ? l.customRules.list(e) : l.customRules.list) },
         interpolation: {
-            order: u.Ay.order,
+            order: o.Ay.order,
             match: (e) => k.exec(e),
             parse(e, t, s) {
                 let l = s.interpolations[e[1]];
@@ -72,7 +72,7 @@ function C(e) {
     return { ...y(e) };
 }
 l = s(482644);
-let x = {
+let A = {
     getDefaultRules: C,
     getSpecialRules: (e) => ({
         ...y(e),
@@ -85,10 +85,10 @@ let x = {
         },
     }),
     getMessageRules: (e) => ({
-        ...{ ...y(e), newline: { ...n().defaultRules.newline }, text: u.Ay, list: r.A, subtext: o.A },
+        ...{ ...y(e), newline: { ...n().defaultRules.newline }, text: o.Ay, list: r.A, subtext: u.A },
     }),
 };
-function A(e, t, s) {
+function x(e, t, s) {
     return {
         hasSpoilerEmbeds: !1,
         hasBailedAst: !1,

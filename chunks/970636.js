@@ -25,14 +25,14 @@ function f(e) {
             hasPermission: f,
             children: p,
             channelLimitReached: T = !1,
-            join: g,
+            join: m,
         } = e,
-        m = (0, u.Us)(),
-        S = s || E ? () => I() : () => h(!e.enabled, m),
-        { Component: N, play: C, events: O } = (0, l.K)(g || a ? "disable" : "enable");
+        g = (0, u.Us)(),
+        S = s || E ? () => I() : () => h(!e.enabled, g),
+        { Component: N, play: C, events: O } = (0, l.K)(m || a ? "disable" : "enable");
     return (
         r.useEffect(() => () => C(), [a, C]),
-        (t = E ? o.b : g ? d.VideoIcon : m === A.BRT.POPOUT ? (a ? d.VideoIcon : c.O) : N),
+        (t = E ? o.b : m ? d.VideoIcon : g === A.BRT.POPOUT ? (a ? d.VideoIcon : c.O) : N),
         (0, i.jsx)(i.Fragment, {
             children: p({
                 onClick: S,
@@ -42,8 +42,8 @@ function f(e) {
                 iconColor: "currentColor",
                 label: n,
                 unavailable: s,
-                onMouseEnter: g ? void 0 : O.onMouseEnter,
-                onMouseLeave: g ? void 0 : O.onMouseLeave,
+                onMouseEnter: m ? void 0 : O.onMouseEnter,
+                onMouseLeave: m ? void 0 : O.onMouseLeave,
             }),
         })
     );
@@ -63,9 +63,9 @@ function p(e) {
             channelLimit: A,
             centerButton: p = !1,
             onPopoutClick: T,
-            ...g
+            ...m
         } = e,
-        m = p ? E.l : E.A;
+        g = p ? E.l : E.A;
     return (0, i.jsx)(f, {
         enabled: t,
         join: n,
@@ -79,18 +79,18 @@ function p(e) {
         channelLimit: A,
         children: (e) => {
             let { unavailable: r, onMouseEnter: a, onMouseLeave: l, isActive: o, ...c } = e;
-            return (0, i.jsx)(m, {
+            return (0, i.jsx)(g, {
                 ...c,
-                ...g,
-                color: n ? "join" : o ? "green" : g.color,
+                ...m,
+                color: n ? "join" : o ? "green" : m.color,
                 caretColor: n ? "join" : t ? "green" : "primaryDark",
                 caretAriaLabel: h.intl.string(h.t.jO7lgy),
                 isActive: o,
                 onMouseEnter: (e) => {
-                    (g.onMouseEnter?.(e), a?.());
+                    (m.onMouseEnter?.(e), a?.());
                 },
                 onMouseLeave: (e) => {
-                    (g.onMouseLeave?.(e), l?.());
+                    (m.onMouseLeave?.(e), l?.());
                 },
                 className: s()(u, { [I.t]: r && !d }),
                 onPopoutClick: T,

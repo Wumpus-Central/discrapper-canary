@@ -1,4 +1,4 @@
-n.d(t, { g: () => g, A: () => N });
+n.d(t, { g: () => m, A: () => N });
 var i,
     r = n(636537),
     a = n(765178),
@@ -18,11 +18,11 @@ var i,
 function T(e) {
     ((0, h.Z_)(), A.A.show(e));
 }
-var g =
+var m =
     (((i = {})[(i.SHOW_ALWAYS = 0)] = "SHOW_ALWAYS"),
     (i[(i.SHOW_ONLY_IF_ACTION_NEEDED = 1)] = "SHOW_ONLY_IF_ACTION_NEEDED"),
     i);
-function m(e, t, n) {
+function g(e, t, n) {
     let { status: i, body: r } = e,
         a = r && r.code;
     switch (i) {
@@ -68,7 +68,7 @@ let S = {
                 oldFormErrors: !0,
                 rejectWithError: (0, r.fT)(),
             }).catch((e) => {
-                m(e, s, t);
+                g(e, s, t);
             });
         },
         addRelationship(e, t) {
@@ -92,7 +92,7 @@ let S = {
                 .then(() => {
                     t?.();
                 })
-                .catch((e) => (m(e, d, E.Ay.getUserTag(c)), Promise.reject(e)));
+                .catch((e) => (g(e, d, E.Ay.getUserTag(c)), Promise.reject(e)));
         },
         acceptFriendRequest: (e) =>
             S.addRelationship(e, function () {

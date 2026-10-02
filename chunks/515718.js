@@ -1,5 +1,5 @@
 (n.d(t, {
-    EW: () => g,
+    EW: () => m,
     LZ: () => N,
     NN: () => C,
     S4: () => f,
@@ -9,7 +9,7 @@
     V: () => _,
     We: () => T,
     aU: () => S,
-    bX: () => m,
+    bX: () => g,
     eJ: () => E,
     wU: () => A,
     z$: () => c,
@@ -113,11 +113,11 @@ function T(e) {
             (i.onerror = (e) => n(e)));
     });
 }
-function g(e) {
+function m(e) {
     let t = e.split(";base64,");
     return (r()(2 === t.length, "Input data is not a valid image."), atob(t[1]).length);
 }
-async function m(e, t, n) {
+async function g(e, t, n) {
     let i = S(e);
     return new File([await i.arrayBuffer()], t, { type: n });
 }

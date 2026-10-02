@@ -10,7 +10,7 @@ n.d(t, {
     hW: () => _,
     l8: () => w,
     mC: () => h,
-    nv: () => g,
+    nv: () => m,
     zf: () => A,
 });
 var i,
@@ -412,7 +412,7 @@ let E = Object.freeze({
         [c._3.SIZE_96]: "svg-mask-avatar-decoration-call-status-96",
         [c._3.SIZE_120]: "svg-mask-avatar-decoration-call-status-120",
     }),
-    g = Object.freeze({
+    m = Object.freeze({
         [c._3.SIZE_16]: "svg-mask-avatar-decoration-call-icon-status-16",
         [c._3.SIZE_20]: "svg-mask-avatar-decoration-call-icon-status-20",
         [c._3.SIZE_24]: "svg-mask-avatar-decoration-call-icon-status-24",
@@ -426,7 +426,7 @@ let E = Object.freeze({
         [c._3.SIZE_96]: "svg-mask-avatar-decoration-call-icon-status-96",
         [c._3.SIZE_120]: "svg-mask-avatar-decoration-call-icon-status-120",
     });
-function m(e, t) {
+function g(e, t) {
     return (e - 0.5) / (t ?? d.Xq) + 0.5;
 }
 function S(e) {
@@ -453,7 +453,7 @@ function C(e, t) {
     let { withBottomRightStatus: n = !1, withTopRightStatus: i = !1 } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { corner: a, radius: s } = S(t),
-        l = m(a),
+        l = g(a),
         o = s / d.Xq;
     return (0, r.jsxs)("mask", {
         id: e,
@@ -658,7 +658,7 @@ function F(e, t) {
     let n = (0, c.Kj)(t),
         i = n.status / 2,
         a = (i + n.stroke) / n.size / d.Xq,
-        s = m((n.size - i - n.offset) / n.size);
+        s = g((n.size - i - n.offset) / n.size);
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -700,11 +700,11 @@ function B(e, t) {
 function V(e, t) {
     let n = (0, c.Kj)(t),
         i = (2.5 * n.status - n.status + 2 * n.stroke) / 2,
-        a = m((n.size - n.status - n.stroke - n.offset) / n.size),
-        s = m((n.size - n.status - i - n.offset) / n.size),
+        a = g((n.size - n.status - n.stroke - n.offset) / n.size),
+        s = g((n.size - n.status - i - n.offset) / n.size),
         l = (2.5 * n.status + 2 * n.stroke) / n.size / d.Xq,
         o = (n.status + 2 * n.stroke) / n.size / d.Xq,
-        u = m(o / 2 / n.size);
+        u = g(o / 2 / n.size);
     return (0, r.jsxs)("mask", {
         id: e,
         maskContentUnits: "objectBoundingBox",
@@ -742,8 +742,8 @@ function H(e, t) {
 }
 function j(e, t) {
     let n = (0, c.Kj)(t),
-        i = m((n.size - n.status - n.stroke - n.offset) / n.size),
-        a = m((n.size - 1.5 * n.status - n.stroke - n.offset) / n.size),
+        i = g((n.size - n.status - n.stroke - n.offset) / n.size),
+        a = g((n.size - 1.5 * n.status - n.stroke - n.offset) / n.size),
         s = (n.status + 2 * n.stroke) / n.size / d.Xq,
         l = (1.5 * n.status + 2 * n.stroke) / n.size / d.Xq;
     return (0, r.jsxs)("mask", {
@@ -799,8 +799,8 @@ function Y(e, t) {
         a = 1.5 * i,
         s = a + 2 * n.stroke,
         l = i + 2 * n.stroke,
-        o = m((n.size - a - n.stroke - n.offset) / n.size),
-        u = m((n.size - i - n.stroke - n.offset) / n.size),
+        o = g((n.size - a - n.stroke - n.offset) / n.size),
+        u = g((n.size - i - n.stroke - n.offset) / n.size),
         _ = s / n.size / d.Xq,
         E = l / n.size / d.Xq;
     return (0, r.jsxs)("mask", {
@@ -1321,7 +1321,7 @@ let X = a.memo(function () {
                 let [t, n] = e;
                 return i.has(n) && C(n, t, { withTopRightStatus: !0 });
             }),
-            Object.entries(g).map((e) => {
+            Object.entries(m).map((e) => {
                 let [t, n] = e;
                 return i.has(n) && C(n, t, { withBottomRightStatus: !0, withTopRightStatus: !0 });
             }),

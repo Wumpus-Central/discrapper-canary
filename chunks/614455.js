@@ -16,8 +16,8 @@ var i = n(17928),
     f = n(489277),
     p = n(96175),
     T = n(905555),
-    g = n(237984),
-    m = n(392164);
+    m = n(237984),
+    g = n(392164);
 let S = new _.A("OverlayV3NativeModule");
 function N(e, t, n) {
     ((0, c._r)(e, "renderer_window_focus_changed", {
@@ -169,7 +169,7 @@ class L {
     destroyOutOfProcessOverlayHostWindow() {
         (S.verbose("Destroying OOP host window"), (0, c._r)(this.lastAssociatedPID, "host_window_destroyed"));
         try {
-            (u.A?.window?.close(m.f), u.A?.window?.setBackgroundThrottling(!0), I.A.resetWindowState(!1));
+            (u.A?.window?.close(g.f), u.A?.window?.setBackgroundThrottling(!0), I.A.resetWindowState(!1));
         } catch (e) {
             S.error("Error closing overlay window:", e);
         }
@@ -184,7 +184,7 @@ class L {
             (this.lastAssociatedPID = e));
     }
     async openOverlayPopout() {
-        return (await (0, g.o)(), await this.getWindowWithRetry());
+        return (await (0, m.o)(), await this.getWindowWithRetry());
     }
     async getWithRetry(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 500,
@@ -207,7 +207,7 @@ class L {
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
         return await this.getWithRetry(
             () => {
-                let e = E.A.getWindow(m.f);
+                let e = E.A.getWindow(g.f);
                 if (null == e) throw Error("Overlay popout window not found");
                 return Promise.resolve(e);
             },
@@ -220,7 +220,7 @@ class L {
             t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 3;
         return await this.getWithRetry(
             async () => {
-                let e = await u.A?.window?.getNativeHandle(m.f);
+                let e = await u.A?.window?.getNativeHandle(g.f);
                 return null != e ? (0, p.Oy)(e) : null;
             },
             e,
@@ -249,7 +249,7 @@ class L {
         this.module?.setInteractionEnabled?.(e);
     }
     setLimitedInteraction(e) {
-        (this.module?.setLimitedInteraction?.(e), A.Ay.setFocusable(m.f, !e));
+        (this.module?.setLimitedInteraction?.(e), A.Ay.setFocusable(g.f, !e));
     }
     setCaptureZoneCallback(e) {
         this.module?.setCaptureZoneCallback?.(e);

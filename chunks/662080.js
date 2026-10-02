@@ -16,8 +16,8 @@ var i = n(477900),
     f = n(688810),
     p = n(139286),
     T = n(915089),
-    g = n(465794),
-    m = n(594061),
+    m = n(465794),
+    g = n(594061),
     S = n(886109),
     N = n(763827),
     C = n(287809),
@@ -47,7 +47,7 @@ function k(e) {
         className: x.Sp,
         children: [
             (0, i.jsx)(u.E, { variant: "text-sm/medium", color: "text-default", children: a }),
-            (0, i.jsx)(g.A, {
+            (0, i.jsx)(m.A, {
                 size: "sm",
                 subscriptionTier: w.pe.TIER_2,
                 buttonTextOverride: G.intl.string(G.t.pj0XBN),
@@ -102,7 +102,7 @@ function B(e) {
 function V(e) {
     let { channel: t, guildId: n, analyticsSource: a, openFullPicker: o } = e,
         { analyticsLocations: h } = (0, f.Ay)(I.A.SOUNDBOARD_QUICK_ACCESS_POPOUT),
-        { sounds: T, hasLockedSound: g, isFetching: C } = (0, D.Ay)({ channel: t, currentGuildId: n }),
+        { sounds: T, hasLockedSound: m, isFetching: C } = (0, D.Ay)({ channel: t, currentGuildId: n }),
         O = (0, d.bG)([N.A], () => N.A.getMediaSessionId()),
         R = (0, d.bG)([y.A], () => y.A.getFavorites().size),
         { enabled: b } = (0, v.W)(n ?? "0", "SoundboardQuickAccessSoundPicker");
@@ -119,14 +119,14 @@ function V(e) {
             },
         }),
         r.useEffect(() => {
-            (L.E7(), m.bW.loadIfNecessary());
+            (L.E7(), g.bW.loadIfNecessary());
         }, []),
         (0, i.jsx)(f.f5, {
             value: h,
             children: (0, i.jsxs)(c.lG, {
                 children: [
                     (0, i.jsxs)("div", {
-                        className: s()(x.kL, g && x.Dx),
+                        className: s()(x.kL, m && x.Dx),
                         children: [
                             null != n && b ? (0, i.jsx)(S.A, { guildId: n, channelId: t.id }) : null,
                             (0, i.jsxs)("div", {
@@ -157,7 +157,7 @@ function V(e) {
                                 : (0, i.jsx)(B, { sounds: T, channel: t, guildId: n, analyticsLocations: h }),
                         ],
                     }),
-                    g && (0, i.jsx)(k, { analyticsLocations: h }),
+                    m && (0, i.jsx)(k, { analyticsLocations: h }),
                 ],
             }),
         })

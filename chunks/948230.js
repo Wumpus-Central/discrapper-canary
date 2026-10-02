@@ -4,7 +4,7 @@ n.d(t, {
     GG: () => F,
     HV: () => U,
     I$: () => H,
-    Is: () => g,
+    Is: () => w,
     K: () => D,
     M7: () => B,
     Ru: () => k,
@@ -31,8 +31,8 @@ var i = n(636537),
     h = n(933294),
     p = n(972786),
     _ = n(652215),
-    w = n(790782);
-function g(e, t, n) {
+    g = n(790782);
+function w(e, t, n) {
     (0, c.Z0)(e, {
         location: "publish",
         code: c.xA.PUBLISH_FAILED,
@@ -73,9 +73,9 @@ async function A(e) {
 let S = !1;
 async function v() {
     if (!S) {
-        for (let e of ((S = !0), u.Ay.getResourceIds(w.P.CONJURING_PROJECT)))
+        for (let e of ((S = !0), u.Ay.getResourceIds(g.P.CONJURING_PROJECT)))
             if (null == p.Ay.getProject(e)) {
-                if (0 === u.Ay.getMentionCount(e, w.P.CONJURING_PROJECT)) {
+                if (0 === u.Ay.getMentionCount(e, g.P.CONJURING_PROJECT)) {
                     y(e);
                     continue;
                 }

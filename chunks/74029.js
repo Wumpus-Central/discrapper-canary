@@ -2,13 +2,13 @@ l.d(t, { PR: () => g, PS: () => d, Q_: () => p, _w: () => c, dy: () => h, fA: ()
 var n = l(582128);
 l(29692);
 let a = Object.freeze({ active: !1, annotations: Object.freeze([]), context: null }),
-    r = new Map(),
-    i = new Set();
+    i = new Map(),
+    r = new Set();
 function s(e) {
-    return r.get(e) ?? a;
+    return i.get(e) ?? a;
 }
 function u(e, t) {
-    for (let l of (t.active || 0 !== t.annotations.length ? r.set(e, t) : r.delete(e), [...i]))
+    for (let l of (t.active || 0 !== t.annotations.length ? i.set(e, t) : i.delete(e), [...r]))
         try {
             l();
         } catch (e) {
@@ -20,7 +20,7 @@ function o(e) {
     t.active || u(e, { ...t, active: !0 });
 }
 function d(e) {
-    r.has(e) && u(e, a);
+    i.has(e) && u(e, a);
 }
 function c(e, t) {
     let l = s(e);
@@ -43,9 +43,9 @@ function m(e, t) {
 }
 function h(e, t, l, n) {
     let a = s(e),
-        r = a.annotations.find((e) => e.id === l);
-    null != r &&
-        m(r, t) &&
+        i = a.annotations.find((e) => e.id === l);
+    null != i &&
+        m(i, t) &&
         u(e, { ...a, annotations: a.annotations.map((e) => (e.id === l ? { ...e, comment: n } : e)) });
 }
 function g(e, t, l) {
@@ -55,9 +55,9 @@ function g(e, t, l) {
 }
 function x(e) {
     return (
-        i.add(e),
+        r.add(e),
         () => {
-            i.delete(e);
+            r.delete(e);
         }
     );
 }

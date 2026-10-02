@@ -20,8 +20,8 @@ function E(e) {
             position: f = "top",
             align: p = "center",
             spacing: T,
-            targetElementRef: g,
-            anchorRef: m,
+            targetElementRef: m,
+            anchorRef: g,
             caretConfig: S,
             positionKey: N,
             ariaHidden: C = !1,
@@ -29,13 +29,13 @@ function E(e) {
         } = e,
         [R, L] = r.useState(null);
     r.useLayoutEffect(() => {
-        null != m && L(m.current);
-    }, [m]);
+        null != g && L(g.current);
+    }, [g]);
     let y = r.useCallback(
             (e) => {
-                (null == m && L(e), (0, d.cZ)(g, e));
+                (null == g && L(e), (0, d.cZ)(m, e));
             },
-            [g, m],
+            [m, g],
         ),
         {
             tooltipId: D,
@@ -80,7 +80,7 @@ function E(e) {
                       isRendered: x,
                       targetElementRef: b,
                       targetElement: R,
-                      anchorRef: m,
+                      anchorRef: g,
                       id: D,
                       content: w,
                       position: f,

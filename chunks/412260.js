@@ -33,8 +33,8 @@ let A = !1,
     f = E(),
     p = null,
     T = new Map(),
-    g = null,
-    m = [],
+    m = null,
+    g = [],
     S = !1;
 function N() {
     let e = null;
@@ -90,7 +90,7 @@ class O extends i.Ay.PersistedStore {
         return _;
     }
     getMarketingComponentByType(e) {
-        if (g?.componentType === e) return g;
+        if (m?.componentType === e) return m;
         let t = l.default.getCurrentUser(),
             n = new Date();
         return (0, c.A)(T.get(e) ?? [], n, (e) => null != t && e.isIncludedInRollout(t.id, n));
@@ -130,7 +130,7 @@ class O extends i.Ay.PersistedStore {
         return null !== this.getActiveBogoRewardPromotion();
     }
     get claimedOutboundPromotionCodes() {
-        return m;
+        return g;
     }
     get claimedOutboundPromotionCodesLoaded() {
         return S;
@@ -141,7 +141,7 @@ let R = new O(r.h, {
         let { promotions: t, consumedInboundPromotionId: n } = e;
         ((f = E()),
             (T = new Map()),
-            (g = null),
+            (m = null),
             t.forEach((e) => {
                 let t = s.A.createFromServer(e);
                 ((f[e.promotion_type][e.id] = t),
@@ -160,10 +160,10 @@ let R = new O(r.h, {
         ((A = !0), (I = t));
     },
     ACTIVE_PROMOTIONS_FETCH_FAIL: function () {
-        ((f = E()), (T = new Map()), (g = null), (A = !1));
+        ((f = E()), (T = new Map()), (m = null), (A = !1));
     },
     ACTIVE_PROMOTIONS_CLEAR: function () {
-        ((f = E()), (T = new Map()), (g = null), (A = !1), (h = Date.now()));
+        ((f = E()), (T = new Map()), (m = null), (A = !1), (h = Date.now()));
     },
     OUTBOUND_PROMOTION_NOTICE_DISMISS: function () {
         if (0 === Object.values(f[d.pt.THIRD_PARTY_OUTBOUND]).length) return !1;
@@ -177,28 +177,28 @@ let R = new O(r.h, {
     },
     CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_SUCCESS: function (e) {
         let { claimedOutboundPromotionCodes: t } = e;
-        ((m = t), (S = !0));
+        ((g = t), (S = !0));
     },
     CLAIMED_OUTBOUND_PROMOTION_CODES_FETCH_FAIL: function (e) {
-        ((m = []), (S = !0));
+        ((g = []), (S = !0));
     },
     CLAIMED_OUTBOUND_PROMOTION_CODE_ADD: function (e) {
         let { claimedOutboundPromotionCode: t } = e;
         if (
-            m.some((e) => {
+            g.some((e) => {
                 let { promotion: n } = e;
                 return n.id === t.promotion.id;
             })
         )
             return !1;
-        m = [...m, t];
+        g = [...g, t];
     },
     LOGOUT: function () {
-        ((_ = u()), (A = !1), (h = null), (f = E()), T.clear(), (g = null), (m = []), (S = !1));
+        ((_ = u()), (A = !1), (h = null), (f = E()), T.clear(), (m = null), (g = []), (S = !1));
     },
     PREMIUM_MARKETING_PREVIEW: function (e) {
         let { data: t } = e,
             n = null != t.promotion ? s.A.createFromServer(t.promotion) : null;
-        ((g = o.A.createFromServer(t, n)), null != n && (f[n.promotionType][n.id] = n));
+        ((m = o.A.createFromServer(t, n)), null != n && (f[n.promotionType][n.id] = n));
     },
 });

@@ -16,8 +16,8 @@ var i = n(435558),
     f = n(25578),
     p = n(763827),
     T = n(873985),
-    g = n(309010),
-    m = n(461213),
+    m = n(309010),
+    g = n(461213),
     S = n(116956),
     N = n(723702),
     C = n(175306),
@@ -71,10 +71,10 @@ class P extends M {
         (super(!1), (this.socket = e));
     }
     getInitialState() {
-        return m.A.getLocalPresence();
+        return g.A.getLocalPresence();
     }
     getNextState() {
-        return m.A.getLocalPresence();
+        return g.A.getLocalPresence();
     }
     shouldCommit() {
         return this.socket.isSessionEstablished();
@@ -270,8 +270,8 @@ var ea = n(756377),
     ef = n(107351),
     ep = n(284009),
     eT = n.n(ep),
-    eg = n(723176),
-    em = n(766034),
+    em = n(723176),
+    eg = n(766034),
     eS = n(314732),
     eN = n(531743),
     eC = n(45773),
@@ -538,8 +538,8 @@ function eY(e, t, n) {
         } = n,
         p = e_.Ay.getMember(e, t.id),
         T = (0, $.t)(A),
-        g = (0, X.mT)(h),
-        m = (0, q.Rt)(I);
+        m = (0, X.mT)(h),
+        g = (0, q.Rt)(I);
     (null != p &&
         p.nick === a &&
         p.avatar === s &&
@@ -552,8 +552,8 @@ function eY(e, t, n) {
         p.flags === o &&
         (p.unusualDMActivityUntil ?? null) === (E ?? null) &&
         r().isEqual(p.collectibles ?? null, T ?? null) &&
-        r().isEqual(p.displayNameStyles ?? null, g ?? null) &&
-        r().isEqual(p.gamingLeaderboardData ?? null, m ?? null) &&
+        r().isEqual(p.displayNameStyles ?? null, m ?? null) &&
+        r().isEqual(p.gamingLeaderboardData ?? null, g ?? null) &&
         r().isEqual(p.vadColors ?? null, f ?? null)) ||
         eW({
             type: "GUILD_MEMBER_ADD",
@@ -570,8 +570,8 @@ function eY(e, t, n) {
             unusualDMActivityUntil: E,
             flags: o,
             collectibles: T,
-            displayNameStyles: g,
-            gamingLeaderboardData: m,
+            displayNameStyles: m,
+            gamingLeaderboardData: g,
             vadColors: f,
         });
 }
@@ -724,8 +724,8 @@ function eZ(e) {
             let t,
                 n,
                 i =
-                    ((t = eg.A.database()),
-                    (n = (0, eO.O)() ? em.A.getCommittedVersions() : Promise.resolve({})),
+                    ((t = em.A.database()),
+                    (n = (0, eO.O)() ? eg.A.getCommittedVersions() : Promise.resolve({})),
                     Promise.all([
                         n,
                         (0, eO.O)() ? eN.A.getGuildIds() : Promise.resolve(new Set()),
@@ -757,7 +757,7 @@ function eZ(e) {
                           let t = (e = el.A.hydrateReady.measure(() =>
                                   (function (e, t, n) {
                                       let { users: i, private_channels: a, merged_members: s, guilds: l, ...o } = e;
-                                      (null != eg.A.database() &&
+                                      (null != em.A.database() &&
                                           !1 === n.databaseOk &&
                                           eC.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
                                           (eL = r().keyBy(i, (e) => e.id)),
@@ -2019,7 +2019,7 @@ let eJ = new c.A("ConnectionStore"),
 async function e6(e) {
     ((e0 = Date.now()), (e1 = e.sessionId), V.handleConnectionOpen());
     let t = {},
-        n = g.Ay.getVoiceChannelId();
+        n = m.Ay.getVoiceChannelId();
     if (null != n) {
         let e = s.w.get("discord_watchdog_restart_timestamp"),
             i = null != e && Date.now() - parseInt(e, 10) < 6e4;
@@ -2051,9 +2051,9 @@ function e9(e) {
 class te extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        (this.waitFor(A.default, h.A, I.A, f.Ay, p.A, T.A, g.Ay, m.A, S.A, E.A),
+        (this.waitFor(A.default, h.A, I.A, f.Ay, p.A, T.A, m.Ay, g.A, S.A, E.A),
             this.syncWith([f.Ay], e7),
-            this.syncWith([m.A], e8));
+            this.syncWith([g.A], e8));
     }
     getSocket() {
         return B;

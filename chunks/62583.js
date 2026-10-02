@@ -16,16 +16,16 @@ var i = n(587895),
     f = n(748975),
     p = n(818023);
 function T(e) {
-    return (0, o.w)((0, o.f)(), () => g(e));
+    return (0, o.w)((0, o.f)(), () => m(e));
 }
-async function g(e) {
+async function m(e) {
     let t,
         {
             applicationId: n,
             activityChannelId: o,
             locationObject: T,
-            analyticsLocations: g,
-            componentId: m,
+            analyticsLocations: m,
+            componentId: g,
             sectionName: S,
             source: N,
             inviterUserId: C,
@@ -74,9 +74,9 @@ async function g(e) {
             applicationId: n,
             isStart: !1,
             embeddedActivitiesManager: L,
-            analyticsLocations: g,
+            analyticsLocations: m,
             locationObject: T,
-            componentId: m,
+            componentId: g,
             sectionName: S,
             source: N,
             inviterUserId: C,

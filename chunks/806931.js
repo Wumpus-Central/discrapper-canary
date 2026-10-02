@@ -9,7 +9,7 @@ n.d(t, {
     fG: () => p,
     jd: () => u,
     lp: () => d,
-    mn: () => g,
+    mn: () => m,
     qs: () => c,
 });
 var i,
@@ -51,4 +51,4 @@ function I(e) {
 var f = (((o = {})[(o.VIDEO = 0)] = "VIDEO"), (o[(o.CAMERA_PREVIEW = 1)] = "CAMERA_PREVIEW"), o);
 let p = { 0: 320, 1: 160 },
     T = { 0: 960, 1: 480 },
-    g = { 0: 200, 1: 160 };
+    m = { 0: 200, 1: 160 };

@@ -9,7 +9,7 @@ n.d(t, {
     Sc: () => h,
     UA: () => f,
     Z_: () => A,
-    _4: () => g,
+    _4: () => m,
     _Z: () => C,
     ad: () => L,
     bh: () => D,
@@ -18,7 +18,7 @@ n.d(t, {
     jh: () => b,
     jr: () => p,
     pO: () => N,
-    py: () => m,
+    py: () => g,
     rH: () => w,
     ri: () => M,
     sB: () => T,
@@ -90,7 +90,7 @@ function T(e) {
         channel_id: n,
     });
 }
-function g(e) {
+function m(e) {
     let { guildId: t, channelId: n } = e,
         r = s.A.getChannel(n);
     if (null == r) return;
@@ -109,7 +109,7 @@ function g(e) {
             num_attachments: (0, _.d1)(n),
         });
 }
-function m(e) {
+function g(e) {
     let { guildId: t, channelId: n } = e;
     i.Ay.trackWithMetadata(E.HAw.FORUM_CHANNEL_NEW_POST_DRAFT_CLEARED, {
         ...(0, _.fO)({ channelId: n }),

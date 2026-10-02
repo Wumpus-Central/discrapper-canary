@@ -42,10 +42,10 @@ function Y(t) {
             user: V,
             onGameJoin: w,
             onClose: k,
-            location: W,
-            supportsAskToJoin: B = !0,
+            location: H,
+            supportsAskToJoin: W = !0,
         } = t,
-        { analyticsLocations: H } = (0, N.Ay)(W ?? []),
+        { analyticsLocations: B } = (0, N.Ay)(H ?? []),
         [z, X] = l.useState(!1),
         $ = Y?.applicationId ?? n?.application_id,
         F = null != Y || (0, _.A)(n),
@@ -133,7 +133,7 @@ function Y(t) {
             intent: D.W9.PLAY,
             embedded: n,
             locationObject: ts.location,
-            analyticsLocations: H,
+            analyticsLocations: B,
         }),
             n ||
                 (0, I.A)({
@@ -145,7 +145,7 @@ function Y(t) {
                     applicationId: $,
                     partyId: null != e ? e?.party?.id : "",
                     locationObject: ts.location,
-                    analyticsLocations: H,
+                    analyticsLocations: B,
                 }));
     }
     async function tp() {
@@ -170,7 +170,7 @@ function Y(t) {
                     applicationId: $,
                     activityChannelId: q,
                     locationObject: ts.location,
-                    analyticsLocations: H,
+                    analyticsLocations: B,
                 }))
             )
                 return void k?.();
@@ -183,7 +183,7 @@ function Y(t) {
             await e();
         }
     }
-    if ((ta === g.o.CANNOT_JOIN && !B) || (ta === g.o.CANNOT_JOIN && (0, h.D)(tn)) || (!td && !z && null == e))
+    if ((ta === g.o.CANNOT_JOIN && !W) || (ta === g.o.CANNOT_JOIN && (0, h.D)(tn)) || (!td && !z && null == e))
         return null;
     let tg = ta === g.o.CAN_JOIN ? G.intl.string(G.t.VJlc0S) : G.intl.string(G.t.OKsSCR);
     return (

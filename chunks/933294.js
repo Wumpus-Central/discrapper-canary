@@ -1,4 +1,4 @@
-n.d(t, { A: () => Y });
+n.d(t, { A: () => X });
 var i = n(264686),
     r = n(625180),
     l = n(91242),
@@ -13,10 +13,10 @@ var d = n(141931),
     h = n(25578),
     p = n(731854);
 let _ = new c.Vy("VibegrationsNativeCapture");
-function w(e, t) {
+function g(e, t) {
     return (_.verbose(`native capture not used: ${e}`, t ?? {}), null);
 }
-function g(e) {
+function w(e) {
     let t = e.getBoundingClientRect();
     return t.width < 40 ||
         t.height < 40 ||
@@ -30,9 +30,9 @@ function g(e) {
 async function E(e) {
     let t = window.DiscordNative,
         n = await t?.window?.getMediaSourceId?.();
-    if (null == n) return w("no media source id for our own window");
+    if (null == n) return g("no media source id for our own window");
     let i = n.split(":")[1];
-    if (null == i || "" === i) return w("unrecognized media source id", { sourceId: n });
+    if (null == i || "" === i) return g("unrecognized media source id", { sourceId: n });
     let r = Math.min(
             window.devicePixelRatio,
             1568 / Math.max(e.width, e.height),
@@ -52,7 +52,7 @@ async function E(e) {
             thumbnailSize: { width: l, height: o },
         }),
         a = u?.find((e) => e.id.split(":")[1] === i);
-    return null == a || "" === a.url ? w("own window missing from capture sources") : a.url;
+    return null == a || "" === a.url ? g("own window missing from capture sources") : a.url;
 }
 async function m() {
     let e = document.createElement("div");
@@ -67,11 +67,11 @@ async function m() {
 async function I(e, t, n) {
     let i = new Image();
     if (((i.decoding = "async"), (i.src = e), await i.decode(), 0 === i.naturalWidth || 0 === i.naturalHeight))
-        return w("window still decoded empty");
+        return g("window still decoded empty");
     let r = i.naturalWidth / window.outerWidth,
         l = i.naturalHeight / window.outerHeight;
     if (r <= 0 || l <= 0 || Math.abs(r - l) > 0.03 * r)
-        return w("window still does not match the window geometry", {
+        return g("window still does not match the window geometry", {
             image: { width: i.naturalWidth, height: i.naturalHeight },
             window: { width: window.outerWidth, height: window.outerHeight },
         });
@@ -95,32 +95,32 @@ async function I(e, t, n) {
                     return { x: t, y: r };
         return null;
     })(i, n, r, l);
-    if (null == o) return w("document not found inside the window still", { inset: n });
+    if (null == o) return g("document not found inside the window still", { inset: n });
     let s = Math.max(0, Math.floor((o.x + t.left) * r)),
         u = Math.max(0, Math.floor((o.y + t.top) * l)),
         a = Math.min(i.naturalWidth - s, Math.round(t.width * r)),
         d = Math.min(i.naturalHeight - u, Math.round(t.height * l));
-    if (a < 1 || d < 1) return w("crop resolved empty");
+    if (a < 1 || d < 1) return g("crop resolved empty");
     let c = Math.min(1, 1568 / Math.max(a, d), Math.sqrt(115e4 / (a * d))),
         f = Math.max(1, Math.round(a * c)),
         h = Math.max(1, Math.round(d * c)),
         p = document.createElement("canvas");
     ((p.width = f), (p.height = h));
     let _ = p.getContext("2d");
-    if (null == _) return w("no 2d context");
+    if (null == _) return g("no 2d context");
     _.drawImage(i, s, u, a, d, 0, 0, f, h);
-    let g = await new Promise((e) => p.toBlob(e, "image/webp", 0.92));
-    return null == g || "image/webp" !== g.type
-        ? w("webp encode failed")
-        : g.size > 5242880
-          ? w("encoded capture too large", { bytes: g.size })
-          : { blob: g, scale: (f / t.width + h / t.height) / 2 };
+    let w = await new Promise((e) => p.toBlob(e, "image/webp", 0.92));
+    return null == w || "image/webp" !== w.type
+        ? g("webp encode failed")
+        : w.size > 5242880
+          ? g("encoded capture too large", { bytes: w.size })
+          : { blob: w, scale: (f / t.width + h / t.height) / 2 };
 }
 async function T(e, t) {
     try {
         var n, i, r;
         let l;
-        if (null == window.DiscordNative) return w("not the desktop app");
+        if (null == window.DiscordNative) return g("not the desktop app");
         if (
             ((n = t.spec),
             null != n &&
@@ -135,10 +135,10 @@ async function T(e, t) {
                               ? "rect"
                               : "viewport")))
         )
-            return w("targeted capture needs the frame DOM", { spec: t.spec });
-        if ("visible" !== document.visibilityState) return w("window not visible");
-        let o = g(e);
-        if (null == o) return w("frame not fully on screen");
+            return g("targeted capture needs the frame DOM", { spec: t.spec });
+        if ("visible" !== document.visibilityState) return g("window not visible");
+        let o = w(e);
+        if (null == o) return g("frame not fully on screen");
         if (
             !(function (e, t) {
                 for (let [n, i] of [
@@ -165,7 +165,7 @@ async function T(e, t) {
                 return !0;
             })(e, o)
         )
-            return w("frame is covered");
+            return g("frame is covered");
         let s = {
                 x: Math.max(0, window.outerWidth - window.innerWidth),
                 y: Math.max(0, window.outerHeight - window.innerHeight),
@@ -177,7 +177,7 @@ async function T(e, t) {
             u?.();
         }
         if (null == l) return null;
-        let a = g(e);
+        let a = w(e);
         if (
             null == a ||
             Math.abs(a.left - o.left) > 1 ||
@@ -185,7 +185,7 @@ async function T(e, t) {
             Math.abs(a.width - o.width) > 1 ||
             Math.abs(a.height - o.height) > 1
         )
-            return w("frame moved or resized during capture");
+            return g("frame moved or resized during capture");
         let d = await I(l, o, s);
         if (null == d) return null;
         let c = (function (e) {
@@ -201,7 +201,7 @@ async function T(e, t) {
                 return null;
             }
         })(e);
-        if (null == c) return w("frame has no resolvable upload url");
+        if (null == c) return g("frame has no resolvable upload url");
         let f = {
                 mode: "viewport",
                 bounds: { x: 0, y: 0, width: Math.round(o.width), height: Math.round(o.height) },
@@ -220,13 +220,13 @@ async function T(e, t) {
         (null != t.build && (h["x-vibegrations-build"] = t.build),
             null != t.uploadToken && (h["x-vibegrations-capture-token"] = t.uploadToken));
         let p = await fetch(c, { method: "POST", headers: h, body: d.blob });
-        if (!p.ok) return w("upload refused", { status: p.status });
+        if (!p.ok) return g("upload refused", { status: p.status });
         return (
             _.verbose("native capture uploaded", { id: t.captureId, bytes: d.blob.size, scale: f.scale }),
             { status: "accepted" }
         );
     } catch (e) {
-        return w("threw", { err: e });
+        return g("threw", { err: e });
     }
 }
 var A = n(120426),
@@ -429,7 +429,7 @@ async function K(e, t, n, i) {
         try {
             let i = await (0, S.S)(r, t, n);
             if ("completed" !== i.status) return i;
-            let l = [...X.drain(e), ...o.drain()];
+            let l = [...Q.drain(e), ...o.drain()];
             if (0 === l.length) return i;
             return { ...i, response: { ...i.response, native: l } };
         } finally {
@@ -439,7 +439,7 @@ async function K(e, t, n, i) {
         r();
     }
 }
-let X = (function (e) {
+let Q = (function (e) {
     let t = new Map();
     function n(e) {
         let n = t.get(e);
@@ -499,7 +499,7 @@ let X = (function (e) {
             { timeoutMs: 2e3, retryMs: 400, sourceMatch: "origin", label: "control end" },
         ).catch(() => {});
 });
-let Y = {
+let X = {
     openVibegrationsAppInstallModal: J,
     isWindowFocused: function () {
         return u.A.isFocused();
@@ -526,10 +526,10 @@ let Y = {
     relayPreviewCapture: z,
     relayPreviewControl: K,
     beginPreviewOperation: function (e) {
-        X.begin(e);
+        Q.begin(e);
     },
     endPreviewOperation: function (e) {
-        X.end(e);
+        Q.end(e);
     },
     releasePreviewControl: function (e) {
         (0, j.xm)(e);

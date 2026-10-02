@@ -16,13 +16,13 @@ var i = n(17928),
     f = n(652215);
 let p = new Set(),
     T = {},
-    g = {},
-    m = new Set();
+    m = {},
+    g = new Set();
 function S(e) {
     return _.A.getGuild(e)?.features.has(f.GuildFeatures.COMMUNITY) === !0;
 }
 function N() {
-    for (let e of (m.clear(), _.A.getGuildIds())) S(e) && m.add(e);
+    for (let e of (g.clear(), _.A.getGuildIds())) S(e) && g.add(e);
     return !1;
 }
 function C(e, t) {
@@ -67,7 +67,7 @@ function O(e) {
                 );
             }),
         )),
-        (g[e] = Date.now()));
+        (m[e] = Date.now()));
 }
 function R() {
     I.default.keys(T).forEach((e) => {
@@ -105,7 +105,7 @@ let y = new L(r.h, {
         if (null == t) return !1;
         let i = T[t],
             r = !1;
-        return ((null == i || g[t] < Date.now() - h.A.Millis.HOUR) && (O(t), (r = !0)), null != n && C(t, n), r);
+        return ((null == i || m[t] < Date.now() - h.A.Millis.HOUR) && (O(t), (r = !0)), null != n && C(t, n), r);
     },
     SIDEBAR_VIEW_CHANNEL: function (e) {
         let { guildId: t, channelId: n, sidebarType: i } = e;
@@ -119,13 +119,13 @@ let y = new L(r.h, {
     CACHE_LOADED: N,
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        return (S(t.id) && m.add(t.id), !1);
+        return (S(t.id) && g.add(t.id), !1);
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e,
             n = S(t.id);
-        if (n && !m.has(t.id)) {
-            m.add(t.id);
+        if (n && !g.has(t.id)) {
+            g.add(t.id);
             let e = T[t.id],
                 n = _.A.getGuild(t.id),
                 i = new Set();
@@ -136,15 +136,15 @@ let y = new L(r.h, {
                         null != t && e.has(t) && i.add(t);
                     }),
                 (T[t.id] = i),
-                (g[t.id] = Date.now()),
+                (m[t.id] = Date.now()),
                 !0
             );
         }
-        return (n || m.delete(t.id), !1);
+        return (n || g.delete(t.id), !1);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        (delete T[t.id], m.delete(t.id));
+        (delete T[t.id], g.delete(t.id));
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;

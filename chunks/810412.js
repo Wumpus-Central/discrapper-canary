@@ -4,7 +4,7 @@ n.d(t, {
     OverlayToggledClientSettingType: () => E,
     Q3: () => A,
     Y: () => I,
-    YX: () => g,
+    YX: () => m,
     Z5: () => p,
     xp: () => f,
 });
@@ -128,7 +128,7 @@ var p =
         (a.VOICE_TAB_SELECTED = "voice tab selected"),
         (a.MESSAGES_TAB_SELECTED = "messages tab selected"),
         a);
-function g(e, t) {
+function m(e, t) {
     let { type: n, value: i, userId: r, secondaryValue: a } = t;
     c.default.track(_.HAw.WIDGET_INTERACTED, {
         widget_type: e,

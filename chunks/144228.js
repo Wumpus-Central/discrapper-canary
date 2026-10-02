@@ -52,8 +52,8 @@ function A(e) {
         f = r.useId(),
         p = `${f}label`,
         T = `${f}description`,
-        g = null != t && "" !== t,
-        [m, S] = (0, r.useState)(void 0),
+        m = null != t && "" !== t,
+        [g, S] = (0, r.useState)(void 0),
         N = (0, r.useRef)(!1);
     return (
         (0, r.useEffect)(() => {
@@ -70,14 +70,14 @@ function A(e) {
             children: (0, i.jsxs)(l.sx, {
                 className: s()(u.radioGroupOption, {
                     [u.withLeadingIcon]: null != a,
-                    [u.animateIn]: "animateIn" === m,
-                    [u.animateOut]: "animateOut" === m,
+                    [u.animateIn]: "animateIn" === g,
+                    [u.animateOut]: "animateOut" === g,
                 }),
                 value: _,
                 isDisabled: n,
                 inputRef: I,
                 "aria-labelledby": p,
-                "aria-describedby": g ? T : void 0,
+                "aria-describedby": m ? T : void 0,
                 ref: h,
                 children: [
                     (0, i.jsx)(E, {}),
@@ -90,7 +90,7 @@ function A(e) {
                             focusable: !1,
                         }),
                     (0, i.jsx)(c.E, { id: p, tag: "span", variant: "text-md/normal", children: d }),
-                    g
+                    m
                         ? (0, i.jsx)(c.E, {
                               id: T,
                               className: u.description,

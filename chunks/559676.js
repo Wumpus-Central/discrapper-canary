@@ -1,7 +1,7 @@
 n.d(t, {
     BP: () => c,
-    FQ: () => w,
-    Qg: () => g,
+    FQ: () => g,
+    Qg: () => w,
     RW: () => p,
     Rh: () => f,
     k: () => _,
@@ -75,7 +75,7 @@ function p(e) {
 function _() {
     return [...r.keys()];
 }
-function w(e) {
+function g(e) {
     return (
         l.add(e),
         () => {
@@ -83,7 +83,7 @@ function w(e) {
         }
     );
 }
-function g(e) {
+function w(e) {
     return (
         o.add(e),
         () => {
@@ -93,5 +93,5 @@ function g(e) {
 }
 function E(e) {
     let t = i.useCallback(() => null != e && p(e), [e]);
-    return i.useSyncExternalStore(w, t, t);
+    return i.useSyncExternalStore(g, t, t);
 }

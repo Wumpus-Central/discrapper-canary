@@ -5,9 +5,9 @@ n.d(t, {
     jv: () => h,
     A9: () => I,
     dR: () => N,
-    lF: () => g,
+    lF: () => m,
     lA: () => p,
-    oG: () => m,
+    oG: () => g,
 });
 var i = n(284009),
     r = n.n(i),
@@ -71,10 +71,10 @@ function T(e) {
         return !!e || (!!t && c());
     })(A.getConfig({ location: e }).enabled, _.getConfig({ location: e }).enabled);
 }
-function g(e, t) {
+function m(e, t) {
     return C(A.getConfig({ location: e }), _.getConfig({ location: e }).enabled, c(), t);
 }
-function m(e, t) {
+function g(e, t) {
     let n = A.useConfig({ location: e }),
         i = _.useConfig({ location: e }),
         r = u();

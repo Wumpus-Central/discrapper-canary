@@ -22,7 +22,7 @@ function l(e) {
             "aria-label": p,
             ref: T,
         } = e,
-        { i18n: g } = (0, a.G9)();
+        { i18n: m } = (0, a.G9)();
     return (0, i.jsx)(s.k, {
         ...I,
         onFocus: A,
@@ -30,11 +30,11 @@ function l(e) {
         value: t,
         onChange: _,
         onKeyDown: d,
-        placeholder: o ?? g.SEARCH,
+        placeholder: o ?? m.SEARCH,
         disabled: u,
         autoFocus: n,
         autoComplete: h,
-        "aria-label": p ?? g.SEARCH,
+        "aria-label": p ?? m.SEARCH,
         inputRef: T,
         leading: r.MagnifyingGlassIcon,
         onClear: l,

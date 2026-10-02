@@ -2,10 +2,10 @@
     n.d(t, {
         promoteFrame: () => I,
         launchFrame: () => E,
-        resetFrameLayoutModes: () => g,
+        resetFrameLayoutModes: () => m,
         demoteMainFrame: () => h,
         refreshProxyTicket: () => O,
-        attachFrameIframe: () => m,
+        attachFrameIframe: () => g,
         attachFrameHostWindow: () => N,
         detachFrameHostWindow: () => C,
         setFramePrefersPictureInPictureOnNavigateAway: () => p,
@@ -65,7 +65,7 @@ function A() {
     null != e && (e.intent === u.sV.MAIN ? (0, c.A)().leaveFrame(e.id) : h(e.id));
 }
 function h(e) {
-    d.A.getMainFrame()?.id === e && (g(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
+    d.A.getMainFrame()?.id === e && (m(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
 }
 function I(e) {
     null != d.A.getFrame(e) &&
@@ -84,10 +84,10 @@ function p(e, t) {
 function T(e, t) {
     i.h.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: e, activityPanelMode: t });
 }
-function g(e) {
+function m(e) {
     (f({ frameId: e, layoutMode: u.y0.FOCUSED }), T(e, _.Gd.PANEL));
 }
-function m(e, t) {
+function g(e, t) {
     i.h.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: e, iframeId: t });
 }
 function S(e, t) {

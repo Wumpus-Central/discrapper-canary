@@ -1,4 +1,4 @@
-(n.d(t, { $: () => g }), n(321073));
+(n.d(t, { $: () => m }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -16,9 +16,9 @@ var I = n(789279),
     f = n(584648),
     p = n(751591),
     T = n(6095);
-function g(e, t, n, a) {
+function m(e, t, n, a) {
     let l = new Map(),
-        g =
+        m =
             "u" < typeof document
                 ? c.F
                 : new a((e) => {
@@ -27,7 +27,7 @@ function g(e, t, n, a) {
                           l.get(t)?.(e);
                       });
                   });
-    return r.forwardRef(function (a, m) {
+    return r.forwardRef(function (a, g) {
         let S,
             N,
             {
@@ -95,8 +95,8 @@ function g(e, t, n, a) {
                     p = (0, r.useRef)(h),
                     [T] = (0, r.useState)(() => new _.A()),
                     {
-                        dirty: g,
-                        chunkStart: m,
+                        dirty: m,
+                        chunkStart: g,
                         chunkEnd: S,
                         forceUpdateOnChunkChange: N,
                     } = (0, A.A)({ chunkSize: o, getScrollerState: u, forceUpdate: f }),
@@ -113,12 +113,12 @@ function g(e, t, n, a) {
                     }
                 }
                 let L = (0, r.useMemo)(() => {
-                        let e = Math.max(0, m * o);
+                        let e = Math.max(0, g * o);
                         return null != s && e < s;
-                    }, [o, m, s]),
+                    }, [o, g, s]),
                     y = (0, r.useMemo)(
                         () =>
-                            g > 0
+                            m > 0
                                 ? p.current
                                 : (T.mergeProps({
                                       sectionHeight: n,
@@ -130,8 +130,8 @@ function g(e, t, n, a) {
                                       sections: t,
                                       getAnchorId: I,
                                   }),
-                                  T.compute(Math.max(0, m * o), S * o)),
-                        [g, m, S, n, i, a, l, c, d, t, T, o, I],
+                                  T.compute(Math.max(0, g * o), S * o)),
+                        [m, g, S, n, i, a, l, c, d, t, T, o, I],
                     );
                 return (
                     (0, r.useLayoutEffect)(() => {
@@ -158,16 +158,16 @@ function g(e, t, n, a) {
         r.useLayoutEffect(() => {
             ((ep.current = R), (eT.current = L));
         });
-        let eg = r.useCallback(
+        let em = r.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
                     (e > eo.current.dirty && (eo.current.dirty = e), 2 === e && ep.current?.(), eh(e));
                 },
                 [eh, eo],
             ),
-            em = r.useCallback(() => eg(), [eg]);
-        ((0, c.A)({ ref: el, onUpdate: em, key: "container", resizeObserver: g, listenerMap: l }),
-            (0, c.A)({ ref: er, onUpdate: () => eT.current?.(), key: "content", resizeObserver: g, listenerMap: l }));
+            eg = r.useCallback(() => em(), [em]);
+        ((0, c.A)({ ref: el, onUpdate: eg, key: "container", resizeObserver: m, listenerMap: l }),
+            (0, c.A)({ ref: er, onUpdate: () => eT.current?.(), key: "content", resizeObserver: m, listenerMap: l }));
         let eS =
                 ((S = r.useRef(e_)),
                 r.useEffect(() => {
@@ -190,7 +190,7 @@ function g(e, t, n, a) {
                     return [0, 0];
                 }, []));
         r.useImperativeHandle(
-            m,
+            g,
             () => ({
                 getScrollerNode: () => el.current,
                 getScrollerState: ed,
@@ -224,14 +224,14 @@ function g(e, t, n, a) {
         );
         let eC = r.useCallback(
             (e) => {
-                (eg(1),
+                (em(1),
                     null == ei.current ? es(!0) : clearTimeout(ei.current),
                     (ei.current = setTimeout(() => {
                         ((ei.current = null), es(!1));
                     }, 200)),
                     null != O && O(e));
             },
-            [O, eg],
+            [O, em],
         );
         return (
             r.useLayoutEffect(() => {

@@ -1,6 +1,6 @@
 n.d(t, {
     AI: () => O,
-    D1: () => m,
+    D1: () => g,
     Et: () => P,
     H_: () => x,
     Id: () => U,
@@ -14,7 +14,7 @@ n.d(t, {
     io: () => T,
     jr: () => w,
     lK: () => M,
-    n: () => g,
+    n: () => m,
     qi: () => F,
     s5: () => H,
     vy: () => N,
@@ -42,7 +42,7 @@ let T = (0, o.A)({
     defaultConfig: { enabled: !1 },
     treatments: [{ id: 1, label: "On", config: { enabled: !0 } }],
 });
-function g(e, t) {
+function m(e, t) {
     return R(
         (0, s.bG)(
             [h.A],
@@ -58,7 +58,7 @@ function g(e, t) {
         t,
     );
 }
-function m(e, t) {
+function g(e, t) {
     let n = e.isForumLikeChannel()
         ? p.xBc.SEND_MESSAGES
         : a.kg(p.xBc.CREATE_PUBLIC_THREADS, p.xBc.READ_MESSAGE_HISTORY);
@@ -77,7 +77,7 @@ function C(e, t, n) {
     return (t.type === p.rbe.GUILD_TEXT || t.type === p.rbe.GUILD_APP) && R(e, t, n);
 }
 function O(e) {
-    let t = g(e),
+    let t = m(e),
         n = S(e);
     return t || n;
 }

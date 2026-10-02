@@ -15,8 +15,8 @@ var l,
     p = n(951305),
     E = n(419212),
     I = n(97352),
-    y = n(67480),
-    S = n(975571),
+    S = n(67480),
+    y = n(975571),
     g = n(158045),
     _ = n(615396),
     P = n(573359),
@@ -98,8 +98,8 @@ var b = n(700546),
     j = n(148155),
     w = n(375708),
     O = n(583741),
-    D = n(896554);
-function F(e) {
+    F = n(896554);
+function D(e) {
     let t,
         { planId: n, startingPremiumSubscriptionPlanId: l, paymentSourceType: i } = e,
         [s, o] = (0, u.yK)([I.A], () => [I.A.get(l), I.A.get(n)]);
@@ -154,7 +154,7 @@ function F(e) {
     return (0, r.jsx)(c.E, {
         variant: "text-md/medium",
         color: "interactive-text-default",
-        className: D.Qq,
+        className: F.Qq,
         children: t,
     });
 }
@@ -185,7 +185,7 @@ function B(e) {
             startingIsInPastDueCheckout: e.startingIsInPastDueCheckout,
         })),
         { theme: K } = (0, o.wR)(),
-        W = (0, u.bG)([y.A], () => (null != C ? y.A.get(C.id) : null)),
+        W = (0, u.bG)([S.A], () => (null != C ? S.A.get(C.id) : null)),
         Y = (0, _.b2)(v),
         q = B === H.uH.META_QUEST_WEB_REDIRECT_CHECKOUT;
     function Q(e) {
@@ -214,21 +214,21 @@ function B(e) {
         t = (0, r.jsx)(c.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
-            className: D.Qq,
+            className: F.Qq,
             children: w.intl.string(O.default["t+xzd8"]),
         });
     else if ("deeplink_to_desktop_app" === T || B === H.uH.META_QUEST_WEB_REDIRECT_CHECKOUT)
         t = (0, r.jsx)(c.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
-            className: D.Qq,
+            className: F.Qq,
             children: (0, r.jsxs)("p", { children: [w.intl.string(w.t.bIVRSQ), " ", w.intl.string(w.t["0UJqOy"])] }),
         });
     else if (null != W)
         t = (0, r.jsx)(c.E, {
             variant: "text-md/medium",
             color: "interactive-text-default",
-            className: D.Qq,
+            className: F.Qq,
             children: w.intl.format(w.t["tsQOs+"], { skuName: W.name }),
         });
     else if (Y && !p) {
@@ -238,12 +238,12 @@ function B(e) {
                 ? (t = (0, r.jsxs)(c.E, {
                       variant: "text-md/medium",
                       color: "interactive-text-default",
-                      className: D.Qq,
+                      className: F.Qq,
                       children: [
                           (0, r.jsx)("p", { children: w.intl.string(w.t["L9lcG/"]) }),
                           (0, r.jsx)("p", {
                               children: w.intl.format(w.t.EoDFuN, {
-                                  helpCenterLink: S.A.getArticleURL(k.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: y.A.getArticleURL(k.MVz.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
@@ -252,17 +252,17 @@ function B(e) {
                   (t = (0, r.jsxs)(c.E, {
                       variant: "text-md/medium",
                       color: "interactive-text-default",
-                      className: D.Qq,
+                      className: F.Qq,
                       children: [
                           (0, r.jsx)("p", { children: w.intl.string(w.t.UPpbP3) }),
                           (0, r.jsx)("p", {
                               children: w.intl.format(w.t.EoDFuN, {
-                                  helpCenterLink: S.A.getArticleURL(k.MVz.FRACTIONAL_PREMIUM_ABOUT),
+                                  helpCenterLink: y.A.getArticleURL(k.MVz.FRACTIONAL_PREMIUM_ABOUT),
                               }),
                           }),
                       ],
                   })));
-    } else if (null != s) t = (0, r.jsx)(F, { planId: l, startingPremiumSubscriptionPlanId: s });
+    } else if (null != s) t = (0, r.jsx)(D, { planId: l, startingPremiumSubscriptionPlanId: s });
     else if (null != A) {
         let e = I.A.get(l);
         (a()(null != e, "Missing plan"),
@@ -271,13 +271,13 @@ function B(e) {
                     (0, r.jsx)(c.E, {
                         variant: "text-md/medium",
                         color: "interactive-text-default",
-                        className: D.Qq,
+                        className: F.Qq,
                         children: Q(e),
                     }),
                     (0, r.jsx)(c.E, {
                         variant: "text-md/medium",
                         color: "interactive-text-default",
-                        className: D.Qq,
+                        className: F.Qq,
                         children: w.intl.format(w.t["6aZ0NR"], { guildName: A.name }),
                     }),
                 ],
@@ -288,7 +288,7 @@ function B(e) {
             (t = (0, r.jsx)(c.E, {
                 variant: "text-md/medium",
                 color: "interactive-text-default",
-                className: D.Qq,
+                className: F.Qq,
                 children: Q(e),
             })));
     }
@@ -320,7 +320,7 @@ function B(e) {
         return (0, r.jsx)(b.A, { type: $(), text: t, buttonText: n, hideClose: E || q, onClose: X, buttonLoading: z });
     let J = (0, g.z4)(l);
     return (0, r.jsxs)("div", {
-        className: D.EL,
+        className: F.EL,
         children: [
             !J && (0, r.jsx)(L, { type: $(), theme: K }),
             t,
@@ -328,7 +328,7 @@ function B(e) {
                 ? null
                 : (0, r.jsx)("div", {
                       "data-button-hoisted-classname-wrapper": !0,
-                      className: D.x6,
+                      className: F.x6,
                       children: (0, r.jsx)(d.$, { variant: "primary", text: n, onClick: X, loading: z }),
                   }),
         ],
@@ -346,15 +346,15 @@ function Z(e) {
         f = (0, u.bG)([I.A], () => I.A.get(t));
     a()(null != f, "Missing plan");
     let h = (0, u.bG)([E.A], () => E.A.getGiftCode(f.skuId)),
-        { quantity: y, checkoutSessionId: S } = (0, m.t4)((e) => ({
+        { quantity: S, checkoutSessionId: y } = (0, m.t4)((e) => ({
             quantity: e.quantity,
             checkoutSessionId: e.contextMetadata.loadId,
         })),
-        g = (0, u.bG)([E.A], () => E.A.isGiftCodeDeliveryReady(S), [S]);
+        g = (0, u.bG)([E.A], () => E.A.isGiftCodeDeliveryReady(y), [y]);
     return (0, r.jsx)(C.A, {
         giftCode: h,
-        giftCount: y,
-        checkoutSessionId: S,
+        giftCount: S,
+        checkoutSessionId: y,
         giftCodeDeliveryReady: g,
         shouldUsePostPurchaseRecipientDelivery: l,
         subscriptionPlan: f,

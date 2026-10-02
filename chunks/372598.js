@@ -1,9 +1,9 @@
-n.d(t, { XO: () => o, b_: () => E, dL: () => a, zR: () => l });
+n.d(t, { XO: () => E, b_: () => o, dL: () => a, zR: () => l });
 var r = n(403362),
     i = n(452245),
     u = n(243277);
 function a(e) {
-    let t = o();
+    let t = E();
     return Array.from(e.defaultActionTypes).map((e) => t[e]);
 }
 function l(e) {
@@ -16,11 +16,11 @@ function l(e) {
         )
         .filter(r.Vq);
 }
-function E(e, t, n) {
+function o(e, t, n) {
     let r = e.actions.filter((e) => e.type !== t);
     return { ...e, actions: null != n ? [...r, n] : r };
 }
-function o() {
+function E() {
     return {
         [u.AH.BLOCK_MESSAGE]: { type: u.AH.BLOCK_MESSAGE, metadata: { customMessage: void 0 } },
         [u.AH.FLAG_TO_CHANNEL]: { type: u.AH.FLAG_TO_CHANNEL, metadata: { channelId: void 0 } },

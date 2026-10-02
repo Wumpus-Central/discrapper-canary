@@ -17,8 +17,8 @@ let u = [o.ni.User, o.ni.Installation],
     f = {},
     p = new Set(),
     T = new Set(),
-    g = "apexTrackedExposures",
-    m = {},
+    m = "apexTrackedExposures",
+    g = {},
     S = {};
 function N(e) {
     let t = S[e];
@@ -41,7 +41,7 @@ class C extends a.Ay.PersistedStore {
                 i = t[n];
             I[n] = { hashedName: e, variantId: i, isOverride: !0, exposureTrackingEnabled: !1, useAsEligibility: !1 };
         }
-        m = this.loadTrackedExposures();
+        g = this.loadTrackedExposures();
     }
     getState() {
         return { version: 3, evaluatedExperiments: _, clientOverrides: A };
@@ -128,7 +128,7 @@ class C extends a.Ay.PersistedStore {
     }
     handleLogout(e) {
         (e || (this.clearUserServerAssignments(), this.clearSessionOverrides()),
-            l.w.remove(g),
+            l.w.remove(m),
             this.clearAllTrackedExposures());
     }
     registerExperiment(e) {
@@ -234,7 +234,7 @@ class C extends a.Ay.PersistedStore {
         }
     }
     withExposureTracking(e, t) {
-        this.shouldTrackExposure(e) && (t(), (m[e] = Date.now()), this.saveTrackedExposures(m));
+        this.shouldTrackExposure(e) && (t(), (g[e] = Date.now()), this.saveTrackedExposures(g));
     }
     trackExposureSuppression(e, t) {
         let n = E[e];
@@ -281,11 +281,11 @@ class C extends a.Ay.PersistedStore {
             });
     }
     shouldTrackExposure(e) {
-        let t = m[e];
+        let t = g[e];
         return null == t || Date.now() - t > 6048e5;
     }
     loadTrackedExposures() {
-        let e = l.w.get(g);
+        let e = l.w.get(m);
         if (null == e || 2 !== e.version) return {};
         let t = e.exposures,
             n = Date.now(),
@@ -295,7 +295,7 @@ class C extends a.Ay.PersistedStore {
     }
     saveTrackedExposures(e) {
         try {
-            l.w.set(g, { version: 2, exposures: e });
+            l.w.set(m, { version: 2, exposures: e });
         } catch (e) {
             (c.error("Error saving tracked exposures", e),
                 this.track(
@@ -325,7 +325,7 @@ class C extends a.Ay.PersistedStore {
         h = {};
     }
     clearAllTrackedExposures() {
-        m = {};
+        g = {};
     }
     getHash(e) {
         return N(e);

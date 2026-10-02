@@ -1,8 +1,8 @@
 l.d(t, { q: () => c });
 var n = l(582128),
     a = l(598748),
-    r = l(17928),
-    i = l(294323),
+    i = l(17928),
+    r = l(294323),
     s = l(627363),
     u = l(25451),
     o = l(280450),
@@ -20,8 +20,8 @@ function c(e) {
         [p, v] = n.useState(t);
     p !== t && (v(t), x(null));
     let b = null != l && l === t ? l : null,
-        j = (0, r.bG)([o.default], () => o.default.getId()),
-        { applicationWidgetConfig: y } = (0, i.A)(j, b ?? void 0),
+        j = (0, i.bG)([o.default], () => o.default.getId()),
+        { applicationWidgetConfig: y } = (0, r.A)(j, b ?? void 0),
         k = y?.surfaces,
         N = (0, d.yZ)({
             widgetTop: k?.[a.m.WIDGET_TOP] != null,

@@ -33,15 +33,15 @@ n(427262);
 var f = n(652215),
     p = n(202541),
     T = n(375708);
-let { GUILD_VOICE: g, GUILD_CATEGORY: m, GUILD_STAGE_VOICE: S } = f.rbe;
+let { GUILD_VOICE: m, GUILD_CATEGORY: g, GUILD_STAGE_VOICE: S } = f.rbe;
 function N(e, t) {
-    return e === t || e === m;
+    return e === t || e === g;
 }
 function C(e, t, n) {
     let r = h.x3;
     return (
-        ((0, d.tr)(t) || t === m) && (r = i.WQ(r, f.xBc.VIEW_CHANNEL)),
-        (N(t, g) || N(t, S)) && ((r = i.WQ(r, f.xBc.VIEW_CHANNEL)), (r = i.WQ(r, f.xBc.CONNECT))),
+        ((0, d.tr)(t) || t === g) && (r = i.WQ(r, f.xBc.VIEW_CHANNEL)),
+        (N(t, m) || N(t, S)) && ((r = i.WQ(r, f.xBc.VIEW_CHANNEL)), (r = i.WQ(r, f.xBc.CONNECT))),
         { id: e, type: n, deny: h.x3, allow: r }
     );
 }
@@ -55,8 +55,8 @@ function O(e, t, n) {
             o.push(
                 ((a = r.r2.ROLE),
                 (s = h.x3),
-                ((0, d.tr)(t) || t === m) && (s = i.WQ(s, f.xBc.VIEW_CHANNEL)),
-                N(t, g) && ((s = i.WQ(s, f.xBc.VIEW_CHANNEL)), (s = i.WQ(s, f.xBc.CONNECT))),
+                ((0, d.tr)(t) || t === g) && (s = i.WQ(s, f.xBc.VIEW_CHANNEL)),
+                N(t, m) && ((s = i.WQ(s, f.xBc.VIEW_CHANNEL)), (s = i.WQ(s, f.xBc.CONNECT))),
                 { id: e, type: a, allow: h.x3, deny: s }),
             ),
         n.forEach((e) => {

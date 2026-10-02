@@ -50,7 +50,7 @@ async function T(e, t) {
             3 === p && E.error("Too many RPC send failures, suppressing further error logs"));
     }
 }
-function g(e) {
+function m(e) {
     if (0 === e.length) return e;
     let t = [];
     for (let n = 0; n < e.length; n++) {
@@ -64,7 +64,7 @@ function g(e) {
     }
     return t;
 }
-function m(e) {
+function g(e) {
     if (null === e) return "null";
     if (void 0 === e) return "undefined";
     if ("string" == typeof e) return e;
@@ -145,8 +145,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((f.log(...t), null != A))
                         try {
-                            let e = g(t)
-                                .map((e) => m(e))
+                            let e = m(t)
+                                .map((e) => g(e))
                                 .join(" ");
                             A.log(e);
                         } catch (e) {
@@ -157,8 +157,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((f.info(...t), null != A))
                         try {
-                            let e = g(t)
-                                .map((e) => m(e))
+                            let e = m(t)
+                                .map((e) => g(e))
                                 .join(" ");
                             A.info(e);
                         } catch (e) {
@@ -169,8 +169,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((f.warn(...t), null != A))
                         try {
-                            let e = g(t)
-                                .map((e) => m(e))
+                            let e = m(t)
+                                .map((e) => g(e))
                                 .join(" ");
                             A.warn(e);
                         } catch (e) {
@@ -181,8 +181,8 @@ __OVERLAY__ &&
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
                     if ((f.error(...t), null != A))
                         try {
-                            let e = g(t)
-                                .map((e) => m(e))
+                            let e = m(t)
+                                .map((e) => g(e))
                                 .join(" ");
                             A.error(e);
                         } catch (e) {}

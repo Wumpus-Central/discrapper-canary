@@ -1,4 +1,4 @@
-n.d(t, { GM: () => I, Hi: () => S, Ml: () => T, P3: () => m, Ut: () => g, X8: () => p, op: () => f });
+n.d(t, { GM: () => I, Hi: () => S, Ml: () => T, P3: () => g, Ut: () => m, X8: () => p, op: () => f });
 var i,
     r = n(477900),
     a = n(582128),
@@ -38,11 +38,11 @@ function T(e) {
         view_id: i,
     });
 }
-function g(e) {
+function m(e) {
     let { section: t, enabled: n, viewId: i } = e;
     c.default.track(A.HAw.NOTIFICATIONS_INBOX_SECTION_INTERACTED, { section: t, enabled: n, view_id: i });
 }
-function m(e) {
+function g(e) {
     let {
         timeToLoad: t,
         messagesCount: n,
@@ -75,7 +75,7 @@ function S(e) {
         f = a.useRef(!1),
         p = (0, o.bG)([u.A], () => u.A.isLoading),
         T = (0, l.A)(p),
-        g = (0, o.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
+        m = (0, o.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
         { unreadRecentMentionsCount: S, unreadChannelIds: N } = (0, _.U4)();
     ((0, d.Ay)(() => {
         (!(function (e) {
@@ -122,21 +122,21 @@ function S(e) {
             }
         }, [i, r, s, N, S, h]),
         a.useEffect(() => {
-            let e = g?.loadingTrigger === E.VA.AUTO_LOAD;
-            null == g ||
+            let e = m?.loadingTrigger === E.VA.AUTO_LOAD;
+            null == m ||
                 !0 !== T ||
                 !1 !== p ||
                 e ||
-                m({
-                    timeToLoad: g?.timeToLoad,
+                g({
+                    timeToLoad: m?.timeToLoad,
                     messagesCount: i.length,
                     unreadMessagesCount: r.length,
-                    loadingTrigger: g?.loadingTrigger ?? E.VA.UNKNOWN,
-                    viewId: g?.viewId,
-                    channelsFetched: g?.channelsFetched,
-                    mentionsFetched: g?.mentionsFetched,
+                    loadingTrigger: m?.loadingTrigger ?? E.VA.UNKNOWN,
+                    viewId: m?.viewId,
+                    channelsFetched: m?.channelsFetched,
+                    mentionsFetched: m?.mentionsFetched,
                 });
-        }, [p, i, r, s, T, g]),
+        }, [p, i, r, s, T, m]),
         (0, d.l0)(() => {
             !(function (e) {
                 let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: i, totalItemsCount: r, viewId: a } = e;

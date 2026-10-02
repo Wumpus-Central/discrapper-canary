@@ -9,8 +9,8 @@ var l = i(17928),
     u = i(780964),
     c = i(766075),
     d = i(22802),
-    f = i(375708),
-    A = i(414981);
+    A = i(375708),
+    f = i(414981);
 function p(t, e) {
     let {
         highlightAdminWarningIfElevated: i,
@@ -43,23 +43,23 @@ function y(t) {
               variant: "text-xxs/semibold",
               color: p ? "text-feedback-warning" : "text-muted",
               children: g
-                  ? f.intl.format(f.t.MVS9pV, {
+                  ? A.intl.format(A.t.MVS9pV, {
                         onSettingsClick: (t) => {
                             (t.stopPropagation(), (0, s.A)(void 0, !0), (0, c.openUserSettings)(u.X.OVERLAY_PANEL));
                         },
                     })
-                  : f.intl.string(f.t.PIeSHF),
+                  : A.intl.string(A.t.PIeSHF),
           })
         : y
           ? (0, n.jsx)("div", {
-                className: A.FH,
-                children: f.intl.format(i, {
+                className: f.FH,
+                children: A.intl.format(i, {
                     keybind: e,
                     keybindHook: (t) => (0, n.jsx)(d.G, { keybind: e, className: m }, e.join("+")),
                 }),
             })
           : (0, n.jsx)(n.Fragment, {
-                children: f.intl.format(i, {
+                children: A.intl.format(i, {
                     keybind: e,
                     keybindHook: (t) => (0, n.jsx)(d.b, { keybind: e }, e.join("+")),
                 }),

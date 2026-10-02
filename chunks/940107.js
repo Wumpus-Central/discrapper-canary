@@ -19,15 +19,15 @@ function r(e, t, n, r) {
     return new Promise((l, h) => {
         let p = 0,
             _ = o,
-            w = window.setTimeout(() => {
+            g = window.setTimeout(() => {
                 (m(), h(new i.fq(t, r.timeoutMs)));
             }, r.timeoutMs),
-            g = null != r.retryMs ? window.setInterval(I, r.retryMs) : null;
+            w = null != r.retryMs ? window.setInterval(I, r.retryMs) : null;
         function E() {
-            null != g && window.clearInterval(g);
+            null != w && window.clearInterval(w);
         }
         function m() {
-            (window.clearTimeout(w), E(), window.removeEventListener("message", T));
+            (window.clearTimeout(g), E(), window.removeEventListener("message", T));
         }
         function I() {
             (p += 1) > 1 &&

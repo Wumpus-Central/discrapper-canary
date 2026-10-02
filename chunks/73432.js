@@ -1,8 +1,8 @@
 l.d(t, { A: () => u });
 var n = l(477900),
     a = l(582128),
-    r = l(503698),
-    i = l.n(r),
+    i = l(503698),
+    r = l.n(i),
     s = l(27989);
 function u(e) {
     let t = a.useId(),
@@ -12,7 +12,7 @@ function u(e) {
         height: l?.height ?? 24,
         viewBox: "0 0 24 24",
         fill: "none",
-        className: i()(e.colorClass, e.className),
+        className: r()(e.colorClass, e.className),
         style: e.style,
         "aria-hidden": !0,
         children: [

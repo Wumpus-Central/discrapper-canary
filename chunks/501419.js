@@ -1,5 +1,5 @@
 n.d(t, {
-    rw: () => g,
+    rw: () => m,
     NZ: () => F,
     ss: () => N,
     D8: () => G,
@@ -13,7 +13,7 @@ n.d(t, {
     D4: () => x,
     $l: () => K,
     iC: () => U,
-    Tg: () => m,
+    Tg: () => g,
     cN: () => w,
     R2: () => R,
     X0: () => H,
@@ -46,13 +46,13 @@ var i = n(17928),
     f = n(853735),
     p = n(652215),
     T = n(49999);
-let g = 2592e6;
-function m(e) {
+let m = 2592e6;
+function g(e) {
     let t = l.A.settings.userContent?.recurringDismissibleContentStates[e];
     return {
         lastDismissedVersion: (0, h.L0)(e) ? (0, f.c)(e) : 0,
         lastDismissedAtMs: new Date().getTime().toString(),
-        lastDismissedObjectId: (0, h.IL)(e) ? d.default.fromTimestamp(Date.now() + g) : "0",
+        lastDismissedObjectId: (0, h.IL)(e) ? d.default.fromTimestamp(Date.now() + m) : "0",
         numTimesDismissed: t?.numTimesDismissed ?? 0,
     };
 }

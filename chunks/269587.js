@@ -47,9 +47,9 @@ function V(t) {
             appContext: w,
             targetElementRef: k,
         } = t,
-        [B, W] = i.useState(!1),
-        { analyticsLocations: H } = (0, f.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        z = (0, g.A)({ display: s, user: n, activity: a, entry: r, analyticsLocations: H }),
+        [H, W] = i.useState(!1),
+        { analyticsLocations: B } = (0, f.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        z = (0, g.A)({ display: s, user: n, activity: a, entry: r, analyticsLocations: B }),
         X = (0, m.NR)(),
         $ = i.useRef(null),
         F = X?.interactionPopoutTargetRef ?? $,
@@ -139,7 +139,7 @@ function V(t) {
                 })(t),
                 (0, j.s)(t),
             ].filter((t) => null != t);
-        })({ entry: r, activity: a, user: n, display: s, onClose: V, onAction: z, isMenuOpen: B, appContext: w });
+        })({ entry: r, activity: a, user: n, display: s, onClose: V, onAction: z, isMenuOpen: H, appContext: w });
     return 0 === Q.length || n.bot
         ? null
         : (0, l.jsx)(c.Y, {

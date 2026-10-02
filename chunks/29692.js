@@ -3,31 +3,31 @@
     LL: () => h,
     Mx: () => g,
     ec: () => a,
-    gq: () => r,
+    gq: () => i,
     iw: () => o,
     jo: () => s,
-    to: () => i,
+    to: () => r,
     ts: () => u,
     v_: () => m,
 }),
     l(321073));
 let n = Object.freeze({ x: 0.5, y: 0.5 });
 function a(e, t, l) {
-    let { x: a, y: r, width: i, height: s } = e.rect;
-    return i < 1 || s < 1 ? n : { x: Math.min(1, Math.max(0, (t - a) / i)), y: Math.min(1, Math.max(0, (l - r) / s)) };
+    let { x: a, y: i, width: r, height: s } = e.rect;
+    return r < 1 || s < 1 ? n : { x: Math.min(1, Math.max(0, (t - a) / r)), y: Math.min(1, Math.max(0, (l - i) / s)) };
 }
-let r = 1e3;
-function i(e) {
+let i = 1e3;
+function r(e) {
     return "" !== e.trim();
 }
 function s(e, t, l) {
     let n = null,
         a = 1 / 0;
-    for (let r of e) {
-        let { x: e, y: i, width: s, height: u } = r.rect;
-        if (s < 1 || u < 1 || t < e || l < i || t > e + s || l > i + u) continue;
+    for (let i of e) {
+        let { x: e, y: r, width: s, height: u } = i.rect;
+        if (s < 1 || u < 1 || t < e || l < r || t > e + s || l > r + u) continue;
         let o = s * u;
-        o < a && ((n = r), (a = o));
+        o < a && ((n = i), (a = o));
     }
     return n;
 }
@@ -153,13 +153,13 @@ function h(e) {
         l = -1 === t ? e : e.slice(0, t),
         n = -1 === t ? "" : e.slice(t + 1),
         a = l.slice(c.length),
-        r = a.indexOf(f),
-        i = (-1 === r ? a : a.slice(0, r)).trim();
-    return "" === i ? null : { label: i, body: n };
+        i = a.indexOf(f),
+        r = (-1 === i ? a : a.slice(0, i)).trim();
+    return "" === r ? null : { label: r, body: n };
 }
 function g(e) {
     let { annotations: t, metaComment: l, context: n } = e,
-        a = t.filter((e) => i(e.comment)),
+        a = t.filter((e) => r(e.comment)),
         s = [];
     if (
         (s.push(`My design feedback: ${1 === a.length ? "1 comment" : `${a.length} comments`} on the app.`), null != n)
@@ -175,7 +175,7 @@ function g(e) {
         let l;
         (s.push(""),
             s.push(`${t + 1}. ${d(e.target)}`),
-            s.push(`   Feedback: ${(l = e.comment.trim()).length <= r ? l : `${l.slice(0, r)}\u{2026}`}`));
+            s.push(`   Feedback: ${(l = e.comment.trim()).length <= i ? l : `${l.slice(0, i)}\u{2026}`}`));
     });
     let u = l.trim();
     return ("" !== u && (s.push(""), s.push(`Note for the whole batch: ${u}`)), s.join("\n"));

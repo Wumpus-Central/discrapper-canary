@@ -1,4 +1,4 @@
-(n.d(t, { S1: () => S, gB: () => m, PX: () => N }),
+(n.d(t, { S1: () => S, gB: () => g, PX: () => N }),
     n(393431),
     n(532706),
     n(42231),
@@ -34,7 +34,7 @@ async function p(e) {
 function T(e, t, n, i, r) {
     (0, l.wq)({ [e]: { graph: n, target: t, image: i, blob: r } });
 }
-async function g(e, t, n) {
+async function m(e, t, n) {
     let r,
         s = !1;
     if (null == n) return T(e, t, i.gO.NONE);
@@ -79,14 +79,14 @@ async function g(e, t, n) {
             (0, l.Mj)();
         }
 }
-async function m(e, t) {
+async function g(e, t) {
     let { track: n = !0, location: r } = t;
-    (await g(i.Tr.CAMERA_BACKGROUND_LIVE, { type: i.Qo.INPUT_DEVICE }, e), n && (0, d.Uz)(e, r, "Enabled"));
+    (await m(i.Tr.CAMERA_BACKGROUND_LIVE, { type: i.Qo.INPUT_DEVICE }, e), n && (0, d.Uz)(e, r, "Enabled"));
 }
 async function S(e, t, n) {
     let { track: r = !0, location: a } = n;
     ((0, l.Oo)(),
-        await g(i.Tr.CAMERA_BACKGROUND_PREVIEW, { type: i.Qo.STREAM, streamId: t }, e),
+        await m(i.Tr.CAMERA_BACKGROUND_PREVIEW, { type: i.Qo.STREAM, streamId: t }, e),
         r && (0, d.Uz)(e, a, "Preview"));
 }
 function N() {
@@ -97,5 +97,5 @@ function N() {
         (!(0, A.isIOS)() || h.getConfig({ location: "applyBackgroundOption" }).enabled) &&
         !o.A.hasBeenApplied &&
         null != t &&
-        m(t, { track: !1 }).catch(f.tEg);
+        g(t, { track: !1 }).catch(f.tEg);
 }

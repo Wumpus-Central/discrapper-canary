@@ -21,7 +21,7 @@ n.d(t, {
     _8: () => tt,
     j7: () => e_,
     JG: () => eq,
-    XZ: () => em,
+    XZ: () => eg,
     Q_: () => eW,
     aM: () => eA,
     he: () => ey,
@@ -115,7 +115,7 @@ function f(e, t, n, i) {
         l = () => n(h.A.settings[e]?.[t]);
     return {
         getSetting: l,
-        updateSetting: m(l, (n) =>
+        updateSetting: g(l, (n) =>
             A.wc.updateAsync(
                 e,
                 (e) => {
@@ -143,7 +143,7 @@ function p(e, t, n) {
                 }) ?? i
             );
         },
-        updateSetting: m(i, function (i) {
+        updateSetting: g(i, function (i) {
             return E.A.shouldSync(t)
                 ? e.updateSetting(i)
                 : (_.h.dispatch({
@@ -164,13 +164,13 @@ function T(e, t, n, i) {
             let t = e.useSetting();
             return i() ?? t;
         },
-        updateSetting: m(
+        updateSetting: g(
             r,
             (n) => (_.h.dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: [t] }), e.updateSetting(n)),
         ),
     };
 }
-function g(e) {
+function m(e) {
     let {
         baseSetting: t,
         isEligible: n,
@@ -192,7 +192,7 @@ function g(e) {
         updateSetting: (e) => t.updateSetting(e),
     };
 }
-function m(e, t) {
+function g(e, t) {
     return function (n) {
         return "function" == typeof n ? t(n(e())) : t(n);
     };
@@ -533,11 +533,11 @@ let ec = f(
         (e) => e?.value ?? !1,
         (e) => l._t.create({ value: e }),
     ),
-    eg = [],
-    em = f(
+    em = [],
+    eg = f(
         "privacy",
         "adTopicOptOuts",
-        (e) => e ?? eg,
+        (e) => e ?? em,
         (e) => e,
     );
 f(
@@ -854,7 +854,7 @@ let eW = p(
         (e) => e ?? eJ,
         (e) => e,
     );
-g({
+m({
     baseSetting: f(
         "privacy",
         "defaultGuildsActivityRestricted",
@@ -866,7 +866,7 @@ g({
     ineligibleDefault: s.AN.OFF,
     eligibleDefault: () => s.AN.ON_FOR_LARGE_GUILDS,
 });
-let e1 = g({
+let e1 = m({
         baseSetting: f(
             "privacy",
             "defaultGuildsActivityRestrictedV2",

@@ -2,8 +2,8 @@ l.d(t, { A: () => x });
 var n = l(477900);
 l(582128);
 var a = l(17928),
-    r = l(86147),
-    i = l(729475),
+    i = l(86147),
+    r = l(729475),
     s = l(91242),
     u = l(742589),
     o = l(869146),
@@ -28,7 +28,7 @@ function x(e) {
     let j = g.intl.string(x ? g.t.Z7MyNB : g.t.OIDkcp);
     return (0, n.jsx)(u.A.Icon, {
         tooltip: j,
-        icon: x ? r.z : i.T,
+        icon: x ? i.z : r.T,
         "aria-label": j,
         role: "switch",
         "aria-checked": x,

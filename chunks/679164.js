@@ -1,4 +1,4 @@
-n.d(t, { $r: () => g, AN: () => S, BX: () => A, i: () => E, w6: () => h });
+n.d(t, { $r: () => m, AN: () => S, BX: () => A, i: () => E, w6: () => h });
 var i = n(636537),
     r = n(332714),
     a = n(534573),
@@ -57,10 +57,10 @@ function p(e) {
 function T(e) {
     return p(e.image) || e.images?.some(p) || p(e.video);
 }
-function g(e) {
+function m(e) {
     return e.attachments.some(f) || e.embeds.some(T);
 }
-async function m(e) {
+async function g(e) {
     return (
         await i.Bo.post({
             url: d.Rsh.ATTACHMENTS_REFRESH_URLS,
@@ -71,5 +71,5 @@ async function m(e) {
 }
 async function S(e) {
     let t = l.A.toURLSafe(e);
-    return null != t && I(t) ? ((await m(e)) ?? e) : e;
+    return null != t && I(t) ? ((await g(e)) ?? e) : e;
 }

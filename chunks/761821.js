@@ -3,13 +3,13 @@
     Gd: () => A,
     Mr: () => S,
     RK: () => f,
-    VB: () => g,
+    VB: () => m,
     Y5: () => _,
     aw: () => h,
     gc: () => T,
     ii: () => E,
     ob: () => I,
-    vI: () => m,
+    vI: () => g,
 }),
     n(321073));
 var i = n(435558),
@@ -50,12 +50,12 @@ function p(e, t, n) {
 }
 function T(e, t, n, i) {
     var r;
-    return ((r = (e) => g(e, n, i)), null == e.guilds && (e.guilds = s.KJ.create()), p(e.guilds, t, r));
+    return ((r = (e) => m(e, n, i)), null == e.guilds && (e.guilds = s.KJ.create()), p(e.guilds, t, r));
 }
-function g(e, t, n) {
+function m(e, t, n) {
     return (t in e.channels || (e.channels[t] = s.Ju.create()), n(e.channels[t]));
 }
-function m(e, t) {
+function g(e, t) {
     null == e.versions && (e.versions = l.u.create());
     let n = 0;
     for (let e of t) {

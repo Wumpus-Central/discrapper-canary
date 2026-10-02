@@ -16,8 +16,8 @@ var i = n(687123),
     f = n(306537),
     p = n(36149),
     T = n(277861),
-    g = n(652215),
-    m = n(835002);
+    m = n(652215),
+    g = n(835002);
 let S = new d.A("AgeVerificationManager");
 function N(e) {
     let { channelId: t, message: n } = e,
@@ -26,17 +26,17 @@ function N(e) {
     let a = i?.embeds?.[0]?.fields?.find((e) => e.rawName === p.uN.CONTENT_TYPE);
     (a?.rawValue === p.Wv.MANUAL_REVIEW_SUBMITTED && (0, T.xf)(),
         a?.rawValue === p.Wv.ERROR
-            ? (_.A.showFailedToast(m.OB.TIGGER_PAWTECT_ERROR), (0, f.Vh)(f.oQ.ERROR))
+            ? (_.A.showFailedToast(g.OB.TIGGER_PAWTECT_ERROR), (0, f.Vh)(f.oQ.ERROR))
             : a?.rawValue === p.Wv.FAE_FAILED
-              ? (_.A.showFailedToast(m.OB.AGE_VERIFICATION_FAE_FAILED), (0, f.Vh)(f.oQ.FAE_FAILED))
+              ? (_.A.showFailedToast(g.OB.AGE_VERIFICATION_FAE_FAILED), (0, f.Vh)(f.oQ.FAE_FAILED))
               : a?.rawValue === p.Wv.ID_FAILED
-                ? (_.A.showFailedToast(m.OB.AGE_VERIFICATION_ID_FAILED), (0, f.Vh)(f.oQ.ID_FAILED))
+                ? (_.A.showFailedToast(g.OB.AGE_VERIFICATION_ID_FAILED), (0, f.Vh)(f.oQ.ID_FAILED))
                 : a?.rawValue === p.Wv.UNDERAGE
-                  ? (_.A.showFailedToast(m.OB.AGE_VERIFICATION_UNDERAGE), (0, f.Vh)(f.oQ.UNDERAGE))
+                  ? (_.A.showFailedToast(g.OB.AGE_VERIFICATION_UNDERAGE), (0, f.Vh)(f.oQ.UNDERAGE))
                   : a?.rawValue === p.Wv.VERIFIED_ADULT
-                    ? (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_ADULT))
+                    ? (_.A.showSuccessToast(g.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_ADULT))
                     : a?.rawValue === p.Wv.VERIFIED_TEEN &&
-                      (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_TEEN)));
+                      (_.A.showSuccessToast(g.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_TEEN)));
 }
 class C extends l.A {
     _previousAgeVerificationStatus = null;
@@ -62,9 +62,9 @@ class C extends l.A {
                     t && null != e)
                 ) {
                     let t;
-                    (a.A.fetchMessages({ channelId: e, limit: g.EMb }),
+                    (a.A.fetchMessages({ channelId: e, limit: m.EMb }),
                         (t = E.A.getChannel(e)),
-                        (t?.type === g.rbe.GUILD_FORUM || t?.type === g.rbe.GUILD_MEDIA) && (0, c.kB)(t));
+                        (t?.type === m.rbe.GUILD_FORUM || t?.type === m.rbe.GUILD_MEDIA) && (0, c.kB)(t));
                 }
             }
         } catch (e) {

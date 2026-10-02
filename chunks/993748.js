@@ -17,13 +17,13 @@ var u = n(773669),
     f = n(651753),
     p = n(82293),
     T = n(680646),
-    g = n(652215);
-let m = new Map();
+    m = n(652215);
+let g = new Map();
 async function S(e) {
     let t = Date.now(),
-        n = m.get(e) ?? 0;
+        n = g.get(e) ?? 0;
     if (A.A.getApplicationFetchState(e) === A.e.FETCHING || A.A.isInvalidApplication(e) || t < n + 6e5) return;
-    (m.set(e, t), c.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId: e }));
+    (g.set(e, t), c.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId: e }));
     let i = new r.A(1e3, 5e3),
         a = (e, t) =>
             429 === e.status &&
@@ -35,7 +35,7 @@ async function S(e) {
     try {
         let t = (
             await d.Bo.get({
-                url: g.Rsh.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
+                url: m.Rsh.APPLICATION_DIRECTORY_EMBED_APPLICATION(e),
                 backoff: i,
                 retries: 10,
                 interceptResponse: a,
@@ -61,7 +61,7 @@ async function N(e) {
         c.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_APPLICATION", applicationId: e });
         try {
             let t = await d.Bo.get({
-                url: g.Rsh.APPLICATION_DIRECTORY_APPLICATION(e),
+                url: m.Rsh.APPLICATION_DIRECTORY_APPLICATION(e),
                 query: { locale: u.default.locale, nocache: s },
                 rejectWithError: !0,
             });
@@ -80,7 +80,7 @@ async function C() {
         t = h.A.getLastFetchTimeMs();
     if (null != t && t + 6e5 > e) return;
     let n = await d.Bo.get({
-        url: g.Rsh.APPLICATION_DIRECTORY_CATEGORIES,
+        url: m.Rsh.APPLICATION_DIRECTORY_CATEGORIES,
         query: { locale: u.default.locale },
         rejectWithError: (0, d.fT)(),
     });
@@ -101,7 +101,7 @@ async function O(e) {
         });
         try {
             let e = await d.Bo.get({
-                url: g.Rsh.APPLICATION_DIRECTORY_SIMILAR(t),
+                url: m.Rsh.APPLICATION_DIRECTORY_SIMILAR(t),
                 query: { guild_id: n, page: r, locale: u.default.locale },
                 rejectWithError: !0,
             });
@@ -138,11 +138,11 @@ async function R(e) {
             source: p = o.V.APP_DIRECTORY,
         } = i ?? {},
         T = Date.now(),
-        m = f.A.getFetchState({ query: t, guildId: n, page: a, pageSize: s, categoryId: l, integrationType: _ }),
+        g = f.A.getFetchState({ query: t, guildId: n, page: a, pageSize: s, categoryId: l, integrationType: _ }),
         { lastFetchTimeMs: S } =
             f.A.getSearchResults({ query: t, guildId: n, page: a, pageSize: s, categoryId: l, integrationType: _ }) ??
             {};
-    if (m !== f.e.FETCHING && (null == S || !(S + 6e5 > T))) {
+    if (g !== f.e.FETCHING && (null == S || !(S + 6e5 > T))) {
         c.h.dispatch({
             type: "APPLICATION_DIRECTORY_FETCH_SEARCH",
             query: t,
@@ -159,7 +159,7 @@ async function R(e) {
         });
         try {
             let e = await d.Bo.get({
-                url: g.Rsh.APPLICATION_DIRECTORY_SEARCH,
+                url: m.Rsh.APPLICATION_DIRECTORY_SEARCH,
                 query: {
                     query: t,
                     guild_id: n,
@@ -230,7 +230,7 @@ async function L() {
         c.h.dispatch({ type: "APPLICATION_DIRECTORY_FETCH_COLLECTIONS", surface: e, activeState: t });
         try {
             let n = await d.Bo.get({
-                url: g.Rsh.APPLICATION_DIRECTORY_COLLECTIONS,
+                url: m.Rsh.APPLICATION_DIRECTORY_COLLECTIONS,
                 query: {
                     surface: e,
                     active_state: t,
@@ -260,7 +260,7 @@ async function y() {
         c.h.dispatch({ type: "FETCH_INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS" });
         try {
             let e = await d.Bo.get({
-                url: g.Rsh.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS,
+                url: m.Rsh.INTEGRATION_APPLICATION_IDS_FOR_MY_GUILDS,
                 rejectWithError: (0, d.fT)(),
             });
             c.h.dispatch({

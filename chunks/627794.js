@@ -2,8 +2,8 @@ n.d(t, {
     AR: () => p,
     JJ: () => g,
     KU: () => f,
-    PZ: () => d,
-    X3: () => O,
+    PZ: () => O,
+    X3: () => d,
     ZG: () => _,
     _I: () => M,
     n3: () => T,
@@ -20,8 +20,8 @@ var r = n(168186),
     u = n(403362),
     a = n(372598),
     l = n(753738),
-    E = n(928348),
-    o = n(452245),
+    o = n(928348),
+    E = n(452245),
     s = n(243277),
     A = n(375708);
 function S(e) {
@@ -57,8 +57,8 @@ function T(e) {
     return e?.triggerType === s.uh.APPLICATION;
 }
 function M(e, t) {
-    let n = o.i$[t],
-        r = (0, o.kT)(t, e),
+    let n = E.i$[t],
+        r = (0, E.kT)(t, e),
         u = {
             id: `${e}-${t}-new-rule`,
             name: n.getDefaultRuleName(),
@@ -74,7 +74,7 @@ function M(e, t) {
             exemptRoles: new Set(),
         };
     if (R(u)) throw Error(A.intl.string(A.t["A/nX8D"]));
-    let l = (0, E.p3)(e, t);
+    let l = (0, o.p3)(e, t);
     return (l > 0 && (u.name += ` ${l + 1}`), u);
 }
 function L(e, t) {
@@ -108,7 +108,7 @@ function N(e) {
 function R(e) {
     return (0, r.hT)(e?.id ?? "INVALID_SNOWFLAKE");
 }
-function O(e) {
+function d(e) {
     switch (e) {
         case s.Mc.MESSAGE_SEND:
             return A.intl.string(A.t.NlQW4P);
@@ -118,7 +118,7 @@ function O(e) {
             return A.intl.string(A.t.SP9BBx);
     }
 }
-function d(e) {
+function O(e) {
     switch (e) {
         case s.AH.BLOCK_MESSAGE:
             return A.intl.string(A.t.d1ab8n);

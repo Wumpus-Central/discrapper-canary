@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => I, UX: () => S, dZ: () => y });
+n.d(t, { Ay: () => I, UX: () => y, dZ: () => S });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
@@ -24,7 +24,7 @@ function I(e) {
             return { header: t, disableDefaultSlideTransformStyling: n, stepProps: l };
         })(e),
         { step: a, stepConfigs: I } = (0, f.Ay)(),
-        { setBodyNode: y, setFooterNode: S, setModalOverlayNode: g } = (0, h.Gm)(),
+        { setBodyNode: S, setFooterNode: y, setModalOverlayNode: g } = (0, h.Gm)(),
         _ = (0, u.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
         { setReadySlideId: P, unifiedCheckoutFlow: A } = (0, m.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
@@ -47,9 +47,9 @@ function I(e) {
         x = a === p.pn.REVIEW,
         L = r.useCallback(
             (e, t) => {
-                t === a && y(e);
+                t === a && S(e);
             },
-            [a, y],
+            [a, S],
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -86,7 +86,7 @@ function I(e) {
                                         ),
                                     }),
                                 }),
-                          (0, l.jsx)("div", { ref: (e) => S(e) }),
+                          (0, l.jsx)("div", { ref: (e) => y(e) }),
                           (0, l.jsx)("div", {
                               ref: (e) => {
                                   g(e);
@@ -97,12 +97,12 @@ function I(e) {
         ],
     });
 }
-function y(e) {
+function S(e) {
     let { children: t } = e,
         { bodyNode: n } = (0, h.Gm)();
     return null == n ? null : a.createPortal(t, n);
 }
-function S(e) {
+function y(e) {
     let { children: t } = e,
         { footerNode: n } = (0, h.Gm)();
     return null == n ? null : a.createPortal(t, n);

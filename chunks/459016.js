@@ -3,7 +3,7 @@ let i, r, a;
     n.d(t, {
         getBoolean: () => E,
         getUserId: () => f,
-        getOptionalRoleId: () => g,
+        getOptionalRoleId: () => m,
         getOptionalString: () => S,
         getOptionalUserId: () => p,
         filterEmpty: () => _,
@@ -12,7 +12,7 @@ let i, r, a;
         getRoleId: () => T,
         normalizeNumericString: () => N,
         getInitialValuesFromInteractionOptions: () => C,
-        getString: () => m,
+        getString: () => g,
         getChannelId: () => h,
     }));
 var s = n(284009),
@@ -100,10 +100,10 @@ function T(e, t) {
         n[0].roleId
     );
 }
-function g(e, t) {
+function m(e, t) {
     return null == e[t] ? null : T(e, t);
 }
-function m(e, t) {
+function g(e, t) {
     let n = e[t],
         i = "";
     for (let e of n)
@@ -130,7 +130,7 @@ function m(e, t) {
     return i;
 }
 function S(e, t) {
-    return null == e[t] ? null : m(e, t);
+    return null == e[t] ? null : g(e, t);
 }
 function N(e, t) {
     if (e !== a) {

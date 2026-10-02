@@ -51,13 +51,13 @@ function T(e, t) {
     if (null == r) return !1;
     (delete r[t], a().isEmpty(r) && delete i[e]);
 }
-function g() {
+function m() {
     let e = u.default.getId();
     if (null == e || E.A.totalUnavailableGuilds > 0) return;
     let t = f(e);
     for (let e in t) null == _.A.getChannel(e) && delete t[e];
 }
-function m(e) {
+function g(e) {
     let {
             channel: { id: t },
         } = e,
@@ -151,7 +151,7 @@ class S extends s.Ay.PersistedStore {
 let N = new S(l.h, {
     CONNECTION_OPEN: function () {
         let e = u.default.getId();
-        return (e in I || (I[e] = {}), g(), !1);
+        return (e in I || (I[e] = {}), m(), !1);
     },
     LOGOUT: function (e) {
         e.isSwitchingAccount || (I = {});
@@ -160,10 +160,10 @@ let N = new S(l.h, {
         e.userId in I && delete I[e.userId];
     },
     GUILD_DELETE: function () {
-        return (g(), !1);
+        return (m(), !1);
     },
-    CHANNEL_DELETE: m,
-    THREAD_DELETE: m,
+    CHANNEL_DELETE: g,
+    THREAD_DELETE: g,
     THREAD_CREATE: function (e) {
         let { channel: t } = e,
             n = u.default.getId();

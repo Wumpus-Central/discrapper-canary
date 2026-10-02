@@ -41,8 +41,8 @@ function f(e) {
 }
 function p(e) {}
 function T(e) {}
-function g(e) {}
 function m(e) {}
+function g(e) {}
 function S(e) {}
 function N(e) {}
 function C(e) {}
@@ -69,8 +69,8 @@ function U(e) {}
         coerceICYMIRoute: () => N,
         coerceMainRoute: () => p,
         coerceModalRoute: () => C,
-        coerceSidebarRoute: () => g,
-        coerceTabsRoute: () => m,
+        coerceSidebarRoute: () => m,
+        coerceTabsRoute: () => g,
         getCurrentNavigationRouteName: () => D,
         getCurrentRouteParents: () => b,
         getICYMIRouteIfActive: () => P,
