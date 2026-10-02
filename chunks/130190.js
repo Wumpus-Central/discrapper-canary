@@ -12,21 +12,21 @@ var s = n(477900),
     E = n(475743),
     m = n(765548),
     A = n(274670),
-    R = n(144779),
-    _ = n(165508),
-    p = n(46054),
-    I = n(351906),
+    p = n(144779),
+    I = n(165508),
+    R = n(46054),
+    _ = n(351906),
     x = n(287809),
     h = n(957565),
     q = n(240248),
     N = n(859703),
     f = n(738822),
-    g = n(104886),
+    w = n(104886),
     y = n(3738),
     D = n(866157),
     T = n(975807),
-    v = n(396813),
-    w = n(18437),
+    g = n(396813),
+    v = n(18437),
     L = n(590202),
     j = n(971649),
     k = n(801365),
@@ -37,11 +37,11 @@ var s = n(477900),
     b = n(190107),
     P = n(375708),
     U = n(50026);
-function F(e) {
+function W(e) {
     let { rewardCode: t, questContent: n, questId: r, sourceQuestContent: o, className: u, inputClassName: l } = e,
-        C = (0, i.bG)([I.A], () => I.A.hidePersonalInformation),
-        E = (0, w.Ut)(),
-        m = (0, j.go)();
+        C = (0, i.bG)([_.A], () => _.A.hidePersonalInformation),
+        E = (0, v.Ut)(),
+        m = (0, j.wW)();
     return null == t
         ? null
         : (0, s.jsx)(c.A, {
@@ -51,15 +51,15 @@ function F(e) {
               buttonColor: d.XD.PRIMARY,
               onCopy: () => {
                   (C && (0, h.C)(t.code),
-                      (0, g.E5)(g.kI.STEP_2_CLICKED_INTERNAL, "quest_reward_code_copy_input")
+                      (0, w.E5)(w.kI.STEP_2_CLICKED_INTERNAL, "quest_reward_code_copy_input")
                           ? (0, A.r)({
-                                type: R.F.CLICK_INTERNAL,
+                                type: p.F.CLICK_INTERNAL,
                                 adCreativeType: a.p.QUEST,
                                 adCreativeId: r,
                                 questContentCTA: L.Cy.COPY_REWARD_CODE,
                                 surfaceId: n,
                                 sourceQuestContent: o,
-                                impressionId: m,
+                                impressionId: m(),
                             })
                           : E({
                                 questId: r,
@@ -70,7 +70,7 @@ function F(e) {
               },
           });
 }
-function K(e) {
+function F(e) {
     let {
             quest: t,
             questContent: n,
@@ -87,31 +87,31 @@ function K(e) {
             let n = d?.code;
             return (0, q.uJ)(n) ? e : e.replace(b.mg, encodeURIComponent(n));
         }, [t, d?.code]),
-        _ = (function (e) {
+        I = (function (e) {
             let { quest: t, redemptionLink: n, questContent: s, questContentPosition: i, sourceQuestContent: o } = e,
-                d = (0, w.Ut)(),
-                u = (0, j.go)();
+                d = (0, v.Ut)(),
+                u = (0, j.wW)();
             return r.useCallback(() => {
                 null != n &&
-                    ((0, g.E5)(g.kI.STEP_2_CLICKED_INTERNAL, "quest_reward_code_redemption_link")
+                    ((0, w.E5)(w.kI.STEP_2_CLICKED_INTERNAL, "quest_reward_code_redemption_link")
                         ? ((0, A.r)({
-                              type: R.F.CLICK_INTERNAL,
+                              type: p.F.CLICK_INTERNAL,
                               adCreativeType: a.p.QUEST,
                               adCreativeId: t.id,
                               questContentCTA: L.Cy.REDEEM_REWARD,
                               surfaceId: s,
                               sourceQuestContent: o,
-                              impressionId: u,
+                              impressionId: u(),
                               questContentPosition: i,
                           }),
                           (0, A.r)({
-                              type: R.F.CLICK_INTERNAL,
+                              type: p.F.CLICK_INTERNAL,
                               adCreativeType: a.p.QUEST,
                               adCreativeId: t.id,
                               questContentCTA: L.Cy.VISIT_REDEMPTION_LINK,
                               surfaceId: s,
                               sourceQuestContent: o,
-                              impressionId: u,
+                              impressionId: u(),
                               questContentPosition: i,
                           }))
                         : (d({
@@ -138,7 +138,7 @@ function K(e) {
             title: P.intl.string(P.t.NkZ7OU),
             actions: [
                 null != m
-                    ? { variant: "primary", text: P.intl.string(P.t["+zx47d"]), onClick: _ }
+                    ? { variant: "primary", text: P.intl.string(P.t["+zx47d"]), onClick: I }
                     : { variant: "primary", text: P.intl.string(P.t["/g10LC"]), onClick: l },
             ],
             preview: (0, s.jsxs)(s.Fragment, {
@@ -149,7 +149,7 @@ function K(e) {
                         className: U.V6,
                         children: P.intl.string(P.t.srzsU2),
                     }),
-                    (0, s.jsx)(F, { rewardCode: d, questContent: n, questId: t.id, sourceQuestContent: i }),
+                    (0, s.jsx)(W, { rewardCode: d, questContent: n, questId: t.id, sourceQuestContent: i }),
                 ],
             }),
             onClose: l,
@@ -158,12 +158,12 @@ function K(e) {
                 variant: "text-sm/medium",
                 color: "text-default",
                 className: U.tG,
-                children: p.A.parse(E, !1, { allowLinks: !0 }),
+                children: R.A.parse(E, !1, { allowLinks: !0 }),
             }),
         }),
     });
 }
-function W(e) {
+function K(e) {
     let { quest: t, questContent: n, rewardCode: r, sourceQuestContent: a, onClaimInstructions: i } = e;
     return (0, s.jsxs)("div", {
         className: U.hQ,
@@ -194,7 +194,7 @@ function W(e) {
                     }),
                 ],
             }),
-            (0, s.jsx)(F, {
+            (0, s.jsx)(W, {
                 className: U.DA,
                 rewardCode: r,
                 questContent: n,
@@ -212,10 +212,10 @@ function z(e) {
         o,
         { initialQuest: d, onClose: u, transitionState: l, sourceQuestContent: c } = e,
         A = (0, D.C5)(d.id) ?? d,
-        R = f.uF.REWARD_MODAL,
-        p = (0, i.bG)([x.default], () => x.default.getCurrentUser()),
+        p = f.uF.REWARD_MODAL,
+        R = (0, i.bG)([x.default], () => x.default.getCurrentUser()),
         {
-            rewardCode: I,
+            rewardCode: _,
             isFetchingRewardCode: h,
             isClaimingReward: q,
         } = (0, i.cf)([N.A], () => ({
@@ -223,7 +223,7 @@ function z(e) {
             isFetchingRewardCode: N.A.isFetchingRewardCode(A.id),
             isClaimingReward: N.A.isClaimingReward(A.id),
         })),
-        { hasError: g, setHasError: y } = (function (e) {
+        { hasError: w, setHasError: y } = (function (e) {
             let {
                     isClaimingReward: t,
                     isFetchingRewardCode: n,
@@ -236,14 +236,14 @@ function z(e) {
                 [l, C] = r.useState(!1),
                 c = r.useCallback(async (e, t, n) => {
                     try {
-                        (C(!0), await (0, v.Oq)(e, t, n), u(!1), C(!1));
+                        (C(!0), await (0, g.Oq)(e, t, n), u(!1), C(!1));
                     } catch (e) {
                         (u(!0), C(!1));
                     }
                 }, []),
                 E = r.useCallback((e) => {
                     try {
-                        (0, v.jh)(e);
+                        (0, g.jh)(e);
                     } catch (e) {
                         u(!0);
                     }
@@ -263,18 +263,18 @@ function z(e) {
                 }, [c, E, d, t, l, n, s, a, i, o]),
                 { claimCode: c, fetchCode: E, hasError: d, setHasError: u }
             );
-        })({ isClaimingReward: q, isFetchingRewardCode: h, quest: A, questContent: R, rewardCode: I });
+        })({ isClaimingReward: q, isFetchingRewardCode: h, quest: A, questContent: p, rewardCode: _ });
     ((t = (0, m.A)(() => {
         y(!0);
     })),
-        (n = _.default.useIsCaptchaModalOpen()),
+        (n = I.default.useIsCaptchaModalOpen()),
         (a = (0, E.Ay)(n)),
         (o = !!(!n && a)),
         r.useEffect(() => {
             o && t();
         }, [o, t]));
-    let T = null == I && (h || q),
-        w = g && !q && !h;
+    let T = null == _ && (h || q),
+        v = w && !q && !h;
     return (0, s.jsx)(Q.A, {
         onClose: u,
         transitionState: l,
@@ -282,15 +282,15 @@ function z(e) {
         sourceQuestContent: c,
         location: b.rE.REWARD_CODE_MODAL,
         isRewardContentLoading: T,
-        rewardContentHasError: w,
-        rewardContent: w
+        rewardContentHasError: v,
+        rewardContent: v
             ? null
             : (0, s.jsx)(M.A, {
-                  rewardName: (0, k.mq)(A.config, p),
-                  children: (0, s.jsx)(W, {
+                  rewardName: (0, k.mq)(A.config, R),
+                  children: (0, s.jsx)(K, {
                       quest: A,
-                      questContent: R,
-                      rewardCode: I,
+                      questContent: p,
+                      rewardCode: _,
                       sourceQuestContent: c,
                       onClaimInstructions: () => {
                           (0, C.openModalLazy)(
@@ -298,16 +298,16 @@ function z(e) {
                                   Promise.resolve((e) =>
                                       (0, s.jsx)(O.R, {
                                           questOrQuests: A,
-                                          questContent: R,
+                                          questContent: p,
                                           sourceQuestContent: c,
                                           children: (t) =>
-                                              (0, s.jsx)(K, {
+                                              (0, s.jsx)(F, {
                                                   ...e,
                                                   impressionRef: t,
                                                   quest: A,
-                                                  questContent: R,
+                                                  questContent: p,
                                                   sourceQuestContent: c,
-                                                  rewardCode: I,
+                                                  rewardCode: _,
                                               }),
                                       }),
                                   ),

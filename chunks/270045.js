@@ -45,7 +45,7 @@ function V(e) {
         V = (0, L.vy)(e.questContent),
         G = [w.uF.QUEST_BAR_V2, w.uF.QUEST_BAR].includes(e.questContent),
         k = (0, M.Ut)(),
-        Z = (0, q.go)(),
+        Z = (0, q.wW)(),
         Q = (0, O.wr)(e.quest),
         B = !0 === e.showShareLink && (0, D.E0)(e.quest.config),
         {
@@ -69,10 +69,9 @@ function V(e) {
                     content: e.questContent,
                     position: e.questContentPosition,
                     ctaContent: x.Cy.CONTEXT_MENU_COPY_LINK,
-                    impressionId: Z,
                     sourceQuestContent: e.sourceQuestContent,
                 }),
-                [e.questContent, e.questContentPosition, e.sourceQuestContent, Z],
+                [e.questContent, e.questContentPosition, e.sourceQuestContent],
             ),
         });
     function ee(e) {
@@ -180,7 +179,7 @@ function V(e) {
                                               questContentCTA: x.Cy.CONTEXT_MENU_LEARN_MORE,
                                               surfaceId: e.questContent,
                                               sourceQuestContent: e.sourceQuestContent,
-                                              impressionId: Z,
+                                              impressionId: Z(),
                                               questContentPosition: e.questContentPosition,
                                           })
                                         : k({
@@ -206,7 +205,7 @@ function V(e) {
                                             content: e.questContent,
                                             position: e.questContentPosition,
                                             ctaContent: x.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
-                                            impressionId: Z,
+                                            impressionId: Z(),
                                             sourceQuestContent: e.sourceQuestContent,
                                         },
                                         e.returnRef,
@@ -226,7 +225,7 @@ function V(e) {
                                               questContentCTA: x.Cy.CONTEXT_MENU_HIDE_CONTENT,
                                               surfaceId: e.questContent,
                                               sourceQuestContent: e.sourceQuestContent,
-                                              impressionId: Z,
+                                              impressionId: Z(),
                                               questContentPosition: e.questContentPosition,
                                           })
                                         : k({
@@ -315,7 +314,7 @@ function G(e) {
             ...E
         } = e,
         _ = (0, M.Ut)(),
-        C = (0, q.go)(),
+        C = (0, q.wW)(),
         h = i.useRef(null),
         A = i.useCallback(() => {
             ((0, R.E5)(R.kI.STEP_2_CLICKED_INTERNAL, "quest_entry_context_menu_popout")
@@ -326,7 +325,7 @@ function G(e) {
                       questContentCTA: x.Cy.OPEN_CONTEXT_MENU,
                       surfaceId: u,
                       sourceQuestContent: d,
-                      impressionId: C,
+                      impressionId: C(),
                       questContentPosition: c,
                   })
                 : _({

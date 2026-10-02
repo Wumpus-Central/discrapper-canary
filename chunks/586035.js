@@ -77,13 +77,8 @@ function q(t) {
         isShareable: x,
         questId: e.id,
         trackingCtx: n.useMemo(
-            () => ({
-                content: m.uF.REWARD_MODAL,
-                ctaContent: _.Cy.REWARD_MODAL_COPY_LINK,
-                impressionId: u,
-                sourceQuestContent: i,
-            }),
-            [u, i],
+            () => ({ content: m.uF.REWARD_MODAL, ctaContent: _.Cy.REWARD_MODAL_COPY_LINK, sourceQuestContent: i }),
+            [i],
         ),
     });
     return (0, s.jsxs)("div", {

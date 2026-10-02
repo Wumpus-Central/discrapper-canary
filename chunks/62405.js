@@ -16,16 +16,16 @@ var s = r(477900),
     R = r(607470),
     _ = r(287809),
     E = r(104886),
-    g = r(192444),
-    x = r(426110),
+    x = r(192444),
+    I = r(426110),
     N = r(291749),
-    I = r(18437),
+    g = r(18437),
     p = r(590202),
     h = r(971649),
     j = r(801365),
     v = r(557637),
-    y = r(415441),
-    w = r(734736),
+    w = r(415441),
+    y = r(734736),
     q = r(617986),
     M = r(139384),
     L = r(375708),
@@ -36,22 +36,22 @@ let Q = function (e) {
             className: r,
             quest: i,
             autoplay: Q = !0,
-            learnMoreStyle: S = null,
-            learnMoreFontSize: W,
+            learnMoreStyle: W = null,
+            learnMoreFontSize: S,
             sourceQuestContent: k,
             lazyLoad: D = !1,
             fullWidth: P = !1,
             style: V,
             location: U,
         } = e,
-        Y = (0, I.Ut)(),
-        G = (0, h.go)(),
+        Y = (0, g.Ut)(),
+        G = (0, h.wW)(),
         z = (0, o.bG)([C.Ay], () => C.Ay.useReducedMotion),
         B = (0, o.bG)([_.default], () => _.default.getCurrentUser()),
         H = (function (e, t) {
-            let { useNewTile: r } = g.aD.useConfig({ location: t }),
-                { enabled: s } = g.LV.useConfig({ location: t }),
-                n = (0, o.bG)([_.default], () => (0, x.Q)(e, _.default.getCurrentUser()));
+            let { useNewTile: r } = x.aD.useConfig({ location: t }),
+                { enabled: s } = x.LV.useConfig({ location: t }),
+                n = (0, o.bG)([_.default], () => (0, I.Q)(e, _.default.getCurrentUser()));
             return r || s ? n : void 0;
         })(i.config, U),
         K = n.useMemo(
@@ -76,7 +76,7 @@ let Q = function (e) {
                               questContentCTA: p.Cy.REWARD_LEARN_MORE,
                               surfaceId: e.questContent,
                               sourceQuestContent: k,
-                              impressionId: G,
+                              impressionId: G(),
                               questContentPosition: e.questContentPosition,
                           })
                         : Y({
@@ -112,10 +112,10 @@ let Q = function (e) {
     )
         t = (0, s.jsx)(v._M, {
             id: "QuestRewardTile_rewardTileNitro",
-            children: (e) => (0, s.jsx)(w.A, { ref: e, className: b.eB }),
+            children: (e) => (0, s.jsx)(y.A, { ref: e, className: b.eB }),
         });
     else if (D)
-        t = (0, s.jsx)(y.N, {
+        t = (0, s.jsx)(w.N, {
             showVideo: Q,
             imageAsset:
                 null != F
@@ -159,7 +159,7 @@ let Q = function (e) {
             children: (t) =>
                 (0, s.jsx)("img", { ref: t, alt: K, className: l()(b.eB, b.Qz), src: X.url, onLoad: e.onLoadComplete }),
         });
-    return null == S
+    return null == W
         ? (0, s.jsx)("div", { className: l()(b.al, r, { [b.Ij]: P }), style: V, children: t })
         : (0, s.jsxs)(c.D, {
               className: l()(b.a$, b.al, b.Yi, r, { [b.Ij]: P }),
@@ -167,15 +167,15 @@ let Q = function (e) {
               style: V,
               children: [
                   t,
-                  "text" === S &&
+                  "text" === W &&
                       (0, s.jsx)(d.E, {
                           color: "text-overlay-light",
                           variant: "text-xs/normal",
                           className: b.n_,
-                          style: { fontSize: W },
+                          style: { fontSize: S },
                           children: L.intl.format(L.t.DYAleT, {}),
                       }),
-                  "icon" === S &&
+                  "icon" === W &&
                       (0, s.jsx)("div", {
                           className: b.n_,
                           children: (0, s.jsx)(m.CircleInformationIcon, { size: "xxs", color: f.A.colors.WHITE.css }),

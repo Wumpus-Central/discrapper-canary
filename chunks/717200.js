@@ -128,13 +128,12 @@ var E = s(815021),
 function I(e) {
     let { quest: t, questContent: s, sourceQuestContent: l, onClose: a } = e,
         r = (0, q.E0)(t.config),
-        c = (0, g.go)(),
-        o = (0, A.Lk)({
+        c = (0, A.Lk)({
             isShareable: r,
             questId: t.id,
             trackingCtx: n.useMemo(
-                () => ({ content: s, ctaContent: L.Cy.COPY_QUEST_URL, impressionId: c, sourceQuestContent: l }),
-                [s, l, c],
+                () => ({ content: s, ctaContent: L.Cy.COPY_QUEST_URL, sourceQuestContent: l }),
+                [s, l],
             ),
         });
     return (0, i.jsxs)("div", {
@@ -146,7 +145,7 @@ function I(e) {
                     variant: "overlay-secondary",
                     icon: _.LinkIcon,
                     "aria-label": y.intl.string(y.t.WqhZss),
-                    onClick: o,
+                    onClick: c,
                 }),
             (0, i.jsx)(E.J, { size: "sm", variant: "overlay-secondary", onClick: a }),
         ],

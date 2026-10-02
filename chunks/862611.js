@@ -16,11 +16,11 @@ var i,
     C = n(274670),
     _ = n(144779),
     S = n(429913),
-    T = n(409626),
-    I = n(921138),
+    I = n(409626),
+    T = n(921138),
     N = n(459746),
-    h = n(311043),
-    p = n(569926),
+    p = n(311043),
+    h = n(569926),
     L = n(363195),
     R = n(174459),
     v = n(738822),
@@ -95,11 +95,11 @@ function j(e) {
 function Q(e) {
     let { quest: t, game: i, sourceQuestContent: a, onGameProfileModalOpen: o, onGameProfileModalClose: c } = e,
         f = (0, x.Ut)(),
-        E = (0, M.go)(),
+        E = (0, M.wW)(),
         S = (0, u.bG)([A.Ay], () => A.Ay.useReducedMotion),
-        I = l.useRef(null),
-        h = null != i.gameRecord;
-    function p() {
+        T = l.useRef(null),
+        p = null != i.gameRecord;
+    function h() {
         (0, G.E5)(G.kI.STEP_3_CLICKED_EXTERNAL, "game_sheet_external")
             ? (0, C.r)({
                   type: _.F.CLICK_EXTERNAL_ADVERTISER_CTA,
@@ -108,6 +108,7 @@ function Q(e) {
                   questContentCTA: P.Cy.GAME_STORE_OPEN_GAME_LINK,
                   surfaceId: v.uF.SPONSORED_QUEST_SHEET,
                   sourceQuestContent: a,
+                  impressionId: E(),
               })
             : f({
                   questId: t.id,
@@ -117,7 +118,7 @@ function Q(e) {
               });
     }
     async function L() {
-        h &&
+        p &&
             ((0, G.E5)(G.kI.STEP_2_CLICKED_INTERNAL, "game_sheet_application")
                 ? (0, C.r)({
                       type: _.F.CLICK_INTERNAL,
@@ -126,7 +127,7 @@ function Q(e) {
                       questContentCTA: P.Cy.GAME_PROFILE_OPEN,
                       surfaceId: v.uF.SPONSORED_QUEST_SHEET,
                       sourceQuestContent: a,
-                      impressionId: E,
+                      impressionId: E(),
                   })
                 : f({
                       questId: t.id,
@@ -794,8 +795,8 @@ function Q(e) {
                     return (t) =>
                         (0, r.jsx)(e, {
                             gameId: i.gameId,
-                            source: T.GameProfileSources.GameSheet,
-                            trackExternalAction: p,
+                            source: I.GameProfileSources.GameSheet,
+                            trackExternalAction: h,
                             ...t,
                         });
                 },
@@ -805,18 +806,18 @@ function Q(e) {
     }
     let R = l.useCallback(
             (e) => {
-                if (null == I.current || S) return;
-                let t = I.current.getBoundingClientRect(),
+                if (null == T.current || S) return;
+                let t = T.current.getBoundingClientRect(),
                     n = e.clientX - t.left,
                     i = e.clientY - t.top,
                     r = t.width / 2,
                     l = t.height / 2;
-                I.current.style.transform = `rotateX(${-(((i - l) / l) * 15)}deg) rotateY(${((n - r) / r) * 15}deg)`;
+                T.current.style.transform = `rotateX(${-(((i - l) / l) * 15)}deg) rotateY(${((n - r) / r) * 15}deg)`;
             },
             [S],
         ),
         O = l.useCallback(() => {
-            null == I.current || S || (I.current.style.transform = "rotateX(0deg) rotateY(0deg)");
+            null == T.current || S || (T.current.style.transform = "rotateX(0deg) rotateY(0deg)");
         }, [S]);
     return (0, r.jsx)(g.m, {
         text: i.name,
@@ -826,7 +827,7 @@ function Q(e) {
             onMouseMove: R,
             onMouseLeave: O,
             children: (0, r.jsx)("div", {
-                ref: I,
+                ref: T,
                 className: U._M,
                 children:
                     null != i.gameRecord
@@ -877,14 +878,14 @@ function F(e) {
     } = e;
     (0, S.A)(i);
     let f = l.useMemo(() => i, [i]);
-    (0, p.x)(f);
-    let g = (0, u.bG)([h.A], () => f.some((e) => h.A.isFetching(e))),
-        E = (0, u.bG)([h.A], () => f.some((e) => h.A.didFetchingFail(e))),
-        A = (0, u.yK)([h.A], () =>
+    (0, h.x)(f);
+    let g = (0, u.bG)([p.A], () => f.some((e) => p.A.isFetching(e))),
+        E = (0, u.bG)([p.A], () => f.some((e) => p.A.didFetchingFail(e))),
+        A = (0, u.yK)([p.A], () =>
             f
-                .map((e) => h.A.getGame(e))
+                .map((e) => p.A.getGame(e))
                 .filter((e) => null != e)
-                .filter((e) => (0, I.oS)(e.id))
+                .filter((e) => (0, T.oS)(e.id))
                 .slice(0, 10),
         ),
         C = l.useMemo(() => A.map((e) => ({ gameId: e.id, name: e.name, gameRecord: e })).slice(0, 10), [A]),
@@ -892,8 +893,8 @@ function F(e) {
             let e = C.length;
             return e <= 4 ? 4 - e : 5 === e ? 0 : e <= 8 ? 8 - e : 10 - e;
         }, [C.length]),
-        T = !g && 0 === C.length,
-        N = E || T;
+        I = !g && 0 === C.length,
+        N = E || I;
     if (
         (l.useEffect(() => {
             if (N) {
@@ -964,14 +965,14 @@ function X(e) {
         } = e,
         [m, g] = l.useState(!1),
         A = (0, x.Ut)(),
-        S = (0, M.go)(),
-        T = l.useRef(null),
-        I = t?.current != null,
-        N = I ? t : T;
-    function h() {
+        S = (0, M.wW)(),
+        I = l.useRef(null),
+        T = t?.current != null,
+        N = T ? t : I;
+    function p() {
         g(!0);
     }
-    function p() {
+    function h() {
         g(!1);
     }
     return (0, r.jsx)(E.Y, {
@@ -985,8 +986,8 @@ function X(e) {
                 onClose: t,
                 sourceQuestContent: d,
                 impressionRef: f,
-                onGameProfileModalOpen: h,
-                onGameProfileModalClose: p,
+                onGameProfileModalOpen: p,
+                onGameProfileModalClose: h,
             });
         },
         onRequestOpen: function () {
@@ -999,7 +1000,7 @@ function X(e) {
                           questContentCTA: P.Cy.SPONSORED_QUEST_SHEET,
                           surfaceId: d,
                           sourceQuestContent: d,
-                          impressionId: S,
+                          impressionId: S(),
                       })
                     : A({
                           questId: c.id,
@@ -1012,12 +1013,12 @@ function X(e) {
             if (m) return a.o;
             o?.();
         },
-        position: I ? "right" : "top",
-        align: I ? "bottom" : void 0,
+        position: T ? "right" : "top",
+        align: T ? "bottom" : void 0,
         spacing: 20,
         scrollBehavior: "close",
         ignoreModalClicks: !0,
-        children: (e) => i(e, T),
+        children: (e) => i(e, I),
     });
 }
 let V = function (e) {

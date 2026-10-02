@@ -1,44 +1,44 @@
-a.d(e, { D: () => S });
-var u = a(582128),
-    i = a(323889),
-    s = a(274670),
-    c = a(144779),
-    n = a(793574),
-    l = a(815996),
-    C = a(104886),
-    _ = a(18437),
-    d = a(590202),
-    r = a(971649),
-    o = a(801365),
-    E = a(518293),
-    p = a(617986),
-    A = a(369189),
-    T = a(758836);
-function S(t) {
+i.d(e, { D: () => I });
+var s = i(582128),
+    a = i(323889),
+    u = i(274670),
+    c = i(144779),
+    n = i(793574),
+    l = i(815996),
+    d = i(104886),
+    r = i(18437),
+    C = i(590202),
+    _ = i(971649),
+    o = i(801365),
+    E = i(518293),
+    p = i(617986),
+    A = i(369189),
+    T = i(758836);
+function I(t) {
     let {
             quest: e,
-            questContent: a,
-            sourceQuestContent: S,
-            questContentPosition: I,
-            questContentRowIndex: f,
-            shouldRedirectToQuestHome: k = !0,
-            shouldShowShopIfAlreadyClaimed: m = !0,
+            questContent: i,
+            sourceQuestContent: I,
+            questContentPosition: S,
+            questContentRowIndex: m,
+            shouldRedirectToQuestHome: f = !0,
+            shouldShowShopIfAlreadyClaimed: k = !0,
             onBeforeClaim: O,
             onCloseModal: L,
         } = t,
-        y = e.userStatus?.completedAt != null && e.userStatus?.claimedAt == null && k,
-        N = (0, _.Ut)(),
-        g = (0, r.go)(),
-        h = (0, E.ix)({
+        y = e.userStatus?.completedAt != null && e.userStatus?.claimedAt == null && f,
+        N = (0, r.Ut)(),
+        h = (0, _.wW)(),
+        M = (0, E.ix)({
             quest: e,
-            questContent: a,
-            questContentPosition: I,
-            questContentRowIndex: f,
-            sourceQuestContent: S,
+            questContent: i,
+            questContentPosition: S,
+            questContentRowIndex: m,
+            sourceQuestContent: I,
         });
-    return u.useCallback(
+    return s.useCallback(
         (t) => {
-            if ((null != t && O?.(t), m && (0, o.ks)(e.config) && e.userStatus?.claimedAt != null)) {
+            if ((null != t && O?.(t), k && (0, o.ks)(e.config) && e.userStatus?.claimedAt != null)) {
                 (L?.(), (0, l.Cz)({ tab: T.G2.ORBS, analyticsLocations: [], analyticsSource: n.A.QUEST_HOME_PAGE }));
                 return;
             }
@@ -46,30 +46,30 @@ function S(t) {
                 (L?.(),
                 (0, o.K9)(e.config) ||
                     (0, A.p)() ||
-                    ((0, C.E5)(C.kI.STEP_2_CLICKED_INTERNAL, "completed_quest_claim_click")
-                        ? (0, s.r)({
+                    ((0, d.E5)(d.kI.STEP_2_CLICKED_INTERNAL, "completed_quest_claim_click")
+                        ? (0, u.r)({
                               type: c.F.CLICK_INTERNAL,
-                              adCreativeType: i.p.QUEST,
+                              adCreativeType: a.p.QUEST,
                               adCreativeId: e.id,
-                              questContentCTA: d.Cy.OPEN_QUEST_HOME_TO_CLAIM,
-                              surfaceId: a,
-                              sourceQuestContent: S,
-                              impressionId: g,
-                              questContentPosition: I,
-                              questContentRowIndex: f,
+                              questContentCTA: C.Cy.OPEN_QUEST_HOME_TO_CLAIM,
+                              surfaceId: i,
+                              sourceQuestContent: I,
+                              impressionId: h(),
+                              questContentPosition: S,
+                              questContentRowIndex: m,
                           })
                         : N({
                               questId: e.id,
-                              questContent: a,
-                              questContentCTA: d.Cy.OPEN_QUEST_HOME_TO_CLAIM,
-                              sourceQuestContent: S,
-                              questContentPosition: I,
-                              questContentRowIndex: f,
+                              questContent: i,
+                              questContentCTA: C.Cy.OPEN_QUEST_HOME_TO_CLAIM,
+                              sourceQuestContent: I,
+                              questContentPosition: S,
+                              questContentRowIndex: m,
                           }),
-                    (0, p.mA)({ fromContent: a }))),
+                    (0, p.mA)({ fromContent: i }))),
                 !y && (0, o.K9)(e.config) && L?.(),
-                h());
+                M());
         },
-        [O, L, e.config, e.userStatus?.claimedAt, h, m, y, e.id, a, S, I, f, N, g],
+        [O, L, e.config, e.userStatus?.claimedAt, M, k, y, e.id, i, I, S, m, N, h],
     );
 }

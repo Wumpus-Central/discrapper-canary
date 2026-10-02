@@ -2414,39 +2414,33 @@ function n6(e) {
         T = (0, n3.c)({ onMenuOpen: _, onMenuClose: N }),
         O = (0, nf.Pd)(n),
         I = O === nf.UA.EXPIRED || O === nf.UA.EXPIRED_CLAIMED,
-        R = (0, tm.go)(),
-        b = (0, tf.E0)(n.config),
-        M = (0, E.bG)([tX.A], () => tX.A.theme),
-        L = M === ef.NJ8.ASH || M === ef.NJ8.DARK,
-        Q = M === ef.NJ8.LIGHT,
-        H = i.useContext(eq.X),
-        { visibilityElementRef: y, almostVisibleInViewport: U } = (0, n5.I)(
-            H?.current?.getScrollerNode() ?? null,
+        R = (0, tf.E0)(n.config),
+        b = (0, E.bG)([tX.A], () => tX.A.theme),
+        M = b === ef.NJ8.ASH || b === ef.NJ8.DARK,
+        L = b === ef.NJ8.LIGHT,
+        Q = i.useContext(eq.X),
+        { visibilityElementRef: H, almostVisibleInViewport: y } = (0, n5.I)(
+            Q?.current?.getScrollerNode() ?? null,
             m ?? !1,
         ),
         {
-            handleHoverStart: D,
-            handleHoverEnd: F,
-            isEventWithinParent: P,
+            handleHoverStart: U,
+            handleHoverEnd: D,
+            isEventWithinParent: F,
         } = (0, n4.B)({ quest: n, questContent: s, contentPosition: c, rowIndex: d, sourceQuestContent: x }),
-        q = (0, tD.Lk)({
-            isShareable: b,
+        P = (0, tD.Lk)({
+            isShareable: R,
             questId: n.id,
             trackingCtx: i.useMemo(
-                () => ({
-                    content: s,
-                    ctaContent: ea.Cy.CONTEXT_MENU_COPY_LINK,
-                    impressionId: R,
-                    sourceQuestContent: x,
-                }),
-                [s, x, R],
+                () => ({ content: s, ctaContent: ea.Cy.CONTEXT_MENU_COPY_LINK, sourceQuestContent: x }),
+                [s, x],
             ),
         }),
-        k = (0, nm.A)(h, y),
-        w = ew.intl.formatToPlainString(ew.t.EAYZAr, { questName: n.config.messages.questName }),
-        B = o()(n7.kL, { [n7.Cn]: A, [n7.DM]: p }, u),
-        V = (0, r.jsx)(n2.A, {
-            showPlaceholder: !U,
+        q = (0, nm.A)(h, H),
+        k = ew.intl.formatToPlainString(ew.t.EAYZAr, { questName: n.config.messages.questName }),
+        w = o()(n7.kL, { [n7.Cn]: A, [n7.DM]: p }, u),
+        B = (0, r.jsx)(n2.A, {
+            showPlaceholder: !y,
             width: 800,
             height: 450,
             className: n7.Tv,
@@ -2467,10 +2461,10 @@ function n6(e) {
                 showVideo: C || !0 === a,
             }),
         }),
-        G = A
+        V = A
             ? (0, r.jsxs)(r.Fragment, {
                   children: [
-                      V,
+                      B,
                       (0, r.jsx)(n3.q.Provider, {
                           value: T,
                           children: (0, r.jsx)(n8, {
@@ -2478,8 +2472,8 @@ function n6(e) {
                               questContent: s,
                               sourceQuestContent: x,
                               isHovering: p,
-                              isShareable: b,
-                              onCopyShareLink: q,
+                              isShareable: R,
+                              onCopyShareLink: P,
                               onMenuOpen: _,
                               onMenuClose: N,
                               contentPosition: c,
@@ -2490,15 +2484,15 @@ function n6(e) {
               })
             : (0, r.jsxs)(r.Fragment, {
                   children: [
-                      V,
+                      B,
                       (0, r.jsx)("div", { className: o()(n7.sL, { [n7.Mq]: I }) }),
-                      Q
+                      L
                           ? (0, r.jsx)(em.N, {
                                 theme: ef.NJ8.ONYX,
                                 disableAdaptiveTheme: !0,
                                 children: (e) => (0, r.jsx)("div", { className: o()(e, n7.f5) }),
                             })
-                          : (0, r.jsx)("div", { className: o()(n7.f5, { [n7.kg]: L }) }),
+                          : (0, r.jsx)("div", { className: o()(n7.f5, { [n7.kg]: M }) }),
                       (0, r.jsxs)("div", {
                           className: n7.qy,
                           children: [
@@ -2554,23 +2548,23 @@ function n6(e) {
         "data-quest-tile": A ? "featured-v2" : "standard",
         "data-quest-tile-hovered": p ? "" : void 0,
         onMouseEnter: () => {
-            (S.onMouseEnter(), D());
+            (S.onMouseEnter(), U());
         },
         onMouseLeave: () => {
-            (S.onMouseLeave(), F());
+            (S.onMouseLeave(), D());
         },
         onFocus: (e) => {
-            P(e) || (S.onFocus(), D());
+            F(e) || (S.onFocus(), U());
         },
         onBlur: (e) => {
-            P(e) || (S.onBlur(), F());
+            F(e) || (S.onBlur(), D());
         },
         children: (0, r.jsx)("article", {
-            ref: k,
-            "aria-label": w,
+            ref: q,
+            "aria-label": k,
             style: { "--custom-featured-tile-width": "291px" },
-            className: B,
-            children: G,
+            className: w,
+            children: V,
         }),
     });
 }

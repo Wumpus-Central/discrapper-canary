@@ -8,16 +8,16 @@ var n = s(477900),
     u = s(821609),
     c = s(834730),
     d = s(192308),
-    C = s(43990),
-    I = s(131607),
+    I = s(43990),
+    C = s(131607),
     m = s(625180),
     N = s(363195),
     T = s(396813),
     A = s(859703),
     E = s(738822),
     x = s(759366),
-    _ = s(3738),
-    p = s(866157),
+    p = s(3738),
+    _ = s(866157),
     h = s(590202),
     j = s(639214),
     f = s(43105),
@@ -58,8 +58,8 @@ function M(e) {
     let { quest: t, questDescription: s, completedRatio: a, minimizeFrame: l, onClose: r } = e,
         o = (0, Y.GV)(),
         d = (0, F.Ut)(),
-        C = (0, Q.go)(),
-        I = i.useCallback(() => {
+        I = (0, Q.wW)(),
+        C = i.useCallback(() => {
             ((0, V.E5)(V.kI.STEP_2_CLICKED_INTERNAL, "quest_activity_header_popout")
                 ? (0, U.r)({
                       type: b.F.CLICK_INTERNAL,
@@ -68,7 +68,7 @@ function M(e) {
                       questContentCTA: h.Cy.LEARN_MORE,
                       surfaceId: E.uF.RUNNING_ACTIVITY,
                       sourceQuestContent: E.uF.RUNNING_ACTIVITY,
-                      impressionId: C,
+                      impressionId: I(),
                   })
                 : d({
                       questId: t.id,
@@ -79,7 +79,7 @@ function M(e) {
                 (0, D.mA)({ fromContent: E.uF.RUNNING_ACTIVITY, questId: t.id }),
                 l(),
                 r());
-        }, [t.id, d, C, l, r]);
+        }, [t.id, d, I, l, r]);
     return (0, n.jsxs)(y.l, {
         className: L.kL,
         "aria-labelledby": o,
@@ -127,7 +127,7 @@ function M(e) {
                 text: R.intl.string(R.t["th2+0j"]),
                 variant: "secondary",
                 size: "md",
-                onClick: I,
+                onClick: C,
             }),
         ],
     });
@@ -139,18 +139,18 @@ var P = s(262254),
     $ = s(391803);
 function K(e) {
     let { quest: t, ...s } = e,
-        a = (0, p.fc)(t),
-        d = (0, _.mU)({
+        a = (0, _.fc)(t),
+        d = (0, p.mU)({
             quest: t,
             taskDetails: a,
             location: z.rE.QUEST_ACTIVITY_HEADER,
             sourceQuestContent: E.uF.RUNNING_ACTIVITY,
         }),
-        [C, N] = i.useState(!1),
+        [I, N] = i.useState(!1),
         A = i.useRef(null),
         x = i.useRef(null),
-        [j, f] = (0, I.kn)([l.M.QUEST_ACTIVITY_HEADER_INTRO], void 0, !0),
-        { completedRatio: g, completedRatioDisplay: y, percentComplete: q } = (0, p.O9)(t, !0),
+        [j, f] = (0, C.kn)([l.M.QUEST_ACTIVITY_HEADER_INTRO], void 0, !0),
+        { completedRatio: g, completedRatioDisplay: y, percentComplete: q } = (0, _.O9)(t, !0),
         S = i.useCallback(() => {
             "frame" === s.type && m.A.updateFrameLayoutMode({ frameId: s.frameId, layoutMode: O.y0.PIP });
         }, [s]),
@@ -184,7 +184,7 @@ function K(e) {
                                     questContent: E.uF.QUEST_ACTIVITY_HEADER,
                                     sourceQuestContent: E.uF.RUNNING_ACTIVITY,
                                     className: $.Qf,
-                                    autoplay: C,
+                                    autoplay: I,
                                 }),
                             }),
                             (0, n.jsx)(o.Y, {
@@ -295,7 +295,7 @@ function Z(e) {
     }, [r, o, c]),
     null == r)
         ? null
-        : (0, n.jsx)(C.N, {
+        : (0, n.jsx)(I.N, {
               theme: l,
               children: (t) =>
                   (0, n.jsx)("div", {
