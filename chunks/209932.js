@@ -1,4 +1,4 @@
-(n.d(t, { A: () => V }), n(321073));
+(n.d(t, { A: () => H }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(536637),
@@ -52,26 +52,28 @@ function G(e) {
         ? ((n[i] = t), S.set(t.guildId, [...n]))
         : null != n && (n?.push(t), S.set(t.guildId, [...n]));
 }
-let x = r().debounce((e, t) => {
-    (A.default.track(g.HAw.UPDATE_SOUNDBOARD_SETTINGS, {
-        volume: Math.round((0, h.M)(e)),
-        location_stack: t,
-        voice_guild_id: _.A.getGuildId() ?? null,
-    }),
-        c.dG.updateSetting({ volume: e }));
-}, 1e3);
-function k() {
+let x = r().debounce((e) => {
+        c.dG.updateSetting({ volume: e });
+    }, 1e3),
+    k = r().debounce((e, t) => {
+        A.default.track(g.HAw.UPDATE_SOUNDBOARD_SETTINGS, {
+            volume: Math.round((0, h.M)(e)),
+            location_stack: t,
+            voice_guild_id: _.A.getGuildId() ?? null,
+        });
+    }, 1e3);
+function F() {
     w = c.dG.getSetting()?.volume === 0;
 }
-function F(e) {
+function B(e) {
     let t = e?.audioContextSettings?.user ?? {};
     for (let [e, n] of Object.entries(t)) n.soundboardMuted ? O.add(e) : O.delete(e);
     for (let e of O.keys()) null == t[e] && O.delete(e);
 }
-class B extends l.Ay.Store {
+class V extends l.Ay.Store {
     static displayName = "SoundboardStore";
     initialize() {
-        (this.waitFor(_.A, p.A, u.A, E.default), F(u.A.settings), k());
+        (this.waitFor(_.A, p.A, u.A, E.default), B(u.A.settings), F());
     }
     getOverlaySerializedState() {
         return {
@@ -158,7 +160,7 @@ class B extends l.Ay.Store {
         return 1 === L || 1 === R;
     }
 }
-let V = new B(o.h, {
+let H = new V(o.h, {
     LOGOUT: function () {
         (S.clear(),
             N.clear(),
@@ -201,7 +203,7 @@ let V = new B(o.h, {
     USER_SOUNDBOARD_SET_VOLUME: function (e) {
         let { volume: t, location: n } = e,
             i = w;
-        ((w = 0 === t), x(t, n), i !== w && x.flush());
+        ((w = 0 === t), x(t), k(t, n), i !== w && x.flush());
     },
     SOUNDBOARD_TRACK_USAGE: function (e) {
         let { soundId: t } = e;
@@ -228,7 +230,7 @@ let V = new B(o.h, {
                         ));
                 break;
             case m.oD.PRELOADED_USER_SETTINGS:
-                (F(a), k());
+                (B(a), F());
         }
     },
     SOUNDBOARD_FETCH_DEFAULT_SOUNDS: function () {
