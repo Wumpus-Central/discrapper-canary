@@ -67,19 +67,13 @@ function B(t) {
                 }),
             [i],
         ),
-        { node: _ } = (0, o.Ay)(d, ""),
-        { isContributing: m } = (0, g.MX)(i);
-    return (
-        s.useEffect(() => {
-            m && a();
-        }, [m, a]),
-        (0, n.jsx)(l.a, {
-            transitionState: u,
-            onClose: a,
-            title: h.intl.string(b.default.WhdCGP),
-            subtitle: h.intl.formatToPlainString(T.default.BeCUHZ, { widgetName: e }),
-            actions: [],
-            children: (0, n.jsx)("div", { className: S.W, children: (0, n.jsx)(r.A, { node: _ }) }),
-        })
-    );
+        { node: _ } = (0, o.Ay)(d, "");
+    return (0, n.jsx)(l.a, {
+        transitionState: u,
+        onClose: a,
+        title: h.intl.string(b.default.WhdCGP),
+        subtitle: h.intl.formatToPlainString(T.default.BeCUHZ, { widgetName: e }),
+        actions: [],
+        children: (0, n.jsx)("div", { className: S.W, children: (0, n.jsx)(r.A, { node: _ }) }),
+    });
 }
