@@ -853,6 +853,35 @@
     color: var(--text-muted)
 }
 
+header.headerCollapsed_a99111 {
+    border-bottom: none;
+    border-radius: var(--radius-md)
+}
+
+.trailing_a99111 {
+    gap: var(--space-4)
+}
+
+.toggle_a99111,
+.trailing_a99111 {
+    align-items: center;
+    display: flex
+}
+
+.toggle_a99111 {
+    border-radius: var(--radius-xs);
+    color: var(--icon-muted);
+    justify-content: center
+}
+
+.toggle_a99111:hover {
+    color: var(--icon-strong)
+}
+
+.body_a99111[hidden] {
+    display: none
+}
+
 .body_af6837 {
     gap: var(--space-16);
     overflow-wrap: anywhere;
@@ -1091,4 +1120,4 @@
     margin-top: var(--space-4)
 }
 
-/*# sourceMappingURL=b481dd64e42e0d37.css.map*/
+/*# sourceMappingURL=12388a8b92688ae5.css.map*/

@@ -1,8 +1,5 @@
 e.exports = {
     Nr: "card__97796",
-    RG: "headerCollapsed__97796",
-    ZY: "trailing__97796",
-    L$: "toggle__97796",
     rf: "body__97796",
     p_: "list__97796",
     AS: "item__97796",

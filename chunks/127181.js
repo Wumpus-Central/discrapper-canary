@@ -724,6 +724,13 @@ let n = [
             "Plan cards now say Conjure it! on the button, with a reminder beside it that you can tell Conjure what to change.",
     },
     {
+        date: "2026-10-01",
+        time: "18:28",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Plan feedback gets you a fresh plan card that says what changed, and the older plan folds up so you can still open it.",
+    },
+    {
         date: "2026-08-31",
         time: "00:03",
         platforms: ["desktop", "mobile"],

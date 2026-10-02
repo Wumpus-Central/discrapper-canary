@@ -147,7 +147,7 @@ function eS() {
         ],
     });
 }
-var eP = a(776525);
+var eP = a(823436);
 function eE(e) {
     let { className: t, ariaLabel: a, disabled: s, onClick: i, children: o } = e;
     return (0, n.jsx)(k.D, { "aria-disabled": s, "aria-label": a, className: t, onClick: s ? void 0 : i, children: o });
@@ -278,7 +278,7 @@ let e9 = [
     { value: "user", icon: e6.UserIcon, nameMessage: Q.default.iqXIRN },
     { value: "guild", icon: e1.R, nameMessage: Q.default.LdgKdI },
 ];
-function e7(e) {
+function e8(e) {
     let { importing: t, onImport: a } = e,
         i = s.useRef(null),
         o = e2(s.useCallback((e) => a(e, "user"), [a])),
@@ -339,7 +339,7 @@ function e7(e) {
         ],
     });
 }
-var e8 = a(379307),
+var e7 = a(379307),
     e3 = a(629584),
     e5 = a(753514),
     e4 = a(491920);
@@ -851,10 +851,10 @@ var t6 = a(165610),
 function t9(e) {
     return (0, n.jsx)(c.ChatIcon, { ...e, size: "custom", width: 20, height: 20 });
 }
-function t7(e) {
+function t8(e) {
     return (0, n.jsx)(p.u, { ...e, size: "custom", width: 20, height: 20 });
 }
-function t8(e) {
+function t7(e) {
     return (0, n.jsx)(h.k, { ...e, size: "custom", width: 20, height: 20 });
 }
 let t3 = {
@@ -1322,14 +1322,14 @@ function t4(e) {
         e6 = (0, eh.Ay)(M, e0),
         e1 = e6?.intent === "open" && "channel" === e6.destination ? e6.appChannelId : null,
         e9 = (0, u.bG)([q.A], () => (null == e1 ? null : q.A.getChannel(e1)), [e1]),
-        e7 = (0, G.Ay)(e9),
-        e8 = (0, z.gU)(e9),
+        e8 = (0, G.Ay)(e9),
+        e7 = (0, z.gU)(e9),
         e3 =
-            null != e7 && null != e8
+            null != e8 && null != e7
                 ? J.intl.format(Q.default.W95rrI, {
-                      channel: e7,
+                      channel: e8,
                       channelIconHook: (e, t) =>
-                          (0, n.jsx)(e8, { size: "xs", color: "currentColor", className: t1.Y2 }, t),
+                          (0, n.jsx)(e7, { size: "xs", color: "currentColor", className: t1.Y2 }, t),
                   })
                 : e6?.label,
         e5 = e6?.upToDate === !0 ? J.intl.string(Q.default["5U1fkv"]) : (e6?.disabledReason ?? null),
@@ -1362,7 +1362,7 @@ function t4(e) {
                           children: [
                               en.showModeSwitch ? (0, n.jsx)(te, { modes: en.modes, mode: ei, onChange: eo }) : null,
                               (0, n.jsx)(V.A.Icon, {
-                                  icon: eR ? t8 : t7,
+                                  icon: eR ? t7 : t8,
                                   tooltip: eM,
                                   "aria-label": eM,
                                   selected: eR,
@@ -1929,7 +1929,7 @@ function ae(e) {
                                                                 }),
                                                   })
                                                 : null,
-                                            (0, n.jsx)(e8.A, {
+                                            (0, n.jsx)(e7.A, {
                                                 settings: v ?? ee.v0,
                                                 tiers: ee.qf,
                                                 choices: (0, ei.e)()
@@ -1974,7 +1974,7 @@ function ae(e) {
                                 (0, n.jsxs)("div", {
                                     className: t1.Ss,
                                     children: [
-                                        (0, n.jsx)(e7, { importing: H, onImport: L }),
+                                        (0, n.jsx)(e8, { importing: H, onImport: L }),
                                         (0, n.jsx)(V.A.Icon, { icon: M.P, tooltip: eR, "aria-label": eR, onClick: eT }),
                                     ],
                                 }),
