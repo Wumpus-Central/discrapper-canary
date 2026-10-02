@@ -68,8 +68,8 @@ function C() {
 var y = l(562073),
     T = l(189213),
     k = l(192308),
-    R = l(502901),
-    w = l(61567),
+    w = l(650179),
+    R = l(61567),
     D = l(375708),
     M = l(397462);
 function L(e) {
@@ -99,7 +99,7 @@ function L(e) {
                                 className: M.BU,
                                 children: (0, n.jsx)(p.jV, {
                                     iconSize: "xs",
-                                    "aria-label": D.intl.formatToPlainString(w.default.NV85DR, { widgetName: l }),
+                                    "aria-label": D.intl.formatToPlainString(R.default.NV85DR, { widgetName: l }),
                                 }),
                             }),
                         null != i && (0, n.jsx)("div", { className: M.gr, children: i }),
@@ -133,7 +133,7 @@ function L(e) {
                                 "aria-label":
                                     "" === l
                                         ? D.intl.string(D.t.Mm07Yc)
-                                        : D.intl.formatToPlainString(w.default.hmNYxk, { widgetName: l }),
+                                        : D.intl.formatToPlainString(R.default.hmNYxk, { widgetName: l }),
                                 disabled: r,
                                 onClick: f,
                             }),
@@ -187,7 +187,7 @@ function G(e) {
                             (0, n.jsx)(x.E, {
                                 variant: "text-md/semibold",
                                 color: "text-default",
-                                children: D.intl.formatToPlainString(w.default.G5zCGV, { widgetName: t }),
+                                children: D.intl.formatToPlainString(R.default.G5zCGV, { widgetName: t }),
                             }),
                             null != l &&
                                 l > 0 &&
@@ -204,7 +204,7 @@ function G(e) {
                                         (0, n.jsx)(x.E, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
-                                            children: D.intl.format(w.default["8wD0Un"], { boostPrice: l }),
+                                            children: D.intl.format(R.default["8wD0Un"], { boostPrice: l }),
                                         }),
                                     ],
                                 }),
@@ -238,7 +238,7 @@ function P(e) {
             disabled: o = !1,
             lock: u,
         } = e,
-        m = R.m[l.type],
+        m = w.m[l.type],
         x = i.useCallback(() => {
             m?.Edit != null &&
                 null != d &&

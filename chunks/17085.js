@@ -44,6 +44,6 @@ function p(e) {
     let { guildId: t, useGuildSharingTitle: l } = e;
     return [d._, h(t, { useTitle: l, useDisabled: () => !r.tz.useSetting() }), c._];
 }
-(l(502901), l(562073), l(299285), l(539888));
+(l(650179), l(562073), l(299285), l(539888));
 var _ = l(851612);
 (l(477900), l(661531), l(914173));
