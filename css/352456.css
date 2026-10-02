@@ -847,8 +847,7 @@
     height: 120px;
     max-width: 100%;
     -o-object-fit: contain;
-    object-fit: contain;
-    width: 120px
+    object-fit: contain
 }
 
 .badgeGraphicAnimated__6f97a {
@@ -1134,4 +1133,4 @@
     margin-top: var(--space-16)
 }
 
-/*# sourceMappingURL=352456.564ed30d41cc1a53.css.map*/
+/*# sourceMappingURL=352456.5f7c0d49f7fc8eff.css.map*/
