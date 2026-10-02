@@ -909,14 +909,14 @@ function eJ(e) {
 }
 var e0 = n(789645),
     e1 = n(81466),
-    e7 = n(842241),
+    e7 = n(21599),
     e2 = n(279208),
     e4 = n(747007),
     e9 = n(710358),
     e5 = n(958590),
     e3 = n(174459),
-    e8 = n(957565),
-    e6 = n(673707);
+    e6 = n(957565),
+    e8 = n(673707);
 let { INVITE_OPTIONS_7_DAYS: te, INVITE_OPTIONS_UNLIMITED: tt } = I.Ay;
 function tn(e) {
     let { onClose: t, event: n } = e,
@@ -940,47 +940,47 @@ function tn(e) {
         v = c?.maxAge ?? te.value,
         f = c?.maxUses ?? tt.value;
     return (0, i.jsxs)("div", {
-        className: e6.kL,
+        className: e8.kL,
         children: [
             (0, i.jsx)(y.D, {
                 onClick: t,
-                className: e6.VN,
+                className: e8.VN,
                 "aria-label": ec.intl.string(ec.t.cpT0Cq),
                 children: (0, i.jsx)(e0.P, { size: "md", color: "currentColor" }),
             }),
             (0, i.jsx)(e9.A, {
                 children: (0, i.jsx)("div", {
-                    className: e6.zc,
+                    className: e8.zc,
                     children: (0, i.jsx)(e1.CalendarIcon, {
                         size: "custom",
                         color: "currentColor",
                         height: 30,
                         width: 30,
-                        className: e6.Kk,
+                        className: e8.Kk,
                         "aria-label": ec.intl.string(ec.t.uxFcqu),
                     }),
                 }),
             }),
             (0, i.jsx)(K.D, {
                 variant: "heading-xl/semibold",
-                className: e6.wx,
+                className: e8.wx,
                 children: ec.intl.string(ec.t.UzNv7u),
             }),
             (0, i.jsx)(g.E, {
                 variant: "text-md/normal",
                 color: "text-default",
-                className: e6.rf,
+                className: e8.rf,
                 children: ec.intl.string(ec.t.UetJjH),
             }),
             (0, i.jsxs)("div", {
-                className: e6.EZ,
+                className: e8.EZ,
                 children: [
                     (0, i.jsx)(e4.I, {
                         value: m,
                         autoFocus: !1,
                         onCopy: function (e) {
                             if (null == n || h) return;
-                            (0, e8.C)(e);
+                            (0, e6.C)(e);
                             let t = (0, P.dy)(n.entity_type);
                             e3.default.track(eu.HAw.COPY_INSTANT_INVITE, {
                                 server: n.guild_id,
@@ -996,7 +996,7 @@ function tn(e) {
                         (0, i.jsx)(g.E, {
                             variant: "text-xs/normal",
                             color: "text-default",
-                            className: e6.x6,
+                            className: e8.x6,
                             children: (0, I.Be)(v, f),
                         }),
                 ],

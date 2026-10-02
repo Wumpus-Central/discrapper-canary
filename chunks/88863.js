@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 628375, Version Hash: 918f7e48e8bd1257e06cde2202c67af77b18013d`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 628381, Version Hash: 35e71ab1ceae3a24714abd3e7528216b1acb3277`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -22107,7 +22107,7 @@ let C_ = "isHideDevBanner",
                     className: to()(Cu.Wz, Cu.mr),
                     children: [
                         (0, y.jsx)(Cc, { className: Cu.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "628375" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "628381" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -33933,7 +33933,7 @@ class ve extends nt.A {
     }
 }
 let vt = new ve();
-var vn = n(842241),
+var vn = n(21599),
     vi = n(684013),
     vr = n(55619),
     va = n(367513);
