@@ -6,7 +6,7 @@ var i,
     l = n(486020),
     o = n(149790),
     d = n(652215),
-    c = (((i = {}).GUILD = "GUILD"), (i.APPLICATION = "APPLICATION"), i);
+    c = (((i = {}).GUILD = "GUILD"), (i.APPLICATION = "APPLICATION"), (i.PACK = "PACK"), i);
 async function u(e) {
     let t = null;
     try {
@@ -15,7 +15,9 @@ async function u(e) {
         ).body;
         n?.type === "GUILD"
             ? (t = { guild: _.createFromServer(n.guild), type: n.type })
-            : n?.type === "APPLICATION" && (t = { application: E.createFromServer(n.application), type: n.type });
+            : n?.type === "APPLICATION"
+              ? (t = { application: E.createFromServer(n.application), type: n.type })
+              : n?.type === "PACK" && (t = { type: n.type });
     } catch {}
     return t;
 }

@@ -1,16 +1,29 @@
-n.d(t, { O: () => r, u: () => a });
+n.d(t, { O: () => d, u: () => u });
 var l,
     i = n(624793),
-    s = n(375708),
-    a = (((l = {}).GET_PREMIUM = "GET_PREMIUM"), (l.JOIN_GUILD = "JOIN_GUILD"), (l.UNAVAILABLE = "UNAVAILABLE"), l);
-function r(e) {
+    s = n(975571),
+    a = n(652215),
+    r = n(375708),
+    o = n(732447),
+    u = (((l = {}).GET_PREMIUM = "GET_PREMIUM"), (l.JOIN_GUILD = "JOIN_GUILD"), (l.UNAVAILABLE = "UNAVAILABLE"), l);
+function d(e) {
+    if (e.sourceType === i.rV.PACK)
+        return {
+            type: "UNAVAILABLE",
+            text: null,
+            description: null,
+            emojiDescription: r.intl.format(o.default["/jdd/7"], {
+                helpdeskArticle: s.A.getArticleURL(a.MVz.NITRO_EMOJI_PACKS),
+            }),
+            analyticsType: "Custom Emoji Popout (Nitro Emoji Pack)",
+        };
     let t = (function (e) {
             let {
                 sourceType: t,
                 expressionSourceApplication: n,
                 isPremium: l,
-                hasJoinedEmojiSourceGuild: a,
-                isUnusableRoleSubscriptionEmoji: r,
+                hasJoinedEmojiSourceGuild: s,
+                isUnusableRoleSubscriptionEmoji: a,
                 isDiscoverable: o,
                 emojiComesFromCurrentGuild: u,
                 userIsRoleSubscriber: d,
@@ -19,36 +32,36 @@ function r(e) {
                 onOpenPremiumSettings: x,
             } = e;
             return t === i.rV.APPLICATION && null != n
-                ? s.intl.formatToPlainString(s.t.uERlTd, { appName: n.name })
+                ? r.intl.formatToPlainString(r.t.uERlTd, { appName: n.name })
                 : l
-                  ? a
+                  ? s
                       ? c
-                          ? m && r
-                              ? s.intl.string(s.t.xFb68j)
-                              : r
+                          ? m && a
+                              ? r.intl.string(r.t.xFb68j)
+                              : a
                                 ? d
-                                    ? s.intl.string(s.t.vLklfF)
-                                    : s.intl.string(s.t["g8i/bf"])
-                                : s.intl.string(s.t.Eoynp0)
+                                    ? r.intl.string(r.t.vLklfF)
+                                    : r.intl.string(r.t["g8i/bf"])
+                                : r.intl.string(r.t.Eoynp0)
                           : u
-                            ? s.intl.string(s.t.hU4kIe)
-                            : s.intl.string(s.t.GM0xaX)
+                            ? r.intl.string(r.t.hU4kIe)
+                            : r.intl.string(r.t.GM0xaX)
                       : o
-                        ? s.intl.string(s.t.xE9WGt)
-                        : s.intl.string(s.t["0LMpW+"])
-                  : a
-                    ? m && r
-                        ? s.intl.string(s.t.xFb68j)
-                        : r
+                        ? r.intl.string(r.t.xE9WGt)
+                        : r.intl.string(r.t["0LMpW+"])
+                  : s
+                    ? m && a
+                        ? r.intl.string(r.t.xFb68j)
+                        : a
                           ? d
-                              ? s.intl.string(s.t.vLklfF)
-                              : s.intl.string(s.t["g8i/bf"])
+                              ? r.intl.string(r.t.vLklfF)
+                              : r.intl.string(r.t["g8i/bf"])
                           : u
-                            ? s.intl.string(s.t.ICPhqa)
-                            : s.intl.string(s.t.jQy3aM)
+                            ? r.intl.string(r.t.ICPhqa)
+                            : r.intl.string(r.t.jQy3aM)
                     : o
-                      ? s.intl.string(s.t.FJ6Z01)
-                      : s.intl.format(s.t.U6vLcA, { openPremiumSettings: x });
+                      ? r.intl.string(r.t.FJ6Z01)
+                      : r.intl.format(r.t.U6vLcA, { openPremiumSettings: x });
         })(e),
         n = (function (e) {
             let {
@@ -82,11 +95,11 @@ function r(e) {
                     isUnusableRoleSubscriptionEmoji: l,
                     isDiscoverable: i,
                 } = e,
-                a = !n && i;
-            return t && a
-                ? { type: "JOIN_GUILD", text: s.intl.string(s.t.riu2R5), description: null }
-                : !t && ((n && !l) || a)
-                  ? { type: "GET_PREMIUM", text: s.intl.string(s.t["gl/XHJ"]), description: null }
+                s = !n && i;
+            return t && s
+                ? { type: "JOIN_GUILD", text: r.intl.string(r.t.riu2R5), description: null }
+                : !t && ((n && !l) || s)
+                  ? { type: "GET_PREMIUM", text: r.intl.string(r.t["gl/XHJ"]), description: null }
                   : { type: "UNAVAILABLE", text: null, description: null };
         })(e),
         emojiDescription: t,

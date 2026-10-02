@@ -242,7 +242,7 @@ function eA(e) {
         R)
     )
         return null;
-    let y = s && (void 0 !== d || void 0 !== h);
+    let y = s && T;
     return (0, i.jsxs)("div", {
         children: [
             y

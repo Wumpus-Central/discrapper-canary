@@ -175,25 +175,26 @@ function k(e) {
                 Y((e, o) => {
                     if (!o) return null;
                     let d = (0, n.jsx)(l.lG, {
-                        ...u,
-                        setDialogRef: r,
-                        modal: S,
-                        className: s()(null != E ? C.popoverContentWithGradient : C.popover, {
-                            [C["popover--video"]]: N,
+                            ...u,
+                            setDialogRef: r,
+                            modal: S,
+                            className: s()(null != E ? C.popoverContentWithGradient : C.popover, {
+                                [C["popover--video"]]: N,
+                            }),
+                            returnRef: A,
+                            children: (0, n.jsx)(b.Provider, { value: er, children: t }),
                         }),
-                        returnRef: A,
-                        children: (0, n.jsx)(b.Provider, { value: er, children: t }),
-                    });
-                    return (0, n.jsx)(i.animated.div, {
-                        ref: K,
-                        "data-mana-component": "popover",
-                        style: {
+                        f = {
                             ...e,
                             "--custom-caret-edge-offset-horizontal": "20px",
                             "--custom-caret-edge-offset-vertical": "22px",
                             "--custom-caret-edge-offset-horizontal-nudge": `${a}px`,
                             "--custom-popover-width": "240px",
-                        },
+                        };
+                    return (0, n.jsx)(i.animated.div, {
+                        ref: K,
+                        "data-mana-component": "popover",
+                        style: f,
                         children:
                             null != E
                                 ? (0, n.jsx)(c.h, {
