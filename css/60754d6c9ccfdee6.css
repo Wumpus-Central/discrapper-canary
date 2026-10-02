@@ -852,9 +852,11 @@
 }
 
 .imageUploaderInnerSquare_bbb935 {
+    aspect-ratio: 16/9;
     background-size: cover;
     border-radius: var(--radius-xs);
-    height: 163px;
+    height: auto;
+    max-width: 100%;
     width: 279px
 }
 
@@ -870,4 +872,4 @@
     background-image: url(/assets/b00e3f0a7090b61f.svg)
 }
 
-/*# sourceMappingURL=7e85d81fde221122.css.map*/
+/*# sourceMappingURL=60754d6c9ccfdee6.css.map*/
