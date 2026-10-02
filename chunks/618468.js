@@ -104,7 +104,11 @@ var D = n(406935),
         (i[(i.REQUIRE = 3)] = "REQUIRE"),
         (i[(i.ASSIGNMENT = 4)] = "ASSIGNMENT"),
         i),
-    b = (((r = {})[(r.REGULAR = 0)] = "REGULAR"), (r[(r.HOLDOUT = 1)] = "HOLDOUT"), r);
+    b =
+        (((r = {})[(r.REGULAR = 0)] = "REGULAR"),
+        (r[(r.HOLDOUT = 1)] = "HOLDOUT"),
+        (r[(r.ROLLOUT = 2)] = "ROLLOUT"),
+        r);
 class M extends C.G {
     constructor() {
         super("discord_protos.discord_experimentation.v1.Rule", [
