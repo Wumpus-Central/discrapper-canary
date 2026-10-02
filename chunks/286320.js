@@ -1,49 +1,52 @@
-i.d(t, { b: () => d });
+i.d(t, { b: () => o });
 var n = i(582128),
     a = i(17928),
-    s = i(73153);
-let r = { fetched: !1, fetching: !1, affinities: [] };
+    r = i(73153);
+let s = { fetched: !1, fetching: !1, affinities: [] };
 class c extends a.Ay.Store {
     get hasFetched() {
-        return r.fetched;
+        return s.fetched;
     }
     get isFetching() {
-        return r.fetching;
+        return s.fetching;
     }
     get affinities() {
-        return r.affinities;
+        return s.affinities;
     }
 }
-let l = new c(s.h, {
+let l = new c(r.h, {
     BILLING_PREMIUM_AFFINITY_FETCH_START: function (e) {
         let {} = e;
-        r.fetching = !0;
+        s.fetching = !0;
     },
     BILLING_PREMIUM_AFFINITY_FETCHED: function (e) {
         let {} = e;
-        ((r.fetched = !0), (r.fetching = !1));
+        ((s.fetched = !0), (s.fetching = !1));
     },
     BILLING_PREMIUM_AFFINITY_FETCH_SUCCEEDED: function (e) {
         let { res: t } = e;
-        r.affinities = t;
+        s.affinities = t;
     },
     LOGOUT: function () {
-        ((r.fetched = !1), (r.fetching = !1), (r.affinities = []));
+        ((s.fetched = !1), (s.fetching = !1), (s.affinities = []));
     },
 });
 var h = i(636537),
     f = i(889227),
-    I = i(652215);
-async function u() {
-    s.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCH_START" });
+    I = i(739508),
+    u = i(652215);
+async function d() {
+    r.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCH_START" });
     try {
-        let e = await h.Bo.get({ url: I.Rsh.BILLING_NITRO_AFFINITY, rejectWithError: !0 });
-        s.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCH_SUCCEEDED", res: e.body.map((e) => new f.A(e)) });
+        let e = await h.Bo.get({ url: u.Rsh.BILLING_NITRO_AFFINITY, rejectWithError: !0 });
+        r.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCH_SUCCEEDED", res: e.body.map((e) => new f.A(e)) });
+    } catch (e) {
+        (0, I.gr)(e) || (0, I.pM)(e);
     } finally {
-        s.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCHED" });
+        r.h.dispatch({ type: "BILLING_PREMIUM_AFFINITY_FETCHED" });
     }
 }
-function d() {
+function o() {
     let {
         affinities: e,
         hasFetched: t,
@@ -51,7 +54,7 @@ function d() {
     } = (0, a.cf)([l], () => ({ affinities: l.affinities, hasFetched: l.hasFetched, isFetching: l.isFetching }));
     return (
         n.useEffect(() => {
-            t || i || u();
+            t || i || d();
         }, [t, i]),
         e
     );
