@@ -282,7 +282,7 @@ var eJ = s(652215),
     e0 = s(303682),
     e1 = s(162907);
 let e2 =
-    "https://cdn.discordapp.com/assets/content/f94d752e86f195c300db953fbe5c704cbf0c696dcbb0b3e389cd60e8a633a942.png";
+    "https://cdn.discordapp.com/assets/content/01b59abb547be615663f35e014507bfdc731692561a1f9630ffc040cf6beae29.png";
 var e3 = s(188828);
 let e7 =
     "https://cdn.discordapp.com/assets/content/ceb223833c25175aadddac32ce46fd1c60f4455860c6be9017c8d5993dce01c9.png";
@@ -2111,7 +2111,7 @@ function s7(e) {
     let { alt: t, ariaLabel: s, ariaHidden: i, role: n, width: a = 288, height: l = 162 } = e;
     return (0, c.jsx)("img", {
         style: { width: a, height: l },
-        src: "https://cdn.discordapp.com/assets/content/a0a5fdb2c9735632e0cadb26af7aa33929c63981e559ef0337cacced2cab2d09.svg",
+        src: "https://cdn.discordapp.com/assets/content/2d617cf5c40353ca4ec6ac76e1a48f6781439c18db06b8cfab0f194358abe555.svg",
         alt: t,
         "aria-label": s,
         "aria-hidden": i,

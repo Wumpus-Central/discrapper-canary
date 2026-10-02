@@ -666,7 +666,7 @@ let e_ = function (e) {
                             }),
                             (0, i.jsx)("img", {
                                 className: eT._e,
-                                src: "https://cdn.discordapp.com/assets/content/a049ba02a320347da76cabc59784a03df55c86b8d1baf507fda1c4400c4d9282.svg",
+                                src: "https://cdn.discordapp.com/assets/content/efeacb8d071bbb7b10c84697c8bc5a3a47ec44a77d2d3adbdfc2d85aa766338c.svg",
                                 alt: "",
                                 draggable: !1,
                             }),
