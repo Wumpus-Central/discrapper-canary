@@ -529,7 +529,7 @@ function eS() {
     (em(et.Gd.ACTIVITY_POPOUT_WINDOW), o.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }));
 }
 async function eN(e, t) {
-    let n = {};
+    let n = { use_stateless_ticket: !0 };
     return (
         null != t && (n.channel_id = t),
         (await s.Bo.post({ url: en.Rsh.APPLICATION_PROXY_TICKET(e), body: n, rejectWithError: !0 })).body.ticket
