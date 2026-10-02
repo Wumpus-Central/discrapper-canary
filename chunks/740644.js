@@ -25,7 +25,7 @@ class n {
     }
     static getAppVersion() {
         try {
-            return "628331";
+            return "628333";
         } catch {
             return "unknown";
         }
