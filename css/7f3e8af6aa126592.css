@@ -192,6 +192,10 @@
     text-align: start
 }
 
+.reminderSeparated__2b71e {
+    padding-top: var(--space-12)
+}
+
 .createForm_a57d27 {
     display: flex;
     flex-direction: column;
@@ -1120,4 +1124,4 @@ header.headerCollapsed_a99111 {
     margin-top: var(--space-4)
 }
 
-/*# sourceMappingURL=12388a8b92688ae5.css.map*/
+/*# sourceMappingURL=7f3e8af6aa126592.css.map*/

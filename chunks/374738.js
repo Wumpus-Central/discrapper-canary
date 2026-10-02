@@ -71,7 +71,7 @@ var n = a(477900),
     eb = a(74029),
     ew = a(559676),
     ek = a(58551),
-    ev = a(215181),
+    ev = a(84442),
     ej = a(805332);
 function ex(e) {
     let { idea: t, installScope: a, submitting: n } = e;
@@ -148,7 +148,7 @@ function eP() {
         ],
     });
 }
-var eE = a(823436);
+var eE = a(788878);
 function eT(e) {
     let { className: t, ariaLabel: a, disabled: s, onClick: i, children: o } = e;
     return (0, n.jsx)(k.D, { "aria-disabled": s, "aria-label": a, className: t, onClick: s ? void 0 : i, children: o });
@@ -341,12 +341,12 @@ function e3(e) {
     });
 }
 var e7 = a(379307),
-    e5 = a(629584),
-    e4 = a(753514),
+    e4 = a(629584),
+    e5 = a(753514),
     te = a(491920);
 function tt(e) {
     let { modes: t, mode: a, onChange: i, className: l } = e,
-        r = s.useMemo(() => t.map((e) => ({ value: e, name: (0, e4.kZ)(e), "aria-controls": (0, e4.z3)(e) })), [t]),
+        r = s.useMemo(() => t.map((e) => ({ value: e, name: (0, e5.kZ)(e), "aria-controls": (0, e5.z3)(e) })), [t]),
         d = s.useCallback(
             (e) => {
                 i(e.value);
@@ -355,7 +355,7 @@ function tt(e) {
         );
     return null == a
         ? null
-        : (0, n.jsx)(e5.I, {
+        : (0, n.jsx)(e4.I, {
               role: "tablist",
               look: "pill",
               className: o()(te.b, l),
@@ -851,8 +851,8 @@ function t3(e) {
     return `VibegrationsProjectsPanel:${e}`;
 }
 var t7 = a(165610),
-    t5 = a(352978);
-function t4(e) {
+    t4 = a(352978);
+function t5(e) {
     return (0, n.jsx)(c.ChatIcon, { ...e, size: "custom", width: 20, height: 20 });
 }
 function ae(e) {
@@ -1027,15 +1027,15 @@ function an(e) {
                 [I, S],
             )),
         q = s.useId(),
-        K = (0, n.jsx)(b.E, { variant: "text-md/semibold", color: "text-strong", className: t5.j1, children: N.name }),
+        K = (0, n.jsx)(b.E, { variant: "text-md/semibold", color: "text-strong", className: t4.j1, children: N.name }),
         X =
             null == z
                 ? (0, n.jsx)("div", {
-                      className: t5.a8,
+                      className: t4.a8,
                       "aria-hidden": !0,
                       children: (0, n.jsx)(w.k, { size: "custom", width: 20, height: 20, color: "var(--icon-muted)" }),
                   })
-                : (0, n.jsx)("img", { alt: "", src: z, className: t5.VJ }),
+                : (0, n.jsx)("img", { alt: "", src: z, className: t4.VJ }),
         Z = (0, ev.lE)(N.id),
         et = {
             projectId: N.id,
@@ -1049,13 +1049,13 @@ function an(e) {
             onImport: R.onImport,
         };
     return (0, n.jsxs)("div", {
-        className: o()(t5.OY, { [t5.Wy]: H }),
+        className: o()(t4.OY, { [t4.Wy]: H }),
         "aria-busy": H,
         children: [
             (0, n.jsx)(tL.Ay, { projectId: N.id }),
-            null == Z || H ? null : (0, n.jsx)("div", { className: t5.SB, "aria-hidden": !0 }),
+            null == Z || H ? null : (0, n.jsx)("div", { className: t4.SB, "aria-hidden": !0 }),
             (0, n.jsxs)(k.D, {
-                className: t5.W6,
+                className: t4.W6,
                 onClick: H ? void 0 : E,
                 onContextMenu: function (e) {
                     H || (0, D.jA)(e, () => (0, n.jsx)(tj, { ...et, onCloseMenu: D.Z_ }));
@@ -1065,17 +1065,17 @@ function an(e) {
                 children: [
                     X,
                     (0, n.jsxs)("div", {
-                        className: t5.MM,
+                        className: t4.MM,
                         children: [
                             (0, n.jsxs)("div", {
-                                className: t5.Ub,
+                                className: t4.Ub,
                                 children: [
                                     null != Y ? (0, n.jsx)(v.m, { text: Y.label, ariaHidden: !0, children: K }) : K,
-                                    null == Y || H ? null : (0, n.jsx)(tT, { creator: Y, className: t5.rb }),
+                                    null == Y || H ? null : (0, n.jsx)(tT, { creator: Y, className: t4.rb }),
                                     Z !== d.I.NEEDS_INPUT || H
                                         ? null
                                         : (0, n.jsxs)("div", {
-                                              className: t5.fs,
+                                              className: t4.fs,
                                               children: [
                                                   (0, n.jsx)(V.A, { mentionsCount: 1 }),
                                                   (0, n.jsx)(j.A, { children: ee.intl.string(J.default.V3e2Yd) }),
@@ -1084,12 +1084,12 @@ function an(e) {
                                 ],
                             }),
                             (0, n.jsxs)("div", {
-                                className: t5.h3,
+                                className: t4.h3,
                                 children: [
                                     (0, n.jsx)(b.E, {
                                         variant: "text-sm/normal",
                                         color: "text-subtle",
-                                        className: t5.Wb,
+                                        className: t4.Wb,
                                         children: H ? ee.intl.string(J.default.EwXXks) : L,
                                     }),
                                     null == B || H
@@ -1097,14 +1097,14 @@ function an(e) {
                                         : (0, n.jsxs)(n.Fragment, {
                                               children: [
                                                   (0, n.jsx)("span", {
-                                                      className: t5.cy,
+                                                      className: t4.cy,
                                                       "aria-hidden": !0,
                                                       children: "\u2022",
                                                   }),
                                                   (0, n.jsx)(b.E, {
                                                       variant: "text-sm/normal",
                                                       color: "text-subtle",
-                                                      className: t5.zM,
+                                                      className: t4.zM,
                                                       children: B,
                                                   }),
                                               ],
@@ -1117,11 +1117,11 @@ function an(e) {
             }),
             null != Y ? (0, n.jsx)(j.A, { id: q, children: Y.label }) : null,
             (0, n.jsx)("div", {
-                className: t5.M2,
+                className: t4.M2,
                 children: H
                     ? (0, n.jsx)(x.y, { type: x.t.SPINNING_CIRCLE_SIMPLE })
                     : (0, n.jsxs)("div", {
-                          className: t5.Pl,
+                          className: t4.Pl,
                           children: [(0, n.jsx)(tx, { ...et, trigger: "iconButton" }), R.importInput],
                       }),
             }),
@@ -1333,17 +1333,17 @@ function as(e) {
                 ? ee.intl.format(J.default.W95rrI, {
                       channel: e8,
                       channelIconHook: (e, t) =>
-                          (0, n.jsx)(e3, { size: "xs", color: "currentColor", className: t5.Y2 }, t),
+                          (0, n.jsx)(e3, { size: "xs", color: "currentColor", className: t4.Y2 }, t),
                   })
                 : e2?.label,
-        e5 = e2?.upToDate === !0 ? ee.intl.string(J.default["5U1fkv"]) : (e2?.disabledReason ?? null),
-        e4 =
+        e4 = e2?.upToDate === !0 ? ee.intl.string(J.default["5U1fkv"]) : (e2?.disabledReason ?? null),
+        e5 =
             null == e2
                 ? null
                 : (0, n.jsx)("div", {
-                      className: t5.As,
+                      className: t4.As,
                       children: (0, n.jsx)(v.m, {
-                          text: e5,
+                          text: e4,
                           asContainer: !0,
                           children: (0, n.jsx)(C.$, {
                               size: "sm",
@@ -1362,7 +1362,7 @@ function as(e) {
                 null == i
                     ? null
                     : (0, n.jsxs)("div", {
-                          className: t5.FO,
+                          className: t4.FO,
                           children: [
                               en.showModeSwitch ? (0, n.jsx)(tt, { modes: en.modes, mode: es, onChange: eo }) : null,
                               (0, n.jsx)(H.A.Icon, {
@@ -1382,7 +1382,7 @@ function as(e) {
                                   onClick: eS,
                               }),
                               "frame" === es ? (0, n.jsx)(eG.A, { frame: eO, controlProjectId: i.id }) : null,
-                              (0, n.jsx)("div", { className: t5.YJ }),
+                              (0, n.jsx)("div", { className: t4.YJ }),
                               N
                                   ? (0, n.jsx)(H.A.Icon, {
                                         icon: A.BugIcon,
@@ -1442,24 +1442,24 @@ function as(e) {
                               }),
                               em
                                   ? null
-                                  : (0, n.jsx)(H.A.Icon, { icon: t4, tooltip: ec, "aria-label": ec, onClick: ep }),
+                                  : (0, n.jsx)(H.A.Icon, { icon: t5, tooltip: ec, "aria-label": ec, onClick: ep }),
                           ],
                       }),
         });
     return (0, n.jsxs)("div", {
-        className: t5.nj,
+        className: t4.nj,
         children: [
             eL.input,
             (0, n.jsx)("main", {
-                className: t5.JX,
+                className: t4.JX,
                 children:
                     null == i
                         ? (0, n.jsxs)("div", {
-                              className: t5.j5,
+                              className: t4.j5,
                               children: [
                                   te,
                                   (0, n.jsxs)("div", {
-                                      className: t5.sD,
+                                      className: t4.sD,
                                       children: [
                                           (0, n.jsx)(S.D, {
                                               variant: "heading-lg/semibold",
@@ -1493,7 +1493,7 @@ function as(e) {
                                       header: te,
                                       chatOpen: d,
                                       onCloseChat: eh,
-                                      chatHeaderAction: e4,
+                                      chatHeaderAction: e5,
                                       versionHistoryOpen: p,
                                       onCloseVersionHistory: () => h(!1),
                                       restorePointsOpen: w,
@@ -1748,12 +1748,12 @@ function ai(e) {
         eM = ee.intl.string(J.default.jDPFDh),
         eR = eA ? eM : ee.intl.string(J.default.a6d2y1);
     return (0, n.jsx)("div", {
-        className: o()(t5.nj, t5.a0),
+        className: o()(t4.nj, t4.a0),
         children: (0, n.jsxs)("div", {
-            className: t5.Yo,
+            className: t4.Yo,
             children: [
                 (0, n.jsxs)("main", {
-                    className: t5.ps,
+                    className: t4.ps,
                     children: [
                         (0, n.jsx)(tR, {
                             title: ee.intl.string(J.default.Xmvb23),
@@ -1766,20 +1766,20 @@ function ai(e) {
                             }),
                         }),
                         (0, n.jsx)(P.Ip, {
-                            className: t5.Yy,
+                            className: t4.Yy,
                             children: (0, n.jsx)("div", {
-                                className: t5.Mo,
+                                className: t4.Mo,
                                 children: (0, n.jsxs)("section", {
-                                    className: o()(t5.Qs, t5.Ix),
+                                    className: o()(t4.Qs, t4.Ix),
                                     children: [
                                         (0, n.jsx)(tF, {}),
                                         (0, n.jsx)(eK, {}),
                                         (0, n.jsxs)("section", {
-                                            className: t5.WI,
+                                            className: t4.WI,
                                             "aria-label": ec,
                                             children: [
                                                 (0, n.jsxs)("div", {
-                                                    className: t5.G9,
+                                                    className: t4.G9,
                                                     children: [
                                                         (0, n.jsx)(b.E, {
                                                             variant: "text-md/medium",
@@ -1794,30 +1794,30 @@ function ai(e) {
                                                     ],
                                                 }),
                                                 (0, n.jsx)(eD, {
-                                                    listClassName: t5.Aw,
+                                                    listClassName: t4.Aw,
                                                     radius: e_,
                                                     children: eu.map((e) =>
                                                         (0, n.jsx)(
                                                             "li",
                                                             {
-                                                                className: t5.EA,
+                                                                className: t4.EA,
                                                                 children: (0, n.jsxs)(eT, {
                                                                     disabled: r,
                                                                     ariaLabel: ee.intl.formatToPlainString(
                                                                         J.default.ER1uQ4,
                                                                         { name: e.name },
                                                                     ),
-                                                                    className: o()(t5.nx, t5.rz),
+                                                                    className: o()(t4.nx, t4.rz),
                                                                     onClick: () => em(e),
                                                                     children: [
                                                                         (0, n.jsx)(b.E, {
-                                                                            className: t5.tG,
+                                                                            className: t4.tG,
                                                                             variant: "text-md/semibold",
                                                                             color: "text-strong",
                                                                             children: e.name,
                                                                         }),
                                                                         (0, n.jsx)(b.E, {
-                                                                            className: t5.BK,
+                                                                            className: t4.BK,
                                                                             variant: "text-sm/normal",
                                                                             color: "text-subtle",
                                                                             children: e.description,
@@ -1832,11 +1832,11 @@ function ai(e) {
                                             ],
                                         }),
                                         (0, n.jsxs)("section", {
-                                            className: t5.WI,
+                                            className: t4.WI,
                                             "aria-label": eh,
                                             children: [
                                                 (0, n.jsxs)("div", {
-                                                    className: t5.G9,
+                                                    className: t4.G9,
                                                     children: [
                                                         (0, n.jsx)(b.E, {
                                                             variant: "text-md/medium",
@@ -1851,21 +1851,21 @@ function ai(e) {
                                                     ],
                                                 }),
                                                 (0, n.jsx)(eD, {
-                                                    listClassName: t5.Aw,
+                                                    listClassName: t4.Aw,
                                                     radius: eO,
                                                     children: ed.map((e) =>
                                                         (0, n.jsx)(
                                                             "li",
                                                             {
-                                                                className: t5.EA,
+                                                                className: t4.EA,
                                                                 children: (0, n.jsx)(eT, {
                                                                     disabled: r,
-                                                                    className: t5.nx,
+                                                                    className: t4.nx,
                                                                     onClick: () => S(e),
                                                                     children: (0, n.jsx)(b.E, {
                                                                         variant: "text-md/semibold",
                                                                         color: "text-strong",
-                                                                        className: t5.un,
+                                                                        className: t4.un,
                                                                         children: e,
                                                                     }),
                                                                 }),
@@ -1882,9 +1882,9 @@ function ai(e) {
                             }),
                         }),
                         (0, n.jsx)("div", {
-                            className: t5.Yl,
+                            className: t4.Yl,
                             children: (0, n.jsxs)("div", {
-                                className: o()(t5.Qs, t5.DA),
+                                className: o()(t4.Qs, t4.DA),
                                 children: [
                                     (0, n.jsx)(E.f, {
                                         label: el,
@@ -1906,10 +1906,10 @@ function ai(e) {
                                           })
                                         : null,
                                     (0, n.jsxs)("div", {
-                                        className: t5.VP,
+                                        className: t4.VP,
                                         children: [
                                             (0, n.jsx)("div", {
-                                                className: t5.gH,
+                                                className: t4.gH,
                                                 children: (0, n.jsx)(M.l, {
                                                     selectionMode: "single",
                                                     label: ee.intl.string(J.default.MLg0S8),
@@ -1962,21 +1962,21 @@ function ai(e) {
                     ],
                 }),
                 (0, n.jsxs)("aside", {
-                    className: t5.pA,
+                    className: t4.pA,
                     hidden: !eA,
                     "aria-label": ee.intl.string(J.default.Bo5fE3),
                     children: [
                         (0, n.jsxs)("div", {
-                            className: t5.IR,
+                            className: t4.IR,
                             children: [
                                 (0, n.jsx)(b.E, {
                                     variant: "text-md/medium",
                                     color: "text-strong",
-                                    className: t5.RM,
+                                    className: t4.RM,
                                     children: ee.intl.string(J.default.Bo5fE3),
                                 }),
                                 (0, n.jsxs)("div", {
-                                    className: t5.Ss,
+                                    className: t4.Ss,
                                     children: [
                                         (0, n.jsx)(e3, { importing: V, onImport: L }),
                                         (0, n.jsx)(H.A.Icon, { icon: R.P, tooltip: eM, "aria-label": eM, onClick: eE }),
@@ -1985,10 +1985,10 @@ function ai(e) {
                             ],
                         }),
                         (0, n.jsxs)(P.Ip, {
-                            className: t5.xe,
+                            className: t4.xe,
                             children: [
                                 (0, n.jsx)("div", {
-                                    className: t5.Vw,
+                                    className: t4.Vw,
                                     children: (0, n.jsx)(M.l, {
                                         selectionMode: "single",
                                         label: ee.intl.string(J.default.mvtKAm),
@@ -2001,19 +2001,19 @@ function ai(e) {
                                 (0, n.jsx)(b.E, {
                                     variant: "text-sm/normal",
                                     color: "text-subtle",
-                                    className: t5.wE,
+                                    className: t4.wE,
                                     children: ee.intl.string(J.default.YnAFtT),
                                 }),
                                 ("unattempted" === eb || "loading" === eb) && 0 === es.length
-                                    ? (0, n.jsx)("div", { className: t5.E8, children: (0, n.jsx)(x.y, {}) })
+                                    ? (0, n.jsx)("div", { className: t4.E8, children: (0, n.jsx)(x.y, {}) })
                                     : "error" === eb && 0 === es.length
                                       ? (0, n.jsxs)("div", {
-                                            className: t5.E8,
+                                            className: t4.E8,
                                             children: [
                                                 (0, n.jsx)(b.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
-                                                    className: t5.JS,
+                                                    className: t4.JS,
                                                     children: ee.intl.string(J.default["IN/HRP"]),
                                                 }),
                                                 (0, n.jsx)(C.$, {
@@ -2026,22 +2026,22 @@ function ai(e) {
                                         })
                                       : 0 === es.length
                                         ? (0, n.jsx)("div", {
-                                              className: t5.D1,
+                                              className: t4.D1,
                                               children: (0, n.jsxs)("div", {
-                                                  className: t5.ST,
+                                                  className: t4.ST,
                                                   children: [
                                                       (0, n.jsx)(_.D, { size: "lg", color: O.A.colors.TEXT_SUBTLE }),
                                                       (0, n.jsx)(b.E, {
                                                           variant: "text-sm/normal",
                                                           color: "text-subtle",
-                                                          className: t5.sI,
+                                                          className: t4.sI,
                                                           children: ee.intl.string(J.default["vqy+in"]),
                                                       }),
                                                   ],
                                               }),
                                           })
                                         : (0, n.jsx)("div", {
-                                              className: t5.Dq,
+                                              className: t4.Dq,
                                               children: es.map((e) =>
                                                   (0, n.jsx)(
                                                       an,
@@ -2057,10 +2057,10 @@ function ai(e) {
                                           }),
                                 Q.length > 0
                                     ? (0, n.jsxs)("div", {
-                                          className: t5.qx,
+                                          className: t4.qx,
                                           children: [
                                               (0, n.jsxs)("div", {
-                                                  className: t5.uc,
+                                                  className: t4.uc,
                                                   children: [
                                                       (0, n.jsx)(b.E, {
                                                           variant: "text-md/medium",
@@ -2075,7 +2075,7 @@ function ai(e) {
                                                   ],
                                               }),
                                               (0, n.jsx)("div", {
-                                                  className: t5.Dq,
+                                                  className: t4.Dq,
                                                   children: Q.map((e) =>
                                                       (0, n.jsx)(
                                                           an,

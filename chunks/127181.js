@@ -49,6 +49,13 @@ let n = [
             "Plans for an app you imported or remixed no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
     },
     {
+        date: "2026-10-01",
+        time: "23:37",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Reminders to update your live app or ask for ideas now wait for a quiet minute, show one at a time, and stay out of the way while you keep building.",
+    },
+    {
         date: "2026-09-03",
         time: "00:01",
         platforms: ["desktop"],

@@ -72,8 +72,14 @@ function V(e) {
             let n = h.default.extractTimestamp(t);
             return Number.isFinite(n) && n > 0 ? n : null;
         })(e.id);
-    for (let i of (null != n && ("assistant" === e.role || null == e.ts) && (t.created_at = n),
-    null != e.kind && (t.kind = e.kind),
+    if (
+        (null != n && ("assistant" === e.role || null == e.ts) && (t.created_at = n),
+        "assistant" === e.role && null != e.ts)
+    ) {
+        let n = Date.parse(e.ts);
+        Number.isFinite(n) && (t.settled_at = n);
+    }
+    for (let n of (null != e.kind && (t.kind = e.kind),
     "interrupted" === e.kind && ((t.interrupted = !0), (t.content = ""), (t.finished = !0)),
     null != e.proposal && (t.proposal = e.proposal),
     null != e.ideas && e.ideas.length > 0 && (t.ideas = e.ideas),
@@ -97,7 +103,7 @@ function V(e) {
     null != e.settings_request && (t.settingsRequest = e.settings_request),
     null != e.intake && e.intake.questions.length > 0 && (t.intake = e.intake),
     e.steps ?? []))
-        "awaiting_user" === i.kind && "secrets" === i.action && (t.awaitingUser = { action: i.action });
+        "awaiting_user" === n.kind && "secrets" === n.action && (t.awaitingUser = { action: n.action });
     return t;
 }
 function H(e, t) {

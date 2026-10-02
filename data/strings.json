@@ -806,7 +806,7 @@
   "x71ku3": "You need the Manage Server permission in {server} to publish this app.",
   "qG1SMK": "You need the Manage Server and Manage Channels permissions in {server} to publish this app.",
   "ogEl54": "[{name}]({name}) is live.",
-  "AcWS6c": "The live version is out of date. [{action}]({action})",
+  "AcWS6c": "Your latest changes aren’t live yet · [{action}]({action})",
   "tg9fgb": "I updated your live app [{name}]({name}).",
   "ncJb2S": "I updated your live bot [{name}]({name}).",
   "M3cBMT": "I updated your live rule [{name}]({name}).",

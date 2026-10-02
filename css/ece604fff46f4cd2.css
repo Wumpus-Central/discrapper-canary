@@ -842,4 +842,54 @@
     display: inline
 }
 
-/*# sourceMappingURL=eb90ad4db18a5f67.css.map*/
+.slot_fe367f {
+    height: 0;
+    overflow: clip;
+    overflow-clip-margin: var(--space-4)
+}
+
+.stack_fe367f {
+    display: grid
+}
+
+.layer_fe367f {
+    align-self: start;
+    grid-area: 1/1;
+    min-width: 0
+}
+
+.layerLeaving_fe367f {
+    opacity: 0;
+    pointer-events: none
+}
+
+@keyframes reminder-enter_fe367f {
+    0% {
+        opacity: 0;
+        transform: translateY(6px)
+    }
+}
+
+@keyframes reminder-leave_fe367f {
+    0% {
+        opacity: 1
+    }
+}
+
+.full-motion .slot_fe367f {
+    transition: height .28s ease-out
+}
+
+.full-motion .slotCollapsing_fe367f {
+    transition-duration: .18s
+}
+
+.full-motion .layerEntering_fe367f {
+    animation: reminder-enter_fe367f .28s ease-out
+}
+
+.full-motion .layerLeaving_fe367f {
+    animation: reminder-leave_fe367f .18s ease-in
+}
+
+/*# sourceMappingURL=ece604fff46f4cd2.css.map*/
