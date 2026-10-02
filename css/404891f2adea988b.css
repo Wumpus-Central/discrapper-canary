@@ -1,14 +1,22 @@
 .block_cee34d {
     background: transparent;
-    box-shadow: inset 0 0 0 2px var(--background-brand), 0 0 var(--space-12) var(--background-brand);
     cursor: default;
     pointer-events: auto;
+    touch-action: none
+}
+
+.block_cee34d,
+.glow_cee34d {
     position: fixed;
-    touch-action: none;
     z-index: 1003
 }
 
-.block_cee34d:after {
+.glow_cee34d {
+    box-shadow: inset 0 0 0 2px var(--background-brand), 0 0 var(--space-12) var(--background-brand);
+    pointer-events: none
+}
+
+.glow_cee34d:after {
     box-shadow: inset 0 0 var(--space-24) var(--background-brand), 0 0 var(--space-24) var(--background-brand);
     content: "";
     inset: 0;
@@ -17,7 +25,7 @@
     position: absolute
 }
 
-.full-motion .block_cee34d:after {
+.full-motion .glow_cee34d:after {
     animation: vibegrations-control-glow_cee34d 2.4s ease-in-out infinite
 }
 
@@ -34,16 +42,42 @@
 }
 
 .barArea_cee34d {
-    flex-direction: column;
-    pointer-events: none;
-    position: fixed;
-    z-index: 1003
+    display: grid;
+    flex: none;
+    grid-template-rows: 1fr
 }
 
-.bar_cee34d,
-.barArea_cee34d {
-    display: flex;
+.barClip_cee34d {
+    min-height: 0;
     overflow: hidden
+}
+
+.full-motion .barArea_cee34d {
+    animation: vibegrations-control-bar-area-enter_cee34d var(--motion-spring-subtle-duration) var(--motion-spring-subtle) both
+}
+
+.full-motion .barArea_cee34d[data-phase=handoff] {
+    animation: vibegrations-control-bar-area-leave_cee34d .28s ease-in 2.12s both
+}
+
+@keyframes vibegrations-control-bar-area-enter_cee34d {
+    0% {
+        grid-template-rows: 0fr
+    }
+
+    to {
+        grid-template-rows: 1fr
+    }
+}
+
+@keyframes vibegrations-control-bar-area-leave_cee34d {
+    0% {
+        grid-template-rows: 1fr
+    }
+
+    to {
+        grid-template-rows: 0fr
+    }
 }
 
 .bar_cee34d {
@@ -53,10 +87,12 @@
     box-sizing: border-box;
     color: var(--text-overlay-light);
     cursor: default;
+    display: flex;
     flex-wrap: wrap;
     gap: var(--space-8);
     justify-content: space-between;
     min-height: var(--space-48);
+    overflow: hidden;
     padding: var(--space-8) var(--space-12);
     pointer-events: auto;
     position: relative
@@ -124,6 +160,19 @@
     }
 }
 
+.compact_cee34d {
+    flex-wrap: nowrap
+}
+
+.compactTitle_cee34d {
+    color: var(--text-overlay-light);
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
 .barStatus_cee34d {
     align-items: center;
     flex: 1 1 auto;
@@ -168,4 +217,4 @@
     width: 1px
 }
 
-/*# sourceMappingURL=39df1733360d1c88.css.map*/
+/*# sourceMappingURL=404891f2adea988b.css.map*/

@@ -1045,6 +1045,13 @@ let n = [
             "While Conjure is using your Frame, it now says why your clicks are paused and offers to open your published app, which stays yours to play.",
     },
     {
+        date: "2026-10-01",
+        time: "04:39",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "While Conjure tests your app, its bar now sits above the Frame instead of over it, so your app\u2019s header stays in view. On phones and narrow windows the bar stays on one line, with Stop on the right.",
+    },
+    {
         date: "2026-09-16",
         time: "00:01",
         platforms: ["mobile"],

@@ -42,8 +42,8 @@
 
 .wrapper_a62174.vibegrationsBuilder_a62174,
 .wrapper_a62174.vibegrationsChannel_a62174 {
-    height: calc(100% - var(--custom-channel-header-height) - 1px);
-    top: calc(var(--custom-channel-header-height) + 1px)
+    height: calc(100% - var(--custom-channel-header-height) - 1px - var(--custom-vibegrations-control-bar-height, 0px));
+    top: calc(var(--custom-channel-header-height) + 1px + var(--custom-vibegrations-control-bar-height, 0px))
 }
 
 .activityPanelContainer_a62174 {
@@ -172,4 +172,4 @@
     border-bottom-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=586206.f985481b94ddfcca.css.map*/
+/*# sourceMappingURL=586206.5f562721d0a92be4.css.map*/
