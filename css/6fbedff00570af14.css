@@ -2822,7 +2822,7 @@
 }
 
 .scroller__8e830 {
-    scroll-padding-top: calc(var(--custom-compact-bar-height) + var(--space-4))
+    scroll-padding-top: calc(var(--custom-top-nav-height) + var(--space-4))
 }
 
 .persistentTopNav__8e830 {
@@ -3848,4 +3848,4 @@
     display: none
 }
 
-/*# sourceMappingURL=a0e512896f9aa8eb.css.map*/
+/*# sourceMappingURL=6fbedff00570af14.css.map*/
