@@ -37,7 +37,7 @@ var i = n(477900),
     G = n(309010),
     D = n(723702),
     V = n(19575),
-    z = n(790535),
+    z = n(747376),
     B = n(113783),
     q = n(518769),
     K = n(571909),
@@ -482,8 +482,8 @@ var eX = n(661531),
     e0 = n(878678),
     e1 = n(742589),
     e9 = n(977851),
-    e5 = n(174459),
-    e2 = n(776781),
+    e2 = n(174459),
+    e5 = n(776781),
     e4 = n(233993),
     e3 = n(132500),
     e7 = n(280056),
@@ -559,7 +559,7 @@ function tr(e) {
     let { channel: t, toggleRequestToSpeakSidebar: n, showRequestToSpeakSidebar: l } = e,
         { analyticsLocations: s, newestAnalyticsLocation: r } = (0, f.Ay)(m.A.VOICE_CHANNEL_HEADER),
         c = (0, o.bG)([E.A], () => E.A.getChatOpen(t.id), [t.id]),
-        d = (0, e2.Ni)(t.id),
+        d = (0, e5.Ni)(t.id),
         u = (0, B.zy)(t.id, q.ip.REQUESTED_TO_SPEAK_ONLY);
     return (0, i.jsxs)(f.f5, {
         value: s,
@@ -606,7 +606,7 @@ function to(e) {
         f = (0, o.bG)([k.A], () => k.A.can(e4.QY, t));
     function E() {
         (A.A.updateStageVideoLimitBoostUpsellDismissed(t.id, !0),
-            e5.default.track(eC.HAw.BOOSTING_UPSELL_CLICKED, {
+            e2.default.track(eC.HAw.BOOSTING_UPSELL_CLICKED, {
                 guild_id: t.guild_id,
                 type: ts.e.VIDEO_STAGE_LIMIT,
                 is_moderator: f,
@@ -621,7 +621,7 @@ function to(e) {
         l.useEffect(() => {
             let { canModerate: e, audienceCount: t, channel: n, speakerCount: i } = j.current;
             m &&
-                e5.default.track(eC.HAw.BOOSTING_UPSELL_VIEWED, {
+                e2.default.track(eC.HAw.BOOSTING_UPSELL_VIEWED, {
                     guild_id: n.guild_id,
                     type: ts.e.VIDEO_STAGE_LIMIT,
                     is_moderator: e,
@@ -708,7 +708,7 @@ function to(e) {
                                                         guildId: t.guild_id,
                                                         location: { section: eC.JJy.STAGE_VIDEO_LIMIT },
                                                     }),
-                                                        e5.default.track(eC.HAw.BOOSTING_UPSELL_CLICKED, {
+                                                        e2.default.track(eC.HAw.BOOSTING_UPSELL_CLICKED, {
                                                             guild_id: t.guild_id,
                                                             type: ts.e.VIDEO_STAGE_LIMIT,
                                                             is_moderator: f,
@@ -1239,8 +1239,8 @@ let t9 = l.memo(function (e) {
         ),
     });
 });
-var t5 = n(847374),
-    t2 = n(402216),
+var t2 = n(847374),
+    t5 = n(402216),
     t4 = n(97808),
     t3 = n(717558),
     t7 = n(636585),
@@ -1374,9 +1374,9 @@ let ni = l.memo(function (e) {
                 null != o &&
                 o.length > 0 &&
                 (0, i.jsxs)(i.Fragment, {
-                    children: [(0, i.jsx)(nt, { channel: c, speakers: o }), d && (0, i.jsx)(t2.Ay, {})],
+                    children: [(0, i.jsx)(nt, { channel: c, speakers: o }), d && (0, i.jsx)(t5.Ay, {})],
                 }),
-            (0, i.jsx)(t5.a, {
+            (0, i.jsx)(t2.a, {
                 size: "custom",
                 color: "currentColor",
                 width: 20,
@@ -1757,7 +1757,7 @@ function n0(e) {
         u = U.default.getId(),
         [h] = nW(t),
         A = tB.Ay.isModerator(u, t.id),
-        p = (0, e2.Ni)(t.id),
+        p = (0, e5.Ni)(t.id),
         x = a(c),
         { parentAnalyticsLocation: g } = (0, f.Ay)(),
         E = l.useRef(null);
@@ -1853,11 +1853,11 @@ function n9(e) {
               },
           });
 }
-let n5 = l.memo(function (e) {
+let n2 = l.memo(function (e) {
     let { channel: t } = e,
         { parentAnalyticsLocation: n } = (0, f.Ay)(),
         { suppress: s, selfMute: a, mute: r } = (0, nP.A)(t),
-        c = (0, e2.Ni)(t.id),
+        c = (0, e5.Ni)(t.id),
         d = (0, o.bG)([tw.default], () => null != tw.default.getAwaitingRemoteSessionInfo()),
         { cameraUnavailable: u, enabled: h } = (0, nO.A)(),
         A = (0, nL.A)(t),
@@ -1980,7 +1980,7 @@ let n5 = l.memo(function (e) {
         ],
     });
 });
-function n2(e) {
+function n5(e) {
     let { channel: t } = e;
     return (0, i.jsxs)("div", {
         className: nQ.iE,
@@ -1993,14 +1993,14 @@ function n2(e) {
 let n4 = l.memo(function (e) {
     let { channel: t, isOnStartStageScreen: n } = e,
         l = nF(t.id),
-        s = (0, e2.Ni)(t.id),
+        s = (0, e5.Ni)(t.id),
         a = (0, o.bG)([k.A], () => k.A.can(e4.QY, t), [t]),
         r = (0, nI.zU)(),
         c = (0, nY.A)(t.id),
         d = (0, o.bG)([E.A], () => (null != t ? E.A.getSelectedParticipant(t.id) : null)),
         u = !c && null == d;
     return n
-        ? (0, i.jsx)(n2, { channel: t })
+        ? (0, i.jsx)(n5, { channel: t })
         : l || s
           ? (0, i.jsxs)("div", {
                 className: nQ.My,
@@ -2014,7 +2014,7 @@ let n4 = l.memo(function (e) {
                             (0, i.jsx)("div", { className: nQ.me }),
                         ],
                     }),
-                    (0, i.jsx)(n5, { channel: t }),
+                    (0, i.jsx)(n2, { channel: t }),
                 ],
             })
           : (0, i.jsx)(n$, { channel: t });
@@ -2271,7 +2271,7 @@ function ih(e) {
             l.useEffect(() => {
                 let { channel: e, maybeLeaveFullScreen: t } = O.current;
                 return (
-                    e5.default.track(eC.HAw.VIDEO_LAYOUT_TOGGLED, {
+                    e2.default.track(eC.HAw.VIDEO_LAYOUT_TOGGLED, {
                         video_layout: d ? "popout" : p,
                         ...(0, is.QS)(e.id),
                     }),

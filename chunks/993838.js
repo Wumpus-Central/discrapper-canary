@@ -1,4 +1,4 @@
-n.d(t, { $q: () => E, E9: () => T, H2: () => A, W0: () => h, j3: () => I, j6: () => f, jA: () => p, tQ: () => _ });
+n.d(t, { $q: () => E, E9: () => p, W0: () => A, j3: () => h, j6: () => I, jA: () => f, tQ: () => _ });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -56,8 +56,7 @@ function E(e, t) {
         { contextKey: t === u.BRT.POPOUT ? a.KX : a.SY },
     );
 }
-function A(e) {}
-function h(e, t) {
+function A(e, t) {
     (0, r.openModalLazy)(async () => {
         let { default: r } = await Promise.all([
             n.e("401425"),
@@ -75,7 +74,7 @@ function h(e, t) {
         return (n) => (0, i.jsx)(r, { ...n, channel: e, onAccept: t });
     });
 }
-function I(e, t) {
+function h(e, t) {
     (0, r.openModalLazy)(
         async () => {
             let { default: t } = await Promise.all([n.e("856753"), n.e("370102")]).then(n.bind(n, 118101));
@@ -84,16 +83,16 @@ function I(e, t) {
         { contextKey: t === u.BRT.POPOUT ? a.KX : a.SY },
     );
 }
-function f(e) {
+function I(e) {
     let t = l.default.getId(),
         n = (0, c.G1)(e),
         i = (0, c.Gc)(e);
     return !o.Ay.isModerator(t, e) && (n > 0 || i > 0);
 }
-function p(e, t) {
+function f(e, t) {
     (t !== e.id && (0, d.ek)(!0), (0, s.iN)(e.id));
 }
-function T(e, t) {
+function p(e, t) {
     return (
         (0, r.openModalLazy)(async () => {
             let { default: r } = await n.e("412963").then(n.bind(n, 24814));
