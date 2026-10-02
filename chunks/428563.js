@@ -21831,7 +21831,7 @@ let fl = function (e) {
             (d(e.body.message), a(!1));
         }
     }
-    let u = os.Ay.useUserTag(l.user);
+    let u = ol.Ay.useName(l.guild_id, void 0, l.user);
     return (0, p.jsx)(t7.m, {
         forceOpen: null != o,
         text: o,
@@ -21864,6 +21864,7 @@ let fl = function (e) {
                                             (0, p.jsx)(G.E, {
                                                 color: "text-default",
                                                 variant: "text-xs/normal",
+                                                lineClamp: 1,
                                                 children: u,
                                             }),
                                         ],

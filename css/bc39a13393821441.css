@@ -273,15 +273,15 @@
 }
 
 .user__83b1d {
+    align-items: center;
     display: flex;
     justify-content: flex-start;
     margin-top: 4px;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap
+    min-width: 0
 }
 
 .userAvatar__83b1d {
+    flex-shrink: 0;
     margin-inline-end: 4px
 }
 
@@ -474,4 +474,4 @@
     color: var(--white)
 }
 
-/*# sourceMappingURL=fc738c723065a8c1.css.map*/
+/*# sourceMappingURL=bc39a13393821441.css.map*/
