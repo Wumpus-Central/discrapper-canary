@@ -257,6 +257,12 @@ let n = [
             "Conjure now tells you when it finishes or needs your answer, even after you step away, and marks those projects in your list, calling out the ones waiting on you.",
     },
     {
+        date: "2026-10-02",
+        time: "01:29",
+        platforms: ["desktop", "mobile"],
+        summary: "Conjure sometimes reacts to your messages with an emoji when something you say lands.",
+    },
+    {
         date: "2026-09-26",
         time: "01:40",
         platforms: ["desktop", "mobile"],

@@ -3,7 +3,7 @@
     r2: () => et,
     $S: () => ek,
     _v: () => em,
-    n6: () => eG,
+    n6: () => eU,
     ss: () => eO,
     cS: () => ew,
     R7: () => en,
@@ -28,7 +28,7 @@
     vX: () => eT,
     dz: () => ey,
     ST: () => ed,
-    PK: () => eU,
+    PK: () => eG,
     y_: () => eR,
     nU: () => eb,
     _m: () => ef,
@@ -193,8 +193,8 @@ function C(e, t) {
     s.h.dispatch({ type: "VIBEGRATIONS_CHAT_CONN_STATE", projectId: e, connState: t });
 }
 let v = { location: "connection", code: l.xA.SEND_FAILED },
-    U = { location: "agent", code: l.xA.AGENT_ERROR };
-function G(e, t) {
+    G = { location: "agent", code: l.xA.AGENT_ERROR };
+function U(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : v;
     (s.h.dispatch({
         type: "VIBEGRATIONS_CHAT_STEP_APPEND",
@@ -223,7 +223,7 @@ function H(e, t) {
 let $ = { steered: !0, queued: !0, restarting: !0, answered: !0 };
 function V(e, t, n) {
     let r = t.pendingSends;
-    for (let i of ((t.pendingSends = []), r)) (H(e, i), G(e, n));
+    for (let i of ((t.pendingSends = []), r)) (H(e, i), U(e, n));
 }
 function L(e, t) {
     if (!0 === O.get(e)) return;
@@ -240,7 +240,7 @@ function L(e, t) {
             );
         } catch (t) {
             (console.error("[vibegrations] queued send failed", t),
-                G(e, t instanceof Error ? t.message : "send failed"));
+                U(e, t instanceof Error ? t.message : "send failed"));
         }
     }
 }
@@ -447,7 +447,7 @@ async function F(e, t) {
                                       turnId: r.turn_id,
                                       patch: { content: e, kind: "message" },
                                   })
-                                : G(t, E.intl.string(T.default.Z8Eo8I), U);
+                                : U(t, E.intl.string(T.default.Z8Eo8I), G);
                         } else if ("thinking_lifecycle" === r.kind) {
                             let { phase: e, session: n, seq: i, ticks: o, elapsed_ms: a, text: c } = r;
                             null != e &&
@@ -531,7 +531,7 @@ async function F(e, t) {
                                       turnId: r.turn_id,
                                       patch: { proposal: r.proposal, kind: "proposal" },
                                   })
-                                : G(t, E.intl.string(T.default.IHCafX), U);
+                                : U(t, E.intl.string(T.default.IHCafX), G);
                         else if ("ideas" === r.kind)
                             null != r.ideas &&
                                 r.ideas.length > 0 &&
@@ -624,6 +624,16 @@ async function F(e, t) {
                                     projectId: t,
                                     turn: r.turn,
                                     project: r.project,
+                                });
+                        else if ("reaction" === r.kind)
+                            null != r.message_id &&
+                                null != r.emoji &&
+                                "" !== r.emoji &&
+                                s.h.dispatch({
+                                    type: "VIBEGRATIONS_CHAT_MESSAGE_REACTION",
+                                    projectId: t,
+                                    id: r.message_id,
+                                    emoji: r.emoji,
                                 });
                         else if ("project_named" === r.kind) {
                             let e = r.name;
@@ -920,7 +930,7 @@ function z(e, t, n) {
             { templateId: l.templateId, remix: l.remix, clarificationAnswers: l.clarificationAnswers },
         );
     } catch (t) {
-        (console.error("[vibegrations] send failed", t), G(e, t instanceof Error ? t.message : "send failed"));
+        (console.error("[vibegrations] send failed", t), U(e, t instanceof Error ? t.message : "send failed"));
     }
 }
 function Y(e) {
@@ -1276,15 +1286,15 @@ async function ev(e, t) {
         i = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${i}`;
 }
-async function eU(e, t) {
+async function eG(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { ticket: r, baseUrl: i } = await el(e),
         s = new URLSearchParams({ ticket: r });
     return (n && s.set("download", "1"), `${eS(i, t)}?${s}`);
 }
-async function eG(e, t) {
+async function eU(e, t) {
     async function n() {
-        return fetch(await eU(e, t), { method: "HEAD" });
+        return fetch(await eG(e, t), { method: "HEAD" });
     }
     let r = await n();
     if ((401 === r.status && (ea.delete(e), (r = await n())), 404 === r.status)) return !1;

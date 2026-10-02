@@ -148,7 +148,7 @@ function eP() {
         ],
     });
 }
-var eE = a(340479);
+var eE = a(917119);
 function eT(e) {
     let { className: t, ariaLabel: a, disabled: s, onClick: i, children: o } = e;
     return (0, n.jsx)(k.D, { "aria-disabled": s, "aria-label": a, className: t, onClick: s ? void 0 : i, children: o });
@@ -251,7 +251,7 @@ async function e2(e, t) {
         s = await (0, Q.cS)(e, n);
     await (0, eQ.F)(s, n);
 }
-function e6(e) {
+function e1(e) {
     let t = s.useRef(null),
         a = s.useCallback(
             (t) => {
@@ -273,17 +273,17 @@ function e6(e) {
         }),
     };
 }
-var e1 = a(950305),
+var e6 = a(950305),
     e9 = a(664121);
 let e3 = [
-    { value: "user", icon: e1.UserIcon, nameMessage: J.default.iqXIRN },
+    { value: "user", icon: e6.UserIcon, nameMessage: J.default.iqXIRN },
     { value: "guild", icon: e9.R, nameMessage: J.default.LdgKdI },
 ];
 function e8(e) {
     let { importing: t, onImport: a } = e,
         i = s.useRef(null),
-        o = e6(s.useCallback((e) => a(e, "user"), [a])),
-        l = e6(s.useCallback((e) => a(e, "guild"), [a])),
+        o = e1(s.useCallback((e) => a(e, "user"), [a])),
+        l = e1(s.useCallback((e) => a(e, "guild"), [a])),
         r = { user: o.open, guild: l.open };
     return (0, n.jsxs)(n.Fragment, {
         children: [
@@ -830,7 +830,7 @@ function t2(e) {
             return e;
     }
 }
-function t6(e, t) {
+function t1(e, t) {
     switch (t) {
         case "all":
             return !0;
@@ -842,10 +842,10 @@ function t6(e, t) {
             return e.guild_id === t || e.preview_guild_id === t;
     }
 }
-var t1 = a(506774);
+var t6 = a(506774);
 let t9 = "VibegrationsProjectsPanelOpen";
 function t3() {
-    return t1.w.get(t9) ?? null;
+    return t6.w.get(t9) ?? null;
 }
 function t8(e) {
     return `VibegrationsProjectsPanel:${e}`;
@@ -922,7 +922,7 @@ function an(e) {
             }, [a, i])),
             {
                 onExport: c,
-                onImport: (p = e6(
+                onImport: (p = e1(
                     s.useCallback(
                         (e) => {
                             let t = e0(e);
@@ -1244,7 +1244,7 @@ function as(e) {
         eF = s.useCallback(() => {
             null != i && (c(!0), (0, Q.dv)(i.id, ee.intl.string(J.default["2ejwtJ"])));
         }, [i]),
-        eL = e6(
+        eL = e1(
             s.useCallback(
                 (e) => {
                     if (null == i) return;
@@ -1324,8 +1324,8 @@ function as(e) {
     }, [r, i, o, e$]);
     let eQ = s.useMemo(() => ({ guildId: r, platform: aa, busy: Z || W }), [r, Z, W]),
         e2 = (0, ef.Ay)(R, eQ),
-        e1 = e2?.intent === "open" && "channel" === e2.destination ? e2.appChannelId : null,
-        e9 = (0, u.bG)([K.A], () => (null == e1 ? null : K.A.getChannel(e1)), [e1]),
+        e6 = e2?.intent === "open" && "channel" === e2.destination ? e2.appChannelId : null,
+        e9 = (0, u.bG)([K.A], () => (null == e6 ? null : K.A.getChannel(e6)), [e6]),
         e3 = (0, z.Ay)(e9),
         e8 = (0, B.gU)(e9),
         e7 =
@@ -1574,7 +1574,7 @@ function ai(e) {
                 {
                     id: "vibegrations-filter-user",
                     value: t$,
-                    leading: e1.UserIcon,
+                    leading: e6.UserIcon,
                     label: ee.intl.string(J.default.mtU4VZ),
                 },
                 {
@@ -1610,7 +1610,7 @@ function ai(e) {
     }, [q]);
     let Q = s.useMemo(
             () =>
-                $.filter((e) => t6(e, q)).sort((e, t) =>
+                $.filter((e) => t1(e, q)).sort((e, t) =>
                     null == e.updated_at ? 1 : null == t.updated_at ? -1 : t.updated_at.localeCompare(e.updated_at),
                 ),
             [$, q],
@@ -1624,7 +1624,7 @@ function ai(e) {
                             id: "conjure-target-user",
                             value: tZ,
                             label: ee.intl.string(J.default.UXnPhI),
-                            leading: e1.UserIcon,
+                            leading: e6.UserIcon,
                         },
                         ...k.map((e) => ({
                             id: `conjure-target-${e.id}`,
@@ -1640,7 +1640,7 @@ function ai(e) {
         es = s.useMemo(
             () =>
                 t
-                    .filter((e) => t6(e, q))
+                    .filter((e) => t1(e, q))
                     .slice()
                     .sort((e, t) =>
                         null == e.updated_at ? 1 : null == t.updated_at ? -1 : t.updated_at.localeCompare(e.updated_at),
@@ -1733,15 +1733,15 @@ function ai(e) {
         eb = (0, u.bG)([er.Ay], () => er.Ay.getGuildProjectsFetchState(ey), [ey]),
         ew = (0, u.bG)([er.Ay], () => er.Ay.getGuildProjectsFetchState(l), [l]),
         [ek, ev] = s.useState(t3),
-        ej = s.useMemo(() => t1.w.get(t8(l)) ?? !1, [l]),
+        ej = s.useMemo(() => t6.w.get(t8(l)) ?? !1, [l]),
         ex = "success" === ew,
-        eC = (0, u.yK)([er.Ay], () => er.Ay.getSharedProjects(l), [l]).length > 0 || t.some((e) => t6(e, l)),
+        eC = (0, u.yK)([er.Ay], () => er.Ay.getSharedProjects(l), [l]).length > 0 || t.some((e) => t1(e, l)),
         eA = ek ?? (!!eC || "error" === ew || (!ex && ej));
     s.useEffect(() => {
-        ex && t1.w.set(t8(l), eC);
+        ex && t6.w.set(t8(l), eC);
     }, [ex, eC, l]);
     let eS = s.useCallback((e) => {
-            (t1.w.set(t9, e), ev(e));
+            (t6.w.set(t9, e), ev(e));
         }, []),
         eN = s.useCallback(() => eS(!eA), [eS, eA]),
         eE = s.useCallback(() => eS(!1), [eS]),

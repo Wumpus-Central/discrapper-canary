@@ -704,6 +704,19 @@
     transition: none
 }
 
+.agentReaction__815c3 {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    padding: 2px var(--space-6)
+}
+
+.agentReaction__815c3:not(:first-child) {
+    margin-top: var(--space-4)
+}
+
 .conjurMessage__72ffd {
     position: relative
 }
@@ -892,4 +905,4 @@
     animation: reminder-leave_fe367f .18s ease-in
 }
 
-/*# sourceMappingURL=ece604fff46f4cd2.css.map*/
+/*# sourceMappingURL=71aa7858ceb560d0.css.map*/
