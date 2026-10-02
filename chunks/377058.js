@@ -1,4 +1,4 @@
-n.d(t, { n: () => b, N: () => N });
+n.d(t, { n: () => j, N: () => b });
 var l = n(477900),
     i = n(582128),
     r = n(17928),
@@ -11,7 +11,7 @@ var l = n(477900),
     p = n(997101),
     m = n(120700),
     h = n(25149),
-    C = n(263532),
+    C = n(661899),
     f = n(652215),
     S = n(583741),
     E = n(375708),
@@ -47,10 +47,11 @@ function g(e) {
 }
 var P = n(655857),
     v = n(87730),
-    x = n(165272),
-    _ = n(451636),
-    T = n(571852);
-function N(e) {
+    x = n(379603),
+    _ = n(165272),
+    T = n(451636),
+    N = n(571852);
+function b(e) {
     let {
             setPaymentSourceId: t,
             paymentSourceId: n,
@@ -62,9 +63,9 @@ function N(e) {
             subscriptionPaymentSourceId: S,
             hideCurrencySelect: y,
             resolveInternalState: A,
-            renderCustomPaymentSourceSelectorContent: x,
+            renderCustomPaymentSourceSelectorContent: _,
         } = e,
-        { setPaymentSourceId: N, paymentSourceId: b } = (function (e) {
+        { setPaymentSourceId: b, paymentSourceId: j } = (function (e) {
             let { setPaymentSourceId: t, paymentSourceId: n } = (function () {
                     let {
                             paymentSourceId: e,
@@ -96,16 +97,16 @@ function N(e) {
                 );
             return { setPaymentSourceId: l, paymentSourceId: r };
         })({ setPaymentSourceId: t, paymentSourceId: n }),
-        [j, R] = i.useState(!1),
+        [R, O] = i.useState(!1),
         {
-            giftCardsEnabled: O,
-            giftCardCheckboxProps: M,
-            walletCoversSubtotal: L,
-            walletCoversTotal: k,
-            basePaymentSourceDropdownProps: w,
-            isSubscriptionPaidByWallet: D,
-            hidePersonalInformation: U,
-            isSplitPaymentMode: G,
+            giftCardsEnabled: M,
+            giftCardCheckboxProps: L,
+            walletCoversSubtotal: k,
+            walletCoversTotal: w,
+            basePaymentSourceDropdownProps: D,
+            isSubscriptionPaidByWallet: U,
+            hidePersonalInformation: G,
+            isSplitPaymentMode: F,
         } = (function (e) {
             let {
                     paymentSourceId: t,
@@ -215,90 +216,91 @@ function N(e) {
                 isSplitPaymentMode: N,
             };
         })({
-            paymentSourceId: b,
-            setPaymentSourceId: N,
+            paymentSourceId: j,
+            setPaymentSourceId: b,
             location: h,
             subscriptionPaymentSourceId: S,
-            pendingGiftCardWalletSelection: j,
-            setPendingGiftCardWalletSelection: R,
+            pendingGiftCardWalletSelection: R,
+            setPendingGiftCardWalletSelection: O,
         }),
         {
-            priceOptions: F,
-            setCurrency: B,
-            expressCheckoutSubmitting: H,
-            isOrderLocked: W,
+            priceOptions: B,
+            setCurrency: H,
+            expressCheckoutSubmitting: W,
+            isOrderLocked: Y,
         } = (0, C.t4)((e) => ({
             priceOptions: e.checkoutPriceOptions,
             setCurrency: e.setCheckoutCurrency,
             expressCheckoutSubmitting: e.expressCheckoutSubmitting,
             isOrderLocked: e.get("isOrderLocked"),
         })),
-        { dropdownCurrencies: Y, displayCurrency: V } = (0, P.Jn)(),
-        K = i.useCallback(() => R(!0), []),
-        q = i.useMemo(() => W || H || (m ?? !1), [W, H, m]),
-        { giftCardCheckboxProps: Z, disabled: z } = i.useMemo(
+        { dropdownCurrencies: V, displayCurrency: K } = (0, P.Jn)(),
+        q = i.useCallback(() => O(!0), []),
+        Z = i.useMemo(() => Y || W || (m ?? !1), [Y, W, m]),
+        { giftCardCheckboxProps: z, disabled: $ } = i.useMemo(
             () =>
                 null != A
-                    ? A({ giftCardCheckboxProps: M, disabled: q }, { isSubscriptionPaidByWallet: D })
-                    : { giftCardCheckboxProps: M, disabled: q },
-            [q, A, M, D],
+                    ? A({ giftCardCheckboxProps: L, disabled: Z }, { isSubscriptionPaidByWallet: U })
+                    : { giftCardCheckboxProps: L, disabled: Z },
+            [Z, A, L, U],
         ),
-        $ = null != Z && !0 === Z.locked,
-        Q = i.useMemo(() => {
-            if (null != x)
-                return x({
-                    isSubscriptionPaidByWallet: D,
-                    selectedSource: w.paymentSources.find((e) => e.id === w.selectedPaymentSourceId),
-                    hidePersonalInformation: U,
-                });
-        }, [x, D, w, U]),
+        Q = null != z && !0 === z.locked,
         J = i.useMemo(() => {
+            if (null != _)
+                return _({
+                    isSubscriptionPaidByWallet: U,
+                    selectedSource: D.paymentSources.find((e) => e.id === D.selectedPaymentSourceId),
+                    hidePersonalInformation: G,
+                });
+        }, [_, U, D, G]),
+        X = i.useMemo(() => {
             if (!y)
                 return {
                     label: E.intl.string(E.t["/AAR02"]),
-                    selectedCurrency: F.currency ?? V,
-                    currencies: Y,
-                    onChange: B,
-                    disabled: z,
+                    selectedCurrency: B.currency ?? K,
+                    currencies: V,
+                    onChange: H,
+                    disabled: $,
                 };
-        }, [y, F.currency, V, Y, B, z]),
-        X = i.useMemo(() => ({ ...w, ...p, onPaymentSourceAdd: f }), [w, f, p]),
-        ee = null != Z && Z.checked,
-        et = G || L || $,
-        en = i.useMemo(() => {
-            if (!O || null == Z) return null;
-            let e = et ? T.r : T.K,
-                t = Z.disabled || z;
-            return (0, l.jsx)(v.o, { ...Z, className: e, disabled: t });
-        }, [O, Z, et, z]),
-        el = O && ee,
-        ei = el && G && k,
-        er = el && !G && et,
-        ea = null != Q,
-        es = ei && X.paymentSources.length > 0,
-        eo = i.useMemo(
+        }, [y, B.currency, K, V, H, $]),
+        ee = i.useMemo(() => ({ ...D, ...p, onPaymentSourceAdd: f }), [D, f, p]),
+        et = null != z && z.checked,
+        en = F || k || Q,
+        el = i.useMemo(() => {
+            if (!M || null == z) return null;
+            let e = en ? N.r : N.K,
+                t = z.disabled || $;
+            return (0, l.jsx)(v.o, { ...z, className: e, disabled: t });
+        }, [M, z, en, $]),
+        ei = M && et,
+        er = ei && F && w,
+        ea = ei && !F && en,
+        es = null != J,
+        eo = er && ee.paymentSources.length > 0,
+        eu = i.useMemo(
             () =>
-                null != Q
-                    ? Q
+                null != J
+                    ? J
                     : (0, l.jsx)(s.Ay, {
-                          ...X,
-                          disabled: z || es,
-                          addPaymentSourceVariant: ei ? "secondary" : "primary",
+                          ...ee,
+                          disabled: $ || eo,
+                          addPaymentSourceVariant: er ? "secondary" : "primary",
                       }),
-            [Q, z, es, ei, X],
+            [J, $, eo, er, ee],
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
             (0, l.jsxs)(a.D, {
                 label: c,
-                children: [et && en, !er && eo, !et && en, !ea && !el && void 0 !== J && (0, l.jsx)(_.q, { ...J })],
+                children: [en && el, !ea && eu, !en && el, !es && !ei && void 0 !== X && (0, l.jsx)(T.q, { ...X })],
             }),
-            O ? (0, l.jsx)(I, { onGiftCardRedeemed: K }) : null,
+            M ? (0, l.jsx)(I, { onGiftCardRedeemed: q }) : null,
             (0, l.jsx)(g, { onPaymentSourceAdd: f }),
+            (0, l.jsx)(x.o, {}),
         ],
     });
 }
-function b(e) {
+function j(e) {
     let { premiumSubscriptionPaymentSourceId: t, ...n } = e,
         { disableSourceChangeTooltipText: r, hasLockedPaymentSource: a } = i.useMemo(
             () =>
@@ -339,11 +341,11 @@ function b(e) {
                 if (!a || t || null == r || null == n) return null;
                 let o = n instanceof c.A ? n.source : n,
                     { brand: u, label: d } = (0, s.Sm)(o, i);
-                return (0, l.jsx)(x.S, { label: d ?? "", icon: u ?? void 0, tooltipText: r });
+                return (0, l.jsx)(_.S, { label: d ?? "", icon: u ?? void 0, tooltipText: r });
             },
             [a, r],
         );
-    return (0, l.jsx)(N, {
+    return (0, l.jsx)(b, {
         ...n,
         resolveInternalState: u,
         renderCustomPaymentSourceSelectorContent: d,

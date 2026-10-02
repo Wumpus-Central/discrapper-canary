@@ -535,8 +535,8 @@ function e3(e) {
     });
 }
 var e7 = n(995786),
-    e9 = n(206835),
-    e6 = n(280450),
+    e6 = n(206835),
+    e9 = n(280450),
     e8 = n(696451),
     e4 = n(229527),
     te = n(81400),
@@ -549,7 +549,7 @@ function tn(e) {
     return (0, i.jsxs)(T.$T, { color: T.Hv.DANGER, children: [s, (0, i.jsx)(T.zr, { onClick: l, children: a })] });
 }
 function ti() {
-    let e = (0, e9.A)({ scrollPosition: eg._F.GUILD_TAG });
+    let e = (0, e6.A)({ scrollPosition: eg._F.GUILD_TAG });
     return (0, i.jsxs)(T.$T, {
         color: T.Hv.DANGER,
         children: [V.intl.string(V.t.Zqlecb), (0, i.jsx)(T.zr, { onClick: e, children: V.intl.string(V.t.SJehVW) })],
@@ -559,10 +559,10 @@ function tl(e) {
     let { analyticsLocations: t, ...n } = e,
         { analyticsLocations: l } = (0, G.Ay)(t, x.A.AUTOMOD_NAGBAR_NOTICE),
         r = (0, c.bG)(
-            [e6.default, e8.Ay],
+            [e9.default, e8.Ay],
             () => {
                 if (null == n.guildId) return new Set();
-                let e = e6.default.getId();
+                let e = e9.default.getId();
                 return (0, e4.wj)(e8.Ay.getMember(n.guildId, e));
             },
             [n.guildId],
@@ -890,9 +890,9 @@ function t3() {
           });
 }
 var t7 = n(952818),
-    t9 = n(935671);
-function t6() {
-    (0, t9.sL)("nagbar");
+    t6 = n(935671);
+function t9() {
+    (0, t6.sL)("nagbar");
 }
 function t8() {
     return null == (0, c.bG)([t7.Ay], () => t7.Ay.getVisibleGame())
@@ -903,7 +903,7 @@ function t8() {
                   (0, i.jsx)(T.PM, { noticeType: eu.kqX.SYSTEM_SERVICE_WARNING, onClick: () => nR() }),
                   V.intl.string(V.t["5rPt+j"]),
                   (0, i.jsx)(T.Z_, {
-                      onClick: t6,
+                      onClick: t9,
                       noticeType: eu.kqX.SYSTEM_SERVICE_WARNING,
                       children: V.intl.string(V.t["1iI46O"]),
                   }),
@@ -1444,7 +1444,7 @@ let nO =
                                               n.e("311541"),
                                               n.e("472847"),
                                               n.e("870088"),
-                                              n.e("989649"),
+                                              n.e("674736"),
                                               n.e("925420"),
                                               n.e("586662"),
                                               n.e("758053"),
@@ -1532,7 +1532,7 @@ let nO =
                                               n.e("910486"),
                                               n.e("221856"),
                                               n.e("678157"),
-                                              n.e("646271"),
+                                              n.e("103053"),
                                               n.e("325675"),
                                               n.e("996481"),
                                               n.e("331988"),

@@ -1041,8 +1041,8 @@ function e3() {
     return (0, s.jsx)(f.E, { variant: "text-sm/normal", children: "Purchase button is disabled for this story" });
 }
 let e6 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
-    e4 = eQ(),
-    e8 = {
+    e8 = eQ(),
+    e4 = {
         name: "Collectibles Review Step",
         id: "collectibles-checkout-review-step",
         component: function (e) {
@@ -1080,7 +1080,7 @@ let e6 = { isGift: { label: "Is Gift", type: "boolean", defaultValue: !1 } },
                   });
         },
         controls: {
-            skuId: { label: "SKU ID", type: "select", options: e4.options, defaultValue: e4.defaultValue },
+            skuId: { label: "SKU ID", type: "select", options: e8.options, defaultValue: e8.defaultValue },
             ...e6,
         },
     },
@@ -2219,12 +2219,12 @@ function t3() {
     });
 }
 var t6 = l(339984);
-let t4 = [
+let t8 = [
         { id: "avatar_decoration", label: "Avatar Decoration", value: eG.e.AVATAR_DECORATION_MODAL_UPSELL },
         { id: "profile_effect", label: "Profile Effect", value: eG.e.PROFILE_EFFECT_MODAL_UPSELL },
         { id: "nameplate", label: "Nameplate", value: eG.e.NAMEPLATE_MODAL_UPSELL },
     ],
-    t8 = {
+    t4 = {
         [eG.e.AVATAR_DECORATION_MODAL_UPSELL]: {
             title: "Express Yourself with Avatar Decorations",
             body: "Stand out with unique avatar decorations exclusive to Nitro subscribers.",
@@ -2994,7 +2994,7 @@ function lO() {
 var lL = l(683071),
     lV = l(942340),
     lU = l(211528),
-    lw = l(263532),
+    lw = l(661899),
     lB = l(783327),
     lG = l(626584),
     lH = l(276858),
@@ -3207,8 +3207,8 @@ let l1 = {
         },
         controls: { ...l1 },
     };
-var l4 = l(786826);
-let l8 = {
+var l8 = l(786826);
+let l4 = {
     title: "RichTextArea",
     stories: [
         {
@@ -3229,7 +3229,7 @@ let l8 = {
                     [p, m] = u.useState("");
                 return (0, s.jsx)("div", {
                     style: { maxWidth: 480, padding: 24 },
-                    children: (0, s.jsx)(l4.f, {
+                    children: (0, s.jsx)(l8.f, {
                         label: t,
                         placeholder: l,
                         minLength: a,
@@ -3942,7 +3942,7 @@ let aj = ["Revenue Storybook", "Revenue Playground"],
                     },
                 ],
             },
-            { title: "Checkout Review Step", stories: [e8, e9] },
+            { title: "Checkout Review Step", stories: [e4, e9] },
             {
                 title: "Miscellaneous",
                 stories: [
@@ -4275,7 +4275,7 @@ let aj = ["Revenue Storybook", "Revenue Playground"],
                         component: function () {
                             let [e, t] = u.useState(eG.e.AVATAR_DECORATION_MODAL_UPSELL),
                                 a = u.useCallback(() => {
-                                    let { title: t, body: a } = t8[e];
+                                    let { title: t, body: a } = t4[e];
                                     (0, ev.openModalLazy)(async () => {
                                         let { default: n } = await Promise.all([l.e("93513"), l.e("764864")]).then(
                                             l.bind(l, 393027),
@@ -4298,7 +4298,7 @@ let aj = ["Revenue Storybook", "Revenue Playground"],
                                             placeholder: "Select type",
                                             onSelectionChange: (e) => t(e),
                                             value: e,
-                                            options: t4,
+                                            options: t8,
                                             selectionMode: "single",
                                             fullWidth: !0,
                                         }),
@@ -4629,7 +4629,7 @@ let aj = ["Revenue Storybook", "Revenue Playground"],
                 ],
             },
             { title: "Profile Banner", stories: [eo] },
-            l8,
+            l4,
             {
                 title: "User Profile Embeds",
                 stories: [

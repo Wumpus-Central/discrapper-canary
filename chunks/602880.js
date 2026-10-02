@@ -15,7 +15,7 @@ var i = n(477900),
     f = n(655857),
     A = n(883645),
     T = n(166532),
-    m = n(263532),
+    m = n(661899),
     h = n(442467),
     I = n(558620),
     v = n(427675),
@@ -193,9 +193,9 @@ function ee(e) {
         e8 = "sm";
     ef ? (e8 = "xl") : (eA || e1 === T.pn.ADD_PAYMENT_STEPS) && (e8 = "md");
     let e6 = null != e5 ? e5.modalSizeGetter : void 0,
-        e3 = (0, w.O)(),
-        e4 = null != X && !eZ && (0, R.U9)(e3, X),
-        [e9, e7] = l.useState({
+        e9 = (0, w.O)(),
+        e4 = null != X && !eZ && (0, R.U9)(e9, X),
+        [e3, e7] = l.useState({
             load_id: eO.loadId,
             discovery_session_id: eO.discoverySessionId,
             payment_type: C.frM[eF],
@@ -245,12 +245,12 @@ function ee(e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
                 (k.default.track(C.HAw.PAYMENT_FLOW_STARTED, e, t), D.trigger());
             })({
-                ...e9,
+                ...e3,
                 virtual_currency_balance: ti,
                 continue_session_initial_step: ev,
                 custom_checkout_flow: eY,
                 has_saved_payment_source: eC,
-                discount_id: null != e3 ? e3.discountId : tl,
+                discount_id: null != e9 ? e9.discountId : tl,
             });
         }),
         l.useEffect(() => {
@@ -261,7 +261,7 @@ function ee(e) {
             let e = (0, H.lo)(eB) === H.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
                 t = Date.now();
             k.default.track(C.HAw.PAYMENT_FLOW_SUCCEEDED, {
-                ...e9,
+                ...e3,
                 is_custom_message_edited: eZ && e && null != eQ ? eQ !== B.intl.string(B.t.ZkOo1U) : void 0,
                 is_custom_emoji_sound_available: eZ && e,
                 emoji_name: eZ && e && eX?.id == null ? eX?.surrogates : void 0,
@@ -272,7 +272,7 @@ function ee(e) {
                 gift_card_currency: tn,
                 virtual_currency_balance: ti,
             });
-        }, [e9, eX, eQ, eB, eZ, e$, eO.startTime, te, tt, tn, ti]),
+        }, [e3, eX, eQ, eB, eZ, e$, eO.startTime, te, tt, tn, ti]),
         ts = l.useCallback(() => {
             let e = null != P ? (0, b.NE)(P) : null;
             eZ && null != eB && null != e && (0, g.Yd)(eB.id, e);
@@ -289,13 +289,13 @@ function ee(e) {
                 let c = null != n ? n : e1;
                 null === c || a
                     ? k.default.track(C.HAw.PAYMENT_FLOW_LOADED, {
-                          ...e9,
+                          ...e3,
                           initial_step: c ?? e,
                           continue_session_initial_step: ev,
                           has_saved_payment_source: eC,
                       })
                     : k.default.track(C.HAw.PAYMENT_FLOW_STEP, {
-                          ...e9,
+                          ...e3,
                           ...i,
                           from_step: c,
                           to_step: e === T.pn.ADD_PAYMENT_STEPS ? T.pn.PAYMENT_ELEMENT : e,
@@ -305,7 +305,7 @@ function ee(e) {
                           gift_card_currency: tn,
                       });
             },
-            [e2, eE, eU, e1, ev, e9, tr, eO.startTime, ta, z, ts, eI, tu, eC, tt, tn],
+            [e2, eE, eU, e1, ev, e3, tr, eO.startTime, ta, z, ts, eI, tu, eC, tt, tn],
         );
     return (
         (0, U.b)(e1, eV, to, ew, !1, void 0, ek),
@@ -345,7 +345,7 @@ function ee(e) {
                         subscriptionTier: X,
                         handleStepChange: to,
                         handleClose: tu,
-                        analyticsData: e9,
+                        analyticsData: e3,
                         setAnalyticsData: e7,
                         trialId: et,
                         reviewWarningMessage: en,
