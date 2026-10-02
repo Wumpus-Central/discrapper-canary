@@ -1,5 +1,5 @@
-a.d(t, { B: () => o, MZ: () => l, TH: () => s, tn: () => i });
-let n = [
+n.d(t, { B: () => s, MZ: () => r, TH: () => a, tn: () => i });
+let l = [
     {
         date: "2026-09-07",
         time: "00:02",
@@ -791,6 +791,13 @@ let n = [
             "Publish now tells you which server permissions you're missing when you can't publish an app into its server.",
     },
     {
+        date: "2026-10-01",
+        time: "16:44",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Published apps in app channels get the same app view, chat, and Edit App controls as other published apps.",
+    },
+    {
         date: "2026-09-01",
         time: "00:02",
         platforms: ["desktop", "mobile"],
@@ -1178,15 +1185,15 @@ let n = [
             ? -1
             : +(e.summary > t.summary);
 });
-function s(e) {
+function a(e) {
     return i(e).slice(0, 3);
 }
 function i(e) {
-    return n.filter((t) => t.platforms.includes(e));
+    return l.filter((t) => t.platforms.includes(e));
 }
-function o(e) {
+function s(e) {
     return i(e).length > 3;
 }
-function l(e) {
+function r(e) {
     return 1 === e.platforms.length;
 }

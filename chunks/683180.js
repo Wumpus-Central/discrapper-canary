@@ -1,6 +1,5 @@
 n.d(t, {
     $X: () => m,
-    B9: () => I,
     Bp: () => L,
     G2: () => S,
     RZ: () => g,
@@ -13,33 +12,32 @@ n.d(t, {
     pG: () => N,
     qx: () => A,
     t7: () => E,
+    vv: () => I,
 });
 var i = n(17928),
-    r = n(808728),
-    a = n(71393),
-    s = n(576705),
-    l = n(967198),
-    o = n(673724),
-    d = n(906786),
-    c = n(652215);
-let u = "vibegrations_application_id=",
-    _ = /^\d{17,20}$/;
+    r = n(615606),
+    a = n(587895),
+    s = n(808728),
+    l = n(71393),
+    o = n(576705),
+    d = n(967198),
+    c = n(673724),
+    u = n(906786),
+    _ = n(652215);
 function E(e, t) {
     return null == e || "user" === e.install_scope ? null : ((t ? e.preview_guild_id : null) ?? e.guild_id ?? null);
 }
 function A(e, t) {
-    return [...("voice" === t ? [] : e[r.I6]), ...("text" === t ? [] : e[r.vM])].map((e) => {
+    return [...("voice" === t ? [] : e[s.I6]), ...("text" === t ? [] : e[s.vM])].map((e) => {
         let { channel: t } = e;
         return t;
     });
 }
 function h(e) {
-    return { isPublic: (e & o.A2.PUBLIC) != 0, isShared: (e & o.A2.SHAREABLE) != 0 };
+    return { isPublic: (e & c.A2.PUBLIC) != 0, isShared: (e & c.A2.SHAREABLE) != 0 };
 }
 function I(e) {
-    if (null == e || !e.startsWith(u)) return null;
-    let t = e.slice(u.length);
-    return _.test(t) ? t : null;
+    return e?.type === _.rbe.GUILD_APP ? (e.application_id ?? null) : null;
 }
 function f(e, t) {
     return (
@@ -48,53 +46,51 @@ function f(e, t) {
     );
 }
 function p(e, t) {
-    let n = null;
-    for (let { channel: i } of r.Ay.getChannels(e)[r.I6]) {
-        if (i.type === c.rbe.GUILD_APP && i.application_id === t) return i.id;
-        null == n && i.type === c.rbe.GUILD_TEXT && I(i.topic) === t && (n = i.id);
-    }
-    return n;
+    for (let { channel: n } of s.Ay.getChannels(e)[s.I6]) if (I(n) === t) return n.id;
+    return null;
 }
 function T(e, t) {
-    return (0, d.ix)({ guildId: e.id, location: t }) && !e.features.has(c.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
+    return (0, u.ix)({ guildId: e.id, location: t }) && !e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
 }
 function g(e, t) {
     return e.filter((e) => T(e, t)).sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id)));
 }
 function m(e) {
-    let t = l.A.getGuildId(),
-        n = null == t ? null : a.A.getGuild(t);
-    return null != n && T(n, e) ? n.id : (g(a.A.getGuildsArray(), e)[0]?.id ?? null);
+    let t = d.A.getGuildId(),
+        n = null == t ? null : l.A.getGuild(t);
+    return null != n && T(n, e) ? n.id : (g(l.A.getGuildsArray(), e)[0]?.id ?? null);
 }
 function S(e, t) {
     return T(e, t);
 }
 function N(e, t) {
     return (
-        !e.features.has(c.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) &&
-        s.A.can(c.xBc.MANAGE_CHANNELS, e) &&
-        s.A.can(c.xBc.MANAGE_GUILD, e) &&
-        (0, d.ix)({ guildId: e.id, location: t })
+        !e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) &&
+        o.A.can(_.xBc.MANAGE_CHANNELS, e) &&
+        o.A.can(_.xBc.MANAGE_GUILD, e) &&
+        (0, u.ix)({ guildId: e.id, location: t })
     );
 }
 function C(e, t) {
-    let n = (0, d.f)({ guildId: e.id, location: t }),
-        i = e.features.has(c.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
+    let n = (0, u.f)({ guildId: e.id, location: t }),
+        i = e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
     return n && !i;
 }
-function O(e, t) {
+function O(e, t, n) {
     return (
-        null != e &&
-        e.type === c.rbe.GUILD_TEXT &&
-        null != I(e.topic) &&
-        !t?.features.has(c.GuildFeatures.INTERNAL_EMPLOYEE_ONLY)
+        e?.type === _.rbe.GUILD_APP &&
+        n?.vibegrationsProjectId != null &&
+        t?.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) !== !0
     );
 }
 function R(e, t) {
-    return O(e, a.A.getGuild(e?.guild_id)) && (0, d.ix)({ guildId: e?.guild_id, location: t });
+    let n = I(e),
+        i = null != n && a.A.isHydrated(n) ? a.A.getApplication(n) : null;
+    return O(e, l.A.getGuild(e?.guild_id), i) && (0, u.ix)({ guildId: e?.guild_id, location: t });
 }
 function L(e, t) {
-    let n = (0, i.bG)([a.A], () => a.A.getGuild(e?.guild_id)),
-        r = (0, d.f)({ guildId: e?.guild_id, location: t });
-    return O(e, n) && r;
+    let n = (0, i.bG)([l.A], () => l.A.getGuild(e?.guild_id)),
+        a = (0, r.q)(e),
+        s = (0, u.f)({ guildId: e?.guild_id, location: t });
+    return O(e, n, a) && s;
 }

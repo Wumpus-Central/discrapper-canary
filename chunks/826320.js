@@ -2,7 +2,7 @@ n.d(t, { A: () => en });
 var i = n(477900),
     l = n(582128),
     s = n(38021),
-    r = n(268090),
+    r = n(854704),
     a = n(796637),
     o = n(117600);
 n(321073);
@@ -189,11 +189,11 @@ function w() {
     });
 }
 var H = n(866665),
-    k = n(939249),
-    B = n(789645),
+    B = n(939249),
+    k = n(789645),
     F = n(821609),
-    z = n(47167),
-    K = n(485947),
+    K = n(47167),
+    z = n(485947),
     W = n(61916),
     Y = n(446244),
     X = n(994500),
@@ -219,15 +219,15 @@ function ee(e) {
                           (0, i.jsxs)("div", {
                               className: Q.wx,
                               children: [
-                                  (0, i.jsx)(K.A, { className: Q.TK, children: D.intl.string(U.default.oHWnLy) }),
+                                  (0, i.jsx)(z.A, { className: Q.TK, children: D.intl.string(U.default.oHWnLy) }),
                                   (0, i.jsx)(H.m, {
                                       text: D.intl.string(D.t.WAI6xu),
-                                      children: (0, i.jsx)(k.D, {
+                                      children: (0, i.jsx)(B.D, {
                                           className: Q.r,
                                           onClick: l,
                                           role: "button",
                                           "aria-label": D.intl.string(U.default.F3dWTe),
-                                          children: (0, i.jsx)(B.P, {
+                                          children: (0, i.jsx)(k.P, {
                                               size: "xs",
                                               color: "currentColor",
                                               className: Q.CB,
@@ -252,7 +252,7 @@ function ee(e) {
                                                   name:
                                                       e.type === c.rD.USER
                                                           ? Z.Ay.getName(e.record)
-                                                          : (0, z.m1)(e.record, q.default, X.A),
+                                                          : (0, K.m1)(e.record, q.default, X.A),
                                               }),
                                               onClick: () => J((0, Y.hY)(e)),
                                           }),

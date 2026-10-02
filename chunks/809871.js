@@ -38,6 +38,12 @@ class f extends u.A {
             let { channel: t } = e;
             for (let e of A.A.getFramesForChannel(t.id)) this.leaveFrame(e.id);
         },
+        GUILD_DELETE: (e) => {
+            let { guild: t } = e;
+            if (!("unavailable" in t) || !0 !== t.unavailable)
+                for (let e of A.A.getAllFrames())
+                    e.surface.type !== c.U.MAIN && e.surface.guildId === t.id && this.leaveFrame(e.id);
+        },
         CHANNEL_UPDATES: (e) => {
             let { channels: t } = e;
             for (let e of t)

@@ -1,7 +1,7 @@
-l.d(t, { default: () => R });
+l.d(t, { default: () => V });
 var n = l(477900),
-    i = l(582128),
-    a = l(17928),
+    a = l(582128),
+    i = l(17928),
     s = l(189213),
     r = l(376357),
     u = l(857250),
@@ -15,10 +15,10 @@ var n = l(477900),
     x = l(713654),
     C = l(355622),
     S = l(408018),
-    b = l(479909),
-    p = l(451909),
-    N = l(135621),
-    v = l(808728),
+    p = l(479909),
+    b = l(451909),
+    v = l(135621),
+    N = l(808728),
     k = l(994500),
     y = l(287809),
     E = l(506774),
@@ -32,24 +32,23 @@ function A(e) {
 ${P.intl.formatToPlainString(j.default.bhoZhI, { channel: e })}`;
 }
 var L = l(683180),
-    w = l(512287),
-    G = l(480007),
-    V = l(381941),
+    w = l(480007),
+    G = l(381941),
     _ = l(286837);
-let M = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
-function R(e) {
+let R = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
+function V(e) {
     let {
             guildId: t,
             applicationId: l,
-            projectName: R,
-            publish: O,
-            initialDraft: B,
-            transitionState: $,
-            onClose: H,
+            projectName: V,
+            publish: M,
+            initialDraft: O,
+            transitionState: B,
+            onClose: $,
         } = e,
-        Q = (0, a.bG)([v.Ay], () =>
-            v.Ay.getChannels(t)
-                [v.I6].filter((e) => {
+        H = (0, i.bG)([N.Ay], () =>
+            N.Ay.getChannels(t)
+                [N.I6].filter((e) => {
                     let { channel: t } = e;
                     return !t.isGuildVocal() && !t.isThread() && !t.isForumLikeChannel();
                 })
@@ -58,113 +57,107 @@ function R(e) {
                     return t;
                 }),
         ),
-        q = (0, a.bG)([v.Ay], () => (0, L.SH)(t, l), [t, l]),
-        D = (0, N.A)() - A(I).length,
-        F = i.useRef(D);
-    F.current = D;
-    let [U, K] = i.useState("publishing"),
-        [Y, Z] = i.useState(null),
-        [z, W] = i.useState(() => {
+        Q = (0, i.bG)([N.Ay], () => (0, L.SH)(t, l), [t, l]),
+        q = (0, v.A)() - A(I).length,
+        D = a.useRef(q);
+    D.current = q;
+    let [F, U] = a.useState("publishing"),
+        [K, Y] = a.useState(null),
+        [Z, z] = a.useState(() => {
             let e = E.w.get(T)?.[l];
-            return null != e && Q.some((t) => t.id === e) ? e : null;
+            return null != e && H.some((t) => t.id === e) ? e : null;
         }),
-        [{ textValue: X, richValue: J }, ee] = i.useState(() => (0, S.N3)()),
-        [et, el] = i.useState(!1),
-        [en, ei] = i.useState(!0),
-        [ea, es] = i.useState(!1),
-        [er, eu] = i.useState(!1),
-        ed = i.useRef(!1),
-        eo = i.useRef(null != z);
-    (i.useEffect(() => {
+        [{ textValue: W, richValue: X }, J] = a.useState(() => (0, S.N3)()),
+        [ee, et] = a.useState(!1),
+        [el, en] = a.useState(!0),
+        [ea, ei] = a.useState(!1),
+        [es, er] = a.useState(!1),
+        eu = a.useRef(!1),
+        ed = a.useRef(null != Z);
+    (a.useEffect(() => {
         let e = !1;
         return (
-            O.then(
+            M.then(
                 () => {
-                    e || K("succeeded");
+                    e || U("succeeded");
                 },
                 (t) => {
-                    e || (K("failed"), Z(t instanceof Error ? t.message : null));
+                    e || (U("failed"), Y(t instanceof Error ? t.message : null));
                 },
             ),
             () => {
                 e = !0;
             }
         );
-    }, [O]),
-        i.useEffect(() => {
-            null == q || eo.current || W(q);
-        }, [q]),
-        i.useEffect(() => {
+    }, [M]),
+        a.useEffect(() => {
+            null == Q || ed.current || z(Q);
+        }, [Q]),
+        a.useEffect(() => {
             let e = !1;
             return (
-                B.then(
+                O.then(
                     (t) => {
                         !e &&
-                            (ei(!1),
+                            (en(!1),
                             !0 !== t.ok
-                                ? es(!0)
+                                ? ei(!0)
                                 : null == t.notes ||
                                   "" === t.notes ||
-                                  ed.current ||
-                                  ee((0, S.ur)(t.notes.slice(0, F.current))));
+                                  eu.current ||
+                                  J((0, S.ur)(t.notes.slice(0, D.current))));
                     },
                     () => {
-                        e || (ei(!1), es(!0));
+                        e || (en(!1), ei(!0));
                     },
                 ),
                 () => {
                     e = !0;
                 }
             );
-        }, [B]));
-    let ec = i.useCallback((e, t, l) => {
-            ((ed.current = !0), ee({ textValue: t, richValue: l }));
+        }, [O]));
+    let eo = a.useCallback((e, t, l) => {
+            ((eu.current = !0), J({ textValue: t, richValue: l }));
         }, []),
-        eh = i.useMemo(
-            () =>
-                Q.map((e) => ({
-                    id: e.id,
-                    value: e.id,
-                    label: (0, g.m1)(e, y.default, k.A),
-                    leading: (0, w.A)(e, "VibegrationsPublishNotesModal") ?? (0, x.gU)(e),
-                })),
-            [Q],
+        ec = a.useMemo(
+            () => H.map((e) => ({ id: e.id, value: e.id, label: (0, g.m1)(e, y.default, k.A), leading: (0, x.gU)(e) })),
+            [H],
         ),
-        ef = (null != z ? Q.find((e) => e.id === z) : null) ?? null,
-        em = ef ?? Q[0] ?? null,
-        eg = X.trim(),
-        ex = null == q ? null : A(`<#${q}>`),
-        eC = i.useCallback(async () => {
-            if (null != ef && "" !== eg) {
-                eu(!0);
+        eh = (null != Z ? H.find((e) => e.id === Z) : null) ?? null,
+        ef = eh ?? H[0] ?? null,
+        em = W.trim(),
+        eg = null == Q ? null : A(`<#${Q}>`),
+        ex = a.useCallback(async () => {
+            if (null != eh && "" !== em) {
+                er(!0);
                 try {
                     var e;
-                    let t = p.Ay.parse(ef, null == ex ? eg : `${eg}${ex}`),
-                        n = await m.A.sendMessage(ef.id, t, !1, { location: V.Hx.VIBEGRATIONS_PATCH_NOTES });
+                    let t = b.Ay.parse(eh, null == eg ? em : `${em}${eg}`),
+                        n = await m.A.sendMessage(eh.id, t, !1, { location: G.Hx.VIBEGRATIONS_PATCH_NOTES });
                     if (n?.ok === !1) throw Error("send failed");
-                    ((e = ef.id), E.w.set(T, { ...E.w.get(T), [l]: e }), H());
+                    ((e = eh.id), E.w.set(T, { ...E.w.get(T), [l]: e }), $());
                 } catch {
-                    ((0, r.P)((0, u.o)(P.intl.string(j.default.P6SoGm), d.Ck.FAILURE)), eu(!1));
+                    ((0, r.P)((0, u.o)(P.intl.string(j.default.P6SoGm), d.Ck.FAILURE)), er(!1));
                 }
             }
-        }, [ef, eg, ex, l, H]);
+        }, [eh, em, eg, l, $]);
     return (0, n.jsx)(s.a, {
-        transitionState: $,
-        onClose: H,
-        title: P.intl.formatToPlainString(j.default.gOv8LL, { projectName: R }),
+        transitionState: B,
+        onClose: $,
+        title: P.intl.formatToPlainString(j.default.gOv8LL, { projectName: V }),
         size: "lg",
         actions: [
             {
-                text: "failed" === U ? P.intl.string(P.t.cpT0Cq) : P.intl.string(j.default.NmaE9T),
+                text: "failed" === F ? P.intl.string(P.t.cpT0Cq) : P.intl.string(j.default.NmaE9T),
                 variant: "secondary",
-                onClick: H,
+                onClick: $,
             },
             {
                 text: P.intl.string(j.default.dx7eQG),
                 variant: "primary",
-                onClick: eC,
-                disabled: "succeeded" !== U || "" === eg || eg.length > D || null == ef || er,
-                loading: er,
+                onClick: ex,
+                disabled: "succeeded" !== F || "" === em || em.length > q || null == eh || es,
+                loading: es,
             },
         ],
         children: (0, n.jsxs)("div", {
@@ -174,7 +167,7 @@ function R(e) {
                     className: _.w0,
                     children: [
                         (0, n.jsx)(o.D, { variant: "heading-md/semibold", children: P.intl.string(j.default.tqtMyS) }),
-                        "publishing" === U
+                        "publishing" === F
                             ? (0, n.jsxs)("div", {
                                   className: _.G1,
                                   children: [
@@ -182,24 +175,24 @@ function R(e) {
                                       (0, n.jsx)(h.E, {
                                           variant: "text-md/medium",
                                           color: "text-subtle",
-                                          children: P.intl.formatToPlainString(j.default.g5fncX, { projectName: R }),
+                                          children: P.intl.formatToPlainString(j.default.g5fncX, { projectName: V }),
                                       }),
                                   ],
                               })
-                            : "succeeded" === U
+                            : "succeeded" === F
                               ? (0, n.jsx)(h.E, {
                                     variant: "text-md/medium",
                                     color: "text-feedback-positive",
-                                    children: P.intl.formatToPlainString(j.default.CC69wK, { projectName: R }),
+                                    children: P.intl.formatToPlainString(j.default.CC69wK, { projectName: V }),
                                 })
                               : (0, n.jsx)(h.E, {
                                     variant: "text-md/medium",
                                     color: "text-feedback-critical",
-                                    children: Y ?? P.intl.string(j.default.fNP6Cd),
+                                    children: K ?? P.intl.string(j.default.fNP6Cd),
                                 }),
                     ],
                 }),
-                null != em
+                null != ef
                     ? (0, n.jsxs)("div", {
                           className: _.dY,
                           children: [
@@ -210,26 +203,26 @@ function R(e) {
                               (0, n.jsxs)("div", {
                                   className: _.Q2,
                                   children: [
-                                      (0, n.jsx)(b.Ay, {
+                                      (0, n.jsx)(p.Ay, {
                                           type: C.oU.VIBEGRATIONS_PATCH_NOTES,
-                                          channel: em,
+                                          channel: ef,
                                           accessibilityLabel: P.intl.string(j.default.oouynk),
-                                          placeholder: P.intl.string(en ? j.default.VQhlkB : j.default.xkxDN1),
-                                          textValue: X,
-                                          richValue: J,
-                                          focused: et,
-                                          onChange: ec,
-                                          onFocus: () => el(!0),
-                                          onBlur: () => el(!1),
-                                          onSubmit: M,
-                                          parentModalKey: G.Y,
+                                          placeholder: P.intl.string(el ? j.default.VQhlkB : j.default.xkxDN1),
+                                          textValue: W,
+                                          richValue: X,
+                                          focused: ee,
+                                          onChange: eo,
+                                          onFocus: () => et(!0),
+                                          onBlur: () => et(!1),
+                                          onSubmit: R,
+                                          parentModalKey: w.Y,
                                           autoCompletePosition: "bottom",
                                           emojiPickerCloseOnModalOuterClick: !0,
                                           disableThemedBackground: !0,
-                                          maxCharacterCount: D,
+                                          maxCharacterCount: q,
                                           editorClassName: _.Tw,
                                       }),
-                                      en
+                                      el
                                           ? (0, n.jsx)(c.y, { type: c.t.SPINNING_CIRCLE_SIMPLE, className: _.n5 })
                                           : null,
                                       ea
@@ -251,11 +244,11 @@ function R(e) {
                                                   selectionMode: "single",
                                                   label: P.intl.string(j.default.IcSdnu),
                                                   hideLabel: !0,
-                                                  options: eh,
-                                                  value: z ?? void 0,
+                                                  options: ec,
+                                                  value: Z ?? void 0,
                                                   placeholder: P.intl.string(j.default["8qO519"]),
                                                   onSelectionChange: (e) => {
-                                                      ((eo.current = !0), W(e));
+                                                      ((ed.current = !0), z(e));
                                                   },
                                                   fullWidth: !0,
                                               }),

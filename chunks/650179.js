@@ -1108,8 +1108,8 @@ function e8(e, t, l) {
         "jpg" === i && (c.quality = "lossless"), "webp" === i && n && (c.animated = !0), (d += `?${e2.stringify(c)}`)
     );
 }
-var e5 = l(868602),
-    e7 = l(445187),
+var e7 = l(868602),
+    e5 = l(445187),
     e4 = l(299285),
     e9 = l(831544),
     te = l(28863),
@@ -1243,8 +1243,8 @@ function ta(e) {
                             l.e("264236"),
                             l.e("776602"),
                             l.e("349619"),
-                            l.e("140402"),
                             l.e("543039"),
+                            l.e("140402"),
                             l.e("244560"),
                             l.e("398125"),
                             l.e("221825"),
@@ -1266,7 +1266,6 @@ function ta(e) {
                             l.e("425544"),
                             l.e("416143"),
                             l.e("844695"),
-                            l.e("401518"),
                             l.e("592028"),
                             l.e("809915"),
                             l.e("662174"),
@@ -1278,11 +1277,11 @@ function ta(e) {
                             l.e("123216"),
                             l.e("428296"),
                             l.e("747017"),
-                            l.e("854461"),
                             l.e("165595"),
                             l.e("445124"),
                             l.e("445421"),
                             l.e("988077"),
+                            l.e("401518"),
                             l.e("832823"),
                             l.e("776750"),
                             l.e("761935"),
@@ -1292,6 +1291,7 @@ function ta(e) {
                             l.e("381933"),
                             l.e("502018"),
                             l.e("561216"),
+                            l.e("854461"),
                             l.e("249366"),
                             l.e("728633"),
                             l.e("313681"),
@@ -1356,7 +1356,6 @@ function ta(e) {
                             l.e("643612"),
                             l.e("187856"),
                             l.e("577084"),
-                            l.e("652898"),
                             l.e("332470"),
                             l.e("334127"),
                             l.e("318546"),
@@ -1367,7 +1366,6 @@ function ta(e) {
                             l.e("8563"),
                             l.e("499941"),
                             l.e("693832"),
-                            l.e("515572"),
                             l.e("773192"),
                             l.e("710638"),
                             l.e("193158"),
@@ -2011,7 +2009,7 @@ function t6(e) {
                                     colorStrings: n.roleColorStrings,
                                 }),
                             }),
-                            (0, i.jsx)(t5, { listener: r }),
+                            (0, i.jsx)(t7, { listener: r }),
                         ],
                     }),
                 ],
@@ -2021,7 +2019,7 @@ function t6(e) {
 function t8(e, t) {
     return (0, i.jsx)(A.E, { tag: "span", variant: "text-xs/medium", color: "text-strong", children: e }, t);
 }
-function t5(e) {
+function t7(e) {
     let { listener: t } = e,
         l = t?.latest_track_title;
     if (null == l) return null;
@@ -2036,7 +2034,7 @@ function t5(e) {
                 : z.intl.format(W.default.ZMJ8Mt, { trackTitle: l, highlightHook: t8 }),
     });
 }
-function t7(e) {
+function t5(e) {
     let { artist: t, notched: l } = e,
         [n, s] = a.useState(!1),
         r = null != t.artist_image_hash ? ts.RQ.IMAGE(t.artist_image_hash) : null;
@@ -2070,7 +2068,7 @@ function t4(e) {
                 children: [
                     n.map((e, t) =>
                         (0, i.jsx)(
-                            t7,
+                            t5,
                             { artist: e, notched: a > 0 || t !== n.length - 1 },
                             `${e.artist_external_id}-${e.artist_image_hash}`,
                         ),
@@ -2461,14 +2459,14 @@ let lZ = {
                 r = "edit" === l ? t.config.image : void 0,
                 d = void 0 !== r ? r : null != s ? e8(n, t.id, s) : null;
             return (0, i.jsxs)("div", {
-                className: e7.kL,
+                className: e5.kL,
                 children: [
-                    null != d && (0, i.jsx)("img", { className: e7.Sl, src: d, alt: "" }),
+                    null != d && (0, i.jsx)("img", { className: e5.Sl, src: d, alt: "" }),
                     null != a &&
                         (0, i.jsx)(A.E, {
                             variant: "text-md/normal",
                             color: "text-subtle",
-                            className: e7.Qq,
+                            className: e5.Qq,
                             children: a,
                         }),
                 ],
@@ -2502,7 +2500,7 @@ let lZ = {
                             direction: "horizontal",
                             align: "center",
                             justify: "space-between",
-                            className: e5.B,
+                            className: e7.B,
                             children: [
                                 (0, i.jsxs)(eq.B, {
                                     gap: 8,
@@ -2532,7 +2530,7 @@ let lZ = {
                                             }),
                                     ],
                                 }),
-                                null != _ && (0, i.jsx)("img", { className: e5.V, src: _, alt: "" }),
+                                null != _ && (0, i.jsx)("img", { className: e7.V, src: _, alt: "" }),
                             ],
                         }),
                     }),

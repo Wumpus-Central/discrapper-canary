@@ -1,40 +1,3 @@
-.changelog__9528d {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-12);
-    width: 100%
-}
-
-.changelogHeading__9528d {
-    gap: var(--space-4)
-}
-
-.changelogHeading__9528d,
-.changelogList__9528d {
-    display: flex;
-    flex-direction: column;
-    text-align: start
-}
-
-.changelogList__9528d {
-    gap: var(--space-8);
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    width: 100%
-}
-
-.changelogItem__9528d {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-4);
-    min-width: 0
-}
-
-.changelogDate__9528d {
-    text-transform: uppercase
-}
-
 .quoteText_a3ced8 {
     max-width: 360px
 }
@@ -309,4 +272,4 @@
     background-image: url(/assets/6ad5446be34bb27a.svg)
 }
 
-/*# sourceMappingURL=132839.76cddaf42a9ba6fd.css.map*/
+/*# sourceMappingURL=926669.5ea1a516ecb182b5.css.map*/

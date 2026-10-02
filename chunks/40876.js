@@ -891,6 +891,7 @@ let r = {
             "VOICE_CHANNEL_SELECT",
             "CHANNEL_DELETE",
             "CHANNEL_UPDATES",
+            "GUILD_DELETE",
         ],
         inlineRequire: () => n(809871).A,
     },

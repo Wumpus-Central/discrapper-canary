@@ -1,48 +1,48 @@
 (n.d(t, {
-    A_: () => m,
-    B4: () => en,
-    Do: () => b,
-    Gw: () => P,
-    IY: () => q,
-    JT: () => z,
-    LE: () => Q,
-    Le: () => H,
-    Lt: () => ev,
-    MK: () => w,
-    OU: () => y,
-    OY: () => eP,
-    QE: () => v,
-    TA: () => eh,
-    UE: () => eM,
-    XD: () => O,
-    YB: () => eg,
-    ZV: () => er,
-    Z_: () => $,
-    ay: () => D,
-    bk: () => X,
-    cq: () => eD,
-    createChannelRecord: () => eG,
-    fT: () => Y,
-    gV: () => F,
-    ig: () => V,
-    jb: () => em,
-    k: () => ee,
-    k3: () => G,
-    ke: () => N,
-    nA: () => eC,
-    nO: () => eo,
-    nb: () => J,
-    oH: () => C,
-    oI: () => es,
-    oh: () => ew,
-    p6: () => et,
-    pQ: () => x,
-    pd: () => eI,
-    tr: () => g,
-    uL: () => R,
-    wE: () => W,
-    xR: () => Z,
-    zy: () => L,
+    A_: () => S,
+    B4: () => ei,
+    Do: () => M,
+    Gw: () => U,
+    IY: () => Q,
+    JT: () => X,
+    LE: () => J,
+    Le: () => j,
+    Lt: () => eb,
+    MK: () => G,
+    OU: () => D,
+    OY: () => eU,
+    QE: () => b,
+    TA: () => eI,
+    UE: () => eP,
+    XD: () => R,
+    YB: () => em,
+    ZV: () => ea,
+    Z_: () => z,
+    ay: () => v,
+    bk: () => Z,
+    cq: () => ev,
+    createChannelRecord: () => ex,
+    fT: () => K,
+    gV: () => B,
+    ig: () => H,
+    jb: () => eS,
+    k: () => et,
+    k3: () => x,
+    ke: () => C,
+    nA: () => eO,
+    nO: () => ed,
+    nb: () => ee,
+    oH: () => O,
+    oI: () => el,
+    oh: () => eG,
+    p6: () => en,
+    pQ: () => k,
+    pd: () => ef,
+    tr: () => m,
+    uL: () => L,
+    wE: () => Y,
+    xR: () => q,
+    zy: () => y,
 }),
     n(938796));
 var i = n(435558),
@@ -57,239 +57,240 @@ var i = n(435558),
     _ = n(933681),
     E = n(233993),
     A = n(446600),
-    h = n(403362),
-    I = n(935208),
-    f = n(652215),
-    p = n(746080);
-let T = new Set([
-    f.rbe.GUILD_TEXT,
-    f.rbe.GUILD_ANNOUNCEMENT,
-    f.rbe.GUILD_STORE,
-    f.rbe.ANNOUNCEMENT_THREAD,
-    f.rbe.PUBLIC_THREAD,
-    f.rbe.PRIVATE_THREAD,
-    f.rbe.GUILD_DIRECTORY,
-    f.rbe.GUILD_FORUM,
-    f.rbe.GUILD_MEDIA,
-    f.rbe.GUILD_APP,
-    f.rbe.DM,
-    f.rbe.GROUP_DM,
+    h = n(387397),
+    I = n(403362),
+    f = n(935208),
+    p = n(652215),
+    T = n(746080);
+let g = new Set([
+    p.rbe.GUILD_TEXT,
+    p.rbe.GUILD_ANNOUNCEMENT,
+    p.rbe.GUILD_STORE,
+    p.rbe.ANNOUNCEMENT_THREAD,
+    p.rbe.PUBLIC_THREAD,
+    p.rbe.PRIVATE_THREAD,
+    p.rbe.GUILD_DIRECTORY,
+    p.rbe.GUILD_FORUM,
+    p.rbe.GUILD_MEDIA,
+    p.rbe.GUILD_APP,
+    p.rbe.DM,
+    p.rbe.GROUP_DM,
 ]);
-function g(e) {
-    return T.has(e);
+function m(e) {
+    return g.has(e);
 }
-let m = new Set([
-        f.rbe.DM,
-        f.rbe.GROUP_DM,
-        f.rbe.GUILD_TEXT,
-        f.rbe.GUILD_VOICE,
-        f.rbe.GUILD_STAGE_VOICE,
-        f.rbe.GUILD_CATEGORY,
-        f.rbe.GUILD_ANNOUNCEMENT,
-        f.rbe.GUILD_STORE,
-        f.rbe.ANNOUNCEMENT_THREAD,
-        f.rbe.PUBLIC_THREAD,
-        f.rbe.PRIVATE_THREAD,
-        f.rbe.GUILD_DIRECTORY,
-        f.rbe.GUILD_FORUM,
-        f.rbe.GUILD_MEDIA,
-        f.rbe.GUILD_SPACE,
-        f.rbe.MEDIA_THREAD,
-        f.rbe.GUILD_APP,
+let S = new Set([
+        p.rbe.DM,
+        p.rbe.GROUP_DM,
+        p.rbe.GUILD_TEXT,
+        p.rbe.GUILD_VOICE,
+        p.rbe.GUILD_STAGE_VOICE,
+        p.rbe.GUILD_CATEGORY,
+        p.rbe.GUILD_ANNOUNCEMENT,
+        p.rbe.GUILD_STORE,
+        p.rbe.ANNOUNCEMENT_THREAD,
+        p.rbe.PUBLIC_THREAD,
+        p.rbe.PRIVATE_THREAD,
+        p.rbe.GUILD_DIRECTORY,
+        p.rbe.GUILD_FORUM,
+        p.rbe.GUILD_MEDIA,
+        p.rbe.GUILD_SPACE,
+        p.rbe.MEDIA_THREAD,
+        p.rbe.GUILD_APP,
     ]),
-    S = new Set([
-        f.rbe.GUILD_TEXT,
-        f.rbe.GUILD_ANNOUNCEMENT,
-        f.rbe.ANNOUNCEMENT_THREAD,
-        f.rbe.PUBLIC_THREAD,
-        f.rbe.PRIVATE_THREAD,
-        f.rbe.GUILD_APP,
+    N = new Set([
+        p.rbe.GUILD_TEXT,
+        p.rbe.GUILD_ANNOUNCEMENT,
+        p.rbe.ANNOUNCEMENT_THREAD,
+        p.rbe.PUBLIC_THREAD,
+        p.rbe.PRIVATE_THREAD,
+        p.rbe.GUILD_APP,
     ]);
-function N(e) {
-    return S.has(e);
+function C(e) {
+    return N.has(e);
 }
-let C = new Set([
-        f.rbe.GUILD_TEXT,
-        f.rbe.GUILD_ANNOUNCEMENT,
-        f.rbe.GUILD_FORUM,
-        f.rbe.GUILD_MEDIA,
-        f.rbe.GUILD_VOICE,
-        f.rbe.GUILD_STAGE_VOICE,
-        f.rbe.GUILD_APP,
+let O = new Set([
+        p.rbe.GUILD_TEXT,
+        p.rbe.GUILD_ANNOUNCEMENT,
+        p.rbe.GUILD_FORUM,
+        p.rbe.GUILD_MEDIA,
+        p.rbe.GUILD_VOICE,
+        p.rbe.GUILD_STAGE_VOICE,
+        p.rbe.GUILD_APP,
     ]),
-    O = new Set([f.rbe.GUILD_TEXT]),
-    R = new Set([
-        f.rbe.GUILD_TEXT,
-        f.rbe.GUILD_VOICE,
-        f.rbe.GUILD_STAGE_VOICE,
-        f.rbe.GUILD_CATEGORY,
-        f.rbe.GUILD_ANNOUNCEMENT,
-        f.rbe.GUILD_STORE,
-        f.rbe.ANNOUNCEMENT_THREAD,
-        f.rbe.PUBLIC_THREAD,
-        f.rbe.PRIVATE_THREAD,
-        f.rbe.GUILD_DIRECTORY,
-        f.rbe.GUILD_FORUM,
-        f.rbe.GUILD_MEDIA,
-        f.rbe.GUILD_SPACE,
-        f.rbe.GUILD_APP,
+    R = new Set([p.rbe.GUILD_TEXT]),
+    L = new Set([
+        p.rbe.GUILD_TEXT,
+        p.rbe.GUILD_VOICE,
+        p.rbe.GUILD_STAGE_VOICE,
+        p.rbe.GUILD_CATEGORY,
+        p.rbe.GUILD_ANNOUNCEMENT,
+        p.rbe.GUILD_STORE,
+        p.rbe.ANNOUNCEMENT_THREAD,
+        p.rbe.PUBLIC_THREAD,
+        p.rbe.PRIVATE_THREAD,
+        p.rbe.GUILD_DIRECTORY,
+        p.rbe.GUILD_FORUM,
+        p.rbe.GUILD_MEDIA,
+        p.rbe.GUILD_SPACE,
+        p.rbe.GUILD_APP,
     ]);
-function L(e) {
-    return R.has(e);
+function y(e) {
+    return L.has(e);
 }
-(f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT, f.rbe.GUILD_FORUM, f.rbe.GUILD_MEDIA, f.rbe.GUILD_APP);
-let y = new Set([f.rbe.GUILD_VOICE, f.rbe.GUILD_STAGE_VOICE]);
-function D(e) {
-    return "SELECTABLE" !== e && y.has(e);
-}
+(p.rbe.GUILD_TEXT, p.rbe.GUILD_ANNOUNCEMENT, p.rbe.GUILD_FORUM, p.rbe.GUILD_MEDIA, p.rbe.GUILD_APP);
+let D = new Set([p.rbe.GUILD_VOICE, p.rbe.GUILD_STAGE_VOICE]);
 function v(e) {
+    return "SELECTABLE" !== e && D.has(e);
+}
+function b(e) {
     var t;
-    return D(e) || ((t = e), j.has(t));
+    return v(e) || ((t = e), W.has(t));
 }
-let b = new Set([f.rbe.GUILD_STAGE_VOICE]),
-    M = new Set([f.rbe.DM, f.rbe.GROUP_DM]);
-function P(e) {
-    return M.has(e);
+let M = new Set([p.rbe.GUILD_STAGE_VOICE]),
+    P = new Set([p.rbe.DM, p.rbe.GROUP_DM]);
+function U(e) {
+    return P.has(e);
 }
-let U = new Set([f.rbe.GROUP_DM]);
-function w(e) {
-    return U.has(e);
+let w = new Set([p.rbe.GROUP_DM]);
+function G(e) {
+    return w.has(e);
 }
-let G = new Set([
-    f.rbe.DM,
-    f.rbe.GROUP_DM,
-    f.rbe.GUILD_TEXT,
-    f.rbe.GUILD_ANNOUNCEMENT,
-    f.rbe.ANNOUNCEMENT_THREAD,
-    f.rbe.PUBLIC_THREAD,
-    f.rbe.PRIVATE_THREAD,
-    f.rbe.GUILD_APP,
+let x = new Set([
+    p.rbe.DM,
+    p.rbe.GROUP_DM,
+    p.rbe.GUILD_TEXT,
+    p.rbe.GUILD_ANNOUNCEMENT,
+    p.rbe.ANNOUNCEMENT_THREAD,
+    p.rbe.PUBLIC_THREAD,
+    p.rbe.PRIVATE_THREAD,
+    p.rbe.GUILD_APP,
 ]);
-function x(e) {
-    return G.has(e);
+function k(e) {
+    return x.has(e);
 }
-let k = new Set([
-    f.rbe.DM,
-    f.rbe.GROUP_DM,
-    f.rbe.GUILD_VOICE,
-    f.rbe.GUILD_STAGE_VOICE,
-    f.rbe.PUBLIC_THREAD,
-    f.rbe.PRIVATE_THREAD,
+let F = new Set([
+    p.rbe.DM,
+    p.rbe.GROUP_DM,
+    p.rbe.GUILD_VOICE,
+    p.rbe.GUILD_STAGE_VOICE,
+    p.rbe.PUBLIC_THREAD,
+    p.rbe.PRIVATE_THREAD,
 ]);
-function F(e) {
-    return k.has(e);
+function B(e) {
+    return F.has(e);
 }
-let B = new Set([
-    f.rbe.GUILD_TEXT,
-    f.rbe.GUILD_ANNOUNCEMENT,
-    f.rbe.ANNOUNCEMENT_THREAD,
-    f.rbe.PUBLIC_THREAD,
-    f.rbe.PRIVATE_THREAD,
-    f.rbe.GUILD_DIRECTORY,
-    f.rbe.GUILD_FORUM,
-    f.rbe.GUILD_MEDIA,
-    f.rbe.GUILD_APP,
-    f.rbe.DM,
-    f.rbe.GROUP_DM,
+let V = new Set([
+    p.rbe.GUILD_TEXT,
+    p.rbe.GUILD_ANNOUNCEMENT,
+    p.rbe.ANNOUNCEMENT_THREAD,
+    p.rbe.PUBLIC_THREAD,
+    p.rbe.PRIVATE_THREAD,
+    p.rbe.GUILD_DIRECTORY,
+    p.rbe.GUILD_FORUM,
+    p.rbe.GUILD_MEDIA,
+    p.rbe.GUILD_APP,
+    p.rbe.DM,
+    p.rbe.GROUP_DM,
 ]);
-function V(e) {
-    return B.has(e);
+function H(e) {
+    return V.has(e);
 }
-let H = new Set([f.rbe.ANNOUNCEMENT_THREAD, f.rbe.PUBLIC_THREAD, f.rbe.PRIVATE_THREAD, f.rbe.MEDIA_THREAD]),
-    j = new Set([f.rbe.PUBLIC_THREAD, f.rbe.PRIVATE_THREAD]),
-    W = new Set([f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT, f.rbe.GUILD_FORUM, f.rbe.GUILD_MEDIA, f.rbe.GUILD_APP]);
-function Y(e) {
-    return H.has(e);
+let j = new Set([p.rbe.ANNOUNCEMENT_THREAD, p.rbe.PUBLIC_THREAD, p.rbe.PRIVATE_THREAD, p.rbe.MEDIA_THREAD]),
+    W = new Set([p.rbe.PUBLIC_THREAD, p.rbe.PRIVATE_THREAD]),
+    Y = new Set([p.rbe.GUILD_TEXT, p.rbe.GUILD_ANNOUNCEMENT, p.rbe.GUILD_FORUM, p.rbe.GUILD_MEDIA, p.rbe.GUILD_APP]);
+function K(e) {
+    return j.has(e);
 }
-let K = new Set([
-    f.rbe.DM,
-    f.rbe.GROUP_DM,
-    f.rbe.GUILD_TEXT,
-    f.rbe.GUILD_ANNOUNCEMENT,
-    f.rbe.ANNOUNCEMENT_THREAD,
-    f.rbe.PUBLIC_THREAD,
-    f.rbe.PRIVATE_THREAD,
-    f.rbe.GUILD_FORUM,
-    f.rbe.GUILD_MEDIA,
-    f.rbe.GUILD_DIRECTORY,
-    f.rbe.GUILD_VOICE,
-    f.rbe.GUILD_STAGE_VOICE,
-    f.rbe.GUILD_APP,
+let $ = new Set([
+    p.rbe.DM,
+    p.rbe.GROUP_DM,
+    p.rbe.GUILD_TEXT,
+    p.rbe.GUILD_ANNOUNCEMENT,
+    p.rbe.ANNOUNCEMENT_THREAD,
+    p.rbe.PUBLIC_THREAD,
+    p.rbe.PRIVATE_THREAD,
+    p.rbe.GUILD_FORUM,
+    p.rbe.GUILD_MEDIA,
+    p.rbe.GUILD_DIRECTORY,
+    p.rbe.GUILD_VOICE,
+    p.rbe.GUILD_STAGE_VOICE,
+    p.rbe.GUILD_APP,
 ]);
-function $(e) {
-    return K.has(e);
+function z(e) {
+    return $.has(e);
 }
-let z = new Set([
-        f.rbe.GUILD_TEXT,
-        f.rbe.GUILD_ANNOUNCEMENT,
-        f.rbe.GUILD_STORE,
-        f.rbe.GUILD_VOICE,
-        f.rbe.GUILD_STAGE_VOICE,
-        f.rbe.ANNOUNCEMENT_THREAD,
-        f.rbe.PUBLIC_THREAD,
-        f.rbe.PRIVATE_THREAD,
-        f.rbe.GUILD_DIRECTORY,
-        f.rbe.GUILD_FORUM,
-        f.rbe.GUILD_MEDIA,
-        f.rbe.GUILD_APP,
+let X = new Set([
+        p.rbe.GUILD_TEXT,
+        p.rbe.GUILD_ANNOUNCEMENT,
+        p.rbe.GUILD_STORE,
+        p.rbe.GUILD_VOICE,
+        p.rbe.GUILD_STAGE_VOICE,
+        p.rbe.ANNOUNCEMENT_THREAD,
+        p.rbe.PUBLIC_THREAD,
+        p.rbe.PRIVATE_THREAD,
+        p.rbe.GUILD_DIRECTORY,
+        p.rbe.GUILD_FORUM,
+        p.rbe.GUILD_MEDIA,
+        p.rbe.GUILD_APP,
     ]),
-    X = new Set([
-        f.rbe.GUILD_ANNOUNCEMENT,
-        f.rbe.GUILD_CATEGORY,
-        f.rbe.GUILD_STORE,
-        f.rbe.GUILD_TEXT,
-        f.rbe.GUILD_VOICE,
-        f.rbe.GUILD_STAGE_VOICE,
-        f.rbe.GUILD_DIRECTORY,
-        f.rbe.GUILD_FORUM,
-        f.rbe.GUILD_MEDIA,
-        f.rbe.GUILD_APP,
+    Z = new Set([
+        p.rbe.GUILD_ANNOUNCEMENT,
+        p.rbe.GUILD_CATEGORY,
+        p.rbe.GUILD_STORE,
+        p.rbe.GUILD_TEXT,
+        p.rbe.GUILD_VOICE,
+        p.rbe.GUILD_STAGE_VOICE,
+        p.rbe.GUILD_DIRECTORY,
+        p.rbe.GUILD_FORUM,
+        p.rbe.GUILD_MEDIA,
+        p.rbe.GUILD_APP,
     ]),
-    Z = new Set([f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT]),
-    q = new Set([f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT, f.rbe.GUILD_FORUM, f.rbe.GUILD_MEDIA, f.rbe.GUILD_APP]),
-    Q = new Set([
-        f.rbe.GUILD_TEXT,
-        f.rbe.GUILD_ANNOUNCEMENT,
-        f.rbe.GUILD_FORUM,
-        f.rbe.GUILD_MEDIA,
-        f.rbe.GUILD_VOICE,
-        f.rbe.GUILD_STAGE_VOICE,
-        f.rbe.GUILD_APP,
-    ]),
+    q = new Set([p.rbe.GUILD_TEXT, p.rbe.GUILD_ANNOUNCEMENT]),
+    Q = new Set([p.rbe.GUILD_TEXT, p.rbe.GUILD_ANNOUNCEMENT, p.rbe.GUILD_FORUM, p.rbe.GUILD_MEDIA, p.rbe.GUILD_APP]),
     J = new Set([
-        f.rbe.GUILD_TEXT,
-        f.rbe.GUILD_FORUM,
-        f.rbe.GUILD_MEDIA,
-        f.rbe.ANNOUNCEMENT_THREAD,
-        f.rbe.PUBLIC_THREAD,
-        f.rbe.PRIVATE_THREAD,
-        f.rbe.GUILD_VOICE,
-        f.rbe.GUILD_STAGE_VOICE,
-        f.rbe.GUILD_APP,
+        p.rbe.GUILD_TEXT,
+        p.rbe.GUILD_ANNOUNCEMENT,
+        p.rbe.GUILD_FORUM,
+        p.rbe.GUILD_MEDIA,
+        p.rbe.GUILD_VOICE,
+        p.rbe.GUILD_STAGE_VOICE,
+        p.rbe.GUILD_APP,
     ]),
-    ee = new Set([f.rbe.PUBLIC_THREAD, f.rbe.PRIVATE_THREAD, f.rbe.GUILD_VOICE, f.rbe.GUILD_STAGE_VOICE]),
-    et = new Set([f.rbe.GUILD_TEXT, f.rbe.GUILD_FORUM, f.rbe.GUILD_MEDIA]),
-    en = new Set([
-        f.rbe.GUILD_TEXT,
-        f.rbe.GUILD_CATEGORY,
-        f.rbe.GUILD_FORUM,
-        f.rbe.GUILD_ANNOUNCEMENT,
-        f.rbe.GUILD_APP,
+    ee = new Set([
+        p.rbe.GUILD_TEXT,
+        p.rbe.GUILD_FORUM,
+        p.rbe.GUILD_MEDIA,
+        p.rbe.ANNOUNCEMENT_THREAD,
+        p.rbe.PUBLIC_THREAD,
+        p.rbe.PRIVATE_THREAD,
+        p.rbe.GUILD_VOICE,
+        p.rbe.GUILD_STAGE_VOICE,
+        p.rbe.GUILD_APP,
+    ]),
+    et = new Set([p.rbe.PUBLIC_THREAD, p.rbe.PRIVATE_THREAD, p.rbe.GUILD_VOICE, p.rbe.GUILD_STAGE_VOICE]),
+    en = new Set([p.rbe.GUILD_TEXT, p.rbe.GUILD_FORUM, p.rbe.GUILD_MEDIA]),
+    ei = new Set([
+        p.rbe.GUILD_TEXT,
+        p.rbe.GUILD_CATEGORY,
+        p.rbe.GUILD_FORUM,
+        p.rbe.GUILD_ANNOUNCEMENT,
+        p.rbe.GUILD_APP,
     ]);
-(f.rbe.GUILD_TEXT, f.rbe.GUILD_ANNOUNCEMENT, f.rbe.GUILD_FORUM, f.rbe.GUILD_VOICE, f.rbe.GUILD_APP);
-let ei = new Set([f.rbe.GUILD_APP]);
-function er(e) {
-    return (0, h.Eo)(e, ei);
+(p.rbe.GUILD_TEXT, p.rbe.GUILD_ANNOUNCEMENT, p.rbe.GUILD_FORUM, p.rbe.GUILD_VOICE, p.rbe.GUILD_APP);
+let er = new Set([p.rbe.GUILD_APP]);
+function ea(e) {
+    return (0, I.Eo)(e, er);
 }
-let ea = new Set([...ei]);
-function es(e) {
-    return (0, h.Eo)(e, ea);
+let es = new Set([...er]);
+function el(e) {
+    return (0, I.Eo)(e, es);
 }
-let el = new Set([...ei, f.rbe.GUILD_FORUM, f.rbe.GUILD_MEDIA]);
-function eo(e) {
-    return !el.has(e);
-}
+let eo = new Set([...er, p.rbe.GUILD_FORUM, p.rbe.GUILD_MEDIA]);
 function ed(e) {
+    return !eo.has(e);
+}
+function ec(e) {
     let t = {};
     return (
         e?.forEach((e) => {
@@ -298,10 +299,10 @@ function ed(e) {
         t
     );
 }
-function ec(e) {
+function eu(e) {
     return null == e ? {} : r().reduce(e, (e, t) => ((e[t.id] = t.nick), e), {});
 }
-function eu(e) {
+function e_(e) {
     return null == e
         ? []
         : e.map((e) => ({
@@ -313,18 +314,18 @@ function eu(e) {
               color: e.color,
           }));
 }
-function e_(e) {
+function eE(e) {
     return null != e ? { id: e.id, name: e.name } : void 0;
 }
-let eE = c.kg(f.xBc.CONNECT, f.xBc.VIEW_CHANNEL),
-    eA = f.hVb.CONNECT | f.hVb.VIEW_CHANNEL;
-function eh(e) {
-    return D(e) ? eE : f.xBc.VIEW_CHANNEL;
-}
+let eA = c.kg(p.xBc.CONNECT, p.xBc.VIEW_CHANNEL),
+    eh = p.hVb.CONNECT | p.hVb.VIEW_CHANNEL;
 function eI(e) {
-    return D(e) ? eA : f.hVb.VIEW_CHANNEL;
+    return v(e) ? eA : p.xBc.VIEW_CHANNEL;
 }
-class ef {
+function ef(e) {
+    return v(e) ? eh : p.hVb.VIEW_CHANNEL;
+}
+class ep {
     id;
     type;
     name;
@@ -383,12 +384,12 @@ class ef {
     gameId;
     constructor(e) {
         ((this.id = e.id),
-            (this.type = e.type ?? f.rbe.GUILD_TEXT),
+            (this.type = e.type ?? p.rbe.GUILD_TEXT),
             (this.name = e.name ?? ""),
             (this.guild_id = e.guild_id ?? null));
     }
 }
-function ep(e) {
+function eT(e) {
     return (
         "topic" in e && ((e.topic_ = e.topic), delete e.topic),
         "position" in e && ((e.position_ = e.position), delete e.position),
@@ -402,19 +403,19 @@ function ep(e) {
         e
     );
 }
-let eT = Object.freeze({});
-class eg extends ef {
+let eg = Object.freeze({});
+class em extends ep {
     get permissionOverwrites() {
-        return this.permissionOverwrites_ ?? eT;
+        return this.permissionOverwrites_ ?? eg;
     }
     get topic() {
-        return this.topic_ ?? "";
+        return this.type === p.rbe.GUILD_APP && null != (0, h.B9)(this.topic_) ? "" : (this.topic_ ?? "");
     }
     get position() {
         return this.position_ ?? 0;
     }
     get bitrate() {
-        return this.bitrate_ ?? f.gp3;
+        return this.bitrate_ ?? p.gp3;
     }
     get userLimit() {
         return this.userLimit_ ?? 0;
@@ -432,11 +433,11 @@ class eg extends ef {
         return { ...this };
     }
     set(e, t) {
-        return this.merge(ep({ [e]: t }));
+        return this.merge(eT({ [e]: t }));
     }
     merge(e) {
         let t = null,
-            n = ep(e);
+            n = eT(e);
         for (let e in n) n.hasOwnProperty(e) && this[e] !== n[e] && (null == t && (t = this.toJS()), (t[e] = n[e]));
         return null != t ? new this.constructor(t) : this;
     }
@@ -447,19 +448,19 @@ class eg extends ef {
         return this.nsfw;
     }
     isManaged() {
-        return f.kvI.APPLICATION_MANAGEABLE.has(this.type) && null != this.application_id;
+        return p.kvI.APPLICATION_MANAGEABLE.has(this.type) && null != this.application_id;
     }
     isPrivate() {
-        return P(this.type);
+        return U(this.type);
     }
     isGroupDM() {
-        return this.type === f.rbe.GROUP_DM;
+        return this.type === p.rbe.GROUP_DM;
     }
     isMultiUserDM() {
-        return w(this.type);
+        return G(this.type);
     }
     isDM() {
-        return this.type === f.rbe.DM;
+        return this.type === p.rbe.DM;
     }
     isSystemDM() {
         return !1;
@@ -471,83 +472,83 @@ class eg extends ef {
         return this.isThread() && this.threadMetadata?.locked === !0;
     }
     isScheduledForDeletion() {
-        return this.hasFlag(p.lx.IS_SCHEDULED_FOR_DELETION);
+        return this.hasFlag(T.lx.IS_SCHEDULED_FOR_DELETION);
     }
     isArchivedLockedThread() {
-        return H.has(this.type) && this.threadMetadata?.archived === !0 && this.threadMetadata?.locked === !0;
+        return j.has(this.type) && this.threadMetadata?.archived === !0 && this.threadMetadata?.locked === !0;
     }
     isForumPost() {
         return (
-            this.type === f.rbe.PUBLIC_THREAD &&
+            this.type === p.rbe.PUBLIC_THREAD &&
             null != this.parentChannelThreadType &&
-            f.kvI.GUILD_THREADS_ONLY.has(this.parentChannelThreadType)
+            p.kvI.GUILD_THREADS_ONLY.has(this.parentChannelThreadType)
         );
     }
     isMediaThread() {
-        return this.type === f.rbe.MEDIA_THREAD;
+        return this.type === p.rbe.MEDIA_THREAD;
     }
     isRingable() {
-        return f.kvI.CALLABLE.has(this.type) || this.type === f.rbe.GUILD_VOICE;
+        return p.kvI.CALLABLE.has(this.type) || this.type === p.rbe.GUILD_VOICE;
     }
     isCategory() {
-        return this.type === f.rbe.GUILD_CATEGORY;
+        return this.type === p.rbe.GUILD_CATEGORY;
     }
     isVocal() {
-        return F(this.type);
+        return B(this.type);
     }
     isGuildVocal() {
-        return D(this.type);
+        return v(this.type);
     }
     isGuildVocalOrThread() {
         return this.isGuildVocal() || this.isVocalThread();
     }
     isGuildVoice() {
-        return this.type === f.rbe.GUILD_VOICE;
+        return this.type === p.rbe.GUILD_VOICE;
     }
     isGuildVoiceOrThread() {
         return this.isGuildVoice() || this.isVocalThread();
     }
     isGuildStageVoice() {
-        return this.type === f.rbe.GUILD_STAGE_VOICE;
+        return this.type === p.rbe.GUILD_STAGE_VOICE;
     }
     isListenModeCapable() {
         return this.isGuildStageVoice();
     }
     isThread() {
-        return Y(this.type);
+        return K(this.type);
     }
     isAnnouncementThread() {
-        return this.type === f.rbe.ANNOUNCEMENT_THREAD;
+        return this.type === p.rbe.ANNOUNCEMENT_THREAD;
     }
     isVocalThread() {
-        return this.type === f.rbe.PUBLIC_THREAD || this.type === f.rbe.PRIVATE_THREAD;
+        return this.type === p.rbe.PUBLIC_THREAD || this.type === p.rbe.PRIVATE_THREAD;
     }
     isActiveThread() {
         return this.isThread() && this.threadMetadata?.archived !== !0;
     }
     isDirectory() {
-        return this.type === f.rbe.GUILD_DIRECTORY;
+        return this.type === p.rbe.GUILD_DIRECTORY;
     }
     isForumLikeChannel() {
         return this.isForumChannel() || this.isMediaChannel();
     }
     isForumChannel() {
-        return this.type === f.rbe.GUILD_FORUM;
+        return this.type === p.rbe.GUILD_FORUM;
     }
     isMediaChannel() {
-        return this.type === f.rbe.GUILD_MEDIA;
+        return this.type === p.rbe.GUILD_MEDIA;
     }
     isMediaPost() {
-        return this.type === f.rbe.PUBLIC_THREAD && this.parentChannelThreadType === f.rbe.GUILD_MEDIA;
+        return this.type === p.rbe.PUBLIC_THREAD && this.parentChannelThreadType === p.rbe.GUILD_MEDIA;
     }
     isRoleSubscriptionTemplatePreviewChannel() {
-        return this.hasFlag(p.lx.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
+        return this.hasFlag(T.lx.IS_ROLE_SUBSCRIPTION_TEMPLATE_PREVIEW_CHANNEL);
     }
     isOwner(e) {
         return this.ownerId === e;
     }
     isObfuscated() {
-        return this.hasFlag(p.lx.OBFUSCATED);
+        return this.hasFlag(T.lx.OBFUSCATED);
     }
     getGuildId() {
         return this.guild_id;
@@ -569,16 +570,16 @@ class eg extends ef {
         return this.defaultTagSetting ?? o.n.MATCH_SOME;
     }
     isModeratorReportChannel() {
-        return this.hasFlag(p.lx.IS_MODERATOR_REPORT_CHANNEL);
+        return this.hasFlag(T.lx.IS_MODERATOR_REPORT_CHANNEL);
     }
     isSpoilerChannel() {
-        return this.hasFlag(p.lx.IS_SPOILER_CHANNEL);
+        return this.hasFlag(T.lx.IS_SPOILER_CHANNEL);
     }
     isGameInvitesChannel() {
-        return this.hasFlag(p.lx.IS_GAME_INVITES_CHANNEL);
+        return this.hasFlag(T.lx.IS_GAME_INVITES_CHANNEL);
     }
     get accessPermissions() {
-        return eh(this.type);
+        return eI(this.type);
     }
     hasFlag(e) {
         return (0, u.Lt)(this.flags, e);
@@ -587,7 +588,7 @@ class eg extends ef {
         return null != this.hdStreamingUntil && new Date(this.hdStreamingUntil) > new Date();
     }
 }
-class em extends eg {
+class eS extends em {
     constructor(e) {
         (super(e),
             (this.application_id = e.application_id),
@@ -646,7 +647,7 @@ class em extends eg {
         let n = {
             application_id: e.application_id,
             appliedTags: e.applied_tags,
-            availableTags: null != e.available_tags ? eu(e.available_tags) : void 0,
+            availableTags: null != e.available_tags ? e_(e.available_tags) : void 0,
             bitrate_: e.bitrate,
             defaultAutoArchiveDuration: e.default_auto_archive_duration,
             defaultForumLayout: e.default_forum_layout,
@@ -664,7 +665,7 @@ class em extends eg {
             gameId: e.game_id,
             guild_id: t ?? e.guild_id ?? null,
             icon: e.icon,
-            iconEmoji: e_(e.icon_emoji),
+            iconEmoji: eE(e.icon_emoji),
             id: e.id,
             isMessageRequest: e.is_message_request,
             isMessageRequestTimestamp: e.is_message_request_timestamp,
@@ -686,13 +687,13 @@ class em extends eg {
             memberListId: e.member_list_id,
             messageCount: e.message_count,
             name: e.name ?? "",
-            nicks: ec(e.nicks),
+            nicks: eu(e.nicks),
             nsfw_: e.nsfw,
             originChannelId: e.origin_channel_id,
             ownerId: e.owner_id,
             parent_id: e.parent_id,
             parentChannelThreadType: void 0,
-            permissionOverwrites_: ed(e.permission_overwrites),
+            permissionOverwrites_: ec(e.permission_overwrites),
             position_: e.position,
             rateLimitPerUser_: e.rate_limit_per_user,
             rawRecipients: null != e.recipients ? e.recipients : [],
@@ -716,7 +717,7 @@ class em extends eg {
                     : void 0,
             topic_: e.topic,
             totalMessageSent: e.total_message_sent,
-            type: null != e.type ? e.type : f.rbe.UNKNOWN,
+            type: null != e.type ? e.type : p.rbe.UNKNOWN,
             userLimit_: e.user_limit,
             version: e.version,
             videoQualityMode: e.video_quality_mode,
@@ -725,10 +726,10 @@ class em extends eg {
             hdStreamingBuyerId: e.hd_streaming_buyer_id,
             voiceHangout: e.voice_hangout,
         };
-        return (0, _.pp)(n, em);
+        return (0, _.pp)(n, eS);
     }
 }
-class eS extends eg {
+class eN extends em {
     constructor(e) {
         (super(e),
             (this.application_id = e.application_id),
@@ -755,12 +756,12 @@ class eS extends eg {
             (this.voiceHangout = e.voiceHangout));
     }
     static fromServer(e, t) {
-        return ew({
+        return eG({
             application_id: e.application_id,
             bitrate_: e.bitrate,
             flags_: e.flags,
             guild_id: t ?? e.guild_id ?? null,
-            iconEmoji: e_(e.icon_emoji),
+            iconEmoji: eE(e.icon_emoji),
             id: e.id,
             lastMessageId: e.last_message_id,
             lastPinTimestamp: e.last_pin_timestamp,
@@ -769,13 +770,13 @@ class eS extends eg {
             nsfw_: e.nsfw ?? !1,
             originChannelId: e.origin_channel_id,
             parent_id: e.parent_id,
-            permissionOverwrites_: ed(e.permission_overwrites),
+            permissionOverwrites_: ec(e.permission_overwrites),
             position_: e.position,
             rateLimitPerUser_: e.rate_limit_per_user ?? 0,
             rtcRegion: e.rtc_region,
             themeColor: e.theme_color,
             topic_: e.topic,
-            type: null != e.type ? e.type : f.rbe.GUILD_VOICE,
+            type: null != e.type ? e.type : p.rbe.GUILD_VOICE,
             userLimit_: e.user_limit,
             version: e.version,
             videoQualityMode: e.video_quality_mode,
@@ -785,7 +786,7 @@ class eS extends eg {
         });
     }
 }
-class eN extends eg {
+class eC extends em {
     constructor(e) {
         (super(e),
             (this.application_id = e.application_id),
@@ -809,13 +810,13 @@ class eN extends eg {
             (this.hdStreamingUntil = e.hdStreamingUntil));
     }
     static fromServer(e, t) {
-        return ew({
+        return eG({
             application_id: e.application_id,
             defaultAutoArchiveDuration: e.default_auto_archive_duration,
             defaultThreadRateLimitPerUser: e.default_thread_rate_limit_per_user,
             flags_: e.flags,
             guild_id: t ?? e.guild_id ?? null,
-            iconEmoji: e_(e.icon_emoji),
+            iconEmoji: eE(e.icon_emoji),
             id: e.id,
             lastMessageId: e.last_message_id,
             lastPinTimestamp: e.last_pin_timestamp,
@@ -823,12 +824,12 @@ class eN extends eg {
             name: e.name ?? "",
             nsfw_: e.nsfw ?? !1,
             parent_id: e.parent_id,
-            permissionOverwrites_: ed(e.permission_overwrites),
+            permissionOverwrites_: ec(e.permission_overwrites),
             position_: e.position,
             rateLimitPerUser_: e.rate_limit_per_user ?? 0,
             themeColor: e.theme_color,
             topic_: e.topic,
-            type: null != e.type ? e.type : f.rbe.GUILD_TEXT,
+            type: null != e.type ? e.type : p.rbe.GUILD_TEXT,
             linkedLobby: e.linked_lobby,
             hdStreamingUntil: e.hd_streaming_until,
             hdStreamingBuyerId: e.hd_streaming_buyer_id,
@@ -836,8 +837,8 @@ class eN extends eg {
         });
     }
 }
-class eC extends eN {}
-class eO extends eg {
+class eO extends eC {}
+class eR extends em {
     constructor(e) {
         (super(e),
             (this.availableTags = e.availableTags ?? []),
@@ -865,7 +866,7 @@ class eO extends eg {
     }
     static fromServer(e, t) {
         let n = {
-            availableTags: null != e.available_tags ? eu(e.available_tags) : [],
+            availableTags: null != e.available_tags ? e_(e.available_tags) : [],
             defaultAutoArchiveDuration: e.default_auto_archive_duration,
             defaultForumLayout: e.default_forum_layout,
             defaultReactionEmoji:
@@ -881,7 +882,7 @@ class eO extends eg {
             flags_: e.flags,
             gameId: e.game_id,
             guild_id: t ?? e.guild_id ?? null,
-            iconEmoji: e_(e.icon_emoji),
+            iconEmoji: eE(e.icon_emoji),
             id: e.id,
             lastMessageId: e.last_message_id,
             lastPinTimestamp: e.last_pin_timestamp,
@@ -889,19 +890,19 @@ class eO extends eg {
             name: e.name ?? "",
             nsfw_: e.nsfw ?? !1,
             parent_id: e.parent_id,
-            permissionOverwrites_: ed(e.permission_overwrites),
+            permissionOverwrites_: ec(e.permission_overwrites),
             position_: e.position,
             rateLimitPerUser_: e.rate_limit_per_user ?? 0,
             template: e.template,
             themeColor: e.theme_color,
             topic_: e.topic,
-            type: null != e.type ? e.type : f.rbe.GUILD_TEXT,
+            type: null != e.type ? e.type : p.rbe.GUILD_TEXT,
             version: e.version,
         };
-        return (0, _.pp)(n, eO);
+        return (0, _.pp)(n, eR);
     }
 }
-class eR {
+class eL {
     cache;
     constructor(e = 100) {
         this.cache = new (s())(e);
@@ -915,12 +916,12 @@ class eR {
         }
     }
 }
-let eL = new eR(),
-    ey = new eR();
-class eD extends eg {
+let ey = new eL(),
+    eD = new eL();
+class ev extends em {
     static sortRecipients(e, t) {
-        let n = eL.getOrCompute(t);
-        return [...(e ?? [])].sort((e, t) => (ey.getOrCompute(e.id) ^ n) - (ey.getOrCompute(t.id) ^ n));
+        let n = ey.getOrCompute(t);
+        return [...(e ?? [])].sort((e, t) => (eD.getOrCompute(e.id) ^ n) - (eD.getOrCompute(t.id) ^ n));
     }
     constructor(e) {
         (super(e),
@@ -934,14 +935,14 @@ class eD extends eg {
             (this.lastPinTimestamp = e.lastPinTimestamp),
             (this.nicks = e.nicks),
             (this.ownerId = e.ownerId),
-            (this.rawRecipients = eD.sortRecipients(e.rawRecipients, this.id)),
-            (this.recipients = [...(e.recipients ?? [])].sort(I.default.compare)),
+            (this.rawRecipients = ev.sortRecipients(e.rawRecipients, this.id)),
+            (this.recipients = [...(e.recipients ?? [])].sort(f.default.compare)),
             (this.recipientFlags = e.recipientFlags),
             (this.safetyWarnings = e.safetyWarnings ?? []),
             (this.blockedUserWarningDismissed = e.blockedUserWarningDismissed));
     }
     static fromServer(e) {
-        let t = eD.sortRecipients(e.recipients, e.id),
+        let t = ev.sortRecipients(e.recipients, e.id),
             n = {
                 application_id: e.application_id,
                 flags_: e.flags,
@@ -954,20 +955,20 @@ class eD extends eg {
                 lastMessageId: e.last_message_id,
                 lastPinTimestamp: e.last_pin_timestamp,
                 name: e.name ?? "",
-                nicks: ec(e.nicks),
+                nicks: eu(e.nicks),
                 ownerId: e.owner_id,
                 rawRecipients: t,
                 recipients: t.map((e) => e.id),
                 recipientFlags: e.recipient_flags,
                 safetyWarnings: e.safety_warnings,
                 blockedUserWarningDismissed: e.blocked_user_warning_dismissed,
-                type: null != e.type ? e.type : f.rbe.DM,
+                type: null != e.type ? e.type : p.rbe.DM,
             };
-        return (0, _.pp)(n, eD);
+        return (0, _.pp)(n, ev);
     }
     isSystemDM() {
         let e = this.rawRecipients[0];
-        return this.type === f.rbe.DM && null != e && !0 === e.system;
+        return this.type === p.rbe.DM && null != e && !0 === e.system;
     }
     getRecipientId() {
         return this.recipients[0];
@@ -979,7 +980,7 @@ class eD extends eg {
                 "recipients",
                 r()
                     .uniq([...(this.recipients ?? []), e])
-                    .sort(I.default.compare),
+                    .sort(f.default.compare),
             );
             return null == t ? n : n.set("nicks", { ...n.nicks, [e]: t });
         }
@@ -988,7 +989,7 @@ class eD extends eg {
         return this.set("recipients", r().without(this.recipients, e));
     }
 }
-class ev extends eg {
+class eb extends em {
     constructor(e) {
         (super(e),
             (this.appliedTags = e.appliedTags ?? []),
@@ -1051,62 +1052,64 @@ class ev extends eg {
                       }
                     : void 0,
             totalMessageSent: e.total_message_sent,
-            type: null != e.type ? e.type : f.rbe.PUBLIC_THREAD,
+            type: null != e.type ? e.type : p.rbe.PUBLIC_THREAD,
             userLimit_: e.user_limit,
             videoQualityMode: e.video_quality_mode,
             lastNonMessageActivityTimestamp: e.last_non_message_activity_timestamp,
         };
-        return (0, _.pp)(n, ev);
+        return (0, _.pp)(n, eb);
     }
 }
-let eb = {
-    [f.rbe.DM]: eD.fromServer,
-    [f.rbe.GROUP_DM]: eD.fromServer,
-    [f.rbe.GUILD_TEXT]: eN.fromServer,
-    [f.rbe.GUILD_VOICE]: eS.fromServer,
-    [f.rbe.GUILD_STAGE_VOICE]: eS.fromServer,
-    [f.rbe.GUILD_CATEGORY]: eN.fromServer,
-    [f.rbe.GUILD_ANNOUNCEMENT]: eN.fromServer,
-    [f.rbe.GUILD_STORE]: eN.fromServer,
-    [f.rbe.ANNOUNCEMENT_THREAD]: ev.fromServer,
-    [f.rbe.PUBLIC_THREAD]: ev.fromServer,
-    [f.rbe.PRIVATE_THREAD]: ev.fromServer,
-    [f.rbe.MEDIA_THREAD]: ev.fromServer,
-    [f.rbe.GUILD_DIRECTORY]: eN.fromServer,
-    [f.rbe.GUILD_FORUM]: eO.fromServer,
-    [f.rbe.GUILD_MEDIA]: eO.fromServer,
-    [f.rbe.GUILD_SPACE]: eN.fromServer,
-    [f.rbe.GUILD_APP]: eN.fromServer,
+let eM = {
+    [p.rbe.DM]: ev.fromServer,
+    [p.rbe.GROUP_DM]: ev.fromServer,
+    [p.rbe.GUILD_TEXT]: eC.fromServer,
+    [p.rbe.GUILD_VOICE]: eN.fromServer,
+    [p.rbe.GUILD_STAGE_VOICE]: eN.fromServer,
+    [p.rbe.GUILD_CATEGORY]: eC.fromServer,
+    [p.rbe.GUILD_ANNOUNCEMENT]: eC.fromServer,
+    [p.rbe.GUILD_STORE]: eC.fromServer,
+    [p.rbe.ANNOUNCEMENT_THREAD]: eb.fromServer,
+    [p.rbe.PUBLIC_THREAD]: eb.fromServer,
+    [p.rbe.PRIVATE_THREAD]: eb.fromServer,
+    [p.rbe.MEDIA_THREAD]: eb.fromServer,
+    [p.rbe.GUILD_DIRECTORY]: eC.fromServer,
+    [p.rbe.GUILD_FORUM]: eR.fromServer,
+    [p.rbe.GUILD_MEDIA]: eR.fromServer,
+    [p.rbe.GUILD_SPACE]: eC.fromServer,
+    [p.rbe.GUILD_APP]: eC.fromServer,
 };
-function eM(e, t) {
-    return (eb[e.type ?? f.rbe.GUILD_TEXT] ?? em.fromServer)(e, t);
+function eP(e, t) {
+    let n = (0, h.hi)(e);
+    return (eM[n.type ?? p.rbe.GUILD_TEXT] ?? eS.fromServer)(n, t);
 }
-function eP(e) {
-    return eG(e);
+function eU(e) {
+    return ex(e);
 }
-let eU = {
-    [f.rbe.DM]: class extends eD {},
-    [f.rbe.GROUP_DM]: class extends eD {},
-    [f.rbe.GUILD_TEXT]: eC,
-    [f.rbe.GUILD_VOICE]: class extends eS {},
-    [f.rbe.GUILD_STAGE_VOICE]: class extends eS {},
-    [f.rbe.GUILD_CATEGORY]: class extends eN {},
-    [f.rbe.GUILD_ANNOUNCEMENT]: class extends eN {},
-    [f.rbe.GUILD_STORE]: class extends eN {},
-    [f.rbe.ANNOUNCEMENT_THREAD]: ev,
-    [f.rbe.PUBLIC_THREAD]: ev,
-    [f.rbe.PRIVATE_THREAD]: ev,
-    [f.rbe.MEDIA_THREAD]: ev,
-    [f.rbe.GUILD_DIRECTORY]: class extends eN {},
-    [f.rbe.GUILD_FORUM]: eO,
-    [f.rbe.GUILD_MEDIA]: eO,
-    [f.rbe.GUILD_SPACE]: class extends eN {},
-    [f.rbe.GUILD_APP]: class extends eN {},
+let ew = {
+    [p.rbe.DM]: class extends ev {},
+    [p.rbe.GROUP_DM]: class extends ev {},
+    [p.rbe.GUILD_TEXT]: eO,
+    [p.rbe.GUILD_VOICE]: class extends eN {},
+    [p.rbe.GUILD_STAGE_VOICE]: class extends eN {},
+    [p.rbe.GUILD_CATEGORY]: class extends eC {},
+    [p.rbe.GUILD_ANNOUNCEMENT]: class extends eC {},
+    [p.rbe.GUILD_STORE]: class extends eC {},
+    [p.rbe.ANNOUNCEMENT_THREAD]: eb,
+    [p.rbe.PUBLIC_THREAD]: eb,
+    [p.rbe.PRIVATE_THREAD]: eb,
+    [p.rbe.MEDIA_THREAD]: eb,
+    [p.rbe.GUILD_DIRECTORY]: class extends eC {},
+    [p.rbe.GUILD_FORUM]: eR,
+    [p.rbe.GUILD_MEDIA]: eR,
+    [p.rbe.GUILD_SPACE]: class extends eC {},
+    [p.rbe.GUILD_APP]: class extends eC {},
 };
-function ew(e) {
-    let t = eU[e.type ?? f.rbe.GUILD_TEXT] ?? em;
-    return (0, _.pp)(e, t);
-}
 function eG(e) {
-    return new (eU[e.type ?? f.rbe.GUILD_TEXT] ?? em)(ep(e));
+    let t = (0, h.UD)(e),
+        n = ew[t.type ?? p.rbe.GUILD_TEXT] ?? eS;
+    return (0, _.pp)(t, n);
+}
+function ex(e) {
+    return new (ew[e.type ?? p.rbe.GUILD_TEXT] ?? eS)(eT(e));
 }
