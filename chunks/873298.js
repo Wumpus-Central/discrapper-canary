@@ -27,6 +27,7 @@
     iL: () => ea,
     ju: () => Q,
     kW: () => et,
+    ky: () => tJ,
     nT: () => el,
     nx: () => eh,
     oJ: () => eV,
@@ -62,8 +63,8 @@ var i,
     f,
     p,
     T,
-    g,
     m,
+    g,
     S,
     N,
     C,
@@ -176,32 +177,32 @@ var i,
         (T[(T.MIDNIGHT = 4)] = "MIDNIGHT"),
         T),
     Q =
-        (((g = {})[(g.MINT_APPLE = 0)] = "MINT_APPLE"),
-        (g[(g.CITRUS_SHERBERT = 1)] = "CITRUS_SHERBERT"),
-        (g[(g.RETRO_RAINCLOUD = 2)] = "RETRO_RAINCLOUD"),
-        (g[(g.HANAMI = 3)] = "HANAMI"),
-        (g[(g.SUNRISE = 4)] = "SUNRISE"),
-        (g[(g.COTTON_CANDY = 5)] = "COTTON_CANDY"),
-        (g[(g.LOFI_VIBES = 6)] = "LOFI_VIBES"),
-        (g[(g.DESERT_KHAKI = 7)] = "DESERT_KHAKI"),
-        (g[(g.SUNSET = 8)] = "SUNSET"),
-        (g[(g.CHROMA_GLOW = 9)] = "CHROMA_GLOW"),
-        (g[(g.FOREST = 10)] = "FOREST"),
-        (g[(g.CRIMSON_MOON = 11)] = "CRIMSON_MOON"),
-        (g[(g.MIDNIGHT_BLURPLE = 12)] = "MIDNIGHT_BLURPLE"),
-        (g[(g.MARS = 13)] = "MARS"),
-        (g[(g.DUSK = 14)] = "DUSK"),
-        (g[(g.UNDER_THE_SEA = 15)] = "UNDER_THE_SEA"),
-        (g[(g.EASTER_EGG = 16)] = "EASTER_EGG"),
-        (g[(g.RETRO_STORM = 17)] = "RETRO_STORM"),
-        (g[(g.NEON_NIGHTS = 18)] = "NEON_NIGHTS"),
-        (g[(g.SEPIA = 19)] = "SEPIA"),
-        (g[(g.STRAWBERRY_LEMONADE = 20)] = "STRAWBERRY_LEMONADE"),
-        (g[(g.AURORA = 21)] = "AURORA"),
-        (g[(g.BLURPLE_TWILIGHT = 22)] = "BLURPLE_TWILIGHT"),
-        (g[(g.HEXAGON = 23)] = "HEXAGON"),
-        g),
-    J = (((m = {})[(m.AUTO = 0)] = "AUTO"), (m[(m.H12 = 1)] = "H12"), (m[(m.H23 = 2)] = "H23"), m),
+        (((m = {})[(m.MINT_APPLE = 0)] = "MINT_APPLE"),
+        (m[(m.CITRUS_SHERBERT = 1)] = "CITRUS_SHERBERT"),
+        (m[(m.RETRO_RAINCLOUD = 2)] = "RETRO_RAINCLOUD"),
+        (m[(m.HANAMI = 3)] = "HANAMI"),
+        (m[(m.SUNRISE = 4)] = "SUNRISE"),
+        (m[(m.COTTON_CANDY = 5)] = "COTTON_CANDY"),
+        (m[(m.LOFI_VIBES = 6)] = "LOFI_VIBES"),
+        (m[(m.DESERT_KHAKI = 7)] = "DESERT_KHAKI"),
+        (m[(m.SUNSET = 8)] = "SUNSET"),
+        (m[(m.CHROMA_GLOW = 9)] = "CHROMA_GLOW"),
+        (m[(m.FOREST = 10)] = "FOREST"),
+        (m[(m.CRIMSON_MOON = 11)] = "CRIMSON_MOON"),
+        (m[(m.MIDNIGHT_BLURPLE = 12)] = "MIDNIGHT_BLURPLE"),
+        (m[(m.MARS = 13)] = "MARS"),
+        (m[(m.DUSK = 14)] = "DUSK"),
+        (m[(m.UNDER_THE_SEA = 15)] = "UNDER_THE_SEA"),
+        (m[(m.EASTER_EGG = 16)] = "EASTER_EGG"),
+        (m[(m.RETRO_STORM = 17)] = "RETRO_STORM"),
+        (m[(m.NEON_NIGHTS = 18)] = "NEON_NIGHTS"),
+        (m[(m.SEPIA = 19)] = "SEPIA"),
+        (m[(m.STRAWBERRY_LEMONADE = 20)] = "STRAWBERRY_LEMONADE"),
+        (m[(m.AURORA = 21)] = "AURORA"),
+        (m[(m.BLURPLE_TWILIGHT = 22)] = "BLURPLE_TWILIGHT"),
+        (m[(m.HEXAGON = 23)] = "HEXAGON"),
+        m),
+    J = (((g = {})[(g.AUTO = 0)] = "AUTO"), (g[(g.H12 = 1)] = "H12"), (g[(g.H23 = 2)] = "H23"), g),
     ee =
         (((S = {})[(S.LAUNCH_PAD_DISABLED = 0)] = "LAUNCH_PAD_DISABLED"),
         (S[(S.LAUNCH_PAD_GESTURE_FULL_SCREEN = 1)] = "LAUNCH_PAD_GESTURE_FULL_SCREEN"),
@@ -261,7 +262,7 @@ class es extends b.G {
             { no: 16, name: "audio_context_settings", kind: "message", T: () => tu },
             { no: 17, name: "communities", kind: "message", T: () => tE },
             { no: 18, name: "broadcast", kind: "message", T: () => tT },
-            { no: 19, name: "clips", kind: "message", T: () => tm },
+            { no: 19, name: "clips", kind: "message", T: () => tg },
             { no: 20, name: "for_later", kind: "message", T: () => tD },
             { no: 21, name: "safety_settings", kind: "message", T: () => tL },
             { no: 22, name: "icymi_settings", kind: "message", T: () => tb },
@@ -269,6 +270,7 @@ class es extends b.G {
             { no: 24, name: "ads", kind: "message", T: () => tV },
             { no: 25, name: "in_app_feedback_settings", kind: "message", T: () => t$ },
             { no: 26, name: "app_version_settings", kind: "message", T: () => tX },
+            { no: 27, name: "vibegrations", kind: "message", T: () => tq },
         ]);
     }
     create(e) {
@@ -340,7 +342,7 @@ class es extends b.G {
                     r.broadcast = tT.internalBinaryRead(e, e.uint32(), n, r.broadcast);
                     break;
                 case 19:
-                    r.clips = tm.internalBinaryRead(e, e.uint32(), n, r.clips);
+                    r.clips = tg.internalBinaryRead(e, e.uint32(), n, r.clips);
                     break;
                 case 20:
                     r.forLater = tD.internalBinaryRead(e, e.uint32(), n, r.forLater);
@@ -362,6 +364,9 @@ class es extends b.G {
                     break;
                 case 26:
                     r.appVersionSettings = tX.internalBinaryRead(e, e.uint32(), n, r.appVersionSettings);
+                    break;
+                case 27:
+                    r.vibegrations = tq.internalBinaryRead(e, e.uint32(), n, r.vibegrations);
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -393,7 +398,7 @@ class es extends b.G {
                 tu.internalBinaryWrite(e.audioContextSettings, t.tag(16, y.O0.LengthDelimited).fork(), n).join(),
             e.communities && tE.internalBinaryWrite(e.communities, t.tag(17, y.O0.LengthDelimited).fork(), n).join(),
             e.broadcast && tT.internalBinaryWrite(e.broadcast, t.tag(18, y.O0.LengthDelimited).fork(), n).join(),
-            e.clips && tm.internalBinaryWrite(e.clips, t.tag(19, y.O0.LengthDelimited).fork(), n).join(),
+            e.clips && tg.internalBinaryWrite(e.clips, t.tag(19, y.O0.LengthDelimited).fork(), n).join(),
             e.forLater && tD.internalBinaryWrite(e.forLater, t.tag(20, y.O0.LengthDelimited).fork(), n).join(),
             e.safetySettings &&
                 tL.internalBinaryWrite(e.safetySettings, t.tag(21, y.O0.LengthDelimited).fork(), n).join(),
@@ -404,7 +409,8 @@ class es extends b.G {
             e.inAppFeedbackSettings &&
                 t$.internalBinaryWrite(e.inAppFeedbackSettings, t.tag(25, y.O0.LengthDelimited).fork(), n).join(),
             e.appVersionSettings &&
-                tX.internalBinaryWrite(e.appVersionSettings, t.tag(26, y.O0.LengthDelimited).fork(), n).join());
+                tX.internalBinaryWrite(e.appVersionSettings, t.tag(26, y.O0.LengthDelimited).fork(), n).join(),
+            e.vibegrations && tq.internalBinaryWrite(e.vibegrations, t.tag(27, y.O0.LengthDelimited).fork(), n).join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
@@ -601,7 +607,7 @@ class eA extends b.G {
             { no: 7, name: "mobile_redesign_channel_list_settings", kind: "message", T: () => e3 },
             { no: 8, name: "disable_raid_alert_push", kind: "scalar", T: 8 },
             { no: 9, name: "disable_raid_alert_nag", kind: "scalar", T: 8 },
-            { no: 10, name: "custom_notification_sound_config", kind: "message", T: () => em },
+            { no: 10, name: "custom_notification_sound_config", kind: "message", T: () => eg },
             { no: 11, name: "leaderboards_disabled", kind: "scalar", T: 8 },
             {
                 no: 12,
@@ -679,7 +685,7 @@ class eA extends b.G {
                     r.disableRaidAlertNag = e.bool();
                     break;
                 case 10:
-                    r.customNotificationSoundConfig = em.internalBinaryRead(
+                    r.customNotificationSoundConfig = eg.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -768,7 +774,7 @@ class eA extends b.G {
         !1 !== e.disableRaidAlertPush && t.tag(8, y.O0.Varint).bool(e.disableRaidAlertPush),
         !1 !== e.disableRaidAlertNag && t.tag(9, y.O0.Varint).bool(e.disableRaidAlertNag),
         e.customNotificationSoundConfig &&
-            em.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, y.O0.LengthDelimited).fork(), n).join(),
+            eg.internalBinaryWrite(e.customNotificationSoundConfig, t.tag(10, y.O0.LengthDelimited).fork(), n).join(),
         !1 !== e.leaderboardsDisabled && t.tag(11, y.O0.Varint).bool(e.leaderboardsDisabled),
         Object.keys(e.guildDismissibleContentStates)))
             (t.tag(12, y.O0.LengthDelimited).fork().tag(1, y.O0.Varint).int32(parseInt(i)),
@@ -836,7 +842,7 @@ class ep extends b.G {
         super("discord_protos.discord_users.v1.ChannelSettings", [
             { no: 1, name: "collapsed_in_inbox", kind: "scalar", T: 8 },
             { no: 2, name: "icon_emoji", kind: "message", T: () => ef },
-            { no: 3, name: "custom_notification_sound_config", kind: "message", T: () => em },
+            { no: 3, name: "custom_notification_sound_config", kind: "message", T: () => eg },
         ]);
     }
     create(e) {
@@ -860,7 +866,7 @@ class ep extends b.G {
                     r.iconEmoji = ef.internalBinaryRead(e, e.uint32(), n, r.iconEmoji);
                     break;
                 case 3:
-                    r.customNotificationSoundConfig = em.internalBinaryRead(
+                    r.customNotificationSoundConfig = eg.internalBinaryRead(
                         e,
                         e.uint32(),
                         n,
@@ -881,7 +887,7 @@ class ep extends b.G {
         (!1 !== e.collapsedInInbox && t.tag(1, y.O0.Varint).bool(e.collapsedInInbox),
             e.iconEmoji && ef.internalBinaryWrite(e.iconEmoji, t.tag(2, y.O0.LengthDelimited).fork(), n).join(),
             e.customNotificationSoundConfig &&
-                em
+                eg
                     .internalBinaryWrite(e.customNotificationSoundConfig, t.tag(3, y.O0.LengthDelimited).fork(), n)
                     .join());
         let i = n.writeUnknownFields;
@@ -889,7 +895,7 @@ class ep extends b.G {
     }
 }
 let eT = new ep();
-class eg extends b.G {
+class em extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.CustomNotificationSoundConfig", [
             { no: 1, name: "notification_sound_pack_id", kind: "message", T: () => M.hU },
@@ -927,7 +933,7 @@ class eg extends b.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let em = new eg();
+let eg = new em();
 class eS extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.RecurringDismissibleContentState", [
@@ -3804,7 +3810,7 @@ class tp extends b.G {
     }
 }
 let tT = new tp();
-class tg extends b.G {
+class tm extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.ClipsSettings", [
             { no: 1, name: "allow_voice_recording", kind: "message", T: () => M._t },
@@ -3841,7 +3847,7 @@ class tg extends b.G {
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let tm = new tg();
+let tg = new tm();
 class tS extends b.G {
     constructor() {
         super("discord_protos.discord_users.v1.SpendingLimit", [
@@ -4481,3 +4487,103 @@ class tz extends b.G {
     }
 }
 let tX = new tz();
+class tZ extends b.G {
+    constructor() {
+        super("discord_protos.discord_users.v1.VibegrationsSettings", [
+            { no: 1, name: "projects", kind: "map", K: 6, V: { kind: "message", T: () => tJ } },
+        ]);
+    }
+    create(e) {
+        let t = { projects: {} };
+        return (
+            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            void 0 !== e && (0, D.x)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let r = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a;) {
+            let [t, i] = e.tag();
+            if (1 === t) this.binaryReadMap1(r.projects, e, n);
+            else {
+                let a = n.readUnknownField;
+                if ("throw" === a)
+                    throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                let s = e.skip(i);
+                !1 !== a && (!0 === a ? y.f$.onRead : a)(this.typeName, r, t, i, s);
+            }
+        }
+        return r;
+    }
+    binaryReadMap1(e, t, n) {
+        let i = t.uint32(),
+            r = t.pos + i,
+            a,
+            s;
+        for (; t.pos < r;) {
+            let [e, i] = t.tag();
+            switch (e) {
+                case 1:
+                    a = t.fixed64().toString();
+                    break;
+                case 2:
+                    s = tJ.internalBinaryRead(t, t.uint32(), n);
+                    break;
+                default:
+                    throw new globalThis.Error(
+                        "unknown map entry field for field discord_protos.discord_users.v1.VibegrationsSettings.projects",
+                    );
+            }
+        }
+        e[a ?? "0"] = s ?? tJ.create();
+    }
+    internalBinaryWrite(e, t, n) {
+        for (let i of Object.keys(e.projects))
+            (t.tag(1, y.O0.LengthDelimited).fork().tag(1, y.O0.Bit64).fixed64(i),
+                t.tag(2, y.O0.LengthDelimited).fork(),
+                tJ.internalBinaryWrite(e.projects[i], t, n),
+                t.join().join());
+        let i = n.writeUnknownFields;
+        return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
+    }
+}
+let tq = new tZ();
+class tQ extends b.G {
+    constructor() {
+        super("discord_protos.discord_users.v1.VibegrationsProjectSettings", [
+            { no: 1, name: "muted", kind: "scalar", T: 8 },
+        ]);
+    }
+    create(e) {
+        let t = { muted: !1 };
+        return (
+            globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
+            void 0 !== e && (0, D.x)(this, t, e),
+            t
+        );
+    }
+    internalBinaryRead(e, t, n, i) {
+        let r = i ?? this.create(),
+            a = e.pos + t;
+        for (; e.pos < a;) {
+            let [t, i] = e.tag();
+            if (1 === t) r.muted = e.bool();
+            else {
+                let a = n.readUnknownField;
+                if ("throw" === a)
+                    throw new globalThis.Error(`Unknown field ${t} (wire type ${i}) for ${this.typeName}`);
+                let s = e.skip(i);
+                !1 !== a && (!0 === a ? y.f$.onRead : a)(this.typeName, r, t, i, s);
+            }
+        }
+        return r;
+    }
+    internalBinaryWrite(e, t, n) {
+        !1 !== e.muted && t.tag(1, y.O0.Varint).bool(e.muted);
+        let i = n.writeUnknownFields;
+        return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
+    }
+}
+let tJ = new tQ();

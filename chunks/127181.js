@@ -430,6 +430,13 @@ let n = [
         summary: "Moderation Bot now starts with a short wizard, builds straight away, then tells you how to test it.",
     },
     {
+        date: "2026-10-01",
+        time: "14:16",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Mute a project from its menu to stop its unread badges and notifications; right-click it on desktop or hold it on phones.",
+    },
+    {
         date: "2026-09-25",
         time: "17:34",
         platforms: ["desktop"],
