@@ -19,11 +19,11 @@ var n = a(477900),
     N = a(531260),
     h = a(914410),
     A = a(174459),
-    O = a(872725),
-    x = a(721157),
+    x = a(872725),
+    O = a(721157),
     I = a(555393),
-    v = a(51965),
-    P = a(465794),
+    P = a(51965),
+    v = a(465794),
     T = a(202541),
     C = a(652215),
     U = a(375708),
@@ -61,14 +61,15 @@ function M(e) {
             footerContent: es,
             analyticsOptions: ei,
             onFocus: er,
+            listItemProps: el,
         } = e,
-        el = (0, R.DP)(),
-        { fractionalState: eo } = (0, N.A)(),
-        ec = (0, I.N)(),
-        ed = { name: t };
-    (ei?.thirdPartyPartner != null && (ed.third_party_partner = ei.thirdPartyPartner),
-        (0, E.A)({ type: o.ImpressionTypes.VIEW, name: o.ImpressionNames.PERK_DISCOVERABILITY_CARD, properties: ed }));
-    let eu = s.useMemo(
+        eo = (0, R.DP)(),
+        { fractionalState: ec } = (0, N.A)(),
+        ed = (0, I.N)(),
+        eu = { name: t };
+    (ei?.thirdPartyPartner != null && (eu.third_party_partner = ei.thirdPartyPartner),
+        (0, E.A)({ type: o.ImpressionTypes.VIEW, name: o.ImpressionNames.PERK_DISCOVERABILITY_CARD, properties: eu }));
+    let em = s.useMemo(
             () =>
                 (0, l.debounce)(() => {
                     A.default.track(C.HAw.PREMIUM_MARKETING_WHAT_IS_NEW_CARD_HOVERED, {
@@ -78,7 +79,7 @@ function M(e) {
                 }, 800),
             [ei?.thirdPartyPartner, a],
         ),
-        em = s.useCallback(() => {
+        ep = s.useCallback(() => {
             null != X &&
                 (X(),
                 A.default.track(C.HAw.PERK_DISCOVERABILITY_CARD_CTA_CLICKED, {
@@ -86,44 +87,46 @@ function M(e) {
                     function_name: (0, l.snakeCase)(X.name),
                 }));
         }, [X, a]),
-        ep = !0 === z && (K ? ec?.state === x.zE.UPSELL : eo === T.xc.FP_ONLY),
-        eb = s.useRef(!1);
+        eb = !0 === z && (K ? ed?.state === O.zE.UPSELL : ec === T.xc.FP_ONLY),
+        ef = s.useRef(!1);
     s.useEffect(() => {
-        !$ || eb.current || F || ep || ((eb.current = !0), em());
-    }, [$, F, em, ep]);
-    let ef = !(0, l.isEmpty)(D),
-        e_ = ef && (0, u.q)(el),
-        eg = (0, m.r)(p.A.colors.BACKGROUND_BASE_LOW).hex(),
-        eR = ep || !(0, l.isEmpty)(V),
-        eE = H ?? (!ef && (0, u.q)(el) ? "primary" : "overlay-primary"),
-        eN = (0, l.isEmpty)(V)
+        !$ || ef.current || F || eb || ((ef.current = !0), ep());
+    }, [$, F, ep, eb]);
+    let e_ = !(0, l.isEmpty)(D),
+        eg = e_ && (0, u.q)(eo),
+        eR = (0, m.r)(p.A.colors.BACKGROUND_BASE_LOW).hex(),
+        eE = eb || !(0, l.isEmpty)(V),
+        eN = H ?? (!e_ && (0, u.q)(eo) ? "primary" : "overlay-primary"),
+        eh = (0, l.isEmpty)(V)
             ? null
             : {
                   icon: Y,
                   iconPosition: G,
                   text: V,
-                  variant: eE,
+                  variant: eN,
                   size: Z ? "md" : void 0,
-                  onClick: em,
+                  onClick: ep,
                   disabled: F,
                   loading: W,
+                  tabIndex: el?.tabIndex,
               },
-        eh = (0, n.jsx)(P.A, { fullWidth: !0, defaultTextOverride: U.intl.string(U.t.sEAnVH) }),
-        eA = null == eN ? null : K ? (0, n.jsx)(v.A, { ...eN }) : (0, n.jsx)(c.$, { ...eN });
+        eA = (0, n.jsx)(v.A, { fullWidth: !0, defaultTextOverride: U.intl.string(U.t.sEAnVH), tabIndex: el?.tabIndex }),
+        ex = null == eh ? null : K ? (0, n.jsx)(P.A, { ...eh }) : (0, n.jsx)(c.$, { ...eh });
     return (0, n.jsx)(d.N, {
-        theme: e_ ? C.NJ8.DARK : void 0,
+        theme: eg ? C.NJ8.DARK : void 0,
         children: (e) =>
-            (0, n.jsxs)(O.A, {
+            (0, n.jsxs)(x.A, {
                 id: t,
                 tabIndex: ea,
-                onMouseEnter: eu,
+                onMouseEnter: em,
                 onFocus: er,
+                listItemProps: el,
                 cardType: b.s.PRIMARY,
                 glowing: J,
                 hueRotate: 25,
-                glowAmount: (0, u.M)(el) ? 2 : 8,
+                glowAmount: (0, u.M)(eo) ? 2 : 8,
                 blurAmount: 10,
-                className: r()(S.Ui, et, { [S.Tn]: ef }),
+                className: r()(S.Ui, et, { [S.Tn]: e_ }),
                 cardClassName: r()(S.Nr, e, ee, { [S.j8]: Z, [S._7]: Q }),
                 cardStyle: {
                     backgroundImage: null != D ? `url(${D})` : void 0,
@@ -154,7 +157,7 @@ function M(e) {
                     Z &&
                         (0, n.jsxs)("div", {
                             className: S.iy,
-                            style: { "--custom-tint-color": en ?? eg },
+                            style: { "--custom-tint-color": en ?? eR },
                             "aria-hidden": !0,
                             children: [(0, n.jsx)("div", { className: S.u_ }), (0, n.jsx)("div", { className: S.G3 })],
                         }),
@@ -164,13 +167,13 @@ function M(e) {
                             !Z &&
                                 (0, n.jsx)("div", {
                                     className: S.u_,
-                                    style: { "--custom-tint-color": en ?? eg },
+                                    style: { "--custom-tint-color": en ?? eR },
                                     "aria-hidden": !0,
                                 }),
                             (0, n.jsxs)("div", {
                                 className: S.P_,
                                 children: [
-                                    ep &&
+                                    eb &&
                                         (0, n.jsxs)("div", {
                                             className: S.d_,
                                             children: [
@@ -221,10 +224,10 @@ function M(e) {
                                             }),
                                         }),
                                     null != es && (0, n.jsx)("div", { className: S.Gv, children: es }),
-                                    eR && (0, n.jsx)("div", { className: S.Cj }),
+                                    eE && (0, n.jsx)("div", { className: S.Cj }),
                                 ],
                             }),
-                            eR && (0, n.jsx)("div", { className: S.yk, children: ep ? eh : eA }),
+                            eE && (0, n.jsx)("div", { className: S.yk, children: eb ? eA : ex }),
                         ],
                     }),
                 ],
