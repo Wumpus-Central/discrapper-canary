@@ -1,34 +1,35 @@
-n.d(t, { H: () => p, Q: () => N });
+n.d(t, { H: () => T, Q: () => C });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
     l = n(284009),
     o = n.n(l),
-    d = n(621466),
-    c = n(559106),
-    u = n(38021),
-    _ = n(43990),
-    E = n(508382),
-    A = n(365912),
-    h = n(38112);
-let I = new WeakMap();
-function f(e) {
-    let t = (0, d.p3)(e, h.qd);
-    return (null == t && (t = (0, d.wB)(e, E.IP)), t ?? null);
+    d = n(333007),
+    c = n(621466),
+    u = n(559106),
+    _ = n(38021),
+    E = n(43990),
+    A = n(508382),
+    h = n(365912),
+    I = n(38112);
+let f = new WeakMap();
+function p(e) {
+    let t = (0, c.p3)(e, I.qd);
+    return (null == t && (t = (0, c.wB)(e, A.IP)), t ?? null);
 }
-function p(e, t) {
+function T(e, t) {
     if (e.contains(t)) return !0;
-    let n = f(t);
+    let n = p(t);
     for (; null != n;) {
-        let t = I.get(n);
+        let t = f.get(n);
         if (null == t) break;
         if (e.contains(t)) return !0;
-        n = f(t);
+        n = p(t);
     }
     return !1;
 }
-function T(e) {
+function g(e) {
     let { positionKey: t, position: n, align: i } = e;
     return null != t ? t : `${n}:${i}`;
 }
@@ -51,7 +52,7 @@ function m(e, t, n, i, r) {
             throw Error(`Unexpected position: ${e}`);
     }
 }
-function g(e) {
+function S(e) {
     switch (e) {
         case "top":
             return "bottom";
@@ -69,13 +70,14 @@ function g(e) {
             throw Error();
     }
 }
-function S(e) {
+function N(e) {
     let { targetRef: t, overrideTargetRect: n } = e;
     return null != n ? n : (o()(null != t.current, "Invalid ref"), t.current.getBoundingClientRect());
 }
-class N extends r.Component {
+class C extends r.Component {
     static defaultProps = { nudgeAlignIntoViewport: !1, spacing: 0, autoInvert: !1, disablePointerEvents: !1 };
     elementRef = r.createRef();
+    resizeObserver;
     state = {
         style: Object.freeze({}),
         position: this.props.autoInvert ? null : this.props.position,
@@ -162,7 +164,7 @@ class N extends r.Component {
     calculatePositionStyle(e, t, n, i) {
         var r, a;
         let { spacing: s = 0 } = this.props,
-            l = S(this.props),
+            l = N(this.props),
             o = n.getBoundingClientRect(),
             d =
                 ((r = o.left),
@@ -202,7 +204,7 @@ class N extends r.Component {
         let { position: e, autoInvert: t, avoidancePadding: n } = this.props,
             i = this.elementRef.current;
         o()(null != i, "Unexpected null element");
-        let r = (0, A.J$)(i),
+        let r = (0, h.J$)(i),
             { style: a, nudge: s } = this.calculatePositionStyle(e, i, r),
             l = { position: e, style: a, nudge: s },
             d = m(e, a, i, r, n),
@@ -210,7 +212,7 @@ class N extends r.Component {
             u = null,
             _ = 0;
         if (t && d < 0) {
-            let t = g(e),
+            let t = S(e),
                 a = this.calculatePositionStyle(t, i, r);
             ((u = a.style), (_ = a.nudge));
             let s = m(t, u, i, r, n);
@@ -227,57 +229,74 @@ class N extends r.Component {
                     a !== t
                 ) {
                     let e = this.calculatePositionStyle(a, i, r, s),
-                        t = m(g(s), e.style, i, r, n);
+                        t = m(S(s), e.style, i, r, n);
                     t > c && ((l = { position: s, ...e }), (c = t));
                 }
             }
         }
         var E = c,
-            h = l;
+            A = l;
         if (
             null != E &&
             E < 0 &&
-            ("top" === h.position || "bottom" === h.position) &&
+            ("top" === A.position || "bottom" === A.position) &&
             null != i &&
             Math.abs(E) < i?.offsetHeight &&
-            null != h.style
+            null != A.style
         ) {
-            let e = "top" === h.position ? "bottom" : "top",
-                t = h.style[e];
-            return { ...h, style: { ...h.style, [e]: (null == t ? 0 : t) + E } };
+            let e = "top" === A.position ? "bottom" : "top",
+                t = A.style[e];
+            return { ...A, style: { ...A.style, [e]: (null == t ? 0 : t) + E } };
         }
-        return h;
+        return A;
     }
     componentDidMount() {
         let { targetRef: e, onMount: t } = this.props;
         this.setState({ isPositioned: !0, ...this.calculateState() });
         let n = this.elementRef.current;
         (o()(null != n, "Missing elementRef"),
-            null != e.current && I.set(n, e.current),
-            n?.ownerDocument?.defaultView?.addEventListener("resize", this.updatePosition),
+            null != e.current && f.set(n, e.current),
+            n?.ownerDocument?.defaultView?.addEventListener("resize", this.updatePosition));
+        let i = n?.ownerDocument?.defaultView?.ResizeObserver;
+        (null != n &&
+            null != i &&
+            ((this.resizeObserver = new i(this.handleResize)), this.resizeObserver.observe(n, { box: "border-box" })),
             t?.());
     }
     componentDidUpdate(e, t) {
         var n;
         let i, r;
-        ((T(e) !== T(this.props) || ((n = this.props), (i = S(e)), (r = S(n)), i.top !== r.top || i.left !== r.left)) &&
+        ((g(e) !== g(this.props) || ((n = this.props), (i = N(e)), (r = N(n)), i.top !== r.top || i.left !== r.left)) &&
             this.updatePosition(),
             t.position !== this.state.position && this.props.onPositionChange?.(this.state.position));
     }
     componentWillUnmount() {
         let e = this.elementRef.current;
         (o()(null != e, "Missing elementRef"),
-            I.delete(e),
+            f.delete(e),
             e?.ownerDocument?.defaultView?.removeEventListener("resize", this.updatePosition),
+            this.resizeObserver?.disconnect(),
             this.props.onUnmount?.());
     }
     updatePosition = () => {
         this.setState(this.calculateState());
     };
+    handleResize = () => {
+        var e;
+        let t = this.calculateState();
+        ((e = this.state),
+            (t.position !== e.position ||
+                t.nudge !== e.nudge ||
+                t.style.top !== e.style.top ||
+                t.style.bottom !== e.style.bottom ||
+                t.style.left !== e.style.left ||
+                t.style.right !== e.style.right) &&
+                (0, d.flushSync)(() => this.setState(t)));
+    };
     calculateMaxHeight() {
         let e = this.elementRef.current;
         if (null == e) return;
-        let t = (0, A.J$)(e),
+        let t = (0, h.J$)(e),
             n = this.state.style;
         return null != n.top
             ? Math.max(0, t.offsetHeight - n.top - 12)
@@ -287,28 +306,28 @@ class N extends r.Component {
     }
     render() {
         let { id: e, className: t, children: n, fixed: r, disablePointerEvents: a, clickTrap: l = !1 } = this.props,
-            { position: o, isPositioned: d, nudge: E } = this.state,
+            { position: o, isPositioned: d, nudge: c } = this.state,
             A = this.calculateMaxHeight();
         return (0, i.jsx)("div", {
-            className: s()({ [h.ld]: !0, [h.x7]: l }),
-            children: (0, i.jsx)(u.aS, {
+            className: s()({ [I.ld]: !0, [I.x7]: l }),
+            children: (0, i.jsx)(_.aS, {
                 children: (l) => {
-                    let { disableAdaptiveTheme: u } = l;
-                    return (0, i.jsx)(_.N, {
-                        disableAdaptiveTheme: u,
+                    let { disableAdaptiveTheme: _ } = l;
+                    return (0, i.jsx)(E.N, {
+                        disableAdaptiveTheme: _,
                         children: (l) =>
                             (0, i.jsx)("div", {
                                 id: e,
-                                className: s()(t, l, h.qd, { [h.CA]: !1, [h.Hc]: a }),
+                                className: s()(t, l, I.qd, { [I.CA]: !1, [I.Hc]: a }),
                                 style: {
                                     position: r ? "fixed" : "absolute",
                                     ...this.state.style,
                                     "--reference-position-layer-max-height": null != A ? `${A}px` : void 0,
                                 },
                                 ref: this.elementRef,
-                                children: (0, i.jsx)(c.xp, {
+                                children: (0, i.jsx)(u.xp, {
                                     containerRef: this.elementRef,
-                                    children: n({ position: o, nudge: E, isPositioned: d }, this.updatePosition),
+                                    children: n({ position: o, nudge: c, isPositioned: d }, this.updatePosition),
                                 }),
                             }),
                     });
