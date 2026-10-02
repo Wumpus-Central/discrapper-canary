@@ -1,4 +1,4 @@
-(a.r(l), a.d(l, { manaCollection: () => a2, playgroundConfig: () => a4 }));
+(a.r(l), a.d(l, { manaCollection: () => a5, playgroundConfig: () => a9 }));
 var t = a(477900),
     o = a(582128),
     n = a(17928),
@@ -230,8 +230,8 @@ let k = {
     ],
 };
 var w = a(782603),
-    M = a(194261),
-    T = a(231483),
+    T = a(194261),
+    M = a(231483),
     I = a(175841),
     E = a(346411),
     D = a(331322),
@@ -349,15 +349,15 @@ var N = a(512950);
 let R = {
     Default: void 0,
     Bell: w.BellIcon,
-    Lock: M.LockIcon,
-    Shield: T.ShieldIcon,
+    Lock: T.LockIcon,
+    Shield: M.ShieldIcon,
     Sparkles: I.SparklesIcon,
     Wrench: E.WrenchIcon,
 };
 function O(e, l) {
     return e ? (0, t.jsx)(h.$, { text: l, variant: "secondary", size: "sm" }) : void 0;
 }
-let P = {
+let B = {
     name: "HelpMessage",
     id: "help-message",
     component: function (e) {
@@ -437,7 +437,7 @@ let P = {
         hidden: { label: "Hidden", type: "boolean", defaultValue: !1 },
     },
 };
-var B = a(22231),
+var P = a(22231),
     z = a(366605),
     $ = a(624479),
     G = a(625903),
@@ -475,12 +475,12 @@ let X = {
                     [V, j] = o.useState(!1),
                     [C, S] = o.useState("text"),
                     [k, w] = o.useState("cozy"),
-                    [M, T] = o.useState(!0),
+                    [T, M] = o.useState(!0),
                     I = o.useRef(null);
                 return (0, t.jsxs)("div", {
                     className: W.k,
                     children: [
-                        !M && (0, t.jsx)(h.$, { text: "Open Menu", onClick: () => T(!0) }),
+                        !T && (0, t.jsx)(h.$, { text: "Open Menu", onClick: () => M(!0) }),
                         (0, t.jsx)(H.Y, {
                             renderPopout: (e) => {
                                 let { closePopout: o } = e;
@@ -496,8 +496,8 @@ let X = {
                                         (0, t.jsx)(U.Dr, {
                                             id: "edit",
                                             label: "Edit Message",
-                                            icon: u ? B.PencilIcon : void 0,
-                                            leadingAccessory: u ? { type: "icon", icon: B.PencilIcon } : void 0,
+                                            icon: u ? P.PencilIcon : void 0,
+                                            leadingAccessory: u ? { type: "icon", icon: P.PencilIcon } : void 0,
                                             shortcut: c ? "\u2318E" : void 0,
                                             action: () => {},
                                         }),
@@ -705,7 +705,7 @@ let X = {
                             align: "center",
                             shouldShow: !0,
                             targetElementRef: I,
-                            onRequestClose: () => T(!1),
+                            onRequestClose: () => M(!1),
                             children: () =>
                                 (0, t.jsx)("div", {
                                     ref: I,
@@ -1156,7 +1156,7 @@ let eg = [
             {
                 title: "HelpMessage",
                 stories: [
-                    P,
+                    B,
                     {
                         name: "All Types",
                         id: "help-message-types",
@@ -1305,8 +1305,8 @@ var eV = a(27232),
     eS = a(260981),
     ek = a(540418),
     ew = a(907085),
-    eM = a(179820),
-    eT = a(508770);
+    eT = a(179820),
+    eM = a(508770);
 let eI = {
         none: void 0,
         StarIcon: eV.StarIcon,
@@ -1316,7 +1316,7 @@ let eI = {
         ExperimentalCommonIcon: eS.p,
         ExperimentalRareIcon: ek.A,
         ExperimentalEpicIcon: ew.b,
-        ExperimentalMythicIcon: eM.O,
+        ExperimentalMythicIcon: eT.O,
     },
     eE = {
         title: "Badge",
@@ -1327,7 +1327,7 @@ let eI = {
                 component: function (e) {
                     let { type: l, customText: a, variant: o, iconName: n } = e,
                         i = null != n && "" !== n && "none" !== n ? eI[n] : void 0;
-                    return (0, t.jsx)(eT.E, {
+                    return (0, t.jsx)(eM.E, {
                         type: "custom" === l && null != a && "" !== a ? { text: a } : l,
                         variant: o,
                         icon: i,
@@ -1388,11 +1388,11 @@ var eD = a(408278),
     eN = a(831544),
     eR = a(83107),
     eO = a(123292),
-    eP = a(825484),
-    eB = a(657718);
+    eB = a(825484),
+    eP = a(657718);
 function ez(e) {
     let { pressed: l, ...a } = e;
-    return (0, t.jsx)(eB.S, {
+    return (0, t.jsx)(eP.S, {
         ...a,
         "data-mana-component": "toggle-button",
         role: "button",
@@ -1561,7 +1561,7 @@ let e$ = {
             id: "button-group",
             docs: "https://design.discord.tools/components/web/buttons/button-group",
             component: function (e) {
-                return (0, t.jsxs)(eP.e, {
+                return (0, t.jsxs)(eB.e, {
                     ...e,
                     children: [
                         (0, t.jsx)(h.$, { variant: "secondary", text: "Cancel" }),
@@ -1668,7 +1668,7 @@ function eW(e) {
                         className: eq.PG,
                         children: [
                             null != l.icon &&
-                                (0, t.jsx)(eB.a, {
+                                (0, t.jsx)(eP.a, {
                                     icon: l.icon,
                                     iconOpticalOffsetMargin: 0,
                                     iconPosition: "start",
@@ -2350,7 +2350,7 @@ function lk(e) {
             getFloatingProps: S,
             getReferenceProps: k,
         } = (0, lp.u)({ matchReferenceWidth: !1, placement: "bottom-start" }),
-        { isMounted: w, styles: M } = (0, lm.DL)(C, {
+        { isMounted: w, styles: T } = (0, lm.DL)(C, {
             common: (e) => {
                 let { side: l } = e;
                 return { transformOrigin: `${"top" === l ? "bottom" : "top"} center` };
@@ -2358,7 +2358,7 @@ function lk(e) {
             initial: { opacity: 0.5, transform: "scaleY(0.96)" },
             duration: 100,
         }),
-        T = (e) => {
+        M = (e) => {
             (a(e), e?.start != null && e?.end != null && j(!1));
         };
     return (0, t.jsx)(A.D, {
@@ -2376,7 +2376,7 @@ function lk(e) {
                     "aria-invalid": null != e.errorMessageId,
                     "aria-errormessage": e.errorMessageId,
                     value: l,
-                    onChange: T,
+                    onChange: M,
                     isDisabled: m,
                     isRequired: y,
                     minValue: o,
@@ -2428,11 +2428,11 @@ function lk(e) {
                                     restoreFocus: !0,
                                     children: (0, t.jsx)(lb.lG, {
                                         "aria-label": b.DATE_INPUT_OPEN_CALENDAR_LABEL,
-                                        style: M,
+                                        style: T,
                                         className: lS.r3,
                                         children: (0, t.jsx)(lC, {
                                             value: l,
-                                            onChange: T,
+                                            onChange: M,
                                             minValue: o,
                                             maxValue: n,
                                             isDisabled: m,
@@ -2535,8 +2535,8 @@ let lw = {
         },
     ],
 };
-var lM = a(270003),
-    lT = a(691885),
+var lT = a(270003),
+    lM = a(691885),
     lI = a(508274),
     lE = a(109802),
     lD = a(885105);
@@ -2614,7 +2614,7 @@ function lR(e) {
             (0, t.jsx)(lN, {
                 title: "Select",
                 auxiliaryContentPosition: l,
-                children: (0, t.jsx)(lT.l, {
+                children: (0, t.jsx)(lM.l, {
                     label: "Animal",
                     hideLabel: !0,
                     options: lA,
@@ -2670,7 +2670,7 @@ let lO = {
             component: function (e) {
                 let { label: l } = e;
                 return (0, t.jsx)("div", {
-                    children: (0, t.jsxs)(lM.n, {
+                    children: (0, t.jsxs)(lT.n, {
                         label: "" === l ? void 0 : l,
                         children: [
                             (0, t.jsx)(ey.k, { label: "First Name" }),
@@ -2691,7 +2691,7 @@ let lO = {
                     children: (0, t.jsx)(A.D, {
                         ...a,
                         description: "" === l ? void 0 : l,
-                        icon: a.showIcon ? M.LockIcon : void 0,
+                        icon: a.showIcon ? T.LockIcon : void 0,
                         children: (0, t.jsx)("div", {
                             className: lD.q,
                             children: (0, t.jsx)(eH.E, {
@@ -2763,8 +2763,8 @@ let lO = {
         },
     ],
 };
-var lP = a(292825);
-let lB = ["info", "success", "warning", "critical"],
+var lB = a(292825);
+let lP = ["info", "success", "warning", "critical"],
     lz = {
         name: "InlineNotice",
         id: "inline-notice",
@@ -2777,7 +2777,7 @@ let lB = ["info", "success", "warning", "critical"],
                 label: "Type",
                 type: "select",
                 defaultValue: "info",
-                options: lB.map((e) => ({ label: e, value: e })),
+                options: lP.map((e) => ({ label: e, value: e })),
             },
             text: { label: "Text", type: "text", defaultValue: "This is an inline notice" },
             iconAlign: {
@@ -2840,7 +2840,7 @@ let lB = ["info", "success", "warning", "critical"],
                                           onClick: () => p(!1),
                                       }),
                                   })
-                                : (0, t.jsx)(lP.a, {
+                                : (0, t.jsx)(lB.a, {
                                       type: "success" === l ? "positive" : l,
                                       title: "" === s ? void 0 : s,
                                       message: a,
@@ -2859,7 +2859,7 @@ let lB = ["info", "success", "warning", "critical"],
                 label: "Shared: Type",
                 type: "select",
                 defaultValue: "critical",
-                options: lB.map((e) => ({ label: e, value: e })),
+                options: lP.map((e) => ({ label: e, value: e })),
             },
             text: {
                 label: "Shared: Message",
@@ -3235,7 +3235,7 @@ let lK = [
                     return (0, t.jsxs)(D.B, {
                         gap: 24,
                         children: [
-                            (0, t.jsxs)(lM.n, {
+                            (0, t.jsxs)(lT.n, {
                                 label: "Text Input",
                                 children: [
                                     (0, t.jsx)(ey.k, { ...x }),
@@ -3258,7 +3258,7 @@ let lK = [
                                 ],
                             }),
                             (0, t.jsx)(lq.c, {}),
-                            (0, t.jsxs)(lM.n, {
+                            (0, t.jsxs)(lT.n, {
                                 label: "Search Bar",
                                 children: [
                                     (0, t.jsx)(l_.I, { query: u, onChange: r.tE, disabled: s, placeholder: d }),
@@ -3272,7 +3272,7 @@ let lK = [
                                 ],
                             }),
                             (0, t.jsx)(lq.c, {}),
-                            (0, t.jsx)(lM.n, { label: "Text Area", children: (0, t.jsx)(lH.f, { ...x }) }),
+                            (0, t.jsx)(lT.n, { label: "Text Area", children: (0, t.jsx)(lH.f, { ...x }) }),
                         ],
                     });
                 },
@@ -4666,7 +4666,7 @@ let aV = {
 var aS = a(593924),
     ak = a(844222),
     aw = a(272318);
-let aM = Object.entries(aS)
+let aT = Object.entries(aS)
     .filter((e) => {
         let l = e[1];
         return "function" == typeof l && "riveSrc" in l;
@@ -4676,7 +4676,7 @@ let aM = Object.entries(aS)
         return { name: l, Component: a };
     })
     .sort((e, l) => e.name.localeCompare(l.name));
-var aT = a(649998),
+var aM = a(649998),
     aI = a(715022),
     aE = a(453318),
     aD = a(379649);
@@ -4733,8 +4733,8 @@ let aA = [
                         [d, u] = o.useState([]),
                         c = aO(a, i.asyncOptions, n);
                     return "single" === l
-                        ? (0, t.jsx)(lT.l, { ...i, selectionMode: l, options: c, onSelectionChange: r, value: s })
-                        : (0, t.jsx)(lT.l, { ...i, selectionMode: l, options: c, onSelectionChange: u, value: d });
+                        ? (0, t.jsx)(lM.l, { ...i, selectionMode: l, options: c, onSelectionChange: r, value: s })
+                        : (0, t.jsx)(lM.l, { ...i, selectionMode: l, options: c, onSelectionChange: u, value: d });
                 },
                 controls: {
                     selectionMode: {
@@ -4925,7 +4925,7 @@ let aA = [
                         } = e,
                         [r, d] = o.useState(null),
                         { flatOptions: u, groups: c } = o.useMemo(() => (0, aI.yG)(aN), []);
-                    return (0, t.jsx)(aT.q, {
+                    return (0, t.jsx)(aM.q, {
                         selectionMode: l,
                         required: a,
                         shouldFocusWrap: n,
@@ -4969,7 +4969,7 @@ function aO(e, l, a) {
             : o;
     }, [e, l, a]);
 }
-let aP = {
+let aB = {
     title: "Switch",
     stories: [
         {
@@ -5005,10 +5005,10 @@ let aP = {
         },
     ],
 };
-var aB = a(11779),
+var aP = a(11779),
     az = a(872162);
 let a$ = [
-        { id: "strength", label: "Strength", icon: aB.r },
+        { id: "strength", label: "Strength", icon: aP.r },
         { id: "dexterity", label: "Dexterity" },
         { id: "wisdom", label: "Wisdom" },
         { id: "charisma", label: "Charisma" },
@@ -5028,7 +5028,7 @@ let a$ = [
                         d = (0, n.bG)([i.default], () => i.default.getCurrentUser()),
                         u = o.useMemo(
                             () => [
-                                { id: "strength", label: "Strength", icon: aB.r },
+                                { id: "strength", label: "Strength", icon: aP.r },
                                 { id: "dexterity", label: "Dexterity", icon: { type: "role", color: "#ff44aa" } },
                                 {
                                     id: "wisdom",
@@ -5186,17 +5186,22 @@ let aq = {
         children: { label: "Text", type: "text", defaultValue: "Hello, world!" },
     },
 };
-var aU = a(936170),
-    aW = a(782641),
-    aX = a(381275);
-let aZ = Object.assign(
+var aU = a(252392),
+    aW = a(260509),
+    aX = a(711014),
+    aZ = a(690521);
+let aK = ["Wumpus", "Discord Staff", "Design Systems Team"],
+    aY = { label: "Text", type: "text", defaultValue: "This is a toast message" };
+var aQ = a(782641),
+    aJ = a(381275);
+let a0 = Object.assign(
     function (e) {
         let { children: l, "aria-label": a, "aria-labelledby": o } = e;
-        return (0, t.jsx)(aW.M, {
+        return (0, t.jsx)(aQ.M, {
             "data-mana-component": "toolbar",
             "aria-label": a,
             "aria-labelledby": o,
-            className: aX.KE,
+            className: aJ.KE,
             children: l,
         });
     },
@@ -5208,7 +5213,7 @@ let aZ = Object.assign(
                 "data-mana-component": "toolbar-group",
                 "aria-label": a,
                 "aria-labelledby": o,
-                className: aX.Os,
+                className: aJ.Os,
                 children: l,
             });
         },
@@ -5217,15 +5222,15 @@ let aZ = Object.assign(
                 role: "separator",
                 "aria-orientation": "vertical",
                 "data-mana-component": "toolbar-separator",
-                className: aX.me,
+                className: aJ.me,
             });
         },
     },
 );
-var aK = a(866665),
-    aY = a(683063),
-    aQ = a(557464);
-let aJ = {
+var a1 = a(866665),
+    a2 = a(683063),
+    a4 = a(557464);
+let a3 = {
     title: "Tooltip",
     stories: [
         {
@@ -5248,7 +5253,7 @@ let aJ = {
                         if ("center" !== i && null != i)
                             return "custom" === i ? { align: i, customOffset: s } : { align: i };
                     }, [i, s]);
-                return (0, t.jsx)(aK.m, {
+                return (0, t.jsx)(a1.m, {
                     text: l,
                     position: a,
                     align: n,
@@ -5327,8 +5332,8 @@ let aJ = {
                         if ("center" !== u && null != u)
                             return "custom" === u ? { align: u, customOffset: c } : { align: u };
                     }, [u, c]),
-                    v = o.useMemo(() => (n ? { type: "image", src: aQ.A, aspectRatio: "1/1" } : void 0), [n]);
-                return (0, t.jsx)(aY.u, {
+                    v = o.useMemo(() => (n ? { type: "image", src: a4.A, aspectRatio: "1/1" } : void 0), [n]);
+                return (0, t.jsx)(a2.u, {
                     title: l,
                     body: a,
                     position: r,
@@ -5412,9 +5417,9 @@ let aJ = {
         },
     ],
 };
-var a0 = a(508382),
-    a1 = a(393743);
-let a2 = {
+var a6 = a(508382),
+    a8 = a(393743);
+let a5 = {
         id: "mana",
         name: "Mana",
         groups: [
@@ -5463,14 +5468,14 @@ let a2 = {
                             let [e, l] = o.useState(!1),
                                 [a, n] = o.useState(!1),
                                 i = e ? "Unmute microphone" : "Mute microphone";
-                            return (0, t.jsxs)(aZ, {
+                            return (0, t.jsxs)(a0, {
                                 "aria-label": "Message actions",
                                 children: [
-                                    (0, t.jsxs)(aZ.Group, {
+                                    (0, t.jsxs)(a0.Group, {
                                         "aria-label": "Response actions",
                                         children: [
                                             (0, t.jsx)(h.$, { variant: "secondary", text: "Reply" }),
-                                            (0, t.jsx)(aK.m, {
+                                            (0, t.jsx)(a1.m, {
                                                 text: "More options",
                                                 children: (0, t.jsx)(eD.K, {
                                                     variant: "secondary",
@@ -5480,11 +5485,11 @@ let a2 = {
                                             }),
                                         ],
                                     }),
-                                    (0, t.jsx)(aZ.Separator, {}),
-                                    (0, t.jsxs)(aZ.Group, {
+                                    (0, t.jsx)(a0.Separator, {}),
+                                    (0, t.jsxs)(a0.Group, {
                                         "aria-label": "Message options",
                                         children: [
-                                            (0, t.jsx)(aK.m, {
+                                            (0, t.jsx)(a1.m, {
                                                 text: i,
                                                 children: (0, t.jsx)(eL.k, {
                                                     icon: eN.MicrophoneIcon,
@@ -5511,7 +5516,7 @@ let a2 = {
             lw,
             aj,
             aC,
-            aP,
+            aB,
             an,
             {
                 title: "InlineNotice",
@@ -5524,7 +5529,7 @@ let a2 = {
                             let { text: l } = e;
                             return (0, t.jsx)(D.B, {
                                 gap: 16,
-                                children: lB.map((e) => (0, t.jsx)(e8.w, { type: e, children: `${e}: ${l}` }, e)),
+                                children: lP.map((e) => (0, t.jsx)(e8.w, { type: e, children: `${e}: ${l}` }, e)),
                             });
                         },
                         controls: { text: { label: "Text", type: "text", defaultValue: "This is an inline notice" } },
@@ -5556,16 +5561,72 @@ let a2 = {
                                         iconColor: lX.A.colors.ICON_BRAND,
                                         secondaryIconColor: lX.A.colors.ICON_DEFAULT,
                                     }),
+                                    (0, t.jsx)(aU.y, {
+                                        text: l,
+                                        variant: "default",
+                                        icon: eV.StarIcon,
+                                        iconColor: lX.A.colors.ICON_BRAND,
+                                    }),
                                     (0, t.jsx)(aU.y, { text: l, variant: "success" }),
                                     (0, t.jsx)(aU.y, { text: l, variant: "critical" }),
                                 ],
                             });
                         },
-                        controls: { text: { label: "Text", type: "text", defaultValue: "This is a toast message" } },
+                        controls: { text: aY },
+                    },
+                    {
+                        name: "Toasts with entities",
+                        id: "toast-entities",
+                        component: function (e) {
+                            let { text: l } = e,
+                                a = (0, n.bG)([aX.Ay, eo.A], () =>
+                                    aX.Ay.getFlattenedGuildIds()
+                                        .map((e) => eo.A.getGuild(e))
+                                        .find((e) => e?.icon != null),
+                                ),
+                                o = aZ.Ay.getURL("\uD83D\uDC4B"),
+                                i = aZ.Ay.getURL("\uD83D\uDD25");
+                            return (0, t.jsxs)(D.B, {
+                                gap: 12,
+                                children: [
+                                    (0, t.jsx)(aU.y, {
+                                        text: l,
+                                        icon:
+                                            "" !== o
+                                                ? { type: "emoji", src: o, alt: "\uD83D\uDC4B" }
+                                                : { type: "emoji", unicode: "\uD83D\uDC4B" },
+                                    }),
+                                    (0, t.jsx)(aU.y, {
+                                        text: l,
+                                        icon:
+                                            "" !== i
+                                                ? { type: "emoji", src: i, alt: "\uD83D\uDD25" }
+                                                : { type: "emoji", unicode: "\uD83D\uDD25" },
+                                    }),
+                                    (0, t.jsx)(aU.y, {
+                                        text: l,
+                                        icon: {
+                                            type: "avatar",
+                                            src: "https://cdn.discordapp.com/embed/avatars/0.png",
+                                            alt: "Nelly",
+                                        },
+                                    }),
+                                    null != a &&
+                                        (0, t.jsx)(aU.y, {
+                                            text: a.name,
+                                            icon: { type: "guild", src: (0, aW.Iv)(a, 48), name: a.name },
+                                        }),
+                                    aK.map((e) =>
+                                        (0, t.jsx)(aU.y, { text: e, icon: { type: "guild", src: null, name: e } }, e),
+                                    ),
+                                ],
+                            });
+                        },
+                        controls: { text: aY },
                     },
                 ],
             },
-            aJ,
+            a3,
             e1,
             aF,
             lO,
@@ -5586,7 +5647,7 @@ let a2 = {
                                     blockPointerEvents: d,
                                 } = e,
                                 [u, c] = o.useState(!1);
-                            return (0, t.jsx)(a0.Ow, {
+                            return (0, t.jsx)(a6.Ow, {
                                 open: u,
                                 onOpenChange: c,
                                 placement: l,
@@ -5598,7 +5659,7 @@ let a2 = {
                                 blockPointerEvents: d,
                                 renderLayer: () =>
                                     (0, t.jsx)("div", {
-                                        className: a1.q,
+                                        className: a8.q,
                                         children: (0, t.jsx)(eH.E, {
                                             variant: "text-sm/medium",
                                             children: "FloatingLayer Content",
@@ -5688,7 +5749,7 @@ let a2 = {
                                         "div",
                                         {
                                             className: aw.Vg,
-                                            children: aM.map((e) => {
+                                            children: aT.map((e) => {
                                                 let { name: l, Component: a } = e;
                                                 return (0, t.jsxs)(
                                                     "div",
@@ -5723,4 +5784,4 @@ let a2 = {
             },
         ],
     },
-    a4 = { collections: [a2, ef] };
+    a9 = { collections: [a5, ef] };
