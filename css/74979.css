@@ -204,6 +204,15 @@
     width: 32px
 }
 
+.circleContainer__796c4 .progress__796c4 {
+    inset: 0;
+    position: absolute
+}
+
+.circleContainer__796c4 .noDisc__796c4 {
+    fill: none
+}
+
 .textContainer__796c4 {
     display: flex;
     flex: 1;
@@ -399,4 +408,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=74979.f7dffceddc218136.css.map*/
+/*# sourceMappingURL=74979.7ee220596e6df49e.css.map*/
