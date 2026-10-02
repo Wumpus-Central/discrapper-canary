@@ -1,13 +1,13 @@
-r.d(e, { A: () => s });
-var n = r(582128);
-let s = function (t, e) {
-    let r = (0, n.useRef)(t);
-    ((0, n.useEffect)(() => {
-        r.current = t;
-    }, [t]),
-        (0, n.useEffect)(() => {
-            if (null === e) return;
-            let t = setTimeout(() => r.current(), e);
-            return () => clearTimeout(t);
-        }, [e, r]));
+u.d(t, { A: () => c });
+var r = u(582128);
+let c = function (e, t) {
+    let u = (0, r.useRef)(e);
+    ((0, r.useEffect)(() => {
+        u.current = e;
+    }, [e]),
+        (0, r.useEffect)(() => {
+            if (null === t) return;
+            let e = setTimeout(() => u.current(), t);
+            return () => clearTimeout(e);
+        }, [t, u]));
 };

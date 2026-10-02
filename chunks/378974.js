@@ -116,8 +116,8 @@ function D(e) {
     });
 }
 var P = n(880652),
-    p = n(838353);
-function M(e) {
+    M = n(838353);
+function m(e) {
     let { question: t, questionId: n, value: l, onValueChange: r } = e,
         { selectedChoice: s, textInputs: a } = (function (e) {
             if (null == e || "" === e) return { selectedChoice: null, textInputs: {} };
@@ -139,17 +139,17 @@ function M(e) {
     }
     return null == t.Choices
         ? (0, i.jsx)("div", {
-              className: p.kL,
+              className: M.kL,
               children: (0, i.jsx)(E.E, {
                   variant: "text-sm/medium",
-                  className: p.WN,
+                  className: M.WN,
                   children: "No choices available for this question",
               }),
           })
         : (0, i.jsx)("div", {
-              className: p.kL,
+              className: M.kL,
               children: (0, i.jsx)("div", {
-                  className: p.Me,
+                  className: M.Me,
                   children: Object.entries(t.Choices).map((e) => {
                       let [t, n] = e;
                       return (0, i.jsx)(
@@ -169,7 +169,7 @@ function M(e) {
               }),
           });
 }
-function m(e) {
+function p(e) {
     let { question: t, questionId: n, value: l, onValueChange: r } = e,
         { selectedChoices: s, textInputs: a } = (function (e) {
             if (null == e || "" === e) return { selectedChoices: [], textInputs: {} };
@@ -203,17 +203,17 @@ function m(e) {
     }
     return null == t.Choices || 0 === Object.keys(t.Choices).length
         ? (0, i.jsx)("div", {
-              className: p.kL,
+              className: M.kL,
               children: (0, i.jsx)(E.E, {
                   variant: "text-sm/medium",
-                  className: p.WN,
+                  className: M.WN,
                   children: "No choices available for this question",
               }),
           })
         : (0, i.jsx)("div", {
-              className: p.kL,
+              className: M.kL,
               children: (0, i.jsx)("div", {
-                  className: p.Me,
+                  className: M.Me,
                   children: Object.entries(t.Choices).map((e) => {
                       let [t, n] = e;
                       return (0, i.jsx)(
@@ -236,8 +236,8 @@ function m(e) {
 function f(e) {
     let { question: t, questionId: n, value: l, onValueChange: r } = e;
     return t.Selector === P.BO.SINGLE_ANSWER
-        ? (0, i.jsx)(M, { question: t, questionId: n, value: l, onValueChange: r })
-        : (0, i.jsx)(m, { question: t, questionId: n, value: l, onValueChange: r });
+        ? (0, i.jsx)(m, { question: t, questionId: n, value: l, onValueChange: r })
+        : (0, i.jsx)(p, { question: t, questionId: n, value: l, onValueChange: r });
 }
 var U = n(103557),
     g = n(424349);
@@ -297,13 +297,13 @@ function j(e) {
         })(n),
         [S, C] = l.useState(O.blockId),
         [D, P] = l.useState(O.pageIndex),
-        [p, M] = l.useState(!1);
-    function m(e, n) {
+        [M, m] = l.useState(!1);
+    function p(e, n) {
         d(t, e, n);
     }
     let f = l.useCallback(
             () => (
-                p
+                M
                     ? r()
                     : (0, a.openModal)((e) =>
                           (0, i.jsx)(s.a, {
@@ -327,7 +327,7 @@ function j(e) {
                       ),
                 Promise.resolve()
             ),
-            [r, p],
+            [r, M],
         ),
         U = l.useMemo(
             () =>
@@ -475,13 +475,13 @@ function j(e) {
                 }
                 return { blockId: null, pageIndex: 0, questionIds: [], isComplete: !0 };
             })(n, { blockId: S, pageIndex: D, responses: R });
-            (N(t, U), e.isComplete && o.Ay.submitSurveyResponse(t, R), C(e.blockId), P(e.pageIndex), M(e.isComplete));
+            (N(t, U), e.isComplete && o.Ay.submitSurveyResponse(t, R), C(e.blockId), P(e.pageIndex), m(e.isComplete));
         }, [n, S, D, R, t, U, N]);
     l.useEffect(() => {
         0 === U.length && g();
     }, [U, g]);
     let h = l.useMemo(() => {
-        if (p) return !1;
+        if (M) return !1;
         for (let e of U) {
             let t = n.Questions[e];
             if (t?.Validation?.Settings?.ForceResponse === "ON") {
@@ -490,8 +490,8 @@ function j(e) {
             }
         }
         return !0;
-    }, [p, U, n, R]);
-    return p
+    }, [M, U, n, R]);
+    return M
         ? (0, i.jsxs)(s.a, {
               transitionState: _,
               onClose: r,
@@ -522,7 +522,7 @@ function j(e) {
                                         ? null
                                         : (0, i.jsx)(
                                               L,
-                                              { question: t, questionId: e, responses: R, onResponseChange: m },
+                                              { question: t, questionId: e, responses: R, onResponseChange: p },
                                               e,
                                           );
                                 }),

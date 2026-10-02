@@ -2,8 +2,8 @@ s.d(t, { Ay: () => I, Be: () => v, Nj: () => g, y3: () => x });
 var r,
     n = s(477900),
     a = s(582128),
-    l = s(503698),
-    i = s.n(l),
+    i = s(503698),
+    l = s.n(i),
     c = s(355522),
     u = s(37766),
     o = s(637956),
@@ -118,7 +118,7 @@ class m extends a.PureComponent {
                   ? (0, n.jsx)(d.E, { className: s, size: "lg" })
                   : (0, n.jsx)("div", {
                         "aria-hidden": !0,
-                        className: i()(r, p[t], s, { [p.flipped]: e }),
+                        className: l()(r, p[t], s, { [p.flipped]: e }),
                         children: t,
                     });
     }

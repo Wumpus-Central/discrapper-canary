@@ -23,19 +23,19 @@ var i,
     f = n(147036),
     L = n(957565),
     m = n(375708);
-let b = (0, T.throttle)(() => (0, N.P)((0, S.o)(m.intl.string(m.t["+5kSoW"]), O.Ck.SUCCESS)), 3e3, {
+let v = (0, T.throttle)(() => (0, N.P)((0, S.o)(m.intl.string(m.t["+5kSoW"]), O.Ck.SUCCESS)), 3e3, {
     leading: !0,
     trailing: !1,
 });
-var v = n(265422),
+var b = n(265422),
     R = n(625494),
     U = n(652215),
     D = n(272613),
-    y = n(819638),
-    G = n(723702),
+    G = n(819638),
+    y = n(723702),
     M = n(763827),
-    x = n(64460),
-    P = n(92960),
+    P = n(64460),
+    x = n(92960),
     V = n(739008),
     w = n(314519),
     j = n(837057),
@@ -50,8 +50,8 @@ var v = n(265422),
     z = n(928531),
     X = n(251494),
     J = n(82038),
-    q = n(14214),
-    Q = n(151199),
+    Q = n(14214),
+    q = n(151199),
     $ = n(975571),
     ee = n(28647),
     et = n(851109);
@@ -132,10 +132,10 @@ let eI = {
     [U.IWg.MENTION_CHANNEL_NEXT]: ec.BD,
     [U.IWg.MENTION_CHANNEL_PREV]: ec.X8,
     [U.IWg.TOGGLE_PREVIOUS_GUILD]: I.Fv,
-    [U.IWg.JUMP_TO_GUILD]: x.J,
+    [U.IWg.JUMP_TO_GUILD]: P.J,
     [U.IWg.SUBMIT]: X.X,
     [U.IWg.TEXTAREA_FOCUS]: J.c,
-    [U.IWg.MARK_CHANNEL_READ]: P.Df,
+    [U.IWg.MARK_CHANNEL_READ]: x.Df,
     [U.IWg.MARK_SERVER_READ]: V.P,
     [U.IWg.TOGGLE_CHANNEL_PINS]: {
         binds: ["mod+p"],
@@ -153,8 +153,8 @@ let eI = {
                 let t = o.Ay.getChannelId(),
                     n = h.A.getChannel(t);
                 window.location.pathname.startsWith(U.BVt.CHANNEL(U.gNP)) && null != n
-                    ? (0, v.i)(n.guild_id, t)
-                    : (0, v.a)(U.BVt.CHANNEL(U.gNP, t ?? void 0));
+                    ? (0, b.i)(n.guild_id, t)
+                    : (0, b.a)(U.BVt.CHANNEL(U.gNP, t ?? void 0));
             })(),
             R._.dispatch(U.jej.TOGGLE_INBOX),
             !1),
@@ -191,9 +191,9 @@ let eI = {
         comboKeysBindGlobal: !0,
         action: () => ((0, eu.A)({ source: eA.y.KEYBIND }), !1),
     },
-    [U.IWg.TOGGLE_MUTE]: q.VT,
-    [U.IWg.TOGGLE_DEAFEN]: q.rR,
-    [U.IWg.TOGGLE_CATEGORY_COLLAPSED]: Q.y,
+    [U.IWg.TOGGLE_MUTE]: Q.VT,
+    [U.IWg.TOGGLE_DEAFEN]: Q.rR,
+    [U.IWg.TOGGLE_CATEGORY_COLLAPSED]: q.y,
     [U.IWg.SEARCH_SOUNDBOARD]: {
         binds: ["mod+shift+b"],
         comboKeysBindGlobal: !0,
@@ -205,7 +205,7 @@ let eI = {
     [U.IWg.CREATE_DM_GROUP]: {
         binds: ["mod+shift+t"],
         comboKeysBindGlobal: !0,
-        action: () => (null != d.A.getGuildId() && (0, v.i)(U.ME), R._.safeDispatch(U.jej.TOGGLE_DM_CREATE), !1),
+        action: () => (null != d.A.getGuildId() && (0, b.i)(U.ME), R._.safeDispatch(U.jej.TOGGLE_DM_CREATE), !1),
     },
     [U.IWg.CREATE_THREAD]: {
         binds: ["mod+shift+alt+n"],
@@ -256,8 +256,8 @@ let eI = {
         binds: ["mod+shift+n"],
         comboKeysBindGlobal: !0,
         action() {
-            (0, l.hasModalOpen)(y.fc)
-                ? D.A.updateCreateGuildModal({ slide: y.oS.JOIN_GUILD, location: "Keyboard Shortcut" })
+            (0, l.hasModalOpen)(G.fc)
+                ? D.A.updateCreateGuildModal({ slide: G.oS.JOIN_GUILD, location: "Keyboard Shortcut" })
                 : D.A.openCreateGuildModal({ location: "Keyboard Shortcut" });
         },
     },
@@ -288,7 +288,7 @@ let eI = {
             (e.preventDefault(), e.stopPropagation());
             let t = M.A.getGuildId(),
                 n = M.A.getChannelId();
-            return (null != n && (0, v.i)(t ?? U.ME, n), !1);
+            return (null != n && (0, b.i)(t ?? U.ME, n), !1);
         },
     },
     [U.IWg.ZOOM_IN]: eE.Ur,
@@ -309,7 +309,7 @@ let eI = {
         binds: ["mod+alt+i"],
         comboKeysBindGlobal: !0,
         action(e) {
-            if ((0, G.isWeb)() && "discord.com" === location.host) return (e.preventDefault(), e.stopPropagation(), !1);
+            if ((0, y.isWeb)() && "discord.com" === location.host) return (e.preventDefault(), e.stopPropagation(), !1);
         },
     },
     [U.IWg.OPEN_CONTEXT_MENU]: {
@@ -343,7 +343,7 @@ let eI = {
             if (null == t) return !1;
             let n = h.A.getChannel(t.parent_id),
                 i = (0, f.af)(t, n);
-            return ((0, L.C)(i, b), !1);
+            return ((0, L.C)(i, v), !1);
         },
     },
 };

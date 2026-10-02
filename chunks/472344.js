@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     kL: "container_ca8727",
     BQ: "giftingButton_ca8727",
     zc: "iconContainer_ca8727",

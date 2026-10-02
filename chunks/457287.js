@@ -1,15 +1,15 @@
-s.d(t, { f: () => l, A: () => i });
+s.d(t, { f: () => i, A: () => l });
 var r = s(477900);
 s(582128);
 var n = s(691885),
     a = s(375708);
-function l(e) {
+function i(e) {
     let { currencies: t, className: s, children: n } = e;
     return t.length < 2 ? null : (0, r.jsx)("div", { className: s, children: n });
 }
-let i = function (e) {
-    let { label: t, currencies: s, onChange: l, selectedCurrency: i, disabled: c = !1 } = e;
-    if (s.length < 2 || null == i) return null;
+let l = function (e) {
+    let { label: t, currencies: s, onChange: i, selectedCurrency: l, disabled: c = !1 } = e;
+    if (s.length < 2 || null == l) return null;
     let u = s.map((e, t) => ({
         id: t.toString(),
         value: e,
@@ -79,10 +79,10 @@ let i = function (e) {
     return (0, r.jsx)(n.l, {
         selectionMode: "single",
         label: t,
-        value: i,
+        value: l,
         options: u,
         onSelectionChange: function (e) {
-            null != e && l(e);
+            null != e && i(e);
         },
         disabled: c,
     });

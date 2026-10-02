@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     U6: "pulse_e475bb",
     qV: "skeleton_e475bb",
     Dk: "carousel_e475bb",

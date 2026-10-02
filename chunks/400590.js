@@ -1,7 +1,7 @@
-e.exports = {
+_.exports = {
     WN: "roleDotRight__703b9",
     Hf: "roleDotLeft__703b9",
-    Xh: "username__703b9 " + t(601645).WY,
+    Xh: "username__703b9 " + b(601645).WY,
     kL: "container__703b9",
     mO: "displayInline__703b9",
     VW: "nameContainer__703b9",

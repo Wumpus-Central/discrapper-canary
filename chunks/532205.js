@@ -20,9 +20,9 @@ var d = n(736653),
     C = n(772680),
     D = n(281020),
     P = n(206828),
-    p = n(49999),
-    M = n(211180),
-    m = n(375708),
+    M = n(49999),
+    m = n(211180),
+    p = n(375708),
     f = n(971656);
 let U =
     221552 == n.j
@@ -45,7 +45,7 @@ let U =
                   X = null == a ? h : a;
               if (
                   (l.useEffect(() => {
-                      j && q && (null != k && (0, D.M8)(k), t(p.i.INDIRECT_ACTION));
+                      j && q && (null != k && (0, D.M8)(k), t(M.i.INDIRECT_ACTION));
                   }, [j, q, t, k]),
                   null == y || !G || !q || j)
               )
@@ -70,7 +70,7 @@ let U =
                       (0, i.jsx)(A.PM, {
                           noticeType: o,
                           onClick: () => {
-                              t(p.i.USER_DISMISS);
+                              t(M.i.USER_DISMISS);
                           },
                       }),
                       (0, i.jsx)("img", {
@@ -78,7 +78,7 @@ let U =
                           alt: L,
                           className: c()(f.tV, f.Y5),
                       }),
-                      m.intl.format(M.default.qV9zT6, {
+                      p.intl.format(m.default.qV9zT6, {
                           connectionName: h?.name,
                           orbsIconHook: () =>
                               (0, i.jsx)(T.C, {
@@ -94,12 +94,12 @@ let U =
                           },
                           className: f.NS,
                           noticeType: o,
-                          children: m.intl.string(M.default.ZeOhh9),
+                          children: p.intl.string(m.default.ZeOhh9),
                       }),
                       (0, i.jsx)(A.zr, {
-                          onClick: () => r(p.i.USER_DISMISS),
+                          onClick: () => r(M.i.USER_DISMISS),
                           className: f.go,
-                          children: m.intl.string(M.default["8qJAeT"]),
+                          children: p.intl.string(m.default["8qJAeT"]),
                       }),
                   ],
               });
@@ -149,7 +149,7 @@ let B =
                                         },
                                     });
                                 },
-                                text: m.intl.string(m.t.zLXssK),
+                                text: p.intl.string(p.t.zLXssK),
                             }),
                         ],
                     });
@@ -181,21 +181,21 @@ function K(e) {
     let { dismissibleContent: t, noticeType: n } = e,
         r = l.useMemo(() => Y(n), [n]),
         o = s()().add(5, "days").toDate(),
-        [c, _] = (0, w.Bo)(t, r, p.m.NOTICE_BAR);
+        [c, _] = (0, w.Bo)(t, r, M.m.NOTICE_BAR);
     if (null == c) return null;
     switch (c) {
         case a.M.NAGBAR_NOTICE_OFFER_EXPIRING:
             if (n === X.kqX.PREMIUM_TIER_2_TRIAL_ENDING)
                 return (0, i.jsx)(b.A, {
                     dismissCurrentNotice: () => {
-                        (_(p.i.USER_DISMISS), (0, h.w)(o));
+                        (_(M.i.USER_DISMISS), (0, h.w)(o));
                     },
                     subscriptionTier: v.pe.TIER_2,
                 });
             if (n === X.kqX.PREMIUM_TIER_2_DISCOUNT_ENDING)
                 return (0, i.jsx)(B, {
                     dismissCurrentNotice: () => {
-                        (_(p.i.USER_DISMISS), (0, h.w)(o));
+                        (_(M.i.USER_DISMISS), (0, h.w)(o));
                     },
                     subscriptionTier: v.pe.TIER_2,
                 });

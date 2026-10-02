@@ -1,25 +1,25 @@
-n.d(a, { A: () => u });
-var e = n(477900),
-    i = n(582128),
-    c = n(696292),
-    l = n(617986),
-    s = n(318346),
-    p = n(70926),
-    r = n(652215),
-    C = n(375708);
-function u(t) {
-    let { location: a, onNavigate: n, variant: u } = t,
-        A = i.useCallback(() => {
-            ((0, s.Y)({ pageType: a, sectionType: r.JJy.ORBS_BALANCE_MENU, ctaObject: r.ZSU.CTA_TO_QUEST_HOME }),
-                null != n && n(),
-                (0, l.mA)({ fromContent: c.u.ORBS_BALANCE_MENU }));
-        }, [a, n]);
-    return (0, e.jsx)(p.SS, {
-        analyticsPage: a,
-        cardAlignment: p.SS.CardAlignment.END,
-        ctaText: C.intl.string(C.t.VC4Mq0),
-        ctaOnClick: A,
-        onNavigate: n,
-        pillVariant: u,
+l.d(e, { A: () => v });
+var s = l(477900),
+    i = l(582128),
+    a = l(696292),
+    n = l(617986),
+    h = l(318346),
+    c = l(70926),
+    r = l(652215),
+    o = l(375708);
+function v(t) {
+    let { location: e, onNavigate: l, variant: v } = t,
+        d = i.useCallback(() => {
+            ((0, h.Y)({ pageType: e, sectionType: r.JJy.ORBS_BALANCE_MENU, ctaObject: r.ZSU.CTA_TO_QUEST_HOME }),
+                null != l && l(),
+                (0, n.mA)({ fromContent: a.u.ORBS_BALANCE_MENU }));
+        }, [e, l]);
+    return (0, s.jsx)(c.SS, {
+        analyticsPage: e,
+        cardAlignment: c.SS.CardAlignment.END,
+        ctaText: o.intl.string(o.t.VC4Mq0),
+        ctaOnClick: d,
+        onNavigate: l,
+        pillVariant: v,
     });
 }
