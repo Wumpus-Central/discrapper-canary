@@ -1,4 +1,4 @@
-(a.r(i), a.d(i, { default: () => s }));
-let s = JSON.parse(
-    '{"/jdd/7":["This emoji is from a Nitro Emoji Pack. It\'s in Beta and only available to select Nitro members. ",[8,"$link",["Learn more."],[[1,"helpdeskArticle"]]]]}',
+(t.r(i), t.d(i, { default: () => a }));
+let a = JSON.parse(
+    '{"Tvdb5N":["Add to picker"],"FgkyO+":["This emoji is from a Nitro Emoji Pack and is currently in Beta."],"VEfeux":["From ",[1,"packName"]," Pack"],"leUgZw":["Nitro exclusive emoji"],"0+5+Oy":["Nitro Emoji Packs"],"6RMLFY":[[1,"packName"]," Added"],"AP3kT4":["Anime"],"UA8cNe":[[6,"count",{"one":[[7]," Emoji"],"other":[[7]," Emojis"]},0,"cardinal"]],"/jdd/7":["This emoji is from a Nitro Emoji Pack. It\'s in Beta and only available to select Nitro members. ",[8,"$link",["Learn more."],[[1,"helpdeskArticle"]]]],"rDWswi":["Happy Feet"],"90jVsn":["Little Guys"],"Tfkx5f":["Meow Squad"],"LbNlZd":[[1,"packName"]," Removed"],"ZiykFI":["Skelly"],"RhpNnh":["Cute one minute, unhinged the next. With Nitro, the perfect emoji is now just a tap away."],"Nj8Y3C":["Check it Out"],"6mcVBm":["New emoji packs with Nitro"],"HtUpwy":["View Emoji Packs"],"2zxYCx":["Remove"],"DtK5IG":["View Set"]}',
 );
