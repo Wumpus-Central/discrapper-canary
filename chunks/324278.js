@@ -1116,7 +1116,7 @@ function nD(e) {
                 n.e("755936"),
                 n.e("147662"),
                 n.e("209338"),
-                n.e("509398"),
+                n.e("749894"),
                 n.e("927875"),
                 n.e("833703"),
                 n.e("544571"),
@@ -1178,8 +1178,8 @@ function nD(e) {
                 n.e("73536"),
                 n.e("538513"),
                 n.e("147864"),
-                n.e("328071"),
                 n.e("370112"),
+                n.e("241176"),
                 n.e("50097"),
                 n.e("263791"),
                 n.e("93461"),
@@ -1822,7 +1822,7 @@ function nX(e) {
                                                                         label: ey.intl.string(ey.t.l6w3Vj),
                                                                         onClick: () => {
                                                                             (n(),
-                                                                                (0, eT._)({
+                                                                                (0, eT.openBadgeDirectoryModal)({
                                                                                     viewingCurrentUserBadges: !0,
                                                                                 }));
                                                                         },
@@ -1948,7 +1948,7 @@ function ih(e) {
     return (0, i.jsx)(im, {
         ...t,
         onPrimaryAction: () => {
-            (l(nk.i.TAKE_ACTION), (0, eT._)());
+            (l(nk.i.TAKE_ACTION), (0, eT.openBadgeDirectoryModal)());
         },
         onRequestClose: () => l(nk.i.USER_DISMISS),
         targetElementRef: n,
@@ -2750,7 +2750,7 @@ function lv(e) {
         }, [r]),
         g = ea.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lA.A)("1790965042495", !0);
+        let e = (0, lA.A)("1790965574938", !0);
         t =
             null != e
                 ? ey.intl.formatToPlainString(ey.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -3332,7 +3332,7 @@ class lb extends l.PureComponent {
                     n.e("755936"),
                     n.e("147662"),
                     n.e("209338"),
-                    n.e("509398"),
+                    n.e("749894"),
                     n.e("927875"),
                     n.e("833703"),
                     n.e("544571"),
@@ -3509,8 +3509,8 @@ class lb extends l.PureComponent {
                     n.e("147864"),
                     n.e("793438"),
                     n.e("691671"),
-                    n.e("328071"),
                     n.e("370112"),
+                    n.e("241176"),
                     n.e("305557"),
                     n.e("36227"),
                     n.e("50097"),

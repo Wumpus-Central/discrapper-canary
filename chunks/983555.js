@@ -392,6 +392,18 @@ function z(e) {
             );
         };
     }
+    if (w && M === j.BVt.FEATURE("badges"))
+        return (e) => (
+            e?.preventDefault(),
+            n
+                .e("644816")
+                .then(n.bind(n, 470739))
+                .then((e) => {
+                    let { openBadgeDirectoryModal: t } = e;
+                    t({ viewingCurrentUserBadges: !0 });
+                }),
+            !0
+        );
     if (w && M?.startsWith("/playground")) {
         let { parsePlaygroundUrl: e } = n(682492),
             { openPlayground: t } = n(965042),

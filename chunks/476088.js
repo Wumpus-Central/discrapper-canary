@@ -6982,7 +6982,7 @@ var dW = n(194509),
     dZ = n(465794),
     dq = n(774774),
     dQ = n(156601),
-    dJ = n(297346),
+    dJ = n(543213),
     d$ = n(88001),
     d0 = n(148155),
     d1 = n(487518);
@@ -16627,7 +16627,7 @@ let TF = function () {
               children: (0, A.jsx)(_.$, {
                   text: R.intl.string(R.t.wRraFx),
                   onClick: () => {
-                      (0, Tw._)();
+                      (0, Tw.openBadgeDirectoryModal)();
                   },
                   size: "sm",
               }),

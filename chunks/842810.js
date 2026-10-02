@@ -1,4 +1,4 @@
-n.d(i, { default: () => _ });
+n.d(i, { default: () => m });
 var t = n(477900),
     o = n(582128),
     a = n(980707),
@@ -16,14 +16,14 @@ var t = n(477900),
     y = n(470739),
     x = n(577931),
     I = n(375708);
-function _(e) {
-    let { badge: i, onClosePopout: n, onAction: _, onSelect: m } = e,
+function m(e) {
+    let { badge: i, onClosePopout: n, onAction: m, onSelect: _ } = e,
         { reorderableBadges: C, hiddenBadges: j } = (0, x.A)(),
         { tenureBadgeHideable: A } = u.A.useConfig({ location: "BadgeCustomizationContextMenu" }),
-        v = o.useMemo(() => (0, h.jg)({ tenureBadgeHideable: A }), [A]),
-        B = (0, p.A)(),
-        k = v.has(i.badge_id),
-        D = i.hidden ?? !1,
+        B = o.useMemo(() => (0, h.jg)({ tenureBadgeHideable: A }), [A]),
+        v = (0, p.A)(),
+        D = B.has(i.badge_id),
+        k = i.hidden ?? !1,
         L = o.useMemo(
             () =>
                 C.map((e) => {
@@ -33,11 +33,11 @@ function _(e) {
             [C],
         ),
         w = L.indexOf(i.badge_id),
-        E = B && -1 !== w,
-        S = 0 === w,
-        K = w === L.length - 1;
-    function M(e) {
-        (_(i.badge_id),
+        E = v && -1 !== w,
+        M = 0 === w,
+        S = w === L.length - 1;
+    function K(e) {
+        (m(i.badge_id),
             (0, f.RC)({
                 badgeId: i.badge_id,
                 hidden: e,
@@ -46,14 +46,14 @@ function _(e) {
                     let { badge_id: i } = e;
                     return i;
                 }),
-                canReorder: B,
+                canReorder: v,
             }));
     }
     return (0, t.jsx)(a.W, {
         navId: "badge-customization-context",
         onClose: b.Z_,
         "aria-label": I.intl.string(I.t["2ia+9V"]),
-        onSelect: m,
+        onSelect: _,
         children: (0, t.jsxs)(d.rX, {
             label: i.name,
             children: [
@@ -62,13 +62,17 @@ function _(e) {
                     iconLeft: c.CircleInformationIcon,
                     leadingAccessory: { type: "icon", icon: c.CircleInformationIcon },
                     label: I.intl.string(I.t["2ia+9V"]),
-                    subtext: k ? I.intl.string((0, h.hK)(i.badge_id)) : void 0,
+                    subtext: D ? I.intl.string((0, h.hK)(i.badge_id)) : void 0,
                     action: function () {
-                        (n(), (0, y._)({ initialBadgeId: i.badge_id, viewingCurrentUserBadges: !0 }));
+                        (n(),
+                            (0, y.openBadgeDirectoryModal)({
+                                initialBadgeId: i.badge_id,
+                                viewingCurrentUserBadges: !0,
+                            }));
                     },
                 }),
                 E &&
-                    !S &&
+                    !M &&
                     (0, t.jsx)(d.Dr, {
                         id: "move-badge-to-front",
                         iconLeft: s.Z,
@@ -79,7 +83,7 @@ function _(e) {
                         },
                     }),
                 E &&
-                    !K &&
+                    !S &&
                     (0, t.jsx)(d.Dr, {
                         id: "move-badge-to-back",
                         iconLeft: l.K,
@@ -89,21 +93,21 @@ function _(e) {
                             (0, f.hB)((0, f.i1)(L, w, L.length - 1));
                         },
                     }),
-                D
+                k
                     ? (0, t.jsx)(d.Dr, {
                           id: "unhide-badge",
                           iconLeft: r.EyeIcon,
                           leadingAccessory: { type: "icon", icon: r.EyeIcon },
                           label: I.intl.string(I.t.RXOPc3),
-                          action: () => M(!1),
+                          action: () => K(!1),
                       })
-                    : !k &&
+                    : !D &&
                       (0, t.jsx)(d.Dr, {
                           id: "hide-badge",
                           iconLeft: g.EyeSlashIcon,
                           leadingAccessory: { type: "icon", icon: g.EyeSlashIcon },
                           label: I.intl.string(I.t.xSWJPo),
-                          action: () => M(!0),
+                          action: () => K(!0),
                       }),
             ],
         }),

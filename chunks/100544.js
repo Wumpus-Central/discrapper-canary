@@ -25,6 +25,7 @@ var o =
     (r.GUILD_EVENT_DETAILS = "guild-event-details"),
     (r.FRIENDS = "friends"),
     (r.EDIT_PROFILE = "edit-profile"),
+    (r.BADGE_DIRECTORY = "badge-directory"),
     (r.MOBILE_WEB_HANDOFF = "mobile-web-handoff"),
     (r.USER_CONNECTIONS_CALLBACK = "user-connections-callback"),
     (r.VOICE_CHANNEL = "voice-channel"),

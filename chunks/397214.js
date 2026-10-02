@@ -1507,7 +1507,7 @@ function e8(e) {
         q = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                (0, eV._)({ ...e, stackingBehavior: "replace" }).then(() => {
+                (0, eV.openBadgeDirectoryModal)({ ...e, stackingBehavior: "replace" }).then(() => {
                     n();
                 });
             },
