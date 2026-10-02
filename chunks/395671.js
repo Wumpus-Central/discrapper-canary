@@ -1,31 +1,32 @@
-(n.d(t, { kJ: () => h, lg: () => A, Ay: () => I }), n(938796));
+(n.d(t, { kJ: () => I, lg: () => h, Ay: () => f }), n(938796));
 var i,
     r = (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"), (i[(i.OUT_OF_PROCESS = 1)] = "OUT_OF_PROCESS"), i),
     a = n(136722),
     s = n(315069),
-    l = n(486020),
-    o = n(935208);
-class d extends s.A {
+    l = n(878014),
+    o = n(486020),
+    d = n(935208);
+class c extends s.A {
     id;
     name;
     static createFromServer(e) {
-        return new d(e);
+        return new c(e);
     }
     constructor(e) {
         (super(), (this.id = e.id), (this.name = e.name));
     }
 }
-var c = n(889227),
-    u = n(818023),
-    _ = n(705751);
-let E = { [u.I4]: 7, [u.qA]: 12 };
-function A(e) {
+var u = n(889227),
+    _ = n(818023),
+    E = n(705751);
+let A = { [_.I4]: 7, [_.qA]: 12 };
+function h(e) {
     let t = { os: e.os, name: e.name };
     null != e.arguments && (t.arguments = e.arguments);
     let n = e.is_launcher ?? e.isLauncher;
     return (null != n && (t.isLauncher = n), t);
 }
-class h extends s.A {
+class I extends s.A {
     id;
     name;
     icon;
@@ -44,11 +45,11 @@ class h extends s.A {
     contentClassification;
     flags;
     static createFromServer(e) {
-        return new h({
+        return new I({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
-            bot: null != e.bot ? new c.A(e.bot) : null,
+            bot: null != e.bot ? new u.A(e.bot) : null,
             thirdPartySkus: e.third_party_skus,
             roleConnectionsVerificationUrl: e.role_connections_verification_url,
             parentId: e.parent_id,
@@ -86,23 +87,23 @@ class h extends s.A {
             : this._connectionEntrypointUrl;
     }
     getIconURL(e, t) {
-        return null != this.icon ? l.Ay.getGameAssetURL({ id: this.id, hash: this.icon, size: e, format: t }) : null;
+        return null != this.icon ? o.Ay.getGameAssetURL({ id: this.id, hash: this.icon, size: e, format: t }) : null;
     }
     getIconSource(e, t) {
-        return null != this.icon ? l.Ay.getGameAssetSource({ id: this.id, hash: this.icon, size: e, format: t }) : null;
+        return null != this.icon ? o.Ay.getGameAssetSource({ id: this.id, hash: this.icon, size: e, format: t }) : null;
     }
     getSplashURL(e, t) {
         return null != this.splash
-            ? l.Ay.getGameAssetURL({ id: this.id, hash: this.splash, size: e, keepAspectRatio: !0, format: t })
+            ? o.Ay.getGameAssetURL({ id: this.id, hash: this.splash, size: e, keepAspectRatio: !0, format: t })
             : null;
     }
     getCoverImageURL(e) {
         return null != this.coverImage
-            ? l.Ay.getApplicationIconURL({ id: this.id, icon: this.coverImage, size: e, keepAspectRatio: !0 })
+            ? o.Ay.getApplicationIconURL({ id: this.id, icon: this.coverImage, size: e, keepAspectRatio: !0 })
             : null;
     }
 }
-class I extends h {
+class f extends I {
     overlay;
     overlayWarn;
     overlayCompatibilityHook;
@@ -121,6 +122,7 @@ class I extends h {
     maxParticipants;
     tags;
     embeddedActivityConfig;
+    embeddedSurfaces;
     team;
     integrationTypesConfig;
     storefront_available;
@@ -136,11 +138,11 @@ class I extends h {
     applicationAccountLinkBenefitConfig;
     vibegrationsProjectId;
     static createFromServer(e) {
-        return new I({
+        return new f({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
-            bot: null != e.bot ? new c.A(e.bot) : null,
+            bot: null != e.bot ? new u.A(e.bot) : null,
             thirdPartySkus: e.third_party_skus,
             roleConnectionsVerificationUrl: e.role_connections_verification_url,
             overlayWarn: e.overlay_warn,
@@ -150,14 +152,15 @@ class I extends h {
             storeListingSkuId: e.store_listing_sku_id,
             guildId: e.guild_id,
             guild: e.guild,
-            publishers: null != e.publishers ? e.publishers.map(d.createFromServer) : [],
-            developers: null != e.developers ? e.developers.map(d.createFromServer) : [],
+            publishers: null != e.publishers ? e.publishers.map(c.createFromServer) : [],
+            developers: null != e.developers ? e.developers.map(c.createFromServer) : [],
             eulaId: e.eula_id,
             slug: e.slug,
             flags: a.iu(e.flags_new ?? e.flags ?? 0),
             maxParticipants: e.max_participants,
             tags: e.tags,
             embeddedActivityConfig: e.embedded_activity_config,
+            embeddedSurfaces: e.embedded_surfaces,
             integrationTypesConfig:
                 null != e.integration_types_config
                     ? Object.fromEntries(
@@ -174,7 +177,7 @@ class I extends h {
             categories: e.categories,
             linkedGames: e.linked_games?.map((e) => ({
                 ...e,
-                application: null != e.application ? I.createFromServer(e.application) : void 0,
+                application: null != e.application ? f.createFromServer(e.application) : void 0,
             })),
             deepLinkUri: e.deeplink_uri,
             applicationAccountLinkBenefitConfig: e.application_account_link_benefit_config,
@@ -195,13 +198,14 @@ class I extends h {
             (this.storeListingSkuId = e.storeListingSkuId),
             (this.guildId = e.guildId),
             (this.guild = e.guild),
-            (this.executables = (e.executables ?? []).map(A)),
+            (this.executables = (e.executables ?? []).map(h)),
             (this.hashes = e.hashes ?? []),
             (this.eulaId = e.eulaId),
             (this.slug = e.slug),
             (this.tags = e.tags ?? []),
             (this.maxParticipants = e.maxParticipants),
             (this.embeddedActivityConfig = e.embedded_activity_config ?? e.embeddedActivityConfig),
+            (this.embeddedSurfaces = e.embedded_surfaces ?? e.embeddedSurfaces),
             (this.team = e.team),
             (this.integrationTypesConfig = e.integrationTypesConfig),
             (this.storefront_available = e.storefront_available),
@@ -215,7 +219,7 @@ class I extends h {
             (this.linkedGames =
                 e.linked_games?.map((e) => ({
                     ...e,
-                    application: null != e.application ? I.createFromServer(e.application) : void 0,
+                    application: null != e.application ? f.createFromServer(e.application) : void 0,
                 })) ?? e.linkedGames),
             (this.deepLinkUri = e.deepLinkUri ?? e.deeplink_uri),
             (this.applicationAccountLinkBenefitConfig =
@@ -224,13 +228,13 @@ class I extends h {
             (this.parentId = e.parentId ?? e.parent_id));
     }
     getCanonicalGameId() {
-        return this.type === _.S7.GAME
-            ? o.default.cast(this.id)
-            : (this.linkedGames?.find((e) => e.application?.type === _.S7.GAME)?.id ?? null);
+        return this.type === E.S7.GAME
+            ? d.default.cast(this.id)
+            : (this.linkedGames?.find((e) => e.application?.type === E.S7.GAME)?.id ?? null);
     }
     mergeFromApplicationUpdate(e) {
         var t, n;
-        return new I({
+        return new f({
             id: e.id ?? this.id,
             name: e.name ?? this.name,
             icon: e.icon ?? this.icon,
@@ -261,6 +265,7 @@ class I extends h {
             embeddedActivityConfig:
                 e.embeddedActivityConfig ??
                 (null != this.embeddedActivityConfig ? { ...this.embeddedActivityConfig } : void 0),
+            embeddedSurfaces: e.embeddedSurfaces ?? this.embeddedSurfaces,
             type: e.type ?? this.type,
             team: e.team ?? this.team,
             roleConnectionsVerificationUrl: e.roleConnectionsVerificationUrl ?? this.roleConnectionsVerificationUrl,
@@ -299,7 +304,13 @@ class I extends h {
         });
     }
     getMaxParticipants() {
-        return this.maxParticipants ?? E[this.id] ?? 0;
+        return this.maxParticipants ?? A[this.id] ?? 0;
+    }
+    get isEmbedded() {
+        return (0, l.D)(this);
+    }
+    supportsEmbeddedSurface(e) {
+        return (0, l.W)(this, e);
     }
     supportsIntegrationTypes() {
         for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
@@ -310,7 +321,7 @@ class I extends h {
         return null != this.storeListingSkuId ? this.storeListingSkuId : this.primarySkuId;
     }
     get supportsOutOfProcessOverlay() {
-        return I.supportsOutOfProcessOverlay(this.overlayMethods);
+        return f.supportsOutOfProcessOverlay(this.overlayMethods);
     }
     static supportsOutOfProcessOverlay(e) {
         let t = r.OUT_OF_PROCESS;

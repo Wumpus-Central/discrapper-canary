@@ -8,7 +8,7 @@ var l = n(17928),
 function u() {
     let e = (0, s.t4)((e) => e.applicationId),
         { data: t } = (0, r.YY)(e),
-        n = null != t && (0, a.n)(t, o.gfo.EMBEDDED) && (0, a.n)(t, o.gfo.EMBEDDED_IAP);
+        n = null != t && t.isEmbedded && (0, a.n)(t, o.gfo.EMBEDDED_IAP);
     return {
         application: t,
         isEmbeddedIAP: n,

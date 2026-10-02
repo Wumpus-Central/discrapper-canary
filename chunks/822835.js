@@ -4,7 +4,7 @@ var n = l(582128),
     r = l(17928),
     i = l(294323),
     s = l(627363),
-    u = l(207371),
+    u = l(25451),
     o = l(280450),
     d = l(58551);
 function c(e) {
@@ -32,7 +32,7 @@ function c(e) {
         { data: A } = (0, s.YY)(l ?? void 0),
         S = null != l && A?.bot?.id != null,
         { data: C, isLoading: E } = (0, s.YY)(t ?? void 0),
-        I = c || (0, u.x)(C),
+        I = c || (0, u.X)(C),
         T = null != t && E && null == C,
         M = (0, d.Xm)({ installScope: f, hasFrame: I, hasProfileWidget: w, hasBotDm: S, ownerAuthorizationRevoked: m });
     return {

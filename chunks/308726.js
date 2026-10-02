@@ -1,4 +1,4 @@
-(i.d(e, { Ay: () => ty, ru: () => tA }), i(321073));
+(i.d(e, { Ay: () => ty, ru: () => tf }), i(321073));
 var n = i(477900),
     l = i(582128),
     a = i(284009),
@@ -8,8 +8,8 @@ var n = i(477900),
     u = i(974690),
     c = i(17928),
     d = i(534890),
-    f = i(820081),
-    A = i(241541),
+    A = i(820081),
+    f = i(241541),
     p = i(559647),
     y = i(866665),
     m = i(408278),
@@ -24,7 +24,7 @@ var n = i(477900),
     T = i(964486),
     v = i(55730),
     O = i(429913),
-    b = i(20015),
+    b = i(878014),
     L = i(402216),
     x = i(506326),
     D = i(428249),
@@ -155,7 +155,7 @@ function ts(t) {
     }
     let b = T ? ta.intl.string(ta.t["3fRySx"]) : ta.intl.string(ta.t.XHxDIV);
     return (
-        (e = "sent" === E ? (I ? d.ChatIcon : f.B) : T ? A.D : p.SendMessageIcon),
+        (e = "sent" === E ? (I ? d.ChatIcon : A.B) : T ? f.D : p.SendMessageIcon),
         (0, n.jsx)(y.m, {
             text: b,
             "aria-label": b,
@@ -177,7 +177,7 @@ function to(t) {
         o = (0, c.bG)([X.A], () => (null != r ? X.A.getApplicationActivity(r.id, s) : null), [s, r]),
         [u, d] = l.useState("unsent");
     if (!(null != o && (0, v.A)(o, tn.jUm.JOIN))) return null;
-    async function A(t) {
+    async function f(t) {
         if (null != o && null != r && "unsent" === u) {
             t.stopPropagation();
             try {
@@ -200,10 +200,10 @@ function to(t) {
         text: p,
         "aria-label": p,
         children: (0, n.jsx)(m.K, {
-            icon: "sent" === u ? f.B : E.E,
+            icon: "sent" === u ? A.B : E.E,
             "aria-label": p,
             loading: "sending" === u,
-            onClick: A,
+            onClick: f,
             variant: "subtle" === a ? "icon-only" : "secondary",
             size: "sm",
         }),
@@ -323,7 +323,7 @@ function td(t) {
               ],
           });
 }
-function tf(t) {
+function tA(t) {
     let { gamingId: e, maxUserShowCount: i, userAffinityThresholdV2: n = 0.0029 } = t,
         a = w(e);
     (0, T.Ay)(() => {
@@ -406,15 +406,15 @@ function tf(t) {
         }
     );
 }
-function tA(t) {
-    let e = tf(t);
+function tf(t) {
+    let e = tA(t);
     return (0, n.jsx)(td, { ...e, className: t.className, variant: t.variant });
 }
 function tp(t) {
     let { activity: e, currentUser: i, showInviteButton: l = !0 } = t,
         a = (0, ti.JH)(e?.application_id),
         r = (0, O.h)(e?.application_id),
-        s = (0, b.n)(r, tn.gfo.EMBEDDED);
+        s = (0, b.D)(r);
     return null == e || null == i
         ? null
         : (0, n.jsxs)(n.Fragment, {
@@ -453,7 +453,7 @@ function ty(t) {
         o = null != a ? a : l,
         u = (0, ti.xl)(o);
     (0, T.Ay)(() => (Y.O(), () => Y.v()));
-    let d = tf({ gamingId: o, userAffinityThresholdV2: 0.00145, maxUserShowCount: 12 });
+    let d = tA({ gamingId: o, userAffinityThresholdV2: 0.00145, maxUserShowCount: 12 });
     return e || (0 === r.length && null == u)
         ? null
         : (0, n.jsxs)("div", {

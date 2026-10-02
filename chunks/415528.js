@@ -3,7 +3,7 @@ var i = n(582128),
     l = n(17928),
     a = n(627363),
     s = n(429913),
-    r = n(207371),
+    r = n(878014),
     o = n(948230),
     c = n(683180),
     d = n(972786),
@@ -29,7 +29,7 @@ function p(e) {
         f = i.useRef(new Set()),
         [x, g] = i.useState(new Set()),
         [C, y] = i.useState(!1),
-        j = i.useMemo(() => p.filter((e, t) => !(0, r.x)(A[t])).map((e) => e.application_id), [p, A]);
+        j = i.useMemo(() => p.filter((e, t) => !(0, r.D)(A[t])).map((e) => e.application_id), [p, A]);
     i.useEffect(() => {
         let e = j.filter((e) => !f.current.has(e));
         if (0 !== e.length) {
@@ -39,7 +39,7 @@ function p(e) {
                 .finally(() => g((t) => new Set([...t, ...e])));
         }
     }, [j]);
-    let I = i.useMemo(() => p.filter((e, t) => (0, r.x)(A[t])), [p, A]),
+    let I = i.useMemo(() => p.filter((e, t) => (0, r.D)(A[t])), [p, A]),
         N = (0, l.bG)([d.Ay], () => d.Ay.getGuildProjectsFetchState(e), [e]),
         v = j.some((e) => !x.has(e)),
         E = (0, h._)({

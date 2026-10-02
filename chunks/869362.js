@@ -208,7 +208,7 @@ let eC = function (e) {
             o(!0);
         }, []),
         u = i.useCallback(() => o(!1), []),
-        h = (0, ea.Ag)(t),
+        h = (0, ea.Z$)(t),
         m = t.bot,
         { botBannerUrl: p, botBannerUrlAnimated: g } = i.useMemo(
             () =>
@@ -764,7 +764,7 @@ class e9 extends i.PureComponent {
         });
     }
 }
-class e6 extends i.PureComponent {
+class e4 extends i.PureComponent {
     handlePrevClick = (e) => {
         (e.stopPropagation(), e.preventDefault());
         let { onClick: t } = this.props;
@@ -779,7 +779,7 @@ class e6 extends i.PureComponent {
         });
     }
 }
-class e4 extends i.PureComponent {
+class e6 extends i.PureComponent {
     handleNextClick = (e) => {
         (e.stopPropagation(), e.preventDefault());
         let { onClick: t } = this.props;
@@ -993,8 +993,8 @@ class tu extends i.PureComponent {
                   className: tt.HY,
                   children: [
                       r,
-                      (0, s.jsx)(e6, { onClick: this.manualPrevious, className: n()(tt.UE, { [tt.h_]: i }) }),
-                      (0, s.jsx)(e4, { onClick: this.manualNext, className: n()(tt.UE, { [tt.h_]: a }) }),
+                      (0, s.jsx)(e4, { onClick: this.manualPrevious, className: n()(tt.UE, { [tt.h_]: i }) }),
+                      (0, s.jsx)(e6, { onClick: this.manualNext, className: n()(tt.UE, { [tt.h_]: a }) }),
                   ],
               });
     }
@@ -1605,8 +1605,8 @@ var t8 = l(449054),
     t2 = l(900002),
     t3 = l(950305),
     t9 = l(573435),
-    t6 = l(714991),
-    t4 = l(776231),
+    t4 = l(714991),
+    t6 = l(776231),
     t5 = l(149790),
     le = l(882553),
     lt = l(937495),
@@ -1615,7 +1615,7 @@ function ls(e) {
     let { guild: t, className: l, onClick: i } = e,
         a = (0, tQ.Ay)(),
         r = (0, t5.dangerouslyConstructGuildRecordFromUntypedObject)({ name: t.name, icon: t.icon }),
-        o = er.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, t4.mZ)() }),
+        o = er.Ay.getGuildDiscoverySplashURL({ id: t.id, splash: t.discovery_splash, size: 192 * (0, t6.mZ)() }),
         c =
             null != o
                 ? o
@@ -1662,7 +1662,7 @@ function ls(e) {
                     (0, s.jsxs)("div", {
                         className: le.Y_,
                         children: [
-                            (0, s.jsx)(t6.A, { className: le.n2, guild: t, tooltipColor: t2.ST.Colors.PRIMARY }),
+                            (0, s.jsx)(t4.A, { className: le.n2, guild: t, tooltipColor: t2.ST.Colors.PRIMARY }),
                             (0, s.jsx)(h.D, { variant: "heading-md/semibold", className: le.J5, children: t.name }),
                         ],
                     }),
@@ -2044,15 +2044,15 @@ var lM = l(607399),
     lQ = l(361926),
     lq = l(204776),
     lJ = l(50268),
-    l0 = l(207371),
+    l0 = l(25451),
     l1 = l(928658),
     l7 = l(395671),
     l8 = l(957565),
     l2 = l(692848),
     l3 = l(108861);
 let l9 = "start_application_install",
-    l6 = "launch_activity";
-function l4(e) {
+    l4 = "launch_activity";
+function l6(e) {
     let { renderDropdown: t, size: l } = e,
         a = i.useRef(null);
     return (0, s.jsx)(lY.Y, {
@@ -2226,9 +2226,9 @@ let st = i.forwardRef(function (e, t) {
         { onClickLaunchActivity: m, isSubmitting: p } = (function (e, t) {
             let l = e.id,
                 s = e?.bot?.id,
-                a = (0, l0.x)(e),
+                a = (0, l0.X)(e),
                 n = (0, lQ.Vr)({ context: { type: "contextless" }, applicationId: l, botUserId: s }),
-                r = null != s && (0, ea.$B)(e) && (0, ea.Ag)(e) && (a || n),
+                r = null != s && (0, ea.$B)(e) && (0, ea.Z$)(e) && (a || n),
                 [o, d] = i.useState(!1),
                 u = k(),
                 h = (0, c.bG)([f.default], () => f.default.getCurrentUser()),
@@ -2240,9 +2240,9 @@ let st = i.forwardRef(function (e, t) {
                 });
             i.useEffect(() => {
                 let e = new URL(location.href),
-                    t = "true" === e.searchParams.get(l6);
+                    t = "true" === e.searchParams.get(l4);
                 if (u && r && t && null != s && null != h) {
-                    e.searchParams.delete(l6);
+                    e.searchParams.delete(l4);
                     let t = e.pathname + e.search;
                     ((0, _.bG)(t), m());
                 }
@@ -2250,7 +2250,7 @@ let st = i.forwardRef(function (e, t) {
             let p = i.useCallback(async () => {
                 if (null != s) {
                     if ((O(D.HAw.APP_DIRECTORY_LAUNCH_CLICKED, { application_id: l }), !u))
-                        return void G({ [l6]: "true" });
+                        return void G({ [l4]: "true" });
                     await m();
                 }
             }, [l, s, u, m]);
@@ -2275,7 +2275,7 @@ let st = i.forwardRef(function (e, t) {
                               "aria-label": U.intl.string(U.t.z4sP5J),
                           })
                         : null,
-                    (0, s.jsx)(l4, { renderDropdown: (e) => h(!1, e), size: a }),
+                    (0, s.jsx)(l6, { renderDropdown: (e) => h(!1, e), size: a }),
                 ],
             }),
             (0, s.jsxs)("div", {
@@ -2283,7 +2283,7 @@ let st = i.forwardRef(function (e, t) {
                 children: [
                     g && (0, s.jsx)(se, { size: a, contentWidth: "small", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(l5, { application: l, size: a, contentWidth: "small", variant: x }),
-                    (0, s.jsx)(l4, { renderDropdown: (e) => h(l8.p5, e), size: a }),
+                    (0, s.jsx)(l6, { renderDropdown: (e) => h(l8.p5, e), size: a }),
                 ],
             }),
             (0, s.jsxs)("div", {
@@ -2291,7 +2291,7 @@ let st = i.forwardRef(function (e, t) {
                 children: [
                     g && (0, s.jsx)(se, { size: a, contentWidth: "icon", onClick: m, isSubmitting: p }),
                     (0, s.jsx)(l5, { application: l, size: a, contentWidth: "icon", variant: x }),
-                    (0, s.jsx)(l4, { renderDropdown: (e) => h(l8.p5, e), size: a }),
+                    (0, s.jsx)(l6, { renderDropdown: (e) => h(l8.p5, e), size: a }),
                 ],
             }),
         ],

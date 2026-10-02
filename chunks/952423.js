@@ -15,8 +15,8 @@ var l = n(477900),
     p = n(17928),
     E = n(73153),
     I = n(277984),
-    y = n(67480);
-function S(e, t) {
+    S = n(67480);
+function y(e, t) {
     let { paymentSources: n, eligiblePaymentGateways: l } = t;
     return !!(null != e && e in n && (null == l || 0 === l.length || l.includes(n[e].paymentGateway)));
 }
@@ -62,7 +62,7 @@ let _ = (e) => {
         m = r.useRef(!1),
         C = r.useCallback(() => {
             if (!h.current && !m.current) {
-                if (S(u, { paymentSources: a, eligiblePaymentGateways: i })) {
+                if (y(u, { paymentSources: a, eligiblePaymentGateways: i })) {
                     (c(u), (h.current = !0));
                     return;
                 }
@@ -182,8 +182,8 @@ function j() {
         { enabled: p } = (0, x.U)({ location: "HeadlessCheckoutStoreOTPInvoiceFetcher" }),
         E = u === b.h.PURCHASING || u === b.h.COMPLETED,
         { giftCardCurrency: I } = (0, L.h)(),
-        y = p && !0 === h,
-        S = r.useMemo(() => (y && null != I ? I : c.loaded ? c.currency : void 0), [y, I, c]),
+        S = p && !0 === h,
+        y = r.useMemo(() => (S && null != I ? I : c.loaded ? c.currency : void 0), [S, I, c]),
         [g, _] =
             ((e = r.useMemo(
                 () => ({
@@ -191,11 +191,11 @@ function j() {
                     skuId: o,
                     paymentSourceId: f,
                     isGift: s,
-                    currency: S,
+                    currency: y,
                     preventFetch: E,
                     applyWalletBalance: p ? (h ?? void 0) : void 0,
                 }),
-                [a, o, f, s, S, E, p, h],
+                [a, o, f, s, y, E, p, h],
             )),
             (t = (0, r.useRef)(e)),
             (n = (0, r.useRef)(!1)),
@@ -237,8 +237,8 @@ function O() {
     let { applicationId: e, skuIds: t } = (0, d.t4)((e) => ({ applicationId: e.applicationId, skuIds: e.skuIds }));
     return ((0, w.c)({ applicationId: e, skuIDs: t }), null);
 }
-var D = n(166532);
-function F(e) {
+var F = n(166532);
+function D(e) {
     let { fetchParams: t, refetchKey: n } = e,
         [l, i] = (0, U.YV)(t, n),
         { setCheckoutInvoicePreview: s } = (0, d.t4)((e) => ({
@@ -304,14 +304,14 @@ function K() {
         }));
     return (r.useEffect(() => {
         let n = t.current;
-        ((t.current = e), n === D.pn.REVIEW && e !== D.pn.REVIEW && (s(null), a(null)));
+        ((t.current = e), n === F.pn.REVIEW && e !== F.pn.REVIEW && (s(null), a(null)));
     }, [e, s, a]),
     null == n && null == i)
         ? null
         : (null != i && i.type,
           (0, l.jsxs)(l.Fragment, {
               children: [
-                  null != n && "subscription_checkout_invoice" === n.type && (0, l.jsx)(F, { fetchParams: n.params }),
+                  null != n && "subscription_checkout_invoice" === n.type && (0, l.jsx)(D, { fetchParams: n.params }),
                   null != n &&
                       "subscription_checkout_invoice_get_request" === n.type &&
                       (0, l.jsx)(G, { fetchParams: n.params }),
@@ -410,25 +410,24 @@ function z() {
         null
     );
 }
-var V = n(10716),
-    X = n(795816),
-    $ = n(627363),
-    J = n(20015),
-    ee = n(885386),
-    et = n(652215);
-function en() {
+var V = n(991690),
+    X = n(10716),
+    $ = n(795816),
+    J = n(627363),
+    ee = n(885386);
+function et() {
     let e = (0, d.t4)((e) => e.applicationId),
-        { data: t } = (0, $.YY)(e),
+        { data: t } = (0, J.YY)(e),
         n = ee.Q_.useSetting(),
-        l = (0, p.bG)([V.A], () => V.A.getFetchState());
+        l = (0, p.bG)([X.A], () => X.A.getFetchState());
     return (
         r.useEffect(() => {
-            null != t && (0, J.n)(t, et.gfo.EMBEDDED) && n && null == l && (0, X.SE)();
+            null != t && t.supportsEmbeddedSurface(V.U.MAIN) && n && null == l && (0, $.SE)();
         }, [t, n, l]),
         null
     );
 }
-function el() {
+function en() {
     let {
             orderRecord: e,
             orderSyncError: t,
@@ -452,8 +451,8 @@ function el() {
         null
     );
 }
-var er = n(158317);
-function ei() {
+var el = n(158317);
+function er() {
     let e = (0, d.Q9)(),
         {
             order: t,
@@ -471,7 +470,7 @@ function ei() {
             if (null == i || l <= s) return;
             let t = !1;
             return (
-                (0, er.r$)(i).then((l) => {
+                (0, el.r$)(i).then((l) => {
                     if (t || null == l) return;
                     let r = e.getState().order;
                     (null != r && r.id === l.id && l.revision <= r.revision) || n(l);
@@ -484,7 +483,7 @@ function ei() {
         null
     );
 }
-function es() {
+function ei() {
     let e = (0, d.t4)((e) => e.handleOrderUpdate);
     return (
         r.useEffect(
@@ -499,15 +498,15 @@ function es() {
         null
     );
 }
-let ea = [
+let es = [
         "BILLING_SUBSCRIPTION_UPDATE_FAIL",
         "GIFT_CODE_REDEEM_FAILURE",
         "PREMIUM_PAYMENT_SUBSCRIBE_FAIL",
         "PREMIUM_PAYMENT_UPDATE_FAIL",
         "SKU_PURCHASE_FAIL",
     ],
-    eu = ["BILLING_PAYMENT_FETCH_SUCCESS", "PAYMENT_UPDATE"],
-    ec = [
+    ea = ["BILLING_PAYMENT_FETCH_SUCCESS", "PAYMENT_UPDATE"],
+    eu = [
         "BILLING_SUBSCRIPTION_UPDATE_START",
         "PAYMENT_AUTHENTICATION_CLEAR_ERROR",
         "PREMIUM_PAYMENT_ERROR_CLEAR",
@@ -517,7 +516,7 @@ let ea = [
         "SKU_PURCHASE_START",
         "SKU_PURCHASE_SUCCESS",
     ];
-function eo() {
+function ec() {
     let {
         handlePaymentFailure: e,
         handlePaymentUpdate: t,
@@ -533,16 +532,16 @@ function eo() {
     }));
     return (
         r.useEffect(() => {
-            for (let t of ea) E.h.subscribe(t, e);
-            for (let e of eu) E.h.subscribe(e, t);
-            for (let e of ec) E.h.subscribe(e, i);
+            for (let t of es) E.h.subscribe(t, e);
+            for (let e of ea) E.h.subscribe(e, t);
+            for (let e of eu) E.h.subscribe(e, i);
             return (
                 E.h.subscribe("PAYMENT_AUTHENTICATION_ERROR", n),
                 E.h.subscribe("PAYMENT_AUTHENTICATION_CANCEL", l),
                 () => {
-                    for (let t of ea) E.h.unsubscribe(t, e);
-                    for (let e of eu) E.h.unsubscribe(e, t);
-                    for (let e of ec) E.h.unsubscribe(e, i);
+                    for (let t of es) E.h.unsubscribe(t, e);
+                    for (let e of ea) E.h.unsubscribe(e, t);
+                    for (let e of eu) E.h.unsubscribe(e, i);
                     (E.h.unsubscribe("PAYMENT_AUTHENTICATION_ERROR", n),
                         E.h.unsubscribe("PAYMENT_AUTHENTICATION_CANCEL", l));
                 }
@@ -551,8 +550,9 @@ function eo() {
         null
     );
 }
-var ed = n(83617),
-    ef = n(655857);
+var eo = n(83617),
+    ed = n(655857),
+    ef = n(652215);
 function eh() {
     let {
             setCheckoutPriceOptions: e,
@@ -567,8 +567,8 @@ function eh() {
             isGift: e.isGift,
             excludeSubscriptionPlansBySKU: e.excludeSubscriptionPlansBySKU,
         })),
-        s = r.useMemo(() => (0, ef._r)(n), [n]),
-        { subscriptionPlanIdForCurrency: a, hasFetchedRelatedSubscriptionPlans: u } = (0, ef.ow)({
+        s = r.useMemo(() => (0, ed._r)(n), [n]),
+        { subscriptionPlanIdForCurrency: a, hasFetchedRelatedSubscriptionPlans: u } = (0, ed.ow)({
             skuIDs: s,
             paymentSourceId: t,
             isGift: l,
@@ -583,12 +583,12 @@ function eh() {
             (async function () {
                 let { current: n } = o;
                 try {
-                    n.length > 0 && !i && (await (0, ed.c_)(t, n));
+                    n.length > 0 && !i && (await (0, eo.c_)(t, n));
                 } catch (e) {
-                    if (e.code !== ed.oy) throw e;
+                    if (e.code !== eo.oy) throw e;
                 }
                 e({ paymentSourceId: t, currency: void 0, loaded: !0 });
-            })().catch(et.tEg);
+            })().catch(ef.tEg);
         }, [t, c, i, e, a, u, l]),
         null
     );
@@ -631,8 +631,8 @@ function eE() {
     );
 }
 var eI = n(741923),
-    ey = n(504275);
-function eS() {
+    eS = n(504275);
+function ey() {
     return (
         !(function () {
             let e = (0, c.s2)(),
@@ -640,7 +640,7 @@ function eS() {
                     purchaseState: e.purchaseState,
                     setPurchaseState: e.setPurchaseState,
                 }));
-            (0, D.zT)(e, t, n);
+            (0, F.zT)(e, t, n);
         })(),
         null
     );
@@ -654,7 +654,7 @@ let eg = [
 ];
 function e_(e) {
     var t, n;
-    let { checkoutInitParameters: i = ey.r, loadId: s, discoverySessionId: a, children: c } = e,
+    let { checkoutInitParameters: i = eS.r, loadId: s, discoverySessionId: a, children: c } = e,
         { order: o, isOrderCreationEnabled: E } = (0, eI._5)(),
         I = (0, h.A)(() => {
             let e = o?.id ?? s ?? (0, f.A)();
@@ -672,7 +672,7 @@ function e_(e) {
             hasPaymentSources: L,
         } = (function (e) {
             let { skuId: t, isGift: n, activeSubscription: l, initialPaymentSourceId: i } = e,
-                s = (0, p.bG)([y.A], () => y.A.get(t), [t]),
+                s = (0, p.bG)([S.A], () => S.A.get(t), [t]),
                 a = null != s ? s.eligiblePaymentGateways : null,
                 {
                     defaultPaymentSourceId: c,
@@ -683,7 +683,7 @@ function e_(e) {
             return {
                 initialCheckoutPaymentSourceId: r.useMemo(() => {
                     var e;
-                    return S(
+                    return y(
                         (e = {
                             isGift: n,
                             activeSubscription: l,
@@ -722,7 +722,7 @@ function e_(e) {
                     contextMetadata: I,
                     order: o,
                     initialPaymentSourceId: P,
-                    initialCurrency: (0, ef.el)({
+                    initialCurrency: (0, ed.el)({
                         activeSubscription: i.activeSubscription,
                         skuIds: i.skuIds,
                         paymentSourceId: P,
@@ -738,23 +738,23 @@ function e_(e) {
         r.useEffect(() => {
             b.getState().setCheckoutInitParameters(i);
         }, [b, i]));
-    let U = ((t = i.purchaseType), null != (n = i.unifiedCheckoutFlow) && t === et.VVm.SUBSCRIPTION && eg.includes(n)),
+    let U = ((t = i.purchaseType), null != (n = i.unifiedCheckoutFlow) && t === ef.VVm.SUBSCRIPTION && eg.includes(n)),
         k = i.unifiedCheckoutFlow === C.C.GUILD_ROLE_CHECKOUT,
-        H = i.purchaseType === et.VVm.ONE_TIME && i.unifiedCheckoutFlow !== C.C.ORB_CHECKOUT,
+        H = i.purchaseType === ef.VVm.ONE_TIME && i.unifiedCheckoutFlow !== C.C.ORB_CHECKOUT,
         w = !E && H;
     return (0, l.jsxs)(d.Ni, {
         value: b,
         children: [
             (0, l.jsx)(A, { hasFetchedPaymentSources: v, hasPaymentSources: L }),
-            (0, l.jsx)(eS, {}),
-            (0, l.jsx)(eo, {}),
+            (0, l.jsx)(ey, {}),
+            (0, l.jsx)(ec, {}),
             i.unifiedCheckoutFlow !== C.C.ORB_CHECKOUT && (0, l.jsx)(eE, {}),
-            (0, l.jsx)(en, {}),
+            (0, l.jsx)(et, {}),
             (0, l.jsx)(eh, {}),
             (0, l.jsx)(z, {}),
-            (0, l.jsx)(el, {}),
-            (0, l.jsx)(es, {}),
+            (0, l.jsx)(en, {}),
             (0, l.jsx)(ei, {}),
+            (0, l.jsx)(er, {}),
             (0, l.jsx)(_, {
                 isGift: i.isGift,
                 activeSubscription: i.activeSubscription,
@@ -779,7 +779,7 @@ function eA(e) {
             breadcrumbs: n,
             loadId: i,
             discoverySessionId: a,
-            purchaseType: u = et.VVm.SUBSCRIPTION,
+            purchaseType: u = ef.VVm.SUBSCRIPTION,
             overrideCustomCheckoutFlow: o,
             ...d
         } = e,
@@ -841,8 +841,8 @@ function eR(e) {
             purchaseType: p,
             isGift: E,
             selectedSkuId: I,
-            selectedPlanId: y,
-            paymentSourceId: S,
+            selectedPlanId: S,
+            paymentSourceId: y,
             paymentGateway: g,
         } = (0, d.t4)((e) => ({
             contextMetadata: e.contextMetadata,
@@ -854,10 +854,10 @@ function eR(e) {
             paymentSourceId: e.paymentSourceId,
             paymentGateway: e.paymentGateway,
         })),
-        _ = null != S && null != h[S] ? h[S]?.type : null,
+        _ = null != y && null != h[y] ? h[y]?.type : null,
         P = r.useMemo(
-            () => ({ payment_source_id: S, payment_gateway: g, payment_source_type: _, checkout_flow: C, is_gift: E }),
-            [S, g, _, C, E],
+            () => ({ payment_source_id: y, payment_gateway: g, payment_source_type: _, checkout_flow: C, is_gift: E }),
+            [y, g, _, C, E],
         ),
         A = (0, i.Db)(),
         R = (0, c.BQ)();
@@ -869,7 +869,7 @@ function eR(e) {
                 onErrorReported: n,
                 loadId: m.loadId,
                 selectedSkuId: I ?? null,
-                selectedPlanId: y ?? null,
+                selectedPlanId: S ?? null,
                 isGift: E,
                 skuIds: s,
                 purchaseType: p,

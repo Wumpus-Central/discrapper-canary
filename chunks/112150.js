@@ -7,7 +7,7 @@ var i = n(582128),
     o = n(572211);
 function d(e) {
     let { bot: t } = e,
-        n = (0, r.Ag)(e),
+        n = (0, r.Z$)(e),
         { url: d } = (0, s.A)({ applicationId: n ? e.id : void 0, size: 600, names: ["embedded_cover"] });
     return i.useMemo(() => {
         let i,

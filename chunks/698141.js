@@ -5,7 +5,7 @@ var a = e(582128),
     c = e(933958),
     l = e(429913),
     p = e(91242),
-    s = e(207371);
+    s = e(25451);
 function d(n) {
     let { applicationId: t, context: e, launchingComponentId: d, onSubmissionComplete: h } = n,
         r = (0, l.h)(t),
@@ -14,7 +14,7 @@ function d(n) {
             let n = p.A.getMainFrame();
             return n?.state === "loading" && n.applicationId === t;
         }),
-        b = null != r && (0, s.x)(r) ? A : null != o && o.isLaunching && o.componentId === d,
+        b = null != r && (0, s.X)(r) ? A : null != o && o.isLaunching && o.componentId === d,
         g = (0, u.Ay)(b);
     return (
         a.useEffect(() => {

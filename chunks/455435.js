@@ -20,7 +20,7 @@ var n = l(582128),
     y = l(683180),
     k = l(308528),
     N = l(625180),
-    w = l(207371),
+    w = l(25451),
     A = l(976860),
     S = l(345942),
     C = l(287809),
@@ -205,7 +205,7 @@ function $(e, t, l) {
             { applicationId: n, guildId: a, appChannelId: r, openProfile: i, openAutomodSettings: s } = t;
         switch (e) {
             case "launch":
-                if ((0, w.x)(u.A.getApplication(n)))
+                if ((0, w.X)(u.A.getApplication(n)))
                     return (N.A.launchFrame({ applicationId: n, surface: I.sd }).catch(() => {}), Promise.resolve());
                 break;
             case "profile": {

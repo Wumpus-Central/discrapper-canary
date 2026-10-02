@@ -206,8 +206,8 @@ async function J(e, t, n) {
                 throw new w.A({ closeCode: T.YI$.INVALID_ORIGIN }, "Invalid Origin");
         }
     null == o && (o = h.Ay.createFromServer(await H(t)));
-    let { id: i, name: r, icon: s, coverImage: l, flags: u, parentId: d } = o;
-    e.application = { id: i, parentId: d, name: r, icon: s, coverImage: l, flags: u };
+    let { id: i, name: r, icon: s, coverImage: l, flags: u, parentId: d, embeddedSurfaces: p } = o;
+    e.application = { id: i, parentId: d, name: r, icon: s, coverImage: l, flags: u, embeddedSurfaces: p };
 }
 async function W(e, t, n) {
     let o = P[e];

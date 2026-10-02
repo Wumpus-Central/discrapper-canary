@@ -75,10 +75,10 @@ function D(e) {
 var U = n(951305),
     G = n(284009),
     F = n.n(G),
-    B = n(17928),
-    H = n(10716),
-    W = n(206828),
-    Y = n(20015),
+    B = n(991690),
+    H = n(17928),
+    W = n(10716),
+    Y = n(206828),
     V = n(31823),
     K = n(427675),
     q = n(977445),
@@ -215,11 +215,11 @@ function er(e) {
         ),
         { upperInlineNoticeProps: M, footerInlineNoticeProps: L } = (function (e) {
             let { sku: t, application: n, isGift: l } = e,
-                r = (0, B.bG)([H.A], () => H.A.getFetchState()),
-                { fetched: a, hasAlreadyLinked: s } = (0, W.RD)(n),
+                r = (0, H.bG)([W.A], () => W.A.getFetchState()),
+                { fetched: a, hasAlreadyLinked: s } = (0, Y.RD)(n),
                 o = (0, q.uS)(n.id),
                 u = null != t && t.productLine === N.EZt.SOCIAL_LAYER_GAME_ITEM,
-                c = (0, Y.n)(n, N.gfo.EMBEDDED) && r === H.$.ERROR,
+                c = n.supportsEmbeddedSurface(B.U.MAIN) && r === W.$.ERROR,
                 d = u && a && !s && !l ? (0, Z.k3)(n) : null;
             return {
                 upperInlineNoticeProps: i.useMemo(() => {

@@ -6,7 +6,7 @@ var i,
     c = n(429913),
     r = n(20015),
     d = n(625180),
-    p = n(207371),
+    p = n(25451),
     u = n(723702),
     s = n(933958),
     A = n(62583),
@@ -112,7 +112,7 @@ function P(e) {
         C = L({ context: i, applicationId: g, fetchesApplication: y }),
         { analyticsLocations: S } = (0, o.Ay)(),
         w = (0, f.A)(),
-        P = (0, p.x)(t);
+        P = (0, p.X)(t);
     if (null == t)
         return () => {
             r?.({ applicationId: "" });

@@ -4,7 +4,7 @@ var n,
     i = t(17928),
     o = t(956518),
     u = t(627363),
-    s = t(20015),
+    s = t(878014),
     l = t(869146),
     c = t(625180),
     d = t(91242),
@@ -28,7 +28,7 @@ function w(e) {
             frameLaunched: w,
             surface: m,
             setFailed: y,
-            lifecycle: E,
+            lifecycle: W,
         } = (function (e) {
             let { applicationId: a, surface: t, hostWindowKey: n } = e,
                 c = r.useMemo(() => (0, p.VA)(a, t), [a, t]),
@@ -43,43 +43,43 @@ function w(e) {
                     },
                     [c, n],
                 ),
-                { data: y, isLoading: E } = (0, u.YY)(a),
-                W = (0, s.n)(y, A.gfo.EMBEDDED),
-                F = null != (0, o.Ay)(a),
-                [L, b] = r.useState(null),
-                k = L === c,
-                v = r.useCallback(() => b(c), [c]);
+                { data: y, isLoading: W } = (0, u.YY)(a),
+                F = (0, s.D)(y),
+                L = null != (0, o.Ay)(a),
+                [b, k] = r.useState(null),
+                v = b === c,
+                C = r.useCallback(() => k(c), [c]);
             return {
                 frameId: c,
                 frameLaunched: (0, p.x1)(w),
                 surface: g,
-                setFailed: v,
+                setFailed: C,
                 lifecycle: (0, p.x1)(w)
                     ? m
                         ? { state: "rendering-elsewhere" }
                         : null != y
                           ? { state: "launched", frame: w, application: y }
                           : { state: "loading", frame: void 0 }
-                    : k
+                    : v
                       ? { state: "error" }
                       : w?.state === "loading"
                         ? { state: "loading", frame: w }
-                        : E
+                        : W
                           ? { state: "loading", frame: void 0 }
-                          : null != y && F
-                            ? W
+                          : null != y && L
+                            ? F
                                 ? { state: "awaiting-launch" }
                                 : { state: "does-not-support-surface" }
                             : { state: "no-application" },
             };
         })({ applicationId: a, surface: t, hostWindowKey: n }),
-        { state: W } = E;
+        { state: F } = W;
     return (
         r.useEffect(() => {
             if (null != n && w) return (c.A.attachFrameHostWindow(g, n), () => c.A.detachFrameHostWindow(g, n));
         }, [g, n, w]),
         r.useEffect(() => {
-            "awaiting-launch" === W && e();
+            "awaiting-launch" === F && e();
             async function e() {
                 try {
                     await c.A.launchFrame({ applicationId: a, surface: m, hostWindowKey: n });
@@ -87,7 +87,7 @@ function w(e) {
                     y();
                 }
             }
-        }, [W, a, m, n, y]),
-        E
+        }, [F, a, m, n, y]),
+        W
     );
 }

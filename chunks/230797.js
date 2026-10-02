@@ -29,7 +29,7 @@ var v = n(485845),
     b = n(361926),
     k = n(583846),
     R = n(625180),
-    L = n(207371),
+    L = n(25451),
     M = n(205184),
     P = n(773669),
     D = n(280450),
@@ -69,7 +69,7 @@ function es(e) {
     let { app: t, linkType: n, activityCustomId: i, activityReferrerId: l, message: a, onView: o } = e,
         { name: d, bot: c } = (t = (0, Q.b)(t)),
         m = c?.id,
-        h = (0, E.Ag)(t),
+        h = (0, E.Z$)(t),
         g = B.Ay.getApplicationIconURL({ id: t.id, icon: t.icon, bot: c }),
         { staticBannerSrc: p, videoBannerSrc: A, bannerAspectRatio: x } = (0, ee.f)(t),
         v = (0, u.bG)([D.default], () => l ?? D.default.getId(), [l]),
@@ -79,7 +79,7 @@ function es(e) {
         P = (0, b.Vr)({ context: { type: "contextless" }, applicationId: t.id, botUserId: c?.id }),
         U = null != m && h && P,
         G = k && h,
-        w = (0, L.x)(t),
+        w = (0, L.X)(t),
         V = (0, et.F)(t),
         z = (0, et.t)(t),
         Y = r.useMemo(() => {
@@ -260,7 +260,7 @@ function eg(e) {
     let { application: t, customId: n, customLink: i, referrerId: l, message: r } = e,
         a = t?.bot?.id,
         o = (0, b.Vr)({ context: { type: "contextless" }, applicationId: t.id, botUserId: t?.bot?.id }),
-        d = null != t && (0, E.Ag)(t),
+        d = null != t && (0, E.Z$)(t),
         c = null != a && d && o,
         { analyticsLocations: m } = (0, I.Ay)(f.A.ACTIVITY_CUSTOM_LINK),
         h = (0, u.bG)([eu.Ay], () => eu.Ay.getChannelId()),
@@ -276,7 +276,7 @@ function eg(e) {
         C = null != p && A?.compositeInstanceId === p,
         _ = null != n ? n : i.customId,
         j = [];
-    (0, L.x)(t)
+    (0, L.X)(t)
         ? j.push({
               label: X.intl.string(X.t.RscU7I),
               trackingArea: $.kY.PLAY,
@@ -340,7 +340,7 @@ function ep(e) {
         { referrerId: l = n.author.id, linkId: r, customId: a } = i,
         { analyticsLocations: o } = (0, I.Ay)(f.A.ACTIVITY_BOOKMARK),
         { data: d, error: c } = ec(t.id, r);
-    return (0, E.Ag)(t)
+    return (0, E.Z$)(t)
         ? null != r && null == c && null != d
             ? (0, s.jsx)(I.f5, {
                   value: o,

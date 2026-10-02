@@ -5,7 +5,7 @@ var r = n(582128),
     i = n(627363),
     o = n(625180),
     s = n(91242),
-    a = n(207371),
+    a = n(25451),
     c = n(933958),
     d = n(748975),
     f = n(165610);
@@ -14,7 +14,7 @@ function A(e) {
         { data: _ } = (0, i.YY)(t),
         p = (0, u.bG)([c.Ay], () => c.Ay.getCurrentEmbeddedActivity()),
         C = (0, u.bG)([s.A], () => s.A.getMainFrame()),
-        I = (0, a.x)(_);
+        I = (0, a.X)(_);
     return r.useCallback(async () => {
         if (null == t || null == _) return;
         let e = null != p && p.applicationId === t;
