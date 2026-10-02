@@ -2123,7 +2123,7 @@ function at(e) {
         C = v ?? j,
         A = C === tY ? "user" : "guild",
         I = C === tY ? a : C,
-        [N, S] = s.useState(!1),
+        [N, S] = s.useState(!0),
         [P, E] = s.useState(null);
     (s.useEffect(() => {
         (0, et.hF)(a);
