@@ -1027,8 +1027,8 @@ function eq(e) {
         {
             progress: (s = t.progress?.[0]),
             threshold: s?.threshold ?? a?.requirements[0]?.threshold ?? null,
-            currentArtUrl: n?.complex_icon_static_url ?? n?.simple_icon_url,
-            nextArtUrl: a?.complex_icon_static_url ?? a?.simple_icon_url,
+            currentArtUrl: n?.simple_icon_url ?? n?.complex_icon_static_url,
+            nextArtUrl: a?.simple_icon_url ?? a?.complex_icon_static_url,
             helperText: (0, Y.uJ)(s?.progress_helper_text) ? void 0 : s?.progress_helper_text,
         }),
         _ = null != h ? { "aria-labelledby": c } : { "aria-label": eo.intl.string(eo.t.Uwhb1l) };
