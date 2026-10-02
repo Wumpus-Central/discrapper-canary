@@ -78,11 +78,13 @@
     --bg-gradient-hanami-3: hsl(var(--bg-gradient-hanami-3-hsl)/1);
     --bg-gradient-hanami-3-hsl: 115.714 calc(var(--saturation-factor, 1)*43.077%) 74.51%;
     --bg-gradient-hexagon-promo-1: hsl(var(--bg-gradient-hexagon-promo-1-hsl)/1);
-    --bg-gradient-hexagon-promo-1-hsl: 323.059 calc(var(--saturation-factor, 1)*100%) 50%;
+    --bg-gradient-hexagon-promo-1-hsl: 231.652 calc(var(--saturation-factor, 1)*48.936%) 53.922%;
     --bg-gradient-hexagon-promo-2: hsl(var(--bg-gradient-hexagon-promo-2-hsl)/1);
-    --bg-gradient-hexagon-promo-2-hsl: 268.421 calc(var(--saturation-factor, 1)*100%) 59.02%;
+    --bg-gradient-hexagon-promo-2-hsl: 277.431 calc(var(--saturation-factor, 1)*47.598%) 55.098%;
     --bg-gradient-hexagon-promo-3: hsl(var(--bg-gradient-hexagon-promo-3-hsl)/1);
-    --bg-gradient-hexagon-promo-3-hsl: 274.286 calc(var(--saturation-factor, 1)*72.414%) 11.373%;
+    --bg-gradient-hexagon-promo-3-hsl: 343.03 calc(var(--saturation-factor, 1)*63.871%) 69.608%;
+    --bg-gradient-hexagon-promo-4: hsl(var(--bg-gradient-hexagon-promo-4-hsl)/1);
+    --bg-gradient-hexagon-promo-4-hsl: 32 calc(var(--saturation-factor, 1)*76.531%) 61.569%;
     --bg-gradient-lofi-vibes-1: hsl(var(--bg-gradient-lofi-vibes-1-hsl)/1);
     --bg-gradient-lofi-vibes-1-hsl: 219.759 calc(var(--saturation-factor, 1)*83.838%) 80.588%;
     --bg-gradient-lofi-vibes-2: hsl(var(--bg-gradient-lofi-vibes-2-hsl)/1);
@@ -925,6 +927,7 @@
     --hexagon-campaign-promo-gradient-1: hsl(var(--bg-gradient-hexagon-promo-1-hsl)/0.6);
     --hexagon-campaign-promo-gradient-2: hsl(var(--bg-gradient-hexagon-promo-2-hsl)/0.6);
     --hexagon-campaign-promo-gradient-3: hsl(var(--bg-gradient-hexagon-promo-3-hsl)/0.6);
+    --hexagon-campaign-promo-gradient-4: hsl(var(--bg-gradient-hexagon-promo-4-hsl)/0.6);
     --hexagon-campaign-promo-gradient-shade: hsl(var(--black-hsl)/0.52);
     --home-background: var(--primary-645);
     --icon-brand: var(--blurple-26);
@@ -1904,6 +1907,7 @@
     --hexagon-campaign-promo-gradient-1: hsl(var(--bg-gradient-hexagon-promo-1-hsl)/0.6);
     --hexagon-campaign-promo-gradient-2: hsl(var(--bg-gradient-hexagon-promo-2-hsl)/0.6);
     --hexagon-campaign-promo-gradient-3: hsl(var(--bg-gradient-hexagon-promo-3-hsl)/0.6);
+    --hexagon-campaign-promo-gradient-4: hsl(var(--bg-gradient-hexagon-promo-4-hsl)/0.6);
     --hexagon-campaign-promo-gradient-shade: hsl(var(--black-hsl)/0.52);
     --home-background: var(--primary-100);
     --icon-brand: var(--blurple-53);
@@ -2883,6 +2887,7 @@
     --hexagon-campaign-promo-gradient-1: hsl(var(--bg-gradient-hexagon-promo-1-hsl)/0.6);
     --hexagon-campaign-promo-gradient-2: hsl(var(--bg-gradient-hexagon-promo-2-hsl)/0.6);
     --hexagon-campaign-promo-gradient-3: hsl(var(--bg-gradient-hexagon-promo-3-hsl)/0.6);
+    --hexagon-campaign-promo-gradient-4: hsl(var(--bg-gradient-hexagon-promo-4-hsl)/0.6);
     --hexagon-campaign-promo-gradient-shade: hsl(var(--black-hsl)/0.52);
     --home-background: var(--plum-18);
     --icon-brand: var(--blurple-45);
@@ -3862,6 +3867,7 @@
     --hexagon-campaign-promo-gradient-1: hsl(var(--bg-gradient-hexagon-promo-1-hsl)/0.6);
     --hexagon-campaign-promo-gradient-2: hsl(var(--bg-gradient-hexagon-promo-2-hsl)/0.6);
     --hexagon-campaign-promo-gradient-3: hsl(var(--bg-gradient-hexagon-promo-3-hsl)/0.6);
+    --hexagon-campaign-promo-gradient-4: hsl(var(--bg-gradient-hexagon-promo-4-hsl)/0.6);
     --hexagon-campaign-promo-gradient-shade: hsl(var(--black-hsl)/0.52);
     --home-background: var(--plum-18);
     --icon-brand: var(--blurple-36);
@@ -10329,4 +10335,4 @@
     --motion-spring-subtle-duration: 598ms
 }
 
-/*# sourceMappingURL=952007.3a32a6c100854d4e.css.map*/
+/*# sourceMappingURL=952007.3b490a4a037fd35b.css.map*/
