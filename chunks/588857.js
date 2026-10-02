@@ -2685,6 +2685,7 @@ let n$ = c.memo(function (e) {
               "aria-label": S,
               children: (0, r.jsxs)(A.D, {
                   className: nQ.pc,
+                  focusProps: { offset: 4 },
                   onClick: () => {
                       (a && (0, nv.S$)({ minimized: !1 }),
                           (0, nv.D$)({

@@ -278,6 +278,7 @@ let B = i.memo(function (e) {
             ? null
             : (0, l.jsxs)(h.s, {
                   className: s()(L.Uw, n && L.gt),
+                  focusProps: { offset: 4 },
                   "aria-label": f ?? "",
                   onClick: () => r(t),
                   onMouseOver: () => u(t),
