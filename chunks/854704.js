@@ -4769,10 +4769,10 @@ class rh extends r.PureComponent {
             } = e;
             if (t === n.voiceChannelsSectionNumber) return 44;
             let { hasDivider: d, canHaveVoiceSummary: c } = nc(n, r, t),
-                u = d ? (a ? 9 : 12) : 0;
+                u = d ? (a ? 9 : h.A.space.SPACE_SM.resolve({ density: o ?? "default" })) : 0;
             if (!c || t === tx.PU) return u;
-            let h = n.getNamedCategoryFromSection(t);
-            return null == h ||
+            let m = n.getNamedCategoryFromSection(t);
+            return null == m ||
                 !(function (e) {
                     let { category: t, voiceStates: n, selectedChannelId: i, selectedVoiceChannelId: l } = e;
                     return (
@@ -4787,7 +4787,7 @@ class rh extends r.PureComponent {
                                   });
                         })({ category: t, selectedChannelId: i, selectedVoiceChannelId: l, voiceStates: n }).length > 0
                     );
-                })({ category: h, selectedChannelId: l, selectedVoiceChannelId: s, voiceStates: i })
+                })({ category: m, selectedChannelId: l, selectedVoiceChannelId: s, voiceStates: i })
                 ? u
                 : (a && "cozy" === o ? 42 : 34) + u;
         })({
