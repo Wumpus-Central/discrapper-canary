@@ -409,6 +409,13 @@ let l = [
         summary: "Helpers join a build only when you ask for them, and up to six can work side by side.",
     },
     {
+        date: "2026-10-03",
+        time: "00:44",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "History in the project menu puts your versions and data backups in one place, with a clear Restore button on each.",
+    },
+    {
         date: "2026-09-10",
         time: "00:00",
         platforms: ["desktop", "mobile"],

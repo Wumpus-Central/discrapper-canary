@@ -9004,7 +9004,7 @@ let ov = {
         return (t) => (0, r.jsx)(e, { ...t, guildId: "123" });
     },
     PhoneVerificationModal: async () => {
-        let { default: e } = await Promise.all([a.e("590275"), a.e("766806"), a.e("989545"), a.e("311493")]).then(
+        let { default: e } = await Promise.all([a.e("590275"), a.e("334179"), a.e("989545"), a.e("311493")]).then(
             a.bind(a, 914724),
         );
         return (t) => (0, r.jsx)(e, { error: null, working: !1, validPhone: !1, ...t });

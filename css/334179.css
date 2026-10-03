@@ -1,29 +1,45 @@
-.allChips_ff7bda {
-    gap: var(--space-32);
-    padding: var(--space-24)
+.phoneField_a0c54f {
+    align-items: start;
+    display: grid;
+    gap: var(--space-8);
+    grid-template-columns: 5fr 6fr;
+    position: relative
 }
 
-.allChips_ff7bda,
-.section_ff7bda {
-    display: flex;
-    flex-direction: column
+.phoneVerificationModal_db41ea {
+    min-height: 252px;
+    padding: 16px;
+    position: relative;
+    width: 440px
 }
 
-.section_ff7bda {
-    gap: var(--space-16)
+.phoneVerificationModal_db41ea .animationContainer_db41ea {
+    position: absolute;
+    top: -150px;
+    inset-inline: 130px
 }
 
-.sectionTitle_ff7bda {
+.phoneVerificationModal_db41ea .title_db41ea {
     color: var(--text-strong);
-    font-weight: var(--font-weight-semibold);
-    margin: 0
+    font-size: 20px;
+    font-weight: var(--font-weight-bold);
+    margin-top: auto;
+    padding-top: 80px
 }
 
-.chipGrid_ff7bda {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-12)
+.phoneVerificationModal_db41ea .description_db41ea {
+    color: var(--text-default);
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center
+}
+
+.phoneVerificationModal_db41ea .description_db41ea.error_db41ea {
+    color: var(--text-feedback-critical)
+}
+
+.phoneVerificationModal_db41ea .field_db41ea {
+    align-self: stretch
 }
 
 :where(.card_b5dd01) {
@@ -140,4 +156,4 @@
     inset-inline-end: 0
 }
 
-/*# sourceMappingURL=611137.b63dea47375355b5.css.map*/
+/*# sourceMappingURL=334179.b96f7cb1e3d9a6e7.css.map*/
