@@ -1147,22 +1147,6 @@
     }
   },
   {
-    "name": "2026-02-sticker-padding",
-    "kind": "user",
-    "defaultConfig": {
-      "padding": 2
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "padding": 1
-      }
-    }
-  },
-  {
     "name": "2026-02-voice-channel-link-click",
     "kind": "user",
     "defaultConfig": {
