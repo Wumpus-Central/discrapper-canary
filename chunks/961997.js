@@ -1,55 +1,55 @@
-e.d(n, { k: () => S, o: () => x });
+e.d(n, { k: () => m, o: () => A });
 var i = e(477900),
-    a = e(582128),
-    s = e(503698),
-    l = e.n(s),
-    r = e(508602),
-    o = e(189213),
+    s = e(582128),
+    a = e(503698),
+    l = e.n(a),
+    o = e(508602),
+    r = e(189213),
     c = e(700058),
-    u = e(607470),
-    d = e(59318),
+    d = e(607470),
+    u = e(59318),
     I = e(633387),
     E = e(390248),
     _ = e(961440),
     C = e(375708),
-    p = e(383999);
-function h(t) {
+    h = e(383999);
+function p(t) {
     let { attachment: n } = t,
-        { url: e, description: a } = n;
-    return null == e ? null : (0, i.jsx)(m, { url: e, description: a });
-}
-function v(t) {
-    let { embed: n } = t;
-    if (!_.Tj.has(n.type)) return null;
-    let e = void 0 !== n.video && n.type !== r.A.GIFV ? n.video.url : (n.thumbnail?.url ?? n.image?.url);
-    return null == e ? null : (0, i.jsx)(m, { url: e });
-}
-function m(t) {
-    let { url: n, description: e } = t,
-        a = (0, d.r1)(n);
-    return (0, i.jsx)("div", {
-        className: p.il,
-        children: a
-            ? (0, i.jsx)(u.A, { className: l()(p.Ki, p.$_), controls: !0, src: n })
-            : (0, i.jsx)("img", { className: l()(p.Sl, p.$_), src: n, alt: e }),
-    });
-}
-function x(t) {
-    (c.A.pop(), (0, I.r)({ id: "explicit-media-false-positive-modal", text: C.intl.string(C.t.gFsTKu) }), t());
+        { url: e, description: s } = n;
+    return null == e ? null : (0, i.jsx)(v, { url: e, description: s });
 }
 function S(t) {
+    let { embed: n } = t;
+    if (!_.Tj.has(n.type)) return null;
+    let e = void 0 !== n.video && n.type !== o.A.GIFV ? n.video.url : (n.thumbnail?.url ?? n.image?.url);
+    return null == e ? null : (0, i.jsx)(v, { url: e });
+}
+function v(t) {
+    let { url: n, description: e } = t,
+        s = (0, u.r1)(n);
+    return (0, i.jsx)("div", {
+        className: h.il,
+        children: s
+            ? (0, i.jsx)(d.A, { className: l()(h.Ki, h.$_), controls: !0, src: n })
+            : (0, i.jsx)("img", { className: l()(h.Sl, h.$_), src: n, alt: e }),
+    });
+}
+function A(t) {
+    (c.A.pop(), (0, I.r)({ id: "explicit-media-false-positive-modal", text: C.intl.string(C.t.gFsTKu) }), t());
+}
+function m(t) {
     let {
             channelId: n,
             messageId: e,
-            isReportFalsePositiveLoading: s,
+            isReportFalsePositiveLoading: a,
             analyticsContext: l,
-            attachmentPreview: r,
+            attachmentPreview: o,
             embedPreview: c,
-            onConfirmPress: u,
-            transitionState: d,
+            onConfirmPress: d,
+            transitionState: u,
             onClose: I,
         } = t,
-        _ = a.useCallback(() => {
+        _ = s.useCallback(() => {
             ((0, E.hv)({
                 action: E.rY.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CANCEL,
                 channelId: n,
@@ -58,29 +58,29 @@ function S(t) {
             }),
                 I());
         }, [n, e, l, I]),
-        p = a.useCallback(() => {
-            (u?.(),
+        h = s.useCallback(() => {
+            (d?.(),
                 (0, E.hv)({
                     action: E.rY.EXPLICIT_MEDIA_FALSE_POSITIVE_CLICK_CONFIRM,
                     channelId: n,
                     messageId: e,
                     context: l,
                 }));
-        }, [n, e, l, u]);
+        }, [n, e, l, d]);
     return (
-        a.useEffect(() => {
+        s.useEffect(() => {
             (0, E.hv)({ action: E.rY.EXPLICIT_MEDIA_FALSE_POSITIVE_VIEWED, channelId: n, messageId: e, context: l });
         }, [n, e, l]),
-        (0, i.jsxs)(o.a, {
-            transitionState: d,
+        (0, i.jsxs)(r.a, {
+            transitionState: u,
             onClose: I,
             title: C.intl.string(C.t.TPpVkI),
             subtitle: C.intl.string(C.t["z4du/I"]),
             actions: [
-                { text: C.intl.string(C.t["ETE/oC"]), onClick: _, variant: "secondary", disabled: s },
-                { text: C.intl.string(C.t["cY+Oob"]), onClick: p, loading: s, disabled: s },
+                { text: C.intl.string(C.t["ETE/oC"]), onClick: _, variant: "secondary", disabled: a },
+                { text: C.intl.string(C.t["cY+Oob"]), onClick: h, loading: a, disabled: a },
             ],
-            children: [null != r && (0, i.jsx)(h, { attachment: r }), null != c && (0, i.jsx)(v, { embed: c })],
+            children: [null != o && (0, i.jsx)(p, { attachment: o }), null != c && (0, i.jsx)(S, { embed: c })],
         })
     );
 }

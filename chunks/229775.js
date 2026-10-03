@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Hz: "textShimmer_a57d27",
     Mp: "vibegrations-text-shimmer_a57d27",
     XR: "chatMessageSurface_a57d27",

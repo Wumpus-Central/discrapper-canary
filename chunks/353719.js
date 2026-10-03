@@ -20,8 +20,8 @@ var n = r(271434);
         return ((t.keys = l), t);
     }
     if (n(t)) {
-        for (var p, f = r, m = a, g = [], b = 0; b < t.length; b++) g.push(e(t[b], f, m).source);
-        return (((p = RegExp("(?:" + g.join("|") + ")", c(m))).keys = f), p);
+        for (var f, p = r, m = a, g = [], y = 0; y < t.length; y++) g.push(e(t[y], p, m).source);
+        return (((f = RegExp("(?:" + g.join("|") + ")", c(m))).keys = p), f);
     }
     return ((i = r), u(o(t, (s = a)), i, s));
 }),
@@ -44,28 +44,28 @@ function o(e, t) {
             s += h[1];
             continue;
         }
-        var p = e[i],
-            f = r[2],
+        var f = e[i],
+            p = r[2],
             m = r[3],
             g = r[4],
-            b = r[5],
-            y = r[6],
-            v = r[7];
+            y = r[5],
+            b = r[6],
+            w = r[7];
         s && (n.push(s), (s = ""));
-        var w = null != f && null != p && p !== f,
-            _ = "+" === y || "*" === y,
-            M = "?" === y || "*" === y,
-            x = r[2] || c,
-            C = g || b;
+        var v = null != p && null != f && f !== p,
+            M = "+" === b || "*" === b,
+            x = "?" === b || "*" === b,
+            _ = r[2] || c,
+            C = g || y;
         n.push({
             name: m || o++,
-            prefix: f || "",
-            delimiter: x,
-            optional: M,
-            repeat: _,
-            partial: w,
-            asterisk: !!v,
-            pattern: C ? C.replace(/([=!:$\/()])/g, "\\$1") : v ? ".*" : "[^" + l(x) + "]+?",
+            prefix: p || "",
+            delimiter: _,
+            optional: x,
+            repeat: M,
+            partial: v,
+            asterisk: !!w,
+            pattern: C ? C.replace(/([=!:$\/()])/g, "\\$1") : w ? ".*" : "[^" + l(_) + "]+?",
         });
     }
     return (i < e.length && (s += e.substr(i)), s && n.push(s), n);
@@ -100,8 +100,8 @@ function s(e) {
                 if (0 === d.length)
                     if (h.optional) continue;
                     else throw TypeError('Expected "' + h.name + '" to not be empty');
-                for (var p = 0; p < d.length; p++) {
-                    if (((u = l(d[p])), !t[c].test(u)))
+                for (var f = 0; f < d.length; f++) {
+                    if (((u = l(d[f])), !t[c].test(u)))
                         throw TypeError(
                             'Expected all "' +
                                 h.name +
@@ -111,7 +111,7 @@ function s(e) {
                                 JSON.stringify(u) +
                                 "`",
                         );
-                    o += (0 === p ? h.prefix : h.delimiter) + u;
+                    o += (0 === f ? h.prefix : h.delimiter) + u;
                 }
                 continue;
             }
@@ -142,18 +142,18 @@ function u(e, t, r) {
         if ("string" == typeof h) s += l(h);
         else {
             var d = l(h.prefix),
-                p = "(?:" + h.pattern + ")";
+                f = "(?:" + h.pattern + ")";
             (t.push(h),
-                h.repeat && (p += "(?:" + d + p + ")*"),
-                (s += p =
-                    h.optional ? (h.partial ? d + "(" + p + ")?" : "(?:" + d + "(" + p + "))?") : d + "(" + p + ")"));
+                h.repeat && (f += "(?:" + d + f + ")*"),
+                (s += f =
+                    h.optional ? (h.partial ? d + "(" + f + ")?" : "(?:" + d + "(" + f + "))?") : d + "(" + f + ")"));
         }
     }
-    var f = l(r.delimiter || "/"),
-        m = s.slice(-f.length) === f;
+    var p = l(r.delimiter || "/"),
+        m = s.slice(-p.length) === p;
     return (
-        o || (s = (m ? s.slice(0, -f.length) : s) + "(?:" + f + "(?=$))?"),
-        i ? (s += "$") : (s += o && m ? "" : "(?=" + f + "|$)"),
+        o || (s = (m ? s.slice(0, -p.length) : s) + "(?:" + p + "(?=$))?"),
+        i ? (s += "$") : (s += o && m ? "" : "(?=" + p + "|$)"),
         ((a = RegExp("^" + s, c(r))).keys = t),
         a
     );

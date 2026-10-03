@@ -1,15 +1,15 @@
-n.d(t, { $s: () => u, cI: () => s, qQ: () => a });
+n.d(t, { $s: () => o, cI: () => s, qQ: () => u });
 var i = n(17928),
     r = n(873298),
     l = n(594061),
-    o = n(617617);
+    a = n(617617);
 function s(e, t) {
     return e.vibegrations?.projects[t]?.muted === !0;
 }
-function u(e) {
-    return (0, i.bG)([o.A], () => s(o.A.settings, e), [e]);
+function o(e) {
+    return (0, i.bG)([a.A], () => s(a.A.settings, e), [e]);
 }
-function a(e, t) {
+function u(e, t) {
     l.wc.updateAsync(
         "vibegrations",
         (n) => {

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Lo: "secretCard__220b3",
     sq: "secretCardActions__220b3",
     $h: "secretCardStatus__220b3",

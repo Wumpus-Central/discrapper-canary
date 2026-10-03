@@ -1,8 +1,8 @@
-n.d(t, { $k: () => u, Xd: () => a, hj: () => s, uQ: () => o });
+n.d(t, { $k: () => o, Xd: () => u, hj: () => s, uQ: () => a });
 var i = n(652215),
     r = n(50617),
     l = n(375708);
-class o extends Error {
+class a extends Error {
     reason;
     status;
     constructor(e, t) {
@@ -20,12 +20,12 @@ function s(e) {
     let r = n?.code;
     return 409 === t && r === i.t02.TOO_MANY_VIBEGRATIONS_PROJECTS ? "project_limit" : "unknown";
 }
-function u(e) {
+function o(e) {
     let t = e?.status;
     return "number" == typeof t ? t : 0;
 }
-function a(e) {
-    switch (e instanceof o ? e.reason : "unknown") {
+function u(e) {
+    switch (e instanceof a ? e.reason : "unknown") {
         case "project_limit":
             return l.intl.string(r.default.Asusmn);
         case "rate_limited":

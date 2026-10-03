@@ -22,8 +22,8 @@ var i,
     v = n(6981),
     C = n(376943),
     I = n(718446),
-    S = n(746080),
-    T = n(355097),
+    T = n(746080),
+    S = n(355097),
     y =
         (((i = {}).ROLE_SUBSCRIPTION = "role_subscription"),
         (i.ROLE_SUBSCRIPTION_SETTING = "role_subscription_setting"),
@@ -33,9 +33,9 @@ var i,
 function b(e) {
     let t = decodeURIComponent(e),
         n = (0, C.vu)(t);
-    return null != n && n.channelId === S.VV.ROLE_SUBSCRIPTIONS
+    return null != n && n.channelId === T.VV.ROLE_SUBSCRIPTIONS
         ? "role_subscription"
-        : t.toLowerCase() === (0, I.settingsPathToRoute)(T.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS)
+        : t.toLowerCase() === (0, I.settingsPathToRoute)(S.od.SUBSCRIPTIONS_ROLE_SUBSCRIPTIONS)
           ? "role_subscription_setting"
           : void 0;
 }
@@ -471,10 +471,10 @@ var e_ = n(628284),
     eC = n(354948);
 n(53516);
 var eI = n(938442);
-let eS = ["loopback-network", "local-network-access"];
-async function eT() {
+let eT = ["loopback-network", "local-network-access"];
+async function eS() {
     if ("u" < typeof navigator || null == navigator.permissions) return "unknown";
-    for (let e of eS)
+    for (let e of eT)
         try {
             return (await navigator.permissions.query({ name: e })).state;
         } catch {}
@@ -579,8 +579,8 @@ var e0 = n(21599),
     e3 = n(661531),
     e4 = n(993077),
     e8 = n(235986),
-    e5 = n(408738);
-function e7(e) {
+    e7 = n(408738);
+function e5(e) {
     let { text: t, buttonCta: i, onClick: l } = e;
     return (0, d.jsxs)(d.Fragment, {
         children: [
@@ -588,26 +588,26 @@ function e7(e) {
             (0, d.jsx)(P.hE, { className: M()($.QX, $.QB, eI.tR), children: q.intl.string(q.t.eL5z0i) }),
             (0, d.jsx)(P.tK, { className: $.C2, children: q.intl.string(q.t.poAv63) }),
             (0, d.jsxs)(e4.Z, {
-                className: e5.Nr,
+                className: e7.Nr,
                 type: e4.Z.Types.CUSTOM,
                 children: [
-                    (0, d.jsx)("img", { alt: "", className: e5.q8, src: n(355912) }),
-                    (0, d.jsx)("img", { alt: "", className: e5.dw, src: n(610925) }),
+                    (0, d.jsx)("img", { alt: "", className: e7.q8, src: n(355912) }),
+                    (0, d.jsx)("img", { alt: "", className: e7.dw, src: n(610925) }),
                     (0, d.jsxs)(e8.A, {
-                        className: e5.p_,
+                        className: e7.p_,
                         direction: e8.A.Direction.VERTICAL,
                         align: e8.A.Align.STRETCH,
                         grow: 0,
                         children: [
                             (0, d.jsx)(H.E, {
                                 tag: "strong",
-                                className: e5.p8,
+                                className: e7.p8,
                                 variant: "text-md/normal",
                                 style: { color: e3.A.unsafe_rawColors.PRIMARY_300.css },
                                 children: t,
                             }),
                             (0, d.jsx)("div", {
-                                className: e5.x6,
+                                className: e7.x6,
                                 children: (0, d.jsx)(W.$, { text: i, fullWidth: !0, onClick: l }),
                             }),
                         ],
@@ -619,7 +619,7 @@ function e7(e) {
 }
 function e9(e) {
     let { text: t, buttonCta: n, theme: i = D.NJ8.DARK, onClick: l } = e;
-    return (0, d.jsx)(P.Ay, { theme: i, children: (0, d.jsx)(e7, { text: t, buttonCta: n, onClick: l }) });
+    return (0, d.jsx)(P.Ay, { theme: i, children: (0, d.jsx)(e5, { text: t, buttonCta: n, onClick: l }) });
 }
 var e6 = n(765671),
     te = n(71393),
@@ -777,8 +777,8 @@ function tN(e) {
 var tv = n(395671),
     tC = n(95701),
     tI = n(889227),
-    tS = n(945810);
-let tT = (0, tS.mj)({
+    tT = n(945810);
+let tS = (0, tT.mj)({
     name: "2026-09-silp-cta-copy-tests",
     kind: "user",
     defaultConfig: { variant: null },
@@ -788,7 +788,7 @@ function ty(e) {
     return null != e && null != e.guild && (null == e.type || e.type === tc.Xd.GUILD);
 }
 function tb(e) {
-    return tT.useConfig({ location: e }).variant;
+    return tS.useConfig({ location: e }).variant;
 }
 function tR(e) {
     switch (e) {
@@ -1019,8 +1019,8 @@ var tJ = n(153488),
     t3 = n(934337),
     t4 = n(15552),
     t8 = n(536637),
-    t5 = n.n(t8),
-    t7 = n(955437),
+    t7 = n.n(t8),
+    t5 = n(955437),
     t9 = n(888548);
 n(861807);
 var t6 = n(569717),
@@ -1044,7 +1044,7 @@ function nt(e) {
         let e;
         ((0, t6.A)(o, D.JJy.REGISTER),
             L.default.track(D.HAw.AGE_GATE_ACTION, { source: ne.w_.REGISTER, action: ne.AM.AGE_GATE_SUBMITTED }),
-            (e = t5()().diff(o, "years")) < 13 ||
+            (e = t7()().diff(o, "years")) < 13 ||
                 L.default.track(D.HAw.USER_AGE_SUBMITTED, {
                     age_bucket: e >= 13 && e <= 17 ? "13-17" : e >= 18 && e <= 22 ? "18-22" : "23+",
                 }));
@@ -1089,7 +1089,7 @@ function nt(e) {
             if (e instanceof t9.CaptchaCancelError) throw e;
             let t = new K.A(e);
             throw (
-                null != t.getFieldErrors("date_of_birth") && t7.Xv(ne.w_.REGISTER),
+                null != t.getFieldErrors("date_of_birth") && t5.Xv(ne.w_.REGISTER),
                 L.default.track(D.HAw.REGISTER_SUBMIT_ERRORED, {
                     is_unique_username_registration: !0,
                     email_error_reason: t.getFirstFieldErrorMessage("email"),
@@ -1132,7 +1132,7 @@ function nl(e) {
               children: q.intl.format(q.t["KI+BSb"], { termsURL: D.X7G.TERMS, privacyURL: D.X7G.PRIVACY }),
           });
 }
-let ns = (0, tS.mj)({
+let ns = (0, tT.mj)({
     kind: "installation",
     name: "2026-09-registration-email-opt-in-copy",
     defaultConfig: { trackingCopy: !1 },
@@ -1183,8 +1183,8 @@ function no(e) {
     h.useEffect(() => {
         N.current?.focus();
     }, []);
-    let S = l.length > 0 && s.length > 0,
-        T = h.useCallback(async () => {
+    let T = l.length > 0 && s.length > 0,
+        S = h.useCallback(async () => {
             let e = t3.mZ.getState();
             (E(!0), g({}));
             try {
@@ -1208,9 +1208,9 @@ function no(e) {
         }, [t, l, n, s, i, r, g, p, _]),
         y = h.useCallback(
             (e) => {
-                (e.preventDefault(), null != a && S && T());
+                (e.preventDefault(), null != a && T && S());
             },
-            [a, S, T],
+            [a, T, S],
         ),
         { message: b } = o;
     return (0, d.jsxs)("form", {
@@ -1255,7 +1255,7 @@ function no(e) {
                         fullWidth: !0,
                         type: "submit",
                         loading: x,
-                        disabled: !j || A || !S,
+                        disabled: !j || A || !T,
                     }),
                 }),
             }),
@@ -1545,11 +1545,11 @@ function nj(e) {
         [j, N] = t$(_),
         [v, C] = h.useState(!1),
         I = h.useRef(null);
-    function S(e) {
+    function T(e) {
         (s(e), I.current?.scrollTo(0, 0));
     }
-    function T(e) {
-        (E(e), (null != e.username || null != e.date_of_birth) && S(0));
+    function S(e) {
+        (E(e), (null != e.username || null != e.date_of_birth) && T(0));
     }
     function y(e) {
         E((t) => {
@@ -1598,7 +1598,7 @@ function nj(e) {
                                                     apiErrors: p,
                                                     onUsernameChange: b,
                                                     onDateOfBirthChange: R,
-                                                    onNext: () => S(1),
+                                                    onNext: () => T(1),
                                                     onOpenApp: n,
                                                 })
                                               : (0, d.jsx)(no, {
@@ -1613,7 +1613,7 @@ function nj(e) {
                                                     onEmailChange: L,
                                                     onPasswordChange: O,
                                                     onConsentChange: N,
-                                                    onApiErrors: T,
+                                                    onApiErrors: S,
                                                     onOpenApp: n,
                                                     onRegister: () => C(!0),
                                                 }),
@@ -1672,13 +1672,13 @@ function nI(e) {
             (0, ti.xb)(n);
     }
 }
-function nS(e) {
+function nT(e) {
     let { invite: t, onAcceptInvite: n } = e;
     return t?.state === D.elq.BANNED
-        ? (0, d.jsx)(e7, { text: q.intl.string(q.t["5AkWAd"]), buttonCta: q.intl.string(q.t["8osdkn"]), onClick: n })
-        : (0, d.jsx)(e7, { text: q.intl.string(q.t["usP+Mb"]), buttonCta: q.intl.string(q.t["8osdkn"]), onClick: n });
+        ? (0, d.jsx)(e5, { text: q.intl.string(q.t["5AkWAd"]), buttonCta: q.intl.string(q.t["8osdkn"]), onClick: n })
+        : (0, d.jsx)(e5, { text: q.intl.string(q.t["usP+Mb"]), buttonCta: q.intl.string(q.t["8osdkn"]), onClick: n });
 }
-function nT(e) {
+function nS(e) {
     let { children: t, cardChildren: n, startAnimHeightPx: i, sectionClassName: l, inviteCardClassName: s = nN.qF } = e,
         { ref: r, height: a } = (0, e6.Ay)(),
         o = (0, e2.z)({ height: null != a && 0 !== a ? `${a}px` : `${i}px`, config: e1.config.stiff });
@@ -1699,7 +1699,7 @@ function ny(e) {
     let { invite: t } = e;
     if (null == t || !tx(t)) return null;
     let n = nI(t);
-    return (0, d.jsx)(nT, {
+    return (0, d.jsx)(nS, {
         startAnimHeightPx: 0,
         sectionClassName: nN.ui,
         children: 1 === n ? (0, d.jsx)(tG, { invite: t }) : null,
@@ -1732,12 +1732,12 @@ function nR(e) {
                 t = (0, d.jsx)(tV, { ...e, invite: n });
                 break;
             case 2:
-                t = (0, d.jsx)(nS, { ...e, invite: n });
+                t = (0, d.jsx)(nT, { ...e, invite: n });
                 break;
             default:
                 t = (0, d.jsx)(nC, {});
         }
-    return (0, d.jsx)(nT, { startAnimHeightPx: 200, sectionClassName: nb[i], inviteCardClassName: nN.qF, children: t });
+    return (0, d.jsx)(nS, { startAnimHeightPx: 200, sectionClassName: nb[i], inviteCardClassName: nN.qF, children: t });
 }
 function nL(e) {
     let { invite: t } = e,
@@ -2047,20 +2047,20 @@ let n4 = "https://stopncii.org/partners/global-network-of-partners/",
             supportOrgURL: "https://discord.findahelpline.com/countries/br",
         },
     };
-function n5(e) {
+function n7(e) {
     return (0, nK.c7)(e) ? n8[e] : n8[nK.sl.TIDA];
 }
-var n7 = (((s = {}).SELECTION = "selection"), (s.DSA = "dsa"), (s.TIDA = "tida"), s),
+var n5 = (((s = {}).SELECTION = "selection"), (s.DSA = "dsa"), (s.TIDA = "tida"), s),
     n9 = n(138658);
 let n6 = (e) => {
     let { mediaTakedownRegulation: t } = e,
         { goToStep: n } = (0, nH.n)(),
-        { selectionLabel: i, selectionDescription: l } = n5(t),
+        { selectionLabel: i, selectionDescription: l } = n7(t),
         s = h.useCallback(() => {
-            n(n7.DSA);
+            n(n5.DSA);
         }, [n]),
         r = h.useCallback(() => {
-            n(n7.TIDA);
+            n(n5.TIDA);
         }, [n]);
     return (0, d.jsxs)(ew.B, {
         gap: 8,
@@ -2223,7 +2223,7 @@ let il = (e) => {
                     g || (await A.A.getLocationMetadata(), A.A.getExperiments());
                 })();
             }, [g]));
-        let { helpBody: p, supportOrgURL: E } = n5(a),
+        let { helpBody: p, supportOrgURL: E } = n7(a),
             _ = s.filter((e) => e !== nK.tY.MEDIA_TAKEDOWN),
             j = s.includes(nK.tY.MEDIA_TAKEDOWN),
             N = _.length > 0,
@@ -2235,11 +2235,11 @@ let il = (e) => {
         let I = h.useCallback(() => {
                 (0, nM.openModalLazy)(() => Promise.resolve((e) => (0, d.jsx)(il, { ...e })), { dismissable: !1 });
             }, []),
-            S = h.useCallback((e, t) => {
-                t !== n7.SELECTION && e !== n7.SELECTION ? u(n7.SELECTION) : u(e);
+            T = h.useCallback((e, t) => {
+                t !== n5.SELECTION && e !== n5.SELECTION ? u(n5.SELECTION) : u(e);
             }, []),
-            T = h.useMemo(() => nY(nK.tY.MEDIA_TAKEDOWN, I), [I]),
-            y = c ?? (v ? n7.SELECTION : N ? n7.DSA : n7.TIDA);
+            S = h.useMemo(() => nY(nK.tY.MEDIA_TAKEDOWN, I), [I]),
+            y = c ?? (v ? n5.SELECTION : N ? n5.DSA : n5.TIDA);
         if (C || (!N && !j))
             return (0, d.jsx)(nV.a, {
                 title: "",
@@ -2271,7 +2271,7 @@ let il = (e) => {
             if (j)
                 return (0, d.jsx)(nV.a, {
                     title: q.intl.string(q.t.YignUm),
-                    actions: [{ text: q.intl.string(q.t.D5Czbu), variant: "primary", onClick: T }],
+                    actions: [{ text: q.intl.string(q.t.D5Czbu), variant: "primary", onClick: S }],
                     transitionState: t,
                     onClose: n,
                     dismissable: !1,
@@ -2280,12 +2280,12 @@ let il = (e) => {
         }
         let b = [
             {
-                stepKey: n7.SELECTION,
+                stepKey: n5.SELECTION,
                 modalProps: { title: q.intl.string(q.t.Z11w18) },
                 body: (0, d.jsx)(n6, { mediaTakedownRegulation: a }),
             },
             {
-                stepKey: n7.DSA,
+                stepKey: n5.DSA,
                 modalProps: {
                     title: q.intl.string(q.t.Z11w18),
                     subtitle: q.intl.format(q.t["532l+q"], {
@@ -2295,19 +2295,19 @@ let il = (e) => {
                 body: (0, d.jsx)(n2, { dsaCapabilities: _, onReopen: I }),
             },
             {
-                stepKey: n7.TIDA,
+                stepKey: n5.TIDA,
                 modalProps: { title: q.intl.string(q.t.YignUm) },
                 body: (0, d.jsx)(it, { helpBody: p, supportOrgURL: E }),
                 nextButtonProps: { text: q.intl.string(q.t.D5Czbu) },
-                onNext: () => (T(), !1),
+                onNext: () => (S(), !1),
             },
         ];
         return (0, d.jsx)("div", {
-            className: { [n7.SELECTION]: ii.a, [n7.DSA]: ii.q, [n7.TIDA]: void 0 }[y],
+            className: { [n5.SELECTION]: ii.a, [n5.DSA]: ii.q, [n5.TIDA]: void 0 }[y],
             children: (0, d.jsx)(nH.t, {
                 steps: b,
                 currentStepKey: y,
-                onStepChange: S,
+                onStepChange: T,
                 onClose: n,
                 transitionState: t,
                 dismissable: !1,
@@ -2420,7 +2420,7 @@ var iN = n(603647),
     iv = n(970672),
     iC = n(129014),
     iI = n(642277);
-let iS = function (e) {
+let iT = function (e) {
     let { match: t, location: n, attemptDeepLink: i } = e,
         [l, s] = h.useState(0);
     (h.useEffect(() => {
@@ -2486,7 +2486,7 @@ let iS = function (e) {
             });
     }
 };
-var iT = n(723923);
+var iS = n(723923);
 x.Ay.initialize();
 class iy extends h.PureComponent {
     static defaultProps = { transitionTo: (e) => n.g.location.assign(e) };
@@ -2530,7 +2530,7 @@ class iy extends h.PureComponent {
                     children: (0, d.jsx)(eg.Q, {
                         text: q.intl.string(q.t.YYTirT),
                         textVariant: "text-sm/normal",
-                        onClick: () => i((0, I.settingsPathToRoute)(T.od.NOTIFICATIONS_EMAILS)),
+                        onClick: () => i((0, I.settingsPathToRoute)(S.od.NOTIFICATIONS_EMAILS)),
                     }),
                 }),
             ],
@@ -2540,7 +2540,7 @@ class iy extends h.PureComponent {
         let { defaultRoute: e, transitionTo: t } = this.props,
             { user: n, category: i } = this.state;
         if (null != i) {
-            let e = iT.px.find((e) => e.category === i);
+            let e = iS.px.find((e) => e.category === i);
             if (null != e) return this.renderCategorySuccess(i, e.label());
         }
         return (0, d.jsxs)(P.Ay, {
@@ -2712,12 +2712,12 @@ var i1 = n(895600),
     i3 = n(104798),
     i4 = n(991512);
 let i8 = "mweb_handoff_nonce",
-    i5 = "mweb_handoff_nonce_expiration",
-    i7 = +tX.A.Millis.MINUTE,
+    i7 = "mweb_handoff_nonce_expiration",
+    i5 = +tX.A.Millis.MINUTE,
     i9 = new Set(["nonce_missing", "nonce_expired", "handoff_exchange"]),
     i6 = new Set(["deep_link_failed"]);
 function le() {
-    (i2.w.remove(i8), i2.w.remove(i5));
+    (i2.w.remove(i8), i2.w.remove(i7));
 }
 let lt = () => {
     let e = (0, x.bG)([eZ.default], () => eZ.default.getFingerprint()),
@@ -2745,7 +2745,7 @@ let lt = () => {
         null != n && "null" !== n && null == o && null === s && a("nonce_missing"),
         h.useEffect(() => {
             if (null != o) {
-                let e = i2.w.get(i5);
+                let e = i2.w.get(i7);
                 (null == e || Date.now() >= e) && (a("nonce_expired"), le());
             }
         }, [o, a]),
@@ -2807,7 +2807,7 @@ let lt = () => {
                       text: q.intl.string(q.t.NcC759),
                       onClick: function () {
                           let e = i3.A.generateNonce();
-                          (i2.w.set(i8, e), i2.w.set(i5, Date.now() + i7));
+                          (i2.w.set(i8, e), i2.w.set(i7, Date.now() + i5));
                           let t = new URL(D.J$u),
                               n = new URLSearchParams(window.location.search);
                           (n.delete("fingerprint"), n.delete("handoff_token"));
@@ -2964,8 +2964,8 @@ function lu(e) {
             handleGotoRegister: C,
         } = e,
         I = (0, x.bG)([ev.A], () => ev.A.getCountryCode()),
-        S = (0, x.bG)([eZ.default], () => eZ.default.getLoginStatus()),
-        T = (0, x.bG)([ln.A], () => ln.A.getHasLoggedInAccounts()),
+        T = (0, x.bG)([eZ.default], () => eZ.default.getLoginStatus()),
+        S = (0, x.bG)([ln.A], () => ln.A.getHasLoggedInAccounts()),
         y = h.useCallback(
             (e) => {
                 L.default.track(D.HAw.LOGIN_SUCCESSFUL, {
@@ -3009,7 +3009,7 @@ function lu(e) {
     let U = (0, d.jsxs)("div", {
         className: iq.Eh,
         children: [
-            T &&
+            S &&
                 p &&
                 (0, d.jsx)("div", {
                     className: iq.AX,
@@ -3070,7 +3070,7 @@ function lu(e) {
                                 text: q.intl.string(q.t.dKhVQN),
                                 fullWidth: !0,
                                 type: "submit",
-                                loading: S === D.aUe.LOGGING_IN,
+                                loading: T === D.aUe.LOGGING_IN,
                             }),
                         }),
                         (0, d.jsxs)("div", {
@@ -3124,7 +3124,7 @@ function lu(e) {
                         (0, d.jsx)(h.Fragment, { children: U }, "form-wrapper"),
                     ],
                 })
-          : T && !p
+          : S && !p
             ? (0, d.jsx)(lr, { onDismiss: () => E(!0), embedded: r })
             : (0, d.jsxs)("div", {
                   children: [
@@ -3213,8 +3213,8 @@ function lA(e) {
             redirecting: N,
             login: C,
             password: I,
-            phoneVerifyError: S,
-            dismissedChooseAccount: T,
+            phoneVerifyError: T,
+            dismissedChooseAccount: S,
             setDismissedChooseAccount: y,
             errors: O,
             conditionalMediationAbortController: k,
@@ -3252,7 +3252,7 @@ function lA(e) {
                 }),
                 [N, v] = h.useState(""),
                 [C, I] = h.useState(!1),
-                [S, T] = h.useState(null),
+                [T, S] = h.useState(null),
                 [y, R] = h.useState(!1),
                 [L] = h.useState(() => new AbortController()),
                 [O, k] = h.useState({});
@@ -3334,19 +3334,19 @@ function lA(e) {
                             let { token: n } = await ej.A.verifyPhone(t, e, !1);
                             (await A.A.authorizeIPAddress(n), V());
                         } catch (e) {
-                            null != e.body && null != e.body.message && T(e.body.message);
+                            null != e.body && null != e.body.message && S(e.body.message);
                         }
                     },
                     [x, _, V],
                 ),
                 W = h.useCallback(
                     async (e) => {
-                        T(null);
+                        S(null);
                         try {
                             let { token: t } = await ej.A.verifyPhone(x + _, e, !1);
                             r(D.BVt.RESET, { search: (0, m.stringify)({ token: t, from_login: "true" }) });
                         } catch (e) {
-                            null != e.body && null != e.body.message && T(e.body.message);
+                            null != e.body && null != e.body.message && S(e.body.message);
                         }
                     },
                     [x, _, r],
@@ -3429,7 +3429,7 @@ function lA(e) {
                 redirecting: f,
                 login: _,
                 password: N,
-                phoneVerifyError: S,
+                phoneVerifyError: T,
                 dismissedChooseAccount: y,
                 setDismissedChooseAccount: R,
                 errors: O,
@@ -3522,7 +3522,7 @@ function lA(e) {
                 children: (0, d.jsx)(lf.A, {
                     title: q.intl.string(q.t.w55Oco),
                     subtitle: q.intl.format(q.t.CfRZBj, { onResendClick: K }),
-                    error: S,
+                    error: T,
                     onSubmit: V,
                     onCancel: Z,
                 }),
@@ -3535,7 +3535,7 @@ function lA(e) {
                 children: (0, d.jsx)(lf.A, {
                     title: q.intl.string(q.t["+xqy3d"]),
                     subtitle: q.intl.format(q.t.ef4uZ7, { onResendClick: K }),
-                    error: S,
+                    error: T,
                     onSubmit: M,
                     onCancel: Z,
                 }),
@@ -3554,7 +3554,7 @@ function lA(e) {
                 password: I,
                 errors: O,
                 loginSource: w,
-                dismissedChooseAccount: T,
+                dismissedChooseAccount: S,
                 setDismissedChooseAccount: y,
                 conditionalMediationAbortController: k,
                 onLoginChange: J,
@@ -3586,15 +3586,15 @@ let lC = new lv(E.h, {
     },
 });
 var lI = n(509434),
-    lS = n(970116);
-let lT = function () {
+    lT = n(970116);
+let lS = function () {
     return (0, d.jsx)(P.Ay, {
         children: (0, d.jsxs)("div", {
-            className: lS.hQ,
+            className: lT.hQ,
             children: [
-                (0, d.jsx)(P.hE, { className: lS.DD, children: q.intl.string(q.t.nCB6Ga) }),
+                (0, d.jsx)(P.hE, { className: lT.DD, children: q.intl.string(q.t.nCB6Ga) }),
                 (0, d.jsx)(P.tK, {
-                    className: lS.VA,
+                    className: lT.VA,
                     children: q.intl.format(q.t.KQgoxG, { underageMessage: q.intl.string(q.t.WqEH4D) }),
                 }),
                 (0, d.jsx)(W.$, {
@@ -3624,7 +3624,7 @@ function lR(e) {
         [c, u] = h.useState(!1),
         [m, g] = h.useState(!1);
     async function f() {
-        T.length > 0 && !lb.A.wasRegistrationSuggestionFetched(T) && (await ly.A.fetchSuggestionsRegistration(T));
+        S.length > 0 && !lb.A.wasRegistrationSuggestionFetched(S) && (await ly.A.fetchSuggestionsRegistration(S));
     }
     function p(e) {
         L.default.track(D.HAw.REGISTER_INPUT_FOCUS, { field: e });
@@ -3638,8 +3638,8 @@ function lR(e) {
         N = h.useRef(null),
         v = h.useRef(null),
         C = h.useRef(null),
-        [I, S] = h.useState(t),
-        [T, y] = h.useState(""),
+        [I, T] = h.useState(t),
+        [S, y] = h.useState(""),
         [b, R] = h.useState(""),
         [O, k] = h.useState(""),
         [w, G] = h.useState(null),
@@ -3677,7 +3677,7 @@ function lR(e) {
                 (await nt({
                     email: I,
                     username: b,
-                    globalName: T,
+                    globalName: S,
                     consent: U,
                     password: O,
                     invite: n?.code,
@@ -3693,7 +3693,7 @@ function lR(e) {
                 let e = (0, t4.W)(t);
                 (Y(e), s?.(e), "number" == typeof e.retry_after && z(e.retry_after));
             }
-        }, [i, l, n, I, s, o, _, b, T, O, w, U, z]),
+        }, [i, l, n, I, s, o, _, b, S, O, w, U, z]),
         ef = h.useCallback(
             (e) => {
                 if ((e?.preventDefault(), null == A)) return;
@@ -3721,7 +3721,7 @@ function lR(e) {
                         name: "email",
                         value: I,
                         onChange: (e) => {
-                            (S(e), r?.(e), es(0 === e.length ? q.intl.string(q.t.EkokLy) : null));
+                            (T(e), r?.(e), es(0 === e.length ? q.intl.string(q.t.EkokLy) : null));
                         },
                         error: el ?? tY(J),
                         type: "email",
@@ -3735,7 +3735,7 @@ function lR(e) {
                         label: q.intl.string(q.t["9AjdkD"]),
                         className: $.SX,
                         name: "global_name",
-                        value: T,
+                        value: S,
                         onChange: y,
                         error: tY(et),
                         maxLength: 32,
@@ -3783,7 +3783,7 @@ function lR(e) {
                             (0, d.jsx)(nE, {
                                 username: b,
                                 suggestion: _,
-                                globalName: T,
+                                globalName: S,
                                 isUsernameFocused: m,
                                 onClickSuggestion: () => {
                                     (N.current?.focus(), null != _ && _.length > 0 && (R(_), ea(null)));
@@ -4013,8 +4013,8 @@ function lB(e) {
         [E, A] = t$(a),
         [_, j] = h.useState(!1),
         [N, v] = h.useState({}),
-        { username: C, global_name: I, date_of_birth: S } = N,
-        [T, y] = tZ();
+        { username: C, global_name: I, date_of_birth: T } = N,
+        [S, y] = tZ();
     h.useEffect(() => {
         null == f && c.current?.focus();
     }, [f, c]);
@@ -4082,7 +4082,7 @@ function lB(e) {
                                           onChange: (e) => {
                                               (p(e), null != e && k(null));
                                           },
-                                          error: O ?? tY(S),
+                                          error: O ?? tY(T),
                                           value: f,
                                       }),
                                       (0, d.jsx)(nl, { consent: E, consentRequired: a, onConsentChange: A }),
@@ -4141,8 +4141,8 @@ function lH(e) {
         j = (0, x.bG)([ln.A], () => ln.A.getHasLoggedInAccounts()),
         N = null != e.location ? (0, m.parse)(e.location.search) : {},
         [v, C] = h.useState(N.email ?? ""),
-        [I, S] = h.useState({}),
-        T = (0, iz.Ay)(E),
+        [I, T] = h.useState({}),
+        S = (0, iz.Ay)(E),
         y = (function (e, t, n) {
             if (null != e) return "gift";
             if (null != t) return "guild_template";
@@ -4173,8 +4173,8 @@ function lH(e) {
             (0, B.d0)("register"));
     }),
         h.useEffect(() => {
-            E && !1 === T && ((0, lF.C)(lM.zY.ORGANIC_REGISTERED), O());
-        }, [E, T, O]));
+            E && !1 === S && ((0, lF.C)(lM.zY.ORGANIC_REGISTERED), O());
+        }, [E, S, O]));
     let k = lV.FULL;
     (_ || null != I.date_of_birth ? (k = lV.AGE_GATE) : b && (k = lV.INVITE),
         (0, li.A)(
@@ -4206,13 +4206,13 @@ function lH(e) {
         },
         [v, s, n, l, o, a, c, f],
     );
-    if (_ || null != I.date_of_birth) return (0, d.jsx)(lT, {});
+    if (_ || null != I.date_of_birth) return (0, d.jsx)(lS, {});
     if (null != s && b)
         return (0, d.jsx)(lB, {
             invite: s,
             authBoxClassName: t,
             hideInviteHeader: r,
-            onApiErrors: S,
+            onApiErrors: T,
             onGotoLogin: w,
             onRegister: u,
         });
@@ -4232,7 +4232,7 @@ function lH(e) {
         invite: s,
         giftCode: n,
         guildTemplate: l,
-        onApiErrors: S,
+        onApiErrors: T,
         onEmailChange: C,
         onGotoLogin: w,
         onRegister: u,
@@ -4663,19 +4663,19 @@ function l2(e) {
 var l3 = n(821418),
     l4 = n(665260),
     l8 = n(362474),
-    l5 = n(695366),
-    l7 = n(964486),
+    l7 = n(695366),
+    l5 = n(964486),
     l9 = n(374063),
     l6 = n(921037),
     se = (((a = {}).IN_CONTENT = "in_content"), (a.BELOW_CONTENT = "below_content"), a);
-let st = (0, tS.mj)({
+let st = (0, tT.mj)({
     name: "2026-09-silp-direct-to-discoverable",
     kind: "installation",
     defaultConfig: { placement: null },
     variations: { 0: { placement: null }, 1: { placement: "in_content" }, 2: { placement: "below_content" } },
 });
 var sn = (((o = {}).IN_CONTENT = "in_content"), (o.BELOW_CONTENT = "below_content"), o);
-let si = (0, tS.mj)({
+let si = (0, tT.mj)({
     name: "2026-09-silp-app-opened-direct-to-discoverable",
     kind: "installation",
     defaultConfig: { placement: null },
@@ -4718,14 +4718,14 @@ function so(e) {
           });
 }
 var sc = n(804070);
-let su = (0, tS.mj)({
+let su = (0, tT.mj)({
     name: "2026-09-silp-desktop-app-upsell",
     kind: "user",
     defaultConfig: { label: null },
     variations: { 1: { label: "download_discord_app" }, 2: { label: "download_app" }, 3: { label: "get_discord" } },
 });
 var sd = (((c = {}).POPOVER = "popover"), (c.SIDEBAR = "sidebar"), c);
-let sh = (0, tS.mj)({
+let sh = (0, tT.mj)({
     name: "2026-09-invite-silp-education",
     kind: "installation",
     defaultConfig: { variant: null },
@@ -4885,12 +4885,12 @@ function sI(e) {
         role: l ?? "img",
     });
 }
-var sS = n(789645),
-    sT = n(915089),
+var sT = n(789645),
+    sS = n(915089),
     sy = n(479789);
 function sb(e) {
     let { visible: t, onLearnMore: n, onDismiss: i, learnMoreRef: l } = e,
-        s = (0, sT.GV)();
+        s = (0, sS.GV)();
     return (0, sp.createPortal)(
         (0, d.jsx)(tM.N, {
             theme: D.NJ8.DARK,
@@ -4907,7 +4907,7 @@ function sb(e) {
                             children: (0, d.jsx)(t1.m, {
                                 text: q.intl.string(q.t.cpT0Cq),
                                 children: (0, d.jsx)(sx.K, {
-                                    icon: sS.P,
+                                    icon: sT.P,
                                     "aria-label": q.intl.string(q.t.cpT0Cq),
                                     variant: "secondary",
                                     size: "sm",
@@ -5231,7 +5231,7 @@ function sz(e) {
                                     color: "text-feedback-critical",
                                     style: { display: "flex", alignItems: "center", gap: 4 },
                                     children: [
-                                        (0, d.jsx)(l5.E, {
+                                        (0, d.jsx)(l7.E, {
                                             size: "custom",
                                             width: 14,
                                             height: 14,
@@ -5406,13 +5406,13 @@ function s4(e) {
 }
 (x.Ay.initialize(), n(426620), x.Ay.initialize());
 let s8 = ij(lA),
-    s5 = ij(function (e) {
+    s7 = ij(function (e) {
         let { transitionTo: t } = e,
             n = h.useCallback(
                 (e) => {
                     let n;
                     ((n = (0, sJ.B)(e, { path: D.BVt.CHANNEL(nF.pv.guildId(), nF.pv.channelId()) })),
-                    +(n?.params?.channelId !== S.VV.ROLE_SUBSCRIPTIONS))
+                    +(n?.params?.channelId !== T.VV.ROLE_SUBSCRIPTIONS))
                         ? (t ?? U.pX)(e)
                         : U.bG(e);
                 },
@@ -5428,7 +5428,7 @@ let s8 = ij(lA),
             let { handoffKey: t, handoffToken: n, handoffSource: i } = e;
             ((0, v.Qh)({ handoffKey: t, handoffToken: n, handoffSource: i }), o(!1));
         }
-        return ((0, l7.Ay)(() => {
+        return ((0, l5.Ay)(() => {
             if (null != s) {
                 let { handoff_key: e, handoff_token: t } = (0, m.parse)(s.search);
                 if (null != e && null != t) {
@@ -5445,7 +5445,7 @@ let s8 = ij(lA),
             ? (0, d.jsx)(P.Ay, { children: (0, d.jsx)(eG.y, {}) })
             : (0, d.jsx)(lA, { ...e, transitionTo: n });
     }),
-    s7 = ij(function (e) {
+    s5 = ij(function (e) {
         let { inviteKey: t, location: n, transitionTo: i, login: l } = e,
             s = h.useMemo(() => (0, e0.m0)(t), [t]),
             r = (0, x.bG)([tt.A], () => tt.A.getInvite(t)),
@@ -5459,7 +5459,7 @@ let s8 = ij(lA),
                     h.useEffect(() => {
                         let e = !1;
                         return (
-                            eT().then((t) => {
+                            eS().then((t) => {
                                 e || "denied" !== t || n(!0);
                             }),
                             () => {
@@ -5517,7 +5517,7 @@ let s8 = ij(lA),
                 i(c);
             }, [c, i]);
         if (
-            ((0, l7.Ay)(() => {
+            ((0, l5.Ay)(() => {
                 let e = eZ.default.getAnalyticsToken();
                 if (
                     (null != e
@@ -5630,16 +5630,16 @@ let s8 = ij(lA),
         let I = a === D.fAW.OPEN;
         if (f || I || r.state === D.elq.APP_OPENED)
             return (0, d.jsx)(sX, { invite: r, inviteKey: t, rpcConnected: I, onContinue: N });
-        let { state: S } = r;
-        if (S === D.elq.APP_NOT_OPENED) return (0, d.jsx)(sZ, { handleDefaultTransition: C });
-        if ([D.elq.RESOLVING, D.elq.ACCEPTING, D.elq.APP_OPENING].includes(S)) {
+        let { state: T } = r;
+        if (T === D.elq.APP_NOT_OPENED) return (0, d.jsx)(sZ, { handleDefaultTransition: C });
+        if ([D.elq.RESOLVING, D.elq.ACCEPTING, D.elq.APP_OPENING].includes(T)) {
             let e =
-                S === D.elq.ACCEPTING ? q.intl.string(q.t["6wsY16"]) : (D.elq.RESOLVING, q.intl.string(q.t["Z+hCVU"]));
+                T === D.elq.ACCEPTING ? q.intl.string(q.t["6wsY16"]) : (D.elq.RESOLVING, q.intl.string(q.t["Z+hCVU"]));
             return (0, d.jsx)(sY, { title: e });
         }
-        if (S === D.elq.EXPIRED) return (0, d.jsx)(s$, { banned: !1, invite: r, handleDefaultTransition: C });
-        if (S === D.elq.BANNED) return (0, d.jsx)(s$, { banned: !0, invite: r, handleDefaultTransition: C });
-        if (S === D.elq.RESOLVED) {
+        if (T === D.elq.EXPIRED) return (0, d.jsx)(s$, { banned: !1, invite: r, handleDefaultTransition: C });
+        if (T === D.elq.BANNED) return (0, d.jsx)(s$, { banned: !0, invite: r, handleDefaultTransition: C });
+        if (T === D.elq.RESOLVED) {
             if (o && (0, l4.Lt)(r.flags ?? 0, l3.Q.IS_GUEST_INVITE))
                 return (
                     j.Ay.openApp(t),
@@ -5665,7 +5665,7 @@ let s8 = ij(lA),
                           transitionTo: i,
                       });
         }
-        return S === D.elq.RESOLVED || S === D.elq.ERROR
+        return T === D.elq.RESOLVED || T === D.elq.ERROR
             ? (0, d.jsx)(sz, {
                   invite: r,
                   inviteKey: t,
@@ -5722,7 +5722,7 @@ let s8 = ij(lA),
                   });
         }
         if (
-            ((0, l7.Ay)(() => {
+            ((0, l5.Ay)(() => {
                 (0, B.d0)("authorize_ip");
                 let e = (0, ex.A)(t);
                 null == e
@@ -5804,7 +5804,7 @@ let s8 = ij(lA),
         let { location: t, transitionTo: n = s4 } = e,
             [i, l] = h.useState("submitting"),
             s = h.useRef(void 0);
-        (0, l7.Ay)(() => {
+        (0, l5.Ay)(() => {
             (0, B.d0)("verify_email");
             let e = (0, ex.A)(t);
             null == e
@@ -6001,7 +6001,7 @@ let s8 = ij(lA),
                 search: t.search,
             });
         }
-        return (0, d.jsx)(iS, { match: t, location: n, attemptDeepLink: i });
+        return (0, d.jsx)(iT, { match: t, location: n, attemptDeepLink: i });
     }),
     rd = ij(function (e) {
         let { match: t, location: n } = e;
@@ -6013,7 +6013,7 @@ let s8 = ij(lA),
                 slug: e.params.slug,
             });
         }
-        return (0, d.jsx)(iS, { match: t, location: n, attemptDeepLink: i });
+        return (0, d.jsx)(iT, { match: t, location: n, attemptDeepLink: i });
     }),
     rh = ij(function (e) {
         let { match: t, location: n } = e;
@@ -6024,7 +6024,7 @@ let s8 = ij(lA),
                 search: t.search,
             });
         }
-        return (0, d.jsx)(iS, { match: t, location: n, attemptDeepLink: i });
+        return (0, d.jsx)(iT, { match: t, location: n, attemptDeepLink: i });
     }),
     rm = ij(function (e) {
         let { location: t } = e,
@@ -6283,7 +6283,7 @@ class rp extends h.PureComponent {
             withGuildExperiments: f.Fr || f.v1,
         });
         if (null != t && (ea(t), null != t.type && tc.uR.has(t.type))) {
-            if ("denied" === (await eT()))
+            if ("denied" === (await eS()))
                 return void L.default.track(D.HAw.INVITE_APP_INVOKE_FAILED, {
                     invite_code: (0, e0.m0)(e),
                     reason: "lna_denied",
@@ -6318,7 +6318,7 @@ class rp extends h.PureComponent {
         return (0, d.jsxs)(iN.A, {
             splash: e,
             children: [
-                (0, d.jsx)(er.A, { path: D.BVt.LOGIN_HANDOFF, render: (e) => (0, d.jsx)(s5, { ...e, redirectTo: t }) }),
+                (0, d.jsx)(er.A, { path: D.BVt.LOGIN_HANDOFF, render: (e) => (0, d.jsx)(s7, { ...e, redirectTo: t }) }),
                 (0, d.jsx)(er.A, { path: D.BVt.LOGIN_ONE_TIME, render: (e) => (0, d.jsx)(rf, { ...e }) }),
                 (0, d.jsx)(er.A, {
                     impressionName: g.ImpressionNames.USER_LOGIN,
@@ -6350,7 +6350,7 @@ class rp extends h.PureComponent {
                         return f.Fr || f.v1
                             ? (0, d.jsx)(re, { inviteKey: s, transitionTo: l }, s)
                             : (0, d.jsx)(
-                                  s7,
+                                  s5,
                                   {
                                       inviteKey: s,
                                       location: i,

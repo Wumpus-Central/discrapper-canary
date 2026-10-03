@@ -4,9 +4,9 @@ var i = n(582128),
     l = n(118751),
     s = n(17928);
 n(166352);
-var u = n(409626),
-    a = n(692969),
-    o = n(773669),
+var o = n(409626),
+    u = n(692969),
+    a = n(773669),
     c = n(287809),
     d = n(975571),
     f = n(474090),
@@ -16,11 +16,11 @@ var u = n(409626),
     A = n(834730),
     C = n(862611),
     _ = n(398889),
-    S = n(590202),
-    I = n(284846),
+    I = n(590202),
+    S = n(284846),
     T = n(546121),
-    N = n(651892),
-    p = n(901406),
+    p = n(651892),
+    N = n(901406),
     h = n(801365),
     L = n(792620),
     R = n(814793),
@@ -49,12 +49,12 @@ function w(e) {
     let { quest: t, gameProfileSource: n, withoutMarkdown: i = !1 } = e,
         r = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
         l = (0, v.I3)(t),
-        o = !1 === (0, I.U)(t).hasAlreadyLinked,
+        a = !1 === (0, S.U)(t).hasAlreadyLinked,
         m = (0, L.I6)(t) ? (0, L.xc)(t) : (0, L._3)(t)?.[0],
-        S = (0, a.A)({
+        I = (0, u.A)({
             applicationId: m,
             location: G.rE.QUEST_INSTRUCTIONS,
-            source: n ?? u.GameProfileSources.QuestHome,
+            source: n ?? o.GameProfileSources.QuestHome,
         }),
         T = !i;
     return (function (e) {
@@ -65,18 +65,18 @@ function w(e) {
                 sourceQuestContent: r,
                 withoutMarkdown: l,
                 currentUser: s,
-                popoutTargetElementRef: u,
-                onGameSheetOpened: a,
-                onGameSheetClosed: o,
+                popoutTargetElementRef: o,
+                onGameSheetOpened: u,
+                onGameSheetClosed: a,
                 onGameTitleClick: c,
                 needsToConnect: m,
             } = e,
-            S = (0, f.ki)(s, x.PremiumTypes.TIER_2),
-            I = (0, h.k5)(t.config),
+            I = (0, f.ki)(s, x.PremiumTypes.TIER_2),
+            S = (0, h.k5)(t.config),
             T = (0, L.g5)(t) && (0, L.xZ)(t),
-            N = (0, R.ui)(t),
-            p = (0, h.mH)(t.config, s);
-        if (N)
+            p = (0, R.ui)(t),
+            N = (0, h.mH)(t.config, s);
+        if (p)
             return (function (e) {
                 let {
                         quest: t,
@@ -85,11 +85,11 @@ function w(e) {
                         withoutMarkdown: r,
                         popoutTargetElementRef: l,
                         onGameSheetOpened: s,
-                        onGameSheetClosed: u,
-                        rewardNameWithArticle: a,
+                        onGameSheetClosed: o,
+                        rewardNameWithArticle: u,
                     } = e,
-                    { targetMinutes: o, applications: c } = n;
-                if (r) return P.intl.formatToPlainString(P.t["1votF6"], { rewardNameWithArticle: a, targetMinutes: o });
+                    { targetMinutes: a, applications: c } = n;
+                if (r) return P.intl.formatToPlainString(P.t["1votF6"], { rewardNameWithArticle: u, targetMinutes: a });
                 let d = (function (e) {
                     let {
                         quest: t,
@@ -130,7 +130,7 @@ function w(e) {
                     applications: c ?? [],
                     popoutTargetElementRef: l,
                     onGameSheetOpened: s,
-                    onGameSheetClosed: u,
+                    onGameSheetClosed: o,
                 });
                 return (function (e) {
                     let { quest: t, gameSheetHook: n, rewardNameWithArticle: i, targetMinutes: r } = e,
@@ -144,18 +144,18 @@ function w(e) {
                             [G.Li.PACKAGE_NEW_YEARS]: P.t["8+sIJz"],
                         },
                         s = t.config.features.find((e) => e in l),
-                        u = (null != s ? l[s] : null) ?? P.t.CDeHul;
-                    return P.intl.format(u, { rewardNameWithArticle: i, targetMinutes: r, gameSheetHook: n });
-                })({ quest: t, rewardNameWithArticle: a, targetMinutes: o, gameSheetHook: d });
+                        o = (null != s ? l[s] : null) ?? P.t.CDeHul;
+                    return P.intl.format(o, { rewardNameWithArticle: i, targetMinutes: r, gameSheetHook: n });
+                })({ quest: t, rewardNameWithArticle: u, targetMinutes: a, gameSheetHook: d });
             })({
                 quest: t,
                 taskDetails: n,
                 sourceQuestContent: r,
                 withoutMarkdown: l,
-                popoutTargetElementRef: u,
-                onGameSheetOpened: a,
-                onGameSheetClosed: o,
-                rewardNameWithArticle: p,
+                popoutTargetElementRef: o,
+                onGameSheetOpened: u,
+                onGameSheetClosed: a,
+                rewardNameWithArticle: N,
             });
         if (T)
             return (function (e) {
@@ -166,10 +166,10 @@ function w(e) {
                         hasNitro: r,
                         collectibleRewardDuration: l,
                         onGameTitleClick: s,
-                        rewardNameWithArticle: u,
+                        rewardNameWithArticle: o,
                     } = e,
-                    { targetMinutes: a } = n,
-                    o = t.config.messages.gameTitle,
+                    { targetMinutes: u } = n,
+                    a = t.config.messages.gameTitle,
                     c = (0, h.JX)(t.config),
                     d = (0, h.Y7)(t.config),
                     f = t.config.features.includes(G.Li.NON_GAMING_PLAY_QUEST),
@@ -193,11 +193,11 @@ function w(e) {
                             ? P.t["e+K3xJ"]
                             : q(m),
                     {
-                        gameTitle: o,
-                        streamingDurationRequirement: a,
-                        rewardNameWithArticle: u,
+                        gameTitle: a,
+                        streamingDurationRequirement: u,
+                        rewardNameWithArticle: o,
                         duration: l,
-                        targetMinutes: a,
+                        targetMinutes: u,
                         onGameTitleClick: s,
                     },
                     i,
@@ -206,10 +206,10 @@ function w(e) {
                 quest: t,
                 taskDetails: n,
                 withoutMarkdown: l,
-                hasNitro: S,
-                collectibleRewardDuration: I,
+                hasNitro: I,
+                collectibleRewardDuration: S,
                 onGameTitleClick: c,
-                rewardNameWithArticle: p,
+                rewardNameWithArticle: N,
             });
         if ((0, L.g5)(t))
             return (function (e) {
@@ -220,10 +220,10 @@ function w(e) {
                         hasNitro: r,
                         collectibleRewardDuration: l,
                         onGameTitleClick: s,
-                        rewardNameWithArticle: u,
+                        rewardNameWithArticle: o,
                     } = e,
-                    { targetMinutes: a } = n,
-                    o = t.config.messages.gameTitle,
+                    { targetMinutes: u } = n,
+                    a = t.config.messages.gameTitle,
                     c = (0, h.JX)(t.config),
                     d = (0, h.Y7)(t.config),
                     f = null != s;
@@ -236,11 +236,11 @@ function w(e) {
                           ? k(f)
                           : q(f),
                     {
-                        gameTitle: o,
-                        targetMinutes: a,
-                        rewardNameWithArticle: u,
+                        gameTitle: a,
+                        targetMinutes: u,
+                        rewardNameWithArticle: o,
                         duration: l,
-                        streamingDurationRequirement: a,
+                        streamingDurationRequirement: u,
                         onGameTitleClick: s,
                     },
                     i,
@@ -249,10 +249,10 @@ function w(e) {
                 quest: t,
                 taskDetails: n,
                 withoutMarkdown: l,
-                hasNitro: S,
-                collectibleRewardDuration: I,
+                hasNitro: I,
+                collectibleRewardDuration: S,
                 onGameTitleClick: c,
-                rewardNameWithArticle: p,
+                rewardNameWithArticle: N,
             });
         if ((0, L.xZ)(t))
             return (function (e) {
@@ -263,15 +263,15 @@ function w(e) {
                         withoutMarkdown: r,
                         hasNitro: l,
                         collectibleRewardDuration: s,
-                        onGameTitleClick: u,
-                        rewardNameWithArticle: a,
+                        onGameTitleClick: o,
+                        rewardNameWithArticle: u,
                     } = e,
-                    { targetMinutes: o } = i,
+                    { targetMinutes: a } = i,
                     c = n.config.messages.gameTitle,
                     d = (0, h.JX)(n.config),
                     f = (0, h.Y7)(n.config),
                     m = n.config.features.includes(G.Li.NON_GAMING_PLAY_QUEST),
-                    g = null != u;
+                    g = null != o;
                 return M(
                     (t =
                         l && d
@@ -295,11 +295,11 @@ function w(e) {
                                   : P.t.FZL5Q5),
                     {
                         gameTitle: c,
-                        streamingDurationRequirement: o,
-                        rewardNameWithArticle: a,
+                        streamingDurationRequirement: a,
+                        rewardNameWithArticle: u,
                         duration: s,
-                        questReward: a,
-                        onGameTitleClick: u,
+                        questReward: u,
+                        onGameTitleClick: o,
                     },
                     r,
                 );
@@ -307,10 +307,10 @@ function w(e) {
                 quest: t,
                 taskDetails: n,
                 withoutMarkdown: l,
-                hasNitro: S,
-                collectibleRewardDuration: I,
+                hasNitro: I,
+                collectibleRewardDuration: S,
                 onGameTitleClick: c,
-                rewardNameWithArticle: p,
+                rewardNameWithArticle: N,
             });
         if ((0, h.kr)({ quest: t }))
             return (function (e) {
@@ -333,25 +333,25 @@ function w(e) {
                         rewardNameWithArticle: l,
                     } = e,
                     s = (0, L.Xi)(t.config),
-                    u = s?.messages.videoTitle ?? "video",
-                    a = (0, h.JX)(t.config),
-                    o = (0, h.Y7)(t.config);
+                    o = s?.messages.videoTitle ?? "video",
+                    u = (0, h.JX)(t.config),
+                    a = (0, h.Y7)(t.config);
                 return M(
-                    a && i
-                        ? o
+                    u && i
+                        ? a
                             ? null != n
                                 ? P.t.tXwfJT
                                 : P.t["xqX+r5"]
                             : P.t["vs/xBu"]
-                        : a || null != n
+                        : u || null != n
                           ? P.t["W/HkLO"]
                           : t.id === G.Fw
                             ? P.t.Rsd5bL
                             : P.t["g+InPC"],
-                    { videoTitle: u, rewardNameWithArticle: l, duration: n },
+                    { videoTitle: o, rewardNameWithArticle: l, duration: n },
                     r,
                 );
-            })({ quest: t, collectibleRewardDuration: I, hasNitro: S, withoutMarkdown: l, rewardNameWithArticle: p });
+            })({ quest: t, collectibleRewardDuration: S, hasNitro: I, withoutMarkdown: l, rewardNameWithArticle: N });
         else if ((0, L.vl)(t))
             return (function (e) {
                 let { quest: t, taskDetails: n, withoutMarkdown: i, rewardNameWithArticle: r } = e,
@@ -380,7 +380,7 @@ function w(e) {
                             },
                             i,
                         );
-            })({ quest: t, taskDetails: n, withoutMarkdown: l, rewardNameWithArticle: p });
+            })({ quest: t, taskDetails: n, withoutMarkdown: l, rewardNameWithArticle: N });
         else if ((0, L.I6)(t) && null != i)
             return (function (e) {
                 let {
@@ -390,15 +390,15 @@ function w(e) {
                         hasNitro: r,
                         collectibleRewardDuration: l,
                         onGameTitleClick: s,
-                        rewardNameWithArticle: u,
-                        needsToConnect: a,
+                        rewardNameWithArticle: o,
+                        needsToConnect: u,
                     } = e,
-                    o = t.config.messages.gameTitle,
+                    a = t.config.messages.gameTitle,
                     c = (0, h.JX)(t.config),
                     d = (0, h.Y7)(t.config),
                     f = null != s;
                 return M(
-                    a
+                    u
                         ? f
                             ? P.t["0SLl/G"]
                             : P.t.BlfaHK
@@ -425,17 +425,17 @@ function w(e) {
                             : f
                               ? P.t.bxN0nx
                               : P.t.thO6iA,
-                    { gameTitle: o, objective: n.description, duration: l, questReward: u, onGameTitleClick: s },
+                    { gameTitle: a, objective: n.description, duration: l, questReward: o, onGameTitleClick: s },
                     i,
                 );
             })({
                 quest: t,
                 thirdPartyTaskDetails: i,
                 withoutMarkdown: l,
-                hasNitro: S,
-                collectibleRewardDuration: I,
+                hasNitro: I,
+                collectibleRewardDuration: S,
                 onGameTitleClick: c,
-                rewardNameWithArticle: p,
+                rewardNameWithArticle: N,
                 needsToConnect: m,
             });
         return null != i
@@ -448,10 +448,10 @@ function w(e) {
                           hasNitro: r,
                           collectibleRewardDuration: l,
                           onGameTitleClick: s,
-                          rewardNameWithArticle: u,
+                          rewardNameWithArticle: o,
                       } = e,
-                      { targetMinutes: a } = n,
-                      o = t.config.messages.gameTitle,
+                      { targetMinutes: u } = n,
+                      a = t.config.messages.gameTitle,
                       c = (0, h.JX)(t.config),
                       d = (0, h.Y7)(t.config),
                       f = null != s;
@@ -476,10 +476,10 @@ function w(e) {
                               ? P.t.ER9rII
                               : P.t["hkJ+Gs"],
                       {
-                          gameTitle: o,
-                          streamingDurationRequirement: a,
+                          gameTitle: a,
+                          streamingDurationRequirement: u,
                           duration: l,
-                          questReward: u,
+                          questReward: o,
                           onGameTitleClick: s,
                       },
                       i,
@@ -488,18 +488,18 @@ function w(e) {
                   quest: t,
                   taskDetails: n,
                   withoutMarkdown: l,
-                  hasNitro: S,
-                  collectibleRewardDuration: I,
+                  hasNitro: I,
+                  collectibleRewardDuration: S,
                   onGameTitleClick: c,
-                  rewardNameWithArticle: p,
+                  rewardNameWithArticle: N,
               });
     })({
         ...e,
         currentUser: r,
         withoutMarkdown: i,
         thirdPartyTaskDetails: l ?? void 0,
-        onGameTitleClick: T ? S : void 0,
-        needsToConnect: o,
+        onGameTitleClick: T ? I : void 0,
+        needsToConnect: a,
     });
 }
 function U(e, t, n, i, r) {
@@ -512,9 +512,9 @@ function U(e, t, n, i, r) {
             popoutTargetElementRef: r,
             gameProfileSource: i,
         }),
-        u = e.userStatus?.claimedAt != null,
-        a = (0, v.S5)(e.userStatus?.claimedAt);
-    return u ? P.intl.formatToPlainString(P.t.lOVr0O, { claimDate: a }) : s;
+        o = e.userStatus?.claimedAt != null,
+        u = (0, v.S5)(e.userStatus?.claimedAt);
+    return o ? P.intl.formatToPlainString(P.t.lOVr0O, { claimDate: u }) : s;
 }
 function j(e) {
     let {
@@ -523,8 +523,8 @@ function j(e) {
             sourceQuestContent: i,
             activeScreen: r,
             popoutTargetElementRef: l,
-            onGameSheetOpened: a,
-            onGameSheetClosed: o,
+            onGameSheetOpened: u,
+            onGameSheetClosed: a,
             hasAlreadyLinked: d,
             onClickGameTitle: f,
         } = e,
@@ -533,22 +533,22 @@ function j(e) {
         A = (0, v.fc)(t),
         C = (0, v.I3)(t),
         _ = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
-        S = t.userStatus?.completedAt != null,
-        I = t.userStatus?.enrolledAt != null,
+        I = t.userStatus?.completedAt != null,
+        S = t.userStatus?.enrolledAt != null,
         T = A.percentComplete > 0,
-        p = (0, v.Vn)(t),
+        N = (0, v.Vn)(t),
         O = w({
             quest: t,
             location: G.rE.QUESTS_BAR,
             taskDetails: A,
             sourceQuestContent: i,
             popoutTargetElementRef: l,
-            onGameSheetOpened: a,
-            onGameSheetClosed: o,
-            gameProfileSource: u.GameProfileSources.QuestBar,
+            onGameSheetOpened: u,
+            onGameSheetClosed: a,
+            gameProfileSource: o.GameProfileSources.QuestBar,
         }),
         x = null != C ? C.percentComplete : A.percentComplete;
-    if (S) return P.intl.formatToPlainString(P.t.APddvF, { expirationDate: E });
+    if (I) return P.intl.formatToPlainString(P.t.APddvF, { expirationDate: E });
     if ((0, L.I6)(t) && !1 === d) return P.intl.string(P.t.mAdqf7);
     if (n) {
         if ((0, L.I6)(t) && !0 === d) {
@@ -557,7 +557,7 @@ function j(e) {
                 ? P.intl.format(P.t.X8hBDz, { gameTitle: e, onClickGameTitle: f })
                 : P.intl.format(P.t.u3mdpP, { gameTitle: e });
         }
-        if (r !== m.X0.SELECT && (0, R.ui)(t) && I && !T) {
+        if (r !== m.X0.SELECT && (0, R.ui)(t) && S && !T) {
             let e = (0, h.mH)(t.config, _);
             return P.intl.format(P.t["1votF6"], { rewardNameWithArticle: e, targetMinutes: A.targetMinutes });
         }
@@ -568,19 +568,19 @@ function j(e) {
         : x > 0
           ? (0, L.I6)(t) && !0 === d
               ? P.intl.string(P.t.JkyCIO)
-              : p
-                ? (0, N.YT)({ quest: t, taskDetails: A, thirdPartyTaskDetails: C ?? void 0 })
+              : N
+                ? (0, p.YT)({ quest: t, taskDetails: A, thirdPartyTaskDetails: C ?? void 0 })
                 : P.intl.string(P.t.mOrpXG)
           : P.intl.string(P.t.S6UUc5);
 }
 function Q(e, t) {
-    let n = (0, s.bG)([o.default], () => o.default.locale),
+    let n = (0, s.bG)([a.default], () => a.default.locale),
         i = (0, v.fc)(e),
         [r] = (0, v.Qo)(e, i),
-        u = (0, v.I3)(e),
-        a = e.userStatus?.completedAt != null,
-        c = null != u ? u.percentComplete : i.percentComplete;
-    if (a) return P.intl.string(P.t["ij5E/5"]);
+        o = (0, v.I3)(e),
+        u = e.userStatus?.completedAt != null,
+        c = null != o ? o.percentComplete : i.percentComplete;
+    if (u) return P.intl.string(P.t["ij5E/5"]);
     if ((0, L.I6)(e) && !1 === t) return P.intl.string(P.t.s9r2a1);
     if ((0, L.I6)(e) && !0 === t && 0 === c) return P.intl.string(P.t["2+opCy"]);
     if (e.userStatus?.enrolledAt != null && c > 0) {
@@ -627,17 +627,17 @@ function F(e) {
         i = (0, h.kr)({ quest: t }),
         r = n?.platform ?? m.pY.CROSS_PLATFORM,
         l = i ? (0, h.cg)({ quest: t, idx: n?.tier ?? t.userStatus?.claimedTier }) : null,
-        s = (0, N.xv)(t.config),
-        u = l?.messages?.redemptionInstructionsByPlatform ?? s.messages.redemptionInstructionsByPlatform;
-    return null != r ? u[r] : void 0;
+        s = (0, p.xv)(t.config),
+        o = l?.messages?.redemptionInstructionsByPlatform ?? s.messages.redemptionInstructionsByPlatform;
+    return null != r ? o[r] : void 0;
 }
 function X(e) {
-    let { quest: t, questContent: n, preCtaClick: l, getImpressionId: s, sourceQuestContent: u } = e;
-    async function a() {
+    let { quest: t, questContent: n, preCtaClick: l, getImpressionId: s, sourceQuestContent: o } = e;
+    async function u() {
         (await l?.(),
-            (0, p.pu)(t, { content: n, ctaContent: S.Cy.OPEN_GAME_LINK, impressionId: s?.(), sourceQuestContent: u }));
+            (0, N.pu)(t, { content: n, ctaContent: I.Cy.OPEN_GAME_LINK, impressionId: s?.(), sourceQuestContent: o }));
     }
-    let o = i.useMemo(() => {
+    let a = i.useMemo(() => {
         let e = t.config.ctaConfig?.subtitle;
         return null != e
             ? e
@@ -650,11 +650,11 @@ function X(e) {
                 : P.intl.string(P.t["wirwN+"]);
     }, [t]);
     return {
-        ctaText: (0, N.wr)(t),
+        ctaText: (0, p.wr)(t),
         ctaVariant: "secondary",
-        onClickCta: a,
+        onClickCta: u,
         title: t.config.messages.gameTitle,
-        subtitle: o,
+        subtitle: a,
         ctaIconPosition: "end",
     };
 }

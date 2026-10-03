@@ -1,7 +1,7 @@
 n.d(t, { A: () => m });
 var i = n(582128),
-    s = n(17928),
-    l = n(71393),
+    l = n(17928),
+    s = n(71393),
     a = n(576705),
     r = n(935208),
     o = n(624458),
@@ -12,10 +12,10 @@ function m(e) {
     let [t, n] = i.useState(!1),
         [m, x] = i.useState(!1),
         h = r.default.cast(e),
-        { joinRequest: g, guild: f } = (0, s.cf)([c.A, d.A, l.A, a.A], () => {
+        { joinRequest: g, guild: f } = (0, l.cf)([c.A, d.A, s.A, a.A], () => {
             let e = c.A.getRequest(h);
             if (null == e) return { joinRequest: null, isModmin: !1, guild: null };
-            let t = l.A.getGuild(e.guildId) ?? d.A.getJoinRequestGuild(e.guildId);
+            let t = s.A.getGuild(e.guildId) ?? d.A.getJoinRequestGuild(e.guildId);
             return { joinRequest: e, isModmin: null != t && a.A.can(u.xBc.KICK_MEMBERS, t), guild: t };
         });
     return (

@@ -1,37 +1,37 @@
-n.d(r, { Nx: () => d, Qq: () => c, Wd: () => u, Zt: () => o });
-var t = n(196765),
-    l = n(462887),
-    i = n(736653),
-    a = n(543699),
-    s = n(652215);
-let o = (0, t.v)()((e) => ({
+t.d(r, { Nx: () => a, Qq: () => m, Wd: () => d, Zt: () => s });
+var n = t(196765),
+    l = t(462887),
+    i = t(736653),
+    u = t(543699),
+    o = t(652215);
+let s = (0, n.v)()((e) => ({
     themeOverride: null,
     savedClientTheme: null,
     setThemeOverride: (r) => e({ themeOverride: r }),
     setSavedClientTheme: (r) => e({ savedClientTheme: r }),
 }));
-function u() {
+function d() {
     let e,
-        r = o((e) => e.themeOverride),
-        n = (0, i.Ay)();
+        r = s((e) => e.themeOverride),
+        t = (0, i.Ay)();
     if (null == r) return null;
-    let t = null,
-        u = null;
+    let n = null,
+        d = null;
     return (
         "nitro" === r.mode
-            ? ((t = r.themeColors?.[0] ?? null),
-              (u = r.themeColors?.[1] ?? null),
-              (e = null != t && null != u ? ((0, a.tM)(t) ?? n) : n))
-            : (e = r.themeType ?? n),
-        e === s.NJ8.ASH && (0, l.M)(n) ? (e = n) : e === s.NJ8.ASH && (0, l.q)(n) && (e = s.NJ8.DARK),
-        { theme: e, primaryColor: t, secondaryColor: u }
+            ? ((n = r.themeColors?.[0] ?? null),
+              (d = r.themeColors?.[1] ?? null),
+              (e = null != n && null != d ? ((0, u.tM)(n) ?? t) : t))
+            : (e = r.themeType ?? t),
+        e === o.NJ8.ASH && (0, l.M)(t) ? (e = t) : e === o.NJ8.ASH && (0, l.q)(t) && (e = o.NJ8.DARK),
+        { theme: e, primaryColor: n, secondaryColor: d }
     );
 }
-function d() {
-    let e = o((e) => e.themeOverride);
+function a() {
+    let e = s((e) => e.themeOverride);
     return null != e && ("non-nitro" === e.mode || !0 === e.disableBanner);
 }
-function c() {
-    let e = o((e) => e.themeOverride);
+function m() {
+    let e = s((e) => e.themeOverride);
     return null != e && "non-nitro" === e.mode;
 }

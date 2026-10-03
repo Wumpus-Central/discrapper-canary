@@ -2,19 +2,19 @@ n.d(t, { h: () => E });
 var s = n(477900);
 n(582128);
 var i = n(192308),
-    a = n(287809),
-    l = n(166403),
+    l = n(287809),
+    a = n(166403),
     o = n(625494),
-    r = n(158045),
-    u = n(598653),
+    u = n(158045),
+    r = n(598653),
     c = n(202541),
     d = n(652215);
 function E(e) {
     let { processedCode: t, channelContext: E, customGiftMessage: _, giftInfo: C } = e,
-        T = !1,
-        h = null,
-        A = a.default.getCurrentUser(),
-        g = (0, r.CC)(A?.premiumType, c.PremiumTypes.TIER_0);
+        h = !1,
+        A = null,
+        T = l.default.getCurrentUser(),
+        p = (0, u.CC)(T?.premiumType, c.PremiumTypes.TIER_0);
     (0, i.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([
@@ -44,19 +44,19 @@ function E(e) {
                     emojiName: C?.emoji?.name,
                     soundId: C?.sound?.id,
                     onComplete: (e, t) => {
-                        ((h = e),
-                            t && ((T = t), e.isSubscription && null == l.A.getPremiumSubscription(!1) && (0, u.o)(!0)));
+                        ((A = e),
+                            t && ((h = t), e.isSubscription && null == a.A.getPremiumSubscription(!1) && (0, r.o)(!0)));
                     },
                     ...n,
                 });
         },
         {
             onCloseCallback: () => {
-                T &&
-                    null != h &&
-                    !g &&
-                    h.isSubscription &&
-                    h?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
+                h &&
+                    null != A &&
+                    !p &&
+                    A.isSubscription &&
+                    A?.subscriptionPlan?.premiumSubscriptionType === c.PremiumTypes.TIER_2 &&
                     o._.dispatch(d.jej.PREMIUM_SUBSCRIPTION_CREATED);
             },
         },

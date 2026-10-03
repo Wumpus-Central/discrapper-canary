@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Nr: "card__1660a",
     rf: "body__1660a",
     Gq: "authorize__1660a",

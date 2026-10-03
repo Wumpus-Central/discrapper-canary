@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     x7: "chatLogList__2b71e",
     q3: "chatRowContinuation__2b71e",
     tC: "chat-row-enter__2b71e",

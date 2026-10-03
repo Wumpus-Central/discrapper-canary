@@ -1,5 +1,6 @@
 !(function () {
     var t = function (e) {
+        "use strict";
         e = e || {};
         var t,
             r,
@@ -13,11 +14,11 @@
             u,
             h,
             d,
-            p,
             f,
+            p,
             m,
             g,
-            b = {
+            y = {
                 bgColor: "#d00",
                 textColor: "#fff",
                 fontFamily: "sans-serif",
@@ -29,44 +30,44 @@
                 dataUrl: !1,
                 win: window,
             };
-        (((p = {}).ff = "u" > typeof InstallTrigger),
-            (p.chrome = !!window.chrome),
-            (p.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
-            (p.ie = !1),
-            (p.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
-            (p.supported = p.chrome || p.ff || p.opera));
-        var y = [];
+        (((f = {}).ff = "u" > typeof InstallTrigger),
+            (f.chrome = !!window.chrome),
+            (f.opera = !!window.opera || navigator.userAgent.indexOf("Opera") >= 0),
+            (f.ie = !1),
+            (f.safari = Object.prototype.toString.call(window.HTMLElement).indexOf("Constructor") > 0),
+            (f.supported = f.chrome || f.ff || f.opera));
+        var b = [];
         ((h = function () {}), (l = d = !1));
-        var v = {};
-        ((v.ready = function () {
-            ((l = !0), v.reset(), h());
+        var w = {};
+        ((w.ready = function () {
+            ((l = !0), w.reset(), h());
         }),
-            (v.reset = function () {
+            (w.reset = function () {
                 l &&
-                    ((y = []),
+                    ((b = []),
                     (c = !1),
                     (u = !1),
                     i.clearRect(0, 0, a, n),
                     i.drawImage(s, 0, 0, a, n),
-                    x.setIcon(o),
-                    window.clearTimeout(f),
+                    _.setIcon(o),
+                    window.clearTimeout(p),
                     window.clearTimeout(m));
             }),
-            (v.start = function () {
+            (w.start = function () {
                 if (l && !u) {
                     var e = function () {
-                        ((c = y[0]), (u = !1), y.length > 0 && (y.shift(), v.start()));
+                        ((c = b[0]), (u = !1), b.length > 0 && (b.shift(), w.start()));
                     };
-                    if (y.length > 0) {
+                    if (b.length > 0) {
                         u = !0;
                         var r = function () {
                             (["type", "animation", "bgColor", "textColor", "fontFamily", "fontStyle"].forEach(
                                 function (e) {
-                                    e in y[0].options && (t[e] = y[0].options[e]);
+                                    e in b[0].options && (t[e] = b[0].options[e]);
                                 },
                             ),
                                 R.run(
-                                    y[0].options,
+                                    b[0].options,
                                     function () {
                                         e();
                                     },
@@ -85,8 +86,8 @@
                     }
                 }
             }));
-        var w = {},
-            _ = function (e) {
+        var v = {},
+            M = function (e) {
                 return (
                     (e.n = "number" == typeof e.n ? Math.abs(0 | e.n) : e.n),
                     (e.x = a * e.x),
@@ -97,18 +98,18 @@
                     e
                 );
             };
-        function M(e) {
+        function x(e) {
             if (e.paused || e.ended || d) return !1;
             try {
                 (i.clearRect(0, 0, a, n), i.drawImage(e, 0, 0, a, n));
             } catch (e) {}
             ((m = setTimeout(function () {
-                M(e);
+                x(e);
             }, R.duration)),
-                x.setIcon(o));
+                _.setIcon(o));
         }
-        ((w.circle = function (e) {
-            e = _(e);
+        ((v.circle = function (e) {
+            e = M(e);
             var r = !1;
             (2 === e.len
                 ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w), (r = !0))
@@ -144,8 +145,8 @@
                     : i.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)),
                 i.closePath());
         }),
-            (w.rectangle = function (e) {
-                e = _(e);
+            (v.rectangle = function (e) {
+                e = M(e);
                 (2 === e.len
                     ? ((e.x = e.x - 0.4 * e.w), (e.w = 1.4 * e.w))
                     : e.len >= 3 && ((e.x = e.x - 0.65 * e.w), (e.w = 1.65 * e.w)),
@@ -167,7 +168,7 @@
                         : i.fillText(e.n, Math.floor(e.x + e.w / 2), Math.floor(e.y + e.h - 0.15 * e.h)),
                     i.closePath());
             }));
-        var x = {};
+        var _ = {};
         function C(e) {
             e = e.replace(/^#?([a-f\d])([a-f\d])([a-f\d])$/i, function (e, t, r, n) {
                 return t + t + r + r + n + n;
@@ -182,7 +183,7 @@
             for (r in t) n[r] = t[r];
             return n;
         }
-        ((x.getIcon = function () {
+        ((_.getIcon = function () {
             var e = !1;
             return (
                 t.element
@@ -207,17 +208,17 @@
                 e
             );
         }),
-            (x.setIcon = function (e) {
+            (_.setIcon = function (e) {
                 var n = e.toDataURL("image/png");
                 if ((t.dataUrl && t.dataUrl(n), t.element))
                     (t.element.setAttribute("href", n), t.element.setAttribute("src", n));
                 else if (t.elementId) {
                     var a = g.getElementById(t.elementId);
                     (a.setAttribute("href", n), a.setAttribute("src", n));
-                } else if (p.ff || p.opera) {
+                } else if (f.ff || f.opera) {
                     var o = r;
                     ((r = g.createElement("link")),
-                        p.opera && r.setAttribute("rel", "icon"),
+                        f.opera && r.setAttribute("rel", "icon"),
                         r.setAttribute("rel", "icon"),
                         r.setAttribute("type", "image/png"),
                         g.getElementsByTagName("head")[0].appendChild(r),
@@ -275,30 +276,30 @@
                 ((a = !0 === n ? (void 0 !== a ? a : i.length - 1) : void 0 !== a ? a : 0),
                 (r = r || function () {}),
                 a < i.length && a >= 0)
-                    ? (w[t.type](S(e, i[a])),
-                      (f = setTimeout(function () {
+                    ? (v[t.type](S(e, i[a])),
+                      (p = setTimeout(function () {
                           (n ? (a -= 1) : (a += 1), R.run(e, r, n, a));
                       }, R.duration)),
-                      x.setIcon(o))
+                      _.setIcon(o))
                     : r();
             }),
-            ((t = S(b, e)).bgColor = C(t.bgColor)),
+            ((t = S(y, e)).bgColor = C(t.bgColor)),
             (t.textColor = C(t.textColor)),
             (t.position = t.position.toLowerCase()),
-            (t.animation = R.types["" + t.animation] ? t.animation : b.animation),
+            (t.animation = R.types["" + t.animation] ? t.animation : y.animation),
             (g = t.win.document));
         var E = t.position.indexOf("up") > -1,
             A = t.position.indexOf("left") > -1;
         if (E || A)
             for (var T = 0; T < R.types["" + t.animation].length; T++) {
-                var k = R.types["" + t.animation][T];
-                (E && (k.y < 0.6 ? (k.y = k.y - 0.4) : (k.y = k.y - 2 * k.y + (1 - k.w))),
-                    A && (k.x < 0.6 ? (k.x = k.x - 0.4) : (k.x = k.x - 2 * k.x + (1 - k.h))),
-                    (R.types["" + t.animation][T] = k));
+                var P = R.types["" + t.animation][T];
+                (E && (P.y < 0.6 ? (P.y = P.y - 0.4) : (P.y = P.y - 2 * P.y + (1 - P.w))),
+                    A && (P.x < 0.6 ? (P.x = P.x - 0.4) : (P.x = P.x - 2 * P.x + (1 - P.h))),
+                    (R.types["" + t.animation][T] = P));
             }
         return (
-            (t.type = w["" + t.type] ? t.type : b.type),
-            (r = x.getIcon()),
+            (t.type = v["" + t.type] ? t.type : y.type),
+            (r = _.getIcon()),
             (o = document.createElement("canvas")),
             (s = document.createElement("img")),
             r.hasAttribute("href")
@@ -309,7 +310,7 @@
                           (o.height = n),
                           (o.width = a),
                           (i = o.getContext("2d")),
-                          v.ready());
+                          w.ready());
                   }),
                   s.setAttribute("src", r.getAttribute("href")))
                 : ((s.onload = function () {
@@ -320,7 +321,7 @@
                           (o.height = n),
                           (o.width = a),
                           (i = o.getContext("2d")),
-                          v.ready());
+                          w.ready());
                   }),
                   s.setAttribute("src", "")),
             {
@@ -334,19 +335,19 @@
                                         ("animation" in t &&
                                             R.types["" + t.animation] &&
                                             (r.options.animation = "" + t.animation),
-                                        "type" in t && w["" + t.type] && (r.options.type = "" + t.type),
+                                        "type" in t && v["" + t.type] && (r.options.type = "" + t.type),
                                         ["bgColor", "textColor"].forEach(function (e) {
                                             e in t && (r.options[e] = C(t[e]));
                                         }),
                                         ["fontStyle", "fontFamily"].forEach(function (e) {
                                             e in t && (r.options[e] = t[e]);
                                         }),
-                                        y.push(r),
-                                        y.length > 100)
+                                        b.push(r),
+                                        b.length > 100)
                                     )
                                         throw Error("Too many badges requests in queue.");
-                                    v.start();
-                                } else v.reset();
+                                    w.start();
+                                } else w.reset();
                             } catch (e) {
                                 throw Error("Error setting badge. Message: " + e.message);
                             }
@@ -357,13 +358,13 @@
                     ((h = function () {
                         try {
                             if ("stop" === e) {
-                                ((d = !0), v.reset(), (d = !1));
+                                ((d = !0), w.reset(), (d = !1));
                                 return;
                             }
                             e.addEventListener(
                                 "play",
                                 function () {
-                                    M(this);
+                                    x(this);
                                 },
                                 !1,
                             );
@@ -382,7 +383,7 @@
                                 l = t / a < r / n ? t / a : r / n;
                             (s.setAttribute("crossOrigin", "anonymous"),
                                 (s.onload = function () {
-                                    (i.clearRect(0, 0, a, n), i.drawImage(s, 0, 0, a, n), x.setIcon(o));
+                                    (i.clearRect(0, 0, a, n), i.drawImage(s, 0, 0, a, n), _.setIcon(o));
                                 }),
                                 s.setAttribute("src", e.getAttribute("src")),
                                 (s.height = r / l),
@@ -400,7 +401,7 @@
                             (window.URL.createObjectURL = function (e) {
                                 return e;
                             })),
-                        p.supported)
+                        f.supported)
                     ) {
                         var t = !1;
                         ((navigator.getUserMedia =
@@ -412,7 +413,7 @@
                             (h = function () {
                                 try {
                                     if ("stop" === e) {
-                                        ((d = !0), v.reset(), (d = !1));
+                                        ((d = !0), w.reset(), (d = !1));
                                         return;
                                     }
                                     (((t = document.createElement("video")).width = a),
@@ -420,7 +421,7 @@
                                         navigator.getUserMedia(
                                             { video: !0, audio: !1 },
                                             function (e) {
-                                                ((t.src = URL.createObjectURL(e)), t.play(), M(t));
+                                                ((t.src = URL.createObjectURL(e)), t.play(), x(t));
                                             },
                                             function () {},
                                         ));
@@ -431,8 +432,8 @@
                             l && h());
                     }
                 },
-                reset: v.reset,
-                browser: { supported: p.supported },
+                reset: w.reset,
+                browser: { supported: f.supported },
             }
         );
     };

@@ -1,29 +1,29 @@
-c.d(u, { X: () => s });
-var t = c(582128),
-    r = c(17928),
-    e = c(77468),
-    l = c(30370);
-function s(n) {
-    let u = (0, r.bG)([l.A], () => (null != n ? l.A.getAccount(null, n) : null)),
-        c = (0, r.bG)([l.A], () => l.A.isFetching()),
-        s = null != u && !u.revoked;
+n.d(t, { X: () => s });
+var i = n(582128),
+    r = n(17928),
+    l = n(77468),
+    a = n(30370);
+function s(e) {
+    let t = (0, r.bG)([a.A], () => (null != e ? a.A.getAccount(null, e) : null)),
+        n = (0, r.bG)([a.A], () => a.A.isFetching()),
+        s = null != t && !t.revoked;
     return {
-        loading: c,
+        loading: n,
         hasConnection: s,
-        canConnect: null != n,
-        startConnection: t.useCallback(
-            async (u) => {
-                if (null == n) return { success: !1 };
+        canConnect: null != e,
+        startConnection: i.useCallback(
+            async (t) => {
+                if (null == e) return { success: !1 };
                 try {
-                    let c = await e.A.authorize(n, { location: u ?? "Account Linking" });
-                    if (c.body?.url != null) return { success: !0, url: c.body.url };
+                    let n = await l.A.authorize(e, { location: t ?? "Account Linking" });
+                    if (n.body?.url != null) return { success: !0, url: n.body.url };
                     return { success: !1 };
-                } catch (n) {
+                } catch (e) {
                     return { success: !1 };
                 }
             },
-            [n],
+            [e],
         ),
-        account: u,
+        account: t,
     };
 }

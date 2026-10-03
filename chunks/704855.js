@@ -73,20 +73,20 @@ function f() {
                         C = Number.isFinite(M) && Math.abs(M - i) > 16;
                     if (!v && (!A || C)) return;
                     b = Math.min(1, Math.max(0, b + ((A ? 1 : -1) * j) / 260));
-                    let w = t.getBoundingClientRect(),
-                        E = w.width > 0 ? w.width / f : 1,
+                    let E = t.getBoundingClientRect(),
+                        w = E.width > 0 ? E.width / f : 1,
                         S = a.getBoundingClientRect(),
-                        L = (S.left - w.left) / E,
-                        N = (1 - Math.min(1, Math.abs(L + S.width / E / 2 - i) / 16)) * b;
-                    if (N < 0.01) {
+                        L = (S.left - E.left) / w,
+                        W = (1 - Math.min(1, Math.abs(L + S.width / w / 2 - i) / 16)) * b;
+                    if (W < 0.01) {
                         (v && n.clearRect(0, 0, f, h), (v = !1));
                         return;
                     }
                     (v || (y = r), (v = !0), n.clearRect(0, 0, f, h));
-                    let W = L - 1 - (1 - N) * 16,
+                    let N = L - 1 - (1 - W) * 16,
                         R = (r - k) / 1e3,
                         I = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (r - y) / 1500))) ** 3),
-                        P = Math.ceil(W / p);
+                        P = Math.ceil(N / p);
                     n.fillStyle = l;
                     for (let e = 0; e < 3; e++) {
                         let t = 72 * (0.825 + 0.35 * c(e, 11)),
@@ -103,9 +103,9 @@ function f() {
                             x = Math.abs(u - h / 2) < f;
                         for (let t = 0; t < P; t++) {
                             let r,
-                                o = W - (t * p + m / 2);
+                                o = N - (t * p + m / 2);
                             if (o < 0) break;
-                            let d = (W - o) / l;
+                            let d = (N - o) / l;
                             if (d >= 1) break;
                             let h = Math.min(6, Math.floor(7 * (1 - d ** a)));
                             ((r =
@@ -121,7 +121,7 @@ function f() {
                                             let t = Math.min(1, Math.max(0, e));
                                             return t * t * (3 - 2 * t);
                                         })((1 - d) / 0.34) *
-                                        N),
+                                        W),
                                     n.fillText(r, o, u)));
                         }
                     }

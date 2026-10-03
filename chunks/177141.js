@@ -240,29 +240,29 @@ let e$ = {
     e5 = {},
     e3 = Object.freeze({ id: null, message: null, buttonText: null, callback: void 0, metadata: null }),
     e7 = null;
-function e9(e) {
+function e8(e) {
     return e0[e] + "-untilAtLeast";
 }
 function e6(e, t, n) {
     if (null == e) return;
     let i = e0[e];
     (null == i || t || o.w.set(i, !0), e1.has(e) && (e2[e] = !0), null != n && null != i)
-        ? o.w.set(e9(e), n.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
-        : o.w.remove(e9(e));
+        ? o.w.set(e8(e), n.format("YYYY-MM-DDTHH:mm:ss.SSSZ"))
+        : o.w.remove(e8(e));
 }
-let e8 = null;
+let e9 = null;
 function e4() {
-    if (null != e8) return e8;
+    if (null != e9) return e9;
     try {
         let e = document.createElement("canvas").getContext("2d"),
             t = "\uE700\uE701\uE702\uE703\uE704\uE705\uE706\uE707";
         e.font = "16px monospace";
         let n = e.measureText(t).width;
-        ((e.font = '16px "Segoe MDL2 Assets", monospace'), (e8 = e.measureText(t).width !== n));
+        ((e.font = '16px "Segoe MDL2 Assets", monospace'), (e9 = e.measureText(t).width !== n));
     } catch (e) {
-        e8 = !1;
+        e9 = !1;
     }
-    return e8;
+    return e9;
 }
 function te(e) {
     if (null == e) return !1;
@@ -276,7 +276,7 @@ function te(e) {
     let i = e0[e];
     if (null != i) {
         let t,
-            n = null != (t = o.w.get(e9(e))) ? l()(t) : null;
+            n = null != (t = o.w.get(e8(e))) ? l()(t) : null;
         if (null != n) return n?.isAfter(l()());
     }
     let r = e2[e];

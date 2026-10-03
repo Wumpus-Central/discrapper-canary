@@ -1,58 +1,58 @@
-i.d(t, { A: () => g });
-var a = i(477900),
-    l = i(582128),
-    s = i(503698),
-    n = i.n(s),
-    r = i(589812),
-    c = i(598748),
-    o = i(331322),
-    d = i(834730),
-    u = i(890856),
-    m = i(619517),
-    x = i(183555),
-    p = i(946356),
-    f = i(981006);
-function h(e) {
-    let { applicationName: t, applicationIcon: i } = e;
-    return (0, a.jsxs)(o.B, {
+a.d(n, { A: () => x });
+var s = a(477900),
+    i = a(582128),
+    c = a(503698),
+    t = a.n(c),
+    r = a(589812),
+    l = a(598748),
+    u = a(331322),
+    o = a(834730),
+    I = a(890856),
+    d = a(619517),
+    h = a(183555),
+    p = a(946356),
+    E = a(981006);
+function f(e) {
+    let { applicationName: n, applicationIcon: a } = e;
+    return (0, s.jsxs)(u.B, {
         direction: "horizontal",
         gap: 4,
         children: [
-            null != i
-                ? (0, a.jsx)(m.Ay, { width: 16, height: 16, src: i, className: f.In })
-                : (0, a.jsx)("div", { className: f.Fi }),
-            (0, a.jsx)(d.E, { variant: "text-xs/medium", children: t }),
+            null != a
+                ? (0, s.jsx)(d.Ay, { width: 16, height: 16, src: a, className: E.In })
+                : (0, s.jsx)("div", { className: E.Fi }),
+            (0, s.jsx)(o.E, { variant: "text-xs/medium", children: n }),
         ],
     });
 }
-function g(e) {
-    let { application: t, rendererProps: i, className: s, onClick: o, renderText: d } = e,
-        { trackUserProfileAction: m } = (0, x.NJ)(),
-        g = i.surfaceConfigs[c.m.MINI_PROFILE],
-        j = t.id;
+function x(e) {
+    let { application: n, rendererProps: a, className: c, onClick: u, renderText: o } = e,
+        { trackUserProfileAction: d } = (0, h.NJ)(),
+        x = a.surfaceConfigs[l.m.MINI_PROFILE],
+        m = n.id;
     return (!(function (e) {
-        let { trackUserProfileAction: t } = (0, x.NJ)(),
-            i = l.useRef(!1);
-        l.useEffect(() => {
-            i.current || (t({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (i.current = !0));
-        }, [t, e]);
-    })(j),
-    null == g)
+        let { trackUserProfileAction: n } = (0, h.NJ)(),
+            a = i.useRef(!1);
+        i.useEffect(() => {
+            a.current || (n({ action: "VIEW_APPLICATION_WIDGET_PREVIEW", applicationId: e }), (a.current = !0));
+        }, [n, e]);
+    })(m),
+    null == x)
         ? null
-        : (0, a.jsx)(u.s, {
+        : (0, s.jsx)(I.s, {
               onClick: (e) => {
                   e.target?.closest("a") == null &&
-                      (m({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: j }), o?.());
+                      (d({ action: "PRESS_APPLICATION_WIDGET_PREVIEW", applicationId: m }), u?.());
               },
-              "aria-label": t.name,
-              children: (0, a.jsx)(p.A.Overlay, {
-                  className: n()(f.kL, s),
-                  children: (0, a.jsx)(r.kH, {
-                      ...i,
-                      renderText: d,
-                      surface: c.m.MINI_PROFILE,
-                      surfaceConfig: g,
-                      header: (0, a.jsx)(h, { applicationName: t.name, applicationIcon: t.getIconURL(16) }),
+              "aria-label": n.name,
+              children: (0, s.jsx)(p.A.Overlay, {
+                  className: t()(E.kL, c),
+                  children: (0, s.jsx)(r.kH, {
+                      ...a,
+                      renderText: o,
+                      surface: l.m.MINI_PROFILE,
+                      surfaceConfig: x,
+                      header: (0, s.jsx)(f, { applicationName: n.name, applicationIcon: n.getIconURL(16) }),
                   }),
               }),
           });

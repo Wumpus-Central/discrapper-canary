@@ -1,10 +1,10 @@
-n.d(t, { Ar: () => _, Xv: () => f, Z0: () => p, qs: () => h, xA: () => u });
+n.d(t, { Ar: () => g, Xv: () => f, Z0: () => p, qs: () => h, xA: () => o });
 var i = n(587895),
     r = n(174459),
     l = n(972786),
-    o = n(683180),
+    a = n(683180),
     s = n(652215);
-let u = {
+let o = {
     BUILD_FAILED: "BUILD_FAILED",
     HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED",
     AGENT_ERROR: "AGENT_ERROR",
@@ -14,14 +14,14 @@ let u = {
     RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR",
     RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR",
 };
-function a(e) {
+function u(e) {
     return null == e || "" === e ? null : e.slice(0, 256);
 }
 function d(e) {
     let t = l.Ay.getProject(e);
     return {
         project_id: e,
-        project_name: a(t?.name),
+        project_name: u(t?.name),
         application_id: t?.application_id ?? null,
         preview_application_id: t?.preview_application_id ?? null,
     };
@@ -30,14 +30,14 @@ function c(e, t) {
     let n = l.Ay.getProject(e),
         i = (t ? n?.preview_guild_id : n?.guild_id) ?? null,
         r = (t ? n?.preview_application_id : n?.application_id) ?? null;
-    return { guild_id: i, channel_id: null != i && null != r ? (0, o.SH)(i, r) : null };
+    return { guild_id: i, channel_id: null != i && null != r ? (0, a.SH)(i, r) : null };
 }
 function f(e, t) {
     var n;
     r.default.track(s.HAw.VIBEGRATION_TURN_RESULTED, {
         ...d(e),
         turn_result: t.result ?? null,
-        turn_summary: a(t.detail ?? t.summary),
+        turn_summary: u(t.detail ?? t.summary),
         turn_cost: t.cost_usd ?? null,
         ...(null == (n = t.tokens)
             ? {
@@ -60,38 +60,38 @@ function f(e, t) {
 function h(e, t) {
     let { isPreview: n } = t,
         l = d(e),
-        o = n ? l.preview_application_id : l.application_id,
-        u = null != o ? i.A.getApplication(o) : null;
+        a = n ? l.preview_application_id : l.application_id,
+        o = null != a ? i.A.getApplication(a) : null;
     r.default.track(s.HAw.VIBEGRATION_DEPLOYED, {
         ...l,
-        project_summary: a(u?.description),
+        project_summary: u(o?.description),
         is_preview: n,
         ...c(e, n),
     });
 }
 function p(e, t) {
-    let { location: n, code: i, message: l, details: o, isPreview: u = !0 } = t;
+    let { location: n, code: i, message: l, details: a, isPreview: o = !0 } = t;
     r.default.track(s.HAw.VIBEGRATION_ERRORED, {
         ...d(e),
-        is_preview: u,
-        ...c(e, u),
+        is_preview: o,
+        ...c(e, o),
         error_location: n,
         error_code: i,
-        error_message: a(l),
-        error_details: a(o),
+        error_message: u(l),
+        error_details: u(a),
     });
 }
-function _(e, t) {
-    let { entryPoint: n, publishState: i, surface: o, installScope: u, action: a } = t,
+function g(e, t) {
+    let { entryPoint: n, publishState: i, surface: a, installScope: o, action: u } = t,
         d = l.Ay.getProject(e);
     r.default.track(s.HAw.VIBEGRATION_PUBLISH_ACTION_CLICKED, {
         project_id: e,
         application_id: d?.application_id ?? null,
-        guild_id: "user" === u ? null : (d?.guild_id ?? null),
+        guild_id: "user" === o ? null : (d?.guild_id ?? null),
         entry_point: n,
         publish_state: i,
-        surface: o,
-        install_scope: u,
-        action: a,
+        surface: a,
+        install_scope: o,
+        action: u,
     });
 }
