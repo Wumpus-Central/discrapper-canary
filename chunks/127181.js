@@ -251,6 +251,13 @@ let l = [
             "Conjure can ask questions where you pick several answers at once, and add your own words alongside them.",
     },
     {
+        date: "2026-10-03",
+        time: "00:20",
+        platforms: ["desktop"],
+        summary:
+            "Conjure can look at your profile widget the way Discord shows it and fix what looks off, while you have the project open.",
+    },
+    {
         date: "2026-09-27",
         time: "04:34",
         platforms: ["desktop", "mobile"],

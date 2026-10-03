@@ -717,35 +717,35 @@ function e0(e) {
                                                         n.e("817989"),
                                                         n.e("952548"),
                                                         n.e("577084"),
-                                                        n.e("693832"),
                                                         n.e("193158"),
+                                                        n.e("693832"),
                                                         n.e("455924"),
                                                         n.e("523276"),
                                                         n.e("812042"),
                                                         n.e("102328"),
                                                         n.e("729963"),
                                                         n.e("830938"),
+                                                        n.e("324622"),
                                                         n.e("895785"),
                                                         n.e("665455"),
                                                         n.e("35485"),
+                                                        n.e("795093"),
                                                         n.e("837687"),
                                                         n.e("73536"),
+                                                        n.e("446800"),
                                                         n.e("538513"),
                                                         n.e("147864"),
-                                                        n.e("28561"),
-                                                        n.e("324622"),
                                                         n.e("370112"),
                                                         n.e("241176"),
+                                                        n.e("306306"),
                                                         n.e("348900"),
-                                                        n.e("182069"),
                                                         n.e("920282"),
                                                         n.e("963584"),
-                                                        n.e("446800"),
                                                         n.e("384996"),
+                                                        n.e("121570"),
                                                         n.e("896137"),
                                                         n.e("50097"),
                                                         n.e("263791"),
-                                                        n.e("306306"),
                                                         n.e("654282"),
                                                         n.e("363618"),
                                                         n.e("644816"),
@@ -868,7 +868,7 @@ function e0(e) {
     });
 }
 var e1 = n(207851);
-function e8(e) {
+function e2(e) {
     let [t, n] = o.useState(void 0);
     return (
         o.useEffect(() => {
@@ -877,7 +877,7 @@ function e8(e) {
         t
     );
 }
-function e2(e) {
+function e8(e) {
     let { application: t, context: n, name: l, iconURL: i, scrollerRef: s, sectionName: a } = e,
         c = (0, eg.q)((0, eI.Ay)()),
         d = o.useRef(null),
@@ -896,8 +896,8 @@ function e2(e) {
                 })?.hex() ?? A,
             [A, c],
         ),
-        x = e8(d),
-        N = e8(u),
+        x = e2(d),
+        N = e2(u),
         E = o.useCallback(() => {
             let e = s.current,
                 t = d.current,
@@ -1456,7 +1456,7 @@ function tD(e) {
             role: "region",
             "aria-label": et.intl.formatToPlainString(et.t["4OP4Uk"], { applicationName: N }),
             children: [
-                (0, r.jsx)(e2, { application: a, context: t, name: N, iconURL: h, scrollerRef: d, sectionName: l }),
+                (0, r.jsx)(e8, { application: a, context: t, name: N, iconURL: h, scrollerRef: d, sectionName: l }),
                 null != h && (0, r.jsx)(j.A, { src: h, className: tU.Z }),
                 (0, r.jsx)(x.h, { size: 54 }),
                 (0, r.jsx)(c ? tw : tT, { context: t, application: a, sectionName: l, hasCommands: u }),
@@ -1529,8 +1529,8 @@ var tQ = n(111042),
     tJ = n(939635),
     t0 = n(111162),
     t1 = n(403362),
-    t8 = n(179771),
-    t2 = n(168186),
+    t2 = n(179771),
+    t8 = n(168186),
     t3 = n(594061),
     t7 = n(935208),
     t5 = n(630248),
@@ -1554,7 +1554,7 @@ function t6(e, t) {
                 null == n.getEntry(e.application.id) && n.track(e.application.id, { timestamp: t });
             }),
                 n.compute());
-            let e = i?.map((e) => (0, t2.bq)(e.application, !0)) ?? [],
+            let e = i?.map((e) => (0, t8.bq)(e.application, !0)) ?? [],
                 t = [...l];
             return (
                 t.push(...e),
@@ -2193,8 +2193,8 @@ function nJ(e) {
     }));
 var n0 = n(984516),
     n1 = n(935573),
-    n8 = n(651753),
-    n2 = n(485845),
+    n2 = n(651753),
+    n8 = n(485845),
     n3 = n(994369),
     n7 = n(240591),
     n5 = n(46477);
@@ -2707,13 +2707,13 @@ function lh(e) {
                 u = o.useRef(c);
             u.current = c;
             let { fetchState: m, totalPages: p } = (0, A.cf)(
-                    [n8.A],
+                    [n2.A],
                     () => ({
-                        fetchState: n8.A.getFetchState({
+                        fetchState: n2.A.getFetchState({
                             query: n,
                             guildId: r,
                             page: c,
-                            integrationType: n2.b.USER_INSTALL,
+                            integrationType: n8.b.USER_INSTALL,
                             minUserInstallCommandCount: 1,
                             excludeAppsWithCustomInstallUrl: !0,
                             excludeNonEmbeddedApps: a,
@@ -2721,11 +2721,11 @@ function lh(e) {
                             source: n3.V.APP_LAUNCHER,
                         }),
                         totalPages:
-                            n8.A.getSearchResults({
+                            n2.A.getSearchResults({
                                 query: n,
                                 guildId: r,
                                 page: c,
-                                integrationType: n2.b.USER_INSTALL,
+                                integrationType: n8.b.USER_INSTALL,
                                 minUserInstallCommandCount: 1,
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
@@ -2738,13 +2738,13 @@ function lh(e) {
                 h = o.useMemo(
                     () =>
                         Array.from(
-                            { length: m === n8.e.FETCHED || m === n8.e.ERROR ? c : c - 1 },
+                            { length: m === n2.e.FETCHED || m === n2.e.ERROR ? c : c - 1 },
                             (e, t) =>
-                                n8.A.getSearchResults({
+                                n2.A.getSearchResults({
                                     query: n,
                                     guildId: r,
                                     page: t + 1,
-                                    integrationType: n2.b.USER_INSTALL,
+                                    integrationType: n8.b.USER_INSTALL,
                                     minUserInstallCommandCount: 1,
                                     excludeAppsWithCustomInstallUrl: !0,
                                     excludeNonEmbeddedApps: a,
@@ -2756,7 +2756,7 @@ function lh(e) {
                 ),
                 f = o.useCallback(() => {
                     let e = h.length;
-                    m === n8.e.FETCHED &&
+                    m === n2.e.FETCHED &&
                         e === u.current &&
                         e > 0 &&
                         e < p &&
@@ -2772,7 +2772,7 @@ function lh(e) {
                             guildId: l,
                             options: {
                                 page: n,
-                                integrationType: n2.b.USER_INSTALL,
+                                integrationType: n8.b.USER_INSTALL,
                                 minUserInstallCommandCount: 1,
                                 excludeAppsWithCustomInstallUrl: !0,
                                 excludeNonEmbeddedApps: a,
@@ -2794,9 +2794,9 @@ function lh(e) {
             );
         })({ query: n, context: t, fetches: !0, pageLimit: 5, entrypoint: l });
     o.useEffect(() => {
-        i && h === n8.e.FETCHED && x();
+        i && h === n2.e.FETCHED && x();
     }, [x, h, i]);
-    let N = null == h || h === n8.e.FETCHING,
+    let N = null == h || h === n2.e.FETCHING,
         E = o.useMemo(() => {
             let e = p.map((e) => ({ application: e, installOnDemand: !0 })),
                 t = new Set(
@@ -3175,7 +3175,7 @@ function lS(e) {
                             i
                                 ? nt.default
                                       .getNewestTokens()
-                                      .filter((e) => e.scopes.includes(t8.F.APPLICATIONS_COMMANDS))
+                                      .filter((e) => e.scopes.includes(t2.F.APPLICATIONS_COMMANDS))
                                 : [],
                         ),
                         r = t.filter((e) => e.id !== ea.Ik.FRECENCY && e.id !== ea.Ik.BUILT_IN),

@@ -366,7 +366,7 @@ let o = new TextEncoder(),
             languageExport: "tree_sitter_markdown_inline",
             wasm: new URL(s(348820), s.b),
             highlights: new URL(s(581934), s.b),
-            injections: new URL(s(858376), s.b),
+            injections: new URL(s(635995), s.b),
         },
         matlab: {
             languageId: "matlab",

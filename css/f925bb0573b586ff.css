@@ -1,0 +1,111 @@
+.previewDmChat__8f086 {
+    min-height: 0;
+    overflow: hidden
+}
+
+.previewDmChat__8f086,
+.previewDmEmpty__8f086 {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column
+}
+
+.previewDmEmpty__8f086 {
+    align-items: center;
+    gap: var(--space-8);
+    justify-content: center;
+    padding: var(--space-16);
+    text-align: center
+}
+
+.card__1660a {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-high);
+    box-sizing: border-box;
+    color: var(--text-default);
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    max-width: 480px;
+    padding: var(--space-24) 0 var(--space-16);
+    text-align: start;
+    width: 100%
+}
+
+.body__1660a {
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 0 var(--space-24)
+}
+
+.authorize__1660a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-24)
+}
+
+.content__1660a {
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    padding: var(--space-32);
+    position: relative;
+    width: 100%
+}
+
+.content__1660a.noPadding__1660a {
+    padding: 0
+}
+
+.contentBackground__1660a {
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted)
+}
+
+.actions__1660a {
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-16) var(--space-24) 0
+}
+
+.actions__1660a>* {
+    flex: 1
+}
+
+.error__1660a {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-16) 0;
+    text-align: center
+}
+
+.previewEmpty__914bb {
+    align-items: center;
+    background: var(--background-gradient-chat, var(--background-base-lower));
+    box-sizing: border-box;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    justify-content: center;
+    padding: var(--space-24);
+    text-align: center
+}
+
+.previewEmpty__914bb,
+.previewPane__914bb {
+    display: flex;
+    min-height: 0;
+    min-width: 0
+}
+
+.previewPane__914bb {
+    flex: 1;
+    position: relative
+}
+
+/*# sourceMappingURL=f925bb0573b586ff.css.map*/
