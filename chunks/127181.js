@@ -1188,6 +1188,13 @@ let l = [
             "With Discord\u2019s Developer Mode on, a project\u2019s menu on phones has a Debug entry: your app\u2019s runtime logs, its resource use, and the agent\u2019s spend and limits.",
     },
     {
+        date: "2026-10-03",
+        time: "19:37",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "With Live Reload on, games and other canvas apps the builder makes now take edits without restarting, so a game keeps its place while you tweak it.",
+    },
+    {
         date: "2026-08-26",
         time: "00:01",
         platforms: ["desktop", "mobile"],
