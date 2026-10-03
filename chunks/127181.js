@@ -463,6 +463,13 @@ let l = [
         summary: "Moderation Bot now starts with a short wizard, builds straight away, then tells you how to test it.",
     },
     {
+        date: "2026-10-03",
+        time: "00:37",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Multiplayer games you build can keep every player in sync, with the match running live on a server while people play.",
+    },
+    {
         date: "2026-10-01",
         time: "14:16",
         platforms: ["desktop", "mobile"],
