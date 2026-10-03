@@ -2,10 +2,10 @@ n.d(t, { z: () => m });
 var i = n(477900),
     r = n(582128),
     l = n(192308),
-    s = n(376357),
-    u = n(97483),
-    a = n(475743),
-    o = n(942370),
+    s = n(739187),
+    o = n(97483),
+    u = n(475743),
+    a = n(942370),
     c = n(211850),
     d = n(375708);
 let f = "in-game-auth-check-modal";
@@ -17,9 +17,9 @@ function m(e, t) {
             function () {
                 for (var t = arguments.length, r = Array(t), s = 0; s < t; s++) r[s] = arguments[s];
                 A(!0);
-                let u = e(...r);
+                let o = e(...r);
                 return (
-                    u === o._.RPC &&
+                    o === a._.RPC &&
                         m &&
                         (0, l.openModalLazy)(
                             async () => {
@@ -28,12 +28,12 @@ function m(e, t) {
                             },
                             { modalKey: f },
                         ),
-                    u
+                    o
                 );
             },
             [e, A, m],
         ),
-        _ = (0, a.Ay)(t);
+        _ = (0, u.Ay)(t);
     return (
         r.useEffect(() => {
             if (E && !1 === _ && !0 === t) {
@@ -41,7 +41,7 @@ function m(e, t) {
                     (0, s.P)({
                         id: "account-linked-toast",
                         message: d.intl.string(c.default.uG6teD),
-                        type: u.Ck.SUCCESS,
+                        type: o.Ck.SUCCESS,
                     });
                 }
                 ((0, l.closeModal)(f),

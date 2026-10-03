@@ -765,10 +765,10 @@ var eU = t(366010),
     e0 = t(763754),
     e1 = t(20851),
     e8 = t(986687),
-    e5 = t(101058),
-    e2 = t(999291),
-    e3 = t(686189),
-    e9 = t(946356),
+    e2 = t(101058),
+    e5 = t(999291),
+    e9 = t(686189),
+    e3 = t(946356),
     e7 = t(975571),
     e6 = t(996988),
     e4 = t(228839);
@@ -785,7 +785,7 @@ function se(e) {
         m = (0, eX.Ay)(),
         f = (0, eU.M)(m),
         [h, g] = (0, n.useState)(f),
-        E = (0, e2.Ay)(s.id, null),
+        E = (0, e5.Ay)(s.id, null),
         { pendingChanges: S, tryItOutChanges: N } = (0, c.cf)([P.A], () => ({
             pendingChanges: P.A.getPendingChanges(t?.id),
             tryItOutChanges: P.A.getTryItOutChanges(),
@@ -805,11 +805,11 @@ function se(e) {
             pendingLegacyUsernameDisabled: k,
         } = S,
         M = u ? N.tryItOutAvatar : A,
-        O = (0, e5.V7)({ userId: s.id, image: M }),
+        O = (0, e2.V7)({ userId: s.id, image: M }),
         F = u ? void 0 : I,
         R = u ? N.tryItOutBanner : _,
         B = u ? N.tryItOutThemeColors : C,
-        { bannerSrc: Y } = (0, e3.A)({ displayProfile: E, size: 413, canAnimate: !1, pendingBanner: R }),
+        { bannerSrc: Y } = (0, e9.A)({ displayProfile: E, size: 413, canAnimate: !1, pendingBanner: R }),
         { userNameplate: G, guildNameplate: H, pendingNameplate: K } = (0, x.rv)(s, t?.id),
         J = (0, eV.WK)(H);
     h && !f ? (m = w.NJ8.DARK) : !h && f && (m = w.NJ8.LIGHT);
@@ -824,7 +824,7 @@ function se(e) {
         className: e4._l,
         children: [
             null != Y &&
-                (0, a.jsx)(e9.A, {
+                (0, a.jsx)(e3.A, {
                     user: s,
                     displayProfile: E,
                     themeType: e6.d.MODAL_V2,
@@ -943,7 +943,7 @@ function ss(e) {
         look: "pill",
     });
 }
-var st = t(376357),
+var st = t(739187),
     sa = t(857250),
     sn = t(97483),
     sl = t(765178);

@@ -1,79 +1,89 @@
-n.d(t, { default: () => V });
+n.d(t, { default: () => S });
 var i = n(477900),
     s = n(582128),
-    a = n(731738),
-    l = n(702841),
+    l = n(731738),
+    a = n(702841),
     r = n(772707),
     c = n(331322),
-    d = n(834730),
-    o = n(807393),
+    o = n(834730),
+    d = n(807393),
     x = n(754302),
     u = n(632738),
-    m = n(349435),
+    h = n(349435),
     _ = n(665909),
-    h = n(503698),
-    g = n.n(h),
+    g = n(503698),
+    m = n.n(g),
     p = n(231483),
-    E = n(661531),
-    f = n(376357),
+    f = n(661531),
+    E = n(858899),
+    N = n(739187),
     j = n(857250),
     y = n(97483),
-    N = n(939249),
-    A = n(340833),
-    O = n(913642),
-    C = n(544231),
-    T = n(375708),
-    b = n(472987),
-    v = n(655214);
+    A = n(939249),
+    C = n(973283),
+    O = n(340833),
+    T = n(913642),
+    b = n(544231),
+    v = n(375708),
+    D = n(472987),
+    W = n(655214);
 function k() {
     return (0, i.jsxs)("div", {
-        className: g()(v.oR, b.oR),
+        className: m()(W.oR, D.oR),
         children: [
-            (0, i.jsx)(p.ShieldIcon, { color: E.A.colors.TEXT_BRAND }),
-            (0, i.jsx)(d.E, {
-                className: v.__invalid_content,
+            (0, i.jsx)(p.ShieldIcon, { color: f.A.colors.TEXT_BRAND }),
+            (0, i.jsx)(o.E, {
+                className: W.__invalid_content,
                 color: "text-strong",
                 variant: "text-md/normal",
-                children: T.intl.string(T.t["gd/Yqs"]),
+                children: v.intl.string(v.t["gd/Yqs"]),
             }),
         ],
     });
 }
-function D(e) {
-    let { channelId: t, warningId: n, senderId: a, safetyWarning: l } = e,
-        r = s.useMemo(() => l?.feedback_type === m.fy.UPVOTE, [l]),
-        c = s.useMemo(() => l?.feedback_type === m.fy.DOWNVOTE, [l]),
-        o = s.useCallback(
+function I(e) {
+    let { channelId: t, warningId: n, senderId: l, safetyWarning: a } = e,
+        r = s.useMemo(() => a?.feedback_type === h.fy.UPVOTE, [a]),
+        c = s.useMemo(() => a?.feedback_type === h.fy.DOWNVOTE, [a]),
+        d = s.useCallback(
             (e, s) => {
-                l?.feedback_type !== e &&
-                    ((0, C.v2)(t, n, e),
-                    (0, f.P)((0, j.o)(T.intl.string(T.t["gd/Yqs"]), y.Ck.CUSTOM, { component: (0, i.jsx)(k, {}) })),
-                    (0, _._$)({ channelId: t, warningId: n, senderId: a, warningType: l?.type, cta: s }));
+                a?.feedback_type !== e &&
+                    ((0, b.v2)(t, n, e),
+                    (0, C.WD)("WasThisHelpfulSection")
+                        ? (0, E.P0)({
+                              text: v.intl.string(v.t["gd/Yqs"]),
+                              icon: p.ShieldIcon,
+                              iconColor: f.A.colors.ICON_BRAND,
+                          })
+                        : (0, N.P)(
+                              (0, j.o)(v.intl.string(v.t["gd/Yqs"]), y.Ck.CUSTOM, { component: (0, i.jsx)(k, {}) }),
+                          ),
+                    (0, _._$)({ channelId: t, warningId: n, senderId: l, warningType: a?.type, cta: s }));
             },
-            [l, t, n, a],
+            [a, t, n, l],
         );
     return (0, i.jsxs)("div", {
-        className: b.mp,
+        className: D.mp,
         children: [
-            (0, i.jsx)(d.E, { variant: "text-sm/medium", color: "text-default", children: T.intl.string(T.t.L84yVm) }),
+            (0, i.jsx)(o.E, { variant: "text-sm/medium", color: "text-default", children: v.intl.string(v.t.L84yVm) }),
             (0, i.jsxs)("div", {
-                className: b.NC,
+                className: D.NC,
                 children: [
-                    (0, i.jsx)(N.D, {
-                        className: g()([b.eH, r ? b.QT : b.LM, { [b.r9]: r }]),
-                        onClick: () => o(m.fy.UPVOTE, _.Wm.FEEDBACK_UPVOTE),
-                        "aria-label": T.intl.string(T.t["2GrOCN"]),
-                        children: (0, i.jsx)(O.A, {
-                            className: b.__invalid_buttonIcon,
+                    (0, i.jsx)(A.D, {
+                        className: m()([D.eH, r ? D.QT : D.LM, { [D.r9]: r }]),
+                        onClick: () => d(h.fy.UPVOTE, _.Wm.FEEDBACK_UPVOTE),
+                        "aria-label": v.intl.string(v.t["2GrOCN"]),
+                        children: (0, i.jsx)(T.A, {
+                            className: D.__invalid_buttonIcon,
                             color: "interactive-text-default",
                         }),
                     }),
-                    (0, i.jsx)(N.D, {
-                        className: g()([b.eH, c ? b.QT : b.LM, { [b.r9]: c }]),
-                        onClick: () => o(m.fy.DOWNVOTE, _.Wm.FEEDBACK_DOWNVOTE),
-                        "aria-label": T.intl.string(T.t.COp9BO),
-                        children: (0, i.jsx)(A.A, {
-                            className: b.__invalid_buttonIcon,
+                    (0, i.jsx)(A.D, {
+                        className: m()([D.eH, c ? D.QT : D.LM, { [D.r9]: c }]),
+                        onClick: () => d(h.fy.DOWNVOTE, _.Wm.FEEDBACK_DOWNVOTE),
+                        "aria-label": v.intl.string(v.t.COp9BO),
+                        children: (0, i.jsx)(O.A, {
+                            className: D.__invalid_buttonIcon,
                             color: "interactive-text-default",
                         }),
                     }),
@@ -82,55 +92,55 @@ function D(e) {
         ],
     });
 }
-var W = n(652215),
-    I = n(546);
-function V(e) {
+var V = n(652215),
+    B = n(546);
+function S(e) {
     let {
             transitionState: t,
             onClose: n,
-            channelId: h,
-            warningId: g,
+            channelId: g,
+            warningId: m,
             senderId: p,
-            description: E,
-            safetyTipRows: f,
-            actionRows: j,
-            learnMore: y,
+            description: f,
+            safetyTipRows: E,
+            actionRows: N,
+            learnMore: j,
         } = e,
-        N = (0, l.bG)([m.Ay], () => m.Ay.getChannelSafetyWarning(h, g));
+        y = (0, a.bG)([h.Ay], () => h.Ay.getChannelSafetyWarning(g, m));
     return (
         s.useEffect(() => {
-            ((0, _.mO)(W.HAw.SAFETY_WARNING_MODAL_VIEWED, {
-                channelId: h,
-                warningId: g,
+            ((0, _.mO)(V.HAw.SAFETY_WARNING_MODAL_VIEWED, {
+                channelId: g,
+                warningId: m,
                 senderId: p,
-                warningType: N?.type,
+                warningType: y?.type,
             }),
-                o.A.increment({ name: a.K.SAFETY_WARNING_MODAL_VIEW }));
-        }, [h, g, p, N]),
+                d.A.increment({ name: l.K.SAFETY_WARNING_MODAL_VIEW }));
+        }, [g, m, p, y]),
         (0, i.jsx)(r.k, {
             onClose: n,
             transitionState: t,
-            graphic: { type: "image", src: I.A },
+            graphic: { type: "image", src: B.A },
             gradientColor: "blue",
-            title: T.intl.string(T.t.lyt43P),
-            subtitle: E,
+            title: v.intl.string(v.t.lyt43P),
+            subtitle: f,
             actions: [],
             children: (0, i.jsxs)(c.B, {
                 gap: 24,
                 children: [
-                    (0, i.jsxs)(c.B, { gap: 8, children: [(0, i.jsx)(x.q, { children: f }), y ?? null] }),
+                    (0, i.jsxs)(c.B, { gap: 8, children: [(0, i.jsx)(x.q, { children: E }), j ?? null] }),
                     (0, i.jsxs)(c.B, {
                         gap: 4,
                         children: [
-                            (0, i.jsx)(d.E, {
+                            (0, i.jsx)(o.E, {
                                 variant: "eyebrow",
                                 color: "text-default",
-                                children: T.intl.string(T.t.K5FKtc),
+                                children: v.intl.string(v.t.K5FKtc),
                             }),
-                            (0, i.jsx)(u.Y0, { children: j }),
+                            (0, i.jsx)(u.Y0, { children: N }),
                         ],
                     }),
-                    (0, i.jsx)(D, { channelId: h, warningId: g, senderId: p, safetyWarning: N }),
+                    (0, i.jsx)(I, { channelId: g, warningId: m, senderId: p, safetyWarning: y }),
                 ],
             }),
         })

@@ -206,7 +206,7 @@ function J(e) {
           })
         : (0, i.jsx)(q, { lastEdit: t, buttonRef: n, disabled: l, cropAndUpload: a, onChangeImage: s });
 }
-var Q = n(376357),
+var Q = n(739187),
     $ = n(857250),
     Z = n(97483),
     ee = n(192308),
@@ -837,8 +837,8 @@ var eZ = n(305866),
     e1 = n(229087),
     e8 = n(753437),
     e7 = n(382701),
-    e3 = n(408519);
-function e2(e) {
+    e2 = n(408519);
+function e3(e) {
     let { clipId: t, tags: n, allowEditing: l, disableInteraction: a = !1, onEditingChange: s } = e,
         r = l && !a,
         d = o.useMemo(() => n?.filter((e) => null != (0, e8.W3)(e)) ?? [], [n]),
@@ -905,11 +905,11 @@ function e2(e) {
         );
     return c || u
         ? (0, i.jsxs)("div", {
-              className: e3.kL,
+              className: e2.kL,
               ref: x,
               children: [
                   (0, i.jsxs)("ul", {
-                      className: e3.xP,
+                      className: e2.xP,
                       "aria-hidden": !0,
                       children: [
                           d.map((e) =>
@@ -927,7 +927,7 @@ function e2(e) {
                               ),
                           ),
                           (0, i.jsx)("li", {
-                              className: e3.lv,
+                              className: e2.lv,
                               ref: h,
                               children: (0, i.jsx)(g.E, {
                                   variant: "text-xxs/medium",
@@ -939,7 +939,7 @@ function e2(e) {
                   }),
                   c &&
                       (0, i.jsx)("ul", {
-                          className: e3.nM,
+                          className: e2.nM,
                           "aria-label": v.intl.string(v.t["4Rq3a7"]),
                           children: d
                               .slice(0, E)
@@ -955,7 +955,7 @@ function e2(e) {
                           onOpenChange: b,
                           disableInteraction: a,
                           children: d.map((e) =>
-                              (0, i.jsx)(e1.A, { tag: e, className: e3.Hl, onRemove: r ? () => O(e) : void 0 }, e),
+                              (0, i.jsx)(e1.A, { tag: e, className: e2.Hl, onRemove: r ? () => O(e) : void 0 }, e),
                           ),
                       }),
                   u && (0, i.jsx)(e0.A, { tags: d, onTagsChange: k, onOpen: R, onClose: y, variant: "filled", ref: I }),
@@ -968,7 +968,7 @@ function e5(e) {
         d = v.intl.string(v.t.pWHvBI);
     return s
         ? (0, i.jsx)("div", {
-              className: `${e3.lv} ${e7.r9}`,
+              className: `${e2.lv} ${e7.r9}`,
               ref: t,
               children: (0, i.jsx)(g.E, { variant: "text-xxs/medium", color: "none", children: `+${n}` }),
           })
@@ -981,10 +981,10 @@ function e5(e) {
               onRequestClose: () => a(!1),
               renderPopout: () =>
                   (0, i.jsx)(eZ.l, {
-                      className: e3.Kt,
+                      className: e2.Kt,
                       "aria-label": d,
                       returnRef: t,
-                      children: (0, i.jsx)("ul", { className: e3.ns, children: r }),
+                      children: (0, i.jsx)("ul", { className: e2.ns, children: r }),
                   }),
               children: (e) =>
                   (0, i.jsx)(R.m, {
@@ -995,7 +995,7 @@ function e5(e) {
                           innerRef: t,
                           "aria-label": d,
                           "aria-expanded": l,
-                          className: e3.lv,
+                          className: e2.lv,
                           children: (0, i.jsx)(g.E, { variant: "text-xxs/medium", color: "none", children: `+${n}` }),
                       }),
                   }),
@@ -1605,7 +1605,7 @@ function tM(e) {
                                                       allowEditing: G,
                                                       onEditingChange: N,
                                                   }),
-                                                  (0, i.jsx)(e2, {
+                                                  (0, i.jsx)(e3, {
                                                       clipId: _.key,
                                                       tags: _.tags,
                                                       allowEditing: r,
@@ -1846,8 +1846,8 @@ function t7(e) {
         ],
     });
 }
-var t3 = n(683071),
-    t2 = n(312252);
+var t2 = n(683071),
+    t3 = n(312252);
 function t5(e) {
     let { widgetType: t, gameCount: n } = e,
         l = (0, j.cv)(t);
@@ -1855,8 +1855,8 @@ function t5(e) {
         ? null
         : (0, i.jsx)("div", {
               role: "alert",
-              className: t2.l,
-              children: (0, i.jsx)(t3.w, {
+              className: t3.l,
+              children: (0, i.jsx)(t2.w, {
                   type: "warning",
                   children: v.intl.formatToPlainString(v.t.Rv3wYq, { maxGames: l }),
               }),

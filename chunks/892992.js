@@ -2,45 +2,38 @@ n.d(t, { A: () => O });
 var i = n(439372),
     r = n(232835),
     a = n(309010),
-    s = n(477900),
-    l = n(582128),
-    o = n(376357),
-    d = n(857250),
-    c = n(97483),
-    u = n(192308),
-    _ = n(734057),
-    E = n(503698),
-    A = n.n(E),
-    h = n(231483),
-    I = n(834730),
-    f = n(939249),
-    p = n(265422),
+    s = n(477900);
+n(582128);
+var l = n(858899),
+    o = n(231483),
+    d = n(661531),
+    c = n(739187),
+    u = n(857250),
+    _ = n(97483),
+    E = n(192308),
+    A = n(973283),
+    h = n(734057),
+    I = n(503698),
+    f = n.n(I),
+    p = n(834730),
     T = n(375708),
     m = n(394272),
     g = n(655214);
 function S(e) {
-    let { guildId: t, channelId: n, channelName: i } = e,
-        r = l.useCallback(() => {
-            ((0, o.V)(), (0, p.i)(t, n));
-        }, [t, n]);
+    let { channelName: t } = e;
     return (0, s.jsxs)("div", {
-        className: A()(g.oR, m.oR),
+        className: f()(g.oR, m.o),
         children: [
-            (0, s.jsx)(h.ShieldIcon, { size: "sm", color: "currentColor", className: m.Kk }),
-            (0, s.jsx)(I.E, {
+            (0, s.jsx)(o.ShieldIcon, { size: "sm", color: "currentColor", className: m.K }),
+            (0, s.jsx)(p.E, {
                 variant: "text-md/normal",
                 color: "text-strong",
                 children: T.intl.format(T.t["9U3Wb3"], {
-                    channel: (0, s.jsx)(f.D, {
-                        className: m.Ix,
-                        onClick: r,
-                        role: "link",
-                        children: (0, s.jsxs)(I.E, {
-                            variant: "text-md/semibold",
-                            color: "text-link",
-                            tag: "span",
-                            children: ["#", i],
-                        }),
+                    channel: (0, s.jsxs)(p.E, {
+                        variant: "text-md/semibold",
+                        color: "text-strong",
+                        tag: "span",
+                        children: ["#", t],
                     }),
                 }),
             }),
@@ -48,10 +41,9 @@ function S(e) {
     });
 }
 function N(e) {
-    var t;
-    let { message: i, thread: l, guildId: E } = e;
-    if (null != l || null == i || null == r.A.getAutomodRemovalNotice(i.id))
-        (0, u.openModalLazy)(async () => {
+    let { message: t, thread: i, guildId: I } = e;
+    if (null != i || null == t || null == r.A.getAutomodRemovalNotice(t.id))
+        (0, E.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
                 n.e("618416"),
                 n.e("490743"),
@@ -790,8 +782,8 @@ function N(e) {
                 n.e("622825"),
                 n.e("681541"),
                 n.e("406357"),
-                n.e("115754"),
                 n.e("616592"),
+                n.e("115754"),
                 n.e("680986"),
                 n.e("987478"),
                 n.e("600330"),
@@ -1002,7 +994,7 @@ function N(e) {
                 n.e("44761"),
                 n.e("398254"),
                 n.e("486155"),
-                n.e("193828"),
+                n.e("366961"),
                 n.e("426996"),
                 n.e("549333"),
                 n.e("717460"),
@@ -1033,18 +1025,22 @@ function N(e) {
             ]).then(n.bind(n, 130577));
             return (n) => (0, s.jsx)(t, { ...n, action: e });
         });
-    else {
-        let e;
-        i.channel_id !== a.Ay.getCurrentlySelectedChannelId() &&
-            ((t = i.channel_id),
-            null != (e = _.A.getChannel(t)?.name) &&
-                (0, o.P)(
-                    (0, d.o)("", c.Ck.CUSTOM, {
-                        component: (0, s.jsx)(S, { guildId: E, channelId: t, channelName: e }),
-                        duration: 6e3,
-                    }),
-                ));
-    }
+    else
+        t.channel_id !== a.Ay.getCurrentlySelectedChannelId() &&
+            (function (e) {
+                let t = h.A.getChannel(e)?.name;
+                if (null != t) {
+                    if ((0, A.WD)("showRemovedMessageToast"))
+                        return (0, l.P0)({
+                            text: T.intl.formatToPlainString(T.t["9U3Wb3"], { channel: `#${t}` }),
+                            icon: o.ShieldIcon,
+                            iconColor: d.A.colors.ICON_FEEDBACK_CRITICAL,
+                        });
+                    (0, c.P)(
+                        (0, u.o)("", _.Ck.CUSTOM, { component: (0, s.jsx)(S, { channelName: t }), duration: 6e3 }),
+                    );
+                }
+            })(t.channel_id);
 }
 class C extends i.A {
     actions = { AUTO_MODERATION_CONTENT_DELETED: N };

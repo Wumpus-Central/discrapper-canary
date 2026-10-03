@@ -61,6 +61,11 @@
     width: 100%
 }
 
+.imageContain__67232 {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
 .avatar__67232 {
     border-radius: var(--radius-round)
 }
@@ -431,4 +436,4 @@
     width: 1px
 }
 
-/*# sourceMappingURL=564248.fb456b34a9bdd563.css.map*/
+/*# sourceMappingURL=564248.f6c538a1709fc879.css.map*/
