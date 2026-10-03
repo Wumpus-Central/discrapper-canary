@@ -12,7 +12,7 @@ let a = new i.A("libdiscore");
     }
     setTimeout(() => {
         try {
-            n(544974);
+            n(849052);
         } finally {
             n(19575).Ay.indexLoadedAsync();
         }

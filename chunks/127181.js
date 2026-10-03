@@ -1,6 +1,13 @@
 n.d(t, { B: () => s, MZ: () => r, TH: () => a, tn: () => i });
 let l = [
     {
+        date: "2026-10-02",
+        time: "14:00",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Live Reload is now a project setting: turn it on in Project Settings and the preview updates instantly when files change.",
+    },
+    {
         date: "2026-09-07",
         time: "00:02",
         platforms: ["desktop", "mobile"],
@@ -1042,6 +1049,13 @@ let l = [
         platforms: ["desktop", "mobile"],
         summary:
             "Tools you connect now say what each call is for in Conjure's activity, instead of repeating the tool's name down the list.",
+    },
+    {
+        date: "2026-10-03",
+        time: "02:45",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Turning Live Reload off now builds a fresh preview and reloads every open copy of the app onto it, including other people's.",
     },
     {
         date: "2026-09-18",

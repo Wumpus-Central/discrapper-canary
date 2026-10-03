@@ -447,6 +447,7 @@ let er = new Q(r.h, {
     },
     VIBEGRATIONS_CHAT_STEP_APPEND: function (e) {
         let { projectId: t, step: n, turnId: i } = e;
+        if ("preview_ready" === n.kind && null == i && !$(t)) return !1;
         (W(t, i, (e) => {
             var t;
             let i;
