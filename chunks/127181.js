@@ -1,6 +1,13 @@
 n.d(t, { B: () => s, MZ: () => r, TH: () => a, tn: () => i });
 let l = [
     {
+        date: "2026-10-03",
+        time: "18:54",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Conjure can test-drive and screenshot your app in the same turn it first builds it, instead of waiting for your next message.",
+    },
+    {
         date: "2026-10-02",
         time: "14:00",
         platforms: ["desktop", "mobile"],
