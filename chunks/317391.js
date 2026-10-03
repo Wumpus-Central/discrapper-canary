@@ -2950,34 +2950,46 @@ function l1(e) {
             pickedIdeaIds: b,
             onApprovePlan: j,
             sideReply: y = !1,
-            hoistedProse: w = !1,
-            hoistedAttachmentsHost: k,
-            restoreProposal: A,
-            onRestoreProposal: N,
+            sideReplyAcknowledges: w,
+            hoistedProse: k = !1,
+            hoistedAttachmentsHost: A,
+            restoreProposal: N,
+            onRestoreProposal: C,
         } = e,
-        C = i.useMemo(
+        S = i.useMemo(
             () => nE({ steps: n, content: l, hasProposal: null != s, hasAttachments: null != d && d.length > 0 }),
             [n, l, s, d],
         ),
-        { streamed: S, lastStreamedMessage: E, showsClosingMessage: I, closingContent: T } = C,
-        P = (w ? k : void 0) ?? C.attachmentsHost,
-        M = I && !w,
-        _ = null == d ? null : (0, a.jsx)(nF.A, { projectId: t, attachments: d }),
-        R = null == _ ? null : (0, a.jsx)("div", { className: lq.MT, children: _ }),
-        D = y
+        { streamed: E, lastStreamedMessage: I, showsClosingMessage: T, closingContent: P } = S,
+        M = (k ? A : void 0) ?? S.attachmentsHost,
+        _ = T && !k,
+        R = null == d ? null : (0, a.jsx)(nF.A, { projectId: t, attachments: d }),
+        D = null == R ? null : (0, a.jsx)("div", { className: lq.MT, children: R }),
+        L = y
             ? (0, a.jsx)(v.E, {
                   variant: "text-xs/normal",
                   color: "text-muted",
-                  children: en.intl.string(et.default.OAjkIT),
+                  children: (function (e) {
+                      switch (e) {
+                          case "steered":
+                              return en.intl.string(et.default.I9TkzD);
+                          case "queued":
+                              return en.intl.string(et.default.gbjY6o);
+                          case "restarting":
+                              return en.intl.string(et.default["1Q4Cs2"]);
+                          default:
+                              return en.intl.string(et.default.OAjkIT);
+                      }
+                  })(w),
               })
             : null;
     return (0, a.jsxs)("div", {
         className: lq.ue,
         children: [
-            S.length > 0 && !w
+            E.length > 0 && !k
                 ? (0, a.jsx)("ol", {
                       className: lq.dO,
-                      children: S.filter((e) => "todos" !== e.type).map((e) =>
+                      children: E.filter((e) => "todos" !== e.type).map((e) =>
                           (0, a.jsxs)(
                               "li",
                               {
@@ -2991,7 +3003,7 @@ function l1(e) {
                                               allowLinks: !0,
                                           }),
                                       }),
-                                      "streamed" === P && e === E ? R : null,
+                                      "streamed" === M && e === I ? D : null,
                                   ],
                               },
                               e.key,
@@ -3001,16 +3013,16 @@ function l1(e) {
                 : null,
             null != s
                 ? (0, a.jsx)(ld, { projectId: t, proposal: s, version: o, onApprove: j })
-                : M
+                : _
                   ? (0, a.jsxs)("div", {
                         className: r()(lq.ky, lZ.XR),
                         children: [
                             (0, a.jsx)("div", {
                                 className: r()(lJ.PT, lq.cW),
-                                children: nN.A.parse(T, !0, { allowList: !0, allowHeading: !0, allowLinks: !0 }),
+                                children: nN.A.parse(P, !0, { allowList: !0, allowHeading: !0, allowLinks: !0 }),
                             }),
-                            "closing" === P ? R : null,
-                            D,
+                            "closing" === M ? D : null,
+                            L,
                         ],
                     })
                   : null,
@@ -3032,11 +3044,11 @@ function l1(e) {
                       children: (0, a.jsx)(lM, { projectId: t, request: p }),
                   })
                 : null,
-            "standalone" !== P && ("closing" !== P || M) ? null : _,
+            "standalone" !== M && ("closing" !== M || _) ? null : R,
             null != g ? (0, a.jsx)(lh, { projectId: t }) : null,
             null != u && u.length > 0 ? (0, a.jsx)(nD, { ideas: u, pickedIdeaIds: b, onPick: x }) : null,
-            null != A ? (0, a.jsx)(lw, { proposal: A, onRestore: N }) : null,
-            M ? null : D,
+            null != N ? (0, a.jsx)(lw, { proposal: N, onRestore: C }) : null,
+            _ ? null : L,
         ],
     });
 }
@@ -5170,6 +5182,7 @@ function iE(e) {
                                         hoistedProse: !0,
                                         hoistedAttachmentsHost: e.attachmentsHost,
                                         sideReply: e.sideReply,
+                                        sideReplyAcknowledges: l.acknowledges,
                                         active: e.active,
                                         ideas: e.active ? void 0 : l.ideas,
                                         pickedIdeaIds:

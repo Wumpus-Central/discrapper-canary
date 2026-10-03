@@ -436,7 +436,7 @@ let er = new Q(r.h, {
         let u = o.findIndex((e) => e.id === i);
         if (-1 === u) return void v.set(t, [...o, s]);
         let { disposition: a, ...d } = o[u];
-        v.set(t, [...o.slice(0, u), d, s, ...o.slice(u + 1)]);
+        (null != a && (s.acknowledges = a), v.set(t, [...o.slice(0, u), d, s, ...o.slice(u + 1)]));
     },
     VIBEGRATIONS_CHAT_PUBLISH_NOTICE: function (e) {
         let { projectId: t, id: n, content: i, timestamp: r, publishNotice: l } = e,

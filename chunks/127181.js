@@ -464,6 +464,13 @@ let l = [
             "Messages you send while Conjure is just getting started stay above its reply instead of landing below it.",
     },
     {
+        date: "2026-10-03",
+        time: "12:00",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Messages you send while Conjure is working only stop it when you ask it to stop, and only change the current work when they are about it; anything else waits its turn, and a short note under the reply says which happened.",
+    },
+    {
         date: "2026-09-21",
         time: "00:01",
         platforms: ["desktop", "mobile"],
