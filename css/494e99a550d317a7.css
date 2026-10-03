@@ -834,13 +834,12 @@
 }
 
 .cursorArrow__57467 {
-    color: var(--black-500);
-    filter: drop-shadow(1px 0 0 rgb(255 255 255/90%)) drop-shadow(-1px 0 0 rgb(255 255 255/90%)) drop-shadow(0 1px 0 rgb(255 255 255/90%)) drop-shadow(0 -1px 0 rgb(255 255 255/90%)) drop-shadow(0 1px 2px rgb(0 0 0/35%));
-    height: 15px;
-    inset-block-start: -1.98px;
-    inset-inline-start: -1.98px;
+    background: url(/assets/0e80ca82ae93af86.svg) no-repeat 0 0/100% 100%;
+    height: 24px;
+    inset-block-start: -4.29px;
+    inset-inline-start: -4.33px;
     position: absolute;
-    width: 15px
+    width: 24px
 }
 
 .highlightLabel__57467 {
@@ -1064,4 +1063,4 @@
     display: contents
 }
 
-/*# sourceMappingURL=b7f3ce16d809fcd2.css.map*/
+/*# sourceMappingURL=494e99a550d317a7.css.map*/

@@ -824,6 +824,13 @@ let l = [
         summary: "Restore this version is in the More menu when you hover a Conjure reply, as well as on right-click.",
     },
     {
+        date: "2026-10-02",
+        time: "18:36",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Select to edit has new art: a fresh header button and, on desktop, a pointer that stays clear on light and dark apps.",
+    },
+    {
         date: "2026-09-25",
         time: "23:27",
         platforms: ["desktop"],

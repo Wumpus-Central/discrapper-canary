@@ -276,7 +276,7 @@ var u,
         ExperimentalConfettiIcon: () => Ab._,
         ExperimentalCouchIcon: () => AM.u,
         ExperimentalCreateEmojiIcon: () => AP,
-        ExperimentalDirectSelectIcon: () => AU,
+        ExperimentalDirectSelectIcon: () => AU.x,
         ExperimentalEpicIcon: () => Aw.b,
         ExperimentalGameControllerLinkIcon: () => ld.A,
         ExperimentalGraphMajorNegativeIcon: () => AG,
@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 628670, Version Hash: a925360b1664f07e46e374a783004c472edb76e5`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 628698, Version Hash: 5aaa058dc2361ac36644f9b3bfb6f3e1fb4a1a59`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -13432,33 +13432,8 @@ function AP(e) {
         }),
     });
 }
-function AU(e) {
-    let {
-            size: t = "md",
-            width: n,
-            height: i,
-            color: r = i8.A.colors.INTERACTIVE_ICON_DEFAULT,
-            colorClass: a = "",
-            ...s
-        } = e,
-        l = (0, cX.J)(t),
-        o = l?.width ?? n,
-        d = l?.height ?? i;
-    return (0, y.jsx)("svg", {
-        ...(0, cz.A)(s),
-        xmlns: "http://www.w3.org/2000/svg",
-        width: o,
-        height: d,
-        fill: "none",
-        viewBox: "0 0 24 24",
-        children: (0, y.jsx)("path", {
-            fill: "string" == typeof r ? r : r.css,
-            d: "M9.55 10.88a2 2 0 0 1 2.89-2.09l8.47 4.36a2 2 0 0 1-.6 3.76l-2.78.43a2 2 0 0 0-1.47 1.07l-1.28 2.5a2 2 0 0 1-3.76-.6l-1.47-9.43ZM9.96 2a1.25 1.25 0 0 0 0 2.5h1.37a1.25 1.25 0 0 0 0-2.5H9.96ZM2 5.26v.21a1.25 1.25 0 1 0 2.5 0v-.21c0-.42.34-.75.75-.75h.21a1.25 1.25 0 0 0 0-2.5h-.21A3.25 3.25 0 0 0 2 5.25ZM2 11.35a1.25 1.25 0 1 0 2.5 0V9.98a1.25 1.25 0 1 0-2.5 0v1.37ZM5.25 19.33h.21a1.25 1.25 0 0 0 0-2.5h-.21a.75.75 0 0 1-.75-.76v-.21a1.25 1.25 0 1 0-2.5 0v.21c0 1.8 1.45 3.26 3.25 3.26ZM16.05 2h-.22a1.25 1.25 0 0 0 0 2.5h.22c.41 0 .75.34.75.76v.21a1.25 1.25 0 1 0 2.5 0v-.21c0-1.8-1.46-3.26-3.25-3.26Z",
-            className: a,
-        }),
-    });
-}
-var Aw = n(907085);
+var AU = n(604525),
+    Aw = n(907085);
 function AG(e) {
     let {
             size: t = "md",
@@ -22111,7 +22086,7 @@ let C_ = "isHideDevBanner",
                     className: to()(Cu.Wz, Cu.mr),
                     children: [
                         (0, y.jsx)(Cc, { className: Cu.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "628670" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "628698" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -25720,8 +25695,8 @@ let R9 = (0, tj.Fe)({
                 n.e("261064"),
                 n.e("256769"),
                 n.e("530615"),
-            ]).then(n.bind(n, 539732)),
-        webpackId: 539732,
+            ]).then(n.bind(n, 889449)),
+        webpackId: 889449,
         name: "VibegrationsScreen",
         renderLoader: R8,
     }),

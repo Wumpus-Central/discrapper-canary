@@ -95,6 +95,12 @@
     width: 1em
 }
 
+svg.selectModeIcon_f8194a {
+    height: 21px;
+    margin-block-start: 1px;
+    width: 21px
+}
+
 .projectHeaderDivider_f8194a {
     background-color: var(--border-subtle);
     height: 20px;
@@ -509,4 +515,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=33f124653e64919c.css.map*/
+/*# sourceMappingURL=cc3f8d586bb4c623.css.map*/
