@@ -313,20 +313,20 @@ function e8(e) {
     });
 }
 var e5 = n(562708),
-    e2 = n(702841),
-    e7 = n(139286),
+    e7 = n(702841),
+    e2 = n(139286),
     e9 = n(468689),
     e4 = n(375708),
     te = n(330766);
 function tt(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
-        l = (0, e2.bG)([v.A, eI.default], () => {
+        l = (0, e7.bG)([v.A, eI.default], () => {
             let e = eI.default.getCurrentUser(),
                 n = v.A.getGuild(t);
             return null != n && (0, em.bM)(n, e);
         });
     return (
-        (0, e7.A)({
+        (0, e2.A)({
             type: e5.ImpressionTypes.POPOUT,
             name: e5.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: l },
@@ -781,8 +781,8 @@ var tQ = n(503698),
     t6 = n(104171),
     t8 = n(47167),
     t5 = n(713654),
-    t2 = n(976860),
-    t7 = n(747376),
+    t7 = n(976860),
+    t2 = n(747376),
     t9 = n(110618),
     t4 = n(280450),
     ne = n(309010),
@@ -1043,7 +1043,7 @@ function n_(e) {
             text: n,
             fullWidth: !0,
             onClick: function () {
-                null != t && null != t.getGuildId() && ((0, t7.av)(t), (0, t2.uh)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, t2.av)(t), (0, t7.uh)(t.getGuildId(), t.id));
             },
         }),
     });
@@ -1501,7 +1501,7 @@ function n5(e) {
         })();
     return null == f ? null : (0, s.jsx)("div", { onContextMenu: n6, children: f });
 }
-let n2 = function (e) {
+let n7 = function (e) {
     let { guild: t } = e;
     switch (Q(t)) {
         case Y.ENABLE_PUBLIC_GUILD:
@@ -1519,7 +1519,7 @@ let n2 = function (e) {
     }
     return nU.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n5, { guild: e.guild });
 };
-var n7 = n(883476);
+var n2 = n(883476);
 function n9(e) {
     let { guild: t, setHasSubheader: n } = e,
         i = l.useRef(null);
@@ -1528,7 +1528,7 @@ function n9(e) {
             let e = i.current;
             null != e && n(e.childNodes.length > 0);
         }),
-        (0, s.jsx)("div", { className: n7.k, ref: i, children: (0, s.jsx)(n2, { guild: t }) })
+        (0, s.jsx)("div", { className: n2.k, ref: i, children: (0, s.jsx)(n7, { guild: t }) })
     );
 }
 var n4 = n(66933),
@@ -2069,7 +2069,7 @@ class il extends l.PureComponent {
                     n.e("793438"),
                     n.e("305557"),
                     n.e("36227"),
-                    n.e("322422"),
+                    n.e("535507"),
                     n.e("444567"),
                     n.e("309004"),
                     n.e("883952"),
@@ -2627,8 +2627,8 @@ function ir(e) {
         e6 = (0, eb.A)(),
         e8 = (0, eG.A)(x),
         e5 = !1 === e$ && e6 && null != e8,
-        e2 = (0, eO.A)(x),
-        e7 = !1 === e$ && e6 && null != e2,
+        e7 = (0, eO.A)(x),
+        e2 = !1 === e$ && e6 && null != e7,
         e9 = [];
     (e_ && e9.push(d.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
         eC && e9.push(d.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
@@ -2646,7 +2646,7 @@ function ir(e) {
             ea.m.GUILD_HEADER_TOOLTIPS,
         ),
         [tl, tr] = (0, $.D8)(
-            e7 ? d.M.EXPIRING_POWERUP_COACHMARK : null,
+            e2 ? d.M.EXPIRING_POWERUP_COACHMARK : null,
             x,
             { cooldownDurationMs: ex.mD },
             ea.m.GUILD_HEADER_TOOLTIPS,
@@ -2671,8 +2671,8 @@ function ir(e) {
                         ? { contentType: tt, data: null, markAsDismissed: tn }
                         : ti === d.M.BOOST_TO_UNLOCK_COACHMARK && null != e8
                           ? { contentType: ti, data: { featuredPowerup: e8 }, markAsDismissed: ts }
-                          : tl === d.M.EXPIRING_POWERUP_COACHMARK && null != e2
-                            ? { contentType: tl, data: { featuredExpiringPowerup: e2 }, markAsDismissed: tr }
+                          : tl === d.M.EXPIRING_POWERUP_COACHMARK && null != e7
+                            ? { contentType: tl, data: { featuredExpiringPowerup: e7 }, markAsDismissed: tr }
                             : null,
             [
                 Z.shouldShow,
@@ -2685,7 +2685,7 @@ function ir(e) {
                 ti,
                 tl,
                 e8,
-                e2,
+                e7,
                 te,
                 tn,
                 ts,

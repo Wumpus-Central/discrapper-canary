@@ -22,6 +22,13 @@ let l = [
             "A remix of another project, or one you link to another app, goes straight to building instead of asking you to approve a plan.",
     },
     {
+        date: "2026-10-02",
+        time: "07:34",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "AutoMod plans show an AutoMod Rule badge and, in place of a wireframe, a few sample messages grouped under Blocked, Alerts mods and Allowed; the rule is named for what it enforces.",
+    },
+    {
         date: "2026-10-01",
         time: "00:00",
         platforms: ["desktop", "mobile"],
