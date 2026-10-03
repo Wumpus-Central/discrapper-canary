@@ -1,4 +1,4 @@
-n.d(t, { B: () => s, MZ: () => r, TH: () => a, tn: () => i });
+n.d(t, { B: () => r, MZ: () => s, TH: () => a, tn: () => i });
 let l = [
     {
         date: "2026-10-03",
@@ -269,6 +269,13 @@ let l = [
         time: "04:34",
         platforms: ["desktop", "mobile"],
         summary: "Conjure can search the web and read pages, so it checks current docs and APIs instead of guessing.",
+    },
+    {
+        date: "2026-10-02",
+        time: "22:48",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Conjure can show you images to choose from, like logo variants, and uses the one you pick or your own.",
     },
     {
         date: "2026-09-27",
@@ -1261,9 +1268,9 @@ function a(e) {
 function i(e) {
     return l.filter((t) => t.platforms.includes(e));
 }
-function s(e) {
+function r(e) {
     return i(e).length > 3;
 }
-function r(e) {
+function s(e) {
     return 1 === e.platforms.length;
 }
