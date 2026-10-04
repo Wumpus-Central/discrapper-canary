@@ -1223,6 +1223,13 @@ let l = [
             "While you preview an app, every notification it sends arrives as a DM to you, naming anyone it concerns, so nothing you test posts to a channel or messages anyone else.",
     },
     {
+        date: "2026-10-04",
+        time: "20:09",
+        platforms: ["desktop"],
+        summary:
+            "Widget and bot apps no longer show the phone/desktop and select buttons, or flicker when a build deploys.",
+    },
+    {
         date: "2026-08-31",
         time: "00:02",
         platforms: ["desktop"],
