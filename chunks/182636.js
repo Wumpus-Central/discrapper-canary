@@ -837,8 +837,8 @@ var eZ = n(305866),
     e1 = n(229087),
     e8 = n(753437),
     e7 = n(382701),
-    e2 = n(408519);
-function e3(e) {
+    e3 = n(408519);
+function e2(e) {
     let { clipId: t, tags: n, allowEditing: l, disableInteraction: a = !1, onEditingChange: s } = e,
         r = l && !a,
         d = o.useMemo(() => n?.filter((e) => null != (0, e8.W3)(e)) ?? [], [n]),
@@ -905,11 +905,11 @@ function e3(e) {
         );
     return c || u
         ? (0, i.jsxs)("div", {
-              className: e2.kL,
+              className: e3.kL,
               ref: x,
               children: [
                   (0, i.jsxs)("ul", {
-                      className: e2.xP,
+                      className: e3.xP,
                       "aria-hidden": !0,
                       children: [
                           d.map((e) =>
@@ -927,7 +927,7 @@ function e3(e) {
                               ),
                           ),
                           (0, i.jsx)("li", {
-                              className: e2.lv,
+                              className: e3.lv,
                               ref: h,
                               children: (0, i.jsx)(g.E, {
                                   variant: "text-xxs/medium",
@@ -939,7 +939,7 @@ function e3(e) {
                   }),
                   c &&
                       (0, i.jsx)("ul", {
-                          className: e2.nM,
+                          className: e3.nM,
                           "aria-label": v.intl.string(v.t["4Rq3a7"]),
                           children: d
                               .slice(0, E)
@@ -955,7 +955,7 @@ function e3(e) {
                           onOpenChange: b,
                           disableInteraction: a,
                           children: d.map((e) =>
-                              (0, i.jsx)(e1.A, { tag: e, className: e2.Hl, onRemove: r ? () => O(e) : void 0 }, e),
+                              (0, i.jsx)(e1.A, { tag: e, className: e3.Hl, onRemove: r ? () => O(e) : void 0 }, e),
                           ),
                       }),
                   u && (0, i.jsx)(e0.A, { tags: d, onTagsChange: k, onOpen: R, onClose: y, variant: "filled", ref: I }),
@@ -968,7 +968,7 @@ function e5(e) {
         d = v.intl.string(v.t.pWHvBI);
     return s
         ? (0, i.jsx)("div", {
-              className: `${e2.lv} ${e7.r9}`,
+              className: `${e3.lv} ${e7.r9}`,
               ref: t,
               children: (0, i.jsx)(g.E, { variant: "text-xxs/medium", color: "none", children: `+${n}` }),
           })
@@ -981,10 +981,10 @@ function e5(e) {
               onRequestClose: () => a(!1),
               renderPopout: () =>
                   (0, i.jsx)(eZ.l, {
-                      className: e2.Kt,
+                      className: e3.Kt,
                       "aria-label": d,
                       returnRef: t,
-                      children: (0, i.jsx)("ul", { className: e2.ns, children: r }),
+                      children: (0, i.jsx)("ul", { className: e3.ns, children: r }),
                   }),
               children: (e) =>
                   (0, i.jsx)(R.m, {
@@ -995,7 +995,7 @@ function e5(e) {
                           innerRef: t,
                           "aria-label": d,
                           "aria-expanded": l,
-                          className: e2.lv,
+                          className: e3.lv,
                           children: (0, i.jsx)(g.E, { variant: "text-xxs/medium", color: "none", children: `+${n}` }),
                       }),
                   }),
@@ -1474,7 +1474,7 @@ function tM(e) {
                             n.e("553829"),
                             n.e("895840"),
                             n.e("865257"),
-                            n.e("287946"),
+                            n.e("228767"),
                             n.e("323079"),
                             n.e("437655"),
                             n.e("430877"),
@@ -1511,9 +1511,9 @@ function tM(e) {
                             n.e("689160"),
                             n.e("565977"),
                             n.e("520342"),
-                            n.e("432262"),
+                            n.e("650676"),
                             n.e("717278"),
-                        ]).then(n.bind(n, 25682));
+                        ]).then(n.bind(n, 272351));
                         return (t) =>
                             (0, i.jsx)(e, {
                                 ...t,
@@ -1605,7 +1605,7 @@ function tM(e) {
                                                       allowEditing: G,
                                                       onEditingChange: N,
                                                   }),
-                                                  (0, i.jsx)(e3, {
+                                                  (0, i.jsx)(e2, {
                                                       clipId: _.key,
                                                       tags: _.tags,
                                                       allowEditing: r,
@@ -1846,8 +1846,8 @@ function t7(e) {
         ],
     });
 }
-var t2 = n(683071),
-    t3 = n(312252);
+var t3 = n(683071),
+    t2 = n(312252);
 function t5(e) {
     let { widgetType: t, gameCount: n } = e,
         l = (0, j.cv)(t);
@@ -1855,8 +1855,8 @@ function t5(e) {
         ? null
         : (0, i.jsx)("div", {
               role: "alert",
-              className: t3.l,
-              children: (0, i.jsx)(t2.w, {
+              className: t2.l,
+              children: (0, i.jsx)(t3.w, {
                   type: "warning",
                   children: v.intl.formatToPlainString(v.t.Rv3wYq, { maxGames: l }),
               }),

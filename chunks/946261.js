@@ -60,6 +60,7 @@ u.isPlatformEmbedded && (c.Ay.addChangeListener(p), p());
 let g = class {
     name;
     _volume;
+    _playbackRate = 1;
     _audio;
     outputChannel;
     trackNotificationFailure;
@@ -71,6 +72,13 @@ let g = class {
     }
     set volume(e) {
         ((this._volume = e), this.ensureAudio().then((t) => (t.volume = e)));
+    }
+    setPlaybackRate(e) {
+        this._playbackRate !== e &&
+            ((this._playbackRate = e),
+            this._audio?.then((t) => {
+                ((t.preservesPitch = !1), (t.playbackRate = e));
+            }));
     }
     loop() {
         this.ensureAudio().then((e) => {
@@ -121,6 +129,8 @@ let g = class {
                     ((i.src = n(696354)(`./${this.name}.mp3`)),
                         (i.onloadeddata = () => {
                             ((i.volume = Math.min((c.Ay.getOutputVolume() / 100) * this._volume, 1)),
+                                1 !== this._playbackRate &&
+                                    ((i.preservesPitch = !1), (i.playbackRate = this._playbackRate)),
                                 u.isPlatformEmbedded && i.setSinkId(this.outputChannel === E.a.DEFAULT ? A : I),
                                 e(i));
                         }),

@@ -478,4 +478,36 @@
     gap: var(--space-8)
 }
 
-/*# sourceMappingURL=0ac40342099da287.css.map*/
+.container__5f77f {
+    align-items: center;
+    background: var(--black);
+    display: flex;
+    justify-content: center;
+    position: relative
+}
+
+.canvas__5f77f,
+.container__5f77f {
+    height: 100%;
+    width: 100%
+}
+
+.canvas__5f77f {
+    display: block;
+    image-rendering: pixelated;
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.canvas__5f77f:focus,
+.canvas__5f77f:focus-visible {
+    outline: none
+}
+
+.closeButton__5f77f {
+    inset-inline-end: var(--space-8);
+    position: absolute;
+    top: var(--space-8)
+}
+
+/*# sourceMappingURL=71ec5d263a5ad43f.css.map*/
