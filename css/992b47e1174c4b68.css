@@ -1,9 +1,9 @@
 .option_e0a1ce {
     align-items: center;
-    background: var(--background-base-lower);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-md);
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
     box-sizing: border-box;
+    cursor: pointer;
     display: flex;
     flex-direction: column;
     gap: var(--space-8);
@@ -11,11 +11,28 @@
     min-height: 96px;
     padding: var(--space-16);
     text-align: center;
+    transition: background-color .15s ease;
     width: 100%
 }
 
+.custom-user-profile-theme.theme-light .option_e0a1ce {
+    background: var(--opacity-white-24)
+}
+
 .option_e0a1ce:hover {
-    background: var(--background-mod-subtle)
+    background: var(--background-mod-normal)
+}
+
+.custom-user-profile-theme.theme-light .option_e0a1ce:hover {
+    background: var(--opacity-white-40)
+}
+
+.option_e0a1ce:active {
+    background: var(--background-mod-strong)
+}
+
+.custom-user-profile-theme.theme-light .option_e0a1ce:active {
+    background: var(--opacity-white-56)
 }
 
 .gameCover__1a3d6 {
@@ -88,4 +105,4 @@
     transform: scale(.9775)
 }
 
-/*# sourceMappingURL=ee41543b8b08e90d.css.map*/
+/*# sourceMappingURL=992b47e1174c4b68.css.map*/
