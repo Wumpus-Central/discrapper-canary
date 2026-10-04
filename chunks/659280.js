@@ -138,7 +138,7 @@ function D(e) {
         children: [c, null != h || null != m ? (0, l.jsxs)("div", { className: P.gM, children: [h, m] }) : null],
     });
 }
-function V(e) {
+function U(e) {
     let t,
         {
             command: n,
@@ -182,7 +182,7 @@ function V(e) {
         ],
     });
 }
-var U = n(524007),
+var V = n(524007),
     W = n(47167),
     F = n(713654),
     B = n(688810),
@@ -476,8 +476,8 @@ class ev extends ef {
             { hovered: s } = this.state,
             a = this.isSelectable();
         return e.inputType === S.y$.PLACEHOLDER
-            ? (0, l.jsx)(U.A, {})
-            : (0, l.jsx)(V, {
+            ? (0, l.jsx)(V.A, {})
+            : (0, l.jsx)(U, {
                   command: e,
                   channel: t,
                   showImage: n,

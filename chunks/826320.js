@@ -116,17 +116,17 @@ var I = n(192308),
     v = n(983851),
     R = n(534890),
     y = n(331322),
-    T = n(297264),
-    L = n(93055),
-    M = n(17839),
+    L = n(297264),
+    M = n(93055),
+    T = n(17839),
     U = n(22277),
     D = n(375708),
     O = n(27948);
 function P() {
     let e = l.useCallback(() => {
-        let { hasAccess: e } = (0, L.ad)();
+        let { hasAccess: e } = (0, M.ad)();
         e
-            ? (0, M.A)({ source: "favorites_empty_sidebar" })
+            ? (0, T.A)({ source: "favorites_empty_sidebar" })
             : (0, I.openModalLazy)(async () => {
                   let { default: e } = await n.e("307476").then(n.bind(n, 777023));
                   return (t) => (0, i.jsx)(e, { ...t, source: "favorites_empty_sidebar" });
@@ -178,7 +178,7 @@ function w() {
                 padding: { top: 16, right: 16, bottom: 0, left: 16 },
                 fullWidth: !1,
                 children: [
-                    (0, i.jsx)(T.D, { variant: "heading-md/semibold", children: D.intl.string(U.default["1n0TGE"]) }),
+                    (0, i.jsx)(L.D, { variant: "heading-md/semibold", children: D.intl.string(U.default["1n0TGE"]) }),
                     (0, i.jsx)(P, {}),
                 ],
             }),
@@ -189,8 +189,8 @@ function w() {
     });
 }
 var H = n(866665),
-    B = n(939249),
-    k = n(789645),
+    k = n(939249),
+    B = n(789645),
     F = n(821609),
     K = n(47167),
     z = n(485947),
@@ -198,11 +198,11 @@ var H = n(866665),
     Y = n(446244),
     X = n(994500),
     q = n(287809),
-    Z = n(427262),
-    $ = n(16236);
-async function J(e) {
+    J = n(427262),
+    Z = n(16236);
+async function $(e) {
     let t = await (0, Y.pk)(e);
-    null != t && (await (0, $.nR)({ channelIds: [t], categoryName: D.intl.string(D.t.OGiMXJ), source: "suggestions" }));
+    null != t && (await (0, Z.nR)({ channelIds: [t], categoryName: D.intl.string(D.t.OGiMXJ), source: "suggestions" }));
 }
 var Q = n(487470);
 function ee(e) {
@@ -222,12 +222,12 @@ function ee(e) {
                                   (0, i.jsx)(z.A, { className: Q.TK, children: D.intl.string(U.default.oHWnLy) }),
                                   (0, i.jsx)(H.m, {
                                       text: D.intl.string(D.t.WAI6xu),
-                                      children: (0, i.jsx)(B.D, {
+                                      children: (0, i.jsx)(k.D, {
                                           className: Q.r,
                                           onClick: l,
                                           role: "button",
                                           "aria-label": D.intl.string(U.default.F3dWTe),
-                                          children: (0, i.jsx)(k.P, {
+                                          children: (0, i.jsx)(B.P, {
                                               size: "xs",
                                               color: "currentColor",
                                               className: Q.CB,
@@ -251,10 +251,10 @@ function ee(e) {
                                               "aria-label": D.intl.formatToPlainString(U.default.Hevebj, {
                                                   name:
                                                       e.type === c.rD.USER
-                                                          ? Z.Ay.getName(e.record)
+                                                          ? J.Ay.getName(e.record)
                                                           : (0, K.m1)(e.record, q.default, X.A),
                                               }),
-                                              onClick: () => J((0, Y.hY)(e)),
+                                              onClick: () => $((0, Y.hY)(e)),
                                           }),
                                           "aria-posinset": t + 1,
                                           "aria-setsize": n.length,

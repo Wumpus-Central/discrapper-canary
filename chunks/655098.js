@@ -34,8 +34,8 @@ var l = n(477900),
     P = n(465365),
     M = n(78390),
     D = n(785562),
-    V = n(332173),
-    U = n(37632),
+    U = n(332173),
+    V = n(37632),
     W = n(593284),
     F = n(967144);
 n(209932);
@@ -69,14 +69,14 @@ function Y(e) {
 }
 function ee(e) {
     let { text: t } = e;
-    return (0, l.jsx)(V.A, { children: t });
+    return (0, l.jsx)(U.A, { children: t });
 }
 function et(e) {
     let { id: t, guildId: n, channelId: i } = e,
         r = (0, y.bG)([z.default], () => z.default.getUser(t)),
         s = (0, y.bG)([H.A], () => H.A.hidePersonalInformation),
         a = Q.Ay.useName(n, i, r),
-        o = (0, l.jsx)(V.A, { children: null == a ? `<@${t}>` : `@${a}` });
+        o = (0, l.jsx)(U.A, { children: null == a ? `<@${t}>` : `@${a}` });
     if (null != r) {
         let e = s || r.hasUniqueUsername() ? null : `#${r.discriminator}`;
         return (0, l.jsx)(C.m, {
@@ -110,7 +110,7 @@ function en(e) {
     function m(e) {
         return null == s
             ? null
-            : (0, l.jsxs)(V.A, {
+            : (0, l.jsxs)(U.A, {
                   ref: u,
                   color: h ? s.color : null,
                   roleColors: h ? o : null,
@@ -145,18 +145,18 @@ function el(e) {
         (r = (0, L.nc)(n) ? ((0, q.QG)(n) ?? "text") : "locked"),
         (s = (0, P.Y)(n.type))),
     s)
-        ? (0, l.jsx)(V.A, { iconType: r, children: i })
+        ? (0, l.jsx)(U.A, { iconType: r, children: i })
         : (0, l.jsx)("span", { children: "#" + i });
 }
 function ei(e) {
     let { id: t, itemId: n, guildId: i } = e,
         r = (0, M.Q)(t),
         s = (0, y.bG)([K.A], () => (0, M.f)(K.A, t, n, i), [t, n, i]);
-    return (0, l.jsxs)(V.A, { iconType: t, children: [r, null != s && (0, l.jsx)(U.A, {}), s] });
+    return (0, l.jsxs)(U.A, { iconType: t, children: [r, null != s && (0, l.jsx)(V.A, {}), s] });
 }
 function er(e) {
     let { text: t, id: n } = e;
-    return (0, l.jsxs)(V.A, { children: [t, "(", n, ")"] });
+    return (0, l.jsxs)(U.A, { children: [t, "(", n, ")"] });
 }
 function es(e) {
     let { timestamp: t } = e;
@@ -167,7 +167,7 @@ function ea(e) {
         n = (0, _.K)(t),
         i = null != n;
     return ((0, R.I)(i ? void 0 : t), i)
-        ? (0, l.jsxs)(V.A, {
+        ? (0, l.jsxs)(U.A, {
               children: [(0, l.jsx)(w.A, { game: { id: t, icon: n.gameIcon }, iconClassName: X.Kk }), n.gameName],
           })
         : (0, l.jsxs)("span", { children: ["@", Z.intl.string(Z.t["11pdXZ"])] });

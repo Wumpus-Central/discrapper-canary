@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => C });
 var l = n(477900);
 n(582128);
 var i = n(17928),
@@ -15,9 +15,9 @@ var i = n(17928),
     p = n(123393),
     A = n(652215),
     f = n(375708),
-    C = n(243226);
-function x(e) {
-    let { channelId: t, showProfile: n = !1, showTrailingDivider: x = !1 } = e,
+    x = n(243226);
+function C(e) {
+    let { channelId: t, showProfile: n = !1, showTrailingDivider: C = !1 } = e,
         E = h.default.cast(t),
         {
             joinRequest: S,
@@ -36,10 +36,10 @@ function x(e) {
         }),
         v = (0, i.bG)([c.A], () => (null != j ? c.A.getMemberCount(j) : 0)),
         _ = null != y && (v ?? 0) >= y,
-        { approveRequest: b, rejectRequest: N, submitting: T } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
+        { approveRequest: b, rejectRequest: T, submitting: N } = (0, p.W)(S?.guildId, S?.userId, S?.joinRequestId);
     return null != S && S.applicationStatus === g.B5.SUBMITTED && I
         ? (0, l.jsxs)("div", {
-              className: C.U,
+              className: x.U,
               children: [
                   (0, l.jsx)(s.m, {
                       text: f.intl.string(f.t.cdPGbE),
@@ -48,7 +48,7 @@ function x(e) {
                           variant: "active",
                           size: "sm",
                           text: f.intl.string(f.t.BzjDQJ),
-                          loading: T,
+                          loading: N,
                           onClick: b,
                           disabled: _,
                       }),
@@ -57,8 +57,8 @@ function x(e) {
                       variant: "critical-primary",
                       size: "sm",
                       text: f.intl.string(f.t.hDtbsz),
-                      onClick: N,
-                      disabled: T,
+                      onClick: T,
+                      disabled: N,
                   }),
                   n &&
                       (0, l.jsx)(a.$, {
@@ -69,7 +69,7 @@ function x(e) {
                           size: "sm",
                           text: f.intl.string(f.t.iXAna6),
                       }),
-                  x && (0, l.jsx)(r.Ay.Divider, {}),
+                  C && (0, l.jsx)(r.Ay.Divider, {}),
               ],
           })
         : null;

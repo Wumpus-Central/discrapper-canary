@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Wh: "flexRow_b6595f",
     ec: "flexColumn_b6595f",
     OA: "assetsLargeImage_b6595f",

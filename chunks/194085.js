@@ -19,8 +19,8 @@ let d = i.forwardRef(function (e, t) {
         disabled: p,
         dangerous: A,
         separator: f,
-        buttonClassName: C,
-        children: x,
+        buttonClassName: x,
+        children: C,
         ...E
     } = e;
     return (0, l.jsx)(r.m, {
@@ -33,7 +33,7 @@ let d = i.forwardRef(function (e, t) {
             children: [
                 (0, l.jsxs)(o.$n, {
                     ref: t,
-                    className: a()(c.W1, C),
+                    className: a()(c.W1, x),
                     onClick: (e) => {
                         h(e);
                     },
@@ -43,7 +43,7 @@ let d = i.forwardRef(function (e, t) {
                     ...E,
                     children: [
                         null != d ? (0, l.jsx)(d, { className: c.Kk, color: "currentColor", ...u }) : null,
-                        null != x ? (0, l.jsx)("div", { className: a()(c.Kk, c.IO), children: x }) : null,
+                        null != C ? (0, l.jsx)("div", { className: a()(c.Kk, c.IO), children: C }) : null,
                     ],
                 }),
                 f && (0, l.jsx)(o.wv, {}),

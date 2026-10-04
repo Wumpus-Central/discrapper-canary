@@ -110,8 +110,8 @@ var k = n(994500),
     P = n(320448),
     M = n(624793),
     D = n(548118),
-    V = n(465794),
-    U = n(796774),
+    U = n(465794),
+    V = n(796774),
     W = n(71393),
     F = n(562153),
     B = n(158045),
@@ -145,7 +145,7 @@ function q(e) {
             return (
                 i.useEffect(() => {
                     u &&
-                        (0, U.nh)(n, t)
+                        (0, V.nh)(n, t)
                             .catch(() => null)
                             .then(a);
                 }, [u, n, t]),
@@ -205,7 +205,7 @@ function q(e) {
                                     color: "text-muted",
                                     children: G.intl.format(G.t["/ZJIuo"], { guildName: t.name }),
                                 }),
-                                (0, l.jsx)(V.A, {
+                                (0, l.jsx)(U.A, {
                                     size: "sm",
                                     fullWidth: !0,
                                     subscriptionTier: K.pe.TIER_2,
@@ -318,7 +318,7 @@ function Z(e) {
         }, [n, r]),
         L = (0, o.bG)([E.A], () => E.A.isPlayingSound(r.soundId), [r]);
     if (null == t || null == b) return null;
-    let { emojiId: P, emojiName: M, emojiAnimated: D, name: V } = r;
+    let { emojiId: P, emojiName: M, emojiAnimated: D, name: U } = r;
     return (0, l.jsxs)("div", {
         className: s()($.Iv, { [$.E$]: C }),
         style: { height: 36 },
@@ -356,7 +356,7 @@ function Z(e) {
                 children: (0, l.jsxs)(m.D, {
                     className: s()($.nG, { [$.Tz]: L, [$.Jx]: C }),
                     onClick: C ? () => null : O,
-                    "aria-label": G.intl.formatToPlainString(G.t.VOmeSq, { name: V }),
+                    "aria-label": G.intl.formatToPlainString(G.t.VOmeSq, { name: U }),
                     children: [
                         (null != M || null != P) &&
                             (0, l.jsx)(g.A, {
@@ -366,7 +366,7 @@ function Z(e) {
                                 emojiName: M,
                                 animated: D,
                             }),
-                        (0, l.jsx)(p.E, { variant: "text-md/medium", children: V }),
+                        (0, l.jsx)(p.E, { variant: "text-md/medium", children: U }),
                         !C &&
                             (0, l.jsxs)(l.Fragment, {
                                 children: [

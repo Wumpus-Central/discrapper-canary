@@ -14,8 +14,8 @@ var l = n(477900),
     p = n(652215),
     A = n(994500),
     f = n(975571),
-    C = n(786051),
-    x = n(559868),
+    x = n(786051),
+    C = n(559868),
     E = n(375708);
 function S(e) {
     var t, S;
@@ -25,8 +25,8 @@ function S(e) {
         v,
         _,
         b,
-        N,
         T,
+        N,
         { channel: M, children: R } = e,
         D = (0, s.bG)([A.A], () => A.A.isBlocked(M.getRecipientId()));
     ((S = t = M.id),
@@ -36,10 +36,10 @@ function S(e) {
         (v = (0, s.bG)([h.A], () => h.A.getChangelog(j ?? "", y), [j, y])),
         (_ = (0, g.A)(t)),
         (b = i.useRef(_ ? Date.now() : null)),
-        (N = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
-        (T = i.useRef(N)),
+        (T = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
+        (N = i.useRef(T)),
         i.useEffect(() => {
-            T.current = N;
+            N.current = T;
         }),
         i.useEffect(() => {
             b.current = Date.now();
@@ -52,7 +52,7 @@ function S(e) {
                 null != v &&
                 u.default.track(p.HAw.CHANGE_LOG_OPENED, {
                     change_log_id: `${v.date}:${v.revision}`,
-                    unread_count: T.current,
+                    unread_count: N.current,
                 });
         }, [_, v]),
         i.useEffect(() => {
@@ -64,7 +64,7 @@ function S(e) {
                     (u.default.track(p.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
                         change_log_id: `${v.date}:${v.revision}`,
-                        unread_count: T.current,
+                        unread_count: N.current,
                     }),
                     (b.current = 0));
             };
@@ -81,8 +81,8 @@ function S(e) {
             (O.buttonIcon = L ? a.t : void 0),
             (O.onButtonClick = function () {
                 if (L) {
-                    (open(x.Do),
-                        u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: x.Do }));
+                    (open(C.Do),
+                        u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: C.Do }));
                     return;
                 }
                 open(f.A.getArticleURL(p.MVz.SYSTEM_DMS));
@@ -95,5 +95,5 @@ function S(e) {
             (O.onButtonClick = function () {
                 r.A.unblockUser(M.getRecipientId());
             }));
-    return (0, l.jsx)(C.A, { ...O, children: R });
+    return (0, l.jsx)(x.A, { ...O, children: R });
 }

@@ -188,8 +188,8 @@ function L(e) {
                     L(i));
             }
         }, [t, T.length, n]));
-    let V = A.filter((e) => e.id !== r);
-    return (!b && 0 === V.length) || (b && 0 === T.length)
+    let U = A.filter((e) => e.id !== r);
+    return (!b && 0 === U.length) || (b && 0 === T.length)
         ? null
         : (0, l.jsx)(a.hD, {
               navigator: C,
@@ -202,7 +202,7 @@ function L(e) {
                           className: s()(R.I, w.KK),
                           children: b
                               ? T.map((e) => (0, l.jsx)(k, { channelId: t, keyboardModeEnabled: y, option: e }, e.name))
-                              : V.map((e) =>
+                              : U.map((e) =>
                                     (0, l.jsx)(
                                         v.A,
                                         {

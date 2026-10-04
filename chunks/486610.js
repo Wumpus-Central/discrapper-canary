@@ -3,13 +3,13 @@ var i = n(435558),
     r = n.n(i),
     l = n(807081),
     a = n(478676),
-    s = n.n(a),
-    o = n(182490);
+    o = n.n(a),
+    s = n(182490);
 let u = {
-    ...s().defaultRules.image,
-    order: s().defaultRules.link.order - 0.5,
+    ...o().defaultRules.image,
+    order: o().defaultRules.link.order - 0.5,
     requiredFirstCharacters: ["!"],
-    parse: (e) => ({ type: o.D.TEXT, content: e[0] }),
+    parse: (e) => ({ type: s.D.TEXT, content: e[0] }),
 };
 var d = n(247186),
     c = n(999915);

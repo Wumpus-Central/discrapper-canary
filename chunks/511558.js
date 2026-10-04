@@ -35,8 +35,8 @@ var E = n(675816),
     P = n(724511),
     M = n(850992),
     D = n(887695),
-    V = n(435558),
-    U = n(962125),
+    U = n(435558),
+    V = n(962125),
     W = n(158045),
     F = n(240864),
     B = n(212633);
@@ -138,7 +138,7 @@ let K = i.forwardRef(function (e, t) {
                 children: [
                     I.length > 0 && !s && null != p
                         ? p()
-                        : (0, l.jsx)(U.A, {
+                        : (0, l.jsx)(V.A, {
                               role: "none presentation",
                               listPadding: a,
                               onScroll: j,
@@ -160,7 +160,7 @@ let K = i.forwardRef(function (e, t) {
             })
         );
     }),
-    G = (0, V.throttle)(
+    G = (0, U.throttle)(
         function (e) {
             let {
                 listRef: t,
@@ -281,10 +281,10 @@ function X(e) {
         L = i.useRef(null),
         P = i.useRef(null),
         M = i.useRef(null),
-        V = 0 === t.length,
-        U = (0, d.RQ)((e) => e.searchQuery),
+        U = 0 === t.length,
+        V = (0, d.RQ)((e) => e.searchQuery),
         W = s.useStore((e) => e.inspectedExpressionPosition),
-        F = (0, D.oV)({ gridWrapperRef: L, containerWidth: r, showingEmptyState: V }),
+        F = (0, D.oV)({ gridWrapperRef: L, containerWidth: r, showingEmptyState: U }),
         {
             expressionsGrid: B,
             rowCount: G,
@@ -334,8 +334,8 @@ function X(e) {
         el = i.useCallback((e) => E?.(t[e], e), [t, E]),
         ei = i.useCallback(() => S?.(B?.[W.rowIndex]?.[W.columnIndex]), [B, W.columnIndex, W.rowIndex, S]);
     (i.useEffect(() => {
-        o(U);
-    }, [o, U]),
+        o(V);
+    }, [o, V]),
         i.useEffect(() => {
             s.setBottomPosition(L.current?.getBoundingClientRect().bottom ?? null);
         }),
@@ -361,7 +361,7 @@ function X(e) {
     return (0, l.jsxs)(l.Fragment, {
         children: [
             null != w ? w(er) : (0, l.jsxs)("div", { className: Z.wx, children: [" ", er, " "] }),
-            V && null != p
+            U && null != p
                 ? p(Z.p$)
                 : (0, l.jsxs)(l.Fragment, {
                       children: [
@@ -481,19 +481,19 @@ function eP(e, t) {
 }
 var eM = n(554146),
     eD = n(43105),
-    eV = n(131607),
-    eU = n(49999),
+    eU = n(131607),
+    eV = n(49999),
     eW = n(375708);
 function eF(e) {
     let { targetElementRef: t } = e,
         { allowReordering: n } = eh.q.useConfig({ location: "SoundboardFavoritesCoachmark" }),
-        [i, r] = (0, eV.kn)(n ? [eM.M.SOUNDBOARD_FAVORITES_ORDERING_COACHMARK] : [], void 0, !0);
+        [i, r] = (0, eU.kn)(n ? [eM.M.SOUNDBOARD_FAVORITES_ORDERING_COACHMARK] : [], void 0, !0);
     return i !== eM.M.SOUNDBOARD_FAVORITES_ORDERING_COACHMARK
         ? null
         : (0, l.jsx)(eD.A, {
               targetElementRef: t,
               onRequestClose: function (e) {
-                  (("user:escape" === e || "user:explicit" === e) && r(eU.i.DISMISS), r(eU.i.AUTO_DISMISS));
+                  (("user:escape" === e || "user:explicit" === e) && r(eV.i.DISMISS), r(eV.i.AUTO_DISMISS));
               },
               title: eW.intl.string(eW.t.KFcQy8),
               body: eW.intl.string(eW.t["P/1x7s"]),
@@ -951,7 +951,7 @@ function tN(e) {
         { analyticsLocations: R } = (0, c.Ay)(u.A.PREMIUM_UPSELL),
         { location: P } = (0, w.p)(),
         D = i.useMemo(() => ({ ...P, section: eT.JJy.SOUNDBOARD_SOUND_PICKER }), [P]),
-        [V, U] = i.useState(null),
+        [U, V] = i.useState(null),
         F = (0, y.bG)([es.default], () => es.default.getCurrentUser()),
         B = (0, W.TW)(F, eR.PremiumTypes.TIER_2),
         K = (0, y.bG)([ea.A], () => ea.A.getVoiceState(t, F?.id ?? eT.dJq)),
@@ -1165,10 +1165,10 @@ function tN(e) {
                 );
             }, [h, s, a, !0, f, x, t, p, m, n, u, r, c, E, S, I, C, A, d]);
         })(r, void 0, I),
-        [eV, eU] = i.useState([]),
+        [eU, eV] = i.useState([]),
         eF = i.useMemo(
-            () => (H.length > 0 ? [{ key: ec.Cx.SEARCH, categoryInfo: { type: ec.Cx.SEARCH }, items: ew(eV) }] : ev),
-            [ev, H.length, eV],
+            () => (H.length > 0 ? [{ key: ec.Cx.SEARCH, categoryInfo: { type: ec.Cx.SEARCH }, items: ew(eU) }] : ev),
+            [ev, H.length, eU],
         ),
         eB = (0, d.RQ)((e) => e.isNitroLockedSectionVisible),
         eK = i.useMemo(() => eF.filter((e) => e.items.length > 0), [eF]),
@@ -1204,7 +1204,7 @@ function tN(e) {
                             }));
                 else {
                     if ((0, ed.Ir)(F, e, r)) return;
-                    f && U(e);
+                    f && V(e);
                 }
             },
             [p, F, r, f, z, H, h, m],
@@ -1289,7 +1289,7 @@ function tN(e) {
         ),
         e3 = i.useCallback(() => {
             let e = g.A.getSoundById("3");
-            null != e && U(e);
+            null != e && V(e);
         }, []),
         e6 = i.useCallback(() => {
             let e = (0, W.Dd)(eR.PremiumTypes.TIER_2);
@@ -1353,7 +1353,7 @@ function tN(e) {
             },
             [eG, eH, ez, eK.length],
         ),
-        tn = i.useCallback((e) => eU((0, em.lG)(e, eM, F, r, j)), [r, F, eM, j]),
+        tn = i.useCallback((e) => eV((0, em.lG)(e, eM, F, r, j)), [r, F, eM, j]),
         tl = i.useCallback(
             (e) => {
                 (0, _.L3)(e, async () => {
@@ -1440,7 +1440,7 @@ function tN(e) {
         }),
         (0, l.jsxs)(l.Fragment, {
             children: [
-                null != V
+                null != U
                     ? (0, l.jsx)(el.A, {
                           title: eW.intl.string(v ? eW.t.rZEEvU : eW.t.jGDYF0),
                           description: eW.intl.string(v ? eW.t.ZPNG5A : eW.t["grL/hg"]),
@@ -1453,7 +1453,7 @@ function tN(e) {
                               sku_id: W.Ay.getSkuIdForPremiumType(eR.PremiumTypes.TIER_2),
                               voice_guild_id: er.A.getGuildId(),
                           },
-                          onClose: () => U(null),
+                          onClose: () => V(null),
                           onUpsellClicked: o,
                       })
                     : void 0,
@@ -1464,7 +1464,7 @@ function tN(e) {
                     store: M.LW,
                     onSelectItem: e0,
                     onSearchExpressions: tn,
-                    hasSearchResults: eV.length > 0,
+                    hasSearchResults: eU.length > 0,
                     defaultSearchPlaceholder: eW.intl.string(eW.t.sKt3xS),
                     renderRow: e1,
                     renderSectionHeader: te,

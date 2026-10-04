@@ -37,8 +37,8 @@ var _ = n(826745),
     P = n(677134),
     M = n(652215),
     D = n(650583);
-let V = /(\t|\s)/;
-class U extends i.PureComponent {
+let U = /(\t|\s)/;
+class V extends i.PureComponent {
     _ref;
     state = { nextSelection: -1 };
     componentDidMount() {
@@ -61,9 +61,9 @@ class U extends i.PureComponent {
         if (0 === t.trim().length) return { word: null, fullWord: null, isAtStart: !1 };
         let n = e.selectionStart,
             l = e.selectionEnd;
-        for (; n > 0 && !V.test(t[n - 1]);) n--;
+        for (; n > 0 && !U.test(t[n - 1]);) n--;
         let i = e.selectionEnd;
-        for (; i < t.length && !V.test(t[i]);) i++;
+        for (; i < t.length && !U.test(t[i]);) i++;
         let r = (0, O.h3)(t.slice(n, l), t.slice(n, i));
         return { word: r.word, fullWord: r.fullWord, isAtStart: 0 === n && !r.didTrimPrefix };
     }
@@ -419,8 +419,8 @@ let eS = i.forwardRef(function (e, t) {
             onKeyUp: w,
             onTab: L,
             onEnter: P,
-            onSpace: V,
-            onSubmit: U,
+            onSpace: U,
+            onSubmit: V,
             onSubmitFailure: X,
             maybeShowAutocomplete: ea,
             hideAutocomplete: ed,
@@ -445,7 +445,7 @@ let eS = i.forwardRef(function (e, t) {
         eP = i.useRef(!0),
         eM = i.useRef(!0),
         eD = y || C,
-        eV = i.useCallback(
+        eU = i.useCallback(
             (e, t, n) => {
                 let { value: l, selection: i } = n,
                     r = q.VW.richValue(e),
@@ -491,13 +491,13 @@ let eS = i.forwardRef(function (e, t) {
             },
             [f.id, f.guild_id],
         ),
-        eU = i.useCallback(() => {
+        eV = i.useCallback(() => {
             eP.current = !1;
         }, []),
         eW = i.useCallback(() => {
             eP.current = !0;
         }, []),
-        eF = (0, Z.A)({ channel: f, chatInputType: h, onChangeStart: eU, onChangeEnd: eW, updateState: eV }),
+        eF = (0, Z.A)({ channel: f, chatInputType: h, onChangeStart: eV, onChangeEnd: eW, updateState: eU }),
         eB = i.useCallback(
             (e, t) => {
                 let n = B.SQ(eF, e, f.id),
@@ -539,8 +539,8 @@ let eS = i.forwardRef(function (e, t) {
                 (F._.dispatch(M.jej.SHAKE_APP, { duration: 200, intensity: 2 }), X?.());
                 return;
             }
-            U?.((0, H.WO)(q.VW.richValue(eF), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
-        }, [f.id, eF, U, X, eB, ey]);
+            V?.((0, H.WO)(q.VW.richValue(eF), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
+        }, [f.id, eF, V, X, eB, ey]);
     (i.useImperativeHandle(
         t,
         () => ({
@@ -802,7 +802,7 @@ let eS = i.forwardRef(function (e, t) {
             onKeyUp: w,
             onTab: L,
             onEnter: P,
-            onSpace: V,
+            onSpace: U,
             allowNewLines: eb,
             submit: eK,
             hideAutocomplete: ed,
@@ -842,8 +842,8 @@ let eS = i.forwardRef(function (e, t) {
             [ea, N],
         );
     (i.useLayoutEffect(() => {
-        eP.current && ((eL.current = d), eV(eF, "parent", { value: d }));
-    }, [eF, d, eV]),
+        eP.current && ((eL.current = d), eU(eF, "parent", { value: d }));
+    }, [eF, d, eU]),
         i.useEffect(() => {
             function e() {
                 let e = p.A.getActiveCommand(f.id) ?? null;
@@ -1218,7 +1218,7 @@ class eA extends i.Component {
                       canOnlyUseTextCommands: g,
                       onSubmitFailure: c,
                   })
-                : (0, l.jsx)(U, { ref: this.ref, ..._, value: n && !T ? "" : e });
+                : (0, l.jsx)(V, { ref: this.ref, ..._, value: n && !T ? "" : e });
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(S.EG, { event: M.jej.INSERT_TEXT, handler: this.handleInsertText }),

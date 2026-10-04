@@ -75,26 +75,26 @@ var R = n(931664),
     P = n(462180),
     M = n(375499),
     D = n(151271),
-    V = n(355622),
-    U = n(698279),
+    U = n(355622),
+    V = n(698279),
     W = n(495088);
 let F = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: r, channelId: s } = e,
             [a, o, u, c] = (0, D.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], P.x),
-            d = r === V.oU.NORMAL,
+            d = r === U.oU.NORMAL,
             h = i.useCallback(() => {
-                (0, D.r$)(U.kx.EMOJI, r, s);
+                (0, D.r$)(V.kx.EMOJI, r, s);
             }, [r, s]);
         return n
             ? null
             : (0, l.jsx)("div", {
-                  className: E()(U.VQ, W.UD),
+                  className: E()(V.VQ, W.UD),
                   ref: t,
                   children: (0, l.jsx)(M.A, {
                       className: W.Z8,
                       onClick: h,
-                      active: a === U.kx.EMOJI && o === r && c === s,
+                      active: a === V.kx.EMOJI && o === r && c === s,
                       "aria-controls": u,
                       tabIndex: 0,
                       focusProps: { offset: { top: 4, bottom: 4, left: -4, right: -4 } },
@@ -128,18 +128,18 @@ let Q = i.memo(
             }, []);
         (0, z.Vo)({ event: f.jej.FAVORITE_GIF, handler: x });
         let S = i.useCallback(() => {
-                (0, D.r$)(U.kx.GIF, r, a.id);
+                (0, D.r$)(V.kx.GIF, r, a.id);
             }, [r, a.id]),
             { Component: y, events: C, play: A } = (0, K.V)();
         if (n) return null;
-        let b = d === U.kx.GIF && h === r && p === a.id;
+        let b = d === V.kx.GIF && h === r && p === a.id;
         return (0, l.jsx)(G.m, {
             text: T.intl.string(c ? T.t.mE2e8A : T.t.nffuyb),
             shouldShow: c,
             forceOpen: c,
             children: (0, l.jsx)("div", {
                 ref: t,
-                className: E()(U.VQ, W.UD),
+                className: E()(V.VQ, W.UD),
                 children: (0, l.jsx)(q.A, {
                     className: W.x6,
                     onMouseEnter: C.onMouseEnter,
@@ -197,9 +197,9 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 u,
                 { disabled: c, type: d, channel: h } = e,
                 [m, p, f, g] = (0, D.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], P.x),
-                x = m === U.kx.STICKER && g === d && f === h.id,
+                x = m === V.kx.STICKER && g === d && f === h.id,
                 S = i.useCallback(() => {
-                    (0, D.r$)(U.kx.STICKER, d, h.id);
+                    (0, D.r$)(V.kx.STICKER, d, h.id);
                 }, [d, h.id]),
                 {
                     Component: y,
@@ -235,7 +235,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             return c
                 ? null
                 : (0, l.jsx)("div", {
-                      className: E()(U.VQ, W.UD),
+                      className: E()(V.VQ, W.UD),
                       ref: t,
                       children: (0, l.jsx)(q.A, {
                           className: E()(W.x6, W.KE),
@@ -287,11 +287,11 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                         l = null != e && e.length > 0;
                     return 0 === O.A.getUploads(t, n.drafts.type).length && i && !l;
                 })),
-            { activeCommand: D, activeCommandOption: V } = (0, s.cf)([u.A], () => ({
+            { activeCommand: D, activeCommandOption: U } = (0, s.cf)([u.A], () => ({
                 activeCommand: u.A.getActiveCommand(S.id),
                 activeCommandOption: u.A.getActiveOption(S.id),
             })),
-            U = (0, g.dw)(),
+            V = (0, g.dw)(),
             K = [],
             G = !S.isDM() || void 0 === S.recipients || S.recipients.length > 1,
             H = (0, s.bG)([p.default], () => (G ? null : p.default.getUser(S.recipients[0]))),
@@ -323,11 +323,11 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 return l && i && null == r;
             })({ channel: S, chatInputType: x }),
             q = x.submit?.button != null && (x.submit?.ignorePreference || N),
-            Z = null == D || (null != V && V.type !== a.n4.ATTACHMENT);
+            Z = null == D || (null != U && U.type !== a.n4.ATTACHMENT);
         return (!r.Fr &&
             (x.gifts?.button != null &&
                 null == D &&
-                !U &&
+                !V &&
                 (null == H || L.Ay.isPremiumEligible(H)) &&
                 K.push((0, l.jsx)($.A, { disabled: E, channel: S }, "gift")),
             x.gifs?.button != null &&

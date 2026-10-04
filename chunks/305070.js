@@ -34,8 +34,8 @@ var l = n(477900),
     P = n(652215),
     M = n(307731);
 let D = new Map([["thread", new Set(["name"])]]);
-var V = n(5867),
-    U = n(940169);
+var U = n(5867),
+    V = n(940169);
 let W = i.forwardRef(function (e, t) {
     let { channel: n, type: r, editorHeight: W, onVisibilityChange: F, editorScrollerRef: B, barsHeight: K } = e,
         G = (0, g.GV)(),
@@ -113,7 +113,7 @@ let W = i.forwardRef(function (e, t) {
                         }, [l.query?.type, l.query?.queryText, l.query?.isLoading, l.isVisible, l.isInitialAfterError]),
                         u
                     );
-                })({ navId: "channel-autocomplete", scrollerRef: n, state: s, onFocus: (e) => V.setSelectedIndex(e) }),
+                })({ navId: "channel-autocomplete", scrollerRef: n, state: s, onFocus: (e) => U.setSelectedIndex(e) }),
                 x = e.editorRef.current?.getCurrentWord(),
                 E = e.editorRef.current?.getSlateEditor(),
                 S = null;
@@ -144,37 +144,37 @@ let W = i.forwardRef(function (e, t) {
                               )
                             : "",
                 },
-                [V] = i.useState(() => new R.Ay(C));
+                [U] = i.useState(() => new R.Ay(C));
             return (
                 i.useEffect(() => {
-                    V.updateProps(C);
+                    U.updateProps(C);
                 }),
-                i.useImperativeHandle(t, () => V, [V]),
+                i.useImperativeHandle(t, () => U, [U]),
                 i.useEffect(() => {
                     function e(e) {
                         return a(e);
                     }
                     return (
-                        V.on("change", e),
-                        V.on("update", u),
+                        U.on("change", e),
+                        U.on("update", u),
                         () => {
-                            (V.off("change", e), V.off("update", u));
+                            (U.off("change", e), U.off("update", u));
                         }
                     );
-                }, [u, V]),
+                }, [u, U]),
                 i.useEffect(() => {
                     let e = s.query?.typeInfo.stores;
                     if (null != e) {
                         function t() {
-                            return V.queryResults();
+                            return U.queryResults();
                         }
                         for (let n of e) n.addChangeListener(t);
                         return () => {
                             for (let n of e) n.removeChangeListener(t);
                         };
                     }
-                }, [V, s.query?.typeInfo]),
-                [s, V, g]
+                }, [U, s.query?.typeInfo]),
+                [s, U, g]
             );
         })({ ...e, guild: H }, t, z),
         Z = r.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
@@ -186,7 +186,7 @@ let W = i.forwardRef(function (e, t) {
             () => {
                 let e = h.Ay.getSelfEmbeddedActivityForChannel(n.id),
                     t = h.Ay.getActivityPanelMode();
-                return (0, d.AX)(n) && null != e && (0, m.H)(e.location) === n.id && t === V.Gd.PANEL;
+                return (0, d.AX)(n) && null != e && (0, m.H)(e.location) === n.id && t === U.Gd.PANEL;
             },
             [n],
         ),
@@ -214,7 +214,7 @@ let W = i.forwardRef(function (e, t) {
             onClick: (e) => Q.onResultClick(e),
         }) ?? null;
     if (null == et) return null;
-    let en = { [U.pK]: null == J, [U.YB]: null != J, [U.sQ]: null == J && "bottom" === e.position, [U.mO]: Y },
+    let en = { [V.pK]: null == J, [V.YB]: null != J, [V.sQ]: null == J && "bottom" === e.position, [V.mO]: Y },
         el = 490;
     null != J && (el = r.autocomplete?.small ? 200 : q.query?.type === y.DB.EMOJIS_AND_STICKERS ? 490 : 245);
     let ei = Math.max(W, B?.current?.clientHeight ?? 0),
@@ -222,8 +222,8 @@ let W = i.forwardRef(function (e, t) {
     el = Math.min(window.innerHeight - 120 - er - (K ?? 0), el);
     let es = (0, l.jsx)(p.Ay, {
         id: G,
-        className: s()(U.nx, en),
-        innerClassName: U.Fv,
+        className: s()(V.nx, en),
+        innerClassName: V.Fv,
         onMouseDown: (e) => e.preventDefault(),
         children: (0, l.jsx)(a.hD, {
             navigator: $,
@@ -238,7 +238,7 @@ let W = i.forwardRef(function (e, t) {
                         orientation: "vertical",
                         overflow: "auto",
                         ...n,
-                        className: U.XG,
+                        className: V.XG,
                         style: { maxHeight: el },
                         role: "listbox",
                         "aria-labelledby": (0, p.Sz)(G),

@@ -14,8 +14,8 @@ var l = n(477900),
     p = n(830215),
     A = n(857182),
     f = n(66834),
-    C = n(775602),
-    x = n(315982),
+    x = n(775602),
+    C = n(315982),
     E = n(480900),
     S = n(311043),
     I = n(60465),
@@ -24,8 +24,8 @@ var l = n(477900),
     v = n(652215),
     _ = n(624458),
     b = n(821124),
-    N = n(202384),
-    T = n(513461),
+    T = n(202384),
+    N = n(513461),
     M = n(709977),
     R = n(212455),
     D = n(224640),
@@ -191,10 +191,10 @@ class ep extends i.PureComponent {
     };
     handleShowMemberVerification = () => {
         let { guild: e } = this.props;
-        null != e && (0, N.Ze)(e.id);
+        null != e && (0, T.Ze)(e.id);
     };
     handleClaimAccount = () => {
-        x.R();
+        C.R();
     };
     handleVerifyPhone = () => {
         (0, d.openModalLazy)(
@@ -254,7 +254,7 @@ class ep extends i.PureComponent {
     };
     renderMemberVerificationSuccessModal = () => {
         let { guild: e, guildJoinRequest: t } = this.props,
-            n = t?.applicationStatus === T.B5.APPROVED;
+            n = t?.applicationStatus === N.B5.APPROVED;
         if (null == e || null == t || !n || (0, b.NK)(t)) return null;
         function i() {
             null != e && null != t && _.A.ackUserGuildJoinRequest(e.id, t.joinRequestId);
@@ -280,15 +280,15 @@ class ep extends i.PureComponent {
                 canSendMessages: p,
                 channelFollowingUsersSeen: A,
                 showLurkerModeUpsellPopout: f,
-                showMemberVerificationModal: C,
-                missingVerificationRole: x,
+                showMemberVerificationModal: x,
+                missingVerificationRole: C,
                 verificationRole: S,
                 useReducedMotion: I,
                 isStaff: j,
                 guildJoinRequest: y,
                 showLinkedLobbyApplicationLoadingIndicator: _,
                 requiredLinkedLobbyApplication: b,
-                shouldRelaunchLinkedLobbyApplication: N,
+                shouldRelaunchLinkedLobbyApplication: T,
                 pendingGameProfileReturn: M,
                 guild: R,
             } = this.props,
@@ -314,16 +314,16 @@ class ep extends i.PureComponent {
         } else if (n)
             ((k.message = w.intl.string(w.t["Eg3/c9"])),
                 (k.buttonText = w.intl.string(w.t.fiNVin)),
-                (k.onButtonClick = C ? this.handleShowMemberVerification : this.handleClaimAccount));
-        else if (C)
+                (k.onButtonClick = x ? this.handleShowMemberVerification : this.handleClaimAccount));
+        else if (x)
             switch (y?.applicationStatus) {
-                case T.B5.SUBMITTED:
+                case N.B5.SUBMITTED:
                     ((k.message = w.intl.string(w.t["5iLvSx"])),
                         (k.subtitle = w.intl.string(w.t.FdsK4h)),
                         (k.buttonText = w.intl.string(w.t.mqtdmQ)),
                         (k.onButtonClick = this.handleCancelApplication));
                     break;
-                case T.B5.REJECTED:
+                case N.B5.REJECTED:
                     ((k.message = w.intl.string(w.t.lk30cY)),
                         (k.buttonText = w.intl.string(w.t["8RrsHr"])),
                         (k.onButtonClick = this.handleViewApplicationRejection));
@@ -335,7 +335,7 @@ class ep extends i.PureComponent {
                         (k.onButtonClick = this.handleShowMemberVerification));
             }
         else
-            null != R && null != S && x
+            null != R && null != S && C
                 ? ((k.message = w.intl.format(w.t.HbivnU, { roleName: `@${S.name}` })),
                   null === S.tags.guild_connections &&
                       ((k.buttonText = w.intl.string(w.t["6Ge2LG"])), (k.onButtonClick = () => (0, E.b)(S, R.id))))
@@ -355,7 +355,7 @@ class ep extends i.PureComponent {
                             ((k.message = w.intl.formatToPlainString(w.t["2JA2GH"], { min: v.$8o.ACCOUNT_AGE })),
                             (k.countdown = c))
                   : ((k.imageSrc = b.getIconURL(eh.iu.SMALL) ?? void 0),
-                    N
+                    T
                         ? (k.message = w.intl.format(w.t["SU2mY/"], { name: b.name }))
                         : ((k.message = w.intl.format(w.t.EvDn1D, { name: b.name })),
                           null != b.connectionEntrypointUrl &&
@@ -413,13 +413,13 @@ function eA(e) {
         p = !!(0, M.Qd)(a),
         A = (0, r.bG)([Z], () => Z.shouldShowPopout(s)),
         f = (0, r.bG)([er.A], () => er.A.can(v.xBc.SEND_MESSAGES, t)),
-        x = (0, r.bG)([R.A], () => R.A.getRequest(s)),
+        C = (0, r.bG)([R.A], () => R.A.getRequest(s)),
         {
             showLinkedLobbyApplicationLoadingIndicator: E,
             requiredLinkedLobbyApplication: _,
             shouldRelaunchLinkedLobbyApplication: b,
         } = (0, ed.A)(t.linkedLobby),
-        N = (function (e) {
+        T = (function (e) {
             let { channelId: t } = e,
                 n = (0, r.bG)([y.A], () => {
                     let e = y.A.getPendingReturn();
@@ -454,14 +454,14 @@ function eA(e) {
             channelFollowingUsersSeen: null != d ? d.usersSeenEver : null,
             hasVerificationGate: p,
             showMemberVerificationModal: g && p,
-            guildJoinRequestStatus: x?.applicationStatus ?? T.B5.STARTED,
-            guildJoinRequest: x,
+            guildJoinRequestStatus: C?.applicationStatus ?? N.B5.STARTED,
+            guildJoinRequest: C,
             showLinkedLobbyApplicationLoadingIndicator: E,
             requiredLinkedLobbyApplication: _,
             shouldRelaunchLinkedLobbyApplication: b,
-            useReducedMotion: C.Ay.useReducedMotion,
+            useReducedMotion: x.Ay.useReducedMotion,
             isStaff: m,
-            pendingGameProfileReturn: N,
+            pendingGameProfileReturn: T,
         };
     return (0, l.jsx)(ep, { ...D, channel: t, children: n });
 }

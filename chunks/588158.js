@@ -1,4 +1,4 @@
-n.d(t, { A: () => eN });
+n.d(t, { A: () => eT });
 var l,
     i = n(477900),
     s = n(582128),
@@ -14,8 +14,8 @@ var l,
     p = n(734066),
     A = n(915725),
     f = n(572164),
-    C = n(111994),
-    x = n(352527),
+    x = n(111994),
+    C = n(352527),
     E = n(267102),
     S = n(969632),
     I = n(554146),
@@ -24,8 +24,8 @@ var l,
     v = n(595528),
     _ = n(31717),
     b = n(49999);
-let N = I.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
-var T = n(566908),
+let T = I.M.SCHEDULED_MESSAGES_DRAFT_COACHMARK;
+var N = n(566908),
     M = n(43105),
     R = n(375708),
     D = n(632946);
@@ -85,8 +85,8 @@ var ea = n(661531),
     ep = n(588190),
     eA = n(152367),
     ef = n(55730),
-    eC = n(47167),
-    ex = n(994500),
+    ex = n(47167),
+    eC = n(994500),
     eE = n(287809),
     eS = n(652215),
     eI =
@@ -121,8 +121,8 @@ function ev(e) {
         } = e,
         { analyticsLocations: A } = (0, Z.Ay)(),
         f = (0, Q.s)({ channel: t }),
-        C = (0, o.bG)([et.A], () => et.A.isInProgress());
-    function x() {
+        x = (0, o.bG)([et.A], () => et.A.isInProgress());
+    function C() {
         (0, en.Tv)(t, void 0, "Plus Button");
     }
     function E() {
@@ -292,7 +292,7 @@ function ev(e) {
                                 label: e.display,
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
-                                action: x,
+                                action: C,
                             },
                             "THREAD",
                         );
@@ -342,9 +342,9 @@ function ev(e) {
                                 iconLeft: e.icon,
                                 leadingAccessory: { type: "icon", icon: e.icon },
                                 action: () => ee.A.summarizeThread(t),
-                                loading: C,
-                                disabled: C,
-                                children: C
+                                loading: x,
+                                disabled: x,
+                                children: x
                                     ? null
                                     : (0, i.jsxs)(i.Fragment, {
                                           children: [
@@ -384,7 +384,7 @@ function ev(e) {
 }
 var e_ = n(696016),
     eb = n(657851);
-let eN = s.memo(function (e) {
+let eT = s.memo(function (e) {
     let {
             className: t,
             channel: l,
@@ -407,7 +407,7 @@ let eN = s.memo(function (e) {
             () => (l.type === eS.rbe.DM ? J.filter((e) => !G.A.getParty(e.party?.id)?.has(l.getRecipientId())) : J),
             [J, l],
         ),
-        { onShareClick: ee } = (0, x.A)(l.id),
+        { onShareClick: ee } = (0, C.A)(l.id),
         et = (0, o.bG)([A.Ay], () => A.Ay.hasClips()),
         [en, el] = s.useState(null),
         ei = (0, p.sw)() && (Y || et),
@@ -463,8 +463,8 @@ let eN = s.memo(function (e) {
                     (0, i.jsx)(e, {
                         ...t,
                         channelId: l.id,
-                        initialMainLink: C.oH.ALL_CLIPS,
-                        picker: { onPick: (e) => ee({ clips: [e] }), action: C.qh.SHARE, allowMultiSelect: !0 },
+                        initialMainLink: x.oH.ALL_CLIPS,
+                        picker: { onPick: (e) => ee({ clips: [e] }), action: x.qh.SHARE, allowMultiSelect: !0 },
                     });
             },
             { modalKey: e_.nm },
@@ -484,10 +484,10 @@ let eN = s.memo(function (e) {
         );
     });
     let ey = (0, k.n)(l),
-        eN = (0, k.Tb)(l),
-        eT = !P.D_.useSetting() && !(0, B.isAndroidWeb)() && null != window.ResizeObserver,
+        eT = (0, k.Tb)(l),
+        eN = !P.D_.useSetting() && !(0, B.isAndroidWeb)() && null != window.ResizeObserver,
         eM = (0, S.I7)(l ?? void 0),
-        eR = (0, T.vK)(l),
+        eR = (0, N.vK)(l),
         eD = (0, g.b)(),
         eL = (function (e) {
             let {
@@ -536,7 +536,7 @@ let eN = s.memo(function (e) {
                                 type: "INVITE_TO_GAME",
                                 icon: eh.L,
                                 display: R.intl.formatToPlainString(R.t["KHLo+F"], {
-                                    channel: (0, eC.m1)(a, eE.default, ex.A, !0),
+                                    channel: (0, ex.m1)(a, eE.default, eC.A, !0),
                                     game: null != e ? e.name : "",
                                 }),
                                 activity: e,
@@ -547,7 +547,7 @@ let eN = s.memo(function (e) {
                                 type: "INVITE_TO_LISTEN",
                                 icon: em.J,
                                 display: R.intl.formatToPlainString(R.t.I479px, {
-                                    channel: (0, eC.m1)(a, eE.default, ex.A, !0),
+                                    channel: (0, ex.m1)(a, eE.default, eC.A, !0),
                                     name: null != e ? e.name : "",
                                 }),
                                 activity: e,
@@ -558,7 +558,7 @@ let eN = s.memo(function (e) {
                                 type: "INVITE_TO_WATCH",
                                 icon: eg.EyeIcon,
                                 display: R.intl.formatToPlainString(R.t["EvCP/g"], {
-                                    channel: (0, eC.m1)(a, eE.default, ex.A, !0),
+                                    channel: (0, ex.m1)(a, eE.default, eC.A, !0),
                                     name: null != e ? e.name : "",
                                 }),
                                 activity: e,
@@ -572,8 +572,8 @@ let eN = s.memo(function (e) {
             );
         })({
             canAttachFiles: eI,
-            canStartThreads: ey || eN,
-            useSlate: eT,
+            canStartThreads: ey || eT,
+            useSlate: eN,
             hasClips: ei,
             canUseApplicationCommands: !D,
             channel: l,
@@ -587,7 +587,7 @@ let eN = s.memo(function (e) {
         }),
         { isCoachmarkVisible: ek, dismissCoachmark: eP } = (function (e) {
             let { channel: t, draftText: n, isEligible: l } = e,
-                i = (0, j.HX)(N),
+                i = (0, j.HX)(T),
                 a = (0, o.bG)([_.A], () => null != _.A.getScheduledMessage(t.id)),
                 r = (0, o.bG)([v.A], () => v.A.isConnected()),
                 c = l && n.trim().length > 10 && !a && r,
@@ -602,11 +602,11 @@ let eN = s.memo(function (e) {
                 }, [c, i, d, n]),
                 !c && d && u(!1));
             let p = s.useCallback((e) => {
-                (u(!1), (0, j.Dr)(N, { dismissAction: e }));
+                (u(!1), (0, j.Dr)(T, { dismissAction: e }));
             }, []);
             return (
                 s.useEffect(() => {
-                    h && ((0, y.Wx)(N), (0, j.Dr)(N, { dismissAction: b.i.AUTO_DISMISS }));
+                    h && ((0, y.Wx)(T), (0, j.Dr)(T, { dismissAction: b.i.AUTO_DISMISS }));
                 }, [h]),
                 { isCoachmarkVisible: h, dismissCoachmark: p }
             );

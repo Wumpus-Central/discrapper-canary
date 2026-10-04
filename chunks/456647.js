@@ -1,15 +1,15 @@
-n.d(t, { X: () => s });
+n.d(t, { X: () => o });
 var i = n(582128),
     r = n(17928),
     l = n(77468),
     a = n(30370);
-function s(e) {
+function o(e) {
     let t = (0, r.bG)([a.A], () => (null != e ? a.A.getAccount(null, e) : null)),
         n = (0, r.bG)([a.A], () => a.A.isFetching()),
-        s = null != t && !t.revoked;
+        o = null != t && !t.revoked;
     return {
         loading: n,
-        hasConnection: s,
+        hasConnection: o,
         canConnect: null != e,
         startConnection: i.useCallback(
             async (t) => {

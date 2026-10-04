@@ -264,18 +264,18 @@ function D(e) {
     return !(function (e) {
         let { boundary: t, content: n, sourceTextLength: l, type: i } = e;
         return (
-            V(i, t) ||
+            U(i, t) ||
             (function (e) {
                 let { boundary: t, content: n, sourceTextLength: l } = e,
                     i = n;
                 for (let e = 0; e < l && null != i && "string" != typeof i; e++) {
                     let e = (function (e, t) {
                         if ("start" === t) {
-                            for (let t = 0; t < e.length; t++) if (!U(e[t])) return e[t];
-                        } else for (let t = e.length - 1; t >= 0; t--) if (!U(e[t])) return e[t];
+                            for (let t = 0; t < e.length; t++) if (!V(e[t])) return e[t];
+                        } else for (let t = e.length - 1; t >= 0; t--) if (!V(e[t])) return e[t];
                     })(i instanceof Array ? i : [i], t);
                     if (null == e) break;
-                    if (V(e.type, t)) return !0;
+                    if (U(e.type, t)) return !0;
                     i = e.content;
                 }
                 return !1;
@@ -285,10 +285,10 @@ function D(e) {
         ? [t]
         : [t, ...[...l, r].map((e) => `${s}_${e}`)];
 }
-function V(e, t) {
+function U(e, t) {
     return C.get(e)?.has(t) ?? !1;
 }
-function U(e) {
+function V(e) {
     return "text" === e.type && "string" == typeof e.content && "" === e.content.trim();
 }
 function W(e, t, n, l, i) {

@@ -1,4 +1,4 @@
-n.d(t, { t: () => C });
+n.d(t, { t: () => x });
 var l = n(582128),
     i = n(800754),
     s = n.n(i),
@@ -14,46 +14,46 @@ var l = n(582128),
     p = n(687599),
     A = n(652215),
     f = n(166643);
-function C(e) {
-    let { user: t, onAcceptSuccess: i, onRejectSuccess: C, onError: x } = e,
+function x(e) {
+    let { user: t, onAcceptSuccess: i, onRejectSuccess: x, onError: C } = e,
         E = (0, f.A)(),
         [S, I] = l.useState(!1),
         [j, y] = l.useState(!1),
         [v, _] = l.useState(!1),
-        [b, N] = l.useState(!1),
-        [T, M] = l.useState(!1),
+        [b, T] = l.useState(!1),
+        [N, M] = l.useState(!1),
         R = S || j || v,
         D = l.useCallback(
             async (e) => {
                 if (!R) {
                     I(!0);
                     try {
-                        (await (0, h.RK)(e), N(!0), i?.());
+                        (await (0, h.RK)(e), T(!0), i?.());
                     } catch (t) {
                         let e = new a.LG(t);
-                        x?.(e);
+                        C?.(e);
                     } finally {
                         I(!1);
                     }
                 }
             },
-            [R, i, x],
+            [R, i, C],
         ),
         L = l.useCallback(
             async (e) => {
                 if (!R) {
                     y(!0);
                     try {
-                        (await (0, h.UK)(e), M(!0), C?.());
+                        (await (0, h.UK)(e), M(!0), x?.());
                     } catch (t) {
                         let e = new a.LG(t);
-                        x?.(e);
+                        C?.(e);
                     } finally {
                         y(!1);
                     }
                 }
             },
-            [R, C, x],
+            [R, x, C],
         ),
         k = l.useCallback(
             async (e) => {
@@ -62,15 +62,15 @@ function C(e) {
                 let t = s()(e, 50);
                 try {
                     for (let e of t) await (0, h.ST)(e);
-                    (M(!0), C?.());
+                    (M(!0), x?.());
                 } catch (t) {
                     let e = new a.LG(t);
-                    x?.(e);
+                    C?.(e);
                 } finally {
                     y(!1);
                 }
             },
-            [R, C, x],
+            [R, x, C],
         ),
         P = l.useCallback(
             async (e) => {
@@ -166,6 +166,6 @@ function C(e) {
         isRejectLoading: j,
         isUserProfileLoading: v,
         isOptimisticAccepted: b,
-        isOptimisticRejected: T,
+        isOptimisticRejected: N,
     };
 }

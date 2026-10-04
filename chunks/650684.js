@@ -11,16 +11,16 @@ function r(e) {
             height: r,
             color: o = a.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: c = "",
-            ...d
+            ...u
         } = e,
-        u = (0, s.J)(t),
-        m = u?.width ?? l,
-        h = u?.height ?? r;
+        d = (0, s.J)(t),
+        m = d?.width ?? l,
+        f = d?.height ?? r;
     return (0, n.jsxs)("svg", {
-        ...(0, i.A)(d),
+        ...(0, i.A)(u),
         xmlns: "http://www.w3.org/2000/svg",
         width: m,
-        height: h,
+        height: f,
         fill: "none",
         viewBox: "0 0 24 24",
         children: [

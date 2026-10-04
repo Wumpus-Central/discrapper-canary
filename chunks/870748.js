@@ -79,8 +79,8 @@ function _(e, t) {
             P(e, () => _(t));
         }));
     let D = null,
-        V = null,
         U = null,
+        V = null,
         W = null,
         F = null;
     return (
@@ -90,8 +90,8 @@ function _(e, t) {
                     a = o.j8({ channel: t, type: "channel" });
                 if (
                     I.VW.richValue(e) !== D ||
-                    !I.Ot.equals(e.selection, V) ||
-                    n.activeCommand !== U ||
+                    !I.Ot.equals(e.selection, U) ||
+                    n.activeCommand !== V ||
                     null == F ||
                     a.some((e, t) => F[t] !== e)
                 ) {
@@ -327,7 +327,7 @@ function _(e, t) {
                             editor: e,
                             storeCommandState: n,
                             channel: t,
-                            commandChanged: n.activeCommand?.id !== U?.id,
+                            commandChanged: n.activeCommand?.id !== V?.id,
                             previousOptionValues: W,
                         }),
                     );
@@ -335,7 +335,7 @@ function _(e, t) {
                         let t = C.o.currentEntry(e);
                         (null != t && (t.commandId = u.commandId), (W = u.optionValues));
                     } else W = null;
-                    ((D = I.VW.richValue(e)), (V = e.selection), (U = n.activeCommand), (F = a));
+                    ((D = I.VW.richValue(e)), (U = e.selection), (V = n.activeCommand), (F = a));
                 }
             }
             E();

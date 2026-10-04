@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     rs: "mainContainer__44492",
     oE: "compact__44492",
     Qs: "content__44492",

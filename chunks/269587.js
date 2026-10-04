@@ -47,9 +47,9 @@ function V(t) {
             appContext: w,
             targetElementRef: k,
         } = t,
-        [H, W] = i.useState(!1),
-        { analyticsLocations: B } = (0, f.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
-        z = (0, g.A)({ display: s, user: n, activity: a, entry: r, analyticsLocations: B }),
+        [W, B] = i.useState(!1),
+        { analyticsLocations: H } = (0, f.Ay)(A.A.USER_PROFILE_ACTIVITY_CONTEXT_MENU),
+        z = (0, g.A)({ display: s, user: n, activity: a, entry: r, analyticsLocations: H }),
         X = (0, m.NR)(),
         $ = i.useRef(null),
         F = X?.interactionPopoutTargetRef ?? $,
@@ -139,7 +139,7 @@ function V(t) {
                 })(t),
                 (0, j.s)(t),
             ].filter((t) => null != t);
-        })({ entry: r, activity: a, user: n, display: s, onClose: V, onAction: z, isMenuOpen: H, appContext: w });
+        })({ entry: r, activity: a, user: n, display: s, onClose: V, onAction: z, isMenuOpen: W, appContext: w });
     return 0 === Q.length || n.bot
         ? null
         : (0, l.jsx)(c.Y, {
@@ -148,7 +148,7 @@ function V(t) {
               position: "right",
               disablePointerEvents: !1,
               onRequestOpen: () => {
-                  (z({ action: "OPEN_MENU" }), W(!0));
+                  (z({ action: "OPEN_MENU" }), B(!0));
               },
               renderPopout: (t) => {
                   let { closePopout: e } = t;
@@ -158,7 +158,7 @@ function V(t) {
                           "data-menu-migrated-auto": !0,
                           navId: p.n,
                           onClose: () => {
-                              (e(), W(!1));
+                              (e(), B(!1));
                           },
                           "aria-label": O.intl.string(O.t.PlAQz1),
                           onSelect: o,

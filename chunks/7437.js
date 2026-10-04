@@ -3,23 +3,23 @@ var i = n(582128),
     r = n(739187),
     l = n(857250),
     a = n(97483),
-    s = n(887725),
-    o = n(375708);
+    o = n(887725),
+    s = n(375708);
 function u(e) {
     let { text: t, ok: n } = (function (e) {
         switch (e) {
             case "dispatched":
-                return { text: o.intl.string(s.default["um/5Kc"]), ok: !0 };
+                return { text: s.intl.string(o.default["um/5Kc"]), ok: !0 };
             case "rate_limited":
-                return { text: o.intl.string(s.default.T1n7hc), ok: !1 };
+                return { text: s.intl.string(o.default.T1n7hc), ok: !1 };
             case "unauthorized":
-                return { text: o.intl.string(s.default["30UxZU"]), ok: !1 };
+                return { text: s.intl.string(o.default["30UxZU"]), ok: !1 };
             case "no_widget_config":
-                return { text: o.intl.string(s.default["1UFWet"]), ok: !1 };
+                return { text: s.intl.string(o.default["1UFWet"]), ok: !1 };
             case "undeliverable":
-                return { text: o.intl.string(s.default.ypKX9A), ok: !1 };
+                return { text: s.intl.string(o.default.ypKX9A), ok: !1 };
             default:
-                return { text: o.intl.string(s.default.BLKD4B), ok: !1 };
+                return { text: s.intl.string(o.default.BLKD4B), ok: !1 };
         }
     })(e);
     (0, r.P)((0, l.o)(t, n ? a.Ck.SUCCESS : a.Ck.FAILURE));

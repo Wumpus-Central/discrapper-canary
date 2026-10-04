@@ -1,1 +1,1 @@
-t.exports = { Z: "appIcon__46ba7" };
+_.exports = { Z: "appIcon__46ba7" };

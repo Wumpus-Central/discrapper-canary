@@ -21,8 +21,8 @@ function p(e) {
 }
 var A = n(832712),
     f = n(543465),
-    C = n(477427),
-    x = n(393432),
+    x = n(477427),
+    C = n(393432),
     E = n(652215),
     S = n(790782),
     I = n(355097),
@@ -51,8 +51,8 @@ function v(e) {
                         A.A.updateChannelOverrideSettings({
                             guildId: e,
                             channelId: l,
-                            settings: { flags: (0, x.mD)(f.Ay.getChannelIdFlags(e, l), i) },
-                            label: C.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
+                            settings: { flags: (0, C.mD)(f.Ay.getChannelIdFlags(e, l), i) },
+                            label: x.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
                             location: { object: E.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
                         }),
                         n());
@@ -63,8 +63,8 @@ function v(e) {
 }
 var _ = n(228098),
     b = n(157259),
-    N = n(503698),
-    T = n.n(N),
+    T = n(503698),
+    N = n.n(T),
     M = n(95561),
     R = n(174459),
     D = n(867455),
@@ -82,7 +82,7 @@ function P(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: T()(k.JD, { [k.sc]: n }),
+            className: N()(k.JD, { [k.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
                     className: k.E5,
@@ -122,7 +122,7 @@ function O(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: T()(k.JD, { [k.sc]: n }),
+            className: N()(k.JD, { [k.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
                     className: k.E5,
