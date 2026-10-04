@@ -33,7 +33,7 @@
     PK: () => eL,
     y_: () => eU,
     nU: () => eP,
-    _m: () => eS,
+    _m: () => ey,
     Du: () => eh,
 }),
     n(321073),
@@ -174,8 +174,8 @@ function _(e) {
     for (let [t, n] of [...h]) n.projectId === e && (h.delete(t), clearTimeout(n.timer), n.resolve(null));
 }
 var g = n(580184),
-    S = n(557875),
-    y = n(783791),
+    y = n(557875),
+    S = n(783791),
     E = n(972786);
 n(421690);
 var T = n(50617),
@@ -339,6 +339,7 @@ async function K(e, t) {
                             "capture_preview" !== r.type &&
                             "control_preview" !== r.type &&
                             "control_claim" !== r.type &&
+                            "control_abort" !== r.type &&
                             "capture_claim" !== r.type &&
                             "preview_operation" !== r.type &&
                             "request_upstream_ticket" !== r.type &&
@@ -730,6 +731,7 @@ async function K(e, t) {
                                       }));
                     else if ("capture_preview" === r.type) q(t, n, r).catch(() => {});
                     else if ("control_preview" === r.type) F(t, n, r).catch(() => {});
+                    else if ("control_abort" === r.type) d.A.abortPreviewControl(t);
                     else if ("control_claim" === r.type || "capture_claim" === r.type) {
                         let e;
                         ((o = r.id),
@@ -958,7 +960,7 @@ function Q(e) {
     try {
         if (null == t) throw Error("Not connected");
         (t.ws.sendInterrupt(),
-            y.Ay.isThinking(e) && (R.add(e), s.h.dispatch({ type: "VIBEGRATIONS_CHAT_STOP_REQUESTED", projectId: e })));
+            S.Ay.isThinking(e) && (R.add(e), s.h.dispatch({ type: "VIBEGRATIONS_CHAT_STOP_REQUESTED", projectId: e })));
     } catch (e) {
         console.error("[vibegrations] interrupt send failed", e);
     }
@@ -1063,7 +1065,7 @@ function ea(e, t) {
 }
 let el = new Map();
 function ec(e) {
-    let t = (0, y.bi)(e);
+    let t = (0, S.bi)(e);
     if (null == t) return !1;
     if (el.get(e) === t) return !0;
     let n = A.get(e);
@@ -1139,7 +1141,7 @@ async function eg(e, t) {
     if (!s.ok) throw Error(`restore window failed (${s.status})`);
     return await s.json();
 }
-async function eS(e, t, n) {
+async function ey(e, t, n) {
     let { ticket: r, baseUrl: i } = await (0, p.d)(e),
         s = new URLSearchParams({ ticket: r }),
         o = await fetch(`${i}/agent/database/restore-points?${s}`, {
@@ -1152,7 +1154,7 @@ async function eS(e, t, n) {
     if (null == a.restorePoint) throw Error("restore point create returned nothing");
     return a.restorePoint;
 }
-async function ey(e, t) {
+async function eS(e, t) {
     var n;
     let r = t.ok && 202 !== t.status ? "" : (await t.text()).trim(),
         i =
@@ -1173,7 +1175,7 @@ async function ey(e, t) {
 async function eE(e, t) {
     let { ticket: n, baseUrl: r } = await (0, p.d)(e),
         i = new URLSearchParams({ ticket: n });
-    return ey(
+    return eS(
         e,
         await fetch(`${r}/agent/database/restore-points/${encodeURIComponent(t)}/restore?${i}`, { method: "POST" }),
     );
@@ -1181,7 +1183,7 @@ async function eE(e, t) {
 async function eT(e, t, n) {
     let { ticket: r, baseUrl: i } = await (0, p.d)(e),
         s = new URLSearchParams({ ticket: r });
-    return ey(
+    return eS(
         e,
         await fetch(`${i}/agent/database/restore?${s}`, {
             method: "POST",
@@ -1309,9 +1311,9 @@ async function eG(e, t) {
     if (!n.ok) {
         let e = null;
         try {
-            e = (0, S.rG)((await n.json())?.error);
+            e = (0, y.rG)((await n.json())?.error);
         } catch {}
-        return { type: "error", error: (0, S.ls)(n.status, e) };
+        return { type: "error", error: (0, y.ls)(n.status, e) };
     }
     try {
         r = (await n.json())?.url;
@@ -1357,7 +1359,7 @@ function eH(e) {
 }
 class eM extends i.Ay.Store {
     initialize() {
-        this.waitFor(a.default, y.Ay, E.Ay);
+        this.waitFor(a.default, S.Ay, E.Ay);
     }
     getConnState(e) {
         return O.get(e) ?? "connecting";

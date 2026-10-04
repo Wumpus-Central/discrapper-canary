@@ -318,6 +318,13 @@ let l = [
         summary: "Conjure ticks off each checklist step as it finishes it, instead of all at once at the end.",
     },
     {
+        date: "2026-10-03",
+        time: "23:55",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Pressing Stop while Conjure is testing your app now ends its clicks and typing in the preview right away.",
+    },
+    {
         date: "2026-09-25",
         time: "05:01",
         platforms: ["desktop", "mobile"],
