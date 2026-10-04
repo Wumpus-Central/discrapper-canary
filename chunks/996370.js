@@ -33,8 +33,8 @@ function T(e) {
             guildId: t,
             initialTab: g,
             scopeKeys: T,
-            note: V,
-            notifyAgent: _,
+            note: B,
+            notifyAgent: V,
             isPreview: L,
             transitionState: R,
             onClose: U,
@@ -82,8 +82,8 @@ function T(e) {
                 })(e),
                 w = f.save,
                 P = r?.collaborator_role_ids ?? [],
-                [T, B] = a.useState(r?.name ?? ""),
-                [V, _] = a.useState(null),
+                [T, _] = a.useState(r?.name ?? ""),
+                [B, V] = a.useState(null),
                 [L, R] = a.useState(T),
                 [U, G] = a.useState(r?.flags ?? 0),
                 [H, Z] = a.useState(() => [...P]),
@@ -94,41 +94,42 @@ function T(e) {
                 K = a.useId(),
                 N = L.trim(),
                 J = null != r && (0, v.IU)(r),
-                O = null != r && null != l && (0, v.RX)(r),
-                { isPublic: Y, isShared: $ } = (0, C.oA)(U),
-                ee = null != r && N !== T,
-                el = J && U !== (V?.flags ?? r?.flags ?? 0),
-                et =
-                    O &&
-                    ((t = V?.roleIds ?? P),
+                O = null != r && "user" !== r.install_scope,
+                Y = O && null != l && (0, v.RX)(r),
+                { isPublic: $, isShared: ee } = (0, C.oA)(U),
+                el = null != r && N !== T,
+                et = J && U !== (B?.flags ?? r?.flags ?? 0),
+                en =
+                    Y &&
+                    ((t = B?.roleIds ?? P),
                     !((s = H instanceof Set ? H : new Set(H)).size === t.length && t.every((e) => s.has(e)))),
-                en = ee || el || et,
-                ea = en || f.changed,
-                ei = a.useCallback((e) => {
+                ea = el || et || en,
+                ei = ea || f.changed,
+                es = a.useCallback((e) => {
                     (R(e), M(null), X(null));
                 }, []),
-                es = a.useCallback((e, l) => {
+                er = a.useCallback((e, l) => {
                     (G((t) => (l ? t | e : t & ~e)), Q(null), X(null));
                 }, []),
-                er = a.useCallback((e) => {
+                eu = a.useCallback((e) => {
                     e.length > v.sq
                         ? Q(I.intl.formatToPlainString(E.default.VPUL05, { max: v.sq }))
                         : (Z(e), Q(null), X(null));
                 }, []),
-                eu = a.useCallback(async () => {
-                    if (null == r || !ea || q) return !0;
+                ed = a.useCallback(async () => {
+                    if (null == r || !ei || q) return !0;
                     if ("" === N) return (M(I.intl.string(E.default.I2hgEB)), !1);
                     let t = {};
-                    (ee && (t.name = N),
-                        el && (t.flags = U),
-                        et && (t.collaborator_role_ids = [...H].sort()),
-                        null == r.guild_id && null != l && (et || (el && Y)) && (t.guild_id = l),
+                    (el && (t.name = N),
+                        et && (t.flags = U),
+                        en && (t.collaborator_role_ids = [...H].sort()),
+                        null == r.guild_id && null != l && (en || (et && $)) && (t.guild_id = l),
                         z(!0),
                         X(null));
                     try {
-                        if (en) {
+                        if (ea) {
                             if (!(await (0, j.CW)(e, t)).ok) return (X(I.intl.string(E.default.dxH2ZV)), !1);
-                            (B(N), _({ flags: U, roleIds: [...H] }));
+                            (_(N), V({ flags: U, roleIds: [...H] }));
                         }
                         if (!w()) return (X(I.intl.string(E.default.ITBIXb)), !1);
                         return !0;
@@ -137,7 +138,7 @@ function T(e) {
                     } finally {
                         z(!1);
                     }
-                }, [U, el, w, en, l, ea, Y, ee, r, e, et, q, H, N]);
+                }, [U, et, w, ea, l, ei, $, el, r, e, en, q, H, N]);
             return {
                 fields: (0, n.jsxs)(x.B, {
                     gap: 20,
@@ -145,7 +146,7 @@ function T(e) {
                         (0, n.jsx)(b.k, {
                             label: I.intl.string(E.default.u9UpIx),
                             value: L,
-                            onChange: ei,
+                            onChange: es,
                             error: F,
                             maxLength: 128,
                             disabled: q,
@@ -155,18 +156,18 @@ function T(e) {
                             ? (0, n.jsx)(h.d, {
                                   label: I.intl.string(E.default.EHMPvA),
                                   description: I.intl.string(E.default.bQQ4uT),
-                                  checked: $,
+                                  checked: ee,
                                   disabled: q,
-                                  onChange: (e) => es(v.A2.SHAREABLE, e),
+                                  onChange: (e) => er(v.A2.SHAREABLE, e),
                               })
                             : null,
-                        J
+                        J && O
                             ? (0, n.jsx)(h.d, {
                                   label: I.intl.string(E.default.fvxLKl),
                                   description: I.intl.string(E.default.Eb3Pe3),
-                                  checked: Y,
+                                  checked: $,
                                   disabled: q,
-                                  onChange: (e) => es(v.A2.PUBLIC, e),
+                                  onChange: (e) => er(v.A2.PUBLIC, e),
                               })
                             : null,
                         f.available
@@ -181,7 +182,7 @@ function T(e) {
                                   },
                               })
                             : null,
-                        O
+                        Y
                             ? (0, n.jsxs)(x.B, {
                                   gap: 8,
                                   children: [
@@ -198,10 +199,10 @@ function T(e) {
                                           options: g,
                                           maxOptionsVisible: 6,
                                           wrapTags: !0,
-                                          disabled: q || !Y,
+                                          disabled: q || !$,
                                           "aria-invalid": null != D,
                                           "aria-errormessage": null != D ? K : void 0,
-                                          onSelectionChange: er,
+                                          onSelectionChange: eu,
                                       }),
                                       (0, n.jsx)(u.E, {
                                           variant: "text-xs/normal",
@@ -211,7 +212,7 @@ function T(e) {
                                               max: v.sq,
                                           }),
                                       }),
-                                      Y
+                                      $
                                           ? null
                                           : (0, n.jsx)(u.E, {
                                                 variant: "text-xs/normal",
@@ -240,17 +241,17 @@ function T(e) {
                             : null,
                     ],
                 }),
-                canSave: ea && "" !== N,
+                canSave: ei && "" !== N,
                 saving: q,
-                submit: eu,
+                submit: ed,
             };
         })(l, G?.guild_id ?? t ?? void 0),
         [F, M] = a.useState(null);
     return (0, n.jsx)(f.A, {
         projectId: l,
         scopeKeys: T,
-        note: V,
-        notifyAgent: _,
+        note: B,
+        notifyAgent: V,
         isPreview: L,
         children: (e) => {
             let t = [];
@@ -302,7 +303,7 @@ function T(e) {
                         i || "secrets" !== a ? null : e.secretFields,
                         i || "model" !== a || H?.tierSettings == null
                             ? null
-                            : (0, n.jsx)(B, { projectId: l, modelSettings: H, tierSettings: H.tierSettings }),
+                            : (0, n.jsx)(_, { projectId: l, modelSettings: H, tierSettings: H.tierSettings }),
                         i || null != a
                             ? null
                             : Z
@@ -318,7 +319,7 @@ function T(e) {
         },
     });
 }
-function B(e) {
+function _(e) {
     let { projectId: l, modelSettings: t, tierSettings: s } = e,
         r = (0, i.bG)([o.Ay], () => "open" === o.Ay.getConnState(l), [l]),
         u = a.useCallback((e) => (0, o.XZ)(l, e), [l]),
