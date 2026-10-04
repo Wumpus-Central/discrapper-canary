@@ -77,6 +77,13 @@ let l = [
             "On phones, a project has the same menu as desktop: remix it, export or import it, get its coding tool link, browse version history and rewind its data from the chat menu, and copy its link or ID, open its settings or delete it from the landing.",
     },
     {
+        date: "2026-10-04",
+        time: "00:01",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Patch notes are written when you publish, from everything since your last publish, Live Reload changes included.",
+    },
+    {
         date: "2026-09-12",
         time: "00:00",
         platforms: ["desktop", "mobile"],

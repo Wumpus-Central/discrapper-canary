@@ -999,7 +999,7 @@ function en(e) {
         let i = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
             s = setTimeout(() => {
                 I(r, "Draft timed out");
-            }, 1e4);
+            }, 45e3);
         r.pendingPatchNotesDraft = { resolve: t, reject: n, timeout: s, nonce: i };
         try {
             r.ws.sendDraftPatchNotes(i);
