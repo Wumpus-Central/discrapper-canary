@@ -1203,6 +1203,13 @@ let l = [
         summary: "While Conjure works on your phone, a side quest may be offered when a video quest is available.",
     },
     {
+        date: "2026-10-03",
+        time: "21:22",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "While Live Reload is on, Conjure fixes what it finds as it tests your app and checks each change live, and the bar over your preview says Tuning the app.",
+    },
+    {
         date: "2026-09-29",
         time: "20:42",
         platforms: ["desktop", "mobile"],

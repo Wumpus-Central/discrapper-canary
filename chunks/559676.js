@@ -1,11 +1,13 @@
 n.d(t, {
     BP: () => c,
-    FQ: () => _,
-    Qg: () => m,
-    RW: () => p,
+    FQ: () => E,
+    Qg: () => I,
+    RW: () => m,
     Rh: () => f,
-    k: () => g,
-    o4: () => w,
+    Yn: () => g,
+    fb: () => _,
+    k: () => w,
+    o4: () => A,
     t_: () => u,
     xm: () => h,
 });
@@ -13,7 +15,7 @@ var i = n(582128);
 let r = new Map(),
     l = new Set(),
     a = new Set();
-function s() {
+function o() {
     for (let e of [...l])
         try {
             e();
@@ -21,7 +23,7 @@ function s() {
             console.error("[vibegrations] control lease subscriber threw", e);
         }
 }
-function o(e) {
+function s(e) {
     for (let t of [...a])
         try {
             t(e);
@@ -40,9 +42,9 @@ function u(e) {
         if (n || ((n = !0), clearTimeout(i), r.get(e) !== t)) return;
         (t.timers.delete(i), (t.holders -= 1));
         let l = t.holders <= 0;
-        (l && r.delete(e), s(), l && o(e));
+        (l && r.delete(e), o(), l && s(e));
     }
-    return (t.timers.add(i), s(), l);
+    return (t.timers.add(i), o(), l);
 }
 let d = new Map();
 function c(e) {
@@ -61,21 +63,30 @@ function f(e) {
     null != t && (d.delete(e), clearTimeout(t.timer), t.release());
 }
 function h(e) {
+    p.delete(e);
     let t = d.get(e);
     null != t && (d.delete(e), clearTimeout(t.timer));
     let n = r.get(e);
     if (null != n) {
         for (let e of n.timers) clearTimeout(e);
-        (r.delete(e), s(), o(e));
+        (r.delete(e), o(), s(e));
     }
 }
-function p(e) {
-    return (r.get(e)?.holders ?? 0) > 0;
-}
-function g() {
-    return [...r.keys()];
+let p = new Set();
+function g(e, t) {
+    p.has(e) !== t && (t ? p.add(e) : p.delete(e), o());
 }
 function _(e) {
+    let t = i.useCallback(() => null != e && p.has(e), [e]);
+    return i.useSyncExternalStore(E, t, t);
+}
+function m(e) {
+    return (r.get(e)?.holders ?? 0) > 0;
+}
+function w() {
+    return [...r.keys()];
+}
+function E(e) {
     return (
         l.add(e),
         () => {
@@ -83,7 +94,7 @@ function _(e) {
         }
     );
 }
-function m(e) {
+function I(e) {
     return (
         a.add(e),
         () => {
@@ -91,7 +102,7 @@ function m(e) {
         }
     );
 }
-function w(e) {
-    let t = i.useCallback(() => null != e && p(e), [e]);
-    return i.useSyncExternalStore(_, t, t);
+function A(e) {
+    let t = i.useCallback(() => null != e && m(e), [e]);
+    return i.useSyncExternalStore(E, t, t);
 }

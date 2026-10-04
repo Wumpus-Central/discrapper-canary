@@ -10670,9 +10670,10 @@ function oI(e) {
             }, [e]);
             return { stop: t ? s : null, stopping: n };
         })(n),
-        d = "controlling" === t,
-        m = ee.intl.string(d ? J.default.ydhvN1 : J.default["7U6tIB"]),
-        f =
+        d = (0, ts.fb)(n),
+        m = "controlling" === t,
+        f = ee.intl.string(m ? (d ? J.default.sX7INK : J.default.ydhvN1) : J.default["7U6tIB"]),
+        h =
             null != l
                 ? (0, a.jsx)(A.$, {
                       variant: "overlay-secondary",
@@ -10681,7 +10682,7 @@ function oI(e) {
                       onClick: l,
                   })
                 : null,
-        h =
+        p =
             null != o
                 ? (0, a.jsx)(A.$, {
                       variant: "overlay-primary",
@@ -10698,12 +10699,12 @@ function oI(e) {
               "data-phase": t,
               "data-testid": "vibegrations-control-notice",
               children: [
-                  d
+                  m
                       ? (0, a.jsx)(ij.i, { size: 12, color: "currentColor" })
                       : (0, a.jsx)(ov.SparklesIcon, { size: "sm", color: "currentColor" }),
-                  (0, a.jsx)(v.E, { variant: "text-sm/semibold", color: "none", className: oN.ID, children: m }),
-                  d ? (0, a.jsx)(w.A, { children: ee.intl.string(J.default.NldIIG) }) : null,
-                  d ? (0, a.jsxs)("div", { className: oN.lC, children: [f, h] }) : null,
+                  (0, a.jsx)(v.E, { variant: "text-sm/semibold", color: "none", className: oN.ID, children: f }),
+                  m ? (0, a.jsx)(w.A, { children: ee.intl.string(J.default.NldIIG) }) : null,
+                  m ? (0, a.jsxs)("div", { className: oN.lC, children: [h, p] }) : null,
               ],
           })
         : (0, a.jsxs)("div", {
@@ -10715,7 +10716,7 @@ function oI(e) {
                       className: oN.sp,
                       children: [
                           (0, a.jsx)(ov.SparklesIcon, { size: "sm", color: "currentColor" }),
-                          d ? (0, a.jsx)(ij.i, { size: 12, color: "currentColor" }) : null,
+                          m ? (0, a.jsx)(ij.i, { size: 12, color: "currentColor" }) : null,
                           (0, a.jsxs)("div", {
                               className: oN.f4,
                               children: [
@@ -10723,9 +10724,9 @@ function oI(e) {
                                       variant: "text-sm/semibold",
                                       color: "none",
                                       className: oN.w9,
-                                      children: m,
+                                      children: f,
                                   }),
-                                  d
+                                  m
                                       ? (0, a.jsx)(v.E, {
                                             variant: "text-xs/medium",
                                             color: "none",
@@ -10737,7 +10738,7 @@ function oI(e) {
                           }),
                       ],
                   }),
-                  d ? (0, a.jsxs)("div", { className: oN.lC, children: [f, h] }) : null,
+                  m ? (0, a.jsxs)("div", { className: oN.lC, children: [h, p] }) : null,
               ],
           });
 }
