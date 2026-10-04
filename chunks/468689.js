@@ -27,7 +27,7 @@ let R = new E.A("GuildSettingsActionCreators"),
         },
         async open(e, r, i, o) {
             (await Promise.all([
-                t.e("334179"),
+                t.e("611137"),
                 t.e("923068"),
                 t.e("886807"),
                 t.e("150183"),

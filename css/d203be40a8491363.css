@@ -1253,25 +1253,8 @@
     justify-content: space-between
 }
 
-.meterTrack__05518 {
-    background: var(--background-base-lowest);
-    height: var(--space-8);
-    overflow: hidden
-}
-
-.meterFill__05518,
-.meterTrack__05518 {
-    border-radius: var(--radius-round)
-}
-
-.meterFill__05518 {
-    background: var(--background-accent);
-    height: 100%;
-    width: calc(var(--custom-vibegrations-debug-meter-fraction, 0)*100%)
-}
-
-.meterFillCritical__05518 {
-    background: var(--status-danger)
+.statRow__05518>.meterCritical__05518 {
+    --custom-progressbar-indicator-color: var(--status-danger)
 }
 
 .tab__3ff54 {
@@ -1310,4 +1293,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=f2c8a296b653f60e.css.map*/
+/*# sourceMappingURL=d203be40a8491363.css.map*/

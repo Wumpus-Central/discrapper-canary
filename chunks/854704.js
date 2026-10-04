@@ -521,27 +521,27 @@ var eJ = n(202091),
     e1 = n(442433),
     e3 = n(230135),
     e2 = n(73153);
-let e9 = {};
-class e7 extends u.Ay.PersistedStore {
+let e7 = {};
+class e9 extends u.Ay.PersistedStore {
     static displayName = "GuildBoostingProgressBarPersistedStore";
     static persistKey = "PremiumGuildProgressBarPersistedStore";
     initialize(e) {
-        null != e && (e9 = e);
+        null != e && (e7 = e);
     }
     getState() {
-        return e9;
+        return e7;
     }
     getCountForGuild(e) {
-        return e9[e];
+        return e7[e];
     }
 }
-let e5 = new e7(e2.h, {
+let e5 = new e9(e2.h, {
     APPLIED_GUILD_BOOST_COUNT_UPDATE: function (e) {
         let { guildId: t, premiumCount: n } = e;
-        e9 = { ...e9, [t]: n };
+        e7 = { ...e7, [t]: n };
     },
     APPLIED_GUILD_BOOST_COUNT_RESET: function () {
-        e9 = {};
+        e7 = {};
     },
 });
 var e6 = n(147925),
@@ -725,10 +725,10 @@ var tg = n(787541),
     t1 = n(22277),
     t3 = n(551851),
     t2 = n(391507);
-function t9(e) {
+function t7(e) {
     e.stopPropagation();
 }
-function t7(e) {
+function t9(e) {
     let { label: t, onClick: n, tabIndex: i } = e;
     return (0, s.jsx)(Y.m, {
         text: t,
@@ -892,11 +892,11 @@ let t5 = B(
                                         ],
                                     }),
                                     (0, s.jsx)("div", {
-                                        onClick: t9,
+                                        onClick: t7,
                                         className: t2.Y_,
                                         children:
                                             null != I
-                                                ? (0, s.jsx)(t7, { label: I.label, onClick: I.perform, tabIndex: G })
+                                                ? (0, s.jsx)(t9, { label: I.label, onClick: I.perform, tabIndex: G })
                                                 : null,
                                     }),
                                 ],
@@ -1621,8 +1621,8 @@ function n2(e) {
         },
     });
 }
-var n9 = n(297264),
-    n7 = n(5373),
+var n7 = n(297264),
+    n9 = n(5373),
     n5 = n(65995),
     n6 = n(195702);
 function n4(e, t) {
@@ -1658,7 +1658,7 @@ let n8 = r.memo(function (e) {
                     (0, s.jsxs)("div", {
                         className: n6.A1,
                         children: [
-                            (0, s.jsx)(n9.D, { variant: "heading-sm/bold", children: el.intl.string(el.t.SnrR3x) }),
+                            (0, s.jsx)(n7.D, { variant: "heading-sm/bold", children: el.intl.string(el.t.SnrR3x) }),
                             (0, s.jsxs)("div", {
                                 className: n6.Ib,
                                 children: [
@@ -1682,7 +1682,7 @@ let n8 = r.memo(function (e) {
                             }),
                         ],
                     }),
-                    (0, s.jsx)(n7.i, {
+                    (0, s.jsx)(n9.i, {
                         className: n6.hr,
                         foregroundGradientColor: [
                             h.A.unsafe_rawColors.GREEN_300.css,
@@ -1769,7 +1769,7 @@ let ia = r.memo(function (e) {
                           (0, s.jsxs)("div", {
                               className: ir.FS,
                               children: [
-                                  (0, s.jsx)(n9.D, {
+                                  (0, s.jsx)(n7.D, {
                                       variant: "heading-sm/bold",
                                       children: el.intl.string(el.t.o3HK3d),
                                   }),
@@ -2259,8 +2259,8 @@ var iX = n(922016),
     i1 = n(305866),
     i3 = n(123292),
     i2 = n(830215),
-    i9 = n(315982),
-    i7 = n(480900),
+    i7 = n(315982),
+    i9 = n(480900),
     i5 = n(557722),
     i6 = n(834942),
     i4 = n(287809),
@@ -2332,7 +2332,7 @@ let ln = function (e) {
                   (0, s.jsxs)("div", {
                       className: le.Qs,
                       children: [
-                          (0, s.jsx)(n9.D, { variant: "heading-md/semibold", id: r, children: g }),
+                          (0, s.jsx)(n7.D, { variant: "heading-md/semibold", id: r, children: g }),
                           (0, s.jsx)(e0.E, { color: "text-default", variant: "text-sm/normal", children: A }),
                           (0, s.jsxs)("div", {
                               className: le.UD,
@@ -2346,13 +2346,13 @@ let ln = function (e) {
                                                 text: f,
                                                 onClick: function () {
                                                     (o
-                                                        ? i9.R()
+                                                        ? i7.R()
                                                         : c
                                                           ? (0, S.openModalLazy)(
                                                                 async () => {
                                                                     let { default: e } = await Promise.all([
                                                                         n.e("590275"),
-                                                                        n.e("334179"),
+                                                                        n.e("766806"),
                                                                         n.e("14775"),
                                                                         n.e("989545"),
                                                                         n.e("991531"),
@@ -2375,7 +2375,7 @@ let ln = function (e) {
                                                                       email: i4.default.getCurrentUser()?.email,
                                                                   }),
                                                               }))
-                                                            : h && null != m && (0, i7.b)(m, i),
+                                                            : h && null != m && (0, i9.b)(m, i),
                                                         l());
                                                 },
                                             }),
@@ -3053,7 +3053,7 @@ var l$ = n(364522),
     l1 = n(427262),
     l3 = n(641635);
 let l2 = nr.DN.SIZE_24;
-function l9(e) {
+function l7(e) {
     let { activity: t, embeddedApp: n } = e,
         i = t?.assets,
         l = t?.application_id;
@@ -3072,7 +3072,7 @@ function l9(e) {
         ? (0, s.jsx)("img", { alt: i.large_text ?? "", src: (0, l0.uD)(l, r, [128, 128]), className: l3.P3 })
         : null;
 }
-function l7(e) {
+function l9(e) {
     let { activity: t, embeddedApp: n, channel: i } = e,
         l = Array.from(n.embeddedActivity.userIds),
         r = (0, u.yK)([i4.default], () => l.map((e) => i4.default.getUser(e)).filter(to.Vq));
@@ -3081,11 +3081,11 @@ function l7(e) {
         children: (0, s.jsxs)("div", {
             className: l3.Wh,
             children: [
-                (0, s.jsx)(l9, { activity: t, embeddedApp: n }),
+                (0, s.jsx)(l7, { activity: t, embeddedApp: n }),
                 (0, s.jsxs)("div", {
                     className: l3.X0,
                     children: [
-                        (0, s.jsx)(n9.D, {
+                        (0, s.jsx)(n7.D, {
                             variant: "heading-sm/semibold",
                             color: "text-strong",
                             className: l3.wx,
@@ -3152,7 +3152,7 @@ function l6(e) {
               children: [
                   (0, s.jsx)("div", {
                       className: l5.Il,
-                      children: (0, s.jsx)(l7, { activity: n, embeddedApp: i, channel: t }),
+                      children: (0, s.jsx)(l9, { activity: n, embeddedApp: i, channel: t }),
                   }),
                   (0, s.jsx)("div", {
                       className: l5.M4,
@@ -4022,8 +4022,8 @@ var sK = n(845056),
     s1 = n(26741),
     s3 = n(493819),
     s2 = n(722884),
-    s9 = n(579129),
-    s7 = n(176431);
+    s7 = n(579129),
+    s9 = n(176431);
 function s5(e) {
     let { channel: t, imageUrl: i, animatedUrl: l, bannerHash: a, canModifyHangout: o } = e,
         d = (0, sQ.S)(i),
@@ -4048,30 +4048,30 @@ function s5(e) {
         );
     return (0, s.jsxs)("div", {
         ref: u,
-        className: s7.rs,
+        className: s9.rs,
         onContextMenu: g,
         children: [
             (0, s.jsx)("div", {
-                className: s7.ZS,
+                className: s9.ZS,
                 style: null != d ? { backgroundColor: d } : void 0,
-                children: (0, s.jsx)(s3.A, { imageUrl: i, animatedUrl: l, className: s7.Sl }),
+                children: (0, s.jsx)(s3.A, { imageUrl: i, animatedUrl: l, className: s9.Sl }),
             }),
             o
                 ? (0, s.jsxs)("div", {
-                      className: s7.n_,
+                      className: s9.n_,
                       children: [
                           (0, s.jsx)(Y.m, {
-                              text: el.intl.string(s9.default.XJ4UpB),
+                              text: el.intl.string(s7.default.XJ4UpB),
                               children: (0, s.jsx)(X.D, {
-                                  className: s7.HF,
+                                  className: s9.HF,
                                   onClick: h,
                                   children: (0, s.jsx)(sZ.PencilIcon, { size: "xs", color: "currentColor" }),
                               }),
                           }),
                           (0, s.jsx)(Y.m, {
-                              text: el.intl.string(s9.default.XV4qT6),
+                              text: el.intl.string(s7.default.XV4qT6),
                               children: (0, s.jsx)(X.D, {
-                                  className: s7.HF,
+                                  className: s9.HF,
                                   onClick: m,
                                   children: (0, s.jsx)(s$.TrashIcon, { size: "xs", color: "currentColor" }),
                               }),
@@ -4090,16 +4090,16 @@ function s6(e) {
         }, [t]);
     return (0, s.jsx)("div", {
         ref: n,
-        className: s7._o,
+        className: s9._o,
         children: (0, s.jsxs)(X.D, {
-            className: s7.hH,
+            className: s9.hH,
             onClick: i,
             children: [
                 (0, s.jsx)(sJ.X, { size: "xs", color: "currentColor" }),
                 (0, s.jsx)(e0.E, {
                     variant: "text-sm/medium",
                     color: "currentColor",
-                    children: el.intl.string(s9.default.NGcIOF),
+                    children: el.intl.string(s7.default.NGcIOF),
                 }),
             ],
         }),

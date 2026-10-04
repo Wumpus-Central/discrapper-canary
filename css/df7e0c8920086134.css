@@ -138,32 +138,4 @@
     color: var(--chip-gray-dark-text)
 }
 
-.allChips_ff7bda {
-    gap: var(--space-32);
-    padding: var(--space-24)
-}
-
-.allChips_ff7bda,
-.section_ff7bda {
-    display: flex;
-    flex-direction: column
-}
-
-.section_ff7bda {
-    gap: var(--space-16)
-}
-
-.sectionTitle_ff7bda {
-    color: var(--text-strong);
-    font-weight: var(--font-weight-semibold);
-    margin: 0
-}
-
-.chipGrid_ff7bda {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-12)
-}
-
-/*# sourceMappingURL=af7a2c3da69e4090.css.map*/
+/*# sourceMappingURL=df7e0c8920086134.css.map*/
