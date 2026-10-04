@@ -36,6 +36,13 @@ let l = [
             "A remix of another project, or one you link to another app, goes straight to building instead of asking you to approve a plan.",
     },
     {
+        date: "2026-10-03",
+        time: "18:42",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "AI chat bots you build keep working after they answer: they can set an alarm to check back on a long job, continue it in a thread, post an update when something important happens, and show their progress as small text in Discord.",
+    },
+    {
         date: "2026-10-02",
         time: "07:34",
         platforms: ["desktop", "mobile"],
