@@ -1263,6 +1263,12 @@ let l = [
         summary:
             "Your published app stays playable while Conjure drives the preview, instead of both freezing at once.",
     },
+    {
+        date: "2026-10-03",
+        time: "22:16",
+        platforms: ["desktop", "mobile"],
+        summary: "Conjure now sees your app's failed network requests while testing it.",
+    },
 ].sort(function (e, t) {
     return e.date !== t.date
         ? e.date < t.date
