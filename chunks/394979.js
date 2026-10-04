@@ -3835,8 +3835,8 @@ function sB(e) {
                 r({ action: "PRESS_ADD_WIDGET" }),
                 (0, s_.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("610964"), n.e("487697"), n.e("595017")]).then(
-                            n.bind(n, 998576),
+                        let { default: e } = await Promise.all([n.e("515293"), n.e("487697"), n.e("911581")]).then(
+                            n.bind(n, 51820),
                         );
                         return (t) => (0, i.jsx)(e, { ...t, trackUserProfileEditAction: r });
                     },
@@ -4710,8 +4710,8 @@ function aH(e) {
             (s({ action: "PRESS_ADD_WIDGET" }),
                 (0, s_.openModalLazy)(
                     async () => {
-                        let { default: e } = await Promise.all([n.e("610964"), n.e("487697"), n.e("595017")]).then(
-                            n.bind(n, 998576),
+                        let { default: e } = await Promise.all([n.e("515293"), n.e("487697"), n.e("911581")]).then(
+                            n.bind(n, 51820),
                         );
                         return (t) => (0, i.jsx)(e, { ...t, trackUserProfileEditAction: s });
                     },

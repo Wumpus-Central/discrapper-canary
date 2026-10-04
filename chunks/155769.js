@@ -715,8 +715,8 @@ var eU = n(140735),
     eJ = n(214881),
     e0 = n(263577),
     e1 = n(471107),
-    e8 = n(609425),
-    e6 = n(922301),
+    e6 = n(609425),
+    e8 = n(922301),
     e2 = n(660184),
     e3 = n(381849),
     e4 = n(342296),
@@ -797,7 +797,7 @@ function tt(e) {
         h = l.useCallback(() => m(!0), []),
         f = l.useCallback(() => m(!1), []),
         b = (0, eQ.r)({ user: a }),
-        N = (0, e8.A)({ userId: t.userId }),
+        N = (0, e6.A)({ userId: t.userId }),
         R = l.useCallback(
             (e) => {
                 let l = D.default.getUser(t.userId);
@@ -868,7 +868,7 @@ function tt(e) {
                                                   children: (0, i.jsx)(e2.A, {
                                                       userName: t.name,
                                                       displayNameStyles: N,
-                                                      effectDisplayType: x ? e6.G.ANIMATED : e6.G.PLAIN,
+                                                      effectDisplayType: x ? e8.G.ANIMATED : e8.G.PLAIN,
                                                       loop: !0,
                                                   }),
                                               }),
@@ -937,7 +937,7 @@ function tl(e) {
 var ts = n(768622),
     tr = n(935154),
     ta = n(80558),
-    to = n(823638),
+    to = n(774926),
     tc = n(416852);
 let tu = { left: 8, right: 8 };
 function td(e) {
@@ -1314,8 +1314,8 @@ var tQ = n(602853),
     tJ = n(565860),
     t0 = n(723690),
     t1 = n(976860),
-    t8 = n(994500),
-    t6 = n(972910);
+    t6 = n(994500),
+    t8 = n(972910);
 function t2(e) {
     let { friend: t, appendGap: n, closePopout: s } = e,
         [a, o] = l.useState(!1),
@@ -1329,7 +1329,7 @@ function t2(e) {
             isVR: e9.A.isVROnline(t.userId),
         }));
     return (0, i.jsx)(C.D, {
-        className: r()(t6.Ke, { [t6.w$]: n }),
+        className: r()(t8.Ke, { [t8.w$]: n }),
         onMouseEnter: () => o(!0),
         onMouseLeave: () => o(!1),
         onClick: function () {
@@ -1345,7 +1345,7 @@ function t2(e) {
             subText: (0, i.jsx)(v.E, { variant: "text-xs/medium", color: "text-muted", children: t.user.username }),
             hovered: a,
             showAccountIdentifier: !1,
-            className: t6.eF,
+            className: t8.eF,
         }),
     });
 }
@@ -1367,25 +1367,25 @@ function t3(e) {
         renderSection: (e) => {
             let { section: n } = e;
             return (0, i.jsx)(v.E, {
-                className: t6.nw,
+                className: t8.nw,
                 variant: "text-sm/medium",
                 children: eg.intl.format(eg.t.xIWGxu, { count: t.length }),
             });
         },
-        className: t6.Xv,
+        className: t8.Xv,
     });
 }
 function t4() {
     return (0, i.jsx)(v.E, {
         variant: "text-sm/medium",
-        className: t6.n1,
+        className: t8.n1,
         children: eg.intl.string(ef.default["0usxBd"]),
     });
 }
 function t7() {
     return (0, i.jsx)(v.E, {
         variant: "text-sm/medium",
-        className: t6.n1,
+        className: t8.n1,
         children: eg.intl.string(ef.default.VH2HXW),
     });
 }
@@ -1393,16 +1393,16 @@ function t9(e) {
     let { rawQuery: t, closePopout: n } = e,
         l = (0, tJ.HI)(t),
         s = (0, p.bG)(
-            [t8.A, D.default],
+            [t6.A, D.default],
             () => {
                 if ("" === l) return [];
-                let e = t8.A.getFriendIDs(),
+                let e = t6.A.getFriendIDs(),
                     t = [];
                 return (
                     e.forEach((e) => {
                         let n = D.default.getUser(e);
                         if (void 0 === n) return;
-                        let i = t8.A.getNickname(e),
+                        let i = t6.A.getNickname(e),
                             s = [(0, tJ.HI)(n.username)];
                         (null != n.globalName && s.push((0, tJ.HI)(n.globalName)),
                             null != i && s.push((0, tJ.HI)(i)),
@@ -1430,7 +1430,7 @@ function t9(e) {
 function t5(e) {
     let { query: t, width: n, closePopout: l } = e;
     return (0, i.jsx)("div", {
-        className: r()(t6.kL, t6.zZ),
+        className: r()(t8.kL, t8.zZ),
         style: { "--custom-search-friends-popout-width": `${n ?? 264}px` },
         children: (0, i.jsx)(t9, { rawQuery: t, closePopout: l }),
     });
@@ -1440,10 +1440,10 @@ function ne(e) {
         [n, s] = l.useState("");
     return (0, i.jsx)(L.l, {
         children: (0, i.jsxs)("div", {
-            className: t6.kL,
+            className: t8.kL,
             children: [
                 (0, i.jsx)("div", {
-                    className: t6.M6,
+                    className: t8.M6,
                     children: (0, i.jsx)(B.k, { placeholder: eg.intl.string(eg.t.lLDtTK), value: n, onChange: s }),
                 }),
                 (0, i.jsx)(t9, { rawQuery: n, closePopout: t }),

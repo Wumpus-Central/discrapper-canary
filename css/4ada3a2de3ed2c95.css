@@ -1,0 +1,50 @@
+.switcher__36487 {
+    flex: 0 0 auto
+}
+
+.option__36487 {
+    padding: var(--space-4) var(--space-12)
+}
+
+.trigger__106b4 {
+    align-items: center;
+    display: inline-flex
+}
+
+.frame_d9c451 {
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    outline: 1px solid var(--border-muted);
+    outline-offset: -1px
+}
+
+.md_d9c451 {
+    height: var(--space-40);
+    width: var(--space-40)
+}
+
+.lg_d9c451 {
+    height: 44px;
+    width: 44px
+}
+
+.image_d9c451 {
+    -o-object-fit: cover;
+    object-fit: cover;
+    outline-color: var(--border-normal)
+}
+
+.placeholder_d9c451 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.people__36261 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto
+}
+
+/*# sourceMappingURL=4ada3a2de3ed2c95.css.map*/

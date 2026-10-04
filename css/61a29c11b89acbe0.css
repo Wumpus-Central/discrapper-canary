@@ -1,0 +1,26 @@
+.connectContent_ef008c {
+    box-sizing: border-box;
+    position: relative
+}
+
+.closeButton_ef008c {
+    inset-block-start: 0;
+    inset-inline-end: var(--space-8);
+    position: absolute;
+    z-index: 1
+}
+
+.connectUrlRow_ef008c {
+    min-width: 0
+}
+
+.connectUrlField_ef008c {
+    flex: 1;
+    min-width: 0
+}
+
+.connectActions_ef008c {
+    flex: none
+}
+
+/*# sourceMappingURL=61a29c11b89acbe0.css.map*/

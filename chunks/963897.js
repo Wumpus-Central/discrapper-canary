@@ -383,9 +383,12 @@ function eS(e) {
     function p() {
         (v.default.track(ec.HAw.PREMIUM_GROUP_SUBSCRIPTION_CARD_INVITE_CLICKED, { subscription_id: t.id }),
             (0, V.openModalLazy)(async () => {
-                let { default: e } = await Promise.all([n.e("76283"), n.e("634508"), n.e("96680"), n.e("485579")]).then(
-                    n.bind(n, 785606),
-                );
+                let { default: e } = await Promise.all([
+                    n.e("962811"),
+                    n.e("634508"),
+                    n.e("96680"),
+                    n.e("485579"),
+                ]).then(n.bind(n, 785606));
                 return (n) => (0, i.jsx)(e, { ...n, subscription: t });
             }));
     }

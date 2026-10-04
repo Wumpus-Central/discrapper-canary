@@ -1,4 +1,4 @@
-n.d(t, { A: () => L });
+n.d(t, { A: () => J });
 var i = n(477900),
     r = n(582128),
     l = n(503698),
@@ -16,24 +16,24 @@ var i = n(477900),
     m = n(477782),
     w = n(687966),
     E = n(404778),
-    I = n(793574),
-    A = n(688810),
-    T = n(206828),
-    v = n(486610),
-    y = n(531913),
+    A = n(793574),
+    v = n(688810),
+    y = n(206828),
+    T = n(486610),
+    C = n(531913),
     b = n(417270),
-    R = n(7437),
-    S = n(375708),
+    I = n(7437),
+    R = n(375708),
     O = n(429913),
-    C = n(627873),
-    N = n(409626),
+    N = n(5960),
+    S = n(409626),
     x = n(692969),
     P = n(569926),
     k = n(280450),
     M = n(183555),
-    j = n(644346),
-    D = n(58266);
-function B(e) {
+    U = n(644346),
+    j = n(58266);
+function D(e) {
     let {
         isCurrentUser: t,
         isLoading: n,
@@ -49,44 +49,44 @@ function B(e) {
         ? null
         : (u && ((l = !1), (a = !1), (d = void 0)),
           (0, i.jsxs)("div", {
-              className: D.qr,
+              className: j.qr,
               children: [
                   n || r || l || a
                       ? null
                       : (0, i.jsxs)("div", {
-                            className: D.o8,
+                            className: j.o8,
                             children: [
                                 (0, i.jsx)(h.Q, { size: "xxs" }),
                                 (0, i.jsx)(c.E, {
                                     variant: "text-sm/medium",
                                     color: "text-subtle",
-                                    children: S.intl.string(S.t.z5K4Uv),
+                                    children: R.intl.string(R.t.z5K4Uv),
                                 }),
                             ],
                         }),
                   l
-                      ? (0, i.jsx)(G, {
-                            heading: S.intl.string(S.t.UDPRLO),
-                            content: S.intl.string(S.t["OW/2al"]),
-                            buttons: (0, i.jsx)(p.$, { text: S.intl.string(S.t.S0W8Z5), onClick: o }),
+                      ? (0, i.jsx)(L, {
+                            heading: R.intl.string(R.t.UDPRLO),
+                            content: R.intl.string(R.t["OW/2al"]),
+                            buttons: (0, i.jsx)(p.$, { text: R.intl.string(R.t.S0W8Z5), onClick: o }),
                         })
                       : a
-                        ? (0, i.jsx)(G, {
-                              heading: S.intl.string(S.t["9WarGY"]),
-                              content: S.intl.string(S.t.qgxnKe),
-                              buttons: (0, i.jsx)(p.$, { text: S.intl.string(S.t.vD60Pv), onClick: o }),
+                        ? (0, i.jsx)(L, {
+                              heading: R.intl.string(R.t["9WarGY"]),
+                              content: R.intl.string(R.t.qgxnKe),
+                              buttons: (0, i.jsx)(p.$, { text: R.intl.string(R.t.vD60Pv), onClick: o }),
                           })
                         : d,
               ],
           }));
 }
-function G(e) {
+function L(e) {
     return (0, i.jsxs)(g.B, {
         direction: "horizontal",
         gap: 24,
         padding: 12,
         fullWidth: !1,
-        className: D.lO,
+        className: j.lO,
         children: [
             (0, i.jsxs)(g.B, {
                 gap: 4,
@@ -95,7 +95,7 @@ function G(e) {
                         (0, i.jsx)(c.E, {
                             variant: "text-xs/medium",
                             color: "text-default",
-                            children: S.intl.string(S.t.zMUr6Z),
+                            children: R.intl.string(R.t.zMUr6Z),
                         }),
                     (0, i.jsx)(_.D, { variant: "heading-sm/medium", color: "text-default", children: e.heading }),
                     (0, i.jsx)(c.E, { variant: "text-xs/normal", color: "text-subtle", children: e.content }),
@@ -112,7 +112,7 @@ function G(e) {
         ],
     });
 }
-let L = Object.assign(
+let J = Object.assign(
     function (e) {
         let {
                 user: t,
@@ -122,13 +122,13 @@ let L = Object.assign(
                 cta: p,
                 subtle: g = !1,
                 embedded: _ = !1,
-                allowEditing: G,
-                disableInteraction: L,
+                allowEditing: L,
+                disableInteraction: J,
                 index: W,
-                trailingContent: U,
-                interactiveLinks: V = !1,
+                trailingContent: F,
+                interactiveLinks: H = !1,
             } = e,
-            F = (function (e) {
+            G = (function (e) {
                 let { trackUserProfileAction: t } = (0, M.NJ)(),
                     { user: n, widget: l, cta: o } = e,
                     s = (0, d.bG)([k.default], () => k.default.getId()) === n.id,
@@ -142,7 +142,7 @@ let L = Object.assign(
                     _ = (0, x.A)({
                         location: "UserProfileApplicationWidget",
                         applicationId: g?.id,
-                        source: N.GameProfileSources.UserProfileApplicationWidget,
+                        source: S.GameProfileSources.UserProfileApplicationWidget,
                         sourceUserId: n.id,
                         trackEntryPointImpression: !0,
                     }),
@@ -150,11 +150,11 @@ let L = Object.assign(
                         fetched: m,
                         hasAlreadyLinked: w,
                         canStartAuthorization: E,
-                        startAuthorization: v,
-                        token: y,
-                    } = (0, T.RD)(h),
-                    { analyticsLocations: b } = (0, A.Ay)(I.A.USER_PROFILE_APPLICATION_WIDGET),
-                    R = r.useCallback(() => {
+                        startAuthorization: T,
+                        token: C,
+                    } = (0, y.RD)(h),
+                    { analyticsLocations: b } = (0, v.Ay)(A.A.USER_PROFILE_APPLICATION_WIDGET),
+                    I = r.useCallback(() => {
                         E &&
                             (t({
                                 action: w
@@ -162,108 +162,108 @@ let L = Object.assign(
                                     : "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                                 applicationId: l.applicationId,
                             }),
-                            v({ analyticsLocations: b }));
-                    }, [E, w, v, t, l.applicationId, b]),
-                    S = null == o && m && !w && E,
-                    C =
+                            T({ analyticsLocations: b }));
+                    }, [E, w, T, t, l.applicationId, b]),
+                    R = null == o && m && !w && E,
+                    N =
                         null == o &&
                         m &&
                         w &&
                         E &&
-                        null != y &&
-                        !Array.from(u._.APPLICATION_IDENTITIES_SCOPES).some((e) => y.scopes.includes(e)) &&
-                        !y.scopes.includes(u.F.SDK_SOCIAL_LAYER) &&
-                        !y.scopes.includes(u.F.SDK_SOCIAL_LAYER_PRESENCE),
-                    j = (0, i.jsxs)(i.Fragment, {
+                        null != C &&
+                        !Array.from(u._.APPLICATION_IDENTITIES_SCOPES).some((e) => C.scopes.includes(e)) &&
+                        !C.scopes.includes(u.F.SDK_SOCIAL_LAYER) &&
+                        !C.scopes.includes(u.F.SDK_SOCIAL_LAYER_PRESENCE),
+                    U = (0, i.jsxs)(i.Fragment, {
                         children: [
                             null != p
-                                ? (0, i.jsx)("img", { className: D.Z2, src: p, width: 16, height: 16, alt: "" })
-                                : (0, i.jsx)("span", { className: D.qP }),
+                                ? (0, i.jsx)("img", { className: j.Z2, src: p, width: 16, height: 16, alt: "" })
+                                : (0, i.jsx)("span", { className: j.qP }),
                             (0, i.jsx)(c.E, {
                                 variant: "text-sm/medium",
-                                children: h?.name != null ? h.name : (0, i.jsx)("div", { className: D.jC }),
+                                children: h?.name != null ? h.name : (0, i.jsx)("div", { className: j.jC }),
                             }),
                         ],
                     }),
-                    B =
+                    D =
                         null == g
-                            ? (0, i.jsx)("div", { className: D.qd, children: j })
-                            : (0, i.jsx)(f.D, { className: a()(D.qd, D.vk), onClick: _, children: j });
+                            ? (0, i.jsx)("div", { className: j.qd, children: U })
+                            : (0, i.jsx)(f.D, { className: a()(j.qd, j.vk), onClick: _, children: U });
                 return {
                     isCurrentUser: s,
                     game: g,
                     openGameProfileModal: _,
-                    handleConnect: R,
-                    showConnectCta: S,
-                    showReconnectCta: C,
-                    headerTitle: B,
+                    handleConnect: I,
+                    showConnectCta: R,
+                    showReconnectCta: N,
+                    headerTitle: D,
                 };
             })(e),
-            H = (0, y.A)(t.id, n.applicationId),
-            q = (0, C.A)(n.applicationId, F.isCurrentUser),
-            J = (function (e, t) {
-                let { pending: n, refresh: r } = (0, R.A)(e);
+            B = (0, C.A)(t.id, n.applicationId),
+            q = (0, N.A)(n.applicationId, G.isCurrentUser),
+            $ = (function (e, t) {
+                let { pending: n, refresh: r } = (0, I.A)(e);
                 return t
                     ? (0, i.jsx)(m.Dr, {
                           id: "application-widget-refresh",
-                          label: S.intl.string(S.t.wzzjk9),
+                          label: R.intl.string(R.t.wzzjk9),
                           leadingAccessory: { type: "icon", icon: b.RetryIcon },
                           disabled: n,
                           action: r,
                       })
                     : null;
-            })(n.applicationId, !0 === q && !0 !== L),
-            $ =
-                V ||
+            })(n.applicationId, !0 === q && !0 !== J),
+            V =
+                H ||
                 (function (e) {
                     let { disableInteraction: t } = e;
                     return !0 !== t;
                 })(e)
-                    ? v.hO
+                    ? T.hO
                     : void 0,
-            z = H.surfaceConfigs[s.m.WIDGET_TOP],
-            K = H.surfaceConfigs[s.m.WIDGET_BOTTOM];
+            z = B.surfaceConfigs[s.m.WIDGET_TOP],
+            K = B.surfaceConfigs[s.m.WIDGET_BOTTOM];
         return null == z || null == K
             ? null
-            : (0, i.jsxs)(j.A, {
+            : (0, i.jsxs)(U.A, {
                   userId: t.id,
                   widget: n,
-                  allowEditing: G,
-                  disableInteraction: L,
+                  allowEditing: L,
+                  disableInteraction: J,
                   index: W,
-                  trailingContent: U,
-                  className: a()(D.Y5, { [D.aK]: g, [D.F9]: _ }),
-                  headerClassName: D.JE,
+                  trailingContent: F,
+                  className: a()(j.Y5, { [j.aK]: g, [j.F9]: _ }),
+                  headerClassName: j.JE,
                   additionalManageWidgetMenuItems: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          null != F.game
+                          null != G.game
                               ? (0, i.jsx)(m.Dr, {
                                     id: "view-game-profile",
                                     label: "View Game Profile",
                                     leadingAccessory: { type: "icon", icon: w.GameControllerIcon },
-                                    action: F.openGameProfileModal,
+                                    action: G.openGameProfileModal,
                                 })
                               : null,
-                          J,
+                          $,
                       ],
                   }),
                   children: [
                       (0, i.jsx)(o.kH, {
-                          ...H,
+                          ...B,
                           surface: s.m.WIDGET_TOP,
                           surfaceConfig: z,
-                          header: F.headerTitle,
-                          renderText: $,
+                          header: G.headerTitle,
+                          renderText: V,
                       }),
                       (0, i.jsx)(E.c, {}),
-                      (0, i.jsx)(o.kH, { ...H, surface: s.m.WIDGET_BOTTOM, surfaceConfig: K, renderText: $ }),
-                      (0, i.jsx)(B, {
-                          isCurrentUser: F.isCurrentUser,
-                          isLoading: H.isLoading,
-                          hasData: H.hasIdentity,
-                          showConnectCta: F.showConnectCta,
-                          showReconnectCta: F.showReconnectCta,
-                          handleConnect: F.handleConnect,
+                      (0, i.jsx)(o.kH, { ...B, surface: s.m.WIDGET_BOTTOM, surfaceConfig: K, renderText: V }),
+                      (0, i.jsx)(D, {
+                          isCurrentUser: G.isCurrentUser,
+                          isLoading: B.isLoading,
+                          hasData: B.hasIdentity,
+                          showConnectCta: G.showConnectCta,
+                          showReconnectCta: G.showReconnectCta,
+                          handleConnect: G.handleConnect,
                           disableCTA: l,
                           disableCTAActions: !0 === h || !1 !== q,
                           cta: p,
@@ -271,5 +271,5 @@ let L = Object.assign(
                   ],
               });
     },
-    { Cta: G },
+    { Cta: L },
 );

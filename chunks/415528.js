@@ -4,22 +4,22 @@ var i = n(582128),
     a = n(627363),
     s = n(429913),
     r = n(878014),
-    o = n(477818),
-    c = n(870440),
-    d = n(26278),
+    o = n(371169),
+    c = n(260498),
+    d = n(246338),
     u = n(486020),
     h = n(495457);
 function p(e) {
     i.useEffect(() => {
         (0, o.hF)(e);
     }, [e]);
-    let t = (0, l.yK)([d.Ay], () => d.Ay.getOwnedProjects()),
-        n = (0, l.yK)([d.Ay], () => d.Ay.getSharedProjects(e), [e]),
+    let t = (0, l.yK)([c.Ay], () => c.Ay.getOwnedProjects()),
+        n = (0, l.yK)([c.Ay], () => c.Ay.getSharedProjects(e), [e]),
         p = i.useMemo(
             () =>
                 (function (e, t, n) {
                     let i = new Map();
-                    for (let l of [...e, ...t]) (0, c.Ot)(l, n) && i.set(l.application_id, l);
+                    for (let l of [...e, ...t]) (0, d.Ot)(l, n) && i.set(l.application_id, l);
                     return [...i.values()].sort((e, t) => e.name.localeCompare(t.name));
                 })(t, n, e),
             [t, n, e],
@@ -40,7 +40,7 @@ function p(e) {
         }
     }, [j]);
     let I = i.useMemo(() => p.filter((e, t) => (0, r.D)(A[t])), [p, A]),
-        N = (0, l.bG)([d.Ay], () => d.Ay.getGuildProjectsFetchState(e), [e]),
+        N = (0, l.bG)([c.Ay], () => c.Ay.getGuildProjectsFetchState(e), [e]),
         v = j.some((e) => !x.has(e)),
         E = (0, h._)({
             hasRows: I.length > 0,

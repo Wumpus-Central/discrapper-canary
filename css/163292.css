@@ -1,0 +1,233 @@
+.agentReaction__0d357 {
+    align-items: center;
+    background: var(--background-mod-subtle);
+    border: 1px solid var(--border-muted);
+    border-radius: var(--radius-sm);
+    display: inline-flex;
+    padding: 2px var(--space-6)
+}
+
+.agentReaction__0d357:not(:first-child) {
+    margin-top: var(--space-4)
+}
+
+.popover_f84418.popover_f84418 {
+    background: var(--background-surface-high);
+    border: 1px solid var(--border-muted);
+    border-radius: 8px;
+    box-shadow: var(--shadow-low) !important;
+    height: auto;
+    overflow: visible;
+    padding: 2px
+}
+
+.popover_f84418.popover_f84418:hover {
+    border: 1px solid var(--border-subtle);
+    box-shadow: var(--shadow-medium) !important
+}
+
+.hoverBarButton_f84418.hoverBarButton_f84418 {
+    border-radius: 6px;
+    padding: 2px
+}
+
+.hoverBarButton_f84418.hoverBarButton_f84418:hover:not([aria-disabled=true]) {
+    background: var(--interactive-background-hover);
+    cursor: pointer
+}
+
+.hoverBarButton_f84418.hoverBarButton_f84418:hover:not([aria-disabled=true]) .icon_f84418 {
+    transform: scale(1.1)
+}
+
+.hoverBarButton_f84418.hoverBarButton_f84418:active:not([aria-disabled=true]) {
+    background: var(--interactive-background-active);
+    padding: 2px
+}
+
+.hoverBarButton_f84418.hoverBarButton_f84418:active:not([aria-disabled=true]) .icon_f84418 {
+    transform: scale(1)
+}
+
+.hoverBarButton_f84418.hoverBarButton_f84418[aria-disabled=true],
+.hoverBarButton_f84418.hoverBarButton_f84418[aria-disabled=true]:active,
+.hoverBarButton_f84418.hoverBarButton_f84418[aria-disabled=true]:hover {
+    padding: 2px
+}
+
+.icon_f84418 {
+    display: block;
+    height: 20px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    width: 20px
+}
+
+.full-motion .icon_f84418 {
+    transition: transform .4s cubic-bezier(.16, 1, .3, 1)
+}
+
+.buttonContent_f84418 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+.tooltip_f84418 {
+    max-width: 300px
+}
+
+.newBadge_f84418 {
+    padding: 0 4px;
+    pointer-events: none;
+    position: absolute;
+    top: -12px
+}
+
+.separator_f84418 {
+    background: var(--border-subtle);
+    border-radius: 100px;
+    height: 24px;
+    margin: 2px 4px;
+    width: 1px
+}
+
+.conjurMessage_a9077e {
+    position: relative
+}
+
+.accessoryMessageRow_a9077e {
+    --custom-message-spacing-vertical-container-cozy: 2px;
+    border-end-end-radius: var(--radius-xs);
+    border-start-end-radius: var(--radius-xs);
+    padding-inline-end: var(--space-xl)
+}
+
+.accessoryMessageRow_a9077e:has(.userMessageButtonsShown_a9077e),
+.conjurMessage_a9077e:has(.userMessageButtonsShown_a9077e) .accessoryMessageRow_a9077e,
+.keyboard-mode .accessoryMessageRow_a9077e:focus-within,
+.keyboard-mode .conjurMessage_a9077e:focus-within .accessoryMessageRow_a9077e,
+.mouse-mode.full-motion .accessoryMessageRow_a9077e:hover,
+.mouse-mode.full-motion .conjurMessage_a9077e:hover .accessoryMessageRow_a9077e {
+    background: var(--message-background-hover)
+}
+
+.userMessageButtons_a9077e {
+    inset-inline-end: 0;
+    opacity: 0;
+    padding-inline: 32px 14px;
+    pointer-events: none;
+    position: absolute;
+    top: -25px;
+    z-index: 1
+}
+
+.userMessageButtonsHeader_a9077e {
+    top: -16px
+}
+
+.userMessageButtonsShown_a9077e,
+.keyboard-mode .accessoryMessageRow_a9077e:focus-within .userMessageButtons_a9077e,
+.keyboard-mode .conjurMessage_a9077e:focus-within .userMessageButtons_a9077e,
+.mouse-mode .accessoryMessageRow_a9077e:hover .userMessageButtons_a9077e,
+.mouse-mode .conjurMessage_a9077e:hover .userMessageButtons_a9077e {
+    opacity: 1;
+    pointer-events: auto
+}
+
+.messageAccessoriesUnderProse_a9077e {
+    margin-top: var(--space-8)
+}
+
+.messageAccessories_a9077e {
+    margin-bottom: 2px
+}
+
+.messageAccessories_a9077e:has(>:empty:only-child) {
+    margin-bottom: 0;
+    margin-top: 0
+}
+
+.conjurMessage_a9077e>[class*=wrapper_]>[class*=contents_]>[class*=avatar]:not([class*=ecoration]),
+.conjurMessage_a9077e>div>[class*=wrapper_]>[class*=contents_]>[class*=avatar]:not([class*=ecoration]) {
+    visibility: hidden
+}
+
+.conjurBotAvatar_a9077e {
+    align-items: center;
+    background: var(--background-code);
+    border: 1px solid var(--border-muted);
+    border-radius: 8px;
+    color: var(--text-brand);
+    display: flex;
+    height: var(--chat-avatar-size);
+    inset-inline-start: var(--custom-message-margin-horizontal);
+    justify-content: center;
+    pointer-events: none;
+    position: absolute;
+    top: 4px;
+    width: var(--chat-avatar-size);
+    z-index: 1
+}
+
+.conjurMessage_a9077e[data-replying=true] .conjurBotAvatar_a9077e {
+    top: calc(4px + var(--custom-message-reply-message-preview-line-height) + var(--space-4))
+}
+
+.full-motion .conjurMessage_a9077e[data-conjure-revealing=true] .messageBody_a9077e:after {
+    animation: conjure-reveal-frontier_a9077e 1.1s ease-in-out infinite;
+    background: linear-gradient(90deg, var(--text-default) 0, transparent 100%);
+    border-radius: var(--radius-xs);
+    content: "";
+    display: inline-block;
+    height: .9em;
+    margin-inline-end: -.32em;
+    vertical-align: text-bottom;
+    width: .32em
+}
+
+@keyframes conjure-reveal-frontier_a9077e {
+
+    0%,
+    to {
+        opacity: .18
+    }
+
+    50% {
+        opacity: .5
+    }
+}
+
+.conjurMessage_a9077e[data-conjure-revealing=true] .messageBody_a9077e:has(>:is(ul, ol, pre, blockquote, table, h1, h2, h3):last-child):after {
+    content: none
+}
+
+.selectedMention_a9077e {
+    background: var(--mention-background);
+    border-radius: 3px;
+    color: var(--mention-foreground);
+    display: inline;
+    font-weight: var(--font-weight-medium);
+    margin-inline-end: 4px;
+    padding: 0 2px;
+    unicode-bidi: plaintext
+}
+
+.selectedMentionIcon_a9077e {
+    color: currentcolor;
+    height: .875em;
+    margin-inline-end: .25em;
+    vertical-align: -.08em;
+    width: .875em
+}
+
+.selectedMessage_a9077e {
+    display: block
+}
+
+.selectedBody_a9077e,
+.selectedBody_a9077e>* {
+    display: inline
+}
+
+/*# sourceMappingURL=163292.167927d2b353b0a8.css.map*/

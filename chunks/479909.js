@@ -147,8 +147,8 @@ var L = n(861382),
     P = n(435558),
     M = n.n(P),
     D = n(537652),
-    V = n(155718),
-    U = n(95561),
+    U = n(155718),
+    V = n(95561),
     W = n(659280),
     F = n(579940),
     B = n(962125),
@@ -252,7 +252,7 @@ var er = n(524007),
     eo = n(643904);
 let eu = [8, 8, 0, 8],
     ec = M().debounce(() => {
-        (0, U.zV)(ea.HAw.APPLICATION_COMMAND_BROWSER_SCROLLED);
+        (0, V.zV)(ea.HAw.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300),
     ed = i.forwardRef(function (e, t) {
         let { channel: n, canOnlyUseTextCommands: r } = e,
@@ -263,7 +263,7 @@ let eu = [8, 8, 0, 8],
             [h, m] = i.useState(!1),
             p = G.LS.useStore((e) => e.activeCategoryIndex);
         i.useEffect(() => {
-            (0, U.zV)(ea.HAw.APPLICATION_COMMAND_BROWSER_OPENED);
+            (0, V.zV)(ea.HAw.APPLICATION_COMMAND_BROWSER_OPENED);
         }, []);
         let {
                 sectionDescriptors: f,
@@ -277,7 +277,7 @@ let eu = [8, 8, 0, 8],
             } = Q.cu({
                 context: { channel: n, type: "channel" },
                 filters: {
-                    commandTypes: [V.kc.CHAT],
+                    commandTypes: [U.kc.CHAT],
                     builtIns: r ? $.n.ONLY_TEXT : $.n.ALLOW,
                     applicationCommands: !r,
                 },
@@ -514,8 +514,8 @@ var ew = n(931664),
 let eP = /(!|\.|;|,|-|\u2014|\u2013|\?|"|')/g,
     eM = /(\n|\t|\s)/g;
 var eD = n(194004),
-    eV = n(406704),
-    eU = n(885386),
+    eU = n(406704),
+    eV = n(885386),
     eW = n(951260),
     eF = n(696451),
     eB = n(576705),
@@ -565,7 +565,7 @@ function tu(e) {
             s.current = r;
         }),
         i.useEffect(() => {
-            (0, U.zV)(ea.HAw.THREAD_NUDGE_SHOWN, {
+            (0, V.zV)(ea.HAw.THREAD_NUDGE_SHOWN, {
                 type: "Reply Chain (3)",
                 reply_chain_length: s.current + 1,
                 channel_id: t.id,
@@ -628,7 +628,7 @@ function tc(e) {
                 },
                 [t, n],
             )),
-        v = (0, eV.n)(o, u),
+        v = (0, eU.n)(o, u),
         N = a.showThreadPromptOnReply && I >= 2 && v;
     return (0, l.jsx)("div", {
         className: ta.e1,
@@ -939,19 +939,19 @@ var tw = n(575293),
     tP = n(31717),
     tM = n(551640),
     tD = n(970244),
-    tV = n(29621);
-function tU(e) {
+    tU = n(29621);
+function tV(e) {
     let { channel: t, scheduledMessageDraft: n } = e,
         { scheduledTimestamp: i } = n;
     return (0, l.jsx)("div", {
-        className: tV.e1,
+        className: tU.e1,
         children: (0, l.jsx)("div", {
-            className: tV.kL,
+            className: tU.kL,
             children: (0, l.jsxs)("div", {
-                className: tV.g3,
+                className: tU.g3,
                 children: [
                     (0, l.jsx)(Y.D, {
-                        className: tV.a3,
+                        className: tU.a3,
                         "aria-label": j.intl.string(j.t.SBcdAN),
                         onClick: function () {
                             (0, tD.e0)({
@@ -963,13 +963,13 @@ function tU(e) {
                         },
                         children: (0, l.jsx)(e1.E, {
                             color: "text-default",
-                            className: tV.Qq,
+                            className: tU.Qq,
                             variant: "text-sm/normal",
                             children: j.intl.formatToPlainString(j.t["MQcRX/"], { timestamp: new Date(i).valueOf() }),
                         }),
                     }),
                     (0, l.jsx)("div", {
-                        className: tV.o1,
+                        className: tU.o1,
                         children: (0, l.jsx)(ts, {
                             onClick: function (e) {
                                 (e.stopPropagation(), x.A.clearDraft(t.id, tP.C.ScheduledMessage));
@@ -1067,7 +1067,7 @@ function t1(e, t, r, s, a) {
                         (0, p.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
                                 n.e("385663"),
-                                n.e("317543"),
+                                n.e("786830"),
                                 n.e("42809"),
                                 n.e("560570"),
                                 n.e("896691"),
@@ -1342,7 +1342,7 @@ function ne(e, t, n, l) {
                         (!t.permissions?.requireSendMessages || h.zy(r, ea.xBc.SEND_MESSAGES)),
                     u = o && h.zy(r, ea.xBc.ATTACH_FILES),
                     c = null != n,
-                    d = (0, eV.UJ)(e);
+                    d = (0, eU.UJ)(e);
                 return {
                     disabled: l || s || (!i && !o) || d,
                     canAttachFiles: !0 === t.attachments && (i || s || u || c),
@@ -1402,8 +1402,8 @@ let nl = i.memo(
                 renderApplicationCommandIcon: P,
                 renderButtons: M,
                 pendingReply: D,
-                onChange: V,
-                onResize: U,
+                onChange: U,
+                onResize: V,
                 onBlur: W,
                 onFocus: F,
                 onKeyDown: B,
@@ -1458,14 +1458,14 @@ let nl = i.memo(
             })),
             {
                 isLurking: eD,
-                isPendingMember: eV,
+                isPendingMember: eU,
                 disabled: eB,
                 canAttachFiles: eK,
                 canCreateThreads: ez,
                 canEveryoneSendMessages: eQ,
             } = ne(j, k, eP, v),
             eZ = k.toolbarType === eY.O1.STATIC,
-            e1 = !eU.D_.useSetting() && !(0, eX.isAndroidWeb)() && null != window.ResizeObserver,
+            e1 = !eV.D_.useSetting() && !(0, eX.isAndroidWeb)() && null != window.ResizeObserver,
             e2 = !e1 || !k.commands?.enabled || !_ || "/" !== a,
             e5 = (0, eA.A)(),
             { fontSize: e8 } = (0, m.cf)([S.Ay], () => ({ fontSize: S.Ay.fontSize })),
@@ -1477,9 +1477,9 @@ let nl = i.memo(
         let e9 = i.useCallback(
                 (e, t, n) => {
                     ("/" === t && "" === e4.current && k.commands?.enabled && e6.emit("command-sentinel-typed"),
-                        V?.(e, t, n));
+                        U?.(e, t, n));
                 },
-                [V, k.commands?.enabled, e6],
+                [U, k.commands?.enabled, e6],
             ),
             { submitting: te, submit: tt, handleSubmit: tn } = t1(K, k, ey, eb, j.id),
             { autocompleteRef: tl, handleMaybeShowAutocomplete: ti, handleHideAutocomplete: tr } = t7(),
@@ -1505,7 +1505,7 @@ let nl = i.memo(
                 [ey, j.id, j.guild_id],
             ),
             th = i.useCallback(() => eb?.current?.hide(), []),
-            { editorHeight: tm, handleResize: tf } = t9(U),
+            { editorHeight: tm, handleResize: tf } = t9(V),
             {
                 handleTab: tg,
                 handleEnter: tx,
@@ -1572,9 +1572,9 @@ let nl = i.memo(
             }, [e6]);
         (0, eJ.R)(e6, j.guild_id, j.id);
         let tM = null != D,
-            tD = (eB && !((eD || eV) && eQ)) || (te && k.submit?.useDisabledStylesOnSubmit),
-            tV = null;
-        null != eP ? (tV = P?.(eP, eM, tW.g$)) : (!eB || ez) && (tV = w?.(tM, tW.g$));
+            tD = (eB && !((eD || eU) && eQ)) || (te && k.submit?.useDisabledStylesOnSubmit),
+            tU = null;
+        null != eP ? (tU = P?.(eP, eM, tW.g$)) : (!eB || ez) && (tU = w?.(tM, tW.g$));
         let { isVisible: tq, showsUpsell: tQ } = (0, tY.A)({
                 type: k,
                 textValue: a,
@@ -1624,7 +1624,7 @@ let nl = i.memo(
                             ),
                         null != s && e.push((0, l.jsx)(tc, { reply: s, chatInputType: n })),
                         h && e.push((0, l.jsx)(tv, {})),
-                        null != a && e.push((0, l.jsx)(tU, { channel: t, scheduledMessageDraft: a })),
+                        null != a && e.push((0, l.jsx)(tV, { channel: t, scheduledMessageDraft: a })),
                         "timestampMentionInput" === o && i.push((0, l.jsx)(tT, { error: u ?? !1 })),
                         p && e.push((0, l.jsx)(tR, { channelId: t.id })),
                         { stacked: e, floating: i }
@@ -1707,7 +1707,7 @@ let nl = i.memo(
                                         (0, l.jsxs)("div", {
                                             className: s()(tW.vW, {
                                                 [tW.BF]: tD,
-                                                [tW.RL]: k !== eY.oU.EDIT && (null != tV || (tD && null == tV) || eD),
+                                                [tW.RL]: k !== eY.oU.EDIT && (null != tU || (tD && null == tU) || eD),
                                                 [tW.fk]: k === eY.oU.THREAD_CREATION,
                                                 [tW.TZ]:
                                                     k === eY.oU.CREATE_FORUM_POST || k === eY.oU.FORWARD_MESSAGE_INPUT,
@@ -1716,7 +1716,7 @@ let nl = i.memo(
                                             onMouseDown: tN,
                                             children: [
                                                 na,
-                                                tV,
+                                                tU,
                                                 (0, l.jsx)(f.vN, {
                                                     ringTarget: ec,
                                                     ringClassName: tW.Rg,
@@ -1731,7 +1731,7 @@ let nl = i.memo(
                                                         placeholder: N,
                                                         required: I,
                                                         accessibilityLabel: T,
-                                                        isPreviewing: (eD || eV) && eQ,
+                                                        isPreviewing: (eD || eU) && eQ,
                                                         channel: j,
                                                         type: k,
                                                         canPasteFiles: eK,

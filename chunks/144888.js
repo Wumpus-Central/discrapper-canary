@@ -691,7 +691,7 @@ var tg = n(787541),
     tN = n(960755),
     t_ = n(633965),
     tS = n(702841),
-    tI = n(870440),
+    tI = n(246338),
     tb = n(41200),
     tG = n(831617),
     tj = n(589603),
@@ -1138,15 +1138,15 @@ let nu = r.memo(function (e) {
             : E;
     });
 var nm = n(152367),
-    ng = n(222454),
-    nA = n(26278),
-    nf = n(594211),
+    ng = n(404373),
+    nA = n(855793),
+    nf = n(260498),
     np = n(309010),
     nC = n(775946),
     nE = n(248675);
 function nx(e) {
     let { guild: t, selected: n } = e,
-        i = (0, u.bG)([nA.Ay], () => nA.Ay.getSelectedProjectId(t.id), [t.id]),
+        i = (0, u.bG)([nf.Ay], () => nf.Ay.getSelectedProjectId(t.id), [t.id]),
         l = (0, u.bG)([np.Ay], () => np.Ay.getChannelId(), []),
         r = (0, u.bG)([P.A], () => P.A.getGuildId(), []),
         { hasUnread: a, badgeCount: o } = (0, ng.NC)();
@@ -1158,7 +1158,7 @@ function nx(e) {
         selected: n,
         showUnread: a,
         trailing: o > 0 ? (0, s.jsx)(nC.A, { mentionsCount: o }) : void 0,
-        background: (0, s.jsx)(nf.X8, { guildId: t.id }),
+        background: (0, s.jsx)(nA.X8, { guildId: t.id }),
         onClick: () => {
             let e = l === et.VV.CONJURE && r === t.id;
             (0, ee.pX)(w.BVt.CHANNEL(t.id, et.VV.CONJURE, null == i || e ? null : i));

@@ -1,0 +1,35 @@
+.settingsForm__0ca6e {
+    gap: var(--space-12)
+}
+
+.settingsForm__0ca6e,
+.settingsSelect__0ca6e {
+    display: flex;
+    flex-direction: column
+}
+
+.settingsSelect__0ca6e {
+    gap: var(--space-4)
+}
+
+.secretRow__0ca6e {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8);
+    justify-content: space-between
+}
+
+.secretRowInfo__0ca6e {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.settingsLoading__0ca6e {
+    display: flex;
+    justify-content: center;
+    padding-block: var(--space-16)
+}
+
+/*# sourceMappingURL=78ec9583b3362e2a.css.map*/

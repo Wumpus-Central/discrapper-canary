@@ -1,0 +1,40 @@
+.secretsForm__9aad5 {
+    gap: var(--space-12)
+}
+
+.secretsCopyList__9aad5,
+.secretsForm__9aad5 {
+    display: flex;
+    flex-direction: column
+}
+
+.secretsCopyList__9aad5 {
+    gap: var(--space-8);
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.secretsCopyRow__9aad5 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.secretsCopyInfo__9aad5 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.secretsCopyValue__9aad5 {
+    background: var(--background-mod-strong);
+    border-radius: var(--radius-xs);
+    overflow-wrap: anywhere;
+    padding: var(--space-4) var(--space-8);
+    word-break: break-all
+}
+
+/*# sourceMappingURL=bde492374c044b4f.css.map*/
