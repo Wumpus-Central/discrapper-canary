@@ -654,6 +654,13 @@ let l = [
             "On phones, new messages in an app\u2019s channel float over the running app for a moment; tap one to open the chat.",
     },
     {
+        date: "2026-10-03",
+        time: "22:40",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Accessibility and load-speed checks: Conjure now flags missing labels, small tap targets, and hard-to-read text while testing your app.",
+    },
+    {
         date: "2026-09-14",
         time: "00:02",
         platforms: ["mobile"],
