@@ -1,3 +1,86 @@
+.people_c366b2 {
+    align-items: center;
+    display: flex;
+    flex: 0 0 auto
+}
+
+.header__90588 {
+    flex: 0 0 auto;
+    padding-inline-end: var(--space-xs);
+    position: relative;
+    width: 100%;
+    z-index: 100
+}
+
+.breadcrumb__90588 {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: hidden
+}
+
+.icon__90588 {
+    flex-shrink: 0;
+    margin-inline-end: var(--space-12)
+}
+
+.title__90588 {
+    flex: 1 1 auto;
+    margin-inline-end: 0;
+    min-width: 0;
+    overflow: hidden
+}
+
+.titleText__90588 {
+    text-overflow: ellipsis
+}
+
+.stop-animations .header__90588 {
+    -webkit-app-region: no-drag
+}
+
+.theme-light.custom-client-theme .header__90588 {
+    --background-gradient-lowest: var(--background-gradient-chat)
+}
+
+.notice_ea1c21 {
+    text-align: start;
+    width: 100%
+}
+
+.glowMask__16f18 {
+    border-radius: var(--custom-vibegrations-glow-radius, var(--radius-sm));
+    inset: 0;
+    opacity: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    transition: opacity .3s ease-in-out
+}
+
+.glowMask__16f18[data-thinking] {
+    opacity: 1;
+    transition: opacity 1s ease-in-out
+}
+
+.glowMask__16f18 {
+    --custom-vibegrations-glow-extent: 100%
+}
+
+@media (prefers-reduced-motion:reduce) {
+
+    .glowMask__16f18,
+    .glowMask__16f18[data-thinking] {
+        transition: none
+    }
+}
+
+.reduce-motion .glowMask__16f18,
+.reduce-motion .glowMask__16f18[data-thinking] {
+    transition: none
+}
+
 .screen_f8194a {
     background: var(--background-gradient-lower, var(--background-base-lower));
     box-sizing: border-box;
@@ -355,29 +438,9 @@ svg.selectModeIcon_f8194a {
     text-align: start
 }
 
-.projectIcon_f8194a,
-.projectIconPlaceholder_f8194a {
-    align-self: flex-start;
-    background: var(--background-mod-subtle);
-    border-radius: var(--radius-sm);
-    box-sizing: border-box;
-    flex: 0 0 auto;
-    height: 40px;
-    outline: 1px solid var(--border-muted);
-    outline-offset: -1px;
-    width: 40px
-}
-
 .projectIcon_f8194a {
-    -o-object-fit: cover;
-    object-fit: cover;
-    outline-color: var(--border-normal)
-}
-
-.projectIconPlaceholder_f8194a {
-    align-items: center;
-    display: flex;
-    justify-content: center
+    align-self: flex-start;
+    background: var(--background-mod-subtle)
 }
 
 .projectCardAction_f8194a {
@@ -515,4 +578,4 @@ svg.selectModeIcon_f8194a {
     text-align: center
 }
 
-/*# sourceMappingURL=cc3f8d586bb4c623.css.map*/
+/*# sourceMappingURL=7350c3a1741a9476.css.map*/

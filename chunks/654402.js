@@ -1,11 +1,10 @@
-_.exports = {
+e.exports = {
     XG: "scroller_f31b36",
     p_: "list_f31b36",
     SF: "sectionHeading_f31b36",
     dc: "rowHost_f31b36",
     nM: "row_f31b36",
     $f: "guildIcon_f31b36",
-    Z2: "appIcon_f31b36",
     Pz: "iconPlaceholder_f31b36",
     fw: "rowBody_f31b36",
     j1: "projectName_f31b36",

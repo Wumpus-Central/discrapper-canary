@@ -18,41 +18,45 @@ let _ = r.forwardRef(function (e, t) {
             color: A,
             colorClass: h,
             tooltip: I,
-            "aria-label": f,
-            "aria-expanded": p,
-            "aria-haspopup": T,
-            "data-jump-section": m,
+            overlay: f,
+            "aria-label": p,
+            "aria-expanded": T,
+            "aria-haspopup": m,
+            "data-jump-section": g,
         } = e,
-        g = (0, i.jsx)(n, { size: "sm", color: A ?? "currentColor", colorClass: h });
+        S = (0, i.jsx)(n, { size: "sm", color: A ?? "currentColor", colorClass: h });
     return (0, i.jsx)(o.m, {
         position: "bottom",
         text: I,
         ariaHidden: !0,
-        children: (0, i.jsx)(d.D, {
+        children: (0, i.jsxs)(d.D, {
             innerRef: t,
             tag: "div",
             onClick: E ? void 0 : r,
             className: s()(u.vk, { [u.wH]: a, [u.r9]: E }),
             role: "button",
-            "aria-label": null != f ? f : I,
-            "aria-haspopup": T,
-            "aria-expanded": p,
-            "data-jump-section": m,
+            "aria-label": null != p ? p : I,
+            "aria-haspopup": m,
+            "aria-expanded": T,
+            "data-jump-section": g,
             "aria-disabled": E,
-            children: _
-                ? (0, i.jsxs)("div", {
-                      className: u.fC,
-                      children: [
-                          (0, i.jsx)(c.Ay, {
-                              mask: c.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
-                              height: l.E.sm,
-                              width: l.E.sm,
-                              children: g,
-                          }),
-                          (0, i.jsx)("span", { className: u.qS }),
-                      ],
-                  })
-                : g,
+            children: [
+                _
+                    ? (0, i.jsxs)("div", {
+                          className: u.fC,
+                          children: [
+                              (0, i.jsx)(c.Ay, {
+                                  mask: c.Ay.Masks.HEADER_BAR_BADGE_BOTTOM,
+                                  height: l.E.sm,
+                                  width: l.E.sm,
+                                  children: S,
+                              }),
+                              (0, i.jsx)("span", { className: u.qS }),
+                          ],
+                      })
+                    : S,
+                f,
+            ],
         }),
     });
 });

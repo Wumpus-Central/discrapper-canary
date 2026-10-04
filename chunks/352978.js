@@ -45,7 +45,6 @@ a.exports = {
     SB: "projectUnreadPill_f8194a",
     W6: "projectCardSelect_f8194a",
     VJ: "projectIcon_f8194a",
-    a8: "projectIconPlaceholder_f8194a",
     M2: "projectCardAction_f8194a",
     rb: "projectPeople_f8194a",
     j1: "projectName_f8194a",
