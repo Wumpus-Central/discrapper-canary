@@ -91,6 +91,13 @@ let l = [
             "Plans for an app you imported or remixed no longer invent a wireframe sketch: the sketch is reserved for brand-new apps that have no screens yet.",
     },
     {
+        date: "2026-10-03",
+        time: "23:30",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Preview tests run from Claude Code or Codex now show in your project's activity under their own title.",
+    },
+    {
         date: "2026-10-01",
         time: "23:37",
         platforms: ["desktop", "mobile"],
