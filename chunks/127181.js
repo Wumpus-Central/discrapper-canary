@@ -1244,6 +1244,13 @@ let l = [
             "With Live Reload on, games and other canvas apps the builder makes now take edits without restarting, so a game keeps its place while you tweak it.",
     },
     {
+        date: "2026-10-04",
+        time: "02:21",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "With Live Reload on, whatever just changed in your Frame gets a quick glowing outline so you can spot the update.",
+    },
+    {
         date: "2026-08-26",
         time: "00:01",
         platforms: ["desktop", "mobile"],
