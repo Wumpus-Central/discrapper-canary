@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => g, kn: () => p, u1: () => x });
+n.d(t, { Ay: () => g, FT: () => p, bR: () => x });
 var l = n(477900),
     r = n(582128),
     a = n(691885),
@@ -35,24 +35,24 @@ function x(e) {
         ),
         p = r.useMemo(() => s.thinking.map((e) => ({ id: e, label: d.hW[e] ?? e, value: e })), [s.thinking]);
     function x(e) {
-        c((0, o.zy)(e));
+        c((0, o.CM)(e));
     }
-    let g = (0, o.$G)(t, n, t.tier);
+    let g = (0, o.Id)(t, n, t.tier);
     return (0, l.jsxs)(l.Fragment, {
         children: [
             null != g
                 ? (0, l.jsx)(a.l, {
-                      label: h.intl.string(f.default["9FRudW"]),
+                      label: h.intl.string(f.default["59TDiR"]),
                       options: m,
                       value: g,
-                      onSelectionChange: (e) => x((0, o.gh)(t, t.tier, e)),
+                      onSelectionChange: (e) => x((0, o.t7)(t, t.tier, e)),
                       selectionMode: "single",
                       disabled: u,
                       fullWidth: !0,
                   })
                 : null,
             (0, l.jsx)(a.l, {
-                label: h.intl.string(f.default["4AsQHS"]),
+                label: h.intl.string(f.default.fpdVCO),
                 options: p,
                 value: t.thinking ?? n?.[t.tier]?.thinking ?? "",
                 onSelectionChange: (e) => x({ ...t, thinking: e }),
@@ -60,10 +60,10 @@ function x(e) {
                 disabled: u,
                 fullWidth: !0,
             }),
-            (0, o.$C)(t, n, s.main)
+            (0, o.gz)(t, n, s.main)
                 ? (0, l.jsx)(i.d, {
-                      label: h.intl.string(f.default.SYLSgx),
-                      description: h.intl.string(f.default.HITWAI),
+                      label: h.intl.string(f.default["5AblQX"]),
+                      description: h.intl.string(f.default.QnUV8M),
                       checked: !0 === t.fast,
                       disabled: u,
                       onChange: (e) => x({ ...t, fast: e }),
@@ -74,7 +74,7 @@ function x(e) {
 }
 function g(e) {
     let { settings: t, tiers: n, choices: r, disabled: a, onChange: i } = e,
-        d = u.ks.indexOf(t.tier);
+        d = u.PY.indexOf(t.tier);
     return (0, l.jsxs)("div", {
         className: m.OA,
         children: [
@@ -88,13 +88,13 @@ function g(e) {
                                 tag: "span",
                                 variant: "text-md/medium",
                                 color: "text-default",
-                                children: h.intl.string(f.default.GDs9Vq),
+                                children: h.intl.string(f.default.aBPQxX),
                             }),
                             (0, l.jsx)(s.E, {
                                 tag: "span",
                                 variant: "text-sm/normal",
                                 color: "text-muted",
-                                children: (0, o.is)(t.tier),
+                                children: (0, o.Tc)(t.tier),
                             }),
                         ],
                     }),
@@ -105,24 +105,24 @@ function g(e) {
                                 tag: "span",
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: h.intl.string(f.default["5DOL2g"]),
+                                children: h.intl.string(f.default["/tlOR5"]),
                             }),
                             (0, l.jsx)(s.E, {
                                 tag: "span",
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: h.intl.string(f.default.OJIfkn),
+                                children: h.intl.string(f.default.FxoUwB),
                             }),
                         ],
                     }),
                     (0, l.jsx)(c.A, {
                         activeIndex: d,
-                        stops: u.ks.map(o.eQ),
-                        ariaLabel: h.intl.string(f.default.GDs9Vq),
+                        stops: u.PY.map(o.D0),
+                        ariaLabel: h.intl.string(f.default.aBPQxX),
                         disabled: a,
                         onSelect: function (e) {
-                            let n = u.ks[e];
-                            null != n && n !== t.tier && i((0, o.zy)((0, o.gc)(t, n)));
+                            let n = u.PY[e];
+                            null != n && n !== t.tier && i((0, o.CM)((0, o.j6)(t, n)));
                         },
                     }),
                 ],

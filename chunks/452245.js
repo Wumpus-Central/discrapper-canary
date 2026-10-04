@@ -119,7 +119,7 @@ function g(e) {
     let t = (0, o.XO)(e),
         n = (function (e) {
             let { enabled: t } = l.useConfig({ guildId: e, location: "automod_settings" }),
-                n = (0, a.f)({ guildId: e, location: "automod_settings" });
+                n = (0, a.m0)({ guildId: e, location: "automod_settings" });
             return t || n;
         })(e);
     return u.useMemo(

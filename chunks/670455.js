@@ -8,10 +8,10 @@ n.d(t, {
     UV: () => L,
     X: () => S,
     bO: () => g,
+    bj: () => R,
     fs: () => T,
     h0: () => I,
     j6: () => C,
-    qK: () => R,
     u0: () => h,
     uf: () => f,
 });
@@ -53,7 +53,7 @@ var m =
         (a.STREAMING = "STREAMING"),
         (a.STREAM_WATCHING = "STREAM_WATCHING"),
         (a.PEOPLE = "PEOPLE"),
-        (a.VIBEGRATIONS = "VIBEGRATIONS"),
+        (a.CONJURE = "VIBEGRATIONS"),
         a),
     g =
         (((s = {}).FREEFORM = "FREEFORM"),

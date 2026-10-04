@@ -409,7 +409,7 @@ class eg extends ep {
         return this.permissionOverwrites_ ?? em;
     }
     get topic() {
-        return this.type === p.rbe.GUILD_APP && null != (0, E.B9)(this.topic_) ? "" : (this.topic_ ?? "");
+        return this.type === p.rbe.GUILD_APP && null != (0, E.Kn)(this.topic_) ? "" : (this.topic_ ?? "");
     }
     get position() {
         return this.position_ ?? 0;
@@ -1080,7 +1080,7 @@ let eM = {
     [p.rbe.GUILD_APP]: eC.fromServer,
 };
 function eP(e, t) {
-    let n = (0, E.hi)(e);
+    let n = (0, E.we)(e);
     return (eM[n.type ?? p.rbe.GUILD_TEXT] ?? eS.fromServer)(n, t);
 }
 function eU(e) {
@@ -1106,7 +1106,7 @@ let ew = {
     [p.rbe.GUILD_APP]: class extends eC {},
 };
 function eG(e) {
-    let t = (0, E.UD)(e),
+    let t = (0, E.BZ)(e),
         n = ew[t.type ?? p.rbe.GUILD_TEXT] ?? eS;
     return (0, _.pp)(t, n);
 }

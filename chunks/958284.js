@@ -11,15 +11,15 @@ function u(e) {
     return (0, l.jsx)(i.u, {
         transitionState: r,
         onClose: u,
-        title: o.intl.string(s.default.jgRu87),
-        subtitle: o.intl.string(s.default["3UbctB"]),
-        confirmText: o.intl.string(s.default.HRwmHd),
+        title: o.intl.string(s.default.NDY6Zv),
+        subtitle: o.intl.string(s.default.z2x5zj),
+        confirmText: o.intl.string(s.default.K3Q49G),
         variant: "primary",
         checkboxProps:
             null != t
                 ? {
-                      label: o.intl.string(s.default["o0p/nQ"]),
-                      description: o.intl.string(s.default.bfKm6w),
+                      label: o.intl.string(s.default["+/pFME"]),
+                      description: o.intl.string(s.default["+I112y"]),
                       checked: d,
                       onChange: (e) => c(e),
                   }

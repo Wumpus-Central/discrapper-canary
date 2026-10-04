@@ -16,7 +16,7 @@ function I() {
     null != A && (clearTimeout(A), (A = null));
 }
 function f(e) {
-    let t = o.aq.filter((t) => t !== e);
+    let t = o.ZR.filter((t) => t !== e);
     return t[Math.floor(Math.random() * t.length)];
 }
 function p() {
@@ -29,7 +29,7 @@ function m(e) {
     let { withGracePeriod: t } = e;
     if (a.A.isIdle() || (null != _ && null == d.Ay.getProject(_))) return T();
     let n = (function () {
-        if (s.Ay.getChannelId() !== u.VV.VIBEGRATIONS) return null;
+        if (s.Ay.getChannelId() !== u.VV.CONJURE) return null;
         let e = l.A.getGuildId();
         if (null == e) return null;
         let t = d.Ay.getSelectedProjectId(e);
@@ -46,7 +46,7 @@ function m(e) {
         : (I(),
           (n !== _ || null == E) &&
               ((_ = n),
-              (E = { type: c.$pd.PLAYING, name: o.G5, details: f(), timestamps: { start: Date.now() } }),
+              (E = { type: c.$pd.PLAYING, name: o.Vb, details: f(), timestamps: { start: Date.now() } }),
               !(function e() {
                   (p(),
                       (h = setTimeout(() => {
@@ -56,7 +56,7 @@ function m(e) {
               !0));
 }
 class g extends i.Ay.Store {
-    static displayName = "VibegrationsRichPresenceStore";
+    static displayName = "ConjureRichPresenceStore";
     initialize() {
         this.syncWith([a.A, s.Ay, l.A, d.Ay], () => m({ withGracePeriod: !0 }));
     }

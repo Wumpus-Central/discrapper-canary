@@ -213,7 +213,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("629087", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("629096", 10))) || (I.client_build_number = s),
     null == (a = U?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -539,8 +539,8 @@ let q = Object.freeze({
     QUEST_HOME_PREVIEW: (e) => `${Q}/quest-home?ad_creative_ids=${e}`,
     QUEST_BAR_PREVIEW: (e) => `${Q}/quest-bar-preview?ad_creative_ids=${e}`,
 });
-var z =
-    (((A = z || {}).INDEX = "/"),
+var J =
+    (((A = J || {}).INDEX = "/"),
     (A.INDEX_WORD = "/index"),
     (A.INDEX_BUCKET = "/index/:bucketId"),
     (A.CHANGELOGS = "/changelogs/:date"),
@@ -629,14 +629,14 @@ var z =
     (A.SNOWSGIVING_GIVEAWAY_TWITTER = "/terms/snowsgiving-2020/twitter"),
     A);
 (K(q),
-    K(z),
+    K(J),
     Object.freeze({
         FACEBOOK_URL: "https://www.facebook.com/discord/",
         INSTAGRAM_URL: "https://www.instagram.com/discord/",
         YOUTUBE_URL: "https://www.youtube.com/discord/",
         TIKTOK_URL: "https://www.tiktok.com/@discord",
     }));
-let J = "dQw4w9WgXcQ:",
+let z = "dQw4w9WgXcQ:",
     Z = null,
     ee = window.DiscordNative;
 null != ee && (Z = ee.safeStorage);
@@ -646,8 +646,8 @@ let et = !1,
 function er(e) {
     return null == e || 0 === e.length
         ? { decryptedToken: null, wasEncrypted: !1 }
-        : Z?.isEncryptionAvailable() && e.startsWith(J)
-          ? { decryptedToken: Z.decryptString(e.substring(J.length)), wasEncrypted: !0 }
+        : Z?.isEncryptionAvailable() && e.startsWith(z)
+          ? { decryptedToken: Z.decryptString(e.substring(z.length)), wasEncrypted: !0 }
           : { decryptedToken: e, wasEncrypted: !1 };
 }
 var ei =
@@ -945,7 +945,7 @@ let eO = ["@me", "@favorites", "@guilds-empty-nux", "@inbox", "@guild-upsell-lis
     ),
     eN = new Set(
         Object.values(
-            (((d = {}).VIBEGRATIONS = "conjuring"),
+            (((d = {}).CONJURE = "conjuring"),
             (d.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
             (d.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
             (d.GAME_SHOP = "game-shop"),

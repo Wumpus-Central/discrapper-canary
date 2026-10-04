@@ -1,24 +1,24 @@
-n.d(e, { default: () => o });
-var i = n(477900);
-n(582128);
-var a = n(382935),
-    r = n(283878),
-    s = n(248675),
-    d = n(375708);
-function o(t) {
-    let { projectId: e, promptCount: n, onClose: o, transitionState: u } = t,
-        l = (0, r.W8)();
-    return (0, i.jsx)(a.A, {
-        onMount: r.hq,
+i.d(n, { default: () => d });
+var e = i(477900);
+i(582128);
+var a = i(382935),
+    r = i(283878),
+    s = i(248675),
+    o = i(375708);
+function d(t) {
+    let { projectId: n, promptCount: i, onClose: d, transitionState: u } = t,
+        c = (0, r.RD)();
+    return (0, e.jsx)(a.A, {
+        onMount: r.iJ,
         onSubmit: function (t) {
-            let { rating: i, problem: a, dontShowAgain: s, feedback: d } = t;
-            (0, r.Hp)(e, n, { rating: i, reason: a, dontShowAgain: s, feedback: d }, "VibegrationsFeedback");
+            let { rating: e, problem: a, dontShowAgain: s, feedback: o } = t;
+            (0, r.iE)(n, i, { rating: e, reason: a, dontShowAgain: s, feedback: o }, "VibegrationsFeedback");
         },
-        onClose: o,
-        ratingHeader: d.intl.string(s.default.W7Sdp4),
-        ratingBody: d.intl.string(s.default.dXJed8),
-        categoriesHeader: d.intl.string(s.default.kLHFxL),
-        optionsTree: [l],
+        onClose: d,
+        ratingHeader: o.intl.string(s.default.QnwyW8),
+        ratingBody: o.intl.string(s.default["+BS1Qc"]),
+        categoriesHeader: o.intl.string(s.default.QhB3in),
+        optionsTree: [c],
         transitionState: u,
     });
 }

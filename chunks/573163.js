@@ -775,7 +775,7 @@ class eU {
                     e = ei.Rsh.USER_NON_CHANNEL_ACK(t, i);
                     break;
                 case el.P.CONJURING_PROJECT:
-                    e = ei.Rsh.VIBEGRATIONS_PROJECT_ACK(n, t);
+                    e = ei.Rsh.CONJURE_PROJECT_ACK(n, t);
                     break;
                 default:
                     return;
@@ -1934,19 +1934,19 @@ let e3 = new e2(_.h, {
             if (null == n.ackMessageId) return !1;
             n.ackMessageId = void 0;
         },
-        VIBEGRATIONS_TURN_SETTLED: function (e) {
+        CONJURE_TURN_SETTLED: function (e) {
             let { projectId: t, entityId: n } = e,
                 i = eU.get(t, el.P.CONJURING_PROJECT);
             ((i._persisted = !0), (i.ackMessageId = n), i.mentionCount++);
         },
-        VIBEGRATIONS_PROJECT_ACK: function (e) {
+        CONJURE_PROJECT_ACK: function (e) {
             let { projectId: t } = e,
                 n = eU.getIfExists(t, el.P.CONJURING_PROJECT);
             if (null == n || 0 === n.mentionCount) return !1;
             let i = j.default.fromTimestamp(Date.now());
             return n.ack({ messageId: i, isExplicitUserAction: !0, trackAnalytics: !1, immediate: !0 });
         },
-        VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
+        CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
             let { projectId: t } = e;
             return eU.clear(t, el.P.CONJURING_PROJECT);
         },

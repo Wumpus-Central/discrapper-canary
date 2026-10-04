@@ -5,7 +5,7 @@ let r =
         ? { frame: (e) => e.hasFrame, widget: (e) => e.hasProfileWidget, bot: (e) => !0 === e.hasBotDm }
         : null;
 function l(e) {
-    let t = i.uZ.filter((t) => r[t](e));
+    let t = i.NK.filter((t) => r[t](e));
     return {
         modes: t,
         defaultMode: t[0] ?? null,

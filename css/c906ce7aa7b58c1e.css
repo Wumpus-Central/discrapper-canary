@@ -1,7 +1,7 @@
 .panel__20ce6 {
-    -webkit-backdrop-filter: blur(20px) var(--custom-vibegrations-glass-filter);
-    backdrop-filter: blur(20px) var(--custom-vibegrations-glass-filter);
-    background: var(--custom-vibegrations-glass-ground);
+    -webkit-backdrop-filter: blur(20px) var(--custom-conjure-glass-filter);
+    backdrop-filter: blur(20px) var(--custom-conjure-glass-filter);
+    background: var(--custom-conjure-glass-ground);
     border: 1px solid var(--border-muted);
     border-radius: var(--radius-sm);
     box-sizing: border-box;
@@ -22,9 +22,9 @@
 }
 
 .panelWithPopouts__20ce6:before {
-    -webkit-backdrop-filter: blur(20px) var(--custom-vibegrations-glass-filter);
-    backdrop-filter: blur(20px) var(--custom-vibegrations-glass-filter);
-    background: var(--custom-vibegrations-glass-ground);
+    -webkit-backdrop-filter: blur(20px) var(--custom-conjure-glass-filter);
+    backdrop-filter: blur(20px) var(--custom-conjure-glass-filter);
+    background: var(--custom-conjure-glass-ground);
     border-radius: inherit;
     content: "";
     inset: 0;
@@ -360,10 +360,10 @@
 }
 
 .full-motion .awaitingSurface__4f832:after {
-    animation: vibegrationsAwaitingPulse__4f832 2s ease-in-out infinite
+    animation: conjureAwaitingPulse__4f832 2s ease-in-out infinite
 }
 
-@keyframes vibegrationsAwaitingPulse__4f832 {
+@keyframes conjureAwaitingPulse__4f832 {
 
     0%,
     to {
@@ -375,4 +375,4 @@
     }
 }
 
-/*# sourceMappingURL=e78a2ce8f8242939.css.map*/
+/*# sourceMappingURL=c906ce7aa7b58c1e.css.map*/

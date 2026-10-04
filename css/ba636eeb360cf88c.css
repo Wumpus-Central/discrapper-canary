@@ -50,7 +50,7 @@
 }
 
 .glowMask__7fb49 {
-    border-radius: var(--custom-vibegrations-glow-radius, var(--radius-sm));
+    border-radius: var(--custom-conjure-glow-radius, var(--radius-sm));
     inset: 0;
     opacity: 0;
     overflow: hidden;
@@ -65,7 +65,7 @@
 }
 
 .glowMask__7fb49 {
-    --custom-vibegrations-glow-extent: 100%
+    --custom-conjure-glow-extent: 100%
 }
 
 @media (prefers-reduced-motion:reduce) {
@@ -343,10 +343,10 @@ svg.selectModeIcon__9f069 {
 }
 
 .projectsSidebarList__9f069 {
-    --custom-vibegrations-projects-inset: var(--space-8);
+    --custom-conjure-projects-inset: var(--space-8);
     flex: 1;
     min-height: 0;
-    padding: var(--custom-vibegrations-projects-inset)
+    padding: var(--custom-conjure-projects-inset)
 }
 
 .projectInfo__9f069,
@@ -418,7 +418,7 @@ svg.selectModeIcon__9f069 {
     border-end-end-radius: var(--radius-xs);
     border-start-end-radius: var(--radius-xs);
     height: var(--space-8);
-    inset-inline-start: calc(var(--custom-vibegrations-projects-inset)*-1);
+    inset-inline-start: calc(var(--custom-conjure-projects-inset)*-1);
     margin-top: calc(var(--space-4)*-1);
     pointer-events: none;
     position: absolute;
@@ -578,4 +578,4 @@ svg.selectModeIcon__9f069 {
     text-align: center
 }
 
-/*# sourceMappingURL=113fded0e0e116b6.css.map*/
+/*# sourceMappingURL=ba636eeb360cf88c.css.map*/

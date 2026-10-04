@@ -1,12 +1,12 @@
 .host__41ba3 {
-    --custom-vibegrations-thread-gap: 0;
-    --custom-vibegrations-shimmer-tint: var(--text-default);
+    --custom-conjure-thread-gap: 0;
+    --custom-conjure-shimmer-tint: var(--text-default);
     min-width: 0;
     width: 100%
 }
 
 .item__41ba3 {
-    --custom-vibegrations-thread-x: 0;
+    --custom-conjure-thread-x: 0;
     padding-block: 0;
     padding-inline: 0
 }
@@ -220,10 +220,10 @@
 }
 
 .full-motion .textShimmer__81e09 {
-    animation: vibegrations-text-shimmer__81e09 2s linear infinite
+    animation: conjure-text-shimmer__81e09 2s linear infinite
 }
 
-@keyframes vibegrations-text-shimmer__81e09 {
+@keyframes conjure-text-shimmer__81e09 {
     0% {
         background-position: 100% 0
     }
@@ -306,10 +306,10 @@
 }
 
 .full-motion .thinkingGlow__81e09[data-state=thinking] {
-    animation: vibegrationsGlowThinkingPulse__81e09 5.5s ease infinite
+    animation: conjureGlowThinkingPulse__81e09 5.5s ease infinite
 }
 
-@keyframes vibegrationsGlowThinkingPulse__81e09 {
+@keyframes conjureGlowThinkingPulse__81e09 {
     0% {
         transform: scaleY(1)
     }
@@ -397,12 +397,12 @@
 
 .full-motion .thinkingGlow__81e09:before {
     animation-duration: 15s;
-    animation-name: vibegrations-glow-drift-a__81e09
+    animation-name: conjure-glow-drift-a__81e09
 }
 
 .full-motion .thinkingGlow__81e09:after {
     animation-duration: 21s;
-    animation-name: vibegrations-glow-drift-b__81e09
+    animation-name: conjure-glow-drift-b__81e09
 }
 
 .full-motion .thinkingGlow__81e09[data-active=true]:after,
@@ -410,7 +410,7 @@
     animation-play-state: running
 }
 
-@keyframes vibegrations-glow-drift-a__81e09 {
+@keyframes conjure-glow-drift-a__81e09 {
 
     0%,
     to {
@@ -424,7 +424,7 @@
     }
 }
 
-@keyframes vibegrations-glow-drift-b__81e09 {
+@keyframes conjure-glow-drift-b__81e09 {
 
     0%,
     to {
@@ -804,14 +804,14 @@ header.headerCollapsed__2cce4 {
     display: flex
 }
 
-@keyframes vibegrations-secret-card-enter__5c627 {
+@keyframes conjure-secret-card-enter__5c627 {
     0% {
         opacity: 0;
         transform: translateY(-4px)
     }
 }
 
-@keyframes vibegrations-secret-card-check-enter__5c627 {
+@keyframes conjure-secret-card-check-enter__5c627 {
     0% {
         opacity: 0;
         transform: scale(.5)
@@ -819,11 +819,11 @@ header.headerCollapsed__2cce4 {
 }
 
 .full-motion .secretCardEnter__5c627 {
-    animation: vibegrations-secret-card-enter__5c627 var(--motion-spring-subtle-duration) var(--motion-spring-subtle) both
+    animation: conjure-secret-card-enter__5c627 var(--motion-spring-subtle-duration) var(--motion-spring-subtle) both
 }
 
 .full-motion .secretCardEnter__5c627 .secretCardStatusIcon__5c627 {
-    animation: vibegrations-secret-card-check-enter__5c627 var(--motion-spring-subtle-duration) var(--motion-spring-subtle) both
+    animation: conjure-secret-card-check-enter__5c627 var(--motion-spring-subtle-duration) var(--motion-spring-subtle) both
 }
 
 .scroller__5d147 {
@@ -850,7 +850,7 @@ header.headerCollapsed__2cce4 {
 }
 
 .rowHost__5d147 {
-    --custom-vibegrations-glow-radius: var(--radius-md);
+    --custom-conjure-glow-radius: var(--radius-md);
     border-radius: var(--radius-md);
     margin-bottom: 2px;
     position: relative
@@ -1099,10 +1099,10 @@ header.headerCollapsed__2cce4 {
 }
 
 .full-motion .iconShine_ec8bf7 {
-    animation: vibegrations-title-bar-wand-shine_ec8bf7 2s linear infinite
+    animation: conjure-title-bar-wand-shine_ec8bf7 2s linear infinite
 }
 
-@keyframes vibegrations-title-bar-wand-shine_ec8bf7 {
+@keyframes conjure-title-bar-wand-shine_ec8bf7 {
     0% {
         -webkit-mask-position: 100% 0;
         mask-position: 100% 0
@@ -1114,4 +1114,4 @@ header.headerCollapsed__2cce4 {
     }
 }
 
-/*# sourceMappingURL=e0e70cf0fb864e16.css.map*/
+/*# sourceMappingURL=6de56e34a1bc9535.css.map*/

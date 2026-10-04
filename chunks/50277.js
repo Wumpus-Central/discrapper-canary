@@ -4,11 +4,11 @@ var n = i(248675),
 function o(e) {
     switch (e) {
         case "simple":
-            return n.default["5DOL2g"];
+            return n.default["/tlOR5"];
         case "balanced":
-            return n.default["5I6PKl"];
+            return n.default.wNhuGQ;
         case "complex":
-            return n.default.OJIfkn;
+            return n.default.FxoUwB;
         default:
             return null;
     }

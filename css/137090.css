@@ -117,31 +117,31 @@
 }
 
 .activityStatus_f921d5 {
-    --custom-vibegrations-glyph-top: 5.2px;
-    --custom-vibegrations-glyph-bottom: 25.2px;
-    --custom-vibegrations-thread-clear: var(--space-4);
-    --custom-vibegrations-thread-x: calc(var(--custom-message-margin-horizontal) + var(--custom-message-avatar-size)/2)
+    --custom-conjure-glyph-top: 5.2px;
+    --custom-conjure-glyph-bottom: 25.2px;
+    --custom-conjure-thread-clear: var(--space-4);
+    --custom-conjure-thread-x: calc(var(--custom-message-margin-horizontal) + var(--custom-message-avatar-size)/2)
 }
 
 .activityStatus_f921d5[data-connected=true]:before,
 .activityStatus_f921d5[data-connects-down=true]:after {
     background: var(--border-normal);
     content: "";
-    inset-inline-start: calc(var(--custom-vibegrations-thread-x) - 1px);
+    inset-inline-start: calc(var(--custom-conjure-thread-x) - 1px);
     position: absolute;
     width: 2px
 }
 
 .activityStatus_f921d5[data-connects-down=true]:after {
     border-radius: 1px 1px 0 0;
-    bottom: calc(var(--custom-vibegrations-thread-gap)*-1/2);
-    top: calc(var(--custom-vibegrations-glyph-bottom) + var(--custom-vibegrations-thread-clear))
+    bottom: calc(var(--custom-conjure-thread-gap)*-1/2);
+    top: calc(var(--custom-conjure-glyph-bottom) + var(--custom-conjure-thread-clear))
 }
 
 .activityStatus_f921d5[data-connected=true]:before {
     border-radius: 0 0 1px 1px;
-    height: calc(var(--custom-vibegrations-thread-gap)/2 + var(--custom-vibegrations-glyph-top) - var(--custom-vibegrations-thread-clear));
-    top: calc(var(--custom-vibegrations-thread-gap)*-1/2)
+    height: calc(var(--custom-conjure-thread-gap)/2 + var(--custom-conjure-glyph-top) - var(--custom-conjure-thread-clear));
+    top: calc(var(--custom-conjure-thread-gap)*-1/2)
 }
 
 .turnChecklist_f921d5 {
@@ -152,8 +152,8 @@
 }
 
 .turnActivity_f921d5 {
-    --custom-vibegrations-thread-gap: var(--space-8);
-    gap: var(--custom-vibegrations-thread-gap);
+    --custom-conjure-thread-gap: var(--space-8);
+    gap: var(--custom-conjure-thread-gap);
     list-style: none;
     margin: 0;
     padding: 0
@@ -258,7 +258,7 @@
 }
 
 .activityStatusShine_f921d5 {
-    color: var(--custom-vibegrations-shimmer-tint, var(--text-brand));
+    color: var(--custom-conjure-shimmer-tint, var(--text-brand));
     inset: 0;
     -webkit-mask-image: linear-gradient(90deg, transparent, transparent 40%, #000 50%, transparent 60%, transparent);
     mask-image: linear-gradient(90deg, transparent, transparent 40%, #000 50%, transparent 60%, transparent);
@@ -274,14 +274,14 @@
 }
 
 .full-motion .turnActivity_f921d5[data-live=true] .activityStatus_f921d5[data-live=true] .activityStatusShine_f921d5 {
-    animation: vibegrations-activity-shine_f921d5 2s linear infinite
+    animation: conjure-activity-shine_f921d5 2s linear infinite
 }
 
 .activityStatus_f921d5[data-live=true] .activityStatusShine_f921d5 {
     opacity: 1
 }
 
-@keyframes vibegrations-activity-shine_f921d5 {
+@keyframes conjure-activity-shine_f921d5 {
     0% {
         -webkit-mask-position: 100% 0;
         mask-position: 100% 0
@@ -299,14 +299,14 @@
 }
 
 .full-motion .turnActivity_f921d5[data-live=true] .wandSparkleSmall_f921d5 {
-    animation: vibegrations-wand-sparkle-small_f921d5 2s ease-in-out infinite
+    animation: conjure-wand-sparkle-small_f921d5 2s ease-in-out infinite
 }
 
 .full-motion .turnActivity_f921d5[data-live=true] .wandSparkleLarge_f921d5 {
-    animation: vibegrations-wand-sparkle-large_f921d5 2s ease-in-out infinite
+    animation: conjure-wand-sparkle-large_f921d5 2s ease-in-out infinite
 }
 
-@keyframes vibegrations-wand-sparkle-small_f921d5 {
+@keyframes conjure-wand-sparkle-small_f921d5 {
 
     0%,
     30%,
@@ -320,7 +320,7 @@
     }
 }
 
-@keyframes vibegrations-wand-sparkle-large_f921d5 {
+@keyframes conjure-wand-sparkle-large_f921d5 {
 
     0%,
     33%,
@@ -374,7 +374,7 @@
     display: none
 }
 
-@keyframes vibegrations-detail-enter_f921d5 {
+@keyframes conjure-detail-enter_f921d5 {
     0% {
         filter: blur(2px);
         opacity: 0;
@@ -390,7 +390,7 @@
 
 .full-motion .activityDetail_f921d5:not([hidden]),
 .full-motion .stepDetail_f921d5:not([hidden]) {
-    animation: vibegrations-detail-enter_f921d5 .15s ease-in-out
+    animation: conjure-detail-enter_f921d5 .15s ease-in-out
 }
 
 .activityDetail_f921d5 .workstreamLane_f921d5 {
@@ -546,4 +546,4 @@
     flex-shrink: 0
 }
 
-/*# sourceMappingURL=137090.501b2cfbc893d827.css.map*/
+/*# sourceMappingURL=137090.462ee48e19a92c69.css.map*/

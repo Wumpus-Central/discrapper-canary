@@ -8,7 +8,7 @@ e.exports = {
     Yq: "messageAccessories__62269",
     st: "conjurBotAvatar__62269",
     OS: "messageBody__62269",
-    Gx: "vibegrations-reveal-frontier__62269",
+    vo: "conjure-reveal-frontier__62269",
     GV: "selectedMention__62269",
     Rj: "selectedMentionIcon__62269",
     zq: "selectedMessage__62269",

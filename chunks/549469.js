@@ -1,8 +1,8 @@
-n.d(t, { A: () => r, Y: () => i });
+n.d(t, { A: () => r, x: () => i });
 var l = n(477900);
 n(582128);
 var a = n(192308);
-let i = "vibegrations-publish-notes";
+let i = "conjure-publish-notes";
 function r(e) {
     (0, a.openModalLazy)(
         async () => {

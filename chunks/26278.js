@@ -7,7 +7,7 @@ function l(e) {
     return e.owner_user_id === a.default.getCurrentUser()?.id;
 }
 function o(e) {
-    return (0, s.XE)(e) && null != e.guild_id;
+    return (0, s.Hn)(e) && null != e.guild_id;
 }
 function d(e) {
     return l(e) || o(e);
@@ -130,7 +130,7 @@ class k extends i.Ay.Store {
     getGuildProjectsFetchState(e) {
         return N.get(e) ?? "unattempted";
     }
-    isVibegrationsProjectApplication(e) {
+    isConjureProjectApplication(e) {
         return null != e && null != this.findProjectByApplicationId(e);
     }
 }
@@ -193,11 +193,11 @@ let Y = new k(r.h, {
             (m = !1),
             B.clear());
     },
-    VIBEGRATIONS_PROJECTS_FETCH_START: function (e) {
+    CONJURE_PROJECTS_FETCH_START: function (e) {
         let { guildId: t } = e;
         (null != t && N.set(t, "loading"), (g = { type: "loading" }));
     },
-    VIBEGRATIONS_PROJECTS_FETCH_SUCCESS: function (e) {
+    CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
             i = new Set(t.map((e) => e.id));
         for (let [e, t] of u) !i.has(e) && (l(t) || (null != n && t.guild_id === n)) && u.delete(e);
@@ -207,45 +207,45 @@ let Y = new k(r.h, {
         for (let [e, t] of I) u.has(t) || I.delete(e);
         ((p = !0), (g = { type: "success", fetchedAt: Date.now() }));
     },
-    VIBEGRATIONS_PROJECTS_FETCH_FAIL: function (e) {
+    CONJURE_PROJECTS_FETCH_FAIL: function (e) {
         let { guildId: t } = e;
         (null != t && N.set(t, "error"), (g = { type: "error", fetchedAt: Date.now() }));
     },
-    VIBEGRATIONS_PROJECT_LIMIT_FETCH_SETTLE: function (e) {
+    CONJURE_PROJECT_LIMIT_FETCH_SETTLE: function (e) {
         let { maxProjects: t } = e;
         ((T = t), (m = !0));
     },
-    VIBEGRATIONS_PROJECT_CREATE_SUCCESS: F,
-    VIBEGRATIONS_PROJECT_UPDATE_SUCCESS: F,
-    VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE: function (e) {
+    CONJURE_PROJECT_CREATE_SUCCESS: F,
+    CONJURE_PROJECT_UPDATE_SUCCESS: F,
+    CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE: function (e) {
         let { projectId: t, integrationStatus: n } = e;
         _.set(t, n);
     },
-    VIBEGRATIONS_PROJECT_PUBLISH_STATUS_UPDATE: function (e) {
+    CONJURE_PROJECT_PUBLISH_STATUS_UPDATE: function (e) {
         let { projectId: t, published: n, hasUnpublishedChanges: i, surface: r } = e,
             a = n ? (i ? "changes" : "up_to_date") : "unpublished",
             s = E.get(t);
         if (s?.state === a && s.surface === r) return !1;
         E.set(t, { state: a, surface: r });
     },
-    VIBEGRATIONS_PROJECT_PUBLISH_START: function (e) {
+    CONJURE_PROJECT_PUBLISH_START: function (e) {
         let { projectId: t } = e;
         A.add(t);
     },
-    VIBEGRATIONS_PROJECT_PUBLISH_SETTLE: function (e) {
+    CONJURE_PROJECT_PUBLISH_SETTLE: function (e) {
         let { projectId: t } = e;
         return A.delete(t);
     },
-    VIBEGRATIONS_PROJECT_APP_CHANNEL_PENDING: function (e) {
+    CONJURE_PROJECT_APP_CHANNEL_PENDING: function (e) {
         let { projectId: t, pending: n } = e;
         if (h.has(t) === n) return !1;
         n ? h.add(t) : h.delete(t);
     },
-    VIBEGRATIONS_PROJECT_DELETE_START: function (e) {
+    CONJURE_PROJECT_DELETE_START: function (e) {
         let { projectId: t } = e;
         f.add(t);
     },
-    VIBEGRATIONS_PROJECT_DELETE_SUCCESS: function (e) {
+    CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
         for (let [e, n] of (f.delete(t),
         u.delete(t),
@@ -262,20 +262,20 @@ let Y = new k(r.h, {
         I))
             n === t && I.delete(e);
     },
-    VIBEGRATIONS_PROJECT_DELETE_FAIL: function (e) {
+    CONJURE_PROJECT_DELETE_FAIL: function (e) {
         let { projectId: t } = e;
         return f.delete(t);
     },
-    VIBEGRATIONS_PROJECT_SELECT: function (e) {
+    CONJURE_PROJECT_SELECT: function (e) {
         let { guildId: t, projectId: n } = e;
         if ((I.get(t) ?? null) === n) return !1;
         null == n ? I.delete(t) : I.set(t, n);
     },
-    VIBEGRATIONS_TRACE_REPLAY_STARTING: function (e) {
+    CONJURE_TRACE_REPLAY_STARTING: function (e) {
         let { projectId: t } = e;
         B.set(t, { snapshot: new Set((v.get(t) ?? D).map((e) => V(e.kind, e.id))), touched: new Set() });
     },
-    VIBEGRATIONS_HISTORY_LOAD_SETTLE: function (e) {
+    CONJURE_HISTORY_LOAD_SETTLE: function (e) {
         let { projectId: t, scope: n, status: i, count: r, truncated: a } = e,
             s = "trace" === n ? B.get(t) : void 0;
         if (("trace" === n && B.delete(t), "failed" === i)) {
@@ -293,7 +293,7 @@ let Y = new k(r.h, {
         }
         G(t, n, { status: "loaded", truncated: a, count: r });
     },
-    VIBEGRATIONS_LOG_APPEND: function (e) {
+    CONJURE_LOG_APPEND: function (e) {
         let { projectId: t, log: n } = e,
             i = n.seq;
         if (null != i) {
@@ -306,14 +306,14 @@ let Y = new k(r.h, {
             s = null == a ? [r] : a.concat(r);
         O.set(t, s.length > 500 ? s.slice(-500) : s);
     },
-    VIBEGRATIONS_LOGS_SEEN: function (e) {
+    CONJURE_LOGS_SEEN: function (e) {
         let { projectId: t } = e,
             n = O.get(t),
             i = null == n || 0 === n.length ? 0 : n[n.length - 1].key;
         if ((y.get(t) ?? 0) >= i) return !1;
         y.set(t, i);
     },
-    VIBEGRATIONS_TOOL_CALL_APPEND: function (e) {
+    CONJURE_TOOL_CALL_APPEND: function (e) {
         let { projectId: t, toolCall: n } = e;
         if ((H(t, "tool", n.id), M(t, n.entry_id, n.status))) return !1;
         let i = v.get(t) ?? D,
@@ -347,7 +347,7 @@ let Y = new k(r.h, {
             };
         (P(t, n.entry_id, n.status), null != a) ? W(t, i, r, _) : x(t, i, _);
     },
-    VIBEGRATIONS_MODEL_CALL_APPEND: function (e) {
+    CONJURE_MODEL_CALL_APPEND: function (e) {
         let { projectId: t, modelCall: n } = e;
         if ((H(t, "model", n.id), M(t, n.entry_id, n.status))) return !1;
         let i = v.get(t) ?? D,

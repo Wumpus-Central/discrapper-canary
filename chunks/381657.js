@@ -11,7 +11,7 @@ _.exports = {
     xL: "marker__15d49",
     D0: "markerTargetBox__15d49",
     Nr: "card__15d49",
-    VD: "vibegrationsDesignCardReveal__15d49",
+    Gn: "conjureDesignCardReveal__15d49",
     MY: "cardHeader__15d49",
     ip: "cardDisc__15d49",
     Qc: "cardTarget__15d49",

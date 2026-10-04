@@ -1,7 +1,7 @@
-t.d(i, { X: () => u });
-var r = t(976860),
-    n = t(652215),
-    l = t(746080);
-function u(e, i) {
-    (0, r.pX)(null == i ? n.BVt.CHANNEL(e, l.VV.VIBEGRATIONS) : n.BVt.CHANNEL(e, l.VV.VIBEGRATIONS, i));
+i.d(t, { g: () => l });
+var n = i(976860),
+    r = i(652215),
+    u = i(746080);
+function l(e, t) {
+    (0, n.pX)(null == t ? r.BVt.CHANNEL(e, u.VV.CONJURE) : r.BVt.CHANNEL(e, u.VV.CONJURE, t));
 }

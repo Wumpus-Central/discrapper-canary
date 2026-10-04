@@ -1,4 +1,4 @@
-n.d(t, { A: () => p, l: () => x });
+n.d(t, { A: () => x, E: () => g });
 var l = n(477900),
     a = n(582128),
     i = n(503698),
@@ -11,27 +11,27 @@ var l = n(477900),
     m = n(248675),
     f = n(375708),
     h = n(508769);
-let x = a.createContext(0);
-function p(e) {
+let g = a.createContext(0);
+function x(e) {
     let {
             glyph: t,
             line: n,
             live: i,
-            settled: p,
-            tint: g,
+            settled: x,
+            tint: p,
             detail: k,
-            connected: v = !1,
-            connectsDown: j = !1,
+            connected: j = !1,
+            connectsDown: v = !1,
             anchor: b = !1,
         } = e,
         [_, y] = a.useState(!1),
-        S = a.useContext(x),
+        S = a.useContext(g),
         N = a.useId(),
         A = a.useCallback(() => y((e) => !e), []),
         { text: T, phase: w } = (0, c.Q)(n),
-        M = _ ? s.a : u._,
-        C = null != k,
-        I = (0, l.jsxs)(l.Fragment, {
+        C = _ ? s.a : u._,
+        I = null != k,
+        M = (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)("span", { className: h.hd, children: t }),
                 (0, l.jsx)(d.E, {
@@ -41,37 +41,37 @@ function p(e) {
                     className: r()(h.qo, { [h._q]: "exit" === w, [h.GD]: "enter" === w }),
                     children: T,
                 }),
-                C ? (0, l.jsx)(M, { size: "xs", color: "currentColor", className: h.nD }) : null,
+                I ? (0, l.jsx)(C, { size: "xs", color: "currentColor", className: h.nD }) : null,
             ],
         }),
-        P = (0, l.jsxs)(l.Fragment, {
+        E = (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)("span", { className: h.$m, children: I }, `face-${S}`),
+                (0, l.jsx)("span", { className: h.$m, children: M }, `face-${S}`),
                 i
-                    ? (0, l.jsx)("span", { className: r()(h.$m, h.pw), "aria-hidden": !0, children: I }, `shine-${S}`)
+                    ? (0, l.jsx)("span", { className: r()(h.$m, h.pw), "aria-hidden": !0, children: M }, `shine-${S}`)
                     : null,
             ],
         });
     return (0, l.jsxs)("li", {
         className: h.K1,
         "data-live": i,
-        "data-settled": p,
-        "data-connected": v,
-        "data-connects-down": j,
-        "data-vibegrations-turn-status": b ? "true" : void 0,
-        style: null != g ? { "--custom-vibegrations-shimmer-tint": g } : void 0,
+        "data-settled": x,
+        "data-connected": j,
+        "data-connects-down": v,
+        "data-conjure-turn-status": b ? "true" : void 0,
+        style: null != p ? { "--custom-conjure-shimmer-tint": p } : void 0,
         children: [
-            C
+            I
                 ? (0, l.jsx)(o.D, {
                       tag: "div",
                       className: r()(h.ep, h.EK),
                       "aria-expanded": _,
                       "aria-controls": N,
-                      "aria-label": f.intl.formatToPlainString(m.default.s1wx5H, { activity: T }),
+                      "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: T }),
                       onClick: A,
-                      children: P,
+                      children: E,
                   })
-                : (0, l.jsx)("div", { className: h.ep, children: P }),
+                : (0, l.jsx)("div", { className: h.ep, children: E }),
             (0, l.jsx)("div", { id: N, hidden: !_, className: h.BA, children: k }),
         ],
     });

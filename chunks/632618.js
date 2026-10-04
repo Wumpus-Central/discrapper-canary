@@ -1,36 +1,36 @@
-l.d(e, { default: () => m });
-var i = l(477900),
-    a = l(582128),
-    n = l(189213),
-    r = l(834730),
-    o = l(103557),
-    s = l(976860),
-    d = l(477818),
-    u = l(489586);
-(l(17928), l(945810), l(71393));
-var c = l(870440),
-    h = l(597331),
-    f = l(652215),
-    g = l(746080),
-    p = l(248675),
-    b = l(375708);
+i.d(e, { default: () => m });
+var a = i(477900),
+    l = i(582128),
+    n = i(189213),
+    r = i(834730),
+    o = i(103557),
+    s = i(976860),
+    d = i(477818),
+    u = i(489586);
+(i(17928), i(945810), i(71393));
+var c = i(870440),
+    h = i(597331),
+    f = i(652215),
+    C = i(746080),
+    g = i(248675),
+    p = i(375708);
 function m(t) {
-    let { transitionState: e, onClose: l } = t,
-        [m, C] = a.useState(""),
-        [k, v] = a.useState(null),
-        [x, w] = a.useState(!1),
-        y = a.useMemo(() => (0, c.$X)("VibegrationsCustomWidgetModal"), []),
-        V = a.useCallback(() => {
-            l().catch(() => void 0);
-        }, [l]),
-        N = a.useCallback((t) => {
-            (C(t), v(null));
+    let { transitionState: e, onClose: i } = t,
+        [m, b] = l.useState(""),
+        [k, v] = l.useState(null),
+        [w, x] = l.useState(!1),
+        y = l.useMemo(() => (0, c.oX)("VibegrationsCustomWidgetModal"), []),
+        V = l.useCallback(() => {
+            i().catch(() => void 0);
+        }, [i]),
+        E = l.useCallback((t) => {
+            (b(t), v(null));
         }, []),
-        S = a.useCallback(async () => {
+        N = l.useCallback(async () => {
             let t = m.trim();
-            if ("" === t) return void v(b.intl.string(p.default.Wo5sQv));
-            if (null == y || x) return;
-            (w(!0), v(null));
+            if ("" === t) return void v(p.intl.string(g.default.AuyDIq));
+            if (null == y || w) return;
+            (x(!0), v(null));
             let e = null;
             try {
                 ((e = await (0, d.gA)({ guild_id: y, install_scope: "user" })),
@@ -42,59 +42,59 @@ function m(t) {
                             t,
                         ].join("\n"),
                     ),
-                    (0, s.pX)(f.BVt.CHANNEL(y, g.VV.VIBEGRATIONS, e)),
+                    (0, s.pX)(f.BVt.CHANNEL(y, C.VV.CONJURE, e)),
                     V());
             } catch (t) {
                 if (null != e) {
-                    ((0, s.pX)(f.BVt.CHANNEL(y, g.VV.VIBEGRATIONS, e)), V());
+                    ((0, s.pX)(f.BVt.CHANNEL(y, C.VV.CONJURE, e)), V());
                     return;
                 }
-                v((0, u.Xd)(t));
+                v((0, u.mG)(t));
             } finally {
-                w(!1);
+                x(!1);
             }
-        }, [m, y, x, V]),
-        E = a.useCallback(() => {
-            S().catch(() => void 0);
-        }, [S]);
+        }, [m, y, w, V]),
+        S = l.useCallback(() => {
+            N().catch(() => void 0);
+        }, [N]);
     return null == y
-        ? (0, i.jsx)(n.a, {
+        ? (0, a.jsx)(n.a, {
               transitionState: e,
-              onClose: l,
-              title: b.intl.string(p.default["33l33s"]),
-              actions: [{ text: b.intl.string(b.t.cpT0Cq), variant: "secondary", onClick: V }],
-              children: (0, i.jsx)(r.E, {
+              onClose: i,
+              title: p.intl.string(g.default.rCU6IG),
+              actions: [{ text: p.intl.string(p.t.cpT0Cq), variant: "secondary", onClick: V }],
+              children: (0, a.jsx)(r.E, {
                   variant: "text-md/normal",
                   color: "text-muted",
-                  children: b.intl.string(p.default["8DyNx1"]),
+                  children: p.intl.string(g.default["UN2H+/"]),
               }),
           })
-        : (0, i.jsx)(n.a, {
+        : (0, a.jsx)(n.a, {
               transitionState: e,
-              onClose: l,
-              title: b.intl.string(p.default["27bu14"]),
+              onClose: i,
+              title: p.intl.string(g.default.yI85oV),
               actions: [
-                  { text: b.intl.string(b.t["ETE/oC"]), variant: "secondary", onClick: V, disabled: x },
+                  { text: p.intl.string(p.t["ETE/oC"]), variant: "secondary", onClick: V, disabled: w },
                   {
-                      text: b.intl.string(p.default["f/Jz/R"]),
+                      text: p.intl.string(g.default.MDZXiK),
                       variant: "primary",
-                      onClick: E,
-                      loading: x,
+                      onClick: S,
+                      loading: w,
                       disabled: "" === m.trim(),
                   },
               ],
-              children: (0, i.jsx)(o.f, {
-                  label: b.intl.string(p.default.DAm99t),
-                  description: b.intl.string(p.default.blSmfQ),
-                  placeholder: b.intl.string(p.default.FYN9Rl),
+              children: (0, a.jsx)(o.f, {
+                  label: p.intl.string(g.default["09BSx3"]),
+                  description: p.intl.string(g.default.SKwzvJ),
+                  placeholder: p.intl.string(g.default.K7zdCZ),
                   value: m,
-                  onChange: N,
+                  onChange: E,
                   maxLength: 2e3,
                   showCharacterCount: !0,
                   rows: 5,
                   autoFocus: !0,
                   error: k,
-                  disabled: x,
+                  disabled: w,
               }),
           });
 }

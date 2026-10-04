@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 629087, Version Hash: a68ff21b90aff5bec4f1c5f8cd2bc2f224169ec6`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 629096, Version Hash: 520d34aa1b81a6c666be61acc5d4fb9f435fb921`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -3682,7 +3682,7 @@ let r9 = (0, ii.Fe)({
                 n.e("137824"),
                 n.e("28998"),
                 n.e("510910"),
-                n.e("371700"),
+                n.e("999045"),
             ]).then(n.bind(n, 18653)),
         webpackId: 18653,
         name: "VibegrationsTitleBarButton",
@@ -4656,7 +4656,7 @@ let ai = (0, ii.Fe)({
             r = (0, r5.Uk)("VoiceDareTitleBarButton"),
             a = null !== e && t === r1.RK.TITLE_BAR_LEFT,
             s = null === e,
-            l = (0, iC.oS)("AppTitleBar"),
+            l = (0, iC.TW)("AppTitleBar"),
             o = (0, ed.bG)([iU.A, k.Bt], () => iU.A.isEnabled()),
             d = (0, ed.bG)([iU.A, k.Bt], () => iU.A.isTabBarVisible(), []),
             c = (0, tG.zy)();
@@ -4874,15 +4874,15 @@ function az(e) {
         s = (0, ed.bG)([t_.A], () => null != a && r === a && t_.A.getChatOpen(a), [r, a]),
         l = (0, rq.h)(t.surface),
         o = (0, ed.bG)([n$.A], () => n$.A.getChannel(l), [l]),
-        d = (0, am.Bp)(o, "FramePanelFocusedView"),
+        d = (0, am.w$)(o, "FramePanelFocusedView"),
         c = (0, ed.bG)([aS.A], () => aS.A.getBuilderPreviewApplicationId()),
-        u = r === aY.VV.VIBEGRATIONS && null == l && t.applicationId === c,
+        u = r === aY.VV.CONJURE && null == l && t.applicationId === c,
         _ = d || u,
         E = (0, ed.bG)([aS.A], () => aS.A.isBuilderPreviewMobile()),
         A = u && E,
         h = (0, ed.bG)([aO.Ay], () => aO.Ay.callChatSidebarWidth),
         I = (0, ed.bG)([aN.Ay], () => aN.Ay.getSidebarWidth()),
-        f = (0, ag.c)(),
+        f = (0, ag.V)(),
         p = (0, ac.r)(i9.A.modules.chat.RESIZE_HANDLE_WIDTH),
         T = eE.useRef(null),
         m = eE.useRef(null),
@@ -4940,9 +4940,9 @@ function az(e) {
         theme: F.NJ8.DARK,
         children: (e) =>
             (0, y.jsxs)("div", {
-                className: to()(aK.iE, a$[v], e, { [aK.$h]: d, [aK.XX]: u, [aK._7]: A }),
+                className: to()(aK.iE, a$[v], e, { [aK.WN]: d, [aK.YO]: u, [aK._7]: A }),
                 ref: T,
-                style: { right: P, ...(_ ? { "--custom-vibegrations-control-bar-height": `${f}px` } : null) },
+                style: { right: P, ...(_ ? { "--custom-conjure-control-bar-height": `${f}px` } : null) },
                 children: [
                     (0, y.jsx)(aC.A, { type: "frame", applicationId: t.applicationId, frameId: t.id }),
                     (0, y.jsx)("div", {
@@ -22077,7 +22077,7 @@ let C_ = "isHideDevBanner",
                     className: to()(Cu.Wz, Cu.mr),
                     children: [
                         (0, y.jsx)(Cc, { className: Cu.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "629087" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "629096" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -25673,7 +25673,7 @@ let R9 = (0, tj.Fe)({
                 n.e("499383"),
                 n.e("261064"),
                 n.e("256769"),
-                n.e("530615"),
+                n.e("526274"),
             ]).then(n.bind(n, 657845)),
         webpackId: 657845,
         name: "VibegrationsScreen",
@@ -29928,7 +29928,7 @@ let R9 = (0, tj.Fe)({
         let d = (0, ed.bG)([eq.A], () => eq.A.getGuild(r)),
             c = (0, ed.bG)([Ca.Ay], () => (null == r ? null : Ca.Ay.getSelfMember(r))),
             u = (0, ed.bG)([aJ.A], () => aJ.A.isConnected()),
-            _ = (0, iC.f)({ guildId: r, location: "ChannelRenderer" }),
+            _ = (0, iC.m0)({ guildId: r, location: "ChannelRenderer" }),
             E = (0, aq.C$)(r, "ChannelRenderer"),
             A = (0, sA.Uq)(r, "ChannelRenderer"),
             h = (0, aQ.N)("ChannelRenderer"),
@@ -29989,7 +29989,7 @@ let R9 = (0, tj.Fe)({
                     return (0, y.jsx)(Ld, { guildId: r, selectedSection: R6.qC.CUSTOMIZE });
                 case aY.VV.MEMBER_SAFETY:
                     return (0, y.jsx)(Lo, { guildId: r });
-                case aY.VV.VIBEGRATIONS:
+                case aY.VV.CONJURE:
                     return _
                         ? (0, y.jsx)(Li, { guildId: r, projectId: s })
                         : (0, y.jsx)(tG.rd, { to: F.BVt.CHANNEL(r) });
@@ -30840,8 +30840,8 @@ function ye() {
                     o = (0, lX.Vq)(n) ? op.Ay.getSelfEmbeddedActivityForLocation(n) : null,
                     d = r$.A.getMainFrame(),
                     c = (0, rq.h)(d?.surface),
-                    u = null == c && LZ.Ay.isVibegrationsProjectApplication(d?.applicationId),
-                    _ = (null != c && (0, am.kg)(n$.A.getChannel(c), "ActivitySounds")) || u,
+                    u = null == c && LZ.Ay.isConjureProjectApplication(d?.applicationId),
+                    _ = (null != c && (0, am.Xs)(n$.A.getChannel(c), "ActivitySounds")) || u,
                     E = null != i && n$.A.getChannel(i)?.type === F.rbe.GUILD_SPACE;
                 return {
                     connectedActivityLocation: n,
@@ -30852,7 +30852,7 @@ function ye() {
                     userConnectedActivity: o,
                     voiceChannelActivities: s,
                     hasFrame: (0, rq.x1)(d),
-                    inVibegrationsChannel: _,
+                    inConjureChannel: _,
                     isGuildSpaceActivity: E,
                 };
             },
@@ -30867,7 +30867,7 @@ function ye() {
                         userConnectedActivity: o,
                         voiceChannelActivities: d,
                         hasFrame: c,
-                        inVibegrationsChannel: u,
+                        inConjureChannel: u,
                         isGuildSpaceActivity: _,
                     } = t,
                     E = d.some((e) => e.applicationId === o?.applicationId && e.launchId === o.launchId),
@@ -30913,7 +30913,7 @@ function ye() {
                     null == n &&
                         (e.hasFrame || c) &&
                         (e.hasFrame || !c || u
-                            ? !e.hasFrame || c || e.inVibegrationsChannel || (n = "activity_end")
+                            ? !e.hasFrame || c || e.inConjureChannel || (n = "activity_end")
                             : (n = "activity_launch")),
                     n
                 );
@@ -37504,9 +37504,7 @@ let MR = new Map(),
                     } = e,
                     { applicationId: i, iframeId: r } = bY(t),
                     a = r$.A.getFrameByIframeId(r),
-                    s =
-                        rW.A.getApplication(i)?.vibegrationsProjectId != null ||
-                        LZ.Ay.isVibegrationsProjectApplication(i);
+                    s = rW.A.getApplication(i)?.vibegrationsProjectId != null || LZ.Ay.isConjureProjectApplication(i);
                 if (a?.applicationId !== i || !s)
                     throw new bV.A(
                         { errorCode: F.Lw6.UNAUTHORIZED_FOR_APPLICATION },

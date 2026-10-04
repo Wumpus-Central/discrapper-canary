@@ -10,7 +10,7 @@ let d = new r.A(3e4, 3e5);
 function c(e, t) {
     let n = (0, l.bG)(
             [a.A],
-            () => t && null != e && (0, u.RZ)(a.A.getGuildsArray(), "useIsOwnedVibegrationsApplication").length > 0,
+            () => t && null != e && (0, u.Qv)(a.A.getGuildsArray(), "useIsOwnedVibegrationsApplication").length > 0,
             [t, e],
         ),
         r = (0, l.bG)([s.Ay], () => s.Ay.getProjectsFetchState()?.type ?? null);

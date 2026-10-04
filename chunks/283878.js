@@ -1,11 +1,11 @@
 n.d(t, {
     AH: () => b,
-    Hp: () => w,
-    W8: () => y,
+    RD: () => j,
     Xi: () => x,
     cP: () => p,
     hl: () => v,
-    hq: () => j,
+    iE: () => w,
+    iJ: () => y,
     jb: () => g,
     qu: () => f,
 });
@@ -37,25 +37,25 @@ function b(e) {
 function v(e) {
     return r.Ay.getMessages(e).filter((e) => "assistant" === e.role && "side_reply" !== e.kind && (0, r.BL)(e)).length;
 }
-function y() {
+function j() {
     return {
-        value: u.Eq.VIBEGRATIONS,
+        value: u.Eq.CONJURE,
         label: "",
-        problemsHeader: c.intl.string(d.default.kLHFxL),
+        problemsHeader: c.intl.string(d.default.QhB3in),
         problemOptions: [
-            { value: u.qK.NOT_WHAT_I_WANTED, variant: u.UV.UNSPECIFIED, label: c.intl.string(d.default.UJLIUY) },
-            { value: u.qK.TOO_SLOW, variant: u.UV.UNSPECIFIED, label: c.intl.string(d.default.FVQz1w) },
-            { value: u.qK.APP_DIDNT_WORK, variant: u.UV.UNSPECIFIED, label: c.intl.string(d.default["4AdY23"]) },
+            { value: u.bj.NOT_WHAT_I_WANTED, variant: u.UV.UNSPECIFIED, label: c.intl.string(d.default.kwO25M) },
+            { value: u.bj.TOO_SLOW, variant: u.UV.UNSPECIFIED, label: c.intl.string(d.default["8cyhK6"]) },
+            { value: u.bj.APP_DIDNT_WORK, variant: u.UV.UNSPECIFIED, label: c.intl.string(d.default.g2rAXL) },
             {
-                value: u.qK.DIDNT_KNOW_WHAT_TO_ASK_FOR,
+                value: u.bj.DIDNT_KNOW_WHAT_TO_ASK_FOR,
                 variant: u.UV.UNSPECIFIED,
-                label: c.intl.string(d.default["u/juX1"]),
+                label: c.intl.string(d.default.X73n1w),
             },
         ],
-        freeformConfig: { value: u.qK.FREEFORM, label: c.intl.string(d.default["8Ee6yW"]) },
+        freeformConfig: { value: u.bj.FREEFORM, label: c.intl.string(d.default.zgU5P0) },
     };
 }
-function j() {
+function y() {
     i.default.track(o.HAw.OPEN_MODAL, { type: "vibegrations", source: "Feedback Modal" });
 }
 function w(e, t, n, l) {

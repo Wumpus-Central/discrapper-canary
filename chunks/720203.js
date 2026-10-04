@@ -23,7 +23,7 @@ function f() {
             if (null == t || null == n || !document.documentElement.classList.contains("full-motion")) return;
             let l = getComputedStyle(t).getPropertyValue("color").trim(),
                 r = t.closest('[role="group"]'),
-                a = r?.querySelector("[data-vibegrations-effort-handle]") ?? null,
+                a = r?.querySelector("[data-conjure-effort-handle]") ?? null,
                 i = 0,
                 s = [],
                 f = 0,
@@ -32,11 +32,11 @@ function f() {
                 p = 9,
                 x = 0,
                 g = 0,
-                v = !1,
-                b = 0,
+                b = !1,
+                v = 0,
                 y = 0,
-                k = performance.now();
-            function j() {
+                j = performance.now();
+            function k() {
                 if (null == n) return;
                 ((n.textAlign = "center"),
                     (n.textBaseline = "middle"),
@@ -61,51 +61,51 @@ function f() {
                     (s = null == a ? [] : Array.from(a, (e) => e.offsetLeft + e.offsetWidth / 2)));
                 let o = window.devicePixelRatio,
                     d = Number.isFinite(o) && o > 0 ? o : 1;
-                ((t.width = Math.round(f * d)), (t.height = Math.round(h * d)), n.setTransform(d, 0, 0, d, 0, 0), j());
+                ((t.width = Math.round(f * d)), (t.height = Math.round(h * d)), n.setTransform(d, 0, 0, d, 0, 0), k());
             }
             (M(),
                 (x = requestAnimationFrame(function e(r) {
                     if (((x = requestAnimationFrame(e)), r - g < u)) return;
-                    let j = r - g;
+                    let k = r - g;
                     if (((g = r), null == t || null == n || 0 === f || null == a)) return;
                     let M = Number(a.dataset.effortCentre),
-                        A = a.hasAttribute("data-effort-live"),
-                        C = Number.isFinite(M) && Math.abs(M - i) > 16;
-                    if (!v && (!A || C)) return;
-                    b = Math.min(1, Math.max(0, b + ((A ? 1 : -1) * j) / 260));
-                    let E = t.getBoundingClientRect(),
-                        w = E.width > 0 ? E.width / f : 1,
-                        S = a.getBoundingClientRect(),
-                        L = (S.left - E.left) / w,
-                        W = (1 - Math.min(1, Math.abs(L + S.width / w / 2 - i) / 16)) * b;
-                    if (W < 0.01) {
-                        (v && n.clearRect(0, 0, f, h), (v = !1));
+                        C = a.hasAttribute("data-effort-live"),
+                        A = Number.isFinite(M) && Math.abs(M - i) > 16;
+                    if (!b && (!C || A)) return;
+                    v = Math.min(1, Math.max(0, v + ((C ? 1 : -1) * k) / 260));
+                    let w = t.getBoundingClientRect(),
+                        E = w.width > 0 ? w.width / f : 1,
+                        L = a.getBoundingClientRect(),
+                        S = (L.left - w.left) / E,
+                        P = (1 - Math.min(1, Math.abs(S + L.width / E / 2 - i) / 16)) * v;
+                    if (P < 0.01) {
+                        (b && n.clearRect(0, 0, f, h), (b = !1));
                         return;
                     }
-                    (v || (y = r), (v = !0), n.clearRect(0, 0, f, h));
-                    let N = L - 1 - (1 - W) * 16,
-                        R = (r - k) / 1e3,
-                        I = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (r - y) / 1500))) ** 3),
-                        P = Math.ceil(N / p);
+                    (b || (y = r), (b = !0), n.clearRect(0, 0, f, h));
+                    let R = S - 1 - (1 - P) * 16,
+                        W = (r - j) / 1e3,
+                        N = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (r - y) / 1500))) ** 3),
+                        I = Math.ceil(R / p);
                     n.fillStyle = l;
                     for (let e = 0; e < 3; e++) {
                         let t = 72 * (0.825 + 0.35 * c(e, 11)),
-                            l = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(R * d * 0.13 + c(e, 29) * d))) * I,
+                            l = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(W * d * 0.13 + c(e, 29) * d))) * N,
                             r = 0;
                         for (let t of o) {
                             let n = (e * t.stagger + 0.07 * c(e, t.salt)) * d;
-                            r += t.weight * Math.sin(R * d * t.hz + n);
+                            r += t.weight * Math.sin(W * d * t.hz + n);
                         }
                         let a = 0.30000000000000004 + 0.7 * (1 + r),
-                            i = Math.floor((R * t) / p),
+                            i = Math.floor((W * t) / p),
                             u = 1 + e * p + m / 2,
                             f = m / 2 + 3,
                             x = Math.abs(u - h / 2) < f;
-                        for (let t = 0; t < P; t++) {
+                        for (let t = 0; t < I; t++) {
                             let r,
-                                o = N - (t * p + m / 2);
+                                o = R - (t * p + m / 2);
                             if (o < 0) break;
-                            let d = (N - o) / l;
+                            let d = (R - o) / l;
                             if (d >= 1) break;
                             let h = Math.min(6, Math.floor(7 * (1 - d ** a)));
                             ((r =
@@ -121,19 +121,19 @@ function f() {
                                             let t = Math.min(1, Math.max(0, e));
                                             return t * t * (3 - 2 * t);
                                         })((1 - d) / 0.34) *
-                                        W),
+                                        P),
                                     n.fillText(r, o, u)));
                         }
                     }
                     n.globalAlpha = 1;
                 })));
-            let A = document.fonts;
-            null != A && A.load(`${m}px 'AI Visual Identity Glyphs'`, "123456789ABC").then(j, () => void 0);
-            let C = "u" < typeof ResizeObserver ? null : new ResizeObserver(M);
+            let C = document.fonts;
+            null != C && C.load(`${m}px 'AI Visual Identity Glyphs'`, "123456789ABC").then(k, () => void 0);
+            let A = "u" < typeof ResizeObserver ? null : new ResizeObserver(M);
             return (
-                C?.observe(t),
+                A?.observe(t),
                 () => {
-                    (cancelAnimationFrame(x), C?.disconnect());
+                    (cancelAnimationFrame(x), A?.disconnect());
                 }
             );
         }, []),
@@ -148,11 +148,11 @@ function m(e) {
         m = r.useRef(null),
         [p, x] = r.useState(-1),
         g = r.useRef(!1),
-        v = r.useRef(t),
-        b = r.useRef({ activeIndex: t, disabled: s, onSelect: u, stopCount: n.length }),
+        b = r.useRef(t),
+        v = r.useRef({ activeIndex: t, disabled: s, onSelect: u, stopCount: n.length }),
         y = r.useRef(!1),
-        k = t >= 0 ? t : p,
-        j = t < 0 && p >= 0,
+        j = t >= 0 ? t : p,
+        k = t < 0 && p >= 0,
         M = r.useCallback((e, t, n, l) => {
             let r = c.current,
                 a = m.current;
@@ -171,7 +171,7 @@ function m(e) {
                 ("arrive" === l || "snap" === l) &&
                     (r.getBoundingClientRect(), (r.style.transitionProperty = ""), (a.style.transitionProperty = "")));
         }, []),
-        A = r.useCallback(
+        C = r.useCallback(
             (e, t) => {
                 let n = d.current,
                     l = e >= 0 ? n?.querySelector(`[data-stop='${e}']`) : null;
@@ -179,7 +179,7 @@ function m(e) {
             },
             [M],
         );
-    function C(e) {
+    function A(e) {
         if (s) return;
         let l = "ArrowRight" === e.key ? 1 : "ArrowLeft" === e.key ? -1 : 0;
         if (0 === l) return;
@@ -190,19 +190,19 @@ function m(e) {
     }
     return (
         r.useLayoutEffect(() => {
-            let e = k >= 0,
+            let e = j >= 0,
                 l = e && g.current;
             ((g.current = e),
-                (v.current = k),
-                (b.current = { activeIndex: t, disabled: s, onSelect: u, stopCount: n.length }),
-                y.current || A(k, l ? "animate" : "arrive"));
-        }, [k, t, s, u, n.length, b, A]),
+                (b.current = j),
+                (v.current = { activeIndex: t, disabled: s, onSelect: u, stopCount: n.length }),
+                y.current || C(j, l ? "animate" : "arrive"));
+        }, [j, t, s, u, n.length, v, C]),
         r.useEffect(() => {
             let e = d.current;
             if (null == e || "u" < typeof ResizeObserver) return;
-            let t = new ResizeObserver(() => A(v.current, "snap"));
+            let t = new ResizeObserver(() => C(b.current, "snap"));
             return (t.observe(e), () => t.disconnect());
-        }, [A]),
+        }, [C]),
         r.useEffect(() => {
             let e = d.current,
                 t = c.current;
@@ -234,7 +234,7 @@ function m(e) {
                     n.snapped !== a.index &&
                         ((n.snapped = a.index),
                         (n.snappedAt = n.at),
-                        a.index !== b.current.activeIndex && b.current.onSelect(a.index));
+                        a.index !== v.current.activeIndex && v.current.onSelect(a.index));
                     let l = n.at - n.snappedAt < 300;
                     M(
                         a.left +
@@ -250,12 +250,12 @@ function m(e) {
                 M(t, e.handleWidth, e.rowWidth, s ? "animate" : "drag");
             }
             function i(l) {
-                if (b.current.disabled || b.current.activeIndex < 0 || null == t) return;
+                if (v.current.disabled || v.current.activeIndex < 0 || null == t) return;
                 let r = (function () {
                     if (null == e || null == t) return null;
                     let n = e.getBoundingClientRect(),
                         l = [];
-                    for (let t = 0; t < b.current.stopCount; t += 1)
+                    for (let t = 0; t < v.current.stopCount; t += 1)
                         l.push(e.querySelector(`[data-stop='${t}']`)?.offsetLeft ?? 0);
                     return { rowLeft: n.left, rowWidth: n.width, handleWidth: t.offsetWidth, stops: l };
                 })();
@@ -265,7 +265,7 @@ function m(e) {
                     (n = {
                         pointerId: l.pointerId,
                         metrics: r,
-                        snapped: b.current.activeIndex,
+                        snapped: v.current.activeIndex,
                         snappedAt: l.timeStamp,
                         releasedAt: 0,
                         x: l.clientX,
@@ -288,7 +288,7 @@ function m(e) {
                 let i = r(a.metrics, l(a.metrics, e ?? a.x));
                 null != i &&
                     (M(i.left, a.metrics.handleWidth, a.metrics.rowWidth, "animate"),
-                    i.index !== b.current.activeIndex && b.current.onSelect(i.index));
+                    i.index !== v.current.activeIndex && v.current.onSelect(i.index));
             }
             function o(e) {
                 u(e.clientX);
@@ -315,7 +315,7 @@ function m(e) {
                         window.removeEventListener("blur", f));
                 }
             );
-        }, [b, y, M]),
+        }, [v, y, M]),
         (0, l.jsx)("div", {
             className: i()(h.u4, o),
             role: "group",
@@ -331,9 +331,9 @@ function m(e) {
                     }),
                     (0, l.jsx)("span", {
                         ref: c,
-                        "data-vibegrations-effort-handle": "",
+                        "data-conjure-effort-handle": "",
                         "data-effort-live": t >= 0 ? "" : void 0,
-                        className: i()(h.p$, { [h.Jb]: k < 0, [h.jz]: j, [h.al]: t >= 0 && !s }),
+                        className: i()(h.p$, { [h.Jb]: j < 0, [h.jz]: k, [h.al]: t >= 0 && !s }),
                         "aria-hidden": "true",
                     }),
                     n.map((e, n) =>
@@ -346,7 +346,7 @@ function m(e) {
                                 "aria-label": e,
                                 disabled: s,
                                 className: h.ds,
-                                onKeyDown: C,
+                                onKeyDown: A,
                                 onPointerEnter: () => x(n),
                                 onPointerLeave: () => x((e) => (e === n ? -1 : e)),
                                 onFocus: () => x(n),

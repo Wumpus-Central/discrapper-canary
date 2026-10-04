@@ -20,7 +20,7 @@ function c(t) {
             : t?.status_display_type === n.A.STATE && null != A
               ? (m = A)
               : t?.status_display_type === n.A.DETAILS && null != c && (m = c),
-        (0, o.A)(t) || (0, s.HL)(t))
+        (0, o.A)(t) || (0, s.$_)(t))
     ) {
         let t = (0, a.A)(e);
         return { text: t, tooltip: t };

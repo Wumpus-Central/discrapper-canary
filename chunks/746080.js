@@ -2,7 +2,7 @@ n.d(t, { Gr: () => o, T4: () => u, VV: () => a, aQ: () => _, jq: () => l, lx: ()
 var i,
     r,
     a =
-        (((i = {}).VIBEGRATIONS = "conjuring"),
+        (((i = {}).CONJURE = "conjuring"),
         (i.ROLE_SUBSCRIPTIONS = "role-subscriptions"),
         (i.SERVER_MONETIZATION_ONBOARDING = "server-monetization-onboarding"),
         (i.GAME_SHOP = "game-shop"),

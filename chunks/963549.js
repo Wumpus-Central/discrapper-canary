@@ -1,41 +1,41 @@
-a.d(s, { default: () => x });
-var e = a(477900);
-a(582128);
-var i = a(536637),
-    l = a.n(i),
-    n = a(189213),
-    r = a(834730),
-    d = a(58703),
-    c = a(590957),
-    u = a(248675),
-    m = a(375708),
-    o = a(637061);
+e.d(s, { default: () => x });
+var a = e(477900);
+e(582128);
+var i = e(536637),
+    l = e.n(i),
+    n = e(189213),
+    r = e(834730),
+    c = e(58703),
+    d = e(590957),
+    u = e(248675),
+    o = e(375708),
+    m = e(637061);
 function x(t) {
-    let { transitionState: s, onClose: a } = t,
-        i = (0, c.tn)("desktop");
-    return (0, e.jsx)(n.a, {
+    let { transitionState: s, onClose: e } = t,
+        i = (0, d.wc)("desktop");
+    return (0, a.jsx)(n.a, {
         transitionState: s,
-        onClose: a,
-        title: m.intl.string(u.default.x07mpp),
+        onClose: e,
+        title: o.intl.string(u.default.bTBUeX),
         actions: [],
-        children: (0, e.jsx)("ol", {
-            className: o.V,
+        children: (0, a.jsx)("ol", {
+            className: m.V,
             children: i.map((t) =>
-                (0, e.jsxs)(
+                (0, a.jsxs)(
                     "li",
                     {
-                        className: o.S3,
+                        className: m.S3,
                         children: [
-                            (0, e.jsxs)(r.E, {
+                            (0, a.jsxs)(r.E, {
                                 variant: "text-xs/medium",
                                 color: "text-muted",
-                                className: o.VO,
+                                className: m.VO,
                                 children: [
-                                    (0, d.i$)(l()(t.date, "YYYY-MM-DD"), "LL"),
-                                    (0, c.MZ)(t) ? ` \xb7 ${m.intl.string(u.default.vvxuUI)}` : null,
+                                    (0, c.i$)(l()(t.date, "YYYY-MM-DD"), "LL"),
+                                    (0, d.t9)(t) ? ` \xb7 ${o.intl.string(u.default.cW5XHD)}` : null,
                                 ],
                             }),
-                            (0, e.jsx)(r.E, { variant: "text-sm/normal", color: "text-subtle", children: t.summary }),
+                            (0, a.jsx)(r.E, { variant: "text-sm/normal", color: "text-subtle", children: t.summary }),
                         ],
                     },
                     `${t.date}-${t.summary}`,

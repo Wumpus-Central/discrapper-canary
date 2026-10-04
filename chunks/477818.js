@@ -1,22 +1,22 @@
 n.d(t, {
+    BD: () => E,
     CW: () => P,
-    Eo: () => E,
-    GG: () => V,
-    HV: () => U,
-    I$: () => L,
+    GG: () => H,
+    HV: () => F,
+    I$: () => J,
     Is: () => m,
-    K: () => D,
+    K: () => j,
     M7: () => M,
     Ru: () => k,
     U1: () => O,
     Zq: () => W,
-    b8: () => S,
-    dm: () => B,
-    gA: () => C,
-    hF: () => T,
+    b8: () => R,
+    dm: () => D,
+    gA: () => N,
+    hF: () => y,
     oB: () => x,
-    tZ: () => G,
-    xx: () => j,
+    tZ: () => L,
+    xx: () => U,
 });
 var i = n(636537),
     r = n(499979),
@@ -33,9 +33,9 @@ var i = n(636537),
     g = n(652215),
     _ = n(790782);
 function m(e, t, n) {
-    (0, c.Z0)(e, {
+    (0, c.Hy)(e, {
         location: "publish",
-        code: c.xA.PUBLISH_FAILED,
+        code: c.xf.PUBLISH_FAILED,
         message: `publish${n ? "-preview" : ""} failed`,
         details: t,
         isPreview: n,
@@ -48,32 +48,32 @@ function E(e) {
     let t = p.Ay.getProject(e);
     null != t && (w(t.application_id), w(t.preview_application_id ?? null));
 }
-let I = null,
-    A = null;
-async function T(e) {
+let A = null,
+    v = null;
+async function y(e) {
     let t = e ?? null;
     if (p.Ay.getProjectsFetchState()?.type === "loading") {
-        null != t && t !== I && (A = t);
+        null != t && t !== A && (v = t);
         return;
     }
-    ((I = t), l.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_START", guildId: t }));
+    ((A = t), l.h.dispatch({ type: "CONJURE_PROJECTS_FETCH_START", guildId: t }));
     try {
         let { body: n } = await i.Bo.get({
-            url: g.Rsh.VIBEGRATIONS_PROJECTS,
+            url: g.Rsh.CONJURE_PROJECTS,
             query: null != e ? { guild_id: e } : void 0,
             rejectWithError: !0,
         });
-        (l.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_SUCCESS", projects: n, guildId: t }), y());
+        (l.h.dispatch({ type: "CONJURE_PROJECTS_FETCH_SUCCESS", projects: n, guildId: t }), C());
     } catch {
-        l.h.dispatch({ type: "VIBEGRATIONS_PROJECTS_FETCH_FAIL", guildId: t });
+        l.h.dispatch({ type: "CONJURE_PROJECTS_FETCH_FAIL", guildId: t });
     }
-    let n = A;
-    ((A = null), null != n && n !== t && T(n));
+    let n = v;
+    ((v = null), null != n && n !== t && y(n));
 }
-let v = !1;
-async function y() {
-    if (!v) {
-        for (let e of ((v = !0), s.Ay.getResourceIds(_.P.CONJURING_PROJECT)))
+let T = !1;
+async function C() {
+    if (!T) {
+        for (let e of ((T = !0), s.Ay.getResourceIds(_.P.CONJURING_PROJECT)))
             if (null == p.Ay.getProject(e)) {
                 if (0 === s.Ay.getMentionCount(e, _.P.CONJURING_PROJECT)) {
                     b(e);
@@ -90,27 +90,27 @@ async function y() {
     }
 }
 function b(e) {
-    l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_SUCCESS", projectId: e });
+    l.h.dispatch({ type: "CONJURE_PROJECT_DELETE_SUCCESS", projectId: e });
 }
-let R = null;
-async function S() {
+let I = null;
+async function R() {
     let e = u.default.getCurrentUser()?.id ?? null;
-    if (null == e || R === e || p.Ay.hasFetchedProjectLimit()) return;
-    R = e;
+    if (null == e || I === e || p.Ay.hasFetchedProjectLimit()) return;
+    I = e;
     let t = null;
     try {
-        let { body: e } = await i.Bo.get({ url: g.Rsh.VIBEGRATIONS_PROJECT_LIMIT, rejectWithError: !0 });
+        let { body: e } = await i.Bo.get({ url: g.Rsh.CONJURE_PROJECT_LIMIT, rejectWithError: !0 });
         t = e.max_projects;
     } catch {}
-    (R === e && (R = null),
+    (I === e && (I = null),
         u.default.getCurrentUser()?.id === e &&
-            l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_LIMIT_FETCH_SETTLE", maxProjects: t }));
+            l.h.dispatch({ type: "CONJURE_PROJECT_LIMIT_FETCH_SETTLE", maxProjects: t }));
 }
 async function O(e, t) {
-    let n = await i.Bo.get({ url: g.Rsh.VIBEGRATIONS_PROJECT(e), rejectWithError: !1, signal: t });
+    let n = await i.Bo.get({ url: g.Rsh.CONJURE_PROJECT(e), rejectWithError: !1, signal: t });
     if (t?.aborted !== !0 && n.ok) {
         var r;
-        (l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: n.body.project }),
+        (l.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: n.body.project }),
             (r = {
                 bot_permissions_changed: n.body.bot_permissions_changed,
                 integration_installed: n.body.integration_installed,
@@ -118,40 +118,36 @@ async function O(e, t) {
                 has_activity: n.body.has_activity,
                 owner_authorization_revoked: n.body.owner_authorization_revoked,
             }),
-            l.h.dispatch({
-                type: "VIBEGRATIONS_PROJECT_INTEGRATION_STATUS_UPDATE",
-                projectId: e,
-                integrationStatus: r,
-            }));
+            l.h.dispatch({ type: "CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE", projectId: e, integrationStatus: r }));
     }
     return n;
 }
-async function C(e) {
+async function N(e) {
     let t;
     try {
         let { body: n } = await i.Bo.post({
-            url: g.Rsh.VIBEGRATIONS_PROJECTS,
-            body: { flags: d.A2.PUBLIC, ...e },
+            url: g.Rsh.CONJURE_PROJECTS,
+            body: { flags: d.Zh.PUBLIC, ...e },
             rejectWithError: !1,
         });
         t = n;
     } catch (e) {
-        throw new f.uQ((0, f.hj)(e), (0, f.$k)(e));
+        throw new f.DS((0, f.hj)(e), (0, f.$k)(e));
     }
-    return (l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_CREATE_SUCCESS", project: t }), t.id);
+    return (l.h.dispatch({ type: "CONJURE_PROJECT_CREATE_SUCCESS", project: t }), t.id);
 }
-async function N(e, t) {
-    let n = await i.Bo.patch({ url: g.Rsh.VIBEGRATIONS_PROJECT(e), body: t, rejectWithError: !1 });
-    return (n.ok && l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_UPDATE_SUCCESS", project: n.body }), n);
+async function S(e, t) {
+    let n = await i.Bo.patch({ url: g.Rsh.CONJURE_PROJECT(e), body: t, rejectWithError: !1 });
+    return (n.ok && l.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: n.body }), n);
 }
 function x(e, t) {
-    return N(e, { name: t });
+    return S(e, { name: t });
 }
 function P(e, t) {
-    return N(e, t);
+    return S(e, t);
 }
 async function k(e, t) {
-    let n = await N(e, { icon: t });
+    let n = await S(e, { icon: t });
     if (n.ok) {
         let e = n.body.preview_application_id;
         if (null != e)
@@ -162,48 +158,44 @@ async function k(e, t) {
     return n;
 }
 function M(e, t) {
-    return N(e, t);
+    return S(e, t);
 }
-async function j(e) {
+async function U(e) {
     let t;
-    l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_START", projectId: e });
+    l.h.dispatch({ type: "CONJURE_PROJECT_DELETE_START", projectId: e });
     try {
-        t = await i.Bo.del({ url: g.Rsh.VIBEGRATIONS_PROJECT(e), rejectWithError: !1 });
+        t = await i.Bo.del({ url: g.Rsh.CONJURE_PROJECT(e), rejectWithError: !1 });
     } catch (t) {
-        throw (l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_DELETE_FAIL", projectId: e }), t);
+        throw (l.h.dispatch({ type: "CONJURE_PROJECT_DELETE_FAIL", projectId: e }), t);
     }
     return (
-        l.h.dispatch({
-            type: t.ok ? "VIBEGRATIONS_PROJECT_DELETE_SUCCESS" : "VIBEGRATIONS_PROJECT_DELETE_FAIL",
-            projectId: e,
-        }),
-        t
+        l.h.dispatch({ type: t.ok ? "CONJURE_PROJECT_DELETE_SUCCESS" : "CONJURE_PROJECT_DELETE_FAIL", projectId: e }), t
     );
 }
-function D(e, t) {
-    j(e).then((e) => {
+function j(e, t) {
+    U(e).then((e) => {
         e.ok || t();
     }, t);
 }
-function B(e, t) {
-    l.h.dispatch({ type: "VIBEGRATIONS_PROJECT_SELECT", guildId: e, projectId: t });
+function D(e, t) {
+    l.h.dispatch({ type: "CONJURE_PROJECT_SELECT", guildId: e, projectId: t });
 }
-async function G(e, t) {
+async function L(e, t) {
     let { isPreview: n } = t,
         { bot_permissions_changed: i, integration_installed: r, project: l } = (await O(e)).body,
         s = n ? l.preview_application_id : l.application_id;
     (null != s && (await (0, o.TA)(s), await (0, a.un)(s, { force: !0 }).catch(() => {}), (n && (!r || i)) || w(s)),
-        (0, c.qs)(e, { isPreview: n }));
+        (0, c.w2)(e, { isPreview: n }));
 }
-function L(e, t) {
-    l.h.dispatch({ type: "VIBEGRATIONS_COMPOSER_DRAFT_SET", projectId: e, draft: t });
+function J(e, t) {
+    l.h.dispatch({ type: "CONJURE_COMPOSER_DRAFT_SET", projectId: e, draft: t });
 }
 function W(e) {
-    l.h.dispatch({ type: "VIBEGRATIONS_CHAT_SIDEBAR_WIDTH_SET", width: e });
+    l.h.dispatch({ type: "CONJURE_CHAT_SIDEBAR_WIDTH_SET", width: e });
 }
-function U(e) {
-    l.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_APPLICATION_SET", applicationId: e });
+function F(e) {
+    l.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", applicationId: e });
 }
-function V(e) {
-    l.h.dispatch({ type: "VIBEGRATIONS_BUILDER_PREVIEW_MOBILE_SET", enabled: e });
+function H(e) {
+    l.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_MOBILE_SET", enabled: e });
 }

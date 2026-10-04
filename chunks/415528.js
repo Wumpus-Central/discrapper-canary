@@ -19,7 +19,7 @@ function p(e) {
             () =>
                 (function (e, t, n) {
                     let i = new Map();
-                    for (let l of [...e, ...t]) (0, c.X0)(l, n) && i.set(l.application_id, l);
+                    for (let l of [...e, ...t]) (0, c.Ot)(l, n) && i.set(l.application_id, l);
                     return [...i.values()].sort((e, t) => e.name.localeCompare(t.name));
                 })(t, n, e),
             [t, n, e],

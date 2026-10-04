@@ -6,7 +6,7 @@ var i = n(734057),
 function l(e) {
     let { channelId: t } = e;
     switch (t) {
-        case s.VV.VIBEGRATIONS:
+        case s.VV.CONJURE:
         case s.VV.CHANNEL_BROWSER:
         case s.VV.GUILD_HOME:
         case s.VV.GUILD_SHOP:

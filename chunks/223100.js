@@ -1,4 +1,4 @@
-i.d(e, { default: () => v });
+i.d(e, { default: () => b });
 var n = i(477900),
     l = i(582128),
     s = i(314116),
@@ -14,7 +14,7 @@ var n = i(477900),
     x = i(957565),
     f = i(597331);
 let p = { setTimeout: (t, e) => setTimeout(t, e), clearTimeout: (t) => clearTimeout(t), now: () => Date.now() };
-class j {
+class C {
     fetchConnection;
     onChange;
     timers;
@@ -65,13 +65,13 @@ class j {
         ((this.state = t), this.disposed || this.onChange(t));
     }
 }
-var C = i(248675),
-    T = i(375708),
-    b = i(365673);
-function v(t) {
+var j = i(248675),
+    v = i(375708),
+    T = i(365673);
+function b(t) {
     let { projectId: e, transitionState: i, onClose: p } = t,
         {
-            connection: v,
+            connection: b,
             loading: k,
             failed: w,
             mint: y,
@@ -79,7 +79,7 @@ function v(t) {
             let [e, i] = l.useState({ connection: null, loading: !0, failed: !1 }),
                 n = l.useRef(null);
             l.useEffect(() => {
-                let e = new j((e) => (0, f.y_)(t, { regenerate: e }), i);
+                let e = new C((e) => (0, f.y_)(t, { regenerate: e }), i);
                 return (
                     (n.current = e),
                     e.mint(!1).catch(() => {}),
@@ -93,39 +93,39 @@ function v(t) {
             }, []);
             return { ...e, mint: s };
         })(e),
-        [z, S] = l.useState(null),
-        N = null != v && z === v.url,
-        B = l.useCallback(() => {
-            if (null == v) return;
-            let { url: t } = v;
-            (0, x.C)(t, () => S(t));
-        }, [v]),
-        E = l.useCallback(() => {
+        [S, B] = l.useState(null),
+        N = null != b && S === b.url,
+        z = l.useCallback(() => {
+            if (null == b) return;
+            let { url: t } = b;
+            (0, x.C)(t, () => B(t));
+        }, [b]),
+        A = l.useCallback(() => {
             (0, s.A)({
-                title: T.intl.string(C.default.jKNAzJ),
-                subtitle: T.intl.string(C.default.oWzC0r),
-                confirmText: T.intl.string(C.default.dZxnCn),
+                title: v.intl.string(j.default.avUWNd),
+                subtitle: v.intl.string(j.default.YSh8bL),
+                confirmText: v.intl.string(j.default.Ise9RO),
                 variant: "critical",
                 onConfirm: () => {
                     y(!0);
                 },
             });
         }, [y]),
-        A = T.intl.string(C.default["xMOS+Z"]);
+        E = v.intl.string(j.default["7937yd"]);
     return (0, n.jsx)(a.d, {
         transitionState: i,
         onClose: p,
-        "aria-label": A,
+        "aria-label": E,
         size: "md",
         children: (0, n.jsxs)(r.B, {
             gap: 24,
             padding: { top: 16, right: 24, bottom: 8, left: 24 },
-            className: b.GV,
+            className: T.GV,
             children: [
                 (0, n.jsx)("div", {
-                    className: b.b,
+                    className: T.b,
                     children: (0, n.jsx)(c.K, {
-                        "aria-label": T.intl.string(T.t.cpT0Cq),
+                        "aria-label": v.intl.string(v.t.cpT0Cq),
                         icon: o.P,
                         onClick: p,
                         variant: "secondary",
@@ -135,15 +135,15 @@ function v(t) {
                 (0, n.jsxs)(r.B, {
                     gap: 8,
                     children: [
-                        (0, n.jsx)(d.D, { variant: "heading-lg/semibold", color: "text-strong", children: A }),
+                        (0, n.jsx)(d.D, { variant: "heading-lg/semibold", color: "text-strong", children: E }),
                         (0, n.jsx)(u.E, {
                             variant: "text-sm/normal",
                             color: "text-subtle",
-                            children: T.intl.string(C.default["1Ew5/j"]),
+                            children: v.intl.string(j.default.WltAg2),
                         }),
                     ],
                 }),
-                null != v
+                null != b
                     ? (0, n.jsxs)(r.B, {
                           gap: 8,
                           children: [
@@ -151,13 +151,13 @@ function v(t) {
                                   direction: "horizontal",
                                   align: "end",
                                   gap: 8,
-                                  className: b._T,
+                                  className: T._T,
                                   children: [
                                       (0, n.jsx)("div", {
-                                          className: b.UQ,
+                                          className: T.UQ,
                                           children: (0, n.jsx)(h.k, {
-                                              label: T.intl.string(C.default.DRgXyU),
-                                              value: v.url,
+                                              label: v.intl.string(j.default.UCwV3L),
+                                              value: b.url,
                                               readOnly: !0,
                                               fullWidth: !0,
                                               onFocus: (t) => t.currentTarget.select(),
@@ -166,19 +166,19 @@ function v(t) {
                                       (0, n.jsxs)(m.e, {
                                           size: "md",
                                           wrap: !1,
-                                          className: b.CA,
+                                          className: T.CA,
                                           children: [
                                               (0, n.jsx)(g.$, {
                                                   variant: "primary",
                                                   minWidth: 60,
-                                                  text: T.intl.string(N ? T.t.t5VZ88 : T.t.OpuAlK),
-                                                  onClick: B,
+                                                  text: v.intl.string(N ? v.t.t5VZ88 : v.t.OpuAlK),
+                                                  onClick: z,
                                               }),
                                               (0, n.jsx)(g.$, {
                                                   variant: "secondary",
                                                   minWidth: 60,
-                                                  text: T.intl.string(C.default.bsDgiq),
-                                                  onClick: E,
+                                                  text: v.intl.string(j.default.FBKOBq),
+                                                  onClick: A,
                                                   loading: k,
                                               }),
                                           ],
@@ -188,7 +188,7 @@ function v(t) {
                               (0, n.jsx)(u.E, {
                                   variant: "text-xs/normal",
                                   color: "text-muted",
-                                  children: T.intl.format(C.default.lTtxBT, { time: (0, f.ho)(v) }),
+                                  children: v.intl.format(j.default.EQ8k1i, { time: (0, f.ho)(b) }),
                               }),
                           ],
                       })
@@ -197,7 +197,7 @@ function v(t) {
                             variant: "text-sm/normal",
                             color: "text-muted",
                             role: "status",
-                            children: T.intl.string(C.default.c3R8Tx),
+                            children: v.intl.string(j.default.Q6xQTM),
                         })
                       : null,
                 w
@@ -211,12 +211,12 @@ function v(t) {
                                   variant: "text-xs/normal",
                                   color: "text-feedback-critical",
                                   role: "alert",
-                                  children: T.intl.string(C.default.QJKw6N),
+                                  children: v.intl.string(j.default.IAF2eN),
                               }),
                               (0, n.jsx)(g.$, {
                                   variant: "secondary",
                                   size: "sm",
-                                  text: T.intl.string(C.default["7xdKYd"]),
+                                  text: v.intl.string(j.default["eHMX/v"]),
                                   onClick: () => {
                                       y(!1);
                                   },

@@ -6,7 +6,7 @@ var i = n(17928),
     r = n(652215);
 function o(e) {
     let t = (0, i.bG)([a.A], () => a.A.getGuild(e?.guild_id)),
-        n = (0, l.f)({ guildId: e?.guild_id, location: "VoiceChannelApp" });
+        n = (0, l.m0)({ guildId: e?.guild_id, location: "VoiceChannelApp" });
     return (
         null != e && e.type === r.rbe.GUILD_VOICE && n && t?.features.has(r.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) !== !0
     );

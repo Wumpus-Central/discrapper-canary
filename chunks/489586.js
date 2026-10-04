@@ -1,4 +1,4 @@
-n.d(t, { $k: () => s, Xd: () => u, hj: () => o, uQ: () => a });
+n.d(t, { $k: () => s, DS: () => a, hj: () => o, mG: () => u });
 var i = n(652215),
     r = n(248675),
     l = n(375708);
@@ -27,10 +27,10 @@ function s(e) {
 function u(e) {
     switch (e instanceof a ? e.reason : "unknown") {
         case "project_limit":
-            return l.intl.string(r.default.Asusmn);
+            return l.intl.string(r.default["lh+h/p"]);
         case "rate_limited":
-            return l.intl.string(r.default.DT6qly);
+            return l.intl.string(r.default.zBENJU);
         default:
-            return l.intl.string(r.default.KKkp5Y);
+            return l.intl.string(r.default["9m86fn"]);
     }
 }

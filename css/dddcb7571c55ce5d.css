@@ -432,10 +432,10 @@
 }
 
 .full-motion .composerHintShine_ee9b5a {
-    animation: vibegrations-composer-hint-shine_ee9b5a 4s linear infinite
+    animation: conjure-composer-hint-shine_ee9b5a 4s linear infinite
 }
 
-@keyframes vibegrations-composer-hint-shine_ee9b5a {
+@keyframes conjure-composer-hint-shine_ee9b5a {
     0% {
         -webkit-mask-position: 100% 0;
         mask-position: 100% 0
@@ -516,14 +516,14 @@
 }
 
 .full-motion .composerTabPinned_ee9b5a[data-wipe="0"] {
-    animation-name: vibegrations-cap-wipe-a_ee9b5a
+    animation-name: conjure-cap-wipe-a_ee9b5a
 }
 
 .full-motion .composerTabPinned_ee9b5a[data-wipe="1"] {
-    animation-name: vibegrations-cap-wipe-b_ee9b5a
+    animation-name: conjure-cap-wipe-b_ee9b5a
 }
 
-@keyframes vibegrations-cap-wipe-a_ee9b5a {
+@keyframes conjure-cap-wipe-a_ee9b5a {
     0% {
         -webkit-mask-position: 100% 0;
         mask-position: 100% 0
@@ -535,7 +535,7 @@
     }
 }
 
-@keyframes vibegrations-cap-wipe-b_ee9b5a {
+@keyframes conjure-cap-wipe-b_ee9b5a {
     0% {
         -webkit-mask-position: 100% 0;
         mask-position: 100% 0
@@ -799,8 +799,8 @@
     top: calc(4px + var(--custom-message-reply-message-preview-line-height) + var(--space-4))
 }
 
-.full-motion .conjurMessage__62269[data-vibegrations-revealing=true] .messageBody__62269:after {
-    animation: vibegrations-reveal-frontier__62269 1.1s ease-in-out infinite;
+.full-motion .conjurMessage__62269[data-conjure-revealing=true] .messageBody__62269:after {
+    animation: conjure-reveal-frontier__62269 1.1s ease-in-out infinite;
     background: linear-gradient(90deg, var(--text-default) 0, transparent 100%);
     border-radius: var(--radius-xs);
     content: "";
@@ -811,7 +811,7 @@
     width: .32em
 }
 
-@keyframes vibegrations-reveal-frontier__62269 {
+@keyframes conjure-reveal-frontier__62269 {
 
     0%,
     to {
@@ -823,7 +823,7 @@
     }
 }
 
-.conjurMessage__62269[data-vibegrations-revealing=true] .messageBody__62269:has(>:is(ul, ol, pre, blockquote, table, h1, h2, h3):last-child):after {
+.conjurMessage__62269[data-conjure-revealing=true] .messageBody__62269:has(>:is(ul, ol, pre, blockquote, table, h1, h2, h3):last-child):after {
     content: none
 }
 
@@ -905,4 +905,4 @@
     animation: reminder-leave__7ac78 .18s ease-in
 }
 
-/*# sourceMappingURL=62fb8645a379bfa0.css.map*/
+/*# sourceMappingURL=dddcb7571c55ce5d.css.map*/

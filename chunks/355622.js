@@ -323,7 +323,7 @@ let c = {
             showCharacterCount: !0,
             layout: 1,
         },
-        VIBEGRATIONS_PATCH_NOTES: {
+        CONJURE_PATCH_NOTES: {
             analyticsName: "vibegrations_patch_notes_input",
             drafts: { type: s.C.ChannelMessage },
             emojis: { button: !0 },

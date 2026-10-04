@@ -1931,7 +1931,7 @@ class nw extends i.PureComponent {
             m = e.isForumLikeChannel(),
             x = m && e.availableTags?.every((e) => e.moderated),
             p = ee.default.getCurrentUser()?.isStaff() === !0,
-            f = (0, t1.tv)(e.type, e.topic_),
+            f = (0, t1.sq)(e.type, e.topic_),
             C =
                 tA.IY.has(e.type) && !f
                     ? (0, l.jsx)(t_.D, {

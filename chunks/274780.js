@@ -774,10 +774,10 @@ function nD(e) {
                 a,
                 o,
                 d,
-                c = (0, nj.Bp)(e, "AppChannelHeaderOverflowMenu"),
+                c = (0, nj.w$)(e, "AppChannelHeaderOverflowMenu"),
                 u =
                     ((t = c ? e : null),
-                    (r = null != (i = (0, nj.vv)(t))),
+                    (r = null != (i = (0, nj.us)(t))),
                     (a = t?.guild_id ?? null),
                     (o = (0, m.bG)(
                         [nC.A, nI.A],
@@ -799,7 +799,7 @@ function nD(e) {
                             if (null == e || (0, n_.PV)(e)) return e;
                             let n = null != a ? nE.default.castGuildIdAsEveryoneGuildRoleId(a) : null,
                                 t = (e.collaborator_role_ids ?? []).some((e) => e === n || d.includes(e));
-                            return e.guild_id === a && (0, ny.XE)(e) && (o || t) ? e : null;
+                            return e.guild_id === a && (0, ny.Hn)(e) && (o || t) ? e : null;
                         },
                         [i, o, d, a],
                     )),
@@ -834,11 +834,11 @@ function nD(e) {
                 (0, l.jsx)(
                     ns.Dr,
                     {
-                        id: "vibegrations-edit",
+                        id: "conjure-edit",
                         icon: nd.PencilIcon,
                         leadingAccessory: { type: "icon", icon: nd.PencilIcon },
-                        label: z.intl.string(nO.default.NXfIfj),
-                        action: () => (0, nx.pX)(eo.BVt.CHANNEL(A, nS.VV.VIBEGRATIONS, u.id)),
+                        label: z.intl.string(nO.default.jMMrDM),
+                        action: () => (0, nx.pX)(eo.BVt.CHANNEL(A, nS.VV.CONJURE, u.id)),
                     },
                     "edit",
                 ),
@@ -849,10 +849,10 @@ function nD(e) {
                         (0, l.jsx)(
                             ns.Dr,
                             {
-                                id: "vibegrations-settings",
+                                id: "conjure-settings",
                                 icon: nc.SettingsIcon,
                                 leadingAccessory: { type: "icon", icon: nc.SettingsIcon },
-                                label: z.intl.string(nO.default.cWmjzs),
+                                label: z.intl.string(nO.default.I2XSKe),
                                 action: () => (0, nT.A)(u.id, { guildId: A, initialTab: "app" }),
                             },
                             "settings",
@@ -863,10 +863,10 @@ function nD(e) {
                         (0, l.jsx)(
                             ns.Dr,
                             {
-                                id: "vibegrations-remix",
+                                id: "conjure-remix",
                                 icon: nu.CopyIcon,
                                 leadingAccessory: { type: "icon", icon: nu.CopyIcon },
-                                label: z.intl.string(nO.default["V+azw/"]),
+                                label: z.intl.string(nO.default["9wQTdG"]),
                                 action: () => (0, nN.A)(u, A),
                             },
                             "remix",
@@ -877,10 +877,10 @@ function nD(e) {
                         (0, l.jsx)(
                             ns.Dr,
                             {
-                                id: "vibegrations-close",
+                                id: "conjure-close",
                                 icon: nh.DoorExitIcon,
                                 leadingAccessory: { type: "icon", icon: nh.DoorExitIcon },
-                                label: z.intl.string(nO.default.Ea0Wrr),
+                                label: z.intl.string(nO.default["/TlGcK"]),
                                 action: x,
                             },
                             "close",

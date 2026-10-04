@@ -79,7 +79,7 @@ function j(t) {
 function P(t, e) {
     let { largeImage: n, smallImage: l } = b(t, e);
     return (function (t) {
-        let { activity: e, application: n, largeImage: l, smallImage: i, conjuringImage: r } = t;
+        let { activity: e, application: n, largeImage: l, smallImage: i, conjureImage: r } = t;
         if (null != l) return { largeImage: l, smallImage: i };
         if ((0, I.Cy)(e)) {
             let t = (0, I.UW)(e),
@@ -99,7 +99,7 @@ function P(t, e) {
                 largeImage: { src: a.A.get(S.fg2.PLAYSTATION).icon.lightPNG, alt: y.intl.string(y.t.fFl4jo) },
                 smallImage: void 0,
             };
-        if ((0, d.HL)(e)) return { largeImage: { src: r, alt: e?.name }, smallImage: void 0 };
+        if ((0, d.$_)(e)) return { largeImage: { src: r, alt: e?.name }, smallImage: void 0 };
         let c = O(n);
         return null != c ? { largeImage: c, smallImage: i } : { largeImage: i, smallImage: void 0 };
     })({
@@ -107,7 +107,7 @@ function P(t, e) {
         application: e,
         largeImage: n,
         smallImage: l,
-        conjuringImage: (0, A.M)((0, f.Ay)()) ? x.dark : x.light,
+        conjureImage: (0, A.M)((0, f.Ay)()) ? x.dark : x.light,
     });
 }
 function R(t, e, n) {

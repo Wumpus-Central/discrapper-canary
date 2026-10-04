@@ -29,7 +29,7 @@ function N(t) {
                 n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
             return e
                 ? i.Q
-                : (0, A.A)(t) || (0, f.HL)(t)
+                : (0, A.A)(t) || (0, f.$_)(t)
                   ? n
                       ? a.GameControllerIcon
                       : r.k

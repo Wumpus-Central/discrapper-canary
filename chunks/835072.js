@@ -17,7 +17,7 @@ function T(t) {
     let l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     return (0, d.Cy)(t)
         ? a.q
-        : (0, u.A)(t) || (0, p.HL)(t)
+        : (0, u.A)(t) || (0, p.$_)(t)
           ? l
               ? i.GameControllerIcon
               : o.k

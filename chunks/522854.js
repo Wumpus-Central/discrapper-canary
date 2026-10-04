@@ -8,7 +8,7 @@ class o extends r.Ay.Store {
     }
 }
 let a = new o(i.h, {
-    VIBEGRATIONS_LIVE_RELOAD_SET: function (e) {
+    CONJURE_LIVE_RELOAD_SET: function (e) {
         let { projectId: t, enabled: n, error: r, phase: i, step: o } = e;
         s.set(t, { enabled: n, error: r, phase: i, step: o });
     },

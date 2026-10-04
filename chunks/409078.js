@@ -8,31 +8,31 @@ var a = l(477900),
     c = l(957565),
     u = l(597331),
     o = l(248675),
-    m = l(375708),
-    x = l(219490);
+    x = l(375708),
+    m = l(219490);
 function h(e) {
-    let { projectId: t, request: l, transitionState: h, onClose: p } = e,
-        [f, v] = n.useState({}),
+    let { projectId: t, request: l, transitionState: h, onClose: f } = e,
+        [p, v] = n.useState({}),
         [b, g] = n.useState(!1),
         [j, C] = n.useState(!1),
-        [y, k] = n.useState(null),
+        [k, y] = n.useState(null),
         E = n.useCallback((e) => {
-            (0, c.C)(e, () => k(e));
+            (0, c.C)(e, () => y(e));
         }, []),
         S = n.useCallback((e, t) => {
             null != t && (C(!1), v((l) => ({ ...l, [t]: e })));
         }, []),
-        w = l.fields.map((e) => e.name).filter((e) => "" !== (f[e] ?? "").trim()),
+        w = l.fields.map((e) => e.name).filter((e) => "" !== (p[e] ?? "").trim()),
         N = w.length > 0,
         _ = w.length < l.fields.length,
-        A = n.useCallback(
+        M = n.useCallback(
             async (e) => {
                 if ((e.preventDefault(), N && !b)) {
                     (g(!0), C(!1));
                     try {
-                        (await (0, u.$S)(t, { secrets: Object.fromEntries(w.map((e) => [e, f[e].trim()])) }),
-                            (0, u.dv)(t, m.intl.string(_ ? o.default.pu8e3p : o.default.lM98yZ)),
-                            await p());
+                        (await (0, u.$S)(t, { secrets: Object.fromEntries(w.map((e) => [e, p[e].trim()])) }),
+                            (0, u.dv)(t, x.intl.string(_ ? o.default.sMQt5O : o.default.UGqnoV)),
+                            await f());
                     } catch {
                         C(!0);
                     } finally {
@@ -40,27 +40,21 @@ function h(e) {
                     }
                 }
             },
-            [N, w, _, p, t, b, f],
+            [N, w, _, f, t, b, p],
         );
     return (0, a.jsx)("form", {
-        onSubmit: A,
+        onSubmit: M,
         children: (0, a.jsx)(s.a, {
             transitionState: h,
-            onClose: p,
-            title: m.intl.string(o.default.ACvhVC),
+            onClose: f,
+            title: x.intl.string(o.default.TuMGZp),
             size: "md",
             actions: [
-                { text: m.intl.string(m.t["ETE/oC"]), variant: "secondary", onClick: p, disabled: b },
-                {
-                    text: m.intl.string(o.default["8SWZaW"]),
-                    variant: "primary",
-                    type: "submit",
-                    loading: b,
-                    disabled: !N,
-                },
+                { text: x.intl.string(x.t["ETE/oC"]), variant: "secondary", onClick: f, disabled: b },
+                { text: x.intl.string(o.default.DUdtms), variant: "primary", type: "submit", loading: b, disabled: !N },
             ],
             children: (0, a.jsxs)("div", {
-                className: x._I,
+                className: m._I,
                 children: [
                     null != l.note && "" !== l.note
                         ? (0, a.jsx)(i.E, {
@@ -74,27 +68,27 @@ function h(e) {
                         variant: "text-xs/normal",
                         color: "text-muted",
                         selectable: !0,
-                        children: m.intl.string(o.default.p0Ay4J),
+                        children: x.intl.string(o.default.jgDBJZ),
                     }),
                     l.fields.length > 1
                         ? (0, a.jsx)(i.E, {
                               variant: "text-xs/normal",
                               color: "text-muted",
                               selectable: !0,
-                              children: m.intl.string(o.default.LpnmXm),
+                              children: x.intl.string(o.default["La+pe4"]),
                           })
                         : null,
                     (l.copy_values ?? []).length > 0
                         ? (0, a.jsx)("ul", {
-                              className: x.vU,
+                              className: m.vU,
                               children: (l.copy_values ?? []).map((e) =>
                                   (0, a.jsxs)(
                                       "li",
                                       {
-                                          className: x.Jq,
+                                          className: m.Jq,
                                           children: [
                                               (0, a.jsxs)("div", {
-                                                  className: x.ll,
+                                                  className: m.ll,
                                                   children: [
                                                       (0, a.jsx)(i.E, {
                                                           variant: "text-xs/semibold",
@@ -103,7 +97,7 @@ function h(e) {
                                                           children: e.label,
                                                       }),
                                                       (0, a.jsx)("span", {
-                                                          className: x.Ml,
+                                                          className: m.Ml,
                                                           children: (0, a.jsx)(i.E, {
                                                               variant: "text-xs/normal",
                                                               color: "text-default",
@@ -116,7 +110,7 @@ function h(e) {
                                               (0, a.jsx)(r.$, {
                                                   variant: "secondary",
                                                   size: "sm",
-                                                  text: m.intl.string(y === e.value ? m.t.t5VZ88 : m.t.OpuAlK),
+                                                  text: x.intl.string(k === e.value ? x.t.t5VZ88 : x.t.OpuAlK),
                                                   onClick: () => E(e.value),
                                               }),
                                           ],
@@ -135,7 +129,7 @@ function h(e) {
                                 name: e.name,
                                 type: "password",
                                 autoComplete: "off",
-                                value: f[e.name] ?? "",
+                                value: p[e.name] ?? "",
                                 onChange: S,
                                 disabled: b,
                                 fullWidth: !0,
@@ -148,7 +142,7 @@ function h(e) {
                               variant: "text-xs/normal",
                               color: "text-feedback-critical",
                               role: "alert",
-                              children: m.intl.string(o.default["4nT7Lo"]),
+                              children: x.intl.string(o.default.IrMuew),
                           })
                         : null,
                 ],

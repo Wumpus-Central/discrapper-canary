@@ -52,10 +52,10 @@ function c(e, t, n) {
                           : (function (e, t) {
                                 let n = d(e),
                                     l = d(t);
-                                if (n === l) return i.intl.string(a.default.DlZ7NF);
+                                if (n === l) return i.intl.string(a.default.CADyoV);
                                 let r = new Date(l);
                                 if ((r.setDate(r.getDate() - 1), n === r.getTime()))
-                                    return i.intl.string(a.default["55bvfa"]);
+                                    return i.intl.string(a.default.mghe4b);
                                 let s = new Date(e).getFullYear() === new Date(t).getFullYear();
                                 return new Date(e).toLocaleDateString(void 0, {
                                     weekday: "long",
@@ -77,38 +77,38 @@ function m(e) {
                 .replace(/\s+/g, " ")
                 .trim();
             if ("" === t || "Deploy" === t) {
-                let e = i.intl.string(a.default.MGFTHh);
+                let e = i.intl.string(a.default.sFC5fT);
                 return { short: e, full: e };
             }
             if (/^Restore version [0-9a-f]{7,40}$/.test(t) || "Already at this version" === t) {
-                let e = i.intl.string(a.default.zel5dv);
+                let e = i.intl.string(a.default.Vk8vB1);
                 return { short: e, full: e };
             }
             return { short: t.length > 90 ? `${t.slice(0, 89).trimEnd()}\u{2026}` : t, full: t };
         })(e);
     return t
         ? {
-              short: i.intl.formatToPlainString(a.default["Hz+Leq"], { title: n.short }),
-              full: i.intl.formatToPlainString(a.default["Hz+Leq"], { title: n.full }),
+              short: i.intl.formatToPlainString(a.default.Z4n6LX, { title: n.short }),
+              full: i.intl.formatToPlainString(a.default.Z4n6LX, { title: n.full }),
           }
         : n;
 }
 function f(e) {
-    return i.intl.string("preview" === e ? a.default.CsjtPn : a.default["2tmkJC"]);
+    return i.intl.string("preview" === e ? a.default.Ebk40C : a.default.S65Rv3);
 }
 function h(e) {
     switch (e.origin) {
         case "auto_deploy":
-            if ("stable" === e.deployEnvironment) return i.intl.string(a.default.CiAY6f);
-            if ("preview" === e.deployEnvironment) return i.intl.string(a.default.XZ3EKs);
-            return i.intl.string(a.default.b245uO);
+            if ("stable" === e.deployEnvironment) return i.intl.string(a.default["4TpI2y"]);
+            if ("preview" === e.deployEnvironment) return i.intl.string(a.default.NdyxPu);
+            return i.intl.string(a.default["4JCH6A"]);
         case "undo":
-            return i.intl.string(a.default.TMiLvb);
+            return i.intl.string(a.default.VjJT5R);
         default: {
             let t = e.label.trim();
             return "" === t || "Manual restore point" === t
-                ? i.intl.string(a.default.p9RSZ2)
-                : i.intl.formatToPlainString(a.default.wIHwsk, { label: t });
+                ? i.intl.string(a.default.ObcM6b)
+                : i.intl.formatToPlainString(a.default["UKyQ+E"], { label: t });
         }
     }
 }

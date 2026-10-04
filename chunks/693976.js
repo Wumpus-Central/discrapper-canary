@@ -1,8 +1,8 @@
 n.d(t, { A: () => g });
 var r = n(477900),
     i = n(582128),
-    a = n(17928),
-    l = n(485163);
+    l = n(17928),
+    a = n(485163);
 n(321073);
 var o = n(168713);
 let s = [6, 8, 10, 12],
@@ -19,8 +19,8 @@ function d(e, t, n) {
 }
 let f = i.memo(function (e) {
     let { state: t, orientation: n = "bottom" } = e,
-        a = i.useRef(null),
         l = i.useRef(null),
+        a = i.useRef(null),
         f = i.useRef(t);
     i.useEffect(() => {
         f.current = t;
@@ -30,8 +30,8 @@ let f = i.memo(function (e) {
         m.current = n;
     }, [n]),
         i.useEffect(() => {
-            let e = l.current,
-                t = a.current;
+            let e = a.current,
+                t = l.current;
             if (null == e || null == t || window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
             let n = e.getContext("2d", { alpha: !0 });
             if (null == n) return;
@@ -42,9 +42,9 @@ let f = i.memo(function (e) {
                 i = 0,
                 o = 0,
                 g = [],
+                p = 0,
                 v = 0,
-                b = 0,
-                p = (function () {
+                b = (function () {
                     let e = [];
                     for (let t = 0; t < 3; t++)
                         e.push({
@@ -61,9 +61,9 @@ let f = i.memo(function (e) {
                 y = c.home.twink,
                 M = c.home.alpha,
                 w = s[u],
-                A = [],
-                $ = 0,
-                j = Array(8).fill(""),
+                j = [],
+                A = 0,
+                $ = Array(8).fill(""),
                 k = !1;
             function R() {
                 (!(function () {
@@ -72,7 +72,7 @@ let f = i.memo(function (e) {
                             g: n,
                             b: r,
                         } = (function () {
-                            let e = getComputedStyle(t).getPropertyValue("--custom-vibegrations-dither-fill").trim();
+                            let e = getComputedStyle(t).getPropertyValue("--custom-conjure-dither-fill").trim();
                             if ("" === e) return { r: 225, g: 240, b: 255 };
                             let n = e.split(",").map((e) => parseInt(e.trim(), 10));
                             return 3 !== n.length || n.some((e) => !Number.isFinite(e))
@@ -80,38 +80,38 @@ let f = i.memo(function (e) {
                                 : { r: n[0], g: n[1], b: n[2] };
                         })(),
                         i = (function () {
-                            let e = getComputedStyle(t).getPropertyValue("--custom-vibegrations-dither-opacity").trim();
+                            let e = getComputedStyle(t).getPropertyValue("--custom-conjure-dither-opacity").trim();
                             if ("" === e) return 0.1;
                             let n = parseFloat(e);
                             return Number.isFinite(n) ? n : 0.1;
                         })();
                     for (let t = 0; t < 8; t++) {
-                        let a = ((t + 0.5) / 8) * i;
-                        j[t] = `rgba(${e}, ${n}, ${r}, ${a})`;
+                        let l = ((t + 0.5) / 8) * i;
+                        $[t] = `rgba(${e}, ${n}, ${r}, ${l})`;
                     }
                 })(),
-                    (k = "1" === getComputedStyle(t).getPropertyValue("--custom-vibegrations-glow-mirror").trim()));
+                    (k = "1" === getComputedStyle(t).getPropertyValue("--custom-conjure-glow-mirror").trim()));
             }
             R();
-            let T = [];
-            for (let e = 0; e < 8; e++) T.push([]);
-            let F = new MutationObserver(R);
-            F.observe(document.documentElement, { attributes: !0, attributeFilter: ["class", "dir", "lang"] });
-            let N = -1;
-            function P() {
-                let e = Math.max(i, v),
-                    t = Math.max(o, b);
-                (e === v && t === b && N === w && g.length > 0) ||
-                    ((v = e),
-                    (b = t),
-                    (N = w),
+            let F = [];
+            for (let e = 0; e < 8; e++) F.push([]);
+            let N = new MutationObserver(R);
+            N.observe(document.documentElement, { attributes: !0, attributeFilter: ["class", "dir", "lang"] });
+            let P = -1;
+            function T() {
+                let e = Math.max(i, p),
+                    t = Math.max(o, v);
+                (e === p && t === v && P === w && g.length > 0) ||
+                    ((p = e),
+                    (v = t),
+                    (P = w),
                     (g = (function (e, t, n) {
                         let r = [],
-                            { cols: i, rows: a } = {
+                            { cols: i, rows: l } = {
                                 cols: Math.ceil(Math.max(0, e) / n) + 1,
                                 rows: Math.ceil(Math.min(600, Math.max(0, t)) / n) + 1,
                             };
-                        for (let e = 0; e < a; e++)
+                        for (let e = 0; e < l; e++)
                             for (let t = 0; t < i; t++)
                                 r.push({
                                     i: t,
@@ -125,107 +125,107 @@ let f = i.memo(function (e) {
             }
             function E() {
                 let t = e.getBoundingClientRect(),
-                    a = t.width,
-                    l = t.height;
-                (0.5 > Math.abs(a - i) && 0.5 > Math.abs(l - o)) ||
-                    ((i = a),
-                    (o = l),
+                    l = t.width,
+                    a = t.height;
+                (0.5 > Math.abs(l - i) && 0.5 > Math.abs(a - o)) ||
+                    ((i = l),
+                    (o = a),
                     (e.width = Math.max(1, Math.floor(i * r))),
                     (e.height = Math.max(1, Math.floor(o * r))),
                     null != n && (n.setTransform(r, 0, 0, r, 0, 0), (n.imageSmoothingEnabled = !1)),
-                    P(),
-                    q(0.001 * performance.now()));
+                    T(),
+                    I(0.001 * performance.now()));
             }
             E();
             let C = new ResizeObserver(E);
             (C.observe(t), window.addEventListener("resize", E));
-            let I = performance.now(),
-                S = 0;
-            function q(e) {
-                var t, r, a;
+            let S = performance.now(),
+                q = 0;
+            function I(e) {
+                var t, r, l;
                 if (i <= 0 || o <= 0) return;
                 (n.clearRect(0, 0, i, o), (n.globalAlpha = M));
-                let l = w,
+                let a = w,
                     s = "right" === m.current,
                     u = s ? o : i,
                     h = u <= 1e3 ? 1.2 : (1e3 / u) * 1.2;
-                for (let e = 0; e < 8; e++) T[e].length = 0;
+                for (let e = 0; e < 8; e++) F[e].length = 0;
                 for (let n = 0; n < g.length; n++) {
                     let r,
-                        a = g[n],
-                        u = (a.i * l) / i,
-                        c = (a.j * l) / o,
+                        l = g[n],
+                        u = (l.i * a) / i,
+                        c = (l.j * a) / o,
                         { u: d, v: f } = ((t = k), s ? { u: c, v: t ? 1 - u : u } : { u: u, v: c }),
                         m =
                             0.55 *
                             (function (e, t, n) {
                                 let r = (e - 0.5) * n,
                                     i = 1 - t,
-                                    a = 1 - Math.sqrt(r * r + i * i * 1.8);
-                                return a < 0 ? 0 : a * a;
+                                    l = 1 - Math.sqrt(r * r + i * i * 1.8);
+                                return l < 0 ? 0 : l * l;
                             })(d, f, h);
-                    for (let e = 0; e < p.length; e++) {
-                        let t = p[e],
+                    for (let e = 0; e < b.length; e++) {
+                        let t = b[e],
                             n = d - t.x,
                             r = f - t.y,
                             i = (n * n + r * r) / (t.radius * t.radius);
                         m += t.strength * Math.exp(-i) * 0.7;
                     }
-                    let v = 0.1 * Math.sin(e * a.freq * 1.85 * y + a.phase),
-                        b = m - (a.threshold + v);
+                    let p = 0.1 * Math.sin(e * l.freq * 1.85 * y + l.phase),
+                        v = m - (l.threshold + p);
                     1;
-                    if (!(b <= -0.1)) {
-                        if (b >= 0.1) r = 7;
+                    if (!(v <= -0.1)) {
+                        if (v >= 0.1) r = 7;
                         else {
-                            let e = (b + 0.1) / 0.2;
+                            let e = (v + 0.1) / 0.2;
                             r = Math.min(7, Math.floor(e * e * (3 - 2 * e) * 8));
                         }
-                        Number.isFinite(r) && T[r].push(a);
+                        Number.isFinite(r) && F[r].push(l);
                     }
                 }
                 for (let e = 0; e < 8; e++) {
-                    let t = T[e];
+                    let t = F[e];
                     if (0 !== t.length) {
-                        ((n.fillStyle = j[e]), n.beginPath());
+                        ((n.fillStyle = $[e]), n.beginPath());
                         for (let e = 0; e < t.length; e++) {
                             let i = t[e];
-                            ((r = i.i * l),
-                                (a = i.j * l),
+                            ((r = i.i * a),
+                                (l = i.j * a),
                                 "function" == typeof n.roundRect
-                                    ? n.roundRect(r, a, 4, 4, 1)
-                                    : (n.moveTo(r + 1, a),
-                                      n.arcTo(r + 4, a, r + 4, a + 4, 1),
-                                      n.arcTo(r + 4, a + 4, r, a + 4, 1),
-                                      n.arcTo(r, a + 4, r, a, 1),
-                                      n.arcTo(r, a, r + 4, a, 1)));
+                                    ? n.roundRect(r, l, 4, 4, 1)
+                                    : (n.moveTo(r + 1, l),
+                                      n.arcTo(r + 4, l, r + 4, l + 4, 1),
+                                      n.arcTo(r + 4, l + 4, r, l + 4, 1),
+                                      n.arcTo(r, l + 4, r, l, 1),
+                                      n.arcTo(r, l, r + 4, l, 1)));
                         }
                         n.fill();
                     }
                 }
             }
             return (
-                (S = requestAnimationFrame(function e(t) {
+                (q = requestAnimationFrame(function e(t) {
                     w = s[u];
-                    let n = t - I,
+                    let n = t - S,
                         r = Math.min(64, n);
-                    ((I = t),
+                    ((S = t),
                         !(function (e, t) {
                             if (
-                                ++$ < 30 ||
+                                ++A < 30 ||
                                 e > 100 ||
-                                (A.push(e),
-                                A.length > 60 && A.shift(),
-                                A.length < 60 || t - h < 3e3 || u >= s.length - 1)
+                                (j.push(e),
+                                j.length > 60 && j.shift(),
+                                j.length < 60 || t - h < 3e3 || u >= s.length - 1)
                             )
                                 return;
                             let n = 0;
-                            for (let e = 0; e < A.length; e++) n += A[e];
-                            let r = n / A.length;
+                            for (let e = 0; e < j.length; e++) n += j[e];
+                            let r = n / j.length;
                             r <= 22 ||
                                 ((w = s[++u]),
                                 (h = t),
-                                (N = -1),
-                                P(),
+                                (P = -1),
+                                T(),
                                 console.log(
                                     "[Vibegrations/glow-dither] perf degrade \u2192 spacing",
                                     w,
@@ -235,22 +235,22 @@ let f = i.memo(function (e) {
                                 ));
                         })(n, t));
                     let i = c[f.current] ?? c.home,
-                        a = 1 - Math.exp(-r / 80);
-                    ((x += (i.blob - x) * a), (y += (i.twink - y) * a), (M += (i.alpha - M) * a));
-                    let l = 1.5 * x;
-                    for (let e = 0; e < p.length; e++) {
-                        let t = p[e];
-                        ((t.x += t.vx * r * l),
-                            (t.y += t.vy * r * l),
+                        l = 1 - Math.exp(-r / 80);
+                    ((x += (i.blob - x) * l), (y += (i.twink - y) * l), (M += (i.alpha - M) * l));
+                    let a = 1.5 * x;
+                    for (let e = 0; e < b.length; e++) {
+                        let t = b[e];
+                        ((t.x += t.vx * r * a),
+                            (t.y += t.vy * r * a),
                             (t.x < -0.1 || t.x > 1.1) && (t.vx *= -1),
                             (t.y < 0.1 || t.y > 1.1) && (t.vy *= -1),
                             (t.vx += (Math.random() - 0.5) * 2e-7 * r),
                             (t.vy += (Math.random() - 0.5) * 2e-7 * r));
                     }
-                    (q(0.001 * t), (S = requestAnimationFrame(e)));
+                    (I(0.001 * t), (q = requestAnimationFrame(e)));
                 })),
                 () => {
-                    (cancelAnimationFrame(S), C.disconnect(), F.disconnect(), window.removeEventListener("resize", E));
+                    (cancelAnimationFrame(q), C.disconnect(), N.disconnect(), window.removeEventListener("resize", E));
                 }
             );
         }, []));
@@ -259,22 +259,22 @@ let f = i.memo(function (e) {
         (g = "conversation" === t ? `${g} ${o.wY}` : "home" === t ? `${g} ${o.Qy}` : `${g} ${o.fR}`),
         "right" === n && (g = `${g} ${o.L$}`),
         (0, r.jsx)("div", {
-            ref: a,
+            ref: l,
             className: g,
             "aria-hidden": "true",
-            children: (0, r.jsx)("canvas", { ref: l, className: "right" === n ? `${o.DX} ${o.l4}` : o.DX }),
+            children: (0, r.jsx)("canvas", { ref: a, className: "right" === n ? `${o.DX} ${o.l4}` : o.DX }),
         })
     );
 });
 var m = n(337044);
 function g(e) {
     let { projectId: t, orientation: n = "bottom", state: i } = e,
-        o = (0, a.bG)([l.Ay], () => (l.Ay.isThinking(t) ? "thinking" : "conversation"), [t]),
+        o = (0, l.bG)([a.Ay], () => (a.Ay.isThinking(t) ? "thinking" : "conversation"), [t]),
         s = i ?? o,
         u = "right" === n ? `${m.ys} ${m.WR}` : m.ys;
     return (0, r.jsxs)("div", {
         className: m.D1,
-        "data-vibegrations-glow": !0,
+        "data-conjure-glow": !0,
         "aria-hidden": !0,
         children: [
             (0, r.jsxs)("div", {

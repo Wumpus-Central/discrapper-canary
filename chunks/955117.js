@@ -1,4 +1,4 @@
-n.d(t, { D: () => A, h: () => E });
+n.d(t, { K: () => v, k: () => E });
 var i = n(477900),
     r = n(582128),
     l = n(598748),
@@ -54,7 +54,7 @@ function E(e, t) {
                 let e = c.default.getCurrentUser();
                 if (null == e) throw Error("no signed-in user to render the widget for");
                 let n = Date.now();
-                await I(
+                await A(
                     Promise.all([(0, o.un)(t, { force: !0 }), d.A.fetchUserApplicationIdentitiesWithProfiles(e.id)]),
                     4e3,
                     "refreshing the widget data timed out",
@@ -68,7 +68,7 @@ function E(e, t) {
                     }).hasAny
                 )
                     throw Error("the deployed preview app has no profile widget surfaces");
-                let r = await I(
+                let r = await A(
                         a.current(),
                         12e3 - (Date.now() - n),
                         "rendering the widget took longer than the capture allows",
@@ -85,7 +85,7 @@ function E(e, t) {
             );
         }, [e, t]));
 }
-function I(e, t, n) {
+function A(e, t, n) {
     return new Promise((i, r) => {
         let l = setTimeout(() => r(Error(n)), t);
         e.then(
@@ -98,13 +98,13 @@ function I(e, t, n) {
         );
     });
 }
-async function A(e, t) {
+async function v(e, t) {
     let n,
         i,
         r = _.get(e);
     if (null == r) return { status: "unavailable" };
     try {
-        [n, i] = await Promise.all([r(), I(t.resolveUploadUrl(), 12e3, "resolving the upload URL timed out")]);
+        [n, i] = await Promise.all([r(), A(t.resolveUploadUrl(), 12e3, "resolving the upload URL timed out")]);
     } catch (e) {
         return (
             g.warn("widget capture preparation failed", { err: e }),

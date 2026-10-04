@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { default: () => P }));
+(n.r(t), n.d(t, { default: () => D }));
 var i = n(477900),
     s = n(582128),
     l = n(991690),
@@ -21,12 +21,12 @@ function E(e) {
         N =
             ((t = s.useCallback((e) => o.A.subscribe(e), [])),
             s.useSyncExternalStore(t, () => null != C && o.A.isFrameVisible(C))),
-        I = (0, u.bG)([p.A], () => p.A.getToastsEnabled(n), [n]),
-        O = N && I,
-        _ = (0, c.useHasAnyModalOpen)(),
-        [b, S] = s.useState(null);
+        O = (0, u.bG)([p.A], () => p.A.getToastsEnabled(n), [n]),
+        _ = N && O,
+        b = (0, c.useHasAnyModalOpen)(),
+        [I, j] = s.useState(null);
     s.useEffect(() => {
-        if (!O) return;
+        if (!_) return;
         function e() {
             let e = (function (e) {
                 if (null == e) return null;
@@ -34,8 +34,8 @@ function E(e) {
                 return t.width < 1 || t.height < 1
                     ? null
                     : { left: t.left, top: t.top, width: t.width, height: t.height };
-            })((0, f.F)(null, C));
-            S((t) =>
+            })((0, f.o)(null, C));
+            j((t) =>
                 (
                     null == t || null == e
                         ? t === e
@@ -53,22 +53,22 @@ function E(e) {
                 (window.clearInterval(t), window.removeEventListener("resize", e));
             }
         );
-    }, [O, C]);
-    let T = s.useCallback(
+    }, [_, C]);
+    let m = s.useCallback(
         (e) => {
             (E(), d.A.jumpToMessage({ channelId: e.channel_id, messageId: e.id, flash: !0 }));
         },
         [E],
     );
-    return !O || null == b || _
+    return !_ || null == I || b
         ? null
         : (0, a.createPortal)(
               (0, i.jsx)("div", {
                   className: g.T,
-                  style: { top: b.top, left: b.left, width: b.width, height: b.height / 2 },
+                  style: { top: I.top, left: I.left, width: I.width, height: I.height / 2 },
                   children: (0, i.jsx)("div", {
                       className: g.f,
-                      children: (0, i.jsx)(h.A, { channelId: n, onToastClick: T }),
+                      children: (0, i.jsx)(h.A, { channelId: n, onToastClick: m }),
                   }),
               }),
               document.body,
@@ -77,51 +77,51 @@ function E(e) {
 var w = n(73153),
     C = n(334738),
     N = n(334105),
-    I = n(761640),
-    O = n(573163),
-    _ = n(927813);
-let b = { lastAutoOpenedAt: null },
-    S = b;
-class T extends u.Ay.PersistedStore {
-    static displayName = "VibegrationsChatAutoOpenStore";
+    O = n(761640),
+    _ = n(573163),
+    b = n(927813);
+let I = { lastAutoOpenedAt: null },
+    j = I;
+class m extends u.Ay.PersistedStore {
+    static displayName = "ConjureChatAutoOpenStore";
     static persistKey = "VibegrationsChatAutoOpen";
     initialize(e) {
-        S = e ?? b;
+        j = e ?? I;
     }
     getState() {
-        return S;
+        return j;
     }
     canAutoOpen(e) {
-        return null == S.lastAutoOpenedAt || e - S.lastAutoOpenedAt >= _.A.Millis.DAY;
+        return null == j.lastAutoOpenedAt || e - j.lastAutoOpenedAt >= b.A.Millis.DAY;
     }
 }
-let m = new T(w.h, {
+let S = new m(w.h, {
     LOGOUT: function () {
-        if (null == S.lastAutoOpenedAt) return !1;
-        S = b;
+        if (null == j.lastAutoOpenedAt) return !1;
+        j = I;
     },
-    VIBEGRATIONS_APP_CHANNEL_CHAT_AUTO_OPENED: function (e) {
+    CONJURE_APP_CHANNEL_CHAT_AUTO_OPENED: function (e) {
         let { timestamp: t } = e;
-        S = { lastAutoOpenedAt: t };
+        j = { lastAutoOpenedAt: t };
     },
 });
-var j = n(652215),
-    y = n(343030),
+var y = n(652215),
+    T = n(343030),
     x = n(150861),
-    v = n(317608),
-    R = n(378859),
-    U = n(206600),
+    U = n(317608),
+    v = n(378859),
+    R = n(206600),
     L = n(375708),
-    G = n(728846);
-function M(e) {
+    M = n(728846);
+function P(e) {
     let { applicationId: t, channel: n, showChatToasts: r } = e,
         a = s.useMemo(() => ({ type: l.U.APP_CHANNEL, channelId: n.id, guildId: n.guild_id }), [n.id, n.guild_id]),
-        { frame: u, state: c } = (0, U.A)({ applicationId: t, surface: a });
+        { frame: u, state: c } = (0, R.A)({ applicationId: t, surface: a });
     switch (c) {
-        case U.n.Launched:
+        case R.n.Launched:
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(v.A, { frameId: u.id, level: y.A.WithinAppContent, className: G.Z }),
+                    (0, i.jsx)(U.A, { frameId: u.id, level: T.A.WithinAppContent, className: M.Z }),
                     r
                         ? (0, i.jsx)(E, {
                               channelId: n.id,
@@ -132,24 +132,24 @@ function M(e) {
                         : null,
                 ],
             });
-        case U.n.RenderingElsewhere:
-            return (0, i.jsx)(R.A, { className: G.w, description: L.intl.string(L.t["2KIDX+"]) });
-        case U.n.NoApplication:
-            return (0, i.jsx)(R.A, { className: G.w, description: L.intl.string(L.t.izggZO) });
-        case U.n.DoesNotSupportSurface:
-            return (0, i.jsx)(R.A, { className: G.w, description: L.intl.string(L.t["iUWcU/"]) });
-        case U.n.Error:
-            return (0, i.jsx)(R.A, {
-                className: G.w,
+        case R.n.RenderingElsewhere:
+            return (0, i.jsx)(v.A, { className: M.w, description: L.intl.string(L.t["2KIDX+"]) });
+        case R.n.NoApplication:
+            return (0, i.jsx)(v.A, { className: M.w, description: L.intl.string(L.t.izggZO) });
+        case R.n.DoesNotSupportSurface:
+            return (0, i.jsx)(v.A, { className: M.w, description: L.intl.string(L.t["iUWcU/"]) });
+        case R.n.Error:
+            return (0, i.jsx)(v.A, {
+                className: M.w,
                 heading: L.intl.string(L.t.VquUff),
                 error: L.intl.string(L.t["Sd9D/R"]),
             });
-        case U.n.AwaitingLaunch:
-        case U.n.Loading:
-            return (0, i.jsx)(R.j, { className: G.w });
+        case R.n.AwaitingLaunch:
+        case R.n.Loading:
+            return (0, i.jsx)(v.j, { className: M.w });
     }
 }
-function P(e) {
+function D(e) {
     let t,
         n,
         l,
@@ -160,11 +160,11 @@ function P(e) {
         { channel: A } = e,
         h = A.application_id;
     (0, x.A)(A);
-    let p = (0, r.Bp)(A, "AppChannel"),
+    let p = (0, r.w$)(A, "AppChannel"),
         f =
             ((t = A.id),
             (n = (0, N.cz)(t)),
-            (l = (0, u.bG)([O.Ay], () => O.Ay.hasUnread(t), [t])),
+            (l = (0, u.bG)([_.Ay], () => _.Ay.hasUnread(t), [t])),
             (a = s.useRef(!1)),
             (c = s.useRef(!1)),
             (d = s.useRef(!0)),
@@ -179,14 +179,14 @@ function P(e) {
                         !e ||
                         n ||
                         ((a.current = !0),
-                        !(O.Ay.getMentionCount(t) > 0) &&
-                            O.Ay.hasUnread(t) &&
+                        !(_.Ay.getMentionCount(t) > 0) &&
+                            _.Ay.hasUnread(t) &&
                             (0, C.ack)(
                                 t,
                                 {
-                                    section: j.JJy.CHANNEL,
-                                    object: j.ZSU.ACK_VIBEGRATIONS_CHAT_CLOSED,
-                                    objectType: j.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
+                                    section: y.JJy.CHANNEL,
+                                    object: y.ZSU.ACK_VIBEGRATIONS_CHAT_CLOSED,
+                                    objectType: y.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                                 },
                                 !0,
                                 !0,
@@ -195,18 +195,14 @@ function P(e) {
             s.useEffect(() => {
                 if (p && l && d.current) {
                     if (
-                        ((d.current = !1), !a.current && null == I.Ay.getSidebarState(t)) &&
+                        ((d.current = !1), !a.current && null == O.Ay.getSidebarState(t)) &&
                         !c.current &&
-                        m.canAutoOpen(Date.now())
+                        S.canAutoOpen(Date.now())
                     ) {
                         var e;
                         ((c.current = !0),
                             (e = Date.now()),
-                            w.h.dispatch({
-                                type: "VIBEGRATIONS_APP_CHANNEL_CHAT_AUTO_OPENED",
-                                channelId: t,
-                                timestamp: e,
-                            }),
+                            w.h.dispatch({ type: "CONJURE_APP_CHANNEL_CHAT_AUTO_OPENED", channelId: t, timestamp: e }),
                             (0, N.fJ)(A.getGuildId(), t));
                     }
                 }
@@ -219,10 +215,10 @@ function P(e) {
             }, [t]),
             n);
     return null == h
-        ? (0, i.jsx)(R.A, {
-              className: G.w,
+        ? (0, i.jsx)(v.A, {
+              className: M.w,
               heading: L.intl.string(L.t.tU5fiM),
               description: L.intl.string(L.t.E94mJf),
           })
-        : (0, i.jsx)(M, { applicationId: h, channel: A, showChatToasts: p && !f });
+        : (0, i.jsx)(P, { applicationId: h, channel: A, showChatToasts: p && !f });
 }

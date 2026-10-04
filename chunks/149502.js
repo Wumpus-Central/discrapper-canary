@@ -1,4 +1,4 @@
-n.d(t, { h: () => m, s: () => _ });
+n.d(t, { $: () => _, o: () => m });
 var i = n(343030),
     r = n(91242),
     l = n(558960),
@@ -19,7 +19,7 @@ function _() {
         u.Ay.addChangeListener(w),
         r.A.addChangeListener(w),
         o.A.addChangeListener(w),
-        (0, a.FQ)(w),
+        (0, a.W3)(w),
         w());
 }
 function m(e) {
@@ -27,8 +27,8 @@ function m(e) {
 }
 function w() {
     let e = new Map();
-    for (let t of new Set([...s.Ay.getActivityOrderedProjectIds(), ...(0, a.k)()])) {
-        if (!s.Ay.isThinking(t) && !(0, a.RW)(t)) continue;
+    for (let t of new Set([...s.Ay.getActivityOrderedProjectIds(), ...(0, a.T7)()])) {
+        if (!s.Ay.isThinking(t) && !(0, a.wK)(t)) continue;
         let n = (function (e) {
             let t = u.Ay.getProject(e)?.preview_application_id;
             if (null == t) return null;
@@ -58,7 +58,7 @@ function w() {
                     document.body.appendChild(n));
                 let r = { frameId: t, element: n, unregisterLookup: () => {} };
                 (p.set(e, r),
-                    (r.unregisterLookup = (0, c.mn)(e, () => (0, d.F)(n, t))),
+                    (r.unregisterLookup = (0, c.Ng)(e, () => (0, d.o)(n, t))),
                     l.A.registerFrameTarget(t, n, i.A.Backstage, void 0));
             })(t, n);
     let g = o.A.isBuilderPreviewMobile();

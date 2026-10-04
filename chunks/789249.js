@@ -15,7 +15,7 @@ _.exports = {
     m3: "multi__590bb",
     B4: "view__590bb",
     pG: "caption__590bb",
-    Rw: "vibegrations-image-option-loading__590bb",
+    ar: "conjure-image-option-loading__590bb",
     ZV: "own__590bb",
     Nz: "picker__590bb",
     QJ: "ownButtons__590bb",

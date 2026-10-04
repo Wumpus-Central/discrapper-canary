@@ -950,7 +950,7 @@ function eZ(e) {
     }),
     eV(["CONJURING_TURN_SETTLED"], (e) => {
         eW({
-            type: "VIBEGRATIONS_TURN_SETTLED",
+            type: "CONJURE_TURN_SETTLED",
             projectId: e.project_id,
             guildId: e.guild_id,
             entityId: e.entity_id,
