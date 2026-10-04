@@ -1,0 +1,18 @@
+e.exports = {
+    qd: "layer__1e18d",
+    t$: "stack__1e18d",
+    uO: "customCard__1e18d",
+    Zr: "cardOpen__1e18d",
+    GF: "cardClosing__1e18d",
+    Nr: "card__1e18d",
+    rF: "effortCard__1e18d",
+    wx: "header__1e18d",
+    y6: "headerToggle__1e18d",
+    vg: "headerChevron__1e18d",
+    Z: "headerValue__1e18d",
+    xQ: "headerValueExit__1e18d",
+    lm: "headerValueEnter__1e18d",
+    hs: "scale__1e18d",
+    Nb: "scaleEnds__1e18d",
+    hZ: "trigger__1e18d",
+};

@@ -838,7 +838,7 @@ var eZ = n(305866),
     e8 = n(753437),
     e7 = n(382701),
     e3 = n(408519);
-function e2(e) {
+function e5(e) {
     let { clipId: t, tags: n, allowEditing: l, disableInteraction: a = !1, onEditingChange: s } = e,
         r = l && !a,
         d = o.useMemo(() => n?.filter((e) => null != (0, e8.W3)(e)) ?? [], [n]),
@@ -948,7 +948,7 @@ function e2(e) {
                               ),
                       }),
                   P &&
-                      (0, i.jsx)(e5, {
+                      (0, i.jsx)(e2, {
                           buttonRef: p,
                           numHidden: _,
                           isOpen: A,
@@ -963,7 +963,7 @@ function e2(e) {
           })
         : null;
 }
-function e5(e) {
+function e2(e) {
     let { buttonRef: t, numHidden: n, isOpen: l, onOpenChange: a, disableInteraction: s, children: r } = e,
         d = v.intl.string(v.t.pWHvBI);
     return s
@@ -1469,7 +1469,7 @@ function tM(e) {
                             n.e("19385"),
                             n.e("718955"),
                             n.e("94954"),
-                            n.e("571247"),
+                            n.e("586339"),
                             n.e("498167"),
                             n.e("553829"),
                             n.e("895840"),
@@ -1605,7 +1605,7 @@ function tM(e) {
                                                       allowEditing: G,
                                                       onEditingChange: N,
                                                   }),
-                                                  (0, i.jsx)(e2, {
+                                                  (0, i.jsx)(e5, {
                                                       clipId: _.key,
                                                       tags: _.tags,
                                                       allowEditing: r,
@@ -1847,15 +1847,15 @@ function t7(e) {
     });
 }
 var t3 = n(683071),
-    t2 = n(312252);
-function t5(e) {
+    t5 = n(312252);
+function t2(e) {
     let { widgetType: t, gameCount: n } = e,
         l = (0, j.cv)(t);
     return n <= l
         ? null
         : (0, i.jsx)("div", {
               role: "alert",
-              className: t2.l,
+              className: t5.l,
               children: (0, i.jsx)(t3.w, {
                   type: "warning",
                   children: v.intl.formatToPlainString(v.t.Rv3wYq, { maxGames: l }),
@@ -1905,7 +1905,7 @@ function nt(e) {
     return n && !l
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(t5, { widgetType: t, gameCount: a.length }),
+                  (0, i.jsx)(t2, { widgetType: t, gameCount: a.length }),
                   (0, i.jsx)(tl.B, { emptyListFallbackRef: r, children: m }),
               ],
           })
@@ -2063,7 +2063,7 @@ function nf(e) {
     return n && !l
         ? (0, i.jsxs)(i.Fragment, {
               children: [
-                  (0, i.jsx)(t5, { widgetType: t, gameCount: a.length }),
+                  (0, i.jsx)(t2, { widgetType: t, gameCount: a.length }),
                   (0, i.jsx)(tl.B, { emptyListFallbackRef: r, children: m }),
               ],
           })

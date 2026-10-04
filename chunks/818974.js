@@ -1,0 +1,16 @@
+e.exports = {
+    $4: "conjurMessage__62269",
+    yE: "accessoryMessageRow__62269",
+    vg: "userMessageButtonsShown__62269",
+    QE: "userMessageButtons__62269",
+    Rn: "userMessageButtonsHeader__62269",
+    x1: "messageAccessoriesUnderProse__62269",
+    Yq: "messageAccessories__62269",
+    st: "conjurBotAvatar__62269",
+    OS: "messageBody__62269",
+    Gx: "vibegrations-reveal-frontier__62269",
+    GV: "selectedMention__62269",
+    Rj: "selectedMentionIcon__62269",
+    zq: "selectedMessage__62269",
+    WO: "selectedBody__62269",
+};

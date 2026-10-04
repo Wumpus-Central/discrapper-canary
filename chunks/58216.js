@@ -3,8 +3,8 @@ var i = n(477900),
     r = n(582128),
     l = n(503698),
     a = n.n(l),
-    s = n(589812),
-    o = n(598748),
+    o = n(589812),
+    s = n(598748),
     u = n(179771),
     d = n(17928),
     c = n(834730),
@@ -25,10 +25,10 @@ var i = n(477900),
     R = n(7437),
     S = n(375708),
     O = n(429913),
-    C = n(409626),
-    N = n(692969),
-    x = n(569926),
-    P = n(484185),
+    C = n(627873),
+    N = n(409626),
+    x = n(692969),
+    P = n(569926),
     k = n(280450),
     M = n(183555),
     j = n(644346),
@@ -40,12 +40,12 @@ function B(e) {
         hasData: r,
         showConnectCta: l,
         showReconnectCta: a,
-        handleConnect: s,
-        disableCTA: o,
+        handleConnect: o,
+        disableCTA: s,
         disableCTAActions: u,
         cta: d,
     } = e;
-    return !t || o
+    return !t || s
         ? null
         : (u && ((l = !1), (a = !1), (d = void 0)),
           (0, i.jsxs)("div", {
@@ -68,13 +68,13 @@ function B(e) {
                       ? (0, i.jsx)(G, {
                             heading: S.intl.string(S.t.UDPRLO),
                             content: S.intl.string(S.t["OW/2al"]),
-                            buttons: (0, i.jsx)(p.$, { text: S.intl.string(S.t.S0W8Z5), onClick: s }),
+                            buttons: (0, i.jsx)(p.$, { text: S.intl.string(S.t.S0W8Z5), onClick: o }),
                         })
                       : a
                         ? (0, i.jsx)(G, {
                               heading: S.intl.string(S.t["9WarGY"]),
                               content: S.intl.string(S.t.qgxnKe),
-                              buttons: (0, i.jsx)(p.$, { text: S.intl.string(S.t.vD60Pv), onClick: s }),
+                              buttons: (0, i.jsx)(p.$, { text: S.intl.string(S.t.vD60Pv), onClick: o }),
                           })
                         : d,
               ],
@@ -130,19 +130,19 @@ let L = Object.assign(
             } = e,
             F = (function (e) {
                 let { trackUserProfileAction: t } = (0, M.NJ)(),
-                    { user: n, widget: l, cta: s } = e,
-                    o = (0, d.bG)([k.default], () => k.default.getId()) === n.id,
+                    { user: n, widget: l, cta: o } = e,
+                    s = (0, d.bG)([k.default], () => k.default.getId()) === n.id,
                     h = (0, O.h)(l.applicationId),
                     p = h?.getIconURL(16),
                     g = (function (e) {
                         let t = e?.getCanonicalGameId(),
-                            { data: n } = (0, x.I)(t);
+                            { data: n } = (0, P.I)(t);
                         return n;
                     })(h),
-                    _ = (0, N.A)({
+                    _ = (0, x.A)({
                         location: "UserProfileApplicationWidget",
                         applicationId: g?.id,
-                        source: C.GameProfileSources.UserProfileApplicationWidget,
+                        source: N.GameProfileSources.UserProfileApplicationWidget,
                         sourceUserId: n.id,
                         trackEntryPointImpression: !0,
                     }),
@@ -164,9 +164,9 @@ let L = Object.assign(
                             }),
                             v({ analyticsLocations: b }));
                     }, [E, w, v, t, l.applicationId, b]),
-                    S = null == s && m && !w && E,
-                    P =
-                        null == s &&
+                    S = null == o && m && !w && E,
+                    C =
+                        null == o &&
                         m &&
                         w &&
                         E &&
@@ -190,18 +190,18 @@ let L = Object.assign(
                             ? (0, i.jsx)("div", { className: D.qd, children: j })
                             : (0, i.jsx)(f.D, { className: a()(D.qd, D.vk), onClick: _, children: j });
                 return {
-                    isCurrentUser: o,
+                    isCurrentUser: s,
                     game: g,
                     openGameProfileModal: _,
                     handleConnect: R,
                     showConnectCta: S,
-                    showReconnectCta: P,
+                    showReconnectCta: C,
                     headerTitle: B,
                 };
             })(e),
             H = (0, y.A)(t.id, n.applicationId),
-            q = (0, P.A)(n.applicationId, F.isCurrentUser),
-            $ = (function (e, t) {
+            q = (0, C.A)(n.applicationId, F.isCurrentUser),
+            J = (function (e, t) {
                 let { pending: n, refresh: r } = (0, R.A)(e);
                 return t
                     ? (0, i.jsx)(m.Dr, {
@@ -213,7 +213,7 @@ let L = Object.assign(
                       })
                     : null;
             })(n.applicationId, !0 === q && !0 !== L),
-            J =
+            $ =
                 V ||
                 (function (e) {
                     let { disableInteraction: t } = e;
@@ -221,8 +221,8 @@ let L = Object.assign(
                 })(e)
                     ? v.hO
                     : void 0,
-            z = H.surfaceConfigs[o.m.WIDGET_TOP],
-            K = H.surfaceConfigs[o.m.WIDGET_BOTTOM];
+            z = H.surfaceConfigs[s.m.WIDGET_TOP],
+            K = H.surfaceConfigs[s.m.WIDGET_BOTTOM];
         return null == z || null == K
             ? null
             : (0, i.jsxs)(j.A, {
@@ -244,19 +244,19 @@ let L = Object.assign(
                                     action: F.openGameProfileModal,
                                 })
                               : null,
-                          $,
+                          J,
                       ],
                   }),
                   children: [
-                      (0, i.jsx)(s.kH, {
+                      (0, i.jsx)(o.kH, {
                           ...H,
-                          surface: o.m.WIDGET_TOP,
+                          surface: s.m.WIDGET_TOP,
                           surfaceConfig: z,
                           header: F.headerTitle,
-                          renderText: J,
+                          renderText: $,
                       }),
                       (0, i.jsx)(E.c, {}),
-                      (0, i.jsx)(s.kH, { ...H, surface: o.m.WIDGET_BOTTOM, surfaceConfig: K, renderText: J }),
+                      (0, i.jsx)(o.kH, { ...H, surface: s.m.WIDGET_BOTTOM, surfaceConfig: K, renderText: $ }),
                       (0, i.jsx)(B, {
                           isCurrentUser: F.isCurrentUser,
                           isLoading: H.isLoading,

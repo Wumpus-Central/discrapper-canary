@@ -55,9 +55,9 @@ var i = n(435558),
     c = n(136722),
     u = n(665260),
     _ = n(933681),
-    E = n(233993),
-    A = n(446600),
-    h = n(387397),
+    E = n(518417),
+    A = n(233993),
+    h = n(446600),
     I = n(403362),
     f = n(935208),
     p = n(652215),
@@ -409,7 +409,7 @@ class eg extends ep {
         return this.permissionOverwrites_ ?? em;
     }
     get topic() {
-        return this.type === p.rbe.GUILD_APP && null != (0, h.B9)(this.topic_) ? "" : (this.topic_ ?? "");
+        return this.type === p.rbe.GUILD_APP && null != (0, E.B9)(this.topic_) ? "" : (this.topic_ ?? "");
     }
     get position() {
         return this.position_ ?? 0;
@@ -442,7 +442,7 @@ class eg extends ep {
         return null != t ? new this.constructor(t) : this;
     }
     computeLurkerPermissionsAllowList() {
-        if (this.isGuildStageVoice() && A.A.isPublic(this.id)) return E.Uu;
+        if (this.isGuildStageVoice() && h.A.isPublic(this.id)) return A.Uu;
     }
     isNSFW() {
         return this.nsfw;
@@ -1080,7 +1080,7 @@ let eM = {
     [p.rbe.GUILD_APP]: eC.fromServer,
 };
 function eP(e, t) {
-    let n = (0, h.hi)(e);
+    let n = (0, E.hi)(e);
     return (eM[n.type ?? p.rbe.GUILD_TEXT] ?? eS.fromServer)(n, t);
 }
 function eU(e) {
@@ -1106,7 +1106,7 @@ let ew = {
     [p.rbe.GUILD_APP]: class extends eC {},
 };
 function eG(e) {
-    let t = (0, h.UD)(e),
+    let t = (0, E.UD)(e),
         n = ew[t.type ?? p.rbe.GUILD_TEXT] ?? eS;
     return (0, _.pp)(t, n);
 }

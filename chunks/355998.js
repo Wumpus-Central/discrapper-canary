@@ -1288,19 +1288,20 @@ var tR = n(371444),
     t0 = n(355622),
     t2 = n(408018),
     t5 = n(479909),
-    t1 = n(375499),
-    t7 = n(267889),
-    t3 = n(770335),
-    t4 = n(7584),
-    t6 = n(422844),
-    t9 = n(307301),
-    t8 = n(599119),
-    ne = n(219504),
-    nt = n(807632),
-    nn = n(376310);
+    t1 = n(518417),
+    t7 = n(375499),
+    t3 = n(267889),
+    t4 = n(770335),
+    t6 = n(7584),
+    t9 = n(422844),
+    t8 = n(307301),
+    ne = n(599119),
+    nt = n(219504),
+    nn = n(807632),
+    nl = n(376310);
 n(253913);
-var nl = n(901748);
-function ni(e) {
+var ni = n(901748);
+function ns(e) {
     let { channel: t } = e,
         a = (0, s.bG)([K.A], () => K.A.can(eZ.xBc.MANAGE_CHANNELS, t), [t]),
         r = t.availableTags.length >= 20,
@@ -1314,7 +1315,7 @@ function ni(e) {
                     return (n) => (0, l.jsx)(e, { ...n, channelId: t.id, guildId: t.guild_id });
                 });
         }, [t, a]),
-        u = i.useCallback((e) => t.isGameInvitesChannel() && e.name === nt.Dg, [t]),
+        u = i.useCallback((e) => t.isGameInvitesChannel() && e.name === nn.Dg, [t]),
         h = i.useCallback(
             (e) => {
                 !a ||
@@ -1330,16 +1331,16 @@ function ni(e) {
             handleDragStart: g,
             handleDragReset: m,
             handleDragComplete: x,
-        } = (0, ne.A)(t.availableTags, (e) => {
+        } = (0, nt.A)(t.availableTags, (e) => {
             (0, d.fy)({ availableTags: e });
         });
     return (0, l.jsxs)("div", {
-        className: nl._A,
+        className: ni._A,
         children: [
             o
                 ? t.availableTags.map((e) =>
                       (0, l.jsx)(
-                          ns,
+                          na,
                           {
                               tag: e,
                               availableTags: t.availableTags,
@@ -1357,8 +1358,8 @@ function ni(e) {
             o
                 ? (0, l.jsx)(N.D, {
                       onClick: c,
-                      className: A()(nl.JE, { [nl.r9]: !a || r }),
-                      children: (0, l.jsx)(t9.j, {
+                      className: A()(ni.JE, { [ni.r9]: !a || r }),
+                      children: (0, l.jsx)(t8.j, {
                           size: "custom",
                           "aria-label": eW.intl.string(eW.t["/jubeD"]),
                           color: tt.A.unsafe_rawColors.WHITE.css,
@@ -1375,7 +1376,7 @@ function ni(e) {
         ],
     });
 }
-function ns(e) {
+function na(e) {
     let {
             tag: t,
             availableTags: n,
@@ -1392,7 +1393,7 @@ function ns(e) {
             dragSourcePosition: h,
             drop: g,
             setIsDraggable: m,
-        } = (0, t8.A)({
+        } = (0, ne.A)({
             type: "CHANNEL_SETTINGS_FORUM_TAGS",
             index: c,
             optionId: t.id,
@@ -1401,7 +1402,7 @@ function ns(e) {
             onDragReset: o,
         });
     return (0, l.jsx)("div", {
-        className: A()(nl.kL, { [nl.A]: null != h && c < h, [nl.Ze]: null != h && c > h }),
+        className: A()(ni.kL, { [ni.A]: null != h && c < h, [ni.Ze]: null != h && c > h }),
         ref: (e) => {
             u(g(e));
         },
@@ -1411,7 +1412,7 @@ function ns(e) {
             text: d,
             asContainer: !0,
             shouldShow: null != d,
-            children: (0, l.jsx)(nn.Ay, {
+            children: (0, l.jsx)(nl.Ay, {
                 tag: t,
                 disabled: !i,
                 ariaLabel: eW.intl.formatToPlainString(eW.t.jhSvB9, { name: t.name }),
@@ -1420,17 +1421,17 @@ function ns(e) {
         }),
     });
 }
-var na = n(235640),
-    nr = n(268761),
-    no = n(474078),
-    nd = n(890497),
-    nc = n(580679);
-let nu = function (e) {
+var nr = n(235640),
+    no = n(268761),
+    nd = n(474078),
+    nc = n(890497),
+    nu = n(580679);
+let nh = function (e) {
     let { autoArchiveDuration: t, onChange: n, isDisabled: i, helperText: s } = e,
-        a = (0, nr.Gk)();
+        a = (0, no.Gk)();
     return (0, l.jsx)("div", {
-        className: nc.gy,
-        children: (0, l.jsx)(nd.Z, {
+        className: nu.gy,
+        children: (0, l.jsx)(nc.Z, {
             selectionMode: "single",
             label: eW.intl.string(eW.t.FGjMZS),
             helperText: s,
@@ -1441,8 +1442,7 @@ let nu = function (e) {
         }),
     });
 };
-var nh = n(387397),
-    ng = n(280450),
+var ng = n(280450),
     nm = n(717518),
     nx = n(147036),
     np = n(927813),
@@ -1479,7 +1479,7 @@ function nC(e) {
         }, []);
     return (0, l.jsx)("div", {
         className: nf.QB,
-        children: (0, l.jsx)(nd.Z, {
+        children: (0, l.jsx)(nc.Z, {
             selectionMode: "single",
             label: t,
             hideLabel: s,
@@ -1795,7 +1795,7 @@ let nT = {
                     defaultTagSetting: b,
                     application_id: N,
                 } = e;
-                e.isThread() && 0 === (t = (0, no.A)(t, !0)).length
+                e.isThread() && 0 === (t = (0, nd.A)(t, !0)).length
                     ? o.h.dispatch({
                           type: "CHANNEL_SETTINGS_SUBMIT_FAILURE",
                           errors: { name: eW.intl.string(eW.t.uXA573) },
@@ -1833,7 +1833,7 @@ function nL(e) {
         r = i.useCallback(
             (e) => {
                 let { closePopout: i } = e;
-                return (0, l.jsx)(t7.A, {
+                return (0, l.jsx)(t3.A, {
                     channel: n,
                     guildId: s,
                     pickerIntention: nE.EmojiIntention.NO_CUSTOM_EMOJI,
@@ -1841,7 +1841,7 @@ function nL(e) {
                     onNavigateAway: i,
                     onSelectEmoji: (e) => {
                         let { emoji: n, willClose: l } = e;
-                        (null != n && n.type === t3.i.UNICODE && t(n.surrogates), l && i());
+                        (null != n && n.type === t4.i.UNICODE && t(n.surrogates), l && i());
                     },
                     showOnlyUnicode: !0,
                     analyticsOverride: nI,
@@ -1857,7 +1857,7 @@ function nL(e) {
         align: "right",
         children: (e, t) => {
             let { isShown: n } = t;
-            return (0, l.jsx)(t1.A, { ...e, ref: a, active: n, className: nS.Z8, tabIndex: 0 });
+            return (0, l.jsx)(t7.A, { ...e, ref: a, active: n, className: nS.Z8, tabIndex: 0 });
         },
     });
 }
@@ -1931,7 +1931,7 @@ class nw extends i.PureComponent {
             m = e.isForumLikeChannel(),
             x = m && e.availableTags?.every((e) => e.moderated),
             p = ee.default.getCurrentUser()?.isStaff() === !0,
-            f = (0, nh.tv)(e.type, e.topic_),
+            f = (0, t1.tv)(e.type, e.topic_),
             C =
                 tA.IY.has(e.type) && !f
                     ? (0, l.jsx)(t_.D, {
@@ -1967,7 +1967,7 @@ class nw extends i.PureComponent {
                     ? (0, l.jsx)(tG.f, {
                           label: eW.intl.string(eW.t.qk2jdY),
                           placeholder: eW.intl.string(eW.t.DDjD1H),
-                          value: t4.Ay.translateSurrogatesToInlineEmoji(e.template ?? ""),
+                          value: t6.Ay.translateSurrogatesToInlineEmoji(e.template ?? ""),
                           onChange: this.handleChangeTemplate,
                           error: this.getError("template"),
                           maxLength: 256,
@@ -1984,7 +1984,7 @@ class nw extends i.PureComponent {
                               label: eW.intl.string(eW.t["P/y+sj"]),
                               description: eW.intl.string(eW.t["/oQQ3y"]),
                               errorMessage: this.getError("available_tags"),
-                              children: (0, l.jsx)(ni, { channel: e }),
+                              children: (0, l.jsx)(ns, { channel: e }),
                           }),
                           (0, l.jsx)(tD.S, {
                               disabled: !s || x,
@@ -2037,7 +2037,7 @@ class nw extends i.PureComponent {
                                               ],
                                           }),
                                       }),
-                                      (0, l.jsx)(na.A, { reactionEmoji: e.defaultReactionEmoji }),
+                                      (0, l.jsx)(nr.A, { reactionEmoji: e.defaultReactionEmoji }),
                                   ],
                               }),
                           }),
@@ -2149,7 +2149,7 @@ class nw extends i.PureComponent {
                 g && null != e.threadMetadata && !h?.isGameInvitesChannel()
                     ? (0, l.jsx)(tW.A, {
                           page: eZ.liQ.CHANNEL_SETTINGS,
-                          children: (0, l.jsx)(nu, {
+                          children: (0, l.jsx)(nh, {
                               isDisabled: !o,
                               autoArchiveDuration: e.threadMetadata.autoArchiveDuration ?? ny.cM,
                               onChange: this.handleAutoArchiveDurationChanged,
@@ -2230,9 +2230,9 @@ class nw extends i.PureComponent {
                 tA.wE.has(e.type) && !e.isGameInvitesChannel()
                     ? (0, l.jsx)(tW.A, {
                           page: eZ.liQ.CHANNEL_SETTINGS,
-                          children: (0, l.jsx)(nu, {
+                          children: (0, l.jsx)(nh, {
                               isDisabled: !s,
-                              autoArchiveDuration: (0, nr.Gl)(e, null),
+                              autoArchiveDuration: (0, no.Gl)(e, null),
                               onChange: this.handleChangeDefaultAutoArchiveDuration,
                               helperText: e.isForumLikeChannel()
                                   ? eW.intl.string(eW.t.fyXclY)
@@ -2478,7 +2478,7 @@ class nw extends i.PureComponent {
     renderEmojiPicker = (e) => {
         let { closePopout: t } = e,
             { channel: n } = this.props;
-        return (0, l.jsx)(t7.A, {
+        return (0, l.jsx)(t3.A, {
             guildId: n?.guild_id,
             closePopout: t,
             onSelectEmoji: (e) => {
@@ -2512,7 +2512,7 @@ class nw extends i.PureComponent {
             l = t?.length ?? 0,
             i = n?.selectionStart === 0 && n?.selectionEnd === l;
         if (((this.cursorPosition = i ? l : (n?.selectionStart ?? l)), e?.isThread() && null != t)) {
-            let e = (0, no.A)(t, !0);
+            let e = (0, nd.A)(t, !0);
             e !== t && (0, d.fy)({ name: e });
         }
     };
@@ -2530,7 +2530,7 @@ class nw extends i.PureComponent {
             }, 0));
     };
     handleChangeTopic = (e) => {
-        (0, d.fy)({ topic: t4.Ay.translateInlineEmojiToSurrogates(e) });
+        (0, d.fy)({ topic: t6.Ay.translateInlineEmojiToSurrogates(e) });
     };
     handleChangeRichTopic = (e, t, n) => {
         (this.setState({ textTopicValue: t, richTopicValue: n }), this.handleChangeTopic(t));
@@ -2541,7 +2541,7 @@ class nw extends i.PureComponent {
         });
     }
     handleChangeTemplate = (e) => {
-        (0, d.fy)({ template: t4.Ay.translateInlineEmojiToSurrogates(e) });
+        (0, d.fy)({ template: t6.Ay.translateInlineEmojiToSurrogates(e) });
     };
     handleChangeDefaultReactionEmoji = (e) => {
         let t =
@@ -2650,7 +2650,7 @@ function nO() {
         })),
         p = (0, m.Ay)(t),
         A = ng.default.getId(),
-        f = (0, t6.p)(),
+        f = (0, t9.p)(),
         C = t?.id,
         j = (0, tY.cI)(t, !1, !0),
         b = i.useCallback(

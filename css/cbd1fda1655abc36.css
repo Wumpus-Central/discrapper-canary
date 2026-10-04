@@ -1,0 +1,31 @@
+.frame_f36e52 {
+    border-radius: var(--radius-sm);
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    outline: 1px solid var(--border-muted);
+    outline-offset: -1px
+}
+
+.md_f36e52 {
+    height: var(--space-40);
+    width: var(--space-40)
+}
+
+.lg_f36e52 {
+    height: 44px;
+    width: 44px
+}
+
+.image_f36e52 {
+    -o-object-fit: cover;
+    object-fit: cover;
+    outline-color: var(--border-normal)
+}
+
+.placeholder_f36e52 {
+    align-items: center;
+    display: flex;
+    justify-content: center
+}
+
+/*# sourceMappingURL=cbd1fda1655abc36.css.map*/

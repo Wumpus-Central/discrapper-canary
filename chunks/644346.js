@@ -3,8 +3,8 @@ var i = n(477900),
     r = n(582128),
     l = n(503698),
     a = n.n(l),
-    s = n(707554),
-    o = n(915089),
+    o = n(707554),
+    s = n(915089),
     u = n(183555),
     d = n(735321),
     c = n(94343),
@@ -35,8 +35,8 @@ var p = n(633075),
     j = n(347727);
 function D(e) {
     let { widget: t, className: n, buttonRef: r, additionalMenuItems: l } = e,
-        s = (0, d.L)(t),
-        u = (0, o.GV)();
+        o = (0, d.L)(t),
+        u = (0, s.GV)();
     return (0, i.jsx)(G, {
         targetRef: r,
         widget: t,
@@ -46,8 +46,8 @@ function D(e) {
                 children: (0, i.jsxs)(E.D, {
                     innerRef: r,
                     className: a()(j.x6, n),
-                    "data-dnd-name": s,
-                    "aria-label": M.intl.formatToPlainString(M.t.HWNJJN, { widgetTitle: s }),
+                    "data-dnd-name": o,
+                    "aria-label": M.intl.formatToPlainString(M.t.HWNJJN, { widgetTitle: o }),
                     "aria-describedby": u,
                     "aria-keyshortcuts": "Control+D, Meta+D",
                     ...e,
@@ -91,11 +91,11 @@ function B(e) {
 }
 function G(e) {
     let { children: t, widget: r, targetRef: l, additionalMenuItems: a } = e,
-        { trackUserProfileEditAction: s } = (0, u.NJ)();
-    function o(e) {
+        { trackUserProfileEditAction: o } = (0, u.NJ)();
+    function s(e) {
         if (e.shiftKey) {
             ((0, d.qA)(r),
-                s({ action: "WIDGET_REMOVED", ...r.getProfileEditAnalyticsOptions() }),
+                o({ action: "WIDGET_REMOVED", ...r.getProfileEditAnalyticsOptions() }),
                 (0, P.XA)(k.jM.WIDGET_REMOVED));
             return;
         }
@@ -116,7 +116,7 @@ function G(e) {
                     n.e("119766"),
                     n.e("887789"),
                     n.e("589154"),
-                    n.e("984062"),
+                    n.e("610964"),
                     n.e("888499"),
                     n.e("193457"),
                     n.e("839182"),
@@ -138,7 +138,7 @@ function G(e) {
                     n.e("353600"),
                 ]).then(n.bind(n, 380035));
                 return (t) =>
-                    (0, i.jsx)(e, { ...t, userId: x.default.getId(), widget: r, trackUserProfileEditAction: s });
+                    (0, i.jsx)(e, { ...t, userId: x.default.getId(), widget: r, trackUserProfileEditAction: o });
             },
             { stackingBehavior: "stack" },
         );
@@ -165,7 +165,7 @@ function G(e) {
                         (0, i.jsx)(S.Dr, {
                             id: "remove-widget",
                             label: M.intl.string(M.t.Mm07Yc),
-                            action: o,
+                            action: s,
                             color: "danger",
                             icon: O.TrashIcon,
                             leadingAccessory: { type: "icon", icon: O.TrashIcon },
@@ -188,10 +188,10 @@ function q(e, t, n) {
         ? (0, H.r3)({ application: n, entrypoint: "user_profile_widget" })
         : (0, H.GJ)(e, t);
 }
-var $ = n(216473);
-function J(e) {
-    let { widget: t, userId: n, className: l, menuItems: s } = e,
-        o = r.useRef(null);
+var J = n(216473);
+function $(e) {
+    let { widget: t, userId: n, className: l, menuItems: o } = e,
+        s = r.useRef(null);
     function u() {
         !(function (e, t) {
             if (!(t instanceof p.R)) return (0, H.GJ)(e, t);
@@ -204,7 +204,7 @@ function J(e) {
         })(n, t);
     }
     return (0, i.jsx)(b.Y, {
-        targetElementRef: o,
+        targetElementRef: s,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
@@ -220,7 +220,7 @@ function J(e) {
                 "aria-label": M.intl.string(M.t.xpSHSk),
                 children: (0, i.jsxs)(S.rX, {
                     children: [
-                        s,
+                        o,
                         (0, i.jsx)(
                             S.Dr,
                             {
@@ -240,9 +240,9 @@ function J(e) {
         children: (e) =>
             (0, i.jsx)(E.D, {
                 ...e,
-                innerRef: o,
+                innerRef: s,
                 "aria-label": M.intl.string(M.t.xpSHSk),
-                className: a()($.x, l),
+                className: a()(J.x, l),
                 children: (0, i.jsx)(U.MoreHorizontalIcon, { size: "sm", color: "currentColor" }),
             }),
     });
@@ -254,8 +254,8 @@ function K(e) {
         headingId: n,
         widget: r,
         disableInteraction: l = !1,
-        title: s,
-        subtitle: o,
+        title: o,
+        subtitle: s,
         actionButtons: u = [],
         className: d,
         additionalMenuItems: c,
@@ -266,8 +266,8 @@ function K(e) {
             (0, i.jsxs)("div", {
                 className: z.DD,
                 children: [
-                    (0, i.jsx)(L.D, { variant: "heading-sm/medium", color: "text-default", id: n, children: s }),
-                    null != o && (0, i.jsx)(T.E, { variant: "text-xs/normal", color: "text-subtle", children: o }),
+                    (0, i.jsx)(L.D, { variant: "heading-sm/medium", color: "text-default", id: n, children: o }),
+                    null != s && (0, i.jsx)(T.E, { variant: "text-xs/normal", color: "text-subtle", children: s }),
                 ],
             }),
             (0, i.jsx)(Z, { widget: r, actionButtons: u, disabledInteraction: l, userId: t, additionalMenuItems: c }),
@@ -276,15 +276,15 @@ function K(e) {
 }
 function Z(e) {
     let { widget: t, actionButtons: n, disabledInteraction: r, userId: l, additionalMenuItems: a } = e,
-        s = (0, w.bG)([x.default], () => x.default.getId());
+        o = (0, w.bG)([x.default], () => x.default.getId());
     return r
         ? null
         : null != n && n.length > 0
           ? (0, i.jsx)("div", { className: z.o1, children: n })
-          : s !== l
+          : o !== l
             ? (0, i.jsx)("div", {
                   className: z.o1,
-                  children: (0, i.jsx)(J, {
+                  children: (0, i.jsx)($, {
                       widget: t,
                       userId: l,
                       className: z.AQ,
@@ -296,7 +296,7 @@ function Z(e) {
 var X = n(192),
     Y = n(223503);
 function Q(e) {
-    let { index: t, widget: n, additionalManageWidgetMenuItems: l, children: s, getWidth: u } = e,
+    let { index: t, widget: n, additionalManageWidgetMenuItems: l, children: o, getWidth: u } = e,
         c = r.useRef(null),
         f = r.useRef(null),
         { registerManageWidgetButtonRef: h, manageFocusOnReorder: p } = (0, X.r)();
@@ -304,7 +304,7 @@ function Q(e) {
         let e = h(n.type);
         return (e(c.current), () => e(null));
     }, [h, n.type]);
-    let _ = r.useMemo(() => n.id ?? (0, o.Ld)(), [n.id]),
+    let _ = r.useMemo(() => n.id ?? (0, s.Ld)(), [n.id]),
         { isDragging: m, dragSourcePosition: w } = (0, g.gY)({
             dragRef: c,
             dropRef: f,
@@ -323,7 +323,7 @@ function Q(e) {
         ref: f,
         className: a()(Y.wX, { [Y.A]: I, [Y.Ze]: A, [Y.Id]: m }),
         "aria-label": M.intl.formatToPlainString(M.t.YLczh4, { positionNumber: t + 1 }),
-        children: [(0, i.jsx)(D, { buttonRef: c, widget: n, className: Y.vn, additionalMenuItems: l }), s],
+        children: [(0, i.jsx)(D, { buttonRef: c, widget: n, className: Y.vn, additionalMenuItems: l }), o],
     });
 }
 function ee(e) {
@@ -342,7 +342,7 @@ function ee(e) {
             headerClassName: v,
             additionalManageWidgetMenuItems: y,
         } = e,
-        b = (0, o.GV)(),
+        b = (0, s.GV)(),
         R = r.useRef(null),
         S = (0, _.g)(),
         { trackUserProfileAction: O } = (0, u.NJ)(),
@@ -350,14 +350,14 @@ function ee(e) {
             let { widget: t, onAction: n } = e,
                 [i, l] = (0, r.useState)(!1),
                 a = t instanceof p.R ? t.applicationId : null,
-                { fetched: s } = (0, h.U)(a),
-                o = (0, r.useCallback)(
+                { fetched: o } = (0, h.U)(a),
+                s = (0, r.useCallback)(
                     (e) => {
                         e && (n({ action: "VIEW_WIDGET", ...t.getProfileAnalyticsOptions() }), l(!0));
                     },
                     [n, t],
                 );
-            return (0, f.K)(o, void 0, !i && (null == a || s));
+            return (0, f.K)(s, void 0, !i && (null == a || o));
         })({ widget: n, onAction: O }),
         N = S === n.type;
     (0, c.A)(C, N);
@@ -378,7 +378,7 @@ function ee(e) {
                     className: v,
                     additionalMenuItems: y,
                 }),
-                (0, i.jsxs)(s.F, { children: [l, E] }),
+                (0, i.jsxs)(o.F, { children: [l, E] }),
             ],
         });
     }
