@@ -118,6 +118,7 @@ class h extends c {
             r = this.pendingEvents.get(s) ?? [];
         (r.push(t), this.pendingEvents.set(s, r));
     }
+    getLocation(e) {}
     flushPendingEvents(e) {
         let t = (0, a.bS)(e),
             s = this.pendingEvents.get(t);

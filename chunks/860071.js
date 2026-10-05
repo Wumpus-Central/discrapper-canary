@@ -150,8 +150,8 @@ let T = new p(r.h, {
     },
     SEARCH_MESSAGES_SUCCESS: f,
     SMART_SEARCH_FETCH_SUCCESS: function (e) {
-        let { guildId: t, messages: n } = e;
-        return h(t, n);
+        let { smartSearchQuery: t, messages: n } = e;
+        return h(t.guildId, n);
     },
     MOD_VIEW_SEARCH_MESSAGES_SUCCESS: f,
     LOCAL_MESSAGES_LOADED: I,
