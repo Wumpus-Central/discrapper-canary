@@ -27876,6 +27876,7 @@
   "WzJTZI": "{intervalCount, number} day discount applied",
   "Chj1Ke": "Discount applied until {discountEndDate, date, short}",
   "mWL08+": "Free Trial",
+  "uCXulJ": "Gifting {intervalCount, plural,one {# month}other {# months} saves you {savingsPercent, number}%. Nice move!",
   "XWo+Bp": "{count, plural,one {Free reward selected}other {Free rewards selected}",
   "7sYIBL": "Gifting a year saves you {savingsPercent, number}%. Nice move!",
   "UdSuwf": "This purchase requires your subscription payment method.",
