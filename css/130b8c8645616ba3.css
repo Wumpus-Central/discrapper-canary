@@ -204,19 +204,10 @@
     flex-basis: 50%
 }
 
-.flexRow__0982b {
-    flex-direction: row;
-    gap: var(--space-8)
-}
-
-.flexRow__0982b,
 .guildSpaceHeader__0982b {
     align-items: center;
-    display: flex
-}
-
-.guildSpaceHeader__0982b {
     cursor: pointer;
+    display: flex;
     justify-content: space-between;
     width: 100%
 }
@@ -296,4 +287,4 @@
     height: 1px
 }
 
-/*# sourceMappingURL=e4716b43ac664733.css.map*/
+/*# sourceMappingURL=130b8c8645616ba3.css.map*/

@@ -1,0 +1,3 @@
+p.exports = JSON.parse(
+    '{"HmFYc5":["\uBCC0\uACBD \uC0AC\uD56D\uC744 \uC800\uC7A5\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4. \uB2E4\uC2DC \uC2DC\uB3C4\uD574 \uC8FC\uC138\uC694."],"Lx0P8k":["\uBB34\uB8CC"]}',
+);

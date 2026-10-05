@@ -1194,9 +1194,8 @@ var eL = n(529609),
     eK = n(486020),
     e$ = n(488428),
     eV = n(776231),
-    eX = n(968176),
-    eY = n(986898);
-function eJ(e) {
+    eX = n(986898);
+function eY(e) {
     let { guildId: t, header: n, canEdit: u, isEditing: s, isSaving: c } = e,
         d = (0, i.bG)([f.A], () => f.A.getGuild(t), [t]),
         o = (0, i.bG)([ez.A], () => ez.A.getOnlineCount(t), [t]),
@@ -1229,15 +1228,15 @@ function eJ(e) {
     return null == d
         ? null
         : (0, l.jsxs)("div", {
-              className: eY.wx,
+              className: eX.wx,
               children: [
                   null != v
-                      ? (0, l.jsx)("img", { className: eY.vK, src: v, alt: "" })
-                      : (0, l.jsx)("div", { className: eY.vK, style: { background: _ }, "aria-hidden": !0 }),
-                  (0, l.jsx)("div", { className: eY.f5, "aria-hidden": !0 }),
+                      ? (0, l.jsx)("img", { className: eX.vK, src: v, alt: "" })
+                      : (0, l.jsx)("div", { className: eX.vK, style: { background: _ }, "aria-hidden": !0 }),
+                  (0, l.jsx)("div", { className: eX.f5, "aria-hidden": !0 }),
                   s
                       ? (0, l.jsxs)("div", {
-                            className: eY.j0,
+                            className: eX.j0,
                             children: [
                                 (0, l.jsx)(eq.A, {
                                     variant: "secondary",
@@ -1267,17 +1266,17 @@ function eJ(e) {
                         })
                       : null,
                   (0, l.jsxs)("div", {
-                      className: eY.D_,
+                      className: eX.D_,
                       children: [
                           (0, l.jsx)(eO.Ay, {
-                              className: eY.Kk,
+                              className: eX.Kk,
                               guild: d,
                               size: eO.Ay.Sizes.LARGE,
                               active: !0,
                               "aria-hidden": !0,
                           }),
                           (0, l.jsxs)("div", {
-                              className: eY.pq,
+                              className: eX.pq,
                               children: [
                                   (0, l.jsx)(eU.D, {
                                       variant: "heading-lg/semibold",
@@ -1286,13 +1285,13 @@ function eJ(e) {
                                       children: d.name,
                                   }),
                                   (0, l.jsxs)("div", {
-                                      className: eY.M1,
+                                      className: eX.M1,
                                       children: [
                                           null != o
                                               ? (0, l.jsxs)("div", {
-                                                    className: eY.dJ,
+                                                    className: eX.dJ,
                                                     children: [
-                                                        (0, l.jsx)("span", { className: eY.RS, "aria-hidden": !0 }),
+                                                        (0, l.jsx)("span", { className: eX.RS, "aria-hidden": !0 }),
                                                         (0, l.jsx)(a.E, {
                                                             variant: "text-xs/semibold",
                                                             color: "currentColor",
@@ -1303,9 +1302,9 @@ function eJ(e) {
                                               : null,
                                           null != g
                                               ? (0, l.jsxs)("div", {
-                                                    className: eY.dJ,
+                                                    className: eX.dJ,
                                                     children: [
-                                                        (0, l.jsx)("span", { className: eY.kq, "aria-hidden": !0 }),
+                                                        (0, l.jsx)("span", { className: eX.kq, "aria-hidden": !0 }),
                                                         (0, l.jsx)(a.E, {
                                                             variant: "text-xs/semibold",
                                                             color: "currentColor",
@@ -1315,7 +1314,7 @@ function eJ(e) {
                                                 })
                                               : null,
                                           (0, l.jsxs)("div", {
-                                              className: eY.dJ,
+                                              className: eX.dJ,
                                               children: [
                                                   (0, l.jsx)(F._, {
                                                       size: "xs",
@@ -1341,20 +1340,20 @@ function eJ(e) {
                       !s &&
                       (0, l.jsx)(U.$, {
                           icon: eM.PencilIcon,
-                          text: X.intl.string(eX.default.KcOpCm),
+                          text: X.intl.string(V.default.KcOpCm),
                           size: "sm",
                           onClick: () => (0, C.Wd)(t),
                       }),
               ],
           });
 }
-var eQ = n(554146),
-    eZ = n(942857),
-    e0 = n(131607),
-    e1 = n(967198),
-    e2 = n(725041),
-    e6 = n(49999),
-    e8 = n(312152);
+var eJ = n(554146),
+    eQ = n(942857),
+    eZ = n(131607),
+    e0 = n(967198),
+    e1 = n(725041),
+    e2 = n(49999),
+    e6 = n(312152);
 function e3(e) {
     let t,
         { guildId: m } = e,
@@ -1392,12 +1391,12 @@ function e3(e) {
         [W, H] = (0, i.yK)([A.A], () => [A.A.getDraft(m), A.A.getSaveStatus(m)], [m]),
         F = U && null != W;
     !(function (e, t) {
-        let a = (0, z.useHasModalOpen)(e2.J),
-            u = (0, i.bG)([e1.A], () => e1.A.getGuildId()),
-            s = (0, eZ.A)(),
-            [c, d] = (0, e0.kn)(t && u === e && !s ? [eQ.M.GUILD_SPACE_NUX_MODAL] : [], e6.m.GUILD_SPACE_NUX, !0),
+        let a = (0, z.useHasModalOpen)(e1.J),
+            u = (0, i.bG)([e0.A], () => e0.A.getGuildId()),
+            s = (0, eQ.A)(),
+            [c, d] = (0, eZ.kn)(t && u === e && !s ? [eJ.M.GUILD_SPACE_NUX_MODAL] : [], e2.m.GUILD_SPACE_NUX, !0),
             o = r.useRef(!1),
-            f = c === eQ.M.GUILD_SPACE_NUX_MODAL;
+            f = c === eJ.M.GUILD_SPACE_NUX_MODAL;
         (r.useEffect(() => {
             o.current = !1;
         }, [e, u]),
@@ -1417,7 +1416,7 @@ function e3(e) {
                                     onClose: n.onClose,
                                 });
                         },
-                        { modalKey: e2.J },
+                        { modalKey: e1.J },
                     ).catch(() => {
                         o.current = !1;
                     }));
@@ -1467,9 +1466,9 @@ function e3(e) {
     }, [m, L, V, Y]),
     null == L || null == q)
         ? (0, l.jsx)("div", {
-              className: e8.MY,
+              className: e6.MY,
               children: (0, l.jsx)("div", {
-                  className: e8.F,
+                  className: e6.F,
                   children:
                       "error" !== N || P
                           ? (0, l.jsx)(u.y, { type: u.y.Type.SPINNING_CIRCLE, "aria-label": X.intl.string(X.t.ZTNur7) })
@@ -1483,16 +1482,16 @@ function e3(e) {
           })
         : (0, l.jsx)(et, {
               children: (0, l.jsxs)("div", {
-                  className: e8.MY,
+                  className: e6.MY,
                   children: [
                       (0, l.jsx)(s.Ch, {
                           ref: E,
-                          className: e8.XG,
+                          className: e6.XG,
                           children: (0, l.jsxs)("div", {
-                              className: e8.Qs,
+                              className: e6.Qs,
                               children: [
                                   U && B ? (0, l.jsx)(R.A, { onPublish: O }) : null,
-                                  (0, l.jsx)(eJ, {
+                                  (0, l.jsx)(eY, {
                                       guildId: m,
                                       header: F ? W.header : L.header,
                                       isEditing: F,
