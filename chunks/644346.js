@@ -14,16 +14,16 @@ n(456647);
 var p = n(633075),
     g = n(451395),
     _ = n(716804),
-    w = n(675816),
-    m = n(17928),
+    m = n(675816),
+    w = n(17928),
     E = n(939249),
     A = n(772838),
     v = n(140735),
     y = n(834730),
     T = n(866665),
     C = n(192308),
-    I = n(922016),
-    b = n(980707),
+    b = n(922016),
+    I = n(980707),
     R = n(477782),
     O = n(241326),
     N = n(442433),
@@ -61,8 +61,8 @@ function j(e) {
 }
 function D(e) {
     let { children: t } = e,
-        n = (0, m.bG)([S.Ay], () => S.Ay.keyboardModeEnabled),
-        { isDragging: r } = (0, w.V)((e) => ({ isDragging: e.isDragging() }));
+        n = (0, w.bG)([S.Ay], () => S.Ay.keyboardModeEnabled),
+        { isDragging: r } = (0, m.V)((e) => ({ isDragging: e.isDragging() }));
     return (0, i.jsx)(T.m, {
         __unsupportedReactNodeAsText: (0, i.jsxs)("div", {
             className: U.HE,
@@ -128,11 +128,13 @@ function L(e) {
                     n.e("908608"),
                     n.e("741786"),
                     n.e("553683"),
+                    n.e("536973"),
                     n.e("720161"),
                     n.e("746623"),
                     n.e("897117"),
                     n.e("415809"),
                     n.e("787320"),
+                    n.e("914248"),
                     n.e("124981"),
                     n.e("392310"),
                     n.e("353600"),
@@ -143,14 +145,14 @@ function L(e) {
             { stackingBehavior: "stack" },
         );
     }
-    return (0, i.jsx)(I.Y, {
+    return (0, i.jsx)(b.Y, {
         targetElementRef: l,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(b.W, {
+            return (0, i.jsx)(I.W, {
                 "data-menu-migrated": !0,
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
@@ -203,14 +205,14 @@ function V(e) {
                       .catch(() => (0, G.GJ)(e, t));
         })(n, t);
     }
-    return (0, i.jsx)(I.Y, {
+    return (0, i.jsx)(b.Y, {
         targetElementRef: s,
         align: "top",
         position: "right",
         disablePointerEvents: !1,
         renderPopout: (e) => {
             let { closePopout: t } = e;
-            return (0, i.jsx)(b.W, {
+            return (0, i.jsx)(I.W, {
                 "data-menu-migrated": !0,
                 navId: "user-profile-widget-context-menu",
                 onClose: () => {
@@ -276,7 +278,7 @@ function K(e) {
 }
 function Y(e) {
     let { widget: t, actionButtons: n, disabledInteraction: r, userId: l, additionalMenuItems: a } = e,
-        o = (0, m.bG)([P.default], () => P.default.getId());
+        o = (0, w.bG)([P.default], () => P.default.getId());
     return r
         ? null
         : null != n && n.length > 0
@@ -305,7 +307,7 @@ function Q(e) {
         return (e(c.current), () => e(null));
     }, [h, n.type]);
     let _ = r.useMemo(() => n.id ?? (0, s.Ld)(), [n.id]),
-        { isDragging: w, dragSourcePosition: m } = (0, g.gY)({
+        { isDragging: m, dragSourcePosition: w } = (0, g.gY)({
             dragRef: c,
             dropRef: f,
             index: t,
@@ -316,12 +318,12 @@ function Q(e) {
             onReorder: d.R_,
             onEnd: () => p(n.type),
         }),
-        E = null != m,
-        A = E && t < m,
-        v = E && t > m;
+        E = null != w,
+        A = E && t < w,
+        v = E && t > w;
     return (0, i.jsxs)("div", {
         ref: f,
-        className: a()(Z.wX, { [Z.A]: A, [Z.Ze]: v, [Z.Id]: w }),
+        className: a()(Z.wX, { [Z.A]: A, [Z.Ze]: v, [Z.Id]: m }),
         "aria-label": M.intl.formatToPlainString(M.t.YLczh4, { positionNumber: t + 1 }),
         children: [(0, i.jsx)(j, { buttonRef: c, widget: n, className: Z.vn, additionalMenuItems: l }), o],
     });
@@ -333,8 +335,8 @@ function ee(e) {
             children: l,
             allowEditing: d,
             disableInteraction: g,
-            className: w,
-            index: m,
+            className: m,
+            index: w,
             trailingContent: E,
             headerTitle: A,
             headerSubtitle: v,
@@ -342,8 +344,8 @@ function ee(e) {
             headerClassName: T,
             additionalManageWidgetMenuItems: C,
         } = e,
-        I = (0, s.GV)(),
-        b = r.useRef(null),
+        b = (0, s.GV)(),
+        I = r.useRef(null),
         R = (0, _.g)(),
         { trackUserProfileAction: O } = (0, u.NJ)(),
         N = (function (e) {
@@ -361,15 +363,15 @@ function ee(e) {
         })({ widget: n, onAction: O }),
         S = R === n.type;
     (0, c.A)(N, S);
-    let P = d && null != m && !g;
+    let P = d && null != w && !g;
     function x() {
         return (0, i.jsxs)("div", {
-            ref: b,
-            className: a()(Z.kL, w),
+            ref: I,
+            className: a()(Z.kL, m),
             children: [
                 (0, i.jsx)(K, {
                     userId: t,
-                    headingId: I,
+                    headingId: b,
                     title: A,
                     subtitle: v,
                     actionButtons: y,
@@ -384,12 +386,12 @@ function ee(e) {
     }
     return (0, i.jsx)("section", {
         ref: N,
-        "aria-labelledby": I,
+        "aria-labelledby": b,
         children: P
             ? (0, i.jsx)(Q, {
-                  index: m ?? 0,
+                  index: w ?? 0,
                   widget: n,
-                  getWidth: () => b.current?.offsetWidth,
+                  getWidth: () => I.current?.offsetWidth,
                   additionalManageWidgetMenuItems: C,
                   children: x(),
               })

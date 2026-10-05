@@ -522,7 +522,7 @@ var e$ = n(202091),
     e3 = n(230135),
     e2 = n(73153);
 let e9 = {};
-class e7 extends u.Ay.PersistedStore {
+class e5 extends u.Ay.PersistedStore {
     static displayName = "GuildBoostingProgressBarPersistedStore";
     static persistKey = "PremiumGuildProgressBarPersistedStore";
     initialize(e) {
@@ -535,7 +535,7 @@ class e7 extends u.Ay.PersistedStore {
         return e9[e];
     }
 }
-let e5 = new e7(e2.h, {
+let e7 = new e5(e2.h, {
     APPLIED_GUILD_BOOST_COUNT_UPDATE: function (e) {
         let { guildId: t, premiumCount: n } = e;
         e9 = { ...e9, [t]: n };
@@ -635,7 +635,7 @@ function ti(e) {
         o = r.useCallback(() => {
             (0, eK.A)(t.id, F.A.GUILD_BOOSTING_SIDEBAR_DISPLAY);
         }, [t.id]),
-        d = (0, u.bG)([e5], () => e5.getCountForGuild(t.id) ?? 0);
+        d = (0, u.bG)([e7], () => e7.getCountForGuild(t.id) ?? 0);
     r.useEffect(() => {
         d !== t.premiumSubscriberCount && (0, e3.u)(t.id, t.premiumSubscriberCount);
     }, [t.id, d, t.premiumSubscriberCount]);
@@ -728,7 +728,7 @@ var tg = n(787541),
 function t9(e) {
     e.stopPropagation();
 }
-function t7(e) {
+function t5(e) {
     let { label: t, onClick: n, tabIndex: i } = e;
     return (0, s.jsx)(Y.m, {
         text: t,
@@ -742,7 +742,7 @@ function t7(e) {
         }),
     });
 }
-let t5 = k(
+let t7 = k(
         r.memo(function (e) {
             let t,
                 {
@@ -896,7 +896,7 @@ let t5 = k(
                                         className: t2.Y_,
                                         children:
                                             null != I
-                                                ? (0, s.jsx)(t7, { label: I.label, onClick: I.perform, tabIndex: G })
+                                                ? (0, s.jsx)(t5, { label: I.label, onClick: I.perform, tabIndex: G })
                                                 : null,
                                     }),
                                 ],
@@ -1026,7 +1026,7 @@ let ns = r.memo(function (e) {
         case tx.TF: {
             let e = i.getNamedCategoryFromSection(t);
             if (null == e) return null;
-            return (0, s.jsx)(t5, {
+            return (0, s.jsx)(t7, {
                 channel: e.record,
                 position: e.position,
                 disableManageChannels: o,
@@ -1041,7 +1041,7 @@ let ns = r.memo(function (e) {
         default: {
             let e = i.getNamedCategoryFromSection(t);
             if (null == e) return null;
-            return (0, s.jsx)(t5, { channel: e.record, position: e.position, disableManageChannels: o });
+            return (0, s.jsx)(t7, { channel: e.record, position: e.position, disableManageChannels: o });
         }
     }
 });
@@ -1585,21 +1585,21 @@ let n3 = r.memo(function (e) {
 });
 var n2 = n(740426),
     n9 = n(826673),
-    n7 = n(591552),
-    n5 = n(202776),
+    n5 = n(591552),
+    n7 = n(202776),
     n6 = n(454058),
     n4 = n(573163);
 function n8(e) {
     let { guild: t, selected: i } = e,
-        l = (0, n5.A)(t),
+        l = (0, n7.A)(t),
         a = (0, n9.HX)(W.M.CHANNEL_BROWSER_NEW_BADGE_NUX),
         o = (0, tS.yK)([n6.A], () =>
             Array.from(n6.A.getNewChannelIds(t.id)).filter((e) => n6.A.shouldIndicateNewChannel(t.id, e)),
         ),
         d = (0, tS.bG)([n4.Ay], () => n4.Ay.hasUnread(t.id, nV.P.GUILD_ONBOARDING_QUESTION)),
         c = o.length > tx.rR,
-        u = (0, tS.bG)([n7.A, n4.Ay], () => {
-            let e = n7.A.lastFetchedAt(t.id),
+        u = (0, tS.bG)([n5.A, n4.Ay], () => {
+            let e = n5.A.lastFetchedAt(t.id),
                 n = n4.Ay.lastMessageId(t.id, nV.P.GUILD_ONBOARDING_QUESTION);
             if (null == n) return !1;
             let i = tc.default.extractTimestamp(n);
@@ -2280,8 +2280,8 @@ var i1 = n(922016),
     i3 = n(367513),
     i2 = n(296216),
     i9 = n(963027),
-    i7 = n(202384),
-    i5 = n(51758),
+    i5 = n(202384),
+    i7 = n(51758),
     i6 = n(139033),
     i4 = n(305866),
     i8 = n(123292),
@@ -2575,7 +2575,7 @@ class lU extends nO {
                 openChatOnClick: s,
             } = this.props,
             r = e.getGuildId();
-        (null != r && (0, i5.V)(r) && (0, i7.Ze)(r),
+        (null != r && (0, i7.V)(r) && (0, i5.Ze)(r),
             i && this.setState({ shouldShowGuildVerificationPopout: !0 }),
             t ||
                 n ||
@@ -3074,8 +3074,8 @@ function l2(e) {
     });
 }
 var l9 = n(364522),
-    l7 = n(302959),
-    l5 = n(35903),
+    l5 = n(302959),
+    l7 = n(35903),
     l6 = n(970928),
     l4 = n(427262),
     l8 = n(641635);
@@ -3183,8 +3183,8 @@ function sl(e) {
                   }),
                   (0, s.jsx)("div", {
                       className: si.M4,
-                      children: (0, s.jsx)(l5.A, {
-                          type: l7.M.VOICE_CHANNEL,
+                      children: (0, s.jsx)(l7.A, {
+                          type: l5.M.VOICE_CHANNEL,
                           activity: n,
                           embeddedActivity: i.embeddedActivity,
                           user: a,
@@ -3419,13 +3419,16 @@ class sc extends nO {
                     n.e("379995"),
                     n.e("544058"),
                     n.e("591377"),
+                    n.e("356675"),
                     n.e("65200"),
                     n.e("35723"),
                     n.e("566378"),
                     n.e("256372"),
                     n.e("29542"),
+                    n.e("206152"),
                     n.e("248804"),
-                    n.e("670954"),
+                    n.e("141049"),
+                    n.e("982921"),
                     n.e("25173"),
                 ]).then(n.bind(n, 468916));
                 return (n) => (0, s.jsx)(e, { ...n, channel: t, guild: i });
@@ -4023,8 +4026,8 @@ var sK = n(845056),
     s3 = n(493819),
     s2 = n(722884),
     s9 = n(579129),
-    s7 = n(176431);
-function s5(e) {
+    s5 = n(176431);
+function s7(e) {
     let { channel: t, imageUrl: i, animatedUrl: l, bannerHash: a, canModifyHangout: o } = e,
         d = (0, sQ.S)(i),
         c = (0, ey.je)(t),
@@ -4048,22 +4051,22 @@ function s5(e) {
         );
     return (0, s.jsxs)("div", {
         ref: u,
-        className: s7.rs,
+        className: s5.rs,
         onContextMenu: g,
         children: [
             (0, s.jsx)("div", {
-                className: s7.ZS,
+                className: s5.ZS,
                 style: null != d ? { backgroundColor: d } : void 0,
-                children: (0, s.jsx)(s3.A, { imageUrl: i, animatedUrl: l, className: s7.Sl }),
+                children: (0, s.jsx)(s3.A, { imageUrl: i, animatedUrl: l, className: s5.Sl }),
             }),
             o
                 ? (0, s.jsxs)("div", {
-                      className: s7.n_,
+                      className: s5.n_,
                       children: [
                           (0, s.jsx)(Y.m, {
                               text: el.intl.string(s9.default.XJ4UpB),
                               children: (0, s.jsx)(X.D, {
-                                  className: s7.HF,
+                                  className: s5.HF,
                                   onClick: h,
                                   children: (0, s.jsx)(sJ.PencilIcon, { size: "xs", color: "currentColor" }),
                               }),
@@ -4071,7 +4074,7 @@ function s5(e) {
                           (0, s.jsx)(Y.m, {
                               text: el.intl.string(s9.default.XV4qT6),
                               children: (0, s.jsx)(X.D, {
-                                  className: s7.HF,
+                                  className: s5.HF,
                                   onClick: m,
                                   children: (0, s.jsx)(sZ.TrashIcon, { size: "xs", color: "currentColor" }),
                               }),
@@ -4090,9 +4093,9 @@ function s6(e) {
         }, [t]);
     return (0, s.jsx)("div", {
         ref: n,
-        className: s7._o,
+        className: s5._o,
         children: (0, s.jsxs)(X.D, {
-            className: s7.hH,
+            className: s5.hH,
             onClick: i,
             children: [
                 (0, s.jsx)(s$.X, { size: "xs", color: "currentColor" }),
@@ -4119,7 +4122,7 @@ function s4(e) {
         }, [t.guild_id, d]);
     return i
         ? null != c
-            ? (0, s.jsx)(s5, {
+            ? (0, s.jsx)(s7, {
                   channel: t,
                   imageUrl: c.imageUrl,
                   animatedUrl: c.animatedUrl,
@@ -4276,7 +4279,7 @@ class ro extends nO {
     handleClick = () => {
         let { channel: e } = this.props,
             t = e.getGuildId();
-        (null != t && (0, i5.V)(t) && (0, i7.Ze)(t), this.handleVoiceConnect());
+        (null != t && (0, i7.V)(t) && (0, i5.Ze)(t), this.handleVoiceConnect());
     };
     handleVoiceStatusClick = (e) => {
         let { connected: t, channel: n } = this.props;
