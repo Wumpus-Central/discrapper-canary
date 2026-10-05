@@ -45,10 +45,10 @@ let L = function (t) {
                 isQuestAccessSuspended: d = !1,
             } = t,
             L = (0, r.fc)(e),
-            y = _(e, o, a, O(n, e)),
-            N = C === c.V3.QUEST_HOME_TILE_V2_FOOTER,
-            g = N ? (0, I.Q_)(e).icon : (0, I.Oz)(e),
-            S = N
+            N = _(e, o, a, O(n, e)),
+            y = C === c.V3.QUEST_HOME_TILE_V2_FOOTER,
+            g = y ? (0, I.Q_)(e).icon : (0, I.Oz)(e),
+            S = y
                 ? (0, l.C0)(e)
                 : (function (t, e) {
                       if ((0, E.K$)(t)) return f.intl.string(f.t["/cXIc6"]);
@@ -63,19 +63,19 @@ let L = function (t) {
                                 : f.intl.string(f.t.l7E81v);
                       return f.intl.string(f.t["9KoPyB"]);
                   })(e, L);
-        return null == y
+        return null == N
             ? (0, s.jsx)(i.$, { size: u, variant: "secondary", disabled: !0, text: S, fullWidth: !0 })
             : (0, s.jsx)(i.$, {
                   size: u,
                   variant: (0, c.wX)(C),
-                  onClick: d ? I.FS : y,
+                  onClick: d ? I.FS : N,
                   text: S,
                   icon: g,
                   fullWidth: !0,
                   "aria-disabled": d || void 0,
               });
     },
-    y = function (t) {
+    N = function (t) {
         let {
                 quest: e,
                 taskType: n,
@@ -96,10 +96,10 @@ let L = function (t) {
                 sourceQuestContent: o,
             }),
             L = (0, l.vj)(e),
-            y = _(e, r, o, O(n, e));
-        return (0, s.jsx)(i.$, { variant: (0, c.wX)(x), fullWidth: !0, size: E, onClick: A ? y : T, text: A ? L : I });
+            N = _(e, r, o, O(n, e));
+        return (0, s.jsx)(i.$, { variant: (0, c.wX)(x), fullWidth: !0, size: E, onClick: A ? N : T, text: A ? L : I });
     };
-var N = n(17928),
+var y = n(17928),
     g = n(859703),
     S = n(630037);
 let m = function (t) {
@@ -114,7 +114,7 @@ let m = function (t) {
             isQuestAccessSuspended: C = !1,
         } = t,
         d = e.id,
-        { isClaiming: E } = (0, N.cf)(
+        { isClaiming: E } = (0, y.cf)(
             [g.A],
             () => ({ isClaiming: g.A.isClaimingReward(d) || g.A.isFetchingRewardCode(d) }),
             [d],
@@ -142,21 +142,21 @@ var Q = n(582128),
     R = n(323889),
     P = n(141628),
     D = n(509434),
-    p = n(274670),
-    v = n(144779),
-    h = n(738822),
+    v = n(274670),
+    h = n(144779),
+    p = n(738822),
     U = n(104886),
     j = n(18437),
     M = n(971649),
     q = n(651892),
     b = n(901406),
     w = n(862611),
-    k = n(284846),
-    W = n(862482),
+    W = n(284846),
+    k = n(862482),
     X = n(663417),
     z = n(775602),
-    V = n(248489);
-function F(t) {
+    F = n(248489);
+function V(t) {
     let {
             quest: e,
             analyticsCtxQuestContent: n,
@@ -168,16 +168,16 @@ function F(t) {
         } = t,
         E = (0, j.Ut)(),
         x = (0, M.wW)(),
-        A = (0, N.bG)([z.Ay], () => z.Ay.useReducedMotion),
+        A = (0, y.bG)([z.Ay], () => z.Ay.useReducedMotion),
         T = (0, u.Xf)({ useReducedMotion: A }),
         [O, _] = Q.useState(!1),
-        { startingConsoleQuest: L, startConsoleQuest: y } = (0, r.Wj)({
+        { startingConsoleQuest: L, startConsoleQuest: N } = (0, r.Wj)({
             questId: e.id,
             beforeRequest: () => {
                 (c ? T.startAnimation() : _(!0),
                     (0, U.E5)(U.kI.STEP_2_CLICKED_INTERNAL, "quest_primary_cta_enrolled_play_quest")
-                        ? (0, p.r)({
-                              type: v.F.CLICK_INTERNAL,
+                        ? (0, v.r)({
+                              type: h.F.CLICK_INTERNAL,
                               adCreativeType: R.p.QUEST,
                               adCreativeId: e.id,
                               questContentCTA: d.Cy.DEFIBRILLATOR,
@@ -200,16 +200,16 @@ function F(t) {
                 c ? T.stopAnimation() : _(!1);
             },
         }),
-        g = C ? I.FS : y;
+        g = C ? I.FS : N;
     return c
-        ? (0, s.jsx)(W.$n, {
+        ? (0, s.jsx)(k.$n, {
               "data-migration-pending": !0,
-              color: W.XD.PRIMARY,
+              color: k.XD.PRIMARY,
               onClick: g,
               disabled: L,
               "aria-disabled": C || void 0,
-              className: V.x,
-              children: (0, s.jsxs)("div", { className: V.t, children: [T?.render(), f.intl.string(f.t.nPThNb)] }),
+              className: F.x,
+              children: (0, s.jsxs)("div", { className: F.t, children: [T?.render(), f.intl.string(f.t.nPThNb)] }),
           })
         : (0, s.jsx)(i.$, {
               variant: "secondary",
@@ -260,32 +260,32 @@ function tC(t) {
             return (A.length > 0 && t.add(tc.fg2.XBOX), O.length > 0 && t.add(tc.fg2.PLAYSTATION), t);
         }, [A.length, O.length]),
         L = Q.useContext(tn.q),
-        [y, N] = (0, r.tZ)(e.id),
+        [N, y] = (0, r.tZ)(e.id),
         [g, S] = Q.useState(null),
         [m, R] = Q.useState(L?.getAutoOpen() ?? !1),
-        [P, p] = Q.useState(null),
-        v = Q.useRef(null),
-        h = (0, M.go)(),
+        [P, v] = Q.useState(null),
+        h = Q.useRef(null),
+        p = (0, M.go)(),
         U = (0, tt.O)((t) => t.errorHintsByQuestId.get(e.id));
     (0, K.u5)(() => {
         m && L?.onMenuOpen();
     });
     let j = Q.useCallback(
             (t) => {
-                if (y === T.fO.CONSOLE && g === t && _.has(t))
+                if (N === T.fO.CONSOLE && g === t && _.has(t))
                     return U?.some((t) => (0, b.$J)(t) === g) ? "error" : "connected";
             },
-            [y, g, U, _],
+            [N, g, U, _],
         ),
         q = Q.useCallback(
             (t) => {
                 if (t === T.fO.DESKTOP) {
                     (S(null),
-                        N(T.fO.DESKTOP),
+                        y(T.fO.DESKTOP),
                         (0, b.pu)(e, {
                             content: l,
                             ctaContent: d.Cy.OPEN_GAME_LINK,
-                            impressionId: h,
+                            impressionId: p,
                             sourceQuestContent: u,
                         }));
                     return;
@@ -298,21 +298,21 @@ function tC(t) {
                             ctaContent: d.Cy.CONNECT_CONSOLE,
                             position: C,
                             rowIndex: E,
-                            impressionId: h,
+                            impressionId: p,
                             sourceQuestContent: u,
                         },
                         t,
                     ),
                     S(t),
-                    N(T.fO.CONSOLE));
+                    y(T.fO.CONSOLE));
             },
-            [_, N, e, l, C, E, u, h],
+            [_, y, e, l, C, E, u, p],
         ),
         w = Q.useCallback(
-            (t) => (t === T.fO.DESKTOP ? y === T.fO.DESKTOP : y === T.fO.CONSOLE && g === t && _.has(t)),
-            [y, g, _],
+            (t) => (t === T.fO.DESKTOP ? N === T.fO.DESKTOP : N === T.fO.CONSOLE && g === t && _.has(t)),
+            [N, g, _],
         ),
-        k = [
+        W = [
             ...n.map((t) => ({
                 value: t,
                 get label() {
@@ -332,8 +332,8 @@ function tC(t) {
                 },
             },
         ],
-        W = {
-            buttonRef: v,
+        k = {
+            buttonRef: h,
             size: a,
             fullWidth: !0,
             variant: (0, c.wX)(o, "primary"),
@@ -341,22 +341,22 @@ function tC(t) {
             iconPosition: "end",
         };
     return x
-        ? (0, s.jsx)(i.$, { ...W, icon: B.a, onClick: I.FS, "aria-disabled": !0 })
+        ? (0, s.jsx)(i.$, { ...k, icon: B.a, onClick: I.FS, "aria-disabled": !0 })
         : (0, s.jsx)(Y.Y, {
-              targetElementRef: v,
+              targetElementRef: h,
               position: "bottom",
               shouldShow: m,
               onRequestOpen: () => {
                   (L?.onMenuOpen(), R(!0));
               },
               onRequestClose: () => {
-                  (L?.onMenuClose(), R(!1), p(null));
+                  (L?.onMenuClose(), R(!1), v(null));
               },
               renderPopout: (t) => {
                   let { closePopout: n } = t;
                   return (0, s.jsx)("div", {
-                      style: { minWidth: v.current?.offsetWidth },
-                      onMouseLeave: () => p(null),
+                      style: { minWidth: h.current?.offsetWidth },
+                      onMouseLeave: () => v(null),
                       children: (0, s.jsxs)(G.W, {
                           "data-menu-migrated": !0,
                           navId: `play-quest-platform-select-${e.id}`,
@@ -365,7 +365,7 @@ function tC(t) {
                           onSelect: void 0,
                           children: [
                               (0, s.jsx)($.rX, {
-                                  children: k.map((t) => {
+                                  children: W.map((t) => {
                                       let e = w(t.value),
                                           n = t.value === T.fO.DESKTOP && P === t.value,
                                           i = (function (t, e) {
@@ -405,7 +405,7 @@ function tC(t) {
                                                   children: t.label,
                                               }),
                                               action: () => q(t.value),
-                                              onFocus: () => p(t.value),
+                                              onFocus: () => v(t.value),
                                               leadingAccessory: { type: "icon", icon: i.icon, color: i.color },
                                               trailingIndicator: n
                                                   ? {
@@ -427,7 +427,7 @@ function tC(t) {
                                       );
                                   }),
                               }),
-                              y === T.fO.CONSOLE &&
+                              N === T.fO.CONSOLE &&
                                   null != g &&
                                   _.has(g) &&
                                   (0, s.jsx)($.rX, {
@@ -437,7 +437,7 @@ function tC(t) {
                                               variant: "text-md/normal",
                                               children: f.intl.string(f.t.cdd1iy),
                                           }),
-                                          onFocus: () => p(null),
+                                          onFocus: () => v(null),
                                           action: () => {
                                               (0, te.i)({ quest: e, sourceQuestContent: u, refreshOnOpen: !0 });
                                           },
@@ -452,7 +452,7 @@ function tC(t) {
                       }),
                   });
               },
-              children: (t) => (0, s.jsx)(i.$, { ...W, ...t, icon: m ? Z.t : B.a }),
+              children: (t) => (0, s.jsx)(i.$, { ...k, ...t, icon: m ? Z.t : B.a }),
           });
 }
 function td(t) {
@@ -470,8 +470,8 @@ function td(t) {
         A = (0, M.wW)(),
         T = (0, r.Vn)(e),
         O = (0, r.fc)(e),
-        [_, L, y] = (0, r.Qo)(e, O);
-    return T || _ === h.X0.DESKTOP
+        [_, L, N] = (0, r.Qo)(e, O);
+    return T || _ === p.X0.DESKTOP
         ? (0, s.jsx)(i.$, {
               variant: "secondary",
               size: C,
@@ -502,7 +502,7 @@ function td(t) {
                 fullWidth: !0,
                 "aria-disabled": E || void 0,
             })
-          : (0, s.jsx)(F, {
+          : (0, s.jsx)(V, {
                 quest: e,
                 analyticsCtxQuestContent: o,
                 analyticsCtxSourceQuestContent: a,
@@ -522,7 +522,7 @@ function tE(t) {
             size: u,
             isQuestAccessSuspended: C,
         } = t,
-        { hasAlreadyLinked: E } = (0, k.U)(e),
+        { hasAlreadyLinked: E } = (0, W.U)(e),
         x = (0, M.wW)(),
         A = (0, j.Ut)();
     if (!0 === E)
@@ -567,8 +567,8 @@ function tE(t) {
             C
                 ? (0, I.FS)()
                 : ((0, U.E5)(U.kI.STEP_2_CLICKED_INTERNAL, "quest_primary_cta_enrolled_play_quest")
-                      ? (0, p.r)({
-                            type: v.F.CLICK_INTERNAL,
+                      ? (0, v.r)({
+                            type: h.F.CLICK_INTERNAL,
                             adCreativeType: R.p.QUEST,
                             adCreativeId: e.id,
                             questContentCTA: d.Cy.OPEN_ACCOUNT_LINK_MODAL,
@@ -770,7 +770,7 @@ let tI = function (t) {
             surface: u,
         } = t;
         return u === c.V3.QUEST_HOME_TILE_FOOTER
-            ? (0, s.jsx)(y, {
+            ? (0, s.jsx)(N, {
                   quest: e,
                   taskType: n,
                   size: l,
@@ -815,7 +815,7 @@ let tI = function (t) {
               });
     };
 var tL = n(396813);
-function ty(t) {
+function tN(t) {
     switch (t) {
         case C.n.ACHIEVEMENT_IN_ACTIVITY:
         case C.n.PLAY_ACTIVITY:
@@ -825,7 +825,7 @@ function ty(t) {
             return d.Cy.ACCEPT_QUEST;
     }
 }
-let tN = function (t) {
+let ty = function (t) {
         var e;
         let {
                 quest: n,
@@ -836,21 +836,21 @@ let tN = function (t) {
                 isQuestAccessSuspended: O = !1,
                 analyticsCtxQuestContent: _,
                 analyticsCtxSourceQuestContent: L,
-                analyticsCtxQuestContentPosition: y,
+                analyticsCtxQuestContentPosition: N,
                 analyticsCtxQuestContentRowIndex: S,
             } = t,
             m = {
                 questContent: _,
-                questContentCTA: ty(o),
+                questContentCTA: tN(o),
                 sourceQuestContent: L,
-                questContentPosition: y,
+                questContentPosition: N,
                 questContentRowIndex: S,
             },
             R = n.id,
             P = u === c.V3.QUEST_HOME_TILE_V2_FOOTER,
-            { isEnrolling: D } = (0, N.cf)([g.A], () => ({ isEnrolling: g.A.isEnrolling(R) }), [R]),
-            { icon: p, iconPosition: v } = P ? (0, I.Q_)(n) : { icon: (0, I.Oz)(n) },
-            h = (0, j.Ut)(),
+            { isEnrolling: D } = (0, y.cf)([g.A], () => ({ isEnrolling: g.A.isEnrolling(R) }), [R]),
+            { icon: v, iconPosition: h } = P ? (0, I.Q_)(n) : { icon: (0, I.Oz)(n) },
+            p = (0, j.Ut)(),
             U = (function (t, e, n, s, i) {
                 let { launchInGameActivity: o } = (0, r.zW)(e),
                     a = (0, M.wW)(),
@@ -918,7 +918,7 @@ let tN = function (t) {
                               questContent: m.questContent,
                               questContentCTA: m.questContentCTA,
                               sourceQuestContent: m.sourceQuestContent,
-                              sourceQuestContentCTA: ty(o),
+                              sourceQuestContentCTA: tN(o),
                               questContentPosition: m.questContentPosition,
                               questContentRowIndex: m.questContentRowIndex,
                           });
@@ -940,11 +940,11 @@ let tN = function (t) {
             variant: (0, c.wX)(u, "primary"),
             onClick: () => {
                 if (O) {
-                    (h({
+                    (p({
                         questId: R,
                         questContent: _,
                         questContentCTA: d.Cy.QUEST_ACCESS_SUSPENDED,
-                        questContentPosition: y,
+                        questContentPosition: N,
                         questContentRowIndex: S,
                         sourceQuestContent: L,
                     }),
@@ -954,8 +954,8 @@ let tN = function (t) {
                 (x?.(), w());
             },
             text: q,
-            icon: p,
-            iconPosition: v,
+            icon: v,
+            iconPosition: h,
             fullWidth: !0,
             "aria-disabled": O || void 0,
         });
@@ -975,13 +975,13 @@ let tN = function (t) {
             A = (0, r.Hv)();
         if (0 === Object.keys(e.config.taskConfigV2.tasks).length)
             return (0, s.jsx)(i.$, { variant: "primary", fullWidth: !0, size: "sm", text: f.intl.string(f.t.P84bAD) });
-        let I = Object.values(e.config.taskConfigV2.tasks)[0],
+        let I = (0, c.cc)(e),
             T = (function () {
                 switch (x) {
                     case c.UA.UNENROLLED:
-                        return (0, s.jsx)(tN, {
+                        return (0, s.jsx)(ty, {
                             quest: e,
-                            taskType: I.type,
+                            taskType: I,
                             size: E,
                             surface: n,
                             preClickCallback: a,
@@ -994,7 +994,7 @@ let tN = function (t) {
                     case c.UA.ENROLLED:
                         return (0, s.jsx)(tT, {
                             quest: e,
-                            taskType: I.type,
+                            taskType: I,
                             size: E,
                             isQuestAccessSuspended: A,
                             analyticsCtxQuestContent: l,
@@ -1006,7 +1006,7 @@ let tN = function (t) {
                     case c.UA.INCOMPLETE:
                         return (0, s.jsx)(t_, {
                             quest: e,
-                            taskType: I.type,
+                            taskType: I,
                             size: E,
                             isQuestAccessSuspended: A,
                             analyticsCtxQuestContent: l,
@@ -1030,7 +1030,7 @@ let tN = function (t) {
                     case c.UA.EXPIRED_CLAIMED:
                         return (0, s.jsx)(tO, {
                             quest: e,
-                            taskType: I.type,
+                            taskType: I,
                             size: E,
                             surface: n,
                             analyticsCtxQuestContent: l,
@@ -1039,9 +1039,9 @@ let tN = function (t) {
                             analyticsCtxQuestContentRowIndex: d,
                         });
                     case c.UA.CLAIMED:
-                        return (0, s.jsx)(y, {
+                        return (0, s.jsx)(N, {
                             quest: e,
-                            taskType: I.type,
+                            taskType: I,
                             size: E,
                             surface: n,
                             analyticsCtxQuestContent: l,
