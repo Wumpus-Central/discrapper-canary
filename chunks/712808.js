@@ -1,40 +1,40 @@
 (n.d(t, {
-    DM: () => eg,
-    r2: () => ei,
-    $S: () => eU,
-    gm: () => eb,
-    n6: () => ej,
-    ss: () => ev,
-    cS: () => eN,
-    R7: () => es,
-    aF: () => e$,
-    Lj: () => eo,
-    JI: () => eD,
-    Vm: () => eH,
-    oX: () => eP,
-    ms: () => ey,
-    TV: () => en,
-    dv: () => Z,
-    Hc: () => Y,
-    Bn: () => ex,
-    XZ: () => el,
-    oB: () => e_,
-    ho: () => eJ,
-    $D: () => em,
-    fu: () => ee,
-    Ay: () => eq,
-    $C: () => er,
-    vX: () => eC,
-    c9: () => eT,
-    ct: () => ea,
-    dz: () => eS,
-    PK: () => eM,
-    Qe: () => eR,
-    y_: () => eI,
-    xE: () => eO,
-    nU: () => eA,
-    _m: () => eE,
-    Du: () => ef,
+    DM: () => eS,
+    r2: () => ec,
+    $S: () => eD,
+    gm: () => eP,
+    n6: () => eB,
+    ss: () => e$,
+    cS: () => ev,
+    R7: () => ed,
+    aF: () => eW,
+    Lj: () => eu,
+    JI: () => ej,
+    Vm: () => ex,
+    oX: () => eJ,
+    ms: () => ek,
+    TV: () => ea,
+    dv: () => ei,
+    Hc: () => er,
+    Bn: () => eF,
+    XZ: () => eh,
+    oB: () => ew,
+    ho: () => eL,
+    $D: () => eb,
+    fu: () => es,
+    Ay: () => eV,
+    $C: () => el,
+    vX: () => eR,
+    c9: () => eU,
+    ct: () => ep,
+    dz: () => eO,
+    PK: () => eq,
+    Qe: () => eI,
+    y_: () => eM,
+    xE: () => eA,
+    nU: () => eH,
+    _m: () => eT,
+    Du: () => em,
 }),
     n(321073),
     n(508300),
@@ -48,29 +48,45 @@ var r = n(158390),
     a = n(287809),
     l = n(245179),
     c = n(785389);
-let d = new Map();
-function u(e, t) {
+let d = new Map(),
+    u = new Map(),
+    p = new Map();
+function h(e, t, n) {
+    f(e, t);
+    let r = setTimeout(() => e.delete(t), 1e4);
+    e.set(t, { ...n, timer: r });
+}
+function f(e, t) {
+    let n = e.get(t);
+    null != n && (clearTimeout(n.timer), e.delete(t));
+}
+function _(e, t) {
+    h(p, t, { projectId: e });
+}
+function g(e, t) {
     let n = d.get(t);
-    return (
-        null != n && (clearTimeout(n.timer), n.resolve(null)),
-        new Promise((n) => {
-            let r = setTimeout(() => {
-                (d.delete(t), n(null));
-            }, 5e3);
-            d.set(t, { resolve: n, timer: r, projectId: e });
-        })
-    );
+    null != n && (clearTimeout(n.timer), n.resolve(null));
+    let r = u.get(t);
+    return null != r
+        ? (f(u, t), _(e, t), Promise.resolve({ uploadToken: r.uploadToken }))
+        : new Promise((n) => {
+              let r = setTimeout(() => {
+                  (d.delete(t), n(null));
+              }, 5e3);
+              d.set(t, { resolve: n, timer: r, projectId: e });
+          });
 }
-function p(e) {
+function y(e) {
     for (let [t, n] of [...d]) n.projectId === e && (d.delete(t), clearTimeout(n.timer), n.resolve(null));
+    for (let t of [u, p]) for (let [n, r] of [...t]) r.projectId === e && f(t, n);
 }
-var h = n(573083),
-    f = n(855859),
-    _ = n(371169),
-    g = n(260498),
-    y = n(385081),
-    E = n(645070);
-class w {
+var E = n(573083),
+    m = n(855859),
+    w = n(371169),
+    S = n(260498),
+    k = n(385081),
+    T = n(89505);
+class C {
     socket = null;
     open(e) {
         let { url: t, ticket: n, onEvent: r, onClose: i, onError: s } = e;
@@ -177,114 +193,114 @@ class w {
         (this.socket?.close(), (this.socket = null));
     }
 }
-var m = n(382541);
+var b = n(382541);
 n(944142);
-var S = n(248675),
-    k = n(375708);
-function C(e, t) {
+var O = n(248675),
+    N = n(375708);
+function R(e, t) {
     let n = e.pendingPublish;
     null != n && ((e.pendingPublish = null), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-function b(e, t) {
+function P(e, t) {
     let n = e.pendingPatchNotesDraft;
     null != n && ((e.pendingPatchNotesDraft = null), clearTimeout(n.timeout), n.reject(Error(t)));
 }
-let T = new Map(),
-    O = new Set(["activity", "automod", "widget", "bot"]);
-function N(e) {
-    return null != e && O.has(e) ? e : null;
+let U = new Map(),
+    A = new Set(["activity", "automod", "widget", "bot"]);
+function v(e) {
+    return null != e && A.has(e) ? e : null;
 }
-let R = new Map(),
-    P = new Map(),
-    U = new Set(),
-    A = new Map(),
-    v = new Map();
-function J(e, t) {
+let I = new Map(),
+    J = new Map(),
+    D = new Set(),
+    H = new Map(),
+    $ = new Map();
+function L(e, t) {
     s.h.dispatch({ type: "CONJURE_CHAT_CONN_STATE", projectId: e, connState: t });
 }
-let I = { location: "connection", code: y.xf.SEND_FAILED },
-    D = { location: "agent", code: y.xf.AGENT_ERROR };
-function H(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : I;
+let M = { location: "connection", code: k.xf.SEND_FAILED },
+    j = { location: "agent", code: k.xf.AGENT_ERROR };
+function x(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : M;
     (s.h.dispatch({
         type: "CONJURE_CHAT_STEP_APPEND",
         projectId: e,
         step: { type: "step", kind: "terminal_error", message: t },
     }),
-        (0, y.Hy)(e, { ...n, message: t }));
+        (0, k.Hy)(e, { ...n, message: t }));
 }
-function $(e) {
+function W(e) {
     return `optimistic:${e}`;
 }
-let L = new Map();
-function M(e, t) {
+let G = new Map();
+function q(e, t) {
     let { content: n, nonce: r, attachments: i } = t;
-    (L.set(r, a.default.getCurrentUser()?.id),
+    (G.set(r, a.default.getCurrentUser()?.id),
         s.h.dispatch({
             type: "CONJURE_CHAT_MESSAGE_APPEND",
             projectId: e,
             content: n,
-            id: $(r),
+            id: W(r),
             userId: a.default.getCurrentUser()?.id,
             timestamp: new Date().toISOString(),
             attachments: i,
         }));
 }
-let j = { steered: !0, queued: !0, restarting: !0, answered: !0 };
-function x(e, t, n) {
+let B = { steered: !0, queued: !0, restarting: !0, answered: !0 };
+function F(e, t, n) {
     let r = t.pendingSends;
-    for (let i of ((t.pendingSends = []), r)) (M(e, i), H(e, n));
+    for (let i of ((t.pendingSends = []), r)) (q(e, i), x(e, n));
 }
-function W(e, t) {
-    if (!0 === P.get(e)) return;
+function K(e, t) {
+    if (!0 === J.get(e)) return;
     let n = t.pendingSends;
     for (let r of ((t.pendingSends = []), n)) {
-        M(e, r);
+        q(e, r);
         try {
             t.ws.sendUserMessage(
                 r.content,
                 r.nonce,
                 r.attachments?.map((e) => e.id),
-                g.Ay.getProject(e)?.name,
+                S.Ay.getProject(e)?.name,
                 { templateId: r.templateId, remix: r.remix, clarificationAnswers: r.clarificationAnswers },
             );
         } catch (t) {
             (console.error("[vibegrations] queued send failed", t),
-                H(e, t instanceof Error ? t.message : "send failed"));
+                x(e, t instanceof Error ? t.message : "send failed"));
         }
     }
 }
-async function G(e, t, n) {
+async function z(e, t, n) {
     try {
-        let { ticket: r } = await (0, m.g)(n);
+        let { ticket: r } = await (0, b.g)(n);
         e.ws.sendUpstreamTicketAck(t, r);
     } catch (r) {
         let n = r?.status;
         e.ws.sendUpstreamTicketAck(t, void 0, 403 === n ? "forbidden" : "failed");
     }
 }
-let q = {
-        build_error: { location: "build", code: y.xf.BUILD_FAILED },
-        healthcheck_failed: { location: "healthcheck", code: y.xf.HEALTHCHECK_FAILED },
-        error: { location: "agent", code: y.xf.AGENT_ERROR },
+let V = {
+        build_error: { location: "build", code: k.xf.BUILD_FAILED },
+        healthcheck_failed: { location: "healthcheck", code: k.xf.HEALTHCHECK_FAILED },
+        error: { location: "agent", code: k.xf.AGENT_ERROR },
     },
-    B = {
-        web: { location: "runtime_frame", code: y.xf.RUNTIME_FRAME_ERROR },
-        preview: { location: "runtime_worker", code: y.xf.RUNTIME_WORKER_ERROR },
+    Q = {
+        web: { location: "runtime_frame", code: k.xf.RUNTIME_FRAME_ERROR },
+        preview: { location: "runtime_worker", code: k.xf.RUNTIME_WORKER_ERROR },
     },
-    F = new Map();
-async function K(e, t, n) {
+    X = new Map();
+async function Y(e, t, n) {
     let r,
         i = Date.now();
     (console.debug("[vibegrations] capture request received", { id: n.id, build: n.build, probe: n.probe }),
-        !0 !== n.probe && n.spec?.mode === "widget" && (0, f.b)(e, "widget"));
+        !0 !== n.probe && n.spec?.mode === "widget" && (0, m.b)(e, "widget"));
     try {
-        r = await E.A.relayPreviewCapture(e, n.id, {
+        r = await T.A.relayPreviewCapture(e, n.id, {
             probe: n.probe,
             spec: n.spec,
             build: n.build,
-            onAccepted: async () => (t.ws.sendCaptureAck(n.id, "accepted"), await u(e, n.id)),
-            resolveUploadUrl: () => eL(e),
+            onAccepted: async () => (t.ws.sendCaptureAck(n.id, "accepted"), await g(e, n.id)),
+            resolveUploadUrl: () => eG(e),
         });
     } catch (e) {
         (console.error("[vibegrations] preview capture relay failed", e), (r = { status: "failed" }));
@@ -297,7 +313,7 @@ async function K(e, t, n) {
     }),
         t.ws.sendCaptureAck(n.id, r.status, r.code, r.message));
 }
-async function z(e, t, n) {
+async function Z(e, t, n) {
     let r = Date.now();
     console.debug("[vibegrations] control request received", {
         id: n.id,
@@ -305,11 +321,11 @@ async function z(e, t, n) {
         steps: n.request?.steps?.length,
     });
     try {
-        let i = await E.A.relayPreviewControl(
+        let i = await T.A.relayPreviewControl(
             e,
             n.id,
             n.request,
-            async () => (t.ws.sendControlAck(n.id, "accepted"), (await u(e, n.id)) != null),
+            async () => (t.ws.sendControlAck(n.id, "accepted"), (await g(e, n.id)) != null),
         );
         (console.debug("[vibegrations] control relay answered", { id: n.id, status: i.status, ms: Date.now() - r }),
             "completed" === i.status
@@ -322,17 +338,17 @@ async function z(e, t, n) {
             t.ws.sendControlAck(n.id, "failed", void 0, "the client could not drive the preview frame"));
     }
 }
-async function V(e, t) {
+async function ee(e, t) {
     t.ws.close();
     try {
-        let { ticket: n, baseUrl: r } = await (0, m.d)(e);
+        let { ticket: n, baseUrl: r } = await (0, b.d)(e);
         if (t.disposed) return;
         t.ws.open({
             url: r,
             ticket: n,
             onEvent: (n) =>
                 (function e(t, n, r) {
-                    var i, o, a, l;
+                    var i, o;
                     if (
                         (console.debug("[vibegrations] ws event", r.type),
                         "hello" !== r.type &&
@@ -344,19 +360,19 @@ async function V(e, t) {
                             "capture_claim" !== r.type &&
                             "preview_operation" !== r.type &&
                             "request_upstream_ticket" !== r.type &&
-                            "open" !== R.get(t))
+                            "open" !== I.get(t))
                     )
                         return void n.pendingEvents.push(r);
                     if ("history_page" === r.type) {
-                        let e = ec.get(t);
-                        if ((null != e && r.requested !== e) || (ec.delete(t), !0 === r.failed)) return;
+                        let e = ef.get(t);
+                        if ((null != e && r.requested !== e) || (ef.delete(t), !0 === r.failed)) return;
                         (s.h.dispatch({
                             type: "CONJURE_CHAT_HISTORY_PREPEND",
                             projectId: t,
                             entries: (r.messages ?? []).slice(),
                             cursor: !0 === r.has_more ? (r.cursor ?? null) : null,
                         }),
-                            ed(t));
+                            e_(t));
                         return;
                     }
                     if ("hello" === r.type) ((n.helloSeen = !0), n.backoff.succeed());
@@ -369,41 +385,41 @@ async function V(e, t) {
                             cursor: !0 === r.has_more ? (r.cursor ?? null) : null,
                             degraded: !0 === r.degraded,
                         }),
-                            ec.delete(t),
-                            (l = t),
-                            ed(l));
-                        let o = n.pendingEvents;
-                        for (let r of ((n.pendingEvents = []), J(t, "open"), o)) e(t, n, r);
-                        let a = n.pendingModelSettings;
-                        if (((n.pendingModelSettings = null), null != a))
+                            ef.delete(t),
+                            (o = t),
+                            e_(o));
+                        let a = n.pendingEvents;
+                        for (let r of ((n.pendingEvents = []), L(t, "open"), a)) e(t, n, r);
+                        let l = n.pendingModelSettings;
+                        if (((n.pendingModelSettings = null), null != l))
                             try {
-                                n.ws.sendModelSettings(a);
+                                n.ws.sendModelSettings(l);
                             } catch (e) {
                                 console.error("[vibegrations] staged model settings send failed", e);
                             }
-                        W(t, n);
+                        K(t, n);
                     } else if ("chat_state" === r.type)
                         (s.h.dispatch({ type: "CONJURE_CHAT_STOPPED_SET", projectId: t, stopped: r.stopped }),
-                            r.stopped || "open" !== R.get(t) || W(t, n));
+                            r.stopped || "open" !== I.get(t) || K(t, n));
                     else if ("user_message" === r.type) {
                         let e, n, i;
-                        ((n = (e = null != r.nonce && L.has(r.nonce)) && null != r.nonce ? L.get(r.nonce) : void 0),
+                        ((n = (e = null != r.nonce && G.has(r.nonce)) && null != r.nonce ? G.get(r.nonce) : void 0),
                             (i = e && (null == n || null == r.user_id || n === r.user_id)) &&
                                 null != r.nonce &&
-                                L.delete(r.nonce),
+                                G.delete(r.nonce),
                             s.h.dispatch({
                                 type: "CONJURE_CHAT_MESSAGE_APPEND",
                                 projectId: t,
                                 content: r.content,
                                 id: r.id,
-                                ...(i && null != r.nonce ? { optimisticId: $(r.nonce) } : {}),
+                                ...(i && null != r.nonce ? { optimisticId: W(r.nonce) } : {}),
                                 userId: r.user_id,
                                 timestamp: r.ts,
                                 attachments: r.attachments,
                             }));
                     } else if ("message_disposition" === r.type)
                         ((i = r.disposition),
-                            Object.prototype.hasOwnProperty.call(j, i) &&
+                            Object.prototype.hasOwnProperty.call(B, i) &&
                                 s.h.dispatch({
                                     type: "CONJURE_CHAT_MESSAGE_DISPOSITION",
                                     projectId: t,
@@ -460,7 +476,7 @@ async function V(e, t) {
                                       turnId: r.turn_id,
                                       patch: { content: e, kind: "message" },
                                   })
-                                : H(t, k.intl.string(S.default["913RMa"]), D);
+                                : x(t, N.intl.string(O.default["913RMa"]), j);
                         } else if ("thinking_lifecycle" === r.kind) {
                             let { phase: e, session: n, seq: i, ticks: o, elapsed_ms: a, text: l } = r;
                             null != e &&
@@ -544,7 +560,7 @@ async function V(e, t) {
                                       turnId: r.turn_id,
                                       patch: { proposal: r.proposal, kind: "proposal" },
                                   })
-                                : H(t, k.intl.string(S.default["0+RUWx"]), D);
+                                : x(t, N.intl.string(O.default["0+RUWx"]), j);
                         else if ("ideas" === r.kind)
                             null != r.ideas &&
                                 r.ideas.length > 0 &&
@@ -568,7 +584,7 @@ async function V(e, t) {
                                     type: "CONJURE_CHAT_TURN_PATCH",
                                     projectId: t,
                                     turnId: r.turn_id,
-                                    patch: { publishCta: { surface: N(r.publish_cta.surface) } },
+                                    patch: { publishCta: { surface: v(r.publish_cta.surface) } },
                                 });
                         else if ("publish_status" === r.kind)
                             s.h.dispatch({
@@ -576,7 +592,7 @@ async function V(e, t) {
                                 projectId: t,
                                 published: !0 === r.published,
                                 hasUnpublishedChanges: !0 === r.has_unpublished_changes,
-                                surface: N(r.surface),
+                                surface: v(r.surface),
                             });
                         else if ("clarification" === r.kind)
                             null != r.clarification &&
@@ -652,7 +668,7 @@ async function V(e, t) {
                             let e = r.name;
                             null != e &&
                                 "" !== e &&
-                                (0, _.oB)(t, e).catch((e) => {
+                                (0, w.oB)(t, e).catch((e) => {
                                     console.error("[vibegrations] rename from agent failed", t, e);
                                 });
                         } else if ("publish_result" === r.kind) {
@@ -662,9 +678,9 @@ async function V(e, t) {
                                 null != e && (clearTimeout(e.timeout), e.resolve(r)),
                                 !0 !== r.ok)
                             )
-                                (0, _.Is)(t, r.error ?? "publish_result not ok", !1);
+                                (0, w.Is)(t, r.error ?? "publish_result not ok", !1);
                             else {
-                                let e = g.Ay.getPublishStatus(t);
+                                let e = S.Ay.getPublishStatus(t);
                                 null != e &&
                                     s.h.dispatch({
                                         type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
@@ -683,21 +699,21 @@ async function V(e, t) {
                             let e = r.icon;
                             if (null != e && "" !== e) {
                                 let i = r.attachment_id;
-                                function c(e) {
+                                function a(e) {
                                     null != i && "" !== i && n.ws.sendAppIconAck(i, e);
                                 }
-                                (0, _.Ru)(t, e)
+                                (0, w.Ru)(t, e)
                                     .then((e) => {
                                         (e.ok || console.error("[vibegrations] icon from agent rejected", t, e.status),
-                                            c(e.ok ? "applied" : "failed"));
+                                            a(e.ok ? "applied" : "failed"));
                                     })
                                     .catch((e) => {
-                                        (console.error("[vibegrations] icon from agent failed", t, e), c("failed"));
+                                        (console.error("[vibegrations] icon from agent failed", t, e), a("failed"));
                                     });
                             }
                         } else
                             "turn_result" === r.kind
-                                ? ((0, y.hV)(t, r),
+                                ? ((0, k.hV)(t, r),
                                   "deployed" === r.result &&
                                       s.h.dispatch({
                                           type: "CONJURE_CHAT_TURN_PATCH",
@@ -711,7 +727,7 @@ async function V(e, t) {
                                       turnId: r.turn_id,
                                       summary: r.summary,
                                   }),
-                                  U.delete(t) &&
+                                  D.delete(t) &&
                                       "cancelled" === r.result &&
                                       s.h.dispatch({ type: "CONJURE_CHAT_INTERRUPTED", projectId: t }))
                                 : (s.h.dispatch({
@@ -721,134 +737,150 @@ async function V(e, t) {
                                       step: r,
                                   }),
                                   ("build_error" === r.kind || "healthcheck_failed" === r.kind || "error" === r.kind) &&
-                                      (0, y.Hy)(t, {
-                                          ...q[r.kind],
+                                      (0, k.Hy)(t, {
+                                          ...V[r.kind],
                                           message: r.message,
                                           details: "build_error" === r.kind ? r.stderr_tail : void 0,
                                       }),
                                   "preview_ready" === r.kind &&
-                                      (0, _.tZ)(t, { isPreview: !0 }).catch((e) => {
+                                      (0, w.tZ)(t, { isPreview: !0 }).catch((e) => {
                                           console.error("[vibegrations] post-preview-publish refresh failed", t, e);
                                       }));
-                    else if ("capture_preview" === r.type) K(t, n, r).catch(() => {});
-                    else if ("control_preview" === r.type) z(t, n, r).catch(() => {});
-                    else if ("control_abort" === r.type) E.A.abortPreviewControl(t);
-                    else if ("control_claim" === r.type || "capture_claim" === r.type) {
-                        let e;
-                        ((o = r.id),
-                            (a = "capture_claim" === r.type ? r.upload_token : void 0),
-                            (e = d.get(o)),
-                            null != e && (d.delete(o), clearTimeout(e.timer), e.resolve({ uploadToken: a })));
-                    } else
-                        "preview_operation" === r.type
-                            ? "begin" === r.phase
-                                ? ((0, h.pF)(t, "tuning" === r.mode), E.A.beginPreviewOperation(t))
-                                : ((0, h.pF)(t, !1), E.A.endPreviewOperation(t))
-                            : "live_reload" === r.type
-                              ? s.h.dispatch({
-                                    type: "CONJURE_LIVE_RELOAD_SET",
-                                    projectId: t,
-                                    enabled: r.enabled,
-                                    error: r.error ?? null,
-                                    phase: r.phase ?? null,
-                                    step: r.step ?? null,
-                                })
-                              : "model_settings" === r.type
-                                ? s.h.dispatch({
-                                      type: "CONJURE_MODEL_SETTINGS_SET",
-                                      projectId: t,
-                                      settings: r.settings,
-                                      tierSettings: r.tier_settings ?? null,
-                                      tiers: r.tiers ?? null,
-                                      choices: r.choices,
-                                  })
-                                : "debug_status" === r.type
-                                  ? s.h.dispatch({
-                                        type: "CONJURE_DEBUG_STATUS_SET",
-                                        projectId: t,
-                                        status: r.status ?? null,
-                                        failed: !0 === r.failed || null == r.status,
-                                    })
-                                  : "settings" === r.type
-                                    ? s.h.dispatch({
-                                          type: "CONJURE_SETTINGS_SET",
-                                          projectId: t,
-                                          settings: {
-                                              schema: r.schema,
-                                              values: r.values,
-                                              secrets: r.secrets,
-                                              connections: r.connections,
-                                          },
-                                      })
-                                    : "debug_model_call" === r.type
-                                      ? (s.h.dispatch({
-                                            type: "CONJURE_MODEL_CALL_APPEND",
+                    else
+                        "capture_preview" === r.type
+                            ? Y(t, n, r).catch(() => {})
+                            : "control_preview" === r.type
+                              ? Z(t, n, r).catch(() => {})
+                              : "control_abort" === r.type
+                                ? T.A.abortPreviewControl(t)
+                                : "control_claim" === r.type || "capture_claim" === r.type
+                                  ? (function (e, t, n) {
+                                        let r = d.get(t);
+                                        if (null == r) {
+                                            p.has(t) || h(u, t, { uploadToken: n, projectId: e });
+                                            return;
+                                        }
+                                        (d.delete(t), clearTimeout(r.timer), _(e, t), r.resolve({ uploadToken: n }));
+                                    })(t, r.id, "capture_claim" === r.type ? r.upload_token : void 0)
+                                  : "preview_operation" === r.type
+                                    ? "begin" === r.phase
+                                        ? ((0, E.pF)(t, "tuning" === r.mode), T.A.beginPreviewOperation(t))
+                                        : ((0, E.pF)(t, !1), T.A.endPreviewOperation(t))
+                                    : "live_reload" === r.type
+                                      ? s.h.dispatch({
+                                            type: "CONJURE_LIVE_RELOAD_SET",
                                             projectId: t,
-                                            modelCall: r,
-                                        }),
-                                        "started" !== r.status &&
-                                            s.h.dispatch({
-                                                type: "CONJURE_DEBUG_MODEL_CALL",
+                                            enabled: r.enabled,
+                                            error: r.error ?? null,
+                                            phase: r.phase ?? null,
+                                            step: r.step ?? null,
+                                        })
+                                      : "model_settings" === r.type
+                                        ? s.h.dispatch({
+                                              type: "CONJURE_MODEL_SETTINGS_SET",
+                                              projectId: t,
+                                              settings: r.settings,
+                                              tierSettings: r.tier_settings ?? null,
+                                              tiers: r.tiers ?? null,
+                                              choices: r.choices,
+                                          })
+                                        : "debug_status" === r.type
+                                          ? s.h.dispatch({
+                                                type: "CONJURE_DEBUG_STATUS_SET",
                                                 projectId: t,
-                                                id: r.id,
-                                                role:
-                                                    "compaction" === r.agent
-                                                        ? "compaction"
-                                                        : "subagent" === r.agent
-                                                          ? "codegen"
-                                                          : "orchestrator",
-                                                model: r.model,
-                                                stopReason:
-                                                    "error" === r.status ? (r.stop_reason ?? "error") : r.stop_reason,
-                                                durationMs: r.duration_ms,
-                                                inputTokens: r.input_tokens ?? 0,
-                                                outputTokens: r.output_tokens ?? 0,
-                                                cacheReadTokens: r.cache_read_tokens ?? 0,
-                                                cacheWriteTokens: r.cache_write_tokens ?? 0,
-                                                observedAt: new Date().toISOString(),
-                                            }))
-                                      : "debug_tool_call" === r.type
-                                        ? s.h.dispatch({ type: "CONJURE_TOOL_CALL_APPEND", projectId: t, toolCall: r })
-                                        : "request_upstream_ticket" === r.type
-                                          ? G(n, r.id, r.project_id)
-                                          : "debug_history_state" === r.type
+                                                status: r.status ?? null,
+                                                failed: !0 === r.failed || null == r.status,
+                                            })
+                                          : "settings" === r.type
                                             ? s.h.dispatch({
-                                                  type: "CONJURE_HISTORY_LOAD_SETTLE",
+                                                  type: "CONJURE_SETTINGS_SET",
                                                   projectId: t,
-                                                  scope: r.scope,
-                                                  status: r.status,
-                                                  count: r.count,
-                                                  truncated: !0 === r.truncated,
+                                                  settings: {
+                                                      schema: r.schema,
+                                                      values: r.values,
+                                                      secrets: r.secrets,
+                                                      connections: r.connections,
+                                                  },
                                               })
-                                            : (s.h.dispatch({ type: "CONJURE_LOG_APPEND", projectId: t, log: r }),
-                                              (function (e, t) {
-                                                  if (!0 === t.historical || "error" !== t.level) return;
-                                                  let n = null != t.source ? B[t.source] : void 0;
-                                                  if (null == n) return;
-                                                  let r = F.get(e);
-                                                  null == r && ((r = new Set()), F.set(e, r));
-                                                  let i = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
-                                                  r.has(i) ||
-                                                      r.size >= 10 ||
-                                                      (r.add(i),
-                                                      (0, y.Hy)(e, {
-                                                          location: n.location,
-                                                          code: n.code,
-                                                          message: t.message,
-                                                          details: t.source,
-                                                      }));
-                                              })(t, r));
+                                            : "debug_model_call" === r.type
+                                              ? (s.h.dispatch({
+                                                    type: "CONJURE_MODEL_CALL_APPEND",
+                                                    projectId: t,
+                                                    modelCall: r,
+                                                }),
+                                                "started" !== r.status &&
+                                                    s.h.dispatch({
+                                                        type: "CONJURE_DEBUG_MODEL_CALL",
+                                                        projectId: t,
+                                                        id: r.id,
+                                                        role:
+                                                            "compaction" === r.agent
+                                                                ? "compaction"
+                                                                : "subagent" === r.agent
+                                                                  ? "codegen"
+                                                                  : "orchestrator",
+                                                        model: r.model,
+                                                        stopReason:
+                                                            "error" === r.status
+                                                                ? (r.stop_reason ?? "error")
+                                                                : r.stop_reason,
+                                                        durationMs: r.duration_ms,
+                                                        inputTokens: r.input_tokens ?? 0,
+                                                        outputTokens: r.output_tokens ?? 0,
+                                                        cacheReadTokens: r.cache_read_tokens ?? 0,
+                                                        cacheWriteTokens: r.cache_write_tokens ?? 0,
+                                                        observedAt: new Date().toISOString(),
+                                                    }))
+                                              : "debug_tool_call" === r.type
+                                                ? s.h.dispatch({
+                                                      type: "CONJURE_TOOL_CALL_APPEND",
+                                                      projectId: t,
+                                                      toolCall: r,
+                                                  })
+                                                : "request_upstream_ticket" === r.type
+                                                  ? z(n, r.id, r.project_id)
+                                                  : "debug_history_state" === r.type
+                                                    ? s.h.dispatch({
+                                                          type: "CONJURE_HISTORY_LOAD_SETTLE",
+                                                          projectId: t,
+                                                          scope: r.scope,
+                                                          status: r.status,
+                                                          count: r.count,
+                                                          truncated: !0 === r.truncated,
+                                                      })
+                                                    : (s.h.dispatch({
+                                                          type: "CONJURE_LOG_APPEND",
+                                                          projectId: t,
+                                                          log: r,
+                                                      }),
+                                                      (function (e, t) {
+                                                          if (!0 === t.historical || "error" !== t.level) return;
+                                                          let n = null != t.source ? Q[t.source] : void 0;
+                                                          if (null == n) return;
+                                                          let r = X.get(e);
+                                                          null == r && ((r = new Set()), X.set(e, r));
+                                                          let i = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
+                                                          r.has(i) ||
+                                                              r.size >= 10 ||
+                                                              (r.add(i),
+                                                              (0, k.Hy)(e, {
+                                                                  location: n.location,
+                                                                  code: n.code,
+                                                                  message: t.message,
+                                                                  details: t.source,
+                                                              }));
+                                                      })(t, r));
                 })(e, t, n),
             onClose: () => {
-                (C(t, "Connection closed before the publish result arrived"),
-                b(t, "Connection closed before the draft arrived"),
-                p(e),
+                (R(t, "Connection closed before the publish result arrived"),
+                P(t, "Connection closed before the draft arrived"),
+                y(e),
                 t.disposed)
-                    ? J(e, "closed")
+                    ? L(e, "closed")
                     : t.helloSeen
-                      ? ((t.reconnectPending = !0), J(e, "connecting"), t.backoff.fail(() => Q(e)))
-                      : (J(e, "closed"),
-                        x(e, t, "Connection closed before the message was sent"),
+                      ? ((t.reconnectPending = !0), L(e, "connecting"), t.backoff.fail(() => et(e)))
+                      : (L(e, "closed"),
+                        F(e, t, "Connection closed before the message was sent"),
                         (t.pendingModelSettings = null));
             },
             onError: (e) => {
@@ -857,23 +889,23 @@ async function V(e, t) {
         });
     } catch (n) {
         if ((console.error("[vibegrations] ws open failed", n), t.disposed)) return;
-        (J(e, "failed"),
-            x(e, t, n instanceof Error ? n.message : "ws open failed"),
+        (L(e, "failed"),
+            F(e, t, n instanceof Error ? n.message : "ws open failed"),
             (t.pendingModelSettings = null),
-            C(t, "Connection failed before the publish result arrived"),
-            b(t, "Connection failed before the draft arrived"),
-            (0, y.Hy)(e, {
+            R(t, "Connection failed before the publish result arrived"),
+            P(t, "Connection failed before the draft arrived"),
+            (0, k.Hy)(e, {
                 location: "connection",
-                code: y.xf.WS_OPEN_FAILED,
+                code: k.xf.WS_OPEN_FAILED,
                 message: n instanceof Error ? n.message : "ws open failed",
             }));
     }
 }
-function Q(e) {
-    let t = T.get(e);
+function et(e) {
+    let t = U.get(e);
     null == t &&
         ((t = {
-            ws: new w(),
+            ws: new C(),
             backoff: new r.A(1e3, 3e4),
             helloSeen: !1,
             disposed: !1,
@@ -884,42 +916,42 @@ function Q(e) {
             pendingPublish: null,
             pendingPatchNotesDraft: null,
         }),
-        T.set(e, t));
+        U.set(e, t));
     let n = t;
     ((n.pendingEvents = []),
         (n.helloSeen = !1),
         (n.disposed = !1),
         (n.reconnectPending = !1),
-        J(e, "connecting"),
+        L(e, "connecting"),
         s.h.dispatch({ type: "CONJURE_TRACE_REPLAY_STARTING", projectId: e }),
-        V(e, n));
+        ee(e, n));
 }
-function X(e) {
+function en(e) {
     var t;
-    let n = T.get(e);
+    let n = U.get(e);
     return (
         null != n &&
         ((n.disposed = !0),
         n.backoff.cancel(),
-        C(n, "Connection closed before the publish result arrived"),
-        b(n, "Connection closed before the draft arrived"),
+        R(n, "Connection closed before the publish result arrived"),
+        P(n, "Connection closed before the draft arrived"),
         n.ws.close(),
-        T.delete(e),
+        U.delete(e),
         (t = e),
-        ec.delete(t),
-        E.A.releasePreviewControl(e),
-        p(e),
-        J(e, "closed"),
+        ef.delete(t),
+        T.A.releasePreviewControl(e),
+        y(e),
+        L(e, "closed"),
         !0)
     );
 }
-function Y(e) {
-    let t = T.get(e);
-    if (null == t) return void Q(e);
-    let n = R.get(e);
-    ("closed" !== n && "failed" !== n) || t.reconnectPending || Q(e);
+function er(e) {
+    let t = U.get(e);
+    if (null == t) return void et(e);
+    let n = I.get(e);
+    ("closed" !== n && "failed" !== n) || t.reconnectPending || et(e);
 }
-function Z(e, t, n) {
+function ei(e, t, n) {
     let {
             templateId: r,
             remix: i,
@@ -936,42 +968,42 @@ function Z(e, t, n) {
             remix: i,
             ...(null != s ? { clarificationAnswers: s } : {}),
         },
-        d = T.get(e);
-    if (null != d && ("connecting" === R.get(e) || d.reconnectPending)) return void d.pendingSends.push(c);
-    M(e, c);
+        d = U.get(e);
+    if (null != d && ("connecting" === I.get(e) || d.reconnectPending)) return void d.pendingSends.push(c);
+    q(e, c);
     try {
         if (null == d) throw Error("Not connected");
         d.ws.sendUserMessage(
             c.content,
             c.nonce,
             c.attachments?.map((e) => e.id),
-            g.Ay.getProject(e)?.name,
+            S.Ay.getProject(e)?.name,
             { templateId: c.templateId, remix: c.remix, clarificationAnswers: c.clarificationAnswers },
         );
     } catch (t) {
-        (console.error("[vibegrations] send failed", t), H(e, t instanceof Error ? t.message : "send failed"));
+        (console.error("[vibegrations] send failed", t), x(e, t instanceof Error ? t.message : "send failed"));
     }
 }
-function ee(e) {
-    let t = T.get(e);
+function es(e) {
+    let t = U.get(e);
     try {
         if (null == t) throw Error("Not connected");
         (t.ws.sendInterrupt(),
-            l.Ay.isThinking(e) && (U.add(e), s.h.dispatch({ type: "CONJURE_CHAT_STOP_REQUESTED", projectId: e })));
+            l.Ay.isThinking(e) && (D.add(e), s.h.dispatch({ type: "CONJURE_CHAT_STOP_REQUESTED", projectId: e })));
     } catch (e) {
         console.error("[vibegrations] interrupt send failed", e);
     }
 }
-let et = 221552 == n.j ? 9e5 : null;
-function en(e) {
+let eo = 221552 == n.j ? 9e5 : null;
+function ea(e) {
     let t = !1;
     return new Promise((n, r) => {
-        let i = T.get(e);
+        let i = U.get(e);
         if (null == i) return void r(Error("Not connected"));
         if (null != i.pendingPublish) return void r(Error("Publish already in flight"));
         let o = setTimeout(() => {
-            C(i, "Publish timed out");
-        }, et);
+            R(i, "Publish timed out");
+        }, eo);
         ((i.pendingPublish = { resolve: n, reject: r, timeout: o }),
             (t = !0),
             s.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_START", projectId: e }));
@@ -982,20 +1014,20 @@ function en(e) {
         }
     })
         .catch((t) => {
-            throw ((0, _.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
+            throw ((0, w.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
         })
         .finally(() => {
             t && s.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_SETTLE", projectId: e });
         });
 }
-function er(e) {
+function el(e) {
     return new Promise((t, n) => {
-        let r = T.get(e);
+        let r = U.get(e);
         if (null == r) return void n(Error("Not connected"));
-        b(r, "Superseded by a newer draft request");
+        P(r, "Superseded by a newer draft request");
         let i = `${Date.now()}-${Math.random().toString(36).slice(2)}`,
             s = setTimeout(() => {
-                b(r, "Draft timed out");
+                P(r, "Draft timed out");
             }, 45e3);
         r.pendingPatchNotesDraft = { resolve: t, reject: n, timeout: s, nonce: i };
         try {
@@ -1007,15 +1039,15 @@ function er(e) {
         }
     });
 }
-function ei(e, t) {
-    let n = T.get(e);
+function ec(e, t) {
+    let n = U.get(e);
     null == n
         ? console.error("[vibegrations] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
-function es(e) {
+function ed(e) {
     s.h.dispatch({ type: "CONJURE_DEBUG_STATUS_REQUESTED", projectId: e });
-    let t = T.get(e);
+    let t = U.get(e);
     try {
         if (null == t) throw Error("Not connected");
         t.ws.sendDebugStatusRequest();
@@ -1024,10 +1056,10 @@ function es(e) {
             s.h.dispatch({ type: "CONJURE_DEBUG_STATUS_SET", projectId: e, status: null, failed: !0 }));
     }
 }
-function eo(e) {
+function eu(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     s.h.dispatch({ type: "CONJURE_DEBUG_FORCE_COMPACTION_REQUESTED", projectId: e });
-    let n = T.get(e);
+    let n = U.get(e);
     try {
         if (null == n) throw Error("Not connected");
         n.ws.sendForceCompaction(t);
@@ -1042,8 +1074,8 @@ function eo(e) {
             }));
     }
 }
-function ea(e, t) {
-    let n = T.get(e);
+function ep(e, t) {
+    let n = U.get(e);
     try {
         if (null == n) throw Error("Not connected");
         return (n.ws.sendLiveReload(t), !0);
@@ -1051,8 +1083,8 @@ function ea(e, t) {
         return (console.error("[vibegrations] live reload send failed", e), !1);
     }
 }
-function el(e, t) {
-    let n = T.get(e);
+function eh(e, t) {
+    let n = U.get(e);
     try {
         if (null == n) throw Error("Not connected");
         n.ws.sendModelSettings(t);
@@ -1060,22 +1092,22 @@ function el(e, t) {
         console.error("[vibegrations] model settings send failed", e);
     }
 }
-let ec = new Map();
-function ed(e) {
+let ef = new Map();
+function e_(e) {
     let t = (0, l.bi)(e);
     if (null == t) return !1;
-    if (ec.get(e) === t) return !0;
-    let n = T.get(e);
-    return null != n && (ec.set(e, t), n.ws.sendLoadHistory(t), !0);
+    if (ef.get(e) === t) return !0;
+    let n = U.get(e);
+    return null != n && (ef.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
-let eu = new Map(),
-    ep = new Map();
-function eh(e) {
-    let t = eu.get(e);
+let eg = new Map(),
+    ey = new Map();
+function eE(e) {
+    let t = eg.get(e);
     if (null != t && t.expiresAt > Date.now()) return Promise.resolve(t.ticket);
-    let n = ep.get(e);
+    let n = ey.get(e);
     if (null != n) return n;
-    let r = (0, m.d)(e)
+    let r = (0, b.d)(e)
         .then((t) => {
             let n = (function (e) {
                 try {
@@ -1086,15 +1118,15 @@ function eh(e) {
                     return null;
                 }
             })(t.ticket);
-            return (null != n && eu.set(e, { ticket: t, expiresAt: n - 3e4 }), t);
+            return (null != n && eg.set(e, { ticket: t, expiresAt: n - 3e4 }), t);
         })
         .finally(() => {
-            ep.delete(e);
+            ey.delete(e);
         });
-    return (ep.set(e, r), r);
+    return (ey.set(e, r), r);
 }
-async function ef(e) {
-    let { ticket: t, baseUrl: n } = await (0, m.d)(e),
+async function em(e) {
+    let { ticket: t, baseUrl: n } = await (0, b.d)(e),
         r = new URLSearchParams({ ticket: t }),
         i = await fetch(`${n}/agent/source-history?${r}`);
     if (!i.ok) throw Error(`version history failed (${i.status})`);
@@ -1105,8 +1137,8 @@ async function ef(e) {
         publishedSha: "string" == typeof s.publishedSha ? s.publishedSha : null,
     };
 }
-async function e_(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, m.d)(e),
+async function ew(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         i = new URLSearchParams({ ticket: n }),
         s = await fetch(`${r}/agent/source-history/${encodeURIComponent(t)}/restore?${i}`, { method: "POST" });
     if (!s.ok) {
@@ -1117,29 +1149,29 @@ async function e_(e, t) {
     if (null == o.entry) throw Error("version restore returned no commit");
     return (
         !0 === o.live ||
-            (0, _.tZ)(e, { isPreview: !0 }).catch((t) => {
+            (0, w.tZ)(e, { isPreview: !0 }).catch((t) => {
                 console.error("[vibegrations] post-version-restore refresh failed", e, t);
             }),
         o.entry
     );
 }
-async function eg(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, m.d)(e),
+async function eS(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         i = new URLSearchParams({ ticket: n, environment: t }),
         s = await fetch(`${r}/agent/database/restore-points?${i}`);
     if (!s.ok) throw Error(`restore points failed (${s.status})`);
     let o = await s.json();
     return Array.isArray(o.restorePoints) ? o.restorePoints : [];
 }
-async function ey(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, m.d)(e),
+async function ek(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         i = new URLSearchParams({ ticket: n, environment: t }),
         s = await fetch(`${r}/agent/database/restore-window?${i}`);
     if (!s.ok) throw Error(`restore window failed (${s.status})`);
     return await s.json();
 }
-async function eE(e, t, n) {
-    let { ticket: r, baseUrl: i } = await (0, m.d)(e),
+async function eT(e, t, n) {
+    let { ticket: r, baseUrl: i } = await (0, b.d)(e),
         s = new URLSearchParams({ ticket: r }),
         o = await fetch(`${i}/agent/database/restore-points?${s}`, {
             method: "POST",
@@ -1151,7 +1183,7 @@ async function eE(e, t, n) {
     if (null == a.restorePoint) throw Error("restore point create returned nothing");
     return a.restorePoint;
 }
-async function ew(e, t) {
+async function eC(e, t) {
     var n;
     let r = t.ok && 202 !== t.status ? "" : (await t.text()).trim(),
         i =
@@ -1163,24 +1195,24 @@ async function ew(e, t) {
                   : { ok: !1, code: 410 === n ? "expired" : "failed", message: r });
     if (i.ok)
         try {
-            (0, _.BD)(e);
+            (0, w.BD)(e);
         } catch (t) {
             console.error("[vibegrations] post-data-restore frame reload failed", e, t);
         }
     return i;
 }
-async function em(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, m.d)(e),
+async function eb(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         i = new URLSearchParams({ ticket: n });
-    return ew(
+    return eC(
         e,
         await fetch(`${r}/agent/database/restore-points/${encodeURIComponent(t)}/restore?${i}`, { method: "POST" }),
     );
 }
-async function eS(e, t, n) {
-    let { ticket: r, baseUrl: i } = await (0, m.d)(e),
+async function eO(e, t, n) {
+    let { ticket: r, baseUrl: i } = await (0, b.d)(e),
         s = new URLSearchParams({ ticket: r });
-    return ew(
+    return eC(
         e,
         await fetch(`${i}/agent/database/restore?${s}`, {
             method: "POST",
@@ -1189,15 +1221,15 @@ async function eS(e, t, n) {
         }),
     );
 }
-function ek(e, t) {
+function eN(e, t) {
     return null == t ? `${e}/agent/attachments` : `${e}/agent/attachments/${encodeURIComponent(t)}`;
 }
-function eC(e, t) {
-    return eT(e, t, t.name, t.type);
+function eR(e, t) {
+    return eU(e, t, t.name, t.type);
 }
-async function eb(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, m.d)(e),
-        i = await fetch(`${ek(r, "from-url")}?${new URLSearchParams({ ticket: n })}`, {
+async function eP(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, b.d)(e),
+        i = await fetch(`${eN(r, "from-url")}?${new URLSearchParams({ ticket: n })}`, {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ url: t }),
@@ -1207,10 +1239,10 @@ async function eb(e, t) {
         throw Error(null != s && "error" in s && "string" == typeof s.error ? s.error : "");
     return s;
 }
-async function eT(e, t, n, r) {
-    let { ticket: i, baseUrl: s } = await (0, m.d)(e),
+async function eU(e, t, n, r) {
+    let { ticket: i, baseUrl: s } = await (0, b.d)(e),
         o = new URLSearchParams({ ticket: i, name: n }),
-        a = await fetch(`${ek(s)}?${o}`, {
+        a = await fetch(`${eN(s)}?${o}`, {
             method: "POST",
             headers: { "content-type": "" !== r ? r : "application/octet-stream" },
             body: t,
@@ -1218,37 +1250,37 @@ async function eT(e, t, n, r) {
     if (!a.ok) throw Error(`attachment upload failed (${a.status})`);
     return await a.json();
 }
-class eO extends Error {
+class eA extends Error {
     status;
     constructor(e) {
         (super(`export failed (${e})`), (this.status = e));
     }
 }
-async function eN(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, m.d)(e),
+async function ev(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         i = new URLSearchParams({ ticket: n, name: t }),
         s = await fetch(`${r}/agent/export?${i}`);
-    if (!s.ok) throw new eO(s.status);
+    if (!s.ok) throw new eA(s.status);
     return await s.blob();
 }
-class eR extends Error {
+class eI extends Error {
     status;
     constructor(e) {
         (super(`remix failed (${e})`), (this.status = e));
     }
 }
-async function eP(e, t) {
-    let [n, r] = await Promise.all([(0, m.g)(e), (0, m.d)(t)]),
+async function eJ(e, t) {
+    let [n, r] = await Promise.all([(0, b.g)(e), (0, b.d)(t)]),
         i = new URLSearchParams({ ticket: n.ticket }),
         s = await fetch(`${n.baseUrl}/agent/fork?${i}`, {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ dest_ticket: r.ticket }),
         });
-    if (!s.ok) throw new eR(s.status);
+    if (!s.ok) throw new eI(s.status);
 }
-async function eU(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, m.d)(e),
+async function eD(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         i = new URLSearchParams({ ticket: n }),
         s = await fetch(`${r}/agent/secrets?${i}`, {
             method: "PUT",
@@ -1257,8 +1289,8 @@ async function eU(e, t) {
         });
     if (!s.ok) throw Error(`secret submission failed (${s.status})`);
 }
-async function eA(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, m.d)(e),
+async function eH(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         i = new URLSearchParams({ ticket: n }),
         s = await fetch(`${r}/agent/settings?${i}`, {
             method: "PUT",
@@ -1269,9 +1301,9 @@ async function eA(e, t) {
     let o = await s.json().catch(() => null);
     return { rebuildRequired: o?.rebuild_required === !0 };
 }
-function ev(e) {
+function e$(e) {
     (async function () {
-        let { ticket: t, baseUrl: n } = await (0, m.d)(e),
+        let { ticket: t, baseUrl: n } = await (0, b.d)(e),
             r = new URLSearchParams({ ticket: t }),
             i = await fetch(`${n}/agent/rebuild?${r}`, { method: "POST" });
         i.ok || console.warn("[vibegrations] settings rebuild request failed", e, i.status);
@@ -1279,12 +1311,12 @@ function ev(e) {
         console.warn("[vibegrations] settings rebuild request failed", e, t);
     });
 }
-function eJ(e) {
+function eL(e) {
     return new Date(e.expiresAtMs).toLocaleTimeString(void 0, { hour: "numeric", minute: "2-digit" });
 }
-async function eI(e) {
+async function eM(e) {
     let { regenerate: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        { ticket: n, baseUrl: r } = await (0, m.d)(e),
+        { ticket: n, baseUrl: r } = await (0, b.d)(e),
         i = new URLSearchParams({ ticket: n });
     t && i.set("regenerate", "1");
     let s = await fetch(`${r}/agent/mcp-token?${i}`, { method: "POST" });
@@ -1293,10 +1325,10 @@ async function eI(e) {
         a = "number" == typeof o.expires_in ? Date.now() + 1e3 * o.expires_in : Date.parse(o.expires_at);
     return { url: o.url, expiresAtMs: a };
 }
-async function eD(e, t) {
+async function ej(e, t) {
     let n, r;
     try {
-        let { ticket: r, baseUrl: i } = await (0, m.d)(e);
+        let { ticket: r, baseUrl: i } = await (0, b.d)(e);
         n = await fetch(`${i}/agent/external-auth/authorize-url?${new URLSearchParams({ ticket: r })}`, {
             method: "POST",
             headers: { "content-type": "application/json" },
@@ -1321,91 +1353,91 @@ async function eD(e, t) {
         ? { type: "url", url: r }
         : { type: "error", error: "unavailable" };
 }
-async function eH(e, t) {
-    let { ticket: n, baseUrl: r } = await (0, m.d)(e),
+async function ex(e, t) {
+    let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         i = new URLSearchParams({ ticket: n }),
-        s = await fetch(`${ek(r, t)}?${i}`, { method: "DELETE", keepalive: !0 });
+        s = await fetch(`${eN(r, t)}?${i}`, { method: "DELETE", keepalive: !0 });
     if (!s.ok) throw Error(`attachment cleanup failed (${s.status})`);
 }
-async function e$(e, t) {
-    let { ticket: n, baseUrl: r } = await eh(e),
+async function eW(e, t) {
+    let { ticket: n, baseUrl: r } = await eE(e),
         i = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${i}`;
 }
-async function eL(e) {
-    let { ticket: t, baseUrl: n } = await eh(e);
+async function eG(e) {
+    let { ticket: t, baseUrl: n } = await eE(e);
     return `${n}/agent/screenshots?${new URLSearchParams({ ticket: t })}`;
 }
-async function eM(e, t) {
+async function eq(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { ticket: r, baseUrl: i } = await eh(e),
+        { ticket: r, baseUrl: i } = await eE(e),
         s = new URLSearchParams({ ticket: r });
-    return (n && s.set("download", "1"), `${ek(i, t)}?${s}`);
+    return (n && s.set("download", "1"), `${eN(i, t)}?${s}`);
 }
-async function ej(e, t) {
+async function eB(e, t) {
     async function n() {
-        return fetch(await eM(e, t), { method: "HEAD" });
+        return fetch(await eq(e, t), { method: "HEAD" });
     }
     let r = await n();
-    if ((401 === r.status && (eu.delete(e), (r = await n())), 404 === r.status)) return !1;
+    if ((401 === r.status && (eg.delete(e), (r = await n())), 404 === r.status)) return !1;
     if (!r.ok) throw Error(`attachment availability check failed (${r.status})`);
     return !0;
 }
-function ex(e) {
-    X(e);
+function eF(e) {
+    en(e);
 }
-class eW extends i.Ay.Store {
+class eK extends i.Ay.Store {
     initialize() {
-        this.waitFor(a.default, l.Ay, g.Ay);
+        this.waitFor(a.default, l.Ay, S.Ay);
     }
     getConnState(e) {
-        return R.get(e) ?? "connecting";
+        return I.get(e) ?? "connecting";
     }
     isChatStopped(e) {
-        return P.get(e) ?? !1;
+        return J.get(e) ?? !1;
     }
     getModelSettings(e) {
-        return A.get(e) ?? null;
+        return H.get(e) ?? null;
     }
     getSettings(e) {
-        return v.get(e) ?? null;
+        return $.get(e) ?? null;
     }
     getDeclaredConnections(e) {
-        return v.get(e)?.connections ?? eG;
+        return $.get(e)?.connections ?? ez;
     }
 }
-let eG = [],
-    eq = new eW(s.h, {
+let ez = [],
+    eV = new eK(s.h, {
         CONJURE_CHAT_CONN_STATE: function (e) {
             let { projectId: t, connState: n } = e;
-            if (R.get(t) === n) return !1;
-            (R.set(t, n), ("closed" === n || "failed" === n) && U.delete(t));
+            if (I.get(t) === n) return !1;
+            (I.set(t, n), ("closed" === n || "failed" === n) && D.delete(t));
         },
         CONJURE_CHAT_STOPPED_SET: function (e) {
             let { projectId: t, stopped: n } = e;
-            if ((P.get(t) ?? !1) === n) return !1;
-            P.set(t, n);
+            if ((J.get(t) ?? !1) === n) return !1;
+            J.set(t, n);
         },
         CONJURE_MODEL_SETTINGS_SET: function (e) {
             let { projectId: t, settings: n, tierSettings: r, tiers: i, choices: s } = e;
-            A.set(t, { settings: n, tierSettings: r, tiers: i, choices: s });
+            H.set(t, { settings: n, tierSettings: r, tiers: i, choices: s });
         },
         CONJURE_SETTINGS_SET: function (e) {
             let { projectId: t, settings: n } = e;
-            v.set(t, n);
+            $.set(t, n);
         },
         CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
             let { projectId: t } = e;
-            if (!X(t)) return !1;
+            if (!en(t)) return !1;
         },
         CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
             let t = !1;
-            for (let e of Array.from(T.keys())) null == g.Ay.getProject(e) && X(e) && (t = !0);
+            for (let e of Array.from(U.keys())) null == S.Ay.getProject(e) && en(e) && (t = !0);
             if (!t) return !1;
         },
         LOGOUT: function () {
-            if (0 === T.size) return !1;
-            for (let e of Array.from(T.keys())) X(e);
-            (P.clear(), L.clear(), eu.clear());
+            if (0 === U.size) return !1;
+            for (let e of Array.from(U.keys())) en(e);
+            (J.clear(), G.clear(), eg.clear());
         },
     });

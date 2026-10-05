@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 630021, Version Hash: d60f9d67087b70b312913290c228032890c9e702`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 630033, Version Hash: b1672e0973015ffc54bfc5217ca4d51ef9026125`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -4904,11 +4904,7 @@ function aX(e) {
         let t = new ResizeObserver(e);
         return (t.observe(m.current), () => t.disconnect());
     }, []);
-    let R = S.width > 0 ? S : null;
-    eE.useLayoutEffect(() => {
-        if (u) return ((0, aN.Qy)(R), () => (0, aN.Qy)(null));
-    }, [u, R]);
-    let L = A ? (0, aN.bR)(h, R ?? void 0) : null;
+    let R = A ? (0, aN.b)(h, S.width > 0 ? S : void 0) : null;
     eE.useEffect(() => {
         function e(e) {
             if (_) return;
@@ -4927,47 +4923,47 @@ function aX(e) {
             }
         );
     }, [t.id, i, _]);
-    let D = S.width / Math.max(S.height, 1) < aY.B5,
+    let L = S.width / Math.max(S.height, 1) < aY.B5,
+        D = 0,
         v = 0,
-        b = 0,
-        M = (0, ah.A)(n?.id);
-    if (!M && !A) {
+        b = (0, ah.A)(n?.id);
+    if (!b && !A) {
         let e = S.width,
             t = S.height;
-        D
-            ? ((t = S.width / aY.B5) > S.height && (e = (t = S.height) * aY.B5), (b = (S.height - t) / 2))
+        L
+            ? ((t = S.width / aY.B5) > S.height && (e = (t = S.height) * aY.B5), (v = (S.height - t) / 2))
             : ((e = Math.min(S.height * aY.B5, S.width)) > S.width && (t = (e = S.width) / aY.B5),
-              (v = (S.width - e) / 2));
+              (D = (S.width - e) / 2));
     }
-    let P = aY.E8.NO_CHAT,
-        U = (0, aI.G)();
+    let M = aY.E8.NO_CHAT,
+        P = (0, aI.G)();
     if (null == n) return null;
-    let w = (f ?? F.da6) + T,
-        G = u ? (I > 0 ? I + 1 : 0) : s && !Number.isNaN(w) ? w : 0,
-        x = aB(t);
+    let U = (f ?? F.da6) + T,
+        w = u ? (I > 0 ? I + 1 : 0) : s && !Number.isNaN(U) ? U : 0,
+        G = aB(t);
     return (0, y.jsx)(tc.N, {
         theme: F.NJ8.DARK,
         children: (e) =>
             (0, y.jsxs)("div", {
-                className: to()(a$.iE, az[P], e, { [a$.WN]: d, [a$.YO]: u, [a$._7]: A }),
+                className: to()(a$.iE, az[M], e, { [a$.WN]: d, [a$.YO]: u, [a$._7]: A }),
                 ref: g,
-                style: { right: G, ...(_ ? { "--custom-conjure-control-bar-height": `${p}px` } : null) },
+                style: { right: w, ...(_ ? { "--custom-conjure-control-bar-height": `${p}px` } : null) },
                 children: [
                     (0, y.jsx)(aO.A, { type: "frame", applicationId: t.applicationId, frameId: t.id }),
                     (0, y.jsx)("div", {
                         className: a$.lq,
                         children: (0, y.jsx)("div", {
-                            className: to()(a$.ht, { [a$.kK]: M, [a$.bU]: A }),
-                            style: { paddingLeft: v, paddingRight: v, paddingTop: b, paddingBottom: b },
+                            className: to()(a$.ht, { [a$.kK]: b, [a$.bU]: A }),
+                            style: { paddingLeft: D, paddingRight: D, paddingTop: v, paddingBottom: v },
                             ref: m,
                             children: (0, y.jsx)(aw, {
                                 className: to()(a$.pU, { [a$.F4]: A }),
-                                style: L ?? void 0,
-                                embedId: x,
+                                style: R ?? void 0,
+                                embedId: G,
                             }),
                         }),
                     }),
-                    !_ && (0, y.jsx)(aZ, { application: n, frameId: t.id, canPopout: U, onMinimize: C, onClose: O }),
+                    !_ && (0, y.jsx)(aZ, { application: n, frameId: t.id, canPopout: P, onMinimize: C, onClose: O }),
                 ],
             }),
     });
@@ -22083,7 +22079,7 @@ let CE = "isHideDevBanner",
                     className: to()(C_.Wz, C_.mr),
                     children: [
                         (0, y.jsx)(Cu, { className: C_.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "630021" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "630033" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -25362,7 +25358,7 @@ let Le = (0, tj.Fe)({
                 n.e("330150"),
                 n.e("205406"),
                 n.e("64640"),
-                n.e("822824"),
+                n.e("433264"),
                 n.e("348567"),
                 n.e("452075"),
                 n.e("900277"),
@@ -25673,8 +25669,8 @@ let Le = (0, tj.Fe)({
                 n.e("261064"),
                 n.e("256769"),
                 n.e("526274"),
-            ]).then(n.bind(n, 224825)),
-        webpackId: 224825,
+            ]).then(n.bind(n, 91460)),
+        webpackId: 91460,
         name: "VibegrationsScreen",
         renderLoader: R9,
     }),
@@ -37492,7 +37488,7 @@ let MC = {
             },
         },
     };
-var MR = n(645070);
+var MR = n(89505);
 let ML = new Map(),
     My = { [R7.sm.ANY]: [R7.W_, R7.VH] },
     MD = {
@@ -47716,7 +47712,7 @@ let F5 = (0, tj.Fe)({
             n.e("759086"),
             n.e("763214"),
             n.e("504374"),
-            n.e("277986"),
+            n.e("139462"),
             n.e("918221"),
             n.e("412117"),
             n.e("263406"),
@@ -48931,8 +48927,8 @@ let F5 = (0, tj.Fe)({
             n.e("421778"),
             n.e("337886"),
             n.e("311008"),
-            n.e("846083"),
             n.e("897117"),
+            n.e("150924"),
             n.e("61750"),
             n.e("220803"),
             n.e("195782"),

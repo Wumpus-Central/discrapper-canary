@@ -326,6 +326,18 @@
     width: 1px
 }
 
+.keeper_d2e539 {
+    inset-inline-start: -10000px;
+    pointer-events: none;
+    position: fixed;
+    top: 0
+}
+
+.desktop_d2e539 {
+    height: 720px;
+    width: 1280px
+}
+
 .sidebar__9a9f5 {
     background: var(--background-gradient-app-frame, var(--background-base-lowest));
     display: flex;
@@ -999,4 +1011,4 @@ svg.selectModeIcon_eb0c63 {
     text-align: center
 }
 
-/*# sourceMappingURL=2419772709de1794.css.map*/
+/*# sourceMappingURL=28c66c397bf1c21d.css.map*/
