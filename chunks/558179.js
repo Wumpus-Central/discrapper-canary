@@ -12,10 +12,10 @@ var r = t(477900),
     g = t(999915),
     p = t(881140),
     f = t(816969),
-    k = t(969490);
-let m = RegExp(`https?://${window.GLOBAL_ENV.CDN_HOST ?? ""}`);
+    m = t(969490);
+let k = RegExp(`https?://${window.GLOBAL_ENV.CDN_HOST ?? ""}`);
 function j(e) {
-    return "string" == typeof e.content ? e.content : R(e.content);
+    return "string" == typeof e.content ? e.content : y(e.content);
 }
 let x = {
         ...c().defaultRules,
@@ -33,7 +33,11 @@ let x = {
         strong: { ...c().defaultRules.strong, order: 6 },
         em: { ...c().defaultRules.em, order: 6 },
         u: { ...c().defaultRules.u, order: 5 },
-        del: { ...c().defaultRules.del, order: 6 },
+        del: {
+            ...c().defaultRules.del,
+            order: 6,
+            match: c().inlineRegex(/^~~(?=\S)((?:\\[\s\S]|~(?!~)|[^\s~\\]|\s(?!~~))+?)~~/),
+        },
         link: { ...h.Ay, ...(0, p.A)({ enableBuildOverrides: !1 }), order: 6 },
         blockQuote: {
             ...c().defaultRules.blockQuote,
@@ -48,7 +52,7 @@ let x = {
                 let n = r.match(e, l, t);
                 if (null != n && Array.isArray(n) && n.length >= 3) {
                     let e = n[2];
-                    if ("string" == typeof e) return null != e.match(m) ? n : null;
+                    if ("string" == typeof e) return null != e.match(k) ? n : null;
                 }
                 return !1;
             },
@@ -62,7 +66,7 @@ let x = {
             ...c().defaultRules.codeBlock,
             react(e, l, n) {
                 function a() {
-                    return (0, r.jsx)("code", { className: s()(k.kw, "hljs"), children: j(e) });
+                    return (0, r.jsx)("code", { className: s()(m.kw, "hljs"), children: j(e) });
                 }
                 return (0, r.jsx)(
                     "pre",
@@ -71,7 +75,7 @@ let x = {
                             location: "Markdown",
                             lang: e.lang,
                             code: e.content,
-                            className: s()(k.kw, "hljs"),
+                            className: s()(m.kw, "hljs"),
                             children: (0, r.jsx)(d.c2, {
                                 createPromise: () =>
                                     Promise.all([t.e("818449"), t.e("175134")]).then(t.bind(t, 981776)),
@@ -84,7 +88,7 @@ let x = {
                                         return null == t
                                             ? a()
                                             : (0, r.jsx)("code", {
-                                                  className: s()(k.kw, "hljs", t.language),
+                                                  className: s()(m.kw, "hljs", t.language),
                                                   dangerouslySetInnerHTML: { __html: t.value },
                                               });
                                     }
@@ -97,11 +101,11 @@ let x = {
             },
         },
     },
-    y = c().parserFor(x),
-    R = c().reactFor(c().ruleOutput(x, "react"));
+    R = c().parserFor(x),
+    y = c().reactFor(c().ruleOutput(x, "react"));
 class w extends n.PureComponent {
     static rules = x;
-    static defaultProps = { parser: y, output: R };
+    static defaultProps = { parser: R, output: y };
     render() {
         let { className: e, children: l, state: t, parser: n, output: a } = this.props,
             u = a(
