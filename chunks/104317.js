@@ -30,7 +30,7 @@ function g(e) {
             tier: j,
         } = e,
         v = (0, s.SY)(n),
-        b = (0, i.Q7)(m.intl.string(c.default.bHcJoe), j),
+        b = (0, i.Q7)(m.intl.string(c.default.uk6jhJ), j),
         _ = g ? void 0 : x,
         y = null != _ ? (0, r.nY)(_) : null != v ? (0, s.WQ)(v) : (h ?? m.intl.string(c.default.t8skVB)),
         N = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
