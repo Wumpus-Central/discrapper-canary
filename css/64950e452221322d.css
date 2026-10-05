@@ -1,22 +1,22 @@
-.chooseServerTitle__65de9 {
+.listLabel__6a19a {
     align-items: center;
     display: flex;
     gap: 2px;
     margin-bottom: var(--space-4)
 }
 
-.infoIcon__65de9 {
+.infoIcon__6a19a {
     color: var(--text-muted);
     margin-inline-start: var(--space-4)
 }
 
-.guildList__65de9 {
+.guildList__6a19a {
     display: flex;
     flex-direction: column;
     max-height: 400px
 }
 
-.guildRow__65de9 {
+.guildRow__6a19a {
     align-items: center;
     border-radius: var(--space-16);
     cursor: pointer;
@@ -25,16 +25,16 @@
     transition: background-color .2s
 }
 
-.guildRow__65de9:hover {
+.guildRow__6a19a:hover {
     background-color: var(--background-mod-normal)
 }
 
-.guildIcon__65de9 {
+.guildIcon__6a19a {
     flex-shrink: 0;
     margin-inline-end: var(--space-12)
 }
 
-.guildInfo__65de9 {
+.guildInfo__6a19a {
     display: flex;
     flex: 1;
     flex-direction: column;
@@ -43,10 +43,10 @@
     min-width: 0
 }
 
-.guildName__65de9 {
+.guildName__6a19a {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap
 }
 
-/*# sourceMappingURL=0f6d99505e3b98bf.css.map*/
+/*# sourceMappingURL=64950e452221322d.css.map*/
