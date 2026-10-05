@@ -500,6 +500,13 @@ let l = [
             "If Conjure restarts partway through a long task, it now picks up from its last step and keeps the steps it already showed you.",
     },
     {
+        date: "2026-10-05",
+        time: "00:00",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "If nobody has the preview open when Conjure finishes a build, it asks you to open the project, then checks the app in the preview as soon as you do.",
+    },
+    {
         date: "2026-09-27",
         time: "08:08",
         platforms: ["desktop", "mobile"],
