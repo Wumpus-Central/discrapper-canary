@@ -23,7 +23,7 @@ function g(e) {
         O = (0, a.bG)([h.A], () => h.A.getToastsEnabled(n), [n]),
         _ = N && O,
         b = (0, u.useHasAnyModalOpen)(),
-        [I, j] = s.useState(null);
+        [I, S] = s.useState(null);
     s.useEffect(() => {
         if (!_) return;
         function e() {
@@ -34,7 +34,7 @@ function g(e) {
                     ? null
                     : { left: t.left, top: t.top, width: t.width, height: t.height };
             })((0, p.o)(null, C));
-            j((t) =>
+            S((t) =>
                 (
                     null == t || null == e
                         ? t === e
@@ -53,7 +53,7 @@ function g(e) {
             }
         );
     }, [_, C]);
-    let m = s.useCallback(
+    let j = s.useCallback(
         (e) => {
             (E(), c.A.jumpToMessage({ channelId: e.channel_id, messageId: e.id, flash: !0 }));
         },
@@ -67,7 +67,7 @@ function g(e) {
                   style: { top: I.top, left: I.left, width: I.width, height: I.height / 2 },
                   children: (0, i.jsx)("div", {
                       className: f.f,
-                      children: (0, i.jsx)(A.A, { channelId: n, onToastClick: m }),
+                      children: (0, i.jsx)(A.A, { channelId: n, onToastClick: j }),
                   }),
               }),
               document.body,
@@ -81,7 +81,7 @@ var E = n(73153),
     _ = n(927813);
 let b = { lastAutoOpenedAt: null },
     I = b;
-class j extends a.Ay.PersistedStore {
+class S extends a.Ay.PersistedStore {
     static displayName = "ConjureChatAutoOpenStore";
     static persistKey = "VibegrationsChatAutoOpen";
     initialize(e) {
@@ -94,7 +94,7 @@ class j extends a.Ay.PersistedStore {
         return null == I.lastAutoOpenedAt || e - I.lastAutoOpenedAt >= _.A.Millis.DAY;
     }
 }
-let m = new j(E.h, {
+let j = new S(E.h, {
     LOGOUT: function () {
         if (null == I.lastAutoOpenedAt) return !1;
         I = b;
@@ -104,7 +104,7 @@ let m = new j(E.h, {
         I = { lastAutoOpenedAt: t };
     },
 });
-var S = n(652215),
+var m = n(652215),
     y = n(246338),
     T = n(343030),
     x = n(150861),
@@ -164,7 +164,7 @@ function D(e) {
         p =
             ((t = o.id),
             (n = (0, C.cz)(t)),
-            (l = (0, a.bG)([O.Ay], () => O.Ay.hasUnread(t), [t])),
+            (l = (0, a.bG)([O.Ay], () => O.Ay.hasUnread(t) || O.Ay.wasUnreadOnSelect(t), [t])),
             (r = s.useRef(!1)),
             (u = s.useRef(!1)),
             (c = s.useRef(!0)),
@@ -184,9 +184,9 @@ function D(e) {
                             (0, w.ack)(
                                 t,
                                 {
-                                    section: S.JJy.CHANNEL,
-                                    object: S.ZSU.ACK_VIBEGRATIONS_CHAT_CLOSED,
-                                    objectType: S.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
+                                    section: m.JJy.CHANNEL,
+                                    object: m.ZSU.ACK_VIBEGRATIONS_CHAT_CLOSED,
+                                    objectType: m.AnalyticsObjectTypes.ACK_SEMI_AUTOMATIC,
                                 },
                                 !0,
                                 !0,
@@ -197,7 +197,7 @@ function D(e) {
                     if (
                         ((c.current = !1), !r.current && null == N.Ay.getSidebarState(t)) &&
                         !u.current &&
-                        m.canAutoOpen(Date.now())
+                        j.canAutoOpen(Date.now())
                     ) {
                         var e;
                         ((u.current = !0),

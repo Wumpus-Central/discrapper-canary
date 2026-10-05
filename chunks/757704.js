@@ -814,6 +814,12 @@ let l = [
             "Opening a project on your phone now lands on its newest message instead of stopping partway up the conversation.",
     },
     {
+        date: "2026-10-04",
+        time: "22:36",
+        platforms: ["desktop", "mobile"],
+        summary: "Opening an app\u2019s channel now marks its messages read, even if you never open its chat.",
+    },
+    {
         date: "2026-09-28",
         time: "19:00",
         platforms: ["desktop", "mobile"],
