@@ -1,6 +1,13 @@
 n.d(t, { Kk: () => a, t9: () => s, ug: () => r, wc: () => i });
 let l = [
     {
+        date: "2026-10-04",
+        time: "23:45",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Chatbots you build now know who they're talking to, where, and what they're allowed to do there, and Conjure asks only the setup questions that matter for your bot.",
+    },
+    {
         date: "2026-10-03",
         time: "18:54",
         platforms: ["desktop", "mobile"],
