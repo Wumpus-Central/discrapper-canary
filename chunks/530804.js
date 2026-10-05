@@ -1,14 +1,16 @@
-(t.d(n, { $n: () => A, uy: () => o, vp: () => f }), t(321073));
+(t.d(n, { $n: () => f, b0: () => C, uy: () => g, vp: () => h }), t(321073));
 var u = t(582128),
-    r = t(435558),
-    l = t(17928),
+    l = t(435558),
+    r = t(17928),
     s = t(568598),
     c = t(280450),
     i = t(584569),
     a = t(763827),
-    d = t(977997);
-function A(e, n) {
-    let t = (0, l.bG)([i.A, a.A], () => (e === a.A.getChannelId() ? i.A.getDesyncedVoiceStates() : null));
+    d = t(977997),
+    A = t(955283),
+    o = t(652215);
+function f(e, n) {
+    let t = (0, r.bG)([i.A, a.A], () => (e === a.A.getChannelId() ? i.A.getDesyncedVoiceStates() : null));
     return u.useMemo(
         () =>
             (function (e, n) {
@@ -19,7 +21,7 @@ function A(e, n) {
                 return (
                     e?.forEach((e) => {
                         t.splice(
-                            (0, r.sortedIndexBy)(t, e, (e) => {
+                            (0, l.sortedIndexBy)(t, e, (e) => {
                                 let { comparator: n } = e;
                                 return n;
                             }),
@@ -33,8 +35,8 @@ function A(e, n) {
         [t, n],
     );
 }
-function f(e, n) {
-    let t = (0, l.bG)([i.A, a.A], () => (e === a.A.getChannelId() ? i.A.getDesyncedParticipants() : null));
+function h(e, n) {
+    let t = (0, r.bG)([i.A, a.A], () => (e === a.A.getChannelId() ? i.A.getDesyncedParticipants() : null));
     return u.useMemo(
         () =>
             (function (e, n) {
@@ -43,7 +45,7 @@ function f(e, n) {
                 return (
                     e.forEach((e) => {
                         t.splice(
-                            (0, r.sortedIndexBy)(t, e, (e) => (0, s.KU)(e)),
+                            (0, l.sortedIndexBy)(t, e, (e) => (0, s.KU)(e)),
                             0,
                             e,
                         );
@@ -54,13 +56,20 @@ function f(e, n) {
         [t, n],
     );
 }
-function o(e, n) {
-    let t = (0, l.bG)([c.default], () => c.default.getId() === n),
-        r = (0, l.bG)([a.A], () => a.A.getChannelId()),
+function C(e) {
+    let n = (0, r.bG)([c.default], () => c.default.getId() === e),
+        { showSelfConnectingUI: t } = A.A.useConfig({ location: "useIsSelfDisconnectedUIVisible" }),
+        u = (0, r.bG)([a.A], () => a.A.getState()),
+        l = (0, r.bG)([a.A], () => a.A.getWasEverRtcConnected());
+    return n && l && u !== o.S7L.RTC_CONNECTED && t;
+}
+function g(e, n) {
+    let t = (0, r.bG)([c.default], () => c.default.getId() === n),
+        l = (0, r.bG)([a.A], () => a.A.getChannelId()),
         s = u.useRef(null),
         [i, A] = u.useState(!1),
-        [f, o] = u.useState(!1),
-        h = (0, l.bG)(
+        [o, f] = u.useState(!1),
+        h = (0, r.bG)(
             [a.A, d.A],
             () =>
                 null != n &&
@@ -69,7 +78,7 @@ function o(e, n) {
                 null != d.A.isInChannel(e, n) &&
                 a.A.isUserConnected(n),
         ),
-        C = (0, l.bG)(
+        C = (0, r.bG)(
             [a.A, d.A],
             () =>
                 null != n &&
@@ -80,11 +89,11 @@ function o(e, n) {
         );
     return (
         u.useEffect(() => {
-            h && o(!0);
+            h && f(!0);
         }, [h]),
         u.useEffect(() => {
-            r !== e && o(!1);
-        }, [e, r]),
+            l !== e && f(!1);
+        }, [e, l]),
         u.useEffect(
             () => (
                 C && null == s.current
@@ -98,6 +107,6 @@ function o(e, n) {
             ),
             [C],
         ),
-        !t && f && i
+        !t && o && i
     );
 }

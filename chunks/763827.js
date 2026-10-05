@@ -113,82 +113,68 @@ function w(e, t, i) {
         s = new (n(673514).A)({ userId: a, sessionId: r, guildId: e, channelId: t, joinVoiceId: P, createdTime: i });
     return (
         s.on(d.q.State, (e, t, n) => {
-            o.h.wait(() => o.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n }));
+            o.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n });
         }),
         s.on(d.q.Video, (e, t, n, i, r) => {
-            o.h.wait(() =>
-                o.h.dispatch({
-                    type: "RTC_CONNECTION_VIDEO",
-                    guildId: e,
-                    channelId: t,
-                    userId: n,
-                    streamId: i,
-                    rtcServerId: r,
-                    context: A.x.DEFAULT,
-                    mediaEngineConnectionId: s.getMediaEngineConnectionId(),
-                }),
-            );
+            o.h.dispatch({
+                type: "RTC_CONNECTION_VIDEO",
+                guildId: e,
+                channelId: t,
+                userId: n,
+                streamId: i,
+                rtcServerId: r,
+                context: A.x.DEFAULT,
+                mediaEngineConnectionId: s.getMediaEngineConnectionId(),
+            });
         }),
         s.on(d.q.Ping, (e, t) => {
-            o.h.wait(() => o.h.dispatch({ type: "RTC_CONNECTION_PING", pings: e, quality: t }));
+            o.h.dispatch({ type: "RTC_CONNECTION_PING", pings: e, quality: t });
         }),
         s.on(d.q.OutboundLossRate, (e) => {
-            o.h.wait(() => o.h.dispatch({ type: "RTC_CONNECTION_LOSS_RATE", lossRate: e }));
+            o.h.dispatch({ type: "RTC_CONNECTION_LOSS_RATE", lossRate: e });
         }),
         s.on(d.q.Speaking, (e, t) => {
             L?.setSpeaking(e, t);
         }),
         s.on(d.q.Flags, (e, t) => {
-            o.h.wait(() => {
-                o.h.dispatch({
-                    type: "RTC_CONNECTION_FLAGS",
-                    flags: t,
-                    userId: e,
-                    guildId: s.guildId,
-                    channelId: s.channelId,
-                    context: s.context,
-                });
+            o.h.dispatch({
+                type: "RTC_CONNECTION_FLAGS",
+                flags: t,
+                userId: e,
+                guildId: s.guildId,
+                channelId: s.channelId,
+                context: s.context,
             });
         }),
         s.on(d.q.UsersMerged, (e, t) => {
             o.h.dispatch({ type: "RTC_CONNECTION_USERS_MERGED", userIds: e, context: t });
         }),
         s.on(d.q.ClientConnect, (e) => {
-            o.h.wait(() => {
-                o.h.dispatch({
-                    type: "RTC_CONNECTION_CLIENT_CONNECT",
-                    userIds: e,
-                    guildId: s.guildId,
-                    channelId: s.channelId,
-                    context: s.context,
-                });
+            o.h.dispatch({
+                type: "RTC_CONNECTION_CLIENT_CONNECT",
+                userIds: e,
+                guildId: s.guildId,
+                channelId: s.channelId,
+                context: s.context,
             });
         }),
         s.on(d.q.ClientDisconnect, (e) => {
-            o.h.wait(() => {
-                o.h.dispatch({
-                    type: "RTC_CONNECTION_CLIENT_DISCONNECT",
-                    userId: e,
-                    guildId: s.guildId,
-                    channelId: s.channelId,
-                    context: s.context,
-                });
+            o.h.dispatch({
+                type: "RTC_CONNECTION_CLIENT_DISCONNECT",
+                userId: e,
+                guildId: s.guildId,
+                channelId: s.channelId,
+                context: s.context,
             });
         }),
         s.on(d.q.Platform, (e, t, n) => {
-            o.h.wait(() => {
-                o.h.dispatch({ type: "RTC_CONNECTION_PLATFORM", platform: t, userId: e, channelId: n });
-            });
+            o.h.dispatch({ type: "RTC_CONNECTION_PLATFORM", platform: t, userId: e, channelId: n });
         }),
         s.on(d.q.SecureFramesUpdate, () => {
-            o.h.wait(() => {
-                o.h.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
-            });
+            o.h.dispatch({ type: "RTC_CONNECTION_SECURE_FRAMES_UPDATE" });
         }),
         s.on(d.q.RosterMapUpdate, (e) => {
-            o.h.wait(() => {
-                o.h.dispatch({ type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds: e });
-            });
+            o.h.dispatch({ type: "RTC_CONNECTION_ROSTER_MAP_UPDATE", userIds: e });
         }),
         (L = new h(g.default.getId(), t)),
         (O = null),

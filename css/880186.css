@@ -2268,6 +2268,10 @@ span.clanTag__07f91.isOverlay__07f91 {
     opacity: 1
 }
 
+.connecting__07f91 {
+    opacity: .6
+}
+
 .ringing__07f91 {
     animation: outgoing-call-pulse__07f91 var(--custom-call-avatar-outgoing-duration) infinite ease-out;
     opacity: .3
@@ -2297,4 +2301,4 @@ span.clanTag__07f91.isOverlay__07f91 {
     color: CanvasText
 }
 
-/*# sourceMappingURL=880186.09ea9d4d1231e374.css.map*/
+/*# sourceMappingURL=880186.6eba4cc6d6b39b8a.css.map*/

@@ -5727,6 +5727,28 @@
     }
   },
   {
+    "kind": "user",
+    "name": "2026-09-voice-connect-feedback",
+    "defaultConfig": {
+      "rtcConnectionJoinSounds": false,
+      "showSelfConnectingUI": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "rtcConnectionJoinSounds": true,
+        "showSelfConnectingUI": false
+      },
+      "2": {
+        "rtcConnectionJoinSounds": true,
+        "showSelfConnectingUI": true
+      }
+    }
+  },
+  {
     "name": "2026-09-web-sticker-picker-upsell-restyle",
     "kind": "user",
     "defaultConfig": false,

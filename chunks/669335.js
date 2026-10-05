@@ -17,8 +17,8 @@ var n,
     E = t(39623),
     C = t(939249),
     j = t(778712),
-    p = t(890856),
-    I = t(666654),
+    I = t(890856),
+    p = t(666654),
     f = t(83107),
     L = t(615675),
     O = t(990836),
@@ -70,11 +70,11 @@ function B(e) {
         E = r.useRef(null),
         C = Math.max(0, Math.min(1, l ?? 0)),
         j = C >= 1 ? h : x,
-        p = r.useMemo(
+        I = r.useMemo(
             () => ({ backgroundImage: `conic-gradient(${j} ${Math.round(360 * C)}deg, ${A} 0deg)` }),
             [C, j, A],
         ),
-        I = r.useMemo(
+        p = r.useMemo(
             () => ({
                 size: { type: "static-random", minValue: 2, maxValue: 6 },
                 velocity: { type: "static-random", minValue: { x: -120, y: -140 }, maxValue: { x: 120, y: -260 } },
@@ -84,8 +84,8 @@ function B(e) {
         f = r.useCallback(() => {
             if (c) return;
             let e = E.current?.getBoundingClientRect();
-            null != e && m(e.left + e.width / 2, e.top + e.height / 2, I, 250);
-        }, [I, m, c]);
+            null != e && m(e.left + e.width / 2, e.top + e.height / 2, p, 250);
+        }, [p, m, c]);
     (r.useEffect(() => {
         c || ((o ?? 0) < 1 && C >= 1 && f());
     }, [C, f, o, c]),
@@ -103,7 +103,7 @@ function B(e) {
         children: (0, i.jsxs)("div", {
             ref: E,
             className: Z.R,
-            children: [(0, i.jsx)("div", { className: Z.h, style: p }), n],
+            children: [(0, i.jsx)("div", { className: Z.h, style: I }), n],
         }),
     });
 }
@@ -119,9 +119,9 @@ var J = t(790381),
     X = t(266080),
     W = t(427262),
     $ = t(652215),
-    Q = t(806931),
-    Y = t(544105),
-    q = t(375708),
+    q = t(806931),
+    Q = t(544105),
+    Y = t(375708),
     ee = t(254849);
 let es = (0, v.Fe)({
     createPromise: () => Promise.all([t.e("910349"), t.e("528966")]).then(t.bind(t, 217356)),
@@ -141,7 +141,7 @@ function en(e) {
         deaf: c,
         serverDeaf: u,
         collapsed: j,
-        video: p,
+        video: I,
         isStreaming: _,
         disabled: S,
         isWatching: k,
@@ -165,17 +165,17 @@ function en(e) {
                 o = [];
             if (t) {
                 let e;
-                e = r || n ? I.O : f.z;
+                e = r || n ? p.O : f.z;
                 let t = (0, i.jsx)(e, { className: a()(ee.Kk, s, { [ee.DU]: r }), color: "currentColor" });
                 o.push(
                     (0, i.jsx)(
                         m.m,
                         {
                             text: n
-                                ? q.intl.string(q.t.Q8Uzof)
+                                ? Y.intl.string(Y.t.Q8Uzof)
                                 : r
-                                  ? q.intl.string(q.t.uLddbQ)
-                                  : q.intl.string(q.t.tjtv3P),
+                                  ? Y.intl.string(Y.t.uLddbQ)
+                                  : Y.intl.string(Y.t.tjtv3P),
                             children: t,
                         },
                         "mute",
@@ -188,20 +188,20 @@ function en(e) {
                 o.push(
                     (0, i.jsx)(
                         m.m,
-                        { text: c ? q.intl.string(q.t.btxSdB) : q.intl.string(q.t.NjmiOL), children: t },
+                        { text: c ? Y.intl.string(Y.t.btxSdB) : Y.intl.string(Y.t.NjmiOL), children: t },
                         "deaf",
                     ),
                 );
             }
             return o;
         })({ iconClassName: v, mute: t, localMute: n, serverMute: l, deaf: c, serverDeaf: u });
-    (p &&
+    (I &&
         (r
             ? Z.push(
                   (0, i.jsx)(
                       m.m,
                       {
-                          text: q.intl.string(q.t["PXMZ/+"]),
+                          text: Y.intl.string(Y.t["PXMZ/+"]),
                           children: (0, i.jsx)(A.O, {
                               size: "md",
                               color: "currentColor",
@@ -216,7 +216,7 @@ function en(e) {
                   (0, i.jsx)(
                       m.m,
                       {
-                          text: q.intl.string(q.t.FlNoSV),
+                          text: Y.intl.string(Y.t.FlNoSV),
                           children: (0, i.jsx)(x.VideoIcon, {
                               size: "md",
                               color: "currentColor",
@@ -231,7 +231,7 @@ function en(e) {
                 (0, i.jsx)(
                     m.m,
                     {
-                        text: q.intl.string(q.t.HFwRpk),
+                        text: Y.intl.string(Y.t.HFwRpk),
                         children: (0, i.jsx)(h.E, {
                             className: a()(ee.Kk, v),
                             color: N.A.colors.STATUS_WARNING_BACKGROUND,
@@ -251,18 +251,18 @@ function en(e) {
                     "activity",
                 ),
             ),
-        M === Y.f$.XBOX || G === Q.J7.XBOX
+        M === Q.f$.XBOX || G === q.J7.XBOX
             ? Z.push((0, i.jsx)(X.A, { className: a()(ee.Kk, v) }, "xbox"))
-            : M === Y.f$.PLAYSTATION || G === Q.J7.PLAYSTATION
+            : M === Q.f$.PLAYSTATION || G === q.J7.PLAYSTATION
               ? Z.push((0, i.jsx)(J.A, { className: a()(ee.Kk, v) }, "playstation"))
-              : G === Q.J7.QUEST &&
+              : G === q.J7.QUEST &&
                 Z.push((0, i.jsx)(o.G, { size: "xs", color: "currentColor", className: a()(ee.Kk, v) }, "quest")),
         k &&
             Z.push(
                 (0, i.jsx)(
                     m.m,
                     {
-                        text: q.intl.string(q.t["JH1SJ+"]),
+                        text: Y.intl.string(Y.t["JH1SJ+"]),
                         children: (0, i.jsx)(E.EyeIcon, {
                             size: "xs",
                             color: "currentColor",
@@ -280,7 +280,7 @@ function en(e) {
                 (0, i.jsx)(
                     m.m,
                     {
-                        text: q.intl.string(q.t.ygslb0),
+                        text: Y.intl.string(Y.t.ygslb0),
                         children: (0, i.jsx)(C.D, {
                             onClick: (e) => {
                                 (e.stopPropagation(), R.A.stopRinging(F, [K.id]));
@@ -333,7 +333,7 @@ let ei = function (e) {
         {
             onClick: E,
             onKeyDown: C,
-            onDoubleClick: I,
+            onDoubleClick: p,
             onContextMenu: f,
             onMouseLeave: L,
             onMouseDown: O,
@@ -352,38 +352,41 @@ let ei = function (e) {
             className: B,
             overlap: J,
             "aria-label": X,
-            ringing: Q,
-            user: Y,
+            ringing: q,
+            connecting: Q = !1,
+            user: et,
         } = g,
-        et = (0, b.A)({ userId: Y.id, guildId: K }),
-        ei = (0, M.a)({ displayNameStyles: et }),
-        er = (0, S.A)(Y.id),
-        el = (0, D.v)({
+        ei = (0, b.A)({ userId: et.id, guildId: K }),
+        er = (0, M.a)({ displayNameStyles: ei }),
+        el = (0, S.A)(et.id),
+        ea = (0, D.v)({
             isSpeaking: T,
-            voiceDb: er,
+            voiceDb: el,
             ...(J ? { spreadDirection: D.O.INSET_ONLY, maxInnerSpreadRadius: 3 } : {}),
         }),
-        [ea, ec] = r.useState(!1),
-        eo = (() => {
+        [ec, eo] = r.useState(!1),
+        ed = (() => {
             if (null != X) return X;
-            let e = z ?? Y.username,
+            let e = z ?? et.username,
                 s = null;
-            return (F
-                ? (s = q.intl.string(q.t.btxSdB))
-                : U
-                  ? (s = q.intl.string(q.t.NjmiOL))
-                  : v
-                    ? (s = q.intl.string(q.t.Q8Uzof))
-                    : G
-                      ? (s = q.intl.string(q.t.uLddbQ))
-                      : y && (s = q.intl.string(q.t.tjtv3P)),
+            return (Q
+                ? (s = Y.intl.string(Y.t["7LkwqE"]))
+                : F
+                  ? (s = Y.intl.string(Y.t.btxSdB))
+                  : U
+                    ? (s = Y.intl.string(Y.t.NjmiOL))
+                    : v
+                      ? (s = Y.intl.string(Y.t.Q8Uzof))
+                      : G
+                        ? (s = Y.intl.string(Y.t.uLddbQ))
+                        : y && (s = Y.intl.string(Y.t.tjtv3P)),
             null != s)
-                ? q.intl.formatToPlainString(q.t["1+MVBP"], { userName: e, status: s })
+                ? Y.intl.formatToPlainString(Y.t["1+MVBP"], { userName: e, status: s })
                 : e;
         })(),
-        ed = (0, u.bG)([V.A], () => V.A.getProgressForUserId(Y.id), [Y.id]),
-        eu = (0, P.Uk)("VoiceUser") && null != ed;
-    return (0, i.jsx)(p.s, {
+        eu = (0, u.bG)([V.A], () => V.A.getProgressForUserId(et.id), [et.id]),
+        em = (0, P.Uk)("VoiceUser") && null != eu;
+    return (0, i.jsx)(I.s, {
         ref: N,
         className: a()(B, {
             [ee.q7]: !0,
@@ -393,68 +396,69 @@ let ei = function (e) {
             [ee.L9]: d === $.OSZ.SMALL,
             [ee.p8]: d === $.OSZ.LARGE,
             [ee.r9]: !A && x,
+            [ee.jI]: Q,
         }),
         onClick: function (e) {
-            E?.(e, Y);
+            E?.(e, et);
         },
         onDoubleClick: function (e) {
-            I?.(e, Y);
+            p?.(e, et);
         },
         onContextMenu: function (e) {
-            f?.(e, Y);
+            f?.(e, et);
         },
         onMouseLeave: function (e) {
-            (L?.(e, Y), ec(!1));
+            (L?.(e, et), eo(!1));
         },
         onMouseDown: function (e) {
-            O?.(e, Y);
+            O?.(e, et);
         },
         onMouseEnter: function () {
-            ec(!0);
+            eo(!0);
         },
         onKeyDown: C,
-        "aria-label": eo,
+        "aria-label": ed,
         focusProps: { offset: { right: 4 } },
         children: (0, i.jsxs)("div", {
             className: a()(ee.Qs, { [ee.zq]: Z }),
             children: [
                 R && !_
                     ? (0, i.jsx)(m.m, {
-                          text: q.intl.string(q.t.BVK71i),
+                          text: Y.intl.string(Y.t.BVK71i),
                           children: (0, i.jsx)("div", { className: a()(ee.G, { [ee.g4]: !y && !G && T }) }),
                       })
                     : null,
-                ((s = a()(ee.my, { [ee.Jb]: d === $.OSZ.LARGE, [ee.dT]: d === $.OSZ.SMALL, [ee.DF]: Q })),
-                (t = { backgroundImage: `url(${Y.getAvatarURL(K, d === $.OSZ.LARGE ? 38 : 24)})`, ...el }),
-                Q
+                ((s = a()(ee.my, { [ee.Jb]: d === $.OSZ.LARGE, [ee.dT]: d === $.OSZ.SMALL, [ee.DF]: q })),
+                (t = { backgroundImage: `url(${et.getAvatarURL(K, d === $.OSZ.LARGE ? 38 : 24)})`, ...ea }),
+                q
                     ? (0, i.jsx)(k.Ay, {
                           size: d === $.OSZ.LARGE ? j._3.SIZE_40 : j._3.SIZE_24,
                           ringing: !0,
-                          src: Y.getAvatarURL(K, d === $.OSZ.LARGE ? 40 : 24),
+                          src: et.getAvatarURL(K, d === $.OSZ.LARGE ? 40 : 24),
                           className: a()(c, s),
                       })
-                    : eu
+                    : em
                       ? (0, i.jsx)(H, {
-                            userId: Y.id,
+                            userId: et.id,
                             wrapperClassName: c,
                             children: (0, i.jsx)("div", { className: s, style: t }),
                         })
                       : (0, i.jsx)("div", { className: a()(c, s), style: t })),
                 ((n = (0, i.jsxs)("div", {
-                    className: a()(o, ee.Xh, ei, { [ee.Pi]: !y && !G && T, [ee.DF]: Q }),
+                    className: a()(o, ee.Xh, er, { [ee.Pi]: !y && !G && T, [ee.DF]: q }),
                     children: [
-                        z ?? W.Ay.getName(Y),
+                        z ?? W.Ay.getName(et),
                         w
                             ? (0, i.jsxs)("span", {
                                   className: ee.IW,
-                                  children: ["\xa0", q.intl.string(q.t["pFO/Ph"])],
+                                  children: ["\xa0", Y.intl.string(Y.t["pFO/Ph"])],
                               })
                             : "",
                     ],
                 })),
                 (l = {
-                    primaryGuild: Y.primaryGuild,
-                    userId: Y.id,
+                    primaryGuild: et.primaryGuild,
+                    userId: et.id,
                     contextGuildId: K,
                     isOverlay: h,
                     disableTooltip: !0,
@@ -462,7 +466,7 @@ let ei = function (e) {
                     profileViewedAnalytics: { source: h ? $.JJy.OVERLAY : $.ThZ.VOICE_PANEL },
                 }),
                 !_ || h ? (0, i.jsx)(es, { ...l, children: n }) : null),
-                (0, i.jsx)(en, { disabled: x, ...g, isHovered: ea }),
+                (0, i.jsx)(en, { disabled: x, ...g, isHovered: ec }),
             ],
         }),
     });
@@ -481,8 +485,8 @@ function er(e) {
                 });
         }, [s.id, o, l, d, u]),
         (0, i.jsx)(m.m, {
-            text: q.intl.formatToPlainString(q.t.Sq9xJ7, { game: s.name }),
-            "aria-label": q.intl.formatToPlainString(q.t.Sq9xJ7, { game: s.name }),
+            text: Y.intl.formatToPlainString(Y.t.Sq9xJ7, { game: s.name }),
+            "aria-label": Y.intl.formatToPlainString(Y.t.Sq9xJ7, { game: s.name }),
             children: (0, i.jsx)(G.A, {
                 ref: x,
                 className: a()(ee.Kk, ee.n8, n),

@@ -16,8 +16,8 @@ var i = n(477900),
     I = n(475825),
     p = n(224640),
     T = n(442433),
-    m = n(390435),
-    g = n(775121),
+    g = n(390435),
+    m = n(775121),
     S = n(115718);
 let N = (0, n(600975).C)({
     kind: "user",
@@ -215,10 +215,10 @@ class en extends r.PureComponent {
     _listId = (0, O.Ld)();
     state = { query: this.props.query, mouseFocusDisabled: !0 };
     componentDidMount() {
-        (g.A.disable(), g.A.enableTemp(m.w));
+        (m.A.disable(), m.A.enableTemp(g.w));
     }
     componentWillUnmount() {
-        (g.A.disableTemp(), g.A.enable());
+        (m.A.disableTemp(), m.A.enable());
     }
     componentDidUpdate(e, t) {
         let { mouseFocusDisabled: n, query: i } = this.state,
@@ -521,7 +521,6 @@ class en extends r.PureComponent {
                         n.e("499485"),
                         n.e("905581"),
                         n.e("249681"),
-                        n.e("869047"),
                         n.e("996382"),
                         n.e("62052"),
                         n.e("771657"),

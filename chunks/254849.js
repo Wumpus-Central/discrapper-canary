@@ -29,6 +29,7 @@ _.exports = {
     Pi: "usernameSpeaking__07f91",
     g4: "iconPriortySpeakerSpeaking__07f91",
     r9: "disabled__07f91",
+    jI: "connecting__07f91",
     DF: "ringing__07f91",
     IW: "guestSuffix__07f91",
     n8: "gameIcon__07f91",
