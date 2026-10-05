@@ -1,5 +1,5 @@
 let i, r;
-(n.d(t, { A: () => $ }), n(321073));
+(n.d(t, { A: () => K }), n(321073));
 var a = n(478437),
     s = n(17928),
     l = n(52133),
@@ -73,12 +73,7 @@ function W() {
     let e = O.Ay.getVoiceChannelId();
     return e !== i && ((i = e), F());
 }
-function Y(e) {
-    let { guild: t } = e,
-        n = F();
-    return (M.delete(t.id), n);
-}
-class K extends s.Ay.Store {
+class Y extends s.Ay.Store {
     static displayName = "GuildMediaStateStore";
     initialize() {
         ((i = O.Ay.getVoiceChannelId()),
@@ -184,14 +179,22 @@ class K extends s.Ay.Store {
         return (M.set(e, { value: i, version: P }), i);
     }
 }
-let $ = new K(o.h, {
-    CONNECTION_OPEN: V,
-    CONNECTION_OPEN_SUPPLEMENTAL: V,
-    CONNECTION_CLOSED: V,
+let K = new Y(o.h, {
+    CONNECTION_OPEN: function () {
+        let e = F();
+        for (let e of M.keys()) null == S.A.getGuild(e) && M.delete(e);
+        return e;
+    },
+    CONNECTION_OPEN_SUPPLEMENTAL: F,
+    CONNECTION_CLOSED: F,
     OVERLAY_INITIALIZE: V,
     LOGOUT: V,
-    GUILD_CREATE: Y,
-    GUILD_DELETE: Y,
+    GUILD_CREATE: F,
+    GUILD_DELETE: function (e) {
+        let { guild: t } = e,
+            n = F();
+        return (M.delete(t.id), n);
+    },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e,
             n = !1;
