@@ -8,6 +8,13 @@ let l = [
             "Chatbots you build now know who they're talking to, where, and what they're allowed to do there, and Conjure asks only the setup questions that matter for your bot.",
     },
     {
+        date: "2026-10-04",
+        time: "23:57",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "The + button in chat now spells out what you can hand Conjure: images and videos, sounds, other files, or a project you already have.",
+    },
+    {
         date: "2026-10-03",
         time: "18:54",
         platforms: ["desktop", "mobile"],
