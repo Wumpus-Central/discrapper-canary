@@ -314,6 +314,13 @@ let l = [
             "Conjure can ask questions where you pick several answers at once, and add your own words alongside them.",
     },
     {
+        date: "2026-10-05",
+        time: "02:20",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Conjure can check your Activity in its own browser, and each screenshot it takes shows up in the chat while it works. Testing the whole app needs Live Reload on and your message asking for it.",
+    },
+    {
         date: "2026-10-03",
         time: "00:20",
         platforms: ["desktop"],
