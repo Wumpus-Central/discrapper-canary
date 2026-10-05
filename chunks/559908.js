@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => g, gN: () => p });
+n.d(t, { Ay: () => m, gN: () => p });
 var i = n(17928),
     r = n(713402),
     a = n(451988),
@@ -21,7 +21,7 @@ let A = new Set(),
             return `${n}-${t}`;
         },
     ),
-    I = new r.J(
+    f = new r.J(
         function (e) {
             let {
                 messageId: t,
@@ -39,7 +39,7 @@ let A = new Set(),
             return `${n}-${i}-${t}`;
         },
     );
-function f(e) {
+function I(e) {
     let { userId: t, channelId: n } = e;
     return `${t}-${n}`;
 }
@@ -52,11 +52,11 @@ class T extends i.Ay.Store {
         this.waitFor(l.default, c.A, o.Ay);
     }
     getComboScore(e, t) {
-        let n = h.get(f({ userId: e, channelId: t }));
+        let n = h.get(I({ userId: e, channelId: t }));
         return null == n ? 0 : (0, u.RL)(n);
     }
     getUserCombo(e, t) {
-        return h.get(f({ userId: e, channelId: t }));
+        return h.get(I({ userId: e, channelId: t }));
     }
     isComboing(e, t) {
         var n;
@@ -64,11 +64,11 @@ class T extends i.Ay.Store {
         return null != i && i.value >= c.A.combosRequiredCount && null != (n = i) && (n.value > 0 || n?.multiplier > 1);
     }
     getMessageCombo(e) {
-        let t = I.get(e);
+        let t = f.get(e);
         return t?.combo ?? void 0;
     }
     getMostRecentMessageCombo(e) {
-        let t = I.values(e);
+        let t = f.values(e);
         return t[t.length - 1];
     }
     getUserComboShakeIntensity(e, t, n, i) {
@@ -76,13 +76,13 @@ class T extends i.Ay.Store {
         return null != r ? (0, u.U$)(r, i) * n : 0;
     }
 }
-let m = new T(s.h, {
+let g = new T(s.h, {
         POGGERMODE_UPDATE_COMBO: function (e) {
             let { type: t, ...n } = e;
             if (!c.A.isEnabled()) return !1;
             !(function e(t) {
                 let n = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-                    i = h.get(f(t)),
+                    i = h.get(I(t)),
                     r = {
                         ...i,
                         ...t,
@@ -90,16 +90,16 @@ let m = new T(s.h, {
                         multiplier: Math.min(t.multiplier ?? i?.multiplier ?? 1, 7),
                         decayInterval: i?.decayInterval ?? new a.IX(),
                     };
-                (h.set(f(t), r),
+                (h.set(I(t), r),
                     n &&
                         r.decayInterval?.start(1e3, () => {
-                            let t = h.get(f(r));
+                            let t = h.get(I(r));
                             if (null != t) {
                                 let n = r.multiplier !== t.multiplier && r.value !== t.value;
                                 t.value <= 0 || n
                                     ? (t.decayInterval?.stop(),
-                                      t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), m.emitChange()))
-                                    : (e({ ...t, value: t.value - 1 }), m.emitChange());
+                                      t.value <= 0 && (e({ ...t, value: 0, multiplier: 1 }), g.emitChange()))
+                                    : (e({ ...t, value: t.value - 1 }), g.emitChange());
                             }
                         }));
             })(n);
@@ -107,7 +107,7 @@ let m = new T(s.h, {
         POGGERMODE_UPDATE_MESSAGE_COMBO: function (e) {
             let { comboMessage: t } = e;
             if (!c.A.isEnabled()) return !1;
-            I.set(t.messageId, t);
+            f.set(t.messageId, t);
         },
         MESSAGE_CREATE: function (e) {
             let {
@@ -117,7 +117,7 @@ let m = new T(s.h, {
             if (!c.A.isEnabled()) return !1;
             let a = l.default.getId();
             if (!p(i?.id, a, r, A)) return !1;
-            let s = h.get(f({ userId: i?.id ?? "???", channelId: t }));
+            let s = h.get(I({ userId: i?.id ?? "???", channelId: t }));
             if (
                 c.A.screenshakeEnabled &&
                 c.A.screenshakeEnabledLocations[_.uD.MENTION] &&
@@ -130,4 +130,4 @@ let m = new T(s.h, {
             return !1;
         },
     }),
-    g = m;
+    m = g;

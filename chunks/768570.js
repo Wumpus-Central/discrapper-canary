@@ -1,7 +1,7 @@
 n.d(t, {
     $H: () => E,
     B7: () => A,
-    Mg: () => I,
+    Mg: () => f,
     Q_: () => h,
     nC: () => d,
     oi: () => o,
@@ -50,4 +50,4 @@ var h =
     (a.SEARCH_XDM_SETTINGS = "search_xdm_settings"),
     (a.SEARCH_RESULTS_HINT = "search_results_hint"),
     a);
-let I = new Set([l.Auw.IMAGE, l.Auw.VIDEO, l.Auw.GIFV]);
+let f = new Set([l.Auw.IMAGE, l.Auw.VIDEO, l.Auw.GIFV]);

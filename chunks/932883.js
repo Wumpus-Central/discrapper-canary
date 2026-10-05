@@ -1,4 +1,4 @@
-n.d(t, { GM: () => I, Hi: () => S, Ml: () => T, P3: () => g, Ut: () => m, X8: () => p, op: () => f });
+n.d(t, { GM: () => f, Hi: () => S, Ml: () => T, P3: () => m, Ut: () => g, X8: () => p, op: () => I });
 var i,
     r = n(477900),
     a = n(582128),
@@ -12,12 +12,12 @@ var i,
     E = n(849077),
     A = n(652215);
 let h = a.createContext("");
-function I(e) {
+function f(e) {
     let { children: t } = e,
         [n] = a.useState(() => (0, s.A)());
     return (0, r.jsx)(h.Provider, { value: n, children: t });
 }
-function f() {
+function I() {
     return a.useContext(h);
 }
 var p =
@@ -38,11 +38,11 @@ function T(e) {
         view_id: i,
     });
 }
-function m(e) {
+function g(e) {
     let { section: t, enabled: n, viewId: i } = e;
     c.default.track(A.HAw.NOTIFICATIONS_INBOX_SECTION_INTERACTED, { section: t, enabled: n, view_id: i });
 }
-function g(e) {
+function m(e) {
     let {
         timeToLoad: t,
         messagesCount: n,
@@ -71,23 +71,23 @@ function S(e) {
             viewId: s,
             messagesByCategory: h,
         } = e,
-        I = a.useRef(null),
-        f = a.useRef(!1),
+        f = a.useRef(null),
+        I = a.useRef(!1),
         p = (0, o.bG)([u.A], () => u.A.isLoading),
         T = (0, l.A)(p),
-        m = (0, o.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
+        g = (0, o.bG)([u.A], () => u.A.currentRequestAnalyticsPayload ?? null),
         { unreadRecentMentionsCount: S, unreadChannelIds: N } = (0, _.U4)();
     ((0, d.Ay)(() => {
         (!(function (e) {
             let { variant: t, viewId: n, entrypoint: i } = e;
             c.default.track(A.HAw.NOTIFICATIONS_INBOX_OPENED, { inbox_variant: t, inbox_entrypoint: i, view_id: n });
         })({ variant: t, viewId: s, entrypoint: n }),
-            (I.current = Date.now()));
+            (f.current = Date.now()));
     }),
         a.useEffect(() => {
-            if (null != I.current && (i?.length > 0 || r?.length > 0) && !f.current) {
-                let e = Date.now() - I.current;
-                ((f.current = !0),
+            if (null != f.current && (i?.length > 0 || r?.length > 0) && !I.current) {
+                let e = Date.now() - f.current;
+                ((I.current = !0),
                     (function (e) {
                         let {
                             timeToLoad: t,
@@ -122,21 +122,21 @@ function S(e) {
             }
         }, [i, r, s, N, S, h]),
         a.useEffect(() => {
-            let e = m?.loadingTrigger === E.VA.AUTO_LOAD;
-            null == m ||
+            let e = g?.loadingTrigger === E.VA.AUTO_LOAD;
+            null == g ||
                 !0 !== T ||
                 !1 !== p ||
                 e ||
-                g({
-                    timeToLoad: m?.timeToLoad,
+                m({
+                    timeToLoad: g?.timeToLoad,
                     messagesCount: i.length,
                     unreadMessagesCount: r.length,
-                    loadingTrigger: m?.loadingTrigger ?? E.VA.UNKNOWN,
-                    viewId: m?.viewId,
-                    channelsFetched: m?.channelsFetched,
-                    mentionsFetched: m?.mentionsFetched,
+                    loadingTrigger: g?.loadingTrigger ?? E.VA.UNKNOWN,
+                    viewId: g?.viewId,
+                    channelsFetched: g?.channelsFetched,
+                    mentionsFetched: g?.mentionsFetched,
                 });
-        }, [p, i, r, s, T, m]),
+        }, [p, i, r, s, T, g]),
         (0, d.l0)(() => {
             !(function (e) {
                 let { unreadsCount: t, totalMessagesCount: n, unreadItemsCount: i, totalItemsCount: r, viewId: a } = e;

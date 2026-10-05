@@ -3,10 +3,10 @@ n.d(t, {
     G1: () => d,
     N$: () => l.Key,
     Nu: () => A,
-    RX: () => f,
+    RX: () => I,
     V8: () => E,
     Yy: () => c,
-    dh: () => I,
+    dh: () => f,
     g$: () => h,
     mi: () => o,
     zY: () => u,
@@ -409,7 +409,7 @@ var h =
         (r[(r.LINUX = 3)] = "LINUX"),
         (r[(r.BROWSER = 4)] = "BROWSER"),
         r),
-    I =
+    f =
         (((a = {}).ENTER = "Enter"),
         (a.TAB = "Tab"),
         (a.SPACE = " "),
@@ -425,7 +425,7 @@ var h =
         (a.DELETE = "Delete"),
         (a.COMMA = ","),
         a),
-    f =
+    I =
         (((s = {})[(s.Left = 0)] = "Left"),
         (s[(s.Right = 1)] = "Right"),
         (s[(s.Center = 2)] = "Center"),

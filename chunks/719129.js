@@ -1,4 +1,4 @@
-n.d(t, { GH: () => h, c1: () => I });
+n.d(t, { GH: () => h, c1: () => f });
 var i = n(73153),
     r = n(386406),
     a = n(56562),
@@ -55,7 +55,7 @@ function h(e, t) {
         });
     });
 }
-function I(e) {
+function f(e) {
     return A().then((t) => {
         t.cancelAttachToProcess(e);
     });

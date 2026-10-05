@@ -22,18 +22,18 @@ function h(e) {
         n = (0, s.yK)([o.Ay], () => o.Ay.getPendingMontageClips()),
         r = (0, s.yK)([o.Ay], () => o.Ay.getNewClipIds()),
         h = (0, c.P)(),
-        I = (0, s.bG)([o.Ay], () => o.Ay.getSettings().showPovClipsInGallery),
-        f = (0, s.bG)([l.default], () => l.default.getCurrentUser()?.id);
+        f = (0, s.bG)([o.Ay], () => o.Ay.getSettings().showPovClipsInGallery),
+        I = (0, s.bG)([l.default], () => l.default.getCurrentUser()?.id);
     return i.useMemo(() => {
-        let i = [...n, ...(I ? t : t.filter((e) => !E(e)))],
+        let i = [...n, ...(f ? t : t.filter((e) => !E(e)))],
             s = null != e ? i.filter(e) : i,
             l = new Set(r),
             o = [],
             c = new Map(),
             p = new Map(),
             T = new Map(),
-            m = { allClips: 0, autoClips: 0, favorites: 0 },
-            g = new Map(),
+            g = { allClips: 0, autoClips: 0, favorites: 0 },
+            m = new Map(),
             S = { allClips: 0, autoClips: 0, favorites: 0 };
         for (let e of s) {
             if (
@@ -90,22 +90,22 @@ function h(e) {
                     }
                     return !0;
                 })(e, h) && o.push(e),
-                (m.allClips += 1),
-                "auto" === e.clipMethod && (m.autoClips += 1),
-                e.isFavorite && (m.favorites += 1),
+                (g.allClips += 1),
+                "auto" === e.clipMethod && (g.autoClips += 1),
+                e.isFavorite && (g.favorites += 1),
                 l.has(e.id) &&
                     ((S.allClips += 1),
                     "auto" === e.clipMethod && (S.autoClips += 1),
                     e.isFavorite && (S.favorites += 1),
-                    null != e.applicationId && g.set(e.applicationId, (g.get(e.applicationId) ?? 0) + 1)),
+                    null != e.applicationId && m.set(e.applicationId, (m.get(e.applicationId) ?? 0) + 1)),
                 null != e.applicationId)
             ) {
                 let t = c.get(e.applicationId);
                 null == t ? c.set(e.applicationId, { name: e.applicationName, count: 1 }) : (t.count += 1);
             }
-            for (let t of e.users) t !== f && p.set(t, (p.get(t) ?? 0) + 1);
+            for (let t of e.users) t !== I && p.set(t, (p.get(t) ?? 0) + 1);
             let t = e.decision?.signal?.type === u.Gy.DISTRIBUTED ? e.decision.signal : null;
-            if (null != t && t.remoteTriggerUserId !== f) {
+            if (null != t && t.remoteTriggerUserId !== I) {
                 let e = t.remoteTriggerUserId;
                 T.set(e, (T.get(e) ?? 0) + 1);
             }
@@ -124,7 +124,7 @@ function h(e) {
                         count: r ? C : i,
                         isSelected: r,
                         isDisabled: !1,
-                        newCount: g.get(t) ?? 0,
+                        newCount: m.get(t) ?? 0,
                     };
                 })
                 .sort((e, t) => e.name.toLowerCase().localeCompare(t.name.toLowerCase())),
@@ -158,11 +158,11 @@ function h(e) {
             participantsFacet: y,
             distributedClipInitiatorsFacet: D,
             mainLinkCounts: {
-                allClips: v && h.activeMainLink === d.oH.ALL_CLIPS ? C : m.allClips,
-                autoClips: v && h.activeMainLink === d.oH.AUTO_CLIPS ? C : m.autoClips,
-                favorites: v && h.activeMainLink === d.oH.FAVORITES ? C : m.favorites,
+                allClips: v && h.activeMainLink === d.oH.ALL_CLIPS ? C : g.allClips,
+                autoClips: v && h.activeMainLink === d.oH.AUTO_CLIPS ? C : g.autoClips,
+                favorites: v && h.activeMainLink === d.oH.FAVORITES ? C : g.favorites,
             },
             mainLinkNewCounts: S,
         };
-    }, [t, n, r, h, f, I, e]);
+    }, [t, n, r, h, I, f, e]);
 }

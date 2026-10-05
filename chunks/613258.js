@@ -1,18 +1,18 @@
-l.d(t, { A: () => _ });
-var n = l(477900),
-    s = l(582128),
-    i = l(503698),
-    r = l.n(i),
-    a = l(575593),
-    o = l(770178),
-    u = l(590180),
-    c = l(395856),
-    d = l(682301),
-    m = l(929283),
-    h = l(758836),
-    g = l(171934);
-let x = [],
-    f = [
+n.d(t, { A: () => v });
+var l = n(477900),
+    s = n(582128),
+    r = n(503698),
+    i = n.n(r),
+    a = n(575593),
+    o = n(770178),
+    u = n(590180),
+    c = n(395856),
+    d = n(682301),
+    m = n(929283),
+    h = n(758836),
+    g = n(171934);
+let f = [],
+    x = [
         "1212569433839636530",
         "1144308439720394944",
         "1228251144065777765",
@@ -31,17 +31,17 @@ let x = [],
         "1409898407849365565",
         "1404558257065824347",
     ];
-function p(e) {
-    let { config: t, baseLeft: l, transitioning: s, resolvedProduct: i } = e,
-        r = window.innerHeight,
-        o = i ?? u.A.getProduct(t.skuId),
+function E(e) {
+    let { config: t, baseLeft: n, transitioning: s, resolvedProduct: r } = e,
+        i = window.innerHeight,
+        o = r ?? u.A.getProduct(t.skuId),
         c = o?.items[0],
         d = o?.type,
-        h = l + t.horizontalJitter;
-    return (0, n.jsx)("div", {
+        h = n + t.horizontalJitter;
+    return (0, l.jsx)("div", {
         className: g.LY,
         style: {
-            top: s ? -r - 384 : t.top,
+            top: s ? -i - 384 : t.top,
             left: s ? h + t.transitionOffsetLeft : h,
             transform: `rotate(${t.rotation}deg)`,
             height: 160,
@@ -49,14 +49,14 @@ function p(e) {
             transitionDelay: t.transitionDelay,
             transitionDuration: t.transitionDuration,
         },
-        children: null != c && d === a.R.AVATAR_DECORATION && (0, n.jsx)(m.i, { item: c }),
+        children: null != c && d === a.R.AVATAR_DECORATION && (0, l.jsx)(m.i, { item: c }),
     });
 }
-function E(e) {
-    let { peaking: t, transitioning: l, parentWidth: i } = e,
+function p(e) {
+    let { peaking: t, transitioning: n, parentWidth: r } = e,
         [o, u] = s.useState(!1),
         [m] = s.useState(() =>
-            [...f]
+            [...x]
                 .sort(() => Math.random() - 0.5)
                 .map((e) => ({
                     skuId: e,
@@ -68,53 +68,53 @@ function E(e) {
                     transitionDuration: `${h.H1 - 200 * Math.random()}ms`,
                 })),
         ),
-        E = (0, c.$)("shop_transition_jumble"),
-        _ = s.useMemo(() => f, []),
-        b = (0, d.hv)(E ? _ : x, { needsCategory: !1 }),
-        C = s.useMemo(() => {
-            if (!E) return m;
+        p = (0, c.$)("shop_transition_jumble"),
+        v = s.useMemo(() => x, []),
+        _ = (0, d.hv)(p ? v : f, { needsCategory: !1 }),
+        b = s.useMemo(() => {
+            if (!p) return m;
             let e = m.filter((e) => {
-                let t = b[e.skuId]?.product;
+                let t = _[e.skuId]?.product;
                 return t?.items[0] != null && t.type === a.R.AVATAR_DECORATION;
             });
             return e.length > 0 ? e : m;
-        }, [E, m, b]),
-        v = s.useMemo(() => {
-            if (null == i || i <= 0) return [];
-            let e = Math.max(1, Math.floor(i / 130)),
-                t = i / e;
-            return Array.from({ length: e }, (e, l) => ({ config: C[l % C.length], baseLeft: l * t }));
-        }, [i, C]);
+        }, [p, m, _]),
+        C = s.useMemo(() => {
+            if (null == r || r <= 0) return [];
+            let e = Math.max(1, Math.floor(r / 130)),
+                t = r / e;
+            return Array.from({ length: e }, (e, n) => ({ config: b[n % b.length], baseLeft: n * t }));
+        }, [r, b]);
     return (
         s.useEffect(() => {
-            l && setTimeout(() => u(!0), h.H1);
-        }, [l]),
-        (0, n.jsx)("div", {
-            className: r()(g.rA, { [g.Kb]: t, [g.pp]: o }),
-            children: v.map((e, t) => {
-                let { config: s, baseLeft: i } = e;
-                return (0, n.jsx)(
-                    p,
-                    { config: s, baseLeft: i, transitioning: l, resolvedProduct: b[s.skuId]?.product },
+            n && setTimeout(() => u(!0), h.H1);
+        }, [n]),
+        (0, l.jsx)("div", {
+            className: i()(g.rA, { [g.Kb]: t, [g.pp]: o }),
+            children: C.map((e, t) => {
+                let { config: s, baseLeft: r } = e;
+                return (0, l.jsx)(
+                    E,
+                    { config: s, baseLeft: r, transitioning: n, resolvedProduct: _[s.skuId]?.product },
                     s.skuId + t,
                 );
             }),
         })
     );
 }
-let _ = function (e) {
-    let { peaking: t, transitioning: l } = e,
-        i = s.useRef(null),
-        [r, a] = s.useState(0),
+let v = function (e) {
+    let { peaking: t, transitioning: n } = e,
+        r = s.useRef(null),
+        [i, a] = s.useState(0),
         u = s.useCallback(() => {
-            null != i.current && a(i.current.offsetWidth);
+            null != r.current && a(r.current.offsetWidth);
         }, []);
     return (
-        (0, o.g)(i, u),
-        (0, n.jsx)("div", {
-            ref: i,
+        (0, o.g)(r, u),
+        (0, l.jsx)("div", {
+            ref: r,
             className: g.eL,
-            children: (0, n.jsx)(E, { peaking: t, transitioning: l, parentWidth: r }),
+            children: (0, l.jsx)(p, { peaking: t, transitioning: n, parentWidth: i }),
         })
     );
 };

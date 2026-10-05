@@ -12,7 +12,7 @@ var i = n(636537),
     E = n(746080);
 let A = {},
     h = !1;
-function I() {
+function f() {
     h ||
         ((h = !0),
         r.h.subscribe("CONNECTION_OPEN", () => {
@@ -22,12 +22,12 @@ function I() {
             null != e && null == t && p(e);
         }));
 }
-function f(e, t) {
+function I(e, t) {
     let n = (0, d.UE)(e);
     r.h.dispatch({ type: "THREAD_CREATE", channel: n, messageId: t });
 }
 function p(e) {
-    if (null == e || e === a.E || (0, E.jq)(e) || null != c.A.getChannel(e) || (I(), !s.A.isConnected()))
+    if (null == e || e === a.E || (0, E.jq)(e) || null != c.A.getChannel(e) || (f(), !s.A.isConnected()))
         return Promise.resolve();
     let t = A[e];
     if (null != t)
@@ -40,7 +40,7 @@ function p(e) {
         u = i.Bo.get({ url: _.Rsh.CHANNEL(e), rejectWithError: (0, i.fT)() })
             .then((t) => {
                 let { body: i } = t;
-                ((A[e] = { type: "LOADED" }), d.Le.has(i.type) && f(i, n?.params?.messageId));
+                ((A[e] = { type: "LOADED" }), d.Le.has(i.type) && I(i, n?.params?.messageId));
             })
             .catch(() => {
                 ((A[e] = { type: "NOT_FOUND" }),
@@ -57,7 +57,7 @@ let T = {
     },
     loadThread: p,
     loadThreadsBulk: function (e) {
-        if ((I(), !s.A.isConnected())) return Promise.resolve();
+        if ((f(), !s.A.isConnected())) return Promise.resolve();
         let t = [],
             n = [];
         for (let i of e) {
@@ -76,7 +76,7 @@ let T = {
                     i = new Set();
                 for (let e of t.items) {
                     let t = e.id;
-                    (i.add(t), (A[t] = { type: "LOADED" }), f(e));
+                    (i.add(t), (A[t] = { type: "LOADED" }), I(e));
                 }
                 for (let e of n) i.has(e) || (A[e] = { type: "NOT_FOUND" });
             })

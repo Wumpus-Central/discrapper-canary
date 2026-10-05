@@ -8,7 +8,7 @@ n.d(t, {
     ND: () => R,
     VD: () => L,
     Wn: () => O,
-    YP: () => g,
+    YP: () => m,
     aw: () => v,
 });
 var i = n(435558),
@@ -24,12 +24,12 @@ var i = n(435558),
     E = n(232835),
     A = n(576705),
     h = n(994500),
-    I = n(927813),
-    f = n(562153),
+    f = n(927813),
+    I = n(562153),
     p = n(412136),
     T = n(652215),
-    m = n(375708);
-function g() {
+    g = n(375708);
+function m() {
     return { text: void 0, image: void 0, localCreationAnswerId: (0, a.A)() };
 }
 function S(e) {
@@ -68,7 +68,7 @@ function y(e) {
                 i = { ...e.poll_media, emoji: null != n ? { id: n.id, name: n.name ?? "" } : void 0 };
             return { ...e, answer_id: t + 1, poll_media: i };
         }),
-        i = e?.duration != null ? ((t = e.duration), new Date(Date.now() + t * I.A.Millis.HOUR).toISOString()) : "0";
+        i = e?.duration != null ? ((t = e.duration), new Date(Date.now() + t * f.A.Millis.HOUR).toISOString()) : "0";
     return { ...e, expiry: i, answers: n };
 }
 function D(e) {
@@ -79,7 +79,7 @@ function D(e) {
             ((t = p.TU),
             (n = e.embeds[0]?.fields?.find((e) => "poll_question_text" === e.rawName)?.rawValue ?? ""),
             null != t ? (0, s.EJ)(n, t) : n);
-    return m.intl.format(m.t.Vn97Ka, { username: i.nick, title: r });
+    return g.intl.format(g.t.Vn97Ka, { username: i.nick, title: r });
 }
 function v(e) {
     return e.reduce((e, t) => e + (t.count_details?.vote ?? 0), 0);
@@ -93,26 +93,26 @@ function b(e, t, n) {
     if (null == o) return "";
     let c = o.getReaction({ id: n, name: "", animated: !1 }),
         A = c?.count_details?.vote ?? 0,
-        I =
+        f =
             ((i = o.getChannelId()),
             (a = _.A.getReactions(i, o.id, { id: n, name: "", animated: !1 }, p.kx, d.v.VOTE)),
             (l = null == (s = u.A.getChannel(i)) || s.isPrivate() ? null : s.getGuildId()),
             r()(Array.from(a?.values() ?? []))
                 .reject((e) => h.A.isBlockedOrIgnored(e.id))
                 .take(p.kx)
-                .map((e) => f.Ay.getName(l, s?.id, e))
+                .map((e) => I.Ay.getName(l, s?.id, e))
                 .value());
-    if (0 === I.length) return "";
-    let T = Math.max(0, A - I.length);
-    if (1 === I.length)
-        if (T > 0) return m.intl.formatToPlainString(m.t["SV/iZn"], { a: I[0], n: T });
-        else return I[0];
-    if (2 === I.length)
-        if (T > 0) return m.intl.formatToPlainString(m.t.YBnZK0, { a: I[0], b: I[1], n: T });
-        else return m.intl.formatToPlainString(m.t["O5+f5c"], { a: I[0], b: I[1] });
-    return 3 !== I.length
-        ? m.intl.formatToPlainString(m.t.yVX6kE, { n: T })
+    if (0 === f.length) return "";
+    let T = Math.max(0, A - f.length);
+    if (1 === f.length)
+        if (T > 0) return g.intl.formatToPlainString(g.t["SV/iZn"], { a: f[0], n: T });
+        else return f[0];
+    if (2 === f.length)
+        if (T > 0) return g.intl.formatToPlainString(g.t.YBnZK0, { a: f[0], b: f[1], n: T });
+        else return g.intl.formatToPlainString(g.t["O5+f5c"], { a: f[0], b: f[1] });
+    return 3 !== f.length
+        ? g.intl.formatToPlainString(g.t.yVX6kE, { n: T })
         : T > 0
-          ? m.intl.formatToPlainString(m.t["ThXp+N"], { a: I[0], b: I[1], c: I[2], n: T })
-          : m.intl.formatToPlainString(m.t["0UzBM3"], { a: I[0], b: I[1], c: I[2] });
+          ? g.intl.formatToPlainString(g.t["ThXp+N"], { a: f[0], b: f[1], c: f[2], n: T })
+          : g.intl.formatToPlainString(g.t["0UzBM3"], { a: f[0], b: f[1], c: f[2] });
 }

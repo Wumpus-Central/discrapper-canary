@@ -11,12 +11,12 @@ var a = n(478437),
     E = n(890615),
     A = n(710195),
     h = n(698441),
-    I = n(508654),
-    f = n(446600),
+    f = n(508654),
+    I = n(446600),
     p = n(95701),
     T = n(616356),
-    m = n(280450),
-    g = n(734057),
+    g = n(280450),
+    m = n(734057),
     S = n(71393),
     N = n(576705),
     C = n(994500),
@@ -56,7 +56,7 @@ function V() {
 }
 function H(e, t, n, i) {
     if (null == t) return !1;
-    let r = g.A.getBasicChannel(t);
+    let r = m.A.getBasicChannel(t);
     return (
         null != r &&
         r.type !== a.r.GUILD_STAGE_VOICE &&
@@ -78,8 +78,8 @@ class Y extends s.Ay.Store {
     initialize() {
         ((i = O.Ay.getVoiceChannelId()),
             (r = C.A.getBlockedOrIgnoredIDs()),
-            this.waitFor(A.A, T.A, m.default, g.A, c.Ay, h.Ay, S.A, N.A, C.A, O.Ay, f.A, R.Ay, L.A),
-            this.syncWith([A.A, T.A, g.A, c.Ay, h.Ay, S.A, N.A, f.A, R.Ay], F),
+            this.waitFor(A.A, T.A, g.default, m.A, c.Ay, h.Ay, S.A, N.A, C.A, O.Ay, I.A, R.Ay, L.A),
+            this.syncWith([A.A, T.A, m.A, c.Ay, h.Ay, S.A, N.A, I.A, R.Ay], F),
             this.syncWith([C.A], j),
             this.syncWith([O.Ay], W));
     }
@@ -90,12 +90,12 @@ class Y extends s.Ay.Store {
                 let t = (function () {
                         if (null != w && G === U) return w;
                         let e = O.Ay.getVoiceChannelId(),
-                            t = null != e ? g.A.getChannel(e) : null,
+                            t = null != e ? m.A.getChannel(e) : null,
                             n = C.A.getBlockedOrIgnoredIDs();
                         return (
                             (w = {
                                 skipMutedVcs: (0, D.f)("GuildMediaStateStore"),
-                                currentUserId: m.default.getId(),
+                                currentUserId: g.default.getId(),
                                 selectedVoiceChannelId: e,
                                 selectedVoiceGuildId: t?.guild_id,
                                 selectedVoiceChannelHasVideo: null != e && L.A.hasVideo(e),
@@ -120,7 +120,7 @@ class Y extends s.Ay.Store {
                     i = t.selectedVoiceGuildId === e;
                 if (!i && n) return b;
                 let r = c.Ay.getEmbeddedActivitiesForGuild(e).filter((e) => {
-                    let n = g.A.getBasicChannel((0, u.H)(e.location));
+                    let n = m.A.getBasicChannel((0, u.H)(e.location));
                     return (
                         n?.type !== a.r.GUILD_SPACE &&
                         (0 === t.blockedOrIgnoredUserIds.size || !(0, _.PH)([...e.userIds], t.blockedOrIgnoredUserIds))
@@ -133,7 +133,7 @@ class Y extends s.Ay.Store {
                         video: t.selectedVoiceChannelHasVideo,
                         screenshare: null != T.A.getActiveStreamForUser(t.currentUserId, e),
                         liveStage: n,
-                        activeEvent: (0, I.wX)(e)?.channel_id === t.selectedVoiceChannelId,
+                        activeEvent: (0, f.wX)(e)?.channel_id === t.selectedVoiceChannelId,
                         activity: r.length > 0,
                         isCurrentUserConnected: !0,
                     };
@@ -154,15 +154,15 @@ class Y extends s.Ay.Store {
                     }
                 let h = t.streamChannelIdsByGuild.get(e),
                     v = null != h && h.some((n) => !t.skipMutedVcs || !R.Ay.isGuildOrCategoryOrChannelMuted(e, n)),
-                    M = y.default.keys(f.A.getStageInstancesByGuild(e)).some((e) => {
-                        let t = g.A.getBasicChannel(e);
+                    M = y.default.keys(I.A.getStageInstancesByGuild(e)).some((e) => {
+                        let t = m.A.getBasicChannel(e);
                         return null != t && (0, E.A)(t, N.A);
                     }),
                     F = (0, u.H)(r[0]?.location),
-                    B = (0, d.pE)(g.A.getChannel(F))
+                    B = (0, d.pE)(m.A.getChannel(F))
                         ? r.length > 0
                         : r.some((e) => {
-                              let t = g.A.getChannel((0, u.H)(e.location));
+                              let t = m.A.getChannel((0, u.H)(e.location));
                               return null != t && (0, p.gV)(t.type);
                           });
                 return {
@@ -170,7 +170,7 @@ class Y extends s.Ay.Store {
                     video: A,
                     screenshare: v,
                     liveStage: M,
-                    activeEvent: null != (0, I.wX)(e),
+                    activeEvent: null != (0, f.wX)(e),
                     activity: B,
                     isCurrentUserConnected: !1,
                 };

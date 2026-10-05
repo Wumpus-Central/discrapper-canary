@@ -1,4 +1,4 @@
-n.d(t, { Ad: () => A, Yd: () => f, np: () => I, qH: () => _, xs: () => h });
+n.d(t, { Ad: () => A, Yd: () => I, np: () => f, qH: () => _, xs: () => h });
 var i = n(636537),
     r = n(73153),
     a = n(427358),
@@ -52,11 +52,11 @@ function h(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.np.FRIEND_ANNIVERSARY;
     (r.h.dispatch({ type: "MESSAGE_GIFT_INTENT_SHOWN", recipientUserId: e }), E(t, e, "shown"));
 }
-function I(e, t) {
+function f(e, t) {
     let n = l.A.getMessage(e, t)?.giftingPrompt;
     null != n && E(n.giftIntentType, n.recipientUserId, "explicit");
 }
-function f(e) {
+function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : c.np.FRIEND_ANNIVERSARY;
     (r.h.dispatch({ type: "GIFT_INTENT_FLOW_PURCHASED_GIFT", recipientUserId: e }), E(t, e, "gift_sent"));
 }

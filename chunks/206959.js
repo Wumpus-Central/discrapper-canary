@@ -13,12 +13,12 @@ var i,
 n(321073);
 var A = n(404144),
     h = n.n(A),
-    I = n(480664),
-    f = n.n(I),
+    f = n(480664),
+    I = n.n(f),
     p = n(811315),
     T = n.n(p),
-    m = n(119469),
-    g = n.n(m),
+    g = n(119469),
+    m = n.n(g),
     S = n(141697),
     N = n(904986);
 n(618792);
@@ -1170,24 +1170,24 @@ class W extends N.A {
                     videoHookStaleFrameTimeoutMs: E,
                     graphicsCaptureStaleFrameTimeoutMs: A,
                     hdrCaptureMode: h,
-                    enableGlobalFramePoolLock: I,
-                    useGraphicsCaptureDirtyRegions: f,
+                    enableGlobalFramePoolLock: f,
+                    useGraphicsCaptureDirtyRegions: I,
                     videoHookAllowDx12: p,
                     minCaptureWidth: T,
-                    minCaptureHeight: m,
+                    minCaptureHeight: g,
                 } = e.desktopDescription;
                 this.setSoundshareSource(a, s);
-                let [g, S] = null != r ? r.split(":") : ["", ""];
+                let [m, S] = null != r ? r.split(":") : ["", ""];
                 (null != r
                     ? this.logger.info(
-                          `capturing desktop (type: ${g}, handle: ${S}, use-video-hook: ${l.toString()}, use-graphics-capture: ${c?.toString()}, use-graphics-capture-api-level: ${o?.toString()}, use-capture-device-for-encode: ${d?.toString()}).`,
+                          `capturing desktop (type: ${m}, handle: ${S}, use-video-hook: ${l.toString()}, use-graphics-capture: ${c?.toString()}, use-graphics-capture-api-level: ${o?.toString()}, use-capture-device-for-encode: ${d?.toString()}).`,
                       )
                     : this.logger.info("capturing desktop (type: <stop>)."),
                     null != this.conn.setDesktopSourceWithOptions
                         ? null != r
                             ? (this.setDesktopEncodingOptions(i, t, n),
                               this.conn.setDesktopSourceWithOptions({
-                                  type: g,
+                                  type: m,
                                   sourceId: S,
                                   useVideoHook: l,
                                   useGraphicsCapture: c,
@@ -1198,14 +1198,14 @@ class W extends N.A {
                                   videoHookStaleFrameTimeoutMs: E,
                                   graphicsCaptureStaleFrameTimeoutMs: A,
                                   hdrCaptureMode: h,
-                                  enableGlobalFramePoolLock: I,
-                                  useGraphicsCaptureDirtyRegions: f,
+                                  enableGlobalFramePoolLock: f,
+                                  useGraphicsCaptureDirtyRegions: I,
                                   videoHookAllowDx12: p,
                                   minCaptureWidth: T,
-                                  minCaptureHeight: m,
+                                  minCaptureHeight: g,
                               }))
                             : this.conn.clearDesktopSource()
-                        : this.conn.setDesktopSource(`wumpus-${S}`, l, g));
+                        : this.conn.setDesktopSource(`wumpus-${S}`, l, m));
             } else if (null != e.cameraDescription) {
                 let { videoDeviceGuid: t, audioDeviceGuid: n } = e.cameraDescription;
                 this.conn.setGoLiveDevices({ videoInputDeviceId: t, audioInputDeviceId: n });
@@ -1511,7 +1511,7 @@ class W extends N.A {
         this.emit(u.y.VideoCodecError, e);
     };
     handleVideo = (e, t, n, i) => {
-        let r = f()(this.videoStreamParameters);
+        let r = I()(this.videoStreamParameters);
         (e === this.userId
             ? null != i && Array.isArray(i) && i.length > 0
                 ? i.forEach((e) => {
@@ -1576,12 +1576,12 @@ class W extends N.A {
         if (this.connectionState === O.$I.DISCONNECTED) return void this.off(u.y.Stats, this.handleStats);
         if (null != e) {
             if (null != this.stats) {
-                let t = g()(
+                let t = m()(
                         e.rtp.outbound,
                         (e, t) => ((e.lost += t.packetsLost ?? 0), (e.sent += t.packetsSent ?? 0), e),
                         { lost: 0, sent: 0 },
                     ),
-                    n = g()(
+                    n = m()(
                         this.stats.rtp.outbound,
                         (e, t) => ((e.lost += t.packetsLost ?? 0), (e.sent += t.packetsSent ?? 0), e),
                         { lost: 0, sent: 0 },
@@ -1700,8 +1700,8 @@ function Y(e, t) {
                 macosTransportType: E,
                 windowsEndpointFormFactor: A,
                 windowsDeviceService: h,
-                windowsDeviceDescription: I,
-                windowsDeviceInterfaceFriendlyName: f,
+                windowsDeviceDescription: f,
+                windowsDeviceInterfaceFriendlyName: I,
             } = t;
             return (
                 /^default/.test(s)
@@ -1722,8 +1722,8 @@ function Y(e, t) {
                     macosTransportType: E,
                     windowsEndpointFormFactor: A,
                     windowsDeviceService: h,
-                    windowsDeviceDescription: I,
-                    windowsDeviceInterfaceFriendlyName: f,
+                    windowsDeviceDescription: f,
+                    windowsDeviceInterfaceFriendlyName: I,
                 }
             );
         });
@@ -2193,8 +2193,8 @@ class ea extends d.A {
                 minCaptureWidth: E,
                 minCaptureHeight: A,
             }));
-        let [h, I] = null != r ? r.split(":") : ["", ""];
-        t.setClipsSource({ id: I, soundshareId: null != a ? a : 0 });
+        let [h, f] = null != r ? r.split(":") : ["", ""];
+        t.setClipsSource({ id: f, soundshareId: null != a ? a : 0 });
     }
     setClipsQualitySettings(e, t, n, i) {
         let r = (0, b.lE)();
@@ -2332,17 +2332,17 @@ class ea extends d.A {
             function h(e, t, n) {
                 return r(e, n, t, void 0);
             }
-            function I(e, t, n) {
+            function f(e, t, n) {
                 return r(e, t, void 0, n);
             }
             A
                 ? null != t.saveClipForUserWithTime
-                    ? t.saveClipForUserWithTime(E, s, l, d ?? null, c ?? null, u ?? null, _ ?? null, I, a, o)
+                    ? t.saveClipForUserWithTime(E, s, l, d ?? null, c ?? null, u ?? null, _ ?? null, f, a, o)
                     : (0, b.$b)(B.CLIPS_THUMBNAIL)
                       ? t.saveClipForUser?.(E, s, l, h, a, o)
                       : t.saveClipForUser?.(E, s, l, h, a)
                 : null != t.saveClipWithTime
-                  ? t.saveClipWithTime(s, l, d ?? null, c ?? null, u ?? null, _ ?? null, I, a, o)
+                  ? t.saveClipWithTime(s, l, d ?? null, c ?? null, u ?? null, _ ?? null, f, a, o)
                   : (0, b.$b)(B.CLIPS_THUMBNAIL)
                     ? t.saveClip?.(s, l, h, a, o)
                     : t.saveClip?.(s, l, h, a);

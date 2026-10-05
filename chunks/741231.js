@@ -12,12 +12,12 @@ var i = n(121197),
     E = n(831617),
     A = n(496767),
     h = n(134413),
-    I = n(713125),
-    f = n(473529),
+    f = n(713125),
+    I = n(473529),
     p = n(960253),
     T = n(469993),
-    m = n(836039),
-    g = n(555325),
+    g = n(836039),
+    m = n(555325),
     S = n(287809),
     N = n(313627),
     C = n(521427),
@@ -47,12 +47,12 @@ async function U(e) {
                 return (
                     null != i &&
                     ((a = i.ownerId === S.default.getCurrentUser()?.id),
-                    (0, g.V9)({
+                    (0, m.V9)({
                         guild: i,
                         isOwner: a,
-                        canManageGuildRoleSubscriptions: (0, g.X9)(i),
+                        canManageGuildRoleSubscriptions: (0, m.X9)(i),
                         isUserInCreatorMonetizationEligibleCountry: (0, T.Z1)(),
-                        shouldRestrictUpdatingRoleSubscriptionSettings: (0, m.mk)(i.id),
+                        shouldRestrictUpdatingRoleSubscriptionSettings: (0, g.mk)(i.id),
                     }))
                 );
             case P.VV.GAME_SHOP:
@@ -62,11 +62,11 @@ async function U(e) {
             case P.VV.MEMBER_APPLICATIONS:
                 return (0, A.h)(t);
             case P.VV.GUILD_HOME:
-                return (0, f.K)(t);
+                return (0, I.K)(t);
             case P.VV.CHANNEL_BROWSER:
                 return null != i && i.features.has(M.GuildFeatures.COMMUNITY);
             case P.VV.GUILD_ONBOARDING:
-                return I.Ay.shouldShowOnboarding(t);
+                return f.Ay.shouldShowOnboarding(t);
             case P.VV.CUSTOMIZE_COMMUNITY:
                 return null != i && i.features.has(M.GuildFeatures.COMMUNITY);
             case P.VV.MEMBER_SAFETY:

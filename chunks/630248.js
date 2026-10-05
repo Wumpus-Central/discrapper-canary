@@ -15,7 +15,7 @@ let _ = [l.kc.CHAT, l.kc.PRIMARY_ENTRY_POINT],
 function h(e) {
     (E.pendingUsages.push({ key: e, timestamp: Date.now() }), A.track(e), A.compute());
 }
-function I() {
+function f() {
     let e = c.A.frecencyWithoutFetchingLatest,
         t = e.applicationFrecency?.applications ?? {};
     A.overwriteHistory(
@@ -23,11 +23,11 @@ function I() {
         E.pendingUsages,
     );
 }
-class f extends a.Ay.PersistedStore {
+class I extends a.Ay.PersistedStore {
     static displayName = "ApplicationFrecencyStore";
     static persistKey = "ApplicationFrecency";
     initialize(e) {
-        (null != e && (E = e), this.waitFor(d.Ay, c.A), this.syncWith([c.A], I));
+        (null != e && (E = e), this.waitFor(d.Ay, c.A), this.syncWith([c.A], f));
     }
     getState() {
         return E;
@@ -45,7 +45,7 @@ class f extends a.Ay.PersistedStore {
         return A.frequently;
     }
 }
-let p = new f(s.h, {
+let p = new I(s.h, {
     APPLICATION_COMMAND_USED: function (e) {
         let { command: t } = e;
         if (!_.includes(t.type) || d.Ay.getLaunchState(t.applicationId)?.isLaunching) return !1;

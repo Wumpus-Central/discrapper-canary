@@ -1,4 +1,4 @@
-n.d(t, { EG: () => c, Gu: () => _, JI: () => h, Lp: () => A, SC: () => f, fk: () => I, hV: () => E, o6: () => u });
+n.d(t, { EG: () => c, Gu: () => _, JI: () => h, Lp: () => A, SC: () => I, fk: () => f, hV: () => E, o6: () => u });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -22,8 +22,8 @@ function E(e) {
             shape: E = c.ROUND,
             className: A,
             style: h,
-            renderBadgeCount: I = _,
-            ...f
+            renderBadgeCount: f = _,
+            ...I
         } = e,
         p = (0, l.N)();
     return (0, i.jsx)(o.E, {
@@ -31,8 +31,8 @@ function E(e) {
         color: "none",
         className: a()(A, d.Do, E),
         style: { backgroundColor: r ? void 0 : n, width: u(t), ...h },
-        ...f,
-        children: I(t),
+        ...I,
+        children: f(t),
     });
 }
 function A(e) {
@@ -59,7 +59,7 @@ function h(e) {
     let { text: t, className: n, ...r } = e;
     return (0, i.jsx)(A, { className: a()(d.BE, n), text: t, ...r });
 }
-function I(e) {
+function f(e) {
     let {
             icon: t,
             className: n,
@@ -80,7 +80,7 @@ function I(e) {
         children: (0, i.jsx)(t, { className: d.Kk, color: "currentColor" }),
     });
 }
-function f(e) {
+function I(e) {
     let {
         className: t,
         color: n = s.A.colors.INTERACTIVE_TEXT_ACTIVE.css,

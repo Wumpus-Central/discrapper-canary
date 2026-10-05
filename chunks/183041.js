@@ -12,21 +12,21 @@ var i = n(515029),
     E = n(280450),
     A = n(761640),
     h = n(734057),
-    I = n(232835),
-    f = n(309010),
+    f = n(232835),
+    I = n(309010),
     p = n(967198),
     T = n(935208);
-function m(e) {
+function g(e) {
     return (
         (null != e.attachments && e.attachments.length > 0) ||
         (null != e.embeds && e.embeds.length > 0) ||
         (null != e.components && e.components.length > 0)
     );
 }
-function g(e) {
+function m(e) {
     if (null == e) return !1;
     let t = "messageSnapshots" in e ? e.messageSnapshots : e.message_snapshots;
-    return m(e) || (null != t && t?.some((e) => m(e.message)));
+    return g(e) || (null != t && t?.some((e) => g(e.message)));
 }
 var S = n(135598),
     N = n(930125),
@@ -104,7 +104,7 @@ function x(e, t) {
                 timeout: setTimeout(() => {
                     !(function (e) {
                         if (U(e, C.VL.TIMEOUT)) {
-                            let t = I.A.getMessage(e.channel_id, e.id);
+                            let t = f.A.getMessage(e.channel_id, e.id);
                             if (null != t) {
                                 let { attachmentIds: n, embedIds: i } = (0, L.M)(t);
                                 (0, C.gm)({ channelId: e.channel_id, messageId: e.id, attachmentIds: n, embedIds: i });
@@ -193,7 +193,7 @@ function F(e, t) {
             attributesByChannelId: d,
             attributesByMessageId: c,
         } = ((n = e.filter((e) => {
-            let t = g(e),
+            let t = m(e),
                 n = 0 !== (0, L.Fg)(e);
             return t && n;
         })),
@@ -203,7 +203,7 @@ function F(e, t) {
                     null != e &&
                     "referenced_message" in e &&
                     null != e.referenced_message &&
-                    g(e.referenced_message) &&
+                    m(e.referenced_message) &&
                     0 !== (0, L.Fg)(e.referenced_message)
                 )
                     return e.referenced_message;
@@ -258,21 +258,21 @@ function B(e) {
         return !1;
     if (!(0, L.mS)(t)) {
         let e =
-            I.A.getMessage(t.channel_id, t.id) ??
+            f.A.getMessage(t.channel_id, t.id) ??
             O.A.getMessage(t.id, t.channel_id) ??
             _.A.getMessage(t.channel_id, t.id)?.message;
         null == e || (0, L.mS)((0, c.IU)(e, t)) || U(e, C.VL.UPDATE);
     }
-    let n = f.Ay.getChannelId(),
+    let n = I.Ay.getChannelId(),
         i = A.Ay.getCurrentSidebarChannelId(n);
     if (t.channel_id !== n && t.channel_id !== i) return !1;
-    let r = I.A.getMessage(t.channel_id, t.id);
+    let r = f.A.getMessage(t.channel_id, t.id);
     return null != r && F([r], { isMessageUpdate: !0 });
 }
 function V(e) {
     let { channelId: t, message: n, optimistic: i, isPushNotification: r } = e;
     if (i || r || null == t || (0, L.nx)(n).authorId === E.default.getId()) return !1;
-    let a = f.Ay.getChannelId(),
+    let a = I.Ay.getChannelId(),
         s = A.Ay.getCurrentSidebarChannelId(a),
         l = t === a || t === s,
         o = h.A.getChannel(t);
@@ -284,7 +284,7 @@ function V(e) {
 function H(e) {
     let { channelId: t, messages: n } = e;
     if (null == t || null == n) return !1;
-    let i = f.Ay.getChannelId(),
+    let i = I.Ay.getChannelId(),
         r = A.Ay.getCurrentSidebarChannelId(i);
     return (t === i || t === r) && F(n);
 }
@@ -323,12 +323,12 @@ function $(e) {
 }
 function z(e) {
     let { channelId: t } = e;
-    return null != t && t === f.Ay.getChannelId() && q(t);
+    return null != t && t === I.Ay.getChannelId() && q(t);
 }
 function X(e) {
     let { settings: t, local: n } = e;
     if (!n || t.type !== v.oD.PRELOADED_USER_SETTINGS) return !1;
-    let i = f.Ay.getChannelId();
+    let i = I.Ay.getChannelId();
     return null != i && q(i);
 }
 function Z(e) {
@@ -336,7 +336,7 @@ function Z(e) {
     return !!n && q(t);
 }
 function q(e) {
-    let t = I.A.getMessages(e);
+    let t = f.A.getMessages(e);
     return (
         0 !== t.length &&
         (function (e) {
@@ -349,7 +349,7 @@ function q(e) {
                     messagesPendingScan: l,
                     attributesByChannelId: o,
                     attributesByMessageId: d,
-                } = ((t = e.filter((e) => g(e) && 0 !== (0, L.Fg)(e))),
+                } = ((t = e.filter((e) => m(e) && 0 !== (0, L.Fg)(e))),
                 (n = e
                     .map((e) => {
                         if (D.sl8.has(e.type) && null != e.messageReference) {
@@ -357,7 +357,7 @@ function q(e) {
                             if (
                                 t.state === _.a.LOADED &&
                                 null != t.message &&
-                                g(t.message) &&
+                                m(t.message) &&
                                 0 !== (0, L.Fg)(t.message)
                             )
                                 return t.message;

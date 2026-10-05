@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => f });
+n.d(t, { Ay: () => I });
 var i = n(979096),
     r = n(626584),
     a = n(595528),
@@ -30,7 +30,7 @@ var _ = n(632789),
     E = n(552618),
     A = n(640631);
 let h = new r.A("Messages");
-class I {
+class f {
     connectionId = null;
     users = [];
     members = [];
@@ -38,7 +38,7 @@ class I {
     constructor(e) {
         if (e.length > 0) {
             const t = e[0]?.connectionId,
-                [n, i] = I.computeUsersAndMembers(e);
+                [n, i] = f.computeUsersAndMembers(e);
             (e.length > 0 && e.every((e) => e.connectionId === t) && (this.connectionId = t),
                 (this.users = n),
                 (this.members = i),
@@ -60,17 +60,17 @@ class I {
         }
     }
 }
-let f = new (class {
+let I = new (class {
     async startupLoad(e, t, n, i) {
         let r = l.A.messages(e);
-        return new I(await r.getLatest(t, n, i));
+        return new f(await r.getLatest(t, n, i));
     }
     async load(e, t, n) {
         let i = s.A.getBasicChannel(t);
-        if (null == t || null == i || !(0, E.c)(i)) return new I([]);
+        if (null == t || null == i || !(0, E.c)(i)) return new f([]);
         {
             let r = l.A.messages(e);
-            return new I(await r.getLatest(i.guild_id, t, n));
+            return new f(await r.getLatest(i.guild_id, t, n));
         }
     }
     actions = {

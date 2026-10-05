@@ -1,4 +1,4 @@
-n.d(t, { w: () => f });
+n.d(t, { w: () => I });
 var i = n(17928),
     r = n(73153),
     a = n(736056),
@@ -110,7 +110,7 @@ async function A() {
             let e = { ...i, gpus: i.gpus?.map((e) => JSON.stringify(e)) };
             (s.default.track(d.HAw.HARDWARE_DETECTED, e), ((c = { hashes: { ...c.hashes } }).hashes[t] = n));
         }
-        e.length > 0 && I.emitChange();
+        e.length > 0 && f.emitChange();
     } catch (e) {}
 }
 class h extends i.Ay.PersistedStore {
@@ -132,11 +132,11 @@ class h extends i.Ay.PersistedStore {
         } catch (e) {}
     }
 }
-let I = new h(r.h, {
+let f = new h(r.h, {
     START_SESSION: function () {
         return (A(), !1);
     },
 });
-function f() {
-    return I.info();
+function I() {
+    return f.info();
 }

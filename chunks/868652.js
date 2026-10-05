@@ -1,4 +1,4 @@
-(n.d(t, { qM: () => A, Xd: () => I, Qh: () => f, AK: () => h, Zm: () => E, pz: () => p }), n(321073));
+(n.d(t, { qM: () => A, Xd: () => f, Qh: () => I, AK: () => h, Zm: () => E, pz: () => p }), n(321073));
 var i = n(636537),
     r = n(73153),
     a = n(403362),
@@ -183,7 +183,7 @@ function h(e, t) {
         );
     });
 }
-function I(e) {
+function f(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return (0, s.aP)({
         url: _.Rsh.GUILD_POWERUPS(e),
@@ -206,7 +206,7 @@ function I(e) {
             }));
     });
 }
-function f(e, t) {
+function I(e, t) {
     return i.Bo.post({ url: _.Rsh.GUILD_POWERUP_TOGGLE(e, t), rejectWithError: !0 });
 }
 function p(e, t) {

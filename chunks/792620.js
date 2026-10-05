@@ -2,7 +2,7 @@ n.d(t, {
     Cr: () => C,
     F9: () => _,
     GL: () => D,
-    I6: () => m,
+    I6: () => g,
     IO: () => R,
     JC: () => H,
     K$: () => b,
@@ -13,17 +13,17 @@ n.d(t, {
     YL: () => w,
     Yh: () => V,
     _3: () => c,
-    a2: () => I,
+    a2: () => f,
     fE: () => p,
     g5: () => M,
     hL: () => G,
     lG: () => j,
     no: () => P,
     pU: () => u,
-    t: () => f,
+    t: () => I,
     uD: () => O,
     vS: () => E,
-    vl: () => g,
+    vl: () => m,
     vv: () => y,
     xZ: () => S,
     xc: () => A,
@@ -69,11 +69,11 @@ function h(e) {
     let t = d(e, [r.n.PLAY_ACTIVITY, r.n.ACHIEVEMENT_IN_ACTIVITY]);
     return t?.[0];
 }
-function I(e) {
+function f(e) {
     let t = d(e, [r.n.STREAM_ON_DESKTOP]);
     return t?.[0];
 }
-function f(e) {
+function I(e) {
     let { quest: t } = e;
     return null != t.config.taskConfigV2.tasks[r.n.PLAY_ON_DESKTOP];
 }
@@ -84,14 +84,14 @@ function p(e) {
 function T(e) {
     return null != e.config.taskConfigV2.tasks[r.n.ACHIEVEMENT_IN_ACTIVITY];
 }
-function m(e) {
+function g(e) {
     return null != e.config.taskConfigV2.tasks[r.n.ACHIEVEMENT_IN_GAME];
 }
-function g(e) {
+function m(e) {
     return null != e.config.taskConfigV2.tasks[r.n.PLAY_ACTIVITY];
 }
 function S(e) {
-    return null != e && f({ quest: e });
+    return null != e && I({ quest: e });
 }
 function N(e) {
     return (t) => e.some((e) => null != t.config.taskConfigV2.tasks[e]);
@@ -118,7 +118,7 @@ function M(e) {
     return O(e);
 }
 function P(e) {
-    return !O(e) && f({ quest: e });
+    return !O(e) && I({ quest: e });
 }
 function U(e, t) {
     let n = e?.progress[t]?.heartbeat?.expiresAt;
@@ -238,7 +238,7 @@ function V(e, t) {
                 ? F({ quest: n, taskType: B(n.config)?.type })
                 : S(n)
                   ? F({ quest: n, taskType: r.n.PLAY_ON_DESKTOP })
-                  : g(n)
+                  : m(n)
                     ? F({ quest: n, taskType: r.n.PLAY_ACTIVITY })
                     : F({ quest: n, taskType: r.n.STREAM_ON_DESKTOP }));
     if (null != a) return a;

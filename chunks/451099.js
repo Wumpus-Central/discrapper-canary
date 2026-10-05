@@ -23,7 +23,7 @@ function h() {
         u.error("Failed to update the display sleep blocker", e);
     });
 }
-function I() {
+function f() {
     let e,
         t =
             null != (e = l.A.getChannelId()) &&
@@ -32,14 +32,14 @@ function I() {
                 (c.A.getActivityParticipants(e).length > 0 && null != r.Ay.getSelfEmbeddedActivityForChannel(e)));
     t !== E && ((E = t), h());
 }
-class f extends i.A {
+class I extends i.A {
     _initialize() {
         !o.isPlatformEmbedded ||
             __OVERLAY__ ||
-            (this.stores = new Map().set(l.A, I).set(c.A, I).set(s.A, I).set(r.Ay, I));
+            (this.stores = new Map().set(l.A, f).set(c.A, f).set(s.A, f).set(r.Ay, f));
     }
     _terminate() {
         ((E = !1), h());
     }
 }
-let p = new f();
+let p = new I();

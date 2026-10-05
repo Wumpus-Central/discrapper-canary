@@ -12,12 +12,12 @@ var i = n(435558),
     E = n(95701),
     A = n(260509),
     h = n(889227),
-    I = n(799422),
-    f = n(149790),
+    f = n(799422),
+    I = n(149790),
     p = n(488926),
     T = n(734057),
-    m = n(696451),
-    g = n(71393),
+    g = n(696451),
+    m = n(71393),
     S = n(287809),
     N = n(652215),
     C = n(402655);
@@ -31,7 +31,7 @@ function D(e) {
     if (null != n) return n;
     let i = S.default.getCurrentUser();
     if (null == i) return p.x3;
-    let r = g.A.getGuild(e);
+    let r = m.A.getGuild(e);
     return null == r ? p.x3 : (O[e] = p.cc({ user: i, context: r, checkElevated: t }));
 }
 function v(e) {
@@ -41,7 +41,7 @@ function v(e) {
     let i = T.A.getChannel(e);
     if (null == i) return p.x3;
     let a = i.getGuildId(),
-        s = null != a && (d.A.isLurking(a) || m.Ay.getMember(a, n.id)?.isPending);
+        s = null != a && (d.A.isLurking(a) || g.Ay.getMember(a, n.id)?.isPending);
     return !i.isScheduledForDeletion() && !s && r().isEmpty(i.permissionOverwrites) && null != a
         ? D(a)
         : p.cc({ user: n, context: i, checkElevated: t });
@@ -113,10 +113,10 @@ function H(e, t, n, i) {
     if (e instanceof E.YB) {
         if (E.Le.has(e.type)) {
             let r = T.A.getChannel(e.parent_id);
-            return null == r ? p.x3 : p.TJ(e, H(r, t, n, i), u.A.hasJoined(e.id), m.Ay.isCurrentUserGuest(e.guild_id));
+            return null == r ? p.x3 : p.TJ(e, H(r, t, n, i), u.A.hasJoined(e.id), g.Ay.isCurrentUserGuest(e.guild_id));
         }
         r = b(e.id);
-    } else (0, f.fh)(e) && (r = D(e.id));
+    } else (0, I.fh)(e) && (r = D(e.id));
     return void 0 !== t || void 0 !== n || void 0 !== i
         ? p.cc({
               user: S.default.getCurrentUser(),
@@ -131,7 +131,7 @@ function H(e, t, n, i) {
 class j extends s.Ay.Store {
     static displayName = "PermissionStore";
     initialize() {
-        this.waitFor(T.A, m.Ay, g.A, o.A, u.A, d.A, c.A, S.default);
+        this.waitFor(T.A, g.Ay, m.A, o.A, u.A, d.A, c.A, S.default);
     }
     getChannelPermissions(e) {
         return E.Le.has(e.type) ? v(e.id) : b(e.id);
@@ -169,20 +169,20 @@ class j extends s.Ay.Store {
     canWithPartialContext(e, t) {
         return "channelId" in t && "string" == typeof t.channelId
             ? this.can(e, T.A.getChannel(t.channelId))
-            : "guildId" in t && "string" == typeof t.guildId && this.can(e, g.A.getGuild(t.guildId));
+            : "guildId" in t && "string" == typeof t.guildId && this.can(e, m.A.getGuild(t.guildId));
     }
     can(e, t, n, i, r) {
         let s = H(t, n, i, r);
         return a.zy(s, e);
     }
     canBasicChannel(e, t, n, i, r) {
-        return "basicPermissions" in t ? I.A.has(t.basicPermissions, e) : a.zy(H(t, n, i, r), I.A.asBigFlag(e));
+        return "basicPermissions" in t ? f.A.has(t.basicPermissions, e) : a.zy(H(t, n, i, r), f.A.asBigFlag(e));
     }
     computePermissions(e, t, n, i) {
         return H(e, t, n, i);
     }
     computeBasicPermissions(e) {
-        return "basicPermissions" in e ? e.basicPermissions : I.A.asBasicFlag(H(e));
+        return "basicPermissions" in e ? e.basicPermissions : f.A.asBasicFlag(H(e));
     }
     canManageUser(e, t, n) {
         let i = t instanceof h.A ? t.id : t;

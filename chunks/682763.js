@@ -6,13 +6,13 @@ n.d(t, {
     Mq: () => s,
     P_: () => o,
     _r: () => S,
-    aS: () => m,
-    bF: () => f,
+    aS: () => g,
+    bF: () => I,
     cS: () => N,
-    dK: () => g,
+    dK: () => m,
     hJ: () => A,
     i0: () => R,
-    lo: () => I,
+    lo: () => f,
     mD: () => T,
     oW: () => O,
     ot: () => p,
@@ -61,7 +61,7 @@ function h(e, t) {
         nativeWindowHandle: t,
     });
 }
-function I(e, t, n) {
+function f(e, t, n) {
     return i.h.dispatch({
         type: "OVERLAY_V3_WINDOW_CREATION_FAILURE",
         createWindowTriggeringPID: e,
@@ -69,7 +69,7 @@ function I(e, t, n) {
         nativeWindowHandle: n,
     });
 }
-function f(e) {
+function I(e) {
     return i.h.dispatch({ type: "OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW", lastAssociatedPID: e ?? -1 });
 }
 function p(e, t) {
@@ -79,18 +79,18 @@ function T(e, t, n) {
     let { crashType: r, isCrashedDisabled: a } = n;
     return i.h.dispatch({ type: "OVERLAY_CRASHED", pid: e, error: t, crashType: r, isCrashedDisabled: a });
 }
-function m(e) {
+function g(e) {
     let { pid: t, name: n, type: a, data: s, logType: l = r.QJ.Info } = e;
     return i.h.dispatch({
         type: "OVERLAY_ADD_DEBUG_BREADCRUMB",
         breadcrumb: { pid: t, type: a, name: n, data: s, logType: l },
     });
 }
-function g(e, t, n, i) {
-    return m({ pid: e, name: t, type: r.ON.Flux, data: n, logType: i });
+function m(e, t, n, i) {
+    return g({ pid: e, name: t, type: r.ON.Flux, data: n, logType: i });
 }
 function S(e, t, n, i) {
-    return m({ pid: e, name: t, type: r.ON.OOPModule, data: n, logType: i });
+    return g({ pid: e, name: t, type: r.ON.OOPModule, data: n, logType: i });
 }
 function N(e, t, n) {
     return i.h.dispatch({ type: "OVERLAY_V3_NATIVE_FOCUS_GAINED", pid: e, windowHandle: t, windowClass: n });

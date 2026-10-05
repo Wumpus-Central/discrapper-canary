@@ -13,19 +13,19 @@ var i = n(477900),
 let A = "Activity Encourages Hardware Acceleration";
 function h(e) {
     let { applicationId: t, transitionState: n, onClose: h } = e,
-        [I, f] = r.useState(!1),
+        [f, I] = r.useState(!1),
         [p] = (0, d.A)([t]),
         T = p?.name ?? "This Activity";
-    async function m() {
+    async function g() {
         let e = "temporary";
-        (I && ((e = "permanent"), o.Ay.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
+        (f && ((e = "permanent"), o.Ay.updatedUnsyncedSettings({ disableActivityHardwareAccelerationPrompt: !0 })),
             c.default.track(_.HAw.MODAL_DISMISSED, { type: A, dismiss_type: e }),
             await h());
     }
-    async function g() {
+    async function m() {
         (c.default.track(_.HAw.ACTIVITY_ENABLE_HARDWARE_ACCELERATION, { application_id: t }),
             u.Ay.setEnableHardwareAcceleration(!0),
-            await m());
+            await g());
     }
     return (
         r.useEffect(() => {
@@ -34,18 +34,18 @@ function h(e) {
         (0, i.jsx)(a.a, {
             size: "md",
             transitionState: n,
-            onClose: m,
+            onClose: g,
             "aria-label": E.intl.string(E.t.NQkK4l),
             title: E.intl.string(E.t.NQkK4l),
             actionBarInput: (0, i.jsx)(s.S, {
-                checked: I,
-                onChange: () => f(!I),
+                checked: f,
+                onChange: () => I(!f),
                 label: E.intl.string(E.t["5E9SB9"]),
                 labelType: "secondary",
             }),
             actions: [
-                { variant: "secondary", text: E.intl.string(E.t["Ibf5/h"]), onClick: m },
-                { variant: "primary", text: E.intl.string(E.t["/wlDqi"]), onClick: g },
+                { variant: "secondary", text: E.intl.string(E.t["Ibf5/h"]), onClick: g },
+                { variant: "primary", text: E.intl.string(E.t["/wlDqi"]), onClick: m },
             ],
             children: (0, i.jsx)(l.E, {
                 variant: "text-md/normal",

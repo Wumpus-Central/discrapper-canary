@@ -19,7 +19,7 @@ var _ =
     E = n(460890),
     A = n(812743),
     h = n(38021);
-function I(e) {
+function f(e) {
     let {
             children: t,
             theme: n = A.NJ.DARK,
@@ -33,7 +33,7 @@ function I(e) {
             disableAdaptiveTheme: _ = !1,
             reduceAdaptiveTheme: E = !1,
         } = e,
-        I = a.useMemo(
+        f = a.useMemo(
             () =>
                 (0, h.dI)({
                     theme: n,
@@ -49,13 +49,13 @@ function I(e) {
                 }),
             [n, i, s, l, o, d, c, u, _, E],
         );
-    return (0, r.jsx)(h.Dx.Provider, { value: I, children: t });
+    return (0, r.jsx)(h.Dx.Provider, { value: f, children: t });
 }
-var f = n(775602),
+var I = n(775602),
     p = n(989395),
     T = n(71855),
-    m = n(267102),
-    g = n(652215);
+    g = n(267102),
+    m = n(652215);
 let S = ["Shift", "Alt", "Meta", "Control"];
 var N = n(973283),
     C = n(534409),
@@ -91,26 +91,26 @@ function x(e) {
             useReducedMotion: $,
             alwaysShowLinkDecorations: z,
             highContrastMode: X,
-        } = (0, c.cf)([y.default, f.Ay, D.A, L.A, v.A], () => ({
+        } = (0, c.cf)([y.default, I.Ay, D.A, L.A, v.A], () => ({
             locale: y.default.locale,
             theme: n ?? D.A.theme,
             focused: l ? L.A.getWindowFocused(t) : v.A.isFocused(),
             mainWindowVisible: v.A.isVisible(),
             currentWindow: l ? (L.A.getWindow(t) ?? window) : window,
-            fontScale: f.Ay.fontScale,
-            fontScaleClass: f.Ay.fontScaleClass,
-            keyboardModeEnabled: f.Ay.keyboardModeEnabled,
-            saturation: f.Ay.saturation,
-            desaturateUserColors: f.Ay.desaturateUserColors,
-            useForcedColors: f.Ay.useForcedColors,
-            systemForcedColors: f.Ay.systemForcedColors,
-            useReducedMotion: f.Ay.useReducedMotion,
-            alwaysShowLinkDecorations: f.Ay.alwaysShowLinkDecorations,
-            highContrastMode: f.Ay.isHighContrastModeEnabled,
+            fontScale: I.Ay.fontScale,
+            fontScaleClass: I.Ay.fontScaleClass,
+            keyboardModeEnabled: I.Ay.keyboardModeEnabled,
+            saturation: I.Ay.saturation,
+            desaturateUserColors: I.Ay.desaturateUserColors,
+            useForcedColors: I.Ay.useForcedColors,
+            systemForcedColors: I.Ay.systemForcedColors,
+            useReducedMotion: I.Ay.useReducedMotion,
+            alwaysShowLinkDecorations: I.Ay.alwaysShowLinkDecorations,
+            highContrastMode: I.Ay.isHighContrastModeEnabled,
         })),
         Z = (function (e, t) {
             let [n, i] = a.useState(0),
-                r = (0, m.aL)();
+                r = (0, g.aL)();
             a.useEffect(() => {
                 function e() {
                     return i((e) => e + 1);
@@ -119,10 +119,10 @@ function x(e) {
                     return i((e) => Math.max(0, e - 1));
                 }
                 return (
-                    r.subscribe(g.jej.POPOUT_SHOW, e),
-                    r.subscribe(g.jej.POPOUT_HIDE, t),
+                    r.subscribe(m.jej.POPOUT_SHOW, e),
+                    r.subscribe(m.jej.POPOUT_HIDE, t),
                     () => {
-                        (r.unsubscribe(g.jej.POPOUT_SHOW, e), r.unsubscribe(g.jej.POPOUT_HIDE, t));
+                        (r.unsubscribe(m.jej.POPOUT_SHOW, e), r.unsubscribe(m.jej.POPOUT_HIDE, t));
                     }
                 );
             }, [r]);
@@ -281,7 +281,7 @@ function x(e) {
         });
     return (0, r.jsx)(E.GE, {
         value: ea,
-        children: (0, r.jsx)(I, {
+        children: (0, r.jsx)(f, {
             theme: h,
             flags: q,
             saturation: j,

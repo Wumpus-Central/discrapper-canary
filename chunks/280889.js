@@ -12,7 +12,7 @@ var r,
     E = n(795129),
     A = n(274652),
     h = n(669646);
-let I = (0, n(945810).mj)({
+let f = (0, n(945810).mj)({
     name: "2025-09-image-attachment-mezzanine-v2",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -22,11 +22,11 @@ let I = (0, n(945810).mj)({
         2: { enabled: !0, maxFileSizeBytes: 262144 },
     },
 });
-var f = n(231971),
+var I = n(231971),
     p = n(742023),
     T = n(544180),
-    m = n(174459),
-    g = n(509929),
+    g = n(174459),
+    m = n(509929),
     S = n(927813),
     N = n(209489),
     C = n(38405),
@@ -354,7 +354,7 @@ class G extends R.Ay {
             let n =
                 "heic" === t
                     ? h.HeicUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertToJpeg.heic" })
-                    : f.JxrUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertToJpeg.jxr" });
+                    : I.JxrUploadConversionExperiment.getConfig({ location: "CloudUpload.tryConvertToJpeg.jxr" });
             if (n.enabled) {
                 let i = this.item.file,
                     r = await G.tryConvertToJpeg({
@@ -465,7 +465,7 @@ class G extends R.Ay {
         b.log(`Starting compression/conversion for ${this.id}`);
         let e = await this.trackTime(
             "compressTimeMs",
-            async () => await (0, g.Si)(this, this.reactNativeFileIndex ?? 0),
+            async () => await (0, m.Si)(this, this.reactNativeFileIndex ?? 0),
         );
         if (null == e || null == e.file)
             throw (
@@ -533,7 +533,7 @@ class G extends R.Ay {
             a,
             s = (function (e) {
                 let { location: t } = e;
-                return I.getConfig({ location: t });
+                return f.getConfig({ location: t });
             })({ location: "CloudUpload.maybeConvertToWebP" });
         if (!s.enabled) return (b.warn(`webp conversion skipped for ${i}: not enabled`), null);
         if (null == e) return (b.warn(`webp conversion skipped for ${i}: no file`), null);
@@ -698,7 +698,7 @@ class G extends R.Ay {
         this.uploadedFilename = e;
     }
     trackUploadStart() {
-        m.default.track(v.HAw.ATTACHMENT_UPLOAD_STARTED, {
+        g.default.track(v.HAw.ATTACHMENT_UPLOAD_STARTED, {
             file_size: this.currentSize,
             mime_type: this.mimeType ?? "unknown",
             video_upload_quality: p.Ay.videoUploadQuality,
@@ -712,7 +712,7 @@ class G extends R.Ay {
     }
     trackUploadFinished(e) {
         let t = null != this.startTime ? performance.now() - this.startTime : -1;
-        m.default.track(v.HAw.ATTACHMENT_UPLOAD_FINISHED, {
+        g.default.track(v.HAw.ATTACHMENT_UPLOAD_FINISHED, {
             duration_ms: t,
             file_size: this.currentSize,
             pre_compression_file_size: this.preCompressionSize,

@@ -1,4 +1,4 @@
-n.d(t, { OA: () => I, kB: () => p });
+n.d(t, { OA: () => f, kB: () => p });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -61,7 +61,7 @@ let A = new (class {
         }
     })(),
     h = null;
-function I(e) {
+function f(e) {
     let { enabled: t = !0, allowArchived: n = !1 } =
             arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { loaded: i, firstMessage: r } = (0, a.cf)([u.A], () => u.A.getMessage(e.id)),
@@ -72,18 +72,18 @@ function I(e) {
             !i &&
             null == r &&
             (n
-                ? f(s, [e.id])
+                ? I(s, [e.id])
                 : (function (e, t) {
                       if (A.hasRequested(e.id, t)) return;
                       let n = (0, c.S)(e.id),
                           i = n.findIndex((e) => e === t),
                           r = n.slice(i, i + 5).filter((t) => !A.hasRequested(e.id, t));
-                      f(e, r);
+                      I(e, r);
                   })(s, e.id)),
         { loaded: i, firstMessage: t ? r : null }
     );
 }
-function f(e, t) {
+function I(e, t) {
     let n = !1;
     (t.forEach((t) => {
         let { loaded: i, firstMessage: r } = u.A.getMessage(t);
@@ -92,16 +92,16 @@ function f(e, t) {
         n && null == h && (h = setTimeout(T, 0)));
 }
 function p(e) {
-    f(e, (0, c.S)(e.id).slice(0, 10));
+    I(e, (0, c.S)(e.id).slice(0, 10));
 }
 async function T() {
     try {
-        for (; A.hasNext();) await m(A.next());
+        for (; A.hasNext();) await g(A.next());
     } finally {
         h = null;
     }
 }
-async function m(e) {
+async function g(e) {
     let t = A.getNextBatch(e, 10);
     try {
         if (0 === t.length) return;

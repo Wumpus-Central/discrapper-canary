@@ -64,12 +64,12 @@ class d extends l.A {
             hero_logo_url: E,
             catalog_banner_url: A,
             catalog_banner_animated_url: h,
-            catalog_banner_rive_url: I,
-            featured_block_url: f,
+            catalog_banner_rive_url: f,
+            featured_block_url: I,
             logo_url: p,
             pdp_bg_url: T,
-            mobile_banner_url: m,
-            mobile_bg_url: g,
+            mobile_banner_url: g,
+            mobile_bg_url: m,
             ...S
         } = e;
         return new d({
@@ -86,12 +86,12 @@ class d extends l.A {
             heroLogoUrl: E,
             catalogBannerUrl: A,
             catalogBannerAnimatedUrl: h,
-            catalogBannerRiveUrl: I,
-            featuredBlockUrl: f,
+            catalogBannerRiveUrl: f,
+            featuredBlockUrl: I,
             logoUrl: p,
             pdpBgUrl: T,
-            mobileBannerUrl: m,
-            mobileBgUrl: g,
+            mobileBannerUrl: g,
+            mobileBgUrl: m,
             heroLogoDisplayConfig: (0, r.f6)(a),
             heroBannerDisplayConfig: (0, r.f6)(l),
         });

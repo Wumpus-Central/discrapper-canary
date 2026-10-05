@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => m, GM: () => f, HY: () => p, kW: () => T });
+n.d(t, { Ay: () => g, GM: () => I, HY: () => p, kW: () => T });
 var i = n(636537),
     r = n(73153),
     a = n(913122),
@@ -12,14 +12,14 @@ var i = n(636537),
     E = n(45938),
     A = n(38405),
     h = n(652215),
-    I = n(202541);
-async function f(e) {
+    f = n(202541);
+async function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     r.h.dispatch({ type: "GIFT_CODE_RESOLVE", code: e });
     try {
         let i = await (0, E.GM)(e, t, n);
-        if (null != i.application_id && i.application_id !== I.tv) {
+        if (null != i.application_id && i.application_id !== f.tv) {
             let e = o.A.getApplication(i.application_id);
             if (null == e)
                 try {
@@ -55,8 +55,8 @@ async function T(e, t) {
         })
     ).body;
 }
-let m = {
-    resolveGiftCode: f,
+let g = {
+    resolveGiftCode: I,
     reportUnexpectedGiftCodeError: p,
     async fetchUserGiftCodesForSKU(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;

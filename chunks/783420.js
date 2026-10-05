@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(477900);
 n(582128);
 var r = n(17928),
@@ -13,15 +13,15 @@ var r = n(17928),
     E = n(166403),
     A = n(732280),
     h = n(202541),
-    I = n(652215);
-function f(e) {
+    f = n(652215);
+function I(e) {
     let {
             onClick: t,
-            subscriptionTier: f,
+            subscriptionTier: I,
             postSuccessGuild: p,
             onSubscribeModalClose: T,
-            premiumModalAnalyticsLocation: m,
-            applicationId: g,
+            premiumModalAnalyticsLocation: g,
+            applicationId: m,
             giftMessage: S,
             confirmationFooter: N,
             isGift: C,
@@ -33,12 +33,12 @@ function f(e) {
         D = (0, r.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
         { analyticsLocations: v } = (0, s.Ay)(),
         b = (0, A.V)(),
-        M = !C && null != b && null != f && h.kb[b.trialId].skus.includes(f);
+        M = !C && null != b && null != I && h.kb[b.trialId].skus.includes(I);
     return L({
         onClick: function (e) {
             if ((e.preventDefault(), null == y))
-                return void (0, d.pX)(I.BVt.LOGIN, { source: "premium_subscribe_button" });
-            if ((t?.(e), D?.status === I.Dmq.ACCOUNT_HOLD)) {
+                return void (0, d.pX)(f.BVt.LOGIN, { source: "premium_subscribe_button" });
+            if ((t?.(e), D?.status === f.Dmq.ACCOUNT_HOLD)) {
                 ((0, l.xf)(), (0, u.openUserSettings)(c.X.NITRO_PANEL), T?.(!1));
                 return;
             }
@@ -69,18 +69,18 @@ function f(e) {
                     };
                 });
             let r = M ? b.subscriptionTrial?.id : null,
-                s = I.AnalyticsObjectTypes.BUY;
-            null != r ? (s = I.AnalyticsObjectTypes.TRIAL) : C && (s = I.AnalyticsObjectTypes.GIFT);
+                s = f.AnalyticsObjectTypes.BUY;
+            null != r ? (s = f.AnalyticsObjectTypes.TRIAL) : C && (s = f.AnalyticsObjectTypes.GIFT);
             let _ = {
                 isGift: C,
                 initialPlanId: O,
-                subscriptionTier: f,
+                subscriptionTier: I,
                 analyticsLocations: v,
-                analyticsObject: { object: I.ZSU.BUTTON_CTA, objectType: s, ...m },
+                analyticsObject: { object: f.ZSU.BUTTON_CTA, objectType: s, ...g },
                 trialId: r,
                 postSuccessGuild: p,
                 onClose: T,
-                applicationId: g,
+                applicationId: m,
                 giftMessage: S,
                 confirmationFooter: N,
             };

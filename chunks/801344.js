@@ -1,8 +1,8 @@
 n.d(t, {
     Br: () => s,
     QL: () => A,
-    VD: () => f,
-    VX: () => I,
+    VD: () => I,
+    VX: () => f,
     j3: () => l,
     kt: () => c,
     nS: () => u,
@@ -71,12 +71,12 @@ let _ = "teamFightScore",
     E = "teamFightStartMs",
     A = "teamFightEndMs",
     h = 0.25;
-function I(e, t) {
+function f(e, t) {
     let n = "BLUE" === t ? "RED" : "BLUE",
         i = e.participantsByTeam[t].size,
         r = e.participantsByTeam[n].size;
     return e.deathsByTeam[n] - e.deathsByTeam[t] + (r - i) * 0.5;
 }
-function f(e) {
+function I(e) {
     return Math.max(0, 0.075 * e);
 }

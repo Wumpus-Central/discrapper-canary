@@ -3,7 +3,7 @@
     i2: () => T,
     tW: () => S,
     vm: () => R,
-    fY: () => f,
+    fY: () => I,
     WV: () => v,
     Yt: () => y,
     UX: () => D,
@@ -26,8 +26,8 @@ function A(e) {
     if (null != e) return e === u.NJ8.LIGHT || "light" === e ? "light" : "dark";
 }
 let h = /\.([a-zA-Z0-9]+)$/,
-    I = ["video/mp4", "video/webm"];
-var f =
+    f = ["video/mp4", "video/webm"];
+var I =
     (((i = {}).HERO = "hero"),
     (i.HERO_IMAGE = "hero_image"),
     (i.HERO_VIDEO = "hero_video"),
@@ -55,7 +55,7 @@ var T =
     (r[(r.TIER_3 = 3)] = "TIER_3"),
     (r[(r.TIER_4 = 4)] = "TIER_4"),
     r);
-let m = {
+let g = {
         video_player_video: { variant: "video", property: "url" },
         video_player_video_low_res: { variant: "videoLowRes", property: "url" },
         video_player_video_hls: { variant: "videoHls", property: "url" },
@@ -63,7 +63,7 @@ let m = {
         video_player_caption: { variant: "video", property: "caption" },
         video_player_transcript: { variant: "video", property: "transcript" },
     },
-    g = {
+    m = {
         1: "https://cdn.discordapp.com/assets/content/5bb6b03e0f5fce0d4a3ff2e8b0cb68a360d1acab6a9b1dc5b1f9c081b5d6d4e7.webm",
         2: "https://cdn.discordapp.com/assets/content/d4fc1c99b3e3044530f08ede0156d1d43a13bf78f0f539e240b63f2d4dad3554.webm",
         3: "https://cdn.discordapp.com/assets/content/864e5841fd9af8da3c50ad6d6220bee54e8c2da2d36d3c85d0a5ae95cdbf095e.webm",
@@ -72,7 +72,7 @@ let m = {
 function S(e, t, n, i, r) {
     var l, o, u;
     let h,
-        f,
+        I,
         T,
         S,
         N = !1,
@@ -105,7 +105,7 @@ function S(e, t, n, i, r) {
         case "reward": {
             let t = (0, d.sn)(e);
             if (t.type === s.l.VIRTUAL_CURRENCY) {
-                let e = null != r ? g[r] : void 0;
+                let e = null != r ? m[r] : void 0;
                 if (null != e) return { url: e, mimetype: "video/webm", isAnimated: !0 };
                 return i
                     ? { url: E.A, mimetype: "video/mp4", isAnimated: !0 }
@@ -156,7 +156,7 @@ function S(e, t, n, i, r) {
         case "video_player_transcript": {
             if (!("taskConfigV2" in e.config)) return null;
             let n = e.config.taskConfigV2.tasks[i ? a.n.WATCH_VIDEO_ON_MOBILE : a.n.WATCH_VIDEO],
-                r = m[t],
+                r = g[t],
                 s = n?.assets[r.variant]?.[r.property];
             if (null == s) return null;
             ((S = s), (C = !0));
@@ -171,8 +171,8 @@ function S(e, t, n, i, r) {
             let i = c.CI;
             return t.includes("/") ? ((i = c.GD), `${i}${t}`) : `${i}${e}${n?.theme != null ? `/${n.theme}` : ""}/${t}`;
         })(l, o, { theme: A(u?.theme) })),
-        (T = null != (f = R(o)) && I.includes(f)),
-        { url: h, mimetype: f, isAnimated: T });
+        (T = null != (I = R(o)) && f.includes(I)),
+        { url: h, mimetype: I, isAnimated: T });
     return C && null == O.mimetype ? null : O;
 }
 function N(e) {

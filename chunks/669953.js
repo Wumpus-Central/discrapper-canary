@@ -12,12 +12,12 @@ var i = n(435558),
     E = n(816662),
     A = n(734057),
     h = n(696451),
-    I = n(287809),
-    f = n(174459),
+    f = n(287809),
+    I = n(174459),
     p = n(403362),
     T = n(38405),
-    m = n(935208),
-    g = n(591552),
+    g = n(935208),
+    m = n(591552),
     S = n(961973),
     N = n(487626),
     C = n(652215),
@@ -26,8 +26,8 @@ var i = n(435558),
 function L(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (_.A.isFullServerPreview(e)) return;
-    let n = t ? g.A.getOnboardingPromptsForOnboarding(e) : g.A.getOnboardingPrompts(e),
-        i = g.A.getOnboardingResponses(e),
+    let n = t ? m.A.getOnboardingPromptsForOnboarding(e) : m.A.getOnboardingPrompts(e),
+        i = m.A.getOnboardingResponses(e),
         r = n.map((e) => e.options.filter((e) => i.includes(e.id))).flat(),
         a = {},
         o = {};
@@ -82,7 +82,7 @@ function L(e) {
 }
 let y = {
     selectOption(e, t, n, i) {
-        let a = g.A.getOnboardingPrompt(t);
+        let a = m.A.getOnboardingPrompt(t);
         if (null == a) return;
         let s = a.singleSelect ? r().without(r().map(a.options, "id"), n) : [];
         l.h.dispatch({
@@ -110,20 +110,20 @@ let y = {
     },
     completeOnboarding(e, t) {
         let n = t.length > 0 ? t[t.length - 1] : null,
-            i = g.A.getSelectedOptions(e),
+            i = m.A.getSelectedOptions(e),
             r = (0, S.a)(i),
             s = (0, S.vV)(i),
-            l = g.A.getEnabled(e) ? g.A.getDefaultChannelIds(e) : [],
+            l = m.A.getEnabled(e) ? m.A.getDefaultChannelIds(e) : [],
             [c, E] = (0, S._N)(e, t, l),
             T = [...s, ...l],
             y = T.map((e) => A.A.getChannel(e)).filter(p.Vq),
             D = (0, N.w)(e, new Set(T), y, !0).length,
             v = null == n ? [] : n.options.map((e) => e.id),
-            b = g.A.getConnections(e),
+            b = m.A.getConnections(e),
             M = (0, S.H_)(b),
             P = (0, S.OG)(b);
         if (
-            (f.default.track(C.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
+            (I.default.track(C.HAw.GUILD_ONBOARDING_STEP_COMPLETED, {
                 ...(0, d.H$)(e),
                 step: t.length - 1,
                 options_selected: null == n ? 0 : i.filter((e) => v.includes(e.id)).length,
@@ -140,12 +140,12 @@ let y = {
                 application_connections_connected: P.connected,
                 application_connections_not_connected: P.notConnected,
             }),
-            (0, o.hK)(e, R.P.GUILD_ONBOARDING_QUESTION, m.default.fromTimestamp(Date.now())),
+            (0, o.hK)(e, R.P.GUILD_ONBOARDING_QUESTION, g.default.fromTimestamp(Date.now())),
             L(e, !0),
             _.A.isFullServerPreview(e))
         ) {
             ((0, u.$u)(e, T, []), (0, u.Z$)(e, { optInEnabled: !0 }), (0, u.ID)(e, Array.from(r)));
-            let t = I.default.getCurrentUser();
+            let t = f.default.getCurrentUser();
             if (null != t) {
                 let n = h.Ay.getMember(e, t.id)?.flags ?? 0;
                 (0, u.Z$)(e, { memberOptions: { flags: (0, a.lA)(n, O.D.COMPLETED_ONBOARDING, !0) } });
@@ -154,7 +154,7 @@ let y = {
     },
     onboardExistingMember(e, t) {
         let n = new Set(t);
-        ((g.A.getEnabled(e) ? g.A.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)),
+        ((m.A.getEnabled(e) ? m.A.getDefaultChannelIds(e) : []).forEach((e) => n.add(e)),
             n.size > 0 && (0, E.Hb)(e, Array.from(n), !0, { page: C.liQ.GUILD_ONBOARDING }));
     },
     finishOnboarding(e) {
@@ -164,7 +164,7 @@ let y = {
         l.h.dispatch({ type: "GUILD_ONBOARDING_SET_STEP", guildId: e, step: t });
     },
     async resetOnboarding(e) {
-        let t = I.default.getCurrentUser();
+        let t = f.default.getCurrentUser();
         if (null != t) {
             let n = h.Ay.getMember(e, t.id)?.flags ?? 0;
             await (0, c.T)(e, { flags: (0, a.lA)(n, O.D.COMPLETED_ONBOARDING, !1) });

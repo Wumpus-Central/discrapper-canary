@@ -1,4 +1,4 @@
-(n.d(t, { P7: () => A, aK: () => u, kZ: () => f, o: () => _, xM: () => h, xm: () => I }), n(321073));
+(n.d(t, { P7: () => A, aK: () => u, kZ: () => I, o: () => _, xM: () => h, xm: () => f }), n(321073));
 var i,
     r,
     a = n(636537),
@@ -77,7 +77,7 @@ function h() {
         )
     );
 }
-async function I(e) {
+async function f(e) {
     let t = [],
         n = new Map();
     for (let i of e)
@@ -90,7 +90,7 @@ async function I(e) {
         }
     return (s.h.dispatch({ type: "CREATE_REFERRALS_SUCCESS", userTrialOffers: t }), n);
 }
-async function f(e) {
+async function I(e) {
     try {
         let t = await a.Bo.get({ url: c.Rsh.REFERRAL_OFFER_ID_RESOLVE(e), oldFormErrors: !0, rejectWithError: !1 }),
             n = null != t.body ? l.A.createFromServer(t.body) : null;

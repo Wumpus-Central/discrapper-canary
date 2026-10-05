@@ -5,11 +5,11 @@ n.d(t, {
     Vh: () => O,
     mU: () => N,
     Bf: () => S,
-    UT: () => g,
-    St: () => m,
+    UT: () => m,
+    St: () => g,
     Bs: () => T,
-    _7: () => I,
-    Im: () => f,
+    _7: () => f,
+    Im: () => I,
     IY: () => p,
     q1: () => A,
 });
@@ -69,7 +69,7 @@ var i,
         (a[(a.SAFETY_FLOWS = 4)] = "SAFETY_FLOWS"),
         (a[(a.EXPRESSIVE_V2 = 5)] = "EXPRESSIVE_V2"),
         a),
-    I =
+    f =
         (((s = {}).LEARN_MORE = "learn_more"),
         (s.GET_STARTED = "get_started"),
         (s.SYSTEM_DMS_LEARN_MORE = "system_dms_learn_more"),
@@ -77,7 +77,7 @@ var i,
         (s.METHOD_SELECT = "method_select"),
         (s.LOG_OUT = "log_out"),
         s),
-    f = (((l = {}).RETRY = "retry"), (l.CONNECT_TO_TEEN = "connect_to_teen"), (l.MANUAL_REVIEW = "manual_review"), l),
+    I = (((l = {}).RETRY = "retry"), (l.CONNECT_TO_TEEN = "connect_to_teen"), (l.MANUAL_REVIEW = "manual_review"), l),
     p =
         (((o = {}).NSFW_CHANNEL_AGREE_CTA = "nsfw_channel_agree_cta"),
         (o.NSFW_CHANNEL_DISAGREE_CTA = "nsfw_channel_disagree_cta"),
@@ -85,10 +85,10 @@ var i,
 function T(e, t, n) {
     u.default.track(E.HAw.AGE_VERIFICATION_MODAL_VIEWED, { modal_session_id: e, modal_version: t, entry_point: n });
 }
-function m(e, t, n, i) {
+function g(e, t, n, i) {
     u.default.track(E.HAw.AGE_VERIFICATION_MODAL_CLICKED, { modal_session_id: e, modal_version: t, cta: n, method: i });
 }
-function g(e, t) {
+function m(e, t) {
     u.default.track(E.HAw.AGE_VERIFICATION_DM_CLICKED, { cta: e, channel_id: t });
 }
 function S(e, t, n) {

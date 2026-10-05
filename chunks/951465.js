@@ -1,13 +1,13 @@
-n.d(t, { A: () => r, x: () => i });
-var l = n(477900);
-n(582128);
-var a = n(192308);
+l.d(t, { A: () => r, x: () => i });
+var n = l(477900);
+l(582128);
+var a = l(192308);
 let i = "conjure-publish-notes";
 function r(e) {
     (0, a.openModalLazy)(
         async () => {
-            let { default: t } = await Promise.all([n.e("637844"), n.e("700903")]).then(n.bind(n, 636378));
-            return (n) => (0, l.jsx)(t, { ...n, ...e });
+            let { default: t } = await Promise.all([l.e("637844"), l.e("700903")]).then(l.bind(l, 636378));
+            return (l) => (0, n.jsx)(t, { ...l, ...e });
         },
         { modalKey: i },
     );

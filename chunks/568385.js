@@ -17,13 +17,13 @@ function _(e) {
             displayOnly: E,
             label: A,
             labeledBy: h,
-            leadingIcon: I,
-            value: f,
+            leadingIcon: f,
+            value: I,
             labelType: p = "primary",
             usageVariant: T = "single",
         } = e,
-        m = (0, r.useRef)(null),
         g = (0, r.useRef)(null),
+        m = (0, r.useRef)(null),
         S = (0, r.useRef)(null),
         N = r.useId(),
         C = `${N}label`,
@@ -32,7 +32,7 @@ function _(e) {
         y = (0, r.useRef)(!1),
         D = null != A && "" !== A,
         v = null != n && "" !== n,
-        b = null != I ? I : null;
+        b = null != f ? f : null;
     (0, r.useEffect)(() => {
         if (!y.current) {
             y.current = !0;
@@ -51,7 +51,7 @@ function _(e) {
             children: [
                 (0, i.jsxs)("div", {
                     className: u.fb,
-                    ref: m,
+                    ref: g,
                     "aria-hidden": !0,
                     children: [
                         (0, i.jsx)("svg", {
@@ -106,11 +106,11 @@ function _(e) {
     return E
         ? (0, i.jsx)("div", { className: M, "data-selected": t || void 0, "data-disabled": _ || void 0, children: P })
         : (0, i.jsx)(o.vN, {
-              focusTarget: g,
+              focusTarget: m,
               ringTarget: S,
               children: (0, i.jsx)(l.Sc, {
                   ref: S,
-                  inputRef: g,
+                  inputRef: m,
                   "aria-labelledby": h ?? (D ? C : void 0),
                   "aria-describedby": D && v ? O : void 0,
                   isSelected: t,
@@ -121,7 +121,7 @@ function _(e) {
                   isReadOnly: E,
                   "data-mana-component": "checkbox",
                   className: M,
-                  value: String(f),
+                  value: String(I),
                   children: P,
               }),
           });

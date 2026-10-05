@@ -1,15 +1,15 @@
 (n.d(t, {
-    EW: () => m,
+    EW: () => g,
     LZ: () => N,
     NN: () => C,
-    S4: () => f,
-    Sf: () => I,
+    S4: () => I,
+    Sf: () => f,
     U8: () => u,
     Uj: () => d,
     V: () => _,
     We: () => T,
     aU: () => S,
-    bX: () => g,
+    bX: () => m,
     eJ: () => E,
     wU: () => A,
     z$: () => c,
@@ -67,7 +67,7 @@ function A(e) {
     return null == e || "" === e ? "none" : `url(${e})`;
 }
 let h = [[0, 0, 0]];
-function I(e, t, n) {
+function f(e, t, n) {
     let i = document.createElement("canvas"),
         r = i.getContext("2d");
     if (null == r) return h;
@@ -86,7 +86,7 @@ function I(e, t, n) {
         d = o()(l, t);
     return "boolean" == typeof d ? h : d.palette();
 }
-function f(e) {
+function I(e) {
     return "number" == typeof e ? null : p(e);
 }
 let p = s().memoize(
@@ -98,7 +98,7 @@ let p = s().memoize(
                     (n(e), (i.onerror = i.onload = null), (i = null));
                 }),
                 (i.onload = () => {
-                    (t(I(i, 5, 10)), (i.onerror = i.onload = null), (i = null));
+                    (t(f(i, 5, 10)), (i.onerror = i.onload = null), (i = null));
                 }),
                 (i.src = e));
         }),
@@ -113,11 +113,11 @@ function T(e) {
             (i.onerror = (e) => n(e)));
     });
 }
-function m(e) {
+function g(e) {
     let t = e.split(";base64,");
     return (r()(2 === t.length, "Input data is not a valid image."), atob(t[1]).length);
 }
-async function g(e, t, n) {
+async function m(e, t, n) {
     let i = S(e);
     return new File([await i.arrayBuffer()], t, { type: n });
 }

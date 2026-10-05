@@ -24,12 +24,12 @@ function h(e) {
             alignment: u,
             style: _,
             eventTargetRef: h,
-            artboard: I,
-            withReducedMotion: f = "halt",
+            artboard: f,
+            withReducedMotion: I = "halt",
             ref: p,
             artboardProperties: T,
-            dataBinding: m,
-            onDataBindingChange: g,
+            dataBinding: g,
+            onDataBindingChange: m,
             touchScrollEnabled: S = !0,
             dynamicDataBinding: N,
             listenOnDocumentBody: C,
@@ -49,7 +49,7 @@ function h(e) {
             buffer: t,
             autoplay: n,
             stateMachines: null != y ? [y] : U,
-            artboard: I,
+            artboard: f,
             useOffscreenRenderer: !0,
             layout: new s.Layout({
                 fit: null != c ? E[c] : s.Fit.Cover,
@@ -109,8 +109,8 @@ function h(e) {
                 E = (0, s.useViewModel)(n);
             (0, s.useViewModelInstance)(E);
             let { theme: A, saturation: h } = (0, d.G9)(),
-                { highContrastModeEnabled: I } = r.useContext(o.C),
-                f = r.useRef({}),
+                { highContrastModeEnabled: f } = r.useContext(o.C),
+                I = r.useRef({}),
                 p =
                     ((t = r.useRef({})),
                     r.useCallback(async (e, n) => {
@@ -183,7 +183,7 @@ function h(e) {
                                         } else if ("object" == typeof o)
                                             if ("resolve" in o) {
                                                 let [e, t, i, a] = o
-                                                    .resolve({ theme: A, saturation: h, highContrastModeEnabled: I })
+                                                    .resolve({ theme: A, saturation: h, highContrastModeEnabled: f })
                                                     .rgba();
                                                 n.viewModelInstance?.color(r)?.rgba(e, t, i, 255 * a);
                                             } else n.viewModelInstance?.color(r)?.rgba(o.r, o.g, o.b, (o.a ?? 1) * 255);
@@ -198,9 +198,9 @@ function h(e) {
                                         break;
                                     case "trigger":
                                         let u = null != o && ("boolean" == typeof o ? o : 0 !== o),
-                                            _ = T(f.current, r);
+                                            _ = T(I.current, r);
                                         (u && _ !== o && n.viewModelInstance?.trigger(r)?.trigger(),
-                                            (f.current[r] = o));
+                                            (I.current[r] = o));
                                         break;
                                     case "string":
                                         let E = n.viewModelInstance?.string(r);
@@ -215,9 +215,9 @@ function h(e) {
                                         }
                                         break;
                                     case "artboard":
-                                        let m = n.viewModelInstance?.artboard(r),
-                                            g = n.getBindableArtboard(o);
-                                        null != m && null != g && (m.value = g);
+                                        let g = n.viewModelInstance?.artboard(r),
+                                            m = n.getBindableArtboard(o);
+                                        null != g && null != m && (g.value = m);
                                         break;
                                     default:
                                         console.warn(`Unknown property type: ${l}`);
@@ -230,17 +230,17 @@ function h(e) {
                             e.abort("New data binding applied - aborting previous image fetches.");
                         }
                     );
-                }, [T, _, n, i, a, A, n?.viewModelInstance, h, I, p]));
+                }, [T, _, n, i, a, A, n?.viewModelInstance, h, f, p]));
         })({
             rive: x,
-            artboard: I,
+            artboard: f,
             artboardProperties: T,
-            dataBinding: m,
+            dataBinding: g,
             dynamicDataBinding: N,
-            onDataBindingChange: g,
+            onDataBindingChange: m,
         }),
         r.useEffect(() => {
-            if (null != x && "short-loop" === f && D.reducedMotion.enabled) {
+            if (null != x && "short-loop" === I && D.reducedMotion.enabled) {
                 function e() {
                     null != x &&
                         x.isPlaying &&
@@ -260,7 +260,7 @@ function h(e) {
                     }
                 );
             }
-        }, [x, f, D.reducedMotion.enabled]),
+        }, [x, I, D.reducedMotion.enabled]),
         r.useLayoutEffect(() => {
             if (null != x) {
                 "layout" === c && x.resizeDrawingSurfaceToCanvas();
@@ -287,9 +287,9 @@ function h(e) {
                 null == U &&
                 null == y &&
                 (w(x.stateMachineNames),
-                x.reset({ stateMachines: x.stateMachineNames, autoplay: n, artboard: I, autoBind: !0 }),
+                x.reset({ stateMachines: x.stateMachineNames, autoplay: n, artboard: f, autoBind: !0 }),
                 x.setupRiveListeners());
-        }, [x, n, U, I, y]));
+        }, [x, n, U, f, y]));
     let F = r.useRef(0);
     (r.useEffect(() => {
         if (null == x) return;
@@ -298,7 +298,7 @@ function h(e) {
                 "number" == typeof t.data &&
                 ((F.current = t.data),
                 t.data > 0 &&
-                    ("halt" === f && D.reducedMotion.enabled && x.isPlaying && x.pause(),
+                    ("halt" === I && D.reducedMotion.enabled && x.isPlaying && x.pause(),
                     x.off(s.EventType.Advance, e)));
         };
         return (
@@ -308,10 +308,10 @@ function h(e) {
                 x.off(s.EventType.Advance, e);
             }
         );
-    }, [x, D.reducedMotion.enabled, f, n]),
+    }, [x, D.reducedMotion.enabled, I, n]),
         r.useEffect(() => {
             P();
-        }, [P, I, c, u, m, N, T]));
+        }, [P, f, c, u, g, N, T]));
     let B = b && !M,
         V = r.useRef(!1);
     return (

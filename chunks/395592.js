@@ -1,5 +1,5 @@
-n.d(t, { u: () => u, x: () => o });
-var l = n(582128);
+l.d(t, { u: () => o, x: () => u });
+var n = l(582128);
 let a = new Set(),
     i = new Set();
 function r() {
@@ -13,7 +13,7 @@ function s(e) {
         }
     );
 }
-async function o(e, t) {
+async function u(e, t) {
     if (a.has(e)) return null;
     (a.add(e), r());
     try {
@@ -22,7 +22,7 @@ async function o(e, t) {
         (a.delete(e), r());
     }
 }
-function u(e) {
-    let t = l.useCallback(() => a.has(e), [e]);
-    return l.useSyncExternalStore(s, t);
+function o(e) {
+    let t = n.useCallback(() => a.has(e), [e]);
+    return n.useSyncExternalStore(s, t);
 }

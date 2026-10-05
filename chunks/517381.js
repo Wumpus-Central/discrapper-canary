@@ -1,4 +1,4 @@
-(n.d(t, { A: () => g }), n(321073));
+(n.d(t, { A: () => m }), n(321073));
 var i = n(17928),
     r = n(73153),
     a = n(913122),
@@ -64,11 +64,11 @@ class _ {
 let E = new Map(),
     A = new Map(),
     h = new Map();
-function I(e) {
+function f(e) {
     return E.get(e) ?? new _();
 }
-function f(e) {
-    let t = I(e);
+function I(e) {
+    let t = f(e);
     return (E.set(e, t), t);
 }
 function p(e, t) {
@@ -89,7 +89,7 @@ function T(e) {
             : n.removeReaction(r, s, i);
     });
 }
-class m extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "SearchMessageStore";
     initialize() {
         this.waitFor(o.default, d.A, c.A);
@@ -98,48 +98,48 @@ class m extends i.Ay.Store {
         return A.get(e);
     }
     getTotalCount(e) {
-        return I(e).totalResults;
+        return f(e).totalResults;
     }
     getIsInitialFetchComplete(e) {
-        return I(e).isInitialFetchComplete;
+        return f(e).isInitialFetchComplete;
     }
     getIsIndexing(e) {
-        return I(e).isIndexing;
+        return f(e).isIndexing;
     }
     getIsHistoricalIndexing(e) {
-        return I(e).isHistoricalIndexing;
+        return f(e).isHistoricalIndexing;
     }
     getDocumentsIndexed(e) {
-        return I(e).documentsIndexed;
+        return f(e).documentsIndexed;
     }
     getIsFetching(e) {
-        return I(e).isFetching;
+        return f(e).isFetching;
     }
     getError(e) {
-        return I(e).error;
+        return f(e).error;
     }
     getMessages(e) {
-        return I(e).messages;
+        return f(e).messages;
     }
     getCursor(e) {
-        return I(e).cursor;
+        return f(e).cursor;
     }
     getAnalyticsId(e) {
-        return I(e).analyticsId;
+        return f(e).analyticsId;
     }
     hasSearchState(e) {
         return E.has(e);
     }
 }
-let g = new m(r.h, {
+let m = new g(r.h, {
     SEARCH_MESSAGES_START: function (e) {
         e.ids.forEach((e) => {
-            f(e).handleSearchStart();
+            I(e).handleSearchStart();
         });
     },
     SEARCH_MESSAGES_SUCCESS: function (e) {
         e.data.forEach((e) => {
-            let t = f(e.id),
+            let t = I(e.id),
                 n = e.messages.map((e) => {
                     let [t] = e;
                     return (0, s.rh)(t);
@@ -153,12 +153,12 @@ let g = new m(r.h, {
     },
     SEARCH_MESSAGES_INDEXING: function (e) {
         e.ids.forEach((e) => {
-            f(e).handleSearchIndexing();
+            I(e).handleSearchIndexing();
         });
     },
     SEARCH_MESSAGES_FAILURE: function (e) {
         e.ids.forEach((t) => {
-            f(t).handleSearchFailure(e.error);
+            I(t).handleSearchFailure(e.error);
         });
     },
     SEARCH_MESSAGES_CLEAR: function (e) {

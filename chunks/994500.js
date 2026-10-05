@@ -12,12 +12,12 @@ let o = new Map(),
     E = new Set(),
     A = new Set(),
     h = {},
-    I = 0,
-    f = {},
+    f = 0,
+    I = {},
     p = 0,
     T = 0,
-    m = 0,
-    g = { friends: void 0, blocked: void 0, ignored: void 0, blockedOrIgnored: void 0 },
+    g = 0,
+    m = { friends: void 0, blocked: void 0, ignored: void 0, blockedOrIgnored: void 0 },
     S = new Set();
 function N(e) {
     e === l.eA$.FRIEND
@@ -31,7 +31,7 @@ function O() {
     (S.add("friends"), S.add("blocked"), S.add("ignored"), S.add("blockedOrIgnored"));
 }
 function R() {
-    for (let e of S) g[e] = void 0;
+    for (let e of S) m[e] = void 0;
     S.clear();
 }
 function L(e) {
@@ -53,7 +53,7 @@ function b(e) {
     null != t && (o.delete(e), D.get(t)?.delete(e), N(t));
 }
 function M() {
-    ((T = _.size), (m = A.size), (p = Math.max((D.get(l.eA$.PENDING_INCOMING)?.size ?? 0) - T - m, 0)), I++);
+    ((T = _.size), (g = A.size), (p = Math.max((D.get(l.eA$.PENDING_INCOMING)?.size ?? 0) - T - g, 0)), f++);
 }
 class P extends i.Ay.Store {
     static displayName = "RelationshipStore";
@@ -99,7 +99,7 @@ class P extends i.Ay.Store {
         return T;
     }
     getPendingIgnoredCount() {
-        return m;
+        return g;
     }
     getOutgoingCount() {
         return D.get(l.eA$.PENDING_OUTGOING)?.size ?? 0;
@@ -114,7 +114,7 @@ class P extends i.Ay.Store {
         return o;
     }
     getVersion() {
-        return I;
+        return f;
     }
     isSpam(e) {
         return _.has(e);
@@ -136,28 +136,28 @@ class P extends i.Ay.Store {
         return u[e];
     }
     getFriendIDs() {
-        return (null == g.friends && (g.friends = Array.from(D.get(l.eA$.FRIEND) ?? [])), g.friends);
+        return (null == m.friends && (m.friends = Array.from(D.get(l.eA$.FRIEND) ?? [])), m.friends);
     }
     getBlockedIDs() {
-        return (null == g.blocked && (g.blocked = Array.from(D.get(l.eA$.BLOCKED) ?? [])), g.blocked);
+        return (null == m.blocked && (m.blocked = Array.from(D.get(l.eA$.BLOCKED) ?? [])), m.blocked);
     }
     getIgnoredIDs() {
-        return (null == g.ignored && (g.ignored = Array.from(E.values()).filter((e) => this.isIgnored(e))), g.ignored);
+        return (null == m.ignored && (m.ignored = Array.from(E.values()).filter((e) => this.isIgnored(e))), m.ignored);
     }
     getBlockedOrIgnoredIDs() {
-        if (null == g.blockedOrIgnored) {
+        if (null == m.blockedOrIgnored) {
             let e = new Set(E),
                 t = D.get(l.eA$.BLOCKED);
             if (null != t) for (let n of t) e.add(n);
-            g.blockedOrIgnored = e;
+            m.blockedOrIgnored = e;
         }
-        return g.blockedOrIgnored;
+        return m.blockedOrIgnored;
     }
     getOriginApplicationId(e) {
         return h[e];
     }
     isStranger(e) {
-        if (null != f[e]) return f[e].expiry < Date.now() ? void delete f[e] : f[e].isStranger;
+        if (null != I[e]) return I[e].expiry < Date.now() ? void delete I[e] : I[e].isStranger;
     }
 }
 let U = new P(r.h, {
@@ -172,7 +172,7 @@ let U = new P(r.h, {
             A.clear(),
             O(),
             (h = {}),
-            (f = {}),
+            (I = {}),
             e.relationships.forEach((e) => {
                 (v(e.id, e.type),
                     null != e.nickname && (d[e.id] = e.nickname),
@@ -229,17 +229,17 @@ let U = new P(r.h, {
             null == t.nickname ? delete d[t.id] : (d[t.id] = t.nickname),
             null == t.note ? delete u[t.id] : (u[t.id] = t.note),
             t.isSpamRequest ? _.add(t.id) : _.delete(t.id),
-            null != f[t.id] && delete f[t.id],
+            null != I[t.id] && delete I[t.id],
             null == t.originApplicationId ? delete h[t.id] : (h[t.id] = t.originApplicationId),
             t.userIgnored ? (L(t.id), t.type === l.eA$.PENDING_INCOMING && A.add(t.id)) : (y(t.id), A.delete(t.id)),
             R(),
             M());
     },
     RELATIONSHIP_PENDING_INCOMING_REMOVED: function (e) {
-        for (let e of o.keys()) o.get(e) === l.eA$.PENDING_INCOMING && (b(e), _.delete(e), A.delete(e), delete f[e]);
+        for (let e of o.keys()) o.get(e) === l.eA$.PENDING_INCOMING && (b(e), _.delete(e), A.delete(e), delete I[e]);
         (R(), M());
     },
     UPDATE_STRANGER_STATUS: function (e) {
-        f[e.userId] = { expiry: Date.now() + 3e5, isStranger: e.isStranger };
+        I[e.userId] = { expiry: Date.now() + 3e5, isStranger: e.isStranger };
     },
 });

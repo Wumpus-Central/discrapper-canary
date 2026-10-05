@@ -1,4 +1,4 @@
-n.d(t, { gn: () => p, ML: () => T, dq: () => f });
+n.d(t, { gn: () => p, ML: () => T, dq: () => I });
 var i = n(582128),
     r = n(435558),
     a = n.n(r),
@@ -17,8 +17,8 @@ var d = n(30370),
     E = n(650583);
 let A = { [_.fg2.INSTAGRAM]: ["1036753656588017764"] },
     h = new Map([[_.fg2.INSTAGRAM, new Date(2023, 1, 18).getTime()]]),
-    I = 30 * u.A.Millis.DAY;
-function f(e) {
+    f = 30 * u.A.Millis.DAY;
+function I(e) {
     let { forUserProfile: t } = e,
         n = (0, s.bG)([c.default], () => c.default.getCurrentUser()),
         i = o.useConfig({ location: "f2f7ef_1" }).allowPlayStationStaging;
@@ -31,7 +31,7 @@ function f(e) {
 }
 function p() {
     let e = (0, s.bG)([d.A], () => d.A.getAccounts()),
-        t = f({ forUserProfile: !1 }),
+        t = I({ forUserProfile: !1 }),
         n = i.useMemo(() => {
             let t = new Set();
             return (e.forEach((e) => t.add(e.type)), t);
@@ -39,7 +39,7 @@ function p() {
     return i.useMemo(
         () =>
             a().sortBy(l.A.filter(t), [
-                (e) => !(h.has(e.type) && Date.now() < (h.get(e.type) ?? 0) + I),
+                (e) => !(h.has(e.type) && Date.now() < (h.get(e.type) ?? 0) + f),
                 (e) => n.has(e.type),
                 (e) => e.hasMetadata,
                 (e) => !_.ewM.has(e.type),

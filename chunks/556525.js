@@ -21,7 +21,7 @@ function c(e) {
         {
             shouldReduceMotion: A,
             useForcedColors: h,
-            isAppFocusedOrOverlayVisible: I,
+            isAppFocusedOrOverlayVisible: f,
         } = (0, a.cf)([s.Ay, l.A, E], () => ({
             shouldReduceMotion: s.Ay.useReducedMotion,
             useForcedColors: s.Ay.useForcedColors,
@@ -36,13 +36,13 @@ function c(e) {
                 r = 3;
             i !== -1 / 0 &&
                 !A &&
-                I &&
+                f &&
                 ((t = "INSET_ONLY" === d ? 0 : o(i, c)),
                 (n = "OUTSET_ONLY" === d ? 0 : o(i, u)),
                 (r = "OUTSET_ONLY" === d ? 0 : n + 1));
             let a = h ? "Highlight" : "var(--status-speaking)";
             e.boxShadow = `0 0 0 ${t}px ${a}, inset 0 0 0 ${n}px ${a}, inset 0 0 0 ${r}px var(--background-base-lower)`;
         }
-        return (I && (e.transition = "box-shadow 50ms ease-out"), e);
-    }, [t, I, A, h, i, d, c, u, _]);
+        return (f && (e.transition = "box-shadow 50ms ease-out"), e);
+    }, [t, f, A, h, i, d, c, u, _]);
 }

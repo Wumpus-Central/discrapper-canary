@@ -210,8 +210,8 @@ let E = (0, n(945810).mj)({
         zu: "zu-ZA",
     },
     h = new o.A("Spellchecker"),
-    I = i.A?.spellCheck;
-function f(e) {
+    f = i.A?.spellCheck;
+function I(e) {
     e = A[(e = "no" === e ? "nb" : e)] ?? e;
     let t = (0, r.parse)(e.replace(/[_-]/g, "-"));
     if (null == t || null == t.langtag.language || null == t.langtag.region)
@@ -233,7 +233,7 @@ class p {
         const t = [];
         if (
             (e.forEach((e) => {
-                let n = f(e);
+                let n = I(e);
                 null != n && (t.push(n), (this.rawLocaleByNormalized[n] = this.rawLocaleByNormalized[n] ?? e));
             }),
             (this.availableLocales = t),
@@ -256,7 +256,7 @@ class p {
                     }
                 })));
         }
-        I.on("spellcheck-result", (e, t) => {
+        f.on("spellcheck-result", (e, t) => {
             ((this.misspelledWord = e ?? ""), (this.corrections = t ?? []));
         });
     }
@@ -270,7 +270,7 @@ class p {
         return this.useMultilang;
     }
     setLearnedWords(e) {
-        I.setLearnedWords(e);
+        f.setLearnedWords(e);
     }
     setAppLocale(e) {
         this.useMultilang ? this.applyLanguages(e) : (this.regionPreference = e.split("-")[1]);
@@ -288,10 +288,10 @@ class p {
         return { misspelledWord: this.misspelledWord, corrections: this.corrections };
     }
     replaceMisspelling(e) {
-        I.replaceMisspelling(e);
+        f.replaceMisspelling(e);
     }
     applyLocale(e) {
-        I.setLocale(e)?.then((t) => {
+        f.setLocale(e)?.then((t) => {
             h.info(`Switching to ${e}`, t ? "(available)" : "(unavailable)");
         });
     }
@@ -301,7 +301,7 @@ class p {
                 new Set(
                     t
                         .map((e) => {
-                            let t = f(e);
+                            let t = I(e);
                             if (null != t && this.availableLocales.includes(t)) return t;
                             let [n] = e.replace(/_/g, "-").split("-");
                             return this.availableLanguagesByLanguage[n.toLowerCase()] ?? null;
@@ -311,12 +311,12 @@ class p {
             );
         if (0 === n.length) return void h.info(`No spellcheck languages resolved from candidates: ${t.join(", ")}`);
         let i = n.map((e) => this.rawLocaleByNormalized[e] ?? e);
-        if (null == I.setSpellCheckerLanguages) {
+        if (null == f.setSpellCheckerLanguages) {
             (h.info(`setSpellCheckerLanguages unavailable, falling back to single-locale: ${i[0]}`),
                 this.applyLocale(i[0]));
             return;
         }
-        I.setSpellCheckerLanguages(i)?.then((e) => {
+        f.setSpellCheckerLanguages(i)?.then((e) => {
             if (!e) {
                 (h.info(`Failed to set spellcheck languages, falling back to single-locale: ${i[0]}`),
                     this.applyLocale(i[0]));
@@ -348,15 +348,15 @@ let T = s().debounce((e, t) => {
                 : void 0;
     null != i && e.detectLanguage(i);
 }, 250);
-async function m() {
-    let e = new p((await I.getAvailableDictionaries()) ?? []);
+async function g() {
+    let e = new p((await f.getAvailableDictionaries()) ?? []);
     return (
         e.usesMultilang ||
             (null != document.body && document.body.addEventListener("beforeinput", (t) => T(e, t.target), !0)),
         e
     );
 }
-var g = n(507263),
+var m = n(507263),
     S = n(723702);
 function N() {
     return i.A?.spellCheck != null;
@@ -366,7 +366,7 @@ function C() {
 }
 let O = C()
         ? new Promise((e) => {
-              Promise.resolve().then(() => (0, g.B)(() => e(m())));
+              Promise.resolve().then(() => (0, m.B)(() => e(g())));
           })
         : null,
     R = null;

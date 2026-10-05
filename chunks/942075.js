@@ -1,4 +1,4 @@
-n.d(t, { WC: () => u, eb: () => A, g6: () => h, gw: () => c, xH: () => I, y4: () => f });
+n.d(t, { WC: () => u, eb: () => A, g6: () => h, gw: () => c, xH: () => f, y4: () => I });
 var i = n(95561),
     r = n(936555),
     a = n(71393),
@@ -94,7 +94,7 @@ function A(e) {
 function h(e) {
     return (0, r.w)(e);
 }
-function I(e, t, n, r) {
+function f(e, t, n, r) {
     i.Ay.trackWithMetadata(l.HAw.ROLE_SUBSCRIPTION_PURCHASE_SYSTEM_MESSAGE_CLICKED, {
         guild_id: e,
         user_id: s.default.getCurrentUser()?.id,
@@ -103,7 +103,7 @@ function I(e, t, n, r) {
         role_subscription_listing_id: r,
     });
 }
-function f(e, t) {
+function I(e, t) {
     return {
         guild_id: e.guild_id,
         sender: s.default.getCurrentUser()?.id,

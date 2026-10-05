@@ -12,12 +12,12 @@ var i = n(812729),
     E = n(287809),
     A = n(488926),
     h = n(63995),
-    I = n(518769),
-    f = n(82149),
+    f = n(518769),
+    I = n(82149),
     p = n(446600),
     T = n(96566),
-    m = n(516607),
-    g = n(652215);
+    g = n(516607),
+    m = n(652215);
 let S = null;
 function N() {
     let e = (function () {
@@ -26,20 +26,20 @@ function N() {
         let t = p.A.getStageInstanceByChannel(e);
         if (null == t) return null;
         let n = o.A.getChannel(e);
-        if (null == n || !A.Ib(g.xBc.VIEW_CHANNEL, n)) return null;
+        if (null == n || !A.Ib(m.xBc.VIEW_CHANNEL, n)) return null;
         let i = d.A.getGuild(n.getGuildId());
-        if (null == i || !i.features.has(g.GuildFeatures.DISCOVERABLE)) return null;
-        let r = (0, f.eL)(n, t),
+        if (null == i || !i.features.has(m.GuildFeatures.DISCOVERABLE)) return null;
+        let r = (0, I.eL)(n, t),
             a = S?.party?.id === r ? S : null,
-            s = h.A.getMutableParticipants(n.id, I.ip.SPEAKER),
-            c = s.filter((e) => e.type === I.wY.STREAM).length,
+            s = h.A.getMutableParticipants(n.id, f.ip.SPEAKER),
+            c = s.filter((e) => e.type === f.wY.STREAM).length,
             N = s.length - c,
             C = h.A.getParticipantCount(e) - c,
             O = a?.party?.size != null ? a.party.size[1] : 0;
         return {
-            application_id: m.SS,
+            application_id: g.SS,
             name: t.topic ?? n.topic ?? (0, l.m1)(n, E.default, u.A),
-            type: (0, T.xn)(n.id) ? g.$pd.WATCHING : g.$pd.LISTENING,
+            type: (0, T.xn)(n.id) ? m.$pd.WATCHING : m.$pd.LISTENING,
             timestamps: { start: a?.timestamps?.start ?? new Date().getTime() },
             assets: { small_image: i.icon ?? void 0, small_text: i.name },
             party: { id: r, size: [N, Math.max(C, O)] },
@@ -65,12 +65,12 @@ let O = new C(s.h, {
     RTC_CONNECTION_STATE: function (e) {
         let { state: t } = e,
             n = S?.party?.size?.[1] ?? 0;
-        return t === g.S7L.RTC_CONNECTED && !(n > 0) && N();
+        return t === m.S7L.RTC_CONNECTED && !(n > 0) && N();
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
         if (null == S) return;
-        let n = (0, f.UW)(S);
+        let n = (0, I.UW)(S);
         null != n && null != t.find((e) => e.channelId === n.channelId) && N();
     },
 });

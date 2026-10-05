@@ -1,4 +1,4 @@
-(n.d(t, { j: () => I }), n(321073));
+(n.d(t, { j: () => f }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -14,24 +14,24 @@ let A = [18, 18, 16, 16, 14, 12, 10];
 function h(e, t) {
     return s()({ [E.AN]: !0, [E.CW]: "always" === e, [E._W]: "on-hover" === e && t });
 }
-function I(e) {
+function f(e) {
     let t,
         n,
         {
             backgroundStyle: a = "always",
-            children: I,
-            icon: f,
+            children: f,
+            icon: I,
             name: p,
             ariaLabel: T,
-            className: m,
-            style: g,
+            className: g,
+            style: m,
             to: S,
             onClick: N,
             selected: C = !1,
             ...O
         } = e,
         R = (0, l.W6)();
-    null == f && null != p && (n = A[(t = (0, _.oN)(p)).length - 1] ?? A[A.length - 1]);
+    null == I && null != p && (n = A[(t = (0, _.oN)(p)).length - 1] ?? A[A.length - 1]);
     let L = r.useCallback(
             (e) => {
                 if (null == S);
@@ -48,16 +48,16 @@ function I(e) {
     return (0, i.jsxs)(o.D, {
         ...O,
         onClick: L,
-        className: s()(m, E.iE, { [E.wH]: C }),
-        style: { ...g, fontSize: n },
+        className: s()(g, E.iE, { [E.wH]: C }),
+        style: { ...m, fontSize: n },
         focusProps: { enabled: !1 },
         children: [
             (0, i.jsx)(d.A, { children: null != T && "" !== T ? T : (p ?? "") }),
             null != t ? (0, i.jsx)("div", { className: s()(h(a, !1), E.q9), "aria-hidden": !0, children: t }) : null,
-            null != f
-                ? (0, i.jsx)("img", { className: E.Kk, src: f, alt: " ", width: y, height: y, "aria-hidden": !0 })
+            null != I
+                ? (0, i.jsx)("img", { className: E.Kk, src: I, alt: " ", width: y, height: y, "aria-hidden": !0 })
                 : null,
-            null != I ? (0, i.jsx)("div", { className: h(a, !0), children: I }) : null,
+            null != f ? (0, i.jsx)("div", { className: h(a, !0), children: f }) : null,
         ],
     });
 }

@@ -1,4 +1,4 @@
-(n.d(t, { A: () => g }), n(938796), n(321073));
+(n.d(t, { A: () => m }), n(938796), n(321073));
 var i = n(665260),
     r = n(17928),
     a = n(73153),
@@ -20,20 +20,20 @@ let A = {
         canChat: !0,
     },
     h = new Set(),
-    I = {};
-function f(e) {
+    f = {};
+function I(e) {
     let t, n;
     (p(e), h.add(e));
     let r = c.A.getGuild(e),
         l = u.default.getCurrentUser(),
         A = null != r && r.verificationLevel !== _.PvD.NONE,
-        f = null != r && null != r.verificationRoleId;
-    if (null == r || null == l || (!A && !f) || (0, s.bM)(r, l)) return;
+        I = null != r && null != r.verificationRoleId;
+    if (null == r || null == l || (!A && !I) || (0, s.bM)(r, l)) return;
     let T = o.Ay.getMember(r.id, l.id);
     if (null != T && (0, i.Lt)(T.flags ?? 0, E.D.BYPASSES_VERIFICATION)) return;
-    let m = !1;
-    f && null != T && (m = !T.roles.includes(r.verificationRoleId)) && (t = d.A.getRole(r.id, r.verificationRoleId));
-    let g = !1,
+    let g = !1;
+    I && null != T && (g = !T.roles.includes(r.verificationRoleId)) && (t = d.A.getRole(r.id, r.verificationRoleId));
+    let m = !1,
         S = !1,
         N = !1,
         C = !1,
@@ -51,12 +51,12 @@ function f(e) {
             let n = new Date("2022-12-02 00:00:00"),
                 i = null == T.joinedAt || new Date(T.joinedAt) < n,
                 a = r.features.has(_.GuildFeatures.GUILD_ONBOARDING_EVER_ENABLED) && !i;
-            f || a || !(t.size > 0) || (e = !0);
+            I || a || !(t.size > 0) || (e = !0);
         }
         !e &&
             ((R = +l.createdAt + 6e4 * _.$8o.ACCOUNT_AGE - Date.now()),
             (L = +r.joinedAt + 6e4 * _.$8o.MEMBER_AGE - Date.now()),
-            (g = r.verificationLevel >= _.PvD.LOW && !l.isClaimed()),
+            (m = r.verificationLevel >= _.PvD.LOW && !l.isClaimed()),
             l.isStaff() ||
                 ((S = r.verificationLevel >= _.PvD.LOW && !l.verified),
                 (N = r.verificationLevel >= _.PvD.VERY_HIGH),
@@ -68,45 +68,45 @@ function f(e) {
         C && y.push(R),
         y.length > 0 &&
             (n = setTimeout(() => a.h.dispatch({ type: "GUILD_VERIFICATION_CHECK", guildId: e }), Math.max(...y))),
-        (I[e] = {
-            notClaimed: g,
+        (f[e] = {
+            notClaimed: m,
             notEmailVerified: S,
             notPhoneVerified: N,
             newAccount: C,
             newMember: O,
-            missingVerificationRole: m,
+            missingVerificationRole: g,
             verificationRole: t,
-            canChat: !(g || S || N || C || O || m),
+            canChat: !(m || S || N || C || O || g),
             accountDeadline: new Date(Date.now() + R),
             memberDeadline: new Date(Date.now() + L),
             timeoutRef: n,
         }));
 }
 function p(e) {
-    let t = I[e];
-    (null != t && clearTimeout(t.timeoutRef), delete I[e]);
+    let t = f[e];
+    (null != t && clearTimeout(t.timeoutRef), delete f[e]);
 }
 function T(e) {
-    (h.delete(e.guild.id), f(e.guild.id));
+    (h.delete(e.guild.id), I(e.guild.id));
 }
-class m extends r.Ay.Store {
+class g extends r.Ay.Store {
     static displayName = "GuildVerificationStore";
     initialize() {
         this.waitFor(o.Ay, d.A, c.A, u.default);
     }
     getCheck(e) {
-        return null == e ? A : (h.has(e) || f(e), I[e] ?? A);
+        return null == e ? A : (h.has(e) || I(e), f[e] ?? A);
     }
     canChatInGuild(e) {
         return this.getCheck(e).canChat;
     }
 }
-let g = new m(a.h, {
+let m = new g(a.h, {
     CONNECTION_OPEN: function () {
-        for (let e in (h.clear(), I)) p(e);
+        for (let e in (h.clear(), f)) p(e);
     },
     CONNECTION_CLOSED: function () {
-        l.default.keys(I).forEach(p);
+        l.default.keys(f).forEach(p);
     },
     CURRENT_USER_UPDATE: function () {
         h.clear();
@@ -120,10 +120,10 @@ let g = new m(a.h, {
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
         if (n.id !== u.default.getCurrentUser()?.id) return !1;
-        (h.delete(t), f(t));
+        (h.delete(t), I(t));
     },
     GUILD_VERIFICATION_CHECK: function (e) {
         let { guildId: t } = e;
-        f(t);
+        I(t);
     },
 });

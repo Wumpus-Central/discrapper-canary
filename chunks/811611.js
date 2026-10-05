@@ -12,12 +12,12 @@ var i = n(477900),
     E = n(862482),
     A = n(403581),
     h = n(834730),
-    I = n(297264),
-    f = n(939249),
+    f = n(297264),
+    I = n(939249),
     p = n(789645),
     T = n(736653),
-    m = n(775602),
-    g = n(11029),
+    g = n(775602),
+    m = n(11029),
     S = n(976860),
     N = n(224016),
     C = n(217392),
@@ -150,7 +150,7 @@ function V(e) {
                 text: P.intl.string(P.t["8CVUrV"]),
                 colorOptions: v.at.PREMIUM_TIER_2_NEW_GRADIENT_FILL,
             }),
-            (0, i.jsx)(I.D, {
+            (0, i.jsx)(f.D, {
                 variant: "heading-md/semibold",
                 color: "text-default",
                 children: P.intl.format(P.t["fF+cgd"], { onClick: () => (0, L.e)() }),
@@ -171,7 +171,7 @@ function H(e) {
     return (0, i.jsxs)("div", {
         className: U.hQ,
         children: [
-            (0, i.jsx)(I.D, { variant: "heading-xl/semibold", children: t }),
+            (0, i.jsx)(f.D, { variant: "heading-xl/semibold", children: t }),
             null != n && (0, i.jsx)(h.E, { className: U._O, variant: "text-md/normal", children: n }),
             (0, i.jsx)(x, { trialOffer: a, discountOffer: s, children: r }),
         ],
@@ -189,14 +189,14 @@ function j(e) {
             trialOffer: A,
             discountOffer: N,
         } = e,
-        C = (0, u.bG)([m.Ay], () => m.Ay.useReducedMotion),
+        C = (0, u.bG)([g.Ay], () => g.Ay.useReducedMotion),
         L = (0, T.Ay)(),
         y = (0, O.EJ)(b.PremiumTypes.TIER_2, { useSpace: !1 });
     switch (d) {
         case b.e.EMPTY_STICKER_PICKER_UPSELL:
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(f.D, {
+                    (0, i.jsx)(I.D, {
                         className: U.kz,
                         onClick: l,
                         children: (0, i.jsx)(p.P, { size: "md", color: "currentColor" }),
@@ -205,7 +205,7 @@ function j(e) {
                         className: U.hQ,
                         children: [
                             (0, i.jsx)("img", { className: U.Tn, src: w, alt: P.intl.string(P.t.do7AoM) }),
-                            (0, i.jsx)(I.D, {
+                            (0, i.jsx)(f.D, {
                                 variant: "heading-xl/bold",
                                 color: "text-strong",
                                 children: P.intl.string(P.t.HEm04J),
@@ -238,7 +238,7 @@ function j(e) {
                             className: U.hQ,
                             children: [
                                 (0, i.jsx)("img", { className: U.Tn, src: w, alt: P.intl.string(P.t.do7AoM) }),
-                                (0, i.jsx)(I.D, {
+                                (0, i.jsx)(f.D, {
                                     variant: "heading-xl/bold",
                                     color: "text-strong",
                                     children: P.intl.string(P.t.jJG1pl),
@@ -272,7 +272,7 @@ function j(e) {
                         className: U.hQ,
                         children: [
                             (0, i.jsx)("img", { alt: "", className: U.Tn, src: D }),
-                            (0, i.jsx)(I.D, {
+                            (0, i.jsx)(f.D, {
                                 variant: "heading-xl/bold",
                                 color: "text-strong",
                                 children: P.intl.string(P.t["1SsvhY"]),
@@ -331,7 +331,7 @@ function j(e) {
                 (0, i.jsxs)("div", {
                     className: U.hQ,
                     children: [
-                        (0, i.jsx)(I.D, { variant: "heading-xl/bold", color: "text-strong", children: t }),
+                        (0, i.jsx)(f.D, { variant: "heading-xl/bold", color: "text-strong", children: t }),
                         (0, i.jsx)(h.E, { variant: "text-md/normal", children: r }),
                         (0, i.jsx)(x, { trialOffer: A, discountOffer: N, children: v }),
                     ],
@@ -341,7 +341,7 @@ function j(e) {
             return (0, i.jsxs)("div", {
                 className: U.hQ,
                 children: [
-                    (0, i.jsx)(I.D, { variant: "heading-xl/bold", color: "text-strong", children: t }),
+                    (0, i.jsx)(f.D, { variant: "heading-xl/bold", color: "text-strong", children: t }),
                     null != r && (0, i.jsx)(h.E, { variant: "text-md/normal", children: r }),
                     (0, i.jsx)(x, {
                         trialOffer: A,
@@ -369,7 +369,7 @@ function j(e) {
                     discountOffer: N,
                     children: P.intl.format(P.t["5KMAnK"], {
                         onClick: () => {
-                            ((0, S.pX)(M.BVt.APPLICATION_STORE), (0, g.D)());
+                            ((0, S.pX)(M.BVt.APPLICATION_STORE), (0, m.D)());
                         },
                     }),
                 })
@@ -379,7 +379,7 @@ function j(e) {
                 className: s()(U.iW, { [U.WP]: !C }),
                 children: [
                     (0, i.jsx)(h.E, { variant: "text-lg/bold", color: "text-feedback-critical", children: r }),
-                    (0, i.jsx)(I.D, {
+                    (0, i.jsx)(f.D, {
                         variant: "heading-lg/extrabold",
                         color: "text-strong",
                         className: U.Ed,

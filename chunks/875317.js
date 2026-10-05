@@ -1,4 +1,4 @@
-n.d(t, { Kb: () => p, Om: () => h, Q: () => m, fX: () => T, gM: () => g });
+n.d(t, { Kb: () => p, Om: () => h, Q: () => g, fX: () => T, gM: () => m });
 var i = n(582128),
     r = n(17928),
     a = n(56562),
@@ -25,10 +25,10 @@ function A(e) {
 function h(e) {
     return null != A(e);
 }
-function I(e) {
+function f(e) {
     return e?.enabled !== !0 ? null : A(e.themeSettings);
 }
-function f(e, t) {
+function I(e, t) {
     let n = (0, r.bG)(
         [o.A, _.A],
         () => {
@@ -40,11 +40,11 @@ function f(e, t) {
         },
         [e, t],
     );
-    return i.useMemo(() => I(n), [n]);
+    return i.useMemo(() => f(n), [n]);
 }
 function p(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "useEnabledGuildThemeForGuildId";
-    return f(e, (0, s.OS)(t));
+    return I(e, (0, s.OS)(t));
 }
 function T() {
     return (function (e) {
@@ -58,10 +58,10 @@ function T() {
         )
             return null;
         let i = _.A.getGuildThemeSnapshot(e);
-        return I(void 0 !== i ? i : n.guildTheme);
+        return f(void 0 !== i ? i : n.guildTheme);
     })(d.A.getGuildId(), "getActiveGuildTheme");
 }
-function m() {
+function g() {
     return (function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "useActiveGuildThemeForGuildId",
             n = (0, s.OS)(t),
@@ -73,7 +73,7 @@ function m() {
                 },
                 [e, n],
             ),
-            d = f(e, n),
+            d = I(e, n),
             c = (0, r.bG)([l.A], () => (null != e && n ? l.A.resolveGuildThemeSourcePreference(e) : a.tI.PERSONAL), [
                 e,
                 n,
@@ -84,6 +84,6 @@ function m() {
         "useActiveGuildTheme",
     );
 }
-function g() {
+function m() {
     return (0, r.bG)([u.Ay], () => u.Ay.isActive);
 }

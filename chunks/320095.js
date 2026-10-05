@@ -31,13 +31,13 @@ var _ = n(383233),
     E = n(280450),
     A = n(994500),
     h = n(287809),
-    I = n(659674),
-    f = n(45938),
+    f = n(659674),
+    I = n(45938),
     p = n(935208),
     T = n(451919);
 n(763754);
-var m = n(652215);
-let g = new c.A({ id: "???", username: "???" });
+var g = n(652215);
+let m = new c.A({ id: "???", username: "???" });
 function S(e) {
     return new _.go({
         ...e,
@@ -46,7 +46,7 @@ function S(e) {
         attachments: e.attachments ?? [],
         embeds: L(e),
         components: (0, s.ZV)(e.components ?? []),
-        codedLinks: m.MRS.NON_PARSED.has(e.type) ? [] : (0, a.Ay)(e.content),
+        codedLinks: g.MRS.NON_PARSED.has(e.type) ? [] : (0, a.Ay)(e.content),
     });
 }
 function N(e) {
@@ -57,22 +57,22 @@ function N(e) {
         s = e.mentions?.map((e) => e.id) ?? [],
         o = e.mention_roles ?? [],
         d = e.mention_channels ?? [],
-        I = e.message_reference,
+        f = e.message_reference,
         N =
             null == e.author
-                ? g
+                ? m
                 : null != e.webhook_id
                   ? new c.A(e.author)
                   : (h.default.getUser(e.author.id) ?? new c.A(e.author)),
         C = e?.gift_info,
         O = e.gifting_prompt,
         L = null != e.interaction ? u.createFromServer(e.interaction) : null,
-        v = e.type === m.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
+        v = e.type === g.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
         b = e.content;
     return (
-        e.type === m.lAJ.PREMIUM_REFERRAL &&
+        e.type === g.lAJ.PREMIUM_REFERRAL &&
             ((t = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (b = "")),
-        e.type === m.lAJ.PREMIUM_GROUP_INVITE &&
+        e.type === g.lAJ.PREMIUM_GROUP_INVITE &&
             ((n = p.default.isProbablyAValidSnowflake(e.content) ? e.content : void 0), (b = "")),
         new _.Ay({
             ...e,
@@ -86,7 +86,7 @@ function N(e) {
             mentions: s,
             mentionRoles: o,
             mentionChannels: d,
-            messageReference: I,
+            messageReference: f,
             mentioned: (0, T.Uj)({
                 userId: E.default.getId(),
                 channelId: e.channel_id,
@@ -94,7 +94,7 @@ function N(e) {
                 mentionUsers: s,
                 mentionRoles: o,
             }),
-            giftCodes: (0, f.pF)(e) ? (0, f.e7)(e?.embeds[0].url) : (0, f.e7)(e.content),
+            giftCodes: (0, I.pF)(e) ? (0, I.e7)(e?.embeds[0].url) : (0, I.e7)(e.content),
             content: b,
             referralTrialOfferId: t,
             premiumGroupInviteId: n,
@@ -161,8 +161,8 @@ function R(e, t) {
 }
 function L(e) {
     if (null == e.embeds) return [];
-    let t = e.embeds.map((t) => (0, I.fK)(e.channel_id, e.id, t));
-    return (0, I.nh)(t);
+    let t = e.embeds.map((t) => (0, f.fK)(e.channel_id, e.id, t));
+    return (0, f.nh)(t);
 }
 function y(e, t) {
     return null == e && t?.results == null
@@ -201,5 +201,5 @@ function v(e) {
     return 0 === (0, o.o6)(e).length || "" !== e.content;
 }
 function b(e) {
-    return e.hasFlag(m.pr7.EPHEMERAL) && e.type !== m.lAJ.IN_GAME_MESSAGE_NUX;
+    return e.hasFlag(g.pr7.EPHEMERAL) && e.type !== g.lAJ.IN_GAME_MESSAGE_NUX;
 }

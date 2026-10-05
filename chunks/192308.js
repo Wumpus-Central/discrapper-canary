@@ -2,18 +2,18 @@
     n.d(t, {
         closeAllModals: () => L,
         closeAllModalsInContext: () => y,
-        closeModal: () => f,
+        closeModal: () => I,
         closeModalInAllContexts: () => p,
         doesTopModalAllowNavigation: () => M,
         getInteractingModalContext: () => _,
         getOpenModalKeys: () => S,
-        hasAnyModalOpen: () => g,
-        hasAnyModalOpenSelector: () => m,
+        hasAnyModalOpen: () => m,
+        hasAnyModalOpenSelector: () => g,
         hasModalOpen: () => v,
         hasModalOpenSelector: () => D,
         hasModalOpenedSince: () => N,
         modalContextFromAppContext: () => E,
-        openModal: () => I,
+        openModal: () => f,
         openModalLazy: () => h,
         subscribeToModalChanges: () => C,
         updateModal: () => T,
@@ -55,16 +55,16 @@ async function h(e) {
         a = null != t.modalKey ? t.modalKey : r()(),
         s = !1,
         l = setTimeout(() => {
-            ((s = !0), I(c, { ...i, modalKey: a }, n));
+            ((s = !0), f(c, { ...i, modalKey: a }, n));
         }, 300),
         o = await e();
     return (
         clearTimeout(l),
-        s ? v(a, n) && T(a, o, i.onCloseRequest, i.onCloseCallback, n) : I(o, { ...i, modalKey: a }, n),
+        s ? v(a, n) && T(a, o, i.onCloseRequest, i.onCloseCallback, n) : f(o, { ...i, modalKey: a }, n),
         a
     );
 }
-function I(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Object.freeze({}),
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : _(),
         {
@@ -77,7 +77,7 @@ function I(e) {
             backdropStyle: u,
             stackingBehavior: E,
             stackNextByDefault: h,
-            allowsNavigation: I,
+            allowsNavigation: f,
         } = t,
         p = null != i ? i : r()();
     return (
@@ -104,13 +104,13 @@ function I(e) {
                                 dismissable: a,
                                 Layer: o,
                                 render: e,
-                                onCloseRequest: d ?? (() => f(p, n)),
+                                onCloseRequest: d ?? (() => I(p, n)),
                                 onCloseCallback: c,
                                 instant: l,
                                 backdropStyle: u,
                                 stackingBehavior: r,
                                 stackNextByDefault: h,
-                                allowsNavigation: I,
+                                allowsNavigation: f,
                             },
                         ],
                     }
@@ -120,7 +120,7 @@ function I(e) {
         p
     );
 }
-function f(e) {
+function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : _(),
         n = A.getState()[t],
         i =
@@ -188,22 +188,22 @@ function T(e, t, n, i) {
                       ...a,
                       [r]: a[r].map((a) =>
                           a.key === e
-                              ? { ...a, render: t, onCloseRequest: null == n ? () => f(e, r) : n, onCloseCallback: i }
+                              ? { ...a, render: t, onCloseRequest: null == n ? () => I(e, r) : n, onCloseCallback: i }
                               : a,
                       ),
                   },
         );
     });
 }
-function m(e) {
+function g(e) {
     for (let t of u) {
         let n = e[t];
         if (null != n && n.length > 0) return !0;
     }
     return !1;
 }
-function g() {
-    return m(A.getState());
+function m() {
+    return g(A.getState());
 }
 function S() {
     let e = A.getState(),
@@ -220,7 +220,7 @@ function C(e) {
     return A.subscribe(e);
 }
 function O() {
-    return m(A());
+    return g(A());
 }
 function R(e) {
     let { default: t, popout: n } = A();
@@ -228,12 +228,12 @@ function R(e) {
 }
 function L() {
     let e = A.getState();
-    for (let t in e) for (let n of e[t]) f(n.key, t);
+    for (let t in e) for (let n of e[t]) I(n.key, t);
 }
 function y() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : _(),
         t = A.getState()[e];
-    if (null != t) for (let n of t) f(n.key, e);
+    if (null != t) for (let n of t) I(n.key, e);
 }
 function D(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : o.SY,

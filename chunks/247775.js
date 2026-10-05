@@ -5,7 +5,7 @@ let i, r;
         getAnalyticsToken: () => S,
         getToken: () => N,
         hideToken: () => L,
-        init: () => m,
+        init: () => g,
         removeAnalyticsToken: () => v,
         removeToken: () => D,
         setAnalyticsToken: () => C,
@@ -29,8 +29,8 @@ let _ = !1,
     E = {},
     A = {},
     h = !1,
-    I = !1;
-function f() {
+    f = !1;
+function I() {
     if (h) {
         (a.w.remove(s.il), a.w.remove(s.zy));
         return;
@@ -47,8 +47,8 @@ function p(e) {
 function T(e) {
     return c?.isEncryptionAvailable() && !e.startsWith(l) ? `${l}${c.encryptString(e)}` : e;
 }
-function m() {
-    if (I) return;
+function g() {
+    if (f) return;
     ((r = a.w.get(s.il)), (A = a.w.get(s.zy) || {}));
     let { decryptedToken: e, wasEncrypted: t } = p(r);
     ((_ = t),
@@ -65,39 +65,39 @@ function m() {
                     return null != n;
                 }),
         )),
-        (I = !0));
+        (f = !0));
 }
-function g() {
-    I || m();
+function m() {
+    f || g();
 }
 function S() {
     return N(o);
 }
 function N(e) {
-    return (m(), null != e) ? E[e] : i;
+    return (g(), null != e) ? E[e] : i;
 }
 function C(e) {
-    null == e ? D(o) : (g(), R(e, o));
+    null == e ? D(o) : (m(), R(e, o));
 }
 function O(e, t) {
-    null == e ? D(t) : (g(), (i = e), R(e, t));
+    null == e ? D(t) : (m(), (i = e), R(e, t));
 }
 function R(e, t) {
-    (null != t && (E[t] = e), _ ? b() : ((r = i), (A = E), f()));
+    (null != t && (E[t] = e), _ ? b() : ((r = i), (A = E), I()));
 }
 function L() {
-    h || (g(), (h = !0), f());
+    h || (m(), (h = !0), I());
 }
 function y() {
-    h && (g(), (h = !1), f());
+    h && (m(), (h = !1), I());
 }
 function D(e) {
-    g();
+    m();
     let t = i;
     return (
         null != e && ((t = E[e]), delete E[e], delete A[e]),
         null != t && t === i && ((i = null), (r = null)),
-        f(),
+        I(),
         null != t
     );
 }
@@ -105,7 +105,7 @@ function v() {
     return D(o);
 }
 function b() {
-    (g(),
+    (m(),
         c?.isEncryptionAvailable()
             ? (null != i && (r = T(i)),
               (A = d(
@@ -116,5 +116,5 @@ function b() {
               )),
               (_ = !0))
             : ((r = i), (A = E)),
-        f());
+        I());
 }

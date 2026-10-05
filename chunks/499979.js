@@ -1,7 +1,7 @@
 (n.d(t, {
     $l: () => p,
     TF: () => o,
-    Ul: () => f,
+    Ul: () => I,
     W0: () => c,
     eZ: () => h,
     pJ: () => A,
@@ -175,7 +175,7 @@ function h(e, t) {
             return e / 60 / 24 / 365;
     }
 }
-let I = [
+let f = [
     { unit: "NONE", max: 0 },
     { unit: "SECONDS", max: 1 },
     { unit: "MINUTES", max: 60 },
@@ -185,13 +185,13 @@ let I = [
     { unit: "MONTHS", max: 525600 },
     { unit: "YEARS", max: 1 / 0 },
 ];
-function f(e, t) {
-    let n = I.findIndex((t) => {
+function I(e, t) {
+    let n = f.findIndex((t) => {
             let { max: n, unit: i } = t;
             return ("NONE" === i && e === n) || e < n;
         }),
         i = a()(
-            I,
+            f,
             (e) => {
                 let { unit: n } = e;
                 return t(n);
@@ -199,7 +199,7 @@ function f(e, t) {
             n,
         );
     if (null != i) return i.unit;
-    let r = I.find((e) => {
+    let r = f.find((e) => {
         let { unit: n } = e;
         return t(n);
     });
@@ -207,7 +207,7 @@ function f(e, t) {
 }
 function p(e, t) {
     if (null == e) return { unit: "NONE", time: 0 };
-    let n = f(e, (e) => t.includes(e)),
+    let n = I(e, (e) => t.includes(e)),
         i = null != n ? h(e, n) : null;
     return { unit: n, time: null != i ? Math.floor(i) : null };
 }

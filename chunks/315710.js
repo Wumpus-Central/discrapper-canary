@@ -17,10 +17,10 @@ function _(e) {
         E,
         A,
         h,
-        I = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    ((t = I.returnRef),
-        (n = !0 === I.disable),
-        (r = !0 === I.disableReturn),
+        f = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    ((t = f.returnRef),
+        (n = !0 === f.disable),
+        (r = !0 === f.disableReturn),
         (c = i.useRef(a?.activeElement)),
         (_ = i.useRef(null)),
         (E = i.useRef(t)),
@@ -83,9 +83,9 @@ function _(e) {
                 }
             );
         }, []));
-    let f = i.useMemo(() => I.attachTo ?? e.current?.ownerDocument ?? a, [I.attachTo, e]),
+    let I = i.useMemo(() => f.attachTo ?? e.current?.ownerDocument ?? a, [f.attachTo, e]),
         p = i.useRef(null);
-    return s(I.disable ? p : e, { disable: I.disable, disableReturnRef: u, attachTo: f });
+    return s(f.disable ? p : e, { disable: f.disable, disableReturnRef: u, attachTo: I });
 }
 function E(e) {
     let { disableReturn: t } = e;

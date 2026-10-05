@@ -1,4 +1,4 @@
-n.d(t, { A: () => N, m: () => I });
+n.d(t, { A: () => N, m: () => f });
 var i = n(435558),
     r = n.n(i),
     a = n(392421),
@@ -12,8 +12,8 @@ var i = n(435558),
     E = n(573163),
     A = n(935208),
     h = n(152007);
-let I = 25,
-    f = new Map();
+let f = 25,
+    I = new Map();
 function p(e, t, n, i) {
     let r = `${e}|${t}|${i}|`;
     return 0 === n.size ? r : 1 === n.size ? r + n.values().next().value : r + Array.from(n).sort().join(",");
@@ -21,7 +21,7 @@ function p(e, t, n, i) {
 function T(e, t) {
     return t === s.T.LATEST_ACTIVITY ? E.Ay.lastMessageId(e.id) : e.id;
 }
-function m(e) {
+function g(e) {
     let { channelId: t, sortOrder: n, tagFilter: i, tagSetting: s, hasMore: l } = e,
         o = !l,
         d = _.A.getChannel(e.threads[e.threads.length - 1]),
@@ -48,43 +48,43 @@ function m(e) {
         .reverse()
         .value();
 }
-let g = [];
+let m = [];
 class S extends l.Ay.Store {
     static displayName = "ArchivedThreadsStore";
     initialize() {
         this.waitFor(_.A, h.A, E.Ay);
     }
     getCanLoadMore(e, t, n, i) {
-        let r = f.get(p(e, t, n, i));
+        let r = I.get(p(e, t, n, i));
         return null != r && r.hasMore && !r.loading && !r.failed;
     }
     getNextOffset(e, t, n, i) {
-        let r = f.get(p(e, t, n, i));
+        let r = I.get(p(e, t, n, i));
         return r?.nextOffset ?? 0;
     }
     getIsInitialLoad(e, t, n, i) {
-        let r = f.get(p(e, t, n, i));
+        let r = I.get(p(e, t, n, i));
         return r?.isInitialLoad ?? !0;
     }
     isLoading(e, t, n, i) {
-        let r = f.get(p(e, t, n, i));
+        let r = I.get(p(e, t, n, i));
         return r?.loading ?? !1;
     }
     getThreads(e, t, n, i) {
-        let r = f.get(p(e, t, n, i));
-        return r?.threads ?? g;
+        let r = I.get(p(e, t, n, i));
+        return r?.threads ?? m;
     }
 }
 let N = new S(o.h, {
     CONNECTION_OPEN: function () {
-        f.clear();
+        I.clear();
     },
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
         if (
             !(function (e) {
                 let t = !1;
-                for (let n of f.values())
+                for (let n of I.values())
                     n.threads.indexOf(e) >= 0 && ((n.threads = n.threads.filter((t) => t !== e)), (t = !0));
                 return t;
             })(t.id)
@@ -95,7 +95,7 @@ let N = new S(o.h, {
         let { channel: t } = e;
         if (!(0, d.yr)(t.id)) return !1;
         let n = !1;
-        for (let e of f.values())
+        for (let e of I.values())
             e.channelId === t.parent_id &&
                 e.threads.indexOf(t.id) >= 0 &&
                 ((e.threads = e.threads.filter((e) => e !== t.id)), (n = !0));
@@ -103,14 +103,14 @@ let N = new S(o.h, {
     },
     CHANNEL_DELETE: function (e) {
         let t = !1;
-        for (let [n, i] of f) i.channelId === e.channel.id && (f.delete(n), (t = !0));
+        for (let [n, i] of I) i.channelId === e.channel.id && (I.delete(n), (t = !0));
         if (!t) return !1;
     },
     LOAD_ARCHIVED_THREADS: function (e) {
         let t = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter),
             n = p(e.channelId, e.sortOrder, t, e.tagSetting);
-        for (let [t, i] of f) t !== n && i.channelId === e.channelId && i.failed && f.delete(t);
-        let i = f.get(n);
+        for (let [t, i] of I) t !== n && i.channelId === e.channelId && i.failed && I.delete(t);
+        let i = I.get(n);
         if (null == i) {
             var r, a;
             ((r = e.channelId),
@@ -130,16 +130,16 @@ let N = new S(o.h, {
         } else ((i.tagFilter = t), (i.failed = !1));
         ((i.loading = !0), (i.isInitialLoad = !1));
         var s = i;
-        if ((f.delete(n), f.set(n, s), !(f.size <= 50)))
-            for (let [e, t] of f) {
-                if (f.size <= 50) break;
-                t.loading || f.delete(e);
+        if ((I.delete(n), I.set(n, s), !(I.size <= 50)))
+            for (let [e, t] of I) {
+                if (I.size <= 50) break;
+                t.loading || I.delete(e);
             }
     },
     LOAD_ARCHIVED_THREADS_SUCCESS: function (e) {
         let t = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter),
             n = p(e.channelId, e.sortOrder, t, e.tagSetting),
-            i = f.get(n);
+            i = I.get(n);
         if (null == i) return !1;
         let r = e.threads.filter((e) => u.A_.has(e.type)).map((e) => e.id);
         i.threads = i.threads.concat(r);
@@ -154,22 +154,22 @@ let N = new S(o.h, {
                 filterTagIds: Array.from(e.tagFilter),
                 sortOrder: e.sortOrder,
             }),
-            m(i),
+            g(i),
             (i.hasMore = e.hasMore),
-            (i.nextOffset = e.offset + I),
+            (i.nextOffset = e.offset + f),
             (i.loading = !1),
             (i.isInitialLoad = !1));
     },
     LOAD_ARCHIVED_THREADS_FAIL: function (e) {
         let t = e.tagFilter instanceof Set ? e.tagFilter : new Set(e.tagFilter),
             n = p(e.channelId, e.sortOrder, t, e.tagSetting),
-            i = f.get(n);
+            i = I.get(n);
         if (null == i) return !1;
         ((i.loading = !1), (i.failed = !0), (i.isInitialLoad = !1));
     },
     RESORT_THREADS: function (e) {
         let t = !1;
-        for (let n of f.values()) (null == e.channelId || n.channelId === e.channelId) && (m(n), (t = !0));
+        for (let n of I.values()) (null == e.channelId || n.channelId === e.channelId) && (g(n), (t = !0));
         if (!t) return !1;
     },
 });

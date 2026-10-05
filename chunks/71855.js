@@ -1,4 +1,4 @@
-n.d(t, { LI: () => p, cq: () => S, m2: () => f, v5: () => N });
+n.d(t, { LI: () => p, cq: () => S, m2: () => I, v5: () => N });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -12,8 +12,8 @@ var i = n(477900),
     E = n(723702),
     A = n(19575),
     h = n(375708),
-    I = n(22405);
-function f(e) {
+    f = n(22405);
+function I(e) {
     let { isPopoutWindow: t } = e;
     return t ? "refresh-title-bar-small" : void 0;
 }
@@ -24,33 +24,33 @@ function p(e) {
 function T(e) {
     return A.Ay.maximize(e);
 }
-function m(e) {
+function g(e) {
     e.stopPropagation();
 }
-function g(e) {
+function m(e) {
     let { windowKey: t, showDivider: n } = e,
         r = (0, i.jsx)(l.D, {
-            className: s()(I.R6, I.d1),
+            className: s()(f.R6, f.d1),
             onClick: () => A.Ay.close(t),
             "aria-label": h.intl.string(h.t.ZdNUj2),
             tabIndex: -1,
             children: (0, i.jsx)(c.A, {}),
         }),
         a = (0, i.jsx)(l.D, {
-            className: s()(I.R6, I.T0),
+            className: s()(f.R6, f.T0),
             onClick: () => T(t),
             "aria-label": h.intl.string(h.t.G1u0hK),
             tabIndex: -1,
             children: (0, i.jsx)(u.A, {}),
         }),
         o = (0, i.jsx)(l.D, {
-            className: s()(I.R6, I.T0),
+            className: s()(f.R6, f.T0),
             onClick: () => A.Ay.minimize(t),
             "aria-label": h.intl.string(h.t.CxOC4U),
             tabIndex: -1,
             children: (0, i.jsx)(_.A, {}),
         });
-    return (0, i.jsxs)("div", { className: s()(I.kU, { [I.Fx]: n }), children: [o, a, r] });
+    return (0, i.jsxs)("div", { className: s()(f.kU, { [f.Fx]: n }), children: [o, a, r] });
 }
 function S(e) {
     let { leading: t, title: n, trailing: a, windowKey: l, className: o, growLeading: d } = e,
@@ -59,16 +59,16 @@ function S(e) {
         _ = c === E.PlatformTypes.WINDOWS || c === E.PlatformTypes.LINUX,
         h = r.useMemo(() => c === E.PlatformTypes.OSX && "rtl" === A.Ay.getSystemUIDirection(), [c]);
     return (0, i.jsxs)("div", {
-        className: s()(I.M0, { [I.CP]: h }, o),
+        className: s()(f.M0, { [f.CP]: h }, o),
         onDoubleClick: u,
         "data-window-chrome": "true",
         children: [
-            (0, i.jsx)("div", { className: s()(I.R4, { [I.MY]: d }), onDoubleClick: m, children: t }),
-            (0, i.jsx)("div", { className: I.DD, children: n }),
+            (0, i.jsx)("div", { className: s()(f.R4, { [f.MY]: d }), onDoubleClick: g, children: t }),
+            (0, i.jsx)("div", { className: f.DD, children: n }),
             (0, i.jsxs)("div", {
-                className: I.ZY,
-                onDoubleClick: m,
-                children: [a, _ && (0, i.jsx)(g, { windowKey: l, showDivider: null != a })],
+                className: f.ZY,
+                onDoubleClick: g,
+                children: [a, _ && (0, i.jsx)(m, { windowKey: l, showDivider: null != a })],
             }),
         ],
     });
@@ -87,10 +87,10 @@ function N(e) {
     if (c === E.PlatformTypes.WEB) return null;
     let h = A || c === E.PlatformTypes.LINUX;
     return (0, i.jsx)("div", {
-        className: s()(I.M0, I.bN, { [I.Zu]: t, [I.WU]: n, [I.dS]: l }),
+        className: s()(f.M0, f.bN, { [f.Zu]: t, [f.WU]: n, [f.dS]: l }),
         onClick: u,
         onDoubleClick: _,
         children:
-            h && (0, i.jsx)("div", { className: I.ZY, onDoubleClick: m, children: (0, i.jsx)(g, { windowKey: a }) }),
+            h && (0, i.jsx)("div", { className: f.ZY, onDoubleClick: g, children: (0, i.jsx)(m, { windowKey: a }) }),
     });
 }

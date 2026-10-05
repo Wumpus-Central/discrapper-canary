@@ -12,12 +12,12 @@ var i = n(435558),
     E = n(189081),
     A = n(927813),
     h = n(403362),
-    I = n(723702),
-    f = n(953384),
+    f = n(723702),
+    I = n(953384),
     p = n(952818),
     T = n(765741),
-    m = n(863160);
-class g extends o.A {
+    g = n(863160);
+class m extends o.A {
     intervalId;
     nonGameIntervalId;
     canonicalGameIdByPid = {};
@@ -53,7 +53,7 @@ class g extends o.A {
     }
     fetchRunningGameRecords(e) {
         let t = e.games
-            .flatMap((e) => (null != e.processGame ? [e, (0, m.Un)(e)] : [e]))
+            .flatMap((e) => (null != e.processGame ? [e, (0, g.Un)(e)] : [e]))
             .map((e) => e.id ?? _.A.findGame(e)?.id)
             .filter(h.Vq);
         0 !== t.length && u.I.fetchMany(...t.map((e) => [e]));
@@ -69,7 +69,7 @@ class g extends o.A {
         d.YY.fetchMany(...t);
     }
     handlePostConnectionOpen() {
-        ((0, I.isDesktop)() && !E.A.fetched && (0, l.Yq)(),
+        ((0, f.isDesktop)() && !E.A.fetched && (0, l.Yq)(),
             s.Ay.getDetectableGames(),
             s.Ay.getDetectableBlocklist(),
             (this.intervalId = setInterval(
@@ -81,7 +81,7 @@ class g extends o.A {
             s.Ay.getDetectableNonGames(),
             (this.nonGameIntervalId = setInterval(
                 s.Ay.getDetectableNonGames,
-                f.A.ttl + Math.random() * A.A.Millis.HOUR,
+                I.A.ttl + Math.random() * A.A.Millis.HOUR,
             )));
     }
     _terminate() {
@@ -91,4 +91,4 @@ class g extends o.A {
                 (clearInterval(this.nonGameIntervalId), (this.nonGameIntervalId = void 0)));
     }
 }
-let S = new g();
+let S = new m();

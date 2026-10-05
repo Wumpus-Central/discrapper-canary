@@ -66,85 +66,85 @@ let E = (() => {
         alertStartupMetrics: !1,
         logQuestEvents: !1,
     },
-    I = { ...h },
-    f = "DeveloperOptionsRoutingKey",
+    f = { ...h },
+    I = "DeveloperOptionsRoutingKey",
     p = [];
 function T(e) {
-    ((I = { ...h, ...I, ...e }), E.set(I.sourceMapsEnabled), l.w.set(A, I));
+    ((f = { ...h, ...f, ...e }), E.set(f.sourceMapsEnabled), l.w.set(A, f));
 }
-function m(e) {
-    ((p = e), l.w.set(f, p));
+function g(e) {
+    ((p = e), l.w.set(I, p));
 }
-class g extends a.Ay.Store {
+class m extends a.Ay.Store {
     static displayName = "DeveloperOptionsStore";
     initialize() {
         let e = l.w.get(A);
-        null != e && (I = { ...h, ...e });
-        let t = l.w.get(f);
+        null != e && (f = { ...h, ...e });
+        let t = l.w.get(I);
         null != t && (p = t);
     }
     get isTracingRequests() {
-        return I.trace;
+        return f.trace;
     }
     get isForcedCanary() {
-        return I.canary;
+        return f.canary;
     }
     get isLoggingGatewayEvents() {
-        return I.logGatewayEvents;
+        return f.logGatewayEvents;
     }
     get isLoggingOverlayEvents() {
-        return I.logOverlayEvents;
+        return f.logOverlayEvents;
     }
     get isLoggingAnalyticsEvents() {
-        return I.logAnalyticsEvents;
+        return f.logAnalyticsEvents;
     }
     get isLoggingInteractionTTIAnalytics() {
-        return I.logInteractionTTIAnalytics;
+        return f.logInteractionTTIAnalytics;
     }
     get isAxeEnabled() {
-        return I.axeEnabled;
+        return f.axeEnabled;
     }
     get cssDebuggingEnabled() {
-        return I.cssDebuggingEnabled;
+        return f.cssDebuggingEnabled;
     }
     get layoutDebuggingEnabled() {
-        return I.layoutDebuggingEnabled;
+        return f.layoutDebuggingEnabled;
     }
     get sourceMapsEnabled() {
-        return I.sourceMapsEnabled;
+        return f.sourceMapsEnabled;
     }
     get isBugReporterEnabled() {
-        return I.bugReporterEnabled;
+        return f.bugReporterEnabled;
     }
     get isIdleStatusIndicatorEnabled() {
-        return I.idleStatusIndicatorEnabled;
+        return f.idleStatusIndicatorEnabled;
     }
     get onlyShowPreviewAppCollections() {
-        return I.onlyShowPreviewAppCollections;
+        return f.onlyShowPreviewAppCollections;
     }
     get disableAppCollectionsCache() {
-        return I.disableAppCollectionsCache;
+        return f.disableAppCollectionsCache;
     }
     get isStreamInfoOverlayEnabled() {
-        return I.isStreamInfoOverlayEnabled;
+        return f.isStreamInfoOverlayEnabled;
     }
     get preventPopoutClose() {
-        return I.preventPopoutClose;
+        return f.preventPopoutClose;
     }
     get logKeyboardMismatches() {
-        return I.logKeyboardMismatches;
+        return f.logKeyboardMismatches;
     }
     get alertStartupMetrics() {
-        return I.alertStartupMetrics;
+        return f.alertStartupMetrics;
     }
     get isLoggingQuestEvents() {
-        return I.logQuestEvents;
+        return f.logQuestEvents;
     }
     getDebugOptionsHeaderValue() {
         return (
-            Object.keys(I).map((e) => I[e]),
-            Object.keys(I)
-                .filter((e) => I[e])
+            Object.keys(f).map((e) => f[e]),
+            Object.keys(f)
+                .filter((e) => f[e])
                 .join(",")
         );
     }
@@ -155,14 +155,14 @@ class g extends a.Ay.Store {
         return 0 === p.length ? null : p.join(",");
     }
 }
-let S = new g(o.h, {
+let S = new m(o.h, {
     LOGOUT: function (e) {
-        (T(h), m([]));
+        (T(h), g([]));
     },
     CONNECTION_OPEN: function (e) {
         let t = ((e.user.flags ?? 0) & _.nhx.STAFF) === _.nhx.STAFF,
             n = t || null != e.user.personal_connection_id;
-        (t && E.set(I.sourceMapsEnabled), u.A.setTags({ isStaff: n.toString() }));
+        (t && E.set(f.sourceMapsEnabled), u.A.setTags({ isStaff: n.toString() }));
     },
     DEVELOPER_OPTIONS_UPDATE_SETTINGS: function (e) {
         let { settings: t } = e;
@@ -170,6 +170,6 @@ let S = new g(o.h, {
     },
     DEVELOPER_OPTIONS_SET_ROUTING_KEY: function (e) {
         let { tags: t } = e;
-        m(t);
+        g(t);
     },
 });

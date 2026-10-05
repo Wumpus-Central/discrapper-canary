@@ -12,18 +12,18 @@ var i = n(66834),
     E = n(309010),
     A = n(993838),
     h = n(233993),
-    I = n(73153),
-    f = n(272355),
+    f = n(73153),
+    I = n(272355),
     p = n(967198),
     T = n(403362);
-class m extends f.A {
+class g extends I.A {
     _initialize() {
-        (I.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
-            I.h.subscribe("LOGOUT", this.handleLogout));
+        (f.h.subscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
+            f.h.subscribe("LOGOUT", this.handleLogout));
     }
     _terminate() {
-        (I.h.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
-            I.h.unsubscribe("LOGOUT", this.handleLogout));
+        (f.h.unsubscribe("VOICE_CHANNEL_SELECT", this.handleVoiceChannelSelect),
+            f.h.unsubscribe("LOGOUT", this.handleLogout));
     }
     handleVoiceChannelSelect = (e) => {
         let { channelId: t, guildId: n } = e;
@@ -41,7 +41,7 @@ class m extends f.A {
         (this.terminate(), this.handleDisconnectFromStageChannel(null));
     };
 }
-let g = new m();
+let m = new g();
 function S(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     return new Promise(async (r) => {
@@ -51,7 +51,7 @@ function S(e, t) {
             await i.A.joinGuild(e, { lurker: !0 }),
             u.A.addConditionalChangeListener(() => {
                 let e = c.A.getChannel(t);
-                return null == e || (N(e), g.initialize(), r(e), !1);
+                return null == e || (N(e), m.initialize(), r(e), !1);
             }));
     });
 }

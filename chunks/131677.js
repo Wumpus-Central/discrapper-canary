@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(17928),
     r = n(73153),
     a = n(95701),
@@ -21,7 +21,7 @@ function h(e) {
         n = l.A.getChannel(t);
     return null != n && !!(0, a.Gw)(n.type) && E();
 }
-class I extends i.Ay.Store {
+class f extends i.Ay.Store {
     static displayName = "PrivateChannelReadStateStore";
     initialize() {
         this.waitFor(c.A, l.A, d.Ay, o.Ay);
@@ -30,7 +30,7 @@ class I extends i.Ay.Store {
         return u;
     }
 }
-let f = new I(r.h, {
+let I = new f(r.h, {
     CONNECTION_OPEN: A,
     OVERLAY_INITIALIZE: A,
     MESSAGE_CREATE: h,

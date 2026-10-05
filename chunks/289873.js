@@ -65,7 +65,7 @@ function _(e) {
                 }),
             }),
         });
-    let I = l()(c.item, s);
+    let f = l()(c.item, s);
     return (0, r.jsx)("span", {
         className: l()(c.spinner, i, { [c.stopAnimation]: !n }),
         role: "img",
@@ -74,9 +74,9 @@ function _(e) {
         children: (0, r.jsxs)("span", {
             className: l()(c.inner, c[A]),
             children: [
-                (0, r.jsx)("span", { className: I }),
-                (0, r.jsx)("span", { className: I }),
-                "pulsingEllipsis" === A || "lowMotion" === A ? (0, r.jsx)("span", { className: I }) : null,
+                (0, r.jsx)("span", { className: f }),
+                (0, r.jsx)("span", { className: f }),
+                "pulsingEllipsis" === A || "lowMotion" === A ? (0, r.jsx)("span", { className: f }) : null,
             ],
         }),
     });

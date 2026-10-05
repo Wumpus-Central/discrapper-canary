@@ -11,15 +11,15 @@ var i = n(635377),
     _ = n(624044),
     E = n(161204);
 n(575279);
-let A = new (r())({ max: 10, dispose: f }),
+let A = new (r())({ max: 10, dispose: I }),
     h = new Map(),
-    I = new Map();
-function f(e) {
+    f = new Map();
+function I(e) {
     for (let [t, n] of h) n === e && h.delete(t);
 }
 function p(e, t) {
-    let n = I.get(e);
-    null != n && (n.delete(t), 0 === n.size && I.delete(e));
+    let n = f.get(e);
+    null != n && (n.delete(t), 0 === n.size && f.delete(e));
 }
 function T(e, t) {
     let n = h.get(e);
@@ -31,10 +31,10 @@ function T(e, t) {
     let a = t(r);
     return null != a && (i.messageByMessageId.set(e, a), (0, _.V)(i, e, a), !0);
 }
-function m(e) {
+function g(e) {
     return T(e.messageId, (t) => (0, _.y4)(e, t));
 }
-function g() {
+function m() {
     let e = !1;
     return (
         A.forEach((t) => {
@@ -85,7 +85,7 @@ class C extends a.Ay.Store {
         return null == t ? null : (A.peek(t)?.messageByMessageId.get(e) ?? null);
     }
     isConversationFetchPending(e, t) {
-        let n = I.get(e);
+        let n = f.get(e);
         return null != n && 0 !== n.size && (!0 !== t || n.has("full"));
     }
 }
@@ -112,7 +112,7 @@ let O = new C(s.h, {
         let n,
             { conversationId: i, full: r, isStandalone: a } = e;
         if (!0 !== a) return !1;
-        ((t = r ? "full" : "preview"), null != (n = I.get(i)) ? n.add(t) : I.set(i, new Set([t])));
+        ((t = r ? "full" : "preview"), null != (n = f.get(i)) ? n.add(t) : f.set(i, new Set([t])));
     },
     CONVERSATION_MESSAGES_FETCH_SUCCESS: function (e) {
         let { conversationId: t, messages: n, messageReferences: i, fullyHydrated: r, isStandalone: a } = e;
@@ -132,7 +132,7 @@ let O = new C(s.h, {
                 },
             }) &&
                 (function (e, t) {
-                    for (let n of (f(e), t.messageByMessageId.keys())) h.set(n, e);
+                    for (let n of (I(e), t.messageByMessageId.keys())) h.set(n, e);
                 })(t, s),
             !0)
         );
@@ -155,8 +155,8 @@ let O = new C(s.h, {
             n = t.id;
         return null != n && T(n, (e) => (0, l.IU)(e, t));
     },
-    MESSAGE_REACTION_ADD: m,
-    MESSAGE_REACTION_REMOVE: m,
+    MESSAGE_REACTION_ADD: g,
+    MESSAGE_REACTION_REMOVE: g,
     MESSAGE_REACTION_ADD_MANY: function (e) {
         let { messageId: t, reactions: n } = e;
         return T(t, (e) => e.addReactionBatch(n, o.default.getId()));
@@ -179,10 +179,10 @@ let O = new C(s.h, {
         for (let e of t) S(e) && (n = !0);
         return n;
     },
-    RELATIONSHIP_ADD: g,
-    RELATIONSHIP_UPDATE: g,
-    RELATIONSHIP_REMOVE: g,
+    RELATIONSHIP_ADD: m,
+    RELATIONSHIP_UPDATE: m,
+    RELATIONSHIP_REMOVE: m,
     LOGOUT: function () {
-        (A.reset(), h.clear(), I.clear());
+        (A.reset(), h.clear(), f.clear());
     },
 });

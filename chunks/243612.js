@@ -1,4 +1,4 @@
-n.d(t, { JH: () => f, VC: () => u, b4: () => A, oQ: () => _, qv: () => E, tg: () => I, xl: () => h });
+n.d(t, { JH: () => I, VC: () => u, b4: () => A, oQ: () => _, qv: () => E, tg: () => f, xl: () => h });
 var i = n(17928),
     r = n(52133),
     a = n(55730);
@@ -52,7 +52,7 @@ function h(e) {
         [e],
     );
 }
-function I(e) {
+function f(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.A,
         n = t.getActivities(!0);
     return (
@@ -61,6 +61,6 @@ function I(e) {
         null
     );
 }
-function f(e) {
-    return (0, i.bG)([o.A], () => I(e, o.A), [e]);
+function I(e) {
+    return (0, i.bG)([o.A], () => f(e, o.A), [e]);
 }

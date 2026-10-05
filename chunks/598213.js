@@ -88,7 +88,7 @@ function E(e, t, n, i) {
         E = [],
         A = new Map(),
         h = [],
-        I = [];
+        f = [];
     return (
         _.forEach((e, n) => {
             let i = t(e.section.clip),
@@ -112,14 +112,14 @@ function E(e, t, n, i) {
                 dst_end_ms: e.dstEnd,
                 volume: 1,
             };
-            (e.blendIn > 0 && (l.fade_in_ms = e.blendIn), a > 0 && (l.fade_out_ms = a), I.push(l));
+            (e.blendIn > 0 && (l.fade_in_ms = e.blendIn), a > 0 && (l.fade_out_ms = a), f.push(l));
         }),
         {
             version: 1,
             output: { width: r, height: a, fps: s, duration_ms: u(_) },
             inputs: E,
             video_tracks: [{ clips: h }],
-            audio_tracks: [{ label: o, clips: I }],
+            audio_tracks: [{ label: o, clips: f }],
         }
     );
 }

@@ -75,11 +75,11 @@ let E = function () {
                             }
                           : null;
                   })(A, e),
-        I = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 null != h && n(e);
             },
             [h, n],
         );
-    return { shopButtonDisplayOptions: h, dismissShopButtonDC: I };
+    return { shopButtonDisplayOptions: h, dismissShopButtonDC: f };
 };

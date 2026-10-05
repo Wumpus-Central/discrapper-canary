@@ -19,12 +19,12 @@ var i = n(92077),
     E = n(192308),
     A = n(54827),
     h = n(780907),
-    I = n(587895),
-    f = n(235986),
+    f = n(587895),
+    I = n(235986),
     p = n(465797),
     T = n(174459),
-    m = n(652215),
-    g = n(375708),
+    g = n(652215),
+    m = n(375708),
     S = n(990587),
     N = n(221851);
 class C extends a.PureComponent {
@@ -42,11 +42,11 @@ class C extends a.PureComponent {
     })();
     handleChooseDownload = () => {
         let { cloudSyncState: e } = this.props;
-        e.type === m.VX0.CONFLICT && this.handlePlay(!0, e.remote.hash);
+        e.type === g.VX0.CONFLICT && this.handlePlay(!0, e.remote.hash);
     };
     handleChooseUpload = () => {
         let { cloudSyncState: e } = this.props;
-        e.type === m.VX0.CONFLICT && this.handlePlay(!0, e.next.hash);
+        e.type === g.VX0.CONFLICT && this.handlePlay(!0, e.next.hash);
     };
     renderConflictButton(e, t, n, i) {
         return (0, r.jsx)(c.D, {
@@ -61,7 +61,7 @@ class C extends a.PureComponent {
                         className: S.fn,
                         children: [
                             (0, r.jsx)("div", { className: S.Pc, children: e }),
-                            (0, r.jsx)("div", { children: g.intl.string(g.t.gflHO6) }),
+                            (0, r.jsx)("div", { children: m.intl.string(m.t.gflHO6) }),
                             (0, r.jsx)("div", { className: S.vE, children: l()(t).calendar() }),
                         ],
                     }),
@@ -75,41 +75,41 @@ class C extends a.PureComponent {
             children: [
                 (0, r.jsxs)(d.$m, {
                     children: [
-                        (0, r.jsx)(f.A, {
-                            justify: f.A.Justify.CENTER,
+                        (0, r.jsx)(I.A, {
+                            justify: I.A.Justify.CENTER,
                             children: (0, r.jsx)("div", { className: S.aR }),
                         }),
                         (0, r.jsx)("div", {
                             className: S.h_,
-                            children: g.intl.format(g.t.RAaWyc, { applicationName: e.name }),
+                            children: m.intl.format(m.t.RAaWyc, { applicationName: e.name }),
                         }),
                     ],
                 }),
                 (0, r.jsx)(d.jl, {
-                    children: (0, r.jsxs)(f.A, {
-                        justify: f.A.Justify.BETWEEN,
+                    children: (0, r.jsxs)(I.A, {
+                        justify: I.A.Justify.BETWEEN,
                         children: [
                             (0, r.jsx)(u.$, {
                                 variant: "secondary",
-                                text: g.intl.string(g.t["ETE/oC"]),
+                                text: m.intl.string(m.t["ETE/oC"]),
                                 onClick: this.onClose,
                             }),
-                            (0, r.jsxs)(f.A, {
-                                direction: f.A.Direction.HORIZONTAL,
-                                justify: f.A.Justify.END,
+                            (0, r.jsxs)(I.A, {
+                                direction: I.A.Direction.HORIZONTAL,
+                                justify: I.A.Justify.END,
                                 children: [
                                     (0, r.jsx)("div", {
                                         "data-button-hoisted-classname-wrapper": !0,
                                         className: S.ft,
                                         children: (0, r.jsx)(u.$, {
                                             variant: "secondary",
-                                            text: g.intl.string(g.t["5911Lb"]),
+                                            text: m.intl.string(m.t["5911Lb"]),
                                             onClick: () => this.handlePlay(),
                                         }),
                                     }),
                                     (0, r.jsx)(u.$, {
                                         variant: "primary",
-                                        text: g.intl.string(g.t["359Pbd"]),
+                                        text: m.intl.string(m.t["359Pbd"]),
                                         onClick: () => this.handlePlay(!1),
                                     }),
                                 ],
@@ -122,36 +122,36 @@ class C extends a.PureComponent {
     }
     renderConflict() {
         let { application: e, cloudSyncState: t } = this.props;
-        if (t.type !== m.VX0.CONFLICT) throw Error("Cannot render conflict for non conflict type");
+        if (t.type !== g.VX0.CONFLICT) throw Error("Cannot render conflict for non conflict type");
         return (0, r.jsxs)(d.$m, {
             className: N.SX,
             children: [
                 (0, r.jsx)("div", {
                     className: S.h_,
-                    children: g.intl.format(g.t.eyXUP6, { applicationName: e.name }),
+                    children: m.intl.format(m.t.eyXUP6, { applicationName: e.name }),
                 }),
                 this.renderConflictButton(
-                    g.intl.string(g.t.AQUmkr),
+                    m.intl.string(m.t.AQUmkr),
                     t.remote.timestamp,
                     S.Mp,
                     this.handleChooseDownload,
                 ),
-                (0, r.jsxs)(f.A, {
+                (0, r.jsxs)(I.A, {
                     className: S.Bu,
-                    align: f.A.Align.CENTER,
+                    align: I.A.Align.CENTER,
                     children: [
                         (0, r.jsx)("div", { className: S.cd }),
-                        (0, r.jsx)("div", { className: S.WW, children: g.intl.string(g.t.WUsA2D) }),
+                        (0, r.jsx)("div", { className: S.WW, children: m.intl.string(m.t.WUsA2D) }),
                         (0, r.jsx)("div", { className: S.cd }),
                     ],
                 }),
-                this.renderConflictButton(g.intl.string(g.t.AXVwsw), t.next.timestamp, S.Hs, this.handleChooseUpload),
+                this.renderConflictButton(m.intl.string(m.t.AXVwsw), t.next.timestamp, S.Hs, this.handleChooseUpload),
             ],
         });
     }
     render() {
         let { cloudSyncState: e, transitionState: t } = this.props,
-            n = e.type === m.VX0.CONFLICT ? g.intl.string(g.t.oNbO1f) : g.intl.string(g.t.as4Tgg);
+            n = e.type === g.VX0.CONFLICT ? m.intl.string(m.t.oNbO1f) : m.intl.string(m.t.as4Tgg);
         return (0, r.jsxs)(d.EO, {
             transitionState: t,
             className: S.yl,
@@ -165,17 +165,17 @@ class C extends a.PureComponent {
                         (0, r.jsx)(_.D, { variant: "heading-lg/semibold", className: N.Gf, children: n }),
                     ],
                 }),
-                e.type === m.VX0.CONFLICT ? this.renderConflict() : this.renderError(),
+                e.type === g.VX0.CONFLICT ? this.renderConflict() : this.renderError(),
             ],
         });
     }
 }
-let O = o.Ay.connectStores([p.A, I.A], (e) => {
+let O = o.Ay.connectStores([p.A, f.A], (e) => {
     let { libraryApplication: t, branchId: n } = e;
-    return { cloudSyncState: p.A.getState(t.id, n), application: I.A.getApplication(t.id) };
+    return { cloudSyncState: p.A.getState(t.id, n), application: f.A.getApplication(t.id) };
 })(C);
 async function R(e, t, n) {
-    let i = I.A.getApplication(e);
+    let i = f.A.getApplication(e);
     if (null == i) return;
     let { cloudSync: a = !0, cloudSyncForceHash: s = null, analyticsParams: l } = n;
     if (a && null != t) {
@@ -188,10 +188,10 @@ async function R(e, t, n) {
         }
     }
     return (
-        T.default.track(m.HAw.APPLICATION_OPENED, {
+        T.default.track(g.HAw.APPLICATION_OPENED, {
             application_id: i.id,
             application_name: i.name,
-            type: m.UqL.LAUNCH,
+            type: g.UqL.LAUNCH,
             distributor: null != t ? t.getDistributor() : null,
             ...l,
         }),
@@ -228,29 +228,29 @@ function P(e, t, a, s, l) {
           });
 }
 function U(e, t, n) {
-    let i = I.A.getApplication(e);
+    let i = f.A.getApplication(e);
     if (null == i) return;
     let r = L.A.getTargetBuildId(i.id, t),
         a = L.A.getTargetManifests(i.id, t);
     null != r && null != a && null != P && P(i, t, r, a, n);
 }
 function w(e, t) {
-    let n = I.A.getApplication(e);
+    let n = f.A.getApplication(e);
     if (null != n) return i.K3(n, t, L.A.getTargetBuildId(n.id, t), L.A.getTargetManifests(n.id, t));
 }
 function G(e, t, n) {
-    let r = I.A.getApplication(e);
+    let r = f.A.getApplication(e);
     if (null != r) return i.qv(r, t, n);
 }
 function x(e, t) {
     let n = (0, y.F)(e, D.A, v.A),
         { analyticsParams: i } = t;
     switch (n) {
-        case m.Hf6.PLAY:
+        case g.Hf6.PLAY:
             return R(e.id, e, { analyticsParams: i });
-        case m.Hf6.INSTALL:
+        case g.Hf6.INSTALL:
             return U(e.id, e.branchId, i.source);
-        case m.Hf6.UPDATE:
+        case g.Hf6.UPDATE:
             return w(e.id, e.branchId);
     }
 }

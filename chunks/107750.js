@@ -1,10 +1,10 @@
 (n.d(t, {
     E$: () => h,
-    VR: () => m,
-    ZH: () => f,
+    VR: () => g,
+    ZH: () => I,
     f0: () => T,
     iD: () => A,
-    oG: () => I,
+    oG: () => f,
     tB: () => E,
     tO: () =>
         function e(t, n, i) {
@@ -70,12 +70,12 @@ function h(e, t) {
         ),
     );
 }
-function I(e, t) {
+function f(e, t) {
     return E.get(e, t, { url: c.RQ.PLAYER_DEVICES }).then(
         (t) => (t.body && a.h.dispatch({ type: "SPOTIFY_SET_DEVICES", accountId: e, devices: t.body.devices }), t),
     );
 }
-function f(e, t, n, i) {
+function I(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         s = c.RQ.PLAYER_OPEN(i, n, !1),
         { deviceId: l, position: o, contextUri: d, repeat: u } = r;
@@ -106,6 +106,6 @@ function T() {
             a.h.dispatch({ type: "SPOTIFY_SET_PROTOCOL_REGISTERED", isRegistered: e });
         });
 }
-function m(e, t) {
+function g(e, t) {
     a.h.dispatch({ type: "SPOTIFY_SET_ACTIVE_DEVICE", accountId: e, deviceId: t });
 }

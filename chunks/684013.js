@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(132500),
     r = n(73153),
     a = n(815706),
@@ -12,8 +12,8 @@ var i = n(132500),
     E = n(531685),
     A = n(5463),
     h = n(9302),
-    I = n(391973),
-    f = n(652215);
+    f = n(391973),
+    I = n(652215);
 let p = new s.A("OverlayActionCreators"),
     T = {
         track(e) {
@@ -77,7 +77,7 @@ let p = new s.A("OverlayActionCreators"),
         setNotificationDisabledSetting(e, t) {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
             return (
-                e === o.M.GAME_ACTIVITY && n && this.track(f.HAw.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: t }),
+                e === o.M.GAME_ACTIVITY && n && this.track(I.HAw.OVERLAY_GAME_INVITE_SETTINGS_UPDATED, { muted: t }),
                 r.h.dispatch({
                     type: "OVERLAY_SET_NOTIFICATION_DISABLED_SETTING",
                     setting: e,
@@ -118,7 +118,7 @@ let p = new s.A("OverlayActionCreators"),
             r.h.dispatch({ type: "OVERLAY_SET_PREVIEW_IN_GAME_MODE", isPreviewingInGame: e });
         },
         updateNotificationStatus(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : f.yFH.DISMISSED;
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : I.yFH.DISMISSED;
             r.h.dispatch({ type: "OVERLAY_UPDATE_NOTIFICATION_STATUS", notificationId: e, status: t });
         },
         setModuleLogging(e) {
@@ -140,60 +140,60 @@ let p = new s.A("OverlayActionCreators"),
         setPinChat(e) {
             let t = h.OVERLAY_LAYOUT_ID,
                 n = u.A.getWidgetsForLayout(t),
-                r = u.A.getWidgetConfig(f.uss.GUILDS),
-                a = u.A.getWidgetConfig(f.uss.TEXT),
-                s = u.A.getWidgetConfig(f.uss.GUILDS_TEXT),
-                o = u.A.getWidgetDefaultSettings(f.uss.GUILDS_TEXT),
-                d = u.A.getWidgetDefaultSettings(f.uss.GUILDS),
-                c = u.A.getWidgetDefaultSettings(f.uss.TEXT);
+                r = u.A.getWidgetConfig(I.uss.GUILDS),
+                a = u.A.getWidgetConfig(I.uss.TEXT),
+                s = u.A.getWidgetConfig(I.uss.GUILDS_TEXT),
+                o = u.A.getWidgetDefaultSettings(I.uss.GUILDS_TEXT),
+                d = u.A.getWidgetDefaultSettings(I.uss.GUILDS),
+                c = u.A.getWidgetDefaultSettings(I.uss.TEXT);
             if (
-                ((0, l.xp)(f.uss.TEXT, { pinned: e }),
+                ((0, l.xp)(I.uss.TEXT, { pinned: e }),
                 0 === n.length || null == r || null == a || null == s || null == o || null == d || null == c)
             )
                 return;
             let _ = E.A.windowSize(),
                 p = { width: 0, height: 0 },
                 T = { top: 0, left: 0, right: 0, bottom: 0 },
-                m = { width: 312, height: 0 },
-                g = { top: 0, left: 0, right: 0, bottom: 0 },
+                g = { width: 312, height: 0 },
+                m = { top: 0, left: 0, right: 0, bottom: 0 },
                 S = { width: 0, height: 0 };
             if (
                 (n.forEach((e) => {
                     let { type: t, id: n, anchor: i, size: r } = e;
                     switch (t) {
-                        case f.uss.TEXT:
-                            ((p = (0, A.fd)(r, _)), (0, I.uv)(n));
+                        case I.uss.TEXT:
+                            ((p = (0, A.fd)(r, _)), (0, f.uv)(n));
                             break;
-                        case f.uss.GUILDS:
-                            ((T = (0, A.NR)(i, r, _)), (m = (0, A.fd)(r, _)), (0, I.uv)(n));
+                        case I.uss.GUILDS:
+                            ((T = (0, A.NR)(i, r, _)), (g = (0, A.fd)(r, _)), (0, f.uv)(n));
                             break;
-                        case f.uss.GUILDS_TEXT:
-                            ((g = (0, A.NR)(i, r, _)), (S = (0, A.fd)(r, _)), (0, I.uv)(n));
+                        case I.uss.GUILDS_TEXT:
+                            ((m = (0, A.NR)(i, r, _)), (S = (0, A.fd)(r, _)), (0, f.uv)(n));
                     }
                 }),
                 e)
             ) {
                 let e = "auto" === S.width ? o.minSize.width : S.width;
                 e -= d.minSize.width;
-                let [n, r] = (0, A.M4)(g, { ...S, width: d.minSize.width }, _),
-                    [a, s] = (0, A.n7)(g, { ...S, width: e }, _, { x: 10, y: 10 }),
-                    l = u.A.getWidgetDefaultSettings(f.uss.TEXT);
+                let [n, r] = (0, A.M4)(m, { ...S, width: d.minSize.width }, _),
+                    [a, s] = (0, A.n7)(m, { ...S, width: e }, _, { x: 10, y: 10 }),
+                    l = u.A.getWidgetDefaultSettings(I.uss.TEXT);
                 if (null == l) throw Error("OverlayActionCreators.setPinChat: No config for TEXT exists");
-                (0, I.jn)({ ...l, type: f.uss.TEXT, id: (0, i.A)(), size: s, anchor: a, layoutId: t });
-                let c = u.A.getWidgetDefaultSettings(f.uss.GUILDS);
+                (0, f.jn)({ ...l, type: I.uss.TEXT, id: (0, i.A)(), size: s, anchor: a, layoutId: t });
+                let c = u.A.getWidgetDefaultSettings(I.uss.GUILDS);
                 if (null == c) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS exists");
-                (0, I.jn)({ ...c, type: f.uss.GUILDS, id: (0, i.A)(), size: r, anchor: n, layoutId: t });
+                (0, f.jn)({ ...c, type: I.uss.GUILDS, id: (0, i.A)(), size: r, anchor: n, layoutId: t });
             } else {
                 let e = "auto" === p.width ? c.minSize.width : p.width;
                 e += d.minSize.width;
-                let [n, r] = (0, A.M4)(T, { height: m.height, width: e }, _),
-                    a = u.A.getWidgetDefaultSettings(f.uss.GUILDS_TEXT);
+                let [n, r] = (0, A.M4)(T, { height: g.height, width: e }, _),
+                    a = u.A.getWidgetDefaultSettings(I.uss.GUILDS_TEXT);
                 if (null == a) throw Error("OverlayActionCreators.setPinChat: No config for GUILDS_TEXT exists");
-                (0, I.jn)({ ...a, type: f.uss.GUILDS_TEXT, id: (0, i.A)(), layoutId: t, anchor: n, size: r });
+                (0, f.jn)({ ...a, type: I.uss.GUILDS_TEXT, id: (0, i.A)(), layoutId: t, anchor: n, size: r });
             }
         },
         resetDefaultLayout(e, t) {
-            null != u.A.getLayout(e) && ((0, I.IC)(e), (0, I.uF)(u.A.getDefaultLayout(e, t)));
+            null != u.A.getLayout(e) && ((0, f.IC)(e), (0, f.uF)(u.A.getDefaultLayout(e, t)));
         },
         setClickZones(e) {
             r.h.dispatch({ type: "OVERLAY_SET_CLICK_ZONES", zones: e });
@@ -239,4 +239,4 @@ let p = new s.A("OverlayActionCreators"),
             r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_ACK_CHANNEL", channelId: e });
         },
     },
-    m = T;
+    g = T;

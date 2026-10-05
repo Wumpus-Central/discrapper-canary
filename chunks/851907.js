@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => A, LU: () => h, xi: () => I });
+n.d(t, { Ay: () => A, LU: () => h, xi: () => f });
 var i = n(991690),
     r = n(17928),
     a = n(587895),
@@ -26,7 +26,7 @@ function h(e) {
     let i = a.A.getApplication(t);
     if (null != i) return A({ application: i, channelId: (0, c.H)(n.location) });
 }
-function I(e) {
+function f(e) {
     let { channelId: t } = e;
     return (0, r.bG)([l.A, d.Ay, a.A], () => {
         let e = (function (e) {

@@ -1,13 +1,13 @@
 (n.d(t, {
     sB: () => eU,
     WM: () => el,
-    lx: () => ef,
+    lx: () => eI,
     N1: () => ea,
     xB: () => eR,
     Yb: () => eE,
     IV: () => ev,
     Oq: () => ed,
-    r8: () => eg,
+    r8: () => em,
     lk: () => e_,
     qY: () => eO,
     jh: () => ec,
@@ -18,7 +18,7 @@
     Oy: () => eo,
     Gn: () => eT,
     uI: () => eC,
-    L4: () => eI,
+    L4: () => ef,
     zh: () => eM,
     R2: () => es,
     g5: () => eu,
@@ -27,7 +27,7 @@
     HA: () => ep,
     Yf: () => eD,
     Ov: () => er,
-    QG: () => em,
+    QG: () => eg,
     Zb: () => eb,
     dQ: () => eL,
     Gt: () => eh,
@@ -48,12 +48,12 @@ var i,
     E = n(144779),
     A = n(881615),
     h = n(390595),
-    I = n(888548),
-    f = n(69114),
+    f = n(888548),
+    I = n(69114),
     p = n(633965),
     T = n(27620),
-    m = n(463347),
-    g = n(310829),
+    g = n(463347),
+    m = n(310829),
     S = n(383394),
     N = n(544180),
     C = n(711014),
@@ -69,7 +69,7 @@ function M(e) {
     let t = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         n = (0, v.O)();
     O.default.track(b.HAw.EARNED_DECISION_ROUNDTRIP, {
-        ...(0, f.A)(),
+        ...(0, I.A)(),
         endpoint: e.endpoint,
         was_successful: e.wasSuccessful,
         api_latency_ms: t,
@@ -115,7 +115,7 @@ function x(e, t, n) {
     let i = null == e.apiResponseTimestamp ? null : e.apiResponseTimestamp - e.initialSendTimestamp,
         r = (0, v.O)();
     O.default.track(b.HAw.QUEST_DECISION_ROUNDTRIP, {
-        ...(0, f.A)(),
+        ...(0, I.A)(),
         endpoint: e.endpoint,
         was_successful: e.wasSuccessful,
         api_latency_ms: i,
@@ -410,7 +410,7 @@ async function eo(e, t) {
                   sourceQuestContent: t.sourceQuestContent,
               });
     }
-    if ((e === J.Fw && (0, g.u)(), H.A.isEnrolling(e))) return { type: "previous_in_flight_request" };
+    if ((e === J.Fw && (0, m.u)(), H.A.isEnrolling(e))) return { type: "previous_in_flight_request" };
     o.h.dispatch({ type: "QUESTS_ENROLL_BEGIN", questId: e });
     try {
         let n = (0, q.L4)(t.questContent),
@@ -433,7 +433,7 @@ async function eo(e, t) {
         var n;
         return (
             o.h.dispatch({ type: "QUESTS_ENROLL_FAILURE", questId: e }),
-            (n = t) instanceof I.CaptchaCancelError ||
+            (n = t) instanceof f.CaptchaCancelError ||
             (null != n &&
                 "object" == typeof n &&
                 ((400 === n.status && n.body?.captcha_key != null) ||
@@ -532,10 +532,10 @@ async function eh(e) {
         o.h.dispatch({ type: "QUESTS_PREVIEW_UPDATE_FAILURE", error: new d.A(t), questId: e });
     }
 }
-function eI(e, t) {
+function ef(e, t) {
     o.h.dispatch({ type: "QUESTS_PREVIEW_OVERRIDE", placement: e, questId: t });
 }
-function ef(e, t) {
+function eI(e, t) {
     o.h.dispatch({ type: "QUESTS_SELECT_TASK_PLATFORM", questId: e, platform: t });
 }
 async function ep() {
@@ -554,10 +554,10 @@ async function ep() {
 function eT(e, t, n) {
     o.h.dispatch({ type: "QUESTS_UPDATE_OPTIMISTIC_PROGRESS", questId: e, taskEventName: t, progress: n });
 }
-function em(e) {
+function eg(e) {
     o.h.dispatch({ type: "QUESTS_RESET_OPTIMISTIC_PROGRESS", questId: e });
 }
-async function eg(e, t) {
+async function em(e, t) {
     let n = Date.now();
     (F.recordQuestRequestAttempt("/quests/decision", t, e),
         o.h.dispatch({ type: "QUESTS_FETCH_QUEST_TO_DELIVER_BEGIN", placement: e }));
@@ -569,19 +569,19 @@ async function eg(e, t) {
             c = (0, p.pc)(),
             _ = null != c ? c() : [],
             E = C.Ay.getGuildsTree(),
-            I = _.filter((e) => {
-                if ((0, m.tZ)(e)) return !1;
+            f = _.filter((e) => {
+                if ((0, g.tZ)(e)) return !1;
                 let t = E.getNode(e);
                 return t?.parentId == null || S.A.isFolderExpanded(t.parentId);
             }).slice(0, 50),
-            T = d.enabled ? I : void 0,
-            g = new URLSearchParams({ placement: String(e) });
-        (r?.uuid != null && g.append("client_heartbeat_session_id", r.uuid),
-            null != s.uuid && g.append("client_ad_session_id", s.uuid),
-            null != T && T.forEach((e) => g.append("visible_guild_ids", e)));
+            T = d.enabled ? f : void 0,
+            m = new URLSearchParams({ placement: String(e) });
+        (r?.uuid != null && m.append("client_heartbeat_session_id", r.uuid),
+            null != s.uuid && m.append("client_ad_session_id", s.uuid),
+            null != T && T.forEach((e) => m.append("visible_guild_ids", e)));
         let R = (
                 await l.Bo.get({
-                    url: `${b.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${g.toString()}`,
+                    url: `${b.Rsh.QUEST_FETCH_QUEST_TO_DELIVER}?${m.toString()}`,
                     rejectWithError: !1,
                     context: { connection_type: N.A.getType() },
                 })
@@ -641,7 +641,7 @@ async function eg(e, t) {
             return;
         (e === j.p9.DESKTOP_ACCOUNT_PANEL_AREA && w.A.startTracking(i.id),
             O.default.track(b.HAw.QUEST_DECISION_RECEIVED, {
-                ...(0, f.A)(),
+                ...(0, I.A)(),
                 quest_id: i.id,
                 caller_source: t,
                 ad_request_id: String(R.request_id),
@@ -649,7 +649,7 @@ async function eg(e, t) {
     } catch (i) {
         (F.recordQuestRequestApiResponse("/quests/decision", { wasSuccessful: !1, currentFetchedAt: n }),
             O.default.track(b.HAw.QUEST_DECISION_ROUNDTRIP_ERROR, {
-                ...(0, f.A)(),
+                ...(0, I.A)(),
                 reason: i?.message ?? null,
                 api_error: new d.A(i).getAnyErrorMessage(),
                 caller_source: t,

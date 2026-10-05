@@ -41,12 +41,12 @@ var r,
             };
         }));
 var h = n(582128),
-    I = n(284009),
-    f = n.n(I),
+    f = n(284009),
+    I = n.n(f),
     p = n(972347),
     T = n(738239),
-    m = n.n(T),
-    g = n(941426),
+    g = n.n(T),
+    m = n(941426),
     S = n(904986),
     N = n(651139),
     C = n(70909),
@@ -164,7 +164,7 @@ class V {
     }
 }
 var H = n(818348);
-let j = new g.Vy("Output"),
+let j = new m.Vy("Output"),
     W = new B();
 class Y extends R.EventEmitter {
     stream;
@@ -549,7 +549,7 @@ class et extends p.A {
         this.emit("video-permission", e);
     };
 }
-let en = new g.Vy("Output");
+let en = new m.Vy("Output");
 var ei = (((a = {}).InteractionRequired = "interactionrequired"), (a.Speaking = "speaking"), (a.Video = "video"), a);
 class er extends p.A {
     id;
@@ -949,13 +949,13 @@ class eA extends S.A {
             let h =
                     "firefox" === (platform.name ?? "unknown").toLowerCase() &&
                     142 === parseInt(platform.version ?? "", 10),
-                I = (c.currentRoundTripTime ?? 0) * (h ? 1 : 1e3);
+                f = (c.currentRoundTripTime ?? 0) * (h ? 1 : 1e3);
             return {
                 transport: {
                     availableOutgoingBitrate: c.availableOutgoingBitrate ?? 0,
                     bytesReceived: c.bytesReceived,
                     bytesSent: c.bytesSent,
-                    ping: I,
+                    ping: f,
                 },
                 rtp: { inbound: E, outbound: u },
             };
@@ -1239,12 +1239,12 @@ class eA extends S.A {
 }
 n(775443);
 var eh = n(800754),
-    eI = n.n(eh),
-    ef = n(226782),
-    ep = n.n(ef),
+    ef = n.n(eh),
+    eI = n(226782),
+    ep = n.n(eI),
     eT = n(316179);
-let em = new g.Vy("SDP");
-var eg =
+let eg = new m.Vy("SDP");
+var em =
     (((o = {}).SENDRECV = "sendrecv"),
     (o.SENDONLY = "sendonly"),
     (o.RECVONLY = "recvonly"),
@@ -1341,11 +1341,11 @@ function eR(e) {
         (h.ssrcs = d),
         d.length > 0 &&
             (null != u &&
-                ((h.ssrcGroups = eI()(d, 4).map((e) => {
+                ((h.ssrcGroups = ef()(d, 4).map((e) => {
                     let t = e[0].id;
                     return { semantics: "FID", ssrcs: `${t} ${t + 1}` };
                 })),
-                (h.ssrcs = eI()(d, 4)
+                (h.ssrcs = ef()(d, 4)
                     .map((e) => {
                         let t = e.map((e) => ((e = { ...e }), (e.id += 1), e));
                         return [...e, ...t];
@@ -1383,11 +1383,11 @@ function eR(e) {
                     "http://www.webrtc.org/experiments/rtp-hdrext/playout-delay" === e.uri,
             )),
                 h.rtp.push({ codec: s, payload: l, rate: 9e4 }));
-            let I = `x-google-max-bitrate=${o}`;
+            let f = `x-google-max-bitrate=${o}`;
             (s === D.UK.H264
-                ? (I += ";level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f")
-                : s === D.UK.H265 && (I += ";level-id=180;profile-id=1;tier-flag=0;tx-mode=SRST"),
-                h.fmtp.push({ config: I, payload: l }),
+                ? (f += ";level-asymmetry-allowed=1;packetization-mode=1;profile-level-id=42e01f")
+                : s === D.UK.H265 && (f += ";level-id=180;profile-id=1;tier-flag=0;tx-mode=SRST"),
+                h.fmtp.push({ config: f, payload: l }),
                 (h.rtcpFb = [
                     { type: "ccm", subtype: "fir", payload: l },
                     { type: "nack", payload: l },
@@ -1438,7 +1438,7 @@ function ey(e, t) {
                         "sendrecv" === o &&
                             (null != (i = s?.find((e) => "cname" === e.attribute)) && (e.videoSSRC = i.id),
                             null != (i = s?.findLast((e) => "cname" === e.attribute)) &&
-                                (i.id === e.videoSSRC && em.warn("Unable to find a unique rtx SSRC!"),
+                                (i.id === e.videoSSRC && eg.warn("Unable to find a unique rtx SSRC!"),
                                 (e.rtxSSRC = i.id))));
             }
             return e;
@@ -1454,17 +1454,17 @@ function eD(e, t) {
     return { sdp: [...new Set(e.split(/\r\n/).filter((e) => r.test(e)))].join("\n"), codecs: n };
 }
 function ev(e) {
-    if (!e.includes("a=fingerprint")) return (em.error("Remote SDP does not include fingerprint!"), !1);
-    if (!e.includes("a=ice-ufrag")) return (em.error("Remote SDP does not include ICE user name!"), !1);
-    if (!e.includes("a=ice-pwd")) return (em.error("Remote SDP does not include ICE password!"), !1);
-    if (!e.includes("a=candidate")) return (em.error("Remote SDP does not include ICE candidate!"), !1);
-    if (!e.includes("c=")) return (em.error("Remote SDP does not include c-line!"), !1);
+    if (!e.includes("a=fingerprint")) return (eg.error("Remote SDP does not include fingerprint!"), !1);
+    if (!e.includes("a=ice-ufrag")) return (eg.error("Remote SDP does not include ICE user name!"), !1);
+    if (!e.includes("a=ice-pwd")) return (eg.error("Remote SDP does not include ICE password!"), !1);
+    if (!e.includes("a=candidate")) return (eg.error("Remote SDP does not include ICE candidate!"), !1);
+    if (!e.includes("c=")) return (eg.error("Remote SDP does not include c-line!"), !1);
     let t = e
         .split("\n")
         .filter((e) => e.startsWith("c="))
         .join()
         .trim();
-    return !(t.split(" ").length < 3) || (em.error(`Incorrect c-line: ${t}`), !1);
+    return !(t.split(" ").length < 3) || (eg.error(`Incorrect c-line: ${t}`), !1);
 }
 function eb(e) {
     return [...new Set(e.split(/\r\n/).filter((e) => e.startsWith("a=extmap:")))].map((e) => {
@@ -1545,7 +1545,7 @@ class eM extends R.EventEmitter {
                 a = this.activeAudioSSRCs[n],
                 s = this.activeVideoSSRCs[n],
                 l = `${r}_inbound_${t}`;
-            return [i, n, r, a === i || s === i ? this.direction : eg.INACTIVE, l];
+            return [i, n, r, a === i || s === i ? this.direction : em.INACTIVE, l];
         });
         if ("Firefox" !== A().name) return this.connected ? t : [];
         let n = this.outboundStreams.map((e, t) => [0, "outbound", e.type, eN(e.direction), `${e.type}_outbound_${t}`]);
@@ -1589,14 +1589,14 @@ class eM extends R.EventEmitter {
                     extensions: _,
                 } = e,
                 E = [];
-            if ((em.info(`generateSessionDescription: ${JSON.stringify(u)}`), "Firefox" === A().name)) {
+            if ((eg.info(`generateSessionDescription: ${JSON.stringify(u)}`), "Firefox" === A().name)) {
                 let e = "answer" === t ? "passive" : "active";
                 u.forEach((t) => {
-                    let [i, u, A, h, I] = t;
+                    let [i, u, A, h, f] = t;
                     ("video" === A && (0 === o || 0 === c)) ||
                         E.push(
                             eR({
-                                mid: I,
+                                mid: f,
                                 type: A,
                                 setup: e,
                                 direction: h,
@@ -1681,7 +1681,7 @@ class eM extends R.EventEmitter {
         return (this.emit(e, l), Promise.resolve(l));
     }
 }
-let eP = new g.Vy("PeerConnection");
+let eP = new m.Vy("PeerConnection");
 class eU extends R.EventEmitter {
     bitrate;
     pc;
@@ -1865,7 +1865,7 @@ class ej extends p.A {
     lastSecureFramesStateUpdate = null;
     constructor(e, t, n) {
         (super(),
-            (this.logger = new g.Vy("DaveSessionManager")),
+            (this.logger = new m.Vy("DaveSessionManager")),
             (this.dave = e),
             (this.transientKeys = t),
             (this.userId = n),
@@ -1999,7 +1999,7 @@ class ej extends p.A {
             (this.lastSecureFramesStateUpdate = e));
     }
 }
-let eW = new g.Vy("LibDaveManager"),
+let eW = new m.Vy("LibDaveManager"),
     eY = null,
     eK = null,
     e$ = null,
@@ -2039,7 +2039,7 @@ class eQ extends eA {
     daveSessionManager = null;
     logger;
     constructor(e) {
-        (super(e), (this.logger = new g.Vy(`UnifiedConnection(${e.context})`)));
+        (super(e), (this.logger = new m.Vy(`UnifiedConnection(${e.context})`)));
         let t = e.dave;
         (null == t ||
             eX() ||
@@ -2366,23 +2366,23 @@ class eQ extends eA {
                 return (
                     u.forEach((e) => {
                         let t,
-                            { ssrc: u, cname: I, type: f, direction: p, mid: T } = e;
-                        ("" !== I
-                            ? (t = eC(I, u, "audio" === f ? "a" : "v"))
+                            { ssrc: u, cname: f, type: I, direction: p, mid: T } = e;
+                        ("" !== f
+                            ? (t = eC(f, u, "audio" === I ? "a" : "v"))
                             : ((t = []), "sendonly" === p ? (p = "inactive") : "sendrecv" === p && (p = "recvonly")),
                             A.push(
                                 eR({
                                     mid: T,
-                                    type: f,
+                                    type: I,
                                     setup: h,
                                     direction: p,
                                     baseSDP: n,
-                                    codec: "audio" === f ? i : s,
-                                    payload: "audio" === f ? r : l,
-                                    bitrate: "audio" === f ? a : o,
+                                    codec: "audio" === I ? i : s,
+                                    payload: "audio" === I ? r : l,
+                                    bitrate: "audio" === I ? a : o,
                                     ssrcs: t,
                                     extensions: _,
-                                    rtxPayload: "audio" === f ? null : c,
+                                    rtxPayload: "audio" === I ? null : c,
                                     sendingVideo: d,
                                     enableAudioNack: E,
                                 }),
@@ -2552,7 +2552,7 @@ class e0 extends eA {
     codecs = [];
     logger;
     constructor(e) {
-        (super(e), (this.logger = new g.Vy(`Connection(${e.context})`)));
+        (super(e), (this.logger = new m.Vy(`Connection(${e.context})`)));
         const t = new eM();
         (t.on("answer", (e) =>
             this.pc
@@ -2566,7 +2566,7 @@ class e0 extends eA {
                     .then((e) => this.fpc.setRemoteDescription(e))
                     .catch((e) => this.logger.error(`Failed to set remote description (offer): ${e}`));
             }),
-            (t.direction = null != this.input.stream ? eg.SENDRECV : eg.SENDONLY),
+            (t.direction = null != this.input.stream ? em.SENDRECV : em.SENDONLY),
             (this.fpc = t));
         const n = new eU(this.voiceBitrate);
         (n.on("addtrack", (e, t) => this.createOutput(eJ(e), t)),
@@ -2630,7 +2630,7 @@ class e0 extends eA {
             this.pc.negotiationNeeded());
     }
     setStream(e) {
-        ((this.fpc.direction = null != e ? eg.SENDRECV : eg.SENDONLY), this.pc.setStream(e ?? null));
+        ((this.fpc.direction = null != e ? em.SENDRECV : em.SENDONLY), this.pc.setStream(e ?? null));
     }
     createUser(e, t, n) {
         if (0 === t) return void this.logger.warn(`Attempting to create user ${e} with 0 audio SSRC`);
@@ -2901,7 +2901,7 @@ function te(e) {
             : (0, _.jsx)(e9, { streamId: s, style: { width: n, height: i } })
     );
 }
-let tt = new g.Vy("MediaEngineWebRTC");
+let tt = new m.Vy("MediaEngineWebRTC");
 class tn extends p.A {
     Video = e9;
     Camera = (e) => (0, _.jsx)(te, { ...e, onDeviceChange: this.handleDeviceChange });
@@ -2970,7 +2970,7 @@ class tn extends p.A {
             case D.O5.AUTOMATIC_GAIN_CONTROL:
                 return "Safari" !== A().name;
             case D.O5.NOISE_CANCELLATION:
-                return m()();
+                return g()();
             case D.O5.QOS:
             case D.O5.ATTENUATION:
             case D.O5.AUTOMATIC_VAD:
@@ -3011,7 +3011,7 @@ class tn extends p.A {
                     experiments: _,
                 }),
                 (r = `${null != A().name && "" !== A().name ? A().name : "unknown"} ${null != A().version && "" !== A().version ? A().version : "unknown"}`),
-                (a = new g.Vy(`Connection(${i.context})`)),
+                (a = new m.Vy(`Connection(${i.context})`)),
                 e_.PF ? (a.info(`Using Unified Plan (${r})`), new eQ(i)) : (a.info(`Using Plan B (${r})`), new e0(i)));
         return (
             (E.streamUserId = c),
@@ -3148,7 +3148,7 @@ class tn extends p.A {
     setGoLiveSource(e, t) {
         if (null == e) this.eachConnection((e) => e.setDesktopInput(null), t);
         else if (null != e.desktopDescription && null != this.findConnection(t)) {
-            f()(t === D.x.STREAM, "Go live context is not STREAM");
+            I()(t === D.x.STREAM, "Go live context is not STREAM");
             let n = !1,
                 i = this.desktopInputPool.get(e.desktopDescription.id);
             if (null == i) return;

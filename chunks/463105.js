@@ -12,12 +12,12 @@ var i = n(478437),
     E = n(148494),
     A = n(439372),
     h = n(931480),
-    I = n(617617),
-    f = n(927813),
+    f = n(617617),
+    I = n(927813),
     p = n(652215);
-let T = 10 * f.A.Millis.SECOND,
-    m = 5 * f.A.Millis.MINUTE;
-class g extends A.A {
+let T = 10 * I.A.Millis.SECOND,
+    g = 5 * I.A.Millis.MINUTE;
+class m extends A.A {
     actions = {
         POST_CONNECTION_OPEN: () => this.onPostConnectionOpen(),
         CHANNEL_SELECT: (e) => this.onChannelSelect(e),
@@ -26,7 +26,7 @@ class g extends A.A {
         LOGOUT: () => this.onLogout(),
     };
     stores = new Map([[c.Ay, () => this.onPremiumGiftingIntentStoreChange()]]);
-    reconcileBackoff = new u.A(T, m);
+    reconcileBackoff = new u.A(T, g);
     isReconciling = !1;
     heldGiftingPromptSystemMessage = !1;
     lastReconciledDismissalAtMs = new Map();
@@ -46,7 +46,7 @@ class g extends A.A {
         return c.Ay.getFriendAnniversaries().length > 0;
     }
     getServerDismissalTimestampMs() {
-        return Number(I.A.settings.userContent?.lastGiftIntentDismissedAtMs ?? "0");
+        return Number(f.A.settings.userContent?.lastGiftIntentDismissedAtMs ?? "0");
     }
     attemptReconcileFetch() {
         let e = this.getServerDismissalTimestampMs();
@@ -99,7 +99,7 @@ class g extends A.A {
     }
 }
 var S = n(202541);
-let N = new (class extends g {
+let N = new (class extends m {
     isChannelEligible(e) {
         switch (e.type) {
             case i.r.DM:

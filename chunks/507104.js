@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => F, ZD: () => g, hb: () => S }), n(321073));
+(n.d(t, { Ay: () => F, ZD: () => m, hb: () => S }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -14,8 +14,8 @@ function A(e) {
     return { enabled: !0 };
 }
 var h = n(689739),
-    I = n(620750),
-    f = n(194537),
+    f = n(620750),
+    I = n(194537),
     p = n(721441);
 function T(e, t, n) {
     let i = {};
@@ -25,8 +25,8 @@ function T(e, t, n) {
     }
     return i;
 }
-var m = n(652215);
-let g = 5,
+var g = n(652215);
+let m = 5,
     S = 6048e5;
 function N() {
     return {
@@ -71,7 +71,7 @@ function P() {
 }
 function U() {
     if (null != D) return void x(D);
-    if ((w(), !_.A.hasConsented(m.YAq.PERSONALIZATION) || !c.oz.getSetting())) return;
+    if ((w(), !_.A.hasConsented(g.YAq.PERSONALIZATION) || !c.oz.getSetting())) return;
     for (let e of E.A.getFriendIDs()) {
         let t = E.A.getSince(e),
             n = d.A.getUserAffinity(e);
@@ -82,7 +82,7 @@ function U() {
                     n = t.getFullYear();
                 for (let i of [-1, 0, 1]) {
                     let r = (0, h.default)(e, n + i);
-                    if (!(0, I.default)(r, e) && 7 >= Math.abs((0, f.A)(t, r))) return !0;
+                    if (!(0, f.default)(r, e) && 7 >= Math.abs((0, I.A)(t, r))) return !0;
                 }
                 return !1;
             })(n) && (O.push(e), (y[e] = { friendsSince: n }));

@@ -1,4 +1,4 @@
-n.d(t, { jZ: () => h, VU: () => u, VA: () => A, CD: () => E, Ey: () => f, tO: () => _, HJ: () => I });
+n.d(t, { jZ: () => h, VU: () => u, VA: () => A, CD: () => E, Ey: () => I, tO: () => _, HJ: () => f });
 var i = n(636537),
     r = n(73153),
     a = n(913122),
@@ -92,12 +92,12 @@ async function h(e, t) {
     }
     r.h.dispatch({ type: "GUILD_UNAPPLY_BOOST_SUCCESS", boostId: t });
 }
-async function I(e) {
+async function f(e) {
     let t = await i.Bo.post({ url: c.Rsh.USER_GUILD_BOOST_SLOT_CANCEL(e), oldFormErrors: !0, rejectWithError: !0 }),
         n = o.A.createFromServer(t.body, d.A.getSubscriptionById(t.body.subscription_id));
     return (r.h.dispatch({ type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: n }), n);
 }
-async function f(e) {
+async function I(e) {
     let t = await i.Bo.post({ url: c.Rsh.USER_GUILD_BOOST_SLOT_UNCANCEL(e), oldFormErrors: !0, rejectWithError: !0 }),
         n = o.A.createFromServer(t.body, d.A.getSubscriptionById(t.body.subscription_id));
     return (r.h.dispatch({ type: "GUILD_BOOST_SLOT_UPDATE_SUCCESS", guildBoostSlot: n }), n);

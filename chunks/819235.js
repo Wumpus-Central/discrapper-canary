@@ -12,12 +12,12 @@ var i = n(435558),
     E = n(86070),
     A = n(435738),
     h = n(99753),
-    I = n(424994),
-    f = n(652215);
+    f = n(424994),
+    I = n(652215);
 let p = 2 * u.A.Millis.MINUTE,
-    T = I.X1.GLOBAL_FEED,
-    m = 15 * u.A.Millis.MINUTE,
-    g = new Map(),
+    T = f.X1.GLOBAL_FEED,
+    g = 15 * u.A.Millis.MINUTE,
+    m = new Map(),
     S = new Set(),
     N = new Map(),
     C = null,
@@ -30,7 +30,7 @@ function L(e, t) {
     a.h.dispatch({ type: "CONTENT_INVENTORY_SET_FEED_STATE", feedId: e, state: t });
 }
 function y(e) {
-    if (S.has(e) || (e === I.X1.GAME_PROFILE_FEED && void 0 !== h.A.getFeed(e))) return !1;
+    if (S.has(e) || (e === f.X1.GAME_PROFILE_FEED && void 0 !== h.A.getFeed(e))) return !1;
     if (e === T) {
         if (
             !(0, _.VS)("ContentInventoryManager") ||
@@ -40,14 +40,14 @@ function y(e) {
         )
             return !1;
         let t = d.A.getIdleSince();
-        if (null != t && Date.now() - t > m) return !1;
+        if (null != t && Date.now() - t > g) return !1;
     }
     return !0;
 }
 function D(e) {
     L(e, { loading: !1 });
-    let t = g.get(e);
-    void 0 !== t && (clearTimeout(t), g.delete(e));
+    let t = m.get(e);
+    void 0 !== t && (clearTimeout(t), m.delete(e));
 }
 function v() {
     let e = N.get(T) ?? 0;
@@ -57,7 +57,7 @@ function v() {
     let n = t?.expired_at == null ? 0 : new Date(t.expired_at).getTime() - Date.now(),
         i = Math.max(0, null == C ? 0 : new Date(C).getTime() - Date.now(), n) + (e > 0 ? R() : 0);
     (L(T, { loading: !1, nextFetchDate: new Date(Date.now() + i) }),
-        g.set(
+        m.set(
             T,
             setTimeout(() => b({ feedId: T, feature: r.M.INBOX }), i),
         ));
@@ -79,7 +79,7 @@ async function b(e) {
             if (e < 4) {
                 let r = u.A.Millis.MINUTE * Math.pow(2, e),
                     a = R(e);
-                (g.set(
+                (m.set(
                     t,
                     setTimeout(() => b({ feedId: t, feature: n, force: i }), r + a),
                 ),
@@ -109,7 +109,7 @@ function G(e) {
 }
 function x(e) {
     let { connectionId: t, track: n } = e;
-    null == t || (o.A.getAccount(t, f.fg2.SPOTIFY)?.showActivity && O(t, n));
+    null == t || (o.A.getAccount(t, I.fg2.SPOTIFY)?.showActivity && O(t, n));
 }
 function k() {
     let e = h.A.getFeed(T);

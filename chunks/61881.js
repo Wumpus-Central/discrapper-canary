@@ -12,8 +12,8 @@ let c = null,
     E = { suggestedGamesIds: [], suggestedWishlistGamesIds: [] },
     A = !1,
     h = !1,
-    I = !1;
-class f extends a.Ay.Store {
+    f = !1;
+class I extends a.Ay.Store {
     initialize() {
         this.waitFor(l.default);
     }
@@ -77,13 +77,13 @@ class f extends a.Ay.Store {
         return h;
     }
     get suggestedFetchAttempted() {
-        return I;
+        return f;
     }
     get suggestedGameIds() {
         return E;
     }
 }
-let p = new f(s.h, {
+let p = new I(s.h, {
     WIDGET_PENDING_SET: function (e) {
         let { widgets: t } = e;
         if (((c = t), null === u)) {
@@ -111,7 +111,7 @@ let p = new f(s.h, {
         ((A = !0), (h = !1));
     },
     WIDGET_SUGGESTED_FETCH_START: function () {
-        ((h = !0), (A = !1), (I = !0));
+        ((h = !0), (A = !1), (f = !0));
     },
     WIDGET_PENDING_CLEAR: function () {
         ((c = null), (u = null));

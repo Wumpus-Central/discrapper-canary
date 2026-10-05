@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Cv: () => u, PU: () => I, So: () => c, _Z: () => E, ap: () => A, uK: () => _ });
+n.d(t, { Cv: () => u, PU: () => f, So: () => c, _Z: () => E, ap: () => A, uK: () => _ });
 var r = n(832081),
     a = n(17928),
     s = n(636537),
@@ -86,7 +86,7 @@ async function A(e) {
 }
 new l.A("StripeUtils");
 let h = { "en-US": "en", "zh-CN": "zh", "sv-SE": "sv" };
-function I() {
+function f() {
     return (0, a.bG)([o.default], () => {
         var e;
         return h[(e = o.default.locale)] ?? e;

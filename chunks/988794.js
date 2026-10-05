@@ -7,17 +7,17 @@ n.d(t, {
     Ps: () => T,
     Qi: () => M,
     Tn: () => S,
-    XG: () => f,
+    XG: () => I,
     aj: () => y,
     al: () => R,
-    b8: () => m,
-    dD: () => g,
+    b8: () => g,
+    dD: () => m,
     lV: () => p,
     nN: () => v,
     o_: () => C,
     om: () => N,
     t_: () => _,
-    tq: () => I,
+    tq: () => f,
     vj: () => A,
     w0: () => b,
 });
@@ -34,8 +34,8 @@ let _ = 100,
     E = 1e3,
     A = 100,
     h = "Guild Events Modal",
-    I = "-1";
-var f =
+    f = "-1";
+var I =
     (((i = {})[(i.SCHEDULED = 1)] = "SCHEDULED"),
     (i[(i.ACTIVE = 2)] = "ACTIVE"),
     (i[(i.COMPLETED = 3)] = "COMPLETED"),
@@ -49,8 +49,8 @@ var T =
         (r[(r.EXTERNAL = 3)] = "EXTERNAL"),
         (r[(r.PRIME_TIME = 4)] = "PRIME_TIME"),
         r),
-    m = (((a = {})[(a.EVENT_START = 1)] = "EVENT_START"), a),
-    g = (((s = {})[(s.PUBLIC = 1)] = "PUBLIC"), (s[(s.GUILD_ONLY = 2)] = "GUILD_ONLY"), s);
+    g = (((a = {})[(a.EVENT_START = 1)] = "EVENT_START"), a),
+    m = (((s = {})[(s.PUBLIC = 1)] = "PUBLIC"), (s[(s.GUILD_ONLY = 2)] = "GUILD_ONLY"), s);
 let S = new Set([1, 4]),
     N = { 1: u.rbe.GUILD_STAGE_VOICE, 2: u.rbe.GUILD_VOICE },
     C = new Set([3]),

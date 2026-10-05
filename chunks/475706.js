@@ -1,4 +1,4 @@
-n.d(t, { Ij: () => f, IS: () => T, Fm: () => p });
+n.d(t, { Ij: () => I, IS: () => T, Fm: () => p });
 var i = n(477900),
     r = n(582128),
     a = n(702841),
@@ -18,20 +18,20 @@ function E(e) {
             let e = o.A.getChannel(n);
             null != e && d.av(e);
         }, [n]),
-        I = E?.topic ?? t.name,
-        f = _.intl.formatToPlainString(_.t["T+DNAA"], { channel: I });
+        f = E?.topic ?? t.name,
+        I = _.intl.formatToPlainString(_.t["T+DNAA"], { channel: f });
     return (0, i.jsx)("div", {
         ref: A,
         children: (0, i.jsx)(s.D, {
             onClick: h,
             focusProps: { ringTarget: A },
-            children: (0, i.jsx)(l.D, { variant: "heading-sm/semibold", children: f }),
+            children: (0, i.jsx)(l.D, { variant: "heading-sm/semibold", children: I }),
         }),
     });
 }
 var A = n(516607),
     h = n(356772);
-let I = {
+let f = {
     [A.SS]: new (class {
         shouldShow(e) {
             return (0, c.IS)(e);
@@ -42,16 +42,16 @@ let I = {
         body = E;
     })(),
 };
-function f(e) {
+function I(e) {
     let t = e.application_id;
     if (null == t) return;
-    let n = I[t];
+    let n = f[t];
     if (null != n && n.shouldShow?.(e) !== !1) return n.createHeader(e);
 }
 function p(e) {
     let t = e.application_id;
     if (null == t) return;
-    let n = I[t];
+    let n = f[t];
     if (n?.body != null && n.shouldShow?.(e) !== !1) {
         let r = n.body;
         return (0, i.jsx)("section", { className: h.uW, children: (0, i.jsx)(r, { activity: e }) }, `delegate-${t}`);
@@ -60,6 +60,6 @@ function p(e) {
 function T(e) {
     let t = e.application_id;
     if (null == t) return !0;
-    let n = I[t];
+    let n = f[t];
     return null == n || n.shouldShow?.(e) !== !1;
 }

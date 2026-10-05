@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(554146),
@@ -21,19 +21,19 @@ function h(e) {
         ? t
         : (0, i.jsxs)(i.Fragment, { children: [t, (0, i.jsx)("div", { className: A.F, children: a })] });
 }
-var I = n(544105),
-    f = n(652215),
+var f = n(544105),
+    I = n(652215),
     p = n(375708);
 let T = "game_console_alert_modal",
-    m = "game_console_ptt_alert_modal",
-    g = {
+    g = "game_console_ptt_alert_modal",
+    m = {
         maybeShowPTTAlert(e) {
-            if (c.Ay.getMode() !== f.TBI.PUSH_TO_TALK || (0, d.k8)(a.M.CONSOLE_PTT_DISABLE_ALERT))
+            if (c.Ay.getMode() !== I.TBI.PUSH_TO_TALK || (0, d.k8)(a.M.CONSOLE_PTT_DISABLE_ALERT))
                 return Promise.resolve();
             let t = {
-                [f.fg2.XBOX]: p.intl.string(p.t.bVZ7vy),
-                [f.fg2.PLAYSTATION]: p.intl.string(p.t["6iqUsf"]),
-                [f.fg2.PLAYSTATION_STAGING]: p.intl.string(p.t["6iqUsf"]),
+                [I.fg2.XBOX]: p.intl.string(p.t.bVZ7vy),
+                [I.fg2.PLAYSTATION]: p.intl.string(p.t["6iqUsf"]),
+                [I.fg2.PLAYSTATION_STAGING]: p.intl.string(p.t["6iqUsf"]),
             }[e];
             return null == t
                 ? Promise.resolve()
@@ -49,9 +49,9 @@ let T = "game_console_alert_modal",
                               actions: [{ text: p.intl.string(p.t.BddRzS), onClick: n }],
                           });
                       }
-                      (0, l.hasModalOpen)(m)
-                          ? (0, l.updateModal)(m, (e) => r(e))
-                          : (0, l.openModalLazy)(async () => (e) => r(e), { modalKey: m });
+                      (0, l.hasModalOpen)(g)
+                          ? (0, l.updateModal)(g, (e) => r(e))
+                          : (0, l.openModalLazy)(async () => (e) => r(e), { modalKey: g });
                   });
         },
         showSelfDismissableAlert(e) {
@@ -60,8 +60,8 @@ let T = "game_console_alert_modal",
             function c() {
                 null != a &&
                     ((0, o.A)({ platformType: a }),
-                    u.default.track(f.HAw.ACCOUNT_LINK_STEP, {
-                        previous_step: I.yM,
+                    u.default.track(I.HAw.ACCOUNT_LINK_STEP, {
+                        previous_step: f.yM,
                         current_step: "desktop oauth",
                         platform_type: a,
                     }));

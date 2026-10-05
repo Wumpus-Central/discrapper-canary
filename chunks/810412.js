@@ -3,10 +3,10 @@ n.d(t, {
     IP: () => T,
     OverlayToggledClientSettingType: () => E,
     Q3: () => A,
-    Y: () => I,
-    YX: () => m,
+    Y: () => f,
+    YX: () => g,
     Z5: () => p,
-    xp: () => f,
+    xp: () => I,
 });
 var i,
     r,
@@ -64,7 +64,7 @@ function h(e, t) {
         n
     );
 }
-function I(e, t) {
+function f(e, t) {
     let { locked: n, shownUserIds: i, liveUserIds: r, contentInventoryIds: a } = t;
     ((i?.length ?? 0) !== 0 || (r?.length ?? 0) !== 0 || (a?.length ?? 0) !== 0) &&
         c.default.track(_.HAw.WIDGET_CONTENT_SHOWN, {
@@ -76,7 +76,7 @@ function I(e, t) {
             media_session_id: d.A.getMediaSessionId(),
         });
 }
-function f(e, t) {
+function I(e, t) {
     let { pinned: n, opacity: i } = t;
     c.default.track(_.HAw.WIDGET_SETTING_UPDATED, { widget_type: e, pinned: n, opacity: i });
 }
@@ -128,7 +128,7 @@ var p =
         (a.VOICE_TAB_SELECTED = "voice tab selected"),
         (a.MESSAGES_TAB_SELECTED = "messages tab selected"),
         a);
-function m(e, t) {
+function g(e, t) {
     let { type: n, value: i, userId: r, secondaryValue: a } = t;
     c.default.track(_.HAw.WIDGET_INTERACTED, {
         widget_type: e,

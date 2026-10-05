@@ -14,8 +14,8 @@ let _ = null,
 function h() {
     return { _categories: [], null: [] };
 }
-let I = h();
-function f(e, t) {
+let f = h();
+function I(e, t) {
     e.index = t;
 }
 function p(e) {
@@ -32,7 +32,7 @@ function p(e) {
         }),
         t[d.I6].forEach(i),
         t[d.vM].forEach(i),
-        (0, a.A)(n._categories, n).forEach(f),
+        (0, a.A)(n._categories, n).forEach(I),
         (E[e] = n),
         n
     );
@@ -40,13 +40,13 @@ function p(e) {
 function T() {
     ((E = {}), null != _ && p(_));
 }
-function m(e) {
+function g(e) {
     let {
         guild: { id: t },
     } = e;
     ((E[t] = void 0), _ === t && p(t));
 }
-function g(e) {
+function m(e) {
     let {
         channel: { guild_id: t },
     } = e;
@@ -71,7 +71,7 @@ class O extends i.Ay.Store {
         (this.waitFor(d.Ay, c.A, l.default, o.A, s.A), this.syncWith([s.A], C));
     }
     getCategories(e) {
-        return null != e ? (E[e] ?? p(e)) : I;
+        return null != e ? (E[e] ?? p(e)) : f;
     }
 }
 let R = new O(r.h, {
@@ -83,16 +83,16 @@ let R = new O(r.h, {
     CONNECTION_OPEN: T,
     OVERLAY_INITIALIZE: T,
     CACHE_LOADED_LAZY: T,
-    GUILD_CREATE: m,
-    GUILD_UPDATE: m,
+    GUILD_CREATE: g,
+    GUILD_UPDATE: g,
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t },
         } = e;
         delete E[t];
     },
-    CHANNEL_CREATE: g,
-    CHANNEL_DELETE: g,
+    CHANNEL_CREATE: m,
+    CHANNEL_DELETE: m,
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e,
             n = !1;

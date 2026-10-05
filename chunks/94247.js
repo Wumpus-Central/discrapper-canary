@@ -1,5 +1,5 @@
 let i, r;
-(n.d(t, { A: () => g }), n(321073));
+(n.d(t, { A: () => m }), n(321073));
 var a = n(435558),
     s = n.n(a),
     l = n(17928),
@@ -11,7 +11,7 @@ var a = n(435558),
     E = n(485296),
     A = n(198052),
     h = n(806931);
-function I() {
+function f() {
     let e,
         t = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0];
     if (null == i) e = null;
@@ -44,11 +44,11 @@ function I() {
             null == (e = t) && (e = null != r && l.includes(r) ? r : l[0]);
         }
     }
-    r !== e && ((r = e), t && m.emitChange());
+    r !== e && ((r = e), t && g.emitChange());
 }
-let f = s().throttle(I, 300, { trailing: !0 });
+let I = s().throttle(f, 300, { trailing: !0 });
 function p() {
-    return (f(), !1);
+    return (I(), !1);
 }
 class T extends l.Ay.Store {
     static displayName = "VideoSpeakerStore";
@@ -56,8 +56,8 @@ class T extends l.Ay.Store {
         (this.waitFor(A.A, u.default, E.A, c.A, _.Ay), this.syncWith([A.A, c.A], p));
     }
     getSpeaker(e) {
-        return (i !== e && ((i = e), (r = null), I(!1)), r ?? u.default.getId());
+        return (i !== e && ((i = e), (r = null), f(!1)), r ?? u.default.getId());
     }
 }
-let m = new T(o.h, { AUDIO_SET_LOCAL_VIDEO_DISABLED: p }),
-    g = m;
+let g = new T(o.h, { AUDIO_SET_LOCAL_VIDEO_DISABLED: p }),
+    m = g;

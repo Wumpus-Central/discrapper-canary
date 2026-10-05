@@ -1,4 +1,4 @@
-n.d(t, { R: () => f });
+n.d(t, { R: () => I });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -65,8 +65,8 @@ function h(e) {
         h = s()(E.caret, E[`caret--${n}`], E[`caret--${r}`]);
     return (0, i.jsx)("div", { className: h, style: c, children: (0, i.jsx)(u, {}) });
 }
-var I = n(710778);
-function f(e) {
+var f = n(710778);
+function I(e) {
     let {
             isVisible: t,
             isRendered: n = t,
@@ -74,11 +74,11 @@ function f(e) {
             targetElement: u,
             anchorRef: E,
             id: A,
-            content: f,
+            content: I,
             position: p = "top",
             align: T = "center",
-            spacing: m = 11,
-            caretConfig: g,
+            spacing: g = 11,
+            caretConfig: m,
             animationStyle: S,
             positionKey: N,
         } = e,
@@ -97,7 +97,7 @@ function f(e) {
     return (0, i.jsx)(o.Ow, {
         className: c.BM,
         open: n,
-        spacing: m,
+        spacing: g,
         placement: L,
         reference: y,
         ownerDocument: O,
@@ -108,9 +108,9 @@ function f(e) {
             return ((e) => {
                 let { position: t, nudge: n } = e,
                     r = t ?? p,
-                    a = g?.align ?? (null != n && 0 !== n ? "custom" : "center"),
-                    o = g?.customOffset ?? n ?? 0,
-                    u = { position: g?.position ?? (0, I.l8)(r), align: a, customOffset: "custom" === a ? o : void 0 },
+                    a = m?.align ?? (null != n && 0 !== n ? "custom" : "center"),
+                    o = m?.customOffset ?? n ?? 0,
+                    u = { position: m?.position ?? (0, f.l8)(r), align: a, customOffset: "custom" === a ? o : void 0 },
                     _ = (0, i.jsxs)("div", {
                         id: A,
                         className: s()(c.YL, { [c.mj]: C }),
@@ -122,9 +122,9 @@ function f(e) {
                             (0, i.jsx)("div", {
                                 className: c.rv,
                                 children:
-                                    "string" == typeof f
-                                        ? (0, i.jsx)(d.E, { variant: "text-sm/medium", children: f })
-                                        : f,
+                                    "string" == typeof I
+                                        ? (0, i.jsx)(d.E, { variant: "text-sm/medium", children: I })
+                                        : I,
                             }),
                         ],
                     });

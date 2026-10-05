@@ -1,4 +1,4 @@
-n.d(t, { default: () => h });
+n.d(t, { default: () => E });
 var i = n(477900);
 n(582128);
 var s = n(284009),
@@ -18,13 +18,13 @@ function A(e) {
             onClose: s,
             onAddPaymentSource: u,
             toastContent: A,
-            initialStep: h = d.pn.PAYMENT_ELEMENT,
-            overwriteSubscriptionPaymentSource: E = !1,
+            initialStep: E = d.pn.PAYMENT_ELEMENT,
+            overwriteSubscriptionPaymentSource: h = !1,
         } = e,
-        S = (0, c.p)(),
-        x = (0, c.Y)({
-            addPaymentMethodStepState: S,
-            initialStep: h,
+        x = (0, c.p)(),
+        p = (0, c.Y)({
+            addPaymentMethodStepState: x,
+            initialStep: E,
             prependSteps: [],
             appendSteps: [],
             onReturn: () => {
@@ -37,7 +37,7 @@ function A(e) {
             header: (0, i.jsx)(r.rQ, { title: g.intl.string(g.t.eQ2bLp) }),
             analyticsLocation: n,
             toastContent: A,
-            overwriteSubscriptionPaymentSource: E,
+            overwriteSubscriptionPaymentSource: h,
         });
     return (0, i.jsx)(a.d, {
         transitionState: t,
@@ -50,11 +50,11 @@ function A(e) {
             onSubmit: function (e) {
                 e.preventDefault();
             },
-            children: x,
+            children: p,
         }),
     });
 }
-function h(e) {
+function E(e) {
     return (0, i.jsx)(u.M, {
         activeSubscription: null,
         stepConfigs: [],

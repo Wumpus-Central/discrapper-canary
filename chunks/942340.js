@@ -54,10 +54,10 @@ function A(a) {
         [r, s] = t.useState(void 0),
         [h, p] = t.useState(null),
         [A, C] = t.useState(!0),
-        [M, g] = t.useState([]),
-        { createSetupIntentDeduped: E } = (0, d.x)(),
+        [M, E] = t.useState([]),
+        { createSetupIntentDeduped: g } = (0, d.x)(),
         [_, j] = t.useState([]),
-        { customPaymentMethods: T, customPaymentMethodIdsToSourceTypes: v } = t.useMemo(
+        { customPaymentMethods: v, customPaymentMethodIdsToSourceTypes: T } = t.useMemo(
             () => ({
                 customPaymentMethods: (0, c.Dd)(M),
                 customPaymentMethodIdsToSourceTypes: M.reduce(
@@ -71,8 +71,8 @@ function A(a) {
             try {
                 let a,
                     e,
-                    { client_secret: l, custom_payment_methods: t, payment_method_order: r } = await E();
-                (g(t),
+                    { client_secret: l, custom_payment_methods: t, payment_method_order: r } = await g();
+                (E(t),
                     s(l),
                     j(
                         null != r && Array.isArray(r)
@@ -89,7 +89,7 @@ function A(a) {
                     (0, i.pM)(a, { tags: { source: "payment_elements" } }));
             }
             C(!1);
-        }, [e, E]);
+        }, [e, g]);
     (0, n.Ay)(() => {
         L();
     });
@@ -103,15 +103,15 @@ function A(a) {
                           clientSecret: r,
                           appearance: I,
                           locale: H,
-                          customPaymentMethods: T,
+                          customPaymentMethods: v,
                           paymentMethodCreation: "manual",
                       },
-            [I, H, r, T, A],
+            [I, H, r, v, A],
         ),
         Z = {
             setupError: h,
-            customPaymentMethods: T,
-            customPaymentMethodIdsToSourceTypes: v,
+            customPaymentMethods: v,
+            customPaymentMethodIdsToSourceTypes: T,
             paymentMethodOrder: _,
             elementsAppearanceOptions: P,
         };

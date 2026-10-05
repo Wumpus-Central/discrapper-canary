@@ -12,19 +12,19 @@ var i = n(435558),
     E = n(617617),
     A = n(189081),
     h = n(340829),
-    I = n(775228),
-    f = n(927813),
+    f = n(775228),
+    I = n(927813),
     p = n(674378),
     T = n(144914);
-let m = new Set(),
-    g = {},
+let g = new Set(),
+    m = {},
     S = new Set(),
     N = {},
     C = new Set(),
     O = {},
-    R = 10 * f.A.Millis.MINUTE,
-    L = 6 * f.A.Millis.HOUR,
-    y = 10 * f.A.Millis.MINUTE,
+    R = 10 * I.A.Millis.MINUTE,
+    L = 6 * I.A.Millis.HOUR,
+    y = 10 * I.A.Millis.MINUTE,
     D = new s.Ep();
 function v(e) {
     D.start(e + Math.random() * R, o.r);
@@ -38,8 +38,8 @@ function b() {
     l.h.wait(() => o.r(t));
 }
 function M(e, t) {
-    if (null != g[t] && I.A.shouldBeInstalled(e, t)) {
-        let n = g[t],
+    if (null != m[t] && f.A.shouldBeInstalled(e, t)) {
+        let n = m[t],
             i = n.manifestIds,
             a = h.A.getState(e, t);
         null != a &&
@@ -57,19 +57,19 @@ function P() {
 class U extends a.Ay.Store {
     static displayName = "ApplicationBuildStore";
     initialize() {
-        (this.syncWith([A.A], b), this.waitFor(u.A, h.A, I.A, A.A, E.A));
+        (this.syncWith([A.A], b), this.waitFor(u.A, h.A, f.A, A.A, E.A));
     }
     getTargetBuildId(e, t) {
-        return null == g[t] ? null : g[t].id;
+        return null == m[t] ? null : m[t].id;
     }
     getTargetManifests(e, t) {
-        return null == g[t] ? null : g[t].manifestIds;
+        return null == m[t] ? null : m[t].manifestIds;
     }
     hasNoBuild(e, t) {
         return S.has(t);
     }
     isFetching(e, t) {
-        return m.has(t);
+        return g.has(t);
     }
     needsToFetchBuildSize(e) {
         return !N.hasOwnProperty(e);
@@ -91,21 +91,21 @@ let w = new U(l.h, {
     },
     APPLICATION_BUILD_FETCH_START: function (e) {
         let { branchId: t } = e;
-        m.add(t);
+        g.add(t);
     },
     APPLICATION_BUILD_FETCH_SUCCESS: function (e) {
         let { applicationId: t, branchId: n, locale: i, build: r } = e;
-        m.delete(n);
+        g.delete(n);
         let a = r.manifests.map((e) => {
                 let { id: t } = e;
                 return t;
             }),
             s = r.id;
-        (S.delete(n), (g[n] = { id: s, applicationId: t, branchId: n, locale: i, manifestIds: a }), M(t, n));
+        (S.delete(n), (m[n] = { id: s, applicationId: t, branchId: n, locale: i, manifestIds: a }), M(t, n));
     },
     APPLICATION_BUILD_NOT_FOUND: function (e) {
         let { branchId: t } = e;
-        (m.delete(t), S.add(t));
+        (g.delete(t), S.add(t));
     },
     APPLICATION_BUILD_SIZE_FETCH_START: function (e) {
         let { buildId: t } = e;

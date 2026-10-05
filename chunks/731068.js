@@ -1,7 +1,7 @@
 (n.d(t, {
-    FE: () => I,
+    FE: () => f,
     IS: () => u,
-    Rr: () => f,
+    Rr: () => I,
     Uv: () => A,
     aG: () => h,
     ad: () => _,
@@ -75,14 +75,14 @@ function h(e) {
         }
     );
 }
-function I(e) {
+function f(e) {
     return (0, o.tT)(e.contentType)
         ? "IMAGE"
         : (0, o.XB)(e.contentType) && null != e.proxyUrl && null != d.A.toURLSafe(e.proxyUrl)
           ? "VIDEO"
           : "INVALID";
 }
-function f(e, t) {
+function I(e, t) {
     return {
         ...h(e),
         type: (0, o.u)(e.filename) ? "IMAGE" : (0, o.AE)(e.filename) ? "VIDEO" : "INVALID",

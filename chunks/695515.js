@@ -12,12 +12,12 @@ let c = null,
     E = !1,
     A = U(),
     h = w(),
-    I = null,
     f = null,
+    I = null,
     p = P(),
     T = !1,
-    m = !1,
-    g = null,
+    g = !1,
+    m = null,
     S = null,
     N = [],
     C = [],
@@ -113,7 +113,7 @@ function V(e) {
     v = e.reduce((e, t) => ((e[t.entitlement_id] = t), e), {});
 }
 function H() {
-    m = !0;
+    g = !0;
 }
 function j(e) {
     let { linkedUsers: t, familyCenterTeenActivity: n, ageGroup: i } = e,
@@ -127,8 +127,8 @@ function j(e) {
             topGuildActivities: E,
             totalSpendAmount: A,
             totalSpendCurrency: h,
-            spendingLimit: I,
-            monthlyPurchases: f,
+            spendingLimit: f,
+            monthlyPurchases: I,
             invoices: p,
             gifts: S,
         } = n;
@@ -144,11 +144,11 @@ function j(e) {
         (C = E),
         (O = A),
         (R = h),
-        (L = I ?? null),
-        (y = f ?? null),
+        (L = f ?? null),
+        (y = I ?? null),
         (b = i ?? null),
-        (m = !1),
-        (g = l.default.fromTimestamp(Date.now())),
+        (g = !1),
+        (m = l.default.fromTimestamp(Date.now())),
         (T = !0));
 }
 function W(e) {
@@ -174,8 +174,8 @@ function K(e) {
         totalSpendCurrency: E,
         invoices: A,
         gifts: h,
-        spendingLimit: I,
-        monthlyPurchases: f,
+        spendingLimit: f,
+        monthlyPurchases: I,
     } = t;
     ((c = a),
         (u = s),
@@ -186,12 +186,12 @@ function K(e) {
         null != h && V(h),
         (N = o),
         (C = d),
-        (m = !1),
-        (g = l.default.fromTimestamp(Date.now())),
+        (g = !1),
+        (m = l.default.fromTimestamp(Date.now())),
         (O = _),
         (R = E),
-        (L = I ?? null),
-        (y = f ?? null));
+        (L = f ?? null),
+        (y = I ?? null));
 }
 function $(e) {
     let { familyCenterTeenActivity: t } = e,
@@ -208,7 +208,7 @@ function X(e) {
 }
 function Z(e) {
     let { linkCode: t, expiresAt: n } = e;
-    ((I = t), (f = n));
+    ((f = t), (I = n));
 }
 function q(e) {
     let { tab: t } = e;
@@ -238,13 +238,13 @@ function et() {
     ((c = null),
         (u = null),
         (_ = {}),
-        (I = null),
         (f = null),
+        (I = null),
         (A = U()),
         (h = w()),
         (M = {}),
-        (m = !1),
-        (g = null),
+        (g = !1),
+        (m = null),
         (p = P()),
         (E = !1),
         (N = []),
@@ -338,10 +338,10 @@ class en extends r.A {
         return h[e];
     }
     getLinkCode() {
-        return I;
+        return f;
     }
     getLinkCodeExpiresAt() {
-        return f;
+        return I;
     }
     getGuild(e) {
         return M[e];
@@ -362,7 +362,7 @@ class en extends r.A {
         return S;
     }
     isLoading() {
-        return m;
+        return g;
     }
     getTopUserActivities() {
         return N;
@@ -403,7 +403,7 @@ class en extends r.A {
         return b;
     }
     canRefetch() {
-        return null === g || l.default.age(g) > d.fD;
+        return null === m || l.default.age(m) > d.fD;
     }
     isCurrentUserInRestrictedHours() {
         let e = a.default.getCurrentUser();

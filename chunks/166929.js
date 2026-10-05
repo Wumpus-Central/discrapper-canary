@@ -1,14 +1,14 @@
 (n.d(t, {
     ET: () => L,
-    Wn: () => I,
+    Wn: () => f,
     aV: () => C,
     dg: () => R,
     eq: () => p,
-    iF: () => g,
+    iF: () => m,
     kZ: () => S,
     s7: () => N,
     tH: () => O,
-    yo: () => f,
+    yo: () => I,
 }),
     n(321073));
 var i,
@@ -64,7 +64,7 @@ let c = [0, 5e5, 1e6, 15e5, 2e6, 3e6, 4e6, 5e6, 6e6, 7e6, 8e6],
         "cryptorInvalidNonceCount",
     ]),
     h = ["bytes", "packets", "framesNetwork", "framesCodec"];
-var I =
+var f =
         (((i = {}).H264 = "H264"),
         (i.H265 = "H265"),
         (i.VP8 = "VP8"),
@@ -72,7 +72,7 @@ var I =
         (i.AV1 = "AV1"),
         (i.UNKNOWN = "UNKNOWN"),
         i),
-    f =
+    I =
         (((r = {}).NVIDIA_CUDA = "nvidia_cuda"),
         (r.NVIDIA_DIRECT_3D = "nvidia_direct_3d"),
         (r.NVIDIA_VULKAN = "nvidia_vulkan"),
@@ -138,7 +138,7 @@ let T = Object.freeze({
         "mediafoundation hw": "wmf_hw",
         "mediafoundation direct3d": "wmf_direct_3d",
     }),
-    m = Object.freeze({
+    g = Object.freeze({
         videotoolbox: "videotoolbox",
         libvpx: "vp8_libvpx",
         electron: "electron",
@@ -155,7 +155,7 @@ let T = Object.freeze({
         "c2.android": "android",
         "omx.google": "android",
     });
-var g =
+var m =
     (((s = {})[(s.None = 0)] = "None"),
     (s[(s.ClientSideDisableVideo = 1)] = "ClientSideDisableVideo"),
     (s[(s.SenderStopped = 2)] = "SenderStopped"),
@@ -167,7 +167,7 @@ function S(e) {
 }
 function N(e) {
     if (null == e) return "unknown";
-    for (let t of Object.keys(m)) if (e.toLowerCase().includes(t)) return m[t];
+    for (let t of Object.keys(g)) if (e.toLowerCase().includes(t)) return g[t];
     return "uncategorized";
 }
 function C(e) {
@@ -453,19 +453,19 @@ class R {
                 codecType: A,
                 localWant: h,
             } = t,
-            { timestamp: I } = n,
-            f = (a - I) / 1e3;
+            { timestamp: f } = n,
+            I = (a - f) / 1e3;
         if (
-            ((this.intervalTotal += f),
-            (this.resolutionTotal += s * f),
-            (this.minorResolutionTotal += l * f),
-            (this.majorResolutionTotal += o * f),
+            ((this.intervalTotal += I),
+            (this.resolutionTotal += s * I),
+            (this.minorResolutionTotal += l * I),
+            (this.majorResolutionTotal += o * I),
             (this.cryptorMaxAttempts = Math.max(this.cryptorMaxAttempts, t.cryptorMaxAttempts)),
             null != d &&
                 null != A &&
                 "encoderBuckets" in this &&
-                ((this.encoderBuckets[d] += f),
-                (this.codecBuckets[A] += f),
+                ((this.encoderBuckets[d] += I),
+                (this.codecBuckets[A] += I),
                 null != t.codecType && "UNKNOWN" !== t.codecType && (this.encoderCodec = t.codecType),
                 null != e.vmafScore &&
                     e.vmafScore >= 0 &&
@@ -485,24 +485,24 @@ class R {
             null != E &&
                 null != A &&
                 "decoderBuckets" in this &&
-                ((this.decoderBuckets[E] += f),
-                (this.codecBuckets[A] += f),
+                ((this.decoderBuckets[E] += I),
+                (this.codecBuckets[A] += I),
                 null != t.codecType && "UNKNOWN" !== t.codecType && (this.decoderCodec = t.codecType)),
             this.statsWindow.length < 6)
         )
             return;
-        let { bytes: p, framesCodec: T, timestamp: m } = this.statsWindow[this.statsWindow.length - 3];
+        let { bytes: p, framesCodec: T, timestamp: g } = this.statsWindow[this.statsWindow.length - 3];
         _.forEach((e) => {
-            s <= e && (this.resolutionBuckets[e] += f);
+            s <= e && (this.resolutionBuckets[e] += I);
         });
-        let g = (a - m) / 1e3,
-            S = ((i - p) * 8) / g,
-            N = (r - T) / g;
+        let m = (a - g) / 1e3,
+            S = ((i - p) * 8) / m,
+            N = (r - T) / m;
         (c.forEach((e) => {
-            S <= e && (this.bitrateBuckets[e] += f);
+            S <= e && (this.bitrateBuckets[e] += I);
         }),
             u.forEach((e) => {
-                N <= e && (this.fpsBuckets[e] += f);
+                N <= e && (this.fpsBuckets[e] += I);
             }),
             this.resolutionHistogram.addSample(s),
             this.bitrateHistogram.addSample(S),
@@ -523,7 +523,7 @@ class R {
     }
 }
 class L extends R {
-    encoderBuckets = Object.fromEntries(Object.values(f).map((e) => [e, 0]));
+    encoderBuckets = Object.fromEntries(Object.values(I).map((e) => [e, 0]));
     encoderCodec = "UNKNOWN";
     targetFrames = 0;
     targetBytesMax = 0;

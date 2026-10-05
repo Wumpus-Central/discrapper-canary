@@ -1,17 +1,17 @@
 n.d(t, {
     Lp: () => A,
     N: () => S,
-    Ot: () => f,
+    Ot: () => I,
     Q9: () => C,
-    Qv: () => m,
+    Qv: () => g,
     Ux: () => E,
     Xs: () => R,
     dd: () => T,
     i8: () => p,
     n5: () => h,
-    oX: () => g,
+    oX: () => m,
     sM: () => N,
-    us: () => I,
+    us: () => f,
     w$: () => L,
 });
 var i = n(17928),
@@ -36,29 +36,29 @@ function A(e, t) {
 function h(e) {
     return { isPublic: (e & c.Zh.PUBLIC) != 0, isShared: (e & c.Zh.SHAREABLE) != 0 };
 }
-function I(e) {
+function f(e) {
     return e?.type === _.rbe.GUILD_APP ? (e.application_id ?? null) : null;
 }
-function f(e, t) {
+function I(e, t) {
     return (
         null != e &&
         (e.guild_id === t || e.preview_guild_id === t || (null == e.guild_id && null == e.preview_guild_id))
     );
 }
 function p(e, t) {
-    for (let { channel: n } of s.Ay.getChannels(e)[s.I6]) if (I(n) === t) return n.id;
+    for (let { channel: n } of s.Ay.getChannels(e)[s.I6]) if (f(n) === t) return n.id;
     return null;
 }
 function T(e, t) {
     return (0, u.L0)({ guildId: e.id, location: t }) && !e.features.has(_.GuildFeatures.INTERNAL_EMPLOYEE_ONLY);
 }
-function m(e, t) {
+function g(e, t) {
     return e.filter((e) => T(e, t)).sort((e, t) => (e.id < t.id ? -1 : +(e.id > t.id)));
 }
-function g(e) {
+function m(e) {
     let t = d.A.getGuildId(),
         n = null == t ? null : l.A.getGuild(t);
-    return null != n && T(n, e) ? n.id : (m(l.A.getGuildsArray(), e)[0]?.id ?? null);
+    return null != n && T(n, e) ? n.id : (g(l.A.getGuildsArray(), e)[0]?.id ?? null);
 }
 function S(e, t) {
     return T(e, t);
@@ -84,7 +84,7 @@ function O(e, t, n) {
     );
 }
 function R(e, t) {
-    let n = I(e),
+    let n = f(e),
         i = null != n && a.A.isHydrated(n) ? a.A.getApplication(n) : null;
     return O(e, l.A.getGuild(e?.guild_id), i) && (0, u.L0)({ guildId: e?.guild_id, location: t });
 }

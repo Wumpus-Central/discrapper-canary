@@ -4,13 +4,13 @@
         GameProfileSources: () => A,
         GameProfileTrackActionActions: () => E,
         GameProfileTypes: () => h,
-        generateViewId: () => I,
+        generateViewId: () => f,
         getGuildIdAndVerifiedFromInvite: () => S,
         trackGameProfileAction: () => T,
         trackGameProfileClose: () => p,
-        trackGameProfileEmbedAction: () => g,
-        trackGameProfileFeedback: () => m,
-        trackGameProfileOpen: () => f,
+        trackGameProfileEmbedAction: () => m,
+        trackGameProfileFeedback: () => g,
+        trackGameProfileOpen: () => I,
     }));
 var i,
     r,
@@ -101,10 +101,10 @@ var i,
         (a.VoiceChannelGames = "voice_channel_games"),
         a),
     h = (((s = {}).FullProfile = "full_profile"), (s.MiniProfile = "mini_profile"), s);
-function I() {
+function f() {
     return (0, l.A)();
 }
-function f(e) {
+function I(e) {
     let { viewId: t, source: n, gameName: i, gameId: r, authorId: a, profileType: s } = e;
     return (
         d.default.track(c.HAw.GAME_PROFILE_OPEN, {
@@ -166,7 +166,7 @@ function T(e) {
         source: u,
     });
 }
-function m(e) {
+function g(e) {
     let {
         viewId: t,
         applicationId: n,
@@ -184,7 +184,7 @@ function m(e) {
         submitted: s,
     });
 }
-function g(e) {
+function m(e) {
     let { gameName: t, gameId: n, action: i } = e;
     d.default.track(c.HAw.GAME_PROFILE_EMBED_ACTION, { game_name: t, application_id: n, action: i });
 }

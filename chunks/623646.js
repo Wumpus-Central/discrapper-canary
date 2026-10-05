@@ -12,28 +12,28 @@ var i = n(477900),
     E = n(43990),
     A = n(508382),
     h = n(365912),
-    I = n(38112);
-let f = new WeakMap();
+    f = n(38112);
+let I = new WeakMap();
 function p(e) {
-    let t = (0, c.p3)(e, I.qd);
+    let t = (0, c.p3)(e, f.qd);
     return (null == t && (t = (0, c.wB)(e, A.IP)), t ?? null);
 }
 function T(e, t) {
     if (e.contains(t)) return !0;
     let n = p(t);
     for (; null != n;) {
-        let t = f.get(n);
+        let t = I.get(n);
         if (null == t) break;
         if (e.contains(t)) return !0;
         n = p(t);
     }
     return !1;
 }
-function m(e) {
+function g(e) {
     let { positionKey: t, position: n, align: i } = e;
     return null != t ? t : `${n}:${i}`;
 }
-function g(e, t, n, i, r) {
+function m(e, t, n, i, r) {
     switch (e) {
         case "top":
             return (
@@ -207,7 +207,7 @@ class C extends r.Component {
         let r = (0, h.J$)(i),
             { style: a, nudge: s } = this.calculatePositionStyle(e, i, r),
             l = { position: e, style: a, nudge: s },
-            d = g(e, a, i, r, n),
+            d = m(e, a, i, r, n),
             c = d,
             u = null,
             _ = 0;
@@ -215,7 +215,7 @@ class C extends r.Component {
             let t = S(e),
                 a = this.calculatePositionStyle(t, i, r);
             ((u = a.style), (_ = a.nudge));
-            let s = g(t, u, i, r, n);
+            let s = m(t, u, i, r, n);
             if ((s > d && ((l = { position: t, style: u, nudge: _ }), (c = s)), d < 0 && s < 0)) {
                 let a,
                     s = l.position;
@@ -229,7 +229,7 @@ class C extends r.Component {
                     a !== t
                 ) {
                     let e = this.calculatePositionStyle(a, i, r, s),
-                        t = g(S(s), e.style, i, r, n);
+                        t = m(S(s), e.style, i, r, n);
                     t > c && ((l = { position: s, ...e }), (c = t));
                 }
             }
@@ -255,7 +255,7 @@ class C extends r.Component {
         this.setState({ isPositioned: !0, ...this.calculateState() });
         let n = this.elementRef.current;
         (o()(null != n, "Missing elementRef"),
-            null != e.current && f.set(n, e.current),
+            null != e.current && I.set(n, e.current),
             n?.ownerDocument?.defaultView?.addEventListener("resize", this.updatePosition));
         let i = n?.ownerDocument?.defaultView?.ResizeObserver;
         (null != n &&
@@ -266,14 +266,14 @@ class C extends r.Component {
     componentDidUpdate(e, t) {
         var n;
         let i, r;
-        ((m(e) !== m(this.props) || ((n = this.props), (i = N(e)), (r = N(n)), i.top !== r.top || i.left !== r.left)) &&
+        ((g(e) !== g(this.props) || ((n = this.props), (i = N(e)), (r = N(n)), i.top !== r.top || i.left !== r.left)) &&
             this.updatePosition(),
             t.position !== this.state.position && this.props.onPositionChange?.(this.state.position));
     }
     componentWillUnmount() {
         let e = this.elementRef.current;
         (o()(null != e, "Missing elementRef"),
-            f.delete(e),
+            I.delete(e),
             e?.ownerDocument?.defaultView?.removeEventListener("resize", this.updatePosition),
             this.resizeObserver?.disconnect(),
             this.props.onUnmount?.());
@@ -309,7 +309,7 @@ class C extends r.Component {
             { position: o, isPositioned: d, nudge: c } = this.state,
             A = this.calculateMaxHeight();
         return (0, i.jsx)("div", {
-            className: s()({ [I.ld]: !0, [I.x7]: l }),
+            className: s()({ [f.ld]: !0, [f.x7]: l }),
             children: (0, i.jsx)(_.aS, {
                 children: (l) => {
                     let { disableAdaptiveTheme: _ } = l;
@@ -318,7 +318,7 @@ class C extends r.Component {
                         children: (l) =>
                             (0, i.jsx)("div", {
                                 id: e,
-                                className: s()(t, l, I.qd, { [I.CA]: !1, [I.Hc]: a }),
+                                className: s()(t, l, f.qd, { [f.CA]: !1, [f.Hc]: a }),
                                 style: {
                                     position: r ? "fixed" : "absolute",
                                     ...this.state.style,

@@ -12,14 +12,14 @@ var i,
     E = n(73153),
     A = n(283047),
     h = n(723176),
-    I = n(154049);
-let f = new (n(626584).A)("GuildEmojis"),
+    f = n(154049);
+let I = new (n(626584).A)("GuildEmojis"),
     p = new (class {
         async getAsync(e) {
             let t = performance.now(),
                 n = await h.A.emojis(e).getMapEntries(),
                 i = performance.now();
-            return (f.log(`asynchronously loaded in ${i - t}ms (guilds: ${n.length})`), n);
+            return (I.log(`asynchronously loaded in ${i - t}ms (guilds: ${n.length})`), n);
         }
         actions = {
             BACKGROUND_SYNC: (e, t) => this.handleBackgroundSync(e, t),
@@ -51,10 +51,10 @@ let f = new (n(626584).A)("GuildEmojis"),
                     e.emojis.map((e) => {
                         if ("unavailable" === e.dataMode) return Promise.resolve();
                         "full" === e.dataMode
-                            ? (f.verbose(`Replacing ${e.entities.length} emojis for ${e.guildId}`),
+                            ? (I.verbose(`Replacing ${e.entities.length} emojis for ${e.guildId}`),
                               this.replace(e.guildId, e.entities, t))
                             : (e.updatedEntities.length > 0 || e.deletedEntityIds.length > 0) &&
-                              (f.verbose(
+                              (I.verbose(
                                   `Updating ${e.updatedEntities.length} and deleting ${e.deletedEntityIds.length} emojis for ${e.guildId}`,
                               ),
                               this.update(e.guildId, e.updatedEntities, e.deletedEntityIds, t));
@@ -116,10 +116,10 @@ let f = new (n(626584).A)("GuildEmojis"),
             return void 0 !== t ? t().then((e) => e.default) : Promise.resolve({});
         }
     }),
-    m = function (e) {
+    g = function (e) {
         T.setParams(e);
     },
-    g = function (e) {
+    m = function (e) {
         let t = T.get();
         return void 0 !== t ? t[e] : [];
     };
@@ -234,7 +234,7 @@ async function ed() {
     let e = h.A.database();
     if (null == e) return;
     en = 1;
-    let t = await (0, I.ES)("EmojiStore.loadSavedEmojis", () =>
+    let t = await (0, f.ES)("EmojiStore.loadSavedEmojis", () =>
         u.A.timeAsync("\uD83D\uDCBE", "loadSavedEmojis", () => p.getAsync(e)),
     );
     ((en = 2), null != t && E.h.dispatch({ type: "CACHED_EMOJIS_LOADED", emojis: t }));
@@ -461,7 +461,7 @@ class eu {
             let { names: n, name: i } = t,
                 r = null != n && o().some(n, e),
                 a = null != i && e(i),
-                s = null != i && o().some(g(i), e);
+                s = null != i && o().some(m(i), e);
             return r || a || s;
         });
     }
@@ -481,10 +481,10 @@ function eA() {
 function eh(e) {
     null != er[e] && delete er[e];
 }
-function eI() {
+function ef() {
     ((ea = null), eu.reset(), 2 === en && (e_.compute(), eE.compute()));
 }
-function ef(e) {
+function eI(e) {
     (eh(e), eu.clear(e));
     let t = H.A.getGuildEmojis(e);
     if (null == t) return;
@@ -553,16 +553,16 @@ function eT(e) {
     let t = e.length > 0;
     return (t && 2 === en && e_.compute(), t);
 }
-function em(e) {
+function eg(e) {
     let {
             guildId: t,
             role: { id: n },
         } = e,
         i = P.A.getRole(t, n);
     if (!(null != i && (0, N.U)(i))) return !1;
-    (ef(t), eI());
+    (eI(t), ef());
 }
-class eg extends _.Ay.PersistedStore {
+class em extends _.Ay.PersistedStore {
     static displayName = "EmojiStore";
     static persistKey = "EmojiStoreV2";
     initialize(e) {
@@ -719,7 +719,7 @@ class eg extends _.Ay.PersistedStore {
         return null != t && t.favoriteEmojisWithoutFetchingLatest.length > 0;
     }
 }
-let eS = new eg(E.h, {
+let eS = new em(E.h, {
     LOGOUT: function () {
         ((Z.pendingUsages = []), (Z.emojiReactionPendingUsages = []));
     },
@@ -727,35 +727,35 @@ let eS = new eg(E.h, {
         eA();
     },
     CONNECTION_OPEN: function (e) {
-        for (let t of (eA(), e.guilds)) ef(t.id);
-        ((en = 0 === e.unavailableGuilds.length && e.guilds.every((e) => "full_sync" === e.emojis.op) ? 2 : 0), eI());
+        for (let t of (eA(), e.guilds)) eI(t.id);
+        ((en = 0 === e.unavailableGuilds.length && e.guilds.every((e) => "full_sync" === e.emojis.op) ? 2 : 0), ef());
     },
     OVERLAY_INITIALIZE: function (e) {
-        for (let t in (eA(), e.emojis)) ef(t);
-        ((en = 2), eI());
+        for (let t in (eA(), e.emojis)) eI(t);
+        ((en = 2), ef());
     },
     CACHED_EMOJIS_LOADED: function (e) {
         let { emojis: t } = e;
-        for (let [e] of t) M.A.isMember(e) && ef(e);
-        eI();
+        for (let [e] of t) M.A.isMember(e) && eI(e);
+        ef();
     },
     GUILD_MEMBER_UPDATE: function (e) {
         let { guildId: t, user: n } = e;
-        n.id === w.default.getCurrentUser()?.id && (ef(t), eI());
+        n.id === w.default.getCurrentUser()?.id && (eI(t), ef());
     },
     GUILD_CREATE: function (e) {
-        (ef(e.guild.id), eI());
+        (eI(e.guild.id), ef());
     },
     GUILD_UPDATE: function (e) {
-        (ef(e.guild.id), eI());
+        (eI(e.guild.id), ef());
     },
     GUILD_EMOJIS_UPDATE: function (e) {
         let { guildId: t } = e;
-        (ef(t), eI());
+        (eI(t), ef());
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        (eh(t.id), es.delete(t.id), eI());
+        (eh(t.id), es.delete(t.id), ef());
     },
     MESSAGE_REACTION_ADD: function (e) {
         if (!e.optimistic) return !1;
@@ -784,11 +784,11 @@ let eS = new eg(E.h, {
             settings: { type: t },
             wasSaved: n,
         } = e;
-        if ((m(D.default.locale), t !== z.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
+        if ((g(D.default.locale), t !== z.oD.FRECENCY_AND_FAVORITES_SETTINGS || !n)) return !1;
         ((Z.pendingUsages = []), (Z.emojiReactionPendingUsages = []));
     },
-    GUILD_ROLE_CREATE: em,
-    GUILD_ROLE_UPDATE: em,
+    GUILD_ROLE_CREATE: eg,
+    GUILD_ROLE_UPDATE: eg,
     TOP_EMOJIS_FETCH_SUCCESS: function (e) {
         let { guildId: t, topEmojisMetadata: n } = e;
         es.set(t, { emojiIds: n.map((e) => e.emojiId), topEmojisTTL: c()(c()()).add(1, "days").valueOf() });

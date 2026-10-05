@@ -93,7 +93,7 @@ class o {
             E = null != d ? this.accessibleDirectory.entry(d) : void 0,
             A = E?.parentSidebarItemKey === n.parentSidebarItemKey,
             h = n.parentPanelKey === d,
-            I = async () => {
+            f = async () => {
                 (t.onTransitionStart?.(),
                     A
                         ? this.maybeCreatePanelSnapshot({ currentPanelKey: d, nextPanelKey: o })
@@ -121,16 +121,16 @@ class o {
                           animatePanelScroll: c,
                           animateSidebarScroll: E,
                       });
-                let I = document.querySelector(`[data-nav-anchor-key="${e}"]`);
-                (null != I
-                    ? I.focus({ preventScroll: !0 })
+                let f = document.querySelector(`[data-nav-anchor-key="${e}"]`);
+                (null != f
+                    ? f.focus({ preventScroll: !0 })
                     : document.querySelector("[data-nav-anchor-key]")?.focus({ preventScroll: !0 }),
                     h || this.onViewChange?.(o),
                     (!c || i.Ay.useReducedMotion) &&
                         n.node.type !== r.Z6.CATEGORY &&
                         a.A.setState({ requestFlashKey: e }));
             };
-        h ? I() : this.navigateWithValidation?.(e, I);
+        h ? f() : this.navigateWithValidation?.(e, f);
     }
     async scrollToOffset(e) {
         let { scrollOffset: t } = e;

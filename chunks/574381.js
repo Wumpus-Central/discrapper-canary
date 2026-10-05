@@ -3,21 +3,21 @@ n.d(t, {
     Av: () => s,
     Ct: () => A,
     HZ: () => _,
-    Ls: () => m,
+    Ls: () => g,
     R0: () => C,
     Sn: () => h,
     cX: () => d,
     cZ: () => O,
     fg: () => r,
     j9: () => c,
-    m0: () => I,
+    m0: () => f,
     q4: () => p,
     r_: () => N,
     t1: () => S,
     tn: () => T,
     uF: () => o,
-    un: () => f,
-    uo: () => g,
+    un: () => I,
+    uo: () => m,
     xl: () => u,
 });
 var i,
@@ -38,7 +38,7 @@ function u() {
     return o() || d() || c();
 }
 function _() {
-    return "WEB" === g();
+    return "WEB" === m();
 }
 function E() {
     return (
@@ -52,10 +52,10 @@ function A() {
 function h() {
     return navigator.userAgent?.match(/Macintosh/i) != null;
 }
-function I() {
+function f() {
     return "android" === l;
 }
-function f() {
+function I() {
     return "ios" === l;
 }
 function p() {
@@ -64,10 +64,10 @@ function p() {
 function T() {
     return p();
 }
-function m() {
+function g() {
     return u() || p() || s;
 }
-function g() {
+function m() {
     return o() ? "WINDOWS" : d() ? "OSX" : c() ? "LINUX" : "WEB";
 }
 function S() {

@@ -12,12 +12,12 @@ var i = n(582128),
     E = n(353202),
     A = n(95701),
     h = n(924985),
-    I = n(734057),
-    f = n(945886),
+    f = n(734057),
+    I = n(945886),
     p = n(576705),
     T = n(573163),
-    m = n(309010),
-    g = n(543465),
+    g = n(309010),
+    m = n(543465),
     S = n(403362),
     N = n(181079),
     C = n(93055),
@@ -25,7 +25,7 @@ var i = n(582128),
     R = n(349828),
     L = n(281405),
     y = n(818348);
-let D = [l.Ay, N.A, o.A, d.Ay, u.A, _.A, h.A, I.A, p.A, T.Ay, m.Ay, g.Ay];
+let D = [l.Ay, N.A, o.A, d.Ay, u.A, _.A, h.A, f.A, p.A, T.Ay, g.Ay, m.Ay];
 function v(e) {
     let { limit: t, includeLoading: n } = e,
         i = N.A.getFavoriteChannels(),
@@ -37,7 +37,7 @@ function v(e) {
             a.type !== s.Ip.REFERENCE_ORIGINAL ||
             null == a.channelType ||
             !A.Le.has(a.channelType) ||
-            null != I.A.getChannel(e)
+            null != f.A.getChannel(e)
         )
             continue;
         let l = E.A.getLoadState(e);
@@ -87,15 +87,15 @@ function b() {
 function M(e) {
     let { withSuggestionsNotice: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         n = e ?? N.A.getFavoriteChannels(),
-        i = g.Ay.isGuildCollapsed(R.Vc),
-        r = m.Ay.getChannelId(),
-        l = I.A.getChannel(r),
-        o = m.Ay.getVoiceChannelId(),
+        i = m.Ay.isGuildCollapsed(R.Vc),
+        r = g.Ay.getChannelId(),
+        l = f.A.getChannel(r),
+        o = g.Ay.getVoiceChannelId(),
         d = [],
         E = {};
     for (let e in n) {
         let t = n[e],
-            i = I.A.getChannel(t.id);
+            i = f.A.getChannel(t.id);
         if (null == i || t.type === s.Ip.CATEGORY) continue;
         let r = (0, O.R)(n, t, i);
         if (null == t.parentId || null == n[t.parentId] || n[t.parentId].type !== s.Ip.CATEGORY) {
@@ -116,20 +116,20 @@ function M(e) {
                         (d || E || !r
                             ? u.A.getActiveJoinedRelevantThreadsForParent(e.guild_id, e.id)
                             : u.A.getActiveJoinedUnreadThreadsForParent(e.guild_id, e.id)) ?? {},
-                    I = (0, c.wF)(e, h, l, o, i),
-                    m = f.A.isCollapsed(e.id),
-                    S = e.isThread() ? _.A.isMuted(e.id) : g.Ay.isChannelMuted(e.guild_id, e.id),
+                    f = (0, c.wF)(e, h, l, o, i),
+                    g = I.A.isCollapsed(e.id),
+                    S = e.isThread() ? _.A.isMuted(e.id) : m.Ay.isChannelMuted(e.guild_id, e.id),
                     N = {
                         id: e.id,
                         record: e,
                         category: t,
                         position: n[e.id].order,
-                        threadIds: I,
-                        threadCount: a().size(I),
-                        isCollapsed: m,
+                        threadIds: f,
+                        threadCount: a().size(f),
+                        isCollapsed: g,
                         isMuted: S,
                         isFirstVoiceChannel: !1,
-                        subtitle: (0, c.go)(e, m, !1),
+                        subtitle: (0, c.go)(e, g, !1),
                     };
                 return d || E || !a().isEmpty(h) || T.Ay.getMentionCount(e.id) > 0
                     ? N
@@ -162,7 +162,7 @@ function M(e) {
                     i = N.A.getCategoryRecord(t);
                 if (null == i) return null;
                 let r = E[t] ?? [],
-                    a = g.Ay.isChannelMuted(R.Vc, t),
+                    a = m.Ay.isChannelMuted(R.Vc, t),
                     s = h.A.isCollapsed(t),
                     l = null;
                 return {
@@ -220,7 +220,7 @@ function M(e) {
             for (let t of [b, ...M])
                 for (let n of t.channelList)
                     for (let t of (e(n.record), n.threadIds)) {
-                        let n = I.A.getChannel(t);
+                        let n = f.A.getChannel(t);
                         null != n && e(n);
                     }
         },

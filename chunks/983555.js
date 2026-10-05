@@ -12,12 +12,12 @@ var i = n(607399),
     E = n(95561),
     A = n(121401),
     h = n(587895),
-    I = n(725606),
-    f = n(167189),
+    f = n(725606),
+    I = n(167189),
     p = n(721779),
     T = n(707592),
-    m = n(698441),
-    g = n(268313),
+    g = n(698441),
+    m = n(268313),
     S = n(21599),
     N = n(376943),
     C = n(741231),
@@ -75,7 +75,7 @@ async function K(e, t) {
         }
     }
     if (null == e || "" === e) return void i();
-    let r = m.Ay.getGuildScheduledEvent(t);
+    let r = g.Ay.getGuildScheduledEvent(t);
     if (null == r)
         try {
             let { default: i } = await Promise.resolve().then(n.bind(n, 496092));
@@ -105,19 +105,19 @@ function z(e) {
             channelId: o,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : $,
         T = (0, p.br)(e);
-    if (null != T && (T.type === f.I.INVITE || T.type === f.I.EMBEDDED_ACTIVITY_INVITE))
+    if (null != T && (T.type === I.I.INVITE || T.type === I.I.EMBEDDED_ACTIVITY_INVITE))
         return (e) => (e?.preventDefault(), Y(T, l), !0);
     if (
         null != T &&
-        (T.type === f.I.APP_DIRECTORY_PROFILE ||
-            T.type === f.I.APP_DIRECTORY_STOREFRONT ||
-            T.type === f.I.APP_DIRECTORY_STOREFRONT_SKU)
+        (T.type === I.I.APP_DIRECTORY_PROFILE ||
+            T.type === I.I.APP_DIRECTORY_STOREFRONT ||
+            T.type === I.I.APP_DIRECTORY_STOREFRONT_SKU)
     )
         return (t) => {
             t?.preventDefault();
             let { code: r } = T,
                 { applicationId: a, skuId: s } =
-                    T.type === f.I.APP_DIRECTORY_PROFILE || T.type === f.I.APP_DIRECTORY_STOREFRONT
+                    T.type === I.I.APP_DIRECTORY_PROFILE || T.type === I.I.APP_DIRECTORY_STOREFRONT
                         ? { applicationId: r, skuId: void 0 }
                         : ((0, A.u)(r) ?? { applicationId: void 0, skuId: void 0 }),
                 l = k.A.getGuildId() ?? void 0;
@@ -140,14 +140,14 @@ function z(e) {
                               t({
                                   tab: i.APPS,
                                   applicationId: a,
-                                  section: (0, g.A)(r, T.type === f.I.APP_DIRECTORY_PROFILE ? r.ABOUT : r.STORE),
+                                  section: (0, m.A)(r, T.type === I.I.APP_DIRECTORY_PROFILE ? r.ABOUT : r.STORE),
                                   skuId: s,
                               });
                           })),
                 !0
             );
         };
-    if (null != T && T.type === f.I.ACTIVITY_BOOKMARK)
+    if (null != T && T.type === I.I.ACTIVITY_BOOKMARK)
         return (e) => {
             e?.preventDefault();
             let { code: t, url: n } = T,
@@ -155,10 +155,10 @@ function z(e) {
                 r = new URL(n),
                 l = r.searchParams.get("referrer_id") ?? void 0,
                 o = (0, _.A)(),
-                { currentChannelId: E, instanceId: A, isCurrentlyInInstance: f, canLaunchInChannel: p } = (0, I.t)(t);
+                { currentChannelId: E, instanceId: A, isCurrentlyInInstance: I, canLaunchInChannel: p } = (0, f.t)(t);
             if (p)
                 return (
-                    !f &&
+                    !I &&
                     null != E &&
                     ((0, u.d9)(t, r.searchParams.get("link_id"), r.searchParams.get("custom_id"))
                         .then(async (e) => {
@@ -200,7 +200,7 @@ function z(e) {
                 );
             }
         };
-    if (null != T && T.type === f.I.GUILD_PRODUCT)
+    if (null != T && T.type === I.I.GUILD_PRODUCT)
         return (e) => {
             e?.preventDefault();
             let [t, i] = T.code.split("-");
@@ -214,7 +214,7 @@ function z(e) {
                 !0
             );
         };
-    if (null != T && T.type === f.I.SOCIAL_LAYER_STOREFRONT)
+    if (null != T && T.type === I.I.SOCIAL_LAYER_STOREFRONT)
         return (e) => {
             let t = (0, D.rg)(T.code);
             if (null == t) return !1;
@@ -244,7 +244,7 @@ function z(e) {
                 !0
             );
         };
-    if (null != T && T.type === f.I.SOCIAL_LAYER_STOREFRONT_APP)
+    if (null != T && T.type === I.I.SOCIAL_LAYER_STOREFRONT_APP)
         return (e) => {
             let t = (0, D.rg)(T.code);
             if (null == t) return !1;
@@ -276,7 +276,7 @@ function z(e) {
                     !0
                 );
         };
-    if (null != T && T.type === f.I.QUESTS_EMBED && (0, O.s)())
+    if (null != T && T.type === I.I.QUESTS_EMBED && (0, O.s)())
         return (e) => {
             e?.preventDefault();
             let { search: t } = V.A.toURLSafe(T.url) ?? {};
@@ -286,7 +286,7 @@ function z(e) {
             }
             return ((0, R.m)({ fromContent: r.u.QUEST_SHARE_LINK, questId: T.code }), !0);
         };
-    if (null != T && T.type === f.I.GAME_PROFILE)
+    if (null != T && T.type === I.I.GAME_PROFILE)
         return (e) => {
             e?.preventDefault();
             let { GameProfileSources: t } = n(409626),
@@ -307,8 +307,8 @@ function z(e) {
                 !0
             );
         };
-    let { host: m, hostname: S, pathname: M, search: P, hash: U } = V.A.toURLSafe(e) ?? {},
-        w = V.A.isDiscordHostname(S ?? null) || V.A.isDiscordLocalhost(m ?? null, S ?? null);
+    let { host: g, hostname: S, pathname: M, search: P, hash: U } = V.A.toURLSafe(e) ?? {},
+        w = V.A.isDiscordHostname(S ?? null) || V.A.isDiscordLocalhost(g ?? null, S ?? null);
     if (w && (M?.startsWith("/application-directory") || M?.startsWith("/discovery/applications"))) {
         let e = M.split("/"),
             t = M?.startsWith("/discovery/applications"),
@@ -368,7 +368,7 @@ function z(e) {
             return (e) => (
                 e?.preventDefault(),
                 null != T &&
-                    T.type === f.I.APP_OAUTH2_LINK &&
+                    T.type === I.I.APP_OAUTH2_LINK &&
                     E.Ay.trackWithMetadata(j.HAw.APP_OAUTH2_LINK_EMBED_URL_CLICKED, { application_id: r.clientId }),
                 i(r),
                 !0

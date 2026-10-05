@@ -12,12 +12,12 @@ var i = n(435558),
     E = n(945096),
     A = n(316031),
     h = n(264388),
-    I = n(518782),
-    f = n(164956),
+    f = n(518782),
+    I = n(164956),
     p = n(403362),
     T = n(7864),
-    m = n(935208),
-    g = n(280450),
+    g = n(935208),
+    m = n(280450),
     S = n(734057),
     N = n(317525),
     C = n(71393),
@@ -49,7 +49,7 @@ function B(e) {
     ((P += 1), (w[e] = P));
 }
 function V(e) {
-    (j(e) === g.default.getId() && (0, h.G)(W(e)), delete b[e]);
+    (j(e) === m.default.getId() && (0, h.G)(W(e)), delete b[e]);
 }
 function H(e, t) {
     let n = [];
@@ -105,7 +105,7 @@ function K(e) {
             unusualDMActivityUntil: E,
             fullProfileLoadedTimestamp: A,
             flags: h,
-            collectibles: I,
+            collectibles: f,
             displayNameStyles: p,
             gamingLeaderboardData: T,
             vadColors: S,
@@ -131,7 +131,7 @@ function K(e) {
             unusualDMActivityUntil: E,
             fullProfileLoadedTimestamp: A,
             flags: h,
-            collectibles: I,
+            collectibles: f,
             displayNameStyles: p,
             gamingLeaderboardData: T,
             vadColors: S,
@@ -141,10 +141,10 @@ function K(e) {
         null == L[i])
     )
         return M;
-    if (t === g.default.getId())
-        if (f.A.isViewingRoles(i) || f.A.isFullServerPreview(i)) {
-            let e = f.A.getViewingRoles(i);
-            D[i] = { ...M, ...f.A.getMemberOptions(i), roles: null != e ? m.default.keys(e) : [] };
+    if (t === m.default.getId())
+        if (I.A.isViewingRoles(i) || I.A.isFullServerPreview(i)) {
+            let e = I.A.getViewingRoles(i);
+            D[i] = { ...M, ...I.A.getMemberOptions(i), roles: null != e ? g.default.keys(e) : [] };
         } else null != D[i] && delete D[i];
     return M;
 }
@@ -175,8 +175,8 @@ function z(e) {
             flags: E,
             collectibles: A,
             displayNameStyles: h,
-            gamingLeaderboardData: I,
-            vadColors: f,
+            gamingLeaderboardData: f,
+            vadColors: I,
         } = e,
         p = L[t];
     if (null == p) return !1;
@@ -199,8 +199,8 @@ function z(e) {
         flags: E,
         collectibles: A,
         displayNameStyles: h,
-        gamingLeaderboardData: I,
-        vadColors: f,
+        gamingLeaderboardData: f,
+        vadColors: I,
     })),
         k(t, p[n.id]));
 }
@@ -229,7 +229,7 @@ function X(e, t) {
                   unusualDMActivityUntil: t.unusual_dm_activity_until ?? r?.unusualDMActivityUntil,
                   collectibles: (0, u.t)(t.collectibles),
                   displayNameStyles: (0, E.mT)(t.display_name_styles),
-                  gamingLeaderboardData: (0, I.Rt)(t.member_gaming_leaderboard_data),
+                  gamingLeaderboardData: (0, f.Rt)(t.member_gaming_leaderboard_data),
                   vadColors: t.vad_colors ?? null,
               })),
                   k(e, n[t.user.id]));
@@ -274,7 +274,7 @@ function J(e) {
                 unusualDMActivityUntil: r.unusual_dm_activity_until ?? s?.unusualDMActivityUntil,
                 collectibles: (0, u.t)(r.collectibles),
                 displayNameStyles: (0, E.mT)(r.display_name_styles),
-                gamingLeaderboardData: (0, I.Rt)(r.member_gaming_leaderboard_data),
+                gamingLeaderboardData: (0, f.Rt)(r.member_gaming_leaderboard_data),
                 vadColors: r.vad_colors ?? null,
             });
         ((i[a] = l), k(t, l));
@@ -286,8 +286,8 @@ function ee(e) {
     if (null == t) return !1;
     let n = C.A.getGuild(e.guildId);
     if (null == n) return (R.warn(`Guild ${e.guildId} not found during ${e.type}.`), !1);
-    let i = g.default.getId();
-    for (let r of m.default.keys(t)) {
+    let i = m.default.getId();
+    for (let r of g.default.keys(t)) {
         let a = t[r];
         if ((null != a.roles && a.roles.length > 0) || null != a.colorString || null != a.hoistRoleId) {
             let s = r === i && "GUILD_ROLE_DELETE" === e.type ? a.roles.filter((t) => t !== e.roleId) : a.roles;
@@ -319,7 +319,7 @@ function et(e) {
     if (null == n) return !1;
     let i = C.A.getGuild(t);
     if (null == i) return (R.warn(`Guild ${t} not found during IMPERSONATE_UPDATE.`), !1);
-    let r = g.default.getId(),
+    let r = m.default.getId(),
         a = n[r];
     n[r] = K({
         userId: r,
@@ -394,7 +394,7 @@ function el(e) {
 class eo extends s.Ay.Store {
     static displayName = "GuildMemberStore";
     initialize() {
-        this.waitFor(g.default, S.A, N.A, C.A, f.A);
+        this.waitFor(m.default, S.A, N.A, C.A, I.A);
     }
     getMutableAllGuildsAndMembers() {
         return L;
@@ -436,7 +436,7 @@ class eo extends s.Ay.Store {
     }
     isCurrentUserGuest(e) {
         if (null == e) return !1;
-        let t = g.default.getId(),
+        let t = m.default.getId(),
             n = L[e];
         if (null == n || null == n[t]) return !1;
         let i = n[t].flags;
@@ -445,7 +445,7 @@ class eo extends s.Ay.Store {
     getMemberIds(e) {
         if (null == e) return [];
         let t = L[e];
-        return null == t ? [] : m.default.keys(t);
+        return null == t ? [] : g.default.keys(t);
     }
     getMembers(e) {
         if (null == e) return [];
@@ -458,12 +458,12 @@ class eo extends s.Ay.Store {
     }
     getMember(e, t) {
         let n = this.getTrueMember(e, t);
-        return null != n && t === g.default.getId() && (f.A.isViewingRoles(e) || f.A.isFullServerPreview(e))
+        return null != n && t === m.default.getId() && (I.A.isViewingRoles(e) || I.A.isFullServerPreview(e))
             ? (D[e] ?? n)
             : n;
     }
     getSelfMember(e) {
-        return this.getMember(e, g.default.getId());
+        return this.getMember(e, m.default.getId());
     }
     getSelfMemberJoinedAt(e) {
         let t = y[e];
@@ -540,7 +540,7 @@ let ed = new eo(l.h, {
     GUILD_MEMBER_UPDATE: z,
     GUILD_MEMBER_UPDATE_LOCAL: function (e) {
         let { guildId: t, roles: n, addedRoleIds: i, removedRoleIds: a, flags: s } = e,
-            l = g.default.getId(),
+            l = m.default.getId(),
             o = L[t],
             d = null != o ? o[l] : null;
         if (null == d) return !1;
@@ -658,7 +658,7 @@ let ed = new eo(l.h, {
             fullProfileLoadedTimestamp: Date.now(),
             collectibles: (0, u.t)(t.collectibles),
             displayNameStyles: (0, E.mT)(t.display_name_styles),
-            gamingLeaderboardData: (0, I.Rt)(t.member_gaming_leaderboard_data),
+            gamingLeaderboardData: (0, f.Rt)(t.member_gaming_leaderboard_data),
             vadColors: t.vad_colors ?? null,
         })),
             k(n, i[t.user.id]));

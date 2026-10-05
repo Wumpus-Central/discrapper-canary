@@ -34,10 +34,10 @@ function h(e, t) {
     if (null == A) throw Error("Cannot use cloud sync when not authenticated.");
     let h = null != s.installPath ? (0, l.A)(s.installPath) : null;
     if (null == h) throw Error(`No install path for ${e}:${t}`);
-    let I = o.default.getId(),
-        f = {
+    let f = o.default.getId(),
+        I = {
             forceHash: n,
-            manifestPath: E.gkb.STORAGE_MANIFEST(h, I),
+            manifestPath: E.gkb.STORAGE_MANIFEST(h, f),
             roots:
                 null != u.roots
                     ? u.roots
@@ -46,13 +46,13 @@ function h(e, t) {
                               id: E.gkb.ROOT_ID,
                               paths: Object.keys(E.gkb.ROOT_PLATFORMS).map((e) => ({
                                   platform: e,
-                                  path: E.gkb.ROOT_STORAGE_PATH(h, I),
+                                  path: E.gkb.ROOT_STORAGE_PATH(h, f),
                               })),
                               patterns: E.gkb.ROOT_PATTERN,
                           },
                       ],
             storage: { baseURL: `${(0, r.TP)()}${E.Rsh.APPLICATION_STORAGE(e, t)}`, token: A },
-            replacements: { INSTALLDIR: E.gkb.INSTALL_DIR(h), USERID: I, BRANCHID: t },
+            replacements: { INSTALLDIR: E.gkb.INSTALL_DIR(h), USERID: f, BRANCHID: t },
         };
-    return a.sync(_, f);
+    return a.sync(_, I);
 }

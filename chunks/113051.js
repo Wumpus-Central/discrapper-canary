@@ -27,14 +27,14 @@ function _(e, t) {
             if (_ && null != u) return u;
         })(_, E, A, u, t.soundboardSounds);
     if (null == h) return { type: "text", content: (0, o.A)(n, u) };
-    let I = h?.name ?? u;
+    let f = h?.name ?? u;
     return {
         type: "soundboard",
         soundId: u,
         guildId: n,
         messageId: t.messageId,
         channelId: t.channelId,
-        content: I,
+        content: f,
         emojiId: h?.emojiId,
         emojiName: h?.emojiName,
         emojiSrc: h?.emojiId != null ? (0, a._O)({ id: h?.emojiId, animated: !1, size: 16 }) : void 0,

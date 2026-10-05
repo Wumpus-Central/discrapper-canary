@@ -1,21 +1,21 @@
-s.d(t, { q: () => u });
-var r = s(477900);
-s(582128);
-var n = s(503698),
-    a = s.n(n),
-    i = s(457287),
-    l = s(375708),
-    c = s(640956);
-function u(e) {
-    let { className: t, currencies: s, onChange: n, selectedCurrency: u, ...o } = e;
-    return (0, r.jsx)(i.f, {
-        currencies: s,
-        className: a()(c.p, t),
-        children: (0, r.jsx)(i.A, {
-            label: l.intl.string(l.t["/AAR02"]),
-            selectedCurrency: u,
-            currencies: s,
-            onChange: n,
+n.d(t, { q: () => c });
+var r = n(477900);
+n(582128);
+var i = n(503698),
+    a = n.n(i),
+    l = n(457287),
+    s = n(375708),
+    u = n(640956);
+function c(e) {
+    let { className: t, currencies: n, onChange: i, selectedCurrency: c, ...o } = e;
+    return (0, r.jsx)(l.f, {
+        currencies: n,
+        className: a()(u.p, t),
+        children: (0, r.jsx)(l.A, {
+            label: s.intl.string(s.t["/AAR02"]),
+            selectedCurrency: c,
+            currencies: n,
+            onChange: i,
             ...o,
         }),
     });

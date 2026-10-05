@@ -1,4 +1,4 @@
-(n.d(t, { Pq: () => eI, rq: () => eA, Ay: () => ef, he: () => eh }), n(938796));
+(n.d(t, { Pq: () => ef, rq: () => eA, Ay: () => eI, he: () => eh }), n(938796));
 var i = n(481613),
     r = n.n(i),
     a = n(562708),
@@ -12,8 +12,8 @@ var i = n(481613),
     E = n(205693),
     A = n(933681),
     h = n(73153),
-    I = n(181658),
-    f = n(178253),
+    f = n(181658),
+    I = n(178253),
     p = n(811024);
 function T(e) {
     let { channelId: t, applicationId: n, intent: i, inviterUserId: r, analyticsLocations: a, commandOrigin: s } = e;
@@ -27,8 +27,8 @@ function T(e) {
         commandOrigin: s,
     });
 }
-var m = n(612200),
-    g = n(323073),
+var g = n(612200),
+    m = n(323073),
     S = n(45645),
     N = n(392054),
     C = n(197111),
@@ -109,7 +109,7 @@ function eE(e, t) {
             null == a ||
             (!(
                 (r.nsfw && !a.nsfwAllowed) ||
-                (r.isGuildVocalOrThread() && (0, g.Tv)(e)) ||
+                (r.isGuildVocalOrThread() && (0, m.Tv)(e)) ||
                 (r.isGuildVocalOrThread() && 0)
             ) &&
                 (t?.guildScheduledEvent != null
@@ -135,7 +135,7 @@ function eE(e, t) {
                           if (!u && !_ && !r?.forceTransition && l && X.A.getGuildId() !== t) return;
                           let { type: A } = i,
                               h = V.A.getChannel(i.id),
-                              I = (function (e, t, n) {
+                              f = (function (e, t, n) {
                                   if (n?.targetType === eo.yV.ROLE_SUBSCRIPTIONS_PURCHASE)
                                       return es.VV.ROLE_SUBSCRIPTIONS;
                                   let i = n?.targetChannelId;
@@ -151,18 +151,18 @@ function eE(e, t) {
                                       ? t.id
                                       : (H.Ay.getDefaultChannel(e, !0, er.xBc.CREATE_INSTANT_INVITE)?.id ?? t.id);
                               })(t, i, r),
-                              f = A === er.rbe.GUILD_STAGE_VOICE,
-                              m = r?.targetChannelId != null && I === r.targetChannelId,
-                              g = m ? r?.targetMessageId : void 0,
-                              S = er.BVt.CHANNEL(t, I, g);
-                          (I === i.id && (0, F.QE)(A) && r?.autoJoin !== !1
+                              I = A === er.rbe.GUILD_STAGE_VOICE,
+                              g = r?.targetChannelId != null && f === r.targetChannelId,
+                              m = g ? r?.targetMessageId : void 0,
+                              S = er.BVt.CHANNEL(t, f, m);
+                          (f === i.id && (0, F.QE)(A) && r?.autoJoin !== !1
                               ? (0, O.B)(() => {
                                     Promise.resolve()
                                         .then(n.bind(n, 730852))
                                         .then((e) => {
                                             let { default: n } = e,
                                                 s = () => {
-                                                    if (f) {
+                                                    if (I) {
                                                         ((0, k.av)(
                                                             i instanceof F.YB ? i : (0, F.createChannelRecord)(i),
                                                         ),
@@ -170,20 +170,20 @@ function eE(e, t) {
                                                         return;
                                                     }
                                                     (r?.muteOnJoinVoiceChannel && et.A.setSelfMute(E.x.DEFAULT, !0),
-                                                        n.selectVoiceChannel(I),
+                                                        n.selectVoiceChannel(f),
                                                         d === eo.yV.STREAM &&
                                                             null != o &&
                                                             ei.Nl({
                                                                 streamType: el.U4.GUILD,
                                                                 ownerId: o,
                                                                 guildId: t,
-                                                                channelId: I,
+                                                                channelId: f,
                                                             }),
                                                         d === eo.yV.EMBEDDED_APPLICATION &&
                                                             null != c &&
-                                                            ((0, x.pX)(er.BVt.CHANNEL(t ?? er.ME, I)),
+                                                            ((0, x.pX)(er.BVt.CHANNEL(t ?? er.ME, f)),
                                                             T({
-                                                                channelId: I,
+                                                                channelId: f,
                                                                 applicationId: c,
                                                                 intent: r?.intent,
                                                                 inviterUserId: r?.inviterUserId,
@@ -197,9 +197,9 @@ function eE(e, t) {
                               : (0, p.AX)(h) &&
                                 d === eo.yV.EMBEDDED_APPLICATION &&
                                 null != c &&
-                                ((0, x.pX)(er.BVt.CHANNEL(t ?? er.ME, I)),
+                                ((0, x.pX)(er.BVt.CHANNEL(t ?? er.ME, f)),
                                 T({
-                                    channelId: I,
+                                    channelId: f,
                                     applicationId: c,
                                     intent: r?.intent,
                                     inviterUserId: r?.inviterUserId,
@@ -222,7 +222,7 @@ function eE(e, t) {
                               })(
                                   i,
                                   r,
-                                  m,
+                                  g,
                               )(S));
                       })({ guildId: r.getGuildId() ?? er.ME, channel: r, options: t, analyticsLocations: i }),
                 !1))
@@ -257,10 +257,10 @@ function eh(e, t) {
         location_stack: t ?? null,
     });
 }
-function eI(e, t, n) {
+function ef(e, t, n) {
     q.default.track(er.HAw.INVITE_SERVER_CLICKED, { guild_id: e, action: t, location_stack: n ?? null });
 }
-let ef = {
+let eI = {
     resolveInvite: function e(t, n, i) {
         return h.h.isDispatching()
             ? Promise.resolve().then(() => e(t, n, i))
@@ -295,7 +295,7 @@ let ef = {
             });
             return (h.h.dispatch({ type: "INSTANT_INVITE_CREATE_SUCCESS", channelId: e, invite: r }), r);
         } catch (t) {
-            throw (h.h.dispatch({ type: "INSTANT_INVITE_CREATE_FAILURE", channelId: e }), new I.A(t));
+            throw (h.h.dispatch({ type: "INSTANT_INVITE_CREATE_FAILURE", channelId: e }), new f.A(t));
         }
     },
     async mobileCreateInvite(e, t) {
@@ -386,7 +386,7 @@ let ef = {
             s,
             { inviteKey: d, context: c, callback: u, skipOnboarding: E } = e,
             A = (0, P.m0)(d),
-            I = B.default.getSessionId(),
+            f = B.default.getSessionId(),
             p = Y.A.getReceivedInstallationIdForInviteCode(A),
             T = K.A.getInvite(d);
         if (null != T)
@@ -398,16 +398,16 @@ let ef = {
             let e = (0, P.y$)(d);
             ((s = e.guildScheduledEventId), (r = e.targetChannelId), (a = e.targetMessageId));
         }
-        let g = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
+        let m = ((t = s), { ...c, invite_guild_scheduled_event_id: t }),
             N = Z.default.getCurrentUser();
         return N?.hasFlag(er.nhx.QUARANTINED)
             ? ((0, w.default)(), new Promise((e, t) => t(Error())))
             : (h.h.dispatch({ type: "INVITE_ACCEPT", code: d }),
               _.Bo.post({
                   url: er.Rsh.INVITE(A),
-                  context: g,
+                  context: m,
                   oldFormErrors: !0,
-                  body: { session_id: I, invite_instance_id: c.invite_instance_id, received_installation_id: p },
+                  body: { session_id: f, invite_instance_id: c.invite_instance_id, received_installation_id: p },
                   rejectWithError: (0, _.fT)(),
               }).then(
                   async (e) => {
@@ -421,8 +421,8 @@ let ef = {
                               target_message_id: e.body.target_message_id ?? a,
                           },
                           _ = c?.guild_id ?? c?.guild?.id,
-                          I = (0, o.Lt)(c.flags ?? 0, l.Q.IS_GUEST_INVITE);
-                      if (!E && !I && null != _ && c.new_member && !c.show_verification_form) {
+                          f = (0, o.Lt)(c.flags ?? 0, l.Q.IS_GUEST_INVITE);
+                      if (!E && !f && null != _ && c.new_member && !c.show_verification_form) {
                           let { default: e } = await Promise.resolve().then(n.bind(n, 608401));
                           await e({ guildId: _ });
                       }
@@ -431,7 +431,7 @@ let ef = {
                   (e) => {
                       throw (
                           e.body?.code === er.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
-                              (0, m.yO)(ea.w_.JOIN_LARGE_GUILD_UNDERAGE),
+                              (0, g.yO)(ea.w_.JOIN_LARGE_GUILD_UNDERAGE),
                           e.body?.code === er.t02.USER_GUILD_JOIN_AGE_RESTRICTED_IOS_DISALLOWED &&
                               (0, S.e)(T?.guild?.id),
                           h.h.dispatch({
@@ -439,7 +439,7 @@ let ef = {
                               code: d,
                               error: { message: e.body?.message, code: e.body?.code },
                           }),
-                          new f.A(e)
+                          new I.A(e)
                       );
                   },
               ));
@@ -547,5 +547,5 @@ let ef = {
     clearReceivedInstallationIdForInviteCode(e) {
         h.h.dispatch({ type: "INSTANT_INVITE_RECEIVED_INSTALLATION_ID_CLEAR", inviteCode: e });
     },
-    trackInviteServerClicked: eI,
+    trackInviteServerClicked: ef,
 };

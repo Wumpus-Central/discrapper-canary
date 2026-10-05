@@ -1,4 +1,4 @@
-n.d(t, { HI: () => h, HU: () => A, cu: () => I, iA: () => _, sF: () => u });
+n.d(t, { HI: () => h, HU: () => A, cu: () => f, iA: () => _, sF: () => u });
 var i = n(582128),
     r = n(462180),
     a = n(882035),
@@ -35,7 +35,7 @@ function A(e) {
 function h(e) {
     return (A(e), null);
 }
-function I() {
+function f() {
     let { skipsSettingDefaultPageTitle: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     i.useEffect(() => {
         function e() {

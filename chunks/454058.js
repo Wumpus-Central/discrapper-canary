@@ -12,17 +12,17 @@ var i = n(17928),
     E = n(573163),
     A = n(543465),
     h = n(927813),
-    I = n(935208),
-    f = n(652215);
+    f = n(935208),
+    I = n(652215);
 let p = new Set(),
     T = {},
-    m = {},
-    g = new Set();
+    g = {},
+    m = new Set();
 function S(e) {
-    return _.A.getGuild(e)?.features.has(f.GuildFeatures.COMMUNITY) === !0;
+    return _.A.getGuild(e)?.features.has(I.GuildFeatures.COMMUNITY) === !0;
 }
 function N() {
-    for (let e of (g.clear(), _.A.getGuildIds())) S(e) && g.add(e);
+    for (let e of (m.clear(), _.A.getGuildIds())) S(e) && m.add(e);
     return !1;
 }
 function C(e, t) {
@@ -38,12 +38,12 @@ function C(e, t) {
             (0, a.ack)(
                 t,
                 {
-                    object: f.ZSU.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED,
-                    objectType: f.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                    object: I.ZSU.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED,
+                    objectType: I.AnalyticsObjectTypes.ACK_AUTOMATIC,
                 },
                 !0,
                 !0,
-                I.default.atPreviousMillisecond(t),
+                f.default.atPreviousMillisecond(t),
             ),
         );
 }
@@ -57,7 +57,7 @@ function O(e) {
     0 !== t.length &&
         ((T[e] = new Set(
             t.filter((t) => {
-                let n = I.default.extractTimestamp(t);
+                let n = f.default.extractTimestamp(t);
                 return (
                     null == E.Ay.getTrackedAckMessageId(t) &&
                     n > Date.now() - h.A.Millis.WEEK &&
@@ -67,10 +67,10 @@ function O(e) {
                 );
             }),
         )),
-        (m[e] = Date.now()));
+        (g[e] = Date.now()));
 }
 function R() {
-    I.default.keys(T).forEach((e) => {
+    f.default.keys(T).forEach((e) => {
         let t = T[e];
         T[e] = new Set([...t].filter((t) => !A.Ay.isChannelOrParentOptedIn(e, t)));
     });
@@ -88,7 +88,7 @@ class L extends i.Ay.Store {
         let n = _.A.getGuild(e);
         return (
             null != n &&
-            !!n.features.has(f.GuildFeatures.COMMUNITY) &&
+            !!n.features.has(I.GuildFeatures.COMMUNITY) &&
             (null != e && null == T[e] && O(e), T[e]?.has(t) && null == E.Ay.getTrackedAckMessageId(t))
         );
     }
@@ -105,7 +105,7 @@ let y = new L(r.h, {
         if (null == t) return !1;
         let i = T[t],
             r = !1;
-        return ((null == i || m[t] < Date.now() - h.A.Millis.HOUR) && (O(t), (r = !0)), null != n && C(t, n), r);
+        return ((null == i || g[t] < Date.now() - h.A.Millis.HOUR) && (O(t), (r = !0)), null != n && C(t, n), r);
     },
     SIDEBAR_VIEW_CHANNEL: function (e) {
         let { guildId: t, channelId: n, sidebarType: i } = e;
@@ -119,13 +119,13 @@ let y = new L(r.h, {
     CACHE_LOADED: N,
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        return (S(t.id) && g.add(t.id), !1);
+        return (S(t.id) && m.add(t.id), !1);
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e,
             n = S(t.id);
-        if (n && !g.has(t.id)) {
-            g.add(t.id);
+        if (n && !m.has(t.id)) {
+            m.add(t.id);
             let e = T[t.id],
                 n = _.A.getGuild(t.id),
                 i = new Set();
@@ -136,15 +136,15 @@ let y = new L(r.h, {
                         null != t && e.has(t) && i.add(t);
                     }),
                 (T[t.id] = i),
-                (m[t.id] = Date.now()),
+                (g[t.id] = Date.now()),
                 !0
             );
         }
-        return (n || g.delete(t.id), !1);
+        return (n || m.delete(t.id), !1);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        (delete T[t.id], g.delete(t.id));
+        (delete T[t.id], m.delete(t.id));
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;

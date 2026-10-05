@@ -21,9 +21,9 @@ function d(e) {
         [c, u, _, E] = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : [l.A, a.Ay, s.A, r.A],
         A = u.getVoiceChannelId(),
         h = null != A ? c.getVoiceStateForChannel(A, t) : null,
-        I = o && (h?.mute || h?.selfMute),
-        f = _.isSpeaking(t, d) && !I,
+        f = o && (h?.mute || h?.selfMute),
+        I = _.isSpeaking(t, d) && !f,
         p = _.isSoundSharing(t) && n,
         T = E.isUserPlayingSounds(t) && i;
-    return f || T || p;
+    return I || T || p;
 }

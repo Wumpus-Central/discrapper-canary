@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => f, J$: () => h, Wd: () => I });
+n.d(t, { Ay: () => I, J$: () => h, Wd: () => f });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -40,7 +40,7 @@ function h(e) {
     if ((null == t && (t = (0, o.wB)(e, c.IP)), null == t)) throw Error("Unexpected missing parent container");
     return t;
 }
-let I = (e) => {
+let f = (e) => {
     let { layerContext: t, children: n } = e;
     return (0, i.jsx)(t.Consumer, {
         children: (e) =>
@@ -50,12 +50,12 @@ let I = (e) => {
             })(e, n),
     });
 };
-function f(e) {
+function I(e) {
     let t = r.createContext([null, () => {}]),
         n = {
             LayerProvider: (e) => (0, i.jsx)(E, { layerContext: t, ...e }),
             LayerContainer: (e) => (0, i.jsx)(A, { layerContext: t, ...e }),
-            Layer: (e) => (0, i.jsx)(I, { layerContext: t, ...e }),
+            Layer: (e) => (0, i.jsx)(f, { layerContext: t, ...e }),
             layerContext: t,
         };
     return (

@@ -10,11 +10,11 @@ let _ = { applicationId: null, originURL: null },
     E = _,
     A = new Set(),
     h = !1;
-function I() {
+function f() {
     a = null;
 }
-function f() {
-    ((i = null), (r = null), (A = new Set()), (E.applicationId = null), (E.originURL = null), I());
+function I() {
+    ((i = null), (r = null), (A = new Set()), (E.applicationId = null), (E.originURL = null), f());
 }
 class p extends s.Ay.PersistedStore {
     static displayName = "TestModeStore";
@@ -84,7 +84,7 @@ let T = new p(l.h, {
         let { testModeApplicationId: t } = e;
         i = t;
     },
-    DEVELOPER_TEST_MODE_RESET_ERROR: I,
-    LOGOUT: f,
-    DEVELOPER_TEST_MODE_RESET: f,
+    DEVELOPER_TEST_MODE_RESET_ERROR: f,
+    LOGOUT: I,
+    DEVELOPER_TEST_MODE_RESET: I,
 });

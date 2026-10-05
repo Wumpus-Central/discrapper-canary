@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(17928),
     r = n(73153),
     a = n(573648),
@@ -45,13 +45,13 @@ let u = new Set([n(652215).fg2.CONTACTS]),
     E = [],
     A = [],
     h = {},
-    I = new Set(),
-    f = {},
+    f = new Set(),
+    I = {},
     p = {};
 function T(e) {
     ((E = e.filter((e) => !u.has(e.type) && a.A.isSupported(e.type))), (A = e.filter((e) => u.has(e.type))), (_ = !1));
 }
-class m extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "ConnectedAccountsStore";
     isJoining(e) {
         return h[e] || !1;
@@ -75,19 +75,19 @@ class m extends i.Ay.Store {
         return A.find((t) => t.type === e);
     }
     isSuggestedAccountType(e) {
-        return f[e] || !1;
+        return I[e] || !1;
     }
     addPendingAuthorizedState(e) {
-        I.add(e);
+        f.add(e);
     }
     deletePendingAuthorizedState(e) {
-        I.delete(e);
+        f.delete(e);
     }
     hasPendingAuthorizedState(e) {
-        return I.has(e);
+        return f.has(e);
     }
 }
-let g = new m(r.h, {
+let m = new g(r.h, {
     CONNECTION_OPEN: function (e) {
         T(e.connectedAccounts.map((e) => new d(e)));
     },

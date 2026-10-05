@@ -12,12 +12,12 @@ var i = n(477900),
     E = n(140735),
     A = n(649998),
     h = n(460890),
-    I = n(872162),
-    f = n(834730),
+    f = n(872162),
+    I = n(834730),
     p = n(991957),
     T = n(44482),
-    m = n(601973),
-    g = n(483084),
+    g = n(601973),
+    m = n(483084),
     S = n(641668),
     N = n(715022),
     C = n(470791);
@@ -26,8 +26,8 @@ function O(e) {
         {
             selectionMode: n,
             readOnly: a,
-            autoFocus: I,
-            clearable: f,
+            autoFocus: f,
+            clearable: I,
             fullWidth: O,
             closeOnSelect: L,
             shouldFocusWrap: y,
@@ -58,7 +58,7 @@ function O(e) {
             transitionStyles: ee,
         } = (0, S.G)(),
         et = r.useId(),
-        { options: en, groups: ei, loading: er } = (0, g.K)({ active: z, options: w, renderOption: G }),
+        { options: en, groups: ei, loading: er } = (0, m.K)({ active: z, options: w, renderOption: G }),
         ea = r.useRef(null),
         es = r.useRef(null),
         [el, eo] = r.useState(null),
@@ -68,7 +68,7 @@ function O(e) {
         e_ = L ?? "multiple" !== n,
         eE = Array.isArray(k) ? k.length > 0 : null != k,
         eA = $ || a,
-        { measuredWidth: eh, itemsForMeasurement: eI } = (function (e, t) {
+        { measuredWidth: eh, itemsForMeasurement: ef } = (function (e, t) {
             let { ref: n, width: a } = (0, l.Ay)(),
                 s = r.useId();
             return {
@@ -99,7 +99,7 @@ function O(e) {
                 ),
             };
         })(en, n),
-        ef = r.useCallback(() => {
+        eI = r.useCallback(() => {
             eA || X(!z);
         }, [eA, X, z]),
         ep = r.useCallback(
@@ -111,16 +111,16 @@ function O(e) {
         eT = r.useCallback(() => {
             (X(!1), ea.current?.focus());
         }, [X]),
-        em = r.useCallback(() => {
-            !1 !== f && ("multiple" === n ? x([]) : x(null), ea.current?.focus());
-        }, [x, n, f]);
+        eg = r.useCallback(() => {
+            !1 !== I && ("multiple" === n ? x([]) : x(null), ea.current?.focus());
+        }, [x, n, I]);
     r.useEffect(() => {
-        I && ea.current?.focus();
-    }, [I]);
-    let eg = r.useRef(null),
+        f && ea.current?.focus();
+    }, [f]);
+    let em = r.useRef(null),
         eS = r.useCallback(
             (e) => {
-                if (!eg.current?.contains(e.relatedTarget)) {
+                if (!em.current?.contains(e.relatedTarget)) {
                     if (eu.current) {
                         eu.current = !1;
                         return;
@@ -237,17 +237,17 @@ function O(e) {
                     case "Escape":
                         z
                             ? (e.preventDefault(), e.stopPropagation(), eT())
-                            : eE && f && (e.preventDefault(), e.stopPropagation(), em());
+                            : eE && I && (e.preventDefault(), e.stopPropagation(), eg());
                         break;
                     default:
                         eR(e);
                 }
             },
-            [eA, z, en, y, n, eN, el, x, eC, eT, em, eR, eE, f, X],
+            [eA, z, en, y, n, eN, el, x, eC, eT, eg, eR, eE, I, X],
         ),
         eD = r.useMemo(() => {
-            if (!O || U) return `${Math.max(eh ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + 24 * !!f + 36 + 12}px`;
-        }, [O, U, eh, n, f]),
+            if (!O || U) return `${Math.max(eh ?? 200, 200) * ("multiple" === n ? 1.5 : 1) + 24 * !!I + 36 + 12}px`;
+        }, [O, U, eh, n, I]),
         ev = "multiple" === n && eN.length > 0,
         eb = r.useRef(null);
     r.useEffect(() => {
@@ -292,23 +292,23 @@ function O(e) {
         layoutConfig: ex,
         children: (e) =>
             (0, i.jsx)("div", {
-                ref: eg,
+                ref: em,
                 style: { width: O ? "100%" : `minmax(${eD}px, 100%)` },
                 children: (0, i.jsxs)(i.Fragment, {
                     children: [
-                        (0, i.jsx)(m.p, {
+                        (0, i.jsx)(g.p, {
                             ref: eM,
                             disabled: $,
                             readOnly: a,
                             loading: er,
-                            clearable: f,
+                            clearable: I,
                             fullWidth: O,
                             isOpen: z,
                             isInert: eA,
                             hasValue: eE,
                             hasError: e?.errorMessageId != null,
-                            handleToggle: ef,
-                            handleClear: em,
+                            handleToggle: eI,
+                            handleClear: eg,
                             variant: B,
                             ...Q(),
                             children: (0, i.jsxs)(u.s, {
@@ -329,7 +329,7 @@ function O(e) {
                                 },
                                 focusProps: { ringTarget: es },
                                 className: s()(C.L5, { [C.kj]: F, [C.M8]: "multiple" === n }),
-                                onClick: ef,
+                                onClick: eI,
                                 onMouseDown: ep,
                                 onKeyDown: ey,
                                 onBlur: eS,
@@ -356,7 +356,7 @@ function O(e) {
                             onSelectionChange: eC,
                             listItems: en,
                         }),
-                        (!O || U) && eI,
+                        (!O || U) && ef,
                         !eA &&
                             z &&
                             (0, i.jsx)("div", {
@@ -391,7 +391,7 @@ function R(e) {
     return null == r || 0 === r.length
         ? (0, i.jsx)("div", {
               className: C.qf,
-              children: (0, i.jsx)(f.E, {
+              children: (0, i.jsx)(I.E, {
                   variant: "text-md/normal",
                   color: "currentColor",
                   lineClamp: 1,
@@ -399,6 +399,6 @@ function R(e) {
               }),
           })
         : "multiple" === n
-          ? (0, i.jsx)(I.C, { listRef: s, label: l.SELECTED_TAGS_HEADING, items: r, layout: "inline", onRemove: a })
+          ? (0, i.jsx)(f.C, { listRef: s, label: l.SELECTED_TAGS_HEADING, items: r, layout: "inline", onRemove: a })
           : (0, i.jsx)(T.c, { ...r[0], inInput: !0 });
 }

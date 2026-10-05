@@ -22,12 +22,12 @@ var i = n(435558),
     E = n(683760),
     A = n(392737),
     h = n(572009),
-    I = n(889227),
-    f = n(403362),
+    f = n(889227),
+    I = n(403362),
     p = n(280450),
     T = n(536802),
-    m = n(652215),
-    g = n(202541);
+    g = n(652215),
+    m = n(202541);
 let S = {},
     N = 0,
     C = "47835198259242069";
@@ -63,18 +63,18 @@ function L(e) {
     let E = e.premium_usage_flags;
     (void 0 !== E && ((e.premiumUsageFlags = E), delete e.premium_usage_flags),
         null === e.banner_color && delete e.banner_color);
-    let I = e.avatar_decoration_data;
-    void 0 !== I && ((e.avatarDecorationData = (0, l.Xq)(I)), delete e.avatar_decoration_data);
-    let f = e.collectibles;
-    void 0 !== f && (delete e.collectibles, (e.collectibles = (0, o.t)(f)));
+    let f = e.avatar_decoration_data;
+    void 0 !== f && ((e.avatarDecorationData = (0, l.Xq)(f)), delete e.avatar_decoration_data);
+    let I = e.collectibles;
+    void 0 !== I && (delete e.collectibles, (e.collectibles = (0, o.t)(I)));
     let p = e.global_name;
     void 0 !== p && ((e.globalName = p), delete e.global_name);
     let T = e.primary_guild;
     void 0 !== T && (e.primary_guild = (0, u.j)(T));
-    let m = e.display_name_styles;
-    void 0 !== m && ((e.displayNameStyles = (0, c.mT)(m)), delete e.display_name_styles);
-    let g = e.typing_indicator_style;
-    void 0 !== g && ((e.typingIndicatorStyle = (0, d.cE)(g)), delete e.typing_indicator_style);
+    let g = e.display_name_styles;
+    void 0 !== g && ((e.displayNameStyles = (0, c.mT)(g)), delete e.display_name_styles);
+    let m = e.typing_indicator_style;
+    void 0 !== m && ((e.typingIndicatorStyle = (0, d.cE)(m)), delete e.typing_indicator_style);
     let S = e.vad_colors;
     void 0 !== S && ((e.vadColors = S), delete e.vad_colors);
     let N = e.premium_state;
@@ -93,7 +93,7 @@ function D(e) {
         i = S[e.id],
         r = void 0 !== e.id && e.id === p.default.getId();
     if (null == i) {
-        if (void 0 !== (t = (i = new I.A(L(e))).premiumType) && r) {
+        if (void 0 !== (t = (i = new f.A(L(e))).premiumType) && r) {
             let e = (0, h.I9)(i);
             ((i.premiumType = v(e, i.premiumType)), (i.perks = b(e, i.perks)));
         }
@@ -133,7 +133,7 @@ function v(e, t) {
     if (!e) return t;
     let n = E.A.getPremiumTypeOverride(),
         i = E.A.getPremiumTypeActual();
-    return n === g.$I ? i : n;
+    return n === m.$I ? i : n;
 }
 function b(e, t) {
     return e ? (null === E.A.getPremiumTypeOverride() ? null : E.A.getPerksActual()) : t;
@@ -182,7 +182,7 @@ function U(e) {
             });
         }),
         null != S[p.default.getId()] &&
-            (S[C] = new I.A({
+            (S[C] = new f.A({
                 id: C,
                 username: "Wumpus",
                 discriminator: "0",
@@ -207,7 +207,7 @@ function G(e) {
     return !("incomplete" in e);
 }
 function x(e) {
-    if (null != e.users) for (let t of e.users) (t.id in S && G(t)) || (S[t.id] = new I.A(t));
+    if (null != e.users) for (let t of e.users) (t.id in S && G(t)) || (S[t.id] = new f.A(t));
 }
 function k(e) {
     let { user: t } = e;
@@ -274,7 +274,7 @@ function z(e) {
                 });
             }),
                 n.forEach((e) => {
-                    (e.type === m.rbe.DM || e.type === m.rbe.GROUP_DM) &&
+                    (e.type === g.rbe.DM || e.type === g.rbe.GROUP_DM) &&
                         (e.recipients?.forEach((e) => D(e)), null != e.recipient && D(e.recipient));
                 }));
         }),
@@ -325,11 +325,11 @@ function et(e) {
 }
 function en(e) {
     let { message: t } = e;
-    if ((P(t, !0), null != t.flags && r.Lt(t.flags, m.pr7.URGENT))) {
+    if ((P(t, !0), null != t.flags && r.Lt(t.flags, g.pr7.URGENT))) {
         let e = S[p.default.getId()];
         return (
             null != e &&
-            ((S[p.default.getId()] = e.set("flags", r.lA(e.flags, m.nhx.HAS_UNREAD_URGENT_MESSAGES, !0))), !0)
+            ((S[p.default.getId()] = e.set("flags", r.lA(e.flags, g.nhx.HAS_UNREAD_URGENT_MESSAGES, !0))), !0)
         );
     }
     return !1;
@@ -412,7 +412,7 @@ function eh(e) {
     for (let n of e.users ?? []) Object.hasOwn(S, n.id) || (t = D(n) || t);
     return t;
 }
-function eI(e) {
+function ef(e) {
     let { members: t } = e,
         n = !1;
     return (
@@ -422,7 +422,7 @@ function eI(e) {
         n
     );
 }
-function ef(e) {
+function eI(e) {
     let { addedMembers: t } = e,
         n = !1;
     return (
@@ -445,10 +445,10 @@ function ep(e) {
 function eT(e) {
     return D(e.relationship.user);
 }
-function em(e) {
+function eg(e) {
     return D(e.gameRelationship.user);
 }
-function eg(e) {
+function em(e) {
     let { relationships: t } = e;
     return t.reduce((e, t) => D(t.user) || e, !1);
 }
@@ -462,7 +462,7 @@ function eN(e) {
 function eC(e) {
     let { users: t } = e;
     t.forEach((e) => {
-        null == S[e.id] && (S[e.id] = new I.A(e));
+        null == S[e.id] && (S[e.id] = new f.A(e));
     });
 }
 function eO(e) {
@@ -584,13 +584,13 @@ class eB extends T.A {
             GUILD_MEMBER_UPDATE: eu,
             GUILD_MEMBERS_CHUNK_BATCH: eE,
             GUILD_MEMBER_LIST_UPDATE: e_,
-            THREAD_MEMBER_LIST_UPDATE: eI,
-            THREAD_MEMBERS_UPDATE: ef,
+            THREAD_MEMBER_LIST_UPDATE: ef,
+            THREAD_MEMBERS_UPDATE: eI,
             CHANNEL_CREATE: ei,
             CHANNEL_UPDATES: er,
             RELATIONSHIP_ADD: eT,
-            GAME_RELATIONSHIP_ADD: em,
-            LOAD_RELATIONSHIPS_SUCCESS: eg,
+            GAME_RELATIONSHIP_ADD: eg,
+            LOAD_RELATIONSHIPS_SUCCESS: em,
             FRIEND_SUGGESTION_CREATE: eS,
             LOAD_FRIEND_SUGGESTIONS_SUCCESS: eN,
             AUDIT_LOG_FETCH_SUCCESS: eC,
@@ -624,12 +624,12 @@ class eB extends T.A {
     }
     takeSnapshot() {
         let e = this.getCurrentUser();
-        return { version: eB.LATEST_SNAPSHOT_VERSION, data: { users: [e].filter(f.Vq) } };
+        return { version: eB.LATEST_SNAPSHOT_VERSION, data: { users: [e].filter(I.Vq) } };
     }
     handleLoadCache(e) {
         let t = this.readSnapshot(eB.LATEST_SNAPSHOT_VERSION);
-        if (null != t) for (let e of t.users) S[e.id] = new I.A(e);
-        if (null != e.users) for (let t of e.users) (t.id in S && G(t)) || (S[t.id] = new I.A(t));
+        if (null != t) for (let e of t.users) S[e.id] = new f.A(e);
+        if (null != e.users) for (let t of e.users) (t.id in S && G(t)) || (S[t.id] = new f.A(t));
         for (let t of [e.privateChannels, e.initialGuildChannels])
             for (let e of t) e.rawRecipients?.forEach((e) => D(e, !1));
     }

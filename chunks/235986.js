@@ -19,12 +19,12 @@ function E(e) {
         wrap: E = _.NO_WRAP,
         shrink: A = 1,
         grow: h = 1,
-        basis: I = "auto",
-        style: f,
+        basis: f = "auto",
+        style: I,
         ...p
     } = e;
     return (0, i.jsx)("div", {
-        style: { flexShrink: A, flexGrow: h, flexBasis: I, ...f },
+        style: { flexShrink: A, flexGrow: h, flexBasis: f, ...I },
         className: s()(l.Uu, r, a, o, E, n),
         ...p,
         children: t,

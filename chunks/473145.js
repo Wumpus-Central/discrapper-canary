@@ -9,9 +9,9 @@ n.d(t, {
     Ry: () => C,
     Ys: () => L,
     aG: () => S,
-    ax: () => g,
+    ax: () => m,
     fA: () => x,
-    fi: () => m,
+    fi: () => g,
     gb: () => O,
     k1: () => y,
     kN: () => V,
@@ -38,13 +38,13 @@ n(38405);
 var E = n(652215),
     A = n(307731),
     h = n(202541),
-    I = n(88001),
-    f = n(375708),
+    f = n(88001),
+    I = n(375708),
     p = n(148155);
 Object.freeze({ 1: 1, 2: 2, 3: 3, 4: 6, 5: 9, 6: 12, 7: 15, 8: 18, 9: 24 });
 let T = [E.TVA.NONE, E.TVA.TIER_1, E.TVA.TIER_2, E.TVA.TIER_3],
-    m = T.slice().reverse();
-function g(e) {
+    g = T.slice().reverse();
+function m(e) {
     return e === E.TVA.NONE ? E.TVA.TIER_1 : U.find((t) => t.tier === e)?.nextTier;
 }
 function S(e, t) {
@@ -65,13 +65,13 @@ function O(e) {
         { useLevels: n = !0 } = t;
     switch (e) {
         case E.TVA.NONE:
-            return n ? f.intl.string(f.t.LcKgJd) : f.intl.string(f.t.mx8j2m);
+            return n ? I.intl.string(I.t.LcKgJd) : I.intl.string(I.t.mx8j2m);
         case E.TVA.TIER_1:
-            return f.intl.string(f.t.nzXtaS);
+            return I.intl.string(I.t.nzXtaS);
         case E.TVA.TIER_2:
-            return f.intl.string(f.t["h33/uW"]);
+            return I.intl.string(I.t["h33/uW"]);
         case E.TVA.TIER_3:
-            return f.intl.string(f.t.BfF6ED);
+            return I.intl.string(I.t.BfF6ED);
         default:
             throw Error("Not a valid tier type");
     }
@@ -79,13 +79,13 @@ function O(e) {
 function R(e) {
     switch (e) {
         case E.TVA.NONE:
-            return f.intl.string(f.t.LcKgJd);
+            return I.intl.string(I.t.LcKgJd);
         case E.TVA.TIER_1:
-            return f.intl.string(f.t.xRjU1V);
+            return I.intl.string(I.t.xRjU1V);
         case E.TVA.TIER_2:
-            return f.intl.string(f.t.C7e2Bo);
+            return I.intl.string(I.t.C7e2Bo);
         case E.TVA.TIER_3:
-            return f.intl.string(f.t.avGxmk);
+            return I.intl.string(I.t.avGxmk);
         default:
             throw Error("Not a valid tier type");
     }
@@ -132,20 +132,20 @@ function M(e) {
     let r = b(c.A.boostSlots),
         a = n?.isPausedOrPausePending,
         l = r.length > 0;
-    if (a && t === h.xc.NONE && !l) return f.intl.string(f.t.mOWsF1);
+    if (a && t === h.xc.NONE && !l) return I.intl.string(I.t.mOWsF1);
     if (i?.isPremiumGroupMember())
-        return f.intl.formatToPlainString(p.default["5xN/C1"], { premiumGroupProductName: (0, I.DP)() });
+        return I.intl.formatToPlainString(p.default["5xN/C1"], { premiumGroupProductName: (0, f.DP)() });
     let { numAvailableGuildBoostSlots: o, numCanceledGuildBoostSlots: A } = Object.values(c.A.boostSlots).reduce(
         (e, t) => (B(t) && e.numCanceledGuildBoostSlots++, t.isAvailable() && e.numAvailableGuildBoostSlots++, e),
         { numAvailableGuildBoostSlots: 0, numCanceledGuildBoostSlots: 0 },
     );
     if (null == n || o > 0) return null;
-    if (n.status === E.Dmq.PAST_DUE) return f.intl.string(f.t.De4Vm6);
-    if (n.status === E.Dmq.ACCOUNT_HOLD) return f.intl.string(f.t.JakNQ8);
-    if (A > 0) return f.intl.string(f.t.x25mZR);
+    if (n.status === E.Dmq.PAST_DUE) return I.intl.string(I.t.De4Vm6);
+    if (n.status === E.Dmq.ACCOUNT_HOLD) return I.intl.string(I.t.JakNQ8);
+    if (A > 0) return I.intl.string(I.t.x25mZR);
     if (null == n.renewalMutations) return null;
     let T = _.bx(n.renewalMutations.additionalPlans);
-    return _.bx(n.additionalPlans) > T ? f.intl.string(f.t.x25mZR) : f.intl.string(f.t["W/bb8f"]);
+    return _.bx(n.additionalPlans) > T ? I.intl.string(I.t.x25mZR) : I.intl.string(I.t["W/bb8f"]);
 }
 function P(e) {
     return !e.ended && (null == e.endsAt || e.endsAt.getTime() > Date.now());
@@ -183,6 +183,6 @@ function B(e) {
     return e.subscription?.status === E.Dmq.CANCELED || e.canceled;
 }
 function V(e) {
-    return m.find((t) => e >= E.M2T[t]) ?? E.TVA.NONE;
+    return g.find((t) => e >= E.M2T[t]) ?? E.TVA.NONE;
 }
 (E.TVA.NONE, E.TVA.TIER_1, E.TVA.TIER_2, E.TVA.TIER_3);

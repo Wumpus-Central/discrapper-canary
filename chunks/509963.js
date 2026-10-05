@@ -12,28 +12,28 @@ var i = n(477900),
     E = n(32880),
     A = n(587895),
     h = n(529433),
-    I = n(976860),
-    f = n(340829),
+    f = n(976860),
+    I = n(340829),
     p = n(966846),
     T = n(674378),
-    m = n(505806),
-    g = n(652215),
+    g = n(505806),
+    m = n(652215),
     S = n(375708),
     N = n(627745);
 let C = {
-    [g.WTw.INSTALLING]: {
+    [m.WTw.INSTALLING]: {
         [h.pJ.NONE]: (e, t) => S.intl.formatToPlainString(S.t["p+2sE+"], { name: e }),
         [h.pJ.SECONDS]: (e, t) => S.intl.formatToPlainString(S.t["/0NgPI"], { name: e, timeRemaining: t }),
         [h.pJ.MINUTES]: (e, t) => S.intl.formatToPlainString(S.t.ZIwMzr, { name: e, timeRemaining: t }),
         [h.pJ.HOURS]: (e, t) => S.intl.formatToPlainString(S.t["3IQDUi"], { name: e, timeRemaining: t }),
     },
-    [g.WTw.UPDATING]: {
+    [m.WTw.UPDATING]: {
         [h.pJ.NONE]: (e, t) => S.intl.formatToPlainString(S.t["6F9QzC"], { name: e }),
         [h.pJ.SECONDS]: (e, t) => S.intl.formatToPlainString(S.t["2OVgVq"], { name: e, timeRemaining: t }),
         [h.pJ.MINUTES]: (e, t) => S.intl.formatToPlainString(S.t.mgQg1L, { name: e, timeRemaining: t }),
         [h.pJ.HOURS]: (e, t) => S.intl.formatToPlainString(S.t.aTdq44, { name: e, timeRemaining: t }),
     },
-    [g.WTw.REPAIRING]: {
+    [m.WTw.REPAIRING]: {
         [h.pJ.NONE]: (e, t) => S.intl.formatToPlainString(S.t["p+2sE+"], { name: e }),
         [h.pJ.SECONDS]: (e, t) => S.intl.formatToPlainString(S.t["/0NgPI"], { name: e, timeRemaining: t }),
         [h.pJ.MINUTES]: (e, t) => S.intl.formatToPlainString(S.t.ZIwMzr, { name: e, timeRemaining: t }),
@@ -58,11 +58,11 @@ class O extends r.PureComponent {
     };
     renderText() {
         let { state: e, isPaused: t } = this.props;
-        if (e.type === g.WTw.UPDATING || e.type === g.WTw.REPAIRING || e.type === g.WTw.INSTALLING) {
+        if (e.type === m.WTw.UPDATING || e.type === m.WTw.REPAIRING || e.type === m.WTw.INSTALLING) {
             if (t) return S.intl.string(S.t["5oxtFS"]);
-            else if (e.stage === g.OQC.PATCHING || e.stage === g.OQC.REPAIRING)
-                return (0, i.jsx)(m.A, {
-                    getHistoricalTotalBytes: f.A.getHistoricalTotalBytesWritten,
+            else if (e.stage === m.OQC.PATCHING || e.stage === m.OQC.REPAIRING)
+                return (0, i.jsx)(g.A, {
+                    getHistoricalTotalBytes: I.A.getHistoricalTotalBytesWritten,
                     updateInterval: 5e3,
                     children: this.renderProgressBody,
                 });
@@ -88,7 +88,7 @@ class R extends r.PureComponent {
     }
     handleOnClick = (e) => {
         let { onClick: t } = this.props;
-        (e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, I.pX)(g.BVt.APPLICATION_LIBRARY));
+        (e.preventDefault(), e.stopPropagation(), null != t && t(e), (0, f.pX)(m.BVt.APPLICATION_LIBRARY));
     };
     getTooltipText() {
         let { firstApplication: e, firstState: t, isPaused: n } = this.props;
@@ -124,9 +124,9 @@ function L(e, t) {
         return (null != a && e.push(a), e);
     }, []);
 }
-let y = o.Ay.connectStores([p.A, f.A, A.A], () => {
+let y = o.Ay.connectStores([p.A, I.A, A.A], () => {
     let e = p.A.activeItems,
-        t = L(e, f.A),
+        t = L(e, I.A),
         { total: n, progress: i } = T.zY(t);
     return {
         percent: T.uA(i, n),

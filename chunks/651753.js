@@ -131,7 +131,7 @@ let A = new E(o.h, {
                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: A,
                 source: h,
             } = e,
-            I = c({
+            f = c({
                 query: t,
                 guildId: n,
                 page: i,
@@ -144,7 +144,7 @@ let A = new E(o.h, {
                 excludeEmbeddedAppsWithoutPrimaryEntryPointAppCommand: A,
                 source: h,
             });
-        (u.set(I, { lastFetchTimeMs: Date.now(), ...s }), (_ = { ..._, [I]: 1 }));
+        (u.set(f, { lastFetchTimeMs: Date.now(), ...s }), (_ = { ..._, [f]: 1 }));
     },
     APPLICATION_DIRECTORY_FETCH_SEARCH_FAILURE: function (e) {
         let {

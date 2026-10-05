@@ -52,21 +52,21 @@ class A extends _.A {
     }
 }
 var h = n(5463),
-    I =
+    f =
         (((a = {}).DEBUG = "DEBUG"),
         (a.REQUIRED = "REQUIRED"),
         (a.OPTIONAL = "OPTIONAL"),
         (a.OPTIONAL_DEFAULT = "OPTIONAL_DEFAULT"),
         a),
-    f = n(652215);
+    I = n(652215);
 n(644434);
 let p = "migrated",
     T = {
-        [f.uss.GUILDS]: {
+        [I.uss.GUILDS]: {
             resizeX: !1,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: I.OPTIONAL,
+            layoutPolicy: f.OPTIONAL,
             defaultSettings: {
                 anchor: { left: 0.175, top: 0.05, bottom: void 0, right: void 0 },
                 size: { width: "auto", height: 0.65 },
@@ -75,11 +75,11 @@ let p = "migrated",
             },
             version: 0,
         },
-        [f.uss.TEXT]: {
+        [I.uss.TEXT]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: I.OPTIONAL,
+            layoutPolicy: f.OPTIONAL,
             defaultSettings: {
                 anchor: { left: 0.26, top: 0.05, bottom: void 0, right: void 0 },
                 size: { width: 0.565, height: 0.65 },
@@ -88,11 +88,11 @@ let p = "migrated",
             },
             version: 0,
         },
-        [f.uss.VOICE]: {
+        [I.uss.VOICE]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: I.REQUIRED,
+            layoutPolicy: f.REQUIRED,
             defaultSettings: {
                 anchor: { left: 0.011, top: 0.011, bottom: void 0, right: void 0 },
                 size: { width: "auto", height: "auto" },
@@ -101,11 +101,11 @@ let p = "migrated",
             },
             version: 0,
         },
-        [f.uss.GUILDS_TEXT]: {
+        [I.uss.GUILDS_TEXT]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: I.OPTIONAL_DEFAULT,
+            layoutPolicy: f.OPTIONAL_DEFAULT,
             defaultSettings: {
                 anchor: { left: void 0, top: 0.05, bottom: void 0, right: 0.25 },
                 size: { width: 0.6, height: 0.45 },
@@ -114,11 +114,11 @@ let p = "migrated",
             },
             version: 0,
         },
-        [f.uss.VOICE_V3]: {
+        [I.uss.VOICE_V3]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: I.REQUIRED,
+            layoutPolicy: f.REQUIRED,
             defaultSettings: {
                 anchor: { left: 0.01, top: 0.35, bottom: void 0, right: void 0 },
                 size: { width: "auto", height: "auto" },
@@ -127,11 +127,11 @@ let p = "migrated",
             },
             version: 4,
         },
-        [f.uss.VIDEO]: {
+        [I.uss.VIDEO]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: I.OPTIONAL_DEFAULT,
+            layoutPolicy: f.OPTIONAL_DEFAULT,
             defaultSettings: {
                 anchor: { left: 0.01, top: void 0, bottom: 0.02, right: void 0 },
                 size: { fixed: !0, width: 408, height: 128 },
@@ -140,11 +140,11 @@ let p = "migrated",
             },
             version: 4,
         },
-        [f.uss.GO_LIVE]: {
+        [I.uss.GO_LIVE]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: I.OPTIONAL_DEFAULT,
+            layoutPolicy: f.OPTIONAL_DEFAULT,
             defaultSettings: {
                 anchor: { left: void 0, top: void 0, bottom: 0.02, right: 0.01 },
                 size: { fixed: !0, width: 256, height: 144 },
@@ -153,11 +153,11 @@ let p = "migrated",
             },
             version: 4,
         },
-        [f.uss.QUICK_ACTIONS]: {
+        [I.uss.QUICK_ACTIONS]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: I.REQUIRED,
+            layoutPolicy: f.REQUIRED,
             defaultSettings: {
                 anchor: { left: 0.34, top: 0.02, bottom: void 0, right: void 0 },
                 size: { width: "auto", height: "auto" },
@@ -166,11 +166,11 @@ let p = "migrated",
             },
             version: 4,
         },
-        [f.uss.NOTIFICATIONS]: {
+        [I.uss.NOTIFICATIONS]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: I.REQUIRED,
+            layoutPolicy: f.REQUIRED,
             defaultSettings: {
                 anchor: { left: 0.01, top: 0.02, bottom: void 0, right: void 0 },
                 size: { height: "auto", width: "auto" },
@@ -179,11 +179,11 @@ let p = "migrated",
             },
             version: 4,
         },
-        [f.uss.ACTIVITY]: {
+        [I.uss.ACTIVITY]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: I.REQUIRED,
+            layoutPolicy: f.REQUIRED,
             defaultSettings: {
                 anchor: { left: void 0, top: 0.35, bottom: void 0, right: 0.01 },
                 size: { height: "auto", width: "auto" },
@@ -192,11 +192,11 @@ let p = "migrated",
             },
             version: 4,
         },
-        [f.uss.TEXT_CHAT_V3]: {
+        [I.uss.TEXT_CHAT_V3]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !1,
-            layoutPolicy: I.REQUIRED,
+            layoutPolicy: f.REQUIRED,
             defaultSettings: {
                 anchor: { left: void 0, top: 0.14, bottom: void 0, right: 0.26 },
                 size: { fixed: !0, height: 372, width: 500 },
@@ -205,12 +205,12 @@ let p = "migrated",
             },
             version: 4,
         },
-        [f.uss.FRIENDS]: {
+        [I.uss.FRIENDS]: {
             resizeX: !1,
             resizeY: !0,
             dragAnywhere: !0,
             constrainAutoSizeToExplicitResizeEvents: !0,
-            layoutPolicy: I.REQUIRED,
+            layoutPolicy: f.REQUIRED,
             defaultSettings: {
                 anchor: { left: void 0, top: 0.14, bottom: 0.3, right: 0.01 },
                 size: { fixed: !0, height: "auto", width: 350 },
@@ -219,11 +219,11 @@ let p = "migrated",
             },
             version: 4,
         },
-        [f.uss.CLICK_ZONE_DEBUG]: {
+        [I.uss.CLICK_ZONE_DEBUG]: {
             resizeX: !0,
             resizeY: !0,
             dragAnywhere: !0,
-            layoutPolicy: I.DEBUG,
+            layoutPolicy: f.DEBUG,
             defaultSettings: {
                 anchor: { left: void 0, top: 0.35, bottom: void 0, right: 0.35 },
                 size: { height: "auto", width: "auto" },
@@ -232,11 +232,11 @@ let p = "migrated",
             },
             version: 4,
         },
-        [f.uss.PERFORMANCE_DEBUG]: {
+        [I.uss.PERFORMANCE_DEBUG]: {
             resizeX: !1,
             resizeY: !1,
             dragAnywhere: !0,
-            layoutPolicy: I.DEBUG,
+            layoutPolicy: f.DEBUG,
             defaultSettings: {
                 anchor: { left: void 0, top: 0.1, bottom: void 0, right: 0.1 },
                 size: { height: "auto", width: "auto" },
@@ -246,13 +246,13 @@ let p = "migrated",
             version: 4,
         },
     };
-function m(e, t) {
+function g(e, t) {
     let n = r[e];
     if (null == n) return !1;
     let a = i[n.layoutId];
     return null != a && t(n, a);
 }
-function g(e) {
+function m(e) {
     let t = T[e];
     if (null != t) return t.defaultSettings;
 }
@@ -284,7 +284,7 @@ class S extends d.Ay.PersistedStore {
         },
         (e) => {
             let { layouts: t, widgets: n } = e,
-                i = new Set(Object.keys(f.uss)),
+                i = new Set(Object.keys(I.uss)),
                 r = Array.from(n).filter((e) => {
                     let [t] = e;
                     return !i.has(t);
@@ -306,8 +306,8 @@ class S extends d.Ay.PersistedStore {
                             });
                             return (
                                 null != n &&
-                                (null == a && n[1].type === f.uss.VOICE && (a = n[0]),
-                                null == i && n[1].type === f.uss.TEXT && (i = n[1].pinned),
+                                (null == a && n[1].type === I.uss.VOICE && (a = n[0]),
+                                null == i && n[1].type === I.uss.TEXT && (i = n[1].pinned),
                                 (null != i && null != a) || void 0)
                             );
                         }),
@@ -316,8 +316,8 @@ class S extends d.Ay.PersistedStore {
                         return;
                     let s = (0, o.A)();
                     n.widgets = [a, s];
-                    let l = g(f.uss.GUILDS_TEXT);
-                    null != l && r.push([s, { ...l, type: f.uss.GUILDS_TEXT, id: s, layoutId: t, zIndex: 2 }]);
+                    let l = m(I.uss.GUILDS_TEXT);
+                    null != l && r.push([s, { ...l, type: I.uss.GUILDS_TEXT, id: s, layoutId: t, zIndex: 2 }]);
                 }),
                 { widgets: r, layouts: a }
             );
@@ -365,7 +365,7 @@ class S extends d.Ay.PersistedStore {
         let a = !1,
             s = [];
         (l().forEach(T, (e, t) => {
-            e.layoutPolicy === I.REQUIRED && s.push(t);
+            e.layoutPolicy === f.REQUIRED && s.push(t);
         }),
             l().forEach(i, (e, t) => {
                 let n = this.getWidgetsForLayout(t),
@@ -375,7 +375,7 @@ class S extends d.Ay.PersistedStore {
                     if (null != s || T[i].version !== e.version) continue;
                     l = a = !0;
                     let d = (0, o.A)(),
-                        c = g(i);
+                        c = m(i);
                     if (null == c) return;
                     ((s = new A({ ...c, type: i, id: d, layoutId: t, zIndex: n.length })),
                         n.push(s),
@@ -431,7 +431,7 @@ class S extends d.Ay.PersistedStore {
                     e.pinned || n.push(e.type);
                     return;
                 }
-                t.layoutPolicy === I.REQUIRED || e.pinned || n.push(e.type);
+                t.layoutPolicy === f.REQUIRED || e.pinned || n.push(e.type);
             }),
             n
         );
@@ -440,7 +440,7 @@ class S extends d.Ay.PersistedStore {
         return T[e];
     }
     getWidgetDefaultSettings(e) {
-        return g(e);
+        return m(e);
     }
     getWidgetType(e) {
         let t = r[e];
@@ -461,10 +461,10 @@ class S extends d.Ay.PersistedStore {
         return (
             l().forEach(this.getRegisteredWidgets(), (i, r) => {
                 switch (i.layoutPolicy) {
-                    case I.REQUIRED:
-                    case I.OPTIONAL_DEFAULT:
+                    case f.REQUIRED:
+                    case f.OPTIONAL_DEFAULT:
                         if ((i.version ?? 0) === t) {
-                            let t = g(r);
+                            let t = m(r);
                             if (null == t) return;
                             n.push({ ...t, type: r, id: (0, o.A)(), layoutId: e });
                         }
@@ -502,14 +502,14 @@ let N = new S(u.h, {
     },
     LAYOUT_SET_PINNED: function (e) {
         let { widgetId: t, pinned: n } = e;
-        return m(t, (e, t) => {
+        return g(t, (e, t) => {
             var i, a;
             ((i = e), (a = n), (r = { ...r, [i.id]: i.set("pinned", a ?? !i.pinned) }));
         });
     },
     LAYOUT_UPDATE_WIDGET: function (e) {
         let { widgetId: t, anchor: n, size: i, opacity: a, minSize: s, defaultSize: l } = e;
-        return m(t, (e, t) =>
+        return g(t, (e, t) =>
             (function (e) {
                 let { widget: t, anchor: n, size: i, opacity: a, minSize: s, defaultSize: l } = e;
                 if (
@@ -532,7 +532,7 @@ let N = new S(u.h, {
     },
     LAYOUT_SET_TOP_WIDGET: function (e) {
         let { widgetId: t } = e;
-        return m(t, (e, t) =>
+        return g(t, (e, t) =>
             (function (e, t) {
                 let n,
                     i =
@@ -589,14 +589,14 @@ let N = new S(u.h, {
     },
     LAYOUT_SET_WIDGET_META: function (e) {
         let { widgetId: t, meta: n } = e;
-        return m(t, (e, t) => {
+        return g(t, (e, t) => {
             var i, a;
             ((i = e), (a = n), (r = { ...r, [i.id]: i.merge({ meta: { ...(i.meta ?? {}), ...a } }) }));
         });
     },
     LAYOUT_SHOW_OVERLAY_EXTRAS_HINT: function (e) {
         let { widgetId: t } = e;
-        return m(t, (e, t) => {
+        return g(t, (e, t) => {
             r = { ...r, [e.id]: e.merge({ showExtrasHintTimestamp: Date.now() }) };
         });
     },

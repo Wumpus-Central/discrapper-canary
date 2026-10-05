@@ -12,12 +12,12 @@ var i = n(739187),
     E = n(72611),
     A = n(616356),
     h = n(280450),
-    I = n(25578),
-    f = n(741394),
+    f = n(25578),
+    I = n(741394),
     p = n(205693),
     T = n(439372),
-    m = n(967347),
-    g = n(885386),
+    g = n(967347),
+    m = n(885386),
     S = n(734057),
     N = n(763827),
     C = n(116956),
@@ -90,14 +90,14 @@ class U extends T.A {
             y.Ay.getClipsWarningShown(t) ||
             e === h.default.getId() ||
             !y.Ay.isClipsEnabledForUser(e) ||
-            (g.Q$.getSetting() &&
+            (m.Q$.getSetting() &&
                 (a.h.dispatch({ type: "CLIPS_SHOW_CALL_WARNING", channelId: t }), this.showClipsToast()));
     }
     handleClipsAllowVoiceRecordingUpdate() {
         N.A.getUserIds()?.forEach((e) => this.maybeShowClipsWarning(e));
     }
     handlePostConnectionOpen() {
-        !(0, D.A)(I.Ay) ||
+        !(0, D.A)(f.Ay) ||
             (this.applyNativeClipsSettings(),
             (0, L.Pm)() &&
                 (this.loadClipsFromStorage(),
@@ -112,7 +112,7 @@ class U extends T.A {
     loadClipsFromStorage() {}
     handleRTCConnectionVideo(e) {
         let { userId: t, context: n, channelId: i, guildId: r } = e;
-        if (n !== p.x.STREAM || !(0, D.A)(I.Ay)) return;
+        if (n !== p.x.STREAM || !(0, D.A)(f.Ay)) return;
         let a = C.A.getRTCConnection(
             u._z({ streamType: null != r ? P.U4.GUILD : P.U4.CALL, ownerId: t, channelId: i, guildId: r }),
         );
@@ -121,7 +121,7 @@ class U extends T.A {
     async classifyHardwareAndTrack() {
         try {
             let { gpuModels: e, classification: t } = await (async () => {
-                let e = await (0, m.w)();
+                let e = await (0, g.w)();
                 if (e?.gpus != null) {
                     let t = e.gpus.map((e) => e.brand).filter((e) => null != e && "" !== e),
                         n = this.classifyHardware(t);
@@ -162,7 +162,7 @@ class U extends T.A {
             : b.k9.UNKNOWN;
     }
     applyUserVoiceRecording(e) {
-        if (!(0, D.A)(I.Ay)) return;
+        if (!(0, D.A)(f.Ay)) return;
         let t = N.A.getRTCConnection();
         if (null == t) return;
         if (S.A.getChannel(N.A.getChannelId())?.isGuildStageVoice()) return void t.setClipRecordUser(e, "audio", !1);
@@ -171,12 +171,12 @@ class U extends T.A {
         t.setClipRecordUser(e, "audio", n);
     }
     applyUserSoundboardRecording(e) {
-        if (!(0, D.A)(I.Ay)) return;
+        if (!(0, D.A)(f.Ay)) return;
         let t = N.A.getRTCConnection();
         null != t && t.setClipRecordUser(e, "soundboard", (0, v.T)());
     }
     applyStreamRecording(e, t) {
-        if ((0, D.A)(I.Ay) && h.default.getId() === e) {
+        if ((0, D.A)(f.Ay) && h.default.getId() === e) {
             let n = (0, v.T)();
             (t.setClipRecordUser(e, "audio", n), t.setClipRecordUser(e, "video", n));
             return;
@@ -261,11 +261,11 @@ class W extends U {
         if (
             (e?.settings.enableAutoclipping != null &&
                 ((0, _.se)(e.settings.enableAutoclipping), (0, E.eZ)(e.settings.enableAutoclipping)),
-            !(0, D.A)(I.Ay))
+            !(0, D.A)(f.Ay))
         )
             return;
         (0, k.mj)();
-        let t = I.Ay.getMediaEngine(),
+        let t = f.Ay.getMediaEngine(),
             n = () => {
                 let n = y.Ay.getSettings(),
                     i = (0, v.T)();
@@ -347,7 +347,7 @@ async function Y() {
     if (y.Ay.getSettings().storageLocation === e)
         try {
             let e = await s.A.app.getPath("videos");
-            x.HU((0, f.CN)(e, y._c));
+            x.HU((0, I.CN)(e, y._c));
         } catch (e) {
             b.nx.error("Failed to resolve videos path for old default storage migration", e);
         }

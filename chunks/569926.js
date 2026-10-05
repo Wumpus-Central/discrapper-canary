@@ -1,4 +1,4 @@
-n.d(t, { x: () => f, I: () => I });
+n.d(t, { x: () => I, I: () => f });
 var i = n(582128),
     r = n(17928),
     a = n(927813),
@@ -30,7 +30,7 @@ let A = new d.OC(
 async function h(e) {
     0 !== e.length && (await A.queue(e));
 }
-let I = (0, r.UT)(u.A, {
+let f = (0, r.UT)(u.A, {
     getQueryId: _.fic.GAME,
     failureStaleAfter: 15 * a.A.Seconds.SECOND,
     get: (e) => (null == e ? null : u.A.hasNoData(e) ? r.V5 : (u.A.getGame(e) ?? null)),
@@ -40,9 +40,9 @@ let I = (0, r.UT)(u.A, {
     getIsLoading: (e) => null != e && u.A.isFetching(e),
     getError: (e) => (null != e && u.A.didFetchingFail(e) ? Error("Failed to fetch game data") : null),
 });
-function f(e) {
+function I(e) {
     i.useEffect(() => {
         let t = e.map((e) => [e]);
-        I.fetchMany(...t);
+        f.fetchMany(...t);
     }, [e]);
 }

@@ -14,10 +14,10 @@ function E() {
 }
 let A = !1,
     h = null,
-    I = null,
-    f = null;
+    f = null,
+    I = null;
 function p() {
-    null != I && (clearTimeout(I), (I = null));
+    null != f && (clearTimeout(f), (f = null));
     let e = (function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : new Date();
         if (!a.A.screenDowntimeReminder) return null;
@@ -36,7 +36,7 @@ function p() {
         (e.minutesUntil <= 16
             ? (!(function (e) {
                   let t = `${e.rule.ruleId}:${e.startAtMs}`;
-                  if (t !== f) {
+                  if (t !== I) {
                       var n, r;
                       let a, s, d;
                       ((n = e.rule),
@@ -45,15 +45,15 @@ function p() {
                           (s = l.bV[new Date(r).getDay()]),
                           (d = `${(0, o.n1)([s])} ${(0, o.li)(n)}`.trim()),
                           i.h.dispatch({ type: "RESTRICTED_HOURS_WARNING", title: a, subtitle: d }),
-                          (f = t));
+                          (I = t));
                   }
               })(e),
-              (I = setTimeout(() => {
-                  ((I = null), p());
+              (f = setTimeout(() => {
+                  ((f = null), p());
               }, 6e4)))
-            : (I = setTimeout(
+            : (f = setTimeout(
                   () => {
-                      ((I = null), p());
+                      ((f = null), p());
                   },
                   Math.max(0, (e.minutesUntil - 16) * 6e4),
               )));
@@ -66,26 +66,26 @@ function T() {
         A ? (0, c.openRestrictedHoursModal)() : (0, c.k)(),
         p());
 }
-function m() {
+function g() {
     ((A = !1),
-        (f = null),
+        (I = null),
         i.h.dispatch({ type: "RESTRICTED_HOURS_STATE_CHANGE", isInRestrictedHours: !1 }),
         (0, c.k)(),
-        null != I && (clearTimeout(I), (I = null)));
+        null != f && (clearTimeout(f), (f = null)));
 }
-function g() {
+function m() {
     (T(), p());
 }
 function S() {
     p();
 }
 class N extends r.A {
-    stores = new Map().set(s.default, g).set(d.A, g);
+    stores = new Map().set(s.default, m).set(d.A, m);
     actions = {
-        POST_CONNECTION_OPEN: g,
-        CURRENT_USER_UPDATE: g,
+        POST_CONNECTION_OPEN: m,
+        CURRENT_USER_UPDATE: m,
         NOTIFICATIONS_SET_SCREEN_DOWNTIME_REMINDER: S,
-        LOGOUT: m,
+        LOGOUT: g,
     };
     _initialize() {
         ((A = E()),
@@ -96,8 +96,8 @@ class N extends r.A {
     }
     _terminate() {
         (null != h && (clearInterval(h), (h = null)),
-            null != I && (clearTimeout(I), (I = null)),
-            (f = null),
+            null != f && (clearTimeout(f), (f = null)),
+            (I = null),
             (0, c.k)(),
             (A = !1));
     }

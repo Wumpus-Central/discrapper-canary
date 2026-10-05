@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var r = n(17928),
     a = n(73153),
     s = n(194862),
@@ -45,7 +45,7 @@ class h extends r.Ay.PersistedStore {
         return !i && (null == E || Date.now() >= E + c);
     }
 }
-let I = new h(a.h, {
+let f = new h(a.h, {
     NON_GAMES_DATABASE_FETCH: function () {
         i = !0;
     },

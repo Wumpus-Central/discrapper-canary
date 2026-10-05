@@ -26,12 +26,12 @@ var c = n(115718),
     E = n(808728),
     A = n(994500),
     h = n(309010),
-    I = n(351906),
-    f = n(287809),
+    f = n(351906),
+    I = n(287809),
     p = n(802842),
     T = n(427262),
-    m = n(692986),
-    g = n(268988),
+    g = n(692986),
+    m = n(268988),
     S = n(902008),
     N = n(5990),
     C = n(257120);
@@ -110,10 +110,10 @@ function H(e) {
                 ? n
                 : i(
                       n === D.ME
-                          ? f.default.getCurrentUser()
+                          ? I.default.getCurrentUser()
                           : null != e.getMatch(4)
-                            ? f.default.findByTag(e.getMatch(4))
-                            : f.default.findByTag(e.getMatch(2), e.getMatch(3)),
+                            ? I.default.findByTag(e.getMatch(4))
+                            : I.default.findByTag(e.getMatch(2), e.getMatch(3)),
                   )) && (e.setData("userId", t), !0)
     );
 }
@@ -160,7 +160,7 @@ function W(e, t) {
                     return t;
                 })
                 .concat(null != i ? _.A.getAllThreadsForGuild(i) : [])
-                .filter((e) => n === (s[e.id]?.name ?? (0, u.m1)(e, f.default, A.A)))
+                .filter((e) => n === (s[e.id]?.name ?? (0, u.m1)(e, I.default, A.A)))
                 .value()),
             o?.length > 0 &&
                 (e.setData(
@@ -170,15 +170,15 @@ function W(e, t) {
                 !0)
         );
     }
-    if (t.type === D.I4_.DMS && !I.A.hidePersonalInformation) {
+    if (t.type === D.I4_.DMS && !f.A.hidePersonalInformation) {
         let t;
         return (
             (r = a),
             (t = Object.values(_.A.getMutablePrivateChannels()).filter((e) => {
-                if (e.isGroupDM() && r === (0, u.m1)(e, f.default, A.A)) return !0;
+                if (e.isGroupDM() && r === (0, u.m1)(e, I.default, A.A)) return !0;
                 if (e.isDM()) {
                     let t = e.getRecipientId(),
-                        n = f.default.getUser(t);
+                        n = I.default.getUser(t);
                     return null != n && r === T.Ay.getUserTag(n);
                 }
                 return !1;
@@ -278,7 +278,7 @@ function et(e) {
                         let { record: t } = e;
                         return l(t);
                     }),
-                    g.A.getRecentMessageAuthorIds(n.guildId).forEach((e) => l(f.default.getUser(e))),
+                    m.A.getRecentMessageAuthorIds(n.guildId).forEach((e) => l(I.default.getUser(e))),
                     e.slice(0, i)
                 );
             }
@@ -306,28 +306,28 @@ function et(e) {
                         if (null != t)
                             if (t.isDM()) {
                                 let e = t.getRecipientId();
-                                i(f.default.getUser(e));
+                                i(I.default.getUser(e));
                             } else
                                 t.isGroupDM() &&
                                     t.recipients.forEach((e) => {
-                                        i(f.default.getUser(e));
+                                        i(I.default.getUser(e));
                                     });
                     }),
                     r
                 );
             })(r ?? []);
             if (null != o && o.length > 0) {
-                let e = f.default.getCurrentUser();
+                let e = I.default.getCurrentUser();
                 (null != e && o.push(e), (s = p.Ay.queryUsers({ ...a, users: o })));
             } else s = p.Ay.queryAllUsers({ ...a });
             break;
         default:
             return [];
     }
-    let d = f.default.getCurrentUser(),
+    let d = I.default.getCurrentUser(),
         u = t.toLowerCase().replace(/^@/, ""),
         E = null != d && t.length > 0 && (v.intl.string(v.t.Qf3ptv).startsWith(u) || D.ME.substr(1).startsWith(u)),
-        I = s
+        f = s
             .filter((e) => {
                 let { record: t } = e;
                 return !A.A.isBlockedOrIgnored(t.id) && (!E || t.id !== d?.id);
@@ -336,7 +336,7 @@ function et(e) {
                 let { record: t } = e;
                 return { text: T.Ay.getUserTag(t), user: t };
             });
-    return (E && I.unshift({ text: D.ME, user: d }), I);
+    return (E && f.unshift({ text: D.ME, user: d }), f);
 }
 function en(e) {
     let { query: t, searchContext: n, maxResults: i } = e;
@@ -379,10 +379,10 @@ function en(e) {
               let r = E.Ay.getTextChannelNameDisambiguations(t);
               return l()(i)
                   .take(n)
-                  .map((e) => ({ text: `${r[e.id]?.name ?? (0, u.m1)(e, f.default, A.A)}`, channel: e, key: e.id }))
+                  .map((e) => ({ text: `${r[e.id]?.name ?? (0, u.m1)(e, I.default, A.A)}`, channel: e, key: e.id }))
                   .value();
           })(t, n.guildId, i)
-        : n.type !== D.I4_.DMS || I.A.hidePersonalInformation
+        : n.type !== D.I4_.DMS || f.A.hidePersonalInformation
           ? []
           : (function (e, t, n) {
                 let i = p.Ay.queryGroupDMs({ query: e, limit: t, fuzzy: !0, boosters: (0, p.X3)(c.rD.GROUP_DM) }),
@@ -407,11 +407,11 @@ function en(e) {
                             let e = a[n];
                             (a.splice(n, 1), a.unshift(e));
                         } else if (t.isGroupDM()) {
-                            let e = (0, u.m1)(t, f.default, A.A);
+                            let e = (0, u.m1)(t, I.default, A.A);
                             a.unshift({ text: e, channel: t, key: t.id });
                         } else if (t.isDM()) {
                             let e = t.getRecipientId(),
-                                n = f.default.getUser(e);
+                                n = I.default.getUser(e);
                             if (null != n) {
                                 let e = T.Ay.getUserTag(n);
                                 a.unshift({ text: e, channel: t, key: t.id });
@@ -583,7 +583,7 @@ function ea(e) {
             key: B(v.intl.string(v.t.WNpFHa)),
             plainText: v.intl.string(v.t.WNpFHa),
             validator: () => {
-                let t = e ?? m.A.getSelectedSearchContext();
+                let t = e ?? g.A.getSelectedSearchContext();
                 return null != t && (0, N.HM)(t);
             },
             getAutocompletions: en,
@@ -594,7 +594,7 @@ function ea(e) {
             follows: [D.LWr.FILTER_IN],
             componentType: "ANSWER",
             validator: (t) => {
-                let n = e ?? m.A.getSelectedSearchContext();
+                let n = e ?? g.A.getSelectedSearchContext();
                 return null != n && W(t, n);
             },
             queryKey: "channel_id",

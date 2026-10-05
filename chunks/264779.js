@@ -8,8 +8,8 @@
     Wl: () => L,
     eN: () => R,
     g_: () => C,
-    kc: () => g,
-    kd: () => m,
+    kc: () => m,
+    kd: () => g,
 }),
     n(938796));
 var i = n(665260),
@@ -25,8 +25,8 @@ var i = n(665260),
     E = n(412260),
     A = n(852218),
     h = n(202541),
-    I = n(652215),
-    f = n(818023);
+    f = n(652215),
+    I = n(818023);
 function p(e, t) {
     let n = (0, s.M)(t) ? "logo-dark" : "logo-light",
         i = window.GLOBAL_ENV.CDN_HOST,
@@ -38,14 +38,14 @@ function p(e, t) {
 function T(e) {
     return { code: e.code, userId: e.user_id, claimedAt: e.claimed_at, promotion: d.A.createFromServer(e.promotion) };
 }
-async function m(e) {
+async function g(e) {
     let t,
         { promotionId: n, promotionTitle: i, partnerId: a, analyticsLocations: s } = e,
-        l = await r.Bo.post({ url: I.Rsh.CLAIM_OUTBOUND_PROMOTION_CODE(n), rejectWithError: (0, r.fT)() }),
+        l = await r.Bo.post({ url: f.Rsh.CLAIM_OUTBOUND_PROMOTION_CODE(n), rejectWithError: (0, r.fT)() }),
         o = l.body;
     return (
-        (t = f.vu.DESKTOP),
-        c.default.track(I.HAw.OUTBOUND_PROMOTION_CLAIMED, {
+        (t = I.vu.DESKTOP),
+        c.default.track(f.HAw.OUTBOUND_PROMOTION_CLAIMED, {
             platform: t,
             status: l.status,
             location_stack: s,
@@ -56,7 +56,7 @@ async function m(e) {
         T(o)
     );
 }
-function g(e, t) {
+function m(e, t) {
     return null != t.outboundRedemptionUrlFormat && "" !== t.outboundRedemptionUrlFormat
         ? t.outboundRedemptionUrlFormat.replace("{code}", encodeURIComponent(e))
         : (t.outboundRedemptionPageLink ?? "");

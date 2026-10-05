@@ -33,12 +33,12 @@ function h() {
             return null;
     }
 }
-var I = n(280450),
-    f = n(544180),
+var f = n(280450),
+    I = n(544180),
     p = n(927813),
     T = n(453771),
-    m = n(513391),
-    g = n(292348),
+    g = n(513391),
+    m = n(292348),
     S = n(280889),
     N = n(381941),
     C =
@@ -57,7 +57,7 @@ function L(e) {
     return O(e) ? e.message.nonce : R(e) ? e.message.messageId : e.message.data.id;
 }
 let y = [+p.A.Millis.MINUTE, 5 * p.A.Millis.MINUTE];
-class D extends m.A {
+class D extends g.A {
     maxSize;
     requests = new Map();
     analyticsTimeouts = new Map();
@@ -135,7 +135,7 @@ class D extends m.A {
         let { channelId: n, analyticsLocation: i, ...r } = e,
             a = h() ?? i,
             s = (0, _.O)(),
-            o = { mobile_network_type: f.A.getType(), ...r, ...(null != s && { signal_strength: s }) };
+            o = { mobile_network_type: I.A.getType(), ...r, ...(null != s && { signal_strength: s }) };
         if (c.Ay.get("send_fail_100")) {
             (this.logger.log("Skipping message send because send_fail_100 is enabled"),
                 t(null, { ok: !1, hasErr: !1, status: 500, headers: {}, body: "{}", text: "Simulated failure" }));
@@ -162,7 +162,7 @@ class D extends m.A {
         let { channelId: n, analyticsLocation: i, ...r } = e,
             a = h() ?? i,
             s = (0, _.O)(),
-            o = { mobile_network_type: f.A.getType(), ...r, ...(null != s && { signal_strength: s }) };
+            o = { mobile_network_type: I.A.getType(), ...r, ...(null != s && { signal_strength: s }) };
         if (c.Ay.get("send_fail_100")) {
             (this.logger.log("Skipping message send because send_fail_100 is enabled"),
                 t(null, { ok: !1, hasErr: !1, status: 500, headers: {}, body: "{}", text: "Simulated failure" }));
@@ -213,34 +213,34 @@ class D extends m.A {
                 maxSizeCallback: _,
                 analytics_location: E,
                 sectionName: h,
-                source: f,
+                source: I,
             } = e,
             p = {
                 type: s.G.APPLICATION_COMMAND,
                 application_id: n,
                 guild_id: i,
                 channel_id: r,
-                session_id: I.default.getSessionId(),
+                session_id: f.default.getSessionId(),
                 data: o,
                 nonce: d,
                 analytics_location: E,
                 section_name: h,
-                source: f,
+                source: I,
             };
         null != c &&
             (p.data.attachments = c.map(
                 (e, t) => (
                     a()(e.status === S.jP.COMPLETED, "Uploads must be staged before trying to send a message"),
-                    (0, g.OW)(e, t)
+                    (0, m.OW)(e, t)
                 ),
             ));
-        let m = new AbortController();
-        (this.requests.set(d, m),
+        let g = new AbortController();
+        (this.requests.set(d, g),
             l.Bo.post(
                 {
                     url: A.Rsh.INTERACTIONS,
                     body: p,
-                    signal: m.signal,
+                    signal: g.signal,
                     rejectWithError: !0,
                     onRequestCreated: (e) => {
                         e.on("progress", (e) => {

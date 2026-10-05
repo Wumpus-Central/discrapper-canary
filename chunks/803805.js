@@ -7,10 +7,10 @@
     Zc: () => O,
     aw: () => u,
     cC: () => w,
-    gW: () => g,
+    gW: () => m,
     kc: () => P,
     tC: () => h,
-    tQ: () => f,
+    tQ: () => I,
     uz: () => E,
     zT: () => L,
 }),
@@ -27,9 +27,9 @@ class c extends l.G {
         super("discord_protos.discord_users.v1.FrecencyUserSettings", [
             { no: 1, name: "versions", kind: "message", T: () => o.u },
             { no: 2, name: "favorite_gifs", kind: "message", T: () => E },
-            { no: 3, name: "favorite_stickers", kind: "message", T: () => f },
+            { no: 3, name: "favorite_stickers", kind: "message", T: () => I },
             { no: 4, name: "sticker_frecency", kind: "message", T: () => T },
-            { no: 5, name: "favorite_emojis", kind: "message", T: () => g },
+            { no: 5, name: "favorite_emojis", kind: "message", T: () => m },
             { no: 6, name: "emoji_frecency", kind: "message", T: () => N },
             { no: 7, name: "application_command_frecency", kind: "message", T: () => O },
             { no: 8, name: "favorite_soundboard_sounds", kind: "message", T: () => D },
@@ -61,13 +61,13 @@ class c extends l.G {
                     a.favoriteGifs = E.internalBinaryRead(e, e.uint32(), n, a.favoriteGifs);
                     break;
                 case 3:
-                    a.favoriteStickers = f.internalBinaryRead(e, e.uint32(), n, a.favoriteStickers);
+                    a.favoriteStickers = I.internalBinaryRead(e, e.uint32(), n, a.favoriteStickers);
                     break;
                 case 4:
                     a.stickerFrecency = T.internalBinaryRead(e, e.uint32(), n, a.stickerFrecency);
                     break;
                 case 5:
-                    a.favoriteEmojis = g.internalBinaryRead(e, e.uint32(), n, a.favoriteEmojis);
+                    a.favoriteEmojis = m.internalBinaryRead(e, e.uint32(), n, a.favoriteEmojis);
                     break;
                 case 6:
                     a.emojiFrecency = N.internalBinaryRead(e, e.uint32(), n, a.emojiFrecency);
@@ -107,11 +107,11 @@ class c extends l.G {
         (e.versions && o.u.internalBinaryWrite(e.versions, t.tag(1, r.O0.LengthDelimited).fork(), n).join(),
             e.favoriteGifs && E.internalBinaryWrite(e.favoriteGifs, t.tag(2, r.O0.LengthDelimited).fork(), n).join(),
             e.favoriteStickers &&
-                f.internalBinaryWrite(e.favoriteStickers, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
+                I.internalBinaryWrite(e.favoriteStickers, t.tag(3, r.O0.LengthDelimited).fork(), n).join(),
             e.stickerFrecency &&
                 T.internalBinaryWrite(e.stickerFrecency, t.tag(4, r.O0.LengthDelimited).fork(), n).join(),
             e.favoriteEmojis &&
-                g.internalBinaryWrite(e.favoriteEmojis, t.tag(5, r.O0.LengthDelimited).fork(), n).join(),
+                m.internalBinaryWrite(e.favoriteEmojis, t.tag(5, r.O0.LengthDelimited).fork(), n).join(),
             e.emojiFrecency && N.internalBinaryWrite(e.emojiFrecency, t.tag(6, r.O0.LengthDelimited).fork(), n).join(),
             e.applicationCommandFrecency &&
                 O.internalBinaryWrite(e.applicationCommandFrecency, t.tag(7, r.O0.LengthDelimited).fork(), n).join(),
@@ -263,7 +263,7 @@ class A extends l.G {
     }
 }
 let h = new A();
-class I extends l.G {
+class f extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.FavoriteStickers", [
             { no: 1, name: "sticker_ids", kind: "scalar", repeat: 1, T: 6 },
@@ -306,7 +306,7 @@ class I extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let f = new I();
+let I = new f();
 class p extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.StickerFrecency", [
@@ -370,7 +370,7 @@ class p extends l.G {
     }
 }
 let T = new p();
-class m extends l.G {
+class g extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.FavoriteEmojis", [
             { no: 1, name: "emojis", kind: "scalar", repeat: 2, T: 9 },
@@ -406,7 +406,7 @@ class m extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let g = new m();
+let m = new g();
 class S extends l.G {
     constructor() {
         super("discord_protos.discord_users.v1.EmojiFrecency", [

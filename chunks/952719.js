@@ -33,18 +33,18 @@ function u() {
                 : e.push(`${n}:${i}`));
     }
     let h = a.A.getRegisteredExperiments(),
-        I = (function () {
+        f = (function () {
             let e = a.A.getRegisteredExperiments(),
                 t = {};
             for (let n in e) t[a.A.getHash(n)] = n;
             return t;
         })(),
-        { evaluatedExperiments: f } = a.A.getState();
+        { evaluatedExperiments: I } = a.A.getState();
     for (let e of ["user", "installation"])
-        for (let t in f?.[e]) {
-            let { assignments: i } = f[e]?.[t] ?? {};
+        for (let t in I?.[e]) {
+            let { assignments: i } = I[e]?.[t] ?? {};
             for (let e in i) {
-                let t = I[e];
+                let t = f[e];
                 if (null == t) continue;
                 let { variantId: r } = i[e];
                 if (null == r) continue;
@@ -53,10 +53,10 @@ function u() {
             }
         }
     if (null != E) {
-        let e = f?.guild?.[E];
+        let e = I?.guild?.[E];
         if (null != e)
             for (let t in e.assignments) {
-                let n = I[t];
+                let n = f[t];
                 if (null == n) continue;
                 let { variantId: r } = e.assignments[t];
                 if (null == r) continue;

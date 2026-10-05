@@ -1,8 +1,8 @@
 n.d(t, {
-    E1: () => f,
+    E1: () => I,
     O4: () => N,
     T$: () => u,
-    Zj: () => g,
+    Zj: () => m,
     e3: () => S,
     gK: () => A,
     ph: () => _,
@@ -71,8 +71,8 @@ let h = {
                 ? n
                 : i.aI.FULLSCREEN,
     },
-    I = new Set(["762434991303950386", "1402418239342120960", "1124351860376096858"]);
-async function f(e) {
+    f = new Set(["762434991303950386", "1402418239342120960", "1124351860376096858"]);
+async function I(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 16,
         n = await (function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
@@ -92,21 +92,21 @@ async function f(e) {
 }
 function p(e) {
     let t = s.A.findGame(e)?.id;
-    return null != t && I.has(t);
+    return null != t && f.has(t);
 }
 function T(e) {
     let t = a.Ay.getGameOrTransformedSubgameForPID(e);
     return null != t && null != t.name && p(t);
 }
-let m = new Set([i.aI.UNKNOWN, i.aI.FULLSCREEN]);
-function g(e, t, n) {
+let g = new Set([i.aI.UNKNOWN, i.aI.FULLSCREEN]);
+function m(e, t, n) {
     if (e.overlayMethod !== d.Ue.OutOfProcess && e.overlayMethod !== d.Ue.OutOfProcessLimitedInteraction) return !1;
     if (!n) return !0;
     switch (t) {
         case i.aI.UNKNOWN:
             var r;
             let a;
-            return m.has(
+            return g.has(
                 0 ===
                     (a = Object.keys((r = e.fullscreenHistory))
                         .map(Number)

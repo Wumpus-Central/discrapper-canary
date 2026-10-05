@@ -56,14 +56,14 @@ let A = new E(s.h, {
     DEVELOPER_ACTIVITY_SHELF_FETCH_SUCCESS: _,
 });
 var h = n(626584),
-    I = n(776231),
-    f = n(652215);
+    f = n(776231),
+    I = n(652215);
 let p = "https://i.scdn.co/image/",
     T = /https:\/\/static-cdn\.jtvnw\.net\/previews-ttv\/live_user_(.+)-\{width\}x\{height\}.jpg/,
-    m = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
-    g = {
-        [f.fg2.SPOTIFY]: { deserialize: (e) => `${p}${encodeURIComponent(e)}`, serialize: (e) => e.split(p)[1] },
-        [f.fg2.TWITCH]: {
+    g = /https:\/\/i\.ytimg\.com\/vi\/([a-zA-Z0-9_-]+)\/hqdefault_live\.jpg/,
+    m = {
+        [I.fg2.SPOTIFY]: { deserialize: (e) => `${p}${encodeURIComponent(e)}`, serialize: (e) => e.split(p)[1] },
+        [I.fg2.TWITCH]: {
             deserialize: (e, t) => {
                 let n, i, r;
                 return (
@@ -78,13 +78,13 @@ let p = "https://i.scdn.co/image/",
                 return null != t ? t[1] : null;
             },
         },
-        [f.fg2.YOUTUBE]: {
+        [I.fg2.YOUTUBE]: {
             deserialize: (e) => {
                 let t;
                 return ((t = encodeURIComponent(e)), `https://i.ytimg.com/vi/${t}/hqdefault_live.jpg`);
             },
             serialize: (e) => {
-                let t = e.match(m);
+                let t = e.match(g);
                 return null != t ? t[1] : null;
             },
         },
@@ -112,30 +112,30 @@ let p = "https://i.scdn.co/image/",
     },
     S = new Map();
 async function N(e) {
-    let { body: t } = await a.Bo.get({ url: f.Rsh.APPLICATION_ASSETS(e), oldFormErrors: !0, rejectWithError: !1 });
+    let { body: t } = await a.Bo.get({ url: I.Rsh.APPLICATION_ASSETS(e), oldFormErrors: !0, rejectWithError: !1 });
     return (
         s.h.dispatch({ type: "APPLICATION_ASSETS_UPDATE", applicationId: e, assets: t }), A.getApplicationAssets(e)
     );
 }
 function C(e, t) {
-    let n = g[e].serialize(t);
+    let n = m[e].serialize(t);
     return n ? `${e}:${n.toString()}` : null;
 }
 function O(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
     if (null != t && t.includes(":")) {
         let [e, i] = t.split(":");
-        return e === f.fg2.TWITCH
+        return e === I.fg2.TWITCH
             ? null == n || "number" == typeof n
                 ? void new h.A("ApplicationAssetUtils").warn("getAssetImage: size must === [number, number] for Twitch")
-                : g[f.fg2.TWITCH].deserialize(i, n)
-            : Object.prototype.hasOwnProperty.call(g, e)
-              ? g[e].deserialize(i)
+                : m[I.fg2.TWITCH].deserialize(i, n)
+            : Object.prototype.hasOwnProperty.call(m, e)
+              ? m[e].deserialize(i)
               : void 0;
     }
     if (null == e || null == t) return;
     let r = Array.isArray(n) ? Math.max(...n) : n,
-        s = "number" == typeof r ? `?size=${(0, I.kr)(r)}` : "";
+        s = "number" == typeof r ? `?size=${(0, f.kr)(r)}` : "";
     return null != window.GLOBAL_ENV.CDN_HOST
         ? `${location.protocol}//${window.GLOBAL_ENV.CDN_HOST}/app-assets/${e}/${t}.${i}${s}`
         : `${(0, a.TP)()}/applications/${e}/app-assets/${t}.${i}${s}`;
@@ -152,7 +152,7 @@ async function L(e, t) {
     let n = t.filter((e) => null != e && null == S.get(e));
     if (0 === n.length) return;
     let { body: i } = await a.Bo.post({
-        url: f.Rsh.APPLICATION_EXTERNAL_ASSETS(e),
+        url: I.Rsh.APPLICATION_EXTERNAL_ASSETS(e),
         body: { urls: n },
         oldFormErrors: !0,
         rejectWithError: !1,

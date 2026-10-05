@@ -1,4 +1,4 @@
-n.d(t, { EL: () => c, TM: () => I, Z5: () => l, cy: () => E, gm: () => h, nr: () => A });
+n.d(t, { EL: () => c, TM: () => f, Z5: () => l, cy: () => E, gm: () => h, nr: () => A });
 var i = n(481613),
     r = n.n(i);
 let a = (r().name ?? "unknown").toLowerCase(),
@@ -25,7 +25,7 @@ function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : navigator.userAgent;
     return -1 !== e.toLowerCase().indexOf("firefox");
 }
-function I() {
+function f() {
     let e = window.navigator,
         t = e.mediaCapabilities?.decodingInfo != null;
     return A(e.userAgent) && t;

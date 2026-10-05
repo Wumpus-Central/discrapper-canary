@@ -12,12 +12,12 @@ var i = n(477900),
     E = n(471993),
     A = n(734057),
     h = n(287809),
-    I = n(964989),
-    f = n(158045),
+    f = n(964989),
+    I = n(158045),
     p = n(447404),
     T = n(204651),
-    m = n(806931),
-    g = n(202541),
+    g = n(806931),
+    m = n(202541),
     S = n(375708),
     N = n(138302);
 function C(e) {
@@ -29,15 +29,15 @@ function O(e) {
     return (0, i.jsxs)(r.Fragment, {
         children: [
             (0, i.jsx)(u.Ay, { className: t, mask: u.Ay.Masks.HEADER_BAR_BADGE_BOTTOM, children: (0, i.jsx)(C, {}) }),
-            (0, i.jsx)(I.A, { className: N.s }),
+            (0, i.jsx)(f.A, { className: N.s }),
         ],
     });
 }
 function R(e) {
     let { hideBadges: t = !1, stream: n, location: s, ...u } = e,
-        I = r.useRef(null),
+        f = r.useRef(null),
         { analyticsLocations: N, parentAnalyticsLocation: R } = (0, o.Ay)(),
-        L = (0, a.bG)([h.default], () => f.Ay.isPremium(h.default.getCurrentUser(), g.PremiumTypes.TIER_1)),
+        L = (0, a.bG)([h.default], () => I.Ay.isPremium(h.default.getCurrentUser(), m.PremiumTypes.TIER_1)),
         y = (0, a.bG)([A.A], () => A.A.getChannel(n?.channelId)),
         D = r.useMemo(() => (null != n ? [n] : []), [n]),
         v = r.useCallback(() => {
@@ -48,7 +48,7 @@ function R(e) {
     return (
         t || L || (b = O),
         (0, i.jsx)(l.Y, {
-            targetElementRef: I,
+            targetElementRef: f,
             position: "top",
             renderPopout: (e) => {
                 let { closePopout: t } = e;
@@ -60,7 +60,7 @@ function R(e) {
                         onClose: t,
                         showReportOption: !0,
                         handleGoLive: v,
-                        onInteraction: (0, c.s)("ManageStreamsButton", R ?? s, { entrypoint: m.GK.OTHER_BUTTON }),
+                        onInteraction: (0, c.s)("ManageStreamsButton", R ?? s, { entrypoint: g.GK.OTHER_BUTTON }),
                     }),
                 });
             },
@@ -68,7 +68,7 @@ function R(e) {
             children: (e) =>
                 (0, i.jsx)(T.A, {
                     ...e,
-                    buttonRef: I,
+                    buttonRef: f,
                     label: S.intl.string(S.t.tmiYpF),
                     iconComponent: b,
                     onClick: (t) => {

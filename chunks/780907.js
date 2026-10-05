@@ -12,12 +12,12 @@ var i = n(488428),
     E = n(306044),
     A = n(626584),
     h = n(625180),
-    I = n(25451),
-    f = n(953384),
+    f = n(25451),
+    I = n(953384),
     p = n(952818),
     T = n(773669),
-    m = n(134861),
-    g = n(760751),
+    g = n(134861),
+    m = n(760751),
     S = n(189081),
     N = n(340829),
     C = n(174459),
@@ -137,7 +137,7 @@ async function V(e) {
     } = e;
     if (s) {
         let e = _.A.getApplication(t);
-        return null != e && (0, I.X)(e)
+        return null != e && (0, f.X)(e)
             ? (await h.A.launchFrame({ applicationId: t, surface: P.sd }), 0)
             : (await (0, c.A)({
                     applicationId: t,
@@ -149,7 +149,7 @@ async function V(e) {
               ? 0
               : Promise.resolve();
     }
-    if (m.A.isConnected(t)) return Promise.resolve();
+    if (g.A.isConnected(t)) return Promise.resolve();
     let A = null;
     if (null == n) {
         let e = S.A.getActiveLibraryApplication(t);
@@ -188,11 +188,11 @@ async function V(e) {
         let e = _.A.getApplication(t);
         if (null != e) {
             A = O.A.launch(e);
-            let n = g.A.getOfficialGame(e);
+            let n = m.A.getOfficialGame(e);
             null != n && n.id !== t && (A = A.catch(() => O.A.launch(n)));
         } else A = O.A.launchGame(t);
     }
-    let f = Error("game not found");
+    let I = Error("game not found");
     return null != A
         ? (d.h.dispatch({ type: "LIBRARY_APPLICATION_ACTIVE_BRANCH_UPDATE", applicationId: t, branchId: n }),
           d.h.dispatch({ type: "GAME_LAUNCH_START", applicationId: t }),
@@ -200,9 +200,9 @@ async function V(e) {
               d.h.dispatch({ type: "GAME_LAUNCH_SUCCESS", applicationId: t, pids: e });
           }).catch((e) => {
               (v.A.show(b.kqX.LAUNCH_GAME_FAILURE, k.intl.string(k.t.YZEBdj)),
-                  d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: f }));
+                  d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: I }));
           }))
-        : (d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: f }), Promise.reject(f));
+        : (d.h.dispatch({ type: "GAME_LAUNCH_FAIL", applicationId: t, error: I }), Promise.reject(I));
 }
 function H(e) {
     d.h.dispatch({ type: "RUNNING_GAME_SET_DEBUG_GAME", game: e });
@@ -214,7 +214,7 @@ let j = {
     },
     toggleOverlay(e, t, n) {
         let i = (0, p.Zh)(e),
-            r = g.A.findGame(i);
+            r = m.A.findGame(i);
         if (null != r) {
             let e = S.A.getActiveLibraryApplication(r.id);
             if (null != e) {
@@ -269,8 +269,8 @@ let j = {
                 }),
         ),
     getDetectableGames() {
-        if (!g.A.canFetchDetectableGames()) return;
-        let e = g.A.detectableGamesEtag;
+        if (!m.A.canFetchDetectableGames()) return;
+        let e = m.A.detectableGamesEtag;
         d.h.wait(() => {
             (d.h.dispatch({ type: "GAMES_DATABASE_FETCH" }),
                 L.A.get({
@@ -294,15 +294,15 @@ let j = {
                     (e) => {
                         let { status: t } = e;
                         304 === t
-                            ? d.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: [], etag: g.A.detectableGamesEtag })
+                            ? d.h.dispatch({ type: "GAMES_DATABASE_UPDATE", games: [], etag: m.A.detectableGamesEtag })
                             : d.h.dispatch({ type: "GAMES_DATABASE_FETCH_FAIL" });
                     },
                 ));
         });
     },
     getDetectableBlocklist() {
-        if (!g.A.canFetchExecutableBlocklist()) return;
-        let e = g.A.blocklistEtag;
+        if (!m.A.canFetchExecutableBlocklist()) return;
+        let e = m.A.blocklistEtag;
         (d.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH" }),
             l.Bo.get({
                 url: b.Rsh.GAMES_BLOCKLIST,
@@ -329,7 +329,7 @@ let j = {
                               type: "GAMES_BLOCKLIST_UPDATE",
                               executables: [],
                               patterns: [],
-                              etag: g.A.blocklistEtag,
+                              etag: m.A.blocklistEtag,
                           })
                         : (F.error("Failed to fetch games blocklist"),
                           d.h.dispatch({ type: "GAMES_BLOCKLIST_FETCH_FAIL" }));
@@ -337,8 +337,8 @@ let j = {
             ));
     },
     getDetectableNonGames() {
-        if (!f.A.canFetch()) return;
-        let e = f.A.etag;
+        if (!I.A.canFetch()) return;
+        let e = I.A.etag;
         d.h.wait(() => {
             (d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH" }),
                 L.A.get({
@@ -361,7 +361,7 @@ let j = {
                     (e) => {
                         let { status: t } = e;
                         304 === t
-                            ? d.h.dispatch({ type: "NON_GAMES_DATABASE_UPDATE", nonGames: [], etag: f.A.etag })
+                            ? d.h.dispatch({ type: "NON_GAMES_DATABASE_UPDATE", nonGames: [], etag: I.A.etag })
                             : d.h.dispatch({ type: "NON_GAMES_DATABASE_FETCH_FAIL" });
                     },
                 ));

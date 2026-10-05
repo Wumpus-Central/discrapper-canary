@@ -5,8 +5,8 @@ n.d(t, {
     zK: () => b,
     c6: () => w,
     tB: () => x,
-    WQ: () => m,
-    AQ: () => g,
+    WQ: () => g,
+    AQ: () => m,
     Dr: () => D,
     z5: () => P,
     zD: () => C,
@@ -30,14 +30,14 @@ var i = n(750459),
     E = n(872772),
     A = n(996512),
     h = n(360729),
-    I = n(652215);
-let f = { x: 0, y: 0 };
+    f = n(652215);
+let I = { x: 0, y: 0 };
 async function p(e, t, n, d) {
     try {
-        let u = n ?? f,
+        let u = n ?? I,
             _ = d ?? i.x.UNSET,
             E = await a.Bo.post({
-                url: I.Rsh.GUILD_ROOM_CONNECT(e, t),
+                url: f.Rsh.GUILD_ROOM_CONNECT(e, t),
                 body: { position: u, seat: _ },
                 rejectWithError: !0,
             }),
@@ -74,10 +74,10 @@ function T(e, t) {
     (s.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: o.default.getId(), roomId: t }),
         t !== e && (0, c.e6)({ guildId: e, channelId: t }));
 }
-function m(e, t) {
+function g(e, t) {
     s.h.dispatch({ type: "GUILD_ROOM_DISCONNECT", userId: e, roomId: t });
 }
-async function g(e, t, n) {
+async function m(e, t, n) {
     let i = _.A.getRoom(t),
         r = _.A.getRoomUsers(t),
         l = _.A.getRoomObjects(t);
@@ -89,7 +89,7 @@ async function g(e, t, n) {
             n?.user_status_id != null && (i.statusId = n.user_status_id),
             n?.user_status_text != null && (i.statusText = n.user_status_text),
             s.h.dispatch(i));
-        let r = await a.Bo.post({ url: I.Rsh.GUILD_ROOM_UPDATE(e, t), body: n, rejectWithError: !0 }),
+        let r = await a.Bo.post({ url: f.Rsh.GUILD_ROOM_UPDATE(e, t), body: n, rejectWithError: !0 }),
             l = (0, A.S)(r.body);
         if (e !== t) {
             if (
@@ -151,13 +151,13 @@ function C(e) {
     s.h.dispatch({ type: "GUILD_ROOM_TOGGLE_LAYOUT", roomId: e });
 }
 async function O(e, t, n) {
-    return await a.Bo.post({ url: I.Rsh.GUILD_ROOM_OBJECT_CREATE(e, t), body: n, rejectWithError: !0 });
+    return await a.Bo.post({ url: f.Rsh.GUILD_ROOM_OBJECT_CREATE(e, t), body: n, rejectWithError: !0 });
 }
 async function R(e, t, n, i) {
-    return await a.Bo.post({ url: I.Rsh.GUILD_ROOM_OBJECT_UPDATE(e, t, n), body: i, rejectWithError: !0 });
+    return await a.Bo.post({ url: f.Rsh.GUILD_ROOM_OBJECT_UPDATE(e, t, n), body: i, rejectWithError: !0 });
 }
 async function L(e, t, n, i) {
-    return await a.Bo.del({ url: I.Rsh.GUILD_ROOM_OBJECT_DELETE(e, t, n), body: i, rejectWithError: !0 });
+    return await a.Bo.del({ url: f.Rsh.GUILD_ROOM_OBJECT_DELETE(e, t, n), body: i, rejectWithError: !0 });
 }
 function y(e) {
     s.h.dispatch({ type: "GUILD_ROOM_PENDING_NOTE_START", roomId: e });
@@ -184,7 +184,7 @@ async function M(e, t, n) {
 }
 async function P(e, t) {
     try {
-        let n = await a.Bo.get({ url: I.Rsh.GUILD_ROOM(e, t), rejectWithError: !0 }),
+        let n = await a.Bo.get({ url: f.Rsh.GUILD_ROOM(e, t), rejectWithError: !0 }),
             i = (0, A.S)(n.body);
         s.h.dispatch({ type: "GUILD_ROOM_FETCH_SUCCESS", guildId: e, room: i });
     } catch (e) {

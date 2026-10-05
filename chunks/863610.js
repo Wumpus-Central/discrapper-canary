@@ -1,4 +1,4 @@
-n.d(t, { U: () => h, n: () => I });
+n.d(t, { U: () => h, n: () => f });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -74,13 +74,13 @@ let h = r.memo(function (e) {
             }),
         });
     }),
-    I = r.memo(function (e) {
+    f = r.memo(function (e) {
         let { dotRadius: t, x: n, y: r, hide: a = !1, themed: o = !1, className: E, ref: A } = e,
-            { focused: I } = (0, c.xb)();
+            { focused: f } = (0, c.xb)();
         return (0, d.p)(
             a,
             { ..._, key: (e) => (e ? "true" : "false") },
-            I ? "animate-always" : "animate-never",
+            f ? "animate-always" : "animate-never",
         )((e, a, d) => {
             let { dotPosition: c } = e,
                 { key: _ } = d;

@@ -80,7 +80,7 @@ function A(e, t) {
 function h(e, t) {
     return 0 === t.length ? e : e.map((e) => A(e, t));
 }
-class I {
+class f {
     prefix;
     tableId;
     database;
@@ -188,10 +188,10 @@ class I {
         );
     }
     transaction(e, t) {
-        return this.database.transaction((t) => e(new f(this.prefix, this.tableId, t)), t);
+        return this.database.transaction((t) => e(new I(this.prefix, this.tableId, t)), t);
     }
     upgradeTransaction(e) {
-        return new f(this.prefix, this.tableId, e);
+        return new I(this.prefix, this.tableId, e);
     }
     messages = {
         getLatest: (e) =>
@@ -220,12 +220,12 @@ class I {
         this.database.executeSync({ type: "kv.delete_many", table: this.tableId, key: E(this.prefix, e) });
     }
 }
-class f {
+class I {
     prefix;
     tableId;
     transaction;
     static fromDatabaseTransaction(e, t, n) {
-        return new f(e, t, n);
+        return new I(e, t, n);
     }
     constructor(e, t, n) {
         ((this.prefix = e), (this.tableId = t), (this.transaction = n));
@@ -324,7 +324,7 @@ class p {
         return this.table.prefix;
     }
     constructor(e, t, n, i = !0) {
-        ((this.originalPrefix = e), (this.table = new I([e], t, n, i)));
+        ((this.originalPrefix = e), (this.table = new f([e], t, n, i)));
     }
     withoutLogging() {
         return new p(this.originalPrefix, this.table.tableId, this.table.database, !1);
@@ -373,7 +373,7 @@ class p {
 class T {
     transaction;
     static fromDatabaseTransaction(e, t, n) {
-        return new T(new f(e, t, n));
+        return new T(new I(e, t, n));
     }
     constructor(e) {
         this.transaction = e;
@@ -387,10 +387,10 @@ class T {
     }
 }
 n(321073);
-var m = n(61090),
-    g = n(941426);
+var g = n(61090),
+    m = n(941426);
 let S = "1" === n(72290).env.KV_STORAGE_LOGGING,
-    N = new g.Vy("Runtime");
+    N = new m.Vy("Runtime");
 class C {
     static counter = 0;
     static pending = new Map();
@@ -541,12 +541,12 @@ class R {
                 C.executeAsync(t ?? e.type, (t) => {
                     this.raw.execute(t, { ...e, handle: 0 });
                 });
-        return null === t ? i() : m.A.timeAsync("\uD83D\uDCBE", `${t ?? e.type} ${n ?? ""}`, i);
+        return null === t ? i() : g.A.timeAsync("\uD83D\uDCBE", `${t ?? e.type} ${n ?? ""}`, i);
     }
     executeSync(e) {
         if (null == this.raw) throw Error(`database is no longer open (database: ${this}`);
         let t = "key" in e ? e.key[0] : e.table;
-        return m.A.time("\uD83D\uDCBE", `SYNC: ${e.type} ${t ?? ""}`, () =>
+        return g.A.time("\uD83D\uDCBE", `SYNC: ${e.type} ${t ?? ""}`, () =>
             this.raw.execute(null, { ...e, handle: 0 }, { synchronous: !0 }),
         );
     }
@@ -601,7 +601,7 @@ class y {
         return this.table.prefix;
     }
     constructor(e, t, n, i = !0) {
-        ((this.originalPrefix = e), (this.table = new I([e], t, n, i)));
+        ((this.originalPrefix = e), (this.table = new f([e], t, n, i)));
     }
     withoutLogging() {
         return new y(this.originalPrefix, this.table.tableId, this.table.database, !1);
@@ -660,7 +660,7 @@ class y {
 class D {
     transaction;
     static fromDatabaseTransaction(e, t, n) {
-        return new D(new f(e, t, n));
+        return new D(new I(e, t, n));
     }
     constructor(e) {
         this.transaction = e;
@@ -693,7 +693,7 @@ class v {
         return this.table.prefix;
     }
     constructor(e, t, n, i = !0) {
-        ((this.originalPrefix = e), (this.table = new I([e], t, n, i)));
+        ((this.originalPrefix = e), (this.table = new f([e], t, n, i)));
     }
     withoutLogging() {
         return new v(this.originalPrefix, this.table.tableId, this.table.database, !1);
@@ -759,7 +759,7 @@ class v {
 class b {
     state;
     static fromDatabaseTransaction(e, t, n) {
-        return new b(new f(e, t, n));
+        return new b(new I(e, t, n));
     }
     constructor(e) {
         this.state = e;
@@ -795,7 +795,7 @@ class M {
         return this.table.prefix;
     }
     constructor(e, t, n, i = !0) {
-        ((this.originalPrefix = e), (this.table = new I([e], t, n, i)));
+        ((this.originalPrefix = e), (this.table = new f([e], t, n, i)));
     }
     withoutLogging() {
         return new M(this.originalPrefix, this.table.tableId, this.table.database, !1);
@@ -863,7 +863,7 @@ class M {
 class P {
     transaction;
     static fromDatabaseTransaction(e, t, n) {
-        return new P(new f(e, t, n));
+        return new P(new I(e, t, n));
     }
     constructor(e) {
         this.transaction = e;
@@ -910,7 +910,7 @@ class U {
         return this.table.prefix;
     }
     constructor(e, t, n, i = !0) {
-        ((this.originalPrefix = e), (this.table = new I([e], t, n, i)));
+        ((this.originalPrefix = e), (this.table = new f([e], t, n, i)));
     }
     withoutLogging() {
         return new U(this.originalPrefix, this.table.tableId, this.table.database, !1);
@@ -961,7 +961,7 @@ class w {
         return new w(e);
     }
     static fromDatabaseTransaction(e, t, n) {
-        return new w(new f(e, t, n));
+        return new w(new I(e, t, n));
     }
     constructor(e) {
         this.transaction = e;

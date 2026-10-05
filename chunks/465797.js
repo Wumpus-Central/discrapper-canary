@@ -1,5 +1,5 @@
 let i, r, a;
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var s = n(17928),
     l = n(73153),
     o = n(54827),
@@ -22,7 +22,7 @@ class h extends s.Ay.Store {
         return r.has(n);
     }
 }
-let I = new h(l.h, {
+let f = new h(l.h, {
     GAME_CLOUD_SYNC_START: function (e) {
         let { applicationId: t, branchId: n } = e,
             i = (0, u.gW)(t, n);

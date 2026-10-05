@@ -24,12 +24,12 @@ var s = n(665260),
     E = n(652215),
     A = n(340837),
     h = n(24873),
-    I = n(95701),
-    f = n(280450),
+    f = n(95701),
+    I = n(280450),
     p = n(808728),
     T = n(498642),
-    m = n(317525),
-    g = n(25578),
+    g = n(317525),
+    m = n(25578),
     S = n(576705),
     N = n(290863),
     C = n(763827),
@@ -49,8 +49,8 @@ function x(e) {
     if (null == e) return null;
     let t = d.A.getGuild(e);
     if (null == t) return null;
-    let n = m.A.getNumRoles(t.id),
-        i = f.default.getId(),
+    let n = g.A.getNumRoles(t.id),
+        i = I.default.getId(),
         r = o.Ay.getMember(e, i),
         a = p.Ay.getChannels(e),
         s = a[p.I6].length,
@@ -89,7 +89,7 @@ function F(e) {
             let t = e.permissionOverwrites[n];
             return null != t && a.zy(t.deny, E.xBc.VIEW_CHANNEL);
         }
-        t = i(I.Le.has(e.type) && null != e.parent_id ? l.A.getChannel(e.parent_id) : e);
+        t = i(f.Le.has(e.type) && null != e.parent_id ? l.A.getChannel(e.parent_id) : e);
     }
     return {
         channel_id: e.id,
@@ -104,7 +104,7 @@ function B(e) {
     if (null == e) return null;
     let n = l.A.getChannel(e);
     if (null == n) return null;
-    let i = g.Ay.isVideoEnabled(),
+    let i = m.Ay.isVideoEnabled(),
         r = C.A.getMediaSessionId();
     return {
         channel_id: n.id,
@@ -156,19 +156,19 @@ function H(e) {
                 : null),
         };
     }
-    let I = O.Ay.getSnapshot(e, 10 * P.A.Millis.SECOND);
+    let f = O.Ay.getSnapshot(e, 10 * P.A.Millis.SECOND);
     return {
         channel_id: e,
-        channel_was_unread: I.unread,
-        channel_mention_count: I.mentionCount,
+        channel_was_unread: f.unread,
+        channel_mention_count: f.mentionCount,
         channel_is_muted: D.Ay.isChannelMuted(r.guild_id, r.id),
         channel_is_nsfw: r.isNSFW(),
         channel_is_spoiler: r.isSpoilerChannel(),
         channel_resolved_unread_setting: D.Ay.resolveUnreadSetting(r),
         channel_preset: (0, h.jU)(D.Ay.resolveUnreadSetting(r), D.Ay.resolvedMessageNotifications(r)),
         guild_id: r.guild_id,
-        guild_was_unread: I.guildUnread,
-        guild_mention_count: I.guildMentionCount,
+        guild_was_unread: f.guildUnread,
+        guild_mention_count: f.guildMentionCount,
         guild_is_muted: D.Ay.isMuted(r.guild_id),
         guild_resolved_unread_setting: D.Ay.resolveGuildUnreadSetting(a),
         guild_preset: (0, h.jU)(D.Ay.resolveGuildUnreadSetting(a), D.Ay.getMessageNotifications(r.guild_id)),
@@ -202,7 +202,7 @@ function W(e, t, n) {
     return (
         r()(b.A.getVoiceStates(e))
             .filter((e) => e.channelId === t)
-            .filter((e) => e.userId !== f.default.getId())
+            .filter((e) => e.userId !== I.default.getId())
             .forEach((e) => {
                 (i.voice_state_count++, (e.selfVideo || e.selfStream) && i.video_stream_count++);
             }),

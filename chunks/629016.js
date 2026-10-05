@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -42,7 +42,7 @@ function h(e) {
     for (let { user: e, status: i, activities: r } of t.presences) !1 !== A(t.id, e.id, r, i) && (n = !0);
     return n;
 }
-function I(e, t) {
+function f(e, t) {
     let n = !1;
     return (
         t.forEach((t) => {
@@ -51,7 +51,7 @@ function I(e, t) {
         n
     );
 }
-function f() {
+function I() {
     let e = l.default.getId(),
         t = d.A.getActivities();
     return A(c.ME, e, t);
@@ -69,7 +69,7 @@ function p(e) {
 class T extends a.Ay.Store {
     static displayName = "GamePartyStore";
     initialize() {
-        (this.syncWith([d.A], f), this.waitFor(l.default, o.A, d.A));
+        (this.syncWith([d.A], I), this.waitFor(l.default, o.A, d.A));
     }
     getParty(e) {
         return null != e && _.has(e) ? _.get(e) : null;
@@ -81,7 +81,7 @@ class T extends a.Ay.Store {
         return _;
     }
 }
-let m = new T(s.h, {
+let g = new T(s.h, {
     CONNECTION_OPEN_SUPPLEMENTAL: function (e) {
         let { guilds: t, presences: n } = e,
             i = !1;
@@ -111,7 +111,7 @@ let m = new T(s.h, {
     },
     THREAD_MEMBER_LIST_UPDATE: function (e) {
         let { guildId: t, members: n } = e;
-        return I(
+        return f(
             t,
             n.map((e) => e.presence),
         );
@@ -120,7 +120,7 @@ let m = new T(s.h, {
         let { guildId: t, addedMembers: n } = e;
         return (
             null != n &&
-            I(
+            f(
                 t,
                 n.map((e) => e.presence),
             )

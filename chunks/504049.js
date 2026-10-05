@@ -1,4 +1,4 @@
-n.d(t, { $9: () => f, KW: () => p, Ks: () => _, Nj: () => I, Tj: () => h, Zp: () => A, hs: () => E });
+n.d(t, { $9: () => I, KW: () => p, Ks: () => _, Nj: () => f, Tj: () => h, Zp: () => A, hs: () => E });
 var i,
     r,
     a = n(582128),
@@ -46,7 +46,7 @@ function h(e) {
         [e],
     );
 }
-var I =
+var f =
     (((r = {}).BAN = "ban"),
     (r.KICK = "kick"),
     (r.MUTE = "mute"),
@@ -56,7 +56,7 @@ var I =
     (r.COPY_ID = "copy_id"),
     (r.CHANGE_NICKNAME = "change_nickname"),
     r);
-function f(e, t) {
+function I(e, t) {
     let { location: n, targetUserId: i, targets: r, locations: s } = t;
     return a.useCallback(
         (t) => {

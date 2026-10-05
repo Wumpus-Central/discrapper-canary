@@ -12,12 +12,12 @@ var i = n(73153),
     E = n(192308),
     A = n(890615),
     h = n(51758),
-    I = n(776781),
-    f = n(96566),
+    f = n(776781),
+    I = n(96566),
     p = n(312987),
     T = n(95561),
-    m = n(329551),
-    g = n(912630),
+    g = n(329551),
+    m = n(912630),
     S = n(965162),
     N = n(763827),
     C = n(309010),
@@ -76,10 +76,10 @@ let U = {
                       o = c.A.getChannel(e),
                       d = v.A.getCurrentClientVoiceChannelId(t ?? null) === e,
                       M = null != o ? y.A.getCheck(o.guild_id) : null;
-                  if (!(null != t && (0, h.V)(t)) && (null == M || M.canChat || (0, I.pC)(o))) {
+                  if (!(null != t && (0, h.V)(t)) && (null == M || M.canChat || (0, f.pC)(o))) {
                       if (null != o && !d) {
                           let e = (0, b.Pd)(o, v.A, L.A);
-                          if (e && o.isGuildStageVoice() && (0, f.xn)(o.id))
+                          if (e && o.isGuildStageVoice() && (0, I.xn)(o.id))
                               return (0, E.openModalLazy)(async () => {
                                   let { default: e } = await Promise.all([
                                       n.e("196063"),
@@ -141,11 +141,11 @@ let U = {
                                               duration_muted_ms: r?.duration_muted_ms ?? null,
                                               output_audio_route_type: R.A.getCurrentRouteType(),
                                           });
-                                  if ((e(), g.A.hasUsedBackgroundInCall)) {
+                                  if ((e(), m.A.hasUsedBackgroundInCall)) {
                                       let e,
                                           t = {
                                               ...s,
-                                              ...((e = (0, m.i)(O.default.getCurrentUser())),
+                                              ...((e = (0, g.i)(O.default.getCurrentUser())),
                                               {
                                                   video_device_name:
                                                       u.Ay.getVideoDevices()[u.Ay.getVideoDeviceId()]?.name,

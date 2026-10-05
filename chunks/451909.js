@@ -12,12 +12,12 @@ var i = n(435558),
     E = n(704726),
     A = n(113051),
     h = n(677413),
-    I = n(863005),
-    f = n(885386),
+    f = n(863005),
+    I = n(885386),
     p = n(734057),
     T = n(808728),
-    m = n(696451),
-    g = n(317525),
+    g = n(696451),
+    m = n(317525),
     S = n(71393),
     N = n(576705),
     C = n(994500),
@@ -149,7 +149,7 @@ let k = _.Ay.RULES,
         },
         emoticon: {
             match(e, t, n) {
-                if (!f.j7.getSetting() || (0 !== n.length && !/\s$/.test(n))) return null;
+                if (!I.j7.getSetting() || (0 !== n.length && !/\s$/.test(n))) return null;
                 let i = u.Ay.EMOJI_SHORTCUT_RE.exec(e);
                 return null == i || (i[0].length !== e.length && " " !== e[i[0].length] && "\n" !== e[i[0].length])
                     ? null
@@ -217,7 +217,7 @@ let k = _.Ay.RULES,
                     let e = "";
                     if (a?.id != null) {
                         let t = o.toLowerCase();
-                        e = r().some(g.A.getUnsafeMutableRoles(a.id), (e) => t.startsWith(e.name.toLowerCase()))
+                        e = r().some(m.A.getUnsafeMutableRoles(a.id), (e) => t.startsWith(e.name.toLowerCase()))
                             ? `#${`${l.discriminator}`.padStart(4, "0")}`
                             : "";
                     }
@@ -230,7 +230,7 @@ let k = _.Ay.RULES,
             parse(e, t, n) {
                 let { guild: i } = n;
                 if (null != i) {
-                    let t = g.A.getRole(i.id, e[1]);
+                    let t = m.A.getRole(i.id, e[1]);
                     if (null != t) return { content: `@${t.name}` };
                 }
                 return { content: e[0] };
@@ -346,7 +346,7 @@ function q(e, t) {
     } else
         n =
             null != i
-                ? m.Ay.getMembers(i).map((e) => {
+                ? g.Ay.getMembers(i).map((e) => {
                       let { userId: t, nick: n } = e;
                       return { userId: t, nick: n };
                   })
@@ -358,7 +358,7 @@ function q(e, t) {
                 return (null == i || e.push({ id: n, text: i.tag }), e);
             }, []),
         ),
-        d = r()(null != a ? g.A.getSortedRoles(a.id) : [])
+        d = r()(null != a ? m.A.getSortedRoles(a.id) : [])
             .filter((e) => {
                 let { mentionable: t } = e;
                 return s || t;
@@ -385,10 +385,10 @@ function q(e, t) {
                       .filter(D.Vq)
                       .value()
                 : [],
-        E = I.A.computeAllActiveJoinedThreads(i).map((e) => ({ id: e.id, text: (0, o.m1)(e, R.default, C.A) })),
+        E = f.A.computeAllActiveJoinedThreads(i).map((e) => ({ id: e.id, text: (0, o.m1)(e, R.default, C.A) })),
         A = c.Ay.getDisambiguatedEmojiContext(i),
         h = A.getEscapedCustomEmoticonNames(),
-        f = A.getCustomEmoji(),
+        I = A.getCustomEmoji(),
         p = A.getCustomEmoticonRegex();
     return {
         inline: !0,
@@ -402,7 +402,7 @@ function q(e, t) {
         channels: u.concat(_).concat(E),
         emojiContext: A,
         customEmoticonsRegex: p,
-        customEmoji: f,
+        customEmoji: I,
         textExclusions: h,
         isNotification: !1,
     };

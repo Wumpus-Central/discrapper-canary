@@ -4,7 +4,7 @@
     IB: () => u,
     Ob: () => d,
     Q7: () => c,
-    WN: () => f,
+    WN: () => I,
     cb: () => o,
     fE: () => E,
     h6: () => h,
@@ -94,9 +94,9 @@ function c(e) {
         (d = (a + r) / 2),
         { h: o, s: +(100 * (0 === s ? 0 : s / (1 - Math.abs(2 * d - 1)))).toFixed(1), l: (d = +(100 * d).toFixed(1)) }),
         h = _,
-        I = E,
-        f = A;
-    (I < 30 && (I += 30), f > 80 && (f -= 40), f < 20 && (f += 15));
+        f = E,
+        I = A;
+    (f < 30 && (f += 30), I > 80 && (I -= 40), I < 20 && (I += 15));
     let p = 360 / (c + 1);
     for (; u.length < c;) {
         (h -= p) < 0 && (h += 360);
@@ -114,7 +114,7 @@ function c(e) {
                         .padStart(2, "0");
                 }
                 return `#${r(0)}${r(8)}${r(4)}`;
-            })(h, I, f),
+            })(h, f, I),
         );
         u.push([e, t, n]);
     }
@@ -208,7 +208,7 @@ function h(e) {
                 function h(e) {
                     return (E - e) / 6 / A + 0.5;
                 }
-                function I(e) {
+                function f(e) {
                     return Math.round(100 * e) / 100;
                 }
                 return (
@@ -221,18 +221,18 @@ function h(e) {
                           (r = c === E ? i - n : u === E ? 1 / 3 + t - i : _ === E ? 2 / 3 + n - t : 0) < 0
                               ? (r += 1)
                               : r > 1 && (r -= 1)),
-                    { h: Math.round(360 * r), s: I(100 * a), v: I(100 * E) }
+                    { h: Math.round(360 * r), s: f(100 * a), v: f(100 * E) }
                 );
             })(e) ?? { h: 0, s: 0, v: 0 },
         }))
-        .sort(I)[0].hex;
+        .sort(f)[0].hex;
 }
-function I(e, t) {
+function f(e, t) {
     let n = e.hsv,
         i = t.hsv;
     return i.s + i.v - (n.s + n.v);
 }
-function f(e) {
+function I(e) {
     let { colorRGB: t, saturationFactor: n = 1 } = e;
     if (null == t) return t;
     let i = u(t.get("rgb.r"), t.get("rgb.g"), t.get("rgb.b"));

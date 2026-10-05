@@ -1,4 +1,4 @@
-n.d(t, { $r: () => m, AN: () => S, BX: () => A, i: () => E, w6: () => h });
+n.d(t, { $r: () => g, AN: () => S, BX: () => A, i: () => E, w6: () => h });
 var i = n(636537),
     r = n(332714),
     a = n(534573),
@@ -38,29 +38,29 @@ function h(e) {
     for (let e of ["ex", "is", "hm"]) t.searchParams.delete(e);
     return t;
 }
-function I(e) {
+function f(e) {
     let t,
         n = isNaN((t = parseInt(e.searchParams.get("ex") ?? "", 16))) ? void 0 : t * s.A.Millis.SECOND;
     return null == n || n <= Date.now() + c;
 }
-function f(e) {
+function I(e) {
     let t = l.A.toURLSafe(e.url);
-    return null != t && I(t);
+    return null != t && f(t);
 }
 function p(e) {
     if (null == e) return !1;
     let t = l.A.toURLSafe(e.url);
     return (
-        null != t && !!(!(!_(t) || t.pathname.startsWith("/external/")) && (t.searchParams.has("ex") || E(t))) && I(t)
+        null != t && !!(!(!_(t) || t.pathname.startsWith("/external/")) && (t.searchParams.has("ex") || E(t))) && f(t)
     );
 }
 function T(e) {
     return p(e.image) || e.images?.some(p) || p(e.video);
 }
-function m(e) {
-    return e.attachments.some(f) || e.embeds.some(T);
+function g(e) {
+    return e.attachments.some(I) || e.embeds.some(T);
 }
-async function g(e) {
+async function m(e) {
     return (
         await i.Bo.post({
             url: d.Rsh.ATTACHMENTS_REFRESH_URLS,
@@ -71,5 +71,5 @@ async function g(e) {
 }
 async function S(e) {
     let t = l.A.toURLSafe(e);
-    return null != t && I(t) ? ((await g(e)) ?? e) : e;
+    return null != t && f(t) ? ((await m(e)) ?? e) : e;
 }

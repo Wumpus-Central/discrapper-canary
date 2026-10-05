@@ -12,12 +12,12 @@ var i,
     E = n(70298),
     A = n(17928),
     h = n(636537),
-    I = n(73153),
-    f = n(766034),
+    f = n(73153),
+    I = n(766034),
     p = n(314732),
     T = n(214771),
-    m = n(937724),
-    g = n(626584),
+    g = n(937724),
+    m = n(626584),
     S = n(807393),
     N = n(464578),
     C = n(111162),
@@ -173,7 +173,7 @@ class j {
                     n = this._pako,
                     i = this._inflate;
                 if (null == i)
-                    return void new g.A("GatewayCompressionHandler").error(
+                    return void new m.A("GatewayCompressionHandler").error(
                         "flush end happened on closed compression adapter",
                     );
                 if (e !== n.Z_OK) throw Error(`zlib error, ${e}, ${i.strm.msg}`);
@@ -317,7 +317,7 @@ let eA = (0, eE.mj)({
 function eh(e) {
     return eA.getConfig({ location: e }).enabled;
 }
-let eI = new (class {
+let ef = new (class {
         _stringEncoding;
         _keyEncoding;
         _safeIntEncoding;
@@ -773,7 +773,7 @@ let eI = new (class {
         encoding: { string: "binary", key: "binary", array: "list", null: "atom", undefined: "null" },
         useLegacyAtoms: !0,
     }),
-    ef = new (class {
+    eI = new (class {
         _nilDecoding;
         _stringDecoding;
         _binaryDecoding;
@@ -1066,18 +1066,18 @@ let eI = new (class {
                     }
                     pack(t) {
                         return (null == this._useWetf && (this._useWetf = eh("EtfEncoding")), this._useWetf)
-                            ? eI.packToArrayBuffer(t)
+                            ? ef.packToArrayBuffer(t)
                             : e.pack(t).buffer;
                     }
                     unpack(t) {
                         if ((null == this._useWetf && (this._useWetf = eh("EtfEncoding")), this._useWetf)) {
                             let e = t instanceof Uint8Array ? t : new Uint8Array(t);
                             try {
-                                return ef.unpack(e);
+                                return eI.unpack(e);
                             } catch (n) {
                                 throw (
                                     D.A.captureException(n, { tags: { app_context: "WetfParser" } }),
-                                    new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
+                                    new m.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
                                         erlpackUnpackError: n,
                                         erlpackDataPreview: null != t ? Array.from(e.slice(0, 32)) : null,
                                         erlpackDataLength: e.length,
@@ -1091,7 +1091,7 @@ let eI = new (class {
                             return e.unpack(t);
                         } catch (e) {
                             throw (
-                                new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
+                                new m.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
                                     erlpackUnpackError: e,
                                     erlpackDataPreview: null != t ? Array.from(t.slice(0, 32)) : null,
                                     erlpackDataLength: null != t ? t.length : null,
@@ -1125,9 +1125,9 @@ class eT {
         return !0;
     }
 }
-let em = void 0 !== ep ? ep : eT;
-G.P.isDiscordGatewayPlaintextSet() && (em = eT);
-let eg = em;
+let eg = void 0 !== ep ? ep : eT;
+G.P.isDiscordGatewayPlaintextSet() && (eg = eT);
+let em = eg;
 n(423034);
 var eS = n(287809),
     eN = n(652215);
@@ -1306,7 +1306,7 @@ class eH {
         };
     }
 }
-let ej = new g.A("DispatcherWorkScheduler");
+let ej = new m.A("DispatcherWorkScheduler");
 class eW {
     _flushTimeoutHandler = null;
     _flushIdleHandler = null;
@@ -1420,7 +1420,7 @@ class ez extends eW {
     _flushIdleMaxTimeoutHandler = null;
     constructor() {
         (super(),
-            I.h.subscribe("WINDOW_VISIBILITY_CHANGE", (e) => {
+            f.h.subscribe("WINDOW_VISIBILITY_CHANGE", (e) => {
                 let { visible: t, windowId: n } = e;
                 n === (0, ey.Xg)() && this._trackAppBackgrounded(!t);
             }));
@@ -1483,7 +1483,7 @@ let eX = (0, eE.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    eZ = new g.A("GatewaySocket"),
+    eZ = new m.A("GatewaySocket"),
     eq = new Set(["INITIAL_GUILD", "READY"]),
     eQ = new Set(["READY", "INITIAL_GUILD"]),
     eJ = new Set(["VOICE_SERVER_UPDATE", "STREAM_SERVER_UPDATE"]),
@@ -1688,12 +1688,12 @@ class e3 {
                             ...A
                         } = e,
                         h = [],
-                        I = [],
                         f = [],
+                        I = [],
                         p = [],
                         T = [],
-                        m = [],
                         g = [],
+                        m = [],
                         S = [];
                     return (
                         n.forEach((e) => {
@@ -1701,12 +1701,12 @@ class e3 {
                             let { features: t, ...n } = e.properties ?? {},
                                 { threads: i, guild_scheduled_events: r, ...a } = e;
                             (h.push("partial" === e.data_mode ? e.partial_updates.channels : e.channels),
-                                I.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles),
-                                f.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
+                                f.push("partial" === e.data_mode ? e.partial_updates.roles : e.roles),
+                                I.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
                                 p.push(i),
                                 T.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
-                                m.push(t),
-                                g.push(r),
+                                g.push(t),
+                                m.push(r),
                                 S.push(a, n));
                         }),
                         {
@@ -1722,12 +1722,12 @@ class e3 {
                             guild_channels_size: JSON.stringify(h).length,
                             guild_members_size: JSON.stringify(r ?? []).length,
                             guild_presences_size: JSON.stringify(i?.guilds ?? []).length,
-                            guild_roles_size: JSON.stringify(I).length,
-                            guild_emojis_size: JSON.stringify(f).length,
+                            guild_roles_size: JSON.stringify(f).length,
+                            guild_emojis_size: JSON.stringify(I).length,
                             guild_threads_size: JSON.stringify(p).length,
                             guild_stickers_size: JSON.stringify(T).length,
-                            guild_events_size: JSON.stringify(g).length,
-                            guild_features_size: JSON.stringify(m).length,
+                            guild_events_size: JSON.stringify(m).length,
+                            guild_features_size: JSON.stringify(g).length,
                             guild_remaining_data_size: JSON.stringify(S).length,
                             size_metrics_duration_ms: Date.now() - t,
                         }
@@ -2161,15 +2161,15 @@ class t_ extends ta.G {
 new t_();
 var tE = n(767589),
     tA = n(458244);
-let th = new g.A("QOS"),
-    tI = new g.A("GatewaySocket"),
-    tf = new eg(),
+let th = new m.A("QOS"),
+    tf = new m.A("GatewaySocket"),
+    tI = new em(),
     tp = null;
 function tT(e) {
     tp = e;
 }
-function tm() {}
-let tg = 30 * L.A.Millis.SECOND,
+function tg() {}
+let tm = 30 * L.A.Millis.SECOND,
     tS = 3 * L.A.Millis.MINUTE,
     tN = +L.A.Millis.MINUTE;
 function tC(e) {
@@ -2217,7 +2217,7 @@ class tR extends e8 {
         return this.connectionState_;
     }
     set connectionState(e) {
-        (tI.verbose(`Setting connection state to ${e}`), (this.connectionState_ = e));
+        (tf.verbose(`Setting connection state to ${e}`), (this.connectionState_ = e));
     }
     constructor() {
         (super(),
@@ -2240,7 +2240,7 @@ class tR extends e8 {
             (this.firstConnectAttemptStartTime = 0),
             (this.identifyStartTime = 0),
             (this.nextReconnectIsImmediate = !1),
-            (this.compressionHandler = Y(tf)),
+            (this.compressionHandler = Y(tI)),
             (this.hasConnectedOnce = !1),
             (this.isFastConnect = !1),
             (this.identifyCount = 0),
@@ -2253,7 +2253,7 @@ class tR extends e8 {
     }
     setResumeUrl(e) {
         (null != e && e.endsWith("/") && (e = e.substring(0, e.length - 1)),
-            null !== e && tI.verbose(`Updating resume url to ${e}`),
+            null !== e && tf.verbose(`Updating resume url to ${e}`),
             (this.resumeUrl = e));
     }
     handleActiveStateChange(e) {
@@ -2278,25 +2278,25 @@ class tR extends e8 {
     _connect() {
         var e, t, n;
         let i, r;
-        if (!this.willReconnect()) return void tI.verbose("Skipping _connect because willReconnect is false");
-        if (e9.j()) return void tI.info("Skipping _connect because socket is paused");
+        if (!this.willReconnect()) return void tf.verbose("Skipping _connect because willReconnect is false");
+        if (e9.j()) return void tf.info("Skipping _connect because socket is paused");
         ((this.connectionState = w.A.CONNECTING), (this.nextReconnectIsImmediate = !1));
         let a = this.compressionHandler.getAlgorithm(),
-            s = tf.getName(),
+            s = tI.getName(),
             l = this._getGatewayUrl(),
             o = window.GLOBAL_ENV.API_VERSION;
         ((this.receivedHelloThisAttempt = !1),
             c.A.mark("\uD83C\uDF10", "Socket._connect"),
-            tI.info(`[CONNECT] ${l}, encoding: ${s}, version: ${o}, compression: ${a ?? "none"}`),
+            tf.info(`[CONNECT] ${l}, encoding: ${s}, version: ${o}, compression: ${a ?? "none"}`),
             null !== this.webSocket &&
-                (tI.error("_connect called with already existing websocket"), this._cleanup((e) => e.close(4e3))),
+                (tf.error("_connect called with already existing websocket"), this._cleanup((e) => e.close(4e3))),
             (this.connectionStartTime = Date.now()),
             0 === this.firstConnectAttemptStartTime && (this.firstConnectAttemptStartTime = this.connectionStartTime),
             (this.helloTimeout = setTimeout(() => {
                 let e = Date.now() - this.connectionStartTime;
                 (this._handleClose(!1, 0, `The connection timed out after ${e} ms - did not receive OP_HELLO in time.`),
                     this.setResumeUrl(null));
-            }, tg)));
+            }, tm)));
         let d = new URL(l);
         (d.searchParams.append("encoding", s),
             d.searchParams.append("v", o.toString()),
@@ -2304,7 +2304,7 @@ class tR extends e8 {
             !(function (e) {
                 let t,
                     { gatewayURL: n, newCallback: i, onOpen: r, onMessage: a, onError: s, onClose: l } = e;
-                tI.enableNativeLogger(!0);
+                tf.enableNativeLogger(!0);
                 let o = window._ws,
                     d = !1,
                     c = !1,
@@ -2315,11 +2315,11 @@ class tR extends e8 {
                     let e = o.state.userId,
                         i = null != e && null != tp && e !== tp;
                     if (o.state.gateway !== n)
-                        (tI.verbose(`[FAST CONNECT] gatewayURL mismatch: ${o.state.gateway} !== ${n}`),
+                        (tf.verbose(`[FAST CONNECT] gatewayURL mismatch: ${o.state.gateway} !== ${n}`),
                             t.close(1e3),
                             (t = null));
                     else if (i)
-                        (tI.log(
+                        (tf.log(
                             `[FAST CONNECT] refusing to adopt socket: identified user ${e} does not match switch target ${tp}`,
                         ),
                             t.close(1e3),
@@ -2332,7 +2332,7 @@ class tR extends e8 {
                                     ? { ...e, data: e.data.substring(0, 100) }
                                     : e,
                             )),
-                            tI.log("[FAST CONNECT] successfully took over websocket, state:", {
+                            tf.log("[FAST CONNECT] successfully took over websocket, state:", {
                                 ...e,
                                 messages: e.messages?.length,
                             }),
@@ -2358,7 +2358,7 @@ class tR extends e8 {
                 onOpen: (e) => {
                     c.A.mark(`\u{1F310}`, `GatewaySocket.onOpen ${e}`);
                     let t = Date.now() - this.connectionStartTime;
-                    (tI.info(`[CONNECTED] ${d.toString()} in ${t} ms`),
+                    (tf.info(`[CONNECTED] ${d.toString()} in ${t} ms`),
                         (this.isFastConnect = e),
                         e ? this._doFastConnectIdentify() : this._doResumeOrIdentify());
                 },
@@ -2367,13 +2367,13 @@ class tR extends e8 {
                     (t = this._handleClose.bind(this)),
                     (n = (e, t) => {
                         let n = Date.now(),
-                            { op: i, s: r, t: a, d: s } = tf.unpack(e);
+                            { op: i, s: r, t: a, d: s } = tI.unpack(e);
                         if (
                             (i !== e7.DISPATCH && c.A.mark(`\u{1F310}`, `GatewaySocket.onMessage ${i} ${e7[i]}`),
                             C.default.isLoggingGatewayEvents)
                         ) {
                             let e = [i];
-                            (i === e7.DISPATCH && e.push(a), e.push(s), tI.verboseDangerously("<~", ...e));
+                            (i === e7.DISPATCH && e.push(a), e.push(s), tf.verboseDangerously("<~", ...e));
                         }
                         let l = Date.now() - n;
                         switch (
@@ -2409,14 +2409,14 @@ class tR extends e8 {
                                               compressed_byte_size: t,
                                               uncompressed_byte_size: tC(e),
                                               compression_algorithm: this.compressionHandler.getAlgorithm(),
-                                              packing_algorithm: tf.getName(),
+                                              packing_algorithm: tI.getName(),
                                               unpack_duration_ms: l,
                                           }
                                         : null,
                                 );
                                 break;
                             default:
-                                tI.info(`Unhandled op ${i}`);
+                                tf.info(`Unhandled op ${i}`);
                         }
                         this._sendHeartbeatIfDue();
                     }),
@@ -2453,7 +2453,7 @@ class tR extends e8 {
         let t = (this.heartbeatInterval = e.heartbeat_interval),
             n = Date.now(),
             i = n - this.connectionStartTime;
-        (tI.verbose(`[HELLO] via ${eC(e)}, heartbeat interval: ${t}, took ${i} ms`),
+        (tf.verbose(`[HELLO] via ${eC(e)}, heartbeat interval: ${t}, took ${i} ms`),
             (function (e) {
                 let { socket: t, altGateway: n, gatewayUrl: i, now: r } = e;
                 O.default.track(
@@ -2477,13 +2477,13 @@ class tR extends e8 {
             this._startHeartbeater());
     }
     _handleReconnect() {
-        (tI.verbose("[RECONNECT] gateway requested I reconnect."),
+        (tf.verbose("[RECONNECT] gateway requested I reconnect."),
             this._cleanup((e) => e.close(4e3)),
             (this.connectionState = w.A.WILL_RECONNECT),
             this._connect());
     }
     _handleInvalidSession(e) {
-        (tI.info(`[INVALID_SESSION]${e ? " can resume)" : ""}`), e ? this._doResumeOrIdentify() : this._doIdentify());
+        (tf.info(`[INVALID_SESSION]${e ? " can resume)" : ""}`), e ? this._doResumeOrIdentify() : this._doIdentify());
     }
     _handleDispatch(e, t, n) {
         let i = Date.now() - this.connectionStartTime;
@@ -2492,8 +2492,8 @@ class tR extends e8 {
             this.sessionId = t;
             let n = eC(e);
             (c.A.setServerTrace(n),
-                tI.info(`[READY] took ${i}ms, as ${t}`),
-                tI.verbose(`${n}`),
+                tf.info(`[READY] took ${i}ms, as ${t}`),
+                tf.verbose(`${n}`),
                 (this.connectionState = w.A.SESSION_ESTABLISHED),
                 this.gatewayBackoff.succeed(),
                 (this.iosGoingAwayEventCount = 0),
@@ -2501,13 +2501,13 @@ class tR extends e8 {
                 this.setResumeUrl(e.resume_gateway_url));
         } else
             "READY_SUPPLEMENTAL" === t
-                ? (tI.info(`[READY_SUPPLEMENTAL] took ${i}ms`),
+                ? (tf.info(`[READY_SUPPLEMENTAL] took ${i}ms`),
                   (this.connectionState = w.A.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0),
                   this.altGateway.recordSuccess())
                 : "RESUMED" === t &&
-                  (tI.verbose(eC(e)),
+                  (tf.verbose(eC(e)),
                   (this.connectionState = w.A.SESSION_ESTABLISHED),
                   this.gatewayBackoff.succeed(),
                   (this.iosGoingAwayEventCount = 0),
@@ -2516,7 +2516,7 @@ class tR extends e8 {
     }
     handleResumeDispatched() {
         let e = Date.now() - this.connectionStartTime;
-        tI.info(
+        tf.info(
             `[RESUMED] took ${e}ms, replayed ${this.dispatcher.resumeAnalytics.numEvents} events, new seq: ${this.seq}`,
         );
     }
@@ -2532,7 +2532,7 @@ class tR extends e8 {
             this.altGateway.shouldUseAltGateway() ||
                 (this.gatewayBackoff.succeed(),
                 this.setResumeUrl(null),
-                tI.warn("[ALT GATEWAY] 3 consecutive failures, falling back to default URL for this session.")));
+                tf.warn("[ALT GATEWAY] 3 consecutive failures, falling back to default URL for this session.")));
     }
     _handleHeartbeatReceive() {
         (this._sendHeartbeat(),
@@ -2547,20 +2547,20 @@ class tR extends e8 {
             null !== this.expeditedHeartbeatTimeout &&
                 (clearTimeout(this.expeditedHeartbeatTimeout),
                 (this.expeditedHeartbeatTimeout = null),
-                tI.verbose("Expedited heartbeat succeeded")));
+                tf.verbose("Expedited heartbeat succeeded")));
     }
     _handleHeartbeatTimeout() {
         (this._cleanup((e) => e.close(4e3)),
             (this.connectionState = w.A.WILL_RECONNECT),
             this._maybeFallBackFromAltGateway());
         let e = this.gatewayBackoff.fail(() => this._connect());
-        tI.warn(`[ACK TIMEOUT] reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
+        tf.warn(`[ACK TIMEOUT] reconnecting in ${(e / 1e3).toFixed(2)} seconds.`);
     }
     _handleClose(e, t, n) {
         if (((e = e || !1), this._cleanup(), this.emit("close", { code: t, reason: n }), 4004 === t))
             return (
                 (this.connectionState = w.A.CLOSED),
-                tI.warn("[WS CLOSED] because of authentication failure, marking as closed."),
+                tf.warn("[WS CLOSED] because of authentication failure, marking as closed."),
                 this._reset(e, t, n)
             );
         if (
@@ -2570,10 +2570,10 @@ class tR extends e8 {
             this._maybeFallBackFromAltGateway(),
             this.nextReconnectIsImmediate)
         )
-            (tI.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying immediately.`), this._connect());
+            (tf.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying immediately.`), this._connect());
         else {
             let i = this.gatewayBackoff.fail(() => this._connect());
-            (tI.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying in ${(i / 1e3).toFixed(2)} seconds.`),
+            (tf.info(`[WS CLOSED] (${e.toString()}, ${t}, ${n}) retrying in ${(i / 1e3).toFixed(2)} seconds.`),
                 this.gatewayBackoff.fails > 4 && this._reset(e, t, n));
         }
     }
@@ -2593,7 +2593,7 @@ class tR extends e8 {
                         let { status: t } = e;
                         (401 === t &&
                             ((this.connectionState = w.A.CLOSED),
-                            tI.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
+                            tf.warn("[WS CLOSED] because of manual authentication failure, marking as closed."),
                             this._reset(n, 4004, "invalid token manually detected")),
                             O.default.track(eN.HAw.IOS_INVALID_TOKEN_WORKAROUND_TRIGGERED, { api_status_code: t }));
                     },
@@ -2602,7 +2602,7 @@ class tR extends e8 {
     _reset(e, t, n) {
         ((this.sessionId = null),
             (this.seq = 0),
-            tI.warn(`[RESET] (${e.toString()}, ${t}, ${n})`),
+            tf.warn(`[RESET] (${e.toString()}, ${t}, ${n})`),
             this.emit("disconnect", { wasClean: e, code: t, reason: n }));
     }
     _sendHeartbeatIfDue() {
@@ -2644,15 +2644,15 @@ class tR extends e8 {
         (A.Ay.Emitter.resume(), this._stopHeartbeater(), this._clearHelloTimeout());
         let t = this.webSocket;
         ((this.webSocket = null),
-            null != t && ((t.onopen = tm), (t.onmessage = tm), (t.onerror = tm), (t.onclose = tm), e?.(t)),
+            null != t && ((t.onopen = tg), (t.onmessage = tg), (t.onerror = tg), (t.onclose = tg), e?.(t)),
             this.gatewayBackoff.cancel(),
             this.compressionHandler.close(),
-            (this.compressionHandler = Y(tf)));
+            (this.compressionHandler = Y(tI)));
     }
     _doResume() {
         ((this.connectionState = w.A.RESUMING),
             (this.dispatcher.resumeAnalytics = eO(Date.now() - this.connectionStartTime)),
-            tI.info(`[RESUME] resuming session ${this.sessionId ?? ""}, seq: ${this.seq}`),
+            tf.info(`[RESUME] resuming session ${this.sessionId ?? ""}, seq: ${this.seq}`),
             this.send(e7.RESUME, { token: this.token, session_id: this.sessionId, seq: this.seq }, !1));
     }
     async _doIdentify() {
@@ -2663,9 +2663,9 @@ class tR extends e8 {
         let t = Date.now();
         this.identifyStartTime = t;
         let [n, i, r] = await Promise.all([
-                (0, m.O)() ? f.A.getCommittedVersions() : {},
-                (0, m.O)() ? T.A.getCommittedVersions() : {},
-                !!(0, m.O)() && p.A.canUseGuildVersions(),
+                (0, g.O)() ? I.A.getCommittedVersions() : {},
+                (0, g.O)() ? T.A.getCommittedVersions() : {},
+                !!(0, g.O)() && p.A.canUseGuildVersions(),
             ]),
             a = (function (e, t) {
                 let n;
@@ -2692,9 +2692,9 @@ class tR extends e8 {
                   }
                 : { guild_versions: {} };
         if (this.connectionState !== w.A.IDENTIFYING || this.identifyStartTime !== t)
-            return void tI.warn("Skipping identify because connectionState or identifyStartTime has changed");
+            return void tf.warn("Skipping identify because connectionState or identifyStartTime has changed");
         let { token: l, properties: o = {}, presence: c } = e;
-        ((this.token = l), tI.verbose("[IDENTIFY]"));
+        ((this.token = l), tf.verbose("[IDENTIFY]"));
         let u = {
                 token: l,
                 capabilities: (function (e) {
@@ -2723,7 +2723,7 @@ class tR extends e8 {
             (this.connectionState = w.A.IDENTIFYING),
             (this.identifyStartTime = Date.now()),
             (this.identifyCount += 1),
-            tI.verbose("[IDENTIFY, fast-connect]"),
+            tf.verbose("[IDENTIFY, fast-connect]"),
             this._updateLastHeartbeatAckTime());
     }
     _doResumeOrIdentify() {
@@ -2754,7 +2754,7 @@ class tR extends e8 {
         (this.send(e7.QOS_HEARTBEAT, { seq: this.seq, qos: e }, !1), (this.lastHeartbeatTime = Date.now()));
     }
     getLogger() {
-        return tI;
+        return tf;
     }
     willReconnect() {
         return this.connectionState === w.A.WILL_RECONNECT;
@@ -2775,16 +2775,16 @@ class tR extends e8 {
     connect() {
         return this.isClosed()
             ? (this.altGateway.reset(),
-              tI.verbose(".connect() called, new state is WILL_RECONNECT"),
+              tf.verbose(".connect() called, new state is WILL_RECONNECT"),
               (this.connectionState = w.A.WILL_RECONNECT),
               (this.firstConnectAttemptStartTime = 0),
               this._connect(),
               !0)
-            : (tI.error("Cannot start a new connection, connection state is not closed"), !1);
+            : (tf.error("Cannot start a new connection, connection state is not closed"), !1);
     }
     resetSocketAndClearCacheOnError(e) {
         let { action: t, error: n, metricAction: i } = e;
-        tI.error(`resetSocketAndClearCacheOnError during ${t}: ${n.message}`, n.stack);
+        tf.error(`resetSocketAndClearCacheOnError during ${t}: ${n.message}`, n.stack);
         let r = (0, E.b)();
         (S.A.increment({ name: _.K.SOCKET_CRASHED, tags: [`action:${i ?? t}`, `modded_client:${r}`] }, !0),
             !1 !== e.sentry && D.A.captureException(n, { tags: { socketCrashedAction: t } }),
@@ -2800,13 +2800,13 @@ class tR extends e8 {
             (this.connectionState = w.A.WILL_RECONNECT),
             this.dispatchExceptionBackoff.cancel(),
             0 === this.dispatchExceptionBackoff._fails
-                ? (tI.verbose("Triggering fast reconnect"),
+                ? (tf.verbose("Triggering fast reconnect"),
                   this.dispatchExceptionBackoff.fail(() => {}),
                   setTimeout(() => this._connect(), 0))
                 : this.dispatchExceptionBackoff.fail(() => this._connect()),
             (this.didForceClearGuildHashes = !0),
-            I.h.dispatch({ type: "CLEAR_CACHES", reason: `Socket reset during ${t}` }),
-            I.h.dispatch({ type: "LIBDISCORE_RESET" }),
+            f.h.dispatch({ type: "CLEAR_CACHES", reason: `Socket reset during ${t}` }),
+            f.h.dispatch({ type: "LIBDISCORE_RESET" }),
             clearTimeout(this.dispatchSuccessTimer),
             (this.dispatchSuccessTimer = setTimeout(() => this.dispatchExceptionBackoff.succeed(), 2 * tN)));
     }
@@ -2817,11 +2817,11 @@ class tR extends e8 {
     close() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
         if (this.isClosed()) {
-            (tI.verbose("close() called, but socket is already closed."),
+            (tf.verbose("close() called, but socket is already closed."),
                 e || ((this.sessionId = null), (this.token = null)));
             return;
         }
-        tI.info(`Closing connection, current state is ${this.connectionState}`);
+        tf.info(`Closing connection, current state is ${this.connectionState}`);
         let t = e ? 4e3 : void 0;
         (this._cleanup((e) => e.close(t)),
             (this.connectionState = w.A.CLOSED),
@@ -2842,7 +2842,7 @@ class tR extends e8 {
             i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3];
         if (!this.isClosed()) {
             if (this.isConnected()) {
-                (tI.verbose(`Performing an expedited heartbeat ${null != t && "" !== t ? "reason: " + t : ""}`),
+                (tf.verbose(`Performing an expedited heartbeat ${null != t && "" !== t ? "reason: " + t : ""}`),
                     (this.heartbeatAck = !1),
                     this._sendHeartbeat(),
                     null !== this.expeditedHeartbeatTimeout && clearTimeout(this.expeditedHeartbeatTimeout),
@@ -2854,7 +2854,7 @@ class tR extends e8 {
             }
             n
                 ? this.resetBackoff(t, i)
-                : tI.verbose(
+                : tf.verbose(
                       `Expedited heartbeat requested, but, connection state is ${this.connectionState} and reconnectImmediately was not requested ${null != t && "" !== t ? "reason: " + t : ""}`,
                   );
         }
@@ -2862,7 +2862,7 @@ class tR extends e8 {
     resetBackoff() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "",
             t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-        (tI.verbose(`Connection has reset backoff${null != e && "" !== e ? " for reason: " + e : ""}`),
+        (tf.verbose(`Connection has reset backoff${null != e && "" !== e ? " for reason: " + e : ""}`),
             this.gatewayBackoff.succeed(),
             (this.iosGoingAwayEventCount = 0),
             (this.nextReconnectIsImmediate = !0),
@@ -2871,12 +2871,12 @@ class tR extends e8 {
                 : t && this.connectionState !== w.A.SESSION_ESTABLISHED && this._handleClose(!0, 0, e));
     }
     send = (e, t, n) => {
-        C.default.isLoggingGatewayEvents && tI.verboseDangerously("~>", e, e7[e], t);
-        let i = tf.pack({ op: e, d: t });
+        C.default.isLoggingGatewayEvents && tf.verboseDangerously("~>", e, e7[e], t);
+        let i = tI.pack({ op: e, d: t });
         if (!n || this.isSessionEstablished())
             try {
                 null != this.webSocket && this.webSocket.send(i);
             } catch (e) {}
-        else tI.warn(`Attempted to send while not being in a connected state opcode: ${e}`);
+        else tf.warn(`Attempted to send while not being in a connected state opcode: ${e}`);
     };
 }

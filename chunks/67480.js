@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var r = n(17928),
     a = n(73153),
     s = n(32731),
@@ -35,16 +35,16 @@ function h(e) {
         null != e.child_skus && e.child_skus.forEach((e) => A(e)),
         null != e.alternative_skus && e.alternative_skus.forEach((e) => A(e)));
 }
-function I(e) {
+function f(e) {
     let { entitlements: t } = e;
     for (let e of t) null != e.sku && A(e.sku);
 }
-function f() {
+function I() {
     ((o = new Map()), (d = new Set()), (c = new Set()), (u = new Map()), (_ = new Map()), (E = new Map()));
 }
 function p() {
     if (i === l.default.locale) return !1;
-    ((i = l.default.locale), f());
+    ((i = l.default.locale), I());
 }
 class T extends r.il {
     static displayName = "SKUStore";
@@ -75,7 +75,7 @@ class T extends r.il {
         return c.has(e);
     }
 }
-let m = new T(a.h, {
+let g = new T(a.h, {
     STORE_LISTINGS_FETCH_START: function (e) {
         let { skuId: t } = e;
         d.add(t);
@@ -114,8 +114,8 @@ let m = new T(a.h, {
         for (let e of n) A(e);
         null != t && E.set(t, new Set(n.map((e) => e.id)));
     },
-    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: I,
-    APPLICATION_STORE_CLEAR_DATA: f,
-    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: I,
-    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: I,
+    ENTITLEMENTS_GIFTABLE_FETCH_SUCCESS: f,
+    APPLICATION_STORE_CLEAR_DATA: I,
+    APPLICATION_SUBSCRIPTIONS_FETCH_ENTITLEMENTS_SUCCESS: f,
+    ENTITLEMENTS_FETCH_FOR_USER_SUCCESS: f,
 });

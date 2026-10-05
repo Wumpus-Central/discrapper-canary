@@ -1,4 +1,4 @@
-n.d(t, { v: () => g });
+n.d(t, { v: () => m });
 var i = n(477900);
 n(582128);
 var r = n(646865),
@@ -13,35 +13,35 @@ var r = n(646865),
     E = n(271195),
     A = n(128286),
     h = n(625180),
-    I = n(262579),
-    f = n(165610),
+    f = n(262579),
+    I = n(165610),
     p = n(652215),
     T = n(977747),
-    m = n(967481);
-function g(e) {
-    let { frame: t, idle: n, onMouseDown: g, onMouseMove: S, onMouseLeave: N } = e,
+    g = n(967481);
+function m(e) {
+    let { frame: t, idle: n, onMouseDown: m, onMouseMove: S, onMouseLeave: N } = e,
         C = (0, o.h)(t.applicationId),
         O = (0, u.Us)() === p.BRT.POPOUT,
         { parentAnalyticsLocation: R } = (0, l.Ay)();
     return (0, i.jsxs)("div", {
-        className: m._v,
+        className: g._v,
         onMouseMove: S,
-        onMouseDown: g,
+        onMouseDown: m,
         onMouseLeave: N,
         children: [
             (0, i.jsx)("div", {
-                className: m.K1,
+                className: g.K1,
                 children: (0, i.jsx)(E.X, {
                     idle: n,
                     title: C?.name ?? "",
                     onJumpToChannel: function () {
-                        h.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: f.y0.FOCUSED });
+                        h.A.updateFrameLayoutMode({ frameId: t.id, layoutMode: I.y0.FOCUSED });
                     },
                     preventIdleComponent: _.A,
                 }),
             }),
             (0, i.jsx)("div", {
-                className: m.q6,
+                className: g.q6,
                 children: (0, i.jsxs)(c.A, {
                     grow: 1,
                     shrink: 1,
@@ -63,7 +63,7 @@ function g(e) {
                                   },
                                   onClosePopout: p.FXj,
                               }),
-                        (0, i.jsx)(I.A, { frameId: t.id, className: T.BD }),
+                        (0, i.jsx)(f.A, { frameId: t.id, className: T.BD }),
                     ],
                 }),
             }),

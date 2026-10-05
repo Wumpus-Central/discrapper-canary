@@ -12,15 +12,15 @@ var i = n(435558),
     E = n(626584),
     A = n(390248),
     h = n(508602);
-function I(e) {
+function f(e) {
     let { type: t } = e;
     return t !== h.A.AUTO_MODERATION_MESSAGE && t !== h.A.AUTO_MODERATION_NOTIFICATION;
 }
-var f = n(164956),
+var I = n(164956),
     p = n(931480),
     T = n(320095),
-    m = n(697470),
-    g = (n(763754), n(491001)),
+    g = n(697470),
+    m = (n(763754), n(491001)),
     S = n(815807),
     N = n(773669),
     C = n(935208),
@@ -164,7 +164,7 @@ function q(e) {
     ((l = l.update(
         r,
         (e) => (
-            e.embeds?.filter(I).length > 0 && (e = e.set("embeds", [])),
+            e.embeds?.filter(f).length > 0 && (e = e.set("embeds", [])),
             "MESSAGE_SEND_FAILED_AUTOMOD" === t && (e = e.set("flags", (0, s.UI)(e.flags, G.pr7.EPHEMERAL))),
             e
         ),
@@ -174,14 +174,14 @@ function q(e) {
 class Q extends l.Ay.Store {
     static displayName = "MessageStore";
     initialize() {
-        (this.waitFor(O.default, R.A, L.A, p.A, y.Ay, D.Ay, v.A, f.A, N.default, b.A, M.A, P.Ay, U.A, w.default),
-            this.syncWith([f.A], () => {}));
+        (this.waitFor(O.default, R.A, L.A, p.A, y.Ay, D.Ay, v.A, I.A, N.default, b.A, M.A, P.Ay, U.A, w.default),
+            this.syncWith([I.A], () => {}));
     }
     getMessages(e) {
-        if (f.A.hasViewingRoles()) {
+        if (I.A.hasViewingRoles()) {
             let t = R.A.getChannel(e),
                 n = t?.getGuildId();
-            if (f.A.isViewingRoles(n) && !b.A.can(G.xBc.VIEW_CHANNEL, t)) return new c.A(e);
+            if (I.A.isViewingRoles(n) && !b.A.can(G.xBc.VIEW_CHANNEL, t)) return new c.A(e);
         }
         return c.A.getOrCreate(e);
     }
@@ -195,7 +195,7 @@ class Q extends l.Ay.Store {
         let t = w.default.getCurrentUser();
         return r()(this.getMessages(e).toArray())
             .reverse()
-            .find((e) => (0, m.A)(e, t?.id));
+            .find((e) => (0, g.A)(e, t?.id));
     }
     getLastChatCommandMessage(e) {
         let t = w.default.getCurrentUser();
@@ -374,7 +374,7 @@ let J = new Q(o.h, {
                 s = c.A.getOrCreate(t),
                 l = n(595528).A.isConnected();
             return a
-                ? (0, g.K)()
+                ? (0, m.K)()
                     ? (j(t, i, l), !1)
                     : (F.log("Inserting message tapped on from a push notification", i.id, i.channel_id),
                       void c.A.commit(s.receivePushNotification(i, l)))

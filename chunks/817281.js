@@ -30,7 +30,7 @@ function h(e) {
         _.Sb.FREQUENT_USER_ACTION,
     );
 }
-function I(e) {
+function f(e) {
     switch (e) {
         case E.NJ8.ASH:
             return i.Sx.DARK;
@@ -44,7 +44,7 @@ function I(e) {
             return i.Sx.DARK;
     }
 }
-function f(e) {
+function I(e) {
     return {
         backgroundGradientPresetId:
             null != e.backgroundGradientPresetId ? r.ZQ.create({ value: e.backgroundGradientPresetId }) : void 0,
@@ -83,8 +83,8 @@ function p(e) {
         return _.wc.updateAsync(
             "appearance",
             (e) => {
-                ((e.theme = I(i)),
-                    (e.clientThemeSettings = f({ backgroundGradientPresetId: t, customUserThemeSettings: n })));
+                ((e.theme = f(i)),
+                    (e.clientThemeSettings = I({ backgroundGradientPresetId: t, customUserThemeSettings: n })));
             },
             l,
         );
@@ -123,8 +123,8 @@ let T = {
                 await _.wc.updateAsync(
                     "appearance",
                     (e) => {
-                        ((e.theme = I(c.A.theme)),
-                            (e.clientThemeSettings = f({
+                        ((e.theme = f(c.A.theme)),
+                            (e.clientThemeSettings = I({
                                 backgroundGradientPresetId: l.A.gradientPreset?.id,
                                 customUserThemeSettings: u.eh.getSetting()?.customUserThemeSettings,
                             })));
@@ -177,7 +177,7 @@ let T = {
                 _.wc.updateAsync(
                     "appearance",
                     (t) => {
-                        t.theme = I(e);
+                        t.theme = f(e);
                     },
                     _.Sb.INFREQUENT_USER_ACTION,
                 ));

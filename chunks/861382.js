@@ -47,13 +47,13 @@ function u(e) {
         (h.initialValues = r ?? {}),
         (h.commandOrigin = A ?? null),
         (h.source = E));
-    let I = {};
+    let f = {};
     return (
         n?.options != null &&
             n.options.forEach((e) => {
-                I[e.name] = { isActive: !1, hasValue: !1, lastValidationResult: null, optionValue: null };
+                f[e.name] = { isActive: !1, hasValue: !1, lastValidationResult: null, optionValue: null };
             }),
-        (h.optionStates = I),
+        (h.optionStates = f),
         null != n &&
             (0, l.my)({
                 command: n,

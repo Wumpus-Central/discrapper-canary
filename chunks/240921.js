@@ -38,21 +38,21 @@ function c(e) {
                     _ = c?.variantId,
                     A = c?.trackedVariantId ?? _,
                     h = c?.revision,
-                    I = c?.isOverride,
-                    f = c?.exposureTrackingEnabled,
+                    f = c?.isOverride,
+                    I = c?.exposureTrackingEnabled,
                     p = c?.useAsEligibility,
                     T = E(c),
-                    m = null == T;
+                    g = null == T;
                 return ((0, i.useEffect)(() => {
                     null == l ||
                         null == A ||
                         null == h ||
-                        !1 !== I ||
-                        !0 !== f ||
+                        !1 !== f ||
+                        !0 !== I ||
                         !0 === p ||
-                        m ||
+                        g ||
                         t.trackExperimentExposure(l, o, e.location, d, h, A, n);
-                }, [n, l, A, h, e.location, I, f, p, m]),
+                }, [n, l, A, h, e.location, f, I, p, g]),
                 null == _ || !0 === p || null == T)
                     ? u
                     : T;
@@ -65,19 +65,19 @@ function c(e) {
                     _ = l?.trackedVariantId ?? c,
                     A = l?.revision,
                     h = l?.isOverride,
-                    I = l?.exposureTrackingEnabled,
-                    f = l?.useAsEligibility,
+                    f = l?.exposureTrackingEnabled,
+                    I = l?.useAsEligibility,
                     p = E(l);
                 return (i?.autoTrackExposure !== !1 &&
                     null != s &&
                     null != _ &&
                     null != A &&
                     !1 === h &&
-                    !0 === I &&
-                    !0 !== f &&
+                    !0 === f &&
+                    !0 !== I &&
                     null != p &&
                     t.trackExperimentExposure(s, o, e.location, d, A, _, r),
-                null == c || !0 === f || null == p)
+                null == c || !0 === I || null == p)
                     ? u
                     : p;
             },

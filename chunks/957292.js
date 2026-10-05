@@ -1,5 +1,5 @@
 let i;
-(n.d(t, { ms: () => eS, iG: () => eN, Ay: () => eC, Pd: () => em, DV: () => eg }), n(321073));
+(n.d(t, { ms: () => eS, iG: () => eN, Ay: () => eC, Pd: () => eg, DV: () => em }), n(321073));
 var r = n(132500),
     a = n(344351),
     s = n(127258),
@@ -12,12 +12,12 @@ var r = n(132500),
     E = n(240591),
     A = n(627363),
     h = n(587895),
-    I = n(20015),
-    f = n(198052),
+    f = n(20015),
+    I = n(198052),
     p = n(655087),
     T = n(625180),
-    m = n(807393),
-    g = n(859703),
+    g = n(807393),
+    m = n(859703),
     S = n(639214),
     N = n(95701),
     C = n(280450),
@@ -165,7 +165,7 @@ function eh(e) {
     let { applicationId: t, nonce: n, analyticsLocations: i, source: r } = e;
     e_({ applicationId: t, nonce: n, locations: i, source: r ?? void 0 });
 }
-async function eI(e) {
+async function ef(e) {
     let { applicationId: t, location: n, instanceId: i } = e,
         r = F.Ay.getEmbeddedActivityDurationMs(n.id, t),
         a = C.default.getSessionId();
@@ -216,7 +216,7 @@ async function eI(e) {
         }),
         delete eo[t]);
 }
-function ef(e) {
+function eI(e) {
     let {
         applicationId: t,
         isFirstActivityInChannel: n,
@@ -243,10 +243,10 @@ function ef(e) {
         A = (0, et.D)(l),
         h = O.A.getChannel(_);
     if ((i && null != h && h.isPrivate() && n && null == u && c.A.selectParticipant(h.id, null), null == u)) return;
-    let I = R.A.getMediaSessionId(),
-        m = s.compositeInstanceId,
-        g = null == I && h?.isVocal() === !0 && h?.isPrivate() === !1;
-    if (null == m || g) return;
+    let f = R.A.getMediaSessionId(),
+        g = s.compositeInstanceId,
+        m = null == f && h?.isVocal() === !0 && h?.isPrivate() === !1;
+    if (null == g || m) return;
     let S = (0, r.A)(),
         N = "location" in s ? 2 : 1,
         L = y.default.getCurrentUser();
@@ -257,9 +257,9 @@ function ef(e) {
         U = 1 + b.findIndex((e) => e === t),
         { releasePhase: w } = eu(P),
         G = p.A.getRawThermalState(),
-        k = null != I ? [I] : [],
+        k = null != f ? [f] : [],
         V = {
-            activitySessionId: m,
+            activitySessionId: g,
             activityUserSessionId: S,
             launchId: s.launchId,
             mediaSessionIds: k,
@@ -272,12 +272,12 @@ function ef(e) {
             channel_id: _,
             guild_id: A,
             media_session_id: k[0],
-            activity_session_id: m,
+            activity_session_id: g,
             application_id: t,
             location_stack: H?.locations,
             user_premium_tier: L.premiumType,
             raw_thermal_state: G,
-            n_participants: null != h ? f.A.getUserParticipantCount(h.id) : null,
+            n_participants: null != h ? I.A.getUserParticipantCount(h.id) : null,
             is_activity_start: i,
             release_phase: w,
             shelf_rank: P?.activity?.shelf_rank,
@@ -321,15 +321,15 @@ function ep(e, t) {
 }
 function eT(e, t) {
     let n = h.A.getApplication(e);
-    if (!(0, I.n)(n, el.gfo.QUEST)) return;
-    let i = (0, S.jm)(g.A.quests, e, !0);
+    if (!(0, f.n)(n, el.gfo.QUEST)) return;
+    let i = (0, S.jm)(m.A.quests, e, !0);
     if (i.length > 0) {
         let n = [`application_id:${e}`],
             r = i.find((e) => e.userStatus?.enrolledAt != null)?.id;
-        (null != r && n.push(`quest_id:${r}`), m.A.increment({ name: t, tags: n }));
+        (null != r && n.push(`quest_id:${r}`), g.A.increment({ name: t, tags: n }));
     }
 }
-function em(e, t) {
+function eg(e, t) {
     let n = ep(e, t);
     if (null == n) return;
     let {
@@ -343,11 +343,11 @@ function em(e, t) {
             source: A,
             interactionId: h,
         } = n,
-        I = y.default.getCurrentUser();
-    if (null == I) return;
+        f = y.default.getCurrentUser();
+    if (null == f) return;
     let T = null != o ? O.A.getChannel(o) : null,
-        m = n.guildId ?? T?.getGuildId() ?? null,
-        g = n.locationKind ?? (null == T ? void 0 : null != m ? a.T.GUILD_CHANNEL : a.T.PRIVATE_CHANNEL),
+        g = n.guildId ?? T?.getGuildId() ?? null,
+        m = n.locationKind ?? (null == T ? void 0 : null != g ? a.T.GUILD_CHANNEL : a.T.PRIVATE_CHANNEL),
         S = R.A.getMediaSessionId(),
         N = null != S ? [S] : [],
         C = (0, r.A)();
@@ -359,10 +359,10 @@ function em(e, t) {
         activitiesInfraVersion: u,
         connectedSince: Date.now(),
         frameChannelId: o,
-        frameGuildId: m,
-        frameLocationKind: g,
+        frameGuildId: g,
+        frameLocationKind: m,
     };
-    let L = F.Ay.getShelfActivities(m),
+    let L = F.Ay.getShelfActivities(g),
         v = x.getState().shelfOrder,
         b = (0, B.A)({ applicationId: e, activityConfigs: L }),
         M = 1 + v.findIndex((t) => t === e),
@@ -370,14 +370,14 @@ function em(e, t) {
         U = p.A.getRawThermalState();
     (D.default.track(el.HAw.ACTIVITY_SESSION_JOINED, {
         channel_id: o,
-        guild_id: m,
+        guild_id: g,
         media_session_id: N[0],
         activity_session_id: c,
         application_id: e,
         location_stack: _,
-        user_premium_tier: I.premiumType,
+        user_premium_tier: f.premiumType,
         raw_thermal_state: U,
-        n_participants: null != T ? f.A.getUserParticipantCount(T.id) : null,
+        n_participants: null != T ? I.A.getUserParticipantCount(T.id) : null,
         is_activity_start: i,
         release_phase: P,
         shelf_rank: b?.activity?.shelf_rank,
@@ -388,14 +388,14 @@ function em(e, t) {
         command_context_type: null != T ? (0, E.ud)(T, e) : null,
         invite_inviter_id: s,
         interaction_id: h,
-        embedded_activity_location_kind: g,
+        embedded_activity_location_kind: m,
     }),
         eT(e, l.K.FRAME_SESSION_JOIN),
         D.default.track(el.HAw.ACTIVITY_IFRAME_MOUNT, {
             location_stack: _,
             channel_id: o,
             channel_type: T?.type,
-            guild_id: m,
+            guild_id: g,
             application_id: e,
             instance_id: d,
             initial_media_session_id: N[0],
@@ -405,10 +405,10 @@ function em(e, t) {
             shelf_rank: b?.activity?.shelf_rank,
             shelf_sorted_rank: M > 0 ? M : null,
             activities_infra_version: u,
-            embedded_activity_location_kind: g,
+            embedded_activity_location_kind: m,
         }));
 }
-function eg(e) {
+function em(e) {
     return eo[e];
 }
 async function eS(e, t, n) {
@@ -478,12 +478,12 @@ class eC extends u.A {
     _initialize() {
         (L.Ay.addChangeListener(this.handleSelectedChannelUpdate),
             v._.subscribe(el.jej.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease),
-            v._.subscribe(el.jej.OPEN_EMBEDDED_ACTIVITY, ef),
+            v._.subscribe(el.jej.OPEN_EMBEDDED_ACTIVITY, eI),
             d.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_START", eh),
             d.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess),
             d.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail),
             d.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel),
-            d.h.subscribe("EMBEDDED_ACTIVITY_CLOSE", eI),
+            d.h.subscribe("EMBEDDED_ACTIVITY_CLOSE", ef),
             d.h.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen),
             d.h.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect),
             d.h.subscribe("CALL_DELETE", this.handleCallDelete),
@@ -498,12 +498,12 @@ class eC extends u.A {
     _terminate() {
         (L.Ay.removeChangeListener(this.handleSelectedChannelUpdate),
             v._.unsubscribe(el.jej.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease),
-            v._.unsubscribe(el.jej.OPEN_EMBEDDED_ACTIVITY, ef),
+            v._.unsubscribe(el.jej.OPEN_EMBEDDED_ACTIVITY, eI),
             d.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_START", eh),
             d.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess),
             d.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail),
             d.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel),
-            d.h.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", eI),
+            d.h.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", ef),
             d.h.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen),
             d.h.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect),
             d.h.unsubscribe("CALL_DELETE", this.handleCallDelete),

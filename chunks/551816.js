@@ -19,21 +19,21 @@ function h(e) {
     let t = [e.isCurrentGuildMemberByTimestamp ? "CURRENT_GUILD_MEMBER" : "NEW_GUILD_MEMBER"];
     return (e.isIncludedInSearchResults && t.push("INCLUDED_IN_SEARCH_RESULTS"), t);
 }
-function I(e) {
+function f(e) {
     return e.sort;
 }
-function f() {
-    return new s.J(h, I);
+function I() {
+    return new s.J(h, f);
 }
 class p {
     guildId;
     _membersMap;
     newMemberTimestamp = Date.now();
     constructor(e) {
-        ((this.guildId = e), (this._membersMap = f()));
+        ((this.guildId = e), (this._membersMap = I()));
     }
     reset() {
-        (this._membersMap.clear(), (this._membersMap = f()), this.resetNewMemberTimestamp());
+        (this._membersMap.clear(), (this._membersMap = I()), this.resetNewMemberTimestamp());
     }
     resetNewMemberTimestamp() {
         this.newMemberTimestamp = Date.now();
@@ -51,7 +51,7 @@ class p {
                 joinSourceApplicationId: A,
                 joinSourceChannelId: h,
             } = this._computeMemberSupplementals(e.userId, e.unusualDMActivityUntil),
-            I = o.default.getUser(e.userId);
+            f = o.default.getUser(e.userId);
         return {
             hasUnusualDmActivity: r,
             hasUnusualAccountActivity: a,
@@ -64,7 +64,7 @@ class p {
             ...e,
             isCurrentGuildMemberByTimestamp: i <= this.newMemberTimestamp,
             isIncludedInSearchResults: !1,
-            user: I,
+            user: f,
             sort: (0, _.R)(e, t.selectedSort ?? c.mF.ORDER_BY_UNSPECIFIED),
             joinedAtTimestamp: i,
             ...n,

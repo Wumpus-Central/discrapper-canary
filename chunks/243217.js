@@ -1,4 +1,4 @@
-n.d(t, { h: () => I, A: () => f });
+n.d(t, { h: () => f, A: () => I });
 var i = n(284009),
     r = n.n(i),
     a = n(315069),
@@ -61,7 +61,7 @@ var d = n(723702),
 function h(e) {
     return { id: e.id, planId: e.plan_id, quantity: e.quantity };
 }
-class I extends a.A {
+class f extends a.A {
     id;
     type;
     items;
@@ -91,7 +91,7 @@ class I extends a.A {
     eligiblePaymentGateways;
     priceChange;
     static createFromServer(e) {
-        return new I({
+        return new f({
             id: e.id,
             type: e.type,
             createdAt: new Date(e.created_at),
@@ -288,4 +288,4 @@ class I extends a.A {
         );
     }
 }
-let f = I;
+let I = f;

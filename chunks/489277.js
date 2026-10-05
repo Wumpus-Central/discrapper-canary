@@ -12,23 +12,23 @@ var i = n(17928),
 let E = new Set(["SplashScreenClass"]);
 var A = n(682763),
     h = n(174459),
-    I = n(777334),
-    f = n(296027),
+    f = n(777334),
+    I = n(296027),
     p = n(515183),
     T = n(614455);
 n(672396);
-var m = n(652215);
-let g = {};
+var g = n(652215);
+let m = {};
 function S(e) {
-    return f.default.getTrackedGameByPid(e)?.overlayMethod ?? null;
+    return I.default.getTrackedGameByPid(e)?.overlayMethod ?? null;
 }
 function N(e) {
-    return g[e] ?? {};
+    return m[e] ?? {};
 }
 function C(e, t) {
-    let n = g[e]?.error,
-        i = g[e]?.error_description;
-    ((g[e] = { ...g[e], ...t }), null != n && (g[e].error = n), null != i && (g[e].error_description = i));
+    let n = m[e]?.error,
+        i = m[e]?.error_description;
+    ((m[e] = { ...m[e], ...t }), null != n && (m[e].error = n), null != i && (m[e].error_description = i));
 }
 function O(e, t) {
     let n = l.Ay.getGameOrTransformedSubgameForPID(e);
@@ -37,7 +37,7 @@ function O(e, t) {
 class R extends i.Ay.Store {
     static displayName = "Overlay-v3-Native-Analytics-Store";
     initialize() {
-        this.waitFor(f.default, T.A, l.Ay);
+        this.waitFor(I.default, T.A, l.Ay);
     }
     getData(e) {
         return N(e);
@@ -72,7 +72,7 @@ let L = new R(
               },
               OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: function (e) {
                   let { lastAssociatedPID: t } = e;
-                  if (-1 !== t) return (h.default.track(m.HAw.OVERLAY_HOOK_RESULT, N(t)), (g = {}), !0);
+                  if (-1 !== t) return (h.default.track(g.HAw.OVERLAY_HOOK_RESULT, N(t)), (m = {}), !0);
               },
               OVERLAY_SUCCESSFULLY_SHOWN: function (e) {
                   let t,
@@ -81,7 +81,7 @@ let L = new R(
                   return (
                       C(n, { total_mount_time_ms: null != i ? new Date().getTime() - i : void 0, success: !0 }),
                       (t = S(n)),
-                      (g[n] = { ...g[n], overlay_method: null != t ? _.Ue[t] : _.Ue[_.Ue.OutOfProcess] }),
+                      (m[n] = { ...m[n], overlay_method: null != t ? _.Ue[t] : _.Ue[_.Ue.OutOfProcess] }),
                       !0
                   );
               },
@@ -91,10 +91,10 @@ let L = new R(
                   return (
                       "native" === i
                           ? (-1 !== t && C(t, { host_crash_count: 1, error: r.message, error_description: r.stack }),
-                            (0, I.St)(r, _.Ue.OutOfProcess, { extra: O(t, "host") }))
+                            (0, f.St)(r, _.Ue.OutOfProcess, { extra: O(t, "host") }))
                           : (-1 !== t &&
                                 C(t, { renderer_crash_count: 1, error: r.message, error_description: r.stack }),
-                            (0, I.St)(r, _.Ue.OutOfProcess, { extra: O(t, "renderer") })),
+                            (0, f.St)(r, _.Ue.OutOfProcess, { extra: O(t, "renderer") })),
                       !0
                   );
               },
@@ -102,10 +102,10 @@ let L = new R(
                   let { pid: t } = e;
                   return (
                       !(function (e) {
-                          if (null != g[e]) return;
+                          if (null != m[e]) return;
                           let t = l.Ay.getGameOrTransformedSubgameForPID(e),
                               n = S(e);
-                          g[e] = {
+                          m[e] = {
                               overlay_method: null != n ? _.Ue[n] : _.Ue[_.Ue.OutOfProcess],
                               success: !1,
                               game_name: t?.name ?? null,
@@ -289,7 +289,7 @@ function eh(e) {
         (q.error("Error removing tracked game:", t), (0, A.mD)(e, t, { crashType: "native" }));
     }
 }
-async function eI() {
+async function ef() {
     if (!T.A.isOverlayEnabled)
         return void (function () {
             try {
@@ -313,7 +313,7 @@ async function eI() {
     for (let t of new Set([...Q].filter((t) => !e.has(t)))) eh(t);
     for (let e of Q) eA(e);
 }
-function ef(e) {
+function eI(e) {
     let t = l.Ay.getGameOrTransformedSubgameForPID(e);
     a.A.setAssociatedGame(es ?? -1, e, t);
 }
@@ -346,10 +346,10 @@ function eT(e, t) {
     }
     a.A.setFocusedPID(0 === e ? null : e, t, n);
 }
-function em() {
+function eg() {
     eT(null, null, !0);
 }
-function eg(e) {
+function em(e) {
     if (e_.allDone) {
         if (!J.has(e))
             return void a.A.updateOverlayState(e, _.AR.WAITING_FOR_SUCCESSFUL_SHOW, "maybeTrackSuccessfullyShown");
@@ -455,7 +455,7 @@ let eR = new eO(
                   OVERLAY_OOP_UI_INITIALIZED: function () {
                       ((e_ = { ...e_, allDone: !0 }),
                           Q.forEach((e) => {
-                              eg(e);
+                              em(e);
                           }));
                   },
                   OVERLAY_OOP_UI_SHOW_INACTIVE_SUCCESS: function () {
@@ -479,7 +479,7 @@ let eR = new eO(
                   },
                   OVERLAY_V3_POST_CREATE_POPOUT: function (e) {
                       let { createWindowTriggeringPID: t } = e;
-                      ((e_ = { ...e_, popoutOpened: !0 }), ef(t), (es = t), (ei = t), (0, c.setPID)(t));
+                      ((e_ = { ...e_, popoutOpened: !0 }), eI(t), (es = t), (ei = t), (0, c.setPID)(t));
                   },
                   OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: function (e) {
                       let { createWindowTriggeringPID: t, nativeWindowHandle: n } = e;
@@ -499,7 +499,7 @@ let eR = new eO(
                           }));
                   },
                   OVERLAY_V3_LOAD_NATIVE_MODULE_SUCCESS: function () {
-                      ((ee = T.A.getNativeModule()), eI());
+                      ((ee = T.A.getNativeModule()), ef());
                   },
                   OVERLAY_V3_LOAD_NATIVE_MODULE_FAILED: function () {
                       ee = null;
@@ -512,14 +512,14 @@ let eR = new eO(
                           (es = t),
                           (ei = t),
                           (0, c.setPID)(t),
-                          ef(t),
+                          eI(t),
                           ep(),
                           !0
                       );
                   },
                   OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: function () {
                       var e;
-                      (em(),
+                      (eg(),
                           null != es && null != ec[(e = es)] && (ec[e] = new Set()),
                           (es = null),
                           (ei = null),
@@ -530,16 +530,16 @@ let eR = new eO(
                   OVERLAY_V3_NATIVE_FOCUS_GAINED: function (e) {
                       let { pid: t, windowHandle: n, windowClass: i } = e;
                       null != i && E.has(i)
-                          ? em()
+                          ? eg()
                           : (eT(t, null != n ? (0, M.Oy)(n) : null),
                             t !== et && q.info("OverlayStore: Focused new PID", t));
                   },
                   OVERLAY_V3_NATIVE_FOCUS_LOST: function () {
-                      em();
+                      eg();
                   },
                   OVERLAY_V3_NATIVE_SUCCESSFULLY_SHOWN: function (e) {
                       let { pid: t } = e;
-                      (J.add(t), eg(t));
+                      (J.add(t), em(t));
                   },
                   OVERLAY_V3_NATIVE_WINDOW_HANDLE_INITIALIZED: function (e) {
                       let { initialized: t } = e;

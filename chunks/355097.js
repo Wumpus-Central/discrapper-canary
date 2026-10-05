@@ -5,14 +5,14 @@ n.d(t, {
     Sb: () => N,
     W: () => D,
     Xx: () => A,
-    YP: () => I,
+    YP: () => f,
     _A: () => h,
-    _F: () => m,
+    _F: () => g,
     bf: () => S,
     ko: () => R,
     n3: () => y,
-    nR: () => f,
-    oD: () => g,
+    nR: () => I,
+    oD: () => m,
     od: () => O,
     vv: () => L,
 });
@@ -40,12 +40,12 @@ var i,
         (r.REDUCED_MOTION_STICKERS = "REDUCED_MOTION_STICKERS"),
         (r.GAME_MODE = "GAME_MODE"),
         r),
-    I = (((a = {}).AUTO = "auto"), (a.COMPACT = "compact"), (a.COZY = "cozy"), a);
-let f = "ROLE_SUBSCRIPTIONS",
+    f = (((a = {}).AUTO = "auto"), (a.COMPACT = "compact"), (a.COZY = "cozy"), a);
+let I = "ROLE_SUBSCRIPTIONS",
     p = "APPLICATION_SUBSCRIPTION_SUBSECTION";
 var T = (((s = {}).USER_PROFILE = "user_profile"), (s.GUILD = "guild"), s),
-    m = (((l = {}).TRY_IT_OUT = "try_it_out"), (l.GUILD_TAG = "guild_tag"), l),
-    g =
+    g = (((l = {}).TRY_IT_OUT = "try_it_out"), (l.GUILD_TAG = "guild_tag"), l),
+    m =
         (((o = {})[(o.PRELOADED_USER_SETTINGS = 1)] = "PRELOADED_USER_SETTINGS"),
         (o[(o.FRECENCY_AND_FAVORITES_SETTINGS = 2)] = "FRECENCY_AND_FAVORITES_SETTINGS"),
         (o[(o.TEST_SETTINGS = 3)] = "TEST_SETTINGS"),

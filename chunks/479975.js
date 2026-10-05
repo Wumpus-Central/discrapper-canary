@@ -22,12 +22,12 @@ function A(e) {
         : { result: "shown", reason: i ?? "none" };
 }
 var h = n(400492),
-    I = n(312671),
-    f = n(458640),
+    f = n(312671),
+    I = n(458640),
     p = n(734057),
     T = n(803224),
-    m = n(994500),
-    g = n(351906),
+    g = n(994500),
+    m = n(351906),
     S = n(287809),
     N = n(174459),
     C = n(486020),
@@ -69,7 +69,7 @@ async function k() {
     return e?.authorizationStatus === "authorized" && e?.sound === !0;
 }
 function F(e, t) {
-    return (0, f.A)(t ?? I.A.getSoundpack())[e] ?? e;
+    return (0, I.A)(t ?? f.A.getSoundpack())[e] ?? e;
 }
 async function B(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 1,
@@ -200,10 +200,10 @@ async function X(e, t, n, i, r) {
         c = await G(),
         u = c?.authorizationStatus === "authorized" || c?.authorizationStatus === "provisional",
         _ = null != c ? u : await K(),
-        h = g.A.disableNotifications && null == r.overrideStreamerMode,
-        I = !R.isPlatformEmbedded || ((0, R.isMac)() && u) || L.Ay.shouldDisplayNotifications(),
-        f = { ...i, action: void 0, ping: void 0, banner: void 0, badge: void 0 };
-    if (((i.banner = await Y()), !(!h && _ && I))) {
+        h = m.A.disableNotifications && null == r.overrideStreamerMode,
+        f = !R.isPlatformEmbedded || ((0, R.isMac)() && u) || L.Ay.shouldDisplayNotifications(),
+        I = { ...i, action: void 0, ping: void 0, banner: void 0, badge: void 0 };
+    if (((i.banner = await Y()), !(!h && _ && f))) {
         (U("suppressed", h ? "streamer_mode" : _ ? "os_disabled" : "permission_denied"),
             null != r.sound &&
                 !1 !== r.playSoundIfDisabled &&
@@ -220,7 +220,7 @@ async function X(e, t, n, i, r) {
         (r.onShown?.(),
             r.omitViewTracking ||
                 (N.default.track(y.HAw.NOTIFICATION_ACTION, { action: "VIEW", ...t }),
-                N.default.track(y.HAw.NOTIFICATION_VIEWED, f)),
+                N.default.track(y.HAw.NOTIFICATION_VIEWED, I)),
             w && setTimeout(() => e.close(), 5e3));
     }
     (null == r.sound || x || (z(r.sound, r.volume ?? 1, r.soundpack), (i.ping = !0)),
@@ -270,7 +270,7 @@ async function X(e, t, n, i, r) {
                 t = r.messageRecord.author;
             a.threadIdentifier = e;
             let n = p.A.getChannel(e);
-            null != n && (a.groupName = (0, d.m1)(n, S.default, m.A));
+            null != n && (a.groupName = (0, d.m1)(n, S.default, g.A));
             let i = n?.getGuildId();
             ((a.senderIdentifier = t.id),
                 (a.senderDisplayName = O.Ay.getName(i, e, t)),
@@ -285,7 +285,7 @@ async function X(e, t, n, i, r) {
                 "string" == typeof s ? { identifier: s, delivered: !0 } : s);
             if (e.delivered) {
                 let t = e.identifier;
-                W[t] = { options: r, trackingProps: i, clickTrackingProps: f };
+                W[t] = { options: r, trackingProps: i, clickTrackingProps: I };
                 let n = {
                     close() {
                         try {
@@ -332,7 +332,7 @@ async function X(e, t, n, i, r) {
         (R.isPlatformEmbedded ? L.Ay.focus() : (window.focus(), l.close()),
             r.omitClickTracking ||
                 (N.default.track(y.HAw.NOTIFICATION_ACTION, { action: "CLICK", ...i }),
-                N.default.track(y.HAw.NOTIFICATION_CLICKED, f)),
+                N.default.track(y.HAw.NOTIFICATION_CLICKED, I)),
             r.onClick?.(""));
     }),
     b)

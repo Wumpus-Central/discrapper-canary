@@ -16,29 +16,29 @@ function A(e) {
 function h(e) {
     return (0, c.yX)(o.A.getGuild(e)?.guildTheme);
 }
-function I() {
+function f() {
     return null != _ && ((_ = null), !0);
 }
-function f(e, t, n) {
+function I(e, t, n) {
     return (
         (!(_?.guildId === e && (0, i.isEqual)(_.guildTheme, t)) || _.hasThemeFeature !== n) &&
         ((_ = { guildId: e, guildTheme: t, hasThemeFeature: n }), !0)
     );
 }
 function p(e) {
-    return null == e ? I() : f(e, h(e), A(e));
+    return null == e ? f() : I(e, h(e), A(e));
 }
 function T() {
     return p(d.A.getGuildId());
 }
-function m(e) {
+function g(e) {
     if (_?.guildId !== e) return !1;
     let t = d.A.getGuildId();
     return t !== e && p(t);
 }
-function g(e) {
+function m(e) {
     let { guildId: t, guildTheme: n } = e;
-    return t === d.A.getGuildId() && f(t, (0, c.yX)(n), A(t));
+    return t === d.A.getGuildId() && I(t, (0, c.yX)(n), A(t));
 }
 class S extends a.Ay.Store {
     static displayName = "GuildThemeRuntimeStore";
@@ -54,16 +54,16 @@ let N = new S(s.h, {
     CACHE_LOADED_LAZY: T,
     CHANNEL_SELECT: function (e) {
         let { guildId: t } = e;
-        return null == t ? I() : t !== _?.guildId && p(t);
+        return null == t ? f() : t !== _?.guildId && p(t);
     },
     CONNECTION_OPEN: T,
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        return m(t.id);
+        return g(t.id);
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t } = e;
-        return m(t);
+        return g(t);
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e,
@@ -82,7 +82,7 @@ let N = new S(s.h, {
                         ((t = n.guildTheme), t?.enabled === !0))
                         ? n.guildTheme
                         : h(e);
-                return f(e, a, i);
+                return I(e, a, i);
             })(t.id) && (n = !0),
             n
         );
@@ -95,11 +95,11 @@ let N = new S(s.h, {
         let { guildId: t, entitlements: n } = e;
         return !!n.some((e) => e.sku_id === r.d0) && t === _?.guildId && E !== t && ((E = t), !0);
     },
-    GUILD_SETTINGS_GUILD_THEME_SAVE_SUCCESS: g,
-    GUILD_THEME_PREVIEW_SAVE_SUCCESS: g,
+    GUILD_SETTINGS_GUILD_THEME_SAVE_SUCCESS: m,
+    GUILD_THEME_PREVIEW_SAVE_SUCCESS: m,
     OVERLAY_INITIALIZE: T,
     LOGOUT: function () {
         let e = null != E;
-        return ((E = null), I() || e);
+        return ((E = null), f() || e);
     },
 });

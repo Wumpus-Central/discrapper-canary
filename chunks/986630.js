@@ -54,8 +54,8 @@ class c extends l.A {
             preview_assets: E,
             variants: A,
             badge_override: h,
-            hide_badge: I,
-            is_first_party: f,
+            hide_badge: f,
+            is_first_party: I,
             ...p
         } = e;
         return new c({
@@ -83,8 +83,8 @@ class c extends l.A {
             googleSkuIds: p.google_sku_ids,
             eligibleOffers: p.eligible_offers,
             badgeOverride: h,
-            hideBadge: I,
-            isFirstParty: f,
+            hideBadge: f,
+            isFirstParty: I,
         });
     }
     static fromStorefrontProductRecord(e) {
@@ -97,7 +97,7 @@ class c extends l.A {
         let _ = null != n && e.skus.length > 1,
             E = e.skus.length > 1 && !_ ? i.R.VARIANTS_GROUP : l.type,
             { items: A, item: h } = (0, s.T7)(r) ?? {},
-            [I] = r.selectedOptions;
+            [f] = r.selectedOptions;
         return new c({
             storeListingId: r.id,
             skuId: r.id,
@@ -106,7 +106,7 @@ class c extends l.A {
             styles: e.primaryCollectionStyles,
             type: E,
             baseVariantName: _ ? e.name : void 0,
-            variantLabel: _ ? (I?.optionValue ?? "") : void 0,
+            variantLabel: _ ? (f?.optionValue ?? "") : void 0,
             premiumType: l.premiumType === d.oA2 ? null : l.premiumType,
             items: A ?? [h].filter((e) => null != e),
             categorySkuId: e.primaryCollectionId ?? l.categorySkuId ?? "",

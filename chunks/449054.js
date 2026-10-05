@@ -1,10 +1,10 @@
 (n.d(t, {
-    Cf: () => m,
+    Cf: () => g,
     PU: () => A,
     Z2: () => _,
-    br: () => f,
-    cf: () => g,
-    fd: () => I,
+    br: () => I,
+    cf: () => m,
+    fd: () => f,
     gp: () => h,
     jE: () => E,
     jb: () => p,
@@ -25,15 +25,15 @@ async function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         o = arguments.length > 3 ? arguments[3] : void 0,
         { channelId: c, onSuccess: _, joinSource: E, loadId: A, shouldNavigate: h = !0 } = n,
-        I = (0, s.JK)(),
-        f = d.A.getGuild(e),
+        f = (0, s.JK)(),
+        I = d.A.getGuild(e),
         p = { sourceLocationStack: o, state: { analyticsSource: t } };
-    if (null != f && null != f.joinedAt)
+    if (null != I && null != I.joinedAt)
         h &&
             (null == c
                 ? (0, l.u)(e, p)
                 : (0, r.A)(u.BVt.CHANNEL(e, c, n.messageId), { ...p, navigationReplace: !0, openChannel: !0 }));
-    else if (null != f && a.A.isLurking(e))
+    else if (null != I && a.A.isLurking(e))
         h &&
             (await i.A.transitionToGuildSync(
                 e,
@@ -42,7 +42,7 @@ async function _(e, t) {
                     welcomeModalChannelId: c,
                     navigationReplace: null != c,
                     openChannel: null != c,
-                    search: I.location.search,
+                    search: f.location.search,
                 },
                 c,
                 n.messageId,
@@ -58,7 +58,7 @@ async function _(e, t) {
                         welcomeModalChannelId: c,
                         navigationReplace: null != c,
                         openChannel: null != c,
-                        search: I.location.search,
+                        search: f.location.search,
                     },
                     c,
                     n.messageId,
@@ -94,7 +94,7 @@ function A(e, t) {
 function h(e) {
     c.default.track(u.HAw.SEARCH_CLOSED, { load_id: e });
 }
-function I(e, t) {
+function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     c.default.track(u.HAw.SEARCH_STARTED, {
         search_type: u.I4_.GUILD_DISCOVERY,
@@ -103,7 +103,7 @@ function I(e, t) {
         category_id: t,
     });
 }
-function f(e) {
+function I(e) {
     let { withCounts: t, offset: n } = e;
     c.default.track(u.HAw.GUILD_DISCOVERY_SEARCH_START, { with_counts: t, offset: n });
 }
@@ -121,7 +121,7 @@ function T(e) {
     let { categoryId: t } = e;
     c.default.track(u.HAw.GUILD_DISCOVERY_GET_FEATURED_GUILDS_FAILED, { category_id: t });
 }
-function m(e) {
+function g(e) {
     let { loadId: t, searchId: n, query: i, guildResults: r, analyticsContext: a, categoryId: s, isTagSearch: l } = e;
     c.default.track(u.HAw.SEARCH_RESULT_VIEWED, {
         search_type: l ? u.I4_.GUILD_DISCOVERY_TAG : u.I4_.GUILD_DISCOVERY,
@@ -134,7 +134,7 @@ function m(e) {
         category_id: s,
     });
 }
-function g(e) {
+function m(e) {
     let t = a.A.getLoadId(e);
     c.default.track(u.HAw.GUILD_DISCOVERY_GUILD_JOIN_CLICKED, {
         guild_id: e,

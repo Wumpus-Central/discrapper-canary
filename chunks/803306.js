@@ -1,4 +1,4 @@
-(n.d(t, { Q9: () => f, eO: () => g, lA: () => p, nj: () => m, q0: () => S, rQ: () => I, wz: () => T }), n(938796));
+(n.d(t, { Q9: () => I, eO: () => m, lA: () => p, nj: () => g, q0: () => S, rQ: () => f, wz: () => T }), n(938796));
 var i = n(284009),
     r = n.n(i),
     a = n(239947),
@@ -12,7 +12,7 @@ var i = n(284009),
     E = n(652215),
     A = n(901123);
 let h = new d.A("UserProfileModalActionCreators");
-function I() {
+function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
         { withAnalyticsToken: t = !1 } = e;
     return s.Bo.get({
@@ -31,7 +31,7 @@ function I() {
         ),
     );
 }
-function f() {
+function I() {
     let e = !(arguments.length > 0) || void 0 === arguments[0] || arguments[0],
         t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
     return _.A.patch({
@@ -59,10 +59,10 @@ function T(e) {
               (t) => (l.h.dispatch({ type: "USER_UPDATE", user: t.body }), u.default.getUser(e)),
           );
 }
-function m(e) {
+function g(e) {
     return (l.h.dispatch({ type: "USER_UPDATE", user: e }), u.default.getUser(e.id));
 }
-async function g(e) {
+async function m(e) {
     let {
             type: t,
             withMutualGuilds: n,
@@ -74,7 +74,7 @@ async function g(e) {
             abortSignal: u,
         } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         _ = arguments.length > 2 ? arguments[2] : void 0,
-        I = Date.now();
+        f = Date.now();
     l.h.dispatch({ type: "USER_PROFILE_FETCH_START", userId: e, guildId: a, withMutualFriends: r });
     try {
         let o = null == a || A.Cr.includes(a) ? void 0 : a,
@@ -94,7 +94,7 @@ async function g(e) {
             });
         (_?.(h.body, a),
             l.h.dispatch({ type: "USER_UPDATE", user: h.body.user }),
-            l.h.dispatch({ type: "USER_PROFILE_FETCH_SUCCESS", userProfile: h.body, fetchStartedAt: I, guildId: a }),
+            l.h.dispatch({ type: "USER_PROFILE_FETCH_SUCCESS", userProfile: h.body, fetchStartedAt: f, guildId: a }),
             null != a &&
                 null != h.body.guild_member &&
                 l.h.dispatch({ type: "GUILD_MEMBER_PROFILE_UPDATE", guildId: a, guildMember: h.body.guild_member }));
@@ -104,7 +104,7 @@ async function g(e) {
             l.h.dispatch({
                 type: "USER_PROFILE_FETCH_FAILURE",
                 apiError: new o.LG(t),
-                fetchStartedAt: I,
+                fetchStartedAt: f,
                 userId: e,
                 guildId: a,
             }),

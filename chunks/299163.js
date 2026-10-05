@@ -12,8 +12,8 @@ var i = n(477900),
     E = n(559106),
     A = n(452027),
     h = n(866665),
-    I = n(9761);
-function f(e, t) {
+    f = n(9761);
+function I(e, t) {
     let n = 0;
     for (let i = 0; i < t.length; i++) {
         let r = t[i];
@@ -37,7 +37,7 @@ function p(e, t) {
                 s = [],
                 l = [];
             if (null == t) return { min: i, max: r, range: r - i, sortedMarkers: s, markerPositions: l };
-            let o = f(n, (s = t.sort((e, t) => e - t))),
+            let o = I(n, (s = t.sort((e, t) => e - t))),
                 d = s[0],
                 c = s[s.length - 1],
                 u = c - d;
@@ -71,7 +71,7 @@ class T extends r.PureComponent {
         if (null != e.value && e.value !== t.value) {
             let n = { ...p(e, e.value), active: t.active };
             if (e.stickToMarkers && n.sortedMarkers.length > 0) {
-                let t = f(e.value, n.sortedMarkers);
+                let t = I(e.value, n.sortedMarkers);
                 null != t && (n.closestMarkerIndex = t);
             }
             return n;
@@ -99,10 +99,10 @@ class T extends r.PureComponent {
             } = this.state,
             {
                 disabled: _,
-                stickToMarkers: f,
+                stickToMarkers: I,
                 className: p,
                 children: T,
-                barStyles: g,
+                barStyles: m,
                 fillStyles: S,
                 mini: N,
                 hideBubble: C,
@@ -123,7 +123,7 @@ class T extends r.PureComponent {
             } = this.props,
             { fieldProps: F } = (0, A.n)(this.props),
             B = 0;
-        (f ? null != a && (null != o ? (B = a[o]) : null != l && (B = a[l])) : (B = this.scaleValue(e)),
+        (I ? null != a && (null != o ? (B = a[o]) : null != l && (B = a[l])) : (B = this.scaleValue(e)),
             (B = Math.min(Math.max(B, 0), 100)));
         let V = `${B}%`,
             H =
@@ -135,10 +135,10 @@ class T extends r.PureComponent {
                           return (0, i.jsx)(
                               "div",
                               {
-                                  className: s()(I.mark, {
-                                      [I.defaultValue]: a,
-                                      [I.markAbove]: 0 === P,
-                                      [I.markBelow]: 1 === P,
+                                  className: s()(f.mark, {
+                                      [f.defaultValue]: a,
+                                      [f.markAbove]: 0 === P,
+                                      [f.markBelow]: 1 === P,
                                   }),
                                   style: { left: `${e}%` },
                                   children:
@@ -146,9 +146,9 @@ class T extends r.PureComponent {
                                           ? y(n)
                                           : (0, i.jsxs)(i.Fragment, {
                                                 children: [
-                                                    (0, i.jsx)("div", { className: I.markValue, children: l }),
+                                                    (0, i.jsx)("div", { className: f.markValue, children: l }),
                                                     (0, i.jsx)("div", {
-                                                        className: I[`markDash${null == l ? "simple" : ""}`],
+                                                        className: f[`markDash${null == l ? "simple" : ""}`],
                                                     }),
                                                 ],
                                             }),
@@ -162,7 +162,7 @@ class T extends r.PureComponent {
         return (0, i.jsx)(A.D, {
             ...F,
             children: (r) =>
-                (0, i.jsx)(m, {
+                (0, i.jsx)(g, {
                     active: t,
                     keyboardFocused: n && this.context.keyboardModeEnabled,
                     children: (a) =>
@@ -170,10 +170,10 @@ class T extends r.PureComponent {
                             focusTarget: this.containerRef,
                             ringTarget: this.grabberRef,
                             children: (0, i.jsxs)(d.animated.div, {
-                                className: s()(I.slider, p, {
-                                    [I.hasMarks]: (H?.length ?? 0) > 0,
-                                    [I.disabled]: _,
-                                    [I.mini]: N,
+                                className: s()(f.slider, p, {
+                                    [f.hasMarks]: (H?.length ?? 0) > 0,
+                                    [f.disabled]: _,
+                                    [f.mini]: N,
                                 }),
                                 style: a?.sliderStyles,
                                 id: r.controlId,
@@ -204,24 +204,24 @@ class T extends r.PureComponent {
                                 onMouseLeave: () => a?.setHovered(!1),
                                 ref: this.containerRef,
                                 children: [
-                                    (0, i.jsx)("div", { className: I.track, children: H }),
+                                    (0, i.jsx)("div", { className: f.track, children: H }),
                                     (0, i.jsx)("div", {
-                                        className: s()(I.bar, v),
-                                        style: g,
+                                        className: s()(f.bar, v),
+                                        style: m,
                                         children: (0, i.jsx)("div", {
-                                            className: I.barFill,
+                                            className: f.barFill,
                                             style: { ...S, width: V },
                                         }),
                                     }),
                                     T,
                                     (0, i.jsx)("div", {
-                                        className: I.track,
+                                        className: f.track,
                                         children: (0, i.jsx)(h.m, {
-                                            __unsupportedReactNodeAsText: C || f ? null : j,
+                                            __unsupportedReactNodeAsText: C || I ? null : j,
                                             forceOpen: t || (n && this.context.keyboardModeEnabled),
                                             positionKey: V,
                                             children: (0, i.jsx)("div", {
-                                                className: s()(I.grabber, b),
+                                                className: s()(f.grabber, b),
                                                 style: { ...M, left: V },
                                                 onMouseDown: this.handleMouseDown,
                                                 ref: this.grabberRef,
@@ -396,7 +396,7 @@ class T extends r.PureComponent {
             o = l - s;
         if (o <= 0) return;
         let d = 100 * Math.min(Math.max((e.clientX - s) / o, 0), 1);
-        (null != (t = this.props.equidistant ? f(d, i) : f(this.unscaleValue(d), r)) && a?.(r[t]),
+        (null != (t = this.props.equidistant ? I(d, i) : I(this.unscaleValue(d), r)) && a?.(r[t]),
             this.setState({ newClosestIndex: t }));
     }
     moveSmoothly = (e) => {
@@ -409,7 +409,7 @@ class T extends r.PureComponent {
         (i?.(o), this.setState({ value: o }));
     };
 }
-function m(e) {
+function g(e) {
     let { active: t, keyboardFocused: n, children: i } = e,
         [a, s] = r.useState(!1);
     return i({

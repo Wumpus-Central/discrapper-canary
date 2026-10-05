@@ -5,11 +5,11 @@ n.d(t, {
     UZ: () => p,
     Xr: () => S,
     as: () => u,
-    cf: () => I,
-    gN: () => m,
+    cf: () => f,
+    gN: () => g,
     mT: () => T,
-    nO: () => f,
-    sx: () => g,
+    nO: () => I,
+    sx: () => m,
     xo: () => E,
 });
 var i = n(310784),
@@ -68,7 +68,7 @@ function h(e) {
     let [t, n, i] = r()((0, l.Hl)(e)).hsl();
     return [Number.isNaN(t) ? 0 : t, n, i];
 }
-function I(e) {
+function f(e) {
     let [t] = h(e);
     return A.map((e) => {
         let { hueShift: n, saturation: i, lightness: a } = e;
@@ -77,7 +77,7 @@ function I(e) {
             .num();
     });
 }
-function f(e) {
+function I(e) {
     let t = e[0];
     if (null == t) return p(0);
     let [n] = h(t);
@@ -89,13 +89,13 @@ function p(e) {
 function T(e) {
     return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
 }
-function m(e, t) {
+function g(e, t) {
     let n = t[Math.floor(Math.random() * t.length)],
         i = e[Math.floor(Math.random() * e.length)],
         r = (0, o.ii)(n);
     return { fontId: i, effectId: n, colors: [...r[Math.floor(Math.random() * r.length)]] };
 }
-function g(e, t) {
+function m(e, t) {
     if (t || null == e) return e;
     let n = o._k.includes(e.fontId) ? s.x.DEFAULT : e.fontId,
         i = o.gz.includes(e.effectId) ? a.z.SOLID : e.effectId;

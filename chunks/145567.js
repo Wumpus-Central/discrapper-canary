@@ -1,4 +1,4 @@
-n.d(t, { $p: () => f, D$: () => h, Ml: () => _, S$: () => p, bB: () => E, lu: () => I });
+n.d(t, { $p: () => I, D$: () => h, Ml: () => _, S$: () => p, bB: () => E, lu: () => f });
 var i,
     r = n(73153),
     a = n(308528),
@@ -58,14 +58,14 @@ async function h(e) {
         a
     );
 }
-function I(e) {
+function f(e) {
     let { channelId: t, widgetType: n, secondaryValue: i = "remove_channel" } = e;
     return (
         (0, d.YX)(n, { type: d.Z5.TEXT_CHAT, value: d.IP.CLOSED_TEXT_CHAT, secondaryValue: i }),
         r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_REMOVE_CHANNEL", channelId: t })
     );
 }
-function f() {
+function I() {
     return r.h.dispatch({ type: "OVERLAY_TEXT_CHAT_REMOVE_ALL_CHANNELS" });
 }
 function p(e) {

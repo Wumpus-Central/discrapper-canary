@@ -1,4 +1,4 @@
-n.d(t, { _z: () => g, Ld: () => m, QX: () => T, PU: () => p });
+n.d(t, { _z: () => m, Ld: () => g, QX: () => T, PU: () => p });
 var i = n(158390),
     r = n(636537),
     a = n(941426),
@@ -17,10 +17,10 @@ let u = new a.Vy("ParentalConsentWarning"),
     E = null,
     A = null,
     h = 0;
-function I() {
+function f() {
     null != A && (clearTimeout(A), (A = null));
 }
-function f() {
+function I() {
     if (!d.getConfig({ location: "parental_consent_warning_manager" }).enabled) return Promise.resolve();
     if (null != E) return E;
     let e = h;
@@ -36,7 +36,7 @@ function f() {
                     daysRemaining: "number" == typeof t.days_remaining ? t.days_remaining : null,
                     surfaces: Array.isArray(t.surfaces) ? t.surfaces : [],
                 });
-            (_.succeed(), I(), s.h.dispatch({ type: "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS", warning: i }));
+            (_.succeed(), f(), s.h.dispatch({ type: "PARENTAL_CONSENT_WARNING_FETCH_SUCCESS", warning: i }));
         } catch (t) {
             if (e !== h) return;
             (u.error("Failed to fetch parental-consent warning", t),
@@ -51,14 +51,14 @@ function f() {
     })());
 }
 async function p() {
-    null == E && null == A && c.A.shouldFetchToday() && (await f());
+    null == E && null == A && c.A.shouldFetchToday() && (await I());
 }
 async function T() {
-    (I(), null != E && (h++, (E = null)), await f());
-}
-function m() {
-    (h++, I(), (E = null), _.succeed());
+    (f(), null != E && (h++, (E = null)), await I());
 }
 function g() {
+    (h++, f(), (E = null), _.succeed());
+}
+function m() {
     s.h.dispatch({ type: "PARENTAL_CONSENT_WARNING_CLEARED" });
 }

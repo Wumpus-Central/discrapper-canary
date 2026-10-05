@@ -14,12 +14,12 @@ let o = {
         [l.U.NETFLIX]: "Netflix",
         [l.U.AMAZON_KIDS_PLUS]: "Amazon Kids+",
     },
-    u = [l.U.PLAYSTATION];
-function c(e) {
+    c = [l.U.PLAYSTATION];
+function u(e) {
     let t = (function (e) {
-        if (null == e) return u;
+        if (null == e) return c;
         let t = a.A.getConfigForApplicationId(e);
-        return null == t ? u : t.excludedPlatforms;
+        return null == t ? c : t.excludedPlatforms;
     })(e);
     return 0 === t.length
         ? ""
@@ -29,15 +29,15 @@ function c(e) {
           });
 }
 function d(e) {
-    return s.intl.format(i.default.Q0dHYO, { platforms_info: c(e?.id) });
+    return s.intl.format(i.default.Q0dHYO, { platforms_info: u(e?.id) });
 }
 function m(e) {
     let t = e.name;
-    return s.intl.format(i.default.fO4b1C, { applicationName: t, platforms_info: c(e.id) });
+    return s.intl.format(i.default.fO4b1C, { applicationName: t, platforms_info: u(e.id) });
 }
 function x(e, t) {
     let { hasAlreadyLinked: n } = t,
         l = e.name,
         r = n ? i.default.yqAKVO : i.default.vyAtfo;
-    return s.intl.format(r, { applicationName: l, platforms_info: c(e.id) });
+    return s.intl.format(r, { applicationName: l, platforms_info: u(e.id) });
 }

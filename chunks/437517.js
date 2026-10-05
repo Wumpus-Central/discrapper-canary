@@ -8,8 +8,8 @@ n.d(t, {
     j2: () => y,
     fw: () => D,
     We: () => O,
-    c7: () => g,
-    zv: () => m,
+    c7: () => m,
+    zv: () => g,
 });
 var i = n(132500),
     r = n(127258),
@@ -26,8 +26,8 @@ var o = n(375708),
     E = n(731068),
     A = n(486020),
     h = n(403362),
-    I = n(489414),
-    f = n(443155);
+    f = n(489414),
+    I = n(443155);
 let p = new c.A("InteractionComponentUtils"),
     T = (e, t) => ({
         id: e.id,
@@ -35,7 +35,7 @@ let p = new c.A("InteractionComponentUtils"),
         animated: e.animated,
         src: t && null != e.id ? A.Ay.getEmojiURL({ id: e.id, animated: e.animated || !1, size: 48 }) : void 0,
     });
-function m(e, t, n) {
+function g(e, t, n) {
     let i = e?.data.interactionType === r.G.MESSAGE_COMPONENT && e?.state === u.m.FAILED ? e.data.componentId : null;
     if (
         null !=
@@ -65,7 +65,7 @@ function m(e, t, n) {
             })(e)
         );
 }
-function g(e) {
+function m(e) {
     return e.placeholder ?? o.intl.string(o.t.Otr6W2);
 }
 function S(e, t) {
@@ -245,7 +245,7 @@ function v(e) {
                             disabled: t.disabled,
                             required: t.required ?? !1,
                             options: t.options.map((e) => ({
-                                type: I.iw.STRING,
+                                type: f.iw.STRING,
                                 label: e.label,
                                 value: e.value,
                                 default: e.default,
@@ -398,7 +398,7 @@ function v(e) {
                         return (function (e, t) {
                             let n = e.checkpoint_data;
                             switch (n.version) {
-                                case f.wk.V2025:
+                                case I.wk.V2025:
                                     return {
                                         type: e.type,
                                         id: b(t),
@@ -439,7 +439,7 @@ function v(e) {
                                                     : void 0,
                                         },
                                     };
-                                case f.wk.V2026:
+                                case I.wk.V2026:
                                     let i = (0, d.q6)(n);
                                     if (null == i) break;
                                     return { type: e.type, id: b(t), checkpointData: i };
@@ -474,5 +474,5 @@ function v(e) {
         .filter((e) => null != e);
 }
 function b(e) {
-    return (0, I.X1)(e.join(","));
+    return (0, f.X1)(e.join(","));
 }

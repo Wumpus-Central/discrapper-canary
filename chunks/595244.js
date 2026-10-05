@@ -14,12 +14,12 @@ var i = n(477900),
     E = n(834730),
     A = n(573435),
     h = n(726249),
-    I = n(310419),
-    f = n(976860),
+    f = n(310419),
+    I = n(976860),
     p = n(345942),
     T = n(734057),
-    m = n(576705),
-    g = n(309010),
+    g = n(576705),
+    m = n(309010),
     S = n(174459),
     N = n(486020),
     C = n(625494),
@@ -66,7 +66,7 @@ function M(e) {
                     guild_id: t?.id,
                 }));
         }, [s, n?.id, t?.id]),
-        o = I.h.getField("entrypoint"),
+        o = f.h.getField("entrypoint"),
         c = r.useCallback(() => {
             (s?.(), S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_CLOSE_CLICKED, { application_id: n?.id }));
         }, [s, n?.id]),
@@ -74,14 +74,14 @@ function M(e) {
         _ = r.useCallback(() => {
             n?.id != null &&
                 (s?.(),
-                null != o && (0, f.pX)(""),
+                null != o && (0, I.pX)(""),
                 setImmediate(() => {
                     (C._.dispatchToLastSubscribed(L.jej.OPEN_APP_LAUNCHER, { applicationId: n.id }),
                         S.default.track(L.HAw.OAUTH2_AUTHORIZE_SUCCESS_OPEN_APP_CLICKED, { application_id: n.id }));
                 }));
         }, [n?.id, s, o]),
-        E = (0, d.bG)([g.Ay, T.A], () => T.A.getChannel(g.Ay.getChannelId())),
-        A = (0, d.bG)([m.A], () => m.A.can(L.xBc.SEND_MESSAGES, E)),
+        E = (0, d.bG)([m.Ay, T.A], () => T.A.getChannel(m.Ay.getChannelId())),
+        A = (0, d.bG)([g.A], () => g.A.can(L.xBc.SEND_MESSAGES, E)),
         h = null != t,
         N = null == t && A && (!u || null != o),
         O = [];
@@ -193,7 +193,7 @@ function k(e) {
         if (null == t || "" === t.search) return;
         let e = null != document.referrer && "" !== document.referrer ? O.A.toURLSafe(document.referrer) : null;
         (null == e || e.host !== window.location.host || e.pathname !== L.BVt.OAUTH2_AUTHORIZE) &&
-            (0, f.pX)(L.BVt.INDEX);
+            (0, I.pX)(L.BVt.INDEX);
     }, [t]);
     let n = null != t ? (0, l.parse)(t.search) : {},
         a = n.error_description ?? n.error ?? y.intl.string(y.t.mqn873);

@@ -12,12 +12,12 @@ var i = n(17928),
     E = n(157347),
     A = n(551816),
     h = n(233693),
-    I = n(811315),
-    f = n.n(I),
+    f = n(811315),
+    I = n.n(f),
     p = n(229527),
     T = n(316031),
-    m = n(859126);
-function g() {
+    g = n(859126);
+function m() {
     return {
         query: "",
         requireUnusualDmActivity: !1,
@@ -32,7 +32,7 @@ function g() {
         selectedSort: void 0,
     };
 }
-let S = Object.freeze(g());
+let S = Object.freeze(m());
 function N(e, t) {
     return null != e && !!e.toLowerCase().includes(t.toLowerCase());
 }
@@ -41,21 +41,21 @@ class C {
     _searchState;
     hasDefaultQuery;
     constructor(e) {
-        ((this.guildId = e), (this._searchState = g()), (this.hasDefaultQuery = !0));
+        ((this.guildId = e), (this._searchState = m()), (this.hasDefaultQuery = !0));
     }
     get requiresUsernameMatch() {
         return this._searchState.query.trim().length > 0;
     }
     reset() {
-        ((this._searchState = g()), (this.hasDefaultQuery = !0));
+        ((this._searchState = m()), (this.hasDefaultQuery = !0));
     }
     updateSearchState(e) {
         return (
-            (this._searchState = { ...this._searchState, ...e }), (this.hasDefaultQuery = f()(this._searchState, S)), !0
+            (this._searchState = { ...this._searchState, ...e }), (this.hasDefaultQuery = I()(this._searchState, S)), !0
         );
     }
     resetSearchState() {
-        return !this.hasDefaultQuery && ((this._searchState = g()), (this.hasDefaultQuery = !0), !0);
+        return !this.hasDefaultQuery && ((this._searchState = m()), (this.hasDefaultQuery = !0), !0);
     }
     getSearchState() {
         return this._searchState;
@@ -78,7 +78,7 @@ class C {
                 (t.length > 0 &&
                     !(function (e, t) {
                         if ("" === t.trim()) return !1;
-                        let [n, i] = (0, m.H)(t);
+                        let [n, i] = (0, g.H)(t);
                         for (let t of i) if (e.userId === t) return !0;
                         for (let t of n) if (N(e.nick, t)) return !0;
                         if (null == e.user) return !1;
@@ -344,7 +344,7 @@ class L {
         return r ? (this.updatePaginationChunks(), this.updatePaginationState({ currentPage: 1 }), !0) : n;
     }
     getSearchState() {
-        return null != this._search && this._initialized ? this._search.getSearchState() : g();
+        return null != this._search && this._initialized ? this._search.getSearchState() : m();
     }
     hasDefaultSearchState() {
         return null == this._search || !this._initialized || this._search.hasDefaultQuery;

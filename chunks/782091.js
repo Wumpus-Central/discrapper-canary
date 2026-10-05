@@ -1,4 +1,4 @@
-n.d(t, { J4: () => h, JH: () => A, dL: () => f, et: () => I, xy: () => E });
+n.d(t, { J4: () => h, JH: () => A, dL: () => I, et: () => f, xy: () => E });
 var i,
     r = n(17928),
     a = n(734057),
@@ -40,14 +40,14 @@ function A(e) {
 function h(e) {
     return A({ channelId: e, ChannelStore: a.A, GuildStore: s.A, PermissionStore: l.A, VoiceStateStore: o.A });
 }
-function I(e) {
+function f(e) {
     return (0, r.bG)(
         [a.A, s.A, l.A, o.A],
         () => A({ channelId: e, ChannelStore: a.A, GuildStore: s.A, PermissionStore: l.A, VoiceStateStore: o.A }),
         [e],
     );
 }
-function f(e) {
+function I(e) {
     switch (e) {
         case 0:
             return _.intl.string(_.t.qJvTKQ);

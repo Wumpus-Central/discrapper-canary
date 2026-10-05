@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(17928),
     r = n(73153),
     a = n(710195),
@@ -19,7 +19,7 @@ function A() {
 function h() {
     return (u && (0, o.v)({ location: "GameModeExperimentAssignment" }), !1);
 }
-class I extends i.Ay.DeviceSettingsStore {
+class f extends i.Ay.DeviceSettingsStore {
     static displayName = "GameModeStore";
     static persistKey = "GameModeStore";
     static migrations = [
@@ -72,7 +72,7 @@ class I extends i.Ay.DeviceSettingsStore {
         return E;
     }
 }
-let f = new I(r.h, {
+let I = new f(r.h, {
     GAME_MODE_SET_ENABLED: function (e) {
         return c.enabled !== e.enabled && ((c = { ...c, enabled: e.enabled }), !0);
     },

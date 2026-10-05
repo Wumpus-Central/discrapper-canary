@@ -13,12 +13,12 @@ var u = n(343328),
     E = n(595528),
     A = n(334465),
     h = n(976860),
-    I = n(940382),
-    f = n(95701),
+    f = n(940382),
+    I = n(95701),
     p = n(761640),
     T = n(734057),
-    m = n(71393),
-    g = n(573163),
+    g = n(71393),
+    m = n(573163),
     S = n(309010),
     N = n(967198),
     C = n(927813),
@@ -39,11 +39,11 @@ function M(e) {
         jumpType: _,
         skipLocalFetch: A,
         avoidInitialScroll: h,
-        fetchKey: I,
+        fetchKey: f,
     } = e;
     if (null == n || (0, y.jq)(n)) return;
-    let f = T.A.getChannel(n);
-    if (f?.type === L.rbe.GUILD_STORE || (f?.type != null && L.kvI.GUILD_THREADS_ONLY.has(f.type))) return;
+    let I = T.A.getChannel(n);
+    if (I?.type === L.rbe.GUILD_STORE || (I?.type != null && L.kvI.GUILD_THREADS_ONLY.has(I.type))) return;
     let p = c.A.getOrCreate(n);
     (p.some(O.$r) &&
         (b.log("Found expired attachment link, clearing messages"), c.A.clear(n), (p = c.A.getOrCreate(n))),
@@ -56,9 +56,9 @@ function M(e) {
         (!d || E.A.isConnected() || p.loadingMore
             ? p.loadingMore || (p.ready && !p.cached)
                 ? null != a && (S = !0)
-                : (null == t || null != m.A.getGuild(t)) && (S = !0)
+                : (null == t || null != g.A.getGuild(t)) && (S = !0)
             : (S = !0),
-        (0, u.A)(n) && g.Ay.hasUnread(n) && (S = !0),
+        (0, u.A)(n) && m.Ay.hasUnread(n) && (S = !0),
         S)
     )
         if ((c.A.commit(p.mutate({ loadingMore: !0 })), null != a))
@@ -73,9 +73,9 @@ function M(e) {
             });
         else {
             if (
-                f?.isThread() &&
+                I?.isThread() &&
                 (function (e) {
-                    if (g.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
+                    if (m.Ay.hasOpenedThread(e) || (null == i && (i = r.w.get(U, {}) ?? {}), e in i)) return !1;
                     i[e] = Date.now();
                     let t = Date.now() - P;
                     for (let e in i) i[e] < t && delete i[e];
@@ -83,7 +83,7 @@ function M(e) {
                 })(n)
             )
                 return (
-                    b.log(`Jumping to start of thread ${f.id}`),
+                    b.log(`Jumping to start of thread ${I.id}`),
                     l.A.fetchMessages({
                         channelId: n,
                         limit: (0, R.h)("MessageManager.threadStart"),
@@ -91,10 +91,10 @@ function M(e) {
                         isPreload: d,
                         skipLocalFetch: A,
                         avoidInitialScroll: h,
-                        fetchKey: I,
+                        fetchKey: f,
                     })
                 );
-            if (!(f?.isThread() && g.Ay.hasTrackedUnread(f.id)) || p.ready)
+            if (!(I?.isThread() && m.Ay.hasTrackedUnread(I.id)) || p.ready)
                 return l.A.fetchMessages({
                     channelId: n,
                     limit: (0, R.h)("MessageManager.initialFetch"),
@@ -102,11 +102,11 @@ function M(e) {
                     skipLocalFetch: A,
                     jump: { jumpType: o.vx.ANIMATED },
                     avoidInitialScroll: h,
-                    fetchKey: I,
+                    fetchKey: f,
                 });
-            let e = g.Ay.getTrackedAckMessageId(f.id);
+            let e = m.Ay.getTrackedAckMessageId(I.id);
             return (
-                b.log(`Jumping to most recent message in thread ${f.id} - ${e}`),
+                b.log(`Jumping to most recent message in thread ${I.id} - ${e}`),
                 l.A.fetchMessages({
                     channelId: n,
                     limit: (0, R.h)("MessageManager.threadUnread"),
@@ -114,7 +114,7 @@ function M(e) {
                     isPreload: d,
                     skipLocalFetch: A,
                     avoidInitialScroll: h,
-                    fetchKey: I,
+                    fetchKey: f,
                 })
             );
         }
@@ -143,7 +143,7 @@ function G() {
     if (null == e) return;
     let t = T.A.getChannel(e);
     if (null == t) return;
-    if (!(0, f.pQ)(t.type)) return void B(t.getGuildId(), t.id);
+    if (!(0, I.pQ)(t.type)) return void B(t.getGuildId(), t.id);
     let n = c.A.getOrCreate(e);
     ((n.ready && n.hasFetched) || M({ guildId: t.getGuildId(), channelId: t.id }), B(t.getGuildId(), t.id));
 }
@@ -169,7 +169,7 @@ function V() {
         t = N.A.getGuildId();
     if (null == t || null == e) return;
     let n = p.Ay.getSidebarState(e);
-    (n?.type !== I.PE.VIEW_CHANNEL || n.channelId !== e) && B(t, e);
+    (n?.type !== f.PE.VIEW_CHANNEL || n.channelId !== e) && B(t, e);
 }
 function H(e) {
     let { guildId: t, channelId: n, context: i } = e;

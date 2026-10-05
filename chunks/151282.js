@@ -1,4 +1,4 @@
-(n.d(t, { Eg: () => _, fK: () => A, mk: () => E, pr: () => u, sy: () => I }), n(938796));
+(n.d(t, { Eg: () => _, fK: () => A, mk: () => E, pr: () => u, sy: () => f }), n(938796));
 var i = n(665260),
     r = n(636537),
     a = n(554146),
@@ -90,7 +90,7 @@ async function A(e) {
 async function h() {
     return (await r.Bo.get({ url: d.Rsh.SCHEDULED_MESSAGES, rejectWithError: !0 })).body.map(o.Lg);
 }
-async function I() {
+async function f() {
     s.h.dispatch({ type: "FETCH_SCHEDULED_MESSAGES" });
     try {
         let e = await h();

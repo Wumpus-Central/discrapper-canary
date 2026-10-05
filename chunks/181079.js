@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var r = n(435558),
     a = n(17928),
     s = n(873298),
@@ -12,8 +12,8 @@ let _ = {},
     E = 0,
     A = 0,
     h = !1,
-    I = !1,
-    f = !1;
+    f = !1,
+    I = !1;
 function p() {
     let e = o.A.settings.favorites,
         t = e?.muted ?? !1,
@@ -39,8 +39,8 @@ function p() {
         p = u ?? !(0, r.isEmpty)(n),
         T = e?.autoAddJoinedThreads ?? !1;
     return (
-        !(h === t && I === p && i === u && f === T && (0, r.isEqual)(_, n)) &&
-        ((h = t), (I = p), (i = u), (f = T), (_ = n), (E = a), (A = l), !0)
+        !(h === t && f === p && i === u && I === T && (0, r.isEqual)(_, n)) &&
+        ((h = t), (f = p), (i = u), (I = T), (_ = n), (E = a), (A = l), !0)
     );
 }
 class T extends a.Ay.Store {
@@ -55,13 +55,13 @@ class T extends a.Ay.Store {
         return h;
     }
     get favoriteGuildEnabled() {
-        return I;
+        return f;
     }
     get favoriteGuildVisibleSetting() {
         return i;
     }
     get autoAddJoinedThreads() {
-        return f && I;
+        return I && f;
     }
     isFavorite(e) {
         return null != e && null != _[e];
@@ -102,4 +102,4 @@ class T extends a.Ay.Store {
         return !(0, r.isEmpty)(this.getFavoriteChannels());
     }
 }
-let m = new T(l.h, {});
+let g = new T(l.h, {});

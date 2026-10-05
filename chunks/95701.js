@@ -12,10 +12,10 @@
     OU: () => D,
     OY: () => eU,
     QE: () => b,
-    TA: () => eI,
+    TA: () => ef,
     UE: () => eP,
     XD: () => R,
-    YB: () => eg,
+    YB: () => em,
     ZV: () => ea,
     Z_: () => z,
     ay: () => v,
@@ -37,8 +37,8 @@
     oh: () => eG,
     p6: () => en,
     pQ: () => k,
-    pd: () => ef,
-    tr: () => g,
+    pd: () => eI,
+    tr: () => m,
     uL: () => L,
     wE: () => Y,
     xR: () => q,
@@ -58,11 +58,11 @@ var i = n(435558),
     E = n(823809),
     A = n(233993),
     h = n(446600),
-    I = n(403362),
-    f = n(935208),
+    f = n(403362),
+    I = n(935208),
     p = n(652215),
     T = n(746080);
-let m = new Set([
+let g = new Set([
     p.rbe.GUILD_TEXT,
     p.rbe.GUILD_ANNOUNCEMENT,
     p.rbe.GUILD_STORE,
@@ -76,8 +76,8 @@ let m = new Set([
     p.rbe.DM,
     p.rbe.GROUP_DM,
 ]);
-function g(e) {
-    return m.has(e);
+function m(e) {
+    return g.has(e);
 }
 let S = new Set([
         p.rbe.DM,
@@ -280,11 +280,11 @@ let X = new Set([
 (p.rbe.GUILD_TEXT, p.rbe.GUILD_ANNOUNCEMENT, p.rbe.GUILD_FORUM, p.rbe.GUILD_VOICE, p.rbe.GUILD_APP);
 let er = new Set([p.rbe.GUILD_APP]);
 function ea(e) {
-    return (0, I.Eo)(e, er);
+    return (0, f.Eo)(e, er);
 }
 let es = new Set([...er]);
 function el(e) {
-    return (0, I.Eo)(e, es);
+    return (0, f.Eo)(e, es);
 }
 let eo = new Set([...er, p.rbe.GUILD_FORUM, p.rbe.GUILD_MEDIA]);
 function ed(e) {
@@ -319,10 +319,10 @@ function eE(e) {
 }
 let eA = c.kg(p.xBc.CONNECT, p.xBc.VIEW_CHANNEL),
     eh = p.hVb.CONNECT | p.hVb.VIEW_CHANNEL;
-function eI(e) {
+function ef(e) {
     return v(e) ? eA : p.xBc.VIEW_CHANNEL;
 }
-function ef(e) {
+function eI(e) {
     return v(e) ? eh : p.hVb.VIEW_CHANNEL;
 }
 class ep {
@@ -403,10 +403,10 @@ function eT(e) {
         e
     );
 }
-let em = Object.freeze({});
-class eg extends ep {
+let eg = Object.freeze({});
+class em extends ep {
     get permissionOverwrites() {
-        return this.permissionOverwrites_ ?? em;
+        return this.permissionOverwrites_ ?? eg;
     }
     get topic() {
         return this.type === p.rbe.GUILD_APP && null != (0, E.Kn)(this.topic_) ? "" : (this.topic_ ?? "");
@@ -579,7 +579,7 @@ class eg extends ep {
         return this.hasFlag(T.lx.IS_GAME_INVITES_CHANNEL);
     }
     get accessPermissions() {
-        return eI(this.type);
+        return ef(this.type);
     }
     hasFlag(e) {
         return (0, u.Lt)(this.flags, e);
@@ -588,7 +588,7 @@ class eg extends ep {
         return null != this.hdStreamingUntil && new Date(this.hdStreamingUntil) > new Date();
     }
 }
-class eS extends eg {
+class eS extends em {
     constructor(e) {
         (super(e),
             (this.application_id = e.application_id),
@@ -729,7 +729,7 @@ class eS extends eg {
         return (0, _.pp)(n, eS);
     }
 }
-class eN extends eg {
+class eN extends em {
     constructor(e) {
         (super(e),
             (this.application_id = e.application_id),
@@ -786,7 +786,7 @@ class eN extends eg {
         });
     }
 }
-class eC extends eg {
+class eC extends em {
     constructor(e) {
         (super(e),
             (this.application_id = e.application_id),
@@ -838,7 +838,7 @@ class eC extends eg {
     }
 }
 class eO extends eC {}
-class eR extends eg {
+class eR extends em {
     constructor(e) {
         (super(e),
             (this.availableTags = e.availableTags ?? []),
@@ -918,7 +918,7 @@ class eL {
 }
 let ey = new eL(),
     eD = new eL();
-class ev extends eg {
+class ev extends em {
     static sortRecipients(e, t) {
         let n = ey.getOrCompute(t);
         return [...(e ?? [])].sort((e, t) => (eD.getOrCompute(e.id) ^ n) - (eD.getOrCompute(t.id) ^ n));
@@ -936,7 +936,7 @@ class ev extends eg {
             (this.nicks = e.nicks),
             (this.ownerId = e.ownerId),
             (this.rawRecipients = ev.sortRecipients(e.rawRecipients, this.id)),
-            (this.recipients = [...(e.recipients ?? [])].sort(f.default.compare)),
+            (this.recipients = [...(e.recipients ?? [])].sort(I.default.compare)),
             (this.recipientFlags = e.recipientFlags),
             (this.safetyWarnings = e.safetyWarnings ?? []),
             (this.blockedUserWarningDismissed = e.blockedUserWarningDismissed));
@@ -980,7 +980,7 @@ class ev extends eg {
                 "recipients",
                 r()
                     .uniq([...(this.recipients ?? []), e])
-                    .sort(f.default.compare),
+                    .sort(I.default.compare),
             );
             return null == t ? n : n.set("nicks", { ...n.nicks, [e]: t });
         }
@@ -989,7 +989,7 @@ class ev extends eg {
         return this.set("recipients", r().without(this.recipients, e));
     }
 }
-class eb extends eg {
+class eb extends em {
     constructor(e) {
         (super(e),
             (this.appliedTags = e.appliedTags ?? []),

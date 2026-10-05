@@ -1,4 +1,4 @@
-n.d(t, { oq: () => S, qC: () => N, xI: () => m, WF: () => p, Eg: () => T, p7: () => C, P7: () => g });
+n.d(t, { oq: () => S, qC: () => N, xI: () => g, WF: () => p, Eg: () => T, p7: () => C, P7: () => m });
 var i = n(517846),
     r = n(636537),
     a = n(73153),
@@ -27,13 +27,13 @@ class h extends E.Ay.DeviceSettingsStore {
         return { channelsExposedCount: A };
     }
 }
-let I = new h(a.h, {
+let f = new h(a.h, {
     TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION: function () {
         A++;
     },
 });
 n(575279);
-var f = n(652215);
+var I = n(652215);
 async function p(e) {
     let {
         channelId: t,
@@ -60,7 +60,7 @@ async function p(e) {
         null != E && ((h.include_messages = !0), (h.message_limit = E.limit ?? void 0)));
     try {
         let e = (
-            await r.Bo.get({ url: f.Rsh.CHANNEL_CONVERSATIONS(t), query: h, oldFormErrors: !0, rejectWithError: !0 })
+            await r.Bo.get({ url: I.Rsh.CHANNEL_CONVERSATIONS(t), query: h, oldFormErrors: !0, rejectWithError: !0 })
         ).body.conversations;
         return (
             a.h.dispatch({
@@ -84,7 +84,7 @@ async function p(e) {
 function T() {
     a.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
-function m(e, t) {
+function g(e, t) {
     let { shouldJump: n = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if (
         null == t ||
@@ -96,7 +96,7 @@ function m(e, t) {
     let i = o.A.getConversationMetadata(e, t)?.conversation.startMessageId;
     null != i && s.A.jumpToMessage({ channelId: e, messageId: i, flash: !1 });
 }
-function g(e, t) {
+function m(e, t) {
     a.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });
 }
 function S(e, t, n) {
@@ -118,7 +118,7 @@ async function N(e, t, n) {
         });
         try {
             let n = await r.Bo.get({
-                url: f.Rsh.CHANNEL_CONVERSATION_MESSAGES(e, t),
+                url: I.Rsh.CHANNEL_CONVERSATION_MESSAGES(e, t),
                 query: { limit: i, include_message_references: s, include_reactions: l },
                 oldFormErrors: !0,
                 rejectWithError: !0,
@@ -145,6 +145,6 @@ async function N(e, t, n) {
 }
 function C(e, t) {
     (u.X.trackEntrypointImpression({ channelId: e, conversationCount: t }),
-        I.shouldTriggerOnNextExposure() && l.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
+        f.shouldTriggerOnNextExposure() && l.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
         a.h.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" }));
 }

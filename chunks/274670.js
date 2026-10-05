@@ -12,8 +12,8 @@ var i = n(132500),
     E = n(174459),
     A = n(723702),
     h = n(345353),
-    I = n(144779),
-    f = n(652215);
+    f = n(144779),
+    I = n(652215);
 async function p(e) {
     let {
             adCreativeType: t,
@@ -38,7 +38,7 @@ async function p(e) {
         let t = e.adCreativeId;
         (0, l.av)({
             questId: t,
-            event: f.HAw.QUEST_CONTENT_CLICKED,
+            event: I.HAw.QUEST_CONTENT_CLICKED,
             properties: {
                 ...A,
                 metadata_sealed: (0, _.L4)(a, t) ?? null,
@@ -55,7 +55,7 @@ async function p(e) {
         adContentId: e.adCreativeId,
         relatedQuestId: e.relatedQuestId,
         adCreativeType: t,
-        event: f.HAw.QUEST_CONTENT_CLICKED,
+        event: I.HAw.QUEST_CONTENT_CLICKED,
         properties: { ...A, search_session_id: (0, c.tv)()?.uuid ?? null },
         trackGuildAndChannelMetadata: E,
         shouldExtendSession: (0, _.xn)(i),
@@ -66,7 +66,7 @@ async function T(e) {
     if (null == e.adCreativeType) {
         let { surfaceId: t, questContentCTA: n, clickId: r, questContentPosition: a, questContentRowIndex: s } = e,
             l = (0, o.fF)(t, a, s);
-        E.default.track(f.HAw.QUEST_CONTENT_CLICKED, {
+        E.default.track(I.HAw.QUEST_CONTENT_CLICKED, {
             cta_name: n,
             click_id: r ?? (0, i.A)(),
             is_targeted: e.isTargeted ?? !1,
@@ -81,10 +81,10 @@ async function T(e) {
     }
     await p(e);
 }
-async function m(e) {
+async function g(e) {
     await p(e);
 }
-function g(e) {
+function m(e) {
     let {
             surfaceId: t,
             sourceQuestContent: n,
@@ -93,11 +93,11 @@ function g(e) {
             minViewTimeSeconds: u,
             minViewportPercentage: E,
             isQuestEnrollmentBlocked: h,
-            shouldExtendSession: I,
+            shouldExtendSession: f,
             adUser: p,
             questContentPosition: T,
-            questContentRowIndex: m,
-            trackGuildAndChannelMetadata: g,
+            questContentRowIndex: g,
+            trackGuildAndChannelMetadata: m,
         } = e,
         S = {
             min_view_time_seconds: u,
@@ -109,15 +109,15 @@ function g(e) {
             ...(0, d.X)(t),
             impression_id: i,
             is_quest_enrollment_blocked: h,
-            ...(0, o.fF)(t, T, m),
+            ...(0, o.fF)(t, T, g),
         };
     if (e.adCreativeType === r.p.QUEST) {
         let t = e.adCreativeId;
         (0, l.av)({
-            event: f.HAw.QUEST_CONTENT_VIEWED,
+            event: I.HAw.QUEST_CONTENT_VIEWED,
             questId: t,
-            trackGuildAndChannelMetadata: g,
-            shouldExtendSession: I,
+            trackGuildAndChannelMetadata: m,
+            shouldExtendSession: f,
             sourceQuestContent: n,
             properties: {
                 ...S,
@@ -129,12 +129,12 @@ function g(e) {
         return;
     }
     (0, l.Qg)({
-        event: f.HAw.QUEST_CONTENT_VIEWED,
+        event: I.HAw.QUEST_CONTENT_VIEWED,
         adContentId: e.adCreativeId,
         relatedQuestId: e.relatedQuestId,
         adCreativeType: e.adCreativeType,
-        trackGuildAndChannelMetadata: g,
-        shouldExtendSession: I,
+        trackGuildAndChannelMetadata: m,
+        shouldExtendSession: f,
         sourceQuestContent: n,
         properties: { ...S },
     });
@@ -142,7 +142,7 @@ function g(e) {
 async function S(e) {
     if (null == e.adCreativeType) {
         let t = await (0, h.N)((0, o.jO)(e.surfaceId));
-        E.default.track(f.HAw.QUEST_CONTENT_VIEWED, {
+        E.default.track(I.HAw.QUEST_CONTENT_VIEWED, {
             ...(0, o.fF)(e.surfaceId),
             apple_advertising_id: null != t && (0, A.isIOS)() ? t.advertisingId : null,
             android_advertising_id: null != t && (0, A.isAndroid)() ? t.advertisingId : null,
@@ -150,7 +150,7 @@ async function S(e) {
         });
         return;
     }
-    g(e);
+    m(e);
 }
 function N(e) {
     (0, u.L)().error("captureAdUserAction failed to report an ad user action", e);
@@ -158,12 +158,12 @@ function N(e) {
 function C(e) {
     try {
         switch (e.type) {
-            case I.F.END_CONTENT_LOAD:
+            case f.F.END_CONTENT_LOAD:
                 let t = null != s.A.questEnrollmentBlockedUntil;
                 if (e.adCreativeType === r.p.QUEST) {
                     let n = e.adCreativeId;
                     (0, l.av)({
-                        event: f.HAw.QUEST_CONTENT_LOADED,
+                        event: I.HAw.QUEST_CONTENT_LOADED,
                         questId: n,
                         trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,
                         sourceQuestContent: e.sourceQuestContent,
@@ -181,7 +181,7 @@ function C(e) {
                     });
                 } else
                     (0, l.Qg)({
-                        event: f.HAw.QUEST_CONTENT_LOADED,
+                        event: I.HAw.QUEST_CONTENT_LOADED,
                         adContentId: e.adCreativeId,
                         relatedQuestId: e.relatedQuestId,
                         adCreativeType: e.adCreativeType,
@@ -198,17 +198,17 @@ function C(e) {
                         },
                     });
                 break;
-            case I.F.CLICK_INTERNAL:
+            case f.F.CLICK_INTERNAL:
                 T(e).catch(N);
                 break;
-            case I.F.CLICK_EXTERNAL_ADVERTISER_CTA:
-                m(e).catch(N);
+            case f.F.CLICK_EXTERNAL_ADVERTISER_CTA:
+                g(e).catch(N);
                 break;
-            case I.F.VIEW_INTERNAL_SURFACE_IMPRESSION:
+            case f.F.VIEW_INTERNAL_SURFACE_IMPRESSION:
                 S(e).catch(N);
                 break;
-            case I.F.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION:
-                g(e);
+            case f.F.VIEW_EXTERNAL_PAID_AD_PLACEMENT_IMPRESSION:
+                m(e);
         }
     } catch (e) {
         N(e);

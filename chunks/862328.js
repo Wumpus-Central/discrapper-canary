@@ -20,7 +20,7 @@ function u(e) {
         E = (0, o.r)(l.A.modules.guildbar.AVATAR_SIZE),
         A = (0, o.r)(l.A.modules.guildbar.FOLDER_SIZE),
         h = !u && c ? A : E,
-        I = h / 2;
+        f = h / 2;
     return (0, i.jsx)(_, {
         ...s,
         selected: t,
@@ -28,7 +28,7 @@ function u(e) {
         baseViewBoxSize: h,
         viewBoxSize: h,
         style: { width: h, height: h },
-        badgeMaskSize: I,
+        badgeMaskSize: f,
         badgeMaskStroke: 2,
         lowerBadgeSize: n,
         highlight: r,
@@ -46,14 +46,14 @@ function _(e) {
             highlight: E,
             badgeMaskStroke: A,
             badgeMaskSize: h,
-            upperBadge: I,
-            lowerBadge: f,
+            upperBadge: f,
+            lowerBadge: I,
             rounded: p = !1,
             "aria-hidden": T,
         } = e,
-        [m, g] = r.useState(!1),
-        S = null != I,
-        N = null != f,
+        [g, m] = r.useState(!1),
+        S = null != f,
+        N = null != I,
         C = r.useId(),
         O = `${C}-upper_badge_masks`,
         R = `${C}-lower_badge_masks`,
@@ -97,10 +97,10 @@ function _(e) {
             className: s()(a, c.iE),
             style: o,
             onFocus: function () {
-                g(!0);
+                m(!0);
             },
             onBlur: function () {
-                g(!1);
+                m(!1);
             },
             "aria-hidden": T,
             children: [
@@ -118,7 +118,7 @@ function _(e) {
                                 children: [
                                     E && (0, i.jsx)("path", { d: U, id: D }),
                                     (0, i.jsx)("path", { d: U, id: L }),
-                                    null != I
+                                    null != f
                                         ? (0, i.jsx)("rect", {
                                               id: O,
                                               x: n - P + A,
@@ -129,7 +129,7 @@ function _(e) {
                                               ry: P / 2,
                                           })
                                         : null,
-                                    null != f
+                                    null != I
                                         ? (0, i.jsx)("rect", {
                                               id: R,
                                               x: n - (v + 2 * A) + A,
@@ -172,7 +172,7 @@ function _(e) {
                                       ],
                                   })
                                 : null,
-                            m
+                            g
                                 ? (0, i.jsxs)(i.Fragment, {
                                       children: [
                                           (0, i.jsx)("g", {
@@ -183,8 +183,8 @@ function _(e) {
                                           (0, i.jsxs)("g", {
                                               className: c.e7,
                                               children: [
-                                                  null != I ? (0, i.jsx)("use", { href: `#${O}` }) : null,
-                                                  null != f ? (0, i.jsx)("use", { href: `#${R}` }) : null,
+                                                  null != f ? (0, i.jsx)("use", { href: `#${O}` }) : null,
+                                                  null != I ? (0, i.jsx)("use", { href: `#${R}` }) : null,
                                               ],
                                           }),
                                       ],
@@ -207,8 +207,8 @@ function _(e) {
                     },
                     "svg",
                 ),
-                null != f ? (0, i.jsx)("div", { className: c.H7, children: f }) : null,
-                null != I ? (0, i.jsx)("div", { className: c.A8, children: I }) : null,
+                null != I ? (0, i.jsx)("div", { className: c.H7, children: I }) : null,
+                null != f ? (0, i.jsx)("div", { className: c.A8, children: f }) : null,
             ],
         },
         `${N}-${S}`,

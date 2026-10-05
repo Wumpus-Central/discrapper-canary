@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(448761),
     r = n(148494),
     a = n(439372),
@@ -12,12 +12,12 @@ var i = n(448761),
     E = n(73153),
     A = n(935208),
     h = n(652215);
-class I extends a.A {
+class f extends a.A {
     actions = { VOICE_STATE_UPDATES: this.handleVoiceStateUpdates };
     handleVoiceStateUpdates(e) {
         let { voiceStates: t } = e;
         t.forEach((e) => {
-            let { channelId: t, userId: n, suppress: a, requestToSpeakTimestamp: I } = e;
+            let { channelId: t, userId: n, suppress: a, requestToSpeakTimestamp: f } = e;
             if (
                 c.Ay.getVoiceChannelId() === t &&
                 a &&
@@ -25,7 +25,7 @@ class I extends a.A {
                 n !== s.default.getId() &&
                 d.A.can(_.QY, l.A.getChannel(t))
             )
-                if (null != I) {
+                if (null != f) {
                     let e = u.default.getUser(n);
                     null != e &&
                         E.h.dispatch({
@@ -51,7 +51,7 @@ class I extends a.A {
                                     state: h.cmJ.SENT,
                                     tts: !1,
                                 };
-                            })({ channelId: t, requesterUser: e, requestToSpeakTimestamp: I }),
+                            })({ channelId: t, requesterUser: e, requestToSpeakTimestamp: f }),
                             optimistic: !1,
                             sendMessageOptions: {},
                             isPushNotification: !1,
@@ -65,4 +65,4 @@ class I extends a.A {
         });
     }
 }
-let f = new I();
+let I = new f();

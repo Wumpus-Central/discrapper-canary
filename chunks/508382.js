@@ -1,4 +1,4 @@
-(n.d(t, { $Y: () => f, IP: () => _, Ow: () => h, Pv: () => I, jQ: () => E }), n(321073));
+(n.d(t, { $Y: () => I, IP: () => _, Ow: () => h, Pv: () => f, jQ: () => E }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(458265),
@@ -17,12 +17,12 @@ function A(e) {
             returnFocusElement: o,
             ownerDocument: A = document,
             open: h,
-            onOpenChange: I,
-            id: f,
+            onOpenChange: f,
+            id: I,
             className: p,
             reference: T,
-            overrideTargetRect: m,
-            placement: g = "bottom",
+            overrideTargetRect: g,
+            placement: m = "bottom",
             spacing: S = 8,
             alignmentSpacing: N,
             autoFlip: C = !0,
@@ -75,23 +75,23 @@ function A(e) {
             context: K,
         } = (0, s.we)({
             nodeId: B,
-            placement: g,
+            placement: m,
             open: h,
-            onOpenChange: I,
+            onOpenChange: f,
             strategy: L,
             middleware: F,
             whileElementsMounted: x
                 ? (e, t, n) =>
                       (0, l.ll)(e, t, n, {
-                          ancestorScroll: null == m,
-                          ancestorResize: null == m,
-                          layoutShift: null == m,
+                          ancestorScroll: null == g,
+                          ancestorResize: null == g,
+                          layoutShift: null == g,
                       })
                 : void 0,
         });
     r.useLayoutEffect(() => {
-        null != m ? V.setPositionReference({ getBoundingClientRect: () => m }) : null != T && V.setReference(T);
-    }, [V, m, T]);
+        null != g ? V.setPositionReference({ getBoundingClientRect: () => g }) : null != T && V.setReference(T);
+    }, [V, g, T]);
     let $ = (0, s.s9)(K),
         z = (0, s.Mk)(K, { restMs: G, delay: { open: G, close: 0 }, enabled: "hover" === w, handleClose: (0, s.iB)() }),
         { getReferenceProps: X, getFloatingProps: Z } = (0, s.bv)([$, z]),
@@ -110,7 +110,7 @@ function A(e) {
                         children: [
                             D ? (0, i.jsx)(s.zR, { lockScroll: !0 }) : null,
                             ((t = (0, i.jsx)("div", {
-                                id: f,
+                                id: I,
                                 className: d()(p, u.q),
                                 [_]: !0,
                                 style: { ...H, visibility: q },
@@ -133,7 +133,7 @@ function A(e) {
 function h(e) {
     return null == (0, s.R1)() ? (0, i.jsx)(s.P6, { children: (0, i.jsx)(A, { ...e }) }) : (0, i.jsx)(A, { ...e });
 }
-function I(e, t) {
+function f(e, t) {
     switch (e) {
         case "center":
         case "window_center":
@@ -151,7 +151,7 @@ function I(e, t) {
             return e;
     }
 }
-function f(e) {
+function I(e) {
     let t = e.split("-")[0];
     switch (t) {
         case "top":

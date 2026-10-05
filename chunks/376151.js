@@ -12,8 +12,8 @@ var i = n(451988),
     E = n(927813),
     A = n(95561),
     h = n(652215);
-let I = +E.A.Millis.MINUTE;
-class f extends r.A {
+let f = +E.A.Millis.MINUTE;
+class I extends r.A {
     _currentUserSpeaking = !1;
     _anyoneElseSpeaking = !1;
     _voiceChannelId;
@@ -32,7 +32,7 @@ class f extends r.A {
             if (((this._voiceChannelId = e), null == e)) return void this._reset();
             null == this._reportInterval &&
                 ((this._reportInterval = new i.IX()),
-                this._reportInterval.start(I, () => {
+                this._reportInterval.start(f, () => {
                     (this._trackStartSpeaking(), this._trackStartListening());
                 }));
         }
@@ -103,4 +103,4 @@ class f extends r.A {
         };
     }
 }
-let p = new f();
+let p = new I();

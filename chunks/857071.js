@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(17928),
     r = n(73153),
     a = n(260509),
@@ -23,7 +23,7 @@ function A(e) {
 function h(e, t) {
     null == t ? delete _[e] : (_[e] = t);
 }
-class I extends i.Ay.Store {
+class f extends i.Ay.Store {
     static displayName = "LurkingStore";
     initialize() {
         this.waitFor(s.Ay, l.A, o.default);
@@ -48,7 +48,7 @@ class I extends i.Ay.Store {
         return null != e ? u[e] : null;
     }
 }
-let f = new I(r.h, {
+let I = new f(r.h, {
     CONNECTION_OPEN: function () {
         ((c = l.A.getGuildsArray()
             .filter((e) => (0, a.DG)(e))

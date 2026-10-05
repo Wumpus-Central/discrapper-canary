@@ -12,12 +12,12 @@ var i,
     E = n(280450),
     A = n(470710),
     h = n(734057),
-    I = n(25578),
-    f = n(485296),
+    f = n(25578),
+    I = n(485296),
     p = n(287809),
     T = n(803301),
-    m = n(977997),
-    g = n(562153),
+    g = n(977997),
+    m = n(562153),
     S = n(90575),
     N = n(806931),
     C = n(652215),
@@ -90,7 +90,7 @@ class v {
             ((this.call = A.A.getCall(this.channelId)), e.isPrivate() && (null == this.call || this.call.unavailable))
         )
             return !1;
-        let t = new Set(e.isGuildVocalOrThread() ? Object.keys(m.A.getVoiceStatesForChannel(e.id)) : e.recipients);
+        let t = new Set(e.isGuildVocalOrThread() ? Object.keys(g.A.getVoiceStatesForChannel(e.id)) : e.recipients);
         return (
             t.add(E.default.getId()),
             _.A.getAllActiveStreamsForChannel(this.channelId).forEach((e) => {
@@ -133,7 +133,7 @@ class v {
             this.participants[e]?.reduce((t, n) => {
                 if (n.type === N.lp.USER) {
                     let i = (0, s.R)({ userId: e, checkIsMuted: !0 }),
-                        r = f.A.isSoundSharing(e),
+                        r = I.A.isSoundSharing(e),
                         a = this.participantByIndex.get(n.id);
                     return a?.type === N.lp.USER && a.speaking === i && a.soundsharing === r
                         ? t
@@ -190,8 +190,8 @@ class v {
             i = [],
             r = p.default.getUser(e);
         if (null == r) return i;
-        let a = m.A.getVoiceStateForChannel(this.channelId, e),
-            l = m.A.getVoicePlatformForChannel(this.channelId, e),
+        let a = g.A.getVoiceStateForChannel(this.channelId, e),
+            l = g.A.getVoicePlatformForChannel(this.channelId, e),
             o = h.A.getChannel(this.channelId),
             c = o?.getGuildId(),
             A = this.call?.ringing?.includes(e) ?? !1;
@@ -205,16 +205,16 @@ class v {
                 voicePlatform: l,
                 speaking: (0, s.R)({ userId: e, checkIsMuted: !0 }),
                 lastSpoke: this.lastSpoke[e] ?? 0,
-                soundsharing: f.A.isSoundSharing(e),
+                soundsharing: I.A.isSoundSharing(e),
                 ringing: A,
-                userNick: g.Ay.getName(c, this.channelId, r),
+                userNick: m.Ay.getName(c, this.channelId, r),
                 userAvatarDecoration: (0, d.U)(r, c),
-                localVideoDisabled: I.Ay.isLocalVideoDisabled(r.id),
+                localVideoDisabled: f.Ay.isLocalVideoDisabled(r.id),
                 isPoppedOut: this.poppedOutParticipants.has(r.id),
             }),
             i.push(t));
         let S = _.A.getStreamForUser(e, c) ?? _.A.getActiveStreamForUser(e, c);
-        if (I.Ay.supports(O.O5.VIDEO) && null != S && S.channelId === this.channelId) {
+        if (f.Ay.supports(O.O5.VIDEO) && null != S && S.channelId === this.channelId) {
             let t = (0, u._z)(S),
                 s = this.getParticipant(t),
                 l = S.ownerId === E.default.getId() && _.A.isSelfStreamHidden(this.channelId),
@@ -232,7 +232,7 @@ class v {
                 id: t,
                 userVideo: a?.selfVideo ?? !1,
                 user: r,
-                userNick: g.Ay.getName(c, this.channelId, r),
+                userNick: m.Ay.getName(c, this.channelId, r),
                 stream: S,
                 isPoppedOut: this.poppedOutParticipants.has(t),
             }),

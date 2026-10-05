@@ -1,4 +1,4 @@
-(n.d(t, { CI: () => S, XM: () => f, e0: () => g, fK: () => T, s: () => m, tu: () => p }), n(938796), n(321073));
+(n.d(t, { CI: () => S, XM: () => I, e0: () => m, fK: () => T, s: () => g, tu: () => p }), n(938796), n(321073));
 var i = n(477900),
     r = n(477782),
     a = n(192308),
@@ -12,8 +12,8 @@ var i = n(477900),
     E = n(896455),
     A = n(23395),
     h = n(381941),
-    I = n(375708);
-async function f(e) {
+    f = n(375708);
+async function I(e) {
     let { scheduledMessageId: t, content: n, flags: i } = e;
     try {
         (await (0, d.Eg)({ scheduledMessageId: t, content: n, flags: i }), (0, c.kb)());
@@ -35,7 +35,7 @@ async function T(e) {
         (0, c.Do)(e.message);
     }
 }
-function m(e) {
+function g(e) {
     let { channel: t } = e,
         n = (0, _.FF)().map((e) =>
             (0, i.jsx)(
@@ -57,8 +57,8 @@ function m(e) {
                         r.Dr,
                         {
                             id: "custom-time",
-                            label: I.intl.string(I.t.stHooC),
-                            action: () => g({ channel: t, entryPoint: u.t.ATTACH_MENU }),
+                            label: f.intl.string(f.t.stHooC),
+                            action: () => m({ channel: t, entryPoint: u.t.ATTACH_MENU }),
                         },
                         "custom-time",
                     ),
@@ -68,7 +68,7 @@ function m(e) {
         n
     );
 }
-function g(e) {
+function m(e) {
     let {
         channel: t,
         defaultValue: r = (0, _.US)(),

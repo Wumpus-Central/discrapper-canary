@@ -12,16 +12,16 @@ var i = n(435558),
     E = n(734057),
     A = n(696451),
     h = n(287809),
-    I = n(977997),
-    f = n(935208),
+    f = n(977997),
+    I = n(935208),
     p = n(427262),
     T = n(652215);
-let m = Object.freeze([]),
-    g = {},
+let g = Object.freeze([]),
+    m = {},
     S = null;
 function N(e) {
-    let t = g[e];
-    return (null == t && ((t = new y(e)), (g[e] = t)), t);
+    let t = m[e];
+    return (null == t && ((t = new y(e)), (m[e] = t)), t);
 }
 function C(e, t) {
     return A.Ay.getMember(e, t.id);
@@ -69,7 +69,7 @@ class y {
     }
     updateVoiceState(e) {
         if (null != this._pending) return (this._pending.add(e), !1);
-        let t = I.A.getVoiceState(this.guildId, e),
+        let t = f.A.getVoiceState(this.guildId, e),
             n = this._voiceStates.get(e),
             i = h.default.getUser(e);
         if (null != t && null != i) {
@@ -115,7 +115,7 @@ class y {
     getVoiceStatesForChannel(e) {
         this.processPending();
         let t = this._voiceStates.values(e);
-        return 0 === t.length ? m : t;
+        return 0 === t.length ? g : t;
     }
     countVoiceStatesForChannel(e) {
         return (this.processPending(), this._voiceStates.size(e));
@@ -131,7 +131,7 @@ class y {
     }
 }
 function D() {
-    return r().reduce(g, (e, t) => t.updateUsers() || e, !1);
+    return r().reduce(m, (e, t) => t.updateUsers() || e, !1);
 }
 function v() {
     let e = null != S;
@@ -142,9 +142,9 @@ function b() {
     return null != e && !!e.unknownChannels.some((e) => null != E.A.getChannel(e)) && ((S = null), !0);
 }
 function M() {
-    ((g = {}), (S = null));
-    let e = I.A.getAllVoiceStates();
-    f.default.keys(e).forEach((t) => {
+    ((m = {}), (S = null));
+    let e = f.A.getAllVoiceStates();
+    I.default.keys(e).forEach((t) => {
         Object.keys(e[t]).forEach((e) => {
             N(t ?? T.ME).updateVoiceState(e);
         });
@@ -154,7 +154,7 @@ class P extends a.Ay.Store {
     static displayName = "SortedVoiceStateStore";
     initialize() {
         (M(),
-            this.waitFor(_.default, E.A, d.A, A.Ay, h.default, I.A),
+            this.waitFor(_.default, E.A, d.A, A.Ay, h.default, f.A),
             this.syncWith([h.default], D),
             this.syncWith([d.A], v),
             this.syncWith([E.A], b));
@@ -172,7 +172,7 @@ class P extends a.Ay.Store {
                               e.unknownChannels.some((e) => null != E.A.getChannel(e))
                           )
                               return !1;
-                          for (let [t, n] of e.versions) if (g[t]?.getVersion() !== n) return !1;
+                          for (let [t, n] of e.versions) if (m[t]?.getVersion() !== n) return !1;
                           return !0;
                       })()
                   )
@@ -181,7 +181,7 @@ class P extends a.Ay.Store {
                       t = new Map(),
                       n = [],
                       i = {};
-                  for (let r of f.default.keys(e)) {
+                  for (let r of I.default.keys(e)) {
                       if (e[r].type === s.Ip.CATEGORY) continue;
                       let a = E.A.getChannel(r);
                       if (null == a) {
@@ -200,7 +200,7 @@ class P extends a.Ay.Store {
             : N(e ?? T.ME).getVoiceStates();
     }
     getAllVoiceStates() {
-        return g;
+        return m;
     }
     getVoiceStatesForChannel(e) {
         let t = e.getGuildId(),
@@ -220,7 +220,7 @@ class P extends a.Ay.Store {
 }
 let U = new P(o.h, {
     CONNECTION_OPEN: function () {
-        ((g = {}), (S = null));
+        ((m = {}), (S = null));
     },
     OVERLAY_INITIALIZE: function () {
         M();
@@ -243,15 +243,15 @@ let U = new P(o.h, {
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        delete g[t.id];
+        delete m[t.id];
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        delete g[t.id];
+        delete m[t.id];
     },
     PASSIVE_UPDATE_V2: function (e) {
         let t = !1,
-            n = new Set(g[e.guildId]?.getUserIds()),
+            n = new Set(m[e.guildId]?.getUserIds()),
             i = new Set(e.voiceStates?.map((e) => e.userId)),
             r = new Set(e.removedVoiceStateUsers);
         for (let r of new Set([...n, ...i])) t = N(e.guildId).updateVoiceState(r) || t;

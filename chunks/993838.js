@@ -1,4 +1,4 @@
-n.d(t, { $q: () => E, E9: () => p, W0: () => A, j3: () => h, j6: () => I, jA: () => f, tQ: () => _ });
+n.d(t, { $q: () => E, E9: () => p, W0: () => A, j3: () => h, j6: () => f, jA: () => I, tQ: () => _ });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -83,13 +83,13 @@ function h(e, t) {
         { contextKey: t === u.BRT.POPOUT ? a.KX : a.SY },
     );
 }
-function I(e) {
+function f(e) {
     let t = l.default.getId(),
         n = (0, c.G1)(e),
         i = (0, c.Gc)(e);
     return !o.Ay.isModerator(t, e) && (n > 0 || i > 0);
 }
-function f(e, t) {
+function I(e, t) {
     (t !== e.id && (0, d.ek)(!0), (0, s.iN)(e.id));
 }
 function p(e, t) {

@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(61090),
     r = n(17928),
     a = n(73153),
@@ -91,7 +91,7 @@ async function h() {
     );
     null != t && a.h.dispatch({ type: "CACHED_STICKERS_LOADED", stickers: t });
 }
-class I extends r.Ay.Store {
+class f extends r.Ay.Store {
     static displayName = "StickersStore";
     initialize() {
         (this.waitFor(c.A, _.A, u.A, E.A), this.syncWith([_.A, E.A], () => !0));
@@ -136,7 +136,7 @@ class I extends r.Ay.Store {
         return (h(), _.A.getStickersByGuildId(e));
     }
 }
-let f = new I(a.h, {
+let I = new f(a.h, {
     BACKGROUND_SYNC: function () {
         A = 0;
     },

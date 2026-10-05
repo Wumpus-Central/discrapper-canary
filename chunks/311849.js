@@ -12,12 +12,12 @@ var i = n(141931),
     E = n(723702),
     A = n(321034),
     h = n(38405),
-    I = n(19575),
-    f = n(652215);
+    f = n(19575),
+    I = n(652215);
 let p = 15 * _.A.Millis.MINUTE,
     T = 15 * _.A.Millis.MINUTE,
-    m = 15 * _.A.Millis.MINUTE,
-    g = 30 * _.A.Millis.MINUTE,
+    g = 15 * _.A.Millis.MINUTE,
+    m = 30 * _.A.Millis.MINUTE,
     S = 60 * _.A.Millis.MINUTE,
     N = "lastMemoryUsageRestart",
     C = +_.A.Millis.DAY,
@@ -70,7 +70,7 @@ class y extends a.A {
                 clearInterval(this._checkIntervalV8),
                 (this._checkIntervalV8 = setInterval(async () => {
                     await this.trackV8HeapAlloc();
-                }, m)),
+                }, g)),
                 clearTimeout(this._checkIntervalCPUProfiler),
                 (this._checkIntervalCPUProfiler = setTimeout(() => {
                     100 * Math.random() < 0.5 && this.trackCPUProfiling();
@@ -110,7 +110,7 @@ class y extends a.A {
                 a.push(t.module_version ?? ""));
         let l = A.A.getPerfAttributedMemoryStats(),
             o = l?.events_dropped;
-        for (let e of (u.default.track(f.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY, {
+        for (let e of (u.default.track(I.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY, {
             memory_type: "native_heap",
             module_name: n,
             allocation_total_size_kb: i,
@@ -136,14 +136,14 @@ class y extends a.A {
                 callstack_frame_relative_offsets: e.frame_rel_offsets,
                 events_dropped: o,
             };
-            u.default.track(f.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK, t);
+            u.default.track(I.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK, t);
         }
         if (this._pushedNativeDeadlockMinidumpCount < 5) {
             let t = A.A.getMemoryHeapStats(),
                 n = t?.usedHeapSize ?? -1,
                 i = t?.totalAvailableSize ?? -1,
                 r = t?.peakMallocedMemory ?? -1;
-            (await I.Ay.submitLiveCrashReport({
+            (await f.Ay.submitLiveCrashReport({
                 message: "Desktop Memory Thread State",
                 extra: {
                     renderer_memory_kb: e,
@@ -164,16 +164,16 @@ class y extends a.A {
         if (null != n && n.timestamp >= Date.now() - C) return;
         let a = o.A.getIdleSince();
         null == a ||
-            a > Date.now() - g ||
+            a > Date.now() - m ||
             null != c.A.getRTCConnection() ||
             (l.A.persist(),
             r.w.set(N, { timeSinceStartup: t, timestamp: Date.now() }),
-            I.Ay.setCrashInformation(i.du.IntentionalCrashReason, "excessive-memory-usage"),
+            f.Ay.setCrashInformation(i.du.IntentionalCrashReason, "excessive-memory-usage"),
             h.A.addBreadcrumb({
                 category: "excessive-memory-usage-restart",
                 message: `Restarting due to excessive renderer memory usage: ${e}kB`,
             }),
-            I.Ay.crash(3));
+            f.Ay.crash(3));
     }
     trackPartitionAllocPerformanceStats() {
         let e = A.A.getPartitionAllocatorStats();
@@ -200,7 +200,7 @@ class y extends a.A {
             s.slice(0, 10)))
                 null != t &&
                     (n.push(e), i.push(t.total_allocation_kb ?? 0), r.push(t.allocation_count ?? 0), a.push(""));
-            for (let e of (u.default.track(f.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY, {
+            for (let e of (u.default.track(I.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY, {
                 memory_type: "part_alloc",
                 module_name: n,
                 allocation_total_size_kb: i,
@@ -226,7 +226,7 @@ class y extends a.A {
                     callstack_frame_relative_offsets: e.frame_rel_offsets,
                     events_dropped: void 0,
                 };
-                u.default.track(f.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK, t);
+                u.default.track(I.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK, t);
             }
         }
     }
@@ -269,7 +269,7 @@ class y extends a.A {
                             return i.length > 0 ? `at ${i} (${t}:${r}:${a})` : `at ${t}:${r}:${a}`;
                         }),
                     };
-                    u.default.track(f.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK, n);
+                    u.default.track(I.HAw.DESKTOP_PERF_ATTRIBUTED_MODULE_MEMORY_CALLSTACK, n);
                 }
             }
         }
@@ -321,7 +321,7 @@ class y extends a.A {
                     s.push(`${l.join(";")} ${a}`);
                 }
                 let l = s.join("\n"),
-                    o = await I.Ay.gzipAndBase64Encode(l),
+                    o = await f.Ay.gzipAndBase64Encode(l),
                     d = null != o && o.length > 0 ? o : l,
                     c = {
                         sample_period_ms: 1,
@@ -332,7 +332,7 @@ class y extends a.A {
                         fg_instr_rel_addr_high: e.fg_instr_rel_addr_high,
                         fg_instr_rel_addr_low: e.fg_instr_rel_addr_low,
                     };
-                (u.default.track(f.HAw.DESKTOP_PERF_CPU_PROFILE, c),
+                (u.default.track(I.HAw.DESKTOP_PERF_CPU_PROFILE, c),
                     (this._checkIntervalCPUProfiler = setTimeout(() => {
                         this.trackCPUProfiling();
                     }, R)));

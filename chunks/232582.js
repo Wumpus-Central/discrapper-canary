@@ -292,7 +292,7 @@ class A extends s.G {
     }
 }
 let h = new A();
-class I extends s.G {
+class f extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.Disclaimer", [
             { no: 1, name: "disclaimer_text", kind: "scalar", T: 9 },
@@ -343,7 +343,7 @@ class I extends s.G {
         return (!1 !== r && (!0 == r ? i.f$.onWrite : r)(this.typeName, e, t), t);
     }
 }
-let f = new I();
+let I = new f();
 class p extends s.G {
     constructor() {
         super("discord_protos.premium_marketing.v1.AnnouncementModalVariant1Properties", [
@@ -359,7 +359,7 @@ class p extends s.G {
             { no: 11, name: "modal_top_pill", kind: "scalar", T: 9 },
             { no: 13, name: "hero_art_video_subtitles", kind: "message", repeat: 1, T: () => h },
             { no: 14, name: "storage", kind: "message", T: () => E },
-            { no: 15, name: "disclaimer", kind: "message", T: () => f },
+            { no: 15, name: "disclaimer", kind: "message", T: () => I },
             { no: 18, name: "help_article", kind: "message", T: () => o.O },
             { no: 19, name: "header_localized", kind: "message", T: () => d.X },
             { no: 20, name: "subheader_localized", kind: "message", T: () => d.X },
@@ -432,7 +432,7 @@ class p extends s.G {
                     a.storage = E.internalBinaryRead(e, e.uint32(), n, a.storage);
                     break;
                 case 15:
-                    a.disclaimer = f.internalBinaryRead(e, e.uint32(), n, a.disclaimer);
+                    a.disclaimer = I.internalBinaryRead(e, e.uint32(), n, a.disclaimer);
                     break;
                 case 18:
                     a.helpArticle = o.O.internalBinaryRead(e, e.uint32(), n, a.helpArticle);
@@ -477,7 +477,7 @@ class p extends s.G {
         for (let r = 0; r < e.heroArtVideoSubtitles.length; r++)
             h.internalBinaryWrite(e.heroArtVideoSubtitles[r], t.tag(13, i.O0.LengthDelimited).fork(), n).join();
         (e.storage && E.internalBinaryWrite(e.storage, t.tag(14, i.O0.LengthDelimited).fork(), n).join(),
-            e.disclaimer && f.internalBinaryWrite(e.disclaimer, t.tag(15, i.O0.LengthDelimited).fork(), n).join(),
+            e.disclaimer && I.internalBinaryWrite(e.disclaimer, t.tag(15, i.O0.LengthDelimited).fork(), n).join(),
             e.helpArticle && o.O.internalBinaryWrite(e.helpArticle, t.tag(18, i.O0.LengthDelimited).fork(), n).join(),
             e.headerLocalized &&
                 d.X.internalBinaryWrite(e.headerLocalized, t.tag(19, i.O0.LengthDelimited).fork(), n).join(),

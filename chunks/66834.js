@@ -12,12 +12,12 @@ var i = n(562708),
     E = n(879408),
     A = n(568185),
     h = n(741231),
-    I = n(854492),
-    f = n(398884),
+    f = n(854492),
+    I = n(398884),
     p = n(700241),
     T = n(750233),
-    m = n(976860),
-    g = n(288254),
+    g = n(976860),
+    m = n(288254),
     S = n(280450),
     N = n(383394),
     C = n(808728),
@@ -101,7 +101,7 @@ let F = {
                 (t.body?.code === P.t02.USER_GUILD_JOIN_LARGE_GUILD_UNDERAGE_DISALLOWED &&
                     (0, o.yO)(U.w_.JOIN_LARGE_GUILD_UNDERAGE),
                 t.body?.code === P.t02.TOO_MANY_USER_GUILDS &&
-                    ((0, f.Om)(y.default.getCurrentUser()) ? G(P.cZu) : G(P.qlD)),
+                    ((0, I.Om)(y.default.getCurrentUser()) ? G(P.cZu) : G(P.qlD)),
                 t.body?.code === P.t02.GUILD_AT_CAPACITY &&
                     M.A.show({ title: w.intl.string(w.t.ZZlox4), body: w.intl.string(w.t.ZUEGFn) }),
                 E && t.body?.code === P.t02.UNKNOWN_GUILD && x(e),
@@ -124,7 +124,7 @@ let F = {
     },
     deleteGuild: x,
     selectGuild(e) {
-        (0, I.j)(e);
+        (0, f.j)(e);
     },
     createGuild(e) {
         s.h.dispatch({ type: "GUILD_CREATE", guild: e });
@@ -340,11 +340,11 @@ let F = {
         s.h.dispatch({ type: "GUILD_NSFW_AGREE", guildId: e });
     },
     nsfwReturnToSafety(e) {
-        if (null == e) return void (0, m.pX)(P.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 });
+        if (null == e) return void (0, g.pX)(P.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 });
         let t = C.Ay.getDefaultChannel(e);
-        null == t || (0, d.qR)(t) || (0, g.BV)(t)
-            ? (0, m.pX)(P.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 })
-            : (0, m.pX)(P.BVt.CHANNEL(e, t.id));
+        null == t || (0, d.qR)(t) || (0, m.BV)(t)
+            ? (0, g.pX)(P.BVt.FRIENDS, { navigationReplace: !1, openChannel: !0 })
+            : (0, g.pX)(P.BVt.CHANNEL(e, t.id));
     },
     spoilerAgree(e) {
         s.h.dispatch({ type: "CHANNEL_SPOILER_AGREE", channelId: e });
@@ -354,7 +354,7 @@ let F = {
     },
     escapeToDefaultChannel(e) {
         let t = C.Ay.getDefaultChannel(e);
-        null != t ? (0, m.pX)(P.BVt.CHANNEL(e, t.id)) : (0, m.pX)(P.BVt.FRIENDS);
+        null != t ? (0, g.pX)(P.BVt.CHANNEL(e, t.id)) : (0, g.pX)(P.BVt.FRIENDS);
     },
     async fetchApplications(e, t) {
         let n = { url: P.Rsh.GUILD_APPLICATIONS(e), oldFormErrors: !0, rejectWithError: (0, a.fT)() };

@@ -3,7 +3,7 @@ n.d(t, {
     r7: () => L,
     wo: () => w,
     ks: () => N,
-    $5: () => m,
+    $5: () => g,
     sn: () => M,
     mH: () => k,
     cg: () => F,
@@ -13,7 +13,7 @@ n.d(t, {
     KK: () => C,
     JX: () => v,
     tU: () => O,
-    k5: () => g,
+    k5: () => m,
     nj: () => T,
     $s: () => V,
     _Z: () => D,
@@ -40,18 +40,18 @@ var d = n(738822),
     E = n(158045),
     A = n(375708),
     h = n(651892),
-    I = n(710969),
-    f = n(576761);
+    f = n(710969),
+    I = n(576761);
 let p = new Set([l.PREMIUM_EXTENSION, l.PREMIUM_PERMANENT]);
 function T(e) {
     let t = e.rewardsConfig.rewards.find((e) => e.type === o.l.COLLECTIBLE);
     return t?.type === o.l.COLLECTIBLE ? t : null;
 }
-function m(e) {
-    let t = T(e);
-    return null != t && "expiresAtPremium" in t && null != t.expiresAtPremium ? (0, I.ZG)(t.expiresAtPremium) : null;
-}
 function g(e) {
+    let t = T(e);
+    return null != t && "expiresAtPremium" in t && null != t.expiresAtPremium ? (0, f.ZG)(t.expiresAtPremium) : null;
+}
+function m(e) {
     let t = T(e);
     if (null == t || !("expiresAt" in t) || null == t.expiresAt) return null;
     let n = new Date(e.expiresAt),
@@ -120,14 +120,14 @@ function U(e, t) {
     if (null == t) return 1;
     let n = P(e) ?? 1,
         i = (0, c.m)(t);
-    return C(e) && (0, f.B9)(i) ? n : 1;
+    return C(e) && (0, I.B9)(i) ? n : 1;
 }
 function w(e, t) {
     let n = e.rewardsConfig.rewards.find((e) => e.type === o.l.VIRTUAL_CURRENCY);
     if (null == n) return null;
     if (null == t) return n.orbQuantity;
     let i = (0, c.m)(t);
-    return C(e) && (0, f.B9)(i) ? (n.premiumOrbQuantity ?? n.orbQuantity) : n.orbQuantity;
+    return C(e) && (0, I.B9)(i) ? (n.premiumOrbQuantity ?? n.orbQuantity) : n.orbQuantity;
 }
 function G(e, t, n) {
     if (S(e)) {

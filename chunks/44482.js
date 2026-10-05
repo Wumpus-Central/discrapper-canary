@@ -12,15 +12,15 @@ function _(e) {
     let { label: t, description: n, onClick: r, "aria-hidden": a, leading: l, trailing: _, inInput: A = !1 } = e,
         h = null;
     null != l && (h = (0, i.jsx)("div", { className: u.R4, children: (0, i.jsx)(E, { accessory: l, leading: !0 }) }));
-    let I = null;
-    null != _ && (I = (0, i.jsx)("div", { className: u.ZY, children: (0, i.jsx)(E, { accessory: _ }) }));
-    let f = !A && null != n && "" !== n,
-        p = { gridColumnStart: null != h ? "2" : "1", gridColumnEnd: null != I ? "2" : "3" };
+    let f = null;
+    null != _ && (f = (0, i.jsx)("div", { className: u.ZY, children: (0, i.jsx)(E, { accessory: _ }) }));
+    let I = !A && null != n && "" !== n,
+        p = { gridColumnStart: null != h ? "2" : "1", gridColumnEnd: null != f ? "2" : "3" };
     return (0, i.jsxs)("div", {
         className: s()(c.uN, u.uK, { [c.MO]: A }),
         onClick: r,
         "aria-hidden": a,
-        "data-has-description": f || void 0,
+        "data-has-description": I || void 0,
         children: [
             h,
             A
@@ -40,15 +40,15 @@ function _(e) {
                           children: t,
                       }),
                   }),
-            f &&
+            I &&
                 (0, i.jsx)(d.E, {
                     variant: "text-sm/normal",
                     color: "text-subtle",
                     lineClamp: 1,
-                    style: { gridColumnStart: null != h ? "2" : "1", gridColumnEnd: null != I ? "2" : "3" },
+                    style: { gridColumnStart: null != h ? "2" : "1", gridColumnEnd: null != f ? "2" : "3" },
                     children: n,
                 }),
-            I,
+            f,
         ],
     });
 }

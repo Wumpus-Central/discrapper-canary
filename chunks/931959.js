@@ -22,7 +22,7 @@ function A() {
 function h() {
     A();
 }
-function I() {
+function f() {
     let e = o.A.frecencyWithoutFetchingLatest.stickerFrecency?.stickers;
     if (null == e) return !1;
     E.overwriteHistory(
@@ -30,11 +30,11 @@ function I() {
         _.pendingUsages,
     );
 }
-class f extends a.Ay.PersistedStore {
+class I extends a.Ay.PersistedStore {
     static displayName = "StickersPersistedStore";
     static persistKey = "StickersPersistedStoreV2";
     initialize(e) {
-        (this.waitFor(c.A, o.A), null != e && (_ = e), this.syncWith([c.A], h), this.syncWith([o.A], I));
+        (this.waitFor(c.A, o.A), null != e && (_ = e), this.syncWith([c.A], h), this.syncWith([o.A], f));
     }
     getState() {
         return _;
@@ -46,7 +46,7 @@ class f extends a.Ay.PersistedStore {
         return E;
     }
 }
-let p = new f(s.h, {
+let p = new I(s.h, {
     STICKER_TRACK_USAGE: function (e) {
         let { stickerIds: t } = e;
         (t?.forEach((e) => {

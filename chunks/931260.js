@@ -48,19 +48,19 @@ async function h(e) {
           (await i.Bo.patch({ url: o.Rsh.USER_GUILD_SETTINGS_BULK, body: { guilds: e }, rejectWithError: !1 })).body)
         : [];
 }
-function I() {
+function f() {
     d = { ...a.A.getCollapsedCategories() };
 }
-class f extends r.A {
+class I extends r.A {
     actions = {
         CATEGORY_COLLAPSE: E,
         CATEGORY_EXPAND: E,
         CATEGORY_COLLAPSE_ALL: E,
         CATEGORY_EXPAND_ALL: E,
         POST_CONNECTION_OPEN: _,
-        USER_GUILD_SETTINGS_FULL_UPDATE: I,
+        USER_GUILD_SETTINGS_FULL_UPDATE: f,
     };
     saveUserGuildSettings = A;
     saveUserGuildSettingsBulk = h;
 }
-let p = new f();
+let p = new I();

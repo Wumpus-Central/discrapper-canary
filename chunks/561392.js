@@ -16,13 +16,13 @@ function o(e) {
         } = e,
         [E, A] = i.useState(t ?? !1),
         h = i.useContext(l.W),
-        I = i.useRef(c);
+        f = i.useRef(c);
     i.useEffect(() => {
-        I.current = c;
+        f.current = c;
     }, [c]);
-    let f = i.useRef(u);
+    let I = i.useRef(u);
     i.useEffect(() => {
-        f.current = u;
+        I.current = u;
     }, [u]);
     let p = i.useRef(d);
     function T() {
@@ -32,8 +32,8 @@ function o(e) {
         p.current = d;
     }, [d]);
     let {
-            refs: m,
-            floatingStyles: g,
+            refs: g,
+            floatingStyles: m,
             context: S,
         } = (0, r.we)({
             open: E,
@@ -50,10 +50,10 @@ function o(e) {
                                 minWidth: `${t.reference.width}px`,
                                 width: `${t.reference.width}px`,
                             }),
-                            null != f.current &&
-                                Object.assign(n.floating.style, { width: `${f.current(t.reference)}px` }),
                             null != I.current &&
-                                Object.assign(n.floating.style, { maxHeight: `${I.current(t.reference)}px` }));
+                                Object.assign(n.floating.style, { width: `${I.current(t.reference)}px` }),
+                            null != f.current &&
+                                Object.assign(n.floating.style, { maxHeight: `${f.current(t.reference)}px` }));
                     },
                 })),
                 (0, a.UU)(T),
@@ -69,8 +69,8 @@ function o(e) {
     return {
         isOpen: E,
         setIsOpen: A,
-        refs: m,
-        floatingStyles: g,
+        refs: g,
+        floatingStyles: m,
         context: S,
         getReferenceProps: C,
         getFloatingProps: O,

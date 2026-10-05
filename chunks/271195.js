@@ -13,30 +13,30 @@ var r = n(503698),
     E = n(763827),
     A = n(6155),
     h = n(919706),
-    I = n(375708),
-    f = n(967481);
+    f = n(375708),
+    I = n(967481);
 function p(e) {
     let { title: t, onJumpToChannel: n, idle: r, preventIdleComponent: a } = e,
         l = (0, s.bG)([E.A], () => E.A.getChannelId()),
         u = null != l ? (0, i.jsx)(A.A, { voiceChannelId: l, idle: r }) : null;
     return (0, i.jsxs)(a, {
-        className: f.Nc,
+        className: I.Nc,
         children: [
             (0, i.jsxs)(o.D, {
-                className: f.qd,
+                className: I.qd,
                 onClick: n,
                 children: [
                     (0, i.jsx)(d.r, {
                         size: "custom",
                         color: "currentColor",
-                        "aria-label": I.intl.string(I.t.mSfLs0),
-                        className: f.Gv,
+                        "aria-label": f.intl.string(f.t.mSfLs0),
+                        className: I.Gv,
                         width: 20,
                         height: 20,
                     }),
                     (0, i.jsx)(c.D, {
                         variant: "heading-md/normal",
-                        className: f.TK,
+                        className: I.TK,
                         color: "text-overlay-light",
                         children: t,
                     }),
@@ -57,38 +57,38 @@ function T(e) {
         renderBottomLeftControls: c,
         renderBottomRightControls: E,
         screenMessage: A,
-        hideControls: I = !1,
+        hideControls: f = !1,
         className: T,
-        innerClassName: m,
-        videoControlsClassName: g,
+        innerClassName: g,
+        videoControlsClassName: m,
         ...S
     } = e;
     return (0, i.jsxs)("div", {
         onMouseMove: o,
         onMouseDown: o,
         onMouseLeave: d,
-        className: a()(f.Hu, { [f.N7]: n }, T),
+        className: a()(I.Hu, { [I.N7]: n }, T),
         onDoubleClick: r,
         children: [
-            (0, i.jsx)(l.F, { children: (0, i.jsx)(_.o, { className: m, children: t }, s) }),
+            (0, i.jsx)(l.F, { children: (0, i.jsx)(_.o, { className: g, children: t }, s) }),
             null != A ? (0, i.jsx)(h.A, { size: "small", ...A }) : null,
-            !I &&
+            !f &&
                 (0, i.jsxs)("div", {
-                    className: a()(f._v, g, "theme-dark"),
+                    className: a()(I._v, m, "theme-dark"),
                     children: [
                         (0, i.jsx)("div", {
-                            className: f.K1,
+                            className: I.K1,
                             children: (0, i.jsx)(p, { idle: n, onJumpToChannel: r, ...S }),
                         }),
                         (0, i.jsxs)("div", {
-                            className: f.q6,
+                            className: I.q6,
                             children: [
                                 (0, i.jsx)(u.A, {
                                     grow: 0,
                                     shrink: 1,
                                     basis: "50%",
                                     align: u.A.Align.CENTER,
-                                    className: f.Px,
+                                    className: I.Px,
                                     children: c?.(),
                                 }),
                                 (0, i.jsx)(u.A, {

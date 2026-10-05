@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -26,8 +26,8 @@ function A(e, t) {
     (T.stopSampling(e, n), T.startSampling(e));
 }
 let h = { [u.oh.AUDIO_INPUT]: new s.W0(), [u.oh.AUDIO_OUTPUT]: new s.W0(), [u.oh.VIDEO_INPUT]: new s.W0() },
-    I = { [u.oh.AUDIO_INPUT]: {}, [u.oh.AUDIO_OUTPUT]: {}, [u.oh.VIDEO_INPUT]: {} },
-    f = { [u.oh.AUDIO_INPUT]: new o.A(E), [u.oh.AUDIO_OUTPUT]: new o.A(E), [u.oh.VIDEO_INPUT]: new o.A(E) };
+    f = { [u.oh.AUDIO_INPUT]: {}, [u.oh.AUDIO_OUTPUT]: {}, [u.oh.VIDEO_INPUT]: {} },
+    I = { [u.oh.AUDIO_INPUT]: new o.A(E), [u.oh.AUDIO_OUTPUT]: new o.A(E), [u.oh.VIDEO_INPUT]: new o.A(E) };
 class p extends a.Ay.PersistedStore {
     static displayName = "DeviceFrecencyStore";
     static persistKey = "DeviceFrecencyStore";
@@ -35,16 +35,16 @@ class p extends a.Ay.PersistedStore {
     initialize(e) {
         (this.waitFor(d.Ay, c.default),
             [u.oh.AUDIO_INPUT, u.oh.AUDIO_OUTPUT, u.oh.VIDEO_INPUT].forEach((t) => {
-                (e?.[t] != null && f[t].overwriteHistory(e[t]), h[t].reset());
+                (e?.[t] != null && I[t].overwriteHistory(e[t]), h[t].reset());
             }));
     }
     reset() {
         [u.oh.AUDIO_INPUT, u.oh.AUDIO_OUTPUT, u.oh.VIDEO_INPUT].forEach((e) => {
-            (h[e].reset(), (I[e] = {}));
+            (h[e].reset(), (f[e] = {}));
         });
     }
     track(e, t, n) {
-        (null == I[e][t] && (I[e][t] = 0), (I[e][t] += n), f[e].track(t, { usesSinceLastTrack: n }));
+        (null == f[e][t] && (f[e][t] = 0), (f[e][t] += n), I[e].track(t, { usesSinceLastTrack: n }));
     }
     isSampling(e) {
         return h[e].isRunning();
@@ -70,19 +70,19 @@ class p extends a.Ay.PersistedStore {
     }
     getState() {
         return {
-            [u.oh.AUDIO_INPUT]: f[u.oh.AUDIO_INPUT].usageHistory,
-            [u.oh.AUDIO_OUTPUT]: f[u.oh.AUDIO_OUTPUT].usageHistory,
-            [u.oh.VIDEO_INPUT]: f[u.oh.VIDEO_INPUT].usageHistory,
+            [u.oh.AUDIO_INPUT]: I[u.oh.AUDIO_INPUT].usageHistory,
+            [u.oh.AUDIO_OUTPUT]: I[u.oh.AUDIO_OUTPUT].usageHistory,
+            [u.oh.VIDEO_INPUT]: I[u.oh.VIDEO_INPUT].usageHistory,
         };
     }
     getDeviceIdsSortedByFrecency(e) {
-        return f[e].frequently;
+        return I[e].frequently;
     }
     getUsageStats() {
         let e = { [u.oh.AUDIO_INPUT]: [], [u.oh.AUDIO_OUTPUT]: [], [u.oh.VIDEO_INPUT]: [] };
         return (
             [u.oh.AUDIO_INPUT, u.oh.AUDIO_OUTPUT].forEach((t) => {
-                (this.isSampling(t) && (this.stopSampling(t), this.startSampling(t)), (e[t] = Object.entries(I[t])));
+                (this.isSampling(t) && (this.stopSampling(t), this.startSampling(t)), (e[t] = Object.entries(f[t])));
             }),
             {
                 duration_input_device_used_ids: e[u.oh.AUDIO_INPUT].map((e) => {
@@ -125,4 +125,4 @@ let T = new p(l.h, {
             T.reset();
         },
     }),
-    m = T;
+    g = T;

@@ -11,14 +11,14 @@ var a = n(17928),
     E = n(885386),
     A = n(617617),
     h = n(185928);
-function I() {
+function f() {
     return _.Ay.useSystemTheme === h.Q_.ON && u.A.isSameAsDeviceThemeEnabled();
 }
-var f = n(95701),
+var I = n(95701),
     p = n(734057),
     T = n(287809),
-    m = n(158045),
-    g = n(427262),
+    g = n(158045),
+    m = n(427262),
     S = n(644235),
     N = n(385803);
 let C = !0,
@@ -28,7 +28,7 @@ function L() {
     (C && (i = void 0), (R = !1), (O = !1));
 }
 function y() {
-    let e = !m.Ay.canUseClientThemes(T.default.getCurrentUser());
+    let e = !g.Ay.canUseClientThemes(T.default.getCurrentUser());
     if (e === C) return !1;
     ((C = e), (R = !1));
 }
@@ -44,14 +44,14 @@ function D() {
     }
 }
 function v() {
-    return I();
+    return f();
 }
 function b() {
     return !0;
 }
 function M() {
     let e = E.eh.getSetting().backgroundGradientPresetId;
-    if ((_.Ay.useSystemTheme !== h.Q_.ON || null == e || I() || (0, c.k7)(h.Q_.OFF), null == e)) {
+    if ((_.Ay.useSystemTheme !== h.Q_.ON || null == e || f() || (0, c.k7)(h.Q_.OFF), null == e)) {
         null != i && (i = void 0);
         return;
     }
@@ -76,7 +76,7 @@ class P extends a.Ay.PersistedStore {
         return C ? {} : { gradientPresetId: i?.id, canUseClientThemes: !0 };
     }
     get gradientPreset() {
-        if (I()) {
+        if (f()) {
             if (C) return R ? i : void 0;
             let e = u.A.getSyncedClientTheme(u.A.systemTheme)?.backgroundGradientPresetId;
             return null != e ? N.ag[e] : void 0;
@@ -120,9 +120,9 @@ let U = new P(l.h, {
     CHANNEL_SELECT: function (e) {
         let { channelId: t, guildId: n } = e,
             i = T.default.getCurrentUser();
-        if (null == t || null == n || (0, o.k8)(s.M.CLIENT_THEMES_COACHMARK) || !(0, g.G2)(i)) return;
+        if (null == t || null == n || (0, o.k8)(s.M.CLIENT_THEMES_COACHMARK) || !(0, m.G2)(i)) return;
         let r = p.A.getChannel(t);
-        null != r && (0, f.ke)(r.type) && (O = !0);
+        null != r && (0, I.ke)(r.type) && (O = !0);
     },
     LOGOUT: L,
     CACHE_LOADED: M,

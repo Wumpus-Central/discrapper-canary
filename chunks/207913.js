@@ -12,12 +12,12 @@ let d = {},
     E = !1,
     A = null,
     h = null,
-    I = !1,
     f = !1,
+    I = !1,
     p = [],
     T = !1,
-    m = !1,
     g = !1,
+    m = !1,
     S = !1,
     N = !1,
     C = null,
@@ -49,8 +49,8 @@ function G() {
         (O = o.Iv.DIDNT_VIOLATE_POLICY),
         (R = ""),
         (p = []),
-        (m = !1),
         (g = !1),
+        (m = !1),
         (M = o.qN.NONE),
         (D = 0),
         (P = null));
@@ -82,10 +82,10 @@ class x extends a.Ay.Store {
         return h;
     }
     getIsDsaEligible() {
-        return I;
+        return f;
     }
     getIsAppealEligible() {
-        return f;
+        return I;
     }
     getAppealEligibility() {
         return p;
@@ -94,10 +94,10 @@ class x extends a.Ay.Store {
         return T;
     }
     getShowExpressiveModalSubtitleAlt() {
-        return m;
+        return g;
     }
     getIsManualReviewFallbackEnabled() {
-        return g;
+        return m;
     }
     getIsManualReviewDecidedUnderage() {
         return S;
@@ -155,16 +155,16 @@ let k = new x(s.h, {
         } = e;
         ((d = r()(t, "id")),
             (u = n),
-            (I = i),
-            (f = a),
+            (f = i),
+            (I = a),
             (_ = !1),
             (E = !0),
             (A = null),
             (L = s),
             (p = l),
             (T = o),
-            (m = c),
-            (g = h),
+            (g = c),
+            (m = h),
             (S = N));
     },
     SAFETY_HUB_FETCH_FAILURE: function (e) {
@@ -176,7 +176,7 @@ let k = new x(s.h, {
     },
     SAFETY_HUB_FETCH_CLASSIFICATION_SUCCESS: function (e) {
         let { classification: t, accountStanding: n, isDsaEligible: i, username: r, isAppealEligible: a } = e;
-        ((d[t.id] = t), (c[t.id] = l.nU.SUCCESS), (u = n), (_ = !1), (A = null), (I = i), (f = a), (E = !0), (L = r));
+        ((d[t.id] = t), (c[t.id] = l.nU.SUCCESS), (u = n), (_ = !1), (A = null), (f = i), (I = a), (E = !0), (L = r));
     },
     SAFETY_HUB_FETCH_CLASSIFICATION_FAILURE: function (e) {
         let { error: t, classificationId: n } = e;

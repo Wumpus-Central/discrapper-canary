@@ -11,17 +11,17 @@ var i = n(477900),
     _ = n(922016),
     E = n(76254);
 function A(e) {
-    let { value: t, onSelect: n, dateFormat: A = "ll", minDate: h, maxDate: I, disabled: f = !1, ...p } = e,
+    let { value: t, onSelect: n, dateFormat: A = "ll", minDate: h, maxDate: f, disabled: I = !1, ...p } = e,
         { required: T } = p,
-        m = r.useRef(null);
+        g = r.useRef(null);
     return (0, i.jsx)(_.Y, {
-        targetElementRef: m,
+        targetElementRef: g,
         renderPopout: function (e) {
             let { closePopout: r } = e;
             return (0, i.jsx)(u.l, {
                 children: (0, i.jsx)(c.CalendarPicker, {
                     minDate: h,
-                    maxDate: I,
+                    maxDate: f,
                     value: t,
                     onSelect: (e) => {
                         (n(e), r());
@@ -41,9 +41,9 @@ function A(e) {
                     (0, i.jsxs)(s.F, {
                         as: l.D,
                         tag: "div",
-                        innerRef: m,
-                        disabled: f,
-                        "aria-disabled": f,
+                        innerRef: g,
+                        disabled: I,
+                        "aria-disabled": I,
                         ...r,
                         id: e?.controlId,
                         "aria-labelledby": null != e ? `${e.labelId} ${e.controlId}` : void 0,
@@ -52,7 +52,7 @@ function A(e) {
                         "aria-invalid": e?.errorMessageId != null,
                         "aria-required": T,
                         className: E.k,
-                        onClick: f ? void 0 : n,
+                        onClick: I ? void 0 : n,
                         children: [
                             (0, i.jsx)(o.E, { variant: "text-md/normal", children: t?.format(A) }),
                             (0, i.jsx)(d.CalendarIcon, { size: "sm" }),

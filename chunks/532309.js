@@ -1,4 +1,4 @@
-n.d(t, { V: () => E, A: () => f });
+n.d(t, { V: () => E, A: () => I });
 var i,
     r = n(410530),
     a = n(107678),
@@ -102,7 +102,7 @@ function h() {
     })();
     A.setTtl("LESS_THAN_24H_BEFORE_REWARD" === e ? (t ?? 864e5) : 864e5);
 }
-class I extends l.Ay.PersistedStore {
+class f extends l.Ay.PersistedStore {
     static displayName = "ProgramRewardsStore";
     static persistKey = "ProgramRewardsStore";
     initialize(e) {
@@ -187,7 +187,7 @@ class I extends l.Ay.PersistedStore {
         getPurgeVars: () => ({ rewards: null }),
     });
 }
-let f = new I(o.h, {
+let I = new f(o.h, {
     LOGOUT: function () {
         A.clear();
     },

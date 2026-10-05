@@ -1,4 +1,4 @@
-(n.d(t, { A: () => I }), n(321073));
+(n.d(t, { A: () => f }), n(321073));
 var i = n(439372),
     r = n(967347),
     a = n(174459),
@@ -122,4 +122,4 @@ class h extends i.A {
         a.default.track(c.HAw.DESKTOP_PERF_HEARTBEAT, d);
     }
 }
-let I = new h();
+let f = new h();

@@ -1,10 +1,10 @@
 n.d(t, {
     JM: () => _,
     Js: () => A,
-    Jx: () => f,
+    Jx: () => I,
     Xm: () => p,
     YT: () => u,
-    fx: () => I,
+    fx: () => f,
     up: () => h,
     wr: () => E,
     xv: () => T,
@@ -87,7 +87,7 @@ function h(e) {
             return c.intl.string(c.t["1nJR4p"]);
     }
 }
-function I(e) {
+function f(e) {
     switch (e) {
         case "reward":
             return c.intl.string(c.t.vjLqAU);
@@ -95,7 +95,7 @@ function I(e) {
             return c.intl.string(c.t.Hufmss);
     }
 }
-function f(e) {
+function I(e) {
     return e.ctaConfig.link;
 }
 function p(e, t) {

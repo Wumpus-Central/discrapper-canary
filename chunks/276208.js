@@ -1,4 +1,4 @@
-n.d(t, { X: () => f, N: () => h });
+n.d(t, { X: () => I, N: () => h });
 var i,
     r = n(972347),
     a = n(451988),
@@ -27,7 +27,7 @@ var h =
     (((i = {}).WindowVisibilityChanged = "window-visibility-changed"),
     (i.IncomingVideoEnabledChanged = "incoming-video-enabled-changed"),
     i);
-class I extends r.A {
+class f extends r.A {
     disableVideoTimer = new a.Ep();
     discordVisible = !0;
     incomingVideoEnabled = !0;
@@ -67,4 +67,4 @@ class I extends r.A {
                 this.emit("incoming-video-enabled-changed", this.incomingVideoEnabled)));
     }
 }
-let f = new I();
+let I = new f();

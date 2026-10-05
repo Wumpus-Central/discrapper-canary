@@ -25,10 +25,10 @@ let h = {
     notifCenterActive: !1,
     notifCenterTabFocused: !1,
 };
-function I(e) {
+function f(e) {
     return null != e.id && null != e.type;
 }
-function f() {
+function I() {
     let { keepLocalItems: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     h = {
         loading: !1,
@@ -46,7 +46,7 @@ function f() {
     };
 }
 function p() {
-    f({ keepLocalItems: !0 });
+    I({ keepLocalItems: !0 });
 }
 function T(e) {
     return {
@@ -56,15 +56,15 @@ function T(e) {
         applicationId: null != e.application ? e.application.id : void 0,
     };
 }
-function m(e) {
+function g(e) {
     let t = "NOTIFICATION_CENTER_ITEM_CREATE" === e.type ? T(e.item) : e.item;
-    if (!h.initialized || !I(t) || h.notifCenterIds.has(t.id)) return !1;
+    if (!h.initialized || !f(t) || h.notifCenterIds.has(t.id)) return !1;
     (h.notifCenterIds.add(t.id),
         (h.notifCenterItems = [t, ...h.notifCenterItems]),
         h.notifCenterItems.sort((e, t) => u.default.compare(t.id, e.id)));
 }
-function g(e, t) {
-    h.notifCenterItems = h.notifCenterItems.map((n) => (e.includes(n.id) ? { ...n, acked: t } : n)).filter(I);
+function m(e, t) {
+    h.notifCenterItems = h.notifCenterItems.map((n) => (e.includes(n.id) ? { ...n, acked: t } : n)).filter(f);
 }
 function S(e, t, n) {
     return e.type === t && e.other_user?.id === n;
@@ -165,7 +165,7 @@ class R extends i.Ay.PersistedStore {
 }
 let L = new R(r.h, {
     CONNECTION_OPEN: function (e) {
-        f();
+        I();
         let t = [],
             n = new Set();
         (e.relationships.forEach((e) => {
@@ -188,26 +188,26 @@ let L = new R(r.h, {
             }),
             (h.notifCenterLocalItems = t));
     },
-    LOGOUT: () => f(),
+    LOGOUT: () => I(),
     NOTIFICATION_CENTER_ITEMS_ACK: function (e) {
         let { ids: t } = e;
-        g(t, !0);
+        m(t, !0);
     },
     NOTIFICATION_CENTER_ITEMS_ACK_FAILURE: function (e) {
         let { ids: t } = e;
-        g(t, !1);
+        m(t, !1);
     },
     GUILD_SCHEDULED_EVENT_UPDATE: function (e) {
         let { guildScheduledEvent: t } = e;
         O(t);
     },
-    NOTIFICATION_CENTER_ITEM_CREATE: m,
+    NOTIFICATION_CENTER_ITEM_CREATE: g,
     NOTIFICATION_CENTER_ITEM_DELETE: function (e) {
         let { id: t } = e;
         if (!h.notifCenterIds.has(t)) return !1;
         (h.notifCenterIds.delete(t), (h.notifCenterItems = h.notifCenterItems.filter((e) => e.id !== t)));
     },
-    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: m,
+    NOTIFICATION_CENTER_ITEM_DELETE_FAILURE: g,
     LOAD_NOTIFICATION_CENTER_ITEMS: function () {
         h.loading = !0;
     },
@@ -279,7 +279,7 @@ let L = new R(r.h, {
         let { item_enum: t } = e;
         h.notifCenterItems = h.notifCenterItems
             .map((e) => (e.item_enum === t ? { ...e, completed: !0, acked: !0 } : e))
-            .filter(I);
+            .filter(f);
     },
     SET_RECENT_MENTIONS_FILTER: () => p(),
     MOBILE_NATIVE_UPDATE_CHECK_FINISHED: function (e) {

@@ -1,7 +1,7 @@
 (n.d(t, {
     $V: () => D,
     Fg: () => p,
-    KM: () => m,
+    KM: () => g,
     LE: () => b,
     M: () => R,
     O8: () => T,
@@ -10,11 +10,11 @@
     c2: () => P,
     f: () => w,
     gh: () => v,
-    ku: () => f,
+    ku: () => I,
     mS: () =>
         function e(t, n) {
             let i = n ?? p(t);
-            if (i === I.LO.NONE) return !1;
+            if (i === f.LO.NONE) return !1;
             if (
                 t.attachments?.some((e) => D({ type: A.D.Attachment, media: e }, i)) ||
                 t.embeds?.some((e) => D({ type: A.D.Embed, media: e }, i)) ||
@@ -35,7 +35,7 @@
     nx: () => G,
     qo: () => y,
     s9: () => O,
-    y5: () => g,
+    y5: () => m,
 }),
     n(938796),
     n(321073));
@@ -52,33 +52,33 @@ var i = n(665260),
     E = n(403362),
     A = n(930125),
     h = n(900019),
-    I = n(811602);
-function f() {
-    return Object.values(I.Jn).filter((e) => null == e.isEligible || e.isEligible?.());
+    f = n(811602);
+function I() {
+    return Object.values(f.Jn).filter((e) => null == e.isEligible || e.isEligible?.());
 }
 function p(e) {
     let { channelId: t, authorId: n } = G(e);
     return null == t || null == e
-        ? I.LO.NONE
+        ? f.LO.NONE
         : (function (e, t) {
               let n = _.default.getCurrentUser();
-              if (null == n || t === n.id) return I.LO.NONE;
+              if (null == n || t === n.id) return f.LO.NONE;
               let i = P(e, t, [d.A, u.A]);
-              return null == i ? I.LO.NONE : T(i);
+              return null == i ? f.LO.NONE : T(i);
           })(t, n);
 }
 function T(e) {
-    let t = f();
+    let t = I();
     return null == e
-        ? I.LO.NONE
+        ? f.LO.NONE
         : b(t.map((t) => (w(t.getUserSettingsWithDefaults()[e]) ? t.harmType : null)).filter(E.Vq));
 }
-function m(e) {
+function g(e) {
     let t = p(e);
-    return g(e, t);
+    return m(e, t);
 }
-function g(e, t) {
-    if (t === I.LO.NONE || null == e) return !1;
+function m(e, t) {
+    if (t === f.LO.NONE || null == e) return !1;
     if (
         e.attachments?.some((e) => L({ type: A.D.Attachment, media: e }, t).length > 0) ||
         e.embeds?.some((e) => L({ type: A.D.Embed, media: e }, t).length > 0)
@@ -90,7 +90,7 @@ function g(e, t) {
         null == n || 0 === n.length)
     )
         return !1;
-    for (let e of n) if (g(e.message, t)) return !0;
+    for (let e of n) if (m(e.message, t)) return !0;
     return !1;
 }
 function S(e) {
@@ -128,7 +128,7 @@ function O(e) {
 }
 function R(e) {
     let t = p(e);
-    if (t === I.LO.NONE) return { attachmentIds: [], embedIds: [] };
+    if (t === f.LO.NONE) return { attachmentIds: [], embedIds: [] };
     let n = e.attachments?.filter((e) => D({ type: A.D.Attachment, media: e }, t)),
         i = e.embeds?.filter((e) => D({ type: A.D.Embed, media: e }, t));
     return {
@@ -137,18 +137,18 @@ function R(e) {
     };
 }
 function L(e, t) {
-    if (t === I.LO.NONE) return [];
+    if (t === f.LO.NONE) return [];
     let n = M(t);
-    return 0 === n.length ? [] : n.filter((t) => v(t, e)).map((e) => I.Jn[e].obscureReason);
+    return 0 === n.length ? [] : n.filter((t) => v(t, e)).map((e) => f.Jn[e].obscureReason);
 }
 function y(e, t) {
-    if (t === I.LO.NONE) return !1;
+    if (t === f.LO.NONE) return !1;
     let n = M(t);
     return 0 !== n.length && n.filter((t) => v(t, e)).length > 0;
 }
 function D(e, t) {
     var n, i, r, a, l, o, d;
-    if (t === I.LO.NONE || s.Ay.get("explicit_media_redaction_ignore_pending_scan")) return !1;
+    if (t === f.LO.NONE || s.Ay.get("explicit_media_redaction_ignore_pending_scan")) return !1;
     let c = M(t);
     if (0 === c.length) return !1;
     switch (e.type) {
@@ -196,7 +196,7 @@ function D(e, t) {
 }
 function v(e, t) {
     if (null == e) return !1;
-    let n = I.Jn[e];
+    let n = f.Jn[e];
     if (null != n.devSettingKey && s.Ay.get(n.devSettingKey)) return !0;
     switch (t.type) {
         case A.D.Embed:
@@ -210,24 +210,24 @@ function v(e, t) {
     }
 }
 function b(e) {
-    let t = I.LO.NONE;
+    let t = f.LO.NONE;
     for (let n of e)
         switch (n) {
-            case I.kn.EXPLICIT:
-                t |= I.LO.EXPLICIT;
+            case f.kn.EXPLICIT:
+                t |= f.LO.EXPLICIT;
                 break;
-            case I.kn.GORE:
-                t |= I.LO.GORE;
+            case f.kn.GORE:
+                t |= f.LO.GORE;
                 break;
-            case I.kn.SELF_HARM:
-                t |= I.LO.SELF_HARM;
+            case f.kn.SELF_HARM:
+                t |= f.LO.SELF_HARM;
         }
     return t;
 }
 function M(e) {
-    if (e === I.LO.NONE) return [];
+    if (e === f.LO.NONE) return [];
     let t = [];
-    for (let n of f()) (e & n.bitmask) > 0 && t.push(n.harmType);
+    for (let n of I()) (e & n.bitmask) > 0 && t.push(n.harmType);
     return t;
 }
 function P(e, t) {
@@ -245,7 +245,7 @@ function P(e, t) {
 }
 function U(e, t) {
     let n = h.A.validContentScanVersion;
-    return -1 !== e && (t.includes(I.kn.GORE) || t.includes(I.kn.SELF_HARM) ? null == e || e < n : null == e);
+    return -1 !== e && (t.includes(f.kn.GORE) || t.includes(f.kn.SELF_HARM) ? null == e || e < n : null == e);
 }
 function w(e) {
     return null != e && [r.TO.BLOCK, r.TO.BLUR].includes(e);

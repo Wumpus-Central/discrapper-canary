@@ -33,16 +33,16 @@ function A(e, t) {
 function h(e, t) {
     return !1;
 }
-function I(e) {
+function f(e) {
     return !1;
 }
-function f(e) {
+function I(e) {
     return !1;
 }
 function p(e) {}
 function T(e) {}
-function m(e) {}
 function g(e) {}
+function m(e) {}
 function S(e) {}
 function N(e) {}
 function C(e) {}
@@ -69,8 +69,8 @@ function U(e) {}
         coerceICYMIRoute: () => N,
         coerceMainRoute: () => p,
         coerceModalRoute: () => C,
-        coerceSidebarRoute: () => m,
-        coerceTabsRoute: () => g,
+        coerceSidebarRoute: () => g,
+        coerceTabsRoute: () => m,
         getCurrentNavigationRouteName: () => D,
         getCurrentRouteParents: () => b,
         getICYMIRouteIfActive: () => P,
@@ -81,14 +81,14 @@ function U(e) {}
         isModalOpen: () => O,
         modalRoutesAboveMain: () => l,
         navigateToChannel: () => i,
-        navigateToContextMenuCommands: () => I,
+        navigateToContextMenuCommands: () => f,
         navigateToCreateThread: () => h,
         navigateToNewGroupDM: () => A,
         navigateToRootTab: () => r,
         popAllModals: () => u,
         popModal: () => d,
         popModalsAboveKey: () => c,
-        popScreens: () => f,
+        popScreens: () => I,
         pushModal: () => s,
         resetToAuthRoute: () => a,
         routesBelowFirstRemoved: () => o,

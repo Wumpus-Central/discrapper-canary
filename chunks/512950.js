@@ -1,4 +1,4 @@
-n.d(t, { Y: () => h, p: () => f });
+n.d(t, { Y: () => h, p: () => I });
 var i,
     r = n(477900),
     a = n(582128),
@@ -18,7 +18,7 @@ var i,
         (i.POSITIVE = "positive"),
         (i.PREVIEW = "preview"),
         i);
-let I = (e) => {
+let f = (e) => {
     let { messageType: t, icon: n } = e,
         i = (function (e, t) {
             if (null != t) return t;
@@ -37,7 +37,7 @@ let I = (e) => {
         })(t, n);
     return a.createElement(i, { className: A.Kk, color: "currentColor" });
 };
-function f(e) {
+function I(e) {
     let {
             children: t,
             messageType: n,
@@ -69,7 +69,7 @@ function f(e) {
             children: [
                 (0, r.jsx)("div", {
                     className: l()(A.XG, { [A.AW]: "center" === s }),
-                    children: (0, r.jsx)(I, { messageType: n, icon: c }),
+                    children: (0, r.jsx)(f, { messageType: n, icon: c }),
                 }),
                 (0, r.jsx)(E.E, { className: A.Qq, color: o, variant: d, children: t }),
                 null != i ? (0, r.jsx)("div", { className: A.Ik, children: i }) : null,

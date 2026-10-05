@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(17928),
     r = n(73153),
     a = n(857071),
@@ -31,7 +31,7 @@ function h(e) {
         null != e && s.users.set(i, e);
     } else s.users.delete(i);
 }
-class I extends i.Ay.Store {
+class f extends i.Ay.Store {
     initialize() {
         this.waitFor(d.A, a.A, c.default);
     }
@@ -56,7 +56,7 @@ class I extends i.Ay.Store {
         return s.users;
     }
 }
-let f = new I(r.h, {
+let I = new f(r.h, {
     CONNECTION_OPEN: function () {
         u = {};
     },

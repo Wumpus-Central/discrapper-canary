@@ -12,12 +12,12 @@ var i = n(192308),
     E = n(329308),
     A = n(815996),
     h = n(790271),
-    I = n(60465),
-    f = n(409626),
+    f = n(60465),
+    I = n(409626),
     p = n(741231),
     T = n(378570),
-    m = n(345942),
-    g = n(114129),
+    g = n(345942),
+    m = n(114129),
     S = n(718446),
     N = n(95701),
     C = n(734057),
@@ -142,11 +142,11 @@ function W(e) {
     let t,
         o = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     (F(), (0, i.closeAllModals)(), k(b.HAw.QUICKSWITCHER_RESULT_SELECTED, e));
-    let { type: g, record: N } = e,
+    let { type: m, record: N } = e,
         R = { page: b.liQ.QUICK_SWITCHER };
-    switch (g) {
+    switch (m) {
         case _.rD.GUILD:
-            (0, m.u)(N.id, { navigationReplace: !0 });
+            (0, g.u)(N.id, { navigationReplace: !0 });
             break;
         case _.rD.TEXT_CHANNEL:
             null != (t = C.A.getChannel(N.id)) &&
@@ -169,10 +169,10 @@ function W(e) {
             U(N.id, L, { analyticsParams: { source: b.ThZ.QUICK_SWITCHER, location: b.ThZ.QUICK_SWITCHER } });
             break;
         case _.rD.GAME_PROFILE:
-            I.default.openGameProfileModal({
+            f.default.openGameProfileModal({
                 gameId: N.id,
                 gameProfileModalChecks: { shouldOpenGameProfile: !0, gameId: N.id },
-                source: f.GameProfileSources.QuickSwitcher,
+                source: I.GameProfileSources.QuickSwitcher,
             });
             break;
         case _.rD.LINK:
@@ -217,7 +217,7 @@ function Y(e) {
             var s, l;
             let t = C.A.getChannel(e.record.id);
             if (null == t) return void W(e);
-            ((s = t.id), (l = t.getGuildId() ?? null), n(), (0, g.D5)(s, l));
+            ((s = t.id), (l = t.getGuildId() ?? null), n(), (0, m.D5)(s, l));
             return;
         }
         case _.rD.USER:
@@ -228,7 +228,7 @@ function Y(e) {
                         location: "Quickswitcher",
                         navigateToChannel: !1,
                     });
-                    (0, g.D5)(t, null);
+                    (0, m.D5)(t, null);
                 })().catch(() => {}));
             return;
         default:

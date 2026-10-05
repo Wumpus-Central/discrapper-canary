@@ -1,4 +1,4 @@
-(n.d(t, { A: () => f }), n(321073));
+(n.d(t, { A: () => I }), n(321073));
 var i = n(477900);
 n(582128);
 var r = n(17928),
@@ -13,8 +13,8 @@ var r = n(17928),
     E = n(885386),
     A = n(375708),
     h = n(652215),
-    I = n(701974);
-function f() {
+    f = n(701974);
+function I() {
     let e,
         t,
         n =
@@ -86,11 +86,11 @@ function f() {
                 ),
             ]),
         {
-            saturation: f,
+            saturation: I,
             useReducedMotion: p,
             roleStyle: T,
-            highContrastMode: m,
-            switchIconsEnabled: g,
+            highContrastMode: g,
+            switchIconsEnabled: m,
         } = (0, r.cf)([o.Ay], () => ({
             saturation: o.Ay.saturation,
             useReducedMotion: o.Ay.prefersReducedMotion,
@@ -129,8 +129,8 @@ function f() {
                     children: (0, i.jsx)(a.sL, {
                         id: "high-contrast",
                         label: A.intl.string(A.t.aZlePv),
-                        checked: m,
-                        action: () => (0, l.uh)(m ? o._1.DEFAULT : o._1.HIGH),
+                        checked: g,
+                        action: () => (0, l.uh)(g ? o._1.DEFAULT : o._1.HIGH),
                     }),
                 },
                 "high-contrast",
@@ -145,7 +145,7 @@ function f() {
                             (0, i.jsx)(s.i, {
                                 ...e,
                                 ref: t,
-                                value: 100 * f,
+                                value: 100 * I,
                                 onChange: (e) => (0, l.HU)(e / 100),
                                 "aria-label": A.intl.string(A.t["5PWWCY"]),
                             }),
@@ -207,7 +207,7 @@ function f() {
                 {
                     children: (0, i.jsx)(a.sL, {
                         id: "display-name-styles",
-                        label: A.intl.string(I.default["2gFUEw"]),
+                        label: A.intl.string(f.default["2gFUEw"]),
                         checked: S,
                         action: function () {
                             (c.default.track(h.HAw.DISPLAY_NAME_STYLES_ACCESSIBILITY_TOGGLE, { enabled: !S }),
@@ -225,8 +225,8 @@ function f() {
                     children: (0, i.jsx)(a.sL, {
                         id: "switch-icons",
                         label: A.intl.string(A.t["S3z+pV"]),
-                        checked: g,
-                        action: () => (0, l.Gm)(!g),
+                        checked: m,
+                        action: () => (0, l.Gm)(!m),
                     }),
                 },
                 "switch-icons",

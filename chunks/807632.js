@@ -4,9 +4,9 @@
     Ij: () => R,
     Qq: () => y,
     WP: () => D,
-    YG: () => g,
+    YG: () => m,
     YS: () => T,
-    Zu: () => m,
+    Zu: () => g,
     _k: () => C,
     n5: () => N,
     t4: () => L,
@@ -26,16 +26,16 @@ var i = n(582128),
     E = n(826767),
     A = n(474078),
     h = n(734057),
-    I = n(652215),
-    f = n(746080);
+    f = n(652215),
+    I = n(746080);
 n(253913);
 let p = "No Mic",
     T = 120;
-function m(e) {
-    let t = e.trim().split("\n")[0] ?? "";
-    return (0, A.A)(t.slice(0, I.Ign), !0);
-}
 function g(e) {
+    let t = e.trim().split("\n")[0] ?? "";
+    return (0, A.A)(t.slice(0, f.Ign), !0);
+}
+function m(e) {
     return (0, s.bG)(
         [h.A],
         () =>
@@ -47,7 +47,7 @@ function g(e) {
 }
 function S(e) {
     let t = (0, u.kt)(e);
-    return !!g(e) && !t.some((e) => e.name === p);
+    return !!m(e) && !t.some((e) => e.name === p);
 }
 function N(e, t) {
     return (0, c.OA)(e, { enabled: t, allowArchived: !0 });
@@ -85,7 +85,7 @@ function O(e, t) {
     (0, l.Eq)(a, "GameInvitesChannelPostAuthors");
 }
 function R(e) {
-    return e.type === I.$pd.PLAYING && (0, o.A)(e, I.jUm.JOIN);
+    return e.type === f.$pd.PLAYING && (0, o.A)(e, f.jUm.JOIN);
 }
 function L(e) {
     return e.size >= 5;
@@ -105,7 +105,7 @@ function D(e, t, n) {
             a = [];
         for (let n of t) {
             let t = h.A.getChannel(n);
-            null != t && !t.hasFlag(f.lx.PINNED) && (0, E.A)(t) <= e ? a.push(n) : i.push(n);
+            null != t && !t.hasFlag(I.lx.PINNED) && (0, E.A)(t) <= e ? a.push(n) : i.push(n);
         }
         return { activeThreadIds: i, archivedThreadIds: [...a, ...n] };
     }, [r, t, n]);

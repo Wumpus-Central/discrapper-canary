@@ -1,13 +1,13 @@
 n.d(t, {
-    C$: () => g,
-    KB: () => I,
+    C$: () => m,
+    KB: () => f,
     Fo: () => p,
     xJ: () => T,
     Mn: () => S,
-    uW: () => m,
+    uW: () => g,
     G9: () => C,
     Yj: () => N,
-    iU: () => f,
+    iU: () => I,
 });
 var i = n(136722),
     r = n(811602),
@@ -24,7 +24,7 @@ var _ = n(628691),
     E = n(272720),
     A = n(56595),
     h = n(652215);
-function I(e) {
+function f(e) {
     if (!(0, _.UN)(e.author)) return !1;
     let t = d.A.getChannel(e.channel_id);
     if (null == t) return !1;
@@ -34,7 +34,7 @@ function I(e) {
         r = (0, E.A)(n);
     return i && null != r;
 }
-function f(e) {
+function I(e) {
     return p(d.A.getChannel(e));
 }
 function p(e) {
@@ -43,11 +43,11 @@ function p(e) {
 function T(e) {
     return null != e && e.isModeratorReportChannel() && e.isForumPost();
 }
-function m(e) {
+function g(e) {
     return null != e && (p(e) || T(e));
 }
-function g(e) {
-    if (null == e || !(0, o.L)() || !m(d.A.getChannel(e))) return !0;
+function m(e) {
+    if (null == e || !(0, o.L)() || !g(d.A.getChannel(e))) return !0;
     let { loaded: t, firstMessage: n } = l.A.getMessage(e);
     return !t || null == n || !(0, a.y5)(n, r.LO.EXPLICIT);
 }

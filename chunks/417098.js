@@ -1,4 +1,4 @@
-n.d(t, { $T: () => m, Hv: () => h, PM: () => T, Z_: () => f, eC: () => p, zr: () => I });
+n.d(t, { $T: () => g, Hv: () => h, PM: () => T, Z_: () => I, eC: () => p, zr: () => f });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -27,15 +27,15 @@ let h = Object.freeze({
     PREMIUM_TIER_1: A.G_,
     PREMIUM_TIER_2: A.NS,
 });
-function I(e) {
+function f(e) {
     let { children: t, className: n, minor: r = !1, ...s } = e;
     return (0, i.jsx)(l.vN, {
         children: (0, i.jsx)("button", { className: a()(A.x6, n, { [A.oy]: r }), ...s, children: t }),
     });
 }
-function f(e) {
+function I(e) {
     let { children: t, noticeType: n, ...r } = e;
-    return (0, i.jsx)(I, {
+    return (0, i.jsx)(f, {
         ...r,
         onClick: (e) => {
             (null != r.onClick && r.onClick(e),
@@ -68,7 +68,7 @@ function T(e) {
         children: (0, i.jsx)(c.P, { size: "sm", color: "currentColor", className: A.ut }),
     });
 }
-function m(e) {
+function g(e) {
     let { color: t = h.DEFAULT, className: n, style: r, ref: l, children: o } = e;
     return (0, i.jsx)("div", {
         ref: l,

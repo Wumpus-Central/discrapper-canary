@@ -39,14 +39,14 @@ let d = new o(a.h, {
 function _(e) {
     let t = (0, r.bG)([d], () => d.get(c), [c]),
         { enabled: n } = u.useConfig({ location: e }),
-        i = I.useConfig({ location: e });
+        i = f.useConfig({ location: e });
     return !t && n && i.icymiDesktopEnabled;
 }
 function E(e) {
     let t = d.get(c),
         { enabled: n } = u.getConfig({ location: e });
     {
-        let { icymiDesktopEnabled: i } = I.getConfig({ location: e });
+        let { icymiDesktopEnabled: i } = f.getConfig({ location: e });
         return !t && n && i;
     }
 }
@@ -59,7 +59,7 @@ let h = (0, i.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    I = (0, i.mj)({
+    f = (0, i.mj)({
         name: "2026-03-icymi-desktop",
         kind: "user",
         defaultConfig: { icymiDesktopEnabled: !1 },

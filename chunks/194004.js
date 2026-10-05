@@ -1,13 +1,13 @@
 n.d(t, {
     zN: () => A,
     TG: () => u,
-    cG: () => f,
+    cG: () => I,
     D6: () => p,
     op: () => h,
     y3: () => _,
     Tw: () => E,
     NL: () => c,
-    Z2: () => I,
+    Z2: () => f,
 });
 var i,
     r,
@@ -31,7 +31,7 @@ function A(e) {
     return e !== c.STANDARD;
 }
 var h = (((s = {})[(s.STICKER = 0)] = "STICKER"), (s[(s.CREATE_STICKER = 1)] = "CREATE_STICKER"), s),
-    I =
+    f =
         (((l = {}).PACK = "PACK"),
         (l.FAVORITE = "FAVORITE"),
         (l.RECENT = "RECENT"),
@@ -41,7 +41,7 @@ var h = (((s = {})[(s.STICKER = 0)] = "STICKER"), (s[(s.CREATE_STICKER = 1)] = "
         (l.EMPTY_GUILD_UPSELL = "EMPTY_GUILD_UPSELL"),
         (l.CREATE_STICKER = "CREATE_STICKER"),
         l),
-    f =
+    I =
         (((o = {})[(o.STICKER_NAME = 0)] = "STICKER_NAME"),
         (o[(o.TAG = 1)] = "TAG"),
         (o[(o.CORRELATED_EMOJI = 2)] = "CORRELATED_EMOJI"),

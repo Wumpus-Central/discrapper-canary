@@ -1,4 +1,4 @@
-(n.d(t, { NM: () => h, PQ: () => N, TX: () => p, WR: () => g, Zy: () => I, lc: () => f, u2: () => m }), n(321073));
+(n.d(t, { NM: () => h, PQ: () => N, TX: () => p, WR: () => m, Zy: () => f, lc: () => I, u2: () => g }), n(321073));
 var i = n(811315),
     r = n.n(i),
     a = n(166929),
@@ -25,7 +25,7 @@ function h(e) {
             return "unknown";
     }
 }
-function I(e) {
+function f(e) {
     return {
         clip_type: h(e),
         num_clip_participants: e.users.length,
@@ -33,15 +33,15 @@ function I(e) {
         is_candidate: e.isCandidate,
     };
 }
-function f() {
+function I() {
     return { clip_runtime: E.sT, current_clip_session_id: _.Ay.getActiveClipsSession()?.id };
 }
 function p(e) {
     let t = o.A.getCurrentUserActiveStream(),
         n = null != t ? c.A.getRTCConnection((0, s._z)(t)) : null;
     return {
-        ...I(e),
-        ...f(),
+        ...f(e),
+        ...I(),
         rtc_connection_id: n?.getRTCConnectionId(),
         media_session_id: n?.getMediaSessionId(),
         parent_media_session_id: d.A.getMediaSessionId(),
@@ -99,7 +99,7 @@ function T(e, t) {
         saved_at: t.savedAt,
     };
 }
-function m(e, t, n, i) {
+function g(e, t, n, i) {
     let r = T(e, t);
     return (
         (r.clip_save_time_ms = t.clipSaveTimeMs),
@@ -129,7 +129,7 @@ function m(e, t, n, i) {
         r
     );
 }
-function g(e, t) {
+function m(e, t) {
     let n = T(e, t);
     return ((n.error_at = t.errorAt), (n.error_message = t.errorMessage), n);
 }
@@ -147,5 +147,5 @@ function N(e, t) {
         soundboard_audio_enabled: S(e.editMetadata?.soundboardAudio, t.editMetadata?.soundboardAudio),
         crop: S(e.editMetadata?.crop?.preset, t.editMetadata?.crop?.preset),
     };
-    Object.values(n).every((e) => null == e) || u.default.track(A.HAw.CLIP_EDITED, { ...f(), clip_uuid: e.id, ...n });
+    Object.values(n).every((e) => null == e) || u.default.track(A.HAw.CLIP_EDITED, { ...I(), clip_uuid: e.id, ...n });
 }

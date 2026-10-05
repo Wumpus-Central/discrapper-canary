@@ -1,6 +1,6 @@
 n.d(t, {
     FD: () => D,
-    Id: () => m,
+    Id: () => g,
     NO: () => O,
     Qn: () => L,
     T5: () => R,
@@ -21,18 +21,18 @@ var i = n(776231),
     d = n(823894),
     c = n(652215);
 let { API_ENDPOINT: u, MEDIA_PROXY_ENDPOINT: _, PROJECT_ENV: E, ASSET_ENDPOINT: A, CDN_HOST: h } = window.GLOBAL_ENV,
-    I = Object.values(o.y3),
-    f = decodeURIComponent(c.Rsh.STICKER_ASSET("[\\d]+", `(${I.join("|")})`)),
-    p = RegExp(`(${location.protocol}${A}|${location.protocol}${_})(${f})`, "ig"),
-    T = RegExp(`${location.protocol}${u}(${f})`, "ig");
-function m(e) {
+    f = Object.values(o.y3),
+    I = decodeURIComponent(c.Rsh.STICKER_ASSET("[\\d]+", `(${f.join("|")})`)),
+    p = RegExp(`(${location.protocol}${A}|${location.protocol}${_})(${I})`, "ig"),
+    T = RegExp(`${location.protocol}${u}(${I})`, "ig");
+function g(e) {
     if (null != e.cover_sticker_id) {
         let t = e.stickers.find((t) => t.id === e.cover_sticker_id);
         if (null != t) return t;
     }
     return e.stickers[0];
 }
-function g(e) {
+function m(e) {
     switch (e) {
         case o.TG.PNG:
             return s.QB ? o.y3.WEBP : o.y3.PNG;
@@ -62,14 +62,14 @@ function S(e) {
     }
 }
 function N(e) {
-    return null == e ? null : `${e.name}.${g(e.format_type)}`;
+    return null == e ? null : `${e.name}.${m(e.format_type)}`;
 }
 let C = function (e) {
     let { isPreview: t = !1, size: r = 160 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
     if (null == e.format_type) return null;
     let a = e.format_type;
     e.format_type === o.TG.GIF && t && (a = o.TG.PNG);
-    let s = g(a),
+    let s = m(a),
         d = c.Rsh.STICKER_ASSET(e.id, s),
         u = !1;
     try {
@@ -77,22 +77,22 @@ let C = function (e) {
         u = e({ location: "sticker_url" }).enabled;
     } catch {}
     let h = u ? "&force_sdr=true" : "",
-        I = s === o.y3.WEBP ? "&quality=lossless" : "";
+        f = s === o.y3.WEBP ? "&quality=lossless" : "";
     if ("development" !== E) {
         if (e.format_type === o.TG.LOTTIE) return `${location.protocol}${A}${d}`;
         let n = e.format_type === o.TG.APNG && t && !(0, l.isAndroid)() ? "&passthrough=false" : "",
             a = Math.min(2, (0, i.mZ)());
-        return `${location.protocol}${_}${d}?size=${(0, i.kr)(r * a)}${n}${I}${h}`;
+        return `${location.protocol}${_}${d}?size=${(0, i.kr)(r * a)}${n}${f}${h}`;
     }
     if (e.format_type === o.TG.LOTTIE && (0, l.isWeb)()) return d;
-    let f = `${location.protocol}${_}${d}`;
-    return u ? `${f}?force_sdr=true` : f;
+    let I = `${location.protocol}${_}${d}`;
+    return u ? `${I}?force_sdr=true` : I;
 };
 function O(e) {
     return null != e.match("development" !== E ? p : T);
 }
 function R(e) {
-    return { type: o.Z2.PACK, id: e.id, name: e.name, stickers: e.stickers, previewSticker: m(e) };
+    return { type: o.Z2.PACK, id: e.id, name: e.name, stickers: e.stickers, previewSticker: g(e) };
 }
 function L(e, t) {
     return e === d.BJ.ANIMATE_ON_INTERACTION ? t : e !== d.BJ.NEVER_ANIMATE;

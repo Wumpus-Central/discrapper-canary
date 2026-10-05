@@ -7,18 +7,18 @@ n.d(t, {
     OG: () => x,
     Q_: () => U,
     Sc: () => h,
-    UA: () => f,
+    UA: () => I,
     Z_: () => A,
-    _4: () => m,
+    _4: () => g,
     _Z: () => C,
     ad: () => L,
     bh: () => D,
-    hT: () => I,
+    hT: () => f,
     jC: () => y,
     jh: () => b,
     jr: () => p,
     pO: () => N,
-    py: () => g,
+    py: () => m,
     rH: () => w,
     ri: () => M,
     sB: () => T,
@@ -54,7 +54,7 @@ function h(e) {
         num_search_results: r,
     });
 }
-function I(e) {
+function f(e) {
     let { guildId: t, channelId: n } = e;
     i.Ay.trackWithMetadata(E.HAw.FORUM_CHANNEL_SEARCH_CLEARED, {
         ...(0, _.fO)({ channelId: n }),
@@ -62,7 +62,7 @@ function I(e) {
         channel_id: n,
     });
 }
-function f(e) {
+function I(e) {
     let { guildId: t, channelId: n, tagId: r, filterTagIds: a, added: s, location: l } = e;
     i.Ay.trackWithMetadata(E.HAw.FORUM_CHANNEL_TAG_FILTER_CLICKED, {
         ...(0, _.fO)({ channelId: n }),
@@ -90,7 +90,7 @@ function T(e) {
         channel_id: n,
     });
 }
-function m(e) {
+function g(e) {
     let { guildId: t, channelId: n } = e,
         r = s.A.getChannel(n);
     if (null == r) return;
@@ -109,7 +109,7 @@ function m(e) {
             num_attachments: (0, _.d1)(n),
         });
 }
-function g(e) {
+function m(e) {
     let { guildId: t, channelId: n } = e;
     i.Ay.trackWithMetadata(E.HAw.FORUM_CHANNEL_NEW_POST_DRAFT_CLEARED, {
         ...(0, _.fO)({ channelId: n }),

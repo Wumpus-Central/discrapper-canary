@@ -20,12 +20,12 @@ let u = r.memo(
                 renderSection: E,
                 renderSectionHeader: A,
                 renderSectionFooter: h,
-                renderListHeader: I,
-                rowCount: f,
+                renderListHeader: f,
+                rowCount: I,
                 rowCountBySection: p,
                 rowHeight: T,
-                sectionMarginBottom: m,
-                sectionHeaderHeight: g,
+                sectionMarginBottom: g,
+                sectionHeaderHeight: m,
                 sectionFooterHeight: S,
                 listHeaderHeight: N,
                 stickyHeaders: C = !1,
@@ -54,10 +54,10 @@ let u = r.memo(
             ),
             F = r.useCallback(
                 (e) => {
-                    let t = "function" == typeof g ? g(e) : g;
+                    let t = "function" == typeof m ? m(e) : m;
                     return null == t ? 0 : t;
                 },
-                [g],
+                [m],
             ),
             B = r.useCallback(
                 (e) => {
@@ -68,10 +68,10 @@ let u = r.memo(
             ),
             V = r.useCallback(
                 (e) => {
-                    let t = "function" == typeof m ? m(e) : m;
+                    let t = "function" == typeof g ? g(e) : g;
                     return null == t ? 0 : t;
                 },
-                [m],
+                [g],
             ),
             H = r.useRef([]),
             j = r.useRef([]),
@@ -88,7 +88,7 @@ let u = r.memo(
                     a = [];
                 i += x();
                 for (let s = 0; s < n; s++) {
-                    let n = t ? p[s] : f,
+                    let n = t ? p[s] : I,
                         l = p?.[s] !== 0;
                     ((a[s] = { firstRowIndex: e, offset: { top: i, bottom: -1 } }), (i += F(s)));
                     for (let t = 0; t < n; t++) {
@@ -99,7 +99,7 @@ let u = r.memo(
                     ((i += B(s) + V(s)), (a[s].offset.bottom = i));
                 }
                 return { totalHeight: (i += u[2]), rowDescriptors: r, sectionDescriptors: a };
-            }, [k, B, F, V, u, f, p, x]);
+            }, [k, B, F, V, u, I, p, x]);
         ((H.current = K), (j.current = Y));
         let $ = r.useCallback(() => {
             let e = U.current?.getScrollerNode();
@@ -187,7 +187,7 @@ let u = r.memo(
                     n = u[0],
                     i = [],
                     r = x();
-                null != I && v < r ? i.push(I()) : (n += r);
+                null != f && v < r ? i.push(f()) : (n += r);
                 for (let r = 0; r < K.length; r++) {
                     let {
                             firstRowIndex: a,
@@ -202,25 +202,25 @@ let u = r.memo(
                     else if (l > v && s < e) {
                         t = a;
                         let l = [],
-                            I = 0,
                             f = 0,
+                            I = 0,
                             p = s + d >= v && s <= e;
-                        for (null != A && (C || p) && l.push(A(r)), p || C || (n += d); I + d + c < o - u;) {
-                            let i = k(r, f, t),
-                                a = s + I + d,
+                        for (null != A && (C || p) && l.push(A(r)), p || C || (n += d); f + d + c < o - u;) {
+                            let i = k(r, I, t),
+                                a = s + f + d,
                                 o = a + i;
                             if (o <= v) n = o - (C ? d : 0);
-                            else if (o > v && a < e) l.push(_(t, { sectionIndex: r, sectionRowIndex: f }));
+                            else if (o > v && a < e) l.push(_(t, { sectionIndex: r, sectionRowIndex: I }));
                             else break;
-                            ((I += i), f++, t++);
+                            ((f += i), I++, t++);
                         }
-                        let T = s + d + I,
-                            m = T + c >= v && T <= e;
-                        (null != h && m && l.push(h(r)), null != E ? i.push(E(r, l)) : (i = [...i, ...l]));
+                        let T = s + d + f,
+                            g = T + c >= v && T <= e;
+                        (null != h && g && l.push(h(r)), null != E ? i.push(E(r, l)) : (i = [...i, ...l]));
                     } else break;
                 }
                 return { visibleItems: i, listOffset: n };
-            }, [k, B, F, V, u, _, E, h, A, v, K, C, I, x, M]),
+            }, [k, B, F, V, u, _, E, h, A, v, K, C, f, x, M]),
             q = r.useMemo(() => ({ top: Z, right: u?.[1] ?? 0, bottom: u?.[2] ?? 0, left: u?.[3] ?? 0 }), [Z, u]),
             Q = r.useMemo(() => ({ height: W }), [W]),
             J = R ? l.zC : l.Ch;

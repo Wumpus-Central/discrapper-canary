@@ -4,7 +4,7 @@ n.d(t, {
     M0: () => _,
     NJ: () => p,
     Qp: () => E,
-    RQ: () => f,
+    RQ: () => I,
     UN: () => A,
     gY: () => o,
     pH: () => u,
@@ -35,10 +35,10 @@ var _ =
         r);
 let A = ["open.spotify.com", "www.spotify.com"],
     h = "https://api.spotify.com/v1";
-function I(e) {
+function f(e) {
     return `?utm_source=discord&utm_medium=${e}`;
 }
-let f = Object.freeze({
+let I = Object.freeze({
     PROFILE: `${h}/me`,
     NOTIFICATIONS_PLAYER: `${h}/me/notifications/player`,
     PLAYER: `${h}/me/player`,
@@ -48,20 +48,20 @@ let f = Object.freeze({
     PLAYER_REPEAT: `${h}/me/player/repeat`,
     WEB_OPEN: function (e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "desktop";
-        return `https://open.spotify.com/${encodeURIComponent(e)}/${encodeURIComponent(t)}${I(n)}`;
+        return `https://open.spotify.com/${encodeURIComponent(e)}/${encodeURIComponent(t)}${f(n)}`;
     },
     IMAGE: (e) => `https://i.scdn.co/image/${encodeURIComponent(e)}`,
     EMBED: function (e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "desktop";
-        return `https://open.spotify.com/embed${e}${I(t)}`;
+        return `https://open.spotify.com/embed${e}${f(t)}`;
     },
     PLAYER_OPEN: function (e, t) {
         let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2],
             i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "desktop";
-        return `${o}:${encodeURIComponent(e)}:${encodeURIComponent(t)}${n ? I(i) : ""}`;
+        return `${o}:${encodeURIComponent(e)}:${encodeURIComponent(t)}${n ? f(i) : ""}`;
     },
-    WEB_HOME: `https://open.spotify.com/${I("desktop")}`,
-    PREMIUM_SITE: `https://www.spotify.com/premium/${I("desktop")}`,
+    WEB_HOME: `https://open.spotify.com/${f("desktop")}`,
+    PREMIUM_SITE: `https://www.spotify.com/premium/${f("desktop")}`,
     INSTALL_ATTRIBUTION: (e) => `https://app.adjust.com/bdyga9?campaign=${e}`,
     APP_STORE: (0, s.isAndroid)()
         ? "https://play.google.com/store/apps/details?id=com.spotify.music&hl=en_US&gl=US"

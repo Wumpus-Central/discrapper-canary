@@ -1,4 +1,4 @@
-n.d(t, { E: () => g, QuestRewardModalUnverified: () => T });
+n.d(e, { E: () => g, QuestRewardModalUnverified: () => T });
 var r = n(477900),
     i = n(582128),
     s = n(17928),
@@ -13,16 +13,16 @@ var r = n(477900),
     A = n(375708),
     E = n(674456),
     _ = n(661965);
-function T(e) {
-    let { transitionState: t, onClose: n } = e,
+function T(t) {
+    let { transitionState: e, onClose: n } = t,
         c = (0, s.bG)([C.default], () => C.default.getCurrentUser()?.email),
         [T, g] = i.useState({ status: "unknown" });
     i.useEffect(() => {
         (g({ status: "loading" }),
             d.A.verifyResend().then(
                 () => g({ status: "success" }),
-                (e) => {
-                    (g({ status: "error" }), (0, f.RF)(e, { tags: { location: "QuestsRewardModalUnverified" } }));
+                (t) => {
+                    (g({ status: "error" }), (0, f.RF)(t, { tags: { location: "QuestsRewardModalUnverified" } }));
                 },
             ));
     }, []);
@@ -33,7 +33,7 @@ function T(e) {
               ? A.intl.format(A.t.qP5xYc, { emailAddress: c, emailAddressLink: `mailto:${c}` })
               : void 0;
     return (0, r.jsxs)(l.k, {
-        transitionState: t,
+        transitionState: e,
         onClose: n,
         graphic: "loading" === T.status ? void 0 : { type: "image", src: _ },
         title: "loading" === T.status ? void 0 : A.intl.string(A.t.c8eASM),
@@ -59,7 +59,7 @@ function T(e) {
 }
 function g() {
     (0, c.openModalLazy)(async () => {
-        let { QuestRewardModalUnverified: e } = await Promise.resolve().then(n.bind(n, 175248));
-        return (t) => (0, r.jsx)(e, { ...t });
+        let { QuestRewardModalUnverified: t } = await Promise.resolve().then(n.bind(n, 175248));
+        return (e) => (0, r.jsx)(t, { ...e });
     });
 }

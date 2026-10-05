@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var i = n(357758),
     r = n(867051),
     a = n(5180),
@@ -40,7 +40,7 @@ class h extends l.yW {
         return this.database.length();
     }
 }
-let I = new h(
+let f = new h(
     {
         BACKGROUND_SYNC: (e, t) => {
             let { guilds: n } = e;

@@ -5,7 +5,7 @@ n.d(t, {
     CW: () => s,
     JQ: () => u,
     Vx: () => o,
-    YW: () => I,
+    YW: () => f,
     ex: () => _,
     go: () => d,
     rb: () => h,
@@ -45,7 +45,7 @@ function c(e) {
 function u(e) {
     return (
         null != e &&
-        I(e) === i.R.PROFILE_EFFECT &&
+        f(e) === i.R.PROFILE_EFFECT &&
         e.items.some(
             (e) => (0, r.C3)(e) && e.effects.some((e) => null != e.randomizedSources && e.randomizedSources.length > 0),
         )
@@ -67,7 +67,7 @@ function A(e) {
 function h(e, t) {
     return E(e) && null != t ? (e.variants[t] ?? e) : e;
 }
-function I(e) {
+function f(e) {
     if (null == e) return null;
     if (e.type === i.R.VARIANTS_GROUP) {
         if (null == e.variants || 0 === e.variants.length) return null;

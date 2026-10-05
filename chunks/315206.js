@@ -1,5 +1,5 @@
 let i;
-n.d(t, { Ay: () => R, bK: () => g, cK: () => S });
+n.d(t, { Ay: () => R, bK: () => m, cK: () => S });
 var r = n(73153),
     a = n(31728),
     s = n(272355),
@@ -12,12 +12,12 @@ var r = n(73153),
     E = n(967198),
     A = n(977997),
     h = n(646865),
-    I = n(933958),
-    f = n(969151),
+    f = n(933958),
+    I = n(969151),
     p = n(594007),
     T = n(227042),
-    m = n(652215);
-function g(e) {
+    g = n(652215);
+function m(e) {
     let t = e ?? i;
     null != t && c.A.isOpen(t) && r.h.wait(() => a.jD(t));
 }
@@ -26,9 +26,9 @@ function S(e) {
     null != t && c.A.isOpen(t) && r.h.wait(() => a.WU(t));
 }
 function N() {
-    let e = I.Ay.getConnectedActivityLocation(),
-        t = null != e ? I.Ay.getSelfEmbeddedActivityForLocation(e) : null,
-        n = (0, f.H)(e),
+    let e = f.Ay.getConnectedActivityLocation(),
+        t = null != e ? f.Ay.getSelfEmbeddedActivityForLocation(e) : null,
+        n = (0, I.H)(e),
         s = o.A.getChannel(n);
     if (null == t || null == s || !0 === t.renderInFramePool) {
         let e;
@@ -41,11 +41,11 @@ function N() {
             let e = i;
             r.h.wait(() => a.VN(e));
         }
-        return (r.h.wait(() => a.ho(e, m.o1q.ACTIVITY, { channel: s })), void (i = e));
+        return (r.h.wait(() => a.ho(e, g.o1q.ACTIVITY, { channel: s })), void (i = e));
     }
 }
 function C() {
-    return (0, T.A)({ LayerStore: d.A, PopoutWindowStore: l.A }) ? g() : S();
+    return (0, T.A)({ LayerStore: d.A, PopoutWindowStore: l.A }) ? m() : S();
 }
 class O extends s.A {
     _initialize() {
@@ -54,7 +54,7 @@ class O extends s.A {
             u.A.addChangeListener(N),
             A.A.addChangeListener(N),
             l.A.addChangeListener(N),
-            I.Ay.addChangeListener(N),
+            f.Ay.addChangeListener(N),
             d.A.addChangeListener(C));
     }
     _terminate() {
@@ -63,7 +63,7 @@ class O extends s.A {
             u.A.removeChangeListener(N),
             A.A.removeChangeListener(N),
             l.A.removeChangeListener(N),
-            I.Ay.removeChangeListener(N),
+            f.Ay.removeChangeListener(N),
             d.A.removeChangeListener(C));
     }
 }

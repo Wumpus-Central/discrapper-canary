@@ -16,7 +16,7 @@ function a(e) {
         analyticsLocations: E,
         referrerId: A,
         inviterUserId: h,
-        remoteJoinPlatform: I,
+        remoteJoinPlatform: f,
     } = e;
     i.default.track(r.HAw.APPLICATION_OPENED, {
         type: t,
@@ -32,6 +32,6 @@ function a(e) {
         location_stack: E,
         referrer_id: A,
         invite_inviter_id: h,
-        remote_join_platform: I,
+        remote_join_platform: f,
     });
 }

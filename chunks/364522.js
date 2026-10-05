@@ -15,24 +15,24 @@ function u(e, t) {
                 dir: E = "ltr",
                 orientation: A = "vertical",
                 scrollbarGutter: h = "stable",
-                fade: I = !1,
-                disableFocusRingScope: f = !1,
+                fade: f = !1,
+                disableFocusRingScope: I = !1,
                 onScroll: p,
                 style: T,
-                ...m
+                ...g
             } = n,
-            g = r.useRef(null),
-            S = (0, o.A)({ scrollbarGutter: h, orientation: A, className: _, scrollerRef: g }),
+            m = r.useRef(null),
+            S = (0, o.A)({ scrollbarGutter: h, orientation: A, className: _, scrollerRef: m }),
             N = !1 === h || "vertical" !== A ? void 0 : "stable" === h ? c.x2 : c.GV;
         return (0, i.jsx)("div", {
             ref: (e) => {
-                ("function" == typeof a ? a(e) : null != a && (a.current = e), (g.current = e));
+                ("function" == typeof a ? a(e) : null != a && (a.current = e), (m.current = e));
             },
-            className: s()(_, N, { [e]: !0, [t]: I }),
+            className: s()(_, N, { [e]: !0, [t]: f }),
             style: (0, d.Ay)(T, A),
             dir: E,
-            ...m,
-            children: (0, i.jsxs)(l.t, { disableFocusRingScope: f, containerRef: g, children: [u, S] }),
+            ...g,
+            children: (0, i.jsxs)(l.t, { disableFocusRingScope: I, containerRef: m, children: [u, S] }),
         });
     });
 }

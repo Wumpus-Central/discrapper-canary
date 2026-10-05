@@ -8,7 +8,7 @@ n.d(t, {
     hj: () => c,
     kw: () => d,
     sm: () => l,
-    z4: () => I,
+    z4: () => f,
 });
 var i,
     r,
@@ -92,4 +92,4 @@ var h =
         (a[(a.INVALID_DRIVE = 2078)] = "INVALID_DRIVE"),
         (a[(a.DISK_FULL = 2080)] = "DISK_FULL"),
         a),
-    I = (((s = {}).IPC = "ipc"), (s.WEBSOCKET = "ws"), (s.HTTP = "http"), (s.POST_MESSAGE = "post_message"), s);
+    f = (((s = {}).IPC = "ipc"), (s.WEBSOCKET = "ws"), (s.HTTP = "http"), (s.POST_MESSAGE = "post_message"), s);

@@ -14,12 +14,12 @@ var r = n(862482),
     E = n(532624),
     A = n(531685),
     h = n(174459),
-    I = n(350535),
-    f = n(427603),
+    f = n(350535),
+    I = n(427603),
     p = n(652215),
     T = n(765682),
-    m = n(375708);
-let g = new d.A("AudioActionCreators");
+    g = n(375708);
+let m = new d.A("AudioActionCreators");
 function S() {
     (0, a.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e("915082"), n.e("944602"), n.e("825280")]).then(n.bind(n, 987482));
@@ -31,13 +31,13 @@ function N() {
         !u.Ay.isSupported() &&
         ((0, a.openModal)((e) =>
             (0, i.jsx)(s.a, {
-                header: m.intl.string(m.t.ilMTy0),
-                confirmText: m.intl.string(m.t["BK8LK+"]),
-                cancelText: m.intl.string(m.t["ETE/oC"]),
+                header: g.intl.string(g.t.ilMTy0),
+                confirmText: g.intl.string(g.t["BK8LK+"]),
+                cancelText: g.intl.string(g.t["ETE/oC"]),
                 onConfirm: S,
                 confirmButtonColor: r.$n.Colors.BRAND,
                 ...e,
-                children: (0, i.jsx)(l.E, { variant: "text-md/normal", children: m.intl.string(m.t.h66vlB) }),
+                children: (0, i.jsx)(l.E, { variant: "text-md/normal", children: g.intl.string(g.t.h66vlB) }),
             }),
         ),
         !0)
@@ -70,7 +70,7 @@ function O() {
                               C(T.hL.DISMISSED);
                               break;
                           default:
-                              (C(T.hL.ERROR), g.warn(`unknown getUserMedia error: ${e}`));
+                              (C(T.hL.ERROR), m.warn(`unknown getUserMedia error: ${e}`));
                       }
                   },
               )
@@ -86,7 +86,7 @@ function R(e) {
         custom_keybind_assigned: null != i,
         used_keybind: t,
         app_in_focus: A.A.isAppFocused(),
-        overlay_activated: null != (0, f.A)(),
+        overlay_activated: null != (0, I.A)(),
         voice_channel_type: null != a ? a.type : null,
         location: n,
     });
@@ -98,10 +98,10 @@ function L(e) {
         a = null != r ? c.A.getChannel(r) : null;
     h.default.track(p.HAw.SELF_DEAFEN_TOGGLED, {
         enabled: !u.Ay.isSelfDeaf(),
-        keybind_assigned: null != i ? (0, I.dI)(i.shortcut) : void 0,
+        keybind_assigned: null != i ? (0, f.dI)(i.shortcut) : void 0,
         used_keybind: t,
         app_in_focus: A.A.isAppFocused(),
-        overlay_activated: null != (0, f.A)(),
+        overlay_activated: null != (0, I.A)(),
         voice_channel_type: null != a ? a.type : null,
         location: n,
     });

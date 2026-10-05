@@ -8,7 +8,7 @@ n.d(t, {
     ZV: () => C,
     J6: () => Y,
     zO: () => X,
-    rE: () => g,
+    rE: () => m,
     eA: () => k,
     tZ: () => N,
     Ls: () => z,
@@ -34,7 +34,7 @@ n.d(t, {
     GD: () => P,
     qh: () => D,
     kL: () => q,
-    TY: () => m,
+    TY: () => g,
 });
 var i,
     r,
@@ -49,14 +49,14 @@ var i,
     E = n(323889),
     A = n(412703),
     h = n(902173),
-    I =
+    f =
         (((i = {})[(i.ConsecutiveHeartbeatPeriodMinutes = 2)] = "ConsecutiveHeartbeatPeriodMinutes"),
         (i[(i.StatusLookbackPeriodDays = 30)] = "StatusLookbackPeriodDays"),
         i),
-    f = n(636537),
+    I = n(636537),
     p = n(927813),
     T = n(738822);
-let m = {
+let g = {
     GIFT_INVENTORY_SETTINGS_BADGE: 1,
     QUEST_BAR: 2,
     QUEST_BAR_V2: 2,
@@ -64,7 +64,7 @@ let m = {
     ACTIVITY_PANEL: 4,
     QUEST_LIVE_STREAM: 8,
 };
-var g =
+var m =
     (((r = {}).ACTIVITY_PANEL = "quests_bar_activity_panel"),
     (r.QUESTS_MANAGER = "quests_manager"),
     (r.QUESTS_CONSOLE_OPTIMISTIC_UPDATES_MANAGER = "quests_console_optimistic_updates_manager"),
@@ -120,7 +120,7 @@ var g =
     (r.PLAY_QUEST_CONNECTION_MODAL = "play_quest_connection_modal"),
     r);
 let S = new Set([h.L.NITRO_2_POINT_0_CTA, h.L.ORBS_MULTIPLIER_QUEST, h.L.XBOX_GAME_PASS_QUEST]),
-    N = p.A.Millis.MINUTE * I.ConsecutiveHeartbeatPeriodMinutes,
+    N = p.A.Millis.MINUTE * f.ConsecutiveHeartbeatPeriodMinutes,
     C = { tension: 900, friction: 45, clamp: !0 },
     O = { tension: 360, friction: 30, clamp: !0 },
     R = 6,
@@ -129,7 +129,7 @@ var y = (((a = {}).CONSOLE = "CONSOLE"), (a.DESKTOP = "DESKTOP"), a),
     D = (((s = {}).IN_GAME = "in_game"), (s.WEB = "web"), s);
 let v = 454,
     b = 2640 / 740,
-    M = (0, f.TP)(),
+    M = (0, I.TP)(),
     P =
         -1 !== M.indexOf("localhost") || -1 !== M.indexOf("127.0.0.1")
             ? `${M}/_cdn_storage/`

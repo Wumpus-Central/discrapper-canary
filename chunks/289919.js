@@ -13,8 +13,8 @@ var r = n(284009),
     E = n(722306),
     A = n(613057),
     h = n(652215);
-let I = "RPC_STORE_WAIT",
-    f = [];
+let f = "RPC_STORE_WAIT",
+    I = [];
 class p {
     getCurrentUser = () => null;
     onConnect = () => {};
@@ -173,7 +173,7 @@ class p {
         (l().remove(this.subscriptions, (t) => t.socket === e), this.dispatchIsSubscribedUpdate());
     }
     dispatchToSubscriptions(e, t, n, i) {
-        (null != i && "" !== i && (f.includes(i) || (f.unshift(i), f.splice(50), 0))) ||
+        (null != i && "" !== i && (I.includes(i) || (I.unshift(i), I.splice(50), 0))) ||
             this.subscriptions.forEach((i) => {
                 var r;
                 if (
@@ -195,12 +195,12 @@ class p {
         let i = t();
         if (i || 0 === n) return Promise.resolve(i);
         let r = l().uniqueId(),
-            a = () => this.removeSubscription(e, I, { uniqueId: r });
+            a = () => this.removeSubscription(e, f, { uniqueId: r });
         return new Promise((i, s) => {
             let l = setTimeout(() => {
                 (a(), s(Error("timeout")));
             }, n * d.A.Millis.SECOND);
-            this.addSubscription(e, I, { uniqueId: r }, () => {
+            this.addSubscription(e, f, { uniqueId: r }, () => {
                 let e = t();
                 e && (clearTimeout(l), i(e));
             });

@@ -53,8 +53,8 @@ function A(e, t) {
     return null == i || i > e.timestamp_ms ? null : i;
 }
 var h = n(598213),
-    I = n(696016);
-let f = new Map([
+    f = n(696016);
+let I = new Map([
         [i.C.Kill, { beforeMs: 3e3, afterMs: 2e3 }],
         [i.C.Death, { beforeMs: 3e3, afterMs: 2e3 }],
         [i.C.MultiKill, { beforeMs: 3e3, afterMs: 2e3 }],
@@ -64,8 +64,8 @@ let f = new Map([
     ]),
     p = { beforeMs: 3e3, afterMs: 2e3 },
     T = { beforeMs: 2e3, afterMs: 4e3 },
-    m = 2 * c.U;
-function g(e, t) {
+    g = 2 * c.U;
+function m(e, t) {
     if (e.eventName !== t) return null;
     let n = e.additionalData?.round;
     return "number" == typeof n ? n : null;
@@ -151,7 +151,7 @@ function b(e) {
                     return t;
                 })(t.clipCandidates);
             return 0 === u.length
-                ? (I.nx.info(
+                ? (f.nx.info(
                       `automontage: no usable clip candidates in this session (received ${t.clipCandidates.length}) - skipping montage`,
                   ),
                   null)
@@ -172,12 +172,12 @@ function b(e) {
                                         (n.clear(), (r = null));
                                         continue;
                                     }
-                                    let e = g(a, i.C.RoundStart);
+                                    let e = m(a, i.C.RoundStart);
                                     if (null != e) {
                                         (null != r && e <= r && n.clear(), n.set(e, a.timestamp_ms), (r = e));
                                         continue;
                                     }
-                                    let s = g(a, i.C.RoundEnd);
+                                    let s = m(a, i.C.RoundEnd);
                                     if (null == s) continue;
                                     let l = n.get(s);
                                     null != l &&
@@ -189,7 +189,7 @@ function b(e) {
                             })(s);
                         if (0 === l.length)
                             return (
-                                I.nx.info(
+                                f.nx.info(
                                     `automontage: no valid CS2 rounds reconstructed from ${s.length} game events - skipping round summary`,
                                 ),
                                 null
@@ -215,7 +215,7 @@ function b(e) {
                                     (Number.isFinite(l) || (a++, (l = 0)), (n[r + 1] = n[r] + l));
                                 }),
                                 a > 0 &&
-                                    I.nx.warn(
+                                    f.nx.warn(
                                         `automontage: ignored ${a} non-finite event score(s) while ranking rounds`,
                                     ),
                                 l
@@ -226,10 +226,10 @@ function b(e) {
                                     })
                                     .sort((e, t) => t.score - e.score)),
                             c = d[0];
-                        if (c.score <= m)
+                        if (c.score <= g)
                             return (
-                                I.nx.info(
-                                    `automontage: best CS2 round ${c.round.number} scored ${c.score.toFixed(3)}, not above the ${m} minimum - skipping round summary`,
+                                f.nx.info(
+                                    `automontage: best CS2 round ${c.round.number} scored ${c.score.toFixed(3)}, not above the ${g} minimum - skipping round summary`,
                                 ),
                                 null
                             );
@@ -244,7 +244,7 @@ function b(e) {
                                 for (let t of l) {
                                     let n = t.eventName;
                                     if (null == n) continue;
-                                    let a = f.get(n);
+                                    let a = I.get(n);
                                     if (null == a) continue;
                                     let s = `r${e.number} ${n}`;
                                     if (n === i.C.MultiKill) {
@@ -271,7 +271,7 @@ function b(e) {
                             C = (0, h.X0)(u),
                             { resolved: O, skipped: R } = (0, h.z2)(C, e.clipCandidates);
                         return 0 === O.length
-                            ? (I.nx.info(
+                            ? (f.nx.info(
                                   `automontage: no candidate clip covers any of the ${C.length} sections of best round ${c.round.number} (candidates=${e.clipCandidates.length}) - skipping round summary`,
                               ),
                               null)
@@ -291,37 +291,37 @@ function b(e) {
                         ? null
                         : { type: e, config: n, durationMs: c.durationMs, resolved: c.resolved, skipped: c.skipped })
                   : (function (e, t, n) {
-                        var i, c, u, f;
+                        var i, c, u, I;
                         let p,
                             T = (function (e) {
                                 let t = D.get(e);
                                 if (null == t) throw Error(`Unrecognized automontage preset: ${e}`);
                                 return t;
                             })(e),
-                            m = (function (e, t, n, i) {
+                            g = (function (e, t, n, i) {
                                 let { localUserId: d, gameId: c, ...u } = n,
                                     h = [],
-                                    I = _(e ?? []),
-                                    f = E(I),
-                                    p = (0, r.Q4)(c, I);
+                                    f = _(e ?? []),
+                                    I = E(f),
+                                    p = (0, r.Q4)(c, f);
                                 function T(e, t) {
                                     return p?.isInGame == null || p.isInGame((e + t) / 2);
                                 }
-                                for (let e of I) {
+                                for (let e of f) {
                                     let t = e.eventName;
                                     if (null == t) continue;
                                     let n = i[`game:${t}`];
                                     if (null == n) continue;
-                                    let r = A(e, f) ?? e.timestamp_ms,
+                                    let r = A(e, I) ?? e.timestamp_ms,
                                         a = e.timestamp_ms;
                                     T(r, a) && h.push({ startMs: r, endMs: a, kind: "game", padding: n });
                                 }
-                                let m = new Map();
+                                let g = new Map();
                                 for (let e of l) {
                                     let t = i[`audio:${e}`];
-                                    null != t && m.set(e, t);
+                                    null != t && g.set(e, t);
                                 }
-                                if (m.size > 0)
+                                if (g.size > 0)
                                     for (let e of (function (e, t, n, i) {
                                         let { includeOtherUsers: l, laughterThreshold: d, shoutingThreshold: c } = n;
                                         if (0 === i.length) return [];
@@ -353,17 +353,17 @@ function b(e) {
                                                 A,
                                             ).map((e) => e.value);
                                         }
-                                        let I = (0, a.A)(),
-                                            f = {
-                                                laughter: d ?? I.laughterEventThreshold,
-                                                shouting: c ?? I.shoutingEventThreshold,
+                                        let f = (0, a.A)(),
+                                            I = {
+                                                laughter: d ?? f.laughterEventThreshold,
+                                                shouting: c ?? f.shoutingEventThreshold,
                                             },
                                             p = u.map((t) => h(e[t].rmsData)),
-                                            T = (0, s.kV)(p, I),
-                                            m = [];
+                                            T = (0, s.kV)(p, f),
+                                            g = [];
                                         for (let t of i) {
                                             let n = u.map((n) => h(e[n][o[t]])),
-                                                i = (0, s.br)(n, I, f[t]),
+                                                i = (0, s.br)(n, f, I[t]),
                                                 a = null != T ? (0, s.ei)(i, T) : i;
                                             u.forEach((e, n) => {
                                                 for (let i of (function (e) {
@@ -378,8 +378,8 @@ function b(e) {
                                                     }
                                                     return t;
                                                 })(a[n]))
-                                                    i.endChunk - i.startChunk + 1 < I.minConsecutiveChunks ||
-                                                        m.push({
+                                                    i.endChunk - i.startChunk + 1 < f.minConsecutiveChunks ||
+                                                        g.push({
                                                             kind: t,
                                                             userId: e,
                                                             startMs: _ + i.startChunk * r.pn,
@@ -387,9 +387,9 @@ function b(e) {
                                                         });
                                             });
                                         }
-                                        return (m.sort((e, t) => e.startMs - t.startMs), m);
-                                    })(t, d, u, Array.from(m.keys()))) {
-                                        let t = m.get(e.kind);
+                                        return (g.sort((e, t) => e.startMs - t.startMs), g);
+                                    })(t, d, u, Array.from(g.keys()))) {
+                                        let t = g.get(e.kind);
                                         null != t &&
                                             T(e.startMs, e.endMs) &&
                                             h.push({ startMs: e.startMs, endMs: e.endMs, kind: "audio", padding: t });
@@ -407,14 +407,14 @@ function b(e) {
                                 },
                                 T.events,
                             );
-                        if (0 === m.length)
+                        if (0 === g.length)
                             return (
-                                I.nx.info(
+                                f.nx.info(
                                     `automontage: preset ${e} matched no events in this session - skipping montage`,
                                 ),
                                 null
                             );
-                        let g =
+                        let m =
                                 T.startOnSilence || T.endOnSilence
                                     ? ((i = (function (e) {
                                           let t = new Set(),
@@ -428,7 +428,7 @@ function b(e) {
                                                   }),
                                                   r.timeline ?? [])) {
                                                       let i = e.signal;
-                                                      if (i.type !== I.Gy.SPEAKING || null == e.timestamp) continue;
+                                                      if (i.type !== f.Gy.SPEAKING || null == e.timestamp) continue;
                                                       let r = `${i.userId}|${e.timestamp}|${i.speakingFlags}`;
                                                       t.has(r) ||
                                                           (t.add(r),
@@ -526,10 +526,10 @@ function b(e) {
                                     _ = (0, h.X0)(u),
                                     E = l ? _.filter((e) => !0 === e.hasGame && !0 === e.hasAudio) : _,
                                     A = [],
-                                    f = [];
-                                for (let e of E) e.srcEndMs - e.srcStartMs < h.rx ? A.push(e) : f.push(e);
-                                let { resolved: p, skipped: T } = (0, h.z2)(f, n),
-                                    { kept: m, removed: g } = (function (e, t, n, i) {
+                                    I = [];
+                                for (let e of E) e.srcEndMs - e.srcStartMs < h.rx ? A.push(e) : I.push(e);
+                                let { resolved: p, skipped: T } = (0, h.z2)(I, n),
+                                    { kept: g, removed: m } = (function (e, t, n, i) {
                                         let r = [...e],
                                             a = e
                                                 .map((e, t) => {
@@ -546,31 +546,31 @@ function b(e) {
                                         }
                                         return (
                                             s.length > 0 &&
-                                                I.nx.info(
+                                                f.nx.info(
                                                     `automontage: removed ${s.length} lowest-scored section(s) to fit the ${n}ms maximum (durationMs=${l})`,
                                                 ),
                                             { kept: r.filter((e) => null != e), removed: s, durationMs: l }
                                         );
                                     })(p, i.blendMs, o, c);
                                 return {
-                                    durationMs: (0, h.s_)(m, i.blendMs),
-                                    resolved: m,
-                                    skipped: [...A, ...T, ...g.map(L)],
+                                    durationMs: (0, h.s_)(g, i.blendMs),
+                                    resolved: g,
+                                    skipped: [...A, ...T, ...m.map(L)],
                                     requestedSectionCount: E.length,
-                                    trimmedSectionCount: g.length,
+                                    trimmedSectionCount: m.length,
                                 };
                             })({
-                                selected: m,
+                                selected: g,
                                 clipCandidates: n,
                                 config: S,
-                                speakingSpans: g,
+                                speakingSpans: m,
                                 startOnSilence: T.startOnSilence,
                                 endOnSilence: T.endOnSilence,
                                 requireVoiceGamePair: T.requireVoiceGamePair,
                                 maxDurationMs: 9e4,
                                 scoreSection:
                                     ((u = t.decisionSignals.gameEventData),
-                                    (f = t.gameId),
+                                    (I = t.gameId),
                                     (function (e, t) {
                                         if (0 === e.length) return () => 0;
                                         let n = () => 1;
@@ -592,7 +592,7 @@ function b(e) {
                                                 (Number.isFinite(l) || (r++, (l = 0)), (i[a + 1] = i[a] + l));
                                             }),
                                             r > 0 &&
-                                                I.nx.warn(
+                                                f.nx.warn(
                                                     `automontage: ignored ${r} non-finite event score(s) while scoring sections`,
                                                 ),
                                             (t, n) => {
@@ -604,17 +604,17 @@ function b(e) {
                                                 );
                                             }
                                         );
-                                    })((p = [...u].sort((e, t) => e.timestamp_ms - t.timestamp_ms)), (0, r.Q4)(f, p))),
+                                    })((p = [...u].sort((e, t) => e.timestamp_ms - t.timestamp_ms)), (0, r.Q4)(I, p))),
                             });
                         return 0 === N.resolved.length
-                            ? (I.nx.info(
+                            ? (f.nx.info(
                                   N.trimmedSectionCount > 0
                                       ? `automontage: preset ${e} - all ${N.trimmedSectionCount} resolved section(s) were removed to fit the maximum duration - skipping montage`
                                       : `automontage: preset ${e} - no candidate clip covers any of the ${N.requestedSectionCount} requested sections (candidates=${n.length}, skipped=${N.skipped.length}) - skipping montage`,
                               ),
                               null)
                             : N.durationMs < 25e3
-                              ? (I.nx.info(
+                              ? (f.nx.info(
                                     `automontage: preset ${e} duration ${N.durationMs}ms is below the 25000ms minimum - skipping montage`,
                                 ),
                                 null)

@@ -1,5 +1,5 @@
 let i, r;
-(n.d(t, { A: () => I, U: () => u }), n(321073));
+(n.d(t, { A: () => f, U: () => u }), n(321073));
 var a,
     s = n(247775),
     l = n(17928),
@@ -65,7 +65,7 @@ class h extends l.Ay.PersistedStore {
         return this.getCanUseMultiAccountMobile();
     }
 }
-let I = new h(o.h, {
+let f = new h(o.h, {
     CONNECTION_OPEN: function (e) {
         let { user: t } = e;
         ((i = t.id), !r && (0, d.A)(t) && (r = !0));

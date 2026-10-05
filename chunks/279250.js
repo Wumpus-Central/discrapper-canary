@@ -1,4 +1,4 @@
-(n.d(t, { OT: () => h, eo: () => I, vz: () => A, zP: () => f }), n(321073));
+(n.d(t, { OT: () => h, eo: () => f, vz: () => A, zP: () => I }), n(321073));
 var i,
     r = n(17928),
     a = n(323073),
@@ -30,7 +30,7 @@ var h =
     (i[(i.NO_PERMISSION = 2)] = "NO_PERMISSION"),
     (i[(i.AGE_RESTRICTED = 3)] = "AGE_RESTRICTED"),
     i);
-function I(e, t, n, i, r) {
+function f(e, t, n, i, r) {
     let l;
     if (null == e) return [!1, 2];
     let d = t.isInChannel(e.id),
@@ -43,6 +43,6 @@ function I(e, t, n, i, r) {
         [!__OVERLAY__ && !E && !A && (d || (u && !c)), l]
     );
 }
-function f(e) {
-    return (0, r.yK)([u.A, d.A, c.A, l.default], () => I(e, u.A, d.A, c.A, l.default));
+function I(e) {
+    return (0, r.yK)([u.A, d.A, c.A, l.default], () => f(e, u.A, d.A, c.A, l.default));
 }

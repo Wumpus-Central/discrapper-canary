@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => T, HB: () => f, Xz: () => p, e$: () => I, nt: () => h });
+n.d(t, { Ay: () => T, HB: () => I, Xz: () => p, e$: () => f, nt: () => h });
 var i = n(636537),
     r = n(873298),
     a = n(73153),
@@ -36,7 +36,7 @@ async function h(e, t) {
         return (a.h.dispatch({ type: "FAMILY_CENTER_REQUEST_LINK_UPDATE_SUCCESS", linkedUsers: t }), t);
     });
 }
-async function I(e) {
+async function f(e) {
     await i.Bo.del({
         url: _.Rsh.FAMILY_CENTER_LINKED_USERS,
         body: { linked_user_id: e },
@@ -48,7 +48,7 @@ async function I(e) {
         );
     });
 }
-async function f() {
+async function I() {
     await i.Bo.get({ url: _.Rsh.FAMILY_CENTER_LINK_CODE, rejectWithError: (0, i.fT)() }).then((e) => {
         let { body: t } = e,
             n = t.link_code,

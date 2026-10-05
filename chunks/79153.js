@@ -115,12 +115,12 @@ var A = n(652215);
 }),
     n(993748));
 var h = n(292572),
-    I = n(122906),
-    f = n(128391),
+    f = n(122906),
+    I = n(128391),
     p = n(167189),
     T = n(254160),
-    m = n(67480),
-    g = n(733391),
+    g = n(67480),
+    m = n(733391),
     S = n(637893),
     N = n(227327);
 let C = new Set();
@@ -151,7 +151,7 @@ function v(e, t) {
                     break;
                 case p.I.TEMPLATE:
                     (0, T.f)(async () => {
-                        null == I.A.getGuildTemplate(i) && (await h.A.resolveGuildTemplate(i));
+                        null == f.A.getGuildTemplate(i) && (await h.A.resolveGuildTemplate(i));
                     });
                     break;
                 case p.I.BUILD_OVERRIDE:
@@ -198,21 +198,21 @@ function v(e, t) {
                             if (!(0, S.x)("resolveStorefrontCodedLink")) return;
                             O(`${e}:${n.scopeId}`, async () => {
                                 "application" === i.type
-                                    ? await (0, g.ap)(i.applicationId, { eager: !1 })
-                                    : await (0, g.Rw)(i.guildId, { eager: !1 });
+                                    ? await (0, m.ap)(i.applicationId, { eager: !1 })
+                                    : await (0, m.Rw)(i.guildId, { eager: !1 });
                             });
                             return;
                         }
                         let [r] = n.skuIds;
-                        null != m.A.get(r) ||
-                            m.A.isFetching(r) ||
-                            m.A.didFetchingSkuFail(r) ||
+                        null != g.A.get(r) ||
+                            g.A.isFetching(r) ||
+                            g.A.didFetchingSkuFail(r) ||
                             (l.h.dispatch({ type: "STORE_LISTINGS_FETCH_START", skuId: r }),
                             O((0, N.m5)([r], n.scopeId), async () => {
                                 let e = {};
                                 "application" === i.type
-                                    ? await (0, g.Pp)(i.applicationId, r, e)
-                                    : await (0, g.qf)(i.guildId, r, e);
+                                    ? await (0, m.Pp)(i.applicationId, r, e)
+                                    : await (0, m.qf)(i.guildId, r, e);
                             }));
                     })(n, i);
                     break;
@@ -232,7 +232,7 @@ function b(e) {
 }
 class M extends r.A {
     constructor() {
-        (super(), (0, f.A)(this, b));
+        (super(), (0, I.A)(this, b));
     }
 }
 let P = new M();

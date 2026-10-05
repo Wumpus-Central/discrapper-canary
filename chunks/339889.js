@@ -1,4 +1,4 @@
-(n.d(t, { I: () => g }), n(323874), n(14289), n(35956));
+(n.d(t, { I: () => m }), n(323874), n(14289), n(35956));
 var i = n(582128),
     r = n(806163),
     a = n(323889),
@@ -68,20 +68,20 @@ let h = new A(l.h, {
         return n;
     },
 });
-var I = n(396813),
-    f = n(866157),
+var f = n(396813),
+    I = n(866157),
     p = n(518293);
 function T(e) {
     return null != e && "" !== e;
 }
-function m(e) {
+function g(e) {
     return T(e?.start) && T(e?.end);
 }
-function g() {
+function m() {
     let e = (0, p.T2)(),
         t = e?.id,
         { search: n } = (0, r.zy)(),
-        l = i.useMemo(() => new URLSearchParams(n).get(f.L1.AD_CREATIVE_IDS), [n]),
+        l = i.useMemo(() => new URLSearchParams(n).get(I.L1.AD_CREATIVE_IDS), [n]),
         o = i.useMemo(() => null != l && null != t && l.includes(t), [l, t]),
         d = (0, s.bG)([h], () => null != t && h.hasSeen(a.p.QUEST_HOME_HERO, t), [t]);
     return {
@@ -89,11 +89,11 @@ function g() {
             (function (e) {
                 if (null == e) return !1;
                 let t = T(e.tooltipTitle) && T(e.tooltipSubtitle);
-                return T(e.image) || m(e.linearGradient) || m(e.radialGradient) || t;
+                return T(e.image) || g(e.linearGradient) || g(e.radialGradient) || t;
             })(e?.questHomeEntrypoint) &&
             (o || !d),
         dismissQuestHomeHeroContent: i.useCallback(() => {
-            o || (null != t && (0, I.zh)(a.p.QUEST_HOME_HERO, [t]));
+            o || (null != t && (0, f.zh)(a.p.QUEST_HOME_HERO, [t]));
         }, [t, o]),
         questHomeHero: e,
     };

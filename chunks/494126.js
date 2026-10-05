@@ -1,16 +1,16 @@
 (n.r(t),
     n.d(t, {
-        promoteFrame: () => I,
+        promoteFrame: () => f,
         launchFrame: () => E,
-        resetFrameLayoutModes: () => m,
+        resetFrameLayoutModes: () => g,
         demoteMainFrame: () => h,
         refreshProxyTicket: () => O,
-        attachFrameIframe: () => g,
+        attachFrameIframe: () => m,
         attachFrameHostWindow: () => N,
         detachFrameHostWindow: () => C,
         setFramePrefersPictureInPictureOnNavigateAway: () => p,
         detachFrameIframe: () => S,
-        updateFrameLayoutMode: () => f,
+        updateFrameLayoutMode: () => I,
         updateFramePanelMode: () => T,
         clearMainFrameSlot: () => A,
     }));
@@ -31,7 +31,7 @@ async function E(e) {
     let { applicationId: t, surface: n, customId: l, referrerId: c, analyticsContext: _, hostWindowKey: E } = e,
         h = (0, u.VA)(t, n),
         p = d.A.getFrame(h);
-    if (null != p) return (p.intent === u.sV.MAIN && (I(h), f({ frameId: h, layoutMode: u.y0.FOCUSED })), h);
+    if (null != p) return (p.intent === u.sV.MAIN && (f(h), I({ frameId: h, layoutMode: u.y0.FOCUSED })), h);
     ((0, u.Yf)(n) === u.sV.MAIN && (o(), A()),
         i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: h, surface: n }));
     try {
@@ -65,14 +65,14 @@ function A() {
     null != e && (e.intent === u.sV.MAIN ? (0, c.A)().leaveFrame(e.id) : h(e.id));
 }
 function h(e) {
-    d.A.getMainFrame()?.id === e && (m(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
+    d.A.getMainFrame()?.id === e && (g(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
 }
-function I(e) {
+function f(e) {
     null != d.A.getFrame(e) &&
         d.A.getMainFrame()?.id !== e &&
         (o(), A(), i.h.dispatch({ type: "FRAME_PROMOTE", frameId: e }));
 }
-function f(e) {
+function I(e) {
     let { frameId: t, layoutMode: n } = e,
         r = d.A.getFrame(t);
     null != r &&
@@ -84,10 +84,10 @@ function p(e, t) {
 function T(e, t) {
     i.h.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: e, activityPanelMode: t });
 }
-function m(e) {
-    (f({ frameId: e, layoutMode: u.y0.FOCUSED }), T(e, _.Gd.PANEL));
+function g(e) {
+    (I({ frameId: e, layoutMode: u.y0.FOCUSED }), T(e, _.Gd.PANEL));
 }
-function g(e, t) {
+function m(e, t) {
     i.h.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: e, iframeId: t });
 }
 function S(e, t) {

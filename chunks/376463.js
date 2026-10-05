@@ -12,8 +12,8 @@ let c = new s.A("MultiAccountSwitchStore"),
     E = null,
     A = null,
     h = !1,
-    I = !1,
     f = !1,
+    I = !1,
     p = null;
 function T(e) {
     return {
@@ -25,14 +25,14 @@ function T(e) {
             let { id: t } = e;
             return t;
         }),
-        has_ever_connected: I,
+        has_ever_connected: f,
         switch_origin: A,
     };
 }
-function m() {
+function g() {
     return h && !1;
 }
-class g extends r.Ay.Store {
+class m extends r.Ay.Store {
     static displayName = "MultiAccountSwitchStore";
     initialize() {
         this.waitFor(o.A);
@@ -47,7 +47,7 @@ class g extends r.Ay.Store {
         return E;
     }
 }
-let S = new g(a.h, {
+let S = new m(a.h, {
     MULTI_ACCOUNT_SWITCH_START: function (e) {
         ((E = e.targetUserId), (A = e.location));
     },
@@ -60,7 +60,7 @@ let S = new g(a.h, {
                     let { id: t } = e;
                     return t;
                 }),
-                has_ever_connected: I,
+                has_ever_connected: f,
                 switch_origin: A,
             }),
             !1
@@ -70,20 +70,20 @@ let S = new g(a.h, {
         ((h = !!e.isSwitchingAccount),
             e.isSwitchingAccount
                 ? ((_ = u),
-                  (f = !!e.goHomeAfterSwitching),
+                  (I = !!e.goHomeAfterSwitching),
                   c.log("logout from account switch", {
                       current_user_id: u,
                       expected_user_id: E,
                       fast_connect_user_id: null,
                       switch_origin: A,
                   }))
-                : ((f = !1), i.removeToken(u)));
+                : ((I = !1), i.removeToken(u)));
     },
     CONNECTION_OPEN: function (e) {
         let { user: t } = e;
         if (h) {
             !(function (e) {
-                if (!m()) return;
+                if (!g()) return;
                 let t = i.getToken(e),
                     n = i.getToken(),
                     r = null != E && e !== E,
@@ -104,20 +104,20 @@ let S = new g(a.h, {
                 let e;
                 ((e = T(t.id)),
                     l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_SUCCESS, e),
-                    m() && c.log("Account switch success", e));
+                    g() && c.log("Account switch success", e));
             } else {
                 let e;
                 ((e = T(t.id)),
                     l.default.track(d.HAw.MULTI_ACCOUNT_SWITCH_FAILURE, e),
-                    m() && c.log("Account switch failure", e));
+                    g() && c.log("Account switch failure", e));
             }
-            p = { success: e, navigateHome: f };
+            p = { success: e, navigateHome: I };
         } else p = null;
         let n = i.getToken();
         (null != n &&
             "" !== n &&
             (!(function (e, t) {
-                if (!m()) return;
+                if (!g()) return;
                 let n = o.A.getUsers()
                     .map((e) => {
                         let { id: t } = e;
@@ -133,7 +133,7 @@ let S = new g(a.h, {
             })(t.id, n),
             i.setToken(n, t.id)),
             (function (e) {
-                if (!m()) return;
+                if (!g()) return;
                 let t = new Map();
                 (o.A.getUsers().forEach((e) => {
                     let { id: n } = e,
@@ -153,12 +153,12 @@ let S = new g(a.h, {
             (E = null),
             (A = null),
             (h = !1),
-            (f = !1),
-            (I = !0),
+            (I = !1),
+            (f = !0),
             (u = t.id));
     },
     CONNECTION_CLOSED: function (e) {
         if (40004 !== e.code || !h) return !1;
-        ((_ = null), (E = null), (A = null), (f = !1));
+        ((_ = null), (E = null), (A = null), (I = !1));
     },
 });

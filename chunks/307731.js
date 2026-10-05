@@ -7,12 +7,12 @@
         EMOJI_MAX_SLOTS_MORE: () => r,
         EMOJI_RE: () => s,
         EMOJI_URL_BASE_SIZE: () => d,
-        EmojiDisabledReasons: () => I,
-        EmojiIntention: () => f,
+        EmojiDisabledReasons: () => f,
+        EmojiIntention: () => I,
         EmojiInteractionPoint: () => T,
         EmojiSprites: () => h,
         MAX_EMOJI_TO_BE_JUMBO: () => c,
-        isExternalEmojiAllowedForIntention: () => m,
+        isExternalEmojiAllowedForIntention: () => g,
     }));
 let i = 50,
     r = 200,
@@ -32,7 +32,7 @@ var u,
         (u[(u.PickerPerRow = 11)] = "PickerPerRow"),
         (u[(u.PickerCount = 50)] = "PickerCount"),
         u),
-    I =
+    f =
         (((_ = {})[(_.DISALLOW_EXTERNAL = 0)] = "DISALLOW_EXTERNAL"),
         (_[(_.GUILD_SUBSCRIPTION_UNAVAILABLE = 1)] = "GUILD_SUBSCRIPTION_UNAVAILABLE"),
         (_[(_.PREMIUM_LOCKED = 2)] = "PREMIUM_LOCKED"),
@@ -41,7 +41,7 @@ var u,
         (_[(_.ROLE_SUBSCRIPTION_UNAVAILABLE = 5)] = "ROLE_SUBSCRIPTION_UNAVAILABLE"),
         (_[(_.DISALLOW_CUSTOM = 6)] = "DISALLOW_CUSTOM"),
         _),
-    f =
+    I =
         (((E = {})[(E.REACTION = 0)] = "REACTION"),
         (E[(E.STATUS = 1)] = "STATUS"),
         (E[(E.COMMUNITY_CONTENT = 2)] = "COMMUNITY_CONTENT"),
@@ -76,6 +76,6 @@ var T =
     (A.TrackOpenPopoutUsed = "TRACK_OPEN_POPOUT_USED"),
     (A.CustomEmojiTooltipShown = "CUSTOM_EMOJI_TOOLTIP_SHOWN"),
     A);
-function m(e) {
+function g(e) {
     return !p.has(e);
 }

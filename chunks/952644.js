@@ -1,37 +1,37 @@
-(n.d(t, {
+(l.d(t, {
     Df: () => i,
     Fl: () => s,
     S3: () => d,
     SF: () => c,
-    Wl: () => o,
-    Wn: () => u,
-    b5: () => m,
+    Wl: () => u,
+    Wn: () => o,
+    b5: () => f,
     h_: () => r,
     kt: () => h,
-    n0: () => f,
+    n0: () => m,
 }),
-    n(321073),
-    n(246338));
-var l = n(248675),
-    a = n(375708);
+    l(321073),
+    l(246338));
+var n = l(248675),
+    a = l(375708);
 function i(e, t) {
     return 0 === t.length ? "none" : t.some((t) => t.id === e) ? "skip" : "pick";
 }
 function r(e, t) {
     if ("none" === t) return ["server"];
-    let n = Array.from({ length: Math.max(1, e.length) }, (e, t) => ({ kind: "question", index: t }));
-    return "pick" === t ? ["about", "server", ...n] : ["about", ...n];
+    let l = Array.from({ length: Math.max(1, e.length) }, (e, t) => ({ kind: "question", index: t }));
+    return "pick" === t ? ["about", "server", ...l] : ["about", ...l];
 }
 function s(e, t) {
     return null != e && (!0 === e.optional || "" !== (t ?? "").trim());
 }
-function o(e) {
-    return a.intl.formatToPlainString(l.default["/qSx7+"], { templateName: e, locale: a.intl.currentLocale });
-}
 function u(e) {
+    return a.intl.formatToPlainString(n.default["/qSx7+"], { templateName: e, locale: a.intl.currentLocale });
+}
+function o(e) {
     for (let t = e.length - 1; t >= 0; t--) {
-        let n = e[t];
-        if ("assistant" === n.role && null != n.intake) return n.intake;
+        let l = e[t];
+        if ("assistant" === l.role && null != l.intake) return l.intake;
     }
     return null;
 }
@@ -48,24 +48,24 @@ function d(e) {
           };
 }
 function c(e) {
-    return e?.server ?? { title: a.intl.string(l.default.vcxYIA), hint: a.intl.string(l.default.auUHPZ) };
+    return e?.server ?? { title: a.intl.string(n.default.vcxYIA), hint: a.intl.string(n.default.auUHPZ) };
 }
-function m(e) {
+function f(e) {
     return e?.questions ?? [];
 }
-function f(e, t) {
-    return e.length > 0 && e.every((e, n) => !0 === e.optional || "" !== (t[n] ?? "").trim());
+function m(e, t) {
+    return e.length > 0 && e.every((e, l) => !0 === e.optional || "" !== (t[l] ?? "").trim());
 }
 function h(e, t) {
-    let n = [];
+    let l = [];
     return (
-        e.forEach((e, l) => {
-            let a = (t[l] ?? "").trim();
+        e.forEach((e, n) => {
+            let a = (t[n] ?? "").trim();
             ("" !== a || !0 !== e.optional) &&
                 (a.includes("\n")
-                    ? n.push(`${l + 1}. ${e.title} \u{2192}`, '"""', a, '"""')
-                    : n.push(`${l + 1}. ${e.title} \u{2192} ${a}`));
+                    ? l.push(`${n + 1}. ${e.title} \u{2192}`, '"""', a, '"""')
+                    : l.push(`${n + 1}. ${e.title} \u{2192} ${a}`));
         }),
-        n.join("\n")
+        l.join("\n")
     );
 }

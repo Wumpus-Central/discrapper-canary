@@ -1,6 +1,6 @@
 n.d(t, {
-    D1: () => I,
-    Eo: () => f,
+    D1: () => f,
+    Eo: () => I,
     Hk: () => T,
     R4: () => p,
     Uz: () => h,
@@ -76,10 +76,10 @@ function h(e, t, n) {
         is_animated: _(e),
     });
 }
-function I(e, t, n) {
+function f(e, t, n) {
     s.default.track(d.HAw.VIDEO_BACKGROUND_ADDED, { is_animated: _(e), is_video: t, is_from_tenor: n });
 }
-function f(e) {
+function I(e) {
     s.default.track(d.HAw.VIDEO_BACKGROUND_DELETED, { is_animated: _(e) });
 }
 function p(e) {

@@ -1,4 +1,4 @@
-n.d(t, { Bp: () => g, Hs: () => p, eq: () => S, t_: () => N });
+n.d(t, { Bp: () => m, Hs: () => p, eq: () => S, t_: () => N });
 var i = n(582128),
     r = n(435558),
     a = n.n(r),
@@ -12,7 +12,7 @@ var i = n(582128),
     E = n(868162),
     A = n(731854);
 let h = new Set(["DisplayPort"]);
-function I(e) {
+function f(e) {
     var t;
     let n,
         i,
@@ -37,7 +37,7 @@ function I(e) {
               })(e.displayName),
           };
 }
-function f() {
+function I() {
     if (!u.A.isConnected()) return !1;
     let e = c.Ay.getInputDeviceId(),
         t = c.Ay.getOutputDeviceId();
@@ -58,24 +58,24 @@ function f() {
     );
 }
 function p() {
-    if (!f()) return null;
+    if (!I()) return null;
     let e = a().first(Object.keys(E.A.lastDeviceConnected)),
         t = null != e && "" !== e ? E.A.lastDeviceConnected[e] : null;
-    return null == t || !0 === E.A.getState().ignoredDevices[t.displayName] ? null : I(t);
+    return null == t || !0 === E.A.getState().ignoredDevices[t.displayName] ? null : f(t);
 }
 function T(e, t) {
     return e.length === t.length && e.every((e, n) => (0, l.A)(e, t[n]));
 }
-function m() {
-    if (!f()) return [];
+function g() {
+    if (!I()) return [];
     let { ignoredDevices: e } = E.A.getState();
     return Object.values(E.A.lastDeviceConnected)
         .filter((t) => !0 !== e[t.displayName])
-        .map(I)
+        .map(f)
         .filter((e) => null != e);
 }
-function g() {
-    return (0, s.bG)([E.A, c.Ay, d.A, u.A], m, void 0, T);
+function m() {
+    return (0, s.bG)([E.A, c.Ay, d.A, u.A], g, void 0, T);
 }
 function S(e, t) {
     return null != t ? `${t.vendor.name} ${t.model.name}` : e.displayName;

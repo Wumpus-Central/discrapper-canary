@@ -14,13 +14,13 @@ let A = "SCHEDULED_MESSAGE_EDIT_MODAL_KEY";
 function h(e) {
     let { scheduledMessage: t, transitionState: n, onClose: a } = e,
         h = s()(t.sendAtTimestamp.substring(0, 200)),
-        [I, f] = r.useState(h),
+        [f, I] = r.useState(h),
         [p, T] = r.useState(!1),
-        m = (0, u.Vf)(I, t.scheduledMessageId);
-    async function g() {
+        g = (0, u.Vf)(f, t.scheduledMessageId);
+    async function m() {
         T(!0);
         try {
-            (await (0, d.Eg)({ scheduledMessageId: t.scheduledMessageId, scheduledTimestamp: I.toISOString() }),
+            (await (0, d.Eg)({ scheduledMessageId: t.scheduledMessageId, scheduledTimestamp: f.toISOString() }),
                 (0, c.kb)(),
                 (0, o.closeModal)(A));
         } catch (e) {
@@ -36,8 +36,8 @@ function h(e) {
         onClose: a,
         actions: [
             { variant: "secondary", text: E.intl.string(E.t["ETE/oC"]), onClick: a },
-            { variant: "primary", text: E.intl.string(E.t.VZANAD), onClick: g, loading: p, disabled: null != m },
+            { variant: "primary", text: E.intl.string(E.t.VZANAD), onClick: m, loading: p, disabled: null != g },
         ],
-        children: (0, i.jsx)(_.A, { defaultValue: h, onChange: f, scheduledMessageId: t.scheduledMessageId }),
+        children: (0, i.jsx)(_.A, { defaultValue: h, onChange: I, scheduledMessageId: t.scheduledMessageId }),
     });
 }

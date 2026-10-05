@@ -1,9 +1,9 @@
 n.d(t, {
     EW: () => y,
     Go: () => O,
-    Gr: () => m,
-    RE: () => g,
-    VQ: () => f,
+    Gr: () => g,
+    RE: () => m,
+    VQ: () => I,
     XQ: () => S,
     a: () => L,
     e$: () => C,
@@ -25,11 +25,11 @@ var i = n(636537),
     E = n(814390),
     A = n(652215),
     h = n(202541),
-    I = n(375708);
-function f() {
+    f = n(375708);
+function I() {
     (_._.dispatch(A.jej.SHAKE_PROFILE_MODAL),
         _._.dispatch(A.jej.EMPHASIZE_NOTICE),
-        r.O.announce(`${I.intl.string(I.t.GP7JLE)} ${I.intl.string(I.t.gKoO1D)}`));
+        r.O.announce(`${f.intl.string(f.t.GP7JLE)} ${f.intl.string(f.t.gKoO1D)}`));
 }
 function p(e) {
     u.default.track(A.HAw.PREMIUM_FEATURE_TRY_OUT, { feature_name: e, feature_tier: h.tz.PREMIUM_STANDARD });
@@ -59,11 +59,11 @@ async function T(e, t, n) {
         return (a.h.dispatch({ type: "USER_PROFILE_UPDATE_FAILURE", guildId: t, errors: n, apiError: e }), i);
     }
 }
-function m(e, t) {
+function g(e, t) {
     let n = c.default.getCurrentUser()?.id;
     null != n && a.h.dispatch({ type: "USER_PROFILE_PIN_BADGES_ON_CLIENT", badges: e, ttlInSeconds: t, userId: n });
 }
-function g() {
+function m() {
     a.h.dispatch({ type: "USER_PROFILE_SETTINGS_RESET_PENDING_PROFILE_CHANGES" });
 }
 function S() {

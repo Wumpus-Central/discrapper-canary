@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var i = n(17928),
     r = n(73153),
     a = n(998218),
@@ -64,7 +64,7 @@ class h extends i.Ay.Store {
         return null == i ? n : (i.searchParams.set("size", t.size.toString()), i.toString());
     }
 }
-let I = new h(r.h, {
+let f = new h(r.h, {
     LOGOUT: function () {
         ((l = new Map()), (o = new Set()), (d = new Set()), (c = new Set()));
     },

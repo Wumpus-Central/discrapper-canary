@@ -12,8 +12,8 @@ var i = n(582128),
     E = n(166403),
     A = n(469778),
     h = n(739508),
-    I = n(158045),
-    f = n(652215),
+    f = n(158045),
+    I = n(652215),
     p = n(202541);
 function T(e) {
     let {
@@ -51,23 +51,23 @@ function T(e) {
     }
     let _ = u[0] ?? null,
         E = p.xc.NONE;
-    null != _ && (E = null != s && s.status === f.Dmq.PAUSED ? p.xc.FP_SUB_PAUSED : p.xc.FP_ONLY);
-    let A = d && _?.sourceType === f.GD.REVERSE_TRIAL;
+    null != _ && (E = null != s && s.status === I.Dmq.PAUSED ? p.xc.FP_SUB_PAUSED : p.xc.FP_ONLY);
+    let A = d && _?.sourceType === I.GD.REVERSE_TRIAL;
     return {
         isFractionalPremiumActive: null != _,
         fractionalState: E,
         startsAt: null != _ ? o()(_.startsAt) : o()(0),
-        endsAt: null != _ ? o()((0, I._e)(_.endsAt, i, void 0, A)) : o()(0),
+        endsAt: null != _ ? o()((0, f._e)(_.endsAt, i, void 0, A)) : o()(0),
         currentEntitlementId: null != _ ? _.id : "",
         currentEntitlementEndsAt: null != _ ? o()(_.endsAt) : o()(0),
         unactivatedUnits: i,
         fetched: l,
     };
 }
-function m(e, t) {
+function g(e, t) {
     return null != t && !A.A.fetchingAllEntitlements && (!A.A.fetchedAllEntitlements || e);
 }
-function g(e) {
+function m(e) {
     return null != e && !A.A.applicationIdsFetching.has(p.tv) && !A.A.applicationIdsFetched.has(p.tv);
 }
 function S() {
@@ -83,9 +83,9 @@ function S() {
         l = (0, d.bG)([A.A], () => A.A.fetchedAllEntitlements),
         o = (0, d.yK)([A.A], () => A.A.getUnactivatedFractionalPremiumUnits()),
         h = (0, d.bG)([E.A], () => E.A.getPremiumTypeSubscription()),
-        [I, S] = i.useState(
+        [f, S] = i.useState(
             T({
-                isFetching: m(e, r) || A.A.fetchingAllEntitlements || g(r) || A.A.applicationIdsFetching.has(p.tv),
+                isFetching: g(e, r) || A.A.fetchingAllEntitlements || m(r) || A.A.applicationIdsFetching.has(p.tv),
                 entitlements: a,
                 unactivatedFractionalPremiumUnits: o,
                 currentUser: r,
@@ -96,7 +96,7 @@ function S() {
         );
     return (
         (0, u.Ay)(() => {
-            (m(e, r) && (0, c.qw)({ entitlementType: f.zF_.FRACTIONAL_REDEMPTION }), g(r) && (0, c.LM)(p.tv));
+            (g(e, r) && (0, c.qw)({ entitlementType: I.zF_.FRACTIONAL_REDEMPTION }), m(r) && (0, c.LM)(p.tv));
         }),
         i.useEffect(() => {
             let e = T({
@@ -109,6 +109,6 @@ function S() {
             });
             S((t) => ((0, s.isEqual)(t, e) ? t : e));
         }, [r, a, h, o, l, n]),
-        I
+        f
     );
 }

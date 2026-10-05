@@ -1,12 +1,12 @@
 n.d(t, {
     Kv: () => T,
-    M9: () => I,
-    MC: () => f,
+    M9: () => f,
+    MC: () => I,
     Ot: () => E,
     UW: () => A,
     Ub: () => h,
-    Wl: () => m,
-    YP: () => g,
+    Wl: () => g,
+    YP: () => m,
     jR: () => u,
     kc: () => _,
     uk: () => p,
@@ -115,10 +115,10 @@ function h(e) {
             (0, s.xb)(e);
     }
 }
-function I(e) {
+function f(e) {
     return null == e || Date.now() - e > o.WV;
 }
-function f(e) {
+function I(e) {
     return {
         id: e.id,
         name: e.name,
@@ -159,7 +159,7 @@ function T() {
         n = e.locale;
     return (t.find((e) => e.code === n) ?? t[0]).code;
 }
-async function m(e) {
+async function g(e) {
     let { loadId: t, guildId: n, index: i, categoryId: r, analyticsLocation: s, options: o } = e,
         c = { ...o, loadId: t };
     (await l.Z2(n, s, c),
@@ -171,6 +171,6 @@ async function m(e) {
             location: s,
         }));
 }
-function g() {
+function m() {
     return (0, i.A)().replace(/-/g, "");
 }

@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(734057),
     r = n(536802);
 let a = new Set(),
@@ -44,7 +44,7 @@ function h(e) {
     let { messageRequestChannelIds: t } = e;
     t.forEach((e) => a.add(e));
 }
-class I extends r.A {
+class f extends r.A {
     static displayName = "MessageRequestStore";
     static LATEST_SNAPSHOT_VERSION = 1;
     constructor() {
@@ -63,11 +63,11 @@ class I extends r.A {
         this.waitFor(i.A);
     }
     loadCache() {
-        let e = this.readSnapshot(I.LATEST_SNAPSHOT_VERSION);
+        let e = this.readSnapshot(f.LATEST_SNAPSHOT_VERSION);
         null != e && (a = new Set(e));
     }
     takeSnapshot() {
-        return { version: I.LATEST_SNAPSHOT_VERSION, data: Array.from(a) };
+        return { version: f.LATEST_SNAPSHOT_VERSION, data: Array.from(a) };
     }
     getMessageRequestChannelIds() {
         return a;
@@ -85,4 +85,4 @@ class I extends r.A {
         return l;
     }
 }
-let f = new I();
+let I = new f();

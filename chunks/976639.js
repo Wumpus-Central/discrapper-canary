@@ -1,4 +1,4 @@
-(n.d(t, { A: () => m }), n(938796));
+(n.d(t, { A: () => g }), n(938796));
 var i = n(477900);
 n(582128);
 var r = n(665260),
@@ -13,8 +13,8 @@ var r = n(665260),
     E = n(701785),
     A = n(374084),
     h = n(65995),
-    I = n(473529),
-    f = n(978165),
+    f = n(473529),
+    I = n(978165),
     p = n(340837);
 class T extends s.A {
     onboardingCompleteGuilds = new Set();
@@ -84,18 +84,18 @@ class T extends s.A {
         i?.[t] !== !0 && null != r && r.actionType === A.NewMemberActionTypes.CHAT && (0, _.eC)(e, t);
     };
     _getOrLoadOnboardingMemberActions = async (e) => {
-        let t = (0, I.K)(e),
+        let t = (0, f.K)(e),
             n = l.A.isFullServerPreview(e);
         if (!t && !n) return {};
         let i = c.Ay.getSelfMember(e);
-        if (null == i || !(0, f.j)(e)) return {};
+        if (null == i || !(0, I.j)(e)) return {};
         let [r, a] = await Promise.all([this._getOrLoadOnboardingHomeSettings(e), this._getOrLoadMemberActions(e, i)]);
         return { memberActions: r, completedActions: a };
     };
     _getOrLoadOnboardingHomeSettings = async (e) => {
         let t = E.h.getNewMemberActions(e),
             n = E.h.getIsLoading(e);
-        if (!(null == t && !n && (0, f.j)(e))) return t;
+        if (!(null == t && !n && (0, I.j)(e))) return t;
         {
             let t = await (0, _.ag)(e);
             return t?.newMemberActions;
@@ -106,4 +106,4 @@ class T extends s.A {
         return null == n && !i && (0, r.Lt)(t.flags ?? 0, p.D.STARTED_HOME_ACTIONS) ? await (0, _.aW)(e) : n;
     };
 }
-let m = new T();
+let g = new T();

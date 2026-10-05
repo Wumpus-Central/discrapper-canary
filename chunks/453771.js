@@ -1,4 +1,4 @@
-n.d(t, { Aw: () => N, GD: () => T, Hb: () => m, Iu: () => C, TX: () => p, VE: () => I, o2: () => S, ww: () => h });
+n.d(t, { Aw: () => N, GD: () => T, Hb: () => g, Iu: () => C, TX: () => p, VE: () => f, o2: () => S, ww: () => h });
 var i = n(796873),
     r = n.n(i),
     a = n(435558),
@@ -12,12 +12,12 @@ var i = n(796873),
     E = n(202541),
     A = n(375708);
 function h(e, t) {
-    return e instanceof File ? e : I(e.data.buffer, e.filename, t ?? "text/plain");
+    return e instanceof File ? e : f(e.data.buffer, e.filename, t ?? "text/plain");
 }
-function I(e, t, n) {
+function f(e, t, n) {
     return new File([e], t, { type: n });
 }
-let f = [
+let I = [
     { reType: /^image\/vnd.adobe.photoshop/, klass: "photoshop" },
     { reType: /^image\/svg\+xml/, klass: "webcode" },
     { reType: /^image\//, klass: "image" },
@@ -41,15 +41,15 @@ function p(e) {
 }
 function T(e, t) {
     e = e?.toLowerCase() ?? "";
-    let n = s().find(f, (n) =>
+    let n = s().find(I, (n) =>
         null != n.reType && null != t ? n.reType.test(t) : null != n.reName && "" !== e && n.reName.test(e),
     );
     return null != n ? n.klass : "unknown";
 }
-function m(e) {
+function g(e) {
     return r().filesize(e);
 }
-let g = [
+let m = [
     [_.GuildFeatures.MAX_FILE_SIZE_100_MB, E.w6],
     [_.GuildFeatures.MAX_FILE_SIZE_50_MB, E.eZ],
 ];
@@ -60,7 +60,7 @@ function S(e) {
     let i = l.A.getGuild(e);
     return Math.max(
         null != i
-            ? g.reduce((e, t) => {
+            ? m.reduce((e, t) => {
                   let [n, r] = t;
                   return i.features.has(n) && r > e ? r : e;
               }, _.TbF)

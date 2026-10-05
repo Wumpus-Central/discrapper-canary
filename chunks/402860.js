@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { openUserProfileModal: () => f }));
+(n.r(t), n.d(t, { openUserProfileModal: () => I }));
 var i = n(778712),
     r = n(73153),
     a = n(803306),
@@ -17,7 +17,7 @@ let _ = (0, n(945810).mj)({
 var E = n(903209);
 let A = (0, i.FT)(i._3.SIZE_120),
     h = new c.A("UserProfileModalActionCreators");
-async function I(e) {
+async function f(e) {
     try {
         await (function (e) {
             if (o.A.isFetchingUserOutbox(e)) return;
@@ -28,7 +28,7 @@ async function I(e) {
         h.log(`Failed to fetch content inventory outbox for ${e}:`, t);
     }
 }
-async function f(e) {
+async function I(e) {
     let {
             userId: t,
             guildId: n,
@@ -38,17 +38,17 @@ async function f(e) {
             roleId: o,
             sessionId: d,
             joinRequestId: c,
-            tabSection: f,
+            tabSection: I,
             scrollTarget: p,
             hideRestrictedProfile: T,
-            sourceAnalyticsLocations: m,
-            appContext: g,
+            sourceAnalyticsLocations: g,
+            appContext: m,
             customStatusPrompt: S = null,
             onModalOpen: N,
         } = e,
         C = Date.now(),
         O = u.default.getUser(t);
-    if ((I(t), null == O))
+    if ((f(t), null == O))
         try {
             await (0, a.eO)(t, {
                 type: "modal",
@@ -94,11 +94,11 @@ async function f(e) {
         sessionId: d ?? void 0,
         openedAt: C,
         customStatusPrompt: S,
-        tabSection: f,
+        tabSection: I,
         scrollTarget: p,
         hideRestrictedProfile: T,
-        sourceAnalyticsLocations: m,
-        appContext: g,
+        sourceAnalyticsLocations: g,
+        appContext: m,
         onModalOpen: N,
     });
 }

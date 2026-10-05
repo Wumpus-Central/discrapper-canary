@@ -1,6 +1,6 @@
 (n.d(t, {
     $Y: () => S,
-    A2: () => m,
+    A2: () => g,
     G4: () => D,
     H_: () => G,
     L1: () => N,
@@ -9,7 +9,7 @@
     VU: () => L,
     _N: () => O,
     a: () => U,
-    rs: () => g,
+    rs: () => m,
     sZ: () => y,
     tb: () => P,
     ui: () => b,
@@ -30,30 +30,30 @@ var i = n(665260),
     E = n(488926),
     A = n(240248),
     h = n(112389),
-    I = n(539916),
-    f = n(652215),
+    f = n(539916),
+    I = n(652215),
     p = n(340837);
 let T = new Date(16824888e5);
-function m(e) {
+function g(e) {
     return (0, r.bG)([c.A, u.A], () => {
         let t = c.A.getGuild(e),
-            n = !!t?.features.has(f.GuildFeatures.COMMUNITY),
-            i = u.A.can(f.xBc.MANAGE_GUILD, t),
-            r = u.A.can(f.xBc.MANAGE_ROLES, t);
+            n = !!t?.features.has(I.GuildFeatures.COMMUNITY),
+            i = u.A.can(I.xBc.MANAGE_GUILD, t),
+            r = u.A.can(I.xBc.MANAGE_ROLES, t);
         return n && i && r;
     });
 }
-function g(e) {
+function m(e) {
     let t = c.A.getGuild(e),
-        n = !!t?.features.has(f.GuildFeatures.COMMUNITY),
-        i = u.A.can(f.xBc.MANAGE_GUILD, t),
-        r = u.A.can(f.xBc.MANAGE_ROLES, t);
+        n = !!t?.features.has(I.GuildFeatures.COMMUNITY),
+        i = u.A.can(I.xBc.MANAGE_GUILD, t),
+        r = u.A.can(I.xBc.MANAGE_ROLES, t);
     return n && i && r;
 }
 function S(e, t) {
     if (
         null == e ||
-        !e.features.has(f.GuildFeatures.GUILD_ONBOARDING) ||
+        !e.features.has(I.GuildFeatures.GUILD_ONBOARDING) ||
         null == t ||
         null == t.joinedAt ||
         new Date(t.joinedAt) < T
@@ -66,8 +66,8 @@ function N(e, t) {
     return (
         !(
             null != e &&
-            e.features.has(f.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
-            e.features.has(f.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)
+            e.features.has(I.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
+            e.features.has(I.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)
         ) && null != t
     );
 }
@@ -114,7 +114,7 @@ function y(e) {
     return (
         null != e &&
         !!(0, h.S)(e.guild_id, e.id) &&
-        (e.isForumChannel() ? E.MJ(f.xBc.SEND_MESSAGES_IN_THREADS, e) : E.MJ(f.xBc.SEND_MESSAGES, e))
+        (e.isForumChannel() ? E.MJ(I.xBc.SEND_MESSAGES_IN_THREADS, e) : E.MJ(I.xBc.SEND_MESSAGES, e))
     );
 }
 function D(e, t, n) {
@@ -208,7 +208,7 @@ function w(e) {
     );
 }
 function G(e) {
-    let t = e.filter((e) => e.connection_type === I.wZ.PROVIDER_CONNECTED_ACCOUNT && !!e.provider_id),
+    let t = e.filter((e) => e.connection_type === f.wZ.PROVIDER_CONNECTED_ACCOUNT && !!e.provider_id),
         n = [],
         i = [];
     return (
@@ -222,7 +222,7 @@ function G(e) {
     );
 }
 function x(e) {
-    let t = e.filter((e) => e.connection_type === I.wZ.APPLICATION && !!e.application_id),
+    let t = e.filter((e) => e.connection_type === f.wZ.APPLICATION && !!e.application_id),
         i = [],
         r = [],
         a = n(733110).default,

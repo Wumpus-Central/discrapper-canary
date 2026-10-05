@@ -27,14 +27,14 @@ function E(e) {
 }
 let A = new Map();
 function h(e, t, n) {
-    let { baseCode: c, targetChannelId: u, targetMessageId: h, guildScheduledEventId: I } = (0, d.y$)(e);
+    let { baseCode: c, targetChannelId: u, targetMessageId: h, guildScheduledEventId: f } = (0, d.y$)(e);
     if ((l.default.track(_.HAw.INVITE_OPENED, { invite_code: c, invite_instance_id: n?.inviteInstanceId }), A.has(e)))
         return A.get(e);
-    let f = {
+    let I = {
             inputValue: n?.inputValue,
             with_counts: !0,
             with_expiration: !0,
-            guild_scheduled_event_id: I,
+            guild_scheduled_event_id: f,
             target_channel_id: u,
             target_message_id: h,
             with_permissions: !0,
@@ -43,7 +43,7 @@ function h(e, t, n) {
         },
         p = o.A.get({
             url: _.Rsh.INVITE(c),
-            query: f,
+            query: I,
             oldFormErrors: !0,
             trackedActionData: {
                 event: i.NetworkActionNames.INVITE_RESOLVE,

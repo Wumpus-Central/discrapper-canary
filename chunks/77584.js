@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -36,7 +36,7 @@ class h extends s.A {
         (super(), (this.handleShowUrgentMessageAlert = e));
     }
 }
-let I = new h(() =>
+let f = new h(() =>
     (0, r.openModalLazy)(
         async () => {
             let { default: e } = await Promise.all([n.e("454048"), n.e("689913"), n.e("136724")]).then(

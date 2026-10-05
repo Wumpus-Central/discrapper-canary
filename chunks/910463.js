@@ -16,7 +16,7 @@ function _(e) {
     if (!n?.is_campaign_ias_enabled || !t || void 0 === _ || void 0 === E) return null;
     let A = o.A.getGuildId(),
         h = null != A ? s.A.getGuild(A) : null,
-        I = {
+        f = {
             guilds: (function () {
                 if (void 0 === _) return [];
                 let e = _(),
@@ -47,16 +47,16 @@ function _(e) {
                           })
                           .filter((e) => null !== e),
         };
-    null != A && (I.selected_guild_id = A);
-    let f =
+    null != A && (f.selected_guild_id = A);
+    let I =
         h?.banner !== null && h?.banner !== void 0
             ? (c.Ay.getGuildBannerURL({ id: h.id, banner: h.banner }, !0) ?? null)
             : null;
     return (
-        null !== f && (I.selected_guild_banner_url = f),
-        I.guilds.length > 100 && ((I.guilds = I.guilds.slice(0, 100)), (I.truncated = !0)),
-        I.channels.length > 100 && ((I.channels = I.channels.slice(0, 100)), (I.truncated = !0)),
-        { brand_safety_context: JSON.stringify(I) }
+        null !== I && (f.selected_guild_banner_url = I),
+        f.guilds.length > 100 && ((f.guilds = f.guilds.slice(0, 100)), (f.truncated = !0)),
+        f.channels.length > 100 && ((f.channels = f.channels.slice(0, 100)), (f.truncated = !0)),
+        { brand_safety_context: JSON.stringify(f) }
     );
 }
 n(23766);

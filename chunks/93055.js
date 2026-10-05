@@ -1,4 +1,4 @@
-(n.d(t, { DZ: () => p, TW: () => A, ad: () => h, e4: () => T, ft: () => I, m_: () => f }), n(321073), n(97378));
+(n.d(t, { DZ: () => p, TW: () => A, ad: () => h, e4: () => T, ft: () => f, m_: () => I }), n(321073), n(97378));
 var i = n(17928),
     r = n(873298),
     a = n(967198),
@@ -37,12 +37,12 @@ function h() {
         isPremiumTier2: l.Ay.isPremiumExactly(s.default.getCurrentUser(), _.PremiumTypes.TIER_2),
     });
 }
-function I() {
+function f() {
     let { canUpsellFavoriteLimit: e, favoriteLimit: t } = A("useFavoritesLimitUpsell"),
         n = (0, i.bG)([o.A], () => o.A.getFavoritesCountAgainstLimit());
     return { shouldShowUpsell: e && !__OVERLAY__, favoriteCount: n, favoriteLimit: t, isAtLimit: t > 0 && n >= t };
 }
-function f() {
+function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : o.A.getFavoriteChannels(),
         t = [{ id: null, name: "" }];
     for (let n in e) {

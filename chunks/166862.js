@@ -30,11 +30,11 @@ function A() {
     return (c.clear(), u.clear(), !0);
 }
 let h = (0, l.isDesktop)();
-function I(e) {
+function f(e) {
     let { channelId: t, command: n } = e;
-    f(t, n?.id);
+    I(t, n?.id);
 }
-function f(e, t) {
+function I(e, t) {
     let n = o.A.getActiveOptionName(e),
         i = u.get(e);
     return (
@@ -116,10 +116,10 @@ let T = new p(r.h, {
                     return { displayName: n ?? i, name: i, value: (t = l ? Number(t) : t) };
                 }) ?? [],
             A = _.get(n),
-            I = null != A ? new Date().getTime() - A.getTime() : 0;
+            f = null != A ? new Date().getTime() - A.getTime() : 0;
         return (
             (0, s.zV)(d.HAw.APPLICATION_COMMAND_OPTION_STRING_AUTOCOMPLETE_PERFORMANCE, {
-                duration_ms: I,
+                duration_ms: f,
                 error: !1,
                 num_options: u.length,
             }),
@@ -146,10 +146,10 @@ let T = new p(r.h, {
             !0
         );
     },
-    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: I,
-    APP_LAUNCHER_SET_ACTIVE_COMMAND: I,
+    APPLICATION_COMMAND_SET_ACTIVE_COMMAND: f,
+    APP_LAUNCHER_SET_ACTIVE_COMMAND: f,
     APPLICATION_COMMAND_UPDATE_CHANNEL_STATE: function (e) {
         let { channelId: t, command: n } = e;
-        f(t, n?.id);
+        I(t, n?.id);
     },
 });

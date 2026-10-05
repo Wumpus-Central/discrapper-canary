@@ -12,12 +12,12 @@ var i = n(435558),
     E = n(287809),
     A = n(174459),
     h = n(824744),
-    I = n(935208),
-    f = n(699840),
+    f = n(935208),
+    I = n(699840),
     p = n(125831),
     T = n(980504),
-    m = n(652215),
-    g = n(355097);
+    g = n(652215),
+    m = n(355097);
 let S = new Map(),
     N = new Map(),
     C = new Map(),
@@ -56,7 +56,7 @@ let x = r().debounce((e) => {
         c.dG.updateSetting({ volume: e });
     }, 1e3),
     k = r().debounce((e, t) => {
-        A.default.track(m.HAw.UPDATE_SOUNDBOARD_SETTINGS, {
+        A.default.track(g.HAw.UPDATE_SOUNDBOARD_SETTINGS, {
             volume: Math.round((0, h.M)(e)),
             location_stack: t,
             voice_guild_id: _.A.getGuildId() ?? null,
@@ -123,7 +123,7 @@ class V extends l.Ay.Store {
         return y.has(e) || D.has(e);
     }
     getFavorites() {
-        let { allowReordering: e } = f.q.getConfig({ location: "SoundboardStore" });
+        let { allowReordering: e } = I.q.getConfig({ location: "SoundboardStore" });
         return e ? D : y;
     }
     getFrequentlyUsedSoundIds() {
@@ -216,7 +216,7 @@ let H = new V(o.h, {
         let { settings: t, wasSaved: n } = e,
             { type: i, proto: a } = t;
         switch (i) {
-            case g.oD.FRECENCY_AND_FAVORITES_SETTINGS:
+            case m.oD.FRECENCY_AND_FAVORITES_SETTINGS:
                 ((y = new Set(a?.favoriteSoundboardSounds?.soundIds ?? [])),
                     (D = new Set(a?.favoriteSoundboardSounds?.orderedSoundIds ?? [])),
                     n && (P = []),
@@ -229,7 +229,7 @@ let H = new V(o.h, {
                             P,
                         ));
                 break;
-            case g.oD.PRELOADED_USER_SETTINGS:
+            case m.oD.PRELOADED_USER_SETTINGS:
                 (B(a), F());
         }
     },
@@ -258,7 +258,7 @@ let H = new V(o.h, {
     },
     OVERLAY_INITIALIZE: function (e) {
         let { soundboardStoreState: t } = e;
-        ((S = new Map(I.default.entries(t.soundboardSounds))),
+        ((S = new Map(f.default.entries(t.soundboardSounds))),
             (y = new Set(t.favoritedSoundIds)),
             (D = new Set(t.orderedFavoritedSoundIds)),
             (O = new Set(t.localSoundboardMutes)));

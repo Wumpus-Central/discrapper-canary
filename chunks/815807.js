@@ -1,12 +1,12 @@
 n.d(t, {
     IN: () => E,
     b3: () => u,
-    i6: () => I,
+    i6: () => f,
     is: () => h,
     jq: () => A,
     mb: () => _,
     n4: () => T,
-    sn: () => f,
+    sn: () => I,
     vp: () => p,
 });
 var i = n(7584),
@@ -40,14 +40,14 @@ function A(e) {
 function h(e) {
     return null != e && "" !== e && ("number" == typeof e ? 0 !== e : "0" !== String(e));
 }
-function I(e, t) {
+function f(e, t) {
     if (null != t.id) {
         let n = null != e.id ? `${e.id}` : e.id;
         return `${t.id}` === n;
     }
     return null == e.id && t.name === e.name;
 }
-function f(e) {
+function I(e) {
     return e.isThread()
         ? o.JJy.THREAD_TEXT_AREA
         : e.isForumPost()

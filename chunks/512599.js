@@ -1,4 +1,4 @@
-n.d(t, { O9: () => I, iq: () => T, Nu: () => p, oG: () => f });
+n.d(t, { O9: () => f, iq: () => T, Nu: () => p, oG: () => I });
 var i = n(73153),
     r = n(280450),
     a = n(3137),
@@ -67,10 +67,10 @@ let h = o().throttle((e) => {
         confetti_enabled_locations: A(h, E),
     });
 }, 5e3);
-function I(e) {
+function f(e) {
     (i.h.dispatch({ type: "POGGERMODE_SETTINGS_UPDATE", settings: e }), h({ ...a.A.getState(), ...e }));
 }
-function f(e) {
+function I(e) {
     i.h.dispatch({ type: "POGGERMODE_UPDATE_COMBO", ...e });
 }
 function p(e) {

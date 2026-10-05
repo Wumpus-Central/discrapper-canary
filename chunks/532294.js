@@ -13,8 +13,8 @@ var d = n(941426),
 let E = new d.Vy("LegacyOverlayLogger"),
     A = null,
     h = !1,
-    I = null,
-    f = {
+    f = null,
+    I = {
         log: console.log.bind(console),
         info: console.info.bind(console),
         warn: console.warn.bind(console),
@@ -50,7 +50,7 @@ async function T(e, t) {
             3 === p && E.error("Too many RPC send failures, suppressing further error logs"));
     }
 }
-function m(e) {
+function g(e) {
     if (0 === e.length) return e;
     let t = [];
     for (let n = 0; n < e.length; n++) {
@@ -64,7 +64,7 @@ function m(e) {
     }
     return t;
 }
-function g(e) {
+function m(e) {
     if (null === e) return "null";
     if (void 0 === e) return "undefined";
     if ("string" == typeof e) return e;
@@ -132,7 +132,7 @@ function V(e) {
 __OVERLAY__ &&
     (function (e) {
         if (__OVERLAY__) {
-            if (h) return f.warn("Overlay logger already set up, skipping duplicate setup");
+            if (h) return I.warn("Overlay logger already set up, skipping duplicate setup");
             ((h = !0),
                 (A = {
                     log: (t, n) => T({ level: "log", message: t, context: n }, e),
@@ -143,46 +143,46 @@ __OVERLAY__ &&
                 }).info("Overlay logger initialized"),
                 (console.log = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    if ((f.log(...t), null != A))
+                    if ((I.log(...t), null != A))
                         try {
-                            let e = m(t)
-                                .map((e) => g(e))
+                            let e = g(t)
+                                .map((e) => m(e))
                                 .join(" ");
                             A.log(e);
                         } catch (e) {
-                            f.error("[Logger Error]", e);
+                            I.error("[Logger Error]", e);
                         }
                 }),
                 (console.info = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    if ((f.info(...t), null != A))
+                    if ((I.info(...t), null != A))
                         try {
-                            let e = m(t)
-                                .map((e) => g(e))
+                            let e = g(t)
+                                .map((e) => m(e))
                                 .join(" ");
                             A.info(e);
                         } catch (e) {
-                            f.error("[Logger Error]", e);
+                            I.error("[Logger Error]", e);
                         }
                 }),
                 (console.warn = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    if ((f.warn(...t), null != A))
+                    if ((I.warn(...t), null != A))
                         try {
-                            let e = m(t)
-                                .map((e) => g(e))
+                            let e = g(t)
+                                .map((e) => m(e))
                                 .join(" ");
                             A.warn(e);
                         } catch (e) {
-                            f.error("[Logger Error]", e);
+                            I.error("[Logger Error]", e);
                         }
                 }),
                 (console.error = function () {
                     for (var e = arguments.length, t = Array(e), n = 0; n < e; n++) t[n] = arguments[n];
-                    if ((f.error(...t), null != A))
+                    if ((I.error(...t), null != A))
                         try {
-                            let e = m(t)
-                                .map((e) => g(e))
+                            let e = g(t)
+                                .map((e) => m(e))
                                 .join(" ");
                             A.error(e);
                         } catch (e) {}
@@ -211,7 +211,7 @@ __OVERLAY__ &&
                                             : null,
                                     });
                             } catch (t) {
-                                f.error("[Failed to log error]", t, e);
+                                I.error("[Failed to log error]", t, e);
                             }
                     },
                     !0,
@@ -228,7 +228,7 @@ __OVERLAY__ &&
                                   (n = { reason: e.reason })),
                                 A.crash(t, n));
                         } catch (t) {
-                            f.error("[Failed to log rejection]", t, e);
+                            I.error("[Failed to log rejection]", t, e);
                         }
                 }),
                 window.addEventListener("securitypolicyviolation", (e) => {
@@ -243,13 +243,13 @@ __OVERLAY__ &&
                                 columnNumber: e.columnNumber,
                             });
                         } catch (t) {
-                            f.error("[Failed to log security violation]", t, e);
+                            I.error("[Failed to log security violation]", t, e);
                         }
                 }),
                 window.addEventListener("beforeunload", () => {
-                    (null != A && A.info("Overlay unloading"), null != I && clearInterval(I));
+                    (null != A && A.info("Overlay unloading"), null != f && clearInterval(f));
                 }),
-                (I = window.setInterval(() => {
+                (f = window.setInterval(() => {
                     if (null != A)
                         try {
                             A.log("Heartbeat", {
@@ -262,10 +262,10 @@ __OVERLAY__ &&
                                     : void 0,
                             });
                         } catch (e) {
-                            f.error("[Heartbeat Error]", e);
+                            I.error("[Heartbeat Error]", e);
                         }
                 }, 1e4)),
-                f.log("Overlay error handlers and console interception set up"));
+                I.log("Overlay error handlers and console interception set up"));
         }
     })((0, u.getRPCAuthToken)());
 let H = { ...b },

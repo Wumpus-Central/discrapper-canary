@@ -24,13 +24,13 @@ function A(e) {
     if (null == E) return;
     let A = (0, s.m)(n, t),
         { startTime: h } = (0, l.YR)(E, n),
-        I = E?.scheduled_start_time != null ? (0, o.j)(A, h, new Date(E?.scheduled_start_time)) : null,
-        f = null != I && d.lV.has(I) ? null : (n ?? (0, o.G3)(E)),
+        f = E?.scheduled_start_time != null ? (0, o.j)(A, h, new Date(E?.scheduled_start_time)) : null,
+        I = null != f && d.lV.has(f) ? null : (n ?? (0, o.G3)(E)),
         p = u(E.id),
-        T = u(E.id, f);
-    null == f
+        T = u(E.id, I);
+    null == I
         ? (r(t, null, i, null != p ? d.Qi.UNINTERESTED : d.Qi.INTERESTED), _?.())
         : null != T
-          ? (r(t, f, i, null != p ? d.Qi.INTERESTED : d.Qi.UNINTERESTED), _?.())
-          : c(E, f);
+          ? (r(t, I, i, null != p ? d.Qi.INTERESTED : d.Qi.UNINTERESTED), _?.())
+          : c(E, I);
 }

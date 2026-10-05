@@ -2,9 +2,9 @@
     A4: () => er,
     Ay: () => et,
     ON: () => ei,
-    RF: () => eI,
+    RF: () => ef,
     SD: () => en,
-    Sx: () => ef,
+    Sx: () => eI,
     XC: () => ea,
     ZA: () => el,
     Zn: () => X,
@@ -24,12 +24,12 @@ var i = n(582128),
     E = n(630248),
     A = n(626584),
     h = n(200662),
-    I = n(773669),
-    f = n(594061),
+    f = n(773669),
+    I = n(594061),
     p = n(280450),
     T = n(734057),
-    m = n(696451),
-    g = n(71393),
+    g = n(696451),
+    m = n(71393),
     S = n(287809),
     N = n(174459),
     C = n(917012),
@@ -193,14 +193,14 @@ class J extends d.Ay.Store {
     indices = {};
     applicationIndices = new Map();
     applicationIndicesVersion = 0;
-    oldLocale = I.default.locale;
-    collator = new Intl.Collator(I.default.locale, H);
+    oldLocale = f.default.locale;
+    collator = new Intl.Collator(f.default.locale, H);
     initialize() {
-        (this.waitFor(I.default),
-            this.waitFor(R.Ay, E.A, p.default, T.A, m.Ay, g.A, S.default),
-            this.syncWith([I.default], () => {
+        (this.waitFor(f.default),
+            this.waitFor(R.Ay, E.A, p.default, T.A, g.Ay, m.A, S.default),
+            this.syncWith([f.default], () => {
                 let e;
-                (e = I.default.locale) !== ee.oldLocale &&
+                (e = f.default.locale) !== ee.oldLocale &&
                     (z(),
                     (ee.collator = new Intl.Collator(e, { sensitivity: "accent", numeric: !0 })),
                     (ee.oldLocale = e));
@@ -517,14 +517,14 @@ function eo(e) {
             installOnDemand: A = !1,
         } = e,
         { commandTypes: h } = t,
-        I = a?.toLowerCase(),
-        p = I?.split(" "),
+        f = a?.toLowerCase(),
+        p = f?.split(" "),
         T = s === y.n.ONLY_TEXT,
-        m = s !== y.n.DENY ? (0, C.Ez)(h, !0, T) : [],
+        g = s !== y.n.DENY ? (0, C.Ez)(h, !0, T) : [],
         S = [],
         N = {
             permissionContext: t,
-            query: I,
+            query: f,
             splitQuery: p,
             allowEmptySections: c,
             scoreMethod: u,
@@ -580,7 +580,7 @@ function eo(e) {
         null != d && S.push(d);
     }
     if (
-        (_.applications.useFrecency && f.bW.loadIfNecessary(),
+        (_.applications.useFrecency && I.bW.loadIfNecessary(),
         S.sort((e, t) => {
             if (_.applications.useScore && u === y.M.APPLICATION_ONLY) {
                 let n = e.data[0]?.score ?? Number.MAX_VALUE,
@@ -594,17 +594,17 @@ function eo(e) {
             }
             return eh(e.section.name, t.section.name);
         }),
-        m.length > 0 || !0 === c)
+        g.length > 0 || !0 === c)
     ) {
-        let e = ed(C.gZ[P.Ik.BUILT_IN], m, !0, !0, N);
+        let e = ed(C.gZ[P.Ik.BUILT_IN], g, !0, !0, N);
         null != e && S.push(e);
     }
     let b = S.flatMap((e) => e.data.map((t) => ({ ...t, section: e.section })));
     if (u === y.M.COMMAND_ONLY || u === y.M.COMMAND_OR_APPLICATION) {
         let e = t.context,
-            n = g.A.getGuild(t?.context?.guild_id),
+            n = m.A.getGuild(t?.context?.guild_id),
             i = S.some((e) => e.section.id !== P.Ik.BUILT_IN && e.data.length > 0);
-        _.commands.useFrecency && i && f.bW.loadIfNecessary();
+        _.commands.useFrecency && i && I.bW.loadIfNecessary();
         let r = null != e ? { channel: e, guild: n } : void 0;
         b.sort((e, t) => {
             if (_.commands.useScore) {
@@ -640,13 +640,13 @@ function ed(e, t, n, i, r) {
             permissionContext: u,
             installOnDemand: _,
         } = r,
-        { context: E, userId: A, roleIds: h, isImpersonating: I } = u,
-        f = E?.guild_id != null ? M.we(e.permissions, E.guild_id, A, h, I) : null,
+        { context: E, userId: A, roleIds: h, isImpersonating: f } = u,
+        I = E?.guild_id != null ? M.we(e.permissions, E.guild_id, A, h, f) : null,
         p = E?.guild_id != null ? M._W(e.permissions, E, E.guild_id) : null,
         T = [];
     for (let r of t)
         M.zl(r, u, {
-            applicationAllowedForUser: f,
+            applicationAllowedForUser: I,
             applicationAllowedForChannel: p,
             commandBotId: e.botId,
             isGuildInstalled: n,
@@ -755,10 +755,10 @@ function eA(e, t) {
 function eh(e, t) {
     return ee.collator.compare(e, t);
 }
-function eI(e, t) {
+function ef(e, t) {
     return eh(e, t);
 }
-function ef(e, t) {
+function eI(e, t) {
     let n, i;
     if (t === P.Ik.BUILT_IN)
         return {

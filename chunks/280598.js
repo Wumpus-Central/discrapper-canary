@@ -12,8 +12,8 @@ var i = n(665260),
     E = n(652215),
     A = n(746080),
     h = n(340837);
-let I = null,
-    f = null;
+let f = null,
+    I = null;
 class p extends r.A {
     actions = {
         GUILD_DELETE: (e) => this.handleGuildDelete(e),
@@ -21,17 +21,17 @@ class p extends r.A {
         POST_CONNECTION_OPEN: (e) => this.handleConnectionOpen(e),
     };
     handleConnectionOpen = (e) => {
-        null != (I = I ?? o.A.getGuildId() ?? null) && this._openOnboardingIfIncomplete(I);
+        null != (f = f ?? o.A.getGuildId() ?? null) && this._openOnboardingIfIncomplete(f);
     };
     handleChannelSelect = (e) => {
         let { guildId: t, channelId: n } = e;
-        if ((I === t && f === n) || ((I = t ?? null), (f = n ?? null), null == I || null == f)) return;
+        if ((f === t && I === n) || ((f = t ?? null), (I = n ?? null), null == f || null == I)) return;
         let i = l.A.getGuild(t);
         (null != i &&
             i.features.has(E.GuildFeatures.COMMUNITY) &&
-            u.A.shouldFetchPrompts(I, 8 * d.A.Millis.HOUR) &&
-            (0, c.Tg)(I),
-            this._openOnboardingIfIncomplete(I, n));
+            u.A.shouldFetchPrompts(f, 8 * d.A.Millis.HOUR) &&
+            (0, c.Tg)(f),
+            this._openOnboardingIfIncomplete(f, n));
     };
     handleGuildDelete = (e) => {
         let { guild: t } = e;

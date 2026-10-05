@@ -12,8 +12,8 @@ var i = n(435558),
     E = n(310031),
     A = n(849077),
     h = n(652215);
-let I = (0, i.throttle)(f, 1500);
-async function f(e) {
+let f = (0, i.throttle)(I, 1500);
+async function I(e) {
     let { preload: t = !1, ...n } = e,
         i = Date.now(),
         l = E.A.getNotifyingChannelIds();
@@ -33,14 +33,14 @@ async function f(e) {
                   }
                   return n;
               })(l),
-        I = o.Ay.getMentions(),
-        f = null != I && I.length > 0 ? I[I.length - 1].id : null,
+        f = o.Ay.getMentions(),
+        I = null != f && f.length > 0 ? f[f.length - 1].id : null,
         p = !1;
     (o.Ay.hasMore || !o.Ay.hasLoadedEver) &&
         !o.Ay.loading &&
         (d.push(
             a.A.fetchRecentMentions({
-                before: f,
+                before: I,
                 limit: h.Ue3,
                 roles: o.Ay.roleFilter,
                 everyone: o.Ay.everyoneFilter,
@@ -78,7 +78,7 @@ let p = {
     loadMoreInbox() {
         let { preload: e = !1, ...t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
         if (!E.A.canLoadMore({ preload: e })) return !1;
-        (r.h.dispatch({ type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START", preload: e }), I({ preload: e, ...t }));
+        (r.h.dispatch({ type: "NOTIFICATIONS_INBOX_LOAD_MORE_INBOX_START", preload: e }), f({ preload: e, ...t }));
     },
     inboxItemClick: function (e) {
         let {
@@ -106,7 +106,7 @@ let p = {
                 ),
             s.A.trackJump(n.id, t.id, A.XU));
         let E = a ? h.gNP : n.guild_id,
-            I = h.BVt.CHANNEL(E, n.id, t.id);
-        u && a ? (0, d.bG)(I) : (0, d.pX)(I);
+            f = h.BVt.CHANNEL(E, n.id, t.id);
+        u && a ? (0, d.bG)(f) : (0, d.pX)(f);
     },
 };

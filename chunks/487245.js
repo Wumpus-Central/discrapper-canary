@@ -12,12 +12,12 @@ var i,
     E = n(604121),
     A = n(140735),
     h = n(331322),
-    I = n(817281),
-    f = n(775602),
+    f = n(817281),
+    I = n(775602),
     p = n(793574),
     T = n(688810),
-    m = n(793943),
-    g = n(915089),
+    g = n(793943),
+    m = n(915089),
     S = n(87719),
     N = n(732280),
     C = n(811611),
@@ -104,33 +104,33 @@ function Z(e) {
         E = (0, B.HX)(w.M.CUSTOM_THEME_ENTRYPOINT_GRADIENT),
         A = (0, F.Ay)(),
         h = (0, x.M)(A) ? z.Xu : z.VO,
-        I = null != c && null != c.colors && c.colors.length > 0,
-        f = (0, d.bG)([V.A], () => V.A.getSavedCustomTheme()),
-        p = I || null != f,
+        f = null != c && null != c.colors && c.colors.length > 0,
+        I = (0, d.bG)([V.A], () => V.A.getSavedCustomTheme()),
+        p = f || null != I,
         T = a.useMemo(() => {
             let e, t;
-            if (I) ((e = c.colors), (t = c.gradientAngle));
+            if (f) ((e = c.colors), (t = c.gradientAngle));
             else {
-                if (null === f) return;
-                ((e = f.colors), (t = f.gradient_angle));
+                if (null === I) return;
+                ((e = I.colors), (t = I.gradient_angle));
             }
             let n = e[0];
             return (
                 e.length > 1 && (n = `linear-gradient(${t}deg, ${e.join(", ")})`),
                 { background: `var(--background-gradient), ${n}` }
             );
-        }, [I, c, f]),
-        m = p ? G.A.unsafe_rawColors.WHITE.css : void 0,
-        g = a.useCallback(() => {
+        }, [f, c, I]),
+        g = p ? G.A.unsafe_rawColors.WHITE.css : void 0,
+        m = a.useCallback(() => {
             (u && _(), i?.());
         }, [u, _, i]);
     return (0, r.jsxs)("div", {
         className: z.fC,
         children: [
             (0, r.jsxs)(H.S4, {
-                onSelect: n ? void 0 : g,
+                onSelect: n ? void 0 : m,
                 isSelected: !1,
-                showSelectionCircle: I,
+                showSelectionCircle: f,
                 size: s,
                 name: $.intl.string(K.default.KSBBpC),
                 className: l()(z.kL, p && h, n && z.r9),
@@ -142,7 +142,7 @@ function Z(e) {
                 children: [
                     !E && !p && (0, r.jsx)(X, {}),
                     (0, r.jsx)("div", { className: z.JU }),
-                    (0, r.jsx)(U.PaintPaletteIcon, { color: m, className: z.vL }),
+                    (0, r.jsx)(U.PaintPaletteIcon, { color: g, className: z.vL }),
                 ],
             }),
             u &&
@@ -251,9 +251,9 @@ function eu(e) {
         [u, _] = (0, d.yK)([P.A], () => [P.A.isPreview, P.A.gradientPreset?.id]),
         [h, S] = a.useState(!1),
         [N, C] = a.useState(-1),
-        O = (0, d.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        O = (0, d.bG)([I.Ay], () => I.Ay.useReducedMotion),
         L = "SETTINGS" === s,
-        y = (0, g.GV)(),
+        y = (0, m.GV)(),
         D = L && u ? y : void 0,
         b = L ? y : void 0;
     function U(e, t) {
@@ -262,10 +262,10 @@ function eu(e) {
             ((0, M.bc)(e.id),
             el({ isPersisted: !u, analyticsLocations: o, themeName: c.ju[e.id] }),
             u && "SETTINGS" === s
-                ? ((n = e), (0, R.GQ)(n.theme), (0, m.nf)(m.HP.CLIENT_THEMES), (0, v.default)())
+                ? ((n = e), (0, R.GQ)(n.theme), (0, g.nf)(g.HP.CLIENT_THEMES), (0, v.default)())
                 : u
                   ? (0, R.GQ)(e.theme)
-                  : (0, I.u_)({ backgroundGradientPresetId: e.id, theme: e.theme }, l),
+                  : (0, f.u_)({ backgroundGradientPresetId: e.id, theme: e.theme }, l),
             null != t)
         ) {
             if ((h && S(!1), t <= N || 0 === t)) return void C(0);
@@ -284,8 +284,8 @@ function eu(e) {
                     isDisabled: t,
                     ariaDescribedBy: b,
                     onSelect: () => {
-                        ((0, m.nf)(m.HP.CUSTOM_THEME, {
-                            from: "SETTINGS" === s ? m.xv.SETTING : m.xv.CLIENT_THEMES_EDITOR,
+                        ((0, g.nf)(g.HP.CUSTOM_THEME, {
+                            from: "SETTINGS" === s ? g.xv.SETTING : g.xv.CLIENT_THEMES_EDITOR,
                         }),
                             "SETTINGS" === s && (0, v.default)());
                     },
@@ -345,7 +345,7 @@ function e_(e) {
     function _(e) {
         ((0, M.Py)(),
             el({ isPersisted: !0, analyticsLocations: l, themeName: `default ${e}` }),
-            (0, I.u_)({ theme: e }, s));
+            (0, f.u_)({ theme: e }, s));
     }
     let E = !i && !0 === n;
     return (0, r.jsxs)(r.Fragment, {
@@ -374,7 +374,7 @@ function e_(e) {
 }
 function eE(e) {
     let { type: t, children: n } = e,
-        i = (0, g.GV)(),
+        i = (0, m.GV)(),
         { ref: s, ...l } = (0, u._u)({ orientation: "horizontal", labelledBy: i }),
         o = a.useMemo(() => ({ type: t, delay: ea[t] }), [t]);
     return (0, r.jsx)(es.Provider, {

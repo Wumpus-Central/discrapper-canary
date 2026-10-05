@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -25,16 +25,16 @@ function h(e, t) {
         i = t.parent_id;
     (i in n || (n[i] = {}), (c[e][i][t.id] = _(t)));
 }
-function I(e) {
+function f(e) {
     let { channel: t } = e;
     if (!l.A_.has(t.type)) return !1;
-    if (t.threadMetadata?.archived === !0) return f(t);
+    if (t.threadMetadata?.archived === !0) return I(t);
     {
         let e = c[t.guild_id] ?? {};
         c[t.guild_id] = { ...e, [t.parent_id]: { ...e[t.parent_id], [t.id]: _(t) } };
     }
 }
-function f(e) {
+function I(e) {
     let { guild_id: t, parent_id: n, id: i } = e;
     if (null == t || null == n || !(t in c) || !(n in c[t]) || !(i in c[t][n])) return !1;
     ((c[t] = { ...c[t], [n]: { ...c[t][n] } }), delete c[t][n][i], r().isEmpty(c[t][n]) && delete c[t][n]);
@@ -66,7 +66,7 @@ class T extends a.Ay.Store {
         return u.has(e);
     }
 }
-let m = new T(s.h, {
+let g = new T(s.h, {
     CONNECTION_OPEN: function (e) {
         ((c = {}),
             u.clear(),
@@ -92,8 +92,8 @@ let m = new T(s.h, {
         let { guild: t } = e;
         E(t.id);
     },
-    THREAD_CREATE: I,
-    THREAD_UPDATE: I,
+    THREAD_CREATE: f,
+    THREAD_UPDATE: f,
     THREAD_LIST_SYNC: function (e) {
         let { guildId: t, threads: n, channelIds: i } = e;
         for (let e in (null == i && u.add(t), (c[t] = { ...c[t] }), c[t])) c[t][e] = { ...c[t][e] };
@@ -101,7 +101,7 @@ let m = new T(s.h, {
     },
     THREAD_DELETE: function (e) {
         let { channel: t } = e;
-        return f(t);
+        return I(t);
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;

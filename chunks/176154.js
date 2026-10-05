@@ -15,13 +15,13 @@ function _(e) {
 var E = n(47167),
     A = n(626584),
     h = n(427930),
-    I = n(857071);
+    f = n(857071);
 n(250953);
-var f = n(380335),
+var I = n(380335),
     p = n(451909),
     T = n(465856),
-    m = n(451919),
-    g = n(143413);
+    g = n(451919),
+    m = n(143413);
 n(622794);
 var S = n(152007),
     N = n(607508),
@@ -156,7 +156,7 @@ function K(e, t, n) {
     if (t.hasFlag(j.nhx.SPAMMER) || n.isManaged() || (0, l.qR)(n)) return !1;
     let r = n.getGuildId();
     return !(
-        (null != r && I.A.isLurking(r)) ||
+        (null != r && f.A.isLurking(r)) ||
         (!i.ignoreSameUser && t.id === e.id) ||
         b.A.isBlockedOrIgnored(t.id) ||
         (!i.ignoreStatus && M.A.getStatus() === j.clD.DND) ||
@@ -180,7 +180,7 @@ function $(e, t) {
         (l.type === j.rbe.GROUP_DM && e.type === j.lAJ.RECIPIENT_REMOVE) ||
         (H.areSlayerNotificationsSuppressed() && ((n = l).type === j.rbe.DM || null != n.linkedLobby)) ||
         !K(o, d, l, { ignoreStatus: a, ignoreSameUser: j.MRS.SELF_MENTIONABLE_SYSTEM.has(e.type) }) ||
-        f.A.isMessageRequest(t) ||
+        I.A.isMessageRequest(t) ||
         (!r && _(l.id)) ||
         b.A.isBlockedOrIgnoredForMessage(e) ||
         (void 0 !== e.activity_instance && null != e.interaction && e.interaction.user.id === o.id)
@@ -196,7 +196,7 @@ function $(e, t) {
         return (
             t !== W.CP.NO_MESSAGES &&
             (t === W.CP.ALL_MESSAGES ||
-                (0, m.bG)({ rawMessage: e, userId: o.id, suppressEveryone: !1, suppressRoles: !1 }))
+                (0, g.bG)({ rawMessage: e, userId: o.id, suppressEveryone: !1, suppressRoles: !1 }))
         );
     }
     {
@@ -204,7 +204,7 @@ function $(e, t) {
         if (P.Ay.allowAllMessages(l) && t) return !0;
         let n = P.Ay.isSuppressEveryoneEnabled(l.getGuildId()),
             i = P.Ay.isSuppressRolesEnabled(l.getGuildId());
-        return (0, m.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: i });
+        return (0, g.bG)({ rawMessage: e, userId: o.id, suppressEveryone: n, suppressRoles: i });
     }
 }
 function z(e, t) {
@@ -298,7 +298,7 @@ function J(e, t, n) {
             let o = y.A.getChannel(e.parent_id);
             t.type === j.lAJ.THREAD_STARTER_MESSAGE && null != o
                 ? (l = q(l, o, y.A.getChannel(o.parent_id)))
-                : (0, g.A)(t)
+                : (0, m.A)(t)
                   ? null != D.A.getGuild(e.getGuildId()) && (l = q(l, e, o))
                   : (l = q(l, e, o));
             break;
@@ -306,7 +306,7 @@ function J(e, t, n) {
             (e.isManaged() && n.bot && l === (0, E.m1)(e, U.default, b.A)) || (l = q(l, e));
     }
     let d = t.content;
-    if ((0, g.A)(t) && null == (d = G.A.stringify(t, e)))
+    if ((0, m.A)(t) && null == (d = G.A.stringify(t, e)))
         throw (
             new A.A("NotificationTextUtils").warn("SystemMessageUtils.stringify(...) could not convert", {
                 message: t,

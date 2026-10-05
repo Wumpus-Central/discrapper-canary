@@ -25,11 +25,11 @@ function A() {
     };
 }
 let h = A();
-function I() {
+function f() {
     E.stop();
 }
-function f() {
-    return (null != h.guildId || !!E.isStarted()) && (I(), (h = A()), !0);
+function I() {
+    return (null != h.guildId || !!E.isStarted()) && (f(), (h = A()), !0);
 }
 class p extends s.Ay.Store {
     static displayName = "GuildThemePreviewStore";
@@ -76,7 +76,7 @@ class p extends s.Ay.Store {
 let T = new p(o.h, {
     GUILD_THEME_PREVIEW_START: function (e) {
         let { guildId: t, draft: n, original: i, draftEnabled: r, originalEnabled: a, origin: s, owner: l } = e;
-        (I(),
+        (f(),
             (h = {
                 guildId: t,
                 draft: (0, c.z_)(n),
@@ -96,7 +96,7 @@ let T = new p(o.h, {
         let n = { presetId: t, customUserThemeSettings: void 0 };
         return (
             (!(0, a.isEqual)(h.draft, n) || !h.draftEnabled) &&
-            (I(), (h = { ...h, draft: n, draftEnabled: !0, isAwaitingGuildUpdate: !1, saveError: null }), !0)
+            (f(), (h = { ...h, draft: n, draftEnabled: !0, isAwaitingGuildUpdate: !1, saveError: null }), !0)
         );
     },
     GUILD_THEME_PREVIEW_UPDATE_CUSTOM: function (e) {
@@ -108,16 +108,16 @@ let T = new p(o.h, {
         };
         return (
             (!(0, a.isEqual)(h.draft, r) || !h.draftEnabled) &&
-            (I(), (h = { ...h, draft: r, draftEnabled: !0, isAwaitingGuildUpdate: !1, saveError: null }), !0)
+            (f(), (h = { ...h, draft: r, draftEnabled: !0, isAwaitingGuildUpdate: !1, saveError: null }), !0)
         );
     },
     GUILD_THEME_PREVIEW_TRANSFER_OWNERSHIP: function (e) {
         let { owner: t } = e;
         return null != h.guildId && h.owner !== t && ((h = { ...h, owner: t }), !0);
     },
-    GUILD_THEME_PREVIEW_END: f,
+    GUILD_THEME_PREVIEW_END: I,
     GUILD_THEME_PREVIEW_SAVE_START: function () {
-        (I(), (h = { ...h, isSaving: !0, isAwaitingGuildUpdate: !1, saveError: null }));
+        (f(), (h = { ...h, isSaving: !0, isAwaitingGuildUpdate: !1, saveError: null }));
     },
     GUILD_THEME_PREVIEW_SAVE_SUCCESS: function (e) {
         let { guildId: t, guildTheme: n } = e;
@@ -135,7 +135,7 @@ let T = new p(o.h, {
                 isAwaitingGuildUpdate: !0,
                 saveError: null,
             }),
-            I(),
+            f(),
             E.start(1e4, () => {
                 h.isAwaitingGuildUpdate && o.h.dispatch({ type: "GUILD_THEME_PREVIEW_END" });
             }),
@@ -147,25 +147,25 @@ let T = new p(o.h, {
         return (
             null != h.guildId &&
             t === h.guildId &&
-            (I(), (h = { ...h, isSaving: !1, isAwaitingGuildUpdate: !1, saveError: n }), !0)
+            (f(), (h = { ...h, isSaving: !1, isAwaitingGuildUpdate: !1, saveError: n }), !0)
         );
     },
     GUILD_SETTINGS_GUILD_THEME_SAVE_SUCCESS: function (e) {
         let { guildId: t } = e;
-        return null != h.guildId && t === h.guildId && f();
+        return null != h.guildId && t === h.guildId && I();
     },
-    USER_SETTINGS_MODAL_OPEN: f,
+    USER_SETTINGS_MODAL_OPEN: I,
     CHANNEL_SELECT: function (e) {
         let { guildId: t } = e;
-        return null != h.guildId && t !== h.guildId && (f(), !0);
+        return null != h.guildId && t !== h.guildId && (I(), !0);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        return null != h.guildId && t.id === h.guildId && (f(), !0);
+        return null != h.guildId && t.id === h.guildId && (I(), !0);
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t, user: n } = e;
-        return n.id === d.default.getId() && null != h.guildId && t === h.guildId && (f(), !0);
+        return n.id === d.default.getId() && null != h.guildId && t === h.guildId && (I(), !0);
     },
     GUILD_UPDATE: function (e) {
         var t;
@@ -180,8 +180,8 @@ let T = new p(o.h, {
             ((t = (0, c.UW)(r.theme)),
             (n = t?.enabled ?? !1),
             (i = t?.themeSettings ?? null),
-            !!(n === h.originalEnabled && (0, a.isEqual)(i, h.original)) && (f(), !0))
+            !!(n === h.originalEnabled && (0, a.isEqual)(i, h.original)) && (I(), !0))
         );
     },
-    LOGOUT: f,
+    LOGOUT: I,
 });

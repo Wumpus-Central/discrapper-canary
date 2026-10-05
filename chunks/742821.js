@@ -36,14 +36,14 @@ function u(e, t) {
     let E = encodeURIComponent(_.toString()),
         A = encodeURIComponent(`discord://app/open#${_.toString()}`),
         h = encodeURIComponent(l()),
-        I = ((n = RegExp("(WebView|(iPhone|iPod|iPad)(?!.*Safari/))", "ig")),
+        f = ((n = RegExp("(WebView|(iPhone|iPod|iPad)(?!.*Safari/))", "ig")),
         (i = r()?.ua?.match(n) != null),
         (a = r()?.name === "Safari" && !i),
         r()?.os?.family !== "iOS" || a)
             ? "true"
             : "false",
-        f = null != d ? encodeURIComponent(d) : null,
+        I = null != d ? encodeURIComponent(d) : null,
         p = null != c ? encodeURIComponent(c) : null,
-        T = `${o}/Hs5r/?deep_link_value=${E}&pid=${s}&af_force_deeplink=${I}&af_og_description=${h}&af_dp=${A}`;
-    return (null != f && (T += `&af_android_url=${f}`), null != p && (T += `&af_ios_url=${p}`), T);
+        T = `${o}/Hs5r/?deep_link_value=${E}&pid=${s}&af_force_deeplink=${f}&af_og_description=${h}&af_dp=${A}`;
+    return (null != I && (T += `&af_android_url=${I}`), null != p && (T += `&af_ios_url=${p}`), T);
 }

@@ -1,11 +1,11 @@
-n.d(t, { t: () => u });
+n.d(t, { t: () => c });
 var l = n(96337),
     r = n(997101),
     a = n(626584);
 let i = new Set(l.A.map((e) => e.alpha2)),
     s = [`${r.d.AN}`, `${r.d.MI}`, `${r.d.TP}`],
     o = new a.A("GetFlagEmoji");
-function u(e) {
+function c(e) {
     if (null == e) return "";
     try {
         if (s.includes(e) || !i.has(e)) return n(874629)("./1f30e.svg");

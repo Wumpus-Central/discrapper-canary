@@ -1,4 +1,4 @@
-(n.d(t, { D3: () => C, EW: () => f, ZV: () => R, cu: () => S, eW: () => N, j8: () => g, s$: () => T, v7: () => m }),
+(n.d(t, { D3: () => C, EW: () => I, ZV: () => R, cu: () => S, eW: () => N, j8: () => m, s$: () => T, v7: () => g }),
     n(321073));
 var i = n(582128),
     r = n(17928),
@@ -13,8 +13,8 @@ var i = n(582128),
     E = n(240591),
     A = n(46477),
     h = n(73510),
-    I = n(652215);
-function f(e, t, n) {
+    f = n(652215);
+function I(e, t, n) {
     if (null == t) return { application: void 0, command: void 0, section: void 0 };
     let i = d.Ay.getUserState(),
         r = d.Ay.getContextState(e),
@@ -47,11 +47,11 @@ function T(e, t, n) {
         s = i.result?.sections?.[n] ?? r.result?.sections?.[n] ?? a.result?.sections?.[n];
     return s?.descriptor;
 }
-function m(e, t, n) {
+function g(e, t, n) {
     let i = d.Ay.query(e, { commandTypes: [t], text: n }, { scoreMethod: c.M.COMMAND_OR_APPLICATION, allowFetch: !1 });
     return { commands: i.commands, sections: i.descriptors };
 }
-function g(e) {
+function m(e) {
     let t = d.Ay.getUserState(),
         n = d.Ay.getContextState(e);
     return [t?.result, n?.result];
@@ -60,39 +60,39 @@ function S(e) {
     let { context: t, filters: n, options: a, allowFetch: l } = e,
         c = "channel" === t.type ? t.channel.guild_id : null,
         u = (0, r.bG)([s.A], () => s.A.getGuild(c), [c]),
-        { descriptors: _, commands: E, sectionedCommands: A, loading: f } = (0, d.XC)(t, u, n, { ...a, allowFetch: l }),
+        { descriptors: _, commands: E, sectionedCommands: A, loading: I } = (0, d.XC)(t, u, n, { ...a, allowFetch: l }),
         [p, T] = i.useState(null),
-        m = i.useMemo(() => y(a.placeholderCount ?? 0, n.commandTypes[0]), [n.commandTypes, a.placeholderCount]);
+        g = i.useMemo(() => y(a.placeholderCount ?? 0, n.commandTypes[0]), [n.commandTypes, a.placeholderCount]);
     return i.useMemo(() => {
         let e = {
-            loading: f,
+            loading: I,
             commands: E,
             activeSections: _,
             commandsByActiveSection: A,
             filteredSectionId: p,
             hasMoreAfter: !1,
-            placeholders: f ? m : [],
+            placeholders: I ? g : [],
             sectionDescriptors: _,
             filterSection: (e) => {
                 T(e);
             },
-            scrollDown: I.tEg,
+            scrollDown: f.tEg,
         };
         if (null != p) {
             let t = A.find((e) => e.section.id === p);
             ((e.activeSections = null != t ? [t.section] : []), (e.commandsByActiveSection = null != t ? [t] : []));
         }
-        if (f) {
+        if (I) {
             let t = A[0];
-            if (null != t) e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...m] }, ...A.slice(1)];
+            if (null != t) e.commandsByActiveSection = [{ section: t.section, data: [...t.data, ...g] }, ...A.slice(1)];
             else {
                 let t = o.gZ[h.Ik.BUILT_IN];
-                ((e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: m }]));
+                ((e.activeSections = [t]), (e.commandsByActiveSection = [{ section: t, data: g }]));
             }
-            e.commands = [...E, ...m];
+            e.commands = [...E, ...g];
         }
         return e;
-    }, [f, E, _, A, p, m]);
+    }, [I, E, _, A, p, g]);
 }
 function N(e, t, n) {
     let { descriptors: i, commands: r, loading: a } = d.Ay.query(e, t, n),
@@ -121,7 +121,7 @@ function R(e, t, n) {
             application: c,
             sectionDescriptor: u,
             isGuildInstalled: h,
-            isUserInstalled: I,
+            isUserInstalled: f,
         } = ((r = i.useMemo(() => ({ channel: e, type: "channel" }), [e])),
         (a = (0, d.A4)(!0, !0)),
         (s = (0, d.SD)(r, !0, !0)),
@@ -148,27 +148,27 @@ function R(e, t, n) {
                 isUserInstalled: e,
             };
         }, [a?.result, s?.result, t, n])),
-        f = (0, E.MW)(e, O);
+        I = (0, E.MW)(e, O);
     return {
         application: c,
         commands: i.useMemo(() => {
             if (null == o) return;
             let t =
                     null != e.guild_id && u?.permissions != null
-                        ? A.we(u.permissions, e.guild_id, f.userId, f.roleIds, f.isImpersonating)
+                        ? A.we(u.permissions, e.guild_id, I.userId, I.roleIds, I.isImpersonating)
                         : null,
                 n = null != e.guild_id && u?.permissions != null ? A._W(u.permissions, e, e.guild_id) : null;
             return o.filter(
                 (e) =>
-                    A.zl(e, f, {
+                    A.zl(e, I, {
                         applicationAllowedForUser: t,
                         applicationAllowedForChannel: n,
                         isGuildInstalled: h,
-                        isUserInstalled: I,
+                        isUserInstalled: f,
                         commandBotId: u?.botId,
                     }) === A.CA.ALLOWED,
             );
-        }, [o, f, u, h, I, e]),
+        }, [o, I, u, h, f, e]),
     };
 }
 let L = { id: "placeholder-section", type: u.Hf.APPLICATION, name: "" };

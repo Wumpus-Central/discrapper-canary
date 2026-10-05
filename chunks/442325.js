@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(574381),
     r = n(17928),
     a = n(73153),
@@ -16,10 +16,10 @@ function A() {
 function h(e) {
     return { id: String(_++), ...e, pinned: !1, entries: [e], index: 0 };
 }
-function I(e, t, n, i) {
+function f(e, t, n, i) {
     return { id: e.id, pinned: e.pinned, ...t, entries: n, index: i };
 }
-function f(e) {
+function I(e) {
     return !A() && (0 === e.length || (1 === e.length && !e[0].pinned));
 }
 function p(e) {
@@ -28,7 +28,7 @@ function p(e) {
     let n = t.index + e,
         i = t.entries[n];
     if (null == i) return !1;
-    c = c.map((e) => (e.id === u ? I(e, i, e.entries, n) : e));
+    c = c.map((e) => (e.id === u ? f(e, i, e.entries, n) : e));
 }
 function T(e) {
     let { channel: t } = e;
@@ -38,13 +38,13 @@ function T(e) {
     }
     if (0 === c.filter((e) => n(e) && e.id !== u).length) return !1;
     let i = c.filter((e) => !n(e) || e.id === u);
-    if (f(i)) {
+    if (I(i)) {
         ((c = []), (u = null));
         return;
     }
     c = i;
 }
-class m extends r.Ay.PersistedStore {
+class g extends r.Ay.PersistedStore {
     static displayName = "ChannelTabsStore";
     static persistKey = "ChannelTabsStore";
     static migrations = [(e) => ({ tabs: [], activeTabId: null, enabled: e?.enabled ?? !1 })];
@@ -93,7 +93,7 @@ class m extends r.Ay.PersistedStore {
         return null != e && e.index < e.entries.length - 1;
     }
 }
-let g = new m(a.h, {
+let m = new g(a.h, {
     CHANNEL_TABS_OPEN: function (e) {
         if (c.length >= 25) return !1;
         if (0 === c.length) {
@@ -115,7 +115,7 @@ let g = new m(a.h, {
             n = c.findIndex((e) => e.id === t);
         if (-1 === n || (A() && 1 === c.length)) return !1;
         let i = c[n].id === u;
-        if (f((c = c.filter((e) => e.id !== t)))) {
+        if (I((c = c.filter((e) => e.id !== t)))) {
             ((c = []), (u = null));
             return;
         }
@@ -177,7 +177,7 @@ let g = new m(a.h, {
         c = c.map((e) => {
             if (e.id !== u) return e;
             let t = [...e.entries.slice(0, e.index + 1), r];
-            return I(e, r, t, t.length - 1);
+            return f(e, r, t, t.length - 1);
         });
     },
     CHANNEL_SELECT: function (e) {
@@ -200,7 +200,7 @@ let g = new m(a.h, {
         c = c.map((e) => {
             if (e.id !== u) return e;
             let t = [...e.entries.slice(0, e.index + 1), i];
-            return I(e, i, t, t.length - 1);
+            return f(e, i, t, t.length - 1);
         });
     },
     CHANNEL_DELETE: T,

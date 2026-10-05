@@ -12,12 +12,12 @@ var i = n(284009),
     E = n(616356),
     A = n(280450),
     h = n(470710),
-    I = n(734057),
-    f = n(290863),
+    f = n(734057),
+    I = n(290863),
     p = n(309010),
     T = n(485296),
-    m = n(287809),
-    g = n(803301),
+    g = n(287809),
+    m = n(803301),
     S = n(977997),
     N = n(568598);
 let C = (0, n(240921).Ay)({
@@ -93,7 +93,7 @@ function j(e) {
     return H((t) => t.updateParticipant(e), t);
 }
 function W(e) {
-    let t = I.A.getChannel(e),
+    let t = f.A.getChannel(e),
         n = t?.isDM() && 1 ? O.jd.AUTO : O.jd.NONE;
     return M[e] ?? [n, O.jd.NONE];
 }
@@ -170,13 +170,13 @@ function ei(e) {
     return j(i, [n]);
 }
 function er(e) {
-    return !!I.A.getChannel(e)?.isGuildVocalOrThread();
+    return !!f.A.getChannel(e)?.isGuildVocalOrThread();
 }
 class ea extends l.Ay.PersistedStore {
     static displayName = "ChannelRTCStore";
     static persistKey = "ChannelRTCStore";
     initialize(e) {
-        (this.waitFor(E.A, A.default, h.A, I.A, d.Ay, u.default, f.A, p.Ay, T.A, m.default, g.A, S.A),
+        (this.waitFor(E.A, A.default, h.A, f.A, d.Ay, u.default, I.A, p.Ay, T.A, g.default, m.A, S.A),
             this.syncWith([d.Ay], Q),
             this.syncWith([u.default], Z),
             e?.voiceParticipantsHidden !== void 0 && Object.assign(x, e?.voiceParticipantsHidden));
@@ -244,7 +244,7 @@ class ea extends l.Ay.PersistedStore {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : R.BRT.APP;
         if (__OVERLAY__) return R.DUB.NORMAL;
         let n = this.getUserParticipantCount(e) > 0,
-            i = !!I.A.getChannel(e)?.isGuildVocal() || (n && !!I.A.getChannel(e)?.isVocalThread());
+            i = !!f.A.getChannel(e)?.isGuildVocal() || (n && !!f.A.getChannel(e)?.isVocalThread());
         return w[e]?.[t] ?? (i ? R.DUB.NO_CHAT : R.DUB.NORMAL);
     }
     getChatOpen(e) {
@@ -293,7 +293,7 @@ let es = new ea(o.h, {
         let { channelId: t, messageId: n } = e,
             i = Z();
         if (null == t || null == n || v.has(t)) return i;
-        let r = I.A.getChannel(t);
+        let r = f.A.getChannel(t);
         return null != r && r.isGuildVocal() ? (q(t, !0), !0) : i;
     },
     CHANNEL_RTC_ACTIVE_CHANNELS: Z,
@@ -325,7 +325,7 @@ let es = new ea(o.h, {
         let { channelId: n, id: i } = e,
             r = V(n);
         ((t = n),
-            I.A.getChannel(t)?.isGuildStageVoice() && (F[n] = (0, _.wL)(i)),
+            f.A.getChannel(t)?.isGuildStageVoice() && (F[n] = (0, _.wL)(i)),
             null == i &&
                 r.toArray(N.r4.STREAM).forEach((e) => {
                     (0, O.Ay)(e) && r.updateParticipant(e.user.id);
@@ -425,7 +425,7 @@ let es = new ea(o.h, {
             n = [];
         if (
             (s().forEach(D, (e) => {
-                let i = I.A.getChannel(e);
+                let i = f.A.getChannel(e);
                 (null == i || i.getGuildId() === t.id) && n.push(e);
             }),
             0 === n.length)

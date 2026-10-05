@@ -54,12 +54,12 @@ function A(e) {
             description: d,
             helperText: E,
             children: A,
-            errorMessage: I,
-            successMessage: f,
+            errorMessage: f,
+            successMessage: I,
             role: p,
             layout: T = "vertical",
-            layoutConfig: m,
-            badge: g,
+            layoutConfig: g,
+            badge: m,
             icon: S = null,
             interactiveLabel: N = !1,
             auxiliaryContentPosition: C = "under-control",
@@ -76,30 +76,30 @@ function A(e) {
                 E = r.useId(),
                 A = r.useId(),
                 h = r.useId(),
-                I = r.useId(),
-                f = null != n && "" !== n,
+                f = r.useId(),
+                I = null != n && "" !== n,
                 p = null != l && "" !== l,
                 T = (null != a && "" !== a) || (null != s && "" !== s),
-                m = [];
-            (p && m.push(A), T && m.push(E), o && m.push(I));
-            let g = m.length > 0 ? m.join(" ") : void 0;
+                g = [];
+            (p && g.push(A), T && g.push(E), o && g.push(f));
+            let m = g.length > 0 ? g.join(" ") : void 0;
             return r.useMemo(
                 () => ({
-                    labelId: f ? u : void 0,
+                    labelId: I ? u : void 0,
                     controlId: t ?? _,
-                    describedById: g,
+                    describedById: m,
                     errorMessageId: null != i && "" !== i ? h : void 0,
                     helperTextId: T ? E : void 0,
                     descriptionId: p ? A : void 0,
-                    trailingAuxiliaryContentId: o ? I : void 0,
+                    trailingAuxiliaryContentId: o ? f : void 0,
                     isLabelHovered: d,
                     setIsLabelHovered: c,
                 }),
-                [f, u, t, _, g, i, h, T, E, p, A, o, I, d, c],
+                [I, u, t, _, m, i, h, T, E, p, A, o, f, d, c],
             );
         })(e, { hasTrailingAuxiliaryContent: null != O }),
         { labelId: y, controlId: D, errorMessageId: v, describedById: b, helperTextId: M, descriptionId: P } = L,
-        U = m?.horizontalControlColumnWidth,
+        U = g?.horizontalControlColumnWidth,
         w = "group" === p || "radiogroup" === p,
         G = w ? "fieldset" : "div",
         x = w ? (0, i.jsx)("legend", { id: y, children: (0, i.jsx)(l.A, { children: t }) }) : null,
@@ -126,18 +126,18 @@ function A(e) {
                               className: _.mw,
                               children: "*",
                           }),
-                      null != g
+                      null != m
                           ? (0, i.jsx)("span", {
                                 className: _.fC,
-                                children: (0, i.jsx)(s.E, { type: g, variant: "brand" }),
+                                children: (0, i.jsx)(s.E, { type: m, variant: "brand" }),
                             })
                           : null,
                   ],
               })
             : null,
         V = (0, i.jsx)(h, {
-            successMessage: f,
-            errorMessage: I,
+            successMessage: I,
+            errorMessage: f,
             helperText: E,
             trailing: O,
             helperTextId: M,

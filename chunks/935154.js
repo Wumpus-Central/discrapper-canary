@@ -1,4 +1,4 @@
-n.d(t, { C$: () => I, S3: () => A, i0: () => S, nW: () => N, p8: () => g, pF: () => m, v: () => T, yi: () => h });
+n.d(t, { C$: () => f, S3: () => A, i0: () => S, nW: () => N, p8: () => m, pF: () => g, v: () => T, yi: () => h });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -36,10 +36,10 @@ function A(e, t) {
 function h(e, t) {
     return t === _.F_.WHITE && e === u.clD.IDLE ? _.Iq.HIGH : _.Iq.LOW;
 }
-function I(e) {
+function f(e) {
     return (0, o.M)(e) ? _.F_.BLACK : _.F_.WHITE;
 }
-function f(e, t, n, i) {
+function I(e, t, n, i) {
     return `scale(${t}) translate(${0.5625 * e + i} ${0.75 * e + n})`;
 }
 function p(e, t, n) {
@@ -61,7 +61,7 @@ function T(e) {
             cutoutWidth: 0,
             cutoutHeight: 0,
             cutoutRadius: 0,
-            polygonScale: f(t, 0, l, o),
+            polygonScale: I(t, 0, l, o),
             polygonOrigin: p(t, l, o),
             dotY: 0.75 * t + l,
             dotX: 0.5 * t + o,
@@ -81,7 +81,7 @@ function T(e) {
                     cutoutWidth: 0.75 * t,
                     cutoutHeight: 0.75 * t,
                     cutoutRadius: 0,
-                    polygonScale: f(t, 0, l, o),
+                    polygonScale: I(t, 0, l, o),
                     polygonOrigin: p(t, l, o),
                     dotY: 1.25 * t,
                     dotX: 0.5 * t + o,
@@ -98,7 +98,7 @@ function T(e) {
                 cutoutWidth: 0,
                 cutoutHeight: 0,
                 cutoutRadius: 0,
-                polygonScale: f(t, 0, l, o),
+                polygonScale: I(t, 0, l, o),
                 polygonOrigin: p(t, l, o),
                 dotY: 0.75 * t + l,
                 dotX: 0.5 * t + o,
@@ -116,7 +116,7 @@ function T(e) {
                 cutoutWidth: 0.75 * t,
                 cutoutHeight: 0.75 * t,
                 cutoutRadius: 0.375 * t,
-                polygonScale: f(t, 0, l, o),
+                polygonScale: I(t, 0, l, o),
                 polygonOrigin: p(t, l, o),
                 dotY: 0.75 * t + l,
                 dotX: 0.5 * t + o,
@@ -134,7 +134,7 @@ function T(e) {
                 cutoutWidth: 0.75 * t,
                 cutoutHeight: 0.25 * t,
                 cutoutRadius: 0.125 * t,
-                polygonScale: f(t, 0, l, o),
+                polygonScale: I(t, 0, l, o),
                 polygonOrigin: p(t, l, o),
                 dotY: 0.75 * t + l,
                 dotX: 0.5 * t + o,
@@ -152,7 +152,7 @@ function T(e) {
                 cutoutWidth: 0,
                 cutoutHeight: 0,
                 cutoutRadius: 0.25 * t,
-                polygonScale: f(t, 1, l, o),
+                polygonScale: I(t, 1, l, o),
                 polygonOrigin: p(t, l, o),
                 dotY: 0.75 * t + l,
                 dotX: 0.5 * t + o,
@@ -173,7 +173,7 @@ function T(e) {
                 cutoutWidth: 0.5 * t,
                 cutoutHeight: 0.5 * t,
                 cutoutRadius: 0.25 * t,
-                polygonScale: f(t, 0, l, o),
+                polygonScale: I(t, 0, l, o),
                 polygonOrigin: p(t, l, o),
                 dotY: 0.75 * t + l,
                 dotX: 0.5 * t + o,
@@ -181,7 +181,7 @@ function T(e) {
             };
     }
 }
-function m(e, t, n) {
+function g(e, t, n) {
     let {
         bgRadius: r,
         bgY: a,
@@ -194,8 +194,8 @@ function m(e, t, n) {
         cutoutHeight: E,
         cutoutRadius: A,
         polygonScale: h,
-        polygonOrigin: I,
-        dotY: f,
+        polygonOrigin: f,
+        dotY: I,
         dotX: p,
         dotRadius: T,
     } = e;
@@ -208,13 +208,13 @@ function m(e, t, n) {
                 points: `-${0.216506 * t},-${0.25 * t} ${0.216506 * t},0 -${0.216506 * t},${0.25 * t}`,
                 fill: "black",
                 transform: h,
-                style: { transformOrigin: I },
+                style: { transformOrigin: f },
             }),
-            (0, i.jsx)(s.animated.circle, { fill: "black", cx: p, cy: f, r: T }),
+            (0, i.jsx)(s.animated.circle, { fill: "black", cx: p, cy: I, r: T }),
         ],
     });
 }
-function g(e, t) {
+function m(e, t) {
     let { isMobile: n, isTyping: i, isVR: r } = t;
     if (i) return c.Ay.Masks.STATUS_TYPING;
     switch (e) {
@@ -248,12 +248,12 @@ function N(e) {
     let { status: t, isMobile: n = !1, isVR: r = !1, size: s = 8, className: l, style: o, color: d } = e,
         _ = t === u.clD.ONLINE && n,
         h = t === u.clD.ONLINE && r,
-        I = A(t, d);
+        f = A(t, d);
     return (0, i.jsx)(c.Ay, {
-        mask: g(t, { isMobile: _, isTyping: !1, isVR: h }),
+        mask: m(t, { isMobile: _, isTyping: !1, isVR: h }),
         className: a()(E.d, l),
         style: o,
         ...S(s, t, { isMobile: _, isTyping: !1, isVR: h }),
-        children: (0, i.jsx)("div", { style: { backgroundColor: I }, className: E.h }),
+        children: (0, i.jsx)("div", { style: { backgroundColor: f }, className: E.h }),
     });
 }

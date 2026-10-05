@@ -1,4 +1,4 @@
-(n.d(t, { kJ: () => I, lg: () => h, Ay: () => f }), n(938796));
+(n.d(t, { kJ: () => f, lg: () => h, Ay: () => I }), n(938796));
 var i,
     r = (((i = {})[(i.DEFAULT = 0)] = "DEFAULT"), (i[(i.OUT_OF_PROCESS = 1)] = "OUT_OF_PROCESS"), i),
     a = n(136722),
@@ -26,7 +26,7 @@ function h(e) {
     let n = e.is_launcher ?? e.isLauncher;
     return (null != n && (t.isLauncher = n), t);
 }
-class I extends s.A {
+class f extends s.A {
     id;
     name;
     icon;
@@ -45,7 +45,7 @@ class I extends s.A {
     contentClassification;
     flags;
     static createFromServer(e) {
-        return new I({
+        return new f({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
@@ -103,7 +103,7 @@ class I extends s.A {
             : null;
     }
 }
-class f extends I {
+class I extends f {
     overlay;
     overlayWarn;
     overlayCompatibilityHook;
@@ -138,7 +138,7 @@ class f extends I {
     applicationAccountLinkBenefitConfig;
     vibegrationsProjectId;
     static createFromServer(e) {
-        return new f({
+        return new I({
             ...e,
             coverImage: e.cover_image,
             primarySkuId: e.primary_sku_id,
@@ -177,7 +177,7 @@ class f extends I {
             categories: e.categories,
             linkedGames: e.linked_games?.map((e) => ({
                 ...e,
-                application: null != e.application ? f.createFromServer(e.application) : void 0,
+                application: null != e.application ? I.createFromServer(e.application) : void 0,
             })),
             deepLinkUri: e.deeplink_uri,
             applicationAccountLinkBenefitConfig: e.application_account_link_benefit_config,
@@ -219,7 +219,7 @@ class f extends I {
             (this.linkedGames =
                 e.linked_games?.map((e) => ({
                     ...e,
-                    application: null != e.application ? f.createFromServer(e.application) : void 0,
+                    application: null != e.application ? I.createFromServer(e.application) : void 0,
                 })) ?? e.linkedGames),
             (this.deepLinkUri = e.deepLinkUri ?? e.deeplink_uri),
             (this.applicationAccountLinkBenefitConfig =
@@ -234,7 +234,7 @@ class f extends I {
     }
     mergeFromApplicationUpdate(e) {
         var t, n;
-        return new f({
+        return new I({
             id: e.id ?? this.id,
             name: e.name ?? this.name,
             icon: e.icon ?? this.icon,
@@ -321,7 +321,7 @@ class f extends I {
         return null != this.storeListingSkuId ? this.storeListingSkuId : this.primarySkuId;
     }
     get supportsOutOfProcessOverlay() {
-        return f.supportsOutOfProcessOverlay(this.overlayMethods);
+        return I.supportsOutOfProcessOverlay(this.overlayMethods);
     }
     static supportsOutOfProcessOverlay(e) {
         let t = r.OUT_OF_PROCESS;

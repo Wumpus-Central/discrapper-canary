@@ -5,9 +5,9 @@
     aT: () => A,
     bU: () => a,
     br: () => r,
-    e3: () => I,
+    e3: () => f,
     ei: () => s,
-    k0: () => f,
+    k0: () => I,
     kV: () => l,
     tf: () => h,
     v$: () => d,
@@ -150,8 +150,8 @@ function A(e, t, n, i) {
         }
         if (null == s) continue;
         l += d * s.mag;
-        let { tStart: u, tEnd: A, peakT: h, peakV: I } = s.window;
-        r.push({ emotion: e, peakT: h, peakV: I, sustain: A - u + 1, tStart: u, tEnd: A });
+        let { tStart: u, tEnd: A, peakT: h, peakV: f } = s.window;
+        r.push({ emotion: e, peakT: h, peakV: f, sustain: A - u + 1, tStart: u, tEnd: A });
     }
     return { mainEventScore: l, anchors: u(a, i.eventChainGapChunks), events: r };
 }
@@ -175,7 +175,7 @@ function h(e, t, n, r, a) {
     }
     return Math.max(0, ...o);
 }
-function I(e, t) {
+function f(e, t) {
     let n = [];
     for (let { emotion: i, matrix: r, threshold: a } of [
         { emotion: "laughter", matrix: e.laughter, threshold: t.laughterEventThreshold },
@@ -189,7 +189,7 @@ function I(e, t) {
         }
     return n;
 }
-function f(e, t, n) {
+function I(e, t, n) {
     let i = e.length,
         r = i > 0 ? e[0].length : 0,
         a = Array(r).fill(0),

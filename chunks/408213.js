@@ -12,8 +12,8 @@ var i = n(636537),
     E = n(299091),
     A = n(287809),
     h = n(174459),
-    I = n(513461),
-    f = n(652215),
+    f = n(513461),
+    I = n(652215),
     p = n(375708);
 let T = {
     fetchVerificationForm: async function e(e, t) {
@@ -22,7 +22,7 @@ let T = {
             s = !_.Ay.isMember(e, a?.id);
         try {
             let t = await i.Bo.get({
-                url: f.Rsh.GUILD_MEMBER_VERIFICATION(e),
+                url: I.Rsh.GUILD_MEMBER_VERIFICATION(e),
                 query: { with_guild: s, invite_code: null != n ? (0, u.m0)(n) : void 0 },
                 oldFormErrors: !0,
                 rejectWithError: (0, i.fT)(),
@@ -49,7 +49,7 @@ let T = {
     },
     updateVerificationForm: async function e(e, t, n, a) {
         let { body: s } = await i.Bo.patch({
-            url: f.Rsh.GUILD_MEMBER_VERIFICATION(e),
+            url: I.Rsh.GUILD_MEMBER_VERIFICATION(e),
             body: { form_fields: t, enabled: n, bulk_action: a },
             oldFormErrors: !0,
             rejectWithError: (0, i.fT)(),
@@ -70,7 +70,7 @@ let T = {
     },
     updateVerificationFormDescription: async function e(e, t) {
         let { body: n } = await i.Bo.patch({
-            url: f.Rsh.GUILD_MEMBER_VERIFICATION(e),
+            url: I.Rsh.GUILD_MEMBER_VERIFICATION(e),
             body: { description: t },
             oldFormErrors: !0,
             rejectWithError: (0, i.fT)(),
@@ -91,7 +91,7 @@ let T = {
     },
     enableVerificationForm: async function e(e, t) {
         await i.Bo.patch({
-            url: f.Rsh.GUILD_MEMBER_VERIFICATION(e),
+            url: I.Rsh.GUILD_MEMBER_VERIFICATION(e),
             body: { enabled: t },
             oldFormErrors: !0,
             rejectWithError: (0, i.fT)(),
@@ -102,13 +102,13 @@ let T = {
         if (c.A.isFullServerPreview(e)) return void (0, d.Z$)(e, { memberOptions: { isPending: !1 } });
         try {
             let { body: a } = await i.Bo.put({
-                url: f.Rsh.GUILD_MEMBER_REQUEST_TO_JOIN(e),
+                url: I.Rsh.GUILD_MEMBER_REQUEST_TO_JOIN(e),
                 body: { version: t.version, form_fields: t.formFields },
                 rejectWithError: (0, i.fT)(),
             });
             return (
                 r.h.dispatch({ type: "USER_GUILD_JOIN_REQUEST_UPDATE", guildId: e, request: a }),
-                (0, I.j5)(t.formFields) &&
+                (0, f.j5)(t.formFields) &&
                     -1 !== n &&
                     setTimeout(() => {
                         var t;
@@ -143,7 +143,7 @@ let T = {
     },
     reportApplication: function (e) {
         let { guild: t, guildJoinRequest: n, guildJoinRequestUser: i, reason: r, reasonOther: a, responses: s } = e;
-        h.default.track(f.HAw.GUILD_MEMBER_APPLICATION_REPORTED, {
+        h.default.track(I.HAw.GUILD_MEMBER_APPLICATION_REPORTED, {
             application_id: n.joinRequestId,
             applicant_id: i.id,
             guild_id: t.id,

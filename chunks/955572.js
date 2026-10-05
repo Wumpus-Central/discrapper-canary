@@ -1,10 +1,10 @@
 n.d(t, {
     AC: () => u,
     Bm: () => A,
-    D3: () => m,
+    D3: () => g,
     Dm: () => L,
     E7: () => v,
-    Er: () => I,
+    Er: () => f,
     FU: () => U,
     Gm: () => M,
     HU: () => p,
@@ -12,8 +12,8 @@ n.d(t, {
     Jb: () => S,
     M1: () => D,
     Qp: () => _,
-    RI: () => g,
-    RJ: () => f,
+    RI: () => m,
+    RJ: () => I,
     XS: () => c,
     Xt: () => y,
     YV: () => h,
@@ -53,10 +53,10 @@ function A() {
 function h() {
     i.h.dispatch({ type: "ACCESSIBILITY_DESATURATE_ROLES_TOGGLE" });
 }
-function I() {
+function f() {
     i.h.dispatch({ type: "KEYBOARD_NAVIGATION_EXPLAINER_MODAL_SEEN" });
 }
-function f(e) {
+function I(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SYSTEM_PREFERS_REDUCED_MOTION_CHANGED", systemPrefersReducedMotion: e });
 }
 function p(e) {
@@ -74,10 +74,10 @@ function T(e) {
           })
         : t && !n && r.Ay.clearSettingsOverride("gifAutoPlay", "animateEmoji", "animateStickers");
 }
-function m(e) {
+function g(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SET_SYNC_FORCED_COLORS", syncForcedColors: e });
 }
-function g(e) {
+function m(e) {
     i.h.dispatch({ type: "ACCESSIBILITY_SYSTEM_COLOR_PREFERENCES_CHANGED", systemForcedColors: e });
 }
 function S(e) {

@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => p, UT: () => f, rG: () => A });
+n.d(t, { Ay: () => p, UT: () => I, rG: () => A });
 var i = n(582128),
     r = n(505779),
     a = n(17928),
@@ -34,7 +34,7 @@ function h(e) {
         (null != e.expires_at && new Date(e.expires_at).getTime() <= Date.now())
     );
 }
-let I = (0, a.UT)(c.A, {
+let f = (0, a.UT)(c.A, {
     getQueryId: _.fic.GAME_PROFILE_INVITE,
     staleAfter: 5 * u.A.Seconds.MINUTE,
     failureStaleAfter: 5 * u.A.Seconds.MINUTE,
@@ -48,10 +48,10 @@ let I = (0, a.UT)(c.A, {
             throw Error(`Failed to resolve game profile invite: ${e}`);
     },
 });
-function f(e) {
+function I(e) {
     o.I.fetchMany([e]).then(() => {
         let t = E(l.A.getGame(e));
-        null != t && I.fetchMany([t]);
+        null != t && f.fetchMany([t]);
     });
 }
 let p = function (e, t) {
@@ -60,7 +60,7 @@ let p = function (e, t) {
         n.current = t;
     }, [t]);
     let r = E(e),
-        { data: s, error: l, isLoading: o } = I(r),
+        { data: s, error: l, isLoading: o } = f(r),
         c = null != r && null == s && (o || null == l),
         u = (0, a.bG)([d.A], () => s?.guild?.id != null && d.A.isMember(s?.guild?.id));
     return (

@@ -11,8 +11,8 @@ function r(e) {
     E1: () => eX,
     EH: () => eB,
     FH: () => Q,
-    FP: () => ef,
-    Fs: () => eg,
+    FP: () => eI,
+    Fs: () => em,
     GQ: () => tE,
     GZ: () => x,
     Gu: () => tP,
@@ -21,14 +21,14 @@ function r(e) {
     Hz: () => eS,
     Jp: () => J,
     LC: () => tS,
-    LM: () => tI,
+    LM: () => tf,
     M2: () => eU,
     Mo: () => eT,
     N8: () => tk,
     ND: () => es,
     NG: () => e1,
     NJ: () => e5,
-    Ng: () => tf,
+    Ng: () => tI,
     Nh: () => e8,
     O$: () => ed,
     Oy: () => K,
@@ -38,10 +38,10 @@ function r(e) {
     Py: () => tG,
     QH: () => eu,
     QR: () => tb,
-    Qg: () => tm,
+    Qg: () => tg,
     Qn: () => tV,
     RG: () => ex,
-    RK: () => eI,
+    RK: () => ef,
     RR: () => ev,
     RX: () => eE,
     Rj: () => tL,
@@ -72,12 +72,12 @@ function r(e) {
     cy: () => et,
     dS: () => eJ,
     dz: () => eh,
-    eF: () => tg,
+    eF: () => tm,
     eI: () => eL,
     eT: () => w,
     eW: () => eR,
     fb: () => td,
-    gG: () => em,
+    gG: () => eg,
     gM: () => z,
     gR: () => e_,
     hI: () => eF,
@@ -100,7 +100,7 @@ function r(e) {
     qN: () => tF,
     qv: () => tM,
     rO: () => tO,
-    rf: () => m,
+    rf: () => g,
     rk: () => tt,
     rl: () => tR,
     s5: () => eA,
@@ -202,7 +202,7 @@ function h(e) {
     let t = i.__externref_table_alloc();
     return (i.__wbindgen_export_4.set(t, e), t);
 }
-function I(e, t) {
+function f(e, t) {
     try {
         return e.apply(this, t);
     } catch (t) {
@@ -210,7 +210,7 @@ function I(e, t) {
         i.__wbindgen_exn_store(e);
     }
 }
-function f(e) {
+function I(e) {
     return null == e;
 }
 E.decode();
@@ -235,10 +235,10 @@ function T(e, t, n, r) {
         };
     return ((s.original = a), p.register(s, a, a), s);
 }
-function m(e, t, n, r, a) {
+function g(e, t, n, r, a) {
     i.installLogCallback(e, t, n, r, a);
 }
-function g(e) {
+function m(e) {
     let t = i.__wbindgen_export_4.get(e);
     return (i.__externref_table_dealloc(e), t);
 }
@@ -296,14 +296,14 @@ class P {
             n = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
             r = a,
             s = i.blockeddomainsstore_isBlockedDomain(n, r);
-        if (s[3]) throw g(s[2]);
+        if (s[3]) throw m(s[2]);
         return (0 !== s[0] && ((t = A(s[0], s[1]).slice()), i.__wbindgen_free(s[0], +s[1], 1)), t);
     }
     static startFetchingBlockedDomains(e) {
         let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
             n = a,
             r = i.blockeddomainsstore_startFetchingBlockedDomains(t, n);
-        if (r[1]) throw g(r[0]);
+        if (r[1]) throw m(r[0]);
     }
 }
 let U =
@@ -323,18 +323,18 @@ class w {
         let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
             n = a,
             r = i.experimentcacher_getConfig(t, n);
-        if (r[2]) throw g(r[1]);
+        if (r[2]) throw m(r[1]);
         return 0 === r[0] ? void 0 : Y.__wrap(r[0]);
     }
     static clearCache() {
         let e = i.experimentcacher_clearCache();
-        if (e[1]) throw g(e[0]);
+        if (e[1]) throw m(e[0]);
     }
     static flushToCache(e) {
         let t = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
             n = a,
             r = i.experimentcacher_flushToCache(t, n);
-        if (r[1]) throw g(r[0]);
+        if (r[1]) throw m(r[0]);
     }
 }
 let G =
@@ -352,8 +352,8 @@ class x {
     }
     connectStore(e) {
         let t = i.fluxapi_connectStore(this.__wbg_ptr, e);
-        if (t[2]) throw g(t[1]);
-        return g(t[0]);
+        if (t[2]) throw m(t[1]);
+        return m(t[0]);
     }
     dispatchAction(e, t) {
         let n = c(e, i.__wbindgen_malloc, i.__wbindgen_realloc),
@@ -489,12 +489,12 @@ function z(e) {
     e.abort();
 }
 function X() {
-    return I(function (e, t, n, i, r) {
+    return f(function (e, t, n, i, r) {
         e.append(A(t, n), A(i, r));
     }, arguments);
 }
 function Z() {
-    return I(function (e) {
+    return f(function (e) {
         return e.arrayBuffer();
     }, arguments);
 }
@@ -506,7 +506,7 @@ function Q(e) {
 }
 function J(e) {
     let t = e.byobRequest;
-    return f(t) ? 0 : h(t);
+    return I(t) ? 0 : h(t);
 }
 function ee(e) {
     return e.byteLength;
@@ -515,17 +515,17 @@ function et(e) {
     return e.byteOffset;
 }
 function en() {
-    return I(function (e) {
+    return f(function (e) {
         return e.caches;
     }, arguments);
 }
 function ei() {
-    return I(function (e, t) {
+    return f(function (e, t) {
         return e.call(t);
     }, arguments);
 }
 function er() {
-    return I(function (e, t, n) {
+    return f(function (e, t, n) {
         return e.call(t, n);
     }, arguments);
 }
@@ -536,12 +536,12 @@ function es(e) {
     return clearTimeout(e);
 }
 function el() {
-    return I(function (e) {
+    return f(function (e) {
         e.close();
     }, arguments);
 }
 function eo() {
-    return I(function (e) {
+    return f(function (e) {
         e.close();
     }, arguments);
 }
@@ -552,7 +552,7 @@ function ec(e) {
     return e.done;
 }
 function eu() {
-    return I(function (e, t) {
+    return f(function (e, t) {
         e.enqueue(t);
     }, arguments);
 }
@@ -563,31 +563,31 @@ function eE(e) {
     return fetch(e);
 }
 function eA() {
-    return I(function (e, t) {
+    return f(function (e, t) {
         var n;
         globalThis.crypto.getRandomValues(((n = e >>> 0), l().subarray(n / 1, n / 1 + t)));
     }, arguments);
 }
 function eh() {
-    return I(function (e, t) {
+    return f(function (e, t) {
         return Reflect.get(e, t);
     }, arguments);
 }
-function eI(e, t) {
+function ef(e, t) {
     return e[t >>> 0];
 }
-function ef(e, t) {
+function eI(e, t) {
     return e[t];
 }
 function ep() {
-    return I(function (e, t) {
+    return f(function (e, t) {
         return Reflect.has(e, t);
     }, arguments);
 }
 function eT(e) {
     return e.headers;
 }
-function em(e) {
+function eg(e) {
     let t;
     try {
         t = e instanceof ArrayBuffer;
@@ -596,7 +596,7 @@ function em(e) {
     }
     return t;
 }
-function eg(e) {
+function em(e) {
     let t;
     try {
         t = e instanceof Cache;
@@ -648,7 +648,7 @@ function eD(e, t) {
     return e.match(t);
 }
 function ev() {
-    return I(function () {
+    return f(function () {
         return new Headers();
     }, arguments);
 }
@@ -685,7 +685,7 @@ function eG(e, t) {
     return Error(A(e, t));
 }
 function ex() {
-    return I(function () {
+    return f(function () {
         return new AbortController();
     }, arguments);
 }
@@ -696,17 +696,17 @@ function eF(e, t, n) {
     return new Uint8Array(e, t >>> 0, n >>> 0);
 }
 function eB() {
-    return I(function (e, t) {
+    return f(function (e, t) {
         return new Response(e, t);
     }, arguments);
 }
 function eV() {
-    return I(function (e, t, n) {
+    return f(function (e, t, n) {
         return new Request(A(e, t), n);
     }, arguments);
 }
 function eH() {
-    return I(function (e) {
+    return f(function (e) {
         return new Blob(e);
     }, arguments);
 }
@@ -714,7 +714,7 @@ function ej(e) {
     return e.next;
 }
 function eW() {
-    return I(function (e) {
+    return f(function (e) {
         return e.next();
     }, arguments);
 }
@@ -726,7 +726,7 @@ function eK(e, t, n) {
 }
 function e$(e) {
     let t = e.performance;
-    return f(t) ? 0 : h(t);
+    return I(t) ? 0 : h(t);
 }
 function ez(e, t) {
     return e.push(t);
@@ -744,7 +744,7 @@ function eQ(e) {
     return Promise.resolve(e);
 }
 function eJ() {
-    return I(function (e, t) {
+    return f(function (e, t) {
         e.respond(t >>> 0);
     }, arguments);
 }
@@ -752,12 +752,12 @@ function e0(e, t) {
     return setTimeout(e, t);
 }
 function e1() {
-    return I(function (e, t) {
+    return f(function (e, t) {
         return setTimeout(e, t);
     }, arguments);
 }
 function e2() {
-    return I(function (e, t, n, i, r) {
+    return f(function (e, t, n, i, r) {
         e.set(A(t, n), A(i, r));
     }, arguments);
 }
@@ -774,7 +774,7 @@ function e4(e, t, n) {
     return e.set(t, n);
 }
 function e7() {
-    return I(function (e, t, n) {
+    return f(function (e, t, n) {
         return Reflect.set(e, t, n);
     }, arguments);
 }
@@ -807,25 +807,25 @@ function ts(e) {
 }
 function tl() {
     let e = void 0 === n.g ? null : n.g;
-    return f(e) ? 0 : h(e);
+    return I(e) ? 0 : h(e);
 }
 function to() {
     let e = "u" < typeof globalThis ? null : globalThis;
-    return f(e) ? 0 : h(e);
+    return I(e) ? 0 : h(e);
 }
 function td() {
     let e = "u" < typeof self ? null : self;
-    return f(e) ? 0 : h(e);
+    return I(e) ? 0 : h(e);
 }
 function tc() {
     let e = "u" < typeof window ? null : window;
-    return f(e) ? 0 : h(e);
+    return I(e) ? 0 : h(e);
 }
 function tu(e) {
     return e.status;
 }
 function t_() {
-    return I(function (e) {
+    return f(function (e) {
         return JSON.stringify(e);
     }, arguments);
 }
@@ -840,12 +840,12 @@ function th(e, t) {
         r = a;
     (_().setInt32(e + 4, r, !0), _().setInt32(e + 0, n, !0));
 }
-function tI(e) {
+function tf(e) {
     return e.value;
 }
-function tf(e) {
+function tI(e) {
     let t = e.view;
-    return f(t) ? 0 : h(t);
+    return I(t) ? 0 : h(t);
 }
 function tp(e, t) {
     console.warn(A(e, t));
@@ -853,10 +853,10 @@ function tp(e, t) {
 function tT(e) {
     return e;
 }
-function tm(e) {
+function tg(e) {
     return BigInt.asUintN(64, e);
 }
-function tg(e) {
+function tm(e) {
     return "boolean" == typeof e ? +!!e : 2;
 }
 function tS(e) {
@@ -947,14 +947,14 @@ function tG() {
 }
 function tx(e, t) {
     let n = "number" == typeof t ? t : void 0;
-    (_().setFloat64(e + 8, f(n) ? 0 : n, !0), _().setInt32(e + 0, !f(n), !0));
+    (_().setFloat64(e + 8, I(n) ? 0 : n, !0), _().setInt32(e + 0, !I(n), !0));
 }
 function tk(e) {
     return e;
 }
 function tF(e, t) {
     let n = "string" == typeof t ? t : void 0;
-    var r = f(n) ? 0 : c(n, i.__wbindgen_malloc, i.__wbindgen_realloc),
+    var r = I(n) ? 0 : c(n, i.__wbindgen_malloc, i.__wbindgen_realloc),
         s = a;
     (_().setInt32(e + 4, s, !0), _().setInt32(e + 0, r, !0));
 }

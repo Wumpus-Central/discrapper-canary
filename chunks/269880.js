@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var i = n(477900);
 n(582128);
 var r = n(17928),
@@ -13,23 +13,23 @@ var r = n(17928),
     E = n(185928),
     A = n(652215),
     h = n(375708);
-function I() {
+function f() {
     let { analyticsLocations: e } = (0, o.Ay)(),
         {
             theme: t,
             useSystemTheme: n,
-            useForcedColors: I,
+            useForcedColors: f,
         } = (0, r.cf)([u.A, _.Ay, l.Ay], () => ({
             theme: u.A.theme,
             useSystemTheme: _.Ay.useSystemTheme,
             useForcedColors: l.Ay.useForcedColors,
         }));
-    function f(r, l) {
+    function I(r, l) {
         return (0, i.jsx)(a.iD, {
             id: r,
             group: "input-modes",
             label: l,
-            disabled: I,
+            disabled: f,
             checked: n === E.Q_.ON ? "system" === r : r === t,
             action: () => {
                 ((0, d.Py)(),
@@ -43,11 +43,11 @@ function I() {
             a.rX,
             {
                 children: [
-                    f(A.NJ8.LIGHT, h.intl.string(h.t.K2sFfo)),
-                    f(A.NJ8.ASH, h.intl.string(h.t.SMPT1k)),
-                    f(A.NJ8.DARK, h.intl.string(h.t.b8Cei3)),
-                    f(A.NJ8.ONYX, h.intl.string(h.t.Do4ZJx)),
-                    f("system", h.intl.string(h.t["7rOU6j"])),
+                    I(A.NJ8.LIGHT, h.intl.string(h.t.K2sFfo)),
+                    I(A.NJ8.ASH, h.intl.string(h.t.SMPT1k)),
+                    I(A.NJ8.DARK, h.intl.string(h.t.b8Cei3)),
+                    I(A.NJ8.ONYX, h.intl.string(h.t.Do4ZJx)),
+                    I("system", h.intl.string(h.t["7rOU6j"])),
                 ],
             },
             "theme-items",

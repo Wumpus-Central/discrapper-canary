@@ -1,4 +1,4 @@
-n.d(t, { D0: () => c, DJ: () => p, Zo: () => I, eb: () => f, en: () => A, uf: () => d });
+n.d(t, { D0: () => c, DJ: () => p, Zo: () => f, eb: () => I, en: () => A, uf: () => d });
 var i = n(636537),
     r = n(73153),
     a = n(393033),
@@ -50,10 +50,10 @@ async function h(e) {
         })
     ).body;
 }
-async function I(e) {
+async function f(e) {
     await i.Bo.post({ url: o.Rsh.REGISTER_INCODE_INTERVIEW, body: { interview_id: e }, rejectWithError: !0 });
 }
-async function f() {
+async function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return (
         await i.Bo.post({

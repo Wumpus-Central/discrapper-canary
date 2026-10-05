@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(439372),
     r = n(183636),
     a = n(927813),
@@ -19,8 +19,8 @@ let u = { questFetchJitterMs: 5 * a.A.Millis.SECOND, questHomeHeroJitterMs: 5 * 
 var E = n(971276);
 let A = a.A.Millis.DAY,
     h = 30 * a.A.Millis.MINUTE,
-    I = 5 * a.A.Millis.MINUTE,
-    f = 12 * a.A.Millis.HOUR,
+    f = 5 * a.A.Millis.MINUTE,
+    I = 12 * a.A.Millis.HOUR,
     p = 5 * a.A.Millis.MINUTE;
 class T extends i.A {
     instantiatedAt = Date.now();
@@ -86,8 +86,8 @@ class T extends i.A {
         }
     };
     handleRunningGamesChange = () => {
-        this.instantiatedAt + f > Date.now() ||
-            d.A.lastFetchedCurrentQuests + f > Date.now() ||
+        this.instantiatedAt + I > Date.now() ||
+            d.A.lastFetchedCurrentQuests + I > Date.now() ||
             this._fetch("running_games");
     };
     handleUserSettingsProtoUpdate = (e) => {
@@ -95,7 +95,7 @@ class T extends i.A {
         !("localization" in n.proto) ||
             !t ||
             i ||
-            Date.now() - this.lastFetchedQuestForLocaleChangeAt <= I ||
+            Date.now() - this.lastFetchedQuestForLocaleChangeAt <= f ||
             ((this.lastFetchedQuestForLocaleChangeAt = Date.now()), this._fetch("user_settings"));
     };
     handleStartSession = () => {
@@ -119,4 +119,4 @@ class T extends i.A {
         LOGOUT: this.handleLogout,
     };
 }
-let m = new T();
+let g = new T();

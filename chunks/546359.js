@@ -12,12 +12,12 @@ var i = n(17928),
     E = n(977997),
     A = n(970928),
     h = n(935208),
-    I = n(636889),
-    f = n(427262),
+    f = n(636889),
+    I = n(427262),
     p = n(736347),
     T = n(303911),
-    m = n(652215);
-let g = { key: "active_now", type: p.ik.ACTIVE_NOW },
+    g = n(652215);
+let m = { key: "active_now", type: p.ik.ACTIVE_NOW },
     S = { key: "online", type: p.ik.ONLINE },
     N = { key: "offline", type: p.ik.OFFLINE },
     C = Object.freeze([]),
@@ -36,7 +36,7 @@ function M(e) {
         i = c.A.getActivities(e),
         r = i.findIndex((e) => {
             let { type: t } = e;
-            return t === m.$pd.PLAYING || t === m.$pd.COMPETING;
+            return t === g.$pd.PLAYING || t === g.$pd.COMPETING;
         }),
         a = -1 !== r ? i[r] : null,
         l = a?.assets?.large_image ?? a?.assets?.small_image,
@@ -44,7 +44,7 @@ function M(e) {
     return {
         type: p.VZ.FRIEND,
         userId: e,
-        name: u.A.getNickname(e) ?? f.Ay.getName(t),
+        name: u.A.getNickname(e) ?? I.Ay.getName(t),
         status: n,
         gameAppId: a?.application_id ?? null,
         gameName: a?.name ?? null,
@@ -57,7 +57,7 @@ function P(e, t) {
     switch (t) {
         case p.Vj.ACTIVE_NOW:
             if ((0, T.iX)(e.status)) return N;
-            if (null != e.gameName || null != e.voiceChannelId) return g;
+            if (null != e.gameName || null != e.voiceChannelId) return m;
             return S;
         case p.Vj.GAME:
             if (null != e.gameName)
@@ -97,7 +97,7 @@ function x(e) {
         rows: [],
         snapshot: null,
     };
-    return (D.set(t.key, t), I.Yr(v, t, T.Ut), (b = null), t);
+    return (D.set(t.key, t), f.Yr(v, t, T.Ut), (b = null), t);
 }
 function k(e, t) {
     let n = e.groupsByChannelId.get(t);
@@ -105,7 +105,7 @@ function k(e, t) {
         null == n &&
             ((n = { channelId: t, rows: [], snapshot: null }),
             e.groupsByChannelId.set(t, n),
-            I.Yr(e.groups, n, (e, t) => h.default.compare(e.channelId, t.channelId))),
+            f.Yr(e.groups, n, (e, t) => h.default.compare(e.channelId, t.channelId))),
         n
     );
 }
@@ -149,7 +149,7 @@ function V(e) {
                           return e.snapshot;
                       })(i),
                   )
-                : (n === e.rows && (n = e.rows.slice()), I.Yr(n, i.rows[0], w));
+                : (n === e.rows && (n = e.rows.slice()), f.Yr(n, i.rows[0], w));
         e.snapshot = {
             key: e.key,
             type: e.type,
@@ -191,12 +191,12 @@ function Y(e) {
                 let r = U(e);
                 if (null != r) {
                     let t = i.groupsByChannelId.get(r);
-                    if (null == t || !I.TF(t.rows, e, w)) return;
+                    if (null == t || !f.TF(t.rows, e, w)) return;
                     ((t.snapshot = null),
                         0 === t.rows.length &&
                             (i.groupsByChannelId.delete(t.channelId),
-                            I.TF(i.groups, t, (e, t) => h.default.compare(e.channelId, t.channelId))));
-                } else if (!I.TF(i.rows, e, w)) return;
+                            f.TF(i.groups, t, (e, t) => h.default.compare(e.channelId, t.channelId))));
+                } else if (!f.TF(i.rows, e, w)) return;
                 (G(i),
                     0 === i.rows.length &&
                         0 === i.groups.length &&
@@ -210,8 +210,8 @@ function Y(e) {
             r = U(n);
         if (null != r) {
             let e = k(i, r);
-            (I.Yr(e.rows, n, w), (e.snapshot = null));
-        } else I.Yr(i.rows, n, w);
+            (f.Yr(e.rows, n, w), (e.snapshot = null));
+        } else f.Yr(i.rows, n, w);
         G(i);
     } else y.delete(e);
     return !0;

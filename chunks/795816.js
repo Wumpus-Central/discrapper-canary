@@ -5,15 +5,15 @@ n.d(t, {
     LK: () => ep,
     LV: () => eh,
     SE: () => e_,
-    Ue: () => ef,
+    Ue: () => eI,
     _H: () => eu,
-    gk: () => em,
-    i5: () => eg,
+    gk: () => eg,
+    i5: () => em,
     jp: () => eS,
     od: () => eC,
     rW: () => el,
     su: () => eo,
-    tk: () => eI,
+    tk: () => ef,
 });
 var i = n(562708),
     r = n(344351),
@@ -28,12 +28,12 @@ var i = n(562708),
     E = n(148494),
     A = n(181658),
     h = n(155718),
-    I = n(264322),
-    f = n(545152),
+    f = n(264322),
+    I = n(545152),
     p = n(361926),
     T = n(587895),
-    m = n(972995),
-    g = n(878014),
+    g = n(972995),
+    m = n(878014),
     S = n(568598),
     N = n(198052),
     C = n(501419),
@@ -89,10 +89,10 @@ async function eo(e) {
             commandOrigin: _,
             sectionName: E,
             source: h,
-            onExecutedCallback: I,
-            referrerId: f,
+            onExecutedCallback: f,
+            referrerId: I,
             customId: p,
-            inviterUserId: m,
+            inviterUserId: g,
             renderInFramePool: S,
             onConfirmActivityLaunchChecksAlertOpen: N,
         } = e,
@@ -107,11 +107,11 @@ async function eo(e) {
             let { close: e } = n(574172);
             e(en.MLl.ACTIVITY_POPOUT);
         }
-        if ((!0 !== S && L.A.clearMainFrameSlot(), (0, J.y)({ applicationId: i, customId: p, referrerId: f })))
+        if ((!0 !== S && L.A.clearMainFrameSlot(), (0, J.y)({ applicationId: i, customId: p, referrerId: I })))
             return (
                 (0, Z.j)(i, {
                     isStart: s,
-                    inviterUserId: m,
+                    inviterUserId: g,
                     channelId: t ?? null,
                     guildId: D ?? null,
                     locationKind: null != D ? r.T.GUILD_CHANNEL : r.T.PRIVATE_CHANNEL,
@@ -127,8 +127,8 @@ async function eo(e) {
             analyticsLocations: l,
             source: h,
             commandOrigin: _,
-            inviterUserId: m,
-            launchParams: { customId: p, referrerId: f, renderInFramePool: S },
+            inviterUserId: g,
+            launchParams: { customId: p, referrerId: I, renderInFramePool: S },
         });
         let e = await eN(i, t ?? void 0);
         o.h.dispatch({
@@ -150,8 +150,8 @@ async function eo(e) {
                     locationObject: d,
                     analyticsLocations: l ?? [],
                     source: h,
-                    referrerId: f,
-                    inviterUserId: m,
+                    referrerId: I,
+                    inviterUserId: g,
                 }),
             s)
         ) {
@@ -163,7 +163,7 @@ async function eo(e) {
                 (x = C),
                 (e = x?.type === en.rbe.GUILD_VOICE),
                 (n = T.A.getApplication(G)),
-                (r = (0, g.W)(n, a.U.MAIN)),
+                (r = (0, m.W)(n, a.U.MAIN)),
                 (s = (0, j.AX)(x)),
                 (!e || !r) && !s)
             )
@@ -176,7 +176,7 @@ async function eo(e) {
                 commandOrigin: _,
                 sectionName: E,
                 source: h,
-                onExecutedCallback: I,
+                onExecutedCallback: f,
                 onConfirmActivityLaunchChecksAlertOpen: N,
                 embeddedActivitiesManager: c,
             });
@@ -194,7 +194,7 @@ async function eo(e) {
                 else throw new O.A(O.A.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND);
         } else {
             let e = await ec({ applicationId: i, channelId: t, embeddedActivitiesManager: c, isStart: s, guildId: D });
-            if ((I?.(), "failure" === e.result))
+            if ((f?.(), "failure" === e.result))
                 throw new O.A(O.A.Reasons.LEGACY_LAUNCH_CLIENT_VALIDATION_FAILED, e.reason);
         }
         o.h.dispatch({ type: "EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", nonce: U, applicationId: i, channelId: t ?? null });
@@ -239,9 +239,9 @@ async function ed(e) {
     }
     let _ = u.handler !== h.Ys.APP_HANDLER;
     if (!(_ || ei.TR.includes(t))) {
-        (null != i && (await (0, I.Zn)({ type: "channel", channelId: i })), await (0, I.Zn)({ type: "user" }));
+        (null != i && (await (0, f.Zn)({ type: "channel", channelId: i })), await (0, f.Zn)({ type: "user" }));
         let e = w.A.getChannel(i),
-            { isAuthorized: n } = await (0, m.q)({
+            { isAuthorized: n } = await (0, g.q)({
                 applicationId: t,
                 channel: e,
                 commandIntegrationTypes: u.integration_types,
@@ -249,7 +249,7 @@ async function ed(e) {
         if (!n) return { result: "failure", reason: 2 };
     }
     let E = w.A.getChannel(i),
-        g = null != r ? G.A.getGuild(r) : null;
+        m = null != r ? G.A.getGuild(r) : null;
     if (null == E) return { result: "failure", reason: 3 };
     if (_) {
         let e,
@@ -274,10 +274,10 @@ async function ed(e) {
     }
     return (
         await new Promise((e, d) => {
-            (0, f.A)({
+            (0, I.A)({
                 command: u,
                 optionValues: {},
-                context: { channel: E, guild: g },
+                context: { channel: E, guild: m },
                 commandOrigin: a,
                 sectionName: s,
                 source: l,
@@ -492,12 +492,12 @@ async function eh(e) {
         );
     }
 }
-async function eI(e) {
+async function ef(e) {
     let { activityChannelId: t, invitedChannelId: n, applicationId: i, location: r, inviteAnalyticsMetadata: a } = e,
         s = await _.Ay.createInvite(t, { target_type: ea.yV.EMBEDDED_APPLICATION, target_application_id: i }, r);
     null != w.A.getChannel(n) && E.A.sendInvite(n, s.code, r, a);
 }
-async function ef(e) {
+async function eI(e) {
     let { channelId: t, applicationId: n, userId: i, location: r, inviteAnalyticsMetadata: a, prefixedContent: s } = e,
         l = await _.Ay.createInvite(t, { target_type: ea.yV.EMBEDDED_APPLICATION, target_application_id: n }, r);
     await c.A.ensurePrivateChannel(i).then((e) => {
@@ -519,14 +519,14 @@ async function eT(e) {
         return !1;
     }
 }
-function em(e) {
+function eg(e) {
     o.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_PANEL_MODE", activityPanelMode: e });
 }
-function eg(e) {
+function em(e) {
     o.h.dispatch({ type: "EMBEDDED_ACTIVITY_SET_FOCUSED_LAYOUT", focusedActivityLayout: e });
 }
 function eS() {
-    (em(et.Gd.ACTIVITY_POPOUT_WINDOW), o.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }));
+    (eg(et.Gd.ACTIVITY_POPOUT_WINDOW), o.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }));
 }
 async function eN(e, t, n) {
     let i = { use_stateless_ticket: !0 };

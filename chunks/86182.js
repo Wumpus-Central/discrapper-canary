@@ -17,36 +17,36 @@ function s(e) {
             disableAdaptiveTheme: A,
             reduceAdaptiveTheme: h,
         } = e,
-        I = r.useContext(a.Dx);
+        f = r.useContext(a.Dx);
     a.PQ;
-    let f = r.useMemo(
+    let I = r.useMemo(
         () =>
             (0, a.dI)({
-                theme: n ?? I.theme,
-                primaryColor: s ?? I.primaryColor,
-                secondaryColor: l ?? I.secondaryColor,
-                gradient: o ?? I.gradient,
-                flags: d ?? I.flags,
-                contrast: c ?? I.contrast,
-                saturation: u ?? I.saturation,
-                enabledExperiments: _ ?? I.enabledExperiments,
-                density: E ?? I.density,
-                disableAdaptiveTheme: A ?? I.disableAdaptiveTheme,
-                reduceAdaptiveTheme: h ?? I.reduceAdaptiveTheme,
+                theme: n ?? f.theme,
+                primaryColor: s ?? f.primaryColor,
+                secondaryColor: l ?? f.secondaryColor,
+                gradient: o ?? f.gradient,
+                flags: d ?? f.flags,
+                contrast: c ?? f.contrast,
+                saturation: u ?? f.saturation,
+                enabledExperiments: _ ?? f.enabledExperiments,
+                density: E ?? f.density,
+                disableAdaptiveTheme: A ?? f.disableAdaptiveTheme,
+                reduceAdaptiveTheme: h ?? f.reduceAdaptiveTheme,
             }),
         [
             n,
-            I.theme,
-            I.primaryColor,
-            I.secondaryColor,
-            I.gradient,
-            I.flags,
-            I.contrast,
-            I.saturation,
-            I.enabledExperiments,
-            I.density,
-            I.disableAdaptiveTheme,
-            I.reduceAdaptiveTheme,
+            f.theme,
+            f.primaryColor,
+            f.secondaryColor,
+            f.gradient,
+            f.flags,
+            f.contrast,
+            f.saturation,
+            f.enabledExperiments,
+            f.density,
+            f.disableAdaptiveTheme,
+            f.reduceAdaptiveTheme,
             s,
             l,
             o,
@@ -59,5 +59,5 @@ function s(e) {
             h,
         ],
     );
-    return (0, i.jsx)(a.Dx.Provider, { value: f, children: t });
+    return (0, i.jsx)(a.Dx.Provider, { value: I, children: t });
 }

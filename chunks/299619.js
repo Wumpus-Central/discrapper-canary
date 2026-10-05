@@ -17,14 +17,14 @@ let l = (e) => {
             } = e,
             A = !_ && !o && l,
             h = r.useRef(null);
-        function I() {
+        function f() {
             o &&
                 h?.current?.play()?.catch((e) => {
                     if (null != d) d(e);
                     else throw e;
                 });
         }
-        function f() {
+        function I() {
             o && h?.current?.pause();
         }
         (r.useLayoutEffect(
@@ -59,10 +59,10 @@ let l = (e) => {
             "aria-label": t,
             ref: h,
             autoPlay: A,
-            onMouseEnter: I,
-            onMouseLeave: f,
-            onFocus: I,
-            onBlur: f,
+            onMouseEnter: f,
+            onMouseLeave: I,
+            onFocus: f,
+            onBlur: I,
             style:
                 u === a.d.MOSAIC
                     ? { width: "100%", height: "100%", maxHeight: "inherit", objectFit: "contain" }

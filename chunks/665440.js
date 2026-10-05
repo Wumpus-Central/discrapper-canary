@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(439372),
     r = n(734057),
     a = n(309010),
@@ -76,7 +76,7 @@ function h(e) {
         (E({ warningId: r.id, warningType: r.type, senderId: i.getRecipientId(), channelId: i.id }), !0)
     );
 }
-class I extends i.A {
+class f extends i.A {
     actions = { CHANNEL_SELECT: A, CHANNEL_UPDATES: h };
 }
-let f = new I();
+let I = new f();

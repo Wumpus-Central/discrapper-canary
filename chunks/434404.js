@@ -11,12 +11,12 @@ var i = n(419954),
     g = n(766075),
     m = n(941933),
     A = n(375708),
-    h = n(536854),
-    E = n(72290);
-function S() {
+    E = n(536854),
+    h = n(72290);
+function x() {
     let e = (0, a.bG)([c.default], () => c.default.locale),
         [t, i] = r.useState(e),
-        S = r.useMemo(
+        x = r.useMemo(
             () =>
                 (0, A.getAvailableLocales)().map((e) => {
                     let t;
@@ -30,18 +30,18 @@ function S() {
                         value: e.value,
                         label: e.name,
                         leading: (0, l.jsx)("div", {
-                            className: h.Jt,
+                            className: E.Jt,
                             "aria-hidden": !0,
-                            children: (0, l.jsx)("img", { alt: "", src: t, className: h.Eb }),
+                            children: (0, l.jsx)("img", { alt: "", src: t, className: E.Eb }),
                         }),
-                        trailing: (0, l.jsx)("span", { className: h.hI, children: A.intl.string(e.localizedName) }),
+                        trailing: (0, l.jsx)("span", { className: E.hI, children: A.intl.string(e.localizedName) }),
                     };
                 }),
             [],
         ),
-        x = r.useCallback((e) => {
+        p = r.useCallback((e) => {
             (i(e),
-                E.nextTick(() => {
+                h.nextTick(() => {
                     (d.Ay.updateLocale(e),
                         (0, o.closeModal)(m.y) && (0, g.openUserSettings)(s.X.LANGUAGE_AND_TIME_PANEL));
                 }));
@@ -51,15 +51,15 @@ function S() {
         label: A.intl.string(A.t["mx+sp7"]),
         description: A.intl.string(A.t.rTPlcq),
         value: t,
-        options: S,
-        onSelectionChange: x,
+        options: x,
+        onSelectionChange: p,
     });
 }
-let x = (0, i.E2)(s.X.LANGUAGE_SELECT_SETTING, {
+let p = (0, i.E2)(s.X.LANGUAGE_SELECT_SETTING, {
     useSearchTerms: () => [A.intl.string(A.t.IHMsPn)],
-    Component: () => (0, l.jsx)(S, {}),
+    Component: () => (0, l.jsx)(x, {}),
 });
-var p = n(873298),
+var S = n(873298),
     T = n(885386);
 let f = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
         useSearchTerms: () => [A.intl.string(A.t.dyamEI), A.intl.string(A.t.p8NOwi), A.intl.string(A.t["+o/sOo"])],
@@ -68,10 +68,10 @@ let f = (0, i.Qx)(s.X.TIME_FORMAT_SETTING, {
         setValue: (e) => T.PZ.updateSetting(e),
         useOptions: function () {
             return [
-                { name: A.intl.string(A.t.FMWYvb), value: p.PZ.AUTO },
-                { name: A.intl.string(A.t.p8NOwi), value: p.PZ.H12 },
-                { name: A.intl.string(A.t["+o/sOo"]), value: p.PZ.H23 },
+                { name: A.intl.string(A.t.FMWYvb), value: S.PZ.AUTO },
+                { name: A.intl.string(A.t.p8NOwi), value: S.PZ.H12 },
+                { name: A.intl.string(A.t["+o/sOo"]), value: S.PZ.H23 },
             ];
         },
     }),
-    I = (0, i.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [x, f] });
+    I = (0, i.zZ)(s.X.LANGUAGE_AND_TIME_CATEGORY, { buildLayout: () => [p, f] });

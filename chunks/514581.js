@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => C, oE: () => g });
+n.d(t, { Ay: () => C, oE: () => m });
 var i = n(439372),
     r = n(734057),
     a = n(763827),
@@ -15,8 +15,8 @@ var c = n(192308),
     A = n(652215);
 n(100544);
 let h = 3 * l.A.Millis.DAY,
-    I = 2 * l.A.Millis.DAY,
-    f = +l.A.Millis.HOUR;
+    f = 2 * l.A.Millis.DAY,
+    I = +l.A.Millis.HOUR;
 function p(e) {
     let { channelId: t } = e;
     if (null == t) return;
@@ -78,15 +78,15 @@ function p(e) {
 function T(e) {
     let { state: t } = e;
 }
-function m() {
-    return ((0, o.Iz)() ?? 0) > Date.now() - f;
+function g() {
+    return ((0, o.Iz)() ?? 0) > Date.now() - I;
 }
-function g(e) {
-    return m() || Array.from(e).every((e) => S(e, !0));
+function m(e) {
+    return g() || Array.from(e).every((e) => S(e, !0));
 }
 function S(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return !!(!t && m()) || ((0, o.kP)(e) ?? 0) > Date.now() - I;
+    return !!(!t && g()) || ((0, o.kP)(e) ?? 0) > Date.now() - f;
 }
 class N extends i.A {
     actions = { CHANNEL_SELECT: p, APP_STATE_UPDATE: T };

@@ -7,7 +7,7 @@
     k9: () => E,
     kK: () => A,
     qU: () => S,
-    vS: () => f,
+    vS: () => I,
 }),
     n(508300));
 var i = n(664294),
@@ -71,15 +71,15 @@ function h() {
         return {};
     }
 }
-let I = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link/?\\?[\\S]+$", "i");
-function f(e) {
-    return null != e && I.test(e);
+let f = RegExp("^https://(?:ptb\\.|canary\\.)?(discordapp|discord)\\.com/__development/link/?\\?[\\S]+$", "i");
+function I(e) {
+    return null != e && f.test(e);
 }
 let p = RegExp("^dev://branch/([\\w-./]+)$", "i");
 function T(e) {
     return null != e && p.test(e);
 }
-let m = new Set([
+let g = new Set([
         "canary.discord.com",
         "ptb.discord.com",
         "discord.com",
@@ -87,11 +87,11 @@ let m = new Set([
         "ptb.discordapp.com",
         "discordapp.com",
     ]),
-    g = new Set(["/__development/link", "/__development/link/"]);
+    m = new Set(["/__development/link", "/__development/link/"]);
 function S(e) {
     if (T(e)) return { payload: null, url: e };
     let t = l.A.safeParseWithQuery(e);
-    if (null == t || !m.has(t.hostname) || !("s" in t.query) || !g.has(t.pathname)) return null;
+    if (null == t || !g.has(t.hostname) || !("s" in t.query) || !m.has(t.pathname)) return null;
     for (let e in t.query) "s" !== e && delete t.query[e];
     return { payload: t.query.s, url: r.format(t) };
 }

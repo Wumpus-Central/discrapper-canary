@@ -12,12 +12,12 @@ var r = n(17928),
     E = n(927813),
     A = n(403362),
     h = n(723702),
-    I = n(935208),
-    f = n(652215),
+    f = n(935208),
+    I = n(652215),
     p = n(705751);
 let T = "GameStoreReportedGames",
-    m = E.A.Millis.DAY,
-    g = new o.A(),
+    g = E.A.Millis.DAY,
+    m = new o.A(),
     S = new Map(),
     N = new Map(),
     C = a.w.get(T) ?? Object.create(null),
@@ -51,7 +51,7 @@ function H(e, t) {
 }
 function j(e) {
     let t = e instanceof d.xg ? B(e) : e;
-    for (let n of (g.set(e.id, t), H(t.id, t.name.toLowerCase()), e.aliases)) H(t.id, n.toLowerCase());
+    for (let n of (m.set(e.id, t), H(t.id, t.name.toLowerCase()), e.aliases)) H(t.id, n.toLowerCase());
     if ((0, h.isDesktop)()) for (let n of e.executables) N.set(n.name, t.id);
 }
 class W extends r.Ay.PersistedStore {
@@ -86,7 +86,7 @@ class W extends r.Ay.PersistedStore {
         return (0, h.isDesktop)()
             ? {
                   detectableGamesEtag: O,
-                  detectableGames: g.values(),
+                  detectableGames: m.values(),
                   blocklistEtag: v,
                   blocklistExecutables: b,
                   blocklistPatterns: M.map((e) => e.source),
@@ -100,10 +100,10 @@ class W extends r.Ay.PersistedStore {
               };
     }
     get games() {
-        return g.values();
+        return m.values();
     }
     getDetectableGame(e) {
-        return g.get(I.default.cast(e));
+        return m.get(f.default.cast(e));
     }
     searchGamesByName(e) {
         if (null == e) return [];
@@ -189,13 +189,13 @@ class W extends r.Ay.PersistedStore {
         return L;
     }
     get detectableGamesTtl() {
-        return m;
+        return g;
     }
     canFetchDetectableGames() {
-        return !0 !== i && (null == R || Date.now() >= R + m);
+        return !0 !== i && (null == R || Date.now() >= R + g);
     }
     canFetchExecutableBlocklist() {
-        return !D && (null == y || Date.now() >= y + m);
+        return !D && (null == y || Date.now() >= y + g);
     }
     getGameByExecutable(e) {
         if (null == e) return;
@@ -226,7 +226,7 @@ class W extends r.Ay.PersistedStore {
         let i = e.id;
         w.has(i) ||
             (w.add(i),
-            _.default.track(f.HAw.GAME_APPLICATION_LOOKUP_FALLTHROUGH, {
+            _.default.track(I.HAw.GAME_APPLICATION_LOOKUP_FALLTHROUGH, {
                 application_id: i,
                 application_name: e.name ?? null,
                 match_type: t,
@@ -239,7 +239,7 @@ class W extends r.Ay.PersistedStore {
         if (G.has(i)) return;
         G.add(i);
         let r = null != n && "" !== n;
-        _.default.track(f.HAw.GAME_NAME_MATCH_FALLBACK, {
+        _.default.track(I.HAw.GAME_NAME_MATCH_FALLBACK, {
             matched_name: e,
             matched_game_id: t.id,
             exe_name: r ? (V(n) ?? null) : null,
@@ -252,7 +252,7 @@ class W extends r.Ay.PersistedStore {
             a = Date.now();
         (null == r || a - r >= U) &&
             (P.set(i, a),
-            _.default.track(f.HAw.GAME_BLOCKLIST_TRIGGERED, {
+            _.default.track(I.HAw.GAME_BLOCKLIST_TRIGGERED, {
                 block_type: t,
                 matched_entry: n,
                 game_name: e.gameName ?? e.origGameName,
@@ -272,7 +272,7 @@ class W extends r.Ay.PersistedStore {
 let Y = new W(s.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { detectableApplications: t } = e;
-        for (let e of (g.clear(), S.clear(), N.clear(), t)) j(e);
+        for (let e of (m.clear(), S.clear(), N.clear(), t)) j(e);
     },
     GAMES_DATABASE_FETCH: function () {
         i = !0;
@@ -282,7 +282,7 @@ let Y = new W(s.h, {
     },
     GAMES_DATABASE_UPDATE: function (e) {
         let { games: t, etag: n } = e;
-        for (let e of (null != n && O !== n && (g.clear(), S.clear(), N.clear(), (O = n)), t))
+        for (let e of (null != n && O !== n && (m.clear(), S.clear(), N.clear(), (O = n)), t))
             j(
                 (function (e) {
                     let { executables: t, aliases: n, third_party_skus: i } = e;

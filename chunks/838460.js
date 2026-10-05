@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var r = n(477900);
 n(582128);
 var a = n(192308),
@@ -65,4 +65,4 @@ class h extends s.A {
         },
     };
 }
-let I = new h();
+let f = new h();

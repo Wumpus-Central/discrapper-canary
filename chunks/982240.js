@@ -16,7 +16,7 @@ function E(e) {
 }
 let A = d.A.Millis.HOUR,
     h = new (r())({ max: 50 });
-function I() {
+function f() {
     return {
         badges: new Map(),
         catalogFetched: !1,
@@ -26,7 +26,7 @@ function I() {
         driftFetchGateUntil: null,
     };
 }
-class f extends s.Ay.Store {
+class I extends s.Ay.Store {
     initialize() {
         this.waitFor(o.default);
     }
@@ -72,7 +72,7 @@ class f extends s.Ay.Store {
         return n?.threshold == null ? 0 : Math.max(0, n.threshold - n.current);
     }
 }
-let p = new f(l.h, {
+let p = new I(l.h, {
     BADGE_DIRECTORY_FETCH_START: function (e) {
         let { userId: t } = e,
             n = h.get(t);
@@ -80,7 +80,7 @@ let p = new f(l.h, {
     },
     BADGE_DIRECTORY_FETCH_SUCCESS: function (e) {
         let { userId: t, badges: n } = e,
-            i = h.peek(t) ?? I();
+            i = h.peek(t) ?? f();
         ((i.badges = new Map(n.map((e) => [e.badge_id, e]))),
             (i.catalogFetched = !0),
             (i.fetchError = !1),
@@ -89,17 +89,17 @@ let p = new f(l.h, {
     },
     BADGE_DIRECTORY_FETCH_FAILURE: function (e) {
         let { userId: t } = e,
-            n = h.peek(t) ?? I();
+            n = h.peek(t) ?? f();
         ((n.fetchError = !0), h.set(t, n));
     },
     BADGE_FETCH_SUCCESS: function (e) {
         let { userId: t, badge: n } = e,
-            i = h.peek(t) ?? I();
+            i = h.peek(t) ?? f();
         (i.badges.set(n.badge_id, n), h.set(t, i));
     },
     BADGE_SUMMARY_FETCH_SUCCESS: function (e) {
         let { userId: t, badge: n } = e,
-            i = h.peek(t) ?? I(),
+            i = h.peek(t) ?? f(),
             r = i.badges.get(n.badge_id);
         (i.badges.set(n.badge_id, {
             ...n,

@@ -1,4 +1,4 @@
-t.d(a, { A: () => d });
+t.d(a, { A: () => c });
 var i = t(256905),
     n = t(625494),
     l = t(652215);
@@ -17,23 +17,23 @@ async function r(e) {
         return s;
     }
 }
-async function c(e, a) {
-    let { key: t, gameId: i, videoURL: s, thumbnailURL: c, title: d, spritesheetImageURL: o, spritesheetVttURL: u } = e,
-        { width: m, height: h } = await r(c);
+async function d(e, a) {
+    let { key: t, gameId: i, videoURL: s, thumbnailURL: d, title: c, spritesheetImageURL: o, spritesheetVttURL: u } = e,
+        { width: m, height: h } = await r(d);
     return {
         type: "VIDEO",
         url: s,
         proxyUrl: s,
-        poster: c,
+        poster: d,
         width: m,
         height: h,
-        alt: d,
+        alt: c,
         clip: {
             id: t,
             url: s,
             width: m,
             height: h,
-            title: d,
+            title: c,
             application: { id: i },
             spritesheet_image_url: o,
             spritesheet_vtt_url: u,
@@ -41,10 +41,10 @@ async function c(e, a) {
         onEnded: a ? () => n._.dispatch(l.jej.MODAL_CAROUSEL_NEXT) : void 0,
     };
 }
-async function d(e) {
+async function c(e) {
     let { clips: a, startingIndex: t } = e;
     if (0 === a.length) return;
     let n = a.length > 1,
-        l = await Promise.all(a.map((e) => c(e, n)));
+        l = await Promise.all(a.map((e) => d(e, n)));
     (0, i.R)({ location: "user_profile_widget_clip", items: l, startingIndex: t, shouldHideMediaOptions: !0 });
 }

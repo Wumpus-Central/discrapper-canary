@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(439372),
     r = n(91777),
     a = n(312006),
@@ -15,7 +15,7 @@ function h() {
     (r.A.requestPermission(E.iL.AUDIO).then((e) => {}),
         c.Ay.getMode() === _.TBI.PUSH_TO_TALK && r.A.requestPermission(E.iL.INPUT_MONITORING));
 }
-class I extends i.A {
+class f extends i.A {
     actions = {
         VOICE_STATE_UPDATES: this.handleVoiceStateUpdates,
         VOICE_CHANNEL_SELECT: this.handleVoiceChannelSelect,
@@ -39,4 +39,4 @@ class I extends i.A {
         });
     }
 }
-let f = new I();
+let I = new f();

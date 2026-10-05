@@ -1,4 +1,4 @@
-n.d(t, { Gf: () => A, H2: () => I, WL: () => T, _y: () => f, e0: () => h, yL: () => p });
+n.d(t, { Gf: () => A, H2: () => f, WL: () => T, _y: () => I, e0: () => h, yL: () => p });
 var i = n(284009),
     r = n.n(i),
     a = n(127258),
@@ -45,11 +45,11 @@ function A(e) {
 function h(e, t) {
     l.h.dispatch({ type: "APPLICATION_COMMAND_SET_PREFERRED_COMMAND", channelId: e, commandId: t });
 }
-function I(e, t) {
+function f(e, t) {
     l.h.dispatch({ type: "APPLICATION_COMMAND_UPDATE_OPTIONS", channelId: e, changedOptionStates: t });
 }
-function f(e, t) {
-    I(
+function I(e, t) {
+    f(
         e,
         Object.fromEntries(
             Object.entries(t).map((e) => {

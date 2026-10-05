@@ -13,17 +13,17 @@ var c = n(231723),
     E = n(157559),
     A = n(47167),
     h = n(994500),
-    I = n(287809),
-    f = n(240248),
+    f = n(287809),
+    I = n(240248),
     p = n(375708),
     T = n(969151),
-    m = n(817636),
-    g = n(574152),
+    g = n(817636),
+    m = n(574152),
     S = n(652215);
 async function N(e) {
     let { applicationId: t, channelId: n, guildId: s } = e;
     try {
-        return await (0, m.A)(t, n);
+        return await (0, g.A)(t, n);
     } catch (l) {
         let e = null != s ? i.T.GUILD_CHANNEL : i.T.PRIVATE_CHANNEL;
         r.h.dispatch({
@@ -53,13 +53,13 @@ async function C(e) {
                 null == a || null == d
                     ? e(!0)
                     : (i?.(),
-                      (r = null != d ? (0, A.m1)(d, I.default, h.A) : ""),
+                      (r = null != d ? (0, A.m1)(d, f.default, h.A) : ""),
                       E.A.show({
                           title: p.intl.string(p.t.XkIWkk),
                           cancelText: p.intl.string(p.t["ETE/oC"]),
                           confirmText: p.intl.string(p.t["cY+Oob"]),
                           onConfirm: () => {
-                              ((0, g.A)().leaveActivity({
+                              ((0, m.A)().leaveActivity({
                                   location: a.location,
                                   applicationId: t.id,
                                   shouldClosePopout: n,
@@ -69,7 +69,7 @@ async function C(e) {
                           onCancel: () => e(!1),
                           body: p.intl.format(p.t["5/Xort"], {
                               currentApplicationName: t?.name ?? p.intl.string(p.t.G99XFs),
-                              currentApplicationChannelName: (0, f.uJ)(r) ? p.intl.string(p.t.OGUjmt) : r,
+                              currentApplicationChannelName: (0, I.uJ)(r) ? p.intl.string(p.t.OGUjmt) : r,
                           }),
                           isDismissable: !1,
                       }));

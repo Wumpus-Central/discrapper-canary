@@ -1,11 +1,11 @@
 n.d(t, {
     $3: () => u,
     Ay: () => N,
-    G2: () => f,
+    G2: () => I,
     Gn: () => S,
     MU: () => h,
-    QV: () => m,
-    R1: () => g,
+    QV: () => g,
+    R1: () => m,
     mG: () => _,
     mv: () => p,
     tx: () => E,
@@ -66,17 +66,17 @@ function h(e) {
             return null;
     }
 }
-function I(e, t) {
+function f(e, t) {
     let { maxDaysOld: n, minDaysOld: i = 0 } = t;
     if (null == e) return !1;
     let r = Date.now() - e.createdAt.getTime();
     return (null == n || !!(r <= 864e5 * n)) && !!(r >= 864e5 * i);
 }
-function f(e) {
-    return !I(e, { minDaysOld: 0, maxDaysOld: 30 });
+function I(e) {
+    return !f(e, { minDaysOld: 0, maxDaysOld: 30 });
 }
 function p(e) {
-    return I(e, { minDaysOld: 0, maxDaysOld: 7 });
+    return f(e, { minDaysOld: 0, maxDaysOld: 7 });
 }
 function T(e, t, n) {
     if (null == e) return l.intl.string(l.t.sKdZ6U);
@@ -90,12 +90,12 @@ function T(e, t, n) {
     let r = i ? o(e.username) : e.username;
     return "never" !== t.decoration ? `@${r}` : r;
 }
-function m(e, t) {
+function g(e, t) {
     let n = { ...d, ...t },
         i = "auto" !== n.identifiable || r.A.hidePersonalInformation;
     return T(e, n, i);
 }
-function g(e) {
+function m(e) {
     return (0, i.bG)([a.default], () => {
         if (null != e) return e.isPrivate() && e.isDM() ? a.default.getUser(e.getRecipientId()) : null;
     });
@@ -110,7 +110,7 @@ let N = {
     isNameConcealed: function (e) {
         return 2 === e.length && e.endsWith("\u2026");
     },
-    getUserTag: m,
+    getUserTag: g,
     useUserTag: function (e, t) {
         return T(
             e,
@@ -123,10 +123,10 @@ let N = {
         let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
         if (null == e) return "???";
         let n = A(e),
-            i = t ? m(e) : (e.username ?? "???");
+            i = t ? g(e) : (e.username ?? "???");
         return n === i ? n : null != n ? `${n} (${i})` : i;
     },
     getGlobalName: A,
     humanizeStatus: h,
-    useDirectMessageRecipient: g,
+    useDirectMessageRecipient: m,
 };

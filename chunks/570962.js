@@ -12,7 +12,7 @@ var r = n(503698),
     _ = n(375708),
     E = n(123502);
 function A(e) {
-    let { obscured: t, children: n, className: r, contentClassName: A, heading: h, description: I, onClose: f } = e;
+    let { obscured: t, children: n, className: r, contentClassName: A, heading: h, description: f, onClose: I } = e;
     return t
         ? (0, i.jsx)(u.OB.Provider, {
               value: u.Wl,
@@ -20,14 +20,14 @@ function A(e) {
                   className: a()(E.kL, r),
                   children: [
                       (0, i.jsx)("div", { className: a()(E.Qs, A), inert: !0, "aria-hidden": "true", children: n }),
-                      null != f &&
+                      null != I &&
                           (0, i.jsx)("div", {
                               className: E.b,
                               children: (0, i.jsx)(l.K, {
                                   icon: o.P,
                                   variant: "overlay-secondary",
                                   size: "sm",
-                                  onClick: () => f(),
+                                  onClick: () => I(),
                                   "aria-label": _.intl.string(_.t.cpT0Cq),
                               }),
                           }),
@@ -45,7 +45,7 @@ function A(e) {
                               (0, i.jsx)(c.E, {
                                   variant: "text-sm/normal",
                                   color: "text-muted",
-                                  children: I ?? _.intl.string(_.t["0fc/DG"]),
+                                  children: f ?? _.intl.string(_.t["0fc/DG"]),
                               }),
                           ],
                       }),

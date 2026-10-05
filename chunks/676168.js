@@ -1,4 +1,4 @@
-n.d(t, { dt: () => _, k3: () => f, r1: () => I, zO: () => h });
+n.d(t, { dt: () => _, k3: () => I, r1: () => f, zO: () => h });
 var i = n(582128),
     r = n(554146),
     a = n(131607),
@@ -28,13 +28,13 @@ function h(e) {
         [u, _] = (0, a.kn)(t && e && i && !n && c ? [r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : []);
     return { shouldShowPopover: u === r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM, markPopoverAsDismissed: _ };
 }
-function I() {
+function f() {
     let [e] = (0, s.gc)(A),
         t = e === r.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM,
         [n, a] = i.useState(t);
     return (t && !n && a(!0), (t || n) && !(0, c.zW)());
 }
-function f(e) {
+function I(e) {
     let { isFreemium: t } = (0, l.m)({ location: "FavoritesDismissibleContent" }),
         [n, i] = (0, a.kn)(t && e ? [r.M.FAVORITES_GUILD_NEW_BADGE] : []),
         s = n === r.M.FAVORITES_GUILD_NEW_BADGE;

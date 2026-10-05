@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(17928),
     r = n(873298),
     a = n(73153),
@@ -14,18 +14,18 @@ let E = {},
 function h() {
     A += 1;
 }
-function I(e) {
+function f(e) {
     if (null == E[e]) return !1;
     delete E[e];
 }
-function f() {
+function I() {
     return l.A.settings.favorites?.favoriteChannels;
 }
 function p(e) {
-    return f()?.[e]?.type === r.Ip.CATEGORY;
+    return I()?.[e]?.type === r.Ip.CATEGORY;
 }
 function T() {
-    let e = f();
+    let e = I();
     if (null == e) return !1;
     let t = !1;
     for (let n in e) {
@@ -34,7 +34,7 @@ function T() {
     }
     return t;
 }
-class m extends i.Ay.PersistedStore {
+class g extends i.Ay.PersistedStore {
     static displayName = "CategoryCollapseStore";
     static persistKey = "collapsedCategories";
     initialize(e) {
@@ -57,7 +57,7 @@ class m extends i.Ay.PersistedStore {
         return A;
     }
 }
-let g = new m(a.h, {
+let m = new g(a.h, {
     CONNECTION_OPEN: function (e) {
         for (let t of (e.userGuildSettings.partial || (E = {}), e.userGuildSettings.entries))
             if (null != t.channel_overrides)
@@ -80,7 +80,7 @@ let g = new m(a.h, {
     },
     CATEGORY_EXPAND: function (e) {
         let { id: t } = e;
-        return !p(t) && I(t);
+        return !p(t) && f(t);
     },
     CATEGORY_COLLAPSE_ALL: function (e) {
         let { guildId: t } = e;
@@ -102,6 +102,6 @@ let g = new m(a.h, {
         let {
             channel: { id: t },
         } = e;
-        return I(t);
+        return f(t);
     },
 });

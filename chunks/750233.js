@@ -45,29 +45,29 @@ var _ = n(246338),
     E = n(181079),
     A = n(5180),
     h = n(713125),
-    I = n(473529),
-    f = n(313627),
+    f = n(473529),
+    I = n(313627),
     p = n(871123),
     T = n(734057),
-    m = n(808728),
-    g = n(71393),
+    g = n(808728),
+    m = n(71393),
     S = n(309010);
 function N(e) {
     let t = u.getLastProjectId(e);
     if (null != t && C(e)) return [a.VV.CONJURE, t];
     let n = S.Ay.getChannelId(e),
-        i = m.Ay.getDefaultChannel(e)?.id ?? void 0;
-    if ((n === a.VV.GUILD_ONBOARDING && !h.Ay.shouldShowOnboarding(e)) || (n === a.VV.GUILD_HOME && !(0, I.K)(e)))
+        i = g.Ay.getDefaultChannel(e)?.id ?? void 0;
+    if ((n === a.VV.GUILD_ONBOARDING && !h.Ay.shouldShowOnboarding(e)) || (n === a.VV.GUILD_HOME && !(0, f.K)(e)))
         return [i, null];
     if (n === a.VV.GUILD_SPACE)
-        return (0, f.tT)(g.A.getGuild(e), "getChannelIdForGuildTransition") ? [n, null] : [i, null];
+        return (0, I.tT)(m.A.getGuild(e), "getChannelIdForGuildTransition") ? [n, null] : [i, null];
     if (n === a.VV.GAME_SHOP && (0, p.Ye)(e)) return [n, null];
     if (n === a.VV.CONJURE) return C(e) ? [n, null] : [i, null];
     let r = T.A.getChannel(n);
     return null == r || ((0, A.ai)(e) && !E.A.isChannelOrParentFavorited(r)) ? [i, null] : [n, null];
 }
 function C(e) {
-    let t = g.A.getGuild(e);
+    let t = m.A.getGuild(e);
     return null != t && (0, _.N)(t, "getChannelIdForGuildTransition");
 }
 (n(645959), n(652215));

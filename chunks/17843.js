@@ -1,4 +1,4 @@
-n.d(t, { CZ: () => I, CC: () => A, J8: () => _ });
+n.d(t, { CZ: () => f, CC: () => A, J8: () => _ });
 var i = n(239266),
     r = n(240921);
 let a = { control: 0, treatment_a: 250, treatment_b: 500, treatment_c: 250, treatment_d: 500 },
@@ -54,7 +54,7 @@ let h = {
         return E(d.W.XBOX, e) && (0, c.H)(l.default.getCurrentUser());
     },
 };
-function I() {
+function f() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "ProgramRewardsUtils";
     for (let t of Object.values(d.W)) if ("number" == typeof t && h[t](e)) return !0;
     return !1;

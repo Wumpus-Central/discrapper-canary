@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => h, Gy: () => A, vG: () => I });
+n.d(t, { Ay: () => h, Gy: () => A, vG: () => f });
 var i,
     r = n(17928),
     a = n(734057),
@@ -60,7 +60,7 @@ function h(e) {
     }
     return 0;
 }
-function I(e) {
+function f(e) {
     let { userId: t, activity: n, channelId: i, application: c } = e,
         _ = (0, u.z)(),
         E = (0, r.bG)([o.default], () => o.default.getCurrentUser());

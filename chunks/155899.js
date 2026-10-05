@@ -1,32 +1,32 @@
-n.d(t, { F: () => d });
-var l = n(477900),
-    a = n(582128),
-    i = n(732159),
-    r = n(192308),
-    s = n(248675),
-    o = n(375708);
-function u(e) {
-    let { matchingBackup: t, onConfirm: n, transitionState: r, onClose: u } = e,
+l.d(t, { F: () => d });
+var n = l(477900),
+    a = l(582128),
+    i = l(732159),
+    r = l(192308),
+    s = l(248675),
+    u = l(375708);
+function o(e) {
+    let { matchingBackup: t, onConfirm: l, transitionState: r, onClose: o } = e,
         [d, c] = a.useState(!1);
-    return (0, l.jsx)(i.u, {
+    return (0, n.jsx)(i.u, {
         transitionState: r,
-        onClose: u,
-        title: o.intl.string(s.default.NDY6Zv),
-        subtitle: o.intl.string(s.default.z2x5zj),
-        confirmText: o.intl.string(s.default.K3Q49G),
+        onClose: o,
+        title: u.intl.string(s.default.NDY6Zv),
+        subtitle: u.intl.string(s.default.z2x5zj),
+        confirmText: u.intl.string(s.default.K3Q49G),
         variant: "primary",
         checkboxProps:
             null != t
                 ? {
-                      label: o.intl.string(s.default["+/pFME"]),
-                      description: o.intl.string(s.default["+I112y"]),
+                      label: u.intl.string(s.default["+/pFME"]),
+                      description: u.intl.string(s.default["+I112y"]),
                       checked: d,
                       onChange: (e) => c(e),
                   }
                 : void 0,
-        onConfirm: () => n(d && null != t ? t : null),
+        onConfirm: () => l(d && null != t ? t : null),
     });
 }
 function d(e) {
-    (0, r.openModalLazy)(() => Promise.resolve((t) => (0, l.jsx)(u, { ...t, ...e })));
+    (0, r.openModalLazy)(() => Promise.resolve((t) => (0, n.jsx)(o, { ...t, ...e })));
 }

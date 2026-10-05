@@ -12,12 +12,12 @@ var i = n(477900),
     E = n(793574),
     A = n(688810),
     h = n(429913),
-    I = n(568598),
-    f = n(198052),
+    f = n(568598),
+    I = n(198052),
     p = n(446243),
     T = n(558076),
-    m = n(360729),
-    g = n(976860),
+    g = n(360729),
+    m = n(976860),
     S = n(272812),
     N = n(461782),
     C = n(334463),
@@ -58,22 +58,22 @@ function j(e) {
             activityParticipant: q,
             selectedParticipant: Q,
             participantsOpen: J,
-        } = (0, l.cf)([f.A], () => ({
+        } = (0, l.cf)([I.A], () => ({
             activityParticipant:
                 null != A && null != t
-                    ? f.A.getParticipant(
+                    ? I.A.getParticipant(
                           t.id,
-                          (0, I.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
+                          (0, f.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
                       )
                     : null,
-            selectedParticipant: null != t ? f.A.getSelectedParticipant(t.id) : null,
-            participantsOpen: null != t && f.A.getParticipantsOpen(t.id),
+            selectedParticipant: null != t ? I.A.getSelectedParticipant(t.id) : null,
+            participantsOpen: null != t && I.A.getParticipantsOpen(t.id),
         })),
         ee = $ || null != Z,
         et = (0, M.A)(t?.id),
         en = t?.id,
         ei = t?.getGuildId(),
-        { enabled: er } = (0, m.mf)({ guildId: ei ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
+        { enabled: er } = (0, g.mf)({ guildId: ei ?? void 0, location: "PictureInPictureEmbeddedActivity" }),
         ea = (0, l.bG)([T.A], () => null != en && T.A.isVisible(en), [en]),
         es = et && er && ea,
         el = et && Q?.type !== F.lp.ACTIVITY,
@@ -85,11 +85,11 @@ function j(e) {
             (null != A &&
                 c.A.selectParticipant(
                     t.id,
-                    (0, I.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
+                    (0, f.Qt)({ applicationId: A.applicationId, instanceId: A.compositeInstanceId }),
                 ),
                 es && (0, p.UV)(!0, t.id));
             let e = t.getGuildId() ?? k.ME;
-            (u.A.channelListScrollTo(e, t.id), (0, g.uh)(e, t.id));
+            (u.A.channelListScrollTo(e, t.id), (0, m.uh)(e, t.id));
         }
         null == Z && (0, _.bz)();
     }

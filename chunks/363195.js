@@ -12,18 +12,18 @@ var i = n(17928),
     E = n(652215),
     A = n(185928),
     h = n(661531),
-    I = n(353835),
-    f = n(723702);
+    f = n(353835),
+    I = n(723702);
 function p(e) {
-    if (!__OVERLAY__ && f.isPlatformEmbedded)
+    if (!__OVERLAY__ && I.isPlatformEmbedded)
         try {
             let t = h.A.colors.BACKGROUND_BASE_LOWEST.resolve({ theme: e, saturation: o.Ay.saturation }).hex();
-            I.A.setApplicationBackgroundColor(t);
+            f.A.setApplicationBackgroundColor(t);
         } catch {}
 }
 var T = n(594061),
-    m = n(355097);
-let g = 0,
+    g = n(355097);
+let m = 0,
     S = A.qj,
     N = (0, s.A)(),
     C = S[N],
@@ -69,7 +69,7 @@ class D extends i.Ay.PersistedStore {
     ];
     initialize(e) {
         (e?.theme != null &&
-            ((g = 1),
+            ((m = 1),
             p((C = e.theme)),
             null != e.preferences && (S = e.preferences),
             null != e.syncedClientThemes && (R = e.syncedClientThemes),
@@ -78,7 +78,7 @@ class D extends i.Ay.PersistedStore {
             this.waitFor(u.Ay, c.A, _.A));
     }
     getState() {
-        return { theme: this.theme, preferences: S, syncedClientThemes: R, syncedThemesEnabled: L, status: g };
+        return { theme: this.theme, preferences: S, syncedClientThemes: R, syncedThemesEnabled: L, status: m };
     }
     get theme() {
         return C;
@@ -100,7 +100,7 @@ let v = new D(a.h, {
     CACHE_LOADED: y,
     CONNECTION_OPEN: function () {
         return (
-            0 === g && ((S = { ...S, [A.Fc.DARK]: E.NJ8.DARK }), (g = 1)),
+            0 === m && ((S = { ...S, [A.Fc.DARK]: E.NJ8.DARK }), (m = 1)),
             u.Ay.darkSidebar &&
                 (_.A.settings.appearance?.darkSidebar ||
                     T.wc.updateAsync(
@@ -108,7 +108,7 @@ let v = new D(a.h, {
                         (e) => {
                             e.darkSidebar = !0;
                         },
-                        m.Sb.INFREQUENT_USER_ACTION,
+                        g.Sb.INFREQUENT_USER_ACTION,
                     ),
                 a.h.wait(() => {
                     a.h.dispatch({ type: "UNSYNCED_USER_SETTINGS_UPDATE", settings: { darkSidebar: !1 } });

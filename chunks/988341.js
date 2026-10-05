@@ -4,8 +4,8 @@
     DW: () => u,
     HW: () => c,
     Jn: () => o,
-    Vs: () => f,
-    YU: () => I,
+    Vs: () => I,
+    YU: () => f,
     hK: () => _,
     in: () => E,
     jg: () => A,
@@ -54,10 +54,10 @@ function h(e) {
     for (let r of e) r.owned && (s(r.badge_id) ? t.push(r) : r.hidden ? i.push(r) : n.push(r));
     return { fixedBadges: t, reorderableBadges: n, hiddenBadges: i };
 }
-function I(e, t) {
+function f(e, t) {
     return null != t ? e.tiers.find((e) => e.key === t) : void 0;
 }
-function f(e) {
+function I(e) {
     let { tier: t, isUnlocked: n, isViewingOtherUser: i, isViewerOnUpgradeableNitro: a } = e;
     return n || !a || i ? (t.milestone_text ?? "") : r.intl.string(r.t.VPu695);
 }

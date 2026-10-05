@@ -13,12 +13,12 @@ var r = n(503698),
     E = n(525788),
     A = n(384059),
     h = n(47167),
-    I = n(235986),
-    f = n(267102),
+    f = n(235986),
+    I = n(267102),
     p = n(574172),
     T = n(704877),
-    m = n(222692),
-    g = n(447404),
+    g = n(222692),
+    m = n(447404),
     S = n(271195),
     N = n(204651),
     C = n(383831),
@@ -56,7 +56,7 @@ function F(e) {
             selectedParticipant: N,
             embeddedActivity: R,
         } = e,
-        b = (0, f.Us)() === P.BRT.POPOUT,
+        b = (0, I.Us)() === P.BRT.POPOUT,
         w = (0, s.bG)([y.Ay], () => y.Ay.isVideoEnabled()),
         k = (0, s.bG)([y.Ay], () => Object.values(y.Ay.getVideoDevices())[0]),
         F = !1 === (k?.disabled ?? !0),
@@ -79,17 +79,17 @@ function F(e) {
                     idle: d,
                     title: B?.name ?? V ?? "",
                     onJumpToChannel: o,
-                    preventIdleComponent: g.A,
+                    preventIdleComponent: m.A,
                 }),
             }),
             (0, i.jsxs)("div", {
                 className: x.q6,
                 children: [
-                    (0, i.jsxs)(I.A, {
+                    (0, i.jsxs)(f.A, {
                         grow: 0,
                         shrink: 1,
                         basis: "50%",
-                        align: I.A.Align.CENTER,
+                        align: f.A.Align.CENTER,
                         children: [
                             (0, i.jsx)(L.A, {
                                 className: G.Oc,
@@ -98,11 +98,11 @@ function F(e) {
                                 hasPermission: H,
                                 onChange: W,
                                 onCameraUnavailable: function () {
-                                    F ? W(!0) : (0, m.A)();
+                                    F ? W(!0) : (0, g.A)();
                                 },
                             }),
                             null != t &&
-                                (0, i.jsx)(g.A, {
+                                (0, i.jsx)(m.A, {
                                     children: (0, i.jsx)(E.A, {
                                         channelId: t.id,
                                         guildId: t.getGuildId(),
@@ -113,12 +113,12 @@ function F(e) {
                                 }),
                         ],
                     }),
-                    (0, i.jsxs)(I.A, {
+                    (0, i.jsxs)(f.A, {
                         grow: 0,
                         shrink: 1,
-                        justify: I.A.Justify.END,
+                        justify: f.A.Justify.END,
                         basis: "50%",
-                        align: I.A.Align.CENTER,
+                        align: f.A.Align.CENTER,
                         children: [
                             b || (0, D.f)()
                                 ? null
@@ -157,7 +157,7 @@ function B(e) {
             embeddedActivity: E,
         } = e,
         A = (0, _.A)([n])[0],
-        I = (0, h.Ay)(t);
+        f = (0, h.Ay)(t);
     return (0, i.jsxs)(o.D, {
         className: a()(x._v, x.ob),
         onMouseMove: s,
@@ -169,9 +169,9 @@ function B(e) {
                 className: x.K1,
                 children: (0, i.jsx)(S.X, {
                     idle: c,
-                    title: A?.name ?? I ?? "",
+                    title: A?.name ?? f ?? "",
                     onJumpToChannel: d,
-                    preventIdleComponent: g.A,
+                    preventIdleComponent: m.A,
                 }),
             }),
             (0, i.jsxs)("div", {
@@ -206,9 +206,9 @@ function H(e) {
             onToggleHeight: u,
             isExpanded: E,
             hideExpandedButton: A,
-            embeddedActivity: I,
+            embeddedActivity: f,
         } = e,
-        f = (0, _.A)([l])[0],
+        I = (0, _.A)([l])[0],
         p = (0, h.Ay)(o);
     return (0, i.jsx)("div", {
         className: G.LO,
@@ -224,15 +224,15 @@ function H(e) {
                         children: [
                             (0, i.jsx)(S.X, {
                                 idle: !s,
-                                title: f?.name ?? p ?? "",
+                                title: I?.name ?? p ?? "",
                                 onJumpToChannel: c,
-                                preventIdleComponent: g.A,
+                                preventIdleComponent: m.A,
                             }),
                             (0, i.jsxs)("div", {
                                 className: G.QS,
                                 children: [
                                     A ? null : (0, i.jsx)(k, { isExpanded: E, onClick: u }),
-                                    (0, i.jsx)(C.A, { applicationId: l, location: I.location, iconClassName: G.Gu }),
+                                    (0, i.jsx)(C.A, { applicationId: l, location: f.location, iconClassName: G.Gu }),
                                 ],
                             }),
                         ],

@@ -1,7 +1,7 @@
 let i;
 n.d(t, {
     AF: () => h,
-    mk: () => f,
+    mk: () => I,
     My: () => F.My,
     UT: () => $,
     V5: () => B,
@@ -41,8 +41,8 @@ let E = new Set([
     ]),
     A = new d.Vy("Flux");
 var h = (((r = {})[(r.Early = 0)] = "Early"), (r[(r.Database = 1)] = "Database"), (r[(r.Default = 2)] = "Default"), r);
-let I = [0, 1, 2];
-class f {
+let f = [0, 1, 2];
+class I {
     _interceptors = [];
     _subscriptions = {};
     _waitQueue = [];
@@ -171,7 +171,7 @@ class f {
 class p {
     _nodes = new Map();
     _orderedActionHandlers = {};
-    _tokensByBand = new Map(I.map((e) => [e, []]));
+    _tokensByBand = new Map(f.map((e) => [e, []]));
     _tokensByActionType = {};
     _callbackTokenPositions = null;
     _lastID = 1;
@@ -179,7 +179,7 @@ class p {
         return this._orderedActionHandlers[e.type] ?? this._computeOrderedActionHandlers(e.type);
     }
     register(e, t, n, i) {
-        l()(I.includes(i), "band must be a DispatchBand, got %s.", i);
+        l()(f.includes(i), "band must be a DispatchBand, got %s.", i);
         let r = `ID_${this._lastID++}`,
             a = {};
         for (let n in t) {
@@ -241,14 +241,14 @@ class p {
                     (t.add(i), this._nodes.get(i).dependencies.forEach(n), t.delete(i), e.set(i, e.size));
                 }
             };
-        return (I.forEach((e) => this._tokensByBand.get(e).forEach(n)), (this._callbackTokenPositions = e), e);
+        return (f.forEach((e) => this._tokensByBand.get(e).forEach(n)), (this._callbackTokenPositions = e), e);
     }
 }
 function T(e, t) {
     Object.defineProperty(e, "name", { value: t });
 }
-var m = n(64015),
-    g = n.n(m),
+var g = n(64015),
+    m = n.n(g),
     S = n(506774);
 n(142703);
 class N {
@@ -539,7 +539,7 @@ class v extends L {
         let { persistKey: t } = this.getClass();
         (this.persist(), v._writePromises.delete(t), v._writeResolvers.delete(t), e());
     };
-    throttledCallback = g()((e) => this.callback(e), this.getClass().throttleDelay, { leading: !1 });
+    throttledCallback = m()((e) => this.callback(e), this.getClass().throttleDelay, { leading: !1 });
     asyncPersist() {
         let { persistKey: e, disableWrite: t, throttleDelay: n } = this.getClass();
         if (v.disableWrites || t) return Promise.resolve(!1);
@@ -738,8 +738,8 @@ function $(e, t) {
             u = E(c),
             _ = (0, F.bG)(d, () => a?.(...o), [o]),
             h = u((e) => null == a && e.isLoading),
-            I = (0, F.bG)(d, () => s?.(...o), [o]),
-            f = u((e) => (null == s ? e.error : null)),
+            f = (0, F.bG)(d, () => s?.(...o), [o]),
+            I = u((e) => (null == s ? e.error : null)),
             p = (0, F.bG)(d, () => i(...o), [o], j);
         return (
             (0, P.useEffect)(() => {
@@ -747,7 +747,7 @@ function $(e, t) {
             }, [c, o, u]),
             {
                 data: p === B ? null : p,
-                error: I ?? f,
+                error: f ?? I,
                 isLoading: _ ?? h,
                 refetch: (0, P.useCallback)(() => {
                     A({ queryId: c, args: o, useStoreState: u, refetch: !0 });

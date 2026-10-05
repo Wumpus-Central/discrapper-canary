@@ -1,4 +1,4 @@
-let i, r, a, s, l, o, d, c, u, _, E, A, h, I, f, p, T, m, g, S, N, C, O, R, L;
+let i, r, a, s, l, o, d, c, u, _, E, A, h, f, I, p, T, g, m, S, N, C, O, R, L;
 n.d(t, { A: () => ei });
 var y = n(435558),
     D = n(412703),
@@ -32,14 +32,14 @@ function K() {
         (E = new Set()),
         (A = new Set()),
         (h = new Set()),
-        (I = new Set()),
+        (f = new Set()),
         (H = new Map()),
         (p = new Map()),
         (T = new Map()),
-        (m = new Map()),
         (g = new Map()),
+        (m = new Map()),
         (S = new Map()),
-        (f = new Set()),
+        (I = new Set()),
         (N = new Map()),
         (C = new Map()),
         J(),
@@ -60,8 +60,8 @@ function $(e, t) {
                         !(0, y.isNil)(n) &&
                             D.o.DESKTOP.has(n.eventName) &&
                             (n.heartbeat?.lastBeatAt != null
-                                ? f.add(e)
-                                : n.heartbeat?.lastBeatAt == null && f.delete(e));
+                                ? I.add(e)
+                                : n.heartbeat?.lastBeatAt == null && I.delete(e));
             })(e, t),
             l.set(e, i),
             L.has(e))
@@ -76,7 +76,7 @@ function z(e, t) {
     (n.set(e, t), (p = n));
 }
 function X(e) {
-    null != m.get(e) && (m = new Map(m)).delete(e);
+    null != g.get(e) && (g = new Map(g)).delete(e);
 }
 function Z(e) {
     let t = new Set(u);
@@ -115,13 +115,13 @@ class et extends b.Ay.Store {
         return r;
     }
     isFetchingQuestPreview(e) {
-        return I.has(e);
+        return f.has(e);
     }
     get lastFetchedCurrentQuests() {
         return c;
     }
     getQuestPreviewOverride(e) {
-        let t = g.get(e);
+        let t = m.get(e);
         return null == t ? void 0 : l.get(t);
     }
     get questEnrollmentBlockedUntil() {
@@ -158,7 +158,7 @@ class et extends b.Ay.Store {
         return T.get(e);
     }
     getStreamHeartbeatFailure(e) {
-        return m.get(e);
+        return g.get(e);
     }
     getQuest(e) {
         return l.get(e);
@@ -167,7 +167,7 @@ class et extends b.Ay.Store {
         return this.getQuest(e)?.config;
     }
     isProgressingOnDesktop(e) {
-        return f.has(e);
+        return I.has(e);
     }
     selectedTaskPlatform(e) {
         return S.get(e) ?? null;
@@ -294,28 +294,28 @@ let en = new et(M.h, {
         },
         QUESTS_FETCH_PREVIEW_BEGIN: function (e) {
             let { questId: t } = e;
-            ((I = new Set(I)).add(t), (Y = new Map(Y)).delete(t));
+            ((f = new Set(f)).add(t), (Y = new Map(Y)).delete(t));
         },
         QUESTS_FETCH_PREVIEW_SUCCESS: function (e) {
             let { questId: t, quest: n } = e;
-            ((I = new Set(I)).delete(t),
+            ((f = new Set(f)).delete(t),
                 (L = new Map(L)).set(t, n),
                 (l = new Map(l)).set(t, n),
                 (Y = new Map(Y)).delete(t));
         },
         QUESTS_FETCH_PREVIEW_FAILURE: function (e) {
             let { questId: t, error: n } = e;
-            ((I = new Set(I)).delete(t), (Y = new Map(Y)).set(t, n));
+            ((f = new Set(f)).delete(t), (Y = new Map(Y)).set(t, n));
         },
         QUESTS_SEND_HEARTBEAT_SUCCESS: function (e) {
             let { questId: t, streamKey: n, userStatus: i } = e;
-            (f.add(t), $(t, { userStatus: i }), null != n && X(n));
+            (I.add(t), $(t, { userStatus: i }), null != n && X(n));
         },
         QUESTS_SEND_HEARTBEAT_FAILURE: function (e) {
             let { questId: t, streamKey: n } = e;
             null != n &&
-                null == m.get(n) &&
-                (m = new Map(m)).set(n, { questId: t, streamKey: n, firstFailedAt: Date.now() });
+                null == g.get(n) &&
+                (g = new Map(g)).set(n, { questId: t, streamKey: n, firstFailedAt: Date.now() });
         },
         QUESTS_ENROLL_BEGIN: function (e) {
             let { questId: t } = e,
@@ -385,10 +385,10 @@ let en = new et(M.h, {
             let { questId: t } = e,
                 n = new Set(A);
             (n.add(t), (A = n));
-            let i = new Map(g),
+            let i = new Map(m),
                 r = !1;
             for (let [e, n] of i) n === t && (i.delete(e), (r = !0));
-            r && (g = i);
+            r && (m = i);
         },
         QUESTS_DISMISS_CONTENT_SUCCESS: function (e) {
             let { dismissedQuestUserStatus: t } = e;
@@ -453,8 +453,8 @@ let en = new et(M.h, {
         },
         QUESTS_PREVIEW_OVERRIDE: function (e) {
             let { placement: t, questId: n } = e,
-                i = new Map(g);
-            (i.get(t) === n ? i.delete(t) : i.set(t, n), (g = i));
+                i = new Map(m);
+            (i.get(t) === n ? i.delete(t) : i.set(t, n), (m = i));
         },
         QUESTS_SELECT_TASK_PLATFORM: function (e) {
             let { questId: t, platform: n } = e;

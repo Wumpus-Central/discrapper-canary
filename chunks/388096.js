@@ -12,7 +12,7 @@ function u(e) {
         [_, E] = r.useState(t),
         A = (0, o._O)(),
         h = (0, o.yp)(u);
-    function I(e) {
+    function f(e) {
         e.isValid() && E(e);
     }
     return (
@@ -30,7 +30,7 @@ function u(e) {
                         required: !0,
                         label: d.intl.string(d.t.pSZKvM),
                         value: _,
-                        onSelect: I,
+                        onSelect: f,
                         minDate: A,
                         maxDate: h,
                         disabled: !1,
@@ -42,7 +42,7 @@ function u(e) {
                         label: d.intl.string(d.t.GOmEb8),
                         required: !0,
                         value: _,
-                        onChange: I,
+                        onChange: f,
                         hideValue: !1,
                         disabled: !1,
                         errorMessage: (0, o.Vf)(_, u),

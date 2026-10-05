@@ -1,4 +1,4 @@
-n.d(t, { CU: () => h, E9: () => u, Z0: () => E, aj: () => f, fj: () => A, lK: () => I });
+n.d(t, { CU: () => h, E9: () => u, Z0: () => E, aj: () => I, fj: () => A, lK: () => f });
 var i = n(582128),
     r = n(196765),
     a = n(554146),
@@ -18,12 +18,12 @@ function A() {
 function h(e) {
     _.setState({ suggestions: e });
 }
-function I() {
+function f() {
     let { hasAccess: e, isFreemium: t } = (0, o.TW)(),
         n = (0, s.Ay)((e) => e.postConnectionOpen),
         r = e && t && n,
         [E, A] = (0, l.kn)(r ? [a.M.FAVORITES_GUILD_SUGGESTIONS] : []),
-        I = E === a.M.FAVORITES_GUILD_SUGGESTIONS;
+        f = E === a.M.FAVORITES_GUILD_SUGGESTIONS;
     return (
         i.useLayoutEffect(() => {
             _.setState({
@@ -33,9 +33,9 @@ function I() {
             });
         }, [A]),
         i.useLayoutEffect(() => () => _.setState({ dismiss: d.tEg }), []),
-        { isEligible: r, isSelected: I }
+        { isEligible: r, isSelected: f }
     );
 }
-function f() {
+function I() {
     return _((e) => e.dismiss);
 }

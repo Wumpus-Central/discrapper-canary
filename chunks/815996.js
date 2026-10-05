@@ -32,27 +32,27 @@ var _ = n(976860),
     E = n(38145),
     A = n(773669),
     h = n(590180);
-let I = (0, n(196765).v)((e) => ({
+let f = (0, n(196765).v)((e) => ({
     logs: [],
     addLog: (t) => e((e) => ({ logs: [...e.logs, `[${new Date().toISOString().split("T")[0]}] ${t}`] })),
     clearLogs: () => e({ logs: [] }),
 }));
-function f(e) {
+function I(e) {
     let t = new Date().toLocaleTimeString("en-US", { hour12: !1 }),
         n = `[${t}] ${e}`;
-    I.getState().addLog(n);
+    f.getState().addLog(n);
 }
 var p = n(4227),
     T = n(870216),
-    m = n(993408),
-    g = n(442007),
+    g = n(993408),
+    m = n(442007),
     S = n(510801);
 class N {
     categories;
     collections;
     constructor(e) {
         ((this.categories = e.categories.map((e) => S.A.fromServer(e))),
-            (this.collections = e.collections.map((e) => g.A.fromServer(e))));
+            (this.collections = e.collections.map((e) => m.A.fromServer(e))));
     }
     static fromServer(e) {
         return new N(e);
@@ -280,7 +280,7 @@ class G {
             purchased_at: E,
             purchase_type: A,
             expires_at: h,
-            ...I
+            ...f
         } = e;
         return new G({
             type: t,
@@ -293,11 +293,11 @@ class G {
                 return t === n;
             }),
             prices: (0, b.A)(s),
-            items: (0, P.Kh)(I.items),
+            items: (0, P.Kh)(f.items),
             bundledProducts: l?.map(M.A.fromServer),
             variants: o?.map(v.x.fromServer),
-            googleSkuIds: I.google_sku_ids,
-            eligibleOffers: I.eligible_offers,
+            googleSkuIds: f.google_sku_ids,
+            eligibleOffers: f.eligible_offers,
             baseVariantName: d,
             baseVariantSkuId: c,
             variantLabel: u,
@@ -420,8 +420,8 @@ class W {
             (this.heroLogoUrl = e.hero_logo_url),
             (this.mobileHeroUrl = e.mobile_hero_url),
             (this.mobileHeroAnimatedUrl = e.mobile_hero_animated_url),
-            (this.bannerDisplayConfig = (0, m.f6)(e.banner_display_config)),
-            (this.logoDisplayConfig = (0, m.f6)(e.logo_display_config)));
+            (this.bannerDisplayConfig = (0, g.f6)(e.banner_display_config)),
+            (this.logoDisplayConfig = (0, g.f6)(e.logo_display_config)));
     }
     static fromServer(e) {
         return new W(e);
@@ -618,7 +618,7 @@ async function en(e, t, n) {
             unpublishedCategoriesShown: e?.includeUnpublished,
             cacheDisabled: e?.noCache,
         }),
-        r && f(`fetchCollectiblesCategories started: ${JSON.stringify(i, null, 2)}`));
+        r && I(`fetchCollectiblesCategories started: ${JSON.stringify(i, null, 2)}`));
     try {
         let a = await l.Bo.get({ url: w.Rsh.COLLECTIBLES_CATEGORIES_V2, query: i, rejectWithError: !0 });
         (e?.logPerf &&
@@ -629,35 +629,35 @@ async function en(e, t, n) {
                 unpublishedCategoriesShown: e?.includeUnpublished,
                 cacheDisabled: e?.noCache,
             }),
-            r && f(`fetchCollectiblesCategories completed ${a.body.categories.length} categories`),
+            r && I(`fetchCollectiblesCategories completed ${a.body.categories.length} categories`),
             o.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH_SUCCESS", categories: N.fromServer(a.body), noOp: t }));
     } catch (t) {
         let e = new d.LG(t);
         ((0, u.o)(e),
             o.h.dispatch({ type: "COLLECTIBLES_CATEGORIES_FETCH_FAILURE", error: e }),
-            r && f(`fetchCollectiblesCategories failed: ${e.message}`));
+            r && I(`fetchCollectiblesCategories failed: ${e.message}`));
     }
 }
 async function ei() {
     if (p.A.isFetching) return;
     o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH" });
     let e = c.Ay.get("shop_show_debug_overlay");
-    e && f("fetchCollectiblesPurchases started");
+    e && I("fetchCollectiblesPurchases started");
     try {
         let t = {
             url: w.Rsh.COLLECTIBLES_PURCHASES,
             rejectWithError: !0,
             query: { variants_return_style: s.g.VARIANTS_GROUP },
         };
-        e && f(`fetchCollectiblesPurchases request: ${JSON.stringify(t, null, 2)}`);
+        e && I(`fetchCollectiblesPurchases request: ${JSON.stringify(t, null, 2)}`);
         let n = await l.Bo.get(t);
-        (e && f(`fetchCollectiblesPurchases completed with ${n.body.length} purchases`),
+        (e && I(`fetchCollectiblesPurchases completed with ${n.body.length} purchases`),
             o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_SUCCESS", purchases: n.body.map(G.fromServer) }));
     } catch (n) {
         let t = new d.LG(n);
         throw (
             (0, u.o)(t),
-            e && f(`fetchCollectiblesPurchases failed: ${t.message}`),
+            e && I(`fetchCollectiblesPurchases failed: ${t.message}`),
             o.h.dispatch({ type: "COLLECTIBLES_PURCHASES_FETCH_FAILURE", error: t }),
             t
         );
@@ -688,7 +688,7 @@ async function ea(e, t) {
 }
 function es(e) {
     let t = Date.now();
-    for (let n of (0, m.XS)([e]))
+    for (let n of (0, g.XS)([e]))
         null == h.A.getProduct(n.skuId) &&
             o.h.dispatch({ type: "COLLECTIBLES_PRODUCT_FETCH_SUCCESS", skuId: n.skuId, product: n, endedAt: t });
 }

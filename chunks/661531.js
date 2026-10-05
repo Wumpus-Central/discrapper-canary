@@ -6433,8 +6433,8 @@ let { Themes: c } = d.zv,
             },
         },
     },
-    { Themes: I } = d.zv,
-    { SemanticColors: f } = { SemanticColors: u },
+    { Themes: f } = d.zv,
+    { SemanticColors: I } = { SemanticColors: u },
     { RawColors: p } = {
         RawColors: {
             APPLICATION_SUBSCRIPTION_END: "#0177a4",
@@ -8147,8 +8147,8 @@ let { Themes: c } = d.zv,
         },
     },
     { SemanticColorExperiments: T } = { SemanticColorExperiments: {} },
-    { SemanticColorHighContrast: m } = { SemanticColorHighContrast: E },
-    { Shadows: g } = { Shadows: h },
+    { SemanticColorHighContrast: g } = { SemanticColorHighContrast: E },
+    { Shadows: m } = { Shadows: h },
     { Spacing: S } = {
         Spacing: {
             PX_4: 4,
@@ -9704,7 +9704,7 @@ let { Themes: c } = d.zv,
     y = {
         themes: d.NJ,
         modules: N,
-        colors: o()(f, (e, t) => ({
+        colors: o()(I, (e, t) => ({
             css: M(t),
             resolve(n) {
                 let i = n.theme,
@@ -9717,7 +9717,7 @@ let { Themes: c } = d.zv,
                         null != n && ((a = n.raw ?? a), (s = n.opacity ?? s));
                     }
                 if (!0 === n.highContrastModeEnabled) {
-                    let e = m[t]?.[i];
+                    let e = g[t]?.[i];
                     null != e && ((a = e.raw ?? a), (s = e.opacity ?? s));
                 }
                 if (1 === s) return y.unsafe_rawColors[a].resolve(n);
@@ -9731,7 +9731,7 @@ let { Themes: c } = d.zv,
             let n = L[t];
             return { css: M(t), resolve: (e) => D(n, e?.saturation ?? 1) };
         }),
-        shadows: o()(g, (e, t) => ({
+        shadows: o()(m, (e, t) => ({
             css: M(t),
             resolve(t) {
                 let n = t.theme;

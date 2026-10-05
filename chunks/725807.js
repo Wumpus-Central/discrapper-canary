@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -12,17 +12,17 @@ var i = n(477900),
     E = n(783420),
     A = n(245383),
     h = n(202541),
-    I = n(347789);
-let f = function (e) {
+    f = n(347789);
+let I = function (e) {
     let {
             subscriptionTier: t,
             onClick: n,
             size: a,
-            className: f,
+            className: I,
             textOptions: p,
             iconClassName: T,
-            postSuccessGuild: m,
-            onSubscribeModalClose: g,
+            postSuccessGuild: g,
+            onSubscribeModalClose: m,
             premiumModalAnalyticsLocation: S,
             showIcon: N = !0,
             disableShine: C,
@@ -44,25 +44,25 @@ let f = function (e) {
         w = (0, i.jsxs)(d.wL, {
             "data-migration-pending": !0,
             disabled: P.disabled,
-            innerClassName: I.UO,
+            innerClassName: f.UO,
             color: U,
             size: a,
             className: R,
-            wrapperClassName: s()({ [I.PJ]: L && t === h.pe.TIER_2, [I.Up]: L && t === h.pe.TIER_1 }, f),
+            wrapperClassName: s()({ [f.PJ]: L && t === h.pe.TIER_2, [f.Up]: L && t === h.pe.TIER_1 }, I),
             buttonShineClassName:
-                "buttonShineClassName" in b ? b.buttonShineClassName : U === o.XD.BRAND_INVERTED ? I.nz : void 0,
+                "buttonShineClassName" in b ? b.buttonShineClassName : U === o.XD.BRAND_INVERTED ? f.nz : void 0,
             pauseAnimation: !M || C,
             ...b,
             children: [
-                N && (0, i.jsx)(c.t, { size: "md", color: v, className: s()(I.PC, T) }),
-                (0, i.jsx)("span", { className: s()(I._d, p?.textClassName), children: P.buttonText }),
+                N && (0, i.jsx)(c.t, { size: "md", color: v, className: s()(f.PC, T) }),
+                (0, i.jsx)("span", { className: s()(f._d, p?.textClassName), children: P.buttonText }),
             ],
         });
     return (0, i.jsx)(E.A, {
         onClick: n,
         subscriptionTier: t,
-        postSuccessGuild: m,
-        onSubscribeModalClose: g,
+        postSuccessGuild: g,
+        onSubscribeModalClose: m,
         premiumModalAnalyticsLocation: S,
         applicationId: O,
         confirmationFooter: y,

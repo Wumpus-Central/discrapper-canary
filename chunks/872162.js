@@ -1,4 +1,4 @@
-n.d(t, { C: () => g });
+n.d(t, { C: () => m });
 var i = n(477900);
 let r = { xs: "text-xs/normal", sm: "text-sm/normal", md: "text-md/normal" },
     a = { xs: "xxs", sm: "xs", md: "sm" };
@@ -12,7 +12,7 @@ var s = n(582128),
     E = n(789645),
     A = n(834730),
     h = n(478576);
-function I(e) {
+function f(e) {
     let { graphic: t, size: n } = e;
     if ("type" in t)
         switch (t.type) {
@@ -30,23 +30,23 @@ function I(e) {
         }
     return (0, i.jsx)(t, { size: a[n], color: "currentColor" });
 }
-var f = n(70074),
+var I = n(70074),
     p = n(132473);
 function T(e) {
     let { label: t, size: n, variant: s = "default", isDisabled: o, icon: d, accessibilityHint: h, ...T } = e,
-        m = [t, h].filter(Boolean).join(", ");
+        g = [t, h].filter(Boolean).join(", ");
     return (0, i.jsx)(l.vw, {
         ...T,
         "data-mana-component": "tag",
-        className: c()(p.Tc, f.GA),
+        className: c()(p.Tc, I.GA),
         "data-variant": s,
-        textValue: m,
+        textValue: g,
         isDisabled: o,
         children: (e) => {
             let { allowsRemoving: s } = e;
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    null != d && (0, i.jsx)(I, { graphic: d, size: n }),
+                    null != d && (0, i.jsx)(f, { graphic: d, size: n }),
                     (0, i.jsx)(A.E, { color: "none", variant: r[n], className: p.v6, children: t }),
                     s &&
                         (0, i.jsx)(u.$, {
@@ -58,7 +58,7 @@ function T(e) {
         },
     });
 }
-function m(e) {
+function g(e) {
     let {
             listRef: t,
             label: n,
@@ -71,10 +71,10 @@ function m(e) {
             variant: E,
             items: A,
             onRemove: h,
-            children: I,
-            selectedKeys: f,
-            onSelectionChange: m,
-            disallowEmptySelection: g,
+            children: f,
+            selectedKeys: I,
+            onSelectionChange: g,
+            disallowEmptySelection: m,
         } = e,
         S = s.useContext(o._),
         N = s.useMemo(() => (r && "all" !== a ? new Set([...(a ?? []), ...A.map((e) => e.id)]) : a), [r, a, A]);
@@ -89,10 +89,10 @@ function m(e) {
         className: p.WD,
         selectionMode: d,
         selectionBehavior: c,
-        selectedKeys: f,
-        onSelectionChange: m,
+        selectedKeys: I,
+        onSelectionChange: g,
         disabledKeys: N,
-        disallowEmptySelection: g,
+        disallowEmptySelection: m,
         onRemove: h,
         children: [
             (0, i.jsx)(l.LY, {
@@ -100,11 +100,11 @@ function m(e) {
                 className: p.Tw,
                 children: A.map((e) => (0, s.createElement)(T, { ...e, key: e.id, size: _, variant: E })),
             }),
-            I,
+            f,
         ],
     });
 }
-function g(e) {
+function m(e) {
     let { mode: t, variant: n = "default", layout: r = "default", size: a = "inline" === r ? "sm" : "md", ...s } = e;
-    return (0, i.jsx)(m, { ...s, layout: r, size: a, variant: n });
+    return (0, i.jsx)(g, { ...s, layout: r, size: a, variant: n });
 }

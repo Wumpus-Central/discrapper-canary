@@ -19,11 +19,11 @@ let u = /(?:^|\.)(?:discordapp|discord|discordmerch)\.com$/i,
         "i.giphy.com",
     ]),
     h = r().v4().source,
-    I = RegExp(
+    f = RegExp(
         `(?:(?:(?:[a-z]+:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*)?@)?(?:localhost|${h}|(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+(?:(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#][^\\s"]*)?`,
         "ig",
     ),
-    f = new Set([
+    I = new Set([
         window.GLOBAL_ENV.CDN_HOST,
         window.GLOBAL_ENV.INVITE_HOST,
         window.GLOBAL_ENV.GIFT_CODE_HOST,
@@ -34,12 +34,12 @@ function p(e, t) {
 }
 function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    return null != e && (u.test(e) || (t && f.has(e.toLowerCase())));
-}
-function m(e) {
-    return null != e && "discord:" === e;
+    return null != e && (u.test(e) || (t && I.has(e.toLowerCase())));
 }
 function g(e) {
+    return null != e && "discord:" === e;
+}
+function m(e) {
     if (null == e) return !1;
     let t = d.A.toURLSafe(e);
     return (
@@ -72,10 +72,10 @@ function C(e) {
     return !1;
 }
 function O(e) {
-    return null != e && m(l.parse(e).protocol);
+    return null != e && g(l.parse(e).protocol);
 }
 let R = {
-    URL_REGEX: I,
+    URL_REGEX: f,
     makeUrl: function (e, t) {
         let n = (t ?? (0, o.m6)()) ? window.GLOBAL_ENV.INVITE_HOST : location.host;
         return `${location.protocol}//${n}${e}`;
@@ -85,17 +85,17 @@ let R = {
     isDiscordLocalhost: function (e, t) {
         return null != e && null != t && window.location.host === e;
     },
-    isDiscordProtocol: m,
+    isDiscordProtocol: g,
     isDiscordUrl: C,
     isDiscordUri: O,
     isDiscordCdnUrl: function (e) {
         return null != e && l.parse(e).hostname === window.GLOBAL_ENV.CDN_HOST;
     },
-    isDiscordDirectAssetUrl: g,
+    isDiscordDirectAssetUrl: m,
     isDiscordProxiedAssetUrl: S,
     isAllowedGifProviderUrl: N,
     isDiscordAssetUrl: function (e, t, n) {
-        return !!(g(e) || S(e, t, n) || N(e));
+        return !!(m(e) || S(e, t, n) || N(e));
     },
     isDiscordUrlOrUri: (e) => C(e) || O(e),
     isAppRoute: (e) => {

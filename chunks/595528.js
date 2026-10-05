@@ -12,12 +12,12 @@ var i = n(435558),
     E = n(617617),
     A = n(280450),
     h = n(470710),
-    I = n(734057),
-    f = n(25578),
+    f = n(734057),
+    I = n(25578),
     p = n(763827),
     T = n(873985),
-    m = n(309010),
-    g = n(461213),
+    g = n(309010),
+    m = n(461213),
     S = n(116956),
     N = n(723702),
     C = n(175306),
@@ -71,10 +71,10 @@ class P extends M {
         (super(!1), (this.socket = e));
     }
     getInitialState() {
-        return g.A.getLocalPresence();
+        return m.A.getLocalPresence();
     }
     getNextState() {
-        return g.A.getLocalPresence();
+        return m.A.getLocalPresence();
     }
     shouldCommit() {
         return this.socket.isSessionEstablished();
@@ -132,9 +132,9 @@ let F = new c.A("ConnectionStore"),
             return {
                 guildId: null,
                 channelId: null,
-                selfMute: f.Ay.isSelfMute(),
-                selfDeaf: f.Ay.isSelfDeaf(),
-                selfVideo: f.Ay.isVideoEnabled(),
+                selfMute: I.Ay.isSelfMute(),
+                selfDeaf: I.Ay.isSelfDeaf(),
+                selfVideo: I.Ay.isVideoEnabled(),
                 preferredRegion: null,
                 preferredRegions: null,
                 videoStreamParameters: null,
@@ -146,12 +146,12 @@ let F = new c.A("ConnectionStore"),
             return {
                 guildId: t,
                 channelId: n,
-                selfMute: f.Ay.isSelfMute(),
-                selfDeaf: f.Ay.isSelfDeaf(),
-                selfVideo: f.Ay.isVideoEnabled(),
+                selfMute: I.Ay.isSelfMute(),
+                selfDeaf: I.Ay.isSelfDeaf(),
+                selfVideo: I.Ay.isVideoEnabled(),
                 preferredRegion: T.A.getPreferredRegion(),
                 preferredRegions: T.A.getPreferredRegions(),
-                videoStreamParameters: f.Ay.getVideoStreamParameters(),
+                videoStreamParameters: I.Ay.getVideoStreamParameters(),
                 flags: this.computeVoiceFlags(),
             };
         }
@@ -170,7 +170,7 @@ let F = new c.A("ConnectionStore"),
                 videoStreamParameters: o,
                 flags: d = 0,
             } = e;
-            a && I.A.getChannel(n)?.type === x.rbe.GUILD_STAGE_VOICE
+            a && f.A.getChannel(n)?.type === x.rbe.GUILD_STAGE_VOICE
                 ? this.socket.voiceStateUpdate({
                       guildId: t,
                       channelId: n,
@@ -266,12 +266,12 @@ var ea = n(756377),
     eE = n(287809),
     eA = n(977997),
     eh = n(97352),
-    eI = n(166403),
-    ef = n(107351),
+    ef = n(166403),
+    eI = n(107351),
     ep = n(284009),
     eT = n.n(ep),
-    em = n(723176),
-    eg = n(766034),
+    eg = n(723176),
+    em = n(766034),
     eS = n(314732),
     eN = n(531743),
     eC = n(45773),
@@ -447,7 +447,7 @@ let eG = new eP.A(
         (e, t) => {
             e = e ?? { type: "CHANNEL_UPDATES", channels: [] };
             let n = (0, ed.UE)(t),
-                i = I.A.getChannel(t.id),
+                i = f.A.getChannel(t.id),
                 r = i?.merge({ ...n, recipients: i.recipients, bitrate: n.bitrate ?? i.bitrate });
             return (e.channels.push(r ?? n), e);
         },
@@ -533,13 +533,13 @@ function eY(e, t, n) {
             unusual_dm_activity_until: E,
             collectibles: A,
             display_name_styles: h,
-            member_gaming_leaderboard_data: I,
-            vad_colors: f,
+            member_gaming_leaderboard_data: f,
+            vad_colors: I,
         } = n,
         p = e_.Ay.getMember(e, t.id),
         T = (0, $.t)(A),
-        m = (0, X.mT)(h),
-        g = (0, q.Rt)(I);
+        g = (0, X.mT)(h),
+        m = (0, q.Rt)(f);
     (null != p &&
         p.nick === a &&
         p.avatar === s &&
@@ -552,9 +552,9 @@ function eY(e, t, n) {
         p.flags === o &&
         (p.unusualDMActivityUntil ?? null) === (E ?? null) &&
         r().isEqual(p.collectibles ?? null, T ?? null) &&
-        r().isEqual(p.displayNameStyles ?? null, m ?? null) &&
-        r().isEqual(p.gamingLeaderboardData ?? null, g ?? null) &&
-        r().isEqual(p.vadColors ?? null, f ?? null)) ||
+        r().isEqual(p.displayNameStyles ?? null, g ?? null) &&
+        r().isEqual(p.gamingLeaderboardData ?? null, m ?? null) &&
+        r().isEqual(p.vadColors ?? null, I ?? null)) ||
         eW({
             type: "GUILD_MEMBER_ADD",
             guildId: e,
@@ -570,9 +570,9 @@ function eY(e, t, n) {
             unusualDMActivityUntil: E,
             flags: o,
             collectibles: T,
-            displayNameStyles: m,
-            gamingLeaderboardData: g,
-            vadColors: f,
+            displayNameStyles: g,
+            gamingLeaderboardData: m,
+            vadColors: I,
         });
 }
 function eK(e) {
@@ -626,7 +626,7 @@ function eZ(e) {
 }
 (eH(
     ["INITIAL_GUILD"],
-    (e) => ("full" === e.data_mode ? null : I.D.loadGuildIds([e.id])),
+    (e) => ("full" === e.data_mode ? null : f.D.loadGuildIds([e.id])),
     (e) => {
         el.A.initialGuild.measure(() => {
             a.Ay.Emitter.batched(() => {
@@ -724,8 +724,8 @@ function eZ(e) {
             let t,
                 n,
                 i =
-                    ((t = em.A.database()),
-                    (n = (0, eO.O)() ? eg.A.getCommittedVersions() : Promise.resolve({})),
+                    ((t = eg.A.database()),
+                    (n = (0, eO.O)() ? em.A.getCommittedVersions() : Promise.resolve({})),
                     Promise.all([
                         n,
                         (0, eO.O)() ? eN.A.getGuildIds() : Promise.resolve(new Set()),
@@ -744,7 +744,7 @@ function eZ(e) {
                                 void 0),
                     )
                     .map((e) => e.id);
-            return Promise.all([i, I.D.loadGuildIds(r) ?? Promise.resolve()]).then((e) => {
+            return Promise.all([i, f.D.loadGuildIds(r) ?? Promise.resolve()]).then((e) => {
                 let [t] = e;
                 return t;
             });
@@ -757,7 +757,7 @@ function eZ(e) {
                           let t = (e = el.A.hydrateReady.measure(() =>
                                   (function (e, t, n) {
                                       let { users: i, private_channels: a, merged_members: s, guilds: l, ...o } = e;
-                                      (null != em.A.database() &&
+                                      (null != eg.A.database() &&
                                           !1 === n.databaseOk &&
                                           eC.A.replaceDisableAllDatabases("ReadyPayloadUtils: database was not ok"),
                                           (eL = r().keyBy(i, (e) => e.id)),
@@ -893,7 +893,7 @@ function eZ(e) {
     }),
     eH(
         ["MESSAGE_CREATE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e) => {
             (eK(e),
                 null != e.author &&
@@ -909,28 +909,28 @@ function eZ(e) {
     ),
     eH(
         ["MESSAGE_UPDATE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e) => {
             (eK(e), eW({ type: "MESSAGE_UPDATE", guildId: e.guild_id, message: e }));
         },
     ),
     eH(
         ["MESSAGE_DELETE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e) => {
             eW({ type: "MESSAGE_DELETE", guildId: e.guild_id, id: e.id, channelId: e.channel_id });
         },
     ),
     eH(
         ["MESSAGE_DELETE_BULK"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e) => {
             eW({ type: "MESSAGE_DELETE_BULK", guildId: e.guild_id, ids: e.ids, channelId: e.channel_id });
         },
     ),
     eH(
         ["MESSAGE_ACK"],
-        (e) => I.D.loadGuildFromChannelId(e.channel_id),
+        (e) => f.D.loadGuildFromChannelId(e.channel_id),
         (e) => {
             eW({
                 type: "MESSAGE_ACK",
@@ -961,21 +961,21 @@ function eZ(e) {
     }),
     eH(
         ["CHANNEL_PINS_ACK"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e) => {
             eW({ type: "CHANNEL_PINS_ACK", channelId: e.channel_id, timestamp: e.timestamp, version: e.version });
         },
     ),
     eH(
         ["CHANNEL_PINS_UPDATE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e) => {
             eW({ type: "CHANNEL_PINS_UPDATE", channelId: e.channel_id, lastPinTimestamp: e.last_pin_timestamp });
         },
     ),
     eH(
         ["CHANNEL_CREATE", "CHANNEL_DELETE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e, t) => {
             eW({ type: t, channel: (0, ed.UE)(e) });
         },
@@ -998,14 +998,14 @@ function eZ(e) {
     }),
     eH(
         ["CHANNEL_UPDATE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e) => {
             eG.add(e);
         },
     ),
     eH(
         ["THREAD_CREATE", "THREAD_UPDATE", "THREAD_DELETE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e, t) => {
             let { newly_created: n, ...i } = e;
             eW({ type: t, isNewlyCreated: n, channel: (0, ed.UE)(i) });
@@ -1013,13 +1013,13 @@ function eZ(e) {
     ),
     eH(
         ["THREAD_LIST_SYNC"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e) => {
             eW({
                 type: "THREAD_LIST_SYNC",
                 guildId: e.guild_id,
                 threads: e.threads.map((e) => {
-                    let t = I.A.getChannel(e.parent_id);
+                    let t = f.A.getChannel(e.parent_id);
                     return (null != t && ((e.nsfw = t.nsfw), (e.parentChannelThreadType = t.type)), (0, ed.UE)(e));
                 }),
                 mostRecentMessages: e.most_recent_messages,
@@ -1069,12 +1069,12 @@ function eZ(e) {
         ex.add(e);
     }),
     eV(["CHANNEL_RECIPIENT_ADD", "CHANNEL_RECIPIENT_REMOVE"], (e, t) => {
-        let n = I.A.getBasicChannel(e.channel_id);
+        let n = f.A.getBasicChannel(e.channel_id);
         eW({ type: t, channelId: e.channel_id, user: e.user, nick: e.nick, isMember: null != n });
     }),
     eH(
         ["GUILD_CREATE"],
-        (e) => ("full" === e.data_mode ? null : I.D.loadGuildIds([e.id])),
+        (e) => ("full" === e.data_mode ? null : f.D.loadGuildIds([e.id])),
         (e) => {
             if (e.unavailable) eW({ type: "GUILD_UNAVAILABLE", guildId: e.id });
             else {
@@ -1171,14 +1171,14 @@ function eZ(e) {
     ),
     eH(
         ["GUILD_ROLE_CREATE", "GUILD_ROLE_UPDATE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e, t) => {
             eW({ type: t, guildId: e.guild_id, role: e.role });
         },
     ),
     eH(
         ["GUILD_ROLE_DELETE"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e) => {
             eW({ type: "GUILD_ROLE_DELETE", guildId: e.guild_id, roleId: e.role_id, version: e.version });
         },
@@ -1447,13 +1447,13 @@ function eZ(e) {
     eV(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_CREATE"], (e) => {
         eW({
             type: "GUILD_BOOST_SLOT_CREATE",
-            guildBoostSlot: ec.A.createFromServer(e, eI.A.getSubscriptionById(e.subscription_id)),
+            guildBoostSlot: ec.A.createFromServer(e, ef.A.getSubscriptionById(e.subscription_id)),
         });
     }),
     eV(["USER_PREMIUM_GUILD_SUBSCRIPTION_SLOT_UPDATE"], (e) => {
         eW({
             type: "GUILD_BOOST_SLOT_UPDATE",
-            guildBoostSlot: ec.A.createFromServer(e, eI.A.getSubscriptionById(e.subscription_id)),
+            guildBoostSlot: ec.A.createFromServer(e, ef.A.getSubscriptionById(e.subscription_id)),
         });
     }),
     eV(["BILLING_POPUP_BRIDGE_CALLBACK"], (e) => {
@@ -1474,7 +1474,7 @@ function eZ(e) {
         });
     }),
     eV(["USER_PAYMENT_CLIENT_ADD"], (e) => {
-        (0, ef.D)().then((t) => {
+        (0, eI.D)().then((t) => {
             let n = e.purchase_token_hash;
             n === t && eW({ type: "USER_PAYMENT_CLIENT_ADD", purchaseTokenHash: n, expiresAt: e.expires_at });
         });
@@ -1799,7 +1799,7 @@ function eZ(e) {
     }),
     eH(
         ["EMBEDDED_ACTIVITY_UPDATE_V2"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e) => {
             eW({
                 type: "EMBEDDED_ACTIVITY_UPDATE_V2",
@@ -1839,7 +1839,7 @@ function eZ(e) {
     }),
     eH(
         ["CHANNEL_SYNC"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e) => {
             (e.integrity_check ||
                 e.channels.forEach((e) => {
@@ -1858,7 +1858,7 @@ function eZ(e) {
     }),
     eH(
         ["PASSIVE_UPDATE_V2"],
-        (e) => I.D.loadGuildIds([e.guild_id]),
+        (e) => f.D.loadGuildIds([e.guild_id]),
         (e) => {
             eW({
                 type: "PASSIVE_UPDATE_V2",
@@ -2019,7 +2019,7 @@ let eJ = new c.A("ConnectionStore"),
 async function e6(e) {
     ((e0 = Date.now()), (e1 = e.sessionId), V.handleConnectionOpen());
     let t = {},
-        n = m.Ay.getVoiceChannelId();
+        n = g.Ay.getVoiceChannelId();
     if (null != n) {
         let e = s.w.get("discord_watchdog_restart_timestamp"),
             i = null != e && Date.now() - parseInt(e, 10) < 6e4;
@@ -2030,7 +2030,7 @@ async function e6(e) {
                 (await eQ?.processUtils?.getLastCrash?.())?.rendererCrashReason != null ||
                 !e2)
         ) {
-            let e = I.A.getChannel(n);
+            let e = f.A.getChannel(n);
             null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, _.CX)(n));
         } else (p.A.setLastSessionVoiceChannelId(null != n ? n : null), o.default.selectVoiceChannel(null));
     }
@@ -2051,9 +2051,9 @@ function e9(e) {
 class te extends a.Ay.Store {
     static displayName = "GatewayConnectionStore";
     initialize() {
-        (this.waitFor(A.default, h.A, I.A, f.Ay, p.A, T.A, m.Ay, g.A, S.A, E.A),
-            this.syncWith([f.Ay], e7),
-            this.syncWith([g.A], e8));
+        (this.waitFor(A.default, h.A, f.A, I.Ay, p.A, T.A, g.Ay, m.A, S.A, E.A),
+            this.syncWith([I.Ay], e7),
+            this.syncWith([m.A], e8));
     }
     getSocket() {
         return B;
@@ -2203,7 +2203,7 @@ let tt = new te(l.h, {
     STREAM_START: function (e) {
         let { streamType: t, guildId: n, channelId: i } = e;
         if (B.isSessionEstablished()) {
-            let e = null != n ? I.A.getChannel(i)?.rtcRegion : h.A.getCall(i)?.region;
+            let e = null != n ? f.A.getChannel(i)?.rtcRegion : h.A.getCall(i)?.region;
             B.streamCreate(t, n, i, e ?? T.A.getPreferredRegion());
         }
         return !1;

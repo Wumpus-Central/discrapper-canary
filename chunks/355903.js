@@ -134,11 +134,11 @@ let A = [
     E.M.NITRO_FILE_UPLOAD_1GB_NEW_BADGE,
 ];
 var h = n(652215);
-let I = new Set(A),
-    f = new r.A(1e3, 6e4),
+let f = new Set(A),
+    I = new r.A(1e3, 6e4),
     p = {},
     T = null;
-function m() {
+function g() {
     return {
         candidates: new Map(),
         shownFatigableCandidate: null,
@@ -150,7 +150,7 @@ function m() {
         postConnectionOpen: !1,
     };
 }
-let g = (0, i.h)(m),
+let m = (0, i.h)(g),
     S = !1;
 function N(e) {
     return {
@@ -195,10 +195,10 @@ function L(e, t) {
     return O(C(e, e.shownFatigableCandidate), t, n);
 }
 async function y(e, t) {
-    let n = e.filter((e) => I.has(e)),
-        i = e.filter((e) => !I.has(e)).map((e) => ({ content: e, weight: 1 }));
+    let n = e.filter((e) => f.has(e)),
+        i = e.filter((e) => !f.has(e)).map((e) => ({ content: e, weight: 1 }));
     if (0 === n.length) return { context: t, candidates: i, outcome: "client-only" };
-    if (f.pending) return { context: t, candidates: i, outcome: "server-backoff" };
+    if (I.pending) return { context: t, candidates: i, outcome: "server-backoff" };
     try {
         let e = await l.Bo.post({
                 url: h.Rsh.DISMISSIBLE_CONTENT_ARBITRATE,
@@ -225,26 +225,26 @@ let D = new o.OC(
     async (e) => {
         let t = T;
         if (((T = null), null == t || t.epoch !== p)) return;
-        if ("retry" === t.source && U()) return void f.succeed();
+        if ("retry" === t.source && U()) return void I.succeed();
         let n = await y(e, t);
         if (n.context.epoch !== p) return;
-        if ("retry" === n.context.source && U()) return void f.succeed();
+        if ("retry" === n.context.source && U()) return void I.succeed();
         !(function (e) {
             if (
-                (("client-only" === e.outcome || "server-success" === e.outcome) && f.succeed(),
+                (("client-only" === e.outcome || "server-success" === e.outcome) && I.succeed(),
                 "server-failure" === e.outcome)
             ) {
-                if (w(g.getState())) return f.succeed();
-                f.fails >= 3
-                    ? f.cancel()
-                    : f.fail(() => {
-                          M([...g.getState().candidates.keys()], "retry", e.context.epoch);
+                if (w(m.getState())) return I.succeed();
+                I.fails >= 3
+                    ? I.cancel()
+                    : I.fail(() => {
+                          M([...m.getState().candidates.keys()], "retry", e.context.epoch);
                       });
             }
         })(n);
         let i = !1;
         ((0, a.r)(() => {
-            g.setState((e) => {
+            m.setState((e) => {
                 let t = N(e),
                     r = (function (e, t) {
                         let n = t.filter((t) => {
@@ -263,7 +263,7 @@ let D = new o.OC(
                         let r = Math.random() * i;
                         for (let t of n) if ((r -= t.weight) < 0) return e.candidates.get(t.content);
                     })(t, n.candidates);
-                return f.pending && null == r ? t : ((i = null != r), L(t, r));
+                return I.pending && null == r ? t : ((i = null != r), L(t, r));
             });
         }),
             i && P());
@@ -298,9 +298,9 @@ function v(e, t) {
 }
 function b(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    ("settled" === e.arbitration.type || ("request" === e.arbitration.type && t) ? P() : t && f.succeed(),
+    ("settled" === e.arbitration.type || ("request" === e.arbitration.type && t) ? P() : t && I.succeed(),
         "request" === e.arbitration.type &&
-            (D.isPending() || D.isInvoking() || !(f.fails >= 3) || f.succeed(),
+            (D.isPending() || D.isInvoking() || !(I.fails >= 3) || I.succeed(),
             M(e.arbitration.candidates, "candidate")));
 }
 function M(e, t) {
@@ -308,10 +308,10 @@ function M(e, t) {
     n === p && (D.isPending() || (T = { epoch: n, source: t }), D.queue(e).catch(h.tEg));
 }
 function P() {
-    ((p = {}), (T = null), f.succeed(), D.reset());
+    ((p = {}), (T = null), I.succeed(), D.reset());
 }
 function U() {
-    return w(g.getState());
+    return w(m.getState());
 }
 function w(e) {
     let t = new Date().getTime();
@@ -321,7 +321,7 @@ function G(e) {
     let t = _.C.has(e.content),
         n = null;
     ((0, a.r)(() => {
-        g.setState((i) => {
+        m.setState((i) => {
             let r = N(i);
             return S ? r : t ? O(r, e) : (n = v((r.candidates.set(e.content, e), r), e.content)).state;
         });
@@ -333,7 +333,7 @@ function x(e, t) {
         i = !1,
         r = !1;
     ((0, a.r)(() => {
-        g.setState((a) => {
+        m.setState((a) => {
             let s = N(a);
             if (((i = s.shownFatigableCandidate?.content === e.content), t)) return (n = v(C(R(s, e), e), null)).state;
             {
@@ -345,22 +345,22 @@ function x(e, t) {
         null != n ? b(n, i) : r && P());
 }
 function k(e) {
-    return g.getState().currentlyShown.has(e);
+    return m.getState().currentlyShown.has(e);
 }
 function F(e) {
-    return g((t) => t.currentlyShown.has(e));
+    return m((t) => t.currentlyShown.has(e));
 }
 function B(e) {
-    return g((t) => e.some((e) => t.currentlyShown.has(e)));
+    return m((t) => e.some((e) => t.currentlyShown.has(e)));
 }
 function V() {
-    let e = [...g.getState().currentlyShown].filter((e) => !_.C.has(e)).length;
-    return [g.getState().currentlyShown.size, e];
+    let e = [...m.getState().currentlyShown].filter((e) => !_.C.has(e)).length;
+    return [m.getState().currentlyShown.size, e];
 }
 function H() {
     ((0, a.r)(() => {
-        g.setState(() => {
-            let e = m();
+        m.setState(() => {
+            let e = g();
             return ((e.postConnectionOpen = !0), e);
         });
     }),
@@ -368,14 +368,14 @@ function H() {
 }
 function j() {
     (0, a.r)(() => {
-        g.setState((e) => {
+        m.setState((e) => {
             let t = N(e);
             return ((t.prevFatigableCandidate = null), (t.lastWinnerTime = 0), t);
         });
     });
 }
 function W() {
-    return g.getState().postConnectionOpen;
+    return m.getState().postConnectionOpen;
 }
 class Y extends s.Ay.Store {
     static displayName = "DismissibleContentShownStateStore";
@@ -391,6 +391,6 @@ class Y extends s.Ay.Store {
     }
 }
 function K(e, t) {
-    return g(e, t);
+    return m(e, t);
 }
 new Y(d.h, { CONNECTION_OPEN: () => H(), LOGOUT: () => H() });

@@ -4,13 +4,13 @@ n.d(t, {
     Eb: () => v,
     Iv: () => T,
     M8: () => S,
-    Qv: () => m,
-    V5: () => g,
+    Qv: () => g,
+    V5: () => m,
     XN: () => p,
-    ZU: () => f,
+    ZU: () => I,
     aC: () => L,
     d$: () => E,
-    g0: () => I,
+    g0: () => f,
     nY: () => N,
     qN: () => y,
     ti: () => b,
@@ -45,7 +45,7 @@ class A {
     static INCIDENT_TIMESTAMP = "incident_time";
 }
 var h = (((i = {}).POLICY_VIOLATION_DETAIL = "policy_violation_detail"), (i.LEARN_MORE_LINK = "learn_more_link"), i);
-class I {
+class f {
     static ICON_TYPE = "icon_type";
     static HEADER = "header";
     static BODY = "body";
@@ -56,7 +56,7 @@ class I {
     static LEARN_MORE_LINK = "learn_more_link";
     static CLASSIFICATION_ID = "classification_id";
 }
-var f =
+var I =
         (((r = {})[(r.ViewViolationDetail = 0)] = "ViewViolationDetail"),
         (r[(r.ViewViolationsDropdown = 1)] = "ViewViolationsDropdown"),
         (r[(r.ClickLetUsKnow = 2)] = "ClickLetUsKnow"),
@@ -86,8 +86,8 @@ var T =
     (s[(s.DONT_AGREE_PENALTY = 2)] = "DONT_AGREE_PENALTY"),
     (s[(s.SOMETHING_ELSE = 3)] = "SOMETHING_ELSE"),
     s);
-let m = [0, 1, 2, 3],
-    g = 372,
+let g = [0, 1, 2, 3],
+    m = 372,
     S = 279,
     N = { impression_group: u.ImpressionGroups.APPEAL_INGESTION };
 var C =

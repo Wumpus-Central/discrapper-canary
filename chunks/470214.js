@@ -30,22 +30,22 @@ let h = new A(r.h, {
         return ((E.lastReportedAtMs = t), !0);
     },
 });
-var I = n(652215),
-    f = n(818348);
+var f = n(652215),
+    I = n(818348);
 let p = 5 * o.A.Millis.MINUTE;
 async function T() {
     try {
-        await i.Bo.post({ url: I.Rsh.USER_MEANINGFULLY_ONLINE, rejectWithError: !0 });
+        await i.Bo.post({ url: f.Rsh.USER_MEANINGFULLY_ONLINE, rejectWithError: !0 });
     } catch (e) {
         if (!(e instanceof i.oh) || 429 !== e.status)
             return void d.A.captureException(e, { tags: { app_context: "session_timer" } });
     }
     r.h.dispatch({ type: "FRIEND_ONLINE_TIMER_REPORTED", timestampMs: Date.now() });
 }
-function m(e) {
-    return [f.cl.ONLINE, f.cl.STREAMING].includes(e);
+function g(e) {
+    return [I.cl.ONLINE, I.cl.STREAMING].includes(e);
 }
-class g extends a.A {
+class m extends a.A {
     timerId = null;
     actions = {
         POST_CONNECTION_OPEN: () => this.start(),
@@ -62,13 +62,13 @@ class g extends a.A {
         s.hV.getSetting() &&
             h.isCooldownElapsed() &&
             null == this.timerId &&
-            m(l.A.getStatus()) &&
+            g(l.A.getStatus()) &&
             (this.timerId = setTimeout(() => {
-                ((this.timerId = null), !m(l.A.getStatus()) || (h.isCooldownElapsed() && T()));
+                ((this.timerId = null), !g(l.A.getStatus()) || (h.isCooldownElapsed() && T()));
             }, p));
     };
     clear = () => {
         null != this.timerId && (clearTimeout(this.timerId), (this.timerId = null));
     };
 }
-let S = new g();
+let S = new m();

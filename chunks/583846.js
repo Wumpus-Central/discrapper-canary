@@ -2,23 +2,23 @@
     BZ: () => M,
     CZ: () => U,
     Hd: () => S,
-    I5: () => g,
+    I5: () => m,
     JM: () => T,
     KH: () => R,
     L7: () => O,
     Pj: () => P,
     Pv: () => p,
-    Rf: () => m,
+    Rf: () => g,
     TQ: () => C,
     U3: () => A,
     W6: () => _,
     WC: () => D,
     XK: () => E,
-    aJ: () => f,
+    aJ: () => I,
     gF: () => v,
     iy: () => b,
     kR: () => y,
-    sg: () => I,
+    sg: () => f,
     ty: () => N,
     us: () => L,
 }),
@@ -75,7 +75,7 @@ let h = {
         weeksAgo: (e) => d.intl.formatToPlainString(d.t.sDtO6D, { count: e }),
         monthsAgo: (e) => d.intl.formatToPlainString(d.t.ITymou, { count: e }),
     },
-    I = {
+    f = {
         secondsAgo: (e) => d.intl.formatToPlainString(d.t.jfUoRQ, { count: e }),
         minutesAgo: (e) => d.intl.formatToPlainString(d.t.DmvRVO, { count: e }),
         hoursAgo: (e) => d.intl.formatToPlainString(d.t.AfXezt, { count: e }),
@@ -83,7 +83,7 @@ let h = {
         weeksAgo: (e) => d.intl.formatToPlainString(d.t["jovF+x"], { count: e }),
         monthsAgo: (e) => d.intl.formatToPlainString(d.t.nmSbST, { count: e }),
     };
-function f(e, t, n) {
+function I(e, t, n) {
     let { formatSet: i = h } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {},
         r = a()(n),
         s = a()(o.default.extractTimestamp(e.id)),
@@ -115,14 +115,14 @@ function p(e, t) {
 function T(e) {
     return p(e, s.K.IS_LIVE)?.is_live ?? !1;
 }
-function m(e) {
+function g(e) {
     return p(e, s.K.FIRST_TIME)?.first_time ?? !1;
 }
-function g(e) {
+function m(e) {
     return null != e.expires_at && new Date(e.expires_at) < new Date();
 }
 function S(e) {
-    return T(e) && !g(e);
+    return T(e) && !m(e);
 }
 function N(e) {
     return p(e, s.K.DURATION_SECONDS)?.duration_seconds;

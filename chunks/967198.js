@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(17928),
     r = n(73153),
     a = n(212455),
@@ -12,12 +12,12 @@ var i = n(17928),
 let E = null,
     A = null,
     h = {};
-function I() {
+function f() {
     (null != E && null == u.A.getGuild(E) && null == a.A.getRequest(E) && (E = null),
         null != A && null == u.A.getGuild(A) && null == a.A.getRequest(A) && (A = null),
-        f(E));
+        I(E));
 }
-function f(e) {
+function I(e) {
     null != e && (h[e] = Date.now());
 }
 function p(e) {
@@ -50,15 +50,15 @@ class T extends i.Ay.PersistedStore {
         return E === e ? -1 : h[e];
     }
 }
-let m = new T(r.h, {
-    CONNECTION_OPEN: I,
+let g = new T(r.h, {
+    CONNECTION_OPEN: f,
     OVERLAY_INITIALIZE: function (e) {
-        ((E = e.selectedGuildId), (A = void 0), I());
+        ((E = e.selectedGuildId), (A = void 0), f());
     },
     CHANNEL_SELECT: function (e) {
         let { guildId: t } = e;
         if (E === t) return !1;
-        (f(E), f(t), null != t && (A = t), (E = t));
+        (I(E), I(t), null != t && (A = t), (E = t));
     },
     GUILD_MEMBER_REMOVE: function (e) {
         let { guildId: t, user: n } = e;

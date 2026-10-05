@@ -1,13 +1,13 @@
 n.d(t, {
     AC: () => E,
     F0: () => c,
-    Jk: () => f,
+    Jk: () => I,
     ZV: () => A,
     ce: () => p,
     jQ: () => _,
     kn: () => u,
     on: () => d,
-    zr: () => I,
+    zr: () => f,
 });
 var i,
     r,
@@ -98,11 +98,11 @@ function h(e, t, n) {
         },
     };
 }
-function I(e) {
+function f(e) {
     return 0 === e ? o.intl.string(o.t.XjXqzh) : o.intl.formatToPlainString(o.t.TEOC0I, { resolution: e });
 }
 (h(720), h(1080), h(1440), h(0, () => o.intl.string(o.t.XjXqzh)), h(720), h(1080), h(1440));
-let f = [h(480, () => I(480)), h(720, () => I(720)), h(1080, () => I(1080)), h(1440, () => I(1440)), h(0, () => I(0))];
+let I = [h(480, () => f(480)), h(720, () => f(720)), h(1080, () => f(1080)), h(1440, () => f(1440)), h(0, () => f(0))];
 (h(15), h(30), h(60));
 let p = [
     h(15, () => o.intl.formatToPlainString(o.t["bW+JCW"], { value: 15 })),

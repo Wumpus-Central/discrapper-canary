@@ -12,12 +12,12 @@ var i = n(284009),
     E = n(95561),
     A = n(224868),
     h = n(236285),
-    I = n(7584),
-    f = n(706727),
+    f = n(7584),
+    I = n(706727),
     p = n(743738),
     T = n(409481),
-    m = n(963852),
-    g = n(195880),
+    g = n(963852),
+    m = n(195880),
     S = n(867455),
     N = n(773669),
     C = n(71393),
@@ -46,16 +46,16 @@ async function B(e) {
         commandOrigin: d = w.iw.CHAT,
         sectionName: u,
         interactionLifecycleOptionsFactory: _ = W,
-        source: f,
+        source: I,
     } = e;
     if (null == i.channel) return;
-    let p = U.A.getSource(i.channel.id) ?? f,
+    let p = U.A.getSource(i.channel.id) ?? I,
         T = U.A.getCommandOrigin(i.channel.id) ?? d;
     (null == i.autocomplete &&
         s.h.dispatch({ type: "APPLICATION_COMMAND_USED", context: i, command: t, commandOrigin: T }),
         await S.A.unarchiveThreadIfNecessary(i.channel.id));
-    let m = [],
-        g = [],
+    let g = [],
+        m = [],
         C = (0, G.Qr)(T);
     if (null != t.options)
         for (let e of t.options) {
@@ -74,15 +74,15 @@ async function B(e) {
                 )
                     continue;
                 (r()(null != i.autocomplete || null != t, `Option "${e.name}" expects a value`),
-                    m.push({ type: e.type, name: e.name, value: t, focused: a }));
+                    g.push({ type: e.type, name: e.name, value: t, focused: a }));
                 continue;
             }
             if (e.type === c.n4.ATTACHMENT) {
                 if (null != i.autocomplete) continue;
                 let t = O.A.getUpload(i.channel.id, e.name, C);
                 if (null == t) continue;
-                let n = g.length;
-                (g.push(t), m.push({ type: e.type, name: e.name, value: n, focused: a }));
+                let n = m.length;
+                (m.push(t), g.push({ type: e.type, name: e.name, value: n, focused: a }));
                 continue;
             }
             let s = M.filterEmpty(n[e.name]);
@@ -172,12 +172,12 @@ async function B(e) {
             }
             ("" !== t || null == i.autocomplete || a) &&
                 (r()(null != i.autocomplete || null != t, `Unexpected value for option "${e.name}"`),
-                null != t && m.push({ type: e.type, name: e.name, value: t, focused: a }));
+                null != t && g.push({ type: e.type, name: e.name, value: t, focused: a }));
         }
     if (null != t.subCommandPath)
         for (let e = t.subCommandPath.length - 1; e >= 0; e -= 1) {
             let { name: n, type: i } = t.subCommandPath[e];
-            m = [{ type: i, name: n, options: m }];
+            g = [{ type: i, name: n, options: g }];
         }
     if (null != t.execute)
         return (
@@ -188,7 +188,7 @@ async function B(e) {
                 location: Y(T),
                 source: p,
             }),
-            t.execute(m, i)
+            t.execute(g, i)
         );
     if (
         t.inputType === w.y$.BUILT_IN ||
@@ -202,7 +202,7 @@ async function B(e) {
         guild_id: t.guildId,
         name: t.rootCommand?.name ?? t.untranslatedName,
         type: t.type,
-        options: m,
+        options: g,
         application_command: t.rootCommand,
     };
     (null != a && (R.target_id = a),
@@ -213,7 +213,7 @@ async function B(e) {
                   applicationId: t.applicationId,
                   data: R,
                   context: i,
-                  attachments: g,
+                  attachments: m,
                   maxSizeCallback: l,
                   onMessageSuccess: function () {
                       let e;
@@ -221,7 +221,7 @@ async function B(e) {
                           e
                               .map((e) =>
                                   "emoji" === e.type
-                                      ? new I.zT({
+                                      ? new f.zT({
                                             names: [e.name.replaceAll(":", "")],
                                             surrogates: "",
                                             unicodeVersion: 6,
@@ -267,19 +267,19 @@ function H(e) {
     let { channel: _, guild: E } = i,
         A = _.id,
         h = E?.id,
-        I = {
+        f = {
             applicationId: t,
             channelId: A,
             guildId: h,
             data: n,
-            nonce: u.nonce ?? (0, g.m)(),
+            nonce: u.nonce ?? (0, m.m)(),
             attachments: r,
             maxSizeCallback: s,
             analytics_location: o,
             sectionName: d,
             source: c,
         };
-    (f.tU(I.nonce, {
+    (I.tU(f.nonce, {
         messageId: u.messageId,
         onCreate: u.onCreate,
         onSuccess: u.onSuccess,
@@ -287,10 +287,10 @@ function H(e) {
         data: { interactionType: a.G.APPLICATION_COMMAND, applicationId: t, channelId: A },
     }),
         null != r && r.length > 0
-            ? $(r, I.nonce, h, s).then((e) => {
-                  e && j(I, l);
+            ? $(r, f.nonce, h, s).then((e) => {
+                  e && j(f, l);
               })
-            : j(I, l));
+            : j(f, l));
 }
 function j(e, t) {
     u.Ay.enqueue({ type: u.AZ.COMMAND, message: e }, (n) => {
@@ -307,7 +307,7 @@ async function W(e, t, n) {
             await d.wz(i.botId);
         } catch {}
     let o = {
-        ...(0, m.Ay)({
+        ...(0, g.Ay)({
             channelId: t.channel.id,
             content: "",
             type: n.type === c.kc.CHAT ? x.lAJ.CHAT_INPUT_COMMAND : x.lAJ.CONTEXT_MENU_COMMAND,
@@ -319,7 +319,7 @@ async function W(e, t, n) {
             name: n.name,
             name_localized: e.displayName,
             type: a.G.APPLICATION_COMMAND,
-            user: (0, m.Vi)(R.default.getCurrentUser()),
+            user: (0, g.Vi)(R.default.getCurrentUser()),
         },
         interaction_data: n,
     };
@@ -383,14 +383,14 @@ async function $(e, t, n, i) {
     let r = (0, T.C)((0, L.o2)(n)),
         a = (0, D.jS)({ location: "executeCommand.stageAttachments" });
     function s(e) {
-        (i?.(r, e), f.C1(t, x.t02.ENTITY_TOO_LARGE, F.intl.formatToPlainString(F.t.fxEKdS, { maxSize: (0, L.Hb)(r) })));
+        (i?.(r, e), I.C1(t, x.t02.ENTITY_TOO_LARGE, F.intl.formatToPlainString(F.t.fxEKdS, { maxSize: (0, L.Hb)(r) })));
     }
     let { totalSize: l, largestUploadedFileSize: o } = await K(e, !1);
     if (o > Math.max(r, k.VP) || l > a) return (s(o), !1);
     try {
         await (0, _.A)(e);
     } catch {
-        f.C1(t, void 0, F.intl.formatToPlainString(F.t["9h1/1p"], { count: e.length }));
+        I.C1(t, void 0, F.intl.formatToPlainString(F.t["9h1/1p"], { count: e.length }));
     }
     return (
         ({ totalSize: l, largestUploadedFileSize: o } = await K(e, !0)),

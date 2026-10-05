@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(17928),
     r = n(73153),
     a = n(77729),
@@ -12,12 +12,12 @@ let u = new s.A("OverlayV3NativeGPUBoostManager"),
     E = !1,
     A = !1;
 function h(e, t) {
-    (t ? _.add(e) : _.delete(e), f());
+    (t ? _.add(e) : _.delete(e), I());
 }
-function I() {
-    (_.clear(), f());
+function f() {
+    (_.clear(), I());
 }
-async function f() {
+async function I() {
     try {
         let e = !A && _.size > 0;
         if (E === e || !o.O) return;
@@ -25,7 +25,7 @@ async function f() {
         if (null == t) return;
         (l.Ay.SetGPUBoostEnabledByPid(t, e) && (E = e), T.emitChange());
     } catch (e) {
-        (e.message?.includes("IPC method called after context was released") && I(),
+        (e.message?.includes("IPC method called after context was released") && f(),
             u.error("Error during GPU boost request flush:", e));
     }
 }
@@ -54,11 +54,11 @@ let T = new p(
                   },
                   OVERLAY_RENDER_DEBUG_MODE: function (e) {
                       let { enabled: t, mode: n } = e;
-                      (n === d.x7.DisabledGPUBoost && ((A = t), f()),
+                      (n === d.x7.DisabledGPUBoost && ((A = t), I()),
                           n === d.x7.ForceGPUBoost && h(d.y7.DEV_FORCED_GPU_BOOST, t));
                   },
                   OVERLAY_CRASHED: function () {
-                      I();
+                      f();
                   },
                   OVERLAY_V3_CREATE_WINDOW_HANDLE_SUCCESS: function () {
                       (l.Ay.IsHardwareAcceleratedGPUSchedulingEnabled() &&
@@ -66,11 +66,11 @@ let T = new p(
                           h(d.y7.OVERLAY_RENDERING, !0));
                   },
                   OVERLAY_V3_NATIVE_DESTROY_HOST_WINDOW: function () {
-                      I();
+                      f();
                   },
                   OVERLAY_SET_INPUT_LOCKED: function (e) {
                       h(d.y7.OVERLAY_UNLOCKED, !e.locked);
                   },
               },
     ),
-    m = T;
+    g = T;

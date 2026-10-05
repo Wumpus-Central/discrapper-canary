@@ -26,8 +26,8 @@ let d = null,
     E = {},
     A = {},
     h = {},
-    I = {};
-class f extends i.Ay.Store {
+    f = {};
+class I extends i.Ay.Store {
     initialize() {
         this.waitFor(a.Ay, s.Ay, l.default);
     }
@@ -53,12 +53,12 @@ class f extends i.Ay.Store {
             approx_seconds_since_last_everyone_mention: t(_),
             approx_seconds_since_last_guild_notification: null == e ? null : t(E[e]),
             approx_seconds_since_last_guild_mention: null == e ? null : t(A[e]),
-            approx_seconds_since_last_guild_role_mention: null == e ? null : t(I[e]),
+            approx_seconds_since_last_guild_role_mention: null == e ? null : t(f[e]),
             approx_seconds_since_last_guild_everyone_mention: null == e ? null : t(h[e]),
         };
     }
 }
-let p = new f(r.h, {
+let p = new I(r.h, {
     CONNECTION_OPEN: function () {
         function e(e) {
             return null != e && Date.now() - e < 6e4;
@@ -66,7 +66,7 @@ let p = new f(r.h, {
         for (let t in (e(d) || (d = null), e(c) || (c = null), e(u) || (u = null), e(_) || (_ = null), E))
             e(E[t]) || delete E[t];
         for (let t in A) e(A[t]) || delete A[t];
-        for (let t in I) e(I[t]) || delete I[t];
+        for (let t in f) e(f[t]) || delete f[t];
         for (let t in h) e(h[t]) || delete h[t];
     },
     MESSAGE_NOTIFICATION_SHOWN: function (e) {
@@ -75,7 +75,7 @@ let p = new f(r.h, {
         ((d = a),
             null != t && (E[t] = a),
             n && ((c = a), null != t && (A[t] = a)),
-            i && ((u = a), null != t && (I[t] = a)),
+            i && ((u = a), null != t && (f[t] = a)),
             r && ((_ = a), null != t && (h[t] = a)));
     },
 });

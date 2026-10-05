@@ -46,13 +46,13 @@ class _ extends r.A {
             E = `[\`${_}\`](${d})`,
             A = r.reduce((e, t) => e + t, 0),
             h = u.intl.formatToMarkdownString(u.t.tmSbYW, { total: A, count: t, sides: n }),
-            I = `-# ${r.map((e) => `:game_die: ${e.toString()}`).join(" ")}`,
-            f =
+            f = `-# ${r.map((e) => `:game_die: ${e.toString()}`).join(" ")}`,
+            I =
                 1 === t
                     ? `### ${h} ${E}`
                     : `### ${h} ${E}
-${I}`;
-        i.A.sendMessage(e, a.Ay.parse(l, f), !0, { location: c.Hx.CHAT_INPUT });
+${f}`;
+        i.A.sendMessage(e, a.Ay.parse(l, I), !0, { location: c.Hx.CHAT_INPUT });
     }
     dismiss() {
         (o.Ay.setState({ dismissing: !0 }),

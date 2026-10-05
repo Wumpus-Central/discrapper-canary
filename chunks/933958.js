@@ -12,12 +12,12 @@ var r = n(17928),
     E = n(625494),
     A = n(723702),
     h = n(646865),
-    I = n(240583),
-    f = n(956518),
+    f = n(240583),
+    I = n(956518),
     p = n(878549),
     T = n(969151),
-    m = n(847381),
-    g = n(108959),
+    g = n(847381),
+    m = n(108959),
     S = n(818023),
     N = n(5867),
     C = n(652215);
@@ -46,7 +46,7 @@ class y {
         ((this.items = []), this.invalidate());
     }
     getItems(e) {
-        let { enabled: t } = I.c.getConfig({ location: "embedded_activity_store" });
+        let { enabled: t } = f.c.getConfig({ location: "embedded_activity_store" });
         if (!t || "all" === e) return this.items;
         switch (e) {
             case "visible":
@@ -97,7 +97,7 @@ function X(e) {
             compositeInstanceId: l,
             location: o,
             participants: A,
-            contentClassification: I,
+            contentClassification: f,
         } = {
             applicationId: e.application_id,
             launchId: e.launch_id,
@@ -106,8 +106,8 @@ function X(e) {
             participants: e.participants.map(z),
             contentClassification: e.content_classification,
         },
-        m = (0, f.Ay)(r);
-    if (null == m) return;
+        g = (0, I.Ay)(r);
+    if (null == g) return;
     let S = (0, T.H)(o),
         O = 0 === (null != S ? (b.get(S)?.getItems("all") ?? R) : R).length,
         L = (M.get(o.id)?.getItems("all") ?? R).find((e) => e.applicationId === r),
@@ -124,10 +124,10 @@ function X(e) {
             location: o,
             launchId: s,
             compositeInstanceId: l,
-            url: m,
+            url: g,
             userIds: new Set(y),
             participants: A,
-            contentClassification: I,
+            contentClassification: f,
             referrerId: F?.referrerId ?? V?.referrerId,
             customId: F?.customId ?? V?.customId,
             proxyTicket: B?.proxyTicket,
@@ -150,13 +150,13 @@ function X(e) {
                               participants: l,
                               isFirstActivityInChannel: o,
                               isStart: A,
-                              referrerId: I,
+                              referrerId: f,
                               customId: p,
-                              inviterUserId: m,
+                              inviterUserId: g,
                               proxyTicket: S,
                               renderInFramePool: O,
                           } = e,
-                          R = (0, f.Ay)(t),
+                          R = (0, I.Ay)(t),
                           L = d.default.getSessionId();
                       if (null == R || null == L || D.get(t)?.location.id === s.id) return;
                       let y = (0, T.H)(s),
@@ -173,7 +173,7 @@ function X(e) {
                           launchId: n,
                           compositeInstanceId: r,
                           location: s,
-                          referrerId: I,
+                          referrerId: f,
                           customId: p,
                           proxyTicket: S,
                           renderInFramePool: O,
@@ -186,7 +186,7 @@ function X(e) {
                               isStart: A,
                               participants: l,
                               embeddedActivity: M,
-                              inviterUserId: m,
+                              inviterUserId: g,
                           }));
                       let P = (0, h.f)();
                       (!0 === O
@@ -196,7 +196,7 @@ function X(e) {
                               a.h.wait(() => {
                                   a.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" });
                               }))
-                            : (j = y !== u.Ay.getChannelId() || (0, g.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
+                            : (j = y !== u.Ay.getChannelId() || (0, m.A)(y) ? N.Gd.PIP : N.Gd.PANEL),
                           H.set(
                               (function (e, t) {
                                   return `${e}:${t}`;
@@ -496,7 +496,7 @@ let ee = new J(a.h, {
             let r = Date.now();
             (!(function (e) {
                 let { activities: t, now: n } = e,
-                    i = (0, m.A)((0, A.getOS)()),
+                    i = (0, g.A)((0, A.getOS)()),
                     r = t.reduce((e, t) => {
                         let r = t.client_platform_config[i];
                         if (null == r.label_from || null == r.label_until) return e;

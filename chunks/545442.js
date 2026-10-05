@@ -13,8 +13,8 @@ function c(e) {
         {
             hasGradient: A,
             stops: h,
-            gradientId: I,
-            animatedGradientId: f,
+            gradientId: f,
+            animatedGradientId: I,
         } = (0, o.RM)(E, n?.secondaryColor, n?.tertiaryColor);
     return null == E
         ? null
@@ -33,7 +33,7 @@ function c(e) {
                       (0, i.jsxs)("defs", {
                           children: [
                               (0, i.jsx)("linearGradient", {
-                                  id: I,
+                                  id: f,
                                   x1: "0%",
                                   y1: "0%",
                                   x2: "100%",
@@ -42,7 +42,7 @@ function c(e) {
                                   children: h,
                               }),
                               (0, i.jsxs)("linearGradient", {
-                                  id: f,
+                                  id: I,
                                   x1: "0%",
                                   y1: "0%",
                                   x2: "100%",
@@ -74,13 +74,13 @@ function c(e) {
                           d: "M0 4C0 1.79086 1.79086 0 4 0H16C18.2091 0 20 1.79086 20 4V16C20 18.2091 18.2091 20 16 20H4C1.79086 20 0 18.2091 0 16V4Z",
                       }),
                   (0, i.jsx)("circle", { className: d.tH, cx: "10", cy: "10", r: "6" }),
-                  (0, i.jsx)("circle", { className: d.NA, cx: "10", cy: "10", r: "6", fill: A ? `url(#${I})` : E }),
+                  (0, i.jsx)("circle", { className: d.NA, cx: "10", cy: "10", r: "6", fill: A ? `url(#${f})` : E }),
                   (0, i.jsx)("circle", {
                       className: d.Om,
                       cx: "10",
                       cy: "10",
                       r: "5",
-                      fill: A ? `url(#${c || u ? f : I})` : E,
+                      fill: A ? `url(#${c || u ? I : f})` : E,
                   }),
               ],
           });

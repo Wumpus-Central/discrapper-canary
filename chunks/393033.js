@@ -1,14 +1,14 @@
 n.d(t, {
-    $r: () => m,
+    $r: () => g,
     Jn: () => h,
     Q7: () => E,
     Tk: () => T,
-    W$: () => g,
+    W$: () => m,
     _W: () => _,
     _g: () => p,
-    eu: () => f,
+    eu: () => I,
     f4: () => A,
-    l0: () => I,
+    l0: () => f,
     qn: () => S,
 });
 var i = n(536637),
@@ -43,7 +43,7 @@ function A(e) {
 function h(e) {
     return e.type !== o.Xo.MESSAGE || ("" === e.content && 0 === e.attachments.length);
 }
-function I(e) {
+function f(e) {
     return {
         [d.Iv.DIDNT_VIOLATE_POLICY]: u.intl.string(u.t.mZffAi),
         [d.Iv.TOO_STRICT_UNFAIR]: u.intl.string(u.t.wgZVAn),
@@ -51,7 +51,7 @@ function I(e) {
         [d.Iv.SOMETHING_ELSE]: u.intl.string(u.t.XU3s6r),
     }[e];
 }
-function f(e) {
+function I(e) {
     return null == e || 0 === e.length
         ? ""
         : 1 === e.length
@@ -64,7 +64,7 @@ function p(e) {
 function T(e) {
     return e === c.t02.DSA_APPEAL_REQUEST_DEFLECTION ? u.intl.string(u.t["0qyXXH"]) : u.intl.string(u.t.aPmsx3);
 }
-function m(e) {
+function g(e) {
     if (e.actions.some((e) => e.action_type === o.X2.BAN)) return null;
     let t = e.max_expiration_time;
     if (null == t || !0 === e.has_indefinite_suspension) return null;
@@ -74,7 +74,7 @@ function m(e) {
         return null;
     }
 }
-function g() {
+function m() {
     return null != (0, a.bG)([l.default], () => l.default.getSuspendedUserToken());
 }
 function S() {

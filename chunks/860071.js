@@ -100,12 +100,12 @@ function h(e, t) {
         !1
     );
 }
-function I(e) {
+function f(e) {
     let { channelId: t, messages: n } = e,
         i = c.A.getChannel(t);
     return null != i && null != i.guild_id && h(i.guild_id, n);
 }
-function f(e) {
+function I(e) {
     let { guildId: t, data: n } = e;
     if (null == t) return !1;
     let i = [];
@@ -148,16 +148,16 @@ let T = new p(r.h, {
                 null != e.notFound && e.notFound.forEach((t) => _.acknowledge(e.guildId, t)));
         return !1;
     },
-    SEARCH_MESSAGES_SUCCESS: f,
+    SEARCH_MESSAGES_SUCCESS: I,
     SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { smartSearchQuery: t, messages: n } = e;
         return h(t.guildId, n);
     },
-    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: f,
-    LOCAL_MESSAGES_LOADED: I,
-    LOAD_MESSAGES_SUCCESS: I,
-    LOAD_MESSAGES_AROUND_SUCCESS: I,
-    LOAD_RECENT_MENTIONS_SUCCESS: I,
+    MOD_VIEW_SEARCH_MESSAGES_SUCCESS: I,
+    LOCAL_MESSAGES_LOADED: f,
+    LOAD_MESSAGES_SUCCESS: f,
+    LOAD_MESSAGES_AROUND_SUCCESS: f,
+    LOAD_RECENT_MENTIONS_SUCCESS: f,
     LOAD_PINNED_MESSAGES_SUCCESS: function (e) {
         let { pins: t, channelId: n } = e,
             i = c.A.getChannel(n);

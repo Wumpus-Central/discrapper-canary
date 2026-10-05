@@ -22,20 +22,20 @@ let h = new A(u.h, {
         E = _.xEi - t;
     },
 });
-var I = n(962052),
-    f = n(723702),
+var f = n(962052),
+    I = n(723702),
     p = n(998218),
     T = n(19575);
-let m = new r.A("Games"),
-    g = null;
+let g = new r.A("Games"),
+    m = null;
 function S() {
-    return null != g
-        ? Promise.resolve(g)
-        : (0, f.isDesktop)()
+    return null != m
+        ? Promise.resolve(m)
+        : (0, I.isDesktop)()
           ? T.Ay.ensureModule("discord_game_utils").then(() => {
                 let e = T.Ay.getGameUtils();
                 return null != e && null != e.findLaunchable
-                    ? ((g = e), e)
+                    ? ((m = e), e)
                     : Promise.reject(Error("game utils not found"));
             })
           : Promise.reject(Error("not desktop client"));
@@ -45,7 +45,7 @@ function N(e) {
             id: e.id,
             name: e.name,
             thirdPartySkus: e.thirdPartySkus,
-            executables: e.executables.filter((e) => e.os === (0, f.getPlatformName)()).map((e) => e.name),
+            executables: e.executables.filter((e) => e.os === (0, I.getPlatformName)()).map((e) => e.name),
         },
         n = e.aliases.map((e) => ({ ...t, name: e }));
     return [t, ...n];
@@ -83,7 +83,7 @@ function O(e, t, n) {
 }
 function R(e) {
     return (
-        m.info("launch", e),
+        g.info("launch", e),
         new Promise((t, n) => {
             null == p.A.safeParseWithQuery(e.launchTarget)
                 ? n(Error(`Failed to parse launch target. ${e.launchTarget}`))
@@ -115,7 +115,7 @@ let L = {
             applicationId: u,
             branchId: E,
             buildId: A,
-            shouldPatch: f,
+            shouldPatch: I,
         } = e;
         if (null == o || null == d || null == c) throw Error(`Couldn't construct launchable for ${e.applicationId}`);
         null == s && (s = d);
@@ -126,9 +126,9 @@ let L = {
                 let t = e[0];
                 if (null == t) return Promise.reject(Error("branch is null"));
                 let { liveBuildId: n } = t;
-                if (f && n !== A) return Promise.reject(Error("live build id changed"));
+                if (I && n !== A) return Promise.reject(Error("live build id changed"));
             })
-            .then(() => I.A.runLaunchSetup(u, E))
+            .then(() => f.A.runLaunchSetup(u, E))
             .then(() => {
                 let e = (0, a.A)(c),
                     i = {
@@ -138,12 +138,12 @@ let L = {
                         DISCORD_CURRENT_BRANCH: r,
                         DISCORD_STORAGE_PATH: _.gkb.ROOT_STORAGE_PATH(e, l.default.getId()),
                     };
-                return I.A.launch(u, E, p.name, i);
+                return f.A.launch(u, E, p.name, i);
             });
     },
-    removeShortcuts: (e) => ((0, f.isWindows)() ? S().then((t) => t.removeShortcuts?.(e) ?? !1) : Promise.resolve(!1)),
+    removeShortcuts: (e) => ((0, I.isWindows)() ? S().then((t) => t.removeShortcuts?.(e) ?? !1) : Promise.resolve(!1)),
     createShortcuts(e, t, n, i, r) {
-        if (null == r || !(0, f.isWindows)()) return Promise.resolve(!1);
+        if (null == r || !(0, I.isWindows)()) return Promise.resolve(!1);
         let a = `discord:///library/${i}/launch`,
             s = `${r}\\icon.ico`;
         return S().then((i) => i.createShortcuts?.(e, t, n, a, s) ?? !1);

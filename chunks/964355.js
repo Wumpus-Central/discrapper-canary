@@ -18,20 +18,20 @@ let u = r.forwardRef(function (e, t) {
             onChange: E,
             onInteraction: A,
             renderValue: h = c,
-            "aria-label": I,
+            "aria-label": f,
         } = e,
-        f = r.useRef(null),
+        I = r.useRef(null),
         p = r.useMemo(() => s().debounce(() => A?.(o.Q.SLIDER), 100), [A]);
     return (
         r.useImperativeHandle(
             t,
-            () => ({ focus: () => f.current?.focus(), blur: () => f.current?.blur(), activate: () => !1 }),
+            () => ({ focus: () => I.current?.focus(), blur: () => I.current?.blur(), activate: () => !1 }),
             [],
         ),
         (0, i.jsx)("div", {
             className: d.x,
             children: (0, i.jsx)(l.A, {
-                ref: f,
+                ref: I,
                 mini: !0,
                 handleSize: 16,
                 className: d.a,
@@ -46,7 +46,7 @@ let u = r.forwardRef(function (e, t) {
                 onValueRender: h,
                 orientation: "horizontal",
                 consumeAxisOnly: !0,
-                "aria-label": I,
+                "aria-label": f,
             }),
         })
     );

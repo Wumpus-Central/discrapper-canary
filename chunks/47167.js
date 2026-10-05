@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => p, Bi: () => A, Eq: () => I, Jo: () => u, LG: () => f, e5: () => E, ks: () => _, m1: () => h });
+n.d(t, { Ay: () => p, Bi: () => A, Eq: () => f, Jo: () => u, LG: () => I, e5: () => E, ks: () => _, m1: () => h });
 var i = n(17928),
     r = n(736056),
     a = n(994500),
@@ -52,7 +52,7 @@ function h(e, t, n) {
             return a;
         case d.rbe.GUILD_CATEGORY:
             if (e.id === d._Ee) return c.intl.string(c.t.GSfOoo);
-            if (r) return `#"${I(a)}"`;
+            if (r) return `#"${f(a)}"`;
             return a;
         case d.rbe.PUBLIC_THREAD:
         case d.rbe.PRIVATE_THREAD:
@@ -60,7 +60,7 @@ function h(e, t, n) {
         case d.rbe.MEDIA_THREAD:
         case d.rbe.GUILD_VOICE:
         case d.rbe.GUILD_STAGE_VOICE:
-            if (r) return `#"${I(a)}"`;
+            if (r) return `#"${f(a)}"`;
             if (i && e.isThread()) return `"${a}"`;
             return a;
         case d.rbe.GUILD_STORE:
@@ -71,10 +71,10 @@ function h(e, t, n) {
             return a;
     }
 }
-function I(e) {
+function f(e) {
     return e.replace(/\\/g, "\\\\").replace(/"/g, '\\"');
 }
-function f(e) {
+function I(e) {
     return e.replace(/\\"/g, '"').replace(/\\\\/g, "\\");
 }
 function p(e) {

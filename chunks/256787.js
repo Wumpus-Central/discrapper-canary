@@ -2,8 +2,8 @@ n.d(t, {
     IL: () => _,
     Jq: () => A,
     L0: () => u,
-    PN: () => f,
-    XQ: () => I,
+    PN: () => I,
+    XQ: () => f,
     Zm: () => E,
     ef: () => h,
     ki: () => c,
@@ -107,14 +107,14 @@ function A(e) {
 function h(e) {
     return o.includes(e);
 }
-function I(e) {
+function f(e) {
     return d.includes(e);
 }
-function f(e) {
+function I(e) {
     return l.includes(e);
 }
 function p(e) {
-    return h(e) || I(e) || f(e);
+    return h(e) || f(e) || I(e);
 }
 let T = Object.keys(i.M)
     .map((e) => parseInt(e))

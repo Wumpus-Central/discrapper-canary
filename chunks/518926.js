@@ -1,6 +1,6 @@
 i.d(e, { A: () => d });
-var s = i(477900),
-    n = i(582128),
+var n = i(477900),
+    s = i(582128),
     l = i(776310),
     a = i(21161),
     r = i(536283);
@@ -8,7 +8,7 @@ let o = { xMin: -40, xMax: 40, yMin: -40, yMax: -70 };
 function u(t, e, i) {
     return null == i ? e : (t * i) / 100;
 }
-let d = n.memo(function (t) {
+let d = s.memo(function (t) {
     let {
             confettiTarget: e,
             colors: i,
@@ -24,31 +24,31 @@ let d = n.memo(function (t) {
             dragCoefficientValue: y = 1.66,
             onAnimationEnd: R,
         } = t,
-        [S, C] = n.useState(null),
-        { confettiCanvas: I } = n.useContext(a.x),
+        [S, C] = s.useState(null),
+        { confettiCanvas: I } = s.useContext(a.x),
         j = (0, l.f9)(A ?? I, S),
-        [T, E] = n.useState(!1);
-    n.useEffect(() => {
+        [T, E] = s.useState(!1);
+    s.useEffect(() => {
         T && R?.();
     });
-    let N = n.useMemo(() => {
+    let N = s.useMemo(() => {
         if (null != d) return [{ src: d, colorize: !1 }];
     }, [d]);
     return (
-        n.useEffect(() => {
+        s.useEffect(() => {
             if (null == e) return;
             let t = Array(c ?? 4).fill(0);
             return (
-                (t = t.map((i, s) =>
+                (t = t.map((i, n) =>
                     setTimeout(() => {
                         (j.createMultipleConfetti(
-                            (function (t, e, i, s, n) {
+                            (function (t, e, i, n, s) {
                                 let l = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
                                     a = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
                                     d = u(t.width, 100, i),
-                                    c = u(t.height, 75, n),
+                                    c = u(t.height, 75, s),
                                     f = u(t.width, 350, e),
-                                    h = u(t.height, 75, s),
+                                    h = u(t.height, 75, n),
                                     { xMin: p, xMax: m, yMin: g, yMax: A } = l;
                                 return {
                                     ...r.Mw,
@@ -68,14 +68,14 @@ let d = n.memo(function (t) {
                             })(e.getBoundingClientRect(), h, p, m, g, x, y),
                             f ?? 50,
                         ),
-                            s === t.length - 1 && null != R && E(!0));
-                    }, 60 * s),
+                            n === t.length - 1 && null != R && E(!0));
+                    }, 60 * n),
                 )),
                 () => {
                     for (let e of t) clearTimeout(e);
                 }
             );
         }, [j, e, c, f, h, p, m, g, x, y, R]),
-        (0, s.jsx)(l.K_, { ref: C, sprites: N ?? r.uI, colors: i ?? r._t, spriteWidth: r.wn, spriteHeight: r.wn })
+        (0, n.jsx)(l.K_, { ref: C, sprites: N ?? r.uI, colors: i ?? r._t, spriteWidth: r.wn, spriteHeight: r.wn })
     );
 });

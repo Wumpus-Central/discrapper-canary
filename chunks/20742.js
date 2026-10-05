@@ -12,15 +12,15 @@ var i = n(477900),
     E = n(297264),
     A = n(911608),
     h = n(331322),
-    I = n(834730),
-    f = n(22856),
+    f = n(834730),
+    I = n(22856),
     p = n(592551);
 function T(e) {
     let { shouldColorMix: t = !1 } = e,
-        { dismissable: n, onClose: r } = (0, f.k)();
+        { dismissable: n, onClose: r } = (0, I.k)();
     return !1 === n ? null : (0, i.jsx)(d.J, { onClick: r, variant: t ? "color-mix" : void 0 });
 }
-function m(e) {
+function g(e) {
     let { leading: t, trailing: n, hasGradient: r, children: a } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -33,7 +33,7 @@ function m(e) {
         ],
     });
 }
-function g(e) {
+function m(e) {
     let { leading: t, trailing: n, hasGradient: r, children: a } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
@@ -97,12 +97,12 @@ function N(e) {
             title: l,
             titleTextVariant: o,
             subtitle: d,
-            alignCenter: I = !1,
+            alignCenter: f = !1,
             leading: T,
             trailing: N,
             progressBarProps: R,
         } = e,
-        { headingId: L } = (0, f.k)(),
+        { headingId: L } = (0, I.k)(),
         y = null != t,
         D = (0, _.Oy)(n),
         v =
@@ -130,13 +130,13 @@ function N(e) {
         }));
     let M = null != n ? v : b,
         P = (0, i.jsx)("header", {
-            className: s()(p.section, p.header, { [p.headerCentered]: I }),
+            className: s()(p.section, p.header, { [p.headerCentered]: f }),
             children: (0, i.jsxs)(h.B, {
                 gap: 8,
                 children: [
                     (0, i.jsx)("div", {
                         className: p.headerLayout,
-                        children: (0, i.jsx)(I ? (D ? g : S) : m, {
+                        children: (0, i.jsx)(f ? (D ? m : S) : g, {
                             leading: T,
                             trailing: N,
                             hasGradient: y,
@@ -174,7 +174,7 @@ function C(e) {
 function O(e) {
     let { subtitle: t } = e;
     if (null == t) return null;
-    let n = (0, i.jsx)(I.E, {
+    let n = (0, i.jsx)(f.E, {
             className: p.headerSubtitle,
             variant: "text-md/normal",
             color: "text-subtle",

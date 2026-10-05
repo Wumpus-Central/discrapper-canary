@@ -1,4 +1,4 @@
-n.d(t, { xb: () => f, fs: () => p });
+n.d(t, { xb: () => I, fs: () => p });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -12,9 +12,9 @@ var i = n(477900),
     E = n(354328),
     A = n(742023),
     h = n(19575);
-let I = r.createContext({ lang: "", style: "", className: "", focused: !1 });
-function f() {
-    let e = r.useContext(I);
+let f = r.createContext({ lang: "", style: "", className: "", focused: !1 });
+function I() {
+    let e = r.useContext(f);
     if (void 0 === e) throw Error("useRootElementContext must be used within a RootElementContextProvider");
     return e;
 }
@@ -22,11 +22,11 @@ function p(e) {
     let t,
         {
             rootClassName: a,
-            lang: f,
+            lang: I,
             theme: p,
             density: T,
-            focused: m,
-            fontScale: g,
+            focused: g,
+            fontScale: m,
             fontScaleClass: S,
             mouseMode: N,
             keyboardModeEnabled: C,
@@ -83,7 +83,7 @@ function p(e) {
             );
         }, [j]));
     let W = (0, o.bG)([A.Ay], () => A.Ay.hdrDynamicRange),
-        Y = `font-size: ${g}%; --saturation-factor: ${O}; dynamic-range-limit: ${W}; ${x}`,
+        Y = `font-size: ${m}%; --saturation-factor: ${O}; dynamic-range-limit: ${W}; ${x}`,
         K = s()(
             ((t = ""),
             (0, _.isWindows)()
@@ -107,7 +107,7 @@ function p(e) {
                 "reduce-motion": D,
                 "full-motion": !D,
                 "is-mobile": l.Fr,
-                "app-focused": m,
+                "app-focused": g,
                 "desaturate-user-colors": R,
                 "disable-forced-colors": !L && "active" === y,
                 "enable-forced-colors": L,
@@ -124,11 +124,11 @@ function p(e) {
             },
             a,
         ),
-        $ = r.useMemo(() => ({ lang: f, style: Y, className: K, focused: m }), [f, Y, K, m]);
+        $ = r.useMemo(() => ({ lang: I, style: Y, className: K, focused: g }), [I, Y, K, g]);
     return (
         (0, c.Ay)(() => {
             h.Ay.setTrafficLightPosition({ x: 9, y: 9 });
         }),
-        (0, i.jsx)(I.Provider, { value: $, children: U })
+        (0, i.jsx)(f.Provider, { value: $, children: U })
     );
 }

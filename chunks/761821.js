@@ -2,14 +2,14 @@
     $o: () => p,
     Gd: () => A,
     Mr: () => S,
-    RK: () => f,
-    VB: () => m,
+    RK: () => I,
+    VB: () => g,
     Y5: () => _,
     aw: () => h,
     gc: () => T,
     ii: () => E,
-    ob: () => I,
-    vI: () => g,
+    ob: () => f,
+    vI: () => m,
 }),
     n(321073));
 var i = n(435558),
@@ -36,12 +36,12 @@ function A(e) {
     return E(s.nT, e);
 }
 function h(e, t) {
-    return I(u[e], t);
+    return f(u[e], t);
 }
-function I(e, t) {
+function f(e, t) {
     return (0, o.ob)(e, t);
 }
-function f(e, t, n) {
+function I(e, t, n) {
     for (let e in ((t = { ...t }), n)) delete t[e];
     return (e.mergePartial(t, n), t);
 }
@@ -50,12 +50,12 @@ function p(e, t, n) {
 }
 function T(e, t, n, i) {
     var r;
-    return ((r = (e) => m(e, n, i)), null == e.guilds && (e.guilds = s.KJ.create()), p(e.guilds, t, r));
+    return ((r = (e) => g(e, n, i)), null == e.guilds && (e.guilds = s.KJ.create()), p(e.guilds, t, r));
 }
-function m(e, t, n) {
+function g(e, t, n) {
     return (t in e.channels || (e.channels[t] = s.Ju.create()), n(e.channels[t]));
 }
-function g(e, t) {
+function m(e, t) {
     null == e.versions && (e.versions = l.u.create());
     let n = 0;
     for (let e of t) {

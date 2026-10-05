@@ -17,12 +17,12 @@ let A = (0, n(945810).mj)({
     variations: { 1: { enabled: !0 } },
 });
 var h = n(838111),
-    I = n(451909),
-    f = n(135621),
+    f = n(451909),
+    I = n(135621),
     p = n(268761),
     T = n(659617),
-    m = n(406704),
-    g = n(885386),
+    g = n(406704),
+    m = n(885386),
     S = n(734057),
     N = n(576705),
     C = n(287809),
@@ -179,7 +179,7 @@ let G = {
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return null != t && !t.isPrivate() && g.on.getSetting() && N.A.can(D.xBc.SEND_TTS_MESSAGES, t);
+                return null != t && !t.isPrivate() && m.on.getSetting() && N.A.can(D.xBc.SEND_TTS_MESSAGES, t);
             },
             execute: (e) => ({ content: w(e, "message") ?? "", tts: !0 }),
         },
@@ -327,21 +327,21 @@ let G = {
                         return P.intl.string(P.t.QXfSfU);
                     },
                     get maxLength() {
-                        return (0, f.a)();
+                        return (0, I.a)();
                     },
                     required: !0,
                 },
             ],
             predicate: (e) => {
                 let { channel: t } = e;
-                return null != t && (0, m.D1)(t);
+                return null != t && (0, g.D1)(t);
             },
             execute: async (e, t) => {
                 let { channel: n } = t,
                     i = w(e, "name") ?? "",
                     r = w(e, "message") ?? "",
                     a = await (0, T.Nw)(n, i, l.r.PUBLIC_THREAD, (0, p.Gl)(n, null), "Slash Command");
-                u.A.sendMessage(a.id, I.Ay.parse(a, r), !0, { location: M.Hx.THREAD_CREATION });
+                u.A.sendMessage(a.id, f.Ay.parse(a, r), !0, { location: M.Hx.THREAD_CREATION });
             },
         },
         {
@@ -643,7 +643,7 @@ let G = {
                     },
                     required: !0,
                     get maxLength() {
-                        return (0, f.a)();
+                        return (0, I.a)();
                     },
                 },
             ],
@@ -656,7 +656,7 @@ let G = {
                     await d.A.openPrivateChannel({ recipientIds: i }).then((e) => {
                         let t = S.A.getChannel(e);
                         (r()(null != t, "Newly created PrivateChannel is null"),
-                            u.A.sendMessage(t.id, I.Ay.parse(t, a), !0, { location: M.Hx.PRIVATE_MESSAGE_COMMAND }));
+                            u.A.sendMessage(t.id, f.Ay.parse(t, a), !0, { location: M.Hx.PRIVATE_MESSAGE_COMMAND }));
                     });
                 })().catch(() => {
                     u.A.sendBotMessage(n.id, P.intl.string(P.t["3XaE95"]));

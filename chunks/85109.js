@@ -28,16 +28,16 @@ let c = new r.J(
     E = new Set(),
     A = new Set(),
     h = new Map();
-function I(e) {
+function f(e) {
     let t = h.get(e);
     return null != t && t.size > 0;
 }
-function f(e) {
+function I(e) {
     let { channelId: t, messageId: n } = e;
     return `${t}-${n}`;
 }
 function p(e) {
-    let t = f(e.saveData);
+    let t = I(e.saveData);
     (null == c.get(t) && (_ = Date.now()), c.set(t, e));
     let n = e.saveData.messageId,
         i = e.saveData.channelId,
@@ -49,17 +49,17 @@ function p(e) {
 }
 function T(e) {
     let { messageId: t, channelId: n } = e,
-        i = f({ messageId: t, channelId: n }),
+        i = I({ messageId: t, channelId: n }),
         r = c.get(i);
     if (r?.message == null) return !1;
     let a = { ...r };
     return ((a.message = null), c.set(i, a), !0);
 }
-function m() {
+function g() {
     if (0 === A.size || u) return !1;
     u = !0;
 }
-class g extends i.Ay.Store {
+class m extends i.Ay.Store {
     static displayName = "SavedMessagesStore";
     initialize() {
         this.waitFor(l.default);
@@ -68,7 +68,7 @@ class g extends i.Ay.Store {
         return c.values(o.Yf.ALL);
     }
     getSavedMessage(e, t) {
-        return c.get(f({ channelId: e, messageId: t }));
+        return c.get(I({ channelId: e, messageId: t }));
     }
     getMessageBookmarks() {
         return c.values(o.Yf.BOOKMARK);
@@ -102,15 +102,15 @@ class g extends i.Ay.Store {
         return _;
     }
     isMessageBookmarked(e, t) {
-        let n = c.get(f({ channelId: e, messageId: t }));
+        let n = c.get(I({ channelId: e, messageId: t }));
         return null != n && null == n.saveData.dueAt;
     }
     isMessageReminder(e, t) {
-        let n = c.get(f({ channelId: e, messageId: t }));
+        let n = c.get(I({ channelId: e, messageId: t }));
         return null != n && null != n.saveData.dueAt;
     }
 }
-let S = new g(a.h, {
+let S = new m(a.h, {
     POST_CONNECTION_OPEN: function () {
         u = !0;
     },
@@ -127,7 +127,7 @@ let S = new g(a.h, {
     },
     SAVED_MESSAGE_DELETE: function (e) {
         let { savedMessageData: t } = e,
-            n = f(t),
+            n = I(t),
             i = c.get(n);
         if (null == i) return !1;
         c.delete(n);
@@ -145,30 +145,30 @@ let S = new g(a.h, {
     MESSAGE_UPDATE: function (e) {
         let { message: t } = e;
         if (null == t.id || null == t.channel_id) return !1;
-        let n = f({ messageId: t.id, channelId: t.channel_id }),
+        let n = I({ messageId: t.id, channelId: t.channel_id }),
             i = c.get(n);
         if (i?.message == null) return !1;
         let r = { ...i };
         ((r.message = (0, s.IU)(i.message, t)), c.set(n, r));
     },
-    GUILD_CREATE: m,
-    GUILD_UPDATE: m,
-    GUILD_DELETE: m,
+    GUILD_CREATE: g,
+    GUILD_UPDATE: g,
+    GUILD_DELETE: g,
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        if (0 === A.size || u || !I(t.id)) return !1;
+        if (0 === A.size || u || !f(t.id)) return !1;
         u = !0;
     },
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
         if (0 === A.size || u) return !1;
         let n = !1;
-        for (let e of t) I(e.id) && ((u = !0), (n = !0));
+        for (let e of t) f(e.id) && ((u = !0), (n = !0));
         return n;
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
-        if (0 === A.size || u || !I(t.id)) return !1;
+        if (0 === A.size || u || !f(t.id)) return !1;
         u = !0;
     },
     GUILD_MEMBER_UPDATE: function (e) {
@@ -176,9 +176,9 @@ let S = new g(a.h, {
         if (0 === A.size || u || t.id !== l.default.getCurrentUser()?.id) return !1;
         u = !0;
     },
-    GUILD_ROLE_CREATE: m,
-    GUILD_ROLE_UPDATE: m,
-    GUILD_ROLE_DELETE: m,
+    GUILD_ROLE_CREATE: g,
+    GUILD_ROLE_UPDATE: g,
+    GUILD_ROLE_DELETE: g,
     MESSAGE_REMINDER_DUE: function (e) {
         let { savedMessage: t } = e;
         E.add(t.saveData.messageId);

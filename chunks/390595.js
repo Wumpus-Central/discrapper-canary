@@ -14,12 +14,12 @@ var _ = n(280450),
     E = n(885576),
     A = n(763827),
     h = n(174459),
-    I = n(927813),
-    f = n(38405),
+    f = n(927813),
+    I = n(38405),
     p = n(70298),
     T = n(973522),
-    m = n(952818),
-    g = n(321034),
+    g = n(952818),
+    m = n(321034),
     S = n(789999),
     N = n(976860),
     C = n(569745);
@@ -30,8 +30,8 @@ var R = n(604594),
     L = n(4043),
     y = n(287809),
     D = n(652215);
-let v = 15 * I.A.Millis.MINUTE,
-    b = I.A.Millis.SECOND,
+let v = 15 * f.A.Millis.MINUTE,
+    b = f.A.Millis.SECOND,
     M = "LAST_CLIENT_HEARTBEAT_SESSION",
     P = "user",
     U = new d.A("SessionHeartbeatScheduler"),
@@ -58,7 +58,7 @@ function W() {
                 w.type;
         }
         return ((w = null), !0);
-    })() && (f.A.addBreadcrumb({ category: P, message: "Stopping Analytics Heartbeat" }), (0, o.p)());
+    })() && (I.A.addBreadcrumb({ category: P, message: "Stopping Analytics Heartbeat" }), (0, o.p)());
 }
 async function Y() {
     let e,
@@ -72,17 +72,17 @@ async function Y() {
         d = await er(),
         c = Date.now();
     if (null == d)
-        return void f.A.captureException(Error(`Null session when tracking session heartbeat. Waited ${c - l}ms`));
-    f.A.addBreadcrumb({ category: P, message: "Tracking Heartbeat", data: { initialized: d.createdAtTimestamp } });
+        return void I.A.captureException(Error(`Null session when tracking session heartbeat. Waited ${c - l}ms`));
+    I.A.addBreadcrumb({ category: P, message: "Tracking Heartbeat", data: { initialized: d.createdAtTimestamp } });
     let _ = {
         client_heartbeat_initialization_timestamp: d.createdAtTimestamp,
         client_heartbeat_version: 31,
         ...{
             ...((e = {}),
-            null != (t = g.A.getMemoryUsageElectronRenderer()) && (e.client_heartbeat_renderer_memory = t),
-            null != (n = g.A.getMemoryUsageElectronRendererUsedHeapSize()) &&
+            null != (t = m.A.getMemoryUsageElectronRenderer()) && (e.client_heartbeat_renderer_memory = t),
+            null != (n = m.A.getMemoryUsageElectronRendererUsedHeapSize()) &&
                 (e.client_heartbeat_renderer_memory_used_heap = n),
-            null != (i = g.A.getMemoryUsageElectronProcessTypeDetails()) &&
+            null != (i = m.A.getMemoryUsageElectronProcessTypeDetails()) &&
                 ((e.electron_process_memory_private = [
                     i.unknown?.wss_priv_kb ?? -1,
                     i.main?.wss_priv_kb ?? -1,
@@ -103,7 +103,7 @@ async function Y() {
                 ])),
             e),
             ...((r = {}),
-            null != (a = m.Ay.getCurrentGameForAnalytics()) &&
+            null != (a = g.Ay.getCurrentGameForAnalytics()) &&
                 ((r.client_heartbeat_current_game_id = a.id),
                 (r.client_heartbeat_current_game_name = a.name),
                 (r.client_heartbeat_current_game_executable = (0, T.Ic)(a.exePath)),
@@ -137,7 +137,7 @@ function z() {
         ? (function () {
               if (null != w) return;
               let e = 0 === k ? 0 : v - (u() - k);
-              (f.A.addBreadcrumb({
+              (I.A.addBreadcrumb({
                   message: `Received Last Heartbeat Event Timestamp. Time Until Next Heartbeat: ${e / 1e3} seconds. Scheduling Heartbeat`,
               }),
                   (w = {
@@ -192,7 +192,7 @@ function en() {
     ((B = A.A.getState()), (V = (0, S.R)()), (H = O()), q());
 }
 function ei() {
-    (f.A.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" }),
+    (I.A.addBreadcrumb({ message: "Initializing SessionHeartbeatScheduler" }),
         A.A.addChangeListener(Q),
         _.default.addChangeListener(q),
         l.h.subscribe("WINDOW_FOCUS", J),
@@ -219,7 +219,7 @@ async function er() {
     try {
         t = "uninitialized" === F.state ? X(await s.w.getAfterRefresh(M)) : F.session;
     } catch (e) {
-        f.A.captureException(e);
+        I.A.captureException(e);
     }
     let a = Date.now();
     if ($()) {
@@ -232,7 +232,7 @@ async function er() {
             try {
                 (s.w.set(M, l), (x = e));
             } catch (e) {
-                f.A.captureException(e);
+                I.A.captureException(e);
             }
     } else null != t && (0, R.aE)(t) && (t = null);
     return (

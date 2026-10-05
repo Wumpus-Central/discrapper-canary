@@ -1,15 +1,15 @@
 n.d(t, {
     BK: () => D,
     BO: () => O,
-    K3: () => g,
+    K3: () => m,
     NQ: () => S,
-    Ts: () => f,
+    Ts: () => I,
     U: () => N,
     Vt: () => L,
     ZT: () => R,
     jU: () => y,
     oc: () => T,
-    qv: () => m,
+    qv: () => g,
     v7: () => C,
     zr: () => p,
 });
@@ -26,8 +26,8 @@ var i = n(636537),
     E = n(962052),
     A = n(356645),
     h = n(652215),
-    I = n(375708);
-function f(e, t) {
+    f = n(375708);
+function I(e, t) {
     E.A.init({
         userToken: e,
         userId: t,
@@ -63,7 +63,7 @@ function T(e) {
             location: l,
         }));
 }
-function m(e, t, n) {
+function g(e, t, n) {
     ((0, A.n)(e.id, t).then(() => {
         r.h.dispatch({ type: "DISPATCH_APPLICATION_REPAIR", applicationId: e.id, branchId: t });
     }),
@@ -74,7 +74,7 @@ function m(e, t, n) {
             location: n,
         }));
 }
-function g(e, t, n, i) {
+function m(e, t, n, i) {
     let a = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
     (!(function (e, t, n, i) {
         if (s.Ay.getRunningDiscordApplicationIds().includes(e.id)) return;
@@ -135,8 +135,8 @@ function D(e, t) {
                     let { default: t } = e;
                     t.showNotification(
                         r.getIconURL(64),
-                        I.intl.string(I.t["1wR7yI"]),
-                        I.intl.formatToPlainString(I.t["89VAgW"], { name: r.name }),
+                        f.intl.string(f.t["1wR7yI"]),
+                        f.intl.formatToPlainString(f.t["89VAgW"], { name: r.name }),
                         { notif_type: "Game Library Game Installed" },
                         { onClick: () => (0, l.pX)(h.BVt.APPLICATION_LIBRARY), omitViewTracking: !0, isUserAvatar: !1 },
                     );

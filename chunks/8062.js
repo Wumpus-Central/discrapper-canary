@@ -1,4 +1,4 @@
-n.d(t, { a: () => A, y: () => I });
+n.d(t, { a: () => A, y: () => f });
 var i = n(176781),
     r = n(173936),
     a = n(606096),
@@ -26,7 +26,7 @@ let A = {
         [E.Ck.FORWARD]: { icon: d.t, color: u.A.colors.ICON_FEEDBACK_POSITIVE },
         [E.Ck.INVITE]: { icon: c.u, color: u.A.colors.ICON_BRAND },
     };
-function I(e) {
+function f(e) {
     let { message: t, type: n, options: i } = e;
     if (i?.component != null) return null;
     let r = {

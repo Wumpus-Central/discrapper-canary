@@ -1,4 +1,4 @@
-n.d(t, { p: () => h, z: () => I });
+n.d(t, { p: () => h, z: () => f });
 var i = n(77729),
     r = n(952818),
     a = n(41984),
@@ -33,18 +33,18 @@ function h() {
         quality_preset: l,
     };
 }
-async function I(e, t) {
+async function f(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         o = __OVERLAY__ ? u.A.getGame() : (0, l.qv)(),
         d = r.Ay.getRunningGames().find((e) => e.name === o?.name),
         h = d?.pid != null ? s.default.getTrackedGameByPid(d?.pid) : null,
-        I = h?.source ?? null,
-        f = h?.overlayMethod ?? s.default.getRenderMethod(d?.pid) ?? null,
+        f = h?.source ?? null,
+        I = h?.overlayMethod ?? s.default.getRenderMethod(d?.pid) ?? null,
         p = {
-            overlay_game_source: I,
+            overlay_game_source: f,
             overlay_game_name: null != o ? o.name : "Unknown Game",
             overlay_app_id: null != o ? o.id : null,
-            overlay_render_method: null != f ? a.Ue[f] : null,
+            overlay_render_method: null != I ? a.Ue[I] : null,
             media_session_id: c.A.getMediaSessionId(),
             overlay_game_elevated: d?.elevated,
             input_service_initialized: r.Ay.isSystemServiceInitialized("input-service"),

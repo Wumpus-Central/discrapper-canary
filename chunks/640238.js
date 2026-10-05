@@ -18,12 +18,12 @@ function _(e) {
             cancelText: E,
             className: A,
             onConfirm: h,
-            onCancel: I,
-            onClose: f,
+            onCancel: f,
+            onClose: I,
             onCloseCallback: p,
             bodyClassName: T,
-            transitionState: m,
-            loading: g = !1,
+            transitionState: g,
+            loading: m = !1,
             confirmButtonColor: S = o.$n.Colors.RED,
             focusCancel: N = !1,
             impression: C,
@@ -42,9 +42,9 @@ function _(e) {
                 color: o.$n.Colors.PRIMARY,
                 className: u.x,
                 size: o.$n.Sizes.MEDIUM,
-                disabled: g,
+                disabled: m,
                 onClick: () => {
-                    (I?.(), f());
+                    (f?.(), I());
                 },
                 autoFocus: N,
                 children: E,
@@ -56,10 +56,10 @@ function _(e) {
                 type: "submit",
                 size: o.$n.Sizes.MEDIUM,
                 color: S,
-                submitting: g,
+                submitting: m,
                 onClick: async () => {
                     try {
-                        (await h?.(), f());
+                        (await h?.(), I());
                     } catch (e) {
                         throw e;
                     }
@@ -70,7 +70,7 @@ function _(e) {
         (0, i.jsxs)(d.EO, {
             "data-migration-pending": !0,
             className: A,
-            transitionState: m,
+            transitionState: g,
             impression: C,
             parentComponent: "ConfirmModal",
             children: [

@@ -12,15 +12,15 @@ var i = n(649852),
     E = n(25578),
     A = n(763827),
     h = n(309010),
-    I = n(287809),
-    f = n(174459),
+    f = n(287809),
+    I = n(174459),
     p = n(650338),
     T = n(652215),
-    m = n(257645),
-    g = n(731854);
+    g = n(257645),
+    m = n(731854);
 let S = new s.A("AudioActionCreators");
 function N() {
-    (0, l.Ak)("mention3", void 0, void 0, void 0, { outputChannel: m.a.VOICE });
+    (0, l.Ak)("mention3", void 0, void 0, void 0, { outputChannel: g.a.VOICE });
 }
 function C() {
     let e = E.Ay.getInputDevices()[E.Ay.getInputDeviceId()];
@@ -35,7 +35,7 @@ function O(e, t, n, i) {
         d = e[n],
         c = E.Ay.getMediaEngine().getAudioSubsystem(),
         A = E.Ay.getMediaEngine().getAudioLayer();
-    f.default.track(T.HAw.MEDIA_DEVICE_CHANGED, {
+    I.default.track(T.HAw.MEDIA_DEVICE_CHANGED, {
         device_from_name: u.A.getCertifiedDeviceName(t, null != o ? o.name : ""),
         device_to_name: u.A.getCertifiedDeviceName(n, null != d ? d.name : ""),
         device_type: i,
@@ -49,7 +49,7 @@ function O(e, t, n, i) {
 }
 S.enableNativeLogger(!0);
 let R = r()((e, t, n) => {
-        f.default.track(T.HAw.USER_VOLUME_SETTING_UPDATED, {
+        I.default.track(T.HAw.USER_VOLUME_SETTING_UPDATED, {
             target_user_id: e,
             context: t,
             volume: n,
@@ -68,7 +68,7 @@ let R = r()((e, t, n) => {
         enable: y,
         toggleSelfMute() {
             let {
-                context: e = g.x.DEFAULT,
+                context: e = m.x.DEFAULT,
                 syncRemote: t = !0,
                 usedKeybind: n = !1,
                 playSoundEffect: i = !0,
@@ -78,7 +78,7 @@ let R = r()((e, t, n) => {
                 ? Promise.resolve()
                 : (v({ usedKeybind: n, location: r }),
                     (i = i && !E.Ay.hasActiveCallKitCall()),
-                    I.default.getCurrentUser()?.isStaff() && S.info("Toggling self mute"),
+                    f.default.getCurrentUser()?.isStaff() && S.info("Toggling self mute"),
                     E.Ay.isEnabled())
                   ? a.h.dispatch({ type: "AUDIO_TOGGLE_SELF_MUTE", context: e, syncRemote: t, playSoundEffect: i })
                   : this.enable(!0);
@@ -87,17 +87,17 @@ let R = r()((e, t, n) => {
             let n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
             D() ||
                 ((n = n && !E.Ay.hasActiveCallKitCall()),
-                I.default.getCurrentUser()?.isStaff() && S.info("Setting self mute", t),
+                f.default.getCurrentUser()?.isStaff() && S.info("Setting self mute", t),
                 a.h.dispatch({ type: "AUDIO_SET_SELF_MUTE", context: e, mute: t, playSoundEffect: n }));
         },
         setTemporarySelfMute(e) {
             D() ||
-                (I.default.getCurrentUser()?.isStaff() && S.info("Setting temporary self mute", e),
+                (f.default.getCurrentUser()?.isStaff() && S.info("Setting temporary self mute", e),
                 a.h.dispatch({ type: "AUDIO_SET_TEMPORARY_SELF_MUTE", mute: e }));
         },
         toggleSelfDeaf() {
             let {
-                context: e = g.x.DEFAULT,
+                context: e = m.x.DEFAULT,
                 syncRemote: t = !0,
                 usedKeybind: n = !1,
                 location: i,
@@ -107,15 +107,15 @@ let R = r()((e, t, n) => {
                 a.h.dispatch({ type: "AUDIO_TOGGLE_SELF_DEAF", context: e, syncRemote: t }));
         },
         toggleLocalMute(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g.x.DEFAULT;
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m.x.DEFAULT;
             D() || a.h.dispatch({ type: "AUDIO_TOGGLE_LOCAL_MUTE", context: t, userId: e });
         },
         toggleLocalSoundboardMute(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g.x.DEFAULT;
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m.x.DEFAULT;
             a.h.dispatch({ type: "AUDIO_TOGGLE_LOCAL_SOUNDBOARD_MUTE", context: t, userId: e });
         },
         setDisableLocalVideo(e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.x.DEFAULT,
+            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : m.x.DEFAULT,
                 i = !(arguments.length > 3) || void 0 === arguments[3] || arguments[3],
                 r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4];
             D() ||
@@ -129,12 +129,12 @@ let R = r()((e, t, n) => {
                 });
         },
         setLocalVolume(e, t) {
-            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.x.DEFAULT,
+            let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : m.x.DEFAULT,
                 i = (0, o.z)(t, n);
             (a.h.dispatch({ type: "AUDIO_SET_LOCAL_VOLUME", context: n, userId: e, volume: i }), R(e, n, i));
         },
         setAudioMixerSettings(e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : g.x.DEFAULT;
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : m.x.DEFAULT;
             a.h.dispatch({ type: "AUDIO_SET_AUDIO_MIXER_SETTINGS", context: t, settings: e });
         },
         setSpatialAudio(e, t) {
@@ -143,17 +143,17 @@ let R = r()((e, t, n) => {
             ((0, d.A)("spatial_audio_enabled", e, n.enabled, t),
                 a.h.dispatch({
                     type: "AUDIO_SET_AUDIO_MIXER_SETTINGS",
-                    context: g.x.DEFAULT,
+                    context: m.x.DEFAULT,
                     settings: { ...n, enabled: e },
                 }));
         },
         setLocalPan(e, t, n) {
-            let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : g.x.DEFAULT;
+            let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : m.x.DEFAULT;
             a.h.dispatch({ type: "AUDIO_SET_LOCAL_PAN", context: i, userId: e, left: t, right: n });
         },
         setMode(e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-                n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : g.x.DEFAULT,
+                n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : m.x.DEFAULT,
                 { analyticsLocations: i } = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
             if (D()) return;
             let r = e !== E.Ay.getMode(),
@@ -164,7 +164,7 @@ let R = r()((e, t, n) => {
                     r = h.Ay.getVoiceChannelId(),
                     a = null != r ? _.A.getChannel(r) : null,
                     s = C();
-                f.default.track(T.HAw.VOICE_ACTIVATION_MODE_CHANGED, {
+                I.default.track(T.HAw.VOICE_ACTIVATION_MODE_CHANGED, {
                     mode: e,
                     location_stack: i,
                     voice_channel_type: a?.type,
@@ -178,7 +178,7 @@ let R = r()((e, t, n) => {
                     r = h.Ay.getVoiceChannelId(),
                     a = null != r ? _.A.getChannel(r) : null,
                     l = C();
-                f.default.track(T.HAw.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
+                I.default.track(T.HAw.VOICE_ACTIVITY_THRESHOLD_CHANGED, {
                     location_stack: i,
                     voice_channel_type: a?.type,
                     input_device_name: l,
@@ -200,7 +200,7 @@ let R = r()((e, t, n) => {
             a.h.dispatch({ type: "AUDIO_SET_INPUT_VOLUME", volume: e });
             let n = h.Ay.getVoiceChannelId(),
                 i = null != n ? _.A.getChannel(n) : null;
-            f.default.track(T.HAw.MEDIA_INPUT_VOLUME_CHANGED, {
+            I.default.track(T.HAw.MEDIA_INPUT_VOLUME_CHANGED, {
                 volume: e,
                 location_stack: t,
                 voice_channel_type: i?.type,
@@ -212,7 +212,7 @@ let R = r()((e, t, n) => {
             a.h.dispatch({ type: "AUDIO_SET_OUTPUT_VOLUME", volume: e });
             let n = h.Ay.getVoiceChannelId(),
                 i = null != n ? _.A.getChannel(n) : null;
-            f.default.track(T.HAw.MEDIA_OUTPUT_VOLUME_CHANGED, {
+            I.default.track(T.HAw.MEDIA_OUTPUT_VOLUME_CHANGED, {
                 volume: e,
                 location_stack: t,
                 voice_channel_type: i?.type,

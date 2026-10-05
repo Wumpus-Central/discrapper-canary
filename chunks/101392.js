@@ -1,4 +1,4 @@
-n.d(t, { A: () => f, R: () => u });
+n.d(t, { A: () => I, R: () => u });
 var i,
     r = n(17928),
     a = n(451988),
@@ -38,7 +38,7 @@ function h(e) {
         n = d.A.getChannel(t);
     return null != n && E(n, 0, 0);
 }
-class I extends r.Ay.Store {
+class f extends r.Ay.Store {
     static displayName = "SlowmodeStore";
     initialize() {
         this.waitFor(d.A, c.A);
@@ -51,7 +51,7 @@ class I extends r.Ay.Store {
         return this.getSlowmodeCooldownGuess(e.id, t) > 0 && e.rateLimitPerUser > 0;
     }
 }
-let f = new I(s.h, {
+let I = new f(s.h, {
     SLOWMODE_RESET_COOLDOWN: function (e) {
         let { channelId: t, slowmodeType: n } = e;
         return A(t, n);

@@ -1,4 +1,4 @@
-(n.d(t, { QB: () => h, YE: () => I, aP: () => p, rW: () => f }), n(321073));
+(n.d(t, { QB: () => h, YE: () => f, aP: () => p, rW: () => I }), n(321073));
 var i = n(975975),
     r = n.n(i),
     a = n(607399),
@@ -14,7 +14,7 @@ n(723702);
 var A = n(652215);
 (n(375708), r().shim());
 let h = !a.Fr && !a.v1 && -1 !== (0, E.Z5)();
-function I(e, t, n, i) {
+function f(e, t, n, i) {
     let r,
         a = window.GLOBAL_ENV.CDN_HOST;
     if (null == i)
@@ -41,7 +41,7 @@ function I(e, t, n, i) {
         r
     );
 }
-function f() {
+function I() {
     let e = [];
     return (
         u.A.hasFetchedPaymentSources || e.push(c.A.paymentSourcesFetchRequest ?? (0, l.$o)()),
@@ -62,7 +62,7 @@ function f() {
 }
 async function p(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
-    t && d.default.isAuthenticated() && (await Promise.race([f(), new Promise((e) => setTimeout(e, 1e4))]));
+    t && d.default.isAuthenticated() && (await Promise.race([I(), new Promise((e) => setTimeout(e, 1e4))]));
     let n = u.A.getDefaultBillingCountryCode(),
         i = u.A.defaultPaymentSource?.id ?? null,
         r = _.A.getPremiumTypeSubscription();

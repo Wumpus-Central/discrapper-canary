@@ -1,4 +1,4 @@
-n.d(t, { z: () => I, T: () => f });
+n.d(t, { z: () => f, T: () => I });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -48,12 +48,12 @@ function E() {
 function A(e) {
     let { desc: t, disabled: n, leadingIcon: a, name: d, value: _, isSelected: A } = e,
         h = (0, r.useRef)(null),
-        I = (0, r.useRef)(null),
-        f = r.useId(),
-        p = `${f}label`,
-        T = `${f}description`,
-        m = null != t && "" !== t,
-        [g, S] = (0, r.useState)(void 0),
+        f = (0, r.useRef)(null),
+        I = r.useId(),
+        p = `${I}label`,
+        T = `${I}description`,
+        g = null != t && "" !== t,
+        [m, S] = (0, r.useState)(void 0),
         N = (0, r.useRef)(!1);
     return (
         (0, r.useEffect)(() => {
@@ -70,14 +70,14 @@ function A(e) {
             children: (0, i.jsxs)(l.sx, {
                 className: s()(u.radioGroupOption, {
                     [u.withLeadingIcon]: null != a,
-                    [u.animateIn]: "animateIn" === g,
-                    [u.animateOut]: "animateOut" === g,
+                    [u.animateIn]: "animateIn" === m,
+                    [u.animateOut]: "animateOut" === m,
                 }),
                 value: _,
                 isDisabled: n,
-                inputRef: I,
+                inputRef: f,
                 "aria-labelledby": p,
-                "aria-describedby": m ? T : void 0,
+                "aria-describedby": g ? T : void 0,
                 ref: h,
                 children: [
                     (0, i.jsx)(E, {}),
@@ -90,7 +90,7 @@ function A(e) {
                             focusable: !1,
                         }),
                     (0, i.jsx)(c.E, { id: p, tag: "span", variant: "text-md/normal", children: d }),
-                    m
+                    g
                         ? (0, i.jsx)(c.E, {
                               id: T,
                               className: u.description,
@@ -136,10 +136,10 @@ function h(e) {
             }),
     });
 }
-function I(e) {
+function f(e) {
     return (0, i.jsx)(h, { ...e });
 }
-function f(e) {
+function I(e) {
     let { disabled: t, checked: n } = e;
     return (0, i.jsx)(_, { disabled: t, isSelected: n });
 }

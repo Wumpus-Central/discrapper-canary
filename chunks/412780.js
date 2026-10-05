@@ -38,10 +38,10 @@ let u = N(c.x.DEFAULT, d.zWA.TRANSPORT, 0),
         screenshareCapturedFps: !0,
         screenshareCapturedFpsUnique: !0,
     };
-function I(e, t, n) {
+function f(e, t, n) {
     return `${e}:${t}:${n}`;
 }
-function f(e, t) {
+function I(e, t) {
     return `${e}:${t}`;
 }
 class p {
@@ -55,18 +55,18 @@ class p {
     put(e, t, n, i) {
         if ("" === i) {
             let i = { ...this.state };
-            return (delete i[I(e, t, n)], new p(i));
+            return (delete i[f(e, t, n)], new p(i));
         }
-        return new p({ [I(e, t, n)]: i, ...this.state });
+        return new p({ [f(e, t, n)]: i, ...this.state });
     }
     get(e, t, n) {
-        let i = this.state[I(e, t, n)];
+        let i = this.state[f(e, t, n)];
         return null != i ? i : null;
     }
 }
 let T = p.empty(),
-    m = !1,
-    g = null,
+    g = !1,
+    m = null,
     S = new Map();
 function N(e, t, n) {
     return `${e}:${t}:${n}`;
@@ -84,7 +84,7 @@ function R() {
     });
 }
 function L() {
-    null != g && (g.destroy(), (g = null));
+    null != m && (m.destroy(), (m = null));
 }
 R();
 class y extends i.Ay.Store {
@@ -121,10 +121,10 @@ class y extends i.Ay.Store {
         return T;
     }
     shouldRecordNextConnection() {
-        return m;
+        return g;
     }
     getSimulcastDebugOverride(e, t) {
-        let n = f(e, t);
+        let n = I(e, t);
         return A.has(n) ? A.get(n) : c.r8.NO_OVERRIDE;
     }
 }
@@ -147,7 +147,7 @@ let D = new y(a.h, {
         if ((L(), !n.supports(c.O5.CONNECTION_REPLAY) || 0 === t.length)) return;
         let i = n.createReplayConnection(c.x.DEFAULT, t);
         null != i &&
-            ((g = i),
+            ((m = i),
             i.on(r.yq.Video, (e, t, n, r, s) => {
                 a.h.dispatch({
                     type: "RTC_DEBUG_MODAL_UPDATE_VIDEO_OUTPUT",
@@ -164,18 +164,18 @@ let D = new y(a.h, {
     },
     RTC_DEBUG_SET_RECORDING_FLAG: function (e) {
         let { value: t } = e;
-        m = t;
+        g = t;
     },
     RTC_DEBUG_SET_SIMULCAST_OVERRIDE: function (e) {
         let { userId: t, context: n, quality: i } = e;
-        A.set(f(t, n), i);
+        A.set(I(t, n), i);
     },
     VOICE_CHANNEL_SELECT: function (e) {
         null != e.channelId && (R(), A.clear(), S.clear());
     },
     RTC_CONNECTION_VIDEO: function (e) {
         if (null === e.streamId) {
-            let t = f(e.userId, e.context);
+            let t = I(e.userId, e.context);
             A.set(t, c.r8.NO_OVERRIDE);
         }
     },

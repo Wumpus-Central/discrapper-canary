@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var i = n(765178),
     r = n(439372),
     a = n(308528),
@@ -42,4 +42,4 @@ function A(e) {
 class h extends r.A {
     actions = { RELATIONSHIP_ADD: E, FRIEND_REQUEST_ACCEPTED: A };
 }
-let I = new h();
+let f = new h();

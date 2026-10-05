@@ -12,12 +12,12 @@ var i = n(477900),
     E = n(782134),
     A = n(890856),
     h = n(834730),
-    I = n(565645),
-    f = n(885386),
+    f = n(565645),
+    I = n(885386),
     p = n(287809),
     T = n(813564),
-    m = n(453997),
-    g = n(792348),
+    g = n(453997),
+    m = n(792348),
     S = n(817232),
     N = n(257645),
     C = n(375708),
@@ -25,14 +25,14 @@ var i = n(477900),
 function R(e) {
     let { sound: t, disabled: n, setIsChildTooltipShowing: a, previewSound: l } = e,
         { emojiId: o, emojiName: A } = t,
-        { text: h, icon: I } = (function (e) {
+        { text: h, icon: f } = (function (e) {
             switch (e) {
-                case m.p0.FAVORITE:
+                case g.p0.FAVORITE:
                     return {
                         text: C.intl.string(C.t["iJA/TE"]),
                         icon: (0, i.jsx)(d.StarIcon, { size: "xs", color: "currentColor", className: O.zr }),
                     };
-                case m.p0.FREQUENTLY_USED:
+                case g.p0.FREQUENTLY_USED:
                     return {
                         text: C.intl.string(C.t["+cGVV6"]),
                         icon: (0, i.jsx)(c.ClockIcon, { size: "xs", color: "currentColor", className: O.zr }),
@@ -41,24 +41,24 @@ function R(e) {
                     return { text: null, icon: null };
             }
         })(t.type),
-        f = r.useCallback(() => {
+        I = r.useCallback(() => {
             a(!0);
         }, [a]),
         p = r.useCallback(() => {
             a(!1);
         }, [a]),
         T = (0, i.jsx)("div", {
-            onMouseEnter: f,
+            onMouseEnter: I,
             onMouseLeave: p,
             children: (0, i.jsx)(S.PI, { sound: t, previewSound: l }),
         }),
-        g = (0, i.jsx)("div", {
-            onMouseEnter: null != I ? f : void 0,
-            onMouseLeave: null != I ? p : void 0,
+        m = (0, i.jsx)("div", {
+            onMouseEnter: null != f ? I : void 0,
+            onMouseLeave: null != f ? p : void 0,
             children: (0, i.jsx)(u.m, {
                 text: h,
                 position: "top",
-                children: (0, i.jsx)("div", { className: O.Wo, children: I }),
+                children: (0, i.jsx)("div", { className: O.Wo, children: f }),
             }),
         });
     return n
@@ -72,7 +72,7 @@ function R(e) {
                   }),
                   (0, i.jsx)("div", {
                       className: O.d7,
-                      children: (0, i.jsxs)("div", { className: O.O5, children: [T, g] }),
+                      children: (0, i.jsxs)("div", { className: O.O5, children: [T, m] }),
                   }),
               ],
           })
@@ -82,7 +82,7 @@ function R(e) {
                   (0, i.jsx)("div", { className: O.LQ }),
                   (0, i.jsxs)("div", {
                       className: O.O5,
-                      children: [T, (0, i.jsx)(E.PlayIcon, { size: "xs", color: "currentColor", className: O.C4 }), g],
+                      children: [T, (0, i.jsx)(E.PlayIcon, { size: "xs", color: "currentColor", className: O.C4 }), m],
                   }),
               ],
           });
@@ -95,7 +95,7 @@ let L = r.forwardRef(function (e, t) {
             className: c,
             interactive: _,
             onMouseEnter: E,
-            openUpsellForSound: m,
+            openUpsellForSound: g,
             analyticsLocations: S,
         } = e,
         { name: L, emojiId: y, emojiName: D } = n,
@@ -104,7 +104,7 @@ let L = r.forwardRef(function (e, t) {
             playSoundboardSound: b,
             previewSound: M,
             isPlayingSound: P,
-        } = (0, g.A)(n, a?.id ?? null, f.dG.getSetting()?.volume ?? 100, a?.isVocal() ? N.a.VOICE : N.a.DEFAULT),
+        } = (0, m.A)(n, a?.id ?? null, I.dG.getSetting()?.volume ?? 100, a?.isVocal() ? N.a.VOICE : N.a.DEFAULT),
         U = r.useRef(null),
         w = `sound-${n.soundId}`,
         G = (0, l.rm)(w),
@@ -114,9 +114,9 @@ let L = r.forwardRef(function (e, t) {
         [B, V] = r.useState(!1),
         H = r.useCallback(
             (e) => {
-                F ? m?.(e) : b(S);
+                F ? g?.(e) : b(S);
             },
-            [F, m, b, S],
+            [F, g, b, S],
         );
     return (0, i.jsx)("li", {
         ref: t,
@@ -138,7 +138,7 @@ let L = r.forwardRef(function (e, t) {
                         "aria-hidden": !0,
                         ref: U,
                         children: [
-                            k && (0, i.jsx)(I.A, { emojiId: y, emojiName: D, className: O.Zg }),
+                            k && (0, i.jsx)(f.A, { emojiId: y, emojiName: D, className: O.Zg }),
                             (0, i.jsx)(h.E, {
                                 variant: "text-xs/medium",
                                 color: _ ? "text-default" : "text-muted",

@@ -12,12 +12,12 @@ var i = n(435558),
     E = n(95701),
     A = n(488926),
     h = n(280450),
-    I = n(734057),
-    f = n(696451),
+    f = n(734057),
+    I = n(696451),
     p = n(71393),
     T = n(576705),
-    m = n(994500),
-    g = n(287809),
+    g = n(994500),
+    m = n(287809),
     S = n(652215);
 let N = "SELECTABLE",
     C = "VOCAL",
@@ -61,7 +61,7 @@ function k(e) {
                             let e = {},
                                 t = c.A.getFavoriteChannels();
                             for (let n in t) {
-                                let i = I.A.getChannel(n);
+                                let i = f.A.getChannel(n);
                                 if (null == i) continue;
                                 let r = t[n],
                                     a = (0, _.R)(t, r, i);
@@ -70,7 +70,7 @@ function k(e) {
                             return e;
                         })();
                     let t = {},
-                        n = I.A.getMutableGuildChannelsForGuild(e);
+                        n = f.A.getMutableGuildChannelsForGuild(e);
                     for (let e in n) t[e] = { channel: n[e], comparator: n[e].position };
                     return t;
                 })(t);
@@ -97,7 +97,7 @@ function k(e) {
         (a = {}),
         t[N].forEach((e) => {
             let { channel: t } = e,
-                n = (0, d.m1)(t, g.default, m.A),
+                n = (0, d.m1)(t, m.default, g.A),
                 r = Object.prototype.hasOwnProperty.call(a, n) ? a[n] : null;
             (null == r ? (a[n] = 1) : ((a[n] = r + 1), (n += `~${r}`)), (i[t.id] = { id: t.id, name: n }));
         }),
@@ -111,7 +111,7 @@ function k(e) {
             for (let { channel: t } of r) if (H(e, t)) return !0;
             for (let { channel: t } of a) if (H(e, t)) return !0;
             return !1;
-        })(g.default.getCurrentUser(), n)
+        })(m.default.getCurrentUser(), n)
             ? delete y[n]
             : (y[n] = !0),
         s
@@ -149,7 +149,7 @@ function W() {
 class Y extends s.Ay.Store {
     static displayName = "GuildChannelStore";
     initialize() {
-        (this.waitFor(h.default, I.A, c.A, o.A, f.Ay, p.A, T.A, g.default), this.syncWith([c.A], W));
+        (this.waitFor(h.default, f.A, c.A, o.A, I.Ay, p.A, T.A, m.default), this.syncWith([c.A], W));
     }
     getAllGuilds() {
         return R;
@@ -256,17 +256,17 @@ let K = new Y(l.h, {
     IMPERSONATE_STOP: V,
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        return null == t && null != D ? j(I.A.getChannel(D), null) : j(I.A.getChannel(t), t);
+        return null == t && null != D ? j(f.A.getChannel(D), null) : j(f.A.getChannel(t), t);
     },
     VOICE_CHANNEL_STATUS_UPDATE: function (e) {
-        let t = I.A.getBasicChannel(e.id);
+        let t = f.A.getBasicChannel(e.id);
         null != t && null != t.guild_id && k(t.guild_id);
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
         return t.reduce((e, t) => {
             let { channelId: n, sessionId: i } = t;
-            return h.default.getSessionId() !== i ? e : j(I.A.getChannel(n), n) || e;
+            return h.default.getSessionId() !== i ? e : j(f.A.getChannel(n), n) || e;
         }, !1);
     },
 });

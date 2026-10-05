@@ -12,8 +12,8 @@ var i = n(477900),
     E = n(885574),
     A = n(738188),
     h = n(789645),
-    I = n(460890),
-    f = n(834730),
+    f = n(460890),
+    I = n(834730),
     p = n(271235);
 function T(e) {
     let { hidden: t = !1, children: n } = e;
@@ -22,11 +22,11 @@ function T(e) {
         children: (0, i.jsx)("div", { className: p.enterExitClip, children: n }),
     });
 }
-let m = "experimental/body-sm/semibold",
-    g = "experimental/body-sm/normal";
+let g = "experimental/body-sm/semibold",
+    m = "experimental/body-sm/normal";
 function S(e) {
     let { type: t, title: n, message: a, onDismiss: S, action: N, role: C, hidden: O } = e,
-        { i18n: R } = (0, I.G9)(),
+        { i18n: R } = (0, f.G9)(),
         L = r.useId(),
         y = r.useId(),
         D = (function (e) {
@@ -51,8 +51,8 @@ function S(e) {
                 (0, i.jsxs)("div", {
                     className: p.iconAndTextContainer,
                     children: [
-                        (0, i.jsx)(f.E, {
-                            variant: null != n ? m : g,
+                        (0, i.jsx)(I.E, {
+                            variant: null != n ? g : m,
                             color: "none",
                             className: p.iconContainer,
                             children: D,
@@ -83,10 +83,10 @@ function S(e) {
                                         }),
                                         null == n
                                             ? null
-                                            : (0, i.jsx)(f.E, { id: y, variant: m, color: "text-strong", children: n }),
-                                        (0, i.jsx)(f.E, {
+                                            : (0, i.jsx)(I.E, { id: y, variant: g, color: "text-strong", children: n }),
+                                        (0, i.jsx)(I.E, {
                                             id: null == n ? y : void 0,
-                                            variant: g,
+                                            variant: m,
                                             color: "text-strong",
                                             children: a,
                                         }),

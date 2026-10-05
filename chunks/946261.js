@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { WebAudioSound: () => g, playGiftSound: () => f, voiceSinkId: () => I }));
+(n.r(t), n.d(t, { WebAudioSound: () => m, playGiftSound: () => I, voiceSinkId: () => f }));
 var i = n(435558),
     r = n.n(i),
     a = n(72978),
@@ -12,8 +12,8 @@ var i = n(435558),
     E = n(257645);
 let A = "default",
     h = /^( Device)?( \([^()]+\))+$/,
-    I = A;
-function f(e, t) {
+    f = A;
+function I(e, t) {
     let n = new Audio((0, o.A)(e));
     ((n.volume = (0, d.A)(t)), n.play());
 }
@@ -28,36 +28,36 @@ async function p() {
                     .findIndex((e) => e.id === c.Ay.getOutputDeviceId()),
                 l = i[c.Ay.getOutputDeviceId()];
             if (null == l) {
-                I = A;
+                f = A;
                 return;
             }
             let o = n.filter((e) => "audiooutput" === e.kind && "communications" !== e.deviceId),
                 d = o[s];
             if (((e = l.name), (t = d?.label ?? "").startsWith(e) && null != t.substring(e.length).match(h))) {
-                I = d.deviceId;
+                f = d.deviceId;
                 return;
             }
             if (
                 ((d = r()(o).maxBy((e) => (0, a.stringSimilarity)(e.label, l.name))),
                 null == d || 0.6 > (0, a.stringSimilarity)(d.label, l.name))
             ) {
-                I = A;
+                f = A;
                 return;
             }
-            I = d.deviceId;
+            f = d.deviceId;
         } catch {
-            I = A;
+            f = A;
         }
 }
 function T(e, t) {
     (l.A.increment({ name: s.K.NOTIFICATION_SOUND_PLAYBACK_FAILURE, tags: [`reason:${e}`] }),
         _.A.captureException(t, { tags: { source: "notification_sound_playback" } }));
 }
-function m(e) {
+function g(e) {
     T("NotAllowedError" === e.name ? "autoplay_blocked" : "generic", e);
 }
 u.isPlatformEmbedded && (c.Ay.addChangeListener(p), p());
-let g = class {
+let m = class {
     name;
     _volume;
     _playbackRate = 1;
@@ -84,7 +84,7 @@ let g = class {
         this.ensureAudio().then((e) => {
             ((e.loop = !0),
                 e.play().catch((e) => {
-                    this.trackNotificationFailure && m(e);
+                    this.trackNotificationFailure && g(e);
                 }));
         });
     }
@@ -92,7 +92,7 @@ let g = class {
         this.ensureAudio().then((e) => {
             ((e.loop = !1),
                 e.play().catch((e) => {
-                    this.trackNotificationFailure && m(e);
+                    this.trackNotificationFailure && g(e);
                 }));
         });
     }
@@ -131,7 +131,7 @@ let g = class {
                             ((i.volume = Math.min((c.Ay.getOutputVolume() / 100) * this._volume, 1)),
                                 1 !== this._playbackRate &&
                                     ((i.preservesPitch = !1), (i.playbackRate = this._playbackRate)),
-                                u.isPlatformEmbedded && i.setSinkId(this.outputChannel === E.a.DEFAULT ? A : I),
+                                u.isPlatformEmbedded && i.setSinkId(this.outputChannel === E.a.DEFAULT ? A : f),
                                 e(i));
                         }),
                         (i.onerror = () => {

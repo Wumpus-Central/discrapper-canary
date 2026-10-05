@@ -12,53 +12,53 @@ var i = n(477900),
     E = n(80556),
     A = n(267102),
     h = n(625494),
-    I = n(192308),
-    f = n(231723),
+    f = n(192308),
+    I = n(231723),
     p = n(652215),
     T = n(409325);
-let m = [_.Ay, E.Ay];
-class g extends r.PureComponent {
+let g = [_.Ay, E.Ay];
+class m extends r.PureComponent {
     state = { transitionState: null };
     componentWillAppear = (e) => {
         this.componentWillEnter(e);
     };
     componentWillEnter = (e) => {
         let { instant: t } = this.props;
-        (this.setState({ transitionState: f.ip.ENTERING }),
+        (this.setState({ transitionState: I.ip.ENTERING }),
             setTimeout(
                 () => {
-                    (this.setState({ transitionState: f.ip.ENTERED }), e?.());
+                    (this.setState({ transitionState: I.ip.ENTERED }), e?.());
                 },
-                t ? 0 : f.xt,
+                t ? 0 : I.xt,
             ));
     };
     componentWillLeave = (e) => {
         let { instant: t } = this.props;
-        (this.setState({ transitionState: f.ip.EXITING }),
+        (this.setState({ transitionState: I.ip.EXITING }),
             setTimeout(
                 () => {
-                    (this.setState({ transitionState: f.ip.EXITED }), e());
+                    (this.setState({ transitionState: I.ip.EXITED }), e());
                 },
-                t ? 0 : f.xt,
+                t ? 0 : I.xt,
             ));
     };
     componentDidUpdate = (e) => {
         if (e.isVisible !== this.props.isVisible) {
             let { transitionState: e } = this.state;
-            (e === f.ip.HIDDEN && this.props.isVisible && this.componentWillEnter(),
+            (e === I.ip.HIDDEN && this.props.isVisible && this.componentWillEnter(),
                 this.props.isVisible ||
-                    (e !== f.ip.ENTERING && e !== f.ip.ENTERED) ||
-                    this.setState({ transitionState: f.ip.HIDDEN }));
+                    (e !== I.ip.ENTERING && e !== I.ip.ENTERED) ||
+                    this.setState({ transitionState: I.ip.HIDDEN }));
         }
     };
     close = () =>
         new Promise((e) => {
-            (this.props.closeModal(this.props.modalKey), setTimeout(() => e(), f.xt));
+            (this.props.closeModal(this.props.modalKey), setTimeout(() => e(), I.xt));
         });
     render() {
         let { render: e, LayerComponent: t, isTopModal: n, instant: r, dismissable: a } = this.props,
             l = e({
-                transitionState: r ? f.ip.ENTERED : this.state.transitionState,
+                transitionState: r ? I.ip.ENTERED : this.state.transitionState,
                 onClose: this.close,
                 dismissable: a,
             });
@@ -66,12 +66,12 @@ class g extends r.PureComponent {
     }
 }
 function S() {
-    return (0, I.modalContextFromAppContext)((0, A.Us)());
+    return (0, f.modalContextFromAppContext)((0, A.Us)());
 }
 let N = [];
 function C() {
     let e = S(),
-        t = (0, I.useModalsStore)((t) => (void 0 !== t[e] ? t[e] : N)),
+        t = (0, f.useModalsStore)((t) => (void 0 !== t[e] ? t[e] : N)),
         n = r.useMemo(
             () =>
                 (function (e) {
@@ -111,15 +111,15 @@ function C() {
         }, []),
         E = r.useCallback(
             (t) => {
-                (0, I.closeModal)(t, e);
+                (0, f.closeModal)(t, e);
             },
             [e],
         ),
-        A = m.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === _.Ay)));
+        A = g.map((e) => t.some((t) => t.Layer === e || (null == t.Layer && e === _.Ay)));
     return (0, i.jsxs)(u.F, {
         component: r.Fragment,
         children: [
-            m.map((e, n) => {
+            g.map((e, n) => {
                 let r = o().findLast(t, (t) => t.Layer === e || (null == t.Layer && e === _.Ay)),
                     a = r?.backdropStyle ?? d.F.DARK;
                 return (0, i.jsx)(
@@ -143,7 +143,7 @@ function C() {
             n.map((e, t) => {
                 let { key: r, Layer: a, render: s, instant: l, isVisible: o, dismissable: d } = e;
                 return (0, i.jsx)(
-                    g,
+                    m,
                     {
                         modalKey: r,
                         LayerComponent: a ?? _.Ay,

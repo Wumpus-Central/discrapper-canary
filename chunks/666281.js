@@ -1,30 +1,30 @@
-s.d(t, { v: () => u });
-var r = s(477900),
-    n = s(661531),
-    a = s(452027),
-    i = s(834730),
-    l = s(375708),
-    c = s(795043);
-function u(e) {
+n.d(t, { v: () => c });
+var r = n(477900),
+    i = n(661531),
+    a = n(452027),
+    l = n(834730),
+    s = n(375708),
+    u = n(795043);
+function c(e) {
     let {
-        fieldLabel: t = l.intl.string(l.t["u+Cw58"]),
-        label: s,
-        value: u,
+        fieldLabel: t = s.intl.string(s.t["u+Cw58"]),
+        label: n,
+        value: c,
         Icon: o,
-        iconColor: d = n.A.colors.ICON_SUBTLE,
+        iconColor: d = i.A.colors.ICON_SUBTLE,
     } = e;
     return (0, r.jsx)(a.D, {
         label: t,
         children: (0, r.jsxs)("div", {
-            className: c.nQ,
+            className: u.nQ,
             children: [
-                (0, r.jsx)(i.E, { className: c.OL, variant: "text-md/normal", children: s }),
+                (0, r.jsx)(l.E, { className: u.OL, variant: "text-md/normal", children: n }),
                 (0, r.jsx)("span", {
-                    className: c.OL,
-                    children: (0, r.jsxs)(i.E, {
+                    className: u.OL,
+                    children: (0, r.jsxs)(l.E, {
                         variant: "text-md/normal",
-                        className: c.Kk,
-                        children: [(0, r.jsx)(o, { color: d, size: "sm" }), u],
+                        className: u.Kk,
+                        children: [(0, r.jsx)(o, { color: d, size: "sm" }), c],
                     }),
                 }),
             ],

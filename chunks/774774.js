@@ -1,4 +1,4 @@
-n.d(t, { HU: () => I, Lj: () => f, at: () => A, e4: () => h, rm: () => p });
+n.d(t, { HU: () => f, Lj: () => I, at: () => A, e4: () => h, rm: () => p });
 var i,
     r = n(477900);
 n(582128);
@@ -48,7 +48,7 @@ function h(e) {
         ],
     });
 }
-function I(e) {
+function f(e) {
     let t,
         { text: n, className: i, colorOptions: a = 2, isPillOnBorder: o = !0 } = e;
     switch (a) {
@@ -86,7 +86,7 @@ function I(e) {
               ],
           });
 }
-function f(e, t) {
+function I(e, t) {
     return t === u.pe.TIER_0
         ? _.intl.string(_.t.IBYG5U)
         : e === u.PremiumTypes.TIER_0

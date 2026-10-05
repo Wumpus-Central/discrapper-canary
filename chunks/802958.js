@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -56,7 +56,7 @@ function h(e) {
     }
     return !1;
 }
-class I extends a.Ay.Store {
+class f extends a.Ay.Store {
     static displayName = "ThreadMembersStore";
     initialize() {
         this.waitFor(o.A);
@@ -71,7 +71,7 @@ class I extends a.Ay.Store {
         return d;
     }
 }
-let f = new I(s.h, {
+let I = new f(s.h, {
     CONNECTION_OPEN: function (e) {
         ((d = {}), e.guilds.forEach(c));
     },

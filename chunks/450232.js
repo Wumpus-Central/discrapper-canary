@@ -13,11 +13,11 @@ function _(e) {
     let { size: t, color: n, className: r, inline: _ = !1, disabled: E = !1 } = e,
         A = d.intl.string(d.t["5AFxuK"]),
         h = E ? s.A.colors.ICON_MUTED : u.inherit,
-        I = null != n ? u[n] : h;
+        f = null != n ? u[n] : h;
     return (0, i.jsx)(l.m, {
         text: A,
         shouldShow: !E,
         ariaHidden: !0,
-        children: (0, i.jsx)(o.t, { size: t, color: I, className: a()({ [c.m]: _ }, r), "aria-label": A }),
+        children: (0, i.jsx)(o.t, { size: t, color: f, className: a()({ [c.m]: _ }, r), "aria-label": A }),
     });
 }

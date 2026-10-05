@@ -12,8 +12,8 @@ var i,
     E = n(451988),
     A = n(638120),
     h = (((i = h || {})[(i.TRANSLATE = 1)] = "TRANSLATE"), (i[(i.SCALE = 2)] = "SCALE"), (i[(i.FADE = 3)] = "FADE"), i);
-let I = Object.freeze({ 1: A.Tl, 2: A.hs, 3: A.Rv }),
-    f = Object.freeze({ top: A.ZR, bottom: A.XI, left: A.Hn, right: A.sS, center: A.pm, window_center: A.pm });
+let f = Object.freeze({ 1: A.Tl, 2: A.hs, 3: A.Rv }),
+    I = Object.freeze({ top: A.ZR, bottom: A.XI, left: A.Hn, right: A.sS, center: A.pm, window_center: A.pm });
 function p(e) {
     let { position: t, type: n, children: i } = e,
         { reducedMotion: r } = s.useContext(_.C),
@@ -37,17 +37,17 @@ function p(e) {
         }, [t, c]),
         (0, a.jsx)("div", {
             "data-popout-animating": h,
-            className: u()(null != t ? f[t] : null, { [I[l]]: null != t, [A.Wr]: o }),
+            className: u()(null != t ? I[t] : null, { [f[l]]: null != t, [A.Wr]: o }),
             children: i,
         })
     );
 }
 p.Types = h;
 var T = n(38568),
-    m = (((r = m || {}).NONE = "1"), (r.TRANSLATE = "2"), (r.SCALE = "3"), (r.FADE = "4"), r);
-let g = Object.freeze({ 2: p.Types.TRANSLATE, 3: p.Types.SCALE, 4: p.Types.FADE });
+    g = (((r = g || {}).NONE = "1"), (r.TRANSLATE = "2"), (r.SCALE = "3"), (r.FADE = "4"), r);
+let m = Object.freeze({ 2: p.Types.TRANSLATE, 3: p.Types.SCALE, 4: p.Types.FADE });
 class S extends s.Component {
-    static Animation = m;
+    static Animation = g;
     ref = s.createRef();
     render() {
         let {
@@ -65,12 +65,12 @@ class S extends s.Component {
             loadingComponent: E,
             disablePointerEvents: A,
             ignoreModalClicks: h,
-            scrollBehavior: I,
-            useMouseEnter: f,
+            scrollBehavior: f,
+            useMouseEnter: I,
             renderPopout: p,
             layerContext: T,
-            position: m = "right",
-            autoInvert: g = !0,
+            position: g = "right",
+            autoInvert: m = !0,
             nudgeAlignIntoViewport: S = !0,
             avoidancePadding: N,
             spacing: C = 8,
@@ -81,7 +81,7 @@ class S extends s.Component {
             targetElementRef: this.props.targetElementRef,
             preload: _,
             loadingComponent: E,
-            position: m,
+            position: g,
             align:
                 null != r
                     ? r
@@ -98,8 +98,8 @@ class S extends s.Component {
                                   return "center";
                           }
                           throw Error(`Unexpected position: ${e}`);
-                      })(m),
-            autoInvert: g,
+                      })(g),
+            autoInvert: m,
             fixed: s,
             nudgeAlignIntoViewport: S,
             avoidancePadding: N,
@@ -114,8 +114,8 @@ class S extends s.Component {
             popoutKey: u,
             disablePointerEvents: A,
             ignoreModalClicks: h,
-            scrollBehavior: I,
-            useMouseEnter: f,
+            scrollBehavior: f,
+            useMouseEnter: I,
             layerContext: T,
             clickTrap: O,
             children: e,
@@ -127,7 +127,7 @@ class S extends s.Component {
             case "2":
             case "3":
             case "4":
-                return (0, a.jsx)(p, { position: e.position, type: g[n], children: t(e) });
+                return (0, a.jsx)(p, { position: e.position, type: m[n], children: t(e) });
             case "1":
                 return t(e);
         }
@@ -165,19 +165,19 @@ function N(e) {
         return (0, a.jsx)("div", { className: T.w, style: { width: t }, children: (0, a.jsx)(l.y, {}) });
     }
     let [A, h] = s.useState(() => c),
-        I = s.useRef(c);
+        f = s.useRef(c);
     return (
         s.useEffect(() => {
-            I.current = c;
+            f.current = c;
         }),
         s.useEffect(() => {
             u.current
                 ? t().then((e) => {
                       (h(() => e), d((e) => e + 1));
                   })
-                : h(() => I.current);
+                : h(() => f.current);
         }, [t]),
         (0, a.jsx)(S, { ref: i, ...n, renderPopout: A })
     );
 }
-N.Animation = m;
+N.Animation = g;

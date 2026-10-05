@@ -1,4 +1,4 @@
-(n.d(t, { tp: () => A, Yn: () => E, _g: () => I, rO: () => h, Rd: () => T, Dv: () => g, s2: () => _, S: () => p }),
+(n.d(t, { tp: () => A, Yn: () => E, _g: () => f, rO: () => h, Rd: () => T, Dv: () => m, s2: () => _, S: () => p }),
     n(801541));
 var i = n(889137),
     r = n(440703),
@@ -303,10 +303,10 @@ function h(e) {
         trafficMetadataSealed: e.traffic_metadata_sealed,
     };
 }
-function I(e) {
+function f(e) {
     return { id: e.id, replacementId: e.replacement_id };
 }
-function f(e) {
+function I(e) {
     return e.type === r.l.VIRTUAL_CURRENCY
         ? {
               skuId: e.sku_id,
@@ -353,7 +353,7 @@ function p(e) {
                 gameTileDark: t.assets.game_tile_dark,
             },
             colors: { primary: t.colors.primary, secondary: t.colors.secondary },
-            rewards: t.rewards.map(f),
+            rewards: t.rewards.map(I),
             cosponsorMetadata: u(t.cosponsor_metadata),
         },
         userStatus: null == e.user_status ? null : A(e.user_status),
@@ -369,7 +369,7 @@ function T(e) {
         tier: e.tier ?? null,
     };
 }
-function m(e) {
+function g(e) {
     return {
         skuId: e.sku_id,
         tenantMetadata: (function (e) {
@@ -385,6 +385,6 @@ function m(e) {
         consumed: e.consumed,
     };
 }
-function g(e) {
-    return { claimedAt: e.claimed_at, items: e.entitlements.map(m), errors: e.errors };
+function m(e) {
+    return { claimedAt: e.claimed_at, items: e.entitlements.map(g), errors: e.errors };
 }

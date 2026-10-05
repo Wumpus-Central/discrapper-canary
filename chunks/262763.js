@@ -13,16 +13,16 @@ var r = n(192308),
     E = n(309010),
     A = n(977997),
     h = n(174459),
-    I = n(389234),
-    f = n(652215),
+    f = n(389234),
+    I = n(652215),
     p = n(64175);
 let T = {
     async handleVoiceConnect(e) {
         let {
             channel: t,
             connected: T,
-            needSubscriptionToAccess: m,
-            locked: g = !1,
+            needSubscriptionToAccess: g,
+            locked: m = !1,
             routeDirectlyToChannel: S = !1,
             bypassChangeModal: N,
             bypassBlockedWarningModal: C,
@@ -37,8 +37,8 @@ let T = {
             D = y?.channelId === t.id || E.Ay.getChannelId() === A.A.getCurrentClientVoiceChannelId(t.guild_id),
             v = d.A.getBlockedUsersForVoiceChannel(t.id),
             b = d.A.getIgnoredUsersForVoiceChannel(t.id);
-        return ((0, o.oE)(new Set([...v, ...b])) && (C = !0), C || g || T || (!(v.size > 0) && !(b.size > 0)))
-            ? !N && !g && (0, I.H)(t)
+        return ((0, o.oE)(new Set([...v, ...b])) && (C = !0), C || m || T || (!(v.size > 0) && !(b.size > 0)))
+            ? !N && !m && (0, f.H)(t)
                 ? new Promise((e) => {
                       (0, r.openModalLazy)(async () => {
                           let { default: r } = await n.e("412963").then(n.bind(n, 24814));
@@ -50,9 +50,9 @@ let T = {
                                           this.handleVoiceConnect({
                                               channel: t,
                                               connected: T,
-                                              needSubscriptionToAccess: m,
+                                              needSubscriptionToAccess: g,
                                               routeDirectlyToChannel: S,
-                                              locked: g,
+                                              locked: m,
                                               bypassChangeModal: !0,
                                           }),
                                       ),
@@ -60,16 +60,16 @@ let T = {
                               });
                       });
                   })
-                : (g || T || a.default.selectVoiceChannel(t.id),
+                : (m || T || a.default.selectVoiceChannel(t.id),
                   !__OVERLAY__ &&
-                      (T || D || m || S) &&
+                      (T || D || g || S) &&
                       (function (e) {
                           let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
                               n = arguments.length > 2 ? arguments[2] : void 0,
                               i = e.getGuildId();
                           if (null == i && !t)
                               throw Error("VoiceChannel, transitionTo: Channel does not have a guildId");
-                          (0, l.pX)(f.BVt.CHANNEL(i, e.id), n);
+                          (0, l.pX)(I.BVt.CHANNEL(i, e.id), n);
                       })(t, O, R),
                   !0)
             : new Promise((e) => {
@@ -104,9 +104,9 @@ let T = {
                                           this.handleVoiceConnect({
                                               channel: t,
                                               connected: T,
-                                              needSubscriptionToAccess: m,
+                                              needSubscriptionToAccess: g,
                                               routeDirectlyToChannel: S,
-                                              locked: g,
+                                              locked: m,
                                               bypassChangeModal: !0,
                                               bypassBlockedWarningModal: !0,
                                           }),
@@ -116,7 +116,7 @@ let T = {
                       },
                       {
                           onCloseCallback: () => {
-                              h.default.track(f.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
+                              h.default.track(I.HAw.VOICE_CHANNEL_BLOCKED_USER_WARNING_ENGAGEMENT, {
                                   action: p.Qi.DISMISS,
                                   channel_id: t.id,
                                   blocked_user_ids: Array.from(v),

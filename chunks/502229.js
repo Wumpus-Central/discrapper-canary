@@ -1,4 +1,4 @@
-n.d(t, { A: () => S, D: () => g });
+n.d(t, { A: () => S, D: () => m });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -13,24 +13,24 @@ var r = n(192308),
     E = n(185928);
 let A = window.matchMedia("(prefers-reduced-motion: reduce)"),
     h = window.matchMedia("(prefers-contrast: more)"),
-    I = window.matchMedia("(prefers-contrast: less)"),
-    f = window.matchMedia("(prefers-color-scheme: dark)"),
+    f = window.matchMedia("(prefers-contrast: less)"),
+    I = window.matchMedia("(prefers-color-scheme: dark)"),
     p = window.matchMedia("(prefers-color-scheme: light)"),
     T = window.matchMedia("(forced-colors: active)"),
-    m = 5;
-function g() {
+    g = 5;
+function m() {
     return "windows" === (0, d.getOS)();
 }
 let S = {
     initBasic() {
         (A.addListener(this.handleSystemPrefersReducedMotionChanged),
             this.handleSystemPrefersReducedMotionChanged(A),
-            f.addListener(this.handleSystemColorPreferencesChanged),
+            I.addListener(this.handleSystemColorPreferencesChanged),
             p.addListener(this.handleSystemColorPreferencesChanged),
             T.addListener(this.handleSystemColorPreferencesChanged),
             this.handleSystemColorPreferencesChanged(),
             h.addListener(this.handleSystemPrefersContrastChanged),
-            I.addListener(this.handleSystemPrefersContrastChanged),
+            f.addListener(this.handleSystemPrefersContrastChanged),
             this.handleSystemPrefersContrastChanged());
     },
     init() {
@@ -44,11 +44,11 @@ let S = {
     },
     maybeShowKeyboardNavigationExplainerModal() {
         let e;
-        ((m = Math.max(m - 1, 0)),
+        ((g = Math.max(g - 1, 0)),
             null == (e = l.default.getCurrentUser()) ||
                 Date.now() - e.createdAt < 864e5 ||
                 u.Ay.keyboardNavigationExplainerModalSeen ||
-                0 !== m ||
+                0 !== g ||
                 (0, r.openModalLazy)(
                     async () => {
                         let { default: e } = await Promise.all([n.e("65000"), n.e("963309"), n.e("898186")]).then(
@@ -66,15 +66,15 @@ let S = {
     },
     handleSystemColorPreferencesChanged() {
         let e = E.Fc.NO_PREFERENCE;
-        f.matches ? (e = E.Fc.DARK) : p.matches && (e = E.Fc.LIGHT);
-        let t = (!d.isPlatformEmbedded || g()) && T.matches ? "active" : "none";
+        I.matches ? (e = E.Fc.DARK) : p.matches && (e = E.Fc.LIGHT);
+        let t = (!d.isPlatformEmbedded || m()) && T.matches ? "active" : "none";
         a.h.wait(() => {
             (s.LA(e), c.RI(t));
         });
     },
     handleSystemPrefersContrastChanged() {
         let e = "no-preference";
-        (h.matches ? (e = "more") : I.matches && (e = "less"),
+        (h.matches ? (e = "more") : f.matches && (e = "less"),
             a.h.wait(() => {
                 c.Jb(e);
             }));

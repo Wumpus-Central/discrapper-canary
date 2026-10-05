@@ -12,12 +12,12 @@ var i = n(477900),
     E = n(71855),
     A = n(91242),
     h = n(210954),
-    I = n(205297),
-    f = n(699426),
+    f = n(205297),
+    I = n(699426),
     p = n(979186),
     T = n(869146),
-    m = n(363195),
-    g = n(742023),
+    g = n(363195),
+    m = n(742023),
     S = n(806911),
     N = n(734057),
     C = n(334463),
@@ -53,10 +53,10 @@ class G extends r.PureComponent {
             } = this.props,
             p = document.body.style.getPropertyValue("--custom-guild-sidebar-width"),
             T = "" !== p ? parseInt(p, 10) : y.MdR,
-            m = u.width - T - (A ? h : 0);
-        return (0, i.jsxs)(f.ic, {
+            g = u.width - T - (A ? h : 0);
+        return (0, i.jsxs)(I.ic, {
             children: [
-                (0, i.jsx)(I.A, {
+                (0, i.jsx)(f.A, {
                     pictureInPictureComponents: P,
                     selectedPIPWindow: e,
                     pipWindows: t,
@@ -72,7 +72,7 @@ class G extends r.PureComponent {
                     resizeConfig: U,
                     getDockedRectPositionY: c,
                 }),
-                (0, i.jsx)(f.Md, { className: !_ && null != E && A && m < 550 ? M.ah : void 0 }),
+                (0, i.jsx)(I.Md, { className: !_ && null != E && A && g < 550 ? M.ah : void 0 }),
             ],
         });
     }
@@ -83,7 +83,7 @@ class G extends r.PureComponent {
         s.EB(e, v.R8.VIDEO);
     };
 }
-let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A], (e) => {
+let x = a.Ay.connectStores([T.A, l.Ay, R.A, g.A, N.A, O.Ay, C.A, _.A, m.Ay, A.A], (e) => {
     let t,
         { popoutWindowKey: n, popoutWindowHasTitleBar: i = !1 } = e,
         r = T.A.getWindowOpen(y.MLl.CHANNEL_CALL_POPOUT),
@@ -91,8 +91,8 @@ let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A]
         s = l.Ay.getCurrentEmbeddedActivity(),
         u = (0, d.H)(s?.location),
         h = null != s && !(0, c.A)(u, N.A, O.Ay),
-        I = l.Ay.getActivityPanelMode(),
-        f = h && I === D.Gd.PANEL,
+        f = l.Ay.getActivityPanelMode(),
+        I = h && f === D.Gd.PANEL,
         S = null != s && null != u && _.A.getSelectedParticipant(u)?.type === v.lp.ACTIVITY,
         M = (0, b.ny)(A.A.getMainFrame()),
         P = M?.data.layoutMode === b.y0.FOCUSED,
@@ -106,7 +106,7 @@ let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A]
         (null != s && a) || (U && h) || (U && null != M)
             ? null
             : U || !r || h || null != M
-              ? null != s && f
+              ? null != s && I
                   ? (C.A.pipActivityWindow ?? C.A.pipVideoWindow)
                   : null != M && P
                     ? (C.A.pipFrameWindow ?? C.A.pipVideoWindow ?? C.A.pipActivityWindow)
@@ -117,11 +117,11 @@ let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A]
         H = B.find((e) => e.component === y.o1q.VIDEO),
         j = B.find((e) => e.component === y.o1q.ACTIVITY),
         W = [H, j, B.find((e) => e.component === y.o1q.FRAME)].filter(L.Vq),
-        Y = g.Ay.callChatSidebarWidth,
+        Y = m.Ay.callChatSidebarWidth,
         K = O.Ay.getVoiceChannelId(),
         $ = O.Ay.getChannelId() === K,
         z = null != K && _.A.getChatOpen(K),
-        X = f || S,
+        X = I || S,
         Z = X && null != s && (0, o.q)(s.applicationId),
         q = !X && null != t && $;
     return {
@@ -130,7 +130,7 @@ let x = a.Ay.connectStores([T.A, l.Ay, R.A, m.A, N.A, O.Ay, C.A, _.A, g.Ay, A.A]
         pipWidth: V,
         maxX: k.width - (q && z ? Y : 0),
         maxY: k.height,
-        theme: m.A.theme,
+        theme: g.A.theme,
         dockedRect: C.A.getDockedRect(t?.id ?? ""),
         getDockedRectPositionY: function (e) {
             return U && (0, p.q)({ withTitleBar: i, isFullScreen: x }) ? e - (0, E.LI)({ isPopoutWindow: U }) : e;

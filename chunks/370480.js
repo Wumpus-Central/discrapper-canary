@@ -1,4 +1,4 @@
-(n.d(t, { An: () => g, N8: () => T, RP: () => p, _g: () => m, iC: () => h, jO: () => I, vA: () => f }),
+(n.d(t, { An: () => m, N8: () => T, RP: () => p, _g: () => g, iC: () => h, jO: () => f, vA: () => I }),
     n(323874),
     n(14289),
     n(35956));
@@ -22,8 +22,8 @@ let h = [
     "1031611223235637258",
     "512333785338216465",
 ];
-var I = (((i = {})[(i.AND = 0)] = "AND"), (i[(i.OR = 1)] = "OR"), i);
-function f(e) {
+var f = (((i = {})[(i.AND = 0)] = "AND"), (i[(i.OR = 1)] = "OR"), i);
+function I(e) {
     let { searchParams: t } = u.A.toURLSafe(e) ?? { searchParams: new URLSearchParams() },
         { code: n, state: i, error: r, error_description: s } = Object.fromEntries(t);
     return (
@@ -225,7 +225,7 @@ function p(e) {
 function T(e) {
     return e.some((e) => null === e.tags.guild_connections);
 }
-function m(e) {
+function g(e) {
     let { guildMember: t, guild: n, sortedGuildRoles: i, channel: r, onlyChannelConnectionRoles: a = !1 } = e;
     if (null == t || (null == n && null != r && (n = c.A.getGuild(r.getGuildId())), null == n)) return null;
     let { id: s } = n;
@@ -234,7 +234,7 @@ function m(e) {
         _ = l().intersection(u, (0, o.A)(r));
     return _.length > 0 ? (_[0] ?? null) : a ? null : (u[0] ?? null);
 }
-function g(e, t) {
+function m(e, t) {
     if (null == e || "" === e) return null;
     let n = new Date(e);
     return !(n instanceof Date) || isNaN(n.getTime())

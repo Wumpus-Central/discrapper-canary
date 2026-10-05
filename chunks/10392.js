@@ -1,114 +1,114 @@
-n.d(t, { Vn: () => f, u1: () => T, sq: () => m, qz: () => p, _D: () => I });
-var i = n(636537),
-    r = n(554146),
-    a = n(73153),
-    s = n(826673),
-    l = n(669316),
-    o = n(959165),
-    d = n(594061),
-    c = n(354670),
-    u = n(174459),
-    _ = n(723702),
-    E = n(38405);
-n(202541);
-var A = n(652215);
-function h() {
+t.d(r, { Vn: () => g, u1: () => y, sq: () => F, qz: () => R, _D: () => h });
+var l = t(636537),
+    i = t(554146),
+    n = t(73153),
+    u = t(826673),
+    o = t(669316),
+    _ = t(959165),
+    s = t(594061),
+    a = t(354670),
+    f = t(174459),
+    c = t(723702),
+    d = t(38405);
+t(202541);
+var p = t(652215);
+function E() {
     let e = null;
-    return ((0, _.isAndroid)() ? (e = A.kM_.GOOGLE) : (0, _.isIOS)() && (e = A.kM_.APPLE), e);
+    return ((0, c.isAndroid)() ? (e = p.kM_.GOOGLE) : (0, c.isIOS)() && (e = p.kM_.APPLE), e);
 }
-async function I(e) {
-    let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        n =
+async function h(e) {
+    let r = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
+        t =
             arguments.length > 2 && void 0 !== arguments[2]
                 ? arguments[2]
                 : { offerId: void 0, paymentGatewayOverride: void 0 },
-        c = arguments.length > 3 ? arguments[3] : void 0,
-        _ = arguments.length > 4 ? arguments[4] : void 0;
-    if (t) {
-        a.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
+        a = arguments.length > 3 ? arguments[3] : void 0,
+        c = arguments.length > 4 ? arguments[4] : void 0;
+    if (r) {
+        n.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
         try {
-            null != e && u.default.track(A.HAw.FETCH_USER_OFFER_STARTED, { call_location: e });
-            let { offerId: t, paymentGatewayOverride: I } = n,
-                f = void 0 !== I ? I : h(),
-                p = await i.Bo.post({
-                    url: A.Rsh.USER_OFFER,
+            null != e && f.default.track(p.HAw.FETCH_USER_OFFER_STARTED, { call_location: e });
+            let { offerId: r, paymentGatewayOverride: h } = t,
+                g = void 0 !== h ? h : E(),
+                R = await l.Bo.post({
+                    url: p.Rsh.USER_OFFER,
                     body:
-                        null != f || null != t
-                            ? { payment_gateway: f, offer_id: t, allow_triggers: !0 }
+                        null != g || null != r
+                            ? { payment_gateway: g, offer_id: r, allow_triggers: !0 }
                             : { allow_triggers: !0 },
                     rejectWithError: !0,
-                    retries: null != c ? c.retries : void 0,
+                    retries: null != a ? a.retries : void 0,
                 }),
-                T = p.body.user_trial_offer ?? null,
-                m = p.body.user_discount_offer ?? null;
-            if (null != t && null != m && m.discount_id !== t) {
+                y = R.body.user_trial_offer ?? null,
+                F = R.body.user_discount_offer ?? null;
+            if (null != r && null != F && F.discount_id !== r) {
                 let e = Error("Returned user discount offer does not match offer ID request parameter");
-                throw (E.A.captureException(e, { extra: { offer_id: t, user_discount_offer: m }, ..._ }), e);
+                throw (d.A.captureException(e, { extra: { offer_id: r, user_discount_offer: F }, ...c }), e);
             }
             return (
-                null == T &&
-                    (0, s.k8)(r.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) &&
-                    (0, d.xB)(r.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING),
-                a.h.dispatch({
+                null == y &&
+                    (0, u.k8)(i.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING) &&
+                    (0, s.xB)(i.M.NAGBAR_NOTICE_PREMIUM_TIER_TWO_TRIAL_ENDING),
+                n.h.dispatch({
                     type: "BILLING_USER_OFFER_FETCH_SUCCESS",
-                    userTrialOffer: null == T ? null : o.A.createFromServer(T),
-                    userDiscountOffer: null != m ? l.A.createFromServer(m) : null,
-                    shouldTriggerOffer: p.body.should_trigger_offer ?? null,
+                    userTrialOffer: null == y ? null : _.A.createFromServer(y),
+                    userDiscountOffer: null != F ? o.A.createFromServer(F) : null,
+                    shouldTriggerOffer: R.body.should_trigger_offer ?? null,
                 }),
                 !0
             );
         } catch (e) {
-            a.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
+            n.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
         }
     }
     return !1;
 }
-async function f() {
-    a.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
+async function g() {
+    n.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_START" });
     try {
-        let e = (await i.Bo.get({ url: A.Rsh.CHURN_USER_OFFER, rejectWithError: !0 })).body.offer ?? null,
-            t = null != e ? l.A.createFromServer(e) : null;
+        let e = (await l.Bo.get({ url: p.Rsh.CHURN_USER_OFFER, rejectWithError: !0 })).body.offer ?? null,
+            r = null != e ? o.A.createFromServer(e) : null;
         return (
-            a.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_SUCCESS", userDiscountOffer: t }), { userDiscountOffer: t }
+            n.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_SUCCESS", userDiscountOffer: r }), { userDiscountOffer: r }
         );
     } catch (e) {
-        a.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
+        n.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_FAIL" });
     }
 }
-async function p() {
+async function R() {
     let e = null;
     try {
-        let t = (await i.Bo.post({ url: A.Rsh.CHURN_USER_OFFER, rejectWithError: !0 })).body.offer ?? null;
-        null != t &&
-            ((e = l.A.createFromServer(t)),
-            a.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_SUCCESS", userDiscountOffer: e }));
+        let r = (await l.Bo.post({ url: p.Rsh.CHURN_USER_OFFER, rejectWithError: !0 })).body.offer ?? null;
+        null != r &&
+            ((e = o.A.createFromServer(r)),
+            n.h.dispatch({ type: "BILLING_USER_OFFER_FETCH_SUCCESS", userDiscountOffer: e }));
     } catch (e) {}
     return e;
 }
-function T(e, t) {
-    let n = null == e || e.hasAcknowledged ? void 0 : e.id,
-        r = null == t || t.hasAcknowledged() ? void 0 : t.id;
-    if (void 0 !== n || void 0 !== r)
-        return i.Bo.post({
-            url: A.Rsh.USER_OFFER_ACKNOWLEDGED,
-            body: { user_trial_offer_id: n, user_discount_offer_id: r },
+function y(e, r) {
+    let t = null == e || e.hasAcknowledged ? void 0 : e.id,
+        i = null == r || r.hasAcknowledged() ? void 0 : r.id;
+    if (void 0 !== t || void 0 !== i)
+        return l.Bo.post({
+            url: p.Rsh.USER_OFFER_ACKNOWLEDGED,
+            body: { user_trial_offer_id: t, user_discount_offer_id: i },
             oldFormErrors: !0,
             rejectWithError: !1,
         })
             .then((e) => {
-                let t = e.body.user_discount ?? null,
-                    n = e.body.user_discount_offer ?? null,
-                    i = e.body.user_trial_offer ?? null;
-                a.h.dispatch({
+                let r = e.body.user_discount ?? null,
+                    t = e.body.user_discount_offer ?? null,
+                    l = e.body.user_trial_offer ?? null;
+                n.h.dispatch({
                     type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
-                    userTrialOffer: null != i ? o.A.createFromServer(i) : null,
-                    userDiscount: null != t ? l.A.createFromServer(t) : null,
-                    userDiscountOffer: null != n ? l.A.createFromServer(n) : null,
+                    userTrialOffer: null != l ? _.A.createFromServer(l) : null,
+                    userDiscount: null != r ? o.A.createFromServer(r) : null,
+                    userDiscountOffer: null != t ? o.A.createFromServer(t) : null,
                 });
             })
             .catch((e) => {
                 404 === e.status &&
-                    a.h.dispatch({
+                    n.h.dispatch({
                         type: "BILLING_USER_OFFER_ACKNOWLEDGED_SUCCESS",
                         userTrialOffer: null,
                         userDiscount: null,
@@ -116,28 +116,28 @@ function T(e, t) {
                     });
             });
 }
-function m(e, t, n) {
-    if (!c.A.canTriggerUserOffer(e)) return;
-    a.h.dispatch({ type: "BILLING_USER_OFFER_TRIGGER_ATTEMPT", triggerType: e });
-    let r = n?.(),
-        s = {
-            payment_gateway: h(),
+function F(e, r, t) {
+    if (!a.A.canTriggerUserOffer(e)) return;
+    n.h.dispatch({ type: "BILLING_USER_OFFER_TRIGGER_ATTEMPT", triggerType: e });
+    let i = t?.(),
+        u = {
+            payment_gateway: E(),
             trigger_type: e,
-            trigger_location_stack: t,
-            trigger_metadata: JSON.stringify(r),
-            trigger_uptime_app: c.A.getUptimeForTrigger(),
+            trigger_location_stack: r,
+            trigger_metadata: JSON.stringify(i),
+            trigger_uptime_app: a.A.getUptimeForTrigger(),
         };
-    i.Bo.post({ url: A.Rsh.USER_OFFER_TRIGGER, body: s, rejectWithError: !0 }).then((t) => {
-        let n = t.body,
-            i = n.offer?.user_trial_offer,
-            r = n.offer?.user_discount_offer;
-        a.h.dispatch({
+    l.Bo.post({ url: p.Rsh.USER_OFFER_TRIGGER, body: u, rejectWithError: !0 }).then((r) => {
+        let t = r.body,
+            l = t.offer?.user_trial_offer,
+            i = t.offer?.user_discount_offer;
+        n.h.dispatch({
             type: "BILLING_USER_OFFER_TRIGGER_SUCCESS",
             triggerType: e,
-            retryAfter: n.retry_after,
-            triggerSuccess: n.trigger_success,
-            userTrialOffer: null != i ? o.A.createFromServer(i) : null,
-            userDiscountOffer: null != r ? l.A.createFromServer(r) : null,
+            retryAfter: t.retry_after,
+            triggerSuccess: t.trigger_success,
+            userTrialOffer: null != l ? _.A.createFromServer(l) : null,
+            userDiscountOffer: null != i ? o.A.createFromServer(i) : null,
         });
     });
 }

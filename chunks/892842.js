@@ -1,4 +1,4 @@
-(n.d(t, { iQ: () => h, FH: () => f, P4: () => E, pd: () => A, ML: () => d, pX: () => m, hw: () => T }), n(321073));
+(n.d(t, { iQ: () => h, FH: () => I, P4: () => E, pd: () => A, ML: () => d, pX: () => g, hw: () => T }), n(321073));
 var i = n(284009),
     r = n.n(i),
     a = n(306173),
@@ -125,7 +125,7 @@ let E = new (class extends u {
     })("2025-09-libdiscore-telemetry"),
     h = new _("2025-11-defer-load-late-lazy-cache", "Allow react to render before lazy cache is loaded");
 new _("2026-09-react-compiler-mobile", "React Compiler for mobile");
-class I extends u {
+class f extends u {
     label;
     treatmentCount;
     getLabel() {
@@ -138,8 +138,8 @@ class I extends u {
         (super(e), (this.label = t), (this.treatmentCount = n));
     }
 }
-let f = new I("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
-(new I("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
+let I = new f("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
+(new f("2026-02-android-fresco-cache", "Android Fresco Cache", 3),
     new _("2026-02-android-chat-mosaic-shared-pool", "Android Chat Mosaic Shared Pool"),
     new _("2026-03-mobile-hermes-occupancy-target", "Android Hermes Occupancy Target"),
     new _("2026-08-android-jank-per-screen", "Android Per-Screen Jank Aggregation"),
@@ -147,12 +147,12 @@ let f = new I("2026-01-android-rmle", "Android Pull Mode Rendering", 4);
         "2026-08-android-rn-reparenting-flag",
         "RN Flag, was false on RN 0.81 and true in RN 0.86, suspect of causing RMLE regressions",
     ),
-    new I("2026-08-ios-objc-composed-image-cache", "iOS ObjC Composed Image Cache", 3));
+    new f("2026-08-ios-objc-composed-image-cache", "iOS ObjC Composed Image Cache", 3));
 let p = !1;
 function T() {
     return p;
 }
-function m() {
+function g() {
     (0, a.xd)() &&
         (o.info("Clearing libdiscore experiment cache and disabling sync"), (p = !0), (0, a.Ih)().clearCache());
 }

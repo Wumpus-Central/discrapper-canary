@@ -1,4 +1,4 @@
-n.d(t, { Jn: () => I, _r: () => A, el: () => _, ow: () => h });
+n.d(t, { Jn: () => f, _r: () => A, el: () => _, ow: () => h });
 var i = n(582128),
     r = n(17928),
     a = n(160946),
@@ -37,7 +37,7 @@ function h(e) {
         hasFetchedRelatedSubscriptionPlans: (0, a.Y)(o),
     };
 }
-function I() {
+function f() {
     let {
             skuIds: e,
             isGift: t,
@@ -70,12 +70,12 @@ function I() {
         })(),
         _ = i.useMemo(() => (u.length > 0 ? u : l), [u, l]),
         E = i.useMemo(() => a.paymentSourceId !== n || !a.loaded || null == d || !c, [a, n, d, c]),
-        I = a.currency,
-        f = i.useMemo(() => (null != I ? I : null != s ? s : _.length > 0 ? _[0] : void 0), [I, s, _]);
+        f = a.currency,
+        I = i.useMemo(() => (null != f ? f : null != s ? s : _.length > 0 ? _[0] : void 0), [f, s, _]);
     return {
         checkoutPriceOptions: a,
         dropdownCurrencies: _,
-        displayCurrency: f,
+        displayCurrency: I,
         setCheckoutCurrency: r,
         subscriptionPlanIdForCurrency: d,
         subscriptionPriceOptionsLoading: E,

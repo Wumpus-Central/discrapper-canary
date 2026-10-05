@@ -36,12 +36,12 @@ var i = n(582128),
     E = n(594061),
     A = n(71393),
     h = n(711014),
-    I = n(287809),
-    f = n(174459),
+    f = n(287809),
+    I = n(174459),
     p = n(927813),
     T = n(690521),
-    m = n(474090),
-    g = n(818645),
+    g = n(474090),
+    m = n(818645),
     S = n(316884),
     N = n(732139),
     C = n(652215),
@@ -80,13 +80,13 @@ function P(e, t) {
     let d = (0, O.isExternalEmojiAllowedForIntention)(e),
         u = K(n),
         E = $(n),
-        f = z(n),
+        I = z(n),
         { topEmojis: p, newlyAddedEmojis: C } = (0, S.A)(n, e),
-        { allEmojis: R } = (0, g.A)({ topEmojis: p, newlyAddedEmojis: C }),
+        { allEmojis: R } = (0, m.A)({ topEmojis: p, newlyAddedEmojis: C }),
         L = (0, s.bG)([o.Ay], () => o.Ay.getDisambiguatedEmojiContext(n), [n]),
         D = (0, s.bG)([A.A], () => A.A.getGuild(n)?.name),
-        v = (0, s.bG)([I.default], () => I.default.getCurrentUser()),
-        b = (0, m.ki)(v),
+        v = (0, s.bG)([f.default], () => f.default.getCurrentUser()),
+        b = (0, g.ki)(v),
         M = (0, _.Ym)({ location: "useEmojiCategories" }),
         P = i.useMemo(() => {
             let i = L.getGroupedCustomEmoji(),
@@ -157,7 +157,7 @@ function P(e, t) {
                                 emojisDisabled: n,
                             });
                         } else if (i === N.R2.FAVORITES) {
-                            let { emojisDisabled: e, emojisUnfiltered: n } = _(f);
+                            let { emojisDisabled: e, emojisUnfiltered: n } = _(I);
                             if (null == n || 0 === n.length) return t;
                             t.push({
                                 type: N.s.FAVORITES,
@@ -177,7 +177,7 @@ function P(e, t) {
                     M && r ? [c] : [],
                 )
             );
-        }, [L, t, n, e, b, R, D, E, u, f, d, M, r, a]),
+        }, [L, t, n, e, b, R, D, E, u, I, d, M, r, a]),
         U = i.useMemo(() => {
             if (e !== O.EmojiIntention.CHAT || null == l) return null;
             let { unlocked: t, locked: n } = l;
@@ -200,7 +200,7 @@ function U() {
 }
 function w(e) {
     let t = e?.getGuildId() != null;
-    f.default.track(C.HAw.PREMIUM_PROMOTION_OPENED, {
+    I.default.track(C.HAw.PREMIUM_PROMOTION_OPENED, {
         location_page: t ? C.liQ.GUILD_CHANNEL : C.liQ.DM_CHANNEL,
         location_section: null != e ? C.JJy.EMOJI_PICKER_POPOUT : C.JJy.CUSTOM_STATUS_MODAL,
     });

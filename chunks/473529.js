@@ -1,4 +1,4 @@
-n.d(t, { K: () => f, d: () => I });
+n.d(t, { K: () => I, d: () => f });
 var i = n(702841),
     r = n(5180),
     a = n(961973),
@@ -21,7 +21,7 @@ function h(e, t) {
     for (let e in n) if (n[e].hasFlag(E.lx.IS_GUILD_RESOURCE_CHANNEL)) return !0;
     return !1;
 }
-function I(e) {
+function f(e) {
     let t = (0, u.A)(e);
     return (0, i.bG)(
         [l.A, o.A, s.A],
@@ -36,7 +36,7 @@ function I(e) {
         [e, t],
     );
 }
-function f(e) {
+function I(e) {
     let t = o.A.getGuild(e),
         n = s.A.isFullServerPreview(e);
     if (null == t || __OVERLAY__ || e === _.ME || (0, r.ai)(e)) return !1;

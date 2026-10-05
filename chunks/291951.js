@@ -1,4 +1,4 @@
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var i = n(73153),
     r = n(439372),
     a = n(498642),
@@ -64,4 +64,4 @@ class h extends r.A {
         l.A.isInitialized(t) && A(t);
     }
 }
-let I = new h();
+let f = new h();

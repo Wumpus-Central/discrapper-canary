@@ -1,4 +1,4 @@
-n.d(t, { Vq: () => m, a6: () => p, xf: () => T });
+n.d(t, { Vq: () => g, a6: () => p, xf: () => T });
 var i = n(636537),
     r = n(73153),
     a = n(381689),
@@ -23,21 +23,21 @@ async function A() {
     ).body;
 }
 let h = !1,
-    I = null,
-    f = 0;
+    f = null,
+    I = 0;
 function p() {
-    I = null;
+    f = null;
 }
 function T() {
     (p(), r.h.dispatch({ type: "AGE_VERIFICATION_METHODS_V2_INVALIDATE" }));
 }
-async function m() {
+async function g() {
     if (!h) {
         h = !0;
         try {
-            let e = I;
+            let e = f;
             if (
-                ((null == e || Date.now() - f >= _) && ((I = e = await ((0, s.qn)() ? A() : E())), (f = Date.now())),
+                ((null == e || Date.now() - I >= _) && ((f = e = await ((0, s.qn)() ? A() : E())), (I = Date.now())),
                 "submitted" === e.status)
             )
                 return void d.A.showManualReviewPendingModal();

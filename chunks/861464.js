@@ -12,12 +12,12 @@ var i = n(385244),
     E = n(763754),
     A = n(808829),
     h = n(552691),
-    I = n(383233),
-    f = n(280450),
+    f = n(383233),
+    I = n(280450),
     p = n(734057),
     T = n(71393),
-    m = n(994500),
-    g = n(287809),
+    g = n(994500),
+    m = n(287809),
     S = n(562153),
     N = n(935208);
 let C = {
@@ -54,9 +54,9 @@ let L = {
                 return null == t
                     ? null
                     : "object" == typeof t
-                      ? (g.default.getUser(t.id) ?? null)
+                      ? (m.default.getUser(t.id) ?? null)
                       : "string" == typeof t
-                        ? (g.default.getUser(t) ?? null)
+                        ? (m.default.getUser(t) ?? null)
                         : null;
             })(e),
             N = e.channel_id,
@@ -87,7 +87,7 @@ let L = {
                 );
             case l.lAJ.CALL:
                 let { call: y } = e;
-                if (null != y && -1 === y.participants.indexOf(f.default.getId()))
+                if (null != y && -1 === y.participants.indexOf(I.default.getId()))
                     return (0, a.$)(o.intl.formatToParts(o.t.DbgSA0, { username: C, usernameOnClick: l.tEg }));
                 return;
             case l.lAJ.CHANNEL_NAME_CHANGE:
@@ -118,15 +118,15 @@ let L = {
             case l.lAJ.THREAD_STARTER_MESSAGE:
                 return o.intl.formatToPlainString(o.t["B8H+Cl"], {
                     username: C,
-                    threadName: (0, s.m1)(t, g.default, m.A),
+                    threadName: (0, s.m1)(t, m.default, g.A),
                 });
             case l.lAJ.ROLE_SUBSCRIPTION_PURCHASE:
-                if (e instanceof I.Ay) return null;
+                if (e instanceof f.Ay) return null;
                 return (0, a.$)(
                     (0, d.eb)({ username: C, guildId: t.guild_id, roleSubscriptionData: e.role_subscription_data }),
                 );
             case l.lAJ.PURCHASE_NOTIFICATION:
-                if (e instanceof I.Ay || e.purchase_notification?.guild_product_purchase?.product_name == null)
+                if (e instanceof f.Ay || e.purchase_notification?.guild_product_purchase?.product_name == null)
                     return null;
                 return (0, a.$)(
                     (function (e) {
@@ -135,14 +135,14 @@ let L = {
                     })({ username: C, productName: e.purchase_notification.guild_product_purchase.product_name }),
                 );
             case l.lAJ.GUILD_APPLICATION_PREMIUM_SUBSCRIPTION:
-                if (e instanceof I.Ay) return null;
+                if (e instanceof f.Ay) return null;
                 let v = (0, E.p_)((0, _.rh)(e));
                 return (0, a.$)((0, A.P)({ application: e.application, username: v.nick }));
             case l.lAJ.PRIVATE_CHANNEL_INTEGRATION_ADDED:
-                if (e instanceof I.Ay) return null;
+                if (e instanceof f.Ay) return null;
                 return (0, a.$)((0, h.g6)({ application: e.application, username: (0, E.p_)((0, _.rh)(e)).nick }));
             case l.lAJ.PRIVATE_CHANNEL_INTEGRATION_REMOVED:
-                if (e instanceof I.Ay) return null;
+                if (e instanceof f.Ay) return null;
                 return (0, a.$)((0, h.uk)({ application: e.application, username: (0, E.p_)((0, _.rh)(e)).nick }));
             case l.lAJ.AUTO_MODERATION_ACTION:
                 if (
@@ -199,8 +199,8 @@ let L = {
                     ? null
                     : (0, a.$)(o.intl.formatToParts(o.t.axmbpm, { username: C, guildName: w.name }));
             case l.lAJ.GUILD_SPACE_MESSAGE: {
-                let n = (0, u.Nu)(e instanceof I.Ay ? e.guildSpaceData?.leaderboard : e.guild_space_data?.leaderboard),
-                    i = (0, c.U_)(n, g.default.getUser(n?.userId), g.default.getUser(n?.secondaryUserId));
+                let n = (0, u.Nu)(e instanceof f.Ay ? e.guildSpaceData?.leaderboard : e.guild_space_data?.leaderboard),
+                    i = (0, c.U_)(n, m.default.getUser(n?.userId), m.default.getUser(n?.secondaryUserId));
                 if (null == i) return e.content;
                 let r = t.getGuildId(),
                     a = (0, c.Sx)(i.data, {

@@ -12,12 +12,12 @@ var r,
     E = n(250953),
     A = n(976860),
     h = n(84948),
-    I = n(917136),
-    f = n(280450),
+    f = n(917136),
+    I = n(280450),
     p = n(153488),
     T = n(353835),
-    m = n(499785),
-    g = n(700058),
+    g = n(499785),
+    m = n(700058),
     S = n(652215),
     N = n(516780);
 let C = new _.A("AuthenticationActionCreators"),
@@ -25,7 +25,7 @@ let C = new _.A("AuthenticationActionCreators"),
 var R = (((r = {}).MFA = "MFA"), (r.SUCCESS = "SUCCESS"), r);
 function L(e) {
     T.A.clearNavigationHistory();
-    let t = { type: "LOGOUT", userId: f.default.getId() ?? void 0, ...e };
+    let t = { type: "LOGOUT", userId: I.default.getId() ?? void 0, ...e };
     d.h.dispatch(t).catch((e) => {
         throw (C.error("Error while dispatching LOGOUT", e), window.DiscordErrors?.softCrash(e), e);
     });
@@ -34,7 +34,7 @@ function y(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT;
     if ((L(), null == t)) return;
     let n = (0, E.Y)();
-    null == n ? (0, A.pX)(t, { source: e }) : (g.A.popAll(), n.reset({ index: 0, routes: [{ name: "auth" }] }));
+    null == n ? (0, A.pX)(t, { source: e }) : (m.A.popAll(), n.reset({ index: 0, routes: [{ name: "auth" }] }));
 }
 let D = {
     startSession(e) {
@@ -46,7 +46,7 @@ let D = {
         let { login: t, password: n, undelete: i, source: r, giftCodeSKUId: s, invite: o, isMultiAccount: u } = e;
         return (
             d.h.dispatch({ type: "LOGIN", isPasswordAttempt: !0 }),
-            m.A.post({
+            g.A.post({
                 url: S.Rsh.LOGIN,
                 body: { login: t, password: n, undelete: i, login_source: r, gift_code_sku_id: s },
                 retries: 2,
@@ -122,14 +122,14 @@ let D = {
     },
     loginMFAv2(e) {
         let { code: t, ticket: n, source: i, giftCodeSKUId: r, isMultiAccount: s, mfaType: l, loginInstanceId: o } = e;
-        return m.A.post({
+        return g.A.post({
             url: S.Rsh.LOGIN_MFA(l),
             body: {
                 code: t,
                 ticket: n,
                 login_source: i,
                 gift_code_sku_id: r,
-                login_instance_id: o ?? f.default.getLoginInstanceId(),
+                login_instance_id: o ?? I.default.getLoginInstanceId(),
             },
             retries: 2,
             oldFormErrors: !0,
@@ -161,7 +161,7 @@ let D = {
         } = e;
         (n?.abort("Starting non-conditional mediation"), d.h.dispatch({ type: "PASSWORDLESS_START" }));
         try {
-            let { challenge: e, ticket: n } = await (0, I.YS)(),
+            let { challenge: e, ticket: n } = await (0, f.YS)(),
                 s = await t(e);
             try {
                 await this.loginWebAuthn({ ticket: n, credential: s, source: i, giftCodeSKUId: r, isMultiAccount: a });
@@ -181,7 +181,7 @@ let D = {
     },
     loginWebAuthn(e) {
         let { ticket: t, credential: n, source: i, giftCodeSKUId: r, isMultiAccount: s } = e;
-        return m.A.post({
+        return g.A.post({
             url: S.Rsh.WEBAUTHN_CONDITIONAL_UI_LOGIN,
             body: { credential: n, ticket: t, source: i, giftCodeSKUId: r },
             retries: 1,
@@ -222,7 +222,7 @@ let D = {
         d.h.dispatch({ type: "LOGIN" });
         try {
             let t = (
-                await m.A.post({
+                await g.A.post({
                     url: S.Rsh.ONE_TIME_LOGIN,
                     body: { ticket: e },
                     oldFormErrors: !0,
@@ -248,7 +248,7 @@ let D = {
     logout(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : S.BVt.DEFAULT_LOGGED_OUT,
             n = arguments.length > 2 ? arguments[2] : void 0;
-        return m.A.post({
+        return g.A.post({
             url: S.Rsh.LOGOUT,
             body: { provider: (0, N.oH)(), token: o.w.get(S.Xlh), voip_provider: N.vz, voip_token: o.w.get(S.Ahp) },
             oldFormErrors: !0,
@@ -256,17 +256,17 @@ let D = {
             ...(null != n && { headers: { authorization: s.getToken(n) ?? "" } }),
             rejectWithError: (0, l.fT)(),
         }).finally(() => {
-            (null == n || n === f.default.getId()) && y(e, t);
+            (null == n || n === I.default.getId()) && y(e, t);
         });
     },
     switchAccountToken(e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-            n = f.default.getToken();
+            n = I.default.getToken();
         return (
             C.log("Switching accounts", { wasLoggedIn: null != n, tokenHasChanged: e !== n }),
             L({ isSwitchingAccount: !0, goHomeAfterSwitching: t }),
             this.loginToken(e, !0).then(() => {
-                let t = e === f.default.getToken();
+                let t = e === I.default.getToken();
                 return (C.log("Switched accounts finished", { isCorrectToken: t }), t);
             })
         );
@@ -282,7 +282,7 @@ let D = {
         );
     },
     async verify(e) {
-        let t = await m.A.post({
+        let t = await g.A.post({
             url: S.Rsh.VERIFY,
             body: { token: e },
             trackedActionData: { event: a.NetworkActionNames.USER_VERIFY },
@@ -291,21 +291,21 @@ let D = {
         return (d.h.dispatch({ type: "LOGIN_SUCCESS", token: t.body.token }), t.body.user_id);
     },
     authorizePayment: (e) =>
-        m.A.post({
+        g.A.post({
             url: S.Rsh.AUTHORIZE_PAYMENT,
             body: { token: e },
             trackedActionData: { event: a.NetworkActionNames.AUTHORIZE_PAYMENT },
             rejectWithError: !0,
         }),
     authorizeIPAddress: (e) =>
-        m.A.post({
+        g.A.post({
             url: S.Rsh.AUTHORIZE_IP,
             body: { token: e },
             trackedActionData: { event: a.NetworkActionNames.AUTHORIZE_IP },
             rejectWithError: !0,
         }),
     verifyResend: () =>
-        m.A.post({
+        g.A.post({
             url: S.Rsh.VERIFY_RESEND,
             oldFormErrors: !0,
             trackedActionData: { event: a.NetworkActionNames.USER_VERIFY_RESEND },
@@ -322,7 +322,7 @@ let D = {
         try {
             let {
                 body: { mfa: e, sms: t, webauthn: n, ticket: r, token: s, backup: o, totp: d },
-            } = await m.A.post({
+            } = await g.A.post({
                 url: S.Rsh.RESET_PASSWORD,
                 body: i,
                 oldFormErrors: !0,
@@ -340,7 +340,7 @@ let D = {
         return (
             d.h.dispatch({ type: "LOGIN_MFA" }),
             (
-                await m.A.post({
+                await g.A.post({
                     url: S.Rsh.RESET_PASSWORD,
                     body: { code: n, ticket: i, password: r, token: s, source: l, method: t },
                     oldFormErrors: !0,
@@ -353,7 +353,7 @@ let D = {
     async forgotPassword(e) {
         d.h.dispatch({ type: "FORGOT_PASSWORD_REQUEST" });
         try {
-            let t = await m.A.post({
+            let t = await g.A.post({
                 url: S.Rsh.FORGOT_PASSWORD,
                 body: { login: e },
                 oldFormErrors: !0,

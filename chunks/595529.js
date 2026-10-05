@@ -23,20 +23,20 @@ var c = n(617617),
     E = n(935208),
     A = n(460288),
     h = n(199773),
-    I = n(355903),
-    f = n(826673),
+    f = n(355903),
+    I = n(826673),
     p = n(501419),
     T = n(958872),
-    m = n(652215),
-    g = n(355097);
+    g = n(652215),
+    m = n(355097);
 function S(e, t, s, u, E) {
     let A,
-        f,
-        T = (0, I.Ay)((t) => null != e && t.currentlyShown.has(e)),
+        I,
+        T = (0, f.Ay)((t) => null != e && t.currentlyShown.has(e)),
         [S, N] =
             ((A = n(773371).default),
-            (f = [d.default, A, l.default]),
-            (0, r.yK)(f, () => {
+            (I = [d.default, A, l.default]),
+            (0, r.yK)(I, () => {
                 let e = (function (e) {
                     if (__OVERLAY__) return l.default.isInstanceLocked();
                     let t = d.default.getOverlayRenderingTrackedGames();
@@ -53,9 +53,9 @@ function S(e, t, s, u, E) {
             if (null != e) {
                 var t;
                 return (
-                    c.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS) ||
+                    c.A.hasLoaded(m.oD.PRELOADED_USER_SETTINGS) ||
                         ((t = R.current),
-                        _.default.track(m.HAw.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, {
+                        _.default.track(g.HAw.DISMISSIBLE_CONTENT_SHOWN_BEFORE_CONNECTION_OPEN, {
                             content_type: a.M[e],
                             group_name: s ?? null,
                             latest_version: u ?? null,
@@ -66,7 +66,7 @@ function S(e, t, s, u, E) {
                     () => {
                         if (null == e) return;
                         let t = !h.A.hasUserHitDCCap();
-                        (0, I.pd)({ content: e, groupName: s }, t);
+                        (0, f.pd)({ content: e, groupName: s }, t);
                     }
                 );
             }
@@ -80,14 +80,14 @@ function N(e, t) {
         s = (0, T.Sg)(e),
         l = null;
     return (
-        c.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS)
+        c.A.hasLoaded(m.oD.PRELOADED_USER_SETTINGS)
             ? (l = s.find((e) => null == n || !(0, A.c0)(n, e)))
             : null != n && (l = s.find((e) => !(0, A.c0)(n, e))),
         [
             S(l, a, t),
             i.useCallback(
                 (e, n) => {
-                    null != l && (0, f.Dr)(l, { dismissAction: e, groupName: t, guildId: a, forceTrack: n });
+                    null != l && (0, I.Dr)(l, { dismissAction: e, groupName: t, guildId: a, forceTrack: n });
                 },
                 [l, t, a],
             ),
@@ -107,7 +107,7 @@ function R(e, t, n) {
         l = null;
     if (null != e) {
         let n = !(0, T.P3)(e);
-        c.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS)
+        c.A.hasLoaded(m.oD.PRELOADED_USER_SETTINGS)
             ? (l = n && (null == a || a < t) ? e : null)
             : null != a && (l = n && a < t ? e : null);
     }
@@ -144,7 +144,7 @@ function y(e, t, n) {
         l = null;
     if (null != e) {
         let n = !(0, T.P3)(e);
-        c.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS)
+        c.A.hasLoaded(m.oD.PRELOADED_USER_SETTINGS)
             ? (l = n && (null == a || 1 === E.default.compare(t, a)) ? e : null)
             : null != a && (l = n && 1 === E.default.compare(t, a) ? e : null);
     }
@@ -165,7 +165,7 @@ function D(e, t, n, a) {
         d = null;
     if (null != e) {
         let n = !(0, T.P3)(e);
-        c.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS)
+        c.A.hasLoaded(m.oD.PRELOADED_USER_SETTINGS)
             ? (d = n && (null == o || 1 === E.default.compare(t, o)) ? e : null)
             : null != o && (d = n && 1 === E.default.compare(t, o) ? e : null);
     }
@@ -173,7 +173,7 @@ function D(e, t, n, a) {
         S(d, n, a, void 0, t),
         i.useCallback(
             (e, i) => {
-                null != d && (0, f.in)(d, t, n, { dismissAction: e, groupName: a, guildId: n, forceTrack: i });
+                null != d && (0, I.in)(d, t, n, { dismissAction: e, groupName: a, guildId: n, forceTrack: i });
             },
             [d, a, n, t],
         ),
@@ -200,14 +200,14 @@ function b(e, t, n) {
         s = (0, T.Sg)(e),
         l = null;
     return (
-        c.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS)
+        c.A.hasLoaded(m.oD.PRELOADED_USER_SETTINGS)
             ? (l = s.find((e) => null == a || null == a[e] || !1 === a[e].dismissed))
             : null != a && (l = s.find((e) => null == a[e] || !1 === a[e].dismissed)),
         [
             S(l, t, n),
             i.useCallback(
                 (e, i) => {
-                    null != l && (0, f.dX)(l, t, { dismissAction: e, groupName: n, guildId: t, forceTrack: i });
+                    null != l && (0, I.dX)(l, t, { dismissAction: e, groupName: n, guildId: t, forceTrack: i });
                 },
                 [l, n, t],
             ),
@@ -225,7 +225,7 @@ function M(e, t, n, a) {
             S(d, t, a),
             i.useCallback(
                 (e, n) => {
-                    null != d && (0, f.KO)(d, t, { dismissAction: e, groupName: a, guildId: t, forceTrack: n });
+                    null != d && (0, I.KO)(d, t, { dismissAction: e, groupName: a, guildId: t, forceTrack: n });
                 },
                 [d, a, t],
             ),
@@ -243,7 +243,7 @@ function U(e, t, n, i) {
         l = null == i.showAfterTimestamp || (s >= i.showAfterTimestamp && (r ?? 0) <= i.showAfterTimestamp),
         o = null == i.numTimesToRecur || 0 === i.numTimesToRecur || null == n || n < i.numTimesToRecur;
     return (
-        (c.A.hasLoaded(g.oD.PRELOADED_USER_SETTINGS) || (null != r && null != n)) &&
+        (c.A.hasLoaded(m.oD.PRELOADED_USER_SETTINGS) || (null != r && null != n)) &&
         e &&
         l &&
         (null == r || s >= a) &&

@@ -2,14 +2,14 @@ n.d(t, {
     Ay: () => A,
     GK: () => E,
     J7: () => _,
-    PJ: () => I,
-    R8: () => f,
+    PJ: () => f,
+    R8: () => I,
     Xw: () => h,
     cF: () => T,
     fG: () => p,
     jd: () => u,
     lp: () => d,
-    mn: () => m,
+    mn: () => g,
     qs: () => c,
 });
 var i,
@@ -45,10 +45,10 @@ function A(e) {
 function h(e) {
     return e?.type === 2;
 }
-function I(e) {
+function f(e) {
     return e?.type === 3;
 }
-var f = (((o = {})[(o.VIDEO = 0)] = "VIDEO"), (o[(o.CAMERA_PREVIEW = 1)] = "CAMERA_PREVIEW"), o);
+var I = (((o = {})[(o.VIDEO = 0)] = "VIDEO"), (o[(o.CAMERA_PREVIEW = 1)] = "CAMERA_PREVIEW"), o);
 let p = { 0: 320, 1: 160 },
     T = { 0: 960, 1: 480 },
-    m = { 0: 200, 1: 160 };
+    g = { 0: 200, 1: 160 };

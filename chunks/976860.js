@@ -1,6 +1,6 @@
 let i, r, a;
 (n.d(t, {
-    EL: () => m,
+    EL: () => g,
     JK: () => S,
     MX: () => L,
     PR: () => N,
@@ -8,7 +8,7 @@ let i, r, a;
     TX: () => h,
     UC: () => C,
     aX: () => y,
-    bG: () => g,
+    bG: () => m,
     m: () => O,
     pX: () => p,
     sY: () => D,
@@ -41,7 +41,7 @@ function h() {
     }
     return (n(712687).A.close(), !0);
 }
-function I(e, t) {
+function f(e, t) {
     return (
         !!("string" == typeof e && _.some((t) => e.startsWith(t))) &&
         (u.log(`${t} - route to external path ${e}`),
@@ -50,18 +50,18 @@ function I(e, t) {
         !0)
     );
 }
-function f(e, t) {
+function I(e, t) {
     return null == e || "" === e || e === t ? "" : e.startsWith(t) ? e : t + e;
 }
 function p(e, t) {
     let n;
-    if (I(e, "assign")) return;
+    if (f(e, "assign")) return;
     let s = new URL(e, `https:${window.GLOBAL_ENV.WEBAPP_ENDPOINT}`),
         l = { pathname: s.pathname, search: s.search, hash: s.hash, ...t };
     u.log(`transitionTo - Transitioning to ${e}`);
     let o = t?.source,
         d = t?.sourceLocationStack;
-    ((n = i.location).pathname === l.pathname && n.search === f(l.search, "?") && n.hash === f(l.hash, "#")
+    ((n = i.location).pathname === l.pathname && n.search === I(l.search, "?") && n.hash === I(l.hash, "#")
         ? i.replace(l)
         : null == t
           ? i.push(e)
@@ -73,11 +73,11 @@ function T(e, t, n, i) {
     (u.log(`transitionToGuild - Transitioning to ${JSON.stringify({ guildId: e, channelId: t, messageId: n })}`),
         p(c.BVt.CHANNEL(e, t, n), i));
 }
-function m() {
+function g() {
     return null != r && d.n.has(r);
 }
-function g(e, t, n) {
-    I(e, "replace") ||
+function m(e, t, n) {
+    f(e, "replace") ||
         (u.log(`Replacing route with ${e}`), "string" == typeof e ? i.replace(e, t) : i.replace(e), (r = n));
 }
 function S() {

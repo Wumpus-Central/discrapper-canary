@@ -17,19 +17,19 @@ function h(e) {
             animationVariant: n = "default",
             size: a = "md",
             paddingSize: h = "sm",
-            fullScreenOnMobile: I = !0,
-            returnRef: f,
+            fullScreenOnMobile: f = !0,
+            returnRef: I,
             role: p = "dialog",
             "aria-label": T,
-            dismissable: m = !0,
-            maxHeight: g = "default",
+            dismissable: g = !0,
+            maxHeight: m = "default",
             onClose: S,
             contentOutsideContainer: N,
             trackingProps: C,
             children: O,
         } = e,
         R = r.useId(),
-        L = r.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: S, dismissable: m }), [m, R, S]),
+        L = r.useMemo(() => ({ id: R, headingId: `heading-${R}`, onClose: S, dismissable: g }), [g, R, S]),
         y = (0, _.kS)(t, n),
         D = r.useRef(null);
     return (0, i.jsx)(u.V.Provider, {
@@ -39,20 +39,20 @@ function h(e) {
             role: p,
             "aria-label": T,
             "aria-labelledby": null != T ? void 0 : L.headingId,
-            returnRef: f,
+            returnRef: I,
             trackingProps: C,
             trackingComponentName: "Modal",
             children: (0, i.jsx)(c.F, {
                 forceLevel: 1,
                 children: (0, i.jsxs)("div", {
-                    className: s()(A.outerContainer, { [A.fullScreenOnMobile]: I }),
+                    className: s()(A.outerContainer, { [A.fullScreenOnMobile]: f }),
                     children: [
                         N,
                         (0, i.jsx)(l.animated.div, {
                             ref: D,
                             "data-mana-component": "modal",
                             className: s()(A.container, A[`size-${a}`], A[`padding-size-${h}`], {
-                                [A.maxHeightViewport]: "viewport" === g,
+                                [A.maxHeightViewport]: "viewport" === m,
                                 [A.exiting]: t === E.i.EXITING || t === E.i.EXITED,
                             }),
                             style: y,

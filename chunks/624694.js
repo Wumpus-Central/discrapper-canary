@@ -1,4 +1,4 @@
-(n.d(t, { A: () => f }), n(321073));
+(n.d(t, { A: () => I }), n(321073));
 var i = n(17928),
     r = n(73153),
     a = n(652896),
@@ -73,7 +73,7 @@ function h(e, t) {
     let n = o[e];
     return null == n || n.length <= t ? null : n[n.length - t - 1];
 }
-class I extends i.Ay.Store {
+class f extends i.Ay.Store {
     initialize() {
         this.waitFor(s.default, l.A);
     }
@@ -93,7 +93,7 @@ class I extends i.Ay.Store {
         return i[e]?.[t] ?? null;
     }
 }
-let f = new I(r.h, {
+let I = new f(r.h, {
     MEDIA_ENGINE_CONNECTION_STATS: function (e) {
         let { connectionStats: t } = e,
             n = {};

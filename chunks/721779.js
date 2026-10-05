@@ -25,17 +25,17 @@ var o = n(417964),
     E = n(167189),
     A = n(477450);
 let h = n.n(A)().v4().source,
-    I = RegExp(
+    f = RegExp(
         `(?:(?:(?:https?:)?//)|www\\.)(?:[^\\s:@]+(?::[^\\s@]*)?@)?(?:localhost|${h}|(?:[a-z\\u00a1-\\uffff0-9-_]+\\.)+(?:(?:[a-z\\u00a1-\\uffff]{2,})))(?::\\d{2,5})?(?:[/?#][^\\s"()\\[\\]<>]*)?`,
         "ig",
     ),
-    f = /`{3,}[\s\S]*?(?:`{3,}|$)|(`{1,2})[^`]+\1(?!`)/g,
+    I = /`{3,}[\s\S]*?(?:`{3,}|$)|(`{1,2})[^`]+\1(?!`)/g,
     p = /[.,;:?'*_~|]+$/;
 function T(e) {
     return e.replace(p, "");
 }
-var m = n(652215),
-    g = n(758836);
+var g = n(652215),
+    m = n(758836);
 let S = /^\/([a-zA-Z0-9-]+)$/,
     N = /^\/channels\/([0-9]+|@me)\/([0-9]+)$/,
     C = /^\/(invite|template)\/([a-zA-Z0-9-]+)\/?\.?$/,
@@ -56,9 +56,9 @@ let S = /^\/([a-zA-Z0-9-]+)$/,
     F = /dev:\/\/[\w-.~:\/?#\[\]@!$&'()*+,;=%]+/i,
     B = X(window.GLOBAL_ENV.INVITE_HOST),
     V = X(window.GLOBAL_ENV.GUILD_TEMPLATE_HOST),
-    H = X(window.GLOBAL_ENV.WEBAPP_ENDPOINT ?? `//canary.${m.U2_}`),
-    j = X(`//canary.${m.U2_}`),
-    W = X(`//ptb.${m.U2_}`),
+    H = X(window.GLOBAL_ENV.WEBAPP_ENDPOINT ?? `//canary.${g.U2_}`),
+    j = X(`//canary.${g.U2_}`),
+    W = X(`//ptb.${g.U2_}`),
     Y = X("discordapp.com"),
     K = X("discord.com"),
     $ = [
@@ -118,7 +118,7 @@ function et(e) {
     let t;
     if (null == e) return [];
     let n =
-            ((t = (e = e.replace(z, (e, t, n, i) => (null == n ? `${t}http://${i}` : e))).replaceAll(f, " ").match(I)),
+            ((t = (e = e.replace(z, (e, t, n, i) => (null == n ? `${t}http://${i}` : e))).replaceAll(I, " ").match(f)),
             t?.map(T) ?? []),
         r = e.match(F);
     return (function (e) {
@@ -133,7 +133,7 @@ function et(e) {
                 primaryHostRemainingPath: h,
             } = J(o);
             if (null == e || null == e.pathname) continue;
-            let I = null != e.query && e.query.length <= 1e3 ? e.query : null;
+            let f = null != e.query && e.query.length <= 1e3 ? e.query : null;
             function r(e, i) {
                 t.has(i) || (t.add(i), n.push({ type: e, code: i, url: o }));
             }
@@ -143,14 +143,14 @@ function et(e) {
                 r(E.I.INVITE, t);
             }
             A?.match(S) != null && r(E.I.TEMPLATE, A.substring(1));
-            let f = h?.match(C);
-            if (null != f) {
-                let t = f[1].toUpperCase();
+            let I = h?.match(C);
+            if (null != I) {
+                let t = I[1].toUpperCase();
                 if (t === E.I.INVITE) {
                     if (o.includes("\\")) continue;
-                    let t = (0, l.fB)(f[2], e.search);
+                    let t = (0, l.fB)(I[2], e.search);
                     r(E.I.INVITE, t);
-                } else r(t, f[2]);
+                } else r(t, I[2]);
             }
             h?.match(N) != null && r(E.I.CHANNEL_LINK, h.replace("/channels/", ""));
             let p = (function (e) {
@@ -168,9 +168,9 @@ function et(e) {
                         E.I.EVENT,
                         `${p.guildId}-${p.guildEventId}` + (null != p.recurrenceId ? `-${p.recurrenceId}` : ""),
                     ),
-                null != h?.match(x) && null != I)
+                null != h?.match(x) && null != f)
             ) {
-                let e = (0, d._)(I),
+                let e = (0, d._)(f),
                     t = e.clientId;
                 null == t ||
                     "" === t ||
@@ -182,10 +182,10 @@ function et(e) {
                 let e = T[2];
                 r(E.I.APP_DIRECTORY_PROFILE, e);
             }
-            let m = h?.match(L);
-            if (null != m) {
-                let e = m[2],
-                    t = m[3];
+            let g = h?.match(L);
+            if (null != g) {
+                let e = g[2],
+                    t = g[3];
                 if (null != t) {
                     let n = (0, s.L)(e, t);
                     r(E.I.APP_DIRECTORY_STOREFRONT_SKU, n);
@@ -203,7 +203,7 @@ function et(e) {
             let V = h?.match(v);
             if (null != V) {
                 let e = V[1] ?? V[2],
-                    t = en(V[3], null != I ? (0, i.parse)(I) : null);
+                    t = en(V[3], null != f ? (0, i.parse)(f) : null);
                 t.length > 0 && r(E.I.SOCIAL_LAYER_STOREFRONT, (0, c.m5)(t, e));
             }
             let H = ei(o);
@@ -216,10 +216,10 @@ function et(e) {
             null != Y && r(E.I.GAME_ORGANIZATION_INVITE, Y[1]);
             let K = h?.match(G);
             if ((null != K && r(E.I.USER_PROFILE, K[1]), "/shop" === h)) {
-                let t = null != I ? (0, i.parse)(I) : null,
+                let t = null != f ? (0, i.parse)(f) : null,
                     n = t?.tab,
                     a = t?.applicationId,
-                    s = n === g.G2.GAME_SHOPS && "string" == typeof a ? en(t?.skuId, t) : [];
+                    s = n === m.G2.GAME_SHOPS && "string" == typeof a ? en(t?.skuId, t) : [];
                 if ("string" == typeof a && s.length > 0) r(E.I.SOCIAL_LAYER_STOREFRONT_APP, (0, c.m5)(s, a));
                 else {
                     let t = e.hash?.match(k);

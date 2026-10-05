@@ -17,17 +17,17 @@ let _ = r.forwardRef(function (e, t) {
             disabled: E = !1,
             color: A,
             colorClass: h,
-            tooltip: I,
-            overlay: f,
+            tooltip: f,
+            overlay: I,
             "aria-label": p,
             "aria-expanded": T,
-            "aria-haspopup": m,
-            "data-jump-section": g,
+            "aria-haspopup": g,
+            "data-jump-section": m,
         } = e,
         S = (0, i.jsx)(n, { size: "sm", color: A ?? "currentColor", colorClass: h });
     return (0, i.jsx)(o.m, {
         position: "bottom",
-        text: I,
+        text: f,
         ariaHidden: !0,
         children: (0, i.jsxs)(d.D, {
             innerRef: t,
@@ -35,10 +35,10 @@ let _ = r.forwardRef(function (e, t) {
             onClick: E ? void 0 : r,
             className: s()(u.vk, { [u.wH]: a, [u.r9]: E }),
             role: "button",
-            "aria-label": null != p ? p : I,
-            "aria-haspopup": m,
+            "aria-label": null != p ? p : f,
+            "aria-haspopup": g,
             "aria-expanded": T,
-            "data-jump-section": g,
+            "data-jump-section": m,
             "aria-disabled": E,
             children: [
                 _
@@ -55,7 +55,7 @@ let _ = r.forwardRef(function (e, t) {
                           ],
                       })
                     : S,
-                f,
+                I,
             ],
         }),
     });

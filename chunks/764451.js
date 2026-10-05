@@ -12,12 +12,12 @@ var i = n(477900),
     E = n(739187),
     A = n(97483),
     h = n(862328),
-    I = n(866665),
-    f = n(67811),
+    f = n(866665),
+    I = n(67811),
     p = n(28863),
     T = n(417098),
-    m = n(364522),
-    g = n(398590),
+    g = n(364522),
+    m = n(398590),
     S = n(58736),
     N = n(856488),
     C = n(269880),
@@ -394,7 +394,7 @@ function ee(e) {
         E = r.useRef(null),
         A = r.useMemo(() => null != n && Object.keys(K(n, a, o)).length > 0, [n, a, o]),
         h = r.useCallback(() => J(Q(t, n, !0, a, o)), [t, n, a, o]),
-        I = r.useCallback(() => J(Q(t, n, !1, a, o)), [t, n, a, o]);
+        f = r.useCallback(() => J(Q(t, n, !1, a, o)), [t, n, a, o]);
     return A
         ? (0, i.jsxs)("div", {
               role: "group",
@@ -430,7 +430,7 @@ function ee(e) {
                                       id: "copy-link-clean",
                                       label: "Copy clean link",
                                       action: () => {
-                                          (t(), I());
+                                          (t(), f());
                                       },
                                   }),
                               ],
@@ -492,10 +492,10 @@ function et(e) {
                     (0, i.jsx)(
                         h.Q,
                         {
-                            children: (0, i.jsx)(I.m, {
+                            children: (0, i.jsx)(f.m, {
                                 position: "right",
                                 text: `${e.name} Design System`,
-                                children: (0, i.jsx)(f.j, {
+                                children: (0, i.jsx)(I.j, {
                                     name: e.name,
                                     selected: (n ?? l[0]?.id) === e.id,
                                     onClick: () => {
@@ -553,7 +553,7 @@ function et(e) {
                                         icon: o.P,
                                         "aria-label": X.intl.string(X.t.cpT0Cq),
                                         variant: "icon-only",
-                                        onClick: g.jH,
+                                        onClick: m.jH,
                                     }),
                                 ],
                             }),
@@ -564,7 +564,7 @@ function et(e) {
                     (0, i.jsxs)("div", {
                         className: V.MY,
                         children: [
-                            (0, i.jsx)(m.Ip, {
+                            (0, i.jsx)(g.Ip, {
                                 fade: !0,
                                 className: V.pz,
                                 children:

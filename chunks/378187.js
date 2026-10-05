@@ -12,12 +12,12 @@ var i = n(412703),
     E = n(871633),
     A = n(616356),
     h = n(760751),
-    I = n(607567),
-    f = n(927813),
+    f = n(607567),
+    I = n(927813),
     p = n(403362),
     T = n(396813),
-    m = n(859703),
-    g = n(738822),
+    g = n(859703),
+    m = n(738822),
     S = n(759366),
     N = n(590202),
     C = n(851936),
@@ -27,21 +27,21 @@ var i = n(412703),
     y = n(814793),
     D = n(190107),
     v = n(165610);
-let b = +f.A.Millis.MINUTE,
-    M = +f.A.Millis.SECOND,
+let b = +I.A.Millis.MINUTE,
+    M = +I.A.Millis.SECOND,
     P = (0, C.L)({ location: D.rE.QUESTS_MANAGER });
 function U(e) {
     return !(0, O.Ic)(e) && null != e.userStatus && null != e.userStatus.enrolledAt && null == e.userStatus.completedAt;
 }
 function w(e) {
     let t = S.A.getState().autoEnroll,
-        n = m.A.quests;
+        n = g.A.quests;
     for (let i of (0, R.jm)(n, e))
         if (t && 1)
             return (0, T.Oy)(i.id, {
-                questContent: g.uF.RUNNING_ACTIVITY,
+                questContent: m.uF.RUNNING_ACTIVITY,
                 questContentCTA: N.Cy.START_QUEST,
-                sourceQuestContent: g.uF.RUNNING_ACTIVITY,
+                sourceQuestContent: m.uF.RUNNING_ACTIVITY,
             });
 }
 function G(e) {
@@ -54,10 +54,10 @@ class x extends s.A {
         [i.n.PLAY_ACTIVITY]: new Map(),
     };
     calculateHeartbeatDurationMs = (e) => {
-        let t = m.A.quests.get(e);
+        let t = g.A.quests.get(e);
         if (null == t || null == t.config || null == t.userStatus) return b;
         let { progressSeconds: n, targetSeconds: r } = (0, L.Yh)(t, i.o.DESKTOP),
-            a = Math.max(0, (r - n) * f.A.Millis.SECOND);
+            a = Math.max(0, (r - n) * I.A.Millis.SECOND);
         return a <= b ? a + M : b;
     };
     initiateHeartbeat = (e, t, n) => {
@@ -102,7 +102,7 @@ class x extends s.A {
     };
     terminateHeartbeat = (e, t) => {
         let n = this.heartbeats[t],
-            i = m.A.quests,
+            i = g.A.quests,
             r = n.get(e);
         if (null != r) {
             (P.log(`~ terminateHeartbeat -> Terminating heartbeat for questId: ${e}`),
@@ -137,7 +137,7 @@ class x extends s.A {
                 t = this.getActivelyProgressingQuests(i);
             for (let n of new Set(e.keys())) t.has(n) || this.terminateHeartbeat(n, i);
             for (let [r, a] of t.entries())
-                !e.has(r) && (null == n || n(m.A.quests.get(r))) && this.initiateHeartbeat(r, i, a);
+                !e.has(r) && (null == n || n(g.A.quests.get(r))) && this.initiateHeartbeat(r, i, a);
         }
     }
     getActivelyProgressingQuests(e) {
@@ -156,7 +156,7 @@ class x extends s.A {
         let e = new Map(),
             t = c.Ay.getRunningGames(),
             n = c.Ay.getRunningNonGames(),
-            i = m.A.quests;
+            i = g.A.quests;
         P.log("~ getActivelyProgressingPlayOnDesktopQuestIds -> Running games: ", t, "Running non-games: ", n);
         let r = {};
         for (let e of t) {
@@ -205,13 +205,13 @@ class x extends s.A {
     getActivelyProgressingStreamOnDesktopQuests() {
         let e = new Map(),
             t = A.A.getCurrentUserActiveStream();
-        if (null == t || 2 > I.Ay.countVoiceStatesForChannel(t.channelId)) return e;
+        if (null == t || 2 > f.Ay.countVoiceStatesForChannel(t.channelId)) return e;
         let n = A.A.getStreamerActiveStreamMetadata();
         if (null == n) return e;
         P.log("~ getActivelyProgressingStreamOnDesktopQuestIds -> Active stream metadata: ", n);
         let i = n.id;
         if (null == i) return e;
-        for (let t of m.A.quests.values()) {
+        for (let t of g.A.quests.values()) {
             let n = (0, L.a2)(t);
             U(t) && null != n && n === i && e.set(t.id, { applicationId: i });
         }
@@ -234,7 +234,7 @@ class x extends s.A {
             0 === i.size)
         )
             return e;
-        let r = m.A.quests;
+        let r = g.A.quests;
         for (let t of i)
             for (let n of r.values()) {
                 let i = (0, L.vS)(n);

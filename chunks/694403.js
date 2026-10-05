@@ -20,8 +20,8 @@ function h(e) {
         r = { whitespaceSanitized: n, fullySanitized: i };
     return (A.set(e, r), r);
 }
-let I = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
-    f = [
+let f = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
+    I = [
         _.D.TEXT,
         _.D.UNDERLINE,
         _.D.STRONG,
@@ -32,10 +32,10 @@ let I = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
         _.D.LINE_BREAK,
         _.D.TIMESTAMP,
     ],
-    p = [...f, _.D.EMOJI, _.D.CUSTOM_EMOJI],
+    p = [...I, _.D.EMOJI, _.D.CUSTOM_EMOJI],
     T = [_.D.LIST, _.D.HEADING, _.D.BLOCK_QUOTE, _.D.SUBTEXT],
-    m = [_.D.TEXT],
-    g = [
+    g = [_.D.TEXT],
+    m = [
         _.D.UNDERLINE,
         _.D.STRONG,
         _.D.ITALICS,
@@ -76,7 +76,7 @@ function C(e) {
         if (N(e)) throw Error("Rejected due to suspicious characters in URL: " + JSON.stringify(e));
         let t = new URL(e),
             n = t.protocol ?? "";
-        if (!I.includes(n.toLowerCase())) throw Error("Provided protocol is not allowed: " + n);
+        if (!f.includes(n.toLowerCase())) throw Error("Provided protocol is not allowed: " + n);
         if (("http:" === n || "https:" === n) && (null == t.hostname || 0 === t.hostname.length))
             throw Error("no hostname");
         let i = (0, E.nK)(t);
@@ -119,18 +119,18 @@ let O = {
         if (N(s)) return u();
         let E = h(s),
             A = h(a),
-            I = h(null != l ? l : ""),
+            f = h(null != l ? l : ""),
             O = E.whitespaceSanitized,
             R = A.fullySanitized,
-            L = I.fullySanitized,
+            L = f.fullySanitized,
             y = R.trim();
         if (0 === O.trim().length || 0 === y.length) return u();
         let D = C(o().unescapeUrl(s));
         if (null == D || (0, d.F9)(l)) return u();
         let v = { ...n, allowEscape: !1, parseInlineCodeChildContent: !0 },
-            b = n.allowEmojiLinks ? p : f,
+            b = n.allowEmojiLinks ? p : I,
             M = [...b, ...T],
-            P = [...m, ...g],
+            P = [...g, ...m],
             U = S(t(R, v), M, [_.D.EMOJI]),
             w = S(t(L, v), P);
         if (null == U || null == w) return u();
@@ -180,7 +180,7 @@ let O = {
             return u();
         let x = r().pick(t.rules, b),
             k = o().parserFor(x)(A.whitespaceSanitized, v),
-            F = I.whitespaceSanitized,
+            F = f.whitespaceSanitized,
             { target: B } = D;
         return { content: k, target: B, title: F };
     },

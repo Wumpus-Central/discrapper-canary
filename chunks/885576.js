@@ -12,21 +12,21 @@ var r = n(649852),
     E = n(280450),
     A = n(652215),
     h = n(731854);
-let I = Date.now(),
-    f = !1,
+let f = Date.now(),
+    I = !1,
     p = !1,
     T = !1,
-    m = !1,
-    g = !1;
+    g = !1,
+    m = !1;
 function S() {
-    return T || m || ((0, _.isAndroid)() && g);
+    return T || g || ((0, _.isAndroid)() && m);
 }
 function N() {
     let e;
-    (Date.now() - I > A.sdF || S()
-        ? f || l.h.dispatch({ type: "IDLE", idle: !0, idleSince: I })
-        : f && l.h.dispatch({ type: "IDLE", idle: !1 }),
-        0 === (e = c.cU.getSetting()) || null != i || Date.now() - I > Math.min(e * u.A.Millis.SECOND, A.sdF) || S()
+    (Date.now() - f > A.sdF || S()
+        ? I || l.h.dispatch({ type: "IDLE", idle: !0, idleSince: f })
+        : I && l.h.dispatch({ type: "IDLE", idle: !1 }),
+        0 === (e = c.cU.getSetting()) || null != i || Date.now() - f > Math.min(e * u.A.Millis.SECOND, A.sdF) || S()
             ? p || l.h.dispatch({ type: "AFK", afk: !0 })
             : p && l.h.dispatch({ type: "AFK", afk: !1 }));
 }
@@ -38,7 +38,7 @@ if (!__OVERLAY__) {
         ? (!(function e() {
               function t(t) {
                   let n = Date.now() - t;
-                  ((null == i || n > i) && ((I = Math.max(n, I)), (i = null)),
+                  ((null == i || n > i) && ((f = Math.max(n, f)), (i = null)),
                       N(),
                       setTimeout(e, 10 * u.A.Millis.SECOND));
               }
@@ -54,10 +54,10 @@ if (!__OVERLAY__) {
               ((T = !0), C(!0), o.default.disconnect());
           }),
           d.A.powerMonitor.on("lock-screen", () => {
-              ((m = !0), C(!0));
+              ((g = !0), C(!0));
           }),
           d.A.powerMonitor.on("unlock-screen", () => {
-              ((m = !1), C(!1));
+              ((g = !1), C(!1));
           }))
         : setInterval(N, 30 * u.A.Millis.SECOND);
     let e = a()(() => {
@@ -71,11 +71,11 @@ function O(e) {
     let { timestamp: t, type: n, bypassIdleUpdate: r } = e,
         a = "OVERLAY_SET_NOT_IDLE" === n && null != t;
     return (
-        (!a || !(t <= I)) &&
+        (!a || !(t <= f)) &&
         !r &&
         ((i = null),
-        (I = a ? t : Date.now()),
-        __OVERLAY__ ? l.h.dispatch({ type: "OVERLAY_SET_NOT_IDLE", timestamp: I }) : N(),
+        (f = a ? t : Date.now()),
+        __OVERLAY__ ? l.h.dispatch({ type: "OVERLAY_SET_NOT_IDLE", timestamp: f }) : N(),
         !1)
     );
 }
@@ -85,24 +85,24 @@ class R extends s.Ay.Store {
     }
     static displayName = "IdleStore";
     isIdle() {
-        return f;
+        return I;
     }
     isAFK() {
         return p;
     }
     getIdleSince() {
-        return f ? I : null;
+        return I ? f : null;
     }
     getSystemSuspended() {
         return T;
     }
     getSystemLocked() {
-        return m;
+        return g;
     }
 }
 let L = new R(l.h, {
     IDLE: function (e) {
-        f = e.idle;
+        I = e.idle;
     },
     AFK: function (e) {
         p = e.afk;
@@ -113,7 +113,7 @@ let L = new R(l.h, {
     },
     APP_STATE_UPDATE: function (e) {
         let { state: t } = e;
-        return ((g = t === A.g6G.BACKGROUND), (i = null), (I = Date.now()), N(), !1);
+        return ((m = t === A.g6G.BACKGROUND), (i = null), (f = Date.now()), N(), !1);
     },
     OVERLAY_SET_NOT_IDLE: O,
     CHANNEL_SELECT: O,

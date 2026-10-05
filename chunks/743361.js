@@ -12,13 +12,13 @@ var i = n(435558),
     E = n(566908),
     A = n(970244),
     h = n(994500),
-    I = n(287809),
-    f = n(392054),
+    f = n(287809),
+    I = n(392054),
     p = n(73510),
     T = n(652215),
-    m = n(375708);
-function g(e) {
-    return e === T.Z86.GIF.title ? m.intl.string(m.t["0vrCgJ"]) : "";
+    g = n(375708);
+function m(e) {
+    return e === T.Z86.GIF.title ? g.intl.string(g.t["0vrCgJ"]) : "";
 }
 let S = [
     ...r()(T.Z86)
@@ -28,13 +28,13 @@ let S = [
             untranslatedName: e.command,
             displayName: e.command,
             type: o.kc.CHAT,
-            inputType: f.y$.BUILT_IN_INTEGRATION,
+            inputType: I.y$.BUILT_IN_INTEGRATION,
             applicationId: p.Ik.BUILT_IN,
             get untranslatedDescription() {
-                return g(e.title);
+                return m(e.title);
             },
             get displayDescription() {
-                return g(e.title);
+                return m(e.title);
             },
             options:
                 e.type === T.p_j.GIF
@@ -44,10 +44,10 @@ let S = [
                               displayName: "query",
                               type: o.n4.STRING,
                               get description() {
-                                  return m.intl.string(m.t["+9g3Du"]);
+                                  return g.intl.string(g.t["+9g3Du"]);
                               },
                               get displayDescription() {
-                                  return m.intl.string(m.t["+9g3Du"]);
+                                  return g.intl.string(g.t["+9g3Du"]);
                               },
                               required: !0,
                           },
@@ -62,13 +62,13 @@ let S = [
         untranslatedName: "leave",
         displayName: "leave",
         type: o.kc.CHAT,
-        inputType: f.y$.BUILT_IN,
+        inputType: I.y$.BUILT_IN,
         applicationId: p.Ik.BUILT_IN,
         get untranslatedDescription() {
-            return m.intl.string(m.t["26C4oi"]);
+            return g.intl.string(g.t["26C4oi"]);
         },
         get displayDescription() {
-            return m.intl.string(m.t["26C4oi"]);
+            return g.intl.string(g.t["26C4oi"]);
         },
         options: [
             {
@@ -76,10 +76,10 @@ let S = [
                 displayName: "silent",
                 type: o.n4.BOOLEAN,
                 get description() {
-                    return m.intl.string(m.t.YH7PkD);
+                    return g.intl.string(g.t.YH7PkD);
                 },
                 get displayDescription() {
-                    return m.intl.string(m.t.bq3JXs);
+                    return g.intl.string(g.t.bq3JXs);
                 },
                 required: !1,
             },
@@ -91,22 +91,22 @@ let S = [
         execute: (e, t) => {
             let { channel: n } = t;
             if (null == n) return;
-            let i = (0, d.m1)(n, I.default, h.A),
-                r = m.intl.formatToPlainString(m.t.hJ5Ap4, { name: i }),
-                o = m.intl.format(m.t.SSIVOu, { name: i }),
+            let i = (0, d.m1)(n, f.default, h.A),
+                r = g.intl.formatToPlainString(g.t.hJ5Ap4, { name: i }),
+                o = g.intl.format(g.t.SSIVOu, { name: i }),
                 c = e.find((e) => "silent" === e.name)?.value ?? !1;
             async function u() {
                 if (null != n)
                     try {
                         await s.A.closePrivateChannel(n.id, void 0, c);
                     } catch (e) {
-                        l.A.sendBotMessage(n.id, m.intl.string(m.t["YOsuT/"]));
+                        l.A.sendBotMessage(n.id, g.intl.string(g.t["YOsuT/"]));
                     }
             }
             (n.isManaged() &&
-                ((r = m.intl.formatToPlainString(m.t.hVGjEW, { name: i })),
-                (o = m.intl.format(m.t.IK1Qvs, { name: i }))),
-                (0, a.A)({ title: r, subtitle: o, confirmText: m.intl.string(m.t["26C4oi"]), onConfirm: u }));
+                ((r = g.intl.formatToPlainString(g.t.hVGjEW, { name: i })),
+                (o = g.intl.format(g.t.IK1Qvs, { name: i }))),
+                (0, a.A)({ title: r, subtitle: o, confirmText: g.intl.string(g.t["26C4oi"]), onConfirm: u }));
         },
     },
     {
@@ -114,13 +114,13 @@ let S = [
         untranslatedName: "schedule",
         displayName: "schedule",
         type: o.kc.CHAT,
-        inputType: f.y$.BUILT_IN,
+        inputType: I.y$.BUILT_IN,
         applicationId: p.Ik.BUILT_IN,
         get untranslatedDescription() {
-            return m.intl.string(m.t.Xw97sv);
+            return g.intl.string(g.t.Xw97sv);
         },
         get displayDescription() {
-            return m.intl.string(m.t.Xw97sv);
+            return g.intl.string(g.t.Xw97sv);
         },
         options: [
             {
@@ -128,10 +128,10 @@ let S = [
                 displayName: "message",
                 type: o.n4.STRING,
                 get description() {
-                    return m.intl.string(m.t.WPXiIk);
+                    return g.intl.string(g.t.WPXiIk);
                 },
                 get displayDescription() {
-                    return m.intl.string(m.t.WPXiIk);
+                    return g.intl.string(g.t.WPXiIk);
                 },
                 required: !0,
                 get maxLength() {
@@ -157,13 +157,13 @@ let S = [
         untranslatedName: "sticker",
         displayName: "sticker",
         type: o.kc.CHAT,
-        inputType: f.y$.BUILT_IN_INTEGRATION,
+        inputType: I.y$.BUILT_IN_INTEGRATION,
         applicationId: p.Ik.BUILT_IN,
         get untranslatedDescription() {
-            return m.intl.string(m.t.GUH9II);
+            return g.intl.string(g.t.GUH9II);
         },
         get displayDescription() {
-            return m.intl.string(m.t.GUH9II);
+            return g.intl.string(g.t.GUH9II);
         },
         options: [
             {
@@ -171,10 +171,10 @@ let S = [
                 displayName: "query",
                 type: o.n4.STRING,
                 get description() {
-                    return m.intl.string(m.t.hIbHm1);
+                    return g.intl.string(g.t.hIbHm1);
                 },
                 get displayDescription() {
-                    return m.intl.string(m.t.hIbHm1);
+                    return g.intl.string(g.t.hIbHm1);
                 },
                 required: !0,
             },

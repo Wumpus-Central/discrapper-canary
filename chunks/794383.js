@@ -12,12 +12,12 @@ var i = n(812729),
     E = n(351906),
     A = n(652215);
 let h = +u.A.Millis.MINUTE,
-    I = 5 * u.A.Millis.MINUTE,
-    f = /live_user_(.*)-\{width\}/,
+    f = 5 * u.A.Millis.MINUTE,
+    I = /live_user_(.*)-\{width\}/,
     p = null,
     T = 0,
-    m = null,
-    g = new Set(),
+    g = null,
+    m = new Set(),
     S = {};
 function N(e, t, n) {
     return s.Bo.get({
@@ -47,7 +47,7 @@ let O = new (class {
     }
     stop() {
         ((this._started = !1),
-            (m = null),
+            (g = null),
             (T = 0),
             null != this._nextCheck && clearTimeout(this._nextCheck),
             l.h.dispatch({ type: "STREAMING_UPDATE", stream: null }));
@@ -65,7 +65,7 @@ let O = new (class {
                 l = { large_image: null != r ? ((0, c.Di)(A.fg2.TWITCH, r) ?? void 0) : void 0 },
                 o = await C(a, t),
                 u = d.A.get(A.fg2.TWITCH),
-                _ = f.exec(r)?.[1] ?? e.name,
+                _ = I.exec(r)?.[1] ?? e.name,
                 E = null != s && "" !== s ? s.slice(0, 128) : void 0,
                 h = null != o && "" !== o ? o.slice(0, 128) : void 0;
             return {
@@ -85,7 +85,7 @@ let O = new (class {
     }
     async _checkYouTube(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (((m = null), e.revoked || g.has(e.id))) return null;
+        if (((g = null), e.revoked || m.has(e.id))) return null;
         try {
             let {
                 body: { items: n },
@@ -103,7 +103,7 @@ let O = new (class {
                 } = n[0],
                 l = { large_image: (0, c.Di)(A.fg2.YOUTUBE, a.high.url) ?? void 0 },
                 o = null != r && "" !== r ? r.slice(0, 128) : void 0;
-            return (m = {
+            return (g = {
                 url: `https://youtube.com/watch?v=${i}`,
                 name: d.A.get(A.fg2.YOUTUBE).name,
                 details: o,
@@ -114,7 +114,7 @@ let O = new (class {
                 return o.A.refreshAccessToken(e.type, e.id)
                     .then((t) => this._checkYouTube(e, t))
                     .catch(() => null);
-            return (403 === n.status && g.add(e.id), null);
+            return (403 === n.status && m.add(e.id), null);
         }
     }
     _check() {
@@ -124,7 +124,7 @@ let O = new (class {
         null != this._nextCheck && clearTimeout(this._nextCheck);
         let t = [A.fg2.TWITCH],
             n = Date.now();
-        (T <= n && (t.push(A.fg2.YOUTUBE), (T = n + I)),
+        (T <= n && (t.push(A.fg2.YOUTUBE), (T = n + f)),
             Promise.allSettled(
                 e
                     .filter((e) => t.includes(e.type))
@@ -132,7 +132,7 @@ let O = new (class {
             ).then((e) => {
                 if (this._started) {
                     let t = e.find((e) => "fulfilled" === e.status && null != e.value)?.value;
-                    (null == t && null != m && (t = m), l.h.dispatch({ type: "STREAMING_UPDATE", stream: t }));
+                    (null == t && null != g && (t = g), l.h.dispatch({ type: "STREAMING_UPDATE", stream: t }));
                 }
                 this._scheduleCheck();
             }));

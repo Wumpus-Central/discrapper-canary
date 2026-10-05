@@ -50,7 +50,7 @@ function c(e, t, n) {
         entityMetadata: E,
         image: A,
         recurrenceRule: h,
-        eventExceptions: I,
+        eventExceptions: f,
     } = e;
     return {
         id: n ?? s.tq,
@@ -67,7 +67,7 @@ function c(e, t, n) {
         creator_id: i.default.getId(),
         status: s.XG.SCHEDULED,
         recurrence_rule: o(h),
-        guild_scheduled_event_exceptions: I.map((e) => ({
+        guild_scheduled_event_exceptions: f.map((e) => ({
             event_exception_id: e.eventExceptionId,
             event_id: e.eventId,
             guild_id: e.guildId,

@@ -13,16 +13,16 @@ var i = n(451988),
     A = n(25202);
 n(974477);
 var h = n(392164),
-    I = n(823894),
-    f = n(355097);
+    f = n(823894),
+    I = n(355097);
 let p = {
-        gifAutoPlay: { value: !1, reasonKey: f._A.GAME_MODE },
-        animateEmoji: { value: !1, reasonKey: f._A.GAME_MODE },
-        animateStickers: { value: I.BJ.ANIMATE_ON_INTERACTION, reasonKey: f._A.GAME_MODE },
+        gifAutoPlay: { value: !1, reasonKey: I._A.GAME_MODE },
+        animateEmoji: { value: !1, reasonKey: I._A.GAME_MODE },
+        animateStickers: { value: f.BJ.ANIMATE_ON_INTERACTION, reasonKey: I._A.GAME_MODE },
     },
     T = Object.keys(p),
-    m = new i.Ep(),
     g = new i.Ep(),
+    m = new i.Ep(),
     S = new i.Ep(),
     N = 0,
     C = 0,
@@ -35,14 +35,14 @@ function y(e) {
     r.h.dispatch({ type: "GAME_MODE_DISCORD_HOVER_CHANGE", hovered: e });
 }
 function D() {
-    (g.stop(), y(!0));
+    (m.stop(), y(!0));
 }
 function v() {
-    g.start(2e3, () => y(!1));
+    m.start(2e3, () => y(!1));
 }
 function b() {
     ((R = !1),
-        g.stop(),
+        m.stop(),
         document.documentElement.removeEventListener("mouseenter", D),
         document.documentElement.removeEventListener("mouseleave", v));
 }
@@ -69,7 +69,7 @@ function U() {
         i = [];
     for (let e of T) {
         let r = u.A.getOverride(e);
-        t ? null == r && (n[e] = p[e]) : r?.reasonKey === f._A.GAME_MODE && i.push(e);
+        t ? null == r && (n[e] = p[e]) : r?.reasonKey === I._A.GAME_MODE && i.push(e);
     }
     (Object.keys(n).length > 0 && a.Ay.applySettingsOverride(n), i.length > 0 && a.Ay.clearSettingsOverride(...i));
 }
@@ -77,7 +77,7 @@ function w() {
     r.h.isDispatching() ? S.start(0, U, !1) : U();
 }
 function G() {
-    (b(), m.stop(), S.stop(), M(0), P(0));
+    (b(), g.stop(), S.stop(), M(0), P(0));
 }
 class x extends s.A {
     actions = {
@@ -87,7 +87,7 @@ class x extends s.A {
             });
         },
         WINDOW_FOCUS: () => {
-            m.start(2e3, L);
+            g.start(2e3, L);
         },
         LOGOUT: () => G(),
     };

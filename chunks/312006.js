@@ -12,12 +12,12 @@ var i = n(435558),
     E = n(488926),
     A = n(233993),
     h = n(105530),
-    I = n(418208);
-let f = {},
+    f = n(418208);
+let I = {},
     p = { speaker: !1, moderator: !1 };
 function T(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-    null == f[t] && (f[t] = {});
+    null == I[t] && (I[t] = {});
     let i = (function (e, t) {
         let n,
             i = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
@@ -39,28 +39,28 @@ function T(e, t) {
               }
             : p;
     })(e, t, n);
-    return ((f[t][e] = i), i);
-}
-function m(e) {
-    let t = Object.values(l.A.getMutableGuildChannelsForGuild(e)).filter((e) => e.isGuildStageVoice());
-    for (let e of t) delete f[e.id];
-    return t.length > 0;
+    return ((I[t][e] = i), i);
 }
 function g(e) {
+    let t = Object.values(l.A.getMutableGuildChannelsForGuild(e)).filter((e) => e.isGuildStageVoice());
+    for (let e of t) delete I[e.id];
+    return t.length > 0;
+}
+function m(e) {
     let { guildId: t, user: n } = e;
     if (null == n || null == t) return !1;
     var i = n.id;
-    for (let e in f) {
+    for (let e in I) {
         let n = l.A.getBasicChannel(e);
-        null != n && n.guild_id === t && delete f[e][i];
+        null != n && n.guild_id === t && delete I[e][i];
     }
     return !0;
 }
 function S(e) {
     let { guild: t } = e;
-    for (let e in f) {
+    for (let e in I) {
         let n = l.A.getBasicChannel(e);
-        (null == n || n.guild_id === t.id) && delete f[e];
+        (null == n || n.guild_id === t.id) && delete I[e];
     }
 }
 class N extends a.Ay.Store {
@@ -80,8 +80,8 @@ class N extends a.Ay.Store {
     }
     getPermissionsForUser(e, t) {
         let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
-        if (null == e || null == t || (e === u.default.getCurrentUser()?.id && (0, I.o$)())) return p;
-        let i = f[t]?.[e];
+        if (null == e || null == t || (e === u.default.getCurrentUser()?.id && (0, f.o$)())) return p;
+        let i = I[t]?.[e];
         if (null != i)
             if (n && null == i.moderator) return T(e, t, !0);
             else return i;
@@ -91,31 +91,31 @@ class N extends a.Ay.Store {
 let C = new N(s.h, {
     CHANNEL_UPDATES: function (e) {
         let { channels: t } = e;
-        for (let e of t) delete f[e.id];
+        for (let e of t) delete I[e.id];
     },
     CONNECTION_OPEN: function () {
-        f = {};
+        I = {};
     },
-    GUILD_MEMBER_REMOVE: g,
-    GUILD_MEMBER_UPDATE: g,
+    GUILD_MEMBER_REMOVE: m,
+    GUILD_MEMBER_UPDATE: m,
     GUILD_ROLE_UPDATE: function (e) {
         let { guildId: t } = e;
-        m(t);
+        g(t);
     },
     PASSIVE_UPDATE_V2: function (e) {
-        return m(e.guildId);
+        return g(e.guildId);
     },
     VOICE_STATE_UPDATES: function (e) {
         let { voiceStates: t } = e;
         return (
-            !r().isEmpty(f) &&
+            !r().isEmpty(I) &&
             t.reduce((e, t) => {
                 let { userId: n, channelId: i } = t;
                 return (
                     (function (e, t) {
                         if (null == t) return !1;
                         let n = l.A.getChannel(t);
-                        return null != n && !!n.isGuildStageVoice() && (delete f[t]?.[e], !0);
+                        return null != n && !!n.isGuildStageVoice() && (delete I[t]?.[e], !0);
                     })(n, i) || e
                 );
             }, !1)

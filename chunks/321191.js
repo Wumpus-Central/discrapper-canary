@@ -12,12 +12,12 @@ var i = n(435558),
     E = n(71393),
     A = n(536802),
     h = n(290863),
-    I = n(711014),
-    f = n(403362),
+    f = n(711014),
+    I = n(403362),
     p = n(439174),
     T = n(633075),
-    m = n(646976),
-    g = n(289173),
+    g = n(646976),
+    m = n(289173),
     S = n(210598);
 function N(e) {
     let t, n;
@@ -60,13 +60,13 @@ function x(e) {
         case s.x.WANT_TO_PLAY_GAMES:
             let n = e.data.games.map((e) => ({ gameId: e.game_id, comment: e.comment, tags: e.tags })),
                 i = r().uniqBy(n, "gameId");
-            return new g.Yy({ id: e.id, type: t, games: i });
+            return new m.Yy({ id: e.id, type: t, games: i });
         case s.x.APPLICATION:
             return new T.R({ id: e.id, applicationId: e.data.application_id });
         case s.x.PERSONAL:
             return new S.Tu({ id: e.id, header: e.data.header ?? "", sections: (0, S.wv)(e.data.sections) });
         case s.x.CLIPS_GALLERY:
-            return new m.kM({
+            return new g.kM({
                 id: e.id,
                 clips: e.data.clips
                     .map((e) =>
@@ -86,7 +86,7 @@ function x(e) {
                               }
                             : null,
                     )
-                    .filter(f.Vq),
+                    .filter(I.Vq),
             });
         default:
             return;
@@ -99,7 +99,7 @@ function k(e) {
         case s.x.PLAYED_GAMES:
         case s.x.WANT_TO_PLAY_GAMES: {
             let { id: t, type: n, games: i } = e;
-            return new g.Yy({ id: t, type: n, games: i });
+            return new m.Yy({ id: t, type: n, games: i });
         }
         case s.x.APPLICATION: {
             let { id: t, applicationId: n } = e;
@@ -111,7 +111,7 @@ function k(e) {
         }
         case s.x.CLIPS_GALLERY: {
             let { id: t, clips: n } = e;
-            return new m.kM({ id: t, clips: n });
+            return new g.kM({ id: t, clips: n });
         }
         default:
             e.type;
@@ -186,7 +186,7 @@ function $(e) {
         }),
             U.set(
                 t.user.id,
-                I.Ay.getFlattenedGuildIds()
+                f.Ay.getFlattenedGuildIds()
                     .filter((t) => null != e[t])
                     .map((t) => ({ guild: e[t].guild, nick: e[t].nick })),
             ));
@@ -253,7 +253,7 @@ function $(e) {
                       }
                     : null,
             badges: d,
-            widgets: t.widgets?.map(x).filter(f.Vq),
+            widgets: t.widgets?.map(x).filter(I.Vq),
             wishlistSettings: t.wishlist_settings,
             private: t.private,
         }),
@@ -394,7 +394,7 @@ function ee(e) {
     let { userId: t, widgets: n } = e,
         i = D.get(t);
     if (null == i) return !1;
-    D.set(t, { ...i, widgets: n.map(x).filter(f.Vq) });
+    D.set(t, { ...i, widgets: n.map(x).filter(I.Vq) });
 }
 function et(e) {
     let { badges: t, ttlInSeconds: n, userId: i } = e;
@@ -460,7 +460,7 @@ class eo extends A.A {
         });
     }
     initialize() {
-        (this.waitFor(I.Ay), this.syncWith([c.default], es));
+        (this.waitFor(f.Ay), this.syncWith([c.default], es));
     }
     isFetchingProfile(e, t) {
         let n = L.get(e);
@@ -508,7 +508,7 @@ class eo extends A.A {
         null != e &&
             e.forEach((e) => {
                 let { userId: t, profile: n } = e;
-                null != t && (null != n ? D.set(t, { ...n, widgets: n.widgets?.map(k).filter(f.Vq) }) : D.delete(t));
+                null != t && (null != n ? D.set(t, { ...n, widgets: n.widgets?.map(k).filter(I.Vq) }) : D.delete(t));
             });
     };
     takeSnapshot() {

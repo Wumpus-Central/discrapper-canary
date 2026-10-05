@@ -19,7 +19,7 @@ n.d(t, {
             if (r instanceof E.YB) {
                 if (r.isScheduledForDeletion()) return O;
                 if (E.Le.has(r.type)) {
-                    let t = f.A.getChannel(r.parent_id);
+                    let t = I.A.getChannel(r.parent_id);
                     return null == t
                         ? O
                         : x(
@@ -39,7 +39,7 @@ n.d(t, {
                 ((d = r.computeLurkerPermissionsAllowList() ?? d),
                     (a = null != a ? { ...r.permissionOverwrites, ...a } : r.permissionOverwrites));
                 let t = r.getGuildId();
-                n = null != t ? m.A.getGuild(t) : null;
+                n = null != t ? g.A.getGuild(t) : null;
             } else ((a = a ?? {}), (n = r));
             if (null == n) return O;
             let c = {
@@ -91,12 +91,12 @@ var i = n(435558),
     E = n(95701),
     A = n(260509),
     h = n(34457),
-    I = n(280450),
-    f = n(734057),
+    f = n(280450),
+    I = n(734057),
     p = n(696451),
     T = n(317525),
-    m = n(71393),
-    g = n(287809),
+    g = n(71393),
+    m = n(287809),
     S = n(7864),
     N = n(935208),
     C = n(652215);
@@ -168,8 +168,8 @@ function P(e, t, n) {
     return (
         i &&
             t.mfaLevel === C.EkJ.ELEVATED &&
-            n === I.default.getId() &&
-            !g.default.getCurrentUser()?.mfaEnabled &&
+            n === f.default.getId() &&
+            !m.default.getCurrentUser()?.mfaEnabled &&
             (e = a.TF(e, C.Lti)),
         e
     );
@@ -228,9 +228,9 @@ function G(e) {
     if (i instanceof E.YB) {
         if (i.isScheduledForDeletion()) return O;
         if (E.Le.has(i.type)) {
-            let e = f.A.getChannel(i.parent_id);
+            let e = I.A.getChannel(i.parent_id);
             if (null == e || e.isScheduledForDeletion()) return O;
-            let t = o === g.default.getCurrentUser()?.id && _.A.hasJoined(i.id);
+            let t = o === m.default.getCurrentUser()?.id && _.A.hasJoined(i.id);
             return x(
                 i,
                 G({ user: n, context: e, overwrites: r, roles: a, checkElevated: s, excludeGuildPermissions: l }),
@@ -241,10 +241,10 @@ function G(e) {
         ((d = i.computeLurkerPermissionsAllowList() ?? d),
             (r = null != r ? { ...i.permissionOverwrites, ...r } : i.permissionOverwrites));
         let e = i.getGuildId();
-        t = null != e ? m.A.getGuild(e) : null;
+        t = null != e ? g.A.getGuild(e) : null;
     } else ((r = r ?? {}), (t = i));
     if (null == t) return O;
-    if (!(o === g.default.getCurrentUser()?.id && c.A.isViewingRoles(t.id)) && (0, A.bM)(t, o)) return P(R, t, o, s);
+    if (!(o === m.default.getCurrentUser()?.id && c.A.isViewingRoles(t.id)) && (0, A.bM)(t, o)) return P(R, t, o, s);
     let u = p.Ay.getMember(t.id, o);
     return w({
         userId: o,
@@ -319,11 +319,11 @@ function K(e, t) {
     let n,
         i = {};
     if (t instanceof E.YB) {
-        if (t.type === C.rbe.PRIVATE_THREAD || (E.Le.has(t.type) && null == (t = f.A.getChannel(t.parent_id))))
+        if (t.type === C.rbe.PRIVATE_THREAD || (E.Le.has(t.type) && null == (t = I.A.getChannel(t.parent_id))))
             return !1;
         i = t.permissionOverwrites;
         let e = t.getGuildId();
-        n = null != e ? m.A.getGuild(e) : null;
+        n = null != e ? g.A.getGuild(e) : null;
     } else n = t;
     if (null == n) return !1;
     let r = T.A.getEveryoneRole(n).permissions,
@@ -334,11 +334,11 @@ function $(e, t) {
     let n,
         i = {};
     if (t instanceof E.YB) {
-        if (t.type === C.rbe.PRIVATE_THREAD || (E.Le.has(t.type) && null == (t = f.A.getChannel(t.parent_id))))
+        if (t.type === C.rbe.PRIVATE_THREAD || (E.Le.has(t.type) && null == (t = I.A.getChannel(t.parent_id))))
             return !1;
         i = t.permissionOverwrites;
         let e = t.getGuildId();
-        n = null != e ? m.A.getGuild(e) : null;
+        n = null != e ? g.A.getGuild(e) : null;
     } else n = t;
     if (null == n) return !1;
     let s = T.A.getEveryoneRole(n);

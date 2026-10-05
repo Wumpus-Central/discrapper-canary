@@ -12,12 +12,12 @@ var i,
     E = n(573163),
     A = n(309010),
     h = n(543465),
-    I = n(645959),
-    f = n(927813),
+    f = n(645959),
+    I = n(927813),
     p = n(935208),
     T = n(206885),
-    m = n(41984),
-    g = n(956753),
+    g = n(41984),
+    m = n(956753),
     S = n(489277),
     N = n(222506),
     C = n(614455),
@@ -43,7 +43,7 @@ let y = new s.J(
     v = null,
     b = !1,
     M = null,
-    P = 30 * f.A.Millis.MINUTE;
+    P = 30 * I.A.Millis.MINUTE;
 function U(e) {
     let t = c.A.getChannel(e),
         n = t?.lastMessageId;
@@ -76,13 +76,13 @@ function x() {
                 if (((D = t), !y.has(t))) {
                     let n = U(t),
                         i = c.A.getChannel(t)?.lastMessageId ?? void 0,
-                        r = w(t, m.B9.MANUAL, e, n, i);
+                        r = w(t, g.B9.MANUAL, e, n, i);
                     y.set(t, r);
                 }
             }
         })(e),
         (function (e) {
-            let t = I.A.getPrivateChannelIds(),
+            let t = f.A.getPrivateChannelIds(),
                 n = 0;
             for (let i of t) {
                 if (n >= 3) return;
@@ -93,7 +93,7 @@ function x() {
                 if (null == r) continue;
                 let a = p.default.extractTimestamp(r);
                 if (e - a > P) continue;
-                let s = w(i, m.B9.MANUAL, e, a, r);
+                let s = w(i, g.B9.MANUAL, e, a, r);
                 (y.set(i, s), n++);
             }
         })(e),
@@ -136,7 +136,7 @@ function j(e) {
 class W extends a.Ay.Store {
     static displayName = "Overlay-v3-Text-Chat-Store";
     initialize() {
-        (this.waitFor(C.A, N.A, S.A, d.A, c.A, u.A, o.A, _.A, I.A, E.Ay, A.Ay, h.Ay), x());
+        (this.waitFor(C.A, N.A, S.A, d.A, c.A, u.A, o.A, _.A, f.A, E.Ay, A.Ay, h.Ay), x());
     }
     isChannelTracked(e) {
         return y.has(e);
@@ -152,7 +152,7 @@ class W extends a.Ay.Store {
     }
 }
 function Y(e) {
-    return (0, g.U5)(e, "OverlayTextChatStore");
+    return (0, m.U5)(e, "OverlayTextChatStore");
 }
 let K = new W(
     l.h,

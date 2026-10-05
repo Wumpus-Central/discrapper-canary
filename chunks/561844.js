@@ -29,12 +29,12 @@ var i = n(132500),
     E = n(111162),
     A = n(174459),
     h = n(723702),
-    I = n(859703),
-    f = n(738822),
+    f = n(859703),
+    I = n(738822),
     p = n(104886),
     T = n(710969),
-    m = n(792620),
-    g = n(814793),
+    g = n(792620),
+    m = n(814793),
     S = n(590202),
     N = n(823784),
     C = n(652215);
@@ -74,15 +74,15 @@ function D(e) {
             shouldExtendSession: s = !1,
             sourceQuestContent: l,
         } = e,
-        o = I.A.quests.get(t);
+        o = f.A.quests.get(t);
     null != o &&
         y(
             n,
             {
                 ...{
                     quest_id: o.id,
-                    quest_type: (0, g.pv)(o.config),
-                    application_ids: (0, m._3)(o) ?? [],
+                    quest_type: (0, m.pv)(o.config),
+                    application_ids: (0, g._3)(o) ?? [],
                     quest_status: (0, S.NI)(o),
                     ...L(o.id, l, r.p.QUEST, s),
                 },
@@ -183,7 +183,7 @@ function G(e) {
         ? w(
               i,
               {
-                  surfaceId: f.uF.CUSTOM_APP_STORE_OVERLAY,
+                  surfaceId: I.uF.CUSTOM_APP_STORE_OVERLAY,
                   sourceQuestContent: n.sourceQuestContent,
                   questContentPosition: n.position,
                   impressionId: n.impressionId,
@@ -192,7 +192,7 @@ function G(e) {
           )
         : V({
               questId: t,
-              questContent: f.uF.CUSTOM_APP_STORE_OVERLAY,
+              questContent: I.uF.CUSTOM_APP_STORE_OVERLAY,
               questContentCTA: a,
               questContentPosition: n.position,
               impressionId: n.impressionId,
@@ -206,7 +206,7 @@ function x(e) {
         ? w(
               r,
               {
-                  surfaceId: f.uF.CUSTOM_APP_STORE_OVERLAY,
+                  surfaceId: I.uF.CUSTOM_APP_STORE_OVERLAY,
                   sourceQuestContent: i.sourceQuestContent,
                   questContentPosition: i.position,
                   impressionId: i.impressionId,
@@ -217,7 +217,7 @@ function x(e) {
               adContentId: t,
               relatedQuestId: a,
               adCreativeType: n,
-              questContent: f.uF.CUSTOM_APP_STORE_OVERLAY,
+              questContent: I.uF.CUSTOM_APP_STORE_OVERLAY,
               questContentCTA: s,
               questContentPosition: i.position,
               impressionId: i.impressionId,
@@ -297,7 +297,7 @@ function F(e) {
                         shouldExtendSession: r,
                         relatedQuestId: a,
                     } = e,
-                    s = null != a ? I.A.getQuest(a) : null;
+                    s = null != a ? f.A.getQuest(a) : null;
                 return {
                     ...L(t, i, n, r),
                     metadata_sealed: (0, T.L4)(i, t) ?? null,

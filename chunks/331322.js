@@ -17,8 +17,8 @@ let c = r.forwardRef(function (e, t) {
         wrap: E = !1,
         padding: A = 0,
         fullWidth: h = !0,
-        style: I,
-        className: f,
+        style: f,
+        className: I,
         children: p,
         ...T
     } = e;
@@ -29,9 +29,9 @@ let c = r.forwardRef(function (e, t) {
         "data-direction": l,
         "data-wrap": E,
         "data-full-width": h,
-        className: s()(d.t, f),
+        className: s()(d.t, I),
         style: {
-            ...I,
+            ...f,
             gap: u(a),
             ...("number" == typeof (n = A) || "string" == typeof n
                 ? { padding: u(n) }

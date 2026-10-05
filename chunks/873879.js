@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(284009),
     r = n.n(i),
     a = n(478676),
@@ -12,18 +12,18 @@ let l = /\n{2,}$/,
     E = / *\n$/,
     A = "^( *)(" + d + ") [\\s\\S]+?(?:\\n(?! )(?!\\1" + d + " )|$)",
     h = new RegExp(A),
-    I = RegExp("^\\n" + A.slice(1)),
-    f = /^\n/,
+    f = RegExp("^\\n" + A.slice(1)),
+    I = /^\n/,
     p = /\n *$/,
     T = /^[ \t\v\u00a0\u1680\u2000-\u200a\u2028\u2029\u202f\u205f\u3000\ufeff]+$/,
-    m = {
+    g = {
         ...s().defaultRules.list,
         requiredFirstCharacters: "\n *-0123456789".split(""),
         match: (e, t) => {
             if (!t.allowList || t._listLevel >= 11) return null;
             if (10 === e.charCodeAt(0)) {
                 let n = null == t.prevCapture ? "" : t.prevCapture[0];
-                return "" === n || p.test(n) ? null : I.exec(e);
+                return "" === n || p.test(n) ? null : f.exec(e);
             }
             let n = null == t.prevCapture ? "" : t.prevCapture[0],
                 i = o.exec(n);
@@ -33,26 +33,26 @@ let l = /\n{2,}$/,
             let i = e[2],
                 a = i.length > 1,
                 s = a ? Math.min(1e9, Math.max(1, +i)) : void 0,
-                o = f.test(e[0]),
-                d = e[0].replace(f, "").replace(l, "\n"),
+                o = I.test(e[0]),
+                d = e[0].replace(I, "").replace(l, "\n"),
                 c = u.exec(d),
                 A = null != c ? c[0].length : 0,
                 h = null != c ? c[1].length : 0,
-                I = ` {${h},${h + 1}}`,
-                p = RegExp(_.replaceAll("%INDENT_CAPTURE_PATTERN%", I), "gm"),
+                f = ` {${h},${h + 1}}`,
+                p = RegExp(_.replaceAll("%INDENT_CAPTURE_PATTERN%", f), "gm"),
                 T = RegExp("^ {1," + A + "}", "gm"),
-                m = d.match(p);
-            r()(null != m, "markup list items can not be parsed.");
-            let g = !1;
+                g = d.match(p);
+            r()(null != g, "markup list items can not be parsed.");
+            let m = !1;
             return {
                 ordered: a,
                 start: s,
-                items: m.map((e, i) => {
+                items: g.map((e, i) => {
                     let r,
                         a = e.replace(u, "").replace(T, ""),
-                        s = i === m.length - 1,
-                        l = -1 !== a.indexOf("\n\n") || (s && g);
-                    g = l;
+                        s = i === g.length - 1,
+                        l = -1 !== a.indexOf("\n\n") || (s && m);
+                    m = l;
                     let o = n.inline,
                         d = n._list,
                         c = n._listLevel;

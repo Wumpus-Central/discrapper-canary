@@ -16,9 +16,9 @@ let s = function (e) {
             purchaseType: E = a.gs.FIAT,
             overrideGraphic: A,
             overrideGradientColor: h,
-            rentalExpiresAt: I,
+            rentalExpiresAt: f,
         } = e,
-        f = null != s && s.length > 0;
+        I = null != s && s.length > 0;
     (0, r.openModalLazy)(
         async () => {
             if ((0, a.EZ)(t.skuId) || t.skuId === a.Dp.ORB_PROFILE_BADGE) {
@@ -124,11 +124,11 @@ let s = function (e) {
                     purchaseType: E,
                     overrideGraphic: A,
                     overrideGradientColor: h,
-                    rentalExpiresAt: I,
+                    rentalExpiresAt: f,
                     onCloseCallback: u,
                     ...n,
                 });
         },
-        { onCloseCallback: f ? void 0 : u },
+        { onCloseCallback: I ? void 0 : u },
     );
 };

@@ -2,14 +2,14 @@ n.d(t, {
     EM: () => p,
     Hy: () => h,
     Io: () => S,
-    Sp: () => I,
+    Sp: () => f,
     Th: () => L,
-    Ur: () => g,
-    V$: () => f,
+    Ur: () => m,
+    V$: () => I,
     VA: () => R,
     Ve: () => O,
     XU: () => A,
-    Yw: () => m,
+    Yw: () => g,
     j5: () => T,
     kR: () => y,
     v7: () => C,
@@ -28,11 +28,11 @@ var i,
     E = n(375708);
 let A = "Notifications Inbox",
     h = "notifications_inbox_guild_id",
-    I = 88,
-    f = c.A.Millis.WEEK,
+    f = 88,
+    I = c.A.Millis.WEEK,
     p = 50,
     T = "notifications-inbox";
-function m(e) {
+function g(e) {
     let t;
     return (
         (t =
@@ -44,7 +44,7 @@ function m(e) {
         (0, u.yF)({ id: _.gNP, name: t, description: "", icon: void 0, features: [] })
     );
 }
-var g = (((i = {}).UNREAD = "UNREAD"), (i.TODAY = "TODAY"), (i.YESTERDAY = "YESTERDAY"), (i.OLDER = "OLDER"), i),
+var m = (((i = {}).UNREAD = "UNREAD"), (i.TODAY = "TODAY"), (i.YESTERDAY = "YESTERDAY"), (i.OLDER = "OLDER"), i),
     S = (((r = {}).ALL = "all"), (r.MENTIONS = "mentions"), (r.BOOKMARKS = "bookmarks"), r),
     N =
         (((a = {}).ALL_MESSAGES_CHANNEL = "ALL_MESSAGES_CHANNEL"),

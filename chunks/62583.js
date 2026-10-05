@@ -12,20 +12,20 @@ var i = n(587895),
     E = n(817636),
     A = n(574152),
     h = n(108959),
-    I = n(90804),
-    f = n(748975),
+    f = n(90804),
+    I = n(748975),
     p = n(818023);
 function T(e) {
-    return (0, o.w)((0, o.f)(), () => m(e));
+    return (0, o.w)((0, o.f)(), () => g(e));
 }
-async function m(e) {
+async function g(e) {
     let t,
         {
             applicationId: n,
             activityChannelId: o,
             locationObject: T,
-            analyticsLocations: m,
-            componentId: g,
+            analyticsLocations: g,
+            componentId: m,
             sectionName: S,
             source: N,
             inviterUserId: C,
@@ -47,7 +47,7 @@ async function m(e) {
             M.applicationId === n &&
             (0, _.H)(M.location) === a.Ay.getVoiceChannelId())
     )
-        return ((0, f.A)(D, M.location), Promise.resolve(!0));
+        return ((0, I.A)(D, M.location), Promise.resolve(!0));
     let P = await (0, E.A)(n, o);
     if (
         !(await (0, u.O)({
@@ -64,7 +64,7 @@ async function m(e) {
         let e = (0, h.A)(y.id),
             n = p.lk.includes(y.type);
         if (e) {
-            if (!(await (0, I.A)({ channelId: y.id, bypassChangeModal: null != t }))) return !1;
+            if (!(await (0, f.A)({ channelId: y.id, bypassChangeModal: null != t }))) return !1;
         } else if (!(0, l.pE)(y) || !n) return !1;
     } else if (null == y) return !1;
     return (
@@ -74,9 +74,9 @@ async function m(e) {
             applicationId: n,
             isStart: !1,
             embeddedActivitiesManager: L,
-            analyticsLocations: m,
+            analyticsLocations: g,
             locationObject: T,
-            componentId: g,
+            componentId: m,
             sectionName: S,
             source: N,
             inviterUserId: C,

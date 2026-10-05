@@ -3,11 +3,11 @@ n.d(t, {
     Fd: () => c,
     Gt: () => A,
     Hx: () => S,
-    MO: () => I,
+    MO: () => f,
     N0: () => _,
-    VP: () => m,
-    ZG: () => g,
-    aj: () => f,
+    VP: () => g,
+    ZG: () => m,
+    aj: () => I,
     cZ: () => p,
     k8: () => E,
     mZ: () => u,
@@ -42,8 +42,8 @@ let l = [0, 4, 8, 16, 24],
     E = 32,
     A = 64,
     h = "---new-messages-bar",
-    I = "SPOILER_",
-    f = 3447003,
+    f = "SPOILER_",
+    I = 3447003,
     p = 0.16;
 var T =
     (((i = {}).ERROR_SOURCE_UNKNOWN = "ERROR_SOURCE_UNKNOWN"),
@@ -54,8 +54,8 @@ var T =
     (i.UPLOAD_ATTACHMENT_MAX_SIZE_ERROR = "UPLOAD_MESSAGE_ATTACHMENT_MAX_SIZE_ERROR"),
     (i.EXPLICIT_CONTENT = "EXPLICIT_CONTENT"),
     i);
-let m = 0xc800000,
-    g = { timeout: 60 * s.A.Millis.SECOND, retries: 3, backoff: new a.A() };
+let g = 0xc800000,
+    m = { timeout: 60 * s.A.Millis.SECOND, retries: 3, backoff: new a.A() };
 var S =
     (((r = {}).PUSH_NOTIFICATION = "push_notification"),
     (r.CHAT_INPUT = "chat_input"),

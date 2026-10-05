@@ -12,8 +12,8 @@ var i = n(739187),
     E = n(174459),
     A = n(91242),
     h = n(652215),
-    I = n(613057);
-class f extends u.A {
+    f = n(613057);
+class I extends u.A {
     static displayName = "FramesManager";
     actions = {
         RPC_APP_DISCONNECTED: (e) => {
@@ -58,7 +58,7 @@ class f extends u.A {
     };
     handleRPCDisconnect = (e) => {
         let { reason: t, source: n } = e;
-        if (null == t || n.type !== I.z4.POST_MESSAGE) return;
+        if (null == t || n.type !== f.z4.POST_MESSAGE) return;
         let i = A.A.getFrameByIframeId(n.iframeId);
         null != i &&
             (this.leaveFrame(i.id),
@@ -77,9 +77,9 @@ class f extends u.A {
 }
 var p = n(165610),
     T = n(375708);
-let m = !1,
-    g = !1,
-    S = new (class extends f {
+let g = !1,
+    m = !1,
+    S = new (class extends I {
         static displayName = "FramesWebManager";
         _initialize() {
             (super._initialize(),
@@ -93,15 +93,15 @@ let m = !1,
         }
         handlePopoutWindowOpen = (e) => {
             let { key: t } = e;
-            t === h.MLl.ACTIVITY_POPOUT && (g = !1);
+            t === h.MLl.ACTIVITY_POPOUT && (m = !1);
         };
         handlePopoutWindowUpdate = () => {
-            let e = m,
+            let e = g,
                 t = o.A.getWindowOpen(h.MLl.ACTIVITY_POPOUT);
-            (!e || t || g || d.A.clearMainFrameSlot(), (m = t));
+            (!e || t || m || d.A.clearMainFrameSlot(), (g = t));
         };
         popInFrame = () => {
-            ((g = !0), l.close(h.MLl.ACTIVITY_POPOUT));
+            ((m = !0), l.close(h.MLl.ACTIVITY_POPOUT));
             let e = A.A.getMainFrame();
             null != e && (e.intent === p.sV.MAIN ? d.A.resetFrameLayoutModes(e.id) : d.A.clearMainFrameSlot());
         };

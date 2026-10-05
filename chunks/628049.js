@@ -1,17 +1,17 @@
 n.d(t, {
-    FG: () => I,
+    FG: () => f,
     HS: () => s,
-    LC: () => f,
+    LC: () => I,
     PH: () => A,
     ST: () => d,
     U$: () => c,
-    W5: () => g,
+    W5: () => m,
     XF: () => E,
     Yh: () => p,
     ZI: () => u,
     ZN: () => l,
     by: () => o,
-    eh: () => m,
+    eh: () => g,
     q4: () => h,
     qL: () => _,
     qb: () => T,
@@ -39,13 +39,13 @@ let l = {
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
               ? "1415044199572832256"
               : "1415025086791942144",
-    I =
+    f =
         "production" === window.GLOBAL_ENV.PROJECT_ENV
             ? "1402418491272986635"
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
               ? "356875570916753438"
               : "1",
-    f =
+    I =
         "production" === window.GLOBAL_ENV.PROJECT_ENV
             ? "1458530944955973852"
             : "staging" === window.GLOBAL_ENV.PROJECT_ENV
@@ -66,5 +66,5 @@ let T = {
                 ? "https://purple-prod.shockbyte.dev/support"
                 : "https://discord.shockbyte.com/support",
     },
-    m = { [r.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
-    g = "0";
+    g = { [r.X.SHOCKBYTE]: "https://shockbyte.com/legal/acceptable-use-policy" },
+    m = "0";

@@ -14,12 +14,12 @@ function c(e) {
         E,
         A,
         h,
-        I,
         f,
+        I,
         p,
         T,
-        m,
         g,
+        m,
         {
             children: S,
             targetElementRef: N,
@@ -54,7 +54,7 @@ function c(e) {
                 { keyboardModeEnabled: E } = i.useContext(o.C),
                 A = i.useRef(null),
                 h = t ?? A,
-                [I, f] = i.useState(!1),
+                [f, I] = i.useState(!1),
                 p = i.useRef(null),
                 T = i.useRef(!1);
             i.useEffect(
@@ -67,8 +67,8 @@ function c(e) {
                 ),
                 [],
             );
-            let m = null != h.current,
-                g = !1 !== n && (I || c) && m && !T.current,
+            let g = null != h.current,
+                m = !1 !== n && (f || c) && g && !T.current,
                 S = i.useCallback(() => {
                     if (T.current || (u && null == h.current)) return;
                     if (u && null != h.current) {
@@ -81,13 +81,13 @@ function c(e) {
                         t.start(
                             e,
                             () => {
-                                (f(!0), a?.());
+                                (I(!0), a?.());
                             },
                             !1,
                         );
                 }, [r, a, u, h]),
                 N = i.useCallback(() => {
-                    (p.current?.stop(), f(!1), d?.());
+                    (p.current?.stop(), I(!1), d?.());
                 }, [d]),
                 C = i.useCallback(() => {
                     _ && N();
@@ -113,7 +113,7 @@ function c(e) {
                 );
             return (
                 i.useEffect(() => {
-                    if (!g) return;
+                    if (!m) return;
                     let e = h.current?.ownerDocument ?? document;
                     function t(e) {
                         ("Escape" === e.key || "Esc" === e.key) && ((T.current = !0), N());
@@ -124,9 +124,9 @@ function c(e) {
                             e.removeEventListener("keydown", t);
                         }
                     );
-                }, [g, N, h]),
+                }, [m, N, h]),
                 i.useEffect(() => {
-                    if (!g) return;
+                    if (!m) return;
                     let e = h.current?.ownerDocument ?? document;
                     function t() {
                         N();
@@ -137,8 +137,8 @@ function c(e) {
                             e.removeEventListener("click", t);
                         }
                     );
-                }, [g, N, h]),
-                { isVisible: g, triggerProps: y }
+                }, [m, N, h]),
+                { isVisible: m, triggerProps: y }
             );
         })({ targetElementRef: y.targetElementRef, ...L }),
         M = R ? void 0 : D,
@@ -163,37 +163,37 @@ function c(e) {
             i.useEffect(() => {
                 h.current = _;
             }, [_]),
-            (f = (I = t.props).buttonRef),
+            (I = (f = t.props).buttonRef),
             (p = i.useCallback(
                 (e) => {
-                    ((0, a.cZ)(f, e), A(e));
+                    ((0, a.cZ)(I, e), A(e));
                 },
-                [f, A],
+                [I, A],
             )),
-            (T = I.innerRef),
-            (m = i.useCallback(
+            (T = f.innerRef),
+            (g = i.useCallback(
                 (e) => {
                     ((0, a.cZ)(T, e), A(e));
                 },
                 [T, A],
             )),
-            (g = {
-                onMouseEnter: (0, a.cy)(I.onMouseEnter, b.onMouseEnter),
-                onMouseLeave: (0, a.cy)(I.onMouseLeave, b.onMouseLeave),
-                onFocus: (0, a.cy)(I.onFocus, b.onFocus),
-                onBlur: (0, a.cy)(I.onBlur, b.onBlur),
-                onContextMenu: (0, a.cy)(I.onContextMenu, b.onContextMenu),
-                onClick: (0, a.cy)(I.onClick, b.onClick),
+            (m = {
+                onMouseEnter: (0, a.cy)(f.onMouseEnter, b.onMouseEnter),
+                onMouseLeave: (0, a.cy)(f.onMouseLeave, b.onMouseLeave),
+                onFocus: (0, a.cy)(f.onFocus, b.onFocus),
+                onBlur: (0, a.cy)(f.onBlur, b.onBlur),
+                onContextMenu: (0, a.cy)(f.onContextMenu, b.onContextMenu),
+                onClick: (0, a.cy)(f.onClick, b.onClick),
             }),
-            null != M && "" !== M && (g["aria-describedby"] = (0, a.iO)(I["aria-describedby"], M)),
+            null != M && "" !== M && (m["aria-describedby"] = (0, a.iO)(f["aria-describedby"], M)),
             "string" == typeof t.type
-                ? (g.ref = A)
+                ? (m.ref = A)
                 : "buttonRef" in t.props
-                  ? ((g.buttonRef = p), (g.ref = A))
+                  ? ((m.buttonRef = p), (m.ref = A))
                   : "innerRef" in t.props
-                    ? ((g.innerRef = m), (g.ref = A))
-                    : ((g.ref = A), (g.innerRef = A)),
-            i.cloneElement(t, g)),
+                    ? ((m.innerRef = g), (m.ref = A))
+                    : ((m.ref = A), (m.innerRef = A)),
+            i.cloneElement(t, m)),
         U = (function (e, t, n, i, r, s, l) {
             if (!e) return null;
             let o = s

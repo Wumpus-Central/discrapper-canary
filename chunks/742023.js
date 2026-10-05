@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => I });
+n.d(t, { Ay: () => f });
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -138,7 +138,7 @@ class h extends a.Ay.DeviceSettingsStore {
         return A.videoBackground ?? null;
     }
 }
-let I = new h(l.h, {
+let f = new h(l.h, {
     UNSYNCED_USER_SETTINGS_UPDATE: function (e) {
         A = { ...A, ...e.settings };
     },

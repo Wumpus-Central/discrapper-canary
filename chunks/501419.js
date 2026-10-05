@@ -1,5 +1,5 @@
 n.d(t, {
-    rw: () => m,
+    rw: () => g,
     NZ: () => F,
     ss: () => N,
     D8: () => G,
@@ -13,7 +13,7 @@ n.d(t, {
     D4: () => x,
     $l: () => K,
     iC: () => U,
-    Tg: () => g,
+    Tg: () => m,
     cN: () => w,
     R2: () => R,
     X0: () => H,
@@ -42,17 +42,17 @@ var i = n(17928),
     E = n(199773),
     A = n(355903),
     h = n(256787),
-    I = n(958872),
-    f = n(853735),
+    f = n(958872),
+    I = n(853735),
     p = n(652215),
     T = n(49999);
-let m = 2592e6;
-function g(e) {
+let g = 2592e6;
+function m(e) {
     let t = l.A.settings.userContent?.recurringDismissibleContentStates[e];
     return {
-        lastDismissedVersion: (0, h.L0)(e) ? (0, f.c)(e) : 0,
+        lastDismissedVersion: (0, h.L0)(e) ? (0, I.c)(e) : 0,
         lastDismissedAtMs: new Date().getTime().toString(),
-        lastDismissedObjectId: (0, h.IL)(e) ? d.default.fromTimestamp(Date.now() + m) : "0",
+        lastDismissedObjectId: (0, h.IL)(e) ? d.default.fromTimestamp(Date.now() + g) : "0",
         numTimesDismissed: t?.numTimesDismissed ?? 0,
     };
 }
@@ -135,13 +135,13 @@ function v(e, t, n) {
     });
 }
 function b(e, t) {
-    if ((0, I.P3)(e)) return { isDismissed: !0, lastDismissedVersion: null };
+    if ((0, f.P3)(e)) return { isDismissed: !0, lastDismissedVersion: null };
     let n = l.A.settings.userContent?.recurringDismissibleContentStates[e]?.lastDismissedVersion,
-        i = t ?? (0, f.c)(e);
+        i = t ?? (0, I.c)(e);
     return { isDismissed: null != n && n >= i, lastDismissedVersion: n };
 }
 function M(e, t) {
-    if ((0, I.P3)(e)) return { isDismissed: !0, lastDismissedAtMs: null };
+    if ((0, f.P3)(e)) return { isDismissed: !0, lastDismissedAtMs: null };
     let n = l.A.settings.userContent?.recurringDismissibleContentStates[e]?.lastDismissedAtMs,
         i = null != n && "0" !== n ? (Number.isNaN(Number(n)) ? void 0 : Number(n)) : void 0;
     if (void 0 === i) return { isDismissed: !1, lastDismissedAtMs: void 0 };
@@ -155,7 +155,7 @@ function M(e, t) {
     return { isDismissed: r, lastDismissedAtMs: i };
 }
 function P(e, t, n) {
-    if ((0, I.P3)(e)) return !0;
+    if ((0, f.P3)(e)) return !0;
     let i = l.A.settings.userContent?.recurringDismissibleContentStates[e]?.lastDismissedObjectId,
         r = l.A.settings.userContent?.recurringDismissibleContentStates[e]?.lastDismissedAtMs,
         a = null != r && "0" !== r ? (Number.isNaN(Number(r)) ? void 0 : Number(r)) : void 0,
@@ -170,7 +170,7 @@ function P(e, t, n) {
     return s && o;
 }
 function U(e, t) {
-    if ((0, I.P3)(e)) return !0;
+    if ((0, f.P3)(e)) return !0;
     let n = l.A.getGuildDismissedContentState(t);
     return null != n && null != n[e] && !0 === n[e].dismissed;
 }
@@ -178,12 +178,12 @@ function w(e, t) {
     return (0, i.bG)([l.A], () => null != e && U(e, t));
 }
 function G(e, t) {
-    if ((0, I.P3)(e)) return !0;
+    if ((0, f.P3)(e)) return !0;
     let n = l.A.getGuildDismissedContentState(t);
     return null != n && null != n[e] && null != n[e].lastDismissedAtMs && "0" !== n[e].lastDismissedAtMs;
 }
 function x(e, t) {
-    if ((0, I.P3)(e)) return !0;
+    if ((0, f.P3)(e)) return !0;
     let n = l.A.getGuildDismissedContentState(t);
     return null != n && null != n[e] && null != n[e].lastDismissedObjectId && "0" !== n[e].lastDismissedObjectId;
 }
@@ -248,7 +248,7 @@ function H(e, t) {
     (0, A.pd)({ content: e, groupName: t?.groupName }, n);
 }
 async function j(e, t) {
-    let n = (0, f.c)(e);
+    let n = (0, I.c)(e);
     await K(e, n, t);
 }
 function W(e, t) {

@@ -4,8 +4,8 @@
         GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX: () => E,
         GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX: () => A,
         GLOBAL_DISCOVERY_TABS: () => d,
-        GlobalDiscoveryAnalyticsLocations: () => f,
-        GlobalDiscoveryRoutes: () => I,
+        GlobalDiscoveryAnalyticsLocations: () => I,
+        GlobalDiscoveryRoutes: () => f,
         GlobalDiscoverySearchBarState: () => h,
         GlobalDiscoverySharedTabId: () => u,
         GlobalDiscoveryTab: () => o,
@@ -24,8 +24,8 @@ let _ = "servers",
     E = 24,
     A = 240;
 var h = (((a = {}).DEFAULT = "default"), (a.FLOATING = "floating"), (a.COLLAPSED = "collapsed"), a),
-    I = (((s = {}).ROOT = "root"), (s.SERVERS_CATEGORY = "server_tab"), (s.SERVERS_SEARCH = "server_search"), s),
-    f =
+    f = (((s = {}).ROOT = "root"), (s.SERVERS_CATEGORY = "server_tab"), (s.SERVERS_SEARCH = "server_search"), s),
+    I =
         (((l = {}).GUILDS_BAR_ICON = "guilds_bar_icon"),
         (l.VIRTUAL_CURRENCY_REHEAT_COACHMARK = "virtual_currency_reheat_coachmark"),
         l);

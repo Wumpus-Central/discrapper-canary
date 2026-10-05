@@ -1,9 +1,9 @@
 (n.d(t, {
     Uq: () => _,
-    Z5: () => f,
+    Z5: () => I,
     _9: () => A,
     ack: () => c,
-    dm: () => I,
+    dm: () => f,
     fb: () => E,
     hK: () => p,
     hS: () => u,
@@ -74,10 +74,10 @@ function A(e, t) {
 function h(e, t) {
     i.h.dispatch({ type: "REGISTER_VISIBLE_INLINE_CHANNEL", channelId: e, windowId: t });
 }
-function I(e, t) {
+function f(e, t) {
     i.h.dispatch({ type: "UNREGISTER_VISIBLE_INLINE_CHANNEL", channelId: e, windowId: t });
 }
-function f(e, t) {
+function I(e, t) {
     i.h.dispatch({ type: "DISABLE_AUTOMATIC_ACK", channelId: e, windowId: t });
 }
 function p(e, t, n) {

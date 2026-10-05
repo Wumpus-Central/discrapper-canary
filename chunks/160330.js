@@ -12,8 +12,8 @@ var i = n(132500),
     E = n(461213),
     A = n(287809),
     h = n(696016),
-    I = n(652215),
-    f = n(375708);
+    f = n(652215),
+    I = n(375708);
 function p() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "manual",
         t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : h.nQ.CLIP,
@@ -21,8 +21,8 @@ function p() {
         p = arguments.length > 3 ? arguments[3] : void 0,
         T = arguments.length > 4 ? arguments[4] : void 0,
         {
-            sourceName: m,
-            sourceApplicationId: g,
+            sourceName: g,
+            sourceApplicationId: m,
             activity: S,
             isVoiceOnly: N,
         } = (function () {
@@ -40,14 +40,14 @@ function p() {
                 r = e?.id ?? i?.id,
                 d = e?.sourceName ?? i?.name,
                 h = u.A.getChannelId(),
-                f = null == d && null != h;
-            if (f) {
+                I = null == d && null != h;
+            if (I) {
                 let e = null != h ? c.A.getChannel(h) : null;
                 d = null != e ? (0, a.m1)(e, A.default, _.A) : "";
             }
             let p = (0, l.A)(r),
                 T = E.A.getUnfilteredActivities(!0).filter(function (e) {
-                    return e.type === I.$pd.PLAYING && null != e.application_id && p.has(e.application_id);
+                    return e.type === f.$pd.PLAYING && null != e.application_id && p.has(e.application_id);
                 });
             return {
                 sourceName: d,
@@ -65,7 +65,7 @@ function p() {
                         return (null != e.state && "" !== e.state) || (null != e.details && "" !== e.details);
                     }) ?? T[0],
                 ),
-                isVoiceOnly: f,
+                isVoiceOnly: I,
             };
         })(),
         C = u.A.getChannelId(),
@@ -84,8 +84,8 @@ function p() {
         createdAt: y,
         syncTimestamp: v,
         version: h.kd,
-        applicationName: m ?? f.intl.string(f.t.qtSJxb),
-        applicationId: g,
+        applicationName: g ?? I.intl.string(I.t.qtSJxb),
+        applicationId: m,
         activity: S,
         users: Array.from(R),
         clipMethod: e,

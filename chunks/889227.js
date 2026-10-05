@@ -1,4 +1,4 @@
-(n.d(t, { A: () => m }), n(938796));
+(n.d(t, { A: () => g }), n(938796));
 var i = n(136722),
     r = n(665260),
     a = n(441574),
@@ -12,11 +12,11 @@ var i = n(136722),
     E = n(349871),
     A = n(392737),
     h = n(486020),
-    I = n(474090),
-    f = n(935208),
+    f = n(474090),
+    I = n(935208),
     p = n(652215),
     T = n(202541);
-class m extends s.A {
+class g extends s.A {
     id;
     username;
     discriminator;
@@ -135,7 +135,7 @@ class m extends s.A {
             this.globalName?.length === 0 && (this.globalName = null));
     }
     get createdAt() {
-        return new Date(f.default.extractTimestamp(this.id));
+        return new Date(I.default.extractTimestamp(this.id));
     }
     hasVerifiedEmailOrPhone() {
         return !0 === this.verified || null != this.phone;
@@ -225,23 +225,23 @@ class m extends s.A {
     }
     hadPremiumSubscription() {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : null;
-        return !(0, I.ki)(this) && this.hasHadPremium(e);
+        return !(0, f.ki)(this) && this.hasHadPremium(e);
     }
     hasFreePremium() {
         return this.isStaff() || this.hasFlag(p.nhx.PARTNER) || this.isStaffPersonal();
     }
     isOnReverseTrial() {
-        return (0, I.ki)(this) && this.premiumState?.premiumSource === a.fE.REVERSE_TRIAL;
+        return (0, f.ki)(this) && this.premiumState?.premiumSource === a.fE.REVERSE_TRIAL;
     }
     isPremiumWithPremiumGroup() {
-        return (0, I.ki)(this, T.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.SUBSCRIPTION_GROUP;
+        return (0, f.ki)(this, T.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.SUBSCRIPTION_GROUP;
     }
     hasPaidTier2Subscription() {
-        return (0, I.ki)(this, T.PremiumTypes.TIER_2) && this.premiumState?.premiumSubscriptionType === a.jK.TIER_2;
+        return (0, f.ki)(this, T.PremiumTypes.TIER_2) && this.premiumState?.premiumSubscriptionType === a.jK.TIER_2;
     }
     isPremiumWithFractionalPremiumOnly() {
         return (
-            (0, I.ki)(this, T.PremiumTypes.TIER_2) &&
+            (0, f.ki)(this, T.PremiumTypes.TIER_2) &&
             (this.premiumState?.premiumSubscriptionType === a.jK.NONE_UNSPECIFIED ||
                 this.premiumState?.premiumSubscriptionType === a.jK.BOOST_ONLY) &&
             this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO
@@ -249,13 +249,13 @@ class m extends s.A {
     }
     isFractionalPremiumWithNoStandardSub() {
         return (
-            (0, I.ki)(this, T.PremiumTypes.TIER_2) &&
+            (0, f.ki)(this, T.PremiumTypes.TIER_2) &&
             this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO &&
             this.premiumState.premiumSubscriptionType !== a.jK.TIER_2
         );
     }
     isFractionalPremium() {
-        return (0, I.ki)(this, T.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO;
+        return (0, f.ki)(this, T.PremiumTypes.TIER_2) && this.premiumState?.premiumSource === a.fE.FRACTIONAL_NITRO;
     }
     hasUrgentMessages() {
         return this.hasFlag(p.nhx.HAS_UNREAD_URGENT_MESSAGES);
@@ -300,4 +300,4 @@ class m extends s.A {
         return this.premiumState?.premiumSubscriptionGroupRole ?? a.qT.UNSPECIFIED;
     }
 }
-new m({ id: "0" });
+new g({ id: "0" });

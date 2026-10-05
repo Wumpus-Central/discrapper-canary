@@ -1,4 +1,4 @@
-n.d(t, { f: () => S, p: () => g });
+n.d(t, { f: () => S, p: () => m });
 var i = n(47167),
     r = n(236285),
     a = n(7584),
@@ -12,13 +12,13 @@ var i = n(47167),
     E = n(994500),
     A = n(287809),
     h = n(802842),
-    I = n(690521),
-    f = n(935208),
+    f = n(690521),
+    I = n(935208),
     p = n(408018),
     T = n(652215),
-    m = n(307731);
-function g(e, t, n, p) {
-    let { allowUsers: g = !0, allowRoles: S = !0 } = p ?? {};
+    g = n(307731);
+function m(e, t, n, p) {
+    let { allowUsers: m = !0, allowRoles: S = !0 } = p ?? {};
     switch (e[0]) {
         case "@":
             return (function (e, t, n, i, r) {
@@ -48,7 +48,7 @@ function g(e, t, n, p) {
                     }
                 }
                 return null;
-            })(e, t, n, g, S);
+            })(e, t, n, m, S);
         case ":":
             var C = e,
                 O = t,
@@ -58,7 +58,7 @@ function g(e, t, n, p) {
             let y = L[1],
                 D = r.Ay.getDisambiguatedEmojiContext(O).getCustomEmoji().get(y),
                 v = null != R ? l.A.getChannel(R) : null;
-            return null == D || I.Ay.isEmojiFiltered({ emoji: D, channel: v, intention: m.EmojiIntention.CHAT })
+            return null == D || f.Ay.isEmojiFiltered({ emoji: D, channel: v, intention: g.EmojiIntention.CHAT })
                 ? null
                 : {
                       type: "customEmoji",
@@ -80,7 +80,7 @@ function g(e, t, n, p) {
                     ? (0, i.LG)(M.slice(2, M.length - 1))
                     : M.slice(1);
             let U = o.Ay.getTextChannelNameDisambiguations(P);
-            for (let e of f.default.keys(U))
+            for (let e of I.default.keys(U))
                 if (U[e].name === b) return { type: "channelMention", channelId: e, children: [{ text: "" }] };
             for (let e of h.L3)
                 if (e !== o.I6) {
@@ -91,8 +91,8 @@ function g(e, t, n, p) {
                         }
                 }
             let w = s.A.getActiveJoinedThreadsForGuild(P);
-            for (let e of f.default.keys(w))
-                for (let t of f.default.keys(w[e])) {
+            for (let e of I.default.keys(w))
+                for (let t of I.default.keys(w[e])) {
                     let { channel: n } = w[e][t];
                     if ((0, i.m1)(n, A.default, E.A) === b)
                         return { type: "channelMention", channelId: n.id, children: [{ text: "" }] };
@@ -102,7 +102,7 @@ function g(e, t, n, p) {
     return null;
 }
 function S(e, t, n, i) {
-    let r = g(e, t, n, i);
+    let r = m(e, t, n, i);
     return null == r ? null : (0, p.QR)(r);
 }
 function N(e, t, n) {

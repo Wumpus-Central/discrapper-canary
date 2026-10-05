@@ -12,10 +12,10 @@ let _ = null,
     E = null,
     A = null,
     h = null;
-function I() {
+function f() {
     null != A && (clearTimeout(A), (A = null));
 }
-function f(e) {
+function I(e) {
     let t = d.ZR.filter((t) => t !== e);
     return t[Math.floor(Math.random() * t.length)];
 }
@@ -23,9 +23,9 @@ function p() {
     null != h && (clearTimeout(h), (h = null));
 }
 function T() {
-    return (I(), p(), (_ = null), null != E && ((E = null), !0));
+    return (f(), p(), (_ = null), null != E && ((E = null), !0));
 }
-function m(e) {
+function g(e) {
     let { withGracePeriod: t } = e;
     if (a.A.isIdle() || (null != _ && null == o.Ay.getProject(_))) return T();
     let n = (function () {
@@ -43,26 +43,26 @@ function m(e) {
                   }, 3e4)),
               !1)
             : T()
-        : (I(),
+        : (f(),
           (n !== _ || null == E) &&
               ((_ = n),
-              (E = { type: c.$pd.PLAYING, name: d.Vb, details: f(), timestamps: { start: Date.now() } }),
+              (E = { type: c.$pd.PLAYING, name: d.Vb, details: I(), timestamps: { start: Date.now() } }),
               !(function e() {
                   (p(),
                       (h = setTimeout(() => {
-                          ((h = null), null != E && ((E = { ...E, details: f(E.details) }), e(), S.emitChange()));
+                          ((h = null), null != E && ((E = { ...E, details: I(E.details) }), e(), S.emitChange()));
                       }, 3e5)));
               })(),
               !0));
 }
-class g extends i.Ay.Store {
+class m extends i.Ay.Store {
     static displayName = "ConjureRichPresenceStore";
     initialize() {
-        this.syncWith([a.A, s.Ay, l.A, o.Ay], () => m({ withGracePeriod: !0 }));
+        this.syncWith([a.A, s.Ay, l.A, o.Ay], () => g({ withGracePeriod: !0 }));
     }
     getActivity() {
         return E;
     }
 }
-let S = new g(r.h, { CONNECTION_OPEN: () => m({ withGracePeriod: !1 }), LOGOUT: T }),
+let S = new m(r.h, { CONNECTION_OPEN: () => g({ withGracePeriod: !1 }), LOGOUT: T }),
     N = S;

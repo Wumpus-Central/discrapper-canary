@@ -13,16 +13,16 @@ var _ = n(113144),
     E = n.n(_),
     A = n(776231);
 let h = /url\(['"](.*)['"]\)/;
-function I(e) {
+function f(e) {
     if (null == e || "" === e || "none" === e) return null;
     let t = e.match(h);
     return null != t ? t[1] : e;
 }
-var f = n(624793),
+var I = n(624793),
     p = n(714991),
     T = n(260509),
-    m = n(531685),
-    g = n(515718),
+    g = n(531685),
+    m = n(515718),
     S = n(821589),
     N = n(779469);
 let C = {
@@ -87,11 +87,11 @@ class L extends r.PureComponent {
                 to: E,
                 badgeStrokeColor: A,
                 animate: h,
-                tabIndex: I,
-                iconSrc: f,
+                tabIndex: f,
+                iconSrc: I,
                 "aria-hidden": p,
-                lossless: m,
-                iconSize: g,
+                lossless: g,
+                iconSize: m,
                 ...C
             } = this.props,
             O = R[a],
@@ -106,7 +106,7 @@ class L extends r.PureComponent {
             "aria-hidden": p,
             style: null == e.icon ? { fontSize: (O[y.length] ?? O[O.length - 1]) * o, ...l } : l,
             onClick: null != E || null == _ ? void 0 : _,
-            tabIndex: I,
+            tabIndex: f,
             ...C,
             children: [this.renderAcronym(), this.renderBadge()],
         });
@@ -130,15 +130,15 @@ class L extends r.PureComponent {
             : this.renderTooltip();
     }
 }
-let y = o.Ay.connectStores([m.A], (e) => {
+let y = o.Ay.connectStores([g.A], (e) => {
     let { guild: t, animate: n, iconSrc: i, style: r, size: a, iconSize: s, lossless: l } = e;
     return (
         null == i &&
             (i =
-                t instanceof f.GO
-                    ? t.getIconURL(s ?? O[a], n && m.A.isFocused())
-                    : (0, T.Iv)(t, s ?? O[a], n && m.A.isFocused(), l)),
-        { style: { ...r, backgroundImage: (0, g.wU)(i) } }
+                t instanceof I.GO
+                    ? t.getIconURL(s ?? O[a], n && g.A.isFocused())
+                    : (0, T.Iv)(t, s ?? O[a], n && g.A.isFocused(), l)),
+        { style: { ...r, backgroundImage: (0, m.wU)(i) } }
     );
 })(
     (function (e) {
@@ -148,14 +148,14 @@ let y = o.Ay.connectStores([m.A], (e) => {
             constructor(e) {
                 super(e);
                 const { style: t } = e,
-                    n = null != t ? I(t.backgroundImage) : null;
+                    n = null != t ? f(t.backgroundImage) : null;
                 ((this.cachedURLs = [n]), (this.state = { cached: n, loaded: !0 }));
             }
             componentDidUpdate(e, t) {
                 if (t === this.state) return;
                 let { cached: n, loaded: i } = this.state,
                     { style: r } = this.props,
-                    a = null != r ? I(r.backgroundImage) : null;
+                    a = null != r ? f(r.backgroundImage) : null;
                 (null == a && a !== n) || this.cachedURLs.indexOf(a) >= 0
                     ? this.setState({ loaded: !0, cached: a })
                     : null != a && a !== n && !0 === i && this.setState({ loaded: !1 }, () => this.preloadURL(a));

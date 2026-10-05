@@ -1,5 +1,5 @@
 let i, r;
-n.d(t, { A: () => I });
+n.d(t, { A: () => f });
 var a = n(17928),
     s = n(73153);
 let l = [],
@@ -40,7 +40,7 @@ class h extends a.Ay.Store {
         return r;
     }
 }
-let I = new h(s.h, {
+let f = new h(s.h, {
     COLLECTIBLES_SHOP_HOME_FETCH: function (e) {
         (_.set(e.tab, !0),
             u.set(e.tab, void 0),

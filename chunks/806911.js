@@ -12,12 +12,12 @@ var i = n(477900),
     E = n(827343),
     A = n(367513),
     h = n(951001),
-    I = n(398590),
-    f = n(793574),
+    f = n(398590),
+    I = n(793574),
     p = n(95561),
     T = n(198052),
-    m = n(94247),
-    g = n(520698),
+    g = n(94247),
+    m = n(520698),
     S = n(525788),
     N = n(384059),
     C = n(47167),
@@ -106,7 +106,7 @@ class eo extends r.PureComponent {
     };
     handleJumpToChannel = () => {
         let { channel: e } = this.props;
-        (0, I.bz)();
+        (0, f.bz)();
         let t = e.getGuildId() ?? er.ME;
         ((0, P.uh)(t, e.id), h.A.channelListScrollTo(t, e.id));
         let n = this.activeStreamForSelectedParticipant;
@@ -115,12 +115,12 @@ class eo extends r.PureComponent {
     handleStopStream = () => {
         let { participantOnScreen: e } = this.props;
         (s()((0, ea.Ay)(e), "cannot stop stream for non streamer"),
-            (0, N.X)(f.A.VIDEO_PIP, N.O.STREAM, !1),
+            (0, N.X)(I.A.VIDEO_PIP, N.O.STREAM, !1),
             (0, v.A)(e.stream));
     };
     handleOpenPopout = () => {
         let { channel: e } = this.props;
-        ((0, N.X)(f.A.VIDEO_PIP, N.O.POPOUT, !0), M.openChannelCallPopout(e));
+        ((0, N.X)(I.A.VIDEO_PIP, N.O.POPOUT, !0), M.openChannelCallPopout(e));
     };
     renderBottomLeftControls = () => {
         let { canSeeParticipantName: e } = this.viewProperties;
@@ -145,7 +145,7 @@ class eo extends r.PureComponent {
         });
     };
     renderDisconnectButton = () =>
-        (0, i.jsx)(x.A, { className: es.iq, onClick: () => (0, N.X)(f.A.VIDEO_PIP, N.O.DISCONNECT) });
+        (0, i.jsx)(x.A, { className: es.iq, onClick: () => (0, N.X)(I.A.VIDEO_PIP, N.O.DISCONNECT) });
     renderStopStreamButton = () => {
         let { isSelf: e } = this.viewProperties;
         return (0, i.jsx)(F.A, { isSelfStream: e, className: es.iq, onClick: this.handleStopStream });
@@ -181,7 +181,7 @@ class eo extends r.PureComponent {
         let n = t.find((t) => (0, L._z)(t) === e.id);
         return null == n || n.state === er.XYD.ENDED
             ? null
-            : (0, i.jsx)(B.A, { stream: n, className: es.iq, appContext: er.BRT.APP, location: f.A.VIDEO_PIP });
+            : (0, i.jsx)(B.A, { stream: n, className: es.iq, appContext: er.BRT.APP, location: I.A.VIDEO_PIP });
     };
     renderStreamState() {
         let e = this.activeStreamForSelectedParticipant,
@@ -270,14 +270,14 @@ class eo extends r.PureComponent {
 }
 function ed(e) {
     let { channel: t, width: n } = e,
-        r = (0, d.bG)([m.A], () => m.A.getSpeaker(t.id)),
+        r = (0, d.bG)([g.A], () => g.A.getSpeaker(t.id)),
         a = (0, d.bG)([T.A], () => T.A.getParticipant(t.id, r), [t.id, r]),
         s = (0, d.bG)([j.Ay], () => o()(j.Ay.getVideoDevices()).values().first()),
         l = (0, d.bG)(
             [K.A],
             () =>
                 null != a && a.type !== ea.lp.ACTIVITY && a.type !== ea.lp.HIDDEN_STREAM
-                    ? K.A.getStreamId(a.user.id, t.getGuildId(), (0, g.A)(a.type))
+                    ? K.A.getStreamId(a.user.id, t.getGuildId(), (0, m.A)(a.type))
                     : null,
             [a, t],
         ),
@@ -286,10 +286,10 @@ function ed(e) {
         E = (0, d.bG)([j.Ay], () => !u && j.Ay.isVideoEnabled(), [u]),
         A = (0, d.bG)([j.Ay], () => (0, y.A)(j.Ay)),
         h = (0, d.bG)([H.default], () => H.default.getId()),
-        I = (0, d.bG)([V.A], () => V.A.getCurrentUserActiveStream()),
-        f = null != a && "user" in a ? a.user.id : "",
-        p = (0, R.A)(a?.type === ea.lp.STREAM ? c.x.STREAM : c.x.DEFAULT, f),
-        S = (0, O.A)(f),
+        f = (0, d.bG)([V.A], () => V.A.getCurrentUserActiveStream()),
+        I = null != a && "user" in a ? a.user.id : "",
+        p = (0, R.A)(a?.type === ea.lp.STREAM ? c.x.STREAM : c.x.DEFAULT, I),
+        S = (0, O.A)(I),
         N = (0, d.yK)([V.A], () => V.A.getAllActiveStreams()),
         C = (0, d.bG)([$.A], () => $.A.isFocused());
     return (0, i.jsx)(eo, {
@@ -301,7 +301,7 @@ function ed(e) {
         canGoLive: A,
         currentUserId: h,
         activeStreams: N,
-        activeSelfStream: I,
+        activeSelfStream: f,
         isMainWindowFocused: C,
         width: n,
         isOverlayRenderingVideo: !1,

@@ -1,4 +1,4 @@
-n.d(t, { EJ: () => f, U4: () => g, i3: () => S, i7: () => p, lI: () => T, tZ: () => m });
+n.d(t, { EJ: () => I, U4: () => m, i3: () => S, i7: () => p, lI: () => T, tZ: () => g });
 var i = n(892227),
     r = n(806163),
     a = n(17928),
@@ -14,8 +14,8 @@ var _ = n(573163);
 var E = n(935208),
     A = n(310031),
     h = n(849077),
-    I = n(652215);
-function f(e) {
+    f = n(652215);
+function I(e) {
     let { messageId: t, channelId: n, guildId: i, ReadStateStore_: r = _.Ay, GuildStore_: a = u.A } = e;
     if (!r.hasUnread(n)) return !1;
     let s = r.ackMessageId(n);
@@ -34,15 +34,15 @@ function p(e) {
 }
 function T() {
     let { pathname: e } = (0, r.zy)();
-    return e.startsWith(I.BVt.CHANNEL(I.gNP));
+    return e.startsWith(f.BVt.CHANNEL(f.gNP));
 }
-function m(e) {
+function g(e) {
     {
         let { openUserSettings: t } = n(766075);
         t(d.X.NOTIFICATIONS_PANEL, { analyticsLocations: e });
     }
 }
-function g() {
+function m() {
     let e = (0, a.yK)([A.A], () => A.A.getNotifyingChannelIds() ?? []),
         t = (0, a.yK)([_.Ay], () => e.filter((e) => _.Ay.hasUnread(e)), [e]),
         n = (0, a.yK)([s.Ay], () => s.Ay.getSettingsFilteredMentions() ?? []);
@@ -55,7 +55,7 @@ function g() {
                             let t = c.A.getBasicChannel(e.channel_id);
                             return (
                                 null != t &&
-                                f({
+                                I({
                                     messageId: e.id,
                                     channelId: e.channel_id,
                                     guildId: t.guild_id,
@@ -67,7 +67,7 @@ function g() {
                     i = 0;
                 for (let t of e) {
                     let e = c.A.getBasicChannel(t);
-                    null != e && I.kvI.ALL_DMS.has(e.type) && (i += _.Ay.getMentionCount(t));
+                    null != e && f.kvI.ALL_DMS.has(e.type) && (i += _.Ay.getMentionCount(t));
                 }
                 return t + i;
             },

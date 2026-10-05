@@ -1,4 +1,4 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var i = n(280889),
     r = n(143236),
     a = n(435558),
@@ -180,8 +180,8 @@ class A extends r.EventEmitter {
     }
 }
 var h = n(358579),
-    I = n(820465);
-class f extends A {
+    f = n(820465);
+class I extends A {
     async uploadFiles(e) {
         super.upload(e);
         let t = new Promise((e, t) => {
@@ -196,7 +196,7 @@ class f extends A {
         try {
             if (((this.files = e), this._aborted)) return t;
             this._handleStart(() => n.abort());
-            let i = (0, I.M)();
+            let i = (0, f.M)();
             if (!(await this.compressAndCheckFileSize({ deferTotalSizeCheckUntilAfterCompression: i }))) return t;
             this.setUploadingTextForUI();
             try {

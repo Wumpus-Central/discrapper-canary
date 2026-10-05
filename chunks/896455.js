@@ -10,8 +10,8 @@ var i = n(477900),
 let u = "SCHEDULED_MESSAGE_CREATE_MODAL_KEY";
 function _(e) {
     let { channel: t, transitionState: n, onClose: _, defaultValue: E, onSubmit: A, onClear: h } = e,
-        [I, f] = r.useState(E),
-        p = (0, o.Vf)(I);
+        [f, I] = r.useState(E),
+        p = (0, o.Vf)(f);
     return (0, i.jsx)(a.a, {
         transitionState: n,
         size: "md",
@@ -32,13 +32,13 @@ function _(e) {
                 variant: "primary",
                 text: c.intl.string(c.t.iQ1SwX),
                 onClick: function () {
-                    let e = I.toISOString();
+                    let e = f.toISOString();
                     (null != A ? A(e) : l.A.changeScheduledMessage(t.id, { scheduledTimestamp: e }),
                         (0, s.closeModal)(u));
                 },
                 disabled: null != p,
             },
         ],
-        children: (0, i.jsx)(d.A, { defaultValue: E, onChange: f }),
+        children: (0, i.jsx)(d.A, { defaultValue: E, onChange: I }),
     });
 }

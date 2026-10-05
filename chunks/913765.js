@@ -13,12 +13,12 @@ var o = n(503698),
     E = n.n(_),
     A = n(615300),
     h = n(17928),
-    I = n(868285),
-    f = n(935462),
+    f = n(868285),
+    I = n(935462),
     p = n(297264),
     T = n(834730),
-    m = n(475358),
-    g = n(707554),
+    g = n(475358),
+    m = n(707554),
     S = n(689175),
     N = n(939249),
     C = n(696760),
@@ -256,7 +256,7 @@ function H() {
                                                       (0, i.jsx)("div", {
                                                           className: "keybind-shortcuts",
                                                           children: e.binds.map((e) =>
-                                                              (0, i.jsx)(m.e, { className: x.Me, shortcut: e }, e),
+                                                              (0, i.jsx)(g.e, { className: x.Me, shortcut: e }, e),
                                                           ),
                                                       }),
                                                   ],
@@ -365,11 +365,11 @@ class j extends r.PureComponent {
             className: x.UV,
             style: this.getStyles(),
             children: [
-                (0, i.jsxs)(g.H, {
+                (0, i.jsxs)(m.H, {
                     className: x.GK,
                     children: [
                         (0, i.jsx)("div", { className: x.Qs, children: G.intl.string(G.t["1BdUtx"]) }),
-                        (0, i.jsx)(m.e, { shortcut: "mod+/" }),
+                        (0, i.jsx)(g.e, { shortcut: "mod+/" }),
                     ],
                 }),
                 (0, i.jsx)("div", { className: x.KV, children: G.intl.string(G.t["2t19lU"]) }),
@@ -385,7 +385,7 @@ class j extends r.PureComponent {
                 (0, i.jsx)(S.Gt, {
                     ref: this.scrollerRef,
                     fade: !0,
-                    children: (0, i.jsx)(g.F, { children: (0, i.jsx)(H, {}) }),
+                    children: (0, i.jsx)(m.F, { children: (0, i.jsx)(H, {}) }),
                 }),
             ],
         });
@@ -419,13 +419,13 @@ function Y(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsx)(V, { showBackdrop: l }),
-            (0, i.jsx)(f.EO, {
+            (0, i.jsx)(I.EO, {
                 className: d()(x._$, { [x.O9]: a }),
-                size: f.rI.DYNAMIC,
+                size: I.rI.DYNAMIC,
                 "aria-label": G.intl.string(G.t.T9DA2K),
                 transitionState: t,
                 parentComponent: "KeyboardShortcutsModal",
-                children: (0, i.jsx)(I.F, {
+                children: (0, i.jsx)(f.F, {
                     component: "div",
                     children: a
                         ? (0, i.jsx)(

@@ -12,12 +12,12 @@ var i = n(812729),
     E = n(652215);
 let A = Object.freeze([]),
     h = {},
-    I = {},
     f = {},
+    I = {},
     p = {},
     T = {},
-    m = {},
-    g = {};
+    g = {},
+    m = {};
 function S(e, t) {
     let n = h[e];
     return null != n ? n[t] : null;
@@ -52,10 +52,10 @@ function O(e) {
     return n.length <= 1 ? e : [...t, [...n].sort(C)[0]].sort(C);
 }
 function R(e, t) {
-    ((f[e] = t), (p[e] = O(t)));
+    ((I[e] = t), (p[e] = O(t)));
 }
 function L(e) {
-    if ((delete I[e], delete f[e], delete p[e], delete T[e], delete m[e], null == h[e])) return;
+    if ((delete f[e], delete I[e], delete p[e], delete T[e], delete g[e], null == h[e])) return;
     let t = Object.values(h[e]),
         n = t.reduce((e, t) => {
             let n = t.processedAtTimestamp,
@@ -65,10 +65,10 @@ function L(e) {
             return n > i || (n === i && r > a) ? t : e;
         }, t[0]);
     n.status !== E.clD.OFFLINE || (null != n.hiddenActivities && n.hiddenActivities.length > 0)
-        ? ((I[e] = n.status),
+        ? ((f[e] = n.status),
           R(e, n.activities),
           (T[e] = y(Object.values(t).flatMap((e) => e.hiddenActivities ?? []))),
-          null != n.clientStatus && (m[e] = n.clientStatus))
+          null != n.clientStatus && (g[e] = n.clientStatus))
         : s().every(
                 h[e],
                 (e) => e.status === E.clD.OFFLINE && (null == e.hiddenActivities || 0 === e.hiddenActivities.length),
@@ -87,10 +87,10 @@ function D(e) {
     if (null == t) return;
     let n = s().maxBy(Object.values(t), (e) => e.processedAtTimestamp);
     (n.status !== E.clD.OFFLINE || (null != n.hiddenActivities && n.hiddenActivities.length > 0)) &&
-        ((I[e] = n.status),
+        ((f[e] = n.status),
         R(e, n.activities),
         (T[e] = n.hiddenActivities ?? []),
-        null != n.clientStatus && (m[e] = n.clientStatus));
+        null != n.clientStatus && (g[e] = n.clientStatus));
 }
 function v(e) {
     let {
@@ -117,7 +117,7 @@ function v(e) {
         ((s = null != d && r()(d.activities, e) ? d.activities : e),
             (c[t] = { status: i, clientStatus: a, activities: s, hiddenActivities: n, processedAtTimestamp: o }));
     }
-    return (delete g[n], L(n), !0);
+    return (delete m[n], L(n), !0);
 }
 function b(e) {
     let {
@@ -158,13 +158,13 @@ class U extends l.Ay.Store {
         this.waitFor(u.default, _.default);
     }
     setCurrentUserOnConnectionOpen(e, t) {
-        ((I[u.default.getId()] = e), R(u.default.getId(), [...t].sort(C)));
+        ((f[u.default.getId()] = e), R(u.default.getId(), [...t].sort(C)));
     }
     getStatus(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null,
             n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : E.clD.OFFLINE,
             i = _.default.getUser(e);
-        if ((null != i && i.hasFlag(E.nhx.BOT_HTTP_INTERACTIONS) && (n = E.clD.UNKNOWN), null == t)) return I[e] ?? n;
+        if ((null != i && i.hasFlag(E.nhx.BOT_HTTP_INTERACTIONS) && (n = E.clD.UNKNOWN), null == t)) return f[e] ?? n;
         let r = S(e, t);
         return r?.status ?? n;
     }
@@ -176,7 +176,7 @@ class U extends l.Ay.Store {
     }
     getUnfilteredActivities(e) {
         let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : null;
-        if (null == t) return f[e] ?? A;
+        if (null == t) return I[e] ?? A;
         let n = S(e, t);
         return null == n || null == n.activities ? A : n.activities;
     }
@@ -206,13 +206,13 @@ class U extends l.Ay.Store {
         return (i && (r = r.concat(this.getHiddenActivities(e, n))), r.find(t));
     }
     getActivityMetadata(e) {
-        return g[e];
+        return m[e];
     }
     getUserIds() {
-        return c.default.keys(f);
+        return c.default.keys(I);
     }
     isMobileOnline(e) {
-        let t = m[e];
+        let t = g[e];
         return (
             null != t &&
             t[E.xfJ.MOBILE] === E.clD.ONLINE &&
@@ -221,21 +221,21 @@ class U extends l.Ay.Store {
         );
     }
     isVROnline(e) {
-        let t = m[e];
+        let t = g[e];
         return null != t && t[E.xfJ.VR] === E.clD.ONLINE;
     }
     getClientStatus(e) {
-        return m[e];
+        return g[e];
     }
     getState() {
         return {
             presencesForGuilds: h,
-            statuses: I,
-            activities: f,
+            statuses: f,
+            activities: I,
             filteredActivities: p,
             hiddenActivities: T,
-            activityMetadata: g,
-            clientStatuses: m,
+            activityMetadata: m,
+            clientStatuses: g,
         };
     }
 }
@@ -247,12 +247,12 @@ let w = new U(o.h, {
         let { guilds: t, presences: n } = e,
             i = u.default.getId();
         ((h = {}),
-            (g = {}),
-            (I = { [i]: I[i] }),
+            (m = {}),
             (f = { [i]: f[i] }),
+            (I = { [i]: I[i] }),
             (p = { [i]: p[i] }),
             (T = { [i]: T[i] }),
-            (m = { [i]: {} }));
+            (g = { [i]: {} }));
         let r = new Set();
         (t.forEach((e) => {
             e.presences.forEach((t) => {
@@ -303,10 +303,10 @@ let w = new U(o.h, {
     OVERLAY_INITIALIZE: function (e) {
         let { presences: t } = e;
         ((h = t.presencesForGuilds),
-            (I = t.statuses),
-            (f = t.activities),
+            (f = t.statuses),
+            (I = t.activities),
             (T = t.hiddenActivities),
-            (g = t.activityMetadata));
+            (m = t.activityMetadata));
     },
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
@@ -389,7 +389,7 @@ let w = new U(o.h, {
     },
     ACTIVITY_METADATA_UPDATE: function (e) {
         let { userId: t, metadata: n } = e;
-        return ((g[t] = n), !1);
+        return ((m[t] = n), !1);
     },
     THREAD_MEMBER_LIST_UPDATE: function (e) {
         let { guildId: t, members: n } = e;
@@ -423,7 +423,7 @@ let w = new U(o.h, {
     },
     SELF_PRESENCE_STORE_UPDATE: function (e) {
         let t = u.default.getId();
-        if (I[t] === e.status && f[t] === e.activities && T[t] === e.hiddenActivities) return !1;
-        ((I[t] = e.status), R(t, [...e.activities].sort(C)), (T[t] = [...e.hiddenActivities].sort(C)), delete g[t]);
+        if (f[t] === e.status && I[t] === e.activities && T[t] === e.hiddenActivities) return !1;
+        ((f[t] = e.status), R(t, [...e.activities].sort(C)), (T[t] = [...e.hiddenActivities].sort(C)), delete m[t]);
     },
 });

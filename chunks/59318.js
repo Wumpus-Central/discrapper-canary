@@ -4,8 +4,8 @@ n.d(t, {
     XB: () => T,
     ge: () => u,
     tT: () => d,
-    r1: () => I,
-    AE: () => f,
+    r1: () => f,
+    AE: () => I,
     XA: () => p,
     L8: () => E,
 });
@@ -44,10 +44,10 @@ function E(e) {
 }
 let A = /\.(riv)$/i,
     h = (0, i.isIOS)() ? /\.(mp4|mov|qt)$/i : ((0, i.isAndroid)(), /\.(mp4|webm|mov|qt)$/i);
-function I(e) {
+function f(e) {
     return r(e, h) || !1;
 }
-function f(e) {
+function I(e) {
     return null != e && (h.test(e) || (null != e && !1));
 }
 function p(e) {

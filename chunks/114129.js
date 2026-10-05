@@ -1,7 +1,7 @@
 n.d(t, {
     Aq: () => L,
-    Bd: () => I,
-    D5: () => f,
+    Bd: () => f,
+    D5: () => I,
     JC: () => p,
     RL: () => y,
     TC: () => R,
@@ -11,7 +11,7 @@ n.d(t, {
     f5: () => D,
     lj: () => C,
     qu: () => N,
-    ug: () => m,
+    ug: () => g,
 });
 var i,
     r = n(73153),
@@ -32,13 +32,13 @@ function A(e, t) {
 function h(e) {
     "route" === e.kind ? (0, s.pX)(e.routePath) : A(e.channelId, e.guildId);
 }
-function I(e, t) {
+function f(e, t) {
     let n = d.Ay.getCurrentlySelectedChannelId();
     0 === u.A.getTabs().length && (null == n || (0, E.jq)(n))
         ? A(e, t)
         : r.h.dispatch({ type: "CHANNEL_TABS_OPEN", kind: "channel", channelId: e, guildId: t });
 }
-function f(e, t) {
+function I(e, t) {
     let n = d.Ay.getCurrentlySelectedChannelId();
     0 === u.A.getTabs().length && (null == n || (0, E.jq)(n))
         ? A(e, t)
@@ -60,13 +60,13 @@ function p() {
         return;
     }
     let t = e?.channelId ?? d.Ay.getCurrentlySelectedChannelId();
-    null == t || f(t, e?.guildId ?? c.A.getGuildId() ?? null);
+    null == t || I(t, e?.guildId ?? c.A.getGuildId() ?? null);
 }
 function T(e, t) {
     0 !== u.A.getTabs().length && r.h.dispatch({ type: "CHANNEL_TABS_NAVIGATE_ROUTE", routePath: e, routeLabel: t });
 }
-var m = (((i = {}).Passthrough = "passthrough"), (i.Noop = "noop"), (i.Navigated = "navigated"), i);
-function g(e) {
+var g = (((i = {}).Passthrough = "passthrough"), (i.Noop = "noop"), (i.Navigated = "navigated"), i);
+function m(e) {
     if (!u.A.isEnabled()) return "passthrough";
     let t = u.A.getActiveTab();
     if (null == t || ("channel" === t.kind && d.Ay.getCurrentlySelectedChannelId() !== t.channelId))
@@ -89,10 +89,10 @@ function g(e) {
             "navigated");
 }
 function S() {
-    return g(-1);
+    return m(-1);
 }
 function N() {
-    return g(1);
+    return m(1);
 }
 function C(e) {
     r.h.dispatch({ type: "CHANNEL_TABS_SET_ENABLED", enabled: e });

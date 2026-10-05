@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(439372),
     r = n(280450),
     a = n(16236),
@@ -33,12 +33,12 @@ function A() {
 function h(e) {
     return null != e && Date.now() - new Date(e).getTime() < 6e4;
 }
-function I(e) {
+function f(e) {
     let { id: t, addedMembers: n } = e,
         i = r.default.getId();
     null == i || null == n || (n.some((e) => e.userId === i) && (0, a.Ye)(t).catch(o.tEg));
 }
-function f(e) {
+function I(e) {
     let { channel: t } = e;
     t?.member != null && h(t.member.joinTimestamp) && (0, a.Ye)(t.id).catch(o.tEg);
 }
@@ -54,9 +54,9 @@ class T extends i.A {
         CATEGORY_COLLAPSE_ALL: _,
         CATEGORY_EXPAND_ALL: E,
         LOGOUT: A,
-        THREAD_CREATE: f,
-        THREAD_MEMBERS_UPDATE: I,
+        THREAD_CREATE: I,
+        THREAD_MEMBERS_UPDATE: f,
         THREAD_MEMBER_UPDATE: p,
     };
 }
-let m = new T();
+let g = new T();

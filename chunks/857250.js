@@ -1,4 +1,4 @@
-n.d(t, { o: () => m, y: () => g });
+n.d(t, { o: () => g, y: () => m });
 var i = n(477900),
     r = n(582128),
     a = n(132500),
@@ -12,11 +12,11 @@ var i = n(477900),
     E = n(152367),
     A = n(27232),
     h = n(661531),
-    I = n(834730),
-    f = n(427209),
+    f = n(834730),
+    I = n(427209),
     p = n(97483),
     T = n(655214);
-function m(e, t) {
+function g(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : p.jg,
         {
             position: i = p.jg.position,
@@ -26,7 +26,7 @@ function m(e, t) {
         } = n;
     return { message: e, id: (0, a.A)(), type: t, options: { position: i, component: r, duration: s, appContext: l } };
 }
-let g = r.memo(function (e) {
+let m = r.memo(function (e) {
     let { message: t, type: n, id: r, options: { component: a = p.jg.component } = p.jg } = e;
     return null != a
         ? a
@@ -59,7 +59,7 @@ let g = r.memo(function (e) {
                           case p.Ck.LINK:
                               return (0, i.jsx)(d.LinkIcon, { className: T.Kk, color: h.A.colors.TEXT_STRONG.css });
                           case p.Ck.FORWARD:
-                              return (0, i.jsx)(f.A, { className: T.Kk, color: h.A.colors.STATUS_POSITIVE.css });
+                              return (0, i.jsx)(I.A, { className: T.Kk, color: h.A.colors.STATUS_POSITIVE.css });
                           case p.Ck.INVITE:
                               return (0, i.jsx)(c.u, { className: T.Kk, color: h.A.colors.TEXT_BRAND.css });
                           case p.Ck.BOOKMARK:
@@ -74,7 +74,7 @@ let g = r.memo(function (e) {
                               return null;
                       }
                   })(n),
-                  (0, i.jsx)(I.E, { className: T.Qs, variant: "text-md/normal", children: t }),
+                  (0, i.jsx)(f.E, { className: T.Qs, variant: "text-md/normal", children: t }),
               ],
           });
 });

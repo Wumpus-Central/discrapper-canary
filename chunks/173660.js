@@ -18,8 +18,8 @@ function c(e) {
         E = null != t ? i.getVoiceState(t.getGuildId(), n.getId()) : null,
         A = c.isSelfMute() || c.isSelfMutedTemporarily(),
         h = t?.getGuildId(),
-        I = _.isViewingRoles(h) && !u.can(d.xBc.SPEAK, t);
-    return { selfMute: A, suppress: E?.suppress || I, mute: E?.mute ?? !1 };
+        f = _.isViewingRoles(h) && !u.can(d.xBc.SPEAK, t);
+    return { selfMute: A, suppress: E?.suppress || f, mute: E?.mute ?? !1 };
 }
 function u(e) {
     return (0, i.cf)([a.default, o.A, s.Ay, l.A, r.A], () =>

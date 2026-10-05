@@ -12,12 +12,12 @@ var i = n(477900),
     E = n(460890),
     A = n(570950),
     h = n(289873),
-    I = n(834730),
-    f = n(65406),
+    f = n(834730),
+    I = n(65406),
     p = n(70074);
 let T = { xs: "text-xs/medium", sm: "text-sm/medium", md: "text-md/medium" },
-    m = { xs: "xxs", sm: "xs", md: "refresh_sm" },
-    g = { xs: "sm", sm: "sm", md: "md" };
+    g = { xs: "xxs", sm: "xs", md: "refresh_sm" },
+    m = { xs: "sm", sm: "sm", md: "md" };
 function S(e) {
     let {
             role: t = "button",
@@ -26,8 +26,8 @@ function S(e) {
             text: _,
             icon: A,
             iconPosition: h = "start",
-            iconOpticalOffsetMargin: m = 0,
-            fullWidth: g = !1,
+            iconOpticalOffsetMargin: g = 0,
+            fullWidth: m = !1,
             focusProps: S,
             loading: R,
             loadingStartedLabel: L,
@@ -51,11 +51,11 @@ function S(e) {
         } = e,
         Y = (0, c.C)(),
         K = Y?.size ?? a,
-        $ = Y?.fullWidth ?? g,
+        $ = Y?.fullWidth ?? m,
         z = null != _,
         X = r.useRef(null),
         Z = j ?? X,
-        q = (0, i.jsx)(O, { icon: A, iconOpticalOffsetMargin: m, iconPosition: h, size: K, ref: Z, disabled: F }),
+        q = (0, i.jsx)(O, { icon: A, iconOpticalOffsetMargin: g, iconPosition: h, size: K, ref: Z, disabled: F }),
         Q = "expressive" === n,
         J = r.useContext(d.C),
         { theme: ee, i18n: et } = (0, E.G9)(),
@@ -66,10 +66,10 @@ function S(e) {
             !1 === R && !0 === ei.current && (o.O.announce(y ?? et.BUTTON_LOADING_FINISHED_LABEL), (ei.current = !1)));
     }, [R, L, y, et.BUTTON_LOADING_STARTED_LABEL, et.BUTTON_LOADING_FINISHED_LABEL]);
     let er = (0, i.jsxs)("div", {
-            className: s()(f.buttonChildren, { [f.loading]: R }),
+            className: s()(I.buttonChildren, { [I.loading]: R }),
             children: [
                 null != q && "start" === h && q,
-                z && (0, i.jsx)(I.E, { tag: "span", variant: T[K], color: "none", lineClamp: 1, children: _ }),
+                z && (0, i.jsx)(f.E, { tag: "span", variant: T[K], color: "none", lineClamp: 1, children: _ }),
                 null != q && "end" === h && q,
             ],
         }),
@@ -83,8 +83,8 @@ function S(e) {
             role: t,
             "aria-busy": R,
             className: s()(
-                f.button,
-                f[K],
+                I.button,
+                I[K],
                 (function (e, t) {
                     switch (e) {
                         case "togglebutton":
@@ -94,10 +94,10 @@ function S(e) {
                         case "togglebutton-icon-only":
                             return p.e7;
                         default:
-                            return f[e];
+                            return I[e];
                     }
                 })(n, z),
-                { [f.hasText]: z, [f.fullWidth]: $, [f.rounded]: D },
+                { [I.hasText]: z, [I.fullWidth]: $, [I.rounded]: D },
             ),
             ref: Z,
             rel: b,
@@ -121,13 +121,13 @@ function S(e) {
                         disabled: F,
                     }),
                 null == R
-                    ? (0, i.jsx)("div", { className: f.buttonChildrenWrapper, children: er })
+                    ? (0, i.jsx)("div", { className: I.buttonChildrenWrapper, children: er })
                     : (0, i.jsx)(N, { loading: R, size: K, children: er }),
             ],
         }),
     });
     return Q
-        ? (0, i.jsx)("div", { className: s()(f.expressiveWrapper, { [f.fullWidth]: $, [f.hasText]: z }), children: el })
+        ? (0, i.jsx)("div", { className: s()(I.expressiveWrapper, { [I.fullWidth]: $, [I.hasText]: z }), children: el })
         : el;
 }
 function N(e) {
@@ -150,16 +150,16 @@ function N(e) {
             [n],
         ),
         (0, i.jsxs)("div", {
-            className: f.buttonChildrenWrapper,
+            className: I.buttonChildrenWrapper,
             children: [
                 t,
                 o &&
                     (0, i.jsx)("div", {
-                        className: s()(f.spinnerWrapper, { [f.fadeIn]: n, [f.fadeOut]: !n }),
+                        className: s()(I.spinnerWrapper, { [I.fadeIn]: n, [I.fadeOut]: !n }),
                         children: (0, i.jsx)(h.y, {
                             type: h.t.PULSING_ELLIPSIS,
-                            className: s()(f.spinner, f[`spinner-${a}`]),
-                            itemClassName: f.spinnerItem,
+                            className: s()(I.spinner, I[`spinner-${a}`]),
+                            itemClassName: I.spinnerItem,
                         }),
                     }),
             ],
@@ -192,7 +192,7 @@ function C(e) {
             children: [
                 !l &&
                     (0, i.jsx)(A.s, {
-                        className: s()(f.expressiveRive, f.expressiveBackground),
+                        className: s()(I.expressiveRive, I.expressiveBackground),
                         eventTargetRef: n,
                         fit: "layout",
                         artboard: "BaseGlowRemapped",
@@ -202,11 +202,11 @@ function C(e) {
                 !t &&
                     !l &&
                     (0, i.jsx)(A.s, {
-                        className: s()(f.expressiveRive, f.expressiveHoverContainer),
+                        className: s()(I.expressiveRive, I.expressiveHoverContainer),
                         fit: "layout",
                         artboard: a ? "HoverLightmode" : "HoverDarkmode",
                     }),
-                (0, i.jsx)("div", { className: s()(f.expressiveRive, f.expressiveFill) }),
+                (0, i.jsx)("div", { className: s()(I.expressiveRive, I.expressiveFill) }),
             ],
         })
     );
@@ -249,8 +249,8 @@ function O(e) {
                 }
                 return {};
             })(),
-            size: m[s],
-            className: f.icon,
+            size: g[s],
+            className: I.icon,
         });
     } else if (null != t)
         switch (t.type) {
@@ -259,13 +259,13 @@ function O(e) {
                 d = (0, i.jsx)(e, {
                     ...t.riveProps,
                     eventTargetRef: l,
-                    style: { width: _.E[m[s]], height: _.E[m[s]] },
+                    style: { width: _.E[g[s]], height: _.E[g[s]] },
                 });
                 break;
             }
             case "sticker": {
                 let e = t.component;
-                d = (0, i.jsx)(e, { size: _.E[g[s]], sticker: t.asset, isInteracting: c });
+                d = (0, i.jsx)(e, { size: _.E[m[s]], sticker: t.asset, isInteracting: c });
             }
         }
     return d;

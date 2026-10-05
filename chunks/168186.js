@@ -6,12 +6,12 @@
     Ez: () => v,
     Lz: () => T,
     Oe: () => p,
-    PV: () => g,
+    PV: () => m,
     Qr: () => L,
     XM: () => S,
     bq: () => D,
     gI: () => P,
-    hT: () => m,
+    hT: () => g,
     my: () => b,
     zl: () => O,
 }),
@@ -30,8 +30,8 @@ n(95701);
 var E = n(31717),
     A = n(392054),
     h = n(73510),
-    I = n(652215),
-    f = n(818348);
+    f = n(652215),
+    I = n(818348);
 function p(e) {
     let t,
         { rootCommand: n, command: i, applicationId: r, subCommandPath: a, useKeyedPermissions: s } = e;
@@ -177,10 +177,10 @@ function T(e, t) {
         ),
     );
 }
-function m(e) {
-    return I.Ut1.test(e.trim());
+function g(e) {
+    return f.Ut1.test(e.trim());
 }
-function g(e, t, n, i) {
+function m(e, t, n, i) {
     let r = [];
     return (
         o()(e).forEach((e) => {
@@ -218,7 +218,7 @@ function O(e) {
         commandLevelPermissions: a,
         defaultMemberPermissions: s,
     } = e;
-    if (n.ownerId === i.userId || t.can(f.xB.ADMINISTRATOR, n)) return !0;
+    if (n.ownerId === i.userId || t.can(I.xB.ADMINISTRATOR, n)) return !0;
     let l = n.id;
     if (null != a) {
         let e = R(i, l, a);
@@ -296,7 +296,7 @@ function b(e) {
         searchResultsPosition: l,
         source: o,
     } = e;
-    (0, u.zV)(I.HAw.APPLICATION_COMMAND_SELECTED, {
+    (0, u.zV)(f.HAw.APPLICATION_COMMAND_SELECTED, {
         command_id: t.rootCommand?.id ?? t.id,
         application_id: t.applicationId,
         location: n,

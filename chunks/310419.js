@@ -1,4 +1,4 @@
-(n.d(t, { Bn: () => I, R4: () => f, ev: () => _, h: () => h, sW: () => A, tS: () => E }),
+(n.d(t, { Bn: () => f, R4: () => I, ev: () => _, h: () => h, sW: () => A, tS: () => E }),
     n(323874),
     n(14289),
     n(35956));
@@ -33,13 +33,13 @@ var A =
     (r.GLOBAL_DISCOVERY_SIDEBAR = "Global Discovery Sidebar"),
     r);
 let h = (0, a.D)(() => ({ sessionId: null, guildId: null, entrypoint: null, trackedOpenedFromExternalEntrypoint: !1 }));
-function I() {
+function f() {
     let {
         location: { state: e },
     } = (0, l.JK)();
     return e?.previousView;
 }
-function f() {
+function I() {
     let {
         location: { pathname: e, search: t },
     } = (0, l.JK)();

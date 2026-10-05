@@ -12,8 +12,8 @@ var i = n(264572),
     E = n(652215);
 let A = o.Ay.requireModule("discord_rpc").RPCIPC,
     h = new l.A("RPCServer:IPC"),
-    I = { HANDSHAKE: 0, FRAME: 1, CLOSE: 2, PING: 3, PONG: 4 };
-function f(e, t) {
+    f = { HANDSHAKE: 0, FRAME: 1, CLOSE: 2, PING: 3, PONG: 4 };
+function I(e, t) {
     null != e.setHandshakeComplete ? e.setHandshakeComplete(t) : (e._didHandshake = t);
 }
 function p(e) {
@@ -22,7 +22,7 @@ function p(e) {
 function T(e) {
     return new Promise((t, n) => {
         "string" == typeof e && (e = A.net.createConnection(e));
-        let i = new g(e, "json");
+        let i = new m(e, "json");
         function r() {
             i.close(E.YI$.CLOSE_NORMAL, "test client going away");
         }
@@ -49,10 +49,10 @@ function T(e) {
                 throw (r(), e);
             },
         );
-        return (e.write(m(I.PING, s().uniqueId())), a.then(t, n));
+        return (e.write(g(f.PING, s().uniqueId())), a.then(t, n));
     });
 }
-function m(e, t) {
+function g(e, t) {
     t = JSON.stringify(t);
     let n = i.Buffer.byteLength(t),
         r = i.Buffer.alloc(8 + n);
@@ -63,7 +63,7 @@ function m(e, t) {
         r.buffer.slice(r.byteOffset, r.byteOffset + r.byteLength)
     );
 }
-class g extends c.A {
+class m extends c.A {
     messageBuffer = i.Buffer.alloc(0);
     currentHeader = null;
     MAX_BUFFER_SIZE = 5242880;
@@ -74,7 +74,7 @@ class g extends c.A {
         (super({ type: _.z4.IPC }, E.dL4, t),
             (this.socket = e),
             (this.onClose = n),
-            f(e, !1),
+            I(e, !1),
             this.socket.on("close", () => {
                 null != this.onClose && (this.onClose(), (this.onClose = null));
             }));
@@ -84,11 +84,11 @@ class g extends c.A {
         return (e.copy(r, 0, t, n), r);
     }
     send(e) {
-        (h.info(`Socket Emit: ${this.id}`, (0, d.A)(e)), this.socket.write(m(I.FRAME, e)));
+        (h.info(`Socket Emit: ${this.id}`, (0, d.A)(e)), this.socket.write(g(f.FRAME, e)));
     }
     close(e, t) {
         try {
-            this.socket.end(m(I.CLOSE, { code: e, message: t }));
+            this.socket.end(g(f.CLOSE, { code: e, message: t }));
         } catch (e) {
             h.error(`Socket End Error: ${e.message}`);
         }
@@ -119,7 +119,7 @@ class g extends c.A {
                         opcode: this.messageBuffer.readInt32LE(0),
                         size: this.messageBuffer.readInt32LE(4),
                     }),
-                    !Object.values(I).includes(this.currentHeader.opcode) || this.currentHeader.size < 0)
+                    !Object.values(f).includes(this.currentHeader.opcode) || this.currentHeader.size < 0)
                 )
                     throw Error("protocol error");
                 if (this.currentHeader.size > 3145728) throw Error("message too large");
@@ -139,26 +139,26 @@ class g extends c.A {
     }
     dispatchMessage(e, t) {
         switch (e) {
-            case I.PING:
-                (this.socket.emit("ping", t), this.socket.write(m(I.PONG, t)));
+            case f.PING:
+                (this.socket.emit("ping", t), this.socket.write(g(f.PONG, t)));
                 break;
-            case I.PONG:
+            case f.PONG:
                 this.socket.emit("pong", t);
                 break;
-            case I.HANDSHAKE:
+            case f.HANDSHAKE:
                 (this.handleHandshake(t), this.socket.emit("handshake", t));
                 break;
-            case I.FRAME:
+            case f.FRAME:
                 if (!p(this.socket)) throw Error("did not handshake");
                 this.socket.emit("request", t);
                 break;
-            case I.CLOSE:
+            case f.CLOSE:
                 this.close(E.YI$.CLOSE_NORMAL, "client disconnect");
         }
     }
     handleHandshake(e) {
         if (p(this.socket)) throw Error("already did handshake");
-        ((this.clientId = e.client_id), this.checkRpcVersion(+e.v), f(this.socket, !0));
+        ((this.clientId = e.client_id), this.checkRpcVersion(+e.v), I(this.socket, !0));
     }
 }
 class S extends r.EventEmitter {
@@ -179,7 +179,7 @@ class S extends r.EventEmitter {
         if (this.activeConnections >= this.MAX_CONNECTIONS) {
             h.warn(`Connection limit reached (${this.MAX_CONNECTIONS}), rejecting connection`);
             try {
-                e.end(m(I.CLOSE, { code: E.YI$.CLOSE_ABNORMAL, message: "Server at capacity" }));
+                e.end(g(f.CLOSE, { code: E.YI$.CLOSE_ABNORMAL, message: "Server at capacity" }));
             } catch (e) {
                 h.error(`Socket End Error: ${e.message}`);
             }
@@ -191,7 +191,7 @@ class S extends r.EventEmitter {
             return;
         }
         this.activeConnections++;
-        let t = new g(e, "json", () => {
+        let t = new m(e, "json", () => {
                 (this.activeConnections--,
                     h.info(`Socket Close: ${t.id} ${t.clientId ?? "unknown"} (active: ${this.activeConnections})`),
                     t.abortController.abort(),

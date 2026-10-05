@@ -1,4 +1,4 @@
-n.d(t, { J_: () => O, N4: () => N, cF: () => m, l9: () => S, rd: () => T, tx: () => p });
+n.d(t, { J_: () => O, N4: () => N, cF: () => g, l9: () => S, rd: () => T, tx: () => p });
 var i = n(636537),
     r = n(73153),
     a = n(181658),
@@ -12,8 +12,8 @@ var i = n(636537),
     E = n(652215);
 let A = 10 * l.A.Millis.MINUTE,
     h = l.A.Millis.MINUTE,
-    I = l.A.Millis.MINUTE;
-function f(e) {
+    f = l.A.Millis.MINUTE;
+function I(e) {
     let t = c.A.getFetchState(e);
     if (void 0 === t) return !0;
     if ("loading" === t) return !1;
@@ -21,7 +21,7 @@ function f(e) {
     return null == n || Date.now() - n > ("error" === t ? A : h);
 }
 async function p(e) {
-    let t = e.filter(f);
+    let t = e.filter(I);
     0 !== t.length && (await T(t));
 }
 async function T(e) {
@@ -41,7 +41,7 @@ async function T(e) {
             r.h.dispatch({ type: "STOREFRONT_PROMOTIONS_FETCH_FAIL", applicationIds: e });
         }
 }
-async function m(e, t) {
+async function g(e, t) {
     let n;
     r.h.dispatch({ type: "STOREFRONT_PROMOTION_CLAIM_START", promotionId: e });
     try {
@@ -52,8 +52,8 @@ async function m(e, t) {
     }
     return (r.h.dispatch({ type: "STOREFRONT_PROMOTION_CLAIM_SUCCESS", promotionId: e }), await T([t]), n.body);
 }
-function g(e) {
-    return e?.type === "error" ? A : I;
+function m(e) {
+    return e?.type === "error" ? A : f;
 }
 async function S(e) {
     let { applicationId: t } = e;
@@ -71,7 +71,7 @@ async function C(e) {
     } = (function (e) {
         if ("application" === e.type) {
             let t = o.A.getFetchStateForApplicationId(e.applicationId),
-                n = g(t);
+                n = m(t);
             return null != t && ("loading" === t.type || t.fetchedAt > Date.now() - n)
                 ? { shouldFetch: !1, filteredSkuIds: [], applicationId: e.applicationId }
                 : { shouldFetch: !0, filteredSkuIds: [], applicationId: e.applicationId };
@@ -81,7 +81,7 @@ async function C(e) {
                 .filter((e) => {
                     let t = o.A.getFetchStateForSkuId(e);
                     if (null == t) return !0;
-                    let n = g(t);
+                    let n = m(t);
                     return "loading" !== t.type && t.fetchedAt < Date.now() - n;
                 })
                 .sort((e, t) => {

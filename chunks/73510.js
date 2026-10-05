@@ -1,5 +1,5 @@
 n.d(t, {
-    $r: () => I,
+    $r: () => f,
     Hi: () => c,
     Ik: () => d,
     NH: () => s,
@@ -8,7 +8,7 @@ n.d(t, {
     YC: () => h,
     iW: () => E,
     oW: () => l,
-    tE: () => f,
+    tE: () => I,
     uA: () => A,
     v4: () => _,
 });
@@ -28,8 +28,8 @@ let c = 10,
     E = 100,
     A = 3,
     h = 10,
-    I = 500;
-function f(e) {
+    f = 500;
+function I(e) {
     if (null != e.choices) return a.intl.string(a.t.xi5aah);
     switch (e.type) {
         case r.n4.BOOLEAN:

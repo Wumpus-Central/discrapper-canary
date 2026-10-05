@@ -17,27 +17,27 @@ function o(e) {
             ...A
         } = e,
         { i18n: h } = (0, a.G9)(),
-        I = h.CANCEL,
-        f = h.INLINE_NOTICE_GENERIC_ERROR,
+        f = h.CANCEL,
+        I = h.INLINE_NOTICE_GENERIC_ERROR,
         [p, T] = r.useState(!1),
-        m = r.useRef(u);
+        g = r.useRef(u);
     (r.useLayoutEffect(() => {
-        m.current = u;
+        g.current = u;
     }),
         r.useLayoutEffect(
             () => () => {
-                m.current?.();
+                g.current?.();
             },
             [],
         ));
-    let [g, S] = r.useState(void 0);
+    let [m, S] = r.useState(void 0);
     function N(e) {
         S(e);
     }
     return (0, i.jsx)(s.a, {
         actions: [
             {
-                text: n ?? I,
+                text: n ?? f,
                 variant: "secondary",
                 onClick: () => {
                     (c?.(), A.onClose());
@@ -51,7 +51,7 @@ function o(e) {
                     try {
                         (await d?.(N), A.onClose());
                     } catch (e) {
-                        throw (T(!1), S((e) => e ?? f), e);
+                        throw (T(!1), S((e) => e ?? I), e);
                     }
                 },
                 disabled: p,
@@ -60,7 +60,7 @@ function o(e) {
         ],
         actionBarInput: null != o ? (0, i.jsx)(l.e, { ...o }) : void 0,
         role: "alertdialog",
-        notice: null != g ? { message: g, type: "critical" } : void 0,
+        notice: null != m ? { message: m, type: "critical" } : void 0,
         ...A,
         children: E,
     });

@@ -13,22 +13,22 @@ var r = n(192308),
     E = n(290863),
     A = n(763827),
     h = n(116956),
-    I = n(435558),
-    f = n(506774),
+    f = n(435558),
+    I = n(506774),
     p = n(439372),
     T = n(891540),
-    m = n(885386),
-    g = n(409181),
+    g = n(885386),
+    m = n(409181),
     S = n(881520),
     N = n(670455);
 function C(e) {
-    let t = m.Yt.getSetting()[e.feedbackType]?.optOutExpiryTime,
+    let t = g.Yt.getSetting()[e.feedbackType]?.optOutExpiryTime,
         n = null != t && !Number.isNaN(t) && Date.now() < t,
         i = !T.A.hasHotspot(e.hotspot);
     return (
         i &&
             !n &&
-            m.Yt.updateSetting((t) => ({ ...t, [e.feedbackType]: { ...t[e.feedbackType], optOutExpiryTime: N.fs } })),
+            g.Yt.updateSetting((t) => ({ ...t, [e.feedbackType]: { ...t[e.feedbackType], optOutExpiryTime: N.fs } })),
         !n && !i
     );
 }
@@ -36,24 +36,24 @@ function O(e) {
     return Math.random() < e.chance;
 }
 function R(e) {
-    for (let t of Object.values(g.u).filter((t) => {
+    for (let t of Object.values(m.u).filter((t) => {
         let { group: n } = t;
         return n === e.group;
     }))
         if (
             !(function (e, t) {
                 let n,
-                    i = m.Yt.getSetting()[t.feedbackType]?.lastImpressionTime;
+                    i = g.Yt.getSetting()[t.feedbackType]?.lastImpressionTime;
                 return (
                     (null == i || Number.isNaN(i)) &&
                         null != t.storageKey &&
-                        (null == (n = f.w.get(t.storageKey) ?? void 0) ||
+                        (null == (n = I.w.get(t.storageKey) ?? void 0) ||
                             Number.isNaN(n) ||
-                            m.Yt.updateSetting((e) => ({
+                            g.Yt.updateSetting((e) => ({
                                 ...e,
                                 [t.feedbackType]: { ...e[t.feedbackType], lastImpressionTime: n },
                             }))),
-                    ((0, I.max)([i, n]) ?? 0) + e.cooldown < Date.now()
+                    ((0, f.max)([i, n]) ?? 0) + e.cooldown < Date.now()
                 );
             })(e, t)
         )
@@ -65,7 +65,7 @@ class L extends p.A {
     possiblyShowFeedbackModal(e, t, n) {
         !(function (e) {
             if (__OVERLAY__) return !1;
-            let t = S.A.getFeedbackConfig(e) ?? g.u[e],
+            let t = S.A.getFeedbackConfig(e) ?? m.u[e],
                 n = t.eligibilityChecks ?? [];
             return [O, C, R].every((e) => e(t)) && n.every((e) => e(t));
         })(e) ||
@@ -73,11 +73,11 @@ class L extends p.A {
             ? n?.()
             : ((this.feedbackTypeToShow = e), this.showFeedbackModalDebounced(t, n));
     }
-    showFeedbackModalDebounced = (0, I.debounce)((e, t) => {
+    showFeedbackModalDebounced = (0, f.debounce)((e, t) => {
         if (null != this.feedbackTypeToShow) {
             var n;
             ((n = this.feedbackTypeToShow),
-                m.Yt.updateSetting((e) => ({ ...e, [n]: { ...e[n], lastImpressionTime: Date.now() } })),
+                g.Yt.updateSetting((e) => ({ ...e, [n]: { ...e[n], lastImpressionTime: Date.now() } })),
                 (this.feedbackTypeToShow = null),
                 e());
         } else t?.();
@@ -191,8 +191,8 @@ let D = new (class extends L {
             u = l.A.getApplication(t),
             E = (0, s.H)(o),
             h = _.A.getChannel(E),
-            I = { rtc_connection_id: A.A.getRTCConnectionId(), media_session_id: A.A.getMediaSessionId() },
-            f = c.A.getWindowOpen(y.MLl.CHANNEL_CALL_POPOUT) ? a.KX : a.SY;
+            f = { rtc_connection_id: A.A.getRTCConnectionId(), media_session_id: A.A.getMediaSessionId() },
+            I = c.A.getWindowOpen(y.MLl.CHANNEL_CALL_POPOUT) ? a.KX : a.SY;
         null != u &&
             d &&
             this.possiblyShowFeedbackModal(N.MW.ACTIVITY, () => {
@@ -220,10 +220,10 @@ let D = new (class extends L {
                                 activityApplication: u,
                                 channel: h,
                                 embeddedActivityLocation: o,
-                                analyticsData: I,
+                                analyticsData: f,
                             });
                     },
-                    { contextKey: f },
+                    { contextKey: I },
                 );
             });
     };

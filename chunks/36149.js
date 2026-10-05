@@ -35,14 +35,14 @@ var _ = n(207560),
     E = n(381689),
     A = n(280450),
     h = n(232835),
-    I = n(287809),
-    f = n(379257),
+    f = n(287809),
+    I = n(379257),
     p = n(306537);
 n(787301);
 var T = n(295972),
-    m = n(757319);
+    g = n(757319);
 n(96358);
-var g = n(40449),
+var m = n(40449),
     S = n(652215),
     N = n(204925),
     C = n(835002),
@@ -70,25 +70,25 @@ function M(e) {
     return e === d.Tk.VERIFIED_TEEN || e === d.Tk.INFERRED_TEEN;
 }
 function P() {
-    return M(I.default.getCurrentUser()?.ageVerificationStatus);
+    return M(f.default.getCurrentUser()?.ageVerificationStatus);
 }
 function U() {
-    return (0, l.bG)([I.default], () => M(I.default.getCurrentUser()?.ageVerificationStatus));
+    return (0, l.bG)([f.default], () => M(f.default.getCurrentUser()?.ageVerificationStatus));
 }
 function w() {
-    let e = I.default.getCurrentUser(),
+    let e = f.default.getCurrentUser(),
         t = e?.ageVerificationStatus;
     return t === d.Tk.VERIFIED_ADULT || t === d.Tk.INFERRED_ADULT;
 }
 function G() {
-    let e = (0, l.bG)([I.default], () => I.default.getCurrentUser());
+    let e = (0, l.bG)([f.default], () => f.default.getCurrentUser());
     return e?.ageVerificationStatus === d.Tk.VERIFIED_ADULT || e?.ageVerificationStatus === d.Tk.INFERRED_ADULT;
 }
 function x() {
-    let e = (0, l.bG)([I.default], () => {
+    let e = (0, l.bG)([f.default], () => {
         var e;
         return (
-            (e = I.default.getCurrentUser()?.ageVerificationStatus) === d.Tk.INFERRED_ADULT || e === d.Tk.INFERRED_TEEN
+            (e = f.default.getCurrentUser()?.ageVerificationStatus) === d.Tk.INFERRED_ADULT || e === d.Tk.INFERRED_TEEN
         );
     });
     return (0, _.aX)(s.t.REACTIVE_CHECK) && e;
@@ -129,7 +129,7 @@ function V(e, t) {
     let i = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return (
         i?.rawValue.split(",").includes("request_manual_review") === !0 &&
-        (0, m._)("isAgeVerificationMessageWithManualReviewCta")
+        (0, g._)("isAgeVerificationMessageWithManualReviewCta")
     );
 }
 function H(e, t) {
@@ -147,17 +147,17 @@ function H(e, t) {
     return i?.rawValue.split(",").includes("connect_to_teen") === !0;
 }
 function j() {
-    let e = I.default.getCurrentUser();
+    let e = f.default.getCurrentUser();
     return e?.ageVerificationStatus !== d.Tk.UNVERIFIED && e?.ageVerificationStatus !== d.Tk.CLIENT_ONLY_PENDING;
 }
 function W() {
-    let e = (0, l.bG)([I.default], () => I.default.getCurrentUser());
+    let e = (0, l.bG)([f.default], () => f.default.getCurrentUser());
     return e?.ageVerificationStatus !== d.Tk.UNVERIFIED && e?.ageVerificationStatus !== d.Tk.CLIENT_ONLY_PENDING;
 }
 function Y(e) {
     let { onComplete: t, entryPoint: n, shouldShowExpressiveModal: i = !1, onMethodUnavailable: r } = e,
         [s, d] = a.useState(!1),
-        c = (0, l.bG)([I.default], () => I.default.getCurrentUser()),
+        c = (0, l.bG)([f.default], () => f.default.getCurrentUser()),
         { current: u } = a.useRef(c?.ageVerificationStatus),
         _ = a.useCallback(() => {
             o.h.dispatch({ type: "CLOSE_AGE_VERIFICATION_MODAL", status: u });
@@ -170,7 +170,7 @@ function Y(e) {
                 try {
                     o.h.dispatch({ type: "INITIATE_AGE_VERIFICATION" });
                     let r = await e(),
-                        s = f.A.showAgeVerification({
+                        s = I.A.showAgeVerification({
                             method: a?.method,
                             externalWindow: a?.externalWindow,
                             webviewUrl: r.verification_webview_url,
@@ -222,7 +222,7 @@ function $(e) {
     };
 }
 function z(e) {
-    let t = (0, l.bG)([I.default], () => I.default.getCurrentUser()?.ageVerificationStatus),
+    let t = (0, l.bG)([f.default], () => f.default.getCurrentUser()?.ageVerificationStatus),
         n = (0, c.Ay)(t),
         i = (0, l.bG)([A.default], () => null != A.default.getSuspendedUserToken()),
         r = (0, l.bG)([A.default], () => A.default.isAuthenticated()),
@@ -233,7 +233,7 @@ function z(e) {
     }, [e, s, o]);
 }
 function X(e) {
-    return null != e && g.zn.has(e);
+    return null != e && m.zn.has(e);
 }
 function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];

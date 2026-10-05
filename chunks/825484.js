@@ -17,8 +17,8 @@ function l(e) {
             fullWidthContainer: A = !1,
         } = e,
         h = r.useMemo(() => ({ size: t, fullWidth: E }), [t, E]),
-        I = r.useRef(null),
-        f = (function (e, t, n) {
+        f = r.useRef(null),
+        I = (function (e, t, n) {
             let [i, a] = r.useState(null);
             return (
                 r.useLayoutEffect(() => {
@@ -40,10 +40,10 @@ function l(e) {
                 }, [e, t, n]),
                 i
             );
-        })(I, n, _),
+        })(f, n, _),
         p = n;
     return (
-        f && (p = n.replace("horizontal", "vertical")),
+        I && (p = n.replace("horizontal", "vertical")),
         (0, i.jsx)(a.B, {
             direction: p,
             gap: 8,
@@ -53,7 +53,7 @@ function l(e) {
             padding: d,
             className: c,
             fullWidth: !!A || E,
-            ref: I,
+            ref: f,
             children: (0, i.jsx)(s.Z.Provider, { value: h, children: u }),
         })
     );

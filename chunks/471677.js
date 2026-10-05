@@ -1,4 +1,4 @@
-n.d(t, { YK: () => h, fo: () => E, J$: () => I, Mg: () => A });
+n.d(t, { YK: () => h, fo: () => E, J$: () => f, Mg: () => A });
 var i = n(582128),
     r = n(17928),
     a = n(636537),
@@ -48,7 +48,7 @@ let E = 200,
         staleAfter: 3600,
         failureStaleAfter: 60,
     });
-function I(e, t) {
+function f(e, t) {
     let { surface: n, profile: r = o.u.DEFAULT } = t,
         a = (0, d.C7)(e),
         s = (function (e) {
@@ -71,21 +71,21 @@ function I(e, t) {
             );
         })(a),
         { data: l, error: c, isLoading: u } = h(s, r),
-        [I, f] = i.useState(null),
+        [f, I] = i.useState(null),
         p = null != l && null != s ? { query: s, results: l } : null;
-    null == a ? null != I && f(null) : null != p && p.results !== I?.results && f(p);
-    let T = null != a ? (p ?? I) : null,
-        m = T?.query ?? null,
-        g = T?.results ?? null,
+    null == a ? null != f && I(null) : null != p && p.results !== f?.results && I(p);
+    let T = null != a ? (p ?? f) : null,
+        g = T?.query ?? null,
+        m = T?.results ?? null,
         [S] = i.useState(() => new _.vn(n, r));
     return (
         i.useEffect(() => {
             S.onQuery(a);
         }, [S, a]),
         i.useEffect(() => {
-            null != m && null != g && S.onResults(m, g);
-        }, [S, m, g]),
+            null != g && null != m && S.onResults(g, m);
+        }, [S, g, m]),
         i.useEffect(() => S.end, [S]),
-        { results: g, isLoading: u || s !== a, error: s === a ? c : null, onSelect: S.select, endSession: S.end }
+        { results: m, isLoading: u || s !== a, error: s === a ? c : null, onSelect: S.select, endSession: S.end }
     );
 }

@@ -1,4 +1,4 @@
-l.d(e, { Ay: () => E, Or: () => M });
+l.d(e, { Ay: () => g, Or: () => M });
 var t,
     r = l(477900),
     s = l(582128),
@@ -26,7 +26,7 @@ var M =
     (t.GUILD_BOOST_APPLIED = "GUILD_BOOST_APPLIED"),
     (t.PREMIUM_PAYMENT_STARTED = "PREMIUM_PAYMENT_STARTED"),
     t);
-class g extends s.PureComponent {
+class E extends s.PureComponent {
     animation = new i.A.Value(0);
     static Types = M;
     componentDidMount() {
@@ -290,11 +290,11 @@ class g extends s.PureComponent {
         });
     }
 }
-function E(a) {
+function g(a) {
     let { theme: e, ...l } = a,
         t = (0, u.r)(o.A.unsafe_rawColors.WHITE).hex(),
         s = (0, u.r)(o.A.unsafe_rawColors.BRAND_500).hex(),
         n = (0, c.M)(e) ? t : s;
-    return (0, r.jsx)(g, { ...l, theme: e, flashColor: n });
+    return (0, r.jsx)(E, { ...l, theme: e, flashColor: n });
 }
-E.Types = M;
+g.Types = M;

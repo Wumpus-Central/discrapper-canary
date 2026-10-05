@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => I, RG: () => _ }), n(321073));
+(n.d(t, { Ay: () => f, RG: () => _ }), n(321073));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -52,7 +52,7 @@ class h extends a.Ay.PersistedStore {
         return u.frequently;
     }
 }
-let I = new h(s.h, {
+let f = new h(s.h, {
     APPLICATION_COMMAND_USED: function (e) {
         let { command: t, context: n } = e,
             i = E(n, t);

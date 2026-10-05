@@ -12,8 +12,8 @@ var i = n(17928),
 let E = new Set(),
     A = new Map(),
     h = new Map(),
-    I = new Map(),
     f = new Map(),
+    I = new Map(),
     p = null;
 function T(e) {
     let t = c.default.getCurrentUser(),
@@ -22,19 +22,19 @@ function T(e) {
     let i = new Set(),
         r = new Set(),
         E = new Set();
-    if ((f.set(e, (0, a.bM)(n, t)), n.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED))) {
+    if ((I.set(e, (0, a.bM)(n, t)), n.features.has(_.GuildFeatures.ROLE_SUBSCRIPTIONS_ENABLED))) {
         let a = l.Ay.getMember(e, t.id),
             d = new Set(a?.roles ?? []);
         for (let t of o.A.getSortedRoles(n.id))
             ((0, u.U)(t) && (i.add(t.id), (0, u.X)(t) && (r.add(t.id), d.has(t.id) && E.add(t.id))),
-                d.has(t.id) && (0, s._m)(t, _.xBc.ADMINISTRATOR) && f.set(e, !0));
+                d.has(t.id) && (0, s._m)(t, _.xBc.ADMINISTRATOR) && I.set(e, !0));
     }
-    return (A.set(e, i), I.set(e, E), h.set(e, r), !0);
+    return (A.set(e, i), f.set(e, E), h.set(e, r), !0);
 }
-function m() {
-    (A.clear(), I.clear(), h.clear(), f.clear(), (p = null));
+function g() {
+    (A.clear(), f.clear(), h.clear(), I.clear(), (p = null));
 }
-function g(e) {
+function m(e) {
     let {
         guild: { id: t },
     } = e;
@@ -78,16 +78,16 @@ class N extends i.Ay.Store {
         return (this.buildRoles(e), h.get(e) ?? E);
     }
     getUserSubscriptionRoles(e) {
-        return (this.buildRoles(e), I.get(e) ?? E);
+        return (this.buildRoles(e), f.get(e) ?? E);
     }
     getUserIsAdmin(e) {
-        return (this.buildRoles(e), f.get(e) ?? !1);
+        return (this.buildRoles(e), I.get(e) ?? !1);
     }
 }
 let C = new N(r.h, {
-    CONNECTION_OPEN: m,
-    LOGOUT: m,
-    GUILD_CREATE: g,
+    CONNECTION_OPEN: g,
+    LOGOUT: g,
+    GUILD_CREATE: m,
     GUILD_DELETE: function (e) {
         let {
             guild: { id: t },
@@ -96,7 +96,7 @@ let C = new N(r.h, {
         let n = new Set(p);
         (n.delete(t), (p = n));
     },
-    GUILD_UPDATE: g,
+    GUILD_UPDATE: m,
     GUILD_ROLE_CREATE: S,
     GUILD_ROLE_UPDATE: S,
     GUILD_ROLE_DELETE: S,

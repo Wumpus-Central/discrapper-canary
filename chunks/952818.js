@@ -12,12 +12,12 @@ var r = n(435558),
     E = n(573648),
     A = n(306044),
     h = n(626584),
-    I = n(736056),
-    f = n(108822),
+    f = n(736056),
+    I = n(108822),
     p = n(311043),
     T = n(830012),
-    m = n(810412),
-    g = n(211753),
+    g = n(810412),
+    m = n(211753),
     S = n(206885),
     N = n(41984),
     C = n(439372),
@@ -120,12 +120,12 @@ let j = new h.A("RunningGameStore"),
     eE = null,
     eA = 0,
     eh = null,
-    eI = null,
-    ef = {},
+    ef = null,
+    eI = {},
     ep = {},
     eT = new Set(),
-    em = new Set(),
-    eg = null,
+    eg = new Set(),
+    em = null,
     eS = null,
     eN = null,
     eC = new Map(),
@@ -175,10 +175,10 @@ function eP() {
     } else ei = null;
     eb();
     let e = [];
-    for (let t of ee) t.pid in ef || ((ef[t.pid] = t), e.push(t));
+    for (let t of ee) t.pid in eI || ((eI[t.pid] = t), e.push(t));
     let t = [];
-    for (let e of Object.values(ef)) ee.some((t) => t.pid === e.pid) || (t.push(e), delete ef[e.pid], es.delete(e.pid));
-    (j.info("Running Games Changed", { runningGames: ee, added: e, removed: t, previousGames: ef }),
+    for (let e of Object.values(eI)) ee.some((t) => t.pid === e.pid) || (t.push(e), delete eI[e.pid], es.delete(e.pid));
+    (j.info("Running Games Changed", { runningGames: ee, added: e, removed: t, previousGames: eI }),
         u.h.dispatch({ type: "RUNNING_GAMES_CHANGE", games: ee, added: e, removed: t }));
 }
 function eU(e) {
@@ -256,7 +256,7 @@ function eB(e) {
     }
     let o = (0, k.supportsOutOfProcess)() && !n,
         d = eG("id" in (t = l ?? s) ? (t.id ?? null) : (D.A.findGame(t)?.id ?? null)),
-        c = g.x.legacyEnabled,
+        c = m.x.legacyEnabled,
         u = o && !d,
         _ = eu.enableOverlay[eU(s)],
         E = eu.enableOverlayV3[eU(s)];
@@ -601,7 +601,7 @@ if (Y) {
     };
 }
 function eX() {
-    I.A.hasLoadedExperiments && K.length > 0 && (e$(K), (K = []));
+    f.A.hasLoadedExperiments && K.length > 0 && (e$(K), (K = []));
 }
 class eZ extends d.Ay.Store {
     static displayName = "RunningGameStore";
@@ -630,9 +630,9 @@ class eZ extends d.Ay.Store {
         )
             for (let n of e.gamesSeen)
                 "number" == typeof n.id && ((n.nativeProcessObserverId = n.id), delete n.id, (t = !0));
-        (this.waitFor(D.A, F.A, M.A, I.A, f.A, p.A, v.A, b.default),
+        (this.waitFor(D.A, F.A, M.A, f.A, I.A, p.A, v.A, b.default),
             (K = e.gamesSeen.filter((e) => !(0, y.n1)(e))),
-            this.syncWith([f.A], eX),
+            this.syncWith([I.A], eX),
             this.syncWith([v.A, D.A, M.A], a().throttle(eY, 1e3)),
             this.syncWith([p.A], eF),
             t && ej());
@@ -704,7 +704,7 @@ class eZ extends d.Ay.Store {
         return null != eh && eh === e;
     }
     shouldContinueWithoutElevatedProcessForPID(e) {
-        return null != eI && eI === e;
+        return null != ef && ef === e;
     }
     canCollectExecutableFingerprintsForRunningGames() {
         return Y;
@@ -766,7 +766,7 @@ class eZ extends d.Ay.Store {
         return eV(e);
     }
     addExecutableTrackedByAnalytics(e) {
-        em.add((0, A.v)(e) ?? e);
+        eg.add((0, A.v)(e) ?? e);
     }
     getSystemServiceStatus(e) {
         return Z[e] ?? { state: "unknown" };
@@ -788,14 +788,14 @@ let eq = new eZ(u.h, {
         },
         PERMISSION_REQUEST_ELEVATED_PROCESS: function (e) {
             let { pid: t } = e;
-            ((eh = t), (eI = null));
+            ((eh = t), (ef = null));
         },
         PERMISSION_CLEAR_ELEVATED_PROCESS: function () {
             eh = null;
         },
         PERMISSION_CONTINUE_NONELEVATED_PROCESS: function (e) {
             let { pid: t } = e;
-            ((eI = t), (eh = null));
+            ((ef = t), (eh = null));
         },
         RUNNING_GAME_ADD_OVERRIDE: function (e) {
             let t,
@@ -824,8 +824,8 @@ let eq = new eZ(u.h, {
                 ej(),
                 !__OVERLAY__ &&
                     null != (null != r.id ? D.A.getDetectableGame(r.id) : null) &&
-                    (a && (0, m.Q3)(n, m.OverlayToggledClientSettingType.LEGACY_GAME, r.id ?? null),
-                    s && null != i && (0, m.Q3)(i, m.OverlayToggledClientSettingType.OOP_GAME, r.id ?? null)));
+                    (a && (0, g.Q3)(n, g.OverlayToggledClientSettingType.LEGACY_GAME, r.id ?? null),
+                    s && null != i && (0, g.Q3)(i, g.OverlayToggledClientSettingType.OOP_GAME, r.id ?? null)));
         },
         RUNNING_GAME_TOGGLE_DETECTION: function (e) {
             let { game: t } = e,
@@ -898,16 +898,16 @@ let eq = new eZ(u.h, {
             eK();
         },
         GAME_DETECTION_DEBUGGING_START: function (e) {
-            ((eg = e.level), (eS = e.intervalSeconds));
+            ((em = e.level), (eS = e.intervalSeconds));
         },
         GAME_DETECTION_DEBUGGING_STOP: function () {
-            ((eg = null), (eS = null), eT.clear());
+            ((em = null), (eS = null), eT.clear());
         },
         GAME_DETECTION_DEBUGGING_TICK: function (e) {
             let t = e.processes
                 .map((e) => ({ pid: e.pid, cleanedExePath: (0, A.v)(e.exePath) ?? e.exePath }))
                 .filter((e) => {
-                    if (eT.has(e.pid) || em.has(e.cleanedExePath)) return !1;
+                    if (eT.has(e.pid) || eg.has(e.cleanedExePath)) return !1;
                     let t = z.some((t) => e.cleanedExePath.includes(t));
                     return (t && eT.add(e.pid), t);
                 })
@@ -916,7 +916,7 @@ let eq = new eZ(u.h, {
                 P.default.track(H.HAw.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
                     keywords: z,
                     paths: t,
-                    debugging_level: eg,
+                    debugging_level: em,
                     interval_seconds: eS,
                 });
         },

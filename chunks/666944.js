@@ -17,7 +17,7 @@ function A(e) {
 function h(e) {
     return e.replace(d, "").replace(_, "").replace(E, "");
 }
-function I(e, t) {
+function f(e, t) {
     let n = t.toUpperCase().trim();
     if (0 !== n.length)
         for (let t of [p, "H:mm", "H.mm"]) {
@@ -25,15 +25,15 @@ function I(e, t) {
             if (A(i.format(t)) === A(n)) return i;
         }
 }
-let f = l()("2021-04-12T00:00:00"),
+let I = l()("2021-04-12T00:00:00"),
     p = "LT";
 function T(e, t) {
     return e.clone().hours(t.hour()).minutes(t.minutes()).seconds(0);
 }
-function m(e, t) {
+function g(e, t) {
     return e.value.unix() - t.value.unix();
 }
-class g {
+class m {
     intervalInMinutes;
     labelFormat;
     options = [];
@@ -44,7 +44,7 @@ class g {
     }
     lookupByValue(e) {
         if (null == e) return;
-        let t = T(f, e);
+        let t = T(I, e);
         return this._index[t.unix()];
     }
     _createLabel(e) {
@@ -52,7 +52,7 @@ class g {
     }
     _generateTimeOptions() {
         ((this.options = []), (this._index = {}));
-        let e = l()(f),
+        let e = l()(I),
             t = l()(e).add(1, "day"),
             n = l()(e);
         for (; n < t;) {
@@ -61,28 +61,28 @@ class g {
         }
     }
     _createNewOption(e) {
-        let t = T(f, e),
+        let t = T(I, e),
             n = this._createLabel(t);
         return { id: t.toISOString(), label: n, value: t };
     }
     _addNewOption(e) {
-        let t = T(f, e),
+        let t = T(I, e),
             n = this._createLabel(t);
         return (
             (this._index[t.unix()] = t),
             this.options.push({ id: t.toISOString(), label: n, value: t }),
-            this.options.sort(m),
+            this.options.sort(g),
             e
         );
     }
     _guessOptions(e) {
         let t = [];
         if (/[:\\.]/.test(e)) {
-            let n = I(f, e);
+            let n = f(I, e);
             if (null != n) {
                 t.push(n.clone());
                 let i = n.add({ hours: 12 });
-                i.isBefore(f.clone().add({ hours: 24 })) && h(i.format("LT")) === h(e) && t.push(i);
+                i.isBefore(I.clone().add({ hours: 24 })) && h(i.format("LT")) === h(e) && t.push(i);
             }
         }
         return t;
@@ -96,7 +96,7 @@ class g {
                 t.forEach((t) => {
                     null == this.lookupByValue(t) && e.push(this._createNewOption(t));
                 }),
-                e.sort(m),
+                e.sort(g),
                 e
             );
         }
@@ -108,13 +108,13 @@ class g {
 }
 function S(e) {
     let { value: t, onChange: n, hideValue: s, disabled: l = !1, ...o } = e,
-        d = r.useMemo(() => new g(), []),
+        d = r.useMemo(() => new m(), []),
         [c, u] = r.useState("");
     function _(e) {
         null != t && n(T(t, d.selectValue(e)));
     }
     function E() {
-        let e = I(t, c);
+        let e = f(t, c);
         null != e && _(e);
     }
     return (0, i.jsx)(a.Z, {

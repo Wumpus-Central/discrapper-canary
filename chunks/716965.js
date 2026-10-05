@@ -1,4 +1,4 @@
-n.d(t, { $Q: () => _, Gq: () => c, IN: () => h, Kf: () => d, Vh: () => E, cG: () => A, qY: () => u, zf: () => I });
+n.d(t, { $Q: () => _, Gq: () => c, IN: () => h, Kf: () => d, Vh: () => E, cG: () => A, qY: () => u, zf: () => f });
 var i = n(323125),
     r = n(636537),
     a = n(830215),
@@ -26,11 +26,11 @@ async function c(e) {
             codeChallengeMethod: E,
             state: A,
             permissions: h,
-            guildId: I,
-            channelId: f,
+            guildId: f,
+            channelId: I,
             integrationType: p,
             connectedAccountProvider: T,
-            nonce: m,
+            nonce: g,
         } = e;
     return (
         await r.Bo.post({
@@ -43,12 +43,12 @@ async function c(e) {
                 code_challenge_method: E,
                 scope: d.join(" "),
                 state: A,
-                nonce: m,
+                nonce: g,
             },
             body: {
-                guild_id: I,
-                webhook_channel_id: null != I && null != f ? f : void 0,
-                channel_id: null == I && null != f ? f : void 0,
+                guild_id: f,
+                webhook_channel_id: null != f && null != I ? I : void 0,
+                channel_id: null == f && null != I ? I : void 0,
                 permissions: h,
                 authorize: i,
                 integration_type: p,
@@ -125,7 +125,7 @@ async function h(e, t) {
         rejectWithError: (0, r.fT)(),
     });
 }
-async function I(e, t, n) {
+async function f(e, t, n) {
     return await r.Bo.post({
         url: o.Rsh.OAUTH2_DEVICE_FINISH,
         body: { user_code: e, result: "two_way_link_error", error_code: t, error_source: n },

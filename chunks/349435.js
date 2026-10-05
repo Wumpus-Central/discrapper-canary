@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => f, _j: () => d, fy: () => c });
+n.d(t, { Ay: () => I, _j: () => d, fy: () => c });
 var i,
     r,
     a = n(17928),
@@ -35,7 +35,7 @@ function h() {
             A(e);
         }));
 }
-class I extends a.Ay.Store {
+class f extends a.Ay.Store {
     initialize() {
         this.waitFor(l.A);
     }
@@ -49,7 +49,7 @@ class I extends a.Ay.Store {
         return E.has(e);
     }
 }
-let f = new I(s.h, {
+let I = new f(s.h, {
     CHANNEL_CREATE: function (e) {
         A(e.channel);
     },

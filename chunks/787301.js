@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(17928),
     r = n(506774),
     a = n(73153),
@@ -17,11 +17,11 @@ function A() {
 function h() {
     ((_ = "unchecked"), (E = null));
 }
-function I() {
+function f() {
     let e = A();
     null != e && r.w.set(e, { reactiveCheckStatus: _, reactiveCheckMissAt: E });
 }
-function f() {
+function I() {
     ((o = null), (d = null), (c = null));
 }
 function p() {
@@ -60,7 +60,7 @@ class T extends i.Ay.Store {
         return !("passed" === _ || "suppress" === _ || p());
     }
 }
-let m = new T(a.h, {
+let g = new T(a.h, {
     AGE_VERIFICATION_METHODS_LOAD_START: function () {
         u = !0;
     },
@@ -75,8 +75,8 @@ let m = new T(a.h, {
         let { methods: t, footerMessage: n, outageBannerMessage: i } = e;
         ((o = t), (d = n), (c = i));
     },
-    AGE_VERIFICATION_METHODS_V2_INVALIDATE: f,
-    INITIATE_AGE_VERIFICATION: f,
+    AGE_VERIFICATION_METHODS_V2_INVALIDATE: I,
+    INITIATE_AGE_VERIFICATION: I,
     CONNECTION_OPEN: function () {
         (!(function () {
             let e = A();
@@ -87,13 +87,13 @@ let m = new T(a.h, {
                 i = t.reactiveCheckMissAt ?? null;
             "miss" === n && null != i && Date.now() - i >= 864e5 ? h() : ((_ = n), (E = i));
         })(),
-            f());
+            I());
     },
     AGE_VERIFICATION_CHECK_RESULT_SET: function (e) {
         let { status: t } = e;
-        ((_ = t), (E = "miss" === t ? Date.now() : null), I());
+        ((_ = t), (E = "miss" === t ? Date.now() : null), f());
     },
     AGE_VERIFICATION_RESET: function () {
-        ((_ = "suppress"), (E = null), I(), f());
+        ((_ = "suppress"), (E = null), f(), I());
     },
 });

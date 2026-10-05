@@ -1,5 +1,5 @@
 let i;
-n.d(t, { A: () => f });
+n.d(t, { A: () => I });
 var r = n(17928),
     a = n(73153),
     s = n(77729),
@@ -32,7 +32,7 @@ function h(e) {
     let t = new Set(i.installationPaths);
     (t.add(e.path), (i.installationPaths = t));
 }
-class I extends r.Ay.PersistedStore {
+class f extends r.Ay.PersistedStore {
     static displayName = "InstallationManagerStore";
     static persistKey = "InstallationManagerStore";
     initialize(e) {
@@ -81,7 +81,7 @@ class I extends r.Ay.PersistedStore {
                   "?");
     }
 }
-let f = new I(a.h, {
+let I = new f(a.h, {
     DISPATCH_APPLICATION_INSTALL: E,
     DISPATCH_APPLICATION_UNINSTALL: A,
     DISPATCH_APPLICATION_CANCEL: function (e) {

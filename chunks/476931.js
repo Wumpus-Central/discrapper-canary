@@ -2,15 +2,15 @@ n.d(t, {
     BC: () => o,
     It: () => R,
     Qy: () => p,
-    U6: () => m,
+    U6: () => g,
     XY: () => N,
-    Yt: () => f,
+    Yt: () => I,
     Z8: () => l,
-    Zq: () => I,
+    Zq: () => f,
     _k: () => O,
     a0: () => d,
     iq: () => u,
-    kI: () => g,
+    kI: () => m,
     oE: () => T,
     sR: () => y,
     w3: () => C,
@@ -91,17 +91,17 @@ let E = [l.TWILIGHT, l.DENIM, l.OCEAN, l.BLURPLE, l.OBSIDIAN, l.PLUM, l.FIRE, l.
         },
     },
     h = new Set(Object.values(l)),
-    I = E.map((e) => A[e]);
-function f(e) {
+    f = E.map((e) => A[e]);
+function I(e) {
     return null != e && h.has(e) ? A[e] : null;
 }
 function p() {
-    return { presetId: I[0].id, customUserThemeSettings: void 0 };
+    return { presetId: f[0].id, customUserThemeSettings: void 0 };
 }
 function T(e, t) {
     return t === s.NJ.LIGHT ? e.lightAppearance : e.darkAppearance;
 }
-function m(e, t) {
+function g(e, t) {
     let n = T(e, t),
         i = n.colors
             .map((e) => {
@@ -111,7 +111,7 @@ function m(e, t) {
             .join(", ");
     return `linear-gradient(${n.angle}deg, ${i})`;
 }
-function g(e, t) {
+function m(e, t) {
     let n = L(e, t),
         i = r()(n),
         a = t === s.NJ.LIGHT ? 0.2 : -0.2,

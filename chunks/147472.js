@@ -23,7 +23,7 @@ let _ = s()(function (e, t) {
 function A(e, t, n, i, a) {
     let s = t.reduce((t, s) => {
             var d;
-            let u, E, A, h, I, f;
+            let u, E, A, h, f, I;
             return (
                 _(a, i?.id),
                 (t[s.soundId] =
@@ -31,19 +31,19 @@ function A(e, t, n, i, a) {
                     (u = 0),
                     (E = s.name.toLocaleLowerCase()),
                     (A = null != s.emojiId ? l.Ay.getCustomEmojiById(s.emojiId) : null),
-                    (I =
+                    (f =
                         null != (h = null != s.emojiName ? o.Ay.convertSurrogateToName(s.emojiName, !1) : null)
                             ? o.Ay.getByName(h)
                             : null),
-                    (f = null != A ? [A.name] : (I?.names ?? [])),
+                    (I = null != A ? [A.name] : (f?.names ?? [])),
                     d === E && (u += 8),
-                    f.includes(d) && (u += 7),
+                    I.includes(d) && (u += 7),
                     E.startsWith(d) && (u += 6),
-                    f.some((e) => e.startsWith(d)) && (u += 5),
+                    I.some((e) => e.startsWith(d)) && (u += 5),
                     E.endsWith(d) && (u += 4),
-                    f.some((e) => e.endsWith(d)) && (u += 3),
+                    I.some((e) => e.endsWith(d)) && (u += 3),
                     r()(d, s.name.toLocaleLowerCase()) && (u += 2),
-                    f.some((e) => r()(d, e)) && (u += 1),
+                    I.some((e) => r()(d, e)) && (u += 1),
                     u > 0 && (0, c.Ir)(n, s, i) && (u += 100),
                     u)),
                 t

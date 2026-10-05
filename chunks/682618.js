@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => p, PV: () => T, RS: () => h, o0: () => I });
+n.d(t, { Ay: () => p, PV: () => T, RS: () => h, o0: () => f });
 var i = n(158390),
     r = n(731738),
     a = n(636537),
@@ -37,7 +37,7 @@ async function h(e) {
             c.A.captureException(e));
     }
 }
-async function I(e, t) {
+async function f(e, t) {
     let n = t ?? o.default.getCurrentUser()?.id;
     if (null != n)
         try {
@@ -47,7 +47,7 @@ async function I(e, t) {
             c.A.captureException(e);
         }
 }
-async function f(e, t, n) {
+async function I(e, t, n) {
     try {
         let i = await a.Bo.get({ url: u.Rsh.USER_BADGE(A(n), t), query: { with_progress: !1 }, rejectWithError: !0 });
         (E.delete(e), s.h.dispatch({ type: "BADGE_SUMMARY_FETCH_SUCCESS", userId: n, badge: i.body }));
@@ -64,7 +64,7 @@ function p(e, t) {
     if (null != r) return r;
     let a = E.get(i)?.gateUntil ?? 0;
     if (Date.now() < a) return Promise.resolve();
-    let s = f(i, e, n).finally(() => {
+    let s = I(i, e, n).finally(() => {
         _.get(i) === s && _.delete(i);
     });
     return (_.set(i, s), s);

@@ -56,18 +56,18 @@ let A = {
                 callback: _,
                 type: A = "spring",
                 shouldLoop: h,
-                durationMin: I,
-                durationMax: f,
+                durationMin: f,
+                durationMax: I,
                 ...p
             } = n,
             T = t._value,
-            m = E(n.duration, I, f),
-            g = E(n.toValue, a, s),
-            S = i[A](t, { ...p, toValue: g, tension: l, friction: o, duration: m }),
+            g = E(n.duration, f, I),
+            m = E(n.toValue, a, s),
+            S = i[A](t, { ...p, toValue: m, tension: l, friction: o, duration: g }),
             N = S;
         if (c || u) {
-            let e = E(n.duration, I, f);
-            ((r = i[A](t, { ...p, toValue: c ? T : -g, tension: l, friction: o, duration: e })),
+            let e = E(n.duration, f, I);
+            ((r = i[A](t, { ...p, toValue: c ? T : -m, tension: l, friction: o, duration: e })),
                 (N = i.sequence([S, r])));
         }
         d

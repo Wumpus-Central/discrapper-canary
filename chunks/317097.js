@@ -4,7 +4,7 @@ n.d(t, {
     Hl: () => l,
     LX: () => s,
     OK: () => E,
-    bJ: () => f,
+    bJ: () => I,
     gq: () => _,
     qt: () => A,
     tf: () => o,
@@ -85,14 +85,14 @@ function A(e) {
 function h(e) {
     return [(e >> 16) & 255, (e >> 8) & 255, 255 & e];
 }
-function I(e, t, n) {
+function f(e, t, n) {
     var i = [e, t, n].map((e) => ((e /= 255) <= 0.03928 ? e / 12.92 : Math.pow((e + 0.055) / 1.055, 2.4)));
     return 0.2126 * i[0] + 0.7152 * i[1] + 0.0722 * i[2];
 }
-function f(e, t) {
+function I(e, t) {
     let n = h(e),
         i = h(t);
-    var r = I(n[0], n[1], n[2]),
-        a = I(i[0], i[1], i[2]);
+    var r = f(n[0], n[1], n[2]),
+        a = f(i[0], i[1], i[2]);
     return (Math.max(r, a) + 0.05) / (Math.min(r, a) + 0.05);
 }

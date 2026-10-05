@@ -1,13 +1,13 @@
 n.d(t, {
     CH: () => A,
-    NC: () => I,
+    NC: () => f,
     SW: () => h,
-    VF: () => m,
+    VF: () => g,
     XM: () => T,
     f6: () => _,
-    uv: () => g,
+    uv: () => m,
     v7: () => p,
-    xO: () => f,
+    xO: () => I,
     zS: () => E,
     zn: () => u,
 });
@@ -38,17 +38,17 @@ function _(e) {
 let E = "https://discord.com/safety/age-assurance-on-discord-vendors-methods-and-your-data",
     A = "13-17",
     h = "AGE_VERIFICATION_MODAL_KEY",
-    I = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY",
-    f = "MANUAL_REVIEW_DECIDED_TEEN_ALERT_KEY",
+    f = "AGE_VERIFICATION_GET_STARTED_MODAL_KEY",
+    I = "MANUAL_REVIEW_DECIDED_TEEN_ALERT_KEY",
     p = "MANUAL_REVIEW_PENDING_ALERT_KEY";
 var T = (((i = {}).K_ID = "K_ID"), (i.GOOGLE_WALLET = "GOOGLE_WALLET"), (i.INCODE = "INCODE"), i),
-    m =
+    g =
         (((r = {})[(r.FACIAL_AGE_ESTIMATION = 1)] = "FACIAL_AGE_ESTIMATION"),
         (r[(r.ID_VERIFICATION = 2)] = "ID_VERIFICATION"),
         (r[(r.MODULAR = 3)] = "MODULAR"),
         (r[(r.GOOGLE_WALLET = 9)] = "GOOGLE_WALLET"),
         r);
-let g = {
+let m = {
     1: { title: d.default["2yLvkS"], description: d.default.eJmat5 },
     2: { title: d.default.dwkwo0, description: d.default.ZdmRwW },
     9: { title: d.default.Y9sLpR, description: d.default.dah4bF },

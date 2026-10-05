@@ -1,4 +1,4 @@
-n.d(t, { pW: () => h, F9: () => A, Mj: () => T, HR: () => E, wq: () => f, _C: () => I, Oo: () => p });
+n.d(t, { pW: () => h, F9: () => A, Mj: () => T, HR: () => E, wq: () => I, _C: () => f, Oo: () => p });
 var i = n(636537),
     r = n(73153);
 n(817281);
@@ -39,10 +39,10 @@ async function A(e, t, n) {
 async function h(e) {
     await i.Bo.del({ url: _.Rsh.VIDEO_FILTER_ASSET(e.id), rejectWithError: !1 });
     let t = (0, o.i)(l.default.getCurrentUser());
-    ((0, d.d1)(t) && t.id === e.id && I(null),
+    ((0, d.d1)(t) && t.id === e.id && f(null),
         r.h.dispatch({ type: "VIDEO_FILTER_ASSET_DELETE_SUCCESS", videoFilterAsset: e }));
 }
-async function I(e) {
+async function f(e) {
     if (
         (await a.wc.updateAsync(
             "voiceAndVideo",
@@ -57,7 +57,7 @@ async function I(e) {
         r.h.dispatch({ type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: t.body });
     } else r.h.dispatch({ type: "VIDEO_SAVE_LAST_USED_BACKGROUND_OPTION", backgroundOption: e });
 }
-function f(e) {
+function I(e) {
     s.Ay.isSupported() && r.h.dispatch({ type: "MEDIA_ENGINE_APPLY_MEDIA_FILTER_SETTINGS", settings: e });
 }
 function p() {

@@ -12,10 +12,10 @@ let c = [d.eA$.PENDING_INCOMING, d.eA$.PENDING_OUTGOING],
     E = [],
     A = [],
     h = !1;
-function I(e, t) {
+function f(e, t) {
     return (t.since ?? "").localeCompare(e.since ?? "");
 }
-function f(e, t) {
+function I(e, t) {
     return e === d.eA$.PENDING_OUTGOING || (e === d.eA$.PENDING_INCOMING && !l.A.isSpam(t) && !l.A.isIgnored(t));
 }
 function p(e, t) {
@@ -24,7 +24,7 @@ function p(e, t) {
 function T() {
     return o.A.getConfig({ location: "FriendRequestsStore" }).sidebarEnabled;
 }
-function m(e) {
+function g(e) {
     if (!h) return !1;
     let t = { incoming: !1, outgoing: !1 };
     for (let n of e)
@@ -32,7 +32,7 @@ function m(e) {
             let n = (function (e) {
                     let t = [],
                         n = l.A.getRelationshipType(e);
-                    for (let { applicationId: i, type: r, since: a } of (f(n, e) &&
+                    for (let { applicationId: i, type: r, since: a } of (I(n, e) &&
                         t.push({
                             key: e,
                             userId: e,
@@ -42,7 +42,7 @@ function m(e) {
                             isGameRelationship: !1,
                         }),
                     s.A.getGameRelationshipsForUser(e)))
-                        f(r, e) &&
+                        I(r, e) &&
                             t.push({
                                 key: `${e}-${i}`,
                                 userId: e,
@@ -72,15 +72,15 @@ function m(e) {
         let i = [],
             r = [];
         for (let e of u.values()) e.type === d.eA$.PENDING_INCOMING ? t && i.push(e) : n && r.push(e);
-        return (t && (E = i.sort(I)), n && (A = r.sort(I)), !0);
+        return (t && (E = i.sort(f)), n && (A = r.sort(f)), !0);
     })(t);
 }
-function g() {
+function m() {
     let e = u.size > 0;
     return (u.clear(), _.clear(), (E = []), (A = []), e);
 }
 function S() {
-    let e = g();
+    let e = m();
     if (!(h = T())) return e;
     let t = new Set();
     for (let e of (l.A.getMutableRelationships().forEach((e, n) => {
@@ -88,14 +88,14 @@ function S() {
     }),
     c))
         for (let { id: n } of s.A.getGameRelationshipsByType(e)) t.add(n);
-    return m(t) || e;
+    return g(t) || e;
 }
 function N() {
     return T() !== h && S();
 }
 function C(e) {
     let { relationship: t } = e;
-    return m([t.id]);
+    return g([t.id]);
 }
 class O extends i.Ay.Store {
     static displayName = "FriendRequestsStore";
@@ -117,11 +117,11 @@ let R = new O(r.h, {
     RELATIONSHIP_PENDING_INCOMING_REMOVED: S,
     GAME_RELATIONSHIP_ADD: function (e) {
         let { gameRelationship: t } = e;
-        return m([t.id]);
+        return g([t.id]);
     },
     GAME_RELATIONSHIP_REMOVE: function (e) {
         let { userId: t } = e;
-        return m([t]);
+        return g([t]);
     },
     APPLICATIONS_FETCH_SUCCESS: function (e) {
         let { unknownApplicationIds: t } = e;
@@ -133,8 +133,8 @@ let R = new O(r.h, {
                 let { userId: t, applicationId: r, isGameRelationship: a } = e;
                 !a || (null != r && n.has(r) && i.add(t));
             }),
-            m(i)
+            g(i)
         );
     },
-    LOGOUT: g,
+    LOGOUT: m,
 });

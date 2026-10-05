@@ -1,4 +1,4 @@
-n.d(t, { A: () => I, j: () => _ });
+n.d(t, { A: () => f, j: () => _ });
 var i = n(17928),
     r = n(73153),
     a = n(287809),
@@ -58,7 +58,7 @@ class h extends i.Ay.Store {
         return null != o;
     }
 }
-let I = new h(r.h, {
+let f = new h(r.h, {
     CONNECTION_OPEN: function (e) {
         let { guildJoinRequests: t } = e;
         ((c = !1),

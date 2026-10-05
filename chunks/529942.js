@@ -1,4 +1,4 @@
-n.d(t, { $u: () => S, IA: () => T, ID: () => N, Tk: () => p, Z$: () => C, rf: () => m });
+n.d(t, { $u: () => S, IA: () => T, ID: () => N, Tk: () => p, Z$: () => C, rf: () => g });
 var i = n(73153),
     r = n(95561),
     a = n(976860),
@@ -12,38 +12,38 @@ var i = n(73153),
     E = n(174459),
     A = n(164956),
     h = n(209700),
-    I = n(652215),
-    f = n(746080);
+    f = n(652215),
+    I = n(746080);
 function p(e, t) {
-    (E.default.track(I.HAw.VIEW_AS_ROLES_SELECTED, {
+    (E.default.track(f.HAw.VIEW_AS_ROLES_SELECTED, {
         num_roles: Object.keys(t.roles).length,
         ...(0, r.H$)(e),
         is_viewing_as_member: t.type === h._.NEW_MEMBER,
     }),
         i.h.dispatch({ type: "IMPERSONATE_UPDATE", guildId: e, data: t }),
-        g(e));
+        m(e));
 }
 function T(e, t) {
     let n = A.A.getData(e);
     null != n &&
         n.type === t.type &&
-        (E.default.track(I.HAw.VIEW_AS_ROLES_SELECTED, {
+        (E.default.track(f.HAw.VIEW_AS_ROLES_SELECTED, {
             num_roles: Object.keys(n.roles).length,
             ...(0, r.H$)(e),
             is_viewing_as_member: n.type === h._.NEW_MEMBER,
         }),
         i.h.dispatch({ type: "IMPERSONATE_UPDATE", guildId: e, data: { ...n, ...t } }),
-        g(e));
-}
-function m(e) {
-    i.h.dispatch({ type: "IMPERSONATE_STOP", guildId: e });
+        m(e));
 }
 function g(e) {
+    i.h.dispatch({ type: "IMPERSONATE_STOP", guildId: e });
+}
+function m(e) {
     let t = u.Ay.getChannelId(e),
         n = s.A.getChannel(t);
-    if (!(null != t && (0, f.jq)(t)) && !c.A.can(I.xBc.VIEW_CHANNEL, n)) {
+    if (!(null != t && (0, I.jq)(t)) && !c.A.can(f.xBc.VIEW_CHANNEL, n)) {
         let t = l.Ay.getDefaultChannel(e);
-        null != t && (0, a.pX)(I.BVt.CHANNEL(e, t.id));
+        null != t && (0, a.pX)(f.BVt.CHANNEL(e, t.id));
     }
 }
 function S(e, t, n) {

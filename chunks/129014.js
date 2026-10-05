@@ -1,4 +1,4 @@
-n.d(t, { default: () => f });
+n.d(t, { default: () => I });
 var i = n(143236),
     r = n(481613),
     a = n.n(r),
@@ -15,7 +15,7 @@ function _(e, t) {
 let E = s.parse(location.search.slice(1)),
     A = parseInt(null != E.rpc && "" !== E.rpc ? E.rpc : c.xEi, 10),
     h = null;
-class I extends i.EventEmitter {
+class f extends i.EventEmitter {
     get port() {
         return A;
     }
@@ -113,4 +113,4 @@ class I extends i.EventEmitter {
         );
     }
 }
-let f = new I();
+let I = new f();

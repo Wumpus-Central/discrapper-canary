@@ -12,12 +12,12 @@ var i = n(687123),
     E = n(734057),
     A = n(232835),
     h = n(309010),
-    I = n(287809),
-    f = n(306537),
+    f = n(287809),
+    I = n(306537),
     p = n(36149),
     T = n(277861),
-    m = n(652215),
-    g = n(835002);
+    g = n(652215),
+    m = n(835002);
 let S = new d.A("AgeVerificationManager");
 function N(e) {
     let { channelId: t, message: n } = e,
@@ -26,26 +26,26 @@ function N(e) {
     let a = i?.embeds?.[0]?.fields?.find((e) => e.rawName === p.uN.CONTENT_TYPE);
     (a?.rawValue === p.Wv.MANUAL_REVIEW_SUBMITTED && (0, T.xf)(),
         a?.rawValue === p.Wv.ERROR
-            ? (_.A.showFailedToast(g.OB.TIGGER_PAWTECT_ERROR), (0, f.Vh)(f.oQ.ERROR))
+            ? (_.A.showFailedToast(m.OB.TIGGER_PAWTECT_ERROR), (0, I.Vh)(I.oQ.ERROR))
             : a?.rawValue === p.Wv.FAE_FAILED
-              ? (_.A.showFailedToast(g.OB.AGE_VERIFICATION_FAE_FAILED), (0, f.Vh)(f.oQ.FAE_FAILED))
+              ? (_.A.showFailedToast(m.OB.AGE_VERIFICATION_FAE_FAILED), (0, I.Vh)(I.oQ.FAE_FAILED))
               : a?.rawValue === p.Wv.ID_FAILED
-                ? (_.A.showFailedToast(g.OB.AGE_VERIFICATION_ID_FAILED), (0, f.Vh)(f.oQ.ID_FAILED))
+                ? (_.A.showFailedToast(m.OB.AGE_VERIFICATION_ID_FAILED), (0, I.Vh)(I.oQ.ID_FAILED))
                 : a?.rawValue === p.Wv.UNDERAGE
-                  ? (_.A.showFailedToast(g.OB.AGE_VERIFICATION_UNDERAGE), (0, f.Vh)(f.oQ.UNDERAGE))
+                  ? (_.A.showFailedToast(m.OB.AGE_VERIFICATION_UNDERAGE), (0, I.Vh)(I.oQ.UNDERAGE))
                   : a?.rawValue === p.Wv.VERIFIED_ADULT
-                    ? (_.A.showSuccessToast(g.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_ADULT))
+                    ? (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, I.Vh)(I.oQ.VERIFIED_ADULT))
                     : a?.rawValue === p.Wv.VERIFIED_TEEN &&
-                      (_.A.showSuccessToast(g.OB.TIGGER_PAWTECT_VERIFIED), (0, f.Vh)(f.oQ.VERIFIED_TEEN)));
+                      (_.A.showSuccessToast(m.OB.TIGGER_PAWTECT_VERIFIED), (0, I.Vh)(I.oQ.VERIFIED_TEEN)));
 }
 class C extends l.A {
     _previousAgeVerificationStatus = null;
     handlePostConnectionOpen = () => {
-        this._previousAgeVerificationStatus = I.default.getCurrentUser()?.ageVerificationStatus ?? null;
+        this._previousAgeVerificationStatus = f.default.getCurrentUser()?.ageVerificationStatus ?? null;
     };
     handleCurrentUserUpdate = (e) => {
         let { user: t } = e,
-            n = (0, I.transformUser)(t).ageVerificationStatus ?? null,
+            n = (0, f.transformUser)(t).ageVerificationStatus ?? null,
             r = this._previousAgeVerificationStatus !== n,
             l = r && n === s.Tk.VERIFIED_ADULT && (0, u.d6)(i.t.AGE_GATED_SPACES);
         r && (0, T.a6)();
@@ -62,9 +62,9 @@ class C extends l.A {
                     t && null != e)
                 ) {
                     let t;
-                    (a.A.fetchMessages({ channelId: e, limit: m.EMb }),
+                    (a.A.fetchMessages({ channelId: e, limit: g.EMb }),
                         (t = E.A.getChannel(e)),
-                        (t?.type === m.rbe.GUILD_FORUM || t?.type === m.rbe.GUILD_MEDIA) && (0, c.kB)(t));
+                        (t?.type === g.rbe.GUILD_FORUM || t?.type === g.rbe.GUILD_MEDIA) && (0, c.kB)(t));
                 }
             }
         } catch (e) {

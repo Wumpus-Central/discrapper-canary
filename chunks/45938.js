@@ -33,16 +33,16 @@ var i,
     E = n(158045),
     A = n(257120),
     h = n(371794),
-    I = n(652215),
-    f = n(202541),
+    f = n(652215),
+    I = n(202541),
     p = n(375708);
 let T = [
         A.A.escape(window.GLOBAL_ENV.GIFT_CODE_HOST),
         ...["discordapp.com/gifts", "discord.com/gifts"].map((e) => A.A.escape(e)),
     ].join("|"),
-    m = RegExp(`(?: |^|https?://)(?:${T})/([a-z0-9-]+)`, "gi"),
-    g = [...["discord.com/billing/promotions", "promos.discord.gg"].map((e) => A.A.escape(e))].join("|"),
-    S = RegExp(`(?: |^|https?://)(?:${g})(/|(/)?\\?code=)([a-z0-9-]+)`, "gi");
+    g = RegExp(`(?: |^|https?://)(?:${T})/([a-z0-9-]+)`, "gi"),
+    m = [...["discord.com/billing/promotions", "promos.discord.gg"].map((e) => A.A.escape(e))].join("|"),
+    S = RegExp(`(?: |^|https?://)(?:${m})(/|(/)?\\?code=)([a-z0-9-]+)`, "gi");
 function N(e, t) {
     return Array(t)
         .fill(void 0)
@@ -79,13 +79,13 @@ function b(e) {
     return e.replace(/[^A-Za-z0-9]/g, "");
 }
 function M(e) {
-    return e?.type === I.lAJ.CUSTOM_GIFT && e?.embeds?.length === 1 && e?.embeds[0].type === I.Auw.GIFT;
+    return e?.type === f.lAJ.CUSTOM_GIFT && e?.embeds?.length === 1 && e?.embeds[0].type === f.Auw.GIFT;
 }
 function P(e) {
     let t;
     if (null == e) return [];
     let n = new Set();
-    for (; null != (t = m.exec(e)) && n.size < 3;) n.add(b(t[1]));
+    for (; null != (t = g.exec(e)) && n.size < 3;) n.add(b(t[1]));
     for (; null != (t = S.exec(e)) && n.size < 3;) n.add(b(t[t.length - 1]));
     return Array.from(n);
 }
@@ -101,7 +101,7 @@ async function w(e) {
     try {
         let i = (
             await (0, h.aP)({
-                url: I.Rsh.GIFT_CODE_RESOLVE(e),
+                url: f.Rsh.GIFT_CODE_RESOLVE(e),
                 query: { with_application: t, with_subscription_plan: n },
                 oldFormErrors: !0,
                 rejectWithError: !1,
@@ -109,7 +109,7 @@ async function w(e) {
         ).body;
         return (
             u.default.track(
-                I.HAw.GIFT_CODE_RESOLVED,
+                f.HAw.GIFT_CODE_RESOLVED,
                 {
                     resolved: !0,
                     gift_code: i.code,
@@ -124,31 +124,31 @@ async function w(e) {
             i
         );
     } catch (t) {
-        throw (u.default.track(I.HAw.GIFT_CODE_RESOLVED, { resolved: !1, gift_code: e }), new l.A(t));
+        throw (u.default.track(f.HAw.GIFT_CODE_RESOLVED, { resolved: !1, gift_code: e }), new l.A(t));
     }
 }
 function G(e, t) {
-    u.default.track(I.HAw.GIFT_CODE_COPIED, { ...(0, o.A)(t, !1, !1), ...e.analyticsData });
+    u.default.track(f.HAw.GIFT_CODE_COPIED, { ...(0, o.A)(t, !1, !1), ...e.analyticsData });
 }
 function x(e, t, n) {
     let { error: i, accepted: r, accepting: a, opened: s, isCustomGift: l } = n;
     return null == i && (r || a || null == e)
         ? !l || s || r || a
             ? r && (t.isSubscription || null != e)
-                ? I.frR.SUCCESS
-                : I.frR.CONFIRM
-            : I.frR.OPEN
-        : I.frR.ERROR;
+                ? f.frR.SUCCESS
+                : f.frR.CONFIRM
+            : f.frR.OPEN
+        : f.frR.ERROR;
 }
 function k(e, t, n) {
     switch (e) {
-        case I.frR.ERROR:
+        case f.frR.ERROR:
             return p.intl.formatToMarkdownString(p.t.JUvC0s, {});
-        case I.frR.SUCCESS:
+        case f.frR.SUCCESS:
             return t.isSubscription
                 ? p.intl.formatToPlainString(p.t["1C2BG/"], { skuName: n.name })
                 : p.intl.string(p.t["+BNMcF"]);
-        case I.frR.CONFIRM:
+        case f.frR.CONFIRM:
         default:
             return t.isSubscription
                 ? p.intl.formatToPlainString(p.t["2VN4N9"], { skuName: n.name })
@@ -158,15 +158,15 @@ function k(e, t, n) {
 function F(e, t, n) {
     let { isCustomGift: i } = n;
     switch (e) {
-        case I.frR.ERROR:
+        case f.frR.ERROR:
             return p.intl.string(p.t.w19zb6);
-        case I.frR.SUCCESS:
+        case f.frR.SUCCESS:
             if (__OVERLAY__) return p.intl.string(p.t.zW87EM);
             if (t.isSubscription) return p.intl.string(p.t.ex5TKr);
             return p.intl.string(p.t.OOkjql);
-        case I.frR.OPEN:
+        case f.frR.OPEN:
             return p.intl.string(p.t.F8ktci);
-        case I.frR.CONFIRM:
+        case f.frR.CONFIRM:
         default:
             if (null != i && i) return p.intl.string(p.t.n6I6k4);
             if (null != t.giftStyle) return t.isClaimed ? p.intl.string(p.t.OgpR0c) : p.intl.string(p.t["2BWscv"]);
@@ -185,29 +185,29 @@ function B(e) {
         subscriptionPlan: d = null,
     } = e;
     switch (t) {
-        case I.frR.ERROR:
+        case f.frR.ERROR:
             return V(i, a, s, l, o);
-        case I.frR.SUCCESS:
+        case f.frR.SUCCESS:
             if (null != d)
                 return (0, r.YW)(d)
-                    .with({ interval: f.WT.MONTH, premiumSubscriptionType: f.PremiumTypes.TIER_2 }, () =>
+                    .with({ interval: I.WT.MONTH, premiumSubscriptionType: I.PremiumTypes.TIER_2 }, () =>
                         p.intl.formatToPlainString(p.t.O2bEOt, { intervalCount: d.intervalCount }),
                     )
-                    .with({ interval: f.WT.YEAR, premiumSubscriptionType: f.PremiumTypes.TIER_2 }, () =>
+                    .with({ interval: I.WT.YEAR, premiumSubscriptionType: I.PremiumTypes.TIER_2 }, () =>
                         p.intl.formatToPlainString(p.t["ZEvHF+"], { intervalCount: d.intervalCount }),
                     )
-                    .with({ interval: f.WT.MONTH, premiumSubscriptionType: f.PremiumTypes.TIER_1 }, () =>
+                    .with({ interval: I.WT.MONTH, premiumSubscriptionType: I.PremiumTypes.TIER_1 }, () =>
                         p.intl.formatToPlainString(p.t.gjKbF4, { intervalCount: d.intervalCount }),
                     )
-                    .with({ interval: f.WT.YEAR, premiumSubscriptionType: f.PremiumTypes.TIER_1 }, () =>
+                    .with({ interval: I.WT.YEAR, premiumSubscriptionType: I.PremiumTypes.TIER_1 }, () =>
                         p.intl.formatToPlainString(p.t.GIe7Bw, { intervalCount: d.intervalCount }),
                     )
                     .otherwise(() => p.intl.string(p.t["5ayf7w"]));
             return p.intl.formatToPlainString(p.t["3CPsbo"], { skuName: n.name });
-        case I.frR.CONFIRM:
+        case f.frR.CONFIRM:
         default:
             if (null != d) {
-                let e = d.interval === f.WT.MONTH ? p.t.P9eTKt : p.t.d8rUdy;
+                let e = d.interval === I.WT.MONTH ? p.t.P9eTKt : p.t.d8rUdy;
                 return p.intl.format(e, { skuName: n.name, intervalCount: d.intervalCount });
             }
             return p.intl.formatToPlainString(p.t.l6Ea4Z, { skuName: n.name });
@@ -238,25 +238,25 @@ function W(e, t) {
 }
 function Y(e, t) {
     switch (e.code) {
-        case I.t02.INVALID_GIFT_SELF_REDEMPTION:
+        case f.t02.INVALID_GIFT_SELF_REDEMPTION:
             return p.intl.string(p.t.wa9h7F);
-        case I.t02.INVALID_GIFT_REDEMPTION_EXHAUSTED:
+        case f.t02.INVALID_GIFT_REDEMPTION_EXHAUSTED:
             return p.intl.string(p.t.Iw2TUW);
-        case I.t02.INVALID_GIFT_REDEMPTION_OWNED:
+        case f.t02.INVALID_GIFT_REDEMPTION_OWNED:
             return p.intl.string(p.t.mdLtb5);
-        case I.t02.UNKNOWN_GIFT_CODE:
+        case f.t02.UNKNOWN_GIFT_CODE:
             return p.intl.string(p.t.roztIr);
-        case I.t02.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
+        case f.t02.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_INCOMPATIBLE:
             return p.intl.formatToPlainString(p.t["4YTHKw"], {
-                planName: (0, E.YE)(t, f.PremiumTypes.TIER_2) ? p.intl.string(p.t.lG6a5x) : p.intl.string(p.t.FSOz78),
+                planName: (0, E.YE)(t, I.PremiumTypes.TIER_2) ? p.intl.string(p.t.lG6a5x) : p.intl.string(p.t.FSOz78),
             });
-        case I.t02.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
+        case f.t02.INVALID_GIFT_REDEMPTION_SUBSCRIPTION_MANAGED:
             return p.intl.string(p.t["9i1J30"]);
-        case I.t02.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
+        case f.t02.INVALID_GIFT_REDEMPTION_INVOICE_OPEN:
             return p.intl.string(p.t["U26WX+"]);
-        case I.t02.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
+        case f.t02.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED:
             return p.intl.string(p.t.ypuSd8);
-        case I.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
+        case f.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE:
             return p.intl.string(p.t.mXMmWE);
         default:
             return p.intl.string(p.t["s9+XlB"]);

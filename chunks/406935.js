@@ -1,4 +1,4 @@
-(n.d(t, { ZQ: () => p, _t: () => m, as: () => I, hU: () => S, j1: () => _, ol: () => A, uN: () => c }),
+(n.d(t, { ZQ: () => p, _t: () => g, as: () => f, hU: () => S, j1: () => _, ol: () => A, uN: () => c }),
     n(393431),
     n(532706),
     n(42231),
@@ -219,8 +219,8 @@ class h extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let I = new h();
-class f extends l.G {
+let f = new h();
+class I extends l.G {
     constructor() {
         super("google.protobuf.UInt32Value", [{ no: 1, name: "value", kind: "scalar", T: 13 }]);
     }
@@ -260,7 +260,7 @@ class f extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let p = new f();
+let p = new I();
 class T extends l.G {
     constructor() {
         super("google.protobuf.BoolValue", [{ no: 1, name: "value", kind: "scalar", T: 8 }]);
@@ -301,8 +301,8 @@ class T extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let m = new T();
-class g extends l.G {
+let g = new T();
+class m extends l.G {
     constructor() {
         super("google.protobuf.StringValue", [{ no: 1, name: "value", kind: "scalar", T: 9 }]);
     }
@@ -342,7 +342,7 @@ class g extends l.G {
         return (!1 !== i && (!0 == i ? r.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let S = new g();
+let S = new m();
 class N extends l.G {
     constructor() {
         super("google.protobuf.BytesValue", [{ no: 1, name: "value", kind: "scalar", T: 12 }]);

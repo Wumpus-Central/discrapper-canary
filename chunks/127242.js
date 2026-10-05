@@ -13,20 +13,20 @@ n(672396);
 let E = null,
     A = new Set(),
     h = null,
-    I = null,
-    f = new d.SnowflakeSequence();
+    f = null,
+    I = new d.SnowflakeSequence();
 function p(e) {
     return (0, u.Vx)(e) ? `native-${e.id}` : null != e.nativeId ? `native-${e.nativeId}` : null;
 }
 function T(e) {
     let t = Math.floor(e);
     try {
-        return (f.willOverflowNext() && f.reset(), d.default.fromTimestampWithSequence(t, f));
+        return (I.willOverflowNext() && I.reset(), d.default.fromTimestampWithSequence(t, I));
     } catch {
-        return (f.reset(), d.default.fromTimestampWithSequence(t, f));
+        return (I.reset(), d.default.fromTimestampWithSequence(t, I));
     }
 }
-let m = new l.J(
+let g = new l.J(
         function (e) {
             let t = [e.type, e.pid?.toString() ?? "null-pid"],
                 n = p(e);
@@ -36,9 +36,9 @@ let m = new l.J(
             return -e.timestamp;
         },
     ),
-    g = 0;
+    m = 0;
 function S(e) {
-    return m.set(e.id, e);
+    return g.set(e.id, e);
 }
 class N extends s.Ay.Store {
     static displayName = "Overlay-v3-Native-Debug-Module-Store";
@@ -55,10 +55,10 @@ class N extends s.Ay.Store {
         return A;
     }
     getOverlayLoggingBreadcrumbs(e) {
-        return [m.values(e, !0), m.version];
+        return [g.values(e, !0), g.version];
     }
     isModuleLoggingEnabled() {
-        return null != I;
+        return null != f;
     }
     isStateDebuggingEnabled() {
         return null != h;
@@ -126,18 +126,18 @@ let C = new N(
                       let { enabled: t } = e;
                       return (
                           t
-                              ? null == I &&
-                                (I = setInterval(() => {
+                              ? null == f &&
+                                (f = setInterval(() => {
                                     let e = E?.getLastAssociatedPID() ?? null;
-                                    E?.getNativeBreadcrumbs({ minBreadcrumbId: g }, (t) => {
+                                    E?.getNativeBreadcrumbs({ minBreadcrumbId: m }, (t) => {
                                         let { breadcrumbs: n } = t;
                                         for (let t of n)
                                             !(function (e, t, n) {
                                                 let i,
                                                     r = p(e);
                                                 if (null == r) throw Error("Native breadcrumb has no native id");
-                                                m.size(r) > 0 ||
-                                                    ((g = Math.max(g, Number(e.id))),
+                                                g.size(r) > 0 ||
+                                                    ((m = Math.max(m, Number(e.id))),
                                                     S({
                                                         id: (i = T(e.timestamp)),
                                                         key: i,
@@ -154,7 +154,7 @@ let C = new N(
                                         C.emitChange();
                                     });
                                 }, 3e3))
-                              : null != I && (clearInterval(I), (I = null)),
+                              : null != f && (clearInterval(f), (f = null)),
                           !0
                       );
                   },

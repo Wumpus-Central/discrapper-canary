@@ -9,7 +9,7 @@
     X7: () => G,
     Xx: () => O,
     Xy: () => h,
-    Ze: () => I,
+    Ze: () => f,
     er: () => x,
     j: () => Y,
     jd: () => R,
@@ -33,12 +33,12 @@ var i = n(435558),
     E = n(375708);
 let A = 365,
     h = 366,
-    I = 4,
-    f = [s.p3.MO.weekday, s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday, s.p3.FR.weekday],
+    f = 4,
+    I = [s.p3.MO.weekday, s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday, s.p3.FR.weekday],
     p = [s.p3.SU.weekday, s.p3.MO.weekday, s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday],
     T = [s.p3.TU.weekday, s.p3.WE.weekday, s.p3.TH.weekday, s.p3.FR.weekday, s.p3.SA.weekday],
-    m = [s.p3.SA.weekday, s.p3.SU.weekday],
-    g = [s.p3.FR.weekday, s.p3.SA.weekday],
+    g = [s.p3.SA.weekday, s.p3.SU.weekday],
+    m = [s.p3.FR.weekday, s.p3.SA.weekday],
     S = [s.p3.SU.weekday, s.p3.MO.weekday],
     N = [
         s.p3.SU.weekday,
@@ -162,7 +162,7 @@ function x(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
         r = n > new Date() ? n : new Date(),
         a = new Date();
-    a.setFullYear(a.getFullYear() + I);
+    a.setFullYear(a.getFullYear() + f);
     let s = t.between(r, a, !0, (t, n) => n < e + 1);
     return i && s.length > 0 && n.getTime() === s[0].getTime() ? s.slice(1) : s.slice(0, e);
 }
@@ -193,12 +193,12 @@ function F(e, t) {
 function B(e) {
     let t = D(e.toDate().getDay()),
         n = D(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? T : n.weekday - t.weekday < 0 ? p : f;
+    return n.weekday - t.weekday > 0 ? T : n.weekday - t.weekday < 0 ? p : I;
 }
 function V(e) {
     let t = D(e.toDate().getDay()),
         n = D(e.toDate().getUTCDay());
-    return n.weekday - t.weekday > 0 ? S : n.weekday - t.weekday < 0 ? g : m;
+    return n.weekday - t.weekday > 0 ? S : n.weekday - t.weekday < 0 ? m : g;
 }
 function H(e, t) {
     let n = (function (e, t) {

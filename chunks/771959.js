@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => m, DA: () => T, QQ: () => f, UW: () => p, mj: () => I, zW: () => h });
+n.d(t, { Ay: () => g, DA: () => T, QQ: () => I, UW: () => p, mj: () => f, zW: () => h });
 var i = n(582128),
     r = n(196765),
     a = n(17928),
@@ -14,10 +14,10 @@ let E = (0, r.v)(() => ({ shouldShowPopover: !1, markPopoverAsDismissed: _.tEg }
 function h() {
     return A;
 }
-function I() {
+function f() {
     A = !1;
 }
-function f() {
+function I() {
     return {
         shouldShowPopover: E((e) => e.shouldShowPopover),
         markPopoverAsDismissed: E((e) => e.markPopoverAsDismissed),
@@ -31,14 +31,14 @@ function T() {
         t = (0, l.mB)(s.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM);
     return e && t;
 }
-let m = i.memo(function () {
+let g = i.memo(function () {
     let { hasAccess: e, isFreemium: t } = (0, c.TW)("FavoritesGuildIntroPopover"),
         n = (0, a.bG)([d.A], () => !1 === d.A.favoriteGuildVisibleSetting),
         r = (0, u.A)(),
         h = (0, l.Ay)((e) => e.postConnectionOpen),
-        [I, f] = (0, o.kn)(e && t && !n && r && h ? [s.M.FAVORITES_SERVER_ONBOARDING_INTRO] : []),
+        [f, I] = (0, o.kn)(e && t && !n && r && h ? [s.M.FAVORITES_SERVER_ONBOARDING_INTRO] : []),
         [p] = (0, o.kn)(
-            I === s.M.FAVORITES_SERVER_ONBOARDING_INTRO ? [s.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : [],
+            f === s.M.FAVORITES_SERVER_ONBOARDING_INTRO ? [s.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : [],
             void 0,
             !0,
         ),
@@ -48,8 +48,8 @@ let m = i.memo(function () {
             T && (A = !0);
         }, [T]),
         i.useLayoutEffect(() => {
-            E.setState({ shouldShowPopover: T, markPopoverAsDismissed: f });
-        }, [T, f]),
+            E.setState({ shouldShowPopover: T, markPopoverAsDismissed: I });
+        }, [T, I]),
         i.useLayoutEffect(() => () => E.setState({ shouldShowPopover: !1, markPopoverAsDismissed: _.tEg }), []),
         null
     );

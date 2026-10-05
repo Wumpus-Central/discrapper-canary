@@ -16,12 +16,12 @@ function E(e) {
             keyboardShortcut: E,
             __unsupportedReactNodeAsText: A,
             asContainer: h = !1,
-            tag: I = "span",
-            position: f = "top",
+            tag: f = "span",
+            position: I = "top",
             align: p = "center",
             spacing: T,
-            targetElementRef: m,
-            anchorRef: g,
+            targetElementRef: g,
+            anchorRef: m,
             caretConfig: S,
             positionKey: N,
             ariaHidden: C = !1,
@@ -29,20 +29,20 @@ function E(e) {
         } = e,
         [R, L] = r.useState(null);
     r.useLayoutEffect(() => {
-        null != g && L(g.current);
-    }, [g]);
+        null != m && L(m.current);
+    }, [m]);
     let y = r.useCallback(
             (e) => {
-                (null == g && L(e), (0, d.cZ)(m, e));
+                (null == m && L(e), (0, d.cZ)(g, e));
             },
-            [m, g],
+            [g, m],
         ),
         {
             tooltipId: D,
             isVisible: v,
             targetElementRef: b,
             trigger: M,
-        } = (0, u.D)({ children: t, targetElementRef: y, asContainer: h, containerTag: I, ariaHidden: C, ...O }),
+        } = (0, u.D)({ children: t, targetElementRef: y, asContainer: h, containerTag: f, ariaHidden: C, ...O }),
         [P, U] = r.useState(!1),
         w = r.useMemo(
             () =>
@@ -80,10 +80,10 @@ function E(e) {
                       isRendered: x,
                       targetElementRef: b,
                       targetElement: R,
-                      anchorRef: g,
+                      anchorRef: m,
                       id: D,
                       content: w,
-                      position: f,
+                      position: I,
                       align: p,
                       spacing: T,
                       caretConfig: S,

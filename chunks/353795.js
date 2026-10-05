@@ -19,7 +19,7 @@ function h(e) {
         { reducedMotion: a } = r.useContext(d.C);
     return (0, i.jsx)(c.a, { className: E.lottie, importData: t, autoplay: !0, shouldAnimate: !a.enabled, ...n });
 }
-function I(e) {
+function f(e) {
     let { rive: t, props: n } = e;
     return (0, i.jsx)(t, {
         className: E.rive,
@@ -30,7 +30,7 @@ function I(e) {
         ...n,
     });
 }
-function f(e) {
+function I(e) {
     let { ref: t, src: n, fallbackImageSrc: a, loop: s, loopAt: o = 0, playbackRate: c, isWindowFocused: u } = e,
         { reducedMotion: _ } = r.useContext(d.C),
         h = r.useRef(null);
@@ -78,8 +78,8 @@ function p(e) {
               children: (function () {
                   if ((0, _.wu)(n)) return (0, i.jsx)(A, { ...n });
                   if ((0, _.al)(n)) return (0, i.jsx)(h, { ...n });
-                  if ((0, _.$P)(n)) return (0, i.jsx)(I, { ...n });
-                  if ((0, _.cZ)(n)) return (0, i.jsx)(f, { ...n, isWindowFocused: d });
+                  if ((0, _.$P)(n)) return (0, i.jsx)(f, { ...n });
+                  if ((0, _.cZ)(n)) return (0, i.jsx)(I, { ...n, isWindowFocused: d });
                   if ((0, _.Kh)(n))
                       return null == a.dynamicGraphicComponents
                           ? (console.warn(

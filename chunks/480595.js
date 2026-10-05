@@ -12,11 +12,11 @@ var i = n(812729),
     E = n(685396),
     A = n(952818),
     h = n(765741),
-    I = n(863160),
-    f = n(671389);
-let p = [n(732755).A, f.Ay],
+    f = n(863160),
+    I = n(671389);
+let p = [n(732755).A, I.Ay],
     T = [];
-function m() {
+function g() {
     let e = [];
     for (let t of p) {
         let n = t.getActivity();
@@ -24,16 +24,16 @@ function m() {
     }
     return !r()(e, T) && ((T = e), !0);
 }
-class g extends o.Ay.Store {
+class m extends o.Ay.Store {
     static displayName = "FirstPartyRichPresenceStore";
     initialize() {
-        this.syncWith(p, m);
+        this.syncWith(p, g);
     }
     getActivities() {
         return T;
     }
 }
-let S = new g(d.h);
+let S = new m(d.h);
 var N = n(155718),
     C = n(871633),
     O = n(655116),
@@ -75,7 +75,7 @@ function k() {
             null != n ? (null == x && (x = n.start ?? Date.now()), (o = n)) : (x = null));
     } else x = null;
     let d = null != o ? A.Ay.getSdkResolutionForPID(o.pid) : void 0,
-        c = null != d && d.type !== I.r.UNRESOLVED ? d.game.id : void 0,
+        c = null != d && d.type !== f.r.UNRESOLVED ? d.game.id : void 0,
         u = P.A.getRemoteActivities(),
         h =
             null != c &&
@@ -84,7 +84,7 @@ function k() {
                     e.application_id === c ||
                     _.A.getApplication(e.application_id ?? void 0)?.getCanonicalGameId() === c,
             ),
-        f =
+        I =
             null != o &&
             null != o.name &&
             (h ||
@@ -107,7 +107,7 @@ function k() {
                     );
                 })(o, [...e, ...u])),
         p = null != o && o.isLauncher;
-    if (null != o && null != o.name && !(f || (p && !l))) {
+    if (null != o && null != o.name && !(I || (p && !l))) {
         let t = v.A.findGame(o);
         e.push({
             type: U.$pd.PLAYING,

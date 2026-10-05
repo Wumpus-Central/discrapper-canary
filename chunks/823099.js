@@ -19,8 +19,8 @@ function A(e) {
         let e,
             d,
             A,
-            I = (0, s.o2)(n),
-            f = (0, l.C)(I),
+            f = (0, s.o2)(n),
+            I = (0, l.C)(f),
             p =
                 ((d = (e = t.items ?? []).map((e) => e.preCompressionSize)),
                 {
@@ -39,7 +39,7 @@ function A(e) {
                 (0, o.s)({
                     guildId: n,
                     channelId: t.items?.[0]?.channelId ?? null,
-                    userIndividualFileSizeLimit: I,
+                    userIndividualFileSizeLimit: f,
                     numAttachments: p.numAttachments,
                     preCompressionFileSizes: p.preCompressionFileSizes,
                     preCompressionAggregateSize: p.preCompressionAggregateSize,
@@ -51,7 +51,7 @@ function A(e) {
             ),
             (0, i.A)({
                 title: u.intl.string(u.t["/tGlcj"]),
-                subtitle: u.intl.formatToPlainString(u.t.fxEKdS, { maxSize: (0, s.Hb)(f) }),
+                subtitle: u.intl.formatToPlainString(u.t.fxEKdS, { maxSize: (0, s.Hb)(I) }),
             }),
             !0
         );
@@ -68,7 +68,7 @@ function A(e) {
         return ((0, i.A)({ title: u.intl.string(u.t.B3vFdU), subtitle: u.intl.string(u.t["9ZpT2C"]) }), !0);
     if (A === c.t02.INVALID_FILE_ASSET)
         return ((0, i.A)({ title: u.intl.string(u.t.B3vFdU), subtitle: u.intl.string(u.t.zMEjJg) }), !0);
-    let I = (function (e) {
+    let f = (function (e) {
         let t = u.intl.string(u.t.B3vFdU);
         switch (e) {
             case c.t02.TOTAL_ATTACHMENT_SIZE_TOO_LARGE:
@@ -81,5 +81,5 @@ function A(e) {
                 return null;
         }
     })(A);
-    return null != I && ((0, i.A)({ title: I.title, subtitle: I.body }), !0);
+    return null != f && ((0, i.A)({ title: f.title, subtitle: f.body }), !0);
 }

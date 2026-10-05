@@ -1,4 +1,4 @@
-(n.d(t, { $: () => m }), n(321073));
+(n.d(t, { $: () => g }), n(321073));
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -12,13 +12,13 @@ var i = n(477900),
     E = n(484702),
     A = n(403431);
 let h = Object.freeze({ spacerTop: 0, totalHeight: 0, items: [], isSidebarVisible: !1 });
-var I = n(789279),
-    f = n(584648),
+var f = n(789279),
+    I = n(584648),
     p = n(751591),
     T = n(6095);
-function m(e, t, n, a) {
+function g(e, t, n, a) {
     let l = new Map(),
-        m =
+        g =
             "u" < typeof document
                 ? c.F
                 : new a((e) => {
@@ -27,7 +27,7 @@ function m(e, t, n, a) {
                           l.get(t)?.(e);
                       });
                   });
-    return r.forwardRef(function (a, g) {
+    return r.forwardRef(function (a, m) {
         let S,
             N,
             {
@@ -76,7 +76,7 @@ function m(e, t, n, a) {
                 isSidebarVisible: eE,
                 listComputer: eA,
                 forceUpdateOnChunkChange: eh,
-                anchor: eI,
+                anchor: ef,
             } = (function (e) {
                 let {
                         sections: t,
@@ -89,17 +89,17 @@ function m(e, t, n, a) {
                         paddingTop: d = 0,
                         paddingBottom: c = 0,
                         getScrollerState: u,
-                        getAnchorId: I,
+                        getAnchorId: f,
                     } = e,
-                    f = (0, E.A)(),
+                    I = (0, E.A)(),
                     p = (0, r.useRef)(h),
                     [T] = (0, r.useState)(() => new _.A()),
                     {
-                        dirty: m,
-                        chunkStart: g,
+                        dirty: g,
+                        chunkStart: m,
                         chunkEnd: S,
                         forceUpdateOnChunkChange: N,
-                    } = (0, A.A)({ chunkSize: o, getScrollerState: u, forceUpdate: f }),
+                    } = (0, A.A)({ chunkSize: o, getScrollerState: u, forceUpdate: I }),
                     { items: C } = p.current,
                     O = null,
                     { scrollTop: R } = u();
@@ -113,12 +113,12 @@ function m(e, t, n, a) {
                     }
                 }
                 let L = (0, r.useMemo)(() => {
-                        let e = Math.max(0, g * o);
+                        let e = Math.max(0, m * o);
                         return null != s && e < s;
-                    }, [o, g, s]),
+                    }, [o, m, s]),
                     y = (0, r.useMemo)(
                         () =>
-                            m > 0
+                            g > 0
                                 ? p.current
                                 : (T.mergeProps({
                                       sectionHeight: n,
@@ -128,10 +128,10 @@ function m(e, t, n, a) {
                                       paddingBottom: c,
                                       paddingTop: d,
                                       sections: t,
-                                      getAnchorId: I,
+                                      getAnchorId: f,
                                   }),
-                                  T.compute(Math.max(0, g * o), S * o)),
-                        [m, g, S, n, i, a, l, c, d, t, T, o, I],
+                                  T.compute(Math.max(0, m * o), S * o)),
+                        [g, m, S, n, i, a, l, c, d, t, T, o, f],
                     );
                 return (
                     (0, r.useLayoutEffect)(() => {
@@ -152,22 +152,22 @@ function m(e, t, n, a) {
                 getScrollerState: ed,
                 getAnchorId: V,
             }),
-            ef = (0, I.A)(el),
+            eI = (0, f.A)(el),
             ep = r.useRef(R),
             eT = r.useRef(L);
         r.useLayoutEffect(() => {
             ((ep.current = R), (eT.current = L));
         });
-        let em = r.useCallback(
+        let eg = r.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
                     (e > eo.current.dirty && (eo.current.dirty = e), 2 === e && ep.current?.(), eh(e));
                 },
                 [eh, eo],
             ),
-            eg = r.useCallback(() => em(), [em]);
-        ((0, c.A)({ ref: el, onUpdate: eg, key: "container", resizeObserver: m, listenerMap: l }),
-            (0, c.A)({ ref: er, onUpdate: () => eT.current?.(), key: "content", resizeObserver: m, listenerMap: l }));
+            em = r.useCallback(() => eg(), [eg]);
+        ((0, c.A)({ ref: el, onUpdate: em, key: "container", resizeObserver: g, listenerMap: l }),
+            (0, c.A)({ ref: er, onUpdate: () => eT.current?.(), key: "content", resizeObserver: g, listenerMap: l }));
         let eS =
                 ((S = r.useRef(e_)),
                 r.useEffect(() => {
@@ -190,14 +190,14 @@ function m(e, t, n, a) {
                     return [0, 0];
                 }, []));
         r.useImperativeHandle(
-            g,
+            m,
             () => ({
                 getScrollerNode: () => el.current,
                 getScrollerState: ed,
                 getItems: eS,
                 getSectionRowFromIndex: eN,
                 ...(function (e, t, n, i) {
-                    let r = (0, f.A)(e, t, i);
+                    let r = (0, I.A)(e, t, i);
                     function a(e, t) {
                         return n.computeScrollPosition(e, t);
                     }
@@ -218,20 +218,20 @@ function m(e, t, n, a) {
                             r.scrollIntoViewRect({ start: o, end: o + d, padding: l, animate: i, callback: s });
                         },
                     };
-                })(el, ed, eA, ef),
+                })(el, ed, eA, eI),
             }),
-            [el, ed, eN, eS, eA, ef],
+            [el, ed, eN, eS, eA, eI],
         );
         let eC = r.useCallback(
             (e) => {
-                (em(1),
+                (eg(1),
                     null == ei.current ? es(!0) : clearTimeout(ei.current),
                     (ei.current = setTimeout(() => {
                         ((ei.current = null), es(!1));
                     }, 200)),
                     null != O && O(e));
             },
-            [O, em],
+            [O, eg],
         );
         return (
             r.useLayoutEffect(() => {
@@ -272,7 +272,7 @@ function m(e, t, n, a) {
                 }, [l]);
             })({
                 scrollerRef: el,
-                anchor: eI,
+                anchor: ef,
                 getScrollerState: ed,
                 listComputer: eA,
                 getAnchorId: V,

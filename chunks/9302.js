@@ -9,13 +9,13 @@ let i;
         getPID: () => h,
         getRPCAuthToken: () => p,
         isHookModuleTooOld: () => C,
-        isValidGamePID: () => f,
+        isValidGamePID: () => I,
         log: () => T,
-        setOutOfProcessSupport: () => g,
-        setPID: () => I,
+        setOutOfProcessSupport: () => m,
+        setPID: () => f,
         supportsLegacy: () => O,
         supportsOutOfProcess: () => S,
-        validResolution: () => m,
+        validResolution: () => g,
     }),
     n(323874),
     n(14289),
@@ -37,10 +37,10 @@ function h() {
     let e = parseInt(new URLSearchParams(window.location.search).get("pid") ?? "", 10);
     return (isNaN(e) && (e = -1), (i = e));
 }
-function I(e) {
+function f(e) {
     i = e;
 }
-function f(e) {
+function I(e) {
     return null != e && 0 !== e && -1 !== e;
 }
 function p() {
@@ -49,10 +49,10 @@ function p() {
 function T(e) {
     (0, r.tN)({ type: o.kGV.LOG_MESSAGES, pid: h(), token: p(), payload: e });
 }
-function m(e) {
+function g(e) {
     return !s.isPlatformEmbedded || (e.width >= u.width && e.height >= u.height);
 }
-function g(e) {
+function m(e) {
     A = e;
 }
 function S() {

@@ -12,8 +12,8 @@ var i = n(477900),
     E = n(475825),
     A = n(289873),
     h = n(834730),
-    I = n(992251);
-function f() {
+    f = n(992251);
+function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "listbox",
         t = arguments.length > 1 ? arguments[1] : void 0;
     return `${e}-option-${t}`;
@@ -21,8 +21,8 @@ function f() {
 n(321073);
 var p = n(869431),
     T = n(594615);
-let m = c.A.modules.select.OPTION_HEIGHT.resolve(),
-    g = m + 4,
+let g = c.A.modules.select.OPTION_HEIGHT.resolve(),
+    m = g + 4,
     S = [];
 function N(e) {
     return null != e.description && "" !== e.description;
@@ -59,7 +59,7 @@ function C(e) {
         K = Y ? y : j,
         $ = (0, l.Ay)({
             id: B,
-            defaultFocused: null != v ? f(B, v) : void 0,
+            defaultFocused: null != v ? I(B, v) : void 0,
             async scrollToEnd() {},
             async scrollToStart() {},
             isEnabled: !u,
@@ -90,7 +90,7 @@ function C(e) {
     let { activeIndex: X, handleKeyDown: Z } = R(k, H);
     r.useEffect(() => {
         if (null != X && k && -1 !== a) {
-            let e = (0, o.t$)(B, f(B, X)),
+            let e = (0, o.t$)(B, I(B, X)),
                 t = document.querySelector((0, o.Mz)(e));
             t?.focus();
         }
@@ -106,8 +106,8 @@ function C(e) {
                         })(C, e, t)
                     ],
                 )
-                    ? g
-                    : m,
+                    ? m
+                    : g,
             [H, C],
         ),
         Q = r.useCallback(
@@ -160,7 +160,7 @@ function C(e) {
                 height:
                     null != U
                         ? `${
-                              H.slice(0, U).reduce((e, t) => e + (N(t) ? g : m), 0) +
+                              H.slice(0, U).reduce((e, t) => e + (N(t) ? m : g), 0) +
                               26 *
                                   (function (e, t) {
                                       let n = 0,
@@ -199,7 +199,7 @@ function C(e) {
             renderRow: (e) => {
                 let { rowIndex: t } = e,
                     n = H[t],
-                    r = f(B, t),
+                    r = I(B, t),
                     s = null == M && N(n) ? `${r}-desc` : void 0,
                     l = 0 !== K.length && null != K.find((e) => e.id === n.id);
                 return (0, i.jsx)(
@@ -222,7 +222,7 @@ function C(e) {
                 );
             },
         });
-    } else t = P?.() ?? (0, i.jsx)(I.o, {});
+    } else t = P?.() ?? (0, i.jsx)(f.o, {});
     return (0, i.jsx)(d.hD, {
         navigator: $,
         children: (0, i.jsx)(d.PR, {

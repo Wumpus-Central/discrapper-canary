@@ -19,8 +19,8 @@ let _ = Object.fromEntries(Object.keys(d.A.colors).map((e) => [o()(e), e])),
                 lineClamp: E,
                 color: A,
                 tabularNumbers: h = !1,
-                scaleFontToUserSetting: I = !1,
-                ...f
+                scaleFontToUserSetting: f = !1,
+                ...I
             } = e,
             p = "",
             T = {};
@@ -38,12 +38,12 @@ let _ = Object.fromEntries(Object.keys(d.A.colors).map((e) => [o()(e), e])),
                 default:
                     n = d.A.colors[_[A]]?.css;
             }
-        let m = { color: n, ...T, ...f.style };
+        let g = { color: n, ...T, ...I.style };
         return (0, i.jsx)(a, {
             ref: t,
-            className: s()({ [c.fT]: void 0 === A, [c.rb]: l, [c.w9]: h, [u.fontScaling]: I }, p, u[r], o),
-            ...f,
-            style: Object.values(m).filter(Boolean).length > 0 ? m : void 0,
+            className: s()({ [c.fT]: void 0 === A, [c.rb]: l, [c.w9]: h, [u.fontScaling]: f }, p, u[r], o),
+            ...I,
+            style: Object.values(g).filter(Boolean).length > 0 ? g : void 0,
             "data-text-variant": r,
         });
     });

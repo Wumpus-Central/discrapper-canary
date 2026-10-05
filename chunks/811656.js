@@ -1,4 +1,4 @@
-n.d(t, { K: () => g, A: () => S });
+n.d(t, { K: () => m, A: () => S });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
@@ -13,8 +13,8 @@ var i = n(477900),
 (n(323874), n(14289), n(35956));
 var A = n(671325),
     h = n(636537),
-    I = n(799226),
-    f = n(676279),
+    f = n(799226),
+    I = n(676279),
     p = n(652215);
 let T = function (e) {
     (0, r.useEffect)(() => {
@@ -25,7 +25,7 @@ let T = function (e) {
             isSuccess: n,
             isLoading: i,
         } = (function (e) {
-            let t = (0, f.TM)(),
+            let t = (0, I.TM)(),
                 [n, i] = (0, r.useState)({ modalGlowEntry: void 0, modalGlowIdle: void 0, modalGlowExit: void 0 }),
                 [a, s] = (0, r.useState)(!1),
                 [l, o] = (0, r.useState)(!1),
@@ -104,23 +104,23 @@ let T = function (e) {
                 { mediaUrls: n, isSuccess: a, isFailure: l, isLoading: d }
             );
         })(e),
-        { status: a } = (0, I.CE)(e ? A.A : null);
-    return { mediaUrls: t, isSuccess: n && a === I.BW.Loaded, isLoading: i || a === I.BW.Loading };
+        { status: a } = (0, f.CE)(e ? A.A : null);
+    return { mediaUrls: t, isSuccess: n && a === f.BW.Loaded, isLoading: i || a === f.BW.Loading };
 };
-var m = n(794899);
-let g = 1e3,
+var g = n(794899);
+let m = 1e3,
     S = (e) => {
         let { children: t, isConfirmationStep: n, isEligibleForWowMoment: a, shouldPrefetchWowMoment: A } = e,
             h = (0, l.bG)([c.Ay], () => c.Ay.useReducedMotion),
-            [I, f] = (0, r.useState)("entry"),
-            g = (0, r.useRef)(null),
+            [f, I] = (0, r.useState)("entry"),
+            m = (0, r.useRef)(null),
             S = (0, r.useRef)(null),
             N = (0, r.useCallback)(() => {
-                "entry" === I && (f("idle"), null != g.current && g.current?.play());
-            }, [I]),
+                "entry" === f && (I("idle"), null != m.current && m.current?.play());
+            }, [f]),
             C = (0, r.useCallback)(() => {
-                "exit" !== I && (f("exit"), null != S.current && S.current?.play());
-            }, [I]),
+                "exit" !== f && (I("exit"), null != S.current && S.current?.play());
+            }, [f]),
             [O, R] = (0, r.useState)(!1);
         (0, r.useEffect)(() => {
             A && R(!0);
@@ -178,38 +178,38 @@ let g = 1e3,
             ? (0, i.jsxs)("div", {
                   children: [
                       (0, i.jsxs)("div", {
-                          className: m.j,
+                          className: g.j,
                           children: [
                               (0, i.jsx)("div", {
-                                  className: m.ws,
+                                  className: g.ws,
                                   children: (0, i.jsx)(u.A, {
                                       playsInline: !0,
                                       muted: !0,
                                       autoPlay: !0,
                                       onEnded: N,
-                                      className: s()(m.Ki, "entry" === I ? m.RK : m.R),
+                                      className: s()(g.Ki, "entry" === f ? g.RK : g.R),
                                       children: (0, i.jsx)("source", { src: L.modalGlowEntry }),
                                   }),
                               }),
                               (0, i.jsx)(u.A, {
-                                  ref: g,
+                                  ref: m,
                                   playsInline: !0,
                                   muted: !0,
                                   loop: !0,
-                                  className: s()(m.Ki, "idle" === I ? m.RK : m.R),
+                                  className: s()(g.Ki, "idle" === f ? g.RK : g.R),
                                   children: (0, i.jsx)("source", { src: L.modalGlowIdle }),
                               }),
                               (0, i.jsx)(u.A, {
                                   ref: S,
                                   playsInline: !0,
                                   muted: !0,
-                                  className: s()(m.Ki, "exit" === I ? m.RK : m.R),
+                                  className: s()(g.Ki, "exit" === f ? g.RK : g.R),
                                   children: (0, i.jsx)("source", { src: L.modalGlowExit }),
                               }),
                           ],
                       }),
                       (0, i.jsx)("div", {
-                          className: m.Sh,
+                          className: g.Sh,
                           children: (0, i.jsx)(o.e, {
                               fit: "layout",
                               ref: D,
@@ -217,7 +217,7 @@ let g = 1e3,
                               listenOnDocumentBody: !0,
                           }),
                       }),
-                      (0, i.jsx)("div", { className: "exit" === I ? m.aO : m.ws, children: t }),
+                      (0, i.jsx)("div", { className: "exit" === f ? g.aO : g.ws, children: t }),
                   ],
               })
             : "static" === U
@@ -229,12 +229,12 @@ let g = 1e3,
                                     (0, i.jsx)("img", {
                                         src: "https://cdn.discordapp.com/assets/content/ada94a00ba3648b0d01f5bbf870b152b02ac6eb1bd1d245d8b46a54527416853.png",
                                         alt: "",
-                                        className: m.Uw,
+                                        className: g.Uw,
                                     }),
                                     (0, i.jsx)("img", {
                                         src: "https://cdn.discordapp.com/assets/content/096964379958760a2615df5128a9022ac6de873c8f7a6af0beadb1c958ce55ea.png",
                                         alt: "",
-                                        className: m.Gv,
+                                        className: g.Gv,
                                     }),
                                 ],
                             }),

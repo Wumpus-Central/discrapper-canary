@@ -12,12 +12,12 @@ var i,
     E = n(95561),
     A = n(207777),
     h = n(477900),
-    I = n(192308),
-    f = n(853742),
+    f = n(192308),
+    I = n(853742),
     p = n(823099),
     T = n(451909),
-    m = n(195880),
-    g = n(677413),
+    g = n(195880),
+    m = n(677413),
     S = n(280450),
     N = n(734057),
     C = n(31717),
@@ -90,8 +90,8 @@ function H(e) {
     } = e;
     return r.useCallback(
         async (e, r, A) => {
-            var h, I, f, p, m;
-            let g = null == n,
+            var h, f, I, p, g;
+            let m = null == n,
                 S = F(i, a),
                 O = i.name ?? "";
             if ("" === O && d) {
@@ -121,16 +121,16 @@ function H(e) {
                 (c.A.clearDraft(t.id, C.C.ThreadSettings),
                 c.A.clearDraft(t.id, C.C.FirstThreadMessage),
                 o?.(D),
-                (g || e.length > 0 || (null != r && r.length > 0) || (null != A && A.length > 0)) &&
+                (m || e.length > 0 || (null != r && r.length > 0) || (null != A && A.length > 0)) &&
                     ((h = D),
-                    (I = e),
-                    (f = r),
+                    (f = e),
+                    (I = r),
                     (p = A),
-                    null != (m = E) && null != p && p.length > 0
-                        ? m(h, p, I, f)
-                        : null != f && f.length > 0
-                          ? u.A.sendStickers(h.id, f, T.Ay.parse(h, I), { location: w.Hx.THREAD_CREATION })
-                          : u.A.sendMessage(h.id, T.Ay.parse(h, I), void 0, { location: w.Hx.THREAD_CREATION }))),
+                    null != (g = E) && null != p && p.length > 0
+                        ? g(h, p, f, I)
+                        : null != I && I.length > 0
+                          ? u.A.sendStickers(h.id, I, T.Ay.parse(h, f), { location: w.Hx.THREAD_CREATION })
+                          : u.A.sendMessage(h.id, T.Ay.parse(h, f), void 0, { location: w.Hx.THREAD_CREATION }))),
                 _.A.clearAll(t.id, C.C.FirstThreadMessage));
         },
         [t, n, i, o, a, l, d, E],
@@ -158,14 +158,14 @@ function W(e) {
         voiceChatEnabled: h,
     } = e;
     return r.useCallback(
-        async (e, r, I) => {
+        async (e, r, f) => {
             var T;
-            let m,
+            let g,
                 N,
                 O,
                 R,
                 L = 0,
-                [y, b] = (0, g.Ay)(e);
+                [y, b] = (0, m.Ay)(e);
             y && ((e = b), (L = (0, a.UI)(L, U.pr7.SUPPRESS_NOTIFICATIONS)));
             let M = (0, v.Gl)(t, null),
                 P = U.Rsh.CHANNEL_THREADS(t.id) + "?use_nested_fields=true",
@@ -177,7 +177,7 @@ function W(e) {
                 },
                 x =
                     null != u
-                        ? null == (N = null != (m = (T = u).activity.session_id) ? m : S.default.getSessionId())
+                        ? null == (N = null != (g = (T = u).activity.session_id) ? g : S.default.getSessionId())
                             ? null
                             : {
                                   type: T.type,
@@ -190,10 +190,10 @@ function W(e) {
                 (null != x &&
                     null != u &&
                     ((G.message.application_id = u.activity.application_id), (G.message.activity = x)),
-                null != I && I.length > 0)
+                null != f && f.length > 0)
             )
                 try {
-                    let e = await d(I);
+                    let e = await d(f);
                     ((O = e.uploaderFile), (G.message.attachments = e.files.map((e, t) => (0, D.OW)(e, t))));
                 } catch (r) {
                     let { file: e, code: n, reason: i } = r;
@@ -216,7 +216,7 @@ function W(e) {
                 c.A.clearDraft(t.id, C.C.ThreadSettings),
                 c.A.clearDraft(t.id, C.C.FirstThreadMessage),
                 _.A.clearAll(t.id, C.C.FirstThreadMessage),
-                (0, f.Lj)({
+                (0, I.Lj)({
                     guildId: t.guild_id,
                     channelId: t.id,
                     postId: R.id,
@@ -277,7 +277,7 @@ async function Y(e, t, i, r) {
         else if (P.F4.has(r.body?.code)) {
             if (null != i)
                 if (r.body?.code === U.t02.EXPLICIT_CONTENT) {
-                    let t = (0, m.m)();
+                    let t = (0, g.m)();
                     if (null != r.body.attachments && r.body.attachments.length > 0) {
                         var c;
                         (o.h.dispatch({
@@ -287,7 +287,7 @@ async function Y(e, t, i, r) {
                             attachments: r.body.attachments,
                         }),
                             (c = e.id),
-                            (0, I.openModalLazy)(async () => {
+                            (0, f.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([
                                     n.e("737853"),
                                     n.e("473384"),
