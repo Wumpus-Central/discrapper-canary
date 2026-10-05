@@ -1,12 +1,12 @@
 n.d(t, {
     NN: () => T,
-    n6: () => C,
-    OO: () => d,
+    n6: () => p,
+    OO: () => c,
     Ig: () => E,
     aD: () => I,
     Se: () => f,
-    uK: () => c,
-    lk: () => p,
+    uK: () => d,
+    lk: () => C,
     LV: () => O,
     Mk: () => S,
     sy: () => A,
@@ -22,13 +22,13 @@ var r,
     o = n(945810),
     s = n(646917),
     a = n(576761);
-let c = (0, o.mj)({
+let d = (0, o.mj)({
         name: "2025-11-video-end-card-v2",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    d = (0, o.mj)({
+    c = (0, o.mj)({
         name: "2026-05-app-store-overlay-feature-gate",
         kind: "user",
         defaultConfig: { enabled: !1 },
@@ -63,7 +63,7 @@ let E = (0, o.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
     });
-function p(e) {
+function C(e) {
     let { enabled: t } = _.useConfig({ location: e }),
         n = (0, s.z)();
     return {
@@ -71,7 +71,7 @@ function p(e) {
         multiplier: i.PREMIUM_TIER_2_MULTIPLIER_PERCENTAGE_POINTS / 100,
     };
 }
-let C = (0, o.mj)({
+let p = (0, o.mj)({
     name: "2026-04-composed-quest-player",
     kind: "user",
     defaultConfig: { enabled: !1 },
@@ -139,4 +139,10 @@ let O = (0, o.mj)({
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
+});
+(0, o.mj)({
+    name: "2026-09-mobile-quest-reward-button-to-secondary-button",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
 });
