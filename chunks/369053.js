@@ -29,7 +29,7 @@ var i,
     m = n(652215),
     S = n(835002);
 async function T(e, t) {
-    let n = p(e),
+    let n = f(e),
         i = await l.Bo.get({
             url: m.Rsh.GET_REPORT_MENU(n),
             query: t?.variant != null ? { variant: t.variant } : void 0,
@@ -49,7 +49,7 @@ async function I(e, t) {
     return _.body ?? JSON.parse(_.text);
 }
 async function A(e, t) {
-    let n = f(e),
+    let n = p(e),
         i = await l.Bo.get({
             url: m.Rsh.GET_UNAUTHENTICATED_REPORT_MENU(n),
             query: t?.variant != null ? { variant: t.variant } : void 0,
@@ -58,7 +58,7 @@ async function A(e, t) {
     return i.body ?? JSON.parse(i.text);
 }
 async function R(e, t) {
-    let n = p(e),
+    let n = f(e),
         i = await T(e, t);
     await l.Bo.post({
         url: m.Rsh.SUBMIT_REPORT_MENU(n),
@@ -129,11 +129,11 @@ function g(e, t, n) {
           : ((a = e),
             (_ = t),
             (u = n),
-            l.Bo.post({ url: m.Rsh.SUBMIT_REPORT_MENU(p(_)), body: G(a, _, u), rejectWithError: !1 }));
+            l.Bo.post({ url: m.Rsh.SUBMIT_REPORT_MENU(f(_)), body: G(a, _, u), rejectWithError: !1 }));
 }
 function h(e, t, n, i) {
     if (s.Ay.get("iar_skip_api_report_submit")) return Promise.resolve();
-    let a = f(t);
+    let a = p(t);
     return l.Bo.post({ url: m.Rsh.SUBMIT_UNAUTHENTICATED_REPORT_MENU(a), body: G(e, t, n, i), rejectWithError: !0 });
 }
 function D(e, t) {
@@ -166,11 +166,11 @@ async function L() {
 async function U(e) {
     return (await l.Bo.post({ url: m.Rsh.SUBMIT_REPORT_SECOND_LOOK, body: { token: e }, rejectWithError: !1 })).body;
 }
-function f(e) {
+function p(e) {
     let t = e.name;
     return (r()(Object.values(E.tY).includes(t), `Invalid report type ${e.name}`), t);
 }
-function p(e) {
+function f(e) {
     let t = e.name;
     return (r()(Object.values(E.t0).includes(t), `Invalid report type ${e.name}`), t);
 }
@@ -294,6 +294,11 @@ function y(e, t) {
         (a?.should_submit_data === !0 && (l?.[a.name] == null || l?.[a.name].value === "")) ||
         _.some((e) => !0 === e.should_submit_data && (l?.[e.name] == null || l?.[e.name].value === "")) ||
         (r?.should_submit_data === !0 && (null == o || 0 === Object.keys(o).length)) ||
+        (r?.require_all_options === !0 &&
+            r.data.some((e) => {
+                let [t] = e;
+                return o?.[t] == null;
+            })) ||
         (d?.should_submit_data === !0 && (l?.[d.name] == null || l?.[d.name].value === "" || !l?.[d.name]?.isValid))
     );
 }
