@@ -295,43 +295,40 @@ function Z(e) {
             count: y,
             disabled: C,
             playedByUserIds: A,
+            showDetails: b,
+            onDetailsMouseEnter: I,
+            onDetailsMouseLeave: v,
         } = e,
-        { authorUser: b, mostRecentPlayedUser: I } = (0, o.cf)([_.default, k.A], () => {
+        { authorUser: N, mostRecentPlayedUser: T } = (0, o.cf)([_.default, k.A], () => {
             let e = k.A.isBlockedOrIgnored(f ?? void 0);
             return {
                 authorUser: _.default.getUser(a),
                 mostRecentPlayedUser: e || a === f ? null : _.default.getUser(f),
             };
         }),
-        [v, N] = i.useState(!1),
-        T = i.useRef(null),
-        j = i.useRef(null);
-    i.useEffect(() => () => clearTimeout(T.current), []);
-    let R = i.useCallback(() => {
-            (clearTimeout(T.current), N(!0));
-        }, []),
+        j = i.useRef(null),
+        R = i.useCallback(() => {
+            I(r.soundId);
+        }, [I, r.soundId]),
         w = i.useCallback(() => {
-            (clearTimeout(T.current), (T.current = setTimeout(() => N(!1), 200)));
-        }, []),
-        O = i.useCallback(() => {
             (0, S.CZ)(r, n);
         }, [n, r]),
-        L = (0, o.bG)([E.A], () => E.A.isPlayingSound(r.soundId), [r]);
-    if (null == t || null == b) return null;
-    let { emojiId: P, emojiName: M, emojiAnimated: D, name: U } = r;
+        O = (0, o.bG)([E.A], () => E.A.isPlayingSound(r.soundId), [r]);
+    if (null == t || null == N) return null;
+    let { emojiId: L, emojiName: P, emojiAnimated: M, name: D } = r;
     return (0, l.jsxs)("div", {
         className: s()($.Iv, { [$.E$]: C }),
         style: { height: 36 },
         children: [
             (0, l.jsx)(c.Y, {
                 targetElementRef: j,
-                shouldShow: v,
+                shouldShow: b,
                 renderPopout: (e) => {
                     let { setPopoutRef: i } = e;
                     return (0, l.jsx)("div", {
                         ref: i,
                         onMouseEnter: R,
-                        onMouseLeave: w,
+                        onMouseLeave: v,
                         children: (0, l.jsx)(Q, { guildId: t, channelId: n, sound: r, playedByUserIds: A }),
                     });
                 },
@@ -341,12 +338,12 @@ function Z(e) {
                     (0, l.jsx)("div", {
                         ref: j,
                         onMouseEnter: R,
-                        onMouseLeave: w,
+                        onMouseLeave: v,
                         children: (0, l.jsx)(u.I, {
                             size: d._3.SIZE_32,
                             guildId: t,
                             channelId: n,
-                            users: null == I ? [b] : [b, I],
+                            users: null == T ? [N] : [N, T],
                             maxUsers: 2,
                         }),
                     }),
@@ -354,19 +351,19 @@ function Z(e) {
             (0, l.jsx)(h.m, {
                 text: C ? G.intl.string(G.t.VqNHoS) : null,
                 children: (0, l.jsxs)(m.D, {
-                    className: s()($.nG, { [$.Tz]: L, [$.Jx]: C }),
-                    onClick: C ? () => null : O,
-                    "aria-label": G.intl.formatToPlainString(G.t.VOmeSq, { name: U }),
+                    className: s()($.nG, { [$.Tz]: O, [$.Jx]: C }),
+                    onClick: C ? () => null : w,
+                    "aria-label": G.intl.formatToPlainString(G.t.VOmeSq, { name: D }),
                     children: [
-                        (null != M || null != P) &&
+                        (null != P || null != L) &&
                             (0, l.jsx)(g.A, {
                                 size: "reaction",
                                 className: $.FA,
-                                emojiId: P,
-                                emojiName: M,
-                                animated: D,
+                                emojiId: L,
+                                emojiName: P,
+                                animated: M,
                             }),
-                        (0, l.jsx)(p.E, { variant: "text-md/medium", children: U }),
+                        (0, l.jsx)(p.E, { variant: "text-md/medium", children: D }),
                         !C &&
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
@@ -425,7 +422,17 @@ function X(e) {
                 return { height: 0, opacity: 0, translateY: -t - 36, pointerEvents: "none" };
             },
             config: a.config.gentle,
-        });
+        }),
+        [E, S] = i.useState(null),
+        y = i.useRef(null);
+    (i.useEffect(() => () => clearTimeout(y.current), []),
+        null == E || p.some((e) => e.sound.soundId === E) || S(null));
+    let C = i.useCallback((e) => {
+            (clearTimeout(y.current), S(e));
+        }, []),
+        A = i.useCallback(() => {
+            (clearTimeout(y.current), (y.current = setTimeout(() => S(null), 200)));
+        }, []);
     return (0, l.jsx)("div", {
         className: $.ei,
         style: { height: 126 },
@@ -435,7 +442,15 @@ function X(e) {
             (0, l.jsx)(a.animated.div, {
                 className: $.Ob,
                 style: e,
-                children: (0, l.jsx)(Z, { guildId: t, channelId: n, ...i.echo, disabled: i.echo.disabled ?? !1 }),
+                children: (0, l.jsx)(Z, {
+                    guildId: t,
+                    channelId: n,
+                    ...i.echo,
+                    disabled: i.echo.disabled ?? !1,
+                    onDetailsMouseEnter: C,
+                    onDetailsMouseLeave: A,
+                    showDetails: E === i.echo.sound.soundId,
+                }),
             }),
         ),
     });
