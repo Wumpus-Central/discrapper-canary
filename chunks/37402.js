@@ -105,11 +105,11 @@ function C(e) {
         (0, n.jsx)(m, { ...v, size: "custom", className: h.E$, useLottieDefaultColors: !0 })
     );
 }
-let p = function (e) {
+let j = function (e) {
     let t = (0, x.Ay)();
     return (0, m.q)(t) ? (0, n.jsx)(C, { ...e }) : (0, n.jsx)(k, { ...e });
 };
-var j = a(375708);
+var p = a(375708);
 function A() {
     return (0, n.jsx)("div", { className: h.V8, "aria-hidden": !0 });
 }
@@ -131,20 +131,20 @@ let E = (0, l.forwardRef)(function (e, t) {
         [R, b] = (0, l.useState)(!1),
         N = (0, l.useMemo)(() => (d === u.k.SELECTED ? h.wH : R ? h.mr : h.Ay), [d, R]),
         [y, L] = (0, l.useState)(!1),
-        [O, S] = (0, l.useState)(!1),
-        [_, T] = (0, l.useState)(2700),
+        [S, _] = (0, l.useState)(!1),
+        [O, T] = (0, l.useState)(2700),
         D = null === r;
     ((0, l.useEffect)(() => {
         D &&
             !y &&
             (L(!0),
             setTimeout(() => {
-                S(!0);
+                _(!0);
             }, 500));
     }, [D, L, y]),
         (0, l.useEffect)(() => {
-            O && !D && L(!1);
-        }, [D, O]));
+            S && !D && L(!1);
+        }, [D, S]));
     let M = D || y,
         w = y ? null : r,
         [P, B] = (0, l.useState)(null),
@@ -167,10 +167,10 @@ let E = (0, l.forwardRef)(function (e, t) {
         "aria-label": (function (e) {
             let { loading: t, balance: a, hasUnread: n } = e;
             return t
-                ? j.intl.string(j.t.y0WGqP)
+                ? p.intl.string(p.t.y0WGqP)
                 : n
-                  ? j.intl.formatToPlainString(j.t.AgMngw, { balance: a })
-                  : j.intl.formatToPlainString(j.t.zPaLL9, { balance: a });
+                  ? p.intl.formatToPlainString(p.t.AgMngw, { balance: a })
+                  : p.intl.formatToPlainString(p.t.zPaLL9, { balance: a });
         })({ loading: M, balance: w ?? 0, hasUnread: !0 === f }),
         "aria-busy": M,
         className: s()(h.vk, { [h.r9]: v }),
@@ -184,7 +184,7 @@ let E = (0, l.forwardRef)(function (e, t) {
             children: [
                 (0, n.jsx)("div", {
                     className: s()(h.hr, M ? h.nr : void 0),
-                    children: (0, n.jsx)(p, {
+                    children: (0, n.jsx)(j, {
                         currentAnimationType: P,
                         animationTypeRef: F,
                         onSetAnimationDurationMS: T,
@@ -194,7 +194,7 @@ let E = (0, l.forwardRef)(function (e, t) {
                     value: w,
                     onValueChange: I,
                     onValueReached: U,
-                    targetTotalCounterTime: _,
+                    targetTotalCounterTime: O,
                     className: M ? h.F : void 0,
                     textColor: "overlay-secondary" === c ? "text-overlay-light" : void 0,
                 }),

@@ -37,9 +37,9 @@ function o(e, t, n) {
             new Promise((i) => {
                 let r = Date.now(),
                     o = r + t;
-                function s(t) {
+                function u(t) {
                     (window.clearInterval(d),
-                        n?.removeEventListener("abort", u),
+                        n?.removeEventListener("abort", s),
                         console.debug("[vibegrations] preview frame wait finished", {
                             projectId: e,
                             found: null != t,
@@ -47,14 +47,14 @@ function o(e, t, n) {
                         }),
                         i(t));
                 }
-                function u() {
-                    s(null);
+                function s() {
+                    u(null);
                 }
                 let d = window.setInterval(() => {
                     let t = l(e);
-                    (null != t || Date.now() >= o || !a(e)) && s(t);
+                    (null != t || Date.now() >= o || !a(e)) && u(t);
                 }, 100);
-                n?.addEventListener("abort", u, { once: !0 });
+                n?.addEventListener("abort", s, { once: !0 });
             }))
           : Promise.resolve(null);
 }

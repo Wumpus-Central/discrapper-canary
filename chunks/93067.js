@@ -19,7 +19,7 @@ function v(e) {
     let { errorMessage: t, className: n, avError: s } = e,
         v = i.useRef(null),
         E = "",
-        { text: C, node: j } = (function (e) {
+        { text: j, node: C } = (function (e) {
             if (null == e) return { text: null, node: null };
             let t = (0, m.B1)(e)?.errorCode,
                 n = h.intl.formatToPlainString(h.t.ejOT95, { errorCode: t }),
@@ -30,7 +30,7 @@ function v(e) {
                 node: s ? (0, l.jsxs)(l.Fragment, { children: [i, " (", e, ")"] }) : i,
             };
         })(s);
-    E = null != C ? `${t} ${C}` : t;
+    E = null != j ? `${t} ${j}` : t;
     let [I] = i.useState(new a.Ep()),
         [S, _] = i.useState(!1),
         [N, b] = i.useState(!1),
@@ -43,10 +43,10 @@ function v(e) {
                 !1,
             );
         }, [I, _]),
-        k = i.useCallback(() => {
+        D = i.useCallback(() => {
             (I.stop(), _(!0));
         }, [I, _]),
-        D = i.useCallback(() => {
+        k = i.useCallback(() => {
             b(!0);
         }, []),
         R = i.useCallback(() => {
@@ -57,16 +57,16 @@ function v(e) {
             (0, l.jsx)(f.A, {
                 children: (0, l.jsxs)("div", {
                     className: A.SW,
-                    onMouseEnter: k,
+                    onMouseEnter: D,
                     onMouseLeave: y,
                     children: [
                         t,
-                        null != j &&
+                        null != C &&
                             (0, l.jsx)(u.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-muted",
                                 className: A.F1,
-                                children: j,
+                                children: C,
                             }),
                     ],
                 }),
@@ -80,9 +80,9 @@ function v(e) {
                     children: (0, l.jsx)("div", {
                         ref: v,
                         tabIndex: 0,
-                        onMouseEnter: k,
+                        onMouseEnter: D,
                         onMouseLeave: y,
-                        onFocus: D,
+                        onFocus: k,
                         onBlur: R,
                         className: r()(n, A.zr),
                         "aria-label": E,

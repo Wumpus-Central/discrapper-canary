@@ -1,4 +1,4 @@
-i.d(t, { p: () => V });
+i.d(t, { p: () => P });
 var n = i(477900),
     l = i(582128),
     s = i(503698),
@@ -23,20 +23,20 @@ var n = i(477900),
     N = i(71393),
     y = i(576705),
     C = i(174459),
-    j = i(778768),
-    b = i(652215);
+    b = i(778768),
+    j = i(652215);
 i(281405);
 var T = i(375708),
     O = i(811041),
     G = i(254849);
-function P(e) {
+function V(e) {
     return 1 - Math.pow(1 - e, 4);
 }
-function V(e) {
+function P(e) {
     let { channel: t, onClose: s } = e,
-        V = l.useRef(null),
-        k = l.useRef(null),
-        [w, R] = l.useState(!1),
+        P = l.useRef(null),
+        w = l.useRef(null),
+        [k, R] = l.useState(!1),
         [D, M] = l.useState(0),
         { analyticsLocations: U } = (0, x.Ay)(S.A.VOICE_INVITE_SUGGESTIONS);
     (0, _.A)({
@@ -44,20 +44,20 @@ function V(e) {
         type: d.ImpressionTypes.VIEW,
         properties: { voice_channel_id: t.id, voice_guild_id: t.guild_id, location_stack: U },
     });
-    let L = (0, u.bG)([y.A], () => y.A.can(b.xBc.CREATE_INSTANT_INVITE, t), [t]),
+    let L = (0, u.bG)([y.A], () => y.A.can(j.xBc.CREATE_INSTANT_INVITE, t), [t]),
         F = (0, u.bG)([N.A], () => N.A.getGuild(t.guild_id)),
         z = (0, u.bG)([v.Ay], () => v.Ay.useReducedMotion),
         [B, K] = l.useState(!1),
         Y = l.useRef(null),
-        q = (0, E.M)(L ? V : Y),
+        q = (0, E.M)(L ? P : Y),
         [$, W] = l.useState(!1),
-        { isFocusing: H } = (0, E.A)(k),
+        { isFocusing: H } = (0, E.A)(w),
         [Z, J] = l.useState(!1),
         X = q || $ || Z,
         Q = l.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "unknown";
-                (C.default.track(b.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
+                (C.default.track(j.HAw.VOICE_INVITE_SUGGESTIONS_ENTRYPOINT_CLOSED, {
                     reason: e,
                     channel_id: t.id,
                     guild_id: t.guild_id,
@@ -80,13 +80,13 @@ function V(e) {
                         i.e("216084"),
                         i.e("284819"),
                     ]).then(i.bind(i, 405342));
-                    return (i) => (0, n.jsx)(e, { ...i, guild: F, channel: t, source: b.PE1.VOICE_INVITE_SUGGESTIONS });
+                    return (i) => (0, n.jsx)(e, { ...i, guild: F, channel: t, source: j.PE1.VOICE_INVITE_SUGGESTIONS });
                 });
         }, [F, t]),
         [et, ei] = (0, c.z)(() => ({
             from: { height: "0px" },
             to: { height: "32px" },
-            config: { duration: 200, easing: P, clamp: !0 },
+            config: { duration: 200, easing: V, clamp: !0 },
         })),
         en = l.useCallback(
             (e) => {
@@ -124,17 +124,17 @@ function V(e) {
             R(!0);
         }, []),
         ea = l.useCallback(() => {
-            (R(!1), W(!1), Z && (J(!1), V.current?.focus()));
+            (R(!1), W(!1), Z && (J(!1), P.current?.focus()));
         }, [Z]);
     return L
         ? (0, n.jsx)(A.Y, {
-              targetElementRef: V,
-              shouldShow: w,
+              targetElementRef: P,
+              shouldShow: k,
               position: "right",
               align: "top",
               spacing: 17,
               popoutKey: "voice-invite-suggestions-button",
-              renderPopout: (e) => (0, n.jsx)(j.w, { channel: t, onHover: W, forceOpen: Z, ...e }),
+              renderPopout: (e) => (0, n.jsx)(b.w, { channel: t, onHover: W, forceOpen: Z, ...e }),
               onRequestOpen: es,
               onRequestClose: ea,
               children: (e) => {
@@ -143,7 +143,7 @@ function V(e) {
                       className: O.lY,
                       style: et,
                       children: (0, n.jsx)(m.D, {
-                          innerRef: V,
+                          innerRef: P,
                           className: a()({ [O.vk]: !B }, G.q7, G.L9, G.vk),
                           focusProps: { offset: { right: 4 } },
                           "aria-disabled": B,
@@ -195,7 +195,7 @@ function V(e) {
                                       }),
                                   }),
                                   (0, n.jsx)("div", {
-                                      ref: k,
+                                      ref: w,
                                       children: q
                                           ? (0, n.jsx)(m.D, {
                                                 className: O.VN,

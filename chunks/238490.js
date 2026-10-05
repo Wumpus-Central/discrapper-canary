@@ -1,4 +1,4 @@
-n.d(t, { JR: () => d, Qg: () => u, Qs: () => a, Xm: () => l, yZ: () => s, yf: () => o });
+n.d(t, { JR: () => d, Qg: () => s, Qs: () => a, Xm: () => l, yZ: () => u, yf: () => o });
 var i = n(696645);
 let r =
     221552 == n.j
@@ -22,12 +22,12 @@ function a(e, t) {
 function o(e, t) {
     return ("frame" === t && e.modes.includes("frame")) || 0 === e.modes.length;
 }
-function s(e) {
+function u(e) {
     let t = e.widgetTop && e.widgetBottom,
         n = e.miniProfile;
     return { hasMainCard: t, hasPopoutCard: n, hasAny: t || n };
 }
-function u(e) {
+function s(e) {
     let { installScope: t, previewReady: n, integrationInstalled: i, botPermissionsChanged: r } = e;
     return !!n && null != i && (!!r || ("user" !== t && !i));
 }

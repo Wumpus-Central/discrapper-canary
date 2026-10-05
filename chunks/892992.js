@@ -17,14 +17,14 @@ var l = n(858899),
     I = n.n(f),
     p = n(834730),
     T = n(375708),
-    m = n(394272),
-    g = n(655214);
+    g = n(394272),
+    m = n(655214);
 function S(e) {
     let { channelName: t } = e;
     return (0, s.jsxs)("div", {
-        className: I()(g.oR, m.o),
+        className: I()(m.oR, g.o),
         children: [
-            (0, s.jsx)(o.ShieldIcon, { size: "sm", color: "currentColor", className: m.K }),
+            (0, s.jsx)(o.ShieldIcon, { size: "sm", color: "currentColor", className: g.K }),
             (0, s.jsx)(p.E, {
                 variant: "text-md/normal",
                 color: "text-strong",

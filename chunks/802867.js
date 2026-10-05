@@ -17,16 +17,16 @@ var l = n(477900),
     A = n(626584),
     v = n(525505),
     E = n(753727),
-    C = n(652896),
-    j = n(638480),
+    j = n(652896),
+    C = n(638480),
     I = n(607407),
     S = n(872363),
     _ = n(451988),
     N = n(765671),
     b = n(461782),
     y = n(426179),
-    k = n(51092),
-    D = n(40056),
+    D = n(51092),
+    k = n(40056),
     R = n(109294);
 function T(e) {
     return (1 & e.buttons) == 1;
@@ -47,10 +47,10 @@ let w = i.memo(function (e) {
             setIsWheeling: A,
             isSlidering: v,
             setVideoAspectRatio: E,
-            wrapperRef: C,
-            doZoom: j,
+            wrapperRef: j,
+            doZoom: C,
             clampPanOffset: I,
-        } = i.useContext(D.e9),
+        } = i.useContext(k.e9),
         [S, w] = i.useState(null),
         [L, M] = i.useState(null),
         [O, V] = i.useState(0),
@@ -69,11 +69,11 @@ let w = i.memo(function (e) {
         ),
         Q = i.useCallback(
             (e) => {
-                if (null == C.current) return D.qd;
-                let t = C.current.getBoundingClientRect();
+                if (null == j.current) return k.qd;
+                let t = j.current.getBoundingClientRect();
                 return { x: e.clientX - t.left - t.width / 2, y: e.clientY - t.top - t.height / 2 };
             },
-            [C],
+            [j],
         ),
         K = i.useCallback(
             (e) => {
@@ -119,16 +119,16 @@ let w = i.memo(function (e) {
             (e) => {
                 u &&
                     (A(!0),
-                    j(x - e.deltaY / 100, Q(e), "wheel"),
+                    C(x - e.deltaY / 100, Q(e), "wheel"),
                     o(),
                     W.current.start(100, () => {
                         A(!1);
                     }));
             },
-            [u, j, x, Q, o, A],
+            [u, C, x, Q, o, A],
         );
     ((0, N.i4)(
-        C,
+        j,
         i.useCallback(
             (e) => {
                 let { width: t, height: n } = e;
@@ -173,7 +173,7 @@ let w = i.memo(function (e) {
         };
     }, [I, d, U, h, v, p, x]);
     return (0, l.jsx)("div", {
-        ref: C,
+        ref: j,
         className: r()(R.iE, a, { [R.rc]: u && Y, [R.d$]: d }),
         onMouseDown: K,
         onMouseMove: X,
@@ -186,7 +186,7 @@ let w = i.memo(function (e) {
             (0, l.jsx)("div", {
                 className: r()(R.j, R.L2),
                 style: en,
-                children: (0, l.jsx)(k.A, { ...t, onResize: Z, wrapperClassName: void 0 }),
+                children: (0, l.jsx)(D.A, { ...t, onResize: Z, wrapperClassName: void 0 }),
             }),
     });
 });
@@ -276,23 +276,23 @@ function el(e) {
         } = e,
         b = P.Ay.getVideoComponent(),
         y = (0, a.bG)([V.default], () => V.default.getId()),
-        k = (0, E.A)(),
-        { stream: D, user: R, streamId: T } = t,
-        $ = (0, a.bG)([G.A], () => G.A.getChannel(D.channelId)),
-        B = (0, a.bG)([O.A], () => O.A.getActiveStreamForUser(R.id, D.guildId), [R.id, D.guildId]),
+        D = (0, E.A)(),
+        { stream: k, user: R, streamId: T } = t,
+        $ = (0, a.bG)([G.A], () => G.A.getChannel(k.channelId)),
+        B = (0, a.bG)([O.A], () => O.A.getActiveStreamForUser(R.id, k.guildId), [R.id, k.guildId]),
         K = (0, a.bG)([O.A], () => O.A.getAllActiveStreams().length > 0),
         X = (0, a.bG)([F.A], () => F.A.isFocused()),
         en = (0, a.bG)([L.Ay], () => L.Ay.pauseSelfStreamPreviewWhenUnfocused),
         el = B?.ownerId === y,
         ei = el && en && !X && A === x.N.NO_POPOUT,
-        es = null != B ? (0, j.A)(B, R, R.id === y, ei) : null,
+        es = null != B ? (0, C.A)(B, R, R.id === y, ei) : null,
         er = S < 195;
     (0, g.Ay)(() => {
         !K &&
             $?.isGuildStageVoice() &&
             !el &&
-            !O.A.isStreamMarkedFull((0, C._z)(D)) &&
-            ((0, p.A9)(D), m.A.updateStageStreamSize(D.channelId, !1));
+            !O.A.isStreamMarkedFull((0, j._z)(k)) &&
+            ((0, p.A9)(k), m.A.updateStageStreamSize(k.channelId, !1));
     });
     let ea = (0, v.u)(ee.x.STREAM, t.user.id);
     if (
@@ -301,7 +301,7 @@ function el(e) {
                 `Stream Tile State - activeStream: ${null != B} | selected: ${n} | Video: ${null != b} | MediaEngine: ${P.Ay.supports(ee.O5.VIDEO)}`,
             );
         }, [b, B, n]),
-        k)
+        D)
     )
         return (0, l.jsx)(Q, { stream: t.stream, isSmall: er, selected: n, isSelfStream: R.id === y });
     if (B?.state === q.XYD.ENDED) return (0, l.jsx)(U.A, { selected: n, stream: B, width: S });

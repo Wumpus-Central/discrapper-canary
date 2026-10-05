@@ -1,4 +1,4 @@
-n.d(t, { NK: () => l, kZ: () => o, z3: () => s });
+n.d(t, { NK: () => l, kZ: () => o, z3: () => u });
 var i = n(248675),
     r = n(375708);
 let l = 221552 == n.j ? ["frame", "widget", "bot"] : null,
@@ -6,6 +6,6 @@ let l = 221552 == n.j ? ["frame", "widget", "bot"] : null,
 function o(e) {
     return r.intl.string(a[e]);
 }
-function s(e) {
+function u(e) {
     return `conjure-preview-mode-panel-${e}`;
 }

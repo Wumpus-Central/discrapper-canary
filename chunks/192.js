@@ -1,13 +1,13 @@
-n.d(t, { D: () => u, r: () => s });
+n.d(t, { D: () => s, r: () => u });
 var i = n(477900),
     r = n(582128),
     l = n(818348);
 let a = r.createContext(null),
     o = { registerManageWidgetButtonRef: () => l.tE, manageFocusOnReorder: l.tE, getManageButtonForWidget: () => null };
-function s() {
+function u() {
     return r.useContext(a) ?? o;
 }
-function u(e) {
+function s(e) {
     let { children: t } = e,
         n = r.useRef(new Map()),
         l = r.useCallback(
@@ -22,10 +22,10 @@ function u(e) {
                 t?.focus();
             });
         }, []),
-        s = r.useCallback((e) => n.current.get(e) ?? null, []),
-        u = r.useMemo(
-            () => ({ registerManageWidgetButtonRef: l, manageFocusOnReorder: o, getManageButtonForWidget: s }),
-            [l, o, s],
+        u = r.useCallback((e) => n.current.get(e) ?? null, []),
+        s = r.useMemo(
+            () => ({ registerManageWidgetButtonRef: l, manageFocusOnReorder: o, getManageButtonForWidget: u }),
+            [l, o, u],
         );
-    return (0, i.jsx)(a.Provider, { value: u, children: t });
+    return (0, i.jsx)(a.Provider, { value: s, children: t });
 }

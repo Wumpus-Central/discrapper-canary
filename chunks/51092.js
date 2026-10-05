@@ -25,17 +25,17 @@ let v = s.memo(function (e) {
             fit: A = "contain",
             mirror: v = !1,
             paused: E = !1,
-            streamPreviewURL: C,
-            videoSpinnerContext: j,
+            streamPreviewURL: j,
+            videoSpinnerContext: C,
             userId: I,
             streamKey: S,
             emptyPreviewAspectRatio: _ = "16 / 9",
         } = e,
         [N, b] = s.useState(!0),
-        [y, k] = s.useState(null),
-        D = s.useCallback(
+        [y, D] = s.useState(null),
+        k = s.useCallback(
             (e) => {
-                ("cover-landscape" === A && k(e), n?.(e));
+                ("cover-landscape" === A && D(e), n?.(e));
             },
             [A, n],
         ),
@@ -46,7 +46,7 @@ let v = s.memo(function (e) {
         s.useEffect(() => {
             a || (r ? o.onSpinnerStarted() : null != i && o.trackSpinnerDuration(n, l, i));
         }, [r, a, i, o, n, l]);
-    })({ location: "VideoStream", videoSpinnerContext: j, userId: I, streamId: t, loading: N, paused: E });
+    })({ location: "VideoStream", videoSpinnerContext: C, userId: I, streamId: t, loading: N, paused: E });
     let { onReady: T } = (function (e) {
             let { streamId: t, userId: n, videoSpinnerContext: l, streamKey: i, loading: r, paused: a = !1 } = e,
                 o = s.useRef(new c.Ep()),
@@ -70,7 +70,7 @@ let v = s.memo(function (e) {
                     }, [n, p]),
                 }
             );
-        })({ streamId: t, userId: I, loading: N, videoSpinnerContext: j, streamKey: S, paused: E }),
+        })({ streamId: t, userId: I, loading: N, videoSpinnerContext: C, streamKey: S, paused: E }),
         w = s.useCallback(() => {
             (b(!1), T());
         }, [T]);
@@ -81,7 +81,7 @@ let v = s.memo(function (e) {
                 (0, i.jsx)(r, {
                     className: a()(h.video, (0, x.t)(h, "video", R), { [h.mirror]: v }, p),
                     streamId: t,
-                    onResize: D,
+                    onResize: k,
                     onReady: w,
                     paused: E,
                 }),
@@ -93,8 +93,8 @@ let v = s.memo(function (e) {
                           N &&
                           (0, i.jsxs)(s.Fragment, {
                               children: [
-                                  null != C
-                                      ? (0, i.jsx)("img", { src: C, alt: "", className: h.previewImage })
+                                  null != j
+                                      ? (0, i.jsx)("img", { src: j, alt: "", className: h.previewImage })
                                       : (0, i.jsx)("div", {
                                             className: h.emptyPreviewWrapper,
                                             style: { aspectRatio: _ },

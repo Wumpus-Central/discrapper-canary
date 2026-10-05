@@ -23,14 +23,14 @@ var n = i(477900),
     N = i(696451),
     y = i(290863),
     C = i(977997),
-    j = i(174459),
-    b = i(927813),
+    b = i(174459),
+    j = i(927813),
     T = i(427262),
     O = i(329554),
     G = i(402313),
-    P = i(699976),
-    V = i(8936);
-let k = (0, f.Fe)({
+    V = i(699976),
+    P = i(8936);
+let w = (0, f.Fe)({
     createPromise: () =>
         Promise.all([
             i.e("419121"),
@@ -191,22 +191,22 @@ let k = (0, f.Fe)({
         ]).then(i.bind(i, 316725)),
     webpackId: 316725,
 });
-function w(e) {
+function k(e) {
     let { user: t, channel: i, activity: l, activityApplicationId: s, withGiftingBreadcrumb: a, onAction: r } = e,
         d = (0, n.jsx)(O.A, { presenceActivity: l, channel: i, userId: t.id, onAction: r });
     return a && null != s
         ? (0, n.jsxs)(n.Fragment, {
               children: [
                   d,
-                  (0, n.jsx)(k, {
-                      className: V.L,
+                  (0, n.jsx)(w, {
+                      className: P.L,
                       applicationId: s,
                       userIds: [t.id],
                       location: "voice_channel",
                       guildId: i.guild_id,
                       channelId: i.id,
                       numWishlistItems: 2,
-                      cardSpec: P.Z.SIZE_110,
+                      cardSpec: V.Z.SIZE_110,
                   }),
               ],
           })
@@ -228,9 +228,9 @@ function R(e) {
             activities: y.A.getActivities(t.id, i),
         })),
         S = (0, s.bG)([C.A], () => C.A.getVoiceStateForChannel(l, t.id)?.connectedAt),
-        x = null != S ? new Date(S * b.A.Millis.SECOND).getTime() : null;
+        x = null != S ? new Date(S * j.A.Millis.SECOND).getTime() : null;
     return (0, n.jsxs)("div", {
-        className: V.aq,
+        className: P.aq,
         children: [
             (0, n.jsx)(r.eu, {
                 src: h,
@@ -239,10 +239,10 @@ function R(e) {
                 avatarDecoration: m,
                 status: (0, g.A)(v) ? d.clD.STREAMING : f === d.clD.OFFLINE ? void 0 : f,
                 isMobile: I,
-                className: V.my,
+                className: P.my,
             }),
             (0, n.jsxs)("div", {
-                className: V.Qq,
+                className: P.Qq,
                 children: [
                     (0, n.jsx)(u.E, { variant: "text-sm/medium", lineClamp: 1, children: A }),
                     null != x && (0, n.jsx)(p.z, { textColor: "text-feedback-positive", entry: { start: x } }),
@@ -259,23 +259,23 @@ function D(e) {
     (0, c.Eq)(_, "VoiceUserActivities");
     let { enabled: N } = G.A.useExperiment({ guildId: a.guild_id, location: "VoiceUserPopout" }),
         C = (0, s.bG)([E.A], () => E.A.getStreamForUser(r.id, a.getGuildId()), [a, r.id]),
-        b = (0, s.bG)([y.A], () => (0, I.nr)(C, y.A), [C]),
+        j = (0, s.bG)([y.A], () => (0, I.nr)(C, y.A), [C]),
         T = (0, h.r9)() && (0, h.UK)(a.id),
-        P =
+        V =
             ((t = (0, m.Ay)(a)),
             (i = l.useMemo(() => t.filter((e) => e.embeddedActivity.userIds.has(r.id)), [t, r.id])),
             [...(0, m.Rz)(i).values()]),
-        k = (0, x.W)(),
+        w = (0, x.W)(),
         D = (0, s.bG)([S.A], () => S.A.getDetectableIdsToApplicationIds()),
-        M = g ?? b,
+        M = g ?? j,
         U = (0, A.m)(r, M),
         L = null != C && null != p && !T,
-        F = L || U.length > 0 || P.length > 0,
+        F = L || U.length > 0 || V.length > 0,
         z = F || N;
     if (
         (l.useEffect(() => {
             z &&
-                j.default.track(d.HAw.OPEN_POPOUT, {
+                b.default.track(d.HAw.OPEN_POPOUT, {
                     type: "Voice User Activities",
                     channel_id: a.id,
                     other_user_id: r.id,
@@ -289,13 +289,13 @@ function D(e) {
             L &&
                 (0, n.jsx)(v.P, {
                     stream: C,
-                    streamActivity: b,
+                    streamActivity: j,
                     user: r,
                     onWatchStream: p,
                     onAction: u,
                     showHeader: !0,
                 }),
-            P.map((e) =>
+            V.map((e) =>
                 (0, n.jsx)(
                     O.A,
                     {
@@ -309,9 +309,9 @@ function D(e) {
                 ),
             ),
             U.map((e) => {
-                let t = k ?? e.application_id;
+                let t = w ?? e.application_id;
                 return (0, n.jsx)(
-                    w,
+                    k,
                     {
                         user: r,
                         channel: a,
@@ -327,12 +327,12 @@ function D(e) {
     });
     return N
         ? (0, n.jsxs)("div", {
-              className: V.Db,
+              className: P.Db,
               ref: f,
               children: [
                   (0, n.jsx)(R, { user: r, guildId: a.guild_id, channelId: a.id }),
-                  F && (0, n.jsx)(o.Ip, { className: V.XG, children: B }),
+                  F && (0, n.jsx)(o.Ip, { className: P.XG, children: B }),
               ],
           })
-        : (0, n.jsx)(o.Ip, { className: V.kL, ref: f, children: B });
+        : (0, n.jsx)(o.Ip, { className: P.kL, ref: f, children: B });
 }

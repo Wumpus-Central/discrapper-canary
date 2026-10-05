@@ -11,39 +11,39 @@ function r(e, t, n, r) {
         }
     })(e);
     if (null == o) return Promise.reject(Error("preview frame has no resolvable origin"));
-    let s = `vibegrations-${t}`,
-        u = `${s}-result`,
-        d = `${s}-ack`,
+    let u = `vibegrations-${t}`,
+        s = `${u}-result`,
+        d = `${u}-ack`,
         c = r.sourceMatch ?? "window",
         f = r.id ?? `${t}-${++l}-${Date.now()}`;
     return new Promise((l, h) => {
         let p = 0,
             g = a,
-            _ = window.setTimeout(() => {
+            m = window.setTimeout(() => {
                 (E(), h(new i.fq(t, r.timeoutMs)));
             }, r.timeoutMs),
-            m = null != r.retryMs ? window.setInterval(A, r.retryMs) : null;
-        function w() {
-            null != m && window.clearInterval(m);
+            w = null != r.retryMs ? window.setInterval(y, r.retryMs) : null;
+        function _() {
+            null != w && window.clearInterval(w);
         }
         function E() {
-            (window.clearTimeout(_), w(), window.removeEventListener("message", v));
+            (window.clearTimeout(m), _(), window.removeEventListener("message", b));
         }
-        function A() {
+        function y() {
             (p += 1) > 1 &&
                 console.debug("[vibegrations] re-offering call to the preview frame", {
                     call: r.label ?? t,
                     id: f,
                     attempt: p,
                 });
-            let i = { type: s, id: f, ...n };
+            let i = { type: u, id: f, ...n };
             ((g = e.contentWindow), e.contentWindow?.postMessage(i, o));
         }
-        function v(e) {
+        function b(e) {
             ("window" === c ? e.source !== g : e.origin !== o) ||
-                ((0, i.YX)(e.data, d, f) ? w() : (0, i.YX)(e.data, u, f) && (E(), l(e.data)));
+                ((0, i.YX)(e.data, d, f) ? _() : (0, i.YX)(e.data, s, f) && (E(), l(e.data)));
         }
-        (window.addEventListener("message", v), A());
+        (window.addEventListener("message", b), y());
     });
 }
 let l = 0;

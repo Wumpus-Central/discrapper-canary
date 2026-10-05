@@ -1,6 +1,6 @@
 n.d(t, {
     GJ: () => G,
-    LF: () => f,
+    LF: () => p,
     NW: () => g,
     RR: () => h,
     RV: () => S,
@@ -11,7 +11,7 @@ n.d(t, {
     b8: () => A,
     bM: () => U,
     dy: () => v,
-    jJ: () => p,
+    jJ: () => f,
     nQ: () => D,
     pb: () => T,
     r3: () => N,
@@ -114,14 +114,14 @@ function U(e, t) {
             { onClose: t, isEligibleForFeedback: !1, isAuthenticated: !1, emailToken: e },
         ));
 }
-async function f(e, t, n) {
+async function p(e, t, n) {
     try {
         (await (0, o.gP)({ name: l.t0.MESSAGE, record: e }, { variant: "safety_alerts_headless_v1" }), t?.());
     } catch {
         n?.();
     }
 }
-function p(e, t) {
+function f(e, t) {
     (y(l.t0.MESSAGE, { message_id: e.id, channel_id: e.channel_id }),
         (0, u.T)({ name: l.t0.MESSAGE, record: e }, { variant: "safety_alerts_v1" }, { onSubmit: t }));
 }

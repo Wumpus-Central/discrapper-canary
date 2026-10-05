@@ -17,8 +17,8 @@ var l = n(477900),
     A = n(40056),
     v = n(375708),
     E = n(950183),
-    C = n(507199);
-function j(e) {
+    j = n(507199);
+function C(e) {
     (e.preventDefault(), e.stopPropagation());
 }
 function I(e) {
@@ -30,8 +30,8 @@ let S = i.memo(function (e) {
         {
             enabled: b,
             zoomLevel: y,
-            minZoom: k,
-            maxZoom: D,
+            minZoom: D,
+            maxZoom: k,
             isDragging: R,
             isWheeling: T,
             isSlidering: w,
@@ -46,7 +46,7 @@ let S = i.memo(function (e) {
         } = i.useContext(A.e9),
         [U, z] = i.useState(!1),
         W = i.useRef(null),
-        $ = y > k,
+        $ = y > D,
         B = i.useCallback(() => {
             _("interact");
         }, [_]),
@@ -136,19 +136,19 @@ let S = i.memo(function (e) {
     }),
     b && null != n)
         ? (0, l.jsxs)("div", {
-              className: r()(C.ne, { [C.Ge]: O || $ }),
+              className: r()(j.ne, { [j.Ge]: O || $ }),
               onMouseEnter: B,
               onMouseLeave: Y,
-              onClick: j,
+              onClick: C,
               children: [
                   (O || $) &&
                       (0, l.jsx)(u.D, {
-                          onClick: j,
+                          onClick: C,
                           onMouseEnter: B,
                           onMouseLeave: Y,
                           children: (0, l.jsxs)("div", {
                               ref: W,
-                              className: C.Wc,
+                              className: j.Wc,
                               style: Z,
                               onPointerDown: function (e) {
                                   I(e) && e.currentTarget.setPointerCapture(e.pointerId);
@@ -158,17 +158,17 @@ let S = i.memo(function (e) {
                               onMouseUp: q,
                               children: [
                                   (0, l.jsx)(J, {
-                                      className: r()(C.BZ, { [E.mirror]: t }),
+                                      className: r()(j.BZ, { [E.mirror]: t }),
                                       streamId: n,
                                       paused: s,
                                       reportContainerResized: !1,
                                   }),
-                                  (0, l.jsx)("div", { className: C.xq, style: ee }),
+                                  (0, l.jsx)("div", { className: j.xq, style: ee }),
                               ],
                           }),
                       }),
                   (0, l.jsxs)("div", {
-                      className: C.xu,
+                      className: j.xu,
                       children: [
                           (O || $) &&
                               (0, l.jsxs)(l.Fragment, {
@@ -179,15 +179,15 @@ let S = i.memo(function (e) {
                                           children: (0, l.jsx)(d.K, {
                                               icon: m.V,
                                               onClick: et,
-                                              disabled: y <= k,
+                                              disabled: y <= D,
                                               variant: "overlay-secondary",
                                               size: "sm",
                                               "aria-label": v.intl.string(v.t.M6Cmwy),
                                           }),
                                       }),
                                       (0, l.jsx)(p.A, {
-                                          minValue: k,
-                                          maxValue: D,
+                                          minValue: D,
+                                          maxValue: k,
                                           initialValue: y,
                                           value: y,
                                           asValueChanges: ei,
@@ -202,7 +202,7 @@ let S = i.memo(function (e) {
                               children: (0, l.jsx)(d.K, {
                                   icon: g.r,
                                   onClick: en,
-                                  disabled: y >= D,
+                                  disabled: y >= k,
                                   variant: "overlay-secondary",
                                   size: "sm",
                                   "aria-label": v.intl.string(v.t["9hMafy"]),

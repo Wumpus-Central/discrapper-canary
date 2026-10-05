@@ -19,8 +19,8 @@ function h(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: c } = e,
         { emoji: h, sentAt: A } = n,
         v = (0, r.bG)([u.Ay], () => u.Ay.useReducedMotion),
-        [E, C] = i.useState(!0),
-        j = !v,
+        [E, j] = i.useState(!0),
+        C = !v,
         I = (0, a.p)(E, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
@@ -38,16 +38,16 @@ function h(e) {
                 ? (0, d.a)(t)
                 : (e = setTimeout(
                       () => {
-                          (C(!1), j && (0, d.a)(t));
+                          (j(!1), C && (0, d.a)(t));
                       },
-                      j ? g : p,
+                      C ? g : p,
                   )),
             () => {
                 null != e && clearTimeout(e);
             }
         );
-    }, [A, t, j]),
-    j)
+    }, [A, t, C]),
+    C)
         ? null
         : I((e, t) => {
               let { rotate: n } = e;

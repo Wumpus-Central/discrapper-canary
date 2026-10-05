@@ -17,8 +17,8 @@ var l = n(477900),
     A = n(240248),
     v = n(818023),
     E = n(818348),
-    C = n(375708),
-    j = n(584841);
+    j = n(375708),
+    C = n(584841);
 function I(e) {
     let { applicationId: t, hideApplicationName: n } = e,
         { gameId: i, gameRecord: s } = (0, x.A)({ applicationId: t }),
@@ -30,19 +30,19 @@ function I(e) {
         }),
         d = s?.getIconURL(v.iu.SMALL);
     if (null == c || null == s || (0, A.uJ)(d)) return null;
-    let m = C.intl.string(C.t.ajHoOr);
+    let m = j.intl.string(j.t.ajHoOr);
     return (0, l.jsx)(a.m, {
         text: m,
         children: (0, l.jsxs)(o.D, {
-            className: r()(j.dY, j.ac, { [j.M7]: n }),
+            className: r()(C.dY, C.ac, { [C.M7]: n }),
             onClick: c,
             "aria-label": m,
             children: [
                 (0, l.jsx)("div", {
-                    className: j.jy,
-                    children: (0, l.jsx)("img", { className: j.Se, src: d, alt: "", "aria-hidden": !0 }),
+                    className: C.jy,
+                    children: (0, l.jsx)("img", { className: C.Se, src: d, alt: "", "aria-hidden": !0 }),
                 }),
-                !n && (0, l.jsx)(u.E, { variant: "text-sm/normal", className: j.Wk, children: s.name }),
+                !n && (0, l.jsx)(u.E, { variant: "text-sm/normal", className: C.Wk, children: s.name }),
             ],
         }),
     });
@@ -53,7 +53,7 @@ function S(e) {
         x = i.useRef(null),
         A = i.useCallback(() => f(!0), []),
         v = i.useCallback(() => f(!1), []),
-        I = C.intl.string(C.t["wg/30i"]);
+        I = j.intl.string(j.t["wg/30i"]);
     return (0, l.jsx)(c.Y, {
         targetElementRef: x,
         shouldShow: g,
@@ -74,7 +74,7 @@ function S(e) {
                     text: I,
                     shouldShow: !g && void 0,
                     children: (0, l.jsx)("div", {
-                        className: r()(j.V7, { [j.kl]: o, [j.N7]: u }),
+                        className: r()(C.V7, { [C.kl]: o, [C.N7]: u }),
                         children: (0, l.jsx)(m.K, {
                             size: "sm",
                             variant: "overlay-secondary",

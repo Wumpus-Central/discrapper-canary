@@ -4,22 +4,22 @@ var i = n(582128),
     l = n(857250),
     a = n(97483),
     o = n(887725),
-    s = n(375708);
-function u(e) {
+    u = n(375708);
+function s(e) {
     let { text: t, ok: n } = (function (e) {
         switch (e) {
             case "dispatched":
-                return { text: s.intl.string(o.default["um/5Kc"]), ok: !0 };
+                return { text: u.intl.string(o.default["um/5Kc"]), ok: !0 };
             case "rate_limited":
-                return { text: s.intl.string(o.default.T1n7hc), ok: !1 };
+                return { text: u.intl.string(o.default.T1n7hc), ok: !1 };
             case "unauthorized":
-                return { text: s.intl.string(o.default["30UxZU"]), ok: !1 };
+                return { text: u.intl.string(o.default["30UxZU"]), ok: !1 };
             case "no_widget_config":
-                return { text: s.intl.string(o.default["1UFWet"]), ok: !1 };
+                return { text: u.intl.string(o.default["1UFWet"]), ok: !1 };
             case "undeliverable":
-                return { text: s.intl.string(o.default.ypKX9A), ok: !1 };
+                return { text: u.intl.string(o.default.ypKX9A), ok: !1 };
             default:
-                return { text: s.intl.string(o.default.BLKD4B), ok: !1 };
+                return { text: u.intl.string(o.default.BLKD4B), ok: !1 };
         }
     })(e);
     (0, r.P)((0, l.o)(t, n ? a.Ck.SUCCESS : a.Ck.FAILURE));
@@ -76,7 +76,7 @@ function p(e) {
                         }
                     }
                 })
-                .then(u)
+                .then(s)
                 .finally(() => {
                     r.current && n(!1);
                 }));
