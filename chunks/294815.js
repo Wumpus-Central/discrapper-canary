@@ -8161,9 +8161,9 @@ let uS = (0, nJ.Fe)({
                 t.e("87729"),
                 t.e("889300"),
                 t.e("344322"),
-                t.e("998976"),
-            ]).then(t.bind(t, 780611)),
-        webpackId: 780611,
+                t.e("30750"),
+            ]).then(t.bind(t, 422445)),
+        webpackId: 422445,
         renderLoader: uT,
         name: "AppChannel",
     });

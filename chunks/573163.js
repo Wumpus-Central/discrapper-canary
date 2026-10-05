@@ -1600,8 +1600,7 @@ let e6 = new e5(_.h, {
             }
             (eJ({ previousChannelId: e_, newChannelId: t }), eJ({ previousChannelId: eE, newChannelId: n }));
             let r = !1;
-            if (
-                (e_ !== t && ((r = e0(e_) || r), (r = e0(eE) || r)),
+            (e_ !== t && ((r = e0(e_) || r), (r = e0(eE) || r)),
                 (e_ === t || (i?.type != null && ei.kvI.GUILD_THREADS_ONLY.has(i.type))) &&
                     (r =
                         eH(
@@ -1611,15 +1610,14 @@ let e6 = new e5(_.h, {
                                 objectType: ei.AnalyticsObjectTypes.ACK_AUTOMATIC,
                             },
                             t,
-                        ) || r),
-                (eA = null),
-                null != i && (0, F.ZV)(i.type))
-            ) {
-                let e = ew.get(i.id),
-                    t = e.canBeUnread() && e.hasUnread();
-                !0 === eQ(i.id) && ((eA = t ? i.id : null), (r = !0));
+                        ) || r));
+            let a = eA;
+            if (((eA = null), null != i && (0, F.ZV)(i.type))) {
+                let e = ew.get(i.id);
+                (e.canBeUnread() && e.hasUnreadOrMentions() && (eA = i.id), (r = !0 === eQ(i.id) || r));
             }
             return (
+                (r = a !== eA || r),
                 e_ === t &&
                     (r =
                         eH(

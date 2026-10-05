@@ -3222,7 +3222,6 @@ var iQ =
         (ec.ACK_WINDOW_FOCUS = "Ack - Window Focus"),
         (ec.ACK_CHANNEL_SECTION_STORE_UPDATE = "Ack - Channel Section Store Update"),
         (ec.ACK_VOICE_CHANNEL_SELECT = "Ack - Voice Channel Select"),
-        (ec.ACK_VIBEGRATIONS_CHAT_CLOSED = "Ack - Vibegrations Chat Closed"),
         (ec.ACK_APP_FOREGROUND = "Ack - App Foreground"),
         (ec.ENABLE_AUTOMATIC_ACK = "Enable Automatic Ack"),
         ec),
