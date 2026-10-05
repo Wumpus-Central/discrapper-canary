@@ -40,19 +40,21 @@ let U = {
                 source: s,
                 skipMessageFetch: l,
                 opensChannel: o,
+                isAppStartupNavigation: d,
             } = e,
-            { fromGuildId: d, fromChannelId: c } = M;
+            { fromGuildId: c, fromChannelId: u } = M;
         i.h.dispatch({
             type: "CHANNEL_SELECT",
             guildId: t === P.ME ? null : t,
             channelId: n,
-            fromGuildId: d,
-            fromChannelId: c,
+            fromGuildId: c,
+            fromChannelId: u,
             messageId: r,
             jumpType: a,
             source: s,
             skipMessageFetch: l,
             opensChannel: o,
+            isAppStartupNavigation: d,
         });
     },
     selectPrivateChannel(e) {
