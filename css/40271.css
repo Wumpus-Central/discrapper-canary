@@ -207,7 +207,17 @@
 }
 
 .orbChallengesCardEmptyContainer__81c60 {
-    padding-bottom: var(--space-16)
+    align-items: center;
+    align-self: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: var(--space-32);
+    padding-top: var(--space-16);
+    padding-inline: calc(var(--space-24) + var(--space-16));
+    padding-inline-end: calc(var(--space-24) + var(--space-16));
+    row-gap: var(--space-4);
+    text-align: center
 }
 
 .orbChallengesList__81c60 {
@@ -231,42 +241,33 @@
     padding-inline-end: var(--space-8)
 }
 
-.orbChallengesCardEmptyContent__81c60 {
-    justify-content: center;
-    row-gap: var(--space-4)
-}
-
-.orbChallengesCardEmptyContent__81c60,
 .orbWalletFooterSection__81c60 {
-    align-items: center;
-    align-self: stretch;
-    display: flex;
-    flex-direction: column
-}
-
-.orbWalletFooterSection__81c60 {
+    flex-direction: column;
     padding-inline: var(--space-16);
     padding-inline-end: var(--space-16);
     row-gap: var(--space-16)
 }
 
-.orbWalletFooter__81c60 {
+.orbWalletFooter__81c60,
+.orbWalletFooterSection__81c60 {
+    align-items: center;
     align-self: stretch;
+    display: flex
+}
+
+.orbWalletFooter__81c60 {
     -moz-column-gap: var(--space-12);
     column-gap: var(--space-12);
+    flex-direction: row;
     justify-content: center
 }
 
-.orbWalletFooter__81c60,
 .orbWalletLifetimeRedeemed__81c60 {
     align-items: center;
+    -moz-column-gap: var(--space-4);
+    column-gap: var(--space-4);
     display: flex;
     flex-direction: row
-}
-
-.orbWalletLifetimeRedeemed__81c60 {
-    -moz-column-gap: var(--space-4);
-    column-gap: var(--space-4)
 }
 
 @keyframes orbSkeletonPulse__81c60 {
@@ -347,4 +348,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=40271.6d870487fd8dab3f.css.map*/
+/*# sourceMappingURL=40271.d5c5cacffd60def8.css.map*/

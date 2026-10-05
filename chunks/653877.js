@@ -16,7 +16,6 @@ e.exports = {
     Up: "orbChallengesList__81c60",
     tJ: "orbChallengesListItem__81c60",
     $b: "orbChallengesCardTitleBlock__81c60",
-    AZ: "orbChallengesCardEmptyContent__81c60",
     VX: "orbWalletFooterSection__81c60",
     W: "orbWalletFooter__81c60",
     RA: "orbWalletLifetimeRedeemed__81c60",

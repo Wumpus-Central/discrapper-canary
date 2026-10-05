@@ -63,7 +63,7 @@ function Q(e) {
     let { className: t } = e;
     return (0, a.jsx)(w.c, { className: i()(K.Fu, t) });
 }
-function Z(e) {
+function J(e) {
     let {
             achievementIdentifier: t,
             title: l,
@@ -130,7 +130,7 @@ function Z(e) {
               children: [(0, a.jsx)("div", { className: x, ...L, children: p }), !u && (0, a.jsx)(Q, {})],
           });
 }
-var J = l(652215),
+var Z = l(652215),
     $ = l(653877),
     ee = l(268920),
     et = l(633217);
@@ -174,8 +174,8 @@ function en(e) {
                         ariaHidden: !0,
                         counterInnerClassName: i ? $.F4 : void 0,
                         value: t,
-                        onValueChange: J.tEg,
-                        onValueReached: J.tEg,
+                        onValueChange: Z.tEg,
+                        onValueReached: Z.tEg,
                         targetTotalCounterTime: 1500,
                         textVariant: "display-md",
                         textColor: "text-strong",
@@ -239,18 +239,18 @@ function er(e) {
             title: t,
             challenges: l,
             isLoading: s,
-            onClaim: r,
-            badgeText: c,
-            badgeAccessibilityLabel: o,
-            onClickBadge: h,
-            inlineNoticeProps: u,
+            onClaim: i,
+            badgeText: r,
+            badgeAccessibilityLabel: c,
+            onClickBadge: o,
+            inlineNoticeProps: h,
         } = e,
-        d = l.length > 0,
-        m = n.useMemo(
+        u = l.length > 0,
+        d = n.useMemo(
             () =>
-                s && null == u
+                s && null == h
                     ? (0, a.jsx)(ei, { numRows: 3 })
-                    : d
+                    : u
                       ? (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsxs)("div", {
@@ -261,7 +261,7 @@ function er(e) {
                                             color: "text-subtle",
                                             children: t,
                                         }),
-                                        null != c && (0, a.jsx)(es, { text: c, accessibilityLabel: o, onClick: h }),
+                                        null != r && (0, a.jsx)(es, { text: r, accessibilityLabel: c, onClick: o }),
                                     ],
                                 }),
                                 (0, a.jsx)("ul", {
@@ -271,9 +271,9 @@ function er(e) {
                                             "li",
                                             {
                                                 className: $.tJ,
-                                                children: (0, a.jsx)(Z, {
+                                                children: (0, a.jsx)(J, {
                                                     ...e,
-                                                    onClaim: r,
+                                                    onClaim: i,
                                                     isLastItem: t === l.length - 1,
                                                 }),
                                             },
@@ -283,10 +283,10 @@ function er(e) {
                                 }),
                             ],
                         })
-                      : null != u
+                      : null != h
                         ? null
                         : (0, a.jsxs)("div", {
-                              className: i()($.GN, $.AZ),
+                              className: $.GN,
                               children: [
                                   (0, a.jsx)(S.E, {
                                       variant: "text-sm/medium",
@@ -294,22 +294,22 @@ function er(e) {
                                       children: Y.intl.string(V.default.xOP5OP),
                                   }),
                                   (0, a.jsx)(S.E, {
-                                      variant: "text-sm/normal",
-                                      color: "text-muted",
+                                      variant: "experimental/body-xs/normal",
+                                      color: "text-subtle",
                                       children: Y.intl.string(V.default.XW2CuY),
                                   }),
                               ],
                           }),
-            [s, d, t, c, o, h, l, u, r],
+            [s, u, t, r, c, o, l, h, i],
         ),
-        C = n.useMemo(
+        m = n.useMemo(
             () =>
-                null == u
+                null == h
                     ? null
-                    : (0, a.jsx)("div", { className: $.re, children: (0, a.jsx)(y.w, { ...u, children: u.message }) }),
-            [u],
+                    : (0, a.jsx)("div", { className: $.re, children: (0, a.jsx)(y.w, { ...h, children: h.message }) }),
+            [h],
         );
-    return (0, a.jsxs)("div", { className: $.E6, "aria-busy": s, children: [C, m] });
+    return (0, a.jsxs)("div", { className: $.E6, "aria-busy": s, children: [m, d] });
 }
 function ec(e) {
     let { onQuestsClick: t, onShopClick: l, totalOrbsRedeemed: n } = e;
@@ -368,7 +368,7 @@ function ec(e) {
                         children: (0, a.jsx)(F.Anchor, {
                             target: "_blank",
                             rel: "author",
-                            href: W.A.getArticleURL(J.MVz.ORBS_WALLET),
+                            href: W.A.getArticleURL(Z.MVz.ORBS_WALLET),
                             children: Y.intl.string(Y.t["5qZv9E"]),
                         }),
                     }),
@@ -620,7 +620,7 @@ function eD(e) {
             orbBalance: n,
             analyticsPage: s,
             forceVisible: i = !1,
-            onCloseWallet: r = J.tEg,
+            onCloseWallet: r = Z.tEg,
         } = e,
         c = eB(t, n);
     return "shop_orbs" === c
@@ -690,7 +690,7 @@ function eG() {
     return null != (0, o.bG)([g.A], () => g.A.getPremiumTypeSubscription()) ? (0, a.jsx)(ew, {}) : null;
 }
 function ez(e) {
-    let { analyticsPage: t = d.A.ORB_WALLET, analyticsLocations: l = [], onCloseWallet: s = J.tEg } = e,
+    let { analyticsPage: t = d.A.ORB_WALLET, analyticsLocations: l = [], onCloseWallet: s = Z.tEg } = e,
         { challengesForOrbWallet: i, hasFetchedChallenges: r, refetch: c } = (0, v.z)({ shouldFetch: !0 }),
         h = (0, C.L)(ep.PremiumTypes.TIER_2),
         { nitroGatedOrbMultiplier: u, orbChallengesDisplayError: m } = (0, o.cf)([b.Ay], () => ({
@@ -765,7 +765,7 @@ function eV(e) {
             cardRef: t,
             returnRef: l,
             analyticsPage: s = d.A.ORB_WALLET,
-            onCloseWallet: i = J.tEg,
+            onCloseWallet: i = Z.tEg,
             isProfilePopout: r,
         } = e,
         { balance: h } = (0, L.W0)(),
@@ -796,7 +796,7 @@ function eV(e) {
         if (!j || y.current) return;
         let e = S.map((e) => e.achievementIdentifier),
             t = S.filter((e) => e.achievementStatus === f.x.COMPLETED).map((e) => e.achievementIdentifier);
-        (A.default.track(J.HAw.ORB_WALLET_VIEWED, {
+        (A.default.track(Z.HAw.ORB_WALLET_VIEWED, {
             location_stack: v,
             location_page: s,
             location_section: d.A.ORB_WALLET,
@@ -808,7 +808,7 @@ function eV(e) {
             (y.current = !0));
     }, [j, S, N, v, s]);
     let { pathname: I } = (0, c.zy)(),
-        U = I.startsWith(J.BVt.COLLECTIBLES_SHOP),
+        U = I.startsWith(Z.BVt.COLLECTIBLES_SHOP),
         M = (0, E.p)(),
         F = n.useMemo(
             () =>
