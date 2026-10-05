@@ -1,40 +1,40 @@
-t.d(e, { I: () => v });
-var i = t(477900),
-    a = t(582128),
-    s = t(503698),
-    r = t.n(s),
-    n = t(837381),
-    o = t(887129),
-    c = t(741918),
-    u = t(939249),
-    d = t(834730),
-    p = t(866665),
-    m = t(537512);
-let h = () => Promise.resolve();
-function b(l) {
+i.d(l, { I: () => v });
+var t = i(477900),
+    a = i(582128),
+    s = i(503698),
+    r = i.n(s),
+    n = i(837381),
+    o = i(887129),
+    c = i(741918),
+    u = i(939249),
+    d = i(834730),
+    p = i(866665),
+    m = i(537512);
+let b = () => Promise.resolve();
+function h(e) {
     let {
-            role: e,
-            option: t,
+            role: l,
+            option: i,
             selected: s,
             onClick: o,
             look: c,
-            className: h,
-            disabled: b = !1,
+            className: b,
+            disabled: h = !1,
             tooltip: v,
             tooltipAriaLabel: x,
-        } = l,
-        k = (0, n.rm)(String(t.value)),
-        f = a.useCallback((l) => o(t, l), [o, t]);
+        } = e,
+        k = (0, n.rm)(String(i.value)),
+        f = a.useCallback((e) => o(i, e), [o, i]);
     function N() {
-        return (0, i.jsx)("div", {
-            role: "listitem" === e ? "listitem" : void 0,
+        return (0, t.jsx)("div", {
+            role: "listitem" === l ? "listitem" : void 0,
             className: r()(m.xp, { [m.iK]: "pill" === c }),
-            children: (0, i.jsx)(u.D, {
+            children: (0, t.jsx)(u.D, {
                 ...k,
-                role: "listitem" === e ? "button" : e,
+                role: "listitem" === l ? "button" : l,
                 className: r()(
-                    (function (l) {
-                        switch (l) {
+                    (function (e) {
+                        switch (e) {
                             case "tab":
                             default:
                                 return m.V3;
@@ -42,10 +42,10 @@ function b(l) {
                                 return m.RW;
                         }
                     })(c),
-                    h,
+                    b,
                     {
-                        [(function (l) {
-                            switch (l) {
+                        [(function (e) {
+                            switch (e) {
                                 case "tab":
                                 default:
                                     return m.u7;
@@ -53,71 +53,72 @@ function b(l) {
                                     return m.EN;
                             }
                         })(c)]: s,
-                        [m.r9]: b,
+                        [m.r9]: h,
                     },
                 ),
-                "aria-disabled": b,
+                "aria-disabled": h,
                 "aria-label": null != v ? x : void 0,
-                "aria-selected": s,
-                "aria-controls": t["aria-controls"] ?? void 0,
-                onClick: b ? void 0 : f,
-                children: (0, i.jsxs)(d.E, {
+                "aria-selected": "tab" === l ? s : void 0,
+                "aria-pressed": "listitem" === l ? s : void 0,
+                "aria-controls": i["aria-controls"] ?? void 0,
+                onClick: h ? void 0 : f,
+                children: (0, t.jsxs)(d.E, {
                     className: r()(m.JU, "pill" === c ? m.up : void 0),
                     variant: "text-sm/medium",
                     color: "none",
-                    children: [null != t.icon ? (0, i.jsx)(t.icon, { className: m.Kk }) : null, t.name],
+                    children: [null != i.icon ? (0, t.jsx)(i.icon, { className: m.Kk }) : null, i.name],
                 }),
             }),
         });
     }
-    return null == v ? N() : (0, i.jsx)(p.m, { shouldShow: !b, __unsupportedReactNodeAsText: v, children: N() });
+    return null == v ? N() : (0, t.jsx)(p.m, { shouldShow: !h, __unsupportedReactNodeAsText: v, children: N() });
 }
-function v(l) {
+function v(e) {
     let {
-            options: e,
-            value: t,
+            options: l,
+            value: i,
             onChange: s,
             role: u = "list",
             look: d = "tab",
             className: p,
             optionClassName: v,
             disabled: x = !1,
-        } = l,
+        } = e,
         k = a.useId(),
-        f = (0, o.Ay)({ id: k, isEnabled: !x, orientation: c.Gl.HORIZONTAL, scrollToStart: h, scrollToEnd: h }),
+        f = (0, o.Ay)({ id: k, isEnabled: !x, orientation: c.Gl.HORIZONTAL, scrollToStart: b, scrollToEnd: b }),
         N = a.useCallback(
-            (l) => {
-                let e = t === l.value;
-                return (0, i.jsx)(
-                    b,
+            (e) => {
+                let l = i === e.value;
+                return (0, t.jsx)(
+                    h,
                     {
                         role: "tablist" === u ? "tab" : "listitem",
-                        selected: e,
-                        option: l,
+                        selected: l,
+                        option: e,
                         look: d,
                         onClick: s,
                         disabled: x,
-                        className: r()(v, l.className),
-                        tooltip: l.tooltip,
-                        tooltipAriaLabel: l.tooltipAriaLabel,
+                        className: r()(v, e.className),
+                        tooltip: e.tooltip,
+                        tooltipAriaLabel: e.tooltipAriaLabel,
                     },
-                    l.key ?? String(l.value),
+                    e.key ?? String(e.value),
                 );
             },
-            [t, u, d, s, v, x],
+            [i, u, d, s, v, x],
         );
-    return (0, i.jsx)(n.hD, {
+    return (0, t.jsx)(n.hD, {
         navigator: f,
-        children: (0, i.jsx)(n.PR, {
-            children: (l) => {
-                let { ref: t, ...a } = l;
-                return (0, i.jsx)("div", {
+        children: (0, t.jsx)(n.PR, {
+            children: (e) => {
+                let { ref: i, ...a } = e;
+                return (0, t.jsx)("div", {
                     ...a,
-                    ref: t,
+                    ref: i,
                     role: u,
                     className: r()(
-                        (function (l) {
-                            switch (l) {
+                        (function (e) {
+                            switch (e) {
                                 case "tab":
                                 default:
                                     return m.v_;
@@ -128,7 +129,7 @@ function v(l) {
                         p,
                         { [m.ii]: x },
                     ),
-                    children: e.map(N),
+                    children: l.map(N),
                 });
             },
         }),
