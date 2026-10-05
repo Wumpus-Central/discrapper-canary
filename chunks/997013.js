@@ -32,6 +32,7 @@ class d extends r.A {
     media;
     firstReleaseDate;
     shopCollectionIds;
+    communityGuildIds;
     steamReleaseStatus;
     reviews;
     opencriticUrl;
@@ -68,6 +69,7 @@ class d extends r.A {
             (this.media = e.media),
             (this.firstReleaseDate = e.first_release_date),
             (this.shopCollectionIds = e.shop_collection_ids),
+            (this.communityGuildIds = e.community_guild_ids),
             (this.steamReleaseStatus = e.steam_release_status),
             (this.reviews = (function (e) {
                 if (e?.steam != null || e?.opencritic != null)

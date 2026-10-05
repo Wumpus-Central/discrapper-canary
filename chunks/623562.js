@@ -1,4 +1,4 @@
-n.d(t, { oq: () => g, qC: () => S, xI: () => T, WF: () => f, Eg: () => p, p7: () => N, P7: () => m });
+n.d(t, { oq: () => S, qC: () => N, xI: () => m, WF: () => p, Eg: () => T, p7: () => C, P7: () => g });
 var i = n(517846),
     r = n(636537),
     a = n(73153),
@@ -8,32 +8,33 @@ var i = n(517846),
     d = n(828488),
     c = n(987741),
     u = n(727011),
-    _ = n(17928);
-let E = 0;
-class A extends _.Ay.DeviceSettingsStore {
+    _ = n(120570),
+    E = n(17928);
+let A = 0;
+class h extends E.Ay.DeviceSettingsStore {
     static displayName = "TopicalNavigationSurveyStore";
     static persistKey = "TopicalNavigationSurveyStore";
     initialize(e) {
-        E = e?.channelsExposedCount ?? 0;
+        A = e?.channelsExposedCount ?? 0;
     }
     shouldTriggerOnNextExposure() {
-        return E >= 2;
+        return A >= 2;
     }
     getState() {
-        return { channelsExposedCount: E };
+        return { channelsExposedCount: A };
     }
     getUserAgnosticState() {
-        return { channelsExposedCount: E };
+        return { channelsExposedCount: A };
     }
 }
-let h = new A(a.h, {
+let I = new h(a.h, {
     TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION: function () {
-        E++;
+        A++;
     },
 });
 n(575279);
-var I = n(652215);
-async function f(e) {
+var f = n(652215);
+async function p(e) {
     let {
         channelId: t,
         guildId: n,
@@ -42,24 +43,24 @@ async function f(e) {
         limit: l = 25,
         isJump: c,
         throwOnError: u = !1,
-        hydrateMessages: _,
+        hydrateMessages: E,
     } = e;
     if (!(0, d.Lc)(n, "fetch_channel_conversations")) return;
-    let E = `${i}:${s}:${l}:${!0 === c}`;
-    if (o.A.isListFetchPending(t, E)) return;
+    let A = `${i}:${s}:${l}:${!0 === c}`;
+    if (o.A.isListFetchPending(t, A)) return;
     a.h.dispatch({
         type: "CHANNEL_CONVERSATIONS_FETCH_START",
         channelId: t,
         direction: i,
-        requestKey: E,
+        requestKey: A,
         isJump: c ?? !1,
     });
-    let A = { limit: l };
-    (null != s && ("before" === i ? (A.before = s) : "after" === i ? (A.after = s) : (A.around = s)),
-        null != _ && ((A.include_messages = !0), (A.message_limit = _.limit ?? void 0)));
+    let h = { limit: l };
+    (null != s && ("before" === i ? (h.before = s) : "after" === i ? (h.after = s) : (h.around = s)),
+        null != E && ((h.include_messages = !0), (h.message_limit = E.limit ?? void 0)));
     try {
         let e = (
-            await r.Bo.get({ url: I.Rsh.CHANNEL_CONVERSATIONS(t), query: A, oldFormErrors: !0, rejectWithError: !0 })
+            await r.Bo.get({ url: f.Rsh.CHANNEL_CONVERSATIONS(t), query: h, oldFormErrors: !0, rejectWithError: !0 })
         ).body.conversations;
         return (
             a.h.dispatch({
@@ -67,40 +68,41 @@ async function f(e) {
                 channelId: t,
                 rawConversations: e,
                 direction: i,
-                requestKey: E,
+                requestKey: A,
                 anchor: s,
                 isJump: c ?? !1,
-                fullyHydrated: _?.limit == null,
+                fullyHydrated: E?.limit == null,
+                selectedConversationId: _.A.getSelectedConversationId(t),
             }),
             e
         );
     } catch {
-        if ((a.h.dispatch({ type: "CHANNEL_CONVERSATIONS_FETCH_FAILURE", channelId: t, requestKey: E }), u))
+        if ((a.h.dispatch({ type: "CHANNEL_CONVERSATIONS_FETCH_FAILURE", channelId: t, requestKey: A }), u))
             throw Error("Failed to fetch conversations");
     }
 }
-function p() {
+function T() {
     a.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
-function T(e, t) {
+function m(e, t) {
     let { shouldJump: n = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if (
         null == t ||
         (a.h.dispatch({ type: "SET_SELECTED_CONVERSATION", channelId: e, conversationId: t }),
-        S(e, t, { includeReactions: !0, includeMessageReferences: !0 }),
+        N(e, t, { includeReactions: !0, includeMessageReferences: !0 }),
         !n)
     )
         return;
     let i = o.A.getConversationMetadata(e, t)?.conversation.startMessageId;
     null != i && s.A.jumpToMessage({ channelId: e, messageId: i, flash: !1 });
 }
-function m(e, t) {
+function g(e, t) {
     a.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });
 }
-function g(e, t, n) {
+function S(e, t, n) {
     a.h.dispatch({ type: "SET_CONVERSATION_FEEDBACK_RATING", channelId: e, conversationId: t, rating: n });
 }
-async function S(e, t, n) {
+async function N(e, t, n) {
     let { previewLimit: i, includeMessageReferences: s, includeReactions: l, isStandalone: d = !1 } = n ?? {},
         u = null == i;
     if (u) {
@@ -116,7 +118,7 @@ async function S(e, t, n) {
         });
         try {
             let n = await r.Bo.get({
-                url: I.Rsh.CHANNEL_CONVERSATION_MESSAGES(e, t),
+                url: f.Rsh.CHANNEL_CONVERSATION_MESSAGES(e, t),
                 query: { limit: i, include_message_references: s, include_reactions: l },
                 oldFormErrors: !0,
                 rejectWithError: !0,
@@ -141,8 +143,8 @@ async function S(e, t, n) {
         }
     }
 }
-function N(e, t) {
+function C(e, t) {
     (u.X.trackEntrypointImpression({ channelId: e, conversationCount: t }),
-        h.shouldTriggerOnNextExposure() && l.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
+        I.shouldTriggerOnNextExposure() && l.Ay.fireSurveyAction(i.w.TOPICAL_NAVIGATION_MULTIPLE_IMPRESSIONS),
         a.h.dispatch({ type: "TOPICAL_NAVIGATION_ENTRYPOINT_IMPRESSION" }));
 }

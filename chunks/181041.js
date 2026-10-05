@@ -128,16 +128,8 @@ class U extends a.Ay.Store {
     isListFetchPending(e, t) {
         return m.get(e)?.has(t) ?? !1;
     }
-    getSelectedConversationId(e) {
-        return T.peek(e)?.selectedConversationId ?? null;
-    }
     consumeFocusRequest() {
         return N !== C && ((C = N), !0);
-    }
-    getSelectedConversation(e) {
-        let t = T.peek(e),
-            n = t?.selectedConversationId;
-        return null == n ? null : (t?.conversationMetadataById.get(n)?.conversation ?? null);
     }
     getConversationColor(e, t) {
         let n = T.peek(e);
@@ -200,42 +192,42 @@ let w = new U(s.h, {
                 isJump: l,
                 requestKey: o,
                 fullyHydrated: c,
+                selectedConversationId: u,
             } = e;
         if (!g(n, o)) return !1;
-        let u = i.map(f.a).filter(E.Vq),
-            _ = T.peek(n);
+        let _ = i.map(f.a).filter(E.Vq),
+            h = T.peek(n);
         if (l) {
-            let e = _?.selectedConversationId,
-                n = null != e ? _?.conversationMetadataById.get(e)?.conversation : null;
-            t = null != n ? [n] : [];
-        } else t = _?.conversations ?? [];
-        let h = l ? null : (_?.reachedOldest ?? null),
-            I = l ? null : (_?.reachedNewest ?? null),
-            m = new Set(t.map((e) => e.id));
+            let e = null != u ? h?.conversationMetadataById.get(u)?.conversation : null;
+            t = null != e ? [e] : [];
+        } else t = h?.conversations ?? [];
+        let I = l ? null : (h?.reachedOldest ?? null),
+            m = l ? null : (h?.reachedNewest ?? null),
+            S = new Set(t.map((e) => e.id));
         if (
-            (u.some((e) => !m.has(e.id)) ||
+            (_.some((e) => !S.has(e.id)) ||
                 null == s ||
-                ("before" === a ? (h = Date.now()) : "after" === a && (I = Date.now())),
-            "before" === a && null == s && (I = Date.now()),
-            (u = (function (e, t) {
+                ("before" === a ? (I = Date.now()) : "after" === a && (m = Date.now())),
+            "before" === a && null == s && (m = Date.now()),
+            (_ = (function (e, t) {
                 let n = new Map();
                 for (let t of e) n.set(t.id, t);
                 for (let e of t) n.set(e.id, e);
                 let i = Array.from(n.values());
                 return (i.sort((e, t) => A.default.compare(e.startMessageId, t.startMessageId)), i);
-            })(t, u)).length > 50)
+            })(t, _)).length > 50)
         )
-            if ("after" === a) ((u = u.slice(u.length - 50)), (h = null));
-            else if ("before" === a) ((u = u.slice(0, 50)), (I = null));
+            if ("after" === a) ((_ = _.slice(_.length - 50)), (I = null));
+            else if ("before" === a) ((_ = _.slice(0, 50)), (m = null));
             else {
                 let e = (function (e, t) {
                     if (null == t) return 0;
                     let n = e.findIndex((e) => A.default.compare(e.startMessageId, t) >= 0);
                     return (-1 === n && (n = e.length), Math.max(0, Math.min(n - Math.floor(25), e.length - 50)));
-                })(u, s);
-                (e > 0 && (h = null), e + 50 < u.length && (I = null), (u = u.slice(e, e + 50)));
+                })(_, s);
+                (e > 0 && (I = null), e + 50 < _.length && (m = null), (_ = _.slice(e, e + 50)));
             }
-        let S = (function (e, t, n) {
+        let N = (function (e, t, n) {
             let i = n?.guildId ?? t[0]?.guildId ?? d.A.getChannel(e)?.guild_id ?? null,
                 a = new Map(),
                 s = new Map(),
@@ -284,22 +276,19 @@ let w = new U(s.h, {
                     }
                 }
             }
-            let o = n?.recentFeedbackRatingsByConversationId ?? new (r())({ max: 10 }),
-                c = n?.selectedConversationId ?? null,
-                u = null != c && t.some((e) => e.id === c) ? c : null;
             return {
                 guildId: i,
                 conversations: t,
                 conversationMetadataById: a,
                 messageMetadataByMessageId: s,
-                recentFeedbackRatingsByConversationId: o,
+                recentFeedbackRatingsByConversationId:
+                    n?.recentFeedbackRatingsByConversationId ?? new (r())({ max: 10 }),
                 reachedOldest: n?.reachedOldest ?? null,
                 reachedNewest: n?.reachedNewest ?? null,
-                selectedConversationId: u,
                 colorIndex: l,
             };
-        })(n, u, _);
-        for (let e of ((S.reachedOldest = h), (S.reachedNewest = I), null != _ ? Object.assign(_, S) : T.set(n, S), i))
+        })(n, _, h);
+        for (let e of ((N.reachedOldest = I), (N.reachedNewest = m), null != h ? Object.assign(h, N) : T.set(n, N), i))
             null != e.messages && R(n, e.id, e.messages, c);
         return !0;
     },
@@ -309,14 +298,7 @@ let w = new U(s.h, {
     },
     CHANNEL_SELECT: function (e) {
         let { channelId: t } = e;
-        null != t && T.has(t) && T.get(t);
-        let n = !1;
-        for (let e of T.keys()) {
-            if (e === t) continue;
-            let i = T.peek(e);
-            i?.selectedConversationId != null && ((i.selectedConversationId = null), (n = !0));
-        }
-        return n;
+        return (null != t && T.has(t) && T.get(t), !1);
     },
     CHANNEL_DELETE: function (e) {
         let { channel: t } = e;
@@ -335,21 +317,8 @@ let w = new U(s.h, {
         let i = T.peek(t);
         return null != i && ((i.reachedOldest = null), (i.reachedNewest = null), !0);
     },
-    SET_SELECTED_CONVERSATION: function (e) {
-        let { channelId: t, conversationId: n } = e;
-        if (null == t) return !1;
-        let i = T.peek(t);
-        return null != i && ((i.selectedConversationId = n), !0);
-    },
     CONVERSATION_FOCUS_REQUEST: function () {
         return (N++, !0);
-    },
-    CLEAR_CONVERSATION_SELECTION: function (e) {
-        let { channelId: t, conversationId: n } = e,
-            i = T.peek(t);
-        if (null == i) return !1;
-        let r = i.selectedConversationId;
-        return null != r && (null == n || r === n) && ((i.selectedConversationId = null), !0);
     },
     SET_CONVERSATION_FEEDBACK_RATING: function (e) {
         let { channelId: t, conversationId: n, rating: i } = e,
