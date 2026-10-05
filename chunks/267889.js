@@ -1035,6 +1035,7 @@ let t5 = r.memo(function (e) {
         emojiSubCategory: N,
     });
 });
+n(30146);
 var t8 = n(607399),
     t4 = n(765178),
     t7 = n(537652),
@@ -1867,26 +1868,43 @@ let nw = (0, eu.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                 activeSectionIndex: K,
                 emojiListRef: a,
             }),
-            er = (0, k.Fk)({
-                activeCategoryIndex: L,
-                isScrolling: b,
-                listRef: a,
-                onActiveCategoryIndexChange: function (e) {
-                    (B(e), "" === v && w.Om.setActiveCategoryIndex(e));
-                },
-                scrollOffset: 0,
-                searchQuery: v,
-                disableForSearch: !1,
-            });
-        (0, k.FV)({ searchQuery: v, activeCategoryIndex: L, listRef: a });
-        let eu = r.useCallback(
+            er = r.useCallback(
                 (e) => {
-                    (er(e),
+                    let t = a.current?.getSectionDescriptors();
+                    null == t ||
+                        B(
+                            Math.max(
+                                t.findLastIndex((t) => t.offset.top <= e),
+                                0,
+                            ),
+                        );
+                },
+                [a],
+            );
+        r.useLayoutEffect(() => {
+            er(a.current?.getScrollerNode()?.scrollTop ?? 0);
+        }, [a, er, E, I, v]);
+        let eu = (0, k.Fk)({
+            activeCategoryIndex: L,
+            isScrolling: b,
+            listRef: a,
+            onActiveCategoryIndexChange: function (e) {
+                "" === v && w.Om.setActiveCategoryIndex(e);
+            },
+            scrollOffset: 0,
+            searchQuery: v,
+            disableForSearch: !1,
+        });
+        (0, k.FV)({ searchQuery: v, activeCategoryIndex: L, listRef: a });
+        let em = r.useCallback(
+                (e) => {
+                    (eu(e),
+                        er(e),
                         nB({ emojiListRef: a, sectionDescriptors: E, scrollTop: e, searchQuery: v, setShowUpsell: W }));
                 },
-                [er, a, E, v, W],
+                [eu, er, a, E, v, W],
             ),
-            em = E.length > 0;
+            ef = E.length > 0;
         (r.useEffect(() => {
             H &&
                 (eo.default.track(Q.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -1899,32 +1917,32 @@ let nw = (0, eu.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
             r.useEffect(() => {
                 "" !== v && W(!1);
             }, [v]));
-        let ef = r.useRef(null);
+        let eI = r.useRef(null);
         return (
             r.useEffect(
                 () => (
-                    clearTimeout(ef.current),
-                    (ef.current = setTimeout(() => {
-                        (em
+                    clearTimeout(eI.current),
+                    (eI.current = setTimeout(() => {
+                        (ef
                             ? t4.O.announce(et.intl.string(et.t.uZ4F2O), "polite")
                             : t4.O.announce(et.intl.string(et.t.IxxiKF), "assertive"),
-                            (ef.current = null));
+                            (eI.current = null));
                     }, 200)),
                     () => {
-                        clearTimeout(ef.current);
+                        clearTimeout(eI.current);
                     }
                 ),
-                [em, v],
+                [ef, v],
             ),
             (0, l.jsxs)("div", {
                 className: nP.AD,
                 children: [
-                    em
+                    ef
                         ? (0, l.jsx)(t6.A, {
                               role: "none presentation",
                               className: nP.p_,
                               listPadding: Z,
-                              onScroll: eu,
+                              onScroll: em,
                               renderRow: Y,
                               renderSection: z,
                               renderSectionHeader: q,

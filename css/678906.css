@@ -290,11 +290,13 @@
 }
 
 .inactiveNitroHeader_e94b8c {
-    background-color: transparent !important
+    background-color: transparent !important;
+    margin-bottom: var(--space-16)
 }
 
 .activeNitroHeader_e94b8c {
-    background-color: var(--background-surface-high)
+    background-color: var(--background-surface-high);
+    margin-bottom: var(--space-16)
 }
 
 .nitroTopDivider_e94b8c {
@@ -669,4 +671,4 @@
     gap: var(--space-4)
 }
 
-/*# sourceMappingURL=678906.9086ceaa8d5b3f81.css.map*/
+/*# sourceMappingURL=678906.f746364dfb2eddcc.css.map*/
