@@ -1,4 +1,4 @@
-n.d(t, { CC: () => h, CZ: () => f, J8: () => _, DK: () => A });
+n.d(t, { CZ: () => I, CC: () => A, J8: () => _ });
 var i = n(239266),
     r = n(240921);
 let a = { control: 0, treatment_a: 250, treatment_b: 500, treatment_c: 250, treatment_d: 500 },
@@ -42,37 +42,20 @@ function E(e) {
             return !1;
     }
 }
-function A(e) {
-    let t,
-        n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "ProgramRewardsUtils",
-        { isInTreatment: i } = {
-            treatment: (t = s.useConfig({ location: n }).treatment ?? "control"),
-            isInTreatment: "control" !== t,
-            orbsRewardAmount: a[t],
-        };
-    switch (e) {
-        case d.W.NITRO:
-            return i;
-        case d.W.XBOX:
-            return !0;
-        default:
-            return !1;
-    }
-}
-function h() {
+function A() {
     let e,
         t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "ProgramRewardsUtils";
     return E(d.W.NITRO, t) && ((e = void 0 ?? l.default.getCurrentUser()), (0, o.YE)(e, u.PremiumTypes.TIER_2));
 }
-let I = {
-    [d.W.NITRO]: h,
+let h = {
+    [d.W.NITRO]: A,
     [d.W.XBOX]: function () {
         let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "ProgramRewardsUtils";
         return E(d.W.XBOX, e) && (0, c.H)(l.default.getCurrentUser());
     },
 };
-function f() {
+function I() {
     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : "ProgramRewardsUtils";
-    for (let t of Object.values(d.W)) if ("number" == typeof t && I[t](e)) return !0;
+    for (let t of Object.values(d.W)) if ("number" == typeof t && h[t](e)) return !0;
     return !1;
 }
