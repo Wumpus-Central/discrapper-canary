@@ -31,7 +31,7 @@ let y = 0;
 async function I(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     n && h.h.dispatch({ type: "GUILD_SPACE_HYDRATE_RESET_ERRORS", guildId: e, widgetIds: t });
-    let l = _.A.getWidgetIdsToHydrate(e, t);
+    let l = _.A.getWidgetIdsToHydrate(e, t, n);
     if (0 === l.length) return;
     let r = y++;
     h.h.dispatch({ type: "GUILD_SPACE_HYDRATE_START", guildId: e, requestId: r, widgetIds: l });

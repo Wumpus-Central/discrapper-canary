@@ -14,16 +14,17 @@ function x(e, t) {
     return (null == l && ((l = { state: c, attempts: 0 }), e.entriesByWidgetId.set(t, l)), l);
 }
 function h(e, t, l, i) {
-    if (0 === l.length) {
+    let s = l.filter((t) => e.entriesByWidgetId.get(t)?.state.status !== "success");
+    if (0 === s.length) {
         e.backoff?.pending !== !0 && e.backoff?.succeed();
         return;
     }
-    let s = [];
-    (l.forEach((t) => {
+    let c = [];
+    (s.forEach((t) => {
         let l = x(e, t);
-        i && l.attempts < 3 ? s.push(t) : (l.state = u);
+        i && l.attempts < 3 ? c.push(t) : (l.state = u);
     }),
-        0 !== s.length &&
+        0 !== c.length &&
             ((e.backoff ??= new n.A(r, d, !0)),
             e.backoff.pending ||
                 e.backoff.fail(() => a.h.dispatch({ type: "GUILD_SPACE_HYDRATE_BACKOFF_EXPIRED", guildId: t }))));
@@ -33,13 +34,19 @@ class f extends i.Ay.Store {
     getHydration(e, t) {
         return m[e]?.entriesByWidgetId.get(t)?.state ?? c;
     }
+    hasRequestInFlight(e) {
+        return m[e]?.activeRequestId != null;
+    }
     getWidgetIdsToHydrate(e, t) {
-        let l = m[e];
-        return null == l
+        let l = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+            n = m[e];
+        return null == n
             ? [...t]
-            : null != l.activeRequestId
+            : null != n.activeRequestId
               ? []
-              : t.filter((e) => "idle" === (l.entriesByWidgetId.get(e)?.state ?? c).status);
+              : l
+                ? [...t]
+                : t.filter((e) => "idle" === (n.entriesByWidgetId.get(e)?.state ?? c).status);
     }
 }
 let g = new f(a.h, {
@@ -51,7 +58,7 @@ let g = new f(a.h, {
             (a.activeWidgetIds = i),
             i.forEach((e) => {
                 let t = x(a, e);
-                ((t.state = o), (t.attempts += 1));
+                "success" !== t.state.status && ((t.state = o), (t.attempts += 1));
             }));
     },
     GUILD_SPACE_HYDRATE_SUCCESS: function (e) {
