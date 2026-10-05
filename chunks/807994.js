@@ -18,5 +18,6 @@ _.exports = {
     p$: "emptyState__4cd87",
     gc: "emptyGuilds__4cd87",
     b6: "emptyGuildRow__4cd87",
+    db: "forMeIcon__4cd87",
     qL: "emptyGuildName__4cd87",
 };

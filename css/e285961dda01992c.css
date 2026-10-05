@@ -1672,6 +1672,18 @@ header.headerCollapsed__42f4e {
     background: var(--interactive-background-hover)
 }
 
+.forMeIcon__4cd87 {
+    align-items: center;
+    background: var(--background-mod-normal);
+    border-radius: var(--radius-round);
+    color: var(--icon-strong);
+    display: flex;
+    flex: 0 0 auto;
+    height: 32px;
+    justify-content: center;
+    width: 32px
+}
+
 .emptyGuildName__4cd87 {
     min-width: 0;
     overflow: hidden;
@@ -1789,4 +1801,4 @@ header.headerCollapsed__42f4e {
     }
 }
 
-/*# sourceMappingURL=d469baf6c70dceb2.css.map*/
+/*# sourceMappingURL=e285961dda01992c.css.map*/
