@@ -5714,6 +5714,18 @@
     }
   },
   {
+    "name": "2026-09-three-month-nitro-gifting",
+    "kind": "user",
+    "defaultConfig": false,
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": true
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-09-update-email-settings-copy-subtext",
     "defaultConfig": {
