@@ -528,11 +528,12 @@ function eg(e) {
 function eS() {
     (em(et.Gd.ACTIVITY_POPOUT_WINDOW), o.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" }));
 }
-async function eN(e, t) {
-    let n = { use_stateless_ticket: !0 };
+async function eN(e, t, n) {
+    let i = { use_stateless_ticket: !0 };
     return (
-        null != t && (n.channel_id = t),
-        (await s.Bo.post({ url: en.Rsh.APPLICATION_PROXY_TICKET(e), body: n, rejectWithError: !0 })).body.ticket
+        null != t && (i.channel_id = t),
+        null != n && (i.surface = n),
+        (await s.Bo.post({ url: en.Rsh.APPLICATION_PROXY_TICKET(e), body: i, rejectWithError: !0 })).body.ticket
     );
 }
 async function eC(e, t) {

@@ -35,7 +35,7 @@ async function E(e) {
     ((0, u.Yf)(n) === u.sV.MAIN && (o(), A()),
         i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: h, surface: n }));
     try {
-        let e = await (0, r.D2)(t, (0, u.h)(n));
+        let e = await (0, r.D2)(t, (0, u.h)(n), n.type);
         return (
             i.h.dispatch({
                 type: "FRAME_LAUNCH",
@@ -105,7 +105,7 @@ async function O(e) {
     let { applicationId: n, surface: l } = t;
     i.h.dispatch({ type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: n, frameId: e, refreshing: !0 });
     try {
-        let t = await (0, r.D2)(n, (0, u.h)(l));
+        let t = await (0, r.D2)(n, (0, u.h)(l), l.type);
         i.h.dispatch({ type: "FRAME_UPDATE_PROXY_TICKET", applicationId: n, frameId: e, proxyTicket: t });
     } catch (i) {
         let e = (0, s.A)(),
