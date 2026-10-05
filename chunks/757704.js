@@ -1224,6 +1224,13 @@ let l = [
             "While Conjure tests your app, its bar now sits above the Frame instead of over it, so your app\u2019s header stays in view. On phones and narrow windows the bar stays on one line, with Stop on the right.",
     },
     {
+        date: "2026-10-05",
+        time: "00:11",
+        platforms: ["desktop"],
+        summary:
+            "While Conjure tests your app, menus that open over your Frame stay clickable, and its blue outline fits the widget view too.",
+    },
+    {
         date: "2026-09-16",
         time: "00:01",
         platforms: ["mobile"],
