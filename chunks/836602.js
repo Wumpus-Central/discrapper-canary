@@ -132,13 +132,14 @@ let O = new C(a.h, {
         I = { ...I, tryItOutCustomTypingIndicatorStyle: t };
     },
     USER_PROFILE_SETTINGS_SET_TRY_IT_OUT_PRESET: function (e) {
-        let { banner: t, themeColors: n, avatarDecoration: i, displayNameStyles: r } = e;
+        let { lastPreset: t, banner: n, themeColors: i, avatarDecoration: r, displayNameStyles: a } = e;
         I = {
             ...I,
-            tryItOutBanner: t,
-            tryItOutThemeColors: n,
-            tryItOutAvatarDecoration: void 0 !== i ? i : I.tryItOutAvatarDecoration,
-            tryItOutDisplayNameStyles: r,
+            tryItOutLastPreset: void 0 !== t ? t : I.tryItOutLastPreset,
+            tryItOutBanner: n,
+            tryItOutThemeColors: i,
+            tryItOutAvatarDecoration: void 0 !== r ? r : I.tryItOutAvatarDecoration,
+            tryItOutDisplayNameStyles: a,
         };
     },
     USER_PROFILE_SETTINGS_CLEAR_ERRORS: function () {
