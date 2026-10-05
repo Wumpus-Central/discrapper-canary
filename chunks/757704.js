@@ -272,6 +272,13 @@ let l = [
             "Comment mode now picks whatever is under your pointer, not only buttons and headings, and outlines it so you can see what you are about to comment on. Each note is pinned to the exact spot you clicked, and its card opens out of that pin.",
     },
     {
+        date: "2026-10-04",
+        time: "22:27",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Comment mode works inside canvas games: point at a character, object, or button and the game highlights it.",
+    },
+    {
         date: "2026-09-28",
         time: "01:59",
         platforms: ["desktop", "mobile"],
