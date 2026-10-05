@@ -163,7 +163,7 @@ function M(e) {
     return R() && b(e);
 }
 function P(e) {
-    return !!M(e) && ((0, f.yO)(p.w_.NSFW_VOICE_CHANNEL), !0);
+    return !!M(e) && ((0, f.yO)(p.w_.NSFW_VOICE_CHANNEL, e), !0);
 }
 function U(e, t, n) {
     let i;

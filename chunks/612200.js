@@ -4,9 +4,9 @@ var i = n(73153);
 var r = n(174459),
     a = n(204925),
     s = n(652215);
-function l(e) {
+function l(e, t) {
     (r.default.track(s.HAw.OPEN_MODAL, { type: "Enter Your Birthday", source: { section: e } }),
-        i.h.dispatch({ type: "AGE_GATE_MODAL_OPEN", source: e }));
+        i.h.dispatch({ type: "AGE_GATE_MODAL_OPEN", source: e, channelId: t }));
 }
 function o(e) {
     (i.h.wait(() => i.h.dispatch({ type: "AGE_GATE_MODAL_CLOSE" })),
