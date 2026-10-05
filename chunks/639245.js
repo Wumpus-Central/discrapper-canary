@@ -28,17 +28,17 @@ var l = n(477900),
     O = n(624793),
     _ = n(652215),
     R = n(731383),
-    G = n(548118),
-    k = n(714991),
+    k = n(548118),
+    G = n(714991),
     P = n(492494),
     M = n(384684),
-    D = n(985242),
-    L = n(87719),
+    L = n(985242),
+    D = n(87719),
     w = n(465794),
     U = n(976860),
     z = n(309010),
-    B = n(967198),
-    V = n(287809),
+    V = n(967198),
+    B = n(287809),
     F = n(174459),
     J = n(486020),
     H = n(449054),
@@ -55,7 +55,7 @@ function ee(e) {
     let i,
         s,
         { node: a } = e;
-    (0, R.i)({ emojiId: a.emojiId, currentGuildId: B.A.getGuildId() });
+    (0, R.i)({ emojiId: a.emojiId, currentGuildId: V.A.getGuildId() });
     let r =
             ((n = t = a.name),
             (i = (0, o.bG)([Y.default], () => Y.default.locale.startsWith("en-"))),
@@ -118,7 +118,7 @@ let et = (e) => {
                               onClick: p,
                               children: [(0, l.jsx)("img", { src: j, alt: "", className: Q.$f }), " :"],
                           })
-                        : (0, l.jsx)(G.Ay, { size: G.Ay.Sizes.SMALL, className: Q.oi, guild: n }),
+                        : (0, l.jsx)(k.Ay, { size: k.Ay.Sizes.SMALL, className: Q.oi, guild: n }),
             }),
             (0, l.jsxs)(v.A, {
                 direction: v.A.Direction.VERTICAL,
@@ -127,7 +127,7 @@ let et = (e) => {
                     (0, l.jsxs)(v.A, {
                         align: v.A.Align.CENTER,
                         children: [
-                            (0, l.jsx)(k.A, { guild: n, className: Q.n2 }),
+                            (0, l.jsx)(G.A, { guild: n, className: Q.n2 }),
                             g
                                 ? (0, l.jsx)(m.D, {
                                       onClick: p,
@@ -277,17 +277,17 @@ function el(e) {
             onToggleShowMoreEmojis: C,
             guildEmoji: T,
             demoMode: y = !1,
-            nonce: G,
+            nonce: k,
         } = e,
-        k = (0, o.bG)([V.default], () => V.default.getCurrentUser()),
-        U = (0, o.bG)([B.A], () => B.A.getGuildId()),
-        z = W.Ay.isPremium(k),
+        G = (0, o.bG)([B.default], () => B.default.getCurrentUser()),
+        U = (0, o.bG)([V.A], () => V.A.getGuildId()),
+        z = W.Ay.isPremium(G),
         J = null != U && (U === g?.id || U === b?.id),
         H = null != b,
         Y = g?.isDiscoverable() ?? !1;
     y && ((z = !0), (Y = !0), (H = !1), (J = !1));
     let ee = {
-            page: null != (0, o.bG)([B.A], () => B.A.getGuildId()) ? _.liQ.GUILD_CHANNEL : _.liQ.DM_CHANNEL,
+            page: null != (0, o.bG)([V.A], () => V.A.getGuildId()) ? _.liQ.GUILD_CHANNEL : _.liQ.DM_CHANNEL,
             section: _.JJy.EMOJI_UPSELL_POPOUT,
         },
         {
@@ -315,7 +315,7 @@ function el(e) {
         },
         { disableTrack: !en },
     );
-    let eo = B.A.getGuildId(),
+    let eo = V.A.getGuildId(),
         eu = (0, K.O)({
             sourceType: d,
             expressionSourceApplication: x,
@@ -333,7 +333,7 @@ function el(e) {
                         location_page: ee.page,
                         location_section: ee.section,
                     }),
-                    (0, L.e)());
+                    (0, D.e)());
             },
         }),
         ed = H && el && !ea && ((z && en) || !z),
@@ -343,7 +343,7 @@ function el(e) {
             currentGuildId: eo,
             popoutData: eu,
             emojiSourceGuildId: g?.id,
-            nonce: G,
+            nonce: k,
             demoMode: y,
         }),
         ex = eu.type === K.u.JOIN_GUILD,
@@ -417,7 +417,7 @@ function el(e) {
                                 })
                               : void 0,
                         ed &&
-                            (0, l.jsx)(D.A, {
+                            (0, l.jsx)(L.A, {
                                 text: es ? $.intl.string($.t.yma8Vp) : $.intl.string($.t.nN2DIo),
                                 size: "sm",
                                 fullWidth: !0,

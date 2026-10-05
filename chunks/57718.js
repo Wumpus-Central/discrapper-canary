@@ -27,9 +27,9 @@ let T = function (t) {
             logotypeStyle: _,
             onLoadComplete: L,
         } = t,
-        y = (0, u.M)(T) ? x.NJ8.DARK : x.NJ8.LIGHT,
-        N = (0, C.a5)(r.id, y),
-        g = f && null != r.config.cosponsorMetadata && null != N;
+        N = (0, u.M)(T) ? x.NJ8.DARK : x.NJ8.LIGHT,
+        y = (0, C.a5)(r.id, N),
+        g = f && null != r.config.cosponsorMetadata && null != y;
     return (0, i.jsxs)("div", {
         className: o()(A.Iu, e),
         children: [
@@ -41,7 +41,7 @@ let T = function (t) {
                             ref: t,
                             className: A._Y,
                             alt: "",
-                            src: (0, d.tW)(r, d.fY.GAME_TILE, y).url,
+                            src: (0, d.tW)(r, d.fY.GAME_TILE, N).url,
                             style: {
                                 borderRadius: (function (t) {
                                     switch (t) {
@@ -65,7 +65,7 @@ let T = function (t) {
                         className: o()(A.lW, n, { [A.TO]: g }),
                         style: _,
                         alt: r.config.messages.gameTitle,
-                        src: (0, d.tW)(r, d.fY.LOGO_TYPE, y).url,
+                        src: (0, d.tW)(r, d.fY.LOGO_TYPE, N).url,
                         onLoad: L,
                     }),
             }),
@@ -85,7 +85,7 @@ let T = function (t) {
                                     className: o()(A.lW, A.TO, n),
                                     style: _,
                                     alt: r.config.cosponsorMetadata?.name ?? "",
-                                    src: N.url,
+                                    src: y.url,
                                     onLoad: L,
                                 }),
                         }),

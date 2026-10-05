@@ -1,4 +1,4 @@
-n.d(e, { default: () => w, i: () => W });
+n.d(e, { default: () => w, i: () => k });
 var s = n(477900),
     i = n(582128),
     r = n(503698),
@@ -18,8 +18,8 @@ var s = n(477900),
     O = n(192308),
     _ = n(775602),
     L = n(274670),
-    y = n(144779),
-    N = n(363195),
+    N = n(144779),
+    y = n(363195),
     g = n(178540),
     S = n(738822),
     m = n(104886),
@@ -27,9 +27,9 @@ var s = n(477900),
     R = n(291749),
     P = n(18437),
     D = n(590202),
-    p = n(971649),
-    v = n(901406),
-    h = n(792620),
+    v = n(971649),
+    h = n(901406),
+    p = n(792620),
     U = n(657792),
     j = n(518293),
     M = n(818348),
@@ -41,12 +41,12 @@ function w(t) {
         O = (0, i.useRef)(!1),
         U = (0, Q.UX)(),
         w = (0, P.Ut)(),
-        W = (0, p.vU)()?.getId(),
+        k = (0, v.vU)()?.getId(),
         X = (0, l.bG)([_.Ay], () => _.Ay.useReducedMotion),
         z = (0, j.Xf)({ useReducedMotion: X, className: b.Zf }),
-        V = f.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
-        F = (0, h.YL)(e),
-        K = (0, l.bG)([N.A], () => N.A.getState().theme),
+        F = f.filter((t) => ["xbox", "playstation"].includes(t.connected_account_type)),
+        V = (0, p.YL)(e),
+        K = (0, l.bG)([y.A], () => y.A.getState().theme),
         B = (0, c.M)(K) ? M.NJ.DARK : M.NJ.LIGHT,
         { startConsoleQuest: Y, startingConsoleQuest: G } = (0, Q.Wj)({
             questId: e.id,
@@ -54,13 +54,13 @@ function w(t) {
                 (z.startAnimation(),
                     (0, m.E5)(m.kI.STEP_2_CLICKED_INTERNAL, "quest_console_connection_errors_modal")
                         ? (0, L.r)({
-                              type: y.F.CLICK_INTERNAL,
+                              type: N.F.CLICK_INTERNAL,
                               adCreativeType: a.p.QUEST,
                               adCreativeId: e.id,
                               questContentCTA: D.Cy.DEFIBRILLATOR,
                               surfaceId: S.uF.CONNECTIONS_MODAL,
                               sourceQuestContent: I,
-                              impressionId: W,
+                              impressionId: k,
                           })
                         : w({
                               questId: e.id,
@@ -87,12 +87,12 @@ function w(t) {
                     variant: "secondary",
                     onClick: () =>
                         void (r(),
-                        (0, v.b6)(
+                        (0, h.b6)(
                             { quest: e },
                             {
                                 content: S.uF.CONNECTIONS_MODAL,
                                 ctaContent: D.Cy.VIEW_CONSOLE_CONNECTIONS_LINK,
-                                impressionId: W,
+                                impressionId: k,
                                 sourceQuestContent: I,
                             },
                         )),
@@ -128,12 +128,12 @@ function w(t) {
                     (0, s.jsxs)("div", {
                         className: b.ei,
                         children: [
-                            (0, s.jsx)(k, { icon: (0, s.jsx)(x.k, { size: "sm" }), text: q.intl.string(q.t.br3uIi) }),
-                            (0, s.jsx)(k, {
+                            (0, s.jsx)(W, { icon: (0, s.jsx)(x.k, { size: "sm" }), text: q.intl.string(q.t.br3uIi) }),
+                            (0, s.jsx)(W, {
                                 icon: (0, s.jsx)(A.GameControllerIcon, { size: "sm" }),
                                 text: q.intl.string(q.t.XF4wuA),
-                                errors: F ? void 0 : V.map((t) => t.message),
-                                gameTile: F
+                                errors: V ? void 0 : F.map((t) => t.message),
+                                gameTile: V
                                     ? (0, s.jsx)(C.m, {
                                           "aria-label": e.config.messages.gameTitle,
                                           __unsupportedReactNodeAsText: (0, s.jsxs)("div", {
@@ -165,7 +165,7 @@ function w(t) {
         })
     );
 }
-function k(t) {
+function W(t) {
     let { icon: e, text: n, errors: i = [], gameTile: r } = t,
         a = i.length > 0,
         l = a ? I.e : T.Q;
@@ -214,7 +214,7 @@ function k(t) {
         ],
     });
 }
-function W(t) {
+function k(t) {
     (0, O.openModalLazy)(async () => {
         let { default: e } = await Promise.resolve().then(n.bind(n, 988436));
         return function (n) {

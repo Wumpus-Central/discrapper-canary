@@ -576,8 +576,8 @@ x.Ay.initialize();
 var e0 = n(21599),
     e1 = n(202091),
     e2 = n(717421),
-    e3 = n(661531),
-    e4 = n(993077),
+    e4 = n(661531),
+    e3 = n(993077),
     e8 = n(235986),
     e7 = n(408738);
 function e5(e) {
@@ -587,9 +587,9 @@ function e5(e) {
             (0, d.jsx)(P._V, { src: n(431979) }),
             (0, d.jsx)(P.hE, { className: M()($.QX, $.QB, eI.tR), children: q.intl.string(q.t.eL5z0i) }),
             (0, d.jsx)(P.tK, { className: $.C2, children: q.intl.string(q.t.poAv63) }),
-            (0, d.jsxs)(e4.Z, {
+            (0, d.jsxs)(e3.Z, {
                 className: e7.Nr,
-                type: e4.Z.Types.CUSTOM,
+                type: e3.Z.Types.CUSTOM,
                 children: [
                     (0, d.jsx)("img", { alt: "", className: e7.q8, src: n(355912) }),
                     (0, d.jsx)("img", { alt: "", className: e7.dw, src: n(610925) }),
@@ -603,7 +603,7 @@ function e5(e) {
                                 tag: "strong",
                                 className: e7.p8,
                                 variant: "text-md/normal",
-                                style: { color: e3.A.unsafe_rawColors.PRIMARY_300.css },
+                                style: { color: e4.A.unsafe_rawColors.PRIMARY_300.css },
                                 children: t,
                             }),
                             (0, d.jsx)("div", {
@@ -1016,8 +1016,8 @@ var tJ = n(153488),
     t0 = n(95477),
     t1 = n(866665),
     t2 = n(913122),
-    t3 = n(934337),
-    t4 = n(15552),
+    t4 = n(934337),
+    t3 = n(15552),
     t8 = n(536637),
     t7 = n.n(t8),
     t5 = n(955437),
@@ -1139,7 +1139,7 @@ let ns = (0, tT.mj)({
     variations: { 1: { trackingCopy: !0 } },
 });
 function nr() {
-    let { required: e, checked: t } = (0, t3.mZ)(),
+    let { required: e, checked: t } = (0, t4.mZ)(),
         n = (function (e, t) {
             let { trackingCopy: n } = ns.useConfig({ location: t });
             return q.intl.string(n ? q.t.LSoXK5 : e);
@@ -1147,7 +1147,7 @@ function nr() {
     return e
         ? (0, d.jsx)("div", {
               className: $.Ot,
-              children: (0, d.jsx)(nn.J, { label: n, checked: t, onChange: t3.Bw, labelType: "secondary" }),
+              children: (0, d.jsx)(nn.J, { label: n, checked: t, onChange: t4.Bw, labelType: "secondary" }),
           })
         : null;
 }
@@ -1185,7 +1185,7 @@ function no(e) {
     }, []);
     let T = l.length > 0 && s.length > 0,
         S = h.useCallback(async () => {
-            let e = t3.mZ.getState();
+            let e = t4.mZ.getState();
             (E(!0), g({}));
             try {
                 (await nt({
@@ -1200,7 +1200,7 @@ function no(e) {
                     p());
             } catch (t) {
                 if ((E(!1), !(t instanceof t2.LG))) return;
-                let e = (0, t4.W)(t);
+                let e = (0, t3.W)(t);
                 (g(e),
                     null != e.email || null != e.phone ? N.current?.focus() : null != e.password && v.current?.focus(),
                     "number" == typeof e.retry_after && _(e.retry_after));
@@ -2025,20 +2025,20 @@ let n0 = { [nK.tY.MESSAGE]: q.t.fuqnBC, [nK.tY.USER]: q.t.F4jrRW, [nK.tY.GUILD]:
             }),
         });
     };
-var n3 = n(881636);
-let n4 = "https://stopncii.org/partners/global-network-of-partners/",
+var n4 = n(881636);
+let n3 = "https://stopncii.org/partners/global-network-of-partners/",
     n8 = {
         [nK.sl.TIDA]: {
             selectionLabel: q.t.jMSjZL,
             selectionDescription: q.t.qEaUPS,
             helpBody: q.t.R2Q57u,
-            supportOrgURL: n4,
+            supportOrgURL: n3,
         },
         [nK.sl.UK_STOPNCII]: {
             selectionLabel: q.t.jMSjZL,
             selectionDescription: q.t.J0tNny,
             helpBody: q.t.R2Q57u,
-            supportOrgURL: n4,
+            supportOrgURL: n3,
         },
         [nK.sl.BRAZIL_ONLINE_SAFETY_OF_WOMEN]: {
             selectionLabel: q.t.jMSjZL,
@@ -2086,7 +2086,7 @@ let n6 = (e) => {
                                     }),
                                 ],
                             }),
-                            (0, d.jsx)(n3.u, { size: "sm" }),
+                            (0, d.jsx)(n4.u, { size: "sm" }),
                         ],
                     }),
                     (0, d.jsxs)(n$.D, {
@@ -2103,7 +2103,7 @@ let n6 = (e) => {
                                     }),
                                 ],
                             }),
-                            (0, d.jsx)(n3.u, { size: "sm" }),
+                            (0, d.jsx)(n4.u, { size: "sm" }),
                         ],
                     }),
                 ],
@@ -2709,8 +2709,8 @@ function i0(e) {
 }
 var i1 = n(895600),
     i2 = n(506774),
-    i3 = n(104798),
-    i4 = n(991512);
+    i4 = n(104798),
+    i3 = n(991512);
 let i8 = "mweb_handoff_nonce",
     i7 = "mweb_handoff_nonce_expiration",
     i5 = +tX.A.Millis.MINUTE,
@@ -2791,7 +2791,7 @@ let lt = () => {
                 : void 0;
     return null != s && i6.has(s)
         ? (0, d.jsx)("div", {
-              className: i4.Un,
+              className: i3.Un,
               children: (0, d.jsx)(H.E, {
                   color: "interactive-text-default",
                   variant: "text-sm/semibold",
@@ -2799,14 +2799,14 @@ let lt = () => {
               }),
           })
         : (0, d.jsxs)("div", {
-              className: i4.kL,
+              className: i3.kL,
               children: [
                   (0, d.jsx)(H.E, { variant: "text-sm/semibold", children: c }),
                   (0, d.jsx)(W.$, {
                       variant: "overlay-primary",
                       text: q.intl.string(q.t.NcC759),
                       onClick: function () {
-                          let e = i3.A.generateNonce();
+                          let e = i4.A.generateNonce();
                           (i2.w.set(i8, e), i2.w.set(i7, Date.now() + i5));
                           let t = new URL(D.J$u),
                               n = new URLSearchParams(window.location.search);
@@ -3321,7 +3321,7 @@ function lA(e) {
                                 invite: t,
                             });
                         } catch (e) {
-                            k((0, t4.p)(e));
+                            k((0, t3.p)(e));
                         }
                     },
                     [L, _, x, N, C, w, G, t],
@@ -3385,7 +3385,7 @@ function lA(e) {
                                       subtitle: q.intl.format(q.t["6u5hQ9"], { email: t }),
                                   });
                         } catch (e) {
-                            k((0, t4.p)(e));
+                            k((0, t3.p)(e));
                         }
                     },
                     [x, _],
@@ -3670,7 +3670,7 @@ function lR(e) {
     })({ apiErrors: X, emailRef: j, usernameRef: N, globalNameRef: v, passwordRef: C });
     let em = h.useCallback(async () => {
             let e = null != i ? i.skuId : null,
-                t = t3.mZ.getState(),
+                t = t4.mZ.getState(),
                 r = (0, ix.uJ)(_) ? null : b === _;
             (Q._.dispatch(D.jej.WAVE_EMPHASIZE), V(!0), Y({}));
             try {
@@ -3690,7 +3690,7 @@ function lR(e) {
                     o?.());
             } catch (t) {
                 if ((V(!1), !(t instanceof t2.LG))) return;
-                let e = (0, t4.W)(t);
+                let e = (0, t3.W)(t);
                 (Y(e), s?.(e), "number" == typeof e.retry_after && z(e.retry_after));
             }
         }, [i, l, n, I, s, o, _, b, S, O, w, U, z]),
@@ -4030,7 +4030,7 @@ function lB(e) {
                     r?.());
             } catch (t) {
                 if ((j(!1), !(t instanceof t2.LG))) return;
-                let e = (0, t4.W)(t);
+                let e = (0, t3.W)(t);
                 (v(e), l?.(e), "number" == typeof e.retry_after && y(e.retry_after));
             }
         }, [t, m, f, E, l, r, y, v, j]),
@@ -4660,8 +4660,8 @@ function l2(e) {
             });
 }
 (x.Ay.initialize(), n(938796));
-var l3 = n(821418),
-    l4 = n(665260),
+var l4 = n(821418),
+    l3 = n(665260),
     l8 = n(362474),
     l7 = n(695366),
     l5 = n(964486),
@@ -4975,7 +4975,7 @@ function sR(e) {
 var sL = n(996682);
 function sO(e) {
     let {
-        color: t = e3.A.colors.ICON_STRONG,
+        color: t = e4.A.colors.ICON_STRONG,
         "aria-label": n,
         "aria-hidden": i,
         role: l,
@@ -5400,8 +5400,8 @@ x.Ay.initialize();
 var s1 = n(163050),
     s2 = n(498206);
 x.Ay.initialize();
-var s3 = n(701273);
-function s4(e) {
+var s4 = n(701273);
+function s3(e) {
     n.g.location.assign(e);
 }
 (x.Ay.initialize(), n(426620), x.Ay.initialize());
@@ -5576,7 +5576,7 @@ let s8 = ij(lA),
                             let { channel: e } = t;
                             if (null != e)
                                 if (((0, lF.C)(lM.zY.INVITE_UNCLAIMED), null != t.guild)) {
-                                    let e = (0, l4.Lt)(t.flags ?? 0, l3.Q.IS_APPLICATION_BYPASS),
+                                    let e = (0, l3.Lt)(t.flags ?? 0, l4.Q.IS_APPLICATION_BYPASS),
                                         n =
                                             t.guild.features?.includes(
                                                 D.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED,
@@ -5640,7 +5640,7 @@ let s8 = ij(lA),
         if (T === D.elq.EXPIRED) return (0, d.jsx)(s$, { banned: !1, invite: r, handleDefaultTransition: C });
         if (T === D.elq.BANNED) return (0, d.jsx)(s$, { banned: !0, invite: r, handleDefaultTransition: C });
         if (T === D.elq.RESOLVED) {
-            if (o && (0, l4.Lt)(r.flags ?? 0, l3.Q.IS_GUEST_INVITE))
+            if (o && (0, l3.Lt)(r.flags ?? 0, l4.Q.IS_GUEST_INVITE))
                 return (
                     j.Ay.openApp(t),
                     l8.u.set(l6.B, t),
@@ -5801,7 +5801,7 @@ let s8 = ij(lA),
                 });
     }),
     rl = ij(function (e) {
-        let { location: t, transitionTo: n = s4 } = e,
+        let { location: t, transitionTo: n = s3 } = e,
             [i, l] = h.useState("submitting"),
             s = h.useRef(void 0);
         (0, l5.Ay)(() => {
@@ -5824,7 +5824,7 @@ let s8 = ij(lA),
             }, [n]),
             a = h.useCallback(() => {
                 (L.default.track(D.HAw.VERIFY_ACCOUNT_APP_OPENED, { verifying_user_id: s.current }),
-                    (0, s3.A)("verify_email"));
+                    (0, s4.A)("verify_email"));
             }, []);
         return "failed" === i
             ? (0, d.jsx)(eB, {

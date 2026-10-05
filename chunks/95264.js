@@ -1,10 +1,10 @@
-t.d(e, { A: () => u });
-var a = t(477900);
-t(582128);
-var n = t(192308);
-function u(r, e) {
+e.d(t, { A: () => r });
+var d = e(477900);
+e(582128);
+var n = e(192308);
+function r(a, t) {
     (0, n.openModalLazy)(async () => {
-        let { default: n } = await t.e("155793").then(t.bind(t, 500008));
-        return (t) => (0, a.jsx)(n, { ...t, project: r, currentGuildId: e });
+        let { default: n } = await e.e("155793").then(e.bind(e, 500008));
+        return (e) => (0, d.jsx)(n, { ...e, project: a, currentGuildId: t });
     });
 }

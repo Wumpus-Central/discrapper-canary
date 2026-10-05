@@ -10,8 +10,8 @@ var l = n(477900),
     c = n(440293),
     _ = n(599941),
     E = n(960253),
-    S = n(164956),
-    f = n(976860),
+    f = n(164956),
+    S = n(976860),
     A = n(808728),
     I = n(71393),
     g = n(174459),
@@ -28,7 +28,7 @@ function T() {
 function L(e) {
     let { children: t, initialTab: n, guildId: r } = e,
         s = (0, a.bG)([I.A], () => I.A.getGuild(r)),
-        T = (0, a.bG)([S.A], () => S.A.isViewingServerShop(r)),
+        T = (0, a.bG)([f.A], () => f.A.isViewingServerShop(r)),
         L = (0, C.P)(s),
         w = (0, c.w)(r),
         O = s?.features.has(v.GuildFeatures.PRODUCTS_AVAILABLE_FOR_PURCHASE) === !0,
@@ -67,7 +67,7 @@ function L(e) {
                         ? (e.stopPropagation(),
                           b(h.B.GUILD_ROLE_SUBSCRIPTIONS),
                           (t.action_taken = R.hN.DISMISS_TAB_PREVIEW))
-                        : ((0, f.bG)(v.BVt.CHANNEL(r, A.Ay.getDefaultChannel(r)?.id)),
+                        : ((0, S.bG)(v.BVt.CHANNEL(r, A.Ay.getDefaultChannel(r)?.id)),
                           (t.action_taken = R.hN.DISMISS_FULL_PREVIEW)),
                         g.default.track(v.HAw.GUILD_SHOP_PREVIEW_CLICK, t));
                 },

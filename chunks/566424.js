@@ -25,8 +25,8 @@ function x(e) {
             anchor: b = !1,
         } = e,
         [_, y] = a.useState(!1),
-        S = a.useContext(g),
-        N = a.useId(),
+        N = a.useContext(g),
+        S = a.useId(),
         A = a.useCallback(() => y((e) => !e), []),
         { text: T, phase: w } = (0, c.Q)(n),
         C = _ ? s.a : u._,
@@ -46,9 +46,9 @@ function x(e) {
         }),
         E = (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)("span", { className: h.$m, children: M }, `face-${S}`),
+                (0, l.jsx)("span", { className: h.$m, children: M }, `face-${N}`),
                 i
-                    ? (0, l.jsx)("span", { className: r()(h.$m, h.pw), "aria-hidden": !0, children: M }, `shine-${S}`)
+                    ? (0, l.jsx)("span", { className: r()(h.$m, h.pw), "aria-hidden": !0, children: M }, `shine-${N}`)
                     : null,
             ],
         });
@@ -66,13 +66,13 @@ function x(e) {
                       tag: "div",
                       className: r()(h.ep, h.EK),
                       "aria-expanded": _,
-                      "aria-controls": N,
+                      "aria-controls": S,
                       "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: T }),
                       onClick: A,
                       children: E,
                   })
                 : (0, l.jsx)("div", { className: h.ep, children: E }),
-            (0, l.jsx)("div", { id: N, hidden: !_, className: h.BA, children: k }),
+            (0, l.jsx)("div", { id: S, hidden: !_, className: h.BA, children: k }),
         ],
     });
 }

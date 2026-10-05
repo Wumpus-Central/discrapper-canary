@@ -20,8 +20,8 @@ var l = n(477900),
     b = n(427262),
     _ = n(248675),
     y = n(375708),
-    S = n(59678);
-function N(e) {
+    N = n(59678);
+function S(e) {
     let { userId: t } = e,
         n = (0, x.bG)([v.default], () => v.default.getUser(t), [t]),
         a = (0, b.tx)(n);
@@ -31,7 +31,7 @@ function N(e) {
         text: i,
         ariaHidden: !0,
         children: (0, l.jsx)("span", {
-            className: S.jz,
+            className: N.jz,
             role: "img",
             "aria-label": i,
             children: (0, l.jsx)(j.A, { user: n, size: k._3.SIZE_16, "aria-hidden": !0 }),
@@ -50,7 +50,7 @@ function w(e) {
         v = "failed" === n.status ? "text-feedback-critical" : "detail" === i ? "text-muted" : "text-default",
         b = "text-muted" === v,
         w = c && b ? "none" : m && b ? "currentColor" : v,
-        C = r()(S.iq, { [T.Hz]: c && b }),
+        C = r()(N.iq, { [T.Hz]: c && b }),
         M = "detail" === i ? "text-md/normal" : "text-sm/normal",
         E = "detail" === i ? "text-sm/normal" : "text-xs/normal",
         P = null != t ? n.screenshots : [],
@@ -58,7 +58,7 @@ function w(e) {
     if (0 === j.length && 0 === P.length && 0 === B.length)
         return (0, l.jsx)("li", {
             "data-step-kind": n.labelKey ?? "step",
-            className: S.Dx,
+            className: N.Dx,
             children: (0, l.jsx)(s.E, {
                 tag: "div",
                 variant: M,
@@ -68,14 +68,14 @@ function w(e) {
                 children: (0, l.jsx)(A.A, { text: k, variant: M, prose: !0 }),
             }),
         });
-    let D = m ? u.a : d._;
+    let G = m ? u.a : d._;
     return (0, l.jsxs)("li", {
         "data-step-kind": n.labelKey ?? "step",
-        className: S.Dx,
+        className: N.Dx,
         children: [
             (0, l.jsxs)(o.D, {
                 tag: "div",
-                className: S.kG,
+                className: N.kG,
                 "aria-expanded": m,
                 "aria-controls": x,
                 "aria-label": y.intl.formatToPlainString(_.default["KE1KI+"], { step: k }),
@@ -88,20 +88,20 @@ function w(e) {
                         className: C,
                         children: (0, l.jsx)(A.A, { text: k, variant: M, prose: !0 }),
                     }),
-                    (0, l.jsx)(D, { size: "xs", color: "currentColor", className: S.Ue }),
+                    (0, l.jsx)(G, { size: "xs", color: "currentColor", className: N.Ue }),
                 ],
             }),
             (0, l.jsxs)("div", {
                 id: x,
                 hidden: !m,
-                className: S.yJ,
+                className: N.yJ,
                 children: [
                     j.map((e, t) => {
                         let a = n.detailDrivenBy[t];
                         return (0, l.jsxs)(
                             "div",
                             {
-                                className: S.l6,
+                                className: N.l6,
                                 children: [
                                     (0, l.jsx)(s.E, {
                                         tag: "div",
@@ -111,7 +111,7 @@ function w(e) {
                                         className: r()({ [T.Hz]: c && b }),
                                         children: (0, l.jsx)(A.A, { text: e, variant: E }),
                                     }),
-                                    null != a ? (0, l.jsx)(N, { userId: a }) : null,
+                                    null != a ? (0, l.jsx)(S, { userId: a }) : null,
                                 ],
                             },
                             t,
@@ -119,7 +119,7 @@ function w(e) {
                     }),
                     null != t && P.length > 0
                         ? (0, l.jsx)("div", {
-                              className: S.y8,
+                              className: N.y8,
                               children: P.map((e) => (0, l.jsx)(I, { projectId: t, screenshotId: e }, e)),
                           })
                         : null,

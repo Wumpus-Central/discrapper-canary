@@ -1,4 +1,4 @@
-n.d(t, { A: () => k });
+n.d(t, { A: () => G });
 var l = n(477900),
     i = n(582128),
     s = n(922016),
@@ -100,8 +100,8 @@ function R(e) {
         children: (0, l.jsx)(O, { guildId: t, leaderboardWinnerData: s, title: c, detailText: a, onClose: i }),
     });
 }
-var G = n(631949);
-function k(e) {
+var k = n(631949);
+function G(e) {
     let { guildId: t, userId: n } = e,
         x = i.useRef(null),
         [h, j] = i.useState(!1),
@@ -162,7 +162,7 @@ function k(e) {
                 children: (0, l.jsx)(o.D, {
                     tag: "span",
                     innerRef: x,
-                    className: G.M,
+                    className: k.M,
                     "aria-label": I,
                     "aria-haspopup": "dialog",
                     "aria-expanded": h,

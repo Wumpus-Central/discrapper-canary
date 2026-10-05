@@ -9,7 +9,7 @@ var l = n(582128),
     d = n(375708);
 function c(e, t, n, c) {
     let _ = l.useRef(null),
-        [E, S] = l.useState(!1);
+        [E, f] = l.useState(!1);
     return {
         handleCopyServerIp: l.useCallback(
             () => (
@@ -17,9 +17,9 @@ function c(e, t, n, c) {
                 (0, u.ed)(e, t, n),
                 (0, a.C)(c ?? ""),
                 (0, i.P)((0, r.o)(d.intl.string(d.t["+5kSoW"]), s.Ck.SUCCESS)),
-                S(!0),
+                f(!0),
                 (_.current = setTimeout(() => {
-                    S(!1);
+                    f(!1);
                 }, 2 * o.A.Millis.SECOND)),
                 () => {
                     null != _.current && clearTimeout(_.current);

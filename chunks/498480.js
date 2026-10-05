@@ -1,20 +1,20 @@
 i.d(t, {
-    Wp: () => N,
+    Wp: () => v,
     pj: () => C,
     cq: () => I,
-    Jr: () => P,
-    hU: () => M,
+    Jr: () => y,
+    hU: () => P,
     as: () => L,
     e_: () => G,
     hE: () => V,
     jL: () => b,
     K: () => S,
     tT: () => R,
-    dk: () => y,
+    dk: () => M,
     z9: () => x,
     Kz: () => O,
     Ce: () => U,
-    KH: () => v,
+    KH: () => N,
     QK: () => j,
 });
 var s = i(390544),
@@ -289,14 +289,14 @@ function R(e, t) {
         }
     });
 }
-function N(e, t) {
+function v(e, t) {
     e &&
         o.default.track(A.HAw.GAME_SERVER_HOSTING_THIRD_PARTY_CONSENT_ACCEPTED, {
             user_id: l.default.getCurrentUser()?.id,
             provider: t,
         });
 }
-function v() {
+function N() {
     n.h.dispatch({ type: "GAME_SERVER_REGION_PING_STATE_RESET" });
 }
 function j(e, t) {
@@ -326,7 +326,7 @@ function G(e, t, i) {
         oldFormErrors: !0,
     });
 }
-function P(e) {
+function y(e) {
     return r.Bo.get({ url: A.Rsh.GAME_SERVER_REGIONS(e), rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
         (e) => {
             n.h.dispatch({
@@ -336,7 +336,7 @@ function P(e) {
         },
     );
 }
-function y() {
+function M() {
     return r.Bo.get({ url: A.Rsh.GAME_SERVER_MY_REGIONS, rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
         (e) => {
             n.h.dispatch({
@@ -347,7 +347,7 @@ function y() {
         },
     );
 }
-function M() {
+function P() {
     return r.Bo.get({ url: A.Rsh.GAME_SERVERS_ME, rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then((e) => {
         let t = e.body;
         n.h.dispatch({
@@ -369,10 +369,10 @@ function U(e, t) {
         : (n.h.dispatch({ type: "GAME_SERVER_UPDATE", guildId: void 0, gameServer: { ...i, name: t } }),
           r.Bo.patch({ url: A.Rsh.GAME_SERVER_ME(i.id), body: { name: t }, rejectWithError: !0 })
               .then(() => {
-                  M().catch(() => {});
+                  P().catch(() => {});
               })
               .catch((e) => {
-                  throw (M().catch(() => {}), e);
+                  throw (P().catch(() => {}), e);
               }));
 }
 function O(e) {
@@ -390,7 +390,7 @@ function O(e) {
                 });
             })
             .catch((e) => {
-                throw (M().catch(() => {}), e);
+                throw (P().catch(() => {}), e);
             })
     );
 }

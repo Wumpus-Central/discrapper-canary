@@ -1,4 +1,4 @@
-n.d(t, { J$: () => I, WM: () => s.WM, cZ: () => p, eG: () => A, vd: () => C, vm: () => _, zh: () => E, zv: () => f });
+n.d(t, { J$: () => I, WM: () => s.WM, cZ: () => C, eG: () => A, vd: () => p, vm: () => _, zh: () => E, zv: () => f });
 var r = n(544180),
     u = n(396813),
     l = n(859703),
@@ -6,8 +6,8 @@ var r = n(544180),
     o = n(561844),
     s = n(546121),
     a = n(710969),
-    c = n(792620),
-    d = n(652215);
+    d = n(792620),
+    c = n(652215);
 function f(e, t) {
     (0, a.Ic)(e) || e.userStatus?.enrolledAt == null || e.userStatus?.completedAt != null || (0, u.uI)(e.id, t);
 }
@@ -26,30 +26,30 @@ function _(e) {
     if (null == s) return;
     let a = l.A.getQuest(t);
     null != a && a.userStatus?.enrolledAt != null && a.userStatus?.completedAt == null && f(a, s.maxTimestampSec);
-    let c = E(s.maxTimestampSec, s.duration);
+    let d = E(s.maxTimestampSec, s.duration);
     ((0, o.av)({
         questId: t,
-        event: d.HAw.QUEST_VIDEO_PROGRESSED,
-        properties: { progress: c, video_timestamp_seconds: s.maxTimestampSec, video_session_id: u },
+        event: c.HAw.QUEST_VIDEO_PROGRESSED,
+        properties: { progress: d, video_timestamp_seconds: s.maxTimestampSec, video_session_id: u },
         sourceQuestContent: n,
     }),
         (0, o.av)({
             questId: t,
-            event: d.HAw.QUEST_VIDEO_MODAL_CLOSED,
+            event: c.HAw.QUEST_VIDEO_MODAL_CLOSED,
             properties: {
-                video_progress: c,
+                video_progress: d,
                 video_session_id: u,
                 network_connection_speed: r.A.getEffectiveConnectionSpeed(),
             },
             sourceQuestContent: n,
         }));
 }
-function p(e) {
+function C(e) {
     return `VIDEO-QUEST-${e}`;
 }
-function C(e, t) {
+function p(e, t) {
     return e >= t - 1 ? Math.max(e, t) : e;
 }
 function I(e) {
-    return !!(0, c.vv)(e) && (0, n(192308).hasModalOpen)(p(e.id));
+    return !!(0, d.vv)(e) && (0, n(192308).hasModalOpen)(C(e.id));
 }

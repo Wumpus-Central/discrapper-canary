@@ -13,16 +13,16 @@ var i = n(477900),
     p = n(821609),
     g = n(331322),
     _ = n(297264),
-    w = n(477782),
-    m = n(687966),
+    m = n(477782),
+    w = n(687966),
     E = n(404778),
     A = n(793574),
     v = n(688810),
     y = n(206828),
     T = n(486610),
     C = n(531913),
-    I = n(417270),
-    b = n(7437),
+    b = n(417270),
+    I = n(7437),
     R = n(375708),
     O = n(429913),
     N = n(5960),
@@ -147,28 +147,28 @@ let J = Object.assign(
                         trackEntryPointImpression: !0,
                     }),
                     {
-                        fetched: w,
-                        hasAlreadyLinked: m,
+                        fetched: m,
+                        hasAlreadyLinked: w,
                         canStartAuthorization: E,
                         startAuthorization: T,
                         token: C,
                     } = (0, y.RD)(h),
-                    { analyticsLocations: I } = (0, v.Ay)(A.A.USER_PROFILE_APPLICATION_WIDGET),
-                    b = r.useCallback(() => {
+                    { analyticsLocations: b } = (0, v.Ay)(A.A.USER_PROFILE_APPLICATION_WIDGET),
+                    I = r.useCallback(() => {
                         E &&
                             (t({
-                                action: m
+                                action: w
                                     ? "PRESS_APPLICATION_WIDGET_LINKED_RECONNECT"
                                     : "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                                 applicationId: l.applicationId,
                             }),
-                            T({ analyticsLocations: I }));
-                    }, [E, m, T, t, l.applicationId, I]),
-                    R = null == o && w && !m && E,
+                            T({ analyticsLocations: b }));
+                    }, [E, w, T, t, l.applicationId, b]),
+                    R = null == o && m && !w && E,
                     N =
                         null == o &&
-                        w &&
                         m &&
+                        w &&
                         E &&
                         null != C &&
                         !Array.from(u._.APPLICATION_IDENTITIES_SCOPES).some((e) => C.scopes.includes(e)) &&
@@ -193,7 +193,7 @@ let J = Object.assign(
                     isCurrentUser: s,
                     game: g,
                     openGameProfileModal: _,
-                    handleConnect: b,
+                    handleConnect: I,
                     showConnectCta: R,
                     showReconnectCta: N,
                     headerTitle: D,
@@ -203,12 +203,12 @@ let J = Object.assign(
             q = e.rendererProps ?? G,
             $ = (0, N.A)(n.applicationId, B.isCurrentUser),
             V = (function (e, t) {
-                let { pending: n, refresh: r } = (0, b.A)(e);
+                let { pending: n, refresh: r } = (0, I.A)(e);
                 return t
-                    ? (0, i.jsx)(w.Dr, {
+                    ? (0, i.jsx)(m.Dr, {
                           id: "application-widget-refresh",
                           label: R.intl.string(R.t.wzzjk9),
-                          leadingAccessory: { type: "icon", icon: I.RetryIcon },
+                          leadingAccessory: { type: "icon", icon: b.RetryIcon },
                           disabled: n,
                           action: r,
                       })
@@ -238,10 +238,10 @@ let J = Object.assign(
                   additionalManageWidgetMenuItems: (0, i.jsxs)(i.Fragment, {
                       children: [
                           null != B.game
-                              ? (0, i.jsx)(w.Dr, {
+                              ? (0, i.jsx)(m.Dr, {
                                     id: "view-game-profile",
                                     label: "View Game Profile",
-                                    leadingAccessory: { type: "icon", icon: m.GameControllerIcon },
+                                    leadingAccessory: { type: "icon", icon: w.GameControllerIcon },
                                     action: B.openGameProfileModal,
                                 })
                               : null,

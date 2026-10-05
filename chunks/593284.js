@@ -28,16 +28,16 @@ var l = n(477900),
     O = n(696451),
     _ = n(317525),
     R = n(71393),
-    G = n(287809),
-    k = n(427262),
+    k = n(287809),
+    G = n(427262),
     P = n(375708),
     M = n(165648),
-    D = n(778724);
-function L(e) {
+    L = n(778724);
+function D(e) {
     let { member: t, guildId: s, channelId: a, role: r } = e,
         u = i.useRef(null),
         d = (0, o.bG)([R.A], () => R.A.getGuild(s)?.ownerId, [s]),
-        c = (0, o.bG)([G.default], () => G.default.getUser(t.userId), [t.userId]),
+        c = (0, o.bG)([k.default], () => k.default.getUser(t.userId), [t.userId]),
         m = (0, o.bG)([y.A], () => y.A.getChannel(a), [a]);
     return null == c || null == m
         ? null
@@ -196,13 +196,13 @@ function w(e) {
             [s],
         ),
         h = (0, o.yK)(
-            [O.Ay, G.default],
+            [O.Ay, k.default],
             () => {
                 let e = O.Ay.getMembers(s),
                     t = null == n || n === x ? e : e.filter((e) => e.roles.includes(n));
                 return a()(t)
-                    .filter((e) => null != G.default.getUser(e.userId))
-                    .sortBy((e) => e.nick ?? k.Ay.getName(G.default.getUser(e.userId)))
+                    .filter((e) => null != k.default.getUser(e.userId))
+                    .sortBy((e) => e.nick ?? G.Ay.getName(k.default.getUser(e.userId)))
                     .value();
             },
             [s, n, x],
@@ -219,7 +219,7 @@ function w(e) {
         f = i.useMemo(
             () =>
                 null != g
-                    ? h.map((e) => (0, l.jsx)(L, { member: e, guildId: s, channelId: r, role: g }, e.userId))
+                    ? h.map((e) => (0, l.jsx)(D, { member: e, guildId: s, channelId: r, role: g }, e.userId))
                     : [],
             [r, s, g, h],
         );
@@ -271,7 +271,7 @@ function U(e) {
                     (0, l.jsx)(c.W, {
                         color: (0, r.Hl)(j.color),
                         colors: T,
-                        className: D.m,
+                        className: L.m,
                         background: !1,
                         tooltip: !1,
                     }),

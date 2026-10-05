@@ -1,4 +1,4 @@
-(n.d(t, { A: () => B }), n(321073));
+(n.d(t, { A: () => V }), n(321073));
 var l = n(477900),
     i = n(582128),
     s = n(503698),
@@ -110,8 +110,8 @@ function _(e) {
     });
 }
 var R = n(3026),
-    G = n(208971);
-function k(e) {
+    k = n(208971);
+function G(e) {
     let t,
         {
             customStatusActivity: n,
@@ -123,7 +123,7 @@ function k(e) {
             hideEmoji: c = !1,
             hideTooltip: m = !1,
         } = e,
-        x = (0, G.G)(n?.state);
+        x = (0, k.G)(n?.state);
     if (null == n) return null;
     let h = n?.emoji,
         g = null != x && "" !== x,
@@ -148,8 +148,8 @@ function k(e) {
 }
 var P = n(835072),
     M = n(935154),
-    D = n(652215),
-    L = n(10862);
+    L = n(652215),
+    D = n(10862);
 function w(e) {
     let {
             channel: t,
@@ -161,7 +161,7 @@ function w(e) {
             canTruncate: u = !0,
             showChannelName: d = !1,
         } = e,
-        c = (0, M.S3)(D.clD.ONLINE),
+        c = (0, M.S3)(L.clD.ONLINE),
         m = (0, S.Ay)(t),
         x = t.isDM() || t.isGroupDM(),
         h = x
@@ -172,7 +172,7 @@ function w(e) {
         j = null != m ? `${h} (${m})` : h,
         g = d ? j : h;
     return (0, l.jsx)(y.A, {
-        icon: (0, l.jsx)(L.A, { size: "custom", color: c, channel: t, className: a()(f.Kk, s) }),
+        icon: (0, l.jsx)(D.A, { size: "custom", color: c, channel: t, className: a()(f.Kk, s) }),
         text: g,
         tooltipText: o ? void 0 : r ? j : x || d ? void 0 : (m ?? void 0),
         textVariant: n,
@@ -196,7 +196,7 @@ function z(e) {
     let { textVariant: t, className: n } = e;
     return (0, l.jsx)(u.E, { variant: t, className: a()(f.Om, n), "aria-hidden": !0, children: "\u2022" });
 }
-function B(e) {
+function V(e) {
     let {
         user: t,
         activities: n,
@@ -216,7 +216,7 @@ function B(e) {
         y = i.useMemo(() => {
             let e = n?.find((e) => {
                 let { type: t } = e;
-                return t === D.$pd.CUSTOM_STATUS;
+                return t === L.$pd.CUSTOM_STATUS;
             });
             if (null == e) return null;
             let t = e.state?.trim() ?? null;
@@ -224,12 +224,12 @@ function B(e) {
         }, [n]),
         O = (0, h.Uk)("ActivityStatus"),
         R = i.useMemo(() => (null != y, null), [y, O]),
-        G = i.useMemo(
+        k = i.useMemo(
             () =>
                 (0, r.uniqWith)(
                     n?.filter((e) => {
                         let { type: t, name: n } = e;
-                        return t !== D.$pd.CUSTOM_STATUS && t !== D.$pd.HANG_STATUS && n !== T?.name;
+                        return t !== L.$pd.CUSTOM_STATUS && t !== L.$pd.HANG_STATUS && n !== T?.name;
                     }) ?? [],
                     (e, t) =>
                         (null != e.application_id &&
@@ -240,15 +240,15 @@ function B(e) {
             [n, T?.name],
         ),
         M = n?.find((e) => e.name === T?.name),
-        L = t?.bot === !0,
-        B = (0, o.bG)([N.A], () => N.A.isBlockedOrIgnored(t?.id)),
-        V = y?.state != null,
+        D = t?.bot === !0,
+        V = (0, o.bG)([N.A], () => N.A.isBlockedOrIgnored(t?.id)),
+        B = y?.state != null,
         F = null != C,
         J = !F && null != u,
-        H = G.length + (F || J ? 1 : 0),
+        H = k.length + (F || J ? 1 : 0),
         W = H > 1,
         K = y?.state != null && "xs" === p;
-    if (B) return null;
+    if (V) return null;
     function Y() {
         let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
             t = !0 === e || S;
@@ -260,10 +260,10 @@ function B(e) {
                 textClassName: j,
                 iconClassName: g,
                 hideText: K,
-                hideIcon: L,
+                hideIcon: D,
                 hideTooltip: t,
             });
-        let n = G?.[0];
+        let n = k?.[0];
         return null != n
             ? (0, l.jsx)(P.A, {
                   activity: n,
@@ -271,7 +271,7 @@ function B(e) {
                   textClassName: j,
                   iconClassName: g,
                   hideText: K,
-                  hideIcon: L,
+                  hideIcon: D,
                   hideTooltip: t,
               })
             : null != u
@@ -289,13 +289,13 @@ function B(e) {
         return (0, l.jsx)(U, {
             textVariant: `text-${p}/medium`,
             className: j,
-            hasCustomStatusText: V,
+            hasCustomStatusText: B,
             totalActivityCount: H,
         });
     }
     function q() {
         if (0 === H) return null;
-        if (W && !L) {
+        if (W && !D) {
             let e, t;
             return S
                 ? (0, l.jsxs)("div", { className: a()(f.ht, K && f.e7), children: [Y(), $()] })
@@ -314,7 +314,7 @@ function B(e) {
                               e.push(
                                   (0, l.jsx)(_, { stream: C, game: n?.find(c.A), ...t, showChannelName: !0 }, "stream"),
                               ),
-                          G.forEach((n, i) => {
+                          k.forEach((n, i) => {
                               e.push((0, l.jsx)(P.A, { activity: n, ...t }, `activity-${i}`));
                           }),
                           J && e.push((0, l.jsx)(w, { channel: u, ...t, showChannelName: !0 }, "voice")),
@@ -354,7 +354,7 @@ function B(e) {
                   null != y && H > 0 && (0, l.jsx)(z, { textVariant: `text-${p}/normal`, className: j }),
                   null == y
                       ? null
-                      : (0, l.jsx)(k, {
+                      : (0, l.jsx)(G, {
                             customStatusActivity: y,
                             textSize: p,
                             animateEmoji: I,

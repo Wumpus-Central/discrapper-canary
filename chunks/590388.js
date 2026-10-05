@@ -10,8 +10,8 @@ if (221552 == n.j) var d = n(939249);
 if (221552 == n.j) var c = n(365199);
 var _ = n(442433),
     E = n(793574),
-    S = n(363487),
-    f = n(123917),
+    f = n(363487),
+    S = n(123917),
     A = n(981381),
     I = n(144977),
     g = n(628049),
@@ -23,7 +23,7 @@ function v(e) {
     let { guildId: t, instance: n } = e,
         g = i.useRef(null),
         v = (0, A.A)(n.providerType, n.gameServerPanelUrl);
-    return (0, S.A)(t)
+    return (0, f.A)(t)
         ? (0, l.jsx)(r.Y, {
               targetElementRef: g,
               align: "top",
@@ -49,7 +49,7 @@ function v(e) {
                                       leadingAccessory: { type: "icon", icon: o.ChatIcon },
                                       label: h.intl.string(C.default.bBkeMs),
                                       action: () => {
-                                          (0, f.h)({ href: v });
+                                          (0, S.h)({ href: v });
                                       },
                                   }),
                               (0, l.jsx)(a.Dr, {

@@ -1,4 +1,4 @@
-n.d(t, { A: () => k });
+n.d(t, { A: () => G });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -29,8 +29,8 @@ var i = n(503698),
     O = n(91166),
     _ = n(936755),
     R = n(375708),
-    G = n(147190);
-let k = function (e) {
+    k = n(147190);
+let G = function (e) {
     let { iconType: t, children: n } = e,
         i = null;
     switch (t) {
@@ -38,7 +38,7 @@ let k = function (e) {
             i = (0, l.jsx)(a.H, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.BVZqJl),
             });
             break;
@@ -46,7 +46,7 @@ let k = function (e) {
             i = (0, l.jsx)(r.LockIcon, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.aa0FYn),
             });
             break;
@@ -54,7 +54,7 @@ let k = function (e) {
             i = (0, l.jsx)(o.O, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.ajeTKN),
             });
             break;
@@ -62,7 +62,7 @@ let k = function (e) {
             i = (0, l.jsx)(u.P, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.hGmOlP),
             });
             break;
@@ -70,7 +70,7 @@ let k = function (e) {
             i = (0, l.jsx)(d.q, {
                 size: "lg",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.EErMzA),
             });
             break;
@@ -78,7 +78,7 @@ let k = function (e) {
             i = (0, l.jsx)(r.LockIcon, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.pKZ4I8),
             });
             break;
@@ -86,7 +86,7 @@ let k = function (e) {
             i = (0, l.jsx)(c.y, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t["7Xm5QI"]),
             });
             break;
@@ -94,7 +94,7 @@ let k = function (e) {
             i = (0, l.jsx)(m.N, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.t1yj0N),
             });
             break;
@@ -102,7 +102,7 @@ let k = function (e) {
             i = (0, l.jsx)(x.r, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.vvASTb),
             });
             break;
@@ -110,7 +110,7 @@ let k = function (e) {
             i = (0, l.jsx)(h.n, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t["8QsJXA"]),
             });
             break;
@@ -118,7 +118,7 @@ let k = function (e) {
             i = (0, l.jsx)(j.k, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.GtDRi2),
             });
             break;
@@ -126,7 +126,7 @@ let k = function (e) {
             i = (0, l.jsx)(g.M, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.eRc6o9),
             });
             break;
@@ -134,7 +134,7 @@ let k = function (e) {
             i = (0, l.jsx)(p.u, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t["7F1TCC"]),
             });
             break;
@@ -142,7 +142,7 @@ let k = function (e) {
             i = (0, l.jsx)(f.b, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.GbryDd),
             });
             break;
@@ -150,7 +150,7 @@ let k = function (e) {
             i = (0, l.jsx)(A.f, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.ibmpPi),
             });
             break;
@@ -158,7 +158,7 @@ let k = function (e) {
             i = (0, l.jsx)(N.H, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.TDGaxd),
             });
             break;
@@ -166,7 +166,7 @@ let k = function (e) {
             i = (0, l.jsx)(I.ChatIcon, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.Y4REmB),
             });
             break;
@@ -175,7 +175,7 @@ let k = function (e) {
             i = (0, l.jsx)(v.Z, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.VbpLyU),
             });
             break;
@@ -184,7 +184,7 @@ let k = function (e) {
             i = (0, l.jsx)(b.k, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.et6wav),
             });
             break;
@@ -192,7 +192,7 @@ let k = function (e) {
             i = (0, l.jsx)(I.ChatIcon, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.BAB0yK),
             });
             break;
@@ -200,7 +200,7 @@ let k = function (e) {
             i = (0, l.jsx)(r.LockIcon, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t["/YzI63"]),
             });
             break;
@@ -208,7 +208,7 @@ let k = function (e) {
             i = (0, l.jsx)(E.ImageIcon, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.seKITE),
             });
             break;
@@ -216,7 +216,7 @@ let k = function (e) {
             i = (0, l.jsx)(S.D, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t["pZ/fYa"]),
             });
             break;
@@ -224,7 +224,7 @@ let k = function (e) {
             i = (0, l.jsx)(C.LinkIcon, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.ghtnss),
             });
             break;
@@ -232,7 +232,7 @@ let k = function (e) {
             i = (0, l.jsx)(T.k, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t["A+8d6M"]),
             });
             break;
@@ -240,7 +240,7 @@ let k = function (e) {
             i = (0, l.jsx)(y.c, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t.zAEV11),
             });
             break;
@@ -248,15 +248,15 @@ let k = function (e) {
             i = (0, l.jsx)(O.W, {
                 size: "md",
                 color: "currentColor",
-                className: G.Kk,
+                className: k.Kk,
                 "aria-label": R.intl.string(R.t["HO/lY5"]),
             });
     }
     return (0, l.jsxs)("span", {
-        className: s()("channelWithIcon", { [G.bV]: "text" === t || "text-nsfw" === t || "text-spoiler" === t }),
+        className: s()("channelWithIcon", { [k.bV]: "text" === t || "text-nsfw" === t || "text-spoiler" === t }),
         children: [
             (0, l.jsx)(_.A, { children: i }),
-            null != n && "" !== n ? (0, l.jsx)("span", { className: G.UU, children: n }) : null,
+            null != n && "" !== n ? (0, l.jsx)("span", { className: k.UU, children: n }) : null,
         ],
     });
 };

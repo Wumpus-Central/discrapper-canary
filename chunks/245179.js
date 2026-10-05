@@ -13,8 +13,8 @@ var i = n(17928),
     p = n(260498),
     g = n(189714),
     _ = n(645070),
-    w = n(246338),
-    m = n(652215),
+    m = n(246338),
+    w = n(652215),
     E = n(746080),
     A = n(248675),
     v = n(375708);
@@ -31,8 +31,8 @@ function C(e) {
         e.steps.some((e) => T.has(e.kind))
     );
 }
-let I = new Map(),
-    b = new Map(),
+let b = new Map(),
+    I = new Map(),
     R = new Map(),
     O = [],
     N = new Map(),
@@ -135,13 +135,13 @@ function H(e, t) {
     return -1;
 }
 function B(e, t, n) {
-    let i = I.get(e);
+    let i = b.get(e);
     if (null == i) return;
     let r = H(i, t);
-    if (-1 === r) return void I.set(e, [...i, n(j("assistant", "", null != t ? { turnId: t } : {}))]);
+    if (-1 === r) return void b.set(e, [...i, n(j("assistant", "", null != t ? { turnId: t } : {}))]);
     let l = i[r],
         a = null == t || null != l.turn_id || J(l, t) ? l : { ...l, turn_id: t };
-    I.set(e, [...i.slice(0, r), n(a), ...i.slice(r + 1)]);
+    b.set(e, [...i.slice(0, r), n(a), ...i.slice(r + 1)]);
 }
 function G(e) {
     return "side_reply" === e.kind || "publish_notice" === e.kind;
@@ -156,7 +156,7 @@ function q(e) {
     return !1;
 }
 function $(e) {
-    return q(I.get(e));
+    return q(b.get(e));
 }
 function V(e, t, n, i, r) {
     if (null != r) {
@@ -165,7 +165,7 @@ function V(e, t, n, i, r) {
     }
     if (
         _.A.areTurnNotificationsDisabled() ||
-        f.A.getStatus() === m.clD.DND ||
+        f.A.getStatus() === w.clD.DND ||
         o.NO.getSetting() ||
         l.A.isCurrentUserInRestrictedHours() ||
         (0, g.j)(s.A.settings, e)
@@ -182,13 +182,13 @@ function V(e, t, n, i, r) {
         h && (0, a.Ak)(y, 0.4);
         return;
     }
-    let v = t ?? (0, w.oX)("VibegrationsChatStore");
+    let v = t ?? (0, m.oX)("VibegrationsChatStore");
     _.A.presentTurnNotification({
         projectId: e,
         guildId: v,
         title: n,
         body: i,
-        route: null == v ? null : m.BVt.CHANNEL(v, E.VV.CONJURE, e),
+        route: null == v ? null : w.BVt.CHANNEL(v, E.VV.CONJURE, e),
         sound: h ? y : void 0,
         volume: 0.4,
     });
@@ -199,12 +199,12 @@ function z(e) {
     if (t === n) return;
     R.set(e, n);
     let i = O.indexOf(e);
-    if ((-1 !== i && O.splice(i, 1), O.unshift(e), n)) b.delete(e);
+    if ((-1 !== i && O.splice(i, 1), O.unshift(e), n)) I.delete(e);
     else {
         let t;
         (null !=
             (t = (function (e) {
-                let t = I.get(e);
+                let t = b.get(e);
                 if (null == t) return null;
                 for (let e = t.length - 1; e >= 0; e--) if ("assistant" === t[e].role && !G(t[e])) return t[e];
                 return null;
@@ -214,16 +214,16 @@ function z(e) {
             null != t.clarification ||
             null != t.intake ||
             t.steps.some((e) => T.has(e.kind) && "terminal_error" !== e.kind))
-            ? b.set(e, Date.now())
-            : b.delete(e),
+            ? I.set(e, Date.now())
+            : I.delete(e),
             !(function (e) {
-                let t = I.get(e);
+                let t = b.get(e);
                 if (null != t)
                     for (let n = t.length - 1; n >= 0; n--) {
                         let i = t[n];
                         if ("assistant" === i.role) {
                             if (null != i.finished_at || !C(i)) return;
-                            I.set(e, [...t.slice(0, n), { ...i, finished_at: Date.now() }, ...t.slice(n + 1)]);
+                            b.set(e, [...t.slice(0, n), { ...i, finished_at: Date.now() }, ...t.slice(n + 1)]);
                             return;
                         }
                     }
@@ -231,10 +231,10 @@ function z(e) {
     }
 }
 function K(e) {
-    let t = I.delete(e),
+    let t = b.delete(e),
         n = X.delete(e),
         i = Z.delete(e),
-        r = b.delete(e),
+        r = I.delete(e),
         l = R.delete(e),
         a = N.delete(e),
         o = S.delete(e),
@@ -247,7 +247,7 @@ class Y extends i.Ay.Store {
         this.waitFor(l.A, u.A, d.Ay, c.A, f.A, s.A, p.Ay);
     }
     getMessages(e) {
-        return I.get(e) ?? M;
+        return b.get(e) ?? M;
     }
     hasPendingSettingsRequest(e) {
         let t = this.getMessages(e),
@@ -264,7 +264,7 @@ class Y extends i.Ay.Store {
         return Z.has(e);
     }
     getFinishedAt(e) {
-        return $(e) ? null : (b.get(e) ?? null);
+        return $(e) ? null : (I.get(e) ?? null);
     }
     getProjectUsage(e) {
         return N.get(e) ?? null;
@@ -282,7 +282,7 @@ class Y extends i.Ay.Store {
         return O.slice();
     }
     isAnyThinking() {
-        for (let e of I.keys()) if (this.isThinking(e)) return !0;
+        for (let e of b.keys()) if (this.isThinking(e)) return !0;
         return !1;
     }
 }
@@ -338,8 +338,8 @@ let er = new Y(r.h, {
     LOGOUT: function () {
         if (
             (x.clear(),
-            0 === I.size &&
-                0 === b.size &&
+            0 === b.size &&
+                0 === I.size &&
                 0 === R.size &&
                 0 === N.size &&
                 0 === S.size &&
@@ -350,8 +350,8 @@ let er = new Y(r.h, {
                 0 === k)
         )
             return !1;
-        (I.clear(),
-            b.clear(),
+        (b.clear(),
+            I.clear(),
             R.clear(),
             N.clear(),
             S.clear(),
@@ -366,33 +366,33 @@ let er = new Y(r.h, {
         (X.set(t, i ?? null), !0 === r ? Z.add(t) : Z.delete(t), S.delete(t), P.delete(t));
         let l = new Set(),
             a = n.filter((e) => null == e.id || (!l.has(e.id) && (l.add(e.id), !0)));
-        (I.set(t, ee(a.map(L))), z(t));
+        (b.set(t, ee(a.map(L))), z(t));
     },
     CONJURE_CHAT_HISTORY_PREPEND: function (e) {
         let { projectId: t, entries: n, cursor: i } = e;
         if ((X.set(t, i), 0 === n.length)) return;
-        let r = I.get(t) ?? [],
+        let r = b.get(t) ?? [],
             l = n.map(L),
             a = new Set(r.flatMap((e) => (null == e.id ? [] : [e.id]))),
             o = l.filter((e) => null == e.id || !a.has(e.id));
-        I.set(t, ee([...o, ...r]));
+        b.set(t, ee([...o, ...r]));
     },
     CONJURE_CHAT_MESSAGE_APPEND: function (e) {
         let { projectId: t, content: n, id: i, optimisticId: r, userId: l, timestamp: a, attachments: o } = e,
-            s = I.get(t) ?? [];
+            s = b.get(t) ?? [];
         if (s.some((e) => e.id === i)) return !1;
         let u = j("user", n, { ts: a, id: i, userId: l, attachments: o }),
             d = null == r ? -1 : s.findIndex((e) => e.id === r);
         if (-1 !== d) {
-            ((u.render_id = s[d].render_id), I.set(t, [...s.slice(0, d), u, ...s.slice(d + 1)]), z(t));
+            ((u.render_id = s[d].render_id), b.set(t, [...s.slice(0, d), u, ...s.slice(d + 1)]), z(t));
             return;
         }
         let c = [...s, u];
-        (q(c) || c.push(j("assistant", "")), I.set(t, c), z(t));
+        (q(c) || c.push(j("assistant", "")), b.set(t, c), z(t));
     },
     CONJURE_CHAT_MESSAGE_DISPOSITION: function (e) {
         let { projectId: t, id: n, activeTurnId: i, disposition: r } = e,
-            l = I.get(t);
+            l = b.get(t);
         if (null == l) return !1;
         let a = l.findIndex((e) => e.id === n);
         if (-1 === a) return !1;
@@ -403,14 +403,14 @@ let er = new Y(r.h, {
             if (-1 !== e && e < a) {
                 let n = { ...o[e], turn_id: i };
                 if (0 === n.steps.length) {
-                    (I.set(t, [...o.slice(0, e), ...o.slice(e + 1, a + 1), n, ...o.slice(a + 1)]), z(t));
+                    (b.set(t, [...o.slice(0, e), ...o.slice(e + 1, a + 1), n, ...o.slice(a + 1)]), z(t));
                     return;
                 }
                 ((o = [...o.slice(0, e), n, ...o.slice(e + 1)]), (s = e));
             }
         }
-        if (-1 === s || s > a) return o !== l && void I.set(t, o);
-        (I.set(t, [
+        if (-1 === s || s > a) return o !== l && void b.set(t, o);
+        (b.set(t, [
             ...o.slice(0, s),
             { ...o[s], continued: !0, finished_at: o[s].finished_at ?? Date.now() },
             ...o.slice(s + 1, a + 1),
@@ -421,29 +421,29 @@ let er = new Y(r.h, {
     },
     CONJURE_CHAT_MESSAGE_REACTION: function (e) {
         let { projectId: t, id: n, emoji: i } = e,
-            r = I.get(t);
+            r = b.get(t);
         if (null == r) return !1;
         let l = r.findIndex((e) => "user" === e.role && e.id === n);
         if (-1 === l || r[l].agentReaction === i) return !1;
-        I.set(t, [...r.slice(0, l), { ...r[l], agentReaction: i }, ...r.slice(l + 1)]);
+        b.set(t, [...r.slice(0, l), { ...r[l], agentReaction: i }, ...r.slice(l + 1)]);
     },
     CONJURE_CHAT_SIDE_REPLY: function (e) {
         let { projectId: t, id: n, inReplyTo: i, content: r, timestamp: l } = e,
-            a = I.get(t);
+            a = b.get(t);
         if (null == a || a.some((e) => e.id === n)) return !1;
         let o = j("assistant", r, { ts: l, id: n });
         ((o.kind = "side_reply"), (o.in_reply_to = i));
         let s = a.findIndex((e) => e.id === i);
-        if (-1 === s) return void I.set(t, [...a, o]);
+        if (-1 === s) return void b.set(t, [...a, o]);
         let { disposition: u, ...d } = a[s];
-        (null != u && (o.acknowledges = u), I.set(t, [...a.slice(0, s), d, o, ...a.slice(s + 1)]));
+        (null != u && (o.acknowledges = u), b.set(t, [...a.slice(0, s), d, o, ...a.slice(s + 1)]));
     },
     CONJURE_CHAT_PUBLISH_NOTICE: function (e) {
         let { projectId: t, id: n, content: i, timestamp: r, publishNotice: l } = e,
-            a = I.get(t);
+            a = b.get(t);
         if (null == a || a.some((e) => e.id === n)) return !1;
         let o = j("assistant", i, { ts: r, id: n });
-        ((o.kind = "publish_notice"), (o.publishNotice = l), (o.finished = !0), I.set(t, [...a, o]));
+        ((o.kind = "publish_notice"), (o.publishNotice = l), (o.finished = !0), b.set(t, [...a, o]));
     },
     CONJURE_CHAT_STEP_APPEND: function (e) {
         let { projectId: t, step: n, turnId: i } = e;
@@ -457,10 +457,10 @@ let er = new Y(r.h, {
     },
     CONJURE_CHAT_TURN_FINISHED: function (e) {
         let { projectId: t, summary: n, turnId: i } = e,
-            r = I.get(t);
+            r = b.get(t);
         (null != r &&
             r.some((e) => null != e.disposition) &&
-            I.set(
+            b.set(
                 t,
                 r.map((e) => {
                     if (null == e.disposition) return e;
@@ -480,16 +480,16 @@ let er = new Y(r.h, {
     },
     CONJURE_CHAT_INTERRUPTED: function (e) {
         let { projectId: t } = e,
-            n = I.get(t);
+            n = b.get(t);
         if (null == n) return !1;
         let i = j("assistant", "");
-        ((i.finished = !0), (i.finished_at = Date.now()), (i.interrupted = !0), I.set(t, [...n, i]));
+        ((i.finished = !0), (i.finished_at = Date.now()), (i.interrupted = !0), b.set(t, [...n, i]));
     },
     CONJURE_CHAT_STOP_REQUESTED: function (e) {
         let { projectId: t } = e,
-            n = I.get(t);
+            n = b.get(t);
         if (null == n || !n.some(ei)) return !1;
-        I.set(
+        b.set(
             t,
             n.map((e) => (ei(e) ? { ...e, stopRequested: !0 } : e)),
         );
@@ -498,21 +498,21 @@ let er = new Y(r.h, {
         let { projectId: t, turnId: n, text: i } = e;
         if (
             !(function (e, t, n) {
-                let i = I.get(e);
+                let i = b.get(e);
                 if (null == i) return !1;
                 let r = W(i, t);
-                return -1 !== r && (I.set(e, [...i.slice(0, r), n(i[r]), ...i.slice(r + 1)]), !0);
+                return -1 !== r && (b.set(e, [...i.slice(0, r), n(i[r]), ...i.slice(r + 1)]), !0);
             })(t, n, (e) => ({ ...e, provisionalTodo: i }))
         )
             return !1;
     },
     CONJURE_CHAT_SOURCE_CHECKPOINT: function (e) {
         let { projectId: t, turnId: n, sourceSha: i } = e,
-            r = I.get(t);
+            r = b.get(t);
         if (null == r) return !1;
         let l = r.map((e) => ("assistant" === e.role && e.sourceSha !== i && J(e, n) ? { ...e, sourceSha: i } : e));
         if (l.every((e, t) => e === r[t])) return !1;
-        I.set(t, l);
+        b.set(t, l);
     },
     CONJURE_CHAT_THINKING_SET: function (e) {
         let { projectId: t, activity: n } = e;
@@ -548,9 +548,9 @@ let er = new Y(r.h, {
         if ("closed" !== n && "failed" !== n) return !1;
         let i = P.delete(t),
             r = S.delete(t),
-            l = I.get(t);
+            l = b.get(t);
         if (null == l || !l.some((e) => "assistant" === e.role && !C(e))) return (!!r || !!i) && void 0;
-        (I.set(
+        (b.set(
             t,
             l.map((e) => {
                 if (null != e.disposition) {
@@ -581,7 +581,7 @@ let er = new Y(r.h, {
         if (!K(t)) return !1;
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
-        let t = new Set([...I.keys(), ...X.keys(), ...b.keys(), ...R.keys(), ...N.keys()]),
+        let t = new Set([...b.keys(), ...X.keys(), ...I.keys(), ...R.keys(), ...N.keys()]),
             n = !1;
         for (let e of t) null == p.Ay.getProject(e) && K(e) && (n = !0);
         if (!n) return !1;

@@ -1,37 +1,37 @@
-e.d(t, { A: () => s, _: () => u });
-var l = e(477900);
+e.d(n, { A: () => A, _: () => s });
+var t = e(477900);
 e(582128);
-var c = e(477782),
-    i = e(138134),
-    a = e(627363),
-    p = e(587895),
-    o = e(928658),
-    r = e(652215),
-    d = e(375708);
-let u = "app_channel_context_menu";
-function s(n, t) {
-    let e = n.type === r.rbe.GUILD_APP ? n.getApplicationId() : null;
+var i = e(477782),
+    c = e(138134),
+    o = e(627363),
+    u = e(587895),
+    r = e(928658),
+    d = e(652215),
+    a = e(375708);
+let s = "app_channel_context_menu";
+function A(l, n) {
+    let e = l.type === d.rbe.GUILD_APP ? l.getApplicationId() : null;
     return null == e
         ? null
-        : (0, l.jsx)(c.Dr, {
+        : (0, t.jsx)(i.Dr, {
               id: "report-app",
-              label: d.intl.string(d.t.NgA5vp),
+              label: a.intl.string(a.t.NgA5vp),
               action: () => {
-                  a.Ay.fetchApplication(e)
+                  o.Ay.fetchApplication(e)
                       .then(() => {
-                          let l = p.A.getApplication(e);
-                          null != l &&
-                              (0, o.r3)({
-                                  application: l,
-                                  entrypoint: t,
-                                  contextualGuildId: n.getGuildId() ?? void 0,
-                                  contextualChannelId: n.id,
+                          let t = u.A.getApplication(e);
+                          null != t &&
+                              (0, r.r3)({
+                                  application: t,
+                                  entrypoint: n,
+                                  contextualGuildId: l.getGuildId() ?? void 0,
+                                  contextualChannelId: l.id,
                               });
                       })
                       .catch(() => {});
               },
-              icon: i.FlagIcon,
-              leadingAccessory: { type: "icon", icon: i.FlagIcon },
+              icon: c.FlagIcon,
+              leadingAccessory: { type: "icon", icon: c.FlagIcon },
               color: "danger",
           });
 }

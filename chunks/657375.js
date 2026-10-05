@@ -6,14 +6,14 @@ var r,
     o = n(929482),
     s = n(636537),
     a = n(38405),
-    c = n(652215);
-async function d(e) {
+    d = n(652215);
+async function c(e) {
     let { metadataSealed: t, impressionId: n, specs: r, signal: u } = e;
     try {
         return (
             (
                 await s.Bo.post({
-                    url: c.Rsh.ADS_IOS_ATTRIBUTION_SIGN_PAYLOAD,
+                    url: d.Rsh.ADS_IOS_ATTRIBUTION_SIGN_PAYLOAD,
                     body: { metadata_sealed: t, impression_id: n, specs: r },
                     failImmediatelyWhenRateLimited: !0,
                     rejectWithError: !0,
@@ -32,10 +32,10 @@ let f = { [u.AD_ATTRIBUTION_KIT]: { viewThroughSpec: { kind: u.AD_ATTRIBUTION_KI
 function _(e, t) {
     return E.get(e) === t;
 }
-function p(e, t) {
+function C(e, t) {
     _(e, t) && E.delete(e);
 }
-function C(e) {
+function p(e) {
     null != e && (0, o.bg)(e).catch(() => {});
 }
 function I(e) {
@@ -43,30 +43,30 @@ function I(e) {
         u = { framework: r, token: null, signAbort: new AbortController(), registration: Promise.resolve() };
     (E.set(t, u),
         (u.registration = T({ impressionId: t, metadataSealed: n, framework: r, impression: u }).catch(() => {
-            p(t, u);
+            C(t, u);
         })));
 }
 async function T(e) {
     let { impressionId: t, metadataSealed: n, framework: r, impression: u } = e,
         l = f[r]?.viewThroughSpec;
     if (null == l) {
-        (A.warn(`No strategy for ${r}; impression ${t} is unattributed`), (0, i.$8)(i.vI.NO_FRAMEWORK, r), p(t, u));
+        (A.warn(`No strategy for ${r}; impression ${t} is unattributed`), (0, i.$8)(i.vI.NO_FRAMEWORK, r), C(t, u));
         return;
     }
-    let s = await d({ metadataSealed: n, impressionId: t, specs: [l], signal: u.signAbort.signal });
+    let s = await c({ metadataSealed: n, impressionId: t, specs: [l], signal: u.signAbort.signal });
     if (!_(t, u)) return;
     let a = null != s ? (s.at(0)?.payload ?? null) : null;
     if (null == a) {
         ((0, i.$8)(i.vI.SIGN_FAILED, r, t), E.delete(t));
         return;
     }
-    let c = await (0, o.EO)(t, r, JSON.stringify(a));
-    if (!_(t, u)) return void C(c);
-    if (null == c) {
+    let d = await (0, o.EO)(t, r, JSON.stringify(a));
+    if (!_(t, u)) return void p(d);
+    if (null == d) {
         ((0, i.$8)(i.vI.NO_TOKEN, r, t), E.delete(t));
         return;
     }
-    ((0, i.$8)(i.vI.REGISTERED, r, t), (u.token = c));
+    ((0, i.$8)(i.vI.REGISTERED, r, t), (u.token = d));
 }
 async function m(e) {
     let t = E.get(e);
@@ -89,5 +89,5 @@ async function S(e) {
 }
 function O(e) {
     let t = E.get(e);
-    null != t && (E.delete(e), t.signAbort.abort(), C(t.token));
+    null != t && (E.delete(e), t.signAbort.abort(), p(t.token));
 }

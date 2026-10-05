@@ -200,7 +200,7 @@ function V(e) {
         children: a,
     });
 }
-function X(e) {
+function W(e) {
     let { gameId: t, userId: n, gameName: l, ...a } = e,
         s = (0, h.A)({
             location: "UserProfileWidgetGameDetailsCard",
@@ -213,15 +213,15 @@ function X(e) {
         ? (0, i.jsx)(r.D, { ...a, children: l })
         : (0, i.jsx)(r.D, { ...a, children: (0, i.jsx)(d.D, { onClick: s, className: H.sd, children: l }) });
 }
-function W(e) {
+function X(e) {
     let { user: t, guildId: n, channelId: l, id: a } = e;
     return (0, i.jsx)(o.A, { id: a, children: L.intl.format(L.t.TM0XDY, { name: j.Ay.getName(n, l, t) }) });
 }
-function Y(e) {
+function K(e) {
     let { text: t, className: n } = e;
     return (0, i.jsx)(c.E, { variant: "text-sm/normal", color: "text-muted", className: n, children: t });
 }
-function K(e) {
+function Y(e) {
     let { text: t, user: n, guildId: l, channelId: a } = e,
         s = (0, x.GV)();
     return null == t || "" === t.trim()
@@ -231,8 +231,8 @@ function K(e) {
               "aria-labelledby": s,
               children: [
                   (0, i.jsx)(u.c, { size: "xxs", color: m.A.colors.ICON_MUTED, className: H.Ls }),
-                  (0, i.jsx)(W, { user: n, guildId: l, channelId: a, id: s }),
-                  (0, i.jsx)(Y, { text: t }),
+                  (0, i.jsx)(X, { user: n, guildId: l, channelId: a, id: s }),
+                  (0, i.jsx)(K, { text: t }),
               ],
           });
 }
@@ -254,13 +254,13 @@ function B(e) {
         j = l.useCallback(() => {
             u({ action: "PRESS_ADD_COMMENTARY", widgetEdited: d });
         }, [d, u]),
-        v = (0, i.jsx)("div", { children: (0, i.jsx)(Y, { text: h ? f : m, className: s()(H.qC, !h && H.qf) }) });
+        v = (0, i.jsx)("div", { children: (0, i.jsx)(K, { text: h ? f : m, className: s()(H.qC, !h && H.qf) }) });
     return (0, i.jsxs)("div", {
         className: s()(F.kL, H.Im),
         role: "group",
         "aria-labelledby": c,
         children: [
-            (0, i.jsx)(W, { user: n, guildId: a, channelId: r, id: c }),
+            (0, i.jsx)(X, { user: n, guildId: a, channelId: r, id: c }),
             (0, i.jsx)(g.w, {
                 value: f,
                 onCommit: p,
@@ -331,10 +331,10 @@ function z(e) {
                     children: [
                         u
                             ? (0, i.jsx)(r.D, { ...R, children: T })
-                            : (0, i.jsx)(X, { gameId: j, userId: t.id, gameName: T, ...R }),
+                            : (0, i.jsx)(W, { gameId: j, userId: t.id, gameName: T, ...R }),
                         P
                             ? (0, i.jsx)(B, { text: I, user: t, guildId: n, channelId: a, widgetType: o, gameId: j })
-                            : (0, i.jsx)(K, { text: I, user: t, guildId: n, channelId: a }),
+                            : (0, i.jsx)(Y, { text: I, user: t, guildId: n, channelId: a }),
                         (0, i.jsx)(_, {
                             tags: N,
                             allowEditing: c,

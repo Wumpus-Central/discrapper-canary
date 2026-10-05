@@ -25,8 +25,8 @@ let p = function (e) {
             secondaryButtonText: I,
             onSecondaryButtonClick: j,
             children: y,
-            useReducedMotion: v = !1,
-            buttonVariant: _,
+            useReducedMotion: _ = !1,
+            buttonVariant: v,
         } = e,
         b = (0, a.bG)([m.Ay], () => m.Ay.getState().isMembersOpen);
     if (s.Fr && b) return null;
@@ -35,7 +35,7 @@ let p = function (e) {
     return (
         null != E
             ? (T = (0, l.jsx)("img", { alt: "", src: E, className: g.Sl }))
-            : null != S && (T = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !v, className: g.lY })),
+            : null != S && (T = (0, l.jsx)(r.a, { importData: S, shouldAnimate: !_, className: g.lY })),
         (0, l.jsxs)("div", {
             className: g.iE,
             children: [
@@ -67,7 +67,7 @@ let p = function (e) {
                                 children: (0, l.jsx)(u.$, {
                                     text: A,
                                     size: "sm",
-                                    variant: _ ?? "secondary",
+                                    variant: v ?? "secondary",
                                     onClick: C,
                                     loading: x,
                                     icon: f,

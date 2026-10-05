@@ -1,4 +1,4 @@
-n.d(t, { QK: () => p, RC: () => c, go: () => E, iY: () => d, vU: () => A, wW: () => _ });
+n.d(t, { QK: () => C, RC: () => d, go: () => E, iY: () => c, vU: () => A, wW: () => _ });
 var r = n(582128),
     u = n(323889),
     l = n(17928),
@@ -6,7 +6,7 @@ var r = n(582128),
     o = n(859703),
     s = n(590202),
     a = n(653819);
-function c(e) {
+function d(e) {
     var t, n;
     let l =
             ((t = "questOrQuests" in e ? e.questOrQuests : void 0),
@@ -24,12 +24,12 @@ function c(e) {
         return (u.p.QUEST, { adContentIds: l, adCreativeType: i, key: t });
     }, [l, e.questContent, i]);
 }
-function d(e) {
+function c(e) {
     let { adContentIds: t, adCreativeType: n } = e,
         a = (0, l.bG)([o.A], () => (n !== u.p.QUEST || 1 !== t.length ? null : o.A.getQuest(t[0])), [t, n]),
-        c = r.useMemo(() => (null == a ? null : (0, s.NI)(a)), [a]),
-        d = (0, i.Ay)(c);
-    return c !== d;
+        d = r.useMemo(() => (null == a ? null : (0, s.NI)(a)), [a]),
+        c = (0, i.Ay)(d);
+    return d !== c;
 }
 function f() {
     return r.useContext(a.n);
@@ -44,7 +44,7 @@ function _() {
     let e = f();
     return r.useCallback(() => e?.current?.getId(), [e]);
 }
-function p() {
+function C() {
     let e = r.useContext(a.n);
     return r.useCallback(() => e?.current?.getId(), [e]);
 }

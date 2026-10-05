@@ -60,25 +60,25 @@ class O extends s.Component {
 }
 var _ = n(268218),
     R = n(193663),
-    G = n(490427),
-    k = n(609425),
+    k = n(490427),
+    G = n(609425),
     P = n(922301),
     M = n(660184),
-    D = n(73392),
-    L = n(218150),
+    L = n(73392),
+    D = n(218150),
     w = n(534400),
     U = n(531685),
     z = n(620141),
-    B = n(19309),
-    V = n(224964);
+    V = n(19309),
+    B = n(224964);
 function F(e) {
     let { confettiSpawnRef: t, shouldFire: n } = e,
         l = (0, o.bG)([U.A], () => U.A.isFocused()),
-        i = (0, V.A)();
+        i = (0, B.A)();
     return (
         s.useEffect(() => {
             if (l && n) {
-                let e = (0, B.A)(t);
+                let e = (0, V.A)(t);
                 null != e && i.fire(e.x, e.y);
             }
         }, [i, t, l, n]),
@@ -204,8 +204,8 @@ let el = s.memo(function (e) {
                 guildId: o,
                 isHovering: u,
             } = e,
-            d = (0, k.A)({ userId: r?.id, guildId: o }),
-            c = (0, D.a)({ displayNameStyles: d }),
+            d = (0, G.A)({ userId: r?.id, guildId: o }),
+            c = (0, L.a)({ displayNameStyles: d }),
             m = null == o && null != d;
         return (0, i.jsxs)(i.Fragment, {
             children: [
@@ -233,7 +233,7 @@ let el = s.memo(function (e) {
                         disableGuildProfile: !0,
                         className: et.fc,
                     }),
-                null != o && r?.id != null && (0, i.jsx)(L.A, { guildId: o, userId: r.id }),
+                null != o && r?.id != null && (0, i.jsx)(D.A, { guildId: o, userId: r.id }),
             ],
         });
     }),
@@ -301,7 +301,7 @@ let el = s.memo(function (e) {
             ),
             h = s.useMemo(
                 () =>
-                    !(0, G.A)({
+                    !(0, k.A)({
                         activity: l?.find((e) => {
                             let { type: t } = e;
                             return t === Z.$pd.CUSTOM_STATUS;
@@ -347,17 +347,17 @@ let el = s.memo(function (e) {
                 channel: T,
                 guildId: y,
                 className: _,
-                nameplate: G,
-                hideClanTag: k = !1,
+                nameplate: k,
+                hideClanTag: G = !1,
                 hideSubtext: P = !1,
                 hideTooltip: M = !1,
-                onMouseDown: D,
-                onKeyDown: L,
+                onMouseDown: L,
+                onKeyDown: D,
                 onClick: w,
                 onContextMenu: U,
                 onClickPremiumGuildIcon: z,
-                "aria-controls": B,
-                "aria-expanded": V,
+                "aria-controls": V,
+                "aria-expanded": B,
                 "aria-posinset": F,
                 "aria-setsize": J,
                 id: q,
@@ -389,8 +389,8 @@ let el = s.memo(function (e) {
             eO = null != ey,
             e_ = eO ? ey : eT,
             eR = (0, Y.Yl)(eT, N, ei),
-            eG = (eO || eR) && t && !eS,
-            ek = s.useCallback(() => {
+            ek = (eO || eR) && t && !eS,
+            eG = s.useCallback(() => {
                 ex(!0);
             }, []),
             eP = s.useCallback(() => {
@@ -399,10 +399,10 @@ let el = s.memo(function (e) {
             eM = s.useCallback(() => {
                 (ej(!0), ev?.());
             }, [ev]),
-            eD = s.useCallback(() => {
+            eL = s.useCallback(() => {
                 ej(!1);
             }, []),
-            eL = s.useCallback((e) => {
+            eD = s.useCallback((e) => {
                 ep(e);
             }, []),
             ew = s.useCallback(
@@ -425,7 +425,7 @@ let el = s.memo(function (e) {
                   targetElementRef: ec,
                   renderPopout: ew,
                   position: "bottom",
-                  shouldShow: eG,
+                  shouldShow: ek,
                   nudgeAlignIntoViewport: !1,
                   useRawTargetDimensions: !0,
                   animation: f.Y.Animation.NONE,
@@ -434,15 +434,15 @@ let el = s.memo(function (e) {
                       (0, i.jsx)(R.A, {
                           ref: ec,
                           selected: t,
-                          className: r()(et.Dc, _, { [et.WK]: v === Z.clD.OFFLINE && !t, [et.PJ]: eG }),
+                          className: r()(et.Dc, _, { [et.WK]: v === Z.clD.OFFLINE && !t, [et.PJ]: ek }),
                           innerClassName: et.Hz,
                           onClick: w,
-                          onKeyDown: L,
-                          onMouseDown: D,
+                          onKeyDown: D,
+                          onMouseDown: L,
                           onContextMenu: U,
-                          onMouseEnter: ek,
+                          onMouseEnter: eG,
                           onMouseLeave: eP,
-                          onBlur: eD,
+                          onBlur: eL,
                           hovered: em,
                           name:
                               null == m
@@ -453,7 +453,7 @@ let el = s.memo(function (e) {
                                             colorString: n ?? null,
                                             name: h ?? es,
                                             colorStrings: eE,
-                                            hideClanTag: k,
+                                            hideClanTag: G,
                                             user: j,
                                             guildId: y,
                                             isHovering: em,
@@ -468,7 +468,7 @@ let el = s.memo(function (e) {
                                                 colorString: n ?? null,
                                                 name: h ?? es,
                                                 colorStrings: eE,
-                                                hideClanTag: k,
+                                                hideClanTag: G,
                                                 user: j,
                                                 guildId: y,
                                                 isHovering: em,
@@ -486,11 +486,11 @@ let el = s.memo(function (e) {
                               isVR: S,
                               isTyping: x,
                               avatarDecorationSrc: eA,
-                              handleSetTypingRef: eL,
+                              handleSetTypingRef: eD,
                               typingRef: eg,
                               currentUser: g,
                           }),
-                          nameplate: G,
+                          nameplate: k,
                           subText: (0, i.jsx)(eu, {
                               hideSubtext: P,
                               activities: A,
@@ -511,8 +511,8 @@ let el = s.memo(function (e) {
                               premiumSince: C,
                               onClickPremiumGuildIcon: z,
                           }),
-                          "aria-controls": B,
-                          "aria-expanded": V,
+                          "aria-controls": V,
+                          "aria-expanded": B,
                           "aria-setsize": J,
                           "aria-posinset": F,
                           id: q,

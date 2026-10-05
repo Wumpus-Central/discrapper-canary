@@ -4,7 +4,7 @@ n.d(t, {
     GG: () => H,
     HV: () => F,
     I$: () => J,
-    Is: () => w,
+    Is: () => m,
     K: () => j,
     Lw: () => B,
     M7: () => M,
@@ -33,7 +33,7 @@ var i = n(636537),
     p = n(260498),
     g = n(652215),
     _ = n(790782);
-function w(e, t, n) {
+function m(e, t, n) {
     (0, f.Hy)(e, {
         location: "publish",
         code: f.xf.PUBLISH_FAILED,
@@ -42,12 +42,12 @@ function w(e, t, n) {
         isPreview: n,
     });
 }
-function m(e) {
+function w(e) {
     h.A.reloadAppFrames(e);
 }
 function E(e) {
     let t = p.Ay.getProject(e);
-    null != t && (m(t.application_id), m(t.preview_application_id ?? null));
+    null != t && (w(t.application_id), w(t.preview_application_id ?? null));
 }
 let A = null,
     v = null;
@@ -77,7 +77,7 @@ async function C() {
         for (let e of ((T = !0), s.Ay.getResourceIds(_.P.CONJURING_PROJECT)))
             if (null == p.Ay.getProject(e)) {
                 if (0 === s.Ay.getMentionCount(e, _.P.CONJURING_PROJECT)) {
-                    I(e);
+                    b(e);
                     continue;
                 }
                 if ((await (0, r.yy)(5e3 * Math.random()), null == p.Ay.getProject(e)))
@@ -85,25 +85,25 @@ async function C() {
                         await O(e);
                     } catch (n) {
                         let t = (0, c.$k)(n);
-                        (403 === t || 404 === t) && I(e);
+                        (403 === t || 404 === t) && b(e);
                     }
             }
     }
 }
-function I(e) {
+function b(e) {
     l.h.dispatch({ type: "CONJURE_PROJECT_DELETE_SUCCESS", projectId: e });
 }
-let b = null;
+let I = null;
 async function R() {
     let e = u.default.getCurrentUser()?.id ?? null;
-    if (null == e || b === e || p.Ay.hasFetchedProjectLimit()) return;
-    b = e;
+    if (null == e || I === e || p.Ay.hasFetchedProjectLimit()) return;
+    I = e;
     let t = null;
     try {
         let { body: e } = await i.Bo.get({ url: g.Rsh.CONJURE_PROJECT_LIMIT, rejectWithError: !0 });
         t = e.max_projects;
     } catch {}
-    (b === e && (b = null),
+    (I === e && (I = null),
         u.default.getCurrentUser()?.id === e &&
             l.h.dispatch({ type: "CONJURE_PROJECT_LIMIT_FETCH_SETTLE", maxProjects: t }));
 }
@@ -185,7 +185,7 @@ async function L(e, t) {
     let { isPreview: n } = t,
         { bot_permissions_changed: i, integration_installed: r, project: l } = (await O(e)).body,
         s = n ? l.preview_application_id : l.application_id;
-    (null != s && (await (0, o.TA)(s), await (0, a.un)(s, { force: !0 }).catch(() => {}), (n && (!r || i)) || m(s)),
+    (null != s && (await (0, o.TA)(s), await (0, a.un)(s, { force: !0 }).catch(() => {}), (n && (!r || i)) || w(s)),
         (0, f.w2)(e, { isPreview: n }));
 }
 function J(e, t) {

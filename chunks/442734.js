@@ -19,8 +19,8 @@ function I(t) {
         O = (0, r.r)(i.A.colors.EXPRESSIVE_GRADIENT_TENURE_BADGE_DIAMOND_END, E.NJ8.DARK).hex(),
         _ = (0, r.r)(i.A.colors.BACKGROUND_BASE_LOWEST, E.NJ8.DARK).hex(),
         L = (0, r.r)(i.A.colors.BACKGROUND_BRAND).hex(),
-        y = (0, u.cb)(f, 0.5),
-        N = (0, u.cb)(O, 0.5),
+        N = (0, u.cb)(f, 0.5),
+        y = (0, u.cb)(O, 0.5),
         g = I === C.MA.XBOX_GAME_PASS,
         S = (0, C.B9)(I);
     if (null == T) return null;
@@ -46,8 +46,8 @@ function I(t) {
               children: (0, s.jsxs)("div", {
                   className: A.I,
                   style: {
-                      "--custom-pill-gradient-start": y,
-                      "--custom-pill-gradient-end": N,
+                      "--custom-pill-gradient-start": N,
+                      "--custom-pill-gradient-end": y,
                       "--custom-pill-base-color": _,
                   },
                   children: [

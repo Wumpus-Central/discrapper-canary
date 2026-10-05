@@ -66,8 +66,8 @@ function U(e) {
 var D = n(249286),
     O = n(867060),
     P = n(568065),
-    V = n(652215),
-    w = n(746080),
+    w = n(652215),
+    V = n(746080),
     H = n(49999),
     k = n(628049),
     B = n(25525),
@@ -315,7 +315,7 @@ function $(e) {
                 text: F.intl.string(F.t.RzWDqY),
                 variant: "primary",
                 onClick: () => {
-                    (n(H.i.TAKE_ACTION), (0, x.pX)(V.BVt.CHANNEL(t, w.VV.GAME_SERVERS)));
+                    (n(H.i.TAKE_ACTION), (0, x.pX)(w.BVt.CHANNEL(t, V.VV.GAME_SERVERS)));
                 },
             },
         ],
@@ -349,7 +349,7 @@ function Q(e) {
                     (n(H.i.TAKE_ACTION),
                         (0, C.K4)({
                             guildId: t,
-                            location: { section: V.JJy.GUILD_HEADER, object: V.ZSU.BUTTON_CTA },
+                            location: { section: w.JJy.GUILD_HEADER, object: w.ZSU.BUTTON_CTA },
                             scrollToPowerupCards: !0,
                         }));
                 },
@@ -382,7 +382,7 @@ function ee(e) {
                 onClick: async () => {
                     let e = N.A.getGuild(t);
                     if (null == e) return;
-                    let i = { page: V.liQ.GUILD_CHANNEL, section: V.JJy.GUILD_HEADER };
+                    let i = { page: w.liQ.GUILD_CHANNEL, section: w.JJy.GUILD_HEADER };
                     (await (0, E.g)({
                         guild: e,
                         numberOfBoostsToAdd: c,
@@ -421,7 +421,7 @@ function et(e) {
                             ? (0, R.A)(t, g.A.GUILD_POWERUPS_COACHMARK_GAME_SERVER_NEW_GAMES, k.W5)
                             : (0, C.K4)({
                                   guildId: t,
-                                  location: { section: V.JJy.GUILD_HEADER, object: V.ZSU.BUTTON_CTA },
+                                  location: { section: w.JJy.GUILD_HEADER, object: w.ZSU.BUTTON_CTA },
                                   scrollToPowerupCards: !0,
                               }));
                 },
@@ -455,7 +455,7 @@ function en(e) {
                 onClick: async () => {
                     let e = N.A.getGuild(t);
                     if (null == e) return;
-                    let i = { page: V.liQ.GUILD_CHANNEL, section: V.JJy.GUILD_HEADER };
+                    let i = { page: w.liQ.GUILD_CHANNEL, section: w.JJy.GUILD_HEADER };
                     (await (0, E.g)({
                         guild: e,
                         numberOfBoostsToAdd: d,
@@ -507,7 +507,7 @@ function ei(e) {
                 onClick: async () => {
                     let e = N.A.getGuild(t);
                     if (null == e) return;
-                    let i = { page: V.liQ.GUILD_CHANNEL, section: V.JJy.GUILD_HEADER };
+                    let i = { page: w.liQ.GUILD_CHANNEL, section: w.JJy.GUILD_HEADER };
                     (await (0, E.g)({
                         guild: e,
                         numberOfBoostsToAdd: n.numExpiringBoosts,

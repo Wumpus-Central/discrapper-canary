@@ -1,24 +1,24 @@
-a.d(t, { A: () => l });
-var n = a(582128),
-    s = a(435558),
-    i = a(174459),
-    r = a(652215);
+n.d(t, { A: () => l });
+var a = n(582128),
+    s = n(435558),
+    i = n(174459),
+    r = n(652215);
 function l(e) {
-    let { boxType: t, thirdPartyPartner: a } = e,
-        l = n.useRef(null),
-        o = n.useRef(!1);
+    let { boxType: t, thirdPartyPartner: n } = e,
+        l = a.useRef(null),
+        c = a.useRef(!1);
     return {
         sectionRef: l,
-        handleVisibilityChange: n.useCallback(
+        handleVisibilityChange: a.useCallback(
             (e) => {
-                if (e && !o.current) {
-                    o.current = !0;
+                if (e && !c.current) {
+                    c.current = !0;
                     let e = { box_type: (0, s.snakeCase)(t) };
-                    (null != a && (e.third_party_partner = a),
+                    (null != n && (e.third_party_partner = n),
                         i.default.track(r.HAw.PREMIUM_MARKETING_BENTO_BOX_IMPRESSION, e));
                 }
             },
-            [t, a],
+            [t, n],
         ),
     };
 }

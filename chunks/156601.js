@@ -24,9 +24,9 @@ let g = function (e) {
             isApplicationHome: T,
             enablePremiumBrandRefresh: E,
         } = e,
-        I = (0, a.bG)([m.A], () => m.A.isLoadedForSKUs([r])),
-        A = (0, s.q)((0, u.Ay)());
-    if (!I) return (0, n.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: h.xB });
+        A = (0, a.bG)([m.A], () => m.A.isLoadedForSKUs([r])),
+        I = (0, s.q)((0, u.Ay)());
+    if (!A) return (0, n.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: h.xB });
     let v = m.A.getForSkuAndInterval((0, x.mH)(r), t),
         N = null != v ? (0, x.sS)(v, j, !1, g) : null;
     if (E) {
@@ -35,7 +35,7 @@ let g = function (e) {
             children: [
                 (0, n.jsx)(c.E, {
                     variant: e ? "heading-md/semibold" : "heading-xxl/extrabold",
-                    color: e ? "text-muted" : A ? "text-strong" : "text-overlay-light",
+                    color: e ? "text-muted" : I ? "text-strong" : "text-overlay-light",
                     tag: "span",
                     children: (0, n.jsx)("span", { children: N }),
                 }),

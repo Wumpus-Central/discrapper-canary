@@ -1,4 +1,4 @@
-t.d(r, { A: () => A });
+t.d(r, { A: () => I });
 var n = t(477900);
 t(582128);
 var i = t(503698),
@@ -18,14 +18,14 @@ var i = t(503698),
     j = t(156601),
     T = t(202541),
     E = t(375708),
-    I = t(832773);
-function A(e) {
+    A = t(832773);
+function I(e) {
     let {
             isGift: r,
             premiumTier: t,
             offerTierMatchesCard: i,
             offerType: a,
-            showYearlyPrice: A,
+            showYearlyPrice: I,
             priceOptions: v,
             textVariant: N,
             className: R,
@@ -57,7 +57,7 @@ function A(e) {
         return (0, n.jsx)(c.D, {
             variant: C,
             color: y,
-            className: l()((i || !o) && I.K, M),
+            className: l()((i || !o) && A.K, M),
             children:
                 null == b
                     ? null
@@ -85,7 +85,7 @@ function A(e) {
             return (0, n.jsx)(c.D, {
                 variant: C,
                 color: y,
-                className: l()(I.K, M),
+                className: l()(A.K, M),
                 children: E.intl.format(E.t["9vyovu"], {
                     planName: (0, x.RH)(T.En[V?.skuId ?? T.pe.NONE] ?? T.gD.PREMIUM_MONTH_TIER_2),
                     duration: (0, x.re)({
@@ -100,7 +100,7 @@ function A(e) {
             return (0, n.jsx)(c.D, {
                 variant: C,
                 color: y,
-                className: l()(I.K, M),
+                className: l()(A.K, M),
                 children: E.intl.format(E.t.sJTwHQ, {
                     numMonths: B.discount.intervalCount ?? T.OJ,
                     discountedPrice: w,
@@ -113,17 +113,17 @@ function A(e) {
             (0, n.jsx)(j.A, {
                 subscriptionTier: G,
                 isGift: r,
-                className: null != R ? R : I.q,
+                className: null != R ? R : A.q,
                 priceOptions: v,
                 variant: N,
                 isApplicationHome: _,
                 enablePremiumBrandRefresh: P,
             }),
-            A &&
+            I &&
                 (0, n.jsx)(j.A, {
                     subscriptionTier: G,
                     interval: T.WT.YEAR,
-                    className: null != R ? R : I.q,
+                    className: null != R ? R : A.q,
                     isGift: r,
                     priceOptions: v,
                     variant: N,

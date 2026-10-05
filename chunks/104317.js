@@ -33,7 +33,7 @@ function g(e) {
         b = (0, i.Q7)(m.intl.string(c.default.bHcJoe), j),
         _ = g ? void 0 : x,
         y = null != _ ? (0, r.nY)(_) : null != v ? (0, s.WQ)(v) : (h ?? m.intl.string(c.default.t8skVB)),
-        S = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
+        N = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(u.A, {
         glyph: (0, l.jsx)(a.u, {
             asset: (0, l.jsx)(o.Ay, { size: 32 }),
@@ -48,7 +48,7 @@ function g(e) {
         live: g,
         settled: null != _ || (!g && k),
         connectsDown: p,
-        detail: S
+        detail: N
             ? (0, l.jsx)("ol", {
                   className: f.dO,
                   children: n.map((e) =>

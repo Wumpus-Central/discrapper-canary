@@ -3,8 +3,8 @@
     IG: () => w,
     Ps: () => G,
     UR: () => h,
-    W1: () => P,
-    WU: () => b,
+    W1: () => b,
+    WU: () => P,
     _Q: () => U,
     b6: () => Q,
     bg: () => v,
@@ -25,14 +25,14 @@ var r,
     o = n(73153),
     s = n(975807),
     a = n(274670),
-    c = n(144779),
-    d = n(7588),
+    d = n(144779),
+    c = n(7588),
     f = n(657375),
     A = n(968309),
     E = n(780964),
     _ = n(625494),
-    p = n(723702),
-    C = n(192444),
+    C = n(723702),
+    p = n(192444),
     I = n(104886),
     T = n(561844),
     m = n(651892),
@@ -59,12 +59,12 @@ function v(e) {
         }
     return n;
 }
-function P(e) {
+function b(e) {
     let t = (0, S.vv)(e),
         n = (0, S.vl)(e);
     return t || n;
 }
-var b = (((r = {}).DESKTOP = "desktop"), (r.XBOX = "xbox"), (r.PLAYSTATION = "playstation"), r);
+var P = (((r = {}).DESKTOP = "desktop"), (r.XBOX = "xbox"), (r.PLAYSTATION = "playstation"), r);
 function L(e) {
     return "xbox" === e.connected_account_type ? g.fg2.XBOX : g.fg2.PLAYSTATION;
 }
@@ -72,7 +72,7 @@ function R(e, t) {
     let { platformType: n, quest: r } = e;
     ((0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "open_authorization_connection_modal")
         ? (0, a.r)({
-              type: c.F.CLICK_INTERNAL,
+              type: d.F.CLICK_INTERNAL,
               adCreativeType: l.p.QUEST,
               adCreativeId: r.id,
               questContentCTA: t.ctaContent,
@@ -93,23 +93,23 @@ function w(e) {
     return L(e) === g.fg2.XBOX ? N.t["mytEv+"] : N.t.iDiwby;
 }
 function y(e) {
-    if (((0, p.isIOS)() || "ios" === (0, p.getOS)()) && e.ios?.iosAppId != null) {
+    if (((0, C.isIOS)() || "ios" === (0, C.getOS)()) && e.ios?.iosAppId != null) {
         let t = e.ios.iosAppId.startsWith("id") ? e.ios.iosAppId : `id${e.ios.iosAppId}`;
         return `https://apps.apple.com/app/${t}`;
     }
-    return ((0, p.isAndroid)() || "android" === (0, p.getOS)()) && e.android?.androidAppId != null
+    return ((0, C.isAndroid)() || "android" === (0, C.getOS)()) && e.android?.androidAppId != null
         ? `https://play.google.com/store/apps/details?id=${e.android.androidAppId}`
         : null;
 }
 function M(e) {
-    if ((0, p.isAndroid)() && e.android?.androidAppId != null)
+    if ((0, C.isAndroid)() && e.android?.androidAppId != null)
         return {
             url: `https://play.google.com/d?id=${e.android.androidAppId}`,
             os: "android",
             storeAppId: e.android.androidAppId,
             appId: null,
         };
-    if ((0, p.isIOS)() && e.ios?.iosAppId != null) {
+    if ((0, C.isIOS)() && e.ios?.iosAppId != null) {
         let t = e.ios.iosAppId.startsWith("id") ? e.ios.iosAppId.slice(2) : e.ios.iosAppId;
         return { url: `https://apps.apple.com/app/id${t}`, os: "ios", storeAppId: t, appId: parseInt(t, 10) };
     }
@@ -126,7 +126,7 @@ function k(e) {
         getIosAttribution: o,
         allowExternalOpen: a = !0,
     } = e;
-    return (C.OO.getConfig({ location: "quest_open_game_link" }).enabled, a && (0, s.A)(t), Promise.resolve(!1));
+    return (p.OO.getConfig({ location: "quest_open_game_link" }).enabled, a && (0, s.A)(t), Promise.resolve(!1));
 }
 function D(e, t) {
     let n,
@@ -152,7 +152,7 @@ function D(e, t) {
             })(o, (i = (0, u.A)()))),
         (0, I.E5)(I.kI.STEP_3_CLICKED_EXTERNAL, "open_game_link_directly")
             ? (0, a.r)({
-                  type: c.F.CLICK_EXTERNAL_ADVERTISER_CTA,
+                  type: d.F.CLICK_EXTERNAL_ADVERTISER_CTA,
                   adCreativeType: l.p.QUEST,
                   adCreativeId: e.id,
                   questContentCTA: t.ctaContent,
@@ -172,7 +172,7 @@ function D(e, t) {
                   clickId: i,
               }));
     let { impressionId: A } = t,
-        E = null != A ? (0, d.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
+        E = null != A ? (0, c.vV)(e.config.ctaConfig?.ios?.iosAppId != null, t.sourceQuestContent, e.id) : null;
     (_._.dispatch(g.jej.QUEST_GAME_LINK_OPENED),
         k({
             link: o,
@@ -206,7 +206,7 @@ function U(e, t) {
         (null != A && (o = A),
             (0, I.E5)(I.kI.STEP_3_CLICKED_EXTERNAL, "open_ad_game_link_directly")
                 ? (0, a.r)({
-                      type: c.F.CLICK_EXTERNAL_ADVERTISER_CTA,
+                      type: d.F.CLICK_EXTERNAL_ADVERTISER_CTA,
                       adCreativeType: u,
                       adCreativeId: r,
                       questContentCTA: t.ctaContent,
@@ -226,15 +226,15 @@ function U(e, t) {
                   }),
             _._.dispatch(g.jej.QUEST_GAME_LINK_OPENED));
         let { impressionId: E } = t,
-            p = null != E ? (0, d.vV)(l.ios?.iosAppId != null, t.sourceQuestContent, r) : null,
-            C = M(l),
-            m = null != p && null != E ? () => (0, f.FW)({ impressionId: E }) : void 0;
+            C = null != E ? (0, c.vV)(l.ios?.iosAppId != null, t.sourceQuestContent, r) : null,
+            p = M(l),
+            m = null != C && null != E ? () => (0, f.FW)({ impressionId: E }) : void 0;
         i && null == m
             ? (0, s.A)(o)
             : k({
                   link: o,
                   directLink: A,
-                  inlineStoreParams: C,
+                  inlineStoreParams: p,
                   trackOverlayEvent: (e, n, l, i, o) =>
                       (0, T.YE)({
                           adContentId: r,
@@ -257,7 +257,7 @@ function Q(e, t) {
     let { quest: r } = e;
     ((0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "open_console_connection_settings")
         ? (0, a.r)({
-              type: c.F.CLICK_INTERNAL,
+              type: d.F.CLICK_INTERNAL,
               adCreativeType: l.p.QUEST,
               adCreativeId: r.id,
               questContentCTA: t.ctaContent,
@@ -285,7 +285,7 @@ function q(e, t) {
     let { quest: n } = e;
     (0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "open_add_console_connection_modal")
         ? (0, a.r)({
-              type: c.F.CLICK_INTERNAL,
+              type: d.F.CLICK_INTERNAL,
               adCreativeType: l.p.QUEST,
               adCreativeId: n.id,
               questContentCTA: t.ctaContent,
@@ -318,7 +318,7 @@ function G(e, t, n) {
     return (
         (0, I.E5)(I.kI.STEP_2_CLICKED_INTERNAL, "open_single_console_connection_modal")
             ? (0, a.r)({
-                  type: c.F.CLICK_INTERNAL,
+                  type: d.F.CLICK_INTERNAL,
                   adCreativeType: l.p.QUEST,
                   adCreativeId: r.id,
                   questContentCTA: t.ctaContent,
