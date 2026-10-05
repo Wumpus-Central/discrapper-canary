@@ -847,6 +847,13 @@ let l = [
             "Pick which app a voice channel runs from the call itself, and switch between it and the participants.",
     },
     {
+        date: "2026-10-04",
+        time: "09:40",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Pick which app a voice channel runs from Channel App in its channel settings; in the call, switch between the app and the participants, or close the app for just you and reopen it later.",
+    },
+    {
         date: "2026-09-24",
         time: "23:06",
         platforms: ["desktop", "mobile"],

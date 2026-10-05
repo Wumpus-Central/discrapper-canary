@@ -1,18 +1,24 @@
-n.d(t, { Fh: () => r, d7: () => c, kM: () => o });
+n.d(t, { EJ: () => d, Fh: () => c, d7: () => h, kM: () => u });
 var i = n(17928),
-    l = n(150861),
-    a = n(778597),
-    s = n(75721);
-function r(e, t) {
-    let n = (0, s.WA)(e),
-        i = (0, s._f)(e);
-    return t && (null != n || i);
-}
-function o(e) {
-    let t = (0, s.WA)(e);
-    return (0, i.bG)([a.A], () => a.A.isAppVisible(e.id, null != t), [e.id, t]);
-}
+    l = n(91242),
+    a = n(150861),
+    s = n(778597),
+    r = n(75721),
+    o = n(843002);
 function c(e, t) {
-    let n = (0, s.WA)(e);
-    return ((0, l.A)(e), t ? n : null);
+    let n = (0, r.WA)(e);
+    return t && null != n;
+}
+function d(e, t) {
+    let n = (0, r.WA)(e),
+        a = (0, i.bG)([l.A], () => (0, o.B)(l.A.getFramesForSurface((0, o.e)(e.id)), n), [e.id, n]);
+    return t && a;
+}
+function u(e) {
+    let t = (0, r.WA)(e);
+    return (0, i.bG)([s.A], () => s.A.isAppVisible(e.id, null != t), [e.id, t]);
+}
+function h(e, t) {
+    let n = (0, r.WA)(e);
+    return ((0, a.A)(e), t ? n : null);
 }

@@ -17,63 +17,23 @@
     width: 24px
 }
 
-.appIcon__46ba7 {
-    flex: 0 0 auto;
-    height: 18px;
-    margin-inline-end: var(--space-8);
-    -o-object-fit: contain;
-    object-fit: contain;
-    width: 18px
-}
-
-.splitButton_d0002b {
+.control_bcc569 {
     align-items: center;
     display: flex
 }
 
-.splitButton_d0002b .splitButtonMain_d0002b {
-    border-radius: var(--radius-sm) 0 0 var(--radius-sm);
-    padding: var(--space-8)
-}
-
-.splitButton_d0002b .soloMain_d0002b {
+.control_bcc569 .controlButton_bcc569 {
     border-radius: var(--radius-sm);
     padding: var(--space-8)
 }
 
-.splitButton_d0002b .splitButtonCaretHalf_d0002b {
-    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-    margin-inline-start: 1px;
-    padding: var(--space-12) var(--space-4)
-}
-
-.splitButton_d0002b .splitButtonCaret_d0002b {
-    height: 16px;
-    transition: color .15s ease-in-out;
-    width: 16px
-}
-
-.splitButton_d0002b .soloMain_d0002b:hover svg,
-.splitButton_d0002b .splitButtonCaretHalf_d0002b:hover svg,
-.splitButton_d0002b .splitButtonMain_d0002b:hover svg {
+.control_bcc569 .controlButton_bcc569:hover svg {
     color: var(--interactive-text-active)
 }
 
-.splitButton_d0002b.splitButtonOpen_d0002b .soloMain_d0002b,
-.splitButton_d0002b.splitButtonOpen_d0002b .splitButtonCaretHalf_d0002b,
-.splitButton_d0002b.splitButtonOpen_d0002b .splitButtonMain_d0002b,
-.splitButton_d0002b:focus-within .soloMain_d0002b,
-.splitButton_d0002b:focus-within .splitButtonCaretHalf_d0002b,
-.splitButton_d0002b:focus-within .splitButtonMain_d0002b,
-.splitButton_d0002b:hover .soloMain_d0002b,
-.splitButton_d0002b:hover .splitButtonCaretHalf_d0002b,
-.splitButton_d0002b:hover .splitButtonMain_d0002b {
+.control_bcc569:focus-within .controlButton_bcc569,
+.control_bcc569:hover .controlButton_bcc569 {
     background-color: var(--background-mod-muted)
-}
-
-.splitButton_d0002b.splitButtonOpen_d0002b .splitButtonCaret_d0002b {
-    color: var(--interactive-text-active);
-    transform: rotateX(180deg)
 }
 
 .popover__1bad5 {
@@ -333,4 +293,4 @@
     }
 }
 
-/*# sourceMappingURL=355761.382eb65458ea44a8.css.map*/
+/*# sourceMappingURL=604456.47a995262756e24a.css.map*/

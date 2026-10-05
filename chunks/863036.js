@@ -276,7 +276,7 @@ let k = new F(h.h, {
                 null != C && (a = a.set("defaultForumLayout", C)),
                 void 0 !== p && (a = a.set("iconEmoji", p)),
                 null != L && (a = a.set("themeColor", L)),
-                null != g && (a = a.set("application_id", g)),
+                void 0 !== g && (a = a.set("application_id", g)),
                 P());
         },
         CHANNEL_SETTINGS_SET_SECTION: b,

@@ -17,11 +17,10 @@ let o = new r(l.h, {
         let { channelId: t } = e;
         a[t] = !s(t);
     },
-    VOICE_CHANNEL_APP_SURFACE_SHOW: function (e) {
-        let { channelId: t, applicationId: n } = e,
-            i = null != n;
-        if (a[t] === i) return !1;
-        a[t] = i;
+    VOICE_CHANNEL_APP_CLOSE: function (e) {
+        let { channelId: t } = e;
+        if (!1 === a[t]) return !1;
+        a[t] = !1;
     },
     VOICE_CHANNEL_SELECT: function (e) {
         let { channelId: t, currentVoiceChannelId: n } = e;

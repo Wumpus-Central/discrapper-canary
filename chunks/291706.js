@@ -1,19 +1,12 @@
-n.d(t, { W: () => u, s: () => d });
-var i = n(739187),
-    l = n(857250),
-    a = n(97483),
-    s = n(73153),
-    r = n(308528),
-    o = n(389036),
-    c = n(375708);
-function d(e) {
-    s.h.dispatch({ type: "VOICE_CHANNEL_APP_SURFACE_TOGGLE", channelId: e });
+n.d(t, { N: () => o, s: () => r });
+var i = n(73153),
+    l = n(91242),
+    a = n(580954),
+    s = n(843002);
+function r(e) {
+    i.h.dispatch({ type: "VOICE_CHANNEL_APP_SURFACE_TOGGLE", channelId: e });
 }
-async function u(e, t) {
-    try {
-        await r.A.updateChannel(e, { application_id: t }, "Voice Channel App Picker");
-    } catch {
-        (0, i.P)((0, l.o)(c.intl.string(o.default.lcgR82), a.Ck.FAILURE));
-    }
-    s.h.dispatch({ type: "VOICE_CHANNEL_APP_SURFACE_SHOW", channelId: e, applicationId: t });
+function o(e) {
+    for (let t of l.A.getFramesForSurface((0, s.e)(e))) (0, a.A)().leaveFrame(t.id);
+    i.h.dispatch({ type: "VOICE_CHANNEL_APP_CLOSE", channelId: e });
 }
