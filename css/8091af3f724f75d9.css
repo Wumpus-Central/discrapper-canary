@@ -166,6 +166,10 @@
     top: var(--space-12)
 }
 
+.betaBadgeHost__5573a {
+    display: flex
+}
+
 .full-motion .container__5573a {
     transition: border-width .2s ease, border-color .2s ease, box-shadow .2s ease, transform .2s ease-in-out, background-color .2s ease
 }
@@ -228,4 +232,4 @@
     transition: opacity .2s ease
 }
 
-/*# sourceMappingURL=a5534dbcc11cf2c0.css.map*/
+/*# sourceMappingURL=8091af3f724f75d9.css.map*/

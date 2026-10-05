@@ -1,9 +1,9 @@
 (a.r(s), a.d(s, { default: () => el }));
 var t = a(477900),
     l = a(582128),
-    i = a(687966),
-    n = a(17928),
-    c = a(812993),
+    n = a(687966),
+    i = a(17928),
+    c = a(508770),
     d = a(834730),
     r = a(289873),
     o = a(364522),
@@ -22,10 +22,10 @@ var t = a(477900),
     p = a(289704),
     S = a(297264),
     G = a(821609),
-    C = a(104510),
-    I = a(793574),
-    R = a(688810),
-    _ = a(987144),
+    I = a(104510),
+    R = a(793574),
+    _ = a(688810),
+    C = a(987144),
     y = a(828162),
     M = a(366010),
     k = a(736653),
@@ -36,7 +36,7 @@ function V(e) {
     let { className: s } = e,
         a = (0, k.Ay)(),
         l = (0, M.q)(a),
-        i = (0, L.TM)()
+        n = (0, L.TM)()
             ? l
                 ? "https://cdn.discordapp.com/assets/content/69d4b14501d44f2aec986761083e10f965087103272626a5db7505f48986f1fd.mp4"
                 : "https://cdn.discordapp.com/assets/content/47dc147701661ba3fabce79f4ce1b2bd45760d8c7c9dc70082fca884101bdb1f.mp4"
@@ -53,9 +53,9 @@ function V(e) {
                     fallbackImage: l
                         ? "https://cdn.discordapp.com/assets/content/d8e2decd311794ae583d9165897e2b70181ec10c3553511d03bbeb3876a3f0af.png"
                         : "https://cdn.discordapp.com/assets/content/da80e999bcef3fc647b6697e4b4cbe396505f1517f06fe6e47eb4e24c5538bc9.png",
-                    children: (0, t.jsx)("source", { src: i }),
+                    children: (0, t.jsx)("source", { src: n }),
                 },
-                i,
+                n,
             ),
         ],
     });
@@ -107,17 +107,17 @@ function $() {
 }
 var w = a(628049),
     B = a(652215),
-    q = a(394107),
-    z = a(375708);
-function O(e) {
+    z = a(394107),
+    O = a(375708);
+function Y(e) {
     let { guildId: s } = e,
-        i = (0, x.A)(s),
-        n = l.useRef(null),
-        { analyticsLocations: c } = (0, R.Ay)(I.A.GAME_SERVER_PAGE),
+        n = (0, x.A)(s),
+        i = l.useRef(null),
+        { analyticsLocations: c } = (0, _.Ay)(R.A.GAME_SERVER_PAGE),
         r = l.useCallback(() => {
             let e = j.A.getGuild(s);
             null != e &&
-                (0, _.g)({
+                (0, C.g)({
                     analyticsLocation: { page: B.liQ.GAME_SERVERS, section: B.JJy.GAME_SERVERS_EMPTY_STATE },
                     numberOfBoostsToAdd: 1,
                     analyticsLocations: c,
@@ -125,7 +125,7 @@ function O(e) {
                 });
         }, [s, c]),
         o = l.useCallback(() => {
-            (0, y.A)(s, I.A.GAME_SERVER_PAGE, w.W5);
+            (0, y.A)(s, R.A.GAME_SERVER_PAGE, w.W5);
         }, [s]),
         m = l.useCallback(() => {
             (0, b.openModalLazy)(async () => {
@@ -141,34 +141,34 @@ function O(e) {
                 className: T.Qs,
                 children: [
                     (0, t.jsx)("div", {
-                        ref: n,
+                        ref: i,
                         className: T._q,
-                        children: (0, t.jsx)(p.E, { eventTargetRef: n, fit: "contain", stateMachine: "SM_Main_Int" }),
+                        children: (0, t.jsx)(p.E, { eventTargetRef: i, fit: "contain", stateMachine: "SM_Main_Int" }),
                     }),
                     (0, t.jsx)(S.D, {
                         variant: "heading-lg/semibold",
                         color: "text-strong",
-                        children: i ? z.intl.string(q.default.SbXvFG) : z.intl.string(q.default.ryqCyJ),
+                        children: n ? O.intl.string(z.default.SbXvFG) : O.intl.string(z.default.ryqCyJ),
                     }),
                     (0, t.jsx)(d.E, {
                         variant: "text-sm/normal",
                         color: "text-muted",
                         className: T.h_,
-                        children: i ? z.intl.string(q.default.D1YcNp) : z.intl.string(q.default.iSX4z8),
+                        children: n ? O.intl.string(z.default.D1YcNp) : O.intl.string(z.default.iSX4z8),
                     }),
                     (0, t.jsx)("div", {
                         className: T.Uo,
-                        children: i
+                        children: n
                             ? (0, t.jsxs)(t.Fragment, {
                                   children: [
                                       (0, t.jsx)(G.$, {
                                           variant: "expressive",
-                                          text: z.intl.string(z.t.LhlgY9),
+                                          text: O.intl.string(O.t.LhlgY9),
                                           onClick: o,
                                       }),
                                       (0, t.jsx)(G.$, {
                                           variant: "secondary",
-                                          text: z.intl.string(q.default.fxIXv4),
+                                          text: O.intl.string(z.default.fxIXv4),
                                           onClick: m,
                                       }),
                                   ],
@@ -177,13 +177,13 @@ function O(e) {
                                   children: [
                                       (0, t.jsx)(G.$, {
                                           variant: "expressive",
-                                          icon: C._,
-                                          text: z.intl.string(q.default["968/QC"]),
+                                          icon: I._,
+                                          text: O.intl.string(z.default["968/QC"]),
                                           onClick: r,
                                       }),
                                       (0, t.jsx)(G.$, {
                                           variant: "secondary",
-                                          text: z.intl.string(q.default.fxIXv4),
+                                          text: O.intl.string(z.default.fxIXv4),
                                           onClick: m,
                                       }),
                                   ],
@@ -198,16 +198,16 @@ function O(e) {
         ],
     });
 }
-var U = a(143407),
-    Y = a(866665),
+var q = a(143407),
+    U = a(866665),
     X = a(328380),
-    W = a(742290),
-    J = a(144977),
-    K = a(660542);
-let Q = { ...w.ZN, initialStep: w.HS.SERVER_SETTINGS };
+    J = a(742290),
+    K = a(144977),
+    Q = a(660542);
+let W = { ...w.ZN, initialStep: w.HS.SERVER_SETTINGS };
 function Z(e) {
     let { guildId: s, isAdmin: a } = e,
-        { state: i, shouldFetchCatalog: c } = (0, n.cf)([N.A], () => ({
+        { state: n, shouldFetchCatalog: c } = (0, i.cf)([N.A], () => ({
             state: N.A.getStateForGuild(s),
             shouldFetchCatalog: N.A.shouldFetchCatalogForGuild(s),
         }));
@@ -215,52 +215,52 @@ function Z(e) {
         c && (0, v.z9)(s);
     }, [s, c]);
     let { catalog: d, instances: m } = l.useMemo(
-            () => ({ catalog: Object.values(i?.catalog ?? {}), instances: Object.values(i?.instances ?? {}) }),
-            [i?.catalog, i?.instances],
+            () => ({ catalog: Object.values(n?.catalog ?? {}), instances: Object.values(n?.instances ?? {}) }),
+            [n?.catalog, n?.instances],
         ),
         u = m.length >= w.ZI;
     return 0 === d.length
         ? (0, t.jsx)("div", {
-              className: K.kL,
-              children: (0, t.jsx)(r.y, { type: r.t.SPINNING_CIRCLE, className: K.u1 }),
+              className: Q.kL,
+              children: (0, t.jsx)(r.y, { type: r.t.SPINNING_CIRCLE, className: Q.u1 }),
           })
         : (0, t.jsxs)("div", {
-              className: K.kL,
+              className: Q.kL,
               children: [
                   (0, t.jsx)(S.D, {
-                      className: K.R_,
+                      className: Q.R_,
                       variant: "heading-md/semibold",
-                      children: z.intl.string(a ? q.default["3vWDMz"] : q.default.Uvf9GK),
+                      children: O.intl.string(a ? z.default["3vWDMz"] : z.default.Uvf9GK),
                   }),
-                  a && u && (0, t.jsx)("div", { className: K.Bq, children: (0, t.jsx)(W.k, {}) }),
+                  a && u && (0, t.jsx)("div", { className: Q.Bq, children: (0, t.jsx)(J.k, {}) }),
                   (0, t.jsx)(o.Ip, {
-                      className: K.nd,
+                      className: Q.nd,
                       children: (0, t.jsx)("div", {
-                          className: K.Y_,
+                          className: Q.Y_,
                           children: d.map((e, l) =>
                               a
                                   ? (0, t.jsx)(
-                                        Y.m,
+                                        U.m,
                                         {
                                             asContainer: !0,
                                             text: e.disabled
-                                                ? z.intl.formatToPlainString(q.default.uVpJYf, { gameName: e.name })
+                                                ? O.intl.formatToPlainString(z.default.uVpJYf, { gameName: e.name })
                                                 : null,
                                             position: "top",
                                             children: (0, t.jsx)(X.A, {
                                                 guildId: s,
                                                 game: e,
                                                 onClick: () =>
-                                                    (0, J.A)({
+                                                    (0, K.A)({
                                                         guildId: s,
-                                                        stepConfig: Q,
+                                                        stepConfig: W,
                                                         initialGameServerGame: e,
-                                                        analyticsLocation: I.A.GAME_SERVER_PAGE_SIDEBAR,
+                                                        analyticsLocation: R.A.GAME_SERVER_PAGE_SIDEBAR,
                                                     }),
-                                                imageClassName: K.Sl,
-                                                titleClassName: K.DD,
+                                                imageClassName: Q.Sl,
+                                                titleClassName: Q.DD,
                                                 variant: u || e.disabled ? X.e.DISABLED : X.e.CLICKABLE,
-                                                location: I.A.GAME_SERVER_PAGE_SIDEBAR,
+                                                location: R.A.GAME_SERVER_PAGE_SIDEBAR,
                                             }),
                                         },
                                         `sidebar-game-${l}-${e.id}`,
@@ -271,9 +271,9 @@ function Z(e) {
                                             guildId: s,
                                             game: e,
                                             variant: X.e.VIEWABLE,
-                                            imageClassName: K.Sl,
-                                            titleClassName: K.DD,
-                                            location: I.A.GAME_SERVER_PAGE_SIDEBAR,
+                                            imageClassName: Q.Sl,
+                                            titleClassName: Q.DD,
+                                            location: R.A.GAME_SERVER_PAGE_SIDEBAR,
                                         },
                                         `sidebar-game-${l}-${e.id}`,
                                     ),
@@ -294,7 +294,7 @@ function el(e) {
         { guildId: b } = e;
     (0, A.tR)(b);
     let p = (0, g.U)("GameServerPage"),
-        S = (0, n.bG)([j.A], () => j.A.getGuild(b)?.features.has(B.GuildFeatures.GAME_SERVERS) ?? !1);
+        S = (0, i.bG)([j.A], () => j.A.getGuild(b)?.features.has(B.GuildFeatures.GAME_SERVERS) ?? !1);
     ((s = S ? b : null),
         (a = (0, ee.j)()),
         l.useEffect(() => {
@@ -302,7 +302,7 @@ function el(e) {
             let e = !0,
                 t = null,
                 l = 0,
-                i = (function n() {
+                n = (function i() {
                     return setTimeout(
                         () => {
                             null == s ||
@@ -312,29 +312,29 @@ function el(e) {
                                         .then(() => (l = 0))
                                         .catch(() => (l = Math.min(l + 1, 4)))
                                         .finally(() => {
-                                            e && (i = n());
+                                            e && (n = i());
                                         })));
                         },
                         es * Math.pow(2, l) + Math.random() * ea,
                     );
                 })();
             return () => {
-                ((e = !1), t?.abort(), clearTimeout(i));
+                ((e = !1), t?.abort(), clearTimeout(n));
             };
         }, [s, a]),
         l.useEffect(() => {
             S && ((0, v.cq)(b), m.Ay.getDetectableGames());
         }, [b, S]));
     let G = (0, x.A)(b),
-        C = (0, E.N)("GameServerPage"),
-        I = (0, n.bG)([N.A], () => N.A.getStateForGuild(b)),
-        R = l.useMemo(() => {
-            if (!I?.hasFetchedInstances) return;
-            let e = Object.values(I.instances ?? {});
+        I = (0, E.N)("GameServerPage"),
+        R = (0, i.bG)([N.A], () => N.A.getStateForGuild(b)),
+        _ = l.useMemo(() => {
+            if (!R?.hasFetchedInstances) return;
+            let e = Object.values(R.instances ?? {});
             return 0 === e.length
                 ? null
-                : e.map((e, s) => (0, t.jsx)(U.Ay, { guildId: b, instance: e }, `${e.gameId}-${s}`));
-        }, [I?.instances, I?.hasFetchedInstances, b]);
+                : e.map((e, s) => (0, t.jsx)(q.Ay, { guildId: b, instance: e }, `${e.gameId}-${s}`));
+        }, [R?.instances, R?.hasFetchedInstances, b]);
     return (0, t.jsxs)("div", {
         className: et.kL,
         children: [
@@ -342,14 +342,14 @@ function el(e) {
                 className: et.KE,
                 toolbar: (0, t.jsx)("div", {}),
                 children: [
-                    (0, t.jsx)(u.Ay.Icon, { icon: i.GameControllerIcon, "aria-label": "" }),
-                    (0, t.jsx)(u.Ay.Title, { children: z.intl.string(q.default.vCzwM7) }),
-                    (0, t.jsx)(c.Lp, { disableColor: !0, text: z.intl.string(z.t.oW0eUd), className: et.qS }),
+                    (0, t.jsx)(u.Ay.Icon, { icon: n.GameControllerIcon, "aria-label": "" }),
+                    (0, t.jsx)(u.Ay.Title, { children: O.intl.string(z.default.vCzwM7) }),
+                    (0, t.jsx)(c.E, { type: "beta", variant: "brand" }),
                     (0, t.jsx)(u.Ay.Divider, { className: et.yF }),
                     (0, t.jsx)(d.E, {
                         variant: "text-sm/normal",
                         color: "text-muted",
-                        children: z.intl.format(q.default.LiR4eN, {
+                        children: O.intl.format(z.default.LiR4eN, {
                             helpCenterUrl: f.A.getArticleURL(B.MVz.GAME_SERVER_HOSTING),
                         }),
                     }),
@@ -358,13 +358,13 @@ function el(e) {
             (0, t.jsxs)("div", {
                 className: et.hQ,
                 children: [
-                    S && !I?.hasFetchedInstances
+                    S && !R?.hasFetchedInstances
                         ? (0, t.jsx)("div", {
                               className: et.dc,
                               children: (0, t.jsx)(r.y, { type: r.t.SPINNING_CIRCLE }),
                           })
-                        : null == R
-                          ? (0, t.jsx)(O, { guildId: b })
+                        : null == _
+                          ? (0, t.jsx)(Y, { guildId: b })
                           : (0, t.jsxs)("div", {
                                 className: et.nd,
                                 children: [
@@ -373,15 +373,15 @@ function el(e) {
                                             className: et.MR,
                                             children: (0, t.jsx)(h.A, {
                                                 look: h.k.WARNING,
-                                                children: z.intl.format(q.default.XzXjK2, {}),
+                                                children: O.intl.format(z.default.XzXjK2, {}),
                                             }),
                                         }),
                                     (0, t.jsx)(o.Ip, {
-                                        children: (0, t.jsx)("div", { className: et.Y_, children: R }),
+                                        children: (0, t.jsx)("div", { className: et.Y_, children: _ }),
                                     }),
                                 ],
                             }),
-                    (G || C) && (0, t.jsx)(Z, { guildId: b, isAdmin: G ?? !1 }),
+                    (G || I) && (0, t.jsx)(Z, { guildId: b, isAdmin: G ?? !1 }),
                 ],
             }),
         ],

@@ -1,6 +1,5 @@
 _.exports = {
     kL: "container__0b710",
-    qS: "badge__0b710",
     yF: "divider__0b710",
     dc: "spinnerContainer__0b710",
     KE: "toolbar__0b710",

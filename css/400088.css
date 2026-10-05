@@ -17,6 +17,7 @@
 }
 
 .betaBadge__14ad3 {
+    display: flex;
     inset-inline-start: var(--space-8);
     position: absolute;
     top: -8px
@@ -60,10 +61,6 @@
 .infoNitroText__14ad3 {
     flex: 1;
     margin-inline-end: var(--space-16)
-}
-
-.infoNitroBadge__14ad3 {
-    margin-inline-start: 0 auto
 }
 
 .infoSoundContainer__14ad3 {
@@ -118,4 +115,4 @@
     gap: var(--space-8)
 }
 
-/*# sourceMappingURL=400088.310deb629803356e.css.map*/
+/*# sourceMappingURL=400088.3709018a0cba3748.css.map*/

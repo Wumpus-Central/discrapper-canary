@@ -9,7 +9,6 @@ n.exports = {
     Pc: "infoNitroTextContainer__14ad3",
     aJ: "infoNitroIcon__14ad3",
     sD: "infoNitroText__14ad3",
-    KD: "infoNitroBadge__14ad3",
     Br: "infoSoundContainer__14ad3",
     tn: "infoSoundInnerContainer__14ad3",
     nR: "infoSoundIcon__14ad3",

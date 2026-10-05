@@ -1,7 +1,3 @@
-.badge_e3f69f {
-    background-color: var(--brand-500)
-}
-
 .trailingContainer_e3f69f {
     align-items: center;
     color: var(--interactive-text-default);
@@ -206,10 +202,6 @@
     object-fit: contain;
     pointer-events: auto;
     width: 100%
-}
-
-.badge__7edcd {
-    background-color: var(--brand-500)
 }
 
 .trailingContainer__41d67 {
@@ -705,4 +697,4 @@
     background-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=e40cb09314fed636.css.map*/
+/*# sourceMappingURL=8e69862b0f7209dc.css.map*/

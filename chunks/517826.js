@@ -17,4 +17,5 @@ a.exports = {
     q9: "price__5573a",
     pT: "inlineBoost__5573a",
     Hl: "new__5573a",
+    Mx: "betaBadgeHost__5573a new__5573a",
 };

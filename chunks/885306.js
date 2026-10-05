@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 629592, Version Hash: b91782b02bfa1937ba74278551b355744160c130`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 629601, Version Hash: 6cae6d9af2f042f92d67ca22b75501af735c6551`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -21651,10 +21651,9 @@ let NF = Math.ceil(Math.sqrt(115200)),
                                         className: Nk.ys,
                                         style: { opacity: (0, Nx.a)(_.to({ range: [0, 1], output: [0, 0.5] })) },
                                     }),
-                                    (0, y.jsx)(sv.Lp, {
+                                    (0, y.jsx)("div", {
                                         className: Nk.qS,
-                                        text: tS.intl.string(tS.t.y2b7CA),
-                                        color: i9.A.colors.BACKGROUND_BRAND.css,
+                                        children: (0, y.jsx)(gi.E, { type: "new", variant: "brand" }),
                                     }),
                                 ],
                             }),
@@ -22091,7 +22090,7 @@ let CE = "isHideDevBanner",
                     className: to()(C_.Wz, C_.mr),
                     children: [
                         (0, y.jsx)(Cu, { className: C_.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "629592" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "629601" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -27350,7 +27349,7 @@ let Le = (0, tj.Fe)({
                 n.e("546957"),
                 n.e("28420"),
                 n.e("371496"),
-                n.e("93579"),
+                n.e("861494"),
                 n.e("317615"),
                 n.e("332165"),
                 n.e("618416"),
@@ -27433,7 +27432,7 @@ let Le = (0, tj.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("145006"),
-                n.e("93579"),
+                n.e("861494"),
                 n.e("172413"),
                 n.e("13039"),
                 n.e("919472"),
@@ -50498,7 +50497,7 @@ let Vu = (0, ii.Fe)({
             Promise.all([
                 n.e("82731"),
                 n.e("145006"),
-                n.e("93579"),
+                n.e("861494"),
                 n.e("172413"),
                 n.e("13039"),
                 n.e("919472"),

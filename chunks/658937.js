@@ -21,4 +21,5 @@ e.exports = {
     NC: "buttonsContainer__65e57",
     x6: "button__65e57",
     AP: "typeBadge__65e57",
+    Mx: "betaBadgeHost__65e57 typeBadge__65e57",
 };
