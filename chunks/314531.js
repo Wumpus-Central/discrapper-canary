@@ -1,20 +1,21 @@
-t.d(a, { A: () => g });
+t.d(a, { A: () => p });
 var i = t(477900),
     n = t(582128),
     l = t(503698),
     s = t.n(l),
-    r = t(607470),
+    r = t(192308),
+    d = t(607470),
     c = t(590251),
-    d = t(219222),
-    o = t(375708),
-    u = t(869006);
-function m(e) {
+    o = t(219222),
+    u = t(375708),
+    m = t(869006);
+function h(e) {
     let { widgetClipId: a, size: t } = e,
-        n = Math.round(((0, d.Ib)(a) ?? 0) * 100);
+        n = Math.round(((0, o.Ib)(a) ?? 0) * 100);
     return (0, i.jsx)("div", {
-        className: s()(u.ring, u[t]),
+        className: s()(m.ring, m[t]),
         role: "progressbar",
-        "aria-label": o.intl.string(o.t.RFRuwZ),
+        "aria-label": u.intl.string(u.t.RFRuwZ),
         "aria-valuenow": n,
         children: (0, i.jsx)(c.a, {
             percent: n,
@@ -23,40 +24,51 @@ function m(e) {
         }),
     });
 }
-var h = t(579460);
-function g(e) {
-    let { item: a, ringSize: t, isPlaying: l = !1, isMuted: c = !0, fit: d = "cover", onEnded: o, className: u } = e,
-        g = n.useRef(null),
-        p = "uploading" === a.status,
-        v = s()(h.Gt, { [h.ob]: p, [h.k6]: "contain" === d });
+var g = t(579460);
+function p(e) {
+    let {
+            item: a,
+            ringSize: t,
+            isPlaying: l = !1,
+            isMuted: c = !0,
+            fit: o = "cover",
+            onEnded: u,
+            className: m,
+            modalKey: p,
+        } = e,
+        v = n.useRef(null),
+        f = "uploading" === a.status,
+        x = s()(g.Gt, { [g.ob]: f, [g.k6]: "contain" === o });
+    n.useEffect(() => {
+        let e = v.current;
+        null != e && (e.muted = c);
+    }, [c]);
+    let j = (0, r.useIsModalAtTop)(p ?? ""),
+        N = l && (null == p || j);
     return (
         n.useEffect(() => {
-            let e = g.current;
-            null != e && (e.muted = c);
-        }, [c]),
-        n.useEffect(() => {
-            let e = g.current;
-            null != e && (l ? e.play().catch(() => {}) : e.pause());
-        }, [l, a.key]),
+            let e = v.current;
+            null != e && (N && e.paused ? e.play().catch(() => {}) : N || e.paused || e.pause());
+        }, [N, a.key]),
         (0, i.jsxs)("div", {
-            className: s()(h.$_, u),
+            className: s()(g.$_, m),
             children: [
                 "saved" === a.status
                     ? null != a.videoURL
-                        ? (0, i.jsx)(r.A, {
-                              ref: g,
+                        ? (0, i.jsx)(d.A, {
+                              ref: v,
                               src: a.videoURL,
                               poster: a.thumbnailURL,
                               crossOrigin: "anonymous",
                               preload: "none",
                               muted: !0,
-                              loop: null == o,
-                              onEnded: o,
-                              className: v,
+                              loop: null == u,
+                              onEnded: u,
+                              className: x,
                           })
                         : null
-                    : (0, i.jsx)("img", { src: a.thumbnail, alt: "", className: v, loading: "lazy" }),
-                p && (0, i.jsx)(m, { widgetClipId: a.key, size: t }),
+                    : (0, i.jsx)("img", { src: a.thumbnail, alt: "", className: x, loading: "lazy" }),
+                f && (0, i.jsx)(h, { widgetClipId: a.key, size: t }),
             ],
         })
     );
