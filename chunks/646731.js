@@ -681,7 +681,7 @@ function ek(e) {
     return (0, a.jsx)(eH, { ...e, hasNoChallenges: !0 });
 }
 function ew() {
-    let { passesGeneralUIInvariant: e, programReward: t } = (0, _.F)({ location: "OrbWallet" });
+    let { passesGeneralUIInvariant: e, programReward: t } = (0, _.F)();
     if (!e || null == t) return null;
     let l = Math.max(1, (0, r.default)(new Date(t.next_reward_date), new Date()));
     return (0, a.jsx)(ea, { text: Y.intl.format(V.default["04j3XV"], { orbAmount: t.reward_amount, days: l }) });

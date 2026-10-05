@@ -2042,7 +2042,7 @@ var sq = s(462887),
     ie = s(1889),
     it = s(749012);
 let is = function () {
-    let { passesGeneralUIInvariant: e, programReward: t } = (0, H.F)({ location: "NitroOrbsWhatsNewCardFooter" });
+    let { passesGeneralUIInvariant: e, programReward: t } = (0, H.F)();
     if (!e || null == t) return null;
     let s =
         null != t.next_reward_date && "" !== t.next_reward_date
@@ -2101,33 +2101,33 @@ let is = function () {
 };
 var ii = s(190107),
     ia = s(799544);
-function il(e) {
-    let { shouldShowBonusOrbsUX: t, multiplier: s } = (0, s8.lk)(ii.rE.NITRO_HOME_MARKETING),
-        { isEligible: i, programReward: n } = (0, H.F)({ location: e });
+function il() {
+    let { shouldShowBonusOrbsUX: e, multiplier: t } = (0, s8.lk)(ii.rE.NITRO_HOME_MARKETING),
+        { isEligible: s, programReward: i } = (0, H.F)();
     return {
         nitroOrbsRewardsCard: (0, o.useMemo)(
             () =>
-                !i || null == n || null == n.reward_amount || n.reward_amount <= 0
+                !s || null == i || null == i.reward_amount || i.reward_amount <= 0
                     ? null
                     : {
                           id: tH.NITRO_ORBS_REWARDS_CARD_ID,
                           title: Q.intl.string(ie.default.hx5AFp),
-                          description: Q.intl.format(ie.default.wq3CF2, { orbsCount: n.reward_amount }),
+                          description: Q.intl.format(ie.default.wq3CF2, { orbsCount: i.reward_amount }),
                           primaryAsset: "/assets/8f530451dce1ccc0.svg",
                           primaryAssetClassName: u()(ia.lH, ia.yK),
                           footerContent: (0, c.jsx)(is, {}),
                           ctaText: Q.intl.string(ie.default.BxjHiu),
                           onCtaClick: () => (0, S.pX)(eZ.BVt.COLLECTIBLES_SHOP_WITH_TAB(e7.G2.ORBS)),
                       },
-            [i, n],
+            [s, i],
         ),
         questOrbMultiplierCard: (0, o.useMemo)(
             () =>
-                t
+                e
                     ? {
                           id: tH.QUEST_ORB_MULTIPLIER_CARD_ID,
                           title: Q.intl.string(Q.t.Csf5Ol),
-                          description: Q.intl.format(Q.t.NpUfej, { bonusOrbMultiplier: s }),
+                          description: Q.intl.format(Q.t.NpUfej, { bonusOrbMultiplier: t }),
                           primaryAsset:
                               "https://cdn.discordapp.com/assets/content/6a45cf480a4894d29a155fbc23df4dca701a69e7f09227ef964a61bdb6e5833a.png",
                           ctaText: Q.intl.string(Q.t.jVcuVY),
@@ -2135,7 +2135,7 @@ function il(e) {
                           primaryAssetClassName: ia.Nf,
                       }
                     : null,
-            [t, s],
+            [e, t],
         ),
     };
 }
@@ -2311,7 +2311,7 @@ function iS() {
                 );
             }, [i, c, r, m, n, d, s, g, p, e]);
         })(s),
-        { nitroOrbsRewardsCard: m, questOrbMultiplierCard: g } = il("useWhatsNewPerkCards"),
+        { nitroOrbsRewardsCard: m, questOrbMultiplierCard: g } = il(),
         p =
             ((e = (0, iN.L)(tj.PremiumTypes.TIER_2)),
             (t = (0, s2.rX)()),
@@ -2427,7 +2427,7 @@ function iw(e) {
                 }, [n]),
                 p = iS(),
                 f = (0, o.useMemo)(() => p.map((e) => e?.id), [p]),
-                { nitroOrbsRewardsCard: h, questOrbMultiplierCard: N } = il("useFavoritesPerkCards"),
+                { nitroOrbsRewardsCard: h, questOrbMultiplierCard: N } = il(),
                 E = ig(n),
                 T = (0, o.useMemo)(
                     () => [
@@ -2752,7 +2752,7 @@ let iX = "/assets/cd2be35d285d4675.svg",
         let i = o.useRef(null),
             n = o.useRef(null),
             a = (0, x.bG)([O.A], () => O.A.getPremiumTypeSubscription()),
-            { isReady: l, programReward: r } = (0, H.F)({ location: "PremiumSubscriberHome" }),
+            { isReady: l, programReward: r } = (0, H.F)(),
             {
                 scrollTargetId: d,
                 glowingSectionId: f,

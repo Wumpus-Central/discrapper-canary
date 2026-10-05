@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 630119, Version Hash: 8edaa5464517bf7a377a3b6b314cd652396384c4`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 630121, Version Hash: 2b0168b1062dc2457e9735a0f10c5b55b9270468`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -21010,7 +21010,7 @@ function Np(e) {
         k = (0, mB.mB)(rO.M.REFERRAL_PROGRAM_POPOVER_V2),
         V = (0, mB.mB)(rO.M.REFERRAL_PROGRAM_INCENTIVE_POPOVER),
         H = (0, ed.bG)([mZ.A], () => mZ.A.getReminderStateId()),
-        { programReward: j, isEligible: W } = (0, m3.F)({ location: "NitroTabButton" }),
+        { programReward: j, isEligible: W } = (0, m3.F)(),
         Y = (0, St.Y)({ location: "nitro_tab_popover" }),
         K = (0, ed.bG)([Sp], () => Sp.getLastDismissedAnnouncementModalAt()),
         $ = null != K && Date.now() - K > 6048e5,
@@ -22076,7 +22076,7 @@ let CE = "isHideDevBanner",
                     className: to()(C_.Wz, C_.mr),
                     children: [
                         (0, y.jsx)(Cu, { className: C_.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "630119" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "630121" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })

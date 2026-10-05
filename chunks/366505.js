@@ -4,20 +4,20 @@ var r = n(17928),
     l = n(636592),
     u = n(150092),
     s = n(892227);
-function i(e) {
+function i() {
     let {
-            isReady: t,
-            programReward: n,
-            totalDays: i,
+            isReady: e,
+            programReward: t,
+            totalDays: n,
         } = (0, r.cf)([a.A], () => ({
             isReady: a.A.isReady(),
             programReward: a.A.getRewardForProgram(l.W.NITRO),
             totalDays: a.A.getTotalDaysInDuration(l.W.NITRO),
         })),
-        c = (0, u.q)();
+        i = (0, u.q)();
     return {
         isEligible: !0,
-        isReady: t,
+        isReady: e,
         passesGeneralUIInvariant: (function (e) {
             if (null == e) return !1;
             let t = e.next_reward_date,
@@ -30,16 +30,16 @@ function i(e) {
                 if (Number.isNaN(e) || e < Date.now()) return !1;
             }
             return !0;
-        })(n),
+        })(t),
         passesProgressBarInvariant: (function (e, t) {
             if (null == e || null == t) return !1;
             let n = e.next_reward_date;
             if (null == n || "" === n) return !1;
             let r = new Date(n).getTime();
             return !(Number.isNaN(r) || r <= Date.now() || (0, s.default)(new Date(n), new Date()) > t);
-        })(n, i),
-        programReward: n,
-        shouldFetch: c,
-        totalDays: i,
+        })(t, n),
+        programReward: t,
+        shouldFetch: i,
+        totalDays: n,
     };
 }

@@ -16,8 +16,8 @@ var n = a(477900),
     g = a(821609),
     k = a(303136),
     C = a(366505),
-    p = a(976860),
-    j = a(309954),
+    j = a(976860),
+    p = a(309954),
     A = a(287809),
     E = a(975571),
     R = a(474090),
@@ -25,9 +25,9 @@ var n = a(477900),
     N = a(94264),
     y = a(549384),
     L = a(566119),
-    O = a(202541),
-    S = a(652215),
-    _ = a(901123),
+    S = a(202541),
+    _ = a(652215),
+    O = a(901123),
     T = a(1889),
     D = a(375708),
     M = a(226068),
@@ -41,30 +41,28 @@ function F() {
     });
 }
 function U() {
-    ((0, L.b)(), window.open(E.A.getArticleURL(S.MVz.ORBS_FAQ), "_blank"));
+    ((0, L.b)(), window.open(E.A.getArticleURL(_.MVz.ORBS_FAQ), "_blank"));
 }
 function I(e) {
     let { targetElementRef: t, shouldShow: a, onRequestClose: r, onNavigate: i, ctaText: u, ctaOnClick: o } = e,
-        { passesGeneralUIInvariant: E, programReward: w } = (0, C.F)({
-            location: "PremiumTenureRewardsOrbsBalancePopover",
-        }),
+        { passesGeneralUIInvariant: E, programReward: w } = (0, C.F)(),
         P = (0, f.bG)([A.default], () => A.default.getCurrentUser()),
-        { balance: I } = (0, j.W)(),
+        { balance: I } = (0, p.W)(),
         W = !(0, R.ki)(P),
         V = l.useCallback(() => {
             ((0, L.RQ)(),
                 r(),
                 null != i && i(),
-                (0, p.pX)(_.BV.NITRO_HOME, { search: (0, d.stringify)({ perk: b.NITRO_ORBS_REWARDS_CARD_ID }) }));
+                (0, j.pX)(O.BV.NITRO_HOME, { search: (0, d.stringify)({ perk: b.NITRO_ORBS_REWARDS_CARD_ID }) }));
         }, [r, i]),
         q = l.useCallback(() => {
             ((0, L.gP)(),
                 r(),
                 null != i && i(),
-                (0, p.pX)(_.BV.NITRO_HOME, { search: (0, d.stringify)({ section: y.L }) }));
+                (0, j.pX)(O.BV.NITRO_HOME, { search: (0, d.stringify)({ section: y.L }) }));
         }, [r, i]),
         z = l.useMemo(() => {
-            let e = (0, R.YE)(P, O.PremiumTypes.TIER_2);
+            let e = (0, R.YE)(P, S.PremiumTypes.TIER_2);
             if (!E || W) return null;
             if (e && null != w) {
                 let e = (0, c.default)(new Date(w.next_reward_date), new Date());
@@ -94,7 +92,7 @@ function I(e) {
         modal: !0,
         closeOnClickOutside: !0,
         children: (0, n.jsx)(v.N, {
-            theme: G ? S.NJ8.DARK : void 0,
+            theme: G ? _.NJ8.DARK : void 0,
             children: (e) =>
                 (0, n.jsxs)("div", {
                     className: s()(e, M.j),
@@ -195,10 +193,10 @@ function X(e) {
             className: f,
             pillVariant: m,
         } = e,
-        { balance: x } = (0, j.W)(),
+        { balance: x } = (0, p.W)(),
         [h, v] = l.useState(z.k.DEFAULT),
         [g, k] = l.useState(!1),
-        [C, p] = l.useState(!1),
+        [C, j] = l.useState(!1),
         A = l.useRef(null),
         E = l.useRef(null);
     (0, o.j)(!g);
@@ -209,8 +207,8 @@ function X(e) {
                 null != d &&
                 (0, W.Y)({
                     pageType: d,
-                    sectionType: R ? u.A.ORB_WALLET : S.JJy.ORBS_BALANCE_MENU,
-                    ctaObject: R ? u.A.ORB_WALLET_OPEN_FROM_BALANCE_PILL : S.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
+                    sectionType: R ? u.A.ORB_WALLET : _.JJy.ORBS_BALANCE_MENU,
+                    ctaObject: R ? u.A.ORB_WALLET_OPEN_FROM_BALANCE_PILL : _.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                 }),
                 v(e ? z.k.SELECTED : z.k.DEFAULT),
                 k(e));
@@ -220,8 +218,8 @@ function X(e) {
         }, [g, b]),
         y = (0, i.A)(null, N),
         { hasUnreadUpdate: L } = (0, q.I)({ enabled: R }),
-        O = t ?? L,
-        _ = l.useMemo(
+        S = t ?? L,
+        O = l.useMemo(
             () =>
                 (0, n.jsx)(H, {
                     pillRef: A,
@@ -234,9 +232,9 @@ function X(e) {
                     },
                     onClick: b,
                     variant: m,
-                    showNotificationBadge: O,
+                    showNotificationBadge: S,
                 }),
-            [x, h, m, O, b, g],
+            [x, h, m, S, b, g],
         ),
         T = l.useCallback(
             (e) =>
@@ -265,6 +263,6 @@ function X(e) {
                       }),
             [R, y, A, b, a, r, d, c],
         );
-    return (0, n.jsxs)("div", { className: s()(Y.kL, f, { [Y.R]: C, [Y.RK]: !C }), children: [_, T(g)] });
+    return (0, n.jsxs)("div", { className: s()(Y.kL, f, { [Y.R]: C, [Y.RK]: !C }), children: [O, T(g)] });
 }
 X.CardAlignment = J;
