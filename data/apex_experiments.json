@@ -3273,34 +3273,6 @@
     }
   },
   {
-    "name": "2026-07-ad-recheck-interval-experiment",
-    "kind": "user",
-    "defaultConfig": {
-      "enableFastAdRecheck": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableFastAdRecheck": false
-      },
-      "2": {
-        "enableFastAdRecheck": true
-      },
-      "3": {
-        "enableFastAdRecheck": true
-      },
-      "4": {
-        "enableFastAdRecheck": true
-      },
-      "5": {
-        "enableFastAdRecheck": true
-      }
-    }
-  },
-  {
     "kind": "guild",
     "name": "2026-07-app-channels",
     "defaultConfig": {
