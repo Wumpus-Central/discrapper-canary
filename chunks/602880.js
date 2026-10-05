@@ -15,7 +15,7 @@ var i = n(477900),
     f = n(655857),
     A = n(883645),
     T = n(166532),
-    m = n(661899),
+    m = n(642639),
     h = n(442467),
     I = n(558620),
     v = n(427675),
@@ -190,11 +190,11 @@ function ee(e) {
             if (null != e0) return e0.options;
         }, [e0]),
         e2 = (0, A.qv)(),
-        e8 = "sm";
-    ef ? (e8 = "xl") : (eA || e1 === T.pn.ADD_PAYMENT_STEPS) && (e8 = "md");
-    let e6 = null != e5 ? e5.modalSizeGetter : void 0,
-        e9 = (0, w.O)(),
-        e4 = null != X && !eZ && (0, R.U9)(e9, X),
+        e6 = "sm";
+    ef ? (e6 = "xl") : (eA || e1 === T.pn.ADD_PAYMENT_STEPS) && (e6 = "md");
+    let e8 = null != e5 ? e5.modalSizeGetter : void 0,
+        e4 = (0, w.O)(),
+        e9 = null != X && !eZ && (0, R.U9)(e4, X),
         [e3, e7] = l.useState({
             load_id: eO.loadId,
             discovery_session_id: eO.discoverySessionId,
@@ -211,7 +211,7 @@ function ee(e) {
             guild_id: e_,
             payment_modal_version: ey,
             activity_session_id: eq,
-            eligible_for_discount: e4,
+            eligible_for_discount: e9,
             sku_product_line: eK?.productLine,
             quantity: eG,
             checkout_design: _.r.UNIFIED,
@@ -250,7 +250,7 @@ function ee(e) {
                 continue_session_initial_step: ev,
                 custom_checkout_flow: eY,
                 has_saved_payment_source: eC,
-                discount_id: null != e9 ? e9.discountId : tl,
+                discount_id: null != e4 ? e4.discountId : tl,
             });
         }),
         l.useEffect(() => {
@@ -333,9 +333,9 @@ function ee(e) {
                 isGift: eZ,
                 giftRecipient: eB,
                 returnRef: eh,
-                manaModalSize: e8,
+                manaModalSize: e6,
                 modalSizeOverride: eT,
-                modalSizeGetter: e6,
+                modalSizeGetter: e8,
                 handleClose: tu,
                 children: (0, i.jsx)(K.Ay, {
                     disableDefaultSlideTransformStyling: em,
