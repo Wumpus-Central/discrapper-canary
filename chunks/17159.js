@@ -1,4 +1,4 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => m });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -13,11 +13,11 @@ var r = n(192308),
     E = n(636537),
     A = n(277984),
     h = n(295405),
-    I = n(652215);
-async function f() {
+    f = n(652215);
+async function I() {
     try {
         a.h.dispatch({ type: "CHECKOUT_RECOVERY_STATUS_FETCH" });
-        let { body: e } = await E.Bo.get({ url: I.Rsh.CHECKOUT_RECOVERY, rejectWithError: !0 }),
+        let { body: e } = await E.Bo.get({ url: f.Rsh.CHECKOUT_RECOVERY, rejectWithError: !0 }),
             t = e?.is_eligible === !0;
         (t && !h.A.hasFetchedPaymentSources && (await (0, A.$o)()),
             a.h.dispatch({ type: "CHECKOUT_RECOVERY_STATUS_FETCH_SUCCESS", isTargeted: t }));
@@ -27,7 +27,7 @@ async function f() {
 }
 var p = n(869968),
     T = n(10392);
-class m extends s.A {
+class g extends s.A {
     _premiumPaymentModalCloseResolve = null;
     _premiumPaymentModalCloseReject = null;
     _initialize() {
@@ -37,7 +37,10 @@ class m extends s.A {
               a.h.subscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell),
               a.h.subscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer),
               a.h.subscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery),
-              a.h.subscribe("POST_CONNECTION_OPEN", this._fetchUserAffinities));
+              a.h.subscribe("POST_CONNECTION_OPEN", this._fetchUserAffinities),
+              a.h.subscribe("BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", this._handlePaymentSourceChange),
+              a.h.subscribe("BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS", this._handlePaymentSourceChange),
+              a.h.subscribe("BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS", this._handlePaymentSourceChange));
     }
     _terminate() {
         __OVERLAY__
@@ -46,7 +49,10 @@ class m extends s.A {
               a.h.unsubscribe("MESSAGE_LENGTH_UPSELL", this.handleMessageLengthUpsell),
               a.h.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchPremiumOffer),
               a.h.unsubscribe("POST_CONNECTION_OPEN", this._maybeFetchCheckoutRecovery),
-              a.h.unsubscribe("POST_CONNECTION_OPEN", this._fetchUserAffinities));
+              a.h.unsubscribe("POST_CONNECTION_OPEN", this._fetchUserAffinities),
+              a.h.unsubscribe("BILLING_PAYMENT_SOURCE_CREATE_SUCCESS", this._handlePaymentSourceChange),
+              a.h.unsubscribe("BILLING_PAYMENT_SOURCE_UPDATE_SUCCESS", this._handlePaymentSourceChange),
+              a.h.unsubscribe("BILLING_PAYMENT_SOURCE_REMOVE_SUCCESS", this._handlePaymentSourceChange));
     }
     handleMessageLengthUpsell(e) {
         let { channel: t, content: a } = e;
@@ -63,9 +69,14 @@ class m extends s.A {
         }
         a.h.dispatch({ type: "PREMIUM_MARKETING_DATA_READY" });
     };
+    _handlePaymentSourceChange = () => {
+        !(0, _.TW)(c.default.getCurrentUser()) &&
+            Object.keys(u.A.getState().userDiscountOffers).length > 0 &&
+            (0, T._D)("UserOfferStore", !0);
+    };
     _maybeFetchCheckoutRecovery = async () => {
         let e = c.default.getCurrentUser();
-        null != e && e.verified && !(0, _.TW)(e) && p.A.shouldFetchCheckoutRecovery() && (await f());
+        null != e && e.verified && !(0, _.TW)(e) && p.A.shouldFetchCheckoutRecovery() && (await I());
     };
     _fetchUserAffinities = () => {
         (0, d.u)();
@@ -114,4 +125,4 @@ class m extends s.A {
         });
     }
 }
-let g = new m();
+let m = new g();

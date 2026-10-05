@@ -1,4 +1,4 @@
-e.d(n, { $P: () => v, rc: () => g, wF: () => m });
+e.d(n, { $P: () => x, rc: () => v, wF: () => g });
 var i,
     l = e(477900);
 e(582128);
@@ -11,23 +11,24 @@ var r = e(323125),
     c = e(638643),
     A = e(976860),
     p = e(174459),
-    I = e(580630),
-    S = e(56754),
-    f = e(652215),
-    h = e(375708),
-    m =
+    I = e(158045),
+    S = e(580630),
+    f = e(56754),
+    h = e(652215),
+    m = e(375708),
+    g =
         (((i = {})[(i.AVAILABLE = 0)] = "AVAILABLE"),
         (i[(i.LOADING = 1)] = "LOADING"),
         (i[(i.UPCOMING_PLAN = 2)] = "UPCOMING_PLAN"),
         (i[(i.SUBSCRIBED = 3)] = "SUBSCRIBED"),
         (i[(i.UNAVAILABLE = 4)] = "UNAVAILABLE"),
         i);
-function g(t) {
+function v(t) {
     let { appId: n, onClick: e, onHasClicked: i, skuId: r, subscriptionPlan: s, icon: a, state: u = 0 } = t,
         o = null != s ? (0, I._J)(s) : null,
         d = 1 === u;
     return 0 === u || d
-        ? (0, l.jsx)(x, {
+        ? (0, l.jsx)(P, {
               appId: n,
               skuId: r,
               onClick: function (t) {
@@ -35,32 +36,32 @@ function g(t) {
               },
               loading: d,
               icon: a,
-              text: null != o ? h.intl.formatToPlainString(h.t.i4T8vz, { rate: o }) : h.intl.string(h.t.uuzaAK),
+              text: null != o ? m.intl.formatToPlainString(m.t.i4T8vz, { rate: o }) : m.intl.string(m.t.uuzaAK),
           })
-        : (0, l.jsx)(P, {
+        : (0, l.jsx)(N, {
               text: (function (t, n) {
                   switch (t) {
                       case 2:
-                          return h.intl.formatToPlainString(h.t.k1ew5N, { rate: n });
+                          return m.intl.formatToPlainString(m.t.k1ew5N, { rate: n });
                       case 3:
-                          return h.intl.formatToPlainString(h.t["Hs3Y+I"], { rate: n });
+                          return m.intl.formatToPlainString(m.t["Hs3Y+I"], { rate: n });
                       case 4:
-                          return h.intl.string(h.t.DLAKbi);
+                          return m.intl.string(m.t.DLAKbi);
                   }
               })(u, o ?? ""),
           });
 }
-function v(t) {
+function x(t) {
     let { appId: n, onClick: e, onHasClicked: i, sku: r, icon: s } = t,
         { analyticsLocations: d } = (0, u.Ay)(a.A.APP_STOREFRONT),
-        A = (0, S.L)(r.id),
-        p = r.type === f.Puh.DURABLE && A,
-        { price: m } = r;
-    return null == m
+        A = (0, f.L)(r.id),
+        p = r.type === h.Puh.DURABLE && A,
+        { price: I } = r;
+    return null == I
         ? null
         : p
-          ? (0, l.jsx)(P, { text: h.intl.string(h.t["6cfuDj"]) })
-          : (0, l.jsx)(x, {
+          ? (0, l.jsx)(N, { text: m.intl.string(m.t["6cfuDj"]) })
+          : (0, l.jsx)(P, {
                 appId: n,
                 skuId: r.id,
                 onClick: function (t) {
@@ -77,19 +78,19 @@ function v(t) {
                     )(t),
                         i?.());
                 },
-                text: h.intl.format(h.t.Xp5WTn, { price: (0, I.$g)(m.amount, m.currency) }),
+                text: m.intl.format(m.t.Xp5WTn, { price: (0, S.$g)(I.amount, I.currency) }),
                 icon: s,
             });
 }
-function x(t) {
+function P(t) {
     let { appId: n, skuId: e, onClick: i, ...a } = t,
         u = (0, d.A)();
     return (0, l.jsx)(s.$, {
         ...a,
         onClick: function (t) {
-            if ((p.default.track(f.HAw.STOREFRONT_PURCHASE_CLICKED, { application_id: n, sku_id: e }), !u)) {
+            if ((p.default.track(h.HAw.STOREFRONT_PURCHASE_CLICKED, { application_id: n, sku_id: e }), !u)) {
                 (t.preventDefault(), t.stopPropagation());
-                let i = f.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n, e),
+                let i = h.BVt.GLOBAL_DISCOVERY_APPS_PROFILE_STORE_SKU(n, e),
                     l = (0, r.T2)(i, !1);
                 (0, A.pX)(l);
                 return;
@@ -98,7 +99,7 @@ function x(t) {
         },
     });
 }
-function P(t) {
+function N(t) {
     let { text: n } = t;
     return (0, l.jsx)(s.$, { text: n, disabled: !0, variant: "primary" });
 }

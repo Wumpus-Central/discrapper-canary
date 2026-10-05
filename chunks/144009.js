@@ -74,8 +74,8 @@ function h(e, t) {
     let n = e.length > t ? t : e.length;
     return e.substring(0, n).padEnd(t, " ");
 }
-var I = n(734057);
-let f = (0, n(945810).mj)({
+var f = n(734057);
+let I = (0, n(945810).mj)({
     kind: "user",
     name: "2026-08-compress-logs",
     defaultConfig: { enabled: !1 },
@@ -84,8 +84,8 @@ let f = (0, n(945810).mj)({
 var p = n(53943);
 n(321073);
 var T = n(435558),
-    m = n.n(T),
-    g = n(61090),
+    g = n.n(T),
+    m = n(61090),
     S = n(707539);
 function N(e) {
     let t = null == e.tag ? e.label : `${e.label} ${e.tag}`;
@@ -100,7 +100,7 @@ let O = new s.A("DebugUploadManager");
 async function R(e, t) {
     try {
         await L(e);
-        let { enabled: n } = f.getConfig({ location: "uploadDebugLogFiles" });
+        let { enabled: n } = I.getConfig({ location: "uploadDebugLogFiles" });
         await _(0xe00000, n, t);
     } catch (t) {
         let e;
@@ -181,7 +181,7 @@ ${s}`;
     ${(function (e) {
         let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
             n = !(arguments.length > 2) || void 0 === arguments[2] || arguments[2];
-        return g.A.logGroups
+        return m.A.logGroups
             .map((i) => {
                 var r, a, s, l, o, d;
                 let c,
@@ -190,13 +190,13 @@ ${s}`;
                     E,
                     A,
                     h,
-                    I,
-                    { index: f, timestamp: p, logs: T, nativeLogs: g, serverTrace: C } = i,
-                    O = 0 === f ? (m().find(T, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
+                    f,
+                    { index: I, timestamp: p, logs: T, nativeLogs: m, serverTrace: C } = i,
+                    O = 0 === I ? (g().find(T, (e) => e.log.indexOf("Logger loaded") >= 0)?.timestamp ?? e) : p,
                     R =
                         ((o =
                             ((r = T),
-                            (a = g),
+                            (a = m),
                             (s = t),
                             (l = n),
                             (r = r.slice()),
@@ -269,18 +269,18 @@ ${s}`;
                             log: `${e.emoji.length > 0 ? `${e.emoji} ` : ""}${e.prefix}${e.log}
 `,
                         }))),
-                        (h = m().max(A.map((e) => e.totalTime.length)) ?? 0),
-                        (I = m().max(A.map((e) => e.deltaTime.length)) ?? 0),
+                        (h = g().max(A.map((e) => e.totalTime.length)) ?? 0),
+                        (f = g().max(A.map((e) => e.deltaTime.length)) ?? 0),
                         A.map((e) => {
                             let { totalTime: t, deltaTime: n, log: i } = e;
-                            return `${m().padStart(t, h)} ${m().padStart(n, I)} ${i}`;
+                            return `${g().padStart(t, h)} ${g().padStart(n, f)} ${i}`;
                         }).join("")),
-                    L = `Trace #${f + 1} started ${(0, S.aK)(p)}
+                    L = `Trace #${I + 1} started ${(0, S.aK)(p)}
 ${R}`;
                 return (
                     null != C &&
                         (L += `
- Server trace for trace #${f + 1}${C}`),
+ Server trace for trace #${I + 1}${C}`),
                     L
                 );
             })
@@ -305,10 +305,10 @@ ${R}`;
     })()}
 
     Metadata:
-    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "629869", versionHash: "9e32f5d5a712a7e8b7e43f6e4e348e87d7d1107d" }, void 0, 2)}
+    ${JSON.stringify({ logsUploaded: new Date().toISOString(), releaseChannel: window.GLOBAL_ENV.RELEASE_CHANNEL, buildNumber: "629896", versionHash: "a84a33c5fab0f98d25529eba1aac43bddbb8deab" }, void 0, 2)}
 
     ChannelStore:
-    ${JSON.stringify(I.A.getDebugInfo(), void 0, 2)}
+    ${JSON.stringify(f.A.getDebugInfo(), void 0, 2)}
 
     Logs:
     ${t}

@@ -9,7 +9,7 @@ var a = n(477900),
     c = n(97352),
     h = n(158045),
     m = n(71532),
-    A = n(169797),
+    A = n(56763),
     p = n(642639),
     d = n(783327),
     y = n(202541),
@@ -142,7 +142,7 @@ function T(e) {
         ? null
         : (0, a.jsxs)(a.Fragment, {
               children: [
-                  I && (0, a.jsx)(A.Ig, {}),
+                  I && (0, a.jsx)(A.I, {}),
                   (0, a.jsx)("div", {
                       className: u()({ [S.X]: I }),
                       children: (0, a.jsx)(i.ExpressCheckoutElement, {

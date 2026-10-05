@@ -11,15 +11,15 @@ var a = n(73153),
     E = n(652215),
     A = n(613057);
 let h = new l.A("NativeDispatchUtils");
-function I() {
+function f() {
     return (null == r && h.warn("Tried getting Dispatch instance before instantiated"), r);
 }
-function f(e) {
+function I(e) {
     let t = JSON.parse(e);
     return (h.log("Native Dispatch error", t), new s.A(t));
 }
 function p(e, t) {
-    "" !== e && f(e);
+    "" !== e && I(e);
 }
 let T = {
     init(e) {
@@ -37,7 +37,7 @@ let T = {
                     )
                   : Promise.reject(Error("not desktop client"))
             ).then((e) => {
-                let i = { environment: window.GLOBAL_ENV.RELEASE_CHANNEL, build_number: "629869" },
+                let i = { environment: window.GLOBAL_ENV.RELEASE_CHANNEL, build_number: "629896" },
                     u = o.default.getCurrentUser();
                 null != u && ((i.user_id = u.id), (i.user_name = u.tag), null != u.email && (i.email = u.email));
                 let _ = {
@@ -73,7 +73,7 @@ let T = {
                         });
                     },
                     (e) => {
-                        d(f(e));
+                        d(I(e));
                     },
                     (e) => {
                         !(function (e) {
@@ -96,7 +96,7 @@ let T = {
             });
     },
     destroy() {
-        let e = I();
+        let e = f();
         null != e && void 0 !== e.destroy && (e.destroy(), (r = null));
     },
     setTargetManifest(e) {
@@ -109,7 +109,7 @@ let T = {
                 manifestIds: s,
                 installationPath: l,
             } = e,
-            o = I();
+            o = f();
         null != o &&
             o.command(
                 JSON.stringify({
@@ -126,7 +126,7 @@ let T = {
             );
     },
     setCurrentTask(e, t, n, i, r) {
-        let a = I();
+        let a = f();
         return (
             null != a &&
             (a.command(
@@ -144,27 +144,27 @@ let T = {
         );
     },
     setCredentials(e, t) {
-        let n = I();
+        let n = f();
         null != n && n.command(JSON.stringify({ command: "SetCredentials", user_id: e, user_token: t }), p);
     },
     cancel(e, t) {
-        let n = I();
+        let n = f();
         null != n && n.command(JSON.stringify({ command: "Cancel", application_id: e, branch_id: t }), p);
     },
     uninstall(e, t) {
-        let n = I();
+        let n = f();
         null != n && n.command(JSON.stringify({ command: "Uninstall", application_id: e, branch_id: t }), p);
     },
     pause() {
-        let e = I();
+        let e = f();
         null != e && e.command(JSON.stringify({ command: "Pause" }), p);
     },
     resume() {
-        let e = I();
+        let e = f();
         null != e && e.command(JSON.stringify({ command: "Resume" }), p);
     },
     queryDirectory(e, t) {
-        let n = I();
+        let n = f();
         null != n &&
             n.command(JSON.stringify({ command: "QueryDirectory", path: e }), (e, n) => {
                 if ("" !== e) t(JSON.parse(e));
@@ -183,7 +183,7 @@ let T = {
             ? Promise.reject(Error("Already running launch setup."))
             : (a.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_START" }),
               new Promise((n, i) => {
-                  let r = I();
+                  let r = f();
                   null == r
                       ? i(Error("native dispatch instance not found"))
                       : r.command(
@@ -191,7 +191,7 @@ let T = {
                             (e, t, r) => {
                                 if ("" !== e) {
                                     a.h.dispatch({ type: "DISPATCH_APPLICATION_LAUNCH_SETUP_COMPLETE" });
-                                    let t = f(e);
+                                    let t = I(e);
                                     (a.h.dispatch({ type: "DISPATCH_APPLICATION_ERROR", error: t }),
                                         null != t.code && t.code === A.Hi.POST_INSTALL_CANCELLED ? i(t) : n());
                                     return;
@@ -214,7 +214,7 @@ let T = {
               })),
     launch: (e, t, n, i) =>
         new Promise((r, a) => {
-            let s = I();
+            let s = f();
             null == s
                 ? a(Error("native dispatch instance not found"))
                 : s.command(
@@ -226,7 +226,7 @@ let T = {
                           environment: i,
                       }),
                       function (e, t) {
-                          "" !== e ? a(f(e)) : r([JSON.parse(t).pid]);
+                          "" !== e ? a(I(e)) : r([JSON.parse(t).pid]);
                       },
                   );
         }),

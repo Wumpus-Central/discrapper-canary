@@ -1,4 +1,15 @@
-(n.d(t, { Ae: () => m, NL: () => p, Q8: () => h, Ro: () => T, SA: () => N, Sb: () => g, Tp: () => f, wt: () => S }),
+(n.d(t, {
+    Ae: () => g,
+    Lw: () => O,
+    NL: () => p,
+    Q8: () => h,
+    Ro: () => T,
+    SA: () => N,
+    Sb: () => m,
+    Tp: () => I,
+    de: () => C,
+    wt: () => S,
+}),
     n(321073));
 var i = n(284009),
     r = n.n(i),
@@ -46,11 +57,11 @@ function h(e, t) {
             };
         });
 }
-function I(e, t) {
+function f(e, t) {
     return (e.discounts ?? []).some((e) => e.type === t);
 }
-function f(e, t, n, i) {
-    let r = I(e, a.iS.PREMIUM_TRIAL);
+function I(e, t, n, i) {
+    let r = f(e, a.iS.PREMIUM_TRIAL);
     switch (e.subscriptionPlanId) {
         case u.gD.PREMIUM_GROUP_MONTH:
             return A.intl.formatToPlainString(E.default["8bPDtb"], { premiumGroupProductName: (0, _.DP)() });
@@ -88,21 +99,21 @@ function p(e) {
 function T(e, t) {
     return e.invoiceItems.some((e) => (e.discounts ?? []).some((e) => e.discount_id === t));
 }
-function m(e, t) {
+function g(e, t) {
     let { subscriptionTrial: n, subscriptionPlan: i, overrideAmount: s, isPrepaidPaymentSource: c, currency: u } = t,
         _ = i ?? l.A.get(e.subscriptionPlanId);
     r()(null != _, "Missing subscriptionPlan");
     let E = n?.intervalCount,
-        A = f(e, _, c, (0, o.re)({ intervalType: n?.interval, intervalCount: E })),
+        A = I(e, _, c, (0, o.re)({ intervalType: n?.interval, intervalCount: E })),
         h = null != s ? s : e.amount,
-        I = (0, d.$g)(h, u),
-        T = c ? I : (0, d.CE)(I, _.interval, _.intervalCount),
-        m = p(e),
-        g = e.discounts ?? [],
-        S = g.find((e) => e.type === a.iS.PREMIUM_TRIAL),
-        N = g.find((e) => e.type === a.iS.ENTITLEMENT),
-        C = g.reduce((e, t) => e + t.amount, 0),
-        O = h + (m?.amount ?? 0);
+        f = (0, d.$g)(h, u),
+        T = c ? f : (0, d.CE)(f, _.interval, _.intervalCount),
+        g = p(e),
+        m = e.discounts ?? [],
+        S = m.find((e) => e.type === a.iS.PREMIUM_TRIAL),
+        N = m.find((e) => e.type === a.iS.ENTITLEMENT),
+        C = m.reduce((e, t) => e + t.amount, 0),
+        O = h + (g?.amount ?? 0);
     return {
         label: A,
         value: T,
@@ -110,15 +121,15 @@ function m(e, t) {
         amount: h,
         amountWithoutDiscount: O,
         discountAmountOff: C,
-        formattedPrice: I,
+        formattedPrice: f,
         subscriptionPlan: _,
         subscriptionTrial: n,
         trialDiscount: S,
-        subscriptionDiscount: m,
+        subscriptionDiscount: g,
         entitlementDiscount: N,
     };
 }
-function g(e, t) {
+function m(e, t) {
     let n = (0, c.Z)(e.invoiceItems);
     return { subscriptionPlanInvoiceItem: n.find((e) => e.subscriptionPlanId === t.id), coalescedInvoiceItems: n };
 }
@@ -154,7 +165,7 @@ function S(e, t) {
 }
 function N(e, t) {
     var n;
-    let { subscriptionPlanInvoiceItem: i, coalescedInvoiceItems: r } = g(e, t);
+    let { subscriptionPlanInvoiceItem: i, coalescedInvoiceItems: r } = m(e, t);
     if (null == i)
         throw new s.v({
             message: "Expected newPlanInvoiceItem",
@@ -167,32 +178,32 @@ function N(e, t) {
                 null != e.discounts &&
                 null != e.discounts.find((e) => e.type === a.iS.PREMIUM_LEGACY_UPGRADE_PROMOTION),
         ),
-        _ = I(i, a.iS.PREMIUM_TRIAL),
+        _ = f(i, a.iS.PREMIUM_TRIAL),
         E =
             ((n = a.iS.SUBSCRIPTION_PLAN),
             i.subscriptionPlanPrice - (i.discounts?.find((e) => e.type === n)?.amount ?? 0)),
         h = i.quantity * E,
-        f = i.amount + (null != l ? l.amount : 0) - h + (null != c ? c.amount : 0),
+        I = i.amount + (null != l ? l.amount : 0) - h + (null != c ? c.amount : 0),
         p = r.filter(
             (e) =>
                 e.subscriptionPlanId === u.gD.PREMIUM_MONTH_GUILD || e.subscriptionPlanId === u.gD.PREMIUM_YEAR_GUILD,
         ),
         T = p.reduce((e, t) => e + t.amount, 0),
-        m = [];
+        g = [];
     return (
-        0 === f ||
+        0 === I ||
             _ ||
-            m.push({
+            g.push({
                 id: "base-plan-adjustment",
                 label: A.intl.formatToPlainString(A.t.ZSVged, { planName: (0, o.ys)(t.id) ? (0, o.RH)(t.id) : t.name }),
                 tooltipText: A.intl.string(A.t.JmwQJM),
                 tooltipAriaLabel: "",
-                value: (0, d.$g)(f, e.currency),
-                amount: f,
+                value: (0, d.$g)(I, e.currency),
+                amount: I,
                 lineItemType: "adjustment",
             }),
         0 !== T &&
-            m.push({
+            g.push({
                 id: "guild-subscription-adjustment",
                 label: A.intl.string(A.t["+as5ZZ"]),
                 tooltipText: A.intl.format(A.t.UDop9c, {}),
@@ -204,13 +215,35 @@ function N(e, t) {
         {
             newPlanInvoiceItem: i,
             basePlanFullAmount: h,
-            basePlanAdjustment: f,
+            basePlanAdjustment: I,
             guildSubscriptionAdjustment: T,
             isTrialItem: _,
-            invoiceAdjustmentDisplayItems: m,
+            invoiceAdjustmentDisplayItems: g,
             guildSubscriptionInvoiceItems: p,
             promotionItem: c,
             basePlanCreditItem: l,
         }
     );
+}
+function C(e) {
+    let t,
+        {
+            overrideRenewalDate: n,
+            currentInvoice: i,
+            renewalInvoice: r,
+            isSubscriptionUpdate: a,
+            fractionalPremiumInfo: s,
+        } = e;
+    return null != n
+        ? n
+        : ((t = null != i ? i.subscriptionPeriodEnd : a ? r.subscriptionPeriodStart : r.subscriptionPeriodEnd),
+            null != s && s.isFractionalPremiumActive)
+          ? (0, o._e)(t, s.unactivatedUnits, s.currentEntitlementEndsAt)
+          : t;
+}
+function O(e, t) {
+    let { isCustomGift: n, isPrepaidPaymentSource: i } = t;
+    return n
+        ? (0, o.D8)(e.interval, !0, void 0, void 0, !0, (0, o.m6)(e.id))
+        : A.intl.formatToPlainString(A.t.LQLxkW, { planName: (0, o.Mn)(e.id, !1, i) });
 }

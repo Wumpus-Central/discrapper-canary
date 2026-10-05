@@ -12,16 +12,16 @@ var i = n(684013),
     E = n(38405),
     A = n(140069),
     h = n(41984),
-    I = n(267355),
-    f = n(956753),
+    f = n(267355),
+    I = n(956753),
     p = n(296027),
     T = n(489277),
-    m = n(222506),
-    g = n(897720),
+    g = n(222506),
+    m = n(897720),
     S = n(145567),
     N = n(652215);
 function C(e) {
-    return (0, f.U5)(e, "OverlayTextChatAutomaticLifecycleManager");
+    return (0, I.U5)(e, "OverlayTextChatAutomaticLifecycleManager");
 }
 let O = new Map(),
     R = null,
@@ -249,7 +249,7 @@ async function y() {
                 n.e("252264"),
                 n.e("960478"),
                 n.e("770697"),
-                n.e("561279"),
+                n.e("534822"),
                 n.e("894747"),
                 n.e("790244"),
                 n.e("593176"),
@@ -422,8 +422,8 @@ function D(e) {
 }
 async function v(e) {
     let t = await y();
-    if (!(null == t || m.A.isInputLocked(T.A.getTargetPID())))
-        for (let n of t.getNotificationsForChannel(e, g.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
+    if (!(null == t || g.A.isInputLocked(T.A.getTargetPID())))
+        for (let n of t.getNotificationsForChannel(e, m.zb.TEXT)) i.A.updateNotificationStatus(n.id, N.yFH.DISMISSED);
 }
 function b() {
     !(function () {
@@ -499,7 +499,7 @@ function k(e) {
 }
 function F(e) {
     let { channelId: t } = e;
-    !p.default.isAnyOverlayRendering() || null == t || ((0, I.isOverlayCurrentlyVisibleAndUnlocked)() && k(t));
+    !p.default.isAnyOverlayRendering() || null == t || ((0, f.isOverlayCurrentlyVisibleAndUnlocked)() && k(t));
 }
 async function B(e) {
     if (e.locked) {

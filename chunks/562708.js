@@ -1,8 +1,8 @@
 let i, r, a, s, l, o, d, c;
 (n.r(t),
     n.d(t, {
-        encodeProperties: () => I,
-        isThrottled: () => em,
+        encodeProperties: () => f,
+        isThrottled: () => eg,
         SpanComponentNames: () => Q.yk,
         analyticsTrackingStoreMaker: () => Z,
         getOS: () => ed,
@@ -11,11 +11,11 @@ let i, r, a, s, l, o, d, c;
         getCampaignParams: () => eE,
         ImpressionNames: () => Q.IJ,
         ImpressionGroups: () => q.q,
-        getSuperPropertiesBase64: () => ef,
-        trackMaker: () => eg,
+        getSuperPropertiesBase64: () => eI,
+        trackMaker: () => em,
         AnalyticsActionHandlers: () => Y,
         NetworkActionNames: () => Q.D3,
-        getSuperProperties: () => eI,
+        getSuperProperties: () => ef,
         ImpressionTypes: () => q.z,
         extendSuperProperties: () => eh,
     }));
@@ -24,7 +24,7 @@ var u = n(812729),
     E = n(284009),
     A = n.n(E),
     h = n(264572).Buffer;
-function I(e) {
+function f(e) {
     try {
         return h.from(JSON.stringify(e)).toString("base64");
     } catch (e) {
@@ -32,12 +32,12 @@ function I(e) {
     }
 }
 (n(142703), n(667532), n(321073));
-var f = n(132500);
+var I = n(132500);
 n(423034);
 var p = n(80703),
     T = n(17928),
-    m = n(636537),
-    g = n(187207),
+    g = n(636537),
+    m = n(187207),
     S = n(941426),
     N = n(818348);
 let C = "x-science-test",
@@ -63,7 +63,7 @@ function H(e) {
     return e + t;
 }
 let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
-    W = new g.n(),
+    W = new m.n(),
     Y = {
         handleConnectionOpen: () => {},
         handleConnectionClosed: () => {},
@@ -94,15 +94,15 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
         }
         function h(e) {
             let { shouldFlushOnNextTick: t = !1 } = e;
-            null == $ && A() && ($ = t ? setTimeout(I, 0) : c(I, { timeout: L }));
+            null == $ && A() && ($ = t ? setTimeout(f, 0) : c(f, { timeout: L }));
         }
-        function I() {
+        function f() {
             if ((($ = null), !A())) return Promise.resolve();
             let e = K.slice();
             ((K = []), (U = H(U)));
             let t = e.length;
             ((w = Math.min(w, t)), (G = Math.max(G, t)), (x = H(x, t)));
-            let n = g(e);
+            let n = m(e);
             return (
                 n.then(
                     () => {
@@ -120,14 +120,14 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 n
             );
         }
-        function g(e, t) {
+        function m(e, t) {
             let n = Date.now(),
                 r = e.map((e) => ({ ...e, properties: { ...e.properties, client_send_timestamp: n } }));
             if (null != _) return _(r, i);
             let a = {};
             return (
-                F || ((V = (0, f.A)()), (a[C] = V), (F = !0)),
-                m.Bo.post({
+                F || ((V = (0, I.A)()), (a[C] = V), (F = !0)),
+                g.Bo.post({
                     url: t ?? l,
                     headers: a,
                     body: { token: i, events: r },
@@ -177,7 +177,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 (x = 0),
                 (P = Date.now()),
                 (M = y),
-                g([e], N.mX.CLIENT_TELEMETRY).catch((e) => {
+                m([e], N.mX.CLIENT_TELEMETRY).catch((e) => {
                     O.trace(`client telemetry flush failed (status ${e?.status ?? "unknown"})`);
                 })
             );
@@ -224,7 +224,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             }),
             (Y.handleConnectionClosed = function () {
                 return (
-                    I(),
+                    f(),
                     (function () {
                         if (null == k) return;
                         switch (k.type) {
@@ -245,7 +245,7 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
                 );
             }),
             (Y.handleFingerprint = function () {
-                return (I(), !1);
+                return (f(), !1);
             }),
             (Y.handleTrack = function (e) {
                 let { event: t, properties: n, flush: i, fingerprint: l, resolve: o } = e;
@@ -286,11 +286,11 @@ let j = window.requestIdleCallback ?? ((e) => setImmediate(() => e())),
             initialize() {
                 null != d && this.waitFor(...d);
             }
-            submitEventsImmediately = g;
+            submitEventsImmediately = m;
             requestDrain = () => {
-                for (let e of (I(), R))
+                for (let e of (f(), R))
                     setTimeout(() => {
-                        I();
+                        f();
                     }, e);
             };
         }
@@ -482,12 +482,12 @@ if (null == a)
         a = {};
     }
 function eh(e) {
-    s = I((a = { ...a, ...e }));
-}
-function eI() {
-    return a;
+    s = f((a = { ...a, ...e }));
 }
 function ef() {
+    return a;
+}
+function eI() {
     return s;
 }
 eh(
@@ -495,7 +495,7 @@ eh(
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("629869", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("629896", 10))) || (l.client_build_number = d),
     null == (c = eo?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {
@@ -509,10 +509,10 @@ eh(
 );
 let ep = {},
     eT = {};
-function em(e) {
+function eg(e) {
     return null != ep[e] && ep[e] > Date.now();
 }
-let eg = (e) => {
+let em = (e) => {
     let { addBreadcrumb: t, analyticEventConfigs: i, dispatcher: r, TRACK_ACTION_NAME: a } = e,
         s = function (e, t, n) {
             return new Promise((i) => {
@@ -534,7 +534,7 @@ let eg = (e) => {
         if (("function" == typeof o && (o = o(l) ?? null), null != o))
             if ("throttlePeriod" in o) {
                 let t = [e, ...o.throttleKeys(l)].join("_");
-                if (em(t) || ("number" == typeof o.throttlePercent && Math.random() > o.throttlePercent))
+                if (eg(t) || ("number" == typeof o.throttlePercent && Math.random() > o.throttlePercent))
                     return Promise.resolve();
                 if (o.deduplicate) {
                     let e = eT[t];

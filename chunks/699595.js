@@ -1,50 +1,51 @@
-n.d(t, { W: () => o });
+n.d(t, { W: () => u });
 var l = n(582128),
     i = n(543767),
-    r = n(511484),
-    a = n(642639),
-    s = n(463376);
-function o(e) {
+    r = n(424776),
+    a = n(511484),
+    s = n(642639),
+    o = n(463376);
+function u(e) {
     let t,
-        { priceOptions: n, trialId: o, metadata: u, discountInvoicePreview: c } = e,
-        { isEligibleForDiscount: d, discountOffer: p } = (0, s.i)(),
-        m = (0, r.YJ)(p),
-        h = !0 === n.loaded,
-        C = null != c,
-        [f, S] = (0, i.YV)({
-            items: null != m ? [{ planId: m, quantity: 1 }] : [],
+        { priceOptions: n, trialId: u, metadata: c, discountInvoicePreview: d } = e,
+        { isEligibleForDiscount: p, discountOffer: m } = (0, o.i)(),
+        h = (0, a.YJ)(m),
+        C = !0 === n.loaded,
+        f = null != d,
+        [S, E] = (0, i.YV)({
+            items: null != h ? [{ planId: h, quantity: 1 }] : [],
             renewal: !1,
-            preventFetch: C || !d || null == m || !h,
-            trialId: o,
+            preventFetch: f || !p || null == h || !C,
+            trialId: u,
             paymentSourceId: n.paymentSourceId,
             currency: n.currency,
-            metadata: u,
+            metadata: c,
         }),
-        E = C ? c : f,
-        y = l.useMemo(() => {
-            let e = d ? (E ?? null) : null;
+        y = f ? d : S,
+        A = l.useMemo(() => {
+            let e = p ? (y ?? null) : null;
             return {
-                discountOffer: p,
-                applicablePlan: m,
+                discountOffer: m,
+                applicablePlan: h,
                 discountInvoicePreview: e,
-                discountAmountOff: null != m ? (0, r.pg)(e, m) : null,
-                discountInvoiceError: S,
+                discountAmountOff: null != h ? (0, a.pg)(e, h) : null,
+                discountInvoiceError: E,
             };
-        }, [p, m, E, S, d]);
+        }, [m, h, y, E, p]);
     return (
-        (t = (0, a.t4)((e) => {
+        (t = (0, s.t4)((e) => {
             let { setPremiumDiscountInfo: t } = e;
             return t;
         })),
         l.useEffect(
             () => (
-                t(y),
+                t(A),
                 () => {
-                    t(r.TI);
+                    t(r.T);
                 }
             ),
-            [y, t],
+            [A, t],
         ),
-        y
+        A
     );
 }

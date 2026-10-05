@@ -4454,22 +4454,6 @@
     border-radius: 8px
 }
 
-.toast__4843d {
-    align-items: center;
-    background-color: var(--background-surface-highest);
-    border: 1px solid var(--border-normal);
-    border-radius: var(--radius-xl);
-    box-shadow: var(--shadow-high);
-    color: var(--text-strong);
-    display: flex;
-    margin-bottom: 12px;
-    padding: var(--space-8) var(--space-12)
-}
-
-.content__4843d {
-    color: currentColor
-}
-
 .drag__5c9fc {
     display: none
 }
@@ -4632,4 +4616,4 @@
     z-index: 2
 }
 
-/*# sourceMappingURL=9056.fe6a2c1742f9f6d6.css.map*/
+/*# sourceMappingURL=110543.cbe5bb492fc80d4d.css.map*/

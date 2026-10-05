@@ -575,7 +575,6 @@ let r = {
         inlineRequire: () => n(552143).A,
     },
     VideoFilterErrorManager: { actions: ["MEDIA_ENGINE_VIDEO_FILTER_ERROR"], inlineRequire: () => n(423091).A },
-    VideoGuardBannerManager: { actions: ["RTC_CONNECTION_STATE"], inlineRequire: () => n(300128).A },
     GPUWorkaroundManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(73508).A },
     NativeCrashManager: {
         actions: ["RTC_CONNECTION_STATE", "RTC_CONNECTION_VIDEO", "MEDIA_SESSION_JOINED"],

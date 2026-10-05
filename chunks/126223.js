@@ -4,5 +4,4 @@ e.exports = {
     uL: "countryTransition_ebbc17",
     B5: "countryTransitionArrow_ebbc17",
     g4: "loadingContainer_ebbc17",
-    Je: "spinnerColor_ebbc17",
 };

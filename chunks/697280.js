@@ -6687,49 +6687,8 @@ let dY = function (e) {
                 }),
             });
 };
-var dX = n(339048),
-    dH = n(136380);
-function dW() {
-    let e = (0, f.yK)([dx.A], () => dx.A.getGiftable()).filter((e) => {
-            let { giftCodeBatchId: t } = e;
-            return null == t;
-        }),
-        t = W().groupBy(e, (e) => (0, dp.Kx)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
-        [n, i] = T.useState(!1);
-    if (
-        (T.useEffect(() => {
-            tl.h.wait(() => {
-                (0, dX.XJ)().then(() => i(!0));
-            });
-        }, []),
-        !n)
-    )
-        return (0, S.jsx)(om.y, { className: dH.Lq });
-    if (0 === Object.keys(t).length)
-        return (0, S.jsxs)("div", {
-            className: dH.p$,
-            children: [
-                (0, S.jsx)("div", { className: dH.QT }),
-                (0, S.jsx)(uE.H, { className: dH.ks, children: U.intl.string(U.t.B1qgZn) }),
-                (0, S.jsx)("p", {
-                    className: dH.WO,
-                    children: U.intl.format(U.t.HezvJ8, {
-                        onClick: function () {
-                            (0, nm.openUserSettings)(h.X.NITRO_PANEL);
-                        },
-                    }),
-                }),
-            ],
-        });
-    let s = W()
-        .keys(t)
-        .map((e) => {
-            let { skuId: n, subscriptionPlanId: i, giftStyle: s } = (0, dp.X6)(e);
-            return (0, S.jsx)(dM, { skuId: n, subscriptionPlanId: i, entitlements: t[e], giftStyle: s }, e);
-        });
-    return (0, S.jsx)(Z.B, { gap: "lg", children: s });
-}
-function dK(e) {
+var dX = n(136380);
+function dH(e) {
     let t,
         { outboundPromotion: n, code: i } = e,
         [s, l] = T.useState(!1),
@@ -6766,17 +6725,17 @@ function dK(e) {
     return (0, S.jsxs)(S.Fragment, {
         children: [
             (0, S.jsxs)("div", {
-                className: dH.AX,
+                className: dX.AX,
                 children: [
                     (0, S.jsxs)("div", {
-                        className: dH.Pg,
+                        className: dX.Pg,
                         children: [
                             (0, S.jsxs)("div", {
-                                className: dH.At,
+                                className: dX.At,
                                 children: [
                                     (0, S.jsx)("div", {
-                                        className: dH.$G,
-                                        children: (0, S.jsx)("img", { alt: "", src: d, className: dH.IJ }),
+                                        className: dX.$G,
+                                        children: (0, S.jsx)("img", { alt: "", src: d, className: dX.IJ }),
                                     }),
                                     (0, S.jsxs)("div", {
                                         children: [
@@ -6795,7 +6754,7 @@ function dK(e) {
                     }),
                     s &&
                         (0, S.jsx)(Q.E, {
-                            className: dH.GL,
+                            className: dX.GL,
                             variant: "text-xs/normal",
                             color: "text-default",
                             children: dk.A.parse(x, !1, { allowLinks: !0 }),
@@ -6817,7 +6776,7 @@ function dK(e) {
         ],
     });
 }
-function dZ(e) {
+function dW(e) {
     let { redesign: t = !1 } = e,
         n = (0, f.yK)([dx.A], () => dx.A.getGiftable()).filter((e) => {
             let { giftCodeBatchId: t } = e;
@@ -6840,25 +6799,25 @@ function dZ(e) {
             t || !c
                 ? null
                 : (0, S.jsxs)("div", {
-                      className: dH.N1,
+                      className: dX.N1,
                       children: [
                           (0, S.jsx)(N.D, { variant: "heading-md/semibold", children: U.intl.string(U.t.wFsj3B) }),
-                          (0, S.jsx)(sd.c, { className: dH.yF }),
+                          (0, S.jsx)(sd.c, { className: dX.yF }),
                       ],
                   }),
         m =
             !1 === i && c
                 ? (0, S.jsxs)("div", {
-                      className: dH.uo,
+                      className: dX.uo,
                       children: [
                           (0, S.jsx)(as.t, {
                               size: "md",
                               color: n8.A.colors.REDESIGN_BUTTON_PREMIUM_PRIMARY_PURPLE_FOR_GRADIENT_2,
-                              className: dH.PC,
+                              className: dX.PC,
                           }),
                           (0, S.jsx)(Q.E, {
                               variant: "text-md/normal",
-                              className: dH.Qw,
+                              className: dX.Qw,
                               children: U.intl.format(U.t.G4fwxK, {
                                   onClick: () => {
                                       ((0, tW.default)(), (0, t9.pX)(I.BVt.APPLICATION_STORE));
@@ -6867,7 +6826,7 @@ function dZ(e) {
                           }),
                           (0, S.jsx)(dE.A, {
                               showGradient: !0,
-                              className: dH.aA,
+                              className: dX.aA,
                               subscriptionTier: t0.pe.TIER_2,
                               textOptions: { textOverride: U.intl.string(U.t.mr4K7D) },
                           }),
@@ -6878,19 +6837,19 @@ function dZ(e) {
         children: [
             g,
             (0, S.jsx)(dh.A, {
-                className: dH.Yj,
+                className: dX.Yj,
                 isShown: !1 === i && c,
                 type: dh.i.PREMIUM,
                 hasBackground: !0,
                 children: (0, S.jsxs)("div", {
-                    className: dH.DE,
+                    className: dX.DE,
                     children: [
                         m,
                         l.map((e) => {
                             let { code: t, promotion: n } = e;
-                            return (0, S.jsx)(dK, { outboundPromotion: n, code: t }, n.id);
+                            return (0, S.jsx)(dH, { outboundPromotion: n, code: t }, n.id);
                         }),
-                        s.map((e) => (0, S.jsx)(dK, { outboundPromotion: e, code: r[e.id] }, e.id)),
+                        s.map((e) => (0, S.jsx)(dH, { outboundPromotion: e, code: r[e.id] }, e.id)),
                         null != a
                             ? (0, S.jsx)(
                                   dM,
@@ -6933,9 +6892,9 @@ function dZ(e) {
         ],
     });
 }
-let dq = (0, E.zZ)(h.X.MY_GIFTS_CATEGORY, {
-        useTitle: d$,
-        buildLayout: () => [dQ],
+let dK = (0, E.zZ)(h.X.MY_GIFTS_CATEGORY, {
+        useTitle: dq,
+        buildLayout: () => [dZ],
         usePredicate: () => {
             let { claimedOutboundPromotionCodes: e, claimedOutboundPromotionCodesLoaded: t } = (0, f.cf)(
                     [dm.A],
@@ -6949,15 +6908,56 @@ let dq = (0, E.zZ)(h.X.MY_GIFTS_CATEGORY, {
             return t && n.length + i > 0;
         },
     }),
-    dQ = (0, E.E2)(h.X.MY_GIFTS_CONTENT, {
-        useSearchTerms: () => [d$()],
-        Component: () => (0, S.jsx)(dZ, { redesign: !0 }),
+    dZ = (0, E.E2)(h.X.MY_GIFTS_CONTENT, {
+        useSearchTerms: () => [dq()],
+        Component: () => (0, S.jsx)(dW, { redesign: !0 }),
     });
-function d$() {
+function dq() {
     return U.intl.string(U.t.YzjdWJ);
 }
+var dQ = n(339048);
+function d$() {
+    let e = (0, f.yK)([dx.A], () => dx.A.getGiftable()).filter((e) => {
+            let { giftCodeBatchId: t } = e;
+            return null == t;
+        }),
+        t = W().groupBy(e, (e) => (0, dp.Kx)(e.skuId, e.subscriptionPlanId, e.giftStyle)),
+        [n, i] = T.useState(!1);
+    if (
+        (T.useEffect(() => {
+            tl.h.wait(() => {
+                (0, dQ.XJ)().then(() => i(!0));
+            });
+        }, []),
+        !n)
+    )
+        return (0, S.jsx)(om.y, { className: dX.Lq });
+    if (0 === Object.keys(t).length)
+        return (0, S.jsxs)("div", {
+            className: dX.p$,
+            children: [
+                (0, S.jsx)("div", { className: dX.QT }),
+                (0, S.jsx)(uE.H, { className: dX.ks, children: U.intl.string(U.t.B1qgZn) }),
+                (0, S.jsx)("p", {
+                    className: dX.WO,
+                    children: U.intl.format(U.t.HezvJ8, {
+                        onClick: function () {
+                            (0, nm.openUserSettings)(h.X.NITRO_PANEL);
+                        },
+                    }),
+                }),
+            ],
+        });
+    let s = W()
+        .keys(t)
+        .map((e) => {
+            let { skuId: n, subscriptionPlanId: i, giftStyle: s } = (0, dp.X6)(e);
+            return (0, S.jsx)(dM, { skuId: n, subscriptionPlanId: i, entitlements: t[e], giftStyle: s }, e);
+        });
+    return (0, S.jsx)(Z.B, { gap: "lg", children: s });
+}
 let dJ = (0, E.zZ)(h.X.PURCHASED_GIFTS_CATEGORY, { useTitle: d1, buildLayout: () => [d0] }),
-    d0 = (0, E.E2)(h.X.PURCHASED_GIFTS_CONTENT, { useSearchTerms: () => [d1()], Component: () => (0, S.jsx)(dW, {}) });
+    d0 = (0, E.E2)(h.X.PURCHASED_GIFTS_CONTENT, { useSearchTerms: () => [d1()], Component: () => (0, S.jsx)(d$, {}) });
 function d1() {
     return U.intl.string(U.t.FWe6CP);
 }
@@ -7073,7 +7073,7 @@ let d6 = (0, E.zZ)(h.X.REDEEM_GIFT_CATEGORY, {
     }),
     d7 = (0, E.t_)(h.X.GIFT_PANEL, {
         useTitle: () => U.intl.string(U.t["jcSP+g"]),
-        buildLayout: () => [d6, dq, dd, dJ, u8],
+        buildLayout: () => [d6, dK, dd, dJ, u8],
         initialize: () => {
             (u3.Ay.fetchClaimedOutboundPromotionCodes(), (0, u2.Ig)("gift_inventory") && (0, u1.o0)(u0.$.GIFTING));
         },
@@ -10532,7 +10532,7 @@ function AO(e) {
         u = T.useMemo(() => {
             if (null == o || 0 === o.length) return null;
             let e = o[0];
-            return (0, u_._J)(e);
+            return (0, ah._J)(e);
         }, [o]);
     return null == u
         ? null
@@ -11132,7 +11132,7 @@ function A1() {
     let e = (0, f.bG)([dx.A], () => dx.A.getForApplication(t0.tv), [], A0);
     return (
         T.useEffect(() => {
-            (0, dX.LM)(t0.tv);
+            (0, dQ.LM)(t0.tv);
         }, []),
         (0, S.jsx)(n9.n, {
             label: U.intl.string(U.t["2GKrvn"]),

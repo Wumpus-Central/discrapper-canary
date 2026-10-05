@@ -1,6 +1,6 @@
 let i;
 (n.r(t),
-    n.d(t, { ACTION_DENYLIST: () => ee, getOverlayURL: () => eI, default: () => eD, OverlayPIDStatus: () => V }),
+    n.d(t, { ACTION_DENYLIST: () => ee, getOverlayURL: () => ef, default: () => eD, OverlayPIDStatus: () => V }),
     n(393431),
     n(532706),
     n(42231),
@@ -26,16 +26,16 @@ var r,
     E = n(77729),
     A = n(719129),
     h = n(996308),
-    I = n(626584),
-    f = n(736056),
+    f = n(626584),
+    I = n(736056),
     p = n(952818);
 let T = [],
-    m = null;
-function g() {
+    g = null;
+function m() {
     0 !== T.length &&
         (l.h.dispatch({ type: "OVERLAY_ADD_LOGS_BATCH", logs: T }),
         (T = []),
-        null != m && (clearTimeout(m), (m = null)));
+        null != g && (clearTimeout(g), (g = null)));
 }
 var S = n(777334),
     N = n(211753),
@@ -266,7 +266,7 @@ let J = new Q(),
         "CLIPS_MONTAGE_RENDER_DONE",
     ]),
     et = new Set(),
-    en = new I.A("OverlayBridgeStore"),
+    en = new f.A("OverlayBridgeStore"),
     ei = {};
 function er(e) {
     return ei[e] ?? {};
@@ -353,11 +353,11 @@ async function ec(e) {
         if (x.Ay.supportsFeature(B.BYE.CREATE_HOST_ON_ATTACH))
             if (W.size > 0) {
                 es = "reconcile.getOverlayURL";
-                let t = await eI();
+                let t = await ef();
                 ((es = "reconcile.createHostProcess"), e.createHostProcess(t, eT, ep));
             } else ((es = "reconcile.destroyHostProcess"), e.destroyHostProcess(), eh((0, k.getPID)()));
         else if (K) {
-            let t = await eI();
+            let t = await ef();
             e.createHostProcess(t, eT, ep);
         } else (e.destroyHostProcess(), eh((0, k.getPID)()));
     } catch (t) {
@@ -505,14 +505,14 @@ let eA = eo("updateIntendedOverlayPIDs", (e) => (en.info("updateIntendedOverlayP
         if (null == e) return (0, k.setPID)(-1);
         y.A.isOverlayV3EnabledForPID(e) || (0, k.setPID)(-1);
     });
-function eI() {
+function ef() {
     return new Promise((e) => {
         ey.addConditionalChangeListener(() => {
             if (null != i) return (e(i), !1);
         });
     });
 }
-let ef = eo("setOverlayEnabled", async (e) => {
+let eI = eo("setOverlayEnabled", async (e) => {
     if (!(0, k.supportsLegacy)()) return;
     if (K === e) return void en.verbose("setOverlayEnabled: no change", { newOverlayEnabled: e });
     ((K = e), ey.emitChange());
@@ -542,7 +542,7 @@ function eT(e, t, n) {
             : (u.A.updateOverlayState(e, C.AR.OVERLAY_CRASHED, "onConnectComplete"),
               ed(e, "CONNECT_FAILED", "CONNECTING")));
 }
-function em() {
+function eg() {
     let e = M.default.getToken(),
         t = M.default.getId();
     null != e &&
@@ -553,7 +553,7 @@ function em() {
             payloads: [{ type: "UPDATE_TOKEN", token: e, userId: t }],
         });
 }
-function eg(e) {
+function em(e) {
     return (
         null != e &&
         (function (e, t) {
@@ -605,10 +605,10 @@ function eS(e) {
             ((i = e.payload),
                 T.push(i),
                 T.length >= 100
-                    ? g()
-                    : null == m &&
-                      (m = setTimeout(() => {
-                          g();
+                    ? m()
+                    : null == g &&
+                      (g = setTimeout(() => {
+                          m();
                       }, 1e3)));
     }
 }
@@ -629,17 +629,17 @@ function eC(e, t) {
 }
 let eO = null;
 function eR() {
-    f.A.hasLoadedExperiments && !j && ((j = !0), ef(N.x.legacyEnabled));
+    I.A.hasLoadedExperiments && !j && ((j = !0), eI(N.x.legacyEnabled));
 }
 class eL extends a.Ay.Store {
     static displayName = "OverlayBridgeStore";
     initialize() {
         !(0, k.supportsLegacy)() ||
             __OVERLAY__ ||
-            (this.waitFor(M.default, f.A, P.A, U.A, R.default, D.A, v.A, y.A, p.Ay),
-            this.syncWith([f.A], eR),
-            h.Le(eS, eg),
-            M.default.addChangeListener(em),
+            (this.waitFor(M.default, I.A, P.A, U.A, R.default, D.A, v.A, y.A, p.Ay),
+            this.syncWith([I.A], eR),
+            h.Le(eS, em),
+            M.default.addChangeListener(eg),
             l.h.addInterceptor(J.queueDispatch));
     }
     isFocusedPidInputLocked() {
@@ -727,7 +727,7 @@ let ey = new eL(
                   },
                   OVERLAY_SET_ENABLED: function (e) {
                       let { legacyEnabled: t } = e;
-                      return (ef(t), !1);
+                      return (eI(t), !1);
                   },
                   OVERLAY_FOCUSED: function (e) {
                       let { pid: t } = e;
@@ -762,7 +762,7 @@ let ey = new eL(
                       let { port: t } = e;
                       Z = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "9e32f5d5a712a7e8b7e43f6e4e348e87d7d1107d"),
+                      (n.append("build_id", "a84a33c5fab0f98d25529eba1aac43bddbb8deab"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", Z),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));

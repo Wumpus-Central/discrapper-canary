@@ -21,8 +21,8 @@ var d = n(736653),
     D = n(281020),
     P = n(206828),
     M = n(49999),
-    m = n(211180),
-    p = n(375708),
+    p = n(211180),
+    m = n(375708),
     f = n(971656);
 let U =
     221552 == n.j
@@ -78,7 +78,7 @@ let U =
                           alt: L,
                           className: c()(f.tV, f.Y5),
                       }),
-                      p.intl.format(m.default.qV9zT6, {
+                      m.intl.format(p.default.qV9zT6, {
                           connectionName: h?.name,
                           orbsIconHook: () =>
                               (0, i.jsx)(T.C, {
@@ -94,19 +94,19 @@ let U =
                           },
                           className: f.NS,
                           noticeType: o,
-                          children: p.intl.string(m.default.ZeOhh9),
+                          children: m.intl.string(p.default.ZeOhh9),
                       }),
                       (0, i.jsx)(A.zr, {
                           onClick: () => r(M.i.USER_DISMISS),
                           className: f.go,
-                          children: p.intl.string(m.default["8qJAeT"]),
+                          children: m.intl.string(p.default["8qJAeT"]),
                       }),
                   ],
               });
           }
         : null;
 var g = n(521790),
-    h = n(16432),
+    h = n(211068),
     k = n(496431),
     y = n(75678),
     L = n(174459),
@@ -149,7 +149,7 @@ let B =
                                         },
                                     });
                                 },
-                                text: p.intl.string(p.t.zLXssK),
+                                text: m.intl.string(m.t.zLXssK),
                             }),
                         ],
                     });
