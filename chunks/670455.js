@@ -1,19 +1,18 @@
 n.d(t, {
-    AO: () => N,
-    CW: () => O,
-    Eq: () => m,
-    MW: () => E.iL,
-    P0: () => A,
-    Rj: () => p,
-    UV: () => L,
-    X: () => S,
-    bO: () => g,
-    bj: () => R,
-    fs: () => T,
-    h0: () => I,
-    j6: () => C,
-    u0: () => h,
-    uf: () => f,
+    AO: () => S,
+    CW: () => C,
+    Eq: () => T,
+    MW: () => _.iL,
+    P0: () => E,
+    Rj: () => f,
+    UV: () => O,
+    X: () => g,
+    bO: () => m,
+    fs: () => p,
+    h0: () => h,
+    j6: () => N,
+    u0: () => A,
+    uf: () => I,
 });
 var i,
     r,
@@ -24,38 +23,36 @@ var i,
     d,
     c,
     u,
-    _,
-    E = n(873298),
-    A = (((i = {}).BAD = "bad"), (i.NEUTRAL = "neutral"), (i.GOOD = "good"), i);
-let h = 1024;
-var I =
+    _ = n(873298),
+    E = (((i = {}).BAD = "bad"), (i.NEUTRAL = "neutral"), (i.GOOD = "good"), i);
+let A = 1024;
+var h =
     (((r = {}).AV = "AV"),
     (r.SOCIAL = "SOCIAL"),
     (r.SEARCH = "SEARCH"),
     (r.SAFETY = "SAFETY"),
     (r.BUILDER = "BUILDER"),
     r);
-let f = [
-        E.iL.VIDEO_BACKGROUND,
-        E.iL.STREAM,
-        E.iL.ACTIVITY,
-        E.iL.VOICE,
-        E.iL.IN_APP_REPORTS,
-        E.iL.SEARCH_RESULTS,
-        E.iL.VIBEGRATIONS,
+let I = [
+        _.iL.VIDEO_BACKGROUND,
+        _.iL.STREAM,
+        _.iL.ACTIVITY,
+        _.iL.VOICE,
+        _.iL.IN_APP_REPORTS,
+        _.iL.SEARCH_RESULTS,
+        _.iL.VIBEGRATIONS,
     ].reduce((e, t, n) => ({ ...e, [t]: n }), {}),
-    p = ["bad", "neutral", "good"],
-    T = 864e13;
-var m =
+    f = ["bad", "neutral", "good"],
+    p = 864e13;
+var T =
         (((a = {}).CONNECTION = "CONNECTION"),
         (a.AUDIO = "AUDIO"),
         (a.VIDEO = "VIDEO"),
         (a.STREAMING = "STREAMING"),
         (a.STREAM_WATCHING = "STREAM_WATCHING"),
         (a.PEOPLE = "PEOPLE"),
-        (a.CONJURE = "VIBEGRATIONS"),
         a),
-    g =
+    m =
         (((s = {}).FREEFORM = "FREEFORM"),
         (s.COULD_NOT_CONNECT = "COULD_NOT_CONNECT"),
         (s.HIGH_TTC = "HIGH_TTC"),
@@ -64,7 +61,7 @@ var m =
         (s.DESYNC = "DESYNC"),
         (s.CUTTING = "CUTTING"),
         s),
-    S =
+    g =
         (((l = {}).FREEFORM = "FREEFORM"),
         (l.NO_AUDIO = "NO_AUDIO"),
         (l.LOW_QUALITY_AUDIO = "LOW_QUALITY_AUDIO"),
@@ -83,7 +80,7 @@ var m =
         (l.COMPLAINTS = "COMPLAINTS"),
         (l.NO_GAME_AUDIO = "NO_GAME_AUDIO"),
         l),
-    N =
+    S =
         (((o = {}).FREEFORM = "FREEFORM"),
         (o.NO_VIDEO = "NO_VIDEO"),
         (o.FREEZING_OR_HITCHING = "FREEZING_OR_HITCHING"),
@@ -91,7 +88,7 @@ var m =
         (o.UNABLE_TO_ENABLE_DEVICE = "UNABLE_TO_ENABLE_DEVICE"),
         (o.DESYNC = "DESYNC"),
         o),
-    C =
+    N =
         (((d = {}).FREEFORM = "FREEFORM"),
         (d.COULD_NOT_LOAD = "COULD_NOT_LOAD"),
         (d.BLACK_SCREEN = "BLACK_SCREEN"),
@@ -104,12 +101,5 @@ var m =
         (d.DESYNC = "DESYNC"),
         (d.NO_GAME_AUDIO = "NO_GAME_AUDIO"),
         d),
-    O = (((c = {}).FREEFORM = "FREEFORM"), (c.TOXIC_OR_INAPPROPRIATE = "TOXIC_OR_INAPPROPRIATE"), c),
-    R =
-        (((u = {}).FREEFORM = "FREEFORM"),
-        (u.NOT_WHAT_I_WANTED = "NOT_WHAT_I_WANTED"),
-        (u.TOO_SLOW = "TOO_SLOW"),
-        (u.APP_DIDNT_WORK = "APP_DIDNT_WORK"),
-        (u.DIDNT_KNOW_WHAT_TO_ASK_FOR = "DIDNT_KNOW_WHAT_TO_ASK_FOR"),
-        u),
-    L = (((_ = {}).UNSPECIFIED = "UNSPECIFIED"), (_.SELF = "SELF"), (_.SOMEONE = "SOMEONE"), (_.OTHERS = "OTHERS"), _);
+    C = (((c = {}).FREEFORM = "FREEFORM"), (c.TOXIC_OR_INAPPROPRIATE = "TOXIC_OR_INAPPROPRIATE"), c),
+    O = (((u = {}).UNSPECIFIED = "UNSPECIFIED"), (u.SELF = "SELF"), (u.SOMEONE = "SOMEONE"), (u.OTHERS = "OTHERS"), u);

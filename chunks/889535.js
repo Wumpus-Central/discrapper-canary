@@ -9837,12 +9837,12 @@ let ov = {
     },
     VoiceCallFeedback: async () => {
         let { default: e } = await Promise.all([
-                a.e("312513"),
+                a.e("36781"),
+                a.e("713710"),
                 a.e("36395"),
                 a.e("155925"),
                 a.e("137381"),
-                a.e("847004"),
-                a.e("313937"),
+                a.e("259375"),
                 a.e("64054"),
             ]).then(a.bind(a, 47893)),
             t = {
@@ -9862,12 +9862,12 @@ let ov = {
     },
     StreamFeedback: async () => {
         let { default: e } = await Promise.all([
-                a.e("312513"),
+                a.e("36781"),
+                a.e("713710"),
                 a.e("36395"),
                 a.e("155925"),
                 a.e("137381"),
-                a.e("847004"),
-                a.e("313937"),
+                a.e("259375"),
                 a.e("617171"),
                 a.e("862767"),
             ]).then(a.bind(a, 218738)),

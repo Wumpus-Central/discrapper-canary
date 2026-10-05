@@ -804,7 +804,7 @@ function tY() {
                       onClick: () => {
                           ((0, N.openModalLazy)(async () => {
                               let { default: e } = await Promise.all([
-                                  n.e("312513"),
+                                  n.e("36781"),
                                   n.e("36395"),
                                   n.e("155925"),
                                   n.e("218413"),
@@ -2070,7 +2070,7 @@ let nO =
                                   onClick: () => {
                                       ((0, N.openModalLazy)(async () => {
                                           let { default: e } = await Promise.all([
-                                              n.e("312513"),
+                                              n.e("36781"),
                                               n.e("36395"),
                                               n.e("155925"),
                                               n.e("218413"),
