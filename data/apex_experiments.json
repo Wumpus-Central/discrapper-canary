@@ -5840,6 +5840,22 @@
     }
   },
   {
+    "name": "2026-10-contextual-referrals-gdm-member-list",
+    "kind": "user",
+    "defaultConfig": {
+      "showEmbed": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "showEmbed": true
+      }
+    }
+  },
+  {
     "kind": "user",
     "name": "2026-10-guild-tooltip-lazy-content",
     "defaultConfig": {
