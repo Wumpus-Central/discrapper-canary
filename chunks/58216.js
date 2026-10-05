@@ -13,22 +13,22 @@ var i = n(477900),
     p = n(821609),
     g = n(331322),
     _ = n(297264),
-    m = n(477782),
-    w = n(687966),
+    w = n(477782),
+    m = n(687966),
     E = n(404778),
     A = n(793574),
     v = n(688810),
     y = n(206828),
     T = n(486610),
     C = n(531913),
-    b = n(417270),
-    I = n(7437),
+    I = n(417270),
+    b = n(7437),
     R = n(375708),
     O = n(429913),
     N = n(5960),
     S = n(409626),
-    x = n(692969),
-    P = n(569926),
+    P = n(692969),
+    x = n(569926),
     k = n(280450),
     M = n(183555),
     U = n(644346),
@@ -128,7 +128,7 @@ let J = Object.assign(
                 trailingContent: F,
                 interactiveLinks: H = !1,
             } = e,
-            G = (function (e) {
+            B = (function (e) {
                 let { trackUserProfileAction: t } = (0, M.NJ)(),
                     { user: n, widget: l, cta: o } = e,
                     s = (0, d.bG)([k.default], () => k.default.getId()) === n.id,
@@ -136,10 +136,10 @@ let J = Object.assign(
                     p = h?.getIconURL(16),
                     g = (function (e) {
                         let t = e?.getCanonicalGameId(),
-                            { data: n } = (0, P.I)(t);
+                            { data: n } = (0, x.I)(t);
                         return n;
                     })(h),
-                    _ = (0, x.A)({
+                    _ = (0, P.A)({
                         location: "UserProfileApplicationWidget",
                         applicationId: g?.id,
                         source: S.GameProfileSources.UserProfileApplicationWidget,
@@ -147,28 +147,28 @@ let J = Object.assign(
                         trackEntryPointImpression: !0,
                     }),
                     {
-                        fetched: m,
-                        hasAlreadyLinked: w,
+                        fetched: w,
+                        hasAlreadyLinked: m,
                         canStartAuthorization: E,
                         startAuthorization: T,
                         token: C,
                     } = (0, y.RD)(h),
-                    { analyticsLocations: b } = (0, v.Ay)(A.A.USER_PROFILE_APPLICATION_WIDGET),
-                    I = r.useCallback(() => {
+                    { analyticsLocations: I } = (0, v.Ay)(A.A.USER_PROFILE_APPLICATION_WIDGET),
+                    b = r.useCallback(() => {
                         E &&
                             (t({
-                                action: w
+                                action: m
                                     ? "PRESS_APPLICATION_WIDGET_LINKED_RECONNECT"
                                     : "PRESS_APPLICATION_WIDGET_UNLINKED_CONNECT",
                                 applicationId: l.applicationId,
                             }),
-                            T({ analyticsLocations: b }));
-                    }, [E, w, T, t, l.applicationId, b]),
-                    R = null == o && m && !w && E,
+                            T({ analyticsLocations: I }));
+                    }, [E, m, T, t, l.applicationId, I]),
+                    R = null == o && w && !m && E,
                     N =
                         null == o &&
-                        m &&
                         w &&
+                        m &&
                         E &&
                         null != C &&
                         !Array.from(u._.APPLICATION_IDENTITIES_SCOPES).some((e) => C.scopes.includes(e)) &&
@@ -193,27 +193,28 @@ let J = Object.assign(
                     isCurrentUser: s,
                     game: g,
                     openGameProfileModal: _,
-                    handleConnect: I,
+                    handleConnect: b,
                     showConnectCta: R,
                     showReconnectCta: N,
                     headerTitle: D,
                 };
             })(e),
-            B = (0, C.A)(t.id, n.applicationId),
-            q = (0, N.A)(n.applicationId, G.isCurrentUser),
-            $ = (function (e, t) {
-                let { pending: n, refresh: r } = (0, I.A)(e);
+            G = (0, C.A)(t.id, n.applicationId),
+            q = e.rendererProps ?? G,
+            $ = (0, N.A)(n.applicationId, B.isCurrentUser),
+            V = (function (e, t) {
+                let { pending: n, refresh: r } = (0, b.A)(e);
                 return t
-                    ? (0, i.jsx)(m.Dr, {
+                    ? (0, i.jsx)(w.Dr, {
                           id: "application-widget-refresh",
                           label: R.intl.string(R.t.wzzjk9),
-                          leadingAccessory: { type: "icon", icon: b.RetryIcon },
+                          leadingAccessory: { type: "icon", icon: I.RetryIcon },
                           disabled: n,
                           action: r,
                       })
                     : null;
-            })(n.applicationId, !0 === q && !0 !== J),
-            V =
+            })(n.applicationId, !0 === $ && !0 !== J),
+            z =
                 H ||
                 (function (e) {
                     let { disableInteraction: t } = e;
@@ -221,9 +222,9 @@ let J = Object.assign(
                 })(e)
                     ? T.hO
                     : void 0,
-            z = B.surfaceConfigs[s.m.WIDGET_TOP],
-            K = B.surfaceConfigs[s.m.WIDGET_BOTTOM];
-        return null == z || null == K
+            K = q.surfaceConfigs[s.m.WIDGET_TOP],
+            Y = q.surfaceConfigs[s.m.WIDGET_BOTTOM];
+        return null == K || null == Y
             ? null
             : (0, i.jsxs)(U.A, {
                   userId: t.id,
@@ -236,36 +237,36 @@ let J = Object.assign(
                   headerClassName: j.JE,
                   additionalManageWidgetMenuItems: (0, i.jsxs)(i.Fragment, {
                       children: [
-                          null != G.game
-                              ? (0, i.jsx)(m.Dr, {
+                          null != B.game
+                              ? (0, i.jsx)(w.Dr, {
                                     id: "view-game-profile",
                                     label: "View Game Profile",
-                                    leadingAccessory: { type: "icon", icon: w.GameControllerIcon },
-                                    action: G.openGameProfileModal,
+                                    leadingAccessory: { type: "icon", icon: m.GameControllerIcon },
+                                    action: B.openGameProfileModal,
                                 })
                               : null,
-                          $,
+                          V,
                       ],
                   }),
                   children: [
                       (0, i.jsx)(o.kH, {
-                          ...B,
+                          ...q,
                           surface: s.m.WIDGET_TOP,
-                          surfaceConfig: z,
-                          header: G.headerTitle,
-                          renderText: V,
+                          surfaceConfig: K,
+                          header: B.headerTitle,
+                          renderText: z,
                       }),
                       (0, i.jsx)(E.c, {}),
-                      (0, i.jsx)(o.kH, { ...B, surface: s.m.WIDGET_BOTTOM, surfaceConfig: K, renderText: V }),
+                      (0, i.jsx)(o.kH, { ...q, surface: s.m.WIDGET_BOTTOM, surfaceConfig: Y, renderText: z }),
                       (0, i.jsx)(D, {
-                          isCurrentUser: G.isCurrentUser,
-                          isLoading: B.isLoading,
-                          hasData: B.hasIdentity,
-                          showConnectCta: G.showConnectCta,
-                          showReconnectCta: G.showReconnectCta,
-                          handleConnect: G.handleConnect,
+                          isCurrentUser: B.isCurrentUser,
+                          isLoading: q.isLoading,
+                          hasData: q.hasIdentity,
+                          showConnectCta: B.showConnectCta,
+                          showReconnectCta: B.showReconnectCta,
+                          handleConnect: B.handleConnect,
                           disableCTA: l,
-                          disableCTAActions: !0 === h || !1 !== q,
+                          disableCTAActions: !0 === h || !1 !== $,
                           cta: p,
                       }),
                   ],

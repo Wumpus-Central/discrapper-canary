@@ -1,3 +1,13 @@
+.widget__20557 {
+    max-width: 414px;
+    width: 100%
+}
+
+.theme__20557 {
+    border-radius: var(--radius-md);
+    width: 100%
+}
+
 .body_f3ecdb {
     gap: var(--space-16);
     overflow-wrap: anywhere;
@@ -707,4 +717,4 @@
     animation: reminder-leave_e5c405 .18s ease-in
 }
 
-/*# sourceMappingURL=8136f6eae4d307f8.css.map*/
+/*# sourceMappingURL=c046a2274370538e.css.map*/

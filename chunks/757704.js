@@ -902,6 +902,13 @@ let l = [
         summary: "Plan proposals come with a wireframe sketch, so you can see the shape of the app before you say go.",
     },
     {
+        date: "2026-10-04",
+        time: "22:49",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Plans that add a profile widget show the real widget, filled with example values, so you can see your profile card before you say go.",
+    },
+    {
         date: "2026-09-27",
         time: "21:37",
         platforms: ["desktop", "mobile"],
