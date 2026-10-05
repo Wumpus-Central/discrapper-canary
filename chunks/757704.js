@@ -200,6 +200,13 @@ let l = [
             "Apps you build can now ask the AI quick yes/no, pick-one, and rating questions and get confidence-scored answers.",
     },
     {
+        date: "2026-10-04",
+        time: "22:53",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Apps you build can now pick any Claude, GPT, Grok or DeepSeek model for their AI, show its replies as they're written, and let it search the web.",
+    },
+    {
         date: "2026-09-23",
         time: "00:03",
         platforms: ["mobile"],
