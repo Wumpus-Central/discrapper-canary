@@ -4,11 +4,9 @@
 }
 
 .iframeMobilePreview_a62174 {
-    border: 1px solid var(--border-subtle);
     border-radius: var(--radius-lg);
-    height: min(844px, 100%);
-    max-width: 100%;
-    width: 390px
+    box-shadow: 0 0 0 1px var(--border-subtle);
+    overflow: hidden
 }
 
 .activityContainerMobilePreview_a62174 {
@@ -172,4 +170,4 @@
     border-bottom-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=586206.af4aff9924e4e875.css.map*/
+/*# sourceMappingURL=586206.7367cfe9db000c73.css.map*/
