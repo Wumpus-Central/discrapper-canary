@@ -65,7 +65,7 @@ function I(e) {
         l.useEffect(() => {
             null != d.current &&
                 (a || u
-                    ? d.current.play().catch((e) => {
+                    ? d.current.play()?.catch((e) => {
                           if (!(e instanceof DOMException && "AbortError" === e.name)) throw e;
                       })
                     : d.current.pause());
