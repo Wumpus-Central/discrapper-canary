@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 629564, Version Hash: 2c96be4d67f59e1d0c9114ce8929528d7abeed6b`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 629568, Version Hash: bbc0882f47f23e20511ece24900cf7cfde6e03c7`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -22091,7 +22091,7 @@ let CE = "isHideDevBanner",
                     className: to()(C_.Wz, C_.mr),
                     children: [
                         (0, y.jsx)(Cu, { className: C_.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "629564" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "629568" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -33033,7 +33033,7 @@ let Dm = ed.Ay.connectStores([a0.A, DI.A, DA.A, e_.Ay], () => ({
 });
 var Dg = n(724066),
     DS = n(389960),
-    DN = n(10929);
+    DN = n(228829);
 let DC = null;
 function DO() {
     (ex.Ay.setSystemTrayIcon(
