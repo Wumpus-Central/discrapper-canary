@@ -192,7 +192,8 @@ class g {
         m(e) && this._members.unsubscribe(e, t);
     }
     subscribeChannel(e, t, n) {
-        return !!m(e) && this._channels.subscribe(e, t, n);
+        let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+        return !!m(e) && this._channels.subscribe(e, t, n, i);
     }
     subscribeToMemberUpdates(e) {
         if (!m(e)) return !1;
@@ -248,18 +249,19 @@ function x(e, t) {
 }
 function k(e, t) {
     let n = (0, d.ai)(e) && null != t ? (y.A.getChannel(t)?.getGuildId() ?? e) : e;
-    return (G.subscribeToGuild(n), null != t && L.Ay.getSection(t) === T.YvQ.MEMBERS && F(e, t, c.LD));
+    return (G.subscribeToGuild(n), null != t && L.Ay.getSection(t) === T.YvQ.MEMBERS && F(e, t, c.LD, !0));
 }
 function F(e, t, n) {
-    if (t === R.sN) return G.subscribeChannel(e, t, n);
-    let i = y.A.getChannel(t);
-    if (null == i) return !1;
-    let r = i.getGuildId();
-    return (r !== e && (0, d.ai)(e) && G.subscribeToGuild(r), i?.isThread())
-        ? i.type === T.rbe.ANNOUNCEMENT_THREAD
-            ? G.subscribeChannel(r, i.parent_id, n)
-            : !!i.isActiveThread() && G.subscribeThreadMemberList(r, t, U.Ay.getChannelId())
-        : G.subscribeChannel(r, t, n);
+    let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3];
+    if (t === R.sN) return G.subscribeChannel(e, t, n, i);
+    let r = y.A.getChannel(t);
+    if (null == r) return !1;
+    let a = r.getGuildId();
+    return (a !== e && (0, d.ai)(e) && G.subscribeToGuild(a), r?.isThread())
+        ? r.type === T.rbe.ANNOUNCEMENT_THREAD
+            ? G.subscribeChannel(a, r.parent_id, n, i)
+            : !!r.isActiveThread() && G.subscribeThreadMemberList(a, t, U.Ay.getChannelId())
+        : G.subscribeChannel(a, t, n, i);
 }
 function B(e) {
     let { type: t } = e;

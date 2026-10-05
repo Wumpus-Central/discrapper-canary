@@ -33,7 +33,12 @@ class c {
         delete this._subscriptions[e];
     }
     subscribe(e, t, n) {
-        let i = this._get(e);
-        return !r().isEqual(i.get(t), n) && (i.set(t, n), (this._subscriptions[e] = i), this._onChange(e, d(i)), !0);
+        let i = arguments.length > 3 && void 0 !== arguments[3] && arguments[3],
+            a = this._get(e),
+            s = a.get(t);
+        return (
+            !((i && null != s) || r().isEqual(s, n)) &&
+            (a.set(t, n), (this._subscriptions[e] = a), this._onChange(e, d(a)), !0)
+        );
     }
 }
