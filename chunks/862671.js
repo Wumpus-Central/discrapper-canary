@@ -34,7 +34,7 @@ var l = n(477900),
     U = n(36149),
     Q = n(207560);
 function z() {
-    let e = (0, U.Dn)(),
+    let e = (0, U.uE)(),
         t = (0, Q.yv)(P.p.MESSAGE_REQUEST_RESTRICTIONS);
     return !e && t;
 }
@@ -45,14 +45,14 @@ var w = n(336590),
     L = n(378570),
     O = n(138298),
     V = n(761640),
-    D = n(47167),
-    q = n(688438),
+    q = n(47167),
+    D = n(688438),
     K = n(375708),
     B = n(172039),
     Z = n(612960);
 function X(e) {
     let { channel: t, baseChannelId: n } = e,
-        i = (0, D.Ay)(t),
+        i = (0, q.Ay)(t),
         a = (0, w.k)(),
         r = (0, w.r)(),
         c = (0, o.bG)([k.A], () => k.A.isMessageRequest(t.id)),
@@ -100,7 +100,7 @@ function X(e) {
                 className: B.T,
                 children: (0, l.jsx)(F.A.Provider, {
                     value: u,
-                    children: (0, l.jsx)(q.A, { channel: t, guild: null, chatInputType: M.oU.SIDEBAR }, t.id),
+                    children: (0, l.jsx)(D.A, { channel: t, guild: null, chatInputType: M.oU.SIDEBAR }, t.id),
                 }),
             }),
         ],
@@ -234,8 +234,8 @@ var eP = n(692617),
     eL = n(562819),
     eO = n(215689),
     eV = n(994500),
-    eD = n(427262),
-    eq = n(19575);
+    eq = n(427262),
+    eD = n(19575);
 n(536637);
 var eK = n(707539),
     eB = n(573163),
@@ -361,7 +361,7 @@ function tn(e) {
               ],
           });
 }
-let tl = eq.Ay.getEnableHardwareAcceleration() ? eU.Js : eU.eu;
+let tl = eD.Ay.getEnableHardwareAcceleration() ? eU.Js : eU.eu;
 function ts(e) {
     let t,
         n,
@@ -408,7 +408,7 @@ function ts(e) {
                                 showAccountIdentifier: !0,
                                 className: tt.I8,
                                 usernameClass: tt.Xh,
-                                discriminatorClass: null != eD.Ay.getGlobalName(i) ? tt.vl : tt.D2,
+                                discriminatorClass: null != eq.Ay.getGlobalName(i) ? tt.vl : tt.D2,
                             }),
                             (0, l.jsx)(E.E, {
                                 className: tt.L7,
