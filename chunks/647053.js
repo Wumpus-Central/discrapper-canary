@@ -156,14 +156,17 @@ function d(e, t) {
         case i.F.PERSONAL_DM_CHANNELS_READ:
             return [r.intl.string(r.t.w8emlT)];
         case i.F.PERSONAL_DM_CHANNELS_MESSAGES_READ:
-        case i.F.PERSONAL_DM_CHANNELS_MESSAGES_SEARCH:
             return [r.intl.string(r.t.FHeB8p)];
+        case i.F.PERSONAL_DM_CHANNELS_MESSAGES_SEARCH:
+            return [r.intl.string(r.t.UVkUVk)];
         case i.F.PERSONAL_GUILDS_CHANNELS_READ:
             return [r.intl.string(r.t.BWGAgt)];
         case i.F.PERSONAL_GUILDS_CHANNELS_MESSAGES_READ:
+            return [r.intl.string(r.t["+7+Hvl"])];
         case i.F.PERSONAL_GUILDS_MESSAGES_SEARCH:
+            return [r.intl.string(r.t.N1P8Wp)];
         case i.F.PERSONAL_MENTIONS_READ:
-            return [r.intl.string(r.t.jVXrHb)];
+            return [r.intl.string(r.t.Alcf2G)];
         case i.F.PERSONAL_ACTIVITIES_WRITE:
             return [r.intl.string(r.t["6OsWXX"])];
         case i.F.GATEWAY_CONNECT:
