@@ -958,6 +958,13 @@ let l = [
             "Publishing now offers patch notes: Conjure drafts what changed since your last release, you edit them, and they post to a channel you pick.",
     },
     {
+        date: "2026-10-03",
+        time: "18:57",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Recipes say right away when you need Manage Server in a server to start them, instead of loading forever.",
+    },
+    {
         date: "2026-09-24",
         time: "00:00",
         platforms: ["desktop", "mobile"],

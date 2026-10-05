@@ -1,4 +1,5 @@
 (n.d(t, {
+    Df: () => i,
     Fl: () => s,
     S3: () => d,
     SF: () => c,
@@ -8,18 +9,18 @@
     h_: () => r,
     kt: () => h,
     n0: () => f,
-    sf: () => i,
 }),
     n(321073),
     n(246338));
 var l = n(248675),
     a = n(375708);
 function i(e, t) {
-    return !t.some((t) => t.id === e);
+    return 0 === t.length ? "none" : t.some((t) => t.id === e) ? "skip" : "pick";
 }
 function r(e, t) {
+    if ("none" === t) return ["server"];
     let n = Array.from({ length: Math.max(1, e.length) }, (e, t) => ({ kind: "question", index: t }));
-    return t ? ["about", "server", ...n] : ["about", ...n];
+    return "pick" === t ? ["about", "server", ...n] : ["about", ...n];
 }
 function s(e, t) {
     return null != e && (!0 === e.optional || "" !== (t ?? "").trim());
