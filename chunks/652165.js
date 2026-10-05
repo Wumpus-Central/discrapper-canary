@@ -14,9 +14,10 @@ function r(e) {
             analyticsSourceLocation: c,
             discoverySessionId: r,
             applicationId: d,
-            onCloseCallback: p,
+            contextKey: p,
+            onCloseCallback: h,
         } = e,
-        h = !1;
+        s = !1;
     return (function (e) {
         let {
             discoverySessionId: o,
@@ -25,7 +26,8 @@ function r(e) {
             analyticsLocations: c = [],
             analyticsSourceLocation: r,
             applicationId: d,
-            onCloseCallback: p,
+            contextKey: p,
+            onCloseCallback: h,
         } = e;
         return (
             i.h.wait(() => {
@@ -37,18 +39,19 @@ function r(e) {
                     checkoutConfiguration: { discoverySessionId: o, skuId: t, applicationId: d },
                     unifiedCheckoutProviderProps: { analyticsLocations: c, analyticsSourceLocation: r },
                     checkoutHandlers: { onComplete: n },
-                    modalAPIOptions: { onCloseCallback: p, modalKey: a },
+                    modalAPIOptions: { contextKey: p, onCloseCallback: h, modalKey: a },
                 })
         );
     })({
         discoverySessionId: r,
         skuId: o,
         onComplete: (e) => {
-            (h || t(e), (h = !0));
+            (s || t(e), (s = !0));
         },
         applicationId: d,
+        contextKey: p,
         analyticsLocations: n,
         analyticsSourceLocation: c,
-        onCloseCallback: p,
+        onCloseCallback: h,
     });
 }

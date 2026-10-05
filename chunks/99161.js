@@ -1,140 +1,147 @@
-t.d(e, {
+e.d(i, {
     a: () =>
-        function i(e, u) {
-            let { isGift: p, giftRecipient: h, giftingOrigin: k, additionalUserIds: y } = u,
+        function t(i, u) {
+            let { isGift: p, giftRecipient: h, giftingOrigin: y, additionalUserIds: k } = u,
                 {
-                    discoverySessionId: C,
-                    analyticsLocations: f,
-                    guildId: g,
+                    discoverySessionId: g,
+                    analyticsLocations: C,
+                    guildId: f,
                     isEligibilityCheckContinuation: _,
                     checkoutState: I,
+                    contextKey: b,
                 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                b = d.A.getSKUEligibilityEntry(e.id),
-                m = b?.state,
-                L = !p && (null == m || "checking" === m || "ineligible" === m);
-            if (!L && !_) {
-                let i = "none";
-                (p ? (i = "gift") : "eligible" === m ? (i = "already_eligible") : "error" === m && (i = "prior_error"),
-                    s.default.track(r.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
-                        sku_id: e.id,
-                        guild_id: g ?? null,
-                        application_id: e.applicationId,
+                m = b ?? (0, o.getInteractingModalContext)(),
+                L = s.A.getSKUEligibilityEntry(i.id),
+                E = L?.state,
+                S = !p && (null == E || "checking" === E || "ineligible" === E);
+            if (!S && !_) {
+                let t = "none";
+                (p ? (t = "gift") : "eligible" === E ? (t = "already_eligible") : "error" === E && (t = "prior_error"),
+                    c.default.track(r.HAw.SLAYER_STOREFRONT_PURCHASE_ELIGIBILITY_SKIPPED, {
+                        sku_id: i.id,
+                        guild_id: f ?? null,
+                        application_id: i.applicationId,
                         is_gift: p,
-                        eligibility_state: m ?? "none",
-                        skip_reason: i,
-                        error_http_status: b?.state === "error" ? (b.httpStatus ?? null) : null,
-                        location_stack: f,
+                        eligibility_state: E ?? "none",
+                        skip_reason: t,
+                        error_http_status: L?.state === "error" ? (L.httpStatus ?? null) : null,
+                        location_stack: C,
                     }));
             }
-            let E = I ?? { hasFinished: !1 };
-            L
-                ? (function (i) {
+            let P = I ?? { hasFinished: !1 };
+            S
+                ? (function (t) {
                       let {
-                          guildId: e,
-                          applicationId: o,
+                          guildId: i,
+                          applicationId: a,
                           skuId: l,
-                          analyticsLocations: s,
-                          onContinue: d,
-                          onClose: r,
-                      } = i;
-                      (0, a.openModalLazy)(
+                          analyticsLocations: c,
+                          contextKey: s,
+                          onContinue: r,
+                          onClose: u,
+                      } = t;
+                      (0, o.openModalLazy)(
                           async () => {
-                              let { default: i } = await Promise.all([t.e("833192"), t.e("262754")]).then(
-                                  t.bind(t, 424185),
+                              let { default: t } = await Promise.all([e.e("833192"), e.e("262754")]).then(
+                                  e.bind(e, 424185),
                               );
-                              return (t) =>
-                                  (0, n.jsx)(i, {
-                                      ...t,
+                              return (e) =>
+                                  (0, n.jsx)(t, {
+                                      ...e,
                                       skuId: l,
-                                      guildId: e,
-                                      applicationId: o,
-                                      analyticsLocations: s,
-                                      onContinue: d,
+                                      guildId: i,
+                                      applicationId: a,
+                                      analyticsLocations: c,
+                                      onContinue: r,
                                   });
                           },
-                          { modalKey: c, onCloseCallback: r },
+                          { modalKey: d, contextKey: s, onCloseCallback: u },
                       );
                   })({
-                      guildId: g,
-                      applicationId: e.applicationId,
-                      skuId: e.id,
-                      analyticsLocations: f ?? [],
+                      guildId: f,
+                      applicationId: i.applicationId,
+                      skuId: i.id,
+                      analyticsLocations: C ?? [],
+                      contextKey: m,
                       onContinue: () => {
-                          if (!E.hasFinished)
-                              return i(
-                                  e,
-                                  { isGift: p, giftRecipient: h, giftingOrigin: k, additionalUserIds: y },
+                          if (!P.hasFinished)
+                              return t(
+                                  i,
+                                  { isGift: p, giftRecipient: h, giftingOrigin: y, additionalUserIds: k },
                                   {
-                                      discoverySessionId: C,
-                                      analyticsLocations: f,
-                                      guildId: g,
+                                      discoverySessionId: g,
+                                      analyticsLocations: C,
+                                      guildId: f,
                                       isEligibilityCheckContinuation: !0,
-                                      checkoutState: E,
+                                      checkoutState: P,
+                                      contextKey: m,
                                   },
                               );
                       },
                   })
-                : (function (i) {
+                : (function (t) {
                       let {
+                          contextKey: i,
                           discoverySessionId: e,
-                          sku: t,
-                          analyticsLocations: n,
+                          sku: n,
+                          analyticsLocations: o,
                           isGift: a,
-                          giftRecipient: o,
+                          giftRecipient: c,
                           additionalUserIds: s,
                           giftingOrigin: d,
-                          onCloseCallback: c,
-                          onComplete: r,
-                          modalKey: u,
-                      } = i;
+                          onCloseCallback: r,
+                          onComplete: u,
+                          modalKey: p,
+                      } = t;
                       l.UnifiedCheckoutFlowManagerSingletons[l.CL.SLAYER_STOREFRONT_CHECKOUT]
                           .get()
                           .openCheckoutModal({
                               checkoutConfiguration: {
                                   discoverySessionId: e,
-                                  applicationId: t.applicationId,
-                                  skuId: t.id,
-                                  skuProductLine: t.productLine,
+                                  applicationId: n.applicationId,
+                                  skuId: n.id,
+                                  skuProductLine: n.productLine,
                               },
-                              unifiedCheckoutProviderProps: { analyticsLocations: n },
-                              checkoutHandlers: { onComplete: r },
-                              giftContextProps: { isGift: a, giftRecipient: o, giftingOrigin: d, additionalUserIds: s },
-                              modalAPIOptions: { modalKey: u, onCloseCallback: c },
+                              unifiedCheckoutProviderProps: { analyticsLocations: o },
+                              checkoutHandlers: { onComplete: u },
+                              giftContextProps: { isGift: a, giftRecipient: c, giftingOrigin: d, additionalUserIds: s },
+                              modalAPIOptions: { contextKey: i, modalKey: p, onCloseCallback: r },
                           });
                   })({
-                      discoverySessionId: C,
-                      sku: e,
-                      analyticsLocations: f ?? [],
+                      contextKey: m,
+                      discoverySessionId: g,
+                      sku: i,
+                      analyticsLocations: C ?? [],
                       isGift: p,
                       giftRecipient: h,
-                      giftingOrigin: k,
-                      additionalUserIds: y,
+                      giftingOrigin: y,
+                      additionalUserIds: k,
                       onCloseCallback: function () {
-                          ((0, o.ET)(), (0, a.closeModal)(c), (E.hasFinished = !0));
+                          ((0, a.ET)(), (0, o.closeModal)(d, m), (P.hasFinished = !0));
                       },
                       onComplete: function () {
-                          E.hasFinished = !0;
+                          P.hasFinished = !0;
                       },
                       modalKey: "slayer-payment-modal",
                   });
         },
     openSocialLayerStorefrontAnnouncementModal: () => u,
 });
-var n = t(477900),
-    a = t(192308),
-    o = t(391048),
-    l = t(589078),
-    s = t(174459),
-    d = t(832163);
-let c = "slayer-eligibility-check-modal";
-var r = t(652215);
+var n = e(477900),
+    o = e(192308),
+    a = e(391048),
+    l = e(589078),
+    c = e(174459),
+    s = e(832163);
+let d = "slayer-eligibility-check-modal";
+var r = e(652215);
 function u() {
-    (0, a.openModalLazy)(
+    (0, o.openModalLazy)(
         async () => {
-            let { default: i } = await Promise.all([t.e("324732"), t.e("847799"), t.e("701218")]).then(
-                t.bind(t, 839225),
+            let { default: t } = await Promise.all([e.e("324732"), e.e("847799"), e.e("701218")]).then(
+                e.bind(e, 839225),
             );
-            return (e) => (0, n.jsx)(i, { ...e });
+            return (i) => (0, n.jsx)(t, { ...i });
         },
         { modalKey: "slayer-storefront-announcement-modal" },
     );

@@ -6,10 +6,11 @@ var l = n(477900),
     s = n(652215);
 let o = "social-layer-storefront-item-claimed-successfully-modal",
     u = (e) => {
-        let { sku: t, application: u, analyticsLocations: c, entitlement: d } = e,
-            p = !1;
-        function m(e) {
-            p = e.shouldIgnoreCloseRequest;
+        let { sku: t, application: u, analyticsLocations: c, entitlement: d, contextKey: p } = e,
+            m = p ?? (0, i.getInteractingModalContext)(),
+            h = !1;
+        function C(e) {
+            h = e.shouldIgnoreCloseRequest;
         }
         (0, i.openModalLazy)(
             async () => {
@@ -29,13 +30,14 @@ let o = "social-layer-storefront-item-claimed-successfully-modal",
                         application: u,
                         analyticsLocations: c,
                         entitlement: d,
-                        onSetIgnoreCloseRequest: m,
+                        onSetIgnoreCloseRequest: C,
                     });
             },
             {
                 modalKey: o,
+                contextKey: m,
                 onCloseRequest: () => {
-                    p || (0, i.closeModal)(o);
+                    h || (0, i.closeModal)(o, m);
                 },
                 onCloseCallback: () => {
                     r.default.track(s.HAw.SLAYER_STOREFRONT_MODAL_CLOSED, {

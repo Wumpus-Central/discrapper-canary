@@ -12,7 +12,8 @@ let r = "social-layer-storefront-product-details-modal",
             giftingOrigin: c,
             analyticsLocations: d,
             analyticsContext: p,
-            onClose: m,
+            contextKey: m,
+            onClose: h,
         } = e;
         (0, i.openModalLazy)(
             async () => {
@@ -86,13 +87,14 @@ let r = "social-layer-storefront-product-details-modal",
             },
             {
                 modalKey: r,
+                contextKey: m,
                 allowsNavigation: o,
                 onCloseCallback: () => {
-                    m?.();
+                    h?.();
                 },
             },
         );
     };
-function s() {
-    (0, i.hasModalOpen)(r) && (0, i.closeModal)(r);
+function s(e) {
+    (0, i.hasModalOpen)(r, e) && (0, i.closeModal)(r, e);
 }

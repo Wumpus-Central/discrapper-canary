@@ -22,7 +22,7 @@ var n = o(477900),
 o(322076);
 var O = o(202541),
     g = o(375708);
-let I = {
+let y = {
         [h.C.ORB_CHECKOUT]: { allowGiftCustomization: !1, excludePaymentAuthSteps: !0, predicateStepType: "unified" },
         [h.C.COLLECTIBLES_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
         [h.C.SLAYER_STOREFRONT_CHECKOUT]: { allowGiftCustomization: !0, predicateStepType: "one_time_payment" },
@@ -36,7 +36,7 @@ let I = {
         [h.C.GAME_SERVER_SUBSCRIPTION_CHECKOUT]: { allowGiftCustomization: !1, predicateStepType: "subscription" },
         [h.C.PAST_DUE_MAGIC_LINK_CHECKOUT]: { allowGiftCustomization: !1 },
     },
-    y = (0, i.lazy)(() =>
+    I = (0, i.lazy)(() =>
         Promise.all([o.e("339384"), o.e("793438"), o.e("154791"), o.e("725246"), o.e("312665"), o.e("208430")])
             .then(o.bind(o, 427325))
             .then((e) => {
@@ -45,7 +45,7 @@ let I = {
             }),
     );
 function F(e) {
-    return (0, n.jsx)(y, { ...e });
+    return (0, n.jsx)(I, { ...e });
 }
 class P {
     checkoutFlow;
@@ -64,7 +64,7 @@ class P {
             throw Error(`Checkout flow ${e} is not implemented`);
         ((this.checkoutFlowConfiguration = t),
             (this.tenantCheckoutFlowConfig = t.TENANT_CHECKOUT_FLOW_CONFIG),
-            (this.internalCheckoutFlowControls = I[e]),
+            (this.internalCheckoutFlowControls = y[e]),
             (this.override_analytic_params =
                 this.tenantCheckoutFlowConfig.TENANT_PROVIDER_CONFIGS.overrideAnalyticParams));
     }
@@ -206,11 +206,11 @@ class P {
                 tenantParams: O,
             } = e,
             g = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : "modal",
-            I = arguments.length > 2 ? arguments[2] : void 0,
-            y = arguments.length > 3 ? arguments[3] : void 0,
-            P = { current: y ?? (0, l.A)() },
+            y = arguments.length > 2 ? arguments[2] : void 0,
+            I = arguments.length > 3 ? arguments[3] : void 0,
+            P = { current: I ?? (0, l.A)() },
             U = { current: null },
-            { modalKey: M } = I,
+            { modalKey: M } = y,
             R = this.generateRenderHeader(),
             A = h ?? this.getApplicationId(c),
             G = !!(null != t && t.isGift),
@@ -255,10 +255,10 @@ class P {
                     return (t) => (0, n.jsx)(e, { ...L, renderModalProps: t });
                 },
                 {
-                    ...I,
+                    ...y,
                     onCloseRequest: () => {
-                        (null != I.onCloseRequest && I.onCloseRequest(H, P.current),
-                            I.skipCloseModalOnCloseRequest || (0, r.closeModal)(M));
+                        (null != y.onCloseRequest && y.onCloseRequest(H, P.current),
+                            y.skipCloseModalOnCloseRequest || (0, r.closeModal)(M, y.contextKey));
                     },
                     onCloseCallback: () => {
                         (s.h.dispatch({ type: "CHECKOUT_MODAL_CLOSE", didSucceed: H }),
@@ -277,7 +277,7 @@ class P {
                                     isGift: G,
                                     eligibleForTrial: null != w.trialId,
                                 })),
-                            null != I.onCloseCallback && I.onCloseCallback(H),
+                            null != y.onCloseCallback && y.onCloseCallback(H),
                             null != u && u(H, c));
                     },
                     modalKey: M,
