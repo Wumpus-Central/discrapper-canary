@@ -112,6 +112,13 @@ let l = [
             "Preview tests run from Claude Code or Codex now show in your project's activity under their own title.",
     },
     {
+        date: "2026-10-03",
+        time: "19:01",
+        platforms: ["desktop", "mobile"],
+        summary:
+            "Recipes and new apps show their Frame right away; you approve the bot\u2019s permissions only when you publish or message it.",
+    },
+    {
         date: "2026-10-01",
         time: "23:37",
         platforms: ["desktop", "mobile"],

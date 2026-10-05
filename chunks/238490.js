@@ -1,4 +1,4 @@
-n.d(t, { Qg: () => u, Qs: () => a, Xm: () => l, yZ: () => s, yf: () => o });
+n.d(t, { JR: () => d, Qg: () => u, Qs: () => a, Xm: () => l, yZ: () => s, yf: () => o });
 var i = n(696645);
 let r =
     221552 == n.j
@@ -30,4 +30,7 @@ function s(e) {
 function u(e) {
     let { installScope: t, previewReady: n, integrationInstalled: i, botPermissionsChanged: r } = e;
     return !!n && null != i && (!!r || ("user" !== t && !i));
+}
+function d(e, t) {
+    return t && "bot" === e;
 }

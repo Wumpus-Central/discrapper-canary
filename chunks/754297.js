@@ -11429,20 +11429,13 @@ function uB(e) {
             surface: l,
             previewReady: a,
             previewGate: i,
-            availability: o,
-            activeMode: u,
-            widgetApplicationId: d,
-            frameOverlay: c,
+            availability: s,
+            activeMode: o,
+            widgetApplicationId: u,
+            frameOverlay: d,
         } = e,
-        m = (0, V.A)(t, l),
-        { data: f, isLoading: h } = (0, q.YY)(t ?? void 0);
-    if (
-        (s.useEffect(() => {
-            i?.type === "permissions" && null != m && (0, nv.A)().leaveFrame(m.id);
-        }, [m, i?.type]),
-        i?.type === "checking")
-    )
-        return (0, r.jsx)("div", { className: u$.q, children: (0, r.jsx)(N.y, {}) });
+        { data: c, isLoading: m } = (0, q.YY)(t ?? void 0);
+    if (i?.type === "checking") return (0, r.jsx)("div", { className: u$.q, children: (0, r.jsx)(N.y, {}) });
     if (i?.type === "permissions")
         return (0, r.jsx)("div", {
             className: u$.q,
@@ -11450,15 +11443,15 @@ function uB(e) {
         });
     if (!a) return (0, r.jsx)(uh, { className: u$.q });
     if (null == t) return null;
-    if (h && null == f) return (0, r.jsx)("div", { className: u$.q, children: (0, r.jsx)(N.y, {}) });
-    let p = o.showModeSwitch && null != u ? { role: "tabpanel", id: (0, t$.z3)(u), "aria-label": (0, t$.kZ)(u) } : {};
+    if (m && null == c) return (0, r.jsx)("div", { className: u$.q, children: (0, r.jsx)(N.y, {}) });
+    let f = s.showModeSwitch && null != o ? { role: "tabpanel", id: (0, t$.z3)(o), "aria-label": (0, t$.kZ)(o) } : {};
     return (0, r.jsxs)("div", {
         className: u$.R,
-        ...p,
+        ...f,
         children: [
-            (0, tA.yf)(o, u) ? (0, r.jsx)(uE, { applicationId: t, surface: l, frameOverlay: c }) : null,
-            "widget" === u && null != d
-                ? "unavailable-authorization-revoked" === o.profileState
+            (0, tA.yf)(s, o) ? (0, r.jsx)(uE, { applicationId: t, surface: l, frameOverlay: d }) : null,
+            "widget" === o && null != u
+                ? "unavailable-authorization-revoked" === s.profileState
                     ? (0, r.jsx)("div", {
                           className: u$.q,
                           children: (0, r.jsx)(uN, {
@@ -11467,9 +11460,9 @@ function uB(e) {
                               body: ef.intl.string(em.default.pKBfrc),
                           }),
                       })
-                    : (0, r.jsx)(uq.A, { applicationId: d })
+                    : (0, r.jsx)(uq.A, { applicationId: u })
                 : null,
-            "bot" === u && null != n ? (0, r.jsx)(uO, { previewApplicationId: n }) : null,
+            "bot" === o && null != n ? (0, r.jsx)(uO, { previewApplicationId: n }) : null,
         ],
     });
 }
@@ -12653,7 +12646,11 @@ function dv(e) {
                       },
                   };
         }, [F, e$, ez, O, D, l?.preview_application_id]),
-        eH = et ? { type: "permissions", authorizeProps: eB } : F && null == L ? { type: "checking" } : void 0,
+        eH = (0, tA.JR)(W, et)
+            ? { type: "permissions", authorizeProps: eB }
+            : F && null == L
+              ? { type: "checking" }
+              : void 0,
         eV = (0, f.bG)([eL.Ay], () => null != A && eL.Ay.isProjectDeleting(A), [A]);
     s.useEffect(() => {
         ((null == l && a) || eV) && (0, X.bG)(ew.BVt.CHANNEL(o, ek.VV.CONJURE));
