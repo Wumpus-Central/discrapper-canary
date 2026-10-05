@@ -3335,25 +3335,6 @@
     }
   },
   {
-    "name": "2026-07-aws-gateway",
-    "kind": "user",
-    "defaultConfig": {
-      "enableAltGateway": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enableAltGateway": false
-      },
-      "2": {
-        "enableAltGateway": true
-      }
-    }
-  },
-  {
     "kind": "user",
     "name": "2026-07-call-of-duty-3pp-expired",
     "defaultConfig": {
