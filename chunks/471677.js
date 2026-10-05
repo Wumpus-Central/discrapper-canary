@@ -1,4 +1,4 @@
-n.d(t, { YK: () => A, fo: () => _, J$: () => h, Mg: () => E });
+n.d(t, { YK: () => h, fo: () => E, J$: () => I, Mg: () => A });
 var i = n(582128),
     r = n(17928),
     a = n(636537),
@@ -28,9 +28,10 @@ async function u(e) {
         }
     }
 }
-let _ = 200,
-    E = 500,
-    A = (0, r.UT)(l.A, {
+var _ = n(649079);
+let E = 200,
+    A = 500,
+    h = (0, r.UT)(l.A, {
         getQueryId: function (e) {
             let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.u.DEFAULT;
             return c.fic.GAME_AUTOCOMPLETE((0, d.C7)(e), t);
@@ -47,10 +48,10 @@ let _ = 200,
         staleAfter: 3600,
         failureStaleAfter: 60,
     });
-function h(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.u.DEFAULT,
-        n = (0, d.C7)(e),
-        r = (function (e) {
+function I(e, t) {
+    let { surface: n, profile: r = o.u.DEFAULT } = t,
+        a = (0, d.C7)(e),
+        s = (function (e) {
             let [t, n] = i.useState(e),
                 r = i.useRef(t),
                 a = i.useRef(0);
@@ -61,18 +62,30 @@ function h(e) {
                         ((a.current = Date.now()), (r.current = e), n(e));
                     }
                     if (null == e || null == r.current) return void t();
-                    let i = setTimeout(t, Math.min(_, Math.max(0, E - (Date.now() - a.current))));
+                    let i = setTimeout(t, Math.min(E, Math.max(0, A - (Date.now() - a.current))));
                     return () => {
                         clearTimeout(i);
                     };
                 }, [e]),
                 t
             );
-        })(n),
-        { data: a, error: s, isLoading: l } = A(r, t),
-        [c, u] = i.useState(null);
+        })(a),
+        { data: l, error: c, isLoading: u } = h(s, r),
+        [I, f] = i.useState(null),
+        p = null != l && null != s ? { query: s, results: l } : null;
+    null == a ? null != I && f(null) : null != p && p.results !== I?.results && f(p);
+    let T = null != a ? (p ?? I) : null,
+        m = T?.query ?? null,
+        g = T?.results ?? null,
+        [S] = i.useState(() => new _.vn(n, r));
     return (
-        null == n ? null != c && u(null) : null != a && a !== c && u(a),
-        { results: null != n ? (a ?? c) : null, isLoading: l || r !== n, error: r === n ? s : null }
+        i.useEffect(() => {
+            S.onQuery(a);
+        }, [S, a]),
+        i.useEffect(() => {
+            null != m && null != g && S.onResults(m, g);
+        }, [S, m, g]),
+        i.useEffect(() => S.end, [S]),
+        { results: g, isLoading: u || s !== a, error: s === a ? c : null, onSelect: S.select, endSession: S.end }
     );
 }

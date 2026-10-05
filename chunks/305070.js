@@ -150,6 +150,7 @@ let W = i.forwardRef(function (e, t) {
                     U.updateProps(C);
                 }),
                 i.useImperativeHandle(t, () => U, [U]),
+                i.useEffect(() => () => U.unmount(), [U]),
                 i.useEffect(() => {
                     function e(e) {
                         return a(e);

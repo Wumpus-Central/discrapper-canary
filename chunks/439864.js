@@ -1,17 +1,24 @@
-n.d(t, { q: () => d });
+n.d(t, { q: () => c });
 var i = n(649852),
     r = n.n(i),
     a = n(243264),
     s = n(929396),
-    l = n(471677);
-let o = r()(
+    l = n(649079),
+    o = n(471677);
+let d = r()(
     (e) => {
-        l.YK.fetchMany([e]);
+        o.YK.fetchMany([e]);
     },
-    l.fo,
-    { leading: !0, maxWait: l.Mg },
+    o.fo,
+    { leading: !0, maxWait: o.Mg },
 );
-function d(e) {
-    let t = (0, s.C7)(e);
-    return null == t ? null : (o(t), (a.A.getClosestResults(t) ?? []).filter(s.qS));
+function c(e, t) {
+    let n = null != t ? (0, l.$g)(t) : null;
+    n?.onQuery(e);
+    let i = (0, s.C7)(e);
+    if (null == i) return null;
+    d(i);
+    let r = a.A.getClosestResults(i),
+        o = (r?.results ?? []).filter(s.qS);
+    return (null != r && n?.onResults(r.query, o), o);
 }

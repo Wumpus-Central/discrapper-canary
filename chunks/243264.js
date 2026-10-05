@@ -23,8 +23,9 @@ class E extends a.Ay.Store {
             n = (0, o.C7)(e);
         if (null != n)
             for (let e = n.length; e >= 1; e--) {
-                let i = c.peek(d(t, n.slice(0, e)));
-                if (null != i) return i;
+                let i = n.slice(0, e),
+                    r = c.peek(d(t, i));
+                if (null != r) return { query: i, results: r };
             }
     }
     shouldSuppressFetch(e) {
