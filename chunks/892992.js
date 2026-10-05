@@ -17,14 +17,14 @@ var l = n(858899),
     I = n.n(f),
     p = n(834730),
     T = n(375708),
-    g = n(394272),
-    m = n(655214);
+    m = n(394272),
+    g = n(655214);
 function S(e) {
     let { channelName: t } = e;
     return (0, s.jsxs)("div", {
-        className: I()(m.oR, g.o),
+        className: I()(g.oR, m.o),
         children: [
-            (0, s.jsx)(o.ShieldIcon, { size: "sm", color: "currentColor", className: g.K }),
+            (0, s.jsx)(o.ShieldIcon, { size: "sm", color: "currentColor", className: m.K }),
             (0, s.jsx)(p.E, {
                 variant: "text-md/normal",
                 color: "text-strong",
@@ -362,7 +362,7 @@ function N(e) {
                 n.e("847727"),
                 n.e("459257"),
                 n.e("790484"),
-                n.e("765073"),
+                n.e("985301"),
                 n.e("631323"),
                 n.e("464452"),
                 n.e("74979"),
@@ -718,12 +718,11 @@ function N(e) {
                 n.e("902564"),
                 n.e("959134"),
                 n.e("377766"),
-                n.e("981004"),
                 n.e("428967"),
                 n.e("92935"),
                 n.e("565065"),
                 n.e("67878"),
-                n.e("568156"),
+                n.e("475324"),
                 n.e("758946"),
                 n.e("214285"),
                 n.e("248330"),

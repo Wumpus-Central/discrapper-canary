@@ -1,4 +1,4 @@
-(n.d(e, { default: () => tc, Z: () => tr }), n(321073));
+(n.d(e, { default: () => to, Z: () => ts }), n(321073));
 var i,
     l = n(477900),
     s = n(582128),
@@ -11,14 +11,14 @@ var i,
     p = n(913122),
     g = n(812633),
     m = n(626584),
-    x = n(837057),
-    b = n(894778),
+    b = n(837057),
+    x = n(894778),
     h = n(207803),
     j = n(287809),
     C = n(53505),
     v = n(4274),
-    E = n(723702),
-    f = n(834730),
+    f = n(723702),
+    E = n(834730),
     N = n(975571),
     y = n(652215),
     w = n(375708);
@@ -26,8 +26,8 @@ function S() {
     let t = N.A.getArticleURL(y.MVz.GUILD_GETTING_STARTED);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(f.E, { variant: "text-md/normal", children: w.intl.string(w.t.crKvu5) }),
-            (0, l.jsx)(f.E, {
+            (0, l.jsx)(E.E, { variant: "text-md/normal", children: w.intl.string(w.t.crKvu5) }),
+            (0, l.jsx)(E.E, {
                 variant: "text-sm/normal",
                 color: "text-subtle",
                 style: { marginTop: 8 },
@@ -74,7 +74,7 @@ function T() {
             (0, l.jsxs)("div", {
                 children: [
                     (0, l.jsx)(D.D, { variant: "heading-md/semibold", children: w.intl.string(w.t.Ksh3ik) }),
-                    (0, l.jsx)(f.E, {
+                    (0, l.jsx)(E.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         children: w.intl.string(w.t["mz+/o+"]),
@@ -94,7 +94,7 @@ function T() {
             (0, l.jsxs)("div", {
                 children: [
                     (0, l.jsx)(D.D, { variant: "heading-md/semibold", children: w.intl.string(w.t["C/5V0A"]) }),
-                    (0, l.jsx)(f.E, {
+                    (0, l.jsx)(E.E, {
                         variant: "text-sm/normal",
                         color: "text-subtle",
                         children: w.intl.string(w.t.sBENmo),
@@ -199,8 +199,8 @@ function Q(t) {
                 (0, l.jsxs)("div", {
                     className: R.ht,
                     children: [
-                        (0, l.jsx)(f.E, { variant: "text-md/semibold", children: n }),
-                        (0, l.jsx)(f.E, { variant: "text-sm/normal", color: "text-subtle", children: i }),
+                        (0, l.jsx)(E.E, { variant: "text-md/semibold", children: n }),
+                        (0, l.jsx)(E.E, { variant: "text-sm/normal", color: "text-subtle", children: i }),
                     ],
                 }),
                 (0, l.jsx)("img", { className: R.$O, alt: "", src: Y }),
@@ -216,7 +216,7 @@ function H(t) {
                 icon: W.GlobeEarthIcon,
                 title: w.intl.string(w.t.riOUtB),
                 description: w.intl.string(w.t["5u0zvP"]),
-                onClick: () => e(tr.JOIN_SERVER),
+                onClick: () => e(ts.JOIN_SERVER),
             }),
             (0, l.jsx)(Q, {
                 icon: J.CompassIcon,
@@ -228,7 +228,7 @@ function H(t) {
                 icon: Z.R,
                 title: w.intl.string(w.t.w5uwoI),
                 description: w.intl.string(w.t.bgoxKS),
-                onClick: () => e(tr.ADD_FRIEND),
+                onClick: () => e(ts.ADD_FRIEND),
             }),
             (0, l.jsx)(Q, {
                 icon: q.R,
@@ -255,10 +255,9 @@ function tt(t) {
 }
 var te = n(488995),
     tn = n(324580),
-    ti = n(315290),
-    tl = n(227143);
-let ts = new m.A("NewUserOnboarding");
-var tr =
+    ti = n(315290);
+let tl = new m.A("NewUserOnboarding");
+var ts =
     (((i = {}).WELCOME = "welcome"),
     (i.APPEARANCE = "appearance"),
     (i.DOWNLOAD_DESKTOP = "download-desktop"),
@@ -267,7 +266,7 @@ var tr =
     (i.JOIN_SERVER = "join-server"),
     (i.ADD_FRIEND = "add-friend"),
     i);
-let ta = {
+let tr = {
     welcome: ti.jK.WELCOME,
     appearance: ti.jK.APPEARANCE,
     "download-desktop": ti.jK.DOWNLOAD_DESKTOP,
@@ -276,31 +275,31 @@ let ta = {
     "join-server": ti.jK.JOIN_SERVER,
     "add-friend": ti.jK.ADD_FRIEND,
 };
-function to(t) {
-    b.A.flowStep(ti.do.ANY, t);
+function ta(t) {
+    x.A.flowStep(ti.do.ANY, t);
 }
-function tc(t) {
+function to(t) {
     let { onClose: e, ...n } = t,
         [i, m] = s.useState("welcome"),
-        [b, f] = s.useState(null),
+        [x, E] = s.useState(null),
         N = j.default.getCurrentUser()?.isClaimed() === !0,
         [y, A] = s.useState(() => j.default.getCurrentUser()?.globalName ?? ""),
         [k, D] = s.useState(""),
         [O, P] = s.useState(""),
         [R, K] = s.useState("");
     s.useEffect(() => {
-        to(ti.jK.WELCOME);
+        ta(ti.jK.WELCOME);
     }, []);
     let I = s.useCallback((t) => {
-            (to(ta[t]), f(t), m(t));
+            (ta(tr[t]), E(t), m(t));
         }, []),
         L = s.useCallback(
             (t, e) => {
-                "next-steps" === t && null != b && f(null);
-                let n = ta[t];
-                (null != n && to(n), m(t));
+                "next-steps" === t && null != x && E(null);
+                let n = tr[t];
+                (null != n && ta(n), m(t));
             },
-            [b],
+            [x],
         ),
         U = s.useCallback(async () => {
             let t = j.default.getCurrentUser(),
@@ -310,17 +309,17 @@ function tc(t) {
                 try {
                     await (0, u._L)({ globalName: e });
                 } catch (t) {
-                    ts.warn("failed to save globalName", t);
+                    tl.warn("failed to save globalName", t);
                 }
             if (k.trim().length > 0)
                 try {
                     await (0, h.gi)({ bio: k.trim() });
                 } catch (t) {
-                    ts.warn("failed to save bio", t);
+                    tl.warn("failed to save bio", t);
                 }
         }, [y, k]),
         B = s.useCallback(async () => {
-            ("next-steps" === i && to(ti.jK.DISMISSED), await U());
+            ("next-steps" === i && ta(ti.jK.DISMISSED), await U());
         }, [i, U]),
         _ = s.useCallback(async () => {
             let t = O.replace(/^\s*(https?:\/\/)?([\w-]+\.)?(discord\.gg|discord(?:app)?\.com\/invite)\//i, "").trim();
@@ -339,10 +338,10 @@ function tc(t) {
             }
         }, [O]),
         M = s.useCallback(async () => {
-            (to(ti.jK.EXPLORE),
+            (ta(ti.jK.EXPLORE),
                 await U(),
                 await e(),
-                (0, x.transitionToGlobalDiscovery)({ tab: te.GlobalDiscoveryTab.SERVERS, entrypoint: tn.J8.UNKNOWN }));
+                (0, b.transitionToGlobalDiscovery)({ tab: te.GlobalDiscoveryTab.SERVERS, entrypoint: tn.J8.UNKNOWN }));
         }, [U, e]),
         F = s.useCallback(async () => {
             let t = R.trim();
@@ -354,7 +353,7 @@ function tc(t) {
             }
         }, [R]),
         G = s.useCallback(async () => {
-            (to(ti.jK.CREATE_SERVER),
+            (ta(ti.jK.CREATE_SERVER),
                 await U(),
                 await e(),
                 (0, g.openCreateGuildModal)({ location: "New User Onboarding" }));
@@ -386,7 +385,7 @@ function tc(t) {
                 },
             ];
             return (
-                E.isPlatformEmbedded ||
+                f.isPlatformEmbedded ||
                     t.push({
                         stepKey: "download-desktop",
                         modalProps: {
@@ -419,7 +418,10 @@ function tc(t) {
                 t.push({
                     stepKey: "next-steps",
                     modalProps: {
-                        graphic: { type: "image", src: tl.A },
+                        graphic: {
+                            type: "image",
+                            src: "https://cdn.discordapp.com/assets/content/e080b25a204330f6009430ab2cb53737b9c204f09112729be927bdc06b7609dc.svg",
+                        },
                         gradientColor: "blue",
                         title: w.intl.string(w.t["++F+ha"]),
                         subtitle: w.intl.string(w.t.yMX0GO),
@@ -452,7 +454,7 @@ function tc(t) {
             }),
             [O, R, _, F],
         ),
-        Z = s.useMemo(() => (null != b && null != J[b] ? [...V, J[b]] : V), [V, b, J]);
+        Z = s.useMemo(() => (null != x && null != J[x] ? [...V, J[x]] : V), [V, x, J]);
     return (0, l.jsx)(a.t, {
         ...n,
         onClose: e,
