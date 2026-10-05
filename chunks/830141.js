@@ -1,4 +1,4 @@
-_.exports = {
+o.exports = {
     CR: "modalRoot__0c027",
     N1: "headerContainer__0c027",
     sB: "ratingBody__0c027",

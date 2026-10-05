@@ -13,10 +13,10 @@ var i = n(477900),
     p = n(979892);
 let g = new a.Vy("VibegrationsWidgetCapture"),
     _ = new Map();
-function m() {
+function w() {
     return new Promise((e) => requestAnimationFrame(() => e()));
 }
-function w(e) {
+function m(e) {
     let { applicationId: t, generateImageRef: n } = e,
         l = r.useRef(null);
     return (
@@ -26,8 +26,8 @@ function w(e) {
             let t = !1;
             return (
                 (async function (e) {
-                    (await m(),
-                        await m(),
+                    (await w(),
+                        await w(),
                         await Promise.all(Array.from(e.querySelectorAll("img")).map((e) => e.decode().catch(() => {}))),
                         t || n(e));
                 })(e).catch(() => {}),
@@ -41,7 +41,7 @@ function w(e) {
 }
 function E(e, t) {
     let { generateImage: n } = (0, u.R)({
-            renderComponent: (e) => (null == t ? null : (0, i.jsx)(w, { ...e, applicationId: t })),
+            renderComponent: (e) => (null == t ? null : (0, i.jsx)(m, { ...e, applicationId: t })),
             imageOptions: { pixelRatio: 2, cacheBust: !1 },
         }),
         a = r.useRef(n);

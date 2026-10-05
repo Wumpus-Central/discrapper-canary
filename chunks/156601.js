@@ -19,25 +19,25 @@ let g = function (e) {
             interval: t = p.WT.MONTH,
             className: i,
             isGift: g = !1,
-            variant: j,
-            priceOptions: f,
+            variant: f,
+            priceOptions: j,
             isApplicationHome: T,
-            enablePremiumBrandRefresh: I,
+            enablePremiumBrandRefresh: E,
         } = e,
-        A = (0, a.bG)([m.A], () => m.A.isLoadedForSKUs([r])),
-        E = (0, s.q)((0, u.Ay)());
-    if (!A) return (0, n.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: h.xB });
-    let N = m.A.getForSkuAndInterval((0, x.mH)(r), t),
-        R = null != N ? (0, x.sS)(N, f, !1, g) : null;
-    if (I) {
+        I = (0, a.bG)([m.A], () => m.A.isLoadedForSKUs([r])),
+        A = (0, s.q)((0, u.Ay)());
+    if (!I) return (0, n.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: h.xB });
+    let v = m.A.getForSkuAndInterval((0, x.mH)(r), t),
+        N = null != v ? (0, x.sS)(v, j, !1, g) : null;
+    if (E) {
         let e = t === p.WT.YEAR;
         return (0, n.jsxs)("div", {
             children: [
                 (0, n.jsx)(c.E, {
                     variant: e ? "heading-md/semibold" : "heading-xxl/extrabold",
-                    color: e ? "text-muted" : E ? "text-strong" : "text-overlay-light",
+                    color: e ? "text-muted" : A ? "text-strong" : "text-overlay-light",
                     tag: "span",
-                    children: (0, n.jsx)("span", { children: R }),
+                    children: (0, n.jsx)("span", { children: N }),
                 }),
                 (0, n.jsxs)(c.E, {
                     variant: "text-xs/medium",
@@ -50,10 +50,10 @@ let g = function (e) {
     }
     return (0, n.jsx)(d.D, {
         color: T ? "none" : "text-overlay-light",
-        variant: j ?? "heading-md/medium",
+        variant: f ?? "heading-md/medium",
         className: l()(h.SW, i),
         children: (0, n.jsxs)(n.Fragment, {
-            children: [(0, n.jsx)("span", { className: T ? void 0 : h.q9, children: R }), " / ", (0, x.FJ)(t)],
+            children: [(0, n.jsx)("span", { className: T ? void 0 : h.q9, children: N }), " / ", (0, x.FJ)(t)],
         }),
     });
 };

@@ -1,21 +1,21 @@
-n.d(t, { WA: () => c, _f: () => d });
-var i = n(17928),
-    l = n(793480),
-    a = n(71393),
-    s = n(576705),
-    r = n(652215);
-function o(e) {
-    let t = (0, i.bG)([a.A], () => a.A.getGuild(e?.guild_id)),
-        n = (0, l.m0)({ guildId: e?.guild_id, location: "VoiceChannelApp" });
+n.d(i, { WA: () => r, _f: () => p });
+var l = n(17928),
+    t = n(793480),
+    e = n(71393),
+    d = n(576705),
+    a = n(652215);
+function c(u) {
+    let i = (0, l.bG)([e.A], () => e.A.getGuild(u?.guild_id)),
+        n = (0, t.m0)({ guildId: u?.guild_id, location: "VoiceChannelApp" });
     return (
-        null != e && e.type === r.rbe.GUILD_VOICE && n && t?.features.has(r.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) !== !0
+        null != u && u.type === a.rbe.GUILD_VOICE && n && i?.features.has(a.GuildFeatures.INTERNAL_EMPLOYEE_ONLY) !== !0
     );
 }
-function c(e) {
-    return o(e) ? (e?.application_id ?? null) : null;
+function r(u) {
+    return c(u) ? (u?.application_id ?? null) : null;
 }
-function d(e) {
-    let t = o(e),
-        n = (0, i.bG)([s.A], () => null != e && s.A.can(r.xBc.MANAGE_CHANNELS, e));
-    return t && n;
+function p(u) {
+    let i = c(u),
+        n = (0, l.bG)([d.A], () => null != u && d.A.can(a.xBc.MANAGE_CHANNELS, u));
+    return i && n;
 }
