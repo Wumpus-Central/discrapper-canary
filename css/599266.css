@@ -189,10 +189,11 @@
 }
 
 .emptyState_ac6cb0 {
-    background: no-repeat 50% 20px;
+    display: flex;
+    flex-direction: column;
     font-weight: var(--font-weight-medium);
-    padding-bottom: 20px;
-    padding-top: 150px;
+    height: 100%;
+    justify-content: center;
     text-align: center
 }
 
@@ -231,12 +232,4 @@
     opacity: 1
 }
 
-.images-light .emptyState_ac6cb0 {
-    background-image: url(/assets/4df87e6155cbedff.svg)
-}
-
-.images-dark .emptyState_ac6cb0 {
-    background-image: url(/assets/05207174d5432737.svg)
-}
-
-/*# sourceMappingURL=599266.ab3918065004d411.css.map*/
+/*# sourceMappingURL=599266.79452fcb2381998c.css.map*/

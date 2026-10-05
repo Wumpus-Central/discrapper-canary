@@ -180,7 +180,8 @@
 .container__4a4f2 {
     border-radius: var(--radius-sm);
     box-shadow: var(--shadow-border), var(--shadow-high);
-    padding: 12px
+    padding: 12px;
+    position: relative
 }
 
 .flexContainer__4a4f2 {
@@ -189,38 +190,11 @@
     width: 100%
 }
 
-.educationUpsellRoot__4a4f2 {
-    bottom: 24px;
-    position: absolute
-}
-
-.full-motion .wumpus__4a4f2:hover {
-    animation: jiggle__4a4f2 .8s ease-out
-}
-
-@keyframes jiggle__4a4f2 {
-    0% {
-        transform: rotate(0deg)
-    }
-
-    25% {
-        transform: rotate(5deg)
-    }
-
-    75% {
-        transform: rotate(-5deg)
-    }
-
-    to {
-        transform: rotate(0deg)
-    }
-}
-
 .educationUpsell__4a4f2 {
     background-color: var(--background-surface-high);
     border-radius: var(--radius-sm);
-    bottom: 88px;
-    inset-inline-start: -16px;
+    bottom: calc(100% + var(--space-8));
+    inset-inline-start: 0;
     position: absolute;
     width: 400px
 }
@@ -589,4 +563,4 @@ input::-webkit-outer-spin-button {
     box-shadow: var(--elevation-low)
 }
 
-/*# sourceMappingURL=ad1dc66e5aa3aab0.css.map*/
+/*# sourceMappingURL=99b47df7d7d991c4.css.map*/

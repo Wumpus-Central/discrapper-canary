@@ -52,8 +52,8 @@ function d(e) {
                           i.e("670089"),
                           i.e("870160"),
                           i.e("454450"),
-                          i.e("560423"),
-                      ]).then(i.bind(i, 729398));
+                          i.e("222689"),
+                      ]).then(i.bind(i, 303224));
                       return (i) => (0, l.jsx)(n, { ...i, guildId: e });
                   }, u);
               },

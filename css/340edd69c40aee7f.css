@@ -1,0 +1,91 @@
+.container__2abba {
+    align-items: center;
+    flex: 1;
+    flex-direction: column
+}
+
+.container__2abba,
+.imageContainer__2abba {
+    display: flex;
+    justify-content: center
+}
+
+.imageContainer__2abba {
+    margin-bottom: 16px;
+    width: 100%
+}
+
+.image__2abba {
+    max-width: 500px;
+    min-width: min(100%, 300px);
+    width: 40%;
+    -webkit-user-drag: none
+}
+
+.full-motion .image__2abba {
+    animation: wiggling__2abba 2s linear infinite;
+    animation-play-state: paused
+}
+
+.full-motion .image__2abba:hover {
+    animation-play-state: running
+}
+
+.header__2abba {
+    margin-bottom: 8px;
+    text-align: center
+}
+
+@keyframes wiggling__2abba {
+    0% {
+        animation-timing-function: linear;
+        transform: rotate(0deg)
+    }
+
+    7% {
+        animation-timing-function: linear;
+        transform: rotate(-16deg)
+    }
+
+    20% {
+        animation-timing-function: ease-in-out;
+        transform: rotate(14deg)
+    }
+
+    32% {
+        animation-timing-function: ease-in-out;
+        transform: rotate(-16deg)
+    }
+
+    44% {
+        animation-timing-function: ease-in-out;
+        transform: rotate(12deg)
+    }
+
+    56% {
+        animation-timing-function: ease-in-out;
+        transform: rotate(-10deg)
+    }
+
+    68% {
+        animation-timing-function: ease-in-out;
+        transform: rotate(14deg)
+    }
+
+    81% {
+        animation-timing-function: ease-in-out;
+        transform: rotate(-16deg)
+    }
+
+    93% {
+        animation-timing-function: linear;
+        transform: rotate(14deg)
+    }
+
+    to {
+        animation-timing-function: linear;
+        transform: rotate(0deg)
+    }
+}
+
+/*# sourceMappingURL=340edd69c40aee7f.css.map*/

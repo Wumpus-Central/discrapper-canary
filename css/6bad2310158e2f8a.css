@@ -1,91 +1,35 @@
-.container__2abba {
-    align-items: center;
-    flex: 1;
-    flex-direction: column
+.searchIndexAnimation__8a209 {
+    height: 280px;
+    position: relative;
+    width: 320px
 }
 
-.container__2abba,
-.imageContainer__2abba {
-    display: flex;
-    justify-content: center
-}
-
-.imageContainer__2abba {
-    margin-bottom: 16px;
+.searchIndexBackground__8a209,
+.searchIndexForeground__8a209 {
+    height: 100%;
+    inset-inline-start: 0;
+    position: absolute;
+    top: 0;
     width: 100%
 }
 
-.image__2abba {
-    max-width: 500px;
-    min-width: min(100%, 300px);
-    width: 40%;
-    -webkit-user-drag: none
+.background__8a209,
+.magnifyingGlass__8a209,
+.mask__8a209 {
+    transform-origin: center
 }
 
-.full-motion .image__2abba {
-    animation: wiggling__2abba 2s linear infinite;
-    animation-play-state: paused
+.mask__8a209 {
+    height: 80px;
+    width: 80px
 }
 
-.full-motion .image__2abba:hover {
-    animation-play-state: running
+.images-light .searchIndexBackground__8a209 {
+    background-image: url(/assets/e409bdbc405200da.svg)
 }
 
-.header__2abba {
-    margin-bottom: 8px;
-    text-align: center
-}
-
-@keyframes wiggling__2abba {
-    0% {
-        animation-timing-function: linear;
-        transform: rotate(0deg)
-    }
-
-    7% {
-        animation-timing-function: linear;
-        transform: rotate(-16deg)
-    }
-
-    20% {
-        animation-timing-function: ease-in-out;
-        transform: rotate(14deg)
-    }
-
-    32% {
-        animation-timing-function: ease-in-out;
-        transform: rotate(-16deg)
-    }
-
-    44% {
-        animation-timing-function: ease-in-out;
-        transform: rotate(12deg)
-    }
-
-    56% {
-        animation-timing-function: ease-in-out;
-        transform: rotate(-10deg)
-    }
-
-    68% {
-        animation-timing-function: ease-in-out;
-        transform: rotate(14deg)
-    }
-
-    81% {
-        animation-timing-function: ease-in-out;
-        transform: rotate(-16deg)
-    }
-
-    93% {
-        animation-timing-function: linear;
-        transform: rotate(14deg)
-    }
-
-    to {
-        animation-timing-function: linear;
-        transform: rotate(0deg)
-    }
+.images-dark .searchIndexBackground__8a209 {
+    background-image: url(/assets/436b5a86429f186a.svg)
 }
 
 :root {
@@ -635,4 +579,4 @@
     margin-inline-start: auto
 }
 
-/*# sourceMappingURL=8903596b8824b8c1.css.map*/
+/*# sourceMappingURL=6bad2310158e2f8a.css.map*/

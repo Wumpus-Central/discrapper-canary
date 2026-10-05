@@ -165,8 +165,8 @@ function K(e) {
                                                     n.e("670089"),
                                                     n.e("870160"),
                                                     n.e("454450"),
-                                                    n.e("560423"),
-                                                ]).then(n.bind(n, 729398));
+                                                    n.e("222689"),
+                                                ]).then(n.bind(n, 303224));
                                                 return (t) => (0, a.jsx)(e, { ...t, guildId: I });
                                             }, O);
                                         },

@@ -46,8 +46,6 @@
 
 .content__03b47 {
     border-bottom: 1px solid var(--border-subtle);
-    display: flex;
-    flex-direction: row;
     padding: 12px
 }
 
@@ -58,12 +56,6 @@
 
 .descriptionText__03b47 {
     margin: 8px 0
-}
-
-.image__03b47 {
-    align-items: center;
-    display: flex;
-    justify-content: center
 }
 
 .inlineText__03b47 {
@@ -142,4 +134,4 @@
     margin-inline-end: 32px
 }
 
-/*# sourceMappingURL=489565.fa3da9a807285a64.css.map*/
+/*# sourceMappingURL=489565.7a703e82b85a08e7.css.map*/
