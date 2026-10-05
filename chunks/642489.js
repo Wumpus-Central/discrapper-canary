@@ -1,5 +1,5 @@
 n.d(t, { h: () => p });
-var i = n(155718),
+var i = n(127258),
     r = n(439372),
     a = n(587895),
     s = n(436283),
@@ -712,9 +712,8 @@ async function I(e) {
                     sourceInteractionType: n?.interactionType,
                     sourceApplicationId: n?.applicationId,
                     sourceMessageId: t?.messageId,
-                    hasSourceCustomId: n?.interactionType === i.G4.MESSAGE_COMPONENT ? null != n.customId : void 0,
-                    hasSourceComponentId:
-                        n?.interactionType === i.G4.MESSAGE_COMPONENT ? null != n.componentId : void 0,
+                    hasSourceCustomId: n?.interactionType === i.G.MESSAGE_COMPONENT ? null != n.customId : void 0,
+                    hasSourceComponentId: n?.interactionType === i.G.MESSAGE_COMPONENT ? null != n.componentId : void 0,
                 });
         d.A.addBreadcrumb({ category: "interaction_modal", message: "Interaction modal opened", data: l });
     }

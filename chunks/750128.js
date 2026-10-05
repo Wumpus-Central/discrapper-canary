@@ -3,10 +3,10 @@ t.d(n, { A: () => R, Z: () => O });
 var s,
     a = t(284009),
     c = t.n(a),
-    A = t(17928),
-    I = t(73153),
-    C = t(148494),
-    T = t(155718),
+    A = t(127258),
+    I = t(17928),
+    C = t(73153),
+    T = t(148494),
     o = t(706727),
     N = t(927813),
     O =
@@ -14,40 +14,40 @@ var s,
         (s[(s.ERRORED = 1)] = "ERRORED"),
         (s[(s.SUCCEEDED = 2)] = "SUCCEEDED"),
         s);
-class M extends A.Ay.Store {
+class M extends I.Ay.Store {
     static displayName = "InteractionModalStore";
     getModalState(l) {
         return l !== e ? null : u;
     }
 }
-let R = new M(I.h, {
+let R = new M(C.h, {
     LOGOUT: function () {
         return ((e = null), (u = null), (E = null), (i = null), (r = null), !0);
     },
     INTERACTION_MODAL_CREATE: function (l) {
         let { nonce: n } = l;
-        return (n === r && (C.A.deleteMessage(i, E, !0), (E = null), (i = null), (r = null)), !1);
+        return (n === r && (T.A.deleteMessage(i, E, !0), (E = null), (i = null), (r = null)), !1);
     },
     INTERACTION_IFRAME_MODAL_CREATE: function (l) {
         let { nonce: n } = l;
-        return (n === r && (C.A.deleteMessage(i, E, !0), (E = null), (i = null), (r = null)), !1);
+        return (n === r && (T.A.deleteMessage(i, E, !0), (E = null), (i = null), (r = null)), !1);
     },
     INTERACTION_QUEUE: function (l) {
         let { messageId: n, nonce: t, data: s, preflight: a } = l;
         switch (s.interactionType) {
-            case T.G4.APPLICATION_COMMAND:
+            case A.G.APPLICATION_COMMAND:
                 return ((E = n), (i = s.channelId), (r = t), !1);
-            case T.G4.MODAL_SUBMIT:
+            case A.G.MODAL_SUBMIT:
                 (c()(null == e || 1 === u || 2 === u, "cannot submit multiple modals at once"), (e = t), (u = 0));
-                let A = (l) => {
+                let I = (l) => {
                     setTimeout(() => {
                         e === t && 0 === u && (0, o.C1)(t);
                     }, l);
                 };
                 return (
                     null != a
-                        ? (A(2 * N.A.Millis.MINUTE), a.then(() => A(10 * N.A.Millis.SECOND)).catch(() => (0, o.C1)(t)))
-                        : A(10 * N.A.Millis.SECOND),
+                        ? (I(2 * N.A.Millis.MINUTE), a.then(() => I(10 * N.A.Millis.SECOND)).catch(() => (0, o.C1)(t)))
+                        : I(10 * N.A.Millis.SECOND),
                     !0
                 );
             default:

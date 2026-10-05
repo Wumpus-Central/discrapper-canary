@@ -2,11 +2,11 @@ let i;
 (n.d(t, { ms: () => eS, iG: () => eN, Ay: () => eC, Pd: () => em, DV: () => eg }), n(321073));
 var r = n(132500),
     a = n(344351),
-    s = n(731738),
-    l = n(636537),
-    o = n(73153),
-    d = n(367513),
-    c = n(155718),
+    s = n(127258),
+    l = n(731738),
+    o = n(636537),
+    d = n(73153),
+    c = n(367513),
     u = n(272355),
     _ = n(793574),
     E = n(240591),
@@ -44,7 +44,7 @@ class G extends P.Ay.PersistedStore {
         return w;
     }
 }
-let x = new G(o.h, {
+let x = new G(d.h, {
     LOGOUT: function () {
         w = U();
     },
@@ -171,16 +171,16 @@ async function eI(e) {
         a = C.default.getSessionId();
     null != i &&
         null != a &&
-        (await l.Bo.post({
+        (await o.Bo.post({
             url: el.Rsh.ACTIVITY_LEAVE(t, n.id, i),
             body: { session_id: a },
             retries: 2,
             rejectWithError: !1,
         }));
     let s = eo[t],
-        o = (0, et.H)(n),
+        l = (0, et.H)(n),
         d = (0, et.D)(n),
-        c = O.A.getChannel(o),
+        c = O.A.getChannel(l),
         u = y.default.getCurrentUser();
     if (null == s || null == u || null != s.connectedSince) return;
     let _ = F.Ay.getShelfActivities(d),
@@ -188,7 +188,7 @@ async function eI(e) {
         { releasePhase: A } = eu(E),
         h = p.A.getRawThermalState();
     (D.default.track(el.HAw.ACTIVITY_SESSION_LEFT, {
-        channel_id: o,
+        channel_id: l,
         guild_id: d,
         media_session_id: s.mediaSessionIds[0],
         activity_session_id: s.activitySessionId,
@@ -204,7 +204,7 @@ async function eI(e) {
         embedded_activity_location_kind: n.kind,
     }),
         D.default.track(el.HAw.ACTIVITY_IFRAME_UNMOUNT, {
-            channel_id: o,
+            channel_id: l,
             guild_id: d,
             application_id: t,
             instance_ids: null != s.launchId ? [s.launchId] : void 0,
@@ -237,12 +237,12 @@ function ef(e) {
             compositeInstanceId: s.compositeInstanceId,
             activitiesInfraVersion: "location" in s ? 2 : 1,
         });
-    let c = C.default.getId(),
-        u = a.find((e) => e.userId === c),
+    let d = C.default.getId(),
+        u = a.find((e) => e.userId === d),
         _ = (0, et.H)(l),
         A = (0, et.D)(l),
         h = O.A.getChannel(_);
-    if ((i && null != h && h.isPrivate() && n && null == u && d.A.selectParticipant(h.id, null), null == u)) return;
+    if ((i && null != h && h.isPrivate() && n && null == u && c.A.selectParticipant(h.id, null), null == u)) return;
     let I = R.A.getMediaSessionId(),
         m = s.compositeInstanceId,
         g = null == I && h?.isVocal() === !0 && h?.isPrivate() === !1;
@@ -334,7 +334,7 @@ function em(e, t) {
     if (null == n) return;
     let {
             isStart: i,
-            inviterUserId: l,
+            inviterUserId: s,
             channelId: o,
             launchId: d,
             compositeInstanceId: c,
@@ -386,11 +386,11 @@ function em(e, t) {
         channel_type: T?.type,
         source: A,
         command_context_type: null != T ? (0, E.ud)(T, e) : null,
-        invite_inviter_id: l,
+        invite_inviter_id: s,
         interaction_id: h,
         embedded_activity_location_kind: g,
     }),
-        eT(e, s.K.FRAME_SESSION_JOIN),
+        eT(e, l.K.FRAME_SESSION_JOIN),
         D.default.track(el.HAw.ACTIVITY_IFRAME_MOUNT, {
             location_stack: _,
             channel_id: o,
@@ -414,12 +414,12 @@ function eg(e) {
 async function eS(e, t, n) {
     let i = ep(e, n);
     if (null == i) return;
-    let { isStart: r, channelId: a, guildId: l, locationKind: o, analyticsLocations: d, source: c } = i,
+    let { isStart: r, channelId: a, guildId: s, locationKind: o, analyticsLocations: d, source: c } = i,
         u = null != a ? O.A.getChannel(a) : null,
         _ = await (0, ee.f)(t, e);
     (D.default.track(el.HAw.ACTIVITY_SESSION_JOIN_FAILED, {
         channel_id: a,
-        guild_id: l ?? u?.getGuildId(),
+        guild_id: s ?? u?.getGuildId(),
         application_id: e,
         raw_thermal_state: p.A.getRawThermalState(),
         is_activity_start: r,
@@ -431,7 +431,7 @@ async function eS(e, t, n) {
         source: c,
         embedded_activity_location_kind: o,
     }),
-        eT(e, s.K.FRAME_SESSION_JOIN_FAILED));
+        eT(e, l.K.FRAME_SESSION_JOIN_FAILED));
 }
 function eN(e) {
     let t = eo[e],
@@ -479,41 +479,41 @@ class eC extends u.A {
         (L.Ay.addChangeListener(this.handleSelectedChannelUpdate),
             v._.subscribe(el.jej.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease),
             v._.subscribe(el.jej.OPEN_EMBEDDED_ACTIVITY, ef),
-            o.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_START", eh),
-            o.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess),
-            o.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail),
-            o.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel),
-            o.h.subscribe("EMBEDDED_ACTIVITY_CLOSE", eI),
-            o.h.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen),
-            o.h.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect),
-            o.h.subscribe("CALL_DELETE", this.handleCallDelete),
-            o.h.subscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState),
-            o.h.subscribe("GUILD_DELETE", this.handleGuildDelete),
-            o.h.subscribe("CHANNEL_DELETE", this.handleChannelDelete),
-            o.h.subscribe("INTERACTION_QUEUE", this.handleInteractionQueue),
-            o.h.subscribe("INTERACTION_CREATE", this.handleInteractionCreate),
-            o.h.subscribe("INTERACTION_SUCCESS", this.handleInteractionSuccess),
-            o.h.subscribe("INTERACTION_FAILURE", this.handleInteractionFailure));
+            d.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_START", eh),
+            d.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess),
+            d.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail),
+            d.h.subscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel),
+            d.h.subscribe("EMBEDDED_ACTIVITY_CLOSE", eI),
+            d.h.subscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen),
+            d.h.subscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect),
+            d.h.subscribe("CALL_DELETE", this.handleCallDelete),
+            d.h.subscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState),
+            d.h.subscribe("GUILD_DELETE", this.handleGuildDelete),
+            d.h.subscribe("CHANNEL_DELETE", this.handleChannelDelete),
+            d.h.subscribe("INTERACTION_QUEUE", this.handleInteractionQueue),
+            d.h.subscribe("INTERACTION_CREATE", this.handleInteractionCreate),
+            d.h.subscribe("INTERACTION_SUCCESS", this.handleInteractionSuccess),
+            d.h.subscribe("INTERACTION_FAILURE", this.handleInteractionFailure));
     }
     _terminate() {
         (L.Ay.removeChangeListener(this.handleSelectedChannelUpdate),
             v._.unsubscribe(el.jej.RELEASE_ACTIVITY_WEB_VIEW, this.handleActivityWebViewRelease),
             v._.unsubscribe(el.jej.OPEN_EMBEDDED_ACTIVITY, ef),
-            o.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_START", eh),
-            o.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess),
-            o.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail),
-            o.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel),
-            o.h.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", eI),
-            o.h.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen),
-            o.h.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect),
-            o.h.unsubscribe("CALL_DELETE", this.handleCallDelete),
-            o.h.unsubscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState),
-            o.h.unsubscribe("GUILD_DELETE", this.handleGuildDelete),
-            o.h.unsubscribe("CHANNEL_DELETE", this.handleChannelDelete),
-            o.h.unsubscribe("INTERACTION_QUEUE", this.handleInteractionQueue),
-            o.h.unsubscribe("INTERACTION_CREATE", this.handleInteractionCreate),
-            o.h.unsubscribe("INTERACTION_SUCCESS", this.handleInteractionSuccess),
-            o.h.unsubscribe("INTERACTION_FAILURE", this.handleInteractionFailure));
+            d.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_START", eh),
+            d.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_SUCCESS", this.handleActivityLaunchSuccess),
+            d.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_FAIL", this.handleActivityLaunchFail),
+            d.h.unsubscribe("EMBEDDED_ACTIVITY_LAUNCH_CANCEL", this.handleActivityLaunchCancel),
+            d.h.unsubscribe("EMBEDDED_ACTIVITY_CLOSE", eI),
+            d.h.unsubscribe("EMBEDDED_ACTIVITY_DEFERRED_OPEN", this.handleDeferredOpen),
+            d.h.unsubscribe("RPC_APP_DISCONNECTED", this.handleRPCDisconnect),
+            d.h.unsubscribe("CALL_DELETE", this.handleCallDelete),
+            d.h.unsubscribe("RTC_CONNECTION_STATE", this.handleRTCConnectionState),
+            d.h.unsubscribe("GUILD_DELETE", this.handleGuildDelete),
+            d.h.unsubscribe("CHANNEL_DELETE", this.handleChannelDelete),
+            d.h.unsubscribe("INTERACTION_QUEUE", this.handleInteractionQueue),
+            d.h.unsubscribe("INTERACTION_CREATE", this.handleInteractionCreate),
+            d.h.unsubscribe("INTERACTION_SUCCESS", this.handleInteractionSuccess),
+            d.h.unsubscribe("INTERACTION_FAILURE", this.handleInteractionFailure));
     }
     handleSelectedChannelUpdate = () => {
         let e = L.Ay.getVoiceChannelId();
@@ -649,11 +649,11 @@ class eC extends u.A {
         let { nonce: t, data: n } = e;
         if (null == ed[n.applicationId]) {
             let e;
-            (n.interactionType === c.G4.APPLICATION_COMMAND
+            (n.interactionType === s.G.APPLICATION_COMMAND
                 ? (e = [_.A.INTERACTION_APPLICATION_COMMAND])
-                : n.interactionType === c.G4.MESSAGE_COMPONENT
+                : n.interactionType === s.G.MESSAGE_COMPONENT
                   ? (e = [_.A.INTERACTION_MESSAGE_COMPONENT])
-                  : n.interactionType === c.G4.MODAL_SUBMIT && (e = [_.A.INTERACTION_MODAL_SUBMIT]),
+                  : n.interactionType === s.G.MODAL_SUBMIT && (e = [_.A.INTERACTION_MODAL_SUBMIT]),
                 e_({ applicationId: n.applicationId, nonce: t, locations: e }) && (ec[t] = n.applicationId));
         }
     };

@@ -2,8 +2,8 @@
 var i,
     r = n(284009),
     a = n.n(r),
-    s = n(636537),
-    l = n(155718),
+    s = n(127258),
+    l = n(636537),
     o = n(95561),
     d = n(626584),
     c = n(865116),
@@ -134,8 +134,8 @@ class D extends m.A {
     handleSend(e, t) {
         let { channelId: n, analyticsLocation: i, ...r } = e,
             a = h() ?? i,
-            l = (0, _.O)(),
-            o = { mobile_network_type: f.A.getType(), ...r, ...(null != l && { signal_strength: l }) };
+            s = (0, _.O)(),
+            o = { mobile_network_type: f.A.getType(), ...r, ...(null != s && { signal_strength: s }) };
         if (c.Ay.get("send_fail_100")) {
             (this.logger.log("Skipping message send because send_fail_100 is enabled"),
                 t(null, { ok: !1, hasErr: !1, status: 500, headers: {}, body: "{}", text: "Simulated failure" }));
@@ -145,7 +145,7 @@ class D extends m.A {
             u = new AbortController();
         (null != e.nonce && this.requests.set(e.nonce, u),
             this.startQueueMetricTimers(e.nonce),
-            s.Bo.post(
+            l.Bo.post(
                 {
                     url: A.Rsh.MESSAGES(n),
                     body: o,
@@ -161,8 +161,8 @@ class D extends m.A {
     handleSendAnnouncement(e, t) {
         let { channelId: n, analyticsLocation: i, ...r } = e,
             a = h() ?? i,
-            l = (0, _.O)(),
-            o = { mobile_network_type: f.A.getType(), ...r, ...(null != l && { signal_strength: l }) };
+            s = (0, _.O)(),
+            o = { mobile_network_type: f.A.getType(), ...r, ...(null != s && { signal_strength: s }) };
         if (c.Ay.get("send_fail_100")) {
             (this.logger.log("Skipping message send because send_fail_100 is enabled"),
                 t(null, { ok: !1, hasErr: !1, status: 500, headers: {}, body: "{}", text: "Simulated failure" }));
@@ -172,7 +172,7 @@ class D extends m.A {
             u = new AbortController();
         (null != e.nonce && this.requests.set(e.nonce, u),
             this.startQueueMetricTimers(e.nonce),
-            s.Bo.post(
+            l.Bo.post(
                 {
                     url: A.Rsh.MESSAGES_ANNOUNCEMENT(n),
                     body: o,
@@ -187,20 +187,20 @@ class D extends m.A {
     }
     handleEdit = (e, t) => {
         let { channelId: n, messageId: i, isCrossposted: r, ...a } = e,
-            l = new AbortController(),
+            s = new AbortController(),
             o = this.createResponseHandler(i, t),
             d = {
                 url: A.Rsh.MESSAGE(n, i),
                 body: a,
                 retries: 1,
                 oldFormErrors: !0,
-                signal: l.signal,
+                signal: s.signal,
                 rejectWithError: !0,
                 onRequestCreated: () => {
-                    this.requests.set(i, l);
+                    this.requests.set(i, s);
                 },
             };
-        (r && (d.failImmediatelyWhenRateLimited = !0), s.Bo.patch(d, o));
+        (r && (d.failImmediatelyWhenRateLimited = !0), l.Bo.patch(d, o));
     };
     handleCommand(e, t) {
         let {
@@ -216,7 +216,7 @@ class D extends m.A {
                 source: f,
             } = e,
             p = {
-                type: l.G4.APPLICATION_COMMAND,
+                type: s.G.APPLICATION_COMMAND,
                 application_id: n,
                 guild_id: i,
                 channel_id: r,
@@ -236,7 +236,7 @@ class D extends m.A {
             ));
         let m = new AbortController();
         (this.requests.set(d, m),
-            s.Bo.post(
+            l.Bo.post(
                 {
                     url: A.Rsh.INTERACTIONS,
                     body: p,
