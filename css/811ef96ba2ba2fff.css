@@ -209,7 +209,8 @@
     display: flex;
     height: var(--custom-friend-row-height);
     padding: var(--space-8);
-    position: relative
+    position: relative;
+    --custom-activity-status-emoji-size: 12px
 }
 
 .row__79ea5:hover {
@@ -2510,4 +2511,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=ae70f7db0d356765.css.map*/
+/*# sourceMappingURL=811ef96ba2ba2fff.css.map*/
