@@ -22,18 +22,18 @@ var l = n(477900),
     b = n(714736);
 n(980504);
 let I = 7.5 * A.A.Millis.SECOND,
-    v = new Map(),
-    N = new Map();
+    N = new Map(),
+    v = new Map();
 class T extends o.Ay.Store {
     initialize() {
         this.waitFor(C.A);
     }
     static displayName = "SoundboardEchoStore";
     getSoundboardEchoes() {
-        return v;
+        return N;
     }
     getSoundboardEcho(e) {
-        return v.get(e);
+        return N.get(e);
     }
 }
 let j = new T(y.h, {
@@ -69,9 +69,9 @@ let j = new T(y.h, {
             let t,
                 n,
                 { soundId: l, sound: i, authorId: r, playedByUserId: s, isEcho: a } = e,
-                o = v.get(l);
+                o = N.get(l);
             (null == o
-                ? v.set(l, {
+                ? N.set(l, {
                       sound: i,
                       count: 1,
                       authorId: r,
@@ -79,26 +79,26 @@ let j = new T(y.h, {
                       mostRecentPlayedByUserId: a ? s : null,
                       lastPlayedAt: Date.now(),
                   })
-                : v.set(l, {
+                : N.set(l, {
                       ...o,
                       count: o.count + 1,
                       playedByUserIds: o.playedByUserIds.add(s),
                       mostRecentPlayedByUserId: s === r ? o.mostRecentPlayedByUserId : s,
                       lastPlayedAt: Date.now(),
                   }),
-                null != (t = N.get(l)) && clearTimeout(t),
+                null != (t = v.get(l)) && clearTimeout(t),
                 (n = setTimeout(() => {
                     y.h.dispatch({ type: "SOUNDBOARD_ECHO_EXPIRED", soundId: l });
                 }, I)),
-                N.set(l, n));
+                v.set(l, n));
         })({ soundId: t, sound: h, authorId: i ?? l, playedByUserId: l, isEcho: u });
     },
     VOICE_CHANNEL_SELECT: function (e) {
-        (N.forEach(clearTimeout), N.clear(), v.clear());
+        (v.forEach(clearTimeout), v.clear(), N.clear());
     },
     SOUNDBOARD_ECHO_EXPIRED: function (e) {
         let { soundId: t } = e;
-        (N.delete(t), v.delete(t));
+        (v.delete(t), N.delete(t));
     },
 });
 var k = n(994500),
@@ -297,9 +297,9 @@ function Z(e) {
             playedByUserIds: A,
             showDetails: b,
             onDetailsMouseEnter: I,
-            onDetailsMouseLeave: v,
+            onDetailsMouseLeave: N,
         } = e,
-        { authorUser: N, mostRecentPlayedUser: T } = (0, o.cf)([_.default, k.A], () => {
+        { authorUser: v, mostRecentPlayedUser: T } = (0, o.cf)([_.default, k.A], () => {
             let e = k.A.isBlockedOrIgnored(p ?? void 0);
             return {
                 authorUser: _.default.getUser(a),
@@ -314,7 +314,7 @@ function Z(e) {
             (0, S.CZ)(r, n);
         }, [n, r]),
         O = (0, o.bG)([E.A], () => E.A.isPlayingSound(r.soundId), [r]);
-    if (null == t || null == N) return null;
+    if (null == t || null == v) return null;
     let { emojiId: L, emojiName: P, emojiAnimated: M, name: D } = r;
     return (0, l.jsxs)("div", {
         className: s()(Q.Iv, { [Q.E$]: C }),
@@ -328,7 +328,7 @@ function Z(e) {
                     return (0, l.jsx)("div", {
                         ref: i,
                         onMouseEnter: R,
-                        onMouseLeave: v,
+                        onMouseLeave: N,
                         children: (0, l.jsx)($, { guildId: t, channelId: n, sound: r, playedByUserIds: A }),
                     });
                 },
@@ -338,12 +338,12 @@ function Z(e) {
                     (0, l.jsx)("div", {
                         ref: j,
                         onMouseEnter: R,
-                        onMouseLeave: v,
+                        onMouseLeave: N,
                         children: (0, l.jsx)(u.I, {
                             size: d._3.SIZE_32,
                             guildId: t,
                             channelId: n,
-                            users: null == T ? [N] : [N, T],
+                            users: null == T ? [v] : [v, T],
                             maxUsers: 2,
                         }),
                     }),
@@ -371,6 +371,7 @@ function Z(e) {
                                     (0, l.jsxs)(f.E, {
                                         variant: "text-md/medium",
                                         className: Q.Zi,
+                                        tabularNumbers: !0,
                                         children: ["x", (0, l.jsx)(x.A, { className: Q.Zi, value: y, digitWidth: 8 })],
                                     }),
                                 ],
