@@ -10,16 +10,16 @@ var l = n(477900),
     c = n(834730),
     f = n(821609),
     m = n(289873),
-    x = n(237528),
-    g = n(739187),
-    h = n(857250),
-    j = n(97483),
-    v = n(95477),
-    b = n(441349),
-    p = n(922016),
-    C = n(980707),
-    y = n(477782),
-    S = n(866665),
+    x = n(866665),
+    g = n(237528),
+    h = n(739187),
+    j = n(857250),
+    v = n(97483),
+    b = n(95477),
+    p = n(441349),
+    C = n(922016),
+    y = n(980707),
+    S = n(477782),
     k = n(408278),
     w = n(365199),
     E = n(872162),
@@ -121,11 +121,13 @@ function G(t) {
                 children: (0, l.jsxs)(d.B, {
                     gap: 4,
                     children: [
-                        (0, l.jsx)(c.E, {
-                            variant: "text-md/medium",
-                            color: a ? "text-muted" : "text-default",
-                            title: null != n && n !== e ? n : void 0,
-                            children: e,
+                        (0, l.jsx)(x.m, {
+                            text: null != n && n !== e ? n : null,
+                            children: (0, l.jsx)(c.E, {
+                                variant: "text-md/medium",
+                                color: a ? "text-muted" : "text-default",
+                                children: e,
+                            }),
                         }),
                         (0, l.jsx)(d.B, { direction: "horizontal", gap: 8, align: "center", children: i }),
                     ],
@@ -170,13 +172,13 @@ function O(t) {
                                         })
                                       : null,
                                   r
-                                      ? (0, l.jsx)(x.v, {
+                                      ? (0, l.jsx)(g.v, {
                                             text: V.intl.string(z.default.KVnLPd),
                                             variant: "blurpleLight",
                                         })
                                       : null,
                                   t.sha === d
-                                      ? (0, l.jsx)(x.v, {
+                                      ? (0, l.jsx)(g.v, {
                                             text: V.intl.string(z.default.qulPhb),
                                             variant: "greenLight",
                                         })
@@ -211,11 +213,11 @@ function X(t) {
         onConfirm: async (t) => {
             let n = await (0, B.b)(e, a);
             if (n.ok) {
-                ((0, g.P)((0, h.o)(V.intl.string(z.default.yHchfE), j.Ck.SUCCESS)), i());
+                ((0, h.P)((0, j.o)(V.intl.string(z.default.yHchfE), v.Ck.SUCCESS)), i());
                 return;
             }
             if ("unconfirmed" === n.code) {
-                ((0, g.P)((0, h.o)(V.intl.string(z.default.iqN7YA), j.Ck.FAILURE)), i());
+                ((0, h.P)((0, j.o)(V.intl.string(z.default.iqN7YA), v.Ck.FAILURE)), i());
                 return;
             }
             throw (
@@ -252,7 +254,7 @@ function A(t) {
                             })
                             .then(
                                 () => {
-                                    ((0, g.P)((0, h.o)(V.intl.string(z.default.OoHJfv), j.Ck.SUCCESS)), i(), r());
+                                    ((0, h.P)((0, j.o)(V.intl.string(z.default.OoHJfv), v.Ck.SUCCESS)), i(), r());
                                 },
                                 () => {
                                     (f(!1), x(!0));
@@ -261,7 +263,7 @@ function A(t) {
                 },
             },
         ],
-        children: (0, l.jsx)(v.k, {
+        children: (0, l.jsx)(b.k, {
             label: V.intl.string(z.default.WKmhsD),
             value: d,
             onChange: u,
@@ -274,45 +276,45 @@ function $(t) {
     return (0, i.tR)((0, i.Bq)(new Date(t), (0, s.Xj)()));
 }
 function H(t) {
-    let { projectId: e, environment: n, restoreWindow: i, onSettled: r, transitionState: d, onClose: u } = t,
-        [c] = a.useState(() => Date.now()),
-        [f, m] = a.useState(null),
-        x = i.earliestRestoreTimestampMs,
-        g = null != f ? f.toDate((0, s.Xj)()).getTime() : null,
-        h = null != g && g >= x && g <= c;
+    let { projectId: e, environment: n, restoreWindow: r, onSettled: d, transitionState: u, onClose: c } = t,
+        [f] = a.useState(() => Date.now()),
+        [m, x] = a.useState(null),
+        g = r.earliestRestoreTimestampMs,
+        h = null != m ? m.toDate((0, s.Xj)()).getTime() : null,
+        j = null != h && h >= g && h <= f;
     return (0, l.jsx)(o.a, {
-        transitionState: d,
-        onClose: u,
+        transitionState: u,
+        onClose: c,
         title: V.intl.string(z.default.L2iFYN),
         subtitle: V.intl.formatToPlainString(z.default.MbjMdo, { days: 30 }),
         actions: [
-            { text: V.intl.string(V.t["ETE/oC"]), variant: "secondary", onClick: u },
+            { text: V.intl.string(V.t["ETE/oC"]), variant: "secondary", onClick: c },
             {
                 text: V.intl.string(z.default.vzbISt),
                 variant: "critical-primary",
-                disabled: !h,
+                disabled: !j,
                 onClick: () => {
-                    null != g &&
-                        h &&
-                        (u(),
+                    null != h &&
+                        j &&
+                        (c(),
                         X({
                             projectId: e,
                             environment: n,
-                            targetMs: g,
-                            execute: () => (0, T.dz)(e, n, g),
-                            onSettled: r,
+                            targetMs: h,
+                            execute: () => (0, T.dz)(e, n, h),
+                            onSettled: d,
                         }));
                 },
             },
         ],
-        children: (0, l.jsx)(b.l, {
+        children: (0, l.jsx)(p.l, {
             label: V.intl.string(z.default["8lOVBi"]),
             granularity: "minute",
-            value: f,
-            onChange: m,
-            minValue: $(x),
-            maxValue: $(c),
-            errorMessage: null == g || h ? void 0 : V.intl.formatToPlainString(z.default["E+5VOP"], { days: 30 }),
+            value: m,
+            onChange: (t) => x(null == t ? null : (0, i.tR)(t)),
+            minValue: $(g),
+            maxValue: $(f),
+            errorMessage: null == h || j ? void 0 : V.intl.formatToPlainString(z.default["E+5VOP"], { days: 30 }),
         }),
     });
 }
@@ -320,19 +322,19 @@ function U(t) {
     let { rewindDisabled: e, onRewindToTime: n } = t,
         i = V.intl.string(z.default.ZoQDS5),
         s = a.useRef(null);
-    return (0, l.jsx)(p.Y, {
+    return (0, l.jsx)(C.Y, {
         targetElementRef: s,
         position: "top",
         align: "left",
-        animation: p.Y.Animation.NONE,
+        animation: C.Y.Animation.NONE,
         renderPopout: (t) => {
             let { closePopout: a } = t;
-            return (0, l.jsx)(C.W, {
+            return (0, l.jsx)(y.W, {
                 navId: "conjure-history-more-options",
                 "aria-label": i,
                 onClose: a,
                 onSelect: a,
-                children: (0, l.jsx)(y.Dr, {
+                children: (0, l.jsx)(S.Dr, {
                     id: "rewind-to-time",
                     label: V.intl.string(z.default.Xi6pDt),
                     disabled: e,
@@ -345,7 +347,7 @@ function U(t) {
                 { isShown: a } = e;
             return (0, l.jsx)("div", {
                 ref: s,
-                children: (0, l.jsx)(S.m, {
+                children: (0, l.jsx)(x.m, {
                     text: i,
                     children: (0, l.jsx)(k.K, {
                         icon: w.MoreHorizontalIcon,
