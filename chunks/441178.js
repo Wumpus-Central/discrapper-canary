@@ -9557,6 +9557,26 @@ let dJ = R.forwardRef((e, t) => {
                                                                         t,
                                                                     ),
                                                           count: l.count ?? "",
+                                                          member: l.member ?? null,
+                                                          memberHook: (e, t) => {
+                                                              var n;
+                                                              return (
+                                                                  (n = l.member ?? null),
+                                                                  null != n
+                                                                      ? (0, p.jsx)(dq, { user: n, onContextMenu: u }, t)
+                                                                      : (0, p.jsx)(
+                                                                            "span",
+                                                                            {
+                                                                                onContextMenu: u,
+                                                                                children: el.intl.string(
+                                                                                    el.t["30mdIx"],
+                                                                                ),
+                                                                            },
+                                                                            t,
+                                                                        )
+                                                              );
+                                                          },
+                                                          uniqueCount: l.unique_count ?? "",
                                                           channel:
                                                               null == l.channel || "string" == typeof l.channel
                                                                   ? l.channel
@@ -9660,9 +9680,9 @@ let d0 = R.forwardRef((e, t) => {
                               let { default: e } = await n.e("715687").then(n.bind(n, 646938));
                               return (n) => (0, p.jsx)(e, { ...n, id: t.targetId, label: el.intl.string(el.t.rCazna) });
                           });
-                      case ei.GaG.USER:
-                          let a = Z.default.getUser(t.targetId);
-                          if (null != a && null != l)
+                      case ei.GaG.USER: {
+                          let i = t.options.member ?? Z.default.getUser(t.options.member_id ?? t.targetId);
+                          if (null != i && null != l)
                               return (0, nY.L3)(e, async () => {
                                   let { default: e } = await Promise.all([
                                       n.e("926132"),
@@ -9672,8 +9692,9 @@ let d0 = R.forwardRef((e, t) => {
                                       n.e("70515"),
                                       n.e("376926"),
                                   ]).then(n.bind(n, 422189));
-                                  return (t) => (0, p.jsx)(e, { ...t, guildId: l, user: a });
+                                  return (t) => (0, p.jsx)(e, { ...t, guildId: l, user: i });
                               });
+                      }
                   }
                   return null;
               },
