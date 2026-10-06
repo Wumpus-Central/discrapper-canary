@@ -13,16 +13,16 @@ var a = t(477900),
     h = t(793574),
     g = t(688810),
     E = t(139286),
-    x = t(919395),
-    S = t(71393),
-    N = t(287809),
+    S = t(919395),
+    N = t(71393),
+    x = t(287809),
     p = t(174459),
     A = t(871162),
     I = t(248778),
     j = t(750656);
 let _ = [...j.re, ...j.gz];
 function C() {
-    let e = (0, I.ux)("effect-order");
+    let e = (0, I.u)("effect-order");
     return n.useMemo(() => (e ? _ : j.re), [e]);
 }
 let v = [
@@ -37,7 +37,7 @@ let v = [
     ],
     D = [...v, ...j._k];
 function y() {
-    let e = (0, I.ux)("font-order");
+    let e = (0, I.u)("font-order");
     return n.useMemo(() => (e ? D : v), [e]);
 }
 var T = t(945096),
@@ -179,9 +179,9 @@ function ec(e) {
             return (0, u.v)(t, s);
         }),
         E = g >= 0,
-        x = s.length > 0 ? s : (0, T.cf)(m),
-        S = U.intl.string(U.t["FHBa/1"]),
-        N = (0, J.Ay)({
+        S = s.length > 0 ? s : (0, T.cf)(m),
+        N = U.intl.string(U.t["FHBa/1"]),
+        x = (0, J.Ay)({
             id: "gummy-color-picker",
             isEnabled: !0,
             orientation: q.Gl.HORIZONTAL,
@@ -189,7 +189,7 @@ function ec(e) {
             scrollToEnd: ed,
         });
     return (0, a.jsx)(W.hD, {
-        navigator: N,
+        navigator: x,
         children: (0, a.jsx)(W.PR, {
             children: (e) => {
                 let { ref: s, ...n } = e;
@@ -205,7 +205,7 @@ function ec(e) {
                                     className: i()(eo.yB, { [eo.EI]: E }),
                                     children:
                                         !E &&
-                                        x.map((e, s) =>
+                                        S.map((e, s) =>
                                             (0, a.jsx)(
                                                 "div",
                                                 { className: eo._4, style: { background: (0, H.Hl)(e) } },
@@ -228,11 +228,11 @@ function ec(e) {
                                                 onChange: f,
                                                 hueToColor: T.UZ,
                                                 onConfirm: () => d(!1),
-                                                "aria-label": S,
+                                                "aria-label": N,
                                             }),
                                         children: (e) =>
                                             (0, a.jsx)(V.m, {
-                                                text: S,
+                                                text: N,
                                                 position: "top",
                                                 ariaHidden: !0,
                                                 children: (0, a.jsx)("div", {
@@ -245,7 +245,7 @@ function ec(e) {
                                                             (0, a.jsx)(Z.D, {
                                                                 ...e,
                                                                 className: eo.Vz,
-                                                                "aria-label": S,
+                                                                "aria-label": N,
                                                                 children: (0, a.jsx)($.PencilIcon, {
                                                                     size: "custom",
                                                                     width: 18,
@@ -311,7 +311,7 @@ function eE(e) {
         }),
     });
 }
-function ex(e) {
+function eS(e) {
     let { value: s, isSelected: t, onChange: l } = e,
         [r, o] = n.useState(!1),
         d = n.useRef(null),
@@ -354,7 +354,7 @@ function ex(e) {
             }),
     });
 }
-function eS(e) {
+function eN(e) {
     let { selectedColor: s, setSelectedColor: t, defaultColor: n, selectedEffectId: l, className: r } = e,
         o = K(l),
         d =
@@ -382,7 +382,7 @@ function eS(e) {
                     ...c,
                     "aria-label": U.intl.string(z.default.JOpi7z),
                     children: [
-                        (0, a.jsx)(ex, { value: s, isSelected: d, onChange: t }),
+                        (0, a.jsx)(eS, { value: s, isSelected: d, onChange: t }),
                         (0, a.jsx)(eE, {
                             color: n,
                             isSelected: s === n,
@@ -410,7 +410,7 @@ function eS(e) {
         }),
     });
 }
-var eN = t(143660),
+var ex = t(143660),
     ep = t(454137);
 function eA(e) {
     let { selectedColors: s, setSelectedColors: t, defaultColor: l, selectedEffectId: i, className: r } = e,
@@ -446,8 +446,8 @@ function eA(e) {
                 ? (0, a.jsx)(ec, { selectedColors: s, setSelectedColors: m })
                 : d > 1
                   ? (0, a.jsx)(G.default, {
-                        className: eN.Ei,
-                        colorContainerClassName: eN.rx,
+                        className: ex.Ei,
+                        colorContainerClassName: ex.rx,
                         defaultColor: l,
                         colors: c,
                         value: s[0],
@@ -460,8 +460,8 @@ function eA(e) {
                         allowBlackCustomColor: !0,
                         customPickerPosition: "top",
                     })
-                  : (0, a.jsx)(eS, {
-                        className: eN.Ei,
+                  : (0, a.jsx)(eN, {
+                        className: ex.Ei,
                         selectedColor: s[0],
                         setSelectedColor: u,
                         defaultColor: l,
@@ -540,7 +540,7 @@ function eT(e) {
                     eI.h.dispatch({ type: "DISPLAY_NAME_STYLES_MARK_EFFECT_SEEN", effectId: e });
                 }, []),
             }),
-        m = (0, I.ux)("DisplayNameStylesEffectSelection"),
+        m = (0, I.u)("DisplayNameStylesEffectSelection"),
         h = Math.ceil(o.length / 2);
     return (0, a.jsxs)("div", {
         className: r,
@@ -613,8 +613,8 @@ function ew(e) {
             }),
         g = t !== d.x.DEFAULT,
         E = (0, T.Xr)(r),
-        x = (0, I.ux)("DisplayNameStylesFontSelection"),
-        S = Math.ceil(u.length / (x ? 3 : 2));
+        S = (0, I.u)("DisplayNameStylesFontSelection"),
+        N = Math.ceil(u.length / (S ? 3 : 2));
     return (0, a.jsxs)("div", {
         className: o,
         children: [
@@ -627,8 +627,8 @@ function ew(e) {
                 ],
             }),
             (0, a.jsxs)("div", {
-                className: i()(ep.fh, { [eO.qW]: x }),
-                style: { "--custom-dns-tile-columns": S },
+                className: i()(ep.fh, { [eO.qW]: S }),
+                style: { "--custom-dns-tile-columns": N },
                 children: [
                     u.map((e) => {
                         let s = (0, eM.p)(e),
@@ -641,7 +641,7 @@ function ew(e) {
                                 text: o,
                                 asContainer: !0,
                                 children: (0, a.jsxs)(Z.D, {
-                                    className: i()(eO.SO, { [eO.wH]: n, [eO.j4]: x }),
+                                    className: i()(eO.SO, { [eO.wH]: n, [eO.j4]: S }),
                                     onClick: () => {
                                         (l(e), r && h(e));
                                     },
@@ -786,7 +786,7 @@ function se(e) {
         f = (0, eU.M)(m),
         [h, g] = (0, n.useState)(f),
         E = (0, e5.Ay)(s.id, null),
-        { pendingChanges: S, tryItOutChanges: N } = (0, c.cf)([P.A], () => ({
+        { pendingChanges: N, tryItOutChanges: x } = (0, c.cf)([P.A], () => ({
             pendingChanges: P.A.getPendingChanges(t?.id),
             tryItOutChanges: P.A.getTryItOutChanges(),
         })),
@@ -803,14 +803,14 @@ function se(e) {
             pendingAccentColor: L,
             pendingBio: b,
             pendingLegacyUsernameDisabled: k,
-        } = S,
-        M = u ? N.tryItOutAvatar : A,
+        } = N,
+        M = u ? x.tryItOutAvatar : A,
         O = (0, e2.V7)({ userId: s.id, image: M }),
         F = u ? void 0 : I,
-        R = u ? N.tryItOutBanner : _,
-        B = u ? N.tryItOutThemeColors : C,
+        R = u ? x.tryItOutBanner : _,
+        B = u ? x.tryItOutThemeColors : C,
         { bannerSrc: Y } = (0, e9.A)({ displayProfile: E, size: 413, canAnimate: !1, pendingBanner: R }),
-        { userNameplate: G, guildNameplate: H, pendingNameplate: K } = (0, x.rv)(s, t?.id),
+        { userNameplate: G, guildNameplate: H, pendingNameplate: K } = (0, S.rv)(s, t?.id),
         J = (0, eV.WK)(H);
     h && !f ? (m = w.NJ8.DARK) : !h && f && (m = w.NJ8.LIGHT);
     let W = (0, n.useCallback)((e) => {
@@ -963,7 +963,7 @@ function so(e) {
             returnRef: D,
             tryOnDisplayNameStyles: B,
         } = e,
-        Y = (0, c.bG)([N.default], () => N.default.getCurrentUser()),
+        Y = (0, c.bG)([x.default], () => x.default.getCurrentUser()),
         G =
             ((s = R.Ay.useName(Y)),
             (0, c.bG)(
@@ -976,13 +976,13 @@ function so(e) {
             ) ??
                 s ??
                 ""),
-        H = (0, c.bG)([S.A], () => S.A.getGuild(j)),
+        H = (0, c.bG)([N.A], () => N.A.getGuild(j)),
         {
             userDisplayNameStyles: K,
             guildDisplayNameStyles: J,
             pendingDisplayNameStyles: W,
             tryItOutDisplayNameStyles: q,
-        } = (0, x.B0)(Y, j),
+        } = (0, S.B0)(Y, j),
         X = _ ? q : W,
         V = void 0 !== X ? X : (J ?? K),
         Z = (0, b.A)(),
@@ -1007,9 +1007,9 @@ function so(e) {
     let { analyticsLocations: eh } = (0, g.Ay)(l, h.A.EDIT_DISPLAY_NAME_STYLES_MODAL),
         eg = n.useMemo(() => (el ? em : [ef]), [el, em, ef]),
         eE = n.useMemo(() => es !== V?.fontId || ea !== V?.effectId || !(0, u.v)(eg, V?.colors ?? []), [V, es, ea, eg]),
-        ex = eE || Q,
-        eS = (0, I.ux)("DisplayNameStylesModal"),
-        eN = y(),
+        eS = eE || Q,
+        eN = (0, I.u)("DisplayNameStylesModal"),
+        ex = y(),
         ep = C(),
         eI = (function (e) {
             let {
@@ -1066,12 +1066,12 @@ function so(e) {
             (p.default.track(w.HAw.DISPLAY_NAME_STYLES_CLOSED), v());
         }, [v]),
         e_ = n.useCallback(() => {
-            let { fontId: e, effectId: s, colors: t } = (0, T.gN)(eN, ep);
+            let { fontId: e, effectId: s, colors: t } = (0, T.gN)(ex, ep);
             (et(e),
                 en(s),
                 (0, T.as)(s) > 1 ? eu((e) => ({ ...e, [s]: t })) : ed((e) => ({ ...e, [s]: t[0] })),
                 p.default.track(w.HAw.DISPLAY_NAME_STYLES_SURPRISE_ME));
-        }, [eN, ep, et, en, eu, ed]),
+        }, [ex, ep, et, en, eu, ed]),
         eC = n.useCallback(
             (e) => {
                 el ? eu((s) => ({ ...s, [ea]: e })) : ed((s) => ({ ...s, [ea]: e[0] }));
@@ -1089,13 +1089,13 @@ function so(e) {
                       transitionState: t,
                       size: m.rI.LARGE,
                       parentComponent: "DisplayNameStylesModal",
-                      className: i()(sr.CR, { [sr.st]: eS }),
+                      className: i()(sr.CR, { [sr.st]: eN }),
                       returnRef: D,
                       children: [
                           (0, a.jsx)(m.s_, { "data-migration-pending": !0, onClick: ej, className: sr.b }),
                           (0, a.jsxs)(m.$m, {
                               "data-migration-pending": !0,
-                              className: i()(sr.jE, { [sr.st]: eS }),
+                              className: i()(sr.jE, { [sr.st]: eN }),
                               style: { overflow: "hidden auto" },
                               scrollbarGutter: !1,
                               children: [
@@ -1146,7 +1146,7 @@ function so(e) {
                               onApply: eI,
                               onSurpriseMe: e_,
                               onClose: v,
-                              canApply: ex,
+                              canApply: eS,
                               analyticsLocations: eh,
                               isPremiumTryItOut: _,
                           }),

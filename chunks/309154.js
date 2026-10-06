@@ -16134,7 +16134,7 @@ function Tt(e) {
             pendingDisplayNameStyles: o,
             pendingErrors: u,
         } = (0, SL.B0)(t, n),
-        d = (0, S9.ux)("DisplayNameStylesSection"),
+        d = (0, S9.u)("DisplayNameStylesSection"),
         [c, g] = (0, me.kn)(d ? [eA.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE] : []),
         m = c === eA.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE,
         A = (0, T.useCallback)(() => {

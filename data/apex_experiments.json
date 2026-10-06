@@ -2906,22 +2906,6 @@
     }
   },
   {
-    "kind": "user",
-    "name": "2026-06-gummy-viewers",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-06-hero-shelf-ad-tile",
     "kind": "user",
     "defaultConfig": {

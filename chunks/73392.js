@@ -1,35 +1,31 @@
-n.d(t, { a: () => N, p: () => m });
-var l = n(503698),
-    s = n.n(l),
-    a = n(559949),
-    r = n(676279),
-    o = n(248778),
-    u = n(913563),
-    i = n(824994),
-    c = n(750656),
-    d = n(516064);
-let f = {
+l.d(t, { a: () => m, p: () => d });
+var n = l(503698),
+    s = l.n(n),
+    a = l(559949),
+    r = l(676279),
+    o = l(913563),
+    u = l(824994),
+    c = l(516064);
+let i = {
     [a.x.DEFAULT]: "",
-    [a.x.CHERRY_BOMB]: d.u_,
-    [a.x.CHICLE]: d.xO,
-    [a.x.MUSEO_MODERNO]: d._,
-    [a.x.NEO_CASTEL]: d.pN,
-    [a.x.PIXELIFY]: d.f,
-    [a.x.SINISTRE]: d.yH,
-    [a.x.ZILLA_SLAB]: d.FR,
-    [a.x.PLAYPEN_SANS]: d.R_,
-    [a.x.ORBITRON]: d.yT,
-    [a.x.NEW_ROCKER]: d.NX,
-    [a.x.KALAM]: d.x4,
+    [a.x.CHERRY_BOMB]: c.u_,
+    [a.x.CHICLE]: c.xO,
+    [a.x.MUSEO_MODERNO]: c._,
+    [a.x.NEO_CASTEL]: c.pN,
+    [a.x.PIXELIFY]: c.f,
+    [a.x.SINISTRE]: c.yH,
+    [a.x.ZILLA_SLAB]: c.FR,
+    [a.x.PLAYPEN_SANS]: c.R_,
+    [a.x.ORBITRON]: c.yT,
+    [a.x.NEW_ROCKER]: c.NX,
+    [a.x.KALAM]: c.x4,
 };
-function m(e) {
-    return { name: (0, u.A)(e), className: f[e] ?? "" };
+function d(e) {
+    return { name: (0, o.A)(e), className: i[e] ?? "" };
 }
-function N(e) {
-    let { displayNameStyles: t, compensateForSafari: n = !0 } = e,
-        l = (0, i.W)({ location: "useDisplayNameStylesFont" }),
-        a = (0, o.DW)("useDisplayNameStylesFont");
-    if (!l || null == t || (!a && c._k.includes(t.fontId))) return "";
-    let u = m(t.fontId);
-    return "" === u.className ? "" : s()(d.zt, u.className, { [d.VM]: n && (0, r.nr)() });
+function m(e) {
+    let { displayNameStyles: t, compensateForSafari: l = !0 } = e;
+    if (!(0, u.W)({ location: "useDisplayNameStylesFont" }) || null == t) return "";
+    let n = d(t.fontId);
+    return "" === n.className ? "" : s()(c.zt, n.className, { [c.VM]: l && (0, r.nr)() });
 }

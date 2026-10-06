@@ -1615,7 +1615,7 @@ function nX(e) {
         Y = l.useCallback(() => {
             (R(), q());
         }, [R, q]),
-        $ = (0, ee.ux)("UserProfileAccountPopout"),
+        $ = (0, ee.u)("UserProfileAccountPopout"),
         X = tU.A.useConfig({ location: "UserProfileAccountPopout" }).enabled,
         Q = (0, t7.H)({ location: "UserProfileAccountPopout" }),
         J = (0, tC.A)((e) => e.shouldScrollToOrbsMenuItem),
@@ -2755,7 +2755,7 @@ function lv(e) {
         }, [r]),
         g = ea.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lA.A)("1791300771160", !0);
+        let e = (0, lA.A)("1791300863232", !0);
         t =
             null != e
                 ? eN.intl.formatToPlainString(eN.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -4109,7 +4109,7 @@ function ly() {
         X = (0, t7.H)({ location: "Account" }) && !S,
         Q = er.A.useIsEligible(),
         J = ea.A.coachmarkDismissibleContent,
-        et = (0, ee.ux)("AccountCoachmark"),
+        et = (0, ee.u)("AccountCoachmark"),
         en = (0, w.J)({ location: "AccountCoachmark" }),
         ei = (function (e) {
             let { currentUserId: t, enabled: n, fetchCatalog: i = !0 } = e,

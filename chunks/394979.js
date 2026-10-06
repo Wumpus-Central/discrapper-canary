@@ -2522,7 +2522,7 @@ function lT(e) {
 }
 function lR(e) {
     let { user: t, guildId: n, disabled: l, errorMessage: r } = e,
-        s = (0, np.ux)("UserProfileModalV2EditingPanel"),
+        s = (0, np.u)("UserProfileModalV2EditingPanel"),
         [a, o] = (0, eG.kn)(s && !l ? [eP.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE] : []),
         u = a === eP.M.DISPLAY_NAME_STYLES_FLYWHEEL_NEW_BADGE_PROFILE_PAGE;
     return (0, i.jsxs)(nZ, {
@@ -5983,7 +5983,7 @@ function ur(e) {
         v = x?.guildId != null,
         I = x?.guildId ?? void 0,
         j = J.Ay.canUsePremiumProfileCustomization(p),
-        C = (0, np.ux)("UserProfileModalV2EditableDisplayName"),
+        C = (0, np.u)("UserProfileModalV2EditableDisplayName"),
         { canChangeDisplayName: E, permissionsLoaded: S } = (0, a.cf)([un.A, K.A], () => {
             if (!v || null == I) return { canChangeDisplayName: !0, permissionsLoaded: !0 };
             let e = K.A.getGuild(I);
