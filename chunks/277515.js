@@ -36,16 +36,16 @@ async function i(e, t, n) {
     n(65162));
 var a = n(495142);
 let o = Uint8Array.of(36, 202, 177, 122, 122, 248, 236, 43, 130, 180, 18, 185, 45, 171, 25, 46),
-    l = { N: 16384, r: 8, p: 2, dkLen: 64 };
-function u(e, t) {
+    u = { N: 16384, r: 8, p: 2, dkLen: 64 };
+function l(e, t) {
     for (let n = 0; n < e.length && n < t.length; n++) if (e[n] != t[n]) return e[n] - t[n];
     return e.length - t.length;
 }
 async function c(e, t, n, r, c) {
     let E = await Promise.all([i(e, t, n), i(e, r, c)]);
-    E.sort(u);
+    E.sort(l);
     let s = new Uint8Array(E[0].byteLength + E[1].byteLength);
-    return (s.set(E[0], 0), s.set(E[1], E[0].byteLength), new Uint8Array(await (0, a.Q)(s, o, l)));
+    return (s.set(E[0], 0), s.set(E[1], E[0].byteLength), new Uint8Array(await (0, a.Q)(s, o, u)));
 }
 var E = n(85526);
 function s(e) {

@@ -1,4 +1,4 @@
-c.exports = {
+e.exports = {
     Vs: "tile_c41dc3",
     iH: "tileFrame_c41dc3",
     om: "tileFrameGrid_c41dc3",

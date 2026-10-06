@@ -21,19 +21,19 @@ function c(e) {
             notice: I,
             onScroll: p,
             scrollerRef: T,
-            children: g,
-            "aria-label": m,
+            children: m,
+            "aria-label": g,
             ...S
         } = e,
-        N = null != t ? t : null != u || null != A || (0, s.y)(g) || null != f ? "md" : "sm";
+        N = null != t ? t : null != u || null != A || (0, s.y)(m) || null != f ? "md" : "sm";
     return (0, i.jsxs)(r.d, {
         ...S,
-        "aria-label": m ?? n,
+        "aria-label": g ?? n,
         size: N,
         children: [
             (0, i.jsx)(o.rQ, { title: n, subtitle: c }),
             (0, i.jsx)(d.i, { message: I?.message, type: I?.type }),
-            (0, i.jsx)(s.c, { controls: u, listProps: f, onScroll: p, scrollerRef: T, children: g }),
+            (0, i.jsx)(s.c, { controls: u, listProps: f, onScroll: p, scrollerRef: T, children: m }),
             (0, i.jsx)(l.j, { children: _ }),
             (0, i.jsx)(a.H, { leading: A, leadingLayout: h, actions: E, actionsFullWidth: null == A }),
         ],

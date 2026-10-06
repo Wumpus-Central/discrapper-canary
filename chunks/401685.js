@@ -1,10 +1,10 @@
 t.d(n, { Ay: () => c, Bx: () => o, bf: () => r, vs: () => a });
-var i,
-    l = t(582128),
-    a = (((i = {})[(i.NONE = 0)] = "NONE"), (i[(i.NO_INVITE = 1)] = "NO_INVITE"), (i[(i.MINIMAL = 2)] = "MINIMAL"), i);
-let s = l.createContext(0);
+var l,
+    i = t(582128),
+    a = (((l = {})[(l.NONE = 0)] = "NONE"), (l[(l.NO_INVITE = 1)] = "NO_INVITE"), (l[(l.MINIMAL = 2)] = "MINIMAL"), l);
+let s = i.createContext(0);
 function o() {
-    return l.useContext(s);
+    return i.useContext(s);
 }
 function r(e) {
     return null == e ? 0 : e <= 550 ? 2 : +(e <= 650);

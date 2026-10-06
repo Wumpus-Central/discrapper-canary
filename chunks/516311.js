@@ -1,8 +1,8 @@
 t.d(n, { RQ: () => x, dA: () => g });
-var i = t(477900);
+var l = t(477900);
 t(582128);
-var l = t(284009),
-    a = t.n(l),
+var i = t(284009),
+    a = t.n(i),
     s = t(17928),
     o = t(477782);
 (t(198052), t(666328), t(422229), t(74329), t(956747));
@@ -19,19 +19,19 @@ var p = t(375708);
 function x(e) {
     let n = (0, s.bG)([u.A], () => u.A.getChannel(e), [e]),
         t = (0, s.bG)([d.A], () => d.A.can(m.QY, n)),
-        l = (0, C.zU)(),
+        i = (0, C.zU)(),
         a = (0, s.bG)([h.A], () => h.A.getStageInstanceByChannel(e), [e]),
         r = (0, c.Us)();
-    return n?.isGuildStageVoice() && t && !l
+    return n?.isGuildStageVoice() && t && !i
         ? null != a
-            ? (0, i.jsx)(o.Dr, {
+            ? (0, l.jsx)(o.Dr, {
                   id: "edit-stage",
                   label: p.intl.string(p.t["I+9bLx"]),
                   action: function () {
                       null != n && (0, A.tQ)(n, r);
                   },
               })
-            : (0, i.jsx)(o.Dr, {
+            : (0, l.jsx)(o.Dr, {
                   id: "start-stage",
                   label: p.intl.string(p.t.OYbHfv),
                   action: function () {

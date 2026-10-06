@@ -1,6 +1,6 @@
 t.d(n, { C: () => N });
-var i,
-    l = t(477900),
+var l,
+    i = t(477900),
     a = t(582128),
     s = t(503698),
     o = t.n(s),
@@ -21,11 +21,11 @@ var i,
 let v = ["embedded_cover"],
     j = { tension: 800, friction: 24 };
 var T =
-    (((i = T || {})[(i.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
-    (i[(i.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
-    i);
+    (((l = T || {})[(l.THIRTEEN_BY_ELEVEN = 0)] = "THIRTEEN_BY_ELEVEN"),
+    (l[(l.SIXTEEN_BY_NINE = 1)] = "SIXTEEN_BY_NINE"),
+    l);
 function N(e) {
-    let { context: n, activityItem: t, onClick: i, aspectRatio: s = 0, animatedDivClass: T, commandOrigin: N } = e,
+    let { context: n, activityItem: t, onClick: l, aspectRatio: s = 0, animatedDivClass: T, commandOrigin: N } = e,
         {
             onActivityItemSelected: _,
             imageBackground: b,
@@ -36,7 +36,7 @@ function N(e) {
             activityItem: t,
             guildId: n.channel.getGuildId() ?? void 0,
             locationObject: {},
-            onActivityItemSelected: i,
+            onActivityItemSelected: l,
             embeddedActivitiesManager: g.A,
             assetNames: v,
             commandOrigin: N,
@@ -50,20 +50,20 @@ function N(e) {
         }, [R]),
         M = a.useMemo(
             () =>
-                (0, l.jsx)("div", {
+                (0, i.jsx)("div", {
                     className: I.Gz,
-                    children: (0, l.jsx)("div", { className: I.fC, children: (0, l.jsx)(x.A, { labelType: y }) }),
+                    children: (0, i.jsx)("div", { className: I.fC, children: (0, i.jsx)(x.A, { labelType: y }) }),
                 }),
             [y],
         ),
         P = a.useMemo(() => {
             switch (O) {
                 case C.o6.JOIN:
-                    return (0, l.jsx)("div", {
+                    return (0, i.jsx)("div", {
                         className: I.m9,
-                        children: (0, l.jsx)("div", {
+                        children: (0, i.jsx)("div", {
                             className: I.aF,
-                            children: (0, l.jsx)(u.E, {
+                            children: (0, i.jsx)(u.E, {
                                 variant: "text-sm/medium",
                                 color: "text-overlay-light",
                                 children: E.intl.string(E.t.VJlc0S),
@@ -71,11 +71,11 @@ function N(e) {
                         }),
                     });
                 case C.o6.LEAVE:
-                    return (0, l.jsx)("div", {
+                    return (0, i.jsx)("div", {
                         className: I.m9,
-                        children: (0, l.jsx)("div", {
+                        children: (0, i.jsx)("div", {
                             className: o()(I.aF, I.pS),
-                            children: (0, l.jsx)(u.E, {
+                            children: (0, i.jsx)(u.E, {
                                 variant: "text-sm/medium",
                                 color: "text-overlay-light",
                                 children: E.intl.string(E.t["wH/wDO"]),
@@ -87,32 +87,32 @@ function N(e) {
                     return null;
             }
         }, [O]);
-    return (0, l.jsx)(d.D, {
+    return (0, i.jsx)(d.D, {
         onClick: _,
         onFocus: D,
         onBlur: L,
         onMouseEnter: D,
         onMouseLeave: L,
         className: I.XA,
-        children: (0, l.jsx)(A.c, {
+        children: (0, i.jsx)(A.c, {
             config: j,
             from: { value: 0 },
             to: { value: +!!S },
             children: (e) => {
                 let { value: n } = e;
-                return (0, l.jsx)(m.N, {
+                return (0, i.jsx)(m.N, {
                     theme: f.NJ8.DARK,
                     children: (e) =>
-                        (0, l.jsx)(h.A, {
+                        (0, i.jsx)(h.A, {
                             applicationId: t.application.id,
                             questContent: c.u.ACTIVITY_SUGGESTION,
-                            children: (i) =>
-                                (0, l.jsxs)(r.animated.div, {
-                                    ref: i,
+                            children: (l) =>
+                                (0, i.jsxs)(r.animated.div, {
+                                    ref: l,
                                     className: o()(e, I.LM, T, { [I.$g]: 0 === s, [I.J3]: 1 === s }),
                                     style: { transform: n.to([0, 1], [1, 1.05]).to((e) => `scale(${e})`) },
                                     children: [
-                                        (0, l.jsx)(p.A, {
+                                        (0, i.jsx)(p.A, {
                                             imageBackground: b,
                                             applicationName: t.application.name,
                                             imageClassName: I.jj,

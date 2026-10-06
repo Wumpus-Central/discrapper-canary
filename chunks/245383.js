@@ -16,11 +16,11 @@ function _(e) {
         I = E ?? u.intl.string(u.t["2pG5Ga"]),
         p = null != h ? (0, l.EL)(h) : null,
         T = void 0 !== f ? f : null != p ? (0, l.m6)(p.planId) : A?.premiumType,
-        g = t === d.pe.TIER_2 && null != T && [d.PremiumTypes.TIER_0, d.PremiumTypes.TIER_1].includes(T),
-        m = null != n && null != p && p?.planId !== n;
-    (g || m) && (I = u.intl.string(u.t.IJI7yk));
+        m = t === d.pe.TIER_2 && null != T && [d.PremiumTypes.TIER_0, d.PremiumTypes.TIER_1].includes(T),
+        g = null != n && null != p && p?.planId !== n;
+    (m || g) && (I = u.intl.string(u.t.IJI7yk));
     let S = null != h && (0, l.Nc)(h);
-    if (!((null != h && h.status !== c.Dmq.ACCOUNT_HOLD && !(0, r.m1)(h.planId) && !g && !m && void 0 === f) || S))
+    if (!((null != h && h.status !== c.Dmq.ACCOUNT_HOLD && !(0, r.m1)(h.planId) && !m && !g && void 0 === f) || S))
         return { buttonText: _ ?? I };
     {
         let e = (function (e) {

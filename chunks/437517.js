@@ -8,8 +8,8 @@ n.d(t, {
     j2: () => y,
     fw: () => D,
     We: () => O,
-    c7: () => m,
-    zv: () => g,
+    c7: () => g,
+    zv: () => m,
 });
 var i = n(132500),
     r = n(127258),
@@ -35,7 +35,7 @@ let p = new c.A("InteractionComponentUtils"),
         animated: e.animated,
         src: t && null != e.id ? A.Ay.getEmojiURL({ id: e.id, animated: e.animated || !1, size: 48 }) : void 0,
     });
-function g(e, t, n) {
+function m(e, t, n) {
     let i = e?.data.interactionType === r.G.MESSAGE_COMPONENT && e?.state === u.m.FAILED ? e.data.componentId : null;
     if (
         null !=
@@ -65,7 +65,7 @@ function g(e, t, n) {
             })(e)
         );
 }
-function m(e) {
+function g(e) {
     return e.placeholder ?? o.intl.string(o.t.Otr6W2);
 }
 function S(e, t) {

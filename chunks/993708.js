@@ -256,8 +256,8 @@ let eJ = {
         eN.kqX.WINDOWS_MEDIA_PACK_REQUIRED,
     ]),
     e7 = {},
-    e8 = {},
-    e9 = Object.freeze({ id: null, message: null, buttonText: null, callback: void 0, metadata: null }),
+    e9 = {},
+    e8 = Object.freeze({ id: null, message: null, buttonText: null, callback: void 0, metadata: null }),
     e6 = null;
 function e4(e) {
     return e5[e] + "-untilAtLeast";
@@ -908,14 +908,14 @@ function ts() {
             })
         ) {
             let i = tr[r].metadata?.({ currentUser: e, premiumSubscription: t, selectedGuildId: n });
-            e6 = { ...e9, type: r, metadata: i };
+            e6 = { ...e8, type: r, metadata: i };
             break;
         }
     if (null != e6) {
         e6.metadata?.sampleRate != null &&
-            null == e8[e6.type] &&
-            (e8[e6.type] = Math.random() <= e6.metadata.sampleRate);
-        let e = !1 === e8[e6.type];
+            null == e9[e6.type] &&
+            (e9[e6.type] = Math.random() <= e6.metadata.sampleRate);
+        let e = !1 === e9[e6.type];
         (ti(e6.type) || e) && (e6 = null);
     }
 }
@@ -1092,7 +1092,7 @@ let to = new tE(c.h, {
         return (te(t), ts());
     },
     LOGOUT: function () {
-        ((e7 = {}), (e8 = {}), (e6 = null));
+        ((e7 = {}), (e9 = {}), (e6 = null));
     },
     SUBSCRIPTION_PLANS_FETCH_SUCCESS: ts,
     AUTO_MODERATION_MENTION_RAID_DETECTION: ts,

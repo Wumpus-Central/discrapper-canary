@@ -16,7 +16,7 @@ var i = n(812729),
     I = n(671389);
 let p = [n(732755).A, I.Ay],
     T = [];
-function g() {
+function m() {
     let e = [];
     for (let t of p) {
         let n = t.getActivity();
@@ -24,16 +24,16 @@ function g() {
     }
     return !r()(e, T) && ((T = e), !0);
 }
-class m extends o.Ay.Store {
+class g extends o.Ay.Store {
     static displayName = "FirstPartyRichPresenceStore";
     initialize() {
-        this.syncWith(p, g);
+        this.syncWith(p, m);
     }
     getActivities() {
         return T;
     }
 }
-let S = new m(d.h);
+let S = new g(d.h);
 var N = n(155718),
     C = n(871633),
     O = n(655116),

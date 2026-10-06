@@ -1,10 +1,10 @@
-n.d(t, { x: () => s });
-var l = n(17928),
-    i = n(561573),
-    r = n(379031);
-let a = [];
+l.d(n, { x: () => s });
+var t = l(17928),
+    r = l(561573),
+    i = l(379031);
+let u = [];
 function s(e) {
-    let { surface: t, skuId: n } = e,
-        s = (0, r.g)(t);
-    return (0, l.yK)([i.A], () => i.A.getOffersForSkuId(n)?.filter((e) => e.purchaseTypes.includes(s)) ?? a, [n, s]);
+    let { surface: n, skuId: l } = e,
+        s = (0, i.g)(n);
+    return (0, t.yK)([r.A], () => r.A.getOffersForSkuId(l)?.filter((e) => e.purchaseTypes.includes(s)) ?? u, [l, s]);
 }

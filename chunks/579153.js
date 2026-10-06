@@ -1,6 +1,6 @@
 t.d(n, { A: () => C });
-var i = t(477900),
-    l = t(582128),
+var l = t(477900),
+    i = t(582128),
     a = t(922016),
     s = t(365199),
     o = t(688810),
@@ -14,14 +14,14 @@ var i = t(477900),
 let C = function (e) {
     let { channel: n, remoteMode: t = !1 } = e,
         { parentAnalyticsLocation: C } = (0, o.Ay)(),
-        p = l.useRef(null);
-    return (0, i.jsx)(a.Y, {
+        p = i.useRef(null);
+    return (0, l.jsx)(a.Y, {
         targetElementRef: p,
         renderPopout: (e) => {
-            let { closePopout: l } = e;
-            return (0, i.jsx)(d.A, {
-                children: (0, i.jsx)(r.A, {
-                    onClose: l,
+            let { closePopout: i } = e;
+            return (0, l.jsx)(d.A, {
+                children: (0, l.jsx)(r.A, {
+                    onClose: i,
                     channel: n,
                     remoteMode: t,
                     onInteraction: (0, u.s)("MoreSettingsMenu", C, { entrypoint: m.GK.THREE_DOT }),
@@ -34,8 +34,8 @@ let C = function (e) {
         spacing: 16,
         children: (e, n) => {
             let { onClick: t } = e,
-                { isShown: l } = n;
-            return (0, i.jsx)(A.l, {
+                { isShown: i } = n;
+            return (0, l.jsx)(A.l, {
                 ref: p,
                 isTrayButton: !0,
                 onClick: (e) => {
@@ -44,7 +44,7 @@ let C = function (e) {
                 label: h.intl.string(h.t.PdRCRg),
                 iconComponent: s.MoreHorizontalIcon,
                 color: "primaryDark",
-                isActive: l,
+                isActive: i,
             });
         },
     });

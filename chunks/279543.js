@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     qr: "footer_e4c320",
     Os: "group_e4c320",
     al: "attribution_e4c320",

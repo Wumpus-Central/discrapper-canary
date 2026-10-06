@@ -1,4 +1,4 @@
-n.d(t, { oq: () => S, qC: () => N, xI: () => g, WF: () => p, Eg: () => T, p7: () => C, P7: () => m });
+n.d(t, { oq: () => S, qC: () => N, xI: () => m, WF: () => p, Eg: () => T, p7: () => C, P7: () => g });
 var i = n(517846),
     r = n(636537),
     a = n(73153),
@@ -84,7 +84,7 @@ async function p(e) {
 function T() {
     a.h.dispatch({ type: "CONVERSATIONS_TOGGLE_HIGHLIGHTING" });
 }
-function g(e, t) {
+function m(e, t) {
     let { shouldJump: n = !0 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {};
     if (
         null == t ||
@@ -96,7 +96,7 @@ function g(e, t) {
     let i = o.A.getConversationMetadata(e, t)?.conversation.startMessageId;
     null != i && s.A.jumpToMessage({ channelId: e, messageId: i, flash: !1 });
 }
-function m(e, t) {
+function g(e, t) {
     a.h.dispatch({ type: "CLEAR_CONVERSATION_SELECTION", channelId: e, conversationId: t });
 }
 function S(e, t, n) {

@@ -1,6 +1,6 @@
 t.d(n, { A: () => E });
-var i = t(477900),
-    l = t(582128),
+var l = t(477900),
+    i = t(582128),
     a = t(17928),
     s = t(922016),
     o = t(980707),
@@ -23,7 +23,7 @@ function E(e) {
         v = (0, a.bG)([h.A], () => h.A.getChannel(n), [n]),
         { canManageGuildEvent: j } = (0, d.nr)(v),
         T = j(I),
-        N = l.useRef(null);
+        N = i.useRef(null);
     if (null == I) return null;
     function _() {
         null != v && (0, x.A)(v) ? (0, C.Py)(v, E) : t();
@@ -32,18 +32,18 @@ function E(e) {
         null != I && p.default.endEvent(I.id, I.guild_id);
     }
     return T
-        ? (0, i.jsx)(s.Y, {
+        ? (0, l.jsx)(s.Y, {
               targetElementRef: N,
               renderPopout: (e) => {
                   let { closePopout: n } = e;
-                  return (0, i.jsx)(A.A, {
-                      children: (0, i.jsx)(o.W, {
+                  return (0, l.jsx)(A.A, {
+                      children: (0, l.jsx)(o.W, {
                           "data-menu-migrated": !0,
                           navId: "exit-options",
                           onSelect: () => {},
                           "aria-label": f.intl.string(f.t["K6/mk3"]),
                           onClose: n,
-                          children: (0, i.jsx)(r.Dr, {
+                          children: (0, l.jsx)(r.Dr, {
                               id: "end-voice-event",
                               color: "danger",
                               action: b,
@@ -59,7 +59,7 @@ function E(e) {
               animation: s.Y.Animation.FADE,
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, i.jsx)(m.A, {
+                  return (0, l.jsx)(m.A, {
                       buttonRef: N,
                       label: f.intl.string(f.t["6vrfgt"]),
                       onClick: _,
@@ -67,5 +67,5 @@ function E(e) {
                   });
               },
           })
-        : (0, i.jsx)(m.A, { label: f.intl.string(f.t["6vrfgt"]), onClick: t });
+        : (0, l.jsx)(m.A, { label: f.intl.string(f.t["6vrfgt"]), onClick: t });
 }

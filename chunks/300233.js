@@ -29,12 +29,12 @@ function d(e) {
         } = e,
         h = (0, i.bG)([u.A], () => u.A.isConnected()),
         f = (0, i.bG)([a.A], () => (null != n ? a.A.getSubscriptionGroupListingsForGuildFetchState(n) : a.e.FETCHED)),
-        [N, A] = r.useState(!0 === c),
+        [A, N] = r.useState(!0 === c),
         C = r.useCallback(() => {
             if (null == n || !h || !0 === E) return;
             let e = a.A.getSubscriptionGroupListingsForGuildFetchState(n);
-            (N || e === a.e.NOT_FETCHED) && (A(!1), s.WA(n, { includeSoftDeleted: d, countryCode: m }));
-        }, [h, n, d, m, E, N]),
-        p = f === a.e.FETCHED && !N;
-    return (0, t.jsx)(o.Provider, { value: { listingsLoaded: p, fetchGroupListingsForGuild: C }, children: l });
+            (A || e === a.e.NOT_FETCHED) && (N(!1), s.WA(n, { includeSoftDeleted: d, countryCode: m }));
+        }, [h, n, d, m, E, A]),
+        g = f === a.e.FETCHED && !A;
+    return (0, t.jsx)(o.Provider, { value: { listingsLoaded: g, fetchGroupListingsForGuild: C }, children: l });
 }

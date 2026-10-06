@@ -1,6 +1,6 @@
 t.d(n, { K: () => _ });
-var i = t(477900),
-    l = t(582128),
+var l = t(477900),
+    i = t(582128),
     a = t(17928),
     s = t(554146),
     o = t(922016),
@@ -35,7 +35,7 @@ function _(e) {
             () => null != u.Ay.getSelfEmbeddedActivityForLocation(u.Ay.getConnectedActivityLocation()),
         ),
         G = !R,
-        V = l.useCallback(
+        V = i.useCallback(
             (e) => {
                 "focus" !== e.type && M();
             },
@@ -43,7 +43,7 @@ function _(e) {
         ),
         B = (0, f.Us)() === j.BRT.POPOUT,
         { parentAnalyticsLocation: w, newestAnalyticsLocation: H } = (0, C.Ay)(),
-        Y = l.useCallback(() => {
+        Y = i.useCallback(() => {
             ((0, x.X)(w, x.O.ACTIVITY),
                 (0, p.A)({
                     context: null != n ? { type: "channel", channel: n } : { type: "contextless" },
@@ -52,17 +52,17 @@ function _(e) {
                 }));
         }, [n, B, H, w]),
         F = R ? [] : [s.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP],
-        X = l.useRef(!1),
-        K = l.useRef(null);
-    return (0, i.jsx)(g.Ay, {
+        X = i.useRef(!1),
+        K = i.useRef(null);
+    return (0, l.jsx)(g.Ay, {
         contentTypes: F,
         children: (e) => {
-            let { visibleContent: l, markAsDismissed: a } = e,
-                c = l === s.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !t && !D;
+            let { visibleContent: i, markAsDismissed: a } = e,
+                c = i === s.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP && !t && !D;
             return (
                 X.current && !c && a(T.i.AUTO_DISMISS),
                 X.current !== c && (X.current = c),
-                (0, i.jsx)(o.Y, {
+                (0, l.jsx)(o.Y, {
                     targetElementRef: K,
                     fixed: !0,
                     shouldShow: D && (_ === v.P.ACTIVITY || null == _),
@@ -75,11 +75,11 @@ function _(e) {
                         (L(!1), b?.(void 0));
                     },
                     renderPopout: (e) => {
-                        let { closePopout: t, setPopoutRef: l } = e;
+                        let { closePopout: t, setPopoutRef: i } = e;
                         return G
-                            ? (0, i.jsx)(m.f, {
+                            ? (0, l.jsx)(m.f, {
                                   ref: (e) => {
-                                      l?.(e);
+                                      i?.(e);
                                   },
                                   channel: n,
                                   closePopout: t,
@@ -88,30 +88,30 @@ function _(e) {
                                   isHovered: D,
                                   onClick: () => a(T.i.UNKNOWN),
                               })
-                            : (0, i.jsx)(i.Fragment, {});
+                            : (0, l.jsx)(l.Fragment, {});
                     },
                     children: () =>
-                        (0, i.jsx)(g.GY, {
+                        (0, l.jsx)(g.GY, {
                             contentType: s.M.ACTIVITIES_VOICE_LAUNCHER_BADGE,
                             latestVersion: k,
                             children: (e) => {
                                 let { visibleContent: n, markAsDismissed: t } = e;
-                                return (0, i.jsxs)(i.Fragment, {
+                                return (0, l.jsxs)(l.Fragment, {
                                     children: [
-                                        (0, i.jsx)(r.m, {
+                                        (0, l.jsx)(r.m, {
                                             text: N.intl.string(N.t.P8vmUv),
                                             forceOpen: !0,
                                             shouldShow: c,
-                                            children: (0, i.jsx)("div", {
+                                            children: (0, l.jsx)("div", {
                                                 ref: K,
-                                                children: (0, i.jsx)(I.A, {
+                                                children: (0, l.jsx)(I.A, {
                                                     disabled: R,
                                                     "aria-label": S,
                                                     label: G ? void 0 : S,
                                                     isActivityActive: U,
                                                     onClick: () => {
                                                         (Y(),
-                                                            l ===
+                                                            i ===
                                                                 s.M
                                                                     .VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP &&
                                                                 a(T.i.TAKE_ACTION),
@@ -124,7 +124,7 @@ function _(e) {
                                             }),
                                         }),
                                         n === s.M.ACTIVITIES_VOICE_LAUNCHER_BADGE
-                                            ? (0, i.jsx)(h.a, { top: 2, right: 2, size: 6 })
+                                            ? (0, l.jsx)(h.a, { top: 2, right: 2, size: 6 })
                                             : null,
                                     ],
                                 });

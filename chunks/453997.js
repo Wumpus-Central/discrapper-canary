@@ -27,7 +27,7 @@ function f(e) {
             d.A.getFavorites(),
             d.A.getFrequentlyUsedSoundIds(),
         ]),
-        { unlockedFavoritesAndFrequentlyUsedSounds: g, lockedSounds: m } = (function (e) {
+        { unlockedFavoritesAndFrequentlyUsedSounds: m, lockedSounds: g } = (function (e) {
             let {
                     channel: t,
                     canUseCrossGuildSounds: n,
@@ -66,22 +66,22 @@ function f(e) {
                         I = c(o),
                         p = [],
                         T = [];
-                    function g() {
+                    function m() {
                         let e = n ? A : 5;
                         return p.length >= e && (n || T.length > 0);
                     }
                     for (let e of f) {
                         let t = { ...e, type: "favorite", analyticsLocationSection: s.A.SOUNDBOARD_FAVORITES_SECTION };
-                        if ((u(e) ? T.push(t) : p.push(t), g())) break;
+                        if ((u(e) ? T.push(t) : p.push(t), m())) break;
                     }
-                    if (!g())
+                    if (!m())
                         for (let e of I) {
                             let t = {
                                 ...e,
                                 type: "frequently_used",
                                 analyticsLocationSection: s.A.SOUNDBOARD_FREQUENTLY_USED_SECTION,
                             };
-                            if ((u(e) ? T.push(t) : p.push(t), g())) break;
+                            if ((u(e) ? T.push(t) : p.push(t), m())) break;
                         }
                     return { unlockedFavoritesAndFrequentlyUsedSounds: p, lockedSounds: T };
                 }, [d, i, a, o, t, n, E]);
@@ -126,8 +126,8 @@ function f(e) {
                 let d = o.slice(0, l);
                 return r ? [...d, e] : d;
             }, [i, a, t, n]);
-        })({ allSounds: I, currentGuildId: n, unlockedFavoritesAndFrequentlyUsedSounds: g, lockedSounds: m }),
-        hasLockedSound: m.length > 0,
+        })({ allSounds: I, currentGuildId: n, unlockedFavoritesAndFrequentlyUsedSounds: m, lockedSounds: g }),
+        hasLockedSound: g.length > 0,
         isFetching: f,
     };
 }

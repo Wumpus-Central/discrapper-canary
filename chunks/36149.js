@@ -40,9 +40,9 @@ var _ = n(207560),
     p = n(306537);
 n(787301);
 var T = n(295972),
-    g = n(757319);
+    m = n(757319);
 n(96358);
-var m = n(40449),
+var g = n(40449),
     S = n(652215),
     N = n(204925),
     C = n(835002),
@@ -129,7 +129,7 @@ function V(e, t) {
     let i = n.embeds[0].fields.find((e) => "ctas" === e.rawName);
     return (
         i?.rawValue.split(",").includes("request_manual_review") === !0 &&
-        (0, g._)("isAgeVerificationMessageWithManualReviewCta")
+        (0, m._)("isAgeVerificationMessageWithManualReviewCta")
     );
 }
 function H(e, t) {
@@ -233,7 +233,7 @@ function z(e) {
     }, [e, s, o]);
 }
 function X(e) {
-    return null != e && m.zn.has(e);
+    return null != e && g.zn.has(e);
 }
 function Z(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];

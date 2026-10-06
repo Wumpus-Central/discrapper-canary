@@ -1,6 +1,6 @@
 t.d(n, { f: () => d });
-var i = t(477900),
-    l = t(582128),
+var l = t(477900),
+    i = t(582128),
     a = t(17928),
     s = t(477782),
     o = t(534963),
@@ -10,10 +10,10 @@ var i = t(477900),
 function d(e) {
     let n = (0, a.bG)([r.A], () => r.A.getCall(e), [e]),
         t = (0, a.bG)([c.A], () => c.A.getRegions(null));
-    l.useEffect(() => {
+    i.useEffect(() => {
         null == t && o.A.fetchRegions(null);
     }, [t]);
-    let d = l.useMemo(
+    let d = i.useMemo(
             () =>
                 null != n && n.regionUpdated && null != t && null != n.region
                     ? (t.find((e) => {
@@ -23,19 +23,19 @@ function d(e) {
                     : { id: "automatic", name: u.intl.string(u.t.JEmsap) },
             [n, t],
         ),
-        A = l.useCallback(
+        A = i.useCallback(
             (e) => {
                 null != n && o.A.changeCallRegion(n.channelId, e.id);
             },
             [n],
         ),
-        m = l.useMemo(
+        m = i.useMemo(
             () =>
                 null == t || 0 === t.length
                     ? null
                     : t.map((e) => {
                           let { id: n, name: t } = e;
-                          return (0, i.jsx)(
+                          return (0, l.jsx)(
                               s.iD,
                               {
                                   id: `region-${n}`,
@@ -49,5 +49,5 @@ function d(e) {
                       }),
             [t, d, A],
         );
-    return (0, i.jsx)(s.Dr, { id: "region-select", label: u.intl.string(u.t.w8gMqh), subtext: d.name, children: m });
+    return (0, l.jsx)(s.Dr, { id: "region-select", label: u.intl.string(u.t.w8gMqh), subtext: d.name, children: m });
 }

@@ -5,12 +5,12 @@ var i = n(477900),
     s = n.n(l),
     a = n(649852),
     o = n.n(a),
-    c = n(132500),
-    u = n(17928),
+    u = n(132500),
+    c = n(17928),
     d = n(52133),
     h = n(684013),
-    A = n(869146),
-    m = n(532294),
+    m = n(869146),
+    A = n(532294),
     g = n(723702),
     f = n(41984),
     E = n(127242),
@@ -41,13 +41,13 @@ class v {
             null == this.mutationObserver)
         ) {
             this.mutationObserver = new MutationObserver(this.handleMutations);
-            let e = A.A.getWindow(p.f);
+            let e = m.A.getWindow(p.f);
             null != e && this.mutationObserver.observe(e?.document.body, { subtree: !0, attributes: !0 });
         }
         let t = this.zones.get(e);
         null != t && this.resizeObserver.unobserve(t.element);
         let n = e.getBoundingClientRect();
-        (this.zones.set(e, { element: e, zone: S(t?.zone.name ?? (0, c.A)(), n) }),
+        (this.zones.set(e, { element: e, zone: S(t?.zone.name ?? (0, u.A)(), n) }),
             this.elements.add(e),
             this.resizeObserver.observe(e),
             this.updateZones());
@@ -77,7 +77,7 @@ class v {
     );
     updateZones() {
         if (!g.isPlatformEmbedded) return;
-        let e = A.A.getWindow(p.f);
+        let e = m.A.getWindow(p.f);
         null != e &&
             h.A.setClickZones(
                 Array.from(this.zones.values()).map((t) => {
@@ -105,9 +105,9 @@ let _ = r.createContext(new v((0, b.b)()));
 function O(e) {
     let { observe: t = !0, className: n, style: l, children: a } = e,
         o = r.useContext(_),
-        c = (0, u.bG)([E.A], () => E.A.hasRenderDebugMode(f.x7.ClickZones)),
-        d = (0, u.bG)([m.default], () => m.default.disableClickableRegions),
-        [{ refHandler: h, setObserve: A }] = r.useState(() => {
+        u = (0, c.bG)([E.A], () => E.A.hasRenderDebugMode(f.x7.ClickZones)),
+        d = (0, c.bG)([A.default], () => A.default.disableClickableRegions),
+        [{ refHandler: h, setObserve: m }] = r.useState(() => {
             let e = null;
             return {
                 setObserve(t) {
@@ -120,8 +120,8 @@ function O(e) {
         });
     return (
         r.useLayoutEffect(() => {
-            d ? A(!1) : A(t);
-        }, [t, A, d]),
-        (0, i.jsx)("div", { ref: h, style: l, className: s()(n, C.v, c && C.p), "data-click-zone": !0, children: a })
+            d ? m(!1) : m(t);
+        }, [t, m, d]),
+        (0, i.jsx)("div", { ref: h, style: l, className: s()(n, C.v, u && C.p), "data-click-zone": !0, children: a })
     );
 }

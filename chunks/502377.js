@@ -28,8 +28,8 @@ function h(e) {
             withReducedMotion: I = "halt",
             ref: p,
             artboardProperties: T,
-            dataBinding: g,
-            onDataBindingChange: m,
+            dataBinding: m,
+            onDataBindingChange: g,
             touchScrollEnabled: S = !0,
             dynamicDataBinding: N,
             listenOnDocumentBody: C,
@@ -215,9 +215,9 @@ function h(e) {
                                         }
                                         break;
                                     case "artboard":
-                                        let g = n.viewModelInstance?.artboard(r),
-                                            m = n.getBindableArtboard(o);
-                                        null != g && null != m && (g.value = m);
+                                        let m = n.viewModelInstance?.artboard(r),
+                                            g = n.getBindableArtboard(o);
+                                        null != m && null != g && (m.value = g);
                                         break;
                                     default:
                                         console.warn(`Unknown property type: ${l}`);
@@ -235,9 +235,9 @@ function h(e) {
             rive: x,
             artboard: f,
             artboardProperties: T,
-            dataBinding: g,
+            dataBinding: m,
             dynamicDataBinding: N,
-            onDataBindingChange: m,
+            onDataBindingChange: g,
         }),
         r.useEffect(() => {
             if (null != x && "short-loop" === I && D.reducedMotion.enabled) {
@@ -311,7 +311,7 @@ function h(e) {
     }, [x, D.reducedMotion.enabled, I, n]),
         r.useEffect(() => {
             P();
-        }, [P, f, c, u, g, N, T]));
+        }, [P, f, c, u, m, N, T]));
     let B = b && !M,
         V = r.useRef(!1);
     return (

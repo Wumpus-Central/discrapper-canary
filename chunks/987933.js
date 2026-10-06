@@ -1,6 +1,6 @@
 t.d(n, { A: () => m });
-var i = t(477900),
-    l = t(582128),
+var l = t(477900),
+    i = t(582128),
     a = t(554146),
     s = t(43105),
     o = t(7807),
@@ -12,7 +12,7 @@ var i = t(477900),
 function m(e) {
     let { targetElementRef: n, openSoundboardPicker: t, shouldShowSoundboardPicker: m } = e,
         [h, C] = (0, r.kn)([a.M.SOUNDBOARD_DESKTOP_NUX]),
-        p = l.useMemo(
+        p = i.useMemo(
             () => [
                 {
                     icon: o.J,
@@ -24,13 +24,13 @@ function m(e) {
             ],
             [C, t],
         );
-    return (l.useEffect(() => {
+    return (i.useEffect(() => {
         m && h === a.M.SOUNDBOARD_DESKTOP_NUX && C(u.i.INDIRECT_ACTION);
     }, [C, m, h]),
     h !== a.M.SOUNDBOARD_DESKTOP_NUX)
         ? null
-        : (0, i.jsx)(c.A, {
-              children: (0, i.jsx)(s.A, {
+        : (0, l.jsx)(c.A, {
+              children: (0, l.jsx)(s.A, {
                   targetElementRef: n,
                   graphic: { type: "image", src: A.A },
                   title: d.intl.string(d.t.UaGc2V),

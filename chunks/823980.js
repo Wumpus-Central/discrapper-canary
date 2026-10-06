@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     Lb: "confettiCanvas__8fcbd",
     VN: "close__8fcbd",
     yl: "modal__8fcbd",

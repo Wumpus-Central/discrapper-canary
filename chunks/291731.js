@@ -14,8 +14,8 @@ let f = [],
     I = null,
     p = !1,
     T = h.XlH.CLOSED,
-    g = {},
-    m = !1,
+    m = {},
+    g = !1,
     S = null;
 function N() {
     if (
@@ -26,10 +26,10 @@ function N() {
         let e = O(I.id);
         null != e && (I = e);
     }
-    ((T = h.XlH.OPEN), (g = {}), (m = !1));
+    ((T = h.XlH.OPEN), (m = {}), (g = !1));
 }
 let C = l().debounce(() => {
-    m && ((null == I || l().isEqual(I, O(I.id))) && (m = !1), m || L.emitChange());
+    g && ((null == I || l().isEqual(I, O(I.id))) && (g = !1), g || L.emitChange());
 }, 500);
 function O(e) {
     return f.find((t) => {
@@ -43,7 +43,7 @@ class R extends o.Ay.Store {
         this.waitFor(u.A, _.A, A.A, E.A);
     }
     hasChanges() {
-        return m;
+        return g;
     }
     get webhooks() {
         return f;
@@ -69,7 +69,7 @@ class R extends o.Ay.Store {
             sectionId: S,
             hasChanges: this.hasChanges(),
             isFetching: p,
-            errors: g,
+            errors: m,
         };
     }
 }
@@ -97,21 +97,21 @@ let L = new R(
                       let { webhookId: t } = e,
                           n = O(t);
                       if (null == n) return !1;
-                      ((I = n), (g = {}), (m = !1));
+                      ((I = n), (m = {}), (g = !1));
                   },
                   INTEGRATION_SETTINGS_STOP_EDITING_WEBHOOK: function () {
-                      ((I = null), (g = {}), (m = !1));
+                      ((I = null), (m = {}), (g = !1));
                   },
                   INTEGRATION_SETTINGS_UPDATE_WEBHOOK: function (e) {
                       let { settings: t } = e;
                       if (null == I) return !1;
                       ((I = { ...I }),
-                          null != t.name && I.name !== t.name && ((I.name = t.name), (m = !0)),
-                          void 0 !== t.avatar && I.avatar !== t.avatar && ((I.avatar = t.avatar), (m = !0)),
+                          null != t.name && I.name !== t.name && ((I.name = t.name), (g = !0)),
+                          void 0 !== t.avatar && I.avatar !== t.avatar && ((I.avatar = t.avatar), (g = !0)),
                           null != t.channelId &&
                               I.channel_id !== t.channelId &&
-                              ((I.channel_id = t.channelId), (m = !0)),
-                          m && C());
+                              ((I.channel_id = t.channelId), (g = !0)),
+                          g && C());
                   },
                   CHANNEL_SETTINGS_CLOSE: function () {
                       ((r = null), (i = null), (f = []), (I = null), (T = h.XlH.CLOSED));
@@ -131,7 +131,7 @@ let L = new R(
                               });
                               if (null != i) {
                                   let n = { ...t, ...i };
-                                  ((f[e] = n), m || I?.id !== n.id || (I = n));
+                                  ((f[e] = n), g || I?.id !== n.id || (I = n));
                               } else (I?.id === t.id && (I = null), f.splice(e, 1));
                           }
                           for (let e of a)
@@ -144,11 +144,11 @@ let L = new R(
                       }
                   },
                   INTEGRATION_SETTINGS_SUBMITTING: function () {
-                      ((T = h.XlH.SUBMITTING), (g = {}));
+                      ((T = h.XlH.SUBMITTING), (m = {}));
                   },
                   INTEGRATION_SETTINGS_SAVE_FAILURE: function (e) {
                       if (T !== h.XlH.SUBMITTING) return !1;
-                      ((T = h.XlH.OPEN), (g = e.errors ?? {}));
+                      ((T = h.XlH.OPEN), (m = e.errors ?? {}));
                   },
               },
     ),

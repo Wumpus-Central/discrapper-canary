@@ -18,12 +18,12 @@ function a(e) {
             },
             [e],
         ),
-        c = r.useCallback(() => {
+        u = r.useCallback(() => {
             if (null == t.current) return;
             let n = "enable" === e ? "hover_disabled" : "hover_enabled";
             t.current.play(n);
         }, [e]),
-        u = r.useCallback(() => {
+        c = r.useCallback(() => {
             if (null == t.current) return;
             let n = "enable" === e ? "hover_disabled" : "hover_enabled";
             t.current.stopIfPlaying(n);
@@ -40,7 +40,7 @@ function a(e) {
             [],
         );
     return {
-        events: { onClick: o, onMouseEnter: c, onMouseLeave: u },
+        events: { onClick: o, onMouseEnter: u, onMouseLeave: c },
         play: o,
         getDuration: r.useCallback(() => t.current?.getDuration(), []),
         getCurrentFrame: r.useCallback(() => t.current?.getCurrentFrame() ?? null, []),

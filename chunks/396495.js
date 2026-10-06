@@ -1,8 +1,8 @@
 t.d(n, { b: () => g });
-var i = t(477900);
+var l = t(477900);
 t(582128);
-var l = t(503698),
-    a = t.n(l),
+var i = t(503698),
+    a = t.n(i),
     s = t(562708),
     o = t(862482),
     r = t(789645),
@@ -20,15 +20,15 @@ function x(e) {
         (0, d.A)({ type: s.ImpressionTypes.VIEW, name: s.ImpressionNames.HD_STREAMING_POPOUT }, { disableTrack: n }, [
             n,
         ]),
-        (0, i.jsxs)("div", {
+        (0, l.jsxs)("div", {
             className: a()(p.jC, { [p.R]: n }),
             children: [
-                (0, i.jsx)("img", {
+                (0, l.jsx)("img", {
                     className: p.Sl,
                     src: "https://cdn.discordapp.com/assets/premium/roadblocks/hd_streaming.png",
                     alt: "HD Streaming Nitro Perk",
                 }),
-                (0, i.jsx)(o.$n, {
+                (0, l.jsx)(o.$n, {
                     "data-migration-pending": !0,
                     className: p.b,
                     "aria-label": C.intl.string(C.t.cpT0Cq),
@@ -37,23 +37,23 @@ function x(e) {
                     onClick: () => {
                         (t(), A.default.track(h.HAw.HD_STREAMING_POPOUT_DISMISSED));
                     },
-                    children: (0, i.jsx)(r.P, { size: "xs", className: p.ut, color: "white" }),
+                    children: (0, l.jsx)(r.P, { size: "xs", className: p.ut, color: "white" }),
                 }),
-                (0, i.jsx)("div", {
+                (0, l.jsx)("div", {
                     className: p.Gm,
-                    children: (0, i.jsxs)("div", {
+                    children: (0, l.jsxs)("div", {
                         className: p.op,
                         children: [
-                            (0, i.jsx)(c.E, {
+                            (0, l.jsx)(c.E, {
                                 className: p.aV,
                                 variant: "text-sm/medium",
                                 children: C.intl.format(C.t.ruvD7i, {}),
                             }),
-                            (0, i.jsxs)("div", {
+                            (0, l.jsxs)("div", {
                                 className: p.vX,
                                 children: [
-                                    (0, i.jsx)(u.t, { size: "xs" }),
-                                    (0, i.jsx)(c.E, {
+                                    (0, l.jsx)(u.t, { size: "xs" }),
+                                    (0, l.jsx)(c.E, {
                                         className: p.aV,
                                         variant: "text-sm/medium",
                                         children: C.intl.string(C.t["BMw+7I"]),
@@ -69,5 +69,5 @@ function x(e) {
 }
 function g(e) {
     let { ...n } = e;
-    return (0, i.jsx)(m.x, { ...n, renderComponent: (e) => (0, i.jsx)(x, { ...e }) });
+    return (0, l.jsx)(m.x, { ...n, renderComponent: (e) => (0, l.jsx)(x, { ...e }) });
 }

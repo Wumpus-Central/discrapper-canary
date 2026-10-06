@@ -19,8 +19,8 @@ function f(e) {
 var I = n(164956),
     p = n(931480),
     T = n(320095),
-    g = n(697470),
-    m = (n(763754), n(491001)),
+    m = n(697470),
+    g = (n(763754), n(491001)),
     S = n(815807),
     N = n(773669),
     C = n(935208),
@@ -195,7 +195,7 @@ class Q extends l.Ay.Store {
         let t = w.default.getCurrentUser();
         return r()(this.getMessages(e).toArray())
             .reverse()
-            .find((e) => (0, g.A)(e, t?.id));
+            .find((e) => (0, m.A)(e, t?.id));
     }
     getLastChatCommandMessage(e) {
         let t = w.default.getCurrentUser();
@@ -374,7 +374,7 @@ let J = new Q(o.h, {
                 s = c.A.getOrCreate(t),
                 l = n(595528).A.isConnected();
             return a
-                ? (0, m.K)()
+                ? (0, g.K)()
                     ? (j(t, i, l), !1)
                     : (F.log("Inserting message tapped on from a push notification", i.id, i.channel_id),
                       void c.A.commit(s.receivePushNotification(i, l)))

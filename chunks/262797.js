@@ -1,46 +1,46 @@
-n.d(i, { default: () => M });
+n.d(i, { default: () => B });
 var e = n(477900),
     s = n(582128),
-    r = n(562708),
-    l = n(17928),
+    l = n(562708),
+    r = n(17928),
     a = n(97808),
     c = n(778712),
     o = n(428678),
     d = n(297264),
-    x = n(834730),
-    u = n(192308),
+    u = n(834730),
+    x = n(192308),
     m = n(640238),
     I = n(717398),
     E = n(628284),
-    N = n(738188),
-    g = n(754302),
-    A = n(375708);
-function j() {
-    return (0, e.jsxs)(g.q, {
+    g = n(738188),
+    h = n(754302),
+    j = n(375708);
+function A() {
+    return (0, e.jsxs)(h.q, {
         children: [
-            (0, e.jsx)(g.B, { title: A.intl.string(A.t.fjFJFV), description: A.intl.string(A.t["8SIMPz"]), icon: E.y }),
-            (0, e.jsx)(g.B, { title: A.intl.string(A.t.QCrmqS), description: A.intl.string(A.t.TKDMoN), icon: E.y }),
-            (0, e.jsx)(g.B, {
-                title: A.intl.string(A.t["lkm/a8"]),
-                description: A.intl.string(A.t["8j3qaC"]),
-                icon: N.WarningIcon,
+            (0, e.jsx)(h.B, { title: j.intl.string(j.t.fjFJFV), description: j.intl.string(j.t["8SIMPz"]), icon: E.y }),
+            (0, e.jsx)(h.B, { title: j.intl.string(j.t.QCrmqS), description: j.intl.string(j.t.TKDMoN), icon: E.y }),
+            (0, e.jsx)(h.B, {
+                title: j.intl.string(j.t["lkm/a8"]),
+                description: j.intl.string(j.t["8j3qaC"]),
+                icon: g.WarningIcon,
             }),
         ],
     });
 }
-var h = n(381689),
-    f = n(632738),
+var N = n(381689),
+    C = n(632738),
     _ = n(994500),
-    C = n(174459),
-    R = n(975571),
+    f = n(174459),
+    p = n(975571),
     T = n(562153),
     O = n(143547),
-    p = n(235627),
-    v = n(652215),
+    R = n(235627),
+    k = n(652215),
     S = n(490930);
-function k(t) {
-    let { user: i, onBlock: n, onIgnore: s, location: r, disallowIgnore: m, guildId: I, channelId: E } = t,
-        N = (0, l.bG)([_.A], () => _.A.isIgnored(i.id));
+function v(t) {
+    let { user: i, onBlock: n, onIgnore: s, location: l, disallowIgnore: m, guildId: I, channelId: E } = t,
+        g = (0, r.bG)([_.A], () => _.A.isIgnored(i.id));
     return (0, e.jsxs)("div", {
         className: S.kL,
         children: [
@@ -63,38 +63,38 @@ function k(t) {
                             (0, e.jsx)(d.D, {
                                 variant: "heading-xl/bold",
                                 color: "text-strong",
-                                children: A.intl.format(A.t.CIbzHR, { username: T.Ay.getName(I, E, i) }),
+                                children: j.intl.format(j.t.CIbzHR, { username: T.Ay.getName(I, E, i) }),
                             }),
-                            (0, e.jsx)(x.E, {
+                            (0, e.jsx)(u.E, {
                                 variant: "text-md/medium",
                                 color: "text-default",
-                                children: A.intl.string(A.t.S70jou),
+                                children: j.intl.string(j.t.S70jou),
                             }),
                         ],
                     }),
                 ],
             }),
-            (0, e.jsx)(j, {}),
-            m || N
+            (0, e.jsx)(A, {}),
+            m || g
                 ? null
                 : (0, e.jsxs)("div", {
                       className: S.l_,
                       children: [
-                          (0, e.jsx)(f.Y0, {
-                              title: A.intl.string(A.t["+BJTcB"]),
-                              children: (0, e.jsx)(f.PQ, {
-                                  title: A.intl.string(A.t.hC8tcc),
-                                  description: A.intl.string(A.t.If89rE),
+                          (0, e.jsx)(C.Y0, {
+                              title: j.intl.string(j.t["+BJTcB"]),
+                              children: (0, e.jsx)(C.PQ, {
+                                  title: j.intl.string(j.t.hC8tcc),
+                                  description: j.intl.string(j.t.If89rE),
                                   titleVariant: "text-md/medium",
                                   descriptionVariant: "text-xs/medium",
-                                  buttonText: A.intl.string(A.t.mxJOd9),
+                                  buttonText: j.intl.string(j.t.mxJOd9),
                                   onButtonPress: () => {
-                                      (C.default.track(v.HAw.USER_REMEDIATION_ACTION, {
-                                          action: p.p.GOTO_IGNORE,
-                                          location: r,
+                                      (f.default.track(k.HAw.USER_REMEDIATION_ACTION, {
+                                          action: R.p.GOTO_IGNORE,
+                                          location: l,
                                       }),
-                                          (0, u.closeAllModals)(),
-                                          (0, u.openModal)((t) =>
+                                          (0, x.closeAllModals)(),
+                                          (0, x.openModal)((t) =>
                                               (0, e.jsx)(O.default, {
                                                   ...t,
                                                   user: i,
@@ -102,17 +102,17 @@ function k(t) {
                                                   channelId: E,
                                                   onIgnore: s,
                                                   onBlock: n,
-                                                  location: r,
+                                                  location: l,
                                               }),
                                           ));
                                   },
                               }),
                           }),
-                          (0, e.jsx)(x.E, {
+                          (0, e.jsx)(u.E, {
                               variant: "text-sm/medium",
                               className: S.FV,
-                              children: A.intl.format(A.t.DJN6eZ, {
-                                  articleLink: R.A.getArticleURL(v.MVz.STEALTH_REMEDIATION_FEATURE_GUIDE),
+                              children: j.intl.format(j.t.DJN6eZ, {
+                                  articleLink: p.A.getArticleURL(k.MVz.STEALTH_REMEDIATION_FEATURE_GUIDE),
                               }),
                           }),
                       ],
@@ -120,40 +120,40 @@ function k(t) {
         ],
     });
 }
-function M(t) {
+function B(t) {
     let {
         user: i,
         onBlock: n,
-        onCancel: l,
+        onCancel: r,
         onIgnore: a,
         location: c = "ContextMenu",
         disallowIgnore: o,
         guildId: d,
-        channelId: x,
-        ...u
+        channelId: u,
+        ...x
     } = t;
     return (
         s.useLayoutEffect(
             () => () => {
-                C.default.track(v.HAw.USER_REMEDIATION_ACTION, { action: p.p.DISMISS_BLOCK, location: c });
+                f.default.track(k.HAw.USER_REMEDIATION_ACTION, { action: R.p.DISMISS_BLOCK, location: c });
             },
             [c],
         ),
         (0, e.jsx)(m.a, {
-            confirmText: A.intl.string(A.t.l4Emac),
-            cancelText: A.intl.string(A.t["ETE/oC"]),
+            confirmText: j.intl.string(j.t.l4Emac),
+            cancelText: j.intl.string(j.t["ETE/oC"]),
             onCancel: function () {
-                (C.default.track(v.HAw.USER_REMEDIATION_ACTION, { action: p.p.CANCEL_BLOCK, location: c }), l?.());
+                (f.default.track(k.HAw.USER_REMEDIATION_ACTION, { action: R.p.CANCEL_BLOCK, location: c }), r?.());
             },
             onConfirm: () => {
                 (n?.(),
                     I.A.blockUser(i.id, { location: c }).then(() => {
-                        (C.default.track(v.HAw.BLOCK_USER_CONFIRMED), h.A.showBlockSuccessToast(i.id, x ?? void 0));
+                        (f.default.track(k.HAw.BLOCK_USER_CONFIRMED), N.A.showBlockSuccessToast(i.id, u ?? void 0));
                     }));
             },
-            impression: { impressionName: r.ImpressionNames.BLOCK_USER_CONFIRMATION },
-            ...u,
-            children: (0, e.jsx)(k, { user: i, guildId: d, channelId: x, onBlock: n, onIgnore: a, disallowIgnore: o }),
+            impression: { impressionName: l.ImpressionNames.BLOCK_USER_CONFIRMATION },
+            ...x,
+            children: (0, e.jsx)(v, { user: i, guildId: d, channelId: u, onBlock: n, onIgnore: a, disallowIgnore: o }),
         })
     );
 }

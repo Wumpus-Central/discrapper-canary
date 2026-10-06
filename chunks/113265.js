@@ -1,42 +1,42 @@
-n.d(t, { z: () => d });
+n.d(e, { z: () => c });
 var a = n(582128),
-    i = n(575593),
-    l = n(466459),
-    s = n(116833),
-    r = n(152472);
-function d(e) {
-    let { userId: t, product: n, selectedVariantIndex: d, location: c, onError: u } = e,
+    r = n(575593),
+    i = n(466459),
+    l = n(116833),
+    s = n(152472);
+function c(t) {
+    let { userId: e, product: n, selectedVariantIndex: c, location: u, onError: d } = t,
         o = a.useMemo(
-            () => (n.type === i.R.VARIANTS_GROUP && null != d && n.variants?.[d] != null ? n.variants[d] : n),
-            [n, d],
+            () => (n.type === r.R.VARIANTS_GROUP && null != c && n.variants?.[c] != null ? n.variants[c] : n),
+            [n, c],
         ),
         h = o.skuId,
-        f = (0, r.c)({
-            userId: t,
+        p = (0, s.c)({
+            userId: e,
             skuId: h,
-            nuxGraphic: (function (e) {
-                let { product: t } = e,
+            nuxGraphic: (function (t) {
+                let { product: e } = t,
                     n = "6/4";
-                switch (t.type) {
-                    case i.R.NAMEPLATE:
-                    case i.R.AVATAR_DECORATION:
+                switch (e.type) {
+                    case r.R.NAMEPLATE:
+                    case r.R.AVATAR_DECORATION:
                         n = "16/9";
                         break;
-                    case i.R.BUNDLE:
-                    case i.R.PROFILE_EFFECT:
+                    case r.R.BUNDLE:
+                    case r.R.PROFILE_EFFECT:
                     default:
                         n = "6/4";
                 }
                 return {
                     type: "dynamic",
-                    component: s.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
+                    component: l.DynamicGraphicComponent.COLLECTIBLES_PREVIEW,
                     aspectRatio: n,
-                    props: { product: t, forCollectedModal: !0 },
+                    props: { product: e, forCollectedModal: !0 },
                 };
             })({ product: o }),
-            location: c,
-            onError: u,
+            location: u,
+            onError: d,
         }),
-        { isPurchased: m } = (0, l.h)(o);
-    return { ...f, specificProductOrVariant: o, isPurchased: m };
+        { isPurchased: A } = (0, i.h)(o);
+    return { ...p, specificProductOrVariant: o, isPurchased: A };
 }

@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     Uw: "staticGlow__1bd8a",
     j: "videoContainer__1bd8a",
     Ki: "video__1bd8a",

@@ -22,8 +22,8 @@ function _(e) {
             labelType: p = "primary",
             usageVariant: T = "single",
         } = e,
-        g = (0, r.useRef)(null),
         m = (0, r.useRef)(null),
+        g = (0, r.useRef)(null),
         S = (0, r.useRef)(null),
         N = r.useId(),
         C = `${N}label`,
@@ -51,7 +51,7 @@ function _(e) {
             children: [
                 (0, i.jsxs)("div", {
                     className: u.fb,
-                    ref: g,
+                    ref: m,
                     "aria-hidden": !0,
                     children: [
                         (0, i.jsx)("svg", {
@@ -106,11 +106,11 @@ function _(e) {
     return E
         ? (0, i.jsx)("div", { className: M, "data-selected": t || void 0, "data-disabled": _ || void 0, children: P })
         : (0, i.jsx)(o.vN, {
-              focusTarget: m,
+              focusTarget: g,
               ringTarget: S,
               children: (0, i.jsx)(l.Sc, {
                   ref: S,
-                  inputRef: m,
+                  inputRef: g,
                   "aria-labelledby": h ?? (D ? C : void 0),
                   "aria-describedby": D && v ? O : void 0,
                   isSelected: t,

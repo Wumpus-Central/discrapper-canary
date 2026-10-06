@@ -79,7 +79,7 @@ let p = RegExp("^dev://branch/([\\w-./]+)$", "i");
 function T(e) {
     return null != e && p.test(e);
 }
-let g = new Set([
+let m = new Set([
         "canary.discord.com",
         "ptb.discord.com",
         "discord.com",
@@ -87,11 +87,11 @@ let g = new Set([
         "ptb.discordapp.com",
         "discordapp.com",
     ]),
-    m = new Set(["/__development/link", "/__development/link/"]);
+    g = new Set(["/__development/link", "/__development/link/"]);
 function S(e) {
     if (T(e)) return { payload: null, url: e };
     let t = l.A.safeParseWithQuery(e);
-    if (null == t || !g.has(t.hostname) || !("s" in t.query) || !m.has(t.pathname)) return null;
+    if (null == t || !m.has(t.hostname) || !("s" in t.query) || !g.has(t.pathname)) return null;
     for (let e in t.query) "s" !== e && delete t.query[e];
     return { payload: t.query.s, url: r.format(t) };
 }

@@ -1,7 +1,7 @@
 t.d(n, { A: () => f });
-var i = t(477900);
+var l = t(477900);
 t(582128);
-var l = t(17928),
+var i = t(17928),
     a = t(661531),
     s = t(192308),
     o = t(81466),
@@ -18,22 +18,22 @@ var l = t(17928),
     g = t(410476);
 function f(e) {
     let { channelId: n, showDismiss: f = !0 } = e,
-        E = (0, l.bG)([c.A], () => c.A.getChannel(n), [n]),
+        E = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
         I = (0, h.RO)(n),
         v = null != (0, h.Qs)(n),
         { canManageGuildEvent: j } = (0, r.nr)(E),
-        T = (0, l.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
-        N = (0, l.cf)([A.Ay], () => T.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
+        T = (0, i.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
+        N = (0, i.cf)([A.Ay], () => T.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
             T,
         ]);
     return T.length < 1 || v
         ? null
-        : (0, i.jsx)(i.Fragment, {
+        : (0, l.jsx)(l.Fragment, {
               children: T.map((e) =>
-                  (0, i.jsx)(
+                  (0, l.jsx)(
                       p.A,
                       {
-                          icon: (0, i.jsx)(o.CalendarIcon, {
+                          icon: (0, l.jsx)(o.CalendarIcon, {
                               size: "custom",
                               color: "currentColor",
                               height: 20,
@@ -57,7 +57,7 @@ function f(e) {
                                             t.e("468248"),
                                             t.e("69772"),
                                         ]).then(t.bind(t, 914119));
-                                        return (t) => (0, i.jsx)(n, { ...t, event: e });
+                                        return (t) => (0, l.jsx)(n, { ...t, event: e });
                                     })
                                   : (0, d.uR)({ eventId: e.id });
                           },

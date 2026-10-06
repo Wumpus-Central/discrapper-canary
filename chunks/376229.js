@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     iE: "wrapper__11054",
     CU: "foreground__11054",
     rC: "gameTile__11054",

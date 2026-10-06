@@ -25,7 +25,7 @@ function p() {
 function T() {
     return (f(), p(), (_ = null), null != E && ((E = null), !0));
 }
-function g(e) {
+function m(e) {
     let { withGracePeriod: t } = e;
     if (a.A.isIdle() || (null != _ && null == o.Ay.getProject(_))) return T();
     let n = (function () {
@@ -55,14 +55,14 @@ function g(e) {
               })(),
               !0));
 }
-class m extends i.Ay.Store {
+class g extends i.Ay.Store {
     static displayName = "ConjureRichPresenceStore";
     initialize() {
-        this.syncWith([a.A, s.Ay, l.A, o.Ay], () => g({ withGracePeriod: !0 }));
+        this.syncWith([a.A, s.Ay, l.A, o.Ay], () => m({ withGracePeriod: !0 }));
     }
     getActivity() {
         return E;
     }
 }
-let S = new m(r.h, { CONNECTION_OPEN: () => g({ withGracePeriod: !1 }), LOGOUT: T }),
+let S = new g(r.h, { CONNECTION_OPEN: () => m({ withGracePeriod: !1 }), LOGOUT: T }),
     N = S;

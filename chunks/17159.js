@@ -1,4 +1,4 @@
-n.d(t, { A: () => m });
+n.d(t, { A: () => g });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -27,7 +27,7 @@ async function I() {
 }
 var p = n(869968),
     T = n(10392);
-class g extends s.A {
+class m extends s.A {
     _premiumPaymentModalCloseResolve = null;
     _premiumPaymentModalCloseReject = null;
     _initialize() {
@@ -125,4 +125,4 @@ class g extends s.A {
         });
     }
 }
-let m = new g();
+let g = new m();

@@ -1,6 +1,6 @@
 t.d(n, { A: () => h });
-var i = t(477900),
-    l = t(582128),
+var l = t(477900),
+    i = t(582128),
     a = t(17928),
     s = t(477782),
     o = t(367513),
@@ -20,8 +20,8 @@ function h(e, n) {
         ),
         x = h && C,
         g = x ? p : null == t,
-        f = l.useCallback(() => {
+        f = i.useCallback(() => {
             x ? (0, r.UV)(!p, e) : null != t ? o.A.selectParticipant(e, null) : o.A.selectParticipant(e, A.jd.AUTO);
         }, [x, p, t, e]);
-    return (0, i.jsx)(s.sL, { id: "call-grid-view", label: m.intl.string(m.t["3jrUBj"]), checked: g, action: f });
+    return (0, l.jsx)(s.sL, { id: "call-grid-view", label: m.intl.string(m.t["3jrUBj"]), checked: g, action: f });
 }

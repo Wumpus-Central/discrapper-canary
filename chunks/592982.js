@@ -1,7 +1,7 @@
 t.d(n, { A: () => N });
-var i = t(477900);
+var l = t(477900);
 t(582128);
-var l = t(17928),
+var i = t(17928),
     a = t(980707),
     s = t(477782),
     o = t(587895),
@@ -26,10 +26,10 @@ function N(e) {
     let { onClose: n, onSelect: t, channel: N, remoteMode: _, onInteraction: b } = e,
         O = (0, c.Us)(),
         { id: y, type: S } = N,
-        R = (0, l.bG)([d.A], () => d.A.getGuild(N.guild_id), [N.guild_id]),
-        D = (0, l.bG)([A.A], () => A.A.getSelectedParticipant(y)),
+        R = (0, i.bG)([d.A], () => d.A.getGuild(N.guild_id), [N.guild_id]),
+        D = (0, i.bG)([A.A], () => A.A.getSelectedParticipant(y)),
         L = D?.type === v.lp.STREAM ? D.stream : null,
-        M = (0, l.bG)([o.A], () => (D?.type === v.lp.ACTIVITY ? o.A.getApplication(D.applicationId) : void 0)),
+        M = (0, i.bG)([o.A], () => (D?.type === v.lp.ACTIVITY ? o.A.getApplication(D.applicationId) : void 0)),
         P = (0, C.A)(y),
         k = (0, E.A)(y),
         U = (0, x.A)(N, R, L?.ownerId, M?.id),
@@ -42,7 +42,7 @@ function N(e) {
         F = (0, p.A)(),
         X = (0, r.A)(N),
         K = (0, m.f)(y);
-    return (0, i.jsxs)(a.W, {
+    return (0, l.jsxs)(a.W, {
         "data-menu-migrated": !0,
         onClose: n,
         onSelect: t,
@@ -50,8 +50,8 @@ function N(e) {
         navId: "more-settings-context",
         "aria-label": T.intl.string(T.t.FTLzdR),
         children: [
-            (0, i.jsx)(s.rX, { children: S !== j.rbe.GUILD_STAGE_VOICE ? U : null }),
-            (0, i.jsxs)(s.rX, {
+            (0, l.jsx)(s.rX, { children: S !== j.rbe.GUILD_STAGE_VOICE ? U : null }),
+            (0, l.jsxs)(s.rX, {
                 children: [
                     S === j.rbe.GUILD_STAGE_VOICE ? B : null,
                     S === j.rbe.GUILD_STAGE_VOICE ? w : null,
@@ -61,9 +61,9 @@ function N(e) {
                     S === j.rbe.GUILD_STAGE_VOICE || S === j.rbe.GUILD_VOICE ? k : null,
                 ],
             }),
-            (0, i.jsx)(s.rX, { children: X }),
-            (0, i.jsxs)(s.rX, { children: [V, !N.isManaged() && N.isPrivate() ? K : null] }),
-            (0, i.jsxs)(s.rX, { children: [null != L ? H : null, null != M ? Y : null] }),
+            (0, l.jsx)(s.rX, { children: X }),
+            (0, l.jsxs)(s.rX, { children: [V, !N.isManaged() && N.isPrivate() ? K : null] }),
+            (0, l.jsxs)(s.rX, { children: [null != L ? H : null, null != M ? Y : null] }),
         ],
     });
 }

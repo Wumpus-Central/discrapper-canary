@@ -77,8 +77,8 @@ function I(e) {
             content: I,
             position: p = "top",
             align: T = "center",
-            spacing: g = 11,
-            caretConfig: m,
+            spacing: m = 11,
+            caretConfig: g,
             animationStyle: S,
             positionKey: N,
         } = e,
@@ -97,7 +97,7 @@ function I(e) {
     return (0, i.jsx)(o.Ow, {
         className: c.BM,
         open: n,
-        spacing: g,
+        spacing: m,
         placement: L,
         reference: y,
         ownerDocument: O,
@@ -108,9 +108,9 @@ function I(e) {
             return ((e) => {
                 let { position: t, nudge: n } = e,
                     r = t ?? p,
-                    a = m?.align ?? (null != n && 0 !== n ? "custom" : "center"),
-                    o = m?.customOffset ?? n ?? 0,
-                    u = { position: m?.position ?? (0, f.l8)(r), align: a, customOffset: "custom" === a ? o : void 0 },
+                    a = g?.align ?? (null != n && 0 !== n ? "custom" : "center"),
+                    o = g?.customOffset ?? n ?? 0,
+                    u = { position: g?.position ?? (0, f.l8)(r), align: a, customOffset: "custom" === a ? o : void 0 },
                     _ = (0, i.jsxs)("div", {
                         id: A,
                         className: s()(c.YL, { [c.mj]: C }),

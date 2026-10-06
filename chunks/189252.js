@@ -21,8 +21,8 @@ let _ = r.forwardRef(function (e, t) {
             overlay: I,
             "aria-label": p,
             "aria-expanded": T,
-            "aria-haspopup": g,
-            "data-jump-section": m,
+            "aria-haspopup": m,
+            "data-jump-section": g,
         } = e,
         S = (0, i.jsx)(n, { size: "sm", color: A ?? "currentColor", colorClass: h });
     return (0, i.jsx)(o.m, {
@@ -36,9 +36,9 @@ let _ = r.forwardRef(function (e, t) {
             className: s()(u.vk, { [u.wH]: a, [u.r9]: E }),
             role: "button",
             "aria-label": null != p ? p : f,
-            "aria-haspopup": g,
+            "aria-haspopup": m,
             "aria-expanded": T,
-            "data-jump-section": m,
+            "data-jump-section": g,
             "aria-disabled": E,
             children: [
                 _

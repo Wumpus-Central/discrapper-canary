@@ -6,8 +6,8 @@ n.d(t, {
     P0: () => E,
     Rj: () => I,
     UV: () => O,
-    X: () => m,
-    bO: () => g,
+    X: () => g,
+    bO: () => m,
     fs: () => p,
     h0: () => h,
     j6: () => N,
@@ -52,7 +52,7 @@ var T =
         (a.STREAM_WATCHING = "STREAM_WATCHING"),
         (a.PEOPLE = "PEOPLE"),
         a),
-    g =
+    m =
         (((s = {}).FREEFORM = "FREEFORM"),
         (s.COULD_NOT_CONNECT = "COULD_NOT_CONNECT"),
         (s.HIGH_TTC = "HIGH_TTC"),
@@ -61,7 +61,7 @@ var T =
         (s.DESYNC = "DESYNC"),
         (s.CUTTING = "CUTTING"),
         s),
-    m =
+    g =
         (((l = {}).FREEFORM = "FREEFORM"),
         (l.NO_AUDIO = "NO_AUDIO"),
         (l.LOW_QUALITY_AUDIO = "LOW_QUALITY_AUDIO"),

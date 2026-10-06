@@ -53,12 +53,12 @@ let p = {
         youBarAvatarDecoAnimation: "animate-never",
     },
     T = p;
-function g(e) {
+function m(e) {
     return Number.isFinite(e)
         ? Math.min(Math.max(e, 1e3 * A.hH7.TOAST_DURATION_MIN_SECONDS), 1e3 * A.hH7.TOAST_DURATION_MAX_SECONDS)
         : A.hH7.TOAST_DURATION_DEFAULT_MS;
 }
-let m = {
+let g = {
     12: "font-size-12",
     14: "font-size-14",
     15: "font-size-15",
@@ -174,7 +174,7 @@ class O extends a.Ay.DeviceSettingsStore {
     initialize(e) {
         (this.waitFor(_.A),
             isNaN((T = { ...p, ...(e ?? null) }).fontSize) && (T.fontSize = A.hH7.FONT_SIZE_DEFAULT),
-            (T.minToastDurationMs = g(T.minToastDurationMs)),
+            (T.minToastDurationMs = m(T.minToastDurationMs)),
             0 > h.qh.indexOf(null != T.messageGroupSpacing ? T.messageGroupSpacing : -1) &&
                 (T.messageGroupSpacing = null),
             this.syncWith([_.A, d.A], N));
@@ -197,7 +197,7 @@ class O extends a.Ay.DeviceSettingsStore {
         return T.fontSize < A.hH7.FONT_SIZE_DEFAULT;
     }
     get fontScaleClass() {
-        let e = m[this.fontSize] ?? "";
+        let e = g[this.fontSize] ?? "";
         return this.isFontScaledUp
             ? `a11y-font-scaled-up ${e}`
             : this.isFontScaledDown
@@ -449,7 +449,7 @@ let R = new O(l.h, {
         T = { ...T, contrast: t };
     },
     ACCESSIBILITY_SET_MIN_TOAST_DURATION: function (e) {
-        (T = { ...T }).minToastDurationMs = g(e.minToastDurationMs);
+        (T = { ...T }).minToastDurationMs = m(e.minToastDurationMs);
     },
     ACCESSIBILITY_SET_CONTRAST_MODE: function (e) {
         let { contrastMode: t } = e;

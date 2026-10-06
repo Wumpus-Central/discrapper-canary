@@ -1,7 +1,7 @@
 t.d(n, { A: () => A });
-var i = t(477900);
+var l = t(477900);
 t(582128);
-var l = t(477782),
+var i = t(477782),
     a = t(241541),
     s = t(283973),
     o = t(267102),
@@ -17,7 +17,7 @@ function A(e, n, t, A) {
             (0, r.X)({ guild: n, source: u.PE1.VOICE_CHANNEL_CALL_MENU_ITEM, ...m });
     }
     return null != A
-        ? (0, i.jsx)(l.Dr, {
+        ? (0, l.jsx)(i.Dr, {
               id: "invite-to-stream",
               label: d.intl.string(d.t["OzOM/q"]),
               action: h,
@@ -25,7 +25,7 @@ function A(e, n, t, A) {
               leadingAccessory: { type: "icon", icon: a.D },
           })
         : null != n && null != e && c.A.can(u.xBc.CREATE_INSTANT_INVITE, e)
-          ? (0, i.jsx)(l.Dr, {
+          ? (0, l.jsx)(i.Dr, {
                 id: "invite-friends",
                 label: d.intl.string(d.t["EE+P0H"]),
                 action: h,

@@ -29,11 +29,11 @@ function T(e, t) {
     }
     return !1;
 }
-function g(e) {
+function m(e) {
     let { positionKey: t, position: n, align: i } = e;
     return null != t ? t : `${n}:${i}`;
 }
-function m(e, t, n, i, r) {
+function g(e, t, n, i, r) {
     switch (e) {
         case "top":
             return (
@@ -207,7 +207,7 @@ class C extends r.Component {
         let r = (0, h.J$)(i),
             { style: a, nudge: s } = this.calculatePositionStyle(e, i, r),
             l = { position: e, style: a, nudge: s },
-            d = m(e, a, i, r, n),
+            d = g(e, a, i, r, n),
             c = d,
             u = null,
             _ = 0;
@@ -215,7 +215,7 @@ class C extends r.Component {
             let t = S(e),
                 a = this.calculatePositionStyle(t, i, r);
             ((u = a.style), (_ = a.nudge));
-            let s = m(t, u, i, r, n);
+            let s = g(t, u, i, r, n);
             if ((s > d && ((l = { position: t, style: u, nudge: _ }), (c = s)), d < 0 && s < 0)) {
                 let a,
                     s = l.position;
@@ -229,7 +229,7 @@ class C extends r.Component {
                     a !== t
                 ) {
                     let e = this.calculatePositionStyle(a, i, r, s),
-                        t = m(S(s), e.style, i, r, n);
+                        t = g(S(s), e.style, i, r, n);
                     t > c && ((l = { position: s, ...e }), (c = t));
                 }
             }
@@ -266,7 +266,7 @@ class C extends r.Component {
     componentDidUpdate(e, t) {
         var n;
         let i, r;
-        ((g(e) !== g(this.props) || ((n = this.props), (i = N(e)), (r = N(n)), i.top !== r.top || i.left !== r.left)) &&
+        ((m(e) !== m(this.props) || ((n = this.props), (i = N(e)), (r = N(n)), i.top !== r.top || i.left !== r.left)) &&
             this.updatePosition(),
             t.position !== this.state.position && this.props.onPositionChange?.(this.state.position));
     }

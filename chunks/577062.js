@@ -1,6 +1,6 @@
 t.d(n, { A: () => A });
-var i = t(477900),
-    l = t(582128),
+var l = t(477900),
+    i = t(582128),
     a = t(523875),
     s = t(666654),
     o = t(688810),
@@ -27,8 +27,8 @@ function A(e) {
         { events: j, play: T, Component: N } = (0, a.L)(E ? "unmute" : "mute"),
         _ = t || A ? s.O : N;
     return (
-        l.useEffect(() => () => T(), [T, E]),
-        (0, i.jsx)(I, {
+        i.useEffect(() => () => T(), [T, E]),
+        (0, l.jsx)(I, {
             ...g,
             iconComponent: _,
             isTrayButton: !0,

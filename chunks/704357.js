@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     tG: "radioBar__88a69",
     go: "radioPositionLeft__88a69",
     Xe: "radioPositionRight__88a69",

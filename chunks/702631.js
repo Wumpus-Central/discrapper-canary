@@ -1,5 +1,5 @@
-i.d(e, { U: () => r });
-function r(t) {
-    let { partySize: e, maxPartySize: i } = t;
-    return e > -1 && i > 0 && e >= i;
+n.d(i, { U: () => e });
+function e(t) {
+    let { partySize: i, maxPartySize: n } = t;
+    return i > -1 && n > 0 && i >= n;
 }

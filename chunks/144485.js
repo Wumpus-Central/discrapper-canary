@@ -4,8 +4,8 @@ n(582128);
 var i = n(314116),
     a = n(192308),
     o = n(231723),
-    l = n(652215),
-    u = n(375708);
+    u = n(652215),
+    l = n(375708);
 let c = {
     openSecureFramesStreamVerification: function (e, t) {
         (0, a.openModalLazy)(async () => {
@@ -17,7 +17,7 @@ let c = {
             return (n) => (0, r.jsx)(i, { streamKey: e, channelId: t, ...n });
         });
     },
-    openSecureFramesUserVerificationModal: function (e, t, i, u) {
+    openSecureFramesUserVerificationModal: function (e, t, i, l) {
         i() &&
             (0, a.openModalLazy)(
                 async () => {
@@ -34,11 +34,11 @@ let c = {
                     ).default;
                     return (n) => (0, r.jsx)(i, { userId: e, channelId: t, ...n });
                 },
-                { contextKey: u === l.BRT.POPOUT ? o.KX : o.SY },
+                { contextKey: l === u.BRT.POPOUT ? o.KX : o.SY },
             );
     },
     openSecureFramesUpdateConfirmation: function (e) {
-        let { title: t, subtitle: n, confirmText: r = u.intl.string(u.t["cY+Oob"]), onConfirm: a } = e;
+        let { title: t, subtitle: n, confirmText: r = l.intl.string(l.t["cY+Oob"]), onConfirm: a } = e;
         (0, i.A)({ title: t, subtitle: n, confirmText: r, onConfirm: a });
     },
     handleSecureFramesUserVerificationLink: function (e) {

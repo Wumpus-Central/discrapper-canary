@@ -1,6 +1,6 @@
 (t.d(n, { f: () => V }), t(938796));
-var i = t(477900),
-    l = t(582128),
+var l = t(477900),
+    i = t(582128),
     a = t(132500),
     s = t(724002),
     o = t(287174),
@@ -40,7 +40,7 @@ function G(e) {
         { channel: a, openInPopout: o, onClick: d } = e,
         { fetchState: A, voiceBannerCollection: m } =
             ((n = (0, c.bG)([O.default], () => O.default.onlyShowPreviewAppCollections) ? s.W.PREVIEW : s.W.ACTIVE),
-            l.useEffect(() => {
+            i.useEffect(() => {
                 (0, j.An)({ surface: k, activeState: n });
             }, [n]),
             {
@@ -48,7 +48,7 @@ function G(e) {
                 voiceBannerCollection: (0, c.bG)([T.A], () => T.A.getCollections({ surface: k, activeState: n }))[0],
             }),
         h = A === T.e.FETCHING,
-        C = l.useMemo(() => {
+        C = i.useMemo(() => {
             let e = m?.application_directory_collection_items[0];
             return null == e ? null : e.type === r.L.APPLICATION_BANNER ? e : null;
         }, [m?.application_directory_collection_items]),
@@ -65,7 +65,7 @@ function G(e) {
         : (null != C.id &&
               null != C.image_hash &&
               (t = (0, N.DH)({ itemId: C.id, hash: C.image_hash, containerWidth: 584 })),
-          (0, i.jsxs)(u.D, {
+          (0, l.jsxs)(u.D, {
               className: P.V8,
               innerRef: p,
               onClick: () => {
@@ -78,30 +78,30 @@ function G(e) {
                       }));
               },
               children: [
-                  (0, i.jsx)("img", { alt: C.description, src: t, className: P.W_ }),
-                  (0, i.jsx)("div", { className: P.LV }),
+                  (0, l.jsx)("img", { alt: C.description, src: t, className: P.W_ }),
+                  (0, l.jsx)("div", { className: P.LV }),
               ],
           }));
 }
-let V = l.forwardRef(function (e, n) {
+let V = i.forwardRef(function (e, n) {
     var t;
     let { channel: a, isHovered: s, closePopout: o, onMouseEnter: r, onMouseLeave: c, onClick: f, className: E } = e,
         { id: j, guild_id: T } = a;
-    (l.useEffect(() => {
+    (i.useEffect(() => {
         y.default.track(L.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: j, guild_id: T });
     }, [j, T]),
-        l.useEffect(() => {
+        i.useEffect(() => {
             s || o();
         }, [o, s]));
     let N = (0, _.Us)(),
         { analyticsLocations: O, newestAnalyticsLocation: k } = (0, g.Ay)(x.A.ACTIVITIES_MINI_SHELF),
         V = N === L.BRT.POPOUT,
         B = ((t = a.getGuildId()), (0, R.A)({ guildId: t }).slice(0, 5));
-    l.useEffect(() => {
+    i.useEffect(() => {
         let e = setTimeout(() => S.LK(), 1e3);
         return () => clearTimeout(e);
     }, []);
-    let w = l.useCallback(() => {
+    let w = i.useCallback(() => {
             ((0, I.A)({
                 context: null != a ? { type: "channel", channel: a } : { type: "contextless" },
                 openInPopout: V,
@@ -110,7 +110,7 @@ let V = l.forwardRef(function (e, n) {
                 c(),
                 f());
         }, [a, k, f, c, V]),
-        H = l.useCallback(
+        H = i.useCallback(
             (e) => {
                 (r(),
                     y.default.track(L.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
@@ -120,51 +120,51 @@ let V = l.forwardRef(function (e, n) {
             },
             [r, a],
         );
-    return (0, i.jsx)(g.f5, {
+    return (0, l.jsx)(g.f5, {
         value: O,
-        children: (0, i.jsx)(b.A, {
-            children: (0, i.jsxs)(d.l, {
+        children: (0, l.jsx)(b.A, {
+            children: (0, l.jsxs)(d.l, {
                 ref: n,
                 "aria-labelledby": U,
                 className: E,
                 children: [
-                    (0, i.jsx)(A.F, {
+                    (0, l.jsx)(A.F, {
                         forceLevel: 2,
-                        children: (0, i.jsx)(m.A, {
-                            children: (0, i.jsx)(A.H, { id: U, children: M.intl.string(M.t["2lnYtB"]) }),
+                        children: (0, l.jsx)(m.A, {
+                            children: (0, l.jsx)(A.H, { id: U, children: M.intl.string(M.t["2lnYtB"]) }),
                         }),
                     }),
-                    (0, i.jsxs)("div", {
+                    (0, l.jsxs)("div", {
                         className: P.kL,
                         onMouseEnter: H,
                         onMouseLeave: c,
                         children: [
-                            (0, i.jsxs)("div", {
+                            (0, l.jsxs)("div", {
                                 className: P.gn,
                                 children: [
-                                    (0, i.jsxs)("div", {
+                                    (0, l.jsxs)("div", {
                                         className: P.gH,
                                         children: [
-                                            (0, i.jsx)(h.k, {
+                                            (0, l.jsx)(h.k, {
                                                 size: "md",
                                                 className: P.ch,
                                                 color: "var(--interactive-text-active)",
                                             }),
-                                            (0, i.jsx)(C.E, {
+                                            (0, l.jsx)(C.E, {
                                                 variant: "eyebrow",
                                                 children: M.intl.string(M.t.f3Cz25),
                                             }),
                                         ],
                                     }),
-                                    (0, i.jsxs)(u.D, {
+                                    (0, l.jsxs)(u.D, {
                                         className: P.hc,
                                         onClick: w,
                                         children: [
-                                            (0, i.jsx)(C.E, {
+                                            (0, l.jsx)(C.E, {
                                                 variant: "eyebrow",
                                                 children: M.intl.string(M.t["K8+z4S"]),
                                             }),
-                                            (0, i.jsx)(p._, {
+                                            (0, l.jsx)(p._, {
                                                 size: "custom",
                                                 width: 12,
                                                 height: 12,
@@ -175,17 +175,17 @@ let V = l.forwardRef(function (e, n) {
                                     }),
                                 ],
                             }),
-                            (0, i.jsx)(G, {
+                            (0, l.jsx)(G, {
                                 openInPopout: V,
                                 channel: a,
                                 onClick: () => {
                                     (f(), o());
                                 },
                             }),
-                            (0, i.jsx)("div", {
+                            (0, l.jsx)("div", {
                                 className: P.ht,
                                 children: B.map((e) =>
-                                    (0, i.jsx)(
+                                    (0, l.jsx)(
                                         D.C,
                                         {
                                             context: { channel: a, type: "channel" },

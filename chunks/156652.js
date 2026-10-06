@@ -1,6 +1,6 @@
 t.d(n, { A: () => C, x: () => m });
-var i,
-    l = t(477900),
+var l,
+    i = t(477900),
     a = t(582128),
     s = t(503698),
     o = t.n(s),
@@ -9,12 +9,12 @@ var i,
     u = t(401685),
     d = t(919706),
     A = t(297468),
-    m = (((i = {})[(i.TOP = 0)] = "TOP"), (i[(i.BOTTOM = 1)] = "BOTTOM"), i);
+    m = (((l = {})[(l.TOP = 0)] = "TOP"), (l[(l.BOTTOM = 1)] = "BOTTOM"), l);
 function h(e) {
     let {
             disableGradients: n = !1,
             renderHeader: t,
-            renderBottomLeft: i,
+            renderBottomLeft: l,
             renderBottomCenter: s,
             renderBottomRight: o,
             renderCenter: d,
@@ -22,25 +22,25 @@ function h(e) {
         m = a.useRef(null),
         { width: h, ref: C } = (0, c.Ay)(),
         p = (0, u.bf)(h);
-    return (0, l.jsx)(r.xp, {
+    return (0, i.jsx)(r.xp, {
         containerRef: m,
-        children: (0, l.jsxs)("div", {
+        children: (0, i.jsxs)("div", {
             className: A._v,
             ref: m,
             children: [
-                0 !== n && !0 !== n && (0, l.jsx)("div", { className: A.aw }),
-                1 !== n && !0 !== n && (0, l.jsx)("div", { className: A.YA }),
-                (0, l.jsx)("div", { className: A.K1, children: t?.() }),
+                0 !== n && !0 !== n && (0, i.jsx)("div", { className: A.aw }),
+                1 !== n && !0 !== n && (0, i.jsx)("div", { className: A.YA }),
+                (0, i.jsx)("div", { className: A.K1, children: t?.() }),
                 d?.(),
-                (0, l.jsx)(u.Ay.Provider, {
+                (0, i.jsx)(u.Ay.Provider, {
                     value: p,
-                    children: (0, l.jsxs)("div", {
+                    children: (0, i.jsxs)("div", {
                         className: A.q6,
                         ref: C,
                         children: [
-                            (0, l.jsx)("div", { className: A.i$, children: i?.() }),
-                            (0, l.jsx)("div", { className: A.Kz, children: s?.() }),
-                            (0, l.jsx)("div", { className: A.He, children: o?.() }),
+                            (0, i.jsx)("div", { className: A.i$, children: l?.() }),
+                            (0, i.jsx)("div", { className: A.Kz, children: s?.() }),
+                            (0, i.jsx)("div", { className: A.He, children: o?.() }),
                         ],
                     }),
                 }),
@@ -52,7 +52,7 @@ function C(e) {
     let {
         screenMessage: n,
         onDoubleClick: t,
-        onActive: i,
+        onActive: l,
         onForceIdle: a,
         idle: s,
         children: r,
@@ -62,17 +62,17 @@ function C(e) {
         hideControls: C = !1,
         ...p
     } = e;
-    return (0, l.jsxs)("div", {
+    return (0, i.jsxs)("div", {
         className: o()(A.zr, { [A.N7]: s }),
         style: m,
-        onMouseMove: i,
-        onMouseDown: i,
+        onMouseMove: l,
+        onMouseDown: l,
         onMouseLeave: a,
         onDoubleClick: t,
         children: [
-            !C && (0, l.jsx)(h, { ...p }),
+            !C && (0, i.jsx)(h, { ...p }),
             r,
-            null != n ? (0, l.jsx)(d.A, { size: "large", ...n }) : null,
+            null != n ? (0, i.jsx)(d.A, { size: "large", ...n }) : null,
             c?.(),
             u?.(),
         ],

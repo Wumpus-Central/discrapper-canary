@@ -16,8 +16,8 @@ var i = n(284009),
     I = n(706727),
     p = n(743738),
     T = n(409481),
-    g = n(963852),
-    m = n(195880),
+    m = n(963852),
+    g = n(195880),
     S = n(867455),
     N = n(773669),
     C = n(71393),
@@ -54,8 +54,8 @@ async function B(e) {
     (null == i.autocomplete &&
         s.h.dispatch({ type: "APPLICATION_COMMAND_USED", context: i, command: t, commandOrigin: T }),
         await S.A.unarchiveThreadIfNecessary(i.channel.id));
-    let g = [],
-        m = [],
+    let m = [],
+        g = [],
         C = (0, G.Qr)(T);
     if (null != t.options)
         for (let e of t.options) {
@@ -74,15 +74,15 @@ async function B(e) {
                 )
                     continue;
                 (r()(null != i.autocomplete || null != t, `Option "${e.name}" expects a value`),
-                    g.push({ type: e.type, name: e.name, value: t, focused: a }));
+                    m.push({ type: e.type, name: e.name, value: t, focused: a }));
                 continue;
             }
             if (e.type === c.n4.ATTACHMENT) {
                 if (null != i.autocomplete) continue;
                 let t = O.A.getUpload(i.channel.id, e.name, C);
                 if (null == t) continue;
-                let n = m.length;
-                (m.push(t), g.push({ type: e.type, name: e.name, value: n, focused: a }));
+                let n = g.length;
+                (g.push(t), m.push({ type: e.type, name: e.name, value: n, focused: a }));
                 continue;
             }
             let s = M.filterEmpty(n[e.name]);
@@ -172,12 +172,12 @@ async function B(e) {
             }
             ("" !== t || null == i.autocomplete || a) &&
                 (r()(null != i.autocomplete || null != t, `Unexpected value for option "${e.name}"`),
-                null != t && g.push({ type: e.type, name: e.name, value: t, focused: a }));
+                null != t && m.push({ type: e.type, name: e.name, value: t, focused: a }));
         }
     if (null != t.subCommandPath)
         for (let e = t.subCommandPath.length - 1; e >= 0; e -= 1) {
             let { name: n, type: i } = t.subCommandPath[e];
-            g = [{ type: i, name: n, options: g }];
+            m = [{ type: i, name: n, options: m }];
         }
     if (null != t.execute)
         return (
@@ -188,7 +188,7 @@ async function B(e) {
                 location: Y(T),
                 source: p,
             }),
-            t.execute(g, i)
+            t.execute(m, i)
         );
     if (
         t.inputType === w.y$.BUILT_IN ||
@@ -202,7 +202,7 @@ async function B(e) {
         guild_id: t.guildId,
         name: t.rootCommand?.name ?? t.untranslatedName,
         type: t.type,
-        options: g,
+        options: m,
         application_command: t.rootCommand,
     };
     (null != a && (R.target_id = a),
@@ -213,7 +213,7 @@ async function B(e) {
                   applicationId: t.applicationId,
                   data: R,
                   context: i,
-                  attachments: m,
+                  attachments: g,
                   maxSizeCallback: l,
                   onMessageSuccess: function () {
                       let e;
@@ -272,7 +272,7 @@ function H(e) {
             channelId: A,
             guildId: h,
             data: n,
-            nonce: u.nonce ?? (0, m.m)(),
+            nonce: u.nonce ?? (0, g.m)(),
             attachments: r,
             maxSizeCallback: s,
             analytics_location: o,
@@ -307,7 +307,7 @@ async function W(e, t, n) {
             await d.wz(i.botId);
         } catch {}
     let o = {
-        ...(0, g.Ay)({
+        ...(0, m.Ay)({
             channelId: t.channel.id,
             content: "",
             type: n.type === c.kc.CHAT ? x.lAJ.CHAT_INPUT_COMMAND : x.lAJ.CONTEXT_MENU_COMMAND,
@@ -319,7 +319,7 @@ async function W(e, t, n) {
             name: n.name,
             name_localized: e.displayName,
             type: a.G.APPLICATION_COMMAND,
-            user: (0, g.Vi)(R.default.getCurrentUser()),
+            user: (0, m.Vi)(R.default.getCurrentUser()),
         },
         interaction_data: n,
     };

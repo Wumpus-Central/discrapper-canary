@@ -32,8 +32,8 @@ function o(e) {
         p.current = d;
     }, [d]);
     let {
-            refs: g,
-            floatingStyles: m,
+            refs: m,
+            floatingStyles: g,
             context: S,
         } = (0, r.we)({
             open: E,
@@ -69,8 +69,8 @@ function o(e) {
     return {
         isOpen: E,
         setIsOpen: A,
-        refs: g,
-        floatingStyles: m,
+        refs: m,
+        floatingStyles: g,
         context: S,
         getReferenceProps: C,
         getFloatingProps: O,

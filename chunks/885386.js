@@ -13,7 +13,7 @@ n.d(t, {
     pK: () => ts,
     JI: () => eH,
     HZ: () => e7,
-    vf: () => eg,
+    vf: () => em,
     Vv: () => e9,
     BQ: () => v,
     HO: () => eI,
@@ -116,7 +116,7 @@ function I(e, t, n, i) {
         l = () => n(h.A.settings[e]?.[t]);
     return {
         getSetting: l,
-        updateSetting: m(l, (n) =>
+        updateSetting: g(l, (n) =>
             A.wc.updateAsync(
                 e,
                 (e) => {
@@ -144,7 +144,7 @@ function p(e, t, n) {
                 }) ?? i
             );
         },
-        updateSetting: m(i, function (i) {
+        updateSetting: g(i, function (i) {
             return E.A.shouldSync(t)
                 ? e.updateSetting(i)
                 : (_.h.dispatch({
@@ -165,13 +165,13 @@ function T(e, t, n, i) {
             let t = e.useSetting();
             return i() ?? t;
         },
-        updateSetting: m(
+        updateSetting: g(
             r,
             (n) => (_.h.dispatch({ type: "USER_SETTINGS_OVERRIDE_CLEAR", settings: [t] }), e.updateSetting(n)),
         ),
     };
 }
-function g(e) {
+function m(e) {
     let {
         baseSetting: t,
         isEligible: n,
@@ -193,7 +193,7 @@ function g(e) {
         updateSetting: (e) => t.updateSetting(e),
     };
 }
-function m(e, t) {
+function g(e, t) {
     return function (n) {
         return "function" == typeof n ? t(n(e())) : t(n);
     };
@@ -534,17 +534,17 @@ let eu = I(
         (e) => e?.value ?? !1,
         (e) => l._t.create({ value: e }),
     ),
-    eg = I(
+    em = I(
         "privacy",
         "quests3PDataOptedOut",
         (e) => e?.value ?? !1,
         (e) => l._t.create({ value: e }),
     ),
-    em = [],
+    eg = [],
     eS = I(
         "privacy",
         "adTopicOptOuts",
-        (e) => e ?? em,
+        (e) => e ?? eg,
         (e) => e,
     );
 I(
@@ -861,7 +861,7 @@ let eY = p(
         (e) => e ?? e0,
         (e) => e,
     );
-g({
+m({
     baseSetting: I(
         "privacy",
         "defaultGuildsActivityRestricted",
@@ -873,7 +873,7 @@ g({
     ineligibleDefault: s.AN.OFF,
     eligibleDefault: () => s.AN.ON_FOR_LARGE_GUILDS,
 });
-let e2 = g({
+let e2 = m({
         baseSetting: I(
             "privacy",
             "defaultGuildsActivityRestrictedV2",

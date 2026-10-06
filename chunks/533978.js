@@ -1,6 +1,6 @@
 t.d(n, { A: () => S });
-var i = t(477900),
-    l = t(582128),
+var l = t(477900),
+    i = t(582128),
     a = t(17928),
     s = t(554146),
     o = t(621956),
@@ -43,23 +43,23 @@ function S(e) {
         [X, K] = (0, m.DP)(F),
         { analyticsLocations: z } = (0, u.Ay)(),
         { showQuickAccess: W } = (0, C.j)("ActionBarSoundboardButton"),
-        [J, q] = l.useState(W),
-        Q = l.useCallback(
+        [J, q] = i.useState(W),
+        Q = i.useCallback(
             (e) => {
                 W && q(e);
             },
             [W],
         ),
-        $ = l.useCallback(() => Q(!1), [Q]),
+        $ = i.useCallback(() => Q(!1), [Q]),
         { enabled: Z } = (0, f.W)(V ?? "0", "ActionBarSoundboardButton"),
-        { isHovered: ee, setIsHovered: en, onMouseEnter: et, onMouseLeave: ei } = (0, h.A)(200, 300),
-        el = l.useMemo(() => (ee && (R === O.P.SOUNDBOARD || null == R)) || R === O.P.SOUNDBOARD, [ee, R]);
+        { isHovered: ee, setIsHovered: en, onMouseEnter: et, onMouseLeave: el } = (0, h.A)(200, 300),
+        ei = i.useMemo(() => (ee && (R === O.P.SOUNDBOARD || null == R)) || R === O.P.SOUNDBOARD, [ee, R]);
     function ea(e) {
         null != V &&
             (0, c.L3)(e, async () => {
                 let { default: e } = await t.e("811562").then(t.bind(t, 666801));
                 return (n) =>
-                    (0, i.jsx)(e, {
+                    (0, l.jsx)(e, {
                         guildId: V,
                         sourceAnalyticsLocations: z,
                         ...n,
@@ -71,31 +71,31 @@ function S(e) {
         (k(), null != R && et(), J && $(), D?.(O.P.SOUNDBOARD));
     }
     function eo() {
-        ((0, d.X)(M, d.O.SOUNDBOARD), R === O.P.SOUNDBOARD ? (D?.(void 0), ei()) : es());
+        ((0, d.X)(M, d.O.SOUNDBOARD), R === O.P.SOUNDBOARD ? (D?.(void 0), el()) : es());
     }
-    l.useEffect(() => {
-        el || J || Q(!0);
-    }, [el, J, Q]);
-    let er = l.useCallback(() => {
+    i.useEffect(() => {
+        ei || J || Q(!0);
+    }, [ei, J, Q]);
+    let er = i.useCallback(() => {
             null == R && D?.(O.P.SOUNDBOARD);
         }, [R, D]),
-        ec = l.useRef(null),
+        ec = i.useRef(null),
         { usersInChannel: eu } = (0, a.cf)([N.Ay], () => ({ usersInChannel: N.Ay.countVoiceStatesForChannel(n.id) }), [
             n,
         ]),
-        [ed, eA] = l.useState(!1);
+        [ed, eA] = i.useState(!1);
     return (
-        l.useEffect(() => {
+        i.useEffect(() => {
             let e = eu >= 2 && !Y && null == R;
             if (L || !e) return void eA(!1);
             let n = setTimeout(() => eA(!0), 300);
             return () => clearTimeout(n);
         }, [L, Y, eu, R]),
-        (0, i.jsxs)(i.Fragment, {
+        (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, i.jsx)(r.Y, {
+                (0, l.jsx)(r.Y, {
                     targetElementRef: ec,
-                    shouldShow: el,
+                    shouldShow: ei,
                     animation: r.Y.Animation.FADE,
                     animationPosition: "top",
                     position: "top",
@@ -108,36 +108,36 @@ function S(e) {
                         let { closePopout: t } = e;
                         return Y
                             ? null
-                            : (0, i.jsx)(_.A, {
-                                  children: (0, i.jsx)("div", {
+                            : (0, l.jsx)(_.A, {
+                                  children: (0, l.jsx)("div", {
                                       onMouseEnter: et,
-                                      onMouseLeave: ei,
+                                      onMouseLeave: el,
                                       onMouseDown: er,
                                       children: J
-                                          ? (0, i.jsx)(E.A, {
+                                          ? (0, l.jsx)(E.A, {
                                                 channel: n,
                                                 guildId: V,
                                                 openFullPicker: $,
                                                 onClose: t,
                                                 analyticsSource: "action bar button",
                                             })
-                                          : (0, i.jsx)(I.A, {
+                                          : (0, l.jsx)(I.A, {
                                                 guildId: V,
                                                 channel: n,
                                                 onClose: t,
                                                 gridNotice:
                                                     X === s.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
-                                                    (0, i.jsx)(x.m, { onClose: t, markAsDismissed: K }),
+                                                    (0, l.jsx)(x.m, { onClose: t, markAsDismissed: K }),
                                                 analyticsSource: "action bar button",
                                             }),
                                   }),
                               });
                     },
                     children: () =>
-                        (0, i.jsxs)(i.Fragment, {
+                        (0, l.jsxs)(l.Fragment, {
                             children: [
-                                !el && null != V && Z ? (0, i.jsx)(j.A, { guildId: V, channelId: n.id }) : null,
-                                (0, i.jsx)(b.l, {
+                                !ei && null != V && Z ? (0, l.jsx)(j.A, { guildId: V, channelId: n.id }) : null,
+                                (0, l.jsx)(b.l, {
                                     ref: ec,
                                     isTrayButton: !0,
                                     themeable: S,
@@ -156,7 +156,7 @@ function S(e) {
                                         (U(), "focus" !== e.type && et());
                                     },
                                     onMouseLeave: () => {
-                                        null == R && (ei(), G());
+                                        null == R && (el(), G());
                                     },
                                     isActive: ee || R === O.P.SOUNDBOARD,
                                     color: ee || R === O.P.SOUNDBOARD ? "primaryDark" : void 0,
@@ -165,7 +165,7 @@ function S(e) {
                         }),
                 }),
                 ed &&
-                    (0, i.jsx)(g.A, { targetElementRef: ec, openSoundboardPicker: es, shouldShowSoundboardPicker: el }),
+                    (0, l.jsx)(g.A, { targetElementRef: ec, openSoundboardPicker: es, shouldShowSoundboardPicker: ei }),
             ],
         })
     );

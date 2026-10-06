@@ -1,6 +1,6 @@
 (t.d(n, { V: () => T }), t(321073));
-var i = t(477900),
-    l = t(582128),
+var l = t(477900),
+    i = t(582128),
     a = t(503698),
     s = t.n(a),
     o = t(435558),
@@ -21,17 +21,17 @@ var i = t(477900),
 function v(e) {
     let n = (0, r.bG)([C.A], () => !(0, o.isEmpty)(C.A.getTypingUsers(e)), [e]),
         t = (0, r.bG)([h.Ay], () => h.Ay.getVoiceChannelId() === e, [e]),
-        { unreadCount: i, mentionCount: l } = (0, r.cf)(
+        { unreadCount: l, mentionCount: i } = (0, r.cf)(
             [m.Ay],
             () => ({ unreadCount: m.Ay.getUnreadCount(e), mentionCount: m.Ay.getMentionCount(e) }),
             [e],
         );
-    return { unreadCount: i, mentionCount: l, voiceChannelIsSelected: t, isTyping: n };
+    return { unreadCount: l, mentionCount: i, voiceChannelIsSelected: t, isTyping: n };
 }
 function j(e) {
     let { className: n, channelId: t } = e,
-        { unreadCount: l, mentionCount: a, isTyping: s, voiceChannelIsSelected: o } = v(t);
-    return (0, i.jsx)(g.A, { className: n, unreadCount: l, mentionCount: a, isTyping: s, canBadge: o });
+        { unreadCount: i, mentionCount: a, isTyping: s, voiceChannelIsSelected: o } = v(t);
+    return (0, l.jsx)(g.A, { className: n, unreadCount: i, mentionCount: a, isTyping: s, canBadge: o });
 }
 function T(e) {
     let n,
@@ -47,17 +47,17 @@ function T(e) {
         } = e,
         { parentAnalyticsLocation: N } = (0, u.Ay)(),
         { disabled: _ } = T,
-        b = l.useRef(null),
+        b = i.useRef(null),
         O = (0, r.bG)([d.A], () => d.A.getChatOpen(t), [t]),
         {
             isShowing: y,
             unreadCount: S,
             mentionCount: R,
         } = (function (e) {
-            let { unreadCount: n, mentionCount: t, isTyping: i } = v(e),
-                [a, s] = l.useState(!1);
+            let { unreadCount: n, mentionCount: t, isTyping: l } = v(e),
+                [a, s] = i.useState(!1);
             return (
-                l.useEffect(() => {
+                i.useEffect(() => {
                     s(n > 0);
                     let e = setTimeout(() => {
                         s(!1);
@@ -66,29 +66,29 @@ function T(e) {
                         (clearTimeout(e), s(!1));
                     };
                 }, [n]),
-                { isShowing: a || t > 0 || i, unreadCount: n, mentionCount: t }
+                { isShowing: a || t > 0 || l, unreadCount: n, mentionCount: t }
             );
         })(t),
-        D = l.useCallback(() => {
+        D = i.useCallback(() => {
             ((0, A.X)(N, A.O.CHAT, !O), m?.(), !O && C && g?.(), c.A.updateChatOpen(t, !O));
         }, [t, O, m, C, g, N]),
-        L = l.useCallback(
+        L = i.useCallback(
             (e) => {
                 let { className: n } = e;
-                return (0, i.jsx)(j, { className: n, channelId: t });
+                return (0, l.jsx)(j, { className: n, channelId: t });
             },
             [t],
         ),
-        M = l.useCallback(() => {
+        M = i.useCallback(() => {
             b.current?.focus();
         }, []);
     (0, p.Vo)({ event: E.jej.FOCUS_CHAT_BUTTON, handler: _ ? null : M });
-    let [P, k] = l.useState(!1),
-        U = l.useCallback(() => {
+    let [P, k] = i.useState(!1),
+        U = i.useCallback(() => {
             h && k(!0);
         }, [h]);
     ((0, p.Vo)({ event: E.jej.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP, handler: U }),
-        l.useEffect(() => {
+        i.useEffect(() => {
             let e;
             return (
                 P &&
@@ -104,7 +104,7 @@ function T(e) {
     return (
         R > 0 && G.push(I.intl.formatToPlainString(I.t["3l1GOx"], { mentionCount: R })),
         S > 0 && G.push(I.intl.string(I.t.x5zAGZ)),
-        (0, i.jsx)(f.A, {
+        (0, l.jsx)(f.A, {
             buttonRef: b,
             onClick: D,
             label: n,

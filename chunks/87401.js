@@ -1,9 +1,9 @@
 t.d(n, { A: () => r });
-var i = t(17928),
-    l = t(73153),
+var l = t(17928),
+    i = t(73153),
     a = t(988794);
 let s = {};
-class o extends i.Ay.PersistedStore {
+class o extends l.Ay.PersistedStore {
     static displayName = "EventBannerStore";
     static persistKey = "EventBanner";
     initialize(e) {
@@ -16,7 +16,7 @@ class o extends i.Ay.PersistedStore {
         return { dismissedEventIds: s };
     }
 }
-let r = new o(l.h, {
+let r = new o(i.h, {
     EVENT_BANNER_DISMISS: function (e) {
         let { eventId: n } = e;
         s = { ...s, [n]: !0 };

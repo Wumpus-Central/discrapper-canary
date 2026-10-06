@@ -1,4 +1,4 @@
-(n.r(t), n.d(t, { WebAudioSound: () => m, playGiftSound: () => I, voiceSinkId: () => f }));
+(n.r(t), n.d(t, { WebAudioSound: () => g, playGiftSound: () => I, voiceSinkId: () => f }));
 var i = n(435558),
     r = n.n(i),
     a = n(72978),
@@ -53,11 +53,11 @@ function T(e, t) {
     (l.A.increment({ name: s.K.NOTIFICATION_SOUND_PLAYBACK_FAILURE, tags: [`reason:${e}`] }),
         _.A.captureException(t, { tags: { source: "notification_sound_playback" } }));
 }
-function g(e) {
+function m(e) {
     T("NotAllowedError" === e.name ? "autoplay_blocked" : "generic", e);
 }
 u.isPlatformEmbedded && (c.Ay.addChangeListener(p), p());
-let m = class {
+let g = class {
     name;
     _volume;
     _playbackRate = 1;
@@ -84,7 +84,7 @@ let m = class {
         this.ensureAudio().then((e) => {
             ((e.loop = !0),
                 e.play().catch((e) => {
-                    this.trackNotificationFailure && g(e);
+                    this.trackNotificationFailure && m(e);
                 }));
         });
     }
@@ -92,7 +92,7 @@ let m = class {
         this.ensureAudio().then((e) => {
             ((e.loop = !1),
                 e.play().catch((e) => {
-                    this.trackNotificationFailure && g(e);
+                    this.trackNotificationFailure && m(e);
                 }));
         });
     }

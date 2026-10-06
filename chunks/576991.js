@@ -1,4 +1,4 @@
-(n.d(t, { A: () => tm, m: () => tA }), n(323874), n(14289), n(35956), n(321073), n(142703));
+(n.d(t, { A: () => tg, m: () => tA }), n(323874), n(14289), n(35956), n(321073), n(142703));
 var i,
     r,
     a,
@@ -16,8 +16,8 @@ var i,
     I = n(766034),
     p = n(314732),
     T = n(214771),
-    g = n(937724),
-    m = n(626584),
+    m = n(937724),
+    g = n(626584),
     S = n(807393),
     N = n(464578),
     C = n(111162),
@@ -144,7 +144,7 @@ class k {
                     n = this._pako,
                     i = this._inflate;
                 if (null == i)
-                    return void new m.A("GatewayCompressionHandler").error(
+                    return void new g.A("GatewayCompressionHandler").error(
                         "flush end happened on closed compression adapter",
                     );
                 if (e !== n.Z_OK) throw Error(`zlib error, ${e}, ${i.strm.msg}`);
@@ -1048,7 +1048,7 @@ let eu = new (class {
                             } catch (n) {
                                 throw (
                                     D.A.captureException(n, { tags: { app_context: "WetfParser" } }),
-                                    new m.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
+                                    new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking (wetf)", {
                                         erlpackUnpackError: n,
                                         erlpackDataPreview: null != t ? Array.from(e.slice(0, 32)) : null,
                                         erlpackDataLength: e.length,
@@ -1062,7 +1062,7 @@ let eu = new (class {
                             return e.unpack(t);
                         } catch (e) {
                             throw (
-                                new m.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
+                                new g.A("GatewayEncodingErlpackEncoding").error("Error unpacking", {
                                     erlpackUnpackError: e,
                                     erlpackDataPreview: null != t ? Array.from(t.slice(0, 32)) : null,
                                     erlpackDataLength: null != t ? t.length : null,
@@ -1122,7 +1122,7 @@ ${n}${t[r]}: ${t[r + 1].micros / 1e3}`),
     } catch (e) {}
     return null != e._trace ? e._trace.join(" -> ") : "???";
 }
-function eg(e) {
+function em(e) {
     return {
         connectTime: e ?? 0,
         numEvents: 0,
@@ -1135,7 +1135,7 @@ function eg(e) {
     };
 }
 n(667532);
-var em = n(499979),
+var eg = n(499979),
     eS = n(877166),
     eN = n(365971),
     eC = n(435558),
@@ -1277,7 +1277,7 @@ class ex {
         };
     }
 }
-let ek = new m.A("DispatcherWorkScheduler");
+let ek = new g.A("DispatcherWorkScheduler");
 class eF {
     _flushTimeoutHandler = null;
     _flushIdleHandler = null;
@@ -1454,7 +1454,7 @@ let eW = (0, eo.mj)({
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    eY = new m.A("GatewaySocket"),
+    eY = new g.A("GatewaySocket"),
     eK = new Set(["INITIAL_GUILD", "READY"]),
     e$ = new Set(["READY", "INITIAL_GUILD"]),
     ez = new Set(["VOICE_SERVER_UPDATE", "STREAM_SERVER_UPDATE"]),
@@ -1485,7 +1485,7 @@ class eQ {
     scheduler = new ej();
     queue = [];
     paused = !0;
-    resumeAnalytics = eg();
+    resumeAnalytics = em();
     getDispatchHandler = null;
     constructor(e) {
         this.socket = e;
@@ -1512,7 +1512,7 @@ class eQ {
             status: 0,
             preloadPromise: null,
             preloadedData: null,
-            receivedAt: (0, em.tB)(),
+            receivedAt: (0, eg.tB)(),
         };
         (this.queue.push(i), this.maybePreload(i) || this.scheduleFlush(t));
     }
@@ -1663,8 +1663,8 @@ class eQ {
                         I = [],
                         p = [],
                         T = [],
-                        g = [],
                         m = [],
+                        g = [],
                         S = [];
                     return (
                         n.forEach((e) => {
@@ -1676,8 +1676,8 @@ class eQ {
                                 I.push("partial" === e.data_mode ? e.partial_updates.emojis : e.emojis),
                                 p.push(i),
                                 T.push("partial" === e.data_mode ? e.partial_updates.stickers : e.stickers),
-                                g.push(t),
-                                m.push(r),
+                                m.push(t),
+                                g.push(r),
                                 S.push(a, n));
                         }),
                         {
@@ -1697,8 +1697,8 @@ class eQ {
                             guild_emojis_size: JSON.stringify(I).length,
                             guild_threads_size: JSON.stringify(p).length,
                             guild_stickers_size: JSON.stringify(T).length,
-                            guild_events_size: JSON.stringify(m).length,
-                            guild_features_size: JSON.stringify(g).length,
+                            guild_events_size: JSON.stringify(g).length,
+                            guild_features_size: JSON.stringify(m).length,
                             guild_remaining_data_size: JSON.stringify(S).length,
                             size_metrics_duration_ms: Date.now() - t,
                         }
@@ -1787,7 +1787,7 @@ class eQ {
                           { logEventProperties: !0 },
                       ),
                   this.socket.handleResumeDispatched(),
-                  (this.resumeAnalytics = eg()))
+                  (this.resumeAnalytics = em()))
                 : this.getDispatchHandler(r)?.dispatch(i, r, s, l);
         this.socket.connectionState === v.A.RESUMING && (this.resumeAnalytics.dispatchTime += performance.now() - o);
     }
@@ -2132,8 +2132,8 @@ class tl extends te.G {
 new tl();
 var to = n(767589),
     td = n(458244);
-let tc = new m.A("QOS"),
-    tu = new m.A("GatewaySocket"),
+let tc = new g.A("QOS"),
+    tu = new g.A("GatewaySocket"),
     t_ = new ef(),
     tE = null;
 function tA(e) {
@@ -2146,8 +2146,8 @@ let tf = 30 * L.A.Millis.SECOND,
 function tT(e) {
     return null == e ? 0 : "string" == typeof e ? e.length : e.byteLength;
 }
-let tg = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
-class tm extends e3 {
+let tm = window.GLOBAL_ENV.GATEWAY_ENDPOINT;
+class tg extends e3 {
     gatewayBackoff;
     handleIdentify;
     dispatchExceptionBackoff = new u.A(1e3, tp);
@@ -2489,7 +2489,7 @@ class tm extends e3 {
         ((this.didForceClearGuildHashes = !1), (this.hasConnectedOnce = !0));
     }
     _getGatewayUrl() {
-        return null != this.resumeUrl ? this.resumeUrl : tg;
+        return null != this.resumeUrl ? this.resumeUrl : tm;
     }
     _handleHeartbeatReceive() {
         (this._sendHeartbeat(),
@@ -2605,7 +2605,7 @@ class tm extends e3 {
     }
     _doResume() {
         ((this.connectionState = v.A.RESUMING),
-            (this.dispatcher.resumeAnalytics = eg(Date.now() - this.connectionStartTime)),
+            (this.dispatcher.resumeAnalytics = em(Date.now() - this.connectionStartTime)),
             tu.info(`[RESUME] resuming session ${this.sessionId ?? ""}, seq: ${this.seq}`),
             this.send(e2.RESUME, { token: this.token, session_id: this.sessionId, seq: this.seq }, !1));
     }
@@ -2617,9 +2617,9 @@ class tm extends e3 {
         let t = Date.now();
         this.identifyStartTime = t;
         let [n, i, r] = await Promise.all([
-                (0, g.O)() ? I.A.getCommittedVersions() : {},
-                (0, g.O)() ? T.A.getCommittedVersions() : {},
-                !!(0, g.O)() && p.A.canUseGuildVersions(),
+                (0, m.O)() ? I.A.getCommittedVersions() : {},
+                (0, m.O)() ? T.A.getCommittedVersions() : {},
+                !!(0, m.O)() && p.A.canUseGuildVersions(),
             ]),
             a = (function (e, t) {
                 let n;

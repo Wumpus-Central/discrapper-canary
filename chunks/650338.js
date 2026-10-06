@@ -1,4 +1,4 @@
-n.d(t, { Bs: () => m, HB: () => p, K2: () => C, ME: () => g, N5: () => N, OI: () => I, wz: () => S });
+n.d(t, { Bs: () => g, HB: () => p, K2: () => C, ME: () => m, N5: () => N, OI: () => I, wz: () => S });
 var i = n(582128),
     r = n(17928),
     a = n(965025),
@@ -30,12 +30,12 @@ function p(e) {
 function T(e) {
     return null != e.quality || null != e.guildPremiumTier;
 }
-function g(e) {
+function m(e) {
     return e.type === h.ei.SOURCE
         ? f.intl.string(f.t.XjXqzh)
         : f.intl.formatToPlainString(f.t.TEOC0I, { resolution: e.height });
 }
-function m(e) {
+function g(e) {
     return f.intl.formatToPlainString(f.t.Qb44XH, { fps: e });
 }
 function S(e) {

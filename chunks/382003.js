@@ -10,8 +10,8 @@ var n = s(477900),
     u = s(285918),
     m = s(912630),
     x = s(965162),
-    A = s(312987),
-    p = s(952572),
+    p = s(312987),
+    A = s(952572),
     g = s(503698),
     E = s.n(g),
     _ = s(939249),
@@ -114,9 +114,9 @@ function Z(e) {
             isAnimatedImage: d,
             isVideo: u,
             hotspotLocation: m,
-            ariaLabel: A,
+            ariaLabel: p,
         } = e,
-        p = (0, r.p)(),
+        A = (0, r.p)(),
         { analyticsLocations: g } = (0, T.Ay)(D.A.VIDEO_BACKGROUND_IMAGE_OPTION),
         N = (0, i.bG)([P.A], () => null != m && P.A.hasHotspot(m)),
         I = l.useCallback((e) => {
@@ -131,14 +131,14 @@ function Z(e) {
             (k.sF(m),
             R.default.track(W.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: z.e.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET,
-                location: p.location,
+                location: A.location,
                 location_stack: g,
             }),
             (0, M.sq)(W.U7l.PREMIUM_UPSELL_VIEWED, g, () => (0, B.uq)(z.e.ANIMATED_VIDEO_BACKGROUND_NEW_PRESET)));
     }
     return (0, n.jsxs)(_.D, {
         className: E()(q.gf, { [q.JI]: o }),
-        "aria-label": A,
+        "aria-label": p,
         onClick: () => c(t),
         onContextMenu: (e) =>
             (0, U.L3)(e, async () => {
@@ -381,7 +381,7 @@ function el(e) {
         } = e,
         j = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
         [f, I] = l.useState(null),
-        h = (0, p.A)(),
+        h = (0, A.A)(),
         O = d.Ay.canUseCustomBackgrounds(j);
     l.useEffect(() => {
         (0, u.HR)();
@@ -393,10 +393,10 @@ function el(e) {
         y = l.useRef(U);
     function D(e) {
         (E(e),
-            (0, A.S1)(e, _, { location: S.location })
+            (0, p.S1)(e, _, { location: S.location })
                 .then(() => I(null))
                 .catch(() => {
-                    (I(J.intl.string(J.t.ejrSLe)), (0, A.S1)(null, _, { location: S.location }));
+                    (I(J.intl.string(J.t.ejrSLe)), (0, p.S1)(null, _, { location: S.location }));
                 }));
     }
     return (
@@ -405,7 +405,7 @@ function el(e) {
         }),
         l.useEffect(() => {
             let { isVideoBackgroundSupported: e, onSelectBackgroundOption: t, selectedBackgroundOption: s } = y.current;
-            e ? (0, A.S1)(s, _, { track: !1 }).catch(() => t(null)) : null != s && t(null);
+            e ? (0, p.S1)(s, _, { track: !1 }).catch(() => t(null)) : null != s && t(null);
         }, [_]),
         h
             ? (0, n.jsx)("div", {

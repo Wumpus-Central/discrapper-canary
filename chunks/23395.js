@@ -16,8 +16,8 @@ function h(e) {
         h = s()(t.sendAtTimestamp.substring(0, 200)),
         [f, I] = r.useState(h),
         [p, T] = r.useState(!1),
-        g = (0, u.Vf)(f, t.scheduledMessageId);
-    async function m() {
+        m = (0, u.Vf)(f, t.scheduledMessageId);
+    async function g() {
         T(!0);
         try {
             (await (0, d.Eg)({ scheduledMessageId: t.scheduledMessageId, scheduledTimestamp: f.toISOString() }),
@@ -36,7 +36,7 @@ function h(e) {
         onClose: a,
         actions: [
             { variant: "secondary", text: E.intl.string(E.t["ETE/oC"]), onClick: a },
-            { variant: "primary", text: E.intl.string(E.t.VZANAD), onClick: m, loading: p, disabled: null != g },
+            { variant: "primary", text: E.intl.string(E.t.VZANAD), onClick: g, loading: p, disabled: null != m },
         ],
         children: (0, i.jsx)(_.A, { defaultValue: h, onChange: I, scheduledMessageId: t.scheduledMessageId }),
     });

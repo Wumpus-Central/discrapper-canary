@@ -1,5 +1,5 @@
-a.r(
-    (e.exports = {
+r.r(
+    (a.exports = {
         slider: "slider__4c059",
         mini: "mini__4c059",
         bar: "bar__4c059",

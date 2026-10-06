@@ -1,20 +1,20 @@
-n.d(t, { T: () => s, q: () => r });
+n.d(e, { T: () => l, q: () => s });
 var a = n(575593),
-    i = n(993408),
-    l = n(375708);
-function s(e) {
-    var t = e.name;
-    switch (e.tenantMetadata?.collectibles?.type) {
+    r = n(993408),
+    i = n(375708);
+function l(t) {
+    var e = t.name;
+    switch (t.tenantMetadata?.collectibles?.type) {
         case a.R.AVATAR_DECORATION:
-            return l.intl.formatToPlainString(l.t.lvBzLi, { product: t });
+            return i.intl.formatToPlainString(i.t.lvBzLi, { product: e });
         case a.R.PROFILE_EFFECT:
-            return l.intl.formatToPlainString(l.t.eR7moP, { product: t });
+            return i.intl.formatToPlainString(i.t.eR7moP, { product: e });
         case a.R.NAMEPLATE:
-            return l.intl.formatToPlainString(l.t.YFOwHj, { product: t });
+            return i.intl.formatToPlainString(i.t.YFOwHj, { product: e });
         default:
-            return t;
+            return e;
     }
 }
-function r(e) {
-    return !(0, i.G0)(e) && e.type !== a.R.EXTERNAL_SKU;
+function s(t) {
+    return !(0, r.G0)(t) && t.type !== a.R.EXTERNAL_SKU;
 }

@@ -3,9 +3,9 @@
     CA: () => A,
     Hn: () => a,
     IU: () => d,
-    Ju: () => g,
+    Ju: () => m,
     KQ: () => l,
-    Oq: () => m,
+    Oq: () => g,
     PY: () => N,
     RX: () => c,
     XB: () => I,
@@ -73,11 +73,11 @@ function f(e, t) {
 let I = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
     p = 10,
     T = 36e5;
-function g(e) {
+function m(e) {
     return I.has(e) ? 5242880 : 0x3200000;
 }
-function m(e, t) {
-    return e <= g(t);
+function g(e, t) {
+    return e <= m(t);
 }
 function S(e) {
     return `${Math.round(e / 1048576)} MB`;

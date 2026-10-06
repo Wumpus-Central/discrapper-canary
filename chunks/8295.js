@@ -1,4 +1,4 @@
-e.exports = {
+n.exports = {
     WE: "shinyButton__6a443",
     Qr: "buttonShine__6a443",
     kF: "Shine__6a443",

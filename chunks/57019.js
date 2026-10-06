@@ -1,15 +1,15 @@
-n.d(t, { Fn: () => A, Gt: () => m, Ru: () => E });
+n.d(t, { Fn: () => m, Gt: () => A, Ru: () => E });
 var i = n(582128),
     r = n(717421),
     l = n(232554),
     s = n(626584),
     a = n(567249),
     o = n(287809),
-    c = n(531685),
-    u = n(365971),
+    u = n(531685),
+    c = n(365971),
     d = n(392164);
 let h = new s.A("NotificationLayoutManager");
-class A {
+class m {
     resizeObserver;
     listeners = new Map();
     queuedCompute = !1;
@@ -86,44 +86,44 @@ class A {
         return this.listeners.get(e);
     }
 }
-let m = i.createContext(new A(!0));
+let A = i.createContext(new m(!0));
 function g(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
 let f = { mass: 0.8, friction: 25, tension: 320 };
 function E(e, t, n) {
-    let [s, A] = (0, r.z)(
+    let [s, m] = (0, r.z)(
             () => ({ from: { opacity: 0, scale: 1, transform: 0, height: 0, contentOpacity: 1 } }),
             void 0,
             [],
         ),
-        E = i.useRef(A),
-        b = i.useContext(m),
+        E = i.useRef(m),
+        b = i.useContext(A),
         p = i.useMemo(() => {
             let t = !1;
             return (n) => {
                 null == n
                     ? b.unsubscribe(e)
                     : b.subscribe(e, n, (n) => {
-                          let { locked: i, matchHeight: r, height: l, top: s, index: A } = n;
+                          let { locked: i, matchHeight: r, height: l, top: s, index: m } = n;
                           if (o.default.getCurrentUser()?.isStaff()) {
                               let t = a.A.getWindow(d.f),
-                                  n = null != t ? c.A.windowSize((0, u.Q2)(t)) : void 0;
+                                  n = null != t ? u.A.windowSize((0, c.Q2)(t)) : void 0;
                               h.info(
                                   "Notification layout update",
-                                  { id: e, locked: i, matchHeight: r, height: l, top: s, index: A },
+                                  { id: e, locked: i, matchHeight: r, height: l, top: s, index: m },
                                   n,
                               );
                           }
-                          let { current: m } = E,
+                          let { current: A } = E,
                               b = {
-                                  opacity: i && A > 4 ? 0 : i ? Math.min(1 - A / 4, 1) : 1,
-                                  scale: i ? Math.min(1 - A / 4, 1) : 1,
-                                  transform: g(A, i, s),
-                                  contentOpacity: i && A > 0 ? 0 : 1,
+                                  opacity: i && m > 4 ? 0 : i ? Math.min(1 - m / 4, 1) : 1,
+                                  scale: i ? Math.min(1 - m / 4, 1) : 1,
+                                  transform: g(m, i, s),
+                                  contentOpacity: i && m > 0 ? 0 : 1,
                                   height: i ? r : l,
                               };
-                          (m({
+                          (A({
                               from: t
                                   ? void 0
                                   : {
