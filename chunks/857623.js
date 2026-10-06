@@ -24,17 +24,17 @@ function c(e) {
             let e = [...t].sort((e, t) => (null != E.get(e)) - (null != E.get(t)));
             return (0, s.oP)(e, m, p, f);
         }, [t, h, o, E, m, p, f]),
-        x = d[n],
-        T = d.Skeleton;
-    return null == x
+        T = d[n],
+        x = d.Skeleton;
+    return null == T
         ? null
         : (g || (o && v)) && u
           ? A.map((e, t) =>
-                null != T
-                    ? (0, r.jsx)(T, { children: (0, r.jsx)(x, { ...c, skuId: e, productId: e }) }, `${e}-${t}`)
+                null != x
+                    ? (0, r.jsx)(x, { children: (0, r.jsx)(T, { ...c, skuId: e, productId: e }) }, `${e}-${t}`)
                     : null,
             )
-          : A.map((e, t) => (0, r.jsx)(x, { ...c, skuId: e, productId: e }, `${e}-${t}`));
+          : A.map((e, t) => (0, r.jsx)(T, { ...c, skuId: e, productId: e }, `${e}-${t}`));
 }
 let o = function (e) {
     let {
@@ -55,14 +55,14 @@ let o = function (e) {
             pages: E,
             paginate: v,
             showPagination: A,
-            paginationPosition: x,
-            truncate: T,
+            paginationPosition: T,
+            truncate: x,
             perPage: S,
             setPage: y,
         } = (0, s.Wk)(t.length, p, f),
-        j = (0, l.useMemo)(() => (0, s.oP)(t, v ? g : void 0, S, T), [t, v, g, S, T]),
-        _ = A && "top" === x,
-        C = A && "bottom" === x,
+        _ = (0, l.useMemo)(() => (0, s.oP)(t, v ? g : void 0, S, x), [t, v, g, S, x]),
+        j = A && "top" === T,
+        C = A && "bottom" === T,
         b =
             null != p
                 ? (0, r.jsx)("div", {
@@ -75,7 +75,7 @@ let o = function (e) {
         return (0, r.jsxs)(r.Fragment, {
             children: [
                 b,
-                _ && (0, r.jsx)(s.hi, { page: g, pages: E, setPage: y }),
+                j && (0, r.jsx)(s.hi, { page: g, pages: E, setPage: y }),
                 (0, r.jsx)(c, {
                     skuIds: t,
                     skuBlock: n,
@@ -83,10 +83,10 @@ let o = function (e) {
                     sortPurchased: i,
                     showSkeleton: u,
                     componentMap: d,
-                    pagedSkuIds: j,
+                    pagedSkuIds: _,
                     page: v ? g : void 0,
                     perPage: v ? S : void 0,
-                    truncate: T,
+                    truncate: x,
                 }),
                 C && (0, r.jsx)(s.hi, { page: g, pages: E, setPage: y }),
             ],
@@ -97,8 +97,8 @@ let o = function (e) {
         : (0, r.jsxs)(r.Fragment, {
               children: [
                   b,
-                  _ && (0, r.jsx)(s.hi, { page: g, pages: E, setPage: y }),
-                  j.map((e, t) => (0, r.jsx)(k, { ...a, skuId: e, productId: e }, `${e}-${t}`)),
+                  j && (0, r.jsx)(s.hi, { page: g, pages: E, setPage: y }),
+                  _.map((e, t) => (0, r.jsx)(k, { ...a, skuId: e, productId: e }, `${e}-${t}`)),
                   C && (0, r.jsx)(s.hi, { page: g, pages: E, setPage: y }),
               ],
           });

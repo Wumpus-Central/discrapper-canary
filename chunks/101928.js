@@ -3,28 +3,28 @@ var n = t(317097),
     l = t(17928),
     i = t(374994),
     u = t(462887),
-    o = t(736653),
-    s = t(775602),
-    d = t(654107),
+    s = t(736653),
+    d = t(775602),
+    o = t(654107),
     a = t(543699),
-    m = t(837529),
-    h = t(652215);
+    h = t(837529),
+    m = t(652215);
 function c(e) {
     let { user: r, displayProfile: t, pendingThemeColors: c, pendingAvatarSrc: A, isPreview: f, forceUserTheme: v } = e,
-        y = (0, o.Ay)(),
-        C = (0, m.Wd)(),
-        p = (0, l.bG)([s.Ay], () => s.Ay.syncProfileThemeWithUserTheme),
-        T = A ?? r?.getAvatarURL(t?.guildId, 80),
-        N = (0, i.nt)("PRIMARY_530", { saturation: 1 }),
-        [w, x] = (0, d.rh)(T, N, !1);
-    if (null != C) return C;
+        y = (0, s.Ay)(),
+        p = (0, h.Wd)(),
+        C = (0, l.bG)([d.Ay], () => d.Ay.syncProfileThemeWithUserTheme),
+        N = A ?? r?.getAvatarURL(t?.guildId, 80),
+        w = (0, i.nt)("PRIMARY_530", { saturation: 1 }),
+        [T, b] = (0, o.rh)(N, w, !1);
+    if (null != p) return p;
     if (!t?.canEditThemes && !f) return { theme: y, primaryColor: null, secondaryColor: null };
-    let b = t?.getPreviewThemeColors(c),
-        P = b?.[0] ?? (0, n.LX)(w),
-        j = b?.[1] ?? (0, n.LX)(x),
-        O = p || v ? y : ((0, a.tM)(P) ?? y);
+    let O = t?.getPreviewThemeColors(c),
+        R = O?.[0] ?? (0, n.LX)(T),
+        g = O?.[1] ?? (0, n.LX)(b),
+        j = C || v ? y : ((0, a.tM)(R) ?? y);
     return (
-        O === h.NJ8.ASH && (0, u.M)(y) ? (O = y) : O === h.NJ8.ASH && (0, u.q)(y) && (O = h.NJ8.DARK),
-        { theme: O, primaryColor: P, secondaryColor: j }
+        j === m.NJ8.ASH && (0, u.M)(y) ? (j = y) : j === m.NJ8.ASH && (0, u.q)(y) && (j = m.NJ8.DARK),
+        { theme: j, primaryColor: R, secondaryColor: g }
     );
 }

@@ -1,1 +1,1 @@
-p.exports = { T: "unreadCount__23463", l: "mention__23463" };
+_.exports = { T: "unreadCount__23463", l: "mention__23463" };

@@ -52,12 +52,12 @@ function d(e) {
                 body: a.intl.formatToPlainString(a.t["5U9LSo"], { types: d }),
             });
         }, [d]),
-        p = l.useMemo(() => 0 === n.length || n.some((e) => o.includes(e) || u.includes(e)), [n]);
+        f = l.useMemo(() => 0 === n.length || n.some((e) => o.includes(e) || u.includes(e)), [n]);
     return {
         allowedExtensions: n,
         typesFormattedString: d,
         validateFilenames: h,
         showInvalidFileTypeAlert: m,
-        mediaFilesAllowed: p,
+        mediaFilesAllowed: f,
     };
 }

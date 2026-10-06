@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(834730),
     h = n(140735),
     m = n(793574),
-    p = n(688810),
-    f = n(135621),
+    f = n(688810),
+    p = n(135621),
     g = n(287809),
     x = n(158045),
     E = n(192308),
@@ -37,7 +37,7 @@ function _(e) {
             let e = b.A.getChannel(I.Ay.getChannelId());
             return e?.isPrivate() ? N.liQ.DM_CHANNEL : N.liQ.GUILD_CHANNEL;
         }),
-        { analyticsLocations: a } = (0, p.Ay)(m.A.PREMIUM_UPSELL);
+        { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
     return (
         i.useEffect(() => {
             (v.default.track(N.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -75,7 +75,7 @@ var R = n(263582),
 function O(e) {
     let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: E } = e,
         S = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
-        y = (0, f.A)(),
+        y = (0, p.A)(),
         C = i ?? y,
         A = r ?? i ?? y / 10,
         b = n.length,
@@ -90,11 +90,11 @@ function O(e) {
                 : j > 0
                   ? T.intl.formatToPlainString(T.t.qH8uFW, { count: j })
                   : T.intl.string(T.t.YSRIqa),
-        { analyticsLocations: L } = (0, p.Ay)(m.A.CHARACTER_COUNT),
+        { analyticsLocations: L } = (0, f.Ay)(m.A.CHARACTER_COUNT),
         { isVisible: P } = (0, R.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r });
     if (!P) return null;
     let M = j >= 0;
-    return (0, l.jsx)(p.f5, {
+    return (0, l.jsx)(f.f5, {
         value: L,
         children: (0, l.jsxs)("div", {
             className: s()(E, w.Dq),

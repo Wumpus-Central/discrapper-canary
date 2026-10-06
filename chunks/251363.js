@@ -1,12 +1,12 @@
-n.d(t, { i: () => a, o: () => l });
-var i = n(884868),
-    r = n(192888);
+n.d(t, { i: () => o, o: () => l });
+var r = n(884868),
+    i = n(192888);
 function l(e, t) {
     let n = e?.querySelector("iframe");
     return null != n ? n : null == t ? null : document.querySelector(`[data-frame-id="${CSS.escape(t)}"] iframe`);
 }
-function a(e, t, n, l) {
-    return (0, r.W)(
+function o(e, t, n, l) {
+    return (0, i.W)(
         e,
         "capture-now",
         { ...(null == n ? {} : { spec: n }), ...(null == l ? {} : { uploadToken: l }) },
@@ -17,6 +17,6 @@ function a(e, t, n, l) {
             "accepted" === e.phase)
                 ? { status: "accepted" }
                 : { status: "failed", code: e.code, message: e.error },
-        (e) => (e instanceof i.fq ? { status: "failed" } : { status: "unavailable" }),
+        (e) => (e instanceof r.fq ? { status: "failed" } : { status: "unavailable" }),
     );
 }

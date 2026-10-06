@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(929788),
     h = n(74833),
     m = n(216964),
-    p = n(387758),
-    f = n(39623),
+    f = n(387758),
+    p = n(39623),
     g = n(559106),
     x = n(750506),
     E = n(267102),
@@ -58,7 +58,7 @@ function I(e) {
                       (0, l.jsx)(N, {
                           slateEditor: t,
                           markdownSyntax: "inlineCode",
-                          children: (0, l.jsx)(p.G, {
+                          children: (0, l.jsx)(f.G, {
                               size: "custom",
                               width: 20,
                               height: 20,
@@ -69,7 +69,7 @@ function I(e) {
                   (0, l.jsx)(N, {
                       slateEditor: t,
                       markdownSyntax: "spoiler",
-                      children: (0, l.jsx)(f.EyeIcon, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
+                      children: (0, l.jsx)(p.EyeIcon, { size: "md", color: "currentColor", className: s()(b.Kk, i) }),
                   }),
               ],
           });
@@ -80,21 +80,21 @@ let v = i.forwardRef(function (e, t) {
         [c, d] = i.useState(!1),
         h = i.useRef(null),
         m = i.useContext(E.Ay),
-        p = i.useCallback(() => {
+        f = i.useCallback(() => {
             (d(!1), clearTimeout(h.current));
         }, []),
-        f = i.useCallback(
+        p = i.useCallback(
             (e) => {
                 let t = m.renderWindow;
-                (e.target instanceof t.Node && u.current?.contains(e.target)) || p();
+                (e.target instanceof t.Node && u.current?.contains(e.target)) || f();
             },
-            [m, p],
+            [m, f],
         ),
         g = i.useCallback(
             (e) => {
                 let t = m.renderWindow;
                 if (e.target instanceof t.Element)
-                    if (0 !== e.button) p();
+                    if (0 !== e.button) f();
                     else {
                         let n = e.target instanceof t.Node && u.current?.contains(e.target);
                         (clearTimeout(h.current),
@@ -104,29 +104,29 @@ let v = i.forwardRef(function (e, t) {
                                 d(n || (null != t && null != l && l.contains(t)));
                             }, 100)));
                     }
-                else p();
+                else f();
             },
-            [m, r, p],
+            [m, r, f],
         );
-    (i.useImperativeHandle(t, () => ({ hide: p }), [p]),
+    (i.useImperativeHandle(t, () => ({ hide: f }), [f]),
         i.useEffect(() => {
             let e = m.renderWindow;
             return (
-                e.document.addEventListener("keydown", p),
-                e.document.addEventListener("mousedown", f),
+                e.document.addEventListener("keydown", f),
+                e.document.addEventListener("mousedown", p),
                 e.document.addEventListener("mouseup", g),
-                e.addEventListener("focus", p),
-                e.addEventListener("blur", p),
+                e.addEventListener("focus", f),
+                e.addEventListener("blur", f),
                 () => {
-                    (e.document.removeEventListener("keydown", p),
-                        e.document.removeEventListener("mousedown", f),
+                    (e.document.removeEventListener("keydown", f),
+                        e.document.removeEventListener("mousedown", p),
                         e.document.removeEventListener("mouseup", g),
-                        e.removeEventListener("focus", p),
-                        e.removeEventListener("blur", p),
+                        e.removeEventListener("focus", f),
+                        e.removeEventListener("blur", f),
                         clearTimeout(h.current));
                 }
             );
-        }, [m, p, f, g]));
+        }, [m, f, p, g]));
     let { x: S, y } = i.useMemo(() => {
             let e = n();
             if (e?.selection == null || C.ZF.isCollapsed(e.selection) || !c) return { x: null, y: null };
@@ -143,9 +143,9 @@ let v = i.forwardRef(function (e, t) {
             (d.setStart(l.anchorNode, l.anchorOffset), d.setEnd(l.focusNode, l.focusOffset));
             let h = d.getBoundingClientRect(),
                 m = s.x === u.x,
-                p = m ? h.x : Math.min(s.x, u.x);
+                f = m ? h.x : Math.min(s.x, u.x);
             return {
-                x: p + ((m ? h.x + h.width : Math.max(s.x, u.x)) - p) / 2,
+                x: f + ((m ? h.x + h.width : Math.max(s.x, u.x)) - f) / 2,
                 y: Math.max(r.current?.getBoundingClientRect()?.y ?? 0, Math.min(u.y, s.y)),
             };
         }, [r, c, n]),

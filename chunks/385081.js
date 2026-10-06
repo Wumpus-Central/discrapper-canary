@@ -1,10 +1,10 @@
-n.d(t, { Hy: () => p, hV: () => f, w2: () => h, xf: () => u, yJ: () => g });
+n.d(e, { Hy: () => d, hV: () => s, w2: () => p, xf: () => l, yJ: () => R });
 var i = n(587895),
     r = n(174459),
-    l = n(260498),
-    a = n(246338),
-    o = n(652215);
-let u = {
+    _ = n(260498),
+    o = n(246338),
+    a = n(652215);
+let l = {
     BUILD_FAILED: "BUILD_FAILED",
     HEALTHCHECK_FAILED: "HEALTHCHECK_FAILED",
     AGENT_ERROR: "AGENT_ERROR",
@@ -14,32 +14,32 @@ let u = {
     RUNTIME_FRAME_ERROR: "RUNTIME_FRAME_ERROR",
     RUNTIME_WORKER_ERROR: "RUNTIME_WORKER_ERROR",
 };
-function s(e) {
-    return null == e || "" === e ? null : e.slice(0, 256);
+function u(t) {
+    return null == t || "" === t ? null : t.slice(0, 256);
 }
-function d(e) {
-    let t = l.Ay.getProject(e);
+function c(t) {
+    let e = _.Ay.getProject(t);
     return {
-        project_id: e,
-        project_name: s(t?.name),
-        application_id: t?.application_id ?? null,
-        preview_application_id: t?.preview_application_id ?? null,
+        project_id: t,
+        project_name: u(e?.name),
+        application_id: e?.application_id ?? null,
+        preview_application_id: e?.preview_application_id ?? null,
     };
 }
-function c(e, t) {
-    let n = l.Ay.getProject(e),
-        i = (t ? n?.preview_guild_id : n?.guild_id) ?? null,
-        r = (t ? n?.preview_application_id : n?.application_id) ?? null;
-    return { guild_id: i, channel_id: null != i && null != r ? (0, a.i8)(i, r) : null };
+function E(t, e) {
+    let n = _.Ay.getProject(t),
+        i = (e ? n?.preview_guild_id : n?.guild_id) ?? null,
+        r = (e ? n?.preview_application_id : n?.application_id) ?? null;
+    return { guild_id: i, channel_id: null != i && null != r ? (0, o.i8)(i, r) : null };
 }
-function f(e, t) {
+function s(t, e) {
     var n;
-    r.default.track(o.HAw.VIBEGRATION_TURN_RESULTED, {
-        ...d(e),
-        turn_result: t.result ?? null,
-        turn_summary: s(t.detail ?? t.summary),
-        turn_cost: t.cost_usd ?? null,
-        ...(null == (n = t.tokens)
+    r.default.track(a.HAw.VIBEGRATION_TURN_RESULTED, {
+        ...c(t),
+        turn_result: e.result ?? null,
+        turn_summary: u(e.detail ?? e.summary),
+        turn_cost: e.cost_usd ?? null,
+        ...(null == (n = e.tokens)
             ? {
                   turn_input_tokens: null,
                   turn_output_tokens: null,
@@ -57,41 +57,41 @@ function f(e, t) {
               }),
     });
 }
-function h(e, t) {
-    let { isPreview: n } = t,
-        l = d(e),
-        a = n ? l.preview_application_id : l.application_id,
-        u = null != a ? i.A.getApplication(a) : null;
-    r.default.track(o.HAw.VIBEGRATION_DEPLOYED, {
-        ...l,
-        project_summary: s(u?.description),
+function p(t, e) {
+    let { isPreview: n } = e,
+        _ = c(t),
+        o = n ? _.preview_application_id : _.application_id,
+        l = null != o ? i.A.getApplication(o) : null;
+    r.default.track(a.HAw.VIBEGRATION_DEPLOYED, {
+        ..._,
+        project_summary: u(l?.description),
         is_preview: n,
-        ...c(e, n),
+        ...E(t, n),
     });
 }
-function p(e, t) {
-    let { location: n, code: i, message: l, details: a, isPreview: u = !0 } = t;
-    r.default.track(o.HAw.VIBEGRATION_ERRORED, {
-        ...d(e),
-        is_preview: u,
-        ...c(e, u),
+function d(t, e) {
+    let { location: n, code: i, message: _, details: o, isPreview: l = !0 } = e;
+    r.default.track(a.HAw.VIBEGRATION_ERRORED, {
+        ...c(t),
+        is_preview: l,
+        ...E(t, l),
         error_location: n,
         error_code: i,
-        error_message: s(l),
-        error_details: s(a),
+        error_message: u(_),
+        error_details: u(o),
     });
 }
-function g(e, t) {
-    let { entryPoint: n, publishState: i, surface: a, installScope: u, action: s } = t,
-        d = l.Ay.getProject(e);
-    r.default.track(o.HAw.VIBEGRATION_PUBLISH_ACTION_CLICKED, {
-        project_id: e,
-        application_id: d?.application_id ?? null,
-        guild_id: "user" === u ? null : (d?.guild_id ?? null),
+function R(t, e) {
+    let { entryPoint: n, publishState: i, surface: o, installScope: l, action: u } = e,
+        c = _.Ay.getProject(t);
+    r.default.track(a.HAw.VIBEGRATION_PUBLISH_ACTION_CLICKED, {
+        project_id: t,
+        application_id: c?.application_id ?? null,
+        guild_id: "user" === l ? null : (c?.guild_id ?? null),
         entry_point: n,
         publish_state: i,
-        surface: a,
-        install_scope: u,
-        action: s,
+        surface: o,
+        install_scope: l,
+        action: u,
     });
 }

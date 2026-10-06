@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(608299),
     h = n(155718),
     m = n(775602),
-    p = n(260762),
-    f = n(861382),
+    f = n(260762),
+    p = n(861382),
     g = n(522602),
     x = n(234320),
     E = n(215497),
@@ -31,13 +31,13 @@ function k(e) {
         [o, u] = i.useState(!1),
         c = g.A.getUpload(t, n.name, I.C.SlashCommand),
         m = i.useRef(null),
-        p = n.type === h.n4.ATTACHMENT ? n.fileTypes : void 0,
+        f = n.type === h.n4.ATTACHMENT ? n.fileTypes : void 0,
         {
-            allowedExtensions: f,
+            allowedExtensions: p,
             typesFormattedString: x,
             validateFilenames: k,
             showInvalidFileTypeAlert: _,
-        } = (0, A.M1)(p),
+        } = (0, A.M1)(f),
         R = i.useCallback(() => {
             u(!0);
         }, []),
@@ -46,11 +46,11 @@ function k(e) {
         }, []),
         O = i.useCallback(
             (e, l) => {
-                if (f.length > 0 && !k([e.name])) return _();
+                if (p.length > 0 && !k([e.name])) return _();
                 let i = { id: n.name, file: e, platform: b.x.WEB, origin: l };
                 d.A.setFile({ channelId: t, id: n.name, file: i, draftType: I.C.SlashCommand, allowOptimization: !1 });
             },
-            [f.length, k, n.name, t, _],
+            [p.length, k, n.name, t, _],
         ),
         L = i.useCallback(
             (e) => {
@@ -125,7 +125,7 @@ function k(e) {
                                       null != t && null != n && (O(n, "file_picker"), (e.currentTarget.value = ""));
                                   },
                                   multiple: !1,
-                                  filters: f.length > 0 ? [{ name: "", extensions: f }] : void 0,
+                                  filters: p.length > 0 ? [{ name: "", extensions: p }] : void 0,
                                   tabIndex: -1,
                                   "aria-hidden": !0,
                                   className: j.Fg,
@@ -143,16 +143,16 @@ let O = [];
 function L(e) {
     let { channelId: t, type: n, ignoreUploadId: r, smallAttachments: S = !1 } = e,
         y = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled),
-        C = (0, p.A)("attachments", o.Gl.HORIZONTAL),
+        C = (0, f.A)("attachments", o.Gl.HORIZONTAL),
         A = (0, u.bG)([g.A], () => g.A.getUploads(t, n.drafts.type)),
         {
             isApplicationCommand: b,
             commandOptions: I,
             commandOptionStates: N,
-        } = (0, u.cf)([f.A], () => {
-            let e = f.A.getActiveCommand(t);
+        } = (0, u.cf)([p.A], () => {
+            let e = p.A.getActiveCommand(t);
             if (null == e) return { isApplicationCommand: !1, commandOptions: O, commandOptionStates: null };
-            let n = f.A.getOptionStates(t);
+            let n = p.A.getOptionStates(t);
             return { isApplicationCommand: !0, commandOptions: e.options, commandOptionStates: n };
         }),
         T = i.useMemo(() => I?.filter((e) => e.type === h.n4.ATTACHMENT && N?.[e.name]?.hasValue) ?? [], [I, N]),

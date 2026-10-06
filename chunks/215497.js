@@ -10,8 +10,8 @@ var l,
     d = n(101555),
     h = n(625494),
     m = n(652215),
-    p = n(375708),
-    f = n(33720),
+    f = n(375708),
+    p = n(33720),
     g =
         (((l = {})[(l.SMALL = 0)] = "SMALL"),
         (l[(l.MEDIUM = 1)] = "MEDIUM"),
@@ -89,21 +89,21 @@ let E = r.forwardRef(function (e, t) {
                     C?.(e);
                 }
             },
-            className: a()(f.Se, s),
+            className: a()(p.Se, s),
             ref: t,
             children: (0, i.jsxs)("div", {
-                className: f.PO,
+                className: p.PO,
                 ref: I,
                 children: [
                     g,
                     _
                         ? (0, i.jsx)("div", {
-                              className: f.TC,
+                              className: p.TC,
                               children: (0, i.jsx)("div", {
-                                  className: a()(f.KY, { [f.BN]: k }),
+                                  className: a()(p.KY, { [p.BN]: k }),
                                   onContextMenu: x,
-                                  "aria-label": p.intl.string(p.t["8Lu3Du"]),
-                                  children: (0, i.jsx)(d.Ay, { className: a()({ [f.BX]: k }), children: E }),
+                                  "aria-label": f.intl.string(f.t["8Lu3Du"]),
+                                  children: (0, i.jsx)(d.Ay, { className: a()({ [p.BX]: k }), children: E }),
                               }),
                           })
                         : null,

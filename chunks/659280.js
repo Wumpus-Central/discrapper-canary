@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(297264),
     h = n(97808),
     m = n(778712),
-    p = n(36075),
-    f = n(545442),
+    f = n(36075),
+    p = n(545442),
     g = n(678708),
     x = n(88187),
     E = n(775602),
@@ -151,9 +151,9 @@ function U(e) {
             section: h,
             isSelectable: m = !0,
         } = e,
-        p = i.useMemo(() => n?.options?.find((e) => e.name === r), [r, n]),
-        f = null != r ? c?.[r] : null;
-    t = null != f && f.lastValidationResult?.success === !1 ? (f.lastValidationResult.error ?? "") : null;
+        f = i.useMemo(() => n?.options?.find((e) => e.name === r), [r, n]),
+        p = null != r ? c?.[r] : null;
+    t = null != p && p.lastValidationResult?.success === !1 ? (p.lastValidationResult.error ?? "") : null;
     let g = u && null != h ? (0, O.Rg)(h) : null,
         x = (0, y.bG)([_.Ay], () => {
             if (null != a.guild_id && h?.botId != null) return _.Ay.getMember(a.guild_id, h.botId)?.nick;
@@ -174,7 +174,7 @@ function U(e) {
                     }),
                     (0, l.jsx)(j, {
                         className: s()(P.h_, null != t ? P.z3 : null),
-                        children: t ?? p?.displayDescription ?? n.displayDescription,
+                        children: t ?? f?.displayDescription ?? n.displayDescription,
                     }),
                 ],
             }),
@@ -191,16 +191,16 @@ var V = n(524007),
     H = n(82498),
     z = n(174459),
     q = n(486020),
-    Q = n(652215),
-    $ = n(307731),
+    $ = n(652215),
+    Q = n(307731),
     Z = n(202541),
     X = n(211319);
 let J = function (e) {
     let { emojis: t } = e,
         { analyticsLocations: n } = (0, B.Ay)();
     i.useEffect(() => {
-        (z.default.track(Q.HAw.PREMIUM_UPSELL_VIEWED, { type: Z.e.EMOJI_AUTOCOMPLETE_INLINE, location_stack: n }),
-            (0, G.sq)(Q.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, H.uq)(Z.e.EMOJI_AUTOCOMPLETE_INLINE)));
+        (z.default.track($.HAw.PREMIUM_UPSELL_VIEWED, { type: Z.e.EMOJI_AUTOCOMPLETE_INLINE, location_stack: n }),
+            (0, G.sq)($.U7l.PREMIUM_UPSELL_VIEWED, n, () => (0, H.uq)(Z.e.EMOJI_AUTOCOMPLETE_INLINE)));
     }, [n]);
     let r = (0, l.jsx)("div", {
         className: X.gm,
@@ -213,7 +213,7 @@ let J = function (e) {
                     children: (0, l.jsx)("img", {
                         alt: e.name,
                         className: X.Zg,
-                        src: q.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: $.EMOJI_URL_BASE_SIZE }),
+                        src: q.Ay.getEmojiURL({ id: e.id, animated: e.animated, size: Q.EMOJI_URL_BASE_SIZE }),
                     }),
                 },
                 e.id,
@@ -266,8 +266,8 @@ function eh(e) {
 function em(e) {
     return `autocomplete-${e}-title`;
 }
-let ep = i.createContext(null);
-class ef extends i.PureComponent {
+let ef = i.createContext(null);
+class ep extends i.PureComponent {
     selectable = !0;
     layoutClass = b.rT;
     constructor(e) {
@@ -320,7 +320,7 @@ class ef extends i.PureComponent {
         null != t && "number" == typeof n && t(n, e);
     };
 }
-class eg extends ef {
+class eg extends ep {
     renderContent() {
         let { text: e, description: t, badge: n } = this.props,
             i = (0, l.jsx)(T, { children: e });
@@ -346,7 +346,7 @@ function ex(e) {
 }
 function eE(e) {
     let { title: t, className: n, children: r } = e,
-        a = i.useContext(ep);
+        a = i.useContext(ef);
     return (0, l.jsx)("div", {
         className: b.E3,
         children: (0, l.jsxs)(d.D, {
@@ -357,7 +357,7 @@ function eE(e) {
         }),
     });
 }
-class eS extends ef {
+class eS extends ep {
     layoutClass = b.fF;
     selectable = !1;
     renderContent() {
@@ -365,7 +365,7 @@ class eS extends ef {
         return (0, l.jsx)("div", { className: s()(e, b.yF) });
     }
 }
-class ey extends ef {
+class ey extends ep {
     renderContent() {
         let { user: e, nick: t, status: n, hidePersonalInformation: i, guildId: r } = this.props,
             s = null == r ? eu.A.getNickname(e.id) : null;
@@ -392,7 +392,7 @@ class ey extends ef {
         });
     }
 }
-class eC extends ef {
+class eC extends ep {
     renderContent() {
         let { role: e, hideDescription: t, guildId: n } = this.props,
             { colorString: i, colorStrings: r } = e,
@@ -400,7 +400,7 @@ class eC extends ef {
             o = "username" === E.Ay.roleStyle && (null != i || null != r),
             u = (0, en.hH)(n, e, r),
             c = null != u && o,
-            { gradientStyle: d, gradientClassname: h } = (0, p.Wq)({
+            { gradientStyle: d, gradientClassname: h } = (0, f.Wq)({
                 colorStrings: r,
                 useReducedMotion: E.Ay.useReducedMotion,
                 roleStyle: "username",
@@ -412,7 +412,7 @@ class eC extends ef {
                 (0, l.jsx)(v, {
                     children: (0, l.jsxs)(T, {
                         children: [
-                            a && (0, l.jsx)(f.W, { className: b.m4, color: i, colors: u, tooltip: !1 }),
+                            a && (0, l.jsx)(p.W, { className: b.m4, color: i, colors: u, tooltip: !1 }),
                             (0, l.jsxs)("span", {
                                 className: s()({ [h]: c }),
                                 style: m,
@@ -427,7 +427,7 @@ class eC extends ef {
         });
     }
 }
-class eA extends ef {
+class eA extends ep {
     renderContent() {
         let { timestamp: e, description: t } = this.props;
         return (0, l.jsxs)(I, {
@@ -440,10 +440,10 @@ class eA extends ef {
         });
     }
 }
-class eb extends ef {
+class eb extends ep {
     renderContent() {
         let { channel: e, category: t } = this.props,
-            n = e.type === Q.rbe.GUILD_CATEGORY ? g.FolderIcon : (0, F.gU)(e);
+            n = e.type === $.rbe.GUILD_CATEGORY ? g.FolderIcon : (0, F.gU)(e);
         return (0, l.jsxs)(I, {
             children: [
                 null != n && (0, l.jsx)(N, { children: (0, l.jsx)(n, { className: b.Kk }) }),
@@ -453,7 +453,7 @@ class eb extends ef {
         });
     }
 }
-class eI extends ef {
+class eI extends ep {
     renderContent() {
         let { command: e } = this.props;
         return (0, l.jsxs)(I, {
@@ -467,7 +467,7 @@ class eI extends ef {
         });
     }
 }
-class ev extends ef {
+class ev extends ep {
     isSelectable() {
         return this.props.command.inputType !== S.y$.PLACEHOLDER;
     }
@@ -487,7 +487,7 @@ class ev extends ef {
               });
     }
 }
-class eN extends ef {
+class eN extends ep {
     layoutClass = s()(b.rT, b.Mf);
     renderContent() {
         let { emoji: e, sentinel: t, guild: n } = this.props,
@@ -502,7 +502,7 @@ class eN extends ef {
                                   ? q.Ay.getEmojiURL({
                                         id: e.id,
                                         animated: e.animated && i,
-                                        size: $.EMOJI_URL_BASE_SIZE,
+                                        size: Q.EMOJI_URL_BASE_SIZE,
                                     })
                                   : e.url,
                       })
@@ -517,7 +517,7 @@ class eN extends ef {
         });
     }
 }
-class eT extends ef {
+class eT extends ep {
     layoutClass = s()(b.rT, b.Mf);
     renderContent() {
         let e,
@@ -542,24 +542,24 @@ class eT extends ef {
         );
     }
 }
-class ej extends ef {
+class ej extends ep {
     layoutClass = b.ju;
     renderContent() {
         let { width: e, height: t, src: n } = this.props;
         return (0, l.jsx)("img", { alt: "", src: n, width: e, height: t });
     }
 }
-class ek extends ef {
+class ek extends ep {
     renderContent() {
         return (0, l.jsx)(J, { emojis: this.props.emojis });
     }
 }
-class e_ extends ef {
+class e_ extends ep {
     renderContent() {
         return (0, l.jsx)(er, { ...this.props });
     }
 }
-class eR extends ef {
+class eR extends ep {
     renderContent() {
         return (0, l.jsxs)(I, {
             children: [
@@ -593,7 +593,7 @@ class ew extends i.PureComponent {
     render() {
         let { children: e, className: t, innerClassName: n, id: r, ...a } = this.props;
         return i.Children.count(e) > 0
-            ? (0, l.jsx)(ep.Provider, {
+            ? (0, l.jsx)(ef.Provider, {
                   value: { id: r ?? "" },
                   children: (0, l.jsx)("div", {
                       className: s()(b.nx, t),

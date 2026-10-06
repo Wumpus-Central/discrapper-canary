@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     H: "soundButtonWrapper__9be63",
     cB: "dragging__9be63",
     aG: "soundButton__9be63",

@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(602853),
     h = n(661531),
     m = n(939249),
-    p = n(935286),
-    f = n(628284),
+    f = n(935286),
+    p = n(628284),
     g = n(775602),
     x = n(47167),
     E = n(713654),
@@ -110,7 +110,7 @@ function L(e) {
                                     }),
                                     (0, l.jsx)("div", {
                                         className: _.kJ,
-                                        children: (0, l.jsx)(p.E, { size: "xs", color: A.hex(), className: _.fz }),
+                                        children: (0, l.jsx)(f.E, { size: "xs", color: A.hex(), className: _.fz }),
                                     }),
                                 ],
                             }),
@@ -140,7 +140,7 @@ function L(e) {
                                     ],
                                 }),
                                 x
-                                    ? (0, l.jsx)(f.y, {
+                                    ? (0, l.jsx)(p.y, {
                                           size: "custom",
                                           color: "currentColor",
                                           className: _.so,

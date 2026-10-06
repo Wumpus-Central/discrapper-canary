@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(39623),
     h = n(22231),
     m = n(241326),
-    p = n(834730),
-    f = n(608299),
+    f = n(834730),
+    p = n(608299),
     g = n(478531),
     x = n(607470),
     E = n(274652),
@@ -65,7 +65,7 @@ function _(e) {
     let { file: t, alt: n, spoiler: r, size: a = I.L.MEDIUM, onMouseEnter: u } = e,
         [c, d] = i.useState(),
         [h, m] = i.useState({ width: 0, height: 0 }),
-        p = a === I.L.SMALL;
+        f = a === I.L.SMALL;
     i.useEffect(() => {
         if (null == t || !1 === j.includes(t.type)) return;
         let e = URL.createObjectURL(t);
@@ -82,7 +82,7 @@ function _(e) {
             }
         );
     }, [t]);
-    let f = i.useCallback(
+    let p = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 return null == c
@@ -91,7 +91,7 @@ function _(e) {
                           src: c,
                           className: s()(T.media, {
                               [T.spoiler]: e,
-                              [T.imageSmall]: p,
+                              [T.imageSmall]: f,
                               [T.sizeXSmall]: a === I.L.XSMALL,
                               [T.sizeXXSmall]: a === I.L.XXSMALL,
                           }),
@@ -100,7 +100,7 @@ function _(e) {
                           style: t ? h : {},
                       });
             },
-            [c, p, a, n, h],
+            [c, f, a, n, h],
         ),
         g = i.useCallback(() => {
             null != c &&
@@ -117,13 +117,13 @@ function _(e) {
                 : v.intl.formatToPlainString(v.t.lXoOEZ, { filename: x });
     return (0, l.jsx)("div", {
         onMouseEnter: u,
-        className: s()(T.mediaContainer, { [T.imageSmall]: p }),
+        className: s()(T.mediaContainer, { [T.imageSmall]: f }),
         children: (0, l.jsx)(o.D, {
             onClick: g,
             className: T.clickableMedia,
             "aria-label": E,
             tabIndex: -1,
-            children: (0, l.jsx)(k, { size: a, alt: n, spoiler: r, renderContent: f }),
+            children: (0, l.jsx)(k, { size: a, alt: n, spoiler: r, renderContent: p }),
         }),
     });
 }
@@ -139,7 +139,7 @@ function R(e) {
             guildId: d,
         } = e,
         [h, m] = i.useState(),
-        p = i.useRef(null);
+        f = i.useRef(null);
     return (
         i.useEffect(() => {
             if (null == t) return;
@@ -161,7 +161,7 @@ function R(e) {
                     spoiler: r,
                     renderContent: (e) =>
                         (0, l.jsx)(x.A, {
-                            ref: p,
+                            ref: f,
                             src: h,
                             className: s()(T.media, {
                                 [T.spoiler]: e,
@@ -237,7 +237,7 @@ function O(e) {
         k = E === I.L.SMALL,
         _ = (0, a.bG)([C.A], () => C.A.getChannel(t)?.guild_id);
     function R() {
-        f.A.remove(t, o.id, r);
+        p.A.remove(t, o.id, r);
     }
     function O(e) {
         (e.stopPropagation(), j)
@@ -296,7 +296,7 @@ function O(e) {
                           upload: o,
                           onSubmit: (e) => {
                               let { name: n, description: l, spoiler: i } = e;
-                              f.A.update(t, o.id, r, { filename: n, description: l, spoiler: i });
+                              p.A.update(t, o.id, r, { filename: n, description: l, spoiler: i });
                           },
                       });
               });
@@ -309,7 +309,7 @@ function O(e) {
                           className: s()({ [T.action]: k }),
                           tooltip: j ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzA),
                           onClick: () => {
-                              f.A.update(t, o.id, r, { spoiler: !o.spoiler });
+                              p.A.update(t, o.id, r, { spoiler: !o.spoiler });
                           },
                           children: o.spoiler
                               ? (0, l.jsx)(c.EyeSlashIcon, {
@@ -362,7 +362,7 @@ function O(e) {
                 (0, l.jsx)("div", {
                     className: T.filenameContainer,
                     "aria-hidden": !0,
-                    children: (0, l.jsx)(p.E, {
+                    children: (0, l.jsx)(f.E, {
                         className: T.filename,
                         variant: "text-sm/normal",
                         children: null != x ? x : j ? A.name : o.filename,

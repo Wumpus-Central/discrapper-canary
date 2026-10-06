@@ -1,32 +1,32 @@
-n.d(t, { A: () => c });
-var i = n(582128),
-    r = n(158390),
-    l = n(17928),
-    a = n(71393),
-    o = n(246338),
-    u = n(371169),
-    s = n(260498);
-let d = new r.A(3e4, 3e5);
-function c(e, t) {
-    let n = (0, l.bG)(
-            [a.A],
-            () => t && null != e && (0, o.Qv)(a.A.getGuildsArray(), "useIsOwnedVibegrationsApplication").length > 0,
+n.d(t, { A: () => d });
+var r = n(582128),
+    s = n(158390),
+    u = n(17928),
+    c = n(71393),
+    i = n(246338),
+    l = n(371169),
+    p = n(260498);
+let a = new s.A(3e4, 3e5);
+function d(e, t) {
+    let n = (0, u.bG)(
+            [c.A],
+            () => t && null != e && (0, i.Qv)(c.A.getGuildsArray(), "useIsOwnedVibegrationsApplication").length > 0,
             [t, e],
         ),
-        r = (0, l.bG)([s.Ay], () => s.Ay.getProjectsFetchState()?.type ?? null);
+        s = (0, u.bG)([p.Ay], () => p.Ay.getProjectsFetchState()?.type ?? null);
     return (
-        i.useEffect(() => {
-            if (("success" === r && d.succeed(), n)) {
-                if (null == r) return void (0, u.hF)();
-                "error" !== r || d.pending || d.fail(() => (0, u.hF)());
+        r.useEffect(() => {
+            if (("success" === s && a.succeed(), n)) {
+                if (null == s) return void (0, l.hF)();
+                "error" !== s || a.pending || a.fail(() => (0, l.hF)());
             }
-        }, [n, r]),
-        (0, l.bG)(
-            [s.Ay],
+        }, [n, s]),
+        (0, u.bG)(
+            [p.Ay],
             () => {
                 if (!n || null == e) return !1;
-                let t = s.Ay.findProjectByApplicationId(e);
-                return !!(null != t && (0, s.PV)(t)) || (s.Ay.getProjectsFetchState()?.type !== "success" && null);
+                let t = p.Ay.findProjectByApplicationId(e);
+                return !!(null != t && (0, p.PV)(t)) || (p.Ay.getProjectsFetchState()?.type !== "success" && null);
             },
             [n, e],
         )

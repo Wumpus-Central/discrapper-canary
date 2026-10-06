@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => p, Ur: () => m, mk: () => h });
+n.d(t, { Ay: () => f, Ur: () => m, mk: () => h });
 var l = n(143236),
     i = n(721768),
     r = n(612394),
@@ -19,7 +19,7 @@ function m() {
         isInitialAfterError: !1,
     };
 }
-class p extends l.EventEmitter {
+class f extends l.EventEmitter {
     props;
     state;
     nextUpdateQueryChanged = !1;
@@ -135,13 +135,13 @@ class p extends l.EventEmitter {
             } = await Promise.all([n.e("435751"), n.e("423798"), n.e("753149")]).then(n.bind(n, 778572));
         if (null == this.props.editorRef.current) return;
         let m = c(this.props),
-            p = this.props.editorRef.current.getSlateEditor();
-        null != p &&
+            f = this.props.editorRef.current.getSlateEditor();
+        null != f &&
             (t =
-                null != (e = s.VW.getSelectedParentOfType(p, h))
-                    ? s.VW.getTextFromRange(p, s.VW.range(p, e[1]))
+                null != (e = s.VW.getSelectedParentOfType(f, h))
+                    ? s.VW.getTextFromRange(f, s.VW.range(f, e[1]))
                     : null);
-        let f = o({
+        let p = o({
                 channel: this.props.channel,
                 guild: this.props.guild,
                 options: m,
@@ -153,9 +153,9 @@ class p extends l.EventEmitter {
                 parentAutocompleteInputValue: t,
             }),
             g = m.commands !== d.Ze.DISABLED ? a(this.props.activeCommandOption, this.props.currentWord) : null;
-        if (null == f && null != g) f = g;
-        else if (null == f || (null != g && f.type !== g.type)) return void this.clearQuery();
-        let { type: x, typeInfo: E, query: S } = f,
+        if (null == p && null != g) p = g;
+        else if (null == p || (null != g && p.type !== g.type)) return void this.clearQuery();
+        let { type: x, typeInfo: E, query: S } = p,
             y = i || (l && (this.state.query?.queryText !== S || this.state.query?.typeInfo !== E)),
             C = u.ML.getSetting();
         m.allowStickers = m.allowStickers ? C : m.allowStickers;

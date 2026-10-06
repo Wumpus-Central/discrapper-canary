@@ -10,8 +10,8 @@ var l = n(635377),
     d = n(927813),
     h = n(38405),
     m = n(186306),
-    p = n(323350),
-    f = n(35277),
+    f = n(323350),
+    p = n(35277),
     g = n(820066),
     x = n(551483),
     E = n(389437);
@@ -123,13 +123,13 @@ function v(e, t) {
                     d = l && 0 === r.length,
                     h = (u ? r.slice(1) : r).length % 2 == 1,
                     m = h && (null == o || "" === o || null != o.match(C)),
-                    p = m && null != o && "" !== o ? o.toLowerCase() : null;
+                    f = m && null != o && "" !== o ? o.toLowerCase() : null;
                 return {
                     blockEntry: t,
                     wasInCodeBlock: n,
                     isInCodeBlock: c,
                     isStyledCodeBlockLine: d,
-                    lang: h || u ? p : i,
+                    lang: h || u ? f : i,
                     hljsTypes: null,
                     closesCodeBlock: u,
                     opensCodeBlock: h,
@@ -154,7 +154,7 @@ function v(e, t) {
                         (r.closesCodeBlock || a) &&
                         (i && a && !r.closesCodeBlock && l.push(r), (i = !1), l.length > 0)
                     ) {
-                        let e = l.map((e) => (0, p.IQ)(e.blockEntry[0])).join("\n"),
+                        let e = l.map((e) => (0, f.IQ)(e.blockEntry[0])).join("\n"),
                             i = l[0].lang;
                         if (null != i && n)
                             !(function (e, t, n, l) {
@@ -183,12 +183,12 @@ function v(e, t) {
                                         );
                                     }
                                     let m = i.split("\n"),
-                                        p = e.match(/\n*$/)?.[0].length ?? 0;
-                                    for (let e = 0; e < p; e++) m.push("");
+                                        f = e.match(/\n*$/)?.[0].length ?? 0;
+                                    for (let e = 0; e < f; e++) m.push("");
                                     if (m.length !== n) return null;
-                                    let f = [];
+                                    let p = [];
                                     for (let e = 0; e < n; e++)
-                                        f.push(
+                                        p.push(
                                             (function (e) {
                                                 let t,
                                                     n = [],
@@ -219,7 +219,7 @@ function v(e, t) {
                                                 );
                                             })(m[e]),
                                         );
-                                    return (R.set(o, f), f);
+                                    return (R.set(o, p), p);
                                 })(e, t, n.length, l);
                                 if (null != i) for (let e = 0; e < n.length; e++) n[e].hljsTypes = i[e];
                                 else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
@@ -290,7 +290,7 @@ function v(e, t) {
                                   hljsTypes: n.hljsTypes,
                               }
                             : null;
-                t?.codeBlockState != r && f.b.setNodes(e, { codeBlockState: r }, { at: i });
+                t?.codeBlockState != r && p.b.setNodes(e, { codeBlockState: r }, { at: i });
             }
         })(e, n),
         n.some((e) => null != e.lang)

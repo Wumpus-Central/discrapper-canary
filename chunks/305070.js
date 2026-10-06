@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(811024),
     h = n(933958),
     m = n(969151),
-    p = n(659280),
-    f = n(579940),
+    f = n(659280),
+    p = n(579940),
     g = n(915089),
     x = n(750506),
     E = n(513609),
@@ -41,7 +41,7 @@ let W = i.forwardRef(function (e, t) {
         G = (0, g.GV)(),
         H = (0, o.bG)([S.A], () => S.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
         z = i.useRef(null),
-        [q, Q, $] = (function (e, t, n) {
+        [q, $, Q] = (function (e, t, n) {
             let { channel: l, type: r } = e,
                 [s, a] = i.useState(() => (0, R.Ur)()),
                 u = (0, A.A)(),
@@ -58,16 +58,16 @@ let W = i.forwardRef(function (e, t) {
                     }),
                     [l, r, c],
                 ),
-                { activeCommand: m, activeCommandOption: p } = (0, o.cf)([I.A], () => ({
+                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([I.A], () => ({
                     activeCommand: I.A.getActiveCommand(l.id),
                     activeCommandOption: I.A.getActiveOption(l.id),
                 })),
-                f = i.useMemo(
+                p = i.useMemo(
                     () =>
                         m?.untranslatedName != null &&
-                        p?.name != null &&
-                        (D.get(m.untranslatedName)?.has(p.name) ?? !1),
-                    [m?.untranslatedName, p?.name],
+                        f?.name != null &&
+                        (D.get(m.untranslatedName)?.has(f.name) ?? !1),
+                    [m?.untranslatedName, f?.name],
                 ),
                 g = (function (e) {
                     let { navId: t, scrollerRef: n, state: l, onFocus: r } = e,
@@ -122,7 +122,7 @@ let W = i.forwardRef(function (e, t) {
                     ...e,
                     navigator: g,
                     activeCommand: m,
-                    activeCommandOption: p,
+                    activeCommandOption: f,
                     activeInlineAutocompleteInput: S,
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
@@ -131,16 +131,16 @@ let W = i.forwardRef(function (e, t) {
                     emojiIntention:
                         r === v.oU.RULES_INPUT
                             ? M.EmojiIntention.COMMUNITY_CONTENT
-                            : f
+                            : p
                               ? M.EmojiIntention.NO_CUSTOM_EMOJI
                               : M.EmojiIntention.CHAT,
                     currentWord: x?.word ?? "",
                     currentWordIsAtStart: x?.isAtStart === !0,
                     optionText:
-                        null != p
+                        null != f
                             ? (0, b.getString)(
-                                  { [p.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
-                                  p.name,
+                                  { [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
+                                  f.name,
                               )
                             : "",
                 },
@@ -179,8 +179,8 @@ let W = i.forwardRef(function (e, t) {
             );
         })({ ...e, guild: H }, t, z),
         Z = r.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
-        X = (0, p.aI)(q.selectedIndex);
-    (0, f.gf)(G, q.isVisible, X);
+        X = (0, f.aI)(q.selectedIndex);
+    (0, p.gf)(G, q.isVisible, X);
     let J = (0, C.l)({ editorHeight: W, type: r, state: q }),
         Y = (0, o.bG)(
             [h.Ay],
@@ -211,8 +211,8 @@ let W = i.forwardRef(function (e, t) {
             guild: H,
             query: q.query.queryText,
             options: q.query.options,
-            onHover: (e) => Q.onResultHover(e),
-            onClick: (e) => Q.onResultClick(e),
+            onHover: (e) => $.onResultHover(e),
+            onClick: (e) => $.onResultClick(e),
         }) ?? null;
     if (null == et) return null;
     let en = { [V.pK]: null == J, [V.YB]: null != J, [V.sQ]: null == J && "bottom" === e.position, [V.mO]: Y },
@@ -221,13 +221,13 @@ let W = i.forwardRef(function (e, t) {
     let ei = Math.max(W, B?.current?.clientHeight ?? 0),
         er = Math.min(0.5 * window.innerHeight, ei);
     el = Math.min(window.innerHeight - 120 - er - (K ?? 0), el);
-    let es = (0, l.jsx)(p.Ay, {
+    let es = (0, l.jsx)(f.Ay, {
         id: G,
         className: s()(V.nx, en),
         innerClassName: V.Fv,
         onMouseDown: (e) => e.preventDefault(),
         children: (0, l.jsx)(a.hD, {
-            navigator: $,
+            navigator: Q,
             children: (0, l.jsx)(a.PR, {
                 children: (e) => {
                     let { ref: t, ...n } = e;
@@ -242,7 +242,7 @@ let W = i.forwardRef(function (e, t) {
                         className: V.XG,
                         style: { maxHeight: el },
                         role: "listbox",
-                        "aria-labelledby": (0, p.Sz)(G),
+                        "aria-labelledby": (0, f.Sz)(G),
                         children: et,
                     });
                 },

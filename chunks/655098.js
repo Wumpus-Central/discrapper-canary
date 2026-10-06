@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(723702),
     h = n(38405),
     m = n(19575),
-    p = n(408018),
-    f = n(186306),
+    f = n(408018),
+    p = n(186306),
     g = n(654821),
     x = n(35277),
     E = n(820066),
@@ -45,8 +45,8 @@ var B = n(734057),
     H = n(351906),
     z = n(287809),
     q = n(147036),
-    Q = n(562153),
-    $ = n(427262),
+    $ = n(562153),
+    Q = n(427262),
     Z = n(375708),
     X = n(307126);
 function J(e) {
@@ -75,7 +75,7 @@ function et(e) {
     let { id: t, guildId: n, channelId: i } = e,
         r = (0, y.bG)([z.default], () => z.default.getUser(t)),
         s = (0, y.bG)([H.A], () => H.A.hidePersonalInformation),
-        a = Q.Ay.useName(n, i, r),
+        a = $.Ay.useName(n, i, r),
         o = (0, l.jsx)(U.A, { children: null == a ? `<@${t}>` : `@${a}` });
     if (null != r) {
         let e = s || r.hasUniqueUsername() ? null : `#${r.discriminator}`;
@@ -84,13 +84,13 @@ function et(e) {
                 className: X.fX,
                 children: [
                     (0, l.jsx)(T.A, { user: r, animate: !0, size: A._3.SIZE_16, className: X.my }),
-                    $.Ay.getUserTag(r, { mode: "username", identifiable: s ? "never" : "always" }),
+                    Q.Ay.getUserTag(r, { mode: "username", identifiable: s ? "never" : "always" }),
                     (0, l.jsx)("span", { className: X.D2, children: e }),
                 ],
             }),
             delay: 750,
             position: "top",
-            "aria-label": $.Ay.getUserTag(r, { decoration: "never" }),
+            "aria-label": Q.Ay.getUserTag(r, { decoration: "never" }),
             asContainer: !0,
             children: (0, l.jsx)(b.D, { tag: "span", children: o }),
         });
@@ -196,12 +196,12 @@ let ed = {
     },
     eh = new Set(["link", "url", "autolink"]);
 var em = n(165648);
-function ep(e) {
+function ef(e) {
     let { className: t, attributes: n, children: i } = e,
         r = s()(eu.S0, eu.Cj, t);
     return (0, l.jsx)("span", { ...n, className: r, contentEditable: !1, children: i });
 }
-var ef = n(652215),
+var ep = n(652215),
     eg = n(809067);
 class ex extends i.PureComponent {
     containerRef = i.createRef();
@@ -221,7 +221,7 @@ class ex extends i.PureComponent {
             (this.handleContextMenu = this.handleContextMenu.bind(this)),
             (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
             E.VW.isEditorEmpty(e.editor)
-                ? (this.state = { initialValue: (0, p.N3)().richValue, showPlaceholder: !0 })
+                ? (this.state = { initialValue: (0, f.N3)().richValue, showPlaceholder: !0 })
                 : (this.state = { initialValue: E.VW.richValue(e.editor), showPlaceholder: !1 }));
     }
     componentDidMount() {
@@ -279,67 +279,67 @@ class ex extends i.PureComponent {
                         });
                     }
                     case "emoji":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(J, { emoji: o.emoji }), a],
                         });
                     case "customEmoji":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(Y, { emoji: o.emoji }), a],
                         });
                     case "textMention":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(ee, { text: o.name }), a],
                         });
                     case "userMention":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(et, { id: o.userId, channelId: n, guildId: t }), a],
                         });
                     case "roleMention":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(en, { id: o.roleId, guildId: t, channelId: n }), a],
                         });
                     case "channelMention":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(el, { id: o.channelId }), a],
                         });
                     case "staticRouteLink":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(ei, { id: o.id, itemId: o.itemId, guildId: t }), a],
                         });
                     case "soundboard":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(S.LF, { soundId: o.soundId }), a],
                         });
                     case "commandMention":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(er, { text: o.commandName, id: o.commandId }), a],
                         });
                     case "timestamp":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(es, { timestamp: o.parsed }), a],
                         });
                     case "gameMention":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(ea, { id: o.gameId }), a],
@@ -437,7 +437,7 @@ class ex extends i.PureComponent {
                 null != n &&
                     null != e.data &&
                     (E.ZF.isExpanded(n)
-                        ? f.o.withSingleEntry(t, () => {
+                        ? p.o.withSingleEntry(t, () => {
                               ((t.selection = n), t.deleteFragment(), t.insertText(e.data), e.preventDefault());
                           })
                         : (t.insertText(e.data), e.preventDefault()));
@@ -580,7 +580,7 @@ class ex extends i.PureComponent {
                 },
                 {
                     align: null != i && null != r && i < r / 2 ? "top" : "bottom",
-                    enableSpellCheck: s === ef.BRT.APP,
+                    enableSpellCheck: s === ep.BRT.APP,
                     repositionOnContentChange: !0,
                 },
             );
@@ -607,8 +607,8 @@ class ex extends i.PureComponent {
             channelId: d,
             guildId: h,
             onChange: m,
-            onFocus: p,
-            onBlur: f,
+            onFocus: f,
+            onBlur: p,
             onKeyDown: g,
             onKeyUp: x,
             renderExtraElement: E,

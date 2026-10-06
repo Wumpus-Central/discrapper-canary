@@ -142,24 +142,24 @@ let A = function (e) {
             pages: m,
             paginate: g,
             showPagination: A,
-            paginationPosition: x,
-            truncate: T,
+            paginationPosition: T,
+            truncate: x,
             perPage: S,
             setPage: y,
         } = v(c, n, o),
-        j = l.useMemo(() => E(l.Children.toArray(a), g ? u : void 0, S, T), [u, S, a, g, T]);
+        _ = l.useMemo(() => E(l.Children.toArray(a), g ? u : void 0, S, x), [u, S, a, g, x]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
-            A && "top" === x && (0, r.jsx)(p, { page: u, pages: m, setPage: y }),
+            A && "top" === T && (0, r.jsx)(p, { page: u, pages: m, setPage: y }),
             (0, r.jsx)(f.Provider, {
                 value: n,
                 children: (0, r.jsx)("div", {
                     ref: o,
                     className: d.gridContainer,
-                    children: (0, r.jsx)("div", { className: i()(d.grid, d[`columns${s}`]), children: j }),
+                    children: (0, r.jsx)("div", { className: i()(d.grid, d[`columns${s}`]), children: _ }),
                 }),
             }),
-            A && "bottom" === x && (0, r.jsx)(p, { page: u, pages: m, setPage: y }),
+            A && "bottom" === T && (0, r.jsx)(p, { page: u, pages: m, setPage: y }),
         ],
     });
 };

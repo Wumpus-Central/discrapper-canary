@@ -1,4 +1,4 @@
-n.exports = {
+_.exports = {
     xJ: "sliderContainer__14ad3",
     aw: "slider__14ad3",
     aZ: "betaBadge__14ad3",

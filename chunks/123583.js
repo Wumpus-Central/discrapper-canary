@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(406704),
     h = n(696451),
     m = n(576705),
-    p = n(287809),
-    f = n(652215),
+    f = n(287809),
+    p = n(652215),
     g = n(86379),
     x = n(503698),
     E = n.n(x),
@@ -109,7 +109,7 @@ var B = n(530134),
     H = n(617617),
     z = n(234320),
     q = n(767089);
-let Q = i.memo(
+let $ = i.memo(
     i.forwardRef(function (e, t) {
         let { disabled: n, type: r, channel: a } = e,
             [o, u] = i.useState(!1),
@@ -117,7 +117,7 @@ let Q = i.memo(
                 [H.A],
                 () => o && Object.values(H.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
             ),
-            [d, h, m, p] = (0, D.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], P.x),
+            [d, h, m, f] = (0, D.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], P.x),
             g = i.useRef(0),
             x = i.useCallback(() => {
                 (u(!0),
@@ -126,13 +126,13 @@ let Q = i.memo(
                         (u(!1), (g.current = 0));
                     }, 2e3)));
             }, []);
-        (0, z.Vo)({ event: f.jej.FAVORITE_GIF, handler: x });
+        (0, z.Vo)({ event: p.jej.FAVORITE_GIF, handler: x });
         let S = i.useCallback(() => {
                 (0, D.r$)(V.kx.GIF, r, a.id);
             }, [r, a.id]),
             { Component: y, events: C, play: A } = (0, K.V)();
         if (n) return null;
-        let b = d === V.kx.GIF && h === r && p === a.id;
+        let b = d === V.kx.GIF && h === r && f === a.id;
         return (0, l.jsx)(G.m, {
             text: T.intl.string(c ? T.t.mE2e8A : T.t.nffuyb),
             shouldShow: c,
@@ -159,7 +159,7 @@ let Q = i.memo(
         });
     }),
 );
-var $ = n(365990),
+var Q = n(365990),
     Z = n(559647),
     X = n(757261);
 let J = i.memo(function (e) {
@@ -196,8 +196,8 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 o,
                 u,
                 { disabled: c, type: d, channel: h } = e,
-                [m, p, f, g] = (0, D.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], P.x),
-                x = m === V.kx.STICKER && g === d && f === h.id,
+                [m, f, p, g] = (0, D.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], P.x),
+                x = m === V.kx.STICKER && g === d && p === h.id,
                 S = i.useCallback(() => {
                     (0, D.r$)(V.kx.STICKER, d, h.id);
                 }, [d, h.id]),
@@ -247,7 +247,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                           "aria-label": T.intl.string(T.t.rZpidU),
                           "aria-expanded": x,
                           "aria-haspopup": "dialog",
-                          "aria-controls": p,
+                          "aria-controls": f,
                           sparkle: !1,
                           children: (0, l.jsx)(y, { size: "refresh_sm", color: "currentColor" }),
                       }),
@@ -294,14 +294,14 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             V = (0, g.dw)(),
             K = [],
             G = !S.isDM() || void 0 === S.recipients || S.recipients.length > 1,
-            H = (0, s.bG)([p.default], () => (G ? null : p.default.getUser(S.recipients[0]))),
+            H = (0, s.bG)([f.default], () => (G ? null : f.default.getUser(S.recipients[0]))),
             z = (function (e) {
                 let { channel: t, chatInputType: n } = e,
                     l = n.commands?.enabled ?? !1,
                     i = (function (e) {
                         let t = e.getGuildId(),
-                            n = (0, s.bG)([h.Ay, p.default], () => {
-                                let e = p.default.getCurrentUser();
+                            n = (0, s.bG)([h.Ay, f.default], () => {
+                                let e = f.default.getCurrentUser();
                                 return (null != t && null != e ? h.Ay.getMember(t, e.id)?.isPending : null) ?? !1;
                             }),
                             { messagesDisabled: l } = (0, s.cf)(
@@ -309,7 +309,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                                 () => {
                                     let t = e.isPrivate(),
                                         l = m.A.computePermissions(e),
-                                        i = c.zy(l, f.xBc.SEND_MESSAGES),
+                                        i = c.zy(l, p.xBc.SEND_MESSAGES),
                                         r = (0, d.UJ)(e);
                                     return { messagesDisabled: n || (!t && !i) || r };
                                 },
@@ -329,13 +329,13 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 null == D &&
                 !V &&
                 (null == H || L.Ay.isPremiumEligible(H)) &&
-                K.push((0, l.jsx)($.A, { disabled: E, channel: S }, "gift")),
+                K.push((0, l.jsx)(Q.A, { disabled: E, channel: S }, "gift")),
             x.gifs?.button != null &&
                 null == D &&
                 A &&
                 k &&
                 !b &&
-                K.push((0, l.jsx)(Q, { disabled: E, type: x, channel: S }, "gif")),
+                K.push((0, l.jsx)($, { disabled: E, type: x, channel: S }, "gif")),
             x.stickers?.button != null &&
                 null == D &&
                 A &&

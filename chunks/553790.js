@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     kL: "container_f782d6",
     EX: "small_f782d6",
     Iv: "cover_f782d6",

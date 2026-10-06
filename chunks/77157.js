@@ -1,9 +1,9 @@
-t.d(r, { A: () => o });
+t.d(r, { A: () => s });
 var n = t(17928),
     l = t(590180),
     i = t(4227),
     u = t(892118);
-function o(e) {
+function s(e) {
     return (0, n.bG)([l.A, i.A], () => {
         if (null == e) return;
         let r = l.A.getProduct(e);

@@ -1,7 +1,7 @@
 (n.d(t, {
-    AS: () => Q,
+    AS: () => $,
     Ot: () => ee,
-    cv: () => $,
+    cv: () => Q,
     PW: () => X,
     l5: () => Z,
     e0: () => ei,
@@ -23,8 +23,8 @@ var a = n(635377),
     d = n(626584),
     h = n(694403),
     m = n(999915),
-    p = n(704726),
-    f = n(551965),
+    f = n(704726),
+    p = n(551965),
     g = n(927813);
 let x = /^[a-z0-9_+\-.#]+$/i,
     E = new d.A("MarkdownToSlate"),
@@ -90,7 +90,7 @@ for (let e in m.Ay.RULES) {
         );
     let t = S[e];
     ("skip" !== t.type && (b[e] = v(m.Ay.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (I[e] = v("text" === e ? p.Ay : m.Ay.RULES[e])));
+        "skip" !== t.type && "inlineObject" !== t.type && (I[e] = v("text" === e ? f.Ay : m.Ay.RULES[e])));
 }
 function v(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
@@ -131,8 +131,8 @@ let T = {
         },
     },
     j = /(-# +)/,
-    k = (0, f.A)([b, T]),
-    _ = (0, f.A)([I, T]),
+    k = (0, p.A)([b, T]),
+    _ = (0, p.A)([I, T]),
     R = c.X(k),
     w = c.X(_),
     O = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
@@ -360,48 +360,48 @@ if ((n(827669), n(654821), !r.KE._addedDiscordOverrides)) {
         let [c, d] = Y.edges(n),
             h = q.blocks(t),
             m = o ? -1 : 1,
-            p = c.path[0] ?? 0,
-            f = d.path[0] ?? h.length - 1,
-            g = o ? f : p,
-            x = o ? p : f,
+            f = c.path[0] ?? 0,
+            p = d.path[0] ?? h.length - 1,
+            g = o ? p : f,
+            x = o ? f : p,
             E = !1;
         "line" === a && (yield o ? d : c);
         for (let n = g; !E && (!o ? n <= x : n >= x); n += m)
             for (let s of (function* n(s) {
-                let [h, p] = s,
-                    f = p.length,
-                    g = X.isAncestor(p, c.path),
-                    x = X.isAncestor(p, d.path),
-                    S = g ? c.path[f] : 0,
-                    y = x ? d.path[f] : h.children.length - 1,
+                let [h, f] = s,
+                    p = f.length,
+                    g = X.isAncestor(f, c.path),
+                    x = X.isAncestor(f, d.path),
+                    S = g ? c.path[p] : 0,
+                    y = x ? d.path[p] : h.children.length - 1,
                     C = o ? y : S,
                     A = o ? S : y;
                 for (let s = C; !E && (!o ? s <= A : s >= A); s += m) {
                     let m = h.children[s],
-                        f = X.child(p, s);
-                    if ($.isElement(m)) {
+                        p = X.child(f, s);
+                    if (Q.isElement(m)) {
                         let e = o ? d.path : c.path;
-                        if (!(X.equals(f, e) || X.isAncestor(f, e))) {
+                        if (!(X.equals(p, e) || X.isAncestor(p, e))) {
                             let e = t.isVoid(m);
-                            if ("line" === a && $.isElement(m) && !e) {
+                            if ("line" === a && Q.isElement(m) && !e) {
                                 (null != l && (yield l, (l = void 0)), (E = !0));
                                 return;
                             }
                             if (!u && e) continue;
                         }
-                        for (let e of n([m, f])) yield e;
+                        for (let e of n([m, p])) yield e;
                     } else if (Z.isText(m))
-                        if ("line" === a) l = { path: f, offset: o ? 0 : m.text.length };
-                        else if (0 === m.text.length) yield { path: f, offset: 0 };
+                        if ("line" === a) l = { path: p, offset: o ? 0 : m.text.length };
+                        else if (0 === m.text.length) yield { path: p, offset: 0 };
                         else {
-                            let n = r.KE.range(t, f);
-                            for (let l of (X.equals(f, c.path) && (n.anchor = c),
-                            X.equals(f, d.path) && (n.focus = d),
+                            let n = r.KE.range(t, p);
+                            for (let l of (X.equals(p, c.path) && (n.anchor = c),
+                            X.equals(p, d.path) && (n.focus = d),
                             e(t, { ...i, at: n })))
                                 yield l;
                         }
                 }
-                "line" === a && $.isElement(h) && !t.isVoid(h) && (null != l && (yield l, (l = void 0)), (E = !0));
+                "line" === a && Q.isElement(h) && !t.isVoid(h) && (null != l && (yield l, (l = void 0)), (E = !0));
             })(h[n]))
                 yield s;
     };
@@ -414,12 +414,12 @@ let q = {
         ...s.rL,
         richValue: (e) => e.children,
         blocks: (e) => q.richValue(e).map((e, t) => [e, [t]]),
-        isBlock: (e, t) => $.isElement(t) && r.KE.isBlock(e, t),
-        isInline: (e, t) => $.isElement(t) && r.KE.isInline(e, t),
-        isVoid: (e, t) => $.isElement(t) && r.KE.isVoid(e, t),
+        isBlock: (e, t) => Q.isElement(t) && r.KE.isBlock(e, t),
+        isInline: (e, t) => Q.isElement(t) && r.KE.isInline(e, t),
+        isVoid: (e, t) => Q.isElement(t) && r.KE.isVoid(e, t),
         isEditorEmpty(e) {
             let t = q.richValue(e);
-            return !(t.length > 1) && (0 === t.length || ("line" === t[0].type && $.isEmpty(t[0])));
+            return !(t.length > 1) && (0 === t.length || ("line" === t[0].type && Q.isEmpty(t[0])));
         },
         getFirstText(e) {
             let t = q.node(e, z.fP);
@@ -442,19 +442,19 @@ let q = {
             return null == t ? null : q.node(e, t.path);
         },
         getParentBlock: (e, t) =>
-            q.above(e, { at: t, match: (t) => $.isElement(t) && q.isBlock(e, t), mode: "lowest" }) ?? null,
-        getParentElement: (e, t) => q.above(e, { at: t, match: (e) => $.isElement(e), mode: "lowest" }) ?? null,
+            q.above(e, { at: t, match: (t) => Q.isElement(t) && q.isBlock(e, t), mode: "lowest" }) ?? null,
+        getParentElement: (e, t) => q.above(e, { at: t, match: (e) => Q.isElement(e), mode: "lowest" }) ?? null,
         getParentInline: (e, t) => q.above(e, { at: t, match: (t) => q.isInline(e, t), mode: "lowest" }) ?? null,
         getParentVoid: (e, t) => q.above(e, { at: t, match: (t) => q.isVoid(e, t), mode: "lowest" }) ?? null,
         getParentOfType: (e, t, n) =>
-            q.above(e, { at: t, match: (e) => $.isElement(e) && n.includes(e.type), mode: "lowest" }) ?? null,
+            q.above(e, { at: t, match: (e) => Q.isElement(e) && n.includes(e.type), mode: "lowest" }) ?? null,
         getSelectedParentOfType(e, t) {
             if (null == e.selection) return null;
             let n = Y.toPoint(e.selection);
             return null == n ? null : q.getParentOfType(e, n, t);
         },
         getNodesOfType: (e, t) =>
-            q.nodes(e, { at: z.Dl, match: (e) => $.isElement(e) && t.includes(e.type), mode: "highest" }),
+            q.nodes(e, { at: z.Dl, match: (e) => Q.isElement(e) && t.includes(e.type), mode: "highest" }),
         getSelectedVoid(e) {
             let t;
             if (null == e.selection) return null;
@@ -522,7 +522,7 @@ let q = {
             if (X.isPath(t)) {
                 let n = q.range(e, t),
                     [l] = q.node(e, t);
-                if ($.isElement(l)) {
+                if (Q.isElement(l)) {
                     let l = q.before(e, t),
                         i = q.after(e, t);
                     t = { anchor: l ?? n.anchor, focus: i ?? n.focus };
@@ -546,19 +546,19 @@ let q = {
             );
         },
     },
-    Q = {
+    $ = {
         ...r.bP,
         isType: (e, t) => r.Hg.isElement(e) && e.type === t,
         isInTypes: (e, t) => r.Hg.isElement(e) && t.has(e.type),
     },
-    $ = {
+    Q = {
         ...r.Hg,
         updateElement(e, t) {
             let n = q.node(e, t[1]);
             return (
                 i()(!q.isEditor(t[0]), "Element is the root node"),
                 i()(null != n, "Failed to find element"),
-                i()($.isElement(n[0]), "Node at this path is no longer an element"),
+                i()(Q.isElement(n[0]), "Node at this path is no longer an element"),
                 i()(n[0].type === t[0].type, "Node at this path is a different type"),
                 n
             );

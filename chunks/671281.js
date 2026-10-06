@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => T });
 var r = n(17928),
     l = n(73153),
     a = n(403362),
@@ -55,7 +55,7 @@ class A extends r.Ay.Store {
         return null == e || null == t ? null : (E[d(e, v(t ?? "", n))] ?? null);
     }
 }
-let x = new A(l.h, {
+let T = new A(l.h, {
     LAYOUT_SYSTEM_FETCH: function (e) {
         let { tenantId: t, layoutId: n } = e;
         m.add(d(t, n));

@@ -1,8 +1,8 @@
-function i(e, t, n) {
+function r(e, t, n) {
     return "object" == typeof e && null != e && e.type === t && e.id === n;
 }
-n.d(t, { YX: () => i, d5: () => l, fq: () => r });
-class r extends Error {
+n.d(t, { YX: () => r, d5: () => l, fq: () => i });
+class i extends Error {
     constructor(e, t) {
         (super(`preview frame did not answer ${e} within ${t}ms`), (this.name = "PreviewFrameCallTimeout"));
     }

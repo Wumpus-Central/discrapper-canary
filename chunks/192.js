@@ -1,13 +1,13 @@
-n.d(t, { D: () => s, r: () => u });
+n.d(t, { D: () => c, r: () => o });
 var i = n(477900),
     r = n(582128),
     l = n(818348);
 let a = r.createContext(null),
-    o = { registerManageWidgetButtonRef: () => l.tE, manageFocusOnReorder: l.tE, getManageButtonForWidget: () => null };
-function u() {
-    return r.useContext(a) ?? o;
+    s = { registerManageWidgetButtonRef: () => l.tE, manageFocusOnReorder: l.tE, getManageButtonForWidget: () => null };
+function o() {
+    return r.useContext(a) ?? s;
 }
-function s(e) {
+function c(e) {
     let { children: t } = e,
         n = r.useRef(new Map()),
         l = r.useCallback(
@@ -16,16 +16,16 @@ function s(e) {
             },
             [],
         ),
-        o = r.useCallback((e) => {
+        s = r.useCallback((e) => {
             requestAnimationFrame(() => {
                 let t = n.current.get(e);
                 t?.focus();
             });
         }, []),
-        u = r.useCallback((e) => n.current.get(e) ?? null, []),
-        s = r.useMemo(
-            () => ({ registerManageWidgetButtonRef: l, manageFocusOnReorder: o, getManageButtonForWidget: u }),
-            [l, o, u],
+        o = r.useCallback((e) => n.current.get(e) ?? null, []),
+        c = r.useMemo(
+            () => ({ registerManageWidgetButtonRef: l, manageFocusOnReorder: s, getManageButtonForWidget: o }),
+            [l, s, o],
         );
-    return (0, i.jsx)(a.Provider, { value: s, children: t });
+    return (0, i.jsx)(a.Provider, { value: c, children: t });
 }

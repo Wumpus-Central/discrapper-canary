@@ -69,16 +69,16 @@ var _ = n(268218),
     w = n(534400),
     U = n(531685),
     z = n(620141),
-    V = n(19309),
-    B = n(224964);
+    B = n(19309),
+    V = n(224964);
 function F(e) {
     let { confettiSpawnRef: t, shouldFire: n } = e,
         l = (0, o.bG)([U.A], () => U.A.isFocused()),
-        i = (0, B.A)();
+        i = (0, V.A)();
     return (
         s.useEffect(() => {
             if (l && n) {
-                let e = (0, V.A)(t);
+                let e = (0, B.A)(t);
                 null != e && i.fire(e.x, e.y);
             }
         }, [i, t, l, n]),
@@ -355,8 +355,8 @@ let el = s.memo(function (e) {
                 onClick: w,
                 onContextMenu: U,
                 onClickPremiumGuildIcon: z,
-                "aria-controls": V,
-                "aria-expanded": B,
+                "aria-controls": B,
+                "aria-expanded": V,
                 "aria-posinset": F,
                 "aria-setsize": J,
                 id: q,
@@ -510,8 +510,8 @@ let el = s.memo(function (e) {
                               premiumSince: C,
                               onClickPremiumGuildIcon: z,
                           }),
-                          "aria-controls": V,
-                          "aria-expanded": B,
+                          "aria-controls": B,
+                          "aria-expanded": V,
                           "aria-setsize": J,
                           "aria-posinset": F,
                           id: q,
