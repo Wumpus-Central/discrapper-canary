@@ -177,7 +177,7 @@ function X(e) {
         E = s.useCallback(() => {
             if (null == x.current || null == v.current) return;
             let e = x.current.getBoundingClientRect();
-            v.current.scrollWidth + 48 > e.width ? C(!0) : C(!1);
+            v.current.scrollWidth + 56 > e.width ? C(!0) : C(!1);
         }, []);
     ((0, I.g)(x, E, [], { enabled: h }), (0, I.g)(v, E, [], { enabled: h }));
     let [S, j, b] = l,

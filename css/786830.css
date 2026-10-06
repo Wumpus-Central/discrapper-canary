@@ -61,11 +61,7 @@
 }
 
 .base_b88801 .ellipsis_b88801 {
-    display: block
-}
-
-.base_b88801 .dots_b88801,
-.base_b88801 .ellipsis_b88801 {
+    display: block;
     flex: 0 0 auto;
     margin-inline-start: 0
 }
@@ -75,7 +71,10 @@
     color: var(--text-default);
     contain: layout paint;
     display: inline-flex;
-    gap: 2px
+    flex: 0 0 auto;
+    gap: 2px;
+    margin: -1px;
+    padding: 1px
 }
 
 .base_b88801 .typingDots_b88801 {
@@ -153,7 +152,7 @@
 }
 
 .inTextChannel_b88801 .typingDots_b88801 {
-    margin-inline-start: 8px
+    padding-inline-start: 8px
 }
 
 .inTextChannel_b88801 .text_b88801 {
@@ -217,4 +216,4 @@
     background-image: url(/assets/6ad5446be34bb27a.svg)
 }
 
-/*# sourceMappingURL=786830.d8c08d1cebe7254a.css.map*/
+/*# sourceMappingURL=786830.7ab3a115b7388139.css.map*/
