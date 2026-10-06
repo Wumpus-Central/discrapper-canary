@@ -3,8 +3,8 @@ var l = n(477900);
 n(582128);
 var i = n(702841),
     a = n(192308),
-    r = n(477782),
-    o = n(968309),
+    o = n(477782),
+    r = n(968309),
     s = n(17928),
     d = n(71393),
     A = n(576705),
@@ -46,10 +46,10 @@ function w(e) {
                 N.A.getAccount(null, P.fg2.PLAYSTATION_STAGING),
             ].filter(O.Vq),
         );
-    if (!v && 0 === m.length) return null;
+    if (e.isGuildStageVoice() || (!v && 0 === m.length)) return null;
     let w = C(void 0);
     return v
-        ? (0, l.jsx)(r.Dr, {
+        ? (0, l.jsx)(o.Dr, {
               label: Y.intl.string(Y.t.PlwgdU),
               id: "handoff",
               action: () => {
@@ -72,7 +72,7 @@ function w(e) {
               var s, d;
               let A = C(i.type);
               return (0, l.jsx)(
-                  r.Dr,
+                  o.Dr,
                   {
                       id: `transfer-${i.type}-${i.id}`,
                       label:
@@ -93,7 +93,7 @@ function w(e) {
                                   : void 0),
                       action: () => {
                           !i.twoWayLink || i.revoked
-                              ? (0, o.A)({ platformType: i.type, location: "Console Transfer Item" })
+                              ? (0, r.A)({ platformType: i.type, location: "Console Transfer Item" })
                               : i.type === P.fg2.XBOX
                                 ? (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
