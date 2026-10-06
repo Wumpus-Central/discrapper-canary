@@ -5,5 +5,5 @@ var i = n(827343),
 function s(e, t) {
     e
         ? l.A.show({ title: r.intl.string(r.t.QZ7WSS), body: r.intl.string(r.t.Tl9JpL) })
-        : i.A.toggleSelfDeaf({ location: t });
+        : i.default.toggleSelfDeaf({ location: t });
 }

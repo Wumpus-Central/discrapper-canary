@@ -139,8 +139,8 @@ class U extends r.PureComponent {
                 isDeafened: u,
             } = this.props,
             d = !1;
-        (e && !u && (p.A.toggleSelfDeaf(), (d = !0)),
-            p.A.setLoopback("mic_test", !0),
+        (e && !u && (p.default.toggleSelfDeaf(), (d = !0)),
+            p.default.setLoopback("mic_test", !0),
             (this._micTestStartTime = Date.now()),
             this.setState({ isMicTesting: !0, isDetectingInput: !0, didDeafenUser: d }),
             R.default.track(D.HAw.MIC_TESTING_STARTED, {
@@ -158,8 +158,8 @@ class U extends r.PureComponent {
         let { didDeafenUser: e, isMicTesting: t } = this.state,
             { isVoiceConnected: n, isDeafened: i } = this.props;
         t &&
-            (n && i && e && p.A.toggleSelfDeaf(),
-            p.A.setLoopback("mic_test", !1),
+            (n && i && e && p.default.toggleSelfDeaf(),
+            p.default.setLoopback("mic_test", !1),
             this.setState({ isMicTesting: !1, didDeafenUser: !1 }),
             null != this._micTestStartTime &&
                 R.default.track(D.HAw.MIC_TESTING_STOPPED, {

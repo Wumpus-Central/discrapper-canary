@@ -16,10 +16,10 @@ var r = n(435558),
     I = n(108822),
     p = n(311043),
     T = n(830012),
-    g = n(810412),
     m = n(211753),
-    S = n(206885),
-    N = n(41984),
+    g = n(206885),
+    S = n(41984),
+    N = n(918825),
     C = n(439372),
     O = n(19575);
 class R extends C.A {
@@ -48,7 +48,7 @@ var y = n(871633),
     H = n(652215);
 let j = new h.A("RunningGameStore"),
     W = "RunningGameStore",
-    Y = !__OVERLAY__ && ((0, x.isDesktop)() || S.O),
+    Y = !__OVERLAY__ && ((0, x.isDesktop)() || g.O),
     K = [],
     $ = [
         {
@@ -124,8 +124,8 @@ let j = new h.A("RunningGameStore"),
     eI = {},
     ep = {},
     eT = new Set(),
-    eg = new Set(),
-    em = null,
+    em = new Set(),
+    eg = null,
     eS = null,
     eN = null,
     eC = new Map(),
@@ -228,18 +228,18 @@ function eB(e) {
         s = (0, V.Un)(e);
     if (s.isLauncher)
         return {
-            source: N.yp.LAUNCHER,
+            source: S.yp.LAUNCHER,
             enabledOOP: !1,
             enabledLegacy: !1,
-            overlayMethod: N.Ue.Disabled,
+            overlayMethod: S.Ue.Disabled,
             reason: "Game is launcher",
         };
     if ("pid" in s && !L.acquireLock(s.pid))
         return {
-            source: N.yp.GLOBAL_OVERLAY_LOCK_FAILED,
+            source: S.yp.GLOBAL_OVERLAY_LOCK_FAILED,
             enabledOOP: !1,
             enabledLegacy: !1,
-            overlayMethod: N.Ue.Disabled,
+            overlayMethod: S.Ue.Disabled,
             reason: "Another Discord instance running overlay for this pid",
         };
     let l = i.findGame(s);
@@ -247,10 +247,10 @@ function eB(e) {
         let e = r.getActiveLibraryApplication(l.id);
         if (null != e)
             return {
-                source: N.yp.LIBRARY_APPLICATION,
+                source: S.yp.LIBRARY_APPLICATION,
                 enabledOOP: e.isOverlayV3Enabled(),
                 enabledLegacy: e.isLegacyOverlayEnabled(),
-                overlayMethod: N.Ue.Disabled,
+                overlayMethod: S.Ue.Disabled,
                 reason: "Some library application thing?",
             };
     }
@@ -262,12 +262,12 @@ function eB(e) {
         E = eu.enableOverlayV3[eU(s)];
     if (null != _ || null != E) {
         let e = null != E ? E : u,
-            t = e ? N.Ue.OutOfProcess : N.Ue.Hook;
+            t = e ? S.Ue.OutOfProcess : S.Ue.Hook;
         return {
-            source: e && !d ? N.yp.OOP_DEFAULT : N.yp.USER_OVERRIDE,
+            source: e && !d ? S.yp.OOP_DEFAULT : S.yp.USER_OVERRIDE,
             enabledOOP: e,
             enabledLegacy: null != _ ? _ : c,
-            overlayMethod: u ? t : N.Ue.Hook,
+            overlayMethod: u ? t : S.Ue.Hook,
             reason: "Enabled from persistent",
         };
     }
@@ -275,20 +275,20 @@ function eB(e) {
     if (null != A) {
         let e = A.enabledOOP,
             t = A.enabled,
-            n = e ? N.Ue.OutOfProcess : N.Ue.Hook;
+            n = e ? S.Ue.OutOfProcess : S.Ue.Hook;
         return {
-            source: e && !d ? N.yp.OOP_DEFAULT_DATABASE : N.yp.DATABASE,
+            source: e && !d ? S.yp.OOP_DEFAULT_DATABASE : S.yp.DATABASE,
             enabledOOP: e,
             enabledLegacy: t,
-            overlayMethod: u ? n : N.Ue.Hook,
+            overlayMethod: u ? n : S.Ue.Hook,
             reason: "Enabled from game record",
         };
     }
     return {
-        source: N.yp.DEFAULT,
+        source: S.yp.DEFAULT,
         enabledOOP: u,
         enabledLegacy: !1,
-        overlayMethod: u ? N.Ue.OutOfProcess : N.Ue.Disabled,
+        overlayMethod: u ? S.Ue.OutOfProcess : S.Ue.Disabled,
         reason: "Default enablement",
     };
 }
@@ -766,7 +766,7 @@ class eZ extends d.Ay.Store {
         return eV(e);
     }
     addExecutableTrackedByAnalytics(e) {
-        eg.add((0, A.v)(e) ?? e);
+        em.add((0, A.v)(e) ?? e);
     }
     getSystemServiceStatus(e) {
         return Z[e] ?? { state: "unknown" };
@@ -824,8 +824,8 @@ let eq = new eZ(u.h, {
                 ej(),
                 !__OVERLAY__ &&
                     null != (null != r.id ? D.A.getDetectableGame(r.id) : null) &&
-                    (a && (0, g.Q3)(n, g.OverlayToggledClientSettingType.LEGACY_GAME, r.id ?? null),
-                    s && null != i && (0, g.Q3)(i, g.OverlayToggledClientSettingType.OOP_GAME, r.id ?? null)));
+                    (a && (0, N.Q)(n, N.OverlayToggledClientSettingType.LEGACY_GAME, r.id ?? null),
+                    s && null != i && (0, N.Q)(i, N.OverlayToggledClientSettingType.OOP_GAME, r.id ?? null)));
         },
         RUNNING_GAME_TOGGLE_DETECTION: function (e) {
             let { game: t } = e,
@@ -898,16 +898,16 @@ let eq = new eZ(u.h, {
             eK();
         },
         GAME_DETECTION_DEBUGGING_START: function (e) {
-            ((em = e.level), (eS = e.intervalSeconds));
+            ((eg = e.level), (eS = e.intervalSeconds));
         },
         GAME_DETECTION_DEBUGGING_STOP: function () {
-            ((em = null), (eS = null), eT.clear());
+            ((eg = null), (eS = null), eT.clear());
         },
         GAME_DETECTION_DEBUGGING_TICK: function (e) {
             let t = e.processes
                 .map((e) => ({ pid: e.pid, cleanedExePath: (0, A.v)(e.exePath) ?? e.exePath }))
                 .filter((e) => {
-                    if (eT.has(e.pid) || eg.has(e.cleanedExePath)) return !1;
+                    if (eT.has(e.pid) || em.has(e.cleanedExePath)) return !1;
                     let t = z.some((t) => e.cleanedExePath.includes(t));
                     return (t && eT.add(e.pid), t);
                 })
@@ -916,7 +916,7 @@ let eq = new eZ(u.h, {
                 P.default.track(H.HAw.GAME_DETECTION_DEBUGGING_KEYWORD_MATCH, {
                     keywords: z,
                     paths: t,
-                    debugging_level: em,
+                    debugging_level: eg,
                     interval_seconds: eS,
                 });
         },

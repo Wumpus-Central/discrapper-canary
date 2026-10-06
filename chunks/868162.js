@@ -125,11 +125,11 @@ let v = new m(s.h, {
         let { displayName: t, connectedDevicePreference: n, location: i } = e;
         if (n === A.f.INPUT || n === A.f.INPUT_AND_OUTPUT) {
             let e = g[t];
-            null != e && s.h.wait(() => a.A.setInputDevice(e, { location: i }));
+            null != e && s.h.wait(() => a.default.setInputDevice(e, { location: i }));
         }
         if (n === A.f.OUTPUT || n === A.f.INPUT_AND_OUTPUT) {
             let e = I[t];
-            null != e && s.h.wait(() => a.A.setOutputDevice(e, { location: i }));
+            null != e && s.h.wait(() => a.default.setOutputDevice(e, { location: i }));
         }
         T = {};
     },

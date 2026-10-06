@@ -10,8 +10,8 @@ var l = t(477900),
     c = t(442433),
     I = t(730852),
     h = t(401843),
-    A = t(820284),
-    E = t(688810),
+    E = t(820284),
+    A = t(688810),
     g = t(74329),
     S = t(304006),
     f = t(479335),
@@ -106,7 +106,7 @@ function y(e) {
                       id: "mute",
                       label: D.intl.string(D.t.sWmtI6),
                       action: function () {
-                          o.A.toggleLocalMute(B.ownerId, L.x.STREAM);
+                          o.default.toggleLocalMute(B.ownerId, L.x.STREAM);
                       },
                       checked: Z,
                   })),
@@ -116,14 +116,14 @@ function y(e) {
                 i = j.Ay.supports(L.O5.SIDECHAIN_COMPRESSION),
                 r = (0, s.bG)([j.Ay], () => j.Ay.getSidechainCompression()),
                 u = (0, s.bG)([j.Ay], () => j.Ay.getSidechainCompressionStrength()),
-                { analyticsLocations: c } = (0, E.Ay)();
+                { analyticsLocations: c } = (0, A.Ay)();
             return !t && n && i
                 ? (0, l.jsxs)(a.rX, {
                       children: [
                           (0, l.jsx)(a.sL, {
                               id: "sidechain-compression",
                               label: D.intl.string(D.t["/jwMtn"]),
-                              action: () => o.A.setSidechainCompression(!r, { analyticsLocations: c }),
+                              action: () => o.default.setSidechainCompression(!r, { analyticsLocations: c }),
                               checked: r,
                           }),
                           r &&
@@ -137,7 +137,7 @@ function y(e) {
                                           value: u,
                                           maxValue: 100,
                                           onChange: (e) =>
-                                              o.A.setSidechainCompressionStrength(e, { analyticsLocations: c }),
+                                              o.default.setSidechainCompressionStrength(e, { analyticsLocations: c }),
                                           "aria-label": D.intl.string(D.t.fhEzfj),
                                       }),
                               }),
@@ -194,7 +194,7 @@ function y(e) {
                 },
                 checked: Y === x.$.COVER,
             }));
-    return (0, l.jsx)(A.A, {
+    return (0, l.jsx)(E.A, {
         context: J,
         object: T.ZSU.CONTEXT_MENU,
         children: (0, l.jsxs)(u.W, {

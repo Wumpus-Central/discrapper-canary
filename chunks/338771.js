@@ -9,5 +9,5 @@ function l(e) {
     if (null == e) return;
     let { streamType: l, guildId: o, channelId: d, ownerId: c } = e,
         u = (0, s._z)({ streamType: l, guildId: o, channelId: d, ownerId: c });
-    (c === a.default.getId() && i.A.setGoLiveSource(null), r.vN(u, t, n));
+    (c === a.default.getId() && i.default.setGoLiveSource(null), r.vN(u, t, n));
 }

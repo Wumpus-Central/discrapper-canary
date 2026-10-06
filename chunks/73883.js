@@ -4,10 +4,10 @@ n(582128);
 var i = n(702841),
     a = n(192308),
     r = n(477782),
-    A = n(968309),
-    o = n(17928),
-    s = n(71393),
-    d = n(576705),
+    o = n(968309),
+    s = n(17928),
+    d = n(71393),
+    A = n(576705),
     c = n(977997),
     f = n(147036),
     u = n(818348),
@@ -36,10 +36,10 @@ function w(e) {
     let t = (0, i.bG)([g.A], () => g.A.getChannelId() === e.id),
         p = (0, G.A)(),
         v = p?.channelId === e.id,
-        k = (0, o.bG)([d.A], () => null == e || !d.A.can(u.xB.CONNECT, e), [e]) && !e.isPrivate(),
-        L = (0, o.bG)([c.A, s.A], () => (0, f.Pd)(e, c.A, s.A)),
+        k = (0, s.bG)([A.A], () => null == e || !A.A.can(u.xB.CONNECT, e), [e]) && !e.isPrivate(),
+        L = (0, s.bG)([c.A, d.A], () => (0, f.Pd)(e, c.A, d.A)),
         X = (!(0, i.bG)([c.A], () => c.A.isInChannel(e.id)) && L) || k,
-        m = (0, o.yK)([N.A], () =>
+        m = (0, s.yK)([N.A], () =>
             [
                 N.A.getAccount(null, P.fg2.XBOX),
                 N.A.getAccount(null, P.fg2.PLAYSTATION),
@@ -59,8 +59,8 @@ function w(e) {
                       (0, S.ZG)(),
                       (t = void 0 ?? p.channelId),
                       y()(null != t, "attempted to transfer to unknown channel"),
-                      p.selfMute !== I.Ay.isSelfMute() && h.A.toggleSelfMute(),
-                      p.selfDeaf !== I.Ay.isSelfDeaf() && h.A.toggleSelfDeaf(),
+                      p.selfMute !== I.Ay.isSelfMute() && h.default.toggleSelfMute(),
+                      p.selfDeaf !== I.Ay.isSelfDeaf() && h.default.toggleSelfDeaf(),
                       (0, b.A)(t, "discord_client", e),
                       T.default.selectVoiceChannel(t, !1));
               },
@@ -69,35 +69,35 @@ function w(e) {
               disabled: X,
           })
         : m.map((i) => {
-              var o, s;
-              let d = C(i.type);
+              var s, d;
+              let A = C(i.type);
               return (0, l.jsx)(
                   r.Dr,
                   {
                       id: `transfer-${i.type}-${i.id}`,
                       label:
-                          ((o = i.type),
-                          (s = t),
-                          o === P.fg2.XBOX
-                              ? s
+                          ((s = i.type),
+                          (d = t),
+                          s === P.fg2.XBOX
+                              ? d
                                   ? Y.intl.string(Y.t["qVE/VF"])
                                   : Y.intl.string(Y.t.E8euSk)
-                              : o === P.fg2.PLAYSTATION
-                                ? s
+                              : s === P.fg2.PLAYSTATION
+                                ? d
                                     ? Y.intl.string(Y.t.vzfxmY)
                                     : Y.intl.string(Y.t.QxEYDj)
-                                : o === P.fg2.PLAYSTATION_STAGING
-                                  ? s
+                                : s === P.fg2.PLAYSTATION_STAGING
+                                  ? d
                                       ? Y.intl.string(Y.t.BDiXtV)
                                       : Y.intl.string(Y.t["bhdB9+"])
                                   : void 0),
                       action: () => {
                           !i.twoWayLink || i.revoked
-                              ? (0, A.A)({ platformType: i.type, location: "Console Transfer Item" })
+                              ? (0, o.A)({ platformType: i.type, location: "Console Transfer Item" })
                               : i.type === P.fg2.XBOX
                                 ? (0, a.openModalLazy)(async () => {
                                       let { default: t } = await Promise.all([
-                                          n.e("262546"),
+                                          n.e("72338"),
                                           n.e("648241"),
                                           n.e("595429"),
                                           n.e("65407"),
@@ -117,8 +117,8 @@ function w(e) {
                                       return (n) => (0, l.jsx)(t, { ...n, platform: i.type, channel: e });
                                   });
                       },
-                      icon: d,
-                      leadingAccessory: { type: "icon", icon: d },
+                      icon: A,
+                      leadingAccessory: { type: "icon", icon: A },
                       disabled: X,
                   },
                   i.id,

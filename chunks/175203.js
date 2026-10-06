@@ -16,8 +16,8 @@ var t = s(477900),
     I = s(615675),
     y = s(666654),
     T = s(990836),
-    j = s(83107),
-    f = s(866665),
+    f = s(83107),
+    j = s(866665),
     E = s(408278),
     g = s(609731),
     N = s(788120),
@@ -70,8 +70,8 @@ var t = s(477900),
     eI = s(723702),
     ey = s(19575),
     eT = s(141035),
-    ej = s(654820),
-    ef = s(804980),
+    ef = s(654820),
+    ej = s(804980),
     eE = s(272812),
     eg = s(304047),
     eN = s(802867),
@@ -96,8 +96,8 @@ let e_ = [eO.lp.ACTIVITY],
                 onDoubleClick: I,
                 onContextMenu: y,
                 onClick: T,
-                onMouseDown: j,
-                onKeyDown: f,
+                onMouseDown: f,
+                onKeyDown: j,
                 className: E,
                 style: g,
                 containerStyle: N,
@@ -184,7 +184,7 @@ let e_ = [eO.lp.ACTIVITY],
             $(k);
         }, [k]);
         let eJ = i.useCallback(() => {
-                null != eI && _.A.toggleLocalMute(eI, eV.x.STREAM);
+                null != eI && _.default.toggleLocalMute(eI, eV.x.STREAM);
             }, [eI]),
             eF = i.useCallback(
                 (e) => {
@@ -248,7 +248,7 @@ let e_ = [eO.lp.ACTIVITY],
                     (e0 = ek.intl.formatToPlainString(ek.t["iC/x/Q"], { username: u.user.username })));
                 break;
             case eO.lp.ACTIVITY:
-                ((eZ = (0, t.jsx)(ef.Ay, { interactible: k, participant: u, selected: O, channel: v, width: C })),
+                ((eZ = (0, t.jsx)(ej.Ay, { interactible: k, participant: u, selected: O, channel: v, width: C })),
                     (e0 = ek.intl.formatToPlainString(ek.t.YCvOsO, { activityName: ey?.name })));
                 break;
             case eO.lp.HIDDEN_STREAM:
@@ -298,8 +298,8 @@ let e_ = [eO.lp.ACTIVITY],
                                     onDoubleClick: eK,
                                     onContextMenu: (e) => eq(e, u.type === eO.lp.STREAM),
                                     onClick: eF,
-                                    onMouseDown: j,
-                                    onKeyDown: f,
+                                    onMouseDown: f,
+                                    onKeyDown: j,
                                     focusProps: { offset: 1 },
                                     children: [
                                         null != eW && null != eI
@@ -370,7 +370,7 @@ let e_ = [eO.lp.ACTIVITY],
                                     ],
                                 }),
                             }),
-                            ee && es && eu && (0, t.jsx)(ej.A, { currentUserId: eh, participant: u }),
+                            ee && es && eu && (0, t.jsx)(ef.A, { currentUserId: eh, participant: u }),
                             (0, t.jsx)(q.A, { isFiring: K, callTileRef: e1 }),
                         ],
                     }),
@@ -399,7 +399,7 @@ function eU(e) {
 }
 function eL(e) {
     let { icon: l, tooltipText: s, hideWhenInactive: i, idle: n, onClick: o } = e;
-    return (0, t.jsx)(f.m, {
+    return (0, t.jsx)(j.m, {
         text: s,
         children: (0, t.jsx)("div", {
             className: a()(eM.V7, { [eM.kl]: i, [eM.N7]: n }),
@@ -481,10 +481,10 @@ let eG = i.memo((e) => {
         }
         return (eA.A.addChangeListener(l), () => eA.A.removeChangeListener(l));
     }, []);
-    let ej = !q && x === eO.lp.STREAM && F && (!ex || Y),
-        ef = (function (e) {
+    let ef = !q && x === eO.lp.STREAM && F && (!ex || Y),
+        ej = (function (e) {
             let { localMuted: l, serverMuted: s, serverDeafened: t, deafened: i, muted: n } = e;
-            return t ? I.T : s ? y.O : i ? T.c : l ? y.O : n ? j.z : null;
+            return t ? I.T : s ? y.O : i ? T.c : l ? y.O : n ? f.z : null;
         })({ localMuted: Y, serverMuted: H, serverDeafened: J, deafened: G, muted: U }),
         eE = (0, S.z)({ value: null != et ? et : 0, config: { ...o.config.stiff, clamp: !0 } }, "animate-always"),
         eN = [];
@@ -536,7 +536,7 @@ let eG = i.memo((e) => {
                       "options",
                   ),
               ),
-              ej &&
+              ef &&
                   eN.push(
                       (0, t.jsx)(
                           eL,
@@ -551,9 +551,9 @@ let eG = i.memo((e) => {
                       ),
                   )));
     let ev = [];
-    (null != ef &&
+    (null != ej &&
         x === eO.lp.USER &&
-        ev.push((0, t.jsx)(ef, { className: eM.gr, size: "xs", color: "currentColor" }, "sound-icon")),
+        ev.push((0, t.jsx)(ej, { className: eM.gr, size: "xs", color: "currentColor" }, "sound-icon")),
         m &&
             ev.push(
                 (0, t.jsx)(
@@ -585,7 +585,7 @@ let eG = i.memo((e) => {
         _ &&
             ev.push(
                 (0, t.jsx)(
-                    f.m,
+                    j.m,
                     {
                         text: ek.intl.string(ek.t.ZEem6O),
                         children: (0, t.jsx)(M.m, {

@@ -11,7 +11,7 @@ function c(e) {
 }
 function u() {
     (0, i.useEffect)(() => {
-        (0, l.sD)(a.Um.APP);
+        (0, l.s)(a.Um.APP);
     }, []);
     let e = (0, r.bG)([o.A], () => o.A.getExperimentsMetadata()),
         t = (0, r.bG)([o.A], () => o.A.getRegisteredExperiments()),

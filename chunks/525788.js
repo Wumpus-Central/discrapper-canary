@@ -16,8 +16,8 @@ var i = n(477900),
     I = n(778712),
     p = n(922016),
     T = n(442433),
-    g = n(820284),
-    m = n(942857),
+    m = n(820284),
+    g = n(942857),
     S = n(538451),
     N = n(616356),
     C = n(287809),
@@ -109,7 +109,7 @@ function w(e) {
             maxVisibleUsers: A = 3,
         } = e,
         h = r.useRef(null),
-        S = (0, m.A)(),
+        S = (0, g.A)(),
         [R, D] = r.useState(!1),
         b = r.useRef(new c.J_(150, () => D(!1))),
         w = (0, d.yK)(
@@ -167,7 +167,8 @@ function w(e) {
                                 n.e("624198"),
                                 n.e("190889"),
                                 n.e("856753"),
-                                n.e("114518"),
+                                n.e("61129"),
+                                n.e("983525"),
                                 n.e("331203"),
                                 n.e("255302"),
                                 n.e("349644"),
@@ -208,7 +209,7 @@ function w(e) {
     return (
         w.length > A &&
             (F[F.length - 1] = (0, i.jsxs)("div", { className: v.ju, children: ["+", w.length - A + 1] }, "overflow")),
-        (0, i.jsx)(g.A, {
+        (0, i.jsx)(m.A, {
             section: y.JJy.STREAM_VIEWER_POPOUT,
             children: (0, i.jsx)("div", {
                 onMouseEnter: G,

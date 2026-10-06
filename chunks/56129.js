@@ -17,8 +17,8 @@ var r = n(503698),
     I = n(267102),
     p = n(574172),
     T = n(704877),
-    g = n(222692),
-    m = n(447404),
+    m = n(222692),
+    g = n(447404),
     S = n(271195),
     N = n(204651),
     C = n(383831),
@@ -65,7 +65,7 @@ function F(e) {
         H = (0, T.A)(t),
         { parentAnalyticsLocation: j } = (0, u.Ay)();
     function W(e) {
-        ((0, A.X)(j, A.O.CAMERA, e), c.A.setVideoEnabled(e));
+        ((0, A.X)(j, A.O.CAMERA, e), c.default.setVideoEnabled(e));
     }
     return (0, i.jsxs)("div", {
         className: x._v,
@@ -79,7 +79,7 @@ function F(e) {
                     idle: d,
                     title: B?.name ?? V ?? "",
                     onJumpToChannel: o,
-                    preventIdleComponent: m.A,
+                    preventIdleComponent: g.A,
                 }),
             }),
             (0, i.jsxs)("div", {
@@ -98,11 +98,11 @@ function F(e) {
                                 hasPermission: H,
                                 onChange: W,
                                 onCameraUnavailable: function () {
-                                    F ? W(!0) : (0, g.A)();
+                                    F ? W(!0) : (0, m.A)();
                                 },
                             }),
                             null != t &&
-                                (0, i.jsx)(m.A, {
+                                (0, i.jsx)(g.A, {
                                     children: (0, i.jsx)(E.A, {
                                         channelId: t.id,
                                         guildId: t.getGuildId(),
@@ -171,7 +171,7 @@ function B(e) {
                     idle: c,
                     title: A?.name ?? f ?? "",
                     onJumpToChannel: d,
-                    preventIdleComponent: m.A,
+                    preventIdleComponent: g.A,
                 }),
             }),
             (0, i.jsxs)("div", {
@@ -226,7 +226,7 @@ function H(e) {
                                 idle: !s,
                                 title: I?.name ?? p ?? "",
                                 onJumpToChannel: c,
-                                preventIdleComponent: m.A,
+                                preventIdleComponent: g.A,
                             }),
                             (0, i.jsxs)("div", {
                                 className: G.QS,

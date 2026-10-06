@@ -16,8 +16,8 @@ var i = n(607399),
     I = n(167189),
     p = n(721779),
     T = n(707592),
-    g = n(698441),
-    m = n(268313),
+    m = n(698441),
+    g = n(268313),
     S = n(21599),
     N = n(376943),
     C = n(741231),
@@ -75,7 +75,7 @@ async function K(e, t) {
         }
     }
     if (null == e || "" === e) return void i();
-    let r = g.Ay.getGuildScheduledEvent(t);
+    let r = m.Ay.getGuildScheduledEvent(t);
     if (null == r)
         try {
             let { default: i } = await Promise.resolve().then(n.bind(n, 496092));
@@ -140,7 +140,7 @@ function z(e) {
                               t({
                                   tab: i.APPS,
                                   applicationId: a,
-                                  section: (0, m.A)(r, T.type === I.I.APP_DIRECTORY_PROFILE ? r.ABOUT : r.STORE),
+                                  section: (0, g.A)(r, T.type === I.I.APP_DIRECTORY_PROFILE ? r.ABOUT : r.STORE),
                                   skuId: s,
                               });
                           })),
@@ -307,8 +307,8 @@ function z(e) {
                 !0
             );
         };
-    let { host: g, hostname: S, pathname: M, search: P, hash: U } = V.A.toURLSafe(e) ?? {},
-        w = V.A.isDiscordHostname(S ?? null) || V.A.isDiscordLocalhost(g ?? null, S ?? null);
+    let { host: m, hostname: S, pathname: M, search: P, hash: U } = V.A.toURLSafe(e) ?? {},
+        w = V.A.isDiscordHostname(S ?? null) || V.A.isDiscordLocalhost(m ?? null, S ?? null);
     if (w && (M?.startsWith("/application-directory") || M?.startsWith("/discovery/applications"))) {
         let e = M.split("/"),
             t = M?.startsWith("/discovery/applications"),
@@ -406,9 +406,17 @@ function z(e) {
         );
     if (w && M?.startsWith("/playground")) {
         let { parsePlaygroundUrl: e } = n(682492),
-            { openPlayground: t } = n(965042),
-            { collection: i, story: r, controlOverrides: a } = e(M, P);
-        return (e) => (e?.preventDefault(), t(i, r, a), !0);
+            { collection: t, story: i, controlOverrides: r } = e(M, P);
+        return (e) => (
+            e?.preventDefault(),
+            Promise.all([n.e("60800"), n.e("129263")])
+                .then(n.bind(n, 965042))
+                .then((e) => {
+                    let { openPlayground: n } = e;
+                    return n(t, i, r);
+                }),
+            !0
+        );
     }
     return w && M?.startsWith("/discovery/quests")
         ? (e) => (e?.preventDefault(), (0, R.m)({ fromContent: r.u.QUEST_BADGE }), !0)

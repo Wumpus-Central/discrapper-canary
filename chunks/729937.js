@@ -1,27 +1,31 @@
-i.d(e, { OH: () => s, ZH: () => a, yb: () => c });
-var r = i(636537),
-    n = i(73153),
-    o = i(981616),
-    u = i(290863),
-    l = i(652215);
-function s(t, e) {
-    n.h.dispatch({ type: "ACTIVITY_SYNC", activity: t, userId: e });
+n.d(i, { OH: () => u, ZH: () => d, yb: () => p });
+var e = n(636537),
+    r = n(73153),
+    a = n(290863),
+    l = n(652215);
+function u(t, i) {
+    r.h.dispatch({ type: "ACTIVITY_SYNC", activity: t, userId: i });
 }
-function a(t, e) {
-    (0, o.LI)(t, e)
-        .then((i) => n.h.dispatch({ type: "ACTIVITY_PLAY", activity: t, userId: e, metadata: i }))
-        .catch(() => n.h.dispatch({ type: "ACTIVITY_PLAY", activity: t, userId: e }));
+function d(t, i) {
+    n.e("61129")
+        .then(n.bind(n, 981616))
+        .then((n) => {
+            let { getSpotifyMetadataFromActivity: e } = n;
+            return e(t, i);
+        })
+        .then((n) => r.h.dispatch({ type: "ACTIVITY_PLAY", activity: t, userId: i, metadata: n }))
+        .catch(() => r.h.dispatch({ type: "ACTIVITY_PLAY", activity: t, userId: i }));
 }
-async function c(t, e) {
-    let i = t.metadata;
-    if (null != i && Object.keys(i).length > 0) return i;
-    let o = u.A.getActivityMetadata(e);
-    if (null != o) return o;
+async function p(t, i) {
+    let n = t.metadata;
+    if (null != n && Object.keys(n).length > 0) return n;
+    let u = a.A.getActivityMetadata(i);
+    if (null != u) return u;
     if (null == t.session_id) throw Error("null/undefined session_id");
-    let { body: s } = await r.Bo.get({
-        url: l.Rsh.USER_ACTIVITY_METADATA(e, t.session_id, t.application_id),
+    let { body: d } = await e.Bo.get({
+        url: l.Rsh.USER_ACTIVITY_METADATA(i, t.session_id, t.application_id),
         oldFormErrors: !0,
-        rejectWithError: (0, r.fT)(),
+        rejectWithError: (0, e.fT)(),
     });
-    return (n.h.dispatch({ type: "ACTIVITY_METADATA_UPDATE", metadata: s, userId: e }), s);
+    return (r.h.dispatch({ type: "ACTIVITY_METADATA_UPDATE", metadata: d, userId: i }), d);
 }

@@ -3041,11 +3041,11 @@ class sK extends a.PureComponent {
     rtcConnectionStatusRef = a.createRef();
     handleToggleSelfMute = () => {
         let { context: e } = this.props;
-        sM.A.toggleSelfMute({ context: e, location: "Overlay Controls" });
+        sM.default.toggleSelfMute({ context: e, location: "Overlay Controls" });
     };
     handleToggleSelfDeaf = () => {
         let { context: e } = this.props;
-        sM.A.toggleSelfDeaf({ context: e, location: "Overlay Controls" });
+        sM.default.toggleSelfDeaf({ context: e, location: "Overlay Controls" });
     };
     handleDisconnect() {
         tI.default.selectVoiceChannel(null);

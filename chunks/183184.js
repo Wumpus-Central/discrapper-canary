@@ -7,5 +7,5 @@ function s(e, t, n) {
         ? l.A.show({ title: r.intl.string(r.t.FJSZVM), body: r.intl.string(r.t.etJjgW) })
         : e
           ? l.A.show({ title: r.intl.string(r.t["+JQCa/"]), body: r.intl.string(r.t.hsNm7d) })
-          : i.A.toggleSelfMute({ location: n });
+          : i.default.toggleSelfMute({ location: n });
 }

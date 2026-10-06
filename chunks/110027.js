@@ -24,7 +24,7 @@ function c(e) {
                     group: "input-profiles",
                     label: n[t],
                     checked: t === (c ?? u.m.CUSTOM),
-                    action: () => s.A.setActiveInputProfile(t, { analyticsLocations: e }),
+                    action: () => s.default.setActiveInputProfile(t, { analyticsLocations: e }),
                 },
                 t,
             ),

@@ -136,7 +136,7 @@ function D(e) {
                                 checked: Q === M.TBI.PUSH_TO_TALK,
                                 id: "input-mode",
                                 label: L.intl.string(L.t.Q8gkVL),
-                                action: () => d.A.setMode(ee, void 0, void 0, { analyticsLocations: H }),
+                                action: () => d.default.setMode(ee, void 0, void 0, { analyticsLocations: H }),
                                 disabled: W === v.m.STUDIO,
                             }),
                         O &&
@@ -145,7 +145,7 @@ function D(e) {
                                 {
                                     id: "deafen",
                                     label: L.intl.string(L.t.wjcRFX),
-                                    action: () => d.A.toggleSelfDeaf({ context: $, location: "AudioDeviceMenu" }),
+                                    action: () => d.default.toggleSelfDeaf({ context: $, location: "AudioDeviceMenu" }),
                                     checked: K,
                                 },
                                 "self-deafen",
@@ -164,7 +164,7 @@ function D(e) {
                                             {},
                                         );
                                 })(q),
-                                action: () => d.A.setSpatialAudio(!X, H),
+                                action: () => d.default.setSpatialAudio(!X, H),
                             }),
                         F && k,
                     ],

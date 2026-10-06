@@ -10,8 +10,8 @@ var n = s(477900),
     u = s(331322),
     m = s(193249),
     x = s(827343),
-    A = s(688810),
-    p = s(625841),
+    p = s(688810),
+    A = s(625841),
     g = s(74848),
     E = s(885386),
     _ = s(912630),
@@ -68,7 +68,7 @@ function y(e) {
             hidePreviewToggle: _ = !1,
             onCancelPreview: S,
         } = e,
-        { analyticsLocations: U } = (0, A.Ay)(),
+        { analyticsLocations: U } = (0, p.Ay)(),
         { id: y } = (0, g.x5)(O.oh.VIDEO_INPUT),
         D = (0, i.bG)([j.Ay], () => j.Ay.isVideoAvailable()),
         T = E.bm.useSetting();
@@ -82,7 +82,7 @@ function y(e) {
                       className: C.u5,
                       color: "interactive-text-default",
                       variant: "text-sm/normal",
-                      children: v.intl.format(v.t.stagfJ, { onEnableClick: () => x.A.enable(!0) }),
+                      children: v.intl.format(v.t.stagfJ, { onEnableClick: () => x.default.enable(!0) }),
                   }),
             _
                 ? null
@@ -96,7 +96,7 @@ function y(e) {
                       },
                   }),
             !t &&
-                (0, n.jsx)(p.U, {
+                (0, n.jsx)(A.U, {
                     label: s ? void 0 : v.intl.string(v.t.FsQ3OR),
                     helperText:
                         !l && (0, I.p)()

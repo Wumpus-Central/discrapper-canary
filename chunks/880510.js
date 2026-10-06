@@ -6,13 +6,13 @@ var l = n(477900),
     o = n(193249),
     d = n(299163),
     r = n(452027),
-    h = n(331322),
-    u = n(144228),
+    u = n(331322),
+    h = n(144228),
     g = n(827343),
     p = n(635242),
-    A = n(625841),
-    c = n(25578),
-    V = n(824744),
+    c = n(625841),
+    V = n(25578),
+    A = n(824744),
     x = n(319437),
     T = n(652215),
     C = n(731854),
@@ -71,14 +71,14 @@ function M(e) {
             vadThreshold: M,
             vadAutoThreshold: y,
             delay: O,
-        } = (0, s.cf)([c.Ay], () => ({
-            inputVolume: c.Ay.getInputVolume(),
-            outputVolume: c.Ay.getOutputVolume(),
-            inputMode: c.Ay.getMode(n),
-            shortcut: c.Ay.getModeOptions(n).shortcut,
-            vadThreshold: c.Ay.getModeOptions(n).threshold,
-            vadAutoThreshold: c.Ay.getModeOptions(n).autoThreshold,
-            delay: c.Ay.getModeOptions(n).delay,
+        } = (0, s.cf)([V.Ay], () => ({
+            inputVolume: V.Ay.getInputVolume(),
+            outputVolume: V.Ay.getOutputVolume(),
+            inputMode: V.Ay.getMode(n),
+            shortcut: V.Ay.getModeOptions(n).shortcut,
+            vadThreshold: V.Ay.getModeOptions(n).threshold,
+            vadAutoThreshold: V.Ay.getModeOptions(n).autoThreshold,
+            delay: V.Ay.getModeOptions(n).delay,
         })),
         I = [
             { value: T.TBI.VOICE_ACTIVITY, name: j.intl.string(j.t.cHCEOJ) },
@@ -87,20 +87,20 @@ function M(e) {
     return (
         (t =
             x === T.TBI.PUSH_TO_TALK
-                ? (0, l.jsxs)(h.B, {
+                ? (0, l.jsxs)(u.B, {
                       gap: 20,
                       children: [
                           (0, l.jsx)(r.D, {
                               label: j.intl.string(j.t.YkDjVM),
                               children: (0, l.jsx)(p.A, {
                                   defaultValue: m,
-                                  onChange: (e) => g.A.setMode(x, { shortcut: e }, n),
+                                  onChange: (e) => g.default.setMode(x, { shortcut: e }, n),
                               }),
                           }),
                           (0, l.jsx)(d.A, {
                               label: j.intl.string(j.t.y0ShVt),
                               initialValue: O,
-                              onValueChange: (e) => g.A.setMode(x, { delay: e }, n),
+                              onValueChange: (e) => g.default.setMode(x, { delay: e }, n),
                               onValueRender: (e) => (e >= 1e3 ? ((e /= 1e3), `${e.toFixed(2)}s`) : `${e.toFixed(0)}ms`),
                               maxValue: T.IjB,
                           }),
@@ -111,35 +111,35 @@ function M(e) {
                       inputMode: x,
                       threshold: M,
                       autoThreshold: y,
-                      onThresholdChange: (e, t) => g.A.setMode(x, { threshold: e, autoThreshold: t }, n),
+                      onThresholdChange: (e, t) => g.default.setMode(x, { threshold: e, autoThreshold: t }, n),
                   })),
-        (0, l.jsxs)(h.B, {
+        (0, l.jsxs)(u.B, {
             gap: 20,
             children: [
-                (0, l.jsx)(A.U, {
+                (0, l.jsx)(c.U, {
                     label: j.intl.string(j.t.hHMYbb),
                     deviceType: C.oh.AUDIO_INPUT,
                     location: "VoiceSettingsModal",
                 }),
                 (0, l.jsx)(d.A, {
                     label: j.intl.string(j.t.OX2Bnr),
-                    initialValue: (0, V.M)(a),
-                    asValueChanges: (e) => g.A.setInputVolume((0, V.w)(e)),
+                    initialValue: (0, A.M)(a),
+                    asValueChanges: (e) => g.default.setInputVolume((0, A.w)(e)),
                 }),
-                (0, l.jsx)(A.U, {
+                (0, l.jsx)(c.U, {
                     label: j.intl.string(j.t.dl18zb),
                     deviceType: C.oh.AUDIO_OUTPUT,
                     location: "VoiceSettingsModal",
                 }),
                 (0, l.jsx)(d.A, {
                     label: j.intl.string(j.t.eATD2B),
-                    initialValue: (0, V.M)(o),
+                    initialValue: (0, A.M)(o),
                     maxValue: 200,
-                    asValueChanges: (e) => g.A.setOutputVolume((0, V.w)(e)),
+                    asValueChanges: (e) => g.default.setOutputVolume((0, A.w)(e)),
                 }),
-                (0, l.jsx)(u.z, {
+                (0, l.jsx)(h.z, {
                     label: j.intl.string(j.t["pS+K2L"]),
-                    onChange: (e) => g.A.setMode(e, {}, n),
+                    onChange: (e) => g.default.setMode(e, {}, n),
                     options: I,
                     value: x,
                 }),

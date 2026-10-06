@@ -15,37 +15,37 @@ var i = n(477900),
     D = n(688810),
     x = n(363195),
     h = n(934729),
-    C = n(347481),
-    f = n(25578),
+    f = n(347481),
+    C = n(25578),
     I = n(74848),
     b = n(106713),
-    A = n(731854),
-    O = n(375708),
+    O = n(731854),
+    A = n(375708),
     S = n(534283);
 function T(e) {
     return {
-        [A.oh.AUDIO_INPUT]: {
-            setDevice: g.A.setInputDevice,
+        [O.oh.AUDIO_INPUT]: {
+            setDevice: g.default.setInputDevice,
             IconComponent: u.MicrophoneIcon,
-            getCanSetDevice: (e) => e.supports(A.O5.AUDIO_INPUT_DEVICE),
+            getCanSetDevice: (e) => e.supports(O.O5.AUDIO_INPUT_DEVICE),
             getWarningMessage: () =>
-                O.intl.format(O.t["1iK6UW"], { onDownloadClick: () => (0, h._)("Help Text Input Devices") }),
+                A.intl.format(A.t["1iK6UW"], { onDownloadClick: () => (0, h._)("Help Text Input Devices") }),
             getLocation: (e) => `${e}.SingleSelectInputDevices`,
         },
-        [A.oh.AUDIO_OUTPUT]: {
-            setDevice: g.A.setOutputDevice,
+        [O.oh.AUDIO_OUTPUT]: {
+            setDevice: g.default.setOutputDevice,
             IconComponent: d.L,
-            getCanSetDevice: (e) => e.supports(A.O5.AUDIO_OUTPUT_DEVICE),
+            getCanSetDevice: (e) => e.supports(O.O5.AUDIO_OUTPUT_DEVICE),
             getWarningMessage: () =>
-                O.intl.format(O.t.Ow0dbF, { onDownloadClick: () => (0, h._)("Help Text Output Devices") }),
+                A.intl.format(A.t.Ow0dbF, { onDownloadClick: () => (0, h._)("Help Text Output Devices") }),
             getLocation: (e) => `${e}.SingleSelectOutputDevices`,
         },
-        [A.oh.VIDEO_INPUT]: {
-            setDevice: g.A.setVideoDevice,
+        [O.oh.VIDEO_INPUT]: {
+            setDevice: g.default.setVideoDevice,
             IconComponent: p.x,
             getCanSetDevice: (e) => e.isVideoAvailable() || !e.hasVideoDevice(),
             getWarningMessage: () =>
-                O.intl.format(O.t["1iK6UW"], { onDownloadClick: () => (0, h._)("Help Text Video Devices") }),
+                A.intl.format(A.t["1iK6UW"], { onDownloadClick: () => (0, h._)("Help Text Video Devices") }),
             getLocation: (e) => `${e}.SingleSelectVideoDevices`,
         },
     }[e];
@@ -59,13 +59,13 @@ function N(e) {
             hideDeviceTypeIcon: p = !1,
             label: g,
             textVariant: h,
-            ...A
+            ...O
         } = e,
         { analyticsLocations: N } = (0, D.Ay)(),
         j = (0, a.bG)([x.A], () => x.A.theme),
         U = l.useMemo(() => t.reduce((e, t) => ({ ...e, [t.id]: t }), {}), [t]),
         _ = U[u]?.deviceType ?? null,
-        V = (0, a.bG)([f.Ay], () => null == _ || T(_).getCanSetDevice(f.Ay)),
+        V = (0, a.bG)([C.Ay], () => null == _ || T(_).getCanSetDevice(C.Ay)),
         { showDeviceFormFactorIndicators: y } = b.A.useConfig({ location: "SingleSelectDevices" }),
         w = null != _ ? (0, i.jsx)(m.p, { messageType: m.Y.WARNING, children: T(_).getWarningMessage() }) : null,
         E = l.useCallback(
@@ -82,10 +82,10 @@ function N(e) {
         let t,
             l = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
             { prefix: s, subName: a } = (0, I.d)(e),
-            c = C.A.getCertifiedDeviceName(e.id, s);
-        if (C.A.isCertified(e.id)) {
+            c = f.A.getCertifiedDeviceName(e.id, s);
+        if (f.A.isCertified(e.id)) {
             let e = (0, r.q)(j) ? n(961392) : n(848672);
-            t = (0, i.jsx)("img", { src: e, alt: O.intl.string(O.t.smSKsj) });
+            t = (0, i.jsx)("img", { src: e, alt: A.intl.string(A.t.smSKsj) });
         }
         let u = null == e ? null : y ? (0, I.d4)(e) : T(e.deviceType).IconComponent;
         return (0, i.jsxs)("div", {
@@ -137,7 +137,7 @@ function N(e) {
                     return M(U[t]);
                 },
                 optionClassName: S.OS,
-                ...A,
+                ...O,
                 "data-migration-pending": !0,
             }),
             !V && w,

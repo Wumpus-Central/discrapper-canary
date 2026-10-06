@@ -19,7 +19,7 @@ function c(e) {
                 ...n,
                 ref: l,
                 value: t,
-                onChange: (t) => a.A.setInputVolume((0, u.w)(t), { analyticsLocations: e }),
+                onChange: (t) => a.default.setInputVolume((0, u.w)(t), { analyticsLocations: e }),
                 "aria-label": d.intl.string(d.t.OX2Bnr),
             }),
     });

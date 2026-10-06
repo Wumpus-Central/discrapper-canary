@@ -158,7 +158,7 @@ function ef(e) {
         { hasVideo: l } = (0, eo.A)(t, s),
         a = i && l,
         o = c.useCallback(() => {
-            Q.A.toggleLocalMute(n, Z.x.STREAM);
+            Q.default.toggleLocalMute(n, Z.x.STREAM);
         }, [n]);
     return (0, r.jsx)(Y.m, {
         text: a ? eg.intl.string(eg.t.YqAjXy) : eg.intl.string(eg.t.w4m945),
@@ -1475,7 +1475,7 @@ function tQ(e) {
         d = !1 === o,
         u = (0, tM.A)(t);
     function h(e) {
-        Q.A.setVideoEnabled(e);
+        Q.default.setVideoEnabled(e);
     }
     function m(e) {
         return (t) => {

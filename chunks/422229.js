@@ -1,36 +1,36 @@
-t.d(i, { A: () => D });
-var n = t(477900);
-t(582128);
-var l = t(17928),
-    d = t(192308),
-    o = t(477782),
-    s = t(742023),
-    a = t(827343),
-    A = t(280450),
-    r = t(25578),
-    u = t(652215),
-    b = t(731854),
-    c = t(513963),
-    f = t(951829),
-    p = t(375708);
+i.d(t, { A: () => D });
+var n = i(477900);
+i(582128);
+var l = i(17928),
+    d = i(192308),
+    o = i(477782),
+    a = i(742023),
+    s = i(827343),
+    r = i(280450),
+    u = i(25578),
+    A = i(652215),
+    b = i(731854),
+    c = i(513963),
+    f = i(951829),
+    p = i(375708);
 function D(e) {
-    let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b.x.DEFAULT,
-        [t, D, h] = (function (e) {
-            let i = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b.x.DEFAULT,
-                t = (0, l.bG)([A.default], () => A.default.getId()),
-                n = (0, l.bG)([r.Ay], () => r.Ay.supports(b.O5.DISABLE_VIDEO)),
-                d = (0, l.bG)([r.Ay], () => r.Ay.isLocalVideoDisabled(t, i), [t, i]);
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b.x.DEFAULT,
+        [i, D, h] = (function (e) {
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : b.x.DEFAULT,
+                i = (0, l.bG)([r.default], () => r.default.getId()),
+                n = (0, l.bG)([u.Ay], () => u.Ay.supports(b.O5.DISABLE_VIDEO)),
+                d = (0, l.bG)([u.Ay], () => u.Ay.isLocalVideoDisabled(i, t), [i, t]);
             return [
-                (null == e || e === t) && n,
+                (null == e || e === i) && n,
                 d,
                 function (e) {
-                    let n = e ? u.bb8.DISABLED : u.bb8.MANUAL_ENABLED;
-                    a.A.setDisableLocalVideo(t, n, i);
+                    let n = e ? A.bb8.DISABLED : A.bb8.MANUAL_ENABLED;
+                    s.default.setDisableLocalVideo(i, n, t);
                 },
             ];
-        })(e, i),
-        E = (0, l.bG)([s.Ay], () => s.Ay.disableHideSelfStreamAndVideoConfirmationAlert);
-    return t
+        })(e, t),
+        E = (0, l.bG)([a.Ay], () => a.Ay.disableHideSelfStreamAndVideoConfirmationAlert);
+    return i
         ? (0, n.jsx)(o.sL, {
               id: "self-video-hide",
               label: p.intl.string(p.t.MH8ESU),

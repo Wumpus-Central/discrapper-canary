@@ -21,7 +21,7 @@ function h(e) {
                 ref: l,
                 value: t,
                 maxValue: d.isPlatformEmbedded ? 200 : 100,
-                onChange: (t) => a.A.setOutputVolume((0, u.w)(t), { analyticsLocations: e }),
+                onChange: (t) => a.default.setOutputVolume((0, u.w)(t), { analyticsLocations: e }),
                 "aria-label": c.intl.string(c.t.eATD2B),
             }),
     });

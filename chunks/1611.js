@@ -1,7 +1,7 @@
 e.d(i, { A: () => p });
-var n = e(477900);
+var d = e(477900);
 e(582128);
-var d = e(17928),
+var n = e(17928),
     r = e(477782),
     s = e(827343),
     o = e(25578),
@@ -10,16 +10,16 @@ var d = e(17928),
     a = e(375708);
 function p(t) {
     let i = !c.isPlatformEmbedded,
-        e = (0, d.bG)([o.Ay], () => o.Ay.getMode());
-    function p(i, d) {
-        return (0, n.jsx)(
+        e = (0, n.bG)([o.Ay], () => o.Ay.getMode());
+    function p(i, n) {
+        return (0, d.jsx)(
             r.iD,
             {
                 id: i,
                 group: "input-modes",
-                label: d,
+                label: n,
                 checked: e === i,
-                action: () => s.A.setMode(i, void 0, void 0, { analyticsLocations: t }),
+                action: () => s.default.setMode(i, void 0, void 0, { analyticsLocations: t }),
             },
             i,
         );

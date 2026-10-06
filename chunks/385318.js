@@ -1,32 +1,32 @@
-t.d(n, { default: () => g });
-var i = t(477900);
-t(582128);
-var l = t(562708),
-    s = t(17928),
-    a = t(205693),
-    d = t(980707),
-    o = t(477782),
-    c = t(827343),
-    r = t(820284),
-    A = t(688810),
-    u = t(139286),
-    T = t(270816),
-    I = t(1611),
-    p = t(486487),
-    U = t(110027),
-    b = t(298242),
-    m = t(25578),
-    _ = t(723702),
-    h = t(819027),
-    f = t(652215),
-    S = t(621380),
-    v = t(731854),
-    x = t(375708),
-    O = t(788066);
+n.d(t, { default: () => g });
+var i = n(477900);
+n(582128);
+var l = n(562708),
+    s = n(17928),
+    a = n(205693),
+    d = n(980707),
+    o = n(477782),
+    c = n(827343),
+    r = n(820284),
+    u = n(688810),
+    A = n(139286),
+    T = n(270816),
+    I = n(1611),
+    p = n(486487),
+    U = n(110027),
+    b = n(298242),
+    f = n(25578),
+    m = n(723702),
+    _ = n(819027),
+    h = n(652215),
+    S = n(621380),
+    v = n(731854),
+    x = n(375708),
+    O = n(788066);
 function g(e) {
     let {
-            onClose: n,
-            renderOutputDevices: t = !1,
+            onClose: t,
+            renderOutputDevices: n = !1,
             renderInputDevices: g = !1,
             renderInputProfiles: y = !1,
             renderInputModes: D = !1,
@@ -38,38 +38,38 @@ function g(e) {
             appContext: M,
             onInteraction: N,
         } = e,
-        { analyticsLocations: P } = (0, A.Ay)();
-    (0, u.A)({
+        { analyticsLocations: P } = (0, u.Ay)();
+    (0, A.A)({
         type: l.ImpressionTypes.MENU,
         name: l.ImpressionNames.AUDIO_DEVICE_MENU,
         properties: { location_stack: P },
     });
-    let V = (0, h.A)(M),
+    let V = (0, _.A)(M),
         X = (0, T.H)({ deviceType: v.oh.AUDIO_INPUT, analyticsLocations: P, asSubmenu: k }),
         B = (0, T.H)({ deviceType: v.oh.AUDIO_OUTPUT, analyticsLocations: P, asSubmenu: k }),
-        H = (0, s.bG)([m.Ay], () => m.Ay.getActiveInputProfile()),
+        H = (0, s.bG)([f.Ay], () => f.Ay.getActiveInputProfile()),
         K = (0, U.A)(P),
         w = (0, I.A)(P),
         F = (0, p.A)(P),
         G = (0, b.A)(P),
         R = a.x.DEFAULT,
-        Y = m.Ay.isSelfDeaf(R),
-        Z = (0, s.bG)([m.Ay], () => m.Ay.getMode()),
-        Q = Z === f.TBI.VOICE_ACTIVITY ? f.TBI.PUSH_TO_TALK : f.TBI.VOICE_ACTIVITY;
+        Y = f.Ay.isSelfDeaf(R),
+        Z = (0, s.bG)([f.Ay], () => f.Ay.getMode()),
+        Q = Z === h.TBI.VOICE_ACTIVITY ? h.TBI.PUSH_TO_TALK : h.TBI.VOICE_ACTIVITY;
     return (0, i.jsx)(r.A, {
-        object: f.ZSU.CONTEXT_MENU,
+        object: h.ZSU.CONTEXT_MENU,
         children: (0, i.jsxs)(d.W, {
             "data-menu-migrated": !0,
             onSelect: L,
             onInteraction: N,
             className: O.MK,
-            onClose: n,
+            onClose: t,
             navId: "audio-device-context",
             variant: "fixed",
             "aria-label": x.intl.string(x.t.ZR1Ss6),
             children: [
                 g && X,
-                t && B,
+                n && B,
                 y && K,
                 !k && D && H !== S.m.STUDIO
                     ? (0, i.jsx)(o.rX, { label: x.intl.string(x.t["pS+K2L"]), children: w })
@@ -85,18 +85,19 @@ function g(e) {
                                   {
                                       id: "deafen",
                                       label: x.intl.string(x.t.wjcRFX),
-                                      action: () => c.A.toggleSelfDeaf({ context: R, location: "AudioDeviceMenu" }),
+                                      action: () =>
+                                          c.default.toggleSelfDeaf({ context: R, location: "AudioDeviceMenu" }),
                                       checked: Y,
                                   },
                                   "self-deafen",
                               )
                             : null,
-                        k && g && _.isPlatformEmbedded
+                        k && g && m.isPlatformEmbedded
                             ? (0, i.jsx)(o.sL, {
-                                  checked: Z === f.TBI.PUSH_TO_TALK,
+                                  checked: Z === h.TBI.PUSH_TO_TALK,
                                   id: "input-mode",
                                   label: x.intl.string(x.t.Q8gkVL),
-                                  action: () => c.A.setMode(Q, void 0, void 0, { analyticsLocations: P }),
+                                  action: () => c.default.setMode(Q, void 0, void 0, { analyticsLocations: P }),
                                   disabled: H === S.m.STUDIO,
                               })
                             : null,

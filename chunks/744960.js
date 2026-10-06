@@ -10,11 +10,11 @@ var i = t(17928),
     o = t(442433),
     u = t(730852),
     h = t(401843),
-    A = t(820284),
-    g = t(793574),
-    I = t(688810),
-    x = t(810845),
-    f = t(854182),
+    g = t(820284),
+    I = t(793574),
+    A = t(688810),
+    f = t(810845),
+    x = t(854182),
     S = t(666328),
     j = t(817281),
     p = t(742023),
@@ -100,7 +100,7 @@ function O(e) {
                       id: "mute",
                       label: b.intl.string(b.t.sWmtI6),
                       action: function () {
-                          c.A.toggleLocalMute(H.ownerId, N.x.STREAM);
+                          c.default.toggleLocalMute(H.ownerId, N.x.STREAM);
                       },
                       checked: Z,
                   })),
@@ -110,7 +110,7 @@ function O(e) {
                 a = z.Ay.supports(N.O5.SIDECHAIN_COMPRESSION),
                 s = (0, i.bG)([z.Ay], () => z.Ay.getSidechainCompression()),
                 o = (0, i.bG)([z.Ay], () => z.Ay.getSidechainCompressionStrength()),
-                { analyticsLocations: u } = (0, I.Ay)();
+                { analyticsLocations: u } = (0, A.Ay)();
             return !t && n && a
                 ? (0, l.jsxs)(r.rX, {
                       children: [
@@ -118,7 +118,7 @@ function O(e) {
                               id: "sidechain-compression",
                               label: b.intl.string(b.t["/jwMtn"]),
                               subtext: b.intl.string(b.t.zlA23F),
-                              action: () => c.A.setSidechainCompression(!s, { analyticsLocations: u }),
+                              action: () => c.default.setSidechainCompression(!s, { analyticsLocations: u }),
                               checked: s,
                           }),
                           s &&
@@ -132,7 +132,7 @@ function O(e) {
                                           value: o,
                                           maxValue: 100,
                                           onChange: (e) =>
-                                              c.A.setSidechainCompressionStrength(e, { analyticsLocations: u }),
+                                              c.default.setSidechainCompressionStrength(e, { analyticsLocations: u }),
                                           "aria-label": b.intl.string(b.t.fhEzfj),
                                       }),
                               }),
@@ -154,21 +154,21 @@ function O(e) {
                   })
                 : null;
         })(H.channelId, H.ownerId),
-        eo = (0, f.A)(H.channelId),
-        eu = (0, x.A)(H.channelId, (0, T._z)(H)),
+        eo = (0, x.A)(H.channelId),
+        eu = (0, f.A)(H.channelId, (0, T._z)(H)),
         eh = (0, i.bG)([U.A], () => U.A.getChannel(H.channelId), [H.channelId]),
-        eA = (0, w.h)({ stream: H, channelId: H.channelId }),
-        eg = (0, v.u)({ userId: H.ownerId, channelId: H.channelId, guildId: H.guildId, minimal: ee }),
-        { analyticsLocations: eI } = (0, I.Ay)(g.A.STREAM_CONTEXT_MENU),
-        ex = (0, y.E)({
+        eg = (0, w.h)({ stream: H, channelId: H.channelId }),
+        eI = (0, v.u)({ userId: H.ownerId, channelId: H.channelId, guildId: H.guildId, minimal: ee }),
+        { analyticsLocations: eA } = (0, A.Ay)(I.A.STREAM_CONTEXT_MENU),
+        ef = (0, y.E)({
             stream: H,
-            handleGoLive: () => (0, X.A)(H.guildId, H.channelId, eI),
+            handleGoLive: () => (0, X.A)(H.guildId, H.channelId, eA),
             minimal: ee,
             appContext: K,
         });
     return ee
-        ? (0, l.jsx)(I.f5, {
-              value: eI,
+        ? (0, l.jsx)(A.f5, {
+              value: eA,
               children: (0, l.jsxs)(s.W, {
                   "data-menu-migrated-auto": !0,
                   navId: "stream-context",
@@ -178,7 +178,7 @@ function O(e) {
                   onSelect: Y,
                   onInteraction: $,
                   children: [
-                      (0, l.jsx)(r.rX, { children: en ? ex : ei }),
+                      (0, l.jsx)(r.rX, { children: en ? ef : ei }),
                       (0, l.jsxs)(r.rX, { children: [er, el] }),
                       (0, l.jsx)(r.rX, { children: eu }),
                       ea,
@@ -189,7 +189,7 @@ function O(e) {
                                     (0, l.jsxs)(r.Dr, {
                                         id: "more-options",
                                         label: b.intl.string(b.t.PdRCRg),
-                                        children: [es, ec, eA, eg, ed],
+                                        children: [es, ec, eg, eI, ed],
                                     }),
                                 ],
                             })
@@ -197,7 +197,7 @@ function O(e) {
                   ],
               }),
           })
-        : (0, l.jsx)(A.A, {
+        : (0, l.jsx)(g.A, {
               context: J,
               object: k.ZSU.CONTEXT_MENU,
               children: (0, l.jsxs)(s.W, {
@@ -209,7 +209,7 @@ function O(e) {
                   onSelect: Y,
                   onInteraction: $,
                   children: [
-                      (0, l.jsx)(r.rX, { children: (0, l.jsxs)(l.Fragment, { children: [ei, er, eA, eg] }) }),
+                      (0, l.jsx)(r.rX, { children: (0, l.jsxs)(l.Fragment, { children: [ei, er, eg, eI] }) }),
                       (0, l.jsx)(r.rX, { children: el }),
                       (0, l.jsx)(r.rX, { children: eu }),
                       ea,

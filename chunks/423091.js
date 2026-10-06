@@ -8,7 +8,7 @@ class s extends r.A {
         let { target: t } = e;
         "live" === t &&
             (a.warn("Live video filter failed to initialize; disabling camera to avoid exposing raw video."),
-            i.A.setVideoEnabled(!1));
+            i.default.setVideoEnabled(!1));
     };
 }
 let l = new s();

@@ -18,7 +18,7 @@ class E extends a.A {
     handleExperimentChange = () => {
         if ((0, o.isWeb)()) return;
         let { enableStats: e } = u.getConfig({ location: "KrispExperimentManager handleExperimentChange" });
-        r.A.setNoiseCancellationEnableStats(e);
+        r.default.setNoiseCancellationEnableStats(e);
     };
     handleRtcConnectionState = (e) => {
         let { state: t, context: n } = e;
@@ -28,7 +28,7 @@ class E extends a.A {
                 t === _.S7L.RTC_CONNECTED &&
                 l.Ay.getKrispEnableStats() &&
                 l.Ay.getNoiseCancellation() &&
-                (r.A.setNoiseCancellation(!1), r.A.setNoiseCancellation(!0)));
+                (r.default.setNoiseCancellation(!1), r.default.setNoiseCancellation(!0)));
     };
     stores = new Map().set(s.A, this.handleExperimentChange);
     actions = { RTC_CONNECTION_STATE: this.handleRtcConnectionState };

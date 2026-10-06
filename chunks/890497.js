@@ -1,7 +1,7 @@
 n.d(t, { Z: () => d });
 var i = n(477900),
     r = n(452027),
-    a = n(453318),
+    a = n(230937),
     s = n(44482),
     l = n(641668),
     o = n(470791);
@@ -17,10 +17,10 @@ function d(e) {
             onBlur: I,
             placeholder: p,
             closeOnSelect: T,
-            selectionMode: g,
+            selectionMode: m,
         } = c,
         {
-            isOpen: m,
+            isOpen: g,
             setIsOpen: S,
             refs: N,
             floatingStyles: C,
@@ -31,9 +31,9 @@ function d(e) {
     return (0, i.jsxs)(a.iS, {
         ...c,
         isCollapsible: !0,
-        isOpen: m,
+        isOpen: g,
         setIsOpen: S,
-        closeOnSelect: T ?? "single" === g,
+        closeOnSelect: T ?? "single" === m,
         children: [
             (0, i.jsx)(a.a3, {
                 hideTags: t,
@@ -50,7 +50,7 @@ function d(e) {
                 onQueryChange: A,
                 onFocus: f,
             }),
-            m &&
+            g &&
                 (0, i.jsx)("div", {
                     ref: N.setFloating,
                     className: o.S_,
