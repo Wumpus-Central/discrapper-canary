@@ -1,4 +1,4 @@
-n.d(t, { G$: () => u, Jm: () => A, Qm: () => c, ag: () => h, f5: () => d, iA: () => E, ni: () => f });
+n.d(t, { G$: () => u, Jm: () => I, Qm: () => c, ag: () => p, f5: () => d, iA: () => E, ni: () => T });
 var i,
     r = n(435558),
     a = n(873298),
@@ -288,34 +288,45 @@ let u = [
             midpointPercentage: 50,
         },
     ],
-    A = [
-        ...u,
-        ...E,
-        {
-            type: s.F.BACKGROUND_GRADIENT_PRESET,
-            id: a.ju.BLURPLE_TWILIGHT,
-            theme: _,
-            colors: [
-                { token: "BG_GRADIENT_BLURPLE_TWILIGHT_1", stop: 11.18 },
-                { token: "BG_GRADIENT_BLURPLE_TWILIGHT_2", stop: 64.54 },
-            ],
-            angle: 47.61,
-            getName: () => o.intl.string(o.t.Mfoe3p),
-            midpointPercentage: 50,
-        },
-        {
-            type: s.F.BACKGROUND_GRADIENT_PRESET,
-            id: a.ju.EASTER_EGG,
-            theme: l.NJ.LIGHT,
-            colors: [
-                { token: "BG_GRADIENT_EASTER_EGG_1", stop: 4 },
-                { token: "BG_GRADIENT_EASTER_EGG_2", stop: 96 },
-            ],
-            angle: 180,
-            getName: () => o.intl.string(o.t.mFinbb),
-            midpointPercentage: 50,
-        },
-    ];
+    A = {
+        type: s.F.BACKGROUND_GRADIENT_PRESET,
+        id: a.ju.BLURPLE_TWILIGHT,
+        theme: _,
+        colors: [
+            { token: "BG_GRADIENT_BLURPLE_TWILIGHT_1", stop: 11.18 },
+            { token: "BG_GRADIENT_BLURPLE_TWILIGHT_2", stop: 64.54 },
+        ],
+        angle: 47.61,
+        getName: () => o.intl.string(o.t.Mfoe3p),
+        midpointPercentage: 50,
+    },
+    h = {
+        type: s.F.BACKGROUND_GRADIENT_PRESET,
+        id: a.ju.EASTER_EGG,
+        theme: l.NJ.LIGHT,
+        colors: [
+            { token: "BG_GRADIENT_EASTER_EGG_1", stop: 4 },
+            { token: "BG_GRADIENT_EASTER_EGG_2", stop: 96 },
+        ],
+        angle: 180,
+        getName: () => o.intl.string(o.t.mFinbb),
+        midpointPercentage: 50,
+    },
+    f = {
+        type: s.F.BACKGROUND_GRADIENT_PRESET,
+        id: a.ju.HEXAGON,
+        theme: _,
+        colors: [
+            { token: "BG_GRADIENT_HEXAGON_4", stop: 0 },
+            { token: "BG_GRADIENT_HEXAGON_3", stop: 30 },
+            { token: "BG_GRADIENT_HEXAGON_2", stop: 63 },
+            { token: "BG_GRADIENT_HEXAGON_1", stop: 100 },
+        ],
+        angle: 150,
+        getName: () => o.intl.string(o.t["+xs8ZP"]),
+        midpointPercentage: 30,
+    },
+    I = [...u, ...E, A, h];
 ([...E, ...u],
     s.F.STANDARD_BACKGROUND_THEME,
     s.F.STANDARD_BACKGROUND_THEME,
@@ -332,5 +343,5 @@ let u = [
     s.F.STANDARD_BACKGROUND_THEME,
     l.NJ.ONYX,
     s.F.STANDARD_BACKGROUND_THEME);
-let h = (0, r.keyBy)(A, "id");
-var f = (((i = {})[(i.SIZE_48 = 48)] = "SIZE_48"), (i[(i.SIZE_60 = 60)] = "SIZE_60"), i);
+let p = (0, r.keyBy)([...I, f], "id");
+var T = (((i = {})[(i.SIZE_48 = 48)] = "SIZE_48"), (i[(i.SIZE_60 = 60)] = "SIZE_60"), i);

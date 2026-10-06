@@ -1,10 +1,10 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => b });
 var i = n(17928),
     s = n(73153),
     r = n(793943),
     l = n(287809),
     a = n(174459),
-    c = n(158045),
+    c = n(927578),
     o = n(350972),
     u = n(652215),
     d = n(49999),
@@ -42,7 +42,7 @@ class A extends i.Ay.PersistedStore {
         return h?.client?.desktop;
     }
 }
-let S = new A(s.h, {
+let b = new A(s.h, {
     APP_ICON_UPDATED: function (e) {
         let { id: t } = e;
         null != t && f(t);

@@ -36,7 +36,7 @@ var N = n(319437),
     W = n(478996),
     F = n(97352),
     H = n(45938),
-    Y = n(158045),
+    Y = n(927578),
     j = n(951305),
     G = n(566980),
     L = n(216641),
@@ -186,15 +186,15 @@ function ee(e) {
         { isGift: eZ, giftRecipient: eB, customGiftMessage: eQ, emojiConfetti: eX, soundEffect: e$ } = (0, j.Pv)(),
         e0 = (0, A.Z8)(),
         e1 = (0, A.s2)(),
-        e5 = l.useMemo(() => {
+        e2 = l.useMemo(() => {
             if (null != e0) return e0.options;
         }, [e0]),
-        e2 = (0, A.qv)(),
+        e5 = (0, A.qv)(),
         e6 = "sm";
     ef ? (e6 = "xl") : (eA || e1 === T.pn.ADD_PAYMENT_STEPS) && (e6 = "md");
-    let e8 = null != e5 ? e5.modalSizeGetter : void 0,
-        e4 = (0, w.O)(),
-        e9 = null != X && !eZ && (0, R.U9)(e4, X),
+    let e8 = null != e2 ? e2.modalSizeGetter : void 0,
+        e9 = (0, w.O)(),
+        e4 = null != X && !eZ && (0, R.U9)(e9, X),
         [e3, e7] = l.useState({
             load_id: eO.loadId,
             discovery_session_id: eO.discoverySessionId,
@@ -211,7 +211,7 @@ function ee(e) {
             guild_id: e_,
             payment_modal_version: ey,
             activity_session_id: eq,
-            eligible_for_discount: e9,
+            eligible_for_discount: e4,
             sku_product_line: eK?.productLine,
             quantity: eG,
             checkout_design: _.r.UNIFIED,
@@ -250,7 +250,7 @@ function ee(e) {
                 continue_session_initial_step: ev,
                 custom_checkout_flow: eY,
                 has_saved_payment_source: eC,
-                discount_id: null != e4 ? e4.discountId : tl,
+                discount_id: null != e9 ? e9.discountId : tl,
             });
         }),
         l.useEffect(() => {
@@ -285,7 +285,7 @@ function ee(e) {
                     { trackedFromStep: n, analyticsDataOverride: i, fulfillment: l, emitPaymentFlowLoadedEvent: a } = t,
                     s = Date.now();
                 if (e === T.pn.CONFIRM && (ta(), z?.(l), ts(), eI)) return void tu();
-                (e2(e), eE?.(e), eU(null), e === T.pn.ADD_PAYMENT_STEPS && (u.h.wait(r.ET), u.h.wait(o.T3)));
+                (e5(e), eE?.(e), eU(null), e === T.pn.ADD_PAYMENT_STEPS && (u.h.wait(r.ET), u.h.wait(o.T3)));
                 let c = null != n ? n : e1;
                 null === c || a
                     ? k.default.track(C.HAw.PAYMENT_FLOW_LOADED, {
@@ -305,7 +305,7 @@ function ee(e) {
                           gift_card_currency: tn,
                       });
             },
-            [e2, eE, eU, e1, ev, e3, tr, eO.startTime, ta, z, ts, eI, tu, eC, tt, tn],
+            [e5, eE, eU, e1, ev, e3, tr, eO.startTime, ta, z, ts, eI, tu, eC, tt, tn],
         );
     return (
         (0, U.b)(e1, eV, to, ew, !1, void 0, ek),

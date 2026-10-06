@@ -15,7 +15,7 @@ let a = { control: 0, treatment_a: 250, treatment_b: 500, treatment_c: 250, trea
         },
     });
 var l = n(287809),
-    o = n(158045),
+    o = n(927578),
     d = n(636592),
     c = n(212739),
     u = n(202541);
