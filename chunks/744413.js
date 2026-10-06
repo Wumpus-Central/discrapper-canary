@@ -3,14 +3,14 @@ var r = n(477900);
 n(582128);
 var s = n(503698),
     i = n.n(s),
-    l = n(17928),
-    a = n(192308),
+    a = n(17928),
+    l = n(192308),
     c = n(778712),
     d = n(97808),
     o = n(144165),
     u = n(590251),
-    f = n(775602),
-    h = n(607470),
+    h = n(775602),
+    f = n(607470),
     m = n(854627),
     b = n(174459),
     p = n(427262),
@@ -22,8 +22,8 @@ var S = n(652215);
 n(375708);
 var x = n(162907);
 let v =
-    "https://cdn.discordapp.com/assets/content/01b59abb547be615663f35e014507bfdc731692561a1f9630ffc040cf6beae29.png";
-var g = n(188828);
+    "https://cdn.discordapp.com/assets/content/a140b0391b893795b626ab338fafbad6be38861a5cce6cec878b05d0d21a9022.png";
+var g = n(488116);
 let E =
     "https://cdn.discordapp.com/assets/content/ceb223833c25175aadddac32ce46fd1c60f4455860c6be9017c8d5993dce01c9.png";
 var O = n(764014),
@@ -32,7 +32,7 @@ var O = n(764014),
 function j(e) {
     let { startingScreen: t, analyticsLocations: s } = e;
     (b.default.track(S.HAw.REFERRAL_PROGRAM_SHARE_MODAL_CTA_CLICKED, { location_stack: s }),
-        (0, a.openModalLazy)(async () => {
+        (0, l.openModalLazy)(async () => {
             let { default: e } = await Promise.resolve().then(n.bind(n, 303682));
             return (n) => (0, r.jsx)(e, { ...n, startingScreen: t });
         }));
@@ -73,18 +73,18 @@ function z(e) {
             imageSize: n = 93,
             backgroundClassName: s,
             ringClassName: i,
-            referralRewardType: a = null,
+            referralRewardType: l = null,
             useAltReferralCardArt: c = !1,
         } = e,
-        d = (0, l.bG)([f.Ay], () => f.Ay.useReducedMotion),
+        d = (0, a.bG)([h.Ay], () => h.Ay.useReducedMotion),
         {
             src: m,
             srcSet: b,
             dimensions: p,
         } = c
-            ? a === A.xb.ORBS
+            ? l === A.xb.ORBS
                 ? { src: E, srcSet: `${E} 1x, ${O.A} 2x`, dimensions: d ? I : Z }
-                : a === A.xb.DISCOUNT
+                : l === A.xb.DISCOUNT
                   ? { src: v, srcSet: `${v} 1x, ${g.A} 2x`, dimensions: y }
                   : { src: _.A, srcSet: void 0, dimensions: null }
             : { src: _.A, srcSet: void 0, dimensions: null },
@@ -98,8 +98,8 @@ function z(e) {
         ringColorOverrideClassName: i ?? x.e0,
         overlayClassName: t === R.Z ? x.ys : void 0,
         children:
-            a === A.xb.ORBS && c && !d
-                ? (0, r.jsx)(h.A, {
+            l === A.xb.ORBS && c && !d
+                ? (0, r.jsx)(f.A, {
                       className: x.HF,
                       width: S,
                       height: j,

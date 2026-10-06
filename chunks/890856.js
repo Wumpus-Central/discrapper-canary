@@ -23,13 +23,15 @@ let l = (e) => {
             buttonProps: m,
             "aria-label": g,
             "aria-describedby": S,
-            ref: N,
-            buttonRef: C,
+            "aria-expanded": N,
+            "data-list-item-id": C,
+            ref: O,
+            buttonRef: R,
         } = e,
-        O = r.useRef(null),
-        R = N ?? O;
+        L = r.useRef(null),
+        y = O ?? L;
     return (0, i.jsxs)(t, {
-        ref: R,
+        ref: y,
         className: l,
         style: o,
         onClick: c,
@@ -42,11 +44,13 @@ let l = (e) => {
         children: [
             (0, i.jsx)(a.D, {
                 ...m,
-                innerRef: C,
-                focusProps: { ringTarget: R, ...d },
+                innerRef: R,
+                focusProps: { ringTarget: y, ...d },
                 className: s.K,
                 "aria-label": g,
                 "aria-describedby": S,
+                "aria-expanded": N,
+                "data-list-item-id": C,
                 onClick: (e) => {
                     (e.stopPropagation(), c?.(e));
                 },

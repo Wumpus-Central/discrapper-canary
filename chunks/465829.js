@@ -122,7 +122,7 @@ function j(e) {
     return (0, a.jsxs)("div", {
         className: r()(_.AK, { [_.j6]: A, [_.w2]: null != N }),
         children: [
-            null != v && null != l ? (0, a.jsx)(i.D, { onClick: l, className: _.vk, children: v }) : v,
+            null != v && null != l ? (0, a.jsx)(i.D, { onClick: l, className: r()(_.qp, _.vk), children: v }) : v,
             A &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [

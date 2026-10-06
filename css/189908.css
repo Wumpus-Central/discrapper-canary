@@ -142,9 +142,13 @@
 
 .headerContainer__095fe {
     align-items: center;
+    display: flex
+}
+
+.headerContainerClickable__095fe {
     cursor: pointer;
-    display: flex;
-    gap: 4px
+    height: 24px;
+    margin: -3px 0
 }
 
 .headerSpacer__095fe {
@@ -156,4 +160,21 @@
     height: 1lh
 }
 
-/*# sourceMappingURL=189908.5a39559cbd5f65e9.css.map*/
+.settingsButton__095fe {
+    align-items: center;
+    box-sizing: border-box;
+    color: var(--channels-default);
+    display: flex;
+    height: 24px;
+    justify-content: center;
+    margin: -3px 0;
+    padding: var(--space-4);
+    width: 24px
+}
+
+.settingsButton__095fe:focus,
+.settingsButton__095fe:hover {
+    color: var(--icon-strong)
+}
+
+/*# sourceMappingURL=189908.ca9542b44b4177d5.css.map*/

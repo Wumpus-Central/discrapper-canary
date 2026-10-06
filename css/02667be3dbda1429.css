@@ -8,14 +8,14 @@
 
 .iconLayout__0c4c4[data-size=sm],
 .iconLayout__0c4c4[data-size=sm] .iconContainer__0c4c4 {
-    height: var(--icon-size-xs);
-    width: var(--icon-size-xs)
+    height: calc(var(--icon-size-xs) + var(--space-4)*2);
+    width: calc(var(--icon-size-xs) + var(--space-4)*2)
 }
 
 .iconLayout__0c4c4[data-size=md],
 .iconLayout__0c4c4[data-size=md] .iconContainer__0c4c4 {
-    height: var(--icon-size-sm);
-    width: var(--icon-size-sm)
+    height: calc(var(--icon-size-sm) + var(--space-4)*2);
+    width: calc(var(--icon-size-sm) + var(--space-4)*2)
 }
 
 .pointer__0c4c4 {
@@ -295,4 +295,4 @@
     padding-bottom: 1px
 }
 
-/*# sourceMappingURL=e9fedf4fceba5b5a.css.map*/
+/*# sourceMappingURL=02667be3dbda1429.css.map*/

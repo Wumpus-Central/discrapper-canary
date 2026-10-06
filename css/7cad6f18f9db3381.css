@@ -124,7 +124,7 @@
 .info_b32ca4 {
     display: flex;
     flex-direction: column;
-    gap: 12px
+    gap: var(--space-8)
 }
 
 .info_b32ca4:empty {
@@ -217,4 +217,4 @@
     width: 80%
 }
 
-/*# sourceMappingURL=4a458c01f0276b77.css.map*/
+/*# sourceMappingURL=7cad6f18f9db3381.css.map*/

@@ -1,4 +1,4 @@
-t.d(n, { A: () => I, MemberListContentSettingsMenu: () => f });
+t.d(n, { A: () => j, MemberListContentSettingsMenu: () => I });
 var i = t(477900),
     l = t(582128),
     s = t(17928),
@@ -13,8 +13,9 @@ var i = t(477900),
     A = t(180170),
     p = t(435738),
     g = t(652215),
-    x = t(375708);
-function f(e) {
+    x = t(375708),
+    f = t(569709);
+function I(e) {
     let { closePopout: n } = e,
         l = (0, s.bG)([p.A], () => p.A.hidden);
     return (0, i.jsx)(r.W, {
@@ -53,7 +54,7 @@ function f(e) {
         }),
     });
 }
-let I = function (e) {
+let j = function (e) {
     let n = l.useRef(null);
     return (0, i.jsx)(u.Y, {
         targetElementRef: n,
@@ -62,7 +63,7 @@ let I = function (e) {
         align: "right",
         renderPopout: (e) => {
             let { closePopout: n } = e;
-            return (0, i.jsx)(f, { closePopout: n });
+            return (0, i.jsx)(I, { closePopout: n });
         },
         children: (t) =>
             (0, i.jsx)(h.D, {
@@ -70,11 +71,13 @@ let I = function (e) {
                 ...e,
                 innerRef: n,
                 "aria-label": x.intl.string(x.t.w2jvOf),
+                "aria-haspopup": !0,
                 onClick: (e) => {
                     (e.stopPropagation(), t.onClick(e));
                 },
-                style: { width: "12px", height: "12px", display: "flex" },
-                children: (0, i.jsx)(m.SettingsIcon, { size: "xxs" }),
+                className: f.Se,
+                focusProps: { offset: 4 },
+                children: (0, i.jsx)(m.SettingsIcon, { size: "xxs", color: "currentColor" }),
             }),
     });
 };

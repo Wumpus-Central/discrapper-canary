@@ -1,10 +1,12 @@
 .button__0f074 {
+    box-sizing: border-box;
     color: var(--icon-subtle);
     cursor: pointer;
-    height: 16px;
+    height: 24px;
     opacity: 0;
+    padding: var(--space-4);
     transition: color 50ms ease-in;
-    width: 16px
+    width: 24px
 }
 
 .button__0f074:focus-visible,
@@ -52,4 +54,4 @@
     position: absolute
 }
 
-/*# sourceMappingURL=377109.7f631dfe07230a6c.css.map*/
+/*# sourceMappingURL=377109.5e9c36e6be6d3347.css.map*/
