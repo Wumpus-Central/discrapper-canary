@@ -1,4 +1,4 @@
-n.d(t, { A: () => I, u: () => q });
+n.d(e, { A: () => v, u: () => q });
 var i = n(477900);
 n(582128);
 var l = n(17928),
@@ -10,70 +10,71 @@ var l = n(17928),
     o = n(280450),
     c = n(73153),
     A = n(820672),
-    p = n(680724),
-    S = n(435558),
-    y = n.n(S),
-    E = n(734057),
-    _ = n(696451),
+    p = n(435558),
+    g = n.n(p),
+    y = n(734057),
+    S = n(696451),
     h = n(317525),
     m = n(576705),
-    g = n(488926),
+    E = n(488926),
     R = n(652215),
-    T = n(25528),
-    b = n(905322),
-    f = n(375708);
-function q(e, t) {
+    _ = n(756977),
+    f = n(25528),
+    T = n(905322),
+    b = n(375708);
+function q(t, e) {
     var n;
     let i = (0, l.bG)([o.default], () => o.default.getId()),
-        a = (0, T.Ay)(e, t.guild_id)[0],
-        r = (0, l.bG)([s.A], () => null != s.A.getStreamForUser(e, t.getGuildId())),
+        a = (0, f.Ay)(t, e.guild_id)[0],
+        r = (0, l.bG)([s.A], () => null != s.A.getStreamForUser(t, e.getGuildId())),
         p = (0, d.YY)(a?.application_id).data,
-        S =
-            ((n = t.id),
-            (0, l.bG)([m.A, E.A, _.Ay, h.A], () => {
+        _ =
+            ((n = e.id),
+            (0, l.bG)([m.A, y.A, S.Ay, h.A], () => {
                 if (null == n) return !1;
-                let t = E.A.getChannel(n);
-                if (null == t) return !1;
-                let i = m.A.can(R.xBc.SEND_MESSAGES, t),
-                    l = _.Ay.getMember(t.guild_id, e),
-                    a = y().keyBy(h.A.getManyRoles(t.guild_id, l?.roles ?? []), "id"),
-                    r = g.$3({ permission: R.xBc.STREAM, user: e, context: t, roles: a });
+                let e = y.A.getChannel(n);
+                if (null == e) return !1;
+                let i = m.A.can(R.xBc.SEND_MESSAGES, e),
+                    l = S.Ay.getMember(e.guild_id, t),
+                    a = g().keyBy(h.A.getManyRoles(e.guild_id, l?.roles ?? []), "id"),
+                    r = E.$3({ permission: R.xBc.STREAM, user: t, context: e, roles: a });
                 return i && r;
             }));
-    return i === e || null == a || null == p || !S || r
+    return i === t || null == a || null == p || !_ || r
         ? null
         : {
               playingApplication: p,
               handleRequestToStream: function (n) {
                   (u.A.sendActivityInvite({
                       type: R.xL.STREAM_REQUEST,
-                      channelId: t.id,
+                      channelId: e.id,
                       activity: a,
-                      content: `<@${e}>`,
+                      content: `<@${t}>`,
                       location: n,
-                      targetUserId: e,
+                      targetUserId: t,
                   }),
-                      c.h.dispatch({ type: "STREAM_REQUEST_COOLDOWN_START", userId: e }),
+                      c.h.dispatch({ type: "STREAM_REQUEST_COOLDOWN_START", userId: t }),
                       setTimeout(() => {
-                          c.h.dispatch({ type: "STREAM_REQUEST_COOLDOWN_END", userId: e });
+                          c.h.dispatch({ type: "STREAM_REQUEST_COOLDOWN_END", userId: t });
                       }, A.e));
               },
           };
 }
-function I(e, t) {
-    let n = q(e, t),
-        u = (0, l.bG)([p.A], () => p.A.isRequestOnCooldown(e));
+function v(t, e) {
+    let n = q(t, e),
+        [l, u] = (0, _.A)(t, e.id);
     return null == n
         ? null
         : (0, i.jsx)(
               a.Dr,
               {
                   id: "request-to-stream",
-                  label: f.intl.format(b.default["8qq+H7"], { applicationName: n.playingApplication.name }),
+                  label: b.intl.format(T.default["8qq+H7"], { applicationName: n.playingApplication.name }),
                   action: () => n.handleRequestToStream("request to stream item"),
                   icon: r.o,
                   leadingAccessory: { type: "icon", icon: r.o },
-                  disabled: u,
+                  disabled: l,
+                  subtext: l ? u : void 0,
               },
               "request-to-stream",
           );

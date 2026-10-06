@@ -1,4 +1,4 @@
-l.d(t, { A: () => ey });
+l.d(t, { A: () => eg });
 var n = l(477900);
 l(582128);
 var i = l(503698),
@@ -17,80 +17,74 @@ var i = l(503698),
     g = l(25528),
     y = l(866665),
     f = l(821609),
-    j = l(309010),
-    v = l(680724),
-    N = l(309858),
-    T = l(905322),
-    S = l(375708);
-function I(e) {
+    j = l(756977),
+    v = l(309858),
+    N = l(905322),
+    T = l(375708);
+function S(e) {
     let { userId: t, channel: l, onAction: i, variant: s = "primary" } = e,
-        a = (0, N.u)(t, l),
-        r = (0, c.bG)([v.A], () => v.A.isRequestOnCooldown(t)),
-        o = (0, c.bG)([j.Ay], () => j.Ay.getVoiceChannelId() === l.id, [l.id]);
-    if (null == a) return null;
-    let [d, u] = r
-        ? [!0, S.intl.string(T.default.mVFTUg)]
-        : o
-          ? [!1, S.intl.string(T.default.qRXats)]
-          : [!0, S.intl.string(T.default.qRXats)];
-    return (0, n.jsx)(y.m, {
-        position: "top",
-        text: u,
-        shouldShow: d,
-        asContainer: !0,
-        children: (0, n.jsx)(f.$, {
-            text: S.intl.string(T.default.DKHhec),
-            variant: s,
-            size: "sm",
-            onClick: () => {
-                (a.handleRequestToStream("request to stream button"), i?.());
-            },
-            fullWidth: !0,
-            disabled: d,
-        }),
-    });
+        a = (0, v.u)(t, l),
+        [r, c] = (0, j.A)(t, l.id);
+    return null == a
+        ? null
+        : (0, n.jsx)(y.m, {
+              position: "top",
+              text: c,
+              shouldShow: r,
+              asContainer: !0,
+              children: (0, n.jsx)(f.$, {
+                  text: T.intl.string(N.default.DKHhec),
+                  variant: s,
+                  size: "sm",
+                  onClick: () => {
+                      (a.handleRequestToStream("request to stream button"), i?.());
+                  },
+                  fullWidth: !0,
+                  disabled: r,
+              }),
+          });
 }
-var C = l(82149),
-    P = l(734057),
-    E = l(287809),
-    b = l(874546),
-    _ = l(90644),
-    L = l(61330),
-    O = l(544441),
-    G = l(50820),
-    k = l(968309),
-    z = l(30370);
-function M(e) {
+var I = l(82149),
+    C = l(734057),
+    P = l(287809),
+    E = l(874546),
+    b = l(90644),
+    _ = l(61330),
+    L = l(544441),
+    O = l(50820),
+    G = l(968309),
+    k = l(30370);
+function z(e) {
     let { platform: t, variant: l = "secondary", size: i = "sm", onAction: s, icon: a, ...r } = e;
-    return (0, c.bG)([z.A], () => z.A.getAccounts().some((e) => e.type === t.type))
+    return (0, c.bG)([k.A], () => k.A.getAccounts().some((e) => e.type === t.type))
         ? null
         : (0, n.jsx)(f.$, {
               onClick: function () {
-                  (s?.(), (0, k.A)({ platformType: t.type, location: "Activity Action" }));
+                  (s?.(), (0, G.A)({ platformType: t.type, location: "Activity Action" }));
               },
               variant: l,
               size: i,
               icon: a,
-              text: S.intl.format(S.t.XWSHTb, { platform: t.name }),
+              text: T.intl.format(T.t.XWSHTb, { platform: t.name }),
               fullWidth: !0,
               ...r,
           });
 }
-var V = l(729937),
-    W = l(123917),
-    U = l(998218);
-function R(e) {
+var M = l(729937),
+    V = l(123917),
+    W = l(998218);
+function U(e) {
     let { activity: t, user: l, variant: i = "secondary", onAction: s, ...a } = e;
     if (t?.buttons == null || t.buttons.length < 1) return null;
     async function r(e, t, l) {
         try {
-            let n = await (0, V.yb)(e, t);
+            let n = await (0, M.yb)(e, t);
             if (n.button_urls.length <= l) return;
             let i = n.button_urls[l];
             if ("string" != typeof i) return;
-            let s = U.A.safeParseWithQuery(i);
+            let s = W.A.safeParseWithQuery(i);
             if (null == s || null == s.protocol || null == s.hostname) return;
-            (0, W.h)({ href: U.A.format(s), trusted: !1 });
+            (0, V.h)({ href: W.A.format(s), trusted: !1 });
         } catch (e) {}
     }
     return (0, n.jsx)(n.Fragment, {
@@ -114,14 +108,14 @@ function R(e) {
 }
 var w = l(284525),
     D = l(747376),
-    $ = l(977997);
-let H = function (e) {
+    R = l(977997);
+let $ = function (e) {
     let { guildId: t, channelId: l, variant: i = "active", size: s = "sm", onAction: a, ...r } = e,
-        o = (0, c.bG)([$.A], () => $.A.isInChannel(l), [l]);
+        o = (0, c.bG)([R.A], () => R.A.isInChannel(l), [l]);
     return (0, n.jsx)(f.$, {
         variant: i,
         size: s,
-        text: S.intl.string(S.t.ZYO5OK),
+        text: T.intl.string(T.t.ZYO5OK),
         disabled: o,
         onClick: function () {
             (a?.(), D.CH(t, l));
@@ -130,18 +124,18 @@ let H = function (e) {
         ...r,
     });
 };
-var Y = l(626584),
-    F = l(55730),
-    B = l(652215);
-function X(e) {
+var H = l(626584),
+    Y = l(55730),
+    F = l(652215);
+function B(e) {
     let { activity: t, user: l, variant: i = "secondary", onAction: s, ...a } = e;
-    return (0, F.A)(t, B.jUm.INSTANCE)
+    return (0, Y.A)(t, F.jUm.INSTANCE)
         ? (0, n.jsx)(f.$, {
-              text: S.intl.string(S.t.vwl1PK),
+              text: T.intl.string(T.t.vwl1PK),
               variant: i,
               size: "sm",
               onClick: function () {
-                  (s?.(), new Y.A("UserActivityActions").log("notify", l.id, t));
+                  (s?.(), new H.A("UserActivityActions").log("notify", l.id, t));
               },
               fullWidth: !0,
               ...a,
@@ -149,7 +143,7 @@ function X(e) {
         : null;
 }
 var K = l(601007),
-    q = l(109487),
+    X = l(109487),
     Q = l(353411);
 function J(e) {
     let {
@@ -168,7 +162,7 @@ function J(e) {
         children: (0, n.jsx)(f.$, {
             variant: a,
             size: s,
-            icon: q.L,
+            icon: X.L,
             text: d,
             fullWidth: r,
             onClick: function () {
@@ -180,16 +174,16 @@ function J(e) {
         }),
     });
 }
-function Z(e) {
+function q(e) {
     let { activity: t, user: l, source: i, onAction: s } = e;
-    return null != t && (0, F.A)(t, B.jUm.PLAY) && (0, _.A)(t)
+    return null != t && (0, Y.A)(t, F.jUm.PLAY) && (0, b.A)(t)
         ? (0, n.jsx)(J, { fullWidth: !0, activity: t, user: l, source: i, onAction: s })
         : null;
 }
-var ee = l(408278),
-    et = l(835723),
-    el = l(562153);
-function en(e) {
+var Z = l(408278),
+    ee = l(835723),
+    et = l(562153);
+function el(e) {
     let {
             activity: t,
             user: l,
@@ -201,11 +195,11 @@ function en(e) {
             onAction: o,
             ...d
         } = e,
-        { tooltip: u, loading: m, disabled: A, onClick: p } = (0, Q.J$)(t, l, a, el.Ay.getNickname(s, i, l));
+        { tooltip: u, loading: m, disabled: A, onClick: p } = (0, Q.J$)(t, l, a, et.Ay.getNickname(s, i, l));
     return (0, n.jsx)(y.m, {
         text: u,
-        children: (0, n.jsx)(ee.K, {
-            icon: et.J,
+        children: (0, n.jsx)(Z.K, {
+            icon: ee.J,
             size: r,
             variant: c,
             onClick: function () {
@@ -218,10 +212,10 @@ function en(e) {
         }),
     });
 }
-function ei(e) {
+function en(e) {
     let { activity: t, user: l, guildId: i, channelId: s, source: a, onAction: r } = e;
-    return null != t && (0, F.A)(t, B.jUm.SYNC) && (0, _.A)(t)
-        ? (0, n.jsx)(en, {
+    return null != t && (0, Y.A)(t, F.jUm.SYNC) && (0, b.A)(t)
+        ? (0, n.jsx)(el, {
               size: "sm",
               variant: "secondary",
               user: l,
@@ -233,48 +227,48 @@ function ei(e) {
           })
         : null;
 }
-var es = l(648246),
-    ea = l(183623),
-    er = l(622631),
-    ec = l(700058),
-    eo = l(730852),
-    ed = l(401843),
-    eu = l(711589),
-    em = l(267102),
-    eA = l(616356),
-    ep = l(625494),
-    eh = l(408399);
-function ex(e) {
+var ei = l(648246),
+    es = l(183623),
+    ea = l(622631),
+    er = l(700058),
+    ec = l(730852),
+    eo = l(401843),
+    ed = l(711589),
+    eu = l(267102),
+    em = l(616356),
+    eA = l(625494),
+    ep = l(408399);
+function eh(e) {
     let { isCurrentUser: t, applicationStream: l, onAction: i } = e,
         s = (0, c.bG)(
-            [eA.A],
+            [em.A],
             () =>
                 null != l &&
-                eA.A.getAllActiveStreamsForChannel(l.channelId).filter((e) => {
+                em.A.getAllActiveStreamsForChannel(l.channelId).filter((e) => {
                     let { ownerId: t } = e;
                     return t !== l.ownerId;
                 }).length > 0,
         ),
-        { actionString: a, canWatch: r, isWatching: o } = (0, eu.K)(l),
-        d = (0, em.aL)();
+        { actionString: a, canWatch: r, isWatching: o } = (0, ed.K)(l),
+        d = (0, eu.aL)();
     function u(e) {
         null != l &&
             (i?.(),
-            eo.default.selectVoiceChannel(l.channelId),
-            o || (0, ed.Nl)(l, { forceMultiple: e }),
-            d.dispatch(B.jej.POPOUT_CLOSE),
-            ep._.dispatch(B.jej.MODAL_CLOSE),
-            ec.A.popAll());
+            ec.default.selectVoiceChannel(l.channelId),
+            o || (0, eo.Nl)(l, { forceMultiple: e }),
+            d.dispatch(F.jej.POPOUT_CLOSE),
+            eA._.dispatch(F.jej.MODAL_CLOSE),
+            er.A.popAll());
     }
     return null == l
         ? null
         : (0, n.jsxs)("div", {
-              className: eh.w,
+              className: ep.w,
               children: [
                   (0, n.jsx)(f.$, {
                       size: "sm",
                       variant: o ? "secondary" : "active",
-                      icon: ea.F,
+                      icon: es.F,
                       text: a,
                       disabled: t || o || !r,
                       onClick: () => u(!1),
@@ -282,12 +276,12 @@ function ex(e) {
                   }),
                   s && !o
                       ? (0, n.jsx)(y.m, {
-                            text: S.intl.string(S.t.wCrzut),
-                            children: (0, n.jsx)(ee.K, {
+                            text: T.intl.string(T.t.wCrzut),
+                            children: (0, n.jsx)(Z.K, {
                                 variant: "secondary",
                                 size: "sm",
-                                icon: er.v,
-                                "aria-label": S.intl.string(S.t.wCrzut),
+                                icon: ea.v,
+                                "aria-label": T.intl.string(T.t.wCrzut),
                                 onClick: () => {
                                     u(!0);
                                 },
@@ -297,8 +291,8 @@ function ex(e) {
               ],
           });
 }
-var eg = l(279954);
-let ey = (0, m.A)((e) => {
+var ex = l(279954);
+let eg = (0, m.A)((e) => {
     let {
             activity: t,
             embeddedActivity: l,
@@ -312,51 +306,51 @@ let ey = (0, m.A)((e) => {
             type: N,
             onAction: T,
         } = e,
-        S = (0, c.bG)([E.default], () => {
-            let e = E.default.getCurrentUser();
+        G = (0, c.bG)([P.default], () => {
+            let e = P.default.getCurrentUser();
             return (r()(null != e, "UserActivityActions: currentUser cannot be undefined"), e);
         }),
-        k = N === G.O.STREAM_PREVIEW || null != a,
-        z = (0, _.A)(t),
-        V = z ? x.A.Direction.HORIZONTAL : x.A.Direction.VERTICAL,
-        W = (0, c.bG)([P.A], () => (null != f ? P.A.getChannel(f) : null), [f]),
-        U = null != W && (0, g.F9)(t),
-        D = t?.application_id,
-        $ = (0, O.A)(D),
+        k = N === O.O.STREAM_PREVIEW || null != a,
+        M = (0, b.A)(t),
+        V = M ? x.A.Direction.HORIZONTAL : x.A.Direction.VERTICAL,
+        W = (0, c.bG)([C.A], () => (null != f ? C.A.getChannel(f) : null), [f]),
+        D = null != W && (0, g.F9)(t),
+        R = t?.application_id,
+        H = (0, L.A)(R),
         { analyticsLocations: Y } = (0, h.Ay)(p.A.VOICE_CHANNEL_ACTIVITY_ACTIONS),
-        F = V === x.A.Direction.VERTICAL;
+        X = V === x.A.Direction.VERTICAL;
     return (0, n.jsx)(x.A, {
         grow: 0,
         align: x.A.Align.STRETCH,
         direction: V,
-        wrap: F ? x.A.Wrap.WRAP : x.A.Wrap.NO_WRAP,
-        className: s()(m, eg.jx, F ? eg.Vd : eg.xM),
+        wrap: X ? x.A.Wrap.WRAP : x.A.Wrap.NO_WRAP,
+        className: s()(m, ex.jx, X ? ex.Vd : ex.xM),
         children: (function () {
-            if (!(0, b.Ay)(t)) {
-                if ((0, L.A)(t))
-                    return (0, n.jsx)(M, { platform: A.A.get(B.fg2.XBOX), variant: v, onAction: T, icon: o.Y });
-                if (t?.platform === B.yTV.PS4 || t?.platform === B.yTV.PS5)
-                    return (0, n.jsx)(M, { variant: v, platform: A.A.get(B.fg2.PLAYSTATION), onAction: T, icon: d.X });
+            if (!(0, E.Ay)(t)) {
+                if ((0, _.A)(t))
+                    return (0, n.jsx)(z, { platform: A.A.get(F.fg2.XBOX), variant: v, onAction: T, icon: o.Y });
+                if (t?.platform === F.yTV.PS4 || t?.platform === F.yTV.PS5)
+                    return (0, n.jsx)(z, { variant: v, platform: A.A.get(F.fg2.PLAYSTATION), onAction: T, icon: d.X });
             }
-            if (z) {
-                let e = (0, n.jsx)(ei, { activity: t, user: i, guildId: y, channelId: f, source: j, onAction: T }),
-                    l = (0, n.jsx)(Z, { activity: t, user: i, source: j, onAction: T });
+            if (M) {
+                let e = (0, n.jsx)(en, { activity: t, user: i, guildId: y, channelId: f, source: j, onAction: T }),
+                    l = (0, n.jsx)(q, { activity: t, user: i, source: j, onAction: T });
                 return (0, n.jsxs)(u.e, { size: "sm", fullWidth: !0, children: [l, e] });
             }
-            if ((0, C.Cy)(t)) {
-                let e = (0, C.UW)(t);
+            if ((0, I.Cy)(t)) {
+                let e = (0, I.UW)(t);
                 return null == e
                     ? null
-                    : (0, n.jsx)(H, { guildId: e.guildId, channelId: e.channelId, variant: v, onAction: T });
+                    : (0, n.jsx)($, { guildId: e.guildId, channelId: e.channelId, variant: v, onAction: T });
             }
             return k
                 ? (0, n.jsxs)(n.Fragment, {
                       children: [
-                          (0, n.jsx)(ex, { isCurrentUser: S.id === i.id, applicationStream: a, onAction: T }),
-                          $.length > 0
+                          (0, n.jsx)(eh, { isCurrentUser: G.id === i.id, applicationStream: a, onAction: T }),
+                          H.length > 0
                               ? (0, n.jsx)(K.A, {
-                                    distributorCTAConfigs: $,
-                                    applicationId: D ?? "",
+                                    distributorCTAConfigs: H,
+                                    applicationId: R ?? "",
                                     analyticsLocations: Y,
                                     buttonVariant: "secondary",
                                 })
@@ -365,21 +359,21 @@ let ey = (0, m.A)((e) => {
                   })
                 : (0, n.jsxs)(n.Fragment, {
                       children: [
-                          U && (0, n.jsx)(I, { userId: i.id, channel: W, onAction: T }),
-                          (0, n.jsx)(es.A, { activity: t, variant: U ? "secondary" : v, onAction: T }),
+                          D && (0, n.jsx)(S, { userId: i.id, channel: W, onAction: T }),
+                          (0, n.jsx)(ei.A, { activity: t, variant: D ? "secondary" : v, onAction: T }),
                           (0, n.jsx)(w.A, {
                               activity: t,
                               embeddedActivity: l,
                               user: i,
-                              variant: U ? "secondary" : v,
+                              variant: D ? "secondary" : v,
                               onAction: T,
                           }),
-                          (0, n.jsx)(X, { activity: t, user: i, variant: U ? "secondary" : v, onAction: T }),
-                          (0, n.jsx)(R, { user: i, activity: t, variant: U ? "secondary" : v, onAction: T }),
-                          $.length > 0
+                          (0, n.jsx)(B, { activity: t, user: i, variant: D ? "secondary" : v, onAction: T }),
+                          (0, n.jsx)(U, { user: i, activity: t, variant: D ? "secondary" : v, onAction: T }),
+                          H.length > 0
                               ? (0, n.jsx)(K.A, {
-                                    distributorCTAConfigs: $,
-                                    applicationId: D ?? "",
+                                    distributorCTAConfigs: H,
+                                    applicationId: R ?? "",
                                     analyticsLocations: Y,
                                     buttonVariant: "secondary",
                                 })
