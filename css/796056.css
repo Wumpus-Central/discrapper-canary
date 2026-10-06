@@ -385,9 +385,20 @@
     border-radius: 8px;
     flex: 0 0 50px;
     height: 50px;
-    -o-object-fit: cover;
-    object-fit: cover;
     width: 50px
+}
+
+.gameTile__11054,
+.gameTile__11054 img {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.gameTile__11054 img {
+    border-radius: inherit;
+    display: block;
+    height: 100%;
+    width: 100%
 }
 
 .ctas__11054 {
@@ -500,4 +511,4 @@
     width: fit-content
 }
 
-/*# sourceMappingURL=796056.e20a77e98ebd6e7e.css.map*/
+/*# sourceMappingURL=796056.b7a051bf76a06be3.css.map*/
