@@ -151,11 +151,12 @@ function H(e) {
                                       value: null != s ? Number(s) : void 0,
                                       minValue: r.minValue,
                                       maxValue: r.maxValue,
-                                      keyboardStep: (r.maxValue - r.minValue) * 0.05,
+                                      keyboardStep: null != r.markers ? 1 : (r.maxValue - r.minValue) * 0.05,
+                                      markers: r.markers,
                                       asValueChanges: (e) => a(t, e),
                                       handleSize: 10,
                                       disabled: !1,
-                                      stickToMarkers: !1,
+                                      stickToMarkers: null != r.markers,
                                       fillStyles: {},
                                       label: r.label,
                                       onValueRender: (e) => String(Math.round(1e3 * e) / 1e3),
@@ -228,7 +229,10 @@ function Y(e, t) {
                               case "slider": {
                                   let n = Number(t);
                                   if (Number.isNaN(n)) return e.defaultValue;
-                                  return Math.min(e.maxValue, Math.max(e.minValue, n));
+                                  let i = Math.min(e.maxValue, Math.max(e.minValue, n)),
+                                      [r, ...a] = e.markers ?? [];
+                                  if (null == r) return i;
+                                  return a.reduce((e, t) => (Math.abs(t - i) < Math.abs(e - i) ? t : e), r);
                               }
                               case "text":
                               case "color":

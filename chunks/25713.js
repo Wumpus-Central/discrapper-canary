@@ -11,8 +11,8 @@ var a = l(34188),
     p = l.n(c),
     m = l(122817),
     b = l(136722),
-    f = l(17928),
-    g = l(73153),
+    g = l(17928),
+    f = l(73153),
     y = l(288106),
     h = l(95701),
     S = l(280450),
@@ -20,9 +20,9 @@ var a = l(34188),
     I = l(818348);
 let v = "000000000000000100",
     x = "000000000000000200",
-    A = "000000000000000300",
+    R = "000000000000000300",
     C = "000000000000000400",
-    R = "playground-nitro-promotion";
+    A = "playground-nitro-promotion";
 function _(e, t, l) {
     let {
             name: a,
@@ -36,7 +36,7 @@ function _(e, t, l) {
         } = t,
         c = `playground-pricing-result-${e}`,
         b = `playground-reward-result-${e}`,
-        f = null != d ? p()().add(d, "days").toISOString() : void 0,
+        g = null != d ? p()().add(d, "days").toISOString() : void 0,
         h = {
             id: e,
             type: E.Puh.DURABLE_PRIMARY,
@@ -65,12 +65,12 @@ function _(e, t, l) {
             bundled_sku_ids: [],
             orbs_reward: s ?? 0,
             eligible_offers: [],
-            tenant_metadata: { social_layer: { carousel_items: [], expires_at: f } },
+            tenant_metadata: { social_layer: { carousel_items: [], expires_at: g } },
         };
-    if ((g.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: h }), null != n && null != r)) {
+    if ((f.h.dispatch({ type: "SKU_FETCH_SUCCESS", sku: h }), null != n && null != r)) {
         let t = {
             skuPriceMap: {
-                [e]: { pricingResultId: c, storefrontPromotionIds: [R], rewardResultIds: [b], offerResultIds: [] },
+                [e]: { pricingResultId: c, storefrontPromotionIds: [A], rewardResultIds: [b], offerResultIds: [] },
             },
             pricingResultIdMap: {
                 [c]: {
@@ -108,9 +108,9 @@ function _(e, t, l) {
             },
             offerResultIdMap: {},
         };
-        g.h.dispatch({ type: "SKUS_PRICING_FETCH_SUCCESS", priceId: { type: "skus", skuIds: [e] }, data: t });
+        f.h.dispatch({ type: "SKUS_PRICING_FETCH_SUCCESS", priceId: { type: "skus", skuIds: [e] }, data: t });
     } else
-        g.h.dispatch({
+        f.h.dispatch({
             type: "SKUS_PRICING_FETCH_SUCCESS",
             priceId: { type: "skus", skuIds: [e] },
             data: {
@@ -149,7 +149,7 @@ function _(e, t, l) {
                 offerResultIdMap: {},
             },
         });
-    g.h.dispatch({
+    f.h.dispatch({
         type: "SOCIAL_LAYER_SKU_PURCHASE_ELIGIBILITY_RESPONSE",
         interactionId: "playground-interaction",
         applicationId: x,
@@ -159,7 +159,7 @@ function _(e, t, l) {
     });
 }
 function P(e) {
-    let t = (0, f.bG)([S.default], () => S.default.getId()),
+    let t = (0, g.bG)([S.default], () => S.default.getId()),
         {
             name: l,
             price: a,
@@ -227,14 +227,27 @@ let T = [
                 isEligible: !0,
             },
         },
+        {
+            id: "000000000000000105",
+            params: {
+                name: "Starlight Companion",
+                price: 799,
+                salePrice: null,
+                salePercentage: null,
+                exclusive: !1,
+                orbsReward: 15e3,
+                daysUntilExpiry: null,
+                isEligible: !0,
+            },
+        },
     ],
     O = (0, h.createChannelRecord)({
         id: "000000000000000500",
         type: E.rbe.GUILD_TEXT,
-        guild_id: A,
+        guild_id: R,
         name: "playground-channel",
     });
-function N() {
+function V() {
     n.useEffect(() => {
         let e = {
             id: x,
@@ -246,18 +259,18 @@ function N() {
             flags: b.pG(32, E.gfo.SOCIAL_LAYER_INTEGRATION),
             flags_new: E.gfo.SOCIAL_LAYER_INTEGRATION.toString(),
         };
-        g.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e });
+        f.h.dispatch({ type: "APPLICATION_FETCH_SUCCESS", application: e });
     }, []);
 }
-function V() {
+function U() {
     n.useEffect(() => {
-        (g.h.dispatch({
+        (f.h.dispatch({
             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
             config: {
                 promotionalSkuIds: [],
                 storefronts: [
                     {
-                        guildId: A,
+                        guildId: R,
                         applicationId: x,
                         gameId: C,
                         collectiblesShopNavigationEnabled: !1,
@@ -269,9 +282,9 @@ function V() {
                 announcementModalConfig: null,
             },
         }),
-            g.h.dispatch({
+            f.h.dispatch({
                 type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
-                guildOrApplicationId: { type: "guild", guildId: A },
+                guildOrApplicationId: { type: "guild", guildId: R },
                 storefront: {
                     id: x,
                     publishedAt: null,
@@ -287,9 +300,9 @@ function V() {
     }, []);
 }
 let w = "/assets/863cb535889630a2.svg";
-var D = l(50777),
-    L = l(467884);
-let U = {
+var L = l(50777),
+    N = l(467884);
+let D = {
     name: "Shop Card",
     id: "storefront-card",
     docs: 'Preview the SocialLayerStorefrontCard in various states. The card uses a fallback icon since no real asset images are loaded. The "Embedded" variant renders the full in-chat product details embed.',
@@ -308,40 +321,40 @@ let U = {
                 isEligible: m,
             } = e,
             b = r ? String(i) : null,
-            f = r ? Math.round(a * (1 - i / 100)) : null;
+            g = r ? Math.round(a * (1 - i / 100)) : null;
         (P({
             name: l,
             price: a,
-            salePrice: f,
+            salePrice: g,
             salePercentage: b,
             exclusive: s,
             orbsReward: d ? u : null,
             daysUntilExpiry: c ? p : null,
             isEligible: m,
         }),
-            N());
-        let g = n.useCallback((e) => {
+            V());
+        let f = n.useCallback((e) => {
             e.preventDefault();
         }, []);
-        return t === L.s6.EMBEDDED
+        return t === N.s6.EMBEDDED
             ? (0, o.jsx)("div", {
                   style: { padding: 16 },
-                  children: (0, o.jsx)(D.A, { applicationId: x, guildId: A, skuId: v, channel: O }),
+                  children: (0, o.jsx)(L.A, { applicationId: x, guildId: R, skuId: v, channel: O }),
               })
             : (0, o.jsx)("div", {
-                  style: { maxWidth: t === L.s6.SMALL ? 220 : 300, padding: 16 },
-                  children: (0, o.jsx)(L.Ay, { skuId: v, variant: t, onClick: g }),
+                  style: { maxWidth: t === N.s6.SMALL ? 220 : 300, padding: 16 },
+                  children: (0, o.jsx)(N.Ay, { skuId: v, variant: t, onClick: f }),
               });
     },
     controls: {
         variant: {
             label: "Card Variant",
             type: "select",
-            defaultValue: L.s6.SMALL,
+            defaultValue: N.s6.SMALL,
             options: [
-                { label: "Small", value: L.s6.SMALL },
-                { label: "Medium", value: L.s6.MEDIUM },
-                { label: "Embedded", value: L.s6.EMBEDDED },
+                { label: "Small", value: N.s6.SMALL },
+                { label: "Medium", value: N.s6.MEDIUM },
+                { label: "Embedded", value: N.s6.EMBEDDED },
             ],
         },
         name: { label: "Product Name", type: "text", defaultValue: "Legendary Dragon Armor" },
@@ -356,14 +369,14 @@ let U = {
         isEligible: { label: "Purchase Eligible", type: "boolean", defaultValue: !0 },
     },
 };
-var M = l(213113);
+var k = l(213113);
 (l(323874), l(14289), l(35956));
-var k = l(366523);
+var M = l(366523);
 let B = new URL("https://cdn.discordapp.com/embed/avatars/0.png"),
     F = new URL("https://cdn.discordapp.com/embed/avatars/1.png");
 var G = l(263911),
     Y = l(403581),
-    j = l(873297),
+    j = l(482358),
     H = l(758836),
     q = l(375708);
 function K() {}
@@ -436,7 +449,7 @@ let en = {
         id: "slayer-storefront",
         name: "Slayer Storefront",
         groups: [
-            { title: "Shop Card", stories: [U] },
+            { title: "Shop Card", stories: [D] },
             {
                 title: "Modals",
                 stories: [
@@ -454,8 +467,8 @@ let en = {
                                     hasOrbsReward: p,
                                     orbsRewardAmount: m,
                                     hasExpiry: b,
-                                    daysUntilExpiry: f,
-                                    isEligible: g,
+                                    daysUntilExpiry: g,
+                                    isEligible: f,
                                 } = e,
                                 y = a ? String(u) : null,
                                 h = a ? Math.round(l * (1 - u / 100)) : null,
@@ -468,12 +481,12 @@ let en = {
                                 salePercentage: y,
                                 exclusive: c,
                                 orbsReward: p ? m : null,
-                                daysUntilExpiry: b ? f : null,
-                                isEligible: g,
+                                daysUntilExpiry: b ? g : null,
+                                isEligible: f,
                             }),
-                            V(),
+                            U(),
                             S)
-                                ? (0, o.jsx)(M.default, {
+                                ? (0, o.jsx)(k.default, {
                                       transitionState: d.ip.ENTERED,
                                       returnRef: I,
                                       skuId: v,
@@ -544,13 +557,13 @@ let en = {
                                 feature1Subtitle: p,
                                 feature2Title: m,
                                 feature2Subtitle: b,
-                                buttonText: f,
+                                buttonText: g,
                             } = e;
-                            V();
-                            let [g, y] = n.useState(!1),
+                            U();
+                            let [f, y] = n.useState(!1),
                                 h = n.useRef(null),
                                 S = [t, l].filter((e) => "" !== e);
-                            return g
+                            return f
                                 ? (0, o.jsx)(u.A, {
                                       version: 0,
                                       transitionState: d.ip.ENTERED,
@@ -565,7 +578,7 @@ let en = {
                                           { assetUrl: w, title: c, subtitle: p },
                                           { assetUrl: w, title: m, subtitle: b },
                                       ],
-                                      buttonText: f,
+                                      buttonText: g,
                                       onClose: () => Promise.resolve(y(!1)),
                                   })
                                 : (0, o.jsxs)(r.B, {
@@ -672,7 +685,7 @@ let en = {
                             let { shape: t, useBackgroundImage: l } = e;
                             return (0, o.jsx)("div", {
                                 style: { width: 220, height: 220 },
-                                children: (0, o.jsx)(k.A, {
+                                children: (0, o.jsx)(M.A, {
                                     cardImage: B,
                                     cardBackgroundImage: l ? F : null,
                                     altText: "Playground preview",
@@ -696,53 +709,56 @@ let en = {
                     {
                         name: "Game Promotion Banner",
                         id: "game-promotion-banner",
-                        docs: 'The social-layer storefront promotional banner. Switch the CTA preset to preview the storefront ("Shop All") vs. the Nitro reuse (the canonical "Get Nitro" subscribe button), and toggle the optional time-left badge and logo.',
+                        docs: "Preview the shop banner with different card counts, CTAs, copy, and assets.",
                         component: function (e) {
                             let t,
                                 l,
                                 {
                                     headerText: a,
-                                    ctaPreset: r,
-                                    showLogo: i,
-                                    showTimeLeft: d,
-                                    timeLeftText: u,
-                                    showOrbsOnly: c,
-                                    cardCount: p,
-                                    gradientPreset: m,
+                                    subheaderText: r,
+                                    ctaPreset: i,
+                                    showLogo: d,
+                                    showTimeLeft: u,
+                                    timeLeftText: c,
+                                    showOrbsOnly: p,
+                                    cardCount: m,
+                                    gradientPreset: b,
+                                    termsUrl: y,
+                                    backgroundImageUrl: h,
                                 } = e,
-                                b =
-                                    ((t = (0, f.bG)([S.default], () => S.default.getId())),
+                                E =
+                                    ((t = (0, g.bG)([S.default], () => S.default.getId())),
                                     (l = n.useMemo(
                                         () =>
-                                            T.slice(0, p).map((e) => {
+                                            T.slice(0, m).map((e) => {
                                                 let { id: t } = e;
                                                 return t;
                                             }),
-                                        [p],
+                                        [m],
                                     )),
                                     n.useEffect(() => {
-                                        for (let { id: e, params: l } of T.slice(0, p)) _(e, l, t);
-                                        (g.h.dispatch({
+                                        for (let { id: e, params: l } of T.slice(0, m)) _(e, l, t);
+                                        (f.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                             config: {
                                                 promotionalSkuIds: l,
                                                 storefronts: [
                                                     {
-                                                        guildId: A,
+                                                        guildId: R,
                                                         applicationId: x,
                                                         gameId: C,
                                                         collectiblesShopNavigationEnabled: !1,
                                                         excludedPlatforms: [],
                                                         disableMobileAccountLinking: !1,
-                                                        allowOrbsSpending: c ?? !1,
+                                                        allowOrbsSpending: p ?? !1,
                                                     },
                                                 ],
                                                 announcementModalConfig: null,
                                             },
                                         }),
-                                            g.h.dispatch({
+                                            f.h.dispatch({
                                                 type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
-                                                guildOrApplicationId: { type: "guild", guildId: A },
+                                                guildOrApplicationId: { type: "guild", guildId: R },
                                                 storefront: {
                                                     id: x,
                                                     publishedAt: null,
@@ -757,39 +773,43 @@ let en = {
                                                     promotions: {},
                                                 },
                                             }));
-                                    }, [p, t, l, c]),
+                                    }, [m, t, l, p]),
                                     l),
-                                y = n.useMemo(
+                                I = n.useMemo(
                                     () =>
-                                        "nitro" === r
-                                            ? {
-                                                  kind: "custom",
-                                                  node: (0, o.jsx)(s.$, {
-                                                      variant: "expressive",
-                                                      size: "sm",
-                                                      icon: Y.t,
-                                                      text: q.intl.string(q.t.pj0XBN),
-                                                      onClick: K,
-                                                  }),
-                                              }
-                                            : { kind: "button", text: "Shop All", onClick: K },
-                                    [r],
+                                        "none" === i
+                                            ? void 0
+                                            : "nitro" === i
+                                              ? {
+                                                    kind: "custom",
+                                                    node: (0, o.jsx)(s.$, {
+                                                        variant: "expressive",
+                                                        size: "sm",
+                                                        icon: Y.t,
+                                                        text: q.intl.string(q.t.pj0XBN),
+                                                        onClick: K,
+                                                    }),
+                                                }
+                                              : { kind: "button", text: "Shop All", onClick: K },
+                                    [i],
                                 );
                             return (0, o.jsx)(j.A, {
-                                onDismiss: K,
-                                skuIds: b,
+                                skuIds: E,
                                 tab: H.G2.GAME_SHOPS,
                                 applicationId: x,
                                 headerText: a,
-                                logoUrl: i
+                                subheaderText: "" !== r ? r : void 0,
+                                logoUrl: d
                                     ? "https://cdn.discordapp.com/app-assets/1346069614634864772/store/1461676971728572478.webp?size=128"
                                     : void 0,
-                                cta: y,
-                                timeLeftText: d && null != u && "" !== u ? u : void 0,
+                                cta: I,
+                                timeLeftText: u && null != c && "" !== c ? c : void 0,
+                                termsUrl: "" !== y ? y : void 0,
+                                backgroundImageUrl: "" !== h ? h : void 0,
                                 analyticsSection: "playground",
                                 analyticsTileType: "PLAYGROUND_BANNER",
                                 analyticsImpressionType: "playground_banner",
-                                backgroundGradient: Q[m],
+                                backgroundGradient: Q[b],
                             });
                         },
                         controls: {
@@ -798,6 +818,7 @@ let en = {
                                 type: "text",
                                 defaultValue: "Get Orbs on every in-game item purchase",
                             },
+                            subheaderText: { label: "Subheader Text", type: "text", defaultValue: "" },
                             ctaPreset: {
                                 label: "CTA",
                                 type: "select",
@@ -805,6 +826,7 @@ let en = {
                                 options: [
                                     { label: "Storefront \u2014 Shop All", value: "storefront" },
                                     { label: "Nitro \u2014 Get Nitro", value: "nitro" },
+                                    { label: "None", value: "none" },
                                 ],
                             },
                             showLogo: { label: "Show Logo", type: "boolean", defaultValue: !0 },
@@ -816,7 +838,8 @@ let en = {
                                 type: "slider",
                                 defaultValue: 4,
                                 minValue: 1,
-                                maxValue: 4,
+                                maxValue: 5,
+                                markers: [1, 2, 3, 4, 5],
                             },
                             gradientPreset: {
                                 label: "Background Gradient",
@@ -828,6 +851,8 @@ let en = {
                                     { label: "None", value: "none" },
                                 ],
                             },
+                            termsUrl: { label: "Terms URL", type: "text", defaultValue: "" },
+                            backgroundImageUrl: { label: "Background Image URL", type: "text", defaultValue: "" },
                         },
                     },
                     {
@@ -843,7 +868,7 @@ let en = {
                                 requiresAnnualPlan: i,
                                 isOnQualifyingPlan: s,
                             } = e;
-                            N();
+                            V();
                             let d = (0, J.i)((e) => e.setOverrideNitroEligibilityForSocialLayerStorefront),
                                 u = (0, J.i)((e) => e.setIsNitroEligibleForSocialLayerStorefront),
                                 c = (0, J.i)((e) => e.setOverrideCurrentPremiumPlanId),
@@ -859,13 +884,13 @@ let en = {
                                     [c, m, s],
                                 ),
                                 n.useEffect(() => {
-                                    (g.h.dispatch({
+                                    (f.h.dispatch({
                                         type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                         config: {
                                             promotionalSkuIds: [],
                                             storefronts: [
                                                 {
-                                                    guildId: A,
+                                                    guildId: R,
                                                     applicationId: x,
                                                     gameId: C,
                                                     collectiblesShopNavigationEnabled: !1,
@@ -877,9 +902,9 @@ let en = {
                                             announcementModalConfig: null,
                                         },
                                     }),
-                                        g.h.dispatch({
+                                        f.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
-                                            guildOrApplicationId: { type: "guild", guildId: A },
+                                            guildOrApplicationId: { type: "guild", guildId: R },
                                             storefront: {
                                                 id: x,
                                                 publishedAt: null,
@@ -1033,15 +1058,15 @@ let en = {
                                 daysUntilExpiry: null,
                                 isEligible: !0,
                             }),
-                                N(),
+                                V(),
                                 n.useEffect(() => {
-                                    (g.h.dispatch({
+                                    (f.h.dispatch({
                                         type: "SOCIAL_LAYER_STOREFRONT_CONFIG_FETCH_SUCCESS",
                                         config: {
                                             promotionalSkuIds: [],
                                             storefronts: [
                                                 {
-                                                    guildId: A,
+                                                    guildId: R,
                                                     applicationId: x,
                                                     gameId: C,
                                                     collectiblesShopNavigationEnabled: !1,
@@ -1053,9 +1078,9 @@ let en = {
                                             announcementModalConfig: null,
                                         },
                                     }),
-                                        g.h.dispatch({
+                                        f.h.dispatch({
                                             type: "SOCIAL_LAYER_STOREFRONT_LOAD_SUCCESS",
-                                            guildOrApplicationId: { type: "guild", guildId: A },
+                                            guildOrApplicationId: { type: "guild", guildId: R },
                                             storefront: {
                                                 id: x,
                                                 publishedAt: null,
@@ -1068,8 +1093,8 @@ let en = {
                                                 ],
                                                 assets: {},
                                                 promotions: {
-                                                    [R]: {
-                                                        id: R,
+                                                    [A]: {
+                                                        id: A,
                                                         endsAt: null,
                                                         flavor: "nitro",
                                                         pdp: { label: "Free with Nitro", tooltip: null, icon: null },
@@ -1087,7 +1112,7 @@ let en = {
                             }, []);
                             return (0, o.jsx)("div", {
                                 style: { maxWidth: 300, padding: 16 },
-                                children: (0, o.jsx)(L.Ay, { skuId: v, variant: L.s6.MEDIUM, onClick: r }),
+                                children: (0, o.jsx)(N.Ay, { skuId: v, variant: N.s6.MEDIUM, onClick: r }),
                             });
                         },
                         controls: {

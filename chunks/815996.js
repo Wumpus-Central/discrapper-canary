@@ -476,22 +476,28 @@ class K {
 class $ {
     applicationId;
     headerText;
+    subheaderText;
     gradientColors;
     gradientAngle;
     skuIds;
     endTime;
     ctaType;
     logoUrl;
+    termsUrl;
+    backgroundImageUrl;
     constructor(e) {
         ((this.type = x.g.SOCIAL_LAYER_STOREFRONT_PROMOTIONAL_BANNER),
             (this.applicationId = e.application_id),
             (this.headerText = e.header_text),
+            (this.subheaderText = e.subheader_text),
             (this.gradientColors = e.gradient_colors),
             (this.gradientAngle = e.gradient_angle),
             (this.skuIds = e.sku_ids),
             (this.endTime = e.end_time),
             (this.ctaType = e.cta_type),
-            (this.logoUrl = e.logo_url));
+            (this.logoUrl = e.logo_url),
+            (this.termsUrl = e.terms_url),
+            (this.backgroundImageUrl = e.background_image_url));
     }
     static fromServer(e) {
         return new $(e);
