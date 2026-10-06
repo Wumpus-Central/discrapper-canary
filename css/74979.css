@@ -312,13 +312,15 @@
     margin-inline-start: auto
 }
 
-.phantomPreview_d59199 .money_d59199,
-.phantomPreview_d59199 .newBadge_d59199 {
+.phantomPreview_d59199 .money_d59199 {
     display: block
 }
 
+.phantomPreview_d59199 .newBadge_d59199 {
+    display: flex
+}
+
 .newBadge_d59199 {
-    color: var(--brand-560);
     display: none
 }
 
@@ -408,4 +410,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=74979.7ee220596e6df49e.css.map*/
+/*# sourceMappingURL=74979.72930c97e5d2d0c3.css.map*/

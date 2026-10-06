@@ -75,7 +75,7 @@
 }
 
 .newBadge__270d7 {
-    color: var(--brand-560);
+    display: flex;
     inset-inline-end: -10px;
     position: absolute;
     top: -10px
@@ -91,7 +91,8 @@
 }
 
 .newBadge__05934 {
-    color: var(--brand-560)
+    align-self: flex-start;
+    display: flex
 }
 
 .memberCount__05934 {
@@ -104,4 +105,4 @@
     opacity: 1
 }
 
-/*# sourceMappingURL=c13df7bdc3ee1629.css.map*/
+/*# sourceMappingURL=47930d9290966e2f.css.map*/

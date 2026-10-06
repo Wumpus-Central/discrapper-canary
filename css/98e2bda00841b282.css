@@ -1,0 +1,30 @@
+.tags__08166 {
+    align-items: center;
+    display: inline-flex;
+    font-family: var(--font-primary);
+    font-weight: var(--font-weight-medium);
+    gap: 8px;
+    height: 24px;
+    margin-bottom: 8px
+}
+
+.newBadge__08166 {
+    display: flex
+}
+
+.pinIcon__08166 {
+    align-items: center;
+    background-color: var(--brand-500);
+    border-radius: 9999px;
+    display: inline-flex;
+    flex-shrink: 0;
+    height: 22px;
+    justify-content: center;
+    width: 22px
+}
+
+.tagFiltered__08166 {
+    background-color: var(--background-base-lowest)
+}
+
+/*# sourceMappingURL=98e2bda00841b282.css.map*/

@@ -2754,12 +2754,8 @@
 }
 
 .newBadge__9a337 {
-    align-items: center;
-    border-radius: var(--radius-md);
-    color: var(--brand-560);
-    display: flex;
-    font-size: 10px;
-    justify-content: center
+    align-self: flex-start;
+    display: flex
 }
 
 .textContentUnread__9a337 {
@@ -2934,4 +2930,4 @@
     width: 180px
 }
 
-/*# sourceMappingURL=6b663800951b0caf.css.map*/
+/*# sourceMappingURL=c1f8ba2a3ba90d23.css.map*/

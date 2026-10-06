@@ -93,9 +93,9 @@
 }
 
 .newBadge_d804ff {
-    color: var(--brand-560);
-    margin-inline-start: auto;
-    padding-inline-end: 4px
+    display: flex;
+    flex-shrink: 0;
+    margin-inline-start: auto
 }
 
 .preview_d804ff.tab_d804ff {
@@ -107,4 +107,4 @@
     width: auto
 }
 
-/*# sourceMappingURL=9a4ec4090b73ed56.css.map*/
+/*# sourceMappingURL=b5cdce583db4f361.css.map*/

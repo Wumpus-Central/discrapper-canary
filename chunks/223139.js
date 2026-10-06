@@ -24,7 +24,7 @@ a.exports = {
     o$: "postTitleText_faa96b",
     pr: "newBadgeWrapper_faa96b",
     Ad: "newBadge_faa96b",
-    PP: "inTagsRow_faa96b",
+    gi: "newBadgeOverflow_faa96b",
     IW: "typing_faa96b",
     mD: "typingUsers_faa96b",
     Mv: "messageCountBox_faa96b",

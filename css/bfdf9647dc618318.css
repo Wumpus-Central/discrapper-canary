@@ -78,7 +78,7 @@
 }
 
 .newBadge__5d7c9 {
-    color: var(--brand-560);
+    display: flex;
     inset-inline-end: -10px;
     position: absolute;
     top: -10px
@@ -271,4 +271,4 @@
     display: none
 }
 
-/*# sourceMappingURL=bf71fe9c4e852242.css.map*/
+/*# sourceMappingURL=bfdf9647dc618318.css.map*/

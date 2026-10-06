@@ -74,7 +74,8 @@
 }
 
 .titleBadge_e4503a {
-    color: var(--brand-560)
+    display: flex;
+    flex-shrink: 0
 }
 
 .premiumIcon_e4503a,
@@ -259,4 +260,4 @@
     padding: 0
 }
 
-/*# sourceMappingURL=3291167bad1e3aaf.css.map*/
+/*# sourceMappingURL=605605ae7c8da8fe.css.map*/

@@ -9,23 +9,23 @@ var l = n(477900),
     o = n(834730),
     d = n(81466),
     m = n(406810),
-    x = n(812993),
+    x = n(508770),
     g = n(866665),
     h = n(602853),
     f = n(722260),
-    N = n(492260),
-    A = n(974930),
-    E = n(604701),
-    v = n(988794),
+    E = n(492260),
+    N = n(974930),
+    v = n(604701),
+    A = n(988794),
     j = n(375708),
     T = n(202265);
 function I(t) {
     let e,
         { timeData: n, status: l, eventType: r, isCanceled: i } = t,
         { startDateTimeString: a, endDateTimeString: s, currentOrPastEvent: c, upcomingEvent: u, diffMinutes: o } = n;
-    if (5 == (e = l === v.XG.CANCELED || i ? 5 : l === v.XG.ACTIVE ? 3 : v.lV.has(l) ? 4 : c ? 2 : +!!u))
+    if (5 == (e = l === A.XG.CANCELED || i ? 5 : l === A.XG.ACTIVE ? 3 : A.lV.has(l) ? 4 : c ? 2 : +!!u))
         return `${a}, ${j.intl.string(j.t.fyBVRm)}`;
-    let d = r === v.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]),
+    let d = r === A.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]),
         m = a;
     switch ((null != s && "" !== s && (m = j.intl.formatToPlainString(j.t.tXbu7I, { start: a, end: s })), e)) {
         case 1:
@@ -39,11 +39,7 @@ function I(t) {
     }
 }
 function C() {
-    return (0, l.jsx)(x.Lp, {
-        className: T.Ad,
-        color: u.A.unsafe_rawColors.BRAND_260.css,
-        text: (0, l.jsx)(o.E, { className: T.rm, variant: "text-xs/bold", children: j.intl.string(j.t.y2b7CA) }),
-    });
+    return (0, l.jsx)("div", { className: T.Ad, children: (0, l.jsx)(x.E, { type: "new", variant: "brand" }) });
 }
 function L(t) {
     let { children: e, className: n, tooltipText: r } = t;
@@ -61,7 +57,7 @@ function D(t) {
     return null != t.timeData ? (0, l.jsx)(p, { ...t, timeData: t.timeData }) : (0, l.jsx)(_, { ...t });
 }
 function _(t) {
-    let e = (0, N.A)(t.startTime, t.endTime);
+    let e = (0, E.A)(t.startTime, t.endTime);
     return (0, l.jsx)(p, { ...t, timeData: e });
 }
 function p(t) {
@@ -72,7 +68,7 @@ function p(t) {
             className: s,
             liveText: x,
             textVariant: g = "text-sm/semibold",
-            isNew: N,
+            isNew: E,
             recurrenceRule: I,
             guildEventId: D,
             recurrenceId: _,
@@ -80,17 +76,17 @@ function p(t) {
         } = t,
         w = (0, h.r)(u.A.colors.TEXT_BRAND).hex(),
         S = (0, h.r)(u.A.colors.TEXT_FEEDBACK_POSITIVE).hex(),
-        b = (0, h.r)(u.A.colors.TEXT_FEEDBACK_CRITICAL).hex();
-    null == x && (x = i === v.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]));
-    let y = (0, f.A)(_, D),
-        { startDateTimeString: P, endDateTimeString: k, currentOrPastEvent: X, upcomingEvent: G, diffMinutes: V } = p,
-        K = P;
-    null != k && "" !== k && (K = j.intl.formatToPlainString(j.t.tXbu7I, { start: P, end: k }));
-    let R = r.useMemo(
-            () => (n === v.XG.CANCELED || y?.is_canceled ? 5 : n === v.XG.ACTIVE ? 3 : v.lV.has(n) ? 4 : X ? 2 : +!!G),
-            [n, y?.is_canceled, X, G],
+        y = (0, h.r)(u.A.colors.TEXT_FEEDBACK_CRITICAL).hex();
+    null == x && (x = i === A.Ps.EXTERNAL ? j.intl.string(j.t.IyZxjH) : j.intl.string(j.t["X2K3/4"]));
+    let P = (0, f.A)(_, D),
+        { startDateTimeString: b, endDateTimeString: k, currentOrPastEvent: X, upcomingEvent: G, diffMinutes: V } = p,
+        K = b;
+    null != k && "" !== k && (K = j.intl.formatToPlainString(j.t.tXbu7I, { start: b, end: k }));
+    let z = r.useMemo(
+            () => (n === A.XG.CANCELED || P?.is_canceled ? 5 : n === A.XG.ACTIVE ? 3 : A.lV.has(n) ? 4 : X ? 2 : +!!G),
+            [n, P?.is_canceled, X, G],
         ),
-        z = (function (t, e, n, r, i) {
+        R = (function (t, e, n, r, i) {
             switch (t) {
                 case 1:
                     return i > 0 ? j.intl.formatToPlainString(j.t.PQlCWk, { minutes: i }) : j.intl.string(j.t.WINqKV);
@@ -113,7 +109,7 @@ function p(t) {
                 default:
                     return e;
             }
-        })(R, K, x, k, V),
+        })(z, K, x, k, V),
         {
             Icon: W,
             iconColor: H,
@@ -150,57 +146,57 @@ function p(t) {
                     }
                     return { Icon: c, iconColor: u, textColor: o, tooltipText: e };
                 })({
-                    timeStatus: R,
+                    timeStatus: z,
                     textBrand: w,
                     textPositive: S,
-                    textDanger: b,
+                    textDanger: y,
                     endDateTimeString: k,
-                    startDateTimeString: P,
+                    startDateTimeString: b,
                 }),
-            [R, w, S, b, k, P],
+            [z, w, S, y, k, b],
         ),
         B = null;
     if (null != I) {
-        let t = (0, A.X7)(I);
+        let t = (0, N.X7)(I);
         B = j.intl.formatToPlainString(j.t.HmKEqW, { recurrenceRule: t.toText() });
         let n = c()(e);
         B = (function (t, e) {
             let n = e.toDate(),
                 l = n.toLocaleString(j.intl.currentLocale, { weekday: "long" });
             switch (t) {
-                case E.z.WEEKLY:
+                case v.z.WEEKLY:
                     return j.intl.formatToPlainString(j.t.xQM9X0, { weekday: l });
-                case E.z.BIWEEKLY:
+                case v.z.BIWEEKLY:
                     return j.intl.formatToPlainString(j.t.RYscac, { weekday: l });
-                case E.z.MONTHLY:
+                case v.z.MONTHLY:
                     let r = Math.ceil(n.getDate() / 7);
                     return j.intl.formatToPlainString(j.t["4ZN9Ap"], { weekday: l, nth: r });
-                case E.z.YEARLY:
+                case v.z.YEARLY:
                     return j.intl.formatToPlainString(j.t["rXUS+j"], {
                         date: n.toLocaleString(j.intl.currentLocale, { month: "short", day: "2-digit" }),
                     });
-                case E.z.DAILY:
+                case v.z.DAILY:
                     return j.intl.string(j.t["/i8N++"]);
-                case E.z.WEEKDAY_ONLY:
+                case v.z.WEEKDAY_ONLY:
                     return j.intl.string(j.t["2BX6bC"]);
-                case E.z.WEEKEND_ONLY:
+                case v.z.WEEKEND_ONLY:
                     return j.intl.string(j.t["IEi+Rw"]);
                 default:
                     return null;
             }
-        })((0, A.z7)(n, I), n);
+        })((0, N.z7)(n, I), n);
     }
     return (0, l.jsxs)(L, {
         className: a()(s, { [T.AD]: null != B }),
         tooltipText: O,
         children: [
-            N && n === v.XG.SCHEDULED
+            E && n === A.XG.SCHEDULED
                 ? (0, l.jsx)(C, {})
                 : (0, l.jsx)(W, { color: H, size: "custom", width: 20, height: 20 }),
             (0, l.jsxs)("div", {
                 className: T.Zy,
                 children: [
-                    (0, l.jsx)(o.E, { color: Y, variant: g, children: z }),
+                    (0, l.jsx)(o.E, { color: Y, variant: g, children: R }),
                     null != B && (0, l.jsx)(o.E, { color: "text-default", variant: "text-xs/normal", children: B }),
                 ],
             }),

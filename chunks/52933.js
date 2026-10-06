@@ -1,27 +1,25 @@
-n.d(t, { Ay: () => p, BA: () => v });
+n.d(t, { Ay: () => A, BA: () => j });
 var s = n(477900),
     l = n(503698),
     a = n.n(l),
-    i = n(661531),
-    r = n(812993),
-    c = n(866665),
-    o = n(366605),
+    i = n(508770),
+    r = n(866665),
+    c = n(366605),
     d = n(872162),
-    u = n(890283),
-    h = n(422844),
-    m = n(691060),
-    g = n(376310),
-    x = n(746080),
-    A = n(375708),
-    f = n(223139),
-    j = n(240103);
-function v(e) {
+    o = n(890283),
+    u = n(422844),
+    h = n(691060),
+    m = n(376310),
+    g = n(746080),
+    x = n(375708),
+    f = n(240103);
+function j(e) {
     let { channel: t, isNew: n } = e,
-        s = (0, m.kt)(t),
+        s = (0, h.kt)(t),
         l = s.slice(void 0, 3),
         a = s.slice(3),
         i = s.length > 3 ? s.length - 3 : 0,
-        r = t.hasFlag(x.lx.PINNED),
+        r = t.hasFlag(g.lx.PINNED),
         c = l.length > 0 || r || n;
     return {
         shownTags: l,
@@ -32,52 +30,51 @@ function v(e) {
         forumPostContainsTags: s.length > 0,
     };
 }
-function p(e) {
-    let { channel: t, isNew: n, tagsClassName: l, className: m } = e,
+function A(e) {
+    let { channel: t, isNew: n, tagsClassName: l, className: h } = e,
         {
-            shownTags: x,
-            remainingTags: p,
-            moreTagsCount: N,
-            isPinned: C,
-            shouldRenderTagsRow: b,
-        } = v({ channel: t, isNew: n }),
-        { enabled: y } = u.A.useConfig({ location: "forum-post-tags" }),
-        { tagFilter: S } = (0, h.R)(t.id),
-        M = (0, g.cq)(x);
-    return b
+            shownTags: g,
+            remainingTags: A,
+            moreTagsCount: v,
+            isPinned: p,
+            shouldRenderTagsRow: N,
+        } = j({ channel: t, isNew: n }),
+        { enabled: b } = o.A.useConfig({ location: "forum-post-tags" }),
+        { tagFilter: y } = (0, u.R)(t.id),
+        C = (0, m.cq)(g);
+    return N
         ? (0, s.jsxs)("div", {
-              className: a()(j._A, m),
+              className: a()(f._A, h),
               children: [
                   n
-                      ? (0, s.jsx)(r.Lp, {
-                            className: a()(f.Ad, f.PP),
-                            color: i.A.unsafe_rawColors.BRAND_260.css,
-                            text: A.intl.string(A.t.y2b7CA),
+                      ? (0, s.jsx)("div", {
+                            className: f.Ad,
+                            children: (0, s.jsx)(i.E, { type: "new", variant: "brand" }),
                         })
                       : null,
-                  C &&
+                  p &&
                       (0, s.jsx)("div", {
-                          className: j.Ne,
-                          children: (0, s.jsx)(c.m, {
-                              text: A.intl.string(A.t["1QLRYb"]),
-                              children: (0, s.jsx)(o.t, { size: "custom", width: 16, height: 16, color: "white" }),
+                          className: f.Ne,
+                          children: (0, s.jsx)(r.m, {
+                              text: x.intl.string(x.t["1QLRYb"]),
+                              children: (0, s.jsx)(c.t, { size: "custom", width: 16, height: 16, color: "white" }),
                           }),
                       }),
-                  y
+                  b
                       ? (0, s.jsx)(d.C, {
                             variant: "filter",
-                            label: A.intl.string(A.t["P/y+sj"]),
-                            items: M,
+                            label: x.intl.string(x.t["P/y+sj"]),
+                            items: C,
                             size: "xs",
                         })
-                      : x.map((e) =>
+                      : g.map((e) =>
                             (0, s.jsx)(
-                                g.Ay,
-                                { tag: e, size: g.Ay.Sizes.SMALL, className: a()(l, { [j.At]: S.has(e.id) }) },
+                                m.Ay,
+                                { tag: e, size: m.Ay.Sizes.SMALL, className: a()(l, { [f.At]: y.has(e.id) }) },
                                 e.id,
                             ),
                         ),
-                  N > 0 ? (0, s.jsx)(g.q6, { tags: p, count: N, size: g.Ay.Sizes.SMALL, useManaTagGroup: y }) : null,
+                  v > 0 ? (0, s.jsx)(m.q6, { tags: A, count: v, size: m.Ay.Sizes.SMALL, useManaTagGroup: b }) : null,
               ],
           })
         : null;

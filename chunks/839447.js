@@ -1,19 +1,18 @@
-(n.d(t, { A: () => h }), n(321073));
+(n.d(t, { A: () => m }), n(321073));
 var l = n(477900),
     i = n(582128),
-    a = n(661531),
-    r = n(444550),
-    o = n(812993),
-    s = n(834730),
-    c = n(565645),
-    u = n(375708),
+    a = n(444550),
+    r = n(508770),
+    o = n(834730),
+    s = n(565645),
+    c = n(375708),
     d = n(438669);
-function m(e) {
+function u(e) {
     return null != e && (null != e.id || null != e.name);
 }
-function h(e) {
-    let { options: t, value: n, onChange: h, canBeNew: p, memberCounts: g } = e,
-        x = i.useMemo(() => {
+function m(e) {
+    let { options: t, value: n, onChange: m, canBeNew: h, memberCounts: p } = e,
+        g = i.useMemo(() => {
             let e = new Map();
             return (
                 t.forEach((t) => {
@@ -22,7 +21,7 @@ function h(e) {
                 e
             );
         }, [t]),
-        f = i.useMemo(() => {
+        x = i.useMemo(() => {
             let e = [];
             return (
                 t.forEach((t) => {
@@ -31,70 +30,69 @@ function h(e) {
                 e
             );
         }, [t]),
-        A = i.useCallback(
+        f = i.useCallback(
             (e) => {
                 if (null == e) return;
-                let t = x.get(e.value);
-                if (null != t && m(t.emoji))
-                    return (0, l.jsx)(c.A, {
+                let t = g.get(e.value);
+                if (null != t && u(t.emoji))
+                    return (0, l.jsx)(s.A, {
                         emojiId: t.emoji?.id,
                         emojiName: t.emoji?.name,
                         animated: t.emoji?.animated ?? !1,
                     });
             },
-            [x],
+            [g],
         ),
-        C = i.useCallback(
+        A = i.useCallback(
             (e, t) => {
                 if (null == e || t.inPill) return;
-                let n = x.get(e.value);
-                if (null == n || !m(n.emoji)) return;
-                let i = null == g || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => g[e])),
-                    r = null != g && i > 0;
+                let n = g.get(e.value);
+                if (null == n || !u(n.emoji)) return;
+                let i = null == p || null == n.roleIds ? 0 : Math.max(...n.roleIds.map((e) => p[e])),
+                    a = null != p && i > 0;
                 return (0, l.jsxs)("div", {
                     className: d.ei,
                     children: [
-                        p &&
+                        h &&
                             n.isUnseen &&
-                            (0, l.jsx)(o.Lp, {
-                                color: a.A.unsafe_rawColors.BRAND_260.css,
-                                text: u.intl.string(u.t.y2b7CA),
+                            (0, l.jsx)("div", {
                                 className: d.Ad,
+                                children: (0, l.jsx)(r.E, { type: "new", variant: "brand" }),
                             }),
-                        r &&
+                        a &&
                             (0, l.jsx)("div", {
                                 className: d.Kl,
                                 "data-hover": !0,
-                                children: (0, l.jsx)(s.E, {
+                                children: (0, l.jsx)(o.E, {
                                     variant: "text-xs/normal",
                                     color: "text-overlay-light",
-                                    children: u.intl.format(u.t.EgKsZA, { memberCount: i }),
+                                    children: c.intl.format(c.t.EgKsZA, { memberCount: i }),
                                 }),
                             }),
                     ],
                 });
             },
-            [p, g, x],
+            [h, p, g],
         ),
         j = i.useCallback(
             (e) => {
                 let t = [];
                 (e.forEach((e) => {
-                    let n = x.get(e);
+                    let n = g.get(e);
                     null != n && t.push(n);
                 }),
-                    h(t));
+                    m(t));
             },
-            [h, x],
+            [m, g],
         );
-    return (0, l.jsx)(r.p, {
+    return (0, l.jsx)(a.p, {
         multi: !0,
-        options: f,
+        options: x,
         onChange: j,
         value: n,
         closeOnSelect: !1,
-        renderOptionSuffix: C,
-        renderOptionPrefix: A,
+        renderOptionSuffix: A,
+        renderOptionPrefix: f,
         "data-migration-pending": !0,
     });
 }
