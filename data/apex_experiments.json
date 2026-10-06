@@ -4184,32 +4184,6 @@
     }
   },
   {
-    "name": "2026-08-gift-recipient-display-name-search",
-    "kind": "user",
-    "defaultConfig": {
-      "displayNameSearchEnabled": false,
-      "affinityOrderingEnabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "displayNameSearchEnabled": true,
-        "affinityOrderingEnabled": false
-      },
-      "2": {
-        "displayNameSearchEnabled": false,
-        "affinityOrderingEnabled": true
-      },
-      "3": {
-        "displayNameSearchEnabled": true,
-        "affinityOrderingEnabled": true
-      }
-    }
-  },
-  {
     "name": "2026-08-gsh-subs-activity-bar",
     "kind": "user",
     "defaultConfig": {
