@@ -1,14 +1,15 @@
-o.d(d, { A: () => c });
-var t = o(536637),
-    e = o.n(t),
-    r = o(174459),
-    s = o(652215);
-function c(a, d) {
-    r.default.track(s.HAw.AGE_GATE_SUBMITTED, {
-        dob: 18 > e()().diff(a, "years") ? a.format("YYYY-MM-DD") : null,
-        dob_day: a.date(),
-        dob_month: a.month() + 1,
-        dob_year: a.year(),
-        source: { section: d },
+d.d(a, { A: () => s });
+var e = d(536637),
+    n = d.n(e),
+    t = d(831167),
+    c = d(174459),
+    r = d(652215);
+function s(o, a) {
+    c.default.track(r.HAw.AGE_GATE_SUBMITTED, {
+        dob: 18 > n()().diff(o, "years") ? (0, t.A)(o) : null,
+        dob_day: o.date(),
+        dob_month: o.month() + 1,
+        dob_year: o.year(),
+        source: { section: a },
     });
 }
