@@ -1,4 +1,4 @@
-n.d(t, { a: () => L, A: () => O });
+n.d(t, { a: () => L, A: () => w });
 var l = n(582128),
     i = n(143236),
     r = n(719442),
@@ -41,10 +41,10 @@ function I(e, t, n) {
           ? l.length
           : i) > 0 && f.b.delete(e, { distance: r, unit: "offset", reverse: n });
 }
-function v(e) {
+function N(e) {
     return { type: "other", mergeable: !1, createdAt: Date.now(), value: p.VW.richValue(e), selection: e.selection };
 }
-var N = n(113001),
+var v = n(113001),
     T = n(2368);
 function j(e, t, n) {
     let l = p.VW.getCurrentInline(e);
@@ -93,15 +93,15 @@ function j(e, t, n) {
 var k = n(694403),
     _ = n(323350),
     R = n(235599),
-    w = n(551483);
-function O(e) {
+    O = n(551483);
+function w(e) {
     let t = l.useContext(o.Ay),
         n = c.SI.useSetting(),
         [i] = l.useState(() => {
             let l = (0, r.ie)();
             return (
                 (l.children = (0, d.x7)("")),
-                (l.selection = { anchor: w.K, focus: w.K }),
+                (l.selection = { anchor: O.K, focus: O.K }),
                 L({ ...e, editor: l, windowContext: t, previewMarkdown: n }),
                 l
             );
@@ -433,7 +433,7 @@ function L(e) {
             ((e.history = { index: 0, stack: [] }),
                 (e.onChange = () => {
                     let { history: t } = e;
-                    (0 === t.stack.length && ((t.stack = [v(e)]), (t.index = 0)),
+                    (0 === t.stack.length && ((t.stack = [N(e)]), (t.index = 0)),
                         null != e.selection && (m.o.currentEntry(e).selection = e.selection),
                         (d = null),
                         o());
@@ -453,7 +453,7 @@ function L(e) {
                     n(t);
                     let i = p.VW.richValue(e);
                     i !== h &&
-                        (0 === l.stack.length && ((l.stack = [v(e)]), (l.index = 0)),
+                        (0 === l.stack.length && ((l.stack = [N(e)]), (l.index = 0)),
                         m.o.isSaving(e) &&
                             ((function (e, t, n) {
                                 var l, i;
@@ -565,12 +565,12 @@ function L(e) {
                                     r = !1;
                                 for (
                                     ;
-                                    null != l && null != (t = p.VW.getParentVoid(e, l)) && !w.XR.includes(t[0].type);
+                                    null != l && null != (t = p.VW.getParentVoid(e, l)) && !O.XR.includes(t[0].type);
                                 )
                                     ((l = p.VW.before(e, l, { unit: "offset" })), (r = !0));
                                 for (
                                     ;
-                                    null != i && null != (n = p.VW.getParentVoid(e, i)) && !w.XR.includes(n[0].type);
+                                    null != i && null != (n = p.VW.getParentVoid(e, i)) && !O.XR.includes(n[0].type);
                                 )
                                     ((i = p.VW.after(e, i, { unit: "offset" })), (r = !0));
                                 r &&
@@ -617,7 +617,7 @@ function L(e) {
                             }),
                             e
                         );
-                    })((S = (0, N.A)(S)))),
+                    })((S = (0, v.A)(S)))),
                 )),
                 c,
                 d,

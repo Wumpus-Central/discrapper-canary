@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(211401),
     b = n(989837),
     I = n(500049),
-    v = n(598071),
-    N = n(60809),
+    N = n(598071),
+    v = n(60809),
     T = n(375708),
     j = n(215837);
 let k = i.forwardRef(function (e, t) {
@@ -32,7 +32,7 @@ let k = i.forwardRef(function (e, t) {
                 () => b.A.shouldShowPopup() && b.A.activeViewType() === n && b.A.activeChannelId() === r,
             ),
             { Component: o, events: u, play: c } = (0, S.c)(),
-            d = i.useContext(v.Ay);
+            d = i.useContext(N.Ay);
         i.useEffect(() => {
             function e() {
                 u.onMouseEnter();
@@ -49,7 +49,7 @@ let k = i.forwardRef(function (e, t) {
             }, [a, n, r, c]),
             m = (0, l.jsx)(o, { size: "refresh_sm", color: "currentColor" });
         return (0, l.jsx)("div", {
-            className: E()(j.UD, N.KG),
+            className: E()(j.UD, v.KG),
             ref: t,
             children: (0, l.jsx)(y.D, {
                 tabIndex: 0,
@@ -69,8 +69,8 @@ let k = i.forwardRef(function (e, t) {
         return (0, l.jsx)(k, { type: t, channelId: n });
     });
 var R = n(931664),
-    w = n(951260),
-    O = n(522602),
+    O = n(951260),
+    w = n(522602),
     L = n(927578),
     P = n(462180),
     M = n(375499),
@@ -265,27 +265,27 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 showAllButtons: A,
                 expressionButtonsHidden: b,
             } = e,
-            I = (0, w.n)("ChannelTextAreaButtons"),
-            v = (0, s.cf)([o.Ay], () => ({
+            I = (0, O.n)("ChannelTextAreaButtons"),
+            N = (0, s.cf)([o.Ay], () => ({
                 isSubmitButtonEnabled: o.Ay.isSubmitButtonEnabled,
                 isAppsButtonEnabled: o.Ay.isAppsButtonEnabled,
                 isEmojiButtonEnabled: o.Ay.isEmojiButtonEnabled,
                 isGifButtonEnabled: o.Ay.isGifButtonEnabled,
                 isStickerButtonEnabled: o.Ay.isStickerButtonEnabled,
             })),
-            N = v.isSubmitButtonEnabled,
-            T = !I || v.isAppsButtonEnabled,
-            j = !I || v.isEmojiButtonEnabled,
-            k = !I || v.isGifButtonEnabled,
-            P = !I || v.isStickerButtonEnabled,
+            v = N.isSubmitButtonEnabled,
+            T = !I || N.isAppsButtonEnabled,
+            j = !I || N.isEmojiButtonEnabled,
+            k = !I || N.isGifButtonEnabled,
+            P = !I || N.isStickerButtonEnabled,
             M =
                 ((t = S.id),
                 (n = x),
                 (i = C),
-                (0, s.bG)([R.A, O.A], () => {
+                (0, s.bG)([R.A, w.A], () => {
                     let e = R.A.getStickerPreview(t, n.drafts.type),
                         l = null != e && e.length > 0;
-                    return 0 === O.A.getUploads(t, n.drafts.type).length && i && !l;
+                    return 0 === w.A.getUploads(t, n.drafts.type).length && i && !l;
                 })),
             { activeCommand: D, activeCommandOption: U } = (0, s.cf)([u.A], () => ({
                 activeCommand: u.A.getActiveCommand(S.id),
@@ -322,7 +322,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                     }));
                 return l && i && null == r;
             })({ channel: S, chatInputType: x }),
-            q = x.submit?.button != null && (x.submit?.ignorePreference || N),
+            q = x.submit?.button != null && (x.submit?.ignorePreference || v),
             Z = null == D || (null != U && U.type !== a.n4.ATTACHMENT);
         return (!r.Fr &&
             (x.gifts?.button != null &&

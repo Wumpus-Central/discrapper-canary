@@ -21,15 +21,15 @@ var l = n(477900),
     A = n(265431),
     b = n(459016),
     I = n(861382),
-    v = n(355622),
-    N = n(820066),
+    N = n(355622),
+    v = n(820066),
     T = n(696451),
     j = n(576705),
     k = n(351906),
     _ = n(287809),
     R = n(31498),
-    w = n(887129),
-    O = n(741918),
+    O = n(887129),
+    w = n(741918),
     L = n(267102),
     P = n(652215),
     M = n(307731);
@@ -53,7 +53,7 @@ let W = i.forwardRef(function (e, t) {
                     [j.A, k.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || r === v.oU.RULES_INPUT || j.A.can(P.xBc.MENTION_EVERYONE, l),
+                            l.isPrivate() || c || r === N.oU.RULES_INPUT || j.A.can(P.xBc.MENTION_EVERYONE, l),
                         hidePersonalInformation: k.A.hidePersonalInformation,
                     }),
                     [l, r, c],
@@ -89,10 +89,10 @@ let W = i.forwardRef(function (e, t) {
                             (u.setFocus(e.toString()), r?.(e));
                         }
                     }
-                    let u = (0, w.Ay)({
+                    let u = (0, O.Ay)({
                             id: t,
                             isEnabled: l.isVisible,
-                            orientation: O.Gl.VERTICAL,
+                            orientation: w.Gl.VERTICAL,
                             useVirtualFocus: !0,
                             setFocus: function (e, t) {
                                 let l = s.document.querySelector(e);
@@ -117,7 +117,7 @@ let W = i.forwardRef(function (e, t) {
                 x = e.editorRef.current?.getCurrentWord(),
                 E = e.editorRef.current?.getSlateEditor(),
                 S = null;
-            null != E && (S = N.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
+            null != E && (S = v.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
             let C = {
                     ...e,
                     navigator: g,
@@ -127,9 +127,9 @@ let W = i.forwardRef(function (e, t) {
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
                     hidePersonalInformation: h,
-                    hideMentionDescription: r === v.oU.RULES_INPUT,
+                    hideMentionDescription: r === N.oU.RULES_INPUT,
                     emojiIntention:
-                        r === v.oU.RULES_INPUT
+                        r === N.oU.RULES_INPUT
                             ? M.EmojiIntention.COMMUNITY_CONTENT
                             : p
                               ? M.EmojiIntention.NO_CUSTOM_EMOJI

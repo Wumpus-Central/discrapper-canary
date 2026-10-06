@@ -14,35 +14,35 @@ var r = n(503698),
     g = n(427262),
     h = n(722260),
     f = n(563312),
-    N = n(826383),
-    A = n(794782),
-    E = n(974930),
-    v = n(937050),
+    E = n(826383),
+    N = n(794782),
+    v = n(974930),
+    A = n(937050),
     j = n(850183),
     T = n(103355),
     I = n(375708),
     C = n(386522);
 function L(t) {
-    let { className: e, creator: n, guildId: r, isNew: m, guildEvent: v, eventPreview: j, recurrenceId: L } = t,
-        D = (0, N.A)(r, v.id, L),
-        _ = v ?? j,
+    let { className: e, creator: n, guildId: r, isNew: m, guildEvent: A, eventPreview: j, recurrenceId: L } = t,
+        D = (0, E.A)(r, A.id, L),
+        _ = A ?? j,
         p = (0, a.bG)([x.Ay], () => x.Ay.getNick(r, n?.id), [r, n]);
-    L = null == _ || null != L ? L : (0, E.G3)(_);
-    let { startTime: w } = (0, f.Ay)(v ?? j, L),
-        S = (0, h.A)(L, v.id),
-        b = _?.scheduled_start_time != null ? (0, E.j)(S, w, new Date(_.scheduled_start_time)) : null;
+    L = null == _ || null != L ? L : (0, v.G3)(_);
+    let { startTime: w } = (0, f.Ay)(A ?? j, L),
+        S = (0, h.A)(L, A.id),
+        y = _?.scheduled_start_time != null ? (0, v.j)(S, w, new Date(_.scheduled_start_time)) : null;
     if (null == _) return null;
-    let { entity_type: y, status: P, recurrence_rule: k } = _;
+    let { entity_type: P, status: b, recurrence_rule: k } = _;
     return (0, l.jsxs)("div", {
         className: i()(C.II, e),
         children: [
             (0, l.jsx)(T.L, {
                 startTime: w.toISOString(),
-                status: b ?? P,
-                eventType: y,
+                status: y ?? b,
+                eventType: P,
                 isNew: m,
-                recurrenceRule: (0, A.Sn)(k),
-                guildEventId: v.id,
+                recurrenceRule: (0, N.Sn)(k),
+                guildEventId: A.id,
                 recurrenceId: L,
             }),
             (0, l.jsx)("div", { className: C.jH }),
@@ -89,7 +89,7 @@ function D(t) {
                 className: i()({ [C.FD]: null != u }),
                 children: [
                     (0, l.jsx)(m.D, { variant: e, selectable: !0, className: C.eq, children: r }),
-                    null != a && (0, l.jsx)(v.A, { description: a, className: i()(n, C.h_), truncate: s, guildId: c }),
+                    null != a && (0, l.jsx)(A.A, { description: a, className: i()(n, C.h_), truncate: s, guildId: c }),
                 ],
             }),
             null != u &&

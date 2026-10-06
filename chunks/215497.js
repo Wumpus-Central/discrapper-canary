@@ -35,7 +35,7 @@ let E = r.forwardRef(function (e, t) {
             size: b = 1,
         } = e,
         I = r.useRef(null),
-        { onFocus: v, ...N } = (0, o.rm)(n),
+        { onFocus: N, ...v } = (0, o.rm)(n),
         { handleFocus: T, handleBlur: j } = (function (e) {
             let [t, n] = (0, r.useState)(!1);
             return {
@@ -54,12 +54,12 @@ let E = r.forwardRef(function (e, t) {
                 ),
                 isFocused: t,
             };
-        })(v),
+        })(N),
         k = 0 === b,
         _ = null != E;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
-            ...N,
+            ...v,
             onFocus: T,
             onBlur: j,
             onClick: function (e) {

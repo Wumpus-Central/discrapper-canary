@@ -88,7 +88,7 @@ class M {
         );
     }
     computeScore(e) {
-        let t = R(e, this.lastActivityAtMs);
+        let t = D(e, this.lastActivityAtMs);
         return ((this.scoreInfo.penalty = t), this.getScoreWithoutPenalty(e) * (1 - t));
     }
     pruneSignals(e) {
@@ -171,7 +171,7 @@ class v {
             n = this._computeVoiceUsersScore(e),
             i = this._computeVoiceActivityScore(e),
             l = this._computeStreamUsersScore(e),
-            r = R(e, this.lastActivityAtMs);
+            r = D(e, this.lastActivityAtMs);
         return (
             (this.scoreInfo.penalty = r),
             (this.scoreInfo.voiceUsersScore = n),
@@ -219,11 +219,11 @@ function x(e) {
           ? { channelId: e.id, kind: e.isVocal?.() ? "GUILD_VOICE" : "GUILD_TEXT", guildId: t, recipientIds: [] }
           : null;
 }
-function R(e, t) {
+function D(e, t) {
     let n = e - t;
     return n <= 6e5 ? 0 : n >= 18e5 ? 1 : (n - 6e5) / 12e5;
 }
-function D(e, t) {
+function R(e, t) {
     let n = e.guildId;
     if (null == n) return 0;
     let i = 0;
@@ -396,18 +396,18 @@ function J(e) {
         }
     );
 }
-function $(e, t) {
-    let n = D(e.candidate, { voiceGuildId: Y(), mostRecentGuildId: G });
+function K(e, t) {
+    let n = R(e.candidate, { voiceGuildId: Y(), mostRecentGuildId: G });
     return (
         e.score *
         (1 + n) *
         (e.candidate.kind === N.DirectMessage || e.candidate.kind === N.GroupDM ? 1 : 1 + O(e.candidate, t))
     );
 }
-function K() {
+function $() {
     let e = J({ includeVcProbability: !1 }),
         t = J({ includeVcProbability: !0 });
-    (k.rebuildSortedIndexIfDirty((t) => $(t, e)), Z.rebuildSortedIndexIfDirty((e) => $(e, t)));
+    (k.rebuildSortedIndexIfDirty((t) => K(t, e)), Z.rebuildSortedIndexIfDirty((e) => K(e, t)));
 }
 function q() {
     return {
@@ -527,7 +527,7 @@ function ei() {
             }
         }
     }
-    K();
+    $();
 }
 function el(e) {
     let t = u.A.getChannel(e);
@@ -562,14 +562,14 @@ class er extends r.Ay.Store {
         let t = k.getChannel(e) ?? Z.getChannel(e);
         if (null == t) return null;
         let n = J({ includeVcProbability: t.candidate.kind === N.GuildVoice });
-        return $(t, n);
+        return K(t, n);
     }
     getScoreBreakdownForChannelId(e) {
         let t = k.getChannel(e) ?? Z.getChannel(e) ?? null;
         if (null == t) return null;
         let n = t.candidate.kind === N.GuildVoice ? "VOICE" : "TEXT",
             i = J({ includeVcProbability: t.candidate.kind === N.GuildVoice }),
-            l = D(t.candidate, { voiceGuildId: Y(), mostRecentGuildId: G }),
+            l = R(t.candidate, { voiceGuildId: Y(), mostRecentGuildId: G }),
             r = t.candidate.kind === N.DirectMessage || t.candidate.kind === N.GroupDM,
             s = r ? 0 : O(t.candidate, i),
             a = t.score;
@@ -608,14 +608,14 @@ let ea = new er(
               OVERLAY_UPDATE_OVERLAY_METHOD: es(function (e) {
                   let { overlayMethod: t } = e;
                   return t === I.Ue.OutOfProcess || t === I.Ue.OutOfProcessLimitedInteraction
-                      ? (W(!0), K(), !0)
+                      ? (W(!0), $(), !0)
                       : !B() && W(!1);
               }),
               OVERLAY_CRASHED: es(function (e) {
                   return !B() && W(!1);
               }),
               OVERLAY_SET_INPUT_LOCKED: es(function (e) {
-                  return !e.locked && (W(!0), K(), !0);
+                  return !e.locked && (W(!0), $(), !0);
               }),
               FRIENDS_LIST_POPOUT_MOUNTED: es(function () {
                   return ((H = !0), W(!0), ei(), !0);
@@ -666,7 +666,7 @@ let ea = new er(
                           h && (A.lastRoleMentionAtMs = l)),
                       a.updateSignalsAndRescore(A, l),
                       a.prunable && k.delete(e.channelId),
-                      K(),
+                      $(),
                       !0
                   );
               }),
@@ -686,7 +686,7 @@ let ea = new er(
                                 (i.lastRoleMentionAtMs = null))),
                       t.updateSignalsAndRescore(i, n),
                       t.prunable && k.delete(e.channelId),
-                      K(),
+                      $(),
                       !0
                   );
               }),
@@ -719,7 +719,7 @@ let ea = new er(
                           i,
                       ),
                       s.prunable && k.delete(e.channelId),
-                      K(),
+                      $(),
                       !0
                   );
               }),
@@ -813,21 +813,21 @@ let ea = new er(
                               }
                           }
                       }),
-                      i && K(),
+                      i && $(),
                       i
                   );
               }),
               VOICE_CHANNEL_SELECT: es(function (e) {
-                  return (K(), !0);
+                  return ($(), !0);
               }),
               RTC_CONNECTION_STATE: es(function (e) {
-                  return (K(), !0);
+                  return ($(), !0);
               }),
               CHANNEL_SELECT: es(function (e) {
                   let { channelId: t } = e;
                   if (null == t) return !1;
                   let n = u.A.getChannel(t);
-                  return !(null == n || n.isPrivate()) && ((G = n.getGuildId?.() ?? null), K(), !0);
+                  return !(null == n || n.isPrivate()) && ((G = n.getGuildId?.() ?? null), $(), !0);
               }),
               USER_GUILD_SETTINGS_CHANNEL_UPDATE: es(function (e) {
                   return el(e.channelId);

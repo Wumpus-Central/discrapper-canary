@@ -21,8 +21,8 @@ var l = n(485845),
     A = n(323350),
     b = n(35277),
     I = n(820066),
-    v = n(551483),
-    N = n(652215);
+    N = n(551483),
+    v = n(652215);
 n(827669);
 let T = new Set(["applicationCommandOption"]),
     j = new Set([r.n4.ATTACHMENT]),
@@ -34,7 +34,7 @@ function _(e, t) {
         isVoid: g,
         onChange: E,
         deleteBackward: S,
-        deleteForward: N,
+        deleteForward: v,
         deleteFragment: _,
     } = e;
     ((e.insertData = (l) => {
@@ -73,7 +73,7 @@ function _(e, t) {
             P(e, () => S(t));
         }),
         (e.deleteForward = (t) => {
-            P(e, () => N(t));
+            P(e, () => v(t));
         }),
         (e.deleteFragment = (t) => {
             P(e, () => _(t));
@@ -201,9 +201,9 @@ function _(e, t) {
                                                 },
                                             };
                                             I.VW.withoutNormalizing(e, () => {
-                                                for (let [, t] of (b.b.insertNodes(e, [p], { at: v.Xg }),
+                                                for (let [, t] of (b.b.insertNodes(e, [p], { at: N.Xg }),
                                                 I.VW.blocks(e).reverse()))
-                                                    I.PW.isAfter(t, v.Xg) && b.b.removeNodes(e, { at: t, voids: !0 });
+                                                    I.PW.isAfter(t, N.Xg) && b.b.removeNodes(e, { at: t, voids: !0 });
                                             });
                                             let g = null;
                                             return (
@@ -213,13 +213,13 @@ function _(e, t) {
                                                       ? (b.b.selectCommandOption(e, f.optionName, !1),
                                                         (g = f.optionName))
                                                       : b.b.resetSelectionToEditorEnd(e),
-                                                null == f && w(e, r),
+                                                null == f && O(e, r),
                                                 g
                                             );
                                         })(t, a, n),
                                         l = y.SQ(t, E, a.id);
                                     return (
-                                        O({
+                                        w({
                                             guildId: a.guild_id,
                                             channelId: a.id,
                                             command: E,
@@ -295,13 +295,13 @@ function _(e, t) {
                                             let l = t.text.trim();
                                             t.text !== l &&
                                                 b.b.textToText(e, l, {
-                                                    anchor: { path: v.fP, offset: 0 },
-                                                    focus: { path: v.fP, offset: t.text.length },
+                                                    anchor: { path: N.fP, offset: 0 },
+                                                    focus: { path: N.fP, offset: t.text.length },
                                                 });
                                         }),
                                         !0)
                                     );
-                                })(t, E) && w(t, E);
+                                })(t, E) && O(t, E);
                                 let e = y.SQ(t, E, a.id),
                                     n = I.VW.above(t, {
                                         match: (e) => I.VW.isInline(t, e) && "applicationCommandOption" === e.type,
@@ -309,7 +309,7 @@ function _(e, t) {
                                     }),
                                     l = n?.[0].optionName ?? null;
                                 return (
-                                    O({
+                                    w({
                                         guildId: a.guild_id,
                                         channelId: a.id,
                                         command: E,
@@ -349,11 +349,11 @@ function R(e, t, n, l) {
             .split("\n")
             .map((e) => ({ type: "line", children: [{ text: e }] })),
         a = [r.length - 1];
-    for (let [, t] of (b.b.insertNodes(e, r, { at: v.Xg }), I.VW.blocks(e).reverse()))
+    for (let [, t] of (b.b.insertNodes(e, r, { at: N.Xg }), I.VW.blocks(e).reverse()))
         I.PW.isAfter(t, a) && b.b.removeNodes(e, { at: t, voids: !0 });
     null != n && s.Gf({ channelId: t, command: null, section: null });
 }
-function w(e, t) {
+function O(e, t) {
     if (
         null == t.options ||
         1 !== t.options.length ||
@@ -366,8 +366,8 @@ function w(e, t) {
     let n = I.VW.getFirstText(e);
     if (null == n) return !1;
     let l = t.options[0],
-        i = { path: v.fP, offset: t.displayName.length + 2 },
-        r = { path: v.fP, offset: n.text.length };
+        i = { path: N.fP, offset: t.displayName.length + 2 },
+        r = { path: N.fP, offset: n.text.length };
     return (
         !(!n.text.startsWith(`/${t.displayName} `.toLocaleLowerCase()) || I.Kh.equals(i, r)) &&
         (b.b.textToInline(
@@ -384,7 +384,7 @@ function w(e, t) {
         !0)
     );
 }
-function O(e) {
+function w(e) {
     let {
         guildId: t,
         channelId: n,
@@ -441,7 +441,7 @@ function P(e, t) {
     if (null == l || n === y.O7(e)[0]) return;
     let { command: i, commandText: r } = L(e);
     !(null == i || null == r || r.endsWith(" ")) &&
-        I.Kh.equals(l, { path: v.fP, offset: i.displayName.length + 1 }) &&
+        I.Kh.equals(l, { path: N.fP, offset: i.displayName.length + 1 }) &&
         b.b.insertText(e, " ");
 }
 function M(e, t, n) {
@@ -454,7 +454,7 @@ function M(e, t, n) {
         ? `<#${s}>	`
         : l.type === r.n4.USER || (l.type === r.n4.MENTIONABLE && null != S.default.getUser(s))
           ? `<@${s}>`
-          : l.type === r.n4.ROLE || (l.type === r.n4.MENTIONABLE && null != E.A.getRole(t.guild_id, s ?? N.dJq))
+          : l.type === r.n4.ROLE || (l.type === r.n4.MENTIONABLE && null != E.A.getRole(t.guild_id, s ?? v.dJq))
             ? `<@&${s}>`
             : s;
 }

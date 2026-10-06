@@ -26,10 +26,10 @@ let _ = !1,
     y = !1,
     L = new Set(),
     x = null;
-function R() {
+function D() {
     ((N = ""), (T = 0), (M = []), (L = new Set()), (_ = !1), (x = null), (y = !1));
 }
-function D(e) {
+function R(e) {
     return y !== e && ((y = e), !0);
 }
 function O(e) {
@@ -77,7 +77,7 @@ function w() {
                     return (t.push(r), t);
                 }, [])
                 .sort(P)),
-            D(!1),
+            R(!1),
             !0
         );
     }
@@ -169,7 +169,7 @@ function G(e) {
     H();
 }
 function H() {
-    (null != i && (i.destroy(), (i = null)), R());
+    (null != i && (i.destroy(), (i = null)), D());
 }
 function k() {
     return !!_ && w();
@@ -200,20 +200,20 @@ class Z extends l.Ay.Store {
 }
 let B = new Z(r.h, {
         CONNECTION_OPEN: function () {
-            R();
+            D();
         },
         GUILD_MEMBERS_CHUNK_BATCH: function (e) {
-            return !!_ && D(!1);
+            return !!_ && R(!1);
         },
         GUILD_MEMBERS_REQUEST: function (e) {
             let { query: t } = e;
-            return !!_ && t === N.toLocaleLowerCase() && D(!0);
+            return !!_ && t === N.toLocaleLowerCase() && R(!0);
         },
         CHANNEL_SELECT: function (e) {
             let { guildId: t, channelId: n } = e;
             if (null != t) return !1;
             let i = _;
-            return (R(), (_ = i), (x = n), w());
+            return (D(), (_ = i), (x = n), w());
         },
         MODAL_PUSH: F,
         SHOW_ACTION_SHEET: F,

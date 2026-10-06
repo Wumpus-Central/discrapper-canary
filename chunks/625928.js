@@ -1,4 +1,4 @@
-n.d(t, { A: () => O });
+n.d(t, { A: () => w });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(82498),
     b = n(734057),
     I = n(309010),
-    v = n(174459),
-    N = n(652215),
+    N = n(174459),
+    v = n(652215),
     T = n(375708),
     j = n(845210);
 function k() {
@@ -35,17 +35,17 @@ function _(e) {
     let { className: t, iconOnly: n } = e,
         r = (0, o.bG)([I.Ay, b.A], () => {
             let e = b.A.getChannel(I.Ay.getChannelId());
-            return e?.isPrivate() ? N.liQ.DM_CHANNEL : N.liQ.GUILD_CHANNEL;
+            return e?.isPrivate() ? v.liQ.DM_CHANNEL : v.liQ.GUILD_CHANNEL;
         }),
         { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
     return (
         i.useEffect(() => {
-            (v.default.track(N.HAw.PREMIUM_UPSELL_VIEWED, {
+            (N.default.track(v.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
-                location: { location_page: r, location_section: N.JJy.CHANNEL_TEXT_AREA },
+                location: { location_page: r, location_section: v.JJy.CHANNEL_TEXT_AREA },
                 location_stack: a,
             }),
-                (0, C.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, A.uq)("longer messages inline")));
+                (0, C.sq)(v.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, A.uq)("longer messages inline")));
         }, [r, a]),
         n
             ? (0, l.jsx)(S.D, {
@@ -71,20 +71,20 @@ function _(e) {
     );
 }
 var R = n(263582),
-    w = n(412028);
-function O(e) {
+    O = n(412028);
+function w(e) {
     let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: E } = e,
         S = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
         y = (0, p.A)(),
         C = i ?? y,
         A = r ?? i ?? y / 10,
         b = n.length,
-        I = null != t.upsellLongMessages && (b ?? 0) > N.uvi && S,
-        v = null != t.upsellLongMessages && !S,
+        I = null != t.upsellLongMessages && (b ?? 0) > v.uvi && S,
+        N = null != t.upsellLongMessages && !S,
         j = C - b,
         k = j > A;
     (0, a.$)({ currentLength: b, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
-    let O =
+    let w =
             0 === j
                 ? T.intl.string(T.t.tU6YQ7)
                 : j > 0
@@ -97,22 +97,22 @@ function O(e) {
     return (0, l.jsx)(f.f5, {
         value: L,
         children: (0, l.jsxs)("div", {
-            className: s()(E, w.Dq),
+            className: s()(E, O.Dq),
             children: [
                 (0, l.jsxs)("div", {
-                    className: w.SW,
+                    className: O.SW,
                     children: [
                         I && M
                             ? (0, l.jsx)(u.m, {
                                   text: T.intl.formatToPlainString(T.t.vcvHa0, { maxLength: C }),
                                   position: "top",
-                                  children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: w.y }),
+                                  children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: O.y }),
                               })
                             : null,
                         k
                             ? null
                             : (0, l.jsx)(u.m, {
-                                  text: O,
+                                  text: w,
                                   position: "top",
                                   children: (0, l.jsx)(d.E, {
                                       variant: "text-sm/semibold",
@@ -125,8 +125,8 @@ function O(e) {
                     ],
                 }),
                 (0, l.jsx)(h.A, { "aria-live": "polite", children: T.intl.format(T.t.qH8uFW, { count: j }) }),
-                v && !k
-                    ? (0, l.jsx)(_, { className: w.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: j })
+                N && !k
+                    ? (0, l.jsx)(_, { className: O.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: j })
                     : null,
             ],
         }),

@@ -1,27 +1,27 @@
 (l.d(t, {
-    FA: () => h,
-    K1: () => m,
+    FA: () => g,
+    K1: () => f,
     KA: () => x,
     Nc: () => v,
-    T4: () => f,
-    YD: () => r,
+    T4: () => m,
+    YD: () => i,
     fd: () => p,
     lG: () => s,
     nY: () => u,
-    u4: () => g,
+    u4: () => h,
     v9: () => c,
-    y0: () => b,
+    y0: () => j,
 }),
     l(321073));
 var n = l(381849),
     a = l(248675),
-    i = l(375708);
-function r(e) {
+    r = l(375708);
+function i(e) {
     let t = Date.parse(e);
     return Number.isNaN(t) ? null : t;
 }
 function s(e) {
-    let t = r(e);
+    let t = i(e);
     return null == t
         ? { relative: null, absolute: null }
         : {
@@ -41,12 +41,12 @@ function d(e) {
 }
 function c(e, t, l) {
     let n = [];
-    for (let r of e) {
-        let e = t(r),
+    for (let i of e) {
+        let e = t(i),
             s = null == e ? "unknown" : String(d(e)),
             u = n[n.length - 1];
         null != u && u.key === s
-            ? u.items.push(r)
+            ? u.items.push(i)
             : n.push({
                   key: s,
                   label:
@@ -55,10 +55,10 @@ function c(e, t, l) {
                           : (function (e, t) {
                                 let l = d(e),
                                     n = d(t);
-                                if (l === n) return i.intl.string(a.default.CADyoV);
-                                let r = new Date(n);
-                                if ((r.setDate(r.getDate() - 1), l === r.getTime()))
-                                    return i.intl.string(a.default.mghe4b);
+                                if (l === n) return r.intl.string(a.default.CADyoV);
+                                let i = new Date(n);
+                                if ((i.setDate(i.getDate() - 1), l === i.getTime()))
+                                    return r.intl.string(a.default.mghe4b);
                                 let s = new Date(e).getFullYear() === new Date(t).getFullYear();
                                 return new Date(e).toLocaleDateString(void 0, {
                                     weekday: "long",
@@ -67,12 +67,12 @@ function c(e, t, l) {
                                     year: s ? void 0 : "numeric",
                                 });
                             })(e, l),
-                  items: [r],
+                  items: [i],
               });
     }
     return n;
 }
-function f(e) {
+function m(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
         l = (function (e) {
             let t = e
@@ -80,56 +80,56 @@ function f(e) {
                 .replace(/\s+/g, " ")
                 .trim();
             if ("" === t || "Deploy" === t) {
-                let e = i.intl.string(a.default.sFC5fT);
+                let e = r.intl.string(a.default.sFC5fT);
                 return { short: e, full: e };
             }
             if (/^Restore version [0-9a-f]{7,40}$/.test(t) || "Already at this version" === t) {
-                let e = i.intl.string(a.default.Vk8vB1);
+                let e = r.intl.string(a.default.Vk8vB1);
                 return { short: e, full: e };
             }
             return { short: t.length > 90 ? `${t.slice(0, 89).trimEnd()}\u{2026}` : t, full: t };
         })(e);
     return t
         ? {
-              short: i.intl.formatToPlainString(a.default.Z4n6LX, { title: l.short }),
-              full: i.intl.formatToPlainString(a.default.Z4n6LX, { title: l.full }),
+              short: r.intl.formatToPlainString(a.default.Z4n6LX, { title: l.short }),
+              full: r.intl.formatToPlainString(a.default.Z4n6LX, { title: l.full }),
           }
         : l;
 }
-function m(e) {
-    return i.intl.string("preview" === e ? a.default.Ebk40C : a.default.S65Rv3);
+function f(e) {
+    return r.intl.string("preview" === e ? a.default.Ebk40C : a.default.S65Rv3);
 }
-function g(e, t) {
-    return t ? i.intl.string(a.default.h3WBgO) : i.intl.string("preview" === e ? a.default.cjJdqL : a.default.yLsAhA);
+function h(e, t) {
+    return t ? r.intl.string(a.default.h3WBgO) : r.intl.string("preview" === e ? a.default.cjJdqL : a.default.yLsAhA);
 }
-function h(e) {
+function g(e) {
     return e.previewSha ?? e.entries[0]?.sha ?? null;
 }
 function x(e, t) {
     return { shown: t ? e : e.slice(0, 3), collapsible: e.length > 3 };
 }
 function p(e, t) {
-    let l = r(e.createdAt),
+    let l = i(e.createdAt),
         n = null != e.sourceSha ? t.get(e.sourceSha) : void 0;
     return {
         title: (function (e) {
             switch (e.origin) {
                 case "auto_deploy":
-                    if ("stable" === e.deployEnvironment) return i.intl.string(a.default["4TpI2y"]);
-                    if ("preview" === e.deployEnvironment) return i.intl.string(a.default.NdyxPu);
-                    return i.intl.string(a.default["4JCH6A"]);
+                    if ("stable" === e.deployEnvironment) return r.intl.string(a.default["4TpI2y"]);
+                    if ("preview" === e.deployEnvironment) return r.intl.string(a.default.NdyxPu);
+                    return r.intl.string(a.default["4JCH6A"]);
                 case "undo":
-                    return i.intl.string(a.default.VjJT5R);
+                    return r.intl.string(a.default.VjJT5R);
                 default: {
                     let t = e.label.trim();
                     return "" === t || "Manual restore point" === t
-                        ? i.intl.string(a.default.ObcM6b)
-                        : i.intl.formatToPlainString(a.default["UKyQ+E"], { label: t });
+                        ? r.intl.string(a.default.ObcM6b)
+                        : r.intl.formatToPlainString(a.default["UKyQ+E"], { label: t });
                 }
             }
         })(e),
         restoreToMs: e.expired ? null : l,
-        detail: [null != l ? o(l) : null, null != n ? i.intl.formatToPlainString(a.default.V7YNvf, { title: n }) : null]
+        detail: [null != l ? o(l) : null, null != n ? r.intl.formatToPlainString(a.default.V7YNvf, { title: n }) : null]
             .filter((e) => null != e)
             .join(" \xb7 "),
     };
@@ -138,19 +138,19 @@ function v(e, t) {
     let l = o(t);
     return "stable" === e
         ? {
-              title: i.intl.string(a.default.G9wD92),
-              body: i.intl.formatToPlainString(a.default.vyxJO8, { time: l }),
-              confirmText: i.intl.string(a.default.kap49k),
+              title: r.intl.string(a.default.G9wD92),
+              body: r.intl.formatToPlainString(a.default.vyxJO8, { time: l }),
+              confirmText: r.intl.string(a.default.kap49k),
               critical: !0,
           }
         : {
-              title: i.intl.string(a.default.rR8rgj),
-              body: i.intl.formatToPlainString(a.default.KfgzUO, { environment: m(e), time: l }),
-              confirmText: i.intl.string(a.default.XfeFw5),
+              title: r.intl.string(a.default.rR8rgj),
+              body: r.intl.formatToPlainString(a.default.KfgzUO, { environment: f(e), time: l }),
+              confirmText: r.intl.string(a.default.XfeFw5),
               critical: !1,
           };
 }
-function b(e, t) {
+function j(e, t) {
     let l = null;
     for (let n of t)
         "auto_deploy" === n.origin &&

@@ -89,10 +89,10 @@ for (let e in m.Ay.RULES) {
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
     let t = S[e];
-    ("skip" !== t.type && (b[e] = v(m.Ay.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (I[e] = v("text" === e ? f.Ay : m.Ay.RULES[e])));
+    ("skip" !== t.type && (b[e] = N(m.Ay.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (I[e] = N("text" === e ? f.Ay : m.Ay.RULES[e])));
 }
-function v(e) {
+function N(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
     let t = e.parse;
     return {
@@ -103,7 +103,7 @@ function v(e) {
         },
     };
 }
-function N(e) {
+function v(e) {
     return { type: "autolink", content: e[1], originalMatch: e };
 }
 let T = {
@@ -114,10 +114,10 @@ let T = {
                     : { type: "link", content: e[1], originalMatch: e },
         },
         autolink: {
-            parse: (e) => (null == (0, h.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : N(e)),
+            parse: (e) => (null == (0, h.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : v(e)),
         },
-        mailto: { parse: N },
-        tel: { parse: N },
+        mailto: { parse: v },
+        tel: { parse: v },
         codeBlockSyntax: {
             order: u.defaultRules.inlineCode.order - 0.1,
             match: (e) => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
@@ -134,10 +134,10 @@ let T = {
     k = (0, p.A)([b, T]),
     _ = (0, p.A)([I, T]),
     R = c.X(k),
-    w = c.X(_),
-    O = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    L = new (o())(O),
-    P = new (o())(O);
+    O = c.X(_),
+    w = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    L = new (o())(w),
+    P = new (o())(w);
 function M(e, t, n, l, r) {
     let { content: s, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof s;
@@ -608,7 +608,7 @@ let q = {
                                         a = {
                                             originalMatch: { index: 0, 0: "" },
                                             type: "paragraph",
-                                            content: (n ? w : R)(s, !0, {
+                                            content: (n ? O : R)(s, !0, {
                                                 returnMentionIds: !0,
                                                 disableAutoBlockNewlines: !0,
                                                 guildId: t,

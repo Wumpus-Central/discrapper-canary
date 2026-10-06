@@ -21,14 +21,14 @@ var l = n(477900),
     A = n(71393),
     b = n(225142),
     I = n(374084),
-    v = n(101611),
-    N = n(473529),
+    N = n(101611),
+    v = n(473529),
     T = n(111487),
     j = n(652215),
     k = n(375708),
     _ = n(160639);
 let R = { compact: 58, cozy: 74, default: 64 };
-function w(e) {
+function O(e) {
     let { action: t } = e,
         n = (0, o.bG)([y.A], () => y.A.getChannel(t.channelId)),
         i = (0, x.Ay)(n, !0);
@@ -44,7 +44,7 @@ function w(e) {
               children: k.intl.format(k.t.MkzlDL, { channelName: i }),
           });
 }
-function O(e) {
+function w(e) {
     let { channelId: t, emojiId: n, emojiName: i } = e,
         r = (0, o.bG)([y.A], () => y.A.getChannel(t));
     if (null == r) return null;
@@ -58,12 +58,12 @@ function O(e) {
 }
 function L(e) {
     let { guildId: t, channel: n, className: r } = e,
-        { channelAction: c, completed: x } = (0, v.j4)(t, n),
-        E = (0, v.Lr)(t, c?.channelId),
+        { channelAction: c, completed: x } = (0, N.j4)(t, n),
+        E = (0, N.Lr)(t, c?.channelId),
         y = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
         C = c?.actionType === I.NewMemberActionTypes.VIEW,
         A = (0, d.r)(h.A.colors.WHITE),
-        N = R[(0, S.C)()],
+        v = R[(0, S.C)()],
         [T, j] = i.useState(!1),
         [L] = i.useState(new a.A.Value(0)),
         [P] = i.useState(new a.A.Value(0));
@@ -87,12 +87,12 @@ function L(e) {
               children:
                   T && null != E
                       ? (0, l.jsx)(a.A.div, {
-                            style: { marginBottom: P.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
+                            style: { marginBottom: P.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
                             children: (0, l.jsxs)(m.D, {
                                 className: s()(_.vK, _.vk, { [_.pJ]: n.isForumChannel() }),
                                 onClick: M,
                                 children: [
-                                    (0, l.jsx)(O, {
+                                    (0, l.jsx)(w, {
                                         channelId: E.channelId,
                                         emojiId: E.emoji?.id,
                                         emojiName: E?.emoji?.name,
@@ -105,7 +105,7 @@ function L(e) {
                                                 color: "text-strong",
                                                 children: k.intl.format(k.t["/beONw"], { step: E.title }),
                                             }),
-                                            (0, l.jsx)(w, { action: E }),
+                                            (0, l.jsx)(O, { action: E }),
                                         ],
                                     }),
                                     (0, l.jsx)("div", {
@@ -117,9 +117,9 @@ function L(e) {
                         })
                       : (0, l.jsxs)(a.A.div, {
                             className: s()(_.vK, { [_.pJ]: n.isForumChannel() }),
-                            style: { marginBottom: L.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
+                            style: { marginBottom: L.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
                             children: [
-                                (0, l.jsx)(O, {
+                                (0, l.jsx)(w, {
                                     channelId: c.channelId,
                                     emojiId: c.emoji?.id,
                                     emojiName: c?.emoji?.name,
@@ -155,9 +155,9 @@ function L(e) {
 }
 function P(e) {
     let { guildId: t, channel: n, className: i } = e,
-        r = (0, N.d)(t),
+        r = (0, v.d)(t),
         s = (0, o.bG)([C.Ay], () => C.Ay.getSelfMember(t)?.isPending === !0),
-        a = (0, v.jY)(t),
+        a = (0, N.jY)(t),
         u = (0, o.bG)([A.A], () => A.A.getGuild(t)?.features.has(j.GuildFeatures.GUILD_SERVER_GUIDE));
     return a || s || !r || !u ? null : (0, l.jsx)(L, { guildId: t, channel: n, className: i });
 }

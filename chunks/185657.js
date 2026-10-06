@@ -57,11 +57,11 @@ function x() {
         }
     L = e;
 }
-function R() {
+function D() {
     let e = g.A.getPrimaryActivity();
     i = e?.application_id;
 }
-function D(e) {
+function R(e) {
     return (
         e.type === N.$pd.PLAYING ||
         e.type === N.$pd.COMPETING ||
@@ -120,7 +120,7 @@ function O(e) {
                             (r = c.A.getStatus(C)),
                             (s = A.A.getVoiceStateForUser(C)),
                             (a = s?.channelId != null),
-                            (u = (o = _.filter(D)).filter(S.A)),
+                            (u = (o = _.filter(R)).filter(S.A)),
                             (h = o.filter((e) => e.application_id === n)),
                             l && h.length > 0
                                 ? { category: "SAME_ACTIVITY", displayActivities: h }
@@ -131,14 +131,14 @@ function O(e) {
                                     : r === N.clD.ONLINE || r === N.clD.IDLE || r === N.clD.DND
                                       ? { category: "ONLINE", displayActivities: o }
                                       : { category: "OFFLINE", displayActivities: o }),
-                        R = "IN_GAME" === v ? (x[0]?.name ?? null) : null,
+                        D = "IN_GAME" === v ? (x[0]?.name ?? null) : null,
                         O = L.get(C) ?? [],
                         [w] = I.A.isFavorite(m.x.FRIENDS, C),
                         U = f.Ay.getVoiceChannelId() ?? f.Ay.getChannelId(),
                         P = null != U ? d.A.getChannel(U)?.guild_id : null,
                         b = c.A.getStatus(C),
                         j = b === N.clD.ONLINE,
-                        V = x.some(D),
+                        V = x.some(R),
                         F = b === N.clD.DND || b === N.clD.IDLE,
                         G = p.Ay.getName(P, U, E);
                     return {
@@ -176,7 +176,7 @@ function O(e) {
                             hasDisplayableActivity: V,
                             isDndOrIdle: F,
                             activityCategory: v,
-                            inGameActivityName: R,
+                            inGameActivityName: D,
                             affinity: M,
                             displayName: G,
                             userId: C,
@@ -207,7 +207,7 @@ function O(e) {
     return null == t ? M.delete(e) : M.set(e, t);
 }
 function w() {
-    (M.clear(), x(), R());
+    (M.clear(), x(), D());
     let e = !1;
     for (let [t, n] of h.A.getMutableRelationships().entries())
         (n === N.eA$.PENDING_INCOMING || n === N.eA$.PENDING_OUTGOING) && (e = O(t) || e);
@@ -268,7 +268,7 @@ let b = new U(
                   return t;
               }),
               VOICE_CHANNEL_SELECT: P(function (e) {
-                  R();
+                  D();
                   let t = !1;
                   for (let e of h.A.getFriendIDs()) t = O(e) || t;
                   return t;
@@ -318,7 +318,7 @@ let b = new U(
                   return O(e.user.id);
               }),
               CURRENT_USER_UPDATE: P(function (e) {
-                  R();
+                  D();
                   let t = !1;
                   for (let e of h.A.getFriendIDs()) t = O(e) || t;
                   return t;

@@ -1,8 +1,8 @@
-n.d(e, { $k: () => l, DS: () => o, hj: () => a, mG: () => u });
+n.d(e, { $k: () => l, DS: () => a, hj: () => o, mG: () => u });
 var i = n(652215),
     r = n(248675),
     _ = n(375708);
-class o extends Error {
+class a extends Error {
     reason;
     status;
     constructor(t, e) {
@@ -12,7 +12,7 @@ class o extends Error {
             (this.status = e));
     }
 }
-function a(t) {
+function o(t) {
     if ("object" != typeof t || null === t) return "unknown";
     let { status: e, body: n } = t;
     if ("number" != typeof e) return "unknown";
@@ -25,7 +25,7 @@ function l(t) {
     return "number" == typeof e ? e : 0;
 }
 function u(t) {
-    switch (t instanceof o ? t.reason : "unknown") {
+    switch (t instanceof a ? t.reason : "unknown") {
         case "project_limit":
             return _.intl.string(r.default["lh+h/p"]);
         case "rate_limited":

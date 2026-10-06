@@ -1,4 +1,4 @@
-n.d(t, { A: () => R, e: () => v });
+n.d(t, { A: () => D, e: () => v });
 var i = n(477900),
     l = n(582128),
     r = n(503698),
@@ -38,7 +38,7 @@ function x(e) {
         r = L[t];
     return (0, i.jsx)(r, { className: s()(M.hU, { [M.kV]: n }), ...l });
 }
-function R(e) {
+function D(e) {
     let {
             quality: t,
             lastPing: n,
@@ -53,7 +53,7 @@ function R(e) {
         S = l.useRef(null),
         _ = r === T.S7L.RTC_CONNECTED,
         L = l.useCallback((e) => (0, i.jsx)(m.A, { ...e, channelId: u }), [u]),
-        { connectionStatus: R, connectionStatusText: D } = p.A.getStatus(r, I),
+        { connectionStatus: D, connectionStatusText: R } = p.A.getStatus(r, I),
         O = (0, g.KN)("RTCConnectionStatus");
     return (0, i.jsxs)("div", {
         className: M.pe,
@@ -90,10 +90,10 @@ function R(e) {
                                                       ((0, A.X)(C.A.RTC_PANEL, A.O.CONNECTION_STATUS), l(e));
                                                   },
                                                   children: (0, i.jsx)(N, {
-                                                      text: D,
+                                                      text: R,
                                                       textVariant: E,
                                                       hasVideo: I,
-                                                      className: v[R],
+                                                      className: v[D],
                                                       hasConnectedChannel: null != u,
                                                   }),
                                               }),

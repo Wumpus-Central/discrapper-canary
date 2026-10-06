@@ -6,8 +6,8 @@ var l = n(477900),
     o = n(688810),
     s = n(206828),
     c = n(627363),
-    u = n(587895),
-    d = n(769015),
+    d = n(587895),
+    u = n(769015),
     m = n(174459),
     h = n(834730),
     p = n(289873),
@@ -15,7 +15,7 @@ var l = n(477900),
     x = n(821609),
     f = n(375708),
     A = n(469792);
-function C(e) {
+function j(e) {
     let { displayName: t, description: n, icon: i, isLoading: a, isConnected: r, canConnect: o, onConnect: s } = e;
     return (0, l.jsxs)("div", {
         className: A.Nr,
@@ -59,25 +59,25 @@ function C(e) {
         ],
     });
 }
-var j = n(652215);
+var C = n(652215);
 function v(e) {
     let { connection: t, guildId: n, location: h } = e,
-        p = (0, a.bG)([u.A], () => (null != t.application_id ? u.A.getApplication(t.application_id) : null), [
+        p = (0, a.bG)([d.A], () => (null != t.application_id ? d.A.getApplication(t.application_id) : null), [
             t.application_id,
         ]),
         { analyticsLocations: g } = (0, o.Ay)(h);
     i.useEffect(() => {
         null != p ||
             null == t.application_id ||
-            u.A.isFetchingApplication(t.application_id) ||
-            u.A.didFetchingApplicationFail(t.application_id) ||
+            d.A.isFetchingApplication(t.application_id) ||
+            d.A.didFetchingApplicationFail(t.application_id) ||
             (0, c.TA)(t.application_id).catch(() => {});
     }, [p, t.application_id]);
     let x = p?.name ?? f.intl.string(f.t.cgPbaZ),
-        { hasAlreadyLinked: A, canStartAuthorization: v, startAuthorization: _, fetched: N } = (0, s.RD)(p),
-        y = (0, l.jsx)(d.A, { game: p, size: d.M.MEDIUM }),
+        { hasAlreadyLinked: A, canStartAuthorization: v, startAuthorization: _, fetched: y } = (0, s.RD)(p),
+        N = (0, l.jsx)(u.A, { game: p, size: u.M.MEDIUM }),
         E = i.useCallback(() => {
-            (m.default.track(j.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
+            (m.default.track(C.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
                 ...(0, r.H$)(n),
                 connection_type: "application",
                 application_id: t.application_id ?? void 0,
@@ -85,41 +85,41 @@ function v(e) {
             }),
                 _({ analyticsLocations: g }));
         }, [_, n, t.application_id, h, g]);
-    return (0, l.jsx)(C, {
+    return (0, l.jsx)(j, {
         displayName: x,
         description: t.description,
-        icon: y,
-        isLoading: !N,
+        icon: N,
+        isLoading: !y,
         isConnected: A,
         canConnect: v,
         onConnect: E,
     });
 }
 var _ = n(462887),
-    N = n(173936),
-    y = n(736653),
+    y = n(173936),
+    N = n(736653),
     E = n(573648),
     w = n(456647);
 function I(e) {
     let { connection: t, guildId: n, location: a } = e,
-        o = (0, y.Ay)(),
+        o = (0, N.Ay)(),
         s = (null != t.provider_id ? E.A.get(t.provider_id)?.name : null) ?? f.intl.string(f.t.NzCoRx),
         c =
             null != t.description && t.description.length > 0
                 ? t.description
                 : (function (e) {
                       switch (e) {
-                          case j.fg2.TWITCH:
+                          case C.fg2.TWITCH:
                               return f.intl.string(f.t["D/wRWb"]);
-                          case j.fg2.YOUTUBE:
+                          case C.fg2.YOUTUBE:
                               return f.intl.string(f.t.TC0upt);
                           default:
                               return;
                       }
                   })(t.provider_id),
         {
-            hasConnection: u,
-            canConnect: d,
+            hasConnection: d,
+            canConnect: u,
             startConnection: h,
             loading: p,
         } = (function (e) {
@@ -143,7 +143,7 @@ function I(e) {
             };
         })(t.provider_id),
         g = i.useCallback(async () => {
-            (m.default.track(j.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
+            (m.default.track(C.HAw.GUILD_ONBOARDING_CONNECTION_CLICKED, {
                 ...(0, r.H$)(n),
                 connection_type: "provider",
                 provider_id: t.provider_id ?? void 0,
@@ -157,15 +157,15 @@ function I(e) {
                     n = e?.icon != null ? ((0, _.M)(o) ? e.icon.darkPNG : e.icon.lightPNG) : null;
                 if (null != n) return (0, l.jsx)("img", { src: n, alt: s, width: 40, height: 40 });
             }
-            return (0, l.jsx)(N.LinkIcon, { size: "custom", width: 40, height: 40, color: "currentColor" });
+            return (0, l.jsx)(y.LinkIcon, { size: "custom", width: 40, height: 40, color: "currentColor" });
         }, [t.provider_id, o, s]);
-    return (0, l.jsx)(C, {
+    return (0, l.jsx)(j, {
         displayName: s,
         description: c,
         icon: x,
         isLoading: p,
-        isConnected: u,
-        canConnect: d,
+        isConnected: d,
+        canConnect: u,
         onConnect: g,
     });
 }

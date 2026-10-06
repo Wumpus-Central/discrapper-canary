@@ -35,7 +35,7 @@ function I(e) {
                             r = !1;
                             try {
                                 (m.o.withoutSaving(e, () => {
-                                    g.VW.withoutNormalizing(e, () => v(e, s));
+                                    g.VW.withoutNormalizing(e, () => N(e, s));
                                 }),
                                     (l = g.VW.richValue(e)));
                             } catch (e) {
@@ -50,7 +50,7 @@ function I(e) {
             (g.VW.richValue(e) !== l &&
                 (m.o.withoutSaving(e, () => {
                     g.VW.withoutNormalizing(e, () => {
-                        let t = v(e, s),
+                        let t = N(e, s),
                             { enabled: r } = o.L.getConfig({ location: "syntaxHighlightCodeBlocks" });
                         !t ||
                             r ||
@@ -70,7 +70,7 @@ function I(e) {
                                 .then(() => {
                                     ((l = null),
                                         m.o.withoutSaving(e, () => {
-                                            g.VW.withoutNormalizing(e, () => v(e));
+                                            g.VW.withoutNormalizing(e, () => N(e));
                                         }),
                                         (l = g.VW.richValue(e)));
                                 })
@@ -86,7 +86,7 @@ function I(e) {
         e
     );
 }
-function v(e, t) {
+function N(e, t) {
     let n = (function (e, t) {
         let n = [],
             l = null;
@@ -167,14 +167,14 @@ function v(e, t) {
                                     let o = s()(`${r}\0${e}`),
                                         d = R.get(o);
                                     if (null != d && d.length === n) return d;
-                                    if (w.has(o)) return null;
+                                    if (O.has(o)) return null;
                                     for (let t of e.split("\n")) if (t.length > 1e3) return null;
                                     try {
                                         let t = a.highlightToHtml(e);
                                         if (((i = t.html), null != l)) for (let e of t.missingInjections) l(e);
                                     } catch (e) {
                                         return (
-                                            w.set(o, !0),
+                                            O.set(o, !0),
                                             h.A.captureException(e instanceof Error ? e : Error(String(e)), {
                                                 tags: { app_context: "syntax_highlighting" },
                                                 extra: { lang: r, surface: "editor" },
@@ -197,7 +197,7 @@ function v(e, t) {
                                                     r = 0;
                                                 for (T.lastIndex = 0; null != (t = T.exec(e));) {
                                                     let s = t.index + t[0].length,
-                                                        a = O(e.substring(r, t.index)).length,
+                                                        a = w(e.substring(r, t.index)).length,
                                                         o = l.filter((e) => null != e);
                                                     if (
                                                         (a > 0 &&
@@ -211,7 +211,7 @@ function v(e, t) {
                                                     } else l.pop();
                                                     r = s;
                                                 }
-                                                let s = O(e.substring(r)).length,
+                                                let s = w(e.substring(r)).length,
                                                     a = l.filter((e) => null != e);
                                                 return (
                                                     s > 0 && a.length > 0 && n.push({ types: a, start: i, end: i + s }),
@@ -249,7 +249,7 @@ function v(e, t) {
                                             s = [],
                                             a = 0,
                                             o = 0;
-                                        for (; null != (i = N.exec(r));) {
+                                        for (; null != (i = v.exec(r));) {
                                             let t = i.index + i[0].length,
                                                 n = i.index - o;
                                             (i.index > o &&
@@ -296,15 +296,15 @@ function v(e, t) {
         n.some((e) => null != e.lang)
     );
 }
-let N = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+let v = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
     T = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
     j = new Map();
 for (let [e, t] of Object.entries(E)) e.startsWith("a-") && null != t && j.set(e, t);
 let k = { max: 1 / 0, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
     _ = new (i())(k),
     R = new (i())(k),
-    w = new (i())(k);
-function O(e) {
+    O = new (i())(k);
+function w(e) {
     return e
         .replace(/&amp;/g, "&")
         .replace(/&lt;/g, "<")

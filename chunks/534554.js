@@ -1,14 +1,14 @@
-n.d(t, { CM: () => h, D0: () => i, Id: () => o, Tc: () => u, gz: () => f, j6: () => d, t7: () => c });
+n.d(t, { CM: () => p, D0: () => r, Id: () => o, Tc: () => s, gz: () => f, j6: () => d, t7: () => c });
 var l = n(56681),
-    r = n(248675),
+    i = n(248675),
     a = n(375708);
-function i(e) {
+function r(e) {
     let t = (0, l.bF)(e);
     return null != t ? a.intl.string(t) : e;
 }
-let s = { simple: r.default.Mqb8mc, balanced: r.default.zCZfA6, complex: r.default["8l2atm"] };
-function u(e) {
-    return a.intl.string(s[e]);
+let u = { simple: i.default.Mqb8mc, balanced: i.default.zCZfA6, complex: i.default["8l2atm"] };
+function s(e) {
+    return a.intl.string(u[e]);
 }
 function o(e, t, n) {
     return e.models?.[n] ?? t?.[n]?.model ?? null;
@@ -25,7 +25,7 @@ function f(e, t, n) {
     let l = o(e, t, e.tier);
     return null != l && n.find((e) => e.id === l)?.supports_fast === !0;
 }
-function h(e) {
+function p(e) {
     let { fast: t, ...n } = e;
     return !0 === t ? { ...n, fast: !0 } : n;
 }

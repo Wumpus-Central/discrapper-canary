@@ -1,4 +1,4 @@
-(n.d(t, { A: () => O, J: () => w }), n(323874), n(14289), n(35956));
+(n.d(t, { A: () => w, J: () => O }), n(323874), n(14289), n(35956));
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(515718),
     b = n(851023),
     I = n(215497),
-    v = n(375708),
-    N = n(268378),
+    N = n(375708),
+    v = n(268378),
     T = n(429955);
 let j = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
 function k(e) {
@@ -46,12 +46,12 @@ function k(e) {
                             className: T.tags,
                             children: [
                                 null != t && "" !== t
-                                    ? (0, l.jsx)("span", { className: T.altTag, children: v.intl.string(v.t.QEW81z) })
+                                    ? (0, l.jsx)("span", { className: T.altTag, children: N.intl.string(N.t.QEW81z) })
                                     : null,
                                 o && n
                                     ? (0, l.jsx)("span", {
                                           className: T.altTag,
-                                          children: v.intl.string(v.t["F+x38C"]),
+                                          children: N.intl.string(N.t["F+x38C"]),
                                       })
                                     : null,
                             ],
@@ -110,11 +110,11 @@ function _(e) {
                     shouldHideMediaOptions: !0,
                 });
         }, [c]),
-        x = t?.name != null ? t.name : v.intl.string(v.t.lduvqL),
+        x = t?.name != null ? t.name : N.intl.string(N.t.lduvqL),
         E =
             null != n && "" !== n
-                ? v.intl.formatToPlainString(v.t["8TRAzR"], { filename: x, alt: n })
-                : v.intl.formatToPlainString(v.t.lXoOEZ, { filename: x });
+                ? N.intl.formatToPlainString(N.t["8TRAzR"], { filename: x, alt: n })
+                : N.intl.formatToPlainString(N.t.lXoOEZ, { filename: x });
     return (0, l.jsx)("div", {
         onMouseEnter: u,
         className: s()(T.mediaContainer, { [T.imageSmall]: f }),
@@ -190,7 +190,7 @@ function R(e) {
         })
     );
 }
-function w(e) {
+function O(e) {
     let { upload: t, size: n = I.L.MEDIUM, onMouseEnter: r, clip: a, guildId: o } = e,
         [u, c] = i.useState(!1);
     return t.isImage && t.item.platform === E.x.WEB
@@ -216,12 +216,12 @@ function w(e) {
                 children: (0, l.jsx)("div", {
                     className: T.tags,
                     children: t.spoiler
-                        ? (0, l.jsx)("span", { className: T.altTag, children: v.intl.string(v.t["F+x38C"]) })
+                        ? (0, l.jsx)("span", { className: T.altTag, children: N.intl.string(N.t["F+x38C"]) })
                         : null,
                 }),
             });
 }
-function O(e) {
+function w(e) {
     let {
             channelId: t,
             draftType: r,
@@ -239,7 +239,7 @@ function O(e) {
     function R() {
         p.A.remove(t, o.id, r);
     }
-    function O(e) {
+    function w(e) {
         (e.stopPropagation(), j)
             ? (0, u.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
@@ -307,7 +307,7 @@ function O(e) {
                 S
                     ? (0, l.jsx)(b.A, {
                           className: s()({ [T.action]: k }),
-                          tooltip: j ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzA),
+                          tooltip: j ? N.intl.string(N.t.MYgdY2) : N.intl.string(N.t.cuurzA),
                           onClick: () => {
                               p.A.update(t, o.id, r, { spoiler: !o.spoiler });
                           },
@@ -327,8 +327,8 @@ function O(e) {
                 S
                     ? (0, l.jsx)(b.A, {
                           className: s()({ [T.action]: k }),
-                          tooltip: j ? v.intl.string(N.default.V8YlF7) : v.intl.string(v.t.Y8ujqr),
-                          onClick: O,
+                          tooltip: j ? N.intl.string(v.default.V8YlF7) : N.intl.string(N.t.Y8ujqr),
+                          onClick: w,
                           children: (0, l.jsx)(h.PencilIcon, {
                               size: "xs",
                               color: "currentColor",
@@ -338,7 +338,7 @@ function O(e) {
                     : null,
                 (0, l.jsx)(b.A, {
                     className: s()({ [T.action]: k }),
-                    tooltip: j ? v.intl.string(v.t.MskAXa) : v.intl.string(v.t.vN7REz),
+                    tooltip: j ? N.intl.string(N.t.MskAXa) : N.intl.string(N.t.vN7REz),
                     onClick: R,
                     dangerous: !0,
                     children: (0, l.jsx)(m.TrashIcon, {
@@ -352,12 +352,12 @@ function O(e) {
         draftType: r,
         id: o.id,
         channelId: t,
-        handleEditModal: O,
+        handleEditModal: w,
         keyboardModeEnabled: g,
         size: E,
         className: s()({ [T.attachmentItemSmall]: k }),
         children: [
-            (0, l.jsx)(w, { upload: o, size: E, clip: A, guildId: _ }),
+            (0, l.jsx)(O, { upload: o, size: E, clip: A, guildId: _ }),
             !y &&
                 (0, l.jsx)("div", {
                     className: T.filenameContainer,

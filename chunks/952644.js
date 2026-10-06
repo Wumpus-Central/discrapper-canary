@@ -1,23 +1,23 @@
 (l.d(t, {
-    Df: () => i,
+    Df: () => r,
     Fl: () => s,
     S3: () => d,
     SF: () => c,
     Wl: () => u,
     Wn: () => o,
-    b5: () => f,
-    h_: () => r,
-    kt: () => g,
-    n0: () => m,
+    b5: () => m,
+    h_: () => i,
+    kt: () => h,
+    n0: () => f,
 }),
     l(321073),
     l(246338));
 var n = l(248675),
     a = l(375708);
-function i(e, t) {
+function r(e, t) {
     return 0 === t.length ? "none" : t.some((t) => t.id === e) ? "skip" : "pick";
 }
-function r(e, t) {
+function i(e, t) {
     if ("none" === t) return ["server"];
     let l = Array.from({ length: Math.max(1, e.length) }, (e, t) => ({ kind: "question", index: t }));
     return "pick" === t ? ["about", "server", ...l] : ["about", ...l];
@@ -50,13 +50,13 @@ function d(e) {
 function c(e) {
     return e?.server ?? { title: a.intl.string(n.default.vcxYIA), hint: a.intl.string(n.default.auUHPZ) };
 }
-function f(e) {
+function m(e) {
     return e?.questions ?? [];
 }
-function m(e, t) {
+function f(e, t) {
     return e.length > 0 && e.every((e, l) => !0 === e.optional || "" !== (t[l] ?? "").trim());
 }
-function g(e, t) {
+function h(e, t) {
     let l = [];
     return (
         e.forEach((e, n) => {

@@ -1,25 +1,25 @@
 l.d(t, { u: () => o, x: () => u });
 var n = l(582128);
 let a = new Set(),
-    i = new Set();
-function r() {
-    for (let e of i) e();
+    r = new Set();
+function i() {
+    for (let e of r) e();
 }
 function s(e) {
     return (
-        i.add(e),
+        r.add(e),
         () => {
-            i.delete(e);
+            r.delete(e);
         }
     );
 }
 async function u(e, t) {
     if (a.has(e)) return null;
-    (a.add(e), r());
+    (a.add(e), i());
     try {
         return await t();
     } finally {
-        (a.delete(e), r());
+        (a.delete(e), i());
     }
 }
 function o(e) {

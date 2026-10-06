@@ -26,8 +26,8 @@ var i = n(477900),
     y = n(698141),
     L = n(429913),
     x = n(567249),
-    R = n(280450),
-    D = n(186111),
+    D = n(280450),
+    R = n(186111),
     O = n(287809),
     w = n(403362),
     U = n(562153),
@@ -58,9 +58,9 @@ function F(e) {
     let { participants: t, application: n, channel: r, width: u } = e,
         A = u > 400 ? 2 : +(u > 300),
         [m] = u > 400 ? [o._3.SIZE_56, 56] : u > 300 ? [o._3.SIZE_32, 32] : [o._3.SIZE_24, 24],
-        E = (0, a.yK)([O.default, R.default], () =>
+        E = (0, a.yK)([O.default, D.default], () =>
             Array.from(t)
-                .map((e) => ((0, C.S)(e, R.default) ? null : O.default.getUser(e.userId)))
+                .map((e) => ((0, C.S)(e, D.default) ? null : O.default.getUser(e.userId)))
                 .filter(w.Vq),
         ),
         I = (0, a.bG)([f.Ay], () =>
@@ -73,8 +73,8 @@ function F(e) {
         M = r.getGuildId() ?? void 0,
         L = l.useId(),
         x = n.id,
-        D = l.useMemo(() => ({ channel: r, type: "channel" }), [r]),
-        { submitting: j } = (0, y.A)({ applicationId: x, context: D, launchingComponentId: L });
+        R = l.useMemo(() => ({ channel: r, type: "channel" }), [r]),
+        { submitting: j } = (0, y.A)({ applicationId: x, context: R, launchingComponentId: L });
     return (0, i.jsxs)("div", {
         className: b.Yi,
         children: [
@@ -128,7 +128,7 @@ function G(e) {
         C = !r && h,
         p = !h,
         _ = !h && !r,
-        y = (0, a.bG)([D.A, x.A], () => (0, T.A)({ LayerStore: D.A, PopoutWindowStore: x.A }));
+        y = (0, a.bG)([R.A, x.A], () => (0, T.A)({ LayerStore: R.A, PopoutWindowStore: x.A }));
     return (
         l.useEffect(() => {
             if (C && null != c && !y) {

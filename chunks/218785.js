@@ -6,12 +6,12 @@ var l = n(17928),
     o = n(576705),
     s = n(994500),
     c = n(287809),
-    u = n(652215),
-    d = n(375708);
+    d = n(652215),
+    u = n(375708);
 function m(e, t, n) {
     return 0 === e.length
         ? ""
-        : d.intl.format(n ? d.t.cJZxWf : d.t.Kj5GIT, {
+        : u.intl.format(n ? u.t.cJZxWf : u.t.Kj5GIT, {
               count: e.length,
               extraCount: Math.max(e.length - 2, 0),
               role1: e[0],
@@ -26,27 +26,27 @@ function h(e) {
         A = (0, l.yK)([a.A, c.default, s.A, o.A], () =>
             Array.from(p)
                 .map((e) => a.A.getChannel(e))
-                .filter((e) => null != e && o.A.can(u.xBc.VIEW_CHANNEL, e))
+                .filter((e) => null != e && o.A.can(d.xBc.VIEW_CHANNEL, e))
                 .map((e) => (0, i.m1)(e, c.default, s.A, !0)),
         ),
-        C = f.map((e) => `@${e.name}`),
-        j = n?.singleSelect ? "" : d.intl.string(d.t.JshhEl),
+        j = f.map((e) => `@${e.name}`),
+        C = n?.singleSelect ? "" : u.intl.string(u.t.JshhEl),
         v = "";
-    if (0 === A.length && C.length > 0) j = m(C, g);
+    if (0 === A.length && j.length > 0) C = m(j, g);
     else
         A.length > 0 &&
-            ((j =
+            ((C =
                 0 === A.length
                     ? ""
-                    : d.intl.format(d.t.Rj841R, {
+                    : u.intl.format(u.t.Rj841R, {
                           count: A.length,
                           extraCount: Math.max(A.length - 2, 0),
                           channel1: A[0],
                           channel2: A[1],
                           itemHook: g,
                       })),
-            C.length > 0 && (v = m(C, g, !0)));
-    return { helpText: j, helpTextAdditional: v };
+            j.length > 0 && (v = m(j, g, !0)));
+    return { helpText: C, helpTextAdditional: v };
 }
 function p(e) {
     let { guild: t, prompt: n, selectedRoleIds: m, selectedChannelIds: h, itemHook: p } = e,
@@ -55,14 +55,14 @@ function p(e) {
         f = (0, l.yK)([a.A, c.default, s.A, o.A], () =>
             Array.from(h)
                 .map((e) => a.A.getChannel(e))
-                .filter((e) => null != e && o.A.can(u.xBc.VIEW_CHANNEL, e))
+                .filter((e) => null != e && o.A.can(d.xBc.VIEW_CHANNEL, e))
                 .map((e) => (0, i.m1)(e, c.default, s.A, !0)),
         ),
         A = x.map((e) => `@${e.name}`),
-        C = n?.singleSelect ? "" : d.intl.string(d.t.JshhEl);
+        j = n?.singleSelect ? "" : u.intl.string(u.t.JshhEl);
     return (
         0 === f.length && A.length > 0
-            ? (C = d.intl.format(d.t.vdtNYa, {
+            ? (j = u.intl.format(u.t.vdtNYa, {
                   count: A.length,
                   extraCount: Math.max(A.length - 2, 0),
                   role1: A[0],
@@ -70,7 +70,7 @@ function p(e) {
                   itemHook: p,
               }))
             : f.length > 0 && 0 === A.length
-              ? (C = d.intl.format(d.t.ZKywGU, {
+              ? (j = u.intl.format(u.t.ZKywGU, {
                     count: f.length,
                     extraCount: Math.max(f.length - 2, 0),
                     channel1: f[0],
@@ -79,7 +79,7 @@ function p(e) {
                 }))
               : f.length > 0 &&
                 A.length > 0 &&
-                (C = d.intl.format(d.t.WewRHM, {
+                (j = u.intl.format(u.t.WewRHM, {
                     channelCount: f.length,
                     extraChannelCount: Math.max(f.length - 2, 0),
                     channel1: f[0],
@@ -90,6 +90,6 @@ function p(e) {
                     role1: A[0],
                     role2: A[1],
                 })),
-        { helpText: C, helpTextAdditional: "" }
+        { helpText: j, helpTextAdditional: "" }
     );
 }

@@ -1,4 +1,4 @@
-(n.d(t, { A: () => R, Y: () => E }), n(321073));
+(n.d(t, { A: () => D, Y: () => E }), n(321073));
 var i,
     l = n(17928),
     r = n(713402),
@@ -118,7 +118,7 @@ class L extends l.Ay.Store {
 function x(e) {
     return (0, C.v$)(e, "FriendsWidgetMessagesStore");
 }
-let R = new L(
+let D = new L(
     s.h,
     __OVERLAY__
         ? {}

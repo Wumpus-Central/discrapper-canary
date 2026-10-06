@@ -26,8 +26,8 @@ var i = n(477900),
     y = n(109802),
     L = n(231723),
     x = n(765178),
-    R = n(192308);
-if (221552 == n.j) var D = n(888366);
+    D = n(192308);
+if (221552 == n.j) var R = n(888366);
 if (221552 == n.j) var O = n(241541);
 var w = n(73153),
     U = n(387755),
@@ -65,8 +65,8 @@ var F = n(717398),
     Y = n(47167),
     z = n(915089),
     J = n(131607),
-    $ = n(727245),
-    K = n(247676),
+    K = n(727245),
+    $ = n(247676),
     q = n(66442);
 if (221552 == n.j) var X = n(43105);
 if (221552 == n.j) var Q = n(403581);
@@ -85,7 +85,7 @@ function eo(e) {
         d = "staff" === a,
         c = "entitled" === a,
         h = (0, o.bG)([et.Ay], () => et.Ay.getSection(n)),
-        { enabled: f } = $.A.useConfig({ location: r }),
+        { enabled: f } = K.A.useConfig({ location: r }),
         [g, C] = (0, J.kn)(f && !d ? [u.M.NITRO_GDM_CAP_COACHMARK] : []),
         A = g === u.M.NITRO_GDM_CAP_COACHMARK,
         p = l.useCallback(() => {
@@ -174,7 +174,7 @@ let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
     eE = l.forwardRef(function (e, t) {
         let { location: n, memberCount: r, recipientLimit: s } = e,
             a = (0, ei.qH)(),
-            { enabled: u } = $.A.useConfig({ location: n }),
+            { enabled: u } = K.A.useConfig({ location: n }),
             d = (0, o.bG)([eA.Ay], () => eA.Ay.useReducedMotion),
             [c, h] = l.useState(!1),
             [f, g] = l.useState(!1),
@@ -396,8 +396,8 @@ async function ey(e, t) {
 }
 var eL = n(279208),
     ex = n(267102),
-    eR = n(976860),
-    eD = n(219271),
+    eD = n(976860),
+    eR = n(219271),
     eO = n(427358),
     ew = n(95701),
     eU = n(734057),
@@ -415,8 +415,8 @@ var eL = n(279208),
     eY = n(935208),
     ez = n(58736),
     eJ = n(837381),
-    e$ = n(692617),
-    eK = n(658675),
+    eK = n(692617),
+    e$ = n(658675),
     eq = n(297413),
     eX = n(966327),
     eQ = n(235986),
@@ -496,7 +496,7 @@ function e6(e) {
                                                   "aria-hidden": "true",
                                                   className: e7.a6,
                                               }),
-                                              (0, i.jsx)(e$.A, {
+                                              (0, i.jsx)(eK.A, {
                                                   className: e7.gP,
                                                   guilds: s,
                                                   maxGuilds: 3,
@@ -516,7 +516,7 @@ function e6(e) {
                         }),
                     ],
                 }),
-                (0, i.jsx)(eK.P, { checked: u, disabled: d }),
+                (0, i.jsx)(e$.P, { checked: u, disabled: d }),
             ],
         }),
     });
@@ -571,7 +571,7 @@ function tr(e) {
         r = (0, o.bG)([eF.Ay], () => eF.Ay.lastMessageId(t.id) ?? t.id);
     return (0, i.jsx)(C.D, {
         onClick: () => {
-            ((0, eR.uh)(el.ME, t.id), n());
+            ((0, eD.uh)(el.ME, t.id), n());
         },
         children: (0, i.jsxs)("div", {
             className: e3.us,
@@ -732,12 +732,12 @@ class to extends l.PureComponent {
     }
     isPartyFull() {
         let { channel: e } = this.props;
-        return null != e && e.recipients.length + 1 >= (0, K.A)({ useNitroCapExperiment: !0 });
+        return null != e && e.recipients.length + 1 >= (0, $.A)({ useNitroCapExperiment: !0 });
     }
     getRemaining() {
         let { channel: e, selectedUsers: t } = this.props,
             n = (null == e ? 0 : e.recipients.length) + 1;
-        return (0, K.A)({ useNitroCapExperiment: !0 }) - t.size - n;
+        return (0, $.A)({ useNitroCapExperiment: !0 }) - t.size - n;
     }
     getTotalSelectedMemberCount() {
         let { channel: e, selectedUsers: t } = this.props;
@@ -748,7 +748,7 @@ class to extends l.PureComponent {
     }
     getListBottomPadding() {
         return this.shouldShowNitroCapRoadblock() &&
-            this.getTotalSelectedMemberCount() >= (0, K.A)({ useNitroCapExperiment: !0 })
+            this.getTotalSelectedMemberCount() >= (0, $.A)({ useNitroCapExperiment: !0 })
             ? 104
             : 14;
     }
@@ -809,10 +809,10 @@ class to extends l.PureComponent {
                 i = null != n ? n.username : "";
             return ea.intl.format(ea.t["eg+R9x"], { username: i });
         }
-        if (null == e) return ea.intl.format(ea.t.t9mhPt, { number: (0, K.A)({ useNitroCapExperiment: !0 }) });
+        if (null == e) return ea.intl.format(ea.t.t9mhPt, { number: (0, $.A)({ useNitroCapExperiment: !0 }) });
         let n = this.getRemaining();
         return n <= 0
-            ? ea.intl.formatToPlainString(ea.t.xYr004, { number: (0, K.A)({ useNitroCapExperiment: !0 }) })
+            ? ea.intl.formatToPlainString(ea.t.xYr004, { number: (0, $.A)({ useNitroCapExperiment: !0 }) })
             : ea.intl.formatToPlainString(ea.t.barkEr, { number: n });
     }
     handleKeyDown(e) {
@@ -897,7 +897,7 @@ class to extends l.PureComponent {
                       ref: this.nitroUpsellBannerRef,
                       location: e9,
                       memberCount: this.getTotalSelectedMemberCount(),
-                      recipientLimit: (0, K.A)({ useNitroCapExperiment: !0 }),
+                      recipientLimit: (0, $.A)({ useNitroCapExperiment: !0 }),
                   }),
               })
             : null;
@@ -911,7 +911,7 @@ class to extends l.PureComponent {
                     e &&
                         (0, i.jsx)(e_, {
                             memberCount: this.getTotalSelectedMemberCount(),
-                            recipientLimit: (0, K.A)({ useNitroCapExperiment: !0 }),
+                            recipientLimit: (0, $.A)({ useNitroCapExperiment: !0 }),
                         }),
                     t,
                 ],
@@ -934,7 +934,7 @@ class to extends l.PureComponent {
             ? null
             : this.isPartyFull()
               ? (0, i.jsx)("div", {
-                    children: ea.intl.format(ea.t.xYr004, { number: (0, K.A)({ useNitroCapExperiment: !0 }) }),
+                    children: ea.intl.format(ea.t.xYr004, { number: (0, $.A)({ useNitroCapExperiment: !0 }) }),
                 })
               : null;
     }
@@ -1182,7 +1182,7 @@ class to extends l.PureComponent {
     renderNitroCapFullState() {
         let { transitionState: e, onClose: t, nitroAudience: n } = this.props;
         if ((0, ei.yh)(n)) return (0, i.jsx)(ed, { transitionState: e, onClose: t, location: e9, nitroAudience: n });
-        let l = (0, K.A)({ useNitroCapExperiment: !0 });
+        let l = (0, $.A)({ useNitroCapExperiment: !0 });
         return (0, i.jsx)(d.a, {
             transitionState: e ?? L.ip.ENTERED,
             onClose: async () => await t(),
@@ -1448,19 +1448,19 @@ class to extends l.PureComponent {
         if (null != e) {
             let t = tC(Array.from(new Set([...e.recipients, ...l])));
             t.size > 0
-                ? (0, R.openModal)(
+                ? (0, D.openModal)(
                       (n) => (0, i.jsx)(ts, { ...n, onConfirm: () => this.pushToExistingDM(e, l), channelIds: t }),
                       {},
-                      (0, R.modalContextFromAppContext)(this.context.appContext),
+                      (0, D.modalContextFromAppContext)(this.context.appContext),
                   )
                 : this.pushToExistingDM(e, l);
         } else {
             let e = tC(l);
             l.length > 1 && e.size > 0
-                ? (0, R.openModal)(
+                ? (0, D.openModal)(
                       (t) => (0, i.jsx)(ts, { ...t, onConfirm: () => this.createNewDM(l), channelIds: e }),
                       {},
-                      (0, R.modalContextFromAppContext)(this.context.appContext),
+                      (0, D.modalContextFromAppContext)(this.context.appContext),
                   )
                 : this.createNewDM(l);
         }
@@ -1546,7 +1546,7 @@ function td(e) {
             [t],
         ),
         u = (0, ei.qH)(),
-        { enabled: d } = $.A.useConfig({ location: e9 }),
+        { enabled: d } = K.A.useConfig({ location: e9 }),
         c = (function (e) {
             let { location: t } = e,
                 { inviteMaxAgeSeconds: n } = eT.useConfig({ location: t });
@@ -1567,16 +1567,16 @@ function td(e) {
 function tc(e) {
     let { channel: t, subscribeToGlobalHotkey: n, entryPointType: r } = e,
         s = `channel-invite-modal-${t?.id}`,
-        a = (0, R.useHasModalOpen)(s),
+        a = (0, D.useHasModalOpen)(s),
         o = l.useCallback(
             () =>
-                (0, R.openModalLazy)(
+                (0, D.openModalLazy)(
                     () => Promise.resolve((e) => (0, i.jsx)(td, { ...e, channel: t, entryPointType: r })),
                     { modalKey: s },
                 ),
             [t, r, s],
         ),
-        u = l.useCallback(() => (a ? (0, R.closeModal)(s) : o()), [a, s, o]);
+        u = l.useCallback(() => (a ? (0, D.closeModal)(s) : o()), [a, s, o]);
     return (
         l.useEffect(
             () => (
@@ -1588,7 +1588,7 @@ function tc(e) {
             [n, u],
         ),
         (0, H.Ay)(() => {
-            (0, eD.u)();
+            (0, eR.u)();
         }),
         { showModal: o, toggleVisible: u }
     );
@@ -1596,7 +1596,7 @@ function tc(e) {
 function th(e) {
     let { channel: t, onComplete: n } = e,
         l = t?.id != null ? `channel-invite-modal-${t.id}` : "channel-invite-modal-new";
-    (0, R.openModalLazy)(() => Promise.resolve((e) => (0, i.jsx)(td, { ...e, channel: t, onComplete: n })), {
+    (0, D.openModalLazy)(() => Promise.resolve((e) => (0, i.jsx)(td, { ...e, channel: t, onComplete: n })), {
         modalKey: l,
     });
 }
@@ -1611,7 +1611,7 @@ function tf(e) {
             subscribeToGlobalHotkey: d = !1,
         } = e,
         c = l.useRef(null),
-        h = s ?? (null == t ? D.g : O.D),
+        h = s ?? (null == t ? R.g : O.D),
         { showModal: f } = tc({ channel: t, subscribeToGlobalHotkey: d }),
         g = (0, o.bG)([eM.default], () => eM.default.getUser(t?.getRecipientId()));
     return g?.bot || g?.isProvisional

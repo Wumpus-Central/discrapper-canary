@@ -21,15 +21,15 @@ var l = n(477900),
     A = n(778712),
     b = n(939249),
     I = n(545442),
-    v = n(922016),
-    N = n(565645),
+    N = n(922016),
+    v = n(565645),
     T = n(730134),
     j = n(775602),
     k = n(47167),
     _ = n(442247),
     R = n(569926),
-    w = n(106191),
-    O = n(545868),
+    O = n(106191),
+    w = n(545868),
     L = n(376943),
     P = n(465365),
     M = n(78390),
@@ -55,7 +55,7 @@ function J(e) {
         text: t.name,
         delay: 750,
         position: "top",
-        children: (0, l.jsx)(N.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
+        children: (0, l.jsx)(v.A, { src: t.src, emojiName: t.name, animated: !1, surrogate: t.surrogate }),
     });
 }
 function Y(e) {
@@ -64,7 +64,7 @@ function Y(e) {
         text: t.name,
         delay: 750,
         position: "top",
-        children: (0, l.jsx)(N.A, { emojiId: t.emojiId, emojiName: t.name, animated: t.animated }),
+        children: (0, l.jsx)(v.A, { emojiId: t.emojiId, emojiName: t.name, animated: t.animated }),
     });
 }
 function ee(e) {
@@ -124,10 +124,10 @@ function en(e) {
     }
     return null == n || null == r
         ? m()
-        : (0, l.jsx)(v.Y, {
+        : (0, l.jsx)(N.Y, {
               targetElementRef: u,
               preload: async () => {
-                  await (0, O.a)(n, t);
+                  await (0, w.a)(n, t);
               },
               renderPopout: (e) => (0, l.jsx)(W.Y, { guildId: n, channelId: r, roleId: t, popoutProps: e }),
               position: "top",
@@ -168,7 +168,7 @@ function ea(e) {
         i = null != n;
     return ((0, R.I)(i ? void 0 : t), i)
         ? (0, l.jsxs)(U.A, {
-              children: [(0, l.jsx)(w.A, { game: { id: t, icon: n.gameIcon }, iconClassName: X.Kk }), n.gameName],
+              children: [(0, l.jsx)(O.A, { game: { id: t, icon: n.gameIcon }, iconClassName: X.Kk }), n.gameName],
           })
         : (0, l.jsxs)("span", { children: ["@", Z.intl.string(Z.t["11pdXZ"])] });
 }

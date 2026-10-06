@@ -69,7 +69,7 @@ function C(e, t, n, l) {
             ((function (e, t, n, l, r) {
                 let [s, o] = t,
                     u = !1,
-                    c = v(e, o);
+                    c = N(e, o);
                 for (let f = s.children.length - 1; f >= 0; f--) {
                     let p,
                         g = s.children[f];
@@ -81,7 +81,7 @@ function C(e, t, n, l) {
                             m.lastIndex = p.index + 1;
                             continue;
                         }
-                        if (N(c, { path: x, offset: p.index }, r)) continue;
+                        if (v(c, { path: x, offset: p.index }, r)) continue;
                         let i = (0, a.p)(p[0], n, l);
                         null != i && T(e, l, t[0], i)
                             ? E.push({ index: p.index, length: p[0].length, node: i })
@@ -111,7 +111,7 @@ function C(e, t, n, l) {
 function A(e, t, n, l) {
     let [i, r] = t,
         s = !1,
-        a = n || null == l ? null : v(e, r);
+        a = n || null == l ? null : N(e, r);
     for (let t = i.children.length - 1; t >= 0; t--) {
         let o = i.children[t];
         if (h.l5.isText(o) && !n) {
@@ -135,7 +135,7 @@ function A(e, t, n, l) {
         } else if (h.cv.isElement(o) && e.isVoid(o)) {
             let i = h.PW.child(r, t),
                 u = { path: h.PW.child(i, 0), offset: 0 };
-            (n || (null != l && N(a, u, l))) &&
+            (n || (null != l && v(a, u, l))) &&
                 (d.b.voidToText(e, (0, c.IQ)(o, { mode: "plain", preventEmojiSurrogates: !0 }), i), (s = !0));
         }
     }
@@ -231,14 +231,14 @@ function b(e, t, n, l) {
 function I(e) {
     return e.join(",");
 }
-function v(e, t) {
+function N(e, t) {
     let n = new Map(),
         l = h.VW.nodes(e, { at: { anchor: h.VW.start(e, t), focus: h.VW.end(e, t) }, mode: "lowest" }),
         i = 0;
     for (let [e, t] of l) (n.set(I(t), i), (i += h.l5.isText(e) ? e.text.length : 1));
     return n;
 }
-function N(e, t, n) {
+function v(e, t, n) {
     if (null == e) return !1;
     let l = e.get(I(t.path));
     if (null != l) l += t.offset;

@@ -25,13 +25,13 @@ var l = n(477900),
     y = n(101392),
     T = n(652215),
     I = n(746080),
-    _ = n(834730),
-    k = n(123292),
+    k = n(834730),
+    _ = n(123292),
     M = n(688810),
     R = n(359800),
     w = n(206828),
-    L = n(769015),
-    P = n(490094),
+    P = n(769015),
+    L = n(490094),
     D = n(375708),
     O = n(425256);
 function G(e) {
@@ -44,18 +44,18 @@ function G(e) {
     let h = !1;
     return (
         "sm" === i
-            ? (t = D.intl.format(P.default.vznMVa, { onClick: () => m({ analyticsLocations: a }) }))
-            : ((t = D.intl.string(P.default.UHF2Zn)), (h = !0)),
+            ? (t = D.intl.format(L.default.vznMVa, { onClick: () => m({ analyticsLocations: a }) }))
+            : ((t = D.intl.string(L.default.UHF2Zn)), (h = !0)),
         (0, l.jsxs)("div", {
             className: O._,
             children: [
-                (0, l.jsx)(L.A, { game: n, size: L.M.MEDIUM }),
-                (0, l.jsx)(_.E, { variant: "text-sm/medium", color: "text-default", className: O.d, children: t }),
+                (0, l.jsx)(P.A, { game: n, size: P.M.MEDIUM }),
+                (0, l.jsx)(k.E, { variant: "text-sm/medium", color: "text-default", className: O.d, children: t }),
                 h
-                    ? (0, l.jsx)(k.Q, {
+                    ? (0, l.jsx)(_.Q, {
                           variant: "primary",
                           size: "sm",
-                          text: D.intl.string(P.default.EBSaL4),
+                          text: D.intl.string(L.default.EBSaL4),
                           onClick: () => m({ analyticsLocations: a }),
                       })
                     : null,
@@ -80,10 +80,10 @@ let B = () => Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
 function V(e) {
     let { parentChannel: t, transitionState: n, onClose: a } = e,
         u = i.useMemo(() => t.availableTags ?? [], [t.availableTags]),
-        [{ textValue: _, richValue: k }, M] = i.useState(() => (0, m.N3)()),
+        [{ textValue: k, richValue: _ }, M] = i.useState(() => (0, m.N3)()),
         [R, w] = i.useState(!1),
-        [L, O] = i.useState(() => new Set()),
-        H = (0, v.t4)(L),
+        [P, O] = i.useState(() => new Set()),
+        H = (0, v.t4)(P),
         {
             application: V,
             noMicTag: W,
@@ -130,15 +130,15 @@ function V(e) {
                 g = t.hasFlag(I.lx.REQUIRE_TAG),
                 f = g && 0 === l.size,
                 { rateLimitPerUser: j } = t,
-                _ = j > 0,
-                k = (0, p.bG)([y.A], () => y.A.getSlowmodeCooldownGuess(t.id, y.R.CreateThread)),
+                k = j > 0,
+                _ = (0, p.bG)([y.A], () => y.A.getSlowmodeCooldownGuess(t.id, y.R.CreateThread)),
                 M = (0, C._i)(t),
                 [R, w] = i.useState(!1),
-                [L, P] = i.useState(!1),
-                D = !R && n.trim().length > 0 && n.length <= v.YS && !(_ && !M && k > 0),
+                [P, L] = i.useState(!1),
+                D = !R && n.trim().length > 0 && n.length <= v.YS && !(k && !M && _ > 0),
                 O = i.useCallback(async () => {
                     if (D) {
-                        if (f) return void P(!0);
+                        if (f) return void L(!0);
                         w(!0);
                         try {
                             await x(n);
@@ -153,10 +153,10 @@ function V(e) {
                 voiceChatEnabled: u,
                 voiceToggleDisabled: m,
                 isTagRequired: g,
-                hasTagRequiredError: L && f,
-                isSlowmodeEnabled: _,
+                hasTagRequiredError: P && f,
+                isSlowmodeEnabled: k,
                 rateLimitPerUser: j,
-                slowmodeCooldownGuess: k,
+                slowmodeCooldownGuess: _,
                 isBypassSlowmode: M,
                 submitting: R,
                 canSubmit: D,
@@ -164,8 +164,8 @@ function V(e) {
             };
         })({
             parentChannel: t,
-            description: _,
-            appliedTagIds: L,
+            description: k,
+            appliedTagIds: P,
             upload: j.Se,
             onThreadCreated: (e) => {
                 ((0, f.JA)(e), a());
@@ -191,7 +191,7 @@ function V(e) {
             [W],
         );
     return (0, l.jsx)(s.a, {
-        title: D.intl.string(P.default.tOsHsu),
+        title: D.intl.string(L.default.tOsHsu),
         transitionState: n,
         onClose: a,
         actions: [
@@ -203,13 +203,13 @@ function V(e) {
             children: [
                 (0, l.jsx)(r.D, {
                     required: !0,
-                    label: D.intl.string(P.default["/mEbGf"]),
+                    label: D.intl.string(L.default["/mEbGf"]),
                     children: (0, l.jsx)(h.Ay, {
                         type: z,
                         channel: t,
-                        placeholder: D.intl.string(P.default["SU/IAE"]),
-                        textValue: _,
-                        richValue: k,
+                        placeholder: D.intl.string(L.default["SU/IAE"]),
+                        textValue: k,
+                        richValue: _,
                         focused: R,
                         onChange: el,
                         onFocus: () => w(!0),
@@ -227,7 +227,7 @@ function V(e) {
                           label: D.intl.string(D.t.KM6lRG),
                           required: K,
                           errorMessage: Y ? D.intl.string(D.t.xPfNQi) : void 0,
-                          description: D.intl.formatToPlainString(P.default["yoIAe/"], { tagsMax: 5 }),
+                          description: D.intl.formatToPlainString(L.default["yoIAe/"], { tagsMax: 5 }),
                           children: (0, l.jsx)("div", {
                               className: F.GA,
                               children: u.map((e) =>
@@ -236,9 +236,9 @@ function V(e) {
                                       {
                                           tag: e,
                                           size: x.Ay.Sizes.SMALL,
-                                          selected: L.has(e.id),
-                                          onClick: !H || L.has(e.id) ? () => ei(e.id) : void 0,
-                                          disabled: !L.has(e.id) && H,
+                                          selected: P.has(e.id),
+                                          onClick: !H || P.has(e.id) ? () => ei(e.id) : void 0,
+                                          disabled: !P.has(e.id) && H,
                                       },
                                       e.id,
                                   ),
@@ -248,10 +248,10 @@ function V(e) {
                     : null,
                 (0, l.jsx)(r.D, {
                     layout: "horizontal",
-                    label: D.intl.string(P.default.Xd2NFi),
-                    description: D.intl.string(P.default.G91SYQ),
+                    label: D.intl.string(L.default.Xd2NFi),
+                    description: D.intl.string(L.default.G91SYQ),
                     children: (0, l.jsx)(o.m, {
-                        text: D.intl.formatToPlainString(P.default["0s2ICk"], { noMicTagName: v.Dg }),
+                        text: D.intl.formatToPlainString(L.default["0s2ICk"], { noMicTagName: v.Dg }),
                         shouldShow: null == W,
                         asContainer: !0,
                         children: (0, l.jsx)(c.d, { checked: $, onChange: es, disabled: q }),

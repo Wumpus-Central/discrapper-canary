@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(424170),
     b = n(274652),
     I = n(31717),
-    v = n(914905),
-    N = n(650583),
+    N = n(914905),
+    v = n(650583),
     T = n(375708),
     j = n(40974);
 function k(e) {
@@ -41,10 +41,10 @@ function k(e) {
         R = i.useCallback(() => {
             u(!0);
         }, []),
-        w = i.useCallback(() => {
+        O = i.useCallback(() => {
             u(!1);
         }, []),
-        O = i.useCallback(
+        w = i.useCallback(
             (e, l) => {
                 if (p.length > 0 && !k([e.name])) return _();
                 let i = { id: n.name, file: e, platform: b.x.WEB, origin: l };
@@ -56,26 +56,26 @@ function k(e) {
             (e) => {
                 u(!1);
                 let t = e.dataTransfer?.files[0];
-                null != t && O(t, "drag_drop");
+                null != t && w(t, "drag_drop");
             },
-            [O],
+            [w],
         );
     return (i.useEffect(() => {
         let e = m.current;
         return (
             null == c &&
                 (e?.addEventListener("dragover", R, !1),
-                e?.addEventListener("dragleave", w, !1),
+                e?.addEventListener("dragleave", O, !1),
                 e?.addEventListener("drop", L, !1)),
             () => {
                 (e?.removeEventListener("dragover", R, !1),
-                    e?.removeEventListener("dragleave", w, !1),
+                    e?.removeEventListener("dragleave", O, !1),
                     e?.removeEventListener("drop", L, !1));
             }
         );
-    }, [c, R, w, L]),
+    }, [c, R, O, L]),
     null != c)
-        ? (0, l.jsx)(v.A, {
+        ? (0, l.jsx)(N.A, {
               channelId: t,
               upload: c,
               keyboardModeEnabled: r,
@@ -98,7 +98,7 @@ function k(e) {
               channelId: t,
               keyboardModeEnabled: r,
               onKeyDown: function (e) {
-                  e.key === N.dh.ENTER && (e.preventDefault(), a.current?.activateUploadDialogue());
+                  e.key === v.dh.ENTER && (e.preventDefault(), a.current?.activateUploadDialogue());
               },
               className: s()(j.xd, { [j.LB]: o }),
               draftType: I.C.SlashCommand,
@@ -122,7 +122,7 @@ function k(e) {
                                   ref: a,
                                   onChange: function (e) {
                                       let n = e.currentTarget?.files?.[0];
-                                      null != t && null != n && (O(n, "file_picker"), (e.currentTarget.value = ""));
+                                      null != t && null != n && (w(n, "file_picker"), (e.currentTarget.value = ""));
                                   },
                                   multiple: !1,
                                   filters: p.length > 0 ? [{ name: "", extensions: p }] : void 0,
@@ -138,8 +138,8 @@ function k(e) {
 }
 var _ = n(652215),
     R = n(714731),
-    w = n(969490);
-let O = [];
+    O = n(969490);
+let w = [];
 function L(e) {
     let { channelId: t, type: n, ignoreUploadId: r, smallAttachments: S = !1 } = e,
         y = (0, u.bG)([m.Ay], () => m.Ay.keyboardModeEnabled),
@@ -148,14 +148,14 @@ function L(e) {
         {
             isApplicationCommand: b,
             commandOptions: I,
-            commandOptionStates: N,
+            commandOptionStates: v,
         } = (0, u.cf)([p.A], () => {
             let e = p.A.getActiveCommand(t);
-            if (null == e) return { isApplicationCommand: !1, commandOptions: O, commandOptionStates: null };
+            if (null == e) return { isApplicationCommand: !1, commandOptions: w, commandOptionStates: null };
             let n = p.A.getOptionStates(t);
             return { isApplicationCommand: !0, commandOptions: e.options, commandOptionStates: n };
         }),
-        T = i.useMemo(() => I?.filter((e) => e.type === h.n4.ATTACHMENT && N?.[e.name]?.hasValue) ?? [], [I, N]),
+        T = i.useMemo(() => I?.filter((e) => e.type === h.n4.ATTACHMENT && v?.[e.name]?.hasValue) ?? [], [I, v]),
         [j, L] = i.useState([]);
     i.useEffect(() => {
         function e() {
@@ -199,12 +199,12 @@ function L(e) {
                       return (0, l.jsx)("ul", {
                           ref: i,
                           ...r,
-                          className: s()(R.I, w.KK),
+                          className: s()(R.I, O.KK),
                           children: b
                               ? T.map((e) => (0, l.jsx)(k, { channelId: t, keyboardModeEnabled: y, option: e }, e.name))
                               : U.map((e) =>
                                     (0, l.jsx)(
-                                        v.A,
+                                        N.A,
                                         {
                                             channelId: t,
                                             draftType: n.drafts.type,

@@ -38,7 +38,7 @@ function v() {
         0 !== T && (clearInterval(T), (T = 0)),
         d.Ay.useNewNotifications &&
             (T = setInterval(() => {
-                M() && D.emitChange();
+                M() && R.emitChange();
             }, 15 * c.A.Millis.SECOND)),
         !1
     );
@@ -71,7 +71,7 @@ function x(e, t) {
         )
     );
 }
-class R extends l.Ay.PersistedStore {
+class D extends l.Ay.PersistedStore {
     static displayName = "UnreadSettingNoticeStore2";
     static persistKey = "UnreadSettingNoticeStore2";
     initialize(e) {
@@ -105,7 +105,7 @@ class R extends l.Ay.PersistedStore {
         );
     }
 }
-let D = new R(r.h, {
+let R = new D(r.h, {
         CHANNEL_SELECT: function () {
             let e = M();
             return ((_ = u.Ay.getChannelId()), (N = Date.now()), e);
@@ -125,4 +125,4 @@ let D = new R(r.h, {
             ((t.lastActionTime = Date.now()), t.numSends++);
         },
     }),
-    O = D;
+    O = R;

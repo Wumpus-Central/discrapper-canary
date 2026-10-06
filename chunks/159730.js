@@ -248,8 +248,8 @@ var _ = n(462180),
     y = n(366811),
     L = n(734057),
     x = n(71393),
-    R = n(287809),
-    D = n(486020),
+    D = n(287809),
+    R = n(486020),
     O = n(316386);
 function w() {
     let { guildId: e, channelId: t } = (0, y.A)((e) => {
@@ -258,9 +258,9 @@ function w() {
         }, _.x),
         n = (0, d.bG)([x.A], () => x.A.getGuild(e)),
         l = (0, d.bG)([L.A], () => (null == n ? L.A.getChannel(t) : null)),
-        r = (0, d.bG)([R.default], () => R.default.getCurrentUser()),
+        r = (0, d.bG)([D.default], () => D.default.getCurrentUser()),
         s = null != l ? (0, M.Y)(l) : null,
-        a = null != r ? r.getAvatarURL(e, 80) : D.vI["0"],
+        a = null != r ? r.getAvatarURL(e, 80) : R.vI["0"],
         o = (0, i.jsx)(N.eu, { src: a, "aria-hidden": !0, size: T._3.SIZE_80, className: O.HT }),
         u = null;
     return (
