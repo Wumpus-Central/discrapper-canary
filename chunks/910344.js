@@ -28,18 +28,17 @@ let E = "u" < typeof window ? m.t : (window.ResizeObserver ?? m.t),
                           l.get(t)?.(e);
                       });
                   })),
-        function (e) {
+        r.forwardRef(function (e, t) {
             let {
-                    children: t,
-                    className: n,
-                    onResize: o,
-                    contentClassName: d,
-                    onScroll: u,
-                    dir: h = "ltr",
-                    fade: m = !1,
-                    customTheme: E = !1,
-                    style: S,
-                    ref: I,
+                    children: n,
+                    className: o,
+                    onResize: d,
+                    contentClassName: u,
+                    onScroll: h,
+                    dir: m = "ltr",
+                    fade: E = !1,
+                    customTheme: S = !1,
+                    style: I,
                     ...j
                 } = e,
                 y = r.useRef(null),
@@ -48,7 +47,7 @@ let E = "u" < typeof window ? m.t : (window.ResizeObserver ?? m.t),
                 { scrollerRef: T, getScrollerState: N } = (0, A.A)(),
                 M = (0, f.A)(T);
             r.useImperativeHandle(
-                I,
+                t,
                 () => ({
                     getScrollerNode: () => T.current,
                     isScrolling: () => null != y.current,
@@ -63,32 +62,32 @@ let E = "u" < typeof window ? m.t : (window.ResizeObserver ?? m.t),
                         (y.current = setTimeout(() => {
                             ((y.current = null), b(!1));
                         }, 200)),
-                        null != u && u(e));
+                        null != h && h(e));
                 },
-                [u],
+                [h],
             );
             return (
                 r.useEffect(() => () => clearTimeout(y.current), []),
-                (0, p.A)({ ref: T, key: "container", onUpdate: o, resizeObserver: i, listenerMap: l }),
-                (0, p.A)({ ref: _, key: "content", onUpdate: o, resizeObserver: i, listenerMap: l }),
+                (0, p.A)({ ref: T, key: "container", onUpdate: d, resizeObserver: i, listenerMap: l }),
+                (0, p.A)({ ref: _, key: "content", onUpdate: d, resizeObserver: i, listenerMap: l }),
                 (0, a.jsx)("div", {
                     ref: T,
-                    className: c()(n, { [C.Rv]: m, [C.D8]: E, [s]: !0, [C.fs]: !0, [C.qw]: v && m }),
-                    style: S,
-                    dir: h,
+                    className: c()(o, { [C.Rv]: E, [C.D8]: S, [s]: !0, [C.fs]: !0, [C.qw]: v && E }),
+                    style: I,
+                    dir: m,
                     onScroll: R,
                     ...j,
                     children: (0, a.jsx)(g.xp, {
                         containerRef: _,
                         children: (0, a.jsxs)("div", {
                             ref: _,
-                            className: c()(d, C.Qs),
-                            children: [t, v && (0, a.jsx)("div", { className: C.X3 })],
+                            className: c()(u, C.Qs),
+                            children: [n, v && (0, a.jsx)("div", { className: C.X3 })],
                         }),
                     }),
                 })
             );
-        });
+        }));
 var I = n(312138),
     j = n(737992),
     y = n(148494),

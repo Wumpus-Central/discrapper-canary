@@ -1,4 +1,4 @@
-i.d(e, { f: () => S });
+i.d(e, { f: () => y });
 var s = i(446837),
     n = i(477900),
     l = i(582128),
@@ -257,7 +257,7 @@ var f = i(789279),
     v = i(751591),
     G = i(559106),
     C = i(465410);
-function y(t, e, i) {
+function w(t, e, i) {
     let s = new Map(),
         r = new i((t) => {
             t.forEach((t) => {
@@ -265,34 +265,33 @@ function y(t, e, i) {
                 s.get(e)?.(t);
             });
         });
-    return function (i) {
+    return (0, l.forwardRef)(function (i, u) {
         let {
-                onScroll: u,
-                dir: a = "ltr",
+                onScroll: a,
+                dir: w = "ltr",
                 sections: y,
                 columns: S,
-                getItemKey: w,
-                getItemHeight: M,
-                getSectionHeight: I,
-                chunkSize: x,
-                renderSection: R,
-                renderItem: P,
-                getSectionProps: _,
-                itemGutter: k,
-                removeEdgeItemGutters: W,
-                sectionGutter: L,
-                padding: z,
-                paddingVertical: V,
-                paddingHorizontal: A,
-                scrollbarGutter: E = "stable",
-                fade: D = !1,
-                className: j,
-                style: F,
-                maxContentWidth: K,
-                renderAccessory: O,
-                onItemVisibilityChange: T,
-                disableFocusRingScope: B = !1,
-                ref: N,
+                getItemKey: M,
+                getItemHeight: I,
+                getSectionHeight: x,
+                chunkSize: R,
+                renderSection: P,
+                renderItem: _,
+                getSectionProps: k,
+                itemGutter: W,
+                removeEdgeItemGutters: L,
+                sectionGutter: z,
+                padding: V,
+                paddingVertical: A,
+                paddingHorizontal: E,
+                scrollbarGutter: D = "stable",
+                fade: j = !1,
+                className: F,
+                style: K,
+                maxContentWidth: O,
+                renderAccessory: T,
+                onItemVisibilityChange: B,
+                disableFocusRingScope: N = !1,
                 ...q
             } = i,
             $ = l.useRef(null),
@@ -327,11 +326,11 @@ function y(t, e, i) {
                         dir: G,
                     } = t,
                     C = (0, g.A)(),
-                    y = (0, l.useRef)(p),
-                    [S] = (0, l.useState)(() => new c()),
-                    w = h(),
-                    M = Math.min(u ?? 1 / 0, w.offsetWidth),
-                    I = null != u ? Math.max(0, w.offsetWidth - u) : 0,
+                    w = (0, l.useRef)(p),
+                    [y] = (0, l.useState)(() => new c()),
+                    S = h(),
+                    M = Math.min(u ?? 1 / 0, S.offsetWidth),
+                    I = null != u ? Math.max(0, S.offsetWidth - u) : 0,
                     {
                         dirty: x,
                         chunkStart: R,
@@ -339,11 +338,11 @@ function y(t, e, i) {
                         forceUpdateOnChunkChange: _,
                     } = (0, m.A)({ chunkSize: o, getScrollerState: h, forceUpdate: C });
                 return (
-                    (y.current = (0, l.useMemo)(
+                    (w.current = (0, l.useMemo)(
                         () =>
                             x > 0
-                                ? y.current
-                                : (S.mergeProps({
+                                ? w.current
+                                : (y.mergeProps({
                                       sections: e,
                                       columns: i,
                                       getItemKey: s,
@@ -359,31 +358,31 @@ function y(t, e, i) {
                                       marginLeft: I / 2,
                                       dir: G,
                                   }),
-                                  S.computeVisibleSections(Math.max(0, R * o), P * o),
-                                  S.getState()),
-                        [x, S, e, i, s, n, r, R, P, o, d, a, f, b, H, v, M, I, G],
+                                  y.computeVisibleSections(Math.max(0, R * o), P * o),
+                                  y.getState()),
+                        [x, y, e, i, s, n, r, R, P, o, d, a, f, b, H, v, M, I, G],
                     )),
-                    { ...y.current, masonryComputer: S, forceUpdateOnChunkChange: _, forceUpdate: C }
+                    { ...w.current, masonryComputer: y, forceUpdateOnChunkChange: _, forceUpdate: C }
                 );
             })({
                 sections: y,
                 columns: S,
-                getItemKey: w,
-                getItemHeight: M,
-                getSectionHeight: I,
-                chunkSize: x,
-                itemGutter: k,
-                removeEdgeItemGutters: W,
-                sectionGutter: L,
-                padding: z,
-                paddingVertical: V,
-                paddingHorizontal: A,
+                getItemKey: M,
+                getItemHeight: I,
+                getSectionHeight: x,
+                chunkSize: R,
+                itemGutter: W,
+                removeEdgeItemGutters: L,
+                sectionGutter: z,
+                padding: V,
+                paddingVertical: A,
+                paddingHorizontal: E,
                 getScrollerState: tt,
-                dir: a,
-                maxBufferWidth: K,
+                dir: w,
+                maxBufferWidth: O,
             });
         l.useEffect(() => {
-            (null != T &&
+            (null != B &&
                 (function (t, e, i) {
                     let s = {},
                         n = {};
@@ -413,9 +412,9 @@ function y(t, e, i) {
                                 }) || i(l[t][1], l[t][2], !1);
                             }
                         }
-                })(tn, U.current, T),
+                })(tn, U.current, B),
                 (U.current = tn));
-        }, [tn, T]);
+        }, [tn, B]);
         let th = (0, l.useCallback)(
                 function () {
                     let t = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
@@ -429,7 +428,7 @@ function y(t, e, i) {
             tc = l.useCallback(() => th(), [th]);
         ((0, b.A)({ ref: X, key: "container", onUpdate: tc, resizeObserver: r, listenerMap: s }),
             (0, l.useImperativeHandle)(
-                N,
+                u,
                 () => ({
                     getScrollerNode: () => X.current,
                     getItemGrid: td,
@@ -446,9 +445,9 @@ function y(t, e, i) {
                     ($.current = setTimeout(() => {
                         (($.current = null), J(!1));
                     }, 200)),
-                    null != u && u(t));
+                    null != a && a(t));
             },
-            [u, th],
+            [a, th],
         );
         return (
             l.useLayoutEffect(() => {
@@ -457,11 +456,11 @@ function y(t, e, i) {
             (0, n.jsxs)("div", {
                 ref: X,
                 onScroll: tg,
-                className: o()(j, !1 === E ? void 0 : "stable" === E ? C.x2 : C.GV, { [t]: !0, [e]: D, [C.qw]: Z }),
-                style: (0, v.Ay)(F),
+                className: o()(F, !1 === D ? void 0 : "stable" === D ? C.x2 : C.GV, { [t]: !0, [e]: j, [C.qw]: Z }),
+                style: (0, v.Ay)(K),
                 ...q,
                 children: [
-                    O?.(tl) ?? null,
+                    T?.(tl) ?? null,
                     (0, l.useMemo)(() => {
                         let t = (0, n.jsx)("div", {
                             style: { height: tl },
@@ -472,7 +471,7 @@ function y(t, e, i) {
                                     i = ti[t],
                                     s = tn[t],
                                     l = ti[d(e)],
-                                    r = _?.(e);
+                                    r = k?.(e);
                                 return null != i && null != s
                                     ? (0, n.jsxs)(
                                           "div",
@@ -480,11 +479,11 @@ function y(t, e, i) {
                                               ...r,
                                               style: { ...i, ...(r?.style ?? {}) },
                                               children: [
-                                                  null != R && null != l && R(e, l, t),
+                                                  null != P && null != l && P(e, l, t),
                                                   s.map((t) => {
                                                       let [e, i, s] = t,
                                                           n = ti[e];
-                                                      return null != n ? P(i, s, n, e, ts) : null;
+                                                      return null != n ? _(i, s, n, e, ts) : null;
                                                   }),
                                               ],
                                           },
@@ -493,12 +492,12 @@ function y(t, e, i) {
                                     : null;
                             }),
                         });
-                        return B ? t : (0, n.jsx)(G.xp, { containerRef: Q, children: t });
-                    }, [tn, P, R, ti, tl, _, ts, B]),
+                        return N ? t : (0, n.jsx)(G.xp, { containerRef: Q, children: t });
+                    }, [tn, _, P, ti, tl, k, ts, N]),
                 ],
             })
         );
-    };
+    });
 }
-let S = y(C.yL, C.Rv, window.ResizeObserver ?? s.t);
-y(C.qZ, C.Rv, window.ResizeObserver ?? s.t);
+let y = w(C.yL, C.Rv, window.ResizeObserver ?? s.t);
+w(C.qZ, C.Rv, window.ResizeObserver ?? s.t);

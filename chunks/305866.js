@@ -6,43 +6,42 @@ var i = n(477900),
     l = n(707554),
     o = n(559106),
     d = n(989395);
-let c = r.createContext({ inDialog: void 0 });
-function u(e) {
-    let { ref: t, ...n } = e,
-        { children: u, impressionType: _, impression: E, disableTrack: A, returnRef: h, ...f } = n,
-        I = r.useRef(null),
-        p = r.useRef(null),
-        [T, m] = r.useState(!1),
-        g = T ? p : I;
-    ((0, s.tj)(g, { returnRef: h }),
-        r.useContext(d.A)(
-            { type: _, name: E?.impressionName, properties: E?.impressionProperties },
-            { disableTrack: A },
-        ));
-    let S = r.useCallback(
-            (e) => {
-                ((I.current = e), "function" == typeof t ? t(e) : null != t && (t.current = e));
-            },
-            [t],
-        ),
-        N = r.useCallback(
-            (e) => {
-                T !== e && m(e);
-            },
-            [T],
-        );
-    return (0, i.jsx)(c.Provider, {
-        value: { inDialog: !0, setFocusLockDisabled: N },
-        children: (0, i.jsxs)("div", {
-            ...f,
-            ref: S,
-            role: "dialog",
-            tabIndex: -1,
-            "aria-modal": !0,
-            children: [
-                (0, i.jsx)(a.zR, {}),
-                (0, i.jsx)(l.F, { forceLevel: 1, children: (0, i.jsx)(o.xp, { containerRef: I, children: u }) }),
-            ],
-        }),
+let c = r.createContext({ inDialog: void 0 }),
+    u = r.forwardRef(function (e, t) {
+        let { children: n, impressionType: u, impression: _, disableTrack: E, returnRef: A, ...h } = e,
+            f = r.useRef(null),
+            I = r.useRef(null),
+            [p, T] = r.useState(!1),
+            m = p ? I : f;
+        ((0, s.tj)(m, { returnRef: A }),
+            r.useContext(d.A)(
+                { type: u, name: _?.impressionName, properties: _?.impressionProperties },
+                { disableTrack: E },
+            ));
+        let g = r.useCallback(
+                (e) => {
+                    ((f.current = e), "function" == typeof t ? t(e) : null != t && (t.current = e));
+                },
+                [t],
+            ),
+            S = r.useCallback(
+                (e) => {
+                    p !== e && T(e);
+                },
+                [p],
+            );
+        return (0, i.jsx)(c.Provider, {
+            value: { inDialog: !0, setFocusLockDisabled: S },
+            children: (0, i.jsxs)("div", {
+                ...h,
+                ref: g,
+                role: "dialog",
+                tabIndex: -1,
+                "aria-modal": !0,
+                children: [
+                    (0, i.jsx)(a.zR, {}),
+                    (0, i.jsx)(l.F, { forceLevel: 1, children: (0, i.jsx)(o.xp, { containerRef: f, children: n }) }),
+                ],
+            }),
+        });
     });
-}

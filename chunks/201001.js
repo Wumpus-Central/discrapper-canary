@@ -27,43 +27,42 @@ function m(e, t, n, a) {
                           l.get(t)?.(e);
                       });
                   });
-    return function (a) {
-        let g,
-            S,
+    return r.forwardRef(function (a, g) {
+        let S,
+            N,
             {
-                className: N,
-                onScroll: C,
-                onResize: O = null,
-                onContentResize: R = null,
-                sections: L,
-                sectionHeight: y,
-                rowHeight: D,
-                footerHeight: v = 0,
-                sidebarHeight: b,
-                listHeaderHeight: M = 0,
-                renderSection: P,
-                renderRow: U,
-                renderFooter: w,
-                renderSidebar: G,
-                renderListHeader: x,
-                stickyListHeader: k,
-                wrapSection: F,
-                getAnchorId: B,
-                paddingTop: V,
-                paddingBottom: H,
-                scrollbarGutter: j = "stable",
-                fade: W = !1,
-                customTheme: Y = !1,
-                chunkSize: K,
-                style: $,
-                innerId: z,
-                innerRole: X,
-                innerAriaLabel: Z,
-                innerAriaMultiselectable: q,
-                innerAriaOrientation: Q,
-                innerClassName: J,
-                innerTag: ee = "div",
-                ref: et,
+                className: C,
+                onScroll: O,
+                onResize: R = null,
+                onContentResize: L = null,
+                sections: y,
+                sectionHeight: D,
+                rowHeight: v,
+                footerHeight: b = 0,
+                sidebarHeight: M,
+                listHeaderHeight: P = 0,
+                renderSection: U,
+                renderRow: w,
+                renderFooter: G,
+                renderSidebar: x,
+                renderListHeader: k,
+                stickyListHeader: F,
+                wrapSection: B,
+                getAnchorId: V,
+                paddingTop: H,
+                paddingBottom: j,
+                scrollbarGutter: W = "stable",
+                fade: Y = !1,
+                customTheme: K = !1,
+                chunkSize: $,
+                style: z,
+                innerId: X,
+                innerRole: Z,
+                innerAriaLabel: q,
+                innerAriaMultiselectable: Q,
+                innerAriaOrientation: J,
+                innerClassName: ee,
+                innerTag: et = "div",
                 ...en
             } = a,
             ei = r.useRef(null),
@@ -141,23 +140,23 @@ function m(e, t, n, a) {
                     { ...y, listComputer: T, forceUpdateOnChunkChange: N, anchor: O, isSidebarVisible: L }
                 );
             })({
-                sections: L,
-                sectionHeight: y,
-                rowHeight: D,
-                footerHeight: v,
-                sidebarHeight: b,
-                listHeaderHeight: M,
-                paddingTop: V,
-                paddingBottom: H,
-                chunkSize: K,
+                sections: y,
+                sectionHeight: D,
+                rowHeight: v,
+                footerHeight: b,
+                sidebarHeight: M,
+                listHeaderHeight: P,
+                paddingTop: H,
+                paddingBottom: j,
+                chunkSize: $,
                 getScrollerState: ed,
-                getAnchorId: B,
+                getAnchorId: V,
             }),
             eI = (0, f.A)(el),
-            ep = r.useRef(O),
-            eT = r.useRef(R);
+            ep = r.useRef(R),
+            eT = r.useRef(L);
         r.useLayoutEffect(() => {
-            ((ep.current = O), (eT.current = R));
+            ((ep.current = R), (eT.current = L));
         });
         let em = r.useCallback(
                 function () {
@@ -170,18 +169,18 @@ function m(e, t, n, a) {
         ((0, c.A)({ ref: el, onUpdate: eg, key: "container", resizeObserver: m, listenerMap: l }),
             (0, c.A)({ ref: er, onUpdate: () => eT.current?.(), key: "content", resizeObserver: m, listenerMap: l }));
         let eS =
-                ((g = r.useRef(e_)),
+                ((S = r.useRef(e_)),
                 r.useEffect(() => {
-                    g.current = e_;
+                    S.current = e_;
                 }, [e_]),
-                r.useCallback(() => g.current, [])),
+                r.useCallback(() => S.current, [])),
             eN =
-                ((S = r.useRef(L)),
+                ((N = r.useRef(y)),
                 r.useEffect(() => {
-                    S.current = L;
-                }, [L]),
+                    N.current = y;
+                }, [y]),
                 r.useCallback((e) => {
-                    let { current: t } = S,
+                    let { current: t } = N,
                         n = 0;
                     for (let i = 0; i < t.length; i++) {
                         let r = t[i];
@@ -191,7 +190,7 @@ function m(e, t, n, a) {
                     return [0, 0];
                 }, []));
         r.useImperativeHandle(
-            et,
+            g,
             () => ({
                 getScrollerNode: () => el.current,
                 getScrollerState: ed,
@@ -230,14 +229,14 @@ function m(e, t, n, a) {
                     (ei.current = setTimeout(() => {
                         ((ei.current = null), es(!1));
                     }, 200)),
-                    null != C && C(e));
+                    null != O && O(e));
             },
-            [C, em],
+            [O, em],
         );
         return (
             r.useLayoutEffect(() => {
                 2 !== eo.current.dirty && (eo.current.dirty = 2);
-            }, [P, U, w, F, eu, ec, eo]),
+            }, [U, w, G, B, eu, ec, eo]),
             !(function (e) {
                 let {
                     scrollerRef: t,
@@ -276,31 +275,31 @@ function m(e, t, n, a) {
                 anchor: ef,
                 getScrollerState: ed,
                 listComputer: eA,
-                getAnchorId: B,
+                getAnchorId: V,
                 totalHeight: eu,
             }),
             (0, i.jsxs)("div", {
                 ref: el,
                 onScroll: eC,
-                className: s()(N, !1 === j ? void 0 : "stable" === j ? T.x2 : T.GV, {
+                className: s()(C, !1 === W ? void 0 : "stable" === W ? T.x2 : T.GV, {
                     [e]: !0,
-                    [t]: W,
-                    [n]: Y,
+                    [t]: Y,
+                    [n]: K,
                     [T.qw]: ea,
                 }),
-                style: (0, p.Ay)($),
+                style: (0, p.Ay)(z),
                 ...en,
                 children: [
                     r.useMemo(
                         () =>
-                            (0, i.jsx)(ee, {
-                                id: z,
-                                role: X,
-                                "aria-label": Z,
-                                "aria-multiselectable": q,
-                                "aria-orientation": Q,
+                            (0, i.jsx)(et, {
+                                id: X,
+                                role: Z,
+                                "aria-label": q,
+                                "aria-multiselectable": Q,
+                                "aria-orientation": J,
                                 style: { height: eu },
-                                className: s()(T.Qs, J),
+                                className: s()(T.Qs, ee),
                                 ref: er,
                                 children: (0, i.jsx)(d.xp, {
                                     containerRef: er,
@@ -354,17 +353,17 @@ function m(e, t, n, a) {
                                         );
                                     })({
                                         items: e_,
-                                        renderListHeader: x,
-                                        stickyListHeader: k,
-                                        renderSection: P,
-                                        renderRow: U,
-                                        renderFooter: w,
-                                        wrapSection: F,
+                                        renderListHeader: k,
+                                        stickyListHeader: F,
+                                        renderSection: U,
+                                        renderRow: w,
+                                        renderFooter: G,
+                                        wrapSection: B,
                                         spacerTop: ec,
                                     }),
                                 }),
                             }),
-                        [ee, z, X, Z, q, Q, eu, J, e_, x, k, P, U, w, F, ec],
+                        [et, X, Z, q, Q, J, eu, ee, e_, k, F, U, w, G, B, ec],
                     ),
                     r.useMemo(
                         () =>
@@ -373,14 +372,14 @@ function m(e, t, n, a) {
                                 return null == n || null == t ? null : t(r, i);
                             })({
                                 isSidebarVisible: eE,
-                                renderSidebar: G,
-                                sidebarHeight: b,
+                                renderSidebar: x,
+                                sidebarHeight: M,
                                 isListVisible: 0 !== e_.length,
                             }),
-                        [eE, G, b, e_.length],
+                        [eE, x, M, e_.length],
                     ),
                 ],
             })
         );
-    };
+    });
 }

@@ -1,11 +1,11 @@
-n.d(t, { D: () => u });
-var i = n(477900);
-n(582128);
-var r = n(503698),
-    a = n.n(r),
-    s = n(834730),
-    l = n(460890);
-let o = new Map([
+n.d(t, { D: () => _ });
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(834730),
+    o = n(460890);
+let d = new Map([
     [
         "mana-type-consolidation",
         {
@@ -85,27 +85,27 @@ let o = new Map([
         },
     ],
 ]);
-var d = n(707554),
-    c = n(257530);
-function u(e) {
-    let { variant: t, className: n, ref: r, ...u } = e,
-        _ = (0, d.$)(),
+var c = n(707554),
+    u = n(257530);
+let _ = r.forwardRef(function (e, t) {
+    let { variant: n, className: r, ...a } = e,
+        _ = (0, c.$)(),
         E = `h${Math.min(_, 6)}`,
         A = (function (e, t) {
-            var n = (0, l.G9)().experiments?.enabledExperiments ?? [];
-            for (let [i, r] of o) {
+            var n = (0, o.G9)().experiments?.enabledExperiments ?? [];
+            for (let [i, r] of d) {
                 if (!n.includes(i)) continue;
                 let a = (t ? r.heading.get(e) : void 0) ?? r.text.get(e);
                 if (null != a) return a;
             }
             return e;
-        })(t, !0);
-    return (0, i.jsx)(s.E, {
-        ref: r,
+        })(n, !0);
+    return (0, i.jsx)(l.E, {
+        ref: t,
         variant: A,
         tag: E,
-        className: a()(c.f, n),
+        className: s()(u.f, r),
         ...(_ > 6 ? { "data-excessive-heading-level": _ } : {}),
-        ...u,
+        ...a,
     });
-}
+});

@@ -10,32 +10,38 @@ var i = n(477900),
     u = n(834730),
     _ = n(650583),
     E = n(516580);
-let A = { side: E.Cf, top: E.Mn, "top-pill": E.vO };
-function h(e) {
-    let { className: t, onClick: n, children: r, "aria-expanded": a, "aria-controls": l, ref: o } = e;
-    return null == n
-        ? (0, i.jsx)("div", {
-              className: s()(E.wx, t),
-              children: (0, i.jsx)(u.E, { variant: "eyebrow", color: "none", className: E.TK, ref: o, children: r }),
-          })
-        : (0, i.jsx)(c.D, {
-              innerRef: o,
-              className: s()(E.wx, t),
-              onClick: n,
-              "aria-expanded": a,
-              "aria-controls": l,
-              focusProps: { offset: { top: -6 } },
-              children: (0, i.jsx)(u.E, { variant: "eyebrow", color: "none", className: E.TK, children: r }),
-          });
-}
+let A = { side: E.Cf, top: E.Mn, "top-pill": E.vO },
+    h = r.forwardRef(function (e, t) {
+        let { className: n, onClick: r, children: a, "aria-expanded": l, "aria-controls": o } = e;
+        return null == r
+            ? (0, i.jsx)("div", {
+                  className: s()(E.wx, n),
+                  children: (0, i.jsx)(u.E, {
+                      variant: "eyebrow",
+                      color: "none",
+                      className: E.TK,
+                      ref: t,
+                      children: a,
+                  }),
+              })
+            : (0, i.jsx)(c.D, {
+                  innerRef: t,
+                  className: s()(E.wx, n),
+                  onClick: r,
+                  "aria-expanded": l,
+                  "aria-controls": o,
+                  focusProps: { offset: { top: -6 } },
+                  children: (0, i.jsx)(u.E, { variant: "eyebrow", color: "none", className: E.TK, children: a }),
+              });
+    });
 function f(e) {
     let { style: t } = e;
     return (0, i.jsx)("div", { className: E.me, style: t });
 }
-let I = function (e) {
-    let { children: t, id: n, ref: r, ...a } = e;
-    return (0, i.jsx)("div", { ...a, ref: r, role: "tabpanel", id: p(n), tabIndex: -1, children: t });
-};
+let I = r.forwardRef(function (e, t) {
+    let { children: n, id: r, ...a } = e;
+    return (0, i.jsx)("div", { ...a, ref: t, role: "tabpanel", id: p(r), tabIndex: -1, children: n });
+});
 function p(e) {
     return `${e.replace(/\s+/g, "-").toLowerCase()}-tab`;
 }

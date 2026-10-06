@@ -9,46 +9,45 @@ var i = n(477900),
 function c(e) {
     return `${e.toFixed(0)}%`;
 }
-function u(e) {
-    let { ref: t, ...n } = e,
-        {
-            value: a,
-            minValue: u = 0,
-            maxValue: _ = 100,
-            tabIndex: E,
-            onChange: A,
-            onInteraction: h,
-            renderValue: f = c,
-            "aria-label": I,
-        } = n,
-        p = r.useRef(null),
-        T = r.useMemo(() => s().debounce(() => h?.(o.Q.SLIDER), 100), [h]);
+let u = r.forwardRef(function (e, t) {
+    let {
+            value: n,
+            minValue: a = 0,
+            maxValue: u = 100,
+            tabIndex: _,
+            onChange: E,
+            onInteraction: A,
+            renderValue: h = c,
+            "aria-label": f,
+        } = e,
+        I = r.useRef(null),
+        p = r.useMemo(() => s().debounce(() => A?.(o.Q.SLIDER), 100), [A]);
     return (
         r.useImperativeHandle(
             t,
-            () => ({ focus: () => p.current?.focus(), blur: () => p.current?.blur(), activate: () => !1 }),
+            () => ({ focus: () => I.current?.focus(), blur: () => I.current?.blur(), activate: () => !1 }),
             [],
         ),
         (0, i.jsx)("div", {
             className: d.x,
             children: (0, i.jsx)(l.A, {
-                ref: p,
+                ref: I,
                 mini: !0,
                 handleSize: 16,
                 className: d.a,
-                initialValue: a,
-                minValue: u,
-                maxValue: _,
-                tabIndex: E,
+                initialValue: n,
+                minValue: a,
+                maxValue: u,
+                tabIndex: _,
                 onValueChange: function (e) {
-                    (A(e), T());
+                    (E(e), p());
                 },
-                asValueChanges: A,
-                onValueRender: f,
+                asValueChanges: E,
+                onValueRender: h,
                 orientation: "horizontal",
                 consumeAxisOnly: !0,
-                "aria-label": I,
+                "aria-label": f,
             }),
         })
     );
-}
+});

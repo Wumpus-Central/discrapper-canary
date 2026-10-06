@@ -1,21 +1,21 @@
-n.d(t, { h: () => l });
-var i = n(477900);
-n(582128);
-var r = n(503698),
-    a = n.n(r),
-    s = n(129735);
-function l(e) {
-    let { color: t = "purple", offsetBottom: n = 0, children: r, ref: l, ...o } = e,
-        d = "object" == typeof t && null != t;
+n.d(t, { h: () => o });
+var i = n(477900),
+    r = n(582128),
+    a = n(503698),
+    s = n.n(a),
+    l = n(129735);
+let o = r.forwardRef(function (e, t) {
+    let { color: n = "purple", offsetBottom: r = 0, children: a, ...o } = e,
+        d = "object" == typeof n && null != n;
     return (0, i.jsx)("div", {
-        ref: l,
+        ref: t,
         ...o,
-        className: a()(s.container, d ? void 0 : s[t], o.className),
+        className: s()(l.container, d ? void 0 : l[n], o.className),
         style: {
             ...o.style,
-            ...(d ? { "--custom-gradient-color-start": t.start.css, "--custom-gradient-color-end": t.end.css } : {}),
-            "--custom-gradient-offset-bottom": `${100 * n}%`,
+            ...(d ? { "--custom-gradient-color-start": n.start.css, "--custom-gradient-color-end": n.end.css } : {}),
+            "--custom-gradient-offset-bottom": `${100 * r}%`,
         },
-        children: r,
+        children: a,
     });
-}
+});
