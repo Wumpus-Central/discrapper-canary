@@ -19,8 +19,8 @@ var i = n(17928),
     I = n(576705),
     N = n(575731),
     E = n(21241),
-    h = n(939496),
-    T = n(10862),
+    T = n(939496),
+    h = n(10862),
     C = n(652215),
     S = n(996988),
     v = n(375708),
@@ -28,7 +28,7 @@ var i = n(17928),
 let O = 3;
 function j(t) {
     let { user: e, guild: n, channel: j, onAction: P, onClose: R } = t,
-        { themeType: L } = (0, h.E)(),
+        { themeType: L } = (0, T.E)(),
         b = (0, N.A)(j),
         M = (0, g.Ay)(j),
         { canViewChannel: U, canConnect: D } = (0, i.cf)([I.A], () => ({
@@ -60,7 +60,7 @@ function j(t) {
                     (0, l.jsxs)("div", {
                         className: y.FH,
                         children: [
-                            (0, l.jsx)(T.A, {
+                            (0, l.jsx)(h.A, {
                                 channel: j,
                                 size: "xxs",
                                 color: d.A.colors.TEXT_SUBTLE,

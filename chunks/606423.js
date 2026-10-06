@@ -1,40 +1,40 @@
-(e.d(n, { Z: () => D }), e(321073));
-var i = e(477900),
-    r = e(582128),
-    l = e(284009),
-    a = e.n(l),
-    s = e(17928),
-    o = e(189213),
-    u = e(403581),
-    c = e(903209),
-    d = e(287809),
-    m = e(158045),
-    f = e(477421),
-    p = e(137728),
-    C = e(816252),
-    g = e(473702),
-    h = e(916974),
-    x = e(88001),
-    y = e(148155),
-    P = e(375708),
-    v = e(298501);
+(n.d(e, { Z: () => D }), n(321073));
+var i = n(477900),
+    r = n(582128),
+    l = n(284009),
+    a = n.n(l),
+    s = n(17928),
+    o = n(189213),
+    u = n(403581),
+    c = n(903209),
+    d = n(287809),
+    m = n(158045),
+    f = n(477421),
+    p = n(137728),
+    C = n(816252),
+    g = n(473702),
+    x = n(916974),
+    h = n(88001),
+    y = n(148155),
+    P = n(375708),
+    v = n(298501);
 function E(t) {
-    let { churnUserDiscountOffer: n } = t;
-    return null == n
+    let { churnUserDiscountOffer: e } = t;
+    return null == e
         ? null
-        : (0, i.jsx)("div", { className: v.i, children: (0, i.jsx)(C._, { userDiscountOffer: n }) });
+        : (0, i.jsx)("div", { className: v.i, children: (0, i.jsx)(C._, { userDiscountOffer: e }) });
 }
 function D() {
     let {
             transitionState: t,
-            onClose: n,
-            premiumType: e,
+            onClose: e,
+            premiumType: n,
             setStep: l,
             churnUserDiscountOffer: C,
             isFetchingChurnDiscountOffer: v,
             planId: D,
             fullPrice: j,
-        } = (0, h.X)(),
+        } = (0, x.X)(),
         S = (0, s.bG)([d.default], () => {
             let t = d.default.getCurrentUser();
             return (a()(null != t, "ProfileItem: currentUser cannot be undefined"), t);
@@ -50,12 +50,12 @@ function D() {
             title: "",
             actions: [],
             onClose: async () => {
-                n();
+                e();
             },
         });
     let N = (0, m.Zb)(D),
         b = N ? P.intl.string(y.default.z2vO3h) : P.intl.string(P.t.PWq8TL),
-        M = N ? P.intl.formatToPlainString(y.default.stVlc6, { cooldownMonths: x.wl }) : P.intl.string(P.t.SOC4ML),
+        M = N ? P.intl.formatToPlainString(y.default.stVlc6, { cooldownMonths: h.wl }) : P.intl.string(P.t.SOC4ML),
         I = [],
         R = null != C && null != j;
     return (
@@ -66,7 +66,7 @@ function D() {
                   variant: "secondary",
                   icon: u.t,
               })
-            : I.push({ text: P.intl.string(P.t.rzVN6j), onClick: () => n(), variant: "secondary" }),
+            : I.push({ text: P.intl.string(P.t.rzVN6j), onClick: () => e(), variant: "secondary" }),
         I.push({
             text: A ? P.intl.string(P.t.PfnxqD) : P.intl.string(P.t["3PatSz"]),
             onClick: () => l(g.g.CONFIRM),
@@ -78,11 +78,11 @@ function D() {
             subtitle: M,
             actions: I,
             preview: R && (0, i.jsx)(E, { churnUserDiscountOffer: C }),
-            onClose: async () => n(),
+            onClose: async () => e(),
             children: (0, i.jsx)(p.l, {
                 currentUser: S,
-                premiumType: e,
-                onClose: n,
+                premiumType: n,
+                onClose: e,
                 isDowngrade: !1,
                 isPremiumRebrand: !0,
             }),

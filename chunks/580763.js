@@ -18,8 +18,8 @@ var l = n(477900),
     I = n(662010),
     N = n(623671),
     E = n(365185),
-    h = n(915089),
-    T = n(932413),
+    T = n(915089),
+    h = n(932413),
     C = n(345942),
     S = n(82149),
     v = n(92240),
@@ -207,7 +207,7 @@ function tI(t) {
 }
 var tN = n(626584),
     tE = n(652215);
-function th(t) {
+function tT(t) {
     let { user: e, activity: n, onAction: i } = t,
         { themeType: a } = (0, R.E)(),
         r = a === ta.d.MODAL_V2;
@@ -223,7 +223,7 @@ function th(t) {
           })
         : null;
 }
-var tT = n(573648),
+var th = n(573648),
     tC = n(968309),
     tS = n(30370);
 function tv(t) {
@@ -235,7 +235,7 @@ function tv(t) {
         ? null
         : (0, l.jsx)(X.FD, {
               icon: n,
-              text: Q.intl.formatToPlainString(Q.t.XWSHTb, { platform: tT.A.get(e).name }),
+              text: Q.intl.formatToPlainString(Q.t.XWSHTb, { platform: th.A.get(e).name }),
               fullWidth: !s,
               onClick: (t) => {
                   t.stopPropagation();
@@ -306,8 +306,8 @@ function tG(t) {
         { analyticsLocations: f } = (0, m.Ay)(g.A.USER_PROFILE_ACTIVITY_BUTTONS),
         x = (0, V.A)(n?.application_id),
         { fetched: _, canStartAuthorization: I, hasAlreadyLinked: N, startAuthorization: E } = (0, Z.RD)(r),
-        h = o === ta.d.MODAL || o === ta.d.MODAL_V2,
-        T = o === ta.d.POPOUT,
+        T = o === ta.d.MODAL || o === ta.d.MODAL_V2,
+        h = o === ta.d.POPOUT,
         C = o === ta.d.MODAL_V2 ? tr.g6 : tr.Zu,
         v =
             x.length > 0
@@ -324,7 +324,7 @@ function tG(t) {
                 : null,
         y = (function () {
             if (c)
-                return T && n?.type === tE.$pd.PLAYING && null != r
+                return h && n?.type === tE.$pd.PLAYING && null != r
                     ? (0, l.jsx)(J, { application: r, onAction: i, onClose: a })
                     : null;
             if (n?.buttons != null && n?.buttons.length >= 1)
@@ -334,7 +334,7 @@ function tG(t) {
                           children: [(0, l.jsx)(to, { user: e, activity: n, onAction: i }), v],
                       })
                     : (0, l.jsx)(to, { user: e, activity: n, onAction: i });
-            if (!d && u && null != r && !h) {
+            if (!d && u && null != r && !T) {
                 let t = (0, l.jsx)(tD.A, { application: r, onAction: i, onClose: a, analyticsLocations: f });
                 return null != v ? (0, l.jsxs)("div", { className: C, children: [t, v] }) : t;
             }
@@ -362,7 +362,7 @@ function tG(t) {
                 : (0, D.Ay)(n)
                   ? (0, l.jsx)(tx, { user: e, activity: n, onAction: i, onClose: a })
                   : (0, M.A)(n, tE.jUm.INSTANCE)
-                    ? (0, l.jsx)(th, { user: e, activity: n, onAction: i })
+                    ? (0, l.jsx)(tT, { user: e, activity: n, onAction: i })
                     : (0, S.Cy)(n)
                       ? (0, l.jsx)(tb, { activity: n, onAction: i, onClose: a })
                       : null;
@@ -393,8 +393,8 @@ function tJ(t) {
             onClose: D,
             appContext: G,
         } = t,
-        Y = (0, h.GV)(),
-        V = (0, h.GV)(),
+        Y = (0, T.GV)(),
+        V = (0, T.GV)(),
         { analyticsLocations: w } = (0, m.Ay)(g.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
         { themeType: k } = (0, R.E)(),
         W = (0, E.A)({ activity: i, user: e }),
@@ -562,7 +562,7 @@ function tJ(t) {
                         appContext: G,
                     }),
                 }),
-                (0, l.jsx)(T.A, {
+                (0, l.jsx)(h.A, {
                     applicationId: a?.id,
                     questContent: s.u.USER_PROFILE_ACTIVITY,
                     children: (t) => {

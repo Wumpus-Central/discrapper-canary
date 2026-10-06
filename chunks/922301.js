@@ -1,3 +1,3 @@
-n.d(t, { G: () => s });
-var l,
-    s = (((l = {})[(l.PLAIN = 0)] = "PLAIN"), (l[(l.STATIC = 1)] = "STATIC"), (l[(l.ANIMATED = 2)] = "ANIMATED"), l);
+l.d(t, { G: () => s });
+var n,
+    s = (((n = {})[(n.PLAIN = 0)] = "PLAIN"), (n[(n.STATIC = 1)] = "STATIC"), (n[(n.ANIMATED = 2)] = "ANIMATED"), n);

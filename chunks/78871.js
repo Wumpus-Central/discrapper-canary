@@ -1,4 +1,4 @@
-n.d(e, { QA: () => N, Rq: () => h, cy: () => E });
+n.d(e, { QA: () => N, Rq: () => T, cy: () => E });
 var l = n(477900);
 n(582128);
 var i = n(339350),
@@ -52,7 +52,7 @@ function E(t) {
     let n = (0, x.gF)(e.state, e.party);
     return null == n ? null : (0, l.jsx)(g.fM, { Icon: u.n, text: n });
 }
-function h(t) {
+function T(t) {
     let { activity: e } = t,
         n = (0, x.kR)(e.assets?.large_text);
     return null == n ? null : (0, l.jsx)(g.fM, { Icon: d.K, text: n });

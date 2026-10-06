@@ -18,8 +18,8 @@ var l = n(582128),
     I = n(946255),
     N = n(688810),
     E = n(429913),
-    h = n(878014),
-    T = n(25451),
+    T = n(878014),
+    h = n(25451),
     C = n(498642),
     S = n(71393),
     v = n(480595),
@@ -73,7 +73,7 @@ function Y(t) {
             () => null != n && null != n.application_id && L.A.getState(n.application_id, U.xL.JOIN) === U.eAD.LOADING,
         ),
         tn = (0, E.h)($),
-        tl = (0, T.X)(tn),
+        tl = (0, h.X)(tn),
         ti = (0, m.vG)({ userId: V.id, activity: n, channelId: q, application: tn }),
         ta = (0, i.bG)([f.A, S.A, C.A, O.A, j.Ay, p.A, y.A, v.A, P.A, c.Ay], () =>
             null != Y
@@ -183,7 +183,7 @@ function Y(t) {
             await e();
         }
     }
-    if ((ta === g.o.CANNOT_JOIN && !B) || (ta === g.o.CANNOT_JOIN && (0, h.D)(tn)) || (!td && !z && null == e))
+    if ((ta === g.o.CANNOT_JOIN && !B) || (ta === g.o.CANNOT_JOIN && (0, T.D)(tn)) || (!td && !z && null == e))
         return null;
     let tg = ta === g.o.CAN_JOIN ? G.intl.string(G.t.VJlc0S) : G.intl.string(G.t.OKsSCR);
     return (

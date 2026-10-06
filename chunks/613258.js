@@ -11,8 +11,8 @@ var l = n(477900),
     m = n(929283),
     h = n(758836),
     g = n(171934);
-let f = [],
-    x = [
+let x = [],
+    f = [
         "1212569433839636530",
         "1144308439720394944",
         "1228251144065777765",
@@ -56,7 +56,7 @@ function p(e) {
     let { peaking: t, transitioning: n, parentWidth: r } = e,
         [o, u] = s.useState(!1),
         [m] = s.useState(() =>
-            [...x]
+            [...f]
                 .sort(() => Math.random() - 0.5)
                 .map((e) => ({
                     skuId: e,
@@ -69,22 +69,22 @@ function p(e) {
                 })),
         ),
         p = (0, c.$)("shop_transition_jumble"),
-        v = s.useMemo(() => x, []),
-        _ = (0, d.hv)(p ? v : f, { needsCategory: !1 }),
-        b = s.useMemo(() => {
+        v = s.useMemo(() => f, []),
+        b = (0, d.hv)(p ? v : x, { needsCategory: !1 }),
+        _ = s.useMemo(() => {
             if (!p) return m;
             let e = m.filter((e) => {
-                let t = _[e.skuId]?.product;
+                let t = b[e.skuId]?.product;
                 return t?.items[0] != null && t.type === a.R.AVATAR_DECORATION;
             });
             return e.length > 0 ? e : m;
-        }, [p, m, _]),
+        }, [p, m, b]),
         C = s.useMemo(() => {
             if (null == r || r <= 0) return [];
             let e = Math.max(1, Math.floor(r / 130)),
                 t = r / e;
-            return Array.from({ length: e }, (e, n) => ({ config: b[n % b.length], baseLeft: n * t }));
-        }, [r, b]);
+            return Array.from({ length: e }, (e, n) => ({ config: _[n % _.length], baseLeft: n * t }));
+        }, [r, _]);
     return (
         s.useEffect(() => {
             n && setTimeout(() => u(!0), h.H1);
@@ -95,7 +95,7 @@ function p(e) {
                 let { config: s, baseLeft: r } = e;
                 return (0, l.jsx)(
                     E,
-                    { config: s, baseLeft: r, transitioning: n, resolvedProduct: _[s.skuId]?.product },
+                    { config: s, baseLeft: r, transitioning: n, resolvedProduct: b[s.skuId]?.product },
                     s.skuId + t,
                 );
             }),

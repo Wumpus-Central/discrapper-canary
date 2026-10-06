@@ -1,4 +1,4 @@
-n.d(t, { A: () => eL });
+n.d(t, { A: () => ek });
 var i,
     l,
     a = n(477900),
@@ -69,8 +69,8 @@ let j = {
 var M = (((l = {}).Empty = "empty"), (l.VerificationCode = "verification_code"), l),
     O = n(627575),
     w = n(17928),
-    L = n(155718),
-    k = n(379257),
+    k = n(155718),
+    L = n(379257),
     P = n(287809),
     D = n(430993),
     U = n(503698),
@@ -134,7 +134,7 @@ function es() {
         className: er.Q,
         children: b.intl.format(I.default.ifObbX, {
             handleAgeVerifyHook: () =>
-                k.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.PARENTAL_CONSENT_LOCKOUT }),
+                L.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.PARENTAL_CONSENT_LOCKOUT }),
         }),
     });
 }
@@ -408,8 +408,8 @@ let eb = {
                         text: "Consectetur adipiscing",
                         variant: "primary",
                         onClick: function () {
-                            n?.ageVerificationStatus === L.Tk.UNVERIFIED
-                                ? k.A.showAgeVerificationGetStartedModal({
+                            n?.ageVerificationStatus === k.Tk.UNVERIFIED
+                                ? L.A.showAgeVerificationGetStartedModal({
                                       entryPoint: f.q1.SAFETY_FLOWS,
                                       onClose: () => t({ type: M.Empty }),
                                   })
@@ -488,14 +488,14 @@ let eb = {
                         (0, K.P)((0, q.o)(b.intl.string(I.default["+QRSxc"]), Y.Ck.FAILURE));
                     }
                 }, [o]),
-                [L, k] = r.useState(_);
-            _ && !L && k(!0);
+                [k, L] = r.useState(_);
+            _ && !k && L(!0);
             let [U, F] = r.useState(!1),
                 G = r.useCallback(() => {
                     (F(!1), p());
                 }, [p]);
             (0, ei.A)(G);
-            let V = !L || U,
+            let V = !k || U,
                 H = V
                     ? b.intl.format(I.default["6GaRTu"], { link: eT })
                     : b.intl.format(I.default["Ke+kz5"], { pendingCount: T, link: eT });
@@ -536,7 +536,7 @@ let eb = {
                     (0, a.jsx)(J.H, {
                         actionsFullWidth: !0,
                         actions:
-                            L && !U
+                            k && !U
                                 ? [
                                       {
                                           text: b.intl.string(I.default["RD76/V"]),
@@ -705,7 +705,7 @@ function ew(e) {
         children: [!c && (0, a.jsx)(eR, {}), (0, a.jsx)(eS, { onSubmit: n, disabled: i, transitionState: l })],
     });
 }
-let eL = function (e) {
+let ek = function (e) {
     let { transitionState: t, onClose: n } = e,
         [i, l] = r.useState(null),
         [A, v] = r.useState(!0),
@@ -731,7 +731,7 @@ let eL = function (e) {
                 v(!1);
             }
         }, [n]),
-        L = r.useCallback(
+        k = r.useCallback(
             async (e) => {
                 if (null !== i) {
                     R(!0);
@@ -751,24 +751,24 @@ let eL = function (e) {
     (0, h.Ay)(() => {
         w();
     });
-    let k = r.useMemo(() => i?.task_type === S.AGE_VERIFICATION, [i]),
+    let L = r.useMemo(() => i?.task_type === S.AGE_VERIFICATION, [i]),
         P = null != i && null === x && N.has(i.task_type);
     return (0, a.jsxs)("div", {
         className: eM.Tp,
         children: [
             (0, a.jsx)("img", { className: eM.xX, src: eO, alt: "" }),
-            k
+            L
                 ? (0, a.jsx)(p.default, {
                       transitionState: t ?? s.ip.ENTERED,
                       entryPoint: f.q1.SAFETY_FLOWS,
                       onClose: eC.tE,
                       onComplete: async () => {
-                          await L({ type: M.Empty });
+                          await k({ type: M.Empty });
                       },
                       dismissable: !1,
                   })
                 : P && null != i
-                  ? (0, a.jsx)(ew, { task: i, handleSubmit: L, disabled: T, transitionState: t ?? s.ip.ENTERED })
+                  ? (0, a.jsx)(ew, { task: i, handleSubmit: k, disabled: T, transitionState: t ?? s.ip.ENTERED })
                   : (0, a.jsx)("div", {
                         className: eM.nA,
                         children: A
@@ -829,7 +829,7 @@ let eL = function (e) {
                                               }),
                                           null === x &&
                                               null != i &&
-                                              (0, a.jsx)(ew, { task: i, handleSubmit: L, disabled: T }),
+                                              (0, a.jsx)(ew, { task: i, handleSubmit: k, disabled: T }),
                                       ],
                                   }),
                               }),

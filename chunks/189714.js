@@ -1,4 +1,4 @@
-n.d(t, { $L: () => a, iI: () => o, j: () => u });
+n.d(t, { $L: () => d, iI: () => o, j: () => u });
 var i = n(17928),
     l = n(873298),
     s = n(594061),
@@ -9,7 +9,7 @@ function u(e, t) {
 function o(e) {
     return (0, i.bG)([r.A], () => u(r.A.settings, e), [e]);
 }
-function a(e, t) {
+function d(e, t) {
     s.wc.updateAsync(
         "vibegrations",
         (n) => {

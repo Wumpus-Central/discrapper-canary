@@ -30,13 +30,13 @@ var l,
     f = n(939249),
     p = n(477155),
     P = n(297264),
-    k = n(475358),
-    F = n(486974),
+    F = n(475358),
+    k = n(486974),
     j = n(375708),
     v = n(60419),
     X = n(14018);
 function b(e) {
-    let { onNavigate: t, backPanel: n = F.g.INFO, trailingAction: l } = e;
+    let { onNavigate: t, backPanel: n = k.g.INFO, trailingAction: l } = e;
     return (0, a.jsxs)("div", {
         className: X.wx,
         children: [
@@ -59,7 +59,7 @@ function b(e) {
                         onClick: (e) => {
                             (e.stopPropagation(), t?.(n));
                         },
-                        children: (0, a.jsx)(k.e, { shortcut: "esc", keyClassName: v.Wb, className: v.ti }),
+                        children: (0, a.jsx)(F.e, { shortcut: "esc", keyClassName: v.Wb, className: v.ti }),
                     }),
                 ],
             }),
@@ -78,7 +78,7 @@ var y = n(435558),
     z = n(734057),
     J = n(994500),
     Q = n(652215);
-let Z = new Set([
+let q = new Set([
     Q.F_X.MESSAGE_DELETE,
     Q.F_X.MESSAGE_BULK_DELETE,
     Q.F_X.MESSAGE_PIN,
@@ -91,7 +91,7 @@ let Z = new Set([
     Q.F_X.APPLICATION_COMMAND_PERMISSION_UPDATE,
     Q.F_X.MEMBER_PRUNE,
 ]);
-function q(e, t) {
+function Z(e, t) {
     return null == e ? null : (t.users?.get(e) ?? O.default.getUser(e) ?? null);
 }
 function $(e, t, n, l, r) {
@@ -231,7 +231,7 @@ function el(e, t) {
                                         if (
                                             null != o &&
                                             (function (e, t, n) {
-                                                if (n >= 50 || Z.has(t.action) || t.targetType === Q.GaG.INVITE)
+                                                if (n >= 50 || q.has(t.action) || t.targetType === Q.GaG.INVITE)
                                                     return !1;
                                                 let l = e.action === t.action,
                                                     r = e.targetId === t.targetId,
@@ -525,7 +525,7 @@ function eP() {
         ],
     });
 }
-function ek(e) {
+function eF(e) {
     let { guildId: t, logs: n, transformContext: l, isLoading: r, hasError: i } = e,
         s = (0, ei.bG)([eA.A], () => eA.A.getGuild(t), [t]),
         E = (0, ei.bG)(
@@ -552,7 +552,7 @@ function ek(e) {
                           let t = e;
                           return (
                               null !=
-                                  (t = (t = (t = t.set("user", q(e.userId, l) ?? e.user)).set(
+                                  (t = (t = (t = t.set("user", Z(e.userId, l) ?? e.user)).set(
                                       "target",
                                       (function (e, t, n) {
                                           switch (e.targetType) {
@@ -566,7 +566,7 @@ function ek(e) {
                                               case Q.GaG.CHANNEL_OVERWRITE:
                                                   return $(e, Q.gGk.NAME, (e) => et(e, n), void 0, n);
                                               case Q.GaG.USER:
-                                                  return $(e, Q.gGk.NICK, (e) => q(e, n), void 0, n);
+                                                  return $(e, Q.gGk.NICK, (e) => Z(e, n), void 0, n);
                                               case Q.GaG.INTEGRATION:
                                                   return $(
                                                       e,
@@ -638,7 +638,7 @@ function ek(e) {
                                           let n = { ...e.options };
                                           switch (e.options.type) {
                                               case Q.AO_.USER:
-                                                  null != e.options.id && (n.subtarget = q(e.options.id, t));
+                                                  null != e.options.id && (n.subtarget = Z(e.options.id, t));
                                                   break;
                                               case Q.AO_.ROLE:
                                                   n.subtarget = e.options.role_name;
@@ -659,8 +659,8 @@ function ek(e) {
                                           e.key === Q.gGk.OWNER_ID
                                               ? new W.QO(
                                                     e.key,
-                                                    null != e.oldValue ? q(e.oldValue, l) : e.oldValue,
-                                                    null != e.newValue ? q(e.newValue, l) : e.newValue,
+                                                    null != e.oldValue ? Z(e.oldValue, l) : e.oldValue,
+                                                    null != e.newValue ? Z(e.newValue, l) : e.newValue,
                                                 )
                                               : e,
                                       ),
@@ -696,7 +696,7 @@ function ek(e) {
               ],
           });
 }
-function eF(e) {
+function ek(e) {
     let { userId: t, guildId: n, onNavigate: l, className: r } = e,
         { logs: i, transformContext: s, isLoading: u, hasError: o } = el(n, t);
     return (0, a.jsxs)("div", {
@@ -705,7 +705,7 @@ function eF(e) {
             (0, a.jsx)(b, { guildId: n, userId: t, onNavigate: l }),
             (0, a.jsx)(x.Ip, {
                 className: X.WH,
-                children: (0, a.jsx)(ek, { guildId: n, logs: i, transformContext: s, isLoading: u, hasError: o }),
+                children: (0, a.jsx)(eF, { guildId: n, logs: i, transformContext: s, isLoading: u, hasError: o }),
             }),
         ],
     });
@@ -741,7 +741,7 @@ function eJ(e, t) {
 function eQ(e) {
     return ez((t) => t.get(e), eb.x);
 }
-function eZ(e, t, n) {
+function eq(e, t, n) {
     let l = n ?? {};
     switch (t) {
         case "links":
@@ -771,7 +771,7 @@ function eZ(e, t, n) {
             return { author_id: [e], ...l };
     }
 }
-function eq(e, t, n, l) {
+function eZ(e, t, n, l) {
     let r = i.useMemo(() => eY(e, t, n, l, !0), [e, t, n, l]),
         a = eQ(r),
         s = (0, h.Ay)(r);
@@ -1136,7 +1136,7 @@ let tm = i.memo(function (e) {
                           }),
                           (0, a.jsxs)(f.D, {
                               className: tO.bz,
-                              onClick: () => n(F.g.PERMISSIONS),
+                              onClick: () => n(k.g.PERMISSIONS),
                               children: [
                                   (0, a.jsx)(eE.E, {
                                       variant: "eyebrow",
@@ -1242,13 +1242,13 @@ function tp(e) {
         G = i.useCallback(
             async (e) => {
                 if (null == d) return;
-                let l = eZ(t, e, { include_nsfw: !0 });
-                await (0, U.z)(n, t, d.baseChannelId, { modViewPanel: F.g.MESSAGE_HISTORY, additionalSearchQuery: l });
+                let l = eq(t, e, { include_nsfw: !0 });
+                await (0, U.z)(n, t, d.baseChannelId, { modViewPanel: k.g.MESSAGE_HISTORY, additionalSearchQuery: l });
             },
             [n, d, t],
         ),
         O = i.useCallback(async () => {
-            null != d && (await (0, U.z)(n, t, d.baseChannelId, { modViewPanel: F.g.AUDIT_LOG }));
+            null != d && (await (0, U.z)(n, t, d.baseChannelId, { modViewPanel: k.g.AUDIT_LOG }));
         }, [n, d, t]);
     return (0, a.jsx)(e$.D, {
         label: j.intl.string(j.t.vCn2Tn),
@@ -1351,25 +1351,25 @@ function tP(e) {
                         onClick: (e) => {
                             (e.stopPropagation(), t());
                         },
-                        children: (0, a.jsx)(k.e, { shortcut: "esc", keyClassName: X.Wb, className: X.ti }),
+                        children: (0, a.jsx)(F.e, { shortcut: "esc", keyClassName: X.Wb, className: X.ti }),
                     }),
                 ],
             }),
         ],
     });
 }
-function tk(e) {
+function tF(e) {
     let { userId: t, guildId: n, location: l, className: r, onClose: s, onNavigate: u } = e,
         o = (0, ei.bG)([O.default], () => O.default.getUser(t), [t]),
         c = (0, ei.bG)([ed.Ay], () => ed.Ay.getMember(n, t), [n, t]),
         d = (function (e, t) {
-            let { key: n, state: l } = eq(e, t, "messages", void 0),
-                { key: r, state: a } = eq(e, t, "links", void 0),
-                { key: s, state: E } = eq(e, t, "media", void 0),
-                u = i.useMemo(() => eZ(e, "all_counts", void 0), [e, void 0]),
+            let { key: n, state: l } = eZ(e, t, "messages", void 0),
+                { key: r, state: a } = eZ(e, t, "links", void 0),
+                { key: s, state: E } = eZ(e, t, "media", void 0),
+                u = i.useMemo(() => eq(e, "all_counts", void 0), [e, void 0]),
                 o = i.useMemo(
                     () => ({
-                        tabs: { messages: eZ(e, "messages", u), links: eZ(e, "links", u), media: eZ(e, "media", u) },
+                        tabs: { messages: eq(e, "messages", u), links: eq(e, "links", u), media: eq(e, "media", u) },
                         track_exact_total_hits: !0,
                         include_nsfw: !0,
                     }),
@@ -1517,7 +1517,7 @@ function tk(e) {
               ],
           });
 }
-var tF = n(689175),
+var tk = n(689175),
     tj = n(964486),
     tv = n(738768),
     tX = n(457699),
@@ -1536,7 +1536,7 @@ function tY(e) {
         d =
             (0, h.p0)({
                 value: _?.details.additionalSearchQuery ?? tW,
-                shouldUpdate: _?.details.modViewPanel === F.g.MESSAGE_HISTORY,
+                shouldUpdate: _?.details.modViewPanel === k.g.MESSAGE_HISTORY,
             }) ?? tW,
         A = (function (e, t, n, l) {
             let { addtionalQuery: r, shouldDispatch: a = !1 } = l,
@@ -1547,7 +1547,7 @@ function tY(e) {
             return (
                 i.useEffect(() => {
                     if (u !== s) {
-                        let l = eZ(e, n, r),
+                        let l = eq(e, n, r),
                             i = new eH.MS(t, Q.I4_.GUILD, l);
                         (eJ(s, { searchFetcher: i, messageCount: -1, lastMessage: null }),
                             setTimeout(() => {
@@ -1619,7 +1619,7 @@ function tY(e) {
                 null == _ ||
                     ((c.current = e.target.scrollTop),
                     (0, U.z)(n, t, _.baseChannelId, {
-                        modViewPanel: F.g.MESSAGE_HISTORY,
+                        modViewPanel: k.g.MESSAGE_HISTORY,
                         additionalSearchQuery: d,
                         scrollOffset: c.current,
                     }));
@@ -1631,7 +1631,7 @@ function tY(e) {
             (e) => {
                 null != _ &&
                     (0, U.z)(n, t, _.baseChannelId, {
-                        modViewPanel: F.g.MESSAGE_HISTORY,
+                        modViewPanel: k.g.MESSAGE_HISTORY,
                         additionalSearchQuery: { ...d, offset: e * Q.T_y },
                         scrollOffset: c.current,
                     });
@@ -1673,7 +1673,7 @@ function tY(e) {
                 { blockCount: e, ignoreCount: t }
             );
         }),
-        k = i.useMemo(
+        F = i.useMemo(
             () =>
                 null == A.result
                     ? {
@@ -1700,21 +1700,21 @@ function tY(e) {
                       },
             [A.result, g, C, I],
         );
-    return null == S || null == k
+    return null == S || null == F
         ? null
         : (0, a.jsxs)("div", {
               className: E()(X.kL, r),
               children: [
                   (0, a.jsx)(b, { guildId: n, userId: t, onNavigate: s }),
-                  (0, a.jsx)(tF.Ch, {
+                  (0, a.jsx)(tk.Ch, {
                       className: tw.W,
                       ref: o,
                       onScroll: R,
                       children:
-                          !k.isSearching && I > 0
+                          !F.isSearching && I > 0
                               ? (0, a.jsx)(tB.A, {
                                     messages: f,
-                                    search: k,
+                                    search: F,
                                     renderEmbeds: !0,
                                     blockCount: p,
                                     ignoreCount: P,
@@ -1733,8 +1733,8 @@ var tK = n(649852),
     tz = n.n(tK),
     tJ = n(270003),
     tQ = n(683438),
-    tZ = n(640708),
-    tq = n(468689),
+    tq = n(640708),
+    tZ = n(468689),
     t$ = n(464536);
 function t0(e) {
     let { permission: t, roleIds: n, guild: l, specMap: r, categoryTitle: s, userId: u } = e,
@@ -1748,7 +1748,7 @@ function t0(e) {
         I = (0, ei.bG)([tr.A], () => tr.A.can(Q.xBc.MANAGE_ROLES, l), [l]),
         N = i.useCallback(
             async (e) => {
-                I && (await tq.default.open(l.id, Q.BEX.ROLES), await tq.default.selectRole(e));
+                I && (await tZ.default.open(l.id, Q.BEX.ROLES), await tZ.default.selectRole(e));
             },
             [I, l.id],
         );
@@ -1774,7 +1774,7 @@ function t0(e) {
                                         A &&
                                             (0, a.jsxs)(a.Fragment, {
                                                 children: [
-                                                    (0, a.jsx)(tZ.A, {
+                                                    (0, a.jsx)(tq.A, {
                                                         height: 4,
                                                         width: 4,
                                                         "aria-hidden": "true",
@@ -1805,7 +1805,7 @@ function t0(e) {
                                             g &&
                                             (0, a.jsxs)(a.Fragment, {
                                                 children: [
-                                                    (0, a.jsx)(tZ.A, {
+                                                    (0, a.jsx)(tq.A, {
                                                         height: 4,
                                                         width: 4,
                                                         "aria-hidden": "true",
@@ -2008,9 +2008,9 @@ function t3(e, t) {
 function t2(e) {
     let { userId: t, guildId: n, onClose: l, analyticsLocation: r, className: s } = e,
         E = (0, u.bG)([M.Ay], () => M.Ay.getGuildSidebarState(n), [n]),
-        o = E?.details.modViewPanel ?? F.g.INFO,
+        o = E?.details.modViewPanel ?? k.g.INFO,
         _ = (0, h.Ay)(t),
-        c = null == o ? null : o === F.g.INFO ? "backwards" : "forwards",
+        c = null == o ? null : o === k.g.INFO ? "backwards" : "forwards",
         d = (0, D.A)(c),
         { reducedMotion: A } = i.useContext(R.C),
         g = i.useCallback(
@@ -2024,7 +2024,7 @@ function t2(e) {
                 [Q.IWg.CLOSE_MODAL]: {
                     binds: ["esc"],
                     comboKeysBindGlobal: !0,
-                    action: () => (o === F.g.INFO ? l() : g(F.g.INFO)),
+                    action: () => (o === k.g.INFO ? l() : g(k.g.INFO)),
                 },
             }),
             [l, o, g],
@@ -2055,30 +2055,30 @@ function t2(e) {
                     },
                     children: (function (e) {
                         switch (e) {
-                            case F.g.INFO:
-                                return (0, a.jsx)(tk, {
+                            case k.g.INFO:
+                                return (0, a.jsx)(tF, {
                                     userId: t,
                                     guildId: n,
                                     onClose: l,
                                     onNavigate: g,
                                     className: s,
                                 });
-                            case F.g.MESSAGE_HISTORY:
+                            case k.g.MESSAGE_HISTORY:
                                 return (0, a.jsx)(tY, {
                                     userId: t,
                                     guildId: n,
-                                    onNavigate: () => g(F.g.INFO),
+                                    onNavigate: () => g(k.g.INFO),
                                     className: s,
                                 });
-                            case F.g.PERMISSIONS:
+                            case k.g.PERMISSIONS:
                                 return (0, a.jsx)(t6, {
                                     userId: t,
                                     guildId: n,
-                                    onNavigate: () => g(F.g.INFO),
+                                    onNavigate: () => g(k.g.INFO),
                                     className: s,
                                 });
-                            case F.g.AUDIT_LOG:
-                                return (0, a.jsx)(eF, { userId: t, guildId: n, onNavigate: g, className: s });
+                            case k.g.AUDIT_LOG:
+                                return (0, a.jsx)(ek, { userId: t, guildId: n, onNavigate: g, className: s });
                             default:
                                 return null;
                         }

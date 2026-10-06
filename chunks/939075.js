@@ -26,7 +26,7 @@ function N(t) {
     let { user: e, activity: n, entry: d, onAction: f, onClose: p, appContext: N } = t,
         E = (0, m.A)();
     if (!(0, i.bG)([g.default], () => g.default.getCurrentUser()?.id === e.id)) return null;
-    let h = (function (t) {
+    let T = (function (t) {
         let { activity: e, entry: n, onOpenGameSettings: l } = t;
         return null != n
             ? I({ entry: n, onOpenGameSettings: l })
@@ -37,13 +37,13 @@ function N(t) {
                 })({ activity: e, onOpenGameSettings: l })
               : null;
     })({ activity: n, entry: d, onOpenGameSettings: E });
-    return null == h
+    return null == T
         ? null
         : (0, l.jsx)(a.Dr, {
               id: "manage-privacy",
               label: x.intl.string(x.t.anfNPV),
               action: () => {
-                  (f?.({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), h(), (0, A.A)(N), p?.());
+                  (f?.({ action: "PRESS_MANAGE_PRIVACY_MENU_ITEM" }), T(), (0, A.A)(N), p?.());
               },
           });
 }

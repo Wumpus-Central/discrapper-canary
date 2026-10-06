@@ -3,14 +3,14 @@ i.d(t, {
     pj: () => C,
     cq: () => I,
     Jr: () => y,
-    hU: () => P,
+    hU: () => M,
     as: () => L,
     e_: () => G,
     hE: () => V,
     jL: () => b,
     K: () => S,
     tT: () => R,
-    dk: () => M,
+    dk: () => P,
     z9: () => x,
     Kz: () => O,
     Ce: () => U,
@@ -336,7 +336,7 @@ function y(e) {
         },
     );
 }
-function M() {
+function P() {
     return r.Bo.get({ url: A.Rsh.GAME_SERVER_MY_REGIONS, rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then(
         (e) => {
             n.h.dispatch({
@@ -347,7 +347,7 @@ function M() {
         },
     );
 }
-function P() {
+function M() {
     return r.Bo.get({ url: A.Rsh.GAME_SERVERS_ME, rejectWithError: !0, oldFormErrors: !0, retries: 3 }).then((e) => {
         let t = e.body;
         n.h.dispatch({
@@ -369,10 +369,10 @@ function U(e, t) {
         : (n.h.dispatch({ type: "GAME_SERVER_UPDATE", guildId: void 0, gameServer: { ...i, name: t } }),
           r.Bo.patch({ url: A.Rsh.GAME_SERVER_ME(i.id), body: { name: t }, rejectWithError: !0 })
               .then(() => {
-                  P().catch(() => {});
+                  M().catch(() => {});
               })
               .catch((e) => {
-                  throw (P().catch(() => {}), e);
+                  throw (M().catch(() => {}), e);
               }));
 }
 function O(e) {
@@ -390,7 +390,7 @@ function O(e) {
                 });
             })
             .catch((e) => {
-                throw (P().catch(() => {}), e);
+                throw (M().catch(() => {}), e);
             })
     );
 }

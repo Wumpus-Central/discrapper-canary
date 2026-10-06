@@ -18,8 +18,8 @@ var l = n(477900),
     I = n(17928),
     N = n(573648),
     E = n(541806),
-    h = n(261020),
-    T = n(83971),
+    T = n(261020),
+    h = n(83971),
     C = n(780964),
     S = n(766075),
     v = n(30370),
@@ -68,7 +68,7 @@ function V(t) {
                     let { user: e, entry: n, display: i, onAction: a, onClose: r } = t,
                         s = (0, I.bG)([M.default], () => M.default.getCurrentUser()?.id === e.id),
                         o = (0, I.bG)([b.A], () => b.A.hasConnectedAccount());
-                    if ("recent" !== i || !(0, T.F3)(n)) return null;
+                    if ("recent" !== i || !(0, h.F3)(n)) return null;
                     if (!o)
                         return (0, l.jsx)(d.Dr, {
                             id: "connect-spotify",
@@ -88,7 +88,7 @@ function V(t) {
                               label: O.intl.string(O.t.rRffNz),
                               action: () => {
                                   (a?.({ action: "PRESS_PLAY_ON_SPOTIFY_MENU_ITEM" }),
-                                      (0, h.n)(U.M0.TRACK, c.external_id));
+                                      (0, T.n)(U.M0.TRACK, c.external_id));
                               },
                           });
                 })(t),
@@ -112,7 +112,7 @@ function V(t) {
                 (function (t) {
                     let { activity: e, entry: n, display: i, onAction: a, onClose: r } = t,
                         s = (0, I.bG)([v.A], () => null != v.A.getAccount(null, y.fg2.CRUNCHYROLL));
-                    if (!(0, E.A)(e) && !(0, T.CU)(n)) return null;
+                    if (!(0, E.A)(e) && !(0, h.CU)(n)) return null;
                     if (!s)
                         return (0, l.jsx)(d.Dr, {
                             id: "connect-crunchyroll",
@@ -125,7 +125,7 @@ function V(t) {
                                     r?.());
                             },
                         });
-                    if ("recent" !== i || !(0, T.CU)(n)) return null;
+                    if ("recent" !== i || !(0, h.CU)(n)) return null;
                     let o = n.extra.url;
                     return null == o || "" === o
                         ? null
@@ -133,7 +133,7 @@ function V(t) {
                               id: "watch-on-crunchyroll",
                               label: O.intl.string(O.t.OpxQVH),
                               action: () => {
-                                  (a?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, h.C)(o));
+                                  (a?.({ action: "PRESS_WATCH_ON_CRUNCHYROLL_MENU_ITEM" }), (0, T.C)(o));
                               },
                           });
                 })(t),

@@ -26,8 +26,8 @@ function I(t) {
             buttonVariant: I = "secondary",
             fullWidth: N = !0,
             stopPropagation: E = !1,
-            onAction: h,
-            onClose: T,
+            onAction: T,
+            onClose: h,
         } = t,
         C = (0, f.A)(),
         S = a.useRef(null),
@@ -57,8 +57,8 @@ function I(t) {
             let { analyticsLocations: e, distributor: n, gameId: l, level: i } = t;
             p.default.track(g.HAw.PLAY_CTA_CLICKED, { location_stack: e, distributor: n, game_id: l, level: i });
         })({ analyticsLocations: l, distributor: e, gameId: n, level: a }),
-            h?.({ action: i }),
-            T?.(),
+            T?.({ action: i }),
+            h?.(),
             C(t));
     }
     if (1 === e.length) {

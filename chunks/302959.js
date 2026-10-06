@@ -1,8 +1,8 @@
 i.d(t, { A: () => N, M: () => g });
 var l = i(477900);
 i(582128);
-var n = i(17928),
-    a = i(55730),
+var a = i(17928),
+    n = i(55730),
     s = i(50820),
     d = i(35903),
     r = i(587895),
@@ -12,16 +12,16 @@ var n = i(17928),
     m = i(71393),
     u = i(977997),
     x = i(821589),
-    h = i(652215),
-    A = i(349789);
+    A = i(652215),
+    h = i(349789);
 function v(e) {
-    let { type: t, source: i, activity: n, applicationStream: a, user: s, guildId: r, channelId: c, onAction: o } = e;
+    let { type: t, source: i, activity: a, applicationStream: n, user: s, guildId: r, channelId: c, onAction: o } = e;
     return (0, l.jsx)(d.A, {
-        className: (0, x.t)(A, "actions", t),
+        className: (0, x.t)(h, "actions", t),
         type: t,
         source: i,
-        activity: n,
-        applicationStream: a,
+        activity: a,
+        applicationStream: n,
         user: s,
         guildId: r,
         buttonVariant: "primary",
@@ -36,34 +36,34 @@ let g = s.A.Types,
                 user: i,
                 useStoreStream: d = !0,
                 showActions: x = !0,
-                hideHeader: A = !1,
+                hideHeader: h = !1,
                 showChannelDetails: g = !1,
                 ...N
             } = e,
-            j = (0, n.bG)([u.A, p.A], () => p.A.getChannel(u.A.getVoiceStateForUser(i.id)?.channelId)),
-            y = (0, n.bG)([o.A], () => (d ? o.A.getAnyStreamForUser(i.id) : null)),
-            I = (0, n.bG)([m.A, u.A, p.A], () =>
-                (0, a.A)(t, h.jUm.EMBEDDED)
+            j = (0, a.bG)([u.A, p.A], () => p.A.getChannel(u.A.getVoiceStateForUser(i.id)?.channelId)),
+            y = (0, a.bG)([o.A], () => (d ? o.A.getAnyStreamForUser(i.id) : null)),
+            I = (0, a.bG)([m.A, u.A, p.A], () =>
+                (0, n.A)(t, A.jUm.EMBEDDED)
                     ? m.A.getGuild(
                           p.A.getChannel(u.A.getVoiceStateForSession(i.id, t?.session_id)?.channelId)?.getGuildId(),
                       )
                     : null,
             ),
-            f = (0, n.bG)([m.A], () => (null != y ? m.A.getGuild(y.guildId) : null)),
-            S = (0, n.bG)([r.A], () => {
+            f = (0, a.bG)([m.A], () => (null != y ? m.A.getGuild(y.guildId) : null)),
+            S = (0, a.bG)([r.A], () => {
                 if (null != t)
                     if (null != t.application_id) return r.A.getApplication(t.application_id);
                     else return r.A.getApplicationByName(t.name);
                 return null;
             });
-        return t?.type === h.$pd.HANG_STATUS
+        return t?.type === A.$pd.HANG_STATUS
             ? null
             : (0, l.jsx)(s.A, {
                   ...N,
                   activity: t,
                   user: i,
                   application: S,
-                  hideHeader: A,
+                  hideHeader: h,
                   activityGuild: I ?? f,
                   showChannelDetails: g,
                   channel: g ? j : void 0,

@@ -1,12 +1,12 @@
-n.d(t, { A: () => u });
-var l = n(582128),
-    s = n(508425),
-    a = n(602853),
-    r = n(661531),
-    o = n(750656);
+l.d(t, { A: () => u });
+var n = l(582128),
+    s = l(508425),
+    a = l(602853),
+    r = l(661531),
+    o = l(750656);
 function u() {
     let e = (0, a.r)(r.A.colors.TEXT_DEFAULT).int();
-    return l.useMemo(
+    return n.useMemo(
         () => ({
             [s.z.SOLID]: [e],
             [s.z.GRADIENT]: [...o.Wf["0"].colors],

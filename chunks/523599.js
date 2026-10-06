@@ -44,8 +44,8 @@ let g = a.kg(
     f = A.F_X.ALL,
     p = null,
     P = {},
-    k = 0;
-function F(e) {
+    F = 0;
+function k(e) {
     let t = [],
         n = 0;
     return (
@@ -208,7 +208,7 @@ class v extends i.Ay.Store {
         return P;
     }
     get groupedFetchCount() {
-        return k;
+        return F;
     }
 }
 let X = new v(s.h, {
@@ -216,12 +216,12 @@ let X = new v(s.h, {
         h = !0;
     },
     AUDIT_LOG_FETCH_SUCCESS: function (e) {
-        ((k = 0),
+        ((F = 0),
             (L = !1),
             (h = !1),
             (M = !0),
             (U = !1),
-            (I = F(e.logs)),
+            (I = k(e.logs)),
             (N = e.integrations),
             (O = e.webhooks),
             (S = e.guildScheduledEvents),
@@ -235,7 +235,7 @@ let X = new v(s.h, {
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_START: function (e) {
         let { isGroupedFetch: t } = e;
-        ((C = !0), t && k++);
+        ((C = !0), t && F++);
     },
     AUDIT_LOG_FETCH_NEXT_PAGE_SUCCESS: function (e) {
         let {
@@ -258,7 +258,7 @@ let X = new v(s.h, {
             (0 === t.length || t.length < A.$jw) && (M = !1),
             t.length > 0)
         ) {
-            let e = F(t);
+            let e = k(t);
             I = [...I, ...e];
         }
     },
@@ -289,7 +289,7 @@ let X = new v(s.h, {
             (x = null),
             (p = null),
             (P = {}),
-            (k = 0),
+            (F = 0),
             (L = !0),
             (N = []),
             (O = []),

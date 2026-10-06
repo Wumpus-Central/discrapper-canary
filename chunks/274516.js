@@ -8,19 +8,19 @@ var l = {
     "./special-template/update-badge.svg": "892796",
     "./store.jpg": "191686",
 };
-function a(e) {
-    return s(n(e));
+function s(e) {
+    return n(a(e));
 }
-function n(e) {
-    if (!s.o(l, e)) {
+function a(e) {
+    if (!n.o(l, e)) {
         var t = Error("Cannot find module '" + e + "'");
         throw ((t.code = "MODULE_NOT_FOUND"), t);
     }
     return l[e];
 }
-((a.keys = function () {
+((s.keys = function () {
     return Object.keys(l);
 }),
-    (a.resolve = n),
-    (e.exports = a),
-    (a.id = 274516));
+    (s.resolve = a),
+    (e.exports = s),
+    (s.id = 274516));
