@@ -1,3 +1,3 @@
 e.exports = JSON.parse(
-    '{"HmFYc5":["Je wijzigingen konden niet worden opgeslagen. Probeer het opnieuw."],"Lx0P8k":["Gratis"]}',
+    '{"L8Xfoo":["Widget toevoegen"],"IuT87w":["Widget toevoegen"],"uG3Bwy":["Weet je het zeker?"],"HmFYc5":["Je wijzigingen konden niet worden opgeslagen. Probeer het opnieuw."],"DwFqrb":[[6,"count",{"one":[[7]," boost"],"other":[[7]," boosts"]},0,"cardinal"]],"rp7bx+":[[6,"count",{"one":[[7]," lid"],"other":[[7]," leden"]},0,"cardinal"]],"G08ClG":[[2,"count"]," online"],"Lx0P8k":["Gratis"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[6,"minutes",{"one":[[7]," minuut"],"other":[[7]," minuten"]},0,"cardinal"]],"5xxUI2":["Populaire muziek"],"jB1fWC":["Koppel account"],"yul+0g":["Publiceren"],"D/HToK":[[1,"hours"],"u"],"fMbgeZ":["Activiteit delen"],"J8r/7L":["Afgelopen"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Activiteit delen"],"rgpc8E":[[6,"count",{"one":[[7]," game"],"other":[[7]," games"]},0,"cardinal"]]}',
 );

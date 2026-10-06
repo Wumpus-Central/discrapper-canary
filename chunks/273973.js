@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"HmFYc5":["Dina \xe4ndringar kunde inte sparas. F\xf6rs\xf6k igen."],"Lx0P8k":["Gratis"]}');
+t.exports = JSON.parse(
+    '{"L8Xfoo":["L\xe4gg till widget"],"IuT87w":["L\xe4gg till widget"],"uG3Bwy":["\xc4r du s\xe4ker?"],"HmFYc5":["Dina \xe4ndringar kunde inte sparas. F\xf6rs\xf6k igen."],"DwFqrb":[[6,"count",{"one":[[7]," boost"],"other":[[7]," boostar"]},0,"cardinal"]],"rp7bx+":[[6,"count",{"one":[[7]," Medlem"],"other":[[7]," Medlemmar"]},0,"cardinal"]],"G08ClG":[[2,"count"]," online"],"Lx0P8k":["Gratis"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[6,"minutes",{"one":[[7]," minut"],"other":[[7]," minuter"]},0,"cardinal"]],"5xxUI2":["Popular Music"],"jB1fWC":["L\xe4nka konto"],"yul+0g":["Publicera"],"D/HToK":[[1,"hours"]," h"],"fMbgeZ":["Dela aktivitet"],"J8r/7L":["Avslutad"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Aktivitetsdelning"],"rgpc8E":[[2,"count"]," spel"]}',
+);

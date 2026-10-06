@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"HmFYc5":["Nie uda\u0142o si\u0119 zapisa\u0107 zmian. Spr\xf3buj ponownie."],"Lx0P8k":["Za darmo"]}',
+o.exports = JSON.parse(
+    '{"L8Xfoo":["Dodaj widget"],"IuT87w":["Dodaj widget"],"uG3Bwy":["Na pewno?"],"HmFYc5":["Nie uda\u0142o si\u0119 zapisa\u0107 zmian. Spr\xf3buj ponownie."],"DwFqrb":[[6,"count",{"one":[[7]," wzmocnienie"],"few":[[7]," wzmocnienia"],"other":[[7]," wzmocnie\u0144"]},0,"cardinal"]],"rp7bx+":[[6,"count",{"one":[[7]," cz\u0142onek"],"other":[[7]," cz\u0142onk\xf3w"]},0,"cardinal"]],"G08ClG":["Cz\u0142onkowie online: ",[2,"count"]],"Lx0P8k":["Za darmo"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[2,"minutes"]," min"],"5xxUI2":["Popularna muzyka"],"jB1fWC":["Po\u0142\u0105cz konto"],"yul+0g":["Opublikuj"],"D/HToK":[[1,"hours"]," godz."],"fMbgeZ":["Udost\u0119pniaj aktywno\u015B\u0107"],"J8r/7L":["Zako\u0144czona"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Udost\u0119pnianie aktywno\u015Bci"],"rgpc8E":[[6,"count",{"one":[[7]," gra"],"few":[[7]," gry"],"other":[[7]," gier"]},0,"cardinal"]]}',
 );

@@ -1,1 +1,3 @@
-e.exports = JSON.parse('{"HmFYc5":["De\u011Fi\u015Fikliklerin kaydedilemedi. Tekrar dene."],"Lx0P8k":["\xdccretsiz"]}');
+i.exports = JSON.parse(
+    '{"L8Xfoo":["Widget ekle"],"IuT87w":["Widget ekle"],"uG3Bwy":["Emin misin?"],"HmFYc5":["De\u011Fi\u015Fikliklerin kaydedilemedi. Tekrar dene."],"DwFqrb":[[2,"count"]," Takviye"],"rp7bx+":[[2,"count"]," \xdcye"],"Lx0P8k":["\xdccretsiz"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[2,"minutes"]," dakika"],"5xxUI2":["Pop\xfcler M\xfczik"],"jB1fWC":["Hesab\u0131 Ba\u011Fla"],"yul+0g":["Yay\u0131nla"],"D/HToK":[[1,"hours"]," s"],"fMbgeZ":["Etkinli\u011Fi Payla\u015F"],"J8r/7L":["Bitti"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Etkinlik Payla\u015F\u0131m\u0131"],"rgpc8E":[[2,"count"]," oyun"]}',
+);

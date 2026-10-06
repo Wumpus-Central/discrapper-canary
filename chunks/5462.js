@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"0ySxbu":["Unfortunately, no results were found."],"FKLBbW":["Show less"],"NuTbB9":["Show more"]}',
+e.exports = JSON.parse(
+    '{"ydAwWi":["TL;DR"],"0ySxbu":["Unfortunately, no results were found."],"HX/WYf":["We searched far and wide."],"ffCCEe":["Searching hard..."],"Sb2fo2":["Searching very hard..."],"rXNe0Z":["Never searched more..."],"22g6Ju":["Searching thoroughly..."],"IogGZY":["Conducting a thorough search..."],"UEnMJF":["Wow, what a search..."],"kk7BVL":["Searching is happening..."],"UVa49v":["Great question apparently. Still searching..."],"QIdSmb":["from messages"],"FKLBbW":["Show less"],"NuTbB9":["Show more"],"bzswFC":["Players also answered"]}',
 );

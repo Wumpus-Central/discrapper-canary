@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"0ySxbu":["Bohu\u017Eel jsme nic nena\u0161li."],"FKLBbW":["Zobrazit m\xe9n\u011B"],"NuTbB9":["Zobrazit v\xedce"]}',
+e.exports = JSON.parse(
+    '{"ydAwWi":["Moc dlouh\xe9, ne\u010Dtu"],"0ySxbu":["Bohu\u017Eel jsme nic nena\u0161li."],"HX/WYf":["Hledali jsme \u0161iroko daleko."],"ffCCEe":["Usilovn\u011B hled\xe1me\u2026"],"Sb2fo2":["Hled\xe1me fakt usilovn\u011B\u2026"],"rXNe0Z":["Snad nikdy jsme nehledali usilovn\u011Bji\u2026"],"22g6Ju":["D\u016Fkladn\u011B hled\xe1me\u2026"],"IogGZY":["Prov\xe1d\xedme hloubkov\xe9 hled\xe1n\xed\u2026"],"UEnMJF":["P\xe1ni, to je ale hleda\u010Dka\u2026"],"kk7BVL":["Pr\xe1v\u011B se odehr\xe1v\xe1 hled\xe1n\xed\u2026"],"UVa49v":["Skv\u011Bl\xe1 ot\xe1zka, na kterou st\xe1le hled\xe1me odpov\u011B\u010F\u2026"],"QIdSmb":["ze zpr\xe1v"],"FKLBbW":["Zobrazit m\xe9n\u011B"],"NuTbB9":["Zobrazit v\xedce"],"bzswFC":["Hr\xe1\u010Di tak\xe9 odpov\u011Bd\u011Bli"]}',
 );

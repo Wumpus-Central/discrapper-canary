@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"HmFYc5":["A m\xf3dos\xedt\xe1sok ment\xe9se sikertelen. Pr\xf3b\xe1ld \xfajra."],"Lx0P8k":["Ingyenes"]}',
+e.exports = JSON.parse(
+    '{"L8Xfoo":["Widget hozz\xe1ad\xe1sa"],"IuT87w":["Widget hozz\xe1ad\xe1sa"],"uG3Bwy":["Biztos vagy benne?"],"HmFYc5":["A m\xf3dos\xedt\xe1sok ment\xe9se sikertelen. Pr\xf3b\xe1ld \xfajra."],"DwFqrb":[[2,"count"]," gyors\xedt\xe1s"],"rp7bx+":[[2,"count"]," tag"],"G08ClG":[[2,"count"]," online"],"Lx0P8k":["Ingyenes"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[2,"minutes"]," perc"],"5xxUI2":["N\xe9pszer\u0171 zene"],"jB1fWC":["Fi\xf3k csatlakoztat\xe1sa"],"yul+0g":["K\xf6zz\xe9t\xe9tel"],"D/HToK":[[1,"hours"]," \xf3"],"fMbgeZ":["Tev\xe9kenys\xe9g megoszt\xe1sa"],"J8r/7L":["Befejez\u0151d\xf6tt"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Tev\xe9kenys\xe9gmegoszt\xe1s"],"rgpc8E":[[2,"count"]," j\xe1t\xe9k"]}',
 );

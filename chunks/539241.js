@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"HmFYc5":["Tes modifications n\'ont pas pu \xeatre enregistr\xe9es. R\xe9essaie."],"Lx0P8k":["Gratuit"]}',
+e.exports = JSON.parse(
+    '{"L8Xfoo":["Ajouter un widget"],"IuT87w":["Ajouter un widget"],"uG3Bwy":["Tu es s\xfbr(e)\xa0?"],"HmFYc5":["Tes modifications n\'ont pas pu \xeatre enregistr\xe9es. R\xe9essaie."],"DwFqrb":[[6,"count",{"one":[[7],"\xa0boost"],"other":[[7],"\xa0boosts"]},0,"cardinal"]],"rp7bx+":[[6,"count",{"one":[[7],"\xa0membre"],"other":[[7],"\xa0membres"]},0,"cardinal"]],"G08ClG":[[2,"count"]," en ligne"],"Lx0P8k":["Gratuit"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[6,"minutes",{"one":[[7],"\xa0minute"],"other":[[7],"\xa0minutes"]},0,"cardinal"]],"5xxUI2":["Musique populaire"],"jB1fWC":["Lier un compte"],"yul+0g":["Publier"],"D/HToK":[[1,"hours"],"\xa0h"],"fMbgeZ":["Partager l\'Activit\xe9"],"J8r/7L":["Termin\xe9e"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Partage d\'Activit\xe9"],"rgpc8E":[[6,"count",{"one":[[7]," jeu"],"other":[[7]," jeux"]},0,"cardinal"]]}',
 );

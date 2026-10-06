@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"HmFYc5":["No se han podido guardar los cambios. Int\xe9ntalo de nuevo."],"Lx0P8k":["Gratis"]}',
+o.exports = JSON.parse(
+    '{"L8Xfoo":["A\xf1adir widget"],"IuT87w":["A\xf1adir widget"],"uG3Bwy":["\xbfSeguro?"],"HmFYc5":["No se han podido guardar los cambios. Int\xe9ntalo de nuevo."],"DwFqrb":[[6,"count",{"one":[[7]," mejora"],"other":[[7]," mejoras"]},0,"cardinal"]],"rp7bx+":[[6,"count",{"one":[[7]," miembro"],"other":[[7]," miembros"]},0,"cardinal"]],"G08ClG":[[2,"count"]," en l\xednea"],"Lx0P8k":["Gratis"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[6,"minutes",{"one":[[7]," minuto"],"other":[[7]," minutos"]},0,"cardinal"]],"5xxUI2":["M\xfasica popular"],"jB1fWC":["Vincular cuenta"],"yul+0g":["Publicar"],"D/HToK":[[1,"hours"],"\xa0h"],"fMbgeZ":["Compartir actividad"],"J8r/7L":["Ha terminado"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Compartir actividad"],"rgpc8E":[[6,"count",{"one":[[7]," juego"],"other":[[7]," juegos"]},0,"cardinal"]]}',
 );

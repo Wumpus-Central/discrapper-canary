@@ -1,3 +1,3 @@
-a.exports = JSON.parse(
-    '{"HmFYc5":["Pakeitim\u0173 i\u0161saugoti nepavyko. Pabandyk dar kart\u0105."],"Lx0P8k":["Nemokama"]}',
+i.exports = JSON.parse(
+    '{"L8Xfoo":["Prid\u0117ti valdikl\u012F"],"IuT87w":["Prid\u0117ti valdikl\u012F"],"uG3Bwy":["Esi tikras (-a)?"],"HmFYc5":["Pakeitim\u0173 i\u0161saugoti nepavyko. Pabandyk dar kart\u0105."],"DwFqrb":[[6,"count",{"one":[[7]," stiprinimas"],"few":[[7]," stiprinimai"],"other":[[7]," stiprinim\u0173"]},0,"cardinal"]],"rp7bx+":[[6,"count",{"one":[[7]," narys"],"few":[[7]," nariai"],"other":[[7]," nari\u0173"]},0,"cardinal"]],"G08ClG":["Prisijungusi\u0173: ",[2,"count"]],"Lx0P8k":["Nemokama"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[2,"minutes"]," min."],"5xxUI2":["Popular Music"],"jB1fWC":["Susiek paskyr\u0105"],"yul+0g":["Publikuoti"],"D/HToK":[[1,"hours"]," val."],"fMbgeZ":["Bendrinti veikl\u0105"],"J8r/7L":["Baig\u0117si"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Veikl\u0173 bendrinimas"],"rgpc8E":[[6,"count",{"one":[[7]," \u017Eaidimas"],"few":[[7]," \u017Eaidimai"],"other":[[7]," \u017Eaidim\u0173"]},0,"cardinal"]]}',
 );

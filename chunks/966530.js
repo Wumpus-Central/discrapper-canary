@@ -1,3 +1,3 @@
-a.exports = JSON.parse(
-    '{"0ySxbu":["Din p\u0103cate, nu s-a g\u0103sit niciun rezultat."],"FKLBbW":["Arat\u0103 mai pu\u021Bine"],"NuTbB9":["Arat\u0103 mai multe"]}',
+e.exports = JSON.parse(
+    '{"ydAwWi":["TL;DR"],"0ySxbu":["Din p\u0103cate, nu s-a g\u0103sit niciun rezultat."],"HX/WYf":["Am c\u0103utat \xeen lung \u0219i-n lat."],"ffCCEe":["C\u0103ut\u0103m din greu..."],"Sb2fo2":["C\u0103ut\u0103m din r\u0103sputeri..."],"rXNe0Z":["Niciodat\u0103 n-am c\u0103utat mai mult..."],"22g6Ju":["C\u0103ut\u0103m \xeen am\u0103nunt..."],"IogGZY":["Se efectueaz\u0103 o c\u0103utare temeinic\u0103..."],"UEnMJF":["Uau, ce c\u0103utare..."],"kk7BVL":["C\u0103utarea este \xeen desf\u0103\u0219urare..."],"UVa49v":["Se pare c\u0103 e o \xeentrebare grozav\u0103, c\u0103ut\u0103m \xeen continuare..."],"QIdSmb":["din mesaje"],"FKLBbW":["Arat\u0103 mai pu\u021Bine"],"NuTbB9":["Arat\u0103 mai multe"],"bzswFC":["Juc\u0103torii au r\u0103spuns \u0219i ei"]}',
 );

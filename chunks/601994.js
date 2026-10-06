@@ -1,1 +1,3 @@
-s.exports = JSON.parse('{"HmFYc5":["Your changes couldn\u2019t be saved. Try again."],"Lx0P8k":["Free"]}');
+e.exports = JSON.parse(
+    '{"L8Xfoo":["Add Widget"],"IuT87w":["Add Widget"],"uG3Bwy":["Are you sure?"],"HmFYc5":["Your changes couldn\u2019t be saved. Try again."],"DwFqrb":[[6,"count",{"one":[[7]," Boost"],"other":[[7]," Boosts"]},0,"cardinal"]],"rp7bx+":[[6,"count",{"one":[[7]," Member"],"other":[[7]," Members"]},0,"cardinal"]],"G08ClG":[[2,"count"]," Online"],"Lx0P8k":["Free"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[6,"minutes",{"one":[[7]," minute"],"other":[[7]," minutes"]},0,"cardinal"]],"5xxUI2":["Popular Music"],"jB1fWC":["Link Account"],"yul+0g":["Publish"],"D/HToK":[[1,"hours"],"h"],"fMbgeZ":["Share Activity"],"J8r/7L":["Ended"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Activity Sharing"],"rgpc8E":[[6,"count",{"one":[[7]," game"],"other":[[7]," games"]},0,"cardinal"]]}',
+);

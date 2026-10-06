@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"HmFYc5":["Nu s-au putut salva modific\u0103rile. \xcencearc\u0103 din nou."],"Lx0P8k":["Gratuit"]}',
+i.exports = JSON.parse(
+    '{"L8Xfoo":["Adaug\u0103 widget"],"IuT87w":["Adaug\u0103 widget"],"uG3Bwy":["Sigur?"],"HmFYc5":["Nu s-au putut salva modific\u0103rile. \xcencearc\u0103 din nou."],"DwFqrb":[[6,"count",{"one":[[7]," boost"],"other":[[7]," boost-uri"]},0,"cardinal"]],"rp7bx+":[[6,"count",{"one":[[7]," membru"],"other":[[7]," membri"]},0,"cardinal"]],"G08ClG":[[2,"count"]," online"],"Lx0P8k":["Gratuit"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[6,"minutes",{"one":[[7]," minut"],"other":[[7]," minute"]},0,"cardinal"]],"5xxUI2":["Muzic\u0103 apreciat\u0103"],"jB1fWC":["Asociaz\u0103-\u021Bi contul"],"yul+0g":["Public\u0103"],"D/HToK":[[1,"hours"]," o"],"fMbgeZ":["Partajeaz\u0103 activitatea"],"J8r/7L":["\xcencheiat\u0103"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Partajarea activit\u0103\u021Bilor"],"rgpc8E":[[6,"count",{"one":[[7]," joc"],"other":[[7]," jocuri"]},0,"cardinal"]]}',
 );

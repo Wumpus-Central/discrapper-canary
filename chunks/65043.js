@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"HmFYc5":["\uBCC0\uACBD \uC0AC\uD56D\uC744 \uC800\uC7A5\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4. \uB2E4\uC2DC \uC2DC\uB3C4\uD574 \uC8FC\uC138\uC694."],"Lx0P8k":["\uBB34\uB8CC"]}',
+u.exports = JSON.parse(
+    '{"L8Xfoo":["\uC704\uC82F \uCD94\uAC00"],"IuT87w":["\uC704\uC82F \uCD94\uAC00"],"uG3Bwy":["\uD655\uC2E4\uD55C\uAC00\uC694?"],"HmFYc5":["\uBCC0\uACBD \uC0AC\uD56D\uC744 \uC800\uC7A5\uD560 \uC218 \uC5C6\uC2B5\uB2C8\uB2E4. \uB2E4\uC2DC \uC2DC\uB3C4\uD574 \uC8FC\uC138\uC694."],"DwFqrb":["\uBD80\uC2A4\uD2B8 ",[2,"count"],"\uBC88"],"rp7bx+":["\uBA64\uBC84 ",[2,"count"],"\uBA85"],"G08ClG":[[2,"count"],"\uBA85 \uC628\uB77C\uC778"],"Lx0P8k":["\uBB34\uB8CC"],"bFIg0R":["+",[1,"count"],"\uAC1C"],"ZdPp2q":["Spotify"],"+5b01q":[[2,"minutes"],"\uBD84"],"5xxUI2":["\uC778\uAE30 \uC74C\uC545"],"jB1fWC":["\uACC4\uC815 \uC5F0\uACB0\uD558\uAE30"],"yul+0g":["\uBC1C\uD589"],"D/HToK":[[1,"hours"],"\uC2DC\uAC04"],"fMbgeZ":["\uD65C\uB3D9 \uACF5\uC720\uD558\uAE30"],"J8r/7L":["\uC885\uB8CC\uD568"],"JiMMEd":["+",[1,"count"],"\uAC1C"],"3LJ1u9":["\uD65C\uB3D9 \uACF5\uC720"],"rgpc8E":["\uAC8C\uC784 ",[2,"count"]," \uAC1C"]}',
 );

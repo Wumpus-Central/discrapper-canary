@@ -1,1 +1,3 @@
-e.exports = JSON.parse('{"HmFYc5":["Endringene ble ikke lagret. Pr\xf8v igjen."],"Lx0P8k":["Gratis"]}');
+t.exports = JSON.parse(
+    '{"L8Xfoo":["Legg til modul"],"IuT87w":["Legg til modul"],"uG3Bwy":["Er du sikker?"],"HmFYc5":["Endringene ble ikke lagret. Pr\xf8v igjen."],"DwFqrb":[[6,"count",{"one":[[7]," boost"],"other":[[7]," booster"]},0,"cardinal"]],"rp7bx+":[[6,"count",{"one":[[7]," Medlem"],"other":[[7]," Medlemmer"]},0,"cardinal"]],"G08ClG":[[2,"count"]," p\xe5logget"],"Lx0P8k":["Gratis"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[6,"minutes",{"one":[[7]," minutt"],"other":[[7]," minutter"]},0,"cardinal"]],"5xxUI2":["Popular Music"],"jB1fWC":["Lenke til konto"],"yul+0g":["Utgiver"],"D/HToK":[[1,"hours"],"\xa0t"],"fMbgeZ":["Del aktivitet"],"J8r/7L":["Avsluttet"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Aktivitetsdeling"],"rgpc8E":[[2,"count"]," spill"]}',
+);

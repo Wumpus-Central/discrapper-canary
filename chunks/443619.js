@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"HmFYc5":["Tvoje promjene nije bilo mogu\u0107e spremiti. Poku\u0161aj ponovno."],"Lx0P8k":["Besplatno"]}',
+o.exports = JSON.parse(
+    '{"L8Xfoo":["Dodaj widget"],"IuT87w":["Dodaj widget"],"uG3Bwy":["Sigurno to \u017Eeli\u0161?"],"HmFYc5":["Tvoje promjene nije bilo mogu\u0107e spremiti. Poku\u0161aj ponovno."],"DwFqrb":[[6,"count",{"one":[[7]," Boost"],"few":[[7]," Boosta"],"other":[[7]," Boostova"]},0,"cardinal"]],"rp7bx+":[[6,"count",{"one":[[7]," \u010Dlan"],"few":[[7]," \u010Dlana"],"other":[[7]," \u010Dlanova"]},0,"cardinal"]],"G08ClG":[[2,"count"]," na mre\u017Ei"],"Lx0P8k":["Besplatno"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[6,"minutes",{"one":[[7]," minute "],"few":[[7]," minute"],"other":[[7]," minuta"]},0,"cardinal"]],"5xxUI2":["Popularna glazba"],"jB1fWC":["Pove\u017Ei ra\u010Dun"],"yul+0g":["Objavi"],"D/HToK":[[1,"hours"]," h"],"fMbgeZ":["Podijeli aktivnost"],"J8r/7L":["Zavr\u0161eno"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Dijeljenje aktivnosti"],"rgpc8E":[[6,"count",{"one":[[7]," igra"],"few":[[7]," igre"],"other":[[7]," igara"]},0,"cardinal"]]}',
 );

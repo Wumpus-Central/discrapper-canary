@@ -1,3 +1,3 @@
-p.exports = JSON.parse(
-    '{"HmFYc5":["\u65E0\u6CD5\u4FDD\u5B58\u60A8\u7684\u66F4\u6539\uFF0C\u8BF7\u91CD\u8BD5\u3002"],"Lx0P8k":["\u514D\u8D39"]}',
+u.exports = JSON.parse(
+    '{"L8Xfoo":["\u6DFB\u52A0\u5C0F\u5DE5\u5177"],"IuT87w":["\u6DFB\u52A0\u5C0F\u5DE5\u5177"],"uG3Bwy":["\u60A8\u786E\u5B9A\u5417\uFF1F"],"HmFYc5":["\u65E0\u6CD5\u4FDD\u5B58\u60A8\u7684\u66F4\u6539\uFF0C\u8BF7\u91CD\u8BD5\u3002"],"DwFqrb":[[2,"count"]," \u4E2A\u52A9\u529B"],"rp7bx+":[[2,"count"]," \u4F4D\u6210\u5458"],"G08ClG":[[2,"count"]," \u4EBA\u5728\u7EBF"],"Lx0P8k":["\u514D\u8D39"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[2,"minutes"]," \u5206\u949F"],"5xxUI2":["\u70ED\u95E8\u97F3\u4E50"],"jB1fWC":["\u8FDE\u63A5\u8D26\u53F7"],"yul+0g":["\u53D1\u5E03"],"D/HToK":[[1,"hours"]," \u5C0F\u65F6"],"fMbgeZ":["\u5206\u4EAB\u52A8\u6001"],"J8r/7L":["\u5DF2\u7ED3\u675F"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["\u52A8\u6001\u5206\u4EAB"],"rgpc8E":[[2,"count"]," \u6B3E\u6E38\u620F"]}',
 );

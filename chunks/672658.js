@@ -1,1 +1,3 @@
-e.exports = JSON.parse('{"HmFYc5":["Dine \xe6ndringer kunne ikke gemmes. Pr\xf8v igen."],"Lx0P8k":["Gratis"]}');
+t.exports = JSON.parse(
+    '{"L8Xfoo":["Tilf\xf8j widget"],"IuT87w":["Tilf\xf8j widget"],"uG3Bwy":["Er du sikker?"],"HmFYc5":["Dine \xe6ndringer kunne ikke gemmes. Pr\xf8v igen."],"DwFqrb":[[2,"count"]," Boost"],"rp7bx+":[[6,"count",{"one":[[7]," Medlem"],"other":[[7]," Medlemmer"]},0,"cardinal"]],"G08ClG":[[2,"count"]," Online"],"Lx0P8k":["Gratis"],"bFIg0R":["+",[1,"count"]],"ZdPp2q":["Spotify"],"+5b01q":[[6,"minutes",{"one":[[7]," minut"],"other":[[7]," minutter"]},0,"cardinal"]],"5xxUI2":["Popul\xe6r musik"],"jB1fWC":["Tilknyt konto"],"yul+0g":["Udgiv"],"D/HToK":[[1,"hours"],"t"],"fMbgeZ":["Del aktivitet"],"J8r/7L":["Afsluttet"],"JiMMEd":["+",[1,"count"]],"3LJ1u9":["Aktivitetsdeling"],"rgpc8E":[[2,"count"]," spil"]}',
+);
