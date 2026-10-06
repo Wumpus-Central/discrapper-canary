@@ -949,7 +949,7 @@ var tP = n(844222),
     tV = n(616356),
     tz = n(977997),
     tB = n(312006),
-    tq = n(25578),
+    tq = n(192820),
     tK = n(756872);
 function tH(e) {
     let { aspectRatio: t, className: n, children: l, width: s, ...a } = e,

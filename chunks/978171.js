@@ -1,4 +1,4 @@
-n.d(t, { A: () => K });
+n.d(t, { A: () => $ });
 var i = n(477900),
     l = n(582128),
     r = n(17928),
@@ -21,13 +21,13 @@ var i = n(477900),
     _ = n(144009),
     N = n(229659),
     T = n(885386),
-    M = n(25578),
+    M = n(192820),
     v = n(174459),
     y = n(975571),
     L = n(917592),
     x = n(652215),
-    R = n(731854),
-    D = n(375708),
+    D = n(731854),
+    R = n(375708),
     O = n(300303),
     w = n(479137);
 let U = function (e) {
@@ -54,8 +54,8 @@ let U = function (e) {
         a = y.A.getArticleURL(x.MVz.VOICE_VIDEO_TROUBLESHOOTING),
         u =
             null != e.outboundLossRate
-                ? D.intl.format(D.t["3pFz1P"], { badPing: 250, badLossRate: 10, url: a })
-                : D.intl.format(D.t.vggaMt, { badPing: 250, url: a }),
+                ? R.intl.format(R.t["3pFz1P"], { badPing: 250, badLossRate: 10, url: a })
+                : R.intl.format(R.t.vggaMt, { badPing: 250, url: a }),
         d = (0, l.useCallback)(() => {
             let { hostname: t, averagePing: n, lastPing: r, outboundLossRate: s } = e,
                 a = T.Q_.getSetting();
@@ -85,14 +85,14 @@ let U = function (e) {
                                     variant: "text-xs/normal",
                                     color: "text-default",
                                     className: O.VU,
-                                    children: D.intl.format(D.t["X58/lN"], { averagePing: n.toFixed(0) }),
+                                    children: R.intl.format(R.t["X58/lN"], { averagePing: n.toFixed(0) }),
                                 }),
                                 null != r
                                     ? (0, i.jsx)(f.E, {
                                           variant: "text-xs/normal",
                                           color: "text-default",
                                           className: O.VU,
-                                          children: D.intl.format(D.t["6iv2TF"], { lastPing: r.toFixed(0) }),
+                                          children: R.intl.format(R.t["6iv2TF"], { lastPing: r.toFixed(0) }),
                                       })
                                     : null,
                                 null != s
@@ -100,7 +100,7 @@ let U = function (e) {
                                           variant: "text-xs/normal",
                                           color: "text-default",
                                           className: O.VU,
-                                          children: D.intl.format(D.t["VIBJM+"], { outboundLossRate: s.toFixed(1) }),
+                                          children: R.intl.format(R.t["VIBJM+"], { outboundLossRate: s.toFixed(1) }),
                                       })
                                     : null,
                             ],
@@ -113,18 +113,18 @@ let U = function (e) {
         { connectionState: c, connectionTypeText: h } = e,
         U = T.Q_.getSetting(),
         P = {
-            [x.S7L.AWAITING_ENDPOINT]: D.intl.format(D.t.Eu2vUR, { url: x.qF7.STATUS }),
-            [x.S7L.CONNECTING]: D.intl.string(D.t["y+E8aD"]),
-            [x.S7L.AUTHENTICATING]: D.intl.string(D.t["5lGIZH"]),
-            [x.S7L.DISCONNECTED]: D.intl.string(D.t.fOX25I),
-            [x.S7L.RTC_CONNECTING]: D.intl.string(D.t.b5Ubd5),
-            [x.S7L.ICE_CHECKING]: D.intl.format(D.t.SyoYUb, { url: y.A.getArticleURL(x.MVz.VOICE_CONNECTION_ERRORS) }),
-            [x.S7L.DTLS_CONNECTING]: D.intl.format(D.t.SyoYUb, {
+            [x.S7L.AWAITING_ENDPOINT]: R.intl.format(R.t.Eu2vUR, { url: x.qF7.STATUS }),
+            [x.S7L.CONNECTING]: R.intl.string(R.t["y+E8aD"]),
+            [x.S7L.AUTHENTICATING]: R.intl.string(R.t["5lGIZH"]),
+            [x.S7L.DISCONNECTED]: R.intl.string(R.t.fOX25I),
+            [x.S7L.RTC_CONNECTING]: R.intl.string(R.t.b5Ubd5),
+            [x.S7L.ICE_CHECKING]: R.intl.format(R.t.SyoYUb, { url: y.A.getArticleURL(x.MVz.VOICE_CONNECTION_ERRORS) }),
+            [x.S7L.DTLS_CONNECTING]: R.intl.format(R.t.SyoYUb, {
                 url: y.A.getArticleURL(x.MVz.VOICE_CONNECTION_ERRORS),
             }),
             [x.S7L.RTC_CONNECTED]: d,
-            [x.S7L.NO_ROUTE]: D.intl.format(D.t["2tgQnk"], { url: y.A.getArticleURL(x.MVz.VOICE_CONNECTION_ERRORS) }),
-            [x.S7L.RTC_DISCONNECTED]: D.intl.string(D.t.fOX25I),
+            [x.S7L.NO_ROUTE]: R.intl.format(R.t["2tgQnk"], { url: y.A.getArticleURL(x.MVz.VOICE_CONNECTION_ERRORS) }),
+            [x.S7L.RTC_DISCONNECTED]: R.intl.string(R.t.fOX25I),
         }[c];
     return (0, i.jsxs)("div", {
         className: O.kL,
@@ -140,10 +140,10 @@ let U = function (e) {
                             className: O.Uo,
                             children: [
                                 U &&
-                                    M.Ay.supports(R.O5.DIAGNOSTICS) &&
+                                    M.Ay.supports(D.O5.DIAGNOSTICS) &&
                                     (0, i.jsx)(g.$, {
                                         icon: C.BugIcon,
-                                        text: D.intl.string(D.t.KBoWg9),
+                                        text: R.intl.string(R.t.KBoWg9),
                                         variant: "secondary",
                                         size: "sm",
                                         fullWidth: !0,
@@ -151,7 +151,7 @@ let U = function (e) {
                                     }),
                                 (0, i.jsx)(g.$, {
                                     icon: "success" === t ? A.y : p.UploadIcon,
-                                    text: "success" === t ? D.intl.string(D.t.i4jeWR) : D.intl.string(D.t.EbwFfR),
+                                    text: "success" === t ? R.intl.string(R.t.i4jeWR) : R.intl.string(R.t.EbwFfR),
                                     variant: "secondary",
                                     size: "sm",
                                     fullWidth: !0,
@@ -198,11 +198,11 @@ function B(e) {
     return (0, i.jsxs)("div", {
         className: Z.kL,
         children: [
-            (0, i.jsx)(P.D, { variant: "text-sm/bold", color: "text-strong", children: D.intl.string(D.t.cTQI5t) }),
+            (0, i.jsx)(P.D, { variant: "text-sm/bold", color: "text-strong", children: R.intl.string(R.t.cTQI5t) }),
             (0, i.jsx)(f.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
-                children: D.intl.format(D.t.wKxADe, { helpArticle: (0, F.aW)() }),
+                children: R.intl.format(R.t.wKxADe, { helpArticle: (0, F.aW)() }),
             }),
             (0, i.jsx)("div", {
                 className: Z.on,
@@ -217,7 +217,7 @@ function B(e) {
                             className: a ? w.Dx : w.t6,
                             children: (0, i.jsx)(g.$, {
                                 icon: j.CopyIcon,
-                                text: D.intl.string(D.t.OpuAlK),
+                                text: R.intl.string(R.t.OpuAlK),
                                 variant: "secondary",
                                 size: "sm",
                                 fullWidth: !0,
@@ -227,7 +227,7 @@ function B(e) {
                             className: a ? w.t6 : w.Dx,
                             children: (0, i.jsx)(g.$, {
                                 icon: A.y,
-                                text: D.intl.string(D.t.t5VZ88),
+                                text: R.intl.string(R.t.t5VZ88),
                                 variant: "secondary",
                                 size: "sm",
                                 fullWidth: !0,
@@ -236,7 +236,7 @@ function B(e) {
                     ],
                 }),
             (0, i.jsx)("hr", { className: w.me }),
-            (0, i.jsx)(f.E, { variant: "text-xs/normal", color: "text-subtle", children: D.intl.string(D.t.B9JNsl) }),
+            (0, i.jsx)(f.E, { variant: "text-xs/normal", color: "text-subtle", children: R.intl.string(R.t.B9JNsl) }),
             (0, i.jsxs)(m.Z, {
                 type: m.Z.Types.SUCCESS,
                 className: w.g4,
@@ -245,7 +245,7 @@ function B(e) {
                     (0, i.jsx)(f.E, {
                         variant: "text-xs/medium",
                         color: "text-feedback-positive",
-                        children: D.intl.string(D.t["3BogKe"]),
+                        children: R.intl.string(R.t["3BogKe"]),
                     }),
                 ],
             }),
@@ -279,12 +279,12 @@ function z(e) {
 }
 function J(e) {
     let { channelId: t, isOverlay: n, lobbyId: l, closePopout: r } = e,
-        s = (0, h.k)({ channelId: t }) ? D.intl.string(D.t["3BogKe"]) : D.intl.string(D.t.ETIVvg);
+        s = (0, h.k)({ channelId: t }) ? R.intl.string(R.t["3BogKe"]) : R.intl.string(R.t.ETIVvg);
     return n
         ? (0, i.jsx)(Y, { lobbyId: l, closePopout: r, connectionTypeText: s })
         : (0, i.jsx)(z, { closePopout: r, connectionTypeText: s });
 }
-function $(e) {
+function K(e) {
     let [t, n] = l.useState(k.Rj.RTC_DEBUG_PANEL),
         r = (0, a.GV)();
     l.useEffect(() => {
@@ -308,14 +308,14 @@ function $(e) {
                         (0, i.jsx)(s.V.Item, {
                             id: k.Rj.RTC_DEBUG_PANEL,
                             className: W.YU,
-                            children: D.intl.string(D.t.MBY1Pm),
+                            children: R.intl.string(R.t.MBY1Pm),
                         }),
                         o
                             ? null
                             : (0, i.jsx)(s.V.Item, {
                                   id: k.Rj.RTC_SECURE_FRAMES,
                                   className: W.YU,
-                                  children: D.intl.string(D.t.zC6o3s),
+                                  children: R.intl.string(R.t.zC6o3s),
                               }),
                     ],
                 }),
@@ -340,8 +340,8 @@ function $(e) {
         })
     );
 }
-function K(e) {
+function $(e) {
     return (0, h.k)({ channelId: e.channelId })
-        ? (0, i.jsx)($, { ...e })
+        ? (0, i.jsx)(K, { ...e })
         : (0, i.jsx)("div", { className: W.L3, children: (0, i.jsx)(J, { ...e }) });
 }

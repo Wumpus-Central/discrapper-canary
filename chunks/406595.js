@@ -48,7 +48,7 @@ function L(e) {
 function x(e) {
     return Array.from(L(e).values());
 }
-function R() {
+function D() {
     let e = u.A.affinities,
         t = 0;
     for (let n = 0; n < e.length; n += 1) {
@@ -57,7 +57,7 @@ function R() {
     }
     return t > 0 ? t : 1;
 }
-function D(e) {
+function R(e) {
     return { hasMention: h.Ay.getMentionCount(e) > 0, hasUnread: h.Ay.hasUnread(e) };
 }
 function O(e, t) {
@@ -116,7 +116,7 @@ function U(e) {
             let l = (i = c.A.getStatus(t)) === p.clD.ONLINE || i === p.clD.IDLE || i === p.clD.DND,
                 r = s.A.getUserAffinity(t)?.communicationProbability ?? 0,
                 a = o.A.getDMFromUserId(t),
-                { hasMention: u, hasUnread: d } = null != a ? D(a) : { hasMention: !1, hasUnread: !1 };
+                { hasMention: u, hasUnread: d } = null != a ? R(a) : { hasMention: !1, hasUnread: !1 };
             return w({
                 tab: e,
                 targetId: t,
@@ -139,7 +139,7 @@ function U(e) {
             s = N((null != r ? (u.A.getGuildAffinity(r)?.score ?? 0) : 0) / i, 0, 1),
             { hasMention: d, hasUnread: c } =
                 (0, a.ke)(l.type) || l.isDM() || l.isMultiUserDM() || l.isPrivate()
-                    ? D(t)
+                    ? R(t)
                     : { hasMention: !1, hasUnread: !1 };
         return w({
             tab: e,
@@ -169,7 +169,7 @@ function P(e, t) {
 function b(e) {
     let { pruneInvalid: t } = e,
         n = new Set(E.values().map((e) => e.rowId)),
-        i = R(),
+        i = D(),
         l = !1;
     for (let e of I) {
         let r = L(e);
@@ -239,7 +239,7 @@ function F(e, t) {
     let { pruneInvalid: n } = t,
         i = L(e);
     if (0 === i.size && 0 === E.values(e).length) return !1;
-    let l = R(),
+    let l = D(),
         r = !1,
         s = new Set();
     for (let t of i.keys())
@@ -251,7 +251,7 @@ function G(e, t) {
     let { pruneInvalid: n } = t,
         i = L(C.x.FRIENDS);
     if (0 === i.size) return !1;
-    let l = R(),
+    let l = D(),
         r = !1;
     for (let t of i.keys())
         o.A.getDMFromUserId(t) === e &&
@@ -260,7 +260,7 @@ function G(e, t) {
 }
 function H(e) {
     let t = _,
-        n = R(),
+        n = D(),
         i = !1;
     return (
         L(C.x.MESSAGES).has(e) &&
@@ -338,7 +338,7 @@ let W = new Z(
                   let n = M(e.addedTimestampMs ?? L(e.tab).get(e.targetId)?.addedTimestampMs ?? Date.now()),
                       i = L(e.tab);
                   i.set(e.targetId, { targetId: e.targetId, addedTimestampMs: n });
-                  let l = R(),
+                  let l = D(),
                       r = U({
                           tab: e.tab,
                           targetId: e.targetId,
@@ -372,7 +372,7 @@ let W = new Z(
               PRESENCE_UPDATES: B(function (e) {
                   let t = L(C.x.FRIENDS);
                   if (0 === t.size) return !1;
-                  let n = R(),
+                  let n = D(),
                       i = !1;
                   for (let l of e.updates) {
                       let e = l.user?.id;
@@ -387,7 +387,7 @@ let W = new Z(
               PRESENCES_REPLACE: B(function (e) {
                   let t = L(C.x.FRIENDS);
                   if (0 === t.size) return !1;
-                  let n = R(),
+                  let n = D(),
                       i = !1;
                   for (let l of e.presences) {
                       let e = l.user?.id;
@@ -411,7 +411,7 @@ let W = new Z(
               CHANNEL_ACK: B((e) => H(e.channelId)),
               CHANNEL_UPDATES: B(function (e) {
                   let t = _,
-                      n = R(),
+                      n = D(),
                       i = !1,
                       l = L(C.x.MESSAGES),
                       r = L(C.x.VOICE);
@@ -449,7 +449,7 @@ let W = new Z(
               RELATIONSHIP_ADD: B(function (e) {
                   let t = e.relationship?.id;
                   if (null == t || !L(C.x.FRIENDS).has(t)) return !1;
-                  let n = R();
+                  let n = D();
                   return V({ tab: C.x.FRIENDS, targetId: t, pruneInvalid: _, guildAffinityNormalizationMax: n });
               }),
               RELATIONSHIP_REMOVE: B(function (e) {

@@ -1,4 +1,4 @@
-n.d(t, { A: () => D });
+n.d(t, { A: () => O });
 var i = n(477900),
     l = n(582128),
     r = n(562708),
@@ -11,15 +11,16 @@ var i = n(477900),
     h = n(688810),
     f = n(139286),
     g = n(270816),
-    C = n(844981),
-    A = n(486487),
-    p = n(110027),
-    m = n(298242),
-    E = n(25578),
-    I = n(763827),
-    S = n(532624),
-    _ = n(152567);
-let N = l.forwardRef(function (e, t) {
+    C = n(201242),
+    A = n(844981),
+    p = n(486487),
+    m = n(110027),
+    E = n(298242),
+    I = n(192820),
+    S = n(763827),
+    _ = n(532624),
+    N = n(152567);
+let T = l.forwardRef(function (e, t) {
     let { "aria-label": n, location: r, containerClassName: s, notchClassName: a } = e,
         o = l.useRef(null);
     return (
@@ -33,8 +34,8 @@ let N = l.forwardRef(function (e, t) {
             tabIndex: -1,
             role: "img",
             "aria-label": n,
-            children: (0, i.jsx)(_.A, {
-                notchBackground: _.V.BLACK,
+            children: (0, i.jsx)(N.A, {
+                notchBackground: N.V.BLACK,
                 location: r,
                 meterOnly: !0,
                 containerClassName: s,
@@ -43,130 +44,130 @@ let N = l.forwardRef(function (e, t) {
         })
     );
 });
-var T = n(819027),
-    M = n(652215),
-    v = n(621380),
-    y = n(731854),
-    L = n(375708),
-    x = n(943679),
+var M = n(819027),
+    v = n(652215),
+    y = n(621380),
+    L = n(731854),
+    x = n(375708),
+    D = n(943679),
     R = n(788066);
-function D(e) {
+function O(e) {
     let {
             appContext: t,
             onInteraction: n,
             onSelect: l,
-            onClose: _,
-            maybeRenderPTTCheckbox: D = !1,
-            renderDeafenCheckbox: O = !1,
-            renderInputProfiles: w = !1,
-            renderOutputDevices: U = !1,
-            renderOutputVolume: P = !1,
-            renderInputDevices: b = !1,
-            renderInputVolume: j = !1,
-            maybeRenderInputMeter: V = !1,
-            renderSettingsButton: F = !1,
-            maybeRenderSpatialAudioCheckbox: G = !1,
+            onClose: N,
+            maybeRenderPTTCheckbox: O = !1,
+            renderDeafenCheckbox: w = !1,
+            renderInputProfiles: U = !1,
+            renderOutputDevices: P = !1,
+            renderOutputVolume: b = !1,
+            renderInputDevices: j = !1,
+            renderInputVolume: V = !1,
+            maybeRenderInputMeter: F = !1,
+            renderSettingsButton: G = !1,
+            maybeRenderSpatialAudioCheckbox: H = !1,
         } = e,
-        { analyticsLocations: H } = (0, h.Ay)();
+        { analyticsLocations: k } = (0, h.Ay)();
     (0, f.A)({
         type: r.ImpressionTypes.MENU,
         name: r.ImpressionNames.AUDIO_DEVICE_MENU,
-        properties: { location_stack: H },
+        properties: { location_stack: k },
     });
-    let k = (0, T.A)(t),
-        Z = (0, g.H)({ deviceType: y.oh.AUDIO_INPUT, analyticsLocations: H, asSubmenu: !0 }),
-        B = (0, g.H)({ deviceType: y.oh.AUDIO_OUTPUT, analyticsLocations: H, asSubmenu: !0 }),
-        W = (0, s.bG)([E.Ay], () => E.Ay.getActiveInputProfile()),
-        Y = (0, p.A)(H),
-        z = (0, A.A)(H),
-        J = (0, m.A)(H),
+    let Z = (0, M.A)(t),
+        B = (0, g.H)({ deviceType: L.oh.AUDIO_INPUT, analyticsLocations: k, asSubmenu: !0 }),
+        W = (0, g.H)({ deviceType: L.oh.AUDIO_OUTPUT, analyticsLocations: k, asSubmenu: !0 }),
+        Y = (0, s.bG)([I.Ay], () => I.Ay.getActiveInputProfile()),
+        z = (0, m.A)(k),
+        J = (0, p.A)(k),
+        K = (0, E.A)(k),
         $ = a.x.DEFAULT,
-        K = E.Ay.isSelfDeaf($),
-        q = (0, C.Ay)("AudioDeviceMenu"),
-        X = (0, s.bG)([E.Ay], () => E.Ay.isSpatialAudioEnabled()),
-        Q = (0, s.bG)([E.Ay], () => E.Ay.getMode()),
-        ee = Q === M.TBI.VOICE_ACTIVITY ? M.TBI.PUSH_TO_TALK : M.TBI.VOICE_ACTIVITY,
-        et = (0, s.bG)([E.Ay, S.Ay], () => {
-            let e = E.Ay.getModeOptions().shortcut?.length > 0,
-                t = null != S.Ay.getKeybindForAction(M.hCu.PUSH_TO_TALK, !1, !0),
-                n = null != S.Ay.getKeybindForAction(M.hCu.PUSH_TO_TALK_PRIORITY, !1, !0);
+        q = I.Ay.isSelfDeaf($),
+        X = (0, A.Ay)("AudioDeviceMenu"),
+        Q = (0, s.bG)([C.A], () => C.A.isSpatialAudioEnabled()),
+        ee = (0, s.bG)([I.Ay], () => I.Ay.getMode()),
+        et = ee === v.TBI.VOICE_ACTIVITY ? v.TBI.PUSH_TO_TALK : v.TBI.VOICE_ACTIVITY,
+        en = (0, s.bG)([I.Ay, _.Ay], () => {
+            let e = I.Ay.getModeOptions().shortcut?.length > 0,
+                t = null != _.Ay.getKeybindForAction(v.hCu.PUSH_TO_TALK, !1, !0),
+                n = null != _.Ay.getKeybindForAction(v.hCu.PUSH_TO_TALK_PRIORITY, !1, !0);
             return e || t || n;
         }),
-        en = (0, s.bG)([I.A], () => null != I.A.getChannelId());
+        ei = (0, s.bG)([S.A], () => null != S.A.getChannelId());
     return (0, i.jsx)(c.A, {
-        object: M.ZSU.CONTEXT_MENU,
+        object: v.ZSU.CONTEXT_MENU,
         children: (0, i.jsxs)(o.W, {
             "data-menu-migrated": !0,
             onSelect: l,
             onInteraction: n,
-            onClose: _,
+            onClose: N,
             navId: "audio-device-context",
             variant: "fixed",
-            "aria-label": L.intl.string(L.t.ZR1Ss6),
+            "aria-label": x.intl.string(x.t.ZR1Ss6),
             className: R.MK,
             children: [
-                (0, i.jsxs)(u.rX, { children: [b && Z, w && Y, U && B] }),
+                (0, i.jsxs)(u.rX, { children: [j && B, U && z, P && W] }),
                 (0, i.jsxs)(u.rX, {
                     children: [
-                        j && z,
-                        V &&
-                            en &&
+                        V && J,
+                        F &&
+                            ei &&
                             (0, i.jsx)(u.aK, {
                                 id: "input-device-meter",
                                 interactive: !1,
-                                label: L.intl.string(L.t["ye+BAy"]),
+                                label: x.intl.string(x.t["ye+BAy"]),
                                 control: (e, t) =>
-                                    (0, i.jsx)(N, {
+                                    (0, i.jsx)(T, {
                                         ...e,
                                         ref: t,
-                                        "aria-label": L.intl.string(L.t["ye+BAy"]),
-                                        location: { section: M.JJy.CONTEXT_MENU },
+                                        "aria-label": x.intl.string(x.t["ye+BAy"]),
+                                        location: { section: v.JJy.CONTEXT_MENU },
                                         containerClassName: R.Eq,
                                         notchClassName: R.CO,
                                     }),
                             }),
-                        P && J,
+                        b && K,
                     ],
                 }),
                 (0, i.jsxs)(u.rX, {
                     children: [
-                        D &&
-                            et &&
-                            (0, i.jsx)(u.sL, {
-                                checked: Q === M.TBI.PUSH_TO_TALK,
-                                id: "input-mode",
-                                label: L.intl.string(L.t.Q8gkVL),
-                                action: () => d.default.setMode(ee, void 0, void 0, { analyticsLocations: H }),
-                                disabled: W === v.m.STUDIO,
-                            }),
                         O &&
+                            en &&
+                            (0, i.jsx)(u.sL, {
+                                checked: ee === v.TBI.PUSH_TO_TALK,
+                                id: "input-mode",
+                                label: x.intl.string(x.t.Q8gkVL),
+                                action: () => d.default.setMode(et, void 0, void 0, { analyticsLocations: k }),
+                                disabled: Y === y.m.STUDIO,
+                            }),
+                        w &&
                             (0, i.jsx)(
                                 u.sL,
                                 {
                                     id: "deafen",
-                                    label: L.intl.string(L.t.wjcRFX),
+                                    label: x.intl.string(x.t.wjcRFX),
                                     action: () => d.default.toggleSelfDeaf({ context: $, location: "AudioDeviceMenu" }),
-                                    checked: K,
+                                    checked: q,
                                 },
                                 "self-deafen",
                             ),
-                        G &&
-                            q !== C.L3.HIDDEN &&
+                        H &&
+                            X !== A.L3.HIDDEN &&
                             (0, i.jsx)(u.sL, {
                                 id: "spatial-audio",
-                                label: L.intl.string(x.default.EWQJcc),
-                                checked: X,
-                                disabled: (0, C.Xt)(q),
+                                label: x.intl.string(D.default.EWQJcc),
+                                checked: Q,
+                                disabled: (0, A.Xt)(X),
                                 subtext: (function (e) {
-                                    if ((0, C.Xt)(e))
-                                        return L.intl.format(
-                                            e === C.L3.BLOCKED_MONO_OUTPUT ? x.default.rOXfEw : x.default.O7Aa3Y,
+                                    if ((0, A.Xt)(e))
+                                        return x.intl.format(
+                                            e === A.L3.BLOCKED_MONO_OUTPUT ? D.default.rOXfEw : D.default.O7Aa3Y,
                                             {},
                                         );
-                                })(q),
-                                action: () => d.default.setSpatialAudio(!X, H),
+                                })(X),
+                                action: () => d.default.setSpatialAudio(!Q, k),
                             }),
-                        F && k,
+                        G && Z,
                     ],
                 }),
             ],

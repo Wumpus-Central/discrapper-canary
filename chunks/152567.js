@@ -89,10 +89,10 @@ function y(e) {
         ],
     });
 }
-var L = n(25578),
+var L = n(192820),
     x = n(763827),
-    R = n(174459),
-    D = n(652215),
+    D = n(174459),
+    R = n(652215),
     O = n(375708),
     w = n(193221);
 class U extends r.PureComponent {
@@ -143,7 +143,7 @@ class U extends r.PureComponent {
             p.default.setLoopback("mic_test", !0),
             (this._micTestStartTime = Date.now()),
             this.setState({ isMicTesting: !0, isDetectingInput: !0, didDeafenUser: d }),
-            R.default.track(D.HAw.MIC_TESTING_STARTED, {
+            D.default.track(R.HAw.MIC_TESTING_STARTED, {
                 input_device_name: t,
                 input_device_volume: n,
                 output_device_name: i,
@@ -162,7 +162,7 @@ class U extends r.PureComponent {
             p.default.setLoopback("mic_test", !1),
             this.setState({ isMicTesting: !1, didDeafenUser: !1 }),
             null != this._micTestStartTime &&
-                R.default.track(D.HAw.MIC_TESTING_STOPPED, {
+                D.default.track(R.HAw.MIC_TESTING_STOPPED, {
                     testing_duration: Math.round((Date.now() - this._micTestStartTime) / 1e3),
                 }));
     }

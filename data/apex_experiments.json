@@ -2585,7 +2585,8 @@
     "name": "2026-05-spatial-audio-for-voice",
     "kind": "user",
     "defaultConfig": {
-      "enabled": false
+      "enabled": false,
+      "defaultOn": false
     },
     "variations": {
       "0": {
@@ -2593,7 +2594,8 @@
         "variant": 0
       },
       "1": {
-        "enabled": true
+        "enabled": true,
+        "defaultOn": true
       }
     }
   },

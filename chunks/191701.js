@@ -193,17 +193,17 @@ var tW = i(554146),
     tQ = i(429913),
     tZ = i(263577),
     t0 = i(826673),
-    t1 = i(25578),
+    t1 = i(192820),
     t2 = i(308726),
     t8 = i(46282),
-    t5 = i(818023),
-    t9 = i(731854),
+    t9 = i(818023),
+    t5 = i(731854),
     t7 = i(709946),
     t3 = i(302933);
 function t4(t) {
     let { game: e } = t,
         i = (0, tQ.h)(e.id);
-    return null == i ? null : (0, B.jsx)(tZ.V, { src: i.getIconURL(t5.iu.LARGE), size: 40 });
+    return null == i ? null : (0, B.jsx)(tZ.V, { src: i.getIconURL(t9.iu.LARGE), size: 40 });
 }
 let t6 = 5 * R.A.Millis.SECOND,
     et = 8 * R.A.Millis.SECOND,
@@ -574,7 +574,7 @@ let eN = new eE(s.h, {
         if (M.default.hasChangedRenderMode(n)) return;
         let l = (function (t, e) {
             if (V.A.isNotificationDisabled(F.KS.WelcomeNudge)) return null;
-            t1.Ay.supports(t9.O5.VIDEO) ||
+            t1.Ay.supports(t5.O5.VIDEO) ||
                 (e = e.filter((t) => t.type !== F.Jr.GO_LIVE_VOICE && t.type !== F.Jr.GO_LIVE_NON_VOICE));
             let { trackView: n, trackClick: l } = (0, G.Y9)(F.KS.WelcomeNudge, {
                     notif_type: F.KS.WelcomeNudge,
