@@ -1,36 +1,36 @@
-t.d(e, { U: () => E });
-var n = t(582128),
-    o = t(435558),
-    s = t.n(o),
-    a = t(999915),
-    i = t(46054),
-    l = t(551965);
-let c = ["heading", "list", "blockQuote"],
-    u = s().once(() =>
+r.d(t, { U: () => j });
+var n = r(582128),
+    a = r(435558),
+    s = r.n(a),
+    c = r(999915),
+    l = r(46054),
+    i = r(551965);
+let u = ["heading", "list", "blockQuote"],
+    o = s().once(() =>
         s().omit(
-            (0, l.A)([
-                a.Ay.EMBED_TITLE_RULES,
-                i.A.createReactRules({ enableBuildOverrides: !1, enableEmojiClick: !0 }),
+            (0, i.A)([
+                c.Ay.EMBED_TITLE_RULES,
+                l.A.createReactRules({ enableBuildOverrides: !1, enableEmojiClick: !0 }),
             ]),
-            c,
+            u,
         ),
     ),
-    h = s().once(() => i.A.reactParserFor(u())),
-    d = s().once(() =>
-        (0, l.A)([
-            u(),
+    d = s().once(() => l.A.reactParserFor(o())),
+    h = s().once(() =>
+        (0, i.A)([
+            o(),
             {
                 br: {
-                    ...a.Ay.RULES.br,
+                    ...c.Ay.RULES.br,
                     requiredFirstCharacters: ["\n"],
-                    match: (r) => /^\n/.exec(r),
-                    react: (r, e, t) => n.createElement("br", { key: t.key }),
+                    match: (e) => /^\n/.exec(e),
+                    react: (e, t, r) => n.createElement("br", { key: r.key }),
                 },
             },
         ]),
     ),
-    p = s().once(() => i.A.reactParserFor(d()));
-function E(r) {
-    let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return (e.enableNewlines ? p() : h())(r, !0, { allowLinks: !0 });
+    m = s().once(() => l.A.reactParserFor(h()));
+function j(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
+    return (t.enableNewlines ? m() : d())(e, !0, { allowLinks: !0 });
 }

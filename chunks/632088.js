@@ -1,11 +1,11 @@
-l.d(e, { A: () => h, h: () => s });
-var t = l(477900);
-l(582128);
-var r = l(36880);
-let s = "cash-app-pay-container";
-function n() {
-    return (0, t.jsx)("div", { id: s, className: r.w });
+n.d(t, { A: () => i, h: () => l });
+var r = n(477900);
+n(582128);
+var o = n(36880);
+let l = "cash-app-pay-container";
+function s() {
+    return (0, r.jsx)("div", { id: l, className: o.w });
 }
-function h() {
-    return (0, t.jsx)(n, {});
+function i() {
+    return (0, r.jsx)(s, {});
 }

@@ -1,13 +1,13 @@
-l.d(n, { H: () => d, X: () => c });
+l.d(n, { H: () => d, X: () => o });
 var t = l(477900),
     r = l(582128),
     i = l(702841),
-    u = l(595528),
+    a = l(595528),
     s = l(579908),
-    a = l(636194);
-let o = r.createContext(void 0);
-function c(e) {
-    let n = r.useContext(o);
+    u = l(636194);
+let c = r.createContext(void 0);
+function o(e) {
+    let n = r.useContext(c);
     if (null == n)
         throw Error(`${e ?? "useGroupListingsFetchContext"} must be used within a GroupListingsFetchContextProvider`);
     let { listingsLoaded: l, fetchGroupListingsForGuild: t } = n;
@@ -22,19 +22,19 @@ function d(e) {
     let {
             guildId: n,
             children: l,
-            refetchOnMount: c,
+            refetchOnMount: o,
             includeSoftDeleted: d,
             countryCode: m,
-            dontFetchWhileTrue: E,
+            dontFetchWhileTrue: h,
         } = e,
-        h = (0, i.bG)([u.A], () => u.A.isConnected()),
-        f = (0, i.bG)([a.A], () => (null != n ? a.A.getSubscriptionGroupListingsForGuildFetchState(n) : a.e.FETCHED)),
-        [A, N] = r.useState(!0 === c),
-        C = r.useCallback(() => {
-            if (null == n || !h || !0 === E) return;
-            let e = a.A.getSubscriptionGroupListingsForGuildFetchState(n);
-            (A || e === a.e.NOT_FETCHED) && (N(!1), s.WA(n, { includeSoftDeleted: d, countryCode: m }));
-        }, [h, n, d, m, E, A]),
-        g = f === a.e.FETCHED && !A;
-    return (0, t.jsx)(o.Provider, { value: { listingsLoaded: g, fetchGroupListingsForGuild: C }, children: l });
+        f = (0, i.bG)([a.A], () => a.A.isConnected()),
+        E = (0, i.bG)([u.A], () => (null != n ? u.A.getSubscriptionGroupListingsForGuildFetchState(n) : u.e.FETCHED)),
+        [A, N] = r.useState(!0 === o),
+        p = r.useCallback(() => {
+            if (null == n || !f || !0 === h) return;
+            let e = u.A.getSubscriptionGroupListingsForGuildFetchState(n);
+            (A || e === u.e.NOT_FETCHED) && (N(!1), s.WA(n, { includeSoftDeleted: d, countryCode: m }));
+        }, [f, n, d, m, h, A]),
+        g = E === u.e.FETCHED && !A;
+    return (0, t.jsx)(c.Provider, { value: { listingsLoaded: g, fetchGroupListingsForGuild: p }, children: l });
 }

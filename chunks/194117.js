@@ -13,13 +13,13 @@ function E(e) {
             colorClass: d = "",
             ...h
         } = e,
-        c = (0, r.J)(t),
-        o = c?.width ?? n,
-        u = c?.height ?? E;
+        o = (0, r.J)(t),
+        c = o?.width ?? n,
+        u = o?.height ?? E;
     return (0, i.jsx)("svg", {
         ...(0, a.A)(h),
         xmlns: "http://www.w3.org/2000/svg",
-        width: o,
+        width: c,
         height: u,
         fill: "none",
         viewBox: "0 0 24 24",

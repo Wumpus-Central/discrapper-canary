@@ -1,3 +1,3 @@
-a.d(t, { T: () => n, Y: () => l });
-let l = "(max-width: 485px)",
-    n = "(max-height: 450px)";
+l.d(n, { T: () => r, Y: () => t });
+let t = "(max-width: 485px)",
+    r = "(max-height: 450px)";

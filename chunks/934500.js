@@ -1,9 +1,9 @@
-n.d(e, { PV: () => f, ro: () => p, xs: () => h });
+n.d(e, { PV: () => I, ro: () => p, xs: () => f });
 var r = n(214947),
     i = n(403581),
-    l = n(104510),
-    a = n(22231),
-    s = n(95635),
+    s = n(104510),
+    l = n(22231),
+    a = n(95635),
     o = n(343032),
     c = n(460905),
     g = n(183623),
@@ -11,39 +11,39 @@ var r = n(214947),
     m = n(158045),
     d = n(202541),
     x = n(88001),
-    T = n(148155),
-    I = n(375708);
-let f = [
-        { Icon: r.$, getText: () => I.intl.formatToPlainString(T.default.eP3Ar7, { totalSeats: x.aw }) },
-        { Icon: i.t, getText: () => I.intl.string(T.default.woz1Kg) },
-        { Icon: l._, getText: () => I.intl.string(T.default.QnbVrt) },
-        { Icon: a.PencilIcon, getText: () => I.intl.string(T.default["409DEa"]) },
+    h = n(148155),
+    T = n(375708);
+let I = [
+        { Icon: r.$, getText: () => T.intl.formatToPlainString(h.default.eP3Ar7, { totalSeats: x.aw }) },
+        { Icon: i.t, getText: () => T.intl.string(h.default.woz1Kg) },
+        { Icon: s._, getText: () => T.intl.string(h.default.QnbVrt) },
+        { Icon: l.PencilIcon, getText: () => T.intl.string(h.default["409DEa"]) },
     ],
     p = [
-        { Icon: r.$, getText: () => I.intl.formatToPlainString(T.default.eP3Ar7, { totalSeats: x.aw }) },
+        { Icon: r.$, getText: () => T.intl.formatToPlainString(h.default.eP3Ar7, { totalSeats: x.aw }) },
         {
-            Icon: s.UploadIcon,
+            Icon: a.UploadIcon,
             getText: () =>
-                I.intl.formatToPlainString(I.t.p8QVLT, {
+                T.intl.formatToPlainString(T.t.p8QVLT, {
                     maxUploadPremium: (0, m.EJ)(d.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
-        { Icon: o.i, getText: () => I.intl.string(I.t["taMwg/"]) },
-        { Icon: c.n, getText: () => I.intl.string(I.t.KjrZ8Z) },
-        { Icon: g.F, getText: () => I.intl.string(I.t.W180bY) },
-        { Icon: l._, getText: () => I.intl.formatToPlainString(T.default.HVCRVf, { numBoosts: d.M4 }) },
-        { Icon: u.c, getText: () => I.intl.string(I.t.CNIZfy) },
+        { Icon: o.i, getText: () => T.intl.string(T.t["taMwg/"]) },
+        { Icon: c.n, getText: () => T.intl.string(T.t.KjrZ8Z) },
+        { Icon: g.F, getText: () => T.intl.string(T.t.W180bY) },
+        { Icon: s._, getText: () => T.intl.formatToPlainString(h.default.HVCRVf, { numBoosts: d.M4 }) },
+        { Icon: u.c, getText: () => T.intl.string(T.t.CNIZfy) },
     ],
-    h = [
+    f = [
         {
-            Icon: s.UploadIcon,
+            Icon: a.UploadIcon,
             getText: () =>
-                I.intl.formatToPlainString(I.t.p8QVLT, {
+                T.intl.formatToPlainString(T.t.p8QVLT, {
                     maxUploadPremium: (0, m.EJ)(d.PremiumTypes.TIER_2, { useSpace: !1 }),
                 }),
         },
-        { Icon: o.i, getText: () => I.intl.string(I.t["taMwg/"]) },
-        { Icon: c.n, getText: () => I.intl.string(I.t.KjrZ8Z) },
-        { Icon: g.F, getText: () => I.intl.string(I.t.W180bY) },
-        { Icon: u.c, getText: () => I.intl.string(I.t.CNIZfy) },
+        { Icon: o.i, getText: () => T.intl.string(T.t["taMwg/"]) },
+        { Icon: c.n, getText: () => T.intl.string(T.t.KjrZ8Z) },
+        { Icon: g.F, getText: () => T.intl.string(T.t.W180bY) },
+        { Icon: u.c, getText: () => T.intl.string(T.t.CNIZfy) },
     ];

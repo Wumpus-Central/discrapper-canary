@@ -2,18 +2,18 @@ n.d(e, { A: () => x, p: () => d });
 var r = n(477900);
 n(582128);
 var i = n(503698),
-    l = n.n(i),
-    a = n(812993),
-    s = n(953727),
+    s = n.n(i),
+    l = n(812993),
+    a = n(953727),
     o = n(771104),
     c = n(63517);
 function g(t) {
-    let { className: e, children: n, forceUseColor: i = !1, hideStars: a } = t;
+    let { className: e, children: n, forceUseColor: i = !1, hideStars: l } = t;
     return (0, r.jsxs)("span", {
-        className: l()(c.kL, e, { [c.cu]: i }),
+        className: s()(c.kL, e, { [c.cu]: i }),
         children: [
             n,
-            a
+            l
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -29,7 +29,7 @@ var u = n(375708),
     m = n(975117);
 function d(t) {
     return (0, r.jsx)("svg", {
-        ...(0, s.A)({ ...t }),
+        ...(0, a.A)({ ...t }),
         width: "25",
         height: "48",
         viewBox: "0 0 25 48",
@@ -46,14 +46,14 @@ function x(t) {
         className: e,
         forceUseColorForSparkles: n = !1,
         shouldInheritTextColor: i = !1,
-        shouldInheritBackgroundColor: s = !1,
+        shouldInheritBackgroundColor: a = !1,
     } = t;
     return (0, r.jsx)(g, {
         className: e,
         forceUseColor: n,
-        children: (0, r.jsx)(a.Lp, {
+        children: (0, r.jsx)(l.Lp, {
             disableColor: !0,
-            className: l()(m.Tc, { [m.YO]: i, [m.ju]: s }),
+            className: s()(m.Tc, { [m.YO]: i, [m.ju]: a }),
             text: u.intl.string(u.t.y2b7CA),
         }),
     });

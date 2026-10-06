@@ -29,12 +29,12 @@ function h(e, t) {
         !0
     );
 }
-function c() {
+function o() {
     if (!d.initialized || null == d.guildId) return !1;
     let e = s.A.getGuild(d.guildId);
     return null != e && h(e.guildTheme?.themeSettings ?? null, e.guildTheme?.enabled ?? !1);
 }
-class o extends l.Ay.Store {
+class c extends l.Ay.Store {
     static displayName = "GuildSettingsGuildThemeStore";
     initialize() {
         this.waitFor(s.A);
@@ -73,7 +73,7 @@ class o extends l.Ay.Store {
         return this.hasChanges();
     }
 }
-let u = new o(a.h, {
+let u = new c(a.h, {
     GUILD_SETTINGS_GUILD_THEME_INIT: function (e) {
         let { guild: t } = e,
             n = (0, E.z_)(t.guildTheme?.themeSettings ?? null),
@@ -155,8 +155,8 @@ let u = new o(a.h, {
         let { guildId: t, error: n } = e;
         return !!d.initialized && d.guildId === t && ((d = { ...d, isSaving: !1, saveError: n }), !0);
     },
-    CONNECTION_OPEN: c,
-    GUILD_CREATE: c,
+    CONNECTION_OPEN: o,
+    GUILD_CREATE: o,
     GUILD_UPDATE: function (e) {
         let { guild: t } = e;
         if (!d.initialized || d.guildId !== t.id || void 0 === t.theme) return !1;

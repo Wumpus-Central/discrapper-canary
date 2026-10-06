@@ -1,5 +1,6 @@
 !(function () {
     var t = function (e) {
+        "use strict";
         e = e || {};
         var t,
             r,
@@ -65,7 +66,7 @@
                                     e in b[0].options && (t[e] = b[0].options[e]);
                                 },
                             ),
-                                R.run(
+                                E.run(
                                     b[0].options,
                                     function () {
                                         e();
@@ -74,7 +75,7 @@
                                 ));
                         };
                         c
-                            ? R.run(
+                            ? E.run(
                                   c.options,
                                   function () {
                                       r();
@@ -104,7 +105,7 @@
             } catch (e) {}
             ((m = setTimeout(function () {
                 x(e);
-            }, R.duration)),
+            }, E.duration)),
                 _.setIcon(o));
         }
         ((v.circle = function (e) {
@@ -225,10 +226,10 @@
                         o.parentNode && o.parentNode.removeChild(o));
                 } else r.setAttribute("href", n);
             }));
-        var R = {};
-        ((R.duration = 40),
-            (R.types = {}),
-            (R.types.fade = [
+        var E = {};
+        ((E.duration = 40),
+            (E.types = {}),
+            (E.types.fade = [
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0.1 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0.2 },
@@ -241,8 +242,8 @@
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 0.9 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (R.types.none = [{ x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 }]),
-            (R.types.pop = [
+            (E.types.none = [{ x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 }]),
+            (E.types.pop = [
                 { x: 1, y: 1, w: 0, h: 0, o: 1 },
                 { x: 0.9, y: 0.9, w: 0.1, h: 0.1, o: 1 },
                 { x: 0.8, y: 0.8, w: 0.2, h: 0.2, o: 1 },
@@ -251,7 +252,7 @@
                 { x: 0.5, y: 0.5, w: 0.5, h: 0.5, o: 1 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (R.types.popFade = [
+            (E.types.popFade = [
                 { x: 0.75, y: 0.75, w: 0, h: 0, o: 0 },
                 { x: 0.65, y: 0.65, w: 0.1, h: 0.1, o: 0.2 },
                 { x: 0.6, y: 0.6, w: 0.2, h: 0.2, o: 0.4 },
@@ -260,7 +261,7 @@
                 { x: 0.45, y: 0.45, w: 0.5, h: 0.5, o: 0.9 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (R.types.slide = [
+            (E.types.slide = [
                 { x: 0.4, y: 1, w: 0.6, h: 0.6, o: 1 },
                 { x: 0.4, y: 0.9, w: 0.6, h: 0.6, o: 1 },
                 { x: 0.4, y: 0.9, w: 0.6, h: 0.6, o: 1 },
@@ -270,31 +271,31 @@
                 { x: 0.4, y: 0.5, w: 0.6, h: 0.6, o: 1 },
                 { x: 0.4, y: 0.4, w: 0.6, h: 0.6, o: 1 },
             ]),
-            (R.run = function (e, r, n, a) {
-                var i = R.types[g.hidden || g.msHidden || g.webkitHidden || g.mozHidden ? "none" : t.animation];
+            (E.run = function (e, r, n, a) {
+                var i = E.types[g.hidden || g.msHidden || g.webkitHidden || g.mozHidden ? "none" : t.animation];
                 ((a = !0 === n ? (void 0 !== a ? a : i.length - 1) : void 0 !== a ? a : 0),
                 (r = r || function () {}),
                 a < i.length && a >= 0)
                     ? (v[t.type](S(e, i[a])),
                       (p = setTimeout(function () {
-                          (n ? (a -= 1) : (a += 1), R.run(e, r, n, a));
-                      }, R.duration)),
+                          (n ? (a -= 1) : (a += 1), E.run(e, r, n, a));
+                      }, E.duration)),
                       _.setIcon(o))
                     : r();
             }),
             ((t = S(y, e)).bgColor = C(t.bgColor)),
             (t.textColor = C(t.textColor)),
             (t.position = t.position.toLowerCase()),
-            (t.animation = R.types["" + t.animation] ? t.animation : y.animation),
+            (t.animation = E.types["" + t.animation] ? t.animation : y.animation),
             (g = t.win.document));
-        var E = t.position.indexOf("up") > -1,
+        var R = t.position.indexOf("up") > -1,
             A = t.position.indexOf("left") > -1;
-        if (E || A)
-            for (var T = 0; T < R.types["" + t.animation].length; T++) {
-                var P = R.types["" + t.animation][T];
-                (E && (P.y < 0.6 ? (P.y = P.y - 0.4) : (P.y = P.y - 2 * P.y + (1 - P.w))),
-                    A && (P.x < 0.6 ? (P.x = P.x - 0.4) : (P.x = P.x - 2 * P.x + (1 - P.h))),
-                    (R.types["" + t.animation][T] = P));
+        if (R || A)
+            for (var P = 0; P < E.types["" + t.animation].length; P++) {
+                var T = E.types["" + t.animation][P];
+                (R && (T.y < 0.6 ? (T.y = T.y - 0.4) : (T.y = T.y - 2 * T.y + (1 - T.w))),
+                    A && (T.x < 0.6 ? (T.x = T.x - 0.4) : (T.x = T.x - 2 * T.x + (1 - T.h))),
+                    (E.types["" + t.animation][P] = T));
             }
         return (
             (t.type = v["" + t.type] ? t.type : y.type),
@@ -332,7 +333,7 @@
                                     var r = { type: "badge", options: { n: e } };
                                     if (
                                         ("animation" in t &&
-                                            R.types["" + t.animation] &&
+                                            E.types["" + t.animation] &&
                                             (r.options.animation = "" + t.animation),
                                         "type" in t && v["" + t.type] && (r.options.type = "" + t.type),
                                         ["bgColor", "textColor"].forEach(function (e) {

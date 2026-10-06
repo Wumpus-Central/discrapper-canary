@@ -1,4 +1,4 @@
-n.d(t, { _5: () => y, rV: () => _ });
+n.d(t, { _5: () => S, rV: () => g });
 var l = n(477900),
     r = n(582128),
     i = n(20742),
@@ -15,30 +15,30 @@ let d = (0, n(945810).mj)({
 });
 var f = n(211287),
     h = n(739508),
-    m = n(120700),
-    C = n(818348);
-let p = new Set([m.C.COLLECTIBLES_CHECKOUT, m.C.SLAYER_STOREFRONT_CHECKOUT]);
+    C = n(120700),
+    m = n(818348);
+let p = new Set([C.C.COLLECTIBLES_CHECKOUT, C.C.SLAYER_STOREFRONT_CHECKOUT]);
 var E = n(169797),
     I = n(375708);
-let S = r.createContext({ order: null, isOrderCreationEnabled: !1 });
-function y() {
-    return r.useContext(S);
+let y = r.createContext({ order: null, isOrderCreationEnabled: !1 });
+function S() {
+    return r.useContext(y);
 }
-function g(e) {
+function _(e) {
     let { renderModalProps: t, children: n } = e,
         r = (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(i.rQ, {}), (0, l.jsx)(s.c, { children: n })] });
     return null != t ? (0, l.jsx)(E.Jg, { ...t, children: r }) : r;
 }
-function _(e) {
+function g(e) {
     let {
             loadId: t,
             skuIDs: n,
             applicationId: i,
             paymentGateway: s,
-            checkoutFlow: m,
+            checkoutFlow: C,
             isGift: E,
-            onOrderCreated: y,
-            renderModalProps: _,
+            onOrderCreated: S,
+            renderModalProps: g,
             children: P,
         } = e,
         {
@@ -56,27 +56,27 @@ function _(e) {
                     checkoutFlow: s,
                     isGift: a,
                     loadId: u,
-                    onOrderCreated: m,
+                    onOrderCreated: C,
                 } = e,
                 E = f.A.useConfig({ location: "payment_modal" }).enabled,
                 I = d.useConfig({ location: "payment_modal" }).enabled,
-                S = i === C.kM.VIRTUAL_CURRENCY,
-                y = null != s && p.has(s);
-            t = S ? E : !!y && !0 !== a && I;
-            let g = S && E,
-                _ = null != n ? n[0] : void 0,
+                y = i === m.kM.VIRTUAL_CURRENCY,
+                S = null != s && p.has(s);
+            t = y ? E : !!S && !0 !== a && I;
+            let _ = y && E,
+                g = null != n ? n[0] : void 0,
                 [P, A] = (0, r.useState)(null),
                 [R, M] = (0, r.useState)(null),
-                [v, T] = (0, r.useState)(g),
-                x = (0, r.useRef)(!1),
-                L = (0, r.useCallback)(
+                [v, T] = (0, r.useState)(_),
+                L = (0, r.useRef)(!1),
+                x = (0, r.useCallback)(
                     async (e) => {
                         let { skuId: t } = e;
                         T(!0);
                         try {
                             let e = null != l && (0, c.Fs)(l),
                                 n = await (0, o.fS)({ skuId: t, paymentGateway: i, loadId: u, testMode: e });
-                            (A(n), null != m && m(n));
+                            (A(n), null != C && C(n));
                         } catch (n) {
                             let e = n instanceof Error ? n : Error(String(n));
                             ((0, h.gr)(n) ||
@@ -89,17 +89,17 @@ function _(e) {
                             T(!1);
                         }
                     },
-                    [l, i, u, m],
+                    [l, i, u, C],
                 );
             return (
                 (0, r.useEffect)(() => {
-                    t && null != _ && (null != P || null != R || x.current || ((x.current = !0), L({ skuId: _ })));
-                }, [_, t, P, L, R]),
+                    t && null != g && (null != P || null != R || L.current || ((L.current = !0), x({ skuId: g })));
+                }, [g, t, P, x, R]),
                 {
                     order: P,
                     isCreateOrderLoading: v,
                     createOrderError: R,
-                    shouldBlockOnOrderCreation: g,
+                    shouldBlockOnOrderCreation: _,
                     isOrderCreationEnabled: t,
                 }
             );
@@ -107,19 +107,19 @@ function _(e) {
             skuIDs: n,
             applicationId: i,
             paymentGateway: s,
-            checkoutFlow: m,
+            checkoutFlow: C,
             isGift: E,
             loadId: t,
-            onOrderCreated: y,
+            onOrderCreated: S,
         }),
-        x = r.useMemo(() => ({ order: A, isOrderCreationEnabled: T }), [A, T]);
+        L = r.useMemo(() => ({ order: A, isOrderCreationEnabled: T }), [A, T]);
     if (v) {
-        if (R) return (0, l.jsx)(g, { renderModalProps: _, children: (0, l.jsx)(u.A, {}) });
+        if (R) return (0, l.jsx)(_, { renderModalProps: g, children: (0, l.jsx)(u.A, {}) });
         else if (null != M)
-            return (0, l.jsx)(g, {
-                renderModalProps: _,
+            return (0, l.jsx)(_, {
+                renderModalProps: g,
                 children: (0, l.jsx)(a.E, { variant: "text-md/normal", children: I.intl.string(I.t.F8FvUy) }),
             });
     }
-    return (0, l.jsx)(S.Provider, { value: x, children: P });
+    return (0, l.jsx)(y.Provider, { value: L, children: P });
 }

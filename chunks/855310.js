@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Mp: "animationContainer__884d1",
     kL: "container__884d1",
     bG: "svgBorder__884d1",

@@ -1,24 +1,24 @@
-n.d(t, { x: () => l });
-var a = n(582128),
-    r = n(655857),
-    i = n(642639);
-function l() {
-    let { displayCurrency: e } = (0, r.Jn)(),
+t.d(e, { x: () => r });
+var l = t(582128),
+    n = t(655857),
+    s = t(642639);
+function r() {
+    let { displayCurrency: a } = (0, n.Jn)(),
         {
-            selectedSkuId: t,
-            skuIds: n,
-            isGift: l,
-            getOrCreateSetupIntent: u,
-        } = (0, i.t4)((e) => ({
-            selectedSkuId: e.selectedSkuId,
-            skuIds: e.skuIds,
-            isGift: e.isGift,
-            getOrCreateSetupIntent: e.getOrCreateSetupIntent,
+            selectedSkuId: e,
+            skuIds: t,
+            isGift: r,
+            getOrCreateSetupIntent: h,
+        } = (0, s.t4)((a) => ({
+            selectedSkuId: a.selectedSkuId,
+            skuIds: a.skuIds,
+            isGift: a.isGift,
+            getOrCreateSetupIntent: a.getOrCreateSetupIntent,
         })),
-        s = t ?? (1 === n.length ? n[0] : void 0),
-        o = a.useMemo(() => ({ currency: e, sku_id: s, is_gift: l }), [e, s, l]);
+        i = e ?? (1 === t.length ? t[0] : void 0),
+        c = l.useMemo(() => ({ currency: a, sku_id: i, is_gift: r }), [a, i, r]);
     return {
-        createSetupIntent: a.useCallback(() => u(o, { forceRecreate: !0 }), [u, o]),
-        createSetupIntentDeduped: a.useCallback(() => u(o), [u, o]),
+        createSetupIntent: l.useCallback(() => h(c, { forceRecreate: !0 }), [h, c]),
+        createSetupIntentDeduped: l.useCallback(() => h(c), [h, c]),
     };
 }

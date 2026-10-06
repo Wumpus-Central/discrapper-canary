@@ -1,40 +1,40 @@
-e.d(E, { SH: () => s, cL: () => h, q1: () => O });
-var a = e(73153),
-    i = e(795816),
-    r = e(627363),
-    _ = e(587895),
-    c = e(793943),
-    T = e(395671),
-    p = e(998218),
-    n = e(110782);
-async function O(t, E) {
-    a.h.dispatch({ applicationId: t, type: "DEVELOPER_TEST_MODE_AUTHORIZATION_START" });
+l.d(a, { SH: () => p, cL: () => u, q1: () => E });
+var i = l(73153),
+    t = l(795816),
+    n = l(627363),
+    r = l(587895),
+    c = l(793943),
+    s = l(395671),
+    o = l(998218),
+    d = l(110782);
+async function E(e, a) {
+    i.h.dispatch({ applicationId: e, type: "DEVELOPER_TEST_MODE_AUTHORIZATION_START" });
     try {
-        if (!(await (0, i.Ir)(t))) throw Error("Do not have access!");
-        let e = _.A.getApplication(t);
-        null == e && (e = T.Ay.createFromServer(await r.Ay.fetchApplication(t)));
-        let c = e.isEmbedded;
-        if (c && (null == E || !p.A.URL_REGEX.test(E))) throw Error("Invalid Origin URL for embedded application");
+        if (!(await (0, t.Ir)(e))) throw Error("Do not have access!");
+        let l = r.A.getApplication(e);
+        null == l && (l = s.Ay.createFromServer(await n.Ay.fetchApplication(e)));
+        let c = l.isEmbedded;
+        if (c && (null == a || !o.A.URL_REGEX.test(a))) throw Error("Invalid Origin URL for embedded application");
         return (
-            c || n.Cd(e),
-            a.h.dispatch({
+            c || d.Cd(l),
+            i.h.dispatch({
                 type: "DEVELOPER_TEST_MODE_AUTHORIZATION_SUCCESS",
-                applicationId: t,
-                originURL: c ? E : null,
+                applicationId: e,
+                originURL: c ? a : null,
             }),
-            e
+            l
         );
-    } catch (E) {
+    } catch (a) {
         return (
-            a.h.dispatch({ type: "DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL", applicationId: t, error: E.message }), null
+            i.h.dispatch({ type: "DEVELOPER_TEST_MODE_AUTHORIZATION_FAIL", applicationId: e, error: a.message }), null
         );
     }
 }
-function h() {
+function u() {
     (c.fy.getState().activePanel === c.HP.APPLICATION_TEST_MODE_DEBUG && (0, c.Jp)(),
-        a.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET" }));
+        i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET" }));
 }
-function s() {
+function p() {
     (c.fy.getState().activePanel === c.HP.APPLICATION_TEST_MODE_DEBUG && (0, c.Jp)(),
-        a.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET_ERROR" }));
+        i.h.dispatch({ type: "DEVELOPER_TEST_MODE_RESET_ERROR" }));
 }

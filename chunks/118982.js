@@ -1,10 +1,10 @@
-n.d(t, { dI: () => m, k3: () => d, x0: () => x });
+n.d(t, { dI: () => m, k3: () => u, x0: () => x });
 var l = n(811996),
-    r = n(773669),
-    a = n(832163);
+    a = n(773669),
+    r = n(832163);
 n(652215);
-var i = n(206285),
-    s = n(375708);
+var s = n(206285),
+    i = n(375708);
 let o = {
         [l.U.DESKTOP]: "PC",
         [l.U.XBOX]: "Xbox",
@@ -15,29 +15,29 @@ let o = {
         [l.U.AMAZON_KIDS_PLUS]: "Amazon Kids+",
     },
     c = [l.U.PLAYSTATION];
-function u(e) {
+function d(e) {
     let t = (function (e) {
         if (null == e) return c;
-        let t = a.A.getConfigForApplicationId(e);
+        let t = r.A.getConfigForApplicationId(e);
         return null == t ? c : t.excludedPlatforms;
     })(e);
     return 0 === t.length
         ? ""
-        : s.intl.formatToPlainString(i.default["5h8p5P"], {
-              platforms: new Intl.ListFormat(r.default.locale).format(t.map((e) => o[e])),
+        : i.intl.formatToPlainString(s.default["5h8p5P"], {
+              platforms: new Intl.ListFormat(a.default.locale).format(t.map((e) => o[e])),
               count: t.length,
           });
 }
-function d(e) {
-    return s.intl.format(i.default.Q0dHYO, { platforms_info: u(e?.id) });
+function u(e) {
+    return i.intl.format(s.default.Q0dHYO, { platforms_info: d(e?.id) });
 }
 function m(e) {
     let t = e.name;
-    return s.intl.format(i.default.fO4b1C, { applicationName: t, platforms_info: u(e.id) });
+    return i.intl.format(s.default.fO4b1C, { applicationName: t, platforms_info: d(e.id) });
 }
 function x(e, t) {
     let { hasAlreadyLinked: n } = t,
         l = e.name,
-        r = n ? i.default.yqAKVO : i.default.vyAtfo;
-    return s.intl.format(r, { applicationName: l, platforms_info: u(e.id) });
+        a = n ? s.default.yqAKVO : s.default.vyAtfo;
+    return i.intl.format(a, { applicationName: l, platforms_info: d(e.id) });
 }

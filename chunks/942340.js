@@ -1,121 +1,121 @@
-(l.d(e, { E: () => x, p: () => A }), l(321073));
-var t = l(582128),
-    r = l(602853),
-    s = l(661531),
-    n = l(964486),
-    h = l(626584),
-    i = l(739508),
-    o = l(71532),
-    c = l(870716),
-    d = l(908166),
-    u = l(818348);
-let m = new h.A("useStripePaymentElementOptions"),
-    p = { fontSize: "16px", lineHeight: "20px", fontWeight: "500" };
-function x() {
-    let a = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        e = (0, r.r)(s.A.colors.MODAL_BACKGROUND),
-        l = (0, r.r)(s.A.colors.TEXT_STRONG),
-        n = (0, r.r)(s.A.colors.INPUT_BACKGROUND_DEFAULT),
-        h = (0, r.r)(s.A.colors.INPUT_BORDER_DEFAULT),
-        i = a.theme ?? "flat",
-        o = a.colorText ?? l.hex(),
-        c = a.colorBackground ?? e.hex(),
-        d = a.inputBackgroundColor ?? n.hex(),
-        u = h.hex(),
-        m = a.tabBackgroundColor ?? n.hex(),
-        x = a.tabSelectedBackgroundColor ?? null;
+(n.d(t, { E: () => h, p: () => C }), n(321073));
+var r = n(582128),
+    o = n(602853),
+    l = n(661531),
+    s = n(964486),
+    i = n(626584),
+    a = n(739508),
+    u = n(71532),
+    c = n(870716),
+    d = n(908166),
+    p = n(818348);
+let x = new i.A("useStripePaymentElementOptions"),
+    m = { fontSize: "16px", lineHeight: "20px", fontWeight: "500" };
+function h() {
+    let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+        t = (0, o.r)(l.A.colors.MODAL_BACKGROUND),
+        n = (0, o.r)(l.A.colors.TEXT_STRONG),
+        s = (0, o.r)(l.A.colors.INPUT_BACKGROUND_DEFAULT),
+        i = (0, o.r)(l.A.colors.INPUT_BORDER_DEFAULT),
+        a = e.theme ?? "flat",
+        u = e.colorText ?? n.hex(),
+        c = e.colorBackground ?? t.hex(),
+        d = e.inputBackgroundColor ?? s.hex(),
+        p = i.hex(),
+        x = e.tabBackgroundColor ?? s.hex(),
+        h = e.tabSelectedBackgroundColor ?? null;
     return {
-        elementsAppearance: t.useMemo(
+        elementsAppearance: r.useMemo(
             () => ({
-                theme: i,
-                variables: { colorText: o, colorBackground: c },
+                theme: a,
+                variables: { colorText: u, colorBackground: c },
                 rules: {
-                    ".Label": { ...p, color: o, marginBottom: "8px" },
-                    ".Input": { backgroundColor: d, borderColor: u, borderWidth: "1px", borderStyle: "solid" },
-                    ".Error": { ...p },
-                    ".CheckboxInput": { border: `1px solid ${u}` },
-                    ".Tab": { backgroundColor: m },
-                    ...(null != x ? { ".Tab--selected": { backgroundColor: x } } : {}),
+                    ".Label": { ...m, color: u, marginBottom: "8px" },
+                    ".Input": { backgroundColor: d, borderColor: p, borderWidth: "1px", borderStyle: "solid" },
+                    ".Error": { ...m },
+                    ".CheckboxInput": { border: `1px solid ${p}` },
+                    ".Tab": { backgroundColor: x },
+                    ...(null != h ? { ".Tab--selected": { backgroundColor: h } } : {}),
                 },
             }),
-            [i, o, c, d, u, m, x],
+            [a, u, c, d, p, x, h],
         ),
         elementsAppearanceOptions: {
-            theme: i,
-            colorText: o,
+            theme: a,
+            colorText: u,
             colorBackground: c,
             inputBackgroundColor: d,
-            tabBackgroundColor: m,
+            tabBackgroundColor: x,
         },
     };
 }
-function A(a) {
-    let { onSetupError: e, elementsAppearanceOptions: l = {} } = a,
-        [r, s] = t.useState(void 0),
-        [h, p] = t.useState(null),
-        [A, C] = t.useState(!0),
-        [M, E] = t.useState([]),
-        { createSetupIntentDeduped: g } = (0, d.x)(),
-        [_, j] = t.useState([]),
-        { customPaymentMethods: v, customPaymentMethodIdsToSourceTypes: T } = t.useMemo(
+function C(e) {
+    let { onSetupError: t, elementsAppearanceOptions: n = {} } = e,
+        [o, l] = r.useState(void 0),
+        [i, m] = r.useState(null),
+        [C, j] = r.useState(!0),
+        [g, y] = r.useState([]),
+        { createSetupIntentDeduped: k } = (0, d.x)(),
+        [v, f] = r.useState([]),
+        { customPaymentMethods: b, customPaymentMethodIdsToSourceTypes: A } = r.useMemo(
             () => ({
-                customPaymentMethods: (0, c.Dd)(M),
-                customPaymentMethodIdsToSourceTypes: M.reduce(
-                    (a, e) => ((a[e.custom_payment_method_id] = e.payment_source_type), a),
+                customPaymentMethods: (0, c.Dd)(g),
+                customPaymentMethodIdsToSourceTypes: g.reduce(
+                    (e, t) => ((e[t.custom_payment_method_id] = t.payment_source_type), e),
                     {},
                 ),
             }),
-            [M],
+            [g],
         ),
-        L = t.useCallback(async () => {
+        _ = r.useCallback(async () => {
             try {
-                let a,
-                    e,
-                    { client_secret: l, custom_payment_methods: t, payment_method_order: r } = await g();
-                (E(t),
-                    s(l),
-                    j(
-                        null != r && Array.isArray(r)
-                            ? r
-                            : ((a = ["pix", "card"]),
-                              (e = t.find((a) => a.payment_source_type === u.he.PAYPAL)),
-                              null != e && a.push(e.custom_payment_method_id),
-                              a),
+                let e,
+                    t,
+                    { client_secret: n, custom_payment_methods: r, payment_method_order: o } = await k();
+                (y(r),
+                    l(n),
+                    f(
+                        null != o && Array.isArray(o)
+                            ? o
+                            : ((e = ["pix", "card"]),
+                              (t = r.find((e) => e.payment_source_type === p.he.PAYPAL)),
+                              null != t && e.push(t.custom_payment_method_id),
+                              e),
                     ));
-            } catch (a) {
-                (p(a),
-                    null != e && e(a),
-                    m.error("there was an error on setup for Payment Elements: ", a),
-                    (0, i.pM)(a, { tags: { source: "payment_elements" } }));
+            } catch (e) {
+                (m(e),
+                    null != t && t(e),
+                    x.error("there was an error on setup for Payment Elements: ", e),
+                    (0, a.pM)(e, { tags: { source: "payment_elements" } }));
             }
-            C(!1);
-        }, [e, g]);
-    (0, n.Ay)(() => {
-        L();
+            j(!1);
+        }, [t, k]);
+    (0, s.Ay)(() => {
+        _();
     });
-    let { elementsAppearance: I, elementsAppearanceOptions: P } = x(l),
-        H = (0, o.PU)(),
-        R = t.useMemo(
+    let { elementsAppearance: S, elementsAppearanceOptions: E } = h(n),
+        T = (0, u.PU)(),
+        N = r.useMemo(
             () =>
-                A
+                C
                     ? null
                     : {
-                          clientSecret: r,
-                          appearance: I,
-                          locale: H,
-                          customPaymentMethods: v,
+                          clientSecret: o,
+                          appearance: S,
+                          locale: T,
+                          customPaymentMethods: b,
                           paymentMethodCreation: "manual",
                       },
-            [I, H, r, v, A],
+            [S, T, o, b, C],
         ),
-        Z = {
-            setupError: h,
-            customPaymentMethods: v,
-            customPaymentMethodIdsToSourceTypes: T,
-            paymentMethodOrder: _,
-            elementsAppearanceOptions: P,
+        I = {
+            setupError: i,
+            customPaymentMethods: b,
+            customPaymentMethodIdsToSourceTypes: A,
+            paymentMethodOrder: v,
+            elementsAppearanceOptions: E,
         };
-    return null == r || null == R || A
-        ? { ...Z, isLoading: !0, elementsOptions: R, setupIntentSecret: r }
-        : { ...Z, isLoading: !1, elementsOptions: R, setupIntentSecret: r };
+    return null == o || null == N || C
+        ? { ...I, isLoading: !0, elementsOptions: N, setupIntentSecret: o }
+        : { ...I, isLoading: !1, elementsOptions: N, setupIntentSecret: o };
 }

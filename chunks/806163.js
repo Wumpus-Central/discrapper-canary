@@ -2,13 +2,13 @@ r.d(t, {
     B6: () => S,
     Ix: () => y,
     W5: () => D,
-    W6: () => T,
+    W6: () => P,
     XZ: () => g,
-    dO: () => E,
+    dO: () => R,
     g: () => k,
-    qh: () => R,
+    qh: () => E,
     rd: () => x,
-    zy: () => P,
+    zy: () => T,
 });
 var n = r(750573),
     a = r(582128),
@@ -286,7 +286,7 @@ function S(e, t) {
               };
     }, null);
 }
-var R = (function (e) {
+var E = (function (e) {
     function t() {
         return e.apply(this, arguments) || this;
     }
@@ -330,7 +330,7 @@ var R = (function (e) {
     );
 })(a.Component);
 a.Component;
-var E = (function (e) {
+var R = (function (e) {
         function t() {
             return e.apply(this, arguments) || this;
         }
@@ -359,10 +359,10 @@ var E = (function (e) {
         );
     })(a.Component),
     A = a.useContext;
-function T() {
+function P() {
     return A(m);
 }
-function P() {
+function T() {
     return A(g).location;
 }
 function k() {
@@ -370,7 +370,7 @@ function k() {
     return e ? e.params : {};
 }
 function D(e) {
-    var t = P(),
+    var t = T(),
         r = A(g).match;
     return e ? S(t.pathname, e) : r;
 }

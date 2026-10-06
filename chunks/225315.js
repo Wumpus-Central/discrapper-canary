@@ -1,4 +1,4 @@
-n.d(t, { Fy: () => E, Vv: () => d, Xx: () => h, i4: () => c, oZ: () => s, ry: () => r });
+n.d(t, { Fy: () => E, Vv: () => d, Xx: () => h, i4: () => o, oZ: () => s, ry: () => r });
 var i = n(636537),
     l = n(73153),
     a = n(652215);
@@ -24,7 +24,7 @@ function d() {
 function h(e) {
     l.h.dispatch({ type: "WELCOME_SCREEN_SETTINGS_UPDATE", settings: e });
 }
-async function c(e, t) {
+async function o(e, t) {
     l.h.dispatch({ type: "WELCOME_SCREEN_SUBMIT" });
     try {
         let n = await i.Bo.patch({

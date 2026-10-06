@@ -1,9 +1,9 @@
 n.d(e, { A: () => m });
 var r = n(477900),
     i = n(582128),
-    l = n(778712),
-    a = n(97808),
-    s = n(834730),
+    s = n(778712),
+    l = n(97808),
+    a = n(834730),
     o = n(854627),
     c = n(286320),
     g = n(375708),
@@ -11,7 +11,7 @@ var r = n(477900),
 function m() {
     let t = (0, c.b)().slice(0, 3),
         e = t[0],
-        { avatarSrc: n, eventHandlers: m } = (0, o.A)({ userId: e?.id, size: l._3.SIZE_24, animateOnHover: !0 });
+        { avatarSrc: n, eventHandlers: m } = (0, o.A)({ userId: e?.id, size: s._3.SIZE_24, animateOnHover: !0 });
     function d(t) {
         return null != t.globalName ? t.globalName : t.username;
     }
@@ -29,14 +29,14 @@ function m() {
         : (0, r.jsxs)("div", {
               className: u.kL,
               children: [
-                  (0, r.jsx)(a.eu, {
+                  (0, r.jsx)(l.eu, {
                       className: u.__invalid_icon,
                       src: n,
                       "aria-label": e.username,
-                      size: l._3.SIZE_24,
+                      size: s._3.SIZE_24,
                       ...m,
                   }),
-                  (0, r.jsx)(s.E, {
+                  (0, r.jsx)(a.E, {
                       className: u.Qq,
                       variant: "text-sm/normal",
                       color: "text-overlay-light",

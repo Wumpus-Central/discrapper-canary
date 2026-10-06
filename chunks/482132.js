@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => I, UX: () => y, dZ: () => S });
+n.d(t, { Ay: () => I, UX: () => S, dZ: () => y });
 var l = n(477900),
     r = n(582128),
     i = n(503698),
@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(71804),
     f = n(883645),
     h = n(601194),
-    m = n(642639),
-    C = n(573359),
+    C = n(642639),
+    m = n(573359),
     p = n(166532),
     E = n(819252);
 function I(e) {
@@ -24,17 +24,17 @@ function I(e) {
             return { header: t, disableDefaultSlideTransformStyling: n, stepProps: l };
         })(e),
         { step: a, stepConfigs: I } = (0, f.Ay)(),
-        { setBodyNode: S, setFooterNode: y, setModalOverlayNode: g } = (0, h.Gm)(),
-        _ = (0, u.bG)([C.A], () => C.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: P, unifiedCheckoutFlow: A } = (0, m.t4)((e) => ({
+        { setBodyNode: y, setFooterNode: S, setModalOverlayNode: _ } = (0, h.Gm)(),
+        g = (0, u.bG)([m.A], () => m.A.isDisplayingWowMomentConfirmation),
+        { setReadySlideId: P, unifiedCheckoutFlow: A } = (0, C.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
         R = I.find((e) => e.key === a);
     if (
         (r.useEffect(() => {
-            g(null);
-        }, [a, g]),
+            _(null);
+        }, [a, _]),
         null == R)
     )
         throw new d.v({
@@ -44,12 +44,12 @@ function I(e) {
     let M = R?.options?.hideSlider ?? !1,
         v = R?.options?.hideDefaultModalBody ?? !1,
         T = R?.options?.sliderBodyClassName,
-        x = a === p.pn.REVIEW,
-        L = r.useCallback(
+        L = a === p.pn.REVIEW,
+        x = r.useCallback(
             (e, t) => {
-                t === a && S(e);
+                t === a && y(e);
             },
-            [a, S],
+            [a, y],
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -68,16 +68,16 @@ function I(e) {
                                         centered: !1,
                                         onSlideReady: (e) => P(e),
                                         width: "100%",
-                                        disableDefaultTransformStyling: x || n,
-                                        overflow: _ ? "visible" : void 0,
+                                        disableDefaultTransformStyling: L || n,
+                                        overflow: g ? "visible" : void 0,
                                         children: I.filter((e) => null != e.key).map((e) =>
                                             (0, l.jsx)(
                                                 o.q,
                                                 {
                                                     id: e.key,
                                                     children: (0, l.jsx)("form", {
-                                                        className: s()(E.OO, { [E.Wq]: x }, T),
-                                                        ref: (t) => L(t, e.key),
+                                                        className: s()(E.OO, { [E.Wq]: L }, T),
+                                                        ref: (t) => x(t, e.key),
                                                         onSubmit: (e) => e.preventDefault(),
                                                     }),
                                                 },
@@ -86,10 +86,10 @@ function I(e) {
                                         ),
                                     }),
                                 }),
-                          (0, l.jsx)("div", { ref: (e) => y(e) }),
+                          (0, l.jsx)("div", { ref: (e) => S(e) }),
                           (0, l.jsx)("div", {
                               ref: (e) => {
-                                  g(e);
+                                  _(e);
                               },
                           }),
                       ],
@@ -97,12 +97,12 @@ function I(e) {
         ],
     });
 }
-function S(e) {
+function y(e) {
     let { children: t } = e,
         { bodyNode: n } = (0, h.Gm)();
     return null == n ? null : a.createPortal(t, n);
 }
-function y(e) {
+function S(e) {
     let { children: t } = e,
         { footerNode: n } = (0, h.Gm)();
     return null == n ? null : a.createPortal(t, n);

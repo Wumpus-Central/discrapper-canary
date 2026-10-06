@@ -1,14 +1,14 @@
 n.d(t, { I: () => E, _: () => N });
 var l,
-    r = n(477900);
+    a = n(477900);
 n(582128);
-var a = n(834730),
-    i = n(150934),
-    s = n(118982),
+var r = n(834730),
+    s = n(150934),
+    i = n(118982),
     o = n(403362),
     c = n(975571),
-    u = n(158045),
-    d = n(580630),
+    d = n(158045),
+    u = n(580630),
     m = n(652215),
     x = n(202541),
     f = n(583741),
@@ -16,14 +16,14 @@ var a = n(834730),
     p = n(484742);
 function j(e) {
     let { value: t, onChange: n } = e;
-    return (0, r.jsxs)(r.Fragment, {
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, r.jsx)(a.E, {
+            (0, a.jsx)(r.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 children: h.intl.string(f.default["5dmUS+"]),
             }),
-            (0, r.jsx)(i.S, { label: h.intl.string(f.default.XBtSMa), checked: t, onChange: n }),
+            (0, a.jsx)(s.S, { label: h.intl.string(f.default.XBtSMa), checked: t, onChange: n }),
         ],
     });
 }
@@ -33,14 +33,14 @@ function g(e) {
             purchaseButtonText: t,
             totalDue: n,
             renewalPrice: l,
-            currency: r,
-            interval: a,
-            intervalCount: i,
-            startDate: s,
+            currency: a,
+            interval: r,
+            intervalCount: s,
+            startDate: i,
             multiPeriodDiscountAttributes: o,
         } = e,
-        x = (0, d.$g)(n, r),
-        f = (0, d.$g)(l, r),
+        x = (0, u.$g)(n, a),
+        f = (0, u.$g)(l, a),
         p = m.X7G.PAID_TERMS,
         j = m.qF7.CONTACT_US,
         g = c.A.getArticleURL(m.MVz.BILLING);
@@ -48,18 +48,18 @@ function g(e) {
         purchaseButtonText: t,
         totalDue: x,
         renewalPrice: f,
-        interval: h.intl.formatToPlainString(v[a], { intervalCount: i }),
-        startDate: s,
+        interval: h.intl.formatToPlainString(v[r], { intervalCount: s }),
+        startDate: i,
         multiPeriodDiscountAttributes: (function (e) {
             let { currency: t, multiPeriodDiscountAttributes: n } = e;
             if (null != n)
                 return {
-                    discountedRenewalPrice: (0, d.$g)(n.discountedRenewalPrice, t),
+                    discountedRenewalPrice: (0, u.$g)(n.discountedRenewalPrice, t),
                     discountEndDate: n.discountEndDate,
-                    priceWithoutDiscount: (0, d.$g)(n.priceWithoutDiscount, t),
-                    trialDuration: (0, u.re)({ intervalType: n.intervalType, intervalCount: n.intervalCount }),
+                    priceWithoutDiscount: (0, u.$g)(n.priceWithoutDiscount, t),
+                    trialDuration: (0, d.re)({ intervalType: n.intervalType, intervalCount: n.intervalCount }),
                 };
-        })({ multiPeriodDiscountAttributes: o, currency: r }),
+        })({ multiPeriodDiscountAttributes: o, currency: a }),
         paidServicesTermsUrl: p,
         contactUsUrl: j,
         subscriptionsFaqUrl: g,
@@ -79,11 +79,11 @@ var E =
     (l[(l.OrbsGameShop = 10)] = "OrbsGameShop"),
     l);
 function N(e) {
-    return (0, r.jsxs)("div", {
+    return (0, a.jsxs)("div", {
         className: p.k,
         children: [
-            null != e.immediateDelivery && (0, r.jsx)(j, { ...e.immediateDelivery }),
-            (0, r.jsx)(a.E, {
+            null != e.immediateDelivery && (0, a.jsx)(j, { ...e.immediateDelivery }),
+            (0, a.jsx)(r.E, {
                 variant: "text-xs/normal",
                 color: "text-muted",
                 children: (function (e) {
@@ -98,13 +98,13 @@ function N(e) {
                                     discountEndDate: e,
                                     discountedRenewalPrice: t,
                                     priceWithoutDiscount: n,
-                                    trialDuration: r,
+                                    trialDuration: a,
                                 } = l.multiPeriodDiscountAttributes;
                                 return h.intl.format(f.default["A+qfZ+"], {
                                     purchaseButtonText: l.purchaseButtonText,
                                     totalDue: l.totalDue,
                                     trialOrDiscountPrice: t,
-                                    trialDuration: r,
+                                    trialDuration: a,
                                     trialOrDiscountEndDate: e,
                                     fullRenewalPrice: n,
                                     interval: l.interval,
@@ -143,15 +143,15 @@ function N(e) {
                             });
                         case 9:
                         case 10:
-                            let { applicationId: r, applicationName: a, shouldAppendDisclaimer: i } = e,
-                                c = a ?? "",
-                                u = (0, s.k3)(null != r ? { id: r, name: c } : void 0);
-                            if (i)
+                            let { applicationId: a, applicationName: r, shouldAppendDisclaimer: s } = e,
+                                c = r ?? "",
+                                d = (0, i.k3)(null != a ? { id: a, name: c } : void 0);
+                            if (s)
                                 return h.intl.format(9 === e.type ? f.default["0Zl+Xt"] : f.default["5fbNBX"], {
                                     ...e,
                                     applicationName: c,
                                     paidServicesTermsUrl: t,
-                                    platformInfo: u,
+                                    platformInfo: d,
                                     virtualGoodsTermsUrl: m.X7G.PAID_TERMS_VIRTUAL_GOODS,
                                 });
                             return h.intl.format(9 === e.type ? f.default.OVhTE7 : f.default.cwuBkH, {
@@ -166,13 +166,13 @@ function N(e) {
                 })(e.variant),
             }),
             e.paymentSourceType === m.hes.PAYSAFE_CARD &&
-                (0, r.jsx)(a.E, {
+                (0, a.jsx)(r.E, {
                     variant: "text-xs/normal",
                     color: "text-muted",
                     children: h.intl.string(h.t.kj9VLI),
                 }),
             e.paymentSourceType === m.hes.SOFORT &&
-                (0, r.jsx)(a.E, {
+                (0, a.jsx)(r.E, {
                     variant: "text-xs/normal",
                     color: "text-muted",
                     children: h.intl.string(h.t["UYy1/h"]),

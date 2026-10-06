@@ -1,4 +1,4 @@
-l.d(t, { A: () => q });
+l.d(t, { A: () => Z });
 var e = l(477900),
     n = l(582128),
     s = l(503698),
@@ -13,12 +13,12 @@ var e = l(477900),
     x = l(140735),
     g = l(707554),
     m = l(730852),
-    p = l(401843),
+    C = l(401843),
     j = l(475743),
-    N = l(672979),
-    _ = l(717306),
-    v = l(323073),
-    C = l(793574),
+    p = l(672979),
+    v = l(717306),
+    N = l(323073),
+    _ = l(793574),
     f = l(688810),
     O = l(47167),
     E = l(402216),
@@ -27,9 +27,9 @@ var e = l(477900),
     y = l(71393),
     S = l(576705),
     D = l(290863),
-    V = l(607567),
-    b = l(92240),
-    M = l(257367),
+    M = l(607567),
+    V = l(92240),
+    b = l(257367),
     T = l(939496),
     P = l(584904),
     w = l(351638),
@@ -39,74 +39,74 @@ var e = l(477900),
     F = l(269587),
     R = l(652215),
     z = l(996988),
-    H = l(375708),
-    B = l(260155),
+    B = l(375708),
+    H = l(260155),
     Q = l(202611),
     Y = l(399162),
     $ = l(181147);
-function q(i) {
+function Z(i) {
     let t,
-        { user: l, currentUser: s, stream: q, className: J, onClose: K } = i,
-        { themeType: X, theme: Z } = (0, T.E)(),
-        W = (0, d.bG)([y.A], () => y.A.getGuild(q?.guildId)),
-        { actionString: ii, actionAriaLabel: it, canWatch: il, channel: ie } = (0, L.K)(q),
+        { user: l, currentUser: s, stream: Z, className: q, onClose: J } = i,
+        { themeType: K, theme: X } = (0, T.E)(),
+        W = (0, d.bG)([y.A], () => y.A.getGuild(Z?.guildId)),
+        { actionString: ii, actionAriaLabel: it, canWatch: il, channel: ie } = (0, L.K)(Z),
         is = (0, O.Ay)(ie),
-        ia = (0, d.yK)([V.Ay], () =>
+        ia = (0, d.yK)([M.Ay], () =>
             null != ie
-                ? V.Ay.getVoiceStatesForChannel(ie).map((i) => {
+                ? M.Ay.getVoiceStatesForChannel(ie).map((i) => {
                       let { user: t } = i;
                       return t;
                   })
                 : [],
         ),
-        id = (0, d.bG)([D.A], () => D.A.findActivity(l.id, (i) => (0, N.A)(i) && !(0, _.A)(i))),
-        { analyticsLocations: io } = (0, f.Ay)(C.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
-        ir = (0, b.A)({ display: "live", voiceChannelId: ie?.id, user: l, stream: q, analyticsLocations: io }),
-        ic = (0, M.A)({ userId: l.id, onAction: ir }),
-        { previewUrl: iu, isLoading: iA } = (0, I.A)(q?.guildId, q?.channelId, q?.ownerId),
-        ih = (0, v.a9)() && (0, v.UK)(ie?.id),
+        id = (0, d.bG)([D.A], () => D.A.findActivity(l.id, (i) => (0, p.A)(i) && !(0, v.A)(i))),
+        { analyticsLocations: io } = (0, f.Ay)(_.A.USER_PROFILE_LIVE_ACTIVITY_CARD),
+        ir = (0, V.A)({ display: "live", voiceChannelId: ie?.id, user: l, stream: Z, analyticsLocations: io }),
+        ic = (0, b.A)({ userId: l.id, onAction: ir }),
+        { previewUrl: iu, isLoading: iA } = (0, I.A)(Z?.guildId, Z?.channelId, Z?.ownerId),
+        ih = (0, N.a9)() && (0, N.UK)(ie?.id),
         ix = (0, d.bG)([S.A], () => null != ie && !ih && S.A.canBasicChannel(R.hVb.CONNECT, ie)),
         ig = (0, j.Ay)(iA ? null : iu),
         im = iA || null == iu ? ig : iu,
-        ip = n.useId();
-    if (null == W || null == ie || !1 === q.discoverable) return null;
+        iC = n.useId();
+    if (null == W || null == ie || !1 === Z.discoverable) return null;
     function ij() {
         return null == ie || l.id === s.id
             ? null
             : (0, e.jsx)("div", {
-                  className: B.o1,
-                  children: (0, e.jsx)(k.Ay, { channel: ie, onAction: ir, onClose: K }),
+                  className: H.o1,
+                  children: (0, e.jsx)(k.Ay, { channel: ie, onAction: ir, onClose: J }),
               });
     }
-    let iN = null != id ? H.intl.formatToPlainString(H.t["4CQq9Q"], { name: id.name }) : H.intl.string(H.t["Jpkr/q"]);
+    let ip = null != id ? B.intl.formatToPlainString(B.t["4CQq9Q"], { name: id.name }) : B.intl.string(B.t["Jpkr/q"]);
     return (0, e.jsx)(f.f5, {
         value: io,
         children: (0, e.jsxs)(P.A, {
             ref: ic,
-            className: J,
+            className: q,
             onAction: ir,
-            onClose: K,
-            "aria-labelledby": ip,
+            onClose: J,
+            "aria-labelledby": iC,
             children: [
                 (0, e.jsx)(w.A, {
-                    text: iN,
+                    text: ip,
                     tags: (0, e.jsx)(E.Ay, { size: E.ed.SMALL }),
-                    contextMenu: (0, e.jsx)(F.A, { display: "live", user: l, onClose: K }),
+                    contextMenu: (0, e.jsx)(F.A, { display: "live", user: l, onClose: J }),
                 }),
-                (0, e.jsx)(x.A, { children: (0, e.jsx)(g.H, { id: ip, children: `${iN}, ${is}` }) }),
+                (0, e.jsx)(x.A, { children: (0, e.jsx)(g.H, { id: iC, children: `${ip}, ${is}` }) }),
                 (0, e.jsxs)("div", {
-                    className: B.rf,
+                    className: H.rf,
                     children: [
                         (0, e.jsxs)("div", {
-                            className: B.Qs,
+                            className: H.Qs,
                             children: [
                                 ((t = (i) => {
                                     (i.stopPropagation(),
                                         il &&
                                             (ir({ action: "PRESS_IMAGE" }),
-                                            m.default.selectVoiceChannel(q.channelId),
-                                            (0, p.Nl)(q),
-                                            K?.()));
+                                            m.default.selectVoiceChannel(Z.channelId),
+                                            (0, C.Nl)(Z),
+                                            J?.()));
                                 }),
                                 null == im && iA
                                     ? (0, e.jsx)("div", { className: Q.VH, children: (0, e.jsx)(r.y, {}) })
@@ -117,9 +117,9 @@ function q(i) {
                                             "aria-label": it,
                                             "aria-disabled": !il,
                                             children: [
-                                                (0, e.jsx)("img", { alt: "", src: Z === R.NJ8.LIGHT ? $ : Y }),
-                                                X !== z.d.MODAL &&
-                                                    X !== z.d.MODAL_V2 &&
+                                                (0, e.jsx)("img", { alt: "", src: X === R.NJ8.LIGHT ? $ : Y }),
+                                                K !== z.d.MODAL &&
+                                                    K !== z.d.MODAL_V2 &&
                                                     (0, e.jsxs)(e.Fragment, {
                                                         children: [
                                                             (0, e.jsx)(u.E, {
@@ -131,8 +131,8 @@ function q(i) {
                                                             (0, e.jsx)(u.E, {
                                                                 variant: "text-sm/medium",
                                                                 children: ix
-                                                                    ? H.intl.string(H.t.uQZTBV)
-                                                                    : H.intl.string(H.t.pgUTZC),
+                                                                    ? B.intl.string(B.t.uQZTBV)
+                                                                    : B.intl.string(B.t.pgUTZC),
                                                             }),
                                                         ],
                                                     }),
@@ -145,8 +145,8 @@ function q(i) {
                                             "aria-disabled": !il,
                                             children: [
                                                 (0, e.jsx)("img", { alt: "", src: im, className: Q.Sl }),
-                                                X !== z.d.MODAL &&
-                                                    X !== z.d.MODAL_V2 &&
+                                                K !== z.d.MODAL &&
+                                                    K !== z.d.MODAL_V2 &&
                                                     (0, e.jsxs)(e.Fragment, {
                                                         children: [
                                                             (0, e.jsx)(u.E, {
@@ -164,12 +164,12 @@ function q(i) {
                                                     }),
                                             ],
                                         })),
-                                null == W || null == ie || (X !== z.d.MODAL && X !== z.d.MODAL_V2)
+                                null == W || null == ie || (K !== z.d.MODAL && K !== z.d.MODAL_V2)
                                     ? null
                                     : (0, e.jsxs)("div", {
-                                          className: B.zH,
+                                          className: H.zH,
                                           children: [
-                                              (0, e.jsx)(G.A, { channel: ie, guild: W, onAction: ir, onClose: K }),
+                                              (0, e.jsx)(G.A, { channel: ie, guild: W, onAction: ir, onClose: J }),
                                               (0, e.jsx)(o.A, {
                                                   users: ia,
                                                   guildId: W.id,
@@ -183,20 +183,20 @@ function q(i) {
                                                   onUserClick: (i) => i.stopPropagation(),
                                                   disableUserPopout: (i) => i === l.id,
                                                   overflowCountColor: "text-muted",
-                                                  "aria-label": H.intl.string(H.t["jNqDh/"]),
+                                                  "aria-label": B.intl.string(B.t["jNqDh/"]),
                                               }),
-                                              X === z.d.MODAL_V2 && ij(),
+                                              K === z.d.MODAL_V2 && ij(),
                                           ],
                                       }),
-                                X === z.d.MODAL && ij(),
+                                K === z.d.MODAL && ij(),
                             ],
                         }),
-                        null == W || null == ie || X === z.d.MODAL || X === z.d.MODAL_V2
+                        null == W || null == ie || K === z.d.MODAL || K === z.d.MODAL_V2
                             ? null
-                            : (0, e.jsx)(U.A, { user: l, guild: W, channel: ie, onAction: ir, onClose: K }),
+                            : (0, e.jsx)(U.A, { user: l, guild: W, channel: ie, onAction: ir, onClose: J }),
                     ],
                 }),
-                X !== z.d.MODAL && X !== z.d.MODAL_V2 && ij(),
+                K !== z.d.MODAL && K !== z.d.MODAL_V2 && ij(),
             ],
         }),
     });
