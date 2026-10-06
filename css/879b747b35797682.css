@@ -40,4 +40,11 @@
     overflow-wrap: anywhere
 }
 
-/*# sourceMappingURL=6a796ee5ee867ee0.css.map*/
+.historyCard__78ae3 {
+    background: var(--card-secondary-bg);
+    border: 1px solid var(--card-border-default);
+    border-radius: var(--radius-md);
+    padding: var(--space-16)
+}
+
+/*# sourceMappingURL=879b747b35797682.css.map*/

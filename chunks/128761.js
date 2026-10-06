@@ -1,13 +1,16 @@
 (l.d(t, {
-    BV: () => h,
+    FA: () => g,
     K1: () => m,
+    KA: () => x,
+    Nc: () => v,
     T4: () => f,
     YD: () => r,
+    fd: () => p,
     lG: () => s,
     nY: () => u,
-    p9: () => o,
+    u4: () => h,
     v9: () => c,
-    y0: () => g,
+    y0: () => j,
 }),
     l(321073));
 var n = l(381849),
@@ -96,23 +99,58 @@ function f(e) {
 function m(e) {
     return i.intl.string("preview" === e ? a.default.Ebk40C : a.default.S65Rv3);
 }
-function h(e) {
-    switch (e.origin) {
-        case "auto_deploy":
-            if ("stable" === e.deployEnvironment) return i.intl.string(a.default["4TpI2y"]);
-            if ("preview" === e.deployEnvironment) return i.intl.string(a.default.NdyxPu);
-            return i.intl.string(a.default["4JCH6A"]);
-        case "undo":
-            return i.intl.string(a.default.VjJT5R);
-        default: {
-            let t = e.label.trim();
-            return "" === t || "Manual restore point" === t
-                ? i.intl.string(a.default.ObcM6b)
-                : i.intl.formatToPlainString(a.default["UKyQ+E"], { label: t });
-        }
-    }
+function h(e, t) {
+    return t ? i.intl.string(a.default.h3WBgO) : i.intl.string("preview" === e ? a.default.cjJdqL : a.default.yLsAhA);
 }
-function g(e, t) {
+function g(e) {
+    return e.previewSha ?? e.entries[0]?.sha ?? null;
+}
+function x(e, t) {
+    return { shown: t ? e : e.slice(0, 3), collapsible: e.length > 3 };
+}
+function p(e, t) {
+    let l = r(e.createdAt),
+        n = null != e.sourceSha ? t.get(e.sourceSha) : void 0;
+    return {
+        title: (function (e) {
+            switch (e.origin) {
+                case "auto_deploy":
+                    if ("stable" === e.deployEnvironment) return i.intl.string(a.default["4TpI2y"]);
+                    if ("preview" === e.deployEnvironment) return i.intl.string(a.default.NdyxPu);
+                    return i.intl.string(a.default["4JCH6A"]);
+                case "undo":
+                    return i.intl.string(a.default.VjJT5R);
+                default: {
+                    let t = e.label.trim();
+                    return "" === t || "Manual restore point" === t
+                        ? i.intl.string(a.default.ObcM6b)
+                        : i.intl.formatToPlainString(a.default["UKyQ+E"], { label: t });
+                }
+            }
+        })(e),
+        restoreToMs: e.expired ? null : l,
+        detail: [null != l ? o(l) : null, null != n ? i.intl.formatToPlainString(a.default.V7YNvf, { title: n }) : null]
+            .filter((e) => null != e)
+            .join(" \xb7 "),
+    };
+}
+function v(e, t) {
+    let l = o(t);
+    return "stable" === e
+        ? {
+              title: i.intl.string(a.default.G9wD92),
+              body: i.intl.formatToPlainString(a.default.vyxJO8, { time: l }),
+              confirmText: i.intl.string(a.default.kap49k),
+              critical: !0,
+          }
+        : {
+              title: i.intl.string(a.default.rR8rgj),
+              body: i.intl.formatToPlainString(a.default.KfgzUO, { environment: m(e), time: l }),
+              confirmText: i.intl.string(a.default.XfeFw5),
+              critical: !1,
+          };
+}
+function j(e, t) {
     let l = null;
     for (let n of t)
         "auto_deploy" === n.origin &&

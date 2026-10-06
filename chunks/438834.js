@@ -1,43 +1,43 @@
-n.d(e, { default: () => Q });
-var l = n(477900),
-    a = n(582128),
-    i = n(594247),
-    s = n(620409),
-    r = n(314116),
-    o = n(189213),
-    d = n(331322),
-    u = n(297264),
-    c = n(834730),
-    f = n(821609),
-    m = n(289873),
-    x = n(866665),
-    g = n(237528),
-    h = n(739187),
-    j = n(857250),
-    v = n(97483),
-    b = n(95477),
-    p = n(441349),
-    C = n(922016),
-    y = n(980707),
-    S = n(477782),
-    k = n(408278),
-    w = n(365199),
-    E = n(872162),
-    M = n(192308),
-    P = n(761508),
-    T = n(712808),
-    D = n(128761),
-    N = n(395592),
-    B = n(967008);
+a.d(e, { default: () => Q });
+var l = a(477900),
+    n = a(582128),
+    i = a(594247),
+    s = a(620409),
+    r = a(314116),
+    o = a(189213),
+    d = a(331322),
+    u = a(297264),
+    c = a(834730),
+    m = a(821609),
+    f = a(289873),
+    x = a(866665),
+    h = a(237528),
+    g = a(739187),
+    j = a(857250),
+    b = a(97483),
+    v = a(95477),
+    p = a(441349),
+    y = a(192308),
+    C = a(123292),
+    k = a(922016),
+    S = a(980707),
+    w = a(477782),
+    E = a(408278),
+    D = a(365199),
+    P = a(761508),
+    T = a(712808),
+    M = a(128761),
+    N = a(395592),
+    B = a(967008);
 function I(t) {
-    let [e, n] = a.useState(0),
-        [l, i] = a.useState(null);
-    a.useEffect(() => {
+    let [e, a] = n.useState(0),
+        [l, i] = n.useState(null);
+    n.useEffect(() => {
         let e = !1;
         return (
             t().then(
-                (n) => {
-                    e || i({ load: t, state: { status: "loaded", data: n, nowMs: Date.now() } });
+                (a) => {
+                    e || i({ load: t, state: { status: "loaded", data: a, nowMs: Date.now() } });
                 },
                 () => {
                     e || i({ load: t, state: { status: "failed" } });
@@ -48,48 +48,48 @@ function I(t) {
             }
         );
     }, [t, e]);
-    let s = a.useCallback(() => {
-            (i(null), n((t) => t + 1));
+    let s = n.useCallback(() => {
+            (i(null), a((t) => t + 1));
         }, []),
-        r = a.useCallback(() => n((t) => t + 1), []);
+        r = n.useCallback(() => a((t) => t + 1), []);
     return { state: null != l && l.load === t ? l.state : { status: "loading" }, retry: s, refresh: r };
 }
-let R = [];
-var Y = n(155899),
-    z = n(248675),
-    V = n(375708),
-    L = n(796734);
+let z = [];
+var R = a(155899),
+    L = a(248675),
+    V = a(375708),
+    A = a(796734);
 function F(t) {
-    let { title: e, body: n, onRetry: a } = t;
+    let { title: e, body: a, onRetry: n } = t;
     return (0, l.jsx)("div", {
-        className: L.wk,
-        role: null != a ? "alert" : void 0,
+        className: A.wk,
+        role: null != n ? "alert" : void 0,
         children: (0, l.jsxs)(d.B, {
             gap: 8,
             align: "center",
             children: [
                 (0, l.jsx)(u.D, { variant: "heading-md/semibold", children: e }),
-                (0, l.jsx)(c.E, { variant: "text-sm/normal", color: "text-muted", children: n }),
-                null != a
-                    ? (0, l.jsx)(f.$, {
+                (0, l.jsx)(c.E, { variant: "text-sm/normal", color: "text-muted", children: a }),
+                null != n
+                    ? (0, l.jsx)(m.$, {
                           variant: "secondary",
                           size: "sm",
-                          text: V.intl.string(z.default.HOuQ9H),
-                          onClick: a,
+                          text: V.intl.string(L.default.HOuQ9H),
+                          onClick: n,
                       })
                     : null,
             ],
         }),
     });
 }
-function K() {
-    return (0, l.jsx)("div", { className: L.wk, children: (0, l.jsx)(m.y, {}) });
+function G() {
+    return (0, l.jsx)("div", { className: A.wk, children: (0, l.jsx)(f.y, {}) });
 }
-function q(t) {
-    let { items: e, getMs: n, nowMs: a, renderItem: i } = t;
+function Y(t) {
+    let { items: e, getMs: a, nowMs: n, renderItem: i } = t;
     return (0, l.jsx)(d.B, {
         gap: 16,
-        children: (0, D.v9)(e, n, a).map((t) =>
+        children: (0, M.v9)(e, a, n).map((t) =>
             (0, l.jsxs)(
                 "section",
                 {
@@ -99,11 +99,11 @@ function q(t) {
                             ? (0, l.jsx)(c.E, {
                                   variant: "text-xs/semibold",
                                   color: "text-muted",
-                                  className: L.$l,
+                                  className: A.$l,
                                   children: t.label,
                               })
                             : null,
-                        (0, l.jsx)("ul", { className: L.Ge, children: t.items.map(i) }),
+                        (0, l.jsx)("ul", { className: A.Ge, children: t.items.map(i) }),
                     ],
                 },
                 t.key,
@@ -111,21 +111,21 @@ function q(t) {
         ),
     });
 }
-function G(t) {
-    let { title: e, fullTitle: n, muted: a = !1, meta: i, trailing: s } = t;
+function q(t) {
+    let { title: e, fullTitle: a, muted: n = !1, meta: i, trailing: s } = t;
     return (0, l.jsxs)("li", {
-        className: L.nM,
+        className: A.nM,
         children: [
             (0, l.jsx)("div", {
-                className: L.qg,
+                className: A.qg,
                 children: (0, l.jsxs)(d.B, {
                     gap: 4,
                     children: [
                         (0, l.jsx)(x.m, {
-                            text: null != n && n !== e ? n : null,
+                            text: null != a && a !== e ? a : null,
                             children: (0, l.jsx)(c.E, {
                                 variant: "text-md/medium",
-                                color: a ? "text-muted" : "text-default",
+                                color: n ? "text-muted" : "text-default",
                                 children: e,
                             }),
                         }),
@@ -137,28 +137,29 @@ function G(t) {
         ],
     });
 }
-function O(t) {
-    let { versions: e, previewBackups: n, restoreDisabled: a, onRetry: i, onRestore: s } = t;
-    if ("loading" === e.status) return (0, l.jsx)(K, {});
+function H(t) {
+    let { versions: e, previewBackups: a, restoreDisabled: n, onRetry: i, onRestore: s } = t;
+    if ("loading" === e.status) return (0, l.jsx)(G, {});
     if ("failed" === e.status)
         return (0, l.jsx)(F, {
-            title: V.intl.string(z.default.Xduqn2),
-            body: V.intl.string(z.default.TOFCh3),
+            title: V.intl.string(L.default.Xduqn2),
+            body: V.intl.string(L.default.TOFCh3),
             onRetry: i,
         });
-    let { entries: r, previewSha: o, publishedSha: d } = e.data;
+    let { entries: r, publishedSha: o } = e.data,
+        d = (0, M.FA)(e.data);
     return 0 === r.length
-        ? (0, l.jsx)(F, { title: V.intl.string(z.default.MczNnb), body: V.intl.string(z.default["8L/U2T"]) })
-        : (0, l.jsx)(q, {
+        ? (0, l.jsx)(F, { title: V.intl.string(L.default.MczNnb), body: V.intl.string(L.default["8L/U2T"]) })
+        : (0, l.jsx)(Y, {
               items: r,
-              getMs: (t) => (0, D.YD)(t.authoredAt),
+              getMs: (t) => (0, M.YD)(t.authoredAt),
               nowMs: e.nowMs,
               renderItem: (t) => {
-                  let e = (0, D.T4)(t.subject, !0 === t.restored),
-                      i = (0, D.YD)(t.authoredAt),
-                      r = t.sha === o;
+                  let e = (0, M.T4)(t.subject, !0 === t.restored),
+                      i = (0, M.YD)(t.authoredAt),
+                      r = t.sha === d;
                   return (0, l.jsx)(
-                      G,
+                      q,
                       {
                           title: e.short,
                           fullTitle: e.full,
@@ -168,18 +169,18 @@ function O(t) {
                                       ? (0, l.jsx)(c.E, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
-                                            children: (0, D.nY)(i),
+                                            children: (0, M.nY)(i),
                                         })
                                       : null,
                                   r
-                                      ? (0, l.jsx)(g.v, {
-                                            text: V.intl.string(z.default.KVnLPd),
+                                      ? (0, l.jsx)(h.v, {
+                                            text: V.intl.string(L.default.KVnLPd),
                                             variant: "blurpleLight",
                                         })
                                       : null,
-                                  t.sha === d
-                                      ? (0, l.jsx)(g.v, {
-                                            text: V.intl.string(z.default.qulPhb),
+                                  t.sha === o
+                                      ? (0, l.jsx)(h.v, {
+                                            text: V.intl.string(L.default.qulPhb),
                                             variant: "greenLight",
                                         })
                                       : null,
@@ -187,14 +188,14 @@ function O(t) {
                           }),
                           trailing: r
                               ? null
-                              : (0, l.jsx)(f.$, {
+                              : (0, l.jsx)(m.$, {
                                     variant: "secondary",
                                     size: "sm",
-                                    text: V.intl.string(z.default.K3Q49G),
-                                    "aria-label": V.intl.formatToPlainString(z.default["hXP0m/"], { title: e.short }),
-                                    disabled: a,
+                                    text: V.intl.string(L.default["1NAPyC"]),
+                                    "aria-label": V.intl.formatToPlainString(L.default["2KgEnm"], { title: e.short }),
+                                    disabled: n,
                                     onClick: () =>
-                                        (0, Y.F)({ matchingBackup: (0, D.y0)(t, n), onConfirm: (e) => s(t, e) }),
+                                        (0, R.F)({ matchingBackup: (0, M.y0)(t, a), onConfirm: (e) => s(t, e) }),
                                 }),
                       },
                       t.sha,
@@ -202,69 +203,69 @@ function O(t) {
               },
           });
 }
-function X(t) {
-    let { projectId: e, environment: n, targetMs: l, execute: a, onSettled: i } = t,
-        s = V.intl.formatToPlainString(z.default.KfgzUO, { environment: (0, D.K1)(n), time: (0, D.p9)(l) });
+function K(t) {
+    let { projectId: e, environment: a, targetMs: l, execute: n, onSettled: i } = t,
+        s = (0, M.Nc)(a, l);
     (0, r.A)({
-        title: V.intl.string(z.default.rR8rgj),
-        subtitle: "stable" === n ? `${V.intl.string(z.default.vMfqqk)} ${s}` : s,
-        confirmText: V.intl.string(z.default.XfeFw5),
-        variant: "critical",
+        title: s.title,
+        subtitle: s.body,
+        confirmText: s.confirmText,
+        variant: s.critical ? "critical" : "primary",
         onConfirm: async (t) => {
-            let n = await (0, B.b)(e, a);
-            if (n.ok) {
-                ((0, h.P)((0, j.o)(V.intl.string(z.default.yHchfE), v.Ck.SUCCESS)), i());
+            let a = await (0, B.b)(e, n);
+            if (a.ok) {
+                ((0, g.P)((0, j.o)(V.intl.string(L.default.yHchfE), b.Ck.SUCCESS)), i());
                 return;
             }
-            if ("unconfirmed" === n.code) {
-                ((0, h.P)((0, j.o)(V.intl.string(z.default.iqN7YA), v.Ck.FAILURE)), i());
+            if ("unconfirmed" === a.code) {
+                ((0, g.P)((0, j.o)(V.intl.string(L.default.iqN7YA), b.Ck.FAILURE)), i());
                 return;
             }
             throw (
-                "expired" === n.code && i(),
-                t(V.intl.string("expired" === n.code ? z.default.a5pfx4 : z.default.uyjFNZ)),
-                Error(`data rewind ${n.code}`)
+                "expired" === a.code && i(),
+                t(V.intl.string("expired" === a.code ? L.default.a5pfx4 : L.default.uyjFNZ)),
+                Error(`data rewind ${a.code}`)
             );
         },
     });
 }
-function A(t) {
-    let { projectId: e, environment: n, onSaved: i, transitionState: s, onClose: r } = t,
-        [d, u] = a.useState(""),
-        [c, f] = a.useState(!1),
-        [m, x] = a.useState(!1);
+function O(t) {
+    let { projectId: e, environment: a, onSaved: i, transitionState: s, onClose: r } = t,
+        [d, u] = n.useState(""),
+        [c, m] = n.useState(!1),
+        [f, x] = n.useState(!1);
     return (0, l.jsx)(o.a, {
         transitionState: s,
         onClose: r,
-        title: V.intl.string(z.default.qywOto),
-        subtitle: V.intl.formatToPlainString(z.default.sXGNm5, { environment: (0, D.K1)(n) }),
-        notice: m ? { message: V.intl.string(z.default.TOxYEF), type: "critical" } : void 0,
+        title: V.intl.string(L.default.qywOto),
+        subtitle: V.intl.formatToPlainString(L.default.sXGNm5, { environment: (0, M.K1)(a) }),
+        notice: f ? { message: V.intl.string(L.default.TOxYEF), type: "critical" } : void 0,
         actions: [
             { text: V.intl.string(V.t["ETE/oC"]), variant: "secondary", onClick: r },
             {
-                text: V.intl.string(z.default["5/xCdF"]),
+                text: V.intl.string(L.default["5/xCdF"]),
                 variant: "primary",
                 loading: c,
                 onClick: function () {
-                    (f(!0),
+                    (m(!0),
                         x(!1),
-                        (0, N.x)(e, () => (0, T._m)(e, n, d))
+                        (0, N.x)(e, () => (0, T._m)(e, a, d))
                             .then((t) => {
                                 if (null == t) throw Error("database busy");
                             })
                             .then(
                                 () => {
-                                    ((0, h.P)((0, j.o)(V.intl.string(z.default.OoHJfv), v.Ck.SUCCESS)), i(), r());
+                                    ((0, g.P)((0, j.o)(V.intl.string(L.default.OoHJfv), b.Ck.SUCCESS)), i(), r());
                                 },
                                 () => {
-                                    (f(!1), x(!0));
+                                    (m(!1), x(!0));
                                 },
                             ));
                 },
             },
         ],
-        children: (0, l.jsx)(b.k, {
-            label: V.intl.string(z.default.WKmhsD),
+        children: (0, l.jsx)(v.k, {
+            label: V.intl.string(L.default.WKmhsD),
             value: d,
             onChange: u,
             maxLength: 200,
@@ -272,89 +273,227 @@ function A(t) {
         }),
     });
 }
-function $(t) {
+function X(t) {
     return (0, i.tR)((0, i.Bq)(new Date(t), (0, s.Xj)()));
 }
-function H(t) {
-    let { projectId: e, environment: n, restoreWindow: r, onSettled: d, transitionState: u, onClose: c } = t,
-        [f] = a.useState(() => Date.now()),
-        [m, x] = a.useState(null),
-        g = r.earliestRestoreTimestampMs,
-        h = null != m ? m.toDate((0, s.Xj)()).getTime() : null,
-        j = null != h && h >= g && h <= f;
+function $(t) {
+    let { projectId: e, environment: a, restoreWindow: r, onSettled: d, transitionState: u, onClose: c } = t,
+        [m] = n.useState(() => Date.now()),
+        [f, x] = n.useState(null),
+        h = r.earliestRestoreTimestampMs,
+        g = null != f ? f.toDate((0, s.Xj)()).getTime() : null,
+        j = null != g && g >= h && g <= m;
     return (0, l.jsx)(o.a, {
         transitionState: u,
         onClose: c,
-        title: V.intl.string(z.default.L2iFYN),
-        subtitle: V.intl.formatToPlainString(z.default.MbjMdo, { days: 30 }),
+        title: V.intl.string(L.default.L2iFYN),
+        subtitle: V.intl.formatToPlainString(L.default.MbjMdo, { days: 30 }),
         actions: [
             { text: V.intl.string(V.t["ETE/oC"]), variant: "secondary", onClick: c },
             {
-                text: V.intl.string(z.default.vzbISt),
+                text: V.intl.string(L.default.vzbISt),
                 variant: "critical-primary",
                 disabled: !j,
                 onClick: () => {
-                    null != h &&
+                    null != g &&
                         j &&
                         (c(),
-                        X({
+                        K({
                             projectId: e,
-                            environment: n,
-                            targetMs: h,
-                            execute: () => (0, T.dz)(e, n, h),
+                            environment: a,
+                            targetMs: g,
+                            execute: () => (0, T.dz)(e, a, g),
                             onSettled: d,
                         }));
                 },
             },
         ],
         children: (0, l.jsx)(p.l, {
-            label: V.intl.string(z.default["8lOVBi"]),
+            label: V.intl.string(L.default["8lOVBi"]),
             granularity: "minute",
-            value: m,
+            value: f,
             onChange: (t) => x(null == t ? null : (0, i.tR)(t)),
-            minValue: $(g),
-            maxValue: $(f),
-            errorMessage: null == h || j ? void 0 : V.intl.formatToPlainString(z.default["E+5VOP"], { days: 30 }),
+            minValue: X(h),
+            maxValue: X(m),
+            errorMessage: null == g || j ? void 0 : V.intl.formatToPlainString(L.default["E+5VOP"], { days: 30 }),
+        }),
+    });
+}
+function W(t) {
+    let e,
+        {
+            projectId: a,
+            database: i,
+            sharedDatabase: s,
+            versionTitles: r,
+            busy: o,
+            onRestoreBackup: f,
+            onSettled: x,
+        } = t,
+        [h, g] = n.useState(!1),
+        j = n.useId(),
+        { environment: b, backups: v } = i,
+        p = (0, M.u4)(b, s),
+        k = "loaded" === v.state.status ? v.state.data.window : null,
+        S = v.state;
+    if ("loading" === S.status) e = (0, l.jsx)(G, {});
+    else if ("failed" === S.status)
+        e = (0, l.jsx)(F, {
+            title: V.intl.string(L.default.Xduqn2),
+            body: V.intl.string(L.default["VGh9H+"]),
+            onRetry: v.retry,
+        });
+    else if (0 === S.data.points.length)
+        e = (0, l.jsx)(c.E, {
+            variant: "text-sm/normal",
+            color: "text-muted",
+            children: V.intl.string(L.default.G2DTWl),
+        });
+    else {
+        let { shown: t, collapsible: a } = (0, M.KA)(S.data.points, h);
+        e = (0, l.jsxs)(d.B, {
+            gap: 4,
+            children: [
+                (0, l.jsx)("ul", {
+                    className: A.Ge,
+                    children: t.map((t) => {
+                        let e = (0, M.fd)(t, r),
+                            { restoreToMs: a } = e;
+                        return (0, l.jsx)(
+                            q,
+                            {
+                                title: e.title,
+                                muted: null == a,
+                                meta: (0, l.jsx)(c.E, {
+                                    variant: "text-sm/normal",
+                                    color: "text-muted",
+                                    children: e.detail,
+                                }),
+                                trailing:
+                                    null == a
+                                        ? (0, l.jsx)(c.E, {
+                                              variant: "text-sm/normal",
+                                              color: "text-muted",
+                                              children: V.intl.string(L.default.zPhIa9),
+                                          })
+                                        : (0, l.jsx)(m.$, {
+                                              variant: "secondary",
+                                              size: "sm",
+                                              text: V.intl.string(L.default.K3Q49G),
+                                              "aria-label": V.intl.formatToPlainString(L.default["hXP0m/"], {
+                                                  title: e.title,
+                                              }),
+                                              disabled: o,
+                                              onClick: () => f(t, a),
+                                          }),
+                            },
+                            t.id,
+                        );
+                    }),
+                }),
+                a
+                    ? (0, l.jsx)(d.B, {
+                          align: "start",
+                          children: (0, l.jsx)(C.Q, {
+                              text: V.intl.string(h ? L.default.GgleNC : L.default.qCWKAE),
+                              onClick: () => g((t) => !t),
+                          }),
+                      })
+                    : null,
+            ],
+        });
+    }
+    return (0, l.jsx)("section", {
+        "aria-labelledby": j,
+        className: A.$H,
+        children: (0, l.jsxs)(d.B, {
+            gap: 12,
+            children: [
+                (0, l.jsxs)(d.B, {
+                    direction: "horizontal",
+                    justify: "space-between",
+                    align: "center",
+                    gap: 12,
+                    children: [
+                        (0, l.jsx)(u.D, { variant: "heading-lg/semibold", id: j, children: p }),
+                        (0, l.jsx)(U, {
+                            label: V.intl.formatToPlainString(L.default.tmSDLN, { database: p }),
+                            saveDisabled: "failed" === S.status || o,
+                            restoreDisabled: null == k || o,
+                            onSaveBackup: function () {
+                                return (0, y.openModalLazy)(() =>
+                                    Promise.resolve((t) =>
+                                        (0, l.jsx)(O, { ...t, projectId: a, environment: b, onSaved: x }),
+                                    ),
+                                );
+                            },
+                            onRestoreToTime: function () {
+                                null != k &&
+                                    (0, y.openModalLazy)(() =>
+                                        Promise.resolve((t) =>
+                                            (0, l.jsx)($, {
+                                                ...t,
+                                                projectId: a,
+                                                environment: b,
+                                                restoreWindow: k,
+                                                onSettled: x,
+                                            }),
+                                        ),
+                                    );
+                            },
+                        }),
+                    ],
+                }),
+                e,
+            ],
         }),
     });
 }
 function U(t) {
-    let { rewindDisabled: e, onRewindToTime: n } = t,
-        i = V.intl.string(z.default.ZoQDS5),
-        s = a.useRef(null);
-    return (0, l.jsx)(C.Y, {
-        targetElementRef: s,
-        position: "top",
-        align: "left",
-        animation: C.Y.Animation.NONE,
+    let { label: e, saveDisabled: a, restoreDisabled: i, onSaveBackup: s, onRestoreToTime: r } = t,
+        o = n.useRef(null);
+    return (0, l.jsx)(k.Y, {
+        targetElementRef: o,
+        position: "bottom",
+        align: "right",
+        animation: k.Y.Animation.NONE,
         renderPopout: (t) => {
-            let { closePopout: a } = t;
-            return (0, l.jsx)(y.W, {
-                navId: "conjure-history-more-options",
-                "aria-label": i,
-                onClose: a,
-                onSelect: a,
-                children: (0, l.jsx)(S.Dr, {
-                    id: "rewind-to-time",
-                    label: V.intl.string(z.default.Xi6pDt),
-                    disabled: e,
-                    action: n,
-                }),
+            let { closePopout: n } = t;
+            return (0, l.jsxs)(S.W, {
+                navId: "conjure-history-database-options",
+                "aria-label": e,
+                onClose: n,
+                onSelect: n,
+                children: [
+                    (0, l.jsx)(w.Dr, {
+                        id: "back-up-now",
+                        label: V.intl.string(L.default.uNd2Je),
+                        disabled: a,
+                        action: s,
+                    }),
+                    (0, l.jsx)(w.Dr, {
+                        id: "restore-to-time",
+                        label: V.intl.string(L.default.Xi6pDt),
+                        disabled: i,
+                        action: r,
+                    }),
+                ],
             });
         },
-        children: (t, e) => {
+        children: (t, a) => {
             let { onClick: n } = t,
-                { isShown: a } = e;
+                { isShown: i } = a;
             return (0, l.jsx)("div", {
-                ref: s,
+                ref: o,
                 children: (0, l.jsx)(x.m, {
-                    text: i,
-                    children: (0, l.jsx)(k.K, {
-                        icon: w.MoreHorizontalIcon,
+                    text: e,
+                    children: (0, l.jsx)(E.K, {
+                        icon: D.MoreHorizontalIcon,
                         variant: "secondary",
-                        "aria-label": i,
+                        size: "sm",
+                        "aria-label": e,
                         "aria-haspopup": "menu",
-                        "aria-expanded": a,
+                        "aria-expanded": i,
                         onClick: n,
                     }),
                 }),
@@ -362,244 +501,174 @@ function U(t) {
         },
     });
 }
-function W(t) {
-    let e,
-        {
-            environments: n,
-            environment: a,
-            onEnvironmentChange: i,
-            backups: s,
-            versionTitles: r,
-            restoreDisabled: o,
-            onRetry: u,
-            onRestoreBackup: m,
-        } = t;
-    return (
-        (e =
-            "loading" === s.status
-                ? (0, l.jsx)(K, {})
-                : "failed" === s.status
-                  ? (0, l.jsx)(F, {
-                        title: V.intl.string(z.default.Xduqn2),
-                        body: V.intl.string(z.default["VGh9H+"]),
-                        onRetry: u,
-                    })
-                  : 0 === s.data.points.length
-                    ? (0, l.jsx)(F, { title: V.intl.string(z.default.nvLRYG), body: V.intl.string(z.default.G2DTWl) })
-                    : (0, l.jsx)(q, {
-                          items: s.data.points,
-                          getMs: (t) => (0, D.YD)(t.createdAt),
-                          nowMs: s.nowMs,
-                          renderItem: (t) => {
-                              let e = (0, D.BV)(t),
-                                  n = (0, D.YD)(t.createdAt),
-                                  a = null != t.sourceSha ? r.get(t.sourceSha) : void 0;
-                              return (0, l.jsx)(
-                                  G,
-                                  {
-                                      title: e,
-                                      muted: t.expired,
-                                      meta: (0, l.jsx)(c.E, {
-                                          variant: "text-sm/normal",
-                                          color: "text-muted",
-                                          children: [
-                                              null != n ? (0, D.nY)(n) : null,
-                                              null != a
-                                                  ? V.intl.formatToPlainString(z.default.V7YNvf, { title: a })
-                                                  : null,
-                                          ]
-                                              .filter((t) => null != t)
-                                              .join(" \xb7 "),
-                                      }),
-                                      trailing:
-                                          t.expired || null == n
-                                              ? (0, l.jsx)(c.E, {
-                                                    variant: "text-sm/normal",
-                                                    color: "text-muted",
-                                                    children: V.intl.string(z.default.zPhIa9),
-                                                })
-                                              : (0, l.jsx)(f.$, {
-                                                    variant: "secondary",
-                                                    size: "sm",
-                                                    text: V.intl.string(z.default.K3Q49G),
-                                                    "aria-label": V.intl.formatToPlainString(z.default["hXP0m/"], {
-                                                        title: e,
-                                                    }),
-                                                    disabled: o,
-                                                    onClick: () => m(t, n),
-                                                }),
-                                  },
-                                  t.id,
-                              );
-                          },
-                      })),
-        (0, l.jsxs)(d.B, {
-            gap: 16,
-            children: [
-                n.length > 1
-                    ? (0, l.jsx)(E.C, {
-                          variant: "filter",
-                          selectionMode: "single",
-                          disallowEmptySelection: !0,
-                          label: V.intl.string(z.default.k8NBLj),
-                          items: n.map((t) => ({ id: t, label: (0, D.K1)(t) })),
-                          selectedKeys: new Set([a]),
-                          onSelectionChange: (t) => {
-                              if ("all" === t) return;
-                              let e = n.find((e) => t.has(e));
-                              null != e && i(e);
-                          },
-                      })
-                    : null,
-                (0, l.jsx)(c.E, {
-                    variant: "text-sm/normal",
-                    color: "text-muted",
-                    children: V.intl.formatToPlainString(z.default.ptsHZu, { days: 30 }),
-                }),
-                e,
-            ],
-        })
-    );
-}
 function Q(t) {
-    let { projectId: e, installScope: n, restoreDisabled: i, onRestoreVersion: s, transitionState: r, onClose: d } = t,
-        [u, c] = a.useState("versions"),
+    let e,
+        a,
+        i,
+        s,
+        r,
+        u,
+        m,
+        f,
+        x,
+        h,
+        g,
+        j,
+        b,
+        v,
+        { projectId: p, installScope: y, restoreDisabled: C, onRestoreVersion: k, transitionState: S, onClose: w } = t,
+        [E, D] = n.useState("versions"),
         {
-            environments: f,
-            environment: m,
-            setEnvironment: x,
-            versions: g,
-            previewBackups: h,
-            previewBackupsLoading: j,
-            backups: v,
-            restoreWindow: b,
-            refreshAllBackups: p,
-            versionTitles: C,
-        } = (function (t, e) {
-            let n = a.useMemo(() => ("user" === e ? ["stable"] : ["preview", "stable"]), [e]),
-                [l, i] = a.useState("stable"),
-                s = I(a.useCallback(() => (0, T.Du)(t), [t])),
-                r = n.includes("preview"),
-                o = I(a.useCallback(() => (r ? (0, T.DM)(t, "preview") : Promise.resolve(R)), [t, r])),
-                d = I(
-                    a.useCallback(
-                        () =>
-                            Promise.all([(0, T.DM)(t, l), (0, T.ms)(t, l)]).then((t) => {
-                                let [e, n] = t;
-                                return { points: e, window: n };
-                            }),
-                        [t, l],
-                    ),
-                ),
-                u = d.refresh,
-                c = o.refresh,
-                f = a.useCallback(() => {
-                    (u(), c());
-                }, [u, c]),
-                m = s.state,
-                x = a.useMemo(() => {
-                    let t = new Map();
-                    if ("loaded" === m.status) for (let e of m.data.entries) t.set(e.sha, (0, D.T4)(e.subject).short);
-                    return t;
-                }, [m]);
+            sharedDatabase: B,
+            versions: R,
+            databases: F,
+            previewBackups: G,
+            previewBackupsLoading: Y,
+            refreshAllBackups: q,
+            versionTitles: O,
+        } = ((a = (e = n.useMemo(() => ("user" === y ? ["stable"] : ["stable", "preview"]), [y])).includes("preview")),
+        (i = I(n.useCallback(() => (0, T.Du)(p), [p]))),
+        (s = I(
+            n.useCallback(() => {
+                var t;
+                return (
+                    (t = "stable"),
+                    Promise.all([(0, T.DM)(p, t), (0, T.ms)(p, t)]).then((t) => {
+                        let [e, a] = t;
+                        return { points: e, window: a };
+                    })
+                );
+            }, [p]),
+        )),
+        (r = I(n.useCallback(() => (a ? (0, T.DM)(p, "preview") : Promise.resolve(z)), [p, a]))),
+        (u = I(n.useCallback(() => (a ? (0, T.ms)(p, "preview") : Promise.resolve(null)), [p, a]))),
+        (m = s.refresh),
+        (f = r.refresh),
+        (x = u.refresh),
+        (h = n.useCallback(() => {
+            (m(), f(), x());
+        }, [m, f, x])),
+        (g = e.map((t) => {
+            var e, a;
+            let l, n;
             return {
-                environments: n,
-                environment: l,
-                setEnvironment: i,
-                versions: s,
-                previewBackups: "loaded" === o.state.status ? o.state.data : R,
-                previewBackupsLoading: "loading" === o.state.status,
-                backups: d,
-                restoreWindow: "loaded" === d.state.status ? d.state.data.window : null,
-                refreshAllBackups: f,
-                versionTitles: x,
+                environment: t,
+                backups:
+                    "preview" === t
+                        ? ((e = r),
+                          (a = u),
+                          (l = e.state),
+                          (n = a.state),
+                          {
+                              state:
+                                  "failed" === l.status || "failed" === n.status
+                                      ? { status: "failed" }
+                                      : "loading" === l.status || "loading" === n.status
+                                        ? { status: "loading" }
+                                        : null == n.data
+                                          ? { status: "failed" }
+                                          : {
+                                                status: "loaded",
+                                                data: { points: l.data, window: n.data },
+                                                nowMs: l.nowMs,
+                                            },
+                              retry: function () {
+                                  (e.retry(), a.retry());
+                              },
+                              refresh: function () {
+                                  (e.refresh(), a.refresh());
+                              },
+                          })
+                        : s,
             };
-        })(e, n),
-        y = (0, N.u)(e),
-        S = a.useCallback(
+        })),
+        (j = i.state),
+        (b = n.useMemo(() => {
+            let t = new Map();
+            if ("loaded" === j.status) for (let e of j.data.entries) t.set(e.sha, (0, M.T4)(e.subject).short);
+            return t;
+        }, [j])),
+        {
+            sharedDatabase: !a,
+            versions: i,
+            databases: g,
+            previewBackups: "loaded" === (v = r.state).status ? v.data : z,
+            previewBackupsLoading: "loading" === v.status,
+            refreshAllBackups: h,
+            versionTitles: b,
+        }),
+        X = (0, N.u)(p),
+        $ = n.useCallback(
             (t, e) => {
-                (d(), s(t, e));
+                (w(), k(t, e));
             },
-            [d, s],
+            [w, k],
         ),
-        k = a.useCallback(
-            (t, n) => {
-                X({
-                    projectId: e,
+        U = n.useCallback(
+            (t, e) => {
+                K({
+                    projectId: p,
                     environment: t.environment,
-                    targetMs: n,
-                    execute: () => (0, T.$D)(e, t.id),
-                    onSettled: p,
+                    targetMs: e,
+                    execute: () => (0, T.$D)(p, t.id),
+                    onSettled: q,
                 });
             },
-            [e, p],
-        ),
-        w = a.useCallback(() => {
-            null != b &&
-                (0, M.openModalLazy)(() =>
-                    Promise.resolve((t) =>
-                        (0, l.jsx)(H, { ...t, projectId: e, environment: m, restoreWindow: b, onSettled: p }),
-                    ),
-                );
-        }, [b, e, m, p]),
-        E =
-            "database" === u
-                ? [
-                      {
-                          text: V.intl.string(z.default.uNd2Je),
-                          variant: "primary",
-                          autoFocus: !1,
-                          disabled: "failed" === v.state.status || y,
-                          onClick: () => {
-                              (0, M.openModalLazy)(() =>
-                                  Promise.resolve((t) =>
-                                      (0, l.jsx)(A, { ...t, projectId: e, environment: m, onSaved: p }),
-                                  ),
-                              );
-                          },
-                      },
-                  ]
-                : [];
+            [p, q],
+        );
     return (0, l.jsxs)(o.a, {
-        transitionState: r,
-        onClose: d,
+        transitionState: S,
+        onClose: w,
         size: "md",
-        title: V.intl.string(z.default["3hIVou"]),
-        actionBarInput:
-            "database" === u ? (0, l.jsx)(U, { rewindDisabled: null == b || y, onRewindToTime: w }) : void 0,
-        actions: E,
+        title: V.intl.string(L.default["3hIVou"]),
+        actions: [],
         children: [
             (0, l.jsxs)(P.V, {
                 type: "top",
-                selectedItem: u,
-                onItemSelect: c,
-                "aria-label": V.intl.string(z.default["/2GnYy"]),
+                selectedItem: E,
+                onItemSelect: D,
+                "aria-label": V.intl.string(L.default["/2GnYy"]),
                 children: [
-                    (0, l.jsx)(P.V.Item, { id: "versions", children: V.intl.string(z.default.aEg2bh) }),
-                    (0, l.jsx)(P.V.Item, { id: "database", children: V.intl.string(z.default["GSu/n6"]) }),
+                    (0, l.jsx)(P.V.Item, { id: "versions", children: V.intl.string(L.default.aEg2bh) }),
+                    (0, l.jsx)(P.V.Item, { id: "database", children: V.intl.string(L.default["GSu/n6"]) }),
                 ],
             }),
             (0, l.jsx)(P.V.Panel, {
-                id: u,
-                className: L.nd,
+                id: E,
+                className: A.nd,
                 children:
-                    "versions" === u
-                        ? (0, l.jsx)(O, {
-                              versions: g.state,
-                              previewBackups: h,
-                              restoreDisabled: i || j || y,
-                              onRetry: g.retry,
-                              onRestore: S,
+                    "versions" === E
+                        ? (0, l.jsx)(H, {
+                              versions: R.state,
+                              previewBackups: G,
+                              restoreDisabled: C || Y || X,
+                              onRetry: R.retry,
+                              onRestore: $,
                           })
-                        : (0, l.jsx)(W, {
-                              environments: f,
-                              environment: m,
-                              onEnvironmentChange: x,
-                              backups: v.state,
-                              versionTitles: C,
-                              onRetry: v.retry,
-                              restoreDisabled: y,
-                              onRestoreBackup: k,
+                        : (0, l.jsxs)(d.B, {
+                              gap: 24,
+                              children: [
+                                  (0, l.jsx)(c.E, {
+                                      variant: "text-sm/normal",
+                                      color: "text-muted",
+                                      children: V.intl.formatToPlainString(L.default.ptsHZu, { days: 30 }),
+                                  }),
+                                  F.map((t) =>
+                                      (0, l.jsx)(
+                                          W,
+                                          {
+                                              projectId: p,
+                                              database: t,
+                                              sharedDatabase: B,
+                                              versionTitles: O,
+                                              busy: X,
+                                              onRestoreBackup: U,
+                                              onSettled: q,
+                                          },
+                                          t.environment,
+                                      ),
+                                  ),
+                              ],
                           }),
             }),
         ],
