@@ -31,7 +31,13 @@ function d(e) {
                 tag: "span",
                 ref: c,
                 className: o.Qq,
-                style: null != u ? { "--custom-marquee-overflow": `${u}px` } : void 0,
+                style:
+                    null != u
+                        ? {
+                              "--custom-marquee-overflow": `${u}px`,
+                              "--custom-marquee-duration": `${Math.min(5, Math.max(2, u / 40))}s`,
+                          }
+                        : void 0,
                 children: t,
             }),
         })
