@@ -407,6 +407,13 @@
     width: 16px
 }
 
+.enlarge-target-size .addButton__29444 {
+    box-sizing: border-box;
+    height: 24px;
+    padding: var(--space-4);
+    width: 24px
+}
+
 .addButton__29444.forceVisible__29444 {
     display: block
 }
@@ -468,7 +475,12 @@
     top: unset
 }
 
-.wrapper__29444,
+.wrapper__29444 {}
+
+.enlarge-target-size .wrapper__29444 {
+    padding-inline: var(--space-md) calc(var(--space-md) - var(--space-xs) - var(--space-4))
+}
+
 .wrapperStatic__29444 {}
 
 .clickable__29444 {
@@ -697,4 +709,4 @@
     background-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=8e69862b0f7209dc.css.map*/
+/*# sourceMappingURL=11ac3f4a672f7e08.css.map*/
