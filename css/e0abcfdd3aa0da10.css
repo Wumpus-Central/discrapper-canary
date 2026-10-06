@@ -136,6 +136,7 @@
 }
 
 .newBadge__4962e {
+    display: flex;
     margin-inline-start: 4px
 }
 
@@ -189,4 +190,8 @@
     margin-inline-start: 4px
 }
 
-/*# sourceMappingURL=615503d43d84093c.css.map*/
+.newBadge__1811e {
+    display: flex
+}
+
+/*# sourceMappingURL=e0abcfdd3aa0da10.css.map*/

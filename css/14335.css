@@ -15,6 +15,7 @@
 }
 
 .newBadge__40caf {
+    display: flex;
     inset-inline-start: var(--space-8);
     position: absolute;
     top: var(--space-8);
@@ -160,4 +161,4 @@
     margin-top: var(--space-4)
 }
 
-/*# sourceMappingURL=14335.153bbffe8e1a3443.css.map*/
+/*# sourceMappingURL=14335.3954f29fe59a0f77.css.map*/

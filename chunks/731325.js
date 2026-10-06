@@ -12,7 +12,7 @@ var l = n(477900),
     m = n(192308),
     p = n(939249),
     f = n(315710),
-    g = n(812993),
+    g = n(508770),
     x = n(817281),
     E = n(820284),
     S = n(761929),
@@ -2124,10 +2124,9 @@ let nd = 498 + no.as.MEDIUM,
                                                                             children: [
                                                                                 eS.intl.string(eS.t.EHlAMc),
                                                                                 null != er &&
-                                                                                    (0, l.jsx)(g.Lp, {
-                                                                                        text: eS.intl.string(
-                                                                                            eS.t.y2b7CA,
-                                                                                        ),
+                                                                                    (0, l.jsx)(g.E, {
+                                                                                        type: "new",
+                                                                                        variant: "brand",
                                                                                     }),
                                                                             ],
                                                                         }),

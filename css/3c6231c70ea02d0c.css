@@ -88,6 +88,7 @@
 }
 
 .badge_a1e8da {
+    display: flex;
     inset-inline-end: var(--space-8);
     position: absolute;
     top: var(--space-8)
@@ -106,4 +107,4 @@
     max-width: 220px
 }
 
-/*# sourceMappingURL=e5a7819c24556246.css.map*/
+/*# sourceMappingURL=3c6231c70ea02d0c.css.map*/

@@ -12,4 +12,5 @@ e.exports = {
     TD: "perServerNoticeDismissButton__2447f",
     BJ: "keyboardModeNotice__2447f",
     qp: "keyboardModeNoticeIcon__2447f",
+    IO: "newBadgeHost__2447f",
 };

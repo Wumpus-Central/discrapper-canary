@@ -14,4 +14,5 @@ e.exports = {
     hQ: "statusPickerModalMenu_ce8328",
     BK: "themeContainer_ce8328",
     eF: "userInfo_ce8328",
+    IO: "newBadgeHost_ce8328",
 };

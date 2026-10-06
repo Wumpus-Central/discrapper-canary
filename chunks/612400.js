@@ -1,4 +1,4 @@
-i.d(t, { $L: () => w, NI: () => _, kd: () => k, TG: () => A, P5: () => S, Ft: () => G, Yq: () => T });
+i.d(t, { $L: () => w, NI: () => G, kd: () => T, TG: () => b, P5: () => A, Ft: () => k, Yq: () => S });
 var r = i(477900),
     s = i(582128),
     a = i(503698),
@@ -8,21 +8,20 @@ var r = i(477900),
     d = i(834730),
     c = i(695366);
 if (221552 == i.j) var x = i(104510);
-if (221552 == i.j) var m = i(297264);
-if (221552 == i.j) var v = i(890856);
-if (221552 == i.j) var u = i(812993);
-if (221552 == i.j) var j = i(508770);
-var h = i(37537),
-    f = i(773669),
-    g = i(939981),
-    p = i(25525),
-    N = i(375708),
-    b = i(517826);
-function A(e) {
+if (221552 == i.j) var v = i(297264);
+if (221552 == i.j) var m = i(890856);
+if (221552 == i.j) var u = i(508770);
+var j = i(37537),
+    h = i(773669),
+    f = i(939981),
+    g = i(25525),
+    p = i(375708),
+    N = i(517826);
+function b(e) {
     let { text: t } = e,
-        i = (0, h.c)("GuildPowerupCardFooterActive");
+        i = (0, j.c)("GuildPowerupCardFooterActive");
     return (0, r.jsxs)("div", {
-        className: b.mG,
+        className: N.mG,
         children: [
             (0, r.jsx)(l.y, { size: "xs", color: o.A.colors.STATUS_POSITIVE }),
             (0, r.jsx)(d.E, {
@@ -33,78 +32,78 @@ function A(e) {
         ],
     });
 }
-function S(e) {
+function A(e) {
     let { dateString: t } = e,
-        i = (0, h.c)("GuildPowerupCardFooterExpiring");
+        i = (0, j.c)("GuildPowerupCardFooterExpiring");
     return (0, r.jsxs)("div", {
-        className: b.mG,
+        className: N.mG,
         children: [
             (0, r.jsx)(c.E, { size: "xs", color: o.A.colors.STATUS_WARNING }),
             (0, r.jsx)(d.E, {
                 color: "text-feedback-warning",
                 variant: i ? "text-sm/semibold" : "text-sm/bold",
-                children: N.intl.formatToMarkdownString(p.default["ol/ao/"], {
-                    dateString: new Date(t).toLocaleDateString(f.default.locale, { month: "2-digit", day: "2-digit" }),
+                children: p.intl.formatToMarkdownString(g.default["ol/ao/"], {
+                    dateString: new Date(t).toLocaleDateString(h.default.locale, { month: "2-digit", day: "2-digit" }),
                 }),
             }),
         ],
     });
 }
-function T(e) {
+function S(e) {
     let { removingAt: t } = e,
-        i = (0, h.c)("GuildPowerupCardFooterRemoving");
+        i = (0, j.c)("GuildPowerupCardFooterRemoving");
     return (0, r.jsxs)("div", {
-        className: b.wL,
+        className: N.wL,
         children: [
             (0, r.jsx)(c.E, { size: "xs", color: o.A.colors.STATUS_WARNING }),
             (0, r.jsx)(d.E, {
                 color: "text-feedback-warning",
                 variant: i ? "text-sm/semibold" : "text-sm/bold",
-                children: N.intl.formatToPlainString(p.default["6e2ry1"], { dateString: (0, g.A)(t) }),
+                children: p.intl.formatToPlainString(g.default["6e2ry1"], { dateString: (0, f.A)(t) }),
             }),
         ],
     });
 }
 function w(e) {
     let { cost: t, costDecorator: i, status: s, className: a } = e,
-        l = void 0 !== t ? b._A : b.$3;
+        l = void 0 !== t ? N._A : N.$3;
     return (0, r.jsxs)("div", {
         className: n()(l, a),
         children: [
             void 0 !== t &&
                 (0, r.jsxs)("div", {
-                    className: n()(b.mG, b.pT),
+                    className: n()(N.mG, N.pT),
                     children: [
                         (0, r.jsx)(x._, { size: "sm", color: o.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
                         (0, r.jsx)(d.E, {
-                            className: b.q9,
+                            className: N.q9,
                             tag: "div",
                             variant: "heading-md/semibold",
                             color: "text-subtle",
-                            children: N.intl.formatToPlainString(N.t.t2Wbo1, { required: t, decorator: i ?? "" }),
+                            children: p.intl.formatToPlainString(p.t.t2Wbo1, { required: t, decorator: i ?? "" }),
                         }),
                     ],
                 }),
-            s?.type === "expiring" && (0, r.jsx)(S, { dateString: s.expiringAt }),
-            s?.type === "removing" && (0, r.jsx)(T, { removingAt: s.removingAt }),
-            s?.type === "active" && (0, r.jsx)(A, { text: s.statusText }),
+            s?.type === "expiring" && (0, r.jsx)(A, { dateString: s.expiringAt }),
+            s?.type === "removing" && (0, r.jsx)(S, { removingAt: s.removingAt }),
+            s?.type === "active" && (0, r.jsx)(b, { text: s.statusText }),
         ],
     });
 }
-function k(e) {
+function T(e) {
     let { children: t } = e;
-    return (0, r.jsx)("div", { className: b.UD, children: t });
+    return (0, r.jsx)("div", { className: N.UD, children: t });
 }
-function G(e) {
+function k(e) {
     let { title: t, textColor: i, children: s, footer: a } = e;
     return (0, r.jsxs)("div", {
-        className: b.hQ,
+        className: N.hQ,
         children: [
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)("div", {
-                        className: b.N1,
-                        children: (0, r.jsx)(m.D, { color: i, variant: "heading-md/bold", children: t }),
+                        className: N.N1,
+                        children: (0, r.jsx)(v.D, { color: i, variant: "heading-md/bold", children: t }),
                     }),
                     s,
                 ],
@@ -113,7 +112,7 @@ function G(e) {
         ],
     });
 }
-let _ =
+let G =
     221552 == i.j
         ? s.forwardRef(function (e, t) {
               let {
@@ -125,25 +124,29 @@ let _ =
                   canRollback: d,
                   onClick: c,
                   onMouseOver: x,
-                  onMouseLeave: m,
-                  children: h,
+                  onMouseLeave: v,
+                  children: j,
               } = e;
               return (0, r.jsx)("div", {
-                  className: n()(b.gp, { [b.Wq]: d && !a }),
+                  className: n()(N.gp, { [N.Wq]: d && !a }),
                   ref: t,
-                  children: (0, r.jsxs)(v.s, {
+                  children: (0, r.jsxs)(m.s, {
                       "aria-label": s,
                       onClick: c,
                       onMouseOver: x,
-                      onMouseLeave: m,
-                      className: n()(b.kL, { [b.vu]: a, [b.$e]: l || (d && a) }, i),
+                      onMouseLeave: v,
+                      className: n()(N.kL, { [N.vu]: a, [N.$e]: l || (d && a) }, i),
                       children: [
-                          h,
-                          "new" === o && (0, r.jsx)(u.Lp, { className: b.Hl, text: N.intl.string(N.t.y2b7CA) }),
+                          j,
+                          "new" === o &&
+                              (0, r.jsx)("div", {
+                                  className: N.Oj,
+                                  children: (0, r.jsx)(u.E, { type: "new", variant: "brand" }),
+                              }),
                           "beta" === o &&
                               (0, r.jsx)("div", {
-                                  className: b.Mx,
-                                  children: (0, r.jsx)(j.E, { type: "beta", variant: "brand" }),
+                                  className: N.Oj,
+                                  children: (0, r.jsx)(u.E, { type: "beta", variant: "brand" }),
                               }),
                       ],
                   }),

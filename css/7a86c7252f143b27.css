@@ -160,14 +160,11 @@
     position: absolute
 }
 
-.new__5573a {
+.badgeHost__5573a {
+    display: flex;
     inset-inline-end: var(--space-12);
     position: absolute;
     top: var(--space-12)
-}
-
-.betaBadgeHost__5573a {
-    display: flex
 }
 
 .full-motion .container__5573a {
@@ -232,4 +229,4 @@
     transition: opacity .2s ease
 }
 
-/*# sourceMappingURL=8091af3f724f75d9.css.map*/
+/*# sourceMappingURL=7a86c7252f143b27.css.map*/

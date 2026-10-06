@@ -2259,7 +2259,7 @@
 }
 
 .newBadge_a36dee {
-    display: inline-block;
+    display: inline-flex;
     flex: 0 0 auto;
     margin-inline-start: 4px;
     vertical-align: bottom
@@ -2331,4 +2331,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=99edc8bbacbb3603.css.map*/
+/*# sourceMappingURL=1d95eac5f640c16c.css.map*/

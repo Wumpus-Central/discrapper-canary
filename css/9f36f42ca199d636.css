@@ -291,6 +291,7 @@
 }
 
 .newBadge_cd2add {
+    display: flex;
     margin-inline-end: 8px
 }
 
@@ -1116,4 +1117,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=68504f8a218aad09.css.map*/
+/*# sourceMappingURL=9f36f42ca199d636.css.map*/
