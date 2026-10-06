@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 630261, Version Hash: 3fb33d9909ea9dbcbb913c4e6067a737d339d2e7`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 630273, Version Hash: a87e9df9c10165307c641554b725aa53e8446f37`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -22077,7 +22077,7 @@ let CE = "isHideDevBanner",
                     className: to()(C_.Wz, C_.mr),
                     children: [
                         (0, y.jsx)(Cu, { className: C_.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "630261" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "630273" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -36682,12 +36682,18 @@ let Mr = [
         }),
     },
     Ml = {
-        [bb.e$.INITIATE_IMAGE_UPLOAD]: { request: void 0, response: (e) => ({ image_url: e.string().required() }) },
+        [bb.e$.INITIATE_IMAGE_UPLOAD]: {
+            embeddedAppSDK: !0,
+            request: void 0,
+            response: (e) => ({ image_url: e.string().required() }),
+        },
         [bb.e$.OPEN_SHARE_MOMENT_DIALOG]: {
+            embeddedAppSDK: !0,
             response: void 0,
             request: (e) => ({ mediaUrl: e.string().required().max(1024) }),
         },
         [bb.e$.AUTHENTICATE]: {
+            embeddedAppSDK: !0,
             request: (e) => ({ access_token: e.string().allow(null).optional() }),
             response: (e) => ({
                 access_token: e.string().required(),
@@ -36718,6 +36724,7 @@ let Mr = [
             }),
         },
         [bb.e$.GET_ACTIVITY_INSTANCE_CONNECTED_PARTICIPANTS]: {
+            embeddedAppSDK: !0,
             request: void 0,
             response: (e) => ({
                 participants: e
@@ -36812,6 +36819,7 @@ let Mr = [
             response: (e) => ({ success: e.boolean().required() }),
         },
         [bb.e$.SHARE_LINK]: {
+            embeddedAppSDK: !0,
             request: (e) => ({
                 custom_id: e.string().max(64),
                 message: e.string().max(1e3).required(),
@@ -36926,6 +36934,7 @@ let Mr = [
             response: (e) => ({ confirmed: e.boolean(), acknowledged: e.boolean() }),
         },
         [bb.e$.GET_RELATIONSHIPS]: {
+            embeddedAppSDK: !0,
             request: void 0,
             response: (e) => ({
                 relationships: e
@@ -36941,14 +36950,17 @@ let Mr = [
             }),
         },
         [bb.e$.INVITE_USER_EMBEDDED]: {
+            embeddedAppSDK: !0,
             request: (e) => ({ user_id: e.string().required(), content: e.string().min(0).max(1024) }),
             response: void 0,
         },
         [bb.e$.GET_USER]: {
+            embeddedAppSDK: !0,
             request: (e) => ({ id: e.string().max(64).required() }),
             response: (e) => M_(e).allow(null),
         },
         [bb.e$.GET_QUEST_ENROLLMENT_STATUS]: {
+            embeddedAppSDK: !0,
             request: (e) => ({ quest_id: e.string().required() }),
             response: (e) => ({
                 quest_id: e.string().required(),
@@ -36957,10 +36969,12 @@ let Mr = [
             }),
         },
         [bb.e$.QUEST_START_TIMER]: {
+            embeddedAppSDK: !0,
             request: (e) => ({ quest_id: e.string().required() }),
             response: (e) => ({ success: e.boolean().required() }),
         },
         [bb.e$.GET_QUEST]: {
+            embeddedAppSDK: !0,
             request: void 0,
             response: (e) => ({
                 quest_id: e.string().required(),
@@ -36969,7 +36983,11 @@ let Mr = [
                 external_cta_url: e.string().required(),
             }),
         },
-        [bb.e$.REQUEST_PROXY_TICKET_REFRESH]: { request: void 0, response: (e) => ({ ticket: e.string().required() }) },
+        [bb.e$.REQUEST_PROXY_TICKET_REFRESH]: {
+            embeddedAppSDK: !0,
+            request: void 0,
+            response: (e) => ({ ticket: e.string().required() }),
+        },
         [bb.e$.SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY]: {
             request: (e) => ({ enabled: e.boolean().required() }),
             response: (e) => ({ enabled: e.boolean().required() }),
