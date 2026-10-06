@@ -604,7 +604,7 @@ let r = {
             "CLIPS_SESSION_START",
             "CLIPS_SESSION_STOP",
         ],
-        inlineRequire: () => n(247254).A,
+        inlineRequire: () => n(95844).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     ClipDecisionEngineManager: {

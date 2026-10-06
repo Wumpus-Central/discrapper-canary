@@ -1,4 +1,4 @@
-n.d(t, { A: () => K });
+n.d(t, { A: () => Y });
 var i = n(739187),
     r = n(97483),
     a = n(73153),
@@ -183,22 +183,16 @@ class U extends T.A {
         }
     }
 }
-let w = (0, n(945810).mj)({
-    kind: "user",
-    name: "2026-07-clips-ntp-clock",
-    defaultConfig: { useNtpClock: !1 },
-    variations: { 1: { useNtpClock: !0 } },
-});
-var G = n(341923),
-    x = n(614584);
+var w = n(341923),
+    G = n(614584);
 n(423341);
-var k = n(201538),
-    F = n(564973),
-    B = n(409067),
-    V = n(227628),
-    H = n(468550),
-    j = n(375708);
-class W extends U {
+var x = n(201538),
+    k = n(564973),
+    F = n(409067),
+    B = n(227628),
+    V = n(468550),
+    H = n(375708);
+class j extends U {
     constructor() {
         (super(),
             Object.assign(this.actions, {
@@ -213,7 +207,7 @@ class W extends U {
                 },
                 CLIPS_SESSION_START: (e) => {
                     let { previousGameId: t } = e;
-                    null != t ? this.handleClipsReminder(t) : (0, H.kF)();
+                    null != t ? this.handleClipsReminder(t) : (0, V.kF)();
                 },
                 RPC_SERVER_READY: () => {
                     ((0, _.se)(y.Ay.getEnableAutoclipping()), (0, E.eZ)(y.Ay.getEnableAutoclipping()));
@@ -227,7 +221,7 @@ class W extends U {
     }
     maybeFetchAutoclipsCapabilities(e) {
         let { force: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-        null == e || ((0, G.s$)() && y.Ay.getEnableAutoclipping() && (t ? F.b.refetchMany([e]) : F.b.fetchMany([e])));
+        null == e || ((0, w.s$)() && y.Ay.getEnableAutoclipping() && (t ? k.b.refetchMany([e]) : k.b.fetchMany([e])));
     }
     stores = new Map().set(o.A, () => this.applyNativeClipsSettings());
     maybeOpenQuickBar() {
@@ -237,7 +231,7 @@ class W extends U {
             (y.Ay.getLastClipsSession()
                 ?.clipIds.map(y.Ay.getClipById)
                 .some((t) => t?.applicationId === e.id) &&
-                (V.MZ.getState().isOpen || (0, V.w9)()));
+                (B.MZ.getState().isOpen || (0, B.w9)()));
     }
     handleClipsReminder(e) {
         if (null == e || !y.Ay.canShowReminders()) return;
@@ -246,13 +240,13 @@ class W extends U {
         let n = !y.Ay.getSettings().showPovClipsInGallery;
         t.clipIds.some((t) => {
             let i = y.Ay.getClipById(t);
-            return null != i && i.applicationId === e && (!n || !(0, B.kD)(i));
-        }) && (0, H.M8)(e);
+            return null != i && i.applicationId === e && (!n || !(0, F.kD)(i));
+        }) && (0, V.M8)(e);
     }
     showClipsToast() {
         (0, i.P)({
             id: "CLIPS_IN_CALL_WARNING",
-            message: j.intl.string(j.t["d+41qJ"]),
+            message: H.intl.string(H.t["d+41qJ"]),
             type: r.Ck.CLIP,
             options: { duration: b.Vi },
         });
@@ -264,7 +258,7 @@ class W extends U {
             !(0, D.A)(f.Ay))
         )
             return;
-        (0, k.mj)();
+        (0, x.mj)();
         let t = f.Ay.getMediaEngine(),
             n = () => {
                 let n = y.Ay.getSettings(),
@@ -281,7 +275,7 @@ class W extends U {
                         this.fireClipsInitEvent();
                 }
             };
-        (0, v.T)() ? ((0, k.t_)() ? n() : (0, k.so)().then(n)) : n();
+        (0, v.T)() ? ((0, x.t_)() ? n() : (0, x.so)().then(n)) : n();
     }
     handleClipsInitOnToggleDetection(e) {
         let t = d.Ay.getVisibleGame();
@@ -293,7 +287,7 @@ class W extends U {
     }
     handleClipsInitOnGamesChange(e) {
         let t = d.Ay.getVisibleGame();
-        if (((0, V.yj)(), null == t)) return;
+        if (((0, B.yj)(), null == t)) return;
         this.prefetchRichPresenceData(t.id);
         let n = !!e.added.find((e) => e.pid === t.pid);
         (this.maybeFetchAutoclipsCapabilities(t.id, { force: n }),
@@ -313,9 +307,9 @@ class W extends U {
         if (!(0, v.T)() || (!e && null != A.A.getCurrentUserActiveStream())) return;
         let t = d.Ay.getVisibleGame();
         if (t?.pid == null || t?.windowHandle == null || null == t.name || "" === t.name) return;
-        if (!(0, k.t_)())
-            return void (0, k.so)().then(() => {
-                (0, k.t_)() && this.fireClipsInitEvent(e);
+        if (!(0, x.t_)())
+            return void (0, x.so)().then(() => {
+                (0, x.t_)() && this.fireClipsInitEvent(e);
             });
         let n = y.Ay.getSettings();
         a.h.dispatch({
@@ -329,27 +323,25 @@ class W extends U {
         let { storageLocation: e } = y.Ay.getSettings();
         "" !== e &&
             e !== y.he &&
-            x
-                .Fb(e)
-                .then(() => Y())
+            G.Fb(e)
+                .then(() => W())
                 .catch((e) => {
                     b.nx.error("Failed to load clips directory on connection open", e);
                 });
     }
     maybeStartNtpClock() {
-        let { useNtpClock: e } = w.getConfig({ location: "ClipsManager#handlePostConnectionOpen" });
-        e && s.A?.ntpClock?.start().catch(() => {});
+        s.A?.ntpClock?.start().catch(() => {});
     }
 }
-async function Y() {
+async function W() {
     if (y.Ay.hasClips() || null == s.A || null == s.A.app) return;
     let e = await s.A.app.getPath("documents");
     if (y.Ay.getSettings().storageLocation === e)
         try {
             let e = await s.A.app.getPath("videos");
-            x.HU((0, I.CN)(e, y._c));
+            G.HU((0, I.CN)(e, y._c));
         } catch (e) {
             b.nx.error("Failed to resolve videos path for old default storage migration", e);
         }
 }
-let K = new W();
+let Y = new j();
