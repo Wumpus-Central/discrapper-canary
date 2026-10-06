@@ -11,14 +11,9 @@ var i = n(439372),
     _ = n(240899),
     E = n(458977),
     A = n(399091),
-    h = n(526233);
-let f = (0, n(945810).mj)({
-    kind: "user",
-    name: "2026-08-rocketleague-events",
-    defaultConfig: { enableRocketLeagueEvents: !1 },
-    variations: { 1: { enableRocketLeagueEvents: !0 } },
-});
-var I = n(171251),
+    h = n(526233),
+    f = n(415281),
+    I = n(171251),
     p = n(826685),
     T = n(876474),
     m = n(190443);
@@ -80,7 +75,7 @@ class N extends i.A {
                     type: "application",
                     name: "rocket-league",
                     applicationId: m.e,
-                    isEnabled: () => S(m.e) && f.getConfig({ location: g }).enableRocketLeagueEvents,
+                    isEnabled: () => S(m.e) && f.A.getConfig({ location: g }).enableRocketLeagueEvents,
                     importHandler: () => Promise.all([n.e("556967"), n.e("182150")]).then(n.bind(n, 446885)),
                 },
             ]))

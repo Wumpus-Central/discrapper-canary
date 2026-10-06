@@ -629,7 +629,7 @@ let r = {
             "CLIPS_AUTOCLIPS_CAPABILITIES_UPDATE",
             "CLIPS_AUTOCLIPS_STAFF_BYPASS_OVERRIDE",
         ],
-        inlineRequire: () => n(105554).A,
+        inlineRequire: () => n(966532).A,
     },
     DistributedClipsManager: { actions: ["CLIPS_REMOTE_TRIGGER"], inlineRequire: () => n(109624).A },
     CustomCallSoundsManager: {
