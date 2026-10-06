@@ -46,19 +46,20 @@ function E(e) {
         { analyticsLocations: i, newestAnalyticsLocation: o } = (0, a.Ay)([...r, s.A.COLLECTIBLES_SHOP, n]);
     return { analyticsSource: t, analyticsLocations: i, newestAnalyticsLocation: o, currentTabLocation: n };
 }
-function C(e, t, r, l, s) {
-    let { analyticsLocations: a, analyticsSource: i, currentTabLocation: o, newestAnalyticsLocation: c } = E(t);
+function C(e, t, r, l) {
+    let { sourceButton: s, enabled: a = !0 } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
+        { analyticsLocations: i, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: d } = E(t);
     n.useEffect(() => {
-        if (l !== g.Pf.VISIBLE || c !== o) return;
-        let n = t === g.G2.CATALOG ? s : i;
+        if (!a || l !== g.Pf.VISIBLE || d !== c) return;
+        let n = t === g.G2.CATALOG ? s : o;
         u.default.track(m.HAw.COLLECTIBLES_SHOP_VIEWED, {
-            location_stack: a,
+            location_stack: i,
             source: n,
             page_session_id: e,
             page_type: t === g.G2.CATALOG ? "full" : t,
             category: t === g.G2.HOME ? void 0 : r,
         });
-    }, [a, e, t, r, o, l, s, i, c]);
+    }, [i, e, t, r, c, l, s, o, d, a]);
 }
 function p(e, t) {
     let { analyticsLocations: r } = E(e);

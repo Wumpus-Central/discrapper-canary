@@ -2552,7 +2552,7 @@ let n2 = function (e) {
             (K(e), F(t));
         }, []),
         { selectedTab: Y, transitionState: W, transitionToTab: $ } = (0, T.o)(y);
-    ((0, x.HU)({ location: el.intl.string(el.t.pWG4ze) }), (0, L.uS)(n, Y, H, W, U), (0, L.N0)(Y, s));
+    ((0, x.HU)({ location: el.intl.string(el.t.pWG4ze) }), (0, L.uS)(n, Y, H, W, { sourceButton: U }), (0, L.N0)(Y, s));
     let { dismissShopButtonDC: Z } = (0, n4.A)();
     (r.useEffect(() => {
         Z(e7.i.AUTO_DISMISS);
