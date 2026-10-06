@@ -36,6 +36,29 @@
     border-radius: var(--radius-xs)
 }
 
+.inlineImage__1689b {
+    margin: var(--space-8) auto;
+    max-width: 100%;
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content
+}
+
+.inlineImageMedia__1689b {
+    border-radius: var(--radius-xs);
+    display: block;
+    height: auto;
+    max-height: 400px;
+    max-width: 100%
+}
+
+.inlineImageGifTag__1689b {
+    left: var(--space-8);
+    pointer-events: none;
+    position: absolute;
+    top: var(--space-8)
+}
+
 .title__1689b {
     text-transform: uppercase
 }
@@ -160,4 +183,4 @@ h3.improved__1689b:after {
     color: var(--primary-500)
 }
 
-/*# sourceMappingURL=227512.0cd8fb49abe2b568.css.map*/
+/*# sourceMappingURL=227512.3289a188db311541.css.map*/

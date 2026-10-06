@@ -1,28 +1,28 @@
 let l;
-(s.r(t), s.d(t, { default: () => A, renderChangelogMessageMarkup: () => x }));
-var a = s(478676),
-    n = s.n(a),
-    r = s(873879),
-    u = s(683412),
-    o = s(704726),
-    c = s(46054);
-let i = n().defaultRules.lheading,
-    p = n().defaultRules.heading,
-    d = n().defaultRules.link,
-    g = n().defaultRules.image,
-    m = n().defaultRules.list,
-    f = n().defaultRules.blockQuote,
-    h = n().defaultRules.paragraph,
+(n.r(t), n.d(t, { default: () => v, renderChangelogMessageMarkup: () => N }));
+var s = n(478676),
+    a = n.n(s),
+    r = n(873879),
+    u = n(683412),
+    o = n(704726),
+    i = n(46054);
+let c = a().defaultRules.lheading,
+    d = a().defaultRules.heading,
+    p = a().defaultRules.link,
+    g = a().defaultRules.image,
+    m = a().defaultRules.list,
+    h = a().defaultRules.blockQuote,
+    f = a().defaultRules.paragraph,
     R = /\{(.+?)}/,
     k = /^\$(\w+?)\$/;
 function b(e) {
     let { transformUpperCase: t = !1 } = e;
-    return (e, s, l) => {
-        let a = R.exec(e[1]),
+    return (e, n, l) => {
+        let s = R.exec(e[1]),
             r = e[1].replace(R, "");
         return (
             t && (r = r.toUpperCase()),
-            { className: null != a ? a[1] : null, level: "=" === e[2] ? 1 : 2, content: n().parseInline(s, r, l) }
+            { className: null != s ? s[1] : null, level: "=" === e[2] ? 1 : 2, content: a().parseInline(n, r, l) }
         );
     };
 }
@@ -38,60 +38,60 @@ function y(e) {
               }
             : {}),
         image: { ...g, ...("function" == typeof l.customRules.image ? l.customRules.image(e) : l.customRules.image) },
-        link: { ...d, ...("function" == typeof l.customRules.link ? l.customRules.link(e) : l.customRules.link) },
+        link: { ...p, ...("function" == typeof l.customRules.link ? l.customRules.link(e) : l.customRules.link) },
         list: { ...m, ...("function" == typeof l.customRules.list ? l.customRules.list(e) : l.customRules.list) },
         interpolation: {
             order: o.Ay.order,
             match: (e) => k.exec(e),
-            parse(e, t, s) {
-                let l = s.interpolations[e[1]];
+            parse(e, t, n) {
+                let l = n.interpolations[e[1]];
                 return null == l ? { type: "text", content: e[0] } : { type: "interpolation", renderer: l };
             },
             react: (e) => e.renderer(),
         },
         lheading: {
-            ...i,
+            ...c,
             parse: b({ transformUpperCase: !0 }),
             ...("function" == typeof l.customRules.lheading ? l.customRules.lheading(e) : l.customRules.lheading),
         },
         heading: {
-            ...p,
+            ...d,
             ...("function" == typeof l.customRules.heading ? l.customRules.heading(e) : l.customRules.heading),
         },
         blockQuote: {
-            ...f,
+            ...h,
             ...("function" == typeof l.customRules.blockQuote ? l.customRules.blockQuote(e) : l.customRules.blockQuote),
         },
         paragraph: {
-            ...h,
+            ...f,
             ...("function" == typeof l.customRules.paragraph ? l.customRules.paragraph(e) : l.customRules.paragraph),
         },
     };
 }
-function C(e) {
+function x(e) {
     return { ...y(e) };
 }
-l = s(482644);
-let A = {
-    getDefaultRules: C,
+l = n(682928);
+let v = {
+    getDefaultRules: x,
     getSpecialRules: (e) => ({
         ...y(e),
         ...{
             lheading: {
-                ...i,
+                ...c,
                 parse: b({ transformUpperCase: !1 }),
                 ...("function" == typeof l.customRules.lheading ? l.customRules.lheading(e) : l.customRules.lheading),
             },
         },
     }),
     getMessageRules: (e) => ({
-        ...{ ...y(e), newline: { ...n().defaultRules.newline }, text: o.Ay, list: r.A, subtext: u.A },
+        ...{ ...y(e), newline: { ...a().defaultRules.newline }, text: o.Ay, list: r.A, subtext: u.A },
     }),
 };
-function x(e, t, s) {
+function N(e, t, n) {
     return {
         hasSpoilerEmbeds: !1,
         hasBailedAst: !1,
-        content: c.A.reactParserFor(C(t))(e.content, !1, null != s ? { changeLog: s } : {}),
+        content: i.A.reactParserFor(x(t))(e.content, !1, null != n ? { changeLog: n } : {}),
     };
 }
