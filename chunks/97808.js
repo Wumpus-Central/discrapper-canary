@@ -271,22 +271,22 @@ function y(e) {
               children: [t, w],
           });
 }
-let D = r.forwardRef((e, t) => {
-    let { src: n, isSpeaking: r, className: a, voiceDb: l = -1 / 0, speakingStylesConfig: o } = e,
-        d = (0, E.v)({ isSpeaking: r, voiceDb: l, spreadDirection: E.O.INSET_ONLY, maxInnerSpreadRadius: 4, ...o });
+function D(e) {
+    let { src: t, isSpeaking: n, className: r, voiceDb: a = -1 / 0, speakingStylesConfig: l, ref: o } = e,
+        d = (0, E.v)({ isSpeaking: n, voiceDb: a, spreadDirection: E.O.INSET_ONLY, maxInnerSpreadRadius: 4, ...l });
     return (0, i.jsxs)(
         "div",
         {
-            ref: t,
-            className: s()(g.yA, a),
+            ref: o,
+            className: s()(g.yA, r),
             children: [
-                (0, i.jsx)("img", { src: n ?? void 0, alt: " ", className: g.my, "aria-hidden": !0 }),
-                r && (0, i.jsx)("div", { className: g.uh, style: d }),
+                (0, i.jsx)("img", { src: t ?? void 0, alt: " ", className: g.my, "aria-hidden": !0 }),
+                n && (0, i.jsx)("div", { className: g.uh, style: d }),
             ],
         },
-        n,
+        t,
     );
-});
+}
 function v(e) {
     let {
             src: t,

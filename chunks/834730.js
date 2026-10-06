@@ -1,49 +1,47 @@
-n.d(t, { E: () => E });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(282802),
-    o = n.n(l),
-    d = n(661531),
-    c = n(108306),
-    u = n(736541);
-let _ = Object.fromEntries(Object.keys(d.A.colors).map((e) => [o()(e), e])),
-    E = r.forwardRef(function (e, t) {
-        let n,
-            {
-                variant: r,
-                tag: a = "div",
-                selectable: l = !1,
-                className: o,
-                lineClamp: E,
-                color: A,
-                tabularNumbers: h = !1,
-                scaleFontToUserSetting: f = !1,
-                ...I
-            } = e,
-            p = "",
-            T = {};
-        if (
-            (null != E && (1 === E ? (p = c.DN) : ((p = c.ED), (T = { lineClamp: E, WebkitLineClamp: E }))),
-            void 0 !== A)
-        )
-            switch (A) {
-                case "currentColor":
-                    n = "currentColor";
-                    break;
-                case "none":
-                    n = void 0;
-                    break;
-                default:
-                    n = d.A.colors[_[A]]?.css;
-            }
-        let m = { color: n, ...T, ...I.style };
-        return (0, i.jsx)(a, {
-            ref: t,
-            className: s()({ [c.fT]: void 0 === A, [c.rb]: l, [c.w9]: h, [u.fontScaling]: f }, p, u[r], o),
-            ...I,
-            style: Object.values(m).filter(Boolean).length > 0 ? m : void 0,
-            "data-text-variant": r,
-        });
+n.d(t, { E: () => _ });
+var i = n(477900);
+n(582128);
+var r = n(503698),
+    a = n.n(r),
+    s = n(282802),
+    l = n.n(s),
+    o = n(661531),
+    d = n(108306),
+    c = n(736541);
+let u = Object.fromEntries(Object.keys(o.A.colors).map((e) => [l()(e), e]));
+function _(e) {
+    let t,
+        {
+            variant: n,
+            tag: r = "div",
+            selectable: s = !1,
+            className: l,
+            lineClamp: _,
+            color: E,
+            tabularNumbers: A = !1,
+            scaleFontToUserSetting: h = !1,
+            ref: f,
+            ...I
+        } = e,
+        p = "",
+        T = {};
+    if ((null != _ && (1 === _ ? (p = d.DN) : ((p = d.ED), (T = { lineClamp: _, WebkitLineClamp: _ }))), void 0 !== E))
+        switch (E) {
+            case "currentColor":
+                t = "currentColor";
+                break;
+            case "none":
+                t = void 0;
+                break;
+            default:
+                t = o.A.colors[u[E]]?.css;
+        }
+    let m = { color: t, ...T, ...I.style };
+    return (0, i.jsx)(r, {
+        ref: f,
+        className: a()({ [d.fT]: void 0 === E, [d.rb]: s, [d.w9]: A, [c.fontScaling]: h }, p, c[n], l),
+        ...I,
+        style: Object.values(m).filter(Boolean).length > 0 ? m : void 0,
+        "data-text-variant": n,
     });
+}

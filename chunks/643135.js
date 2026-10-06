@@ -26,29 +26,29 @@ let d = `
         "padding-right",
         "border-width",
         "box-sizing",
-    ],
-    s = l.forwardRef(function (e, t) {
-        let { style: r, autoFocus: a = !1, disabled: n = !1, autoCorrect: d = "off", maxRows: u = 15, ...s } = e,
-            g = l.useRef(null),
-            [b, p] = l.useState(() => c(g.current, s.rows, u, s.value));
-        return (
-            l.useLayoutEffect(() => {
-                p(c(g.current, s.rows, u, s.value));
-            }, [s.rows, u, s.value]),
-            (0, o.jsx)(i.vN, {
-                children: (0, o.jsx)("textarea", {
-                    ...s,
-                    ref: function (e) {
-                        ((g.current = e), "function" == typeof t ? t(g.current) : null != t && (t.current = e));
-                    },
-                    style: { ...r, height: b },
-                    autoFocus: a,
-                    disabled: n,
-                    autoCorrect: d,
-                }),
-            })
-        );
-    });
+    ];
+function s(e) {
+    let { style: t, autoFocus: r = !1, disabled: a = !1, autoCorrect: n = "off", maxRows: d = 15, ref: u, ...s } = e,
+        g = l.useRef(null),
+        [b, p] = l.useState(() => c(g.current, s.rows, d, s.value));
+    return (
+        l.useLayoutEffect(() => {
+            p(c(g.current, s.rows, d, s.value));
+        }, [s.rows, d, s.value]),
+        (0, o.jsx)(i.vN, {
+            children: (0, o.jsx)("textarea", {
+                ...s,
+                ref: function (e) {
+                    ((g.current = e), "function" == typeof u ? u(g.current) : null != u && (u.current = e));
+                },
+                style: { ...t, height: b },
+                autoFocus: r,
+                disabled: a,
+                autoCorrect: n,
+            }),
+        })
+    );
+}
 function c(e, t, r, o) {
     var l, i, s, c, g, b;
     let p, h, x, m, y, f;
