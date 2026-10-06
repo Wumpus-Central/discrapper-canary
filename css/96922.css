@@ -1,0 +1,45 @@
+.container_c530da {
+    max-width: 350px;
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    user-select: text
+}
+
+.tooltip_c530da {
+    background-color: var(--background-surface-high);
+    border-radius: 5px;
+    box-shadow: var(--shadow-border), var(--shadow-high);
+    color: var(--primary-200);
+    font-size: 16px;
+    line-height: 20px;
+    overflow-wrap: break-word;
+    padding: 8px 12px
+}
+
+.tooltipPointer_c530da {
+    border: 5px solid transparent;
+    border-top: 5px solid var(--background-surface-high);
+    height: 0;
+    inset-inline-start: 50%;
+    margin-inline-start: -5px;
+    pointer-events: none;
+    position: absolute;
+    top: 100%;
+    width: 0
+}
+
+.clickable_c530da {
+    cursor: pointer
+}
+
+.mention_c530da {
+    background: none;
+    padding: 0
+}
+
+.spinner_c530da {
+    height: 16px;
+    width: 16px
+}
+
+/*# sourceMappingURL=96922.a30d7b123b1ad582.css.map*/

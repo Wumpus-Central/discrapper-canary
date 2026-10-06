@@ -19,6 +19,7 @@ function s(e) {
         preview: p,
         avatarDecorationOverride: g,
         avatarOverride: _,
+        usernameClassName: A,
     } = e;
     return !(0, l.A)(t) && (c || r)
         ? (0, a.jsx)(o, {
@@ -34,6 +35,7 @@ function s(e) {
               preview: p,
               avatarDecorationOverride: g,
               avatarOverride: _,
+              usernameClassName: A,
           })
         : void 0;
 }
