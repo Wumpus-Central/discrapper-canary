@@ -1,4 +1,4 @@
-n.d(t, { default: () => e6 });
+n.d(t, { default: () => e3 });
 var i = n(477900),
     s = n(582128),
     r = n(562708),
@@ -142,7 +142,7 @@ function z(e) {
             }),
     });
 }
-let Y = s.memo(function (e) {
+let X = s.memo(function (e) {
     let { onClose: t, setting: n } = e,
         s = L.A.useField("showNavigationMobile");
     return (0, i.jsxs)("div", {
@@ -154,7 +154,7 @@ let Y = s.memo(function (e) {
     });
 });
 n(321073);
-var X = n(837381),
+var Y = n(837381),
     V = n(741918),
     $ = n(689175),
     Z = n(928039),
@@ -208,7 +208,7 @@ function ex(e) {
         x = o?.() ?? g;
     return (
         ea()(null != x, "[SettingsSubnavigationCategory] Category must have a title"),
-        (0, i.jsx)(X.tG, {
+        (0, i.jsx)(Y.tG, {
             id: u,
             children: (e) =>
                 (0, i.jsx)("div", {
@@ -552,7 +552,7 @@ function eb(e) {
               dismissibleBadge: f,
               children: x,
           })
-        : (0, i.jsx)(X.tG, {
+        : (0, i.jsx)(Y.tG, {
               id: a?.key ?? t.key,
               children: (e) =>
                   (0, i.jsx)(eS, {
@@ -682,9 +682,9 @@ function ev(e) {
                             (0, i.jsx)("nav", {
                                 className: ey.C$,
                                 "aria-label": K.intl.string(K.t.MqTGqz),
-                                children: (0, i.jsx)(X.hD, {
+                                children: (0, i.jsx)(Y.hD, {
                                     navigator: A,
-                                    children: (0, i.jsx)(X.PR, {
+                                    children: (0, i.jsx)(Y.PR, {
                                         children: (e) => {
                                             let { ref: t, ...n } = e;
                                             return (0, i.jsxs)($.Ch, {
@@ -826,7 +826,7 @@ function eT(e) {
                             emptyState: u,
                             searchBar: c,
                         }),
-                        (0, i.jsx)(Y, { onClose: I, setting: P }),
+                        (0, i.jsx)(X, { onClose: I, setting: P }),
                     ],
                 }),
             ],
@@ -905,8 +905,8 @@ var eM = n(280450),
     eW = n(975571),
     eH = n(481613),
     ez = n.n(eH),
-    eY = n(77729),
-    eX = n(521502),
+    eX = n(77729),
+    eY = n(521502),
     eV = n(915089),
     e$ = n(206845),
     eZ = n(19575),
@@ -915,18 +915,18 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eV.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "630828",
-        s = "fb451cae7630fca12e83930b499e512d9786ec1f".substring(0, 7),
-        r = eY.A?.app.getVersion(),
-        l = eY.A?.app.getBuildNumber(),
-        c = eY.A?.app.getAppArch(),
-        o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1791310256433", !1) : null,
+        n = "630837",
+        s = "10095e5141e3dea8d0e89621fcc63b1f486d1745".substring(0, 7),
+        r = eX.A?.app.getVersion(),
+        l = eX.A?.app.getBuildNumber(),
+        c = eX.A?.app.getAppArch(),
+        o = eY.A.getCurrentBuildOverride().overrides?.discord_web,
+        u = null != o ? (0, eq.A)("1791310628735", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
-            if (null == e || null == eY.A) return null;
-            let t = eY.A.os.release,
+            if (null == e || null == eX.A) return null;
+            let t = eX.A.os.release,
                 [n, i, s] = eZ.Ay.parsedOSRelease;
             return (
                 e.includes("Windows 10") && void 0 !== s && s >= 22e3 && (e = e.replace("Windows 10", "Windows 11")),
@@ -1091,8 +1091,8 @@ var e7 = n(402651),
     e9 = n(830543),
     e4 = n(953056);
 let e8 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
-    e3 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
-function e6(e) {
+    e6 = new Map([[e_.X.SESSIONS_PANEL, r.ImpressionNames.USER_SETTINGS_SESSIONS]]);
+function e3(e) {
     let { target: t, ...n } = e,
         l = eL.A.useField("query"),
         a = s.useCallback(() => {
@@ -1119,7 +1119,7 @@ function e6(e) {
               sidebarFooter: e2,
               onViewChange: function (e) {
                   e8.has(e) || (0, e5._)(e);
-                  let t = e3.get(e);
+                  let t = e6.get(e);
                   (null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
