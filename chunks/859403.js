@@ -32,9 +32,8 @@ function I(e) {
                   n.e("183776"),
                   n.e("428296"),
                   n.e("534822"),
-                  n.e("967279"),
-                  n.e("13248"),
-              ]).then(n.bind(n, 689219));
+                  n.e("178930"),
+              ]).then(n.bind(n, 471177));
               return (t) => (0, i.jsx)(e, { ...t, analyticsLocations: [c.A.SCHEDULED_MESSAGES_ROADBLOCK] });
           })
         : d.A.show({

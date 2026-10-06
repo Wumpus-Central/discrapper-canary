@@ -443,7 +443,7 @@ var eQ = n(294002),
 let e1 = "ForLaterPopout",
     e3 = "Bookmarks",
     e2 = "Reminders";
-function e8(e) {
+function e7(e) {
     let { closePopout: t, type: n } = e,
         s = (function () {
             let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : m.Yf.ALL,
@@ -532,7 +532,7 @@ function e8(e) {
                                       ...l,
                                       children: s.map((e) =>
                                           (0, a.jsx)(
-                                              e7,
+                                              e8,
                                               { savedMessage: e, closePopout: t, throttledNow: x },
                                               e.saveData.messageId,
                                           ),
@@ -551,7 +551,7 @@ function e8(e) {
               }),
           });
 }
-function e7(e) {
+function e8(e) {
     let { savedMessage: t, closePopout: n, throttledNow: s } = e,
         l = (0, ey.vr)(t),
         r = i.useCallback(
@@ -1031,8 +1031,8 @@ function t0(e) {
 var t1 = n(435558),
     t3 = n.n(t1),
     t2 = n(350527),
-    t8 = n(218152),
-    t7 = n(970278),
+    t7 = n(218152),
+    t8 = n(970278),
     t6 = n(747926),
     t4 = n(935208),
     t5 = n(37411),
@@ -1040,9 +1040,9 @@ var t1 = n(435558),
 function ne(e) {
     let { channel: t, channelRecord: n, deleteChannel: s } = e,
         l = (0, j.yK)(
-            [t7.A, Q.A],
+            [t8.A, Q.A],
             () =>
-                t3()(t7.A.getThreadsForParent(n.guild_id, n.id))
+                t3()(t8.A.getThreadsForParent(n.guild_id, n.id))
                     .values()
                     .filter((e) => {
                         let { id: n } = e;
@@ -1084,7 +1084,7 @@ function ne(e) {
             className: t9.k,
             children: l.map((e) =>
                 (0, a.jsx)(
-                    t8.Cp,
+                    t7.Cp,
                     { channel: n, children: (0, a.jsx)(t2.Ay, { className: t9.u, threadId: e.id, goToThread: r }) },
                     e.id,
                 ),
@@ -1316,7 +1316,7 @@ class n2 extends nP.EventEmitter {
     populateInitialStateFromStore(e) {
         switch (e.type) {
             case "messages": {
-                let t = n8(e, !1);
+                let t = n7(e, !1);
                 if (t.messages.some(nK.$r)) return (L.A.clearChannel(e.channelId), { ...e, messages: [] });
                 return t;
             }
@@ -1324,7 +1324,7 @@ class n2 extends nP.EventEmitter {
             case "guild-events":
                 return { ...e, isFullyLoaded: !0, hasLoadedAnything: !0 };
             case "forum": {
-                let t = t7.A.hasLoaded(e.guildId);
+                let t = t8.A.hasLoaded(e.guildId);
                 return { ...e, isFullyLoaded: t, hasLoadedAnything: !0 };
             }
             default:
@@ -1334,7 +1334,7 @@ class n2 extends nP.EventEmitter {
     reloadMessages = () => {
         this.setState({
             channels: this.state.channels.map((e) =>
-                "messages" === e.type && e.hasLoadedAnything ? n8(e, !1, !0) : e,
+                "messages" === e.type && e.hasLoadedAnything ? n7(e, !1, !0) : e,
             ),
         });
     };
@@ -1447,7 +1447,7 @@ class n2 extends nP.EventEmitter {
             if ("forum" !== e.type) return e;
             {
                 if (!e.hasLoadedAnything) return e;
-                let t = t7.A.hasLoaded(e.guildId);
+                let t = t8.A.hasLoaded(e.guildId);
                 return { ...e, isFullyLoaded: t, hasLoadedAnything: !0 };
             }
         });
@@ -1470,7 +1470,7 @@ class n2 extends nP.EventEmitter {
                         loadState: "loaded",
                         channels: this.updateChannel(e.channelId, (e) => {
                             x()("messages" === e.type, "channel cannot change type");
-                            let n = n8(e, !0);
+                            let n = n7(e, !0);
                             return (
                                 (0 === n.messages.length || n.messages.length === e.messages.length) &&
                                     (n = { ...n, hasLoadedAnything: !0, isFullyLoaded: !0, hasError: !t }),
@@ -1487,7 +1487,7 @@ class n2 extends nP.EventEmitter {
                             (e) => (
                                 x()("messages" === e.type, "channel cannot change type"),
                                 {
-                                    ...n8(e, !0),
+                                    ...n7(e, !0),
                                     isFullyLoaded: !0,
                                     hasError: !0,
                                     hasLoadedAnything: !0,
@@ -1512,7 +1512,7 @@ class n2 extends nP.EventEmitter {
             }
     }
 }
-function n8(e, t) {
+function n7(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
         s = nZ.A.getMessages(e.channelId),
         l = s
@@ -1534,7 +1534,7 @@ function n8(e, t) {
         isFullyLoaded: e.isFullyLoaded || (a && r) || (t && !s.hasMoreAfter),
     };
 }
-function n7() {
+function n8() {
     var e;
     let t,
         n = (function () {
@@ -2039,10 +2039,10 @@ function sf(e) {
         x = (0, T.A)("unreads", g);
     ((0, eg.xN)(g), (0, eg.yW)(sh));
     let [A, p] = (function (e) {
-            let [t, n] = i.useState(() => new n2(n7(), e)),
+            let [t, n] = i.useState(() => new n2(n8(), e)),
                 [s, l] = i.useState(!1),
                 a = i.useRef(Date.now()),
-                [r, d] = i.useState(() => n7());
+                [r, d] = i.useState(() => n8());
             (i.useEffect(() => {
                 function e(e) {
                     return d(e);
@@ -2058,7 +2058,7 @@ function sf(e) {
                 i.useEffect(() => {
                     if (null == r || r.channels.length > 0 || s) return;
                     let t = Date.now(),
-                        i = n7();
+                        i = n8();
                     0 === i.channels.length || t - a.current < 10 * ej.A.Millis.SECOND
                         ? l(!0)
                         : ((a.current = Date.now()), n(new n2(i, e)));
@@ -2091,8 +2091,8 @@ function sf(e) {
                 ),
                 i.useEffect(
                     () => (
-                        t7.A.addChangeListener(t.handleActiveThreadsStoreChange),
-                        () => t7.A.removeChangeListener(t.handleActiveThreadsStoreChange)
+                        t8.A.addChangeListener(t.handleActiveThreadsStoreChange),
+                        () => t8.A.removeChangeListener(t.handleActiveThreadsStoreChange)
                     ),
                     [t],
                 ),
@@ -2564,14 +2564,14 @@ var sD = n(559647),
     sw = n(588190),
     sU = n(663341),
     sK = n(626891),
-    sz = n(632946);
+    sz = n(474218);
 function sH() {
     return (0, a.jsx)("div", {
         className: sK.kL,
         children: (0, a.jsxs)("div", {
             className: sK.vW,
             children: [
-                (0, a.jsx)("img", { src: sz, className: sK.Tn, alt: ea.intl.string(ea.t.SZVs3K) }),
+                (0, a.jsx)("img", { src: sz.A, className: sK.Tn, alt: ea.intl.string(ea.t.SZVs3K) }),
                 (0, a.jsx)(I.D, {
                     className: sK.wx,
                     variant: "heading-xl/semibold",
@@ -2738,7 +2738,7 @@ function s3(e) {
         { analyticsLocations: s } = (0, k.Ay)(D.A.SCHEDULED_MESSAGES_LIST),
         l = i.useCallback(() => {
             (0, eD.openModalLazy)(async () => {
-                let { default: e } = await n.e("13248").then(n.bind(n, 689219));
+                let { default: e } = await n.e("178930").then(n.bind(n, 471177));
                 return (t) => (0, a.jsx)(e, { ...t, analyticsLocations: s });
             });
         }, [s]),
@@ -2762,7 +2762,7 @@ let s2 = i.memo(function (e) {
             (0, sV.CI)({ scheduledMessage: t });
         }, [t]);
     return null == r
-        ? (0, a.jsx)(s8, { scheduledMessageId: t.scheduledMessageId })
+        ? (0, a.jsx)(s7, { scheduledMessageId: t.scheduledMessageId })
         : (0, a.jsxs)(
               "div",
               {
@@ -2880,7 +2880,7 @@ let s2 = i.memo(function (e) {
               t.record.id,
           );
 });
-function s8(e) {
+function s7(e) {
     let { scheduledMessageId: t } = e;
     return (0, a.jsxs)("div", {
         className: d()(e0.aP, sq.Mh),
@@ -2917,7 +2917,7 @@ function s8(e) {
         ],
     });
 }
-var s7 = n(211550);
+var s8 = n(211550);
 function s6(e) {
     let {
         dialogClassName: t,
@@ -2934,7 +2934,7 @@ function s6(e) {
         "aria-label": ea.intl.string(ea.t.GSmTKJ),
         className: t,
         children: (0, a.jsx)("div", {
-            className: d()(s7.k, { [s7.q]: n }),
+            className: d()(s8.k, { [s8.q]: n }),
             children: (0, a.jsx)(c.tH, {
                 fallback: (0, a.jsx)(sp, {}),
                 children: (0, a.jsx)(h.F, {
@@ -2943,9 +2943,9 @@ function s6(e) {
                         s === o.Y2.MENTIONS
                             ? (0, a.jsx)(sL, { onJump: r })
                             : A && s === o.Y2.BOOKMARKS
-                              ? (0, a.jsx)(e8, { closePopout: i, type: m.Yf.BOOKMARK }, "bookmarks")
+                              ? (0, a.jsx)(e7, { closePopout: i, type: m.Yf.BOOKMARK }, "bookmarks")
                               : A && s === o.Y2.REMINDERS
-                                ? (0, a.jsx)(e8, { closePopout: i, type: m.Yf.REMINDER }, "reminders")
+                                ? (0, a.jsx)(e7, { closePopout: i, type: m.Yf.REMINDER }, "reminders")
                                 : s === o.Y2.SCHEDULED
                                   ? (0, a.jsx)(s1, { onJump: r })
                                   : (0, a.jsx)(sf, { onJump: r, showTutorial: g, setSeenTutorial: x, closePopout: i }),
