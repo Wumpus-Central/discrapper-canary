@@ -266,21 +266,29 @@ function er(e) {
                         l = [];
                     if (null != n) {
                         let { discount: e, basePrice: i, showTaxes: r } = (0, $.yh)({ invoicePreview: n });
-                        return (
-                            l.push({ id: "sku", label: J(t), amount: i }),
+                        (l.push({ id: "sku", label: J(t), amount: i }),
                             null != e &&
                                 l.push({
                                     id: "discount",
                                     label: e.description,
                                     amount: e.amount > 0 ? -1 * e.amount : e.amount,
                                 }),
-                            r && l.push({ id: "tax", label: b.intl.string(b.t["/I8zmP"]), amount: n.tax }),
+                            r && l.push({ id: "tax", label: b.intl.string(b.t["/I8zmP"]), amount: n.tax }));
+                        let a = n.getWalletAmount();
+                        return (
+                            a > 0 &&
+                                l.push({
+                                    id: "gift-card-adjustment",
+                                    label: b.intl.string(k.default.bdF0KJ),
+                                    amount: -a,
+                                    lineItemType: "adjustment",
+                                }),
                             {
                                 unifiedInvoiceSummaryProps: {
                                     lineItems: l,
                                     label: b.intl.string(k.default.eoXh7B),
                                     currency: n.currency,
-                                    defaultExpanded: null != e,
+                                    defaultExpanded: null != e || a > 0,
                                 },
                                 priceText: (0, f.$g)(i, n.currency),
                                 discount: e,
@@ -306,7 +314,7 @@ function er(e) {
                         : (0, l.jsx)(et, { ...t })
             );
         }, [n, y, A, S, er]),
-        eo = i.useMemo(() => (null != r ? (0, f.$g)(r.total, r.currency) : void 0), [r]),
+        eo = i.useMemo(() => (null != r ? (0, f.$g)(r.getAmountDue(), r.currency) : void 0), [r]),
         eu = (0, h.g)(X ?? null),
         ec = i.useMemo(
             () =>

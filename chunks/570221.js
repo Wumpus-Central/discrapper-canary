@@ -1,7 +1,8 @@
-n.d(t, { A: () => s, Y: () => a });
+n.d(t, { A: () => l, Y: () => s });
 var i = n(315069),
-    r = n(874638);
-class a extends i.A {
+    r = n(874638),
+    a = n(652215);
+class s extends i.A {
     id;
     total;
     subtotal;
@@ -9,7 +10,7 @@ class a extends i.A {
     tax;
     invoiceItems;
     static createFromServer(e) {
-        return new a({
+        return new s({
             id: e.id,
             total: e.total,
             subtotal: e.subtotal,
@@ -38,7 +39,7 @@ class a extends i.A {
                       };
             })
             .filter((e) => null != e);
-        return new a({ total: n.total, subtotal: n.subtotal, tax: n.tax, currency: n.currency, invoiceItems: i });
+        return new s({ total: n.total, subtotal: n.subtotal, tax: n.tax, currency: n.currency, invoiceItems: i });
     }
     constructor(e) {
         (super(),
@@ -57,7 +58,7 @@ class a extends i.A {
         return null == t || null == t.unitPrice ? null : t.unitPrice.amount;
     }
 }
-class s extends a {
+class l extends s {
     id;
     invoiceItems;
     taxInclusive;
@@ -67,8 +68,9 @@ class s extends a {
     orbsReward;
     checkoutContext;
     applyWalletBalance;
+    paymentLegs;
     static createInvoiceFromServer(e) {
-        return new s({
+        return new l({
             id: e.id,
             invoiceItems: e.invoice_items?.map(r.c),
             total: e.total,
@@ -111,7 +113,7 @@ class s extends a {
                 })
                 .filter((e) => null != e),
             r = n.line_items.reduce((e, t) => e + (t.orbs_reward ?? 0), 0);
-        return new s({
+        return new l({
             id: "",
             invoiceItems: i,
             total: n.total,
@@ -126,7 +128,7 @@ class s extends a {
         });
     }
     static createFromOTPPreview(e) {
-        return new s({
+        return new l({
             id: "",
             invoiceItems: e.invoice_items?.map(r.c),
             total: e.amount,
@@ -139,6 +141,7 @@ class s extends a {
             orbsReward: e.orbs_reward,
             checkoutContext: e.checkout_context,
             applyWalletBalance: e.apply_wallet_balance,
+            paymentLegs: e.payment_legs,
         });
     }
     constructor(e) {
@@ -151,7 +154,14 @@ class s extends a {
             (this.status = e.status),
             (this.orbsReward = e.orbsReward),
             (this.checkoutContext = e.checkoutContext),
-            (this.applyWalletBalance = e.applyWalletBalance));
+            (this.applyWalletBalance = e.applyWalletBalance),
+            (this.paymentLegs = e.paymentLegs ?? []));
+    }
+    getWalletAmount() {
+        return this.paymentLegs.reduce((e, t) => (t.payment_gateway === a.kM_.TDS ? e + t.amount : e), 0);
+    }
+    getAmountDue() {
+        return this.total - this.getWalletAmount();
     }
     findInvoiceItemByPlanId(e) {
         return this.invoiceItems.find((t) => t.subscriptionPlanId === e) ?? null;
