@@ -1479,7 +1479,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e6 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eW.A().log(
-    `[BUILD INFO] Release Channel: ${e6}, Build Number: 630312, Version Hash: c9eed2ccde1a2f82fffeee59e37d6aa4fb2b00e6`,
+    `[BUILD INFO] Release Channel: ${e6}, Build Number: 630314, Version Hash: c39b95f223e0dbde8e7e7f12ac37bbc8cc3025e9`,
 ),
     M.A.setTags({ appContext: F.QCW }),
     ep.A.initBasic(),
@@ -22077,7 +22077,7 @@ let CE = "isHideDevBanner",
                     className: to()(C_.Wz, C_.mr),
                     children: [
                         (0, y.jsx)(Cu, { className: C_.Kk }),
-                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "630312" }),
+                        tS.intl.format(tS.t.uyrfYF, { buildNumber: "630314" }),
                         (0, y.jsx)(r, {}),
                     ],
                 })
@@ -36961,7 +36961,7 @@ let Mr = [
         },
         [bb.e$.GET_QUEST_ENROLLMENT_STATUS]: {
             embeddedAppSDK: !0,
-            request: (e) => ({ quest_id: e.string().required() }),
+            request: (e) => ({ quest_id: e.string().required().meta({ className: "QuestId" }) }),
             response: (e) => ({
                 quest_id: e.string().required(),
                 is_enrolled: e.boolean().required(),
@@ -36970,7 +36970,7 @@ let Mr = [
         },
         [bb.e$.QUEST_START_TIMER]: {
             embeddedAppSDK: !0,
-            request: (e) => ({ quest_id: e.string().required() }),
+            request: (e) => ({ quest_id: e.string().required().meta({ className: "QuestId" }) }),
             response: (e) => ({ success: e.boolean().required() }),
         },
         [bb.e$.GET_QUEST]: {
@@ -38210,7 +38210,7 @@ let M9 = new Set([Mt.AM, Mt.eK]),
         },
     },
     Pt = {
-        [F.e$_.GET_QUEST_ENROLLMENT_STATUS]: {
+        [F.e$_.GET_QUEST_ENROLLMENT_STATUS]: Mf(F.e$_.GET_QUEST_ENROLLMENT_STATUS, {
             scope: Mi.F.IDENTIFY,
             handler(e) {
                 let {
@@ -38229,8 +38229,8 @@ let M9 = new Set([Mt.AM, Mt.eK]),
                     enrolled_at: r.userStatus?.enrolledAt ?? null,
                 };
             },
-        },
-        [F.e$_.QUEST_START_TIMER]: {
+        }),
+        [F.e$_.QUEST_START_TIMER]: Mf(F.e$_.QUEST_START_TIMER, {
             scope: Mi.F.IDENTIFY,
             handler(e) {
                 let {
@@ -38251,8 +38251,8 @@ let M9 = new Set([Mt.AM, Mt.eK]),
                     { success: !0 }
                 );
             },
-        },
-        [F.e$_.GET_QUEST]: {
+        }),
+        [F.e$_.GET_QUEST]: Mf(F.e$_.GET_QUEST, {
             scope: Mi.F.IDENTIFY,
             handler(e) {
                 let { socket: t } = e;
@@ -38277,7 +38277,7 @@ let M9 = new Set([Mt.AM, Mt.eK]),
                                 : new Date(e.enrolled_at).getTime() - new Date(t.enrolled_at).getTime(),
                     )[0];
             },
-        },
+        }),
     },
     Pn = {
         [F.e$_.GET_RELATIONSHIPS]: Mf(F.e$_.GET_RELATIONSHIPS, {
