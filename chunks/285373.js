@@ -1,44 +1,44 @@
-n.d(t, { g: () => f, l: () => m });
+n.d(e, { g: () => p, l: () => A });
 var a = n(477900),
-    i = n(582128),
-    l = n(17928),
-    s = n(139146),
-    r = n(895360),
-    d = n(152472),
-    c = n(594832),
-    u = n(280450),
+    r = n(582128),
+    i = n(17928),
+    l = n(753704),
+    s = n(895360),
+    c = n(152472),
+    u = n(594832),
+    d = n(280450),
     o = n(202541),
     h = n(375708);
-let f = {
+let p = {
         type: "image",
         src: "https://cdn.discordapp.com/assets/content/e6a95b370154817e3cec977345baf14c7643d3dacb99c3034005b10be99a36c7.svg",
     },
-    m = i.forwardRef(function (e, t) {
-        let { className: n, disabled: i, size: m, variant: p, location: A, forceDarkTheme: g } = e,
-            y = o.pe.TIER_2,
-            I = h.intl.string(h.t.lG6a5x),
-            T = (0, l.bG)([u.default], () => u.default.getId());
-        (0, c.pE)();
+    A = r.forwardRef(function (t, e) {
+        let { className: n, disabled: r, size: A, variant: f, location: g, forceDarkTheme: R } = t,
+            I = o.pe.TIER_2,
+            m = h.intl.string(h.t.lG6a5x),
+            y = (0, i.bG)([d.default], () => d.default.getId());
+        (0, u.pE)();
         let {
-            isWishlisted: v,
-            isBusy: b,
-            isFirstTimeWishlister: R,
-            handleToggle: E,
-        } = (0, d.c)({ userId: T, location: A, skuId: y, nuxGraphic: f, onNuxShow: r.D });
+            isWishlisted: E,
+            isBusy: P,
+            isFirstTimeWishlister: T,
+            handleToggle: v,
+        } = (0, c.c)({ userId: y, location: g, skuId: I, nuxGraphic: p, onNuxShow: s.D });
         return (0, a.jsx)("div", {
-            ref: t,
-            className: g ? "theme-dark" : void 0,
-            children: (0, a.jsx)(s._, {
-                skuId: y,
-                productName: I,
+            ref: e,
+            className: R ? "theme-dark" : void 0,
+            children: (0, a.jsx)(l._, {
+                skuId: I,
+                productName: m,
                 className: n,
-                disabled: i,
-                size: m,
-                variant: p,
-                isWishlisted: v,
-                isBusy: b,
-                isFirstTimeWishlister: R,
-                onClick: E,
+                disabled: r,
+                size: A,
+                variant: f,
+                isWishlisted: E,
+                isBusy: P,
+                isFirstTimeWishlister: T,
+                onClick: v,
                 tooltipConfig: { add: h.intl.string(h.t.cjmnm6) },
             }),
         });

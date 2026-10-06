@@ -1,0 +1,307 @@
+.container__9d8b7 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-12)
+}
+
+.heroContainerTopSpacing__9d8b7 {
+    padding-top: var(--space-16)
+}
+
+.heroContainer__9d8b7 {
+    cursor: pointer;
+    width: 100%
+}
+
+.heroContainer__9d8b7,
+.thumbnailWrapper__9d8b7 {
+    border-radius: var(--radius-md);
+    position: relative
+}
+
+.thumbnailWrapper__9d8b7 {
+    height: 60px;
+    overflow: hidden;
+    width: 106px
+}
+
+.thumbnailPlayIcon__9d8b7 {
+    align-items: center;
+    display: flex;
+    inset: 0;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute
+}
+
+@keyframes heroFadeIn__9d8b7 {
+    0% {
+        opacity: 0
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+@keyframes heroFadeOut__9d8b7 {
+    0% {
+        opacity: 1
+    }
+
+    to {
+        opacity: 0
+    }
+}
+
+.heroFrame__9d8b7 {
+    aspect-ratio: 16/9;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.heroImage__9d8b7 {
+    display: block;
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%
+}
+
+.heroFitted__9d8b7 {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
+.heroBackdrop__9d8b7 {
+    filter: blur(24px);
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    transform: scale(1.2);
+    width: 100%
+}
+
+.heroBackdropHidden__9d8b7 {
+    display: none
+}
+
+.full-motion .heroCurrentImage__9d8b7 {
+    animation: heroFadeIn__9d8b7 .15s ease-out
+}
+
+.heroArea__9d8b7 {
+    position: relative
+}
+
+.heroPrevLayer__9d8b7 {
+    aspect-ratio: 16/9;
+    border-radius: var(--radius-lg);
+    position: absolute;
+    top: var(--space-16);
+    inset-inline: 0;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1
+}
+
+.full-motion .heroPrevLayer__9d8b7 {
+    animation: heroFadeOut__9d8b7 .15s ease-in forwards
+}
+
+.thumbnail__9d8b7 {
+    border-radius: var(--radius-md);
+    display: block;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%
+}
+
+.full-motion .thumbnail__9d8b7 {
+    transition: transform .6s cubic-bezier(.16, 1, .3, 1)
+}
+
+.thumbnailClickable__9d8b7 {
+    border-radius: var(--radius-md);
+    cursor: pointer
+}
+
+.full-motion .thumbnailClickable__9d8b7:hover .thumbnail__9d8b7 {
+    transform: scale(1.1)
+}
+
+.thumbnailSelected__9d8b7 .thumbnailWrapper__9d8b7 {
+    box-sizing: border-box;
+    padding: var(--space-4)
+}
+
+.thumbnailSelected__9d8b7 .thumbnail__9d8b7,
+.thumbnailSelected__9d8b7.thumbnailClickable__9d8b7:hover .thumbnail__9d8b7 {
+    border-radius: calc(var(--radius-md) - var(--space-4));
+    transform: scale(1)
+}
+
+.thumbnailSelected__9d8b7 .thumbnailWrapper__9d8b7:after {
+    border-radius: var(--radius-md);
+    box-shadow: inset 0 0 0 2px var(--border-strong);
+    content: "";
+    inset: 0;
+    pointer-events: none;
+    position: absolute;
+    z-index: 1
+}
+
+.trailerSection__9d8b7 {
+    padding-top: var(--space-16);
+    position: relative
+}
+
+.full-motion .trailerSection__9d8b7 {
+    animation: heroFadeIn__9d8b7 .15s ease-out
+}
+
+.haloCanvas__9d8b7 {
+    height: 100%;
+    inset: 0;
+    -webkit-mask-composite: source-in, xor;
+    mask-composite: intersect;
+    -webkit-mask-image: linear-gradient(180deg, transparent, #000 10%, #000 90%, transparent), linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    mask-image: linear-gradient(180deg, transparent, #000 10%, #000 90%, transparent), linear-gradient(90deg, transparent, #000 10%, #000 90%, transparent);
+    opacity: .3;
+    pointer-events: none;
+    position: absolute;
+    width: 100%
+}
+
+.videoWrapper__9d8b7 {
+    aspect-ratio: 16/9;
+    background: #000;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    position: relative;
+    width: 100%
+}
+
+.trailerMediaPlayer__9d8b7 {
+    height: 100%;
+    inset: 0;
+    position: absolute;
+    width: 100%
+}
+
+.section__51891 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    position: relative
+}
+
+.sectionTitle__51891 {
+    padding-inline: var(--space-8)
+}
+
+.container__51891 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg)
+}
+
+.innerContainer__51891 {
+    height: 56px;
+    width: 100%
+}
+
+.innerContainer__51891:not(:last-child) {
+    border-bottom: 1px solid var(--background-mod-subtle)
+}
+
+.innerContainer__51891:first-child {
+    border-start-end-radius: var(--radius-lg);
+    border-start-start-radius: var(--radius-lg)
+}
+
+.innerContainer__51891:last-child {
+    border-end-end-radius: var(--radius-lg);
+    border-end-start-radius: var(--radius-lg)
+}
+
+.steamContainer__51891 {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-inline: var(--space-12);
+    padding-bottom: var(--space-20);
+    padding-top: var(--space-20)
+}
+
+.steamNameContainer__51891,
+.steamRatingContainer__51891 {
+    display: flex;
+    flex-direction: row;
+    gap: var(--space-4)
+}
+
+.steamRatingContainer__51891 {
+    align-items: center
+}
+
+.opencriticContainer__51891 {
+    justify-content: space-between;
+    padding-inline: var(--space-12);
+    padding-bottom: var(--space-12);
+    padding-top: var(--space-12)
+}
+
+.opencriticContainer__51891,
+.opencriticRightContainer__51891 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.opencriticRightContainer__51891 {
+    gap: var(--space-12);
+    height: 32px
+}
+
+.opencriticTopCriticContainer__51891 {
+    align-items: center;
+    background-color: var(--background-surface-higher);
+    border-radius: var(--radius-round);
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    position: relative;
+    width: 32px
+}
+
+.opencriticTopCriticRating__51891 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    position: absolute
+}
+
+.link__51891 {
+    border-radius: inherit;
+    cursor: pointer
+}
+
+.link__51891:hover {
+    background-color: var(--background-surface-higher)
+}
+
+.linkText__51891 {
+    -webkit-text-decoration: var(--link-decoration);
+    text-decoration: var(--link-decoration)
+}
+
+/*# sourceMappingURL=ec5b0749194be81d.css.map*/

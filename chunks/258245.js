@@ -457,7 +457,7 @@ let tf = function (t) {
 };
 var tg = e(484469),
     tj = e(661847),
-    tT = e(139146),
+    tT = e(753704),
     tv = e(668253);
 function tA(t) {
     let { product: n, selectedVariantIndex: e, isCardHovered: r, onTrackClick: a, tabIndex: l } = t;

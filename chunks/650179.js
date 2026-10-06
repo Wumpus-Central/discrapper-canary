@@ -1116,7 +1116,7 @@ var eq = l(331322),
     e3 = l(488428),
     e6 = l(776231);
 let e8 = (0, l(676279).cy)();
-function e7(e, t, l) {
+function e4(e, t, l) {
     let n = l.startsWith("a_"),
         i = n ? (e8 ? "webp" : "gif") : e8 ? "webp" : "jpg",
         { CDN_HOST: a, API_ENDPOINT: s } = window.GLOBAL_ENV,
@@ -1127,7 +1127,7 @@ function e7(e, t, l) {
         "jpg" === i && (c.quality = "lossless"), "webp" === i && n && (c.animated = !0), (d += `?${e3.stringify(c)}`)
     );
 }
-var e4 = l(868602),
+var e7 = l(868602),
     e5 = l(445187),
     e9 = l(299285),
     te = l(831544),
@@ -1234,7 +1234,7 @@ function ts(e) {
                                 l.e("177086"),
                                 l.e("319714"),
                                 l.e("189281"),
-                                l.e("751251"),
+                                l.e("205035"),
                                 l.e("200075"),
                                 l.e("896995"),
                                 l.e("385663"),
@@ -1367,7 +1367,7 @@ function ts(e) {
                                 l.e("696123"),
                                 l.e("537894"),
                                 l.e("198323"),
-                                l.e("548974"),
+                                l.e("128534"),
                                 l.e("799657"),
                                 l.e("810034"),
                                 l.e("843719"),
@@ -1419,10 +1419,10 @@ function ts(e) {
                                 l.e("807771"),
                                 l.e("478476"),
                                 l.e("496715"),
+                                l.e("329218"),
                                 l.e("622825"),
                                 l.e("681541"),
                                 l.e("406357"),
-                                l.e("616592"),
                                 l.e("115754"),
                                 l.e("680986"),
                                 l.e("600330"),
@@ -2032,17 +2032,17 @@ function t8(e) {
                                     colorStrings: n.roleColorStrings,
                                 }),
                             }),
-                            (0, i.jsx)(t4, { listener: r }),
+                            (0, i.jsx)(t7, { listener: r }),
                         ],
                     }),
                 ],
             }),
     });
 }
-function t7(e, t) {
+function t4(e, t) {
     return (0, i.jsx)(E.E, { tag: "span", variant: "text-xs/medium", color: "text-strong", children: e }, t);
 }
-function t4(e) {
+function t7(e) {
     let { listener: t } = e,
         l = t?.latest_track_title;
     if (null == l) return null;
@@ -2053,8 +2053,8 @@ function t4(e) {
         lineClamp: 1,
         children:
             null != n
-                ? z.intl.format(W.default.QqaqBg, { trackTitle: l, artistName: n, highlightHook: t7 })
-                : z.intl.format(W.default.ZMJ8Mt, { trackTitle: l, highlightHook: t7 }),
+                ? z.intl.format(W.default.QqaqBg, { trackTitle: l, artistName: n, highlightHook: t4 })
+                : z.intl.format(W.default.ZMJ8Mt, { trackTitle: l, highlightHook: t4 }),
     });
 }
 function t5(e) {
@@ -2480,7 +2480,7 @@ let lV = {
             let { widget: t, guildSpaceMode: l, guildId: n } = e,
                 { text: a, image_hash: s } = t.config,
                 r = "edit" === l ? t.config.image : void 0,
-                d = void 0 !== r ? r : null != s ? e7(n, t.id, s) : null;
+                d = void 0 !== r ? r : null != s ? e4(n, t.id, s) : null;
             return (0, i.jsxs)("div", {
                 className: e5.kL,
                 children: [
@@ -2503,7 +2503,7 @@ let lV = {
                 [h, f] = a.useState(s.image),
                 [g, j] = a.useState(null),
                 p = (0, v.bG)([e2.A], () => e2.A.getGuildId()),
-                _ = void 0 !== h ? h : null != s.image_hash && null != p ? e7(p, t.id, s.image_hash) : null;
+                _ = void 0 !== h ? h : null != s.image_hash && null != p ? e4(p, t.id, s.image_hash) : null;
             return (0, i.jsxs)(eq.B, {
                 gap: 16,
                 children: [
@@ -2523,7 +2523,7 @@ let lV = {
                             direction: "horizontal",
                             align: "center",
                             justify: "space-between",
-                            className: e4.B,
+                            className: e7.B,
                             children: [
                                 (0, i.jsxs)(eq.B, {
                                     gap: 8,
@@ -2553,7 +2553,7 @@ let lV = {
                                             }),
                                     ],
                                 }),
-                                null != _ && (0, i.jsx)("img", { className: e4.V, src: _, alt: "" }),
+                                null != _ && (0, i.jsx)("img", { className: e7.V, src: _, alt: "" }),
                             ],
                         }),
                     }),

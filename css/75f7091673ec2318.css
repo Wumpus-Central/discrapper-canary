@@ -1,0 +1,26 @@
+.container__898a6 {
+    min-height: var(--space-32)
+}
+
+.ctaContainer__898a6 {
+    gap: var(--space-10);
+    justify-content: space-between;
+    width: 100%
+}
+
+.ctaContainer__898a6,
+.textContainer__898a6 {
+    align-items: center;
+    display: flex;
+    flex-direction: row
+}
+
+.textContainer__898a6 {
+    gap: var(--space-4)
+}
+
+.icon__898a6 {
+    flex-shrink: 0
+}
+
+/*# sourceMappingURL=75f7091673ec2318.css.map*/

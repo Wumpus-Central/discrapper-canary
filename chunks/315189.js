@@ -1,0 +1,15 @@
+_.exports = {
+    uW: "section__51891",
+    Gf: "sectionTitle__51891",
+    kL: "container__51891",
+    WH: "innerContainer__51891",
+    U6: "steamContainer__51891",
+    tN: "steamNameContainer__51891",
+    Z0: "steamRatingContainer__51891",
+    Ur: "opencriticContainer__51891",
+    WA: "opencriticRightContainer__51891",
+    TE: "opencriticTopCriticContainer__51891",
+    ti: "opencriticTopCriticRating__51891",
+    nf: "link__51891",
+    yX: "linkText__51891",
+};

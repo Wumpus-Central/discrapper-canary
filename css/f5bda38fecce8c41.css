@@ -1,0 +1,17 @@
+.emptyState__759cf {
+    align-items: center;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: var(--space-16);
+    justify-content: center;
+    overflow: hidden;
+    padding: var(--space-16);
+    text-align: center
+}
+
+.illustration__759cf {
+    margin-bottom: var(--space-16)
+}
+
+/*# sourceMappingURL=f5bda38fecce8c41.css.map*/
