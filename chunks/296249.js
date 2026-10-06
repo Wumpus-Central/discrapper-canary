@@ -2589,7 +2589,7 @@ class nZ extends i.PureComponent {
                 this.renderVideoQualityMode(e),
                 this.renderUserLimit(e),
                 this.renderRegionOverride(e),
-                this.renderJuiceImage(e),
+                !e.isGuildVoice() && this.renderJuiceImage(e),
             ],
         });
     }

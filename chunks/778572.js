@@ -87,7 +87,7 @@ var k = n(827669),
 let Y = { results: { entries: [] } };
 function v() {
     (0, m.openModalLazy)(async () => {
-        let { default: e } = await n.e("152855").then(n.bind(n, 563478));
+        let { default: e } = await n.e("676429").then(n.bind(n, 717020));
         return (t) => (0, c.jsx)(e, { ...t });
     });
 }
@@ -955,7 +955,7 @@ function eX(e) {
 }
 var e0 = n(696451),
     e1 = n(427262);
-let e4 = {
+let e7 = {
     sentinel: "@",
     stores: [e0.Ay],
     matches: (e, t, n, l, i) =>
@@ -1121,9 +1121,9 @@ let e4 = {
         return -1 === r ? null : t.length + r;
     },
 };
-var e7 = n(307731);
-let e8 = { results: { command: null, stickers: [] } };
-function e2(e, t) {
+var e4 = n(307731);
+let e2 = { results: { command: null, stickers: [] } };
+function e8(e, t) {
     return (0, c.jsx)(O.A, { sticker: e, isInteracting: t, size: 40 });
 }
 let e5 = {
@@ -1135,7 +1135,7 @@ let e5 = {
         M.A.getOptionStates(e.id).query.hasValue,
     queryResults(e, t, n, l) {
         let i = M.A.getActiveCommand(e.id)?.untranslatedName;
-        if (null == i) return e8;
+        if (null == i) return e2;
         let r = [];
         return (
             (0, eh.YB)(),
@@ -1169,7 +1169,7 @@ let e5 = {
                 getProps: (e) => {
                     let { comparator: t, sticker: n } = e;
                     return {
-                        renderSticker: e2,
+                        renderSticker: e8,
                         queryMatch: t !== n.name.toLocaleLowerCase() ? t : void 0,
                         sticker: n,
                         key: n.id,
@@ -1375,7 +1375,7 @@ let te = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
         [o.DB.STICKERS]: e5,
         [o.DB.GIFS]: eZ,
         [o.DB.LEGACY_COMMANDS]: eJ,
-        [o.DB.MENTIONS]: e4,
+        [o.DB.MENTIONS]: e7,
         [o.DB.REACTIONS]: {
             sentinel: "+:",
             matches: (e, t, n, l, i) =>
@@ -1386,7 +1386,7 @@ let te = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                 let { emojis: r } = U.Ay.queryEmojiResults({
                     query: n,
                     channel: e,
-                    intention: e7.EmojiIntention.REACTION,
+                    intention: e4.EmojiIntention.REACTION,
                     maxCount: 50,
                 });
                 return { results: { emojis: r.unlocked } };
@@ -1722,7 +1722,7 @@ function ts(e) {
                 }
             } else if (e === o.DB.EMOJIS_AND_STICKERS) {
                 if (
-                    (null != r && r.length > 0 && (0, a.K)(e7.EmojiInteractionPoint.AutocompleteTyped),
+                    (null != r && r.length > 0 && (0, a.K)(e4.EmojiInteractionPoint.AutocompleteTyped),
                     null != r && tr({ type: e, channel: t, guild: n, query: r, isAtStart: s, options: l }))
                 ) {
                     p = { type: e, typeInfo: y, query: r.substring(y.sentinel?.length ?? 0) };
