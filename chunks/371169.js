@@ -1,30 +1,29 @@
 (n.d(e, {
     BD: () => O,
-    CW: () => k,
-    GG: () => M,
-    HV: () => W,
-    I$: () => v,
+    CW: () => g,
+    GG: () => W,
+    HV: () => H,
+    I$: () => F,
     Is: () => C,
-    K: () => B,
-    Lw: () => G,
-    M7: () => j,
-    Ru: () => D,
+    K: () => m,
+    Lw: () => M,
+    M7: () => D,
+    Ru: () => k,
     U1: () => S,
-    Zq: () => H,
+    Zq: () => v,
     b8: () => J,
     dm: () => b,
     gA: () => w,
     hF: () => A,
-    oB: () => g,
-    tZ: () => F,
-    xx: () => m,
+    tZ: () => B,
+    xx: () => j,
 }),
     n(938796));
 var i = n(636537),
     r = n(499979),
     _ = n(73153),
-    o = n(382483),
-    a = n(627363),
+    a = n(382483),
+    o = n(627363),
     l = n(573163),
     u = n(287809),
     c = n(164892),
@@ -144,26 +143,23 @@ async function L(t, e) {
     return (n.ok && _.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: n.body }), n);
 }
 function g(t, e) {
-    return L(t, { name: e });
-}
-function k(t, e) {
     return L(t, e);
 }
-async function D(t, e) {
+async function k(t, e) {
     let n = await L(t, { icon: e });
     if (n.ok) {
         let t = n.body.preview_application_id;
         if (null != t)
             try {
-                await (0, a.TA)(t);
+                await (0, o.TA)(t);
             } catch {}
     }
     return n;
 }
-function j(t, e) {
+function D(t, e) {
     return L(t, e);
 }
-async function m(t) {
+async function j(t) {
     let e;
     _.h.dispatch({ type: "CONJURE_PROJECT_DELETE_START", projectId: t });
     try {
@@ -175,33 +171,33 @@ async function m(t) {
         _.h.dispatch({ type: e.ok ? "CONJURE_PROJECT_DELETE_SUCCESS" : "CONJURE_PROJECT_DELETE_FAIL", projectId: t }), e
     );
 }
-function B(t, e) {
-    m(t).then((t) => {
+function m(t, e) {
+    j(t).then((t) => {
         t.ok || e();
     }, e);
 }
 function b(t, e) {
     _.h.dispatch({ type: "CONJURE_PROJECT_SELECT", guildId: t, projectId: e });
 }
-async function F(t, e) {
+async function B(t, e) {
     let { isPreview: n } = e,
         { bot_permissions_changed: i, integration_installed: r, project: _ } = (await S(t)).body,
         l = n ? _.preview_application_id : _.application_id;
-    (null != l && (await (0, a.TA)(l), await (0, o.un)(l, { force: !0 }).catch(() => {}), (n && (!r || i)) || T(l)),
+    (null != l && (await (0, o.TA)(l), await (0, a.un)(l, { force: !0 }).catch(() => {}), (n && (!r || i)) || T(l)),
         (0, s.w2)(t, { isPreview: n }));
 }
-function v(t, e) {
+function F(t, e) {
     _.h.dispatch({ type: "CONJURE_COMPOSER_DRAFT_SET", projectId: t, draft: e });
 }
-function H(t) {
+function v(t) {
     _.h.dispatch({ type: "CONJURE_CHAT_SIDEBAR_WIDTH_SET", width: t });
 }
-function W(t) {
+function H(t) {
     _.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", applicationId: t });
 }
-function M(t) {
+function W(t) {
     _.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_MOBILE_SET", enabled: t });
 }
-function G(t) {
+function M(t) {
     _.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", landscape: t });
 }
