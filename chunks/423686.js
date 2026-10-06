@@ -79,34 +79,35 @@ function R(e) {
                 let {
                     loadId: e,
                     purchaseToken: r,
-                    errorExtra: n,
+                    gatewayCheckoutContext: n,
+                    errorExtra: l,
                 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                 if (null == t) return (u(new a.Ay("Order not created yet")), { type: "failed" });
                 o(null);
                 try {
-                    let l = await (0, i.Ub)({ orderId: t.id, loadId: e, purchaseToken: r });
-                    if (l.status === _.Re.SIGNED) return { type: "signed", order: l };
-                    if (l.status === _.Re.SIGNING_IN_PROGRESS) {
-                        let e = l.billing_facet;
+                    let d = await (0, i.Ub)({ orderId: t.id, loadId: e, purchaseToken: r, gatewayCheckoutContext: n });
+                    if (d.status === _.Re.SIGNED) return { type: "signed", order: d };
+                    if (d.status === _.Re.SIGNING_IN_PROGRESS) {
+                        let e = d.billing_facet;
                         try {
                             await h(null != e ? e.order_signing_deferral_context : null);
                         } catch (e) {
-                            return (R(e, { ...n, orderId: t.id }, E.intl.string(E.t.khEaRI)), { type: "failed" });
+                            return (R(e, { ...l, orderId: t.id }, E.intl.string(E.t.khEaRI)), { type: "failed" });
                         }
-                        return { type: "pending", order: l };
+                        return { type: "pending", order: d };
                     }
-                    let d = (function (e) {
+                    let s = (function (e) {
                         let { error: t } = e;
                         return null == t || t.code === _.lD.UNKNOWN_ERROR_CODE
                             ? null
                             : new a.Ay(t.message, t.billing_error_code);
-                    })(l);
-                    if (null != d) return (u(d), { type: "failed" });
-                    if (null != l.error) throw Error(`Order signing failed with error: ${l.error.code}`);
-                    throw Error(`Unexpected order status: ${l.status}`);
+                    })(d);
+                    if (null != s) return (u(s), { type: "failed" });
+                    if (null != d.error) throw Error(`Order signing failed with error: ${d.error.code}`);
+                    throw Error(`Unexpected order status: ${d.status}`);
                 } catch (e) {
                     if (e instanceof i.FY) return (d?.(e.order), u(e), { type: "failed" });
-                    return (R(e, { ...n, orderId: t.id }), { type: "failed" });
+                    return (R(e, { ...l, orderId: t.id }), { type: "failed" });
                 }
             },
             [t, d, R, u],

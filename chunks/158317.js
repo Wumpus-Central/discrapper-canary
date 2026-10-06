@@ -18,25 +18,27 @@ class c extends r.Ay {
 }
 async function u(e) {
     let t,
-        { orderId: n, expectedRevision: r, loadId: a, purchaseToken: s } = e,
-        o = {};
-    (null != r && (o.expected_revision = r), null != s && (o.purchase_token = s));
+        { orderId: n, expectedRevision: r, loadId: a, purchaseToken: s, gatewayCheckoutContext: o } = e,
+        c = {};
+    (null != r && (c.expected_revision = r),
+        null != s && (c.purchase_token = s),
+        null != o && (c.gateway_checkout_context = o));
     try {
         t = await i.Bo.post({
             url: l.Rsh.ORDER_SIGN(n),
-            body: o,
+            body: c,
             context: null != a && "" !== a ? { load_id: a } : void 0,
             rejectWithError: !0,
         });
     } catch (e) {
-        var c;
+        var u;
         if (
             e instanceof i.oh &&
             400 === e.status &&
-            null != (c = e.body) &&
-            "object" == typeof c &&
-            "id" in c &&
-            "status" in c
+            null != (u = e.body) &&
+            "object" == typeof u &&
+            "id" in u &&
+            "status" in u
         )
             throw new d(e.body);
         throw e;
