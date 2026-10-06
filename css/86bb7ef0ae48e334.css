@@ -321,20 +321,6 @@
     z-index: 100
 }
 
-.footerPlaceholder__98b95 {
-    padding-bottom: 228px
-}
-
-.footerImage__98b95 {
-    background-position: 50%;
-    background-repeat: no-repeat;
-    background-size: 660px 188px;
-    bottom: 0;
-    height: 188px;
-    inset-inline: 0;
-    position: absolute
-}
-
 .linkedLobbyIcon__98b95 {
     background-color: unset;
     border-radius: 4px
@@ -352,14 +338,6 @@
 .infoIcon__98b95 {
     color: var(--text-link);
     margin: 10px
-}
-
-.images-light .footerImage__98b95 {
-    background-image: url(/assets/9d2bd46b521600c7.svg)
-}
-
-.images-dark .footerImage__98b95 {
-    background-image: url(/assets/35c8990288849b40.svg)
 }
 
 .headerDivider__97dd8 {
@@ -414,4 +392,4 @@
     color: var(--text-strong)
 }
 
-/*# sourceMappingURL=8787a40c636839e8.css.map*/
+/*# sourceMappingURL=86bb7ef0ae48e334.css.map*/

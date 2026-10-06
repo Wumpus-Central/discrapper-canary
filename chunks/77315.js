@@ -313,20 +313,20 @@ function e8(e) {
     });
 }
 var e5 = n(562708),
-    e7 = n(702841),
-    e2 = n(139286),
+    e2 = n(702841),
+    e7 = n(139286),
     e9 = n(468689),
     e4 = n(375708),
     te = n(330766);
 function tt(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
-        l = (0, e7.bG)([H.A, em.default], () => {
+        l = (0, e2.bG)([H.A, em.default], () => {
             let e = em.default.getCurrentUser(),
                 n = H.A.getGuild(t);
             return null != n && (0, eE.bM)(n, e);
         });
     return (
-        (0, e2.A)({
+        (0, e7.A)({
             type: e5.ImpressionTypes.POPOUT,
             name: e5.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: l },
@@ -781,8 +781,8 @@ var tq = n(503698),
     t6 = n(104171),
     t8 = n(47167),
     t5 = n(713654),
-    t7 = n(976860),
-    t2 = n(747376),
+    t2 = n(976860),
+    t7 = n(747376),
     t9 = n(110618),
     t4 = n(280450),
     ne = n(309010),
@@ -1043,7 +1043,7 @@ function n_(e) {
             text: n,
             fullWidth: !0,
             onClick: function () {
-                null != t && null != t.getGuildId() && ((0, t2.av)(t), (0, t7.uh)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, t7.av)(t), (0, t2.uh)(t.getGuildId(), t.id));
             },
         }),
     });
@@ -1501,7 +1501,7 @@ function n5(e) {
         })();
     return null == R ? null : (0, s.jsx)("div", { onContextMenu: n6, children: R });
 }
-let n7 = function (e) {
+let n2 = function (e) {
     let { guild: t } = e;
     switch (Y(t)) {
         case z.ENABLE_PUBLIC_GUILD:
@@ -1519,7 +1519,7 @@ let n7 = function (e) {
     }
     return nU.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n5, { guild: e.guild });
 };
-var n2 = n(883476);
+var n7 = n(883476);
 function n9(e) {
     let { guild: t, setHasSubheader: n } = e,
         i = l.useRef(null);
@@ -1528,7 +1528,7 @@ function n9(e) {
             let e = i.current;
             null != e && n(e.childNodes.length > 0);
         }),
-        (0, s.jsx)("div", { className: n2.k, ref: i, children: (0, s.jsx)(n7, { guild: t }) })
+        (0, s.jsx)("div", { className: n7.k, ref: i, children: (0, s.jsx)(n2, { guild: t }) })
     );
 }
 var n4 = n(66933),
@@ -2167,7 +2167,7 @@ class il extends l.PureComponent {
                     n.e("916373"),
                     n.e("528038"),
                     n.e("81398"),
-                    n.e("324484"),
+                    n.e("623522"),
                     n.e("925172"),
                     n.e("232347"),
                     n.e("8458"),
@@ -2189,7 +2189,7 @@ class il extends l.PureComponent {
                     n.e("694529"),
                     n.e("303807"),
                     n.e("995210"),
-                    n.e("795016"),
+                    n.e("701911"),
                     n.e("317699"),
                     n.e("257032"),
                     n.e("845322"),
@@ -2612,22 +2612,22 @@ function ir(e) {
         e6 = !1 === eQ && e1 && null != e3,
         e8 = (0, eG.A)(L),
         e5 = !1 === eQ && e1 && null != e8,
-        e7 = [];
-    (eI && e7.push(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
-        ee && e7.push(o.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
-        eg && e7.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
-        !1 === eQ && e7.push(o.M.GUILD_POWERUP_PERKS_COACHMARK),
-        eZ && e7.push(o.M.GUILD_THEME_MEMBER_COACHMARK),
-        e0 && e7.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
-        eB && e7.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
-    let e2 = (0, q.uW)([
-            ...e7,
+        e2 = [];
+    (eI && e2.push(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+        ee && e2.push(o.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
+        eg && e2.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
+        !1 === eQ && e2.push(o.M.GUILD_POWERUP_PERKS_COACHMARK),
+        eZ && e2.push(o.M.GUILD_THEME_MEMBER_COACHMARK),
+        e0 && e2.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        eB && e2.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
+    let e7 = (0, q.uW)([
+            ...e2,
             o.M.GUILD_HEADER_COACHMARK,
             o.M.GAME_SERVER_NEW_GAMES_COACHMARK,
             o.M.BOOST_TO_UNLOCK_COACHMARK,
             o.M.EXPIRING_POWERUP_COACHMARK,
         ]),
-        e9 = (0, eL.Dq)(U) && !e2,
+        e9 = (0, eL.Dq)(U) && !e7,
         e4 = (function (e) {
             let t = (0, el.c)(es.C.GUILD_HEADER_COACHMARK),
                 n =
@@ -2648,7 +2648,7 @@ function ir(e) {
                 markAsDismissed: l,
             };
         })(e9 ? null : L),
-        [te, tt] = (0, Z.kn)(e9 ? [] : e7, er.m.GUILD_HEADER_TOOLTIPS),
+        [te, tt] = (0, Z.kn)(e9 ? [] : e2, er.m.GUILD_HEADER_TOOLTIPS),
         [tn, ti] = (0, eD.vB)(e$ && !1 === eQ && !(0, J.ai)(L) && !e9, er.m.GUILD_HEADER_TOOLTIPS),
         [ts, tl] = (0, Z.D8)(
             e6 && !e9 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
@@ -2723,7 +2723,7 @@ function ir(e) {
         showGuildTemplateDirtyTooltip: eC,
         showNewUnreadsBar: ep,
         isHeaderPopoutOpen: eN,
-        isGuildHeaderDismissibleTooltipShown: e2,
+        isGuildHeaderDismissibleTooltipShown: e7,
         headerAnalyticsLocations: X,
         shouldRenderBurstCoachmark: !ef,
         guildHeaderContentDescriptor: to,
