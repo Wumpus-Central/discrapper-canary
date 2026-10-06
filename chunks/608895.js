@@ -7,10 +7,8 @@ function r(e) {
             return { surface: t };
         case i.U.APP_CHANNEL:
         case i.U.VOICE_CHANNEL:
-            let n = { surface: t };
-            return (
-                null != e.channelId && (n.channel_id = e.channelId), null != e.guildId && (n.guild_id = e.guildId), n
-            );
+            let n = { surface: t, channel_id: e.channelId };
+            return (null != e.guildId && (n.guild_id = e.guildId), n);
         default:
             return { surface: t };
     }
