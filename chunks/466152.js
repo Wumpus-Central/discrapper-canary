@@ -1,42 +1,53 @@
-l.d(e, { A: () => y });
+l.d(e, { A: () => G });
 var t = l(477900),
-    r = l(192308),
-    i = l(66834),
-    u = l(443063),
-    a = l(16236),
-    d = l(5180),
-    c = l(734057),
-    f = l(71393),
-    o = l(576705),
-    p = l(488926),
-    h = l(97587),
-    s = l(652215);
-function y(n, e, y, g) {
-    if (0 === g.length) return;
-    if ((0, d.ai)(n)) return void (0, a.zN)(g);
-    let A = f.A.getGuild(n);
-    if (null == A) return;
-    let _ = (e.parent_id ?? null) !== (y ?? null),
-        I = null != y ? c.A.getChannel(y) : null;
-    if (_ && (!(0, h.JL)(I) || !(0, h.Ay)(I, A))) return;
-    let C = g.filter((n) => {
-        let { id: e } = n,
-            l = c.A.getChannel(e);
-        return null != l && (0, h.Ay)((0, h.Fd)(l), A);
+    r = l(739187),
+    i = l(857250),
+    u = l(97483),
+    a = l(192308),
+    d = l(66834),
+    c = l(913122),
+    f = l(443063),
+    o = l(16236),
+    p = l(5180),
+    h = l(734057),
+    s = l(71393),
+    y = l(576705),
+    g = l(488926),
+    A = l(97587),
+    _ = l(652215),
+    I = l(375708);
+function C(n, e) {
+    d.A.batchChannelUpdate(n, e).catch((n) => {
+        let e = new c.LG(n).getAnyErrorMessage() ?? I.intl.string(I.t.iufib1);
+        (0, r.P)((0, i.o)(e, u.Ck.FAILURE));
     });
-    if (0 === C.length) return;
-    let G = _ ? I : null,
-        v = C.find((n) => n.id === e.id);
-    null != v &&
+}
+function G(n, e, r, i) {
+    if (0 === i.length) return;
+    if ((0, p.ai)(n)) return void (0, o.zN)(i);
+    let u = s.A.getGuild(n);
+    if (null == u) return;
+    let d = (e.parent_id ?? null) !== (r ?? null),
+        c = null != r ? h.A.getChannel(r) : null;
+    if (d && (!(0, A.JL)(c) || !(0, A.Ay)(c, u))) return;
+    let I = i.filter((n) => {
+        let { id: e } = n,
+            l = h.A.getChannel(e);
+        return null != l && (0, A.Ay)((0, A.Fd)(l), u);
+    });
+    if (0 === I.length) return;
+    let G = d ? c : null,
+        E = I.find((n) => n.id === e.id);
+    null != E &&
     null != G &&
     (function (n, e) {
-        if (!o.A.can(s.xBc.MANAGE_ROLES, n) || !o.A.can(s.xBc.MANAGE_ROLES, e)) return !1;
-        let l = (0, u.GY)(n);
-        if (p.r(n, e, l)) return !1;
-        let t = p.r(n, c.A.getChannel(n.parent_id), l);
+        if (!y.A.can(_.xBc.MANAGE_ROLES, n) || !y.A.can(_.xBc.MANAGE_ROLES, e)) return !1;
+        let l = (0, f.GY)(n);
+        if (g.r(n, e, l)) return !1;
+        let t = g.r(n, h.A.getChannel(n.parent_id), l);
         return null == n.parent_id || t;
     })(e, G)
-        ? (0, r.openModalLazy)(async () => {
+        ? (0, a.openModalLazy)(async () => {
               let { default: r } = await l.e("687634").then(l.bind(l, 544169));
               return (l) =>
                   (0, t.jsx)(r, {
@@ -44,10 +55,10 @@ function y(n, e, y, g) {
                       channel: e,
                       category: G,
                       onConfirm: () => {
-                          ((v.lock_permissions = !0), i.A.batchChannelUpdate(n, C));
+                          ((E.lock_permissions = !0), C(n, I));
                       },
-                      onCancel: () => i.A.batchChannelUpdate(n, C),
+                      onCancel: () => C(n, I),
                   });
           })
-        : i.A.batchChannelUpdate(n, C);
+        : C(n, I);
 }
