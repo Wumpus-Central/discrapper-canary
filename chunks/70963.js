@@ -1,59 +1,60 @@
-l.d(t, { Ay: () => m });
+l.d(t, { Ay: () => C });
 var e = l(477900);
 l(582128);
 var n = l(17928),
     s = l(730852),
     a = l(323073),
-    d = l(378570),
-    o = l(747376),
-    r = l(576705),
-    c = l(977997),
-    u = l(939496),
-    A = l(993401),
-    h = l(652215),
-    x = l(996988),
-    g = l(375708);
-function m(i) {
-    let { channel: t, onAction: l, onClose: m } = i,
-        { themeType: C } = (0, u.E)(),
-        j = C === x.d.MODAL_V2,
-        p = (0, n.bG)([c.A], () => c.A.isInChannel(t.id));
+    d = l(597306),
+    o = l(378570),
+    r = l(747376),
+    c = l(576705),
+    u = l(977997),
+    A = l(939496),
+    h = l(993401),
+    x = l(652215),
+    g = l(996988),
+    m = l(375708);
+function C(i) {
+    let { channel: t, onAction: l, onClose: C } = i,
+        { themeType: j } = (0, A.E)(),
+        p = j === g.d.MODAL_V2,
+        v = (0, n.bG)([u.A], () => u.A.isInChannel(t.id));
     if (
-        !(0, n.bG)([r.A], () => {
-            let i = (0, a.r9)() && (0, a.UK)(t.id);
-            return (t.isPrivate() || r.A.can(h.xBc.CONNECT, t)) && !i;
+        !(0, n.bG)([c.A], () => {
+            let i = (0, d.r)() && (0, a.UK)(t.id);
+            return (t.isPrivate() || c.A.can(x.xBc.CONNECT, t)) && !i;
         })
     )
         return null;
-    let v = C === x.d.MODAL || C === x.d.MODAL_V2;
-    return (0, e.jsx)(A.FD, {
-        text: p
+    let N = j === g.d.MODAL || j === g.d.MODAL_V2;
+    return (0, e.jsx)(h.FD, {
+        text: v
             ? (function (i) {
                   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                   return t
-                      ? g.intl.string(g.t["3xjX0U"])
+                      ? m.intl.string(m.t["3xjX0U"])
                       : i.isDM() || i.isGroupDM()
-                        ? g.intl.string(g.t["7hwn2A"])
+                        ? m.intl.string(m.t["7hwn2A"])
                         : i.isGuildStageVoice()
-                          ? g.intl.string(g.t.Acqcot)
-                          : g.intl.string(g.t.BXxdl7);
-              })(t, v)
+                          ? m.intl.string(m.t.Acqcot)
+                          : m.intl.string(m.t.BXxdl7);
+              })(t, N)
             : (function (i) {
                   let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                   return t
-                      ? g.intl.string(g.t.VJlc0S)
+                      ? m.intl.string(m.t.VJlc0S)
                       : i.isDM() || i.isGroupDM()
-                        ? g.intl.string(g.t.ozoE2A)
+                        ? m.intl.string(m.t.ozoE2A)
                         : i.isGuildStageVoice()
-                          ? g.intl.string(g.t["7vb2cc"])
-                          : g.intl.string(g.t["96ANUN"]);
-              })(t, v),
-        fullWidth: !j,
+                          ? m.intl.string(m.t["7vb2cc"])
+                          : m.intl.string(m.t["96ANUN"]);
+              })(t, N),
+        fullWidth: !p,
         onClick: (i) => {
             (i.stopPropagation(),
                 l?.({ action: "PRESS_JOIN_CALL_BUTTON" }),
-                t.isGuildStageVoice() ? (0, o.av)(t) : (s.default.selectVoiceChannel(t.id), (0, d.iN)(t.id)),
-                m?.());
+                t.isGuildStageVoice() ? (0, r.av)(t) : (s.default.selectVoiceChannel(t.id), (0, o.iN)(t.id)),
+                C?.());
         },
     });
 }

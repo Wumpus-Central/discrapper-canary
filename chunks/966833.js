@@ -4,7 +4,7 @@ var i,
     l = s.n(n),
     r = s(17928),
     a = s(73153),
-    E = s(390248),
+    E = s(519460),
     d = s(320095),
     m = s(773669),
     u = s(734057),
@@ -153,6 +153,6 @@ let g = new L(a.h, {
             return s.id === t;
         });
         if (-1 === n) return !1;
-        ((i.items = i.items.slice()), (i.items[n].message = (0, E.Td)(i.items[n].message)));
+        ((i.items = i.items.slice()), (i.items[n].message = (0, E.T)(i.items[n].message)));
     },
 });

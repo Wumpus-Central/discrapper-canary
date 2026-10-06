@@ -4,7 +4,7 @@ t(582128);
 var l = t(17928),
     a = t(477782),
     c = t(730852),
-    s = t(796774),
+    s = t(308877),
     r = t(984813),
     o = t(576705),
     d = t(309010),
@@ -20,7 +20,7 @@ function b(n, i) {
               id: "join-muted-custom-join-sound",
               label: A.intl.string(A.t.saLMWc),
               action: () => {
-                  ((0, s.CX)(n.id), c.default.selectVoiceChannel(n.id));
+                  ((0, s.A)(n.id), c.default.selectVoiceChannel(n.id));
               },
           })
         : null;

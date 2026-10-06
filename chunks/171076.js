@@ -38,9 +38,7 @@ async function y() {
                 n.e("552653"),
                 n.e("85427"),
                 n.e("247917"),
-                n.e("915170"),
-                n.e("35328"),
-                n.e("400088"),
+                n.e("89530"),
                 n.e("64769"),
                 n.e("959371"),
                 n.e("992956"),
@@ -52,7 +50,7 @@ async function y() {
                 n.e("60002"),
                 n.e("189423"),
                 n.e("415695"),
-                n.e("249290"),
+                n.e("219798"),
                 n.e("691398"),
                 n.e("266201"),
                 n.e("752704"),
@@ -255,13 +253,13 @@ async function y() {
                 n.e("790244"),
                 n.e("593176"),
                 n.e("621624"),
+                n.e("931319"),
                 n.e("836545"),
                 n.e("273232"),
                 n.e("784041"),
                 n.e("466322"),
                 n.e("858514"),
                 n.e("344265"),
-                n.e("931319"),
                 n.e("401827"),
                 n.e("958428"),
                 n.e("121435"),
@@ -349,6 +347,7 @@ async function y() {
                 n.e("982699"),
                 n.e("177104"),
                 n.e("88160"),
+                n.e("28561"),
                 n.e("90373"),
                 n.e("324622"),
                 n.e("35485"),
@@ -501,7 +500,7 @@ function k(e) {
 }
 function F(e) {
     let { channelId: t } = e;
-    !p.default.isAnyOverlayRendering() || null == t || ((0, f.isOverlayCurrentlyVisibleAndUnlocked)() && k(t));
+    !p.default.isAnyOverlayRendering() || null == t || ((0, f.D)() && k(t));
 }
 async function B(e) {
     if (e.locked) {

@@ -645,7 +645,7 @@ let ev = H().debounce(eY, 300, { trailing: !0 }),
                 (null == n && eT.h.dispatch({ type: "INTEGRATION_QUERY", integration: e, query: t }), ev(e, t));
         },
     };
-var eq = n(95561),
+var eq = n(666860),
     eH = n(59318),
     ej = n(503698),
     eW = n.n(ej),
@@ -1126,7 +1126,7 @@ let e2 = { results: { command: null, stickers: [] } };
 function e8(e, t) {
     return (0, c.jsx)(O.A, { sticker: e, isInteracting: t, size: 40 });
 }
-let e5 = {
+let e6 = {
     stores: [eg.A],
     matches: (e, t, n, l, i) =>
         i.commands !== o.Ze.DISABLED &&
@@ -1223,7 +1223,7 @@ let e5 = {
         );
     },
 };
-var e6 = n(379418),
+var e5 = n(379418),
     e3 = n(536637),
     e9 = n.n(e3);
 let te = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm", "ha", "h a", "H", "LT", "LTS"],
@@ -1372,7 +1372,7 @@ let te = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
         [o.DB.COMMAND_OPTIONS]: K,
         [o.DB.CHOICES]: Z,
         [o.DB.EMOJIS_AND_STICKERS]: eS,
-        [o.DB.STICKERS]: e5,
+        [o.DB.STICKERS]: e6,
         [o.DB.GIFS]: eZ,
         [o.DB.LEGACY_COMMANDS]: eJ,
         [o.DB.MENTIONS]: e7,
@@ -1557,7 +1557,7 @@ let te = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                     s = t.map((e, t) => {
                         let { mention: l, description: s } = e;
                         if (void 0 === l) return (0, c.jsx)(f.Ay.Divider, {}, `divider-${t}`);
-                        let u = (0, e6.WA)(l);
+                        let u = (0, e5.WA)(l);
                         return null == u
                             ? null
                             : (0, c.jsx)(
@@ -1587,8 +1587,8 @@ let te = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
                     } = e,
                     { mention: i } = t[n] ?? {};
                 if (null == i) return null;
-                let r = (0, e6.tf)(i.timestamp, i.format),
-                    s = (0, e6.WA)(i)?.formatted;
+                let r = (0, e5.tf)(i.timestamp, i.format),
+                    s = (0, e5.WA)(i)?.formatted;
                 return null == s
                     ? null
                     : (l.replaceInlineInput("timestampMentionInput", s, r), { type: o.kc.TIMESTAMP });

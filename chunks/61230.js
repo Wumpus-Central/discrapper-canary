@@ -1,4 +1,4 @@
-l.d(n, { A: () => k, T: () => O });
+l.d(n, { A: () => G, T: () => k });
 var t = l(477900),
     i = l(582128),
     a = l(17928),
@@ -6,43 +6,44 @@ var t = l(477900),
     r = l(922016),
     o = l(714114),
     c = l(323073),
-    d = l(10862),
-    u = l(734057),
-    h = l(576705),
-    m = l(342952),
-    g = l(834730),
-    x = l(778712),
-    A = l(821609),
-    j = l(693879),
-    p = l(607407),
-    v = l(188645),
-    N = l(747376),
-    f = l(575731),
-    I = l(616356),
-    C = l(977997),
-    b = l(47167),
-    E = l(475889),
-    y = l(262763),
-    M = l(402216),
-    _ = l(375708),
-    S = l(971718);
-let R = function (e) {
+    d = l(597306),
+    u = l(10862),
+    h = l(734057),
+    m = l(576705),
+    g = l(342952),
+    x = l(834730),
+    A = l(778712),
+    j = l(821609),
+    p = l(693879),
+    v = l(607407),
+    N = l(188645),
+    f = l(747376),
+    I = l(575731),
+    C = l(616356),
+    b = l(977997),
+    E = l(47167),
+    y = l(475889),
+    M = l(262763),
+    _ = l(402216),
+    S = l(375708),
+    R = l(971718);
+let T = function (e) {
     let { channel: n } = e,
-        l = (0, a.bG)([C.A], () => C.A.isInChannel(n.id)),
-        i = (0, f.A)(n),
-        s = (0, b.Ay)(n),
-        r = (0, E.H)(n),
-        o = (0, a.bG)([I.A], () => I.A.getAllApplicationStreamsForChannel(n.id)[0]);
-    return (0, t.jsxs)(v.Uq, {
-        className: S.jC,
+        l = (0, a.bG)([b.A], () => b.A.isInChannel(n.id)),
+        i = (0, I.A)(n),
+        s = (0, E.Ay)(n),
+        r = (0, y.H)(n),
+        o = (0, a.bG)([C.A], () => C.A.getAllApplicationStreamsForChannel(n.id)[0]);
+    return (0, t.jsxs)(N.Uq, {
+        className: R.jC,
         children: [
             (0, t.jsxs)("div", {
-                className: S.hY,
+                className: R.hY,
                 children: [
                     (0, t.jsxs)("div", {
-                        className: S.HA,
+                        className: R.HA,
                         children: [
-                            (0, t.jsx)(d.A, {
+                            (0, t.jsx)(u.A, {
                                 size: "custom",
                                 height: 20,
                                 width: 20,
@@ -51,11 +52,11 @@ let R = function (e) {
                                 style: { flexShrink: 0 },
                             }),
                             (0, t.jsx)("div", {
-                                className: S.Mw,
-                                children: (0, t.jsx)(g.E, {
+                                className: R.Mw,
+                                children: (0, t.jsx)(x.E, {
                                     variant: "text-sm/medium",
                                     color: "text-default",
-                                    className: S.Kw,
+                                    className: R.Kw,
                                     children: s,
                                 }),
                             }),
@@ -63,39 +64,39 @@ let R = function (e) {
                     }),
                     null != r &&
                         (0, t.jsx)("span", {
-                            className: S.j2,
-                            children: (0, t.jsx)(j.z, { entry: { start: r }, textColor: "text-feedback-positive" }),
+                            className: R.j2,
+                            children: (0, t.jsx)(p.z, { entry: { start: r }, textColor: "text-feedback-positive" }),
                         }),
                 ],
             }),
             (0, t.jsxs)("div", {
-                className: S.Bm,
+                className: R.Bm,
                 children: [
                     null != o &&
                         (0, t.jsxs)("div", {
-                            className: S.yt,
+                            className: R.yt,
                             children: [
-                                (0, t.jsx)(p.A, { stream: o, className: S.Rh, noText: !0 }),
-                                (0, t.jsx)(M.Ay, { size: M.Ay.Sizes.SMALL, className: S.wI }),
+                                (0, t.jsx)(v.A, { stream: o, className: R.Rh, noText: !0 }),
+                                (0, t.jsx)(_.Ay, { size: _.Ay.Sizes.SMALL, className: R.wI }),
                             ],
                         }),
-                    (0, t.jsx)(m.A, {
+                    (0, t.jsx)(g.A, {
                         users: i,
                         guildId: n.guild_id,
                         channelId: n.id,
-                        size: x._3.SIZE_24,
+                        size: A._3.SIZE_24,
                         maxUsers: 8,
-                        "aria-label": _.intl.string(_.t["jNqDh/"]),
+                        "aria-label": S.intl.string(S.t["jNqDh/"]),
                     }),
-                    (0, t.jsx)(A.$, {
+                    (0, t.jsx)(j.$, {
                         variant: l ? "secondary" : "active",
                         size: "sm",
-                        text: l ? _.intl.string(_.t["3xjX0U"]) : _.intl.string(_.t.VJlc0S),
+                        text: l ? S.intl.string(S.t["3xjX0U"]) : S.intl.string(S.t.VJlc0S),
                         fullWidth: !0,
                         onClick: function () {
                             n.isGuildStageVoice()
-                                ? (0, N.av)(n)
-                                : y.A.handleVoiceConnect({
+                                ? (0, f.av)(n)
+                                : M.A.handleVoiceConnect({
                                       channel: n,
                                       connected: l,
                                       needSubscriptionToAccess: !1,
@@ -109,9 +110,9 @@ let R = function (e) {
         ],
     });
 };
-var T = l(652215),
-    w = l(396975);
-function O(e) {
+var w = l(652215),
+    O = l(396975);
+function k(e) {
     let { channel: n, children: l, childWrapperClassName: a } = e,
         o = i.useRef(null),
         [c, d] = i.useState(!1),
@@ -147,25 +148,25 @@ function O(e) {
         position: "right",
         shouldShow: c,
         renderPopout: () =>
-            (0, t.jsx)("div", { onMouseEnter: m, onMouseLeave: g, children: (0, t.jsx)(R, { channel: n }) }),
+            (0, t.jsx)("div", { onMouseEnter: m, onMouseLeave: g, children: (0, t.jsx)(T, { channel: n }) }),
         children: () => (0, t.jsx)("div", { className: a, ref: o, onMouseEnter: m, onMouseLeave: g, children: l }),
     });
 }
-function k(e) {
+function G(e) {
     let { guild: n, message: l } = e,
         { voiceState: i, voiceChannel: s } = (0, o.Ay)({ userId: l.author.id, guildId: n.id }),
-        r = (0, a.bG)([u.A], () => u.A.getChannel(l.channel_id)?.isVocal()),
-        m = (0, a.bG)([h.A], () => {
+        r = (0, a.bG)([h.A], () => h.A.getChannel(l.channel_id)?.isVocal()),
+        g = (0, a.bG)([m.A], () => {
             if (null == s) return !1;
-            let e = (0, c.r9)() && (0, c.UK)(s.id);
-            return (s.isPrivate() || (h.A.can(T.xBc.VIEW_CHANNEL, s) && h.A.can(T.xBc.CONNECT, s))) && !e;
+            let e = (0, d.r)() && (0, c.UK)(s.id);
+            return (s.isPrivate() || (m.A.can(w.xBc.VIEW_CHANNEL, s) && m.A.can(w.xBc.CONNECT, s))) && !e;
         });
-    return null != i && null != s && s.isGuildVocal() && m && !r
-        ? (0, t.jsx)(O, {
+    return null != i && null != s && s.isGuildVocal() && g && !r
+        ? (0, t.jsx)(k, {
               channel: s,
-              childWrapperClassName: w.y,
-              children: (0, t.jsx)(d.A, {
-                  className: w.B,
+              childWrapperClassName: O.y,
+              children: (0, t.jsx)(u.A, {
+                  className: O.B,
                   size: "custom",
                   color: "currentColor",
                   width: 20,

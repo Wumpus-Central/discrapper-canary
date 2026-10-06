@@ -1,5 +1,4 @@
 (n.d(t, {
-    CX: () => U,
     E7: () => S,
     Lk: () => L,
     Rp: () => R,
@@ -159,7 +158,4 @@ function M(e, t) {
 }
 function P(e, t) {
     s.h.dispatch({ type: "USER_SOUNDBOARD_SET_VOLUME", volume: e, location: t });
-}
-function U(e) {
-    s.h.dispatch({ type: "SOUNDBOARD_MUTE_JOIN_SOUND", channelId: e });
 }

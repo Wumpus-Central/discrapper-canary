@@ -106,8 +106,9 @@ function C(e) {
     );
 }
 let j = function (e) {
-    let t = (0, x.Ay)();
-    return (0, m.q)(t) ? (0, n.jsx)(C, { ...e }) : (0, n.jsx)(k, { ...e });
+    let { themeOverride: t, ...a } = e,
+        l = (0, x.Ay)();
+    return (0, m.q)(t ?? l) ? (0, n.jsx)(C, { ...a }) : (0, n.jsx)(k, { ...a });
 };
 var p = a(375708);
 function A() {
@@ -118,52 +119,53 @@ let E = (0, l.forwardRef)(function (e, t) {
             id: a,
             balance: r,
             variant: c = "default",
-            balanceWidgetMode: d = u.k.DEFAULT,
-            showNotificationBadge: f,
-            onClick: m,
-            onMouseDown: x,
-            disabled: v,
-            isInModalOverlay: g,
-            ariaExpanded: k,
-            clickableRef: C,
-            className: E,
+            themeOverride: d,
+            balanceWidgetMode: f = u.k.DEFAULT,
+            showNotificationBadge: m,
+            onClick: x,
+            onMouseDown: v,
+            disabled: g,
+            isInModalOverlay: k,
+            ariaExpanded: C,
+            clickableRef: E,
+            className: R,
         } = e,
-        [R, b] = (0, l.useState)(!1),
-        N = (0, l.useMemo)(() => (d === u.k.SELECTED ? h.wH : R ? h.mr : h.Ay), [d, R]),
-        [y, L] = (0, l.useState)(!1),
+        [b, N] = (0, l.useState)(!1),
+        y = (0, l.useMemo)(() => (f === u.k.SELECTED ? h.wH : b ? h.mr : h.Ay), [f, b]),
+        [L, O] = (0, l.useState)(!1),
         [S, _] = (0, l.useState)(!1),
-        [O, T] = (0, l.useState)(2700),
-        D = null === r;
+        [T, D] = (0, l.useState)(2700),
+        M = null === r;
     ((0, l.useEffect)(() => {
-        D &&
-            !y &&
-            (L(!0),
+        M &&
+            !L &&
+            (O(!0),
             setTimeout(() => {
                 _(!0);
             }, 500));
-    }, [D, L, y]),
+    }, [M, O, L]),
         (0, l.useEffect)(() => {
-            S && !D && L(!1);
-        }, [D, S]));
-    let M = D || y,
-        w = y ? null : r,
-        [P, B] = (0, l.useState)(null),
-        F = (0, l.useRef)(null),
-        U = (0, l.useCallback)(() => {
-            ((F.current = null), B(null));
+            S && !M && O(!1);
+        }, [M, S]));
+    let w = M || L,
+        P = L ? null : r,
+        [B, F] = (0, l.useState)(null),
+        U = (0, l.useRef)(null),
+        I = (0, l.useCallback)(() => {
+            ((U.current = null), F(null));
         }, []),
-        I = (0, l.useCallback)(
+        W = (0, l.useCallback)(
             (e) => {
-                let t = P === F.current;
-                e > 0 && ("earn" !== P || !t) && B("earn");
+                let t = B === U.current;
+                e > 0 && ("earn" !== B || !t) && F("earn");
             },
-            [B, P],
+            [F, B],
         );
     return (0, n.jsx)(i.D, {
-        innerRef: C,
-        onClick: M ? void 0 : m,
-        "aria-expanded": k,
-        "aria-haspopup": null != k ? "dialog" : void 0,
+        innerRef: E,
+        onClick: w ? void 0 : x,
+        "aria-expanded": C,
+        "aria-haspopup": null != C ? "dialog" : void 0,
         "aria-label": (function (e) {
             let { loading: t, balance: a, hasUnread: n } = e;
             return t
@@ -171,34 +173,35 @@ let E = (0, l.forwardRef)(function (e, t) {
                 : n
                   ? p.intl.formatToPlainString(p.t.AgMngw, { balance: a })
                   : p.intl.formatToPlainString(p.t.zPaLL9, { balance: a });
-        })({ loading: M, balance: w ?? 0, hasUnread: !0 === f }),
-        "aria-busy": M,
-        className: s()(h.vk, { [h.r9]: v }),
+        })({ loading: w, balance: P ?? 0, hasUnread: !0 === m }),
+        "aria-busy": w,
+        className: s()(h.vk, { [h.r9]: g }),
         id: a ?? "balance-widget-pill",
         children: (0, n.jsxs)("span", {
-            onMouseDown: x,
-            onMouseEnter: v ? void 0 : () => b(!0),
-            onMouseLeave: v ? void 0 : () => b(!1),
+            onMouseDown: v,
+            onMouseEnter: g ? void 0 : () => N(!0),
+            onMouseLeave: g ? void 0 : () => N(!1),
             ref: t,
-            className: s()(h.kL, N, E, { [h.D0]: "overlay-secondary" === c, [h.En]: M, [h.dA]: g, [h.r9]: v }),
+            className: s()(h.kL, y, R, { [h.D0]: "overlay-secondary" === c, [h.En]: w, [h.dA]: k, [h.r9]: g }),
             children: [
                 (0, n.jsx)("div", {
-                    className: s()(h.hr, M ? h.nr : void 0),
+                    className: s()(h.hr, w ? h.nr : void 0),
                     children: (0, n.jsx)(j, {
-                        currentAnimationType: P,
-                        animationTypeRef: F,
-                        onSetAnimationDurationMS: T,
+                        currentAnimationType: B,
+                        animationTypeRef: U,
+                        onSetAnimationDurationMS: D,
+                        themeOverride: d,
                     }),
                 }),
                 (0, n.jsx)(o.A, {
-                    value: w,
-                    onValueChange: I,
-                    onValueReached: U,
-                    targetTotalCounterTime: O,
-                    className: M ? h.F : void 0,
+                    value: P,
+                    onValueChange: W,
+                    onValueReached: I,
+                    targetTotalCounterTime: T,
+                    className: w ? h.F : void 0,
                     textColor: "overlay-secondary" === c ? "text-overlay-light" : void 0,
                 }),
-                f && (0, n.jsx)(A, {}),
+                m && (0, n.jsx)(A, {}),
             ],
         }),
     });

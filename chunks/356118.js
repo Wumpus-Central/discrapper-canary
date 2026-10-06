@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => E, F2: () => d, Qs: () => f, Z_: () => g });
+n.d(t, { Ay: () => v, F2: () => d, Qs: () => g, Z_: () => E });
 var r = n(477900),
     l = n(582128),
     a = n(132500),
@@ -21,7 +21,7 @@ function u(e, t) {
                     }
                     return null;
                 })(),
-                d = i.E6.has(s) ? { ...c, componentMap: n } : c;
+                d = i.E6.has(s) ? { ...c, componentMap: n, renderLayout: f } : c;
             return (0, r.jsx)(o, { ...d, children: u }, (0, a.A)());
         })(e, t),
     );
@@ -61,6 +61,9 @@ function p(e) {
     );
 }
 function f(e) {
+    return (0, r.jsx)(p, { ...e });
+}
+function g(e) {
     let { layoutId: t, tenantId: n, overrides: a, onError: i, onEmptyLayout: s } = e,
         { layout: o, error: u } = (0, c.A)(n, t);
     return (l.useEffect(() => {
@@ -70,7 +73,7 @@ function f(e) {
         ? null
         : (0, r.jsx)(p, { layout: o, overrides: a, onError: i, onEmptyLayout: s });
 }
-function g(e) {
+function E(e) {
     let { templateId: t, tenantId: n, overrides: a, onError: i, onEmptyLayout: s, requestParams: c } = e,
         { layout: u, error: d } = (0, o.A)(n, t, c);
     return (l.useEffect(() => {
@@ -80,4 +83,4 @@ function g(e) {
         ? null
         : (0, r.jsx)(p, { layout: u, overrides: a, onError: i, onEmptyLayout: s });
 }
-let E = p;
+let v = p;

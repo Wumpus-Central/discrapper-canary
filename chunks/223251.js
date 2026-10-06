@@ -2,7 +2,7 @@ l.d(n, { A: () => f });
 var t = l(582128),
     d = l(136722),
     s = l(17928),
-    r = l(95561),
+    r = l(806411),
     i = l(885437),
     u = l(973854),
     a = l(840364),
@@ -36,7 +36,7 @@ class b extends t.Component {
             (0, a.A)({ guildId: n })),
             null != l &&
                 l !== e.selectedChannel &&
-                ((0, A.z)(k.HAw.CHANNEL_OPENED, { ...(0, i.p)(l), ...(0, r.qL)(l) }), (0, u.A)({ channelId: l })));
+                ((0, A.z)(k.HAw.CHANNEL_OPENED, { ...(0, i.p)(l), ...(0, r.q)(l) }), (0, u.A)({ channelId: l })));
     }
     render() {
         return null;

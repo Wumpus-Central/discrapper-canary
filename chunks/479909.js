@@ -4,13 +4,13 @@ n.d(t, {
     Zx: () => t1,
     v7: () => t7,
     L0: () => t4,
-    N_: () => t3,
+    N_: () => t6,
     MD: () => nt,
     Ay: () => nl,
     uW: () => nn,
     NO: () => t5,
     ck: () => t9,
-    ml: () => t6,
+    ml: () => t3,
     Vu: () => t2,
 });
 var l = n(477900),
@@ -65,22 +65,24 @@ let _ = { width: 500, height: T.$V },
                 n.e("507528"),
                 n.e("76428"),
                 n.e("834552"),
+                n.e("993103"),
                 n.e("397270"),
                 n.e("695445"),
                 n.e("890027"),
                 n.e("638221"),
                 n.e("571210"),
+                n.e("88342"),
                 n.e("936320"),
                 n.e("27773"),
-                n.e("88342"),
-                n.e("132191"),
                 n.e("311802"),
                 n.e("698965"),
+                n.e("132191"),
                 n.e("37977"),
                 n.e("354044"),
                 n.e("682337"),
                 n.e("437065"),
                 n.e("538887"),
+                n.e("235313"),
                 n.e("454625"),
                 n.e("636373"),
                 n.e("726033"),
@@ -88,12 +90,10 @@ let _ = { width: 500, height: T.$V },
                 n.e("371133"),
                 n.e("280854"),
                 n.e("335395"),
-                n.e("235313"),
                 n.e("408362"),
                 n.e("715038"),
-                n.e("993103"),
-                n.e("653849"),
                 n.e("252229"),
+                n.e("653849"),
                 n.e("522261"),
                 n.e("678195"),
                 n.e("472289"),
@@ -148,7 +148,7 @@ var L = n(861382),
     M = n.n(P),
     D = n(537652),
     U = n(155718),
-    V = n(95561),
+    V = n(666860),
     W = n(659280),
     F = n(579940),
     B = n(962125),
@@ -535,8 +535,8 @@ var eD = n(194004),
     e2 = n(140735),
     e5 = n(176781),
     e8 = n(463930),
-    e3 = n(935063),
-    e6 = n(73392),
+    e6 = n(935063),
+    e3 = n(73392),
     e7 = n(650019),
     e4 = n(763754),
     e9 = n(967144),
@@ -610,7 +610,7 @@ function tc(e) {
             displayNameStyles: y,
         } = (0, e4.Ay)(u),
         C = (0, e9.gn)(f, S, x),
-        A = (0, e6.a)({ displayNameStyles: y }),
+        A = (0, e3.a)({ displayNameStyles: y }),
         b = (0, e7.A)(h, u.attachments),
         I =
             ((t = o.id),
@@ -713,7 +713,7 @@ function tc(e) {
                                                         color: c ? "text-link" : "text-muted",
                                                         className: ta.Z4,
                                                         children: [
-                                                            (0, l.jsx)(e3.X, {
+                                                            (0, l.jsx)(e6.X, {
                                                                 size: "md",
                                                                 color: "currentColor",
                                                                 "aria-label": j.intl.string(j.t.P8tvKG),
@@ -1270,7 +1270,7 @@ function t8(e) {
         [n, l, r, t, o, a, s],
     );
 }
-function t3(e, t, n) {
+function t6(e, t, n) {
     let l = i.useCallback(() => {
             t || (0, ex.r$)(t0.kx.EMOJI, e, n);
         }, [t, e, n]),
@@ -1284,7 +1284,7 @@ function t3(e, t, n) {
         (0, e$.Vo)({ event: ea.jej.TOGGLE_GIF_PICKER, handler: r }),
         (0, e$.Vo)({ event: ea.jej.TOGGLE_STICKER_PICKER, handler: s }));
 }
-function t6(e, t, n) {
+function t3(e, t, n) {
     let [l] = i.useState(() => new a.EventEmitter());
     return (
         i.useEffect(() => {
@@ -1470,17 +1470,17 @@ let nl = i.memo(
             e2 = !e1 || !k.commands?.enabled || !_ || "/" !== a,
             e5 = (0, eA.A)(),
             { fontSize: e8 } = (0, m.cf)([S.Ay], () => ({ fontSize: S.Ay.fontSize })),
-            e3 = (0, m.bG)([eG.A], () => eG.A.isEnabled());
-        t3(k, eB, j.id);
-        let { eventEmitter: e6, handleEditorSelectionChanged: e7 } = t6(ey, a, o),
+            e6 = (0, m.bG)([eG.A], () => eG.A.isEnabled());
+        t6(k, eB, j.id);
+        let { eventEmitter: e3, handleEditorSelectionChanged: e7 } = t3(ey, a, o),
             e4 = i.useRef(a);
         e4.current = a;
         let e9 = i.useCallback(
                 (e, t, n) => {
-                    ("/" === t && "" === e4.current && k.commands?.enabled && e6.emit("command-sentinel-typed"),
+                    ("/" === t && "" === e4.current && k.commands?.enabled && e3.emit("command-sentinel-typed"),
                         U?.(e, t, n));
                 },
-                [U, k.commands?.enabled, e6],
+                [U, k.commands?.enabled, e3],
             ),
             { submitting: te, submit: tt, handleSubmit: tn } = t1(K, k, ey, eb, j.id),
             { autocompleteRef: tl, handleMaybeShowAutocomplete: ti, handleHideAutocomplete: tr } = t7(),
@@ -1555,7 +1555,7 @@ let nl = i.memo(
                     ),
                     n
                 );
-            })(e6, ey),
+            })(e3, ey),
             { handleAutocompleteVisibilityChange: tO } = nn(k, j.id),
             tL = (function (e) {
                 let { type: t, channelId: n } = e;
@@ -1569,9 +1569,9 @@ let nl = i.memo(
                 );
             })({ type: k, channelId: j.id }),
             tP = i.useCallback(() => {
-                e6.emit("submit-failure");
-            }, [e6]);
-        (0, eJ.R)(e6, j.guild_id, j.id);
+                e3.emit("submit-failure");
+            }, [e3]);
+        (0, eJ.R)(e3, j.guild_id, j.id);
         let tM = null != D,
             tD = (eB && !((eD || eU) && e$)) || (te && k.submit?.useDisabledStylesOnSubmit),
             tU = null;
@@ -1672,7 +1672,7 @@ let nl = i.memo(
                 _ && eQ._.dispatch(ea.jej.CHANNEL_TEXT_AREA_FOCUSED, { channelId: j.id });
             }, [_, j.id]),
             (0, l.jsx)(eg.Sv, {
-                value: e6,
+                value: e3,
                 children: (0, l.jsxs)(C.f5, {
                     value: eu,
                     children: [
@@ -1756,7 +1756,7 @@ let nl = i.memo(
                                                         onHideAutocomplete: tr,
                                                         promptToUpload: G,
                                                         fontSize: e8,
-                                                        spellcheckEnabled: e3,
+                                                        spellcheckEnabled: e6,
                                                         canOnlyUseTextCommands: tM,
                                                         className: s()(
                                                             {

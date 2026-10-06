@@ -1,48 +1,48 @@
-n.d(t, { A: () => w });
-var i = n(477900),
-    r = n(582128),
-    l = n(598748),
-    a = n(17928),
-    o = n(486610),
-    u = n(531913),
-    s = n(587895),
-    d = n(633075),
-    c = n(946356),
-    f = n(139730),
-    h = n(58216),
-    p = n(287809),
-    g = n(238490),
-    m = n(844474);
-function w(e) {
-    let { applicationId: t } = e,
-        n = (0, a.bG)([p.default], () => p.default.getCurrentUser());
-    return null == n ? null : (0, i.jsx)(_, { applicationId: t, user: n });
+t.d(n, { A: () => C });
+var l = t(477900),
+    o = t(582128),
+    i = t(598748),
+    a = t(17928),
+    r = t(11099),
+    u = t(531913),
+    s = t(587895),
+    d = t(633075),
+    c = t(946356),
+    m = t(139730),
+    p = t(58216),
+    h = t(287809),
+    f = t(238490),
+    g = t(844474);
+function C(e) {
+    let { applicationId: n } = e,
+        t = (0, a.bG)([h.default], () => h.default.getCurrentUser());
+    return null == t ? null : (0, l.jsx)(v, { applicationId: n, user: t });
 }
-function _(e) {
-    let { applicationId: t, user: n } = e,
-        p = (0, a.bG)([s.A], () => s.A.getApplication(t)),
-        w = r.useMemo(() => new d.R({ applicationId: t }), [t]),
-        _ = (0, u.A)(n.id, t),
-        E = _.surfaceConfigs,
-        y = (0, g.yZ)({
-            widgetTop: null != E[l.m.WIDGET_TOP],
-            widgetBottom: null != E[l.m.WIDGET_BOTTOM],
-            miniProfile: null != E[l.m.MINI_PROFILE],
+function v(e) {
+    let { applicationId: n, user: t } = e,
+        h = (0, a.bG)([s.A], () => s.A.getApplication(n)),
+        C = o.useMemo(() => new d.R({ applicationId: n }), [n]),
+        v = (0, u.A)(t.id, n),
+        x = v.surfaceConfigs,
+        w = (0, f.yZ)({
+            widgetTop: null != x[i.m.WIDGET_TOP],
+            widgetBottom: null != x[i.m.WIDGET_BOTTOM],
+            miniProfile: null != x[i.m.MINI_PROFILE],
         });
-    return y.hasAny
-        ? (0, i.jsx)("div", {
-              className: m.$C,
-              children: (0, i.jsxs)("div", {
-                  className: m.PV,
+    return w.hasAny
+        ? (0, l.jsx)("div", {
+              className: g.$C,
+              children: (0, l.jsxs)("div", {
+                  className: g.PV,
                   children: [
-                      y.hasMainCard
-                          ? (0, i.jsx)("div", {
-                                className: m.a9,
-                                children: (0, i.jsx)(c.A.Overlay, {
-                                    className: m.Qb,
-                                    children: (0, i.jsx)(h.A, {
-                                        user: n,
-                                        widget: w,
+                      w.hasMainCard
+                          ? (0, l.jsx)("div", {
+                                className: g.a9,
+                                children: (0, l.jsx)(c.A.Overlay, {
+                                    className: g.Qb,
+                                    children: (0, l.jsx)(p.A, {
+                                        user: t,
+                                        widget: C,
                                         allowEditing: !1,
                                         disableInteraction: !0,
                                         interactiveLinks: !0,
@@ -51,10 +51,10 @@ function _(e) {
                                 }),
                             })
                           : null,
-                      y.hasPopoutCard && null != p
-                          ? (0, i.jsx)("div", {
-                                className: m.ql,
-                                children: (0, i.jsx)(f.A, { application: p, rendererProps: _, renderText: o.hO }),
+                      w.hasPopoutCard && null != h
+                          ? (0, l.jsx)("div", {
+                                className: g.ql,
+                                children: (0, l.jsx)(m.A, { application: h, rendererProps: v, renderText: r.hO }),
                             })
                           : null,
                   ],

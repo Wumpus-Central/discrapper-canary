@@ -6,7 +6,7 @@ var i,
     l = n(73153),
     o = n(181041),
     d = n(987741),
-    c = n(390248),
+    c = n(519460),
     u = n(320095),
     _ = n(734057),
     E = n(232835),
@@ -174,7 +174,7 @@ let v = new D(l.h, {
         if (!m.has(n, t)) return !1;
         let i = m.get(n, t);
         if (null == i || 0 !== i.state) return !1;
-        m.set(n, t, { state: 0, message: (0, c.Td)(i.message) });
+        m.set(n, t, { state: 0, message: (0, c.T)(i.message) });
     },
     LOAD_FORUM_POSTS: function (e) {
         let { threads: t } = e;

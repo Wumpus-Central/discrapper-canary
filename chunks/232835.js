@@ -10,7 +10,7 @@ var i = n(435558),
     u = n(779185),
     _ = n(723176),
     E = n(626584),
-    A = n(390248),
+    A = n(519460),
     h = n(508602);
 function f(e) {
     let { type: t } = e;
@@ -440,7 +440,7 @@ let J = new Q(o.h, {
             let { messageId: t, channelId: n } = e,
                 i = c.A.get(n);
             if (null == i || !i.has(t)) return !1;
-            ((i = i.update(t, A.Td)), c.A.commit(i));
+            ((i = i.update(t, A.T)), c.A.commit(i));
         },
         MESSAGE_DELETE: function (e) {
             let { id: t, channelId: n, local: i } = e,

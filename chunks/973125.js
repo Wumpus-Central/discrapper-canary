@@ -1,4 +1,4 @@
-n.d(t, { E: () => N, e: () => P });
+n.d(t, { E: () => M, e: () => N });
 var r = n(582128),
     l = n(435558),
     a = n(364801),
@@ -16,20 +16,19 @@ var r = n(582128),
     E = n(450117),
     v = n(834805),
     A = n(74871),
-    x = n(498381),
-    T = n(857623),
-    S = n(477900),
-    y = n(790219),
-    j = n(356118),
-    _ = n(879923),
-    C = n(575593),
-    b = n(674658),
-    k = n(258245),
-    L = n(561769),
-    I = n(303720),
-    O = n(538235),
-    M = n(891167);
-let N = {
+    T = n(498381),
+    x = n(857623),
+    S = n(790219),
+    y = n(879923),
+    _ = n(477900),
+    j = n(575593),
+    C = n(674658),
+    b = n(258245),
+    k = n(561769),
+    L = n(303720),
+    I = n(538235),
+    O = n(891167);
+let M = {
     ContainedHero: v.A,
     FullHero: A.A,
     NarrowContent: f.A,
@@ -46,84 +45,84 @@ let N = {
     FeaturedChip: g.A,
     FeaturedCollection: E.A,
     FeaturedProduct: () => null,
-    ShopProductCard: I.A,
+    ShopProductCard: L.A,
     GridItemShopProductCard: function (e) {
         let { skuId: t, auto: n, columns: l, rows: a } = e,
-            { product: i } = (0, b.q)(t, !0),
-            s = r.useContext(L.v3);
+            { product: i } = (0, C.q)(t, !0),
+            s = r.useContext(k.v3);
         if (null == i) return null;
         let { flattenProductVariants: c, ...o } = s;
-        if (i.type === C.R.BUNDLE) {
+        if (i.type === j.R.BUNDLE) {
             let e = n ? 2 : l,
                 r = n ? 1 : a,
                 i = `${e}/${r}`;
-            return (0, S.jsx)(L.v3.Provider, {
+            return (0, _.jsx)(k.v3.Provider, {
                 value: { flattenProductVariants: c ?? !1, ...o },
-                children: (0, S.jsx)(u.A, {
+                children: (0, _.jsx)(u.A, {
                     columns: e,
                     rows: r,
-                    children: (0, S.jsx)(k.A, { skuId: t, aspectRatio: i }),
+                    children: (0, _.jsx)(b.A, { skuId: t, aspectRatio: i }),
                 }),
             });
         }
-        if (i.type === C.R.PROFILE_EFFECT) {
+        if (i.type === j.R.PROFILE_EFFECT) {
             let e = n ? 1 : l,
                 r = n ? 2 : a,
                 i = `${e}/${r}`;
-            return (0, S.jsx)(L.v3.Provider, {
+            return (0, _.jsx)(k.v3.Provider, {
                 value: { flattenProductVariants: c ?? !1, ...o },
-                children: (0, S.jsx)(u.A, {
+                children: (0, _.jsx)(u.A, {
                     columns: e,
                     rows: r,
-                    children: (0, S.jsx)(k.A, { skuId: t, aspectRatio: i }),
+                    children: (0, _.jsx)(b.A, { skuId: t, aspectRatio: i }),
                 }),
             });
         }
         return n
-            ? (0, S.jsx)(L.v3.Provider, {
+            ? (0, _.jsx)(k.v3.Provider, {
                   value: { flattenProductVariants: c ?? !1, ...o },
-                  children: (0, S.jsx)(k.A, { skuId: t, aspectRatio: "1/1" }),
+                  children: (0, _.jsx)(b.A, { skuId: t, aspectRatio: "1/1" }),
               })
-            : (0, S.jsx)(L.v3.Provider, {
+            : (0, _.jsx)(k.v3.Provider, {
                   value: { flattenProductVariants: c ?? !1, ...o },
-                  children: (0, S.jsx)(u.A, {
+                  children: (0, _.jsx)(u.A, {
                       columns: l,
                       rows: a,
-                      children: (0, S.jsx)(k.A, { skuId: t, aspectRatio: `${l}/${a}` }),
+                      children: (0, _.jsx)(b.A, { skuId: t, aspectRatio: `${l}/${a}` }),
                   }),
               });
     },
-    SkuList: T.A,
+    SkuList: x.A,
     SubLayout: function (e) {
-        let { layoutId: t, tenantId: n, skeleton: r, componentMap: l } = e,
-            { layout: a, loading: i } = (0, y.A)(n, t);
-        return i && null != r
-            ? (0, S.jsx)(j.Ay, { overrides: l, layout: { id: "skeleton", children: r } })
-            : null == a
-              ? null
-              : (0, S.jsx)(j.Ay, { layout: a, overrides: l });
-    },
-    SubTemplate: function (e) {
-        let { templateId: t, tenantId: n, skeleton: r, requestParams: l, componentMap: a } = e,
-            { layout: i, loading: s } = (0, _.A)(n, t, l);
+        let { layoutId: t, tenantId: n, skeleton: r, componentMap: l, renderLayout: a } = e,
+            { layout: i, loading: s } = (0, S.A)(n, t);
         return s && null != r
-            ? (0, S.jsx)(j.Ay, { overrides: a, layout: { id: "skeleton", children: r } })
+            ? a({ overrides: l, layout: { id: "skeleton", children: r } })
             : null == i
               ? null
-              : (0, S.jsx)(j.Ay, { layout: i, overrides: a });
+              : a({ layout: i, overrides: l });
     },
-    Button: x.aF,
-    Heading: x.i0,
-    Stack: x.Ym,
-    Text: x.Ni,
-    Tooltip: x.F4,
-    Image: M.A,
-    Any: O.A,
+    SubTemplate: function (e) {
+        let { templateId: t, tenantId: n, skeleton: r, requestParams: l, componentMap: a, renderLayout: i } = e,
+            { layout: s, loading: c } = (0, y.A)(n, t, l);
+        return c && null != r
+            ? i({ overrides: a, layout: { id: "skeleton", children: r } })
+            : null == s
+              ? null
+              : i({ layout: s, overrides: a });
+    },
+    Button: T.aF,
+    Heading: T.i0,
+    Stack: T.Ym,
+    Text: T.Ni,
+    Tooltip: T.F4,
+    Image: O.A,
+    Any: I.A,
 };
-function P() {
+function N() {
     let { overrides: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
     return r.useMemo(() => {
-        let t = (0, l.cloneDeep)(N);
+        let t = (0, l.cloneDeep)(M);
         if (null != e) for (let [n, r] of Object.entries(e)) null != r && (t[n] = r);
         return t;
     }, [e]);

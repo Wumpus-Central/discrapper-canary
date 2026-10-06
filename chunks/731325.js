@@ -16,7 +16,7 @@ var l = n(477900),
     x = n(817281),
     E = n(820284),
     S = n(761929),
-    y = n(95561),
+    y = n(666860),
     C = n(131607),
     A = n(267889),
     b = n(813703),
@@ -465,8 +465,8 @@ var ez = n(404778),
     e2 = n(468689),
     e5 = n(931991),
     e8 = n(473145),
-    e3 = n(625633),
-    e6 = n(136123);
+    e6 = n(625633),
+    e3 = n(136123);
 let e7 = function (e) {
     let { className: t, guildId: n, channel: r, shouldTrackUpsellViewed: a, setTrackedUpsellViewed: o } = e,
         { location: u } = (0, P.p)(),
@@ -490,13 +490,13 @@ let e7 = function (e) {
     null != h && m)
         ? f
             ? (0, l.jsxs)("div", {
-                  className: s()(e6.UX, t),
+                  className: s()(e3.UX, t),
                   onKeyDown: (e) => e.stopPropagation(),
                   children: [
-                      (0, l.jsx)(eY.v, { size: "md", color: "currentColor", className: e6.Kk }),
+                      (0, l.jsx)(eY.v, { size: "md", color: "currentColor", className: e3.Kk }),
                       (0, l.jsx)(eL.E, {
                           color: "interactive-text-default",
-                          className: e6.rf,
+                          className: e3.rf,
                           variant: "text-sm/normal",
                           children: ey.intl.format(ey.t.AXWla1, { count: (0, e8.aG)(eE.TVA.TIER_1) }),
                       }),
@@ -509,26 +509,26 @@ let e7 = function (e) {
                                       analyticsLocations: c,
                                       analyticsSourceLocation: u,
                                       guild: h,
-                                      perks: (0, e3.q5)(),
+                                      perks: (0, e6.q5)(),
                                   });
                           },
                       }),
                   ],
               })
             : (0, l.jsxs)("div", {
-                  className: s()(e6.UX, t),
+                  className: s()(e3.UX, t),
                   onKeyDown: (e) => e.stopPropagation(),
                   children: [
                       (0, l.jsx)(ea.t, {
                           size: "custom",
                           color: "currentColor",
-                          className: e6.Kk,
+                          className: e3.Kk,
                           width: 20,
                           height: 20,
                       }),
                       (0, l.jsx)(eL.E, {
                           color: "interactive-text-default",
-                          className: e6.rf,
+                          className: e3.rf,
                           variant: "text-sm/normal",
                           children: ey.intl.string(ey.t.S83wgh),
                       }),
@@ -1593,8 +1593,8 @@ var t1 = n(970099);
 let t2 = (0, $.xI)(O.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
     t5 = (0, $.xI)(O.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_LEFT),
     t8 = (0, $.xI)(O.A.STICKERS_CONSTANTS_STICKERS_LIST_PADDING_RIGHT),
-    t3 = (0, $.xI)(O.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
-    t6 = (0, $.xI)(O.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
+    t6 = (0, $.xI)(O.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN),
+    t3 = (0, $.xI)(O.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_MARGIN_SMALL),
     t7 = (0, $.xI)(O.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS),
     t4 = (0, $.xI)(O.A.STICKERS_CONSTANTS_STICKER_PICKER_PREVIEW_DIMENSIONS_SMALL),
     t9 = t7 + 2,
@@ -1673,7 +1673,7 @@ let t2 = (0, $.xI)(O.A.STICKERS_CONSTANTS_STICKER_PICKER_BREAKPOINT_SMALL),
                 collapsePremiumSearchSection: u && _.has(tP),
                 listWidth: N,
                 listPaddingRight: t8,
-                stickerNodeMargin: ei ? t3 : t6,
+                stickerNodeMargin: ei ? t6 : t3,
                 stickerNodeWidth: ei ? t9 : ne,
             }),
             {

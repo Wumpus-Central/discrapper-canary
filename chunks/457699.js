@@ -2,7 +2,7 @@ n.d(t, { A: () => u });
 var i = n(17928),
     r = n(73153),
     a = n(320095),
-    s = n(390248);
+    s = n(519460);
 let l = {};
 function o(e) {
     return `${e.channel_id}:${e.id}`;
@@ -45,6 +45,6 @@ let u = new c(r.h, {
         let { messageId: t, channelId: n } = e,
             i = o({ id: t, channel_id: n }),
             r = l[i];
-        null != r && (l[i] = (0, s.Td)(r));
+        null != r && (l[i] = (0, s.T)(r));
     },
 });

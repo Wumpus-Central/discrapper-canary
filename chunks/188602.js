@@ -1,4 +1,4 @@
-a.d(t, { default: () => H });
+a.d(t, { default: () => P });
 var s = a(477900),
     l = a(582128),
     r = a(503698),
@@ -28,16 +28,17 @@ var s = a(477900),
     N = a(945810),
     T = a(207913),
     V = a(393033);
-let y = (0, N.mj)({
+let b = (0, N.mj)({
     kind: "user",
     name: "2026-08-show-expressive-modal-subtitle-alt",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var b = a(73153),
+var y = a(73153),
     O = a(482876),
-    B = a(787301);
-let k = function (e) {
+    B = a(787301),
+    k = a(750481);
+let L = function (e) {
     let { icon: t, size: a = 24 } = e;
     return (0, s.jsx)("svg", {
         width: a,
@@ -48,23 +49,23 @@ let k = function (e) {
         children: t.paths.map((e) => (0, s.jsx)("path", { d: e.d, fillRule: e.fillRule, clipRule: e.fillRule }, e.d)),
     });
 };
-var L = a(40449),
-    Z = a(652215),
-    D = a(841365),
-    G = a(375708),
-    U = a(126106);
-let H = function (e) {
+var Z = a(40449),
+    D = a(652215),
+    G = a(841365),
+    U = a(375708),
+    H = a(126106);
+let P = function (e) {
     let t,
         a,
         r,
-        { transitionState: N, entryPoint: H, onComplete: P, onClose: W, dismissable: F } = e,
+        { transitionState: N, entryPoint: P, onComplete: W, onClose: F, dismissable: z } = e,
         {
-            loading: z,
-            error: J,
-            methods: X,
-            footerMessage: Y,
-            outageBannerMessage: $,
-            refetch: q,
+            loading: J,
+            error: X,
+            methods: Y,
+            footerMessage: $,
+            outageBannerMessage: q,
+            refetch: K,
         } = (function () {
             let [e, t] = l.useState(() => B.A.methodsV2 ?? []),
                 [a, s] = l.useState(() => B.A.methodsV2FooterMessage),
@@ -81,7 +82,7 @@ let H = function (e) {
                     (c(!0), d(!1));
                     try {
                         let e = (0, V.qn)() ? await (0, O.j)() : await (0, O.J)();
-                        (b.h.dispatch({
+                        (y.h.dispatch({
                             type: "AGE_VERIFICATION_METHODS_V2_LOAD_SUCCESS",
                             methods: e.methods,
                             footerMessage: e.footerMessage,
@@ -117,83 +118,83 @@ let H = function (e) {
                 }
             );
         })(),
-        K = (0, M.Z)(X),
-        Q = K.length > 0,
-        ee = l.useCallback(() => {
-            (P?.(), W());
-        }, [P, W]),
-        { initiateAgeVerificationV2: et } = (0, C.Ny)({ onComplete: ee, entryPoint: H, onMethodUnavailable: q }),
-        ea = l.useRef(!1),
-        [es, el] = l.useState(null),
-        er = null != es,
-        en = l.useMemo(() => (0, i.A)(), []),
-        ei =
+        Q = (0, M.Z)(Y),
+        ee = Q.length > 0,
+        et = l.useCallback(() => {
+            (W?.(), F());
+        }, [W, F]),
+        { initiateAgeVerificationV2: ea } = (0, k.N)({ onComplete: et, entryPoint: P, onMethodUnavailable: K }),
+        es = l.useRef(!1),
+        [el, er] = l.useState(null),
+        en = null != el,
+        ei = l.useMemo(() => (0, i.A)(), []),
+        ec =
             ((t = (0, V.W$)()),
             (a = (0, I.bG)([T.A], () => T.A.getShowExpressiveModalSubtitleAlt())),
-            (r = y.useConfig({ location: "age_verification_expressive_v2_modal" }).enabled),
+            (r = b.useConfig({ location: "age_verification_expressive_v2_modal" }).enabled),
             t ? a : r);
     l.useEffect(() => {
-        (0, S.Bs)(en, S.WU.EXPRESSIVE_V2, H);
-    }, [en, H]);
-    let ec = l.useCallback(
+        (0, S.Bs)(ei, S.WU.EXPRESSIVE_V2, P);
+    }, [ei, P]);
+    let eo = l.useCallback(
         async (e, t) => {
-            if (!ea.current) {
-                ((0, S.St)(en, S.WU.EXPRESSIVE_V2, S._7.METHOD_SELECT, e.method), (ea.current = !0), el(t));
+            if (!es.current) {
+                ((0, S.St)(ei, S.WU.EXPRESSIVE_V2, S._7.METHOD_SELECT, e.method), (es.current = !0), er(t));
                 try {
-                    await et(e);
+                    await ea(e);
                 } finally {
-                    ((ea.current = !1), el(null));
+                    ((es.current = !1), er(null));
                 }
             }
         },
-        [et, en],
+        [ea, ei],
     );
     return (0, s.jsxs)(v.k, {
         transitionState: N,
-        onClose: W,
+        onClose: F,
         gradientColor: "blue",
-        dismissable: F,
+        dismissable: z,
         graphic: {
             type: "image",
             src: "https://cdn.discordapp.com/assets/content/78be134dd5dcecb7d0b26e1aead0c61f79a95c93893a4acc82c9828c87d2165a.svg",
             aspectRatio: "21/9",
         },
-        title: (0, C.ST)(H, !0),
+        title: (0, C.ST)(P, !0),
         subtitle: (0, C.mK)(
-            H,
+            P,
             () => {
-                (w.A.openUrl(j.A.getArticleURL(Z.MVz.TIGGER_PAWTECT_LEARN_MORE)),
-                    (0, S.St)(en, S.WU.EXPRESSIVE_V2, S._7.LEARN_MORE));
+                (w.A.openUrl(j.A.getArticleURL(D.MVz.TIGGER_PAWTECT_LEARN_MORE)),
+                    (0, S.St)(ei, S.WU.EXPRESSIVE_V2, S._7.LEARN_MORE));
             },
             void 0,
-            ei
+            ec
                 ? () => {
-                      (w.A.openUrl(L.zS), (0, S.St)(en, S.WU.EXPRESSIVE_V2, S._7.TRUSTED_PROVIDERS));
+                      (w.A.openUrl(Z.zS), (0, S.St)(ei, S.WU.EXPRESSIVE_V2, S._7.TRUSTED_PROVIDERS));
                   }
                 : void 0,
             !0,
         ),
         children: [
             (0, s.jsx)("div", { "data-expressive-v2-graphic": !0, hidden: !0 }),
-            z && (0, s.jsx)(g.B, { direction: "vertical", align: "center", children: (0, s.jsx)(E.y, {}) }),
-            !z && Q && null != $ && (0, s.jsx)(x.p, { messageType: x.Y.WARNING, className: U.Ih, children: $ }),
-            !z &&
-                !Q &&
+            J && (0, s.jsx)(g.B, { direction: "vertical", align: "center", children: (0, s.jsx)(E.y, {}) }),
+            !J && ee && null != q && (0, s.jsx)(x.p, { messageType: x.Y.WARNING, className: H.Ih, children: q }),
+            !J &&
+                !ee &&
                 (0, s.jsx)(x.p, {
                     messageType: x.Y.ERROR,
                     action: (0, s.jsx)(p.$, {
                         variant: "secondary",
                         size: "sm",
-                        text: G.intl.string(D.default.hDvmYP),
-                        onClick: q,
+                        text: U.intl.string(G.default.hDvmYP),
+                        onClick: K,
                     }),
-                    children: G.intl.string(J ? D.default.Bkmk4Y : D.default.cR6336),
+                    children: U.intl.string(X ? G.default.Bkmk4Y : G.default.cR6336),
                 }),
-            Q &&
+            ee &&
                 (0, s.jsx)(g.B, {
                     direction: "vertical",
                     gap: 8,
-                    children: K.map((e) => {
+                    children: Q.map((e) => {
                         let t,
                             a = (function (e) {
                                 switch (e) {
@@ -215,21 +216,21 @@ let H = function (e) {
                             null != a
                                 ? (0, s.jsx)(a, { size: "md", color: "var(--text-strong)" })
                                 : null != e.icon
-                                  ? (0, s.jsx)(k, { icon: e.icon })
+                                  ? (0, s.jsx)(L, { icon: e.icon })
                                   : (0, s.jsx)(f._, { size: "md", color: "var(--text-strong)" });
                         let l = `${e.method}-${e.vendor}`,
-                            r = es === l;
+                            r = el === l;
                         return (0, s.jsxs)(
                             A.D,
                             {
-                                className: n()(U.kZ, { [U.w1]: er }),
+                                className: n()(H.kZ, { [H.w1]: en }),
                                 "aria-busy": r,
-                                "aria-disabled": er,
-                                onClick: er ? void 0 : () => ec(e, l),
+                                "aria-disabled": en,
+                                onClick: en ? void 0 : () => eo(e, l),
                                 children: [
-                                    (0, s.jsx)("div", { className: U.zc, children: t }),
+                                    (0, s.jsx)("div", { className: H.zc, children: t }),
                                     (0, s.jsxs)("div", {
-                                        className: U.Qq,
+                                        className: H.Qq,
                                         children: [
                                             (0, s.jsx)(_.E, {
                                                 variant: "text-md/normal",
@@ -237,7 +238,7 @@ let H = function (e) {
                                                 children: e.title,
                                             }),
                                             (0, s.jsx)("div", {
-                                                className: U.h_,
+                                                className: H.h_,
                                                 children: (0, s.jsx)(_.E, {
                                                     variant: "text-sm/normal",
                                                     color: "text-muted",
@@ -246,7 +247,7 @@ let H = function (e) {
                                             }),
                                             null != e.providedBy &&
                                                 (0, s.jsx)("div", {
-                                                    className: U.Vp,
+                                                    className: H.Vp,
                                                     children: (0, s.jsx)(_.E, {
                                                         variant: "text-sm/normal",
                                                         color: "text-muted",
@@ -256,20 +257,20 @@ let H = function (e) {
                                         ],
                                     }),
                                     r
-                                        ? (0, s.jsx)(E.y, { type: E.t.SPINNING_CIRCLE_SIMPLE, className: U.wt })
-                                        : (0, s.jsx)(R._, { size: "refresh_sm", className: U.ai }),
+                                        ? (0, s.jsx)(E.y, { type: E.t.SPINNING_CIRCLE_SIMPLE, className: H.wt })
+                                        : (0, s.jsx)(R._, { size: "refresh_sm", className: H.ai }),
                                 ],
                             },
                             l,
                         );
                     }),
                 }),
-            !z &&
-                Q &&
-                null != Y &&
+            !J &&
+                ee &&
+                null != $ &&
                 (0, s.jsx)("div", {
-                    className: U.qr,
-                    children: (0, s.jsx)(_.E, { variant: "text-sm/normal", color: "text-muted", children: Y }),
+                    className: H.qr,
+                    children: (0, s.jsx)(_.E, { variant: "text-sm/normal", color: "text-muted", children: $ }),
                 }),
         ],
     });

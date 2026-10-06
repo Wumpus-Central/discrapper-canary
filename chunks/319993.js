@@ -1,4 +1,4 @@
-n.d(t, { Gq: () => Y, WE: () => K, qn: () => H, Ay: () => $ });
+n.d(t, { Gq: () => K, WE: () => W, qn: () => J, Ay: () => Y });
 var l,
     i = n(477900),
     s = n(582128),
@@ -29,21 +29,20 @@ var l,
     _ = n(188645),
     R = n(796774),
     k = n(807348),
-    G = n(817232),
-    P = n(71393),
-    M = n(725807);
+    G = n(71393),
+    P = n(725807);
 n(801541);
-var L = n(889137);
+var M = n(889137);
 n(980504);
-var D = n(375708),
-    w =
+var L = n(375708),
+    D =
         (((l = {})[(l.JOIN_GUILD = 0)] = "JOIN_GUILD"),
         (l[(l.GET_NITRO = 1)] = "GET_NITRO"),
         (l[(l.NONE = 2)] = "NONE"),
         l),
-    U = n(202541),
-    z = n(652215),
-    V = n(653131);
+    w = n(202541),
+    U = n(652215),
+    z = n(653131);
 function B(e) {
     let { discoverableGuildId: t, closePopout: n, buttonType: l } = e,
         a = s.useCallback(async () => {
@@ -52,82 +51,82 @@ function B(e) {
                     (await T.A.joinGuild(t), T.A.transitionToGuildSync(t));
                 } catch {}
         }, [n, t]);
-    return l === w.GET_NITRO
-        ? (0, i.jsx)(M.A, {
+    return l === D.GET_NITRO
+        ? (0, i.jsx)(P.A, {
               fullWidth: !0,
               showGradient: !0,
-              premiumModalAnalyticsLocation: { section: z.JJy.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
-              subscriptionTier: U.pe.TIER_2,
+              premiumModalAnalyticsLocation: { section: U.JJy.PREMIUM_SOUNDMOJI_GUILD_INFO_POPOUT },
+              subscriptionTier: w.pe.TIER_2,
               size: S.$n.Sizes.SMALL,
               color: S.$n.Colors.CUSTOM,
               onClick: n,
-              textOptions: { textOverride: D.intl.string(D.t.pj0XBN) },
+              textOptions: { textOverride: L.intl.string(L.t.pj0XBN) },
           })
-        : l === w.JOIN_GUILD
+        : l === D.JOIN_GUILD
           ? (0, i.jsx)(C.$, {
                 variant: "primary",
                 size: "sm",
-                text: D.intl.string(D.t.riu2R5),
+                text: L.intl.string(L.t.riu2R5),
                 fullWidth: !0,
                 onClick: a,
             })
           : null;
 }
-function F(e) {
+function V(e) {
     let t,
         n,
         l,
         a,
-        { sound: r, channel: u, closePopout: c, refreshPosition: x } = e,
-        h = "0" === r.guildId,
-        j = (0, o.bG)([P.A], () => P.A.getGuild(r.guildId)),
-        g = !h && null != j,
-        [p, f] = s.useState(),
-        A = (0, b.tj)({ location: "SoundmojiGuildInfo" }),
-        I = h || g || null != p || !A,
-        [E, S] = s.useState(!I);
+        { sound: r, channel: u, closePopout: c, refreshPosition: x, renderSoundButton: h } = e,
+        j = "0" === r.guildId,
+        g = (0, o.bG)([G.A], () => G.A.getGuild(r.guildId)),
+        p = !j && null != g,
+        [f, A] = s.useState(),
+        I = (0, b.tj)({ location: "SoundmojiGuildInfo" }),
+        E = j || p || null != f || !I,
+        [S, C] = s.useState(!E);
     s.useEffect(() => {
-        I ||
-            (S(!0),
+        E ||
+            (C(!0),
             (0, R.nh)(r.soundId, r.guildId)
                 .then((e) => {
-                    f(e);
+                    A(e);
                 })
                 .finally(() => {
-                    (S(!1), x());
+                    (C(!1), x());
                 }));
-    }, [x, I, r.guildId, r.soundId]);
-    let { buttonType: C, description: T } =
+    }, [x, E, r.guildId, r.soundId]);
+    let { buttonType: T, description: P } =
             ((t = "0" === r.guildId),
             (n = (0, o.bG)([N.default], () => v.Ay.canUseSoundboardEverywhere(N.default.getCurrentUser()))),
             (l = (0, b.tj)({ location: "useSoundmojiGuildInfoData" })),
             (a = r.guildId !== u?.guild_id),
             {
-                buttonType: s.useMemo(() => (t || !l ? 2 : n ? (g || null == p ? 2 : 0) : 1), [t, n, l, g, p]),
+                buttonType: s.useMemo(() => (t || !l ? 2 : n ? (p || null == f ? 2 : 0) : 1), [t, n, l, p, f]),
                 description: s.useMemo(() => {
-                    let e = null != p;
-                    return (0, L.YW)({
+                    let e = null != f;
+                    return (0, M.YW)({
                         hasSoundmojiPermissions: n,
-                        isInGuild: g,
+                        isInGuild: p,
                         isGuildDiscoverable: e,
                         isSoundFromDifferentGuild: a,
                         canSendSoundmojis: l,
                         isDefaultSound: t,
                     })
-                        .with({ canSendSoundmojis: !1 }, () => D.intl.string(D.t.x2kyyJ))
-                        .with({ isDefaultSound: !0 }, () => D.intl.string(D.t.AabHep))
-                        .with({ isInGuild: !1, isGuildDiscoverable: !1 }, () => D.intl.string(D.t.MRYt06))
+                        .with({ canSendSoundmojis: !1 }, () => L.intl.string(L.t.x2kyyJ))
+                        .with({ isDefaultSound: !0 }, () => L.intl.string(L.t.AabHep))
+                        .with({ isInGuild: !1, isGuildDiscoverable: !1 }, () => L.intl.string(L.t.MRYt06))
                         .with({ hasSoundmojiPermissions: !0, isInGuild: !0, isSoundFromDifferentGuild: !1 }, () =>
-                            D.intl.string(D.t.p17MQJ),
+                            L.intl.string(L.t.p17MQJ),
                         )
                         .with({ hasSoundmojiPermissions: !0, isInGuild: !0, isSoundFromDifferentGuild: !0 }, () =>
-                            D.intl.string(D.t.Lkbm5s),
+                            L.intl.string(L.t.Lkbm5s),
                         )
                         .with({ hasSoundmojiPermissions: !0, isInGuild: !1, isGuildDiscoverable: !0 }, () =>
-                            D.intl.string(D.t.GTJmaS),
+                            L.intl.string(L.t.GTJmaS),
                         )
                         .with({ hasSoundmojiPermissions: !1, isInGuild: !0, isSoundFromDifferentGuild: !1 }, () =>
-                            D.intl.string(D.t["sj/imS"]),
+                            L.intl.string(L.t["sj/imS"]),
                         )
                         .with(
                             {
@@ -136,73 +135,73 @@ function F(e) {
                                 isSoundFromDifferentGuild: !0,
                                 canSendSoundmojis: !0,
                             },
-                            () => D.intl.string(D.t["3Ru2/x"]),
+                            () => L.intl.string(L.t["3Ru2/x"]),
                         )
                         .with({ hasSoundmojiPermissions: !1, isInGuild: !1, isGuildDiscoverable: !0 }, () =>
-                            D.intl.string(D.t.qRkWhZ),
+                            L.intl.string(L.t.qRkWhZ),
                         )
                         .exhaustive();
-                }, [t, p, n, g, a, l]),
+                }, [t, f, n, p, a, l]),
             }),
-        M = C === w.JOIN_GUILD,
-        U = !h && E,
-        z = s.useMemo(
-            () => (g ? y.GO.createFromGuildRecord(j) : null != p ? y.GO.createFromDiscoverableGuild(p) : void 0),
-            [j, g, p],
+        w = T === D.JOIN_GUILD,
+        U = !j && S,
+        V = s.useMemo(
+            () => (p ? y.GO.createFromGuildRecord(g) : null != f ? y.GO.createFromDiscoverableGuild(f) : void 0),
+            [g, p, f],
         );
     return U
         ? (0, i.jsx)(_.Y0, {})
         : (0, i.jsxs)("div", {
-              className: V.op,
+              className: z.op,
               children: [
                   (0, i.jsxs)(_.Uq, {
                       children: [
                           (0, i.jsxs)("div", {
-                              className: V.g4,
+                              className: z.g4,
                               children: [
-                                  (0, i.jsx)(G.Ay, {
+                                  h({
                                       buttonOverlay: k.If.NONE,
                                       sound: r,
                                       channel: void 0,
                                       isSoundmoji: !0,
                                       onSelectItem: () => {},
                                   }),
-                                  (0, i.jsx)(d.E, { variant: "text-sm/normal", children: T }),
+                                  (0, i.jsx)(d.E, { variant: "text-sm/normal", children: P }),
                               ],
                           }),
-                          null != z &&
+                          null != V &&
                               (0, i.jsxs)("div", {
-                                  className: V.Qe,
+                                  className: z.Qe,
                                   children: [
                                       (0, i.jsx)(d.E, {
                                           variant: "eyebrow",
                                           color: "text-muted",
-                                          className: V.x$,
-                                          children: g ? D.intl.string(D.t.tGDabk) : D.intl.string(D.t.rnOmOa),
+                                          className: z.x$,
+                                          children: p ? L.intl.string(L.t.tGDabk) : L.intl.string(L.t.rnOmOa),
                                       }),
                                       (0, i.jsx)("div", {
-                                          className: V.Ff,
+                                          className: z.Ff,
                                           children: (0, i.jsx)(O.G7, {
-                                              expressionSourceGuild: z,
-                                              hasJoinedExpressionSourceGuild: g,
-                                              isDisplayingJoinGuildButtonInPopout: M,
+                                              expressionSourceGuild: V,
+                                              hasJoinedExpressionSourceGuild: p,
+                                              isDisplayingJoinGuildButtonInPopout: w,
                                               closePopout: c,
                                           }),
                                       }),
-                                      (0, i.jsx)(B, { buttonType: C, discoverableGuildId: p?.id, closePopout: c }),
+                                      (0, i.jsx)(B, { buttonType: T, discoverableGuildId: f?.id, closePopout: c }),
                                   ],
                               }),
                       ],
                   }),
                   (0, i.jsx)("div", {
-                      className: V.aZ,
+                      className: z.aZ,
                       children: (0, i.jsx)(m.E, { type: { text: "BETA" }, variant: "brand" }),
                   }),
               ],
           });
 }
-var J = n(948611);
-function H() {
+var F = n(948611);
+function J() {
     let { volume: e, onVolumeChange: t } = (function () {
         let [e, t] = s.useState(E.HO.getSetting());
         return {
@@ -214,37 +213,37 @@ function H() {
         };
     })();
     return (0, i.jsxs)(u.D, {
-        className: V.xJ,
+        className: z.xJ,
         onClick: (e) => e.stopPropagation(),
         children: [
-            (0, i.jsx)(d.E, { variant: "text-sm/normal", children: D.intl.string(D.t["2JbvKw"]) }),
-            (0, i.jsx)(c.A, { onValueChange: t, className: V.aw, initialValue: (0, I.M)(e), maxValue: 100 }),
+            (0, i.jsx)(d.E, { variant: "text-sm/normal", children: L.intl.string(L.t["2JbvKw"]) }),
+            (0, i.jsx)(c.A, { onValueChange: t, className: z.aw, initialValue: (0, I.M)(e), maxValue: 100 }),
         ],
     });
 }
-function W(e) {
+function H(e) {
     let { sound: t, forceShowBetaLabel: n = !1 } = e,
         l = (0, b.tj)({ location: "SoundmojiBanner" }),
         s = (0, o.bG)([N.default], () => v.Ay.canUseSoundboardEverywhere(N.default.getCurrentUser())),
         a = (0, o.bG)([A.A], () => A.A.getGuildId());
     return n || s || "0" === t.guildId || t.guildId === a || !l
         ? (0, i.jsx)("div", {
-              className: V.aZ,
+              className: z.aZ,
               children: (0, i.jsx)(m.E, { type: { text: "BETA" }, variant: "brand" }),
           })
         : (0, i.jsxs)("div", {
-              className: V.Mq,
+              className: z.Mq,
               children: [
-                  (0, i.jsx)("div", { className: V.Nh }),
+                  (0, i.jsx)("div", { className: z.Nh }),
                   (0, i.jsxs)("div", {
-                      className: V.Pc,
+                      className: z.Pc,
                       children: [
-                          (0, i.jsx)(x.t, { size: "xxs", color: "white", className: V.aJ }),
+                          (0, i.jsx)(x.t, { size: "xxs", color: "white", className: z.aJ }),
                           (0, i.jsx)(d.E, {
                               variant: "text-xs/medium",
                               color: "text-overlay-light",
-                              className: V.sD,
-                              children: D.intl.string(D.t["BMw+7I"]),
+                              className: z.sD,
+                              children: L.intl.string(L.t["BMw+7I"]),
                           }),
                           (0, i.jsx)(m.E, { type: { text: "BETA" }, variant: "brand" }),
                       ],
@@ -252,32 +251,32 @@ function W(e) {
               ],
           });
 }
-function K(e) {
+function W(e) {
     let { sound: t } = e;
     return (0, i.jsxs)("div", {
-        className: r()(V.op, V.kX),
+        className: r()(z.op, z.kX),
         children: [
-            (0, i.jsx)(W, { sound: t }),
+            (0, i.jsx)(H, { sound: t }),
             (0, i.jsxs)("div", {
-                className: V.Br,
+                className: z.Br,
                 children: [
                     (0, i.jsxs)("div", {
-                        className: V.tn,
+                        className: z.tn,
                         children: [
-                            (0, i.jsx)(h.J, { size: "sm", className: V.nR }),
+                            (0, i.jsx)(h.J, { size: "sm", className: z.nR }),
                             (0, i.jsx)(d.E, { variant: "text-md/semibold", color: "text-strong", children: t.name }),
                         ],
                     }),
                     (0, i.jsx)("div", {
-                        className: V.tn,
-                        children: (0, i.jsx)(d.E, { variant: "text-sm/normal", children: D.intl.string(D.t.D6eYmf) }),
+                        className: z.tn,
+                        children: (0, i.jsx)(d.E, { variant: "text-sm/normal", children: L.intl.string(L.t.D6eYmf) }),
                     }),
                 ],
             }),
         ],
     });
 }
-function Y(e) {
+function K(e) {
     let { renderPopout: t, position: n, tooltipText: l, children: a, setTooltipShowing: r, clickableClassName: o } = e,
         [d, c] = s.useState(!1),
         [m, x] = s.useState(String(Date.now())),
@@ -333,23 +332,23 @@ function Y(e) {
             }),
     });
 }
-function $(e) {
-    let { sound: t, channel: n, setTooltipShowing: l } = e;
+function Y(e) {
+    let { sound: t, channel: n, setTooltipShowing: l, renderSoundButton: s } = e;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            (0, i.jsx)(Y, {
+            (0, i.jsx)(K, {
                 setTooltipShowing: l,
-                renderPopout: () => (0, i.jsx)(H, {}),
-                tooltipText: D.intl.string(D.t["19lt24"]),
+                renderPopout: () => (0, i.jsx)(J, {}),
+                tooltipText: L.intl.string(L.t["19lt24"]),
                 position: "top",
-                children: (0, i.jsx)(p.H, { size: "md", color: "currentColor", className: J.Wo }),
+                children: (0, i.jsx)(p.H, { size: "md", color: "currentColor", className: F.Wo }),
             }),
-            (0, i.jsx)(Y, {
+            (0, i.jsx)(K, {
                 setTooltipShowing: l,
-                renderPopout: (e) => (0, i.jsx)(F, { sound: t, channel: n, ...e }),
-                tooltipText: D.intl.string(D.t["KVbJU/"]),
+                renderPopout: (e) => (0, i.jsx)(V, { sound: t, channel: n, renderSoundButton: s, ...e }),
+                tooltipText: L.intl.string(L.t["KVbJU/"]),
                 position: "right",
-                children: (0, i.jsx)(f.CircleInformationIcon, { size: "md", color: "currentColor", className: J.Wo }),
+                children: (0, i.jsx)(f.CircleInformationIcon, { size: "md", color: "currentColor", className: F.Wo }),
             }),
         ],
     });

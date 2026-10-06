@@ -25,9 +25,9 @@ var n = a(477900),
     N = a(94264),
     y = a(549384),
     L = a(566119),
-    S = a(202541),
-    _ = a(652215),
-    O = a(901123),
+    O = a(202541),
+    S = a(652215),
+    _ = a(901123),
     T = a(1889),
     D = a(375708),
     M = a(226068),
@@ -41,7 +41,7 @@ function F() {
     });
 }
 function U() {
-    ((0, L.b)(), window.open(E.A.getArticleURL(_.MVz.ORBS_FAQ), "_blank"));
+    ((0, L.b)(), window.open(E.A.getArticleURL(S.MVz.ORBS_FAQ), "_blank"));
 }
 function I(e) {
     let { targetElementRef: t, shouldShow: a, onRequestClose: r, onNavigate: i, ctaText: u, ctaOnClick: o } = e,
@@ -53,16 +53,16 @@ function I(e) {
             ((0, L.RQ)(),
                 r(),
                 null != i && i(),
-                (0, j.pX)(O.BV.NITRO_HOME, { search: (0, d.stringify)({ perk: b.NITRO_ORBS_REWARDS_CARD_ID }) }));
+                (0, j.pX)(_.BV.NITRO_HOME, { search: (0, d.stringify)({ perk: b.NITRO_ORBS_REWARDS_CARD_ID }) }));
         }, [r, i]),
         q = l.useCallback(() => {
             ((0, L.gP)(),
                 r(),
                 null != i && i(),
-                (0, j.pX)(O.BV.NITRO_HOME, { search: (0, d.stringify)({ section: y.L }) }));
+                (0, j.pX)(_.BV.NITRO_HOME, { search: (0, d.stringify)({ section: y.L }) }));
         }, [r, i]),
         z = l.useMemo(() => {
-            let e = (0, R.YE)(P, S.PremiumTypes.TIER_2);
+            let e = (0, R.YE)(P, O.PremiumTypes.TIER_2);
             if (!E || W) return null;
             if (e && null != w) {
                 let e = (0, c.default)(new Date(w.next_reward_date), new Date());
@@ -92,7 +92,7 @@ function I(e) {
         modal: !0,
         closeOnClickOutside: !0,
         children: (0, n.jsx)(v.N, {
-            theme: G ? _.NJ8.DARK : void 0,
+            theme: G ? S.NJ8.DARK : void 0,
             children: (e) =>
                 (0, n.jsxs)("div", {
                     className: s()(e, M.j),
@@ -192,77 +192,79 @@ function X(e) {
             analyticsPage: d,
             className: f,
             pillVariant: m,
+            themeOverride: x,
         } = e,
-        { balance: x } = (0, p.W)(),
-        [h, v] = l.useState(z.k.DEFAULT),
-        [g, k] = l.useState(!1),
-        [C, j] = l.useState(!1),
-        A = l.useRef(null),
-        E = l.useRef(null);
-    (0, o.j)(!g);
-    let R = (0, V.H)({ location: "BalanceWidgetMenu" }),
-        b = l.useCallback(() => {
-            let e = !g;
+        { balance: h } = (0, p.W)(),
+        [v, g] = l.useState(z.k.DEFAULT),
+        [k, C] = l.useState(!1),
+        [j, A] = l.useState(!1),
+        E = l.useRef(null),
+        R = l.useRef(null);
+    (0, o.j)(!k);
+    let b = (0, V.H)({ location: "BalanceWidgetMenu" }),
+        N = l.useCallback(() => {
+            let e = !k;
             (e &&
                 null != d &&
                 (0, W.Y)({
                     pageType: d,
-                    sectionType: R ? u.A.ORB_WALLET : _.JJy.ORBS_BALANCE_MENU,
-                    ctaObject: R ? u.A.ORB_WALLET_OPEN_FROM_BALANCE_PILL : _.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
+                    sectionType: b ? u.A.ORB_WALLET : S.JJy.ORBS_BALANCE_MENU,
+                    ctaObject: b ? u.A.ORB_WALLET_OPEN_FROM_BALANCE_PILL : S.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                 }),
-                v(e ? z.k.SELECTED : z.k.DEFAULT),
-                k(e));
-        }, [g, d, R]),
-        N = l.useCallback(() => {
-            g && b();
-        }, [g, b]),
-        y = (0, i.A)(null, N),
-        { hasUnreadUpdate: L } = (0, q.I)({ enabled: R }),
-        S = t ?? L,
-        O = l.useMemo(
+                g(e ? z.k.SELECTED : z.k.DEFAULT),
+                C(e));
+        }, [k, d, b]),
+        y = l.useCallback(() => {
+            k && N();
+        }, [k, N]),
+        L = (0, i.A)(null, y),
+        { hasUnreadUpdate: O } = (0, q.I)({ enabled: b }),
+        _ = t ?? O,
+        T = l.useMemo(
             () =>
                 (0, n.jsx)(H, {
-                    pillRef: A,
-                    clickableRef: E,
-                    ariaExpanded: g,
-                    balance: x,
-                    balanceWidgetMode: h,
+                    pillRef: E,
+                    clickableRef: R,
+                    ariaExpanded: k,
+                    balance: h,
+                    balanceWidgetMode: v,
                     onMouseDown: (e) => {
                         e.stopPropagation();
                     },
-                    onClick: b,
+                    onClick: N,
                     variant: m,
-                    showNotificationBadge: S,
+                    themeOverride: x,
+                    showNotificationBadge: _,
                 }),
-            [x, h, m, S, b, g],
+            [h, v, m, x, _, N, k],
         ),
-        T = l.useCallback(
+        D = l.useCallback(
             (e) =>
-                R
+                b
                     ? e
                         ? (0, n.jsx)(Q.EA, {
-                              cardRef: y,
-                              returnRef: E,
-                              targetElementRef: A,
+                              cardRef: L,
+                              returnRef: R,
+                              targetElementRef: E,
                               shouldShow: e,
                               analyticsPage: d,
                               onCloseWallet: (e) => {
-                                  (b(), "navigation" === e && null != c && c());
+                                  (N(), "navigation" === e && null != c && c());
                               },
                           })
                         : null
                     : (0, n.jsx)(I, {
-                          targetElementRef: A,
+                          targetElementRef: E,
                           shouldShow: e,
-                          onRequestClose: b,
+                          onRequestClose: N,
                           ctaText: a,
                           onNavigate: c,
                           ctaOnClick: () => {
-                              (b(), r());
+                              (N(), r());
                           },
                       }),
-            [R, y, A, b, a, r, d, c],
+            [b, L, E, N, a, r, d, c],
         );
-    return (0, n.jsxs)("div", { className: s()(Y.kL, f, { [Y.R]: C, [Y.RK]: !C }), children: [O, T(g)] });
+    return (0, n.jsxs)("div", { className: s()(Y.kL, f, { [Y.R]: j, [Y.RK]: !j }), children: [T, D(k)] });
 }
 X.CardAlignment = J;

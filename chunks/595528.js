@@ -8,7 +8,7 @@ var i = n(435558),
     d = n(183636),
     c = n(626584),
     u = n(652896),
-    _ = n(796774),
+    _ = n(308877),
     E = n(617617),
     A = n(280450),
     h = n(470710),
@@ -2031,7 +2031,7 @@ async function e6(e) {
                 !e2)
         ) {
             let e = f.A.getChannel(n);
-            null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, _.CX)(n));
+            null != e && ((t = { guildId: e.getGuildId(), channelId: n }), (0, _.A)(n));
         } else (p.A.setLastSessionVoiceChannelId(null != n ? n : null), o.default.selectVoiceChannel(null));
     }
     (H.update(t, !0), (e2 = !1), (e5 = null));

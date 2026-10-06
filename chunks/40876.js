@@ -771,7 +771,7 @@ let r = {
     },
     SharedSpacesWarningManager: {
         actions: ["CHANNEL_SELECT", "APP_STATE_UPDATE"],
-        inlineRequire: () => n(514581).Ay,
+        inlineRequire: () => n(814037).A,
         neverLoadBeforeConnectionOpen: !0,
     },
     GlobalDiscoveryServersFeaturedSearchManager: {

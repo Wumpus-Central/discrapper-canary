@@ -124,7 +124,7 @@ let ee = u.Ay.connectStores([J.A], (e) => {
     return { skus: J.A.getForApplication(t) };
 })($);
 var et = n(155718),
-    en = n(95561),
+    en = n(666860),
     ei = n(945810);
 let el = (0, ei.mj)({
     kind: "guild",

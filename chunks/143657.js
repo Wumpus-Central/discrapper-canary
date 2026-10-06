@@ -56,7 +56,7 @@ var F = n(180662),
 function q(e, t) {
     return { mediaAttachmentState: { status: t, mediaURL: e }, emoji: void 0, stickerId: void 0 };
 }
-var G = n(95561),
+var G = n(666860),
     M = n(652215),
     B = n(503698),
     H = n.n(B),

@@ -8,8 +8,8 @@ var n = t(477900),
     o = t(652215),
     d = t(375708);
 function u(e) {
-    let { location: l, onNavigate: t, variant: u } = e,
-        A = a.useCallback(() => {
+    let { location: l, onNavigate: t, variant: u, themeOverride: A } = e,
+        C = a.useCallback(() => {
             ((0, r.Y)({ pageType: l, sectionType: o.JJy.ORBS_BALANCE_MENU, ctaObject: o.ZSU.CTA_TO_QUEST_HOME }),
                 null != t && t(),
                 (0, s.mA)({ fromContent: i.u.ORBS_BALANCE_MENU }));
@@ -18,8 +18,9 @@ function u(e) {
         analyticsPage: l,
         cardAlignment: c.SS.CardAlignment.END,
         ctaText: d.intl.string(d.t.VC4Mq0),
-        ctaOnClick: A,
+        ctaOnClick: C,
         onNavigate: t,
         pillVariant: u,
+        themeOverride: A,
     });
 }

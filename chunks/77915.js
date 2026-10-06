@@ -1,7 +1,7 @@
 l.d(t, { B6: () => c, MX: () => u, WK: () => o, XG: () => d });
 var n = l(17928),
     i = l(30370),
-    a = l(17085),
+    a = l(606072),
     s = l(652215);
 function r(e) {
     return e.type === s.fg2.SPOTIFY && !e.revoked;
