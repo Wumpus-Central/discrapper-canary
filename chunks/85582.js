@@ -1,9 +1,9 @@
 (r.r(n),
     r.d(n, {
         ImageConversionFailureReason: () => c,
-        convertFileToJpeg: () => f,
-        maybeConvertHeicToJpeg: () => p,
-        maybeConvertJxrToJpeg: () => v,
+        convertFileToJpeg: () => v,
+        maybeConvertHeicToJpeg: () => d,
+        maybeConvertJxrToJpeg: () => f,
         renameToJpegExtension: () => s.DP,
     }));
 var i,
@@ -19,43 +19,48 @@ var c =
     (i.CONVERSION_FAILED = "conversion_failed"),
     (i.UNKNOWN_ERROR = "unknown_error"),
     i);
-let u = { label: "heic", matches: s.E5, canConvert: (e) => e.canConvertHeic() },
-    m = { label: "jxr", matches: s.Tn, canConvert: (e) => e.canConvertJxr() };
-async function d(e, n, r, i) {
-    let { label: t, matches: s, canConvert: c } = n;
-    if (!s(e)) return null;
+let u = {
+        label: "heic",
+        matches: s.E5,
+        canConvert: (e) => e.canConvertHeic(),
+        quality: 80,
+        maxFileSizeBytes: 0x1400000,
+    },
+    m = { label: "jxr", matches: s.Tn, canConvert: (e) => e.canConvertJxr(), quality: 85, maxFileSizeBytes: 0x3200000 };
+async function p(e, n) {
+    let { label: r, matches: i, canConvert: t, quality: s, maxFileSizeBytes: c } = n;
+    if (!i(e)) return null;
     let u = performance.now();
     function m() {
         return Math.round(performance.now() - u);
     }
-    function d(n) {
+    function p(n) {
         return { success: !1, sizeBefore: e.size, sizeAfter: e.size, reason: n, compressTimeMs: m() };
     }
-    let p = o.A?.sysimg;
-    if (null == p) return (l.verbose("sysimg not available (not Electron)"), d("native_module_unavailable"));
+    let d = o.A?.sysimg;
+    if (null == d) return (l.verbose("sysimg not available (not Electron)"), p("native_module_unavailable"));
     try {
-        if (!(await c(p))) return (l.verbose(`platform does not support ${t} conversion`), d("platform_unsupported"));
-        if (null != i && e.size > i) return (l.verbose(`file too large: ${e.size} > ${i}`), d("size_limit_exceeded"));
+        if (!(await t(d))) return (l.verbose(`platform does not support ${r} conversion`), p("platform_unsupported"));
+        if (e.size > c) return (l.verbose(`file too large: ${e.size} > ${c}`), p("size_limit_exceeded"));
         let n = await e.arrayBuffer(),
-            o = Math.min(100, Math.max(1, r)),
-            s = JSON.stringify({ format: "jpeg", quality: o }),
-            u = await p.convertBytes(n, s),
-            v = new Blob([u], { type: "image/jpeg" }),
+            i = JSON.stringify({ format: "jpeg", quality: s }),
+            o = await d.convertBytes(n, i),
+            u = new Blob([o], { type: "image/jpeg" }),
             f = m();
-        l.log(`converted ${e.name}: ${e.size} -> ${v.size} bytes in ${f}ms`);
-        let g = null;
+        l.log(`converted ${e.name}: ${e.size} -> ${u.size} bytes in ${f}ms`);
+        let v = null;
         try {
-            g = (await p.getBackendName?.()) ?? null;
+            v = (await d.getBackendName?.()) ?? null;
         } catch {
-            g = null;
+            v = null;
         }
         return {
             success: !0,
-            convertedBlob: v,
+            convertedBlob: u,
             sizeBefore: e.size,
-            sizeAfter: v.size,
+            sizeAfter: u.size,
             compressTimeMs: f,
-            imageCompressionQuality: o / 100,
+            imageCompressionQuality: s / 100,
             imageEncoderType: (function (e) {
                 switch (e) {
                     case "WIC":
@@ -67,46 +72,42 @@ async function d(e, n, r, i) {
                     default:
                         return a.ad.SYSIMG_UNKNOWN;
                 }
-            })(g),
+            })(v),
         };
     } catch (n) {
-        return (l.warn(`${t} conversion failed for ${e.name}:`, n), d("conversion_failed"));
+        return (l.warn(`${r} conversion failed for ${e.name}:`, n), p("conversion_failed"));
     }
 }
-function p(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 85,
-        r = arguments.length > 2 ? arguments[2] : void 0;
-    return d(e, u, n, r);
+function d(e) {
+    return p(e, u);
 }
-function v(e) {
-    let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 85,
-        r = arguments.length > 2 ? arguments[2] : void 0;
-    return d(e, m, n, r);
+function f(e) {
+    return p(e, m);
 }
-async function f(e, n, r, i) {
-    let o = await ("heic" === n ? p(e, r, i) : v(e, r, i));
-    return null == o
+async function v(e, n) {
+    let r = await ("heic" === n ? d(e) : f(e));
+    return null == r
         ? null
-        : o.success && null != o.convertedBlob
-          ? (l.log(`${n} conversion worked for ${e.name}: ${o.sizeBefore} -> ${o.sizeAfter} bytes`),
+        : r.success && null != r.convertedBlob
+          ? (l.log(`${n} conversion worked for ${e.name}: ${r.sizeBefore} -> ${r.sizeAfter} bytes`),
             {
-                convertedFile: new File([o.convertedBlob], (0, s.DP)(e.name), {
+                convertedFile: new File([r.convertedBlob], (0, s.DP)(e.name), {
                     type: "image/jpeg",
                     lastModified: e.lastModified,
                 }),
                 analytics: {
                     convertedMimeType: "image/jpeg",
-                    compressTimeMs: o.compressTimeMs,
-                    imageCompressionQuality: o.imageCompressionQuality,
-                    imageEncoderType: o.imageEncoderType,
+                    compressTimeMs: r.compressTimeMs,
+                    imageCompressionQuality: r.imageCompressionQuality,
+                    imageEncoderType: r.imageEncoderType,
                 },
             })
           : {
                 convertedFile: null,
                 analytics: {
                     convertedMimeType: null,
-                    conversionFailureReason: o.reason ?? "unknown_error",
-                    compressTimeMs: o.compressTimeMs,
+                    conversionFailureReason: r.reason ?? "unknown_error",
+                    compressTimeMs: r.compressTimeMs,
                 },
             };
 }

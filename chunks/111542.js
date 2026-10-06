@@ -17,46 +17,36 @@ async function l(e) {
     let t = a(e);
     if (null == t || e.platform !== i.x.WEB) return e;
     try {
-        let [
-                { convertFileToJpeg: i },
-                { HeicUploadConversionExperiment: a },
-                { JxrUploadConversionExperiment: s },
-                { default: l },
-            ] = await Promise.all([
+        let [{ convertFileToJpeg: i }, { default: a }] = await Promise.all([
                 n.e("86851").then(n.bind(n, 85582)),
-                Promise.resolve().then(n.bind(n, 669646)),
-                Promise.resolve().then(n.bind(n, 231971)),
                 Promise.resolve().then(n.bind(n, 860840)),
             ]),
-            { experiment: o, sourceMimeType: d } =
-                "heic" === t ? { experiment: a, sourceMimeType: r.II } : { experiment: s, sourceMimeType: r.NX },
-            c = e.file,
-            u = {
+            s = "heic" === t ? r.II : r.NX,
+            l = e.file,
+            o = {
                 originalContentType:
                     e.compressionMetadata?.originalContentType != null &&
                     "" !== e.compressionMetadata.originalContentType
                         ? e.compressionMetadata.originalContentType
-                        : d(c),
-                preCompressionSize: e.compressionMetadata?.preCompressionSize ?? c.size,
+                        : s(l),
+                preCompressionSize: e.compressionMetadata?.preCompressionSize ?? l.size,
             },
-            _ = o.getConfig({ location: `imagePreConvert.maybePreConvertImageItem.${t}` });
-        if (!_.enabled) return { ...e, compressionMetadata: u, imageConversionEvaluated: !0 };
-        let E = await i(c, t, _.quality, _.maxFileSizeBytes);
-        if (null == E || null == E.convertedFile)
+            d = await i(l, t);
+        if (null == d || null == d.convertedFile)
             return {
                 ...e,
-                compressionMetadata: u,
+                compressionMetadata: o,
                 imageConversionEvaluated: !0,
-                imageConversionAnalytics: E?.analytics,
+                imageConversionAnalytics: d?.analytics,
             };
-        let A = (await l.fromBlob(c).catch(() => null)) ?? void 0;
+        let c = (await a.fromBlob(l).catch(() => null)) ?? void 0;
         return {
             ...e,
-            file: E.convertedFile,
-            compressionMetadata: u,
-            originalMd5: A,
+            file: d.convertedFile,
+            compressionMetadata: o,
+            originalMd5: c,
             imageConversionEvaluated: !0,
-            imageConversionAnalytics: E.analytics,
+            imageConversionAnalytics: d.analytics,
         };
     } catch {
         return e;
