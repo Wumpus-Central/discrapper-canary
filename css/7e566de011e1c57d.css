@@ -344,14 +344,8 @@
     margin: 32px 0
 }
 
-.createButton__97dd8,
-.emptyStateImage__97dd8 {
+.createButton__97dd8 {
     margin-bottom: 24px
-}
-
-.emptyStateImage__97dd8 {
-    height: 145px;
-    width: 272px
 }
 
 .emptyStateButton__97dd8 {
@@ -392,4 +386,4 @@
     color: var(--text-strong)
 }
 
-/*# sourceMappingURL=86bb7ef0ae48e334.css.map*/
+/*# sourceMappingURL=7e566de011e1c57d.css.map*/
