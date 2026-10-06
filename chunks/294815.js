@@ -8355,7 +8355,7 @@ let uk = (0, nJ.Fe)({ createPromise: uD, webpackId: 883396, name: "StageChannelC
         name: "GuildMemberModViewSidebar",
     }),
     uU = (0, nJ.Fe)({
-        createPromise: () => Promise.all([t.e("188547"), t.e("269178"), t.e("105906")]).then(t.bind(t, 546377)),
+        createPromise: () => Promise.all([t.e("814364"), t.e("269178"), t.e("105906")]).then(t.bind(t, 546377)),
         webpackId: 546377,
         name: "FriendsSidebar",
     });

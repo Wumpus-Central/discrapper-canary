@@ -258,6 +258,20 @@
     margin-inline-start: auto
 }
 
+.gameName__1af21,
+.header__1af21 {
+    cursor: pointer
+}
+
+.gameName__1af21:hover {
+    text-decoration: underline
+}
+
+.gameIcon__1af21 {
+    cursor: pointer;
+    display: flex
+}
+
 .container_f0371f {
     display: flex;
     flex: 1 1 auto;
@@ -2511,4 +2525,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=811ef96ba2ba2fff.css.map*/
+/*# sourceMappingURL=ef9eaf3806908c3c.css.map*/
