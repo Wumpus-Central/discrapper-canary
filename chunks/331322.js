@@ -1,49 +1,50 @@
-n.d(t, { B: () => c });
-var i = n(477900),
-    r = n(582128),
-    a = n(503698),
-    s = n.n(a),
-    l = n(359689),
-    o = n.n(l),
-    d = n(32690);
-let c = r.forwardRef(function (e, t) {
-    var n;
+n.d(t, { B: () => d });
+var i = n(477900);
+n(582128);
+var r = n(503698),
+    a = n.n(r),
+    s = n(359689),
+    l = n.n(s),
+    o = n(32690);
+function d(e) {
+    var t;
     let {
-        as: r = "div",
-        gap: a = 8,
-        direction: l = "vertical",
-        align: c = "stretch",
-        justify: _ = "start",
-        wrap: E = !1,
-        padding: A = 0,
-        fullWidth: h = !0,
-        style: f,
-        className: I,
-        children: p,
+        as: n = "div",
+        gap: r = 8,
+        direction: s = "vertical",
+        align: d = "stretch",
+        justify: u = "start",
+        wrap: _ = !1,
+        padding: E = 0,
+        fullWidth: A = !0,
+        style: h,
+        className: f,
+        children: I,
+        ref: p,
         ...T
     } = e;
-    return (0, i.jsx)(r, {
-        ref: t,
-        "data-align": c,
-        "data-justify": _,
-        "data-direction": l,
-        "data-wrap": E,
-        "data-full-width": h,
-        className: s()(d.t, I),
+    return (0, i.jsx)(n, {
+        ref: p,
+        "data-align": d,
+        "data-justify": u,
+        "data-direction": s,
+        "data-wrap": _,
+        "data-full-width": A,
+        className: a()(o.t, f),
         style: {
-            ...f,
-            gap: u(a),
-            ...("number" == typeof (n = A) || "string" == typeof n
-                ? { padding: u(n) }
-                : Object.entries(n).reduce((e, t) => {
+            ...h,
+            gap: c(r),
+            ...("number" == typeof (t = E) || "string" == typeof t
+                ? { padding: c(t) }
+                : Object.entries(t).reduce((e, t) => {
                       let [n, i] = t;
-                      return ((e[`padding${o()(n)}`] = u(i)), e);
+                      return ((e[`padding${l()(n)}`] = c(i)), e);
                   }, {})),
         },
         ...T,
-        children: p,
+        children: I,
     });
-});
-function u(e) {
+}
+function c(e) {
     return `var(--space-${e})`;
 }
