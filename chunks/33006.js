@@ -9,8 +9,8 @@ var r = n(143236),
     d = n(998218),
     h = n(19575),
     p = n(636401),
-    _ = n(861621),
-    A = n(313731),
+    A = n(861621),
+    _ = n(313731),
     m = n(324029),
     g = n(72611),
     f = n(546983),
@@ -26,8 +26,8 @@ try {
 }
 let C = h.Ay.requireModule("discord_rpc").RPCWebSocket,
     y = window.GLOBAL_ENV.MARKETING_ENDPOINT,
-    O = new c.A("RPCServer:WSS"),
-    S = [];
+    S = new c.A("RPCServer:WSS"),
+    O = [];
 function w(e) {
     return "function" == typeof e ? e() : e;
 }
@@ -39,11 +39,11 @@ function N() {
                 : () => {
                       if (!w(i.listening)) return;
                       let e = i.address().port;
-                      (O.info(`Starting on ${e}`), a.h.dispatch({ type: "RPC_SERVER_READY", port: e }));
+                      (S.info(`Starting on ${e}`), a.h.dispatch({ type: "RPC_SERVER_READY", port: e }));
                   };
     i.listen(E.xEi + (e % E.sJq), "127.0.0.1", t);
 }
-function k(e, t, n) {
+function T(e, t, n) {
     let o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : 200,
         i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
         r =
@@ -62,11 +62,11 @@ function k(e, t, n) {
         t.writeHead(o, { ...i, ...r }),
         t.end(n));
 }
-function T(e, t, n, o) {
+function k(e, t, n, o) {
     let i = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : 0;
-    k(e, t, { code: i, message: o }, n);
+    T(e, t, { code: i, message: o }, n);
 }
-class b extends A.A {
+class b extends _.A {
     _socket;
     constructor(e, t, n) {
         if ((super({ type: I.z4.WEBSOCKET }, t, n), -1 === ["etf", "json"].indexOf(n)))
@@ -77,7 +77,7 @@ class b extends A.A {
     }
     send(e) {
         ((u.default.isLoggingOverlayEvents || (e.cmd !== E.e$_.OVERLAY && e.evt !== E.ZE4.OVERLAY)) &&
-            O.info(`Socket Emit: ${this.id}`, (0, _.A)(e)),
+            S.info(`Socket Emit: ${this.id}`, (0, A.A)(e)),
             null != o && "etf" === this.encoding
                 ? this._socket.send(o.pack(e), { binary: !0 })
                 : this._socket.send(JSON.stringify(e)));
@@ -86,7 +86,7 @@ class b extends A.A {
         this._socket.close(e, t);
     }
 }
-class L extends A.A {
+class L extends _.A {
     _sendCallback;
     _closeCallback;
     constructor(e, t, n, o) {
@@ -95,7 +95,7 @@ class L extends A.A {
         ((this._sendCallback = e), (this._closeCallback = t));
     }
     send(e) {
-        ((u.default.isLoggingOverlayEvents || e.cmd !== E.e$_.OVERLAY) && O.info(`Socket Emit: ${this.id}`, e),
+        ((u.default.isLoggingOverlayEvents || e.cmd !== E.e$_.OVERLAY) && S.info(`Socket Emit: ${this.id}`, e),
             this._sendCallback(e));
     }
     close(e, t) {
@@ -107,7 +107,7 @@ class R extends r.EventEmitter {
         super();
         let e = 0;
         ((i = C.http.createServer()).on("error", (t) => {
-            (O.error(`Error: ${t.message}`),
+            (S.error(`Error: ${t.message}`),
                 ("EADDRINUSE" === t.code || t.message.includes("EADDRINUSE")) && setTimeout(() => N(++e), 1e3));
         }),
             i.on("request", this.handleRequest.bind(this)),
@@ -123,7 +123,7 @@ class R extends r.EventEmitter {
             i = w(e.method);
         if ("POST" === i && (0, m.xp)(n)) return void (0, m.JX)(e, t);
         if ("POST" === i && (0, g.J9)(n)) return void (0, g.Xw)(e, t);
-        if ("/rpc" === n && "OPTIONS" === i) return void k(e, t, { body: "" });
+        if ("/rpc" === n && "OPTIONS" === i) return void T(e, t, { body: "" });
         let r = "POST" === i;
         if ("/rpc" === n && ("GET" === i || r)) {
             let n = new URLSearchParams(o),
@@ -136,24 +136,24 @@ class R extends r.EventEmitter {
                         t.writeHead(301),
                         t.end());
                 },
-                l = new L(!r ? s : k.bind(null, e, t), !r ? s : T.bind(null, e, t, 400), Number(n.get("v")), i);
+                l = new L(!r ? s : T.bind(null, e, t), !r ? s : k.bind(null, e, t, 400), Number(n.get("v")), i);
             r
                 ? (0, f.j7)(l, w(e.headers).origin, n.get("client_id"))
                       .then(() => {
                           let n = "";
                           (e.on("data", (e) => (n += e)),
-                              e.on("error", () => T(e, t, 500, "Internal Server Error")),
+                              e.on("error", () => k(e, t, 500, "Internal Server Error")),
                               e.on("end", () => this.handleMessage(l, n)));
                       })
                       .catch((e) => {
                           let { code: t, message: n } = e;
                           return l.close(t, n);
                       })
-                : ((l.authorization.scopes = [I.kw]),
+                : ((l.authorization.scopes = new Set([I.kw])),
                   this.handleMessage(l, decodeURIComponent(n.get("payload") ?? "")));
             return;
         }
-        T(e, t, 404, "Not Found");
+        k(e, t, 404, "Not Found");
     }
     handleConnection(e) {
         let t,
@@ -165,18 +165,18 @@ class R extends r.EventEmitter {
             e.close(t.code, t.message);
             return;
         }
-        (O.info(`Socket Opened: ${t.id}`),
-            e.on("error", (e) => O.error(`WS Error: ${e.message}`)),
+        (S.info(`Socket Opened: ${t.id}`),
+            e.on("error", (e) => S.error(`WS Error: ${e.message}`)),
             e.on("close", (e, n) => {
-                (O.info(`Socket Closed: ${t.id}, code ${e}, message ${n}`),
+                (S.info(`Socket Closed: ${t.id}, code ${e}, message ${n}`),
                     t.abortController.abort("DISCONNECTED"),
-                    l().remove(S, (e) => e === t),
+                    l().remove(O, (e) => e === t),
                     this.emit("disconnect", t));
             }),
             (0, f.j7)(t, o, n.get("client_id"))
                 .then(() => {
                     t.abortController.signal.aborted ||
-                        (S.push(t), e.on("message", (e) => this.handleMessage(t, e)), this.emit("connect", t));
+                        (O.push(t), e.on("message", (e) => this.handleMessage(t, e)), this.emit("connect", t));
                 })
                 .catch((e) => {
                     let { code: n, message: o } = e;
@@ -194,7 +194,7 @@ class R extends r.EventEmitter {
             return;
         }
         ((u.default.isLoggingOverlayEvents || n.cmd !== E.e$_.OVERLAY) &&
-            O.info(`Socket Message: ${e.id}`, (0, _.A)(n)),
+            S.info(`Socket Message: ${e.id}`, (0, A.A)(n)),
             this.emit("request", e, n));
     }
 }

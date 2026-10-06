@@ -1,19 +1,28 @@
-r.d(e, { A: () => s });
-var n = r(477900),
-    u = r(536246),
-    t = r(162802),
-    o = r(355361);
-function s(a) {
-    let { application: e, queryParams: r, url: s, onIframeMount: i, onIframeUnmount: c, onGuestReload: l } = a;
-    return (0, n.jsx)(t.o, {
-        allowPopups: (0, u.b)(e),
+a.d(r, { A: () => s });
+var t = a(477900),
+    n = a(536246),
+    o = a(597396),
+    u = a(355361);
+function s(e) {
+    let {
+        application: r,
+        queryParams: a,
+        url: s,
+        contextSource: c,
+        onIframeMount: i,
+        onIframeUnmount: l,
+        onGuestReload: m,
+    } = e;
+    return (0, t.jsx)(o.o, {
+        allowPopups: (0, n.b)(r),
         referrerPolicy: "origin",
         url: s,
         onIframeMount: i,
-        onIframeUnmount: c,
-        onGuestReload: l,
-        queryParams: r,
-        className: o.p,
+        onIframeUnmount: l,
+        onGuestReload: m,
+        contextSource: c,
+        queryParams: a,
+        className: u.p,
         shouldRefocus: !1,
     });
 }

@@ -3,8 +3,8 @@
     B_: () => B,
     D2: () => ee,
     Gc: () => U,
-    IR: () => Y,
-    LP: () => x,
+    IR: () => x,
+    LP: () => Y,
     SK: () => z,
     SN: () => G,
     Ub: () => X,
@@ -12,7 +12,7 @@
     e2: () => W,
     hk: () => M,
     lG: () => Z,
-    px: () => F,
+    px: () => H,
     qG: () => q,
     sq: () => Q,
     uM: () => J,
@@ -31,8 +31,8 @@ var o = n(567243),
     d = n(763754),
     h = n(395671),
     p = n(95701),
-    _ = n(889227),
-    A = n(734057),
+    A = n(889227),
+    _ = n(734057),
     m = n(71393),
     g = n(25578),
     f = n(232835),
@@ -41,13 +41,13 @@ var o = n(567243),
     v = n(977997),
     C = n(927813),
     y = n(562153),
-    O = n(257120),
-    S = n(998218),
+    S = n(257120),
+    O = n(998218),
     w = n(636401),
     N = n(639621),
-    k = n(613057),
-    T = n(652215);
-let b = S.A.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)?.host ?? "localhost",
+    T = n(613057),
+    k = n(652215);
+let b = O.A.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)?.host ?? "localhost",
     L = (function () {
         let e = b.split(":")[0];
         if (!e.includes(".")) return e;
@@ -55,7 +55,7 @@ let b = S.A.toURLSafe(window.GLOBAL_ENV.API_ENDPOINT)?.host ?? "localhost",
             n = t[t.length - 1];
         return /^\d+$/.test(n) ? e : t.slice(-2).join(".");
     })(),
-    R = RegExp(`^${O.A.escape("https://")}(?:[a-z]+\\.)?(${O.A.escape(L)}|discordapp.com|discord.com)$`),
+    R = RegExp(`^${S.A.escape("https://")}(?:[a-z]+\\.)?(${S.A.escape(L)}|discordapp.com|discord.com)$`),
     D = +C.A.Millis.MINUTE,
     P = {};
 function $(e) {
@@ -77,10 +77,10 @@ function G(e, t) {
     let n = [],
         o = e.getGuildId();
     return (
-        [T.rbe.GUILD_CATEGORY, ...p.OU].includes(e.type) ||
+        [k.rbe.GUILD_CATEGORY, ...p.OU].includes(e.type) ||
             n.push(
                 new Promise((t) => {
-                    (f.A.whenReady(e.id, () => t()), l.A.fetchMessages({ channelId: e.id, limit: T.EMb }));
+                    (f.A.whenReady(e.id, () => t()), l.A.fetchMessages({ channelId: e.id, limit: k.EMb }));
                 }),
             ),
         Promise.all(n).then(() => {
@@ -106,8 +106,8 @@ function G(e, t) {
 }
 function j(e) {
     let t = u.A.parseToAST(e.content, !0, { channelId: e.channel_id }).map($),
-        n = A.A.getChannel(e.channel_id),
-        o = null != e.author ? new _.A(e.author) : void 0,
+        n = _.A.getChannel(e.channel_id),
+        o = null != e.author ? new A.A(e.author) : void 0,
         i = null != e.author ? (0, d.FT)(o, n) : void 0;
     return {
         id: e.id,
@@ -146,12 +146,12 @@ function q(e, t, n) {
 function U(e, t) {
     return { type: e, user: (0, N.A)(t), presence: { status: I.A.getStatus(t.id, null), activity: null } };
 }
-function x(e, t) {
+function Y(e, t) {
     return null == t
         ? e
         : { ...e, presence: { ...e.presence, activity: I.A.getApplicationActivity(e.user.id, t) ?? null } };
 }
-function Y(e) {
+function x(e) {
     let t;
     if (null == e) return !1;
     let n = window.location.origin;
@@ -168,46 +168,47 @@ function Y(e) {
 }
 function B(e, t, n) {
     let o = m.A.getGuild(e.getGuildId());
-    return (null != o ? o.application_id : e.getApplicationId()) === t || n.indexOf(i.F.MESSAGES_READ) > -1;
+    return (null != o ? o.application_id : e.getApplicationId()) === t || n.has(i.F.MESSAGES_READ);
 }
 function z(e) {
     switch (e) {
-        case T.S7L.RTC_CONNECTED:
-        case T.S7L.RTC_CONNECTING:
-        case T.S7L.RTC_DISCONNECTED:
+        case k.S7L.RTC_CONNECTED:
+        case k.S7L.RTC_CONNECTING:
+        case k.S7L.RTC_DISCONNECTED:
             return e.replace(/^RTC_/, "VOICE_");
         default:
             return e;
     }
 }
-function F(e, t, n) {
-    return e === T.xL.JOIN && null != t && null != t.id && null != n.join;
+function H(e, t, n) {
+    return e === k.xL.JOIN && null != t && null != t.id && null != n.join;
 }
-function H(e) {
-    return r.Bo.get({ url: T.Rsh.APPLICATION_RPC(e), oldFormErrors: !0, retries: 3, rejectWithError: !0 }).then(
+function F(e) {
+    return r.Bo.get({ url: k.Rsh.APPLICATION_RPC(e), oldFormErrors: !0, retries: 3, rejectWithError: !0 }).then(
         (e) => {
             let { body: t } = e;
             return t;
         },
         () => {
-            throw new w.A({ closeCode: T.YI$.INVALID_CLIENTID }, "Invalid Client ID");
+            throw new w.A({ closeCode: k.YI$.INVALID_CLIENTID }, "Invalid Client ID");
         },
     );
 }
 async function J(e, t, n) {
     let o = c.A.getApplication(t);
     if ("string" == typeof n)
-        if (e.transport === k.z4.POST_MESSAGE) {
+        if (e.transport === T.z4.POST_MESSAGE) {
             let e = (0, a.Ay)(t);
-            if (null == e || !V(n, [e])) throw new w.A({ closeCode: T.YI$.INVALID_ORIGIN }, "Invalid Origin");
+            if (null == e || !V(n, [e])) throw new w.A({ closeCode: k.YI$.INVALID_ORIGIN }, "Invalid Origin");
         } else {
-            let e = await H(t);
+            let e = await F(t);
             if (((o = h.Ay.createFromServer(e)), !V(n, e.rpc_origins)))
-                throw new w.A({ closeCode: T.YI$.INVALID_ORIGIN }, "Invalid Origin");
+                throw new w.A({ closeCode: k.YI$.INVALID_ORIGIN }, "Invalid Origin");
         }
-    null == o && (o = h.Ay.createFromServer(await H(t)));
-    let { id: i, name: r, icon: s, coverImage: l, flags: u, parentId: d, embeddedSurfaces: p } = o;
-    e.application = { id: i, parentId: d, name: r, icon: s, coverImage: l, flags: u, embeddedSurfaces: p };
+    let i = e.transport === T.z4.POST_MESSAGE && !c.A.isHydrated(t);
+    (null == o || i) && (o = h.Ay.createFromServer(await F(t)));
+    let { id: r, name: s, icon: l, coverImage: u, flags: d, parentId: p, bot: A, embeddedSurfaces: _ } = o;
+    e.application = { id: r, parentId: p, name: s, icon: l, coverImage: u, flags: d, bot: A, embeddedSurfaces: _ };
 }
 async function W(e, t, n) {
     let o = P[e];
@@ -215,11 +216,11 @@ async function W(e, t, n) {
     try {
         await o.process(n);
     } catch (e) {
-        throw new w.A({ closeCode: T.YI$.CLOSE_ABNORMAL }, "Socket closed during throttle");
+        throw new w.A({ closeCode: k.YI$.CLOSE_ABNORMAL }, "Socket closed during throttle");
     }
 }
 function Q(e, t) {
-    null == t && (e.authorization.scopes = [k.hj]);
+    null == t && (e.authorization.scopes = new Set([T.hj]));
 }
 function K(e) {
     let t = g.Ay.getSettings();
@@ -260,10 +261,10 @@ function X(e, t) {
     };
 }
 function Z(e) {
-    if (e !== k.z4.POST_MESSAGE)
-        throw new w.A({ errorCode: T.Lw6.INVALID_COMMAND }, `command not available from "${e} transport`);
+    if (e !== T.z4.POST_MESSAGE)
+        throw new w.A({ errorCode: k.Lw6.INVALID_COMMAND }, `command not available from "${e} transport`);
 }
 function ee(e) {
-    if (null == e.id) throw new w.A({ errorCode: T.Lw6.INVALID_COMMAND }, "Invalid application");
+    if (null == e.id) throw new w.A({ errorCode: k.Lw6.INVALID_COMMAND }, "Invalid application");
     return e.id;
 }

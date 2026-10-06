@@ -107,7 +107,10 @@ async function eo(e) {
             let { close: e } = n(574172);
             e(en.MLl.ACTIVITY_POPOUT);
         }
-        if ((!0 !== S && L.A.clearMainFrameSlot(), (0, J.y)({ applicationId: i, customId: p, referrerId: I })))
+        if (
+            (!0 !== S && L.A.clearMainFrameSlot(),
+            (0, J.y)({ applicationId: i, launch: { customId: p, referrerId: I } }))
+        )
             return (
                 (0, Z.j)(i, {
                     isStart: s,

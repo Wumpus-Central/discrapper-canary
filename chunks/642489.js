@@ -1,16 +1,18 @@
-n.d(t, { h: () => p });
-var i = n(127258),
-    r = n(439372),
-    a = n(587895),
-    s = n(436283),
-    l = n(892842),
-    o = n(174459),
-    d = n(38405),
-    c = n(192308),
-    u = n(73153),
-    _ = n(477900);
-async function E(e) {
-    let t = await (0, c.openModalLazy)(
+n.d(t, { h: () => m });
+var i = n(991690),
+    r = n(127258),
+    a = n(439372),
+    s = n(587895),
+    l = n(436283),
+    o = n(892842),
+    d = n(308277),
+    c = n(174459),
+    u = n(38405),
+    _ = n(192308),
+    E = n(73153),
+    A = n(477900);
+async function h(e) {
+    let t = await (0, _.openModalLazy)(
         async () => {
             let { default: t } = await Promise.all([
                 n.e("598947"),
@@ -34,20 +36,20 @@ async function E(e) {
                 n.e("429624"),
                 n.e("318687"),
             ]).then(n.bind(n, 144482));
-            return (n) => (0, _.jsx)(t, { ...n, ...e });
+            return (n) => (0, A.jsx)(t, { ...n, ...e });
         },
         {
             onCloseCallback: () => {
-                u.h.dispatch({ type: "INTERACTION_IFRAME_MODAL_CLOSE", applicationId: e.application.id });
+                E.h.dispatch({ type: "INTERACTION_IFRAME_MODAL_CLOSE", applicationId: e.application.id });
             },
         },
     );
-    u.h.dispatch({ type: "INTERACTION_IFRAME_MODAL_KEY_CREATE", modalKey: t });
+    E.h.dispatch({ type: "INTERACTION_IFRAME_MODAL_KEY_CREATE", interactionId: e.id, modalKey: t });
 }
 n(582128);
-var A = n(652215);
-let h = "interaction_iframe_modal";
-async function f(e) {
+var f = n(652215);
+let I = "interaction_iframe_modal";
+async function p(e) {
     let { openInteractionModal: t } = await Promise.all([
         n.e("552653"),
         n.e("426782"),
@@ -695,51 +697,51 @@ async function f(e) {
     ]).then(n.bind(n, 121338));
     if (
         (t(e),
-        o.default.track(A.HAw.OPEN_MODAL, { type: "interaction_modal", application_id: e.application.id }),
-        l.FH.getCurrentConfig().treatmentId >= 2)
+        c.default.track(f.HAw.OPEN_MODAL, { type: "interaction_modal", application_id: e.application.id }),
+        o.FH.getCurrentConfig().treatmentId >= 2)
     ) {
         let t,
             n,
-            r,
-            l =
-                ((t = s.Ay.getInteractionDebugContext(e.nonce)),
+            i,
+            a =
+                ((t = l.Ay.getInteractionDebugContext(e.nonce)),
                 (n = t?.interaction.data),
-                (r = a.A.getApplication(e.application.id)),
+                (i = s.A.getApplication(e.application.id)),
                 {
                     interactionId: e.id,
                     nonce: e.nonce,
                     channelId: e.channelId,
                     applicationId: e.application.id,
-                    hasApplicationRecord: null != r,
+                    hasApplicationRecord: null != i,
                     hasActionApplicationBot: null != e.application.bot,
                     componentCount: e.components.length,
                     componentTypes: e.components.map((e) => e.type),
                     sourceInteractionType: n?.interactionType,
                     sourceApplicationId: n?.applicationId,
                     sourceMessageId: t?.messageId,
-                    hasSourceCustomId: n?.interactionType === i.G.MESSAGE_COMPONENT ? null != n.customId : void 0,
-                    hasSourceComponentId: n?.interactionType === i.G.MESSAGE_COMPONENT ? null != n.componentId : void 0,
+                    hasSourceCustomId: n?.interactionType === r.G.MESSAGE_COMPONENT ? null != n.customId : void 0,
+                    hasSourceComponentId: n?.interactionType === r.G.MESSAGE_COMPONENT ? null != n.componentId : void 0,
                 });
-        d.A.addBreadcrumb({ category: "interaction_modal", message: "Interaction modal opened", data: l });
+        u.A.addBreadcrumb({ category: "interaction_modal", message: "Interaction modal opened", data: a });
     }
 }
-class I extends r.A {
+class T extends a.A {
     iframeModalOpenTimeMs = void 0;
     actions = {
         INTERACTION_MODAL_CREATE: (e) => {
-            f(e);
+            p(e);
         },
         INTERACTION_IFRAME_MODAL_CREATE: (e) => {
             ((this.iframeModalOpenTimeMs = Date.now()),
-                E(e),
-                o.default.track(A.HAw.OPEN_MODAL, { type: h, application_id: e.application.id }));
+                h(e),
+                c.default.track(f.HAw.OPEN_MODAL, { type: I, application_id: e.application.id }));
         },
         INTERACTION_IFRAME_MODAL_CLOSE: (e) => {
             var t;
             let n;
             ((n = null != (t = this.iframeModalOpenTimeMs) ? Date.now() - t : void 0),
-                o.default.track(A.HAw.MODAL_DISMISSED, {
-                    type: h,
+                c.default.track(f.HAw.MODAL_DISMISSED, {
+                    type: I,
                     application_id: e.applicationId,
                     duration_open_ms: n,
                 }),
@@ -747,15 +749,17 @@ class I extends r.A {
         },
         RPC_APP_DISCONNECTED: (e) => {
             !(function (e) {
-                let { application: t } = e,
-                    n = s.Ay.getIFrameModalApplicationId(),
-                    i = s.Ay.getIFrameModalKey();
-                t.id === n &&
-                    null != n &&
-                    (null != i && (0, c.closeModal)(i),
-                    u.h.dispatch({ type: "INTERACTION_IFRAME_MODAL_CLOSE", applicationId: n }));
+                var t, n;
+                let r = l.Ay.getIFrameModal();
+                if (null == r || !(0, d.A)(e)) return;
+                let { context: a } = e;
+                a.surface.type === i.U.INTERACTION_MODAL &&
+                    a.launch?.interactionId === r.interactionId &&
+                    ((t = r.applicationId),
+                    null != (n = r.modalKey) && (0, _.closeModal)(n),
+                    E.h.dispatch({ type: "INTERACTION_IFRAME_MODAL_CLOSE", applicationId: t }));
             })(e);
         },
     };
 }
-let p = new I();
+let m = new T();

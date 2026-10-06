@@ -8,7 +8,7 @@ class l {
     version;
     encoding;
     id = i().uniqueId();
-    authorization = { authing: !1, scopes: [], accessToken: null, expires: new Date(0) };
+    authorization = { authing: !1, scopes: new Set(), accessToken: null, expires: new Date(0) };
     application = { id: null, name: null, icon: null };
     abortController = new AbortController();
     constructor(e, t, n) {

@@ -1,7 +1,9 @@
 function i(e) {
     let t = {};
     return (
-        null != e.customId && (t.custom_id = e.customId), null != e.referrerId && (t.referrer_id = e.referrerId), t
+        e.launch?.customId != null && (t.custom_id = e.launch.customId),
+        e.launch?.referrerId != null && (t.referrer_id = e.launch.referrerId),
+        t
     );
 }
 n.d(t, { A: () => i });

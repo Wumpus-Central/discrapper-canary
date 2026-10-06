@@ -9,10 +9,10 @@ var i = n(739187),
     c = n(991690),
     u = n(439372),
     _ = n(957292),
-    E = n(174459),
-    A = n(91242),
-    h = n(652215),
-    f = n(613057);
+    E = n(308277),
+    A = n(174459),
+    h = n(91242),
+    f = n(652215);
 class I extends u.A {
     static displayName = "FramesManager";
     actions = {
@@ -36,42 +36,42 @@ class I extends u.A {
         },
         CHANNEL_DELETE: (e) => {
             let { channel: t } = e;
-            for (let e of A.A.getFramesForChannel(t.id)) this.leaveFrame(e.id);
+            for (let e of h.A.getFramesForChannel(t.id)) this.leaveFrame(e.id);
         },
         GUILD_DELETE: (e) => {
             let { guild: t } = e;
             if (!("unavailable" in t) || !0 !== t.unavailable)
-                for (let e of A.A.getAllFrames())
+                for (let e of h.A.getAllFrames())
                     e.surface.type !== c.U.MAIN && e.surface.guildId === t.id && this.leaveFrame(e.id);
         },
         CHANNEL_UPDATES: (e) => {
             let { channels: t } = e;
             for (let e of t)
-                for (let t of A.A.getFramesForChannel(e.id))
+                for (let t of h.A.getFramesForChannel(e.id))
                     t.applicationId !== e.application_id && this.leaveFrame(t.id);
         },
     };
     handleVoiceChannelSelect = (e) => {
         let { channelId: t, currentVoiceChannelId: n } = e;
         if (null != n && n !== t)
-            for (let e of A.A.getFramesForSurface({ type: c.U.VOICE_CHANNEL, channelId: n })) this.leaveFrame(e.id);
+            for (let e of h.A.getFramesForSurface({ type: c.U.VOICE_CHANNEL, channelId: n })) this.leaveFrame(e.id);
     };
     handleRPCDisconnect = (e) => {
-        let { reason: t, source: n } = e;
-        if (null == t || n.type !== f.z4.POST_MESSAGE) return;
-        let i = A.A.getFrameByIframeId(n.iframeId);
-        null != i &&
-            (this.leaveFrame(i.id),
-            t.code !== h.YI$.CLOSE_NORMAL &&
-                (E.default.track(h.HAw.ACTIVITY_CLOSED_RPC_ERROR, {
+        let { reason: t } = e;
+        if (null == t || !(0, E.A)(e)) return;
+        let n = h.A.getFrameByEmbeddedContext(e.context, e.source.iframeId);
+        null != n &&
+            (this.leaveFrame(n.id),
+            t.code !== f.YI$.CLOSE_NORMAL &&
+                (A.default.track(f.HAw.ACTIVITY_CLOSED_RPC_ERROR, {
                     rpc_close_code: t.code,
                     rpc_message: t.message,
-                    application_id: i.applicationId,
+                    application_id: n.applicationId,
                 }),
                 this.showRPCDisconnectErrorUI(t)));
     };
     leaveFrame(e) {
-        let t = A.A.getFrame(e);
+        let t = h.A.getFrame(e);
         null != t && s.h.dispatch({ type: "FRAME_STOP", applicationId: t.applicationId, frameId: t.id });
     }
 }
@@ -93,16 +93,16 @@ let m = !1,
         }
         handlePopoutWindowOpen = (e) => {
             let { key: t } = e;
-            t === h.MLl.ACTIVITY_POPOUT && (g = !1);
+            t === f.MLl.ACTIVITY_POPOUT && (g = !1);
         };
         handlePopoutWindowUpdate = () => {
             let e = m,
-                t = o.A.getWindowOpen(h.MLl.ACTIVITY_POPOUT);
+                t = o.A.getWindowOpen(f.MLl.ACTIVITY_POPOUT);
             (!e || t || g || d.A.clearMainFrameSlot(), (m = t));
         };
         popInFrame = () => {
-            ((g = !0), l.close(h.MLl.ACTIVITY_POPOUT));
-            let e = A.A.getMainFrame();
+            ((g = !0), l.close(f.MLl.ACTIVITY_POPOUT));
+            let e = h.A.getMainFrame();
             null != e && (e.intent === p.sV.MAIN ? d.A.resetFrameLayoutModes(e.id) : d.A.clearMainFrameSlot());
         };
         showRPCDisconnectErrorUI(e) {
