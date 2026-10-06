@@ -408,6 +408,7 @@
     max-width: 100%;
     min-height: 0;
     min-width: 0;
+    overflow-anchor: none;
     overflow-x: hidden;
     padding-inline: 0;
     width: 100%;
@@ -555,4 +556,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=34b23f81f975b3df.css.map*/
+/*# sourceMappingURL=f3479c812dc42979.css.map*/

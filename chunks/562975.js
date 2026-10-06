@@ -7581,11 +7581,20 @@ function sD(e) {
         p = s.useRef(null),
         v = s.useRef(null),
         j = s.useRef(!0),
-        [b, y] = s.useState(!0);
-    s.useEffect(() => {
-        j.current && p.current?.scrollToBottom();
-    }, [u]);
-    let w = s.useCallback(() => {
+        [b, y] = s.useState(!0),
+        w = s.useRef(null);
+    s.useLayoutEffect(() => {
+        let e = p.current?.getScrollerNode();
+        if (null == e) return;
+        let t = w.current;
+        j.current
+            ? p.current?.scrollToBottom()
+            : t?.row.isConnected === !0 && (e.scrollTop += t.row.getBoundingClientRect().top + e.scrollTop - t.top);
+        let n = v.current?.firstElementChild;
+        ((w.current = null != n ? { row: n, top: n.getBoundingClientRect().top + e.scrollTop } : null),
+            e.scrollTop < 600 && (0, es.P6)(l));
+    }, [u, l]);
+    let A = s.useCallback(() => {
             let e = x.current;
             if (null == e) return;
             let t = e.querySelector('[data-conjure-turn-status="true"][data-live="true"]'),
@@ -7595,14 +7604,16 @@ function sD(e) {
             let a = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches === !0;
             n.scrollIntoView({ block: "center", behavior: a ? "auto" : "smooth" });
         }, []),
-        A = s.useCallback(() => {
+        N = s.useCallback(() => {
             let e = p.current;
             if (null == e) return;
             let t = e.getDistanceFromBottom();
             j.current = t < 32;
-            let l = t > 1;
-            y((e) => (!l === e ? e : !l));
-        }, []);
+            let n = t > 1;
+            y((e) => (!n === e ? e : !n));
+            let a = e.getScrollerNode();
+            null != a && a.scrollTop < 600 && (0, es.P6)(l);
+        }, [l]);
     (s.useLayoutEffect(() => {
         let e = x.current,
             t = v.current;
@@ -7645,18 +7656,18 @@ function sD(e) {
             (0, es.Hc)(l);
         }, [l]),
         (0, eA.E1)(l));
-    let N = tt(l),
-        C = s.useCallback(
+    let C = tt(l),
+        E = s.useCallback(
             (e, t) => {
                 (0, es.dv)(l, e, t);
             },
             [l],
         ),
-        E = s.useCallback(
+        I = s.useCallback(
             (e, t) => {
-                0 === N.annotations.length
-                    ? C(e, t)
-                    : (C(
+                0 === C.annotations.length
+                    ? E(e, t)
+                    : (E(
                           (function (e) {
                               let { annotations: t, metaComment: l, context: n } = e,
                                   a = t.filter((e) => eJ(e.comment)),
@@ -7684,62 +7695,62 @@ function sD(e) {
                               });
                               let r = l.trim();
                               return ("" !== r && (i.push(""), i.push(`Note for the whole batch: ${r}`)), i.join("\n"));
-                          })({ annotations: N.annotations, metaComment: e, context: N.context }),
+                          })({ annotations: C.annotations, metaComment: e, context: C.context }),
                           t,
                       ),
                       e6(l));
             },
-            [N, C, l],
+            [C, E, l],
         ),
-        I = s.useCallback(() => (0, es.fu)(l), [l]),
-        T = s.useCallback((e) => nV(l, e.implementation_prompt), [l]),
-        [M, _] = (function (e) {
+        T = s.useCallback(() => (0, es.fu)(l), [l]),
+        M = s.useCallback((e) => nV(l, e.implementation_prompt), [l]),
+        [_, P] = (function (e) {
             let [t, l] = s.useState(() => au(e)),
                 [n, a] = s.useState(e),
                 i = n !== e,
                 r = i ? au(e) : t;
             return (i && (a(e), l(r)), [r, l]);
         })(l),
-        P = s.useCallback(() => C(em.intl.string(ef.default["t5CN3+"])), [C]),
-        R = s.useCallback((e, t, n) => nV(l, e, { clarificationAnswers: t, attachments: n }), [l]),
-        L = s.useCallback((e) => (0, es.XZ)(l, e), [l]),
-        D = s.useCallback((e) => (0, es.vX)(l, e), [l]),
-        O = s.useCallback((e) => rs(l, "chat", Array.from(e), D), [l, D]),
-        F = s.useCallback(() => nV(l, em.intl.string(ef.default.Zc7gML)), [l]),
-        z = n?.status === "restoring",
-        U = "open" === o && !d && !z,
-        G = u[u.length - 1],
-        $ = null != G && "assistant" === G.role && null != G.proposal,
-        [q, B] = s.useState(null),
-        H = G?.clarification != null && G.clarification.id !== q ? G.clarification : null,
-        V = s.useCallback(() => {
-            null != H && B(H.id);
-        }, [H]),
-        K = (0, m.bG)([es.Ay], () => es.Ay.getSettings(l), [l]),
-        [W, J] = s.useState(null),
-        X =
-            null != G &&
-            "assistant" === G.role &&
-            null != G.settingsRequest &&
-            (0, tK.BL)(G) &&
-            G.id !== W &&
-            ((t = G.settingsRequest),
-            null != K &&
+        R = s.useCallback(() => E(em.intl.string(ef.default["t5CN3+"])), [E]),
+        L = s.useCallback((e, t, n) => nV(l, e, { clarificationAnswers: t, attachments: n }), [l]),
+        D = s.useCallback((e) => (0, es.XZ)(l, e), [l]),
+        O = s.useCallback((e) => (0, es.vX)(l, e), [l]),
+        F = s.useCallback((e) => rs(l, "chat", Array.from(e), O), [l, O]),
+        z = s.useCallback(() => nV(l, em.intl.string(ef.default.Zc7gML)), [l]),
+        U = n?.status === "restoring",
+        G = "open" === o && !d && !U,
+        $ = u[u.length - 1],
+        q = null != $ && "assistant" === $.role && null != $.proposal,
+        [B, H] = s.useState(null),
+        V = $?.clarification != null && $.clarification.id !== B ? $.clarification : null,
+        K = s.useCallback(() => {
+            null != V && H(V.id);
+        }, [V]),
+        W = (0, m.bG)([es.Ay], () => es.Ay.getSettings(l), [l]),
+        [J, X] = s.useState(null),
+        Y =
+            null != $ &&
+            "assistant" === $.role &&
+            null != $.settingsRequest &&
+            (0, tK.BL)($) &&
+            $.id !== J &&
+            ((t = $.settingsRequest),
+            null != W &&
                 (t.keys ?? []).some((e) => {
-                    let t = K.schema.find((t) => t.key === e);
+                    let t = W.schema.find((t) => t.key === e);
                     if (null == t) return !1;
-                    if ("secret" === t.type) return K.secrets.find((t) => t.name === e)?.set !== !0;
-                    let l = K.values[e];
+                    if ("secret" === t.type) return W.secrets.find((t) => t.name === e)?.set !== !0;
+                    let l = W.values[e];
                     return null == l || "" === l;
                 }))
-                ? G
+                ? $
                 : null,
-        Y = X?.settingsRequest ?? null,
-        Q = s.useCallback(() => {
-            null != X && J(X.id);
-        }, [X]),
-        Z = null != Y,
-        ee = (function (e) {
+        Q = Y?.settingsRequest ?? null,
+        Z = s.useCallback(() => {
+            null != Y && X(Y.id);
+        }, [Y]),
+        ee = null != Q,
+        et = (function (e) {
             let { historyLoaded: t, historyUnavailable: l, connState: n } = e;
             return l ? "unavailable" : t ? "greeting" : "failed" === n || "closed" === n ? "unavailable" : "loading";
         })({
@@ -7747,22 +7758,22 @@ function sD(e) {
             historyUnavailable: (0, m.bG)([tK.Ay], () => tK.Ay.isHistoryUnavailable(l), [l]),
             connState: o,
         }),
-        et = "loading" === ee && 0 === u.length,
-        el = s.useMemo(() => {
+        el = "loading" === et && 0 === u.length,
+        en = s.useMemo(() => {
             let e = 0;
             for (let t = 0; t < l.length; t++) e = (31 * e + l.charCodeAt(t)) % 0x7fffffff;
             return sL[e % sL.length];
         }, [l]),
-        en = $ ? em.intl.string(ef.default.Zc7gML) : "greeting" === ee && 0 === u.length ? el : null,
-        ea = s.useMemo(() => {
+        ea = q ? em.intl.string(ef.default.Zc7gML) : "greeting" === et && 0 === u.length ? en : null,
+        ei = s.useMemo(() => {
             for (let e = u.length - 1; e >= 0; e--) {
                 let t = u[e];
                 if ("assistant" === t.role && !(0, tK.BL)(t)) return t;
             }
         }, [u]),
-        ei = null != ea,
-        er =
-            null != ea
+        er = null != ei,
+        eu =
+            null != ei
                 ? (function (e) {
                       let t = e.turn_id ?? e.steps.find((e) => null != e.turn_id)?.turn_id;
                       if (null != t && /^\d+$/.test(t)) {
@@ -7770,15 +7781,15 @@ function sD(e) {
                           if (Number.isFinite(e) && e > 0) return e;
                       }
                       return e.created_at;
-                  })(ea)
+                  })(ei)
                 : void 0,
-        eu = $ && U ? F : void 0,
-        eo = s.useCallback(() => nV(l, em.intl.string(ef.default.EMgIuY)), [l]),
-        [ed, ec] = s.useState(null),
-        [eg, eh] = s.useState(ei);
-    (eg !== ei && (eh(ei), ei || ec(null)),
+        eo = q && G ? z : void 0,
+        ed = s.useCallback(() => nV(l, em.intl.string(ef.default.EMgIuY)), [l]),
+        [ec, eg] = s.useState(null),
+        [eh, ex] = s.useState(er);
+    (eh !== er && (ex(er), er || eg(null)),
         s.useEffect(() => {
-            if (!ei) return;
+            if (!er) return;
             let e = p.current?.getScrollerNode(),
                 t = e?.querySelector('[data-conjure-turn-status="true"][data-live="true"]');
             if (null == e || null == t) return;
@@ -7786,93 +7797,93 @@ function sD(e) {
                 (e) => {
                     let [t] = e;
                     null == t || t.isIntersecting || null == t.rootBounds
-                        ? ec(null)
-                        : ec(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
+                        ? eg(null)
+                        : eg(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
                 },
                 { root: e, threshold: 0 },
             );
             return (l.observe(t), () => l.disconnect());
-        }, [ei, ea?.steps]));
-    let ex = s.useMemo(() => (null != ea ? (0, l6.b)(ea.steps) : ""), [ea]),
-        ep = s.useMemo(() => (null != ea ? ((0, l4.lt)(ea.steps) ?? ea.todos) : void 0), [ea]),
-        ev = ea?.provisionalTodo,
-        ej = null != ea && l7(ea),
-        eb = s.useMemo(() => {
+        }, [er, ei?.steps]));
+    let ep = s.useMemo(() => (null != ei ? (0, l6.b)(ei.steps) : ""), [ei]),
+        ev = s.useMemo(() => (null != ei ? ((0, l4.lt)(ei.steps) ?? ei.todos) : void 0), [ei]),
+        ej = ei?.provisionalTodo,
+        eb = null != ei && l7(ei),
+        ey = s.useMemo(() => {
             var e;
-            return null != ea ? ((e = ea.steps), i1((0, l4.GO)(e, { turnActive: !0 }).tasks)) : void 0;
-        }, [ea]);
+            return null != ei ? ((e = ei.steps), i1((0, l4.GO)(e, { turnActive: !0 }).tasks)) : void 0;
+        }, [ei]);
     return (0, r.jsxs)("section", {
         ref: x,
         "data-conjure-chat": !0,
         className: sR.TE,
         children: [
-            U
+            G
                 ? (0, r.jsx)(l5.A, {
                       title: em.intl.string(ef.default.gy7byi),
                       description: em.intl.string(ef.default["dkv/WO"]),
                       icons: sP.ir,
-                      onDrop: O,
+                      onDrop: F,
                   })
                 : null,
             (0, r.jsx)(nx, {
-                onJumpToActivity: w,
-                line: ex,
-                placement: ei && "top" === ed ? "top" : null,
-                todos: ep,
-                todosLive: ej,
-                provisionalTodo: ev,
-                agents: eb,
+                onJumpToActivity: A,
+                line: ep,
+                placement: er && "top" === ec ? "top" : null,
+                todos: ev,
+                todosLive: eb,
+                provisionalTodo: ej,
+                agents: ey,
             }),
             (0, r.jsxs)("div", {
                 className: sR.JX,
                 children: [
                     (0, r.jsx)(l3.Ch, {
                         ref: p,
-                        onScroll: A,
-                        scrollbarGutter: et ? "both-edges" : "stable",
-                        className: [sR.N$, b ? null : sR.hB, Z ? sR.J9 : null].filter(Boolean).join(" "),
+                        onScroll: N,
+                        scrollbarGutter: el ? "both-edges" : "stable",
+                        className: [sR.N$, b ? null : sR.hB, ee ? sR.J9 : null].filter(Boolean).join(" "),
                         children: (0, r.jsx)(sc, {
                             ref: v,
                             projectId: l,
                             messages: u,
-                            emptyState: ee,
-                            floatingSettingsMessageId: X?.id,
-                            onPickIdea: U ? T : void 0,
-                            onAskForIdeas: U ? P : void 0,
-                            draftHasText: M,
-                            onApprovePlan: U ? eo : void 0,
-                            onRestoreVersion: z || ei ? void 0 : a,
+                            emptyState: et,
+                            floatingSettingsMessageId: Y?.id,
+                            onPickIdea: G ? M : void 0,
+                            onAskForIdeas: G ? R : void 0,
+                            draftHasText: _,
+                            onApprovePlan: G ? ed : void 0,
+                            onRestoreVersion: U || er ? void 0 : a,
                         }),
                     }),
                     (0, r.jsx)("div", {
                         className: sR.NJ,
                         children: (0, r.jsx)(s_, {
                             projectId: l,
-                            thinking: ei,
-                            turnStartedAt: er,
-                            restoring: z,
-                            recalling: et,
+                            thinking: er,
+                            turnStartedAt: eu,
+                            restoring: U,
+                            recalling: el,
                             thinkingActivity: f,
                             compacting: g,
                             projectUsage: c,
                             connState: o,
                         }),
                     }),
-                    null == H
+                    null == V
                         ? null
                         : (0, r.jsx)("div", {
-                              className: Z ? `${sR.B5} ${sR.J9}` : sR.B5,
+                              className: ee ? `${sR.B5} ${sR.J9}` : sR.B5,
                               children: (0, r.jsx)(
                                   n4,
-                                  { projectId: l, clarification: H, onSubmit: U ? R : void 0, onDismiss: V },
-                                  H.id,
+                                  { projectId: l, clarification: V, onSubmit: G ? L : void 0, onDismiss: K },
+                                  V.id,
                               ),
                           }),
-                    null == Y
+                    null == Q
                         ? null
                         : (0, r.jsx)("div", {
                               className: sR.B5,
-                              children: (0, r.jsx)(n8, { projectId: l, request: Y, onDismiss: Q }, X?.id),
+                              children: (0, r.jsx)(n8, { projectId: l, request: Q, onDismiss: Z }, Y?.id),
                           }),
                 ],
             }),
@@ -7880,15 +7891,15 @@ function sD(e) {
                 className: sR.Jx,
                 children: [
                     (0, r.jsx)(nx, {
-                        onJumpToActivity: w,
-                        line: ex,
-                        placement: ei && "bottom" === ed ? "bottom" : null,
-                        todos: ep,
-                        todosLive: ej,
-                        provisionalTodo: ev,
-                        agents: eb,
+                        onJumpToActivity: A,
+                        line: ep,
+                        placement: er && "bottom" === ec ? "bottom" : null,
+                        todos: ev,
+                        todosLive: eb,
+                        provisionalTodo: ej,
+                        agents: ey,
                     }),
-                    0 === N.annotations.length
+                    0 === C.annotations.length
                         ? null
                         : (0, r.jsxs)("div", {
                               className: sR.g0,
@@ -7898,7 +7909,7 @@ function sD(e) {
                                       variant: "text-sm/medium",
                                       color: "text-default",
                                       children: em.intl.formatToPlainString(ef.default["7b49dS"], {
-                                          count: N.annotations.length,
+                                          count: C.annotations.length,
                                       }),
                                   }),
                                   (0, r.jsx)(k.E, {
@@ -7916,21 +7927,21 @@ function sD(e) {
                           }),
                     (0, r.jsx)(rh, {
                         projectId: l,
-                        canSend: U,
+                        canSend: G,
                         stopped: d,
-                        running: ei,
-                        restoring: z,
-                        onSend: E,
-                        hasPendingContext: N.annotations.length > 0,
-                        onInterrupt: U ? I : void 0,
-                        onUploadFile: D,
+                        running: er,
+                        restoring: U,
+                        onSend: I,
+                        hasPendingContext: C.annotations.length > 0,
+                        onInterrupt: G ? T : void 0,
+                        onUploadFile: O,
                         onImport: i,
-                        onApprove: eu,
-                        suggestion: en,
-                        questionOpen: null != H || null != Y,
+                        onApprove: eo,
+                        suggestion: ea,
+                        questionOpen: null != V || null != Q,
                         modelSettings: h,
-                        onModelSettingsChange: L,
-                        onDraftHasTextChange: _,
+                        onModelSettingsChange: D,
+                        onDraftHasTextChange: P,
                     }),
                 ],
             }),

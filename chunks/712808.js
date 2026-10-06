@@ -33,6 +33,7 @@
     y_: () => eM,
     xE: () => eA,
     nU: () => eH,
+    P6: () => e_,
     _m: () => eT,
     Du: () => em,
 }),
@@ -348,7 +349,7 @@ async function ee(e, t) {
             ticket: n,
             onEvent: (n) =>
                 (function e(t, n, r) {
-                    var i, o;
+                    var i;
                     if (
                         (console.debug("[vibegrations] ws event", r.type),
                         "hello" !== r.type &&
@@ -364,15 +365,13 @@ async function ee(e, t) {
                     )
                         return void n.pendingEvents.push(r);
                     if ("history_page" === r.type) {
-                        let e = ef.get(t);
-                        if ((null != e && r.requested !== e) || (ef.delete(t), !0 === r.failed)) return;
-                        (s.h.dispatch({
+                        if (r.requested !== ef.get(t) || (ef.delete(t), !0 === r.failed)) return;
+                        s.h.dispatch({
                             type: "CONJURE_CHAT_HISTORY_PREPEND",
                             projectId: t,
                             entries: (r.messages ?? []).slice(),
                             cursor: !0 === r.has_more ? (r.cursor ?? null) : null,
-                        }),
-                            e_(t));
+                        });
                         return;
                     }
                     if ("hello" === r.type) ((n.helloSeen = !0), n.backoff.succeed());
@@ -385,15 +384,13 @@ async function ee(e, t) {
                             cursor: !0 === r.has_more ? (r.cursor ?? null) : null,
                             degraded: !0 === r.degraded,
                         }),
-                            ef.delete(t),
-                            (o = t),
-                            e_(o));
-                        let a = n.pendingEvents;
-                        for (let r of ((n.pendingEvents = []), L(t, "open"), a)) e(t, n, r);
-                        let l = n.pendingModelSettings;
-                        if (((n.pendingModelSettings = null), null != l))
+                            ef.delete(t));
+                        let o = n.pendingEvents;
+                        for (let r of ((n.pendingEvents = []), L(t, "open"), o)) e(t, n, r);
+                        let a = n.pendingModelSettings;
+                        if (((n.pendingModelSettings = null), null != a))
                             try {
-                                n.ws.sendModelSettings(l);
+                                n.ws.sendModelSettings(a);
                             } catch (e) {
                                 console.error("[vibegrations] staged model settings send failed", e);
                             }
@@ -699,16 +696,16 @@ async function ee(e, t) {
                             let e = r.icon;
                             if (null != e && "" !== e) {
                                 let i = r.attachment_id;
-                                function a(e) {
+                                function o(e) {
                                     null != i && "" !== i && n.ws.sendAppIconAck(i, e);
                                 }
                                 (0, w.Ru)(t, e)
                                     .then((e) => {
                                         (e.ok || console.error("[vibegrations] icon from agent rejected", t, e.status),
-                                            a(e.ok ? "applied" : "failed"));
+                                            o(e.ok ? "applied" : "failed"));
                                     })
                                     .catch((e) => {
-                                        (console.error("[vibegrations] icon from agent failed", t, e), a("failed"));
+                                        (console.error("[vibegrations] icon from agent failed", t, e), o("failed"));
                                     });
                             }
                         } else
@@ -1098,7 +1095,7 @@ function e_(e) {
     if (null == t) return !1;
     if (ef.get(e) === t) return !0;
     let n = U.get(e);
-    return null != n && (ef.set(e, t), n.ws.sendLoadHistory(t), !0);
+    return null != n && "open" === I.get(e) && (ef.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
 let eg = new Map(),
     ey = new Map();
