@@ -4763,13 +4763,13 @@ let rh = [
 var rf = n(143582),
     rS = n(241524),
     rE = n(19311),
-    ry = n(4126);
-let rA = "(max-width: 485px)";
-var rI = n(875632),
+    ry = n(4126),
+    rA = n(376747),
+    rI = n(875632),
     rg = n(938430);
 function rP(e) {
     let { step: t, onClose: n } = e,
-        l = (0, rS.A)("(max-height: 450px)");
+        l = (0, rS.A)(rA.T);
     return t === o.pn.CONFIRM || t === o.pn.BENEFITS
         ? (0, r.jsx)("div", {})
         : (0, r.jsxs)("div", {
@@ -4932,7 +4932,7 @@ function rw(e) {
         { subscriptionMetadataRequest: i } = rN(),
         { application: a } = (0, nZ.V)(),
         s = (0, nz.S3)(),
-        u = (0, rS.A)(rA),
+        u = (0, rS.A)(rA.Y),
         d = (0, D.bG)([eh.A], () => eh.A.getGuild(i?.guild_id)),
         p = c.useCallback(() => t(o.pn.REVIEW), [t]);
     if (null == s) return null;
@@ -4987,7 +4987,7 @@ function rU(e) {
             updatedSubscription: e.updatedSubscription,
         })),
         p = (0, nz.S3)(),
-        m = (0, rS.A)(rA),
+        m = (0, rS.A)(rA.Y),
         { createMultipleConfettiAt: h } = c.useContext(rD.x),
         C = p?.name ?? "";
     function f() {

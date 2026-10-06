@@ -313,20 +313,20 @@ function e8(e) {
     });
 }
 var e5 = n(562708),
-    e2 = n(702841),
-    e7 = n(139286),
+    e7 = n(702841),
+    e2 = n(139286),
     e9 = n(468689),
     e4 = n(375708),
     te = n(330766);
 function tt(e) {
     let { guildId: t, markAsDismissed: n, targetElementRef: i } = e,
-        l = (0, e2.bG)([H.A, em.default], () => {
+        l = (0, e7.bG)([H.A, em.default], () => {
             let e = em.default.getCurrentUser(),
                 n = H.A.getGuild(t);
             return null != n && (0, eE.bM)(n, e);
         });
     return (
-        (0, e7.A)({
+        (0, e2.A)({
             type: e5.ImpressionTypes.POPOUT,
             name: e5.ImpressionNames.ENABLE_CREATOR_MONETIZATION_GUILD_HEADER_UPSELL,
             properties: { guild_id: t, is_owner: l },
@@ -781,8 +781,8 @@ var tq = n(503698),
     t6 = n(104171),
     t8 = n(47167),
     t5 = n(713654),
-    t2 = n(976860),
-    t7 = n(747376),
+    t7 = n(976860),
+    t2 = n(747376),
     t9 = n(110618),
     t4 = n(280450),
     ne = n(309010),
@@ -1043,7 +1043,7 @@ function n_(e) {
             text: n,
             fullWidth: !0,
             onClick: function () {
-                null != t && null != t.getGuildId() && ((0, t7.av)(t), (0, t2.uh)(t.getGuildId(), t.id));
+                null != t && null != t.getGuildId() && ((0, t2.av)(t), (0, t7.uh)(t.getGuildId(), t.id));
             },
         }),
     });
@@ -1501,7 +1501,7 @@ function n5(e) {
         })();
     return null == R ? null : (0, s.jsx)("div", { onContextMenu: n6, children: R });
 }
-let n2 = function (e) {
+let n7 = function (e) {
     let { guild: t } = e;
     switch (Y(t)) {
         case z.ENABLE_PUBLIC_GUILD:
@@ -1519,7 +1519,7 @@ let n2 = function (e) {
     }
     return nU.P.isDisallowPopupsSet() ? null : (0, s.jsx)(n5, { guild: e.guild });
 };
-var n7 = n(883476);
+var n2 = n(883476);
 function n9(e) {
     let { guild: t, setHasSubheader: n } = e,
         i = l.useRef(null);
@@ -1528,7 +1528,7 @@ function n9(e) {
             let e = i.current;
             null != e && n(e.childNodes.length > 0);
         }),
-        (0, s.jsx)("div", { className: n7.k, ref: i, children: (0, s.jsx)(n2, { guild: t }) })
+        (0, s.jsx)("div", { className: n2.k, ref: i, children: (0, s.jsx)(n7, { guild: t }) })
     );
 }
 var n4 = n(66933),
@@ -1673,7 +1673,9 @@ class il extends l.PureComponent {
                     n.e("873532"),
                     n.e("279774"),
                     n.e("590088"),
-                    n.e("125298"),
+                    n.e("60104"),
+                    n.e("46083"),
+                    n.e("857297"),
                     n.e("327439"),
                     n.e("685673"),
                     n.e("71169"),
@@ -1700,7 +1702,9 @@ class il extends l.PureComponent {
                     n.e("88683"),
                     n.e("363874"),
                     n.e("750370"),
-                    n.e("612162"),
+                    n.e("972281"),
+                    n.e("307107"),
+                    n.e("896622"),
                     n.e("466592"),
                     n.e("73946"),
                     n.e("282050"),
@@ -1874,9 +1878,7 @@ class il extends l.PureComponent {
                     n.e("771657"),
                     n.e("122218"),
                     n.e("76428"),
-                    n.e("77473"),
                     n.e("863232"),
-                    n.e("25279"),
                     n.e("364827"),
                     n.e("517888"),
                     n.e("811133"),
@@ -1901,7 +1903,7 @@ class il extends l.PureComponent {
                     n.e("221856"),
                     n.e("678157"),
                     n.e("147134"),
-                    n.e("325675"),
+                    n.e("883846"),
                     n.e("996481"),
                     n.e("331988"),
                     n.e("40291"),
@@ -1926,7 +1928,7 @@ class il extends l.PureComponent {
                     n.e("958038"),
                     n.e("532039"),
                     n.e("719466"),
-                    n.e("99799"),
+                    n.e("515799"),
                     n.e("576909"),
                     n.e("27355"),
                     n.e("585968"),
@@ -1999,6 +2001,7 @@ class il extends l.PureComponent {
                     n.e("179745"),
                     n.e("64504"),
                     n.e("553984"),
+                    n.e("299854"),
                     n.e("280854"),
                     n.e("335395"),
                     n.e("608557"),
@@ -2009,6 +2012,7 @@ class il extends l.PureComponent {
                     n.e("146844"),
                     n.e("163235"),
                     n.e("212055"),
+                    n.e("247660"),
                     n.e("486672"),
                     n.e("14035"),
                     n.e("75029"),
@@ -2035,7 +2039,7 @@ class il extends l.PureComponent {
                     n.e("844780"),
                     n.e("204744"),
                     n.e("737021"),
-                    n.e("472328"),
+                    n.e("694635"),
                     n.e("818465"),
                     n.e("971430"),
                     n.e("218203"),
@@ -2612,22 +2616,22 @@ function ir(e) {
         e6 = !1 === eQ && e1 && null != e3,
         e8 = (0, eG.A)(L),
         e5 = !1 === eQ && e1 && null != e8,
-        e2 = [];
-    (eI && e2.push(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
-        ee && e2.push(o.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
-        eg && e2.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
-        !1 === eQ && e2.push(o.M.GUILD_POWERUP_PERKS_COACHMARK),
-        eZ && e2.push(o.M.GUILD_THEME_MEMBER_COACHMARK),
-        e0 && e2.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
-        eB && e2.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
-    let e7 = (0, q.uW)([
-            ...e2,
+        e7 = [];
+    (eI && e7.push(o.M.STUDENT_HUB_PRIVACY_SETTINGS_TOOLTIP),
+        ee && e7.push(o.M.GUILD_HEADER_ROLE_SUBSCRIPTION_UPSELL),
+        eg && e7.push(o.M.GUILD_DISCOVERY_LANDING_PAGE_SETTINGS_UPSELL),
+        !1 === eQ && e7.push(o.M.GUILD_POWERUP_PERKS_COACHMARK),
+        eZ && e7.push(o.M.GUILD_THEME_MEMBER_COACHMARK),
+        e0 && e7.push(o.M.GAME_SERVER_HOSTING_NEW_PERK_AVAILABLE_COACHMARK),
+        eB && e7.push(o.M.SERVER_SUBSCRIPTION_TIER_TEMPLATE_UPSELL));
+    let e2 = (0, q.uW)([
+            ...e7,
             o.M.GUILD_HEADER_COACHMARK,
             o.M.GAME_SERVER_NEW_GAMES_COACHMARK,
             o.M.BOOST_TO_UNLOCK_COACHMARK,
             o.M.EXPIRING_POWERUP_COACHMARK,
         ]),
-        e9 = (0, eL.Dq)(U) && !e7,
+        e9 = (0, eL.Dq)(U) && !e2,
         e4 = (function (e) {
             let t = (0, el.c)(es.C.GUILD_HEADER_COACHMARK),
                 n =
@@ -2648,7 +2652,7 @@ function ir(e) {
                 markAsDismissed: l,
             };
         })(e9 ? null : L),
-        [te, tt] = (0, Z.kn)(e9 ? [] : e2, er.m.GUILD_HEADER_TOOLTIPS),
+        [te, tt] = (0, Z.kn)(e9 ? [] : e7, er.m.GUILD_HEADER_TOOLTIPS),
         [tn, ti] = (0, eD.vB)(e$ && !1 === eQ && !(0, J.ai)(L) && !e9, er.m.GUILD_HEADER_TOOLTIPS),
         [ts, tl] = (0, Z.D8)(
             e6 && !e9 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,
@@ -2723,7 +2727,7 @@ function ir(e) {
         showGuildTemplateDirtyTooltip: eC,
         showNewUnreadsBar: ep,
         isHeaderPopoutOpen: eN,
-        isGuildHeaderDismissibleTooltipShown: e7,
+        isGuildHeaderDismissibleTooltipShown: e2,
         headerAnalyticsLocations: X,
         shouldRenderBurstCoachmark: !ef,
         guildHeaderContentDescriptor: to,

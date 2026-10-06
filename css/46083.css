@@ -1,0 +1,35 @@
+.animationContainer__884d1,
+.container__884d1 {
+    position: relative;
+    z-index: 0
+}
+
+.animationContainer__884d1 {
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden
+}
+
+.svgBorder__884d1 {
+    height: calc(100% + 2px);
+    inset-inline-start: -1px;
+    position: absolute;
+    top: -1px;
+    width: calc(100% + 2px);
+    z-index: 1
+}
+
+.svgCopy__884d1 {
+    display: block
+}
+
+.animationContainer__884d1 {
+    color: var(--text-strong)
+}
+
+.shine__884d1 {
+    color: var(--opacity-white-48)
+}
+
+/*# sourceMappingURL=46083.fdcf2f4c72500b44.css.map*/

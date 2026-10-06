@@ -1,0 +1,45 @@
+.contentWrapper_baa57d {
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    min-height: 0
+}
+
+.content_baa57d {
+    overflow: hidden
+}
+
+.breadcrumbsWrapper_baa57d {
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 0 16px 16px
+}
+
+.externalErrorBlock_baa57d {
+    margin-top: 16px
+}
+
+.externalErrorBlock_baa57d a {
+    text-decoration: underline
+}
+
+.helpMessageWrapper_baa57d {
+    margin-bottom: 16px
+}
+
+.bodyWrapper_baa57d {
+    position: relative
+}
+
+.copy_baa57d {
+    color: var(--text-default)
+}
+
+.loadingWrapper_baa57d {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    min-height: 398px;
+    padding-top: 16px
+}
+
+/*# sourceMappingURL=60104.7e0057495eab1d04.css.map*/

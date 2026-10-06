@@ -535,8 +535,8 @@ function e3(e) {
     });
 }
 var e7 = n(995786),
-    e9 = n(206835),
-    e8 = n(280450),
+    e8 = n(206835),
+    e9 = n(280450),
     e6 = n(696451),
     e4 = n(229527),
     te = n(81400),
@@ -549,7 +549,7 @@ function tn(e) {
     return (0, i.jsxs)(T.$T, { color: T.Hv.DANGER, children: [s, (0, i.jsx)(T.zr, { onClick: l, children: a })] });
 }
 function ti() {
-    let e = (0, e9.A)({ scrollPosition: eg._F.GUILD_TAG });
+    let e = (0, e8.A)({ scrollPosition: eg._F.GUILD_TAG });
     return (0, i.jsxs)(T.$T, {
         color: T.Hv.DANGER,
         children: [V.intl.string(V.t.Zqlecb), (0, i.jsx)(T.zr, { onClick: e, children: V.intl.string(V.t.SJehVW) })],
@@ -559,10 +559,10 @@ function tl(e) {
     let { analyticsLocations: t, ...n } = e,
         { analyticsLocations: l } = (0, G.Ay)(t, x.A.AUTOMOD_NAGBAR_NOTICE),
         r = (0, c.bG)(
-            [e8.default, e6.Ay],
+            [e9.default, e6.Ay],
             () => {
                 if (null == n.guildId) return new Set();
-                let e = e8.default.getId();
+                let e = e9.default.getId();
                 return (0, e4.wj)(e6.Ay.getMember(n.guildId, e));
             },
             [n.guildId],
@@ -864,7 +864,7 @@ function t7(e) {
               })
             : null;
 }
-function t9() {
+function t8() {
     let e = (0, t0.A)();
     return null == e
         ? null
@@ -893,13 +893,13 @@ function t9() {
               ],
           });
 }
-var t8 = n(952818),
+var t9 = n(952818),
     t6 = n(935671);
 function t4() {
     (0, t6.sL)("nagbar");
 }
 function ne() {
-    return null == (0, c.bG)([t8.Ay], () => t8.Ay.getVisibleGame())
+    return null == (0, c.bG)([t9.Ay], () => t9.Ay.getVisibleGame())
         ? null
         : (0, i.jsxs)(T.$T, {
               color: T.Hv.DANGER,
@@ -1149,7 +1149,7 @@ let nC =
                   case eu.kqX.PENDING_MEMBER:
                       return (0, i.jsx)(tO, {});
                   case eu.kqX.INVITED_TO_SPEAK:
-                      return (0, i.jsx)(t9, {});
+                      return (0, i.jsx)(t8, {});
                   case eu.kqX.GUILD_RAID_NOTIFICATION:
                       let { dismissUntil: q } = r.metadata;
                       return (0, i.jsx)(e3, { onDismiss: () => nS(q) });
@@ -1465,7 +1465,9 @@ let nC =
                                               n.e("873532"),
                                               n.e("279774"),
                                               n.e("590088"),
-                                              n.e("125298"),
+                                              n.e("60104"),
+                                              n.e("46083"),
+                                              n.e("857297"),
                                               n.e("295570"),
                                               n.e("327439"),
                                               n.e("685673"),
@@ -1495,7 +1497,9 @@ let nC =
                                               n.e("363874"),
                                               n.e("923981"),
                                               n.e("750370"),
-                                              n.e("612162"),
+                                              n.e("972281"),
+                                              n.e("307107"),
+                                              n.e("896622"),
                                               n.e("466592"),
                                               n.e("73946"),
                                               n.e("282050"),
@@ -1514,9 +1518,7 @@ let nC =
                                               n.e("900277"),
                                               n.e("127962"),
                                               n.e("76428"),
-                                              n.e("77473"),
                                               n.e("863232"),
-                                              n.e("25279"),
                                               n.e("364827"),
                                               n.e("517888"),
                                               n.e("811133"),
@@ -1540,7 +1542,7 @@ let nC =
                                               n.e("221856"),
                                               n.e("678157"),
                                               n.e("147134"),
-                                              n.e("325675"),
+                                              n.e("883846"),
                                               n.e("996481"),
                                               n.e("331988"),
                                               n.e("40291"),
@@ -1566,26 +1568,29 @@ let nC =
                                               n.e("958038"),
                                               n.e("532039"),
                                               n.e("719466"),
-                                              n.e("99799"),
+                                              n.e("515799"),
                                               n.e("576909"),
                                               n.e("27355"),
                                               n.e("406174"),
                                               n.e("715555"),
                                               n.e("146070"),
+                                              n.e("77473"),
                                               n.e("523276"),
+                                              n.e("25279"),
                                               n.e("812042"),
                                               n.e("102328"),
                                               n.e("729963"),
                                               n.e("830938"),
                                               n.e("895785"),
-                                              n.e("665455"),
+                                              n.e("113458"),
                                               n.e("73536"),
                                               n.e("538513"),
                                               n.e("147864"),
                                               n.e("122990"),
                                               n.e("241176"),
+                                              n.e("570815"),
                                               n.e("50097"),
-                                              n.e("639409"),
+                                              n.e("220581"),
                                               n.e("791824"),
                                               n.e("562075"),
                                           ]).then(n.bind(n, 4630));
@@ -1849,11 +1854,11 @@ let nC =
                                                   n.e("82937"),
                                                   n.e("412117"),
                                                   n.e("987221"),
-                                                  n.e("125298"),
-                                                  n.e("612162"),
+                                                  n.e("46083"),
+                                                  n.e("972281"),
+                                                  n.e("307107"),
+                                                  n.e("896622"),
                                                   n.e("76428"),
-                                                  n.e("77473"),
-                                                  n.e("25279"),
                                                   n.e("517888"),
                                                   n.e("811133"),
                                                   n.e("959880"),
@@ -1868,16 +1873,19 @@ let nC =
                                                   n.e("190779"),
                                                   n.e("793716"),
                                                   n.e("221856"),
-                                                  n.e("325675"),
+                                                  n.e("883846"),
                                                   n.e("996481"),
                                                   n.e("209338"),
+                                                  n.e("77473"),
                                                   n.e("523276"),
+                                                  n.e("25279"),
                                                   n.e("812042"),
                                                   n.e("102328"),
                                                   n.e("830938"),
                                                   n.e("895785"),
-                                                  n.e("665455"),
+                                                  n.e("113458"),
                                                   n.e("73536"),
+                                                  n.e("570815"),
                                                   n.e("114794"),
                                               ]).then(n.bind(n, 174705));
                                               return (t) =>
