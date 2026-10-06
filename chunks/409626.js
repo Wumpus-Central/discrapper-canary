@@ -65,6 +65,7 @@ var i,
         (r[(r.CopyLink = 39)] = "CopyLink"),
         (r[(r.Overview = 40)] = "Overview"),
         (r[(r.Communities = 41)] = "Communities"),
+        (r[(r.CommunityClicked = 42)] = "CommunityClicked"),
         r),
     A =
         (((a = {}).ActivityCard = "activity_card"),

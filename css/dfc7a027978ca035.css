@@ -1100,69 +1100,6 @@
     width: 246px
 }
 
-.placeholder__644cf {
-    background-color: var(--icon-muted);
-    opacity: .1
-}
-
-.button__644cf {
-    border-radius: var(--radius-sm)
-}
-
-.buttonSm__644cf {
-    flex-shrink: 0;
-    height: var(--size-32);
-    width: 92px
-}
-
-.buttonMd__644cf {
-    height: 40px;
-    width: 100%
-}
-
-.full-motion .placeholder__644cf {
-    animation: game-profile-skeleton-pulse__644cf 1.4s ease-in-out infinite alternate;
-    animation-delay: var(--custom-game-profile-skeleton-animation-delay, 0s);
-    animation-fill-mode: backwards
-}
-
-@media (prefers-reduced-motion:reduce) {
-    .full-motion .placeholder__644cf {
-        animation: none
-    }
-}
-
-@keyframes game-profile-skeleton-pulse__644cf {
-    0% {
-        opacity: .05
-    }
-
-    to {
-        opacity: .1
-    }
-}
-
-.container__0b616 {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-sm)
-}
-
-.headingContainer__0b616 {
-    align-items: center;
-    display: flex;
-    gap: var(--space-8);
-    height: var(--size-32);
-    justify-content: space-between
-}
-
-.skeletonTitle__0b616 {
-    border-radius: var(--radius-xs);
-    height: var(--size-24);
-    max-width: 100%;
-    min-width: 0
-}
-
 .row_a54042 {
     display: flex;
     gap: var(--space-md);
@@ -1186,4 +1123,4 @@
     gap: var(--space-16)
 }
 
-/*# sourceMappingURL=ca688bb016aa2def.css.map*/
+/*# sourceMappingURL=dfc7a027978ca035.css.map*/

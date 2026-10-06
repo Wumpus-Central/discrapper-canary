@@ -11,6 +11,7 @@ e.exports = {
     To: "iconTextContainerCondensed_adbbea",
     yj: "textContainerCondensed_adbbea",
     YS: "guildNameContainer_adbbea",
+    J5: "guildName_adbbea",
     h_: "description_adbbea",
     nW: "pillIcon_adbbea",
     jk: "pillIconTotal_adbbea pillIcon_adbbea",

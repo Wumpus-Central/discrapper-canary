@@ -137,7 +137,7 @@ function X(e) {
             n.e("831130"),
             n.e("398929"),
             n.e("377989"),
-            n.e("796056"),
+            n.e("788029"),
             n.e("505928"),
             n.e("752657"),
             n.e("747973"),
@@ -248,7 +248,7 @@ function Z(e) {
     let { quest: t, sourceQuestContent: o } = e;
     (0, r.openModalLazy)(async () => {
         let { default: e } = await Promise.all([
-            n.e("796056"),
+            n.e("788029"),
             n.e("505928"),
             n.e("885251"),
             n.e("953840"),

@@ -3394,6 +3394,7 @@ var i3 =
         (e_.GAME_COMMUNITY_UPSELL = "Game Community Upsell"),
         (e_.ACTIVITY_PANEL_GAME_COMMUNITY_UPSELL = "Activity Panel Game Community Upsell"),
         (e_.GAME_PROFILE_ANNOUNCEMENTS = "Game Profile Announcements"),
+        (e_.GAME_PROFILE_COMMUNITIES = "Game Profile Communities"),
         (e_.DISCOVERABLE_GUILD_INVITE_LURKER = "Discoverable Guild Invite - Lurker Mode"),
         (e_.LEAVE_PROMPT_LURKER = "Leave Prompt - Lurker Mode"),
         e_),
