@@ -2,22 +2,23 @@ let i, r, a, s, l, o, d, c;
 (n.r(t),
     n.d(t, {
         encodeProperties: () => f,
-        isThrottled: () => em,
+        isThrottled: () => eg,
         SpanComponentNames: () => Q.yk,
         analyticsTrackingStoreMaker: () => Z,
         getOS: () => ed,
         SpanTtiNames: () => Q.wJ,
-        getDevice: () => eu,
-        getCampaignParams: () => eE,
+        getDevice: () => e_,
+        getCampaignParams: () => eA,
         ImpressionNames: () => Q.IJ,
         ImpressionGroups: () => q.q,
-        getSuperPropertiesBase64: () => eI,
-        trackMaker: () => eg,
+        getBrowser: () => eu,
+        getSuperPropertiesBase64: () => ep,
+        trackMaker: () => eS,
         AnalyticsActionHandlers: () => Y,
         NetworkActionNames: () => Q.D3,
-        getSuperProperties: () => ef,
         ImpressionTypes: () => q.z,
-        extendSuperProperties: () => eh,
+        getSuperProperties: () => eI,
+        extendSuperProperties: () => ef,
     }));
 var u = n(812729),
     _ = n.n(u),
@@ -374,6 +375,39 @@ function ec(e, t) {
     return null === n || ("string" != typeof n[1] && n[1].length) ? "" : decodeURIComponent(n[1]).replace(/\+/g, " ");
 }
 function eu() {
+    let { userAgent: e, vendor: t = "" } = window.navigator,
+        { opera: n } = window,
+        i = (function (e) {
+            let { userAgentData: t } = window.navigator;
+            for (let { brand: n } of t?.brands ?? []) {
+                if ("Microsoft Edge" === n) return "Edge";
+                if ("Opera" === n) return /Mini/.test(e) ? "Opera Mini" : "Opera";
+            }
+            return null;
+        })(e);
+    if (n) return /Mini/.test(e) ? "Opera Mini" : "Opera";
+    if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
+    if (/FBIOS/.test(e)) return "Facebook Mobile";
+    if (/CriOS/.test(e)) return "Chrome iOS";
+    if (/FxiOS/.test(e)) return "Firefox iOS";
+    else if (/EdgiOS/.test(e)) return "Edge iOS";
+    else if (/EdgA/.test(e)) return "Android Edge";
+    else if (/Apple/.test(t))
+        return /Mobile/.test(e) || (null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2)
+            ? "Mobile Safari"
+            : "Safari";
+    else if (null !== i) return i;
+    else if (/Android/.test(e))
+        return /Firefox/.test(e) ? "Android Firefox" : /Chrome/.test(e) ? "Android Chrome" : "Android Mobile";
+    else if (/Edge/.test(e)) return "Edge";
+    else if (/Chrome/.test(e)) return "Chrome";
+    else if (/Konqueror/.test(e)) return "Konqueror";
+    else if (/Firefox/.test(e)) return "Firefox";
+    else if (/MSIE|Trident\//.test(e)) return "Internet Explorer";
+    else if (/Gecko/.test(e)) return "Mozilla";
+    else return "";
+}
+function e_() {
     let { userAgent: e } = window.navigator;
     if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
     if (/Windows Phone/i.test(e)) return "Windows Phone";
@@ -382,18 +416,18 @@ function eu() {
     if (/iPad/.test(e)) return "iPad";
     else return "";
 }
-let e_ = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
-function eE(e) {
+let eE = "utm_source utm_medium utm_campaign utm_content utm_term".split(" ");
+function eA(e) {
     let t = {};
     return (
-        e_.forEach((n) => {
+        eE.forEach((n) => {
             let i = ec(e, n);
             i.length > 0 && (t[n] = i);
         }),
         t
     );
 }
-function eA() {
+function eh() {
     let e,
         t = {};
     return (
@@ -401,7 +435,7 @@ function eA() {
         (t.referring_domain = (e = document.referrer.split("/")).length >= 3 ? e[2] : ""),
         (t = {
             ...t,
-            ...eE(window.location.href),
+            ...eA(window.location.href),
             ...(function () {
                 let e,
                     t = {},
@@ -433,40 +467,20 @@ if (null == a)
             if (null == e) {
                 let t;
                 (((t = {}).os = ed()),
-                    (t.browser = (function () {
-                        let { userAgent: e, vendor: t = "" } = window.navigator,
-                            { opera: n } = window;
-                        if (n) return /Mini/.test(e) ? "Opera Mini" : "Opera";
-                        if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
-                        if (/FBIOS/.test(e)) return "Facebook Mobile";
-                        if (/CriOS/.test(e)) return "Chrome iOS";
-                        if (/Apple/.test(t))
-                            return /Mobile/.test(e) ||
-                                (null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2)
-                                ? "Mobile Safari"
-                                : "Safari";
-                        else if (/Android/.test(e)) return /Chrome/.test(e) ? "Android Chrome" : "Android Mobile";
-                        else if (/Edge/.test(e)) return "Edge";
-                        else if (/Chrome/.test(e)) return "Chrome";
-                        else if (/Konqueror/.test(e)) return "Konqueror";
-                        else if (/Firefox/.test(e)) return "Firefox";
-                        else if (/MSIE|Trident\//.test(e)) return "Internet Explorer";
-                        else if (/Gecko/.test(e)) return "Mozilla";
-                        else return "";
-                    })()),
-                    (t.device = eu()),
+                    (t.browser = eu()),
+                    (t.device = e_()),
                     (t.system_locale = (0, en.c)()),
                     (t.has_client_mods = (0, et.b)()),
                     (e = t),
                     ei.w.set(es, e));
             }
             let t = ei.w.get(el);
-            null == t && ((t = eA()), ei.w.set(el, t));
+            null == t && ((t = eh()), ei.w.set(el, t));
             let n = er.u.get(el);
             if (null == n) {
                 var i;
                 let e;
-                ((i = eA()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), er.u.set(el, n));
+                ((i = eh()), (e = {}), Object.keys(i).map((t) => (e[`${t}_current`] = i[t])), (n = e), er.u.set(el, n));
             }
             return {
                 ...e,
@@ -481,21 +495,21 @@ if (null == a)
     } catch (e) {
         a = {};
     }
-function eh(e) {
+function ef(e) {
     s = f((a = { ...a, ...e }));
 }
-function ef() {
+function eI() {
     return a;
 }
-function eI() {
+function ep() {
     return s;
 }
-eh(
+ef(
     ((l = {}),
     (o = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == l.release_channel || "" === l.release_channel) &&
         (l.release_channel = o.split("-")[0]),
-    isNaN((d = parseInt("630635", 10))) || (l.client_build_number = d),
+    isNaN((d = parseInt("630637", 10))) || (l.client_build_number = d),
     null == (c = eo?.app.getBuildNumber()) || isNaN(c) || (l.native_build_number = c),
     (l.client_event_source = (function () {
         try {
@@ -507,12 +521,12 @@ eh(
     (l.client_launch_id = ea.C),
     l),
 );
-let ep = {},
-    eT = {};
-function em(e) {
-    return null != ep[e] && ep[e] > Date.now();
+let eT = {},
+    em = {};
+function eg(e) {
+    return null != eT[e] && eT[e] > Date.now();
 }
-let eg = (e) => {
+let eS = (e) => {
     let { addBreadcrumb: t, analyticEventConfigs: i, dispatcher: r, TRACK_ACTION_NAME: a } = e,
         s = function (e, t, n) {
             return new Promise((i) => {
@@ -534,14 +548,14 @@ let eg = (e) => {
         if (("function" == typeof o && (o = o(l) ?? null), null != o))
             if ("throttlePeriod" in o) {
                 let t = [e, ...o.throttleKeys(l)].join("_");
-                if (em(t) || ("number" == typeof o.throttlePercent && Math.random() > o.throttlePercent))
+                if (eg(t) || ("number" == typeof o.throttlePercent && Math.random() > o.throttlePercent))
                     return Promise.resolve();
                 if (o.deduplicate) {
-                    let e = eT[t];
+                    let e = em[t];
                     if (_()(e, l)) return Promise.resolve();
-                    eT[t] = l;
+                    em[t] = l;
                 }
-                ep[t] = Date.now() + o.throttlePeriod;
+                eT[t] = Date.now() + o.throttlePeriod;
             } else if ("throttlePercent" in o) {
                 if (Math.random() > o.throttlePercent) return Promise.resolve();
             } else A()(!1, `Unsupported analytics event config: ${o}`);

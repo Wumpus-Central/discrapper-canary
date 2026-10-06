@@ -10,9 +10,9 @@ var A,
     L,
     d,
     C,
-    D = E(214958),
-    p = E.n(D);
-function P() {
+    p = E(214958),
+    g = E.n(p);
+function D() {
     let e = window;
     return (
         null != e.jQuery ||
@@ -24,7 +24,7 @@ function P() {
         null != e.VencordNative
     );
 }
-function g() {
+function P() {
     return (
         ((Array.isArray(navigator.languages) ? navigator.languages[0] : null) ||
             navigator.language ||
@@ -35,8 +35,8 @@ function g() {
 }
 ((n = E(973117).n), (r = E(28967).n));
 let M = (0, E(132500).A)();
-var G = E(264572).Buffer;
-let f = "deviceProperties",
+var f = E(264572).Buffer;
+let G = "deviceProperties",
     m = "referralProperties",
     U = window.DiscordNative;
 if (null != U) {
@@ -47,7 +47,7 @@ if (null != U) {
         r = U.os.arch,
         _ = U.os.appArch,
         o = U.app.getReleaseChannel(),
-        I = g();
+        I = P();
     switch (E) {
         case "win32":
             e = "Windows";
@@ -71,11 +71,11 @@ if (null != U) {
             os_arch: r,
             app_arch: _,
             system_locale: I,
-            has_client_mods: P(),
+            has_client_mods: D(),
             client_launch_id: M,
         }),
-        p().name?.toLocaleLowerCase() === "electron" &&
-            ((i.browser_user_agent = p().ua || ""), (i.browser_version = p().version || "")),
+        g().name?.toLocaleLowerCase() === "electron" &&
+            ((i.browser_user_agent = g().ua || ""), (i.browser_version = g().version || "")),
         "linux" === E)
     ) {
         let e = U.crashReporter.getMetadata();
@@ -137,7 +137,7 @@ function $() {
 if (null == i)
     try {
         i = (function () {
-            let e = n.get(f);
+            let e = n.get(G);
             if (null == e) {
                 let t;
                 (((t = {}).os = (function () {
@@ -155,17 +155,34 @@ if (null == i)
                 })()),
                     (t.browser = (function () {
                         let { userAgent: e, vendor: t = "" } = window.navigator,
-                            { opera: E } = window;
+                            { opera: E } = window,
+                            n = (function (e) {
+                                let { userAgentData: t } = window.navigator;
+                                for (let { brand: E } of t?.brands ?? []) {
+                                    if ("Microsoft Edge" === E) return "Edge";
+                                    if ("Opera" === E) return /Mini/.test(e) ? "Opera Mini" : "Opera";
+                                }
+                                return null;
+                            })(e);
                         if (E) return /Mini/.test(e) ? "Opera Mini" : "Opera";
                         if (/(BlackBerry|PlayBook|BB10)/i.test(e)) return "BlackBerry";
                         if (/FBIOS/.test(e)) return "Facebook Mobile";
                         if (/CriOS/.test(e)) return "Chrome iOS";
-                        if (/Apple/.test(t))
+                        if (/FxiOS/.test(e)) return "Firefox iOS";
+                        else if (/EdgiOS/.test(e)) return "Edge iOS";
+                        else if (/EdgA/.test(e)) return "Android Edge";
+                        else if (/Apple/.test(t))
                             return /Mobile/.test(e) ||
                                 (null != window.navigator.maxTouchPoints && window.navigator.maxTouchPoints > 2)
                                 ? "Mobile Safari"
                                 : "Safari";
-                        else if (/Android/.test(e)) return /Chrome/.test(e) ? "Android Chrome" : "Android Mobile";
+                        else if (null !== n) return n;
+                        else if (/Android/.test(e))
+                            return /Firefox/.test(e)
+                                ? "Android Firefox"
+                                : /Chrome/.test(e)
+                                  ? "Android Chrome"
+                                  : "Android Mobile";
                         else if (/Edge/.test(e)) return "Edge";
                         else if (/Chrome/.test(e)) return "Chrome";
                         else if (/Konqueror/.test(e)) return "Konqueror";
@@ -183,10 +200,10 @@ if (null == i)
                         if (/iPad/.test(e)) return "iPad";
                         else return "";
                     })()),
-                    (t.system_locale = g()),
-                    (t.has_client_mods = P()),
+                    (t.system_locale = P()),
+                    (t.has_client_mods = D()),
                     (e = t),
-                    n.set(f, e));
+                    n.set(G, e));
             }
             let t = n.get(m);
             null == t && ((t = $()), n.set(m, t));
@@ -199,8 +216,8 @@ if (null == i)
             return {
                 ...e,
                 ...{
-                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: p().version || "" },
-                    os_version: p()?.os?.version ?? "",
+                    ...{ browser_user_agent: window.navigator.userAgent || "", browser_version: g().version || "" },
+                    os_version: g()?.os?.version ?? "",
                 },
                 ...t,
                 ...E,
@@ -213,7 +230,7 @@ if (null == i)
     (l = window.GLOBAL_ENV.RELEASE_CHANNEL) &&
         (null == I.release_channel || "" === I.release_channel) &&
         (I.release_channel = l.split("-")[0]),
-    isNaN((s = parseInt("630635", 10))) || (I.client_build_number = s),
+    isNaN((s = parseInt("630637", 10))) || (I.client_build_number = s),
     null == (a = U?.app.getBuildNumber()) || isNaN(a) || (I.native_build_number = a),
     (I.client_event_source = (function () {
         try {
@@ -221,11 +238,11 @@ if (null == i)
         } catch (e) {}
         return null;
     })()),
-    (I.has_client_mods = P()),
+    (I.has_client_mods = D()),
     (I.client_launch_id = M),
     (function (e) {
         try {
-            G.from(JSON.stringify(e)).toString("base64");
+            f.from(JSON.stringify(e)).toString("base64");
         } catch (e) {
             return null;
         }
@@ -330,8 +347,8 @@ b &&
     (BigInt.prototype.toJSON = function () {
         return this.toString();
     });
-let Y = {},
-    F = (
+let F = {},
+    Y = (
         b
             ? function (e) {
                   return BigInt(e);
@@ -339,18 +356,18 @@ let Y = {},
             : function (e) {
                   return e instanceof y
                       ? e
-                      : ("number" == typeof e && (e = e.toString()), null != Y[e] || (Y[e] = y.fromString(e)), Y[e]);
+                      : ("number" == typeof e && (e = e.toString()), null != F[e] || (F[e] = y.fromString(e)), F[e]);
               }
     )(0),
     V = b
         ? function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : F,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Y,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Y;
               return e | t;
           }
         : function () {
-              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : F,
-                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : F;
+              let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : Y,
+                  t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Y;
               return e.or(t);
           },
     W = b
@@ -399,9 +416,9 @@ function K(e, t) {
     }
     return E;
 }
-let j = "u" < typeof location ? "" : location.protocol,
-    Q = j + ("u" < typeof window ? "" : window.GLOBAL_ENV.WEBAPP_ENDPOINT),
-    x = j + "//discord.gg";
+let x = "u" < typeof location ? "" : location.protocol,
+    j = x + ("u" < typeof window ? "" : window.GLOBAL_ENV.WEBAPP_ENDPOINT),
+    Q = x + "//discord.gg";
 (Object.freeze({
     HINT_PURPLE: "#c9d2f0",
     DARK_PURPLE: "#697ec4",
@@ -518,26 +535,26 @@ let X = Object.freeze({
         TWITTER: Object.freeze({ default: "https://twitter.com/discord", ja: "https://twitter.com/discord_jp" }),
     }));
 let q = Object.freeze({
-    WELCOME: `${Q}/welcome/`,
-    ME: `${Q}/channels/@me`,
-    SETTINGS: (e, t) => `${Q}/settings/${e}${null != t && "" !== t ? `/${t}` : ""}`,
-    CONNECTION: (e) => `${Q}/connections/${e}`,
-    CHANGELOGS: `${Q}/settings/changelogs`,
-    LOGIN: `${Q}/login`,
-    LOGIN_WITH_REDIRECT: (e) => `${Q}/login?redirect_to=${e}`,
-    REGISTER: `${Q}/register`,
-    REGISTER_WITH_REDIRECT: (e) => `${Q}/register?redirect_to=${e}`,
-    CREATE_GUILD: `${Q}/guilds/create`,
-    VANITY_INVITE: (e) => `${x}/${e}`,
-    HYPESQUAD_ONLINE: `${Q}/settings/hypesquad-online`,
-    BROWSE_NITRO_TITLES: `${Q}/store/browse?type=nitro`,
-    SKU_DETAILS: (e, t) => `${Q}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
+    WELCOME: `${j}/welcome/`,
+    ME: `${j}/channels/@me`,
+    SETTINGS: (e, t) => `${j}/settings/${e}${null != t && "" !== t ? `/${t}` : ""}`,
+    CONNECTION: (e) => `${j}/connections/${e}`,
+    CHANGELOGS: `${j}/settings/changelogs`,
+    LOGIN: `${j}/login`,
+    LOGIN_WITH_REDIRECT: (e) => `${j}/login?redirect_to=${e}`,
+    REGISTER: `${j}/register`,
+    REGISTER_WITH_REDIRECT: (e) => `${j}/register?redirect_to=${e}`,
+    CREATE_GUILD: `${j}/guilds/create`,
+    VANITY_INVITE: (e) => `${Q}/${e}`,
+    HYPESQUAD_ONLINE: `${j}/settings/hypesquad-online`,
+    BROWSE_NITRO_TITLES: `${j}/store/browse?type=nitro`,
+    SKU_DETAILS: (e, t) => `${j}/store/skus/${e}${null != t ? `?store_listing_id=${t}` : ""}`,
     MESSAGE: (e, t, E) => `/channels/${e}/${t}/${E}`,
     CHANNEL: (e, t) => `/channels/${e}/${t}`,
-    REPORT: `${Q}/report`,
-    QUEST_PREVIEW_TOOL_2: (e) => `${Q}/quest-preview/${e}`,
-    QUEST_HOME_PREVIEW: (e) => `${Q}/quest-home?ad_creative_ids=${e}`,
-    QUEST_BAR_PREVIEW: (e) => `${Q}/quest-bar-preview?ad_creative_ids=${e}`,
+    REPORT: `${j}/report`,
+    QUEST_PREVIEW_TOOL_2: (e) => `${j}/quest-preview/${e}`,
+    QUEST_HOME_PREVIEW: (e) => `${j}/quest-home?ad_creative_ids=${e}`,
+    QUEST_BAR_PREVIEW: (e) => `${j}/quest-bar-preview?ad_creative_ids=${e}`,
 });
 var J =
     (((A = J || {}).INDEX = "/"),
