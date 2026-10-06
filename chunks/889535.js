@@ -8504,12 +8504,14 @@ let rJ = {
                     a.e("995210"),
                     a.e("701911"),
                     a.e("784853"),
+                    a.e("553203"),
                     a.e("966016"),
                     a.e("218489"),
                     a.e("317699"),
                     a.e("257032"),
                     a.e("772238"),
                     a.e("845322"),
+                    a.e("945651"),
                     a.e("114748"),
                     a.e("426386"),
                     a.e("204665"),
@@ -8518,7 +8520,7 @@ let rJ = {
                     a.e("639855"),
                     a.e("214530"),
                     a.e("149409"),
-                    a.e("124468"),
+                    a.e("928246"),
                     a.e("632607"),
                     a.e("935277"),
                 ]).then(a.bind(a, 237600)),
@@ -8560,7 +8562,7 @@ let rJ = {
                 });
         },
         StaffOnlyEntryDebugMenu: async () => {
-            let { default: e } = await a.e("789346").then(a.bind(a, 949881)),
+            let { default: e } = await Promise.all([a.e("886456"), a.e("789346")]).then(a.bind(a, 949881)),
                 { ContentInventoryEntryType: t } = await Promise.resolve().then(a.bind(a, 681154)),
                 { ContentInventoryAuthorType: n } = await Promise.resolve().then(a.bind(a, 6161)),
                 l = ed.default.getCurrentUser(),
@@ -8627,14 +8629,18 @@ let rJ = {
                 : (t) => (0, r.jsx)(e, { ...t, channel: n });
         },
         MembersTableSortContextMenu: async () => {
-            let { default: e } = await a.e("73091").then(a.bind(a, 779662)),
+            let { default: e } = await Promise.all([a.e("73091"), a.e("945651")]).then(a.bind(a, 779662)),
                 t = Object.values(nb.A.getGuilds())[0];
             return null == t ? () => null : () => (0, r.jsx)(e, { guildId: t.id, onClose: rY.Z_ });
         },
         MembersTableJoinTypeContextMenu: async () => {
-            let { default: e } = await Promise.all([a.e("118203"), a.e("71719"), a.e("514878"), a.e("966016")]).then(
-                    a.bind(a, 316173),
-                ),
+            let { default: e } = await Promise.all([
+                    a.e("118203"),
+                    a.e("71719"),
+                    a.e("514878"),
+                    a.e("966016"),
+                    a.e("945651"),
+                ]).then(a.bind(a, 316173)),
                 t = Object.values(nb.A.getGuilds())[0];
             return null == t ? () => null : () => (0, r.jsx)(e, { guildId: t.id, onClose: rY.Z_ });
         },
@@ -9500,9 +9506,13 @@ let op = {
             });
     },
     EnableCommunityModal: async () => {
-        let { default: e } = await Promise.all([a.e("443159"), a.e("82721"), a.e("452823"), a.e("674832")]).then(
-            a.bind(a, 709779),
-        );
+        let { default: e } = await Promise.all([
+            a.e("443159"),
+            a.e("82721"),
+            a.e("452823"),
+            a.e("553203"),
+            a.e("674832"),
+        ]).then(a.bind(a, 709779));
         return (t) =>
             (0, r.jsx)(e, {
                 ...t,
@@ -9560,7 +9570,7 @@ let op = {
     FavoritesGuildAddChannelModal: async () => {
         let { default: e } = await Promise.all([
             a.e("866475"),
-            a.e("385663"),
+            a.e("267732"),
             a.e("850979"),
             a.e("236946"),
             a.e("692639"),
@@ -9576,7 +9586,7 @@ let op = {
     ActivityShareMomentModal: async () => {
         let { default: e } = await Promise.all([
             a.e("866475"),
-            a.e("385663"),
+            a.e("267732"),
             a.e("58243"),
             a.e("236946"),
             a.e("692639"),
@@ -9958,7 +9968,9 @@ let op = {
         return (t) => (0, r.jsx)(e, { ...t });
     },
     DisableRiskyPermsModal: async () => {
-        let { default: e } = await Promise.all([a.e("796057"), a.e("452823"), a.e("971905")]).then(a.bind(a, 868952)),
+        let { default: e } = await Promise.all([a.e("796057"), a.e("452823"), a.e("553203"), a.e("971905")]).then(
+                a.bind(a, 868952),
+            ),
             t = Object.values(nb.A.getGuilds())[0];
         return null == t ? () => null : (a) => (0, r.jsx)(e, { ...a, guild: t });
     },

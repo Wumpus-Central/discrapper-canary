@@ -18,22 +18,23 @@ let r = new (class {
             (this.isQueryEnteredTracked = !1));
     }
     maybeTrackQueryEntered() {
-        this.isQueryEnteredTracked ||
-            (n.default.track(a.HAw.USER_SETTINGS_SEARCH_QUERY_ENTERED, { search_session_id: r.getSearchSessionId() }),
-            (this.isQueryEnteredTracked = !0));
+        this.isQueryEnteredTracked || (this.trackQueryEntered(), (this.isQueryEnteredTracked = !0));
     }
     terminate() {
         null != this.searchSessionId &&
             null != this.searchSessionStartTime &&
-            (!(function (e) {
-                let { searchSessionDuration: t } = e;
-                n.default.track(a.HAw.USER_SETTINGS_SEARCH_CLOSED, {
-                    search_session_id: r.getSearchSessionId(),
-                    search_session_duration_ms: t,
-                });
-            })({ searchSessionDuration: Date.now() - this.searchSessionStartTime }),
+            (this.trackClosed(Date.now() - this.searchSessionStartTime),
             (this.searchSessionId = null),
             (this.searchSessionStartTime = null),
             (this.isQueryEnteredTracked = !1));
+    }
+    trackQueryEntered() {
+        n.default.track(a.HAw.USER_SETTINGS_SEARCH_QUERY_ENTERED, { search_session_id: this.getSearchSessionId() });
+    }
+    trackClosed(e) {
+        n.default.track(a.HAw.USER_SETTINGS_SEARCH_CLOSED, {
+            search_session_id: this.getSearchSessionId(),
+            search_session_duration_ms: e,
+        });
     }
 })();

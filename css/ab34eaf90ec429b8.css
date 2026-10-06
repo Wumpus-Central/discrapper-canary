@@ -1,20 +1,3 @@
-.paymentTag__1d3ca {
-    border-radius: var(--radius-xs);
-    padding: 0 var(--space-4);
-    text-transform: uppercase;
-    white-space: nowrap
-}
-
-.paymentTagPositive__1d3ca {
-    background-color: var(--background-feedback-positive);
-    color: var(--text-feedback-positive)
-}
-
-.paymentTagCritical__1d3ca {
-    background-color: var(--background-feedback-critical);
-    color: var(--text-feedback-critical)
-}
-
 .container__9a1ef,
 .contentSection__9a1ef {
     display: flex;
@@ -2550,4 +2533,4 @@
     color: var(--premium-tier-2-pink)
 }
 
-/*# sourceMappingURL=d7219c841cfa1181.css.map*/
+/*# sourceMappingURL=ab34eaf90ec429b8.css.map*/

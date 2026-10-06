@@ -1,0 +1,18 @@
+.paymentTag__1d3ca {
+    border-radius: var(--radius-xs);
+    padding: 0 var(--space-4);
+    text-transform: uppercase;
+    white-space: nowrap
+}
+
+.paymentTagPositive__1d3ca {
+    background-color: var(--background-feedback-positive);
+    color: var(--text-feedback-positive)
+}
+
+.paymentTagCritical__1d3ca {
+    background-color: var(--background-feedback-critical);
+    color: var(--text-feedback-critical)
+}
+
+/*# sourceMappingURL=a527fec0ecfa1789.css.map*/
