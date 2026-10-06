@@ -8,11 +8,11 @@ function l(e) {
 }
 class o {
     surface;
-    profile;
+    filterGroup;
     state = null;
     selectedQuery = null;
-    constructor(e, t = r.u.DEFAULT) {
-        ((this.surface = e), (this.profile = t));
+    constructor(e, t = r.a.DEFAULT) {
+        ((this.surface = e), (this.filterGroup = t));
     }
     onQuery = (e) => {
         let t = (0, a.C7)(e);
@@ -65,7 +65,7 @@ class o {
             i.default.track(s.HAw.GAME_SEARCH_RESULT_SELECTED, {
                 search_session_id: t.id,
                 surface: this.surface,
-                profile: this.profile,
+                filter_group: this.filterGroup,
                 query: t.query,
                 query_length: t.query.length,
                 results_query: r?.query ?? null,
@@ -90,7 +90,7 @@ class o {
                 i.default.track(s.HAw.GAME_SEARCH_SESSION_ENDED, {
                     search_session_id: t.id,
                     surface: this.surface,
-                    profile: this.profile,
+                    filter_group: this.filterGroup,
                     query: t.lastQuery,
                     query_length: t.lastQuery.length,
                     max_query_length: t.maxQueryLength,

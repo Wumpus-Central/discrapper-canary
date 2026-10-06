@@ -14,12 +14,12 @@ let c = new (r())({ max: 100 }),
 class E extends a.Ay.Store {
     static displayName = "GameAutocompleteStore";
     getResults(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.u.DEFAULT,
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.a.DEFAULT,
             n = (0, o.C7)(e);
         return null == n ? void 0 : c.peek(d(t, n));
     }
     getClosestResults(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.u.DEFAULT,
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.a.DEFAULT,
             n = (0, o.C7)(e);
         if (null != n)
             for (let e = n.length; e >= 1; e--) {
@@ -29,14 +29,14 @@ class E extends a.Ay.Store {
             }
     }
     shouldSuppressFetch(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.u.DEFAULT,
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.a.DEFAULT,
             n = (0, o.C7)(e);
         if (null == n) return !1;
         let i = d(t, n);
         return !(c.has(i) || u.has(i)) && (0, o.bC)(n, (e) => c.peek(d(t, e)));
     }
     isFetching(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.u.DEFAULT,
+        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.a.DEFAULT,
             n = (0, o.C7)(e);
         return null != n && u.has(d(t, n));
     }
@@ -49,16 +49,16 @@ let A = new E(s.h, {
         (c.reset(), (u = new Set()), _.reset());
     },
     GAME_AUTOCOMPLETE_FETCH: function (e) {
-        let { query: t, profile: n } = e;
+        let { query: t, filterGroup: n } = e;
         u.add(d(n, t));
     },
     GAME_AUTOCOMPLETE_FETCH_SUCCESS: function (e) {
-        let { query: t, profile: n, results: i } = e,
+        let { query: t, filterGroup: n, results: i } = e,
             r = d(n, t);
         for (let e of (u.delete(r), c.set(r, i), i)) _.set(e.id, e);
     },
     GAME_AUTOCOMPLETE_FETCH_FAILURE: function (e) {
-        let { query: t, profile: n } = e;
+        let { query: t, filterGroup: n } = e;
         u.delete(d(n, t));
     },
 });

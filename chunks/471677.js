@@ -8,12 +8,17 @@ var i = n(582128),
     d = n(929396),
     c = n(652215);
 async function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.u.DEFAULT,
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.a.DEFAULT,
         n = (0, d.C7)(e);
     if (null != n) {
         if (l.A.shouldSuppressFetch(n, t))
-            return void s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: n, profile: t, results: [] });
-        s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH", query: n, profile: t });
+            return void s.h.dispatch({
+                type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS",
+                query: n,
+                filterGroup: t,
+                results: [],
+            });
+        s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH", query: n, filterGroup: t });
         try {
             let { body: e } = await a.Bo.get({ url: c.Rsh.GAMES_AUTOCOMPLETE, query: { q: n }, rejectWithError: !1 }),
                 i = (e ?? []).map((e) => ({
@@ -22,9 +27,9 @@ async function u(e) {
                     icon: e.icon,
                     platformAvailability: e.platform_availability,
                 }));
-            s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: n, profile: t, results: i });
+            s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_SUCCESS", query: n, filterGroup: t, results: i });
         } catch (e) {
-            throw (s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_FAILURE", query: n, profile: t }), e);
+            throw (s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH_FAILURE", query: n, filterGroup: t }), e);
         }
     }
 }
@@ -33,7 +38,7 @@ let E = 200,
     A = 500,
     h = (0, r.UT)(l.A, {
         getQueryId: function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.u.DEFAULT;
+            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.a.DEFAULT;
             return c.fic.GAME_AUTOCOMPLETE((0, d.C7)(e), t);
         },
         get: (e, t) => l.A.getResults(e, t) ?? null,
@@ -49,7 +54,7 @@ let E = 200,
         failureStaleAfter: 60,
     });
 function f(e, t) {
-    let { surface: n, profile: r = o.u.DEFAULT } = t,
+    let { surface: n, filterGroup: r = o.a.DEFAULT } = t,
         a = (0, d.C7)(e),
         s = (function (e) {
             let [t, n] = i.useState(e),
