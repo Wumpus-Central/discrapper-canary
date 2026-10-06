@@ -656,8 +656,8 @@ var e0 = n(174459),
     e2 = n(47675),
     e7 = n(999291),
     e5 = n(874402),
-    e4 = n(652215),
-    e9 = n(758836),
+    e9 = n(652215),
+    e4 = n(758836),
     e3 = n(854232),
     e6 = n(816645);
 function te(e) {
@@ -842,7 +842,7 @@ function te(e) {
                             }
                             if (n) {
                                 ((0, eE.Cz)({
-                                    tab: e9.G2.ORBS,
+                                    tab: e4.G2.ORBS,
                                     analyticsLocations: en,
                                     analyticsSource: S.A.VIRTUAL_CURRENCY_ORB_PROFILE_BADGE,
                                 }),
@@ -853,7 +853,7 @@ function te(e) {
                             if (r) {
                                 if (
                                     (a.preventDefault(),
-                                    e0.default.track(e4.HAw.TIERED_TENURE_BADGE_CLICKED, {
+                                    e0.default.track(e9.HAw.TIERED_TENURE_BADGE_CLICKED, {
                                         badge: e.id,
                                         premium_type: es,
                                         viewed_user_id: w?.userId,
@@ -861,7 +861,7 @@ function te(e) {
                                     es)
                                 ) {
                                     (eT
-                                        ? ((0, eF.pX)(e4.BVt.NITRO_HOME), (0, A.closeAllModals)())
+                                        ? ((0, eF.pX)(e9.BVt.NITRO_HOME), (0, A.closeAllModals)())
                                         : (0, eL.D)({ analyticsLocations: en, displayProfile: w }),
                                         k?.());
                                     return;
@@ -884,7 +884,7 @@ function te(e) {
                                           surfaceId: eH.uF.QUEST_BADGE,
                                           isTargeted: !1,
                                       })
-                                    : e0.default.track(e4.HAw.QUEST_CONTENT_VIEWED, {
+                                    : e0.default.track(e9.HAw.QUEST_CONTENT_VIEWED, {
                                           ...(0, e$.fF)(eH.uF.QUEST_BADGE),
                                           is_targeted: !1,
                                       })),
@@ -940,7 +940,7 @@ function te(e) {
                                 mode: "tooltip",
                                 body: e.description,
                                 onShow: () => {
-                                    e0.default.track(e4.HAw.TOOLTIP_VIEWED, {
+                                    e0.default.track(e9.HAw.TOOLTIP_VIEWED, {
                                         type: "tiered_tenure_badge_profile_" + (eT ? "self" : "other"),
                                     });
                                 },

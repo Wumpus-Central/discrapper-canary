@@ -1,7 +1,7 @@
 n.d(t, { A: () => g });
 var i = n(477900),
-    r = n(582128),
-    l = n(17928);
+    l = n(582128),
+    r = n(17928);
 if (588245 != n.j) var s = n(43105);
 var a = n(181079),
     o = n(676168),
@@ -16,16 +16,16 @@ function g(e) {
 }
 function N(e) {
     let { targetElementRef: t, channelType: n, isTargetInViewport: u = !0, onVisibilityChange: g } = e,
-        [N, v] = r.useState("top"),
-        p = r.useRef(null),
-        h = r.useRef(null),
-        j = (0, l.bG)([a.A], () => a.A.hasStoredFavorites()),
+        [N, v] = l.useState("top"),
+        p = l.useRef(null),
+        h = l.useRef(null),
+        j = (0, r.bG)([a.A], () => a.A.hasStoredFavorites()),
         { shouldShowPopover: x, markPopoverAsDismissed: _ } = (0, o.zO)(u && m.has(n));
     if (
-        (r.useEffect(() => {
+        (l.useEffect(() => {
             if (x) return (g?.(!0), () => g?.(!1));
         }, [x, g]),
-        r.useLayoutEffect(() => {
+        l.useLayoutEffect(() => {
             if (x && null != t.current)
                 return (
                     e(),

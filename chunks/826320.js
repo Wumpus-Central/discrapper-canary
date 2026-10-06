@@ -10,8 +10,8 @@ var d = n(17928),
     c = n(115718),
     u = n(280157),
     h = n(513520),
-    m = n(130100),
-    g = n(151054),
+    g = n(130100),
+    m = n(151054),
     A = n(219271),
     f = n(427358),
     p = n(734057),
@@ -28,12 +28,12 @@ function _() {
         let e,
             t,
             n = (0, C.A)(),
-            { results: i } = (0, g.R)({ channelFilter: n, includeFrecency: !1 }),
+            { results: i } = (0, m.R)({ channelFilter: n, includeFrecency: !1 }),
             s =
                 (l.useEffect(() => {
                     (0, h.I)();
                 }, []),
-                (e = (0, d.bG)([m.A], () => m.A.getChannelAffinities())),
+                (e = (0, d.bG)([g.A], () => g.A.getChannelAffinities())),
                 l.useMemo(() => e.slice().sort((e, t) => t.score - e.score), [e])),
             r =
                 (l.useEffect(() => {
@@ -116,17 +116,17 @@ var I = n(192308),
     v = n(983851),
     R = n(534890),
     y = n(331322),
-    L = n(297264),
-    M = n(93055),
-    T = n(17839),
+    T = n(297264),
+    L = n(93055),
+    M = n(17839),
     U = n(22277),
     D = n(375708),
     O = n(27948);
 function P() {
     let e = l.useCallback(() => {
-        let { hasAccess: e } = (0, M.ad)();
+        let { hasAccess: e } = (0, L.ad)();
         e
-            ? (0, T.A)({ source: "favorites_empty_sidebar" })
+            ? (0, M.A)({ source: "favorites_empty_sidebar" })
             : (0, I.openModalLazy)(async () => {
                   let { default: e } = await n.e("307476").then(n.bind(n, 777023));
                   return (t) => (0, i.jsx)(e, { ...t, source: "favorites_empty_sidebar" });
@@ -138,7 +138,7 @@ function P() {
         children: D.intl.format(U.default.LyZZLX, { onClick: e }),
     });
 }
-function w() {
+function V() {
     return (0, i.jsxs)("div", {
         className: O.v0,
         "aria-hidden": "true",
@@ -167,7 +167,7 @@ function w() {
         ],
     });
 }
-function V() {
+function w() {
     let e = (0, o.fj)();
     return (0, i.jsxs)(y.B, {
         gap: 8,
@@ -178,13 +178,13 @@ function V() {
                 padding: { top: 16, right: 16, bottom: 0, left: 16 },
                 fullWidth: !1,
                 children: [
-                    (0, i.jsx)(L.D, { variant: "heading-md/semibold", children: D.intl.string(U.default["1n0TGE"]) }),
+                    (0, i.jsx)(T.D, { variant: "heading-md/semibold", children: D.intl.string(U.default["1n0TGE"]) }),
                     (0, i.jsx)(P, {}),
                 ],
             }),
             e
                 ? null
-                : (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { className: O.yF }), (0, i.jsx)(w, {})] }),
+                : (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)("div", { className: O.yF }), (0, i.jsx)(V, {})] }),
         ],
     });
 }
@@ -277,7 +277,7 @@ function en(e) {
         children: [
             (0, i.jsx)(S, {}),
             n
-                ? (0, i.jsxs)("div", { className: et.XG, children: [(0, i.jsx)(ee, {}), (0, i.jsx)(V, {})] })
+                ? (0, i.jsxs)("div", { className: et.XG, children: [(0, i.jsx)(ee, {}), (0, i.jsx)(w, {})] })
                 : (0, i.jsxs)(i.Fragment, {
                       children: [
                           (0, i.jsx)("div", { className: Q._I, children: (0, i.jsx)(ee, { withDivider: !l }) }),
