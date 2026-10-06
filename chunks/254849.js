@@ -33,4 +33,5 @@ _.exports = {
     DF: "ringing__07f91",
     IW: "guestSuffix__07f91",
     n8: "gameIcon__07f91",
+    Rh: "streamPreview__07f91",
 };

@@ -2301,4 +2301,14 @@ span.clanTag__07f91.isOverlay__07f91 {
     color: CanvasText
 }
 
-/*# sourceMappingURL=880186.6eba4cc6d6b39b8a.css.map*/
+.streamPreview__07f91 {
+    border: 1px solid var(--border-normal);
+    border-radius: var(--radius-xs);
+    box-sizing: border-box;
+    height: 18px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 32px
+}
+
+/*# sourceMappingURL=880186.b21aa1cb12f231b3.css.map*/

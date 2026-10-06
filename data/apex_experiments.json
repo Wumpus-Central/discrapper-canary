@@ -4893,6 +4893,22 @@
     }
   },
   {
+    "name": "2026-09-guild-sidebar-stream-preview",
+    "kind": "guild",
+    "defaultConfig": {
+      "enabled": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true
+      }
+    }
+  },
+  {
     "kind": "guild",
     "name": "2026-09-guild-spaces",
     "defaultConfig": {
