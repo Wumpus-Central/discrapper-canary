@@ -1283,33 +1283,34 @@ function lU(e, t) {
     };
 }
 function lG(e, t, l) {
-    return (function (e, t) {
-        let l,
-            { applicationId: n, guildId: a, appChannelId: i, openProfile: r, openAutomodSettings: s } = t;
-        switch (e) {
+    return (function e(t, l) {
+        let n,
+            { applicationId: a, guildId: i, appChannelId: r, openProfile: s, openAutomodSettings: u } = l;
+        switch (t) {
             case "launch":
-                if ((0, tw.X)(lI.A.getApplication(n)))
-                    return (B.A.launchFrame({ applicationId: n, surface: tL.sd }).catch(() => {}), Promise.resolve());
+                if (null != i) return e("channel", { applicationId: a, guildId: i, appChannelId: r, openProfile: s });
+                if ((0, tw.X)(lI.A.getApplication(a)))
+                    return (B.A.launchFrame({ applicationId: a, surface: tL.sd }).catch(() => {}), Promise.resolve());
                 break;
             case "profile": {
                 let e = tB.default.getCurrentUser()?.id;
-                if (null != e) return (r(e), Promise.resolve());
+                if (null != e) return (s(e), Promise.resolve());
                 break;
             }
             case "channel":
-                if (null != a && null != i) return ((0, W.pX)(ey.BVt.CHANNEL(a, i)), Promise.resolve());
+                if (null != i && null != r) return ((0, W.pX)(ey.BVt.CHANNEL(i, r)), Promise.resolve());
                 break;
             case "automod":
-                if (null != a && null != s) return (s(a), Promise.resolve());
+                if (null != i && null != u) return (u(i), Promise.resolve());
         }
-        if ("dm" !== e && null != a) {
+        if ("dm" !== t && null != i) {
             let e;
             return (
-                null != (e = lM.Ay.getDefaultChannel(a)?.id) ? (0, W.pX)(ey.BVt.CHANNEL(a, e)) : (0, lO.u)(a),
+                null != (e = lM.Ay.getDefaultChannel(i)?.id) ? (0, W.pX)(ey.BVt.CHANNEL(i, e)) : (0, lO.u)(i),
                 Promise.resolve()
             );
         }
-        return ((l = lI.A.getApplication(n)?.bot?.id ?? n), lD.A.openPrivateChannel({ recipientIds: l }));
+        return ((n = lI.A.getApplication(a)?.bot?.id ?? a), lD.A.openPrivateChannel({ recipientIds: n }));
     })(t, {
         applicationId: e.project.application_id,
         guildId: e.guildId,
