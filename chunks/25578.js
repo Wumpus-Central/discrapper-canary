@@ -950,7 +950,7 @@ function nM(e) {
     (tr.setAudioInputDevice(e),
         nb(e),
         (function (e) {
-            if (!(0, p.isMac)()) return;
+            if (!(0, p.isWindows)() && !(0, p.isMac)()) return;
             let t = th[e];
             t?.guid != null && tr.watchDeviceHardwareMutedChange?.(t.guid);
         })(e));
