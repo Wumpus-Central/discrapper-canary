@@ -161,6 +161,8 @@
 }
 
 .profile__5d7c9 {
+    align-self: flex-start;
+    padding-bottom: var(--space-32);
     position: sticky;
     top: 0
 }
@@ -269,4 +271,4 @@
     display: none
 }
 
-/*# sourceMappingURL=72f03f9f0b306615.css.map*/
+/*# sourceMappingURL=bf71fe9c4e852242.css.map*/
