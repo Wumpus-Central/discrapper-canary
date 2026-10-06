@@ -68,7 +68,7 @@ function C() {
 var y = l(562073),
     T = l(189213),
     R = l(192308),
-    k = l(717274),
+    k = l(253145),
     D = l(61567),
     w = l(375708),
     M = l(397462);
@@ -267,7 +267,7 @@ function P(e) {
     let { View: h, Edit: f, HeaderAccessory: g, HeaderActions: j, Title: v, TitleIcon: p, ViewHeaderTrailing: _ } = m,
         A = "edit" === a,
         E = null != f && null != d && null == u,
-        N = null != g ? (0, n.jsx)(g, { hydration: s }) : null,
+        N = null != g ? (0, n.jsx)(g, { hydration: s, guildId: t }) : null,
         b = null != p ? (0, n.jsx)(p, { hydration: s }) : null,
         I = null == u && null != j ? (0, n.jsx)(j, { hydration: s, guildId: t, column: l.position.column }) : null,
         S = l.default_title ?? "",
