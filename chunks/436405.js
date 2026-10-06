@@ -1980,7 +1980,7 @@ class n4 extends a.PureComponent {
                 className: n6.Qs,
                 children: [
                     this.props.streamerModeEnabled &&
-                        (0, l.jsx)(nH.w, { type: "warning", children: z.intl.string(z.t["1CC/lX"]) }),
+                        (0, l.jsx)(nH.w, { type: "warning", message: z.intl.string(z.t["1CC/lX"]), role: "status" }),
                     e,
                 ],
             },

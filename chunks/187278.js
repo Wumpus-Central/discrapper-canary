@@ -1,56 +1,56 @@
-t.d(n, { default: () => x });
-var i = t(477900),
-    a = t(582128),
-    r = t(284009),
-    l = t.n(r),
-    s = t(224640),
-    c = t(683071),
-    d = t(430993),
-    o = t(789645),
-    u = t(696208),
-    h = t(10005),
-    C = t(438732),
-    k = t(208993),
-    p = t(513687),
-    b = t(375708),
-    f = t(96954);
-let x = function (e) {
-    let { currentUser: n, otherUser: t, transitionState: r, onClose: x } = e,
-        [g, y] = a.useState(!1),
-        j = a.useCallback(() => {
+n.d(t, { default: () => g });
+var a = n(477900),
+    i = n(582128),
+    r = n(284009),
+    l = n.n(r),
+    s = n(224640),
+    c = n(683071),
+    d = n(430993),
+    o = n(789645),
+    u = n(696208),
+    h = n(10005),
+    C = n(438732),
+    k = n(208993),
+    p = n(513687),
+    b = n(375708),
+    f = n(96954);
+let g = function (e) {
+    let { currentUser: t, otherUser: n, transitionState: r, onClose: g } = e,
+        [x, y] = i.useState(!1),
+        j = i.useCallback(() => {
             y(!0);
         }, []),
-        m = a.useCallback(() => {
-            x();
-        }, [x]),
+        m = i.useCallback(() => {
+            g();
+        }, [g]),
         A = (0, C.A)(),
         { cancelLinkRequest: v, isCancelLoading: w } = (0, h.A)({ onError: j, onSuccess: m });
     return (
         l()(A, "FamilyCenterCancelLinkModal should only be rendered for parents."),
-        (0, i.jsxs)(s.d, {
+        (0, a.jsxs)(s.d, {
             transitionState: r,
-            onClose: x,
+            onClose: g,
             children: [
-                g && (0, i.jsx)(c.w, { type: "critical", children: b.intl.string(p.default["6gyAQZ"]) }),
-                (0, i.jsx)(d.c, {
-                    children: (0, i.jsx)(k.A.Header, {
-                        currentUser: n,
-                        otherUser: t,
+                x && (0, a.jsx)(c.w, { type: "critical", message: b.intl.string(p.default["6gyAQZ"]), role: "alert" }),
+                (0, a.jsx)(d.c, {
+                    children: (0, a.jsx)(k.A.Header, {
+                        currentUser: t,
+                        otherUser: n,
                         header: b.intl.string(p.default.HynllX),
-                        icon: (0, i.jsx)(o.P, { size: "md", color: "currentColor", className: f.u }),
+                        icon: (0, a.jsx)(o.P, { size: "md", color: "currentColor", className: f.u }),
                     }),
                 }),
-                (0, i.jsx)(u.H, {
+                (0, a.jsx)(u.H, {
                     actionsFullWidth: !0,
                     actions: [
-                        { variant: "secondary", text: b.intl.string(p.default.czincX), onClick: x, disabled: w },
+                        { variant: "secondary", text: b.intl.string(p.default.czincX), onClick: g, disabled: w },
                         {
                             variant: "critical-primary",
                             text: b.intl.string(p.default.mK40bk),
                             onClick: function () {
-                                (y(!1), v(t.id));
+                                (y(!1), v(n.id));
                             },
-                            disabled: w || g,
+                            disabled: w || x,
                             loading: w,
                         },
                     ],

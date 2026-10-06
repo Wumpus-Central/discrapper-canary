@@ -83,7 +83,7 @@ let P = (t) => {
                 style: { textAlign: "center" },
                 children: [(0, r.jsx)("p", { children: W }), (0, r.jsx)("p", { children: M.intl.string(M.t.UQolSy) })],
             }),
-            F ? (0, r.jsx)(g.w, { type: "critical", children: M.intl.string(M.t["5mlOCW"]) }) : null,
+            F ? (0, r.jsx)(g.w, { type: "critical", message: M.intl.string(M.t["5mlOCW"]), role: "alert" }) : null,
         ],
     });
 };

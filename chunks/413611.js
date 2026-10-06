@@ -28,7 +28,7 @@ function I(e) {
             reapplyNoticeText: o,
             isApplicationPending: d,
         } = e;
-    if (null != l) return (0, i.jsx)(c.w, { type: "critical", children: l.getAnyErrorMessage() });
+    if (null != l) return (0, i.jsx)(c.w, { type: "critical", message: l.getAnyErrorMessage(), role: "alert" });
     let u = null;
     return (
         d
@@ -134,7 +134,7 @@ function v(e) {
                 (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(d.h, { size: 24 }),
-                        (0, i.jsx)(c.w, { type: "critical", children: a.getAnyErrorMessage() }),
+                        (0, i.jsx)(c.w, { type: "critical", message: a.getAnyErrorMessage(), role: "alert" }),
                     ],
                 }),
         ],

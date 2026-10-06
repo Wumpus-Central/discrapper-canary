@@ -1,4 +1,4 @@
-n.d(t, { default: () => j });
+n.d(t, { default: () => g });
 var i = n(477900),
     s = n(582128),
     r = n(284009),
@@ -14,24 +14,24 @@ var i = n(477900),
     k = n(513687),
     p = n(375708),
     f = n(610746);
-let j = function (e) {
-    let { currentUser: t, otherUser: n, transitionState: r, onClose: j } = e,
-        [b, g] = s.useState(!1),
+let g = function (e) {
+    let { currentUser: t, otherUser: n, transitionState: r, onClose: g } = e,
+        [j, b] = s.useState(!1),
         y = s.useCallback(() => {
-            g(!0);
+            b(!0);
         }, []),
         A = s.useCallback(() => {
-            j();
-        }, [j]),
+            g();
+        }, [g]),
         m = (0, C.A)(),
         { declineLinkRequest: L, isDeclineLoading: S } = (0, h.A)({ onError: y, onSuccess: A });
     return (
         l()(m, "FamilyCenterDeclineLinkModal should only be rendered for teens."),
         (0, i.jsxs)(a.d, {
             transitionState: r,
-            onClose: j,
+            onClose: g,
             children: [
-                b && (0, i.jsx)(c.w, { type: "critical", children: p.intl.string(k.default.tJAUyn) }),
+                j && (0, i.jsx)(c.w, { type: "critical", message: p.intl.string(k.default.tJAUyn), role: "alert" }),
                 (0, i.jsxs)(d.c, {
                     children: [
                         (0, i.jsx)(x.A.Header, {
@@ -48,12 +48,12 @@ let j = function (e) {
                 (0, i.jsx)(u.H, {
                     actionsFullWidth: !0,
                     actions: [
-                        { variant: "secondary", text: p.intl.string(p.t["ETE/oC"]), onClick: j, disabled: S },
+                        { variant: "secondary", text: p.intl.string(p.t["ETE/oC"]), onClick: g, disabled: S },
                         {
                             variant: "critical-primary",
                             text: p.intl.string(k.default.dKxFcn),
                             onClick: function () {
-                                (g(!1), L(n.id));
+                                (b(!1), L(n.id));
                             },
                             disabled: S,
                             loading: S,

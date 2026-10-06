@@ -303,10 +303,7 @@ function er(e) {
             [s, u, t, r, c, o, l, h, i],
         ),
         m = n.useMemo(
-            () =>
-                null == h
-                    ? null
-                    : (0, a.jsx)("div", { className: $.re, children: (0, a.jsx)(y.w, { ...h, children: h.message }) }),
+            () => (null == h ? null : (0, a.jsx)("div", { className: $.re, children: (0, a.jsx)(y.w, { ...h }) })),
             [h],
         );
     return (0, a.jsxs)("div", { className: $.E6, "aria-busy": s, children: [m, d] });
@@ -662,6 +659,7 @@ function eH(e) {
                 ? {
                       type: "warning",
                       message: Y.intl.format(V.default.ggLzeg, { underlineHook: (e) => (0, a.jsx)(eP, { text: e }) }),
+                      role: "status",
                   }
                 : null,
             title: Y.intl.string(V.default.H6Ny8N),
@@ -708,6 +706,7 @@ function ez(e) {
                                   : Y.intl.format(V.default.ggLzeg, {
                                         underlineHook: (e) => (0, a.jsx)(eP, { text: e, onClick: c }),
                                     }),
+                          role: "status",
                       }
                     : null,
             [m, c],

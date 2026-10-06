@@ -1,8 +1,8 @@
 t.d(s, { default: () => ea });
 var a = t(477900),
     l = t(582128),
-    i = t(503698),
-    r = t.n(i),
+    r = t(503698),
+    i = t.n(r),
     n = t(562708),
     c = t(702841),
     d = t(661531),
@@ -48,8 +48,8 @@ var R = t(74399),
     X = t(873586);
 function z(e) {
     let { listing: s } = e,
-        { name: t, image: l, description: i } = s,
-        r = (0, W.$g)(s.price_tier, D.Yri.USD);
+        { name: t, image: l, description: r } = s,
+        i = (0, W.$g)(s.price_tier, D.Yri.USD);
     return (0, a.jsxs)("div", {
         children: [
             (0, a.jsxs)("div", {
@@ -59,7 +59,7 @@ function z(e) {
                     (0, a.jsxs)("div", {
                         children: [
                             (0, a.jsx)(u.D, { variant: "heading-md/medium", className: X.KR, children: t }),
-                            (0, a.jsx)(E.E, { variant: "text-md/medium", tag: "span", children: r }),
+                            (0, a.jsx)(E.E, { variant: "text-md/medium", tag: "span", children: i }),
                             (0, a.jsx)(E.E, { variant: "text-xxs/medium", tag: "span", children: "/mo." }),
                         ],
                     }),
@@ -73,7 +73,7 @@ function z(e) {
                     (0, a.jsx)(E.E, { variant: "text-xs/medium", children: t }),
                 ],
             }),
-            (0, a.jsx)(E.E, { variant: "text-xs/normal", className: X.rj, children: i }),
+            (0, a.jsx)(E.E, { variant: "text-xs/normal", className: X.rj, children: r }),
         ],
     });
 }
@@ -168,7 +168,7 @@ var K = t(352432);
 function V(e) {
     let { price: s, selected: t, onClick: l } = e;
     return (0, a.jsxs)(x.D, {
-        className: r()(K.y3, { [K.wH]: t }),
+        className: i()(K.y3, { [K.wH]: t }),
         onClick: l,
         children: [
             t
@@ -195,8 +195,8 @@ function V(e) {
     });
 }
 function q(e) {
-    let { selectedTemplate: s, handleSelectTemplate: t, newPricesToPick: i } = e,
-        [r, n] = l.useState(0);
+    let { selectedTemplate: s, handleSelectTemplate: t, newPricesToPick: r } = e,
+        [i, n] = l.useState(0);
     return (0, a.jsxs)("div", {
         className: K.kL,
         children: [
@@ -214,14 +214,14 @@ function q(e) {
                             price: (0, W.$g)(s.listings[0].price_tier, D.Yri.USD),
                         }),
                     }),
-                    i.map((e, s) => (0, a.jsx)(V, { price: e, selected: s === r, onClick: () => n(s) }, e)),
+                    r.map((e, s) => (0, a.jsx)(V, { price: e, selected: s === i, onClick: () => n(s) }, e)),
                 ],
             }),
             (0, a.jsx)(v.$, {
                 variant: "primary",
                 text: B.intl.string(B.t["1W7mCt"]),
                 onClick: function () {
-                    t({ ...s, listings: [{ ...s.listings[0], price_tier: i[r] }] });
+                    t({ ...s, listings: [{ ...s.listings[0], price_tier: r[i] }] });
                 },
             }),
         ],
@@ -229,16 +229,16 @@ function q(e) {
 }
 var J = t(777942);
 function ee(e) {
-    let { name: s, imageUrl: t, selected: l, onTap: i } = e;
+    let { name: s, imageUrl: t, selected: l, onTap: r } = e;
     return (0, a.jsxs)(x.D, {
-        onClick: i,
+        onClick: r,
         className: J.rz,
         children: [
             (0, a.jsx)("img", { src: t, alt: "", className: J.ks }),
             (0, a.jsxs)("div", {
                 className: J.GY,
                 children: [
-                    (0, a.jsx)(u.D, { variant: "heading-md/normal", className: r()({ [J.kE]: !l }), children: s }),
+                    (0, a.jsx)(u.D, { variant: "heading-md/normal", className: i()({ [J.kE]: !l }), children: s }),
                     l &&
                         (0, a.jsx)(h.y, {
                             size: "md",
@@ -251,12 +251,12 @@ function ee(e) {
     });
 }
 function es(e) {
-    let { loading: s, error: t, templates: l, selectedTemplateIndex: i, handleTapTemplate: r } = e,
+    let { loading: s, error: t, templates: l, selectedTemplateIndex: r, handleTapTemplate: i } = e,
         n = (0, c.bG)([S.A], () => S.A.theme);
     return s
         ? (0, a.jsx)(j.y, {})
         : null != t
-          ? (0, a.jsx)(p.w, { type: "critical", children: t.message })
+          ? (0, a.jsx)(p.w, { type: "critical", message: t.message, role: "alert" })
           : null == l || 0 === l.length
             ? null
             : (0, a.jsx)("div", {
@@ -266,14 +266,14 @@ function es(e) {
                           ee,
                           {
                               imageUrl:
-                                  s === i
+                                  s === r
                                       ? e.category_image
                                       : (0, m.q)(n)
                                         ? e.unselected_light_theme_category_image
                                         : e.unselected_dark_theme_category_image,
                               name: e.category,
-                              selected: s === i,
-                              onTap: () => r(s),
+                              selected: s === r,
+                              onTap: () => i(s),
                           },
                           s,
                       ),
@@ -284,13 +284,13 @@ function et(e) {
     let {
             guildId: s,
             templates: t,
-            selectedTemplateIndex: i,
-            priceTiers: r,
+            selectedTemplateIndex: r,
+            priceTiers: i,
             showPriceReselection: n,
             setShowPriceReselection: c,
             handleCreateTierFromTemplate: d,
         } = e,
-        m = (0, U.zu)(s, r, null != t ? t[i]?.listings[0]?.price_tier : void 0),
+        m = (0, U.zu)(s, i, null != t ? t[r]?.listings[0]?.price_tier : void 0),
         o = null != m && m.length > 0,
         x = l.useCallback(
             (e) => {
@@ -301,31 +301,31 @@ function et(e) {
     return null == t || 0 === t.length
         ? null
         : n && o
-          ? (0, a.jsx)(q, { selectedTemplate: t[i], handleSelectTemplate: d, newPricesToPick: m })
-          : (0, a.jsx)(Z, { selectedTemplate: t[i], handleSelectTemplate: x });
+          ? (0, a.jsx)(q, { selectedTemplate: t[r], handleSelectTemplate: d, newPricesToPick: m })
+          : (0, a.jsx)(Z, { selectedTemplate: t[r], handleSelectTemplate: x });
 }
 function ea(e) {
     let {
             transitionState: s,
             onClose: t,
-            guildId: i,
-            addNewEditStateFromTemplate: r,
+            guildId: r,
+            addNewEditStateFromTemplate: i,
             addNewEditStateFromScratch: d,
             priceTiers: m,
         } = e,
-        h = (0, c.bG)([R.A], () => R.A.getTemplates(i)),
+        h = (0, c.bG)([R.A], () => R.A.getTemplates(r)),
         [j, { loading: p, error: S }] = (0, C.A)(b),
         y = l.useRef("voluntarily_exit");
     (l.useEffect(() => {
-        (null == h || 0 === h.length) && j(i);
-    }, [j, i, h]),
+        (null == h || 0 === h.length) && j(r);
+    }, [j, r, h]),
         l.useEffect(() => {
             s === g.ip.EXITING &&
                 L.default.track(D.HAw.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR_EXITED, {
                     exit_reason: y.current,
-                    ...(0, I.H$)(i),
+                    ...(0, I.H$)(r),
                 });
-        }, [s, i, y]));
+        }, [s, r, y]));
     let [U, k] = l.useState(0),
         [O, G] = l.useState(!1),
         P = l.useCallback(
@@ -334,12 +334,12 @@ function ea(e) {
                     A.h.dispatch({
                         type: "GUILD_ROLE_SUBSCRIPTIONS_STASH_TEMPLATE_CHANNELS",
                         selectedTemplate: e,
-                        guildId: i,
+                        guildId: r,
                     }),
-                    r(e),
+                    i(e),
                     t());
             },
-            [i, r, t],
+            [r, i, t],
         ),
         w = l.useCallback(() => {
             O ? G(!1) : t();
@@ -348,7 +348,7 @@ function ea(e) {
         (0, f.A)({
             type: n.ImpressionTypes.MODAL,
             name: n.ImpressionNames.ROLE_SUBSCRIPTION_LISTING_TEMPLATE_SELECTOR,
-            properties: { guild_id: i },
+            properties: { guild_id: r },
         }),
         (0, a.jsxs)(o.EO, {
             "data-migration-pending": !0,
@@ -424,7 +424,7 @@ function ea(e) {
                             ],
                         }),
                         (0, a.jsx)(et, {
-                            guildId: i,
+                            guildId: r,
                             templates: h,
                             selectedTemplateIndex: U,
                             priceTiers: m,

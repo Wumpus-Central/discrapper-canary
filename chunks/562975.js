@@ -12500,7 +12500,8 @@ function dG() {
               children: (0, r.jsx)(dF.w, {
                   type: "info",
                   iconAlign: "center",
-                  children: em.intl.format(ef.default["6anmu1"], { channel: dz, onNavigate: t }),
+                  message: em.intl.format(ef.default["6anmu1"], { channel: dz, onNavigate: t }),
+                  role: "static",
               }),
           });
 }

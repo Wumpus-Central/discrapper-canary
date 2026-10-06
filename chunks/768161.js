@@ -2,8 +2,8 @@ t.d(e, { default: () => U });
 var n = t(477900),
     a = t(582128),
     r = t(96337),
-    u = t(997101),
-    s = t(17928),
+    s = t(997101),
+    u = t(17928),
     i = t(189213),
     o = t(890497),
     d = t(95477),
@@ -19,7 +19,7 @@ var n = t(477900),
     y = t(375708),
     b = t(986485),
     S = t(183064);
-let j = r.A.filter((l) => u.M.EURO_CURRENCY_COUNTRIES.has(l.alpha2)).map((l) => ({
+let j = r.A.filter((l) => s.M.EURO_CURRENCY_COUNTRIES.has(l.alpha2)).map((l) => ({
     id: l.alpha2,
     value: l.alpha2,
     label: (0, g.Gw)(l.alpha2),
@@ -31,8 +31,8 @@ function x(l) {
         isEU: t,
         postalCodeInput: a,
         selectedBillingCountry: r,
-        redemptionError: u,
-        codeError: s,
+        redemptionError: s,
+        codeError: u,
         billingError: i,
         onCodeInputChange: C,
         onPostalCodeChange: h,
@@ -41,7 +41,7 @@ function x(l) {
     return (0, n.jsxs)("div", {
         className: S.Xj,
         children: [
-            null != u && (0, n.jsx)(c.w, { type: "critical", children: u }),
+            null != s && (0, n.jsx)(c.w, { type: "critical", message: s, role: "alert" }),
             (0, n.jsx)("span", {
                 className: S.ZY,
                 children: (0, n.jsx)(d.k, {
@@ -50,7 +50,7 @@ function x(l) {
                     value: e,
                     onChange: C,
                     placeholder: y.intl.string(b.default.dSPkHo),
-                    error: s,
+                    error: u,
                     fullWidth: !0,
                 }),
             }),
@@ -88,12 +88,12 @@ function U(l) {
             transitionState: e,
             onClose: t,
             onComplete: r,
-            initialCode: u = "",
+            initialCode: s = "",
             withRedemptionSuccessModal: o = !1,
             source: d,
             loadId: c,
         } = l,
-        [E, j] = a.useState(u),
+        [E, j] = a.useState(s),
         [U, v] = a.useState(!1),
         [A, I] = a.useState(""),
         [_, k] = a.useState(null),
@@ -101,7 +101,7 @@ function U(l) {
         [T, w] = a.useState(null),
         [P, D] = a.useState(null),
         { isEU: O, displayCountry: G, savedPostalCode: B } = (0, m.A)(),
-        L = (0, s.bG)([p.A], () => p.A.hasFetchedPaymentSources);
+        L = (0, u.bG)([p.A], () => p.A.hasFetchedPaymentSources);
     a.useEffect(() => {
         L || (0, C.$o)();
     }, [L]);

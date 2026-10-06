@@ -601,7 +601,7 @@ function eo(e) {
         T = s.useCallback((e) => _(e, b.cM.RECENT_IMAGE), [_]),
         H = s.useCallback((e) => _(e, b.cM.PRESET_GIF), [_]),
         D = s.useCallback(() => (N(null), C("HOME"), Promise.resolve()), []),
-        F = null != y ? (0, n.jsx)(m.w, { type: "critical", children: y }) : null;
+        F = null != y ? (0, n.jsx)(m.w, { type: "critical", message: y, role: "alert" }) : null;
     if ("RECENT_UPLOADS" === f) {
         let e = I.intl.string(E.default.aBnIyR);
         return (0, n.jsxs)(a.d, {

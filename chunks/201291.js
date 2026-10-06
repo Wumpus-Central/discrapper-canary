@@ -1,36 +1,36 @@
-n.d(i, { default: () => m });
-var a = n(477900);
-n(582128);
-var l = n(284009),
-    e = n.n(l),
-    r = n(189213),
-    s = n(683071),
-    c = n(696986),
-    u = n(608461),
-    d = n(915089),
-    o = n(493540),
-    p = n(652215),
-    h = n(375708);
+a.d(i, { default: () => m });
+var l = a(477900);
+a(582128);
+var n = a(284009),
+    e = a.n(n),
+    s = a(189213),
+    r = a(683071),
+    c = a(696986),
+    u = a(608461),
+    d = a(915089),
+    o = a(493540),
+    p = a(652215),
+    h = a(375708);
 function m(t) {
-    let { transitionState: i, guild: n, onClose: l } = t,
+    let { transitionState: i, guild: a, onClose: n } = t,
         m = (0, d.GV)(),
         [g, { loading: b, error: k }] = (0, u.A)(o.ms);
     async function w() {
-        (e()(null != n, "no guild"), null != (await g(n.id)) && l());
+        (e()(null != a, "no guild"), null != (await g(a.id)) && n());
     }
-    return (0, a.jsx)(r.a, {
+    return (0, l.jsx)(s.a, {
         transitionState: i,
         "aria-labelledby": m,
         actions: [{ variant: "critical-primary", text: h.intl.string(h.t["R3BPH+"]), loading: b, onClick: w }],
         title: h.intl.string(h.t.rRpcE1),
-        subtitle: h.intl.format(h.t.Oa5P6w, { guildName: n.name, url: p.X7G.DEVELOPER_PORTAL_TEAMS }),
-        onClose: l,
+        subtitle: h.intl.format(h.t.Oa5P6w, { guildName: a.name, url: p.X7G.DEVELOPER_PORTAL_TEAMS }),
+        onClose: n,
         children:
             null != k
-                ? (0, a.jsxs)(a.Fragment, {
+                ? (0, l.jsxs)(l.Fragment, {
                       children: [
-                          (0, a.jsx)(s.w, { type: "critical", children: k.message }),
-                          (0, a.jsx)(c.h, { size: 24 }),
+                          (0, l.jsx)(r.w, { type: "critical", message: k.message, role: "alert" }),
+                          (0, l.jsx)(c.h, { size: 24 }),
                       ],
                   })
                 : null,

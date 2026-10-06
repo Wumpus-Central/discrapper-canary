@@ -58,7 +58,7 @@ function E(e) {
                             children: g.intl.formatToPlainString(g.t["3x6NGw"], {}),
                         })
                       : null,
-                  null != o && "" !== o && (0, i.jsx)(a.w, { type: "critical", children: o }),
+                  null != o && "" !== o && (0, i.jsx)(a.w, { type: "critical", message: o, role: "alert" }),
               ],
           })
         : t.hasInvoiceURL && null != n
@@ -75,7 +75,7 @@ function E(e) {
                               ),
                           )
                         : null,
-                    null != o && "" !== o && (0, i.jsx)(a.w, { type: "critical", children: o }),
+                    null != o && "" !== o && (0, i.jsx)(a.w, { type: "critical", message: o, role: "alert" }),
                 ],
             })
           : h

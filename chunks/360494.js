@@ -1,12 +1,12 @@
 n.d(i, { default: () => l });
 var a = n(477900);
 n(582128);
-var r = n(189213),
-    s = n(683071),
+var s = n(189213),
+    r = n(683071),
     e = n(375708);
 function l(t) {
     let { roleName: i, onConfirmDelete: n, ...l } = t;
-    return (0, a.jsx)(r.a, {
+    return (0, a.jsx)(s.a, {
         ...l,
         size: "sm",
         title: e.intl.string(e.t.YWISbQ),
@@ -21,6 +21,6 @@ function l(t) {
                 variant: "primary",
             },
         ],
-        children: (0, a.jsx)(s.w, { type: "warning", children: e.intl.string(e.t.lXk2SU) }),
+        children: (0, a.jsx)(r.w, { type: "warning", message: e.intl.string(e.t.lXk2SU), role: "static" }),
     });
 }

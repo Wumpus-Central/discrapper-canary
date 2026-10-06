@@ -1,45 +1,45 @@
 e.d(i, { default: () => p });
 var r = e(477900),
     a = e(582128),
-    n = e(189213),
+    s = e(189213),
     l = e(683071),
-    s = e(964486),
+    n = e(964486),
     d = e(174459),
     u = e(427262),
-    c = e(751877),
-    o = e(88001),
+    o = e(751877),
+    c = e(88001),
     _ = e(652215),
-    M = e(148155),
-    m = e(375708);
+    m = e(148155),
+    M = e(375708);
 let p = function (t) {
     let { subscriptionId: i, member: e, onClose: p, ...E } = t,
         [f, b] = (0, a.useState)(!1),
-        [h, k] = (0, a.useState)(!1);
-    async function w() {
+        [k, w] = (0, a.useState)(!1);
+    async function C() {
         (d.default.track(_.HAw.PREMIUM_GROUP_REMOVE_MEMBER_CTA_CLICKED, { subscription_id: i, member_user_id: e.id }),
             b(!0));
-        let t = await (0, c.oO)(i, e.id);
-        (b(!1), t.ok ? p() : k(!0));
+        let t = await (0, o.oO)(i, e.id);
+        (b(!1), t.ok ? p() : w(!0));
     }
     return (
-        (0, s.Ay)(() => {
+        (0, n.Ay)(() => {
             d.default.track(_.HAw.PREMIUM_GROUP_REMOVE_MEMBER_MODAL_VIEWED, {
                 subscription_id: i,
                 member_user_id: e.id,
             });
         }),
-        (0, r.jsx)(n.a, {
+        (0, r.jsx)(s.a, {
             size: "md",
-            title: m.intl.string(M.default.MJIHXY),
-            subtitle: m.intl.formatToPlainString(M.default.gMyQrH, {
+            title: M.intl.string(m.default.MJIHXY),
+            subtitle: M.intl.formatToPlainString(m.default.gMyQrH, {
                 memberName: (0, u.$3)(e),
-                premiumGroupProductName: (0, o.DP)(),
-                cooldownMonths: o.wl,
+                premiumGroupProductName: (0, c.DP)(),
+                cooldownMonths: c.wl,
             }),
             onClose: p,
-            actions: [{ text: m.intl.string(M.default.dlr8CX), variant: "critical-primary", onClick: w, loading: f }],
+            actions: [{ text: M.intl.string(m.default.dlr8CX), variant: "critical-primary", onClick: C, loading: f }],
             ...E,
-            children: h && (0, r.jsx)(l.w, { type: "critical", children: m.intl.string(m.t["rTU7/z"]) }),
+            children: k && (0, r.jsx)(l.w, { type: "critical", message: M.intl.string(M.t["rTU7/z"]), role: "alert" }),
         })
     );
 };

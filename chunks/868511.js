@@ -71,7 +71,10 @@ function S(e) {
         children: [
             null == T
                 ? null
-                : (0, i.jsx)("div", { className: x.SX, children: (0, i.jsx)(a.w, { type: "critical", children: T }) }),
+                : (0, i.jsx)("div", {
+                      className: x.SX,
+                      children: (0, i.jsx)(a.w, { type: "critical", message: T, role: "alert" }),
+                  }),
             (0, i.jsxs)(m.A, {
                 direction: m.A.Direction.VERTICAL,
                 align: m.A.Align.START,

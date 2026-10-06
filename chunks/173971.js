@@ -10,13 +10,13 @@ var a = i(477900),
     d = i(696208),
     _ = i(289873),
     p = i(141628),
-    f = i(811893),
-    m = i(683071),
+    m = i(811893),
+    f = i(683071),
     C = i(75255),
     A = i(964486),
-    k = i(775602),
-    x = i(793574),
-    g = i(688810),
+    g = i(775602),
+    k = i(793574),
+    x = i(688810),
     S = i(206828),
     E = i(587895),
     h = i(518926),
@@ -50,15 +50,15 @@ function K(t) {
             emojiName: d,
             soundId: _,
             analyticsLocations: p,
-            onSetIgnoreCloseRequest: f,
+            onSetIgnoreCloseRequest: m,
         } = t,
-        [m, k] = n.useState({ state: "LINK" }),
+        [f, g] = n.useState({ state: "LINK" }),
         [h, I] = n.useState(!1),
         R = (0, s.bG)([E.A], () => E.A.getApplication(i.applicationId)),
         { startAuthorization: T, ...N } = (0, S.RD)(R),
-        { startAuthorization: O, shouldShowGoToGameHint: M } = (0, U.W)(T, { onSetIgnoreCloseRequest: f }),
+        { startAuthorization: O, shouldShowGoToGameHint: M } = (0, U.W)(T, { onSetIgnoreCloseRequest: m }),
         G = { startAuthorization: O, shouldShowGoToGameHint: M, ...N },
-        { analyticsLocations: v } = (0, g.Ay)(p ?? [], x.A.SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL),
+        { analyticsLocations: v } = (0, x.Ay)(p ?? [], k.A.SOCIAL_LAYER_GIFT_CODE_CLAIM_MODAL),
         [w, B] = (0, L.L_)(R?.id),
         K = (0, b.J)(R),
         Y = n.useCallback(() => {
@@ -77,9 +77,9 @@ function K(t) {
         );
     n.useEffect(() => {
         r.redeemed &&
-            "LINK" === m.state &&
-            k({ state: "ERROR", error: new l.Wl(H.intl.string(H.t.Iw2TUW), F.t02.INVALID_GIFT_REDEMPTION_EXHAUSTED) });
-    }, [r, m.state]);
+            "LINK" === f.state &&
+            g({ state: "ERROR", error: new l.Wl(H.intl.string(H.t.Iw2TUW), F.t02.INVALID_GIFT_REDEMPTION_EXHAUSTED) });
+    }, [r, f.state]);
     let X = n.useRef({
         analyticsLocations: v,
         giftCode: r,
@@ -105,7 +105,7 @@ function K(t) {
                 skuProductLine: l,
             } = X.current;
             y.default.track(F.HAw.GIFT_ACCEPT_STEP, {
-                to_step: m.state,
+                to_step: f.state,
                 location_stack: t,
                 has_custom_message: e,
                 is_custom_message_edited: e && i !== H.intl.string(H.t.ZkOo1U),
@@ -115,7 +115,7 @@ function K(t) {
                 sound_id: s,
                 product_line: l,
             });
-        }, [m.state]));
+        }, [f.state]));
     let Z = n.useCallback(async () => {
         let {
             analyticsLocations: t,
@@ -137,15 +137,15 @@ function K(t) {
             sound_id: s,
         });
         try {
-            (I(!0), await C.A.redeemGiftCode({ code: r.code, options: { channelId: c } }), k({ state: "SUCCESS" }));
+            (I(!0), await C.A.redeemGiftCode({ code: r.code, options: { channelId: c } }), g({ state: "SUCCESS" }));
         } catch (t) {
-            k({ state: "ERROR", error: t });
+            g({ state: "ERROR", error: t });
         } finally {
             I(!1);
         }
-    }, [r, k, c, R?.id]);
+    }, [r, g, c, R?.id]);
     if (null == R) return null;
-    switch (m.state) {
+    switch (f.state) {
         case "LINK":
             return (0, a.jsx)(z, {
                 sku: i,
@@ -176,26 +176,26 @@ function K(t) {
             return (0, a.jsx)(W, {
                 transitionState: e,
                 onClose: o,
-                error: m.error,
+                error: f.error,
                 application: R,
                 hasAlreadyLinked: G.hasAlreadyLinked,
             });
         default:
-            (0, D.xb)(m);
+            (0, D.xb)(f);
     }
 }
 function W(t) {
     let e,
         i,
         { transitionState: n, onClose: s, error: l, application: _, hasAlreadyLinked: p } = t,
-        f = T.default.getCurrentUser();
+        m = T.default.getCurrentUser();
     return (
         l.code === F.t02.INVALID_GIFT_REDEMPTION_OWNED
             ? ((e = H.intl.string(H.t.uXnSGo)),
               (i = p
                   ? H.intl.formatToPlainString(H.t["TNRN/e"], { applicationName: _.name })
                   : H.intl.formatToPlainString(H.t.VkR30M, { applicationName: _.name })))
-            : ((e = H.intl.string(H.t.dMYg1c)), (i = (0, O.eN)(l, f))),
+            : ((e = H.intl.string(H.t.dMYg1c)), (i = (0, O.eN)(l, m))),
         (0, a.jsxs)(o.d, {
             transitionState: n,
             onClose: s,
@@ -222,23 +222,23 @@ function z(t) {
             onClose: r,
             successStateButtonText: u,
             onSuccessButtonClick: d,
-            isSuccessButtonLoading: m,
+            isSuccessButtonLoading: f,
             analyticsLocations: C,
             startAuthorizeResult: A,
-            launchGameDetails: k,
+            launchGameDetails: g,
         } = t,
         {
-            hasAlreadyLinked: x,
-            canStartAuthorization: g,
+            hasAlreadyLinked: k,
+            canStartAuthorization: x,
             startAuthorization: S,
             fetched: E,
             shouldShowGoToGameHint: h,
         } = A,
-        { isLaunchable: L, isLaunchableLoading: I, isApplicationConnected: R, handleLaunchGame: T } = k,
-        N = n.useRef({ analyticsLocations: C, skuId: i.id, applicationId: s.id, canStartAuthorization: g });
+        { isLaunchable: L, isLaunchableLoading: I, isApplicationConnected: R, handleLaunchGame: T } = g,
+        N = n.useRef({ analyticsLocations: C, skuId: i.id, applicationId: s.id, canStartAuthorization: x });
     (n.useEffect(() => {
-        N.current.canStartAuthorization = g;
-    }, [g]),
+        N.current.canStartAuthorization = x;
+    }, [x]),
         n.useEffect(() => {
             if (!E) return;
             let { analyticsLocations: t, skuId: e, applicationId: i, canStartAuthorization: a } = N.current;
@@ -247,10 +247,10 @@ function z(t) {
                 sku_id: e,
                 application_id: i,
                 is_gift: !0,
-                is_account_linked: x,
+                is_account_linked: k,
                 can_start_authorization: a,
             });
-        }, [E, x]));
+        }, [E, k]));
     let j = n.useCallback(() => {
             let { analyticsLocations: t, skuId: e, applicationId: i } = N.current;
             (y.default.track(F.HAw.SLAYER_STOREFRONT_ACCOUNT_LINK_CLICKED, {
@@ -261,7 +261,7 @@ function z(t) {
             }),
                 S({ analyticsLocations: t }));
         }, [S]),
-        O = n.useMemo(() => (0, G.x0)(s, { hasAlreadyLinked: x }), [s, x]);
+        O = n.useMemo(() => (0, G.x0)(s, { hasAlreadyLinked: k }), [s, k]);
     return !E || I
         ? (0, a.jsx)(o.d, {
               transitionState: l,
@@ -270,18 +270,18 @@ function z(t) {
                   children: (0, a.jsx)("div", { className: B.g4, children: (0, a.jsx)(_.y, {}) }),
               }),
           })
-        : (x
-              ? (e = { variant: "primary", text: u, onClick: d, loading: m })
-              : g
+        : (k
+              ? (e = { variant: "primary", text: u, onClick: d, loading: f })
+              : x
                 ? (e = { variant: "primary", text: H.intl.string(H.t["VDAhr+"]), onClick: j, icon: p.A })
-                : L && !R && (e = { variant: "primary", text: H.intl.string(H.t["s+J8Dl"]), onClick: T, icon: f.t }),
+                : L && !R && (e = { variant: "primary", text: H.intl.string(H.t["s+J8Dl"]), onClick: T, icon: m.t }),
           (0, a.jsx)(v.m, {
               sku: i,
               application: s,
               transitionState: l,
               onClose: r,
-              hasAlreadyLinked: x,
-              canStartAuthorization: g,
+              hasAlreadyLinked: k,
+              canStartAuthorization: x,
               shouldShowGoToGameHint: h,
               primaryCTAButtonProps: e,
               bodyText: O,
@@ -297,12 +297,12 @@ function V(t) {
             giftCode: p,
             customGiftMessage: C,
             analyticsLocations: A,
-            emojiName: k,
-            soundId: x,
-            launchGameDetails: g,
+            emojiName: g,
+            soundId: k,
+            launchGameDetails: x,
         } = t,
         [S, E] = n.useState(null),
-        { isLaunchable: h, isLaunchableLoading: L, isApplicationConnected: I, handleLaunchGame: R } = g,
+        { isLaunchable: h, isLaunchableLoading: L, isApplicationConnected: I, handleLaunchGame: R } = x,
         N = (0, s.bG)([T.default], () => T.default.getUser(p.userId)),
         j = M.Ay.getName(N),
         O = n.useRef({
@@ -325,7 +325,7 @@ function V(t) {
         });
     let D =
         h && !I
-            ? { variant: "primary", text: H.intl.string(H.t["s+J8Dl"]), onClick: R, icon: f.t }
+            ? { variant: "primary", text: H.intl.string(H.t["s+J8Dl"]), onClick: R, icon: m.t }
             : {
                   variant: "primary",
                   text: H.intl.string(H.t.cpT0Cq),
@@ -365,16 +365,17 @@ function V(t) {
                         }),
                     (0, a.jsx)("div", {
                         className: B.S3,
-                        children: (0, a.jsx)(m.w, {
+                        children: (0, a.jsx)(f.w, {
                             type: "success",
-                            children: H.intl.formatToPlainString(H.t.W2znvX, {
+                            message: H.intl.formatToPlainString(H.t.W2znvX, {
                                 skuName: l.name,
                                 applicationName: r.name,
                             }),
+                            role: "static",
                         }),
                     }),
-                    null != S && (0, a.jsx)(X, { confettiTarget: S, emojiName: k }),
-                    null != x && (0, a.jsx)(Y, { soundId: x }),
+                    null != S && (0, a.jsx)(X, { confettiTarget: S, emojiName: g }),
+                    null != k && (0, a.jsx)(Y, { soundId: k }),
                 ],
             }),
             (0, a.jsx)(d.H, { actions: [D], actionsFullWidth: !0 }),
@@ -394,7 +395,7 @@ function Y(t) {
 let J = { xMin: -120, xMax: 120, yMin: -80, yMax: -200 },
     X = (t) => {
         let { confettiTarget: e, emojiName: i } = t,
-            l = (0, s.bG)([k.Ay], () => k.Ay.useReducedMotion),
+            l = (0, s.bG)([g.Ay], () => g.Ay.useReducedMotion),
             o = n.useRef(e),
             [r, c] = n.useState(!0),
             u = n.useCallback(() => {

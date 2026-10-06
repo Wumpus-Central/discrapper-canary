@@ -1680,7 +1680,8 @@ function t4(e) {
                   children: [
                       (0, r.jsx)(e$.w, {
                           type: "critical",
-                          children: H.intl.format(H.t["/m3Y3s"], { paymentGatewayName: tG.qm[m.paymentGateway] }),
+                          message: H.intl.format(H.t["/m3Y3s"], { paymentGatewayName: tG.qm[m.paymentGateway] }),
+                          role: "static",
                       }),
                       O,
                   ],
@@ -4426,7 +4427,7 @@ function rn(e) {
                 children: [
                     !b && es,
                     (0, r.jsx)(n1.A, { className: rt.tg }),
-                    et ? (0, r.jsx)(e$.w, { type: "critical", children: X }) : eu,
+                    et ? (0, r.jsx)(e$.w, { type: "critical", message: X, role: "alert" }) : eu,
                     !b &&
                         ee &&
                         (0, r.jsxs)(r.Fragment, {
@@ -5634,7 +5635,7 @@ function al(e) {
 function ai(e) {
     let { fractionalPremiumInfo: t } = e,
         n = (0, tS.NQ)({ fractionalPremiumInfo: t, variant: tS.uA.TRIAL });
-    return null != n && "" !== n ? (0, r.jsx)(e$.w, { type: "info", children: n }) : null;
+    return null != n && "" !== n ? (0, r.jsx)(e$.w, { type: "info", message: n, role: "static" }) : null;
 }
 function ar(e) {
     let { plan: t, renewalInvoicePreview: n } = e;
@@ -6295,7 +6296,11 @@ let aV = {
                                       }),
                                 null != v &&
                                     (0, aw.Ri)(v) &&
-                                    (0, r.jsx)(e$.w, { type: "info", children: H.intl.string(H.t.lORYb6) }),
+                                    (0, r.jsx)(e$.w, {
+                                        type: "info",
+                                        message: H.intl.string(H.t.lORYb6),
+                                        role: "static",
+                                    }),
                                 null != _ &&
                                     (0, r.jsx)(ax.O0, {
                                         Icon: _.Icon,

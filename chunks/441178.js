@@ -3572,7 +3572,7 @@ function iP(e) {
     if (null != l)
         return (0, p.jsx)("div", {
             className: iU.U,
-            children: (0, p.jsx)(iR.w, { type: "critical", children: l.getAnyErrorMessage() }),
+            children: (0, p.jsx)(iR.w, { type: "critical", message: l.getAnyErrorMessage(), role: "alert" }),
         });
     let u = null;
     return (
@@ -3719,7 +3719,7 @@ function ll(e) {
             null != j &&
                 (0, p.jsxs)(p.Fragment, {
                     children: [
-                        (0, p.jsx)(iR.w, { type: "critical", children: j.getAnyErrorMessage() }),
+                        (0, p.jsx)(iR.w, { type: "critical", message: j.getAnyErrorMessage(), role: "alert" }),
                         (0, p.jsx)(iY.h, { size: 16 }),
                     ],
                 }),
@@ -4725,7 +4725,11 @@ let sA = function (e) {
                   !i &&
                       (0, p.jsx)("div", {
                           className: sf.b8,
-                          children: (0, p.jsx)(iR.w, { type: "warning", children: el.intl.string(el.t.t56qWO) }),
+                          children: (0, p.jsx)(iR.w, {
+                              type: "warning",
+                              message: el.intl.string(el.t.t56qWO),
+                              role: "static",
+                          }),
                       }),
                   (0, p.jsx)(i0.D, {
                       label: el.intl.string(el.t["sYLCY/"]),
@@ -7169,7 +7173,7 @@ function aM(e) {
     return (0, p.jsxs)("div", {
         className: aO.rf,
         children: [
-            null != l && (0, p.jsx)(iR.w, { type: "critical", children: l.getAnyErrorMessage() }),
+            null != l && (0, p.jsx)(iR.w, { type: "critical", message: l.getAnyErrorMessage(), role: "alert" }),
             !m &&
                 !d &&
                 !g &&
@@ -8146,7 +8150,8 @@ function op(e) {
                   (0, p.jsx)(iY.h, { size: 16 }),
                   (0, p.jsx)(iR.w, {
                       type: "warning",
-                      children: el.intl.format(el.t.Yo0ZB2, { url: ei.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }),
+                      message: el.intl.format(el.t.Yo0ZB2, { url: ei.X7G.DEVELOPER_PORTAL_PAYOUT_SETTINGS(i.id) }),
+                      role: "static",
                   }),
                   (0, p.jsx)(iY.h, { size: 16 }),
               ],
@@ -9010,7 +9015,7 @@ function o8(e) {
         : r.actionRequired
           ? (0, p.jsx)(o4, { guild: n })
           : null != s
-            ? (0, p.jsx)(iR.w, { type: "critical", children: s.message })
+            ? (0, p.jsx)(iR.w, { type: "critical", message: s.message, role: "alert" })
             : (0, p.jsxs)("div", {
                   className: o7.kL,
                   children: [

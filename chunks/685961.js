@@ -1958,7 +1958,10 @@ let ld = (e) => {
                             ],
                         }),
                     "" !== z
-                        ? (0, n.jsx)("div", { ref: Z, children: (0, n.jsx)(_.w, { type: "critical", children: z }) })
+                        ? (0, n.jsx)("div", {
+                              ref: Z,
+                              children: (0, n.jsx)(_.w, { type: "critical", message: z, role: "alert" }),
+                          })
                         : null,
                 ],
             }),

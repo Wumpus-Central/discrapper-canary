@@ -856,7 +856,11 @@ function eM(e) {
         ej =
             !A || h.is_earnable || S || h.badge_id === U.$.STAFF
                 ? null
-                : (0, i.jsx)(L.w, { type: "info", children: eo.intl.format(eo.t.vFekBs, { onViewBadges: B }) }),
+                : (0, i.jsx)(L.w, {
+                      type: "info",
+                      message: eo.intl.format(eo.t.vFekBs, { onViewBadges: B }),
+                      role: "static",
+                  }),
         eN = (0, s.bG)([J.A], () => J.A.hasConsented(y.YAq.PERSONALIZATION)),
         ep = (0, N.Jn)(h.badge_id) && !A && !eN;
     return (0, i.jsx)(z.F, {
@@ -922,10 +926,11 @@ function eM(e) {
                                     ep &&
                                         (0, i.jsx)(L.w, {
                                             type: "info",
-                                            children: eo.intl.format(eo.t.Zh44ni, {
+                                            message: eo.intl.format(eo.t.Zh44ni, {
                                                 onGoToSettings: () =>
                                                     (0, Z.openUserSettings)(H.X.DATA_USAGE_PERSONALIZATION_SETTING),
                                             }),
+                                            role: "static",
                                         }),
                                     eg,
                                     !(0, Y.uJ)(x) &&
@@ -1281,7 +1286,11 @@ function e1(e) {
             return n && !t.is_earnable && !i && t.badge_id !== U.$.STAFF;
         })({ badge: x, isViewingOtherUser: j, viewerOwnsBadge: I })
             ? null
-            : (0, i.jsx)(L.w, { type: "info", children: eo.intl.format(eo.t.vFekBs, { onViewBadges: w }) }),
+            : (0, i.jsx)(L.w, {
+                  type: "info",
+                  message: eo.intl.format(eo.t.vFekBs, { onViewBadges: w }),
+                  role: "static",
+              }),
         ed = (function (e) {
             let { badge: t, isViewingOtherUser: n } = e,
                 i = (0, s.bG)([J.A], () => J.A.hasConsented(y.YAq.PERSONALIZATION));
@@ -1364,10 +1373,11 @@ function e1(e) {
                                         ed &&
                                             (0, i.jsx)(L.w, {
                                                 type: "info",
-                                                children: eo.intl.format(eo.t.Zh44ni, {
+                                                message: eo.intl.format(eo.t.Zh44ni, {
                                                     onGoToSettings: () =>
                                                         (0, Z.openUserSettings)(H.X.DATA_USAGE_PERSONALIZATION_SETTING),
                                                 }),
+                                                role: "static",
                                             }),
                                         e_ &&
                                             (0, i.jsxs)("div", {

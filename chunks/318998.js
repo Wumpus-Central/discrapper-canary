@@ -163,7 +163,11 @@ function P() {
             m
                 ? (0, e.jsx)("div", {
                       className: h.QK,
-                      children: (0, e.jsx)(o.w, { type: "critical", children: y.intl.string(y.t["5mlOCW"]) }),
+                      children: (0, e.jsx)(o.w, {
+                          type: "critical",
+                          message: y.intl.string(y.t["5mlOCW"]),
+                          role: "alert",
+                      }),
                   })
                 : null,
             (0, e.jsx)("div", { className: h.rf, children: P }),

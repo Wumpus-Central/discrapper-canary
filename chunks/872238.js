@@ -1322,7 +1322,11 @@ let tg = C.memo(
                                                 className: to.sj,
                                                 children: (0, i.jsx)("div", { className: to.S0 }),
                                             }),
-                                            (0, i.jsx)(m.w, { type: "info", children: b.intl.string(b.t["UP+9QZ"]) }),
+                                            (0, i.jsx)(m.w, {
+                                                type: "info",
+                                                message: b.intl.string(b.t["UP+9QZ"]),
+                                                role: "status",
+                                            }),
                                         ],
                                     }),
                                 }),

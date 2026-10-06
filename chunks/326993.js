@@ -1,11 +1,11 @@
 t.d(e, { default: () => N });
 var n = t(477900),
     s = t(582128),
-    r = t(435558),
-    a = t.n(r),
+    a = t(435558),
+    r = t.n(a),
     l = t(17928),
-    d = t(189213),
-    o = t(331322),
+    o = t(189213),
+    d = t(331322),
     c = t(834730),
     p = t(683071),
     m = t(97808),
@@ -13,8 +13,8 @@ var n = t(477900),
     g = t(282956),
     y = t(181658),
     A = t(155718),
-    h = t(392054),
-    b = t(168186),
+    b = t(392054),
+    h = t(168186),
     E = t(587895),
     x = t(696451),
     j = t(486020),
@@ -27,7 +27,7 @@ function N(i) {
     let {
             applicationIcon: e,
             applicationId: t,
-            applicationName: r,
+            applicationName: a,
             command: m,
             guildId: u,
             onClose: j,
@@ -44,23 +44,23 @@ function N(i) {
         } = (0, f.A)(u, t, m.id),
         L = s.useCallback(async () => {
             if (!T) return void j();
-            let i = a().difference(Object.keys(m.permissions ?? {}), Object.keys(S)),
-                e = a().omit({ ...S }, i),
-                n = (0, b.Ap)(u),
-                s = (0, C.Eu)(u, h.RA.ROLE),
-                r = (0, C.Eu)(n, h.RA.CHANNEL),
+            let i = r().difference(Object.keys(m.permissions ?? {}), Object.keys(S)),
+                e = r().omit({ ...S }, i),
+                n = (0, h.Ap)(u),
+                s = (0, C.Eu)(u, b.RA.ROLE),
+                a = (0, C.Eu)(n, b.RA.CHANNEL),
                 l = M[s]?.permission ?? !0,
-                d = M[r]?.permission ?? !0,
-                o = Object.values(e).map((i) => ({ id: i.id, permission: i.permission, type: i.type }));
+                o = M[a]?.permission ?? !0,
+                d = Object.values(e).map((i) => ({ id: i.id, permission: i.permission, type: i.type }));
             (w(null), _(!0));
             try {
                 (await v.Ni({
                     defaultEveryoneValue: l,
-                    defaultEverywhereValue: d,
+                    defaultEverywhereValue: o,
                     applicationId: t,
                     commandId: m.id,
                     guildId: u,
-                    permissions: o,
+                    permissions: d,
                 }),
                     _(!1),
                     j());
@@ -79,23 +79,23 @@ function N(i) {
         H = (0, l.bG)([E.A], () => E.A.getApplication(t)),
         V = H?.bot?.id,
         Y = (0, l.bG)([x.Ay], () => (null != V ? x.Ay.getMember(u, V) : null));
-    return (0, n.jsx)(d.a, {
+    return (0, n.jsx)(o.a, {
         "aria-label": I.intl.string(I.t["N+InBa"]),
         transitionState: N,
         onClose: j,
         title: I.intl.string(I.t["N+InBa"]),
-        preview: (0, n.jsxs)(o.B, {
+        preview: (0, n.jsxs)(d.B, {
             direction: "horizontal",
             gap: 16,
             children: [
                 (0, n.jsx)(P, {
                     icon: e,
                     id: t,
-                    name: r,
+                    name: a,
                     guildMember: Y,
                     bot: m.type !== A.kc.PRIMARY_ENTRY_POINT ? H?.bot : void 0,
                 }),
-                (0, n.jsxs)(o.B, {
+                (0, n.jsxs)(d.B, {
                     direction: "vertical",
                     gap: 4,
                     children: [
@@ -113,13 +113,13 @@ function N(i) {
             { text: I.intl.string(I.t["ETE/oC"]), onClick: j, variant: "secondary" },
             { text: I.intl.string(I.t["R3BPH+"]), onClick: L, variant: "primary", disabled: !T, loading: B },
         ],
-        children: (0, n.jsxs)(o.B, {
+        children: (0, n.jsxs)(d.B, {
             direction: "vertical",
             gap: 16,
             children: [
                 null == R || R.hasFieldErrors()
                     ? null
-                    : (0, n.jsx)(p.w, { type: "critical", children: R.getAnyErrorMessage() }),
+                    : (0, n.jsx)(p.w, { type: "critical", message: R.getAnyErrorMessage(), role: "alert" }),
                 (0, n.jsx)(k.A, {
                     applicationId: t,
                     commandId: m.id,
@@ -135,7 +135,7 @@ function N(i) {
     });
 }
 function P(i) {
-    let { icon: e, id: t, guildMember: s, bot: r } = i,
-        a = j.Ay.getApplicationIconURL({ id: t, guildMember: s, bot: r, icon: e, size: 40 });
-    return (0, n.jsx)(m.eu, { src: a, size: u._3.SIZE_40, "aria-hidden": !0 });
+    let { icon: e, id: t, guildMember: s, bot: a } = i,
+        r = j.Ay.getApplicationIconURL({ id: t, guildMember: s, bot: a, icon: e, size: 40 });
+    return (0, n.jsx)(m.eu, { src: r, size: u._3.SIZE_40, "aria-hidden": !0 });
 }

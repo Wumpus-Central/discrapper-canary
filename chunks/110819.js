@@ -1,7 +1,7 @@
 e.d(n, { default: () => N });
 var r = e(477900),
-    i = e(582128),
-    s = e(636537),
+    s = e(582128),
+    i = e(636537),
     l = e(109802),
     a = e(452027),
     o = e(95477),
@@ -15,12 +15,12 @@ var r = e(477900),
     h = e(637219);
 function f(t) {
     let { name: n, value: e } = t,
-        [s, o] = i.useState(l.q.DEFAULT);
+        [i, o] = s.useState(l.q.DEFAULT);
     return (0, r.jsx)(a.D, {
         label: n,
         children: (0, r.jsx)(l.e, {
             value: e,
-            mode: s,
+            mode: i,
             supportsCopy: x.p5,
             onCopy: () => {
                 (0, x.C)(
@@ -33,15 +33,15 @@ function f(t) {
     });
 }
 function j(t) {
-    let { domain: n, error: e, disabled: i, onDomainChange: s } = t;
+    let { domain: n, error: e, disabled: s, onDomainChange: i } = t;
     return (0, r.jsx)(o.k, {
         label: m.intl.string(m.t["4jIAa+"]),
         error: e,
-        onChange: s,
+        onChange: i,
         placeholder: "example.com",
         maxLength: 253,
         value: n,
-        disabled: i,
+        disabled: s,
         required: !0,
     });
 }
@@ -81,7 +81,7 @@ function y(t) {
                     }),
                 ],
             }),
-            (0, r.jsx)(c.w, { type: "info", children: m.intl.string(m.t.CUBxDB) }),
+            (0, r.jsx)(c.w, { type: "info", message: m.intl.string(m.t.CUBxDB), role: "static" }),
         ],
     });
 }
@@ -103,18 +103,18 @@ function S(t) {
 }
 function N(t) {
     let { onClose: n, transitionState: e } = t,
-        [l, a] = i.useState(""),
-        [o, u] = i.useState(""),
-        [d, c] = i.useState(null),
-        [x, h] = i.useState(!1),
-        [f, N] = i.useState("DOMAIN"),
-        [b, C] = i.useState("DNS"),
-        D = i.useId();
+        [l, a] = s.useState(""),
+        [o, u] = s.useState(""),
+        [d, c] = s.useState(null),
+        [x, h] = s.useState(!1),
+        [f, N] = s.useState("DOMAIN"),
+        [b, C] = s.useState("DNS"),
+        D = s.useId();
     function v(t) {
         return t.body?.errors?.domain?._errors?.[0]?.message ?? t.body?.message ?? t.message;
     }
     function P() {
-        return s.Bo.post({ url: g.Rsh.CONNECTION(g.fg2.DOMAIN, l), body: {}, rejectWithError: !1 });
+        return i.Bo.post({ url: g.Rsh.CONNECTION(g.fg2.DOMAIN, l), body: {}, rejectWithError: !1 });
     }
     async function k() {
         if ("" === l) return (c(m.intl.string(m.t.eJEUvD)), !1);

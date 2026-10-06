@@ -10,14 +10,14 @@ var e = n(477900),
     u = n(683071),
     p = n(691885),
     g = n(608461),
-    h = n(627363),
-    m = n(130771),
+    m = n(627363),
+    h = n(130771),
     x = n(269927),
     C = n(375708);
 function b(t) {
     let { transitionState: i, application: n, onClose: a } = t,
         [b, f] = l.useState(n?.team?.id),
-        { teams: v } = (0, m.A)(),
+        { teams: v } = (0, h.A)(),
         y = l.useMemo(
             () =>
                 v
@@ -26,7 +26,7 @@ function b(t) {
             [v],
         ),
         A = n?.team?.id !== b,
-        [j, { loading: k, error: I }] = (0, g.A)(h.Ay.transferApplication);
+        [j, { loading: k, error: I }] = (0, g.A)(m.Ay.transferApplication);
     async function w() {
         (s()(null != n, "no application"),
             s()(null != b, "no team selected"),
@@ -53,7 +53,7 @@ function b(t) {
                       ],
                   })
                 : null,
-            null != I ? (0, e.jsx)(u.w, { type: "critical", children: I.message }) : null,
+            null != I ? (0, e.jsx)(u.w, { type: "critical", message: I.message, role: "alert" }) : null,
             (0, e.jsx)(d.h, { size: 16 }),
             (0, e.jsx)(p.l, {
                 selectionMode: "single",

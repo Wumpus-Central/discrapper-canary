@@ -10747,7 +10747,7 @@ function oG() {
                         (0, r.jsx)(x.$, { variant: "secondary", size: "sm", text: "Refresh", onClick: s, loading: a }),
                     ],
                 }),
-                null != l && (0, r.jsx)(J.w, { type: "critical", children: l }),
+                null != l && (0, r.jsx)(J.w, { type: "critical", message: l, role: "alert" }),
                 !a &&
                     null != e &&
                     0 === e.length &&
@@ -14039,7 +14039,7 @@ function cD() {
                         }),
                     ],
                 }),
-            null != m && (0, r.jsx)(J.w, { type: "critical", children: m }),
+            null != m && (0, r.jsx)(J.w, { type: "critical", message: m, role: "alert" }),
         ],
     });
 }

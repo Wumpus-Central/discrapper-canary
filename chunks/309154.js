@@ -2343,16 +2343,17 @@ function sB(e) {
     return e6.A.hasBind(n)
         ? (0, S.jsx)("div", {
               className: sF.$e,
-              children: (0, S.jsx)(iJ.w, { type: "warning", children: U.intl.string(U.t["7lQlw3"]) }),
+              children: (0, S.jsx)(iJ.w, { type: "warning", message: U.intl.string(U.t["7lQlw3"]), role: "status" }),
           })
         : sw.Yy.has(n)
           ? (0, S.jsx)("div", {
                 className: sF.$e,
                 children: (0, S.jsx)(iJ.w, {
                     type: "warning",
-                    children: U.intl.format(U.t.MOIaNd, {
+                    message: U.intl.format(U.t.MOIaNd, {
                         keyboardNavArticle: eC.A.getArticleURL(I.MVz.KEYBOARD_NAVIGATION),
                     }),
+                    role: "status",
                 }),
             })
           : void 0;
@@ -2656,7 +2657,8 @@ let s$ = function () {
                 ? (0, S.jsx)(s$, {})
                 : (0, S.jsx)(iJ.w, {
                       type: "info",
-                      children: U.intl.format(U.t.mPi3F3, { downloadLink: I.X7G.DOWNLOAD }),
+                      message: U.intl.format(U.t.mPi3F3, { downloadLink: I.X7G.DOWNLOAD }),
+                      role: "static",
                   });
         },
     });
@@ -3037,7 +3039,11 @@ let lI = (0, E.zD)(h.X.ENABLE_TABS_EXPERIENCE, {
                               direction: "vertical",
                               gap: "md",
                               children: [
-                                  (0, S.jsx)(iJ.w, { type: "info", children: U.intl.string(U.t["5pkmHa"]) }),
+                                  (0, S.jsx)(iJ.w, {
+                                      type: "info",
+                                      message: U.intl.string(U.t["5pkmHa"]),
+                                      role: "static",
+                                  }),
                                   (0, S.jsx)(su, { sourcePage: "keybinds" }),
                               ],
                           }),
@@ -3758,7 +3764,8 @@ let rW = (0, E.E2)(h.X.VOICE_INPUT_SENSITIVITY_FIELD_SET, {
                         className: rB.B4,
                         children: (0, S.jsx)(iJ.w, {
                             type: "warning",
-                            children: U.intl.format(U.t["O13I+O"], { onEnableClick: () => lq.default.enable(!0) }),
+                            message: U.intl.format(U.t["O13I+O"], { onEnableClick: () => lq.default.enable(!0) }),
+                            role: "status",
                         }),
                     }),
                 [r],
@@ -4861,12 +4868,12 @@ class oF extends T.PureComponent {
             ? null != t
                 ? (0, S.jsx)("div", {
                       className: ok.zc,
-                      children: (0, S.jsx)(iJ.w, { type: "critical", children: t.message }),
+                      children: (0, S.jsx)(iJ.w, { type: "critical", message: t.message, role: "alert" }),
                   })
                 : null
             : (0, S.jsx)("div", {
                   className: ok.zc,
-                  children: (0, S.jsx)(iJ.w, { type: "critical", children: e.message }),
+                  children: (0, S.jsx)(iJ.w, { type: "critical", message: e.message, role: "alert" }),
               });
     }
     renderBillingAddressSection() {
@@ -9636,7 +9643,7 @@ function mF(e) {
         children: (0, S.jsxs)(Z.B, {
             gap: 8,
             children: [
-                null != u ? (0, S.jsx)(iJ.w, { type: "critical", children: u.message }) : null,
+                null != u ? (0, S.jsx)(iJ.w, { type: "critical", message: u.message, role: "alert" }) : null,
                 (0, S.jsx)(mk.x, { listingId: i.id, guildId: n.guild_id, className: mw.P }),
             ],
         }),
@@ -13306,7 +13313,11 @@ let h2 = (0, E.E2)(h.X.ACTIVITY_PRIVACY_PER_GUILD_SETTING, {
                 ? null
                 : (0, S.jsx)("div", {
                       className: h1.l,
-                      children: (0, S.jsx)(iJ.w, { type: "warning", children: U.intl.string(hM.default["xxI0/W"]) }),
+                      children: (0, S.jsx)(iJ.w, {
+                          type: "warning",
+                          message: U.intl.string(hM.default["xxI0/W"]),
+                          role: "status",
+                      }),
                   });
             return (0, S.jsx)(h0, { notice: e });
         },
@@ -15417,11 +15428,12 @@ function p6() {
               children: [
                   (0, S.jsx)(iJ.w, {
                       type: "warning",
-                      children: U.intl.format(U.t.fuEX5B, {
+                      message: U.intl.format(U.t.fuEX5B, {
                           onClick: function () {
                               return (0, nm.openUserSettings)(h.X.STREAMER_MODE_CATEGORY);
                           },
                       }),
+                      role: "status",
                   }),
                   (0, S.jsx)(sd.c, { className: p5.yF }),
               ],

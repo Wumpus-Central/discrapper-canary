@@ -821,7 +821,9 @@ function eO(e) {
         actions: es,
         children: (0, n.jsxs)(d.n, {
             children: [
-                null != G && !G.hasFieldErrors() && (0, n.jsx)(f.w, { type: "critical", children: G.message }),
+                null != G &&
+                    !G.hasFieldErrors() &&
+                    (0, n.jsx)(f.w, { type: "critical", message: G.message, role: "alert" }),
                 S ? (0, n.jsx)(eD, { label: P.intl.string(P.t.UYt7iQ), value: Q, onChange: W }) : null,
                 (ee || null != O) && (0, n.jsx)(eg, { sound: i, volume: k, disabled: $, onChange: H }),
                 ee || null != t

@@ -68,7 +68,10 @@ function h(e) {
     return "reverse_trial" === n
         ? "" === p
             ? null
-            : (0, i.jsx)("div", { className: d.OK, children: (0, i.jsx)(r.w, { type: "info", children: p }) })
+            : (0, i.jsx)("div", {
+                  className: d.OK,
+                  children: (0, i.jsx)(r.w, { type: "info", message: p, role: "static" }),
+              })
         : "trial" === n && null != u && null != c
           ? "" === p
               ? null

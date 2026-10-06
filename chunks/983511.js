@@ -212,7 +212,7 @@ function W(e) {
                               null !== R &&
                                   (0, i.jsx)("div", {
                                       className: Y.z3,
-                                      children: (0, i.jsx)(E.w, { type: "critical", children: R }),
+                                      children: (0, i.jsx)(E.w, { type: "critical", message: R, role: "alert" }),
                                   }),
                               (0, i.jsx)("div", { children: ei }),
                               (0, i.jsxs)(O.Yx, {
@@ -265,7 +265,7 @@ function W(e) {
                           null !== R &&
                               (0, i.jsx)("div", {
                                   className: Y.z3,
-                                  children: (0, i.jsx)(E.w, { type: "critical", children: R }),
+                                  children: (0, i.jsx)(E.w, { type: "critical", message: R, role: "alert" }),
                               }),
                           (0, i.jsx)("div", { children: ei }),
                           (0, i.jsxs)(O.Yx, {

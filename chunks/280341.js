@@ -664,7 +664,11 @@ let eT = (e) => {
             u
                 ? (0, r.jsx)("div", {
                       className: e_.QK,
-                      children: (0, r.jsx)(el.w, { type: "critical", children: Y.intl.string(Y.t.vZ8y7l) }),
+                      children: (0, r.jsx)(el.w, {
+                          type: "critical",
+                          message: Y.intl.string(Y.t.vZ8y7l),
+                          role: "alert",
+                      }),
                   })
                 : null,
             (0, r.jsx)(eI.Ay, {
@@ -689,7 +693,11 @@ function ej(e) {
             l
                 ? (0, r.jsx)("div", {
                       className: e_.QK,
-                      children: (0, r.jsx)(el.w, { type: "critical", children: Y.intl.string(Y.t["4vnhKV"]) }),
+                      children: (0, r.jsx)(el.w, {
+                          type: "critical",
+                          message: Y.intl.string(Y.t["4vnhKV"]),
+                          role: "alert",
+                      }),
                   })
                 : null,
             (0, r.jsx)(eA, { onCardInfoChange: n, error: t }),
@@ -1512,7 +1520,7 @@ function tk(e) {
                                 ? null
                                 : (0, r.jsx)("div", {
                                       className: tE.Nk,
-                                      children: (0, r.jsx)(el.w, { type: "critical", children: s }),
+                                      children: (0, r.jsx)(el.w, { type: "critical", message: s, role: "alert" }),
                                   }),
                             a ? (0, r.jsx)(tM.y, { className: tE.CI }) : t,
                         ],

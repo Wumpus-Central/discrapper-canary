@@ -210,12 +210,13 @@ function el(e) {
                     null != eu && (0, l.jsx)(er, { product: eu, moreCount: ec.length }),
                     (0, l.jsx)(G.w, {
                         type: "info",
-                        children: ee.intl.format(et.default.ZvgWUV, {
+                        message: ee.intl.format(et.default.ZvgWUV, {
                             giftCount: i,
                             onInventoryClick: function () {
                                 (m(), (0, S.bz)(), (0, X.openUserSettings)(V.X.GIFT_PANEL, { analyticsLocations: x }));
                             },
                         }),
+                        role: "static",
                     }),
                 ],
             }),

@@ -1331,10 +1331,11 @@ function ne() {
         "data-parental-consent-notice": !0,
         children: (0, l.jsx)(t9.w, {
             type: "warning",
-            children:
+            message:
                 0 === t
                     ? et.intl.format(ee.default.S5kmfO, { learnMoreHook: n })
                     : et.intl.format(ee.default["5jm+T3"], { count: t, learnMoreHook: n }),
+            role: "static",
         }),
     });
 }

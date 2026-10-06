@@ -22,7 +22,7 @@ function p(e) {
                 { fractionalPremiumBannerMessage: (0, d.NQ)({ fractionalPremiumInfo: t, ...a }) }
             );
         })({ fractionalPremiumInfo: t, isEligibleForTrial: n, trialPeriodCopy: r, subscriptionPeriodEnd: a });
-    return null != s && "" !== s ? (0, l.jsx)(i.w, { type: "info", children: s }) : null;
+    return null != s && "" !== s ? (0, l.jsx)(i.w, { type: "info", message: s, role: "static" }) : null;
 }
 function m(e) {
     let { isGift: t, isTrial: n, isInvoiceBilledImmediately: i = !0, subscriptionTrial: c, ...d } = e,

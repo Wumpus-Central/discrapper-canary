@@ -705,7 +705,7 @@ function eA(e) {
             className: eC.Qs,
             onKeyDown: eS,
             children: [
-                null != ec && (0, a.jsx)(C.w, { type: "critical", children: ec.getAnyErrorMessage() }),
+                null != ec && (0, a.jsx)(C.w, { type: "critical", message: ec.getAnyErrorMessage(), role: "alert" }),
                 (0, a.jsx)(eb, { question: z, onChange: et, error: em?.question, inputRef: L }),
                 (0, a.jsx)(b.h, { size: 26 }),
                 (0, a.jsxs)(p.D, {

@@ -943,7 +943,9 @@ let eW = [ec.Dmq.PAST_DUE, ec.Dmq.ACCOUNT_HOLD, ec.Dmq.BILLING_RETRY],
             subtitle: et.intl.string(et.t.FClXh9),
             actions: m,
             onClose: async () => n(),
-            children: d ? (0, i.jsx)(ek.w, { type: "critical", children: et.intl.string(et.t["5mlOCW"]) }) : null,
+            children: d
+                ? (0, i.jsx)(ek.w, { type: "critical", message: et.intl.string(et.t["5mlOCW"]), role: "alert" })
+                : null,
         });
     };
 function eZ(e) {

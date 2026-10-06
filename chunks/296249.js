@@ -342,7 +342,8 @@ function eK(e) {
                       className: eQ.B2,
                       children: (0, l.jsx)(ep.w, {
                           type: "info",
-                          children: eW.intl.format(eW.t["Xq++FA"], { appName: d.name }),
+                          message: eW.intl.format(eW.t["Xq++FA"], { appName: d.name }),
+                          role: "static",
                       }),
                   })
                 : null,

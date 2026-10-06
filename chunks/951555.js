@@ -197,7 +197,7 @@ function k(e) {
             align: "start",
             gap: 8,
             children: [
-                (0, i.jsx)(E.w, { type: "critical", children: M.intl.string(M.t["5mlOCW"]) }),
+                (0, i.jsx)(E.w, { type: "critical", message: M.intl.string(M.t["5mlOCW"]), role: "alert" }),
                 (0, i.jsx)(c.$, {
                     variant: "secondary",
                     onClick: () => (0, I.$o)(),

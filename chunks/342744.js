@@ -37,7 +37,10 @@ function C(e) {
         className: _.rf,
         children: [
             null !== t &&
-                (0, i.jsx)("div", { className: _.z3, children: (0, i.jsx)(u.w, { type: "critical", children: t }) }),
+                (0, i.jsx)("div", {
+                    className: _.z3,
+                    children: (0, i.jsx)(u.w, { type: "critical", message: t, role: "alert" }),
+                }),
             (0, i.jsx)("div", { children: I.intl.string(I.t.DY2CXs) }),
         ],
     });
