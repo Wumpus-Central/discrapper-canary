@@ -24,8 +24,8 @@ var _ = n(569926),
     I = n(82149),
     N = n(174459),
     E = n(970928),
-    h = n(486020),
-    T = n(20805),
+    T = n(486020),
+    h = n(20805),
     C = n(327098),
     S = n(652215),
     v = n(818023),
@@ -53,14 +53,14 @@ function j(t) {
         { data: f } = (0, _.I)(A),
         p = f?.getCoverURL(),
         g =
-            (0, T.Tq)(n) && n.extra.entries.length > 0
+            (0, h.Tq)(n) && n.extra.entries.length > 0
                 ? { src: n.extra.entries[0].media.image_url }
-                : (0, T.Lf)(n)
+                : (0, h.Lf)(n)
                   ? {
                         src: (0, E.uD)(n.extra.application_id, n.extra.media_assets_large_image, v.iu.LARGE),
                         alt: n.extra.media_title,
                     }
-                  : (0, T.p6)(n)
+                  : (0, h.p6)(n)
                     ? { src: n.extra.media.image_url }
                     : void 0;
     return (
@@ -85,7 +85,7 @@ function P(t, e) {
             let t = (0, I.UW)(e),
                 n =
                     null != t
-                        ? h.Ay.getGuildIconURL({ id: t.guildId, icon: e?.assets?.small_image, size: v.iu.SMALL })
+                        ? T.Ay.getGuildIconURL({ id: t.guildId, icon: e?.assets?.small_image, size: v.iu.SMALL })
                         : void 0;
             return { largeImage: null != n ? { src: n } : void 0, smallImage: void 0 };
         }
@@ -143,25 +143,37 @@ function L(t) {
     }, [r, I, A, p, s, g, m, x, f, _]);
 }
 function b(t, e) {
-    let n = (0, u.h)(t?.application_id);
+    let n = (0, u.h)(t?.application_id),
+        l = e ?? n,
+        { data: i } = (0, _.I)(l?.getCanonicalGameId());
     if (null == t) return { largeImage: void 0, smallImage: void 0 };
-    let l = t?.assets?.large_image,
-        i =
-            null != l
-                ? {
-                      src: (0, E.uD)(t.application_id, l, [v.iu.LARGE, v.iu.LARGE]),
-                      text: t.assets?.large_text?.trim(),
-                      url: t.assets?.large_url,
-                  }
-                : void 0,
-        a = (0, r.A)(t) ? void 0 : t?.assets?.small_image,
+    let a = t?.assets?.large_image,
         s =
             null != a
                 ? {
                       src: (0, E.uD)(t.application_id, a, [v.iu.LARGE, v.iu.LARGE]),
+                      text: t.assets?.large_text?.trim(),
+                      url: t.assets?.large_url,
+                  }
+                : void 0,
+        o = (0, r.A)(t) ? void 0 : t?.assets?.small_image,
+        c =
+            null != o
+                ? {
+                      src: (0, E.uD)(t.application_id, o, [v.iu.LARGE, v.iu.LARGE]),
                       text: t.assets?.small_text?.trim(),
                       url: t.assets?.small_url,
                   }
                 : void 0;
-    return { largeImage: i ?? O(e ?? n), smallImage: s };
+    return {
+        largeImage:
+            s ??
+            (function (t) {
+                let e = t?.getIconURL(v.iu.LARGE);
+                if (null != t && null != e)
+                    return { src: e, alt: y.intl.formatToPlainString(y.t.tiKyYg, { applicationName: t.name }) };
+            })(i) ??
+            O(l),
+        smallImage: c,
+    };
 }
