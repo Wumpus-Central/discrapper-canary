@@ -1,4 +1,4 @@
-n.d(e, { R: () => B, Z: () => x });
+n.d(e, { R: () => x, Z: () => G });
 var i = n(477900),
     s = n(582128),
     a = n(172218),
@@ -23,17 +23,18 @@ var i = n(477900),
     A = n(859703),
     w = n(104886),
     S = n(710969),
-    q = n(851936),
-    f = n(561844),
-    k = n(590202),
-    N = n(910463),
-    P = n(971649),
-    R = n(823784),
-    b = n(653819);
+    q = n(977416),
+    f = n(851936),
+    k = n(561844),
+    N = n(590202),
+    P = n(910463),
+    R = n(971649),
+    b = n(823784),
+    V = n(653819);
 n(23766);
-var V = n(652215);
-let O = new Set();
-class M {
+var O = n(652215);
+let M = new Set();
+class U {
     id;
     entity;
     questContent;
@@ -99,11 +100,11 @@ class M {
     }
     trackViewedPlacement = (t) => {
         let e = (0, S.HN)(this.questContent);
-        null != e && (0, S.xn)(this.questContent, this.entity.adCreativeType) && O.add(`${t}_${e}`);
+        null != e && (0, S.xn)(this.questContent, this.entity.adCreativeType) && M.add(`${t}_${e}`);
     };
     shouldExtendSession = (t) => {
         let e = (0, S.HN)(this.questContent);
-        return null != e && !O.has(`${t}_${e}`) && (0, S.xn)(this.questContent, this.entity.adCreativeType);
+        return null != e && !M.has(`${t}_${e}`) && (0, S.xn)(this.questContent, this.entity.adCreativeType);
     };
     maybeRegisterIosAttributionImpression = (t, e) => {
         if (this.iosAttributionRegistered || !(0, p.C$)()) return;
@@ -118,7 +119,7 @@ class M {
                 : (0, I.$8)(I.vI.NOT_SKAN_ENABLED, n, this.id);
     };
     onMinViewTimeReached = async () => {
-        let t = await (0, g.N)((0, k.jO)(this.questContent)),
+        let t = await (0, g.N)((0, N.jO)(this.questContent)),
             e = {
                 trackGuildAndChannelMetadata: this.trackGuildAndChannelMetadata,
                 sourceQuestContent: this.sourceQuestContent,
@@ -130,7 +131,7 @@ class M {
                 apple_advertising_id: null != t && (0, v.isIOS)() ? t.advertisingId : null,
                 android_advertising_id: null != t && (0, v.isAndroid)() ? t.advertisingId : null,
                 ...(0, E.A)(),
-                ...(0, N.X)(this.questContent),
+                ...(0, P.X)(this.questContent),
             };
         (this.entity.adContentIds.forEach((i, s) => {
             let a = (0, S.L4)(this.sourceQuestContent, i),
@@ -139,7 +140,7 @@ class M {
                 if (this.entity.adCreativeType === o.p.QUEST) {
                     let t = this.entity.adContentIds[s],
                         e = A.A.getQuest(t);
-                    null == e || (0, S.Ic)(e) || (0, Q.zh)(o.p.QUEST, [t]);
+                    null == e || (0, q.Ic)(e) || (0, Q.zh)(o.p.QUEST, [t]);
                 }
                 let e = {
                     type: (0, S.xn)(this.questContent, this.entity.adCreativeType)
@@ -176,8 +177,8 @@ class M {
                             adCreativeType: this.entity.adCreativeType,
                             adCreativeId: this.entity.adContentIds[s],
                         }),
-                    (0, q.L)().info(
-                        `${i} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, k.jO)(this.questContent)}`,
+                    (0, f.L)().info(
+                        `${i} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, N.jO)(this.questContent)}`,
                         { impressionId: this.id },
                     ));
                 return;
@@ -185,37 +186,37 @@ class M {
             if (this.entity.adCreativeType === o.p.QUEST) {
                 let t = this.entity.adContentIds[s],
                     i = A.A.getQuest(t);
-                (null == i || (0, S.Ic)(i) || (0, Q.zh)(o.p.QUEST, [t]),
-                    (0, q.L)().info(
-                        `${i?.config.messages.questName ?? t} Quest viewed for at least ${this.minViewTimeSeconds}s at ${(0, k.jO)(this.questContent)}`,
+                (null == i || (0, q.Ic)(i) || (0, Q.zh)(o.p.QUEST, [t]),
+                    (0, f.L)().info(
+                        `${i?.config.messages.questName ?? t} Quest viewed for at least ${this.minViewTimeSeconds}s at ${(0, N.jO)(this.questContent)}`,
                         { impressionId: this.id },
                     ),
-                    (0, f.av)({
+                    (0, k.av)({
                         ...e,
                         shouldExtendSession: d,
                         questId: t,
-                        event: V.HAw.QUEST_CONTENT_VIEWED,
+                        event: O.HAw.QUEST_CONTENT_VIEWED,
                         properties: {
                             ...n,
                             ...this.commonProperties(),
                             metadata_sealed: a ?? null,
-                            search_session_id: (0, R.tv)()?.uuid ?? null,
+                            search_session_id: (0, b.tv)()?.uuid ?? null,
                             traffic_metadata_sealed: (0, S.Gp)(this.sourceQuestContent, i?.id) ?? null,
                         },
                     }));
             } else {
                 let t = this.entity.adContentIds[s];
-                ((0, q.L)().info(
-                    `${t} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, k.jO)(this.questContent)}`,
+                ((0, f.L)().info(
+                    `${t} ad content viewed for at least ${this.minViewTimeSeconds}s at ${(0, N.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
-                    (0, f.Qg)({
+                    (0, k.Qg)({
                         ...e,
                         shouldExtendSession: d,
                         adContentId: t,
                         relatedQuestId: this.entity.relatedQuestId,
                         adCreativeType: this.entity.adCreativeType,
-                        event: V.HAw.QUEST_CONTENT_VIEWED,
+                        event: O.HAw.QUEST_CONTENT_VIEWED,
                         properties: { ...n, ...this.commonProperties() },
                     }));
             }
@@ -241,28 +242,28 @@ class M {
                     if (t.entity.adCreativeType === o.p.QUEST) {
                         let a = t.entity.adContentIds[d],
                             o = A.A.getQuest(a);
-                        ((0, q.L)().info(
+                        ((0, f.L)().info(
                             `${o?.config.messages.questName ?? a} Quest impression ${e ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: t.id },
                         ),
-                            (0, f.av)({
+                            (0, k.av)({
                                 ...i,
                                 questId: a,
-                                event: V.HAw.QUEST_CONTENT_VIEW_TIME,
+                                event: O.HAw.QUEST_CONTENT_VIEW_TIME,
                                 properties: { ...s, ...t.commonProperties() },
                             }));
                     } else {
                         let a = t.entity.adContentIds[d];
-                        ((0, q.L)().info(
+                        ((0, f.L)().info(
                             `${a} ad content impression ${e ? "terminal " : ""}heartbeat: ${n}ms since last heartbeat`,
                             { impressionId: t.id },
                         ),
-                            (0, f.Qg)({
+                            (0, k.Qg)({
                                 ...i,
                                 adContentId: a,
                                 relatedQuestId: t.entity.relatedQuestId,
                                 adCreativeType: t.entity.adCreativeType,
-                                event: V.HAw.QUEST_CONTENT_VIEW_TIME,
+                                event: O.HAw.QUEST_CONTENT_VIEW_TIME,
                                 properties: { ...s, ...t.commonProperties() },
                             }));
                     }
@@ -274,13 +275,13 @@ class M {
     commonProperties = () => ({
         impression_id: this.id,
         is_quest_enrollment_blocked: this.isQuestEnrollmentBlocked,
-        ...(0, k.fF)(this.questContent, this.questContentPosition, this.questContentRowIndex),
+        ...(0, N.fF)(this.questContent, this.questContentPosition, this.questContentRowIndex),
     });
     clone = (t) => {
         let { triggeredByStatusChange: e } = t;
         return (
             this.stop(),
-            new M({
+            new U({
                 questContent: this.questContent,
                 questContentRowIndex: this.questContentRowIndex,
                 questContentPosition: this.questContentPosition,
@@ -336,14 +337,14 @@ class M {
             if (this.entity.adCreativeType === o.p.QUEST) {
                 let n = this.entity.adContentIds[i],
                     a = A.A.getQuest(n);
-                ((0, q.L)().info(
-                    `${a?.config.messages.questName ?? n} Quest became visible at ${(0, k.jO)(this.questContent)}`,
+                ((0, f.L)().info(
+                    `${a?.config.messages.questName ?? n} Quest became visible at ${(0, N.jO)(this.questContent)}`,
                     { impressionId: this.id },
                 ),
-                    (0, f.av)({
+                    (0, k.av)({
                         ...t,
                         questId: n,
-                        event: V.HAw.QUEST_CONTENT_LOADED,
+                        event: O.HAw.QUEST_CONTENT_LOADED,
                         properties: {
                             ...e,
                             metadata_sealed: s ?? null,
@@ -353,22 +354,22 @@ class M {
                     }));
             } else {
                 let n = this.entity.adContentIds[i];
-                ((0, q.L)().info(`${n} ad content became visible at ${(0, k.jO)(this.questContent)}`, {
+                ((0, f.L)().info(`${n} ad content became visible at ${(0, N.jO)(this.questContent)}`, {
                     impressionId: this.id,
                 }),
-                    (0, f.Qg)({
+                    (0, k.Qg)({
                         ...t,
                         adContentId: n,
                         relatedQuestId: this.entity.relatedQuestId,
                         adCreativeType: this.entity.adCreativeType,
-                        event: V.HAw.QUEST_CONTENT_LOADED,
+                        event: O.HAw.QUEST_CONTENT_LOADED,
                         properties: { ...e, ...this.commonProperties() },
                     }));
             }
         }),
             _.A.increment({
                 name: l.K.QUEST_CONTENT_IMPRESSION,
-                tags: [`quest_content:${(0, k.jO)(this.questContent)}`],
+                tags: [`quest_content:${(0, N.jO)(this.questContent)}`],
             }),
             (this.isRunning = !0));
     };
@@ -385,9 +386,9 @@ class M {
         };
     })();
 }
-function U(t) {
+function $(t) {
     let { visible: e, visibleChanged: n, focused: a, reference: r, focusedChanged: u, sourceQuestContent: h } = t,
-        l = (0, P.iY)(t),
+        l = (0, R.iY)(t),
         c = t.adCreativeType === o.p.QUEST ? void 0 : t.relatedQuestId,
         m = s.useRef(null),
         p = (0, d.bG)([A.A], () => null != A.A.questEnrollmentBlockedUntil, []);
@@ -412,8 +413,8 @@ function U(t) {
                     triggeredByStatusChange: l,
                 };
                 (t.adCreativeType === o.p.QUEST
-                    ? (m.current = new M({ ...e, adContentIds: t.adContentIds, adCreativeType: t.adCreativeType }))
-                    : (m.current = new M({
+                    ? (m.current = new U({ ...e, adContentIds: t.adContentIds, adCreativeType: t.adCreativeType }))
+                    : (m.current = new U({
                           ...e,
                           adContentIds: t.adContentIds,
                           adCreativeType: t.adCreativeType,
@@ -439,10 +440,10 @@ function U(t) {
             t.adCreativeType,
             c,
         ]),
-        (0, i.jsx)(b.n.Provider, { value: m, children: t.children(r, m) })
+        (0, i.jsx)(V.n.Provider, { value: m, children: t.children(r, m) })
     );
 }
-let $ = s.memo(function (t) {
+let B = s.memo(function (t) {
     let e,
         n,
         i,
@@ -461,15 +462,15 @@ let $ = s.memo(function (t) {
                 o = i !== (0, r.Ay)(i);
             return { visible: i, visibleChanged: o, reference: (0, a.K)((t) => n(t), 0.5) };
         })(t.overrideVisibility),
-        { key: p, adContentIds: T } = (0, P.RC)(t),
+        { key: p, adContentIds: T } = (0, R.RC)(t),
         I = { ...t, focused: h, focusedChanged: l, visible: C, visibleChanged: c, reference: m };
     return "questOrQuests" in t
-        ? (0, s.createElement)(U, { ...I, key: p, adContentIds: T, adCreativeType: o.p.QUEST })
-        : (0, s.createElement)(U, { ...I, key: p, adContentIds: T, adCreativeType: t.adCreativeType });
+        ? (0, s.createElement)($, { ...I, key: p, adContentIds: T, adCreativeType: o.p.QUEST })
+        : (0, s.createElement)($, { ...I, key: p, adContentIds: T, adCreativeType: t.adCreativeType });
 });
-function B(t) {
-    return (0, i.jsx)($, { ...t });
-}
 function x(t) {
-    return (0, i.jsx)($, { ...t });
+    return (0, i.jsx)(B, { ...t });
+}
+function G(t) {
+    return (0, i.jsx)(B, { ...t });
 }

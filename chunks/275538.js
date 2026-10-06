@@ -35,33 +35,17 @@ var x = n(414121),
     j = n(625494);
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(508300));
 var b = n(284009),
-    T = n.n(b),
-    k = n(889227);
-async function P(e, t) {
-    let n = (t = await D.decryptEncodedCiphertext(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
-    if (null == n) throw Error("Invalid encoded user record.");
-    let [, s, r, a, i] = n;
-    return new k.A({ id: s, discriminator: r, avatar: "0" === a ? null : a, username: i });
+    T = n.n(b);
+async function k(e) {
+    return O(await window.crypto.subtle.digest({ name: "SHA-256" }, e));
 }
-function L(e) {
-    return btoa(String.fromCharCode(...new Uint8Array(e)))
-        .replace(/\//g, "_")
-        .replace(/\+/g, "-")
-        .replace(/={1,2}$/, "");
-}
-function O(e) {
-    return Uint8Array.from(atob(e), (e) => e.charCodeAt(0));
-}
-async function G(e) {
-    return L(await window.crypto.subtle.digest({ name: "SHA-256" }, e));
-}
-function R(e, t) {
+function P(e, t) {
     return (
         T()(null != e.privateKey, "private key cannot be null"),
         window.crypto.subtle.decrypt({ name: "RSA-OAEP", hash: "SHA-256" }, e.privateKey, t)
     );
 }
-let D = new (class {
+let L = new (class {
     generateRsaKeyPair() {
         return window.crypto.subtle.generateKey(
             { name: "RSA-OAEP", modulusLength: 2048, publicExponent: new Uint8Array([1, 0, 1]), hash: "SHA-256" },
@@ -78,19 +62,35 @@ let D = new (class {
     async publicKeyFingerprint(e) {
         return (
             T()(null != e.publicKey, "public key cannot be null"),
-            G(await window.crypto.subtle.exportKey("spki", e.publicKey))
+            k(await window.crypto.subtle.exportKey("spki", e.publicKey))
         );
     }
     async decryptEncodedCiphertext(e, t) {
         let n = new TextDecoder(),
-            s = await R(e, O(t));
+            s = await P(e, G(t));
         return n.decode(s);
     }
     async decryptNonce(e, t) {
-        return L(await R(e, O(t)));
+        return O(await P(e, G(t)));
     }
     release() {}
 })();
+function O(e) {
+    return btoa(String.fromCharCode(...new Uint8Array(e)))
+        .replace(/\//g, "_")
+        .replace(/\+/g, "-")
+        .replace(/={1,2}$/, "");
+}
+function G(e) {
+    return Uint8Array.from(atob(e), (e) => e.charCodeAt(0));
+}
+var R = n(889227);
+async function D(e, t) {
+    let n = (t = await L.decryptEncodedCiphertext(e, t)).match(/^(\d+):(\d{1,4}):([a-zA-Z0-9_]+):(.*)$/);
+    if (null == n) throw Error("Invalid encoded user record.");
+    let [, s, r, a, i] = n;
+    return new R.A({ id: s, discriminator: r, avatar: "0" === a ? null : a, username: i });
+}
 var M = n(652215);
 let F = new S.A("useAuthWebsocket");
 var K = n(293731),
@@ -321,13 +321,13 @@ function Y(e) {
                         switch (l.op) {
                             case "nonce_proof": {
                                 let e = l.encrypted_nonce,
-                                    t = await D.decryptNonce(f(), e);
+                                    t = await L.decryptNonce(f(), e);
                                 (r("computed nonce proof"), i.send(JSON.stringify({ op: "nonce_proof", nonce: t })));
                                 return;
                             }
                             case "pending_remote_init": {
                                 (u.succeed(), j._.dispatch(M.jej.WAVE_EMPHASIZE));
-                                let e = await D.publicKeyFingerprint(f());
+                                let e = await L.publicKeyFingerprint(f());
                                 if (e !== l.fingerprint) throw Error(`bad fingerprint ${e} !== ${l.fingerprint}`);
                                 (r("handshake complete awaiting remote auth."),
                                     c({ step: I.PENDING_REMOTE_INIT, fingerprint: e }));
@@ -345,8 +345,8 @@ function Y(e) {
                                     })
                                         .then(async (t) => {
                                             if (null == d.current) return void p();
-                                            let s = await D.decryptEncodedCiphertext(d.current, t.body.encrypted_token),
-                                                r = await D.publicKeyFingerprint(d.current);
+                                            let s = await L.decryptEncodedCiphertext(d.current, t.body.encrypted_token),
+                                                r = await L.publicKeyFingerprint(d.current);
                                             (n ? await g.A.switchAccountToken(s) : await g.A.loginToken(s, !1), e(r));
                                         })
                                         .catch(() => p()));
@@ -356,7 +356,7 @@ function Y(e) {
                                 (j._.dispatch(M.jej.WAVE_EMPHASIZE),
                                     r("remote auth handshake started, awaiting ticket/cancel."));
                                 let e = l.encrypted_user_payload,
-                                    t = await P(f(), e);
+                                    t = await D(f(), e);
                                 c({ step: I.PENDING_TICKET, user: t });
                                 return;
                             }
@@ -382,8 +382,8 @@ function Y(e) {
                         }
                     }
                     async function x() {
-                        ((l = await D.generateRsaKeyPair()), (o = await D.serializePublicKey(l)));
-                        let e = await D.publicKeyFingerprint(l);
+                        ((l = await L.generateRsaKeyPair()), (o = await L.serializePublicKey(l)));
+                        let e = await L.publicKeyFingerprint(l);
                         (r(`connected, handshaking with fingerprint: ${e}`),
                             i.send(JSON.stringify({ op: "init", encoded_public_key: o })),
                             (d.current = l));
@@ -407,7 +407,7 @@ function Y(e) {
                                 i.removeEventListener("error", v),
                                 i.close(1e3),
                                 u.cancel(),
-                                D.release(),
+                                L.release(),
                                 null != N && clearTimeout(N),
                                 null != m && clearInterval(m));
                         }

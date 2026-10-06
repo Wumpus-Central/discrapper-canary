@@ -1,22 +1,19 @@
 n.d(t, {
-    GR: () => m,
-    Gp: () => b,
-    HN: () => N,
-    Ic: () => I,
-    Kc: () => y,
-    L4: () => D,
-    Oh: () => _,
-    RF: () => P,
-    ZG: () => g,
-    gO: () => h,
-    if: () => p,
-    kd: () => f,
-    s9: () => v,
-    v1: () => T,
-    vZ: () => M,
-    vc: () => E,
-    vy: () => A,
-    xn: () => C,
+    GR: () => p,
+    Gp: () => D,
+    HN: () => g,
+    Kc: () => R,
+    L4: () => L,
+    Oh: () => E,
+    RF: () => b,
+    ZG: () => T,
+    gO: () => f,
+    if: () => I,
+    s9: () => y,
+    vZ: () => v,
+    vc: () => A,
+    vy: () => h,
+    xn: () => S,
 });
 var i = n(665260),
     r = n(157695),
@@ -26,11 +23,12 @@ var i = n(665260),
     o = n(265704),
     d = n(859703),
     c = n(738822),
-    u = n(190107);
-function _(e) {
+    u = n(977416),
+    _ = n(190107);
+function E(e) {
     return null != e && e.fetchedAt + e.ttlMillis >= Date.now();
 }
-function E(e, t, n) {
+function A(e, t, n) {
     let i = Array.isArray(t) ? new Map(t.map((e) => [e.id, e])) : t,
         r = Array.isArray(n) ? new Map(n.map((e) => [e.id, e])) : n,
         a = i.get(e);
@@ -38,43 +36,28 @@ function E(e, t, n) {
     let s = r.get(e)?.replacementId;
     if (null != s) return i.get(s);
 }
-function A(e) {
-    return Object.keys(u.TY).includes(c.uF[e]);
+function h(e) {
+    return Object.keys(_.TY).includes(c.uF[e]);
 }
-function h(e, t) {
-    if (!A(t)) return !1;
+function f(e, t) {
+    if (!h(t)) return !1;
     let n = c.uF[t];
-    return (0, i.Lt)(e.dismissedQuestContent, u.TY[n]);
-}
-function f(e) {
-    return new Date(e.expiresAt).valueOf() <= Date.now();
+    return (0, i.Lt)(e.dismissedQuestContent, _.TY[n]);
 }
 function I(e) {
-    return f(e.config);
-}
-function p(e) {
-    if (!I(e)) return !1;
+    if (!(0, u.Ic)(e)) return !1;
     let t = Date.now() - 2592e6,
         n = new Date(e.config.expiresAt).valueOf();
     return null != e.config.expiresAt && !(n <= t);
 }
-function T(e) {
-    let t = null,
-        n = Date.now();
-    for (let i of e) {
-        let e = new Date(i.config.expiresAt).valueOf();
-        !(e <= n) && (null == t || e < t) && (t = e);
-    }
-    return t;
-}
-function m(e) {
+function p(e) {
     return null != e && null != e.completedAt && null == e.claimedAt;
 }
-function g(e) {
+function T(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { dateStyle: "short" };
     return null == e ? "" : new Date(e).toLocaleDateString(s.default.locale, t);
 }
-let S = {
+let m = {
     [c.uF.QUEST_BAR]: c.p9.DESKTOP_ACCOUNT_PANEL_AREA,
     [c.uF.QUEST_BAR_V2]: c.p9.DESKTOP_ACCOUNT_PANEL_AREA,
     [c.uF.QUEST_BAR_MOBILE]: c.p9.MOBILE_HOME_DOCK_AREA,
@@ -82,15 +65,15 @@ let S = {
     [c.uF.QUEST_HOME_HERO_SHELF]: c.p9.QUEST_HOME_BANNER_DESKTOP,
     [c.uF.VIDEO_MODAL_MOBILE]: c.p9.VIDEO_MODAL_MOBILE,
 };
+function g(e) {
+    return m[e];
+}
+function S(e, t) {
+    if (null != t && _.cY.has(t)) return !1;
+    let n = m[e];
+    return null != n && _.J6.has(n);
+}
 function N(e) {
-    return S[e];
-}
-function C(e, t) {
-    if (null != t && u.cY.has(t)) return !1;
-    let n = S[e];
-    return null != n && u.J6.has(n);
-}
-function O(e) {
     return {
         questId: (0, a.Yz)(e.creative),
         adCreativeId: (0, a.K2)(e.creative),
@@ -101,43 +84,43 @@ function O(e) {
         provenanceMetadataSealed: e.provenanceMetadataSealed,
     };
 }
-let R = new Set([c.p9.VIDEO_MODAL_MOBILE]);
-function L(e, t) {
+let C = new Set([c.p9.VIDEO_MODAL_MOBILE]);
+function O(e, t) {
     let n = (function (e, t) {
-        if (!R.has(e) || null == t) return null;
+        if (!C.has(e) || null == t) return null;
         let n = o.A.getAdDecisionByPlacementAndAdCreativeId(e, t);
-        return null != n ? O(n) : null;
+        return null != n ? N(n) : null;
     })(e, t);
     if (null != n) return n;
     let i = r.A.deliveryAdDecisionByPlacement.get(e);
-    return e === c.p9.QUEST_HOME_BANNER_DESKTOP && null != i ? O(i) : null == i ? null : O(i);
+    return e === c.p9.QUEST_HOME_BANNER_DESKTOP && null != i ? N(i) : null == i ? null : N(i);
 }
-function y(e, t) {
-    let n = S[t];
-    if (null == n) return u.K3;
-    let { adDecisionData: i, questId: a, adCreativeId: s } = L(n, e) ?? {};
+function R(e, t) {
+    let n = m[t];
+    if (null == n) return _.K3;
+    let { adDecisionData: i, questId: a, adCreativeId: s } = O(n, e) ?? {};
     if (null != i && (a === e || s === e || i.ad_id === e)) return i;
     let l = r.A.getNoFillForPlacement(n, { includeExpired: !0 });
-    return null != l && l.decisionId === e ? { decision_id: l.decisionId, is_targeted: !1 } : u.K3;
+    return null != l && l.decisionId === e ? { decision_id: l.decisionId, is_targeted: !1 } : _.K3;
 }
-function D(e, t) {
-    let n = S[e];
+function L(e, t) {
+    let n = m[e];
     if (null == n) return;
-    let i = L(n, t)?.metadataSealed;
+    let i = O(n, t)?.metadataSealed;
     if (null != i) return i;
     let a = r.A.getNoFillForPlacement(n, { includeExpired: !0 });
     return null != a && a.decisionId === t ? a.metadataSealed : void 0;
 }
-function v(e, t) {
-    let n = S[e];
-    if (null != n) return L(n, t)?.provenanceMetadataSealed;
+function y(e, t) {
+    let n = m[e];
+    if (null != n) return O(n, t)?.provenanceMetadataSealed;
 }
-function b(e, t, n) {
-    let i = S[e];
+function D(e, t, n) {
+    let i = m[e];
     if (null != i) {
         let e = r.A.getNoFillForPlacement(i, { includeExpired: !0 });
         if (null != e && e.decisionId === n) return e.trafficMetadataSealed;
-        let { trafficMetadataSealed: a, questId: s } = L(i, n) ?? {};
+        let { trafficMetadataSealed: a, questId: s } = O(i, n) ?? {};
         if (null != a && (null != n || s === t)) return a;
     }
     if (null != t) {
@@ -145,10 +128,10 @@ function b(e, t, n) {
         return e?.trafficMetadataSealed;
     }
 }
-function M(e, t) {
-    let n = S[e];
-    if (null != n) return L(n, t)?.adContext;
+function v(e, t) {
+    let n = m[e];
+    if (null != n) return O(n, t)?.adContext;
 }
-function P(e, t) {
+function b(e, t) {
     l.A.captureException(e, { ...t, tags: { ...t?.tags, app_context: "quests" } });
 }

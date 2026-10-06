@@ -1481,7 +1481,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eK.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 630656, Version Hash: 0416893adff86478f0374031ff972d93541c01c1`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 630670, Version Hash: 9893be047e6589d296da88cb09321ad06b44ec30`,
 ),
     U.A.setTags({ appContext: V.QCW }),
     em.A.initBasic(),
@@ -25568,7 +25568,7 @@ let LM = "isHideDevBanner",
                     className: tc()(Lb.Wz, Lb.mr),
                     children: [
                         (0, v.jsx)(Lv, { className: Lb.Kk }),
-                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "630656" }),
+                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "630670" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -37284,8 +37284,8 @@ class Pz extends ni.A {
                                     n.e("816799"),
                                     n.e("999574"),
                                     n.e("457794"),
-                                    n.e("929574"),
-                                ]).then(n.bind(n, 655045));
+                                    n.e("908768"),
+                                ]).then(n.bind(n, 189411));
                                 return (t) => (0, v.jsx)(e, { ...t });
                             },
                             { onCloseRequest: V.tEg, onCloseCallback: e, modalKey: r },
