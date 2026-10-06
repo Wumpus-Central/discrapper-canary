@@ -42,10 +42,11 @@ function O(e, t, n, i, r) {
         o = m.A.getRTCConnectionId(),
         d = p.Ay.getCurrentGameForAnalytics()?.name,
         c = s !== n.guildId && "0" !== n.guildId,
-        u = "0" === n.guildId ? "default" : c ? "custom-external" : "custom";
+        u = "0" === n.guildId ? "default" : c ? "custom-external" : "custom",
+        _ = c && i !== I.ib.ECHO;
     S.default.track(N.HAw.PREMIUM_FEATURE_USAGE, {
         feature_name: C.Ae.SOUNDBOARD_PLAY,
-        feature_tier: c ? C.tz.PREMIUM_STANDARD : C.tz.FREE,
+        feature_tier: _ ? C.tz.PREMIUM_STANDARD : C.tz.FREE,
         guild_id: s,
         home_guild_id: n.guildId,
         location_stack: e,
