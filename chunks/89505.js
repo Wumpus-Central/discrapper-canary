@@ -44,6 +44,7 @@ async function y(e) {
     if (null == i || "" === i) return _("unrecognized media source id", { sourceId: n });
     let r = Math.min(
             window.devicePixelRatio,
+            1,
             1568 / Math.max(e.width, e.height),
             Math.sqrt(115e4 / (e.width * e.height)),
         ),
@@ -351,8 +352,14 @@ async function H(e, t, n) {
     if (null == u) return { status: "unavailable" };
     let s = null == a ? { uploadToken: void 0 } : await a();
     if (null == s) return { status: "unavailable" };
-    let d = await I(u, { captureId: t, spec: r, build: l, uploadToken: s.uploadToken });
-    return null != d ? d : await (0, A.i)(u, t, r, s.uploadToken);
+    let d = I(u, { captureId: t, spec: r, build: l, uploadToken: s.uploadToken });
+    function c(e) {
+        return Promise.race([d, new Promise((t) => setTimeout(() => t(null), e))]);
+    }
+    let f = await c(3e3);
+    if (null != f) return f;
+    let h = await (0, A.i)(u, t, r, s.uploadToken);
+    return "accepted" === h.status ? h : ((await c(3e3)) ?? h);
 }
 async function $(e, t, n, i) {
     if (!(0, C.rQ)(e)) return { status: "unavailable" };
