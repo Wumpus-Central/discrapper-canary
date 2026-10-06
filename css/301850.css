@@ -198,6 +198,8 @@
 }
 
 .alphaBetaTag_c5e6a1 {
+    align-self: flex-start;
+    display: flex;
     margin-inline-start: 8px
 }
 
@@ -335,4 +337,4 @@
     object-fit: contain
 }
 
-/*# sourceMappingURL=301850.22d46ca66a39720e.css.map*/
+/*# sourceMappingURL=301850.e2a642ecb50e86af.css.map*/

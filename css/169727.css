@@ -1,45 +1,20 @@
-.container_ab64fd {
-    pointer-events: none;
-    position: fixed;
-    will-change: transform;
-    z-index: 1000
+.icon_bd6d20 {
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    box-sizing: border-box;
+    flex-shrink: 0
 }
 
-.container_ab64fd * {
-    box-shadow: none !important;
-    filter: none !important;
-    transition: none !important
+.placeholder_bd6d20 {
+    background-color: var(--background-mod-subtle)
 }
 
-.widgetPreview_ab64fd {
-    background-color: var(--profile-gradient-modal-background-color);
-    border-radius: var(--radius-lg)
+.host_c2a039 {
+    flex: 0 0 auto
 }
 
-.gameDetailsCardPreview_ab64fd,
-.widgetPreview_ab64fd {
-    box-shadow: var(--shadow-high);
-    opacity: .85
-}
-
-.gameDetailsCardPreview_ab64fd {
-    background-color: var(--user-profile-overlay-background);
-    border-radius: 12px;
-    container-type: inline-size;
-    padding: 4px
-}
-
-.clipPreview_ab64fd,
-.gamePreview_ab64fd,
-.wishlistItemPreview_ab64fd {
-    box-shadow: var(--shadow-high);
-    opacity: .85
-}
-
-.clipPreview_ab64fd {
-    aspect-ratio: 16/9;
-    border-radius: var(--radius-sm);
-    overflow: hidden
+.block_c2a039 {
+    display: flex
 }
 
 .container__3f982 {
@@ -421,4 +396,4 @@
     z-index: 1
 }
 
-/*# sourceMappingURL=332172b62df3f68b.css.map*/
+/*# sourceMappingURL=169727.24d2a5a2e12f0b6f.css.map*/

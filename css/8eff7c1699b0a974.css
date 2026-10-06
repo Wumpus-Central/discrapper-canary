@@ -492,7 +492,8 @@
 
 .connectionMetadataUpsellTag__41de9 {
     align-self: center;
-    padding: 0 6px
+    display: flex;
+    flex: 0 0 auto
 }
 
 .connectionMetadataUpsellDescription__41de9 {
@@ -1117,4 +1118,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=9f36f42ca199d636.css.map*/
+/*# sourceMappingURL=8eff7c1699b0a974.css.map*/

@@ -187,7 +187,7 @@ function ee(e) {
                                       })
                                     : null,
                                 et,
-                                O && (0, i.jsx)(N.A, { className: q.vW }),
+                                O && (0, i.jsx)(N.A, { className: q.q0 }),
                                 ec &&
                                     (0, i.jsx)(u.m, {
                                         text: K.intl.string(K.t.QyZ4Td),

@@ -1,0 +1,45 @@
+.container_ab64fd {
+    pointer-events: none;
+    position: fixed;
+    will-change: transform;
+    z-index: 1000
+}
+
+.container_ab64fd * {
+    box-shadow: none !important;
+    filter: none !important;
+    transition: none !important
+}
+
+.widgetPreview_ab64fd {
+    background-color: var(--profile-gradient-modal-background-color);
+    border-radius: var(--radius-lg)
+}
+
+.gameDetailsCardPreview_ab64fd,
+.widgetPreview_ab64fd {
+    box-shadow: var(--shadow-high);
+    opacity: .85
+}
+
+.gameDetailsCardPreview_ab64fd {
+    background-color: var(--user-profile-overlay-background);
+    border-radius: 12px;
+    container-type: inline-size;
+    padding: 4px
+}
+
+.clipPreview_ab64fd,
+.gamePreview_ab64fd,
+.wishlistItemPreview_ab64fd {
+    box-shadow: var(--shadow-high);
+    opacity: .85
+}
+
+.clipPreview_ab64fd {
+    aspect-ratio: 16/9;
+    border-radius: var(--radius-sm);
+    overflow: hidden
+}
+
+/*# sourceMappingURL=4ec449c1f566d72d.css.map*/

@@ -1,10 +1,14 @@
-r.d(t, { A: () => n });
-var a = r(477900);
+r.d(s, { A: () => d });
+var t = r(477900);
 r(582128);
-var c = r(661531),
-    e = r(812993),
-    i = r(375708);
-function n(s) {
-    let { className: t, color: r = c.A.unsafe_rawColors.BRAND_500.css, ...n } = s;
-    return (0, a.jsx)(e.Lp, { ...n, text: i.intl.string(i.t.oW0eUd), color: r, className: t });
+var e = r(503698),
+    i = r.n(e),
+    n = r(508770),
+    c = r(251219);
+function d(a) {
+    let { className: s, variant: r = "brand" } = a;
+    return (0, t.jsx)("div", {
+        className: i()(c.H, s ?? c.o),
+        children: (0, t.jsx)(n.E, { type: "beta", variant: r }),
+    });
 }
