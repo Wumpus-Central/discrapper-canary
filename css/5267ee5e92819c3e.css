@@ -750,10 +750,9 @@
     object-fit: contain
 }
 
-.badgeGraphicAnimated__6f97a {
-    position: relative;
-    transform: scale(1.5);
-    z-index: 0
+.badgeGraphicAnimatedNitro__6f97a {
+    height: 150px;
+    margin: calc(var(--space-12)*-1)
 }
 
 .badgeInfo__6f97a {
@@ -913,4 +912,4 @@
     }
 }
 
-/*# sourceMappingURL=b20fa3a3acaa16be.css.map*/
+/*# sourceMappingURL=5267ee5e92819c3e.css.map*/

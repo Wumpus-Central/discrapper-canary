@@ -5,7 +5,7 @@ e.exports = {
     Gw: "detailCloseButton__6f97a",
     mC: "betaPill__6f97a",
     y2: "badgeGraphic__6f97a",
-    hu: "badgeGraphicAnimated__6f97a",
+    Zl: "badgeGraphicAnimatedNitro__6f97a",
     OU: "badgeInfo__6f97a",
     cQ: "badgeIdentity__6f97a",
     nj: "badgeTitleGroup__6f97a",

@@ -1333,7 +1333,7 @@ function e1(e) {
                         }),
                         null != T &&
                             (0, i.jsx)("img", {
-                                className: C()(eQ.y2, null != S && eQ.hu),
+                                className: C()(eQ.y2, null != S && D && eQ.Zl),
                                 src: T,
                                 alt: "",
                                 "aria-hidden": !0,
