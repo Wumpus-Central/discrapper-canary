@@ -1176,7 +1176,7 @@ function tm(e) {
         onPrimary: g,
     });
 }
-var th = n(648335);
+var th = n(870716);
 let tC = new $.A("PaymentElementStepFooter.tsx");
 function tf(e) {
     let { addPaymentMethodStepState: t } = e,

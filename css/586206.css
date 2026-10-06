@@ -3,20 +3,6 @@
     width: 100%
 }
 
-.iframeMobilePreview_a62174 {
-    border-radius: var(--radius-lg);
-    box-shadow: 0 0 0 1px var(--border-subtle);
-    overflow: hidden
-}
-
-.activityContainerMobilePreview_a62174 {
-    display: flex
-}
-
-.wrapperMobilePreview_a62174 {
-    background: var(--background-gradient-chat, var(--background-base-lower))
-}
-
 .wrapper_a62174 {
     background-color: #000;
     display: flex;
@@ -38,7 +24,6 @@
     max-height: 100%
 }
 
-.wrapper_a62174.conjureBuilder_a62174,
 .wrapper_a62174.conjureChannel_a62174 {
     height: calc(100% - var(--custom-channel-header-height) - 1px - var(--custom-conjure-control-bar-height, 0px));
     top: calc(var(--custom-channel-header-height) + 1px + var(--custom-conjure-control-bar-height, 0px))
@@ -170,4 +155,4 @@
     border-bottom-color: var(--app-frame-border)
 }
 
-/*# sourceMappingURL=586206.7367cfe9db000c73.css.map*/
+/*# sourceMappingURL=586206.7b0e0170f8204ad6.css.map*/

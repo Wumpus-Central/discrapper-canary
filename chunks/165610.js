@@ -30,7 +30,7 @@ function u(e, t) {
         case a.U.MAIN:
             return `main:${e}`;
         case a.U.APP_CHANNEL:
-            return `app-channel:${e}:${t.channelId}`;
+            return null != t.channelId ? `app-channel:${e}:${t.channelId}` : `app-channel:${e}`;
         case a.U.VOICE_CHANNEL:
             return `voice-channel:${e}:${t.channelId}`;
     }

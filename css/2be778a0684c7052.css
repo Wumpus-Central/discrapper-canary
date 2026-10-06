@@ -1235,6 +1235,33 @@
     }
 }
 
+.stage__0669d {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    min-width: 0
+}
+
+.stagePhone__0669d {
+    align-items: center;
+    background: var(--background-gradient-chat, var(--background-base-lower));
+    justify-content: center
+}
+
+.viewport__0669d {
+    display: flex;
+    flex: 1;
+    min-height: 0;
+    min-width: 0
+}
+
+.viewportPhone__0669d {
+    border-radius: var(--radius-lg);
+    box-shadow: 0 0 0 1px var(--border-subtle);
+    flex: none;
+    overflow: hidden
+}
+
 .previewStatusCard__94025 {
     align-items: center;
     background: var(--background-mod-subtle);
@@ -1286,4 +1313,4 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=b0489f79db9d492f.css.map*/
+/*# sourceMappingURL=2be778a0684c7052.css.map*/
