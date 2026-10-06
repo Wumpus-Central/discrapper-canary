@@ -3259,6 +3259,8 @@ let ip = s.memo(function (e) {
                                   className: im.gM,
                                   innerClassName: r()(im.SL, { [im.cr]: null != N }),
                                   onChange: A,
+                                  onFocus: v,
+                                  onBlur: p,
                                   onSubmit: C,
                                   promptToUpload: ld.R,
                                   disabled: l,
