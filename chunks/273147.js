@@ -100,7 +100,7 @@ function ei(e) {
         className: en.k,
         children: (0, i.jsx)(ee.$, {
             variant: "primary",
-            size: "md",
+            size: "sm",
             fullWidth: !0,
             text: et.intl.string(et.t.iXAna6),
             onClick: t,
@@ -108,9 +108,9 @@ function ei(e) {
     });
 }
 var el = n(332757);
-let es = a._3.SIZE_96,
+let es = a._3.SIZE_80,
     er = {
-        "--custom-user-profile-banner-height": "120px",
+        "--custom-user-profile-banner-height": "105px",
         "--custom-user-profile-avatar-size": `${(0, a.Kj)(es).size}px`,
         "--custom-user-profile-avatar-stroke": `${(0, a.Kj)(es).stroke}px`,
         "--custom-user-profile-content-inset": "16px",
@@ -184,7 +184,7 @@ function ed(e) {
                         user: t,
                         displayProfile: y,
                         guildId: n,
-                        bannerHeight: 120,
+                        bannerHeight: 105,
                         avatarSize: es,
                         avatarInsetStart: 16,
                     }),
