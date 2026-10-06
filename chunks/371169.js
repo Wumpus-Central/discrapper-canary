@@ -1,6 +1,6 @@
-n.d(e, {
+(n.d(e, {
     BD: () => O,
-    CW: () => g,
+    CW: () => k,
     GG: () => M,
     HV: () => W,
     I$: () => v,
@@ -11,14 +11,15 @@ n.d(e, {
     Ru: () => D,
     U1: () => S,
     Zq: () => H,
-    b8: () => P,
+    b8: () => J,
     dm: () => b,
     gA: () => w,
     hF: () => A,
-    oB: () => k,
+    oB: () => g,
     tZ: () => F,
     xx: () => m,
-});
+}),
+    n(938796));
 var i = n(636537),
     r = n(499979),
     _ = n(73153),
@@ -77,7 +78,7 @@ async function U() {
         for (let t of ((I = !0), l.Ay.getResourceIds(h.P.CONJURING_PROJECT)))
             if (null == d.Ay.getProject(t)) {
                 if (0 === l.Ay.getMentionCount(t, h.P.CONJURING_PROJECT)) {
-                    J(t);
+                    N(t);
                     continue;
                 }
                 if ((await (0, r.yy)(5e3 * Math.random()), null == d.Ay.getProject(t)))
@@ -85,25 +86,25 @@ async function U() {
                         await S(t);
                     } catch (n) {
                         let e = (0, E.$k)(n);
-                        (403 === e || 404 === e) && J(t);
+                        (403 === e || 404 === e) && N(t);
                     }
             }
     }
 }
-function J(t) {
+function N(t) {
     _.h.dispatch({ type: "CONJURE_PROJECT_DELETE_SUCCESS", projectId: t });
 }
-let N = null;
-async function P() {
+let P = null;
+async function J() {
     let t = u.default.getCurrentUser()?.id ?? null;
-    if (null == t || N === t || d.Ay.hasFetchedProjectLimit()) return;
-    N = t;
+    if (null == t || P === t || d.Ay.hasFetchedProjectLimit()) return;
+    P = t;
     let e = null;
     try {
         let { body: t } = await i.Bo.get({ url: R.Rsh.CONJURE_PROJECT_LIMIT, rejectWithError: !0 });
         e = t.max_projects;
     } catch {}
-    (N === t && (N = null),
+    (P === t && (P = null),
         u.default.getCurrentUser()?.id === t &&
             _.h.dispatch({ type: "CONJURE_PROJECT_LIMIT_FETCH_SETTLE", maxProjects: e }));
 }
@@ -124,14 +125,15 @@ async function S(t, e) {
     return n;
 }
 async function w(t) {
-    let e;
+    let e,
+        n = (t.flags ?? c.Zh.PUBLIC) | ("guild" === t.install_scope ? c.Zh.NATIVE_APP_CHANNELS : 0);
     try {
-        let { body: n } = await i.Bo.post({
+        let { body: r } = await i.Bo.post({
             url: R.Rsh.CONJURE_PROJECTS,
-            body: { flags: c.Zh.PUBLIC, ...t },
+            body: { ...t, flags: n },
             rejectWithError: !1,
         });
-        e = n;
+        e = r;
     } catch (t) {
         throw new E.DS((0, E.hj)(t), (0, E.$k)(t));
     }
@@ -141,10 +143,10 @@ async function L(t, e) {
     let n = await i.Bo.patch({ url: R.Rsh.CONJURE_PROJECT(t), body: e, rejectWithError: !1 });
     return (n.ok && _.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: n.body }), n);
 }
-function k(t, e) {
+function g(t, e) {
     return L(t, { name: e });
 }
-function g(t, e) {
+function k(t, e) {
     return L(t, e);
 }
 async function D(t, e) {
