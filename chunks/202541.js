@@ -517,6 +517,7 @@ var e1 =
         (c.VIDEO_STAGE_LIMIT = "video_stage_limit"),
         (c.SOUND_PICKER_SOUND_CLICKED = "sound_picker_sound_clicked"),
         (c.SOUND_QUICK_ACCESS_PICKER_SOUND_CLICKED = "sound_quick_access_picker_sound_clicked"),
+        (c.SOUNDBOARD_ECHO_SOUND_DETAILS_UPSELL = "soundboard_echo_sound_details_upsell"),
         (c.APP_ICON_UPSELL = "app_icon_upsell"),
         (c.COLLECTIBLES_SHOP = "collectibles_shop"),
         (c.COLLECTIBLES_PROFILE_SETTINGS_UPSELL = "collectibles_profile_settings_upsell"),
