@@ -404,6 +404,8 @@ var i,
         (i.ACTIVITY_PRIVACY_FRIENDS_JOIN_SETTING = "activity_privacy_friends_join_setting"),
         (i.ACTIVITY_PRIVACY_VOICE_JOIN_SETTING = "activity_privacy_voice_join_setting"),
         (i.ACTIVITY_PRIVACY_NOTIFY_FRIENDS_ONLINE_SETTING = "activity_privacy_notify_friends_online_setting"),
+        (i.ACTIVITY_PRIVACY_NOTIFY_SERVER_MEMBERS_ON_GO_LIVE_SETTING =
+            "activity_privacy_notify_server_members_on_go_live_setting"),
         (i.REGISTERED_GAMES_SIDEBAR_ITEM = "registered_games_sidebar_item"),
         (i.REGISTERED_GAMES_PANEL = "registered_games_panel"),
         (i.REGISTERED_GAMES_CURRENT_GAME_CATEGORY = "registered_games_current_game_category"),

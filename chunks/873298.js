@@ -1957,6 +1957,7 @@ class eH extends b.G {
             { no: 23, name: "enable_screen_downtime_schedule_notifications", kind: "message", T: () => M._t },
             { no: 24, name: "notify_friends_on_profile_update", kind: "message", T: () => M._t },
             { no: 25, name: "notify_friends_on_come_online", kind: "message", T: () => M._t },
+            { no: 26, name: "notify_server_members_on_go_live", kind: "message", T: () => M._t },
         ]);
     }
     create(e) {
@@ -2139,6 +2140,14 @@ class eH extends b.G {
                         r.notifyFriendsOnComeOnline,
                     );
                     break;
+                case 26:
+                    r.notifyServerMembersOnGoLive = M._t.internalBinaryRead(
+                        e,
+                        e.uint32(),
+                        n,
+                        r.notifyServerMembersOnGoLive,
+                    );
+                    break;
                 default:
                     let a = n.readUnknownField;
                     if ("throw" === a)
@@ -2254,8 +2263,10 @@ class eH extends b.G {
                     .internalBinaryWrite(e.notifyFriendsOnProfileUpdate, t.tag(24, y.O0.LengthDelimited).fork(), n)
                     .join(),
             e.notifyFriendsOnComeOnline &&
+                M._t.internalBinaryWrite(e.notifyFriendsOnComeOnline, t.tag(25, y.O0.LengthDelimited).fork(), n).join(),
+            e.notifyServerMembersOnGoLive &&
                 M._t
-                    .internalBinaryWrite(e.notifyFriendsOnComeOnline, t.tag(25, y.O0.LengthDelimited).fork(), n)
+                    .internalBinaryWrite(e.notifyServerMembersOnGoLive, t.tag(26, y.O0.LengthDelimited).fork(), n)
                     .join());
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
