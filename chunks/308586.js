@@ -1,3 +1,3 @@
 e.exports = JSON.parse(
-    '{"0ySxbu":["Leider haben wir nichts gefunden."],"FKLBbW":["Weniger anzeigen"],"NuTbB9":["Mehr anzeigen"]}',
+    '{"ydAwWi":["TL;DR"],"0ySxbu":["Leider haben wir nichts gefunden."],"HX/WYf":["Wir haben weit und breit gesucht."],"ffCCEe":["Suche flei\xdfig\xa0\u2026"],"Sb2fo2":["Suche mit aller Kraft\xa0\u2026"],"rXNe0Z":["Suche l\xe4uft auf Hochtouren\xa0\u2026"],"22g6Ju":["Suche gr\xfcndlich\xa0\u2026"],"IogGZY":["F\xfchre eine gr\xfcndliche Suche durch\xa0\u2026"],"UEnMJF":["Wow, was f\xfcr eine Suche\xa0\u2026"],"kk7BVL":["Suche l\xe4uft\xa0\u2026"],"UVa49v":["Sehr gute Frage, suche immer noch\xa0\u2026"],"QIdSmb":["aus Nachrichten"],"FKLBbW":["Weniger anzeigen"],"NuTbB9":["Mehr anzeigen"],"bzswFC":["Spieler haben auch geantwortet"]}',
 );

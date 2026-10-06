@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"0ySxbu":["Vi hittade tyv\xe4rr inga resultat."],"FKLBbW":["Visa mindre"],"NuTbB9":["Visa mer"]}',
+e.exports = JSON.parse(
+    '{"ydAwWi":["TL;DR"],"0ySxbu":["Vi hittade tyv\xe4rr inga resultat."],"HX/WYf":["Vi s\xf6kte vitt och brett."],"ffCCEe":["S\xf6ker intensivt ..."],"Sb2fo2":["S\xf6ker v\xe4ldigt intensivt ..."],"rXNe0Z":["Aldrig s\xf6kt mer ..."],"22g6Ju":["S\xf6k grundligt ..."],"IogGZY":["Genomf\xf6r en grundlig s\xf6kning ..."],"UEnMJF":["Wow, vilket s\xf6k ..."],"kk7BVL":["S\xf6kning p\xe5g\xe5r ..."],"UVa49v":["Bra fr\xe5ga tydligen, s\xf6ker fortfarande ..."],"QIdSmb":["fr\xe5n meddelanden"],"FKLBbW":["Visa mindre"],"NuTbB9":["Visa mer"],"bzswFC":["Spelare svarade ocks\xe5"]}',
 );

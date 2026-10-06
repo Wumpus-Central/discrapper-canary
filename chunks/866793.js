@@ -1,3 +1,3 @@
 e.exports = JSON.parse(
-    '{"0ySxbu":["Niestety nie znale\u017Ali\u015Bmy \u017Cadnych wynik\xf3w."],"FKLBbW":["Poka\u017C mniej"],"NuTbB9":["Poka\u017C wi\u0119cej"]}',
+    '{"ydAwWi":["W skr\xf3cie"],"0ySxbu":["Niestety nie znale\u017Ali\u015Bmy \u017Cadnych wynik\xf3w."],"HX/WYf":["Szukali\u015Bmy wzd\u0142u\u017C i wszerz."],"ffCCEe":["Intensywnie szukamy..."],"Sb2fo2":["Bardzo intensywnie szukamy..."],"rXNe0Z":["Jeszcze nigdy tyle nie szukali\u015Bmy..."],"22g6Ju":["Dok\u0142adnie przeszukujemy..."],"IogGZY":["Prowadzimy gruntowne poszukiwania..."],"UEnMJF":["\u0141a\u0142, co za poszukiwania..."],"kk7BVL":["Szukanie trwa w najlepsze..."],"UVa49v":["Najwyra\u017Aniej to \u015Bwietne pytanie. Wci\u0105\u017C szukamy..."],"QIdSmb":["z wiadomo\u015Bci"],"FKLBbW":["Poka\u017C mniej"],"NuTbB9":["Poka\u017C wi\u0119cej"],"bzswFC":["Gracze odpowiedzieli r\xf3wnie\u017C"]}',
 );

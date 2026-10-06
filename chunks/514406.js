@@ -1,3 +1,3 @@
-s.exports = JSON.parse(
-    '{"0ySxbu":["Por desgracia, no hemos encontrado ning\xfan resultado."],"FKLBbW":["Mostrar menos"],"NuTbB9":["Mostrar m\xe1s"]}',
+a.exports = JSON.parse(
+    '{"ydAwWi":["Resumen"],"0ySxbu":["Por desgracia, no hemos encontrado ning\xfan resultado."],"HX/WYf":["Hemos buscado por todas partes."],"ffCCEe":["Buscando a fondo..."],"Sb2fo2":["Buscando a conciencia..."],"rXNe0Z":["Nunca hab\xedamos buscado tanto..."],"22g6Ju":["Buscando minuciosamente..."],"IogGZY":["Realizando una b\xfasqueda exhaustiva..."],"UEnMJF":["Vaya, menuda b\xfasqueda..."],"kk7BVL":["La b\xfasqueda est\xe1 en curso..."],"UVa49v":["Gran pregunta, al parecer. Seguimos buscando..."],"QIdSmb":["de mensajes"],"FKLBbW":["Mostrar menos"],"NuTbB9":["Mostrar m\xe1s"],"bzswFC":["Los jugadores tambi\xe9n contestaron"]}',
 );
