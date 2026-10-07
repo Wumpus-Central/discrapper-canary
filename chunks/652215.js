@@ -5101,7 +5101,6 @@ var rb =
         (ew.SEND_MESSAGE_FAILURE = "send_message_failure"),
         (ew.SEND_MESSAGE_QUEUED = "send_message_queued"),
         (ew.SEND_MESSAGE_ROUNDTRIP = "send_message_roundtrip"),
-        (ew.MESSAGE_MARKUP_PARSE = "message_markup_parse"),
         (ew.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED = "vc_tile_activities_entry_point_viewed"),
         (ew.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED = "vc_tile_activities_entry_point_closed"),
         (ew.KV_FIELD_TRIAL_EXECUTED = "kv_field_trial_executed"),
