@@ -47,58 +47,58 @@ var w = n(212407),
     W = n(604913),
     Z = n(773669);
 n(321073);
-var K = n(375708);
-function Y(e) {
+var Y = n(375708);
+function $(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    if (t) return K.intl.formatToPlainString(K.t["/0Yndu"], { num: e.bundledProducts?.length });
+    if (t) return Y.intl.formatToPlainString(Y.t["/0Yndu"], { num: e.bundledProducts?.length });
     let n = e.bundledProducts ?? [],
         i = [],
         s = !1;
     for (let e of n)
         switch (e.type) {
             case D.R.AVATAR_DECORATION:
-                i.push(K.intl.formatToPlainString(K.t.Ntv9Jt, { itemName: e.name }));
+                i.push(Y.intl.formatToPlainString(Y.t.Ntv9Jt, { itemName: e.name }));
                 break;
             case D.R.PROFILE_EFFECT:
-                i.push(K.intl.formatToPlainString(K.t["3Y8q7a"], { itemName: e.name }));
+                i.push(Y.intl.formatToPlainString(Y.t["3Y8q7a"], { itemName: e.name }));
                 break;
             case D.R.NAMEPLATE:
-                (i.push(K.intl.formatToPlainString(K.t["2keXky"], { itemName: e.name })), (s = !0));
+                (i.push(Y.intl.formatToPlainString(Y.t["2keXky"], { itemName: e.name })), (s = !0));
         }
     if (s) {
         let e = i.join(", ").replace(/, ([^,]*)$/, " & $1");
-        return K.intl.formatToPlainString(K.t.Ofrqj6, { joinedItems: e });
+        return Y.intl.formatToPlainString(Y.t.Ofrqj6, { joinedItems: e });
     }
     let r = i.join(" & ");
-    return K.intl.formatToPlainString(K.t.Ofrqj6, { joinedItems: r });
+    return Y.intl.formatToPlainString(Y.t.Ofrqj6, { joinedItems: r });
 }
-var $ = n(306396);
+var K = n(306396);
 function q(e, t) {
     return e.endsAt?.toLocaleDateString(t, { month: "numeric", day: "numeric" }) ?? null;
 }
 function J(e) {
     return (0, _.aw)(e)
-        ? K.intl.formatToPlainString(K.t["1tUCAO"], { count: e.items.length })
+        ? Y.intl.formatToPlainString(Y.t["1tUCAO"], { count: e.items.length })
         : (function (e) {
               let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
               if (null != e && null != e.summary && "" !== e.summary) {
                   if (e.type === D.R.BUNDLE && e.summary.includes("{joinedItems}")) {
-                      let n = Y(e, t);
+                      let n = $(e, t);
                       return e.summary.replace("{joinedItems}", n);
                   }
                   return e.summary;
               }
               switch (e?.type) {
                   case D.R.AVATAR_DECORATION:
-                      return K.intl.string(K.t["3lv7q2"]);
+                      return Y.intl.string(Y.t["3lv7q2"]);
                   case D.R.PROFILE_EFFECT:
-                      return K.intl.string(K.t.VhJL72);
+                      return Y.intl.string(Y.t.VhJL72);
                   case D.R.NAMEPLATE:
-                      return K.intl.string(K.t.ik37EZ);
+                      return Y.intl.string(Y.t.ik37EZ);
                   case D.R.PROFILE_FRAME:
-                      return K.intl.string(K.t.fWzWPp);
+                      return Y.intl.string(Y.t.fWzWPp);
                   case D.R.BUNDLE:
-                      return Y(e, t);
+                      return $(e, t);
                   default:
                       return "";
               }
@@ -114,14 +114,14 @@ function Q(e) {
                       let i, s;
                       if (t.rewardStatus !== X.GM.IN_PROGRESS) return n;
                       let r = Z.default.locale,
-                          l = (0, $.oO)(e, t.tenantMetadata.collectibles.collectionId);
+                          l = (0, K.oO)(e, t.tenantMetadata.collectibles.collectionId);
                       return (
                           ((0, _.aw)(e)
                               ? null != (i = q(t, r))
-                                  ? K.intl.formatToPlainString(K.t["vI+3Ok"], { itemCount: l, endDate: i })
+                                  ? Y.intl.formatToPlainString(Y.t["vI+3Ok"], { itemCount: l, endDate: i })
                                   : null
                               : null != (s = q(t, r))
-                                ? K.intl.formatToPlainString(K.t.wBhFsO, {
+                                ? Y.intl.formatToPlainString(Y.t.wBhFsO, {
                                       itemDescription: n.replace(/\.$/, ""),
                                       endDate: s,
                                   })
@@ -256,7 +256,7 @@ function ev(e) {
         ? (0, s.jsx)(G.E, {
               variant: "text-sm/normal",
               className: ef.CU,
-              children: K.intl.format(K.t.Q1scdE, {
+              children: Y.intl.format(Y.t.Q1scdE, {
                   helpdeskArticle: eg.A.getArticleURL(O.MVz.FRACTIONAL_PREMIUM_ABOUT),
               }),
           })
@@ -296,7 +296,7 @@ function eN(e) {
                                     color: "text-subtle",
                                     className: ef.a9,
                                     lineClamp: 1,
-                                    children: K.intl.format(K.t.EcaRWt, {
+                                    children: Y.intl.format(Y.t.EcaRWt, {
                                         value: (0, s.jsx)("span", { className: ef.I8, children: g.variantLabel }),
                                     }),
                                 }),
@@ -359,14 +359,14 @@ function eB(e) {
     return (0, s.jsx)("div", {
         className: ew.nJ,
         role: "img",
-        "aria-label": K.intl.formatToPlainString(K.t["95pCSf"], { a11y_text: n.label }),
+        "aria-label": Y.intl.formatToPlainString(Y.t["95pCSf"], { a11y_text: n.label }),
         children: (0, s.jsxs)(eI.M, {
             children: [
                 (0, s.jsx)(eM, { user: a.mallow, innerClassName: ew.ab }),
                 (0, s.jsxs)(G.E, {
                     variant: "text-sm/semibold",
                     className: ew.OS,
-                    children: [K.intl.string(K.t["yzW/fZ"]), " - 3"],
+                    children: [Y.intl.string(Y.t["yzW/fZ"]), " - 3"],
                 }),
                 (0, s.jsx)(eM, { user: a.phibi, innerClassName: ew.e9 }),
                 (0, s.jsx)("div", {
@@ -389,7 +389,7 @@ function eB(e) {
                 (0, s.jsxs)(G.E, {
                     variant: "text-sm/semibold",
                     className: ew.OS,
-                    children: [K.intl.string(K.t["NG43/6"]), " - 12"],
+                    children: [Y.intl.string(Y.t["NG43/6"]), " - 12"],
                 }),
                 (0, s.jsx)(eM, { user: a.boom, innerClassName: ew.bD }),
                 (0, s.jsx)(eM, { user: a.cherry, innerClassName: ew.bD }),
@@ -409,7 +409,7 @@ function eF(e) {
         c = (function (e) {
             let { author: t } = e;
             return (0, ek.rh)({
-                ...(0, eO.Ay)({ author: t, channelId: "1337", content: K.intl.string(K.t.d5YwK5) }),
+                ...(0, eO.Ay)({ author: t, channelId: "1337", content: Y.intl.string(Y.t.d5YwK5) }),
                 state: O.cmJ.SENT,
                 id: "0",
             });
@@ -427,7 +427,7 @@ function eF(e) {
         };
     return (0, s.jsx)("div", {
         role: "img",
-        "aria-label": K.intl.string(K.t["TN+ZvB"]),
+        "aria-label": Y.intl.string(Y.t["TN+ZvB"]),
         children: (0, s.jsx)(eI.M, {
             children: (0, s.jsxs)(eR.Z, {
                 className: ew.f7,
@@ -526,18 +526,18 @@ var eH = n(478016),
     eX = n(224016),
     eW = n(202541),
     eZ = n(549848);
-function eK() {
+function eY() {
     let e = [
-        K.intl.string(K.t.E1NP2x),
-        K.intl.string(K.t.kpMomJ),
+        Y.intl.string(Y.t.E1NP2x),
+        Y.intl.string(Y.t.kpMomJ),
         (0, eV.M6)({
-            legacyCopy: K.intl.string(K.t.xT1Vfn),
-            rolloutCopy: K.intl.formatToPlainString(K.t.IDAfOy, {
+            legacyCopy: Y.intl.string(Y.t.xT1Vfn),
+            rolloutCopy: Y.intl.formatToPlainString(Y.t.IDAfOy, {
                 maxFileSize: (0, eD.EJ)(eW.PremiumTypes.TIER_2, { useSpace: !1 }),
             }),
         }),
-        K.intl.string(K.t.myyAEr),
-        K.intl.string(K.t.zTk8Ul),
+        Y.intl.string(Y.t.myyAEr),
+        Y.intl.string(Y.t.zTk8Ul),
     ];
     return (0, s.jsxs)("div", {
         className: eZ.kL,
@@ -571,13 +571,13 @@ function eK() {
         ],
     });
 }
-var eY = n(17928),
-    e$ = n(132198),
+var e$ = n(17928),
+    eK = n(132198),
     eq = n(35929);
 function eJ(e) {
     let { user: t } = e,
         n = eD.Ay.canUsePremiumProfileCustomization(t),
-        { pendingAvatar: i, ...r } = (0, eY.cf)([v.A], () => v.A.getPendingChanges()),
+        { pendingAvatar: i, ...r } = (0, e$.cf)([v.A], () => v.A.getPendingChanges()),
         l = (0, f.V7)({ userId: t.id, image: i });
     return (0, s.jsx)("div", {
         className: eq.k,
@@ -585,7 +585,7 @@ function eJ(e) {
             ...r,
             pendingAvatar: l,
             user: t,
-            pendingBadges: [(0, e$._)()],
+            pendingBadges: [(0, eK._)()],
             canUsePremiumCustomization: n,
             disabledInputs: !0,
             hideExampleButton: !0,
@@ -600,7 +600,7 @@ function e0(e) {
             ? null
             : (0, s.jsx)(eJ, { user: t })
         : (0, ee.EZ)(n.skuId)
-          ? (0, s.jsx)(eK, {})
+          ? (0, s.jsx)(eY, {})
           : (0, s.jsx)(ep.B, { product: n, className: eQ.M });
 }
 let e1 = {
@@ -620,7 +620,7 @@ let e1 = {
                 o = d?.[i]?.name,
                 u = c[i]?.type,
                 m = null != u ? (0, _.Dm)(u) : null,
-                p = K.intl.string(K.t.cTbdgu),
+                p = Y.intl.string(Y.t.cTbdgu),
                 x = Q(t),
                 g = r.useRef(null),
                 E = r.useCallback(
@@ -726,9 +726,9 @@ let e9 = (e) => {
     return (0, s.jsx)(e6.m, {
         position: "top",
         asContainer: !0,
-        text: K.intl.formatToPlainString(K.t.cNtuKF, { offerName: t.displayName }),
+        text: Y.intl.formatToPlainString(Y.t.cNtuKF, { offerName: t.displayName }),
         children: (0, s.jsx)(e5.E, {
-            type: { text: K.intl.string(K.t["nb5PC/"]) },
+            type: { text: Y.intl.string(Y.t["nb5PC/"]) },
             variant: "expressive",
             icon: e3.TagIcon,
         }),
@@ -783,7 +783,7 @@ function tE(e) {
         ? (0, s.jsx)(e6.m, {
               position: "top",
               align: "left",
-              text: K.intl.string(K.t.y1VWkZ),
+              text: Y.intl.string(Y.t.y1VWkZ),
               children: (0, s.jsxs)("div", {
                   className: F()(tg.GX, t),
                   children: [
@@ -795,11 +795,11 @@ function tE(e) {
                               className: tg.G,
                           }),
                       }),
-                      (0, s.jsx)(G.E, { variant: "text-md/semibold", children: K.intl.string(K.t.BEjTij) }),
+                      (0, s.jsx)(G.E, { variant: "text-md/semibold", children: Y.intl.string(Y.t.BEjTij) }),
                   ],
               }),
           })
-        : (0, s.jsx)(G.E, { variant: "text-md/semibold", className: t, children: K.intl.string(K.t["6cfuDj"]) });
+        : (0, s.jsx)(G.E, { variant: "text-md/semibold", className: t, children: Y.intl.string(Y.t["6cfuDj"]) });
 }
 var th = n(878112),
     tf = n(572595),
@@ -816,7 +816,7 @@ let tA = function (e) {
                   (i?.(ee.sH.USE_NOW), r());
               },
               loading: l,
-              text: K.intl.string(K.t.MAS7uK),
+              text: Y.intl.string(Y.t.MAS7uK),
               fullWidth: !0,
           })
         : (0, s.jsx)(tt.$, {
@@ -824,7 +824,7 @@ let tA = function (e) {
               onClick: () => {
                   (i?.(ee.sH.EDIT_PROFILE), c(), n?.());
               },
-              text: K.intl.string(K.t["2p2aYz"]),
+              text: Y.intl.string(Y.t["2p2aYz"]),
               fullWidth: !0,
           });
 };
@@ -841,7 +841,7 @@ function tR(e) {
         variant: r,
         className: F()(tI.v, i),
         children: [
-            (0, s.jsx)(tj.A, { children: K.intl.format(K.t["2CEGln"], { price: l }) }),
+            (0, s.jsx)(tj.A, { children: Y.intl.format(Y.t["2CEGln"], { price: l }) }),
             (0, s.jsx)("span", { "aria-hidden": !0, children: l }),
         ],
     });
@@ -909,13 +909,13 @@ function tS(e) {
         className: tP.k,
         children: [
             (0, s.jsx)(e6.m, {
-                text: K.intl.string(K.t.MPFyJ5),
-                "aria-label": K.intl.string(K.t.X3Ekj8),
+                text: Y.intl.string(Y.t.MPFyJ5),
+                "aria-label": Y.intl.string(Y.t.X3Ekj8),
                 children: (0, s.jsx)(tT.t, { size: "md", color: "currentColor", className: tP.o }),
             }),
             (0, s.jsx)(G.E, {
                 variant: "text-xs/medium",
-                children: K.intl.format(K.t.Sv8iic, {
+                children: Y.intl.format(Y.t.Sv8iic, {
                     price: r,
                     subscribeNowHook: (e) => (0, s.jsx)(tL, { text: e, onTrackClick: n }),
                 }),
@@ -927,7 +927,7 @@ var tD = n(818348),
     tb = n(426919);
 function tw(e) {
     let { orbPrice: t, isProductDisabled: n, hasSufficientOrbs: i, discount: r } = e,
-        l = n ? K.intl.string(K.t.wu4gyV) : K.intl.string(K.t.eFNRzU),
+        l = n ? Y.intl.string(Y.t.wu4gyV) : Y.intl.string(Y.t.eFNRzU),
         a = n || !i;
     return (0, s.jsxs)("div", {
         className: tb.eg,
@@ -1044,9 +1044,9 @@ function tX(e) {
                                   let n = e.progress;
                                   if (null == n) return null;
                                   let i =
-                                      null != t && t > 0 ? K.intl.formatToPlainString(K.t.w4GEvw, { days: t }) : null;
+                                      null != t && t > 0 ? Y.intl.formatToPlainString(Y.t.w4GEvw, { days: t }) : null;
                                   return {
-                                      label: K.intl.formatToPlainString(K.t.d9KbHK, {
+                                      label: Y.intl.formatToPlainString(Y.t["8XhAe3"], {
                                           current: n.current,
                                           target: n.target,
                                       }),
@@ -1070,12 +1070,12 @@ function tX(e) {
         H = (0, _.G0)(i),
         z = (0, _.yt)(i, O.lid.DEFAULT),
         Z = z?.amount === 0,
-        Y = (0, tB.X)(i),
-        $ = k ? ee.Hi.FIAT : c === ee.G2.ORBS && a ? ee.Hi.ORBS : void 0,
+        $ = (0, tB.X)(i),
+        K = k ? ee.Hi.FIAT : c === ee.G2.ORBS && a ? ee.Hi.ORBS : void 0,
         { checkoutEligiblePrices: q, hasSufficientOrbs: J } = (0, tG.F)({
             product: i,
             hasShopDiscount: j,
-            prioritizedCurrency: $,
+            prioritizedCurrency: K,
         }),
         Q = r.useMemo(() => (0, _.fT)(i, j, q[0]?.currency), [i, j, q]),
         et = r.useMemo(() => q.some((e) => e.currency === tD.Yr.DISCORD_ORB), [q]);
@@ -1098,12 +1098,12 @@ function tX(e) {
                   ? (0, s.jsxs)("div", {
                         className: tz.pq,
                         children: [
-                            (0, s.jsx)(G.E, { variant: "text-md/semibold", children: K.intl.string(K.t.rt69oo) }),
+                            (0, s.jsx)(G.E, { variant: "text-md/semibold", children: Y.intl.string(Y.t.rt69oo) }),
                             !S &&
                                 (0, s.jsx)(G.E, {
                                     className: F()(tz.ed, !U && tz.un),
                                     variant: "text-xxs/normal",
-                                    children: K.intl.string(K.t.nKdAlO),
+                                    children: Y.intl.string(Y.t.nKdAlO),
                                 }),
                         ],
                     })
@@ -1125,7 +1125,7 @@ function tX(e) {
                     if (H && !v && !Z) {
                         var e;
                         return (
-                            (e = K.intl.string(K.t.sEAnVH)),
+                            (e = Y.intl.string(Y.t.sEAnVH)),
                             (0, s.jsx)(ta.A, {
                                 subscriptionTier: eW.pe.TIER_2,
                                 fullWidth: !0,
@@ -1153,7 +1153,7 @@ function tX(e) {
                     }
                     return w
                         ? S
-                            ? Y
+                            ? $
                                 ? (0, s.jsxs)(ti.e, {
                                       wrap: !1,
                                       fullWidth: !0,
@@ -1173,8 +1173,8 @@ function tX(e) {
                             : H
                               ? (0, s.jsx)(tt.$, {
                                     loading: M,
-                                    loadingStartedLabel: K.intl.string(K.t["TYw+9s"]),
-                                    loadingFinishedLabel: K.intl.string(K.t.Pg1UP5),
+                                    loadingStartedLabel: Y.intl.string(Y.t["TYw+9s"]),
+                                    loadingFinishedLabel: Y.intl.string(Y.t.Pg1UP5),
                                     onClick: async () => {
                                         (g(ee.sH.ADD_TO_COLLECTION),
                                             await (0, R.iJ)(i.skuId),
@@ -1185,7 +1185,7 @@ function tX(e) {
                                                 purchaseType: ee.gs.PREMIUM_PURCHASE,
                                             }));
                                     },
-                                    text: K.intl.string(K.t.zp6caO),
+                                    text: Y.intl.string(Y.t.zp6caO),
                                     fullWidth: !0,
                                 })
                               : (0, s.jsx)(s.Fragment, {
@@ -1198,9 +1198,9 @@ function tX(e) {
                                             p = 0 === t,
                                             E =
                                                 e.currency === tD.Yr.DISCORD_ORB
-                                                    ? ((n = b ? K.intl.string(K.t.cTdr3x) : K.intl.string(K.t.zqh7ZM)),
+                                                    ? ((n = b ? Y.intl.string(Y.t.cTdr3x) : Y.intl.string(Y.t.zqh7ZM)),
                                                       (l = !J || b),
-                                                      (a = K.intl.formatToPlainString(K.t.yi41qQ, {
+                                                      (a = Y.intl.formatToPlainString(Y.t.yi41qQ, {
                                                           orbPrice: e.amount,
                                                       })),
                                                       (c = l ? `${a}, ${n}` : a),
@@ -1233,7 +1233,7 @@ function tX(e) {
                                                               },
                                                               disabled: l,
                                                               "aria-label": c,
-                                                              text: K.intl.format(K.t.JC15qj, {
+                                                              text: Y.intl.format(Y.t.JC15qj, {
                                                                   orbPrice: e.amount,
                                                                   orbIconHook: () =>
                                                                       (0, s.jsx)(tn.C, {
@@ -1247,7 +1247,7 @@ function tX(e) {
                                                       }))
                                                     : ((o =
                                                           T ??
-                                                          K.intl.formatToPlainString(K.t["cNSL/j"], {
+                                                          Y.intl.formatToPlainString(Y.t["cNSL/j"], {
                                                               price: (0, to.$g)(e.amount, e.currency),
                                                           })),
                                                       (0, s.jsxs)(ti.e, {
@@ -1260,7 +1260,7 @@ function tX(e) {
                                                                   text: o,
                                                                   fullWidth: !0,
                                                               }),
-                                                              Y &&
+                                                              $ &&
                                                                   (0, s.jsx)(th.A, {
                                                                       primary: p,
                                                                       product: i,
@@ -1274,7 +1274,7 @@ function tX(e) {
                                         return (0, s.jsx)(r.Fragment, { children: E }, e.currency);
                                     }),
                                 })
-                        : Y
+                        : $
                           ? (0, s.jsx)(th.A, {
                                 primary: !0,
                                 product: i,
@@ -1325,9 +1325,9 @@ function tZ(e) {
         ],
     });
 }
-var tK = n(529756),
-    tY = n(408278),
-    t$ = n(972213),
+var tY = n(529756),
+    t$ = n(408278),
+    tK = n(972213),
     tq = n(156248),
     tJ = n(753704),
     tQ = n(60465),
@@ -1343,8 +1343,8 @@ function t3(e) {
         children: [
             (0, s.jsx)("div", {
                 className: t5.Y,
-                children: (0, s.jsx)(tY.K, {
-                    "aria-label": K.intl.string(K.t["3NdvMK"]),
+                children: (0, s.jsx)(t$.K, {
+                    "aria-label": Y.intl.string(Y.t["3NdvMK"]),
                     onClick: t,
                     icon: t8.f,
                     variant: "overlay-secondary",
@@ -1353,8 +1353,8 @@ function t3(e) {
             }),
             (0, s.jsx)("div", {
                 className: t5.K,
-                children: (0, s.jsx)(tY.K, {
-                    "aria-label": K.intl.string(K.t.RYIeOX),
+                children: (0, s.jsx)(t$.K, {
+                    "aria-label": Y.intl.string(Y.t.RYIeOX),
                     onClick: n,
                     icon: t6.u,
                     variant: "overlay-secondary",
@@ -1453,11 +1453,11 @@ function t7(e) {
                 (0, s.jsx)("div", {
                     className: t9.GV,
                     children: (0, s.jsx)(e6.m, {
-                        text: K.intl.string(K.t["Hr/q/6"]),
+                        text: Y.intl.string(Y.t["Hr/q/6"]),
                         children: (0, s.jsx)(tt.$, {
                             variant: "overlay-secondary",
                             size: "sm",
-                            icon: tK.c,
+                            icon: tY.c,
                             text: x.name,
                             onClick: j,
                         }),
@@ -1495,10 +1495,10 @@ function t7(e) {
                             tab: g,
                             onTrackClick: h,
                         }),
-                        (0, s.jsx)(tY.K, {
-                            "aria-label": K.intl.string(K.t.cpT0Cq),
+                        (0, s.jsx)(t$.K, {
+                            "aria-label": Y.intl.string(Y.t.cpT0Cq),
                             onClick: k,
-                            icon: t$.XLargeIcon,
+                            icon: tK.XLargeIcon,
                             variant: "overlay-secondary",
                             size: "sm",
                         }),
@@ -1529,11 +1529,11 @@ let ne = (0, u.FT)(u._3.SIZE_152),
             X = (0, M.f)(i),
             { previewingVariantIndex: W } = X,
             Z = (0, y.Q)(i),
-            K = b(i, W),
-            Y = (0, L.rb)(i, Z);
-        a()(null != Y, "Selected product should not be null");
-        let { analyticsLocations: $ } = (0, g.Ay)([...B, x.A.COLLECTIBLES_SHOP_DETAILS_MODAL]);
-        (0, S.Yr)(Y.skuId);
+            Y = b(i, W),
+            $ = (0, L.rb)(i, Z);
+        a()(null != $, "Selected product should not be null");
+        let { analyticsLocations: K } = (0, g.Ay)([...B, x.A.COLLECTIBLES_SHOP_DETAILS_MODAL]);
+        (0, S.Yr)($.skuId);
         let q = (0, w.U1)(l),
             [J, Q] = r.useState(0);
         r.useEffect(() => {
@@ -1544,12 +1544,12 @@ let ne = (0, u.FT)(u._3.SIZE_152),
             (I.default.track(O.HAw.OPEN_MODAL, {
                 type: O.JJy.COLLECTIBLES_SHOP_DETAILS_MODAL,
                 source: D,
-                location_stack: $,
-                sku_id: Y.skuId,
+                location_stack: K,
+                sku_id: $.skuId,
                 product_type: ee,
             }),
-                (0, R.RD)(Y.skuId));
-        }, [D, $, Y.skuId, ee]);
+                (0, R.RD)($.skuId));
+        }, [D, K, $.skuId, ee]);
         let { cardId: et, sessionId: en, tilePosition: ei } = (0, C.uM)() ?? {},
             es = r.useMemo(() => (0, L.v8)(i), [i]),
             er = (function (e) {
@@ -1571,17 +1571,17 @@ let ne = (0, u.FT)(u._3.SIZE_152),
                     },
                     [t, i, s, n, l, c],
                 );
-            })({ skuId: Y.skuId, productSkuIds: es, analyticsLocations: $ });
+            })({ skuId: $.skuId, productSkuIds: es, analyticsLocations: K });
         (0, E.A)({
             type: c.ImpressionTypes.MODAL,
             name: c.ImpressionNames.SHOP_PRODUCT_DETAIL,
             properties: {
-                sku_id: Y.skuId,
+                sku_id: $.skuId,
                 card_id: et,
                 shop_session_id: en,
                 position_in_section: ei,
                 product_sku_ids: es,
-                location_stack: $,
+                location_stack: K,
             },
         });
         let el = (0, A.o6)(),
@@ -1603,8 +1603,8 @@ let ne = (0, u.FT)(u._3.SIZE_152),
                 pendingProfile: ed,
                 productRecord: i,
                 productName: eo,
-                selectedProduct: Y,
-                previewingProduct: K ?? null,
+                selectedProduct: $,
+                previewingProduct: Y ?? null,
                 category: l,
                 selectedVariantIndex: Z,
                 previewingVariantIndexProps: X,
@@ -1614,13 +1614,13 @@ let ne = (0, u.FT)(u._3.SIZE_152),
                 shouldCheckoutWithOrbs: F,
                 giftRecipient: U?.id !== z.id ? U : void 0,
                 giftingOrigin: U?.id !== z.id ? H : void 0,
-                analyticsLocations: $,
+                analyticsLocations: K,
                 returnRef: u,
                 onClose: n,
                 onTrackClick: er,
             };
         return (0, s.jsx)(g.f5, {
-            value: $,
+            value: K,
             children: (0, s.jsx)(p.d, {
                 returnRef: u,
                 transitionState: t,

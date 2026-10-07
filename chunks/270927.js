@@ -339,7 +339,7 @@ function er(e) {
                                                       ? null
                                                       : {
                                                             Icon: E.TagIcon,
-                                                            text: b.intl.formatToPlainString(b.t.jidBDk, {
+                                                            text: b.intl.formatToPlainString(b.t["/nFLZv"], {
                                                                 current: t.current,
                                                                 target: t.target,
                                                                 numDays: n,
