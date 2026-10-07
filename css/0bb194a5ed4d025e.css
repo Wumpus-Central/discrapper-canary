@@ -237,6 +237,14 @@
     white-space: nowrap
 }
 
+.dpad__06abd {
+    color: var(--icon-voice-connected)
+}
+
+.dpad__06abd>path {
+    transition: opacity .1s ease-out
+}
+
 .eyebrow__49f30 {
     height: 24px
 }
@@ -2525,4 +2533,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=ef9eaf3806908c3c.css.map*/
+/*# sourceMappingURL=0bb194a5ed4d025e.css.map*/
