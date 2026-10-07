@@ -7,6 +7,7 @@ a.exports = {
     KR: "tierName__0ab43",
     S7: "arrowIconExpanded__0ab43",
     xp: "headerSubtitleContainer__0ab43",
+    Bi: "platformBadge__0ab43",
     yF: "divider__0ab43",
     kE: "changePlanNotice__0ab43",
     Zx: "subscriptionInfoCards__0ab43",

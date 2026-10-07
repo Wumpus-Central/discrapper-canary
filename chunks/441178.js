@@ -7282,16 +7282,20 @@ function aw(e) {
                                             className: aP.vW,
                                         }),
                                     j &&
-                                        (0, p.jsx)(em.Lp, {
-                                            color: ed.A.unsafe_rawColors.PRIMARY_500.css,
-                                            text: el.intl.string(el.t.nhbtEl),
+                                        (0, p.jsx)("div", {
                                             className: aP.KR,
+                                            children: (0, p.jsx)(nK.E, {
+                                                type: { text: el.intl.string(el.t.nhbtEl) },
+                                                variant: "default",
+                                            }),
                                         }),
                                     N &&
-                                        (0, p.jsx)(em.Lp, {
-                                            color: ed.A.unsafe_rawColors.PRIMARY_500.css,
-                                            text: el.intl.string(el.t.aiwXeq),
+                                        (0, p.jsx)("div", {
                                             className: aP.s7,
+                                            children: (0, p.jsx)(nK.E, {
+                                                type: { text: el.intl.string(el.t.aiwXeq) },
+                                                variant: "default",
+                                            }),
                                         }),
                                     null != h &&
                                         (0, p.jsxs)(G.E, {

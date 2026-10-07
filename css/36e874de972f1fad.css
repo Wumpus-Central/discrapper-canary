@@ -200,13 +200,13 @@
 }
 
 .draftBadge_d7a3d0 {
-    color: var(--primary-860)
+    color: var(--primary-860);
+    letter-spacing: .02em
 }
 
 .archivedBadge_d7a3d0,
-.draftBadge_d7a3d0,
 .unsavedBadge_d7a3d0 {
-    letter-spacing: .02em
+    display: flex
 }
 
 .pencilIcon_d7a3d0 {
@@ -256,4 +256,4 @@
     opacity: .5
 }
 
-/*# sourceMappingURL=c0a16550f4c6bac8.css.map*/
+/*# sourceMappingURL=36e874de972f1fad.css.map*/

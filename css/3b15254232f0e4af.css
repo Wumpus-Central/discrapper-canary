@@ -46,6 +46,10 @@
     gap: 6px
 }
 
+.platformBadge__0ab43 {
+    display: flex
+}
+
 .divider__0ab43 {
     border-bottom: 1px solid var(--opacity-white-4);
     margin: 16px 0
@@ -162,4 +166,4 @@
     gap: 16px
 }
 
-/*# sourceMappingURL=b25122d0b36c9fef.css.map*/
+/*# sourceMappingURL=3b15254232f0e4af.css.map*/
