@@ -126,17 +126,18 @@ async function f(e) {
 function I(e, t, n) {
     let { preventFetch: r = !1 } = e,
         [a, s] = (0, i.useState)(null),
-        [l, o] = (0, i.useState)(null);
+        [l, o] = (0, i.useState)(null),
+        d = (0, i.useRef)(null);
     return (
         (0, i.useEffect)(() => {
             let e = !1;
             async function n() {
                 try {
                     o(null);
-                    let n = await t();
-                    e || s(n);
+                    let n = await t(d.current);
+                    e || ((d.current = n), s(n));
                 } catch (t) {
-                    e || (o(t), s(null));
+                    e || ((d.current = null), o(t), s(null));
                 }
             }
             return (

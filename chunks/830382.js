@@ -42,16 +42,26 @@ async function T(e) {
     return (a.h.dispatch({ type: "SKUS_FETCH_SUCCESS", skus: n }), n);
 }
 async function m(e) {
-    let { applicationId: t, skuId: n, paymentSourceId: i, isGift: a, currency: o, applyWalletBalance: d } = e,
-        _ = { payment_source_id: i, gift: a, currency: o };
-    (null != d && (_.apply_wallet_balance = d), (0, c.Fs)(t) && (_.test_mode = !0));
-    let E = u.A.getPromotionIdOverride();
-    null != E && (_.promotion_id_override = E);
+    let {
+            applicationId: t,
+            skuId: n,
+            paymentSourceId: i,
+            isGift: a,
+            currency: o,
+            applyWalletBalance: d,
+            previousTotal: _,
+        } = e,
+        E = { payment_source_id: i, gift: a, currency: o };
+    (null != d && (E.apply_wallet_balance = d),
+        null != _ && (E.previous_total = _),
+        (0, c.Fs)(t) && (E.test_mode = !0));
+    let A = u.A.getPromotionIdOverride();
+    null != A && (E.promotion_id_override = A);
     try {
         return (
             await (0, f.aP)({
                 url: I.Rsh.STORE_SKU_PURCHASE(n),
-                query: _,
+                query: E,
                 oldFormErrors: !0,
                 rejectWithError: (0, r.fT)(),
             })
