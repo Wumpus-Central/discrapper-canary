@@ -119,7 +119,7 @@ class m {
     }
 }
 var h = n(660183),
-    C = n(986485);
+    C = n(693351);
 function f(e) {
     let { giftCardsEnabled: t, checkoutPaymentSources: n } = e,
         a = l.useMemo(() => (0, c.N)(n)?.id, [n]),
@@ -273,13 +273,13 @@ function y(e) {
         {
             walletCoversSubtotal: V,
             walletCoversTotal: K,
-            isWalletBalanceLoaded: q,
-            isWalletCoverageLoading: Z,
+            isWalletBalanceLoaded: Z,
+            isWalletCoverageLoading: q,
         } = f({ giftCardsEnabled: A, checkoutPaymentSources: i }),
         z = null != y && null != R && y === R.id;
     l.useEffect(() => {
-        !z && q && !V && w && u(D);
-    }, [z, q, V, w, u, D]);
+        !z && Z && !V && w && u(D);
+    }, [z, Z, V, w, u, D]);
     let $ = l.useMemo(
         () =>
             null == R
@@ -297,11 +297,11 @@ function y(e) {
                         giftCardWallet: R,
                         checked: w,
                         onChange: W,
-                        loading: Z,
-                        disabled: !Z && !V,
-                        disabledTooltip: Z || V ? void 0 : h.intl.string(C.default.ccWIdu),
+                        loading: q,
+                        disabled: !q && !V,
+                        disabledTooltip: q || V ? void 0 : h.intl.string(C.default.ccWIdu),
                     },
-        [R, O, _, T, Y, w, W, V, Z],
+        [R, O, _, T, Y, w, W, V, q],
     );
     return {
         giftCardsEnabled: A,
@@ -315,8 +315,8 @@ function y(e) {
         giftCardCheckboxProps: $,
         walletCoversSubtotal: V,
         walletCoversTotal: K,
-        isWalletBalanceLoaded: q,
-        isWalletCoverageLoading: Z,
+        isWalletBalanceLoaded: Z,
+        isWalletCoverageLoading: q,
         isSplitPaymentMode: O,
     };
 }

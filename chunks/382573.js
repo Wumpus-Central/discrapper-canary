@@ -53,7 +53,7 @@ function C(t) {
         l = (0, g.Tx)();
     return (0, i.jsx)(I, { ingress: e, guildId: n ?? l });
 }
-var G = n(57129);
+var G = n(968987);
 function x(t) {
     let { ingress: e, guildId: n } = t,
         r = c.JG.useSetting().includes(n),
@@ -92,7 +92,7 @@ var h = n(862482),
     j = n(307863),
     m = n(428031),
     k = n(972737),
-    Y = n(513687);
+    Y = n(273665);
 function L(t) {
     let { ingress: e, guildId: n } = t,
         r = (0, g.q9)(),

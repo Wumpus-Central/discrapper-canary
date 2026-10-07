@@ -31,8 +31,8 @@ var l = n(477900),
     O = n(808598),
     M = n(287809),
     L = n(158045),
-    k = n(583741),
-    w = n(181666);
+    k = n(649975),
+    w = n(182732);
 function D(e) {
     let { requiredCheckoutFlow: t, invoicePreview: n, product: l } = e;
     return (
@@ -81,8 +81,8 @@ var U = n(951305),
     Y = n(206828),
     V = n(31823),
     K = n(427675),
-    q = n(977445),
-    Z = n(118982),
+    Z = n(977445),
+    q = n(118982),
     z = n(566980),
     $ = n(319820),
     Q = n(52635);
@@ -217,10 +217,10 @@ function er(e) {
             let { sku: t, application: n, isGift: l } = e,
                 r = (0, H.bG)([W.A], () => W.A.getFetchState()),
                 { fetched: a, hasAlreadyLinked: s } = (0, Y.RD)(n),
-                o = (0, q.uS)(n.id),
+                o = (0, Z.uS)(n.id),
                 u = null != t && t.productLine === N.EZt.SOCIAL_LAYER_GAME_ITEM,
                 c = n.supportsEmbeddedSurface(B.U.MAIN) && r === W.$.ERROR,
-                d = u && a && !s && !l ? (0, Z.k3)(n) : null;
+                d = u && a && !s && !l ? (0, q.k3)(n) : null;
             return {
                 upperInlineNoticeProps: i.useMemo(() => {
                     let e = [];

@@ -97,7 +97,7 @@ let M = {
     };
 var R = l(825484),
     O = l(821609),
-    w = l(39470);
+    w = l(256416);
 let G = (e) => {
     let t,
         {
@@ -854,31 +854,31 @@ let e3 = (e) => {
           });
 };
 var e8 = l(486020),
-    e4 = l(695451);
-let e2 = (e) => {
+    e2 = l(695451);
+let e4 = (e) => {
     let { entry: t } = e,
         l = (0, V.c)("GuildDiscoveryPreviewElement"),
         { id: i, icon: a, name: s } = t,
         r = e8.Ay.getGuildIconURL({ id: i, icon: a, size: 32 }) ?? void 0;
     return (0, n.jsxs)("div", {
-        className: e4.kL,
+        className: e2.kL,
         children: [
             (0, n.jsx)(p.D, {
-                className: e4.wx,
+                className: e2.wx,
                 variant: l ? "heading-sm/medium" : "heading-sm/semibold",
                 children: T.intl.string(T.t.nTe4HC),
             }),
             (0, n.jsx)("div", {
-                className: e4.bo,
+                className: e2.bo,
                 children: (0, n.jsxs)("div", {
-                    className: e4.OA,
+                    className: e2.OA,
                     children: [
                         (0, n.jsx)(B.Ay, {
                             mask: B.Ay.Masks.SQUIRCLE,
                             width: 32,
                             height: 32,
-                            className: e4.$d,
-                            children: (0, n.jsx)("img", { src: r, alt: "", className: e4.$f }),
+                            className: e2.$d,
+                            children: (0, n.jsx)("img", { src: r, alt: "", className: e2.$f }),
                         }),
                         (0, n.jsx)(P.E, { color: "text-default", variant: "text-sm/normal", children: s }),
                     ],
@@ -921,28 +921,28 @@ let e7 = (e) => {
         ],
     });
 };
-var e9 = l(285496);
-let e5 = (e) => {
+var e5 = l(285496);
+let e9 = (e) => {
     let { event: t } = e,
         l = (0, V.c)("GuildScheduledEventPreviewElement"),
         i = (0, L.bG)([e0.A], () => e0.A.getGuild(t.guild_id));
     return null == i
         ? null
         : (0, n.jsxs)("div", {
-              className: e9.kL,
+              className: e5.kL,
               children: [
                   (0, n.jsx)(p.D, {
-                      className: e9.wx,
+                      className: e5.wx,
                       variant: l ? "heading-sm/medium" : "heading-sm/semibold",
                       children: T.intl.string(T.t.SDTOL7),
                   }),
                   (0, n.jsxs)("div", {
-                      className: e9.bo,
+                      className: e5.bo,
                       children: [
                           (0, n.jsxs)("div", {
-                              className: e9.OA,
+                              className: e5.OA,
                               children: [
-                                  (0, n.jsx)(eX.Ay, { guild: i, size: eX.Ay.Sizes.MINI, className: e9.$f }),
+                                  (0, n.jsx)(eX.Ay, { guild: i, size: eX.Ay.Sizes.MINI, className: e5.$f }),
                                   (0, n.jsx)(P.E, {
                                       color: "text-default",
                                       variant: "text-sm/normal",
@@ -1490,8 +1490,8 @@ function t3(e) {
         : null;
 }
 var t8 = l(957565),
-    t4 = l(65489);
-function t2(e) {
+    t2 = l(65489);
+function t4(e) {
     let {
             element: {
                 data: { title: t, body: l, sms: a, is_localized: s },
@@ -1501,28 +1501,28 @@ function t2(e) {
         u = i.useRef(e_.A.reactParserFor(e_.A.defaultRules));
     return s
         ? (0, n.jsxs)("div", {
-              className: t4.kL,
+              className: t2.kL,
               children: [
                   (0, n.jsx)(p.D, {
                       variant: "heading-sm/semibold",
                       color: "text-default",
-                      className: t4.wx,
+                      className: t2.wx,
                       children: t,
                   }),
-                  (0, n.jsx)(P.E, { variant: "text-sm/normal", className: t4.G3, children: u.current(l) }),
+                  (0, n.jsx)(P.E, { variant: "text-sm/normal", className: t2.G3, children: u.current(l) }),
                   (0, n.jsx)("div", {
                       children: (0, n.jsxs)("div", {
-                          className: ed()(t4.GH, { [t4.pG]: r }),
+                          className: ed()(t2.GH, { [t2.pG]: r }),
                           children: [
                               (0, n.jsx)(P.E, {
                                   variant: "text-md/normal",
                                   selectable: !0,
-                                  className: t4.Kk,
+                                  className: t2.Kk,
                                   children: a,
                               }),
                               (0, n.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
-                                  className: t4.__invalid_trailingButton,
+                                  className: t2.__invalid_trailingButton,
                                   children: (0, n.jsx)(O.$, {
                                       variant: "secondary",
                                       size: "sm",
@@ -1541,24 +1541,24 @@ function t2(e) {
 }
 var t6 = l(778712),
     t7 = l(730134),
-    t9 = l(243899);
-let t5 = (e) => {
+    t5 = l(243899);
+let t9 = (e) => {
     let { user: t } = e,
         l = (0, V.c)("UserPreviewElement");
     return (0, n.jsxs)("div", {
-        className: t9.kL,
+        className: t5.kL,
         children: [
             (0, n.jsx)(p.D, {
-                className: t9.wx,
+                className: t5.wx,
                 variant: l ? "heading-sm/medium" : "heading-sm/semibold",
                 children: T.intl.string(T.t.Rsth7z),
             }),
             (0, n.jsx)("div", {
-                className: t9.f1,
+                className: t5.f1,
                 children: (0, n.jsxs)("div", {
-                    className: t9.eF,
+                    className: t5.eF,
                     children: [
-                        (0, n.jsx)(t7.A, { className: t9.Hk, user: t, size: t6._3.SIZE_40 }),
+                        (0, n.jsx)(t7.A, { className: t5.Hk, user: t, size: t6._3.SIZE_40 }),
                         (0, n.jsxs)("div", {
                             children: [
                                 null != t.globalName &&
@@ -1830,12 +1830,12 @@ let ld = (e) => {
                 "data-migration-pending": !0,
                 className: em.rf,
                 children: [
-                    null != y && (0, n.jsx)(t2, { element: y }),
+                    null != y && (0, n.jsx)(t4, { element: y }),
                     null != L && (0, n.jsx)(t3, { element: L }),
                     null != ls(t, "message_preview") &&
                         ("message" === l.name || "first_dm" === l.name || "report_to_mod_message" === l.name) &&
                         (0, n.jsx)(tA, { message: l.record }),
-                    null != ls(t, "user_preview") && "user" === l.name ? (0, n.jsx)(t5, { user: l.record }) : null,
+                    null != ls(t, "user_preview") && "user" === l.name ? (0, n.jsx)(t9, { user: l.record }) : null,
                     null != ls(t, "widget_preview") && "widget" === l.name
                         ? (0, n.jsx)(ln, { widget: l.widget, userId: l.user_id })
                         : null,
@@ -1915,13 +1915,13 @@ let ld = (e) => {
                         (0, n.jsx)(tJ, { stageInstance: l.record }),
                     null != ls(t, "guild_scheduled_event_preview") &&
                         "guild_scheduled_event" === l.name &&
-                        (0, n.jsx)(e5, { event: l.record }),
+                        (0, n.jsx)(e9, { event: l.record }),
                     null != ls(t, "guild_directory_entry_preview") &&
                         "guild_directory_entry" === l.name &&
                         (0, n.jsx)(e3, { entry: l.record }),
                     null != ls(t, "guild_discovery_preview") &&
                         "guild_discovery" === l.name &&
-                        (0, n.jsx)(e2, { entry: l.record }),
+                        (0, n.jsx)(e4, { entry: l.record }),
                     null != ls(t, "app_preview") && "application" === l.name && (0, n.jsx)(Y, { entry: l.record }),
                     null != E && (0, n.jsx)(tE, { element: E, onChange: ei, state: K }),
                     la.includes(l.name) && null != P && (0, n.jsx)(eM, { element: P, onChange: ea, state: q }),

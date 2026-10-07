@@ -52,7 +52,7 @@ var C = t(604121),
     M = t(427262),
     O = t(652215),
     G = t(49999),
-    E = t(556427),
+    E = t(95769),
     S = t(660183);
 function D(e) {
     let { currentTier: n, giftCount: t, variant: a, onComplete: r, markAsDismissed: o, children: c } = e,

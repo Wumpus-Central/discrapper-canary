@@ -1,155 +1,155 @@
-n.d(t, { A: () => A });
-var l = n(477900);
-n(582128);
-var i = n(503698),
-    a = n.n(i),
-    r = n(17928),
-    s = n(876230),
-    o = n(939249),
-    u = n(477155),
-    c = n(834730),
-    d = n(866665),
-    m = n(176781),
-    p = n(429913),
-    h = n(769015),
-    f = n(409626),
-    g = n(692969),
-    x = n(202163),
-    y = n(287809),
-    v = n(58703),
-    E = n(403362),
-    N = n(331446),
-    C = n(829648),
-    O = n(268378),
-    j = n(660183),
-    S = n(447177);
-function w(e) {
-    let { applicationId: t, hasTrailingDate: n } = e,
-        i = (0, p.h)(t),
-        { gameRecord: r } = (0, x.A)(t),
-        s = (0, g.A)({ applicationId: t, location: "ClipEmbed", source: f.GameProfileSources.ClipEmbed }),
-        u = r?.name ?? i?.name;
-    if (null == u) return null;
-    let d = (0, l.jsxs)(l.Fragment, {
+s.d(e, { A: () => I });
+var a = s(477900);
+s(582128);
+var t = s(503698),
+    n = s.n(t),
+    i = s(17928),
+    r = s(876230),
+    c = s(939249),
+    o = s(477155),
+    d = s(834730),
+    x = s(866665),
+    h = s(176781),
+    m = s(429913),
+    u = s(769015),
+    p = s(409626),
+    g = s(692969),
+    N = s(202163),
+    j = s(287809),
+    v = s(58703),
+    E = s(403362),
+    f = s(331446),
+    y = s(829648),
+    C = s(704796),
+    D = s(660183),
+    P = s(447177);
+function w(l) {
+    let { applicationId: e, hasTrailingDate: s } = l,
+        t = (0, m.h)(e),
+        { gameRecord: i } = (0, N.A)(e),
+        r = (0, g.A)({ applicationId: e, location: "ClipEmbed", source: p.GameProfileSources.ClipEmbed }),
+        o = i?.name ?? t?.name;
+    if (null == o) return null;
+    let x = (0, a.jsxs)(a.Fragment, {
             children: [
-                (0, l.jsx)(h.A, { game: r ?? i, size: h.M.XXSMALL, className: S.Gt, allowUnknownGameIcon: !1 }),
-                (0, l.jsx)(c.E, {
-                    className: S.mO,
+                (0, a.jsx)(u.A, { game: i ?? t, size: u.M.XXSMALL, className: P.Gt, allowUnknownGameIcon: !1 }),
+                (0, a.jsx)(d.E, {
+                    className: P.mO,
                     variant: "text-sm/normal",
                     color: "text-overlay-light",
-                    children: u,
+                    children: o,
                 }),
             ],
         }),
-        m =
-            null != s
-                ? (0, l.jsx)(o.D, { className: a()(S.Nn, S.On), onClick: s, children: d })
-                : (0, l.jsx)("span", { className: S.Nn, children: d });
-    return (0, l.jsxs)(l.Fragment, {
+        h =
+            null != r
+                ? (0, a.jsx)(c.D, { className: n()(P.Nn, P.On), onClick: r, children: x })
+                : (0, a.jsx)("span", { className: P.Nn, children: x });
+    return (0, a.jsxs)(a.Fragment, {
         children: [
-            m,
-            !0 === n && (0, l.jsx)(c.E, { variant: "text-sm/normal", color: "text-overlay-light", children: "\xb7" }),
+            h,
+            !0 === s && (0, a.jsx)(d.E, { variant: "text-sm/normal", color: "text-overlay-light", children: "\xb7" }),
         ],
     });
 }
-let A = function (e) {
+let I = function (l) {
     let {
-            createdAt: t,
-            participantIds: n,
-            applicationId: i,
-            title: p,
-            guildId: h,
-            className: f,
+            createdAt: e,
+            participantIds: s,
+            applicationId: t,
+            title: m,
+            guildId: u,
+            className: p,
             activeLayer: g,
-            playerState: x = s.Q6.PAUSED,
-            isControlBarExpanded: A = !0,
-            isFullScreen: b = !1,
-            showTextContent: k = !0,
-            isGridView: I = !1,
-            setIsGridView: T,
-        } = e,
-        V = (0, r.yK)([y.default], () => n.map((e) => y.default.getUser(e)).filter(E.Vq) ?? []),
-        W = null != t ? (0, v.Fe)(new Date(t)) : null;
-    return (0, l.jsxs)("div", {
-        className: a()(S.oK, { [S.pd]: x === s.Q6.PLAYING && !A, [S.aS]: b }, f),
+            playerState: N = r.Q6.PAUSED,
+            isControlBarExpanded: I = !0,
+            isFullScreen: L = !1,
+            showTextContent: _ = !0,
+            isGridView: b = !1,
+            setIsGridView: A,
+        } = l,
+        k = (0, i.yK)([j.default], () => s.map((l) => j.default.getUser(l)).filter(E.Vq) ?? []),
+        G = null != e ? (0, v.Fe)(new Date(e)) : null;
+    return (0, a.jsxs)("div", {
+        className: n()(P.oK, { [P.pd]: N === r.Q6.PLAYING && !I, [P.aS]: L }, p),
         children: [
-            (0, l.jsx)("div", { className: S.Lu }),
-            (0, l.jsxs)("div", {
-                className: S.s$,
+            (0, a.jsx)("div", { className: P.Lu }),
+            (0, a.jsxs)("div", {
+                className: P.s$,
                 children: [
-                    I &&
-                        A &&
-                        (0, l.jsxs)(o.D, {
-                            className: S.i9,
-                            onClick: function (e) {
-                                (e.stopPropagation(), T?.(!1));
+                    b &&
+                        I &&
+                        (0, a.jsxs)(c.D, {
+                            className: P.i9,
+                            onClick: function (l) {
+                                (l.stopPropagation(), A?.(!1));
                             },
                             children: [
-                                (0, l.jsx)(u.r, { color: "white", size: "xs" }),
-                                (0, l.jsx)(c.E, {
+                                (0, a.jsx)(o.r, { color: "white", size: "xs" }),
+                                (0, a.jsx)(d.E, {
                                     variant: "text-md/semibold",
                                     color: "text-overlay-light",
                                     children: "Back to single mode",
                                 }),
                             ],
                         }),
-                    !I &&
-                        (0, l.jsxs)("div", {
-                            className: S.yR,
+                    !b &&
+                        (0, a.jsxs)("div", {
+                            className: P.yR,
                             children: [
-                                (0, l.jsxs)("div", {
-                                    className: S.$,
+                                (0, a.jsxs)("div", {
+                                    className: P.$,
                                     children: [
-                                        (0, l.jsx)(d.m, {
+                                        (0, a.jsx)(x.m, {
                                             asContainer: !0,
-                                            text: j.intl.string(j.t["/fgfWh"]),
-                                            children: (0, l.jsx)(m.x, { className: S.gr, size: "xs", color: "white" }),
+                                            text: D.intl.string(D.t["/fgfWh"]),
+                                            children: (0, a.jsx)(h.x, { className: P.gr, size: "xs", color: "white" }),
                                         }),
-                                        k &&
-                                            (0, l.jsx)(c.E, {
-                                                className: S.DD,
+                                        _ &&
+                                            (0, a.jsx)(d.E, {
+                                                className: P.DD,
                                                 variant: "text-md/semibold",
                                                 color: "text-overlay-light",
-                                                children: null != p && p.length > 0 ? p : j.intl.string(j.t.Cyxddp),
+                                                children: null != m && m.length > 0 ? m : D.intl.string(D.t.Cyxddp),
                                             }),
                                     ],
                                 }),
-                                k &&
-                                    (null != i || null != W) &&
-                                    (0, l.jsxs)("div", {
-                                        className: S.yu,
+                                _ &&
+                                    (null != t || null != G) &&
+                                    (0, a.jsxs)("div", {
+                                        className: P.yu,
                                         children: [
-                                            (0, l.jsx)(w, { applicationId: i, hasTrailingDate: null != W }),
-                                            null != W &&
-                                                (0, l.jsx)(c.E, {
-                                                    className: S.BR,
+                                            (0, a.jsx)(w, { applicationId: t, hasTrailingDate: null != G }),
+                                            null != G &&
+                                                (0, a.jsx)(d.E, {
+                                                    className: P.BR,
                                                     variant: "text-sm/normal",
                                                     color: "text-overlay-light",
-                                                    children: W,
+                                                    children: G,
                                                 }),
                                         ],
                                     }),
                             ],
                         }),
-                    !I &&
-                        V.length > 0 &&
-                        (0, l.jsxs)("div", {
-                            className: S.HD,
+                    !b &&
+                        k.length > 0 &&
+                        (0, a.jsxs)("div", {
+                            className: P.HD,
                             role: "group",
-                            "aria-label": j.intl.string(j.t.WTozwe),
+                            "aria-label": D.intl.string(D.t.WTozwe),
                             children: [
-                                V.slice(0, 4).map((e) =>
-                                    (0, l.jsx)(C.A, { layerContext: g, user: e, guildId: h }, e.id),
-                                ),
-                                V.length > 4 &&
-                                    (0, l.jsx)(N.w, {
+                                k
+                                    .slice(0, 4)
+                                    .map((l) => (0, a.jsx)(y.A, { layerContext: g, user: l, guildId: u }, l.id)),
+                                k.length > 4 &&
+                                    (0, a.jsx)(f.w, {
                                         layerContext: g,
-                                        participants: V,
+                                        participants: k,
                                         maxVisibleParticipants: 4,
-                                        overflowLabel: j.intl.formatToPlainString(O.default.CJ0I6C, {
-                                            count: V.length - 4,
+                                        overflowLabel: D.intl.formatToPlainString(C.default.CJ0I6C, {
+                                            count: k.length - 4,
                                         }),
-                                        guildId: h,
+                                        guildId: u,
                                     }),
                             ],
                         }),

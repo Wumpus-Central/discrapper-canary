@@ -44,7 +44,7 @@ var i,
     Y = n(922016),
     K = n(827827),
     $ = n(481045),
-    z = n(57129),
+    z = n(968987),
     X = n(660183),
     Z = n(293686);
 function q(e) {
@@ -360,7 +360,7 @@ var el = n(688810),
     eN = n(572164),
     eC = n(614584),
     eO = n(118328),
-    eR = n(268378),
+    eR = n(704796),
     eL = n(253146);
 let ey = 2 * eg.A.Millis.WEEK;
 function eD(e) {
@@ -498,11 +498,11 @@ var ej = n(769015),
     e1 = n(650338),
     e2 = n(753070),
     e3 = n(900795);
-function e6(e) {
+function e5(e) {
     let { className: t, color: n, ...i } = e;
     return (0, r.jsx)(k.E, { className: l()({ [e3.Q]: null == n }, t), color: n, ...i });
 }
-var e5 = n(95701),
+var e6 = n(95701),
     e4 = n(280450),
     e7 = n(734057),
     e8 = n(184989),
@@ -584,7 +584,7 @@ let tG = (0, ew.mj)({
     });
 var tk = n(610010),
     tF = n(475669),
-    tB = n(394107);
+    tB = n(344045);
 function tV(e) {
     let { title: t, body: n, ctaText: i, runningGameId: a, targetElementRef: s, onClick: l, onClose: o } = e,
         d = (0, _.bG)([tF.A], () => null != a && tF.A.getGlobalCatalogGame(a)?.can_market === !0, [a]);
@@ -718,8 +718,8 @@ let tJ = a.memo(function (e) {
                     n.e("236946"),
                     n.e("338601"),
                     n.e("944727"),
-                    n.e("118577"),
-                    n.e("39404"),
+                    n.e("561547"),
+                    n.e("937494"),
                     n.e("82001"),
                 ]).then(n.bind(n, 266536));
                 return (t) =>
@@ -806,7 +806,7 @@ let tJ = a.memo(function (e) {
                       : ((e = !0),
                         (t = null),
                         (n = th.F),
-                        null != o && (0, e5.gV)(o.type) && (a = X.intl.string(X.t.uQn9B8))),
+                        null != o && (0, e6.gV)(o.type) && (a = X.intl.string(X.t.uQn9B8))),
                 (0, r.jsx)("div", {
                     className: tq.IF,
                     children: (0, r.jsx)(tL.A, { tooltipText: a, disabled: e, onClick: t, icon: n }),
@@ -966,8 +966,8 @@ function t3(e) {
         }, [t, s]);
     return (0, r.jsx)(tL.A, { tooltipText: X.intl.string(X.t.vyaWs7), onClick: l, onMouseDown: i, icon: tT.U, ref: n });
 }
-var t6 = n(428689),
-    t5 = n(409626),
+var t5 = n(428689),
+    t6 = n(409626),
     t4 = n(692969),
     t7 = n(202163),
     t8 = n(475358),
@@ -1020,7 +1020,7 @@ function ns(e) {
         i = (0, t4.A)({
             location: "ActivityPanelGameCard",
             applicationId: n,
-            source: t5.GameProfileSources.RtcPanel,
+            source: t6.GameProfileSources.RtcPanel,
             trackEntryPointImpression: !0,
         });
     return (0, r.jsx)(f.D, {
@@ -1035,7 +1035,7 @@ function nl(e) {
         className: na.f9,
         children: [
             (0, r.jsx)(ej.A, { className: na.Gt, game: t ?? n, pid: i?.pid, ref: s }),
-            a ? (0, r.jsx)(t6.VideoIcon, { size: "md", color: "currentColor", className: na.it }) : null,
+            a ? (0, r.jsx)(t5.VideoIcon, { size: "md", color: "currentColor", className: na.it }) : null,
         ],
     });
 }
@@ -1044,7 +1044,7 @@ function no(e) {
         o = (0, t4.A)({
             location: "ActivityPanelGameCardIcon",
             applicationId: i?.id,
-            source: t5.GameProfileSources.RtcPanel,
+            source: t6.GameProfileSources.RtcPanel,
             trackEntryPointImpression: !1,
         }),
         d = null != o,
@@ -1141,7 +1141,7 @@ let n_ = {
 };
 var nE = n(534952),
     nA = n(731854),
-    nh = n(559626),
+    nh = n(545704),
     nf = n(821095),
     nI = n(268920),
     np = n(633217);
@@ -1409,12 +1409,12 @@ function nC(e) {
         (d()(null != a, "Channel cannot be null during navigation click"),
             g.A.channelListScrollTo(a.guild_id ?? x.ME, a.id),
             !E &&
-                ((0, e5.gV)(a.type) &&
+                ((0, e6.gV)(a.type) &&
                     m.A.selectParticipant(
                         a.id,
                         (0, eE.Qt)({ applicationId: i.applicationId, instanceId: i.compositeInstanceId }),
                     ),
-                (0, e5.pQ)(a.type) && (0, L.gk)(nc.Gd.PANEL)));
+                (0, e6.pQ)(a.type) && (0, L.gk)(nc.Gd.PANEL)));
     }
     null != l && null != a
         ? ((t = x.BVt.CHANNEL(l.id, a.id)), (h = `${h} / ${l.name}`))
@@ -1436,7 +1436,7 @@ function nC(e) {
                             },
                             children: (0, r.jsx)(tu.A, { className: nf._W, children: n.name }),
                         }),
-                        null != a && (0, e5.pQ)(a.type)
+                        null != a && (0, e6.pQ)(a.type)
                             ? (0, r.jsx)(eZ.A, {
                                   href: t,
                                   onClick: f,
@@ -1495,7 +1495,7 @@ function nR(e) {
                             className: nf.qi,
                             children: [
                                 (0, r.jsx)(I.t, { size: "xxs", color: ev.k0.PREMIUM_TIER_2 }),
-                                (0, r.jsx)(e6, { className: nf.s, variant: "text-xxs/semibold", children: i }),
+                                (0, r.jsx)(e5, { className: nf.s, variant: "text-xxs/semibold", children: i }),
                             ],
                         }),
                 ],

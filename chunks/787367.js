@@ -119,7 +119,7 @@ function O(e) {
     });
 }
 var S = i(652215),
-    V = i(25525),
+    V = i(356863),
     q = i(115087);
 function G(e) {
     return (0, r.jsx)(T._, { ...e, color: _.A.unsafe_rawColors.GUILD_BOOSTING_PINK_REFRESH });

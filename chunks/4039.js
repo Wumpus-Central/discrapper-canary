@@ -90,7 +90,7 @@ var b = l(976860),
     A = l(628049),
     I = l(652215),
     _ = l(746080),
-    v = l(394107);
+    v = l(344045);
 function T(t) {
     let { gameName: i, gameApplicationId: l, onClose: s, transitionState: o } = t,
         c = (0, C.EX)("game_server_modal"),

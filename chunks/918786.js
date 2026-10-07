@@ -1,4 +1,4 @@
-n.d(t, { A: () => q });
+n.d(t, { A: () => Z });
 var l,
     i = n(477900),
     r = n(582128),
@@ -33,7 +33,7 @@ var C =
     j = n(158045),
     R = n(264725),
     O = n(202541),
-    M = n(583741);
+    M = n(649975);
 function L(e) {
     let { children: t, containerNode: n } = e;
     return null == n ? null : A.createPortal(t, n);
@@ -447,7 +447,7 @@ function V(e) {
     );
 }
 var K = n(942537);
-function q(e) {
+function Z(e) {
     let { handlePaymentSourceAdd: t, planGroup: n, hasOpenInvoice: l, isInPastDueCheckout: a } = e,
         { invoiceError: A } = (0, p.t4)((e) => ({ invoiceError: e.get("primaryInvoicesError") })),
         { paymentSources: I, hasPaymentSources: g } = (0, u.j)(),
@@ -479,13 +479,13 @@ function q(e) {
         })),
         { isPremiumPurchase: B, isPremiumGroupPurchase: H } = (0, p.t4)((e) => e.get("selectedPlanAttributes")),
         W = (0, E.g)(I, _),
-        { showFractionalPremiumBanner: Y, fractionalPremiumInfo: q } = (0, f._V)({
+        { showFractionalPremiumBanner: Y, fractionalPremiumInfo: Z } = (0, f._V)({
             premiumSubscription: O,
             selectedPlanId: v,
             planGroup: n,
             isGift: !1,
         }),
-        Z = x === m.h.PURCHASING || x === m.h.COMPLETED,
+        q = x === m.h.PURCHASING || x === m.h.COMPLETED,
         z = O?.isPausedAllowsResumeButNotUpdates,
         $ = r.useRef(null),
         [Q, J] = r.useState(null),
@@ -556,11 +556,11 @@ function q(e) {
                   })(
                       { hasOpenInvoice: l, showResumeSubscriptionView: z, planId: v },
                       {
-                          disabled: Z,
+                          disabled: q,
                           premiumSubscription: O,
                           newPlan: P,
                           planGroup: n,
-                          fractionalPremiumInfo: q,
+                          fractionalPremiumInfo: Z,
                           priceOptions: T,
                       },
                       et,
@@ -586,13 +586,13 @@ function q(e) {
                     ? (0, i.jsx)(o.N, {
                           label: h.intl.string(h.t["mmDvV+"]),
                           onPaymentSourceAdd: t,
-                          disabled: Z,
+                          disabled: q,
                           additionalPaymentSourceDropdownProps: es,
                           location: "PremiumSwitchPlanReview",
                           subscriptionPaymentSourceId: T.paymentSourceId,
                       })
                     : null,
-            [eo, T.paymentSourceId, es, t, Z],
+            [eo, T.paymentSourceId, es, t, q],
         ),
         ec = null != O && (0, y.Ge)(O, v, n),
         ed = !z && k && !H && !a && !w,
@@ -602,7 +602,7 @@ function q(e) {
                 null == b || null == N || ep
                     ? null
                     : (0, i.jsx)(S.P, {
-                          fractionalPremiumInfo: q,
+                          fractionalPremiumInfo: Z,
                           overrideRenewalDate: X,
                           activeSubscription: O,
                           isTrial: !1,
@@ -616,14 +616,14 @@ function q(e) {
                               renewalInvoicePreview: N,
                           },
                       }),
-            [q, b, N, ep, X, O, P, W, el],
+            [Z, b, N, ep, X, O, P, W, el],
         );
     return (0, i.jsx)(V, {
         loading: j,
-        disabled: Z,
+        disabled: q,
         isInPastDueCheckout: a,
         showFractionalPremiumBanner: Y,
-        fractionalPremiumInfo: q,
+        fractionalPremiumInfo: Z,
         isPremiumGroupPurchase: H,
         paymentRestrictionBannerType: er,
         invoiceError: A,

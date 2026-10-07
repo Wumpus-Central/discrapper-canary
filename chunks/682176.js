@@ -20,11 +20,11 @@ var n = i(477900),
     _ = i(802976),
     A = i(696016),
     I = i(652215),
-    b = i(268378),
+    b = i(704796),
     f = i(660183),
     k = i(324973);
 let x = (0, h.qT)({
-    createPromise: () => Promise.all([i.e("216870"), i.e("643612"), i.e("334127")]).then(i.bind(i, 266546)),
+    createPromise: () => Promise.all([i.e("216870"), i.e("390098"), i.e("334127")]).then(i.bind(i, 266546)),
     webpackId: 266546,
     name: "DiscordVideoPlayer",
     renderLoader: () => (0, n.jsx)("div", { className: k.Lq }),

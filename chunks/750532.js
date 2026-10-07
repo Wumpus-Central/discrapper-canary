@@ -24,7 +24,7 @@ var l = n(477900),
     x = n(652215),
     _ = n(202541),
     T = n(660183),
-    N = n(341535),
+    N = n(805161),
     b = n(894575),
     j = n(711729);
 function R(e) {
@@ -50,9 +50,9 @@ function R(e) {
         Y = D?.productLine === x.EZt.COLLECTIBLES,
         V = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
         K = U === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        q = G && (0, I.Ik)(B) && U === v.pn.CONFIRM && null != F && !Y && !V,
-        Z = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
-        z = null != U && !Z.includes(U) && null != n,
+        Z = G && (0, I.Ik)(B) && U === v.pn.CONFIRM && null != F && !Y && !V,
+        q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
+        z = null != U && !q.includes(U) && null != n,
         $ = i.useCallback(() => t(!1), [t]);
     return i.useMemo(() => {
         if (null == U) return;
@@ -70,7 +70,7 @@ function R(e) {
                           skuName: null != d ? (0, g.RH)(d) : "",
                       }),
                   }))
-                : q
+                : Z
                   ? (e = (0, l.jsxs)("div", {
                         className: b.kL,
                         children: [
@@ -108,7 +108,7 @@ function R(e) {
                               : (0, l.jsx)(s.rQ, { title: T.intl.string(T.t.q9EGps) })),
             e
         );
-    }, [F, $, E, n, U, k, w, R, d, K, q, H, z, G, B, M, O, L]);
+    }, [F, $, E, n, U, k, w, R, d, K, Z, H, z, G, B, M, O, L]);
 }
 function O(e) {
     let { premiumDiscountPercent: t, isPremiumDiscountAppliedToCheckoutInvoice: n } = (0, p.t4)((e) => ({

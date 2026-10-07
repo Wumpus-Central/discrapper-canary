@@ -144,7 +144,7 @@ var P = n(166532),
     U = n(202475),
     G = n(31823),
     F = n(642639),
-    B = n(583741),
+    B = n(649975),
     H = n(660183);
 class W {
     init;
@@ -219,7 +219,7 @@ class W {
 var Y = n(558620),
     V = n(427675),
     K = n(169797);
-function q(e, t) {
+function Z(e, t) {
     let n = t(e.getState());
     return null != n
         ? Promise.resolve(n)
@@ -230,8 +230,8 @@ function q(e, t) {
               });
           });
 }
-async function Z(e) {
-    await q(e, (e) => !e.get("isOrderLocked") || null);
+async function q(e) {
+    await Z(e, (e) => !e.get("isOrderLocked") || null);
 }
 var z = n(26279);
 function $(e, t) {
@@ -458,7 +458,7 @@ function ee(e) {
                     virtual_currency_balance: eD,
                 }));
         }, [et, ee, ei, n, r, Q, ek, ew, eD]),
-        eq = i.useCallback(
+        eZ = i.useCallback(
             (e) => {
                 (et(v.h.FAIL),
                     ei(e),
@@ -475,11 +475,11 @@ function ee(e) {
             },
             [et, ei, n, r, eL, ek, ew, eD],
         ),
-        { signOrder: eZ, reportError: ez } = (0, h.f)({
+        { signOrder: eq, reportError: ez } = (0, h.f)({
             order: em,
             errorSource: "checkout_sign_order",
             onError: (e) => {
-                (eq(e), eS(e));
+                (eZ(e), eS(e));
             },
         }),
         e$ = i.useCallback(
@@ -514,8 +514,8 @@ function ee(e) {
     }
     async function e0(e) {
         J(eE, e, () => eH.current);
-        let t = await q(eE, (t) => $(t, e));
-        return t.status !== z.Re.SIGNED ? (eq(new u.Ay(H.intl.string(H.t.khEaRI))), null) : t;
+        let t = await Z(eE, (t) => $(t, e));
+        return t.status !== z.Re.SIGNED ? (eZ(new u.Ay(H.intl.string(H.t.khEaRI))), null) : t;
     }
     async function e2() {
         let e = await (0, j.ob)(
@@ -525,7 +525,7 @@ function ee(e) {
                     return (0, x.W)(ey, null != t ? t.payment_source_id : null);
                 })(),
             ).catch(() => null),
-            t = await eZ({ loadId: en.loadId, purchaseToken: (0, O.r)(), gatewayCheckoutContext: e });
+            t = await eq({ loadId: en.loadId, purchaseToken: (0, O.r)(), gatewayCheckoutContext: e });
         if ("failed" === t.type) return;
         let n = "signed" === t.type ? t.order : await e0(t.order);
         if (null != n)
@@ -543,7 +543,7 @@ function ee(e) {
             if (eW.current) return;
             eW.current = !0;
             try {
-                if ((await Z(eE), !eH.current)) return;
+                if ((await q(eE), !eH.current)) return;
                 await eX();
             } finally {
                 eW.current = !1;
@@ -553,7 +553,7 @@ function ee(e) {
         let t = e ?? eL;
         await g({
             onPurchaseAttempt: eK,
-            onPurchaseError: eq,
+            onPurchaseError: eZ,
             onPurchaseComplete: e$,
             onPurchaseFinalize: eQ,
             hasRedirectURL: eF,

@@ -13,7 +13,7 @@ var l = n(477900),
     h = n(25149),
     C = n(642639),
     f = n(652215),
-    S = n(583741),
+    S = n(649975),
     E = n(660183),
     y = n(170691);
 let A = new Set([m.C.ORB_CHECKOUT]);
@@ -235,14 +235,14 @@ function b(e) {
             isOrderLocked: e.get("isOrderLocked"),
         })),
         { dropdownCurrencies: V, displayCurrency: K } = (0, P.Jn)(),
-        q = i.useCallback(() => O(!0), []),
-        Z = i.useMemo(() => Y || W || (m ?? !1), [Y, W, m]),
+        Z = i.useCallback(() => O(!0), []),
+        q = i.useMemo(() => Y || W || (m ?? !1), [Y, W, m]),
         { giftCardCheckboxProps: z, disabled: $ } = i.useMemo(
             () =>
                 null != A
-                    ? A({ giftCardCheckboxProps: L, disabled: Z }, { isSubscriptionPaidByWallet: U })
-                    : { giftCardCheckboxProps: L, disabled: Z },
-            [Z, A, L, U],
+                    ? A({ giftCardCheckboxProps: L, disabled: q }, { isSubscriptionPaidByWallet: U })
+                    : { giftCardCheckboxProps: L, disabled: q },
+            [q, A, L, U],
         ),
         Q = null != z && !0 === z.locked,
         J = i.useMemo(() => {
@@ -294,7 +294,7 @@ function b(e) {
                 label: c,
                 children: [en && el, !ea && eu, !en && el, !es && !ei && void 0 !== X && (0, l.jsx)(T.q, { ...X })],
             }),
-            M ? (0, l.jsx)(I, { onGiftCardRedeemed: q }) : null,
+            M ? (0, l.jsx)(I, { onGiftCardRedeemed: Z }) : null,
             (0, l.jsx)(g, { onPaymentSourceAdd: f }),
             (0, l.jsx)(x.B, {}),
         ],

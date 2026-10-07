@@ -239,8 +239,8 @@ var eY = n(780964),
     e2 = n(475358),
     e3 = n(866665),
     e5 = n(408278),
-    e8 = n(625903),
-    e7 = n(404778),
+    e7 = n(625903),
+    e8 = n(404778),
     e6 = n(689175),
     e4 = n(821609),
     e9 = n(532624),
@@ -324,7 +324,7 @@ let tg = l.memo(function (e) {
 var tA = n(696016),
     tv = n(652215),
     tE = n(753070),
-    tx = n(268378),
+    tx = n(704796),
     tC = n(48127);
 function t_(e) {
     let { onOpenGallery: t, onOpenSettings: n, onClose: a, setPopoutRef: r } = e;
@@ -383,7 +383,7 @@ function t_(e) {
                                     text: eW.intl.string(eW.t["3D5yo/"]),
                                     children: (0, i.jsx)(e5.K, {
                                         onClick: () => n(),
-                                        icon: e8.SettingsIcon,
+                                        icon: e7.SettingsIcon,
                                         size: "sm",
                                         variant: "icon-only",
                                         "aria-label": eW.intl.string(eW.t["3D5yo/"]),
@@ -434,7 +434,7 @@ function t_(e) {
                             }),
                     ],
                 }),
-                (0, i.jsx)(e7.c, {}),
+                (0, i.jsx)(e8.c, {}),
                 A.length > 0
                     ? (0, i.jsxs)(e6.Ch, {
                           className: tC.Vg,
@@ -676,8 +676,8 @@ var t$ = n(397562),
     t2 = n(718019),
     t3 = n(365607),
     t5 = n(915614),
-    t8 = n(744753),
-    t7 = n(559506),
+    t7 = n(744753),
+    t8 = n(559506),
     t6 = n(646986),
     t4 = n(657538),
     t9 = n(946356),
@@ -1128,13 +1128,13 @@ function nX(e) {
                 n.e("784569"),
                 n.e("861060"),
                 n.e("77333"),
-                n.e("56366"),
+                n.e("264572"),
                 n.e("639161"),
                 n.e("477175"),
                 n.e("960235"),
                 n.e("402368"),
                 n.e("190779"),
-                n.e("910486"),
+                n.e("716460"),
                 n.e("221856"),
                 n.e("678157"),
                 n.e("147134"),
@@ -1146,7 +1146,7 @@ function nX(e) {
                 n.e("733115"),
                 n.e("397270"),
                 n.e("373122"),
-                n.e("217951"),
+                n.e("724285"),
                 n.e("293159"),
                 n.e("755936"),
                 n.e("147662"),
@@ -1214,7 +1214,7 @@ function nX(e) {
                 n.e("113458"),
                 n.e("534874"),
                 n.e("50097"),
-                n.e("265696"),
+                n.e("518954"),
                 n.e("500520"),
                 n.e("201050"),
                 n.e("93461"),
@@ -1224,7 +1224,7 @@ function nX(e) {
                 n.e("908081"),
                 n.e("829260"),
                 n.e("489523"),
-                n.e("327198"),
+                n.e("25212"),
                 n.e("504098"),
                 n.e("245691"),
                 n.e("604172"),
@@ -1302,7 +1302,7 @@ function nX(e) {
                                                   n.e("892937"),
                                                   n.e("169727"),
                                                   n.e("487697"),
-                                                  n.e("265696"),
+                                                  n.e("518954"),
                                                   n.e("504098"),
                                                   n.e("723934"),
                                                   n.e("720161"),
@@ -1365,8 +1365,8 @@ let n5 = [
         { duration: 3 * L.A.Millis.DAY, label: () => eW.intl.string(eW.t["f3/1ch"]) },
         { duration: void 0, label: () => eW.intl.string(eW.t["46dqJY"]) },
     ],
-    n8 = "forever";
-function n7(e) {
+    n7 = "forever";
+function n8(e) {
     let { status: t, currentStatus: n, description: l } = e,
         a = t !== tv.clD.ONLINE,
         r = (0, i.jsx)(i.Fragment, {
@@ -1380,7 +1380,7 @@ function n7(e) {
                         action: () => (0, n3.A)({ nextStatus: t, prevStatus: n, durationMillis: l }),
                         dontCloseOnAction: !0,
                     },
-                    l ?? n8,
+                    l ?? n7,
                 );
             }),
         });
@@ -1462,14 +1462,14 @@ function it(e) {
                                 },
                                 dontCloseOnAction: !0,
                             },
-                            n ?? n8,
+                            n ?? n7,
                         );
                     }),
                 }),
-                s = n7({ status: tv.clD.ONLINE, currentStatus: e }),
-                o = n7({ status: tv.clD.IDLE, currentStatus: e, description: a(tv.clD.IDLE) }),
-                d = n7({ status: tv.clD.DND, currentStatus: e, description: a(tv.clD.DND) }),
-                c = n7({ status: tv.clD.INVISIBLE, currentStatus: e, description: a(tv.clD.INVISIBLE) });
+                s = n8({ status: tv.clD.ONLINE, currentStatus: e }),
+                o = n8({ status: tv.clD.IDLE, currentStatus: e, description: a(tv.clD.IDLE) }),
+                d = n8({ status: tv.clD.DND, currentStatus: e, description: a(tv.clD.DND) }),
+                c = n8({ status: tv.clD.INVISIBLE, currentStatus: e, description: a(tv.clD.INVISIBLE) });
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     s,
@@ -1713,7 +1713,7 @@ function it(e) {
                                         className: ez.rf,
                                         style: { pointerEvents: W ? "none" : void 0 },
                                         children: [
-                                            (0, i.jsx)(t7.A, { userId: t.id }),
+                                            (0, i.jsx)(t8.A, { userId: t.id }),
                                             (0, i.jsx)(ne.Ay, {
                                                 className: ez.eF,
                                                 user: t,
@@ -1729,7 +1729,7 @@ function it(e) {
                                                     shouldGlowTenureBadge: H.current,
                                                 }),
                                             }),
-                                            (0, i.jsx)(t8.A, { isPremiumUser: k, onInteraction: n }),
+                                            (0, i.jsx)(t7.A, { isPremiumUser: k, onInteraction: n }),
                                             (0, i.jsx)(no.A, {
                                                 userId: t.id,
                                                 userBio: p?.bio,
@@ -2033,7 +2033,7 @@ var iM = n(379848),
     ik = n(591179),
     iL = n(531685),
     iP = n(259065),
-    iD = n(701974);
+    iD = n(763052);
 let iU = new iO.A("DisplayNameStylesFlywheelCoachmark");
 function iF(e) {
     let { markAsDismissed: t, targetElementRef: n, children: a } = e,
@@ -2249,7 +2249,7 @@ function i3(e) {
     });
 }
 var i5 = n(764014);
-function i8(e) {
+function i7(e) {
     let { targetElementRef: t } = e,
         n = (0, tP.A)((e) => e.isOpen),
         [l, a] = (0, tM.kn)(n ? [] : [c.M.ORB_WALLET_PROFILE_INTRODUCTION_COACHMARK], nY.m.ACCOUNT_NAME_ZONE, !0);
@@ -2278,7 +2278,7 @@ function i8(e) {
           })
         : null;
 }
-function i7(e) {
+function i8(e) {
     let { isQuestBarEmpty: t, hasLoadedQuestBar: n } = (0, ii.c9)(),
         l = null != e.targetElementRef.current && t && n,
         [a, r] = (function (e) {
@@ -2334,7 +2334,7 @@ function i7(e) {
               : (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(i2, { groupName: nY.m.ACCOUNT_NAME_ZONE, targetElementRef: e.targetElementRef }),
-                        e.isOrbchievementsEnabled && (0, i.jsx)(i8, { targetElementRef: e.targetElementRef }),
+                        e.isOrbchievementsEnabled && (0, i.jsx)(i7, { targetElementRef: e.targetElementRef }),
                         (0, i.jsx)(iM.Ay, {
                             contentTypes: e.additionalDCs ?? [],
                             groupName: nY.m.ACCOUNT_NAME_ZONE,
@@ -2521,7 +2521,7 @@ let lh = new lm(iW.h, {
 });
 var lf = n(362823),
     lp = n(980923),
-    lg = n(573549),
+    lg = n(436763),
     lA = n(222176),
     lv = n(973324);
 function lE(e) {
@@ -2678,7 +2678,7 @@ var lx = n(935399),
     lC = n(505312),
     l_ = n(848847),
     lT = n(975807),
-    lI = n(745188);
+    lI = n(891262);
 let lS = `data:image/svg+xml,${encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" width="143" height="107"><rect x="1" y="1" width="141" height="105" fill="none" stroke="hotpink" stroke-width="2"/></svg>')}`;
 function lb(e) {
     let { markAsDismissed: t, targetElementRef: n } = e,
@@ -2736,7 +2736,7 @@ function ly(e) {
     });
 }
 var lj = n(88001),
-    lN = n(148155),
+    lN = n(259589),
     lR = n(438705);
 function lM(e) {
     let { targetElementRef: t, shouldShow: n, onDismiss: a } = e,
@@ -2822,13 +2822,13 @@ function lP(e) {
         }, [r]),
         g = ex.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lL.A)("1791404518473", !0);
+        let e = (0, lL.A)("1791404940315", !0);
         t =
             null != e
                 ? eW.intl.formatToPlainString(eW.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
                 : eW.intl.formatToPlainString(eW.t.Gzh6ZP, { webBuildOverride: a.id });
     } else t = eW.intl.string(eW.t.cduTBL);
-    let A = e8.SettingsIcon,
+    let A = e7.SettingsIcon,
         v = (0, lC.w)();
     return (
         (A = null != a ? l_.H : v.Component),
@@ -3392,13 +3392,13 @@ class lB extends l.PureComponent {
                     n.e("784569"),
                     n.e("861060"),
                     n.e("77333"),
-                    n.e("56366"),
+                    n.e("264572"),
                     n.e("639161"),
                     n.e("477175"),
                     n.e("960235"),
                     n.e("402368"),
                     n.e("190779"),
-                    n.e("910486"),
+                    n.e("716460"),
                     n.e("221856"),
                     n.e("678157"),
                     n.e("147134"),
@@ -3410,7 +3410,7 @@ class lB extends l.PureComponent {
                     n.e("733115"),
                     n.e("397270"),
                     n.e("373122"),
-                    n.e("217951"),
+                    n.e("724285"),
                     n.e("293159"),
                     n.e("755936"),
                     n.e("147662"),
@@ -3476,7 +3476,7 @@ class lB extends l.PureComponent {
                     n.e("9205"),
                     n.e("25949"),
                     n.e("836863"),
-                    n.e("931319"),
+                    n.e("869853"),
                     n.e("854622"),
                     n.e("807936"),
                     n.e("344502"),
@@ -3501,7 +3501,7 @@ class lB extends l.PureComponent {
                     n.e("147626"),
                     n.e("952548"),
                     n.e("613867"),
-                    n.e("164776"),
+                    n.e("417886"),
                     n.e("203589"),
                     n.e("636373"),
                     n.e("294857"),
@@ -3594,7 +3594,7 @@ class lB extends l.PureComponent {
                     n.e("305557"),
                     n.e("36227"),
                     n.e("50097"),
-                    n.e("265696"),
+                    n.e("518954"),
                     n.e("535507"),
                     n.e("500520"),
                     n.e("201050"),
@@ -3620,7 +3620,7 @@ class lB extends l.PureComponent {
                     n.e("903663"),
                     n.e("411353"),
                     n.e("508829"),
-                    n.e("824547"),
+                    n.e("898377"),
                     n.e("896804"),
                     n.e("36877"),
                     n.e("963203"),
@@ -3640,7 +3640,7 @@ class lB extends l.PureComponent {
                     n.e("78601"),
                     n.e("574678"),
                     n.e("829260"),
-                    n.e("806295"),
+                    n.e("919885"),
                     n.e("342234"),
                     n.e("81189"),
                     n.e("66580"),
@@ -3650,8 +3650,8 @@ class lB extends l.PureComponent {
                     n.e("726294"),
                     n.e("780407"),
                     n.e("127659"),
-                    n.e("327198"),
-                    n.e("267255"),
+                    n.e("25212"),
+                    n.e("620689"),
                     n.e("276814"),
                     n.e("132737"),
                     n.e("781949"),
@@ -3676,7 +3676,7 @@ class lB extends l.PureComponent {
                     n.e("871467"),
                     n.e("350949"),
                     n.e("270591"),
-                    n.e("825947"),
+                    n.e("93857"),
                     n.e("51892"),
                     n.e("841838"),
                     n.e("472789"),
@@ -3699,7 +3699,7 @@ class lB extends l.PureComponent {
                     n.e("79216"),
                     n.e("946039"),
                     n.e("995602"),
-                    n.e("816589"),
+                    n.e("170571"),
                     n.e("544901"),
                     n.e("929569"),
                     n.e("896480"),
@@ -3738,7 +3738,7 @@ class lB extends l.PureComponent {
                     n.e("702846"),
                     n.e("991531"),
                     n.e("462318"),
-                    n.e("341638"),
+                    n.e("574196"),
                     n.e("523638"),
                     n.e("450541"),
                     n.e("647999"),
@@ -3761,7 +3761,7 @@ class lB extends l.PureComponent {
                     n.e("943534"),
                     n.e("124564"),
                     n.e("666601"),
-                    n.e("739725"),
+                    n.e("170371"),
                     n.e("313052"),
                     n.e("639721"),
                     n.e("419631"),
@@ -3770,7 +3770,7 @@ class lB extends l.PureComponent {
                     n.e("876892"),
                     n.e("971508"),
                     n.e("816799"),
-                    n.e("912118"),
+                    n.e("316140"),
                     n.e("852694"),
                     n.e("728549"),
                     n.e("632482"),
@@ -3787,12 +3787,12 @@ class lB extends l.PureComponent {
                     n.e("44264"),
                     n.e("821403"),
                     n.e("444790"),
-                    n.e("310022"),
+                    n.e("87641"),
                     n.e("874913"),
                     n.e("435476"),
-                    n.e("665807"),
-                    n.e("258327"),
-                    n.e("348072"),
+                    n.e("203041"),
+                    n.e("135001"),
+                    n.e("496422"),
                     n.e("214451"),
                     n.e("407755"),
                     n.e("993720"),
@@ -3982,7 +3982,7 @@ class lB extends l.PureComponent {
         } = this.props;
         return null == n
             ? null
-            : (0, i.jsx)(i7, {
+            : (0, i.jsx)(i8, {
                   guildId: this.props.selectedGuildId ?? null,
                   currentUser: n,
                   targetElementRef: this.avatarWithPopoutRef,

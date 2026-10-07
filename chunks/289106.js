@@ -19,7 +19,7 @@ var l = n(582128),
     y = n(89505),
     A = n(246338),
     C = n(803101),
-    j = n(248675),
+    j = n(261425),
     P = n(660183);
 function w(e) {
     let { installScope: t, integrationStatus: n, guildName: l, appChannelName: i } = e;

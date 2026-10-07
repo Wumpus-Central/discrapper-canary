@@ -1459,7 +1459,7 @@ function nb(e, t, n) {
         iconURL: n?.icon == null ? null : (nj.Ay.getApplicationIconURL({ id: n.id, icon: n.icon, size: 24 }) ?? null),
     };
 }
-var nv = n(389036);
+var nv = n(4998);
 let nN = "none";
 function ny(e) {
     let { channel: t, guildId: n, onChange: i } = e;
@@ -1862,7 +1862,7 @@ function nG(e) {
 var nD = n(746080),
     nk = n(307731),
     nP = n(37411),
-    nU = n(35692);
+    nU = n(590930);
 let nV = {
         popoutLocation: {
             page: eZ.liQ.CHANNEL_SETTINGS,
