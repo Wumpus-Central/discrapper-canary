@@ -1,29 +1,30 @@
-n.d(t, { E: () => N, A: () => A });
+n.d(t, { E: () => R, A: () => v });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
     s = n.n(r),
-    i = n(834730),
-    o = n(28863),
-    d = n(174459),
-    c = n(559868),
-    u = n(652215),
-    f = n(375708);
-function m() {
-    d.default.track(u.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: c.Do });
-}
+    i = n(17928),
+    o = n(834730),
+    d = n(28863),
+    c = n(174459),
+    u = n(559868),
+    f = n(652215),
+    m = n(375708);
 function g() {
+    c.default.track(f.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "profile_bio", target: u.Do });
+}
+function p() {
     return (0, a.jsxs)(a.Fragment, {
         children: [
-            (0, a.jsx)("span", { children: f.intl.string(f.t.OJmNR9) }),
+            (0, a.jsx)("span", { children: m.intl.string(m.t.OJmNR9) }),
             (0, a.jsx)("br", {}),
             (0, a.jsx)("br", {}),
             (0, a.jsx)("span", {
-                children: f.intl.format(f.t.RCYeBL, {
+                children: m.intl.format(m.t.RCYeBL, {
                     blogHook: (e, t) =>
                         (0, a.jsx)(
-                            o.Anchor,
-                            { onClick: m, target: "_blank", rel: "noreferrer noopener", href: c.Do, children: e },
+                            d.Anchor,
+                            { onClick: g, target: "_blank", rel: "noreferrer noopener", href: u.Do, children: e },
                             t,
                         ),
                 }),
@@ -31,46 +32,55 @@ function g() {
         ],
     });
 }
-var p = n(311016),
-    E = n(692051),
-    h = n(713804),
-    b = n(900179),
-    x = n(165668),
-    _ = n(165648);
-function A(e) {
+var E = n(311016),
+    h = n(692051),
+    b = n(713804),
+    x = n(967198),
+    _ = n(900179),
+    A = n(165668),
+    N = n(165648);
+function v(e) {
     let {
             userBio: t,
             className: n,
             animateOnHoverOrFocusOnly: r = !1,
-            isHoveringOrFocusing: o = !1,
-            lineClamp: d = 6,
-            setLineClamp: c = !0,
-            textColor: u,
-            userId: f,
+            isHoveringOrFocusing: d = !1,
+            lineClamp: c = 6,
+            setLineClamp: u = !0,
+            textColor: f,
+            userId: m,
+            guildId: g,
         } = e,
-        m = l.useMemo(
-            () => ((0, p.A)(f) ? (0, a.jsx)(g, {}) : null == t || "" === t ? null : (0, h.parseBioReact)(t)),
-            [f, t],
+        _ = (0, i.bG)([x.A], () => x.A.getGuildId()),
+        v = g ?? _,
+        R = l.useMemo(
+            () =>
+                (0, E.A)(m)
+                    ? (0, a.jsx)(p, {})
+                    : null == t || "" === t
+                      ? null
+                      : (0, b.parseBioReact)(t, void 0, { guildId: v }),
+            [m, t, v],
         );
-    return null == m
+    return null == R
         ? null
         : (0, a.jsx)("div", {
-              className: s()(n, _.PT, x.z),
-              children: (0, a.jsx)(i.E, {
+              className: s()(n, N.PT, A.z),
+              children: (0, a.jsx)(o.E, {
                   variant: "text-sm/normal",
-                  lineClamp: c ? d : void 0,
-                  color: void 0 !== u ? u : void 0,
-                  className: x.w,
-                  children: (0, a.jsx)(E.Y.Provider, {
-                      value: { disableAnimations: r && !o, disableInteractions: !1 },
-                      children: m,
+                  lineClamp: u ? c : void 0,
+                  color: void 0 !== f ? f : void 0,
+                  className: A.w,
+                  children: (0, a.jsx)(h.Y.Provider, {
+                      value: { disableAnimations: r && !d, disableInteractions: !1 },
+                      children: R,
                   }),
               }),
           });
 }
-function N(e) {
+function R(e) {
     let { userBio: t, userId: n } = e;
-    return (0, p.A)(n) || (null != t && "" !== t)
-        ? (0, a.jsx)(b.A, { heading: f.intl.string(f.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(A, { ...e }) })
+    return (0, E.A)(n) || (null != t && "" !== t)
+        ? (0, a.jsx)(_.A, { heading: m.intl.string(m.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(v, { ...e }) })
         : null;
 }

@@ -28,14 +28,15 @@ let h = (0, d.A)([
 function f(e, t, n, r) {
     return B(e, t, { ...A, ...n }, r);
 }
-function O(e) {
-    let t = k.get(e);
-    return (null != t || ((t = r(e, !0)), k.set(e, t)), t);
+function O(e, t) {
+    let n = `${t ?? ""}:${e}`,
+        i = k.get(n);
+    return (null != i || ((i = r(e, !0, { guildId: t })), k.set(n, i)), i);
 }
-function R(e) {
+function R(e, t) {
     if (0 === e.trim().length) return null;
-    let t = O(e);
-    return c().reactFor(c().ruleOutput(h, "react"))(t);
+    let n = O(e, t);
+    return c().reactFor(c().ruleOutput(h, "react"))(n);
 }
 let g = s.aV(
     (0, d.A)([

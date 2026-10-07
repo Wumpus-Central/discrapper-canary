@@ -49,6 +49,7 @@ let T = i.memo(function (e) {
                       },
                       children: (0, l.jsx)(d.A, {
                           userId: t,
+                          guildId: E?.guildId,
                           userBio: n,
                           setLineClamp: !1,
                           textColor: "text-strong",
