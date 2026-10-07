@@ -33,7 +33,7 @@ function f(e, n, t) {
     return null != t && 1 === t.length && i && n;
 }
 function m(e) {
-    return [d.gD.PREMIUM_YEAR_TIER_2, d.gD.PREMIUM_MONTH_TIER_2].includes(e?.id);
+    return [d.gD.PREMIUM_YEAR_TIER_2, d.gD.PREMIUM_MONTH_TIER_2, d.gD.PREMIUM_3_MONTH_TIER_2].includes(e?.id);
 }
 function p(e, n) {
     if (null == e) return;

@@ -244,6 +244,6 @@ function C(e) {
 function O(e, t) {
     let { isCustomGift: n, isPrepaidPaymentSource: i } = t;
     return n
-        ? (0, o.D8)(e.interval, !0, void 0, void 0, !0, (0, o.m6)(e.id))
+        ? (0, o.D8)(e.interval, !0, void 0, e.intervalCount, !0, (0, o.m6)(e.id))
         : A.intl.formatToPlainString(A.t.LQLxkW, { planName: (0, o.Mn)(e.id, !1, i) });
 }

@@ -129,25 +129,15 @@ function X(e) {
         P = i.useId(),
         v = i.useId(),
         x = i.useId(),
-        _ = a.find((e) => e?.interval === K.WT.MONTH),
-        T = a.find((e) => e?.interval === K.WT.YEAR),
-        b = null != T ? (0, D.L_)({ planId: T.id, isGift: !0, priceOptions: m, subscriptionPlan: T }) : void 0,
-        j = [
-            null != T
-                ? {
-                      plan: T,
-                      label: N.intl.formatToPlainString(q.default.Aq6Jxd, { durationCount: 1 }),
-                      savingsPercent: b,
-                  }
-                : null,
-            null != _
-                ? {
-                      plan: _,
-                      label: N.intl.formatToPlainString(q.default["0nFw35"], { durationCount: 1 }),
-                      savingsPercent: void 0,
-                  }
-                : null,
-        ].filter((e) => null != e);
+        _ = a
+            .filter((e) => null != e && (0, W.b)(e.id))
+            .map((e) => ({
+                plan: e,
+                label: N.intl.formatToPlainString(e.interval === K.WT.YEAR ? q.default.Aq6Jxd : q.default["0nFw35"], {
+                    durationCount: e.intervalCount,
+                }),
+                savingsPercent: (0, D.L_)({ planId: e.id, isGift: !0, priceOptions: m, subscriptionPlan: e }),
+            }));
     return (0, l.jsxs)(u.B, {
         gap: 24,
         padding: { bottom: 12 },
@@ -157,7 +147,7 @@ function X(e) {
                 role: "radiogroup",
                 children: (0, l.jsx)("div", {
                     className: Z.bH,
-                    children: j.map((e) => {
+                    children: _.map((e) => {
                         let { plan: n, label: i, savingsPercent: r } = e,
                             a = n.id === t;
                         return (0, l.jsxs)(
