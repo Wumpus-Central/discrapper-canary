@@ -5793,6 +5793,24 @@
     }
   },
   {
+    "name": "2026-10-desktop-general-perf",
+    "kind": "user",
+    "defaultConfig": {
+      "skipSilentDelayEstimatorFfts": false,
+      "basicProcessEnumeration": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "skipSilentDelayEstimatorFfts": true,
+        "basicProcessEnumeration": true
+      }
+    }
+  },
+  {
     "name": "2026-10-desktop-tti-perf",
     "kind": "user",
     "defaultConfig": {

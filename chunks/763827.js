@@ -109,7 +109,7 @@ let g = new f.A("RTCConnectionStore"),
 function U(e, t, i) {
     if (null == r) throw Error("Creating RTCConnection without session.");
     let a = T.default.getId(),
-        s = new (n(673514).A)({ userId: a, sessionId: r, guildId: e, channelId: t, joinVoiceId: M, createdTime: i });
+        s = new (n(143430).A)({ userId: a, sessionId: r, guildId: e, channelId: t, joinVoiceId: M, createdTime: i });
     return (
         s.on(d.q.State, (e, t, n) => {
             o.h.dispatch({ type: "RTC_CONNECTION_STATE", state: e, ...t, ...n });
