@@ -56,6 +56,9 @@ class f extends i.Ay.DeviceSettingsStore {
     get hasRunningGame() {
         return u;
     }
+    get runningGameId() {
+        return s.Ay.getVisibleRunningGames().find((e) => !0 !== e.isLauncher)?.id ?? null;
+    }
     get hasDetectedGame() {
         return c.hasDetectedGame;
     }

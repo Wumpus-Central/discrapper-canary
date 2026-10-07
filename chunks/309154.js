@@ -2757,7 +2757,8 @@ let s4 = (0, E.E2)(h.X.DEFAULT_KEYBINDS_SETTING, {
         useSubtitle: () => U.intl.string(eL.default.DwBO0x),
         useValue: () => (0, f.bG)([i3.A], () => i3.A.isEnabledFor(!0)),
         setValue: (e) => {
-            tl.h.dispatch({ type: "GAME_MODE_SET_ENABLED", enabled: e });
+            (tc.default.track(I.HAw.GAME_MODE_TOGGLED, { enabled: e, running_game_id: i3.A.runningGameId }),
+                tl.h.dispatch({ type: "GAME_MODE_SET_ENABLED", enabled: e }));
         },
     });
 var s8 = n(19575),
