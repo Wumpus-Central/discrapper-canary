@@ -1,46 +1,46 @@
-n.d(t, { A: () => c });
-var i = n(477900),
-    s = n(582128),
-    l = n(408278),
-    r = n(921853),
-    a = n(834730),
-    o = n(320448),
-    u = n(375708),
-    d = n(22306);
-let c = s.forwardRef(function (e, t) {
-    let { currentPageIndex: n, numPages: s, onChangePage: c, children: g, showPageCount: m = !0, ...A } = e,
-        E = n >= s - 1,
-        h = m
-            ? u.intl.format(u.t.MtpIwg, { currentPage: n + 1, numPages: s })
-            : u.intl.format(u.t.bKI77c, { currentPage: n + 1 });
+n.d(t, { A: () => d });
+var i = n(477900);
+n(582128);
+var s = n(408278),
+    l = n(921853),
+    r = n(834730),
+    a = n(320448),
+    o = n(375708),
+    u = n(22306);
+function d(e) {
+    let { currentPageIndex: t, numPages: n, onChangePage: d, children: c, showPageCount: g = !0, ref: m, ...A } = e,
+        E = t >= n - 1,
+        h = g
+            ? o.intl.format(o.t.MtpIwg, { currentPage: t + 1, numPages: n })
+            : o.intl.format(o.t.bKI77c, { currentPage: t + 1 });
     return (0, i.jsxs)("div", {
-        ref: t,
+        ref: m,
         ...A,
         children: [
-            g,
+            c,
             (0, i.jsx)("div", {
-                className: d.v,
+                className: u.v,
                 children: (0, i.jsxs)("div", {
-                    className: d.U,
+                    className: u.U,
                     children: [
-                        (0, i.jsx)(l.K, {
+                        (0, i.jsx)(s.K, {
                             variant: "icon-only",
-                            icon: r.n,
-                            disabled: n <= 0,
-                            onClick: () => c(n - 1),
-                            "aria-label": u.intl.string(u.t.vgfxaA),
+                            icon: l.n,
+                            disabled: t <= 0,
+                            onClick: () => d(t - 1),
+                            "aria-label": o.intl.string(o.t.vgfxaA),
                         }),
-                        (0, i.jsx)(a.E, { variant: "text-sm/medium", children: h }),
-                        (0, i.jsx)(l.K, {
+                        (0, i.jsx)(r.E, { variant: "text-sm/medium", children: h }),
+                        (0, i.jsx)(s.K, {
                             variant: "icon-only",
-                            icon: o._,
+                            icon: a._,
                             disabled: E,
-                            onClick: () => c(n + 1),
-                            "aria-label": u.intl.string(u.t.XiOHRX),
+                            onClick: () => d(t + 1),
+                            "aria-label": o.intl.string(o.t.XiOHRX),
                         }),
                     ],
                 }),
             }),
         ],
     });
-});
+}

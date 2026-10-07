@@ -1061,28 +1061,28 @@ var ty = l(707554),
     tP = l(459746);
 let t_ = "1552821538409939044";
 var tw = l(175213);
-let tV = l(892799),
-    tD = s.forwardRef(function (e, t) {
-        let { game: l } = e,
-            n = (function (e) {
-                let [t] = s.useState(() => Math.random());
-                return s.useMemo(() => {
-                    let l = e.getBannerURL(1400);
-                    if (null != l) return l;
-                    let n = e.screenshotUrls?.length ?? 0;
-                    return 0 === n ? null : e.getScreenshotURL(Math.floor(t * n), 1400);
-                }, [1400, e, t]);
-            })(l);
-        return (0, e5.uJ)(n)
-            ? null
-            : (0, a.jsxs)("div", {
-                  ref: t,
-                  children: [
-                      (0, a.jsx)("div", { className: tw.y1, style: { backgroundImage: `url("${n}")` } }),
-                      (0, a.jsx)("div", { className: tw.N4 }),
-                  ],
-              });
-    });
+let tV = l(892799);
+function tD(e) {
+    let { game: t, ref: l } = e,
+        n = (function (e) {
+            let [t] = s.useState(() => Math.random());
+            return s.useMemo(() => {
+                let l = e.getBannerURL(1400);
+                if (null != l) return l;
+                let n = e.screenshotUrls?.length ?? 0;
+                return 0 === n ? null : e.getScreenshotURL(Math.floor(t * n), 1400);
+            }, [1400, e, t]);
+        })(t);
+    return (0, e5.uJ)(n)
+        ? null
+        : (0, a.jsxs)("div", {
+              ref: l,
+              children: [
+                  (0, a.jsx)("div", { className: tw.y1, style: { backgroundImage: `url("${n}")` } }),
+                  (0, a.jsx)("div", { className: tw.N4 }),
+              ],
+          });
+}
 function tU(e) {
     let { game: t } = e,
         l = (t.genres ?? []).map(tO.du).join(", ");

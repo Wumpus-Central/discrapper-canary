@@ -17,21 +17,21 @@ class o {
     }
 }
 let u = i.createContext(
-        new (class {
-            subscribe(e, t) {
-                a._.subscribe(e, t);
-            }
-            unsubscribe(e, t) {
-                a._.unsubscribe(e, t);
-            }
-            bumpDispatchPriority() {}
-        })(),
-    ),
-    c = i.forwardRef(function (e, t) {
-        let { children: n } = e,
-            r = (0, s.A)(() => new o());
-        return (i.useImperativeHandle(t, () => r, [r]), (0, l.jsx)(u.Provider, { value: r, children: n }));
-    });
+    new (class {
+        subscribe(e, t) {
+            a._.subscribe(e, t);
+        }
+        unsubscribe(e, t) {
+            a._.unsubscribe(e, t);
+        }
+        bumpDispatchPriority() {}
+    })(),
+);
+function c(e) {
+    let { children: t, ref: n } = e,
+        r = (0, s.A)(() => new o());
+    return (i.useImperativeHandle(n, () => r, [r]), (0, l.jsx)(u.Provider, { value: r, children: t }));
+}
 function d(e) {
     let { event: t, handler: n } = e,
         l = i.useContext(u),

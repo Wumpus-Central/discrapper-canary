@@ -93,14 +93,14 @@ function M() {
             return t;
         });
 }
-let _ = r.forwardRef(function (e, t) {
-    let { sprites: n } = e,
+let _ = function (e) {
+    let { sprites: t, ref: n } = e,
         [s, a] = r.useState(null),
         { confettiCanvas: l } = r.useContext(h.x),
         o = (0, f.f9)(l, s);
     return (
         r.useImperativeHandle(
-            t,
+            n,
             () => ({
                 fireConfetti: (e, t) => {
                     o.createMultipleConfetti(
@@ -121,9 +121,9 @@ let _ = r.forwardRef(function (e, t) {
             }),
             [o],
         ),
-        (0, i.jsx)(f.K_, { ref: a, colors: E, sprites: n, spriteWidth: 48, spriteHeight: 48 })
+        (0, i.jsx)(f.K_, { ref: a, colors: E, sprites: t, spriteWidth: 48, spriteHeight: 48 })
     );
-});
+};
 function I(e) {
     let { children: t } = e,
         n = r.useRef({}),

@@ -1,27 +1,28 @@
-(r.r(t), r.d(t, { default: () => s }));
+(r.r(t), r.d(t, { default: () => d }));
 var u = r(477900),
     n = r(582128),
-    d = r(76788);
-let s = n.forwardRef(function (e, t) {
+    s = r(76788);
+function d(e) {
     let {
-            className: r,
-            src: s,
-            playing: a,
-            preload: l = "",
-            onEnded: f,
-            onLoadedMetadata: i,
-            onError: o,
+            className: t,
+            src: r,
+            playing: d,
+            preload: a = "",
+            onEnded: l,
+            onLoadedMetadata: f,
+            onError: i,
             muted: c,
-            volume: v,
-            playbackRate: E,
+            volume: o,
+            playbackRate: v,
+            ref: E,
         } = e,
         p = n.useRef(null),
         [m] = n.useState(() => {
-            let e = new d.A.OGVPlayer();
-            return ((e.preload = l), (e.controls = !1), e);
+            let e = new s.A.OGVPlayer();
+            return ((e.preload = a), (e.controls = !1), e);
         });
     return (
-        n.useImperativeHandle(t, () => m, [m]),
+        n.useImperativeHandle(E, () => m, [m]),
         n.useEffect(() => {
             let e = p.current;
             if (null != m && null != e)
@@ -33,57 +34,57 @@ let s = n.forwardRef(function (e, t) {
                 );
         }, [m]),
         n.useEffect(() => {
-            m.src = s;
-        }, [m, s]),
+            m.src = r;
+        }, [m, r]),
         n.useEffect(() => {
-            m.preload = l;
-        }, [m, l]),
+            m.preload = a;
+        }, [m, a]),
         n.useEffect(() => {
-            void 0 !== a &&
-                (a
+            void 0 !== d &&
+                (d
                     ? setTimeout(() => {
                           m.play();
                       }, 0)
                     : setTimeout(() => {
                           m.pause();
                       }, 0));
-        }, [s, m, a]),
+        }, [r, m, d]),
         n.useEffect(() => {
             void 0 !== c && (m.muted = c);
         }, [m, c]),
         n.useEffect(() => {
-            void 0 !== v && (m.volume = v);
+            void 0 !== o && (m.volume = o);
+        }, [m, o]),
+        n.useEffect(() => {
+            null != v && (m.playbackRate = v);
         }, [m, v]),
         n.useEffect(() => {
-            null != E && (m.playbackRate = E);
-        }, [m, E]),
+            if (null != l)
+                return (
+                    m.addEventListener("ended", l),
+                    () => {
+                        m.removeEventListener("ended", l);
+                    }
+                );
+        }, [m, l]),
         n.useEffect(() => {
             if (null != f)
                 return (
-                    m.addEventListener("ended", f),
+                    m.addEventListener("loadedmetadata", f),
                     () => {
-                        m.removeEventListener("ended", f);
+                        m.removeEventListener("loadedmetadata", f);
                     }
                 );
         }, [m, f]),
         n.useEffect(() => {
             if (null != i)
                 return (
-                    m.addEventListener("loadedmetadata", i),
+                    m.addEventListener("error", i),
                     () => {
-                        m.removeEventListener("loadedmetadata", i);
+                        m.removeEventListener("error", i);
                     }
                 );
         }, [m, i]),
-        n.useEffect(() => {
-            if (null != o)
-                return (
-                    m.addEventListener("error", o),
-                    () => {
-                        m.removeEventListener("error", o);
-                    }
-                );
-        }, [m, o]),
-        (0, u.jsx)("div", { ref: p, className: r })
+        (0, u.jsx)("div", { ref: p, className: t })
     );
-});
+}

@@ -15,33 +15,41 @@ var a = l(477900),
 function p() {
     return (0, a.jsx)("div", { className: h.overlay });
 }
-let b = t.forwardRef(function (e, n) {
-    let { variant: l, disabled: t = !1, isInteracting: r = !1, children: c, deleteButton: g, hasError: v = !1 } = e,
-        p = g?.type === "remove" ? f.intl.string(f.t.N86XcP) : f.intl.string(f.t.wgIPss);
+function b(e) {
+    let {
+            variant: n,
+            disabled: l = !1,
+            isInteracting: t = !1,
+            children: r,
+            deleteButton: c,
+            hasError: g = !1,
+            ref: v,
+        } = e,
+        p = c?.type === "remove" ? f.intl.string(f.t.N86XcP) : f.intl.string(f.t.wgIPss);
     return (0, a.jsxs)("div", {
-        ref: n,
-        className: i()(h.tile, h[l], { [h.disabled]: t, [h.isInteracting]: r, [h.hasError]: v }),
+        ref: v,
+        className: i()(h.tile, h[n], { [h.disabled]: l, [h.isInteracting]: t, [h.hasError]: g }),
         children: [
-            c,
-            !t &&
-                null != g &&
+            r,
+            !l &&
+                null != c &&
                 (0, a.jsx)("div", {
-                    className: i()(h.deleteButtonWrapper, { [h.resetButton]: "reset" === g.type }),
+                    className: i()(h.deleteButtonWrapper, { [h.resetButton]: "reset" === c.type }),
                     children: (0, a.jsx)(s.m, {
                         text: p,
                         ariaHidden: !0,
                         children: (0, a.jsx)(u.K, {
-                            "aria-label": g.accessibleLabel,
-                            icon: "remove" === g.type ? o.TrashIcon : d.RetryIcon,
+                            "aria-label": c.accessibleLabel,
+                            icon: "remove" === c.type ? o.TrashIcon : d.RetryIcon,
                             size: "sm",
                             variant: "overlay-secondary",
-                            onClick: g.onClick,
+                            onClick: c.onClick,
                         }),
                     }),
                 }),
         ],
     });
-});
+}
 function m(e) {
     let {
             variant: n,

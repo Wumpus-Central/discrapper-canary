@@ -43,22 +43,23 @@ async function d(e, t) {
             return (t) => (0, i.jsx)(e, { errors: s, ...t });
         }));
 }
-let m = s.forwardRef((e, t) => {
+function m(e) {
     let {
-            onChange: o,
-            multiple: c = !0,
-            disabled: u,
-            className: m,
-            tabIndex: f = -1,
-            "aria-label": E,
-            filters: I,
-            setLoading: g,
-            title: h,
+            onChange: t,
+            multiple: o = !0,
+            disabled: c,
+            className: u,
+            tabIndex: m = -1,
+            "aria-label": f,
+            filters: E,
+            setLoading: I,
+            title: g,
+            ref: h,
         } = e,
         A = s.useRef(null),
         [_, p] = s.useState(!1);
     async function N(e) {
-        (g?.(!0), await d(e, o), p(!0), g?.(!1));
+        (I?.(!0), await d(e, t), p(!0), I?.(!1));
     }
     async function C(e) {
         if (
@@ -78,17 +79,17 @@ let m = s.forwardRef((e, t) => {
             _ && null !== A.current && ((0, l.closeModal)(A.current), (A.current = null));
         }, [_]),
         (0, i.jsx)(r.A, {
-            ref: t,
+            ref: h,
             onChange: C,
-            filters: I ?? (0, a.gA)(),
-            multiple: c,
-            disabled: u,
-            className: m,
-            tabIndex: f,
-            "aria-label": E,
-            title: h,
+            filters: E ?? (0, a.gA)(),
+            multiple: o,
+            disabled: c,
+            className: u,
+            tabIndex: m,
+            "aria-label": f,
+            title: g,
         })
     );
-});
+}
 m.displayName = "ImageInputWithModals";
 let f = m;

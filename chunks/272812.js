@@ -1,17 +1,17 @@
-n.d(t, { A: () => o });
-var i = n(477900),
-    r = n(582128),
-    l = n(503698),
-    s = n.n(l),
-    a = n(195500);
-let o = r.forwardRef(function (e, t) {
-    let { children: n, className: r, style: l, noBorder: o = !1, participantUserId: u } = e;
+n.d(t, { A: () => a });
+var i = n(477900);
+n(582128);
+var r = n(503698),
+    l = n.n(r),
+    s = n(195500);
+function a(e) {
+    let { children: t, className: n, style: r, noBorder: a = !1, participantUserId: o, ref: u } = e;
     return (0, i.jsx)("div", {
-        className: s()(r, a.V, { [a.E]: o }),
-        style: l,
-        ref: t,
-        "data-selenium-video-tile": u,
+        className: l()(n, s.V, { [s.E]: a }),
+        style: r,
+        ref: u,
+        "data-selenium-video-tile": o,
         "data-call-tile": "",
-        children: n,
+        children: t,
     });
-});
+}

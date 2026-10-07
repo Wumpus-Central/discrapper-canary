@@ -3733,42 +3733,40 @@ function lU(e) {
 var lH = n(529777);
 let lD = { width: 500, height: K.$V },
     lw = { height: K.$V },
-    lW = o.memo(
-        o.forwardRef(function (e, t) {
-            let { context: n, entrypoint: l, initHistory: i } = e,
-                { analyticsLocations: s } = (0, m.Ay)(d.A.APP_LAUNCHER);
-            return (
-                o.useEffect(() => {
-                    (0, u.zV)(es.HAw.APPLICATION_COMMAND_TOP_OF_FUNNEL, { source: l, location: "app_launcher" });
-                }, [l]),
-                o.useEffect(() => {
-                    let e = Date.now();
-                    return () => {
-                        (0, u.zV)(es.HAw.APP_LAUNCHER_CLOSED, {
-                            reason: p.A.closeReason(),
-                            time_spent: Date.now() - e,
-                            source: l,
-                        });
-                    };
-                }, [l]),
-                (0, r.jsx)("div", {
-                    className: lH.jP,
-                    ref: t,
-                    style: lD,
-                    children: (0, r.jsx)("div", {
-                        className: lH.FG,
-                        children: (0, r.jsx)(m.f5, {
-                            value: s,
-                            children: (0, r.jsx)(lV, {
-                                initHistory: i,
-                                children: (0, r.jsx)(lB, { context: n, entrypoint: l }),
-                            }),
+    lW = o.memo(function (e) {
+        let { context: t, entrypoint: n, initHistory: l, ref: i } = e,
+            { analyticsLocations: s } = (0, m.Ay)(d.A.APP_LAUNCHER);
+        return (
+            o.useEffect(() => {
+                (0, u.zV)(es.HAw.APPLICATION_COMMAND_TOP_OF_FUNNEL, { source: n, location: "app_launcher" });
+            }, [n]),
+            o.useEffect(() => {
+                let e = Date.now();
+                return () => {
+                    (0, u.zV)(es.HAw.APP_LAUNCHER_CLOSED, {
+                        reason: p.A.closeReason(),
+                        time_spent: Date.now() - e,
+                        source: n,
+                    });
+                };
+            }, [n]),
+            (0, r.jsx)("div", {
+                className: lH.jP,
+                ref: i,
+                style: lD,
+                children: (0, r.jsx)("div", {
+                    className: lH.FG,
+                    children: (0, r.jsx)(m.f5, {
+                        value: s,
+                        children: (0, r.jsx)(lV, {
+                            initHistory: l,
+                            children: (0, r.jsx)(lB, { context: t, entrypoint: n }),
                         }),
                     }),
-                })
-            );
-        }),
-    );
+                }),
+            })
+        );
+    });
 function lV(e) {
     let { initHistory: t, children: n } = e,
         [l, i] = o.useState(t ?? [{ type: h.Wy.HOME }]),

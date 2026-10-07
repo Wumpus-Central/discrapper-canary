@@ -171,10 +171,10 @@ var ec = n(503698),
 n(46121);
 var ep = n(222358);
 let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
-    eE = l.forwardRef(function (e, t) {
-        let { location: n, memberCount: r, recipientLimit: s } = e,
+    eE = function (e) {
+        let { location: t, memberCount: n, recipientLimit: r, ref: s } = e,
             a = (0, ei.qH)(),
-            { enabled: u } = K.A.useConfig({ location: n }),
+            { enabled: u } = K.A.useConfig({ location: t }),
             d = (0, o.bG)([eA.Ay], () => eA.Ay.useReducedMotion),
             [c, h] = l.useState(!1),
             [f, g] = l.useState(!1),
@@ -182,7 +182,7 @@ let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
             p = l.useRef(1.4),
             I = l.useRef(null),
             S = l.useRef(null),
-            _ = (0, ei.yh)(a) && r >= s && u,
+            _ = (0, ei.yh)(a) && n >= r && u,
             N = l.useCallback(() => {
                 (A(p.current),
                     (p.current = Math.min(p.current + 2, 15)),
@@ -197,7 +197,7 @@ let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
                         (g(!1), (S.current = null));
                     }, 1e3)));
             }, []);
-        (l.useImperativeHandle(t, () => ({ shake: N }), [N]),
+        (l.useImperativeHandle(s, () => ({ shake: N }), [N]),
             l.useEffect(() => {
                 _ || (p.current = 1.4);
             }, [_]),
@@ -208,8 +208,8 @@ let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
                 [],
             ));
         let T = l.useCallback(() => {
-            en.default.track(el.HAw.PREMIUM_PROMOTION_OPENED, { location: n });
-        }, [n]);
+            en.default.track(el.HAw.PREMIUM_PROMOTION_OPENED, { location: t });
+        }, [t]);
         return (0, eg.p)(_, {
             from: { transform: "translateY(16px)", opacity: 0.4 },
             enter: { transform: "translateY(0)", opacity: 1 },
@@ -263,7 +263,7 @@ let em = { mass: 1, tension: 320, friction: 30, clamp: !0 },
                     }),
                 }),
         );
-    });
+    };
 var eI = n(683063),
     eS = n(84327);
 function e_(e) {

@@ -1631,27 +1631,27 @@ let nc = new Set(["Enter", "Tab"]),
     nu = new Set(["z", "y"]),
     nm = /[\n\t\r\f\v\x10]/;
 var ng = n(536233);
-let nx = R.forwardRef(function (e, t) {
-    let { value: n, isSelected: i, isEditing: l, forceShowErrorTooltip: s = !1, error: r } = e,
+function nx(e) {
+    let { value: t, isSelected: n, isEditing: i, forceShowErrorTooltip: l = !1, error: s, ref: r } = e,
         [a, o, d] = R.useMemo(() => {
-            if (null == r) return [];
-            let { erroringCharacterOffset: e = 0, erroringCharacterLength: t = n.length } = r ?? {};
-            return [n.slice(0, e), n.slice(e, e + t), n.slice(e + t)];
-        }, [n, r]);
-    return null == r
-        ? (0, p.jsx)("div", { className: k()(ng.n5, { [ng.JN]: l, [ng.sp]: i }), ref: t, children: n })
+            if (null == s) return [];
+            let { erroringCharacterOffset: e = 0, erroringCharacterLength: n = t.length } = s ?? {};
+            return [t.slice(0, e), t.slice(e, e + n), t.slice(e + n)];
+        }, [t, s]);
+    return null == s
+        ? (0, p.jsx)("div", { className: k()(ng.n5, { [ng.JN]: i, [ng.sp]: n }), ref: r, children: t })
         : (a?.length ?? 0) + (o?.length ?? 0) > 70
           ? (0, p.jsx)(t7.m, {
-                "aria-label": r.message,
+                "aria-label": s.message,
                 __unsupportedReactNodeAsText: (0, p.jsxs)("div", {
-                    "aria-label": r.message,
-                    children: [r.message, " ", (0, p.jsx)("span", { className: ng.io, children: o })],
+                    "aria-label": s.message,
+                    children: [s.message, " ", (0, p.jsx)("span", { className: ng.io, children: o })],
                 }),
                 position: "left",
-                forceOpen: s || void 0,
+                forceOpen: l || void 0,
                 children: (0, p.jsxs)("div", {
-                    ref: t,
-                    className: k()(ng.n5, { [ng.JN]: l, [ng.bJ]: null != r && !l, [ng.fR]: null != r && !l }),
+                    ref: r,
+                    className: k()(ng.n5, { [ng.JN]: i, [ng.bJ]: null != s && !i, [ng.fR]: null != s && !i }),
                     children: [
                         (0, p.jsx)("span", { children: a }),
                         (0, p.jsx)("span", { className: ng.SD, children: o }),
@@ -1660,20 +1660,20 @@ let nx = R.forwardRef(function (e, t) {
                 }),
             })
           : (0, p.jsxs)("div", {
-                ref: t,
-                className: k()(ng.n5, { [ng.JN]: l, [ng.bJ]: null != r && !l }),
+                ref: r,
+                className: k()(ng.n5, { [ng.JN]: i, [ng.bJ]: null != s && !i }),
                 children: [
                     (0, p.jsx)("span", { children: a }),
                     (0, p.jsx)(t7.m, {
-                        text: r.message,
+                        text: s.message,
                         position: "top",
-                        forceOpen: s || void 0,
+                        forceOpen: l || void 0,
                         children: (0, p.jsx)("span", { className: ng.SD, children: o }),
                     }),
                     (0, p.jsx)("span", { children: d }),
                 ],
             });
-});
+}
 function nh(e) {
     let {
             value: t,
@@ -1814,30 +1814,30 @@ function np(e) {
         });
     return (0, p.jsx)("div", { onMouseDown: l, className: nN.Di });
 }
-let nA = R.forwardRef(function (e, t) {
-    let { children: n, onFocus: i, onBlur: l, onClick: s } = e,
+function nA(e) {
+    let { children: t, onFocus: n, onBlur: i, onClick: l, ref: s } = e,
         r = R.useRef(null),
         [a, o] = R.useState(100);
     return (0, p.jsxs)(eM.D, {
         className: nN.Tg,
-        onFocus: i,
-        onBlur: l,
-        onClick: s,
+        onFocus: n,
+        onBlur: i,
+        onClick: l,
         innerRef: r,
         ignoreKeyPress: !0,
         style: { minHeight: a },
         children: [
-            (0, p.jsx)(nr.Ch, { className: nN.Fg, style: { minHeight: a - 2 }, ref: t, children: n }),
+            (0, p.jsx)(nr.Ch, { className: nN.Fg, style: { minHeight: a - 2 }, ref: s, children: t }),
             (0, p.jsx)(np, {
                 resizableNode: r,
                 onResize: o,
                 onResizeEnd: (e) => {
-                    (o(e), i?.());
+                    (o(e), n?.());
                 },
             }),
         ],
     });
-});
+}
 function nI(e) {
     let {
             initialValue: t,
@@ -9444,73 +9444,74 @@ class dQ extends R.PureComponent {
         });
     }
 }
-let dZ = R.forwardRef((e, t) => {
-    let n,
+function dZ(e) {
+    let t,
+        { ref: n, ...i } = e,
         {
-            log: i,
-            className: l,
-            expanded: s,
-            guildId: r,
-            guild: a,
-            onChannelContextMenu: o,
-            onContentClick: d,
-            onHeaderClick: c,
-            onTargetContextMenu: u,
-            onUserContextMenu: m,
-            theme: g,
-        } = e,
-        x = R.useRef(null),
-        h = dY.checkChangesToRender(i),
-        E = dJ.headerDefault;
-    s ? (E = dJ.headerExpanded) : h && (E = dJ.headerClickable);
-    let j = i.timestampStart.calendar(),
-        f = i.timestampEnd.calendar();
-    n =
-        j === f
-            ? (0, p.jsx)(G.E, { className: dJ.timestamp, variant: "text-sm/normal", children: j })
-            : (0, p.jsxs)(G.E, { className: dJ.timestamp, variant: "text-sm/normal", children: [j, "\u2014", f] });
-    let N = h ? c : ei.tEg;
+            log: l,
+            className: s,
+            expanded: r,
+            guildId: a,
+            guild: o,
+            onChannelContextMenu: d,
+            onContentClick: c,
+            onHeaderClick: u,
+            onTargetContextMenu: m,
+            onUserContextMenu: g,
+            theme: x,
+        } = i,
+        h = R.useRef(null),
+        E = dY.checkChangesToRender(l),
+        j = dJ.headerDefault;
+    r ? (j = dJ.headerExpanded) : E && (j = dJ.headerClickable);
+    let f = l.timestampStart.calendar(),
+        N = l.timestampEnd.calendar();
+    t =
+        f === N
+            ? (0, p.jsx)(G.E, { className: dJ.timestamp, variant: "text-sm/normal", children: f })
+            : (0, p.jsxs)(G.E, { className: dJ.timestamp, variant: "text-sm/normal", children: [f, "\u2014", N] });
+    let A = E ? u : ei.tEg;
     return (0, p.jsx)(dO.tG, {
-        id: i.id,
+        id: l.id,
         children: (e) =>
             (0, p.jsxs)("div", {
-                ref: t,
-                className: k()(dJ.auditLog, l),
+                ref: n,
+                className: k()(dJ.auditLog, s),
                 children: [
                     (0, p.jsxs)(eM.D, {
-                        className: E,
-                        "aria-expanded": s,
-                        onClick: N,
+                        className: j,
+                        "aria-expanded": r,
+                        onClick: A,
                         ...e,
                         children: [
-                            (0, p.jsx)(dW.H, { action: i.action, actionType: i.actionType, targetType: i.targetType }),
+                            (0, p.jsx)(dW.H, { action: l.action, actionType: l.actionType, targetType: l.targetType }),
                             (function () {
                                 let {
                                     user: e,
                                     userId: t,
                                     options: { integration_type: n },
-                                } = i;
+                                } = l;
                                 if (null != e && null != t)
                                     return (0, p.jsx)(dX.A, {
-                                        targetElementRef: x,
+                                        targetElementRef: h,
                                         user: e,
-                                        guildId: r,
+                                        guildId: a,
                                         newAnalyticsLocations: [a0.A.AVATAR],
                                         children: (e) =>
                                             (0, p.jsx)(ec.eu, {
                                                 ...e,
-                                                ref: x,
+                                                ref: h,
                                                 onClick: (t) => {
                                                     (t.stopPropagation(), e.onClick(t));
                                                 },
                                                 className: dJ.avatar,
                                                 src:
-                                                    i.action === ei.F_X.AUTO_MODERATION_BLOCK_MESSAGE ||
-                                                    i.action === ei.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL ||
-                                                    i.action === ei.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
-                                                    i.action === ei.F_X.AUTO_MODERATION_QUARANTINE_USER
+                                                    l.action === ei.F_X.AUTO_MODERATION_BLOCK_MESSAGE ||
+                                                    l.action === ei.F_X.AUTO_MODERATION_FLAG_TO_CHANNEL ||
+                                                    l.action === ei.F_X.AUTO_MODERATION_USER_COMMUNICATION_DISABLED ||
+                                                    l.action === ei.F_X.AUTO_MODERATION_QUARANTINE_USER
                                                         ? (0, dq.q)()
-                                                        : i.user?.getAvatarURL(r, 40),
+                                                        : l.user?.getAvatarURL(a, 40),
                                                 "aria-hidden": !0,
                                                 size: eu._3.SIZE_40,
                                             }),
@@ -9518,7 +9519,7 @@ let dZ = R.forwardRef((e, t) => {
                                 if (null != n) {
                                     let e = dK.A.get(n);
                                     if (null != e) {
-                                        let t = (0, oy.M)(g) ? e.icon.darkSVG : e.icon.lightSVG;
+                                        let t = (0, oy.M)(x) ? e.icon.darkSVG : e.icon.lightSVG;
                                         return (0, p.jsx)(ec.eu, {
                                             className: dJ.avatar,
                                             src: t,
@@ -9536,9 +9537,9 @@ let dZ = R.forwardRef((e, t) => {
                                         className: dJ.title,
                                         children: (function () {
                                             let e,
-                                                { user: t, target: n, options: l } = i;
+                                                { user: t, target: n, options: i } = l;
                                             e = (0, oF.fh)(n) ? n.name : n.toString();
-                                            let s = dY.getChangeTitle(i);
+                                            let s = dY.getChangeTitle(l);
                                             return null != s
                                                 ? (0, p.jsx)("div", {
                                                       className: dJ.overflowEllipsis,
@@ -9546,42 +9547,42 @@ let dZ = R.forwardRef((e, t) => {
                                                           user: t,
                                                           target: e,
                                                           userHook: (e, t) => {
-                                                              if (null != i.user)
+                                                              if (null != l.user)
                                                                   return (0, p.jsx)(
                                                                       dQ,
-                                                                      { user: i.user, onContextMenu: m },
+                                                                      { user: l.user, onContextMenu: g },
                                                                       t,
                                                                   );
-                                                              if (null != i.options.integration_type) {
-                                                                  let e = dK.A.get(i.options.integration_type);
+                                                              if (null != l.options.integration_type) {
+                                                                  let e = dK.A.get(l.options.integration_type);
                                                                   return e?.name ?? el.intl.string(el.t["n+olu7"]);
                                                               }
                                                               return el.intl.string(el.t["30mdIx"]);
                                                           },
                                                           targetHook: (e, t) =>
-                                                              i.targetType === ei.GaG.USER && i.target instanceof dz.A
+                                                              l.targetType === ei.GaG.USER && l.target instanceof dz.A
                                                                   ? (0, p.jsx)(
                                                                         dQ,
-                                                                        { user: i.target, onContextMenu: u },
+                                                                        { user: l.target, onContextMenu: m },
                                                                         t,
                                                                     )
                                                                   : (0, p.jsx)(
                                                                         "span",
-                                                                        { onContextMenu: u, children: e },
+                                                                        { onContextMenu: m, children: e },
                                                                         t,
                                                                     ),
-                                                          count: l.count ?? "",
-                                                          member: l.member ?? null,
+                                                          count: i.count ?? "",
+                                                          member: i.member ?? null,
                                                           memberHook: (e, t) => {
                                                               var n;
                                                               return (
-                                                                  (n = l.member ?? null),
+                                                                  (n = i.member ?? null),
                                                                   null != n
-                                                                      ? (0, p.jsx)(dQ, { user: n, onContextMenu: u }, t)
+                                                                      ? (0, p.jsx)(dQ, { user: n, onContextMenu: m }, t)
                                                                       : (0, p.jsx)(
                                                                             "span",
                                                                             {
-                                                                                onContextMenu: u,
+                                                                                onContextMenu: m,
                                                                                 children: el.intl.string(
                                                                                     el.t["30mdIx"],
                                                                                 ),
@@ -9590,60 +9591,60 @@ let dZ = R.forwardRef((e, t) => {
                                                                         )
                                                               );
                                                           },
-                                                          uniqueCount: l.unique_count ?? "",
+                                                          uniqueCount: i.unique_count ?? "",
                                                           channel:
-                                                              null == l.channel || "string" == typeof l.channel
-                                                                  ? l.channel
-                                                                  : (0, eq.m1)(l.channel, Z.default, e7.A, !0),
+                                                              null == i.channel || "string" == typeof i.channel
+                                                                  ? i.channel
+                                                                  : (0, eq.m1)(i.channel, Z.default, e7.A, !0),
                                                           channelHook: (e, t) =>
-                                                              (0, p.jsx)("span", { onContextMenu: o, children: e }, t),
-                                                          subtarget: l.subtarget,
+                                                              (0, p.jsx)("span", { onContextMenu: d, children: e }, t),
+                                                          subtarget: i.subtarget,
                                                       }),
                                                   })
                                                 : null;
                                         })(),
                                     }),
-                                    n,
+                                    t,
                                 ],
                             }),
-                            h
+                            E
                                 ? (0, p.jsx)(rn.A, {
                                       className: dJ.expand,
                                       foreground: dJ.expandForeground,
-                                      expanded: s,
+                                      expanded: r,
                                       "aria-hidden": !0,
                                   })
                                 : null,
                         ],
                     }),
-                    s ? (0, p.jsx)("div", { className: dJ.divider }) : null,
-                    s && null != a ? (0, p.jsx)(dW.r, { log: i, guild: a, onContentClick: d }) : null,
+                    r ? (0, p.jsx)("div", { className: dJ.divider }) : null,
+                    r && null != o ? (0, p.jsx)(dW.r, { log: l, guild: o, onContentClick: c }) : null,
                 ],
             }),
     });
-});
+}
 dZ.displayName = "GuildSettingsAuditLogEntry";
 let d$ = L.Ay.connectStores([ol.A], () => ({ theme: ol.A.theme }), { forwardRef: !0 })(dZ);
 var d0 = n(521219),
     d1 = n(187065);
-let d2 = R.forwardRef((e, t) => {
-    let { onHeaderClick: i, guildId: l, guild: s, ...r } = e;
-    return null == l
+function d2(e) {
+    let { onHeaderClick: t, guildId: i, guild: l, ref: s, ...r } = e;
+    return null == i
         ? null
         : (0, p.jsx)(d$, {
-              ref: t,
+              ref: s,
               ...r,
-              guildId: l,
-              guild: s,
+              guildId: i,
+              guild: l,
               onHeaderClick: function () {
                   let { log: e } = r;
-                  i?.(e);
+                  t?.(e);
               },
               onUserContextMenu: function (e) {
                   let { log: t } = r,
-                      { user: i } = t;
-                  null != i &&
-                      null != l &&
+                      { user: l } = t;
+                  null != l &&
+                      null != i &&
                       (0, nY.L3)(e, async () => {
                           let { default: e } = await Promise.all([
                               n.e("926132"),
@@ -9653,15 +9654,15 @@ let d2 = R.forwardRef((e, t) => {
                               n.e("70515"),
                               n.e("376926"),
                           ]).then(n.bind(n, 422189));
-                          return (t) => (0, p.jsx)(e, { ...t, guildId: l, user: i });
+                          return (t) => (0, p.jsx)(e, { ...t, guildId: i, user: l });
                       });
               },
               onChannelContextMenu: function (e) {
                   let { log: t } = r,
-                      i = t9.A.getGuild(l);
+                      l = t9.A.getGuild(i);
                   null != t.options.channel &&
                       "string" != typeof t.options.channel &&
-                      null != i &&
+                      null != l &&
                       (0, nY.L3)(e, async () => {
                           let { default: e } = await Promise.all([
                               n.e("926132"),
@@ -9678,9 +9679,9 @@ let d2 = R.forwardRef((e, t) => {
                   switch (t.targetType) {
                       case ei.GaG.CHANNEL:
                       case ei.GaG.CHANNEL_OVERWRITE:
-                          let i = e6.A.getChannel(t.targetId),
-                              s = t9.A.getGuild(l);
-                          if (null != i && null != s)
+                          let l = e6.A.getChannel(t.targetId),
+                              s = t9.A.getGuild(i);
+                          if (null != l && null != s)
                               return (0, nY.L3)(e, async () => {
                                   let { default: e } = await Promise.all([
                                       n.e("926132"),
@@ -9688,15 +9689,15 @@ let d2 = R.forwardRef((e, t) => {
                                       n.e("421060"),
                                       n.e("23440"),
                                   ]).then(n.bind(n, 194195));
-                                  return (t) => (0, p.jsx)(e, { ...t, channel: i });
+                                  return (t) => (0, p.jsx)(e, { ...t, channel: l });
                               });
                           return (0, nY.L3)(e, async () => {
                               let { default: e } = await n.e("715687").then(n.bind(n, 646938));
                               return (n) => (0, p.jsx)(e, { ...n, id: t.targetId, label: el.intl.string(el.t.rCazna) });
                           });
                       case ei.GaG.USER: {
-                          let i = t.options.member ?? Z.default.getUser(t.options.member_id ?? t.targetId);
-                          if (null != i && null != l)
+                          let l = t.options.member ?? Z.default.getUser(t.options.member_id ?? t.targetId);
+                          if (null != l && null != i)
                               return (0, nY.L3)(e, async () => {
                                   let { default: e } = await Promise.all([
                                       n.e("926132"),
@@ -9706,14 +9707,14 @@ let d2 = R.forwardRef((e, t) => {
                                       n.e("70515"),
                                       n.e("376926"),
                                   ]).then(n.bind(n, 422189));
-                                  return (t) => (0, p.jsx)(e, { ...t, guildId: l, user: i });
+                                  return (t) => (0, p.jsx)(e, { ...t, guildId: i, user: l });
                               });
                       }
                   }
                   return null;
               },
           });
-});
+}
 function d3(e) {
     let {
             logs: t,
@@ -20163,36 +20164,36 @@ class Em extends R.PureComponent {
         });
     };
 }
-let Eg = R.forwardRef(function (e, t) {
-    let { guild: n, sortedBans: i, bans: l } = e,
+function Eg(e) {
+    let { guild: t, sortedBans: n, bans: i, ref: l } = e,
         s = R.useCallback(
             (e) => {
-                if (null == l && 0 === e) return 60;
-                let t = i[e],
-                    n = l?.get(t?.id ?? "");
-                return 60 * (null != t && null != n);
+                if (null == i && 0 === e) return 60;
+                let t = n[e],
+                    l = i?.get(t?.id ?? "");
+                return 60 * (null != t && null != l);
             },
-            [l, i],
+            [i, n],
         ),
         r = R.useCallback(
             (e) => {
-                if (null == l && 0 === e)
+                if (null == i && 0 === e)
                     return (0, p.jsx)(eO.y, { className: Eu.u1, type: eO.y.Type.SPINNING_CIRCLE }, "spinner");
-                let t = i[e],
-                    s = l?.get(t?.id ?? "");
-                if (null != t && null != s) return (0, p.jsx)(Em, { user: t, ban: s, guild: n }, t.id);
+                let l = n[e],
+                    s = i?.get(l?.id ?? "");
+                if (null != l && null != s) return (0, p.jsx)(Em, { user: l, ban: s, guild: t }, l.id);
             },
-            [l, n, i],
+            [i, t, n],
         );
     return (0, p.jsx)(Eo.A, {
         role: "listbox",
         listPadding: [8, 8, 8, 8],
-        rowCount: i.length,
+        rowCount: n.length,
         rowHeight: s,
         renderRow: r,
-        ref: t,
+        ref: l,
     });
-});
+}
 function Ex(e) {
     let { guildId: t, storedSearchQuery: n } = e,
         [i, l] = R.useState(n ?? ""),

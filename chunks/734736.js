@@ -1,14 +1,15 @@
-r.d(t, { A: () => o });
-var s = r(477900),
-    n = r(582128),
-    i = r(503698),
-    l = r.n(i),
-    a = r(403581),
-    u = r(289768);
-let o = n.forwardRef(function (e, t) {
-    return (0, s.jsx)("div", {
+s.d(t, { A: () => u });
+var r = s(477900);
+s(582128);
+var n = s(503698),
+    i = s.n(n),
+    l = s(403581),
+    a = s(289768);
+let u = function (e) {
+    let { ref: t, ...s } = e;
+    return (0, r.jsx)("div", {
         ref: t,
-        className: l()(u.R, e.className),
-        children: (0, s.jsx)(a.t, { size: "lg", className: u.Q, color: "white" }),
+        className: i()(a.R, s.className),
+        children: (0, r.jsx)(l.t, { size: "lg", className: a.Q, color: "white" }),
     });
-});
+};

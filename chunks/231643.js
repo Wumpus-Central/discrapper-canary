@@ -15,16 +15,16 @@ var n = a(477900),
     g = a(867041),
     v = a(786574),
     j = a(730441);
-let f = l.forwardRef(function (e, t) {
-    let { id: a, selected: l, onClick: i, children: r } = e;
+function f(e) {
+    let { id: t, selected: a, onClick: l, children: i, ref: r } = e;
     return (0, n.jsx)(o.D, {
-        className: s()(j.V3, { [j.wH]: l }),
-        "data-tab-id": a,
-        innerRef: t,
-        onClick: i,
-        children: r,
+        className: s()(j.V3, { [j.wH]: a }),
+        "data-tab-id": t,
+        innerRef: r,
+        onClick: l,
+        children: i,
     });
-});
+}
 function b(e) {
     let { tabs: t, selectedTabId: a, onSelectTab: i } = e,
         s = l.useRef(new Map()),

@@ -197,27 +197,27 @@ let G = function (e) {
 };
 var B = l(779662),
     P = l(60433);
-let q = i.forwardRef(function (e, t) {
-    let { guild: l } = e,
+let q = function (e) {
+    let { guild: t, ref: l } = e,
         C = i.useRef(null),
-        a = (0, d.bG)([v.A], () => v.A.hasDefaultSearchStateByGuildId(l.id), [l.id]),
+        a = (0, d.bG)([v.A], () => v.A.hasDefaultSearchStateByGuildId(t.id), [t.id]),
         A = (0, d.bG)(
             [h.A, g.A, f.default],
-            () => (0, p.dQ)(h.A.getGuild(l.id) ?? l, f.default.getCurrentUser(), g.A),
-            [l],
+            () => (0, p.dQ)(h.A.getGuild(t.id) ?? t, f.default.getCurrentUser(), g.A),
+            [t],
         ),
         M = i.useCallback(() => {
-            null != l && A && (0, o.openModalLazy)(async () => (e) => (0, n.jsx)(G, { ...e, guild: l }));
-        }, [l, A]),
-        L = (0, d.bG)([v.A], () => v.A.getSearchStateByGuildId(l.id), [l.id], r()),
-        b = (0, j.Ks)(l.id),
+            null != t && A && (0, o.openModalLazy)(async () => (e) => (0, n.jsx)(G, { ...e, guild: t }));
+        }, [t, A]),
+        L = (0, d.bG)([v.A], () => v.A.getSearchStateByGuildId(t.id), [t.id], r()),
+        b = (0, j.Ks)(t.id),
         [D, R] = i.useState(L.query),
         E = i.useCallback(
             (e) => {
-                let t = e.trim();
-                (t.length > 0 && b(), (0, V.Ld)(l.id, { query: t }));
+                let l = e.trim();
+                (l.length > 0 && b(), (0, V.Ld)(t.id, { query: l }));
             },
-            [l.id, b],
+            [t.id, b],
         ),
         S = i.useMemo(() => s()(E, 300), [E]),
         N = i.useCallback(
@@ -230,7 +230,7 @@ let q = i.forwardRef(function (e, t) {
             (R(""), E(""));
         }, [E]);
     return (
-        i.useImperativeHandle(t, () => ({
+        i.useImperativeHandle(l, () => ({
             resetSearchText() {
                 R("");
             },
@@ -267,8 +267,8 @@ let q = i.forwardRef(function (e, t) {
                         spacing: 4,
                         align: "left",
                         renderPopout: (e) => {
-                            let { closePopout: t } = e;
-                            return (0, n.jsx)(B.default, { guildId: l.id, onClose: t });
+                            let { closePopout: l } = e;
+                            return (0, n.jsx)(B.default, { guildId: t.id, onClose: l });
                         },
                         children: (e) => {
                             let { onClick: t, ...l } = e;
@@ -303,4 +303,4 @@ let q = i.forwardRef(function (e, t) {
             ],
         })
     );
-});
+};

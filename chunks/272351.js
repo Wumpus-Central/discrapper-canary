@@ -443,16 +443,16 @@ function eJ(e) {
         }),
     });
 }
-let e0 = a.forwardRef((e, t) => {
-    let { isPlaying: l, onProgressChange: a, children: i } = e;
+function e0(e) {
+    let { isPlaying: t, onProgressChange: l, children: a, ref: i } = e;
     return (0, n.jsx)(eF.d, {
-        ref: t,
-        isPlaying: l,
+        ref: i,
+        isPlaying: t,
         preload: "none",
-        onProgressChange: a,
-        children: (0, n.jsx)(eH.h, { isVisible: !0, className: eW.Lw, children: i }),
+        onProgressChange: l,
+        children: (0, n.jsx)(eH.h, { isVisible: !0, className: eW.Lw, children: a }),
     });
-});
+}
 function e1(e) {
     let {
             isNew: t,

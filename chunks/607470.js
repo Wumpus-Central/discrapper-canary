@@ -1,12 +1,13 @@
-n.d(t, { A: () => d });
-var i = n(477900),
-    r = n(582128),
-    a = n(299619),
-    s = n(17928),
-    l = n(775602);
-let o = r.forwardRef((e, t) => {
-    let n = (0, s.bG)([l.Ay], () => l.Ay.useReducedMotion);
-    return (0, i.jsx)(a.A, { ...e, ref: t, useReducedMotion: n });
-});
-o.displayName = "Video";
-let d = o;
+n.d(t, { A: () => o });
+var i = n(477900);
+n(582128);
+var r = n(299619),
+    a = n(17928),
+    s = n(775602);
+function l(e) {
+    let { ref: t, ...n } = e,
+        l = (0, a.bG)([s.Ay], () => s.Ay.useReducedMotion);
+    return (0, i.jsx)(r.A, { ...n, ref: t, useReducedMotion: l });
+}
+l.displayName = "Video";
+let o = l;

@@ -34,8 +34,8 @@ var l = n(477900),
     O = n(427262),
     $ = n(448613),
     V = n(866665),
-    w = n(460905),
-    k = n(110384),
+    k = n(460905),
+    w = n(110384),
     F = n(365199),
     Y = n(101555),
     D = n(570287),
@@ -98,7 +98,7 @@ function q(e) {
                           className: B.x6,
                           "aria-label": z[n](),
                           "aria-haspopup": "dialog",
-                          children: (0, l.jsx)(w.n, { size: "xs", className: B.Kk }),
+                          children: (0, l.jsx)(k.n, { size: "xs", className: B.Kk }),
                       }),
                   }),
                   (0, l.jsx)(V.m, {
@@ -120,7 +120,7 @@ function q(e) {
                           className: B.x6,
                           "aria-label": K[n](),
                           "aria-haspopup": "dialog",
-                          children: (0, l.jsx)(k.W, { size: "xs", className: B.Kk }),
+                          children: (0, l.jsx)(w.W, { size: "xs", className: B.Kk }),
                       }),
                   }),
                   f?.((e) =>
@@ -510,256 +510,239 @@ function eE(e) {
         }),
     });
 }
-let eR = i.forwardRef(function (e, t) {
-        let { onCloseProfile: i, prompt: r, addButtonRef: s } = e,
-            o = (0, R.GV)(),
-            { analyticsLocations: u } = (0, E.Ay)(),
-            { trackUserProfileAction: T } = (0, P.NJ)(),
-            { themeType: h } = (0, W.E)(),
-            m = null != r ? r.label() : H.intl.string(H.t.evw0oz),
-            g = (0, l.jsxs)("div", {
-                className: ex.Qs,
-                children: [
-                    (0, l.jsx)(d.U, { size: "xs", className: ex.Tw, colorClass: ex.qv }),
-                    (0, l.jsx)(f.E, {
-                        variant: "text-sm/normal",
-                        className: a()(ex.ch, null != r && ex.R9),
-                        children: m,
-                    }),
-                ],
-            });
-        return (0, l.jsxs)(l.Fragment, {
+function eR(e) {
+    let { onCloseProfile: t, prompt: i, addButtonRef: r, ref: s } = e,
+        o = (0, R.GV)(),
+        { analyticsLocations: u } = (0, E.Ay)(),
+        { trackUserProfileAction: T } = (0, P.NJ)(),
+        { themeType: h } = (0, W.E)(),
+        m = null != i ? i.label() : H.intl.string(H.t.evw0oz),
+        g = (0, l.jsxs)("div", {
+            className: ex.Qs,
             children: [
-                (0, l.jsx)(eE, { children: g }),
-                (0, l.jsx)("div", {
-                    className: a()(ex.kL, ex.LL),
-                    ref: t,
-                    children: (0, l.jsx)(A.D, {
-                        innerRef: s,
-                        className: ex.A7,
-                        "aria-label": H.intl.string(H.t["zrpF/b"]),
-                        "aria-describedby": o,
-                        onClick: function () {
-                            (T({ action: "PRESS_ADD_CUSTOM_STATUS" }),
-                                i?.(),
-                                (0, c.openModalLazy)(
-                                    async () => {
-                                        let { default: e } = await Promise.all([
-                                            n.e("775417"),
-                                            n.e("865429"),
-                                            n.e("25300"),
-                                            n.e("291103"),
-                                            n.e("686889"),
-                                            n.e("875762"),
-                                            n.e("526807"),
-                                            n.e("193158"),
-                                            n.e("455924"),
-                                            n.e("250478"),
-                                            n.e("348900"),
-                                            n.e("356296"),
-                                            n.e("220287"),
-                                            n.e("428367"),
-                                            n.e("655552"),
-                                            n.e("772163"),
-                                            n.e("689122"),
-                                        ]).then(n.bind(n, 657977));
-                                        return (t) =>
-                                            (0, l.jsx)(e, {
-                                                ...t,
-                                                sourceAnalyticsLocations: u,
-                                                prompt: r,
-                                                returnRef: s,
-                                            });
-                                    },
-                                    h === ed.d.MODAL_V2 ? { stackingBehavior: "stack" } : void 0,
-                                ));
-                        },
-                        focusProps: { ringClassName: ex.hN },
-                        children: (0, l.jsxs)("span", {
-                            className: a()(ex.vW, ex.vk),
-                            children: [
-                                (0, l.jsx)(d.U, { size: "xs", className: ex.Tw, colorClass: ex.qv }),
-                                (0, l.jsxs)(S.A, { id: o, children: [H.intl.string(H.t.EVV6uZ), ": ", m] }),
-                                (0, l.jsx)(f.E, {
-                                    variant: "text-sm/normal",
-                                    className: a()(ex.ch, null != r && ex.R9),
-                                    "aria-hidden": "true",
-                                    children: m,
-                                }),
-                            ],
-                        }),
-                    }),
-                }),
+                (0, l.jsx)(d.U, { size: "xs", className: ex.Tw, colorClass: ex.qv }),
+                (0, l.jsx)(f.E, { variant: "text-sm/normal", className: a()(ex.ch, null != i && ex.R9), children: m }),
             ],
         });
-    }),
-    ep = i.forwardRef(function (e, t) {
-        let {
-                emoji: n,
-                text: r,
-                statusLabel: c,
-                themeType: d,
-                animate: x,
-                className: E,
-                referenceClassName: p,
-                renderToolbar: C,
-                onShowToolbar: y,
-                placeholderText: j,
-                hasEntered: v = !0,
-            } = e,
-            L = (0, N.NR)(),
-            { trackUserProfileAction: I } = (0, P.NJ)(),
-            _ = 1.25 * (null != n),
-            b = 36 + _,
-            U = 144 + _,
-            M = i.useRef(null),
-            O = i.useRef(null),
-            $ = i.useRef(null),
-            V = (0, R.GV)(),
-            w = i.useRef(b),
-            k = i.useRef(b),
-            F = null != n && null == r,
-            [Y, D] = i.useState(!1),
-            [B, Q] = i.useState(!0),
-            [z, K] = i.useState(!F && v),
-            [q, W] = i.useState(!1),
-            X = v && Y,
-            J = d === ed.d.MODAL || d === ed.d.MODAL_V2,
-            Z = i.useCallback((e) => (J ? e : Math.min(e, U)), [U, J]),
-            ee = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion),
-            [et] = i.useState(() => new u.Ep());
-        (i.useEffect(() => () => et.stop(), [et]),
-            i.useEffect(() => {
-                L?.onInteractionPopoutTargetRefChange(M);
-            }, [L]));
-        let [en, el] = (0, T.z)(() => ({ maxHeight: `${w.current}px`, config: { clamp: !0, duration: 150 } }));
-        function ei(e) {
-            z &&
-                (W(e),
-                e
-                    ? el({
-                          maxHeight: `${Z(k.current)}px`,
-                          delay: 300 * !ee,
-                          config: { clamp: !0, duration: 150 * !ee },
-                      })
-                    : el({ maxHeight: `${Math.min(w.current, b)}px`, delay: 0 }),
-                ee ? Q(!e) : et.start(e ? 300 : 150, () => Q(!e)));
-        }
-        i.useLayoutEffect(() => {
-            if ((D(!0), null == O.current || null == $.current || !X)) return;
-            let e = O.current.getBoundingClientRect().height,
-                t = $.current.getBoundingClientRect().height,
-                n = Z(t);
-            (K(n > e), (w.current = e), (k.current = t), el({ maxHeight: `${B ? Math.min(w.current, b) : n}px` }));
-        }, [X, r, n, el, B, b, Z]);
-        let er =
-                null != n
-                    ? (0, l.jsx)(g.A, { emoji: n, animate: x, hideTooltip: !1, tooltipDelay: G.In, className: ex.H0 })
-                    : null,
-            ea = null != r ? (0, l.jsx)(f.E, { variant: "text-sm/normal", className: ex.qS, children: r }) : null,
-            es =
-                void 0 !== j && null == n
-                    ? (0, l.jsx)(f.E, {
-                          variant: "text-sm/normal",
-                          color: "text-muted",
-                          "aria-label": `${H.intl.string(H.t.EVV6uZ)}: ${j}`,
-                          className: a()(ex.qS, ex.R9),
-                          children: j ?? "",
-                      })
-                    : null,
-            eo = null == ea || "" === r ? es : ea,
-            eu = (0, l.jsxs)("div", { className: ex.Qs, children: [er, eo] }),
-            ec = (0, l.jsxs)("div", { ref: O, className: a()(ex.Qs, ex.mj), children: [er, eo] }),
-            ef = (0, l.jsxs)("div", { ref: $, className: a()(ex.Qs, ex.m2, ex.mj), children: [er, eo] }),
-            eA = H.intl.string(q ? H.t.fFaN1b : H.t.xPkLPy),
-            eS = z
-                ? (0, l.jsx)(S.A, {
-                      showOnFocus: !0,
-                      children: (0, l.jsx)(A.D, {
-                          className: ex.uJ,
-                          "aria-label": eA,
-                          "aria-controls": V,
-                          "aria-expanded": q,
-                          onClick: () => ei(!q),
-                          focusProps: { ringClassName: ex.o5 },
-                          children: (0, l.jsx)(h.a, {
-                              size: "xs",
-                              color: "currentColor",
-                              className: q ? ex.DE : void 0,
-                          }),
-                      }),
-                  })
-                : null,
-            eT = (0, l.jsx)("div", {
-                ref: t,
-                className: ex.A7,
-                role: "group",
-                "aria-label": c,
-                children: (0, l.jsx)("span", {
-                    className: ex.vW,
-                    children: (0, l.jsxs)(s.animated.div, {
-                        id: V,
-                        style: en,
-                        className: a()(ex.Qs, { [ex.m2]: !B && J, [ex.p$]: !B && !J }),
-                        children: [er, eo],
+    return (0, l.jsxs)(l.Fragment, {
+        children: [
+            (0, l.jsx)(eE, { children: g }),
+            (0, l.jsx)("div", {
+                className: a()(ex.kL, ex.LL),
+                ref: s,
+                children: (0, l.jsx)(A.D, {
+                    innerRef: r,
+                    className: ex.A7,
+                    "aria-label": H.intl.string(H.t["zrpF/b"]),
+                    "aria-describedby": o,
+                    onClick: function () {
+                        (T({ action: "PRESS_ADD_CUSTOM_STATUS" }),
+                            t?.(),
+                            (0, c.openModalLazy)(
+                                async () => {
+                                    let { default: e } = await Promise.all([
+                                        n.e("775417"),
+                                        n.e("865429"),
+                                        n.e("25300"),
+                                        n.e("291103"),
+                                        n.e("686889"),
+                                        n.e("875762"),
+                                        n.e("526807"),
+                                        n.e("193158"),
+                                        n.e("455924"),
+                                        n.e("250478"),
+                                        n.e("348900"),
+                                        n.e("356296"),
+                                        n.e("220287"),
+                                        n.e("428367"),
+                                        n.e("655552"),
+                                        n.e("772163"),
+                                        n.e("689122"),
+                                    ]).then(n.bind(n, 657977));
+                                    return (t) =>
+                                        (0, l.jsx)(e, { ...t, sourceAnalyticsLocations: u, prompt: i, returnRef: r });
+                                },
+                                h === ed.d.MODAL_V2 ? { stackingBehavior: "stack" } : void 0,
+                            ));
+                    },
+                    focusProps: { ringClassName: ex.hN },
+                    children: (0, l.jsxs)("span", {
+                        className: a()(ex.vW, ex.vk),
+                        children: [
+                            (0, l.jsx)(d.U, { size: "xs", className: ex.Tw, colorClass: ex.qv }),
+                            (0, l.jsxs)(S.A, { id: o, children: [H.intl.string(H.t.EVV6uZ), ": ", m] }),
+                            (0, l.jsx)(f.E, {
+                                variant: "text-sm/normal",
+                                className: a()(ex.ch, null != i && ex.R9),
+                                "aria-hidden": "true",
+                                children: m,
+                            }),
+                        ],
                     }),
                 }),
             }),
-            eh = (0, l.jsxs)(eE, { className: p, children: [eu, ec, ef] });
-        return null == y
-            ? (0, l.jsxs)(l.Fragment, {
-                  children: [
-                      eh,
-                      (0, l.jsxs)("div", {
-                          ref: M,
-                          className: a()(ex.kL, E),
-                          onMouseEnter: () => {
-                              (I({ action: "HOVER_CUSTOM_STATUS" }), ei(!0));
-                          },
-                          onMouseLeave: () => {
-                              ei(!1);
-                          },
-                          children: [eT, C?.(z), eS],
-                      }),
-                  ],
-              })
-            : (0, l.jsxs)(l.Fragment, {
-                  children: [
-                      eh,
-                      (0, l.jsxs)("div", {
-                          ref: M,
-                          className: a()(ex.kL, E),
-                          onFocus: () => {
-                              y(!0);
-                          },
-                          onBlur: (e) => {
-                              M.current?.contains(e.relatedTarget) || y(!1);
-                          },
-                          onMouseEnter: () => {
-                              (I({ action: "HOVER_CUSTOM_STATUS" }), y(!0), ei(!0));
-                          },
-                          onMouseLeave: () => {
-                              (y(!1), ei(!1));
-                          },
-                          children: [eT, C?.(z), eS],
-                      }),
-                  ],
-              });
-    }),
-    eC = i.forwardRef(function (e, t) {
-        let { emoji: n, text: r, onCloseProfile: s, editButtonRef: o, className: u, ...c } = e,
-            [d, f] = i.useState(!1);
-        return (0, l.jsx)(ep, {
-            ...c,
-            ref: t,
-            emoji: n,
-            text: r,
-            className: a()(ex.LL, u),
-            onShowToolbar: f,
-            renderToolbar: (e) =>
-                (0, l.jsx)(eg, { isVisible: d, isExpandable: e, onCloseProfile: s, editButtonRef: o }),
-        });
+        ],
     });
+}
+function ep(e) {
+    let {
+            emoji: t,
+            text: n,
+            statusLabel: r,
+            themeType: c,
+            animate: d,
+            className: x,
+            referenceClassName: E,
+            renderToolbar: p,
+            onShowToolbar: C,
+            placeholderText: y,
+            hasEntered: j = !0,
+            ref: v,
+        } = e,
+        L = (0, N.NR)(),
+        { trackUserProfileAction: I } = (0, P.NJ)(),
+        _ = 1.25 * (null != t),
+        b = 36 + _,
+        U = 144 + _,
+        M = i.useRef(null),
+        O = i.useRef(null),
+        $ = i.useRef(null),
+        V = (0, R.GV)(),
+        k = i.useRef(b),
+        w = i.useRef(b),
+        F = null != t && null == n,
+        [Y, D] = i.useState(!1),
+        [B, Q] = i.useState(!0),
+        [z, K] = i.useState(!F && j),
+        [q, W] = i.useState(!1),
+        X = j && Y,
+        J = c === ed.d.MODAL || c === ed.d.MODAL_V2,
+        Z = i.useCallback((e) => (J ? e : Math.min(e, U)), [U, J]),
+        ee = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion),
+        [et] = i.useState(() => new u.Ep());
+    (i.useEffect(() => () => et.stop(), [et]),
+        i.useEffect(() => {
+            L?.onInteractionPopoutTargetRefChange(M);
+        }, [L]));
+    let [en, el] = (0, T.z)(() => ({ maxHeight: `${k.current}px`, config: { clamp: !0, duration: 150 } }));
+    function ei(e) {
+        z &&
+            (W(e),
+            e
+                ? el({ maxHeight: `${Z(w.current)}px`, delay: 300 * !ee, config: { clamp: !0, duration: 150 * !ee } })
+                : el({ maxHeight: `${Math.min(k.current, b)}px`, delay: 0 }),
+            ee ? Q(!e) : et.start(e ? 300 : 150, () => Q(!e)));
+    }
+    i.useLayoutEffect(() => {
+        if ((D(!0), null == O.current || null == $.current || !X)) return;
+        let e = O.current.getBoundingClientRect().height,
+            t = $.current.getBoundingClientRect().height,
+            n = Z(t);
+        (K(n > e), (k.current = e), (w.current = t), el({ maxHeight: `${B ? Math.min(k.current, b) : n}px` }));
+    }, [X, n, t, el, B, b, Z]);
+    let er =
+            null != t
+                ? (0, l.jsx)(g.A, { emoji: t, animate: d, hideTooltip: !1, tooltipDelay: G.In, className: ex.H0 })
+                : null,
+        ea = null != n ? (0, l.jsx)(f.E, { variant: "text-sm/normal", className: ex.qS, children: n }) : null,
+        es =
+            void 0 !== y && null == t
+                ? (0, l.jsx)(f.E, {
+                      variant: "text-sm/normal",
+                      color: "text-muted",
+                      "aria-label": `${H.intl.string(H.t.EVV6uZ)}: ${y}`,
+                      className: a()(ex.qS, ex.R9),
+                      children: y ?? "",
+                  })
+                : null,
+        eo = null == ea || "" === n ? es : ea,
+        eu = (0, l.jsxs)("div", { className: ex.Qs, children: [er, eo] }),
+        ec = (0, l.jsxs)("div", { ref: O, className: a()(ex.Qs, ex.mj), children: [er, eo] }),
+        ef = (0, l.jsxs)("div", { ref: $, className: a()(ex.Qs, ex.m2, ex.mj), children: [er, eo] }),
+        eA = H.intl.string(q ? H.t.fFaN1b : H.t.xPkLPy),
+        eS = z
+            ? (0, l.jsx)(S.A, {
+                  showOnFocus: !0,
+                  children: (0, l.jsx)(A.D, {
+                      className: ex.uJ,
+                      "aria-label": eA,
+                      "aria-controls": V,
+                      "aria-expanded": q,
+                      onClick: () => ei(!q),
+                      focusProps: { ringClassName: ex.o5 },
+                      children: (0, l.jsx)(h.a, { size: "xs", color: "currentColor", className: q ? ex.DE : void 0 }),
+                  }),
+              })
+            : null,
+        eT = (0, l.jsx)("div", {
+            ref: v,
+            className: ex.A7,
+            role: "group",
+            "aria-label": r,
+            children: (0, l.jsx)("span", {
+                className: ex.vW,
+                children: (0, l.jsxs)(s.animated.div, {
+                    id: V,
+                    style: en,
+                    className: a()(ex.Qs, { [ex.m2]: !B && J, [ex.p$]: !B && !J }),
+                    children: [er, eo],
+                }),
+            }),
+        }),
+        eh = (0, l.jsxs)(eE, { className: E, children: [eu, ec, ef] });
+    return null == C
+        ? (0, l.jsxs)(l.Fragment, {
+              children: [
+                  eh,
+                  (0, l.jsxs)("div", {
+                      ref: M,
+                      className: a()(ex.kL, x),
+                      onMouseEnter: () => {
+                          (I({ action: "HOVER_CUSTOM_STATUS" }), ei(!0));
+                      },
+                      onMouseLeave: () => {
+                          ei(!1);
+                      },
+                      children: [eT, p?.(z), eS],
+                  }),
+              ],
+          })
+        : (0, l.jsxs)(l.Fragment, {
+              children: [
+                  eh,
+                  (0, l.jsxs)("div", {
+                      ref: M,
+                      className: a()(ex.kL, x),
+                      onFocus: () => {
+                          C(!0);
+                      },
+                      onBlur: (e) => {
+                          M.current?.contains(e.relatedTarget) || C(!1);
+                      },
+                      onMouseEnter: () => {
+                          (I({ action: "HOVER_CUSTOM_STATUS" }), C(!0), ei(!0));
+                      },
+                      onMouseLeave: () => {
+                          (C(!1), ei(!1));
+                      },
+                      children: [eT, p?.(z), eS],
+                  }),
+              ],
+          });
+}
+function eC(e) {
+    let { emoji: t, text: n, onCloseProfile: r, editButtonRef: s, className: o, ref: u, ...c } = e,
+        [d, f] = i.useState(!1);
+    return (0, l.jsx)(ep, {
+        ...c,
+        ref: u,
+        emoji: t,
+        text: n,
+        className: a()(ex.LL, o),
+        onShowToolbar: f,
+        renderToolbar: (e) => (0, l.jsx)(eg, { isVisible: d, isExpandable: e, onCloseProfile: r, editButtonRef: s }),
+    });
+}
 function ey(e) {
     let t,
         { emoji: n, text: r, user: s, guildId: o, channelId: u, themeType: c, className: d, ...f } = e,
@@ -813,73 +796,74 @@ function ey(e) {
             }),
     });
 }
-let ej = i.forwardRef(function (e, t) {
-    let {
-            user: n,
-            guildId: r,
-            channelId: a,
-            onCloseProfile: s,
-            previewText: u,
-            previewEmoji: c,
-            placeholderText: d,
-            prompt: f,
-            disableToolbar: A = !1,
-            ...S
-        } = e,
-        T = (0, p.A)(n.id),
-        { analyticsLocations: h } = (0, E.Ay)(x.A.USER_PROFILE_CUSTOM_STATUS_BUBBLE),
-        m = i.useRef(null),
-        g = null != u || null != c,
-        R = (0, y.G)(g ? u : T?.state),
-        C = (0, o.bG)([j.default], () => j.default.getId() === n.id),
-        P = C && !A,
-        N = v.Ay.useName(r, a, n),
-        L = C ? H.intl.string(H.t.SlKMnR) : H.intl.formatToPlainString(H.t["91lTRe"], { name: N }),
-        I = !C && !n.bot && !A;
-    if (g) {
-        let e = null != R && "" !== R ? R : null;
+let ej = function (e) {
+    let { ref: t, ...n } = e,
+        {
+            user: r,
+            guildId: a,
+            channelId: s,
+            onCloseProfile: u,
+            previewText: c,
+            previewEmoji: d,
+            placeholderText: f,
+            prompt: A,
+            disableToolbar: S = !1,
+            ...T
+        } = n,
+        h = (0, p.A)(r.id),
+        { analyticsLocations: m } = (0, E.Ay)(x.A.USER_PROFILE_CUSTOM_STATUS_BUBBLE),
+        g = i.useRef(null),
+        R = null != c || null != d,
+        C = (0, y.G)(R ? c : h?.state),
+        P = (0, o.bG)([j.default], () => j.default.getId() === r.id),
+        N = P && !S,
+        L = v.Ay.useName(a, s, r),
+        I = P ? H.intl.string(H.t.SlKMnR) : H.intl.formatToPlainString(H.t["91lTRe"], { name: L }),
+        _ = !P && !r.bot && !S;
+    if (R) {
+        let e = null != C && "" !== C ? C : null;
         return (0, l.jsx)(E.f5, {
-            value: h,
-            children: (0, l.jsx)(ep, { emoji: c ?? null, text: e, statusLabel: L, placeholderText: d, ref: t, ...S }),
+            value: m,
+            children: (0, l.jsx)(ep, { emoji: d ?? null, text: e, statusLabel: I, placeholderText: f, ref: t, ...T }),
         });
     }
-    let _ = T?.emoji ?? null,
-        b = null != R && "" !== R ? R : null;
-    return null != _ || null != b || P
-        ? null == _ && null == b
+    let b = h?.emoji ?? null,
+        U = null != C && "" !== C ? C : null;
+    return null != b || null != U || N
+        ? null == b && null == U
             ? (0, l.jsx)(E.f5, {
-                  value: h,
-                  children: (0, l.jsx)(eR, { onCloseProfile: s, prompt: f, ref: t, addButtonRef: m }),
+                  value: m,
+                  children: (0, l.jsx)(eR, { onCloseProfile: u, prompt: A, ref: t, addButtonRef: g }),
               })
-            : I
+            : _
               ? (0, l.jsx)(E.f5, {
-                    value: h,
+                    value: m,
                     children: (0, l.jsx)(ey, {
-                        user: n,
-                        guildId: r,
-                        channelId: a,
-                        emoji: _,
-                        text: b,
-                        statusLabel: L,
-                        ...S,
+                        user: r,
+                        guildId: a,
+                        channelId: s,
+                        emoji: b,
+                        text: U,
+                        statusLabel: I,
+                        ...T,
                     }),
                 })
-              : P
+              : N
                 ? (0, l.jsx)(E.f5, {
-                      value: h,
+                      value: m,
                       children: (0, l.jsx)(eC, {
-                          emoji: _,
-                          text: b,
-                          statusLabel: L,
-                          onCloseProfile: s,
-                          editButtonRef: m,
+                          emoji: b,
+                          text: U,
+                          statusLabel: I,
+                          onCloseProfile: u,
+                          editButtonRef: g,
                           ref: t,
-                          ...S,
+                          ...T,
                       }),
                   })
                 : (0, l.jsx)(E.f5, {
-                      value: h,
-                      children: (0, l.jsx)(ep, { emoji: _, text: b, statusLabel: L, ref: t, ...S }),
+                      value: m,
+                      children: (0, l.jsx)(ep, { emoji: b, text: U, statusLabel: I, ref: t, ...T }),
                   })
         : null;
-});
+};

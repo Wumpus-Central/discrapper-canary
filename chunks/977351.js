@@ -751,33 +751,33 @@ var eD = n(964661),
     eW = n(765671),
     ez = n(573999);
 function e$() {}
-let eq = i.forwardRef(function (e, t) {
-    let { icon: n, label: o, selected: l = !1, decoration: a, showHoverGradient: r = !1 } = e,
+function eq(e) {
+    let { icon: t, label: n, selected: o = !1, decoration: l, showHoverGradient: a = !1, ref: r } = e,
         { width: i, ref: d } = (0, eW.Ay)(),
-        s = (0, ej.A)(t, d);
+        s = (0, ej.A)(r, d);
     return (0, p.jsxs)("button", {
         ref: s,
         type: "button",
-        className: eF()(ez.pc, { [ez.EV]: l }),
+        className: eF()(ez.pc, { [ez.EV]: o }),
         onClick: e$,
         children: [
-            r && (0, p.jsx)(eY.ls, { eventTargetRef: d, isNitro: !0, contentWidth: i }),
+            a && (0, p.jsx)(eY.ls, { eventTargetRef: d, isNitro: !0, contentWidth: i }),
             (0, p.jsxs)("span", {
                 className: ez.Hq,
                 children: [
-                    (0, p.jsx)(n, { size: "md", color: "currentColor" }),
+                    (0, p.jsx)(t, { size: "md", color: "currentColor" }),
                     (0, p.jsx)(eM.E, {
                         variant: "text-md/medium",
                         color: "text-strong",
                         className: ez.We,
-                        children: o,
+                        children: n,
                     }),
-                    null != a && (0, p.jsx)("div", { className: ez.UT, children: a }),
+                    null != l && (0, p.jsx)("div", { className: ez.UT, children: l }),
                 ],
             }),
         ],
     });
-});
+}
 function eZ(e) {
     let {
             tabLabel: t = "Nitro",

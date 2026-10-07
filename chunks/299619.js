@@ -73,4 +73,7 @@ let l = (e) => {
             ...E,
         });
     },
-    o = r.forwardRef((e, t) => (0, i.jsx)(l, { ...e, externalRef: t }));
+    o = (e) => {
+        let { ref: t, ...n } = e;
+        return (0, i.jsx)(l, { ...n, externalRef: t });
+    };

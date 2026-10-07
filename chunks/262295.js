@@ -1,38 +1,39 @@
-a.d(e, { A: () => n });
-var l = a(477900),
-    d = a(582128),
-    i = a(503698),
-    c = a.n(i),
-    r = a(174645);
-let h = d.forwardRef((s, e) => {
+e.d(a, { A: () => n });
+var i = e(477900);
+e(582128);
+var l = e(503698),
+    c = e.n(l),
+    d = e(174645);
+function r(s) {
     let {
         muted: a = !1,
-        highlighted: d = !1,
-        avatar: i,
-        decorators: h,
+        highlighted: e = !1,
+        avatar: l,
+        decorators: r,
         name: n,
-        subText: t,
-        avatarClassName: m,
-        innerClassName: p,
-        withDisplayNameStyles: v = !1,
+        subText: h,
+        avatarClassName: t,
+        innerClassName: v,
+        withDisplayNameStyles: m = !1,
+        ref: p,
     } = s;
-    return (0, l.jsxs)("div", {
-        ref: e,
-        className: c()(r.Zp, p, { [r.SU]: a, [r.mr]: d }),
+    return (0, i.jsxs)("div", {
+        ref: p,
+        className: c()(d.Zp, v, { [d.SU]: a, [d.mr]: e }),
         children: [
-            (0, l.jsx)("div", { className: c()(r.my, m), children: i }),
-            (0, l.jsxs)("div", {
-                className: c()(r.Qs, { [r.e8]: v }),
+            (0, i.jsx)("div", { className: c()(d.my, t), children: l }),
+            (0, i.jsxs)("div", {
+                className: c()(d.Qs, { [d.e8]: m }),
                 children: [
-                    (0, l.jsxs)("div", {
-                        className: r.BG,
-                        children: [(0, l.jsx)("div", { className: r.UU, children: n }), h],
+                    (0, i.jsxs)("div", {
+                        className: d.BG,
+                        children: [(0, i.jsx)("div", { className: d.UU, children: n }), r],
                     }),
-                    null != t ? (0, l.jsx)("div", { className: r.Sv, children: t }) : null,
+                    null != h ? (0, i.jsx)("div", { className: d.Sv, children: h }) : null,
                 ],
             }),
         ],
     });
-});
-h.displayName = "AvatarWithText";
-let n = h;
+}
+r.displayName = "AvatarWithText";
+let n = r;

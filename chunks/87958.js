@@ -3489,10 +3489,11 @@ let nb = function () {
     });
 };
 var nC = s(989756);
-let nR = o.forwardRef((e, t) => {
-    let { analyticsLocations: s } = (0, j.Ay)(A.A.PREMIUM_MARKETING_FOOTER_CTA);
+function nR(e) {
+    let { ref: t, ...s } = e,
+        { analyticsLocations: i } = (0, j.Ay)(A.A.PREMIUM_MARKETING_FOOTER_CTA);
     return (0, c.jsx)(j.f5, {
-        value: s,
+        value: i,
         children: (0, c.jsx)("div", {
             ref: t,
             className: nC.kL,
@@ -3510,7 +3511,7 @@ let nR = o.forwardRef((e, t) => {
             }),
         }),
     });
-});
+}
 nR.displayName = "PremiumMarketingFooter";
 var nI = s(939249);
 let n_ = function (e) {
@@ -3841,107 +3842,99 @@ let n$ = function (e) {
     });
 };
 var n0 = s(14057);
-let n1 = o.memo(
-    o.forwardRef(function (e, t) {
-        let { className: s, subscriptionTier: i, isEligibleForBogoPromotion: n } = e,
-            { analyticsLocations: a } = (0, j.Ay)(A.A.PREMIUM_MARKETING_HERO_CTA),
-            l = nQ(),
-            r = nz.useConfig({ location: "PremiumBrandRefreshMarketingHeroHeading" }).enabled,
-            o = (0, nW.A)(),
-            d = null != o,
-            { visibilityPercentageRef: m, visibilityPercentage: g } = ej(
-                !(0, x.bG)([el.Ay], () => el.Ay.useReducedMotion),
-            ),
-            p = (0, iJ.b)(),
-            f = !d && p.length > 0,
-            h = (0, eN.c)(ee.C.MARKETING_PAGE_BANNER),
-            N = null != h && "marketingPageBanner" === h.properties.properties.oneofKind,
-            E = (0, ni.ar)() && !N,
-            T = (0, ef.O)(),
-            b = (null != T && tj.U4.includes(T.discountId)) || N;
-        return (0, c.jsx)(j.f5, {
-            value: a,
+let n1 = o.memo(function (e) {
+    let { className: t, subscriptionTier: s, isEligibleForBogoPromotion: i, ref: n } = e,
+        { analyticsLocations: a } = (0, j.Ay)(A.A.PREMIUM_MARKETING_HERO_CTA),
+        l = nQ(),
+        r = nz.useConfig({ location: "PremiumBrandRefreshMarketingHeroHeading" }).enabled,
+        o = (0, nW.A)(),
+        d = null != o,
+        { visibilityPercentageRef: m, visibilityPercentage: g } = ej(!(0, x.bG)([el.Ay], () => el.Ay.useReducedMotion)),
+        p = (0, iJ.b)(),
+        f = !d && p.length > 0,
+        h = (0, eN.c)(ee.C.MARKETING_PAGE_BANNER),
+        N = null != h && "marketingPageBanner" === h.properties.properties.oneofKind,
+        E = (0, ni.ar)() && !N,
+        T = (0, ef.O)(),
+        b = (null != T && tj.U4.includes(T.discountId)) || N;
+    return (0, c.jsx)(j.f5, {
+        value: a,
+        children: (0, c.jsx)("div", {
+            ref: n,
+            className: u()(n0.kL, t),
+            "data-testid": "marketing-page-hero-header",
             children: (0, c.jsx)("div", {
-                ref: t,
-                className: u()(n0.kL, s),
-                "data-testid": "marketing-page-hero-header",
-                children: (0, c.jsx)("div", {
-                    ref: m,
-                    children: (0, c.jsxs)("div", {
-                        className: n0.hQ,
-                        children: [
-                            (0, c.jsx)(n$, { containerVisibilityPercentage: g }),
-                            E && (0, c.jsx)(nq, {}),
-                            (0, c.jsx)("div", {
-                                className: n0.s8,
-                                children: (0, c.jsx)(eB.F, {
-                                    forceLevel: 1,
-                                    children: (0, c.jsx)(K.D, {
-                                        variant: "nitro-md",
-                                        color: "text-strong",
-                                        className: n0.wx,
-                                        children: Q.intl.string(Q.t.YCZldK),
-                                    }),
+                ref: m,
+                children: (0, c.jsxs)("div", {
+                    className: n0.hQ,
+                    children: [
+                        (0, c.jsx)(n$, { containerVisibilityPercentage: g }),
+                        E && (0, c.jsx)(nq, {}),
+                        (0, c.jsx)("div", {
+                            className: n0.s8,
+                            children: (0, c.jsx)(eB.F, {
+                                forceLevel: 1,
+                                children: (0, c.jsx)(K.D, {
+                                    variant: "nitro-md",
+                                    color: "text-strong",
+                                    className: n0.wx,
+                                    children: Q.intl.string(Q.t.YCZldK),
                                 }),
                             }),
-                            (0, c.jsxs)("div", {
-                                className: n0.rf,
-                                children: [
-                                    d &&
-                                        (0, c.jsx)("div", {
-                                            className: n0.eZ,
-                                            children: (0, c.jsx)(nX, { referrer: o }),
-                                        }),
-                                    f &&
-                                        (0, c.jsx)("div", {
-                                            className: n0.Qn,
-                                            children: (0, c.jsx)(nK.A, {
-                                                textColor: "text-strong",
-                                                smallerText: !1,
-                                                isApplicationHome: !0,
-                                                enablePremiumBrandRefresh: !0,
-                                            }),
-                                        }),
-                                    (0, c.jsxs)("div", {
-                                        className: E ? n0.es : n0.UJ,
-                                        children: [
-                                            (0, c.jsx)(eR.A, {
-                                                size: "md",
-                                                fullWidth: E,
-                                                hasActivePromotion: !!n,
-                                                subscriptionTier: b && null == i ? tj.pe.NONE : i,
-                                                buttonTextOverride: b ? Q.intl.string(Q.t["2pG5Ga"]) : void 0,
-                                            }),
-                                            !E && (0, c.jsx)(q.A, { variant: "secondary", size: "md" }),
-                                        ],
-                                    }),
+                        }),
+                        (0, c.jsxs)("div", {
+                            className: n0.rf,
+                            children: [
+                                d && (0, c.jsx)("div", { className: n0.eZ, children: (0, c.jsx)(nX, { referrer: o }) }),
+                                f &&
                                     (0, c.jsx)("div", {
-                                        className: n0.iQ,
-                                        children: (0, c.jsx)(J.E, {
-                                            color: "text-muted",
-                                            variant: "text-xs/medium",
-                                            children: r
-                                                ? Q.intl.string(Q.t.jHqrJW)
-                                                : Q.intl.format(Q.t.kt9wxs, { cheapestMonthlyPrice: l }),
+                                        className: n0.Qn,
+                                        children: (0, c.jsx)(nK.A, {
+                                            textColor: "text-strong",
+                                            smallerText: !1,
+                                            isApplicationHome: !0,
+                                            enablePremiumBrandRefresh: !0,
                                         }),
                                     }),
-                                    null != h &&
-                                        "marketingPageBanner" === h.properties.properties.oneofKind &&
-                                        (0, c.jsx)(eb.x, {
-                                            componentId: h.id,
-                                            promotionId: h.promotionId,
-                                            promotionBannerMarketingComponentFields:
-                                                h.properties.properties.marketingPageBanner,
+                                (0, c.jsxs)("div", {
+                                    className: E ? n0.es : n0.UJ,
+                                    children: [
+                                        (0, c.jsx)(eR.A, {
+                                            size: "md",
+                                            fullWidth: E,
+                                            hasActivePromotion: !!i,
+                                            subscriptionTier: b && null == s ? tj.pe.NONE : s,
+                                            buttonTextOverride: b ? Q.intl.string(Q.t["2pG5Ga"]) : void 0,
                                         }),
-                                ],
-                            }),
-                        ],
-                    }),
+                                        !E && (0, c.jsx)(q.A, { variant: "secondary", size: "md" }),
+                                    ],
+                                }),
+                                (0, c.jsx)("div", {
+                                    className: n0.iQ,
+                                    children: (0, c.jsx)(J.E, {
+                                        color: "text-muted",
+                                        variant: "text-xs/medium",
+                                        children: r
+                                            ? Q.intl.string(Q.t.jHqrJW)
+                                            : Q.intl.format(Q.t.kt9wxs, { cheapestMonthlyPrice: l }),
+                                    }),
+                                }),
+                                null != h &&
+                                    "marketingPageBanner" === h.properties.properties.oneofKind &&
+                                    (0, c.jsx)(eb.x, {
+                                        componentId: h.id,
+                                        promotionId: h.promotionId,
+                                        promotionBannerMarketingComponentFields:
+                                            h.properties.properties.marketingPageBanner,
+                                    }),
+                            ],
+                        }),
+                    ],
                 }),
             }),
-        });
-    }),
-);
+        }),
+    });
+});
 var n2 = s(820081),
     n3 = s(140735),
     n7 = s(401432),
@@ -4924,8 +4917,8 @@ function aH(e) {
         children: Q.intl.format(Q.t.kt9wxs, { cheapestMonthlyPrice: n }),
     });
 }
-let aF = o.forwardRef(function (e, t) {
-    let { className: s, buttonClassName: i, subscriptionTier: n, isDarkMode: a } = e,
+let aF = function (e) {
+    let { className: t, buttonClassName: s, subscriptionTier: i, isDarkMode: n, ref: a } = e,
         { analyticsLocations: l } = (0, j.Ay)(A.A.PREMIUM_MARKETING_HERO_CTA),
         r = (0, eg.QQ)(),
         o = (0, ni.ar)(),
@@ -4934,8 +4927,8 @@ let aF = o.forwardRef(function (e, t) {
     return (0, c.jsx)(j.f5, {
         value: l,
         children: (0, c.jsxs)("div", {
-            ref: t,
-            className: u()(aG.kL, s, { [aG.V1]: !o, [aG.Q4]: !o && d }),
+            ref: a,
+            className: u()(aG.kL, t, { [aG.V1]: !o, [aG.Q4]: !o && d }),
             "data-testid": "v2-marketing-page-hero-header",
             children: [
                 (0, c.jsxs)("div", {
@@ -4958,13 +4951,13 @@ let aF = o.forwardRef(function (e, t) {
                         r
                             ? (0, c.jsx)("div", {
                                   className: aG.UD,
-                                  children: (0, c.jsx)(aL.A, { className: u()(aG.x6, i), color: au.XD.WHITE }),
+                                  children: (0, c.jsx)(aL.A, { className: u()(aG.x6, s), color: au.XD.WHITE }),
                               })
                             : (0, c.jsx)(aw, {
-                                  subscriptionTier: n,
+                                  subscriptionTier: i,
                                   inOfferExperience: o,
-                                  buttonClassName: i,
-                                  isDarkMode: a,
+                                  buttonClassName: s,
+                                  isDarkMode: n,
                               }),
                         d && (0, c.jsx)(aH, { variant: "text-md/normal", withBottomMargin: !1 }),
                     ],
@@ -4973,7 +4966,7 @@ let aF = o.forwardRef(function (e, t) {
             ],
         }),
     });
-});
+};
 var aV = s(22118),
     az = s(145359),
     aW = s(377770);

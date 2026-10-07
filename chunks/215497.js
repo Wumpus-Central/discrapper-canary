@@ -10,8 +10,8 @@ var l,
     d = n(101555),
     h = n(625494),
     m = n(652215),
-    f = n(375708),
-    p = n(33720),
+    p = n(375708),
+    f = n(33720),
     g =
         (((l = {})[(l.SMALL = 0)] = "SMALL"),
         (l[(l.MEDIUM = 1)] = "MEDIUM"),
@@ -21,21 +21,22 @@ var l,
 function x(e) {
     e.stopPropagation();
 }
-let E = r.forwardRef(function (e, t) {
+let E = function (e) {
     let {
-            id: n,
-            channelId: l,
-            className: s,
-            children: g,
-            actions: E,
-            handleEditModal: S,
-            keyboardModeEnabled: y,
-            onKeyDown: C,
-            draftType: A,
-            size: b = 1,
+            id: t,
+            channelId: n,
+            className: l,
+            children: s,
+            actions: g,
+            handleEditModal: E,
+            keyboardModeEnabled: S,
+            onKeyDown: y,
+            draftType: C,
+            size: A = 1,
+            ref: b,
         } = e,
         I = r.useRef(null),
-        { onFocus: N, ...v } = (0, o.rm)(n),
+        { onFocus: N, ...v } = (0, o.rm)(t),
         { handleFocus: T, handleBlur: j } = (function (e) {
             let [t, n] = (0, r.useState)(!1);
             return {
@@ -55,8 +56,8 @@ let E = r.forwardRef(function (e, t) {
                 isFocused: t,
             };
         })(N),
-        k = 0 === b,
-        _ = null != E;
+        k = 0 === A,
+        _ = null != g;
     return (0, i.jsx)(u.vN, {
         children: (0, i.jsx)("li", {
             ...v,
@@ -69,41 +70,41 @@ let E = r.forwardRef(function (e, t) {
                 }
             },
             onKeyDown: function (e) {
-                if (y) {
+                if (S) {
                     switch (e.which) {
                         case m.Ks6.D:
-                            (e.preventDefault(), c.A.remove(l, n, A));
+                            (e.preventDefault(), c.A.remove(n, t, C));
                             return;
                         case m.Ks6.E:
-                            null != S && (e.preventDefault(), S(e));
+                            null != E && (e.preventDefault(), E(e));
                             return;
                         case m.Ks6.BACKSPACE:
                             e.ctrlKey
-                                ? (e.preventDefault(), c.A.clearAll(l, A))
-                                : (e.preventDefault(), c.A.remove(l, n, A));
+                                ? (e.preventDefault(), c.A.clearAll(n, C))
+                                : (e.preventDefault(), c.A.remove(n, t, C));
                             return;
                         case m.Ks6.ARROW_UP:
                             if (e.shiftKey || e.altKey || e.ctrlKey || e.metaKey) return;
                             (e.preventDefault(), h._.dispatchToLastSubscribed(m.jej.FOCUS_MESSAGES, { atEnd: !0 }));
                     }
-                    C?.(e);
+                    y?.(e);
                 }
             },
-            className: a()(p.Se, s),
-            ref: t,
+            className: a()(f.Se, l),
+            ref: b,
             children: (0, i.jsxs)("div", {
-                className: p.PO,
+                className: f.PO,
                 ref: I,
                 children: [
-                    g,
+                    s,
                     _
                         ? (0, i.jsx)("div", {
-                              className: p.TC,
+                              className: f.TC,
                               children: (0, i.jsx)("div", {
-                                  className: a()(p.KY, { [p.BN]: k }),
+                                  className: a()(f.KY, { [f.BN]: k }),
                                   onContextMenu: x,
-                                  "aria-label": f.intl.string(f.t["8Lu3Du"]),
-                                  children: (0, i.jsx)(d.Ay, { className: a()({ [p.BX]: k }), children: E }),
+                                  "aria-label": p.intl.string(p.t["8Lu3Du"]),
+                                  children: (0, i.jsx)(d.Ay, { className: a()({ [f.BX]: k }), children: g }),
                               }),
                           })
                         : null,
@@ -111,4 +112,4 @@ let E = r.forwardRef(function (e, t) {
             }),
         }),
     });
-});
+};

@@ -1,23 +1,23 @@
-n.d(t, { default: () => A });
+n.d(t, { default: () => f });
 var a = n(477900),
     l = n(582128),
     i = n(17928),
     r = n(181658),
     u = n(557722),
-    o = n(914724),
-    s = n(870570),
+    s = n(914724),
+    o = n(870570),
     c = n(287809),
     d = n(446868),
     h = n(662758),
-    f = n(375708);
-let A = l.forwardRef(function (e, t) {
-    let { onAddedPhone: n, onClose: A, transitionState: w, reason: y, layerContext: b } = e,
+    A = n(375708);
+function f(e) {
+    let { onAddedPhone: t, onClose: n, transitionState: f, reason: y, layerContext: b, ref: w } = e,
         C = (0, i.bG)([c.default], () => c.default.getCurrentUser()),
-        P = (0, i.bG)([s.A], () => s.A.getAction()),
+        P = (0, i.bG)([o.A], () => o.A.getAction()),
         [g, k] = l.useState(null),
         [p, v] = l.useState(null),
-        [S, R] = l.useState(null),
-        [x, j] = l.useState(!1),
+        [S, x] = l.useState(null),
+        [R, j] = l.useState(!1),
         G = l.useCallback(
             async (e) => {
                 j(!0);
@@ -25,10 +25,10 @@ let A = l.forwardRef(function (e, t) {
                     (d.A.isPhoneReverification(C, P)
                         ? await u.A.beginReverifyPhone(e, y)
                         : await u.A.beginAddPhone(e, y),
-                        R(null),
+                        x(null),
                         k(e));
                 } catch (e) {
-                    R(new r.A(e));
+                    x(new r.A(e));
                 }
                 j(!1);
             },
@@ -40,9 +40,9 @@ let A = l.forwardRef(function (e, t) {
                     j(!0);
                     try {
                         let { token: t } = await u.A.verifyPhone(g, e);
-                        (R(null), v(t));
+                        (x(null), v(t));
                     } catch (e) {
-                        R(new r.A(e));
+                        x(new r.A(e));
                     }
                     j(!1);
                 }
@@ -53,21 +53,21 @@ let A = l.forwardRef(function (e, t) {
             async (e) => {
                 null != p &&
                     (d.A.isPhoneReverification(C, P) ? await u.A.reverifyPhone(p, e, y) : await u.A.addPhone(p, e, y),
-                    n?.(),
-                    A());
+                    t?.(),
+                    n());
             },
-            [n, A, p, y, C, P],
+            [t, n, p, y, C, P],
         );
     return null != p
-        ? (0, a.jsx)(h.default, { onClose: A, transitionState: w, title: f.intl.string(f.t.ZtCDc2), handleSubmit: m })
-        : (0, a.jsx)(o.default, {
-              onClose: A,
-              transitionState: w,
+        ? (0, a.jsx)(h.default, { onClose: n, transitionState: f, title: A.intl.string(A.t.ZtCDc2), handleSubmit: m })
+        : (0, a.jsx)(s.default, {
+              onClose: n,
+              transitionState: f,
               error: S?.getAnyErrorMessage(),
-              working: x,
+              working: R,
               validPhone: null != g,
               onAddPhone: G,
               onVerifyPhone: _,
               layerContext: b,
           });
-});
+}

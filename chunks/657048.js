@@ -1,53 +1,54 @@
-n.d(t, { A: () => m });
-var l = n(477900),
-    i = n(582128),
-    s = n(503698),
-    a = n.n(s),
-    r = n(559106),
-    o = n(939249),
-    u = n(866665),
-    d = n(375708),
-    c = n(408968);
-let m = i.forwardRef(function (e, t) {
-    let n,
+n.d(t, { A: () => c });
+var l = n(477900);
+n(582128);
+var i = n(503698),
+    s = n.n(i),
+    a = n(559106),
+    r = n(939249),
+    o = n(866665),
+    u = n(375708),
+    d = n(408968);
+function c(e) {
+    let t,
         {
-            className: i,
-            src: s,
-            unicodeEmoji: m,
-            name: x,
-            size: h = 20,
-            enableTooltip: j = !0,
-            enableHeight: g = !0,
-            onClick: p,
+            className: n,
+            src: i,
+            unicodeEmoji: c,
+            name: m,
+            size: x = 20,
+            enableTooltip: h = !0,
+            enableHeight: j = !0,
+            onClick: g,
+            ref: p,
         } = e;
-    return null == s && null == m
+    return null == i && null == c
         ? null
-        : (0, l.jsx)(u.m, {
+        : (0, l.jsx)(o.m, {
               asContainer: !0,
-              text: x,
+              text: m,
               "aria-label": !1,
-              shouldShow: j,
+              shouldShow: h,
               tag: "span",
               children:
-                  ((n = (0, l.jsx)("img", {
-                      ref: t,
-                      alt: d.intl.formatToPlainString(d.t["9+YWrE"], { name: x }),
-                      className: a()(c.U, i, { [c.v]: null != p }),
-                      height: g ? h : void 0,
-                      src: s,
-                      width: h,
+                  ((t = (0, l.jsx)("img", {
+                      ref: p,
+                      alt: u.intl.formatToPlainString(u.t["9+YWrE"], { name: m }),
+                      className: s()(d.U, n, { [d.v]: null != g }),
+                      height: j ? x : void 0,
+                      src: i,
+                      width: x,
                   })),
-                  (null != m &&
-                      (n = (0, l.jsx)("img", {
-                          ref: t,
-                          alt: m.allNamesString,
-                          className: a()(c.U, i, { [c.v]: null != p }),
-                          height: g ? h : void 0,
-                          src: m.url,
-                          width: h,
+                  (null != c &&
+                      (t = (0, l.jsx)("img", {
+                          ref: p,
+                          alt: c.allNamesString,
+                          className: s()(d.U, n, { [d.v]: null != g }),
+                          height: j ? x : void 0,
+                          src: c.url,
+                          width: x,
                       })),
-                  null == p)
-                      ? (0, l.jsx)(r.vN, { offset: { left: 5 }, children: n })
-                      : (0, l.jsx)(o.D, { onClick: p, tag: "span", focusProps: { offset: { left: 5 } }, children: n })),
+                  null == g)
+                      ? (0, l.jsx)(a.vN, { offset: { left: 5 }, children: t })
+                      : (0, l.jsx)(r.D, { onClick: g, tag: "span", focusProps: { offset: { left: 5 } }, children: t })),
           });
-});
+}

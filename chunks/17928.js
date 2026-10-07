@@ -823,7 +823,10 @@ let z = {
                               return (0, M.jsx)(n, { ref: e, ...t, ...i });
                           }
                       }
-                      let s = P.forwardRef((e, t) => (0, M.jsx)(r, { childProps: e, forwardedConnectStoresRef: t }));
+                      function s(e) {
+                          let { ref: t, ...n } = e;
+                          return (0, M.jsx)(r, { childProps: n, forwardedConnectStoresRef: t });
+                      }
                       return ((s.displayName = `ForwardRef(${i})`), s);
                   };
               })(e, t)

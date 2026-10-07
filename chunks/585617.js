@@ -14,8 +14,8 @@ var n = i(477900),
     N = i(193249),
     x = i(691885),
     A = i(404778),
-    f = i(144228),
-    j = i(611677),
+    j = i(144228),
+    f = i(611677),
     p = i(452027),
     b = i(28863),
     S = i(834730),
@@ -323,11 +323,11 @@ function eo(e) {
     });
 }
 var ec = i(632422);
-let eu = l.forwardRef(function (e, t) {
-    let { guildId: i } = e,
+let eu = function (e) {
+    let { guildId: t, ref: i } = e,
         [s, r] = l.useState(null),
         a = (0, o.yK)([D.A, Y.Ay], () =>
-            (0, F.ct)(Y.Ay.getChannelOverrides(i), {
+            (0, F.ct)(Y.Ay.getChannelOverrides(t), {
                 ignoreMute: !0,
                 ignoreUnreadSetting: !1,
                 ignoreNotificationSetting: !1,
@@ -335,7 +335,7 @@ let eu = l.forwardRef(function (e, t) {
                 .map((e) => D.A.getChannel(e))
                 .filter(B.Vq),
         ),
-        d = (0, o.bG)([k.A], () => k.A.getCategories(i)),
+        d = (0, o.bG)([k.A], () => k.A.getCategories(t)),
         c = a.map((e, t) =>
             (0, n.jsxs)(
                 l.Fragment,
@@ -349,23 +349,23 @@ let eu = l.forwardRef(function (e, t) {
             ),
         );
     return (0, n.jsxs)("div", {
-        ref: t,
+        ref: i,
         children: [
             (0, n.jsx)(eo, {
-                guildId: i,
+                guildId: t,
                 onSelected: function (e) {
                     if (null != a.find((t) => t.id === e)) return;
-                    let t = D.A.getChannel(e);
-                    null != t &&
+                    let i = D.A.getChannel(e);
+                    null != i &&
                         (C.A.updateChannelOverrideSettings({
-                            guildId: i,
+                            guildId: t,
                             channelId: e,
                             settings: {
                                 muted: !1,
-                                message_notifications: Y.Ay.resolvedMessageNotifications(t),
+                                message_notifications: Y.Ay.resolvedMessageNotifications(i),
                                 flags: (0, er.mD)(
-                                    Y.Ay.getChannelIdFlags(t.guild_id, t.id),
-                                    Y.Ay.resolveUnreadSetting(t),
+                                    Y.Ay.getChannelIdFlags(i.guild_id, i.id),
+                                    Y.Ay.resolveUnreadSetting(i),
                                 ),
                             },
                             label: V.fd.OverrideCreated,
@@ -435,7 +435,7 @@ let eu = l.forwardRef(function (e, t) {
                 }),
         ],
     });
-});
+};
 function eh(e) {
     let { channel: t, categories: i, autoFocus: s } = e,
         r = (0, o.bG)([D.A], () => D.A.getChannel(t?.parent_id)),
@@ -625,17 +625,17 @@ function eA(e) {
               ],
           });
 }
-var ef = i(790782);
-function ej(e) {
+var ej = i(790782);
+function ef(e) {
     let { guildId: t } = e,
         i = (0, em.bG)([Y.Ay], () => {
             let e = Y.Ay.getGuildUnreadSetting(t),
                 i = Y.Ay.getMessageNotifications(t);
-            return e === ef.e.UNSET ? (i === X.orn.ALL_MESSAGES ? ef.e.ALL_MESSAGES : ef.e.ONLY_MENTIONS) : e;
+            return e === ej.e.UNSET ? (i === X.orn.ALL_MESSAGES ? ej.e.ALL_MESSAGES : ej.e.ONLY_MENTIONS) : e;
         }),
         l = (0, em.bG)([Y.Ay], () => Y.Ay.getMessageNotifications(t)),
         s = (0, ea.hJ)(i, l);
-    return (0, n.jsx)(f.z, {
+    return (0, n.jsx)(j.z, {
         label: q.intl.string(q.t.lprV7V),
         value: s,
         options: [
@@ -726,7 +726,7 @@ function e_(e) {
         actions: [{ text: q.intl.string(q.t.i4jeWR), onClick: i.onClose }],
         children: [
             (0, n.jsx)(ev, { noPadding: !0, noContainer: !0, children: (0, n.jsx)(eA, { guildId: t }) }),
-            (0, n.jsx)(ev, { children: (0, n.jsx)(ej, { guildId: t }) }),
+            (0, n.jsx)(ev, { children: (0, n.jsx)(ef, { guildId: t }) }),
             (0, n.jsx)(ev, { title: q.intl.string(q.t["31DySj"]), children: (0, n.jsx)(en, { guildId: t }) }),
             l &&
                 (0, n.jsxs)(n.Fragment, {
@@ -797,7 +797,7 @@ function eG(e) {
         children: [
             (0, n.jsx)("div", {
                 className: $.bj,
-                children: (0, n.jsx)(f.z, {
+                children: (0, n.jsx)(j.z, {
                     label: q.intl.string(q.t.lprV7V),
                     disabled: t,
                     value: i,
@@ -825,7 +825,7 @@ function eO(e) {
         return (0, n.jsxs)("div", {
             className: $.YK,
             children: [
-                (0, n.jsx)(j.l, {
+                (0, n.jsx)(f.l, {
                     className: $.bj,
                     children: (0, n.jsxs)(p.D, {
                         label: q.intl.string(q.t.D9yVAH),
@@ -1100,8 +1100,8 @@ function eI(e) {
             muted: N,
             muteConfig: x,
             messageNotifications: A,
-            channelOverrides: f,
-            notifyHighlights: j,
+            channelOverrides: j,
+            notifyHighlights: f,
         } = (0, o.cf)([Y.Ay], () => ({
             suppressEveryone: Y.Ay.isSuppressEveryoneEnabled(t),
             suppressRoles: Y.Ay.isSuppressRolesEnabled(t),
@@ -1148,7 +1148,7 @@ function eI(e) {
                 suppressEveryone: c,
                 suppressRoles: u,
                 handleCheckboxChange: E,
-                notifyHighlights: j,
+                notifyHighlights: f,
                 muteEvents: h,
                 mobilePush: m,
                 muted: N,
@@ -1163,7 +1163,7 @@ function eI(e) {
             }),
             (0, n.jsx)(eM, {
                 newChannelOverrides: p,
-                channelOverrides: f,
+                channelOverrides: j,
                 channels: _,
                 categories: r,
                 muted: N,

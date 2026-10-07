@@ -1,109 +1,109 @@
-i.d(t, { $L: () => w, NI: () => G, kd: () => T, TG: () => b, P5: () => A, Ft: () => k, Yq: () => S });
-var r = i(477900),
-    s = i(582128),
-    a = i(503698),
-    n = i.n(a),
-    l = i(628284),
-    o = i(661531),
-    d = i(834730),
-    c = i(695366);
-if (221552 == i.j) var x = i(104510);
-if (221552 == i.j) var v = i(297264);
-if (221552 == i.j) var m = i(890856);
-if (221552 == i.j) var u = i(508770);
-var j = i(37537),
-    h = i(773669),
-    f = i(939981),
-    g = i(25525),
-    p = i(375708),
-    N = i(517826);
-function b(e) {
-    let { text: t } = e,
-        i = (0, j.c)("GuildPowerupCardFooterActive");
+t.d(i, { $L: () => S, NI: () => k, kd: () => T, TG: () => N, P5: () => b, Ft: () => w, Yq: () => A });
+var r = t(477900);
+t(582128);
+var s = t(503698),
+    a = t.n(s),
+    n = t(628284),
+    o = t(661531),
+    l = t(834730),
+    d = t(695366);
+if (221552 == t.j) var c = t(104510);
+if (221552 == t.j) var x = t(297264);
+if (221552 == t.j) var v = t(890856);
+if (221552 == t.j) var m = t(508770);
+var u = t(37537),
+    j = t(773669),
+    h = t(939981),
+    f = t(25525),
+    g = t(375708),
+    p = t(517826);
+function N(e) {
+    let { text: i } = e,
+        t = (0, u.c)("GuildPowerupCardFooterActive");
     return (0, r.jsxs)("div", {
-        className: N.mG,
+        className: p.mG,
         children: [
-            (0, r.jsx)(l.y, { size: "xs", color: o.A.colors.STATUS_POSITIVE }),
-            (0, r.jsx)(d.E, {
+            (0, r.jsx)(n.y, { size: "xs", color: o.A.colors.STATUS_POSITIVE }),
+            (0, r.jsx)(l.E, {
                 color: "text-feedback-positive",
-                variant: i ? "text-sm/semibold" : "text-sm/bold",
-                children: t,
+                variant: t ? "text-sm/semibold" : "text-sm/bold",
+                children: i,
+            }),
+        ],
+    });
+}
+function b(e) {
+    let { dateString: i } = e,
+        t = (0, u.c)("GuildPowerupCardFooterExpiring");
+    return (0, r.jsxs)("div", {
+        className: p.mG,
+        children: [
+            (0, r.jsx)(d.E, { size: "xs", color: o.A.colors.STATUS_WARNING }),
+            (0, r.jsx)(l.E, {
+                color: "text-feedback-warning",
+                variant: t ? "text-sm/semibold" : "text-sm/bold",
+                children: g.intl.formatToMarkdownString(f.default["ol/ao/"], {
+                    dateString: new Date(i).toLocaleDateString(j.default.locale, { month: "2-digit", day: "2-digit" }),
+                }),
             }),
         ],
     });
 }
 function A(e) {
-    let { dateString: t } = e,
-        i = (0, j.c)("GuildPowerupCardFooterExpiring");
+    let { removingAt: i } = e,
+        t = (0, u.c)("GuildPowerupCardFooterRemoving");
     return (0, r.jsxs)("div", {
-        className: N.mG,
+        className: p.wL,
         children: [
-            (0, r.jsx)(c.E, { size: "xs", color: o.A.colors.STATUS_WARNING }),
-            (0, r.jsx)(d.E, {
+            (0, r.jsx)(d.E, { size: "xs", color: o.A.colors.STATUS_WARNING }),
+            (0, r.jsx)(l.E, {
                 color: "text-feedback-warning",
-                variant: i ? "text-sm/semibold" : "text-sm/bold",
-                children: p.intl.formatToMarkdownString(g.default["ol/ao/"], {
-                    dateString: new Date(t).toLocaleDateString(h.default.locale, { month: "2-digit", day: "2-digit" }),
-                }),
+                variant: t ? "text-sm/semibold" : "text-sm/bold",
+                children: g.intl.formatToPlainString(f.default["6e2ry1"], { dateString: (0, h.A)(i) }),
             }),
         ],
     });
 }
 function S(e) {
-    let { removingAt: t } = e,
-        i = (0, j.c)("GuildPowerupCardFooterRemoving");
+    let { cost: i, costDecorator: t, status: s, className: n } = e,
+        d = void 0 !== i ? p._A : p.$3;
     return (0, r.jsxs)("div", {
-        className: N.wL,
+        className: a()(d, n),
         children: [
-            (0, r.jsx)(c.E, { size: "xs", color: o.A.colors.STATUS_WARNING }),
-            (0, r.jsx)(d.E, {
-                color: "text-feedback-warning",
-                variant: i ? "text-sm/semibold" : "text-sm/bold",
-                children: p.intl.formatToPlainString(g.default["6e2ry1"], { dateString: (0, f.A)(t) }),
-            }),
-        ],
-    });
-}
-function w(e) {
-    let { cost: t, costDecorator: i, status: s, className: a } = e,
-        l = void 0 !== t ? N._A : N.$3;
-    return (0, r.jsxs)("div", {
-        className: n()(l, a),
-        children: [
-            void 0 !== t &&
+            void 0 !== i &&
                 (0, r.jsxs)("div", {
-                    className: n()(N.mG, N.pT),
+                    className: a()(p.mG, p.pT),
                     children: [
-                        (0, r.jsx)(x._, { size: "sm", color: o.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
-                        (0, r.jsx)(d.E, {
-                            className: N.q9,
+                        (0, r.jsx)(c._, { size: "sm", color: o.A.unsafe_rawColors.GUILD_BOOSTING_PINK }),
+                        (0, r.jsx)(l.E, {
+                            className: p.q9,
                             tag: "div",
                             variant: "heading-md/semibold",
                             color: "text-subtle",
-                            children: p.intl.formatToPlainString(p.t.t2Wbo1, { required: t, decorator: i ?? "" }),
+                            children: g.intl.formatToPlainString(g.t.t2Wbo1, { required: i, decorator: t ?? "" }),
                         }),
                     ],
                 }),
-            s?.type === "expiring" && (0, r.jsx)(A, { dateString: s.expiringAt }),
-            s?.type === "removing" && (0, r.jsx)(S, { removingAt: s.removingAt }),
-            s?.type === "active" && (0, r.jsx)(b, { text: s.statusText }),
+            s?.type === "expiring" && (0, r.jsx)(b, { dateString: s.expiringAt }),
+            s?.type === "removing" && (0, r.jsx)(A, { removingAt: s.removingAt }),
+            s?.type === "active" && (0, r.jsx)(N, { text: s.statusText }),
         ],
     });
 }
 function T(e) {
-    let { children: t } = e;
-    return (0, r.jsx)("div", { className: N.UD, children: t });
+    let { children: i } = e;
+    return (0, r.jsx)("div", { className: p.UD, children: i });
 }
-function k(e) {
-    let { title: t, textColor: i, children: s, footer: a } = e;
+function w(e) {
+    let { title: i, textColor: t, children: s, footer: a } = e;
     return (0, r.jsxs)("div", {
-        className: N.hQ,
+        className: p.hQ,
         children: [
             (0, r.jsxs)("div", {
                 children: [
                     (0, r.jsx)("div", {
-                        className: N.N1,
-                        children: (0, r.jsx)(v.D, { color: i, variant: "heading-md/bold", children: t }),
+                        className: p.N1,
+                        children: (0, r.jsx)(x.D, { color: t, variant: "heading-md/bold", children: i }),
                     }),
                     s,
                 ],
@@ -112,44 +112,42 @@ function k(e) {
         ],
     });
 }
-let G =
-    221552 == i.j
-        ? s.forwardRef(function (e, t) {
-              let {
-                  className: i,
-                  label: s,
-                  isActive: a,
-                  isWarning: l,
-                  badge: o,
-                  canRollback: d,
-                  onClick: c,
-                  onMouseOver: x,
-                  onMouseLeave: v,
-                  children: j,
-              } = e;
-              return (0, r.jsx)("div", {
-                  className: n()(N.gp, { [N.Wq]: d && !a }),
-                  ref: t,
-                  children: (0, r.jsxs)(m.s, {
-                      "aria-label": s,
-                      onClick: c,
-                      onMouseOver: x,
-                      onMouseLeave: v,
-                      className: n()(N.kL, { [N.vu]: a, [N.$e]: l || (d && a) }, i),
-                      children: [
-                          j,
-                          "new" === o &&
-                              (0, r.jsx)("div", {
-                                  className: N.Oj,
-                                  children: (0, r.jsx)(u.E, { type: "new", variant: "brand" }),
-                              }),
-                          "beta" === o &&
-                              (0, r.jsx)("div", {
-                                  className: N.Oj,
-                                  children: (0, r.jsx)(u.E, { type: "beta", variant: "brand" }),
-                              }),
-                      ],
-                  }),
-              });
-          })
-        : null;
+function k(e) {
+    let { ref: i, ...t } = e,
+        {
+            className: s,
+            label: n,
+            isActive: o,
+            isWarning: l,
+            badge: d,
+            canRollback: c,
+            onClick: x,
+            onMouseOver: u,
+            onMouseLeave: j,
+            children: h,
+        } = t;
+    return (0, r.jsx)("div", {
+        className: a()(p.gp, { [p.Wq]: c && !o }),
+        ref: i,
+        children: (0, r.jsxs)(v.s, {
+            "aria-label": n,
+            onClick: x,
+            onMouseOver: u,
+            onMouseLeave: j,
+            className: a()(p.kL, { [p.vu]: o, [p.$e]: l || (c && o) }, s),
+            children: [
+                h,
+                "new" === d &&
+                    (0, r.jsx)("div", {
+                        className: p.Oj,
+                        children: (0, r.jsx)(m.E, { type: "new", variant: "brand" }),
+                    }),
+                "beta" === d &&
+                    (0, r.jsx)("div", {
+                        className: p.Oj,
+                        children: (0, r.jsx)(m.E, { type: "beta", variant: "brand" }),
+                    }),
+            ],
+        }),
+    });
+}

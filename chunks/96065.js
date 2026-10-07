@@ -82,8 +82,8 @@ function L() {
     );
 }
 var M = l(696016),
-    R = l(933092),
-    T = l(24468);
+    T = l(933092),
+    R = l(24468);
 function D(e, t) {
     let { applicationAudioEnabled: l, voiceAudioEnabled: a, soundboardAudioEnabled: n, isVoiceClip: i } = t;
     if (!i && l && a && n)
@@ -113,12 +113,12 @@ function S(e) {
         src: i ?? void 0,
         muted: s,
         preload: "auto",
-        className: T.R,
+        className: R.R,
         onLoadedMetadata: o,
     });
 }
-let _ = n.forwardRef(function (e, t) {
-    let { overlay: l, cropFraming: i, frameAspectRatio: s, loop: r = !0 } = e,
+function _(e) {
+    let { overlay: t, cropFraming: l, frameAspectRatio: i, loop: s = !0, ref: r } = e,
         {
             cropStart: o,
             cropEnd: c,
@@ -162,7 +162,7 @@ let _ = n.forwardRef(function (e, t) {
         }, []);
     (0, g.A)(() => {
         if (N.current) {
-            if (!r) {
+            if (!s) {
                 let e = j.current.main;
                 if (null != e) {
                     let t = null != c ? (0, x.round)(c, 3) : (0, x.round)(e.duration, 3);
@@ -188,7 +188,7 @@ let _ = n.forwardRef(function (e, t) {
         z = n.useCallback((e, t) => {
             j.current[t] = e;
         }, []);
-    n.useImperativeHandle(t, () => {
+    n.useImperativeHandle(r, () => {
         let e = { play: P, seek: U, pause: G, videoElement: j.current.main };
         return (u(e), e);
     }, [P, U, G, u]);
@@ -202,7 +202,7 @@ let _ = n.forwardRef(function (e, t) {
         };
     }, []);
     let H = y.type === M.nQ.VOICE_CLIP,
-        F = !0 === i && !H && null != s;
+        F = !0 === l && !H && null != i;
     return (n.useLayoutEffect(() => {
         let e = E.current;
         if (null == e) return;
@@ -225,24 +225,24 @@ let _ = n.forwardRef(function (e, t) {
         if (null == l) return;
         let a = new ResizeObserver(t);
         return (a.observe(l), () => a.disconnect());
-    }, [F, s]),
+    }, [F, i]),
     null == d)
         ? null
         : (0, a.jsxs)("div", {
               ref: E,
-              className: p()(R.DV, F && R.Ln),
+              className: p()(T.DV, F && T.Ln),
               children: [
                   H
                       ? (0, a.jsxs)(a.Fragment, {
                             children: [
                                 (0, a.jsx)("audio", { ref: K, src: d, muted: !0, preload: "auto" }),
-                                (0, a.jsx)(b, { className: R.Ap }),
+                                (0, a.jsx)(b, { className: T.Ap }),
                             ],
                         })
                       : (0, a.jsx)(C.A, {
                             onClick: B,
-                            className: p()(R.Ap, F && R.HU),
-                            style: F ? { aspectRatio: s } : void 0,
+                            className: p()(T.Ap, F && T.HU),
+                            style: F ? { aspectRatio: i } : void 0,
                             ref: K,
                             src: d,
                             muted: D(":all", {
@@ -255,7 +255,7 @@ let _ = n.forwardRef(function (e, t) {
                             onLoadedData: $,
                         }),
                   (0, a.jsx)(L, {}),
-                  l,
+                  t,
                   (0, a.jsx)("audio", {
                       id: "ClipsPlayerAudioTrack:application",
                       src: m ?? void 0,
@@ -265,7 +265,7 @@ let _ = n.forwardRef(function (e, t) {
                           soundboardAudioEnabled: v,
                           isVoiceClip: H,
                       }),
-                      className: T.R,
+                      className: R.R,
                       preload: "auto",
                       ref: (e) => z(e, "main:application"),
                       onLoadedMetadata: O,
@@ -289,7 +289,7 @@ let _ = n.forwardRef(function (e, t) {
                   ),
               ],
           });
-});
+}
 function O(e, t) {
     let l = e / M.YM;
     return (t && (l /= M.iJ), l);
@@ -500,7 +500,7 @@ function ec(e) {
         let e = L.current;
         null != e && I(e);
     }, [l, i, s, d, I, L]);
-    let R = n.useCallback(
+    let T = n.useCallback(
             (e) => {
                 let t = b.current,
                     l = L.current,
@@ -529,18 +529,18 @@ function ec(e) {
             },
             [g, o, c, L],
         ),
-        T = n.useCallback(() => {
+        R = n.useCallback(() => {
             b.current = null;
         }, []);
     n.useEffect(
         () => (
-            document.addEventListener("mousemove", R),
-            document.addEventListener("mouseup", T),
+            document.addEventListener("mousemove", T),
+            document.addEventListener("mouseup", R),
             () => {
-                (document.removeEventListener("mousemove", R), document.removeEventListener("mouseup", T));
+                (document.removeEventListener("mousemove", T), document.removeEventListener("mouseup", R));
             }
         ),
-        [R, T],
+        [T, R],
     );
     let D = n.useCallback(
             (e) => (t) => {
@@ -763,8 +763,8 @@ var eA = l(661531),
     eI = l(602853),
     eL = l(602674),
     eM = l(335416),
-    eR = l(556250);
-let eT = new Map(),
+    eT = l(556250);
+let eR = new Map(),
     eD = n.memo(function (e) {
         let { clipId: t, voiceAudioTracks: i, onMouseDown: s, className: r, alwaysRenderContainer: o = !1 } = e,
             c = n.useRef(null),
@@ -783,14 +783,14 @@ let eT = new Map(),
         n.useEffect(() => {
             if (0 === d || 0 === i.length || null == c.current) return;
             let e = `${t}-${i.map((e) => e.trackName).join(",")}-${d}`,
-                l = eT.get(e);
+                l = eR.get(e);
             if (null != l) return void f(l.waveform);
             let a = c.current,
                 n = !1;
             function s(t) {
                 if (n) return;
                 let { waveform: l, error: a } = t.data;
-                null != a ? M.nx.error("Failed to load waveform:", a) : (eT.set(e, { waveform: l }), f(l));
+                null != a ? M.nx.error("Failed to load waveform:", a) : (eR.set(e, { waveform: l }), f(l));
             }
             return (
                 a.addEventListener("message", s),
@@ -837,12 +837,12 @@ let eT = new Map(),
         }, [x, d, u, m, h]),
         0 === i.length)
             ? o
-                ? (0, a.jsx)("div", { className: p()(eR.k, r), onMouseDown: s })
+                ? (0, a.jsx)("div", { className: p()(eT.k, r), onMouseDown: s })
                 : null
             : (0, a.jsx)("div", {
-                  className: p()(eR.k, r),
+                  className: p()(eT.k, r),
                   children: (0, a.jsx)("canvas", {
-                      className: eR.s,
+                      className: eT.s,
                       ref: u,
                       width: (d ?? 0) * 2,
                       height: (m ?? 0) * 2,
@@ -1254,8 +1254,8 @@ function eQ(e) {
         { tracks: b, selectedTrackId: w, setSelectedTrackId: E, updateTrackRange: N } = (0, ed.fn)(),
         A = i(),
         [I, L] = n.useState(null),
-        R = n.useRef(null),
         T = n.useRef(null),
+        R = n.useRef(null),
         [D, S] = n.useState(!1),
         [_, P] = n.useState(null);
     n.useEffect(
@@ -1399,7 +1399,7 @@ function eQ(e) {
                     (0, a.jsx)("div", {
                         className: eq.k2,
                         children: (0, a.jsx)("div", {
-                            ref: T,
+                            ref: R,
                             className: eq.re,
                             children: (0, a.jsxs)(K.E, {
                                 variant: "text-xs/medium",
@@ -1469,7 +1469,7 @@ function eQ(e) {
                                             (0, a.jsx)(eE.vN, {
                                                 children: (0, a.jsx)("div", {
                                                     tabIndex: 0,
-                                                    ref: R,
+                                                    ref: T,
                                                     className: eq.lG,
                                                     children: (0, a.jsx)("svg", {
                                                         className: eq.$6,
@@ -1672,12 +1672,12 @@ function e0(e) {
                           children: [
                               (0, a.jsx)(el, {}),
                               (0, a.jsx)("div", {
-                                  className: R.zT,
+                                  className: T.zT,
                                   children: (0, a.jsx)(r.D, {
-                                      className: R.xS,
+                                      className: T.xS,
                                       onClick: L,
                                       children: (0, a.jsx)("img", {
-                                          className: R.V_,
+                                          className: T.V_,
                                           src: v.thumbnail,
                                           alt: v.name ?? "",
                                       }),
@@ -1687,7 +1687,7 @@ function e0(e) {
                       }),
             ],
         });
-    let T = null == p || t !== s.ip.ENTERED,
+    let R = null == p || t !== s.ip.ENTERED,
         D = v.type === M.nQ.VOICE_CLIP,
         S = g === d.Y.CROP,
         P = null != y ? y.width / y.height : null,
@@ -1727,7 +1727,7 @@ function e0(e) {
                     (0, a.jsx)(G, {}),
                     (0, a.jsx)("div", {
                         className: ea.zT,
-                        children: T
+                        children: R
                             ? (0, a.jsx)(h, {})
                             : (0, a.jsxs)(a.Fragment, {
                                   children: [

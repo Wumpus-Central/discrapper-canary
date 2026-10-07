@@ -87,41 +87,42 @@ function R(e) {
               ],
           });
 }
-let L = r.forwardRef(function (e, t) {
+function L(e) {
     let {
-            sound: n,
-            channel: a,
-            containerClassName: d,
-            className: c,
-            interactive: _,
-            onMouseEnter: E,
-            openUpsellForSound: m,
-            analyticsLocations: S,
+            sound: t,
+            channel: n,
+            containerClassName: a,
+            className: d,
+            interactive: c,
+            onMouseEnter: _,
+            openUpsellForSound: E,
+            analyticsLocations: m,
+            ref: S,
         } = e,
-        { name: L, emojiId: y, emojiName: D } = n,
+        { name: L, emojiId: y, emojiName: D } = t,
         v = (0, o.bG)([p.default], () => p.default.getCurrentUser()),
         {
             playSoundboardSound: b,
             previewSound: M,
             isPlayingSound: P,
-        } = (0, g.A)(n, a?.id ?? null, I.dG.getSetting()?.volume ?? 100, a?.isVocal() ? N.a.VOICE : N.a.DEFAULT),
+        } = (0, g.A)(t, n?.id ?? null, I.dG.getSetting()?.volume ?? 100, n?.isVocal() ? N.a.VOICE : N.a.DEFAULT),
         U = r.useRef(null),
-        w = `sound-${n.soundId}`,
+        w = `sound-${t.soundId}`,
         G = (0, l.rm)(w),
         x = r.useMemo(() => ({ ...G, id: w, role: "button" }), [G, w]),
         k = null != y || null != D,
-        F = !(0, T.Ir)(v, n, a, !1),
+        F = !(0, T.Ir)(v, t, n, !1),
         [B, V] = r.useState(!1),
         H = r.useCallback(
             (e) => {
-                F ? m?.(e) : b(S);
+                F ? E?.(e) : b(m);
             },
-            [F, m, b, S],
+            [F, E, b, m],
         );
     return (0, i.jsx)("li", {
-        ref: t,
-        className: s()(O.H, d),
-        onMouseEnter: E,
+        ref: S,
+        className: s()(O.H, a),
+        onMouseEnter: _,
         children: (0, i.jsx)(u.m, {
             text: L,
             position: "top",
@@ -130,7 +131,7 @@ let L = r.forwardRef(function (e, t) {
             children: (0, i.jsxs)(A.s, {
                 buttonProps: x,
                 "aria-label": C.intl.formatToPlainString(C.t.tuMUJ2, { emojiName: D, soundName: L }),
-                className: s()(O.aG, { [O.he]: P, [O.wT]: _, [O.fx]: !_ }, c),
+                className: s()(O.aG, { [O.he]: P, [O.wT]: c, [O.fx]: !c }, d),
                 onClick: H,
                 children: [
                     (0, i.jsxs)("div", {
@@ -141,15 +142,15 @@ let L = r.forwardRef(function (e, t) {
                             k && (0, i.jsx)(f.A, { emojiId: y, emojiName: D, className: O.Zg }),
                             (0, i.jsx)(h.E, {
                                 variant: "text-xs/medium",
-                                color: _ ? "text-default" : "text-muted",
+                                color: c ? "text-default" : "text-muted",
                                 className: s()(O.TW, { [O.hn]: k }),
                                 children: L,
                             }),
                         ],
                     }),
-                    (0, i.jsx)(R, { sound: n, disabled: F, setIsChildTooltipShowing: V, previewSound: M }),
+                    (0, i.jsx)(R, { sound: t, disabled: F, setIsChildTooltipShowing: V, previewSound: M }),
                 ],
             }),
         }),
     });
-});
+}

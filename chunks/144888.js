@@ -555,25 +555,25 @@ function e8(e) {
     }, [e]);
 }
 var te = n(196577);
-let tt = r.forwardRef((e, t) => {
-    let { appliedBoostCount: n, maxBoostCount: i, premiumSubscriberCount: l, className: a } = e,
-        o = n >= i,
-        d = Math.min((n / i) * 100, 100),
+let tt = (e) => {
+    let { appliedBoostCount: t, maxBoostCount: n, premiumSubscriberCount: i, className: l, ref: a } = e,
+        o = t >= n,
+        d = Math.min((t / n) * 100, 100),
         c = `calc(${d}% - 4px)`,
         [u, h] = (0, e$.z)(
-            () => ({ width: n === l ? c : "calc(0% - 0px)", config: { tension: 250, damping: 5, mass: 1 } }),
+            () => ({ width: t === i ? c : "calc(0% - 0px)", config: { tension: 250, damping: 5, mass: 1 } }),
             "respect-motion-settings",
-            [n, l],
+            [t, i],
         );
     return (
         r.useEffect(() => {
             h({ width: c });
         }, [c, h]),
         (0, s.jsxs)("div", {
-            ref: t,
+            ref: a,
             className: te.hQ,
             children: [
-                (0, s.jsx)("div", { className: eD()(te.L$, a) }),
+                (0, s.jsx)("div", { className: eD()(te.L$, l) }),
                 (0, s.jsx)(eZ.animated.div, { className: eD()(te.qB, { [te.mu]: d <= 5 }), style: u }),
                 (0, s.jsxs)("div", {
                     className: te.FS,
@@ -586,7 +586,7 @@ let tt = r.forwardRef((e, t) => {
                                     variant: "text-xs/semibold",
                                     children: el.intl.string(eW.default.NI6Ihe),
                                 }),
-                                l >= i &&
+                                i >= n &&
                                     (0, s.jsx)(eQ.E, {
                                         className: te.Qq,
                                         variant: "text-xs/semibold",
@@ -601,10 +601,10 @@ let tt = r.forwardRef((e, t) => {
                                     className: eD()(te.Qq, te.ue),
                                     variant: "text-xs/semibold",
                                     children: o
-                                        ? el.intl.formatToPlainString(eW.default["Ehpq+7"], { appliedBoostCount: n })
+                                        ? el.intl.formatToPlainString(eW.default["Ehpq+7"], { appliedBoostCount: t })
                                         : el.intl.formatToPlainString(eW.default["/rbPDs"], {
-                                              appliedBoostCount: n,
-                                              maxBoostCount: i,
+                                              appliedBoostCount: t,
+                                              maxBoostCount: n,
                                           }),
                                 }),
                                 (0, s.jsx)(e7.A, {
@@ -620,7 +620,7 @@ let tt = r.forwardRef((e, t) => {
             ],
         })
     );
-});
+};
 function tn(e) {
     let { guild: t, withMargin: i } = e,
         l = e8(t),
@@ -1408,55 +1408,55 @@ var nw = n(34188),
     nz = n(770178),
     nW = n(307076);
 let nY = Math.ceil(Math.sqrt(115200)),
-    nX = (nY - 240) / 2,
-    nq = r.forwardRef(function (e, t) {
-        let { children: n } = e,
-            [i, l] = r.useState(-1),
-            a = r.useCallback((e) => {
-                l(e.contentRect.width);
-            }, []),
-            o = (0, nz.w)(a, [], { fireOnMount: !0 }),
-            [{ shineSpring: d }, c] = (0, e$.z)(() => ({
-                from: { shineSpring: 0 },
-                config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
-            })),
-            u = r.useCallback(
-                (e, t) => {
-                    c({ shineSpring: 1, delay: t, reset: !0, loop: { reset: !0, delay: 1600 } });
-                },
-                [c],
-            ),
-            h = r.useCallback(() => {
-                c({ shineSpring: 0, immediate: !0, loop: !1 });
-            }, [c]),
-            g = r.useMemo(
-                () =>
-                    n(
-                        (0, s.jsx)(eZ.animated.div, {
-                            className: nW.q,
-                            style: {
-                                transform: d.to(
-                                    (e) => `translateX(calc(${e * i}px + ${e * nY}px)) translateY(-50%) rotate(45deg)`,
-                                ),
-                            },
-                        }),
-                    ),
-                [n, i, d],
-            );
-        return (
-            r.useImperativeHandle(t, () => ({ onMouseEnter: u, onMouseLeave: h }), [u, h]),
-            (0, s.jsx)("div", {
-                className: nW.i,
-                onMouseEnter: u,
-                onMouseLeave: h,
-                onFocus: u,
-                onBlur: h,
-                ref: o,
-                style: { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${nX}px` },
-                children: g,
-            })
+    nX = (nY - 240) / 2;
+function nq(e) {
+    let { children: t, ref: n } = e,
+        [i, l] = r.useState(-1),
+        a = r.useCallback((e) => {
+            l(e.contentRect.width);
+        }, []),
+        o = (0, nz.w)(a, [], { fireOnMount: !0 }),
+        [{ shineSpring: d }, c] = (0, e$.z)(() => ({
+            from: { shineSpring: 0 },
+            config: { clamp: !0, mass: 1, tension: 170, friction: 38 },
+        })),
+        u = r.useCallback(
+            (e, t) => {
+                c({ shineSpring: 1, delay: t, reset: !0, loop: { reset: !0, delay: 1600 } });
+            },
+            [c],
+        ),
+        h = r.useCallback(() => {
+            c({ shineSpring: 0, immediate: !0, loop: !1 });
+        }, [c]),
+        g = r.useMemo(
+            () =>
+                t(
+                    (0, s.jsx)(eZ.animated.div, {
+                        className: nW.q,
+                        style: {
+                            transform: d.to(
+                                (e) => `translateX(calc(${e * i}px + ${e * nY}px)) translateY(-50%) rotate(45deg)`,
+                            ),
+                        },
+                    }),
+                ),
+            [t, i, d],
         );
-    });
+    return (
+        r.useImperativeHandle(n, () => ({ onMouseEnter: u, onMouseLeave: h }), [u, h]),
+        (0, s.jsx)("div", {
+            className: nW.i,
+            onMouseEnter: u,
+            onMouseLeave: h,
+            onFocus: u,
+            onBlur: h,
+            ref: o,
+            style: { "--custom-shine-dimensions": "240px", "--custom-shine-rotated-dimensions-delta": `${nX}px` },
+            children: g,
+        })
+    );
+}
 var nJ = n(371794),
     nZ = n(240248),
     n$ = n(998218),
@@ -3975,12 +3975,12 @@ function sH(e) {
         l = V.Ay.isChannelMuted(n, t.id);
     return (!i || !l) && n6.Ay.getMentionCount(e) > 0;
 }
-let sk = r.forwardRef(function (e, t) {
-    let { guildId: n, guildChannels: i, guildChannelsVersion: l, ...r } = e,
-        a = (0, sP.W)(n, i, l, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
+function sk(e) {
+    let { guildId: t, guildChannels: n, guildChannelsVersion: i, ref: l, ...r } = e,
+        a = (0, sP.W)(t, n, i, { withVoiceChannels: !1 }, { ignoreRecents: !0 }),
         o = (0, u.bG)([sA.A], () => sA.A.isFocused());
-    return (0, s.jsx)(sV.A, { ref: t, ...r, isUnread: sw, isMentioned: sH, items: a, animate: o });
-});
+    return (0, s.jsx)(sV.A, { ref: l, ...r, isUnread: sw, isMentioned: sH, items: a, animate: o });
+}
 var sB = n(81466);
 function sF(e) {
     let { guild: t, selected: i } = e,

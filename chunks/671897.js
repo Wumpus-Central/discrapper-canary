@@ -92,66 +92,67 @@ function H(e) {
         ],
     });
 }
-let V = l.forwardRef(function (e, t) {
+function V(e) {
     let {
-            iconComponent: n,
-            animationTime: l,
-            visible: a,
-            ariaLabel: o,
-            active: s,
-            disabled: m,
-            overlay: f,
-            tooltipLabel: p,
-            tooltipDelayMs: h = 1500,
-            shortcut: x,
-            onClick: v,
-            buttonSize: g = d.n4.MD,
-            "data-testid": E,
-            clickableProps: b,
+            iconComponent: t,
+            animationTime: n,
+            visible: l,
+            ariaLabel: a,
+            active: o,
+            disabled: s,
+            overlay: m,
+            tooltipLabel: f,
+            tooltipDelayMs: p = 1500,
+            shortcut: h,
+            onClick: x,
+            buttonSize: v = d.n4.MD,
+            "data-testid": g,
+            clickableProps: E,
+            ref: b,
         } = e,
-        y = "" !== (x ?? "").trim();
+        y = "" !== (h ?? "").trim();
     return (0, r.jsx)(F.m, {
-        text: a ? p : void 0,
-        keyboardShortcut: y ? x : void 0,
+        text: l ? f : void 0,
+        keyboardShortcut: y ? h : void 0,
         ariaHidden: !0,
-        delay: h,
+        delay: p,
         children: (0, r.jsx)(B.D, {
-            onClick: !0 === m ? void 0 : v,
-            className: i()(U.K5, { [U.Iy]: m }),
-            "aria-label": o,
-            "aria-keyshortcuts": y ? x : void 0,
-            "aria-disabled": m,
-            "data-testid": E,
-            innerRef: t,
-            ...b,
+            onClick: !0 === s ? void 0 : x,
+            className: i()(U.K5, { [U.Iy]: s }),
+            "aria-label": a,
+            "aria-keyshortcuts": y ? h : void 0,
+            "aria-disabled": s,
+            "data-testid": g,
+            innerRef: b,
+            ...E,
             children: (0, r.jsx)(u.animated.div, {
                 className: U.K5,
                 style: {
-                    opacity: (0, u.to)([l.to({ range: [0, 1], output: [0, 1] })], (e) => `${a ? e : Math.pow(e, 8)}`),
-                    height: Q[g],
+                    opacity: (0, u.to)([n.to({ range: [0, 1], output: [0, 1] })], (e) => `${l ? e : Math.pow(e, 8)}`),
+                    height: Q[v],
                 },
                 children:
-                    null != f
+                    null != m
                         ? (0, r.jsxs)("span", {
                               className: U.bT,
                               children: [
-                                  (0, r.jsx)(n, {
-                                      size: O[g],
-                                      color: !0 !== m ? c.A.colors.WHITE : c.A.colors.TEXT_MUTED,
-                                      className: i()(U.jk, { [U.x2]: s, [U.Wr]: !m }),
+                                  (0, r.jsx)(t, {
+                                      size: O[v],
+                                      color: !0 !== s ? c.A.colors.WHITE : c.A.colors.TEXT_MUTED,
+                                      className: i()(U.jk, { [U.x2]: o, [U.Wr]: !s }),
                                   }),
-                                  f,
+                                  m,
                               ],
                           })
-                        : (0, r.jsx)(n, {
-                              size: O[g],
-                              color: !0 !== m ? c.A.colors.WHITE : c.A.colors.TEXT_MUTED,
-                              className: i()(U.jk, { [U.x2]: s, [U.Wr]: !m }),
+                        : (0, r.jsx)(t, {
+                              size: O[v],
+                              color: !0 !== s ? c.A.colors.WHITE : c.A.colors.TEXT_MUTED,
+                              className: i()(U.jk, { [U.x2]: o, [U.Wr]: !s }),
                           }),
             }),
         }),
     });
-});
+}
 var Y = n(91034),
     z = n(710434),
     X = n(634156),

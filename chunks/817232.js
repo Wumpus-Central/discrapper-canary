@@ -31,24 +31,24 @@ var l = n(477900),
     k = n(287809),
     G = n(194486),
     P = n(178226);
-let M = i.forwardRef(function (e, t) {
-    let { sound: n, containerDimensions: s } = e,
+function M(e) {
+    let { sound: t, containerDimensions: n, ref: s } = e,
         a = (0, u.bG)([k.default], () => k.default.getCurrentUser()),
         r = (0, u.bG)([b.Ay], () => b.Ay.useReducedMotion),
         [o, d] = i.useState([]),
         c = o.length < 50,
-        m = n?.emojiId != null || n?.emojiName != null,
+        m = t?.emojiId != null || t?.emojiName != null,
         x = i.useCallback(() => {
             if (!r && c && m && null != a) {
-                let e = (0, _.Br)({ id: n.emojiId, name: n.emojiName ?? "", animated: !1 }),
-                    t = null != n.emojiId,
+                let e = (0, _.Br)({ id: t.emojiId, name: t.emojiName ?? "", animated: !1 }),
+                    n = null != t.emojiId,
                     l = G.B.PREMIUM,
                     i = (0, y.random)(_.Bf[l].length, !1),
-                    s = { id: (0, O.A)(), animationId: i, animationType: l, shouldResize: t, url: e, userId: a.id };
+                    s = { id: (0, O.A)(), animationId: i, animationType: l, shouldResize: n, url: e, userId: a.id };
                 d((e) => [...e, s]);
             }
-        }, [r, c, m, a, n]);
-    i.useImperativeHandle(t, () => ({ addAnimation: x }));
+        }, [r, c, m, a, t]);
+    i.useImperativeHandle(s, () => ({ addAnimation: x }));
     let h = i.useCallback((e) => {
         d((t) => {
             let n = [...t],
@@ -60,10 +60,10 @@ let M = i.forwardRef(function (e, t) {
         ? null
         : (0, l.jsx)("div", {
               className: P.z,
-              style: { width: s.width, height: s.height },
-              children: o.map((e) => (0, l.jsx)(R.A, { containerDimensions: s, effect: e, onComplete: h }, e.id)),
+              style: { width: n.width, height: n.height },
+              children: o.map((e) => (0, l.jsx)(R.A, { containerDimensions: n, effect: e, onComplete: h }, e.id)),
           });
-});
+}
 var L = n(885386),
     D = n(967198),
     w = n(174459),
@@ -161,80 +161,81 @@ function en(e) {
             : (0, l.jsx)(g.y, { size: "xs", color: "currentColor", className: Q.Wo }),
     });
 }
-let el = i.forwardRef(function (e, t) {
-    var n, s, c;
-    let x,
+function el(e) {
+    var t, n, s;
+    let c,
         {
-            sound: h,
-            channel: j,
-            containerClassName: g,
-            className: E,
-            focused: y,
-            forceSecondaryActions: O = !1,
-            interactive: _ = !0,
-            enableSecondaryActions: R = !1,
-            suppressPlaySound: G,
-            onMouseEnter: P,
-            onSelectItem: D,
-            analyticsLocations: w,
-            buttonOverlay: U = B.If.PLAY,
-            showLockForDisabledSound: z = !0,
-            inNitroLockedSection: J = !1,
-            isAnimated: W = !0,
-            isPlayingSoundOverride: $,
-            isSoundmoji: ee,
-            soundmojiVisualEffectRef: el,
-            tooltipOverride: es,
-            enableFavoritesDragAndDrop: ea = !1,
-            isLastFavoriteSound: er = !1,
-            onFavoriteSoundDrop: eo,
-            disableActiveStyles: eu = !1,
+            sound: x,
+            channel: h,
+            containerClassName: j,
+            className: g,
+            focused: E,
+            forceSecondaryActions: y = !1,
+            interactive: O = !0,
+            enableSecondaryActions: _ = !1,
+            suppressPlaySound: R,
+            onMouseEnter: G,
+            onSelectItem: P,
+            analyticsLocations: D,
+            buttonOverlay: w = B.If.PLAY,
+            showLockForDisabledSound: U = !0,
+            inNitroLockedSection: z = !1,
+            isAnimated: J = !0,
+            isPlayingSoundOverride: W,
+            isSoundmoji: $,
+            soundmojiVisualEffectRef: ee,
+            tooltipOverride: el,
+            enableFavoritesDragAndDrop: es = !1,
+            isLastFavoriteSound: ea = !1,
+            onFavoriteSoundDrop: er,
+            disableActiveStyles: eo = !1,
+            ref: eu,
             ...ed
         } = e,
-        { name: ec, emojiId: em, emojiName: ex } = h,
+        { name: ec, emojiId: em, emojiName: ex } = x,
         eh = (0, u.bG)([k.default], () => k.default.getCurrentUser()),
-        ej = (0, Y.v)(h, j?.guild_id),
+        ej = (0, Y.v)(x, h?.guild_id),
         {
             playSoundboardSound: eg,
             previewSound: ep,
             isPlayingSound: ef,
         } = (0, F.A)(
-            h,
-            j?.id ?? null,
-            (ee ? L.HO.getSetting() : L.dG.getSetting()?.volume) ?? 100,
-            !ee && j?.isVocal() ? X.a.VOICE : X.a.DEFAULT,
+            x,
+            h?.id ?? null,
+            ($ ? L.HO.getSetting() : L.dG.getSetting()?.volume) ?? 100,
+            !$ && h?.isVocal() ? X.a.VOICE : X.a.DEFAULT,
         ),
         { createMultipleConfettiAt: eA } = i.useContext(S.x),
         eN = i.useRef(null),
         eI =
-            ((n = h.soundId),
-            (s = eN.current),
+            ((t = x.soundId),
+            (n = eN.current),
             i.useMemo(() => {
-                if (null == s || "1" !== n) return { x: 0, y: 0 };
-                let e = s.getBoundingClientRect();
+                if (null == n || "1" !== t) return { x: 0, y: 0 };
+                let e = n.getBoundingClientRect();
                 return { x: e.left + e.width / 2, y: e.top + e.height / 2 };
-            }, [s, n])),
+            }, [n, t])),
         ev = (0, u.bG)([b.Ay], () => b.Ay.useReducedMotion),
         eb = i.useRef(0.01),
         eE = i.useRef(new d.IX()),
-        eS = "1" === h.soundId,
-        eC = `sound-${h.soundId}`,
+        eS = "1" === x.soundId,
+        eC = `sound-${x.soundId}`,
         eT = (0, o.rm)(eC),
         [{ isDragging: ey }, eO] = (0, r.i)({
             type: H.Tj,
-            item: () => ({ soundId: h.soundId }),
-            canDrag: () => ea,
+            item: () => ({ soundId: x.soundId }),
+            canDrag: () => es,
             collect: (e) => ({ isDragging: e.isDragging() }),
         }),
         e_ = i.useCallback(
             (e) => {
-                (eO(e), "function" == typeof t ? t(e) : null != t && (t.current = e));
+                (eO(e), "function" == typeof eu ? eu(e) : null != eu && (eu.current = e));
             },
-            [eO, t],
+            [eO, eu],
         ),
         eR = null != em || null != ex,
-        ek = !(0, V.Ir)(eh, h, j) && !ee,
-        eG = O || (R && !ek),
+        ek = !(0, V.Ir)(eh, x, h) && !$,
+        eG = y || (_ && !ek),
         eP = C.LW.useStore().bottomPosition ?? 0,
         eM = eN.current?.getBoundingClientRect().bottom ?? 0,
         [eL, eD] = i.useState(!1),
@@ -244,23 +245,23 @@ let el = i.forwardRef(function (e, t) {
         eU = i.useCallback(() => {
             eD(!1);
         }, []),
-        ez = ek && z;
+        ez = ek && U;
     function eB(e) {
         (eS &&
             !ev &&
             ((eb.current = Math.min(eb.current + 0.01, 0.1)),
             Math.random() < eb.current && eA(eI.x, eI.y, void 0, void 0, { sprite: q.dR })),
-        null != D)
-            ? D(e)
-            : G || eg(w);
+        null != P)
+            ? P(e)
+            : R || eg(D);
     }
     let eV = (0, l.jsx)("div", {
         onMouseEnter: ew,
         onMouseLeave: eU,
-        children: et({ sound: h, previewSound: ep, disabled: ek && !O }),
+        children: et({ sound: x, previewSound: ep, disabled: ek && !y }),
     });
     function eF(e) {
-        return G || ek
+        return R || ek
             ? ez
                 ? (0, l.jsx)(f.LockIcon, {
                       size: "xs",
@@ -273,7 +274,7 @@ let el = i.forwardRef(function (e, t) {
     let eJ = (0, l.jsx)("div", {
         onMouseEnter: ew,
         onMouseLeave: eU,
-        children: (0, l.jsx)(en, { sound: h, disabled: !_ && !O }),
+        children: (0, l.jsx)(en, { sound: x, disabled: !O && !y }),
     });
     i.useEffect(() => {
         let e = eE.current;
@@ -286,51 +287,51 @@ let el = i.forwardRef(function (e, t) {
         );
     }, [eS]);
     let eH =
-        ((c = eN.current),
-        null == (x = c?.parentElement?.getBoundingClientRect())
+        ((s = eN.current),
+        null == (c = s?.parentElement?.getBoundingClientRect())
             ? { width: 0, height: 0 }
-            : { width: x.width, height: x.height });
+            : { width: c.width, height: c.height });
     return (0, l.jsxs)("li", {
         ref: e_,
-        className: a()(Q.H, g, { [Q.cB]: ea && ey }),
-        onMouseEnter: P,
+        className: a()(Q.H, j, { [Q.cB]: es && ey }),
+        onMouseEnter: G,
         children: [
-            ea &&
+            es &&
                 (0, l.jsxs)(l.Fragment, {
                     children: [
-                        (0, l.jsx)(K, { edge: "before", targetSoundId: h.soundId, onDrop: eo }),
-                        er && (0, l.jsx)(K, { edge: "after", targetSoundId: null, onDrop: eo }),
+                        (0, l.jsx)(K, { edge: "before", targetSoundId: x.soundId, onDrop: er }),
+                        ea && (0, l.jsx)(K, { edge: "after", targetSoundId: null, onDrop: er }),
                     ],
                 }),
             (0, l.jsx)(m.m, {
-                "aria-label": null != es ? h.name : void 0,
-                __unsupportedReactNodeAsText: es ?? h.name,
+                "aria-label": null != el ? x.name : void 0,
+                __unsupportedReactNodeAsText: el ?? x.name,
                 position: eM + 50 > eP ? "top" : "bottom",
                 shouldShow: !eL,
                 delay: 500,
                 children: (0, l.jsxs)(I.s, {
                     ...ed,
                     buttonProps: { ...eT, id: eC, role: "button" },
-                    "aria-label": Z.intl.formatToPlainString(Z.t.tuMUJ2, { emojiName: h.emojiName, soundName: h.name }),
+                    "aria-label": Z.intl.formatToPlainString(Z.t.tuMUJ2, { emojiName: x.emojiName, soundName: x.name }),
                     className: a()(
                         Q.aG,
                         {
-                            [Q.CS]: W,
-                            [Q.he]: $ ?? ef,
-                            [Q.ju]: G,
-                            [Q.wT]: _,
-                            [Q.$9]: !_ && !O,
-                            [Q.Au]: ek && !O,
-                            [Q.fx]: !_ && O,
-                            [Q.in]: _ && y,
-                            [Q.bo]: eu,
+                            [Q.CS]: J,
+                            [Q.he]: W ?? ef,
+                            [Q.ju]: R,
+                            [Q.wT]: O,
+                            [Q.$9]: !O && !y,
+                            [Q.Au]: ek && !y,
+                            [Q.fx]: !O && y,
+                            [Q.in]: O && E,
+                            [Q.bo]: eo,
                         },
-                        E,
+                        g,
                     ),
                     onClick: (e) => {
                         eB?.(e);
                     },
-                    onContextMenu: R && !ek ? ej : void 0,
+                    onContextMenu: _ && !ek ? ej : void 0,
                     children: [
                         (0, l.jsxs)("div", {
                             className: a()(Q.KM, { [Q.hn]: eR }),
@@ -340,14 +341,14 @@ let el = i.forwardRef(function (e, t) {
                                 eR && (0, l.jsx)(v.A, { emojiId: em, emojiName: ex, className: Q.Zg }),
                                 (0, l.jsx)(N.E, {
                                     variant: "text-xs/medium",
-                                    color: _ ? void 0 : "text-muted",
+                                    color: O ? void 0 : "text-muted",
                                     className: a()(Q.TW, { [Q.hn]: eR }),
                                     children: ec,
                                 }),
                             ],
                         }),
                         (function () {
-                            switch (U) {
+                            switch (w) {
                                 case B.If.ADD:
                                     return (0, l.jsxs)("div", {
                                         className: Q.ec,
@@ -382,7 +383,7 @@ let el = i.forwardRef(function (e, t) {
                                 case B.If.PLAY:
                                 case B.If.SOUNDMOJI:
                                 default:
-                                    return ez && !J
+                                    return ez && !z
                                         ? (0, l.jsxs)(l.Fragment, {
                                               children: [
                                                   (0, l.jsx)("div", { className: Q.LQ }),
@@ -399,14 +400,14 @@ let el = i.forwardRef(function (e, t) {
                                         : (0, l.jsxs)("div", {
                                               className: Q.d7,
                                               children: [
-                                                  (0, l.jsx)("div", { className: a()({ [Q.LQ]: !G }) }),
+                                                  (0, l.jsx)("div", { className: a()({ [Q.LQ]: !R }) }),
                                                   (0, l.jsx)("div", {
                                                       className: Q.O5,
                                                       children:
-                                                          U === B.If.SOUNDMOJI
+                                                          w === B.If.SOUNDMOJI
                                                               ? (0, l.jsx)(T.Ay, {
-                                                                    sound: h,
-                                                                    channel: j,
+                                                                    sound: x,
+                                                                    channel: h,
                                                                     setTooltipShowing: eD,
                                                                     renderSoundButton: ei,
                                                                 })
@@ -421,19 +422,19 @@ let el = i.forwardRef(function (e, t) {
                     ],
                 }),
             }),
-            !h.available &&
+            !x.available &&
                 (0, l.jsx)(m.m, {
                     text: Z.intl.string(Z.t.MDOXJR),
                     shouldShow: !eL,
                     children: (0, l.jsx)("div", {
                         className: Q.ET,
-                        children: !J && (0, l.jsxs)("div", { className: Q.ld, children: [eV, eJ] }),
+                        children: !z && (0, l.jsxs)("div", { className: Q.ld, children: [eV, eJ] }),
                     }),
                 }),
-            !0 === ee && (0, l.jsx)(M, { sound: h, containerDimensions: eH, ref: el }),
+            !0 === $ && (0, l.jsx)(M, { sound: x, containerDimensions: eH, ref: ee }),
         ],
     });
-});
+}
 function ei(e) {
     return (0, l.jsx)(el, { ...e });
 }

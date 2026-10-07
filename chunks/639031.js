@@ -40,22 +40,22 @@ var a,
     G = n.n(Y),
     V = n(907581),
     H = n(830370);
-let F = r.forwardRef((e, t) => {
-    let { className: n } = e,
+function F(e) {
+    let { className: t, ref: n } = e,
         a = r.useRef(null);
     return (
-        r.useImperativeHandle(t, () => ({
+        r.useImperativeHandle(n, () => ({
             play: () => {
                 a.current?.play();
             },
             pause: () => a.current?.pause(),
         })),
         (0, i.jsx)("div", {
-            className: G()(n, H.k),
+            className: G()(t, H.k),
             children: (0, i.jsx)(V.C, { ref: a, autoplay: !1, stateMachine: "State Machine 1", fit: "contain" }),
         })
     );
-});
+}
 F.displayName = "PremiumRewardsBentoBoxAsset";
 var X = n(592909),
     W = n(989790),

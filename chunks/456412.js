@@ -2,34 +2,35 @@ i.d(t, { A: () => u });
 var h = i(477900),
     n = i(582128),
     d = i(770178),
-    r = i(765548);
-let l = { width: "100%", height: "100%", display: "flex" },
+    l = i(765548);
+let r = { width: "100%", height: "100%", display: "flex" },
     s = { width: "100%", height: "100%", flex: 1 };
 function u(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {};
-    return n.forwardRef(function (i, u) {
-        let [c, a] = n.useState({ width: 0, height: 0 }),
-            g = (0, r.A)((e) => {
+    return function (i) {
+        let { ref: u, ...c } = i,
+            [g, a] = n.useState({ width: 0, height: 0 }),
+            p = (0, l.A)((e) => {
                 if (null != e) {
                     let { width: t, height: i } = e;
                     a({ width: t, height: i });
                 }
             }),
-            p = (0, r.A)((e) => {
-                g(e.contentRect);
+            w = (0, l.A)((e) => {
+                p(e.contentRect);
             }),
-            w = (0, d.w)(p, [], t);
+            o = (0, d.w)(w, [], t);
         return (
             n.useImperativeHandle(u, () => ({
                 triggerResize: () => {
-                    g(w.current?.getBoundingClientRect());
+                    p(o.current?.getBoundingClientRect());
                 },
             })),
             (0, h.jsx)("div", {
-                ref: w,
-                style: l,
-                children: (0, h.jsx)(e, { ...i, width: c.width, height: c.height, style: s }),
+                ref: o,
+                style: r,
+                children: (0, h.jsx)(e, { ...c, width: g.width, height: g.height, style: s }),
             })
         );
-    });
+    };
 }

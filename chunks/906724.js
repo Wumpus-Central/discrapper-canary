@@ -957,66 +957,67 @@ class e$ extends l.PureComponent {
         return "CHANNEL_INFO" === e ? this.renderCreateChannelModal() : this.renderAddMemberSlideContent();
     }
 }
-let e0 = l.forwardRef(function (e, t) {
-    let { channelType: n, guildId: s, cloneChannelId: a } = e,
-        r = (0, u.cf)([eL.A, eM.default, eT.A, ev.A, eG.Ay], () => {
-            let e = eL.A.getGuild(s),
+function e0(e) {
+    let { ref: t, ...n } = e,
+        { channelType: s, guildId: a, cloneChannelId: r } = n,
+        d = (0, u.cf)([eL.A, eM.default, eT.A, ev.A, eG.Ay], () => {
+            let e = eL.A.getGuild(a),
                 t = eM.default.getCurrentUser();
             o()(null != t, "CreateChannel: user cannot be undefined");
-            let i = null != e && null != e.ownerId ? eM.default.getUser(e.ownerId) : null,
-                l = eT.A.can(eH.xBc.ADMINISTRATOR, e),
-                r = ev.A.getChannel(a);
+            let n = null != e && null != e.ownerId ? eM.default.getUser(e.ownerId) : null,
+                i = eT.A.can(eH.xBc.ADMINISTRATOR, e),
+                l = ev.A.getChannel(r);
             return {
                 guild: e,
                 canCreateStoreChannel: null != e && e.features.has(eH.GuildFeatures.COMMERCE),
                 canCreateAnnouncementChannel: null != e && e.features.has(eH.GuildFeatures.NEWS),
                 user: t,
-                owner: i,
-                memberRoles: eG.Ay.getMember(s, t.id)?.roles ?? [],
+                owner: n,
+                memberRoles: eG.Ay.getMember(a, t.id)?.roles ?? [],
                 canViewChannels: eT.A.can(eH.xBc.VIEW_CHANNEL, e),
                 canConnect: eT.A.can(eH.xBc.CONNECT, e),
-                isAdmin: l,
-                cloneChannel: r,
-                channelType: r?.type ?? n,
+                isAdmin: i,
+                cloneChannel: l,
+                channelType: l?.type ?? s,
                 canManageRoles: eT.A.can(eH.xBc.MANAGE_ROLES, e),
                 canManageChannels: eT.A.can(eH.xBc.MANAGE_CHANNELS, e),
             };
         }),
-        d = (0, u.yK)([ea.A], () =>
-            ea.A.getGuildApplicationIds(s)
+        h = (0, u.yK)([ea.A], () =>
+            ea.A.getGuildApplicationIds(a)
                 .map((e) => ea.A.getApplication(e))
                 .filter(eD.Vq),
         ),
-        h = new Set(r.memberRoles),
-        { canManageRoles: c, canManageChannels: g } = r,
-        p = (0, ef.R)(s) && c && g,
-        m = (0, eb.V)(r?.guild),
-        C = eC.useConfig({ guildId: s, location: "CreateChannel" }).enabled,
-        I = el.useConfig({ guildId: s, location: "CreateChannel web" }).enabled,
-        [A, E] = l.useState(""),
-        [b, N] = l.useState(null),
-        { results: S, isLoading: f, onSelect: O } = (0, eE.J$)(A, { surface: eA.K.CREATE_CHANNEL }),
-        _ = l.useCallback(
+        c = new Set(d.memberRoles),
+        { canManageRoles: g, canManageChannels: p } = d,
+        m = (0, ef.R)(a) && g && p,
+        C = (0, eb.V)(d?.guild),
+        I = eC.useConfig({ guildId: a, location: "CreateChannel" }).enabled,
+        A = el.useConfig({ guildId: a, location: "CreateChannel web" }).enabled,
+        [E, b] = l.useState(""),
+        [N, S] = l.useState(null),
+        { results: f, isLoading: O, onSelect: _ } = (0, eE.J$)(E, { surface: eA.K.CREATE_CHANNEL }),
+        v = l.useCallback(
             (e) => {
-                (null != e && O(e.id), N(e));
+                (null != e && _(e.id), S(e));
             },
-            [O],
+            [_],
         );
     return (0, i.jsx)(e$, {
-        ...e,
-        ...r,
-        memberRoleIds: h,
-        applications: d,
-        canCreateStageChannel: p,
-        canCreateMediaChannel: m,
-        canCreateGameInvitesChannel: C,
-        canCreateAppChannel: I,
+        ...n,
+        ...d,
+        memberRoleIds: c,
+        applications: h,
+        canCreateStageChannel: m,
+        canCreateMediaChannel: C,
+        canCreateGameInvitesChannel: I,
+        canCreateAppChannel: A,
         ref: t,
         width: 496,
-        games: S,
-        isGamesQueryLoading: f,
-        onGameQueryChange: E,
-        selectedGame: b,
-        onSelectedGameChange: _,
+        games: f,
+        isGamesQueryLoading: O,
+        onGameQueryChange: b,
+        selectedGame: N,
+        onSelectedGameChange: v,
     });
-});
+}

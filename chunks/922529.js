@@ -1,31 +1,30 @@
-e.d(t, { A: () => c });
+e.d(r, { A: () => c });
 var s = e(477900),
     i = e(582128),
     n = e(503698),
-    a = e.n(n),
-    l = e(837381),
+    l = e.n(n),
+    a = e(837381),
     o = e(749314),
     p = e(375708),
-    d = e(13673);
-let u = i.forwardRef(function (r, t) {
-        let e,
-            { className: i, isBeforeGroup: n = !1, itemId: u, ...c } = r,
-            { children: f, isUnread: b } = c,
-            { role: h, onFocus: y, ...g } = (0, l.rm)(u ?? "");
-        return (
-            "string" == typeof f && b
-                ? (e = `${p.intl.string(p.t.y2b7CA)}, ${f}`)
-                : "string" == typeof f
-                  ? (e = f)
-                  : b && (e = p.intl.string(p.t.y2b7CA)),
-            (0, s.jsx)(o.A, {
-                ...c,
-                ...(null != u ? { ...g, onFocus: y } : void 0),
-                ref: t,
-                role: "separator",
-                "aria-label": e,
-                className: a()(i, { [d.yF]: !0, [d.ov]: null != f, [d.rd]: n }),
-            })
-        );
-    }),
-    c = i.memo(u);
+    u = e(13673);
+let c = i.memo(function (t) {
+    let r,
+        { className: e, isBeforeGroup: i = !1, itemId: n, ref: c, ...d } = t,
+        { children: b, isUnread: h } = d,
+        { role: y, onFocus: f, ...g } = (0, a.rm)(n ?? "");
+    return (
+        "string" == typeof b && h
+            ? (r = `${p.intl.string(p.t.y2b7CA)}, ${b}`)
+            : "string" == typeof b
+              ? (r = b)
+              : h && (r = p.intl.string(p.t.y2b7CA)),
+        (0, s.jsx)(o.A, {
+            ...d,
+            ...(null != n ? { ...g, onFocus: f } : void 0),
+            ref: c,
+            role: "separator",
+            "aria-label": r,
+            className: l()(e, { [u.yF]: !0, [u.ov]: null != b, [u.rd]: i }),
+        })
+    );
+});

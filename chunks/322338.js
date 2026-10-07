@@ -50,28 +50,28 @@ var l = s(477900),
 (s(134528), s(947204));
 var X = s(885574),
     J = s(939);
-let Z = n.forwardRef(function (e, t) {
-    let { isInventory: s, style: n, children: r } = e;
+let Z = function (e) {
+    let { isInventory: t, style: s, children: n, ref: r } = e;
     return (0, l.jsxs)("div", {
-        ref: t,
+        ref: r,
         className: J.Q,
-        style: { marginTop: 8 * !!s, ...n },
+        style: { marginTop: 8 * !!t, ...s },
         children: [
             (0, l.jsx)(X.CircleInformationIcon, {
                 size: "custom",
                 className: J.G,
-                height: s ? 16 : 12,
-                width: s ? 16 : 12,
-                color: s ? T.A.colors.TEXT_MUTED.css : T.A.colors.WHITE.css,
+                height: t ? 16 : 12,
+                width: t ? 16 : 12,
+                color: t ? T.A.colors.TEXT_MUTED.css : T.A.colors.WHITE.css,
             }),
             (0, l.jsx)(A.E, {
-                color: s ? "text-muted" : "text-overlay-light",
-                variant: s ? "text-xs/normal" : "text-xxs/normal",
-                children: r,
+                color: t ? "text-muted" : "text-overlay-light",
+                variant: t ? "text-xs/normal" : "text-xxs/normal",
+                children: n,
             }),
         ],
     });
-});
+};
 var ee = s(367703);
 let et = function (e) {
     let { className: t, color: s = T.A.colors.WHITE, quest: n, isInventory: r } = e,

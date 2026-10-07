@@ -1,13 +1,14 @@
-n.d(t, { Ay: () => h, C8: () => u, Yf: () => _, nE: () => A, uY: () => E });
-var i = n(477900),
-    r = n(582128),
-    a = n(365912),
-    s = n(623646);
-let { Layer: l, LayerContainer: o, LayerProvider: d, layerContext: c } = (0, a.Ay)("App"),
+n.d(t, { Ay: () => A, C8: () => c, Yf: () => u, nE: () => E, uY: () => _ });
+var i = n(477900);
+n(582128);
+var r = n(365912),
+    a = n(623646);
+let { Layer: s, LayerContainer: l, LayerProvider: o, layerContext: d } = (0, r.Ay)("App"),
+    c = l,
     u = o,
-    _ = d,
-    E = c,
-    A = r.forwardRef(function (e, t) {
-        return (0, i.jsx)(l, { children: (0, i.jsx)(s.Q, { ref: t, ...e }) });
-    }),
-    h = l;
+    _ = d;
+function E(e) {
+    let { ref: t, ...n } = e;
+    return (0, i.jsx)(s, { children: (0, i.jsx)(a.Q, { ref: t, ...n }) });
+}
+let A = s;

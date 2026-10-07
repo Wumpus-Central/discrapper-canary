@@ -1107,41 +1107,42 @@ function th(e) {
         ],
     });
 }
-let tA = d.forwardRef(function (e, t) {
-    let n,
-        i,
+function tA(e) {
+    let t,
+        n,
         {
-            channel: l,
-            guild: s,
-            source: a,
-            guildScheduledEvent: r,
-            streamUserId: o,
-            applicationId: c,
-            transitionState: g,
-            onClose: h,
-            page: A,
-            analyticsLocation: x,
+            channel: i,
+            guild: l,
+            source: s,
+            guildScheduledEvent: a,
+            streamUserId: r,
+            applicationId: o,
+            transitionState: c,
+            onClose: g,
+            page: h,
+            analyticsLocation: A,
+            ref: x,
         } = e,
         { analyticsLocations: v } = (0, ei.Ay)(en.A.INSTANT_INVITE_MODAL),
         S = (0, I.bG)(
             [ex.Ay, L.A, ep.Ay, k.A],
             () => {
-                if (null != l) return l;
+                if (null != i) return i;
                 let e = ex.Ay.getChannelId(),
                     t = null == e || (0, tr.jq)(e) ? void 0 : L.A.getChannel(e);
                 return (
                     t?.isThread() && (t = L.A.getChannel(t.parent_id)),
-                    t?.guild_id === s.id && null != t && k.A.can(B.xBc.VIEW_CHANNEL, t)
+                    t?.guild_id === l.id && null != t && k.A.can(B.xBc.VIEW_CHANNEL, t)
                         ? t
-                        : ep.Ay.getDefaultChannel(s.id, !0, B.xBc.CREATE_INSTANT_INVITE)
+                        : ep.Ay.getDefaultChannel(l.id, !0, B.xBc.CREATE_INSTANT_INVITE)
                 );
             },
-            [l, s.id],
+            [i, l.id],
         ),
         f = (0, ea.Ay)(S),
         y = null;
-    null != o ? (y = K.yV.STREAM) : null != c && (y = K.yV.EMBEDDED_APPLICATION);
-    let E = null != l ? l.getGuildId() : null != s ? s.id : null,
+    null != r ? (y = K.yV.STREAM) : null != o && (y = K.yV.EMBEDDED_APPLICATION);
+    let E = null != i ? i.getGuildId() : null != l ? l.id : null,
         _ = (function (e) {
             let { guildId: t, location: n } = e,
                 i = t ?? B.dJq,
@@ -1175,9 +1176,9 @@ let tA = d.forwardRef(function (e, t) {
             [em.A],
             () => {
                 let e = null != S ? S.id : null;
-                return null == e ? null : em.A.getInvite(e, { targetType: y, targetUserId: o, targetApplicationId: c });
+                return null == e ? null : em.A.getInvite(e, { targetType: y, targetUserId: r, targetApplicationId: o });
             },
-            [S, y, o, c],
+            [S, y, r, o],
         ),
         [T, N, M, G] = (0, I.yK)(
             [ee, eS.Ay],
@@ -1185,9 +1186,9 @@ let tA = d.forwardRef(function (e, t) {
                 ee.getInviteSuggestionRows(),
                 ee.getTotalSuggestionsCount() >= 1,
                 ee.getInitialCounts(),
-                null != l && null != S ? eS.Ay.getVoiceStatesForChannel(S) : null,
+                null != i && null != S ? eS.Ay.getVoiceStatesForChannel(S) : null,
             ],
-            [S, l],
+            [S, i],
         ),
         O = d.useMemo(() => {
             let e = null != S ? S.id : null;
@@ -1200,7 +1201,7 @@ let tA = d.forwardRef(function (e, t) {
         H = d.useMemo(() => {
             let e = new Set();
             return (
-                F || null != o
+                F || null != r
                     ? G?.forEach((t) => {
                           let { user: n } = t;
                           e.add(n.id);
@@ -1213,8 +1214,8 @@ let tA = d.forwardRef(function (e, t) {
                       }),
                 e
             );
-        }, [F, O, o, G, E, y]),
-        q = l?.id,
+        }, [F, O, r, G, E, y]),
+        q = i?.id,
         Q = (0, I.bG)([ec.A], () => ec.A.getStageInstanceByChannel(q), [q]);
     d.useEffect(() => {
         (function (e) {
@@ -1229,14 +1230,14 @@ let tA = d.forwardRef(function (e, t) {
                     inviteTargetType: s,
                 });
             });
-        })({ omitUserIds: H, guild: s, channel: S, applicationId: c, inviteTargetType: y }).catch(B.FXj);
-    }, [H, S, s, c, y]);
-    let [z] = (0, el.A)(null != c ? [c] : []),
+        })({ omitUserIds: H, guild: l, channel: S, applicationId: o, inviteTargetType: y }).catch(B.FXj);
+    }, [H, S, l, o, y]);
+    let [z] = (0, el.A)(null != o ? [o] : []),
         W = null != b ? b.code : void 0,
         Y = b?.maxAge,
         $ = b?.maxUses,
         J = b?.temporary,
-        Z = s.vanityURLCode,
+        Z = l.vanityURLCode,
         X = null != Z && Z.length > 0,
         er = !U && !S?.isGuildVocal() && X,
         eo = b?.flags ?? 0;
@@ -1251,7 +1252,7 @@ let tA = d.forwardRef(function (e, t) {
             temporary: J ?? !1,
             networkError: void 0,
             showVanityURL: er,
-            currentPage: A ?? K.QR.MAIN,
+            currentPage: h ?? K.QR.MAIN,
             lastPage: void 0,
             flags: eo,
             sectionVisibility: {},
@@ -1268,16 +1269,16 @@ let tA = d.forwardRef(function (e, t) {
             [eg.currentPage, eI],
         ),
         eT = F && !er && !V && !P,
-        { enabled: eN } = ed.useExperiment({ guildId: s?.id, location: "acc417_3" }, { autoTrackExposure: eT }),
+        { enabled: eN } = ed.useExperiment({ guildId: l?.id, location: "acc417_3" }, { autoTrackExposure: eT }),
         { canCreateApplicationBypassInvites: ew, isManualApprovalGuild: eG } =
-            ((n = (0, I.bG)([k.A], () => k.A.can(B.xBc.KICK_MEMBERS, s), [s])),
+            ((t = (0, I.bG)([k.A], () => k.A.can(B.xBc.KICK_MEMBERS, l), [l])),
             {
                 canCreateApplicationBypassInvites:
-                    (i = !!(
-                        s?.features.has(B.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
-                        s?.features.has(B.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)
-                    )) && n,
-                isManualApprovalGuild: i,
+                    (n = !!(
+                        l?.features.has(B.GuildFeatures.MEMBER_VERIFICATION_MANUAL_APPROVAL) &&
+                        l?.features.has(B.GuildFeatures.MEMBER_VERIFICATION_GATE_ENABLED)
+                    )) && t,
+                isManualApprovalGuild: n,
             }),
         eO = (eN && eT) || eG,
         { maxAge: eU, maxUses: eV, temporary: eD, savedMaxAge: eL, flags: eF, roleIds: eP } = eg,
@@ -1304,7 +1305,7 @@ let tA = d.forwardRef(function (e, t) {
                         !(0, eM.Oy)(t) && !t.managed && t.tags?.guild_connections === void 0 && !!ej.wO(e, n.id, l, t),
                 );
             }, [e, n, i, t]);
-        })(s),
+        })(l),
         eB = eH.length > 0,
         eK = d.useCallback(
             (e) => {
@@ -1315,8 +1316,8 @@ let tA = d.forwardRef(function (e, t) {
         ),
         eq = d.useCallback(() => {
             let { currentPage: e, lastPage: t } = eg;
-            e === K.QR.SETTINGS && null != t ? ef(t) : h();
-        }, [ef, eg, h]),
+            e === K.QR.SETTINGS && null != t ? ef(t) : g();
+        }, [ef, eg, g]),
         eQ = d.useCallback(() => {
             let e = S?.id;
             (0 === eV && 0 === eU && !ek && er
@@ -1330,16 +1331,16 @@ let tA = d.forwardRef(function (e, t) {
                           max_age: eU,
                           max_uses: eV,
                           target_type: y,
-                          target_user_id: o,
+                          target_user_id: r,
                           target_application_id: z?.id,
                           temporary: ek,
                           flags: eF,
                           role_ids: Array.from(eP),
                       },
-                      a,
+                      s,
                   ).catch((e) => eI({ networkError: e, showVanityURL: er }))),
                 eU !== tu.value && eL !== tu.value && eI({ savedMaxAge: tu.value }));
-        }, [er, U, S, a, z?.id, y, o, eU, eV, ek, eI, eL, eF, eP]),
+        }, [er, U, S, s, z?.id, y, r, eU, eV, ek, eI, eL, eF, eP]),
         ez = (0, et.Ay)(S),
         eW = (0, et.Ay)((0, m.Lt)(eF, p.Q.IS_APPLICATION_BYPASS)),
         eY = null != ez && ez !== S,
@@ -1351,28 +1352,28 @@ let tA = d.forwardRef(function (e, t) {
         (0, u.jsx)(ei.f5, {
             value: v,
             children: (0, u.jsx)(tg, {
-                ref: t,
+                ref: x,
                 canCreateInvites: U,
                 noInvitesAvailable: V,
                 inviteChannel: S,
                 inviteChannelName: f,
-                guild: s,
-                guildScheduledEvent: r,
-                streamUserId: o,
+                guild: l,
+                guildScheduledEvent: a,
+                streamUserId: r,
                 vanityURLCode: Z,
                 targetType: y,
-                targetUserId: o,
+                targetUserId: r,
                 application: z,
                 rows: T,
                 sections: eu,
                 showFriends: N,
                 initialCounts: M,
                 code: W,
-                source: a,
+                source: s,
                 analyticsLocations: v,
-                analyticsLocation: x,
-                transitionState: g,
-                onClose: h,
+                analyticsLocation: A,
+                transitionState: c,
+                onClose: g,
                 canShowVanityURL: er,
                 isGuestInviteCreationToggleEnabled: eN && eT,
                 shouldHideTemporaryInviteToggle: eO,
@@ -1388,7 +1389,7 @@ let tA = d.forwardRef(function (e, t) {
             }),
         })
     );
-});
+}
 function tp(e) {
     return (0, u.jsx)(tA, { ...e });
 }

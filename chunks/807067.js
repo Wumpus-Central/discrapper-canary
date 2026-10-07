@@ -83,50 +83,59 @@ function G(e) {
               ],
           }));
 }
-let V = i.forwardRef(function (e, n) {
-    var t;
-    let { channel: a, isHovered: s, closePopout: o, onMouseEnter: r, onMouseLeave: c, onClick: f, className: E } = e,
-        { id: j, guild_id: T } = a;
+function V(e) {
+    var n;
+    let {
+            channel: t,
+            isHovered: a,
+            closePopout: s,
+            onMouseEnter: o,
+            onMouseLeave: r,
+            onClick: c,
+            className: f,
+            ref: E,
+        } = e,
+        { id: j, guild_id: T } = t;
     (i.useEffect(() => {
         y.default.track(L.HAw.ACTIVITIES_CENTER_CONTROL_TRAY_BUTTON_HOVERED, { channel_id: j, guild_id: T });
     }, [j, T]),
         i.useEffect(() => {
-            s || o();
-        }, [o, s]));
+            a || s();
+        }, [s, a]));
     let N = (0, _.Us)(),
         { analyticsLocations: O, newestAnalyticsLocation: k } = (0, g.Ay)(x.A.ACTIVITIES_MINI_SHELF),
         V = N === L.BRT.POPOUT,
-        B = ((t = a.getGuildId()), (0, R.A)({ guildId: t }).slice(0, 5));
+        B = ((n = t.getGuildId()), (0, R.A)({ guildId: n }).slice(0, 5));
     i.useEffect(() => {
         let e = setTimeout(() => S.LK(), 1e3);
         return () => clearTimeout(e);
     }, []);
-    let w = i.useCallback(() => {
+    let H = i.useCallback(() => {
             ((0, I.A)({
-                context: null != a ? { type: "channel", channel: a } : { type: "contextless" },
+                context: null != t ? { type: "channel", channel: t } : { type: "contextless" },
                 openInPopout: V,
                 analyticsLocation: k,
             }),
-                c(),
-                f());
-        }, [a, k, f, c, V]),
-        H = i.useCallback(
+                r(),
+                c());
+        }, [t, k, c, r, V]),
+        w = i.useCallback(
             (e) => {
-                (r(),
+                (o(),
                     y.default.track(L.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
-                        channel_id: a.id,
-                        guild_id: a.getGuildId(),
+                        channel_id: t.id,
+                        guild_id: t.getGuildId(),
                     }));
             },
-            [r, a],
+            [o, t],
         );
     return (0, l.jsx)(g.f5, {
         value: O,
         children: (0, l.jsx)(b.A, {
             children: (0, l.jsxs)(d.l, {
-                ref: n,
+                ref: E,
                 "aria-labelledby": U,
-                className: E,
+                className: f,
                 children: [
                     (0, l.jsx)(A.F, {
                         forceLevel: 2,
@@ -136,8 +145,8 @@ let V = i.forwardRef(function (e, n) {
                     }),
                     (0, l.jsxs)("div", {
                         className: P.kL,
-                        onMouseEnter: H,
-                        onMouseLeave: c,
+                        onMouseEnter: w,
+                        onMouseLeave: r,
                         children: [
                             (0, l.jsxs)("div", {
                                 className: P.gn,
@@ -158,7 +167,7 @@ let V = i.forwardRef(function (e, n) {
                                     }),
                                     (0, l.jsxs)(u.D, {
                                         className: P.hc,
-                                        onClick: w,
+                                        onClick: H,
                                         children: [
                                             (0, l.jsx)(C.E, {
                                                 variant: "eyebrow",
@@ -177,9 +186,9 @@ let V = i.forwardRef(function (e, n) {
                             }),
                             (0, l.jsx)(G, {
                                 openInPopout: V,
-                                channel: a,
+                                channel: t,
                                 onClick: () => {
-                                    (f(), o());
+                                    (c(), s());
                                 },
                             }),
                             (0, l.jsx)("div", {
@@ -188,10 +197,10 @@ let V = i.forwardRef(function (e, n) {
                                     (0, l.jsx)(
                                         D.C,
                                         {
-                                            context: { channel: a, type: "channel" },
+                                            context: { channel: t, type: "channel" },
                                             activityItem: e,
                                             onClick: () => {
-                                                (o(), f());
+                                                (s(), c());
                                             },
                                             aspectRatio: D.C.AspectRatio.THIRTEEN_BY_ELEVEN,
                                             animatedDivClass: P.KU,
@@ -207,4 +216,4 @@ let V = i.forwardRef(function (e, n) {
             }),
         }),
     });
-});
+}

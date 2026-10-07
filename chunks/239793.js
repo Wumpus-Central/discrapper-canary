@@ -34,9 +34,9 @@ var C = l(503698),
     k = l(915089),
     M = l(625494),
     P = l(304578),
-    w = l(65600),
-    W = l(536637),
-    H = l.n(W),
+    W = l(65600),
+    w = l(536637),
+    H = l.n(w),
     D = l(364522),
     Q = l(939538),
     z = l(692986),
@@ -285,7 +285,7 @@ var eF = l(506774),
 let ek = ef.nC,
     eM = !1,
     eP = {};
-class ew extends o.Ay.Store {
+class eW extends o.Ay.Store {
     static displayName = ef.yQ;
     initialize() {
         var e;
@@ -305,7 +305,7 @@ class ew extends o.Ay.Store {
         return eP[e];
     }
 }
-let eW = new ew(eO.h, {
+let ew = new eW(eO.h, {
     SEARCH_HISTORY_WEB_CLEAR_ITEMS: function (e) {
         let { id: t } = e;
         (delete eP[t], eF.w.set(ef.nC, { history: eP }));
@@ -370,631 +370,627 @@ function eG(e) {
         }),
     });
 }
-let eq = s.forwardRef(function (e, t) {
-        let { searchContext: l, navId: r, resultsState: a, onSelectedIndexChanged: i, selectedChannel: c } = e,
-            [u, h] = s.useState(-1),
-            d = s.useCallback(
-                (e) => {
-                    (h(e), i(e));
-                    let t = document.getElementById(`${r}-${e}`);
-                    null != t && t.scrollIntoView({ block: "nearest", inline: "nearest" });
-                },
-                [r, i],
-            ),
-            f = s.useCallback(
-                (e) => {
-                    let { query: t, performSearch: l, replace: r } = e;
-                    (b.A.setSearchQuery({
-                        query: t,
-                        performSearch: l,
-                        replace: r,
-                        resultsState: a,
-                        searchQuerySource: ef.Q_.SEARCH_POPOUT,
-                    }),
-                        d(-1));
-                },
-                [a, d],
-            ),
-            { items: x, itemsData: g } = (function (e) {
-                let { resultsState: t, searchContext: l, selectedChannel: r, setSearchQuery: a } = e,
-                    { autocompletes: i, mode: c } = t,
-                    u = (function (e) {
-                        let { autocompletes: t, mode: l } = e;
-                        return s.useCallback(
-                            (e) => {
-                                let { getAutocompleteRowItem: r, getAutocompleteGroupItem: n } = e,
-                                    s = 0,
-                                    a = [],
-                                    i = [];
-                                for (let e of t) {
-                                    let t = [],
-                                        { group: o, results: c } = e;
-                                    if (e.results.length > 0) {
-                                        for (let e of c) {
-                                            let n = r({ result: e, modeType: l.type, group: o });
-                                            t.push(n);
-                                        }
-                                        s += c.length;
-                                        let e = n({ group: o, rows: t });
-                                        (a.push(e), i.push(...t));
-                                    }
-                                }
-                                return { autocompleteCount: s, autocompleteGroups: a, allAutocompleteRows: i };
-                            },
-                            [t, l.type],
-                        );
-                    })({ autocompletes: i, mode: c }),
-                    h = (function (e) {
-                        let { setSearchQuery: t, searchContext: l, mode: r } = e,
-                            a = (0, eD.o)(l);
-                        return s.useMemo(() => {
-                            let e = [
-                                {
-                                    type: eo.LWr.FILTER_FROM,
-                                    isEligible: a.has(eo.LWr.FILTER_FROM),
-                                    icon: ee.UserIcon,
-                                    label: ec.intl.string(ec.t.ktr6z5),
-                                },
-                                {
-                                    type: eo.LWr.FILTER_IN,
-                                    isEligible: a.has(eo.LWr.FILTER_IN),
-                                    icon: J.N,
-                                    label: ec.intl.string(ec.t.VMjDvS),
-                                },
-                                {
-                                    type: eo.LWr.FILTER_HAS,
-                                    isEligible: a.has(eo.LWr.FILTER_HAS),
-                                    icon: eH.P,
-                                    label: ec.intl.string(ec.t.IhIpc7),
-                                },
-                                {
-                                    type: eo.LWr.FILTER_MENTIONS,
-                                    isEligible: a.has(eo.LWr.FILTER_MENTIONS),
-                                    icon: et.X,
-                                    label: ec.intl.string(ec.t.fpKv9Y),
-                                },
-                            ];
-                            return e
-                                .filter((e) => e.isEligible)
-                                .map((s) => {
-                                    let { icon: a, label: i, type: o } = s;
-                                    return eu(eN.ROW, {
-                                        icon: (0, n.jsx)(a, { size: "sm", color: "currentColor", className: ex.Fx }),
-                                        label: (0, n.jsx)(eg, { label: i }),
-                                        sublabel: (0, n.jsx)(ep, { searchTokenType: o }),
-                                        onSelect: function (n) {
-                                            let { selectedIndex: s, searchAutocompleteSelectAction: a } = n,
-                                                i = P.Ay[o]?.key ?? "",
-                                                c = (0, S.bS)(l);
-                                            ((0, R.kc)({
-                                                searchContext: l,
-                                                searchQuery: w.A.getSearchResultsQuery(c),
-                                                searchQueryString: b.A.getSearchInputText(l),
-                                                searchTokenType: o,
-                                                searchAutocompleteGroup: o,
-                                                searchAutocompleteMode: r,
-                                                searchAutocompleteResultIndex: s - 1,
-                                                searchAutocompleteTotalResults: e.length,
-                                                isSearchFilterPrefix: !0,
-                                                isSearchFilterAnswer: !1,
-                                                isSearchFilterComplete: !1,
-                                                isInFilterForSelectedChannel: !1,
-                                                searchAutocompleteSelectAction: a,
-                                            }),
-                                                t({ query: `${i} `, performSearch: !1, replace: !1 }));
-                                        },
-                                    });
-                                });
-                        }, [a, l, r, t]);
-                    })({ setSearchQuery: a, searchContext: l, mode: c }),
-                    d = (0, o.yK)([B.A, m.Ay, eW], () => {
-                        if (B.A.hidePersonalInformation) return eQ;
-                        let e = (0, S.Jl)(l, m.Ay);
-                        if (null == e) return eQ;
-                        let t = eW.getHistory(e);
-                        if (null == t) return eQ;
-                        let r = new Set(),
-                            n = [];
-                        return (
-                            t.forEach((e) => {
-                                let t = l.type === eo.I4_.CHANNEL ? (0, S.EH)(e) : e;
-                                "" === t || r.has(t) || (r.add(t), n.push(t));
-                            }),
-                            n
-                        );
-                    });
-                function f(e) {
-                    let {
-                            autocompleteCount: t,
-                            selectedIndex: r,
-                            searchAutocompleteSelectAction: n,
-                            selectedAutocomplete: s,
-                            selectedAutocompleteGroup: a,
-                        } = e,
-                        i = c.type,
-                        o = c.filter,
-                        { token: u, group: h } = s,
-                        d = null != h && (0, P.If)(h) ? h : null,
-                        f = u ?? o ?? d,
-                        x = s.channel,
-                        g = f === eo.LWr.FILTER_IN && null != x && x.id === m.Ay.getChannelId(),
-                        p = (0, S.bS)(l);
-                    (0, R.kc)({
-                        searchContext: l,
-                        searchQuery: w.A.getSearchResultsQuery(p),
-                        searchQueryString: b.A.getSearchInputText(l),
-                        searchTokenType: f,
-                        searchAutocompleteGroup: a,
-                        searchAutocompleteMode: c,
-                        searchAutocompleteResultIndex: r,
-                        searchAutocompleteTotalResults: t,
-                        isSearchFilterPrefix: i === eo.o$q.EMPTY,
-                        isSearchFilterAnswer: i === eo.o$q.FILTER,
-                        isSearchFilterComplete: i === eo.o$q.FILTER_ALL,
-                        isInFilterForSelectedChannel: g,
-                        searchAutocompleteSelectAction: n,
-                    });
-                }
-                let x = s.useCallback(
-                        (e) => {
-                            let { hasOtherSearchFiltersVisible: t } = e,
-                                r = t ? ec.intl.string(ec.t.diOL4i) : ec.intl.string(ec.t["M1tf+7"]);
-                            return eu(eN.ROW, {
-                                icon: (0, n.jsx)($.R, {
-                                    size: "custom",
-                                    color: "currentColor",
-                                    width: 20,
-                                    height: 20,
-                                    className: ex.Fx,
-                                }),
-                                label: (0, n.jsx)(eg, { label: r }),
-                                sublabel: t
-                                    ? (0, n.jsx)(G.E, {
-                                          variant: "text-sm/medium",
-                                          color: "text-muted",
-                                          children: ec.intl.string(ec.t["1axf1T"]),
-                                      })
-                                    : void 0,
-                                onSelect: () => b.A.openSearchFiltersModal(l),
-                            });
-                        },
-                        [l],
-                    ),
-                    g = (0,
-                    {
-                        [eo.o$q.EMPTY]: () => {
-                            let e = [];
-                            if (null != r && (0, Y.HM)(l) && l.type === eo.I4_.DMS) {
-                                let t = eS(r),
-                                    s = eu(eN.ROW, {
-                                        icon: (0, n.jsx)(q.MagnifyingGlassIcon, {
-                                            size: "sm",
-                                            color: "currentColor",
-                                            className: ex.Fx,
-                                        }),
-                                        label: (0, n.jsx)(eg, {
-                                            label: ec.intl.format(ec.t["VGEH/0"], { channelName: t }),
-                                            className: ex.YL,
-                                        }),
-                                        onSelect: (e) => {
-                                            let { searchAutocompleteSelectAction: t } = e;
-                                            return (function (e) {
-                                                let { selectedChannel: t, searchAutocompleteSelectAction: r } = e;
-                                                (0, R.rE)({ searchContext: l, searchAutocompleteSelectAction: r });
-                                                let n = eo.LWr.FILTER_IN,
-                                                    s = P.Ay[n],
-                                                    i = (0, S.Rt)(t);
-                                                a({
-                                                    query: `${s?.key ?? n.toString()} ${i}`,
-                                                    performSearch: !0,
-                                                    replace: !1,
-                                                });
-                                            })({ selectedChannel: r, searchAutocompleteSelectAction: t });
-                                        },
-                                    });
-                                e.push(s);
-                            }
-                            let t = [...h, x({ hasOtherSearchFiltersVisible: !0 })];
-                            if ((e.push(eu(eN.GROUP, { rows: t, title: ec.intl.string(ec.t.UdhTtk) })), d.length > 0)) {
-                                let t = d.map((e, t) => {
-                                        let { label: r, ariaLabel: s } = eC({
-                                            value: e,
-                                            avatarSize: U._3.SIZE_16,
-                                            iconSize: "xs",
-                                        });
-                                        return eu(eN.ROW, {
-                                            icon: (0, n.jsx)(q.MagnifyingGlassIcon, {
-                                                size: "sm",
-                                                color: "currentColor",
-                                                className: ex.Fx,
-                                            }),
-                                            label: r,
-                                            ariaLabel: ec.intl.formatToPlainString(ec.t.WoiGrV, { suggestion: s }),
-                                            resultText: e,
-                                            onSelect: () => {
-                                                ((0, R.oR)({
-                                                    searchContext: l,
-                                                    searchHistoryIndex: t,
-                                                    searchHistoryTotalResults: d.length,
-                                                }),
-                                                    a({ query: e, performSearch: !0, replace: !1 }));
-                                            },
-                                        });
-                                    }),
-                                    r = eu(eN.GROUP, {
-                                        rows: t,
-                                        trailingIcon: (0, n.jsx)(eA, { searchContext: l }),
-                                        title: eh(eo.x2k.HISTORY),
-                                    });
-                                e.push(r);
-                            }
-                            return e;
-                        },
-                        [eo.o$q.FILTER_ALL]: () => {
-                            let e = [];
-                            if ("" !== t.query.trim()) {
-                                let { label: l } = eC({ value: t.query, avatarSize: U._3.SIZE_16, iconSize: "xs" }),
-                                    r = eu(eN.ROW, {
-                                        icon: (0, n.jsx)(q.MagnifyingGlassIcon, {
-                                            size: "sm",
-                                            color: "currentColor",
-                                            className: ex.Fx,
-                                        }),
-                                        label: (0, n.jsx)(eg, {
-                                            label: ec.intl.format(ec.t.rCnaoo, { value: l }),
-                                            className: ex.YL,
-                                        }),
-                                        ariaLabel: ec.intl.formatToPlainString(ec.t.rCnaoo, { value: t.query }),
-                                        onSelect: () =>
-                                            (function (e) {
-                                                let { searchEverywhere: t } = e;
-                                                M._.dispatch(eo.jej.PERFORM_SEARCH, {
-                                                    searchEverywhere: t,
-                                                    searchQuerySource: ef.Q_.SEARCH_POPOUT,
-                                                });
-                                            })({ searchEverywhere: !1 }),
-                                    });
-                                e.push(r);
-                            }
-                            let { autocompleteCount: l, autocompleteGroups: r } = u({
-                                getAutocompleteRowItem: (e) => {
-                                    let { result: t, modeType: r, group: s } = e,
-                                        i = ed({ modeType: r, result: t, group: s }),
-                                        o = (function (e) {
-                                            let { result: t, group: l } = e;
-                                            switch (l) {
-                                                case eo.x2k.HISTORY:
-                                                    return (0, n.jsx)(q.MagnifyingGlassIcon, {
-                                                        size: "sm",
-                                                        color: "currentColor",
-                                                        className: ex.Fx,
-                                                    });
-                                                case eo.LWr.FILTER_IN:
-                                                    return (0, n.jsx)(J.N, {
-                                                        size: "sm",
-                                                        color: "currentColor",
-                                                        className: ex.Fx,
-                                                    });
-                                                case eo.LWr.FILTER_FROM:
-                                                    return (0, n.jsx)(ee.UserIcon, {
-                                                        size: "sm",
-                                                        color: "currentColor",
-                                                        className: ex.Fx,
-                                                    });
-                                                case eo.LWr.FILTER_MENTIONS:
-                                                    return (0, n.jsx)(et.X, {
-                                                        size: "sm",
-                                                        color: "currentColor",
-                                                        className: ex.Fx,
-                                                    });
-                                                case eo.LWr.FILTER_HAS:
-                                                    return (0, n.jsx)(ev, {
-                                                        text: t.text,
-                                                        size: "sm",
-                                                        className: ex.Fx,
-                                                    });
-                                                default:
-                                                    return null;
-                                            }
-                                        })({ result: t, group: s }),
-                                        { label: c, ariaLabel: u } = (function (e) {
-                                            let { channel: t, user: l, text: r } = e;
-                                            return null != t
-                                                ? {
-                                                      label: (0, n.jsxs)("div", {
-                                                          className: ex.YL,
-                                                          children: [
-                                                              (0, n.jsx)(G.E, {
-                                                                  variant: "text-sm/medium",
-                                                                  color: "text-strong",
-                                                                  children: P.Ay[eo.LWr.FILTER_IN].key ?? "",
-                                                              }),
-                                                              eS(t),
-                                                          ],
-                                                      }),
-                                                      ariaLabel: (0, S.E3)(t),
-                                                  }
-                                                : null != l
-                                                  ? {
-                                                        label: (0, n.jsxs)("div", {
-                                                            className: ex.YL,
-                                                            children: [
-                                                                (0, n.jsx)(eI, { size: U._3.SIZE_16, user: l }),
-                                                                (0, n.jsx)(eR, { user: l }),
-                                                            ],
-                                                        }),
-                                                        ariaLabel: l.username,
-                                                    }
-                                                  : { label: (0, n.jsx)(eg, { label: r }), ariaLabel: r };
-                                        })(t),
-                                        h =
-                                            s === eo.LWr.FILTER_FROM || s === eo.LWr.FILTER_MENTIONS
-                                                ? (0, n.jsx)(ep, { searchTokenType: s, answer: t.user?.username })
-                                                : void 0;
-                                    return eu(eN.ROW, {
-                                        icon: o,
-                                        label: c,
-                                        sublabel: h,
-                                        ariaLabel: u,
-                                        resultText: i,
-                                        onSelect: function (e) {
-                                            let { selectedIndex: r, searchAutocompleteSelectAction: n } = e;
-                                            (f({
-                                                selectedIndex: r,
-                                                searchAutocompleteSelectAction: n,
-                                                selectedAutocomplete: t,
-                                                selectedAutocompleteGroup: s,
-                                                autocompleteCount: l,
-                                            }),
-                                                a({ query: i, performSearch: !1, replace: !1 }));
-                                        },
-                                    });
-                                },
-                                getAutocompleteGroupItem: (e) => {
-                                    let { group: t, rows: l } = e,
-                                        r = eh(t);
-                                    return eu(eN.GROUP, { rows: l, title: r });
-                                },
-                            });
-                            if (0 === l) {
-                                let t = [...h, x({ hasOtherSearchFiltersVisible: !0 })];
-                                e.push(eu(eN.GROUP, { rows: t, title: ec.intl.string(ec.t.UdhTtk) }));
-                            } else {
-                                let t = x({ hasOtherSearchFiltersVisible: !1 });
-                                e.push(t);
-                            }
-                            return (l > 0 && e.push(...r), e);
-                        },
-                        [eo.o$q.FILTER]: () => {
-                            let { autocompleteCount: e, autocompleteGroups: t } = u({
-                                getAutocompleteRowItem: (t) => {
-                                    let { result: l, modeType: r, group: s } = t,
-                                        i = ed({ modeType: r, result: l, group: s }),
-                                        o = (function (e) {
-                                            let { result: t, group: l } = e,
-                                                { channel: r, user: s } = t;
-                                            return null != r
-                                                ? (0, n.jsx)(es.A, {
-                                                      channel: r,
-                                                      avatarSize: U._3.SIZE_20,
-                                                      iconClassName: ex.Fx,
-                                                      iconSize: "refresh_sm",
-                                                  })
-                                                : null != s
-                                                  ? (0, n.jsx)(eI, { size: U._3.SIZE_20, user: s, className: ex.Fx })
-                                                  : l === eo.LWr.FILTER_HAS
-                                                    ? (0, n.jsx)(ev, { size: "sm", text: t.text, className: ex.Fx })
-                                                    : l === eo.LWr.FILTER_AUTHOR_TYPE
-                                                      ? (0, n.jsx)(e_, { size: "sm", text: t.text, className: ex.Fx })
-                                                      : null;
-                                        })({ result: l, group: s }),
-                                        { label: c, ariaLabel: u } = (function (e) {
-                                            let { channel: t, user: l, text: r } = e;
-                                            if (null != t) {
-                                                let e = (0, S.E3)(t);
-                                                return {
-                                                    label: (0, n.jsx)(G.E, {
-                                                        variant: "text-sm/semibold",
-                                                        color: "text-strong",
-                                                        children: e,
-                                                    }),
-                                                    ariaLabel: (0, S.E3)(t),
-                                                };
-                                            }
-                                            return null != l
-                                                ? {
-                                                      label: (0, n.jsxs)("div", {
-                                                          className: ex.YL,
-                                                          children: [
-                                                              (0, n.jsx)(eR, { user: l }),
-                                                              (0, n.jsx)(G.E, {
-                                                                  variant: "text-sm/medium",
-                                                                  color: "text-subtle",
-                                                                  children: l.username,
-                                                              }),
-                                                          ],
-                                                      }),
-                                                      ariaLabel: l.username,
-                                                  }
-                                                : { label: (0, n.jsx)(eg, { label: r }), ariaLabel: r };
-                                        })(l);
-                                    return eu(eN.ROW, {
-                                        icon: o,
-                                        label: c,
-                                        ariaLabel: u,
-                                        resultText: i,
-                                        onSelect: function (t) {
-                                            let { selectedIndex: r, searchAutocompleteSelectAction: n } = t;
-                                            (f({
-                                                selectedIndex: r,
-                                                searchAutocompleteSelectAction: n,
-                                                selectedAutocomplete: l,
-                                                selectedAutocompleteGroup: s,
-                                                autocompleteCount: e,
-                                            }),
-                                                a({ query: i, performSearch: !0, replace: !1 }));
-                                        },
-                                    });
-                                },
-                                getAutocompleteGroupItem: (e) => {
-                                    let { group: t, rows: l } = e,
-                                        r = eh(t);
-                                    return eu(eN.GROUP, { rows: l, title: r });
-                                },
-                            });
-                            return [...t];
-                        },
-                    }[c.type])(),
-                    p = s.useMemo(() => {
-                        let e = [];
-                        return (
-                            g.forEach((t) => {
-                                switch (t.type) {
-                                    case eN.ROW:
-                                        e.push(t);
-                                        break;
-                                    case eN.GROUP:
-                                        t.data.rows.forEach((t) => e.push(t));
-                                }
-                            }),
-                            e
-                        );
-                    }, [g]);
-                return { items: g, itemsData: p };
-            })({ resultsState: a, searchContext: l, selectedChannel: c, setSearchQuery: f });
-        function p(e) {
-            let { newSelectedIndex: t, searchAutocompleteSelectAction: l } = e,
-                r = t;
-            return (
-                null == r && (r = u),
-                !(r < 0) &&
-                    !(r > g.length - 1) &&
-                    (g[r].data.onSelect({ searchAutocompleteSelectAction: l, selectedIndex: r }), !0)
-            );
-        }
-        function A(e) {
-            let t;
-            ((t = u + e) > g.length - 1 ? (t = 0) : t < 0 && (t = g.length - 1), d(t));
-        }
-        let E = s.useRef({ itemsData: [], selectedIndex: -1, modeType: a.mode.type, query: a.query });
-        s.useEffect(() => {
-            let { itemsData: e, selectedIndex: t, modeType: l, query: r } = E.current,
-                n = a.mode.type,
-                s = a.query;
-            if (n !== l) n === eo.o$q.FILTER ? d(0) : d(-1);
-            else if (n === eo.o$q.FILTER && a.query !== r && g.length > 0) d(0);
-            else if (n === eo.o$q.FILTER && 0 === e.length && g.length > 0) d(0);
-            else if (t >= 0 && (t === u || e.length !== g.length)) {
-                let l = e[t],
-                    r = l?.data.resultText;
-                if (null != r) {
-                    let e = g.findIndex((e) => e.data.resultText === r);
-                    -1 !== e ? d(e) : t >= g.length && d(Math.max(0, g.length - 1));
-                } else t >= g.length && d(Math.max(0, g.length - 1));
-            }
-            E.current = { itemsData: g, selectedIndex: u, modeType: n, query: s };
-        }, [g, u, a.mode.type, a.query, d]);
-        let y = s.useRef(null),
-            I = a.query;
-        return (
-            s.useEffect(() => {
-                if ("" === I) {
-                    y.current = null;
-                    return;
-                }
-                let e = g.length;
-                y.current !== e &&
-                    ((y.current = e), v.O.announce(ec.intl.formatToPlainString(ec.t.ZGVL3g, { count: e }), "polite"));
-            }, [g.length, I]),
-            s.useImperativeHandle(t, () => ({
-                selectedIndex: u,
-                focusNextOption: () => {
-                    A(1);
-                },
-                focusPreviousOption: () => {
-                    A(-1);
-                },
-                selectOption: p,
-            })),
-            (0, n.jsx)(D.d_, {
-                onMouseDown: function (e) {
-                    (e.stopPropagation(), e.preventDefault());
-                },
-                role: "listbox",
-                id: r,
-                tabIndex: -1,
-                "aria-activedescendant": `${r}-${u}`,
-                className: x.length > 0 ? ez.kL : void 0,
-                children: (0, n.jsx)(eG, { items: x, navId: r, selectedIndex: u }),
-            })
-        );
-    }),
-    eU = s.forwardRef(function (e, t) {
-        let { navId: l, resultsState: r, searchContext: a } = e;
-        return (
-            s.useImperativeHandle(t, () => ({
-                selectedIndex: -1,
-                focusNextOption: () => {},
-                focusPreviousOption: () => {},
-                selectOption: () => {},
-            })),
-            (0, n.jsx)(D.d_, {
-                onMouseDown: function (e) {
-                    (e.stopPropagation(), e.preventDefault());
-                },
-                role: "listbox",
-                id: l,
-                tabIndex: -1,
-                "aria-activedescendant": `${l}--1`,
-                className: T()(ez.kL, ez.Wl),
-                children: (0, n.jsx)(Q.CalendarPicker, {
-                    onSelect: function (e) {
-                        let t = (0, S.bS)(a);
-                        ((0, R.kc)({
-                            searchContext: a,
-                            searchQuery: w.A.getSearchResultsQuery(t),
-                            searchQueryString: b.A.getSearchInputText(a),
-                            searchTokenType: r.mode.filter,
-                            searchAutocompleteGroup: eo.x2k.DATES,
-                            searchAutocompleteMode: r.mode,
-                            isSearchFilterPrefix: !1,
-                            isSearchFilterAnswer: !0,
-                            isSearchFilterComplete: !1,
-                            searchAutocompleteSelectAction: ef.oi.CLICK,
-                        }),
-                            b.A.setSearchQuery({
-                                query: e.format(eo.ump) + " ",
-                                performSearch: !0,
-                                replace: !1,
-                                resultsState: r,
-                                searchQuerySource: ef.Q_.SEARCH_POPOUT,
-                            }));
-                    },
-                    maxDate: H()().local(),
-                    minDate: e$,
-                    calendarClassName: ez.BJ,
+function eq(e) {
+    let { searchContext: t, navId: l, resultsState: r, onSelectedIndexChanged: a, selectedChannel: i, ref: c } = e,
+        [u, h] = s.useState(-1),
+        d = s.useCallback(
+            (e) => {
+                (h(e), a(e));
+                let t = document.getElementById(`${l}-${e}`);
+                null != t && t.scrollIntoView({ block: "nearest", inline: "nearest" });
+            },
+            [l, a],
+        ),
+        f = s.useCallback(
+            (e) => {
+                let { query: t, performSearch: l, replace: n } = e;
+                (b.A.setSearchQuery({
+                    query: t,
+                    performSearch: l,
+                    replace: n,
+                    resultsState: r,
+                    searchQuerySource: ef.Q_.SEARCH_POPOUT,
                 }),
-            })
+                    d(-1));
+            },
+            [r, d],
+        ),
+        { items: x, itemsData: g } = (function (e) {
+            let { resultsState: t, searchContext: l, selectedChannel: r, setSearchQuery: a } = e,
+                { autocompletes: i, mode: c } = t,
+                u = (function (e) {
+                    let { autocompletes: t, mode: l } = e;
+                    return s.useCallback(
+                        (e) => {
+                            let { getAutocompleteRowItem: r, getAutocompleteGroupItem: n } = e,
+                                s = 0,
+                                a = [],
+                                i = [];
+                            for (let e of t) {
+                                let t = [],
+                                    { group: o, results: c } = e;
+                                if (e.results.length > 0) {
+                                    for (let e of c) {
+                                        let n = r({ result: e, modeType: l.type, group: o });
+                                        t.push(n);
+                                    }
+                                    s += c.length;
+                                    let e = n({ group: o, rows: t });
+                                    (a.push(e), i.push(...t));
+                                }
+                            }
+                            return { autocompleteCount: s, autocompleteGroups: a, allAutocompleteRows: i };
+                        },
+                        [t, l.type],
+                    );
+                })({ autocompletes: i, mode: c }),
+                h = (function (e) {
+                    let { setSearchQuery: t, searchContext: l, mode: r } = e,
+                        a = (0, eD.o)(l);
+                    return s.useMemo(() => {
+                        let e = [
+                            {
+                                type: eo.LWr.FILTER_FROM,
+                                isEligible: a.has(eo.LWr.FILTER_FROM),
+                                icon: ee.UserIcon,
+                                label: ec.intl.string(ec.t.ktr6z5),
+                            },
+                            {
+                                type: eo.LWr.FILTER_IN,
+                                isEligible: a.has(eo.LWr.FILTER_IN),
+                                icon: J.N,
+                                label: ec.intl.string(ec.t.VMjDvS),
+                            },
+                            {
+                                type: eo.LWr.FILTER_HAS,
+                                isEligible: a.has(eo.LWr.FILTER_HAS),
+                                icon: eH.P,
+                                label: ec.intl.string(ec.t.IhIpc7),
+                            },
+                            {
+                                type: eo.LWr.FILTER_MENTIONS,
+                                isEligible: a.has(eo.LWr.FILTER_MENTIONS),
+                                icon: et.X,
+                                label: ec.intl.string(ec.t.fpKv9Y),
+                            },
+                        ];
+                        return e
+                            .filter((e) => e.isEligible)
+                            .map((s) => {
+                                let { icon: a, label: i, type: o } = s;
+                                return eu(eN.ROW, {
+                                    icon: (0, n.jsx)(a, { size: "sm", color: "currentColor", className: ex.Fx }),
+                                    label: (0, n.jsx)(eg, { label: i }),
+                                    sublabel: (0, n.jsx)(ep, { searchTokenType: o }),
+                                    onSelect: function (n) {
+                                        let { selectedIndex: s, searchAutocompleteSelectAction: a } = n,
+                                            i = P.Ay[o]?.key ?? "",
+                                            c = (0, S.bS)(l);
+                                        ((0, R.kc)({
+                                            searchContext: l,
+                                            searchQuery: W.A.getSearchResultsQuery(c),
+                                            searchQueryString: b.A.getSearchInputText(l),
+                                            searchTokenType: o,
+                                            searchAutocompleteGroup: o,
+                                            searchAutocompleteMode: r,
+                                            searchAutocompleteResultIndex: s - 1,
+                                            searchAutocompleteTotalResults: e.length,
+                                            isSearchFilterPrefix: !0,
+                                            isSearchFilterAnswer: !1,
+                                            isSearchFilterComplete: !1,
+                                            isInFilterForSelectedChannel: !1,
+                                            searchAutocompleteSelectAction: a,
+                                        }),
+                                            t({ query: `${i} `, performSearch: !1, replace: !1 }));
+                                    },
+                                });
+                            });
+                    }, [a, l, r, t]);
+                })({ setSearchQuery: a, searchContext: l, mode: c }),
+                d = (0, o.yK)([B.A, m.Ay, ew], () => {
+                    if (B.A.hidePersonalInformation) return eQ;
+                    let e = (0, S.Jl)(l, m.Ay);
+                    if (null == e) return eQ;
+                    let t = ew.getHistory(e);
+                    if (null == t) return eQ;
+                    let r = new Set(),
+                        n = [];
+                    return (
+                        t.forEach((e) => {
+                            let t = l.type === eo.I4_.CHANNEL ? (0, S.EH)(e) : e;
+                            "" === t || r.has(t) || (r.add(t), n.push(t));
+                        }),
+                        n
+                    );
+                });
+            function f(e) {
+                let {
+                        autocompleteCount: t,
+                        selectedIndex: r,
+                        searchAutocompleteSelectAction: n,
+                        selectedAutocomplete: s,
+                        selectedAutocompleteGroup: a,
+                    } = e,
+                    i = c.type,
+                    o = c.filter,
+                    { token: u, group: h } = s,
+                    d = null != h && (0, P.If)(h) ? h : null,
+                    f = u ?? o ?? d,
+                    x = s.channel,
+                    g = f === eo.LWr.FILTER_IN && null != x && x.id === m.Ay.getChannelId(),
+                    p = (0, S.bS)(l);
+                (0, R.kc)({
+                    searchContext: l,
+                    searchQuery: W.A.getSearchResultsQuery(p),
+                    searchQueryString: b.A.getSearchInputText(l),
+                    searchTokenType: f,
+                    searchAutocompleteGroup: a,
+                    searchAutocompleteMode: c,
+                    searchAutocompleteResultIndex: r,
+                    searchAutocompleteTotalResults: t,
+                    isSearchFilterPrefix: i === eo.o$q.EMPTY,
+                    isSearchFilterAnswer: i === eo.o$q.FILTER,
+                    isSearchFilterComplete: i === eo.o$q.FILTER_ALL,
+                    isInFilterForSelectedChannel: g,
+                    searchAutocompleteSelectAction: n,
+                });
+            }
+            let x = s.useCallback(
+                    (e) => {
+                        let { hasOtherSearchFiltersVisible: t } = e,
+                            r = t ? ec.intl.string(ec.t.diOL4i) : ec.intl.string(ec.t["M1tf+7"]);
+                        return eu(eN.ROW, {
+                            icon: (0, n.jsx)($.R, {
+                                size: "custom",
+                                color: "currentColor",
+                                width: 20,
+                                height: 20,
+                                className: ex.Fx,
+                            }),
+                            label: (0, n.jsx)(eg, { label: r }),
+                            sublabel: t
+                                ? (0, n.jsx)(G.E, {
+                                      variant: "text-sm/medium",
+                                      color: "text-muted",
+                                      children: ec.intl.string(ec.t["1axf1T"]),
+                                  })
+                                : void 0,
+                            onSelect: () => b.A.openSearchFiltersModal(l),
+                        });
+                    },
+                    [l],
+                ),
+                g = (0,
+                {
+                    [eo.o$q.EMPTY]: () => {
+                        let e = [];
+                        if (null != r && (0, Y.HM)(l) && l.type === eo.I4_.DMS) {
+                            let t = eS(r),
+                                s = eu(eN.ROW, {
+                                    icon: (0, n.jsx)(q.MagnifyingGlassIcon, {
+                                        size: "sm",
+                                        color: "currentColor",
+                                        className: ex.Fx,
+                                    }),
+                                    label: (0, n.jsx)(eg, {
+                                        label: ec.intl.format(ec.t["VGEH/0"], { channelName: t }),
+                                        className: ex.YL,
+                                    }),
+                                    onSelect: (e) => {
+                                        let { searchAutocompleteSelectAction: t } = e;
+                                        return (function (e) {
+                                            let { selectedChannel: t, searchAutocompleteSelectAction: r } = e;
+                                            (0, R.rE)({ searchContext: l, searchAutocompleteSelectAction: r });
+                                            let n = eo.LWr.FILTER_IN,
+                                                s = P.Ay[n],
+                                                i = (0, S.Rt)(t);
+                                            a({
+                                                query: `${s?.key ?? n.toString()} ${i}`,
+                                                performSearch: !0,
+                                                replace: !1,
+                                            });
+                                        })({ selectedChannel: r, searchAutocompleteSelectAction: t });
+                                    },
+                                });
+                            e.push(s);
+                        }
+                        let t = [...h, x({ hasOtherSearchFiltersVisible: !0 })];
+                        if ((e.push(eu(eN.GROUP, { rows: t, title: ec.intl.string(ec.t.UdhTtk) })), d.length > 0)) {
+                            let t = d.map((e, t) => {
+                                    let { label: r, ariaLabel: s } = eC({
+                                        value: e,
+                                        avatarSize: U._3.SIZE_16,
+                                        iconSize: "xs",
+                                    });
+                                    return eu(eN.ROW, {
+                                        icon: (0, n.jsx)(q.MagnifyingGlassIcon, {
+                                            size: "sm",
+                                            color: "currentColor",
+                                            className: ex.Fx,
+                                        }),
+                                        label: r,
+                                        ariaLabel: ec.intl.formatToPlainString(ec.t.WoiGrV, { suggestion: s }),
+                                        resultText: e,
+                                        onSelect: () => {
+                                            ((0, R.oR)({
+                                                searchContext: l,
+                                                searchHistoryIndex: t,
+                                                searchHistoryTotalResults: d.length,
+                                            }),
+                                                a({ query: e, performSearch: !0, replace: !1 }));
+                                        },
+                                    });
+                                }),
+                                r = eu(eN.GROUP, {
+                                    rows: t,
+                                    trailingIcon: (0, n.jsx)(eA, { searchContext: l }),
+                                    title: eh(eo.x2k.HISTORY),
+                                });
+                            e.push(r);
+                        }
+                        return e;
+                    },
+                    [eo.o$q.FILTER_ALL]: () => {
+                        let e = [];
+                        if ("" !== t.query.trim()) {
+                            let { label: l } = eC({ value: t.query, avatarSize: U._3.SIZE_16, iconSize: "xs" }),
+                                r = eu(eN.ROW, {
+                                    icon: (0, n.jsx)(q.MagnifyingGlassIcon, {
+                                        size: "sm",
+                                        color: "currentColor",
+                                        className: ex.Fx,
+                                    }),
+                                    label: (0, n.jsx)(eg, {
+                                        label: ec.intl.format(ec.t.rCnaoo, { value: l }),
+                                        className: ex.YL,
+                                    }),
+                                    ariaLabel: ec.intl.formatToPlainString(ec.t.rCnaoo, { value: t.query }),
+                                    onSelect: () =>
+                                        (function (e) {
+                                            let { searchEverywhere: t } = e;
+                                            M._.dispatch(eo.jej.PERFORM_SEARCH, {
+                                                searchEverywhere: t,
+                                                searchQuerySource: ef.Q_.SEARCH_POPOUT,
+                                            });
+                                        })({ searchEverywhere: !1 }),
+                                });
+                            e.push(r);
+                        }
+                        let { autocompleteCount: l, autocompleteGroups: r } = u({
+                            getAutocompleteRowItem: (e) => {
+                                let { result: t, modeType: r, group: s } = e,
+                                    i = ed({ modeType: r, result: t, group: s }),
+                                    o = (function (e) {
+                                        let { result: t, group: l } = e;
+                                        switch (l) {
+                                            case eo.x2k.HISTORY:
+                                                return (0, n.jsx)(q.MagnifyingGlassIcon, {
+                                                    size: "sm",
+                                                    color: "currentColor",
+                                                    className: ex.Fx,
+                                                });
+                                            case eo.LWr.FILTER_IN:
+                                                return (0, n.jsx)(J.N, {
+                                                    size: "sm",
+                                                    color: "currentColor",
+                                                    className: ex.Fx,
+                                                });
+                                            case eo.LWr.FILTER_FROM:
+                                                return (0, n.jsx)(ee.UserIcon, {
+                                                    size: "sm",
+                                                    color: "currentColor",
+                                                    className: ex.Fx,
+                                                });
+                                            case eo.LWr.FILTER_MENTIONS:
+                                                return (0, n.jsx)(et.X, {
+                                                    size: "sm",
+                                                    color: "currentColor",
+                                                    className: ex.Fx,
+                                                });
+                                            case eo.LWr.FILTER_HAS:
+                                                return (0, n.jsx)(ev, { text: t.text, size: "sm", className: ex.Fx });
+                                            default:
+                                                return null;
+                                        }
+                                    })({ result: t, group: s }),
+                                    { label: c, ariaLabel: u } = (function (e) {
+                                        let { channel: t, user: l, text: r } = e;
+                                        return null != t
+                                            ? {
+                                                  label: (0, n.jsxs)("div", {
+                                                      className: ex.YL,
+                                                      children: [
+                                                          (0, n.jsx)(G.E, {
+                                                              variant: "text-sm/medium",
+                                                              color: "text-strong",
+                                                              children: P.Ay[eo.LWr.FILTER_IN].key ?? "",
+                                                          }),
+                                                          eS(t),
+                                                      ],
+                                                  }),
+                                                  ariaLabel: (0, S.E3)(t),
+                                              }
+                                            : null != l
+                                              ? {
+                                                    label: (0, n.jsxs)("div", {
+                                                        className: ex.YL,
+                                                        children: [
+                                                            (0, n.jsx)(eI, { size: U._3.SIZE_16, user: l }),
+                                                            (0, n.jsx)(eR, { user: l }),
+                                                        ],
+                                                    }),
+                                                    ariaLabel: l.username,
+                                                }
+                                              : { label: (0, n.jsx)(eg, { label: r }), ariaLabel: r };
+                                    })(t),
+                                    h =
+                                        s === eo.LWr.FILTER_FROM || s === eo.LWr.FILTER_MENTIONS
+                                            ? (0, n.jsx)(ep, { searchTokenType: s, answer: t.user?.username })
+                                            : void 0;
+                                return eu(eN.ROW, {
+                                    icon: o,
+                                    label: c,
+                                    sublabel: h,
+                                    ariaLabel: u,
+                                    resultText: i,
+                                    onSelect: function (e) {
+                                        let { selectedIndex: r, searchAutocompleteSelectAction: n } = e;
+                                        (f({
+                                            selectedIndex: r,
+                                            searchAutocompleteSelectAction: n,
+                                            selectedAutocomplete: t,
+                                            selectedAutocompleteGroup: s,
+                                            autocompleteCount: l,
+                                        }),
+                                            a({ query: i, performSearch: !1, replace: !1 }));
+                                    },
+                                });
+                            },
+                            getAutocompleteGroupItem: (e) => {
+                                let { group: t, rows: l } = e,
+                                    r = eh(t);
+                                return eu(eN.GROUP, { rows: l, title: r });
+                            },
+                        });
+                        if (0 === l) {
+                            let t = [...h, x({ hasOtherSearchFiltersVisible: !0 })];
+                            e.push(eu(eN.GROUP, { rows: t, title: ec.intl.string(ec.t.UdhTtk) }));
+                        } else {
+                            let t = x({ hasOtherSearchFiltersVisible: !1 });
+                            e.push(t);
+                        }
+                        return (l > 0 && e.push(...r), e);
+                    },
+                    [eo.o$q.FILTER]: () => {
+                        let { autocompleteCount: e, autocompleteGroups: t } = u({
+                            getAutocompleteRowItem: (t) => {
+                                let { result: l, modeType: r, group: s } = t,
+                                    i = ed({ modeType: r, result: l, group: s }),
+                                    o = (function (e) {
+                                        let { result: t, group: l } = e,
+                                            { channel: r, user: s } = t;
+                                        return null != r
+                                            ? (0, n.jsx)(es.A, {
+                                                  channel: r,
+                                                  avatarSize: U._3.SIZE_20,
+                                                  iconClassName: ex.Fx,
+                                                  iconSize: "refresh_sm",
+                                              })
+                                            : null != s
+                                              ? (0, n.jsx)(eI, { size: U._3.SIZE_20, user: s, className: ex.Fx })
+                                              : l === eo.LWr.FILTER_HAS
+                                                ? (0, n.jsx)(ev, { size: "sm", text: t.text, className: ex.Fx })
+                                                : l === eo.LWr.FILTER_AUTHOR_TYPE
+                                                  ? (0, n.jsx)(e_, { size: "sm", text: t.text, className: ex.Fx })
+                                                  : null;
+                                    })({ result: l, group: s }),
+                                    { label: c, ariaLabel: u } = (function (e) {
+                                        let { channel: t, user: l, text: r } = e;
+                                        if (null != t) {
+                                            let e = (0, S.E3)(t);
+                                            return {
+                                                label: (0, n.jsx)(G.E, {
+                                                    variant: "text-sm/semibold",
+                                                    color: "text-strong",
+                                                    children: e,
+                                                }),
+                                                ariaLabel: (0, S.E3)(t),
+                                            };
+                                        }
+                                        return null != l
+                                            ? {
+                                                  label: (0, n.jsxs)("div", {
+                                                      className: ex.YL,
+                                                      children: [
+                                                          (0, n.jsx)(eR, { user: l }),
+                                                          (0, n.jsx)(G.E, {
+                                                              variant: "text-sm/medium",
+                                                              color: "text-subtle",
+                                                              children: l.username,
+                                                          }),
+                                                      ],
+                                                  }),
+                                                  ariaLabel: l.username,
+                                              }
+                                            : { label: (0, n.jsx)(eg, { label: r }), ariaLabel: r };
+                                    })(l);
+                                return eu(eN.ROW, {
+                                    icon: o,
+                                    label: c,
+                                    ariaLabel: u,
+                                    resultText: i,
+                                    onSelect: function (t) {
+                                        let { selectedIndex: r, searchAutocompleteSelectAction: n } = t;
+                                        (f({
+                                            selectedIndex: r,
+                                            searchAutocompleteSelectAction: n,
+                                            selectedAutocomplete: l,
+                                            selectedAutocompleteGroup: s,
+                                            autocompleteCount: e,
+                                        }),
+                                            a({ query: i, performSearch: !0, replace: !1 }));
+                                    },
+                                });
+                            },
+                            getAutocompleteGroupItem: (e) => {
+                                let { group: t, rows: l } = e,
+                                    r = eh(t);
+                                return eu(eN.GROUP, { rows: l, title: r });
+                            },
+                        });
+                        return [...t];
+                    },
+                }[c.type])(),
+                p = s.useMemo(() => {
+                    let e = [];
+                    return (
+                        g.forEach((t) => {
+                            switch (t.type) {
+                                case eN.ROW:
+                                    e.push(t);
+                                    break;
+                                case eN.GROUP:
+                                    t.data.rows.forEach((t) => e.push(t));
+                            }
+                        }),
+                        e
+                    );
+                }, [g]);
+            return { items: g, itemsData: p };
+        })({ resultsState: r, searchContext: t, selectedChannel: i, setSearchQuery: f });
+    function p(e) {
+        let { newSelectedIndex: t, searchAutocompleteSelectAction: l } = e,
+            r = t;
+        return (
+            null == r && (r = u),
+            !(r < 0) &&
+                !(r > g.length - 1) &&
+                (g[r].data.onSelect({ searchAutocompleteSelectAction: l, selectedIndex: r }), !0)
         );
-    }),
-    eB = s.forwardRef(function (e, t) {
-        let { searchContext: l, navId: r, onSelectedIndexChanged: s } = e,
-            [a, i] = (0, o.yK)([z.A, m.Ay, f.A], () => {
-                let e = z.A.getState(l),
-                    t = m.Ay.getChannelId();
-                return [e, f.A.getChannel(t)];
-            });
-        return (0, S.av)(a.mode.filter)
-            ? (0, n.jsx)(eU, { navId: r, resultsState: a, searchContext: l })
-            : (0, n.jsx)(eq, {
-                  ref: t,
-                  searchContext: l,
-                  navId: r,
-                  onSelectedIndexChanged: s,
-                  resultsState: a,
-                  selectedChannel: i,
-              });
-    });
+    }
+    function A(e) {
+        let t;
+        ((t = u + e) > g.length - 1 ? (t = 0) : t < 0 && (t = g.length - 1), d(t));
+    }
+    let E = s.useRef({ itemsData: [], selectedIndex: -1, modeType: r.mode.type, query: r.query });
+    s.useEffect(() => {
+        let { itemsData: e, selectedIndex: t, modeType: l, query: n } = E.current,
+            s = r.mode.type,
+            a = r.query;
+        if (s !== l) s === eo.o$q.FILTER ? d(0) : d(-1);
+        else if (s === eo.o$q.FILTER && r.query !== n && g.length > 0) d(0);
+        else if (s === eo.o$q.FILTER && 0 === e.length && g.length > 0) d(0);
+        else if (t >= 0 && (t === u || e.length !== g.length)) {
+            let l = e[t],
+                r = l?.data.resultText;
+            if (null != r) {
+                let e = g.findIndex((e) => e.data.resultText === r);
+                -1 !== e ? d(e) : t >= g.length && d(Math.max(0, g.length - 1));
+            } else t >= g.length && d(Math.max(0, g.length - 1));
+        }
+        E.current = { itemsData: g, selectedIndex: u, modeType: s, query: a };
+    }, [g, u, r.mode.type, r.query, d]);
+    let y = s.useRef(null),
+        I = r.query;
+    return (
+        s.useEffect(() => {
+            if ("" === I) {
+                y.current = null;
+                return;
+            }
+            let e = g.length;
+            y.current !== e &&
+                ((y.current = e), v.O.announce(ec.intl.formatToPlainString(ec.t.ZGVL3g, { count: e }), "polite"));
+        }, [g.length, I]),
+        s.useImperativeHandle(c, () => ({
+            selectedIndex: u,
+            focusNextOption: () => {
+                A(1);
+            },
+            focusPreviousOption: () => {
+                A(-1);
+            },
+            selectOption: p,
+        })),
+        (0, n.jsx)(D.d_, {
+            onMouseDown: function (e) {
+                (e.stopPropagation(), e.preventDefault());
+            },
+            role: "listbox",
+            id: l,
+            tabIndex: -1,
+            "aria-activedescendant": `${l}-${u}`,
+            className: x.length > 0 ? ez.kL : void 0,
+            children: (0, n.jsx)(eG, { items: x, navId: l, selectedIndex: u }),
+        })
+    );
+}
+function eU(e) {
+    let { navId: t, resultsState: l, searchContext: r, ref: a } = e;
+    return (
+        s.useImperativeHandle(a, () => ({
+            selectedIndex: -1,
+            focusNextOption: () => {},
+            focusPreviousOption: () => {},
+            selectOption: () => {},
+        })),
+        (0, n.jsx)(D.d_, {
+            onMouseDown: function (e) {
+                (e.stopPropagation(), e.preventDefault());
+            },
+            role: "listbox",
+            id: t,
+            tabIndex: -1,
+            "aria-activedescendant": `${t}--1`,
+            className: T()(ez.kL, ez.Wl),
+            children: (0, n.jsx)(Q.CalendarPicker, {
+                onSelect: function (e) {
+                    let t = (0, S.bS)(r);
+                    ((0, R.kc)({
+                        searchContext: r,
+                        searchQuery: W.A.getSearchResultsQuery(t),
+                        searchQueryString: b.A.getSearchInputText(r),
+                        searchTokenType: l.mode.filter,
+                        searchAutocompleteGroup: eo.x2k.DATES,
+                        searchAutocompleteMode: l.mode,
+                        isSearchFilterPrefix: !1,
+                        isSearchFilterAnswer: !0,
+                        isSearchFilterComplete: !1,
+                        searchAutocompleteSelectAction: ef.oi.CLICK,
+                    }),
+                        b.A.setSearchQuery({
+                            query: e.format(eo.ump) + " ",
+                            performSearch: !0,
+                            replace: !1,
+                            resultsState: l,
+                            searchQuerySource: ef.Q_.SEARCH_POPOUT,
+                        }));
+                },
+                maxDate: H()().local(),
+                minDate: e$,
+                calendarClassName: ez.BJ,
+            }),
+        })
+    );
+}
+let eB = function (e) {
+    let { searchContext: t, navId: l, onSelectedIndexChanged: r, ref: s } = e,
+        [a, i] = (0, o.yK)([z.A, m.Ay, f.A], () => {
+            let e = z.A.getState(t),
+                l = m.Ay.getChannelId();
+            return [e, f.A.getChannel(l)];
+        });
+    return (0, S.av)(a.mode.filter)
+        ? (0, n.jsx)(eU, { navId: l, resultsState: a, searchContext: t })
+        : (0, n.jsx)(eq, {
+              ref: s,
+              searchContext: t,
+              navId: l,
+              onSelectedIndexChanged: r,
+              resultsState: a,
+              selectedChannel: i,
+          });
+};
 var eY = l(798549);
 let eK = "searchToken";
 function eZ(e) {
@@ -1014,7 +1010,7 @@ function e0(e, t) {
     return { path: [0, 0], offset: Math.min(Math.max(t, 0), j.bP.string(e).length) };
 }
 function e1(e) {
-    return w.A.getQueryText(e) ?? "";
+    return W.A.getQueryText(e) ?? "";
 }
 function e5(e, t) {
     let { selection: l } = e;
@@ -1128,7 +1124,7 @@ function e8(e) {
         [p] = s.useState(() => [...x.children]),
         [A, I] = s.useState(!1),
         [C, k] = s.useState(() => d.length > 0),
-        W = s.useRef(null),
+        w = s.useRef(null),
         H = s.useRef(null),
         D = s.useRef(null),
         Q = s.useRef(!0);
@@ -1306,7 +1302,7 @@ function e8(e) {
     s.useEffect(() => {
         (0, S.Pe)();
     }, [l]);
-    let et = (0, o.bG)([w.A], () => w.A.getQueryText(h) ?? "");
+    let et = (0, o.bG)([W.A], () => W.A.getQueryText(h) ?? "");
     (s.useEffect(() => {
         j.bP.string(x) !== et && Y(et);
     }, [et, x, Y]),
@@ -1316,7 +1312,7 @@ function e8(e) {
             let t = j.bP.string(x).length;
             (j.Q6.start(e).offset > t || j.Q6.end(e).offset > t) && j.gB.deselect(x);
         }, [h, x]));
-    let el = (0, o.bG)([w.A], () => w.A.getIsSearchTokensInitialized());
+    let el = (0, o.bG)([W.A], () => W.A.getIsSearchTokensInitialized());
     (s.useEffect(() => {
         el && x.onChange();
     }, [x, el]),
@@ -1392,7 +1388,7 @@ function e8(e) {
         }, [x, l]),
         eu = u ?? ec.intl.string(ec.t["5h0QOP"]);
     return (0, n.jsx)(_.Y, {
-        targetElementRef: W,
+        targetElementRef: w,
         renderPopout: ea,
         position: "bottom",
         animation: _.Y.Animation.NONE,
@@ -1402,7 +1398,7 @@ function e8(e) {
             let { isShown: s } = r;
             return (0, n.jsx)("div", {
                 className: t,
-                ref: W,
+                ref: w,
                 children: (0, n.jsx)("div", {
                     className: T()(eV.$P, { [eV.ho]: C || A, [eV.in]: A }),
                     children: (0, n.jsx)(N.vN, {

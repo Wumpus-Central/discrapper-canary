@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(811024),
     h = n(933958),
     m = n(969151),
-    f = n(659280),
-    p = n(579940),
+    p = n(659280),
+    f = n(579940),
     g = n(915089),
     x = n(750506),
     E = n(513609),
@@ -29,19 +29,20 @@ var l = n(477900),
     _ = n(287809),
     R = n(31498),
     O = n(887129),
-    w = n(741918),
-    L = n(267102),
+    L = n(741918),
+    w = n(267102),
     P = n(652215),
     M = n(307731);
 let D = new Map([["thread", new Set(["name"])]]);
 var U = n(5867),
     V = n(940169);
-let W = i.forwardRef(function (e, t) {
-    let { channel: n, type: r, editorHeight: W, onVisibilityChange: F, editorScrollerRef: B, barsHeight: K } = e,
-        G = (0, g.GV)(),
-        H = (0, o.bG)([S.A], () => S.A.getGuild(n.guild_id) ?? null, [n.guild_id]),
-        z = i.useRef(null),
-        [q, $, Q] = (function (e, t, n) {
+function W(e) {
+    let { ref: t, ...n } = e,
+        { channel: r, type: W, editorHeight: F, onVisibilityChange: B, editorScrollerRef: K, barsHeight: G } = n,
+        H = (0, g.GV)(),
+        z = (0, o.bG)([S.A], () => S.A.getGuild(r.guild_id) ?? null, [r.guild_id]),
+        q = i.useRef(null),
+        [$, Q, Z] = (function (e, t, n) {
             let { channel: l, type: r } = e,
                 [s, a] = i.useState(() => (0, R.Ur)()),
                 u = (0, A.A)(),
@@ -58,20 +59,20 @@ let W = i.forwardRef(function (e, t) {
                     }),
                     [l, r, c],
                 ),
-                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([I.A], () => ({
+                { activeCommand: m, activeCommandOption: p } = (0, o.cf)([I.A], () => ({
                     activeCommand: I.A.getActiveCommand(l.id),
                     activeCommandOption: I.A.getActiveOption(l.id),
                 })),
-                p = i.useMemo(
+                f = i.useMemo(
                     () =>
                         m?.untranslatedName != null &&
-                        f?.name != null &&
-                        (D.get(m.untranslatedName)?.has(f.name) ?? !1),
-                    [m?.untranslatedName, f?.name],
+                        p?.name != null &&
+                        (D.get(m.untranslatedName)?.has(p.name) ?? !1),
+                    [m?.untranslatedName, p?.name],
                 ),
                 g = (function (e) {
                     let { navId: t, scrollerRef: n, state: l, onFocus: r } = e,
-                        { renderWindow: s } = i.useContext(L.Ay);
+                        { renderWindow: s } = i.useContext(w.Ay);
                     function a(e, t, i) {
                         if ((n.current?.scrollToTop(), e && null != l.query)) {
                             let e = l.query.typeInfo.focusMode,
@@ -92,7 +93,7 @@ let W = i.forwardRef(function (e, t) {
                     let u = (0, O.Ay)({
                             id: t,
                             isEnabled: l.isVisible,
-                            orientation: w.Gl.VERTICAL,
+                            orientation: L.Gl.VERTICAL,
                             useVirtualFocus: !0,
                             setFocus: function (e, t) {
                                 let l = s.document.querySelector(e);
@@ -122,7 +123,7 @@ let W = i.forwardRef(function (e, t) {
                     ...e,
                     navigator: g,
                     activeCommand: m,
-                    activeCommandOption: f,
+                    activeCommandOption: p,
                     activeInlineAutocompleteInput: S,
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
@@ -131,16 +132,16 @@ let W = i.forwardRef(function (e, t) {
                     emojiIntention:
                         r === N.oU.RULES_INPUT
                             ? M.EmojiIntention.COMMUNITY_CONTENT
-                            : p
+                            : f
                               ? M.EmojiIntention.NO_CUSTOM_EMOJI
                               : M.EmojiIntention.CHAT,
                     currentWord: x?.word ?? "",
                     currentWordIsAtStart: x?.isAtStart === !0,
                     optionText:
-                        null != f
+                        null != p
                             ? (0, b.getString)(
-                                  { [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
-                                  f.name,
+                                  { [p.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
+                                  p.name,
                               )
                             : "",
                 },
@@ -177,91 +178,91 @@ let W = i.forwardRef(function (e, t) {
                 }, [U, s.query?.typeInfo]),
                 [s, U, g]
             );
-        })({ ...e, guild: H }, t, z),
-        Z = r.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
-        X = (0, f.aI)(q.selectedIndex);
-    (0, p.gf)(G, q.isVisible, X);
-    let J = (0, C.l)({ editorHeight: W, type: r, state: q }),
-        Y = (0, o.bG)(
+        })({ ...n, guild: z }, t, q),
+        X = W.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
+        J = (0, p.aI)($.selectedIndex);
+    (0, f.gf)(H, $.isVisible, J);
+    let Y = (0, C.l)({ editorHeight: F, type: W, state: $ }),
+        ee = (0, o.bG)(
             [h.Ay],
             () => {
-                let e = h.Ay.getSelfEmbeddedActivityForChannel(n.id),
+                let e = h.Ay.getSelfEmbeddedActivityForChannel(r.id),
                     t = h.Ay.getActivityPanelMode();
-                return (0, d.AX)(n) && null != e && (0, m.H)(e.location) === n.id && t === U.Gd.PANEL;
+                return (0, d.AX)(r) && null != e && (0, m.H)(e.location) === r.id && t === U.Gd.PANEL;
             },
-            [n],
+            [r],
         ),
-        ee = i.useMemo(
+        et = i.useMemo(
             () =>
-                J?.top == null && J?.left == null && J?.bottom == null && J?.right == null ? "" : String(Date.now()),
-            [J?.top, J?.left, J?.bottom, J?.right],
+                Y?.top == null && Y?.left == null && Y?.bottom == null && Y?.right == null ? "" : String(Date.now()),
+            [Y?.top, Y?.left, Y?.bottom, Y?.right],
         );
     if (
         (i.useEffect(() => {
-            F(q.isVisible);
-        }, [F, q.isVisible]),
-        !q.isVisible || null == q.query || void 0 === J)
+            B($.isVisible);
+        }, [B, $.isVisible]),
+        !$.isVisible || null == $.query || void 0 === Y)
     )
         return null;
-    let et =
-        q.query.typeInfo.renderResults({
-            results: q.query.results,
-            selectedIndex: q.selectedIndex,
-            channel: n,
-            guild: H,
-            query: q.query.queryText,
-            options: q.query.options,
-            onHover: (e) => $.onResultHover(e),
-            onClick: (e) => $.onResultClick(e),
+    let en =
+        $.query.typeInfo.renderResults({
+            results: $.query.results,
+            selectedIndex: $.selectedIndex,
+            channel: r,
+            guild: z,
+            query: $.query.queryText,
+            options: $.query.options,
+            onHover: (e) => Q.onResultHover(e),
+            onClick: (e) => Q.onResultClick(e),
         }) ?? null;
-    if (null == et) return null;
-    let en = { [V.pK]: null == J, [V.YB]: null != J, [V.sQ]: null == J && "bottom" === e.position, [V.mO]: Y },
-        el = 490;
-    null != J && (el = r.autocomplete?.small ? 200 : q.query?.type === y.DB.EMOJIS_AND_STICKERS ? 490 : 245);
-    let ei = Math.max(W, B?.current?.clientHeight ?? 0),
-        er = Math.min(0.5 * window.innerHeight, ei);
-    el = Math.min(window.innerHeight - 120 - er - (K ?? 0), el);
-    let es = (0, l.jsx)(f.Ay, {
-        id: G,
-        className: s()(V.nx, en),
+    if (null == en) return null;
+    let el = { [V.pK]: null == Y, [V.YB]: null != Y, [V.sQ]: null == Y && "bottom" === n.position, [V.mO]: ee },
+        ei = 490;
+    null != Y && (ei = W.autocomplete?.small ? 200 : $.query?.type === y.DB.EMOJIS_AND_STICKERS ? 490 : 245);
+    let er = Math.max(F, K?.current?.clientHeight ?? 0),
+        es = Math.min(0.5 * window.innerHeight, er);
+    ei = Math.min(window.innerHeight - 120 - es - (G ?? 0), ei);
+    let ea = (0, l.jsx)(p.Ay, {
+        id: H,
+        className: s()(V.nx, el),
         innerClassName: V.Fv,
         onMouseDown: (e) => e.preventDefault(),
         children: (0, l.jsx)(a.hD, {
-            navigator: Q,
+            navigator: Z,
             children: (0, l.jsx)(a.PR, {
                 children: (e) => {
                     let { ref: t, ...n } = e;
                     return (0, l.jsx)(u.Ch, {
-                        id: G,
+                        id: H,
                         ref: (e) => {
-                            ((t.current = e?.getScrollerNode() ?? null), (z.current = e));
+                            ((t.current = e?.getScrollerNode() ?? null), (q.current = e));
                         },
                         orientation: "vertical",
                         overflow: "auto",
                         ...n,
                         className: V.XG,
-                        style: { maxHeight: el },
+                        style: { maxHeight: ei },
                         role: "listbox",
-                        "aria-labelledby": (0, f.Sz)(G),
-                        children: et,
+                        "aria-labelledby": (0, p.Sz)(H),
+                        children: en,
                     });
                 },
             }),
         }),
     });
-    return null != J
-        ? (0, l.jsx)(Z, {
+    return null != Y
+        ? (0, l.jsx)(X, {
               children: (0, l.jsx)(c.Q, {
-                  targetRef: e.targetRef,
-                  overrideTargetRect: J,
-                  positionKey: ee,
-                  position: e.position ?? "top",
+                  targetRef: n.targetRef,
+                  overrideTargetRect: Y,
+                  positionKey: et,
+                  position: n.position ?? "top",
                   align: "left",
                   spacing: 8,
                   autoInvert: !0,
                   nudgeAlignIntoViewport: !0,
-                  children: () => es,
+                  children: () => ea,
               }),
           })
-        : es;
-});
+        : ea;
+}

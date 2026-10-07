@@ -1,17 +1,17 @@
-n.d(e, { A: () => h });
-var r = n(477900),
-    l = n(582128),
-    a = n(503698),
-    t = n.n(a),
-    i = n(953727);
-function c(s) {
-    let { width: e = 8, height: n = 13, color: l = "currentColor", foreground: a, ...t } = s;
-    return (0, r.jsx)("svg", {
-        ...(0, i.A)(t),
-        width: e,
-        height: n,
+r.d(n, { A: () => u });
+var e = r(477900);
+r(582128);
+var l = r(503698),
+    a = r.n(l),
+    t = r(953727);
+function i(s) {
+    let { width: n = 8, height: r = 13, color: l = "currentColor", foreground: a, ...i } = s;
+    return (0, e.jsx)("svg", {
+        ...(0, t.A)(i),
+        width: n,
+        height: r,
         viewBox: "0 0 8 13",
-        children: (0, r.jsx)("path", {
+        children: (0, e.jsx)("path", {
             className: a ?? void 0,
             stroke: l,
             fill: "transparent",
@@ -19,22 +19,22 @@ function c(s) {
         }),
     });
 }
-var d = n(375708),
-    u = n(682172);
-let h = l.forwardRef(function (s, e) {
-    let { className: n, contentClassName: l, isUnread: a, children: i, ...h } = s;
-    return (0, r.jsxs)("div", {
+var c = r(375708),
+    d = r(682172);
+function u(s) {
+    let { className: n, contentClassName: r, isUnread: l, children: t, ref: u, ...h } = s;
+    return (0, e.jsxs)("div", {
         ...h,
-        className: t()(n, { [u.yF]: !0, [u.KJ]: a, [u.ov]: null != i }),
-        ref: e,
+        className: a()(n, { [d.yF]: !0, [d.KJ]: l, [d.ov]: null != t }),
+        ref: u,
         children: [
-            null != i ? (0, r.jsx)("span", { className: t()(u.Qs, l), children: i }) : null,
-            a
-                ? (0, r.jsxs)("span", {
-                      className: u.dM,
-                      children: [(0, r.jsx)(c, { foreground: u.BH, className: u.fE }), d.intl.string(d.t.y2b7CA)],
+            null != t ? (0, e.jsx)("span", { className: a()(d.Qs, r), children: t }) : null,
+            l
+                ? (0, e.jsxs)("span", {
+                      className: d.dM,
+                      children: [(0, e.jsx)(i, { foreground: d.BH, className: d.fE }), c.intl.string(c.t.y2b7CA)],
                   })
                 : null,
         ],
     });
-});
+}

@@ -20,30 +20,31 @@ var i = n(477900),
     S = n(763827),
     _ = n(532624),
     N = n(152567);
-let T = l.forwardRef(function (e, t) {
-    let { "aria-label": n, location: r, containerClassName: s, notchClassName: a } = e,
-        o = l.useRef(null);
+function T(e) {
+    let { ref: t, ...n } = e,
+        { "aria-label": r, location: s, containerClassName: a, notchClassName: o } = n,
+        u = l.useRef(null);
     return (
         l.useImperativeHandle(
             t,
-            () => ({ focus: () => o.current?.focus(), blur: () => o.current?.blur(), activate: () => !1 }),
+            () => ({ focus: () => u.current?.focus(), blur: () => u.current?.blur(), activate: () => !1 }),
             [],
         ),
         (0, i.jsx)("div", {
-            ref: o,
+            ref: u,
             tabIndex: -1,
             role: "img",
-            "aria-label": n,
+            "aria-label": r,
             children: (0, i.jsx)(N.A, {
                 notchBackground: N.V.BLACK,
-                location: r,
+                location: s,
                 meterOnly: !0,
-                containerClassName: s,
-                notchClassName: a,
+                containerClassName: a,
+                notchClassName: o,
             }),
         })
     );
-});
+}
 var M = n(819027),
     v = n(652215),
     y = n(621380),

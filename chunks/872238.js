@@ -525,27 +525,27 @@ function eV(e) {
 }
 var eA = l(307877),
     eM = l(917089);
-let eL = C.forwardRef(function (e, t) {
-    let { label: l, onFilter: n, isFiltered: C, isSorted: s, className: r, ...d } = e,
-        o = C ? "text-strong" : "text-default";
+function eL(e) {
+    let { label: t, onFilter: l, isFiltered: n, isSorted: C, className: s, ref: r, ...d } = e,
+        o = n ? "text-strong" : "text-default";
     return (
-        s && (o = "text-brand"),
+        C && (o = "text-brand"),
         (0, i.jsx)("th", {
-            className: a()(eA.P1, r),
+            className: a()(eA.P1, s),
             children: (0, i.jsxs)(N.D, {
                 ...d,
-                innerRef: t,
-                onClick: n,
-                className: a()(eA.WV, { [eA.o1]: null != n }),
+                innerRef: r,
+                onClick: l,
+                className: a()(eA.WV, { [eA.o1]: null != l }),
                 children: [
-                    (0, i.jsx)(A.E, { variant: "eyebrow", color: o, children: l }),
-                    null != n &&
+                    (0, i.jsx)(A.E, { variant: "eyebrow", color: o, children: t }),
+                    null != l &&
                         (0, i.jsx)("div", {
                             className: eA.IO,
                             children: (0, i.jsx)(Z.R, {
                                 size: "custom",
                                 className: eA.Sj,
-                                color: C ? I.A.colors.CONTROL_BRAND_FOREGROUND.css : I.A.colors.TEXT_MUTED.css,
+                                color: n ? I.A.colors.CONTROL_BRAND_FOREGROUND.css : I.A.colors.TEXT_MUTED.css,
                                 width: 16,
                                 height: 16,
                             }),
@@ -554,7 +554,7 @@ let eL = C.forwardRef(function (e, t) {
             }),
         })
     );
-});
+}
 function eb(e) {
     let { guildId: t, currentPagedMembers: l } = e,
         n = C.useRef(null),

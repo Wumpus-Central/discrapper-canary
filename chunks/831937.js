@@ -518,25 +518,25 @@ var AZ = e(785007),
     AG = e(241326),
     AR = e(946274),
     AB = e(922349);
-let Ay = "custom-image",
-    Ak = r.forwardRef(function (A, t) {
-        let { selectedImageName: e, onChange: r, disabled: l = !1, name: i, alt: s, data: o } = A,
-            d = i === e,
-            u = (0, AZ.Gx)({ isSelected: d, label: s }),
-            g = l
-                ? void 0
-                : () => {
-                      r(o, i);
-                  };
-        return (0, n.jsx)(Ab.D, {
-            ref: t,
-            className: a()(AB.hO, { [AB.wH]: d, [AB.r9]: l }),
-            onClick: g,
-            "aria-disabled": l,
-            ...u,
-            children: (0, n.jsx)("img", { src: o, alt: s, className: AB.mp }),
-        });
+let Ay = "custom-image";
+function Ak(A) {
+    let { selectedImageName: t, onChange: e, disabled: r = !1, name: l, alt: i, data: s, ref: o } = A,
+        d = l === t,
+        u = (0, AZ.Gx)({ isSelected: d, label: i }),
+        g = r
+            ? void 0
+            : () => {
+                  e(s, l);
+              };
+    return (0, n.jsx)(Ab.D, {
+        ref: o,
+        className: a()(AB.hO, { [AB.wH]: d, [AB.r9]: r }),
+        onClick: g,
+        "aria-disabled": r,
+        ...u,
+        children: (0, n.jsx)("img", { src: s, alt: i, className: AB.mp }),
     });
+}
 function AY(A) {
     let {
             presetImages: t,

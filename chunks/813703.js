@@ -415,42 +415,43 @@ class q extends n.PureComponent {
         });
     }
 }
-let X = n.forwardRef((e, t) => {
+function X(e) {
+    let { ref: t, ...s } = e;
     n.useEffect(
         () => (
-            e.persistSearch || ((0, g.Ri)(e.initialQuery ?? ""), m.$P(e.initialQuery ?? "", O.dD.SEARCH)),
+            s.persistSearch || ((0, g.Ri)(s.initialQuery ?? ""), m.$P(s.initialQuery ?? "", O.dD.SEARCH)),
             () => {
-                e.persistSearch || (0, g.Ri)("");
+                s.persistSearch || (0, g.Ri)("");
             }
         ),
-        [e.persistSearch, e.initialQuery],
+        [s.persistSearch, s.initialQuery],
     );
     let {
-            query: s,
-            resultQuery: l,
-            resultItems: i,
-            suggestions: o,
+            query: l,
+            resultQuery: i,
+            resultItems: o,
+            suggestions: h,
         } = (0, a.cf)([f.A], () => ({
             query: f.A.getQuery(),
             resultQuery: f.A.getResultQuery(),
             resultItems: f.A.getResultItems(),
             suggestions: f.A.getSuggestions(),
         })),
-        h = (0, g.RQ)((e) => e.searchQuery),
-        u = (0, R.IE)(),
-        d = n.useRef(null);
+        u = (0, g.RQ)((e) => e.searchQuery),
+        d = (0, R.IE)(),
+        c = n.useRef(null);
     return (0, r.jsx)(q, {
-        ...e,
+        ...s,
         forwardedRef: t,
-        query: null != s && "" !== s ? s : h,
-        resultQuery: l,
-        resultItems: i,
-        suggestions: o,
-        favorites: u,
+        query: null != l && "" !== l ? l : u,
+        resultQuery: i,
+        resultItems: o,
+        suggestions: h,
+        favorites: d,
         searchOffset: 0,
         searchTotalResults: f.A.getResultItems().length,
         searchLimit: null,
-        searchBarRef: d,
-        selectedGIF: e.selectedGIF,
+        searchBarRef: c,
+        selectedGIF: s.selectedGIF,
     });
-});
+}

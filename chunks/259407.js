@@ -8,47 +8,47 @@ var r,
 let d = "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts";
 var u = (((r = {}).YOUTUBE = "YouTube"), (r.TIKTOK = "TikTok"), (r.TWITCH = "Twitch"), r);
 let h = {
-        YouTube: {
-            params: { autoplay: "1", auto_play: "1", pageType: a.NzX },
-            dynamicParams: (e) => {
-                let { autoMute: l } = e;
-                return { mute: l ? "1" : void 0 };
-            },
-        },
-        TikTok: { params: { utm_source: "discord.gg" } },
-        Twitch: {
-            stripParams: ["parent"],
-            appendParams: {
-                parent: [
-                    "discord.co",
-                    "discord.com",
-                    "discordapp.com",
-                    "ptb.discord.com",
-                    "canary.discord.com",
-                    "localhost",
-                ],
-            },
-            params: { autoplay: "true" },
-            dynamicParams: (e) => {
-                let { autoMute: l } = e;
-                return { muted: l ? "true" : void 0 };
-            },
+    YouTube: {
+        params: { autoplay: "1", auto_play: "1", pageType: a.NzX },
+        dynamicParams: (e) => {
+            let { autoMute: l } = e;
+            return { mute: l ? "1" : void 0 };
         },
     },
-    c = i.forwardRef(function (e, l) {
-        let { allowFullScreen: t, ...r } = e,
-            i = t ? `${d} allow-fullscreen` : d;
-        return (0, s.jsx)("iframe", {
-            ref: l,
-            className: o.Qu,
-            allow: t ? "autoplay; fullscreen" : "autoplay",
-            frameBorder: 0,
-            scrolling: "no",
-            sandbox: i,
-            allowFullScreen: t,
-            ...r,
-        });
+    TikTok: { params: { utm_source: "discord.gg" } },
+    Twitch: {
+        stripParams: ["parent"],
+        appendParams: {
+            parent: [
+                "discord.co",
+                "discord.com",
+                "discordapp.com",
+                "ptb.discord.com",
+                "canary.discord.com",
+                "localhost",
+            ],
+        },
+        params: { autoplay: "true" },
+        dynamicParams: (e) => {
+            let { autoMute: l } = e;
+            return { muted: l ? "true" : void 0 };
+        },
+    },
+};
+function c(e) {
+    let { allowFullScreen: l, ref: t, ...r } = e,
+        i = l ? `${d} allow-fullscreen` : d;
+    return (0, s.jsx)("iframe", {
+        ref: t,
+        className: o.Qu,
+        allow: l ? "autoplay; fullscreen" : "autoplay",
+        frameBorder: 0,
+        scrolling: "no",
+        sandbox: i,
+        allowFullScreen: l,
+        ...r,
     });
+}
 function m(e) {
     var l;
     let t,

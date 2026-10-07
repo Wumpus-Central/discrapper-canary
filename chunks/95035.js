@@ -1,29 +1,29 @@
 a.d(t, { A: () => u });
-var r = a(477900),
-    l = a(582128),
-    n = a(559106),
-    s = a(976860),
+var n = a(477900),
+    r = a(582128),
+    s = a(559106),
+    l = a(976860),
     p = a(650583);
-let u = l.forwardRef(function (e, t) {
-    let { href: a, children: u, onClick: c, onKeyPress: h, focusProps: i, transitionExtras: d, ...o } = e,
-        k = l.useCallback(
+function u(e) {
+    let { href: t, children: a, onClick: u, onKeyPress: c, focusProps: h, transitionExtras: i, ref: d, ...k } = e,
+        o = r.useCallback(
             (e) => {
                 e.repeat ||
                     ((e.key === p.dh.SPACE || e.key === p.dh.ENTER) &&
-                        (e.preventDefault(), null != a && (0, s.pX)(a, d), c?.()),
-                    h?.(e));
+                        (e.preventDefault(), null != t && (0, l.pX)(t, i), u?.()),
+                    c?.(e));
             },
-            [a, h, c, d],
+            [t, c, u, i],
         ),
-        f = l.useCallback(
+        f = r.useCallback(
             (e) => {
                 e.metaKey ||
                     e.shiftKey ||
                     0 !== e.button ||
-                    (e.preventDefault(), e.stopPropagation(), null != a && (0, s.pX)(a, d), c?.());
+                    (e.preventDefault(), e.stopPropagation(), null != t && (0, l.pX)(t, i), u?.());
             },
-            [a, c, d],
+            [t, u, i],
         ),
-        C = (0, r.jsx)("a", { ref: t, href: a, onClick: f, onKeyPress: k, ...o, children: u });
-    return (0, r.jsx)(n.vN, { ...i, children: C });
-});
+        C = (0, n.jsx)("a", { ref: d, href: t, onClick: f, onKeyPress: o, ...k, children: a });
+    return (0, n.jsx)(s.vN, { ...h, children: C });
+}

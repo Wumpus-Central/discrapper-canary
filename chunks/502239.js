@@ -413,25 +413,26 @@ function e2(e) {
         (e !== eJ && e !== e0 && t[e ?? "null"]?.highImportanceMentionCount > 0)
     );
 }
-let e3 = (0, eQ.L_)((e, t, n) => ["null", ...t, ...e, e0, eS.sFm.E3_SERVER_DISCOVERY_BADGE, eJ]),
-    e5 = s.forwardRef(function (e, t) {
-        let n = (0, A.yK)([eF.Ay, eK.A, J.default], () =>
-                e3(eF.Ay.getGuildFolders(), eK.A.getUnreadPrivateChannelIds(), J.default.getStoreChangeSentinel()),
-            ),
-            i = (0, A.bG)([eq.A], () => eq.A.isFocused()),
-            r = (0, A.bG)([eY.A], () => eY.A.getExpandedFolders());
-        return (0, a.jsx)(eW.A, {
-            ...e,
-            ref: t,
-            items: n,
-            isUnread: e1,
-            textUnread: es.intl.string(es.t.y2b7CA),
-            textMention: es.intl.string(es.t.y2b7CA),
-            isMentioned: e2,
-            animate: i,
-            expandedFolders: r,
-        });
+let e3 = (0, eQ.L_)((e, t, n) => ["null", ...t, ...e, e0, eS.sFm.E3_SERVER_DISCOVERY_BADGE, eJ]);
+function e5(e) {
+    let { ref: t, ...n } = e,
+        i = (0, A.yK)([eF.Ay, eK.A, J.default], () =>
+            e3(eF.Ay.getGuildFolders(), eK.A.getUnreadPrivateChannelIds(), J.default.getStoreChangeSentinel()),
+        ),
+        r = (0, A.bG)([eq.A], () => eq.A.isFocused()),
+        s = (0, A.bG)([eY.A], () => eY.A.getExpandedFolders());
+    return (0, a.jsx)(eW.A, {
+        ...n,
+        ref: t,
+        items: i,
+        isUnread: e1,
+        textUnread: es.intl.string(es.t.y2b7CA),
+        textMention: es.intl.string(es.t.y2b7CA),
+        isMentioned: e2,
+        animate: r,
+        expandedFolders: s,
     });
+}
 n(667532);
 var e6 = n(868285),
     e4 = n(763827),
@@ -813,39 +814,40 @@ class tm extends s.PureComponent {
         });
     }
 }
-let tg = s.forwardRef(function (e, t) {
-    let n = e.channel.id,
-        i = (0, ti.Ay)(e.channel),
-        r = (0, _.Vd)(n, 2),
-        s = (0, A.bG)([e4.A], () => e4.A.getChannelId(), []),
-        l = (0, A.bG)([y.A], () => y.A.getMode(n), [n]),
-        o = (0, A.bG)([j.A], () => j.A.getAllApplicationStreamsForChannel(n).length > 0),
-        d = (0, A.bG)([em.Ay], () => em.Ay.getVoiceStatesForChannel(e.channel).length > 0, [e.channel]),
-        c = (0, A.bG)([Y.Ay], () => Y.Ay.getChannelId(), []),
-        u = (0, A.bG)([et.Ay], () => et.Ay.getMentionCount(n), [n]),
-        E = s === n,
-        { isIncomingCall: h, isOngoingCall: f } = (0, tt.A)(n),
-        p = !1,
-        T = !1;
-    (E || d) && ((p = l === eS._Of.VOICE), (T = l === eS._Of.VIDEO));
-    let g = (0, m.r)(I.A.modules.guildbar.AVATAR_SIZE);
+function tg(e) {
+    let { ref: t, ...n } = e,
+        i = n.channel.id,
+        r = (0, ti.Ay)(n.channel),
+        s = (0, _.Vd)(i, 2),
+        l = (0, A.bG)([e4.A], () => e4.A.getChannelId(), []),
+        o = (0, A.bG)([y.A], () => y.A.getMode(i), [i]),
+        d = (0, A.bG)([j.A], () => j.A.getAllApplicationStreamsForChannel(i).length > 0),
+        c = (0, A.bG)([em.Ay], () => em.Ay.getVoiceStatesForChannel(n.channel).length > 0, [n.channel]),
+        u = (0, A.bG)([Y.Ay], () => Y.Ay.getChannelId(), []),
+        E = (0, A.bG)([et.Ay], () => et.Ay.getMentionCount(i), [i]),
+        h = l === i,
+        { isIncomingCall: f, isOngoingCall: p } = (0, tt.A)(i),
+        T = !1,
+        g = !1;
+    (h || c) && ((T = o === eS._Of.VOICE), (g = o === eS._Of.VIDEO));
+    let S = (0, m.r)(I.A.modules.guildbar.AVATAR_SIZE);
     return (0, a.jsx)(tm, {
-        ...e,
+        ...n,
         ref: t,
-        channelName: i,
-        unread: u > 0,
-        selected: c === n,
-        badge: u,
-        audio: p,
-        video: T,
-        stream: o,
-        isCurrentUserInThisDMCall: E,
-        isIncomingCall: h,
-        isOngoingCall: f,
-        size: g,
-        treeItemProps: r,
+        channelName: r,
+        unread: E > 0,
+        selected: u === i,
+        badge: E,
+        audio: T,
+        video: g,
+        stream: d,
+        isCurrentUserInThisDMCall: h,
+        isIncomingCall: f,
+        isOngoingCall: p,
+        size: S,
+        treeItemProps: s,
     });
-});
+}
 function tS() {
     (0, A.bG)([W.A], () => W.A.getPrivateChannelsVersion());
     let e = W.A.getMutablePrivateChannels(),
@@ -912,63 +914,64 @@ function tL(e) {
     });
 }
 var ty = n(93776);
-let tD = s.forwardRef(function (e, t) {
-        let {
-                id: n,
-                onClick: i,
-                onContextMenu: r,
-                icon: l,
-                selected: d,
-                tooltip: c,
-                upperBadge: u,
-                lowerBadge: E,
-                lowerBadgeSize: A,
-                showPill: h = !0,
-                className: f,
-                "aria-label": I,
-                children: p,
-                onMouseEnter: T,
-                onMouseLeave: m,
-                onMouseDown: g,
-            } = e,
-            S = (0, _.Vd)(n),
-            [N, C] = s.useState(!1),
-            O = I ?? ("string" == typeof c ? c : void 0);
+let tD = function (e) {
+        let { ref: t, ...n } = e,
+            {
+                id: i,
+                onClick: r,
+                onContextMenu: l,
+                icon: d,
+                selected: c,
+                tooltip: u,
+                upperBadge: E,
+                lowerBadge: A,
+                lowerBadgeSize: h,
+                showPill: f = !0,
+                className: I,
+                "aria-label": p,
+                children: T,
+                onMouseEnter: m,
+                onMouseLeave: g,
+                onMouseDown: S,
+            } = n,
+            N = (0, _.Vd)(i),
+            [C, O] = s.useState(!1),
+            R = p ?? ("string" == typeof u ? u : void 0);
         return (0, a.jsxs)(F.c, {
             children: [
-                h ? (0, a.jsx)(k.A, { overlay: !0, hovered: N, selected: d }) : null,
+                f ? (0, a.jsx)(k.A, { overlay: !0, hovered: C, selected: c }) : null,
                 (0, a.jsx)(tL, {
-                    text: c,
-                    selected: d,
+                    text: u,
+                    selected: c,
                     children: (0, a.jsx)(M.Q, {
                         selected: !0,
-                        upperBadge: u,
-                        lowerBadge: E,
-                        lowerBadgeSize: A,
+                        upperBadge: E,
+                        lowerBadge: A,
+                        lowerBadgeSize: h,
                         children: (0, a.jsx)(tO.D, {
                             innerRef: t,
                             onMouseEnter: () => {
-                                (T?.(), C(!0));
+                                (m?.(), O(!0));
                             },
                             onMouseLeave: () => {
-                                (m?.(), C(!1));
+                                (g?.(), O(!1));
                             },
-                            onMouseDown: g,
-                            className: o()(ty.oZ, f, { [ty.wH]: d || N }),
-                            onClick: i,
-                            "aria-label": O,
-                            "aria-selected": d,
-                            onContextMenu: r,
+                            onMouseDown: S,
+                            className: o()(ty.oZ, I, { [ty.wH]: c || C }),
+                            onClick: r,
+                            "aria-label": R,
+                            "aria-selected": c,
+                            onContextMenu: l,
                             focusProps: { enabled: !1 },
-                            ...S,
-                            children: null != l && (0, a.jsx)(l, { className: ty.sF, color: "currentColor" }),
+                            ...N,
+                            children: null != d && (0, a.jsx)(d, { className: ty.sF, color: "currentColor" }),
                         }),
                     }),
                 }),
-                p,
+                T,
             ],
         });
-    }),
+    },
     tv = "DOWNLOAD_APPS";
 function tb() {
     let e = (0, tN.useModalsStore)((e) => (0, tN.hasModalOpenSelector)(e, tv));
@@ -1217,18 +1220,18 @@ var t7 = n(696292),
     ni = n(488995),
     nr = n(324580),
     na = n(190107);
-let ns = s.forwardRef(function (e, t) {
-    let { selected: n, onClick: i, questId: r, className: l } = e,
+let ns = function (e) {
+    let { selected: t, onClick: n, questId: i, className: r, ref: l } = e,
         o = s.useCallback(() => {
             (0, t9.WL)({ source: ni.GlobalDiscoveryAnalyticsLocations.GUILDS_BAR_ICON });
-            let e = void 0 !== r ? ni.GlobalDiscoveryTab.QUESTS : ne.A.getField("selectedTab");
+            let e = void 0 !== i ? ni.GlobalDiscoveryTab.QUESTS : ne.A.getField("selectedTab");
             switch (e) {
                 case ni.GlobalDiscoveryTab.QUESTS:
                     return (0, nt.transitionToGlobalDiscovery)({
                         tab: ni.GlobalDiscoveryTab.QUESTS,
                         location: na.rE.DISCOVERY_COMPASS,
                         questContent: t7.u.DISCOVERY_COMPASS,
-                        questId: r,
+                        questId: i,
                     });
                 case ni.GlobalDiscoveryTab.SERVERS:
                     return (0, nt.transitionToGlobalDiscovery)({
@@ -1246,19 +1249,19 @@ let ns = s.forwardRef(function (e, t) {
                 default:
                     return (0, nt.transitionToGlobalDiscovery)({ tab: e });
             }
-        }, [r]);
+        }, [i]);
     return (0, a.jsx)(tD, {
         id: "guild-discover-button",
-        ref: t,
-        className: l,
+        ref: l,
+        className: r,
         onClick: () => {
-            (o(), void 0 !== i && i());
+            (o(), void 0 !== n && n());
         },
-        selected: n,
+        selected: t,
         tooltip: es.intl.string(es.t["4nEZLk"]),
         icon: t8.CompassIcon,
     });
-});
+};
 var nl = n(506774),
     no = n(509963),
     nd = n(111159),

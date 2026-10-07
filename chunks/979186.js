@@ -399,58 +399,59 @@ class eO extends i.Component {
         });
     }
 }
-let e_ = i.forwardRef(function (e, t) {
-        let { guestWindow: n, className: s, children: o } = e,
-            { lang: c, style: u, className: d } = (0, eg.xb)();
-        (i.useEffect(() => {
-            let e = n.document.documentElement;
-            (a()(null != e, "Window document element was null"), e.setAttribute("style", u));
-        }, [n, u]),
-            i.useEffect(() => {
-                let e = n.document.documentElement;
-                (a()(null != e, "Window document element was null"), e.setAttribute("lang", c));
-            }, [n, c]),
-            (0, em.A)(n.document.documentElement));
-        let h = l()(d, s, "in-popout");
-        return (
-            i.useLayoutEffect(() => {
-                let e = n.document.documentElement;
-                (a()(null != e, "Window document element was null"), e.setAttribute("class", h));
-            }, [n, h]),
-            (0, r.jsx)("div", { "data-popout-root": !0, ref: t, children: o })
-        );
-    }),
-    eD = i.forwardRef(function (e, t) {
-        let { guestWindow: n, isFullScreen: i } = (0, h.cf)([ew.A], () => ({
-            guestWindow: ew.A.getWindow(e.windowKey),
-            isFullScreen: ew.A.isWindowFullScreen(e.windowKey),
+function e_(e) {
+    let { guestWindow: t, className: n, children: s, ref: o } = e,
+        { lang: c, style: u, className: d } = (0, eg.xb)();
+    (i.useEffect(() => {
+        let e = t.document.documentElement;
+        (a()(null != e, "Window document element was null"), e.setAttribute("style", u));
+    }, [t, u]),
+        i.useEffect(() => {
+            let e = t.document.documentElement;
+            (a()(null != e, "Window document element was null"), e.setAttribute("lang", c));
+        }, [t, c]),
+        (0, em.A)(t.document.documentElement));
+    let h = l()(d, n, "in-popout");
+    return (
+        i.useLayoutEffect(() => {
+            let e = t.document.documentElement;
+            (a()(null != e, "Window document element was null"), e.setAttribute("class", h));
+        }, [t, h]),
+        (0, r.jsx)("div", { "data-popout-root": !0, ref: o, children: s })
+    );
+}
+let eD = function (e) {
+    let { ref: t, ...n } = e,
+        { guestWindow: i, isFullScreen: s } = (0, h.cf)([ew.A], () => ({
+            guestWindow: ew.A.getWindow(n.windowKey),
+            isFullScreen: ew.A.isWindowFullScreen(n.windowKey),
         }));
-        a()(null != n, "Missing guestWindow reference");
-        let { forcedColors: s, connectedEmbeddedActivity: l } = (0, h.cf)([N.Ay, _.Ay], () => ({
-            forcedColors: N.Ay.useForcedColors ? "yes" : "no",
-            connectedEmbeddedActivity: _.Ay.getCurrentEmbeddedActivity(),
-        }));
-        (0, L.A)(n, !1);
-        let { analyticsLocations: o } = (0, I.Ay)(D.A.POPOUT_WINDOW),
-            { clientThemesClassName: c, clientThemesCSS: u } = (0, T.Ay)(),
-            d = (0, ef.NC)(),
-            f = e.themeOverride ?? d;
-        return null == n
-            ? null
-            : (0, r.jsx)(w.W, {
-                  children: (0, r.jsx)(I.f5, {
-                      value: o,
-                      children: (0, r.jsx)(eO, {
-                          ref: t,
-                          ...e,
-                          titleBarTheme: f,
-                          guestWindow: n,
-                          isFullScreen: i,
-                          forcedColors: s,
-                          connectedEmbeddedActivity: l,
-                          clientThemesClassName: c,
-                          clientThemesCSS: u,
-                      }),
+    a()(null != i, "Missing guestWindow reference");
+    let { forcedColors: l, connectedEmbeddedActivity: o } = (0, h.cf)([N.Ay, _.Ay], () => ({
+        forcedColors: N.Ay.useForcedColors ? "yes" : "no",
+        connectedEmbeddedActivity: _.Ay.getCurrentEmbeddedActivity(),
+    }));
+    (0, L.A)(i, !1);
+    let { analyticsLocations: c } = (0, I.Ay)(D.A.POPOUT_WINDOW),
+        { clientThemesClassName: u, clientThemesCSS: d } = (0, T.Ay)(),
+        f = (0, ef.NC)(),
+        p = n.themeOverride ?? f;
+    return null == i
+        ? null
+        : (0, r.jsx)(w.W, {
+              children: (0, r.jsx)(I.f5, {
+                  value: c,
+                  children: (0, r.jsx)(eO, {
+                      ref: t,
+                      ...n,
+                      titleBarTheme: p,
+                      guestWindow: i,
+                      isFullScreen: s,
+                      forcedColors: l,
+                      connectedEmbeddedActivity: o,
+                      clientThemesClassName: u,
+                      clientThemesCSS: d,
                   }),
-              });
-    });
+              }),
+          });
+};
