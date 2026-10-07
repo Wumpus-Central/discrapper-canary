@@ -1,28 +1,30 @@
 n.d(i, { default: () => u });
-var r = n(477900),
-    e = n(772707),
-    s = n(402860),
-    a = n(287809),
-    l = n(518477),
-    o = n(375708);
+var e = n(477900),
+    r = n(772707),
+    s = n(192308),
+    a = n(402860),
+    l = n(287809),
+    o = n(518477),
+    c = n(375708);
 function u(t) {
     let { transitionState: i, onClose: n, graphic: u } = t,
-        c = a.default.getCurrentUser();
-    return (0, r.jsx)(e.k, {
+        d = l.default.getCurrentUser();
+    return (0, e.jsx)(r.k, {
         transitionState: i,
-        title: o.intl.string(o.t.L4Wg3B),
-        subtitle: o.intl.string(o.t.SXb73A),
+        title: c.intl.string(c.t.L4Wg3B),
+        subtitle: c.intl.string(c.t.SXb73A),
         graphic: u,
         onClose: n,
         actions: [
             {
-                text: o.intl.string(o.t.TxBQzD),
+                text: c.intl.string(c.t.TxBQzD),
                 onClick: () => {
-                    (null != c && (0, s.openUserProfileModal)({ userId: c.id, tabSection: l.RP.WISHLIST }), n());
+                    ((0, s.closeAllModals)(),
+                        null != d && (0, a.openUserProfileModal)({ userId: d.id, tabSection: o.RP.WISHLIST }));
                 },
                 variant: "secondary",
             },
-            { variant: "primary", text: o.intl.string(o.t.tM4PUv), onClick: n, autoFocus: !1 },
+            { variant: "primary", text: c.intl.string(c.t.tM4PUv), onClick: n, autoFocus: !1 },
         ],
     });
 }

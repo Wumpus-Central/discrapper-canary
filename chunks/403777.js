@@ -1,36 +1,39 @@
-n.d(t, { Ay: () => f, kN: () => E, n1: () => u });
+n.d(t, { Ay: () => p, kN: () => h, n1: () => E });
 var i = n(477900);
 n(582128);
-var r = n(192308),
-    a = n(439372),
-    s = n(267102),
-    l = n(287809),
-    o = n(415916),
-    d = n(652215);
-let c = new Set();
-function u(e, t) {
+var r = n(277057),
+    a = n.n(r),
+    s = n(192308),
+    l = n(439372),
+    o = n(267102),
+    d = n(287809),
+    c = n(415916),
+    u = n(652215);
+let _ = new Set();
+function E(e, t) {
     return `USER_PROFILE_MODAL_KEY:${e}:${null == t ? "" : t}`;
 }
-async function _(e) {
+async function A(e) {
     let {
             userId: t,
-            tabSection: a,
-            scrollTarget: _,
-            guildId: E,
-            originGuildId: A,
-            channelId: h,
-            appContext: f,
-            customStatusPrompt: I,
-            onModalOpen: p,
-            ...T
+            tabSection: r,
+            scrollTarget: l,
+            guildId: A,
+            originGuildId: h,
+            channelId: f,
+            appContext: I,
+            customStatusPrompt: p,
+            onModalOpen: T,
+            ...m
         } = e,
-        m = l.default.getUser(t);
-    if (null == m) return;
-    let g = l.default.getCurrentUser();
+        g = d.default.getUser(t);
     if (null == g) return;
-    let S = u(t, E);
-    (c.add(
-        await (0, r.openModalLazy)(
+    let S = d.default.getCurrentUser();
+    if (null == S) return;
+    let N = E(t, A),
+        C = a()();
+    (_.add(
+        await (0, s.openModalLazy)(
             async () => {
                 let e = (
                     await Promise.all([
@@ -851,54 +854,58 @@ async function _(e) {
                     ]).then(n.bind(n, 577593))
                 ).default;
                 return (t) =>
-                    (0, i.jsx)(e, {
-                        user: m,
-                        currentUser: g,
-                        guildId: E,
-                        originGuildId: A ?? E,
-                        initialTabSection: a,
-                        initialScrollTarget: _,
-                        channelId: h,
-                        customStatusPrompt: I,
-                        ...t,
-                        ...T,
-                    });
+                    (0, i.jsx)(
+                        e,
+                        {
+                            user: g,
+                            currentUser: S,
+                            guildId: A,
+                            originGuildId: h ?? A,
+                            initialTabSection: r,
+                            initialScrollTarget: l,
+                            channelId: f,
+                            customStatusPrompt: p,
+                            ...t,
+                            ...m,
+                        },
+                        C,
+                    );
             },
             {
-                modalKey: S,
-                contextKey: (0, r.modalContextFromAppContext)(f ?? (0, s.zd)() ?? d.BRT.APP),
+                modalKey: N,
+                contextKey: (0, s.modalContextFromAppContext)(I ?? (0, o.zd)() ?? u.BRT.APP),
                 onCloseRequest: () => {
-                    (0, o.A)(t === g.id, () => {
-                        ((0, r.closeModal)(S), c.delete(S));
+                    (0, c.A)(t === S.id, () => {
+                        ((0, s.closeModal)(N), _.delete(N));
                     });
                 },
-                onCloseCallback: () => c.delete(S),
+                onCloseCallback: () => _.delete(N),
             },
         ),
     ),
-        p?.());
+        T?.());
 }
-function E(e) {
-    let t = u(e, null);
-    for (let e of (0, r.getOpenModalKeys)()) if (e.startsWith(t)) return !0;
+function h(e) {
+    let t = E(e, null);
+    for (let e of (0, s.getOpenModalKeys)()) if (e.startsWith(t)) return !0;
     return !1;
 }
-function A() {
-    if (0 === c.size) return;
-    let e = l.default.getCurrentUser();
-    for (let t of c) {
+function f() {
+    if (0 === _.size) return;
+    let e = d.default.getCurrentUser();
+    for (let t of _) {
         let n =
             null != e &&
             (function (e) {
                 let t = e.indexOf(":", 23);
                 return -1 !== t ? e.slice(23, t) : e.slice(23);
             })(t) === String(e.id);
-        (0, o.A)(n, () => {
-            ((0, r.closeModal)(t), c.delete(t));
+        (0, c.A)(n, () => {
+            ((0, s.closeModal)(t), _.delete(t));
         });
     }
 }
-class h extends a.A {
-    actions = { USER_PROFILE_MODAL_OPEN: _, USER_PROFILE_MODAL_CLOSE: A };
+class I extends l.A {
+    actions = { USER_PROFILE_MODAL_OPEN: A, USER_PROFILE_MODAL_CLOSE: f };
 }
-let f = new h();
+let p = new I();
