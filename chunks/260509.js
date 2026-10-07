@@ -64,6 +64,7 @@ let d = "Guild",
         gameApplicationIds: null,
         officialMessageColor: null,
         incidentsData: null,
+        linkedGameOrganization: null,
     });
 function _(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],

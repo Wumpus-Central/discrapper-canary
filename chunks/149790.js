@@ -35,7 +35,7 @@ function u(e) {
     return (0, s.Wj)(d.vI, e);
 }
 function _(e, t, n) {
-    var i, r, c, u;
+    var i, r, c, u, _;
     return (0, s.e)(d.vI, n, {
         id: e.id,
         joinedAt: t.joinedAt,
@@ -116,6 +116,13 @@ function _(e, t, n) {
             };
             return l(t) ? null : t;
         })(e.incidents_data),
+        linkedGameOrganization:
+            null != e.linked_game_organization
+                ? {
+                      applicationId: (_ = e.linked_game_organization).application_id,
+                      gameOrganizationId: _.game_organization_id,
+                  }
+                : null,
     });
 }
 function E(e, t) {
@@ -266,10 +273,11 @@ function S(e) {
         officialMessageColor: e.officialMessageColor ?? null,
         verificationRoleId: e.verificationRoleId ?? null,
         incidentsData: e.incidentsData ?? null,
+        linkedGameOrganization: e.linkedGameOrganization ?? null,
     });
 }
 function N(e) {
-    var t, n, i, r;
+    var t, n, i, r, a;
     return {
         id: e.id,
         name: e.name,
@@ -338,6 +346,13 @@ function N(e) {
                   },
         game_application_ids: e.gameApplicationIds,
         verification_role_id: e.verificationRoleId,
+        linked_game_organization:
+            null != e.linkedGameOrganization
+                ? {
+                      application_id: (a = e.linkedGameOrganization).applicationId,
+                      game_organization_id: a.gameOrganizationId,
+                  }
+                : null,
     };
 }
 function C(e) {
