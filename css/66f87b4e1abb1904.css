@@ -66,6 +66,31 @@
     margin-bottom: var(--space-16)
 }
 
+.upsellContainer_daf541 {
+    align-items: center;
+    background: var(--background-base-lowest);
+    border-radius: var(--radius-xs);
+    display: flex;
+    gap: var(--space-8);
+    padding: var(--space-12)
+}
+
+.upsellText_daf541 {
+    flex: 1;
+    min-width: 0
+}
+
+.betaTag_daf541 {
+    bottom: 1px;
+    display: inline-flex;
+    position: relative;
+    vertical-align: middle
+}
+
+.warningIcon_daf541 {
+    color: var(--text-feedback-warning)
+}
+
 .container__1f5b6 {
     box-sizing: border-box;
     height: 480px;
@@ -165,4 +190,4 @@
     color: var(--interactive-text-hover)
 }
 
-/*# sourceMappingURL=966603ebd716b8c6.css.map*/
+/*# sourceMappingURL=66f87b4e1abb1904.css.map*/

@@ -100,25 +100,23 @@ var D = n(454938),
     K = n(849077);
 function $() {
     let e = (0, V.op)(),
-        t = (0, Y.i3)(),
-        { selectedFilter: n, setSelectedFilter: i } = (0, _.A)();
-    if (!t) return null;
-    let a = n === K.Io.BOOKMARKS,
-        l = a ? S.intl.string(S.t.HcoRu0) : S.intl.string(S.t["2pAkDA"]);
+        { selectedFilter: t, setSelectedFilter: n } = (0, _.A)(),
+        i = t === K.Io.BOOKMARKS,
+        a = i ? S.intl.string(S.t.HcoRu0) : S.intl.string(S.t["2pAkDA"]);
     return (0, s.jsx)(d.m, {
         position: "bottom",
-        text: l,
+        text: a,
         asContainer: !0,
         children: (0, s.jsx)(P.k, {
             icon: w.c,
             selectedIcon: F.BookmarkIcon,
-            pressed: a,
+            pressed: i,
             variant: "icon-only",
             size: "sm",
-            "aria-label": l,
+            "aria-label": a,
             onClick: function () {
-                let t = a ? K.Io.ALL : K.Io.BOOKMARKS;
-                (i(t), (0, V.Ut)({ section: t, enabled: !0, viewId: e }));
+                let t = i ? K.Io.ALL : K.Io.BOOKMARKS;
+                (n(t), (0, V.Ut)({ section: t, enabled: !0, viewId: e }));
             },
         }),
     });

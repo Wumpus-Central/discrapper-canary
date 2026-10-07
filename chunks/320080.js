@@ -137,7 +137,7 @@ var eN = t(922016),
     eT = t(782603),
     eb = t(461678),
     eU = t(880457),
-    ev = t(164684),
+    ev = t(568467),
     eM = t(738125),
     eC = t(914703),
     eR = t(849077),
@@ -308,30 +308,25 @@ let eG = {
     },
 };
 function eK(e) {
-    let n,
-        { message: t, channel: a, isUnread: l } = e,
-        r =
-            ((n = (0, k.i3)()),
-            (0, i.useMemo)(() => {
-                let e = eR.Th.MENTION,
-                    t = new Set();
-                return (
-                    l && t.add(eR.kR.ACK), n && t.add(eR.kR.BOOKMARK), ew[e].forEach((e) => t.add(e)), Array.from(t)
-                );
-            }, [t, l, n]));
+    let { message: n, channel: t, isUnread: a } = e,
+        l = (0, i.useMemo)(() => {
+            let e = eR.Th.MENTION,
+                n = new Set();
+            return (a && n.add(eR.kR.ACK), n.add(eR.kR.BOOKMARK), ew[e].forEach((e) => n.add(e)), Array.from(n));
+        }, [n, a]);
     return (0, s.jsx)(D.B, {
         direction: "horizontal",
         gap: 4,
         align: "center",
         justify: "center",
         className: e_.o1,
-        children: r.map((e) => {
-            let n = eG[e];
-            switch (n.type) {
+        children: l.map((e) => {
+            let i = eG[e];
+            switch (i.type) {
                 case "standard":
-                    return (0, s.jsx)(eD, { ...n, actionType: e, message: t }, e);
+                    return (0, s.jsx)(eD, { ...i, actionType: e, message: n }, e);
                 case "menu":
-                    return (0, s.jsx)(eB, { ...n, actionType: e, channel: a, message: t }, e);
+                    return (0, s.jsx)(eB, { ...i, actionType: e, channel: t, message: n }, e);
             }
         }),
     });

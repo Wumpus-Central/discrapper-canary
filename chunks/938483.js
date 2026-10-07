@@ -1,4 +1,4 @@
-n.d(t, { U: () => m });
+n.d(t, { U: () => T });
 var i = n(477900),
     r = n(582128),
     a = n(17928),
@@ -8,14 +8,13 @@ var i = n(477900),
     d = n(688810),
     c = n(268218),
     u = n(335180),
-    _ = n(269073),
-    E = n(85109),
-    A = n(566908),
-    h = n(594061),
-    f = n(617617),
-    I = n(625494),
-    p = n(652215);
-let T = (0, c.Fe)({
+    _ = n(85109),
+    E = n(566908),
+    A = n(594061),
+    h = n(617617),
+    f = n(625494),
+    I = n(652215);
+let p = (0, c.Fe)({
     createPromise: () =>
         Promise.all([
             n.e("938745"),
@@ -210,7 +209,7 @@ let T = (0, c.Fe)({
             n.e("855773"),
             n.e("365461"),
             n.e("96922"),
-            n.e("421874"),
+            n.e("381214"),
             n.e("786830"),
             n.e("229511"),
             n.e("202342"),
@@ -219,7 +218,7 @@ let T = (0, c.Fe)({
             n.e("727139"),
             n.e("884841"),
             n.e("998835"),
-            n.e("262035"),
+            n.e("423211"),
             n.e("870423"),
             n.e("292699"),
             n.e("360777"),
@@ -375,7 +374,6 @@ let T = (0, c.Fe)({
             n.e("212055"),
             n.e("486672"),
             n.e("14035"),
-            n.e("75029"),
             n.e("632756"),
             n.e("564850"),
             n.e("879947"),
@@ -457,8 +455,8 @@ let T = (0, c.Fe)({
             n.e("618706"),
             n.e("439089"),
             n.e("800872"),
+            n.e("963203"),
             n.e("452531"),
-            n.e("480945"),
             n.e("215920"),
             n.e("573330"),
             n.e("65393"),
@@ -486,113 +484,109 @@ let T = (0, c.Fe)({
             n.e("623685"),
             n.e("842516"),
             n.e("886571"),
-            n.e("978204"),
             n.e("391952"),
-        ]).then(n.bind(n, 985110)),
-    webpackId: 985110,
+        ]).then(n.bind(n, 678091)),
+    webpackId: 678091,
     name: "InboxPopoutRenderer",
     renderLoader: u.hc,
 });
-function m(e) {
+function T(e) {
     let t,
         n,
         {
             onOpen: c,
             onClose: u,
-            children: m,
-            popoutPosition: g,
-            popoutAlign: S,
-            targetElementRef: N,
-            spacing: C,
-            dialogClassName: O,
+            children: T,
+            popoutPosition: m,
+            popoutAlign: g,
+            targetElementRef: S,
+            spacing: N,
+            dialogClassName: C,
         } = e,
-        { analyticsLocations: R } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
-        [L, y] = r.useState(!1),
-        [D, v] = [
-            (0, a.bG)([f.A], () => f.A.settings.inbox?.currentTab ?? s.Y2.UNREADS),
+        { analyticsLocations: O } = (0, d.Ay)(o.A.NOTIFICATION_CENTER),
+        [R, L] = r.useState(!1),
+        [y, D] = [
+            (0, a.bG)([h.A], () => h.A.settings.inbox?.currentTab ?? s.Y2.UNREADS),
             r.useCallback((e) => {
-                h.wc.updateAsync(
+                A.wc.updateAsync(
                     "inbox",
                     (t) => {
                         if (t.currentTab === e) return !1;
                         t.currentTab = e;
                     },
-                    h.Sb.FREQUENT_USER_ACTION,
+                    A.Sb.FREQUENT_USER_ACTION,
                 );
             }, []),
         ],
-        { showTutorial: b, setSeenTutorial: M } =
-            ((t = (0, a.bG)([f.A], () => f.A.settings.inbox?.viewedTutorial ?? !1)),
+        { showTutorial: v, setSeenTutorial: b } =
+            ((t = (0, a.bG)([h.A], () => h.A.settings.inbox?.viewedTutorial ?? !1)),
             (n = r.useCallback(() => {
-                h.wc.updateAsync(
+                A.wc.updateAsync(
                     "inbox",
                     (e) => {
                         e.viewedTutorial = !0;
                     },
-                    h.Sb.INFREQUENT_USER_ACTION,
+                    A.Sb.INFREQUENT_USER_ACTION,
                 );
             }, [])),
-            { showTutorial: !t && D === s.Y2.UNREADS, setSeenTutorial: n }),
-        P = r.useCallback(() => {
-            (y(!1), L && u?.());
-        }, [u, L]),
-        U = r.useCallback(
+            { showTutorial: !t && y === s.Y2.UNREADS, setSeenTutorial: n }),
+        M = r.useCallback(() => {
+            (L(!1), R && u?.());
+        }, [u, R]),
+        P = r.useCallback(
             (e) => {
-                (y(!L), null != e && "number" == typeof e && v(e), L ? u?.() : c?.());
+                (L(!R), null != e && "number" == typeof e && D(e), R ? u?.() : c?.());
             },
-            [u, c, L, v],
+            [u, c, R, D],
         );
     r.useEffect(
         () => (
-            I._.subscribe(p.jej.TOGGLE_INBOX, U),
+            f._.subscribe(I.jej.TOGGLE_INBOX, P),
             () => {
-                I._.unsubscribe(p.jej.TOGGLE_INBOX, U);
+                f._.unsubscribe(I.jej.TOGGLE_INBOX, P);
             }
         ),
-        [U],
+        [P],
     );
-    let w = (0, _.jv)("RecentsPopout"),
-        G = (0, a.bG)([E.A], () => E.A.hasOverdueReminder(), []) && w;
+    let U = (0, a.bG)([_.A], () => _.A.hasOverdueReminder(), []);
     r.useEffect(() => {
-        ((D !== s.Y2.BOOKMARKS && D !== s.Y2.REMINDERS) || w || v(s.Y2.MENTIONS),
-            (D === s.Y2.GAME_INVITES || D === s.Y2.FOR_YOU) && v(s.Y2.UNREADS));
+        (y === s.Y2.GAME_INVITES || y === s.Y2.FOR_YOU) && D(s.Y2.UNREADS);
     });
-    let x = r.useCallback(
+    let w = r.useCallback(
             (e) => {
-                e.shiftKey || P();
+                e.shiftKey || M();
             },
-            [P],
+            [M],
         ),
-        k = (0, A.Sc)();
+        G = (0, E.Sc)();
     return (0, i.jsx)(d.f5, {
-        value: R,
+        value: O,
         children: (0, i.jsx)(l.Y, {
-            targetElementRef: N,
+            targetElementRef: S,
             animation: l.Y.Animation.NONE,
-            position: g,
-            align: S,
+            position: m,
+            align: g,
             autoInvert: !1,
-            shouldShow: L,
-            onRequestClose: P,
+            shouldShow: R,
+            onRequestClose: M,
             renderPopout: function () {
-                return (0, i.jsx)(T, {
-                    dialogClassName: O,
-                    isScheduledMessagesEnabled: k,
-                    tab: D,
-                    setTab: v,
-                    closePopout: P,
-                    handleMentionsJump: x,
-                    showTutorial: b,
-                    setSeenTutorial: M,
-                    forLaterEnabled: w,
+                return (0, i.jsx)(p, {
+                    dialogClassName: C,
+                    isScheduledMessagesEnabled: G,
+                    tab: y,
+                    setTab: D,
+                    closePopout: M,
+                    handleMentionsJump: w,
+                    showTutorial: v,
+                    setSeenTutorial: b,
                 });
             },
             ignoreModalClicks: !0,
-            spacing: C,
+            spacing: N,
             clickTrap: !0,
             children: (e, t) => {
                 let { isShown: n } = t;
-                return m(U, n, e, G);
+                return T(P, n, e, U);
             },
         }),
     });

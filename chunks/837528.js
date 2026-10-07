@@ -1,7 +1,7 @@
 (n.d(t, {
     U_: () => K,
     G8: () => z,
-    I: () => M,
+    I: () => P,
     H9: () => R,
     VL: () => G,
     T0: () => L,
@@ -72,11 +72,11 @@ function L(e, t, n, i) {
     let l = S("interactionUsernameProfile", n, i);
     return b(e?.user.id, t.id, l);
 }
-function M(e, t, n, i) {
+function P(e, t, n, i) {
     let l = S("referencedUsernameProfile", n, i);
     return b(e, t.id, l);
 }
-function P(e) {
+function M(e) {
     return l.useCallback(
         (t) => {
             (t.preventDefault(), t.stopPropagation(), e());
@@ -85,13 +85,13 @@ function P(e) {
     );
 }
 function D(e, t) {
-    return P(S("avatarProfile", e, t));
+    return M(S("avatarProfile", e, t));
 }
 function O(e, t) {
-    return P(S("referencedAvatarProfile", e, t));
+    return M(S("referencedAvatarProfile", e, t));
 }
 function U(e, t) {
-    return P(S("interactionAvatarProfile", e, t));
+    return M(S("interactionAvatarProfile", e, t));
 }
 function G(e, t, s, o) {
     let { id: d } = t,
@@ -163,9 +163,9 @@ function G(e, t, s, o) {
                             n.e("652111"),
                             n.e("411353"),
                             n.e("896804"),
+                            n.e("963203"),
                             n.e("295998"),
                             n.e("275133"),
-                            n.e("480945"),
                             n.e("678195"),
                             n.e("228850"),
                             n.e("527687"),
@@ -194,7 +194,7 @@ function G(e, t, s, o) {
                             n.e("69727"),
                             n.e("347285"),
                             n.e("812663"),
-                            n.e("35846"),
+                            n.e("903581"),
                         ]).then(n.bind(n, 674447));
                         return (n) =>
                             (0, i.jsx)(e, { ...n, message: r, channel: l, mediaItem: t, shouldHideMediaOptions: o });

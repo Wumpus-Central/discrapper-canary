@@ -1,73 +1,71 @@
-n.d(t, { EJ: () => I, U4: () => g, i3: () => S, i7: () => p, lI: () => T, tZ: () => m });
+n.d(t, { EJ: () => h, U4: () => T, i7: () => f, lI: () => I, tZ: () => p });
 var i = n(892227),
     r = n(806163),
     a = n(17928),
     s = n(409686),
-    l = n(269073),
-    o = n(85109),
-    d = n(780964),
-    c = n(734057),
-    u = n(71393);
+    l = n(780964),
+    o = n(734057),
+    d = n(71393);
 n(232835);
-var _ = n(573163);
+var c = n(573163);
 (n(287809), n(927813));
-var E = n(935208),
-    A = n(310031),
-    h = n(849077),
-    f = n(652215);
-function I(e) {
-    let { messageId: t, channelId: n, guildId: i, ReadStateStore_: r = _.Ay, GuildStore_: a = u.A } = e;
+var u = n(935208),
+    _ = n(310031),
+    E = n(849077),
+    A = n(652215);
+function h(e) {
+    let { messageId: t, channelId: n, guildId: i, ReadStateStore_: r = c.Ay, GuildStore_: a = d.A } = e;
     if (!r.hasUnread(n)) return !1;
     let s = r.ackMessageId(n);
     if (null == s) {
         if (null == i) return !0;
         let e = a.getGuild(i);
         if (null == e || null == e.joinedAt) return !1;
-        s = E.default.fromTimestamp(e.joinedAt.getTime());
+        s = u.default.fromTimestamp(e.joinedAt.getTime());
     }
-    return E.default.compare(t, s) > 0;
+    return u.default.compare(t, s) > 0;
+}
+function f(e) {
+    let { id: t } = e,
+        n = (0, i.default)(new Date(), u.default.extractTimestamp(t));
+    return 0 === n ? E.Ur.TODAY : 1 === n ? E.Ur.YESTERDAY : E.Ur.OLDER;
+}
+function I() {
+    let { pathname: e } = (0, r.zy)();
+    return e.startsWith(A.BVt.CHANNEL(A.gNP));
 }
 function p(e) {
-    let { id: t } = e,
-        n = (0, i.default)(new Date(), E.default.extractTimestamp(t));
-    return 0 === n ? h.Ur.TODAY : 1 === n ? h.Ur.YESTERDAY : h.Ur.OLDER;
-}
-function T() {
-    let { pathname: e } = (0, r.zy)();
-    return e.startsWith(f.BVt.CHANNEL(f.gNP));
-}
-function m(e) {
     {
         let { openUserSettings: t } = n(766075);
-        t(d.X.NOTIFICATIONS_PANEL, { analyticsLocations: e });
+        t(l.X.NOTIFICATIONS_PANEL, { analyticsLocations: e });
     }
 }
-function g() {
-    let e = (0, a.yK)([A.A], () => A.A.getNotifyingChannelIds() ?? []),
-        t = (0, a.yK)([_.Ay], () => e.filter((e) => _.Ay.hasUnread(e)), [e]),
+function T() {
+    let e = (0, a.yK)([_.A], () => _.A.getNotifyingChannelIds() ?? []),
+        t = (0, a.yK)([c.Ay], () => e.filter((e) => c.Ay.hasUnread(e)), [e]),
         n = (0, a.yK)([s.Ay], () => s.Ay.getSettingsFilteredMentions() ?? []);
     return {
         unreadRecentMentionsCount: (0, a.bG)(
-            [_.Ay, c.A, u.A],
+            [c.Ay, o.A, d.A],
             () => {
                 let t =
                         n?.filter((e) => {
-                            let t = c.A.getBasicChannel(e.channel_id);
+                            let t = o.A.getBasicChannel(e.channel_id);
                             return (
                                 null != t &&
-                                I({
+                                h({
                                     messageId: e.id,
                                     channelId: e.channel_id,
                                     guildId: t.guild_id,
-                                    ReadStateStore_: _.Ay,
-                                    GuildStore_: u.A,
+                                    ReadStateStore_: c.Ay,
+                                    GuildStore_: d.A,
                                 })
                             );
                         })?.length ?? 0,
                     i = 0;
                 for (let t of e) {
-                    let e = c.A.getBasicChannel(t);
-                    null != e && f.kvI.ALL_DMS.has(e.type) && (i += _.Ay.getMentionCount(t));
+                    let e = o.A.getBasicChannel(t);
+                    null != e && A.kvI.ALL_DMS.has(e.type) && (i += c.Ay.getMentionCount(t));
                 }
                 return t + i;
             },
@@ -75,10 +73,4 @@ function g() {
         ),
         unreadChannelIds: t,
     };
-}
-function S() {
-    let e = (0, l.jv)("NotificationsInboxUtils"),
-        t = (0, l.lA)("NotificationsInboxUtils"),
-        n = (0, a.bG)([o.A], () => o.A.getSavedMessageCount());
-    return e && (n > 0 || t);
 }

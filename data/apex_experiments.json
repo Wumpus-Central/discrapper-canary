@@ -1490,25 +1490,6 @@
     }
   },
   {
-    "name": "2026-03-message-bookmarks",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      },
-      "2": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-03-mobile-quest-home-red-dot-notification",
     "kind": "user",
     "defaultConfig": {
@@ -3536,19 +3517,6 @@
       "1": {
         "enabled": true
       }
-    }
-  },
-  {
-    "name": "2026-07-message-bookmarks-v2",
-    "kind": "user",
-    "defaultConfig": null,
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": null,
-      "2": null
     }
   },
   {

@@ -1,28 +1,3 @@
-.upsellContainer_daf541 {
-    align-items: center;
-    background: var(--background-base-lowest);
-    border-radius: var(--radius-xs);
-    display: flex;
-    gap: var(--space-8);
-    padding: var(--space-12)
-}
-
-.upsellText_daf541 {
-    flex: 1;
-    min-width: 0
-}
-
-.betaTag_daf541 {
-    bottom: 1px;
-    display: inline-flex;
-    position: relative;
-    vertical-align: middle
-}
-
-.warningIcon_daf541 {
-    color: var(--text-feedback-warning)
-}
-
 .container_d42d06 {
     box-sizing: border-box;
     height: 480px;
@@ -111,11 +86,6 @@
     flex: 1;
     flex-direction: column;
     min-height: 0
-}
-
-.upsellBar__4ad69 {
-    flex-shrink: 0;
-    padding: var(--space-8) var(--space-16) var(--space-16)
 }
 
 .deletedMessage__4ad69 {
@@ -257,4 +227,4 @@
     overflow: hidden
 }
 
-/*# sourceMappingURL=040c330b4224ca60.css.map*/
+/*# sourceMappingURL=fa6168fb2d46ca6a.css.map*/
