@@ -118,8 +118,8 @@ e.exports = {
                 if (("float" === a && (a = "cssFloat"), c)) o.setProperty(a, f);
                 else if (f) o[a] = f;
                 else {
-                    var d = l && n[a];
-                    if (d) for (var p in d) o[p] = "";
+                    var p = l && n[a];
+                    if (p) for (var d in p) o[d] = "";
                     else o[a] = "";
                 }
             }

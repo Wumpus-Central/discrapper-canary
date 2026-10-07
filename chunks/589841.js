@@ -59,37 +59,37 @@ e.exports = {
                 return "%26%23" + parseInt(e.slice(2), 16) + "%3B";
             });
         for (var l = "", u = 0; u < s.length; u += 1024) {
-            for (var c = s.length >= 1024 ? s.slice(u, u + 1024) : s, f = [], d = 0; d < c.length; ++d) {
-                var p = c.charCodeAt(d);
+            for (var c = s.length >= 1024 ? s.slice(u, u + 1024) : s, f = [], p = 0; p < c.length; ++p) {
+                var d = c.charCodeAt(p);
                 if (
-                    45 === p ||
-                    46 === p ||
-                    95 === p ||
-                    126 === p ||
-                    (p >= 48 && p <= 57) ||
-                    (p >= 65 && p <= 90) ||
-                    (p >= 97 && p <= 122) ||
-                    (o === n.RFC1738 && (40 === p || 41 === p))
+                    45 === d ||
+                    46 === d ||
+                    95 === d ||
+                    126 === d ||
+                    (d >= 48 && d <= 57) ||
+                    (d >= 65 && d <= 90) ||
+                    (d >= 97 && d <= 122) ||
+                    (o === n.RFC1738 && (40 === d || 41 === d))
                 ) {
-                    f[f.length] = c.charAt(d);
+                    f[f.length] = c.charAt(p);
                     continue;
                 }
-                if (p < 128) {
-                    f[f.length] = a[p];
+                if (d < 128) {
+                    f[f.length] = a[d];
                     continue;
                 }
-                if (p < 2048) {
-                    f[f.length] = a[192 | (p >> 6)] + a[128 | (63 & p)];
+                if (d < 2048) {
+                    f[f.length] = a[192 | (d >> 6)] + a[128 | (63 & d)];
                     continue;
                 }
-                if (p < 55296 || p >= 57344) {
-                    f[f.length] = a[224 | (p >> 12)] + a[128 | ((p >> 6) & 63)] + a[128 | (63 & p)];
+                if (d < 55296 || d >= 57344) {
+                    f[f.length] = a[224 | (d >> 12)] + a[128 | ((d >> 6) & 63)] + a[128 | (63 & d)];
                     continue;
                 }
-                ((d += 1),
-                    (p = 65536 + (((1023 & p) << 10) | (1023 & c.charCodeAt(d)))),
+                ((p += 1),
+                    (d = 65536 + (((1023 & d) << 10) | (1023 & c.charCodeAt(p)))),
                     (f[f.length] =
-                        a[240 | (p >> 18)] + a[128 | ((p >> 12) & 63)] + a[128 | ((p >> 6) & 63)] + a[128 | (63 & p)]));
+                        a[240 | (d >> 18)] + a[128 | ((d >> 12) & 63)] + a[128 | ((d >> 6) & 63)] + a[128 | (63 & d)]));
             }
             l += f.join("");
         }

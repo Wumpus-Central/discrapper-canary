@@ -15,54 +15,54 @@ function a(e, t, r = {}) {
         u = t.getBoundingClientRect(),
         c = e.getBoundingClientRect(),
         f = window.getComputedStyle(t),
-        d = window.getComputedStyle(e),
-        p = document.scrollingElement || document.documentElement,
-        h = e === p,
-        m = e === p ? 0 : c.top,
-        v = e === p ? e.clientHeight : c.bottom,
-        y = e === p ? 0 : c.left,
-        g = e === p ? e.clientWidth : c.right,
+        p = window.getComputedStyle(e),
+        d = document.scrollingElement || document.documentElement,
+        h = e === d,
+        m = e === d ? 0 : c.top,
+        v = e === d ? e.clientHeight : c.bottom,
+        y = e === d ? 0 : c.left,
+        g = e === d ? e.clientWidth : c.right,
         b = parseFloat(f.scrollMarginTop) || 0,
         w = parseFloat(f.scrollMarginBottom) || 0,
         _ = parseFloat(f.scrollMarginLeft) || 0,
         S = parseFloat(f.scrollMarginRight) || 0,
-        x = parseFloat(d.scrollPaddingTop) || 0,
-        E = parseFloat(d.scrollPaddingBottom) || 0,
-        k = parseFloat(d.scrollPaddingLeft) || 0,
-        C = parseFloat(d.scrollPaddingRight) || 0,
-        T = parseFloat(d.borderTopWidth) || 0,
-        M = parseFloat(d.borderBottomWidth) || 0,
-        P = parseFloat(d.borderLeftWidth) || 0,
-        A = parseFloat(d.borderRightWidth) || 0,
+        E = parseFloat(p.scrollPaddingTop) || 0,
+        x = parseFloat(p.scrollPaddingBottom) || 0,
+        C = parseFloat(p.scrollPaddingLeft) || 0,
+        k = parseFloat(p.scrollPaddingRight) || 0,
+        T = parseFloat(p.borderTopWidth) || 0,
+        M = parseFloat(p.borderBottomWidth) || 0,
+        P = parseFloat(p.borderLeftWidth) || 0,
+        A = parseFloat(p.borderRightWidth) || 0,
         I = u.top - b,
         O = u.bottom + w,
-        D = u.left - _,
-        R = u.right + S,
-        L = e === p ? 0 : P + A,
-        F = e === p ? 0 : T + M,
-        N = e === p ? 0 : e.offsetWidth - e.clientWidth - L,
-        j = e === p ? 0 : e.offsetHeight - e.clientHeight - F,
-        B = m + (h ? 0 : T) + x,
-        K = v - (h ? 0 : M) - E - j,
-        $ = y + (h ? 0 : P) + k,
-        V = g - (h ? 0 : A) - C;
-    ((0, o.un)() && (0, o.Tc)()) || "ltr" === d.direction ? (V -= N) : "rtl" === d.direction && ($ += N);
-    let U = I < B || O > K,
-        z = D < $ || R > V;
-    if (U && "start" === n) s += I - B;
-    else if (U && "center" === n) s += (I + O) / 2 - (B + K) / 2;
-    else if (U && "end" === n) s += O - K;
-    else if (U && "nearest" === n) {
+        R = u.left - _,
+        L = u.right + S,
+        D = e === d ? 0 : P + A,
+        F = e === d ? 0 : T + M,
+        N = e === d ? 0 : e.offsetWidth - e.clientWidth - D,
+        j = e === d ? 0 : e.offsetHeight - e.clientHeight - F,
+        B = m + (h ? 0 : T) + E,
+        K = v - (h ? 0 : M) - x - j,
+        U = y + (h ? 0 : P) + C,
+        V = g - (h ? 0 : A) - k;
+    ((0, o.un)() && (0, o.Tc)()) || "ltr" === p.direction ? (V -= N) : "rtl" === p.direction && (U += N);
+    let $ = I < B || O > K,
+        H = R < U || L > V;
+    if ($ && "start" === n) s += I - B;
+    else if ($ && "center" === n) s += (I + O) / 2 - (B + K) / 2;
+    else if ($ && "end" === n) s += O - K;
+    else if ($ && "nearest" === n) {
         let e = I - B,
             t = O - K;
         s += Math.abs(e) <= Math.abs(t) ? e : t;
     }
-    if (z && "start" === i) l += D - $;
-    else if (z && "center" === i) l += (D + R) / 2 - ($ + V) / 2;
-    else if (z && "end" === i) l += R - V;
-    else if (z && "nearest" === i) {
-        let e = D - $,
-            t = R - V;
+    if (H && "start" === i) l += R - U;
+    else if (H && "center" === i) l += (R + L) / 2 - (U + V) / 2;
+    else if (H && "end" === i) l += L - V;
+    else if (H && "nearest" === i) {
+        let e = R - U,
+            t = L - V;
         l += Math.abs(e) <= Math.abs(t) ? e : t;
     }
     e.scrollTo({ left: l, top: s });

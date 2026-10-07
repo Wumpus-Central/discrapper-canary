@@ -60,13 +60,13 @@ function l(e) {
         l = (0, i.R)(e),
         u = (0, s.useMemo)(() => (e.disabledKeys ? new Set(e.disabledKeys) : new Set()), [e.disabledKeys]),
         f = (0, s.useCallback)((e) => new n(t ? t(e) : e), [t]),
-        d = (0, s.useMemo)(
+        p = (0, s.useMemo)(
             () => ({ suppressTextValueWarning: e.suppressTextValueWarning }),
             [e.suppressTextValueWarning],
         ),
-        p = (0, a.G)(e, f, d),
-        h = (0, s.useMemo)(() => new (0, o.Y)(p, l, { layoutDelegate: r }), [p, l, r]);
-    return (c(p, h), { collection: p, disabledKeys: u, selectionManager: h });
+        d = (0, a.G)(e, f, p),
+        h = (0, s.useMemo)(() => new (0, o.Y)(d, l, { layoutDelegate: r }), [d, l, r]);
+    return (c(d, h), { collection: d, disabledKeys: u, selectionManager: h });
 }
 function u(e, t) {
     let r = (0, s.useMemo)(() => (t ? e.collection.filter(t) : e.collection), [e.collection, t]),

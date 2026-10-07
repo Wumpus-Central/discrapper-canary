@@ -1,8 +1,8 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => b });
 var l = n(477900),
     s = n(582128),
-    r = n(503698),
-    i = n.n(r),
+    i = n(503698),
+    r = n.n(i),
     a = n(575593),
     o = n(770178),
     u = n(590180),
@@ -32,16 +32,16 @@ let x = [],
         "1404558257065824347",
     ];
 function E(e) {
-    let { config: t, baseLeft: n, transitioning: s, resolvedProduct: r } = e,
-        i = window.innerHeight,
-        o = r ?? u.A.getProduct(t.skuId),
+    let { config: t, baseLeft: n, transitioning: s, resolvedProduct: i } = e,
+        r = window.innerHeight,
+        o = i ?? u.A.getProduct(t.skuId),
         c = o?.items[0],
         d = o?.type,
         h = n + t.horizontalJitter;
     return (0, l.jsx)("div", {
         className: g.LY,
         style: {
-            top: s ? -i - 384 : t.top,
+            top: s ? -r - 384 : t.top,
             left: s ? h + t.transitionOffsetLeft : h,
             transform: `rotate(${t.rotation}deg)`,
             height: 160,
@@ -53,7 +53,7 @@ function E(e) {
     });
 }
 function p(e) {
-    let { peaking: t, transitioning: n, parentWidth: r } = e,
+    let { peaking: t, transitioning: n, parentWidth: i } = e,
         [o, u] = s.useState(!1),
         [m] = s.useState(() =>
             [...f]
@@ -69,52 +69,52 @@ function p(e) {
                 })),
         ),
         p = (0, c.$)("shop_transition_jumble"),
-        v = s.useMemo(() => f, []),
-        b = (0, d.hv)(p ? v : x, { needsCategory: !1 }),
-        _ = s.useMemo(() => {
+        b = s.useMemo(() => f, []),
+        _ = (0, d.hv)(p ? b : x, { needsCategory: !1 }),
+        j = s.useMemo(() => {
             if (!p) return m;
             let e = m.filter((e) => {
-                let t = b[e.skuId]?.product;
+                let t = _[e.skuId]?.product;
                 return t?.items[0] != null && t.type === a.R.AVATAR_DECORATION;
             });
             return e.length > 0 ? e : m;
-        }, [p, m, b]),
-        C = s.useMemo(() => {
-            if (null == r || r <= 0) return [];
-            let e = Math.max(1, Math.floor(r / 130)),
-                t = r / e;
-            return Array.from({ length: e }, (e, n) => ({ config: _[n % _.length], baseLeft: n * t }));
-        }, [r, _]);
+        }, [p, m, _]),
+        v = s.useMemo(() => {
+            if (null == i || i <= 0) return [];
+            let e = Math.max(1, Math.floor(i / 130)),
+                t = i / e;
+            return Array.from({ length: e }, (e, n) => ({ config: j[n % j.length], baseLeft: n * t }));
+        }, [i, j]);
     return (
         s.useEffect(() => {
             n && setTimeout(() => u(!0), h.H1);
         }, [n]),
         (0, l.jsx)("div", {
-            className: i()(g.rA, { [g.Kb]: t, [g.pp]: o }),
-            children: C.map((e, t) => {
-                let { config: s, baseLeft: r } = e;
+            className: r()(g.rA, { [g.Kb]: t, [g.pp]: o }),
+            children: v.map((e, t) => {
+                let { config: s, baseLeft: i } = e;
                 return (0, l.jsx)(
                     E,
-                    { config: s, baseLeft: r, transitioning: n, resolvedProduct: b[s.skuId]?.product },
+                    { config: s, baseLeft: i, transitioning: n, resolvedProduct: _[s.skuId]?.product },
                     s.skuId + t,
                 );
             }),
         })
     );
 }
-let v = function (e) {
+let b = function (e) {
     let { peaking: t, transitioning: n } = e,
-        r = s.useRef(null),
-        [i, a] = s.useState(0),
+        i = s.useRef(null),
+        [r, a] = s.useState(0),
         u = s.useCallback(() => {
-            null != r.current && a(r.current.offsetWidth);
+            null != i.current && a(i.current.offsetWidth);
         }, []);
     return (
-        (0, o.g)(r, u),
+        (0, o.g)(i, u),
         (0, l.jsx)("div", {
-            ref: r,
+            ref: i,
             className: g.eL,
-            children: (0, l.jsx)(p, { peaking: t, transitioning: n, parentWidth: i }),
+            children: (0, l.jsx)(p, { peaking: t, transitioning: n, parentWidth: r }),
         })
     );
 };

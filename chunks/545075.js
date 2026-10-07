@@ -1,4 +1,4 @@
-t.d(r, { uK: () => A, oO: () => I, kb: () => v });
+t.d(r, { uK: () => A, oO: () => I, kb: () => N });
 var n = t(477900);
 t(582128);
 var i = t(503698),
@@ -50,7 +50,7 @@ function I() {
         children: [(0, n.jsx)(s.rQ, {}), (0, n.jsx)(u.c, { children: (0, n.jsx)(E, { className: T.yl }) })],
     });
 }
-function v(e) {
+function N(e) {
     let { className: r } = e;
     return (0, g.Hp)()
         ? (0, n.jsxs)(m.Z, {

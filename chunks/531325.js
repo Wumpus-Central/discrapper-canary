@@ -183,8 +183,8 @@ e.exports = (function () {
                     u,
                     c,
                     f,
-                    d,
                     p,
+                    d,
                     h,
                     m,
                     v,
@@ -201,7 +201,7 @@ e.exports = (function () {
                     w++;
                 });
                 var _ =
-                        ((p = 1e6),
+                        ((d = 1e6),
                         (h = 0),
                         (m = 1e6),
                         (v = 0),
@@ -210,16 +210,16 @@ e.exports = (function () {
                         o.forEach(function (e) {
                             ((c = e[0] >> 3),
                                 (f = e[1] >> 3),
-                                (d = e[2] >> 3),
-                                c < p ? (p = c) : c > h && (h = c),
+                                (p = e[2] >> 3),
+                                c < d ? (d = c) : c > h && (h = c),
                                 f < m ? (m = f) : f > v && (v = f),
-                                d < y ? (y = d) : d > g && (g = d));
+                                p < y ? (y = p) : p > g && (g = p));
                         }),
-                        new n(p, h, m, v, y, g, b)),
+                        new n(d, h, m, v, y, g, b)),
                     S = new r(function (e, r) {
                         return t.naturalOrder(e.count(), r.count());
                     });
-                function x(r, n) {
+                function E(r, n) {
                     for (var i, o = 1, a = 0; a < 1e3;) {
                         if (!(i = r.pop()).count()) {
                             (r.push(i), a++);
@@ -236,30 +236,30 @@ e.exports = (function () {
                                         u,
                                         c,
                                         f,
-                                        d = 0,
-                                        p = [],
+                                        p = 0,
+                                        d = [],
                                         h = [];
                                     if (s == i)
                                         for (l = n.r1; l <= n.r2; l++) {
                                             for (f = 0, u = n.g1; u <= n.g2; u++)
                                                 for (c = n.b1; c <= n.b2; c++) f += r[e(l, u, c)] || 0;
-                                            ((d += f), (p[l] = d));
+                                            ((p += f), (d[l] = p));
                                         }
                                     else if (s == o)
                                         for (l = n.g1; l <= n.g2; l++) {
                                             for (f = 0, u = n.r1; u <= n.r2; u++)
                                                 for (c = n.b1; c <= n.b2; c++) f += r[e(u, l, c)] || 0;
-                                            ((d += f), (p[l] = d));
+                                            ((p += f), (d[l] = p));
                                         }
                                     else
                                         for (l = n.b1; l <= n.b2; l++) {
                                             for (f = 0, u = n.r1; u <= n.r2; u++)
                                                 for (c = n.g1; c <= n.g2; c++) f += r[e(u, c, l)] || 0;
-                                            ((d += f), (p[l] = d));
+                                            ((p += f), (d[l] = p));
                                         }
                                     return (
-                                        p.forEach(function (e, t) {
-                                            h[t] = d - e;
+                                        d.forEach(function (e, t) {
+                                            h[t] = p - e;
                                         }),
                                         (function (e) {
                                             var t,
@@ -271,7 +271,7 @@ e.exports = (function () {
                                                 u = e + "2",
                                                 c = 0;
                                             for (l = n[s]; l <= n[u]; l++)
-                                                if (p[l] > d / 2) {
+                                                if (d[l] > p / 2) {
                                                     for (
                                                         i = n.copy(),
                                                             o = n.copy(),
@@ -279,10 +279,10 @@ e.exports = (function () {
                                                                 (t = l - n[s]) <= (r = n[u] - l)
                                                                     ? Math.min(n[u] - 1, ~~(l + r / 2))
                                                                     : Math.max(n[s], ~~(l - 1 - t / 2));
-                                                        !p[a];
+                                                        !d[a];
                                                     )
                                                         a++;
-                                                    for (c = h[a]; !c && p[a - 1];) c = h[--a];
+                                                    for (c = h[a]; !c && d[a - 1];) c = h[--a];
                                                     return ((i[u] = a), (o[s] = i[u] + 1), [i, o]);
                                                 }
                                         })(s == i ? "r" : s == o ? "g" : "b")
@@ -294,17 +294,17 @@ e.exports = (function () {
                         if (!l || (r.push(l), u && (r.push(u), o++), o >= n || a++ > 1e3)) return;
                     }
                 }
-                (S.push(_), x(S, 0.75 * a));
+                (S.push(_), E(S, 0.75 * a));
                 for (
-                    var E = new r(function (e, r) {
+                    var x = new r(function (e, r) {
                         return t.naturalOrder(e.count() * e.volume(), r.count() * r.volume());
                     });
                     S.size();
                 )
-                    E.push(S.pop());
-                x(E, a - E.size());
-                for (var k = new i(); E.size();) k.push(E.pop());
-                return k;
+                    x.push(S.pop());
+                E(x, a - x.size());
+                for (var C = new i(); x.size();) C.push(x.pop());
+                return C;
             },
         }
     );

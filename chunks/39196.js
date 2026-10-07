@@ -11,29 +11,29 @@ function o(e, t) {
 function u(e, t, r, l) {
     var u, c, d;
     let g,
-        m = o(e, t);
-    if (null == e || null == m) return t;
-    let _ = (0, i.Q7)(m, r),
-        E = {
+        E = o(e, t);
+    if (null == e || null == E) return t;
+    let m = (0, i.Q7)(E, r),
+        p = {
             locale: l,
             endsAt: e.endsAt,
             redemptionEndsAt: e.redemptionEndsAt,
-            helpCenterId: m.shared.helpCenter?.id,
+            helpCenterId: E.shared.helpCenter?.id,
         },
-        C = _?.title != null && "" !== _.title ? (0, n.U)((0, s.wJ)(_.title, E)) : t.title,
-        p = _?.description != null && "" !== _.description ? (0, n.U)((0, s.wJ)(_.description, E)) : t.summary,
-        h =
-            null != _
-                ? ((u = _.rewardStates),
+        _ = m?.title != null && "" !== m.title ? (0, n.U)((0, s.wJ)(m.title, p)) : t.title,
+        h = m?.description != null && "" !== m.description ? (0, n.U)((0, s.wJ)(m.description, p)) : t.summary,
+        C =
+            null != m
+                ? ((u = m.rewardStates),
                   (c = e.rewardStatus),
                   (d = e.progress?.current ?? 0),
                   null != (g = (0, a.x)(u, c, d)?.heroUrl) && "" !== g ? g : void 0)
                 : void 0;
     return {
         ...t,
-        title: C,
-        summary: p,
-        heroBannerUrl: h ?? t.heroBannerUrl,
+        title: _,
+        summary: h,
+        heroBannerUrl: C ?? t.heroBannerUrl,
         heroBannerAnimatedUrl: void 0,
         heroRiveUrl: void 0,
     };

@@ -39,7 +39,7 @@ function l(e, t, r) {
         f = (0, o.J)(() => {
             c.current || t.resetValidation();
         }),
-        d = (0, o.J)((e) => {
+        p = (0, o.J)((e) => {
             t.displayValidation.isInvalid || t.commitValidation();
             let n = r?.current?.form;
             (!e.defaultPrevented &&
@@ -55,7 +55,7 @@ function l(e, t, r) {
                 (u ? u() : r.current?.focus(), (0, i.Cl)("keyboard")),
                 e.preventDefault());
         }),
-        p = (0, o.J)(() => {
+        d = (0, o.J)(() => {
             t.commitValidation();
         });
     (0, s.useEffect)(() => {
@@ -72,12 +72,12 @@ function l(e, t, r) {
                         i?.call(t),
                         (c.current = !1));
                 }),
-            e.addEventListener("invalid", d),
-            e.addEventListener("change", p),
+            e.addEventListener("invalid", p),
+            e.addEventListener("change", d),
             t?.addEventListener("reset", f),
             () => {
-                (e.removeEventListener("invalid", d),
-                    e.removeEventListener("change", p),
+                (e.removeEventListener("invalid", p),
+                    e.removeEventListener("change", d),
                     t?.removeEventListener("reset", f),
                     t && (t.reset = i));
             }

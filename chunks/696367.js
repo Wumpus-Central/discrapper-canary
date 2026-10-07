@@ -12,10 +12,10 @@ if (r(912877)() || r(640847)()) {
         u = r(439619),
         c = u("%Map%", !0),
         f = u("%Set%", !0),
-        d = r(616380),
-        p = d("Array.prototype.push"),
-        h = d("String.prototype.charCodeAt"),
-        m = d("String.prototype.slice"),
+        p = r(616380),
+        d = p("Array.prototype.push"),
+        h = p("String.prototype.charCodeAt"),
+        m = p("String.prototype.slice"),
         v = function (e, t) {
             if (t + 1 >= e.length) return t + 1;
             var r = h(e, t);
@@ -50,35 +50,35 @@ if (r(912877)() || r(640847)()) {
     if (c || f) {
         var b = r(232258),
             w = r(551306),
-            _ = d("Map.prototype.forEach", !0),
-            S = d("Set.prototype.forEach", !0);
+            _ = p("Map.prototype.forEach", !0),
+            S = p("Set.prototype.forEach", !0);
         if (void 0 === n || !n.versions || !n.versions.node)
-            var x = d("Map.prototype.iterator", !0),
-                E = d("Set.prototype.iterator", !0);
-        var k = d("Map.prototype.@@iterator", !0) || d("Map.prototype._es6-shim iterator_", !0),
-            C = d("Set.prototype.@@iterator", !0) || d("Set.prototype._es6-shim iterator_", !0),
+            var E = p("Map.prototype.iterator", !0),
+                x = p("Set.prototype.iterator", !0);
+        var C = p("Map.prototype.@@iterator", !0) || p("Map.prototype._es6-shim iterator_", !0),
+            k = p("Set.prototype.@@iterator", !0) || p("Set.prototype._es6-shim iterator_", !0),
             T = function (e) {
                 if (b(e)) {
-                    if (x) return o(x(e));
-                    if (k) return k(e);
+                    if (E) return o(E(e));
+                    if (C) return C(e);
                     if (_) {
                         var t = [];
                         return (
                             _(e, function (e, r) {
-                                p(t, [r, e]);
+                                d(t, [r, e]);
                             }),
                             y(t)
                         );
                     }
                 }
                 if (w(e)) {
-                    if (E) return o(E(e));
-                    if (C) return C(e);
+                    if (x) return o(x(e));
+                    if (k) return k(e);
                     if (S) {
                         var r = [];
                         return (
                             S(e, function (e) {
-                                p(r, e);
+                                d(r, e);
                             }),
                             y(r)
                         );

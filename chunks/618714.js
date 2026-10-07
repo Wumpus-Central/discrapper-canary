@@ -1,5 +1,6 @@
 var n;
 ((n = function () {
+    "use strict";
     var e,
         t,
         n,
@@ -11,8 +12,8 @@ var n;
         u = "u" > typeof window ? window : (r.g, r.g),
         c = (u.cancelRequestAnimationFrame && u.requestAnimationFrame) || setTimeout,
         f = u.cancelRequestAnimationFrame || clearTimeout,
-        d = [],
-        p = 0,
+        p = [],
+        d = 0,
         h = !1,
         m = 7,
         v = 35,
@@ -40,38 +41,38 @@ var n;
             function () {
                 ((n = Date.now()), t || (t = setTimeout(i, 99)));
             });
-    function x() {
-        (125 != y && ((m = 7), (y = 125), (v = 35), h && (h && (l && f(l), s && clearTimeout(s), (h = !1)), C())), S());
-    }
     function E() {
+        (125 != y && ((m = 7), (y = 125), (v = 35), h && (h && (l && f(l), s && clearTimeout(s), (h = !1)), k())), S());
+    }
+    function x() {
         ((l = null), (s = setTimeout(T, 0)));
     }
-    function k() {
-        ((s = null), c(E));
-    }
     function C() {
+        ((s = null), c(x));
+    }
+    function k() {
         h ||
             ((a = y - (Date.now() - b)),
             (o = Date.now()),
             (h = !0),
             v && a < v && (a = v),
-            a > 9 ? (s = setTimeout(k, a)) : ((a = 0), k()));
+            a > 9 ? (s = setTimeout(C, a)) : ((a = 0), C()));
     }
     function T() {
         var e,
             t,
             r,
             n = m > 9 ? 9 : 1;
-        if (((b = Date.now()), (h = !1), (s = null), p > 2 || b - a - 50 < o))
-            for (t = 0, r = d.length; t < r && _.timeRemaining() > n; t++) ((e = d.shift()), w++, e && e(_));
-        d.length ? C() : (p = 0);
+        if (((b = Date.now()), (h = !1), (s = null), d > 2 || b - a - 50 < o))
+            for (t = 0, r = p.length; t < r && _.timeRemaining() > n; t++) ((e = p.shift()), w++, e && e(_));
+        p.length ? k() : (d = 0);
     }
     function M(e) {
-        return (g++, d.push(e), C(), g);
+        return (g++, p.push(e), k(), g);
     }
     function P(e) {
         var t = e - 1 - w;
-        d[t] && (d[t] = null);
+        p[t] && (p[t] = null);
     }
     if (u.requestIdleCallback && u.cancelIdleCallback)
         try {
@@ -101,15 +102,15 @@ var n;
             (u.cancelIdleCallback = P),
             u.document &&
                 document.addEventListener &&
-                (u.addEventListener("scroll", x, !0),
-                u.addEventListener("resize", x),
-                document.addEventListener("focus", x, !0),
-                document.addEventListener("mouseover", x, !0),
+                (u.addEventListener("scroll", E, !0),
+                u.addEventListener("resize", E),
+                document.addEventListener("focus", E, !0),
+                document.addEventListener("mouseover", E, !0),
                 ["click", "keypress", "touchstart", "mousedown"].forEach(function (e) {
-                    document.addEventListener(e, x, { capture: !0, passive: !0 });
+                    document.addEventListener(e, E, { capture: !0, passive: !0 });
                 }),
                 u.MutationObserver &&
-                    new MutationObserver(x).observe(document.documentElement, {
+                    new MutationObserver(E).observe(document.documentElement, {
                         childList: !0,
                         subtree: !0,
                         attributes: !0,

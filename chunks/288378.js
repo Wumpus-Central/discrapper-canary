@@ -7,8 +7,8 @@ function s(e = {}) {
     let { autoFocus: t = !1, isTextInput: r, within: l } = e,
         u = (0, a.useRef)({ isFocused: !1, isFocusVisible: t || (0, n.pP)() }),
         [c, f] = (0, a.useState)(!1),
-        [d, p] = (0, a.useState)(() => u.current.isFocused && u.current.isFocusVisible),
-        h = (0, a.useCallback)(() => p(u.current.isFocused && u.current.isFocusVisible), []),
+        [p, d] = (0, a.useState)(() => u.current.isFocused && u.current.isFocusVisible),
+        h = (0, a.useCallback)(() => d(u.current.isFocused && u.current.isFocusVisible), []),
         m = (0, a.useCallback)(
             (e) => {
                 ((u.current.isFocused = e), (u.current.isFocusVisible = (0, n.pP)()), f(e), h());
@@ -24,5 +24,5 @@ function s(e = {}) {
     );
     let { focusProps: v } = (0, i.i)({ isDisabled: l, onFocusChange: m }),
         { focusWithinProps: y } = (0, o.R)({ isDisabled: !l, onFocusWithinChange: m });
-    return { isFocused: c, isFocusVisible: d, focusProps: l ? y : v };
+    return { isFocused: c, isFocusVisible: p, focusProps: l ? y : v };
 }

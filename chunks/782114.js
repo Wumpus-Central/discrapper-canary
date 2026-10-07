@@ -12,8 +12,8 @@ function a(e) {
         } = e,
         c = (0, o.useRef)(!1),
         [, f] = (0, o.useState)(!1),
-        d = (0, o.useRef)(null),
         p = (0, o.useRef)(null),
+        d = (0, o.useRef)(null),
         [, h] = (0, o.useState)(null),
         m = (0, o.useMemo)(() => s(e.selectedKeys), [e.selectedKeys]),
         v = (0, o.useMemo)(() => s(e.defaultSelectedKeys, new (0, n.L)()), [e.defaultSelectedKeys]),
@@ -38,13 +38,13 @@ function a(e) {
                 ((c.current = e), f(e));
             },
             get focusedKey() {
-                return d.current;
-            },
-            get childFocusStrategy() {
                 return p.current;
             },
+            get childFocusStrategy() {
+                return d.current;
+            },
             setFocusedKey(e, t = "first") {
-                ((d.current = e), (p.current = t), h(e));
+                ((p.current = e), (d.current = t), h(e));
             },
             selectedKeys: y,
             setSelectedKeys(e) {

@@ -19,8 +19,8 @@ function u() {
 }
 var c = RegExp("rgb" + u(s, s, s)),
     f = RegExp("rgba" + u(s, s, s, s)),
-    d = RegExp("hsl" + u(s, l, l)),
-    p = RegExp("hsla" + u(s, l, l, s)),
+    p = RegExp("hsl" + u(s, l, l)),
+    d = RegExp("hsla" + u(s, l, l, s)),
     h = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     m = /^#([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})([0-9a-fA-F]{1})$/,
     v = /^#([0-9a-fA-F]{6})$/,
@@ -59,11 +59,11 @@ function S(e) {
     var t = parseFloat(e);
     return t < 0 ? 0 : t > 1 ? 255 : Math.round(255 * t);
 }
-function x(e) {
+function E(e) {
     var t = parseFloat(e);
     return t < 0 ? 0 : t > 100 ? 1 : t / 100;
 }
-function E(e) {
+function x(e) {
     var t,
         r =
             "number" == typeof e
@@ -84,10 +84,10 @@ function E(e) {
                             ? parseInt(t[1], 16) >>> 0
                             : (t = m.exec(e))
                               ? parseInt(t[1] + t[1] + t[2] + t[2] + t[3] + t[3] + t[4] + t[4], 16) >>> 0
-                              : (t = d.exec(e))
-                                ? (255 | b(_(t[1]), x(t[2]), x(t[3]))) >>> 0
-                                : (t = p.exec(e))
-                                  ? (b(_(t[1]), x(t[2]), x(t[3])) | S(t[4])) >>> 0
+                              : (t = p.exec(e))
+                                ? (255 | b(_(t[1]), E(t[2]), E(t[3]))) >>> 0
+                                : (t = d.exec(e))
+                                  ? (b(_(t[1]), E(t[2]), E(t[3])) | S(t[4])) >>> 0
                                   : null;
     return null === r
         ? e
@@ -101,8 +101,8 @@ function E(e) {
               (255 & r) / 255 +
               ")";
 }
-var k = /[+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,
-    C = /(#(?:[0-9a-f]{2}){2,4}|(#[0-9a-f]{3})|(rgb|hsl)a?\((-?\d+%?[,\s]+){2,3}\s*[\d\.]+%?\))/gi,
+var C = /[+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,
+    k = /(#(?:[0-9a-f]{2}){2,4}|(#[0-9a-f]{3})|(rgb|hsl)a?\((-?\d+%?[,\s]+){2,3}\s*[\d\.]+%?\))/gi,
     T = /rgba\(([0-9\.-]+), ([0-9\.-]+), ([0-9\.-]+), ([0-9\.-]+)\)/gi,
     M = function (e, t, r, n, i) {
         return "rgba(" + Math.round(t) + ", " + Math.round(r) + ", " + Math.round(n) + ", " + i + ")";
@@ -110,10 +110,10 @@ var k = /[+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,
     P = function (e) {
         n || (n = g.colorNames ? RegExp("(" + Object.keys(g.colorNames).join("|") + ")", "g") : /^\b$/);
         var t = e.output.map(function (e) {
-                return (0, o.oq)(e).replace(C, E).replace(n, E);
+                return (0, o.oq)(e).replace(k, x).replace(n, x);
             }),
             r = t.map(function (e) {
-                return e.match(k).map(Number);
+                return e.match(C).map(Number);
             }),
             s = r[0]
                 .map(function (e, t) {
@@ -128,7 +128,7 @@ var k = /[+\-]?(?:0|[1-9]\d*)(?:\.\d*)?(?:[eE][+\-]?\d+)?/g,
         return function (e) {
             var r = 0;
             return t[0]
-                .replace(k, function () {
+                .replace(C, function () {
                     return String(s[r++](e));
                 })
                 .replace(T, M);

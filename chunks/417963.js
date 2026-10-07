@@ -14,17 +14,17 @@ var n = r(582128),
 t.useSyncExternalStoreWithSelector = function (e, t, r, n, i) {
     var f = s(null);
     if (null === f.current) {
-        var d = { hasValue: !1, value: null };
-        f.current = d;
-    } else d = f.current;
-    var p = a(
+        var p = { hasValue: !1, value: null };
+        f.current = p;
+    } else p = f.current;
+    var d = a(
         e,
         (f = u(
             function () {
                 function e(e) {
                     if (!l) {
-                        if (((l = !0), (a = e), (e = n(e)), void 0 !== i && d.hasValue)) {
-                            var t = d.value;
+                        if (((l = !0), (a = e), (e = n(e)), void 0 !== i && p.hasValue)) {
+                            var t = p.value;
                             if (i(t, e)) return (s = t);
                         }
                         return (s = e);
@@ -55,11 +55,11 @@ t.useSyncExternalStoreWithSelector = function (e, t, r, n, i) {
     return (
         l(
             function () {
-                ((d.hasValue = !0), (d.value = p));
+                ((p.hasValue = !0), (p.value = d));
             },
-            [p],
+            [d],
         ),
-        c(p),
-        p
+        c(d),
+        d
     );
 };

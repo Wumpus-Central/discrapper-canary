@@ -1,4 +1,4 @@
-(r.r(t), r.d(t, { Manager: () => a, usePopper: () => y, Reference: () => E, Popper: () => _ }));
+(r.r(t), r.d(t, { Manager: () => a, usePopper: () => y, Reference: () => x, Popper: () => _ }));
 var n = r(582128),
     i = n.createContext(),
     o = n.createContext();
@@ -39,8 +39,8 @@ var s = function (e) {
         }, {});
     },
     f = "u" > typeof window && window.document && window.document.createElement ? n.useLayoutEffect : n.useEffect,
-    d = r(333007),
-    p = r(888767),
+    p = r(333007),
+    d = r(888767),
     h = r(412700),
     m = r.n(h),
     v = [],
@@ -67,7 +67,7 @@ var s = function (e) {
                     fn: function (e) {
                         var t = e.state,
                             r = Object.keys(t.elements);
-                        d.flushSync(function () {
+                        p.flushSync(function () {
                             l({
                                 styles: c(
                                     r.map(function (e) {
@@ -108,7 +108,7 @@ var s = function (e) {
             f(
                 function () {
                     if (null != e && null != t) {
-                        var n = (r.createPopper || p.n)(e, t, h);
+                        var n = (r.createPopper || d.n)(e, t, h);
                         return (
                             (y.current = n),
                             function () {
@@ -141,23 +141,23 @@ function _(e) {
         l = e.modifiers,
         c = void 0 === l ? w : l,
         f = e.referenceElement,
-        d = e.onFirstUpdate,
-        p = e.innerRef,
+        p = e.onFirstUpdate,
+        d = e.innerRef,
         h = e.children,
         m = n.useContext(i),
         v = n.useState(null),
         _ = v[0],
         S = v[1],
-        x = n.useState(null),
-        E = x[0],
-        k = x[1];
+        E = n.useState(null),
+        x = E[0],
+        C = E[1];
     n.useEffect(
         function () {
-            u(p, _);
+            u(d, _);
         },
-        [p, _],
+        [d, _],
     );
-    var C = y(
+    var k = y(
             f || m,
             _,
             n.useMemo(
@@ -165,17 +165,17 @@ function _(e) {
                     return {
                         placement: r,
                         strategy: a,
-                        onFirstUpdate: d,
-                        modifiers: [].concat(c, [{ name: "arrow", enabled: null != E, options: { element: E } }]),
+                        onFirstUpdate: p,
+                        modifiers: [].concat(c, [{ name: "arrow", enabled: null != x, options: { element: x } }]),
                     };
                 },
-                [r, a, d, c, E],
+                [r, a, p, c, x],
             ),
         ),
-        T = C.state,
-        M = C.styles,
-        P = C.forceUpdate,
-        A = C.update,
+        T = k.state,
+        M = k.styles,
+        P = k.forceUpdate,
+        A = k.update,
         I = n.useMemo(
             function () {
                 return {
@@ -184,18 +184,18 @@ function _(e) {
                     placement: T ? T.placement : r,
                     hasPopperEscaped: T && T.modifiersData.hide ? T.modifiersData.hide.hasPopperEscaped : null,
                     isReferenceHidden: T && T.modifiersData.hide ? T.modifiersData.hide.isReferenceHidden : null,
-                    arrowProps: { style: M.arrow, ref: k },
+                    arrowProps: { style: M.arrow, ref: C },
                     forceUpdate: P || g,
                     update: A || b,
                 };
             },
-            [S, k, r, T, M, A, P],
+            [S, C, r, T, M, A, P],
         );
     return s(h)(I);
 }
 var S = r(916822),
-    x = r.n(S);
-function E(e) {
+    E = r.n(S);
+function x(e) {
     var t = e.children,
         r = e.innerRef,
         i = n.useContext(o),
@@ -213,7 +213,7 @@ function E(e) {
         }, []),
         n.useEffect(
             function () {
-                x()(!!i, "`Reference` should not be used outside of a `Manager` component.");
+                E()(!!i, "`Reference` should not be used outside of a `Manager` component.");
             },
             [i],
         ),

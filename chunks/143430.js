@@ -1349,8 +1349,8 @@ class e1 {
 }
 var e2 = n(681813),
     e3 = n(357758),
-    e6 = n(912630),
-    e5 = n(544180);
+    e5 = n(912630),
+    e6 = n(544180);
 function e4(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : 0;
     return null != e ? Math.round(e) : t;
@@ -1392,9 +1392,9 @@ class e7 {
     }
     incrementNetworkStats(e) {
         let t = (e - this._lastSampleTimestamp) / 1e3,
-            n = e5.A.getEffectiveConnectionSpeed();
+            n = e6.A.getEffectiveConnectionSpeed();
         n === eN.NKC.SLOW_TWO_G && (n = eN.NKC.TWO_G);
-        let i = e5.A.getType();
+        let i = e6.A.getType();
         (i === eN.wY_.WIMAX && (i = eN.wY_.WIFI),
             (this._networkStats.effectiveConnectionSpeedBuckets[n] += t),
             (this._networkStats.connectionTypeBuckets[i] += t),
@@ -1926,7 +1926,7 @@ class tt extends m.A {
             (this.cameraSendDuration.value = this.connection.context === g.x.DEFAULT && null != t.camera && r > 0),
             this.cameraDuration.value && !l && this.cameraToggles++,
             (this.videoBackgroundEnabledDuration.value =
-                this.connection.context === g.x.DEFAULT && null != t.camera && e6.A.liveBackgroundEnabled));
+                this.connection.context === g.x.DEFAULT && null != t.camera && e5.A.liveBackgroundEnabled));
         let o = eT().max(n.map((e) => e.quality)),
             d = t.rtp.outbound.filter((e) => "video" === e.type && e?.videoEntropy != null)[0],
             c = d?.videoEntropy;

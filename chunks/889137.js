@@ -1,4 +1,4 @@
-r.d(t, { P: () => W, YW: () => q });
+r.d(t, { P: () => G, YW: () => q });
 let n = Symbol.for("@ts-pattern/matcher"),
     i = Symbol.for("@ts-pattern/isVariadic"),
     o = "@ts-pattern/anonymous-select-key",
@@ -59,13 +59,13 @@ let n = Symbol.for("@ts-pattern/matcher"),
     c = (e, t) => e.reduce((e, r) => e.concat(t(r)), []);
 function f(e) {
     return Object.assign(e, {
-        optional: () => d(e),
-        and: (t) => p(e, t),
+        optional: () => p(e),
+        and: (t) => d(e, t),
         or: (t) => h(e, t),
         select: (t) => (void 0 === t ? v(e) : v(t, e)),
     });
 }
-function d(e) {
+function p(e) {
     return f({
         [n]: () => ({
             match: (t) => {
@@ -82,7 +82,7 @@ function d(e) {
         }),
     });
 }
-function p(...e) {
+function d(...e) {
     return f({
         [n]: () => ({
             match: (t) => {
@@ -153,52 +153,52 @@ let w = f(
         Object.assign(f(e), {
             startsWith: (t) =>
                 _(
-                    p(
+                    d(
                         e,
                         m((e) => g(e) && e.startsWith(t)),
                     ),
                 ),
             endsWith: (t) =>
                 _(
-                    p(
+                    d(
                         e,
                         m((e) => g(e) && e.endsWith(t)),
                     ),
                 ),
             minLength: (t) =>
                 _(
-                    p(
+                    d(
                         e,
                         m((e) => g(e) && e.length >= t),
                     ),
                 ),
             maxLength: (t) =>
                 _(
-                    p(
+                    d(
                         e,
                         m((e) => g(e) && e.length <= t),
                     ),
                 ),
             includes: (t) =>
                 _(
-                    p(
+                    d(
                         e,
                         m((e) => g(e) && e.includes(t)),
                     ),
                 ),
             regex: (t) =>
                 _(
-                    p(
+                    d(
                         e,
                         m((e) => g(e) && !!e.match(t)),
                     ),
                 ),
         }),
     S = _(m(g)),
-    x = (e, t) => m((r) => y(r) && e <= r && t >= r),
-    E = (e) => m((t) => y(t) && t < e),
-    k = (e) => m((t) => y(t) && t > e),
-    C = (e) => m((t) => y(t) && t <= e),
+    E = (e, t) => m((r) => y(r) && e <= r && t >= r),
+    x = (e) => m((t) => y(t) && t < e),
+    C = (e) => m((t) => y(t) && t > e),
+    k = (e) => m((t) => y(t) && t <= e),
     T = (e) => m((t) => y(t) && t >= e),
     M = () => m((e) => y(e) && Number.isInteger(e)),
     P = () => m((e) => y(e) && Number.isFinite(e)),
@@ -206,54 +206,54 @@ let w = f(
     I = () => m((e) => y(e) && e < 0),
     O = (e) =>
         Object.assign(f(e), {
-            between: (t, r) => O(p(e, x(t, r))),
-            lt: (t) => O(p(e, E(t))),
-            gt: (t) => O(p(e, k(t))),
-            lte: (t) => O(p(e, C(t))),
-            gte: (t) => O(p(e, T(t))),
-            int: () => O(p(e, M())),
-            finite: () => O(p(e, P())),
-            positive: () => O(p(e, A())),
-            negative: () => O(p(e, I())),
+            between: (t, r) => O(d(e, E(t, r))),
+            lt: (t) => O(d(e, x(t))),
+            gt: (t) => O(d(e, C(t))),
+            lte: (t) => O(d(e, k(t))),
+            gte: (t) => O(d(e, T(t))),
+            int: () => O(d(e, M())),
+            finite: () => O(d(e, P())),
+            positive: () => O(d(e, A())),
+            negative: () => O(d(e, I())),
         }),
-    D = O(m(y)),
-    R = (e, t) => m((r) => b(r) && e <= r && t >= r),
-    L = (e) => m((t) => b(t) && t < e),
+    R = O(m(y)),
+    L = (e, t) => m((r) => b(r) && e <= r && t >= r),
+    D = (e) => m((t) => b(t) && t < e),
     F = (e) => m((t) => b(t) && t > e),
     N = (e) => m((t) => b(t) && t <= e),
     j = (e) => m((t) => b(t) && t >= e),
     B = () => m((e) => b(e) && e > 0),
     K = () => m((e) => b(e) && e < 0),
-    $ = (e) =>
+    U = (e) =>
         Object.assign(f(e), {
-            between: (t, r) => $(p(e, R(t, r))),
-            lt: (t) => $(p(e, L(t))),
-            gt: (t) => $(p(e, F(t))),
-            lte: (t) => $(p(e, N(t))),
-            gte: (t) => $(p(e, j(t))),
-            positive: () => $(p(e, B())),
-            negative: () => $(p(e, K())),
+            between: (t, r) => U(d(e, L(t, r))),
+            lt: (t) => U(d(e, D(t))),
+            gt: (t) => U(d(e, F(t))),
+            lte: (t) => U(d(e, N(t))),
+            gte: (t) => U(d(e, j(t))),
+            positive: () => U(d(e, B())),
+            negative: () => U(d(e, K())),
         }),
-    V = $(m(b)),
-    U = f(
+    V = U(m(b)),
+    $ = f(
         m(function (e) {
             return "boolean" == typeof e;
         }),
     ),
-    z = f(
+    H = f(
         m(function (e) {
             return "symbol" == typeof e;
         }),
     ),
-    H = f(
+    z = f(
         m(function (e) {
             return null == e;
         }),
     );
-var W = {
+var G = {
     __proto__: null,
     matcher: n,
-    optional: d,
+    optional: p,
     array: function (...e) {
         return (function e(t) {
             return Object.assign(
@@ -262,7 +262,7 @@ var W = {
                         yield Object.assign(t, { [i]: !0 });
                     },
                 }),
-                { optional: () => e(d(t)), select: (r) => e(void 0 === r ? v(t) : v(r, t)) },
+                { optional: () => e(p(t)), select: (r) => e(void 0 === r ? v(t) : v(r, t)) },
             );
         })({
             [n]: () => ({
@@ -344,7 +344,7 @@ var W = {
             }),
         });
     },
-    intersection: p,
+    intersection: d,
     union: h,
     not: function (e) {
         return f({
@@ -360,27 +360,27 @@ var W = {
     any: w,
     _: w,
     string: S,
-    between: x,
-    lt: E,
-    gt: k,
-    lte: C,
+    between: E,
+    lt: x,
+    gt: C,
+    lte: k,
     gte: T,
     int: M,
     finite: P,
     positive: A,
     negative: I,
-    number: D,
-    betweenBigInt: R,
-    ltBigInt: L,
+    number: R,
+    betweenBigInt: L,
+    ltBigInt: D,
     gtBigInt: F,
     lteBigInt: N,
     gteBigInt: j,
     positiveBigInt: B,
     negativeBigInt: K,
     bigint: V,
-    boolean: U,
-    symbol: z,
-    nullish: H,
+    boolean: $,
+    symbol: H,
+    nullish: z,
     instanceOf: function (e) {
         return f(m((t) => t instanceof e));
     },
@@ -404,9 +404,9 @@ var W = {
         );
     },
 };
-let G = { matched: !1, value: void 0 };
+let W = { matched: !1, value: void 0 };
 function q(e) {
-    return new Y(e, G);
+    return new Y(e, W);
 }
 class Y {
     constructor(e, t) {
@@ -428,13 +428,13 @@ class Y {
             u =
                 n.some((e) => l(e, this.input, s)) && (!t || t(this.input))
                     ? { matched: !0, value: r(i ? (o in a ? a[o] : a) : this.input, this.input) }
-                    : G;
+                    : W;
         return new Y(this.input, u);
     }
     when(e, t) {
         if (this.state.matched) return this;
         let r = !!e(this.input);
-        return new Y(this.input, r ? { matched: !0, value: t(this.input, this.input) } : G);
+        return new Y(this.input, r ? { matched: !0, value: t(this.input, this.input) } : W);
     }
     otherwise(e) {
         return this.state.matched ? this.state.value : e(this.input);

@@ -15,7 +15,7 @@ var n = r(672722),
             u = new Set(),
             c = new Set(),
             f = new Set(),
-            d = function (e) {
+            p = function (e) {
                 var t = a.indexOf(e);
                 t < 0 &&
                     ((t = a.findIndex(function (t) {
@@ -23,16 +23,16 @@ var n = r(672722),
                     })),
                     a.splice(~t ? t : a.length, 0, e));
             },
-            p = function () {
+            d = function () {
                 if (!t)
                     try {
-                        (v(), e(p));
+                        (v(), e(d));
                     } catch (e) {
                         console.error(e);
                     }
             },
             h = function () {
-                t && ((t = !1), 0 == o && ((o = n.now()), e(p)));
+                t && ((t = !1), 0 == o && ((o = n.now()), e(d)));
             },
             m = [];
         this.setTimeout = function (e, t) {
@@ -52,7 +52,7 @@ var n = r(672722),
         var v = (this.advance = function () {
             var e = n.now();
             if (
-                (u.size && (u.forEach(d), u.clear()),
+                (u.size && (u.forEach(p), u.clear()),
                 m.length &&
                     n.batchedUpdates(function () {
                         var t = s(m, function (t) {
@@ -89,7 +89,7 @@ var n = r(672722),
             }
         });
         ((this.start = function (e) {
-            l > e.priority ? u.add(e) : (d(e), h());
+            l > e.priority ? u.add(e) : (p(e), h());
         }),
             (this.onFrame = function (e) {
                 (c.add(e), h());

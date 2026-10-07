@@ -1,4 +1,4 @@
-r.d(t, { N0: () => p, lC: () => E, uS: () => C });
+r.d(t, { N0: () => h, lC: () => p, uS: () => _ });
 var n = r(582128),
     l = r(17928),
     s = r(793574),
@@ -9,9 +9,9 @@ var n = r(582128),
     c = r(158045),
     d = r(870216),
     g = r(758836),
-    m = r(652215),
-    _ = r(202541);
-function E(e) {
+    E = r(652215),
+    m = r(202541);
+function p(e) {
     let { analyticsSource: t, analyticsLocations: r } = (0, l.cf)([d.A], () => d.A.getAnalytics()),
         n = (function (e) {
             switch (e) {
@@ -46,13 +46,13 @@ function E(e) {
         { analyticsLocations: i, newestAnalyticsLocation: o } = (0, a.Ay)([...r, s.A.COLLECTIBLES_SHOP, n]);
     return { analyticsSource: t, analyticsLocations: i, newestAnalyticsLocation: o, currentTabLocation: n };
 }
-function C(e, t, r, l) {
+function _(e, t, r, l) {
     let { sourceButton: s, enabled: a = !0 } = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : {},
-        { analyticsLocations: i, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: d } = E(t);
+        { analyticsLocations: i, analyticsSource: o, currentTabLocation: c, newestAnalyticsLocation: d } = p(t);
     n.useEffect(() => {
         if (!a || l !== g.Pf.VISIBLE || d !== c) return;
         let n = t === g.G2.CATALOG ? s : o;
-        u.default.track(m.HAw.COLLECTIBLES_SHOP_VIEWED, {
+        u.default.track(E.HAw.COLLECTIBLES_SHOP_VIEWED, {
             location_stack: i,
             source: n,
             page_session_id: e,
@@ -61,12 +61,12 @@ function C(e, t, r, l) {
         });
     }, [i, e, t, r, c, l, s, o, d, a]);
 }
-function p(e, t) {
-    let { analyticsLocations: r } = E(e);
+function h(e, t) {
+    let { analyticsLocations: r } = p(e);
     n.useEffect(() => {
         null == t ||
             c.Ay.canUseCollectibles(t) ||
-            (u.default.track(m.HAw.PREMIUM_UPSELL_VIEWED, { type: _.e.COLLECTIBLES_SHOP, location_stack: r }),
-            (0, i.sq)(m.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, o.uq)(_.e.COLLECTIBLES_SHOP)));
+            (u.default.track(E.HAw.PREMIUM_UPSELL_VIEWED, { type: m.e.COLLECTIBLES_SHOP, location_stack: r }),
+            (0, i.sq)(E.U7l.PREMIUM_UPSELL_VIEWED, r, () => (0, o.uq)(m.e.COLLECTIBLES_SHOP)));
     }, [r, t]);
 }

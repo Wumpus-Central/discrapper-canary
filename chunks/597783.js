@@ -11,13 +11,13 @@ var n = r(582128),
 function g(e, t) {
     let r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : "product",
         g = (0, i.uM)(),
-        m = (0, l.bG)([o.A], () => o.A.getProduct(e)),
-        _ = (0, c.i)(),
-        E = a.Ay.canUseShopDiscounts(_),
-        C = n.useRef(null),
-        p = n.useCallback(() => {
-            let n = null != m ? (0, u.Br)(m, E, !1) : null,
-                l = null != m ? (0, u.c7)(m, E, !1) : void 0;
+        E = (0, l.bG)([o.A], () => o.A.getProduct(e)),
+        m = (0, c.i)(),
+        p = a.Ay.canUseShopDiscounts(m),
+        _ = n.useRef(null),
+        h = n.useCallback(() => {
+            let n = null != E ? (0, u.Br)(E, p, !1) : null,
+                l = null != E ? (0, u.c7)(E, p, !1) : void 0;
             s.default.track(d.HAw.COLLECTIBLES_TILE_IMPRESSION, {
                 collectibles_shop_session_id: g?.sessionId,
                 sku_id: e,
@@ -31,25 +31,25 @@ function g(e, t) {
                 type: r,
                 category_position: g?.categoryPosition,
             });
-        }, [g?.sessionId, g?.categoryPosition, g?.pageCategory, g?.pageSection, g?.tilePosition, E, t, m, e, r]),
-        h = n.useCallback(
+        }, [g?.sessionId, g?.categoryPosition, g?.pageCategory, g?.pageSection, g?.tilePosition, p, t, E, e, r]),
+        C = n.useCallback(
             (e) => {
                 e
-                    ? null === C.current &&
-                      (C.current = setTimeout(() => {
-                          (p(), (C.current = null));
+                    ? null === _.current &&
+                      (_.current = setTimeout(() => {
+                          (h(), (_.current = null));
                       }, 1e3))
-                    : null !== C.current && (clearTimeout(C.current), (C.current = null));
+                    : null !== _.current && (clearTimeout(_.current), (_.current = null));
             },
-            [p],
+            [h],
         );
     return (
         n.useEffect(
             () => () => {
-                null !== C.current && (clearTimeout(C.current), (C.current = null));
+                null !== _.current && (clearTimeout(_.current), (_.current = null));
             },
             [e],
         ),
-        { handleCardVisibilityChange: h }
+        { handleCardVisibilityChange: C }
     );
 }

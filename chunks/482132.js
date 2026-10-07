@@ -11,8 +11,8 @@ var l = n(477900),
     f = n(883645),
     h = n(601194),
     C = n(642639),
-    m = n(573359),
-    p = n(166532),
+    p = n(573359),
+    m = n(166532),
     E = n(819252);
 function I(e) {
     let {
@@ -25,7 +25,7 @@ function I(e) {
         })(e),
         { step: a, stepConfigs: I } = (0, f.Ay)(),
         { setBodyNode: y, setFooterNode: S, setModalOverlayNode: _ } = (0, h.Gm)(),
-        g = (0, u.bG)([m.A], () => m.A.isDisplayingWowMomentConfirmation),
+        g = (0, u.bG)([p.A], () => p.A.isDisplayingWowMomentConfirmation),
         { setReadySlideId: P, unifiedCheckoutFlow: A } = (0, C.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
@@ -44,7 +44,7 @@ function I(e) {
     let M = R?.options?.hideSlider ?? !1,
         v = R?.options?.hideDefaultModalBody ?? !1,
         T = R?.options?.sliderBodyClassName,
-        L = a === p.pn.REVIEW,
+        L = a === m.pn.REVIEW,
         x = r.useCallback(
             (e, t) => {
                 t === a && y(e);

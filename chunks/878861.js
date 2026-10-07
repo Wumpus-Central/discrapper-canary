@@ -32,20 +32,20 @@ function l(e, t) {
                 u = null,
                 c = r,
                 f = null,
-                d = this._root;
+                p = this._root;
             for (c.right = this._root; ;) {
                 if (
-                    (null === d
-                        ? ((d = new i(e)), f.set_child(n, d), (t = !0), this.size++)
-                        : a(d.left) && a(d.right) && ((d.red = !0), (d.left.red = !1), (d.right.red = !1)),
-                    a(d) && a(f))
+                    (null === p
+                        ? ((p = new i(e)), f.set_child(n, p), (t = !0), this.size++)
+                        : a(p.left) && a(p.right) && ((p.red = !0), (p.left.red = !1), (p.right.red = !1)),
+                    a(p) && a(f))
                 ) {
-                    var p = c.right === u;
-                    d === f.get_child(o) ? c.set_child(p, s(u, !o)) : c.set_child(p, l(u, !o));
+                    var d = c.right === u;
+                    p === f.get_child(o) ? c.set_child(d, s(u, !o)) : c.set_child(d, l(u, !o));
                 }
-                var h = this._comparator(d.data, e);
+                var h = this._comparator(p.data, e);
                 if (0 === h) break;
-                ((o = n), (n = h < 0), null !== u && (c = u), (u = f), (f = d), (d = d.get_child(n)));
+                ((o = n), (n = h < 0), null !== u && (c = u), (u = f), (f = p), (p = p.get_child(n)));
             }
             this._root = r.right;
         }
@@ -59,11 +59,11 @@ function l(e, t) {
         for (var n = null, o = null, u = null, c = 1; null !== r.get_child(c);) {
             var f = c;
             ((o = n), (n = r), (r = r.get_child(c)));
-            var d = this._comparator(e, r.data);
-            if (((c = d > 0), 0 === d && (u = r), !a(r) && !a(r.get_child(c)))) {
+            var p = this._comparator(e, r.data);
+            if (((c = p > 0), 0 === p && (u = r), !a(r) && !a(r.get_child(c)))) {
                 if (a(r.get_child(!c))) {
-                    var p = s(r, c);
-                    (n.set_child(f, p), (n = p));
+                    var d = s(r, c);
+                    (n.set_child(f, d), (n = d));
                 } else if (!a(r.get_child(!c))) {
                     var h = n.get_child(!f);
                     if (null !== h)

@@ -7,7 +7,7 @@ var n = r(439619),
     u = i("Map.prototype.set", !0),
     c = i("Map.prototype.has", !0),
     f = i("Map.prototype.delete", !0),
-    d = i("Map.prototype.size", !0);
+    p = i("Map.prototype.size", !0);
 e.exports =
     !!s &&
     function () {
@@ -19,7 +19,7 @@ e.exports =
                 delete: function (t) {
                     if (e) {
                         var r = f(e, t);
-                        return (0 === d(e) && (e = void 0), r);
+                        return (0 === p(e) && (e = void 0), r);
                     }
                     return !1;
                 },

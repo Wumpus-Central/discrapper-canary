@@ -39,10 +39,10 @@ function o(e) {
     let s = r.useContext(c);
     return (a()(null != s, "useSteps must be used inside CheckoutStepContext"), s(e));
 }
-function m(e) {
+function d(e) {
     return e.step;
 }
-function d(e) {
+function m(e) {
     return e.setStep;
 }
 function C() {
@@ -50,10 +50,10 @@ function C() {
     return s.find((s) => s.key === e) ?? null;
 }
 function x() {
-    return o(m);
+    return o(d);
 }
 function L() {
-    return o(d);
+    return o(m);
 }
 function p(e) {
     return e.stepsHistory;

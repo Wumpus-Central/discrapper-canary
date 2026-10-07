@@ -6,14 +6,15 @@ var n = r(225063),
     l = r(12994),
     u = r(601300);
 function c() {
+    "use strict";
     var t = i(),
         r = t.m(c),
         f = (Object.getPrototypeOf ? Object.getPrototypeOf(r) : r.__proto__).constructor;
-    function d(e) {
+    function p(e) {
         var t = "function" == typeof e && e.constructor;
         return !!t && (t === f || "GeneratorFunction" === (t.displayName || t.name));
     }
-    var p = { throw: 1, return: 2, break: 3, continue: 3 };
+    var d = { throw: 1, return: 2, break: 3, continue: 3 };
     function h(e) {
         var t, r;
         return function (n) {
@@ -26,7 +27,7 @@ function c() {
                         return n.v;
                     },
                     abrupt: function (e, t) {
-                        return r(n.a, p[e], t);
+                        return r(n.a, d[e], t);
                     },
                     delegateYield: function (e, i, o) {
                         return ((t.resultName = i), r(n.d, u(e), o));
@@ -59,14 +60,14 @@ function c() {
                 wrap: function (e, r, n, i) {
                     return t.w(h(e), r, n, i && i.reverse());
                 },
-                isGeneratorFunction: d,
+                isGeneratorFunction: p,
                 mark: t.m,
                 awrap: function (e, t) {
                     return new n(e, t);
                 },
                 AsyncIterator: s,
                 async: function (e, t, r, n, i) {
-                    return (d(t) ? a : o)(h(e), t, r, n, i);
+                    return (p(t) ? a : o)(h(e), t, r, n, i);
                 },
                 keys: l,
                 values: u,

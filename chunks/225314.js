@@ -7,7 +7,7 @@ var n = r(381265),
     u = o.apply(l()),
     c = r(255733),
     f = a("Array.prototype.slice"),
-    d = function (e, t) {
+    p = function (e, t) {
         return (i(e), u(e, f(arguments, 1)));
     };
-(n(d, { getPolyfill: l, implementation: s, shim: c }), (e.exports = d));
+(n(p, { getPolyfill: l, implementation: s, shim: c }), (e.exports = p));

@@ -6,7 +6,7 @@ let n = r(74509),
     l = [new i(">=0.0.0-0")],
     u = [new i(">=0.0.0")],
     c = (e, t, r) => {
-        let n, i, c, p, h, m, v;
+        let n, i, c, d, h, m, v;
         if (e === t) return !0;
         if (1 === e.length && e[0].semver === o)
             if (1 === t.length && t[0].semver === o) return !0;
@@ -19,7 +19,7 @@ let n = r(74509),
             ">" === t.operator || ">=" === t.operator
                 ? (n = f(n, t, r))
                 : "<" === t.operator || "<=" === t.operator
-                  ? (i = d(i, t, r))
+                  ? (i = p(i, t, r))
                   : y.add(t.semver);
         if (y.size > 1) return null;
         if (n && i && ((c = s(n.semver, i.semver, r)) > 0 || (0 === c && (">=" !== n.operator || "<=" !== i.operator))))
@@ -47,7 +47,7 @@ let n = r(74509),
                         (b = !1),
                     ">" === e.operator || ">=" === e.operator)
                 ) {
-                    if ((p = f(n, e, r)) === e && p !== n) return !1;
+                    if ((d = f(n, e, r)) === e && d !== n) return !1;
                 } else if (">=" === n.operator && !a(n.semver, String(e), r)) return !1;
             }
             if (i) {
@@ -61,7 +61,7 @@ let n = r(74509),
                         (g = !1),
                     "<" === e.operator || "<=" === e.operator)
                 ) {
-                    if ((h = d(i, e, r)) === e && h !== i) return !1;
+                    if ((h = p(i, e, r)) === e && h !== i) return !1;
                 } else if ("<=" === i.operator && !a(i.semver, String(e), r)) return !1;
             }
             if (!e.operator && (i || n) && 0 !== c) return !1;
@@ -73,7 +73,7 @@ let n = r(74509),
         let n = s(e.semver, t.semver, r);
         return n > 0 ? e : n < 0 || (">" === t.operator && ">=" === e.operator) ? t : e;
     },
-    d = (e, t, r) => {
+    p = (e, t, r) => {
         if (!e) return t;
         let n = s(e.semver, t.semver, r);
         return n < 0 ? e : n > 0 || ("<" === t.operator && "<=" === e.operator) ? t : e;

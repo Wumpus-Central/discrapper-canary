@@ -6,15 +6,15 @@ var o = n(477900),
     i = n(206248),
     d = n(43105),
     s = n(59318),
-    p = n(549996),
-    u = n(498470),
+    u = n(549996),
+    p = n(498470),
     c = n(807098),
     b = n(637706),
     m = n(788883),
     A = n(49999);
 function _(e) {
     let { children: t, targetElementRef: n, dismissPopover: _ } = e,
-        f = (0, p.c)(a.C.PREMIUM_TAB_POPOVER),
+        f = (0, u.c)(a.C.PREMIUM_TAB_POPOVER),
         I =
             null != f && "premiumTabPopover" === f.properties.properties.oneofKind
                 ? f.properties.properties.premiumTabPopover
@@ -30,7 +30,7 @@ function _(e) {
             promotionId: E,
             dismissibleContent: r.M.PREMIUM_MARKETING_MOMENT_REMINDER_UPSELL,
         }),
-        { icon: S, iconPosition: C } = (0, u.x)({ buttonAction: I.button?.buttonAction });
+        { icon: S, iconPosition: C } = (0, p.x)({ buttonAction: I.button?.buttonAction });
     function O() {
         return _(A.i.USER_DISMISS);
     }
@@ -39,7 +39,7 @@ function _(e) {
                 ? {
                       text: I.button.copy,
                       variant: "expressive",
-                      onClick: (0, u.h)({
+                      onClick: (0, p.h)({
                           buttonAction: I.button.buttonAction,
                           deeplinkSection: I.button.deeplinkSection,
                           applicationId: I.button.navigableStorefrontApplicationId?.value,

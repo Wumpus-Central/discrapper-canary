@@ -55,8 +55,8 @@ class i {
         let n = this.options.loose,
             i = n ? c[f.HYPHENRANGELOOSE] : c[f.HYPHENRANGE];
         (l("hyphen replace", (e = e.replace(i, A(this.options.includePrerelease)))),
-            l("comparator trim", (e = e.replace(c[f.COMPARATORTRIM], d))),
-            l("tilde trim", (e = e.replace(c[f.TILDETRIM], p))),
+            l("comparator trim", (e = e.replace(c[f.COMPARATORTRIM], p))),
+            l("tilde trim", (e = e.replace(c[f.TILDETRIM], d))),
             l("caret trim", (e = e.replace(c[f.CARETTRIM], h))));
         let a = e
             .split(" ")
@@ -99,7 +99,7 @@ let o = new (r(678884))(),
     s = r(46666),
     l = r(692714),
     u = r(864886),
-    { safeRe: c, t: f, comparatorTrimReplace: d, tildeTrimReplace: p, caretTrimReplace: h } = r(64672),
+    { safeRe: c, t: f, comparatorTrimReplace: p, tildeTrimReplace: d, caretTrimReplace: h } = r(64672),
     { FLAG_INCLUDE_PRERELEASE: m, FLAG_LOOSE: v } = r(376780),
     y = (e) => "<0.0.0-0" === e.value,
     g = (e) => "" === e.value,
@@ -112,9 +112,9 @@ let o = new (r(678884))(),
     },
     w = (e, t) => (
         l("comp", e, t),
-        l("caret", (e = E(e, t))),
+        l("caret", (e = x(e, t))),
         l("tildes", (e = S(e, t))),
-        l("xrange", (e = C(e, t))),
+        l("xrange", (e = k(e, t))),
         l("stars", (e = M(e, t))),
         e
     ),
@@ -123,9 +123,9 @@ let o = new (r(678884))(),
         e
             .trim()
             .split(/\s+/)
-            .map((e) => x(e, t))
+            .map((e) => E(e, t))
             .join(" "),
-    x = (e, t) => {
+    E = (e, t) => {
         let r = t.loose ? c[f.TILDELOOSE] : c[f.TILDE];
         return e.replace(r, (t, r, n, i, o) => {
             let a;
@@ -145,13 +145,13 @@ let o = new (r(678884))(),
             );
         });
     },
-    E = (e, t) =>
+    x = (e, t) =>
         e
             .trim()
             .split(/\s+/)
-            .map((e) => k(e, t))
+            .map((e) => C(e, t))
             .join(" "),
-    k = (e, t) => {
+    C = (e, t) => {
         l("caret", e, t);
         let r = t.loose ? c[f.CARETLOOSE] : c[f.CARET],
             n = t.includePrerelease ? "-0" : "";
@@ -188,7 +188,7 @@ let o = new (r(678884))(),
             );
         });
     },
-    C = (e, t) => (
+    k = (e, t) => (
         l("replaceXRanges", e, t),
         e
             .split(/\s+/)
@@ -226,7 +226,7 @@ let o = new (r(678884))(),
     },
     M = (e, t) => (l("replaceStars", e, t), e.trim().replace(c[f.STAR], "")),
     P = (e, t) => (l("replaceGTE0", e, t), e.trim().replace(c[t.includePrerelease ? f.GTE0PRE : f.GTE0], "")),
-    A = (e) => (t, r, n, i, o, a, s, l, u, c, f, d) => (
+    A = (e) => (t, r, n, i, o, a, s, l, u, c, f, p) => (
         (r = _(n)
             ? ""
             : _(i)
@@ -242,8 +242,8 @@ let o = new (r(678884))(),
               ? `<${+u + 1}.0.0-0`
               : _(f)
                 ? `<${u}.${+c + 1}.0-0`
-                : d
-                  ? `<=${u}.${c}.${f}-${d}`
+                : p
+                  ? `<=${u}.${c}.${f}-${p}`
                   : e
                     ? `<${u}.${c}.${+f + 1}-0`
                     : `<=${l}`),

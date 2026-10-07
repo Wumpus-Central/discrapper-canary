@@ -10,7 +10,7 @@ function u(e) {
     return o.createElement(l.Provider, { value: t }, e.children);
 }
 let c = (0, o.forwardRef)(function (e, t) {
-    let { name: r, isVisible: u = !0, children: c, className: f, style: d, render: p, ...h } = e,
+    let { name: r, isVisible: u = !0, children: c, className: f, style: p, render: d, ...h } = e,
         [m, v] = (0, o.useState)(u ? "visible" : "hidden"),
         y = (0, o.useContext)(l);
     if (!y) throw Error("<SharedElement> must be rendered inside a <SharedElementTransition>");
@@ -70,8 +70,8 @@ let c = (0, o.forwardRef)(function (e, t) {
     let g = (0, n.Sl)({
         children: c,
         className: f,
-        style: d,
-        render: p,
+        style: p,
+        render: d,
         values: { isEntering: "entering" === m, isExiting: "exiting" === m },
     });
     return "hidden" === m

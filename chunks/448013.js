@@ -90,12 +90,12 @@ function j(e) {
         Y = (0, g.Sq)(),
         V = (0, y.L_)({ planId: n, isGift: w, priceOptions: s, subscriptionPlan: H }),
         K = (0, y.y8)(n, !1, w, s),
-        q = null != V && !P,
-        Z = i.useCallback(() => {
+        Z = null != V && !P,
+        q = i.useCallback(() => {
             let e = b(t, H, {
                 userLocale: M,
                 isEligibleForBOGOPromotion: Y,
-                shouldShowSavingsPercent: q,
+                shouldShowSavingsPercent: Z,
                 isGift: w,
                 planId: n,
                 savingsPercent: V,
@@ -114,7 +114,7 @@ function j(e) {
                         children: e.text,
                     }))
                   : null;
-        }, [M, Y, H, t, q, w, n, V, s, j]),
+        }, [M, Y, H, t, Z, w, n, V, s, j]),
         z = i.useMemo(
             () => (0, y.D8)(H.interval, w, u, H.intervalCount, U, W),
             [H.interval, H.intervalCount, w, u, U, W],
@@ -162,7 +162,7 @@ function j(e) {
                                 children: [
                                     (0, l.jsxs)("div", {
                                         className: a()(_.Gl, { [_.h4]: r || U, [_.ox]: P && (r || U) }),
-                                        children: [z, U && Z()],
+                                        children: [z, U && q()],
                                     }),
                                     U &&
                                         (0, l.jsx)("div", {
@@ -178,7 +178,7 @@ function j(e) {
                                     className: _.bq,
                                     children: ["(", x.intl.string(x.t.ymSxhy), ")"],
                                 }),
-                            !U && Z(),
+                            !U && q(),
                         ],
                     }),
                     P

@@ -1,4 +1,4 @@
-r.d(t, { K: () => f, z: () => d });
+r.d(t, { K: () => f, z: () => p });
 var n = r(407815),
     i = r(154370),
     o = r(961082),
@@ -10,11 +10,11 @@ function u(e, t = -1 / 0, r = 1 / 0) {
 }
 var c = r(582128);
 let f = (0, c.createContext)(null),
-    d = (0, c.forwardRef)(function (e, t) {
+    p = (0, c.forwardRef)(function (e, t) {
         let r;
         [e, t] = (0, n.JT)(e, t, f);
-        let { value: d = 0, minValue: p = 0, maxValue: h = 100, isIndeterminate: m = !1 } = e;
-        d = u(d, p, h);
+        let { value: p = 0, minValue: d = 0, maxValue: h = 100, isIndeterminate: m = !1 } = e;
+        p = u(p, d, h);
         let [v, y] = (0, n._E)(!e["aria-label"] && !e["aria-labelledby"]),
             { progressBarProps: g, labelProps: b } = (function (e) {
                 let {
@@ -25,8 +25,8 @@ let f = (0, c.createContext)(null),
                         isIndeterminate: c,
                         formatOptions: f = { style: "percent" },
                     } = e,
-                    d = (0, o.$)(e, { labelable: !0 }),
-                    { labelProps: p, fieldProps: h } = (0, s.M)({ ...e, labelElementType: "span" });
+                    p = (0, o.$)(e, { labelable: !0 }),
+                    { labelProps: d, fieldProps: h } = (0, s.M)({ ...e, labelElementType: "span" });
                 t = u(t, r, n);
                 let m = n - r,
                     v = 0 === m ? 0 : (t - r) / m,
@@ -36,7 +36,7 @@ let f = (0, c.createContext)(null),
                     i = y.format(e);
                 }
                 return {
-                    progressBarProps: (0, a.v)(d, {
+                    progressBarProps: (0, a.v)(p, {
                         ...h,
                         "aria-valuenow": c ? void 0 : t,
                         "aria-valuemin": r,
@@ -44,11 +44,11 @@ let f = (0, c.createContext)(null),
                         "aria-valuetext": c ? void 0 : i,
                         role: "progressbar",
                     }),
-                    labelProps: p,
+                    labelProps: d,
                 };
             })({ ...e, label: y }),
-            w = h - p;
-        m || (r = 0 === w ? 0 : ((d - p) / w) * 100);
+            w = h - d;
+        m || (r = 0 === w ? 0 : ((p - d) / w) * 100);
         let _ = (0, n.Sl)({
                 ...e,
                 defaultClassName: "react-aria-ProgressBar",

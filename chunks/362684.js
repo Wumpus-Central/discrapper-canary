@@ -11,8 +11,8 @@ function s(e, t) {
             onPress: u,
             onPressStart: c,
             onPressEnd: f,
-            onPressUp: d,
-            onPressChange: p,
+            onPressUp: p,
+            onPressChange: d,
             preventFocusOnPress: h,
             allowFocusWhenDisabled: m,
             onClick: v,
@@ -47,20 +47,20 @@ function s(e, t) {
     let { pressProps: _, isPressed: S } = (0, a.d)({
             onPressStart: c,
             onPressEnd: f,
-            onPressChange: p,
+            onPressChange: d,
             onPress: u,
-            onPressUp: d,
+            onPressUp: p,
             onClick: v,
             isDisabled: l,
             preventFocusOnPress: h,
             ref: t,
         }),
-        { focusableProps: x } = (0, o.Wc)(e, t);
-    m && (x.tabIndex = l ? -1 : x.tabIndex);
-    let E = (0, i.v)(x, _, (0, n.$)(e, { labelable: !0 }));
+        { focusableProps: E } = (0, o.Wc)(e, t);
+    m && (E.tabIndex = l ? -1 : E.tabIndex);
+    let x = (0, i.v)(E, _, (0, n.$)(e, { labelable: !0 }));
     return {
         isPressed: S,
-        buttonProps: (0, i.v)(r, E, {
+        buttonProps: (0, i.v)(r, x, {
             "aria-haspopup": e["aria-haspopup"],
             "aria-expanded": e["aria-expanded"],
             "aria-controls": e["aria-controls"],

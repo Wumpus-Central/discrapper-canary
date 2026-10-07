@@ -16,8 +16,8 @@ let o = r(882630),
     u = r(17101),
     c = u.isObject,
     f = u.mixin,
-    d = u.hasOwn,
-    p = r(531679),
+    p = u.hasOwn,
+    d = r(531679),
     h = r(427879);
 function m() {}
 e.exports = function (e, r) {
@@ -38,7 +38,7 @@ function g(e) {
     if (!c(e)) return e;
     let t = [];
     for (let r in e)
-        d(e, r) &&
+        p(e, r) &&
             (function e(t, r, n) {
                 if (void 0 !== n) {
                     if (null === n) return void t.push(encodeURI(r));
@@ -117,7 +117,7 @@ function g(e) {
                         } finally {
                             a.f();
                         }
-                    } else if (c(n)) for (let i in n) d(n, i) && e(t, `${r}[${i}]`, n[i]);
+                    } else if (c(n)) for (let i in n) p(n, i) && e(t, `${r}[${i}]`, n[i]);
                     else t.push(encodeURI(r) + "=" + encodeURIComponent(n));
                 }
             })(t, r, e[r]);
@@ -217,7 +217,7 @@ function S(e, t) {
     }),
     (v.serialize = { "application/x-www-form-urlencoded": s.stringify, "application/json": a }),
     (v.parse = { "application/x-www-form-urlencoded": b, "application/json": JSON.parse }),
-    f(_.prototype, p.prototype),
+    f(_.prototype, d.prototype),
     (_.prototype._parseBody = function (e) {
         let t = v.parse[this.type];
         return this.req._parser
@@ -367,20 +367,20 @@ function S(e, t) {
             (!t && w(e) && (t = v.serialize["application/json"]), t && (r = t(r)));
         }
         for (let e in this.header)
-            null !== this.header[e] && d(this.header, e) && t.setRequestHeader(e, this.header[e]);
+            null !== this.header[e] && p(this.header, e) && t.setRequestHeader(e, this.header[e]);
         (this._responseType && (t.responseType = this._responseType),
             this.emit("request", this),
             t.send(void 0 === r ? null : r));
     }),
     (v.agent = () => new h()));
-for (var x = 0, E = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; x < E.length; x++) {
-    let e = E[x];
+for (var E = 0, x = ["GET", "POST", "OPTIONS", "PATCH", "PUT", "DELETE"]; E < x.length; E++) {
+    let e = x[E];
     h.prototype[e.toLowerCase()] = function (t, r) {
         let n = new v.Request(e, t);
         return (this._setDefaults(n), r && n.end(r), n);
     };
 }
-function k(e, t, r) {
+function C(e, t, r) {
     let n = v("DELETE", e);
     return ("function" == typeof t && ((r = t), (t = null)), t && n.send(t), r && n.end(r), n);
 }
@@ -397,8 +397,8 @@ function k(e, t, r) {
         let n = v("OPTIONS", e);
         return ("function" == typeof t && ((r = t), (t = null)), t && n.send(t), r && n.end(r), n);
     }),
-    (v.del = k),
-    (v.delete = k),
+    (v.del = C),
+    (v.delete = C),
     (v.patch = (e, t, r) => {
         let n = v("PATCH", e);
         return ("function" == typeof t && ((r = t), (t = null)), t && n.send(t), r && n.end(r), n);

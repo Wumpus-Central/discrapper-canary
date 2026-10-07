@@ -9,8 +9,8 @@ var l = "u" > typeof BigInt,
     u = "u" > typeof Symbol,
     c = s(Object.prototype.toString),
     f = s(Number.prototype.valueOf),
-    d = s(String.prototype.valueOf),
-    p = s(Boolean.prototype.valueOf);
+    p = s(String.prototype.valueOf),
+    d = s(Boolean.prototype.valueOf);
 if (l) var h = s(BigInt.prototype.valueOf);
 if (u) var m = s(Symbol.prototype.valueOf);
 function v(e, t) {
@@ -39,11 +39,11 @@ function _(e) {
 function S(e) {
     return !("u" < typeof ArrayBuffer) && (_.working ? _(e) : e instanceof ArrayBuffer);
 }
-function x(e) {
+function E(e) {
     return "[object DataView]" === c(e);
 }
-function E(e) {
-    return !("u" < typeof DataView) && (x.working ? x(e) : e instanceof DataView);
+function x(e) {
+    return !("u" < typeof DataView) && (E.working ? E(e) : e instanceof DataView);
 }
 ((t.isArgumentsObject = n),
     (t.isGeneratorFunction = i),
@@ -55,7 +55,7 @@ function E(e) {
         );
     }),
     (t.isArrayBufferView = function (e) {
-        return "u" > typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : a(e) || E(e);
+        return "u" > typeof ArrayBuffer && ArrayBuffer.isView ? ArrayBuffer.isView(e) : a(e) || x(e);
     }),
     (t.isUint8Array = function (e) {
         return "Uint8Array" === o(e);
@@ -108,23 +108,23 @@ function E(e) {
     }),
     (_.working = "u" > typeof ArrayBuffer && _(new ArrayBuffer())),
     (t.isArrayBuffer = S),
-    (x.working = "u" > typeof ArrayBuffer && "u" > typeof DataView && x(new DataView(new ArrayBuffer(1), 0, 1))),
-    (t.isDataView = E));
-var k = "u" > typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
-function C(e) {
+    (E.working = "u" > typeof ArrayBuffer && "u" > typeof DataView && E(new DataView(new ArrayBuffer(1), 0, 1))),
+    (t.isDataView = x));
+var C = "u" > typeof SharedArrayBuffer ? SharedArrayBuffer : void 0;
+function k(e) {
     return "[object SharedArrayBuffer]" === c(e);
 }
 function T(e) {
-    return void 0 !== k && (void 0 === C.working && (C.working = C(new k())), C.working ? C(e) : e instanceof k);
+    return void 0 !== C && (void 0 === k.working && (k.working = k(new C())), k.working ? k(e) : e instanceof C);
 }
 function M(e) {
     return v(e, f);
 }
 function P(e) {
-    return v(e, d);
+    return v(e, p);
 }
 function A(e) {
-    return v(e, p);
+    return v(e, d);
 }
 function I(e) {
     return l && v(e, h);

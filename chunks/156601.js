@@ -27,8 +27,8 @@ let g = function (e) {
         A = (0, a.bG)([m.A], () => m.A.isLoadedForSKUs([r])),
         I = (0, s.q)((0, u.Ay)());
     if (!A) return (0, n.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS, className: h.xB });
-    let v = m.A.getForSkuAndInterval((0, x.mH)(r), t),
-        N = null != v ? (0, x.sS)(v, j, !1, g) : null;
+    let N = m.A.getForSkuAndInterval((0, x.mH)(r), t),
+        v = null != N ? (0, x.sS)(N, j, !1, g) : null;
     if (E) {
         let e = t === p.WT.YEAR;
         return (0, n.jsxs)("div", {
@@ -37,7 +37,7 @@ let g = function (e) {
                     variant: e ? "heading-md/semibold" : "heading-xxl/extrabold",
                     color: e ? "text-muted" : I ? "text-strong" : "text-overlay-light",
                     tag: "span",
-                    children: (0, n.jsx)("span", { children: N }),
+                    children: (0, n.jsx)("span", { children: v }),
                 }),
                 (0, n.jsxs)(c.E, {
                     variant: "text-xs/medium",
@@ -53,7 +53,7 @@ let g = function (e) {
         variant: f ?? "heading-md/medium",
         className: l()(h.SW, i),
         children: (0, n.jsxs)(n.Fragment, {
-            children: [(0, n.jsx)("span", { className: T ? void 0 : h.q9, children: N }), " / ", (0, x.FJ)(t)],
+            children: [(0, n.jsx)("span", { className: T ? void 0 : h.q9, children: v }), " / ", (0, x.FJ)(t)],
         }),
     });
 };

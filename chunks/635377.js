@@ -26,18 +26,18 @@ function c(e) {
 }
 function f(e, t, r, n) {
     var i = r.value;
-    (p(e, i) && (m(e, r), l(e, "allowStale") || (i = void 0)), i && t.call(n, i.value, i.key, e));
+    (d(e, i) && (m(e, r), l(e, "allowStale") || (i = void 0)), i && t.call(n, i.value, i.key, e));
 }
-function d(e, t, r) {
+function p(e, t, r) {
     var n = l(e, "cache").get(t);
     if (n) {
         var i = n.value;
-        (p(e, i) ? (m(e, n), l(e, "allowStale") || (i = void 0)) : r && l(e, "lruList").unshiftNode(n),
+        (d(e, i) ? (m(e, n), l(e, "allowStale") || (i = void 0)) : r && l(e, "lruList").unshiftNode(n),
             i && (i = i.value));
     }
     return i;
 }
-function p(e, t) {
+function d(e, t) {
     if (!t || (!t.maxAge && !l(e, "maxAge"))) return !1;
     var r = Date.now() - t.now;
     return t.maxAge ? r > t.maxAge : l(e, "maxAge") && r > l(e, "maxAge");
@@ -167,7 +167,7 @@ function v(e, t, r, n, i) {
     (c.prototype.dump = function () {
         return l(this, "lruList")
             .map(function (e) {
-                if (!p(this, e)) return { k: e.key, v: e.value, e: e.now + (e.maxAge || 0) };
+                if (!d(this, e)) return { k: e.key, v: e.value, e: e.now + (e.maxAge || 0) };
             }, this)
             .toArray()
             .filter(function (e) {
@@ -195,7 +195,7 @@ function v(e, t, r, n, i) {
                     l = { value: e.value };
                 (e.maxAge !== a && (l.maxAge = e.maxAge),
                     s !== u && (l.length = e.length),
-                    p(this, e) && (l.stale = !0),
+                    d(this, e) && (l.stale = !0),
                     (l = o.inspect(l, t).split("\n").join("\n  ")),
                     (r += i + " => " + l));
             }),
@@ -231,13 +231,13 @@ function v(e, t, r, n, i) {
               !0);
     }),
     (c.prototype.has = function (e) {
-        return !(!l(this, "cache").has(e) || p(this, l(this, "cache").get(e).value));
+        return !(!l(this, "cache").has(e) || d(this, l(this, "cache").get(e).value));
     }),
     (c.prototype.get = function (e) {
-        return d(this, e, !0);
+        return p(this, e, !0);
     }),
     (c.prototype.peek = function (e) {
-        return d(this, e, !1);
+        return p(this, e, !1);
     }),
     (c.prototype.pop = function () {
         var e = l(this, "lruList").tail;
@@ -261,6 +261,6 @@ function v(e, t, r, n, i) {
     (c.prototype.prune = function () {
         var e = this;
         l(this, "cache").forEach(function (t, r) {
-            d(e, r, !1);
+            p(e, r, !1);
         });
     }));

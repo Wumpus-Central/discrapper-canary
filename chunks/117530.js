@@ -133,47 +133,47 @@ var a = r(64480),
     u = r(644255),
     c = r(979347),
     f = r(361854),
-    d = r(582128);
-let p = d.createContext(null),
+    p = r(582128);
+let d = p.createContext(null),
     h = "react-aria-focus-scope-restore",
     m = null;
 function v(e) {
     var t, r, i, o, a, c, v, M, P, A;
-    let D,
-        R,
+    let R,
         L,
+        D,
         F,
         { children: N, contain: j, restoreFocus: B, autoFocus: K } = e,
-        $ = (0, d.useRef)(null),
-        V = (0, d.useRef)(null),
-        U = (0, d.useRef)([]),
-        { parentNode: z } = (0, d.useContext)(p) || {},
-        H = (0, d.useMemo)(() => new I({ scopeRef: U }), [U]);
+        U = (0, p.useRef)(null),
+        V = (0, p.useRef)(null),
+        $ = (0, p.useRef)([]),
+        { parentNode: H } = (0, p.useContext)(d) || {},
+        z = (0, p.useMemo)(() => new I({ scopeRef: $ }), [$]);
     ((0, f.N)(() => {
-        let e = z || O.root;
+        let e = H || O.root;
         if (O.getTreeNode(e.scopeRef) && m && !_(m, e.scopeRef)) {
             let t = O.getTreeNode(m);
             t && (e = t);
         }
-        (e.addChild(H), O.addNode(H));
-    }, [H, z]),
+        (e.addChild(z), O.addNode(z));
+    }, [z, H]),
         (0, f.N)(() => {
-            let e = O.getTreeNode(U);
+            let e = O.getTreeNode($);
             e && (e.contain = !!j);
         }, [j]),
         (0, f.N)(() => {
-            let e = $.current?.nextSibling,
+            let e = U.current?.nextSibling,
                 t = [],
                 r = (e) => e.stopPropagation();
             for (; e && e !== V.current;) (t.push(e), e.addEventListener(h, r), (e = e.nextSibling));
             return (
-                (U.current = t),
+                ($.current = t),
                 () => {
                     for (let e of t) e.removeEventListener(h, r);
                 }
             );
         }, [N]),
-        (t = U),
+        (t = $),
         (r = B),
         (i = j),
         (0, f.N)(() => {
@@ -193,14 +193,14 @@ function v(e) {
                 }
             );
         }, [t, r, i]),
-        (o = U),
+        (o = $),
         (a = j),
-        (D = (0, d.useRef)(void 0)),
-        (R = (0, d.useRef)(void 0)),
+        (R = (0, p.useRef)(void 0)),
+        (L = (0, p.useRef)(void 0)),
         (0, f.N)(() => {
             let e = o.current;
             if (!a) {
-                R.current && (cancelAnimationFrame(R.current), (R.current = void 0));
+                L.current && (cancelAnimationFrame(L.current), (L.current = void 0));
                 return;
             }
             let t = (0, l.TW)(e ? e[0] : void 0),
@@ -223,23 +223,23 @@ function v(e) {
                 },
                 i = (e) => {
                     (!m || _(m, o)) && b((0, n.wt)(e), o.current)
-                        ? ((m = o), (D.current = (0, n.wt)(e)))
+                        ? ((m = o), (R.current = (0, n.wt)(e)))
                         : g(o) && !w((0, n.wt)(e), o)
-                          ? D.current
-                              ? S(D.current)
-                              : m && m.current && E(m.current)
-                          : g(o) && (D.current = (0, n.wt)(e));
+                          ? R.current
+                              ? S(R.current)
+                              : m && m.current && x(m.current)
+                          : g(o) && (R.current = (0, n.wt)(e));
                 },
                 c = (e) => {
-                    (R.current && cancelAnimationFrame(R.current),
-                        (R.current = requestAnimationFrame(() => {
+                    (L.current && cancelAnimationFrame(L.current),
+                        (L.current = requestAnimationFrame(() => {
                             let r = (0, s.ME)(),
                                 i = ("virtual" === r || null === r) && (0, u.m0)() && (0, u.H8)(),
                                 a = (0, n.bq)(t);
                             if (!i && a && g(o) && !w(a, o)) {
                                 m = o;
                                 let t = (0, n.wt)(e);
-                                t && t.isConnected ? ((D.current = t), S(D.current)) : m.current && E(m.current);
+                                t && t.isConnected ? ((R.current = t), S(R.current)) : m.current && x(m.current);
                             }
                         })));
                 };
@@ -258,14 +258,14 @@ function v(e) {
         }, [o, a]),
         (0, f.N)(
             () => () => {
-                R.current && cancelAnimationFrame(R.current);
+                L.current && cancelAnimationFrame(L.current);
             },
-            [R],
+            [L],
         ),
-        (c = U),
+        (c = $),
         (v = B),
         (M = j),
-        (L = (0, d.useRef)("u" > typeof document ? (0, n.bq)((0, l.TW)(c.current ? c.current[0] : void 0)) : null)),
+        (D = (0, p.useRef)("u" > typeof document ? (0, n.bq)((0, l.TW)(c.current ? c.current[0] : void 0)) : null)),
         (0, f.N)(() => {
             let e = c.current,
                 t = (0, l.TW)(e ? e[0] : void 0);
@@ -288,7 +288,7 @@ function v(e) {
             let t = (t) => {
                 if ("Tab" !== t.key || t.altKey || t.ctrlKey || t.metaKey || !g(c) || t.isComposing) return;
                 let r = e.activeElement;
-                if (!w(r, c) || !k(c)) return;
+                if (!w(r, c) || !C(c)) return;
                 let n = O.getTreeNode(c);
                 if (!n) return;
                 let i = n.nodeToRestore,
@@ -318,25 +318,25 @@ function v(e) {
             let t = O.getTreeNode(c);
             if (t)
                 return (
-                    (t.nodeToRestore = L.current ?? void 0),
+                    (t.nodeToRestore = D.current ?? void 0),
                     () => {
                         let t = O.getTreeNode(c);
                         if (!t) return;
                         let r = t.nodeToRestore,
                             i = (0, n.bq)(e);
-                        if (v && r && ((i && w(i, c)) || (i === e.body && k(c)))) {
+                        if (v && r && ((i && w(i, c)) || (i === e.body && C(c)))) {
                             let t = O.clone();
                             requestAnimationFrame(() => {
                                 if (e.activeElement === e.body) {
                                     let e = t.getTreeNode(c);
                                     for (; e;) {
                                         if (e.nodeToRestore && e.nodeToRestore.isConnected)
-                                            return void C(e.nodeToRestore);
+                                            return void k(e.nodeToRestore);
                                         e = e.parent;
                                     }
                                     for (e = t.getTreeNode(c); e;) {
                                         if (e.scopeRef && e.scopeRef.current && O.getTreeNode(e.scopeRef))
-                                            return void C(x(e.scopeRef.current, !0));
+                                            return void k(E(e.scopeRef.current, !0));
                                         e = e.parent;
                                     }
                                 }
@@ -345,36 +345,36 @@ function v(e) {
                     }
                 );
         }, [c, v]),
-        (P = U),
+        (P = $),
         (A = K),
-        (F = d.useRef(A)),
-        (0, d.useEffect)(() => {
+        (F = p.useRef(A)),
+        (0, p.useEffect)(() => {
             if (F.current) {
                 m = P;
                 let e = (0, l.TW)(P.current ? P.current[0] : void 0);
-                !b((0, n.bq)(e), m.current) && P.current && E(P.current);
+                !b((0, n.bq)(e), m.current) && P.current && x(P.current);
             }
             F.current = !1;
         }, [P]),
-        (0, d.useEffect)(() => {
-            let e = (0, n.bq)((0, l.TW)(U.current ? U.current[0] : void 0)),
+        (0, p.useEffect)(() => {
+            let e = (0, n.bq)((0, l.TW)($.current ? $.current[0] : void 0)),
                 t = null;
-            if (b(e, U.current)) {
+            if (b(e, $.current)) {
                 for (let r of O.traverse()) r.scopeRef && b(e, r.scopeRef.current) && (t = r);
-                t === O.getTreeNode(U) && (m = t.scopeRef);
+                t === O.getTreeNode($) && (m = t.scopeRef);
             }
-        }, [U]),
+        }, [$]),
         (0, f.N)(
             () => () => {
-                let e = O.getTreeNode(U)?.parent?.scopeRef ?? null;
-                ((U === m || _(U, m)) && (!e || O.getTreeNode(e)) && (m = e), O.removeTreeNode(U));
+                let e = O.getTreeNode($)?.parent?.scopeRef ?? null;
+                (($ === m || _($, m)) && (!e || O.getTreeNode(e)) && (m = e), O.removeTreeNode($));
             },
-            [U],
+            [$],
         ));
-    let W = (0, d.useMemo)(() => {
+    let G = (0, p.useMemo)(() => {
             var e;
             return (
-                (e = U),
+                (e = $),
                 {
                     focusNext(t = {}) {
                         let r = e.current,
@@ -383,8 +383,8 @@ function v(e) {
                             c = r[0].previousElementSibling,
                             f = T(y(r), { tabbable: o, accept: s }, r);
                         f.currentNode = b(u, r) ? u : c;
-                        let d = f.nextNode();
-                        return (!d && a && ((f.currentNode = c), (d = f.nextNode())), d && S(d, !0), d);
+                        let p = f.nextNode();
+                        return (!p && a && ((f.currentNode = c), (p = f.nextNode())), p && S(p, !0), p);
                     },
                     focusPrevious(t = {}) {
                         let r = e.current,
@@ -393,8 +393,8 @@ function v(e) {
                             c = r[r.length - 1].nextElementSibling,
                             f = T(y(r), { tabbable: o, accept: s }, r);
                         f.currentNode = b(u, r) ? u : c;
-                        let d = f.previousNode();
-                        return (!d && a && ((f.currentNode = c), (d = f.previousNode())), d && S(d, !0), d);
+                        let p = f.previousNode();
+                        return (!p && a && ((f.currentNode = c), (p = f.previousNode())), p && S(p, !0), p);
                     },
                     focusFirst(t = {}) {
                         let r = e.current,
@@ -415,13 +415,13 @@ function v(e) {
                 }
             );
         }, []),
-        G = (0, d.useMemo)(() => ({ focusManager: W, parentNode: H }), [H, W]);
-    return d.createElement(
-        p.Provider,
-        { value: G },
-        d.createElement("span", { "data-focus-scope-start": !0, hidden: !0, ref: $ }),
+        W = (0, p.useMemo)(() => ({ focusManager: G, parentNode: z }), [z, G]);
+    return p.createElement(
+        d.Provider,
+        { value: W },
+        p.createElement("span", { "data-focus-scope-start": !0, hidden: !0, ref: U }),
         N,
-        d.createElement("span", { "data-focus-scope-end": !0, hidden: !0, ref: V }),
+        p.createElement("span", { "data-focus-scope-end": !0, hidden: !0, ref: V }),
     );
 }
 function y(e) {
@@ -462,7 +462,7 @@ function S(e, t = !1) {
             (0, a.l)(e);
         } catch {}
 }
-function x(e, t = !0) {
+function E(e, t = !0) {
     let r = e[0].previousElementSibling,
         n = y(e),
         i = T(n, { tabbable: t }, e);
@@ -470,10 +470,10 @@ function x(e, t = !0) {
     let o = i.nextNode();
     return (t && !o && (((i = T((n = y(e)), { tabbable: !1 }, e)).currentNode = r), (o = i.nextNode())), o);
 }
-function E(e, t = !0) {
-    S(x(e, t));
+function x(e, t = !0) {
+    S(E(e, t));
 }
-function k(e) {
+function C(e) {
     let t = O.getTreeNode(m);
     for (; t && t.scopeRef !== e;) {
         if (t.nodeToRestore) return !1;
@@ -481,16 +481,16 @@ function k(e) {
     }
     return t?.scopeRef === e;
 }
-function C(e) {
+function k(e) {
     e.dispatchEvent(new CustomEvent(h, { bubbles: !0, cancelable: !0 })) && S(e);
 }
 function T(e, t, r) {
     var a, s, u;
     let f = t?.tabbable ? c.A : c.t,
-        d = e?.nodeType === Node.ELEMENT_NODE ? e : null,
-        p = (0, l.TW)(d),
+        p = e?.nodeType === Node.ELEMENT_NODE ? e : null,
+        d = (0, l.TW)(p),
         h =
-            ((a = e || p),
+            ((a = e || d),
             (s = NodeFilter.SHOW_ELEMENT),
             (u = {
                 acceptNode: (e) =>
@@ -525,7 +525,7 @@ function T(e, t, r) {
                           ? NodeFilter.FILTER_ACCEPT
                           : NodeFilter.FILTER_SKIP,
             }),
-            (0, i.Nf)() ? new o(p, a, s, u) : p.createTreeWalker(a, s, u));
+            (0, i.Nf)() ? new o(d, a, s, u) : d.createTreeWalker(a, s, u));
     return (t?.from && (h.currentNode = t.from), h);
 }
 function M(e, t = {}) {
@@ -537,8 +537,8 @@ function M(e, t = {}) {
                 c = o || (0, n.bq)((0, l.TW)(i)),
                 f = T(i, { tabbable: a, accept: u });
             (0, n.sD)(i, c) && (f.currentNode = c);
-            let d = f.nextNode();
-            return (!d && s && ((f.currentNode = i), (d = f.nextNode())), d && S(d, !0), d);
+            let p = f.nextNode();
+            return (!p && s && ((f.currentNode = i), (p = f.nextNode())), p && S(p, !0), p);
         },
         focusPrevious(r = t) {
             let i = e.current;
@@ -551,14 +551,14 @@ function M(e, t = {}) {
                 let e = P(f);
                 return (e && S(e, !0), e ?? null);
             }
-            let d = f.previousNode();
-            if (!d && s) {
+            let p = f.previousNode();
+            if (!p && s) {
                 f.currentNode = i;
                 let e = P(f);
                 if (!e) return null;
-                d = e;
+                p = e;
             }
-            return (d && S(d, !0), d ?? null);
+            return (p && S(p, !0), p ?? null);
         },
         focusFirst(r = t) {
             let n = e.current;

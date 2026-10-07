@@ -25,23 +25,23 @@ function c() {
 }
 function f(e) {
     let { onHoverStart: t, onHoverChange: r, onHoverEnd: l, isDisabled: u } = e,
-        [f, d] = (0, a.useState)(!1),
-        p = (0, a.useRef)({ isHovered: !1, ignoreEmulatedMouseEvents: !1, pointerType: "", target: null }).current;
+        [f, p] = (0, a.useState)(!1),
+        d = (0, a.useRef)({ isHovered: !1, ignoreEmulatedMouseEvents: !1, pointerType: "", target: null }).current;
     (0, a.useEffect)(c, []);
     let { addGlobalListener: h, removeAllGlobalListeners: m } = (0, o.A)(),
         { hoverProps: v, triggerHoverEnd: y } = (0, a.useMemo)(() => {
             let e = (e, t) => {
-                    let n = p.target;
-                    ((p.pointerType = ""),
-                        (p.target = null),
+                    let n = d.target;
+                    ((d.pointerType = ""),
+                        (d.target = null),
                         "touch" !== t &&
-                            p.isHovered &&
+                            d.isHovered &&
                             n &&
-                            ((p.isHovered = !1),
+                            ((d.isHovered = !1),
                             m(),
                             l && l({ type: "hoverend", target: n, pointerType: t }),
                             r && r(!1),
-                            d(!1)));
+                            p(!1)));
                 },
                 o = {};
             return (
@@ -50,27 +50,27 @@ function f(e) {
                         (s && "mouse" === o.pointerType) ||
                             ((o, a) => {
                                 if (
-                                    ((p.pointerType = a),
-                                    u || "touch" === a || p.isHovered || !(0, n.sD)(o.currentTarget, (0, n.wt)(o)))
+                                    ((d.pointerType = a),
+                                    u || "touch" === a || d.isHovered || !(0, n.sD)(o.currentTarget, (0, n.wt)(o)))
                                 )
                                     return;
-                                p.isHovered = !0;
+                                d.isHovered = !0;
                                 let s = o.currentTarget;
-                                ((p.target = s),
+                                ((d.target = s),
                                     h(
                                         (0, i.TW)((0, n.wt)(o)),
                                         "pointerover",
                                         (t) => {
-                                            p.isHovered &&
-                                                p.target &&
-                                                !(0, n.sD)(p.target, (0, n.wt)(t)) &&
+                                            d.isHovered &&
+                                                d.target &&
+                                                !(0, n.sD)(d.target, (0, n.wt)(t)) &&
                                                 e(t, t.pointerType);
                                         },
                                         { capture: !0 },
                                     ),
                                     t && t({ type: "hoverstart", target: s, pointerType: a }),
                                     r && r(!0),
-                                    d(!0));
+                                    p(!0));
                             })(o, o.pointerType);
                     }),
                     (o.onPointerLeave = (t) => {
@@ -78,10 +78,10 @@ function f(e) {
                     })),
                 { hoverProps: o, triggerHoverEnd: e }
             );
-        }, [t, r, l, u, p, h, m]);
+        }, [t, r, l, u, d, h, m]);
     return (
         (0, a.useEffect)(() => {
-            u && y({ currentTarget: p.target }, p.pointerType);
+            u && y({ currentTarget: d.target }, d.pointerType);
         }, [u]),
         { hoverProps: v, isHovered: f }
     );

@@ -1,4 +1,4 @@
-r.d(t, { e: () => p });
+r.d(t, { e: () => d });
 var n = r(961082),
     i = r(256062),
     o = r(184093),
@@ -8,10 +8,10 @@ var n = r(961082),
     u = r(114218),
     c = r(209787),
     f = r(582128),
-    d = r(572313);
-function p(e, t, r) {
+    p = r(572313);
+function d(e, t, r) {
     let {
-            isDisabled: p = !1,
+            isDisabled: d = !1,
             isReadOnly: h = !1,
             value: m,
             name: v,
@@ -21,37 +21,37 @@ function p(e, t, r) {
             validationBehavior: w = "aria",
             "aria-label": _,
             "aria-labelledby": S,
-            "aria-describedby": x,
-            onPressStart: E,
-            onPressEnd: k,
-            onPressChange: C,
+            "aria-describedby": E,
+            onPressStart: x,
+            onPressEnd: C,
+            onPressChange: k,
             onPress: T,
             onPressUp: M,
             onClick: P,
         } = e,
-        A = (0, d.KZ)({ ...e, value: t.isSelected }),
-        { isInvalid: I, validationErrors: O, validationDetails: D } = A.displayValidation;
+        A = (0, p.KZ)({ ...e, value: t.isSelected }),
+        { isInvalid: I, validationErrors: O, validationDetails: R } = A.displayValidation;
     (0, l.X)(e, A, r);
-    let { pressProps: R, isPressed: L } = (0, u.d)({
-            onPressStart: E,
-            onPressEnd: k,
-            onPressChange: C,
+    let { pressProps: L, isPressed: D } = (0, u.d)({
+            onPressStart: x,
+            onPressEnd: C,
+            onPressChange: k,
             onPress: T,
             onPressUp: M,
             onClick: P,
-            isDisabled: p,
+            isDisabled: d,
         }),
         [F, N] = (0, f.useState)(!1),
         { pressProps: j } = (0, u.d)({
             onPressStart(e) {
                 "keyboard" === e.pointerType || "virtual" === e.pointerType
                     ? e.continuePropagation()
-                    : (E?.(e), C?.(!0), N(!0));
+                    : (x?.(e), k?.(!0), N(!0));
             },
             onPressEnd(e) {
                 "keyboard" === e.pointerType || "virtual" === e.pointerType
                     ? e.continuePropagation()
-                    : (k?.(e), C?.(!1), N(!1));
+                    : (C?.(e), k?.(!1), N(!1));
             },
             onPressUp(e) {
                 "keyboard" === e.pointerType || "virtual" === e.pointerType ? e.continuePropagation() : M?.(e);
@@ -60,21 +60,21 @@ function p(e, t, r) {
             onPress(n) {
                 if ("keyboard" === n.pointerType || "virtual" === n.pointerType) return void n.continuePropagation();
                 (T?.(n), t.toggle(), r.current?.focus());
-                let { [d.Lf]: i } = e,
+                let { [p.Lf]: i } = e,
                     { commitValidation: o } = i || A;
                 o();
             },
-            isDisabled: p || h,
+            isDisabled: d || h,
         }),
         { focusableProps: B } = (0, a.Wc)(e, r),
-        K = (0, o.v)(R, B),
-        $ = (0, n.$)(e, { labelable: !0 });
+        K = (0, o.v)(L, B),
+        U = (0, n.$)(e, { labelable: !0 });
     (0, s.F)(r, t.defaultSelected, t.setSelected);
     let V = (0, c.L)(),
-        U = (0, c.L)();
+        $ = (0, c.L)();
     return {
         labelProps: (0, o.v)(j, { onClick: (e) => e.preventDefault() }),
-        inputProps: (0, o.v)($, {
+        inputProps: (0, o.v)(U, {
             checked: t.isSelected,
             "aria-required": (b && "aria" === w) || void 0,
             required: b && "native" === w,
@@ -82,11 +82,11 @@ function p(e, t, r) {
             "aria-errormessage": e["aria-errormessage"],
             "aria-controls": e["aria-controls"],
             "aria-readonly": h || void 0,
-            "aria-describedby": [V.id, U.id, x].filter(Boolean).join(" ") || void 0,
+            "aria-describedby": [V.id, $.id, E].filter(Boolean).join(" ") || void 0,
             onChange: (e) => {
                 (e.stopPropagation(), t.setSelected((0, i.wt)(e).checked));
             },
-            disabled: p,
+            disabled: d,
             ...(null == m ? {} : { value: m }),
             name: v,
             form: y,
@@ -94,13 +94,13 @@ function p(e, t, r) {
             ...K,
         }),
         descriptionProps: V,
-        errorMessageProps: U,
+        errorMessageProps: $,
         isSelected: t.isSelected,
-        isPressed: L || F,
-        isDisabled: p,
+        isPressed: D || F,
+        isDisabled: d,
         isReadOnly: h,
         isInvalid: I || "invalid" === e.validationState,
         validationErrors: O,
-        validationDetails: D,
+        validationDetails: R,
     };
 }

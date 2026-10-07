@@ -1,5 +1,5 @@
 let n;
-r.d(t, { X1: () => d, Tw: () => f, Bi: () => c });
+r.d(t, { X1: () => p, Tw: () => f, Bi: () => c });
 var i = r(361854),
     o = r(447502),
     a = r(582128);
@@ -14,16 +14,16 @@ function c(e) {
     let [t, r] = (0, a.useState)(e),
         c = (0, a.useRef)(null),
         f = (0, o.Cc)(t),
-        d = (0, a.useRef)(null),
-        p = u.get(d);
-    if ((n && p !== f && (null != p && n.unregister(d), n.register(d, f, d), u.set(d, f)), s)) {
+        p = (0, a.useRef)(null),
+        d = u.get(p);
+    if ((n && d !== f && (null != d && n.unregister(p), n.register(p, f, p), u.set(p, f)), s)) {
         let e = l.get(f);
         e && !e.includes(c) ? e.push(c) : l.set(f, [c]);
     }
     return (
         (0, i.N)(
             () => () => {
-                (n && (n.unregister(d), u.delete(d)), l.delete(f));
+                (n && (n.unregister(p), u.delete(p)), l.delete(f));
             },
             [f],
         ),
@@ -46,7 +46,7 @@ function f(e, t) {
     let n = l.get(t);
     return n ? (n.forEach((t) => (t.current = e)), e) : t;
 }
-function d(e = []) {
+function p(e = []) {
     let t = c(),
         [r, n] = (function (e) {
             let [t, r] = (0, a.useState)(e),

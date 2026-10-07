@@ -1,4 +1,4 @@
-r.d(t, { Cc: () => l, wR: () => d });
+r.d(t, { Cc: () => l, wR: () => p });
 var n = r(582128);
 let i = { prefix: String(Math.round(1e10 * Math.random())), current: 0 },
     o = n.createContext(i),
@@ -8,7 +8,7 @@ let i = { prefix: String(Math.round(1e10 * Math.random())), current: 0 },
         "function" == typeof n.useId
             ? function (e) {
                   let t = n.useId(),
-                      [r] = (0, n.useState)(d()),
+                      [r] = (0, n.useState)(p()),
                       o = r ? "react-aria" : `react-aria${i.prefix}`;
                   return e || `${o}-${t}`;
               }
@@ -41,6 +41,6 @@ function c() {
 function f(e) {
     return () => {};
 }
-function d() {
+function p() {
     return "function" == typeof n.useSyncExternalStore ? n.useSyncExternalStore(f, u, c) : (0, n.useContext)(a);
 }
