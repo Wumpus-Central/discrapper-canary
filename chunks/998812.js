@@ -9,4 +9,10 @@ e.exports = {
     SU: "verticalDivider_effefc",
     E$: "echoRowDisabled_effefc",
     Jx: "echoPillDisabled_effefc",
+    yA: "avatarStack_effefc",
+    R3: "avatarWrapper_effefc",
+    aR: "stackedAvatarWrapper_effefc",
+    my: "avatar_effefc",
+    Du: "authorAvatar_effefc avatar_effefc",
+    mf: "replyAvatar_effefc avatar_effefc",
 };
