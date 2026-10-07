@@ -141,6 +141,10 @@
     flex-shrink: 0
 }
 
+.isFullscreen__0a5bd .avatars__0a5bd {
+    pointer-events: auto
+}
+
 .participantAvatar__0a5bd {
     border-radius: 50%;
     cursor: pointer;
@@ -165,4 +169,4 @@
     text-decoration: underline
 }
 
-/*# sourceMappingURL=200075.270ca55d5e90bc51.css.map*/
+/*# sourceMappingURL=200075.f67555e1263e1d8b.css.map*/

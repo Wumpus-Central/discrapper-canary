@@ -1,31 +1,38 @@
-a.d(t, { A: () => o });
+a.d(t, { A: () => c });
 var i = a(477900),
     n = a(582128),
+    d = a(866665),
     s = a(939249),
-    d = a(97808),
-    l = a(778712),
-    r = a(342296),
-    h = a(447177);
-function o(e) {
-    let { user: t, guildId: a, layerContext: o } = e,
-        u = n.useRef(null);
-    return (0, i.jsx)(r.A, {
-        targetElementRef: u,
+    l = a(97808),
+    r = a(778712),
+    h = a(342296),
+    o = a(427262),
+    u = a(447177);
+function c(e) {
+    let { user: t, guildId: a, layerContext: c } = e,
+        p = n.useRef(null),
+        C = (0, o.$3)(t);
+    return (0, i.jsx)(h.A, {
+        targetElementRef: p,
         shouldPreload: !0,
         user: t,
         guildId: a,
         position: "bottom",
-        layerContext: o,
+        layerContext: c,
         children: (e) =>
-            (0, i.jsx)(s.D, {
-                ...e,
-                innerRef: u,
-                className: h.RB,
-                onClick: (t) => {
-                    (e.onClick(t), t.stopPropagation());
-                },
-                "aria-label": t.username,
-                children: (0, i.jsx)(d.eu, { src: t.getAvatarURL(a, 24), size: l._3.SIZE_24, "aria-hidden": !0 }),
+            (0, i.jsx)(d.m, {
+                text: C,
+                ariaHidden: !0,
+                children: (0, i.jsx)(s.D, {
+                    ...e,
+                    innerRef: p,
+                    className: u.RB,
+                    onClick: (t) => {
+                        (e.onClick(t), t.stopPropagation());
+                    },
+                    "aria-label": C,
+                    children: (0, i.jsx)(l.eu, { src: t.getAvatarURL(a, 24), size: r._3.SIZE_24, "aria-hidden": !0 }),
+                }),
             }),
     });
 }
