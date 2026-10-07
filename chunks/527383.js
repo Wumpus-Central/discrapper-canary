@@ -1,30 +1,38 @@
-r.d(o, { D: () => c });
-var t = r(477900);
-r(582128);
-let d =
+a.d(t, { D: () => n });
+var o = a(477900);
+a(582128);
+let r =
     "https://cdn.discordapp.com/assets/content/4e02ee0451e556464805350795ce905d3f1fae8d476d249189c0d236fd312029.riv";
-var a = r(502377),
-    s = r(799226);
+var d = a(845867),
+    s = a(799226);
 let i = {
-    "Boost Server": { reducedMotion: "boolean" },
-    "Boost Crystal": { reducedMotion: "boolean" },
-    "Crystal Side B": {},
-    "Crystal Side A": {},
-    "Boost Saved": { reducedMotion: "boolean" },
-};
-function c(e) {
-    let { artboard: o = "Boost Server", stateMachine: r, ...c } = e,
-        { status: n, buffer: l } = (0, s.CE)(d),
-        p = (0, s.m2)(d);
-    return n === s.BW.Loading
+        "Boost Server": { reducedMotion: "boolean" },
+        "Boost Crystal": { reducedMotion: "boolean" },
+        "Crystal Side B": {},
+        "Crystal Side A": {},
+        "Boost Saved": { reducedMotion: "boolean" },
+    },
+    c = {
+        "Boost Server": ["State Machine 1"],
+        "Boost Crystal": ["State Machine 1"],
+        "Crystal Side B": ["State Machine 1"],
+        "Crystal Side A": ["State Machine 1"],
+        "Boost Saved": ["State Machine 1"],
+    };
+function n(e) {
+    let { artboard: t = "Boost Server", stateMachine: a, ...n } = e,
+        { status: S, buffer: l } = (0, s.CE)(r),
+        h = (0, s.m2)(r);
+    return S === s.BW.Loading
         ? null
-        : (0, t.jsx)(a.w, {
-              ...(p ? { key: "override" } : {}),
+        : (0, o.jsx)(d.w, {
+              ...(h ? { key: "override" } : {}),
               buffer: l,
-              artboard: o,
-              stateMachine: r,
+              artboard: t,
+              stateMachine: a,
               artboardProperties: i,
-              ...c,
+              artboardStateMachines: c,
+              ...n,
           });
 }
-c.riveSrc = d;
+n.riveSrc = r;

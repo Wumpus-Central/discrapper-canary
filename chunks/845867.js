@@ -1,7 +1,7 @@
 n.d(t, { w: () => h });
 var i = n(477900),
     r = n(582128),
-    a = n(565409),
+    a = n(895975),
     s = n(971940),
     l = n(941861),
     o = n(844222),
@@ -37,55 +37,80 @@ function h(e) {
             assetLoader: R,
             onLoad: L,
             stateMachine: y,
+            artboardStateMachines: D,
         } = e,
-        D = r.useContext(o.C),
-        v = (0, l.R)(),
-        b = (0, d.G9)().isWindowFocused?.() ?? v,
-        [M, P] = (0, l.X)(3e4),
-        [U, w] = r.useState(void 0),
-        G = r.useRef(null),
-        { rive: x, RiveComponent: k } = (0, s.useRive)({
-            eventTarget: h?.current,
-            buffer: t,
-            autoplay: n,
-            stateMachines: null != y ? [y] : U,
-            artboard: f,
-            useOffscreenRenderer: !0,
-            layout: new s.Layout({
-                fit: null != c ? E[c] : s.Fit.Cover,
-                alignment: null != u ? A[u] : s.Alignment.Center,
-            }),
-            isTouchScrollEnabled: S,
-            listenOnDocumentBody: C,
-            eventCapture: O,
-            assetLoader: R,
-            onLoad: L,
-        });
+        v = r.useContext(o.C),
+        b = (0, l.Rs)(),
+        M = (0, d.G9)().isWindowFocused?.() ?? b,
+        [P, U] = (0, l.Xb)(3e4),
+        w = (function () {
+            let e = (0, d.G9)().experiments?.enabledExperiments,
+                [t] = r.useState(() => e?.includes("rive-web-perf") ?? !1);
+            return t;
+        })(),
+        [G, x] = r.useState(void 0),
+        k = r.useMemo(() => {
+            if (w && null != D) return D[f ?? ""];
+        }, [w, D, f]),
+        F = null != k,
+        B = r.useRef(null),
+        { rive: V, RiveComponent: H } = (0, s.useRive)(
+            {
+                eventTarget: h?.current,
+                buffer: t,
+                autoplay: n,
+                stateMachines: null != y ? [y] : F ? k : G,
+                artboard: f,
+                autoBind: !!F || void 0,
+                enableAutoSleep: w,
+                useOffscreenRenderer: !0,
+                layout: new s.Layout({
+                    fit: null != c ? E[c] : s.Fit.Cover,
+                    alignment: null != u ? A[u] : s.Alignment.Center,
+                }),
+                isTouchScrollEnabled: S,
+                listenOnDocumentBody: C,
+                eventCapture: O,
+                assetLoader: R,
+                onLoad: L,
+            },
+            { ...(w ? { shouldUseIntersectionObserver: !1 } : {}) },
+        );
     (r.useImperativeHandle(
         p,
         () => ({
-            play: () => x?.play(),
-            pause: () => x?.pause(),
-            stop: () => x?.stop(),
+            play: () => V?.play(),
+            pause: () => V?.pause(),
+            stop: () => V?.stop(),
+            getPlaybackState: () =>
+                null == V
+                    ? null
+                    : {
+                          isPlaying: V.isPlaying,
+                          isPaused: V.isPaused,
+                          isAutoSleeping: V.isAutoSleeping ?? !1,
+                          isRenderScheduled: null != V.frameRequestId,
+                          fps: V.fps,
+                      },
             getProperties: () =>
-                x?.viewModelInstance?.properties.reduce(
+                V?.viewModelInstance?.properties.reduce(
                     (e, t) => (
                         "viewModel" === t.type &&
-                            x?.viewModelInstance?.viewModel(t.name)?.properties.forEach((n) => {
+                            V?.viewModelInstance?.viewModel(t.name)?.properties.forEach((n) => {
                                 e[t.name + "/" + n.name] = {
                                     type: n.type,
-                                    value: x?.viewModelInstance?.[n.type]?.(`${t.name}/${n.name}`)?.value,
+                                    value: V?.viewModelInstance?.[n.type]?.(`${t.name}/${n.name}`)?.value,
                                 };
                             }),
-                        (e[t.name] = { type: t.type, value: x?.viewModelInstance?.[t.type]?.(t.name)?.value }),
+                        (e[t.name] = { type: t.type, value: V?.viewModelInstance?.[t.type]?.(t.name)?.value }),
                         e
                     ),
                     {},
                 ) ?? {},
             getArtboards: () => {
-                if (null == x) return [];
+                if (null == V) return [];
                 let e = new Set(),
-                    t = x.riveFile.getInstance();
+                    t = V.riveFile.getInstance();
                 for (let n = 0; n < t.artboardCount(); n++) {
                     let i = t.artboardByIndex(n);
                     e.add(i.name);
@@ -93,7 +118,7 @@ function h(e) {
                 return Array.from(e);
             },
         }),
-        [x],
+        [V],
     ),
         (function (e) {
             let t,
@@ -223,6 +248,7 @@ function h(e) {
                                         console.warn(`Unknown property type: ${l}`);
                                 }
                             }
+                            n.wakeFromAutoSleep?.();
                         })().catch((e) => {
                             if ("AbortError" !== e.name) throw e;
                         }),
@@ -232,7 +258,7 @@ function h(e) {
                     );
                 }, [T, _, n, i, a, A, n?.viewModelInstance, h, f, p]));
         })({
-            rive: x,
+            rive: V,
             artboard: f,
             artboardProperties: T,
             dataBinding: m,
@@ -240,93 +266,110 @@ function h(e) {
             onDataBindingChange: g,
         }),
         r.useEffect(() => {
-            if (null != x && "short-loop" === I && D.reducedMotion.enabled) {
+            if (null != V && "short-loop" === I && v.reducedMotion.enabled) {
                 function e() {
-                    null != x &&
-                        x.isPlaying &&
-                        (G.current = setTimeout(() => {
-                            x.pause();
+                    null != V &&
+                        V.isPlaying &&
+                        (B.current = setTimeout(() => {
+                            V.pause();
                         }, 5e3));
                 }
                 function t() {
-                    clearTimeout(G.current);
+                    clearTimeout(B.current);
                 }
                 return (
-                    x.on(s.EventType.Play, e),
-                    x.on(s.EventType.Pause, t),
-                    x.on(s.EventType.Stop, t),
+                    V.on(s.EventType.Play, e),
+                    V.on(s.EventType.Pause, t),
+                    V.on(s.EventType.Stop, t),
                     () => {
-                        (x.off(s.EventType.Play, e), x.off(s.EventType.Pause, t), x.off(s.EventType.Stop, t));
+                        (V.off(s.EventType.Play, e), V.off(s.EventType.Pause, t), V.off(s.EventType.Stop, t));
                     }
                 );
             }
-        }, [x, I, D.reducedMotion.enabled]),
+        }, [V, I, v.reducedMotion.enabled]),
         r.useLayoutEffect(() => {
-            if (null != x) {
-                "layout" === c && x.resizeDrawingSurfaceToCanvas();
+            if (null != V) {
+                "layout" === c && V.resizeDrawingSurfaceToCanvas();
                 let e = setTimeout(() => {
-                    null != x.canvas &&
-                        (x.resizeDrawingSurfaceToCanvas(),
-                        x.isPlaying || (x.startRendering(), requestAnimationFrame(() => x.stopRendering())));
+                    null != V.canvas &&
+                        (V.resizeDrawingSurfaceToCanvas(),
+                        V.isPlaying || (V.startRendering(), requestAnimationFrame(() => V.stopRendering())));
                 }, 100);
                 return () => clearTimeout(e);
             }
-        }, [x, c]),
+        }, [V, c]),
         r.useEffect(() => {
-            if (null == x || !D.reducedMotion.enabled) return;
-            let e = x.canvas;
+            if (null == V || !v.reducedMotion.enabled) return;
+            let e = V.canvas;
             if (null == e) return;
             let t = new ResizeObserver(() => {
-                (x.resizeDrawingSurfaceToCanvas(),
-                    x.isPlaying || (x.startRendering(), requestAnimationFrame(() => x.stopRendering())));
+                (V.resizeDrawingSurfaceToCanvas(),
+                    V.isPlaying || (V.startRendering(), requestAnimationFrame(() => V.stopRendering())));
             });
             return (t.observe(e), () => t.disconnect());
-        }, [x, D.reducedMotion.enabled]),
+        }, [V, v.reducedMotion.enabled]),
         r.useEffect(() => {
-            null != x &&
-                null == U &&
-                null == y &&
-                (w(x.stateMachineNames),
-                x.reset({ stateMachines: x.stateMachineNames, autoplay: n, artboard: f, autoBind: !0 }),
-                x.setupRiveListeners());
-        }, [x, n, U, f, y]));
-    let F = r.useRef(0);
-    (r.useEffect(() => {
-        if (null == x) return;
-        let e = (t) => {
-            null != t.data &&
-                "number" == typeof t.data &&
-                ((F.current = t.data),
-                t.data > 0 &&
-                    ("halt" === I && D.reducedMotion.enabled && x.isPlaying && x.pause(),
-                    x.off(s.EventType.Advance, e)));
-        };
-        return (
-            x.on(s.EventType.Advance, e),
-            n && x.play(),
-            () => {
-                x.off(s.EventType.Advance, e);
-            }
-        );
-    }, [x, D.reducedMotion.enabled, I, n]),
-        r.useEffect(() => {
-            P();
-        }, [P, f, c, u, m, N, T]));
-    let B = b && !M,
-        V = r.useRef(!1);
+            F ||
+                (null != V &&
+                    null == G &&
+                    null == y &&
+                    (x(V.stateMachineNames),
+                    V.reset({ stateMachines: V.stateMachineNames, autoplay: n, artboard: f, autoBind: !0 }),
+                    V.setupRiveListeners()));
+        }, [V, n, G, f, y, F]));
+    let j = r.useRef(0);
     return (
         r.useEffect(() => {
-            if (null != x)
+            if (null == V) return;
+            let e = (t) => {
+                null != t.data &&
+                    "number" == typeof t.data &&
+                    ((j.current = t.data),
+                    t.data > 0 &&
+                        ("halt" === I && v.reducedMotion.enabled && V.isPlaying && V.pause(),
+                        V.off(s.EventType.Advance, e)));
+            };
+            return (
+                V.on(s.EventType.Advance, e),
+                n && V.play(),
+                () => {
+                    V.off(s.EventType.Advance, e);
+                }
+            );
+        }, [V, v.reducedMotion.enabled, I, n]),
+        r.useEffect(() => {
+            U();
+        }, [U, f, c, u, m, N, T]),
+        !(function (e) {
+            let { rive: t, autoplay: n, isRiveWebPerfEnabled: i, isFocused: a, isUserIdle: o, lastFrameRef: d } = e,
+                c = i ? t?.canvas : null,
+                u = (0, l.Cz)(c),
+                _ = a && !o && (!i || u),
+                E = r.useRef(!1),
+                A = r.useRef(null);
+            r.useEffect(() => {
+                if (null == t) return;
+                t !== A.current && ((A.current = t), i && (E.current = n));
+                let e = null;
                 return (
-                    !B && V.current && x.isPlaying && F.current > 0
-                        ? x.pause()
-                        : B && !x.isPlaying && V.current && x.play(),
+                    !_ && E.current && t.isPlaying
+                        ? d.current > 0
+                            ? t.pause()
+                            : ((e = (n) => {
+                                  "number" == typeof n.data &&
+                                      !(n.data <= 0) &&
+                                      (null != e && t.off(s.EventType.Advance, e), t.isPlaying && t.pause());
+                              }),
+                              t.on(s.EventType.Advance, e))
+                        : _ && !t.isPlaying && E.current && t.play(),
                     () => {
-                        null != x && B && (V.current = null != x.frameRequestId);
+                        (null != e && t.off(s.EventType.Advance, e),
+                            null != t && _ && (E.current = null != t.frameRequestId || !0 === t.isAutoSleeping));
                     }
                 );
-        }, [x, B]),
-        (0, i.jsx)(k, { className: a, style: _, "aria-hidden": !0 })
+            }, [t, _, d, n, i]);
+        })({ rive: V, autoplay: n, isRiveWebPerfEnabled: w, isFocused: M, isUserIdle: P, lastFrameRef: j }),
+        (0, i.jsx)(H, { className: a, style: _, "aria-hidden": !0 })
     );
 }
 (n(393431), n(532706), n(42231), n(232424), n(949626), n(767709), n(65162), n(321073), s.RuntimeLoader.setWasmUrl(a));

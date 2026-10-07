@@ -1,24 +1,26 @@
-r.d(e, { s: () => i });
-var t = r(477900);
-r(582128);
-let d =
+t.d(e, { s: () => f });
+var r = t(477900);
+t(582128);
+let c =
     "https://cdn.discordapp.com/assets/content/fac02dd925a746a61291e1f604a8affff663e9d8a22cd9b21749991ff745f1f2.riv";
-var s = r(502377),
-    c = r(799226);
-let f = { "STACKED COINS": {}, "SINGLE COIN": {} };
-function i(a) {
-    let { artboard: e = "STACKED COINS", stateMachine: r, ...i } = a,
-        { status: n, buffer: o } = (0, c.CE)(d),
-        p = (0, c.m2)(d);
-    return n === c.BW.Loading
+var d = t(845867),
+    s = t(799226);
+let i = { "STACKED COINS": {}, "SINGLE COIN": {} },
+    n = { "STACKED COINS": ["State Machine 1"], "SINGLE COIN": ["State Machine 1"] };
+function f(a) {
+    let { artboard: e = "STACKED COINS", stateMachine: t, ...f } = a,
+        { status: o, buffer: S } = (0, s.CE)(c),
+        p = (0, s.m2)(c);
+    return o === s.BW.Loading
         ? null
-        : (0, t.jsx)(s.w, {
+        : (0, r.jsx)(d.w, {
               ...(p ? { key: "override" } : {}),
-              buffer: o,
+              buffer: S,
               artboard: e,
-              stateMachine: r,
-              artboardProperties: f,
-              ...i,
+              stateMachine: t,
+              artboardProperties: i,
+              artboardStateMachines: n,
+              ...f,
           });
 }
-i.riveSrc = d;
+f.riveSrc = c;

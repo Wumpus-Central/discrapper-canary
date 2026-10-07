@@ -1,4 +1,4 @@
-n.d(t, { R: () => s, X: () => a });
+n.d(t, { Cz: () => s, Rs: () => l, Xb: () => a });
 var i = n(582128);
 let r = ["mousemove", "mousedown", "keydown", "scroll", "touchstart", "pointerdown"];
 function a(e) {
@@ -21,7 +21,21 @@ function a(e) {
         [t, s]
     );
 }
-function s() {
+function s(e) {
+    let [t, n] = i.useState(!0);
+    return (
+        i.useEffect(() => {
+            if (null == e || "u" < typeof IntersectionObserver) return void n(!0);
+            let t = new IntersectionObserver((e) => {
+                let t = e[e.length - 1];
+                null != t && n(t.isIntersecting);
+            });
+            return (t.observe(e), () => t.disconnect());
+        }, [e]),
+        t
+    );
+}
+function l() {
     let [e, t] = i.useState(!0);
     return (
         i.useEffect(() => {

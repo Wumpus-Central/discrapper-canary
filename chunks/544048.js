@@ -92,7 +92,7 @@ class u extends s.PureComponent {
 function c(e) {
     let { componentRef: t, ignoreReducedMotion: n = !1, ...a } = e,
         { isWindowFocused: o } = (0, h.G9)(),
-        p = (0, l.R)(),
+        p = (0, l.Rs)(),
         { reducedMotion: c } = s.useContext(r.C),
         d = c.enabled && !n,
         m = { ...a, isWindowFocused: o?.() ?? p, useReducedMotion: d };

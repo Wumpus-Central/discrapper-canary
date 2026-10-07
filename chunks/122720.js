@@ -1,28 +1,35 @@
-r.d(o, { E: () => c });
-var t = r(477900);
-r(582128);
+o.d(r, { E: () => c });
+var t = o(477900);
+o(582128);
 let a =
     "https://cdn.discordapp.com/assets/content/a5e059af7c16750f382df02ee50c55be2ee90575e42ff1790aa2067c7c890a16.riv";
-var d = r(502377),
-    i = r(799226);
-let n = {
-    Torbs_Multiply: { reducedMotion: "boolean" },
-    Shards_All_Nitro: { reducedMotion: "boolean" },
-    "Orb Mid Shine": { reducedMotion: "boolean" },
-    Torbs_Shine: { reducedMotion: "boolean" },
-};
+var i = o(845867),
+    d = o(799226);
+let s = {
+        Torbs_Multiply: { reducedMotion: "boolean" },
+        Shards_All_Nitro: { reducedMotion: "boolean" },
+        "Orb Mid Shine": { reducedMotion: "boolean" },
+        Torbs_Shine: { reducedMotion: "boolean" },
+    },
+    n = {
+        Torbs_Multiply: ["SM_Torbs_Multiply"],
+        Shards_All_Nitro: ["Shard_Burst"],
+        "Orb Mid Shine": ["State Machine 1"],
+        Torbs_Shine: ["SM_Torbs"],
+    };
 function c(e) {
-    let { artboard: o = "Torbs_Multiply", stateMachine: r, ...c } = e,
-        { status: s, buffer: l } = (0, i.CE)(a),
-        b = (0, i.m2)(a);
-    return s === i.BW.Loading
+    let { artboard: r = "Torbs_Multiply", stateMachine: o, ...c } = e,
+        { status: l, buffer: b } = (0, d.CE)(a),
+        u = (0, d.m2)(a);
+    return l === d.BW.Loading
         ? null
-        : (0, t.jsx)(d.w, {
-              ...(b ? { key: "override" } : {}),
-              buffer: l,
-              artboard: o,
-              stateMachine: r,
-              artboardProperties: n,
+        : (0, t.jsx)(i.w, {
+              ...(u ? { key: "override" } : {}),
+              buffer: b,
+              artboard: r,
+              stateMachine: o,
+              artboardProperties: s,
+              artboardStateMachines: n,
               ...c,
           });
 }

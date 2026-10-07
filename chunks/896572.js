@@ -1,24 +1,26 @@
-a.d(r, { i: () => s });
-var i = a(477900);
-a(582128);
-let t =
+t.d(a, { i: () => n });
+var i = t(477900);
+t(582128);
+let r =
     "https://cdn.discordapp.com/assets/content/087fb34ba986c4c0e0ed4973e0a2e7cc730de3a715dfed275d9533742484f3b4.riv";
-var d = a(502377),
-    c = a(799226);
-let o = { "Emoji Neg": {}, "Emoji Mid": {}, "Emoji Happy": {} };
-function s(e) {
-    let { artboard: r = "Emoji Neg", stateMachine: a, ...s } = e,
-        { status: p, buffer: n } = (0, c.CE)(t),
-        b = (0, c.m2)(t);
-    return p === c.BW.Loading
+var c = t(845867),
+    d = t(799226);
+let o = { "Emoji Neg": {}, "Emoji Mid": {}, "Emoji Happy": {} },
+    s = { "Emoji Neg": ["State Machine"], "Emoji Mid": ["State Machine"], "Emoji Happy": ["State Machine"] };
+function n(e) {
+    let { artboard: a = "Emoji Neg", stateMachine: t, ...n } = e,
+        { status: p, buffer: h } = (0, d.CE)(r),
+        b = (0, d.m2)(r);
+    return p === d.BW.Loading
         ? null
-        : (0, i.jsx)(d.w, {
+        : (0, i.jsx)(c.w, {
               ...(b ? { key: "override" } : {}),
-              buffer: n,
-              artboard: r,
-              stateMachine: a,
+              buffer: h,
+              artboard: a,
+              stateMachine: t,
               artboardProperties: o,
-              ...s,
+              artboardStateMachines: s,
+              ...n,
           });
 }
-s.riveSrc = t;
+n.riveSrc = r;

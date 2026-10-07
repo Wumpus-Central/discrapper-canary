@@ -36,7 +36,7 @@ function f(e) {
             ...P
         } = e,
         { reducedMotion: T } = n.useContext(s.C),
-        I = (0, r.R)(),
+        I = (0, r.Rs)(),
         D = (0, i.G9)().isWindowFocused?.() ?? I,
         O = n.useRef(null),
         U = (0, c.RJ)(k),

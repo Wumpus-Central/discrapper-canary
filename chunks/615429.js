@@ -1,24 +1,26 @@
-a.d(r, { R: () => o });
-var t = a(477900);
-a(582128);
-let d =
+t.d(e, { R: () => i });
+var r = t(477900);
+t(582128);
+let c =
     "https://cdn.discordapp.com/assets/content/905fd829443af468087dff86c879838d5fc2dba35ccdaa856f6481b1af1d5c74.riv";
-var c = a(502377),
-    s = a(799226);
-let n = { Wumpus: {}, Background: {} };
-function o(e) {
-    let { artboard: r = "Wumpus", stateMachine: a, ...o } = e,
-        { status: u, buffer: i } = (0, s.CE)(d),
-        p = (0, s.m2)(d);
-    return u === s.BW.Loading
+var d = t(845867),
+    n = t(799226);
+let s = { Wumpus: {}, Background: {} },
+    u = { Wumpus: ["Auto Generated State Machine"], Background: ["State Machine_ALT", "State Machine 1"] };
+function i(a) {
+    let { artboard: e = "Wumpus", stateMachine: t, ...i } = a,
+        { status: o, buffer: p } = (0, n.CE)(c),
+        b = (0, n.m2)(c);
+    return o === n.BW.Loading
         ? null
-        : (0, t.jsx)(c.w, {
-              ...(p ? { key: "override" } : {}),
-              buffer: i,
-              artboard: r,
-              stateMachine: a,
-              artboardProperties: n,
-              ...o,
+        : (0, r.jsx)(d.w, {
+              ...(b ? { key: "override" } : {}),
+              buffer: p,
+              artboard: e,
+              stateMachine: t,
+              artboardProperties: s,
+              artboardStateMachines: u,
+              ...i,
           });
 }
-o.riveSrc = d;
+i.riveSrc = c;

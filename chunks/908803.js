@@ -1,24 +1,26 @@
-r.d(a, { m: () => d });
-var c = r(477900);
-r(582128);
-let t =
+t.d(a, { m: () => d });
+var c = t(477900);
+t(582128);
+let r =
     "https://cdn.discordapp.com/assets/content/b02469d463aaa6b145fab2e70084146735951008acc87c49261038a2e5864994.riv";
-var o = r(502377),
-    i = r(799226);
-let s = { "Icon Dice": { fill: "color", muted: "boolean" } };
+var i = t(845867),
+    o = t(799226);
+let n = { "Icon Dice": { fill: "color", muted: "boolean" } },
+    s = { "Icon Dice": ["State Machine 1"] };
 function d(e) {
-    let { artboard: a = "Icon Dice", stateMachine: r, ...d } = e,
-        { status: n, buffer: p } = (0, i.CE)(t),
-        b = (0, i.m2)(t);
-    return n === i.BW.Loading
+    let { artboard: a = "Icon Dice", stateMachine: t, ...d } = e,
+        { status: p, buffer: b } = (0, o.CE)(r),
+        h = (0, o.m2)(r);
+    return p === o.BW.Loading
         ? null
-        : (0, c.jsx)(o.w, {
-              ...(b ? { key: "override" } : {}),
-              buffer: p,
+        : (0, c.jsx)(i.w, {
+              ...(h ? { key: "override" } : {}),
+              buffer: b,
               artboard: a,
-              stateMachine: r,
-              artboardProperties: s,
+              stateMachine: t,
+              artboardProperties: n,
+              artboardStateMachines: s,
               ...d,
           });
 }
-d.riveSrc = t;
+d.riveSrc = r;

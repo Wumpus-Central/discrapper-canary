@@ -1,34 +1,36 @@
-o.d(e, { U: () => c });
-var t = o(477900);
-o(582128);
-let n =
+t.d(r, { U: () => s });
+var a = t(477900);
+t(582128);
+let o =
     "https://cdn.discordapp.com/assets/content/068d7e953bf2dd5c6e2e63bb703245f76c75d991e7f3d14d3216f6e8175d7c79.riv";
-var a = o(502377),
-    d = o(799226);
-let i = {
-    "Tab Gradient Dawn": {
-        Color_GradientCenter: "color",
-        Color_InnerRing: "color",
-        Color_OuterRing: "color",
-        DimmerWidth: "number",
-        NitroVFX: "boolean",
-        posX: "number",
+var n = t(845867),
+    i = t(799226);
+let d = {
+        "Tab Gradient Dawn": {
+            Color_GradientCenter: "color",
+            Color_InnerRing: "color",
+            Color_OuterRing: "color",
+            DimmerWidth: "number",
+            NitroVFX: "boolean",
+            posX: "number",
+        },
+        "Nitro VFX": {},
     },
-    "Nitro VFX": {},
-};
-function c(r) {
-    let { artboard: e = "Tab Gradient Dawn", stateMachine: o, ...c } = r,
-        { status: s, buffer: b } = (0, d.CE)(n),
-        l = (0, d.m2)(n);
-    return s === d.BW.Loading
+    c = { "Tab Gradient Dawn": ["State Machine 1"], "Nitro VFX": ["State Machine 1"] };
+function s(e) {
+    let { artboard: r = "Tab Gradient Dawn", stateMachine: t, ...s } = e,
+        { status: b, buffer: l } = (0, i.CE)(o),
+        p = (0, i.m2)(o);
+    return b === i.BW.Loading
         ? null
-        : (0, t.jsx)(a.w, {
-              ...(l ? { key: "override" } : {}),
-              buffer: b,
-              artboard: e,
-              stateMachine: o,
-              artboardProperties: i,
-              ...c,
+        : (0, a.jsx)(n.w, {
+              ...(p ? { key: "override" } : {}),
+              buffer: l,
+              artboard: r,
+              stateMachine: t,
+              artboardProperties: d,
+              artboardStateMachines: c,
+              ...s,
           });
 }
-c.riveSrc = n;
+s.riveSrc = o;

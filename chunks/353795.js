@@ -69,7 +69,7 @@ function I(e) {
 function p(e) {
     let { aspectRatio: t = "16/9", ...n } = e,
         a = (0, u.G9)(),
-        l = (0, o.R)(),
+        l = (0, o.Rs)(),
         d = a.isWindowFocused?.() ?? l;
     return null == n
         ? null

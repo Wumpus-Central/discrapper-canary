@@ -1,24 +1,26 @@
-t.d(e, { M: () => o });
-var a = t(477900);
-t(582128);
+e.d(a, { M: () => b });
+var t = e(477900);
+e(582128);
 let c =
     "https://cdn.discordapp.com/assets/content/5ff46e6a38cbffb1450e062ca9e8dcabf8452f6890907b70dc0489fb3ec489de.riv";
-var d = t(502377),
-    s = t(799226);
-let i = { Artboard: {} };
-function o(r) {
-    let { artboard: e = "Artboard", stateMachine: t, ...o } = r,
-        { status: b, buffer: n } = (0, s.CE)(c),
-        p = (0, s.m2)(c);
-    return b === s.BW.Loading
+var d = e(845867),
+    s = e(799226);
+let i = { Artboard: {} },
+    o = { Artboard: ["stateMachine"] };
+function b(r) {
+    let { artboard: a = "Artboard", stateMachine: e, ...b } = r,
+        { status: n, buffer: p } = (0, s.CE)(c),
+        f = (0, s.m2)(c);
+    return n === s.BW.Loading
         ? null
-        : (0, a.jsx)(d.w, {
-              ...(p ? { key: "override" } : {}),
-              buffer: n,
-              artboard: e,
-              stateMachine: t,
+        : (0, t.jsx)(d.w, {
+              ...(f ? { key: "override" } : {}),
+              buffer: p,
+              artboard: a,
+              stateMachine: e,
               artboardProperties: i,
-              ...o,
+              artboardStateMachines: o,
+              ...b,
           });
 }
-o.riveSrc = c;
+b.riveSrc = c;
