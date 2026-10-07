@@ -82,26 +82,26 @@ function eg(e, t) {
         sourceQuestContent: en.uF.QUEST_HOME_HERO,
     });
 }
-let ev = i.forwardRef(function (e, t) {
-    let { adContentId: n, topContent: s, title: l, subtitle: a, buttons: u, background: c, className: d } = e,
+let ev = function (e) {
+    let { adContentId: t, topContent: n, title: s, subtitle: l, buttons: a, background: u, className: c, ref: d } = e,
         [m, E] = i.useState("display-lg"),
         h = i.useCallback((e) => {
             E(e.contentRect.width < 500 ? "display-md" : "display-lg");
         }, []),
         f = (0, eh.w)(h, [], { fireOnMount: !0 }),
-        x = i.useCallback(() => eg(n, ef.HAw.QUEST_HOVER), [n]),
-        g = i.useCallback(() => eg(n, ef.HAw.QUEST_HOVER_OFF), [n]);
+        x = i.useCallback(() => eg(t, ef.HAw.QUEST_HOVER), [t]),
+        g = i.useCallback(() => eg(t, ef.HAw.QUEST_HOVER_OFF), [t]);
     return (0, r.jsx)(em.N, {
         theme: ef.NJ8.ONYX,
         disableAdaptiveTheme: !0,
         children: (e) =>
             (0, r.jsx)("div", {
                 "data-testid": "quest-home-hero-banner",
-                className: o()(ex.iE, e, d),
+                className: o()(ex.iE, e, c),
                 onMouseEnter: x,
                 onMouseLeave: g,
                 ref: (e) => {
-                    ((f.current = e), "function" == typeof t ? t(e) : null != t && (t.current = e));
+                    ((f.current = e), "function" == typeof d ? d(e) : null != d && (d.current = e));
                 },
                 children: (0, r.jsxs)("div", {
                     className: ex.FG,
@@ -109,9 +109,9 @@ let ev = i.forwardRef(function (e, t) {
                         (0, r.jsxs)(j.B, {
                             className: ex.Qs,
                             direction: "vertical",
-                            justify: null != s ? "space-between" : "end",
+                            justify: null != n ? "space-between" : "end",
                             children: [
-                                s,
+                                n,
                                 (0, r.jsxs)(j.B, {
                                     className: ex.yp,
                                     gap: 16,
@@ -123,27 +123,27 @@ let ev = i.forwardRef(function (e, t) {
                                                     color: "text-strong",
                                                     variant: m,
                                                     className: ex.DD,
-                                                    children: l,
+                                                    children: s,
                                                 }),
                                                 (0, r.jsx)(X.E, {
                                                     color: "text-strong",
                                                     variant: "text-md/normal",
                                                     className: ex.VA,
-                                                    children: a,
+                                                    children: l,
                                                 }),
                                             ],
                                         }),
-                                        u,
+                                        a,
                                     ],
                                 }),
                             ],
                         }),
-                        c,
+                        u,
                     ],
                 }),
             }),
     });
-});
+};
 var ej = n(339889);
 (n(134528), n(947204));
 var eC = n(749401),
