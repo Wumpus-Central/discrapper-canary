@@ -3562,41 +3562,42 @@ function rn(e) {
                     null == t || null == g || null == f || null == h
                         ? []
                         : (function (e, t, l) {
-                              let { bot: n, currentUser: a, viewer: r, member: i } = t,
-                                  s = [];
-                              function u(e, t) {
+                              var n, a, r;
+                              let { bot: i, currentUser: s, viewer: u, member: o } = t,
+                                  d = [];
+                              function c(e, t) {
                                   let {
                                           interactionName: l,
                                           messageType: n,
-                                          menu: r,
+                                          menu: a,
                                       } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-                                      i = String(s.length + 1),
-                                      u = (0, ak.rh)({
+                                      r = String(d.length + 1),
+                                      i = (0, ak.rh)({
                                           ...(0, aw.Ay)({
                                               channelId: aP.id,
                                               content: e,
                                               author: t,
                                               type: n ?? eb.lAJ.DEFAULT,
                                           }),
-                                          id: i,
+                                          id: r,
                                           state: eb.cmJ.SENT,
                                           ...(null != l
                                               ? {
                                                     interaction: {
-                                                        id: i,
+                                                        id: r,
                                                         name: l,
                                                         type: ab.G.APPLICATION_COMMAND,
-                                                        user: (0, aw.Vi)(a),
+                                                        user: (0, aw.Vi)(s),
                                                     },
                                                 }
                                               : {}),
                                       });
-                                  s.push({ key: i, record: u, isCommandReply: null != l, menu: r });
+                                  d.push({ key: r, record: i, isCommandReply: null != l, menu: a });
                               }
                               for (let t of e)
                                   switch (t.kind) {
                                       case "command":
-                                          u(t.bot, n, {
+                                          c(t.bot, i, {
                                               interactionName: t.user.trim().replace(/^\//, "").split(/\s+/)[0] ?? "",
                                               messageType: eb.lAJ.CHAT_INPUT_COMMAND,
                                           });
@@ -3604,21 +3605,23 @@ function rn(e) {
                                       case "user_command":
                                       case "message_command": {
                                           let e = "user_command" === t.kind;
-                                          (u(e ? l.memberMessage : l.targetMessage, e ? i : a, {
+                                          (c(e ? l.memberMessage : l.targetMessage, e ? o : s, {
                                               menu: { target: e ? "user" : "message", commandName: t.user },
                                           }),
-                                              u(t.bot, n, {
+                                              c(t.bot, i, {
                                                   interactionName: t.user,
                                                   messageType: eb.lAJ.CONTEXT_MENU_COMMAND,
                                               }));
                                           break;
                                       }
                                       case "message":
-                                          var o, d;
-                                          (u(((o = t.user), o.trim().replace(aL, `<@${n.id}>`)), a),
-                                              u(((d = t.bot), d.includes("<@") ? d : `<@${r.id}> ${d}`), n));
+                                          (c(((n = t.user), n.trim().replace(aL, `<@${i.id}>`)), s),
+                                              c(((a = t.bot), a.includes("<@") ? a : `<@${u.id}> ${a}`), i));
+                                          break;
+                                      case "event":
+                                          c(((r = t.bot), r.split(`@${o.username}`).join(`<@${o.id}>`)), i);
                                   }
-                              return s;
+                              return d;
                           })(
                               p,
                               { bot: f, currentUser: t, viewer: g, member: h },
@@ -3865,16 +3868,48 @@ function rx(e) {
                 if (null != e.bot) return e.bot.interaction;
                 let t = e.commands.some(aT),
                     l = e.privileged_intents?.includes("MESSAGE_CONTENT") === !0;
-                return t && l ? "both" : t ? "commands" : l ? "messages" : null;
+                return t && l
+                    ? "both"
+                    : t
+                      ? "commands"
+                      : l
+                        ? "messages"
+                        : !0 === e.is_activity || null != e.automod || null != e.widget_config
+                          ? null
+                          : "events";
             })(a)),
             (l = i.useMemo(
                 () =>
                     null == t
                         ? []
                         : (function (e, t, l) {
-                              let n = { kind: "message", user: l.message, bot: l.reply };
-                              if ("messages" === t && (e.bot?.example_exchanges?.length ?? 0) === 0) return [n];
-                              let a = e.commands.filter(aT).map((e) =>
+                              let n = e.bot?.example_exchanges ?? [],
+                                  a = { kind: "event", user: "", bot: l.event };
+                              if ("events" === t) {
+                                  let e = n.slice(0, 3).map((e) => {
+                                      let { bot: t } = e;
+                                      return "" !== t.trim() ? { ...a, bot: t } : a;
+                                  });
+                                  return e.length > 0 ? e : [a];
+                              }
+                              let r = n.flatMap((e) => {
+                                      let { user: l, bot: n } = e;
+                                      return "" === l.trim()
+                                          ? []
+                                          : [
+                                                {
+                                                    kind:
+                                                        "messages" !== t && l.trimStart().startsWith("/")
+                                                            ? "command"
+                                                            : "message",
+                                                    user: l,
+                                                    bot: n,
+                                                },
+                                            ];
+                                  }),
+                                  i = { kind: "message", user: l.message, bot: l.reply };
+                              if ("messages" === t && 0 === r.length) return [i];
+                              let s = e.commands.filter(aT).map((e) =>
                                       (function (e, t) {
                                           let l = e.description?.trim() ?? "",
                                               n = "" !== l ? l : t.reply;
@@ -3888,27 +3923,13 @@ function rx(e) {
                                           }
                                       })(e, l),
                                   ),
-                                  r = "messages" === t ? [] : a.filter(aM),
-                                  i = e.bot?.example_exchanges ?? [];
-                              return i.length > 0
-                                  ? a_(
-                                        [
-                                            ...i.map((e) => ({
-                                                kind:
-                                                    "messages" !== t && e.user.trimStart().startsWith("/")
-                                                        ? "command"
-                                                        : "message",
-                                                user: e.user,
-                                                bot: e.bot,
-                                            })),
-                                            ...r,
-                                        ],
-                                        !0,
-                                    )
-                                  : a_("both" === t ? [...a, n] : a, !1);
+                                  u = "messages" === t ? [] : s.filter(aM),
+                                  o = r.length > 0 ? a_([...r, ...u], !0) : a_("both" === t ? [...s, i] : s, !1);
+                              return o.length > 0 ? o : [a];
                           })(a, t, {
                               message: ec.intl.string(ed.default.J7qggf),
                               reply: ec.intl.string(ed.default.nqYtiy),
+                              event: ec.intl.string(ed.default["05lU9W"]),
                           }),
                 [a, t],
             )),
@@ -4035,7 +4056,9 @@ function rx(e) {
                           ? [...l, "activity"]
                           : null == t
                             ? [...l, "bot"]
-                            : ("messages" !== t && l.push("commands"), "commands" !== t && l.push("chat_bot"), l);
+                            : (("commands" === t || "both" === t) && l.push("commands"),
+                              "commands" !== t && l.push("chat_bot"),
+                              l);
                   })(a, d),
               }),
         superseded: h,
