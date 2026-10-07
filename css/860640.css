@@ -53,10 +53,13 @@
     padding: 4px 8px
 }
 
-.echoPill_effefc:active,
-.echoPill_effefc:hover {
+.echoPill_effefc:hover:not(.echoPillDisabled_effefc):not(.echoPillActive_effefc) {
     background: var(--control-overlay-secondary-background-hover);
     border: 1px solid var(--control-overlay-secondary-border-hover)
+}
+
+.full-motion .echoPill_effefc:active:not(.echoPillDisabled_effefc) {
+    transform: translateY(2px)
 }
 
 .echoPill_effefc.echoPillActive_effefc {
@@ -124,4 +127,4 @@
     mask-type: alpha
 }
 
-/*# sourceMappingURL=860640.84ed64a8eaa3cc8e.css.map*/
+/*# sourceMappingURL=860640.d28a640962d9e631.css.map*/
