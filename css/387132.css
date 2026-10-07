@@ -51,8 +51,9 @@
 }
 
 @media (max-height:550px) and (pointer:coarse),
-(max-width:485px) and (pointer:coarse) {
+(max-width:485px) {
     .root_f4fc8f:has(.iframe_f4fc8f) {
+        min-height: 0;
         min-width: 100%
     }
 
@@ -270,4 +271,4 @@
     background-image: url(/assets/49e200b52c0a66ab.svg)
 }
 
-/*# sourceMappingURL=387132.874ab73a6e42a67e.css.map*/
+/*# sourceMappingURL=387132.9374eac38a4ce3fd.css.map*/

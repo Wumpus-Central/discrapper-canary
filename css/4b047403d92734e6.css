@@ -101,7 +101,7 @@
 }
 
 @media (max-height:550px) and (pointer:coarse),
-(max-width:485px) and (pointer:coarse) {
+(max-width:485px) {
     [data-mana-component=modal]:has([data-expressive-v2-graphic]) {
         max-height: none
     }
@@ -120,4 +120,4 @@
     }
 }
 
-/*# sourceMappingURL=4c071e155fd1b024.css.map*/
+/*# sourceMappingURL=4b047403d92734e6.css.map*/
