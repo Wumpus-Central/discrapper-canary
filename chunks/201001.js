@@ -5,7 +5,7 @@ var i = n(477900),
     s = n.n(a),
     l = n(515029),
     o = n.n(l),
-    d = n(559106),
+    d = n(330573),
     c = n(448539),
     u = n(154327),
     _ = n(715828),
@@ -63,21 +63,22 @@ function m(e, t, n, a) {
                 innerAriaOrientation: Q,
                 innerClassName: J,
                 innerTag: ee = "div",
-                ref: et,
-                ...en
+                disableFocusRingScope: et = !1,
+                ref: en,
+                ...ei
             } = a,
-            ei = r.useRef(null),
             er = r.useRef(null),
-            [ea, es] = r.useState(!1),
-            { scrollerRef: el, scrollerState: eo, getScrollerState: ed } = (0, u.A)(),
+            ea = r.useRef(null),
+            [es, el] = r.useState(!1),
+            { scrollerRef: eo, scrollerState: ed, getScrollerState: ec } = (0, u.A)(),
             {
-                spacerTop: ec,
-                totalHeight: eu,
-                items: e_,
-                isSidebarVisible: eE,
-                listComputer: eA,
-                forceUpdateOnChunkChange: eh,
-                anchor: ef,
+                spacerTop: eu,
+                totalHeight: e_,
+                items: eE,
+                isSidebarVisible: eA,
+                listComputer: eh,
+                forceUpdateOnChunkChange: ef,
+                anchor: eI,
             } = (function (e) {
                 let {
                         sections: t,
@@ -150,32 +151,32 @@ function m(e, t, n, a) {
                 paddingTop: V,
                 paddingBottom: H,
                 chunkSize: K,
-                getScrollerState: ed,
+                getScrollerState: ec,
                 getAnchorId: B,
             }),
-            eI = (0, f.A)(el),
-            ep = r.useRef(O),
-            eT = r.useRef(R);
+            ep = (0, f.A)(eo),
+            eT = r.useRef(O),
+            em = r.useRef(R);
         r.useLayoutEffect(() => {
-            ((ep.current = O), (eT.current = R));
+            ((eT.current = O), (em.current = R));
         });
-        let em = r.useCallback(
+        let eg = r.useCallback(
                 function () {
                     let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : 2;
-                    (e > eo.current.dirty && (eo.current.dirty = e), 2 === e && ep.current?.(), eh(e));
+                    (e > ed.current.dirty && (ed.current.dirty = e), 2 === e && eT.current?.(), ef(e));
                 },
-                [eh, eo],
+                [ef, ed],
             ),
-            eg = r.useCallback(() => em(), [em]);
-        ((0, c.A)({ ref: el, onUpdate: eg, key: "container", resizeObserver: m, listenerMap: l }),
-            (0, c.A)({ ref: er, onUpdate: () => eT.current?.(), key: "content", resizeObserver: m, listenerMap: l }));
-        let eS =
-                ((g = r.useRef(e_)),
+            eS = r.useCallback(() => eg(), [eg]);
+        ((0, c.A)({ ref: eo, onUpdate: eS, key: "container", resizeObserver: m, listenerMap: l }),
+            (0, c.A)({ ref: ea, onUpdate: () => em.current?.(), key: "content", resizeObserver: m, listenerMap: l }));
+        let eN =
+                ((g = r.useRef(eE)),
                 r.useEffect(() => {
-                    g.current = e_;
-                }, [e_]),
+                    g.current = eE;
+                }, [eE]),
                 r.useCallback(() => g.current, [])),
-            eN =
+            eC =
                 ((S = r.useRef(L)),
                 r.useEffect(() => {
                     S.current = L;
@@ -191,12 +192,12 @@ function m(e, t, n, a) {
                     return [0, 0];
                 }, []));
         r.useImperativeHandle(
-            et,
+            en,
             () => ({
-                getScrollerNode: () => el.current,
-                getScrollerState: ed,
-                getItems: eS,
-                getSectionRowFromIndex: eN,
+                getScrollerNode: () => eo.current,
+                getScrollerState: ec,
+                getItems: eN,
+                getSectionRowFromIndex: eC,
                 ...(function (e, t, n, i) {
                     let r = (0, I.A)(e, t, i);
                     function a(e, t) {
@@ -219,25 +220,25 @@ function m(e, t, n, a) {
                             r.scrollIntoViewRect({ start: o, end: o + d, padding: l, animate: i, callback: s });
                         },
                     };
-                })(el, ed, eA, eI),
+                })(eo, ec, eh, ep),
             }),
-            [el, ed, eN, eS, eA, eI],
+            [eo, ec, eC, eN, eh, ep],
         );
-        let eC = r.useCallback(
+        let eO = r.useCallback(
             (e) => {
-                (em(1),
-                    null == ei.current ? es(!0) : clearTimeout(ei.current),
-                    (ei.current = setTimeout(() => {
-                        ((ei.current = null), es(!1));
+                (eg(1),
+                    null == er.current ? el(!0) : clearTimeout(er.current),
+                    (er.current = setTimeout(() => {
+                        ((er.current = null), el(!1));
                     }, 200)),
                     null != C && C(e));
             },
-            [C, em],
+            [C, eg],
         );
         return (
             r.useLayoutEffect(() => {
-                2 !== eo.current.dirty && (eo.current.dirty = 2);
-            }, [P, U, w, F, eu, ec, eo]),
+                2 !== ed.current.dirty && (ed.current.dirty = 2);
+            }, [P, U, w, F, e_, eu, ed]),
             !(function (e) {
                 let {
                     scrollerRef: t,
@@ -272,24 +273,24 @@ function m(e, t, n, a) {
                         (l(n.row) || l(n.row - 1) || l(n.row + 1));
                 }, [l]);
             })({
-                scrollerRef: el,
-                anchor: ef,
-                getScrollerState: ed,
-                listComputer: eA,
+                scrollerRef: eo,
+                anchor: eI,
+                getScrollerState: ec,
+                listComputer: eh,
                 getAnchorId: B,
-                totalHeight: eu,
+                totalHeight: e_,
             }),
             (0, i.jsxs)("div", {
-                ref: el,
-                onScroll: eC,
+                ref: eo,
+                onScroll: eO,
                 className: s()(N, !1 === j ? void 0 : "stable" === j ? T.x2 : T.GV, {
                     [e]: !0,
                     [t]: W,
                     [n]: Y,
-                    [T.qw]: ea,
+                    [T.qw]: es,
                 }),
                 style: (0, p.Ay)($),
-                ...en,
+                ...ei,
                 children: [
                     r.useMemo(
                         () =>
@@ -299,11 +300,12 @@ function m(e, t, n, a) {
                                 "aria-label": Z,
                                 "aria-multiselectable": q,
                                 "aria-orientation": Q,
-                                style: { height: eu },
+                                style: { height: e_ },
                                 className: s()(T.Qs, J),
-                                ref: er,
-                                children: (0, i.jsx)(d.xp, {
-                                    containerRef: er,
+                                ref: ea,
+                                children: (0, i.jsx)(d.t, {
+                                    disableFocusRingScope: et,
+                                    containerRef: ea,
                                     children: (function (e) {
                                         let {
                                                 renderSection: t,
@@ -353,18 +355,18 @@ function m(e, t, n, a) {
                                             o()(_)
                                         );
                                     })({
-                                        items: e_,
+                                        items: eE,
                                         renderListHeader: x,
                                         stickyListHeader: k,
                                         renderSection: P,
                                         renderRow: U,
                                         renderFooter: w,
                                         wrapSection: F,
-                                        spacerTop: ec,
+                                        spacerTop: eu,
                                     }),
                                 }),
                             }),
-                        [ee, z, X, Z, q, Q, eu, J, e_, x, k, P, U, w, F, ec],
+                        [ee, z, X, Z, q, Q, e_, J, eE, x, k, P, U, w, F, eu, et],
                     ),
                     r.useMemo(
                         () =>
@@ -372,12 +374,12 @@ function m(e, t, n, a) {
                                 let { renderSidebar: t, sidebarHeight: n, isSidebarVisible: i, isListVisible: r } = e;
                                 return null == n || null == t ? null : t(r, i);
                             })({
-                                isSidebarVisible: eE,
+                                isSidebarVisible: eA,
                                 renderSidebar: G,
                                 sidebarHeight: b,
-                                isListVisible: 0 !== e_.length,
+                                isListVisible: 0 !== eE.length,
                             }),
-                        [eE, G, b, e_.length],
+                        [eA, G, b, eE.length],
                     ),
                 ],
             })
