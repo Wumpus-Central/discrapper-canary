@@ -5767,6 +5767,22 @@
     }
   },
   {
+    "name": "2026-10-desktop-tti-perf",
+    "kind": "user",
+    "defaultConfig": {
+      "legacyOverlayWorker": false
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "legacyOverlayWorker": true
+      }
+    }
+  },
+  {
     "name": "2026-10-gift-cards-in-app-marketing",
     "kind": "user",
     "defaultConfig": {

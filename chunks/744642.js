@@ -1,4 +1,4 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => f });
 var i = n(439372),
     r = n(710195),
     a = n(723702),
@@ -16,12 +16,23 @@ let l = (0, s.mj)({
         variations: { 1: { enabled: !0 } },
     }),
     d = (0, s.mj)({
+        name: "2026-10-desktop-tti-perf",
+        kind: "user",
+        defaultConfig: { legacyOverlayWorker: !1 },
+        variations: { 0: { legacyOverlayWorker: !1 }, 1: { legacyOverlayWorker: !0 } },
+    }),
+    c = (0, s.mj)({
         name: "2026-06-desktop-tti-splash-asset",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    c = [
+    u = [
+        {
+            settingKey: "DESKTOP_TTI_LEGACY_OVERLAY_WORKER",
+            defaultValue: !1,
+            readValue: (e) => (0, a.isWindows)() && d.getConfig({ location: e }).legacyOverlayWorker,
+        },
         {
             settingKey: "DESKTOP_TTI_HTTP_CDT",
             defaultValue: !1,
@@ -37,7 +48,7 @@ let l = (0, s.mj)({
             readValue: (e) =>
                 (function (e) {
                     let { location: t } = e;
-                    return d.getConfig({ location: t });
+                    return c.getConfig({ location: t });
                 })({ location: e }).enabled,
         },
         {
@@ -50,32 +61,32 @@ let l = (0, s.mj)({
                 })({ location: e }).enabled,
         },
     ],
-    u = !1,
-    _ = new Map();
-async function E(e, t) {
+    _ = !1,
+    E = new Map();
+async function A(e, t) {
     if (!(0, a.isDesktop)() || window.DiscordNative?.settings?.set == null) return;
     let n = e.readValue(t);
     (n !== (await window.DiscordNative.settings.get(e.settingKey, e.defaultValue)) &&
         (await window.DiscordNative.settings.set(e.settingKey, n)),
-        _.set(e.settingKey, n));
+        E.set(e.settingKey, n));
 }
-class A extends i.A {
+class h extends i.A {
     stores = new Map().set(r.A, () => {
-        if (u)
-            for (let e of c) {
+        if (_)
+            for (let e of u) {
                 let t = e.readValue("experimentStoreUpdate");
-                _.get(e.settingKey) !== t && E(e, "experimentStoreUpdate");
+                E.get(e.settingKey) !== t && A(e, "experimentStoreUpdate");
             }
     });
     actions = {
         POST_CONNECTION_OPEN: async () => {
-            u ||
+            _ ||
                 window.DiscordNative?.settings?.set == null ||
-                ((0, a.isDesktop)() && ((u = !0), await Promise.all(c.map((e) => E(e, "postConnectionOpen")))));
+                ((0, a.isDesktop)() && ((_ = !0), await Promise.all(u.map((e) => A(e, "postConnectionOpen")))));
         },
         LOGOUT: () => {
-            ((u = !1), _.clear());
+            ((_ = !1), E.clear());
         },
     };
 }
-let h = new A();
+let f = new h();
