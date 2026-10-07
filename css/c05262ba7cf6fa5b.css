@@ -140,6 +140,10 @@
     min-width: 0
 }
 
+.platform-win .sidebar_e29cd7 {
+    height: calc(100vh - var(--custom-app-top-bar-height))
+}
+
 .container_e29cd7 {
     display: flex;
     flex-direction: column;
@@ -785,4 +789,4 @@
     margin-inline-start: 4px
 }
 
-/*# sourceMappingURL=2c6ac7853638338f.css.map*/
+/*# sourceMappingURL=c05262ba7cf6fa5b.css.map*/
