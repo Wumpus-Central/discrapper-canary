@@ -1,37 +1,43 @@
-n.d(t, { A: () => f });
+n.d(t, { A: () => p });
 var i = n(439372),
     r = n(710195),
     a = n(723702),
     s = n(945810);
 let l = (0, s.mj)({
-        name: "2026-09-desktop-tti-shader-cache",
+        name: "2026-09-windows-native-premap",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
     o = (0, s.mj)({
-        name: "2026-06-desktop-tti-http-cdt",
+        name: "2026-09-desktop-tti-shader-cache",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
     d = (0, s.mj)({
+        name: "2026-06-desktop-tti-http-cdt",
+        kind: "user",
+        defaultConfig: { enabled: !1 },
+        variations: { 1: { enabled: !0 } },
+    }),
+    c = (0, s.mj)({
         name: "2026-10-desktop-tti-perf",
         kind: "user",
         defaultConfig: { legacyOverlayWorker: !1 },
         variations: { 0: { legacyOverlayWorker: !1 }, 1: { legacyOverlayWorker: !0 } },
     }),
-    c = (0, s.mj)({
+    u = (0, s.mj)({
         name: "2026-06-desktop-tti-splash-asset",
         kind: "user",
         defaultConfig: { enabled: !1 },
         variations: { 1: { enabled: !0 } },
     }),
-    u = [
+    _ = [
         {
             settingKey: "DESKTOP_TTI_LEGACY_OVERLAY_WORKER",
             defaultValue: !1,
-            readValue: (e) => (0, a.isWindows)() && d.getConfig({ location: e }).legacyOverlayWorker,
+            readValue: (e) => (0, a.isWindows)() && c.getConfig({ location: e }).legacyOverlayWorker,
         },
         {
             settingKey: "DESKTOP_TTI_HTTP_CDT",
@@ -39,7 +45,7 @@ let l = (0, s.mj)({
             readValue: (e) =>
                 (function (e) {
                     let { location: t } = e;
-                    return o.getConfig({ location: t });
+                    return d.getConfig({ location: t });
                 })({ location: e }).enabled,
         },
         {
@@ -48,7 +54,7 @@ let l = (0, s.mj)({
             readValue: (e) =>
                 (function (e) {
                     let { location: t } = e;
-                    return c.getConfig({ location: t });
+                    return u.getConfig({ location: t });
                 })({ location: e }).enabled,
         },
         {
@@ -57,36 +63,54 @@ let l = (0, s.mj)({
             readValue: (e) =>
                 (function (e) {
                     let { location: t } = e;
-                    return l.getConfig({ location: t });
+                    return o.getConfig({ location: t });
                 })({ location: e }).enabled,
         },
+        {
+            settingKey: "DESKTOP_NATIVE_PREMAP",
+            defaultValue: !1,
+            readValue: (e) =>
+                (function (e) {
+                    let { location: t } = e;
+                    return l.getConfig({ location: t });
+                })({ location: e }).enabled,
+            removeWhenDefault: !0,
+        },
     ],
-    _ = !1,
-    E = new Map();
-async function A(e, t) {
+    E = !1,
+    A = new Map();
+async function h(e) {
+    let t = window.DiscordNative?.settings;
+    t?.set == null || (null != (await t.get(e.settingKey, null)) && (await t.set(e.settingKey, null)));
+}
+async function f(e, t) {
     if (!(0, a.isDesktop)() || window.DiscordNative?.settings?.set == null) return;
     let n = e.readValue(t);
-    (n !== (await window.DiscordNative.settings.get(e.settingKey, e.defaultValue)) &&
-        (await window.DiscordNative.settings.set(e.settingKey, n)),
-        E.set(e.settingKey, n));
+    (A.set(e.settingKey, n), !0 === e.removeWhenDefault && n === e.defaultValue)
+        ? await h(e)
+        : n !== (await window.DiscordNative.settings.get(e.settingKey, e.defaultValue)) &&
+          (await window.DiscordNative.settings.set(e.settingKey, n));
 }
-class h extends i.A {
+class I extends i.A {
     stores = new Map().set(r.A, () => {
-        if (_)
-            for (let e of u) {
+        if (E)
+            for (let e of _) {
                 let t = e.readValue("experimentStoreUpdate");
-                E.get(e.settingKey) !== t && A(e, "experimentStoreUpdate");
+                A.get(e.settingKey) !== t && f(e, "experimentStoreUpdate");
             }
     });
     actions = {
         POST_CONNECTION_OPEN: async () => {
-            _ ||
+            E ||
                 window.DiscordNative?.settings?.set == null ||
-                ((0, a.isDesktop)() && ((_ = !0), await Promise.all(u.map((e) => A(e, "postConnectionOpen")))));
+                ((0, a.isDesktop)() && ((E = !0), await Promise.all(_.map((e) => f(e, "postConnectionOpen")))));
         },
-        LOGOUT: () => {
-            ((_ = !1), E.clear());
+        LOGOUT: async () => {
+            ((E = !1),
+                A.clear(),
+                (0, a.isDesktop)() &&
+                    (await Promise.all(_.filter((e) => !0 === e.removeWhenDefault).map((e) => h(e)))));
         },
     };
 }
-let f = new h();
+let p = new I();
