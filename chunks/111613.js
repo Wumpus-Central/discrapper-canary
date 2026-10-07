@@ -9,12 +9,12 @@ function s(e) {
     let o = t.map(i).sort().join(":"),
         d = n.map(i).sort().join(":");
     if (o !== d) return (a.warn("Object IDs in the old ordering and the new ordering are not the same.", o, d), []);
-    let c = {};
-    for (let e = 0; e < l; e++) c[i(t[e])] = r(t[e]);
+    let c = new Map();
+    for (let e = 0; e < l; e++) c.set(i(t[e]), r(t[e]));
     let u = [];
     for (let e = 0; e < l; e++) {
         let t = i(n[e]),
-            a = c[t],
+            a = c.get(t),
             o = s ? e : l - 1 - e;
         (a !== o || r(n[e]) !== o) && u.push({ id: t, position: o });
     }

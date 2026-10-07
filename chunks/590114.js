@@ -719,11 +719,11 @@ var tS = n(435558),
     tY = n(998304),
     tJ = n(281370);
 class tQ extends l.PureComponent {
-    dataChangedAt;
-    fillColor;
-    maxValue;
+    dataChangedAt = 0;
+    fillColor = "";
+    maxValue = 0;
     canvas = l.createRef();
-    animationFrameRequestId;
+    animationFrameRequestId = 0;
     static defaultProps = { animate: !0 };
     onDataUpdate(t, e) {
         let { maxValue: n, data: i, animate: l } = this.props,
@@ -749,50 +749,47 @@ class tQ extends l.PureComponent {
     }
     updateAnimation = (t) => {
         let e,
-            n,
-            i = this.canvas.current;
-        if (null == i) return;
+            n = this.canvas.current;
+        if (null == n) return;
         let {
-            data: l,
-            updateInterval: s,
-            color: a,
-            numUpdatesToShow: r,
-            lineWidth: o,
-            animate: c,
-            gradientStopColor: d,
+            data: i,
+            updateInterval: l,
+            color: s,
+            numUpdatesToShow: a,
+            lineWidth: r,
+            animate: o,
+            gradientStopColor: c,
         } = this.props;
-        if (l.length < 2) return;
-        let h = Math.max(Math.min((t - this.dataChangedAt) / s, 1), 0),
-            u = i.getContext("2d"),
-            p = this.maxValue;
-        ((u.strokeStyle = a), (u.lineWidth = o));
-        let A = i.height - u.lineWidth,
-            m = u.createLinearGradient(0, 0, 0, A);
-        if (null != d) m.addColorStop(0, d);
+        if (i.length < 2) return;
+        let d = Math.max(Math.min((t - this.dataChangedAt) / l, 1), 0),
+            h = n.getContext("2d"),
+            u = this.maxValue;
+        ((h.strokeStyle = s), (h.lineWidth = r));
+        let p = n.height - h.lineWidth,
+            A = h.createLinearGradient(0, 0, 0, p);
+        if (null != c) A.addColorStop(0, c);
         else {
-            let { r: t, g: e, b: n } = tY.E2(a);
-            m.addColorStop(0, `rgba(${t}, ${e}, ${n}, 0)`);
+            let { r: t, g: e, b: n } = tY.E2(s);
+            A.addColorStop(0, `rgba(${t}, ${e}, ${n}, 0)`);
         }
-        (m.addColorStop(1, this.fillColor), (u.fillStyle = m));
-        let g = l.length >= r ? r : l.length;
-        (u.setTransform(1, 0, 0, -1, 0, i.height),
-            u.clearRect(0, 0, i.width, i.height),
-            u.translate(0, 0.5 * u.lineWidth));
-        let x = Math.floor(i.width / (g - 3)),
-            f = 0.5 * x;
-        (u.translate(x - x * h, 0), u.beginPath());
-        let y = -x;
-        (l.forEach((t, i) => {
-            ((e = { x: y, y: (A * t) / p }),
-                0 === i ? u.moveTo(e.x, e.y) : u.bezierCurveTo(n.x + f, n.y, e.x - f, e.y, e.x, e.y),
-                (n = e),
-                (y += x));
+        (A.addColorStop(1, this.fillColor), (h.fillStyle = A));
+        let m = i.length >= a ? a : i.length;
+        (h.setTransform(1, 0, 0, -1, 0, n.height),
+            h.clearRect(0, 0, n.width, n.height),
+            h.translate(0, 0.5 * h.lineWidth));
+        let g = Math.floor(n.width / (m - 3)),
+            x = 0.5 * g;
+        (h.translate(g - g * d, 0), h.beginPath());
+        let f = -g;
+        (i.forEach((t) => {
+            let n = { x: f, y: (p * t) / u };
+            (null == e ? h.moveTo(n.x, n.y) : h.bezierCurveTo(e.x + x, e.y, n.x - x, n.y, n.x, n.y), (e = n), (f += g));
         }),
-            u.stroke(),
-            u.lineTo(y - x, 0),
-            u.lineTo(0, 0),
-            u.fill(),
-            c && h < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation)));
+            h.stroke(),
+            h.lineTo(f - g, 0),
+            h.lineTo(0, 0),
+            h.fill(),
+            o && d < 1 && (this.animationFrameRequestId = window.requestAnimationFrame(this.updateAnimation)));
     };
     render() {
         let { className: t, pixelWidth: e, pixelHeight: n } = this.props;
@@ -854,14 +851,14 @@ function t0(t) {
     let { className: e, children: n, onContextMenu: l, item: s } = t;
     return (0, i.jsx)("div", { className: e, onContextMenu: (t) => l(t, s), children: n });
 }
-let t1 = [tj.A.unsafe_rawColors.BLUE_345.css, tj.A.colors.INTERACTIVE_TEXT_DEFAULT.css],
-    t4 = (t) => {
-        let { tooltip: e, onClick: n, icon: l } = t;
-        return (0, i.jsx)(X.m, {
-            text: e,
-            children: (0, i.jsx)(t_.K, { "aria-label": e, variant: "secondary", icon: l, onClick: n, size: "sm" }),
-        });
-    };
+let t1 = [tj.A.unsafe_rawColors.BLUE_345.css, tj.A.colors.INTERACTIVE_TEXT_DEFAULT.css];
+function t4(t) {
+    let { tooltip: e, onClick: n, icon: l } = t;
+    return (0, i.jsx)(X.m, {
+        text: e,
+        children: (0, i.jsx)(t_.K, { "aria-label": e, variant: "secondary", icon: l, onClick: n, size: "sm" }),
+    });
+}
 function t5(t, e) {
     switch (e) {
         case w.OQC.POST_INSTALL_SCRIPTS:
@@ -908,7 +905,7 @@ function t3(t, e, n, i, l) {
         { unit: r, time: o } = (0, tt.$l)(null != t ? t / 60 : null, a);
     if (null != s && null != r) {
         let t = s[r];
-        return null != t ? t(n, i, l, o) : null;
+        return null != t ? t(n, i, l, o ?? 0) : null;
     }
     return null;
 }
@@ -1120,72 +1117,72 @@ function t9() {
 function t8() {
     return (0, i.jsx)(t4, { icon: tD.PauseIcon, tooltip: v.intl.string(v.t.TVAd5J), onClick: () => tO.v7() });
 }
-let et = (t) => {
-        let { item: e } = t;
-        return (0, i.jsx)(t4, {
-            icon: tM.z,
-            tooltip: v.intl.string(v.t["Eqb+LN"]),
-            onClick: () => tO.BO(e.applicationId, e.branchId),
-        });
+function et(t) {
+    let { item: e } = t;
+    return (0, i.jsx)(t4, {
+        icon: tM.z,
+        tooltip: v.intl.string(v.t["Eqb+LN"]),
+        onClick: () => tO.BO(e.applicationId, e.branchId),
+    });
+}
+function ee(t) {
+    let { item: e } = t;
+    return (0, i.jsx)(t4, {
+        icon: tB.P,
+        tooltip: v.intl.string(v.t["0lFmC9"]),
+        onClick: () => tO.ZT(e.applicationId, e.branchId),
+    });
+}
+let en = [
+    {
+        key: "name",
+        cellClassName: tZ.UQ,
+        render: (t) =>
+            (0, i.jsxs)(q.A, {
+                align: q.A.Align.CENTER,
+                children: [
+                    (0, i.jsx)(Z.A, { game: t.application, className: tZ.__invalid_gameIcon, size: Z.M.SMALL }),
+                    (0, i.jsx)("div", { className: tZ.TF, children: t.application.name }),
+                ],
+            }),
     },
-    ee = (t) => {
-        let { item: e } = t;
-        return (0, i.jsx)(t4, {
-            icon: tB.P,
-            tooltip: v.intl.string(v.t["0lFmC9"]),
-            onClick: () => tO.ZT(e.applicationId, e.branchId),
-        });
+    {
+        key: "progress",
+        cellClassName: tZ.Ay,
+        headerCellClassName: tZ.VD,
+        bodyCellClassName: tZ.so,
+        render: (t, e) => (0, i.jsx)(t7, { item: t, cellProps: e }),
     },
-    en = [
-        {
-            key: "name",
-            cellClassName: tZ.UQ,
-            render: (t) =>
-                (0, i.jsxs)(q.A, {
-                    align: q.A.Align.CENTER,
-                    children: [
-                        (0, i.jsx)(Z.A, { game: t.application, className: tZ.__invalid_gameIcon, size: Z.M.SMALL }),
-                        (0, i.jsx)("div", { className: tZ.TF, children: t.application.name }),
-                    ],
-                }),
+    {
+        key: "actions",
+        cellClassName: tZ.AT,
+        render(t, e) {
+            let n, l;
+            return (
+                t.finished
+                    ? (n =
+                          null != t.libraryApplication
+                              ? (0, i.jsx)(Q.A, {
+                                    libraryApplication: t.libraryApplication,
+                                    size: "sm",
+                                    source: w.ThZ.APPLICATION_LIBRARY_UPDATES,
+                                })
+                              : null)
+                    : null != t.state
+                      ? t.state.type !== w.WTw.UP_TO_DATE &&
+                        ((n =
+                            t.index > 0
+                                ? (0, i.jsx)(et, { item: t })
+                                : null != e && e.paused
+                                  ? (0, i.jsx)(t9, {})
+                                  : (0, i.jsx)(t8, {})),
+                        (l = (0, i.jsx)(ee, { item: t })))
+                      : (l = (0, i.jsx)(ee, { item: t })),
+                (0, i.jsxs)("div", { className: tZ.sG, children: [n, l] })
+            );
         },
-        {
-            key: "progress",
-            cellClassName: tZ.Ay,
-            headerCellClassName: tZ.VD,
-            bodyCellClassName: tZ.so,
-            render: (t, e) => (0, i.jsx)(t7, { item: t, cellProps: e }),
-        },
-        {
-            key: "actions",
-            cellClassName: tZ.AT,
-            render(t, e) {
-                let n, l;
-                return (
-                    t.finished
-                        ? (n =
-                              null != t.libraryApplication
-                                  ? (0, i.jsx)(Q.A, {
-                                        libraryApplication: t.libraryApplication,
-                                        size: "sm",
-                                        source: w.ThZ.APPLICATION_LIBRARY_UPDATES,
-                                    })
-                                  : null)
-                        : null != t.state
-                          ? t.state.type !== w.WTw.UP_TO_DATE &&
-                            ((n =
-                                t.index > 0
-                                    ? (0, i.jsx)(et, { item: t })
-                                    : null != e && e.paused
-                                      ? (0, i.jsx)(t9, {})
-                                      : (0, i.jsx)(t8, { item: t })),
-                            (l = (0, i.jsx)(ee, { item: t })))
-                          : (l = (0, i.jsx)(ee, { item: t })),
-                    (0, i.jsxs)("div", { className: tZ.sG, children: [n, l] })
-                );
-            },
-        },
-    ];
+    },
+];
 class ei extends l.PureComponent {
     isUnmounted = !1;
     isTallerThanHalfViewport = !1;

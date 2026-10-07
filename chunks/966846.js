@@ -1,4 +1,4 @@
-(n.d(t, { A: () => F }), n(321073), n(667532));
+(n.d(t, { A: () => k }), n(321073), n(667532));
 var i = n(435558),
     r = n.n(i),
     a = n(17928),
@@ -67,27 +67,22 @@ function P(e, t) {
     let r = b(e, t);
     (-1 !== r && (m.splice(r, 1), D()), v());
 }
-function U(e) {
-    let { applicationId: t, branchId: n } = e;
-    P(t, n);
+function U(e, t) {
+    let n = (0, _.gW)(e, t),
+        i = g.indexOf(n);
+    -1 !== i && g.splice(i, 1);
 }
-function w(e) {
-    let { applicationId: t, branchId: n } = e,
-        i = (0, _.gW)(t, n),
-        r = g.indexOf(i);
-    -1 !== r && g.splice(r, 1);
-}
-function G() {
+function w() {
     let e = c.default.getToken(),
         t = c.default.getId();
     null != e && E.A.setCredentials(t, e);
 }
-function x() {
+function G() {
     for (let e of d.Ay.getRunningDiscordApplicationIds()) o.ZT(e, e);
     let e = d.Ay.getVisibleGame();
     return (S || null == e || e.pid === y || o.v7(), (y = null == e ? null : e.pid), !1);
 }
-class k extends a.Ay.Store {
+class x extends a.Ay.Store {
     static displayName = "DispatchManagerStore";
     initialize() {
         let e = s.w.get(T) ?? { queue: null, paused: null, userActions: null };
@@ -95,7 +90,7 @@ class k extends a.Ay.Store {
             null != e.paused && (S = e.paused),
             null != e.userActions && (R = new Map(Array.from(e.userActions))),
             this.waitFor(h.A, d.Ay),
-            this.syncWith([d.Ay], x),
+            this.syncWith([d.Ay], G),
             this.waitFor(u.A, c.default, h.A));
     }
     get activeItems() {
@@ -117,7 +112,7 @@ class k extends a.Ay.Store {
         return L;
     }
 }
-let F = new k(l.h, {
+let k = new x(l.h, {
     DISPATCH_APPLICATION_INSTALL: function (e) {
         let { applicationId: t, branchId: n } = e;
         (R.set((0, _.gW)(t, n), "Install"), M(t, n, !1, "Patch"));
@@ -127,9 +122,13 @@ let F = new k(l.h, {
         M(t, n, i, "Patch");
     },
     DISPATCH_APPLICATION_UNINSTALL: function (e) {
-        (U(e), w(e));
+        let { applicationId: t, branchId: n } = e;
+        (P(t, n), U(t, n));
     },
-    DISPATCH_APPLICATION_CANCEL: U,
+    DISPATCH_APPLICATION_CANCEL: function (e) {
+        let { applicationId: t, branchId: n } = e;
+        P(t, n);
+    },
     DISPATCH_APPLICATION_REPAIR: function (e) {
         let { applicationId: t, branchId: n } = e;
         (R.set((0, _.gW)(t, n), "Repair"), M(t, n, !1, "Repair"));
@@ -140,7 +139,10 @@ let F = new k(l.h, {
         if (i < 1) return !1;
         (m.splice(0, 0, m.splice(i, 1)[0]), v(), S && E.A.resume(), D());
     },
-    DISPATCH_APPLICATION_REMOVE_FINISHED: w,
+    DISPATCH_APPLICATION_REMOVE_FINISHED: function (e) {
+        let { applicationId: t, branchId: n } = e;
+        U(t, n);
+    },
     DISPATCH_APPLICATION_STATE_UPDATE: function (e) {
         let { state: t } = e;
         !O && ((O = !0), v(), S || E.A.resume());
@@ -182,7 +184,7 @@ let F = new k(l.h, {
         let { error: t } = e,
             { code: n } = t;
         if (null != n) {
-            if (p.includes(n)) G();
+            if (p.includes(n)) w();
             else if (n === I.Hi.APPLICATION_NOT_FOUND) {
                 let { context: e } = t;
                 if (null != e) {
@@ -193,7 +195,7 @@ let F = new k(l.h, {
         }
     },
     CONNECTION_OPEN: function () {
-        (0, A.isDesktop)() && G();
+        (0, A.isDesktop)() && w();
     },
     LOGOUT: function () {
         (s.w.remove(T), (0, A.isDesktop)() && E.A.pause());

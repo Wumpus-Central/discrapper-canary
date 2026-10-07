@@ -199,9 +199,9 @@ let w = new U(d.h, {
             }
             let O = (function (e) {
                 let t = "";
-                for (let n of Object.keys(e)) {
-                    let i = e[n];
-                    void 0 !== i && ("boolean" == typeof i && (i = i ? "yes" : "no"), (t += `${n}=${i},`));
+                for (let [n, i] of Object.entries(e)) {
+                    let e = i;
+                    void 0 !== e && ("boolean" == typeof e && (e = e ? "yes" : "no"), (t += `${n}=${e},`));
                 }
                 return t;
             })(E);

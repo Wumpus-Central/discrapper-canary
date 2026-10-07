@@ -337,7 +337,7 @@ let K = {
             );
         },
         inputEventUnregister(e) {
-            this.getDiscordUtils().inputEventUnregister(parseInt(e));
+            this.getDiscordUtils().inputEventUnregister(e);
         },
         setOnInputEventCallback(e) {
             I.isPlatformEmbedded && this.getDiscordUtils().inputWatchAll(e);

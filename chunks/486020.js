@@ -109,7 +109,7 @@ function O(e) {
         o = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : null,
         d = arguments.length > 4 && void 0 !== arguments[4] ? arguments[4] : m;
     if (a) {
-        let e = i.BOT_AVATARS[n];
+        let e = null != n ? i.BOT_AVATARS[n] : void 0;
         if (e) return e;
         if (null == n && "0000" === r) return f[0];
     }

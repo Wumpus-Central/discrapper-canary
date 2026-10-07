@@ -50,8 +50,8 @@ function U(e, t, n) {
 }
 let w =
     (D && b) ||
-    ("Chrome" === s().name && 47 > parseFloat(s().version)) ||
-    ("Firefox" === s().name && 52 > parseFloat(s().version));
+    ("Chrome" === s().name && 47 > parseFloat(s().version ?? "")) ||
+    ("Firefox" === s().name && 52 > parseFloat(s().version ?? ""));
 async function G() {
     if (o.A?.features.supports("notifications"))
         try {

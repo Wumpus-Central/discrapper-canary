@@ -119,19 +119,21 @@ async function N(e) {
 }
 function C(e, t) {
     let n = g[e].serialize(t);
-    return n ? `${e}:${n.toString()}` : null;
+    return null != n && "" !== n ? `${e}:${n.toString()}` : null;
 }
 function O(e, t, n) {
     let i = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : "png";
     if (null != t && t.includes(":")) {
         let [e, i] = t.split(":");
-        return e === I.fg2.TWITCH
-            ? null == n || "number" == typeof n
-                ? void new h.A("ApplicationAssetUtils").warn("getAssetImage: size must === [number, number] for Twitch")
-                : g[I.fg2.TWITCH].deserialize(i, n)
-            : Object.prototype.hasOwnProperty.call(g, e)
-              ? g[e].deserialize(i)
-              : void 0;
+        return Object.prototype.hasOwnProperty.call(g, e)
+            ? e === I.fg2.TWITCH
+                ? null == n || "number" == typeof n
+                    ? void new h.A("ApplicationAssetUtils").warn(
+                          "getAssetImage: size must === [number, number] for Twitch",
+                      )
+                    : g[I.fg2.TWITCH].deserialize(i, n)
+                : g[e].deserialize(i)
+            : void 0;
     }
     if (null == e || null == t) return;
     let r = Array.isArray(n) ? Math.max(...n) : n,

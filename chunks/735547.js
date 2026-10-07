@@ -245,7 +245,7 @@ function h(t, e) {
 let y = [n.INVITE_OPTIONS_14_DAYS, n.INVITE_OPTIONS_30_DAYS, n.INVITE_OPTIONS_60_DAYS],
     U = {
         getMaxAgeOptionByValue: function (t) {
-            return [...n.MAX_AGE_OPTIONS, ...y].find((e) => e.value === t) || null;
+            return [...n.MAX_AGE_OPTIONS, ...y].find((e) => e.value === t) ?? null;
         },
         getMaxAgeOptions: function (t) {
             return n.MAX_AGE_OPTIONS.filter((e) => !y.includes(e) || t?.includeExperimentalValues?.includes?.(e.value));
