@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     y4: "logsControls__6eef7",
     KT: "logsSearch__6eef7",
     $F: "logsTab__6eef7",

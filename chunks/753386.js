@@ -1,9 +1,9 @@
-n.d(t, { J$: () => I, WM: () => s.WM, cZ: () => C, eG: () => A, vd: () => p, vm: () => _, zh: () => E, zv: () => f });
+n.d(t, { J$: () => I, WM: () => s.WM, cZ: () => p, eG: () => A, vd: () => _, vm: () => C, zh: () => E, zv: () => f });
 var r = n(544180),
     u = n(396813),
-    l = n(859703),
-    i = n(405670),
-    o = n(561844),
+    i = n(859703),
+    o = n(405670),
+    l = n(561844),
     s = n(546121),
     a = n(977416),
     d = n(792620),
@@ -19,21 +19,21 @@ function A(e) {
 function E(e, t) {
     return e <= 0 || t <= 0 ? 0 : e >= t ? 1 : Math.min(1, Math.round((e / t) * 100) / 100);
 }
-function _(e) {
+function C(e) {
     let { questId: t, sourceQuestContent: n, videoSessionId: u } = e;
-    i.Ay.getState().setTranscriptEnabled(!1);
-    let s = i.Ay.getState().getVideoProgress(t);
+    o.Ay.getState().setTranscriptEnabled(!1);
+    let s = o.Ay.getState().getVideoProgress(t);
     if (null == s) return;
-    let a = l.A.getQuest(t);
+    let a = i.A.getQuest(t);
     null != a && a.userStatus?.enrolledAt != null && a.userStatus?.completedAt == null && f(a, s.maxTimestampSec);
     let d = E(s.maxTimestampSec, s.duration);
-    ((0, o.av)({
+    ((0, l.av)({
         questId: t,
         event: c.HAw.QUEST_VIDEO_PROGRESSED,
         properties: { progress: d, video_timestamp_seconds: s.maxTimestampSec, video_session_id: u },
         sourceQuestContent: n,
     }),
-        (0, o.av)({
+        (0, l.av)({
             questId: t,
             event: c.HAw.QUEST_VIDEO_MODAL_CLOSED,
             properties: {
@@ -44,12 +44,12 @@ function _(e) {
             sourceQuestContent: n,
         }));
 }
-function C(e) {
+function p(e) {
     return `VIDEO-QUEST-${e}`;
 }
-function p(e, t) {
+function _(e, t) {
     return e >= t - 1 ? Math.max(e, t) : e;
 }
 function I(e) {
-    return !!(0, d.vv)(e) && (0, n(192308).hasModalOpen)(C(e.id));
+    return !!(0, d.vv)(e) && (0, n(192308).hasModalOpen)(p(e.id));
 }

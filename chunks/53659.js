@@ -1,4 +1,4 @@
-_.exports = {
+e.exports = {
     hF: "thinkingTrigger__99e8e",
     bl: "thinkingDots__99e8e",
     xu: "thinkingLabel__99e8e",

@@ -1,5 +1,5 @@
-_.r(
-    (e.exports = {
+r.r(
+    (_.exports = {
         chip: "chip__3854f",
         "with-icon": "with-icon__3854f",
         icon: "icon__3854f",

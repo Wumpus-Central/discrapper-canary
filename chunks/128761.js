@@ -7,7 +7,7 @@
     YD: () => i,
     fd: () => p,
     lG: () => s,
-    nY: () => u,
+    nY: () => o,
     u4: () => h,
     v9: () => c,
     y0: () => j,
@@ -29,10 +29,10 @@ function s(e) {
               absolute: new Date(t).toLocaleString(),
           };
 }
-function u(e) {
+function o(e) {
     return new Date(e).toLocaleTimeString(void 0, { hour: "numeric", minute: "2-digit" });
 }
-function o(e) {
+function u(e) {
     return new Date(e).toLocaleString(void 0, { dateStyle: "medium", timeStyle: "short" });
 }
 function d(e) {
@@ -44,9 +44,9 @@ function c(e, t, l) {
     for (let i of e) {
         let e = t(i),
             s = null == e ? "unknown" : String(d(e)),
-            u = n[n.length - 1];
-        null != u && u.key === s
-            ? u.items.push(i)
+            o = n[n.length - 1];
+        null != o && o.key === s
+            ? o.items.push(i)
             : n.push({
                   key: s,
                   label:
@@ -129,13 +129,13 @@ function p(e, t) {
             }
         })(e),
         restoreToMs: e.expired ? null : l,
-        detail: [null != l ? o(l) : null, null != n ? r.intl.formatToPlainString(a.default.V7YNvf, { title: n }) : null]
+        detail: [null != l ? u(l) : null, null != n ? r.intl.formatToPlainString(a.default.V7YNvf, { title: n }) : null]
             .filter((e) => null != e)
             .join(" \xb7 "),
     };
 }
 function v(e, t) {
-    let l = o(t);
+    let l = u(t);
     return "stable" === e
         ? {
               title: r.intl.string(a.default.G9wD92),
