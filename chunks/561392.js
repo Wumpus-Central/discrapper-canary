@@ -35,6 +35,7 @@ function o(e) {
             refs: m,
             floatingStyles: g,
             context: S,
+            middlewareData: N,
         } = (0, r.we)({
             open: E,
             onOpenChange: A,
@@ -59,20 +60,22 @@ function o(e) {
                 (0, a.UU)(T),
                 (0, a.cY)(n),
                 (0, a.BN)(T),
+                (0, a.jD)({ strategy: "referenceHidden" }),
             ],
             whileElementsMounted: s.ll,
             placement: o,
             strategy: "fixed",
         }),
-        N = (0, r.s9)(S, { bubbles: { escapeKey: !1 } }),
-        { getReferenceProps: C, getFloatingProps: O } = (0, r.bv)([N]);
+        C = { ...g, visibility: N.hide?.referenceHidden ? "hidden" : "visible" },
+        O = (0, r.s9)(S, { bubbles: { escapeKey: !1 } }),
+        { getReferenceProps: R, getFloatingProps: L } = (0, r.bv)([O]);
     return {
         isOpen: E,
         setIsOpen: A,
         refs: m,
-        floatingStyles: g,
+        floatingStyles: C,
         context: S,
-        getReferenceProps: C,
-        getFloatingProps: O,
+        getReferenceProps: R,
+        getFloatingProps: L,
     };
 }
