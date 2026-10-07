@@ -38,8 +38,8 @@ let x = function (e) {
         D = E[m],
         b = I[m],
         j = (0, c.Iv)(T, 48),
-        k = p[m],
-        M =
+        M = p[m],
+        k =
             0 ===
             (n =
                 null != (t = C ?? "")
@@ -81,18 +81,18 @@ let x = function (e) {
                 "aria-hidden": !0,
                 children: (0, i.jsx)(d.Ay, {
                     mask: d.hW.SQUIRCLE,
-                    width: k,
-                    height: k,
+                    width: M,
+                    height: M,
                     children: _
                         ? (0, i.jsx)("div", {
                               className: s()(S[m], g.WQ),
                               style: { backgroundColor: y ?? v },
-                              children: (0, i.jsx)(u.n, { dotRadius: k / 10 }),
+                              children: (0, i.jsx)(u.n, { dotRadius: M / 10 }),
                           })
                         : (0, i.jsx)("div", {
                               className: s()(S[m], g.q9),
-                              style: { fontSize: N(f[m], M) },
-                              children: M,
+                              style: { fontSize: N(f[m], k) },
+                              children: k,
                           }),
                 }),
             }),

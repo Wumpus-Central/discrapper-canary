@@ -1,18 +1,18 @@
-a.d(t, { A: () => n });
-var s = a(17928),
-    l = a(73153);
+t.d(a, { A: () => c });
+var s = t(17928),
+    l = t(73153);
 let i = { speechRate: 1, currentMessage: null },
     h = i;
-class c extends s.Ay.DeviceSettingsStore {
+class n extends s.Ay.DeviceSettingsStore {
     static displayName = "TTSStore";
     static persistKey = "TTSStore";
     static migrations = [];
     initialize(e) {
         h = { ...i, ...(e ?? null) };
     }
-    isSpeakingMessage(e, t) {
-        let { currentMessage: a } = h;
-        return null !== a && a.channelId === e && a.messageId === t;
+    isSpeakingMessage(e, a) {
+        let { currentMessage: t } = h;
+        return null !== t && t.channelId === e && t.messageId === a;
     }
     get currentMessage() {
         return h.currentMessage;
@@ -24,14 +24,14 @@ class c extends s.Ay.DeviceSettingsStore {
         return h;
     }
 }
-let n = new c(
+let c = new n(
     l.h,
     __OVERLAY__
         ? {}
         : {
               SPEAKING_MESSAGE: function (e) {
-                  let { messageId: t, channelId: a } = e;
-                  h = { ...h, currentMessage: { messageId: t, channelId: a } };
+                  let { messageId: a, channelId: t } = e;
+                  h = { ...h, currentMessage: { messageId: a, channelId: t } };
               },
               STOP_SPEAKING: function () {
                   h = { ...h, currentMessage: null };

@@ -31,8 +31,8 @@ var l = n(477900),
     O = n(887129),
     L = n(741918),
     w = n(267102),
-    P = n(652215),
-    M = n(307731);
+    M = n(652215),
+    P = n(307731);
 let D = new Map([["thread", new Set(["name"])]]);
 var U = n(5867),
     V = n(940169);
@@ -54,7 +54,7 @@ function W(e) {
                     [j.A, k.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || r === N.oU.RULES_INPUT || j.A.can(P.xBc.MENTION_EVERYONE, l),
+                            l.isPrivate() || c || r === N.oU.RULES_INPUT || j.A.can(M.xBc.MENTION_EVERYONE, l),
                         hidePersonalInformation: k.A.hidePersonalInformation,
                     }),
                     [l, r, c],
@@ -131,10 +131,10 @@ function W(e) {
                     hideMentionDescription: r === N.oU.RULES_INPUT,
                     emojiIntention:
                         r === N.oU.RULES_INPUT
-                            ? M.EmojiIntention.COMMUNITY_CONTENT
+                            ? P.EmojiIntention.COMMUNITY_CONTENT
                             : f
-                              ? M.EmojiIntention.NO_CUSTOM_EMOJI
-                              : M.EmojiIntention.CHAT,
+                              ? P.EmojiIntention.NO_CUSTOM_EMOJI
+                              : P.EmojiIntention.CHAT,
                     currentWord: x?.word ?? "",
                     currentWordIsAtStart: x?.isAtStart === !0,
                     optionText:

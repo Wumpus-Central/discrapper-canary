@@ -15,8 +15,8 @@ var i = n(477900),
     g = n(398590),
     h = n(523527),
     A = n(976860),
-    _ = n(174459),
-    p = n(676279),
+    p = n(174459),
+    _ = n(676279),
     N = n(158045),
     C = n(10392),
     O = n(82498),
@@ -48,7 +48,7 @@ function U(e) {
             useNitroGradient: B = !1,
         } = e;
     s.useEffect(() => {
-        (_.default.track(b.HAw.PREMIUM_UPSELL_VIEWED, G),
+        (p.default.track(b.HAw.PREMIUM_UPSELL_VIEWED, G),
             (0, C.sq)(b.U7l.PREMIUM_UPSELL_VIEWED, G.location_stack, () =>
                 (0, O.uq)(G.type, G.has_premium_stream_fps, G.has_premium_stream_resolution),
             ),
@@ -59,10 +59,10 @@ function U(e) {
         W = (0, x.A)(R.pe.TIER_2),
         Z = (0, T.O9)();
     t = V
-        ? (0, p.TM)()
+        ? (0, _.TM)()
             ? "https://cdn.discordapp.com/assets/content/c0f100da7d39f5e84ae361150c05077f9ca94ea62d0f7dd086ba1aa8fe17ae68.mov"
             : "https://cdn.discordapp.com/assets/content/75e94ffcd07b3b84cdd4305c93b43b3c94bf3ae56ace551f59b8dba7f3616c1c.webm"
-        : (0, p.TM)()
+        : (0, _.TM)()
           ? P.A
           : w.A;
     let Y = V || B ? "nitro-pink" : "green";
@@ -119,7 +119,7 @@ function U(e) {
                                     (0, i.jsx)(I.$, {
                                         variant: "secondary",
                                         onClick: function () {
-                                            (_.default.track(b.HAw.PREMIUM_PROMOTION_OPENED, {
+                                            (p.default.track(b.HAw.PREMIUM_PROMOTION_OPENED, {
                                                 location_section: U,
                                                 location_object: b.ZSU.NAVIGATION_LINK,
                                             }),

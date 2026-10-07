@@ -26,12 +26,12 @@ let d = s.memo(function (t) {
         } = t,
         [S, C] = s.useState(null),
         { confettiCanvas: I } = s.useContext(a.x),
-        j = (0, l.f9)(A ?? I, S),
-        [T, E] = s.useState(!1);
+        T = (0, l.f9)(A ?? I, S),
+        [j, E] = s.useState(!1);
     s.useEffect(() => {
-        T && R?.();
+        j && R?.();
     });
-    let N = s.useMemo(() => {
+    let v = s.useMemo(() => {
         if (null != d) return [{ src: d, colorize: !1 }];
     }, [d]);
     return (
@@ -41,7 +41,7 @@ let d = s.memo(function (t) {
             return (
                 (t = t.map((i, n) =>
                     setTimeout(() => {
-                        (j.createMultipleConfetti(
+                        (T.createMultipleConfetti(
                             (function (t, e, i, n, s) {
                                 let l = arguments.length > 5 && void 0 !== arguments[5] ? arguments[5] : o,
                                     a = arguments.length > 6 && void 0 !== arguments[6] ? arguments[6] : 1.66,
@@ -75,7 +75,7 @@ let d = s.memo(function (t) {
                     for (let e of t) clearTimeout(e);
                 }
             );
-        }, [j, e, c, f, h, p, m, g, x, y, R]),
-        (0, n.jsx)(l.K_, { ref: C, sprites: N ?? r.uI, colors: i ?? r._t, spriteWidth: r.wn, spriteHeight: r.wn })
+        }, [T, e, c, f, h, p, m, g, x, y, R]),
+        (0, n.jsx)(l.K_, { ref: C, sprites: v ?? r.uI, colors: i ?? r._t, spriteWidth: r.wn, spriteHeight: r.wn })
     );
 });

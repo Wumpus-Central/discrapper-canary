@@ -29,8 +29,8 @@ var i,
     k = n(928550),
     R = n(689168),
     L = n(403362),
-    M = n(456060),
-    P = n(723702),
+    P = n(456060),
+    M = n(723702),
     D = n(850670),
     O = n(206589),
     U = n(125017);
@@ -47,7 +47,7 @@ var G = n(665260),
     W = n(702631),
     J = n(375708),
     X = n(946255),
-    q =
+    Z =
         (((i = {}).DESKTOP = "desktop"),
         (i.MOBILE = "mobile"),
         (i.ANDROID = "android"),
@@ -65,7 +65,7 @@ var G = n(665260),
     F.yTV.SAMSUNG,
     F.yTV.EMBEDDED,
     F.yTV.META_QUEST);
-let Z = [];
+let q = [];
 function $(e) {
     let { width: t, height: n, color: i } = e;
     return (0, l.jsxs)("svg", {
@@ -100,7 +100,7 @@ function en(e) {
                             l = new Set(t),
                             s = [];
                         return null == t || 0 === t.length || (null != n && l.has(n) && i)
-                            ? Z
+                            ? q
                             : (l.has(F.yTV.ANDROID) && l.has(F.yTV.IOS)
                                   ? s.push("mobile")
                                   : l.has(F.yTV.ANDROID)
@@ -120,19 +120,19 @@ function en(e) {
                 r
                     .map((e) => {
                         switch (e) {
-                            case q.MOBILE:
+                            case Z.MOBILE:
                                 return (0, l.jsx)(u.u, { size: "xxs", color: "currentColor" }, e);
-                            case q.ANDROID:
+                            case Z.ANDROID:
                                 return (0, l.jsx)($, { width: m.E.xxs, height: m.E.xxs, color: "currentColor" }, e);
-                            case q.IOS:
+                            case Z.IOS:
                                 return (0, l.jsx)(h.z, { size: "xxs", color: "currentColor" }, e);
-                            case q.PLAYSTATION:
+                            case Z.PLAYSTATION:
                                 return (0, l.jsx)(g.X, { size: "xxs", color: "currentColor" }, e);
-                            case q.XBOX:
+                            case Z.XBOX:
                                 return (0, l.jsx)(p.Y, { size: "xxs", color: "currentColor" }, e);
-                            case q.VR:
+                            case Z.VR:
                                 return (0, l.jsx)(d.G, { size: "xxs", color: "currentColor" }, e);
-                            case q.DESKTOP:
+                            case Z.DESKTOP:
                                 return (0, l.jsx)(A.k, { size: "xxs", color: "currentColor" }, e);
                             default:
                                 return null;
@@ -207,8 +207,8 @@ function el(e) {
             presenceActivity: f,
             currentUserPresenceActivity: y,
             hideParty: L,
-            hideBanner: q = !1,
-            partyStatusElement: Z,
+            hideBanner: Z = !1,
+            partyStatusElement: q,
             analyticsLocations: $,
             showAuthButton: el,
             canPromptAuth: es,
@@ -237,7 +237,7 @@ function el(e) {
                     className: et.dS,
                     color: "none",
                     lineClamp: 2,
-                    children: [ed ? (0, M.YC)(t, i, r, d, !1) : (0, l.jsx)(ei, { activity: f }), ed ? null : eu],
+                    children: [ed ? (0, P.YC)(t, i, r, d, !1) : (0, l.jsx)(ei, { activity: f }), ed ? null : eu],
                 }),
             [ed, t, i, r, d, f, eu],
         ),
@@ -248,8 +248,8 @@ function el(e) {
                 : (0, l.jsx)(x.E, { variant: "text-xs/normal", color: "none", lineClamp: 1, children: e });
         }, [f?.details]),
         eg = s.useMemo(
-            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, L || ed ? null : Z] }),
-            [em, L, ed, Z, eh],
+            () => (0, l.jsxs)("div", { className: et.pq, children: [eh, em, L || ed ? null : q] }),
+            [em, L, ed, q, eh],
         ),
         ep = !!(0, k.au)(n.id),
         eA = (0, S.X)(n),
@@ -291,7 +291,7 @@ function el(e) {
                 if (null != e) return { canJoin: !0, remoteJoinPlatform: e };
                 if ((0, z.A)(t, F.jUm.SUPPORTS_JOIN_URL)) return { canJoin: !0, remoteJoinPlatform: null };
             }
-            return (0, P.platformSupportsActivityJoin)() && o
+            return (0, M.platformSupportsActivityJoin)() && o
                 ? { canJoin: !0, remoteJoinPlatform: null }
                 : { canJoin: !1, remoteJoinPlatform: null };
         })({
@@ -308,7 +308,7 @@ function el(e) {
             null == f ||
             !(0, K.A)(f, t, n.id) ||
             !(0, z.A)(f, F.jUm.SYNC) ||
-            !P.isPlatformEmbedded ||
+            !M.isPlatformEmbedded ||
             (0, O.w)(y, f)
         ),
         eE = (function (e, t, n, i) {
@@ -437,7 +437,7 @@ function el(e) {
                 header: a,
                 title: i,
                 staticBannerSrc: h,
-                hideBanner: q,
+                hideBanner: Z,
                 onClickBanner: g,
                 bannerAspectRatio: j.u.ACTIVITY,
                 iconSrc: p ?? void 0,

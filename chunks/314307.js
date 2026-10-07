@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => E, WK: () => f, cr: () => C, j1: () => x });
+n.d(t, { Ay: () => E, WK: () => f, cr: () => x, j1: () => C });
 var l = n(477900);
 n(582128);
 var i = n(503698),
@@ -26,7 +26,7 @@ function f(e) {
         })
     );
 }
-function C(e) {
+function x(e) {
     let { children: t, className: n } = e;
     return (0, l.jsx)(h.D, {
         "aria-hidden": "true",
@@ -35,7 +35,7 @@ function C(e) {
         children: t,
     });
 }
-function x(e) {
+function C(e) {
     let { children: t, className: n } = e;
     return (0, l.jsx)(m.E, { variant: "text-md/normal", color: "none", className: s()(A.h_, n), children: t });
 }

@@ -28,8 +28,8 @@ var l = n(477900),
     D = n(71393),
     b = n(576705),
     j = n(994500),
-    k = n(287809),
-    M = n(977997),
+    M = n(287809),
+    k = n(977997),
     O = n(403362),
     w = n(996439),
     F = n(652215),
@@ -38,7 +38,7 @@ var l = n(477900),
 let U = (e) => [
         e.userId,
         ...(function (e) {
-            let t = k.default.getUser(e.userId);
+            let t = M.default.getUser(e.userId);
             if (null == t) return [];
             let n = t.username,
                 l = (0, N.jP)(t);
@@ -51,7 +51,7 @@ let U = (e) => [
         searchStringGenerator: (e) => {
             let { channel: t, voiceStates: n } = e;
             return [
-                (0, E.m1)(t, k.default, j.A),
+                (0, E.m1)(t, M.default, j.A),
                 t.id,
                 t.guild_id,
                 D.A.getGuild(t.guild_id)?.name ?? "",
@@ -63,14 +63,14 @@ let U = (e) => [
     V = { searchType: T.n.FUZZY, sortType: T.r.JARO_WINKLER, searchStringGenerator: U, throttleMs: 100 },
     H = i.memo(function (e) {
         let { channel: t, query: n } = e,
-            [r] = (0, a.bG)([M.A], () => [M.A.getVoiceStatesForChannel(t.id), M.A.getVoiceStateVersion()], [t.id], w.D),
+            [r] = (0, a.bG)([k.A], () => [k.A.getVoiceStatesForChannel(t.id), k.A.getVoiceStateVersion()], [t.id], w.D),
             [s, u] = i.useState([]);
         (0, _.RT)(n, Object.values(r), u, V);
         let c = (0, a.yK)(
-                [M.A, k.default, y.A, j.A],
+                [k.A, M.default, y.A, j.A],
                 () =>
-                    Object.values(M.A.getVoiceStatesForChannel(t.id))
-                        .map((e) => k.default.getUser(e.userId))
+                    Object.values(k.A.getVoiceStatesForChannel(t.id))
+                        .map((e) => M.default.getUser(e.userId))
                         .filter(O.Vq)
                         .sort((e, t) => {
                             if (s.length > 0 && "" !== n.trim()) {
@@ -105,7 +105,7 @@ function Y() {
     let e,
         t =
             ((e = (0, a.yK)(
-                [k.default, j.A, y.A],
+                [M.default, j.A, y.A],
                 () =>
                     j.A.getFriendIDs()
                         .sort((e, t) =>
@@ -119,17 +119,17 @@ function Y() {
                                       (y.A.getUserAffinity(e)?.communicationProbability ?? 0),
                         )
                         .reduce((e, t) => {
-                            let n = k.default.getUser(t);
+                            let n = M.default.getUser(t);
                             return (null != n && e.push(n), e);
                         }, []),
                 [],
             )),
             (0, a.yK)(
-                [M.A, v.A, b.A],
+                [k.A, v.A, b.A],
                 () =>
                     Array.from(
                         e
-                            .map((e) => M.A.getDiscoverableVoiceStateForUser(e.id))
+                            .map((e) => k.A.getDiscoverableVoiceStateForUser(e.id))
                             .reduce((e, t) => {
                                 let n = t?.channelId;
                                 if (null == n) return e;
@@ -178,7 +178,7 @@ function K(e, t) {
 }
 function z() {
     return (0, a.bG)(
-        [D.A, R.Ay, M.A, j.A, b.A],
+        [D.A, R.Ay, k.A, j.A, b.A],
         () =>
             D.A.getGuildsArray()
                 .reduce(
@@ -197,7 +197,7 @@ function z() {
                 )
                 .map((e) => ({
                     channel: e,
-                    voiceStates: Object.values(M.A.getVoiceStatesForChannel(e.id)).filter((e) =>
+                    voiceStates: Object.values(k.A.getVoiceStatesForChannel(e.id)).filter((e) =>
                         j.A.isFriend(e.userId),
                     ),
                 })),
@@ -296,7 +296,7 @@ let B = i.memo(function (e) {
                                           variant: x ? "text-sm/semibold" : "text-sm/medium",
                                           color: T,
                                           className: L.rU,
-                                          children: (0, E.m1)(I, k.default, j.A),
+                                          children: (0, E.m1)(I, M.default, j.A),
                                       }),
                                   ],
                               }),

@@ -1,4 +1,4 @@
-(n.d(t, { A: () => S }), n(321073));
+(n.d(t, { A: () => k }), n(321073));
 var r = n(477900),
     i = n(582128),
     s = n(562708),
@@ -10,8 +10,8 @@ var r = n(477900),
     d = n(763827),
     h = n(935208),
     f = n(796774),
-    p = n(209932),
-    g = n(813564),
+    g = n(209932),
+    p = n(813564),
     m = n(933204),
     A = n(805143),
     y = n(435558),
@@ -100,17 +100,17 @@ let I = i.memo(function (e) {
             onClose: h,
             children: f,
         } = e,
-        p = i.useRef(null),
-        g = i.useRef([]),
+        g = i.useRef(null),
+        p = i.useRef([]),
         m = i.useRef(!1),
         A = i.useRef(null),
         [w, I] = i.useState(0),
         [T, j] = i.useState({ x: 0, y: 0 }),
-        k = Math.abs(T.x) + Math.abs(T.y) > 0,
-        S = i.useMemo(() => v().chunk(f, _), [f]),
+        S = Math.abs(T.x) + Math.abs(T.y) > 0,
+        k = i.useMemo(() => v().chunk(f, _), [f]),
         L = i.useCallback(
             (e, t) => {
-                null == g.current[w] ? (g.current[w] = []) : (g.current[w][t] = e);
+                null == p.current[w] ? (p.current[w] = []) : (p.current[w][t] = e);
             },
             [w],
         ),
@@ -158,8 +158,8 @@ let I = i.memo(function (e) {
                 (0, y.throttle)((e) => {
                     var r;
                     let i;
-                    if (null == p.current) return;
-                    let s = p.current.getBoundingClientRect(),
+                    if (null == g.current) return;
+                    let s = g.current.getBoundingClientRect(),
                         l = { x: s.left + s.width / 2, y: s.top + s.height / 2 },
                         o = { x: e.clientX, y: e.clientY };
                     if ((U(o, l, Math.max(t, n)), m.current)) {
@@ -170,8 +170,8 @@ let I = i.memo(function (e) {
                         ((r = Math.max(t, n)),
                         (i = Math.sqrt(Math.pow(l.x - o.x, 2) + Math.pow(l.y - o.y, 2))),
                         { x: o.x + ((o.x - l.x) / i) * r, y: o.y + ((o.y - l.y) / i) * r });
-                    for (let e = 0; e < g.current[w].length; e++) {
-                        let t = g.current[w][e];
+                    for (let e = 0; e < p.current[w].length; e++) {
+                        let t = p.current[w][e];
                         if (
                             null != t &&
                             (function (e, t, n) {
@@ -193,14 +193,14 @@ let I = i.memo(function (e) {
                 if (!d) return;
                 let t = w + (e.deltaY > 0 ? 1 : -1);
                 t >= 0 &&
-                    t < S.length &&
-                    (null != A.current && (S[t].length > A.current ? M(t, A.current) : P()), I(t));
+                    t < k.length &&
+                    (null != A.current && (k[t].length > A.current ? M(t, A.current) : P()), I(t));
             },
-            [d, w, S, M, P],
+            [d, w, k, M, P],
         ),
         F = i.useMemo(
             () =>
-                S[w].map((e, i) => {
+                k[w].map((e, i) => {
                     let o = O[i];
                     if (null == o) throw Error(`Too many items supplied ${f.length} expected max of ${O.length}`);
                     let a = D(o.x, t, s),
@@ -216,7 +216,7 @@ let I = i.memo(function (e) {
                         i,
                     );
                 }),
-            [S, w, t, s, n, l, f.length, L],
+            [k, w, t, s, n, l, f.length, L],
         );
     return (0, r.jsx)(x.D, {
         className: b.Pw,
@@ -224,7 +224,7 @@ let I = i.memo(function (e) {
         onWheel: B,
         onClick: K,
         children: (0, r.jsxs)("div", {
-            ref: p,
+            ref: g,
             className: b._$,
             style: { width: t, height: n },
             children: [
@@ -281,7 +281,7 @@ let I = i.memo(function (e) {
                                         cy: 144,
                                         r: 28.8,
                                     }),
-                                k && (0, r.jsx)("circle", { className: b.JV, cx: 144 + T.x, cy: 144 + T.y, r: 28.8 }),
+                                S && (0, r.jsx)("circle", { className: b.JV, cx: 144 + T.x, cy: 144 + T.y, r: 28.8 }),
                             ],
                         }),
                         o &&
@@ -305,7 +305,7 @@ let I = i.memo(function (e) {
                                 onClick: h,
                                 children: (0, r.jsx)(N, { className: b.$2 }),
                             }),
-                        d && S.length > 1
+                        d && k.length > 1
                             ? (0, r.jsx)("div", { className: b.YB, children: C.intl.string(C.t["Xy+S02"]) })
                             : null,
                     ],
@@ -317,8 +317,8 @@ let I = i.memo(function (e) {
 });
 var T = n(817232),
     j = n(980504),
-    k = n(613967);
-function S(e) {
+    S = n(613967);
+function k(e) {
     let {
             guildId: t,
             channel: n,
@@ -330,7 +330,7 @@ function S(e) {
             onClose: C,
         } = e,
         b = (function (e) {
-            let [t, n] = (0, l.yK)([p.A], () => [p.A.getSounds(), p.A.getFavorites()]);
+            let [t, n] = (0, l.yK)([g.A], () => [g.A.getSounds(), g.A.getFavorites()]);
             return i.useMemo(() => {
                 let r = [],
                     i = [...e, "0"];
@@ -346,11 +346,11 @@ function S(e) {
         N = (0, m.T)(),
         O = i.useRef(null),
         [_, D] = i.useState(void 0),
-        S = (0, l.bG)([d.A], () => d.A.getMediaSessionId()),
+        k = (0, l.bG)([d.A], () => d.A.getMediaSessionId()),
         { analyticsLocations: L } = (0, a.Ay)(o.A.SOUNDBOARD_WHEEL),
         M = i.useCallback(
             (e) => {
-                ((0, g.Ak)(e, n.id, L), C());
+                ((0, p.Ak)(e, n.id, L), C());
             },
             [L, n.id, C],
         );
@@ -371,7 +371,7 @@ function S(e) {
             {
                 type: s.ImpressionTypes.POPOUT,
                 name: s.ImpressionNames.SOUNDBOARD_POPOUT,
-                properties: { source: E, guild_id: t, media_session_id: S, type: j.c4.WHEEL },
+                properties: { source: E, guild_id: t, media_session_id: k, type: j.c4.WHEEL },
             },
             { disableTrack: !w },
         ));
@@ -399,7 +399,7 @@ function S(e) {
                 b.map((e) =>
                     (0, r.jsx)(
                         T.Ay,
-                        { interactive: w, className: k.a, sound: e, focused: _ === e.soundId, channel: n },
+                        { interactive: w, className: S.a, sound: e, focused: _ === e.soundId, channel: n },
                         e.soundId,
                     ),
                 ),

@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => I, Q9: () => P, W: () => w }), n(321073));
+(n.d(t, { Ay: () => I, Q9: () => M, W: () => w }), n(321073));
 var l = n(635377),
     i = n.n(l),
     r = n(181370),
@@ -326,7 +326,7 @@ function w(e, t) {
     }
     return n % 2 != 0;
 }
-function P(e) {
+function M(e) {
     if (null == e.selection) return !1;
     let t = g.ZF.start(e.selection);
     return w(e, t);

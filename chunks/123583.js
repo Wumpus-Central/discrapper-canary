@@ -72,15 +72,15 @@ var R = n(931664),
     O = n(951260),
     L = n(522602),
     w = n(158045),
-    P = n(462180),
-    M = n(375499),
+    M = n(462180),
+    P = n(375499),
     D = n(151271),
     U = n(355622),
     V = n(698279),
     W = n(495088);
 let F = i.memo(function (e) {
     let { disabled: t, type: n, channelId: r, ref: s } = e,
-        [a, o, u, c] = (0, D.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], P.x),
+        [a, o, u, c] = (0, D.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], M.x),
         d = n === U.oU.NORMAL,
         h = i.useCallback(() => {
             (0, D.r$)(V.kx.EMOJI, n, r);
@@ -90,7 +90,7 @@ let F = i.memo(function (e) {
         : (0, l.jsx)("div", {
               className: E()(V.VQ, W.UD),
               ref: s,
-              children: (0, l.jsx)(M.A, {
+              children: (0, l.jsx)(P.A, {
                   className: W.Z8,
                   onClick: h,
                   active: a === V.kx.EMOJI && o === n && c === r,
@@ -114,7 +114,7 @@ let $ = i.memo(function (e) {
             [H.A],
             () => o && Object.values(H.A.frecencyWithoutFetchingLatest.favoriteGifs?.gifs ?? {}).length <= 2,
         ),
-        [d, h, m, p] = (0, D.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], P.x),
+        [d, h, m, p] = (0, D.RQ)((e) => [e.activeView, e.activeViewType, e.pickerId, e.activeChannelId], M.x),
         g = i.useRef(0),
         x = i.useCallback(() => {
             (u(!0),
@@ -191,7 +191,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             a,
             o,
             { disabled: u, type: c, channel: d, ref: h } = e,
-            [m, p, f, g] = (0, D.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], P.x),
+            [m, p, f, g] = (0, D.RQ)((e) => [e.activeView, e.pickerId, e.activeChannelId, e.activeViewType], M.x),
             x = m === V.kx.STICKER && g === c && f === d.id,
             S = i.useCallback(() => {
                 (0, D.r$)(V.kx.STICKER, c, d.id);
@@ -271,8 +271,8 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             T = !I || N.isAppsButtonEnabled,
             j = !I || N.isEmojiButtonEnabled,
             k = !I || N.isGifButtonEnabled,
-            P = !I || N.isStickerButtonEnabled,
-            M =
+            M = !I || N.isStickerButtonEnabled,
+            P =
                 ((t = S.id),
                 (n = x),
                 (i = C),
@@ -333,7 +333,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
             x.stickers?.button != null &&
                 null == D &&
                 A &&
-                P &&
+                M &&
                 !b &&
                 K.push((0, l.jsx)(et, { disabled: E, type: x, channel: S }, "sticker"))),
         x.emojis?.button != null &&
@@ -343,7 +343,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 ? j && K.push((0, l.jsx)(F, { disabled: E, type: x, channelId: S.id }, "emoji"))
                 : K.push((0, l.jsx)(B.A, { disabled: E, type: x, channel: S }, "expression"))),
         z && T && K.push((0, l.jsx)(_, { channelId: S.id, type: x }, "appLauncher")),
-        q && K.push((0, l.jsx)(J, { onClick: y, disabled: E || M }, "submit")),
+        q && K.push((0, l.jsx)(J, { onClick: y, disabled: E || P }, "submit")),
         0 === K.length)
             ? null
             : (0, l.jsx)("div", { className: W.Uo, children: K });

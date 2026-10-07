@@ -18,16 +18,16 @@ var s = n(477900),
     g = n(144779),
     I = n(976860),
     f = n(246356),
-    v = n(957565),
-    N = n(396813),
-    m = n(859703),
+    N = n(957565),
+    m = n(396813),
+    v = n(859703),
     w = n(738822),
     R = n(104886),
     S = n(866157),
     M = n(18437),
-    x = n(590202),
+    q = n(590202),
     O = n(971649),
-    q = n(651892),
+    x = n(651892),
     L = n(710969),
     P = n(792620),
     y = n(814793),
@@ -38,16 +38,16 @@ var s = n(477900),
     F = n(818348),
     H = n(375708);
 function V(e) {
-    let t = (0, a.bG)([m.A], () => m.A.getQuestPreviewOverride(w.uF.QUEST_BAR_V2), []),
-        n = (0, a.bG)([m.A], () => m.A.getQuestPreviewOverride(w.uF.ACTIVITY_PANEL), []),
-        h = (0, a.bG)([m.A], () => m.A.getQuestPreviewOverride(w.uF.QUEST_LIVE_STREAM), []),
-        f = (0, a.bG)([m.A], () => m.A.getQuestPreviewOverride(w.uF.MEMBERS_LIST), []),
+    let t = (0, a.bG)([v.A], () => v.A.getQuestPreviewOverride(w.uF.QUEST_BAR_V2), []),
+        n = (0, a.bG)([v.A], () => v.A.getQuestPreviewOverride(w.uF.ACTIVITY_PANEL), []),
+        h = (0, a.bG)([v.A], () => v.A.getQuestPreviewOverride(w.uF.QUEST_LIVE_STREAM), []),
+        f = (0, a.bG)([v.A], () => v.A.getQuestPreviewOverride(w.uF.MEMBERS_LIST), []),
         V = (0, L.vy)(e.questContent),
         G = [w.uF.QUEST_BAR_V2, w.uF.QUEST_BAR].includes(e.questContent),
         k = (0, M.Ut)(),
         B = (0, O.wW)(),
-        Z = (0, q.wr)(e.quest),
-        Q = !0 === e.showShareLink && (0, y.E0)(e.quest.config),
+        Q = (0, x.wr)(e.quest),
+        Z = !0 === e.showShareLink && (0, y.E0)(e.quest.config),
         {
             handleComplete: K,
             handleProgress: X,
@@ -58,17 +58,17 @@ function V(e) {
         z = (0, S.do)({
             quest: e.quest,
             content: e.questContent,
-            ctaContent: x.Cy.CONTEXT_MENU_OPEN_GAME_LINK,
+            ctaContent: q.Cy.CONTEXT_MENU_OPEN_GAME_LINK,
             sourceQuestContent: e.sourceQuestContent,
         }),
         $ = (0, D.Lk)({
-            isShareable: Q,
+            isShareable: Z,
             questId: e.quest.id,
             trackingCtx: i.useMemo(
                 () => ({
                     content: e.questContent,
                     position: e.questContentPosition,
-                    ctaContent: x.Cy.CONTEXT_MENU_COPY_LINK,
+                    ctaContent: q.Cy.CONTEXT_MENU_COPY_LINK,
                     sourceQuestContent: e.sourceQuestContent,
                 }),
                 [e.questContent, e.questContentPosition, e.sourceQuestContent],
@@ -78,7 +78,7 @@ function V(e) {
         return (0, o.P)((0, u.o)(new T.A(e, e.status).message, r.Ck.FAILURE));
     }
     function et() {
-        return (0, N.CV)(e.quest.id).catch(ee);
+        return (0, m.CV)(e.quest.id).catch(ee);
     }
     let en = (0, S.Ns)(e.quest),
         es = i.useMemo(
@@ -141,12 +141,12 @@ function V(e) {
                     children: [
                         (0, s.jsx)(c.Dr, {
                             id: "play-game",
-                            label: Z,
+                            label: Q,
                             action: z,
                             icon: E.W,
                             leadingAccessory: { type: "icon", icon: E.W },
                         }),
-                        Q &&
+                        Z &&
                             (0, s.jsx)(c.Dr, {
                                 id: "share-link",
                                 label: H.intl.string(H.t.RDE0Sc),
@@ -176,7 +176,7 @@ function V(e) {
                                               type: g.F.CLICK_INTERNAL,
                                               adCreativeType: l.p.QUEST,
                                               adCreativeId: e.quest.id,
-                                              questContentCTA: x.Cy.CONTEXT_MENU_LEARN_MORE,
+                                              questContentCTA: q.Cy.CONTEXT_MENU_LEARN_MORE,
                                               surfaceId: e.questContent,
                                               sourceQuestContent: e.sourceQuestContent,
                                               impressionId: B(),
@@ -186,7 +186,7 @@ function V(e) {
                                               questId: e.quest.id,
                                               questContent: e.questContent,
                                               questContentPosition: e.questContentPosition,
-                                              questContentCTA: x.Cy.CONTEXT_MENU_LEARN_MORE,
+                                              questContentCTA: q.Cy.CONTEXT_MENU_LEARN_MORE,
                                               sourceQuestContent: e.sourceQuestContent,
                                           }),
                                         (0, j.mA)({ fromContent: e.questContent, questId: e.quest.id }));
@@ -204,7 +204,7 @@ function V(e) {
                                         {
                                             content: e.questContent,
                                             position: e.questContentPosition,
-                                            ctaContent: x.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
+                                            ctaContent: q.Cy.CONTEXT_MENU_OPEN_DISCLOSURE,
                                             impressionId: B(),
                                             sourceQuestContent: e.sourceQuestContent,
                                         },
@@ -222,7 +222,7 @@ function V(e) {
                                               type: g.F.CLICK_INTERNAL,
                                               adCreativeType: l.p.QUEST,
                                               adCreativeId: e.quest.id,
-                                              questContentCTA: x.Cy.CONTEXT_MENU_HIDE_CONTENT,
+                                              questContentCTA: q.Cy.CONTEXT_MENU_HIDE_CONTENT,
                                               surfaceId: e.questContent,
                                               sourceQuestContent: e.sourceQuestContent,
                                               impressionId: B(),
@@ -232,11 +232,11 @@ function V(e) {
                                               questId: e.quest.id,
                                               questContent: e.questContent,
                                               questContentPosition: e.questContentPosition,
-                                              questContentCTA: x.Cy.CONTEXT_MENU_HIDE_CONTENT,
+                                              questContentCTA: q.Cy.CONTEXT_MENU_HIDE_CONTENT,
                                               sourceQuestContent: e.sourceQuestContent,
                                           }),
                                         (0, L.vy)(e.questContent) &&
-                                            ((0, N.g5)(e.quest.id, e.questContent), G && (0, j.z6)(e.quest)));
+                                            ((0, m.g5)(e.quest.id, e.questContent), G && (0, j.z6)(e.quest)));
                                 },
                                 subtext: H.intl.string(H.t.RK9gxo),
                             }),
@@ -280,7 +280,7 @@ function V(e) {
                                             id: "start",
                                             label: "Start heartbeat (cheatmode)",
                                             action: function () {
-                                                return (0, N.vD)(e.quest.id, !0).catch(ee);
+                                                return (0, m.vD)(e.quest.id, !0).catch(ee);
                                             },
                                         }),
                                         (0, s.jsx)(c.Dr, { id: "stop", label: "Stop heartbeat", action: et }),
@@ -290,7 +290,7 @@ function V(e) {
                                 id: "copy-quest-id",
                                 label: H.intl.string(H.t.oisrFi),
                                 action: () => {
-                                    (0, v.C)(e.quest.id);
+                                    (0, N.C)(e.quest.id);
                                 },
                             }),
                             (0, s.jsx)(c.Dr, { id: "preview", label: H.intl.string(H.t.tx5Ax5), action: eo }),
@@ -322,7 +322,7 @@ function G(e) {
                       type: g.F.CLICK_INTERNAL,
                       adCreativeType: l.p.QUEST,
                       adCreativeId: u.id,
-                      questContentCTA: x.Cy.OPEN_CONTEXT_MENU,
+                      questContentCTA: q.Cy.OPEN_CONTEXT_MENU,
                       surfaceId: r,
                       sourceQuestContent: d,
                       impressionId: C(),
@@ -331,7 +331,7 @@ function G(e) {
                 : _({
                       questId: u.id,
                       questContent: r,
-                      questContentCTA: x.Cy.OPEN_CONTEXT_MENU,
+                      questContentCTA: q.Cy.OPEN_CONTEXT_MENU,
                       questContentPosition: c,
                       sourceQuestContent: d,
                   }),

@@ -57,9 +57,9 @@ function m(e) {
             ref: h,
         } = e,
         A = s.useRef(null),
-        [_, p] = s.useState(!1);
+        [p, _] = s.useState(!1);
     async function N(e) {
-        (I?.(!0), await d(e, t), p(!0), I?.(!1));
+        (I?.(!0), await d(e, t), _(!0), I?.(!1));
     }
     async function C(e) {
         if (
@@ -76,8 +76,8 @@ function m(e) {
     }
     return (
         s.useEffect(() => {
-            _ && null !== A.current && ((0, l.closeModal)(A.current), (A.current = null));
-        }, [_]),
+            p && null !== A.current && ((0, l.closeModal)(A.current), (A.current = null));
+        }, [p]),
         (0, i.jsx)(r.A, {
             ref: h,
             onChange: C,

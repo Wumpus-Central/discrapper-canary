@@ -11,28 +11,28 @@ function d(e) {
     let { children: t } = e,
         [n, d] = i.useState(null),
         [h, f] = i.useState(null),
-        p = i.useRef(void 0),
-        g = i.useRef(new Set()),
+        g = i.useRef(void 0),
+        p = i.useRef(new Set()),
         [m, A] = i.useState(!1),
         y = (0, l.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
         v = i.useCallback((e) => {
-            (g.current.delete(e), A(g.current.size > 0));
+            (p.current.delete(e), A(p.current.size > 0));
         }, []),
-        x = i.useCallback((e) => (g.current.add(e), A(!0), () => v(e)), [v]),
+        x = i.useCallback((e) => (p.current.add(e), A(!0), () => v(e)), [v]),
         w = i.useCallback((e, t) => {
-            for (let n of g.current) n(e, t);
+            for (let n of p.current) n(e, t);
         }, []);
     i.useEffect(() => {
         h?.clearConfetti();
     }, [h, y]);
     let E = i.useCallback((e) => {
-            (window.clearTimeout(p.current),
-                (p.current = window.setTimeout(() => {
+            (window.clearTimeout(g.current),
+                (g.current = window.setTimeout(() => {
                     ((e.width = 0), (e.height = 0));
                 }, 1e4)));
         }, []),
         C = i.useCallback((e) => {
-            window.clearTimeout(p.current);
+            window.clearTimeout(g.current);
             let t = e.canvas;
             if (0 === t.width && 0 === t.height) {
                 let { width: e, height: n } = t.getBoundingClientRect();
@@ -53,7 +53,7 @@ function d(e) {
             return (
                 t.observe(e),
                 () => {
-                    (t.disconnect(), window.clearTimeout(p.current));
+                    (t.disconnect(), window.clearTimeout(g.current));
                 }
             );
         }, [h, E]),

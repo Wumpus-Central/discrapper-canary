@@ -27,13 +27,13 @@ function T(e) {
     let { currentUserId: t, message: l, application: r, channel: a, analyticsLocations: T, onView: S } = e,
         { staticBannerSrc: b, videoBannerSrc: k, bannerAspectRatio: R } = (0, g.f)(r),
         L = E.Ay.getApplicationIconURL({ id: r.id, icon: r.icon }),
-        M = (0, s.bG)([f.A], () => f.A.getGameByApplication(r)?.id, [r]),
-        P = (0, s.bG)(
+        P = (0, s.bG)([f.A], () => f.A.getGameByApplication(r)?.id, [r]),
+        M = (0, s.bG)(
             [p.Ay, f.A],
             () => {
                 let e = p.Ay.getVisibleRunningGames();
                 function t(e) {
-                    return null != e && (e === r.id || (null != M && e === M));
+                    return null != e && (e === r.id || (null != P && e === P));
                 }
                 return (
                     e.find((e) => {
@@ -42,7 +42,7 @@ function T(e) {
                     }) ?? e.find((e) => null == e.id && t(f.A.findGame(e)?.id))
                 );
             },
-            [r.id, M],
+            [r.id, P],
         ),
         D = (0, s.bG)([x.A], () => x.A.getCurrentUserActiveStream()),
         O = (0, s.bG)([I.A], () => I.A.getChannelId()),
@@ -58,7 +58,7 @@ function T(e) {
               ? ((B = y.intl.string(N.default.P0wwmM)), (V = !0))
               : O !== a.id
                 ? ((B = y.intl.string(N.default.qRXats)), (V = !0))
-                : null == P && ((B = y.intl.string(N.default["43zohO"])), (V = !0)),
+                : null == M && ((B = y.intl.string(N.default["43zohO"])), (V = !0)),
         (0, i.jsx)(m.h, {
             header: y.intl.string(N.default.nAyuPp),
             title: r.name,
@@ -76,9 +76,9 @@ function T(e) {
                               trackingArea: h.kY.STREAM,
                               disabled: V,
                               onClick: () => {
-                                  null != P &&
+                                  null != M &&
                                       ((0, v.isWindows)()
-                                          ? (0, A.A)(P.pid)
+                                          ? (0, A.A)(M.pid)
                                           : (0, o.openModalLazy)(async () => {
                                                 let { default: e } = await Promise.all([
                                                     n.e("238417"),
@@ -122,8 +122,8 @@ var S = n(666176),
     k = n(629016),
     R = n(480595),
     L = n(290863),
-    M = n(461213),
-    P = n(287809),
+    P = n(461213),
+    M = n(287809),
     D = n(454292),
     O = n(850670),
     U = n(125017),
@@ -144,8 +144,8 @@ var z = n(359800),
     W = n(379848),
     J = n(409626),
     X = n(692969),
-    q = n(928550),
-    Z = n(232835),
+    Z = n(928550),
+    q = n(232835),
     $ = n(970928),
     Q = n(659051),
     ee = n(652215),
@@ -236,7 +236,7 @@ function ep(e) {
             accountLinkButtonRef: S,
             renderAccountLinkUpsell: b,
         } = e,
-        k = (0, s.bG)([Z.A], () => Z.A.getMessages(o.id)),
+        k = (0, s.bG)([q.A], () => q.A.getMessages(o.id)),
         { actions: R, hasAccountLinkButton: L } = l.useMemo(() => {
             let e = [],
                 i = !0,
@@ -287,9 +287,9 @@ function ep(e) {
             }
             return { actions: e, hasAccountLinkButton: l };
         }, [p, g, A, k, C, n.id, t.id, N, T, _, S]),
-        M = R.some((e) => e.trackingArea === h.kY.CLOUD_PLAY);
-    (0, em.A)(M, _);
-    let P = R.length > 0,
+        P = R.some((e) => e.trackingArea === h.kY.CLOUD_PLAY);
+    (0, em.A)(P, _);
+    let M = R.length > 0,
         D = l.useMemo(
             () =>
                 (0, i.jsx)(r.E, {
@@ -297,9 +297,9 @@ function ep(e) {
                     className: eh.h_,
                     color: "none",
                     lineClamp: 3,
-                    children: (0, d.BE)(t, a, o, u, P),
+                    children: (0, d.BE)(t, a, o, u, M),
                 }),
-            [t, a, o, u, P],
+            [t, a, o, u, M],
         ),
         O = {
             id: n.id,
@@ -402,7 +402,7 @@ function ef(e) {
         { openGameProfileModal: N, launchableAppId: T } =
             ((t = o.id),
             (n = A.author.id),
-            (r = (0, q.dB)(t)),
+            (r = (0, Z.dB)(t)),
             {
                 openGameProfileModal: (0, X.A)({
                     location: "Rich Presence Activity Invite Embed",
@@ -421,20 +421,20 @@ function ef(e) {
         k = (0, K.F)(o),
         R = l.useMemo(() => (null != N ? N : null != k && v ? k : void 0), [v, N, k]),
         L = F.useConfig({ location: "RichPresenceGameActivityInviteEmbed" }),
-        { canStartAuthorization: M, hasAlreadyLinked: P, startAuthorization: D } = (0, Y.RD)(o),
-        O = (0, z.z)(D, P),
+        { canStartAuthorization: P, hasAlreadyLinked: M, startAuthorization: D } = (0, Y.RD)(o),
+        O = (0, z.z)(D, M),
         U = !(0, Q.A)(I, A, o.id),
         G = (0, d.n$)(_, A.activity?.type, U),
         el = l.useRef(null),
-        es = (0, s.bG)([Z.A], () => Z.A.getMessages(c.id));
+        es = (0, s.bG)([q.A], () => q.A.getMessages(c.id));
     function er() {
         var e;
         let t = [];
         return (
             (e = A.id),
             !es.hasAnyAfter(e, (e) => null != e.activity && e.activity.type === ee.xL.JOIN, 25) &&
-                M &&
-                !P &&
+                P &&
+                !M &&
                 L.enabled &&
                 t.push(w.M.GAME_INVITE_ACCOUNT_LINK_UPSELL),
             (0, i.jsx)(W.Ay, {
@@ -478,7 +478,7 @@ function ef(e) {
               onView: x,
               presenceActivity: I,
               analyticsLocations: a,
-              showAuthButton: M && !P && L.enabled,
+              showAuthButton: P && !M && L.enabled,
               startAuthorization: O,
               accountLinkButtonRef: el,
               renderAccountLinkUpsell: er,
@@ -502,8 +502,8 @@ function ef(e) {
               hideParty: g,
               partyStatusElement: f,
               analyticsLocations: a,
-              showAuthButton: M && !P && L.enabled,
-              canPromptAuth: M && !P,
+              showAuthButton: P && !M && L.enabled,
+              canPromptAuth: P && !M,
               startAuthorization: O,
               accountLinkButtonRef: el,
               renderAccountLinkUpsell: er,
@@ -702,7 +702,7 @@ function ek(e) {
         c = l.useMemo(
             () =>
                 a.map((e) => {
-                    let t = P.default.getUser(e);
+                    let t = M.default.getUser(e);
                     return null != t ? t : G.mt;
                 }),
             [a],
@@ -737,7 +737,7 @@ function eR(e) {
             },
             [r, l, m],
         ),
-        g = (0, s.bG)([R.A, M.A], () => (0, D.A)(R.A, M.A, u.id), [u.id]),
+        g = (0, s.bG)([R.A, P.A], () => (0, D.A)(R.A, P.A, u.id), [u.id]),
         p = ek({ presenceActivity: h, channel: l, activityActionType: r.activity?.type });
     return (0, eS.pH)(h?.party?.id) || u.id === S.HT.id
         ? (0, i.jsx)(eT, {

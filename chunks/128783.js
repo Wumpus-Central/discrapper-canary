@@ -21,8 +21,8 @@ function p(e) {
 }
 var A = n(832712),
     f = n(543465),
-    C = n(477427),
-    x = n(393432),
+    x = n(477427),
+    C = n(393432),
     E = n(652215),
     S = n(790782),
     I = n(355097),
@@ -51,8 +51,8 @@ function v(e) {
                         A.A.updateChannelOverrideSettings({
                             guildId: e,
                             channelId: l,
-                            settings: { flags: (0, x.mD)(f.Ay.getChannelIdFlags(e, l), i) },
-                            label: C.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
+                            settings: { flags: (0, C.mD)(f.Ay.getChannelIdFlags(e, l), i) },
+                            label: x.G_.unreads(i === I.vv.UNREADS_ALL_MESSAGES ? S.e.ALL_MESSAGES : S.e.ONLY_MENTIONS),
                             location: { object: E.ZSU.NOTIFICATION_SETTING_UNREAD_NOTICE },
                         }),
                         n());
@@ -68,11 +68,11 @@ var _ = n(228098),
     M = n(666860),
     R = n(174459),
     D = n(867455),
-    k = n(406704),
-    L = n(215741);
+    L = n(406704),
+    k = n(215741);
 function P(e) {
     let { channel: t, narrow: n } = e,
-        s = (0, k.lK)(t);
+        s = (0, L.lK)(t);
     return (
         i.useEffect(() => {
             R.default.track(E.HAw.CHANNEL_BANNER_VIEWED, {
@@ -82,10 +82,10 @@ function P(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: T()(L.JD, { [L.sc]: n }),
+            className: T()(k.JD, { [k.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
-                    className: L.E5,
+                    className: k.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: t.isForumPost() ? j.intl.string(j.t["833FDn"]) : j.intl.string(j.t.rEeodK),
@@ -112,7 +112,7 @@ function P(e) {
 }
 function O(e) {
     let { channel: t, narrow: n } = e,
-        s = (0, k.H_)(t);
+        s = (0, L.H_)(t);
     return (
         i.useEffect(() => {
             R.default.track(E.HAw.CHANNEL_BANNER_VIEWED, {
@@ -122,10 +122,10 @@ function O(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: T()(L.JD, { [L.sc]: n }),
+            className: T()(k.JD, { [k.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
-                    className: L.E5,
+                    className: k.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: t.isForumPost() ? j.intl.string(j.t.E7oO8u) : j.intl.string(j.t["V/JF2N"]),

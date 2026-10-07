@@ -20,9 +20,9 @@ let I = function (e) {
             channel: g,
             emojiDescriptor: h,
             pickerIntention: A,
-            analyticsLocation: _,
+            analyticsLocation: p,
         } = e,
-        p = (0, r.RQ)((e) => e.searchQuery),
+        _ = (0, r.RQ)((e) => e.searchQuery),
         { analyticsLocations: N } = (0, l.Ay)(s.A.EMOJI_PICKER);
     t =
         A === m.EmojiIntention.REACTION
@@ -47,10 +47,10 @@ let I = function (e) {
         upsellViewedTrackingData: {
             type: t,
             is_external: S,
-            location: { ..._, object: x },
+            location: { ...p, object: x },
             location_stack: N,
             sku_id: (0, c.mH)(c.Ay.getSkuIdForPremiumType(f.PremiumTypes.TIER_2)),
-            has_search_query: null != p && "" !== p,
+            has_search_query: null != _ && "" !== _,
             is_animated: O,
         },
         isEmojiPickerOverlay: !0,

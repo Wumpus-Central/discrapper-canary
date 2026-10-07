@@ -15,8 +15,8 @@ var i = n(435558),
     g = n(919638),
     h = n(403362),
     A = n(157559),
-    _ = n(652215),
-    p = n(355097),
+    p = n(652215),
+    _ = n(355097),
     N = n(375708);
 function C(e) {
     I.wc.updateAsync(
@@ -24,12 +24,12 @@ function C(e) {
         (t) => {
             ((t.diversitySurrogate = r.hU.create()), (t.diversitySurrogate.value = e));
         },
-        p.Sb.FREQUENT_USER_ACTION,
+        _.Sb.FREQUENT_USER_ACTION,
     );
 }
 function O(e) {
     (o.h.dispatch({ type: "EMOJI_FETCH", guildId: e }),
-        l.Bo.get({ url: _.Rsh.GUILD_EMOJIS(e), oldFormErrors: !0, rejectWithError: !0 }).then(
+        l.Bo.get({ url: p.Rsh.GUILD_EMOJIS(e), oldFormErrors: !0, rejectWithError: !0 }).then(
             (t) => o.h.dispatch({ type: "EMOJI_FETCH_SUCCESS", guildId: e, emojis: t.body }),
             () => o.h.dispatch({ type: "EMOJI_FETCH_FAILURE", guildId: e }),
         ));
@@ -39,7 +39,7 @@ function S(e) {
     return (
         o.h.dispatch({ type: "EMOJI_UPLOAD_START", guildId: t }),
         l.Bo.post({
-            url: _.Rsh.GUILD_EMOJIS(t),
+            url: p.Rsh.GUILD_EMOJIS(t),
             body: { image: n, name: i, roles: s },
             headers: u.A.buildHeadersForMd5(a),
             context: { client_event_source: r?.page },
@@ -55,7 +55,7 @@ function x(e, t, n) {
     return (
         o.h.dispatch({ type: "EMOJI_DELETE", guildId: e, emojiId: t }),
         l.Bo.del({
-            url: _.Rsh.GUILD_EMOJI(e, t),
+            url: p.Rsh.GUILD_EMOJI(e, t),
             body: null != n ? { replaced_by: n } : void 0,
             oldFormErrors: !0,
             rejectWithError: (0, l.fT)(),
@@ -68,7 +68,7 @@ async function T(e) {
     let { guildId: t, emojiId: n, name: i, roles: s } = e;
     try {
         return await l.Bo.patch({
-            url: _.Rsh.GUILD_EMOJI(t, n),
+            url: p.Rsh.GUILD_EMOJI(t, n),
             body: { name: i, roles: s },
             oldFormErrors: !0,
             rejectWithError: !0,
@@ -98,7 +98,7 @@ function R(e) {
                       }),
                       !1)
                     : !e.emojis.includes(t) && void e.emojis.push(t),
-            p.Sb.INFREQUENT_USER_ACTION,
+            _.Sb.INFREQUENT_USER_ACTION,
         );
 }
 function b(e) {
@@ -110,6 +110,6 @@ function b(e) {
                 if (((e.emojis = y(e.emojis)), !e.emojis.includes(t))) return !1;
                 e.emojis = e.emojis.filter((e) => t !== e);
             },
-            p.Sb.INFREQUENT_USER_ACTION,
+            _.Sb.INFREQUENT_USER_ACTION,
         );
 }

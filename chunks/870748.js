@@ -70,13 +70,13 @@ function _(e, t) {
         (e.isInline = (e) => !!T.has(e.type) || h(e)),
         (e.isVoid = (e) => !!("applicationCommandOption" === e.type && j.has(e.optionType)) || g(e)),
         (e.deleteBackward = (t) => {
-            P(e, () => S(t));
+            M(e, () => S(t));
         }),
         (e.deleteForward = (t) => {
-            P(e, () => v(t));
+            M(e, () => v(t));
         }),
         (e.deleteFragment = (t) => {
-            P(e, () => _(t));
+            M(e, () => _(t));
         }));
     let D = null,
         U = null,
@@ -156,7 +156,7 @@ function _(e, t) {
                                                 if (null != s)
                                                     for (let l of s) {
                                                         e.add(l.name);
-                                                        let i = M(n, t, l.name) ?? l.text,
+                                                        let i = P(n, t, l.name) ?? l.text,
                                                             r = {
                                                                 type: "applicationCommandOption",
                                                                 optionName: l.name,
@@ -171,7 +171,7 @@ function _(e, t) {
                                                         let e, i;
                                                         o.length > 0 && !j.has(l.type)
                                                             ? ((e = o), (o = ""))
-                                                            : (e = (i = M(n, t, l.name)) ?? "");
+                                                            : (e = (i = P(n, t, l.name)) ?? "");
                                                         let r = {
                                                             type: "applicationCommandOption",
                                                             optionName: l.name,
@@ -434,7 +434,7 @@ function w(e) {
         l = n.children[0];
     return I.l5.isText(l) ? { command: n.command, commandText: l.text } : { command: n.command, commandText: null };
 }
-function P(e, t) {
+function M(e, t) {
     let n = y.O7(e)[0];
     t();
     let l = I.ZF.toPoint(e.selection);
@@ -444,7 +444,7 @@ function P(e, t) {
         I.Kh.equals(l, { path: N.fP, offset: i.displayName.length + 1 }) &&
         b.b.insertText(e, " ");
 }
-function M(e, t, n) {
+function P(e, t, n) {
     let l = e.activeCommand?.options?.find((e) => e.name === n),
         i = e.initialValues[n];
     if (null == l || null == i) return null;

@@ -10,8 +10,8 @@ var r = n(477900),
     d = n(17928),
     h = n(397613),
     f = n(821609),
-    p = n(825484),
-    g = n(148810),
+    g = n(825484),
+    p = n(148810),
     m = n(521502),
     A = n(380610),
     y = n(807393),
@@ -29,7 +29,7 @@ function _() {
         return null;
     async function n() {
         try {
-            (t(!0), await (0, g.iD)(), window.location.reload(!0));
+            (t(!0), await (0, p.iD)(), window.location.reload(!0));
         } catch (e) {
             t(!1);
         }
@@ -102,7 +102,7 @@ class I extends i.PureComponent {
                         (0, r.jsx)("p", { children: N.intl.string(N.t.CvQlAH) }),
                     ],
                 }),
-                n = (0, r.jsxs)(p.e, {
+                n = (0, r.jsxs)(g.e, {
                     children: [
                         (0, r.jsx)(f.$, {
                             variant: "primary",

@@ -79,17 +79,17 @@ let m = {
                 onBlur: j,
                 pulse: x,
                 sparkle: y,
-                notification: v,
-                "aria-label": _,
+                notification: _,
+                "aria-label": v,
                 "aria-expanded": R,
-                "aria-haspopup": O,
-                "aria-controls": G,
-                noHover: M,
+                "aria-haspopup": M,
+                "aria-controls": O,
+                noHover: G,
             } = e,
             E = (0, s.p)(null != A, { ...m, keys: (e) => (e ? "children" : "icon") });
         function S(e) {
             let { component: n } = e;
-            return null != v
+            return null != _
                 ? (0, i.jsxs)("div", {
                       className: f.IO,
                       children: [
@@ -107,13 +107,13 @@ let m = {
         }
         return (0, i.jsxs)(c.D, {
             innerRef: n,
-            "aria-label": _,
+            "aria-label": v,
             "aria-expanded": R,
-            "aria-haspopup": O,
-            "aria-controls": G,
+            "aria-haspopup": M,
+            "aria-controls": O,
             "aria-disabled": l,
             tabIndex: l ? -1 : 0,
-            className: r()(t, f.x6, { [f.vu]: I, [f.CK]: M, [f.s0]: x, [f.r9]: l }),
+            className: r()(t, f.x6, { [f.vu]: I, [f.CK]: G, [f.s0]: x, [f.r9]: l }),
             onClick: l ? void 0 : b,
             onDoubleClick: l ? void 0 : h,
             onMouseEnter: T,

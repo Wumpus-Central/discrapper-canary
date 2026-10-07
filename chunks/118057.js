@@ -23,16 +23,16 @@ function u(e) {
             enabled: g = !0,
             onDispatch: h,
             autoFocusElement: A = !0,
-            useVirtualFocus: _ = !1,
+            useVirtualFocus: p = !1,
         } = e,
-        p = i.useCallback(
+        _ = i.useCallback(
             (e, t) => {
                 let n = (0, s.A)(e, t);
                 return (null != h && h(e, n, t), n);
             },
             [h],
         ),
-        [N, C] = i.useReducer(p, { focusedX: u, focusedY: d, columnCounts: n }),
+        [N, C] = i.useReducer(_, { focusedX: u, focusedY: d, columnCounts: n }),
         { columnCounts: O, focusedX: S, focusedY: x } = N,
         [T] = i.useState(() => (0, r.nF)(C, 16));
     return (
@@ -52,9 +52,9 @@ function u(e) {
                     maintainFocusPosition: g,
                     enabled: h,
                     autoFocusElement: A,
-                    useVirtualFocus: _,
+                    useVirtualFocus: p,
                 } = e,
-                p = i.useRef(h),
+                _ = i.useRef(h),
                 N = c(o(t, u, d)),
                 [C, O] = i.useState(!1),
                 [S, x] = i.useState(!1),
@@ -71,7 +71,7 @@ function u(e) {
             i.useEffect(() => () => j.clean(), [j]);
             let R = i.useCallback(
                     (e) => {
-                        if (!p.current || !A) return !1;
+                        if (!_.current || !A) return !1;
                         e.focus();
                     },
                     [A],
@@ -108,7 +108,7 @@ function u(e) {
                 null != n && R(n);
             }, [t, v, C, R, u, d]);
             let D = i.useCallback((e) => {
-                p.current && null == e && M(!0);
+                _.current && null == e && M(!0);
             }, []);
             (i.useEffect(() => {
                 C && S && null != N && (R(N), x(!1));
@@ -118,9 +118,9 @@ function u(e) {
                 }, [u, d]));
             let P = i.useCallback(
                     (e) => {
-                        if (!p.current) return;
+                        if (!_.current) return;
                         if (
-                            !_ &&
+                            !p &&
                             a.includes(e.key) &&
                             !(e.shiftKey || e.altKey || e.metaKey || e.ctrlKey) &&
                             e.currentTarget === e.target
@@ -232,7 +232,7 @@ function u(e) {
             maintainFocusPosition: I,
             enabled: g,
             autoFocusElement: A,
-            useVirtualFocus: _,
+            useVirtualFocus: p,
         })
     );
 }

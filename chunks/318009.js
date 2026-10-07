@@ -10,8 +10,8 @@ var r = n(477900),
     d = n(267102),
     h = n(363195),
     f = n(712687),
-    p = n(625494),
-    g = n(652215);
+    g = n(625494),
+    p = n(652215);
 function m() {
     window.getSelection().removeAllRanges();
 }
@@ -24,7 +24,7 @@ function A(e) {
             rect: c,
             position: h,
             align: f,
-            impressionName: p,
+            impressionName: g,
             impressionProperties: A,
             disableClickTrap: y = !1,
             repositionOnContentChange: v = !1,
@@ -38,13 +38,13 @@ function A(e) {
         w.current = o;
     }),
         i.useEffect(() => () => w.current?.(), []),
-        (0, u.A)({ type: s.ImpressionTypes.MENU, name: p, properties: A }));
+        (0, u.A)({ type: s.ImpressionTypes.MENU, name: g, properties: A }));
     let E = (0, d.aL)(),
         C = i.useCallback(() => {
-            E.dispatch(g.jej.POPOUT_SHOW);
+            E.dispatch(p.jej.POPOUT_SHOW);
         }, [E]),
         b = i.useCallback(() => {
-            E.dispatch(g.jej.POPOUT_HIDE);
+            E.dispatch(p.jej.POPOUT_HIDE);
         }, [E]),
         N = a.ownerDocument;
     return (0, r.jsx)(l.Ow, {
@@ -74,7 +74,7 @@ class y extends i.PureComponent {
         let { renderLazy: e, renderWindow: t } = this.props;
         if (
             (t.addEventListener("resize", this.closeResize, !0),
-            p._.subscribe(g.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
+            g._.subscribe(p.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu),
             null != e)
         ) {
             let t = setTimeout(() => {
@@ -92,7 +92,7 @@ class y extends i.PureComponent {
     componentWillUnmount() {
         let { renderWindow: e } = this.props;
         (e.removeEventListener("resize", this.closeResize, !0),
-            p._.unsubscribe(g.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu));
+            g._.unsubscribe(p.jej.CONTEXT_MENU_CLOSE, this.props.closeContextMenu));
     }
     closeResize = (e) => {
         let { renderWindow: t } = this.props;

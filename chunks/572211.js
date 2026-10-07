@@ -43,11 +43,11 @@ function _(e) {
     } = e;
     S = (0, f.Q)(S);
     let { primaryColor: R, secondaryColor: L } = (0, A.A)(N ?? c),
-        M = `linear-gradient(45deg, ${R}, ${L})`,
-        P = (0, d.bG)([p.Ay], () => p.Ay.useReducedMotion),
+        P = `linear-gradient(45deg, ${R}, ${L})`,
+        M = (0, d.bG)([p.Ay], () => p.Ay.useReducedMotion),
         D = (0, x.DC)(S),
         O = null != c && !_,
-        U = null != v && !1 === P && !_,
+        U = null != v && !1 === M && !_,
         G = O || U,
         w = 0 === j ? E.pv : E.$g,
         B = s.useRef(null),
@@ -89,7 +89,7 @@ function _(e) {
     return (0, l.jsxs)("div", {
         ref: D,
         className: E.E6,
-        style: { background: M },
+        style: { background: P },
         children: [
             G &&
                 (0, l.jsxs)(C, {

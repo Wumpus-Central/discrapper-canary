@@ -79,8 +79,8 @@ function R(e) {
         E = (n?.description?.trim().length ?? 0) > 0,
         [C, R] = l.useState(1),
         L = (0, m.A)("(max-width: 1439px)"),
-        { selectedTab: M, isPhantomPreview: P } = (0, j.k)(),
-        D = M === N.B.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t["LvXy/H"]) : T.intl.string(T.t.XyqKh8),
+        { selectedTab: P, isPhantomPreview: M } = (0, j.k)(),
+        D = P === N.B.GUILD_PRODUCTS_PREVIEW ? T.intl.string(T.t["LvXy/H"]) : T.intl.string(T.t.XyqKh8),
         O = E
             ? (0, i.jsxs)(i.Fragment, {
                   children: [
@@ -108,7 +108,7 @@ function R(e) {
             : (0, i.jsx)(d.E, {
                   variant: "text-sm/normal",
                   color: "text-default",
-                  children: P ? D : T.intl.string(T.t["NY/FIW"]),
+                  children: M ? D : T.intl.string(T.t["NY/FIW"]),
               });
     return (0, i.jsxs)("div", {
         className: S.kL,
@@ -121,7 +121,7 @@ function R(e) {
                             guild: t,
                             size: p.Ay.Sizes.LARGER,
                             iconSrc:
-                                null == t.icon || P
+                                null == t.icon || M
                                     ? (0, h.n)("server_products/storefront/default-guild-icon.jpg")
                                     : void 0,
                         }),
@@ -137,7 +137,7 @@ function R(e) {
                                     variant: "heading-xl/semibold",
                                     color: "text-strong",
                                     lineClamp: 2,
-                                    children: P
+                                    children: M
                                         ? T.intl.string(T.t.rtgp7q)
                                         : T.intl.formatToPlainString(T.t.NZeik9, { guildName: t.name }),
                                 }),
@@ -159,7 +159,7 @@ function R(e) {
                     }),
                 ],
             }),
-            (0, i.jsx)(k, { coverImageAsset: n?.cover_image_asset, isPreview: P }),
+            (0, i.jsx)(k, { coverImageAsset: n?.cover_image_asset, isPreview: M }),
         ],
     });
 }

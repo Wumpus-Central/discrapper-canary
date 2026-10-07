@@ -193,8 +193,8 @@ class f {
               }, []);
     }
 }
-let p = [" ", "Enter"],
-    g = ["Escape"];
+let g = [" ", "Enter"],
+    p = ["Escape"];
 function m(e) {
     (e.preventDefault(), e.stopImmediatePropagation());
 }
@@ -245,7 +245,7 @@ class v {
             this.endDrag());
     }
     handleGlobalKeyDown = (e) => {
-        this.monitor.isDragging() && A(e, g) && (this.endDrag(e), this._announcer.announceCancel());
+        this.monitor.isDragging() && A(e, p) && (this.endDrag(e), this._announcer.announceCancel());
     };
     setDndMode(e) {
         this.options?.onDndModeChanged(e);
@@ -313,7 +313,7 @@ class v {
             this._announcer.announceDrag(n, e));
     };
     handleDrop = (e) => {
-        A(e, p) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
+        A(e, g) && (this.actions.drop(), this.endDrag(e), this._announcer.announceDrop());
     };
     endDrag(e) {
         (null != e && m(e),

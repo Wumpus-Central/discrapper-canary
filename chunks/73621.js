@@ -44,7 +44,7 @@ let A = function (e) {
             icon: f,
             description: h,
             color: A,
-            tooltip: _,
+            tooltip: p,
         } = {
             0: {
                 icon: r.m,
@@ -97,7 +97,7 @@ let A = function (e) {
             (0, s.jsx)(d.m, {
                 asContainer: !0,
                 position: "right",
-                text: _,
+                text: p,
                 children: (0, s.jsx)(m.E, { size: "custom", width: 20, height: 20, color: A }),
             }),
         ],

@@ -1,4 +1,4 @@
-n.d(t, { m: () => N, default: () => w });
+n.d(t, { m: () => L, default: () => w });
 var i = n(477900),
     o = n(582128),
     a = n(503698),
@@ -14,9 +14,9 @@ var i = n(477900),
     C = n(320448),
     E = n(192308),
     y = n(964486),
-    g = n(235986),
-    A = n(174459),
-    _ = n(859703),
+    _ = n(235986),
+    g = n(174459),
+    A = n(859703),
     I = n(866157),
     h = n(590202),
     S = n(652215),
@@ -26,20 +26,20 @@ let v = "/assets/1929535a8397f7f0.png";
 function w(e) {
     let { questId: t, survey: n, transitionState: a, onClose: s, onSubmit: p } = e,
         C = (0, I.C5)(t),
-        [E, _] = o.useState(0),
+        [E, A] = o.useState(0),
         [h, w] = (0, u.z)(() => ({ from: { width: "0%" }, config: { duration: 2500 } }));
-    function N(e) {
+    function L(e) {
         (p(),
-            _(1),
+            A(1),
             null != C &&
-                A.default.track(S.HAw.QUEST_SURVEY_SUBMITTED, { ...b(C, n), choice: e.text, choice_id: e.key }));
+                g.default.track(S.HAw.QUEST_SURVEY_SUBMITTED, { ...q(C, n), choice: e.text, choice_id: e.key }));
     }
-    async function q(e) {
+    async function b(e) {
         1 === e && (await w({ width: "100%" }), s());
     }
     return (
         (0, y.Ay)(() => {
-            null != C && A.default.track(S.HAw.QUEST_SURVEY_DISPLAYED, b(C, n));
+            null != C && g.default.track(S.HAw.QUEST_SURVEY_DISPLAYED, q(C, n));
         }),
         null == C && s(),
         (0, i.jsx)(r.EO, {
@@ -51,14 +51,14 @@ function w(e) {
             children: (0, i.jsxs)(c.t, {
                 activeSlide: E,
                 width: 467,
-                onSlideReady: q,
+                onSlideReady: b,
                 children: [
                     (0, i.jsxs)(c.q, {
                         id: 0,
                         children: [
                             (0, i.jsxs)(r.rQ, {
                                 "data-migration-pending": !0,
-                                direction: g.A.Direction.VERTICAL,
+                                direction: _.A.Direction.VERTICAL,
                                 separator: !1,
                                 className: T.Hc,
                                 children: [
@@ -76,7 +76,7 @@ function w(e) {
                                 "data-migration-pending": !0,
                                 scrollbarGutter: !1,
                                 className: T.jE,
-                                children: n.choices.map((e) => (0, i.jsx)(L, { choice: e, onClick: N }, e.key)),
+                                children: n.choices.map((e) => (0, i.jsx)(N, { choice: e, onClick: L }, e.key)),
                             }),
                         ],
                     }),
@@ -120,7 +120,7 @@ function w(e) {
         })
     );
 }
-function L(e) {
+function N(e) {
     let { className: t, choice: n, onClick: o } = e;
     return (0, i.jsxs)(p.D, {
         className: s()(T.z5, t),
@@ -128,7 +128,7 @@ function L(e) {
         children: [(0, i.jsx)(m.E, { variant: "text-sm/semibold", children: n.text }), (0, i.jsx)(C._, {})],
     });
 }
-function N(e) {
+function L(e) {
     let t = !1;
     (0, E.openModalLazy)(
         async () => {
@@ -144,13 +144,13 @@ function N(e) {
         },
         {
             onCloseCallback: () => {
-                let n = _.A.getQuest(e.questId);
-                null != n && A.default.track(S.HAw.QUEST_SURVEY_DISMISSED, { ...b(n, e.survey), submitted: t });
+                let n = A.A.getQuest(e.questId);
+                null != n && g.default.track(S.HAw.QUEST_SURVEY_DISMISSED, { ...q(n, e.survey), submitted: t });
             },
         },
     );
 }
-function b(e, t) {
+function q(e, t) {
     return {
         quest_id: e.id,
         quest_status: (0, h.NI)(e),

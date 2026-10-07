@@ -1,4 +1,4 @@
-(l.d(n, { A: () => B }), l(321073));
+(l.d(n, { A: () => w }), l(321073));
 var t = l(477900),
     i = l(582128),
     a = l(17928),
@@ -30,9 +30,9 @@ var t = l(477900),
     R = l(688438),
     G = l(652215),
     L = l(375708),
-    w = l(172039);
-function B(e) {
-    let { channelId: n, baseChannelId: B, channelViewSource: D = "Split View", isResourceChannelView: F } = e,
+    D = l(172039);
+function w(e) {
+    let { channelId: n, baseChannelId: w, channelViewSource: B = "Split View", isResourceChannelView: F } = e,
         H = (0, a.bG)([y.A], () => y.A.getChannel(n)),
         V = (0, a.bG)([S.A], () => S.A.getGuild(H?.getGuildId())),
         O = (0, k.Ay)(H),
@@ -47,19 +47,19 @@ function B(e) {
             null == H ||
                 X.current ||
                 ((X.current = !0),
-                (0, u.zV)(G.HAw.CHANNEL_OPENED, { ...(0, o.q)(H.id), channel_view: D }),
+                (0, u.zV)(G.HAw.CHANNEL_OPENED, { ...(0, o.q)(H.id), channel_view: B }),
                 (0, A.A)({ channelId: H.id }));
-        }, [H, D]),
+        }, [H, B]),
         null == H || null == V)
     )
         return null;
-    let Y = n === B,
+    let Y = n === w,
         W = [];
     return (P || Y || W.push((0, t.jsx)(j.A, { channel: H }, "notifications")),
     W.push(
         (0, t.jsx)(
             f.Ay.Icon,
-            { icon: s.P, tooltip: L.intl.string(L.t.cpT0Cq), onClick: () => E.A.closeChannelSidebar(B) },
+            { icon: s.P, tooltip: L.intl.string(L.t.cpT0Cq), onClick: () => E.A.closeChannelSidebar(w) },
             "close",
         ),
     ),
@@ -115,7 +115,7 @@ function B(e) {
                         }),
                     }),
                     (0, t.jsx)("div", {
-                        className: w.T,
+                        className: D.T,
                         children: (0, t.jsx)(R.A, { channel: H, guild: V, chatInputType: g.oU.SIDEBAR }, n),
                     }),
                 ],

@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     kL: "container_a5f01b",
     r: "soundContainer_a5f01b",
     Zg: "emoji_a5f01b",

@@ -10,8 +10,8 @@ var r = n(477900),
     d = n(264927),
     h = n(652215),
     f = n(650583),
-    p = n(375708);
-function g(e) {
+    g = n(375708);
+function p(e) {
     if (e.ctrlKey || e.altKey || e.metaKey || e.key !== f.dh.TAB || null == e.target) return;
     let { target: t } = e,
         n = (0, l.BF)(e)?.activeElement;
@@ -48,9 +48,9 @@ function m(e) {
         i.useEffect(
             () => (
                 (0, s.waitForAllDefaultIntlMessagesLoaded)().then(() => (0, d.Z7)()),
-                p.intl.onLocaleChange(() => (0, d.Z7)()),
-                window.addEventListener("keydown", g),
-                () => window.removeEventListener("keydown", g)
+                g.intl.onLocaleChange(() => (0, d.Z7)()),
+                window.addEventListener("keydown", p),
+                () => window.removeEventListener("keydown", p)
             ),
             [],
         ),

@@ -10,8 +10,8 @@ var i = n(17928),
     d = n(480595),
     h = n(290863),
     f = n(994500),
-    p = n(287809),
-    g = n(645959),
+    g = n(287809),
+    p = n(645959),
     m = n(652215);
 let A = [o.rD.TEXT_CHANNEL, o.rD.GROUP_DM, o.rD.USER],
     y = null,
@@ -31,7 +31,7 @@ function b() {
 class N extends i.Ay.Store {
     static displayName = "ActivityInviteModalStore";
     initialize() {
-        this.waitFor(c.A, u.A, d.A, h.A, g.A, p.default);
+        this.waitFor(c.A, u.A, d.A, h.A, p.A, g.default);
     }
     getActivity() {
         return y;
@@ -55,12 +55,12 @@ let O = new N(s.h, {
                             ((w = (
                                 "" === t.trim()
                                     ? ((n = []),
-                                      g.A.getPrivateChannelIds().forEach((e) => {
+                                      p.A.getPrivateChannelIds().forEach((e) => {
                                           let t = c.A.getChannel(e);
                                           if (null != t)
                                               if (t.type === m.rbe.DM) {
                                                   let e = t.getRecipientId(),
-                                                      r = null != e ? p.default.getUser(e) : null;
+                                                      r = null != e ? g.default.getUser(e) : null;
                                                   null != r && n.push({ type: o.rD.USER, record: r, score: 0 });
                                               } else
                                                   t.isMultiUserDM() &&
@@ -87,7 +87,7 @@ let O = new N(s.h, {
                                             return {
                                                 type: o.rD.TEXT_CHANNEL,
                                                 sent: x.includes(t.id),
-                                                categoryName: null != n ? (0, a.m1)(n, p.default, f.A) : "",
+                                                categoryName: null != n ? (0, a.m1)(n, g.default, f.A) : "",
                                                 guildName: r?.name ?? "",
                                                 data: e,
                                             };

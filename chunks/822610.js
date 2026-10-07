@@ -1,4 +1,4 @@
-(n.d(t, { A: () => P }), n(321073));
+(n.d(t, { A: () => M }), n(321073));
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -166,14 +166,14 @@ function w(e) {
             () => c.h.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)
         );
     }, [t, n]);
-    let P = i.useCallback(() => {
+    let M = i.useCallback(() => {
         C.focusFirstVisibleItem();
     }, [C]);
-    (0, x.Vo)({ event: _.jej.FOCUS_ATTACHMENT_AREA, handler: P });
-    let M = { isApplicationCommand: b, previousUploadOptions: j, uploadOptions: T },
-        D = i.useRef(M);
+    (0, x.Vo)({ event: _.jej.FOCUS_ATTACHMENT_AREA, handler: M });
+    let P = { isApplicationCommand: b, previousUploadOptions: j, uploadOptions: T },
+        D = i.useRef(P);
     (i.useEffect(() => {
-        D.current = M;
+        D.current = P;
     }),
         i.useEffect(() => {
             let { isApplicationCommand: e, previousUploadOptions: l, uploadOptions: i } = D.current;
@@ -221,7 +221,7 @@ function w(e) {
               }),
           });
 }
-let P = i.memo(function (e) {
+let M = i.memo(function (e) {
     let { channelId: t, type: n, canAttachFiles: i, ignoreUploadId: r, smallAttachments: s = !1 } = e;
     return i ? (0, l.jsx)(w, { channelId: t, type: n, ignoreUploadId: r, smallAttachments: s }) : null;
 });

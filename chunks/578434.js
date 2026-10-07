@@ -14,8 +14,8 @@ var l = n(477900),
     p = n(652215),
     A = n(994500),
     f = n(975571),
-    C = n(786051),
-    x = n(559868),
+    x = n(786051),
+    C = n(559868),
     E = n(375708);
 function S(e) {
     var t, S;
@@ -69,20 +69,20 @@ function S(e) {
                     (b.current = 0));
             };
         }, [_, v]));
-    let k = (0, g.A)(M.id),
-        L = M.isSystemDM(),
-        P = D && !L && !M.isMultiUserDM(),
+    let L = (0, g.A)(M.id),
+        k = M.isSystemDM(),
+        P = D && !k && !M.isMultiUserDM(),
         O = {};
-    if (L) {
-        let e = k ? E.intl.string(E.t["+KSnWX"]) : E.intl.string(E.t.hvVgAZ);
+    if (k) {
+        let e = L ? E.intl.string(E.t["+KSnWX"]) : E.intl.string(E.t.hvVgAZ);
         ((O.message = E.intl.string(E.t.Bt2N7D)),
             (O.subtitle = E.intl.string(E.t["n/Vzkw"])),
             (O.buttonText = e),
-            (O.buttonIcon = k ? a.t : void 0),
+            (O.buttonIcon = L ? a.t : void 0),
             (O.onButtonClick = function () {
-                if (k) {
-                    (open(x.Do),
-                        u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: x.Do }));
+                if (L) {
+                    (open(C.Do),
+                        u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: C.Do }));
                     return;
                 }
                 open(f.A.getArticleURL(p.MVz.SYSTEM_DMS));
@@ -95,5 +95,5 @@ function S(e) {
             (O.onButtonClick = function () {
                 r.A.unblockUser(M.getRecipientId());
             }));
-    return (0, l.jsx)(C.A, { ...O, children: R });
+    return (0, l.jsx)(x.A, { ...O, children: R });
 }

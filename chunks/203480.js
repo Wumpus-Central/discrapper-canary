@@ -10,10 +10,10 @@ var r = n(582128),
     d = n(502229),
     h = n(532624),
     f = n(350535),
-    p = n(650583);
-function g(e) {
+    g = n(650583);
+function p(e) {
     let t = e.ctrlKey || e.altKey || e.metaKey;
-    e.key !== p.N$.Tab ||
+    e.key !== g.N$.Tab ||
         t ||
         __OVERLAY__ ||
         (0, l.hasAnyModalOpen)() ||
@@ -30,25 +30,25 @@ let A = function (e, t) {
             !(function (e, t) {
                 let n = (0, i.Cw)((0, i.BF)(e)?.activeElement);
                 if (
-                    (n && e.key !== p.N$.Tab) ||
+                    (n && e.key !== g.N$.Tab) ||
                     e.ctrlKey ||
                     e.altKey ||
                     e.metaKey ||
-                    (e.key !== p.N$.Tab && e.shiftKey)
+                    (e.key !== g.N$.Tab && e.shiftKey)
                 )
                     return;
                 let r = (function (e) {
                     let t = f.Cy("shift"),
                         n = f.Cy("tab");
-                    if (e.key === p.N$.Tab && e.shiftKey && null != t && null != n)
+                    if (e.key === g.N$.Tab && e.shiftKey && null != t && null != n)
                         return [
-                            [p.zY.KEYBOARD_KEY, t],
-                            [p.zY.KEYBOARD_KEY, n],
+                            [g.zY.KEYBOARD_KEY, t],
+                            [g.zY.KEYBOARD_KEY, n],
                         ];
-                    let r = p.G1.get(e.key);
+                    let r = g.G1.get(e.key);
                     if (null != r) {
                         let e = f.Cy(r);
-                        if (null != e) return [[p.zY.KEYBOARD_KEY, e]];
+                        if (null != e) return [[g.zY.KEYBOARD_KEY, e]];
                     }
                     return null;
                 })(e);
@@ -64,11 +64,11 @@ let A = function (e, t) {
         (0, r.useLayoutEffect)(
             () => (
                 n
-                    ? (e.addEventListener("mousedown", m), e.addEventListener("keydown", g))
+                    ? (e.addEventListener("mousedown", m), e.addEventListener("keydown", p))
                     : e.addEventListener("keydown", l),
                 () => {
                     n
-                        ? (e.removeEventListener("mousedown", m), e.removeEventListener("keydown", g))
+                        ? (e.removeEventListener("mousedown", m), e.removeEventListener("keydown", p))
                         : e.removeEventListener("keydown", l);
                 }
             ),

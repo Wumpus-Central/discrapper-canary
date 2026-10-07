@@ -1,4 +1,4 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => x });
 var l = n(477900),
     i = n(582128),
     s = n(661531),
@@ -14,17 +14,17 @@ var l = n(477900),
     p = n(375708),
     A = n(548426),
     f = n(165648);
-function C(e) {
-    let { onClose: t, onConfirm: C, onCancel: x, channel: E, analyticsType: S, popoutText: I, animation: j } = e;
+function x(e) {
+    let { onClose: t, onConfirm: x, onCancel: C, channel: E, analyticsType: S, popoutText: I, animation: j } = e;
     i.useEffect(() => {
         m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(E) });
     }, [S, E]);
     let y = i.useCallback(() => {
-            (C?.(), t());
-        }, [C, t]),
-        v = i.useCallback(() => {
             (x?.(), t());
         }, [x, t]),
+        v = i.useCallback(() => {
+            (C?.(), t());
+        }, [C, t]),
         _ = i.useRef(null);
     return (
         i.useEffect(() => {
