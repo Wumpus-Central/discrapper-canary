@@ -58,7 +58,7 @@ let r = {
         inlineRequire: () => n(340137).A,
         loadAfterConnectionOpen: !0,
     },
-    DesktopNotificationsManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(105613).A },
+    NotificationsManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(287542).A },
     DesktopPerfAnalyticsManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(311849).A },
     DesktopPerfHeartbeatManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(687829).A },
     DesktopTTIClearV8CacheExperimentManager: {
