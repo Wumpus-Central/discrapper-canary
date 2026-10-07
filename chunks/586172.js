@@ -1,52 +1,57 @@
-l.d(t, { l: () => j, L: () => f });
+l.d(t, { l: () => f, L: () => j });
 var n = l(477900),
-    s = l(582128),
-    r = l(945810),
+    r = l(582128),
+    s = l(945810),
+    o = l(626551),
     a = l(503698),
     c = l.n(a),
-    o = l(768947),
-    i = l(389437);
-function h(e) {
-    let { code: t, lang: l, highlightedClassName: r, ...a } = e,
-        c = s.useMemo(() => (0, o.py)(l), [l]);
-    return null == c
-        ? (0, n.jsx)(u, { code: t, ...a })
-        : (0, n.jsx)(s.Suspense, {
-              fallback: (0, n.jsx)(u, { code: t, ...a }),
+    i = l(768947),
+    h = l(389437);
+function u(e) {
+    let { code: t, lang: l, highlightedClassName: s, ...o } = e,
+        a = r.useMemo(() => (0, i.py)(l), [l]);
+    return null == a
+        ? (0, n.jsx)(p, { code: t, ...o })
+        : (0, n.jsx)(r.Suspense, {
+              fallback: (0, n.jsx)(p, { code: t, ...o }),
               children:
-                  "ansi" === c
-                      ? (0, n.jsx)(m, { code: t, highlightedClassName: r, ...a })
-                      : (0, n.jsx)(p, { code: t, lang: c, highlightedClassName: r, ...a }),
+                  "ansi" === a
+                      ? (0, n.jsx)(d, { code: t, highlightedClassName: s, ...o })
+                      : (0, n.jsx)(m, { code: t, lang: a, highlightedClassName: s, ...o }),
           });
 }
-function u(e) {
+function p(e) {
     let { code: t, ...l } = e;
     return (0, n.jsx)("code", { ...l, children: t });
 }
-function p(e) {
-    let { code: t, lang: l, className: s, highlightedClassName: r, ...a } = e,
-        i = (0, o.OY)(l, t);
-    return null == i
-        ? (0, n.jsx)(u, { code: t, className: s, ...a })
-        : (0, n.jsx)(d, { html: i, className: c()(s, `language-${l}`, r), ...a });
-}
 function m(e) {
-    let { code: t, className: l, highlightedClassName: s, ...r } = e,
-        a = (0, o.ph)(t);
-    return (0, n.jsx)(d, { className: c()(l, i.ansi, s), html: a, ...r });
+    let { code: t, lang: l, className: r, highlightedClassName: s, ...o } = e,
+        a = (0, i.OY)(l, t);
+    return null == a
+        ? (0, n.jsx)(p, { code: t, className: r, ...o })
+        : (0, n.jsx)(g, { html: a, className: c()(r, `language-${l}`, s), ...o });
 }
 function d(e) {
+    let { code: t, className: l, highlightedClassName: s, ...a } = e,
+        u = r.useMemo(() => (0, o.$M)(t), [t]);
+    return (0, n.jsx)("code", {
+        className: c()(l, h.ansi, s),
+        ...a,
+        children: u.map((e, t) => (0, n.jsx)("span", { style: (0, i.OT)(e), children: e.value }, t)),
+    });
+}
+function g(e) {
     let { html: t, ...l } = e;
     return (0, n.jsx)("code", { ...l, dangerouslySetInnerHTML: { __html: t } });
 }
-let f = (0, r.mj)({
+let j = (0, s.mj)({
     name: "2026-03-arborium-highlight",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-function j(e) {
-    let { children: t, location: l, ...s } = e,
-        { enabled: r } = f.useConfig({ location: l });
-    return r ? (0, n.jsx)(h, { ...s }) : t;
+function f(e) {
+    let { children: t, location: l, ...r } = e,
+        { enabled: s } = j.useConfig({ location: l });
+    return s ? (0, n.jsx)(u, { ...r }) : t;
 }

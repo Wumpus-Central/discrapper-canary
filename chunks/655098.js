@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(723702),
     h = n(38405),
     m = n(19575),
-    p = n(408018),
-    f = n(186306),
+    f = n(408018),
+    p = n(186306),
     g = n(654821),
     x = n(35277),
     E = n(820066),
@@ -25,8 +25,8 @@ var l = n(477900),
     v = n(565645),
     T = n(730134),
     j = n(775602),
-    k = n(47167),
-    _ = n(442247),
+    _ = n(47167),
+    k = n(442247),
     R = n(569926),
     O = n(106191),
     L = n(545868),
@@ -141,7 +141,7 @@ function el(e) {
         r = "text",
         s = !0;
     return (null != n &&
-        ((i = (0, w.nc)(n) ? (0, k.m1)(n, z.default, G.A) : Z.intl.string(Z.t["/YzI63"])),
+        ((i = (0, w.nc)(n) ? (0, _.m1)(n, z.default, G.A) : Z.intl.string(Z.t["/YzI63"])),
         (r = (0, w.nc)(n) ? ((0, q.QG)(n) ?? "text") : "locked"),
         (s = (0, M.Y)(n.type))),
     s)
@@ -164,7 +164,7 @@ function es(e) {
 }
 function ea(e) {
     let { id: t } = e,
-        n = (0, _.K)(t),
+        n = (0, k.K)(t),
         i = null != n;
     return ((0, R.I)(i ? void 0 : t), i)
         ? (0, l.jsxs)(U.A, {
@@ -196,12 +196,12 @@ let ed = {
     },
     eh = new Set(["link", "url", "autolink"]);
 var em = n(165648);
-function ep(e) {
+function ef(e) {
     let { className: t, attributes: n, children: i } = e,
         r = s()(eu.S0, eu.Cj, t);
     return (0, l.jsx)("span", { ...n, className: r, contentEditable: !1, children: i });
 }
-var ef = n(652215),
+var ep = n(652215),
     eg = n(809067);
 class ex extends i.PureComponent {
     containerRef = i.createRef();
@@ -221,7 +221,7 @@ class ex extends i.PureComponent {
             (this.handleContextMenu = this.handleContextMenu.bind(this)),
             (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
             E.VW.isEditorEmpty(e.editor)
-                ? (this.state = { initialValue: (0, p.N3)().richValue, showPlaceholder: !0 })
+                ? (this.state = { initialValue: (0, f.N3)().richValue, showPlaceholder: !0 })
                 : (this.state = { initialValue: E.VW.richValue(e.editor), showPlaceholder: !1 }));
     }
     componentDidMount() {
@@ -279,67 +279,67 @@ class ex extends i.PureComponent {
                         });
                     }
                     case "emoji":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(J, { emoji: o.emoji }), a],
                         });
                     case "customEmoji":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(Y, { emoji: o.emoji }), a],
                         });
                     case "textMention":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(ee, { text: o.name }), a],
                         });
                     case "userMention":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(et, { id: o.userId, channelId: n, guildId: t }), a],
                         });
                     case "roleMention":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(en, { id: o.roleId, guildId: t, channelId: n }), a],
                         });
                     case "channelMention":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(el, { id: o.channelId }), a],
                         });
                     case "staticRouteLink":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(ei, { id: o.id, itemId: o.itemId, guildId: t }), a],
                         });
                     case "soundboard":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(S.LF, { soundId: o.soundId }), a],
                         });
                     case "commandMention":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(er, { text: o.commandName, id: o.commandId }), a],
                         });
                     case "timestamp":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(es, { timestamp: o.parsed }), a],
                         });
                     case "gameMention":
-                        return (0, l.jsxs)(ep, {
+                        return (0, l.jsxs)(ef, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(ea, { id: o.gameId }), a],
@@ -357,15 +357,16 @@ class ex extends i.PureComponent {
                 n?.(e) ??
                 (function (e, t) {
                     let n,
-                        { attributes: i, children: r, leaf: a, text: o } = t,
-                        u = e.chatInputType.markdown?.disableLinks === !0,
-                        c = !1,
-                        [d] = E.VW.node(e, E.PW.parent(E.VW.findPath(e, o)));
-                    switch (E.VW.isEditor(d) ? "editor" : d.type) {
+                        i,
+                        { attributes: r, children: a, leaf: o, text: u } = t,
+                        c = e.chatInputType.markdown?.disableLinks === !0,
+                        d = !1,
+                        [h] = E.VW.node(e, E.PW.parent(E.VW.findPath(e, u)));
+                    switch (E.VW.isEditor(h) ? "editor" : h.type) {
                         case "line":
                         case "blockQuote": {
-                            c = void 0;
-                            let e = Object.entries(a)
+                            d = void 0;
+                            let e = Object.entries(o)
                                 .filter((e) => {
                                     let [t] = e;
                                     return "text" !== t;
@@ -373,25 +374,27 @@ class ex extends i.PureComponent {
                                 .flatMap((e) => {
                                     let [t, n] = e;
                                     if ("hljsTypes" === t) return n;
+                                    if ("ansiStyle" === t) return [];
                                     if (!0 === n) {
                                         if (
-                                            (("codeBlockLang" === t || "codeBlockSyntax" === t) && (c = !1),
+                                            (("codeBlockLang" === t || "codeBlockSyntax" === t) && (d = !1),
                                             t.startsWith("before_") || t.startsWith("after_"))
                                         )
                                             return [eo[t]];
-                                        if (u && eh.has(t)) return [];
+                                        if (c && eh.has(t)) return [];
                                         if (t in ed) return [ed[t]];
                                         throw Error(`Slate: Unknown decoration attribute: ${t}`);
                                     }
                                 })
                                 .filter((e) => null != e)
                                 .join(" ");
-                            n = s()(e, { [eo.syntaxOverride]: "||" === a.text || "\\" === a.text });
+                            ((i = o.ansiStyle),
+                                (n = s()(e, { [eo.syntaxOverride]: "||" === o.text || "\\" === o.text })));
                         }
                     }
                     return (
-                        (n = s()(n, { [eu.BI]: "" === o.text })),
-                        (0, l.jsx)("span", { ...i, className: n, spellCheck: c, children: r })
+                        (n = s()(n, { [eu.BI]: "" === u.text })),
+                        (0, l.jsx)("span", { ...r, className: n, style: i, spellCheck: d, children: a })
                     );
                 })(t, e);
         return null != a ? a : (0, l.jsx)("span", { ...i, children: r });
@@ -437,7 +440,7 @@ class ex extends i.PureComponent {
                 null != n &&
                     null != e.data &&
                     (E.ZF.isExpanded(n)
-                        ? f.o.withSingleEntry(t, () => {
+                        ? p.o.withSingleEntry(t, () => {
                               ((t.selection = n), t.deleteFragment(), t.insertText(e.data), e.preventDefault());
                           })
                         : (t.insertText(e.data), e.preventDefault()));
@@ -580,7 +583,7 @@ class ex extends i.PureComponent {
                 },
                 {
                     align: null != i && null != r && i < r / 2 ? "top" : "bottom",
-                    enableSpellCheck: s === ef.BRT.APP,
+                    enableSpellCheck: s === ep.BRT.APP,
                     repositionOnContentChange: !0,
                 },
             );
@@ -607,8 +610,8 @@ class ex extends i.PureComponent {
             channelId: d,
             guildId: h,
             onChange: m,
-            onFocus: p,
-            onBlur: f,
+            onFocus: f,
+            onBlur: p,
             onKeyDown: g,
             onKeyUp: x,
             renderExtraElement: E,

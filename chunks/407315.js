@@ -1,32 +1,34 @@
-(n.d(t, { Ay: () => I, Q9: () => M, W: () => w }), n(321073));
-var l = n(635377),
-    i = n.n(l),
-    r = n(181370),
-    s = n.n(r),
-    a = n(941426),
-    o = n(586172),
-    u = n(938855),
-    c = n(768947),
-    d = n(927813),
-    h = n(38405),
-    m = n(186306),
+(n.d(t, { Ay: () => v, Q9: () => U, W: () => D }), n(321073));
+var l = n(626551),
+    i = n(635377),
+    r = n.n(i),
+    s = n(181370),
+    a = n.n(s),
+    o = n(941426),
+    u = n(586172),
+    c = n(938855),
+    d = n(768947),
+    h = n(927813),
+    m = n(38405),
+    f = n(186306),
     p = n(323350),
-    f = n(35277),
-    g = n(820066),
-    x = n(551483),
-    E = n(389437);
-let S = new a.Vy("withCodeBlocks"),
-    y = new Set(["line"]),
-    C = /^[a-z0-9_+\-.#]+$/i,
-    A = null,
-    b = null;
-function I(e) {
+    g = n(35277),
+    x = n(820066),
+    E = n(551483),
+    S = n(891031),
+    y = n(389437);
+let C = new o.Vy("withCodeBlocks"),
+    A = new Set(["line"]),
+    b = /^[a-z0-9_+\-.#]+$/i,
+    I = null,
+    N = null;
+function v(e) {
     let { onChange: t } = e,
         l = null,
         i = !1,
         r = !1;
     function s(t) {
-        (0, u.W9)(t)
+        (0, c.W9)(t)
             .then((t) => {
                 null != t &&
                     (r ||
@@ -34,12 +36,12 @@ function I(e) {
                         queueMicrotask(() => {
                             r = !1;
                             try {
-                                (m.o.withoutSaving(e, () => {
-                                    g.VW.withoutNormalizing(e, () => N(e, s));
+                                (f.o.withoutSaving(e, () => {
+                                    x.VW.withoutNormalizing(e, () => T(e, s));
                                 }),
-                                    (l = g.VW.richValue(e)));
+                                    (l = x.VW.richValue(e)));
                             } catch (e) {
-                                S.warn("error applying arborium highlighting to editor", e);
+                                C.warn("error applying arborium highlighting to editor", e);
                             }
                         })));
             })
@@ -47,32 +49,32 @@ function I(e) {
     }
     return (
         (e.onChange = () => {
-            (g.VW.richValue(e) !== l &&
-                (m.o.withoutSaving(e, () => {
-                    g.VW.withoutNormalizing(e, () => {
-                        let t = N(e, s),
-                            { enabled: r } = o.L.getConfig({ location: "syntaxHighlightCodeBlocks" });
+            (x.VW.richValue(e) !== l &&
+                (f.o.withoutSaving(e, () => {
+                    x.VW.withoutNormalizing(e, () => {
+                        let t = T(e, s),
+                            { enabled: r } = u.L.getConfig({ location: "syntaxHighlightCodeBlocks" });
                         !t ||
                             r ||
-                            null != A ||
+                            null != I ||
                             i ||
                             ((i = !0),
-                            (null == b &&
-                                (b = Promise.all([n.e("818449"), n.e("175134")])
+                            (null == N &&
+                                (N = Promise.all([n.e("818449"), n.e("175134")])
                                     .then(n.bind(n, 981776))
                                     .then((e) => {
-                                        A = e.default;
+                                        I = e.default;
                                     })
                                     .catch((e) => {
-                                        throw ((b = null), e);
+                                        throw ((N = null), e);
                                     })),
-                            b)
+                            N)
                                 .then(() => {
                                     ((l = null),
-                                        m.o.withoutSaving(e, () => {
-                                            g.VW.withoutNormalizing(e, () => N(e));
+                                        f.o.withoutSaving(e, () => {
+                                            x.VW.withoutNormalizing(e, () => T(e));
                                         }),
-                                        (l = g.VW.richValue(e)));
+                                        (l = x.VW.richValue(e)));
                                 })
                                 .catch(() => {})
                                 .finally(() => {
@@ -80,33 +82,33 @@ function I(e) {
                                 }));
                     });
                 }),
-                (l = g.VW.richValue(e))),
+                (l = x.VW.richValue(e))),
                 t());
         }),
         e
     );
 }
-function N(e, t) {
+function T(e, t) {
     let n = (function (e, t) {
         let n = [],
-            l = null;
-        for (let t of g.VW.blocks(e))
-            ((l = (function (e, t, n, l, i) {
+            i = null;
+        for (let t of x.VW.blocks(e))
+            ((i = (function (e, t, n, l, i) {
                 let r = (function (e) {
                         let t,
                             [n, l] = e;
-                        if (!y.has(n.type)) return [];
+                        if (!A.has(n.type)) return [];
                         let i = [],
                             r = /\\|```/g;
                         for (let e = 0; e < n.children.length; e++) {
                             let s = n.children[e];
-                            if (g.l5.isText(s))
+                            if (x.l5.isText(s))
                                 for (r.lastIndex = 0; null != (t = r.exec(s.text));) {
                                     if ("\\" === t[0]) {
                                         r.lastIndex += 1;
                                         continue;
                                     }
-                                    i.push({ path: g.PW.child(l, e), offset: t.index });
+                                    i.push({ path: x.PW.child(l, e), offset: t.index });
                                 }
                         }
                         return i;
@@ -115,21 +117,21 @@ function N(e, t) {
                     a = r[r.length - 1],
                     o = null;
                 if (null != a) {
-                    let [t] = g.VW.node(e, a.path);
+                    let [t] = x.VW.node(e, a.path);
                     o = t.text.substring(a.offset + 3);
                 }
                 let u = n && null != s,
                     c = n && 0 === r.length,
                     d = l && 0 === r.length,
                     h = (u ? r.slice(1) : r).length % 2 == 1,
-                    m = h && (null == o || "" === o || null != o.match(C)),
-                    p = m && null != o && "" !== o ? o.toLowerCase() : null;
+                    m = h && (null == o || "" === o || null != o.match(b)),
+                    f = m && null != o && "" !== o ? o.toLowerCase() : null;
                 return {
                     blockEntry: t,
                     wasInCodeBlock: n,
                     isInCodeBlock: c,
                     isStyledCodeBlockLine: d,
-                    lang: h || u ? p : i,
+                    lang: h || u ? f : i,
                     hljsTypes: null,
                     closesCodeBlock: u,
                     opensCodeBlock: h,
@@ -138,66 +140,96 @@ function N(e, t) {
             })(
                 e,
                 t,
-                null != l && (l.isInCodeBlock || l.opensCodeBlock),
-                null != l && (l.isStyledCodeBlockLine || l.opensCodeBlockOnOwnLine),
-                null != l && (l.opensCodeBlock || !l.closesCodeBlock) ? l.lang : null,
+                null != i && (i.isInCodeBlock || i.opensCodeBlock),
+                null != i && (i.isStyledCodeBlockLine || i.opensCodeBlockOnOwnLine),
+                null != i && (i.opensCodeBlock || !i.closesCodeBlock) ? i.lang : null,
             )),
-                n.push(l));
+                n.push(i));
         return (
             (function (e, t) {
-                let { enabled: n } = o.L.getConfig({ location: "syntaxHighlightCodeBlocks" }),
-                    l = [],
-                    i = !1;
-                for (let r of e) {
-                    let a = r === e[e.length - 1];
+                let { enabled: n } = u.L.getConfig({ location: "syntaxHighlightCodeBlocks" }),
+                    i = [],
+                    r = !1;
+                for (let s of e) {
+                    let o = s === e[e.length - 1];
                     if (
-                        (r.closesCodeBlock || a) &&
-                        (i && a && !r.closesCodeBlock && l.push(r), (i = !1), l.length > 0)
+                        (s.closesCodeBlock || o) &&
+                        (r && o && !s.closesCodeBlock && i.push(s), (r = !1), i.length > 0)
                     ) {
-                        let e = l.map((e) => (0, p.IQ)(e.blockEntry[0])).join("\n"),
-                            i = l[0].lang;
-                        if (null != i && n)
+                        let e = i.map((e) => (0, p.IQ)(e.blockEntry[0])).join("\n"),
+                            r = i[0].lang;
+                        if (null != r && "ansi" === (0, d.py)(r)) {
+                            let t = (function (e, t) {
+                                let n = a()(e),
+                                    i = P.get(n);
+                                if (null != i && i.length === t) return i;
+                                let r = [[]],
+                                    s = 0;
+                                function o(e, t, n) {
+                                    let l = e.split("\n");
+                                    for (let e = 0; e < l.length; e++) {
+                                        e > 0 && (r.push([]), (s = 0));
+                                        let i = l[e].length;
+                                        if (i > 0 && t.length > 0) {
+                                            let e = { types: t, start: s, end: s + i };
+                                            (null != n && (e.style = n), r[r.length - 1].push(e));
+                                        }
+                                        s += i;
+                                    }
+                                }
+                                let u = 0;
+                                for (let t of (0, l.$M)(e)) {
+                                    o(e.substring(u, t.position), [S.ansiControlSequence]);
+                                    let n = (0, d.OT)(t);
+                                    (o(t.value, null != n ? [y.ansi] : [], n), (u = t.position + t.value.length));
+                                }
+                                return (o(e.substring(u), [S.ansiControlSequence]), r.length !== t)
+                                    ? null
+                                    : (P.set(n, r), r);
+                            })(e, i.length);
+                            for (let e = 0; e < i.length; e++) i[e].hljsTypes = t?.[e] ?? [];
+                        } else if (null != r && n)
                             !(function (e, t, n, l) {
                                 let i = (function (e, t, n, l) {
                                     let i,
-                                        r = (0, c.py)(t);
+                                        r = (0, d.py)(t);
                                     if (null == r) return null;
-                                    let a = (0, u.F)(r);
-                                    if (null == a) return (l?.(r), null);
-                                    let o = s()(`${r}\0${e}`),
-                                        d = R.get(o);
-                                    if (null != d && d.length === n) return d;
-                                    if (O.has(o)) return null;
+                                    let s = (0, c.F)(r);
+                                    if (null == s) return (l?.(r), null);
+                                    let o = a()(`${r}\0${e}`),
+                                        u = L.get(o);
+                                    if (null != u && u.length === n) return u;
+                                    if (w.has(o)) return null;
                                     for (let t of e.split("\n")) if (t.length > 1e3) return null;
                                     try {
-                                        let t = a.highlightToHtml(e);
+                                        let t = s.highlightToHtml(e);
                                         if (((i = t.html), null != l)) for (let e of t.missingInjections) l(e);
                                     } catch (e) {
                                         return (
-                                            O.set(o, !0),
-                                            h.A.captureException(e instanceof Error ? e : Error(String(e)), {
+                                            w.set(o, !0),
+                                            m.A.captureException(e instanceof Error ? e : Error(String(e)), {
                                                 tags: { app_context: "syntax_highlighting" },
                                                 extra: { lang: r, surface: "editor" },
                                             }),
                                             null
                                         );
                                     }
-                                    let m = i.split("\n"),
-                                        p = e.match(/\n*$/)?.[0].length ?? 0;
-                                    for (let e = 0; e < p; e++) m.push("");
-                                    if (m.length !== n) return null;
-                                    let f = [];
+                                    let h = i.split("\n"),
+                                        f = e.match(/\n*$/)?.[0].length ?? 0;
+                                    for (let e = 0; e < f; e++) h.push("");
+                                    if (h.length !== n) return null;
+                                    let p = [];
                                     for (let e = 0; e < n; e++)
-                                        f.push(
+                                        p.push(
                                             (function (e) {
                                                 let t,
                                                     n = [],
                                                     l = [],
                                                     i = 0,
                                                     r = 0;
-                                                for (T.lastIndex = 0; null != (t = T.exec(e));) {
+                                                for (_.lastIndex = 0; null != (t = _.exec(e));) {
                                                     let s = t.index + t[0].length,
-                                                        a = L(e.substring(r, t.index)).length,
+                                                        a = M(e.substring(r, t.index)).length,
                                                         o = l.filter((e) => null != e);
                                                     if (
                                                         (a > 0 &&
@@ -206,40 +238,40 @@ function N(e, t) {
                                                         a > 0 && (i += a),
                                                         null != t[1])
                                                     ) {
-                                                        let e = j.get(t[1]);
+                                                        let e = k.get(t[1]);
                                                         l.push(e ?? null);
                                                     } else l.pop();
                                                     r = s;
                                                 }
-                                                let s = L(e.substring(r)).length,
+                                                let s = M(e.substring(r)).length,
                                                     a = l.filter((e) => null != e);
                                                 return (
                                                     s > 0 && a.length > 0 && n.push({ types: a, start: i, end: i + s }),
                                                     n
                                                 );
-                                            })(m[e]),
+                                            })(h[e]),
                                         );
-                                    return (R.set(o, f), f);
+                                    return (L.set(o, p), p);
                                 })(e, t, n.length, l);
                                 if (null != i) for (let e = 0; e < n.length; e++) n[e].hljsTypes = i[e];
                                 else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
-                            })(e, i, l, t);
-                        else if (null == i || null == A || A.hasLanguage(i)) {
-                            if (null != i && null != A && A.hasLanguage(i)) {
+                            })(e, r, i, t);
+                        else if (null == r || null == I || I.hasLanguage(r)) {
+                            if (null != r && null != I && I.hasLanguage(r)) {
                                 let t = (function (e, t) {
-                                    if (null == A) return null;
+                                    if (null == I) return null;
                                     let n = `${e}-${t}`,
-                                        l = _.get(n);
+                                        l = O.get(n);
                                     if (null != l) return l;
-                                    let i = A.highlight(t, e, !1);
+                                    let i = I.highlight(t, e, !1);
                                     if (null == i || i.illegal) return null;
                                     let r = i.value.split("\n");
-                                    return (_.set(n, r), r);
-                                })(e, i);
-                                if (null != t && t.length === l.length) {
+                                    return (O.set(n, r), r);
+                                })(e, r);
+                                if (null != t && t.length === i.length) {
                                     let e = [];
-                                    for (let n = 0; n < l.length; n++) {
-                                        let i,
+                                    for (let n = 0; n < i.length; n++) {
+                                        let l,
                                             r = t[n]
                                                 .replace(/&amp;/g, "&")
                                                 .replace(/&lt;/g, "<")
@@ -249,27 +281,27 @@ function N(e, t) {
                                             s = [],
                                             a = 0,
                                             o = 0;
-                                        for (; null != (i = v.exec(r));) {
-                                            let t = i.index + i[0].length,
-                                                n = i.index - o;
-                                            (i.index > o &&
+                                        for (; null != (l = j.exec(r));) {
+                                            let t = l.index + l[0].length,
+                                                n = l.index - o;
+                                            (l.index > o &&
                                                 (e.length > 0 && s.push({ types: [...e], start: a, end: a + n }),
                                                 (a += n)),
-                                                "</span>" === i[0] ? e.pop() : e.push(i[1]),
+                                                "</span>" === l[0] ? e.pop() : e.push(l[1]),
                                                 (o = t));
                                         }
                                         if (e.length > 0) {
                                             let t = r.length - o;
                                             s.push({ types: [...e], start: a, end: a + t });
                                         }
-                                        l[n].hljsTypes = s;
+                                        i[n].hljsTypes = s;
                                     }
-                                } else for (let e = 0; e < l.length; e++) l[e].hljsTypes = null;
+                                } else for (let e = 0; e < i.length; e++) i[e].hljsTypes = null;
                             }
-                        } else for (let e = 0; e < l.length; e++) l[e].hljsTypes = [];
-                        l = [];
+                        } else for (let e = 0; e < i.length; e++) i[e].hljsTypes = [];
+                        i = [];
                     }
-                    (i && l.push(r), r.opensCodeBlock && (i = !0));
+                    (r && i.push(s), s.opensCodeBlock && (r = !0));
                 }
             })(n, t),
             n
@@ -290,21 +322,21 @@ function N(e, t) {
                                   hljsTypes: n.hljsTypes,
                               }
                             : null;
-                t?.codeBlockState != r && f.b.setNodes(e, { codeBlockState: r }, { at: i });
+                t?.codeBlockState != r && g.b.setNodes(e, { codeBlockState: r }, { at: i });
             }
         })(e, n),
         n.some((e) => null != e.lang)
     );
 }
-let v = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
-    T = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
-    j = new Map();
-for (let [e, t] of Object.entries(E)) e.startsWith("a-") && null != t && j.set(e, t);
-let k = { max: 1 / 0, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
-    _ = new (i())(k),
-    R = new (i())(k),
-    O = new (i())(k);
-function L(e) {
+let j = /(?:<span class="([^"]*)">)|(?:<\/span>)/g,
+    _ = /(?:<(a-[a-z]{1,2})>)|(?:<\/a-[a-z]{1,2}>)/g,
+    k = new Map();
+for (let [e, t] of Object.entries(y)) e.startsWith("a-") && null != t && k.set(e, t);
+let R = { max: 1 / 0, maxAge: +h.A.Millis.MINUTE, updateAgeOnGet: !0 },
+    O = new (r())(R),
+    L = new (r())(R),
+    w = new (r())(R);
+function M(e) {
     return e
         .replace(/&amp;/g, "&")
         .replace(/&lt;/g, "<")
@@ -312,25 +344,26 @@ function L(e) {
         .replace(/&quot;/g, '"')
         .replace(/&#x27;/g, "'");
 }
-function w(e, t) {
+(0, c.Q4)(() => {
+    L.reset();
+});
+let P = new (r())(R);
+function D(e, t) {
     let n = 0;
-    for (let l of g.VW.nodes(e, {
-        at: { anchor: { path: x.fP, offset: 0 }, focus: t },
+    for (let l of x.VW.nodes(e, {
+        at: { anchor: { path: E.fP, offset: 0 }, focus: t },
         mode: "lowest",
-        match: (e) => g.l5.isText(e),
+        match: (e) => x.l5.isText(e),
     })) {
         let e = l[0].text;
-        g.PW.equals(l[1], t.path) && (e = e.substring(0, t.offset));
+        x.PW.equals(l[1], t.path) && (e = e.substring(0, t.offset));
         let i = e.match(/```/g);
         n += i?.length ?? 0;
     }
     return n % 2 != 0;
 }
-function M(e) {
+function U(e) {
     if (null == e.selection) return !1;
-    let t = g.ZF.start(e.selection);
-    return w(e, t);
+    let t = x.ZF.start(e.selection);
+    return D(e, t);
 }
-(0, u.Q4)(() => {
-    R.reset();
-});

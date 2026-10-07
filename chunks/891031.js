@@ -25,6 +25,7 @@ _.r(
         spoiler: "spoiler_ada32f",
         codeBlockText: "codeBlockText_ada32f",
         codeLine: "codeLine_ada32f",
+        ansiControlSequence: "ansiControlSequence_ada32f",
         before_subtext: "before_subtext_ada32f",
         subtext: "subtext_ada32f",
     }),

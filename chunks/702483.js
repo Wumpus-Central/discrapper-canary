@@ -10,7 +10,12 @@ function r(e, t) {
     if (null == a || 0 === a.length || !o) return [];
     for (let t of a) {
         let a = n.children.map((e) => (i.l5.isText(e) ? e.text : null));
-        s.push({ hljsTypes: t.types, anchor: (0, l.Q)(e, r, a, t.start), focus: (0, l.Q)(e, r, a, t.end) });
+        s.push({
+            hljsTypes: t.types,
+            ...(null != t.style ? { ansiStyle: t.style } : null),
+            anchor: (0, l.Q)(e, r, a, t.start),
+            focus: (0, l.Q)(e, r, a, t.end),
+        });
     }
     return s;
 }

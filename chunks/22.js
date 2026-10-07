@@ -1,1 +1,0 @@
-return g(i,"font-weight:normal;text-decoration:none;font-style:normal")
