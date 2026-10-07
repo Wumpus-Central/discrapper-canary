@@ -1,0 +1,3 @@
+p.exports = JSON.parse(
+    '{"j4n5/K":["\u0E40\u0E23\u0E35\u0E22\u0E19\u0E23\u0E39\u0E49\u0E40\u0E1E\u0E34\u0E48\u0E21\u0E40\u0E15\u0E34\u0E21"]}',
+);
