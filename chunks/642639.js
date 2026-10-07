@@ -1,4 +1,4 @@
-n.d(t, { y0: () => Z, Ni: () => q, t4: () => J, Q9: () => Q, y$: () => ee });
+n.d(t, { y0: () => q, Ni: () => Q, t4: () => ee, Q9: () => J, y$: () => et });
 var i = n(462180),
     r = n(882035),
     a = n(428865),
@@ -274,17 +274,18 @@ let H = {
 var j = n(155718),
     W = n(811315),
     Y = n.n(W),
-    K = n(75304),
-    $ = n(442467),
-    z = n(403362),
-    X = n(427262);
-let Z = 1,
-    [q, Q] = (0, g.A)();
-function J(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
-    return Q()(e, t);
-}
+    K = n(529412),
+    $ = n(75304),
+    z = n(442467),
+    X = n(403362),
+    Z = n(427262);
+let q = 1,
+    [Q, J] = (0, g.A)();
 function ee(e) {
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.x;
+    return J()(e, t);
+}
+function et(e) {
     let {
         checkoutInitParameters: t,
         startingValues: n,
@@ -297,9 +298,7 @@ function ee(e) {
         var r;
         let u,
             _,
-            E,
-            A,
-            h =
+            E =
                 ((u = { checkoutContext: null, checkoutPaymentSources: [] }),
                 {
                     isPremiumPurchase: () => L(i().selectedPlanId).isPremiumPurchase,
@@ -476,7 +475,7 @@ function ee(e) {
                 getShouldUseStripeExpressCheckout: () => {
                     let e = i().getSharedTenantParams();
                     return (
-                        !!((0, X.Gn)() || "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL || (0, z.m6)()) &&
+                        !!((0, Z.Gn)() || "staging" === window.GLOBAL_ENV.RELEASE_CHANNEL || (0, X.m6)()) &&
                         null != e &&
                         !!e.shouldUseStripeExpressCheckout
                     );
@@ -489,67 +488,91 @@ function ee(e) {
                     return null == e ? _ : e.filter((e) => e.subject_type === j.SV.PAYMENT_SOURCE);
                 },
             }),
-            ...((E = []),
-            (A = { premiumPlanOptions: null }),
-            {
-                getShouldDisallowPlanSelection: () => {
-                    let e = i().getTenantParams(K.C.PREMIUM_CHECKOUT);
-                    return null != e && (e.shouldDisallowPlanSelection ?? !1);
-                },
-                getIsInOneStepSubscriptionCheckout: (e) => {
-                    let { isTrial: t, selectedSkuId: n } = e,
-                        {
-                            isGift: r,
-                            selectedSkuId: a,
-                            startedPaymentFlowWithPaymentSources: s,
-                            getShouldDisallowPlanSelection: l,
-                            getShouldUseStripeExpressCheckout: o,
-                        } = i();
-                    return (
-                        !!(l() || o()) ||
-                        (function (e) {
-                            let {
-                                isTrial: t,
-                                isGift: n,
-                                selectedSkuId: i,
-                                startedPaymentFlowWithPaymentSources: r,
-                            } = e;
-                            return !t && !n && null != i && O.oz.includes(i) && !!r;
-                        })({ isTrial: t, isGift: r, selectedSkuId: n ?? a, startedPaymentFlowWithPaymentSources: s })
-                    );
-                },
-                getVerifiedTrialId: (e) => {
-                    let { trialId: t } = e,
-                        { referralTrialOfferId: n, selectedSkuId: r, get: a } = i(),
-                        s = a("isPremiumPurchase"),
-                        l = t ?? n ?? null,
-                        o = null != l && l in O.kb ? O.kb[l].skus : [];
-                    return null != l && (!s || o.includes(r)) ? l : null;
-                },
-                getEffectivePlanGroup: (e) => {
-                    let { planGroup: t } = e,
-                        { selectedPlanId: n } = i();
-                    if (null != t && (null == n || t.includes(n))) return t;
-                    if (null != n) {
-                        if ((0, C.xq)(n)) return O.LE;
-                        if ((0, C.z4)(n)) return O.DA;
-                    }
-                    return E;
-                },
-                getPremiumPlanOptionsOrNull: () => {
-                    let { selectedSkuId: e, defaultPlanId: t, get: n } = i(),
-                        r = n("isPremiumPurchase");
+            ...(function (e) {
+                let t = [],
+                    n = { premiumPlanOptions: null };
+                function i(t) {
+                    let { defaultPlanId: n, isGift: i, get: r } = e();
                     try {
-                        let n = (0, C.Tm)({ skuId: e, isPremium: r, defaultPlanId: t });
-                        if (Y()(n, A.premiumPlanOptions)) return A.premiumPlanOptions;
-                        return ((A.premiumPlanOptions = n), n);
+                        return (0, C.Tm)({
+                            skuId: t,
+                            isPremium: r("isPremiumPurchase"),
+                            defaultPlanId: n,
+                            isThreeMonthGiftingEnabled: i && (0, K.dW)({ location: "PremiumCheckoutStoreSlice" }),
+                        });
                     } catch (e) {
                         return null;
                     }
-                },
-            }),
-            ...(0, $.d)(e, i),
-            get: (e) => (null != h[e] ? h[e]() : null),
+                }
+                return {
+                    getShouldDisallowPlanSelection: () => {
+                        let t = e().getTenantParams($.C.PREMIUM_CHECKOUT);
+                        return null != t && (t.shouldDisallowPlanSelection ?? !1);
+                    },
+                    getIsInOneStepSubscriptionCheckout: (t) => {
+                        let { isTrial: n, selectedSkuId: i } = t,
+                            {
+                                isGift: r,
+                                selectedSkuId: a,
+                                startedPaymentFlowWithPaymentSources: s,
+                                getShouldDisallowPlanSelection: l,
+                                getShouldUseStripeExpressCheckout: o,
+                            } = e();
+                        return (
+                            !!(l() || o()) ||
+                            (function (e) {
+                                let {
+                                    isTrial: t,
+                                    isGift: n,
+                                    selectedSkuId: i,
+                                    startedPaymentFlowWithPaymentSources: r,
+                                } = e;
+                                return !t && !n && null != i && O.oz.includes(i) && !!r;
+                            })({
+                                isTrial: n,
+                                isGift: r,
+                                selectedSkuId: i ?? a,
+                                startedPaymentFlowWithPaymentSources: s,
+                            })
+                        );
+                    },
+                    getVerifiedTrialId: (t) => {
+                        let { trialId: n } = t,
+                            { referralTrialOfferId: i, selectedSkuId: r, get: a } = e(),
+                            s = a("isPremiumPurchase"),
+                            l = n ?? i ?? null,
+                            o = null != l && l in O.kb ? O.kb[l].skus : [];
+                        return null != l && (!s || o.includes(r)) ? l : null;
+                    },
+                    getEffectivePlanGroup: (n) => {
+                        let { planGroup: i } = n,
+                            { selectedPlanId: r } = e();
+                        if (null != i && (null == r || i.includes(r))) return i;
+                        if (null != r) {
+                            if ((0, C.xq)(r)) return O.LE;
+                            if ((0, C.z4)(r)) return O.DA;
+                        }
+                        return t;
+                    },
+                    getPremiumPlanOptionsOrNull: () => {
+                        let t = i(e().selectedSkuId);
+                        return null == t
+                            ? null
+                            : Y()(t, n.premiumPlanOptions)
+                              ? n.premiumPlanOptions
+                              : ((n.premiumPlanOptions = t), t);
+                    },
+                    getAvailableDefaultPlanId: function () {
+                        let { skuId: t } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
+                            { defaultPlanId: n, selectedSkuId: r } = e();
+                        if (null == n) return;
+                        let a = i(t ?? r);
+                        return null == a || 0 === a.length || a.includes(n) ? n : void 0;
+                    },
+                };
+            })(i),
+            ...(0, z.d)(e, i),
+            get: (e) => (null != E[e] ? E[e]() : null),
             contextMetadata: s,
             order: o,
             orderRecord: null != o ? p.createFromServer(o) : null,
@@ -591,14 +614,14 @@ function ee(e) {
             setSelectedSkuId: (t) =>
                 e((e) => {
                     let n = t ?? void 0;
-                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: Z };
+                    return n === e.selectedSkuId ? e : { selectedSkuId: n, quantity: q };
                 }),
             setSelectedPlanId: function (t) {
                 let n = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : { shouldUpdateQuantity: !0 },
                     i = t ?? void 0;
-                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: Z }) : e({ selectedPlanId: i });
+                return n.shouldUpdateQuantity ? e({ selectedPlanId: i, quantity: q }) : e({ selectedPlanId: i });
             },
-            quantity: Z,
+            quantity: q,
             setQuantity: (t) => e({ quantity: t }),
             fetchCheckoutInvoicePreviewRequest: null,
             setFetchCheckoutInvoicePreviewRequest: (t) => e({ fetchCheckoutInvoicePreviewRequest: y(t, i) }),

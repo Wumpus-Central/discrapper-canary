@@ -51,7 +51,7 @@ function K(e) {
         ...a,
     });
 }
-function q(e) {
+function Z(e) {
     let { skuIds: t, text: n, gradientColor: r = "nitro-pink" } = e,
         a = (0, D.bG)([W.default], () => W.default.getCurrentUser()),
         { product: s } = (0, F.q)(t[0]),
@@ -95,7 +95,7 @@ function q(e) {
               }),
           });
 }
-var Z = n(583741),
+var q = n(583741),
     z = n(750532),
     $ = n(216641),
     Q = n(377058);
@@ -322,18 +322,18 @@ function en(e) {
             hasEntitlements: eg,
         }),
         eb = (0, y.V)(B),
-        ej = H && el.interval === T.WT.YEAR && (0, P.xq)(el.id),
+        ej = H && (0, et.uH)(el),
         eR = (0, P.L_)({ planId: el.id, isGift: !0, priceOptions: G, subscriptionPlan: el }),
         eO = i.useMemo(() => {
             if (null != eR && ej)
-                return { headerBadgeText: b.intl.formatToPlainString(Z.default["Mi5BH/"], { percentOff: eR }) };
+                return { headerBadgeText: b.intl.formatToPlainString(q.default["Mi5BH/"], { percentOff: eR }) };
         }, [eR, ej]),
         eM = (0, z.Fe)(eO),
         { upperInlineNoticeProps: eL, promotionalNoticeContent: ek } = (function (e) {
             let {
                     planGroup: t,
-                    yearlySavingsPercent: n,
-                    isGiftingPremiumYearly: r,
+                    giftSavingsPercent: n,
+                    isGiftingMultiPeriodPremium: r,
                     mainPreviewInvoice: a,
                     discriminatedInvoicePreview: s,
                     subscriptionPeriodEnd: o,
@@ -359,25 +359,33 @@ function en(e) {
                 }),
                 D = i.useMemo(() => {
                     if (null != s && s.type === c.u$.PREMIUM_WITH_TRIAL && null != k)
-                        return (0, l.jsx)(K, { text: b.intl.format(Z.default.IAsfR5, { daysCount: L }) });
+                        return (0, l.jsx)(K, { text: b.intl.format(q.default.IAsfR5, { daysCount: L }) });
                     if (null != d && u) {
                         let e = d.discount,
                             t = e.intervalCount;
                         if (e.intervalType === T.Ff.MONTH)
                             return (0, l.jsx)(K, {
-                                text: b.intl.format(Z.default.wCkwJf, { percentOff: e.amount, intervalCount: t }),
+                                text: b.intl.format(q.default.wCkwJf, { percentOff: e.amount, intervalCount: t }),
                             });
                         if (e.intervalType === T.Ff.YEAR)
                             return (0, l.jsx)(K, {
-                                text: b.intl.format(Z.default["tUzT/U"], { percentOff: e.amount }),
+                                text: b.intl.format(q.default["tUzT/U"], { percentOff: e.amount }),
                             });
                     }
                     return E && g.length > 0
-                        ? (0, l.jsx)(q, { skuIds: g, text: b.intl.format(Z.default["XWo+Bp"], { count: g.length }) })
+                        ? (0, l.jsx)(Z, { skuIds: g, text: b.intl.format(q.default["XWo+Bp"], { count: g.length }) })
                         : r && null != n
-                          ? (0, l.jsx)(K, { text: b.intl.format(Z.default["7sYIBL"], { savingsPercent: n }) })
+                          ? (0, l.jsx)(K, {
+                                text:
+                                    A.interval === T.WT.YEAR
+                                        ? b.intl.format(q.default["7sYIBL"], { savingsPercent: n })
+                                        : b.intl.format(q.default.uCXulJ, {
+                                              intervalCount: A.intervalCount,
+                                              savingsPercent: n,
+                                          }),
+                            })
                           : null;
-                }, [k, u, d, L, s, n, r, E, g]),
+                }, [k, u, d, L, s, n, r, A.interval, A.intervalCount, E, g]),
                 U = (function (e) {
                     let { skuId: t, isGift: n } = e,
                         r = (0, _.O)();
@@ -419,8 +427,8 @@ function en(e) {
             };
         })({
             planGroup: n,
-            yearlySavingsPercent: eR,
-            isGiftingPremiumYearly: ej,
+            giftSavingsPercent: eR,
+            isGiftingMultiPeriodPremium: ej,
             mainPreviewInvoice: e_,
             discriminatedInvoicePreview: ec,
             subscriptionPeriodEnd: ed,
@@ -517,6 +525,6 @@ function en(e) {
         invoiceSummaryContent: eH,
         legalContent: eV,
         invoiceTotalDueValue: eK,
-        invoiceTotalDueLabel: H ? b.intl.string(Z.default.Zxav97) : b.intl.string(Z.default.R0cZsM),
+        invoiceTotalDueLabel: H ? b.intl.string(q.default.Zxav97) : b.intl.string(q.default.R0cZsM),
     });
 }

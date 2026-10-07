@@ -56,11 +56,11 @@ function x(e) {
                 premiumSwitchPlanSelectText: e ? (0, C.yq)(H, Y) : null,
             };
         }, [H, B, Y]),
-        q = i.useMemo(
+        Z = i.useMemo(
             () => (N && F ? (0, C.Ct)(U, { subscriptionPeriodEnd: x, trialPeriodCopy: G }) : b),
             [N, F, U, x, G, b],
         ),
-        Z = i.useMemo(() => (r.length > 0 ? I.hd[r[0]].premiumType : void 0), [r]),
+        q = i.useMemo(() => (r.length > 0 ? I.hd[r[0]].premiumType : void 0), [r]),
         { setSelectedPlanId: z } = (0, p.t4)((e) => ({ setSelectedPlanId: e.setSelectedPlanId })),
         $ = i.useCallback(
             (e) => {
@@ -176,8 +176,8 @@ function x(e) {
                                 subscriptionPlan: b,
                                 userLocale: j,
                                 discountOffer: R,
-                                yearlyPercentSavings: L,
-                                shouldHideYearlySavingsBadge: null != T || null != R || v,
+                                savingsPercent: L,
+                                shouldHideSavingsBadge: null != T || null != R || v,
                             }),
                         });
                         return {
@@ -203,15 +203,15 @@ function x(e) {
             showPlanStatusSubText: _,
             isInPlanSelectStep: N,
         });
-    return null == Z
+    return null == q
         ? null
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   V &&
                       (0, l.jsx)(u.E, { variant: "text-md/medium", color: "text-subtle", className: v.S, children: K }),
                   (0, l.jsx)(d.me, {
-                      headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: Z }),
-                      headingSubText: q,
+                      headingComponent: (0, l.jsx)(d.ec, { size: "sm", color: "text-strong", premiumType: q }),
+                      headingSubText: Z,
                       planRadioOptions: Q,
                       value: R?.id ?? "",
                       onChange: $,

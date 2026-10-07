@@ -696,7 +696,7 @@ function e0(e) {
                                                         n.e("755936"),
                                                         n.e("147662"),
                                                         n.e("209338"),
-                                                        n.e("434539"),
+                                                        n.e("749894"),
                                                         n.e("927875"),
                                                         n.e("833703"),
                                                         n.e("256274"),
@@ -978,8 +978,8 @@ var e3 = n(34188),
     e7 = n(700623),
     e5 = n(177953),
     e6 = n(825484),
-    e4 = n(512950),
-    e9 = n(900797),
+    e9 = n(512950),
+    e4 = n(900797),
     te = n(847374),
     tt = n(10716),
     tn = n(702841),
@@ -1362,9 +1362,9 @@ function tM(e) {
                   ],
               })
             : s && !i && (0, I.Z$)(n)
-              ? (0, r.jsx)(e4.p, {
+              ? (0, r.jsx)(e9.p, {
                     className: tP.ai,
-                    messageType: e4.Y.WARNING,
+                    messageType: e9.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1427,7 +1427,7 @@ function tk(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e9.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              ? (0, r.jsx)(e4.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
                               : (0, r.jsx)(te.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
@@ -1540,7 +1540,7 @@ var tQ = n(111042),
     t7 = n(935208),
     t5 = n(630248),
     t6 = n(355097);
-function t4(e, t) {
+function t9(e, t) {
     o.useEffect(() => {
         t3.bW.loadIfUncached(t6.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
@@ -1584,7 +1584,7 @@ function t4(e, t) {
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
 }
-var t9 = n(457408),
+var t4 = n(457408),
     ne = n(712440),
     nt = n(733110),
     nn = n(73153);
@@ -2253,11 +2253,11 @@ function n6(e, t) {
         i,
     ).slice(0, i);
 }
-function n4(e, t) {
+function n9(e, t) {
     let n = t5.A.getScoreWithoutLoadingLatest(e.id);
     return t5.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n9(e, t) {
+function n4(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
@@ -2685,7 +2685,7 @@ function lh(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n4, n9],
+                        sortComparers: [n9, n4],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3189,11 +3189,11 @@ function lS(e) {
                             let e = [];
                             return (c && e.push(na.gq), e);
                         }, [c]),
-                        u = t4(r, a),
+                        u = t9(r, a),
                         m = (0, A.bG)([eG.default], () => eG.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
-                            return !(!1 === m && (0, t9.A)(e.id));
+                            return !(!1 === m && (0, t4.A)(e.id));
                         }
                         return l
                             ? u
@@ -3368,7 +3368,7 @@ function lb(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t4(
+                c = t9(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})
@@ -3390,7 +3390,7 @@ function lb(e) {
                                     return t;
                                 }),
                             )
-                            .filter((e) => !(!1 === i && (0, t9.A)(e.id)))
+                            .filter((e) => !(!1 === i && (0, t4.A)(e.id)))
                             .map((e) => ({ application: e })),
                     [i, c],
                 ),

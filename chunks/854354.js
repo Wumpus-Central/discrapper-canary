@@ -19,18 +19,13 @@ function u(e, t) {
     }
 }
 function c(e) {
-    let {
-        subscriptionPlan: t,
-        userLocale: n,
-        discountOffer: i,
-        yearlyPercentSavings: r,
-        shouldHideYearlySavingsBadge: u,
-    } = e;
-    if (null != r && t.interval === a.WT.YEAR && !u)
+    let { subscriptionPlan: t, userLocale: n, discountOffer: i, savingsPercent: r, shouldHideSavingsBadge: u } = e,
+        c = t.interval === a.WT.MONTH && t.intervalCount > 1;
+    if (null != r && !u && (t.interval === a.WT.YEAR || c))
         return o.intl.formatToPlainString(s.default.nsG1jw, { savingsText: (0, l.l9)(n, r / 100) });
-    let c = null != i ? i.discount.amount : null;
-    return null != i && i.discount.planIds.includes(t.id) && null != c
-        ? o.intl.formatToPlainString(s.default.MSB4E4, { amountOrPercentOffText: (0, l.l9)(n, parseInt(c) / 100) })
+    let d = null != i ? i.discount.amount : null;
+    return null != i && i.discount.planIds.includes(t.id) && null != d
+        ? o.intl.formatToPlainString(s.default.MSB4E4, { amountOrPercentOffText: (0, l.l9)(n, parseInt(d) / 100) })
         : null;
 }
 function d(e) {

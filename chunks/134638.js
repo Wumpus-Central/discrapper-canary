@@ -93,7 +93,7 @@ function R(e) {
             isClickPurchaseItemToEdit: Y,
             quantity: B,
         }),
-        q = (function (e) {
+        Z = (function (e) {
             let { guildId: t, invoiceSummaryType: n, giftRecipient: l } = e,
                 i = (0, r.bG)([f.A], () => (null != t ? f.A.getGuild(t) : null), [t]);
             return M(n) && null != l
@@ -102,7 +102,7 @@ function R(e) {
                   ? { type: "guildSubscription", guild: i }
                   : void 0;
         })({ guildId: w, invoiceSummaryType: t, giftRecipient: L }),
-        Z = (function (e) {
+        q = (function (e) {
             let { invoiceSummaryType: t, guildId: n, giftRecipient: l } = e;
             return M(t)
                 ? null != l
@@ -168,13 +168,13 @@ function R(e) {
                         y = null,
                         g = null,
                         v = !1,
-                        _ = E,
-                        b = o?.discountOffer;
+                        x = E,
+                        _ = o?.discountOffer;
                     if (p)
                         ((y = (0, C.O7)(n, { amount: f, currency: l.currency })),
-                            (_ = (0, P.ib)(l.currency, { includeNowSuffix: !0 })));
+                            (x = (0, P.ib)(l.currency, { includeNowSuffix: !0 })));
                     else if (d) {
-                        if (((_ = S), n.interval === x.WT.YEAR && (0, A.xq)(n.id))) {
+                        if (((x = S), (0, P.uH)(n))) {
                             let e = (0, A.VA)({ subscriptionPlan: n, isGift: d, priceOptions: i });
                             ((y = null != e ? (0, I.$g)(e * u, l.currency) : null), (v = !0));
                         }
@@ -182,27 +182,27 @@ function R(e) {
                         let e = (0, m.pg)(l, n.id);
                         if (null != a && a.discount.applicableSubscriptionInterval === n.interval && null != e) {
                             let t = (0, I.$g)(f - e, l.currency);
-                            ((_ = T.intl.format(N.default.U2CmMW, { priceAmount: t })),
+                            ((x = T.intl.format(N.default.U2CmMW, { priceAmount: t })),
                                 (y = T.intl.format(N.default.JsSin7, {
                                     priceRate: (0, I.CE)(S, n.interval, n.intervalCount),
                                     intervalCount: a.discount.intervalCount,
                                 })));
                         }
-                    } else if ((0, A.xq)(n.id) && null != b) {
+                    } else if ((0, A.xq)(n.id) && null != _) {
                         let e = (0, m.pg)(l, n.id);
-                        if ((0, h.Ro)(l, b.discount.id) && null != e) {
+                        if ((0, h.Ro)(l, _.discount.id) && null != e) {
                             let t = (0, I.$g)(f - e, l.currency);
-                            ((_ = T.intl.format(T.t.hXcaLT, { price: t })),
+                            ((x = T.intl.format(T.t.hXcaLT, { price: t })),
                                 (g = S),
-                                (y = (0, m.hm)(b)
+                                (y = (0, m.hm)(_)
                                     ? T.intl.format(T.t.VZ8Tvh, { regularPrice: S })
                                     : T.intl.format(N.default.JsSin7, {
                                           priceRate: E,
-                                          intervalCount: b.discount.intervalCount,
+                                          intervalCount: _.discount.intervalCount,
                                       })));
                         }
                     }
-                    return { price: _, priceStrikethroughText: g, priceSubText: y, priceSubTextHasStrikethrough: v };
+                    return { price: x, priceStrikethroughText: g, priceSubText: y, priceSubTextHasStrikethrough: v };
                 })({
                     invoiceSummaryType: t,
                     subscriptionPlan: c,
@@ -218,12 +218,12 @@ function R(e) {
         er = ((0, A.ys)(c.id) ? (0, A.m6)(c.id) : void 0) === x.PremiumTypes.TIER_2;
     return (0, l.jsx)(u.f7, {
         label: K,
-        description: Z,
+        description: q,
         price: et,
         priceStrikethroughText: en,
         priceSubText: el,
         priceSubTextHasStrikethrough: ei,
-        target: q,
+        target: Z,
         graphic: (0, l.jsx)(O, { subscriptionPlan: c, storeListing: U }),
         omitDefaultIconBackground: er,
         header: z,
