@@ -1,4 +1,4 @@
-l.d(t, { m: () => l8 });
+l.d(t, { m: () => l4 });
 var n,
     i = l(477900),
     a = l(582128);
@@ -1232,10 +1232,10 @@ function e2(e) {
               }),
           });
 }
-var e3 = l(452027),
-    e6 = l(103557),
-    e4 = l(825484),
-    e8 = l(95477),
+var e6 = l(452027),
+    e3 = l(103557),
+    e8 = l(825484),
+    e4 = l(95477),
     e7 = l(241326),
     e5 = l(683071),
     e9 = l(2553),
@@ -1295,6 +1295,7 @@ function th(e) {
                                 l.e("132502"),
                                 l.e("230029"),
                                 l.e("891089"),
+                                l.e("861973"),
                                 l.e("196063"),
                                 l.e("392028"),
                                 l.e("124054"),
@@ -1516,7 +1517,8 @@ function th(e) {
                                 l.e("8563"),
                                 l.e("499941"),
                                 l.e("693832"),
-                                l.e("773192"),
+                                l.e("488990"),
+                                l.e("469187"),
                                 l.e("710638"),
                                 l.e("959669"),
                                 l.e("73500"),
@@ -1994,11 +1996,11 @@ var tJ = l(625903),
     t0 = l(780964),
     t1 = l(766075),
     t2 = l(30370),
-    t3 = l(123894);
-function t6() {
+    t6 = l(123894);
+function t3() {
     let e = (0, C.bG)([t2.A], () => t2.A.getAccounts().some((e) => e.type === eK.fg2.SPOTIFY && e.showActivity));
     return (0, i.jsx)(S, {
-        className: t3.w,
+        className: t6.w,
         title: E.intl.string(Q.default.ULK65a),
         body: E.intl.format(e ? Q.default.BLuvck : Q.default["Ko3a0+"], { memberCount: 2 }),
         action: e
@@ -2012,14 +2014,14 @@ function t6() {
               }),
     });
 }
-function t4() {
+function t8() {
     return (0, i.jsx)(S, {
-        className: t3.w,
+        className: t6.w,
         title: E.intl.string(Q.default.ULK65a),
         body: E.intl.format(Q.default.ZQxU8v, { memberCount: 2 }),
     });
 }
-var t8 = l(109487),
+var t4 = l(109487),
     t7 = l(279543);
 function t5(e) {
     let { isCompact: t } = e;
@@ -2053,7 +2055,7 @@ function t5(e) {
                 children: [
                     (0, i.jsx)("span", {
                         className: t7.Kk,
-                        children: (0, i.jsx)(t8.L, { size: "xs", color: d.A.colors.ICON_STRONG, "aria-hidden": !0 }),
+                        children: (0, i.jsx)(t4.L, { size: "xs", color: d.A.colors.ICON_STRONG, "aria-hidden": !0 }),
                     }),
                     !t &&
                         (0, i.jsx)(p.E, {
@@ -2255,7 +2257,7 @@ function lc(e) {
         j = f ? null : h,
         v = null != j;
     return n.top_listeners.length < 2
-        ? (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(t4, {}), s] })
+        ? (0, i.jsxs)(i.Fragment, { children: [(0, i.jsx)(t8, {}), s] })
         : (0, i.jsxs)("div", {
               className: ld.SY,
               children: [
@@ -2595,10 +2597,10 @@ async function lJ(e) {
 let l0 = [];
 var l1 = l(344351),
     l2 = l(256693),
-    l3 = l(343030),
-    l6 = l(317608),
-    l4 = l(953538);
-let l8 = {
+    l6 = l(343030),
+    l3 = l(317608),
+    l8 = l(953538);
+let l4 = {
     [r.a.IMAGE_TEXT]: {
         View: function (e) {
             let { widget: t, guildSpaceMode: l, guildId: n } = e,
@@ -2631,7 +2633,7 @@ let l8 = {
             return (0, i.jsxs)(_.B, {
                 gap: 16,
                 children: [
-                    (0, i.jsx)(e8.k, {
+                    (0, i.jsx)(e4.k, {
                         label: E.intl.string(E.t.gnwWrx),
                         value: d,
                         onChange: function (e) {
@@ -2640,7 +2642,7 @@ let l8 = {
                         maxLength: 100,
                         showCharacterCount: !0,
                     }),
-                    (0, i.jsx)(e3.D, {
+                    (0, i.jsx)(e6.D, {
                         label: E.intl.string(E.t.X4IxWL),
                         children: (0, i.jsxs)(_.B, {
                             gap: 16,
@@ -2681,7 +2683,7 @@ let l8 = {
                             ],
                         }),
                     }),
-                    (0, i.jsx)(e6.f, {
+                    (0, i.jsx)(e3.f, {
                         label: E.intl.string(E.t.COGMNC),
                         value: m,
                         onChange: function (e) {
@@ -2697,7 +2699,7 @@ let l8 = {
                             role: "alert",
                             children: (0, i.jsx)(e5.w, { type: "critical", children: g }),
                         }),
-                    (0, i.jsxs)(e4.e, {
+                    (0, i.jsxs)(e8.e, {
                         fullWidth: !0,
                         children: [
                             (0, i.jsx)(L.$, { variant: "secondary", text: E.intl.string(E.t["ETE/oC"]), onClick: n }),
@@ -2878,7 +2880,7 @@ let l8 = {
                                 if (null == o || "idle" === o.status || "loading" === o.status)
                                     return (0, i.jsx)(b, {});
                                 if ("error" === o.status) return (0, i.jsx)(I, {});
-                                if (_) return (0, i.jsx)(t6, {});
+                                if (_) return (0, i.jsx)(t3, {});
                                 switch (h) {
                                     case tL.TOP_SONGS:
                                         return (0, i.jsx)(lI, {
@@ -2986,25 +2988,25 @@ let l8 = {
                 h = null != n && o && !u;
             return null == n
                 ? (0, i.jsx)(_.B, {
-                      className: l4.kL,
+                      className: l8.kL,
                       align: "center",
                       justify: "center",
                       children: (0, i.jsx)(s, { alt: "", width: 200 }),
                   })
                 : r
                   ? (0, i.jsxs)("div", {
-                        className: l4.kL,
+                        className: l8.kL,
                         children: [
                             null != d &&
-                                (0, i.jsx)(l6.A, {
+                                (0, i.jsx)(l3.A, {
                                     frameId: (0, l2.Ri)(d),
-                                    level: l3.A.WithinAppContent,
-                                    className: l4.t$,
+                                    level: l6.A.WithinAppContent,
+                                    className: l8.t$,
                                 }),
                             null == d &&
                                 h &&
                                 (0, i.jsx)("div", {
-                                    className: l4.P5,
+                                    className: l8.P5,
                                     children: (0, i.jsx)(L.$, {
                                         variant: "secondary",
                                         text: E.intl.string(Q.default.PSuly6),
@@ -3015,9 +3017,9 @@ let l8 = {
                         ],
                     })
                   : (0, i.jsx)("div", {
-                        className: l4.kL,
+                        className: l8.kL,
                         children: (0, i.jsx)("div", {
-                            className: l4.m0,
+                            className: l8.m0,
                             children: (0, i.jsx)(p.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
@@ -3094,7 +3096,7 @@ let l8 = {
                                       children: E.intl.string(Q.default.xyCJYs),
                                   }),
                               }),
-                          (0, i.jsxs)(e4.e, {
+                          (0, i.jsxs)(e8.e, {
                               fullWidth: !0,
                               children: [
                                   (0, i.jsx)(L.$, {

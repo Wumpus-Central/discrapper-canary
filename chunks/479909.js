@@ -144,8 +144,8 @@ let _ = { width: 500, height: T.$V },
         });
     });
 var w = n(861382),
-    P = n(435558),
-    M = n.n(P),
+    M = n(435558),
+    P = n.n(M),
     D = n(537652),
     U = n(155718),
     V = n(666860),
@@ -251,7 +251,7 @@ var er = n(524007),
     ea = n(652215),
     eo = n(643904);
 let eu = [8, 8, 0, 8],
-    ec = M().debounce(() => {
+    ec = P().debounce(() => {
         (0, V.zV)(ea.HAw.APPLICATION_COMMAND_BROWSER_SCROLLED);
     }, 300);
 function ed(e) {
@@ -472,7 +472,7 @@ var em = n(702841),
     ef = n(31498),
     eg = n(598071),
     ex = n(151271),
-    eE = n(731325),
+    eE = n(573853),
     eS = n(256265),
     ey = n(336807),
     eC = n(857071),
@@ -507,8 +507,8 @@ function eR(e) {
 var eO = n(931664),
     eL = n(631576),
     ew = n(522602);
-let eP = /(!|\.|;|,|-|\u2014|\u2013|\?|"|')/g,
-    eM = /(\n|\t|\s)/g;
+let eM = /(!|\.|;|,|-|\u2014|\u2013|\?|"|')/g,
+    eP = /(\n|\t|\s)/g;
 var eD = n(194004),
     eU = n(406704),
     eV = n(885386),
@@ -932,8 +932,8 @@ function tR(e) {
 var tO = n(575293),
     tL = n(536637),
     tw = n.n(tL),
-    tP = n(31717),
-    tM = n(551640),
+    tM = n(31717),
+    tP = n(551640),
     tD = n(970244),
     tU = n(29621);
 function tV(e) {
@@ -953,7 +953,7 @@ function tV(e) {
                             (0, tD.e0)({
                                 channel: t,
                                 defaultValue: tw()(i),
-                                entryPoint: tM.t.COMPOSER_BAR,
+                                entryPoint: tP.t.COMPOSER_BAR,
                                 isEditing: !0,
                             });
                         },
@@ -968,7 +968,7 @@ function tV(e) {
                         className: tU.o1,
                         children: (0, l.jsx)(ts, {
                             onClick: function (e) {
-                                (e.stopPropagation(), x.A.clearDraft(t.id, tP.C.ScheduledMessage));
+                                (e.stopPropagation(), x.A.clearDraft(t.id, tM.C.ScheduledMessage));
                             },
                             "aria-label": j.intl.string(j.t.cpT0Cq),
                         }),
@@ -999,7 +999,7 @@ var tB = n(123583),
     tz = n(820066),
     tq = n(922016),
     t$ = n(375499),
-    tQ = n(267889),
+    tQ = n(879064),
     tZ = n(307731),
     tX = n(9287);
 function tJ(e) {
@@ -1245,7 +1245,7 @@ function t8(e) {
                         case eD.D6.AUTOCOMPLETE:
                             var r;
                             return (
-                                (null == (r = t) ? [] : r.replace(eP, "").replace(eM, " ").trim().split(" ")).length > 1
+                                (null == (r = t) ? [] : r.replace(eM, "").replace(eP, " ").trim().split(" ")).length > 1
                             );
                         case eD.D6.BUILT_IN_INTEGRATION:
                         default:
@@ -1396,8 +1396,8 @@ let nl = i.memo(function (e) {
             error: _,
             renderAttachButton: R,
             renderApplicationCommandIcon: O,
-            renderButtons: P,
-            pendingReply: M,
+            renderButtons: M,
+            pendingReply: P,
             onChange: D,
             onResize: U,
             onBlur: V,
@@ -1449,7 +1449,7 @@ let nl = i.memo(function (e) {
     });
     let eL = ej === S.IG.HIDDEN,
         ew = ej === S.IG.CONDENSED || (ej === S.IG.FLEXIBLE && ek && !e_),
-        { activeCommand: eP, activeCommandSection: eM } = (0, m.cf)([w.A], () => ({
+        { activeCommand: eM, activeCommandSection: eP } = (0, m.cf)([w.A], () => ({
             activeCommand: j.commands?.enabled ? w.A.getActiveCommand(T.id) : null,
             activeCommandSection: j.commands?.enabled ? w.A.getActiveCommandSection(T.id) : null,
         })),
@@ -1460,7 +1460,7 @@ let nl = i.memo(function (e) {
             canAttachFiles: eK,
             canCreateThreads: ez,
             canEveryoneSendMessages: e$,
-        } = ne(T, j, eP, I),
+        } = ne(T, j, eM, I),
         eZ = j.toolbarType === eY.O1.STATIC,
         e1 = !eV.D_.useSetting() && !(0, eX.isAndroidWeb)() && null != window.ResizeObserver,
         e2 = !e1 || !j.commands?.enabled || !k || "/" !== r,
@@ -1564,22 +1564,22 @@ let nl = i.memo(function (e) {
                 [t, n],
             );
         })({ type: j, channelId: T.id }),
-        tP = i.useCallback(() => {
+        tM = i.useCallback(() => {
             e3.emit("submit-failure");
         }, [e3]);
     (0, eJ.R)(e3, T.guild_id, T.id);
-    let tM = null != M,
+    let tP = null != P,
         tD = (eB && !((eD || eU) && e$)) || (te && j.submit?.useDisabledStylesOnSubmit),
         tU = null;
-    null != eP ? (tU = O?.(eP, eM, tW.g$)) : (!eB || ez) && (tU = R?.(tM, tW.g$));
+    null != eM ? (tU = O?.(eM, eP, tW.g$)) : (!eB || ez) && (tU = R?.(tP, tW.g$));
     let { isVisible: tq, showsUpsell: t$ } = (0, tY.A)({
             type: j,
             textValue: r,
             maxCharacterCount: q,
             showRemainingCharsAfterCount: $,
         }),
-        tQ = e1 && null != a && !eB && j.showCharacterCount && null == eP,
-        tZ = e1 && !__OVERLAY__ && null != a && null == eP && j.toolbarType !== eY.O1.NONE && !eB,
+        tQ = e1 && null != a && !eB && j.showCharacterCount && null == eM,
+        tZ = e1 && !__OVERLAY__ && null != a && null == eM && j.toolbarType !== eY.O1.NONE && !eB,
         tX = (function (e) {
             let {
                     channel: t,
@@ -1630,21 +1630,21 @@ let nl = i.memo(function (e) {
         })({
             channel: T,
             type: j,
-            activeCommand: eP,
-            pendingReply: M,
+            activeCommand: eM,
+            pendingReply: P,
             scheduledMessageDraft: er,
             selectedAutocompleteInputType: tk,
             selectedAutocompleteInputError: t_,
         }),
         t0 = 0 === r.trim().length,
-        nl = null != M ? [X, to].filter(Boolean).join(" ") : X,
+        nl = null != P ? [X, to].filter(Boolean).join(" ") : X,
         ni = j.layout === eY.wt.INLINE,
         nr = j.layout === eY.wt.FLUSH,
         ns = (0, l.jsx)("div", { ref: eS, className: tW.BW }),
         na = tw ? (0, l.jsx)(L, { align: "right", positionTargetRef: eS, channel: T }) : null,
         no =
-            null != P
-                ? P()
+            null != M
+                ? M()
                 : (0, l.jsx)(tB.A, {
                       type: j,
                       disabled: eB,
@@ -1741,7 +1741,7 @@ let nl = i.memo(function (e) {
                                                     onFocus: W,
                                                     onKeyDown: F,
                                                     onSubmit: tt,
-                                                    onSubmitFailure: tP,
+                                                    onSubmitFailure: tM,
                                                     onTab: tg,
                                                     onEnter: tx,
                                                     onSpace: tS,
@@ -1752,7 +1752,7 @@ let nl = i.memo(function (e) {
                                                     promptToUpload: K,
                                                     fontSize: e8,
                                                     spellcheckEnabled: e6,
-                                                    canOnlyUseTextCommands: tM,
+                                                    canOnlyUseTextCommands: tP,
                                                     className: s()(
                                                         {
                                                             [tW.QI]: j === eY.oU.THREAD_CREATION,
@@ -1771,14 +1771,14 @@ let nl = i.memo(function (e) {
                                     }),
                                 ],
                             }),
-                            e2 ? null : (0, l.jsx)(ed, { ref: eh, channel: T, canOnlyUseTextCommands: tM }),
+                            e2 ? null : (0, l.jsx)(ed, { ref: eh, channel: T, canOnlyUseTextCommands: tP }),
                             (0, l.jsx)(ep.A, {
                                 ref: tl,
                                 channel: T,
                                 canMentionRoles: H,
                                 canMentionChannels: z,
                                 useNewSlashCommands: e1,
-                                canOnlyUseTextCommands: tM,
+                                canOnlyUseTextCommands: tP,
                                 canSendStickers: j.stickers?.allowSending,
                                 canSendSoundmoji: j.soundmoji?.allowSending,
                                 textValue: r,

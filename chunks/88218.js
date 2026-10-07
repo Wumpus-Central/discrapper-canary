@@ -1,4 +1,4 @@
-n.d(t, { A: () => _, J: () => g });
+n.d(t, { A: () => p, J: () => g });
 var i = n(477900),
     s = n(582128),
     l = n(503698),
@@ -36,29 +36,30 @@ function g(e) {
 }
 var h = n(652215),
     A = n(14753);
-let _ = function (e) {
+let p = function (e) {
     let {
             categoryListRef: t,
             expressionsListRef: n,
             categories: l,
             store: d,
-            children: _,
-            className: p,
-            listPadding: N,
-            rowCount: C,
-            getScrollOffsetForIndex: O,
-            categoryHeight: S,
-            onScroll: x,
-            renderCategoryListItem: T,
-            rowCountBySection: y,
-            renderSection: j,
-            navId: R,
-            itemIdPrefix: b,
+            children: p,
+            emojiPacksHeader: _,
+            className: N,
+            listPadding: C,
+            rowCount: O,
+            getScrollOffsetForIndex: S,
+            categoryHeight: x,
+            onScroll: T,
+            renderCategoryListItem: y,
+            rowCountBySection: j,
+            renderSection: R,
+            navId: b,
+            itemIdPrefix: L,
         } = e,
-        L = d.useStore((e) => e.activeCategoryIndex),
-        v = null != R && null != b,
-        { itemIdForIndex: M, parseIndex: D } = s.useMemo(() => g(b ?? "expression-category-"), [b]),
-        P = (function (e) {
+        v = d.useStore((e) => e.activeCategoryIndex),
+        M = null != b && null != L,
+        { itemIdForIndex: D, parseIndex: P } = s.useMemo(() => g(L ?? "expression-category-"), [L]),
+        w = (function (e) {
             let {
                     navId: t,
                     categoryListRef: n,
@@ -79,19 +80,19 @@ let _ = function (e) {
                 },
                 [],
             );
-            let _ = s.useCallback(
+            let p = s.useCallback(
                     (e, t) => {
                         let i = o?.(e, t) ?? 0;
                         n.current?.scrollRowIntoView(e, { animate: !1, offset: i });
                     },
                     [n, o],
                 ),
-                p = s.useCallback(
+                _ = s.useCallback(
                     (e, n) => {
                         let s = l(n);
                         if (null != s) {
                             let e = E(l) ?? g.current;
-                            (_(s, null == e || s >= e), (g.current = s));
+                            (p(s, null == e || s >= e), (g.current = s));
                         }
                         let r = document.querySelector(e);
                         if (null != r) {
@@ -100,13 +101,13 @@ let _ = function (e) {
                         }
                         null != s && I(t, i(s), h);
                     },
-                    [i, t, l, _],
+                    [i, t, l, p],
                 ),
                 N = s.useCallback(
                     (e, n) => {
-                        (_(e, n), (g.current = e), I(t, i(e), h));
+                        (p(e, n), (g.current = e), I(t, i(e), h));
                     },
-                    [i, t, _],
+                    [i, t, p],
                 ),
                 C = s.useCallback(
                     () =>
@@ -140,7 +141,7 @@ let _ = function (e) {
                 T = (0, u.Ay)({
                     id: t,
                     isEnabled: A,
-                    setFocus: p,
+                    setFocus: _,
                     scrollToStart: C,
                     scrollToEnd: O,
                     onNavigateNextAtEnd: S,
@@ -165,14 +166,14 @@ let _ = function (e) {
                 T
             );
         })({
-            navId: R ?? "expression-picker-categories-disabled",
+            navId: b ?? "expression-picker-categories-disabled",
             categoryListRef: t,
-            itemIdForIndex: M,
-            parseIndex: D,
-            rowCount: C,
-            activeIndex: L,
-            getScrollOffsetForIndex: O,
-            enabled: v,
+            itemIdForIndex: D,
+            parseIndex: P,
+            rowCount: O,
+            activeIndex: v,
+            getScrollOffsetForIndex: S,
+            enabled: M,
         });
     !(function (e) {
         let { activeIndex: t, categoryListRef: n, getScrollOffsetForIndex: i } = e,
@@ -189,41 +190,42 @@ let _ = function (e) {
                     (n.current.scrollRowIntoView(t, { animate: !0, offset: s }), (l.current = h.An1), (r.current = t));
                 })));
         }, [t, n, i]);
-    })({ activeIndex: L, categoryListRef: t, getScrollOffsetForIndex: O });
-    let w = s.useCallback(
+    })({ activeIndex: v, categoryListRef: t, getScrollOffsetForIndex: S });
+    let U = s.useCallback(
             (e) => {
                 let { searchQuery: t } = c.RQ.getState();
                 (d.setActiveCategoryIndex(e), "" !== t ? (0, c.Ri)("") : n.current?.scrollToSectionTop(e));
             },
             [n, d],
         ),
-        U = s.useCallback((e) => T(l[e], e, () => w(e), L === e), [L, l, w, T]),
-        G = s.useMemo(() => ("function" == typeof S ? (e) => S(l[e], e) : S), [l, S]),
-        k = (0, i.jsx)(o.A, {
-            listPadding: N,
-            onScroll: x,
+        G = s.useCallback((e) => y(l[e], e, () => U(e), v === e), [v, l, U, y]),
+        k = s.useMemo(() => ("function" == typeof x ? (e) => x(l[e], e) : x), [l, x]),
+        F = (0, i.jsx)(o.A, {
+            listPadding: C,
+            onScroll: T,
             ref: t,
-            renderRow: U,
-            rowCount: C,
-            rowHeight: G,
+            renderRow: G,
+            rowCount: O,
+            rowHeight: k,
             hideScrollbar: !0,
-            rowCountBySection: y,
-            renderSection: j,
-            role: v ? "none presentation" : void 0,
+            rowCountBySection: j,
+            renderSection: R,
+            role: M ? "none presentation" : void 0,
         }),
-        F = (0, i.jsxs)("div", {
-            className: r()(A.i, p),
+        J = (0, i.jsxs)("div", {
+            className: r()(A.iE, { [A.bx]: null != _ }, N),
             children: [
-                v
+                _,
+                M
                     ? (0, i.jsx)(a.PR, {
                           children: (e) => {
                               let { ref: t, ...n } = e;
-                              return (0, i.jsx)("div", { className: A.e, ...n, ref: t, children: k });
+                              return (0, i.jsx)("div", { className: A.en, ...n, ref: t, children: F });
                           },
                       })
-                    : k,
-                _?.(w),
+                    : F,
+                p?.(U),
             ],
         });
-    return v ? (0, i.jsx)(a.hD, { navigator: P, children: F }) : F;
+    return M ? (0, i.jsx)(a.hD, { navigator: w, children: J }) : J;
 };

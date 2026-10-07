@@ -25,10 +25,10 @@ var l = n(477900),
     v = n(562153),
     P = n(183555),
     N = n(679492),
-    L = n(922016),
-    I = n(403777),
+    I = n(922016),
+    L = n(403777),
     _ = n(462887),
-    b = n(267889),
+    b = n(879064),
     U = n(363195),
     M = n(403362),
     O = n(427262),
@@ -390,11 +390,11 @@ function ef(e) {
             interactionSourceId: f,
             interactionPopoutTargetRef: A,
         } = (0, N.Pq)(),
-        S = [ed.d.MODAL, ed.d.MODAL_V2].includes(r) ? (0, I.n1)(t.id, n) : void 0,
+        S = [ed.d.MODAL, ed.d.MODAL_V2].includes(r) ? (0, L.n1)(t.id, n) : void 0,
         T = c === o.sourceType && u === G.AQ.REACT,
         h = c === o.sourceType && u === G.AQ.REPLY,
         m = (T || h) && f === o.sourceId;
-    return (0, l.jsx)(L.Y, {
+    return (0, l.jsx)(I.Y, {
         targetElementRef: A ?? void 0,
         renderPopout: (e) => {
             let { setPopoutRef: s } = e;
@@ -599,8 +599,8 @@ function ep(e) {
             hasEntered: j = !0,
             ref: v,
         } = e,
-        L = (0, N.NR)(),
-        { trackUserProfileAction: I } = (0, P.NJ)(),
+        I = (0, N.NR)(),
+        { trackUserProfileAction: L } = (0, P.NJ)(),
         _ = 1.25 * (null != t),
         b = 36 + _,
         U = 144 + _,
@@ -622,8 +622,8 @@ function ep(e) {
         [et] = i.useState(() => new u.Ep());
     (i.useEffect(() => () => et.stop(), [et]),
         i.useEffect(() => {
-            L?.onInteractionPopoutTargetRefChange(M);
-        }, [L]));
+            I?.onInteractionPopoutTargetRefChange(M);
+        }, [I]));
     let [en, el] = (0, T.z)(() => ({ maxHeight: `${k.current}px`, config: { clamp: !0, duration: 150 } }));
     function ei(e) {
         z &&
@@ -698,7 +698,7 @@ function ep(e) {
                       ref: M,
                       className: a()(ex.kL, x),
                       onMouseEnter: () => {
-                          (I({ action: "HOVER_CUSTOM_STATUS" }), ei(!0));
+                          (L({ action: "HOVER_CUSTOM_STATUS" }), ei(!0));
                       },
                       onMouseLeave: () => {
                           ei(!1);
@@ -720,7 +720,7 @@ function ep(e) {
                           M.current?.contains(e.relatedTarget) || C(!1);
                       },
                       onMouseEnter: () => {
-                          (I({ action: "HOVER_CUSTOM_STATUS" }), C(!0), ei(!0));
+                          (L({ action: "HOVER_CUSTOM_STATUS" }), C(!0), ei(!0));
                       },
                       onMouseLeave: () => {
                           (C(!1), ei(!1));
@@ -817,14 +817,14 @@ let ej = function (e) {
         C = (0, y.G)(R ? c : h?.state),
         P = (0, o.bG)([j.default], () => j.default.getId() === r.id),
         N = P && !S,
-        L = v.Ay.useName(a, s, r),
-        I = P ? H.intl.string(H.t.SlKMnR) : H.intl.formatToPlainString(H.t["91lTRe"], { name: L }),
+        I = v.Ay.useName(a, s, r),
+        L = P ? H.intl.string(H.t.SlKMnR) : H.intl.formatToPlainString(H.t["91lTRe"], { name: I }),
         _ = !P && !r.bot && !S;
     if (R) {
         let e = null != C && "" !== C ? C : null;
         return (0, l.jsx)(E.f5, {
             value: m,
-            children: (0, l.jsx)(ep, { emoji: d ?? null, text: e, statusLabel: I, placeholderText: f, ref: t, ...T }),
+            children: (0, l.jsx)(ep, { emoji: d ?? null, text: e, statusLabel: L, placeholderText: f, ref: t, ...T }),
         });
     }
     let b = h?.emoji ?? null,
@@ -844,7 +844,7 @@ let ej = function (e) {
                         channelId: s,
                         emoji: b,
                         text: U,
-                        statusLabel: I,
+                        statusLabel: L,
                         ...T,
                     }),
                 })
@@ -854,7 +854,7 @@ let ej = function (e) {
                       children: (0, l.jsx)(eC, {
                           emoji: b,
                           text: U,
-                          statusLabel: I,
+                          statusLabel: L,
                           onCloseProfile: u,
                           editButtonRef: g,
                           ref: t,
@@ -863,7 +863,7 @@ let ej = function (e) {
                   })
                 : (0, l.jsx)(E.f5, {
                       value: m,
-                      children: (0, l.jsx)(ep, { emoji: b, text: U, statusLabel: I, ref: t, ...T }),
+                      children: (0, l.jsx)(ep, { emoji: b, text: U, statusLabel: L, ref: t, ...T }),
                   })
         : null;
 };
