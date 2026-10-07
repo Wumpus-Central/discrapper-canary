@@ -215,13 +215,22 @@ class g extends a.A {
         (I = I ?? e.lastChannel),
         [e.channels, t.values()]))
             for (let e of n) e.fallback || p.put(e.channelId, e);
-        for (let t of [e.penalized, n.keys()]) for (let e of t) T.put(e, null);
+        let i = new Set();
+        for (let t of [e.penalized, n.keys()])
+            for (let e of t) {
+                let t = T.put(e, null);
+                null != t && i.add(t[0]);
+            }
+        for (let e of i) T.has(e) || p.delete(e);
     }
     static recordChannel(e) {
         let t = i.A.getBasicChannel(e);
         if (null != t && (0, A.c)(t)) {
             let n = { guildId: t.guild_id ?? null, channelId: e, channelType: t.type };
-            ((I = n), p.put(e, n), E(t) && null != T.put(e, null) && p.delete(e));
+            if (((I = n), p.put(e, n), E(t))) {
+                let t = T.put(e, null);
+                null != t && p.delete(t[0]);
+            }
         }
     }
     static deleteChannel(e) {
