@@ -29,6 +29,11 @@
     margin-top: var(--space-12)
 }
 
+.content__9c1cb {
+    min-height: 100%;
+    position: relative
+}
+
 .stickyPromotionBanner__9c1cb {
     position: sticky;
     top: 0;
@@ -76,4 +81,4 @@
     text-align: center
 }
 
-/*# sourceMappingURL=2858df869eff507e.css.map*/
+/*# sourceMappingURL=3bcbb1fa63ad5bc8.css.map*/

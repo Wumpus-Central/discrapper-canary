@@ -1,4 +1,5 @@
 .container_c468f4 {
+    background: var(--background-gradient-chat, var(--background-base-lowest));
     display: flex;
     flex: 1 1 auto;
     min-height: 0
@@ -12,4 +13,4 @@
     padding-top: var(--custom-top-nav-height)
 }
 
-/*# sourceMappingURL=19c6c1332a13a98c.css.map*/
+/*# sourceMappingURL=71a00f975133cc5f.css.map*/
