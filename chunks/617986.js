@@ -41,9 +41,9 @@ var r = n(192308),
     C = n(157559),
     E = n(376728),
     y = n(274670),
-    g = n(144779),
-    A = n(167189),
-    _ = n(721779),
+    _ = n(144779),
+    g = n(167189),
+    A = n(721779),
     I = n(976860),
     h = n(280450),
     S = n(299091),
@@ -51,13 +51,13 @@ var r = n(192308),
     T = n(174459),
     v = n(998218),
     w = n(877062),
-    L = n(396813),
-    N = n(859703),
-    b = n(405670),
-    q = n(192444),
+    N = n(396813),
+    L = n(859703),
+    q = n(405670),
+    b = n(192444),
     P = n(104886),
-    Q = n(291749),
-    j = n(561844),
+    j = n(291749),
+    Q = n(561844),
     O = n(590202),
     D = n(851936),
     M = n(199510),
@@ -66,16 +66,16 @@ var r = n(192308),
     U = n(375708),
     V = n(977416),
     z = n(901406),
-    H = n(814793),
-    G = n(753386),
-    $ = n(448967),
-    F = n(190107),
-    Y = n(652215),
+    G = n(814793),
+    $ = n(753386),
+    H = n(448967),
+    Y = n(190107),
+    F = n(652215),
     K = n(216934);
 async function B(e) {
     try {
-        let t = (0, _.br)(e);
-        if (null == t || t.type !== A.I.INVITE) return !1;
+        let t = (0, A.br)(e);
+        if (null == t || t.type !== g.I.INVITE) return !1;
         let n = S.A.getInvite(t.code);
         if (null == n) {
             let { invite: e } = await E.Ay.resolveInvite(t.code, "Markdown Link");
@@ -397,7 +397,7 @@ function eo(e, t, o) {
     let { ctaContent: s } = t;
     ((0, P.E5)(P.kI.STEP_2_CLICKED_INTERNAL, "open_disclosure_modal")
         ? (0, y.r)({
-              type: g.F.CLICK_INTERNAL,
+              type: _.F.CLICK_INTERNAL,
               adCreativeType: a.p.QUEST,
               adCreativeId: e.id,
               questContentCTA: s,
@@ -406,7 +406,7 @@ function eo(e, t, o) {
               questContentPosition: t.position,
               impressionId: t.impressionId,
           })
-        : (0, j.Y5)({
+        : (0, Q.Y5)({
               questId: e.id,
               questContent: t.content,
               questContentPosition: t.position,
@@ -472,7 +472,7 @@ function ea(e) {
             subtitle: U.intl.string(U.t.FIYcpC),
             choices: k()(t.slice(0, 4)).concat(t[4]),
         });
-    (n.log(`Showing survey ${i.id}`), (0, $.m)({ questId: e.id, survey: i }));
+    (n.log(`Showing survey ${i.id}`), (0, H.m)({ questId: e.id, survey: i }));
 }
 function es() {
     return Promise.all([
@@ -531,38 +531,38 @@ function el(e) {
         skipEnrollmentCheck: c = !1,
     } = e;
     if ((0, R.K$)(t)) return void em(t);
-    if (N.A.isQuestAccessSuspended && t.userStatus?.completedAt == null) return void ei();
+    if (L.A.isQuestAccessSuspended && t.userStatus?.completedAt == null) return void ei();
     let d = (0, o.A)();
     if (!c && t.userStatus?.enrolledAt == null && !(0, V.Ic)(t)) {
-        N.A.isEnrolling(t.id) ||
-            (0, L.Oy)(t.id, { questContent: n, questContentCTA: O.Cy.ACCEPT_QUEST, sourceQuestContent: a });
-        let e = b.Ay.getState().getVideoProgress(t.id);
+        L.A.isEnrolling(t.id) ||
+            (0, N.Oy)(t.id, { questContent: n, questContentCTA: O.Cy.ACCEPT_QUEST, sourceQuestContent: a });
+        let e = q.Ay.getState().getVideoProgress(t.id);
         null != e &&
             e.timestampSec > 1 &&
-            ((0, L.QG)(t.id),
-            T.default.track(Y.HAw.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
+            ((0, N.QG)(t.id),
+            T.default.track(F.HAw.QUEST_VIDEO_ENROLLMENT_RETRY_ATTEMPTED, {
                 quest_id: t.id,
                 source_quest_content: (0, O.jO)(a),
                 source_quest_content_cta: s,
                 video_session_id: d,
             }));
     }
-    let { setCaptionEnabled: m, muted: f, volume: p, captionEnabled: C } = b.Ay.getState(),
-        { enabled: E, variant: y } = q.Ig.getConfig({ location: F.rE.VIDEO_MODAL }),
-        g = null != (0, Q.tW)(t, Q.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
+    let { setCaptionEnabled: m, muted: f, volume: p, captionEnabled: C } = q.Ay.getState(),
+        { enabled: E, variant: y } = b.Ig.getConfig({ location: Y.rE.VIDEO_MODAL }),
+        _ = null != (0, j.tW)(t, j.fY.VIDEO_PLAYER_CAPTION, void 0, !1);
     f &&
         E &&
-        (y === q.sy.AUTO_ENABLE_CAPTIONS && g && !C
+        (y === b.sy.AUTO_ENABLE_CAPTIONS && _ && !C
             ? m(!0)
-            : y === q.sy.AUTO_UNMUTE && (b.Ay.getState().setMuted(!1), 0 === p && b.Ay.getState().setVolume(0.3)));
-    let A = performance.now();
+            : y === b.sy.AUTO_UNMUTE && (q.Ay.getState().setMuted(!1), 0 === p && q.Ay.getState().setVolume(0.3)));
+    let g = performance.now();
     (0, r.openModalLazy)(
         async () => {
             let { default: e } = await es();
             return (n) =>
                 (0, i.jsx)(e, {
                     ...n,
-                    openStartClockTime: A,
+                    openStartClockTime: g,
                     questId: t.id,
                     autoplay: l,
                     videoSessionId: d,
@@ -570,9 +570,9 @@ function el(e) {
                 });
         },
         {
-            modalKey: (0, G.cZ)(t.id),
+            modalKey: (0, $.cZ)(t.id),
             backdropStyle: u.F.IMMERSIVE,
-            onCloseCallback: () => (0, G.vm)({ questId: t.id, sourceQuestContent: a, videoSessionId: d }),
+            onCloseCallback: () => (0, $.vm)({ questId: t.id, sourceQuestContent: a, videoSessionId: d }),
         },
     );
 }
@@ -589,13 +589,13 @@ function er(e) {
         })(e),
         n = (0, s.X7)(t);
     (null != n &&
-        T.default.track(Y.HAw.DEEP_LINK_CLICKED, {
+        T.default.track(F.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, l.v)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
         w.A.launch(t, (t) => {
-            t || (0, I.bG)({ pathname: Y.BVt.QUEST_HOME, hash: e });
+            t || (0, I.bG)({ pathname: F.BVt.QUEST_HOME, hash: e });
         }));
 }
 function eu(e) {
@@ -611,13 +611,13 @@ function eu(e) {
         })(e),
         n = (0, s.X7)(t);
     (null != n &&
-        T.default.track(Y.HAw.DEEP_LINK_CLICKED, {
+        T.default.track(F.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, l.v)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
         w.A.launch(t, (t) => {
-            t || (0, I.bG)({ pathname: Y.BVt.QUEST_HOME, hash: e });
+            t || (0, I.bG)({ pathname: F.BVt.QUEST_HOME, hash: e });
         }));
 }
 function ec(e) {
@@ -633,13 +633,13 @@ function ec(e) {
         })(e),
         n = (0, s.X7)(t);
     (null != n &&
-        T.default.track(Y.HAw.DEEP_LINK_CLICKED, {
+        T.default.track(F.HAw.DEEP_LINK_CLICKED, {
             fingerprint: (0, l.v)(n.fingerprint),
             attempt_id: n.attemptId,
             source: n.utmSource,
         }),
         w.A.launch(t, (e) => {
-            e || (0, I.bG)({ pathname: Y.BVt.QUEST_HOME });
+            e || (0, I.bG)({ pathname: F.BVt.QUEST_HOME });
         }));
 }
 function ed(e, t, o) {
@@ -678,7 +678,7 @@ function em(e) {
     });
 }
 async function ef(e, t) {
-    let { type: n } = await (0, L.Oy)(e.id, {
+    let { type: n } = await (0, N.Oy)(e.id, {
         questContent: t.questContent,
         questContentCTA: t.questContentCTA,
         sourceQuestContent: t.sourceQuestContent,
@@ -686,7 +686,7 @@ async function ef(e, t) {
         questContentRowIndex: t.questContentRowIndex,
     });
     switch (n) {
-        case L.WM.SUCCESS:
+        case N.WM.SUCCESS:
             el({
                 quest: e,
                 questContent: t.questContent,
@@ -694,16 +694,13 @@ async function ef(e, t) {
                 sourceQuestContentCTA: t.sourceQuestContentCTA,
             });
             break;
-        case L.WM.CAPTCHA_FAILED:
-            C.A.show({ title: U.intl.string(U.t["/CidxO"]), body: U.intl.string(U.t.HQdHg6) });
-            break;
-        case L.WM.UNKNOWN_ERROR:
+        case N.WM.UNKNOWN_ERROR:
             C.A.show({ title: U.intl.string(U.t.R0RpRX), body: U.intl.string(U.t.OXD41D) });
-        case L.WM.PREVIOUS_IN_FLIGHT_REQUEST:
+        case N.WM.PREVIOUS_IN_FLIGHT_REQUEST:
     }
 }
 function ep(e) {
-    if ((0, H.vA)(e)) return e.config.features.includes(F.Li.CLOUD_GAMING_ACTIVITY) ? c.h : d.GameControllerIcon;
+    if ((0, G.vA)(e)) return e.config.features.includes(Y.Li.CLOUD_GAMING_ACTIVITY) ? c.h : d.GameControllerIcon;
 }
 function eC(e) {
     let t = (0, z.bg)(e);
