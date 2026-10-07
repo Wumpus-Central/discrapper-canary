@@ -133,11 +133,13 @@
 
 .scroller__1f657 {
     height: 330px;
-    margin: 12px -12px 0
+    margin-block: 12px 0;
+    margin-inline-end: -8px;
+    margin-inline-start: -12px
 }
 
 .templatesList__1f657 {
     padding: 0 12px
 }
 
-/*# sourceMappingURL=018e15c628b843ce.css.map*/
+/*# sourceMappingURL=61b0e1c2a7d1ff4f.css.map*/

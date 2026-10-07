@@ -371,6 +371,16 @@
     position: relative
 }
 
+.joinButton_d7e468 {
+    opacity: 0;
+    transition: opacity .15s ease-out
+}
+
+.voiceGroup_d7e468:focus-within .joinButton_d7e468,
+.voiceGroup_d7e468:hover .joinButton_d7e468 {
+    opacity: 1
+}
+
 .joinButton_d7e468>button {
     border-radius: var(--radius-xs);
     height: 24px
@@ -2544,4 +2554,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=6da0e4e2cba2b0d5.css.map*/
+/*# sourceMappingURL=6898b64980a1538e.css.map*/
