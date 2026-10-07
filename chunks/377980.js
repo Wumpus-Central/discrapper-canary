@@ -43,7 +43,7 @@ var f = t(834730),
     g = t(107384),
     p = t(176524);
 t(321073);
-var v = t(355903);
+var v = t(47899);
 function y(e) {
     let { persistentBadge: n, dismissibleBadges: t } = e;
     return (function (e) {
@@ -1022,8 +1022,8 @@ var eH = t(17928),
     e0 = t(689175),
     e1 = t(707554),
     e6 = t(823092),
-    e5 = t(397274),
-    e8 = t(525473);
+    e8 = t(397274),
+    e5 = t(525473);
 function e7(e) {
     let { notice: n, children: t } = e,
         { showNotice: i, handleStoreUpdate: s } = (0, e6.L_)(),
@@ -1045,7 +1045,7 @@ function e7(e) {
     let c = l.useMemo(() => {
         if (null == n || !i) return null;
         let { element: e } = n;
-        return (0, r.jsx)(eQ.F, { className: e8.lm, children: (0, r.jsx)(e, {}) });
+        return (0, r.jsx)(eQ.F, { className: e5.lm, children: (0, r.jsx)(e, {}) });
     }, [n, i]);
     return (0, r.jsxs)(r.Fragment, { children: [t, (0, r.jsx)(eJ.F, { component: "div", children: c })] });
 }
@@ -1053,12 +1053,12 @@ function e9(e) {
     let { decoration: n } = e,
         t = n.component;
     return (0, r.jsx)("div", {
-        className: a()(e8.oK, { [e8.qf]: n.sticky }),
+        className: a()(e5.oK, { [e5.qf]: n.sticky }),
         "data-settings-panel-sticky-decoration": n.sticky || void 0,
         children: (0, r.jsx)(t, {}),
     });
 }
-function e3(e) {
+function e2(e) {
     let { notice: n, children: t, useObscuredNotice: i } = e,
         s = l.useRef(null),
         a = i?.();
@@ -1067,26 +1067,26 @@ function e3(e) {
         : (0, r.jsx)(e7, {
               notice: n,
               children: (0, r.jsxs)(e0.Gt, {
-                  className: e8.XG,
+                  className: e5.XG,
                   scrollbarGutter: "both-edges",
                   ref: (e) => {
-                      e5.A.setPanelScrollerRef(e);
+                      e8.A.setPanelScrollerRef(e);
                   },
                   children: [
                       (0, r.jsx)("div", {
-                          className: e8.nd,
+                          className: e5.nd,
                           ref: s,
                           children: (0, r.jsx)(eo.xp, { containerRef: s, children: t }),
                       }),
-                      (0, r.jsx)("div", { className: e8.iS, "data-panel-bottom": !0 }),
+                      (0, r.jsx)("div", { className: e5.iS, "data-panel-bottom": !0 }),
                   ],
               }),
           });
 }
-function e2(e) {
+function e3(e) {
     let { layout: n, decoration: t, renderSetting: i } = e;
     return (0, r.jsxs)("div", {
-        className: e8.LZ,
+        className: e5.LZ,
         children: [
             null != t && (0, r.jsx)(e9, { decoration: t }),
             (0, r.jsx)(e1.F, {
@@ -1094,7 +1094,7 @@ function e2(e) {
                 children: n.map((e, t) =>
                     (0, r.jsxs)(
                         l.Fragment,
-                        { children: [i(e), t !== n.length - 1 && (0, r.jsx)(eM.c, { className: e8.yF })] },
+                        { children: [i(e), t !== n.length - 1 && (0, r.jsx)(eM.c, { className: e5.yF })] },
                         e.key,
                     ),
                 ),
@@ -1107,11 +1107,11 @@ function e4(e) {
         { layout: l } = n;
     if ((0, i.zS)(l))
         return (0, r.jsx)(
-            e3,
+            e2,
             {
                 notice: n.notice,
                 useObscuredNotice: n.useObscuredNotice,
-                children: (0, r.jsx)(e2, { layout: l, decoration: n.decoration, renderSetting: t }),
+                children: (0, r.jsx)(e3, { layout: l, decoration: n.decoration, renderSetting: t }),
             },
             n.key,
         );
