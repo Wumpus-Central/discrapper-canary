@@ -1,14 +1,14 @@
 (n.r(t),
     n.d(t, {
-        international: () => T,
-        initialLocale: () => S,
-        intl: () => N,
-        getSystemLocale: () => m,
-        useSyncMessages: () => C,
+        international: () => m,
+        initialLocale: () => N,
+        intl: () => C,
+        getSystemLocale: () => g,
+        useSyncMessages: () => O,
         t: () => E,
-        getLanguages: () => h,
+        getLanguages: () => f,
         getAvailableLocales: () => A,
-        systemLocale: () => g,
+        systemLocale: () => S,
     }));
 var i = n(477900),
     r = n(582128),
@@ -23,7 +23,7 @@ let { createLoader: d } = n(632296),
     E = (0, a.chainMessagesObjects)(o.A, _);
 function A() {
     let e = n(855494).A;
-    return h()
+    return f()
         .filter((e) => {
             let { enabled: t } = e;
             return t;
@@ -38,14 +38,15 @@ function A() {
             return (n = n.toLowerCase()) < (i = i.toLowerCase()) ? -1 : +(n > i);
         });
 }
-function h() {
+let h = { es: "es-ES", nb: "no", nn: "no" };
+function f() {
     return n(416678);
 }
-let { createLoader: f } = n(632296),
-    I = f({ "en-US": () => n.e("386098").then(n.bind(n, 26185)) }, "en-US"),
-    { makeMessagesProxy: p } = n(632296),
-    T = p(I);
-function m(e) {
+let { createLoader: I } = n(632296),
+    p = I({ "en-US": () => n.e("386098").then(n.bind(n, 26185)) }, "en-US"),
+    { makeMessagesProxy: T } = n(632296),
+    m = T(p);
+function g(e) {
     return [
         Array.isArray(navigator.languages) ? navigator.languages[0] : null,
         navigator.language,
@@ -54,9 +55,9 @@ function m(e) {
         e,
     ].find((e) => null != e && "" !== e);
 }
-let g = m("en-US"),
-    S = (function (e, t) {
-        let n = h()
+let S = g("en-US"),
+    N = (function (e, t) {
+        let n = f()
             .filter((e) => {
                 let { enabled: t } = e;
                 return t;
@@ -67,13 +68,15 @@ let g = m("en-US"),
             });
         if (n.includes(e)) return e;
         let i = e.split("-");
-        return n.includes(i[0])
-            ? i[0]
+        if (n.includes(i[0])) return i[0];
+        let r = 1 === i.length ? h[i[0]] : null;
+        return null != r && n.includes(r)
+            ? r
             : "zh" === i[0] && i.length > 1 && "Hant" === i[1]
               ? (n.find((e) => "zh-TW" === e) ?? t)
               : (n.find((e) => e.split("-")[0] === i[0]) ?? t);
-    })(g, "en-US"),
-    N = new a.IntlManager({ initialLocale: S, defaultLocale: "en-US" }).withFormatters({
+    })(S, "en-US"),
+    C = new a.IntlManager({ initialLocale: N, defaultLocale: "en-US" }).withFormatters({
         format: (0, a.makeReactFormatter)({
             $i: (e, t) => (0, i.jsx)("em", { children: e }, t),
             $b: (e, t) => (0, i.jsx)("strong", { children: e }, t),
@@ -103,9 +106,9 @@ let g = m("en-US"),
         formatToMarkdownString: a.markdownFormatter,
         formatToParts: a.astFormatter,
     });
-function C(e) {
+function O(e) {
     r.useSyncExternalStore(
         (t) => e.onChange(t),
-        () => e.isLocaleLoaded(N.currentLocale),
+        () => e.isLocaleLoaded(C.currentLocale),
     );
 }
