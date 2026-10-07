@@ -1006,6 +1006,7 @@ class eC extends b.G {
                 V: { kind: "message", T: () => eN },
             },
             { no: 8, name: "last_gift_intent_dismissed_at_ms", kind: "scalar", T: 6 },
+            { no: 9, name: "contextual_referral_upsell_dismissals_version", kind: "scalar", T: 6 },
         ]);
     }
     create(e) {
@@ -1014,6 +1015,7 @@ class eC extends b.G {
             lastReceivedChangelogId: "0",
             recurringDismissibleContentStates: {},
             lastGiftIntentDismissedAtMs: "0",
+            contextualReferralUpsellDismissalsVersion: "0",
         };
         return (
             globalThis.Object.defineProperty(t, v.$, { enumerable: !1, value: this }),
@@ -1070,6 +1072,9 @@ class eC extends b.G {
                     break;
                 case 8:
                     r.lastGiftIntentDismissedAtMs = e.fixed64().toString();
+                    break;
+                case 9:
+                    r.contextualReferralUpsellDismissalsVersion = e.fixed64().toString();
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -1133,7 +1138,9 @@ class eC extends b.G {
                 t.tag(2, y.O0.LengthDelimited).fork(),
                 eN.internalBinaryWrite(e.recurringDismissibleContentStates[i], t, n),
                 t.join().join());
-        "0" !== e.lastGiftIntentDismissedAtMs && t.tag(8, y.O0.Bit64).fixed64(e.lastGiftIntentDismissedAtMs);
+        ("0" !== e.lastGiftIntentDismissedAtMs && t.tag(8, y.O0.Bit64).fixed64(e.lastGiftIntentDismissedAtMs),
+            "0" !== e.contextualReferralUpsellDismissalsVersion &&
+                t.tag(9, y.O0.Bit64).fixed64(e.contextualReferralUpsellDismissalsVersion));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? y.f$.onWrite : i)(this.typeName, e, t), t);
     }
