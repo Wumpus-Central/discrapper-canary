@@ -433,6 +433,13 @@ async function ee(e, t) {
                             timestamp: r.ts,
                             publishNotice: r.publish_notice,
                         });
+                    else if (
+                        "app_removed" === r.type ||
+                        "bot_removed" === r.type ||
+                        "preview_bot_removed" === r.type ||
+                        "app_channel_deleted" === r.type
+                    )
+                        s.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: t, event: r });
                     else if ("side_reply" === r.type)
                         s.h.dispatch({
                             type: "CONJURE_CHAT_SIDE_REPLY",

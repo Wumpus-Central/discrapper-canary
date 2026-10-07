@@ -7,14 +7,14 @@ var i = n(17928),
     o = n(617617),
     d = n(803224),
     a = n(309010),
-    f = n(967198),
-    c = n(461213),
+    c = n(967198),
+    f = n(461213),
     _ = n(935208),
     p = n(260498),
     g = n(189714),
     h = n(89505),
-    C = n(246338),
-    E = n(652215),
+    E = n(246338),
+    C = n(652215),
     T = n(746080),
     A = n(261425),
     S = n(660183);
@@ -35,14 +35,14 @@ let U = new Map(),
     k = new Map(),
     m = new Map(),
     I = [],
-    w = new Map(),
+    v = new Map(),
     H = new Map(),
+    w = new Set(),
     q = new Set(),
-    v = new Set(),
-    y = new Map(),
-    J = 0,
-    D = [],
-    P = 0;
+    J = new Map(),
+    y = 0,
+    P = [],
+    D = 0;
 function b(e, t) {
     let {
             ts: n,
@@ -51,7 +51,7 @@ function b(e, t) {
             attachments: s,
             turnId: r,
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        u = i ?? `m${++P}`;
+        u = i ?? `m${++D}`;
     return {
         id: u,
         render_id: u,
@@ -64,11 +64,11 @@ function b(e, t) {
         attachments: s,
     };
 }
-let M = "turn:";
-function j(e) {
+let j = "turn:";
+function M(e) {
     let t = b(e.role, e.content, { ts: e.ts, id: e.id, userId: e.user_id, attachments: e.attachments }),
         n = (function (e) {
-            let t = e?.startsWith(M) === !0 ? e.slice(M.length) : e;
+            let t = e?.startsWith(j) === !0 ? e.slice(j.length) : e;
             if (null == t || !/^\d+$/.test(t)) return null;
             let n = _.default.extractTimestamp(t);
             return Number.isFinite(n) && n > 0 ? n : null;
@@ -86,6 +86,7 @@ function j(e) {
     null != e.ideas && e.ideas.length > 0 && (t.ideas = e.ideas),
     null != e.publish_cta && (t.publishCta = e.publish_cta),
     null != e.publish_notice && (t.publishNotice = e.publish_notice),
+    null != e.project_event && (t.projectEvent = e.project_event),
     null != e.clarification && e.clarification.questions.length > 0 && (t.clarification = e.clarification),
     null != e.restore_proposal && (t.restoreProposal = e.restore_proposal),
     null != e.source_sha && (t.sourceSha = e.source_sha),
@@ -108,7 +109,7 @@ function j(e) {
     return t;
 }
 function z(e, t) {
-    return e.turn_id === t || e.id === `${M}${t}`;
+    return e.turn_id === t || e.id === `${j}${t}`;
 }
 function x(e, t) {
     if (null == t) return -1;
@@ -145,7 +146,7 @@ function L(e, t, n) {
     U.set(e, [...i.slice(0, l), n(r), ...i.slice(l + 1)]);
 }
 function V(e) {
-    return "side_reply" === e.kind || "publish_notice" === e.kind;
+    return "side_reply" === e.kind || "publish_notice" === e.kind || "project_event" === e.kind;
 }
 function B(e) {
     if (null == e) return !1;
@@ -161,19 +162,19 @@ function $(e) {
 }
 function W(e, t, n, i, l) {
     if (null != l) {
-        if (l <= (y.get(e) ?? 0)) return;
-        y.set(e, l);
+        if (l <= (J.get(e) ?? 0)) return;
+        J.set(e, l);
     }
     if (
         h.A.areTurnNotificationsDisabled() ||
-        c.A.getStatus() === E.clD.DND ||
+        f.A.getStatus() === C.clD.DND ||
         u.NO.getSetting() ||
         s.A.isCurrentUserInRestrictedHours() ||
         (0, g.j)(o.A.settings, e)
     )
         return;
     let _ = !d.A.isSoundDisabled("message1"),
-        A = f.A.getGuildId();
+        A = c.A.getGuildId();
     if (
         null != A &&
         p.Ay.getSelectedProjectId(A) === e &&
@@ -183,13 +184,13 @@ function W(e, t, n, i, l) {
         _ && (0, r.Ak)(N, 0.4);
         return;
     }
-    let S = t ?? (0, C.oX)("VibegrationsChatStore");
+    let S = t ?? (0, E.oX)("VibegrationsChatStore");
     h.A.presentTurnNotification({
         projectId: e,
         guildId: S,
         title: n,
         body: i,
-        route: null == S ? null : E.BVt.CHANNEL(S, T.VV.CONJURE, e),
+        route: null == S ? null : C.BVt.CHANNEL(S, T.VV.CONJURE, e),
         sound: _ ? N : void 0,
         volume: 0.4,
     });
@@ -237,19 +238,19 @@ function K(e) {
         i = Z.delete(e),
         l = k.delete(e),
         s = m.delete(e),
-        r = w.delete(e),
+        r = v.delete(e),
         u = H.delete(e),
-        o = q.delete(e),
-        d = v.delete(e),
+        o = w.delete(e),
+        d = q.delete(e),
         a = I.indexOf(e);
     return (-1 !== a && I.splice(a, 1), t || n || i || l || s || r || u || o || d || -1 !== a);
 }
 class Q extends i.Ay.Store {
     initialize() {
-        this.waitFor(s.A, d.A, a.Ay, f.A, c.A, o.A, p.Ay);
+        this.waitFor(s.A, d.A, a.Ay, c.A, f.A, o.A, p.Ay);
     }
     getMessages(e) {
-        return U.get(e) ?? D;
+        return U.get(e) ?? P;
     }
     hasPendingSettingsRequest(e) {
         let t = this.getMessages(e),
@@ -269,19 +270,19 @@ class Q extends i.Ay.Store {
         return $(e) ? null : (k.get(e) ?? null);
     }
     getProjectUsage(e) {
-        return w.get(e) ?? null;
+        return v.get(e) ?? null;
     }
     getThinkingActivity(e) {
         return H.get(e) ?? null;
     }
     isCompacting(e) {
-        return q.has(e);
+        return w.has(e);
     }
     isSaving(e) {
-        return v.has(e);
+        return q.has(e);
     }
     getSidebarWidth() {
-        return J;
+        return y;
     }
     getActivityOrderedProjectIds() {
         return I.slice();
@@ -342,39 +343,39 @@ function el(e) {
 let es = new Q(l.h, {
     LOGOUT: function () {
         if (
-            (y.clear(),
+            (J.clear(),
             0 === U.size &&
                 0 === k.size &&
                 0 === m.size &&
-                0 === w.size &&
-                0 === H.size &&
-                0 === q.size &&
                 0 === v.size &&
+                0 === H.size &&
+                0 === w.size &&
+                0 === q.size &&
                 0 === X.size &&
                 0 === Z.size &&
                 0 === I.length &&
-                0 === J)
+                0 === y)
         )
             return !1;
         (U.clear(),
             k.clear(),
             m.clear(),
-            w.clear(),
-            H.clear(),
-            q.clear(),
             v.clear(),
+            H.clear(),
+            w.clear(),
+            q.clear(),
             X.clear(),
             Z.clear(),
             (I.length = 0),
-            (J = 0));
+            (y = 0));
     },
     CONJURE_CHAT_HISTORY_SET: function (e) {
         let { projectId: t, entries: n, cursor: i, degraded: l } = e,
             s = X.get(t),
             r = X.has(t) ? (U.get(t) ?? []) : [];
-        (X.set(t, i ?? null), !0 === l ? Z.add(t) : Z.delete(t), H.delete(t), q.delete(t), v.delete(t));
+        (X.set(t, i ?? null), !0 === l ? Z.add(t) : Z.delete(t), H.delete(t), w.delete(t), q.delete(t));
         let u = new Set(),
-            o = n.filter((e) => null == e.id || (!u.has(e.id) && (u.add(e.id), !0))).map(j),
+            o = n.filter((e) => null == e.id || (!u.has(e.id) && (u.add(e.id), !0))).map(M),
             d = null != i && !0 !== l ? o.findIndex((e) => null != e.id) : -1,
             a = -1 === d ? -1 : r.findIndex((e) => e.id === o[d].id);
         (-1 !== a && X.set(t, s ?? null), U.set(t, et(-1 === a ? o : [...r.slice(0, a), ...o.slice(d)])), Y(t));
@@ -383,7 +384,7 @@ let es = new Q(l.h, {
         let { projectId: t, entries: n, cursor: i } = e;
         if ((X.set(t, i), 0 === n.length)) return;
         let l = U.get(t) ?? [],
-            s = n.map(j),
+            s = n.map(M),
             r = new Set(l.flatMap((e) => (null == e.id ? [] : [e.id]))),
             u = s.filter((e) => null == e.id || !r.has(e.id));
         U.set(t, et([...u, ...l]));
@@ -398,8 +399,8 @@ let es = new Q(l.h, {
             ((d.render_id = o[a].render_id), U.set(t, [...o.slice(0, a), d, ...o.slice(a + 1)]), Y(t));
             return;
         }
-        let f = [...o, d];
-        (B(f) || f.push(b("assistant", "")), U.set(t, f), Y(t));
+        let c = [...o, d];
+        (B(c) || c.push(b("assistant", "")), U.set(t, c), Y(t));
     },
     CONJURE_CHAT_MESSAGE_DISPOSITION: function (e) {
         let { projectId: t, id: n, activeTurnId: i, disposition: l } = e,
@@ -456,6 +457,13 @@ let es = new Q(l.h, {
         let u = b("assistant", i, { ts: l, id: n });
         ((u.kind = "publish_notice"), (u.publishNotice = s), (u.finished = !0), U.set(t, [...r, u]));
     },
+    CONJURE_CHAT_PROJECT_EVENT: function (e) {
+        let { projectId: t, event: n } = e,
+            i = U.get(t);
+        if (null == i || i.some((e) => e.id === n.id)) return !1;
+        let l = b("assistant", "", { ts: n.ts, id: n.id });
+        ((l.kind = "project_event"), (l.projectEvent = n), (l.finished = !0), U.set(t, [...i, l]));
+    },
     CONJURE_CHAT_STEP_APPEND: function (e) {
         let { projectId: t, step: n, turnId: i } = e;
         if ("preview_ready" === n.kind && null == i && !$(t)) return !1;
@@ -486,8 +494,8 @@ let es = new Q(l.h, {
                 provisionalTodo: void 0,
                 content: "" !== e.content ? e.content : (n ?? ""),
             })),
-            $(t) || (H.delete(t), q.delete(t)),
-            v.delete(t),
+            $(t) || (H.delete(t), w.delete(t)),
+            q.delete(t),
             Y(t));
     },
     CONJURE_CHAT_INTERRUPTED: function (e) {
@@ -535,22 +543,22 @@ let es = new Q(l.h, {
     },
     CONJURE_CHAT_COMPACTING_SET: function (e) {
         let { projectId: t, compacting: n } = e;
-        if (n === q.has(t)) return !1;
-        n ? q.add(t) : q.delete(t);
+        if (n === w.has(t)) return !1;
+        n ? w.add(t) : w.delete(t);
     },
     CONJURE_CHAT_SAVING_SET: function (e) {
         let { projectId: t, saving: n } = e;
-        if (n === v.has(t)) return !1;
-        n ? v.add(t) : v.delete(t);
+        if (n === q.has(t)) return !1;
+        n ? q.add(t) : q.delete(t);
     },
     CONJURE_CHAT_USAGE_SET: function (e) {
         let { projectId: t, project: n } = e;
-        w.set(t, n);
+        v.set(t, n);
     },
     CONJURE_CHAT_SIDEBAR_WIDTH_SET: function (e) {
         let { width: t } = e;
-        if (J === t) return !1;
-        J = t;
+        if (y === t) return !1;
+        y = t;
     },
     CONJURE_CHAT_TURN_PATCH: function (e) {
         let { projectId: t, patch: n, turnId: i } = e;
@@ -563,8 +571,8 @@ let es = new Q(l.h, {
     CONJURE_CHAT_CONN_STATE: function (e) {
         let { projectId: t, connState: n } = e;
         if ("closed" !== n && "failed" !== n) return !1;
-        let i = q.delete(t),
-            l = v.delete(t),
+        let i = w.delete(t),
+            l = q.delete(t),
             s = H.delete(t),
             r = U.get(t);
         if (null == r || !r.some((e) => "assistant" === e.role && !O(e))) return (!!s || !!i || !!l) && void 0;
@@ -599,7 +607,7 @@ let es = new Q(l.h, {
         if (!K(t)) return !1;
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
-        let t = new Set([...U.keys(), ...X.keys(), ...k.keys(), ...m.keys(), ...w.keys()]),
+        let t = new Set([...U.keys(), ...X.keys(), ...k.keys(), ...m.keys(), ...v.keys()]),
             n = !1;
         for (let e of t) null == p.Ay.getProject(e) && K(e) && (n = !0);
         if (!n) return !1;

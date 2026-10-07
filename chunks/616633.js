@@ -1,3 +1,3 @@
-c.d(t, { t: () => n });
-var i,
-    n = 588245 != c.j ? (((i = {}).ACCOUNT_LINKING = "account_linking"), (i.STOREFRONT = "storefront"), i) : null;
+t.d(l, { t: () => a });
+var n,
+    a = (((n = {}).ACCOUNT_LINKING = "account_linking"), (n.STOREFRONT = "storefront"), n);
