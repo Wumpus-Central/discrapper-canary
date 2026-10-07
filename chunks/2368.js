@@ -11,7 +11,7 @@ var l = n(284009),
     h = n(820066);
 let m =
         /(@[^@#]+(?:#0|#\d{4}))|(@[^\s\t@#:]+)(?=[\s\t@:])|(:[a-zA-Z0-9_~]+:)|(#"(?:\\\\|\\"|(?!")[^\\])+")|(#[^\s\t@#:]+(?=[\s\t@#:]))/g,
-    f = new Set([
+    p = new Set([
         "emoji",
         "customEmoji",
         "textMention",
@@ -23,13 +23,13 @@ let m =
         "timestamp",
         "gameMention",
     ]),
-    p = new Set(["textMention", "userMention", "roleMention", "channelMention"]),
+    f = new Set(["textMention", "userMention", "roleMention", "channelMention"]),
     g = new Set(["gameMentionInput", "timestampMentionInput"]),
     x = new Set(["line", "blockQuote"]),
     E = new Set(["applicationCommandOption"]);
 function S(e, t, n) {
     let { isInline: l, isVoid: i, onChange: r } = e;
-    ((e.isVoid = (e) => !!f.has(e.type) || i(e)), (e.isInline = (e) => !!(f.has(e.type) || g.has(e.type)) || l(e)));
+    ((e.isVoid = (e) => !!p.has(e.type) || i(e)), (e.isInline = (e) => !!(p.has(e.type) || g.has(e.type)) || l(e)));
     let s = null,
         a = !0;
     return (
@@ -70,22 +70,22 @@ function C(e, t, n, l) {
                 let [s, o] = t,
                     u = !1,
                     c = N(e, o);
-                for (let f = s.children.length - 1; f >= 0; f--) {
-                    let p,
-                        g = s.children[f];
+                for (let p = s.children.length - 1; p >= 0; p--) {
+                    let f,
+                        g = s.children[p];
                     if (!h.l5.isText(g)) continue;
-                    let x = h.PW.child(o, f),
+                    let x = h.PW.child(o, p),
                         E = [];
-                    for (m.lastIndex = 0; null != (p = m.exec(g.text));) {
-                        if (0 !== p.index && null == g.text.charAt(p.index - 1).match(/(\t|\s)/)) {
-                            m.lastIndex = p.index + 1;
+                    for (m.lastIndex = 0; null != (f = m.exec(g.text));) {
+                        if (0 !== f.index && null == g.text.charAt(f.index - 1).match(/(\t|\s)/)) {
+                            m.lastIndex = f.index + 1;
                             continue;
                         }
-                        if (v(c, { path: x, offset: p.index }, r)) continue;
-                        let i = (0, a.p)(p[0], n, l);
+                        if (v(c, { path: x, offset: f.index }, r)) continue;
+                        let i = (0, a.p)(f[0], n, l);
                         null != i && T(e, l, t[0], i)
-                            ? E.push({ index: p.index, length: p[0].length, node: i })
-                            : (m.lastIndex = p.index + 1);
+                            ? E.push({ index: f.index, length: f[0].length, node: i })
+                            : (m.lastIndex = f.index + 1);
                     }
                     for (let t of E.reverse())
                         ((function (e, t, n, l, r) {
@@ -101,7 +101,7 @@ function C(e, t, n, l) {
                                     "Failed to find valid end position for raw mention replace",
                                 ),
                                 d.b.textToVoid(e, r, { anchor: o, focus: u }));
-                        })(e, [g, h.PW.child(o, f)], t.index, t.length, t.node),
+                        })(e, [g, h.PW.child(o, p)], t.index, t.length, t.node),
                             (u = !0));
                 }
                 return u;
@@ -150,8 +150,8 @@ function b(e, t, n, l) {
     for (let c = 0; c < s.length; c++) {
         let h,
             m = s[c],
-            f = s[c + 1];
-        if (null != f && f.text.endsWith("\\") && m.start === f.start + f.text.length) continue;
+            p = s[c + 1];
+        if (null != p && p.text.endsWith("\\") && m.start === p.start + p.text.length) continue;
         switch (m.attributes[0]) {
             case "emoji":
                 if (
@@ -222,9 +222,9 @@ function b(e, t, n, l) {
                 continue;
         }
         if (!T(e, n, t[0], h)) continue;
-        let p = (0, u.Q)(e, i, l.serializedChildren, m.start),
+        let f = (0, u.Q)(e, i, l.serializedChildren, m.start),
             g = (0, u.Q)(e, i, l.serializedChildren, m.start + m.text.length);
-        (d.b.textToVoid(e, h, { anchor: p, focus: g }), (r = !0));
+        (d.b.textToVoid(e, h, { anchor: f, focus: g }), (r = !0));
     }
     return r;
 }
@@ -256,7 +256,7 @@ function v(e, t, n) {
     return !1;
 }
 function T(e, t, n, l) {
-    if (e.chatInputType.markdown?.disableMentions === !0 && p.has(l.type)) return !1;
+    if (e.chatInputType.markdown?.disableMentions === !0 && f.has(l.type)) return !1;
     if ("applicationCommandOption" !== n.type) return !0;
     switch (n.optionType) {
         case r.n4.CHANNEL:

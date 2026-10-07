@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => I, Q9: () => P, W: () => L }), n(321073));
+(n.d(t, { Ay: () => I, Q9: () => P, W: () => w }), n(321073));
 var l = n(635377),
     i = n.n(l),
     r = n(181370),
@@ -10,8 +10,8 @@ var l = n(635377),
     d = n(927813),
     h = n(38405),
     m = n(186306),
-    f = n(323350),
-    p = n(35277),
+    p = n(323350),
+    f = n(35277),
     g = n(820066),
     x = n(551483),
     E = n(389437);
@@ -123,13 +123,13 @@ function N(e, t) {
                     d = l && 0 === r.length,
                     h = (u ? r.slice(1) : r).length % 2 == 1,
                     m = h && (null == o || "" === o || null != o.match(C)),
-                    f = m && null != o && "" !== o ? o.toLowerCase() : null;
+                    p = m && null != o && "" !== o ? o.toLowerCase() : null;
                 return {
                     blockEntry: t,
                     wasInCodeBlock: n,
                     isInCodeBlock: c,
                     isStyledCodeBlockLine: d,
-                    lang: h || u ? f : i,
+                    lang: h || u ? p : i,
                     hljsTypes: null,
                     closesCodeBlock: u,
                     opensCodeBlock: h,
@@ -154,7 +154,7 @@ function N(e, t) {
                         (r.closesCodeBlock || a) &&
                         (i && a && !r.closesCodeBlock && l.push(r), (i = !1), l.length > 0)
                     ) {
-                        let e = l.map((e) => (0, f.IQ)(e.blockEntry[0])).join("\n"),
+                        let e = l.map((e) => (0, p.IQ)(e.blockEntry[0])).join("\n"),
                             i = l[0].lang;
                         if (null != i && n)
                             !(function (e, t, n, l) {
@@ -183,12 +183,12 @@ function N(e, t) {
                                         );
                                     }
                                     let m = i.split("\n"),
-                                        f = e.match(/\n*$/)?.[0].length ?? 0;
-                                    for (let e = 0; e < f; e++) m.push("");
+                                        p = e.match(/\n*$/)?.[0].length ?? 0;
+                                    for (let e = 0; e < p; e++) m.push("");
                                     if (m.length !== n) return null;
-                                    let p = [];
+                                    let f = [];
                                     for (let e = 0; e < n; e++)
-                                        p.push(
+                                        f.push(
                                             (function (e) {
                                                 let t,
                                                     n = [],
@@ -197,7 +197,7 @@ function N(e, t) {
                                                     r = 0;
                                                 for (T.lastIndex = 0; null != (t = T.exec(e));) {
                                                     let s = t.index + t[0].length,
-                                                        a = w(e.substring(r, t.index)).length,
+                                                        a = L(e.substring(r, t.index)).length,
                                                         o = l.filter((e) => null != e);
                                                     if (
                                                         (a > 0 &&
@@ -211,7 +211,7 @@ function N(e, t) {
                                                     } else l.pop();
                                                     r = s;
                                                 }
-                                                let s = w(e.substring(r)).length,
+                                                let s = L(e.substring(r)).length,
                                                     a = l.filter((e) => null != e);
                                                 return (
                                                     s > 0 && a.length > 0 && n.push({ types: a, start: i, end: i + s }),
@@ -219,7 +219,7 @@ function N(e, t) {
                                                 );
                                             })(m[e]),
                                         );
-                                    return (R.set(o, p), p);
+                                    return (R.set(o, f), f);
                                 })(e, t, n.length, l);
                                 if (null != i) for (let e = 0; e < n.length; e++) n[e].hljsTypes = i[e];
                                 else for (let e = 0; e < n.length; e++) n[e].hljsTypes = [];
@@ -290,7 +290,7 @@ function N(e, t) {
                                   hljsTypes: n.hljsTypes,
                               }
                             : null;
-                t?.codeBlockState != r && p.b.setNodes(e, { codeBlockState: r }, { at: i });
+                t?.codeBlockState != r && f.b.setNodes(e, { codeBlockState: r }, { at: i });
             }
         })(e, n),
         n.some((e) => null != e.lang)
@@ -304,7 +304,7 @@ let k = { max: 1 / 0, maxAge: +d.A.Millis.MINUTE, updateAgeOnGet: !0 },
     _ = new (i())(k),
     R = new (i())(k),
     O = new (i())(k);
-function w(e) {
+function L(e) {
     return e
         .replace(/&amp;/g, "&")
         .replace(/&lt;/g, "<")
@@ -312,7 +312,7 @@ function w(e) {
         .replace(/&quot;/g, '"')
         .replace(/&#x27;/g, "'");
 }
-function L(e, t) {
+function w(e, t) {
     let n = 0;
     for (let l of g.VW.nodes(e, {
         at: { anchor: { path: x.fP, offset: 0 }, focus: t },
@@ -329,7 +329,7 @@ function L(e, t) {
 function P(e) {
     if (null == e.selection) return !1;
     let t = g.ZF.start(e.selection);
-    return L(e, t);
+    return w(e, t);
 }
 (0, u.Q4)(() => {
     R.reset();

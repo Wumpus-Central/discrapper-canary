@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(778712),
     h = n(866665),
     m = n(939249),
-    f = n(834730),
-    p = n(866323),
+    p = n(834730),
+    f = n(866323),
     g = n(565645),
     x = n(114166),
     E = n(793574),
@@ -105,8 +105,8 @@ let _ = new k(A.h, {
 });
 var R = n(994500),
     O = n(287809),
-    w = n(435558),
-    L = n.n(w),
+    L = n(435558),
+    w = n.n(L),
     P = n(111159),
     M = n(952270),
     D = n(320448),
@@ -133,8 +133,8 @@ function J(e) {
             (0, l.jsxs)("div", {
                 className: X.FS,
                 children: [
-                    (0, l.jsx)(f.E, { variant: "text-sm/medium", children: n }),
-                    (0, l.jsx)(f.E, { variant: "text-xs/medium", color: "text-muted", children: i }),
+                    (0, l.jsx)(p.E, { variant: "text-sm/medium", children: n }),
+                    (0, l.jsx)(p.E, { variant: "text-xs/medium", color: "text-muted", children: i }),
                 ],
             }),
         ],
@@ -158,7 +158,7 @@ function Y(e) {
             children: (0, l.jsxs)("div", {
                 className: X.Kt,
                 children: [
-                    (0, l.jsx)(f.E, {
+                    (0, l.jsx)(p.E, {
                         variant: "text-xs/medium",
                         color: "text-muted",
                         children: Z.intl.format(Z.t["/ZJIuo"], { guildName: t }),
@@ -249,7 +249,7 @@ function et(e) {
             let { playedByUserIds: t, guildId: n, channelId: l } = e,
                 i = t.size,
                 r = (0, o.yK)([O.default, R.A], () =>
-                    L()(Array.from(t))
+                    w()(Array.from(t))
                         .reject((e) => R.A.isBlockedOrIgnored(e))
                         .take(3)
                         .map((e) => {
@@ -271,7 +271,7 @@ function et(e) {
                   ? Z.intl.formatToPlainString(Z.t["+z+JUw"], { a: r[0], b: r[1], c: r[2], n: s })
                   : Z.intl.formatToPlainString(Z.t["3Zq6FM"], { a: r[0], b: r[1], c: r[2] });
         })({ playedByUserIds: s, guildId: t, channelId: n }),
-        [p, x] = i.useState(!1),
+        [f, x] = i.useState(!1),
         E = i.useCallback((e) => e?.focus(), []);
     return (0, l.jsxs)("div", {
         className: X.kL,
@@ -287,7 +287,7 @@ function et(e) {
                     description: h,
                 }),
             }),
-            p
+            f
                 ? (0, l.jsx)("div", {
                       ref: E,
                       tabIndex: -1,
@@ -300,7 +300,7 @@ function et(e) {
                           onClick: () => x(!0),
                           className: X._x,
                           children: [
-                              (0, l.jsx)(f.E, { variant: "text-sm/medium", children: Z.intl.string(Z.t["UQT3/h"]) }),
+                              (0, l.jsx)(p.E, { variant: "text-sm/medium", children: Z.intl.string(Z.t["UQT3/h"]) }),
                               (0, l.jsx)(D._, { size: "xs", color: "currentColor" }),
                           ],
                       }),
@@ -315,7 +315,7 @@ function el(e) {
             channelId: n,
             sound: r,
             authorId: a,
-            mostRecentPlayedByUserId: p,
+            mostRecentPlayedByUserId: f,
             count: A,
             disabled: b,
             playedByUserIds: I,
@@ -324,20 +324,20 @@ function el(e) {
             onDetailsMouseLeave: T,
         } = e,
         { authorUser: j, mostRecentPlayedUser: k } = (0, o.cf)([O.default, R.A], () => {
-            let e = R.A.isBlockedOrIgnored(p ?? void 0);
+            let e = R.A.isBlockedOrIgnored(f ?? void 0);
             return {
                 authorUser: O.default.getUser(a),
-                mostRecentPlayedUser: e || a === p ? null : O.default.getUser(p),
+                mostRecentPlayedUser: e || a === f ? null : O.default.getUser(f),
             };
         }),
         _ = i.useRef(null),
-        { analyticsLocations: w } = (0, S.Ay)(E.A.SOUNDBOARD_ECHO),
-        L = i.useCallback(() => {
+        { analyticsLocations: L } = (0, S.Ay)(E.A.SOUNDBOARD_ECHO),
+        w = i.useCallback(() => {
             v(r.soundId);
         }, [v, r.soundId]),
         P = i.useCallback(() => {
-            (0, C.CZ)(r, n, w);
-        }, [w, n, r]),
+            (0, C.CZ)(r, n, L);
+        }, [L, n, r]),
         M = (0, o.bG)([y.A], () => y.A.isPlayingSound(r.soundId), [r]);
     if (null == t || null == j) return null;
     let { emojiId: D, emojiName: U, emojiAnimated: V, name: W } = r;
@@ -352,7 +352,7 @@ function el(e) {
                     let { setPopoutRef: i } = e;
                     return (0, l.jsx)("div", {
                         ref: i,
-                        onMouseEnter: L,
+                        onMouseEnter: w,
                         onMouseLeave: T,
                         children: (0, l.jsx)(et, { guildId: t, channelId: n, sound: r, playedByUserIds: I }),
                     });
@@ -362,7 +362,7 @@ function el(e) {
                 children: () =>
                     (0, l.jsx)("div", {
                         ref: _,
-                        onMouseEnter: L,
+                        onMouseEnter: w,
                         onMouseLeave: T,
                         children: (0, l.jsx)(u.I, {
                             size: d._3.SIZE_32,
@@ -388,12 +388,12 @@ function el(e) {
                                 emojiName: U,
                                 animated: V,
                             }),
-                        (0, l.jsx)(f.E, { variant: "text-md/medium", children: W }),
+                        (0, l.jsx)(p.E, { variant: "text-md/medium", children: W }),
                         !b &&
                             (0, l.jsxs)(l.Fragment, {
                                 children: [
                                     (0, l.jsx)("div", { className: en.SU }),
-                                    (0, l.jsxs)(f.E, {
+                                    (0, l.jsxs)(p.E, {
                                         variant: "text-md/medium",
                                         className: en.Zi,
                                         tabularNumbers: !0,
@@ -418,7 +418,7 @@ function ei(e) {
         m = i.useCallback(() => {
             d(!1);
         }, []),
-        f = i.useMemo(
+        p = i.useMemo(
             () =>
                 (c
                     ? Object.entries(s).map((e) => {
@@ -431,8 +431,8 @@ function ei(e) {
                     .reverse(),
             [s, r, c],
         ),
-        g = i.useMemo(() => f.map((e, t) => ({ echo: e, y: 42 * t })), [f]),
-        x = (0, p.p)(g, {
+        g = i.useMemo(() => p.map((e, t) => ({ echo: e, y: 42 * t })), [p]),
+        x = (0, f.p)(g, {
             keys: (e) => e.echo.sound.soundId,
             from: () => ({ height: 0, opacity: 0 }),
             enter: (e) => {
@@ -452,7 +452,7 @@ function ei(e) {
         [E, S] = i.useState(null),
         y = i.useRef(null);
     (i.useEffect(() => () => clearTimeout(y.current), []),
-        null == E || f.some((e) => e.sound.soundId === E) || S(null));
+        null == E || p.some((e) => e.sound.soundId === E) || S(null));
     let C = i.useCallback((e) => {
             (clearTimeout(y.current), S(e));
         }, []),

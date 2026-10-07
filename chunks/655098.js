@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(723702),
     h = n(38405),
     m = n(19575),
-    f = n(408018),
-    p = n(186306),
+    p = n(408018),
+    f = n(186306),
     g = n(654821),
     x = n(35277),
     E = n(820066),
@@ -29,8 +29,8 @@ var l = n(477900),
     _ = n(442247),
     R = n(569926),
     O = n(106191),
-    w = n(545868),
-    L = n(376943),
+    L = n(545868),
+    w = n(376943),
     P = n(465365),
     M = n(78390),
     D = n(785562),
@@ -127,7 +127,7 @@ function en(e) {
         : (0, l.jsx)(N.Y, {
               targetElementRef: u,
               preload: async () => {
-                  await (0, w.a)(n, t);
+                  await (0, L.a)(n, t);
               },
               renderPopout: (e) => (0, l.jsx)(W.Y, { guildId: n, channelId: r, roleId: t, popoutProps: e }),
               position: "top",
@@ -141,8 +141,8 @@ function el(e) {
         r = "text",
         s = !0;
     return (null != n &&
-        ((i = (0, L.nc)(n) ? (0, k.m1)(n, z.default, G.A) : Z.intl.string(Z.t["/YzI63"])),
-        (r = (0, L.nc)(n) ? ((0, q.QG)(n) ?? "text") : "locked"),
+        ((i = (0, w.nc)(n) ? (0, k.m1)(n, z.default, G.A) : Z.intl.string(Z.t["/YzI63"])),
+        (r = (0, w.nc)(n) ? ((0, q.QG)(n) ?? "text") : "locked"),
         (s = (0, P.Y)(n.type))),
     s)
         ? (0, l.jsx)(U.A, { iconType: r, children: i })
@@ -196,12 +196,12 @@ let ed = {
     },
     eh = new Set(["link", "url", "autolink"]);
 var em = n(165648);
-function ef(e) {
+function ep(e) {
     let { className: t, attributes: n, children: i } = e,
         r = s()(eu.S0, eu.Cj, t);
     return (0, l.jsx)("span", { ...n, className: r, contentEditable: !1, children: i });
 }
-var ep = n(652215),
+var ef = n(652215),
     eg = n(809067);
 class ex extends i.PureComponent {
     containerRef = i.createRef();
@@ -221,7 +221,7 @@ class ex extends i.PureComponent {
             (this.handleContextMenu = this.handleContextMenu.bind(this)),
             (this.handlePasteCapture = this.handlePasteCapture.bind(this)),
             E.VW.isEditorEmpty(e.editor)
-                ? (this.state = { initialValue: (0, f.N3)().richValue, showPlaceholder: !0 })
+                ? (this.state = { initialValue: (0, p.N3)().richValue, showPlaceholder: !0 })
                 : (this.state = { initialValue: E.VW.richValue(e.editor), showPlaceholder: !1 }));
     }
     componentDidMount() {
@@ -279,67 +279,67 @@ class ex extends i.PureComponent {
                         });
                     }
                     case "emoji":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(J, { emoji: o.emoji }), a],
                         });
                     case "customEmoji":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(Y, { emoji: o.emoji }), a],
                         });
                     case "textMention":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(ee, { text: o.name }), a],
                         });
                     case "userMention":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(et, { id: o.userId, channelId: n, guildId: t }), a],
                         });
                     case "roleMention":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(en, { id: o.roleId, guildId: t, channelId: n }), a],
                         });
                     case "channelMention":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(el, { id: o.channelId }), a],
                         });
                     case "staticRouteLink":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(ei, { id: o.id, itemId: o.itemId, guildId: t }), a],
                         });
                     case "soundboard":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(S.LF, { soundId: o.soundId }), a],
                         });
                     case "commandMention":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(er, { text: o.commandName, id: o.commandId }), a],
                         });
                     case "timestamp":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(es, { timestamp: o.parsed }), a],
                         });
                     case "gameMention":
-                        return (0, l.jsxs)(ef, {
+                        return (0, l.jsxs)(ep, {
                             attributes: r,
                             className: c,
                             children: [(0, l.jsx)(ea, { id: o.gameId }), a],
@@ -437,7 +437,7 @@ class ex extends i.PureComponent {
                 null != n &&
                     null != e.data &&
                     (E.ZF.isExpanded(n)
-                        ? p.o.withSingleEntry(t, () => {
+                        ? f.o.withSingleEntry(t, () => {
                               ((t.selection = n), t.deleteFragment(), t.insertText(e.data), e.preventDefault());
                           })
                         : (t.insertText(e.data), e.preventDefault()));
@@ -580,7 +580,7 @@ class ex extends i.PureComponent {
                 },
                 {
                     align: null != i && null != r && i < r / 2 ? "top" : "bottom",
-                    enableSpellCheck: s === ep.BRT.APP,
+                    enableSpellCheck: s === ef.BRT.APP,
                     repositionOnContentChange: !0,
                 },
             );
@@ -607,8 +607,8 @@ class ex extends i.PureComponent {
             channelId: d,
             guildId: h,
             onChange: m,
-            onFocus: f,
-            onBlur: p,
+            onFocus: p,
+            onBlur: f,
             onKeyDown: g,
             onKeyUp: x,
             renderExtraElement: E,

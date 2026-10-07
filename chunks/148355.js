@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(269115),
     h = n(395899),
     m = n(834730),
-    f = n(866323),
-    p = n(717421),
+    p = n(866323),
+    f = n(717421),
     g = n(775602),
     x = n(776231),
     E = n(750506),
@@ -81,8 +81,8 @@ function R(e) {
             className: d,
             maskAsset: h,
             positionRef: m,
-            withLoadingIndicator: f,
-            onError: p,
+            withLoadingIndicator: p,
+            onError: f,
         } = e,
         g = i.useRef(null),
         E = i.useRef(null),
@@ -111,7 +111,7 @@ function R(e) {
                             t || y(!1);
                         },
                         onError: () => {
-                            t || (y(!1), N(!0), p?.());
+                            t || (y(!1), N(!0), f?.());
                         },
                     })),
                     v.current && E.current.setState(!0));
@@ -120,7 +120,7 @@ function R(e) {
                 (E.current?.drop(), (E.current = null), (t = !0));
             }
         );
-    }, [T, r, s.id, u, p]),
+    }, [T, r, s.id, u, f]),
     i.useEffect(() => {
         let e;
         (t || (e = 0), E.current?.setState(t && c, e));
@@ -137,7 +137,7 @@ function R(e) {
                   isLoading: S,
                   maskAsset: h,
                   size: r,
-                  withLoadingIndicator: f,
+                  withLoadingIndicator: p,
                   children: j((0, l.jsx)("canvas", { className: I.ex, ref: g }), s),
               }),
           });
@@ -154,12 +154,12 @@ let O = (e) => {
                 withLoadingIndicator: h,
                 fileUri: m,
             } = e,
-            [f, p] = i.useState(!1),
+            [p, f] = i.useState(!1),
             [g, x] = i.useState(!0),
             [E, S] = i.useState(!1),
             y = i.useRef(null),
             C = i.useRef(null),
-            b = m ?? (0, A.zg)(n, { isPreview: !t || !f || !r, size: a }),
+            b = m ?? (0, A.zg)(n, { isPreview: !t || !p || !r, size: a }),
             v = i.useCallback(() => {
                 x(!1);
             }, []),
@@ -169,7 +169,7 @@ let O = (e) => {
         return (i.useEffect(() => {
             if (null != y.current) {
                 let { isVisible: e } = y.current;
-                p(e);
+                f(e);
             }
         }, []),
         i.useLayoutEffect(() => {
@@ -180,7 +180,7 @@ let O = (e) => {
             : (0, l.jsx)(d.L, {
                   innerRef: c,
                   ref: y,
-                  onChange: p,
+                  onChange: f,
                   threshold: 0.7,
                   children: (0, l.jsx)("div", {
                       className: s()(o, I.__invalid_pngImageWrapper),
@@ -208,7 +208,7 @@ let O = (e) => {
                   }),
               });
     },
-    w = (e) => {
+    L = (e) => {
         let {
                 disableAnimation: t,
                 enlargeScaleFactor: n,
@@ -221,9 +221,9 @@ let O = (e) => {
             h = (0, c.bG)([g.Ay], () => g.Ay.useReducedMotion),
             x = i.useRef(null),
             S = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
-            y = (0, f.p)(s, { ref: x, from: S, enter: { transform: "scale(1)", opacity: 1 }, leave: S, config: v }),
+            y = (0, p.p)(s, { ref: x, from: S, enter: { transform: "scale(1)", opacity: 1 }, leave: S, config: v }),
             C = i.useRef(null),
-            A = (0, p.z)(
+            A = (0, f.z)(
                 { ref: C, transform: s || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!s, config: T },
                 "animate-always",
             );
@@ -245,7 +245,7 @@ let O = (e) => {
                                     (0, l.jsx)(u.animated.div, {
                                         className: I.tm,
                                         style: e,
-                                        children: (0, l.jsx)(L, {
+                                        children: (0, l.jsx)(w, {
                                             className: I.__invalid_overlaySticker,
                                             disableAnimation: t,
                                             enlargeOnInteraction: !1,
@@ -272,7 +272,7 @@ let O = (e) => {
             )
         );
     };
-function L(e) {
+function w(e) {
     let {
             isInteracting: t = !1,
             disableAnimation: n = !1,
@@ -285,8 +285,8 @@ function L(e) {
             className: d,
             withLoadingIndicator: h,
             assetData: m,
-            fileUri: f,
-            onError: p,
+            fileUri: p,
+            onError: f,
         } = e,
         g = (0, S.j)(),
         x = (0, y.Th)(t) && !n,
@@ -307,11 +307,11 @@ function L(e) {
                     positionRef: E,
                     withLoadingIndicator: h,
                     assetData: m,
-                    fileUri: f,
-                    onError: p,
+                    fileUri: p,
+                    onError: f,
                 }),
                 r &&
-                    (0, l.jsx)(w, {
+                    (0, l.jsx)(L, {
                         disableAnimation: n,
                         enlargeScaleFactor: a,
                         enlargeWithName: s,
@@ -325,4 +325,4 @@ function L(e) {
         `${c.id},${u}`,
     );
 }
-let P = L;
+let P = w;

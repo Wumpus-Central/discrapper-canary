@@ -9,15 +9,15 @@ var i = n(477900),
     c = n(128450),
     o = n(836602),
     p = n(71393),
-    f = n(711014),
-    g = n(403362),
-    h = n(375708),
-    x = n(897023);
+    g = n(711014),
+    h = n(403362),
+    x = n(375708),
+    f = n(897023);
 function m(e) {
     let { guildId: l, className: n, globalOption: a, hideDivider: t = !1, onChange: s, renderOptionSuffix: u } = e;
     return (0, i.jsx)(c.A, {
-        className: r()(x.u, n),
-        title: h.intl.string(h.t.ref7Ki),
+        className: r()(f.u, n),
+        title: x.intl.string(x.t.ref7Ki),
         hideDivider: t,
         forcedDivider: !0,
         children: (0, i.jsx)(v, { guildId: l, onChange: s, renderOptionSuffix: u, globalOption: a }),
@@ -26,7 +26,7 @@ function m(e) {
 function v(e) {
     let { guildId: l, globalOption: n, onChange: t, renderOptionSuffix: r } = e,
         c = (0, s.bG)([o.A], () => o.A.showNotice()),
-        m = (0, s.bG)([f.Ay], () => f.Ay.getFlattenedGuildIds()),
+        m = (0, s.bG)([g.Ay], () => g.Ay.getFlattenedGuildIds()),
         v = (0, s.bG)([p.A], () => p.A.getGuilds()),
         A = a.useMemo(() => {
             let e = m
@@ -34,7 +34,7 @@ function v(e) {
                     let l = v[e];
                     return null == l ? null : { label: l.name, value: l.id };
                 })
-                .filter(g.Vq);
+                .filter(h.Vq);
             return (null != n && e.unshift(n), e);
         }, [m, v, n]),
         b = a.useCallback(
@@ -42,7 +42,7 @@ function v(e) {
                 let l = e?.label === n?.label && e?.value === n?.value;
                 return null == e || "" === e.value || l
                     ? null
-                    : (0, i.jsx)(d.Ay, { className: x.c, guild: v[e.value], size: d.Ay.Sizes.SMOL, active: !0 });
+                    : (0, i.jsx)(d.Ay, { className: f.c, guild: v[e.value], size: d.Ay.Sizes.SMOL, active: !0 });
             },
             [v, n],
         );
@@ -57,7 +57,7 @@ function v(e) {
         options: A,
         renderOptionPrefix: b,
         renderOptionSuffix: r,
-        placeholder: h.intl.string(h.t["kMgj+e"]),
+        placeholder: x.intl.string(x.t["kMgj+e"]),
         "data-migration-pending": !0,
     });
 }

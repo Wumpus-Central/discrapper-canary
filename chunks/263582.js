@@ -10,8 +10,8 @@ function o(e) {
         d = (0, i.A)(),
         h = n.length,
         m = null != t.upsellLongMessages && h > a.uvi && c,
-        f = null != t.upsellLongMessages && !c,
-        p = (o ?? d) - h,
-        g = p > (u ?? o ?? d / 10);
-    return { isVisible: (m && p >= 0) || !g, showsUpsell: f && !g };
+        p = null != t.upsellLongMessages && !c,
+        f = (o ?? d) - h,
+        g = f > (u ?? o ?? d / 10);
+    return { isVisible: (m && f >= 0) || !g, showsUpsell: p && !g };
 }

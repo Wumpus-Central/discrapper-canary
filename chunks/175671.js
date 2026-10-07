@@ -14,8 +14,8 @@ function m(e) {
 }
 var p = t(17928),
     g = t(462887),
-    f = t(363195);
-let x = Object.freeze({
+    x = t(363195);
+let f = Object.freeze({
     EMBED: (e, l, t) => `https://embed.music.apple.com/${e}?theme=${l}&i=${null != t ? encodeURIComponent(t) : ""}`,
 });
 var y = t(411517);
@@ -24,7 +24,7 @@ function v(e) {
             className: l,
             embed: { url: t },
         } = e,
-        s = (0, p.bG)([f.A], () => (0, g.M)(f.A.theme));
+        s = (0, p.bG)([x.A], () => (0, g.M)(x.A.theme));
     if (null == t) return null;
     let i = null,
         a = null,
@@ -46,7 +46,7 @@ function v(e) {
         (a = a.substr(1)),
         (0, r.jsx)("iframe", {
             className: n()(y.li, l),
-            src: x.EMBED(a, s ? "dark" : "light", o),
+            src: f.EMBED(a, s ? "dark" : "light", o),
             style: { maxWidth: 660, minWidth: 300, width: "100%", height: v },
             frameBorder: 0,
             sandbox: "allow-forms allow-popups allow-same-origin allow-scripts allow-storage-access-by-user-activation",
@@ -295,8 +295,8 @@ function ei(e) {
             responsive: m = !1,
             renderImageComponent: p,
             renderVideoComponent: g,
-            renderLinkComponent: f,
-            playable: x = !0,
+            renderLinkComponent: x,
+            playable: f = !0,
             autoPlay: v = !1,
             autoMute: w,
             volume: b,
@@ -352,7 +352,7 @@ function ei(e) {
                 naturalWidth: d.width,
                 naturalHeight: d.height,
                 onVolumeChange: C,
-                playable: x,
+                playable: f,
                 autoMute: w,
                 volume: b,
                 onPlay: j,
@@ -408,7 +408,7 @@ function ei(e) {
                 imageClassName: y.jq,
                 placeholder: M,
                 placeholderVersion: W,
-                onClick: x && null != d ? O : null,
+                onClick: f && null != d ? O : null,
                 sourceMetadata: R,
                 analyticsSource: "EmbedVideo",
             }),
@@ -416,11 +416,11 @@ function ei(e) {
                 className: y._W,
                 children: (0, r.jsx)("div", {
                     className: y.Fo,
-                    children: x
+                    children: f
                         ? (0, r.jsx)(L.A, {
                               onPlay: null != d ? O : null,
                               externalURL: T,
-                              renderLinkComponent: f,
+                              renderLinkComponent: x,
                               messageId: R?.message?.id,
                               channelId: R?.message?.channel_id,
                           })
@@ -445,8 +445,8 @@ function en(e) {
         disableAltTextDisplay: m = !1,
         playable: p = !0,
         hiddenSpoilers: g,
-        placeholder: f,
-        placeholderVersion: x,
+        placeholder: x,
+        placeholderVersion: f,
         sourceMetadata: v,
     } = e;
     return (0, r.jsx)(E, {
@@ -467,8 +467,8 @@ function en(e) {
         renderImageComponent: u,
         hiddenSpoilers: g,
         disableAltTextDisplay: m,
-        placeholder: f,
-        placeholderVersion: x,
+        placeholder: x,
+        placeholderVersion: f,
         sourceMetadata: v,
     });
 }
@@ -765,8 +765,8 @@ class ea extends s.PureComponent {
         let p = (0, U.E)(t),
             {
                 srcToOnClickOverride: g,
-                srcToHandlePreloadImage: f,
-                srcToSeekOverride: x,
+                srcToHandlePreloadImage: x,
+                srcToSeekOverride: f,
             } = null == a
                 ? { srcToOnClickOverride: {}, srcToHandlePreloadImage: {}, srcToSeekOverride: {} }
                 : (0, M.o)(
@@ -810,7 +810,7 @@ class ea extends s.PureComponent {
                                     ...w,
                                     autoPlay: u && !r && !e,
                                     renderAccessory: v ? l : null,
-                                    handlePreloadImage: f[p],
+                                    handlePreloadImage: x[p],
                                     onClick: g[p],
                                     onMouseEnter: () => this.handleImageHover(),
                                     sourceMetadata: m,
@@ -838,7 +838,7 @@ class ea extends s.PureComponent {
                 autoPlayGif: c,
                 obscureReason: m,
             } = this.props,
-            { maxMediaWidth: p, maxMediaHeight: g, sourceMetadata: f } = this.state;
+            { maxMediaWidth: p, maxMediaHeight: g, sourceMetadata: x } = this.state;
         if (null == s || null == i) return null;
         if (e)
             return null == n
@@ -861,11 +861,11 @@ class ea extends s.PureComponent {
                               disableAltTextDisplay: null != m,
                               placeholder: n.placeholder,
                               placeholderVersion: n.placeholderVersion,
-                              sourceMetadata: f,
+                              sourceMetadata: x,
                           });
                       },
                   });
-        let x = () => {
+        let f = () => {
                 this.setState({ videoControlsShown: !0 });
             },
             v = () => {
@@ -884,12 +884,12 @@ class ea extends s.PureComponent {
             renderImageComponent: d,
             renderVideoComponent: o,
             renderLinkComponent: u,
-            onControlsShow: x,
+            onControlsShow: f,
             onControlsHide: v,
             playable: l && !t,
             placeholder: n?.placeholder,
             placeholderVersion: n?.placeholderVersion,
-            sourceMetadata: f,
+            sourceMetadata: x,
         });
     }
     renderFooter() {

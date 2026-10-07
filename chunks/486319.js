@@ -13,7 +13,7 @@ function d(e) {
 function h(e, t, n) {
     let i = (0, o.A)(),
         [h, m] = l.useState(!1),
-        f = l.useMemo(
+        p = l.useMemo(
             () =>
                 r().debounce(
                     (e) => {
@@ -33,10 +33,10 @@ function h(e, t, n) {
         let l = u.Ay.getProps(t, n).groups;
         if (null != t && !d(l) && !h)
             return (
-                e.addListener("text-changed", f),
+                e.addListener("text-changed", p),
                 () => {
-                    (e.removeListener("text-changed", f), f.cancel());
+                    (e.removeListener("text-changed", p), p.cancel());
                 }
             );
-    }, [h, f, e, t, n]);
+    }, [h, p, e, t, n]);
 }

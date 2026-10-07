@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(602853),
     h = n(661531),
     m = n(939249),
-    f = n(935286),
-    p = n(628284),
+    p = n(935286),
+    f = n(628284),
     g = n(775602),
     x = n(47167),
     E = n(713654),
@@ -44,7 +44,7 @@ function O(e) {
               children: k.intl.format(k.t.MkzlDL, { channelName: i }),
           });
 }
-function w(e) {
+function L(e) {
     let { channelId: t, emojiId: n, emojiName: i } = e,
         r = (0, o.bG)([y.A], () => y.A.getChannel(t));
     if (null == r) return null;
@@ -56,7 +56,7 @@ function w(e) {
         defaultComponent: (0, l.jsx)(s, { className: _.p }),
     });
 }
-function L(e) {
+function w(e) {
     let { guildId: t, channel: n, className: r } = e,
         { channelAction: c, completed: x } = (0, N.j4)(t, n),
         E = (0, N.Lr)(t, c?.channelId),
@@ -65,15 +65,15 @@ function L(e) {
         A = (0, d.r)(h.A.colors.WHITE),
         v = R[(0, S.C)()],
         [T, j] = i.useState(!1),
-        [L] = i.useState(new a.A.Value(0)),
+        [w] = i.useState(new a.A.Value(0)),
         [P] = i.useState(new a.A.Value(0));
     (i.useEffect(() => {
         x
-            ? a.A.timing(L, { toValue: 0, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !C }).start(() =>
+            ? a.A.timing(w, { toValue: 0, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !C }).start(() =>
                   j(!0),
               )
-            : a.A.timing(L, { toValue: 1, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
-    }, [x, L, C, y]),
+            : a.A.timing(w, { toValue: 1, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
+    }, [x, w, C, y]),
         i.useEffect(() => {
             x && T && a.A.timing(P, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
         }, [x, P, T, y]));
@@ -92,7 +92,7 @@ function L(e) {
                                 className: s()(_.vK, _.vk, { [_.pJ]: n.isForumChannel() }),
                                 onClick: M,
                                 children: [
-                                    (0, l.jsx)(w, {
+                                    (0, l.jsx)(L, {
                                         channelId: E.channelId,
                                         emojiId: E.emoji?.id,
                                         emojiName: E?.emoji?.name,
@@ -110,16 +110,16 @@ function L(e) {
                                     }),
                                     (0, l.jsx)("div", {
                                         className: _.kJ,
-                                        children: (0, l.jsx)(f.E, { size: "xs", color: A.hex(), className: _.fz }),
+                                        children: (0, l.jsx)(p.E, { size: "xs", color: A.hex(), className: _.fz }),
                                     }),
                                 ],
                             }),
                         })
                       : (0, l.jsxs)(a.A.div, {
                             className: s()(_.vK, { [_.pJ]: n.isForumChannel() }),
-                            style: { marginBottom: L.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
+                            style: { marginBottom: w.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
                             children: [
-                                (0, l.jsx)(w, {
+                                (0, l.jsx)(L, {
                                     channelId: c.channelId,
                                     emojiId: c.emoji?.id,
                                     emojiName: c?.emoji?.name,
@@ -140,7 +140,7 @@ function L(e) {
                                     ],
                                 }),
                                 x
-                                    ? (0, l.jsx)(p.y, {
+                                    ? (0, l.jsx)(f.y, {
                                           size: "custom",
                                           color: "currentColor",
                                           className: _.so,
@@ -159,5 +159,5 @@ function P(e) {
         s = (0, o.bG)([C.Ay], () => C.Ay.getSelfMember(t)?.isPending === !0),
         a = (0, N.jY)(t),
         u = (0, o.bG)([A.A], () => A.A.getGuild(t)?.features.has(j.GuildFeatures.GUILD_SERVER_GUIDE));
-    return a || s || !r || !u ? null : (0, l.jsx)(L, { guildId: t, channel: n, className: i });
+    return a || s || !r || !u ? null : (0, l.jsx)(w, { guildId: t, channel: n, className: i });
 }

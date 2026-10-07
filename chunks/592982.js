@@ -36,8 +36,8 @@ function N(e) {
         G = (0, h.A)(y, N.guild_id),
         V = (0, I.A)(),
         B = (0, u.RQ)(y),
-        w = (0, u.dA)(y),
-        H = (0, f.A)(L, O),
+        H = (0, u.dA)(y),
+        w = (0, f.A)(L, O),
         Y = (0, g.A)(M, y),
         F = (0, p.A)(),
         X = (0, r.A)(N),
@@ -54,7 +54,7 @@ function N(e) {
             (0, l.jsxs)(s.rX, {
                 children: [
                     S === j.rbe.GUILD_STAGE_VOICE ? B : null,
-                    S === j.rbe.GUILD_STAGE_VOICE ? w : null,
+                    S === j.rbe.GUILD_STAGE_VOICE ? H : null,
                     _ || S === j.rbe.GUILD_STAGE_VOICE ? null : G,
                     F,
                     S !== j.rbe.GUILD_STAGE_VOICE ? P : null,
@@ -63,7 +63,7 @@ function N(e) {
             }),
             (0, l.jsx)(s.rX, { children: X }),
             (0, l.jsxs)(s.rX, { children: [V, !N.isManaged() && N.isPrivate() ? K : null] }),
-            (0, l.jsxs)(s.rX, { children: [null != L ? H : null, null != M ? Y : null] }),
+            (0, l.jsxs)(s.rX, { children: [null != L ? w : null, null != M ? Y : null] }),
         ],
     });
 }

@@ -1,8 +1,8 @@
 n.d(t, { S: () => A });
 var s = n(478676),
     i = n.n(s),
-    l = n(715943),
-    a = n(148494),
+    a = n(715943),
+    l = n(148494),
     o = n(666860),
     r = n(236285),
     c = n(649963),
@@ -24,7 +24,7 @@ let g = /\\([*?+/])/g,
         nick: {
             action(e, t) {
                 let { channel: n } = t;
-                if (null != n.guild_id) return (l.A.changeNickname(n.guild_id, n.id, p.ME, e), { content: "" });
+                if (null != n.guild_id) return (a.A.changeNickname(n.guild_id, n.id, p.ME, e), { content: "" });
             },
         },
         reaction: {
@@ -34,8 +34,8 @@ let g = /\\([*?+/])/g,
                 if (n || !h.A.hasPresent(s.id)) return;
                 let i = h.A.getMessages(s.id).last();
                 if (null == i || null == i.id) return;
-                let l = r.Ay.getDisambiguatedEmojiContext(s.guild_id).getByName(e.trim().slice(2, -1));
-                if (null != l) return ((0, c.BB)(s.id, i.id, (0, u.jq)(l)), { content: "" });
+                let a = r.Ay.getDisambiguatedEmojiContext(s.guild_id).getByName(e.trim().slice(2, -1));
+                if (null != a) return ((0, c.BB)(s.id, i.id, (0, u.jq)(a)), { content: "" });
             },
         },
         searchReplace: {
@@ -45,14 +45,14 @@ let g = /\\([*?+/])/g,
                 if (n) return;
                 let i = h.A.getLastEditableMessage(s.id);
                 if (null == i || null == i.id) return { content: "" };
-                let [l, o, r, c] = Array.from(e.match(this.match.regex) ?? []),
+                let [a, o, r, c] = Array.from(e.match(this.match.regex) ?? []),
                     u = c?.split("") ?? [];
                 ((o = o.replace(g, (e, t) => t)), (r = r.replace(g, (e, t) => t)));
                 let d = u.includes("g") ? i.content.replaceAll(o, r) : i.content.replace(o, r);
                 return (
                     (null == d || "" === d.trim()) && 0 === i.attachments.length
-                        ? a.A.deleteMessage(s.id, i.id)
-                        : d !== i.content && a.A.editMessage(s.id, i.id, { content: d }),
+                        ? l.A.deleteMessage(s.id, i.id)
+                        : d !== i.content && l.A.editMessage(s.id, i.id, { content: d }),
                     { content: "" }
                 );
             },

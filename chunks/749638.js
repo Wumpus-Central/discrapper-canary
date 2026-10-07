@@ -1,4 +1,4 @@
-t.d(l, { n: () => R, S: () => S });
+t.d(l, { n: () => S, S: () => R });
 var r,
     s = t(477900),
     n = t(582128),
@@ -72,8 +72,8 @@ function T(e) {
             itemWidthsRef: T,
         } = (0, h.Wv)({ items: r, itemGapPx: 24, maxLines: 1, containerWidth: o }),
         g = n.useMemo(() => r.slice(0, x + 1), [x, r]),
-        R = n.useMemo(() => r.slice(x + 1), [x, r]),
-        S = n.useRef(null),
+        S = n.useMemo(() => r.slice(x + 1), [x, r]),
+        R = n.useRef(null),
         w = n.useCallback(
             (e) => {
                 let l = e.contentRect.width;
@@ -84,9 +84,9 @@ function T(e) {
             },
             [T, c],
         );
-    (0, b.g)(S, w);
+    (0, b.g)(R, w);
     let k = 0 !== o,
-        C = R.some((e) => e.id === t),
+        C = S.some((e) => e.id === t),
         y = n.useCallback((e) => {
             let l,
                 t = e.currentTarget,
@@ -118,7 +118,7 @@ function T(e) {
         }, []);
     return (0, s.jsxs)("div", {
         className: i()(p.kL, l),
-        ref: S,
+        ref: R,
         children: [
             (0, s.jsxs)("div", {
                 className: p.Kk,
@@ -141,7 +141,7 @@ function T(e) {
                     ),
                     (0, s.jsx)("div", {
                         ref: j,
-                        children: (0, s.jsx)(A, { tabs: R, onTabSelect: a, selectedTab: t, selected: C }),
+                        children: (0, s.jsx)(A, { tabs: S, onTabSelect: a, selectedTab: t, selected: C }),
                     }),
                 ],
             }),
@@ -157,8 +157,8 @@ function T(e) {
                                 e.id,
                             ),
                         ),
-                        0 !== R.length
-                            ? (0, s.jsx)(A, { tabs: R, onTabSelect: a, selectedTab: t, selected: C, onKeyDown: y })
+                        0 !== S.length
+                            ? (0, s.jsx)(A, { tabs: S, onTabSelect: a, selectedTab: t, selected: C, onKeyDown: y })
                             : null,
                     ],
                 }),
@@ -166,8 +166,8 @@ function T(e) {
     });
 }
 var g = t(701245),
-    R = (((r = {}).DEFAULT = "DEFAULT"), (r.SEARCH = "SEARCH"), r);
-function S(e) {
+    S = (((r = {}).DEFAULT = "DEFAULT"), (r.SEARCH = "SEARCH"), r);
+function R(e) {
     let {
         selectedTabId: l,
         handleTransition: t,

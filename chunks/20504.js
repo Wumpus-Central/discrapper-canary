@@ -1,4 +1,4 @@
-s.d(t, { A: () => f });
+s.d(t, { A: () => g });
 var n = s(477900),
     a = s(582128),
     l = s(503698),
@@ -73,8 +73,8 @@ class p extends a.PureComponent {
                 sliderWrapperClassName: a,
                 sliderClassName: l,
                 currentWindow: p,
-                muted: f,
-                minValue: g,
+                muted: g,
+                minValue: f,
                 maxValue: v,
                 value: C,
                 onVolumeShow: A,
@@ -83,7 +83,7 @@ class p extends a.PureComponent {
             { hovered: y, focused: S, dragging: _ } = this.state,
             E = r.H;
         return (
-            f || C === g ? (E = o._) : C < v / 2 && (E = u.S),
+            g || C === f ? (E = o._) : C < v / 2 && (E = u.S),
             (0, n.jsxs)("div", {
                 className: i()(s, m.kL),
                 onMouseEnter: () => {
@@ -130,4 +130,4 @@ class p extends a.PureComponent {
         );
     }
 }
-let f = p;
+let g = p;

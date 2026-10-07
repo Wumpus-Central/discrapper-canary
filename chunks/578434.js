@@ -14,75 +14,75 @@ var l = n(477900),
     p = n(652215),
     A = n(994500),
     f = n(975571),
-    x = n(786051),
-    C = n(559868),
+    C = n(786051),
+    x = n(559868),
     E = n(375708);
 function S(e) {
     var t, S;
     let I,
         j,
         y,
-        _,
         v,
+        _,
         b,
-        T,
         N,
+        T,
         { channel: M, children: R } = e,
         D = (0, s.bG)([A.A], () => A.A.isBlocked(M.getRecipientId()));
     ((S = t = M.id),
         (I = (0, s.bG)([m.A], () => m.A.getLastMessage(S))),
         (j = I?.changelogId),
         (y = (0, s.bG)([c.default], () => c.default.locale)),
-        (_ = (0, s.bG)([h.A], () => h.A.getChangelog(j ?? "", y), [j, y])),
-        (v = (0, g.A)(t)),
-        (b = i.useRef(v ? Date.now() : null)),
-        (T = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
-        (N = i.useRef(T)),
+        (v = (0, s.bG)([h.A], () => h.A.getChangelog(j ?? "", y), [j, y])),
+        (_ = (0, g.A)(t)),
+        (b = i.useRef(_ ? Date.now() : null)),
+        (N = (0, s.bG)([d.Ay], () => d.Ay.getUnreadCount(t), [t])),
+        (T = i.useRef(N)),
         i.useEffect(() => {
-            N.current = T;
+            T.current = N;
         }),
         i.useEffect(() => {
             b.current = Date.now();
-        }, [v]),
+        }, [_]),
         i.useEffect(() => {
-            v && null != j && o.A.fetchChangelog(j, y, !0);
-        }, [j, y, v]),
+            _ && null != j && o.A.fetchChangelog(j, y, !0);
+        }, [j, y, _]),
         i.useEffect(() => {
-            v &&
-                null != _ &&
+            _ &&
+                null != v &&
                 u.default.track(p.HAw.CHANGE_LOG_OPENED, {
-                    change_log_id: `${_.date}:${_.revision}`,
-                    unread_count: N.current,
+                    change_log_id: `${v.date}:${v.revision}`,
+                    unread_count: T.current,
                 });
-        }, [v, _]),
+        }, [_, v]),
         i.useEffect(() => {
             let e = b.current;
             return () => {
-                v &&
-                    null != _ &&
+                _ &&
+                    null != v &&
                     null != e &&
                     (u.default.track(p.HAw.CHANGE_LOG_CLOSED, {
                         seconds_open: Math.round((Date.now() - e) / 1e3),
-                        change_log_id: `${_.date}:${_.revision}`,
-                        unread_count: N.current,
+                        change_log_id: `${v.date}:${v.revision}`,
+                        unread_count: T.current,
                     }),
                     (b.current = 0));
             };
-        }, [v, _]));
-    let L = (0, g.A)(M.id),
-        k = M.isSystemDM(),
-        P = D && !k && !M.isMultiUserDM(),
+        }, [_, v]));
+    let k = (0, g.A)(M.id),
+        L = M.isSystemDM(),
+        P = D && !L && !M.isMultiUserDM(),
         O = {};
-    if (k) {
-        let e = L ? E.intl.string(E.t["+KSnWX"]) : E.intl.string(E.t.hvVgAZ);
+    if (L) {
+        let e = k ? E.intl.string(E.t["+KSnWX"]) : E.intl.string(E.t.hvVgAZ);
         ((O.message = E.intl.string(E.t.Bt2N7D)),
             (O.subtitle = E.intl.string(E.t["n/Vzkw"])),
             (O.buttonText = e),
-            (O.buttonIcon = L ? a.t : void 0),
+            (O.buttonIcon = k ? a.t : void 0),
             (O.onButtonClick = function () {
-                if (L) {
-                    (open(C.Do),
-                        u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: C.Do }));
+                if (k) {
+                    (open(x.Do),
+                        u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: x.Do }));
                     return;
                 }
                 open(f.A.getArticleURL(p.MVz.SYSTEM_DMS));
@@ -95,5 +95,5 @@ function S(e) {
             (O.onButtonClick = function () {
                 r.A.unblockUser(M.getRecipientId());
             }));
-    return (0, l.jsx)(x.A, { ...O, children: R });
+    return (0, l.jsx)(C.A, { ...O, children: R });
 }

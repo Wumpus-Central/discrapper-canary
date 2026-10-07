@@ -27,8 +27,8 @@ var a = l(477900),
     I = l(442433),
     L = l(793574),
     M = l(688810),
-    R = l(429913),
-    T = l(769015),
+    T = l(429913),
+    R = l(769015),
     D = l(540999),
     S = l(915725),
     _ = l(614584),
@@ -510,7 +510,7 @@ function eb(e) {
         { isCropEnabled: em, isTextTrackEnabled: eh, isImageTrackEnabled: ef } = (0, eo.As)(),
         ep = Y.type === J.nQ.SCREENSHOT,
         ex = Y.type === J.nQ.VOICE_CLIP,
-        ev = (0, R.h)(Y.applicationId),
+        ev = (0, T.h)(Y.applicationId),
         eg = (0, i.bG)([S.Ay], () => S.Ay.isClipExporting(Y.id)),
         { onShareClick: ej } = (0, K.A)(t),
         { picker: eb } = n.useContext(P.$),
@@ -712,7 +712,7 @@ function eb(e) {
                                         (0, a.jsx)(ey, {
                                             icon:
                                                 null != ev
-                                                    ? (0, a.jsx)(T.A, { game: ev, size: T.M.XXSMALL })
+                                                    ? (0, a.jsx)(R.A, { game: ev, size: R.M.XXSMALL })
                                                     : (0, a.jsx)(E.L, { size: "sm", color: "currentColor" }),
                                             label: eA,
                                             enabled: V,

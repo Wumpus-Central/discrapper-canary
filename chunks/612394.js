@@ -1,4 +1,4 @@
-n.d(t, { AR: () => h, So: () => f, fh: () => p, uA: () => m });
+n.d(t, { AR: () => h, So: () => p, fh: () => f, uA: () => m });
 var l = n(666860),
     i = n(597184),
     r = n(194004),
@@ -29,7 +29,7 @@ function m(e, t, n) {
         game_mentions_available: n?.gameMentionsAvailable,
     });
 }
-function f(e, t, n, i) {
+function p(e, t, n, i) {
     a.default.track(o.HAw.CHANNEL_AUTOCOMPLETE_SELECTED, {
         ...(0, l.dI)(n),
         ...(0, l.H$)(n.guild_id),
@@ -45,7 +45,7 @@ function f(e, t, n, i) {
         application_id: i?.gameId,
     });
 }
-function p(e) {
+function f(e) {
     let { sticker: t, stickerSelectLocation: n, isReplacement: l, analyticsLocations: i } = e;
     a.default.track(o.HAw.STICKER_ATTACHED, {
         replaced: l,

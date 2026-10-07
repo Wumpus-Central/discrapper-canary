@@ -13,6 +13,6 @@ function h(e) {
     let { node: t, guestWindow: s, ...h } = e,
         m = (0, a.bG)([o.A, r.A], () => (0, u._U)(t, s?.document), [t, s]),
         p = m ? c.intl.string(c.t.Z7MyNB) : c.intl.string(c.t.OIDkcp),
-        f = m ? l.z : i.T;
-    return (0, n.jsx)(d.A, { label: p, iconComponent: f, ...h });
+        g = m ? l.z : i.T;
+    return (0, n.jsx)(d.A, { label: p, iconComponent: g, ...h });
 }

@@ -1,42 +1,42 @@
-t.d(n, { $: () => a });
+t.d(n, { $: () => s });
 var r = t(477900);
 function i(e, n) {
     if (null == e) throw Error(`Attempted to render "${n}" but no renderer was provided`);
 }
 function o({ node: e, renderers: n, ...t }) {
-    let s = n[e.type];
-    if ((i(s, e.type), Array.isArray(e.value)))
-        return (0, r.jsx)(s, { node: e, ...t, children: (0, r.jsx)(a, { nodes: e.value, renderers: n }) });
+    let a = n[e.type];
+    if ((i(a, e.type), Array.isArray(e.value)))
+        return (0, r.jsx)(a, { node: e, ...t, children: (0, r.jsx)(s, { nodes: e.value, renderers: n }) });
     switch (e.type) {
         case "mention":
         case "timestamp":
         case "emoji":
         case "code_block":
-            return (0, r.jsx)(s, { node: e, ...e.value, ...t });
+            return (0, r.jsx)(a, { node: e, ...e.value, ...t });
         case "link": {
             let { text: i, url: o } = e.value;
-            return (0, r.jsx)(s, {
+            return (0, r.jsx)(a, {
                 node: e,
                 ...e.value,
                 ...t,
-                children: i ? (0, r.jsx)(a, { nodes: i, renderers: n }) : o,
+                children: i ? (0, r.jsx)(s, { nodes: i, renderers: n }) : o,
             });
         }
         case "text":
         case "code":
-            return (0, r.jsx)(s, { node: e, ...t, children: e.value });
+            return (0, r.jsx)(a, { node: e, ...t, children: e.value });
         case "heading":
-            return (0, r.jsx)(s, {
+            return (0, r.jsx)(a, {
                 node: e,
                 level: e.value.level,
                 ...t,
-                children: (0, r.jsx)(a, { nodes: e.value.content, renderers: n }),
+                children: (0, r.jsx)(s, { nodes: e.value.content, renderers: n }),
             });
         case "list": {
             let o = n.listItem;
             return (
                 i(o, "listItem"),
-                (0, r.jsx)(s, {
+                (0, r.jsx)(a, {
                     node: e,
                     ...e.value,
                     ...t,
@@ -47,7 +47,7 @@ function o({ node: e, renderers: n, ...t }) {
                                 node: t,
                                 siblings: e.value.items,
                                 index: i,
-                                children: (0, r.jsx)(a, { nodes: t.content, renderers: n }),
+                                children: (0, r.jsx)(s, { nodes: t.content, renderers: n }),
                             },
                             i,
                         ),
@@ -56,14 +56,14 @@ function o({ node: e, renderers: n, ...t }) {
             );
         }
         case "empty":
-            return (0, r.jsx)(s, { ...t });
+            return (0, r.jsx)(a, { ...t });
         case "small":
-            return (0, r.jsx)(s, { node: e, ...t, children: (0, r.jsx)(a, { nodes: e.value.content, renderers: n }) });
+            return (0, r.jsx)(a, { node: e, ...t, children: (0, r.jsx)(s, { nodes: e.value.content, renderers: n }) });
         default:
             throw TypeError(`Unknown node type "${e.type}"`);
     }
 }
-function a({ nodes: e, renderers: n }) {
+function s({ nodes: e, renderers: n }) {
     return (0, r.jsx)(r.Fragment, {
         children: e.map((t, i) => (0, r.jsx)(o, { node: t, renderers: n, siblings: e, index: i }, i)),
     });

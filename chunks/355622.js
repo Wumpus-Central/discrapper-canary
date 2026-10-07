@@ -99,7 +99,7 @@ let c = {
         autocomplete: { alwaysUseLayer: !0, small: !0 },
         showCharacterCount: !0,
     },
-    f = {
+    p = {
         analyticsName: "forum",
         drafts: { type: s.C.ChannelMessage },
         emojis: { button: !0 },
@@ -111,7 +111,7 @@ let c = {
         showSlowmodeIndicator: !0,
         showTypingIndicator: !0,
     },
-    p = {
+    f = {
         analyticsName: "voice_channel_status",
         drafts: { type: s.C.ChannelMessage },
         emojis: { button: !0 },
@@ -214,8 +214,8 @@ let c = {
         },
         SIDEBAR: h,
         EDIT: m,
-        FORM: f,
-        VOICE_CHANNEL_STATUS: p,
+        FORM: p,
+        VOICE_CHANNEL_STATUS: f,
         THREAD_CREATION: g,
         USER_PROFILE: C,
         USER_PROFILE_REPLY: {

@@ -1,4 +1,4 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => L });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(834730),
     h = n(140735),
     m = n(793574),
-    f = n(688810),
-    p = n(135621),
+    p = n(688810),
+    f = n(135621),
     g = n(287809),
     x = n(927578),
     E = n(192308),
@@ -37,7 +37,7 @@ function _(e) {
             let e = b.A.getChannel(I.Ay.getChannelId());
             return e?.isPrivate() ? v.liQ.DM_CHANNEL : v.liQ.GUILD_CHANNEL;
         }),
-        { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
+        { analyticsLocations: a } = (0, p.Ay)(m.A.PREMIUM_UPSELL);
     return (
         i.useEffect(() => {
             (N.default.track(v.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -72,10 +72,10 @@ function _(e) {
 }
 var R = n(263582),
     O = n(412028);
-function w(e) {
+function L(e) {
     let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: E } = e,
         S = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
-        y = (0, p.A)(),
+        y = (0, f.A)(),
         C = i ?? y,
         A = r ?? i ?? y / 10,
         b = n.length,
@@ -84,18 +84,18 @@ function w(e) {
         j = C - b,
         k = j > A;
     (0, a.$)({ currentLength: b, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
-    let w =
+    let L =
             0 === j
                 ? T.intl.string(T.t.tU6YQ7)
                 : j > 0
                   ? T.intl.formatToPlainString(T.t.qH8uFW, { count: j })
                   : T.intl.string(T.t.YSRIqa),
-        { analyticsLocations: L } = (0, f.Ay)(m.A.CHARACTER_COUNT),
+        { analyticsLocations: w } = (0, p.Ay)(m.A.CHARACTER_COUNT),
         { isVisible: P } = (0, R.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r });
     if (!P) return null;
     let M = j >= 0;
-    return (0, l.jsx)(f.f5, {
-        value: L,
+    return (0, l.jsx)(p.f5, {
+        value: w,
         children: (0, l.jsxs)("div", {
             className: s()(E, O.Dq),
             children: [
@@ -112,7 +112,7 @@ function w(e) {
                         k
                             ? null
                             : (0, l.jsx)(u.m, {
-                                  text: w,
+                                  text: L,
                                   position: "top",
                                   children: (0, l.jsx)(d.E, {
                                       variant: "text-sm/semibold",

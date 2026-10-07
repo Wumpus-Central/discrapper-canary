@@ -42,15 +42,15 @@ function _(e) {
             [M],
         ),
         B = (0, f.Us)() === j.BRT.POPOUT,
-        { parentAnalyticsLocation: w, newestAnalyticsLocation: H } = (0, C.Ay)(),
+        { parentAnalyticsLocation: H, newestAnalyticsLocation: w } = (0, C.Ay)(),
         Y = i.useCallback(() => {
-            ((0, x.X)(w, x.O.ACTIVITY),
+            ((0, x.X)(H, x.O.ACTIVITY),
                 (0, p.A)({
                     context: null != n ? { type: "channel", channel: n } : { type: "contextless" },
                     openInPopout: B,
-                    analyticsLocation: H,
+                    analyticsLocation: w,
                 }));
-        }, [n, B, H, w]),
+        }, [n, B, w, H]),
         F = R ? [] : [s.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP],
         X = i.useRef(!1),
         K = i.useRef(null);

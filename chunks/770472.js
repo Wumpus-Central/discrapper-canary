@@ -1,8 +1,8 @@
 l.d(t, { p: () => o });
 var s = l(582128),
     i = l(488995),
-    a = l(381645);
-let n = 20 + i.GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX - i.GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX,
+    n = l(381645);
+let a = 20 + i.GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX - i.GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX,
     r = 20 + i.GLOBAL_DISCOVERY_SEARCH_BAR_WIDTH_PX + i.GLOBAL_DISCOVERY_SEARCH_BAR_ICON_WIDTH_PX;
 function o(e) {
     let { isSearchBarVisible: t, isSearchBarEmpty: l, searchBarState: o, setSearchBarState: c } = e,
@@ -16,7 +16,7 @@ function o(e) {
                             c(l ? i.GlobalDiscoverySearchBarState.COLLAPSED : i.GlobalDiscoverySearchBarState.FLOATING);
                         break;
                     case i.GlobalDiscoverySearchBarState.COLLAPSED:
-                        s > n && c(i.GlobalDiscoverySearchBarState.DEFAULT);
+                        s > a && c(i.GlobalDiscoverySearchBarState.DEFAULT);
                         break;
                     case i.GlobalDiscoverySearchBarState.FLOATING:
                         s > r && c(i.GlobalDiscoverySearchBarState.DEFAULT);
@@ -32,7 +32,7 @@ function o(e) {
         }, [l, o, c]);
     return {
         onTabsAvailableWidthChange: d,
-        tabsClassName: o === i.GlobalDiscoverySearchBarState.FLOATING ? a.b6 : void 0,
+        tabsClassName: o === i.GlobalDiscoverySearchBarState.FLOATING ? n.b6 : void 0,
         onCollapsedSearchBarClick: u,
         onSearchBarBlur: h,
     };

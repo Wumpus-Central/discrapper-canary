@@ -1,7 +1,7 @@
 i.d(t, { X: () => E });
 var s = i(460905),
-    r = i(7807),
-    n = i(391242),
+    n = i(7807),
+    r = i(391242),
     a = i(597601),
     l = i(183623),
     o = i(95635),
@@ -16,9 +16,9 @@ function E(e) {
         case T.TP.EMOJI:
             return s.n;
         case T.TP.SOUNDBOARD:
-            return r.J;
+            return n.J;
         case T.TP.ANIMATED:
-            return n.O;
+            return r.O;
         case T.TP.AUDIO:
             return a.L;
         case T.TP.STREAM:

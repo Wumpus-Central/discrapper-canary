@@ -1,8 +1,8 @@
 n.d(t, { A: () => d, l: () => u });
 var s = n(58703),
     i = n(927813),
-    l = n(935208),
-    a = n(143413),
+    a = n(935208),
+    l = n(143413),
     o = n(652215);
 let r = 7 * i.A.Millis.MINUTE;
 function c(e) {
@@ -22,14 +22,14 @@ function d(e, t, n) {
         t.blocked !== n.blocked ||
         t.ignored !== n.ignored ||
         (n.type > o.lAJ.DEFAULT
-            ? !(0, a.A)(t) || n.type === o.lAJ.REPLY
+            ? !(0, l.A)(t) || n.type === o.lAJ.REPLY
             : !!(
-                  (0, a.A)(t) ||
+                  (0, l.A)(t) ||
                   t.author.id !== n.author.id ||
                   t.hasFlag(o.pr7.EPHEMERAL) !== n.hasFlag(o.pr7.EPHEMERAL) ||
                   t.hasFlag(o.pr7.IS_SCHEDULED) !== n.hasFlag(o.pr7.IS_SCHEDULED) ||
                   (null != n.webhookId && t.author.username !== n.author.username) ||
-                  (e?.isForumPost() && t.id === l.default.castChannelIdAsMessageId(e.id)) ||
+                  (e?.isForumPost() && t.id === a.default.castChannelIdAsMessageId(e.id)) ||
                   !(0, s.ro)(t.timestamp, n.timestamp) ||
                   !(0, s.v0)(t.timestamp, n.timestamp, r) ||
                   (n.hasFlag(o.pr7.SUPPRESS_NOTIFICATIONS) && !t.hasFlag(o.pr7.SUPPRESS_NOTIFICATIONS)) ||

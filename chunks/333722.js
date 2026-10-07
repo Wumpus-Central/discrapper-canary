@@ -1,8 +1,8 @@
 i.d(t, { s: () => g, A: () => T });
 var s = i(477900);
 i(582128);
-var r = i(503698),
-    n = i.n(r),
+var n = i(503698),
+    r = i.n(n),
     a = i(104510),
     l = i(957485),
     o = i(926268),
@@ -15,7 +15,7 @@ let g = [
     {
         icon: function (e) {
             let { className: t } = e;
-            return (0, s.jsx)("img", { className: n()(t, m.Dp), src: "/assets/185ece790f20d870.svg", alt: "" });
+            return (0, s.jsx)("img", { className: r()(t, m.Dp), src: "/assets/185ece790f20d870.svg", alt: "" });
         },
         getText: () => u.intl.string(u.t.hjQuV2),
     },
@@ -25,7 +25,7 @@ let g = [
 function T(e) {
     let { className: t } = e;
     return (0, s.jsxs)("div", {
-        className: n()(m.iE, t),
+        className: r()(m.iE, t),
         children: [
             (0, s.jsx)(c.D, { className: m.R_, variant: "heading-xxl/semibold", children: u.intl.string(u.t.IzKs3o) }),
             (0, s.jsx)("div", {

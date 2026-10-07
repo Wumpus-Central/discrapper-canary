@@ -1,9 +1,9 @@
 i.d(t, { A: () => u });
 var s = i(17928),
-    r = i(73153),
-    n = i(628049);
+    n = i(73153),
+    r = i(628049);
 let a = [],
-    l = n.qL;
+    l = r.qL;
 function o(e, t) {
     return null != e.subscription_id || t?.subscription_id == null ? e : { ...e, subscription_id: t.subscription_id };
 }
@@ -21,9 +21,9 @@ class d extends s.Ay.Store {
         return l;
     }
 }
-let u = new d(r.h, {
+let u = new d(n.h, {
     LOGOUT: function () {
-        ((a = []), (l = n.qL));
+        ((a = []), (l = r.qL));
     },
     GAME_SERVER_FETCH_MY_SERVERS_SUCCESS: function (e) {
         let { gameServers: t, maxServers: i } = e;
@@ -33,7 +33,7 @@ let u = new d(r.h, {
                 a.find((t) => t.id === e.id),
             ),
         )),
-            (l = i ?? n.qL));
+            (l = i ?? r.qL));
     },
     GAME_SERVER_CREATE: c,
     GAME_SERVER_UPDATE: c,

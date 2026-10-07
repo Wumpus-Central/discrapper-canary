@@ -1,8 +1,8 @@
 l.d(t, { A: () => m });
 var s = l(477900),
     i = l(582128),
-    a = l(503698),
-    n = l.n(a),
+    n = l(503698),
+    a = l.n(n),
     r = l(939249),
     o = l(7689),
     c = l(661531),
@@ -13,7 +13,7 @@ function m(e) {
     let {
             state: t,
             query: l,
-            placeholder: a,
+            placeholder: n,
             onTextChange: m,
             onCollapsedClick: p,
             onClear: g,
@@ -37,12 +37,12 @@ function m(e) {
               children: (0, s.jsx)(o.MagnifyingGlassIcon, { size: "sm", color: c.A.colors.ICON_STRONG }),
           })
         : (0, s.jsx)("div", {
-              className: n()(h.ON, { [h.Nz]: t === u.GlobalDiscoverySearchBarState.FLOATING }),
+              className: a()(h.ON, { [h.Nz]: t === u.GlobalDiscoverySearchBarState.FLOATING }),
               children: (0, s.jsx)(d.I, {
                   size: "sm",
                   ref: j,
                   query: l,
-                  placeholder: a,
+                  placeholder: n,
                   onChange: m,
                   onClear: g,
                   onKeyDown: A,

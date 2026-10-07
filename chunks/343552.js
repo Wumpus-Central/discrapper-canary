@@ -9,12 +9,12 @@ let o = (e, l, t, o, d) => () => {
     if (null == u) return null;
     let { url: h, proxyURL: c, width: m, height: p } = u,
         g = null != c && "" !== c ? c : h,
-        f = (0, i.mW)({ providerName: d, thumbnail: o });
+        x = (0, i.mW)({ providerName: d, thumbnail: o });
     return (0, r.jsx)(n.A, {
         width: m,
         height: p,
         src: g,
-        gifSrc: f,
+        gifSrc: x,
         url: null != e && "" !== e ? e : null != c && "" !== c ? c : h,
         format: null != t ? s.TL.VIDEO : s.TL.IMAGE,
         className: a.jj,

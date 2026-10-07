@@ -1,8 +1,8 @@
 n.d(t, { A: () => p });
 var s = n(477900),
     i = n(582128),
-    l = n(155718),
-    a = n(751258),
+    a = n(155718),
+    l = n(751258),
     o = n(451909),
     r = n(652215),
     c = n(650583),
@@ -28,13 +28,13 @@ class p extends i.PureComponent {
             : u({ value: e, channel: n, message: t }).then((s) => {
                   let { valid: u } = s;
                   if (!u) return Promise.resolve({ shouldClear: !1, shouldRefocus: !1 });
-                  let d = (0, a.S)(e, { channel: n, isEdit: !0 });
+                  let d = (0, l.S)(e, { channel: n, isEdit: !0 });
                   if (
                       (d?.content != null && (e = d.content),
                       t.hasFlag(r.pr7.IS_COMPONENTS_V2) && this.props.channel.type === r.rbe.GUILD_ANNOUNCEMENT)
                   ) {
                       let t = o.Ay.parse(this.props.channel, e),
-                          n = this.props.message.components.filter((e) => e.type === l.I5.TEXT_DISPLAY);
+                          n = this.props.message.components.filter((e) => e.type === a.I5.TEXT_DISPLAY);
                       if (1 === n.length) {
                           let s = n[0];
                           e !== s.content && c(this.props.channel.id, this.props.message.id, t);
@@ -57,10 +57,10 @@ class p extends i.PureComponent {
         }
     };
     render() {
-        let { className: e, textValue: t, richValue: n, message: i, channel: l, onCancel: a, children: o } = this.props,
+        let { className: e, textValue: t, richValue: n, message: i, channel: a, onCancel: l, children: o } = this.props,
             r = (0, s.jsx)("div", {
                 className: d.z,
-                children: u.intl.format(u.t.wDsPXs, { onCancel: () => a(l.id), onSave: this.onClickSave }),
+                children: u.intl.format(u.t.wDsPXs, { onCancel: () => l(a.id), onSave: this.onClickSave }),
             });
         return (0, s.jsxs)("div", {
             className: e,
@@ -71,7 +71,7 @@ class p extends i.PureComponent {
                     textValue: t,
                     richValue: n,
                     message: i,
-                    channel: l,
+                    channel: a,
                     onChange: this.onChange,
                     onSubmit: this.onSubmit,
                     onKeyDown: this.onKeyDown,

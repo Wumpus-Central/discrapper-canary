@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => C });
 var l = n(477900),
     i = n(582128),
     s = n(661531),
@@ -14,18 +14,18 @@ var l = n(477900),
     p = n(375708),
     A = n(548426),
     f = n(165648);
-function x(e) {
-    let { onClose: t, onConfirm: x, onCancel: C, channel: E, analyticsType: S, popoutText: I, animation: j } = e;
+function C(e) {
+    let { onClose: t, onConfirm: C, onCancel: x, channel: E, analyticsType: S, popoutText: I, animation: j } = e;
     i.useEffect(() => {
         m.default.track(g.HAw.OPEN_POPOUT, { type: S, ...(0, u.dI)(E) });
     }, [S, E]);
     let y = i.useCallback(() => {
-            (x?.(), t());
-        }, [x, t]),
-        _ = i.useCallback(() => {
             (C?.(), t());
         }, [C, t]),
-        v = i.useRef(null);
+        v = i.useCallback(() => {
+            (x?.(), t());
+        }, [x, t]),
+        _ = i.useRef(null);
     return (
         i.useEffect(() => {
             let e,
@@ -39,9 +39,9 @@ function x(e) {
                             (0, a.M)(t) ? j.dark() : j.light(),
                         ]);
                         l ||
-                            null == v.current ||
+                            null == _.current ||
                             (e = i.loadAnimation({
-                                container: v.current,
+                                container: _.current,
                                 renderer: "svg",
                                 loop: !0,
                                 autoplay: !0,
@@ -62,7 +62,7 @@ function x(e) {
                     (0, l.jsxs)("div", {
                         className: A.rf,
                         children: [
-                            null != j && (0, l.jsx)("div", { className: A.lY, ref: v }),
+                            null != j && (0, l.jsx)("div", { className: A.lY, ref: _ }),
                             (0, l.jsxs)("div", {
                                 className: A.Qs,
                                 children: [
@@ -83,7 +83,7 @@ function x(e) {
                                                         className: A.x6,
                                                         children: (0, l.jsx)(c.$, {
                                                             variant: "secondary",
-                                                            onClick: _,
+                                                            onClick: v,
                                                             text: p.intl.string(p.t.fsBWmS),
                                                         }),
                                                     }),

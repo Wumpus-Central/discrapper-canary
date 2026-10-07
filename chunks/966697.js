@@ -17,12 +17,12 @@ function o(e) {
             placeholderVersion: o,
             placeholderStyle: m,
             children: x,
-            disableSpinner: f = !1,
+            disableSpinner: g = !1,
         } = e,
-        g = t === h.Rv1.LOADING,
-        [p] = s.useState(g),
-        [v, R] = s.useState(!1),
-        [b] = s.useState(() => Date.now()),
+        f = t === h.Rv1.LOADING,
+        [p] = s.useState(f),
+        [v, b] = s.useState(!1),
+        [R] = s.useState(() => Date.now()),
         N = (function (e, t, a) {
             let i = a && 1 === t && null != e,
                 [l, n] = s.useState(void 0);
@@ -51,17 +51,17 @@ function o(e) {
                 l
             );
         })(l, o, p),
-        w = t === h.Rv1.READY && Date.now() - b < 200;
+        w = t === h.Rv1.READY && Date.now() - R < 200;
     return (
         s.useEffect(() => {
-            if (f) return;
+            if (g) return;
             let e = setTimeout(() => {
-                R(!0);
+                b(!0);
             }, 2e3);
             return () => {
                 clearTimeout(e);
             };
-        }, [f, p]),
+        }, [g, p]),
         (0, i.jsxs)("div", {
             className: u.bX,
             style: { aspectRatio: a },
@@ -70,11 +70,11 @@ function o(e) {
                 null != N &&
                     (0, i.jsx)("img", {
                         style: m,
-                        className: n()(u.bc, { [u.t5]: g, [u.Jh]: !g, [u.zg]: w }),
+                        className: n()(u.bc, { [u.t5]: f, [u.Jh]: !f, [u.zg]: w }),
                         src: N,
                         alt: "",
                     }),
-                f || !g
+                g || !f
                     ? null
                     : (0, i.jsx)("div", {
                           "aria-hidden": !v,

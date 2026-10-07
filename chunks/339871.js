@@ -1,4 +1,4 @@
-n.d(t, { Px: () => p, Sx: () => c, fO: () => g });
+n.d(t, { Px: () => f, Sx: () => c, fO: () => g });
 var l = n(284009),
     i = n.n(l),
     r = n(186306),
@@ -42,17 +42,17 @@ function d(e, t) {
     );
 }
 function h(e, t, n, l, i) {
-    let r = f(t, l);
+    let r = p(t, l);
     r >= 0 && (e[i] = { chars: l, location: n + r });
 }
 function m(e) {
     let { result: t, text: n, startIndex: l, syntax: i, type1: r, type2: s } = e,
-        a = f(n, i);
+        a = p(n, i);
     a >= 0 &&
         ((t[r] = { chars: i.substring(0, 1), location: a + l }),
         (t[s] = { chars: i.substring(1), location: a + l + 1 }));
 }
-function f(e, t) {
+function p(e, t) {
     let n = e.indexOf(t);
     if (n >= 0) {
         let l = t.charAt(0);
@@ -60,7 +60,7 @@ function f(e, t) {
     }
     return n;
 }
-function p(e, t) {
+function f(e, t) {
     (r.o.withSingleEntry(e, () => {
         a.VW.withoutNormalizing(e, () => {
             i()(null != e.selection, "Editor has no selection");
@@ -71,7 +71,7 @@ function p(e, t) {
                 h = a.VW.node(e, n.path),
                 m = a.VW.node(e, l.path);
             if (null == h || null == m || !a.l5.isText(h[0]) || !a.l5.isText(m[0])) return;
-            let f = a.PW.equals(h[1], m[1]);
+            let p = a.PW.equals(h[1], m[1]);
             if (null != o && null != d) {
                 let t = { path: n.path, offset: o.location },
                     i = { path: l.path, offset: d.location };
@@ -80,7 +80,7 @@ function p(e, t) {
                 let r = n.offset,
                     u = l.offset;
                 (a.Kh.isBefore(n, t) || (r -= o.chars.length),
-                    f && !a.Kh.isBefore(l, t) && (u -= o.chars.length),
+                    p && !a.Kh.isBefore(l, t) && (u -= o.chars.length),
                     a.Kh.isAfter(l, i) && (u -= d.chars.length),
                     s.b.select(e, {
                         anchor: { path: n.path, offset: Math.max(0, r) },
@@ -90,10 +90,10 @@ function p(e, t) {
                 let i = u[t];
                 (s.b.insertText(e, i, { at: l }), s.b.insertText(e, i, { at: n }));
                 let r = h[0].text.length + i.length,
-                    a = m[0].text.length + (f ? 2 * i.length : i.length);
+                    a = m[0].text.length + (p ? 2 * i.length : i.length);
                 s.b.select(e, {
                     anchor: { path: n.path, offset: Math.min(r, n.offset + i.length) },
-                    focus: { path: l.path, offset: Math.min(a, l.offset + (f ? i.length : 0)) },
+                    focus: { path: l.path, offset: Math.min(a, l.offset + (p ? i.length : 0)) },
                 });
             }
         });

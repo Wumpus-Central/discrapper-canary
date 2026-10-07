@@ -1,9 +1,9 @@
 l.d(t, { Ay: () => x, T4: () => m, XQ: () => p, Z5: () => g, ns: () => h });
 var s,
     i = l(477900),
-    a = l(582128),
-    n = l(503698),
-    r = l.n(n),
+    n = l(582128),
+    a = l(503698),
+    r = l.n(a),
     o = l(202091),
     c = l(661531),
     d = l(939249),
@@ -27,6 +27,6 @@ function p(e) {
 var g = (((s = {}).OVERLAY = "overlay"), (s.RELATIVE = "relative"), s);
 function x(e) {
     let { className: t, variant: l, children: s } = e,
-        n = a.useMemo(() => ("overlay" === l ? u.Lw : u.V8), [l]);
-    return (0, i.jsx)("div", { className: r()(u.jr, n, t), children: s });
+        a = n.useMemo(() => ("overlay" === l ? u.Lw : u.V8), [l]);
+    return (0, i.jsx)("div", { className: r()(u.jr, a, t), children: s });
 }

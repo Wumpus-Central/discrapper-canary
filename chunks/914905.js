@@ -1,4 +1,4 @@
-(n.d(t, { A: () => w, J: () => O }), n(323874), n(14289), n(35956));
+(n.d(t, { A: () => L, J: () => O }), n(323874), n(14289), n(35956));
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(39623),
     h = n(22231),
     m = n(241326),
-    f = n(834730),
-    p = n(608299),
+    p = n(834730),
+    f = n(608299),
     g = n(478531),
     x = n(607470),
     E = n(274652),
@@ -65,7 +65,7 @@ function _(e) {
     let { file: t, alt: n, spoiler: r, size: a = I.L.MEDIUM, onMouseEnter: u } = e,
         [c, d] = i.useState(),
         [h, m] = i.useState({ width: 0, height: 0 }),
-        f = a === I.L.SMALL;
+        p = a === I.L.SMALL;
     i.useEffect(() => {
         if (null == t || !1 === j.includes(t.type)) return;
         let e = URL.createObjectURL(t);
@@ -82,7 +82,7 @@ function _(e) {
             }
         );
     }, [t]);
-    let p = i.useCallback(
+    let f = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 return null == c
@@ -91,7 +91,7 @@ function _(e) {
                           src: c,
                           className: s()(T.media, {
                               [T.spoiler]: e,
-                              [T.imageSmall]: f,
+                              [T.imageSmall]: p,
                               [T.sizeXSmall]: a === I.L.XSMALL,
                               [T.sizeXXSmall]: a === I.L.XXSMALL,
                           }),
@@ -100,7 +100,7 @@ function _(e) {
                           style: t ? h : {},
                       });
             },
-            [c, f, a, n, h],
+            [c, p, a, n, h],
         ),
         g = i.useCallback(() => {
             null != c &&
@@ -117,13 +117,13 @@ function _(e) {
                 : N.intl.formatToPlainString(N.t.lXoOEZ, { filename: x });
     return (0, l.jsx)("div", {
         onMouseEnter: u,
-        className: s()(T.mediaContainer, { [T.imageSmall]: f }),
+        className: s()(T.mediaContainer, { [T.imageSmall]: p }),
         children: (0, l.jsx)(o.D, {
             onClick: g,
             className: T.clickableMedia,
             "aria-label": E,
             tabIndex: -1,
-            children: (0, l.jsx)(k, { size: a, alt: n, spoiler: r, renderContent: p }),
+            children: (0, l.jsx)(k, { size: a, alt: n, spoiler: r, renderContent: f }),
         }),
     });
 }
@@ -139,7 +139,7 @@ function R(e) {
             guildId: d,
         } = e,
         [h, m] = i.useState(),
-        f = i.useRef(null);
+        p = i.useRef(null);
     return (
         i.useEffect(() => {
             if (null == t) return;
@@ -161,7 +161,7 @@ function R(e) {
                     spoiler: r,
                     renderContent: (e) =>
                         (0, l.jsx)(x.A, {
-                            ref: f,
+                            ref: p,
                             src: h,
                             className: s()(T.media, {
                                 [T.spoiler]: e,
@@ -221,7 +221,7 @@ function O(e) {
                 }),
             });
 }
-function w(e) {
+function L(e) {
     let {
             channelId: t,
             draftType: r,
@@ -237,9 +237,9 @@ function w(e) {
         k = E === I.L.SMALL,
         _ = (0, a.bG)([C.A], () => C.A.getChannel(t)?.guild_id);
     function R() {
-        p.A.remove(t, o.id, r);
+        f.A.remove(t, o.id, r);
     }
-    function w(e) {
+    function L(e) {
         (e.stopPropagation(), j)
             ? (0, u.openModalLazy)(async () => {
                   let { default: e } = await Promise.all([
@@ -296,7 +296,7 @@ function w(e) {
                           upload: o,
                           onSubmit: (e) => {
                               let { name: n, description: l, spoiler: i } = e;
-                              p.A.update(t, o.id, r, { filename: n, description: l, spoiler: i });
+                              f.A.update(t, o.id, r, { filename: n, description: l, spoiler: i });
                           },
                       });
               });
@@ -309,7 +309,7 @@ function w(e) {
                           className: s()({ [T.action]: k }),
                           tooltip: j ? N.intl.string(N.t.MYgdY2) : N.intl.string(N.t.cuurzA),
                           onClick: () => {
-                              p.A.update(t, o.id, r, { spoiler: !o.spoiler });
+                              f.A.update(t, o.id, r, { spoiler: !o.spoiler });
                           },
                           children: o.spoiler
                               ? (0, l.jsx)(c.EyeSlashIcon, {
@@ -328,7 +328,7 @@ function w(e) {
                     ? (0, l.jsx)(b.A, {
                           className: s()({ [T.action]: k }),
                           tooltip: j ? N.intl.string(v.default.V8YlF7) : N.intl.string(N.t.Y8ujqr),
-                          onClick: w,
+                          onClick: L,
                           children: (0, l.jsx)(h.PencilIcon, {
                               size: "xs",
                               color: "currentColor",
@@ -352,7 +352,7 @@ function w(e) {
         draftType: r,
         id: o.id,
         channelId: t,
-        handleEditModal: w,
+        handleEditModal: L,
         keyboardModeEnabled: g,
         size: E,
         className: s()({ [T.attachmentItemSmall]: k }),
@@ -362,7 +362,7 @@ function w(e) {
                 (0, l.jsx)("div", {
                     className: T.filenameContainer,
                     "aria-hidden": !0,
-                    children: (0, l.jsx)(f.E, {
+                    children: (0, l.jsx)(p.E, {
                         className: T.filename,
                         variant: "text-sm/normal",
                         children: null != x ? x : j ? A.name : o.filename,

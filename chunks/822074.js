@@ -8,8 +8,8 @@ var r = s(435558),
     h = s(115718),
     m = s(736056),
     p = s(174768),
-    f = s(734057),
-    g = s(71393),
+    g = s(734057),
+    f = s(71393),
     v = s(573163),
     C = s(309010),
     A = s(543465),
@@ -51,7 +51,7 @@ class k extends u.Ay.PersistedStore {
     }
     initialize(e) {
         ((n = e?.shouldShowTopicsBar ?? !0),
-            this.waitFor(f.A, m.A, g.A, p.A, v.Ay, C.Ay, A.Ay, x.default),
+            this.waitFor(g.A, m.A, f.A, p.A, v.Ay, C.Ay, A.Ay, x.default),
             this.syncWith([p.A], D));
     }
     allSummaries() {
@@ -90,7 +90,7 @@ class k extends u.Ay.PersistedStore {
     }
     shouldFetch(e, t) {
         let s = j[e],
-            n = f.A.getChannel(e);
+            n = g.A.getChannel(e);
         if (!(0, c.pk)(n)) return !1;
         if (null != t) {
             let e = s?.summaryIdLastRequestedAt ?? 0,
@@ -123,11 +123,11 @@ class k extends u.Ay.PersistedStore {
             s && (l = l.concat(I.map((e) => e.channel_id))),
             n &&
                 (l = l.filter((e) => {
-                    let t = f.A.getChannel(e);
+                    let t = g.A.getChannel(e);
                     return null != t && !A.Ay.isChannelMuted(t.guild_id, e) && v.Ay.hasUnread(e);
                 })),
             (l = l.filter((e) => {
-                let t = f.A.getChannel(e);
+                let t = g.A.getChannel(e);
                 return (0, c.pk)(t, !1, !1);
             })).slice(0, a)
         );

@@ -16,16 +16,16 @@ function a(e, t, n) {
                 s = c[t + 1],
                 a = { anchor: (0, l.Q)(e, u, d, n.start), focus: (0, l.Q)(e, u, d, n.start + n.text.length) },
                 m = i.VW.nodes(e, { at: a, mode: "lowest", voids: !1 }),
-                f = {};
+                p = {};
             for (let e of n.attributes)
-                if (((f[e] = !0), "syntaxBefore" === e && null != s))
-                    for (let e of s.attributes) o(e) || (f[`before_${e}`] = !0);
-                else if ("syntaxAfter" === e && null != r) for (let e of r.attributes) o(e) || (f[`after_${e}`] = !0);
+                if (((p[e] = !0), "syntaxBefore" === e && null != s))
+                    for (let e of s.attributes) o(e) || (p[`before_${e}`] = !0);
+                else if ("syntaxAfter" === e && null != r) for (let e of r.attributes) o(e) || (p[`after_${e}`] = !0);
             for (let [t, n] of m) {
                 let t = { anchor: i.VW.start(e, n), focus: i.VW.end(e, n) };
                 (i.Kh.isBefore(t.anchor, a.anchor) && (t.anchor = a.anchor),
                     i.Kh.isAfter(t.focus, a.focus) && (t.focus = a.focus),
-                    h.push({ ...f, ...t }));
+                    h.push({ ...p, ...t }));
             }
         }
     }

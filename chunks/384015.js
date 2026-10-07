@@ -15,8 +15,8 @@ let c = function (e) {
             rel: h,
             target: m,
             mimeType: p,
-            fileName: f,
-            focusProps: g,
+            fileName: g,
+            focusProps: f,
             onClick: v,
             ...C
         } = e,
@@ -32,16 +32,16 @@ let c = function (e) {
             },
             [A, p, v],
         );
-    return null != f
+    return null != g
         ? (0, n.jsx)(i.Anchor, {
               href: t,
               onClick: x,
               target: m,
               rel: h,
               className: s,
-              focusProps: g,
+              focusProps: f,
               ...C,
-              children: f,
+              children: g,
           })
         : (0, n.jsx)(i.Anchor, {
               href: t,
@@ -50,7 +50,7 @@ let c = function (e) {
               rel: h,
               className: s,
               "aria-label": d.intl.string(d.t["1WjMbC"]),
-              focusProps: g,
+              focusProps: f,
               ...C,
               children: (0, n.jsx)(r.DownloadIcon, { size: "md", color: "currentColor", className: c }),
           });

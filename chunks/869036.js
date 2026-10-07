@@ -190,8 +190,8 @@ let A = {
 var L = l(477900);
 l(582128);
 var M = l(661531),
-    R = l(260612),
-    T = l(953727);
+    T = l(260612),
+    R = l(953727);
 function D(e) {
     let {
             size: t = "md",
@@ -201,12 +201,12 @@ function D(e) {
             colorClass: i = "",
             ...s
         } = e,
-        r = (0, R.J)(t),
+        r = (0, T.J)(t),
         o = r?.width ?? l,
         c = r?.height ?? a,
         u = "string" == typeof n ? n : n.css;
     return (0, L.jsxs)("svg", {
-        ...(0, T.A)(s),
+        ...(0, R.A)(s),
         width: o,
         height: c,
         viewBox: "0 0 16 16",

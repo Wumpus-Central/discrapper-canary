@@ -11,20 +11,20 @@ var n = s(477900),
     h = s(789645),
     m = s(28863),
     p = s(834730),
-    f = s(73153),
-    g = s(31717),
+    g = s(73153),
+    f = s(31717),
     v = s(399263);
 let C = {
     cancel(e, t) {
-        f.h.dispatch({ type: "UPLOAD_CANCEL_REQUEST", channelId: e, file: t });
+        g.h.dispatch({ type: "UPLOAD_CANCEL_REQUEST", channelId: e, file: t });
         let s = v.A.getMessageForFile(t.id);
         null == s ||
-            ("" === g.A.getDraft(s.channel_id, g.C.ChannelMessage) &&
-                f.h.dispatch({
+            ("" === f.A.getDraft(s.channel_id, f.C.ChannelMessage) &&
+                g.h.dispatch({
                     type: "DRAFT_SAVE",
                     channelId: s.channel_id,
                     draft: s.content,
-                    draftType: g.C.ChannelMessage,
+                    draftType: f.C.ChannelMessage,
                 }));
     },
 };
@@ -59,10 +59,10 @@ function E(e) {
         }, [t, s]),
         m = 100 === s.progress,
         p = !m && s.currentSize > 0,
-        f = a.useMemo(() => (null == l || "" === l.trim() ? null : A.A.parse(l)), [l]);
+        g = a.useMemo(() => (null == l || "" === l.trim() ? null : A.A.parse(l)), [l]);
     return (0, n.jsxs)(n.Fragment, {
         children: [
-            null != f && (0, n.jsx)("div", { className: S.Qs, children: f }),
+            null != g && (0, n.jsx)("div", { className: S.Qs, children: g }),
             (0, n.jsx)("div", {
                 className: S.Ig,
                 children: (0, n.jsxs)("div", {

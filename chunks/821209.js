@@ -32,7 +32,7 @@ let m = function (e) {
         renderLinkComponent: u,
         inactive: m,
         messageId: p,
-        channelId: f,
+        channelId: g,
     } = e;
     return (0, n.jsx)(o.Y.Consumer, {
         children: (e) =>
@@ -65,7 +65,7 @@ let m = function (e) {
                                   className: null != t ? h._L : h.Zl,
                               }),
                               messageId: p,
-                              channelId: f,
+                              channelId: g,
                           })
                         : null,
                 ],

@@ -36,9 +36,9 @@ function S(e) {
             events: { onMouseEnter: U, onMouseLeave: G },
         } = (0, o.E)(),
         V = n.getGuildId(),
-        { mute: B, suppress: w } = (0, v.A)(n),
-        H = (0, a.bG)([T.Ay], () => T.Ay.isDeaf()),
-        Y = B || w || H,
+        { mute: B, suppress: H } = (0, v.A)(n),
+        w = (0, a.bG)([T.Ay], () => T.Ay.isDeaf()),
+        Y = B || H || w,
         F = (0, p.VE)({ isSoundboardButtonDisabled: Y }),
         [X, K] = (0, m.DP)(F),
         { analyticsLocations: z } = (0, u.Ay)(),
@@ -143,9 +143,9 @@ function S(e) {
                                     themeable: S,
                                     label: B
                                         ? y.intl.string(y.t["Ox4/zU"])
-                                        : w
+                                        : H
                                           ? y.intl.string(y.t["+YBKYI"])
-                                          : H
+                                          : w
                                             ? y.intl.string(y.t.X1lQli)
                                             : y.intl.string(y.t["6EJvHt"]),
                                     iconComponent: P,

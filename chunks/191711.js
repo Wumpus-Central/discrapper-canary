@@ -1,9 +1,9 @@
 l.d(t, { A: () => C, H: () => A });
 var s,
     i = l(477900),
-    a = l(582128),
-    n = l(503698),
-    r = l.n(n),
+    n = l(582128),
+    a = l(503698),
+    r = l.n(a),
     o = l(980707),
     c = l(477782),
     d = l(628284),
@@ -15,12 +15,12 @@ var s,
     x = l(773669),
     v = l(619189);
 function j(e) {
-    let { items: t, onClose: l, onSelect: s, selected: a, ...n } = e;
+    let { items: t, onClose: l, onSelect: s, selected: n, ...a } = e;
     return (0, i.jsx)(o.W, {
         "data-menu-migrated-auto": !0,
         className: v.MK,
         navId: "global-discovery-search-filter-options",
-        "aria-label": n["aria-label"],
+        "aria-label": a["aria-label"],
         hideScroller: !0,
         onClose: l,
         onSelect: l,
@@ -28,15 +28,15 @@ function j(e) {
             c.rX,
             {
                 children: t.map((e) => {
-                    let { id: t, name: l, count: n } = e;
+                    let { id: t, name: l, count: a } = e;
                     return (0, i.jsx)(
                         c.Dr,
                         {
                             id: t,
                             label: l,
-                            subtext: n.toLocaleString(x.default.locale),
-                            icon: t === a ? d.y : void 0,
-                            leadingAccessory: t === a ? { type: "icon", icon: d.y } : void 0,
+                            subtext: a.toLocaleString(x.default.locale),
+                            icon: t === n ? d.y : void 0,
+                            leadingAccessory: t === n ? { type: "icon", icon: d.y } : void 0,
                             action: () => s(t),
                         },
                         t,
@@ -49,9 +49,9 @@ function j(e) {
 }
 var A = (((s = {}).FILLED = "FILLED"), (s.TRANSPARENT = "TRANSPARENT"), s);
 function C(e) {
-    let { items: t, title: l, onSelect: s, selected: n, variant: o = "TRANSPARENT", ...c } = e,
-        d = a.useRef(null),
-        x = a.useMemo(
+    let { items: t, title: l, onSelect: s, selected: a, variant: o = "TRANSPARENT", ...c } = e,
+        d = n.useRef(null),
+        x = n.useMemo(
             () =>
                 (function (e) {
                     switch (e) {
@@ -67,7 +67,7 @@ function C(e) {
         targetElementRef: d,
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, i.jsx)(j, { selected: n, onClose: l, items: t, onSelect: s, "aria-label": c["aria-label"] });
+            return (0, i.jsx)(j, { selected: a, onClose: l, items: t, onSelect: s, "aria-label": c["aria-label"] });
         },
         position: "bottom",
         align: "left",

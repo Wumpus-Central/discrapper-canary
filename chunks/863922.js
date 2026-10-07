@@ -11,15 +11,15 @@ var n = s(582128),
     h = s(734057),
     m = s(927813),
     p = s(822074),
-    f = s(652215);
-let g = 30 * m.A.Millis.SECOND;
+    g = s(652215);
+let f = 30 * m.A.Millis.SECOND;
 async function v(e, t) {
     let s, n;
     if (!p.A.shouldFetch(e, t)) return;
     let a = Date.now();
     o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARY", channelId: e, summaryId: t, requestedAt: a });
     try {
-        let s = await r.Bo.get({ url: f.BVt.CHANNEL_SUMMARY(e, t), rejectWithError: !1 });
+        let s = await r.Bo.get({ url: g.BVt.CHANNEL_SUMMARY(e, t), rejectWithError: !1 });
         n = s?.body;
     } catch (e) {
         s = new u.LG(e);
@@ -39,7 +39,7 @@ async function C(e) {
     let n = Date.now();
     o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES", channelId: e, requestedAt: n });
     try {
-        s = await r.Bo.get({ url: f.BVt.CHANNEL_SUMMARIES(e), rejectWithError: !1 });
+        s = await r.Bo.get({ url: g.BVt.CHANNEL_SUMMARIES(e), rejectWithError: !1 });
     } catch (e) {
         t = new u.LG(e);
     }
@@ -109,14 +109,14 @@ async function N(e) {
                     s = p.A.status(e);
                 if (s?.fetching) return !1;
                 let n = s?.lastReceivedAt;
-                return null == n || t - n > g;
+                return null == n || t - n > f;
             })
             .slice(0, 50)).length
     )
         return Promise.resolve(null);
     o.h.dispatch({ type: "REQUEST_CHANNEL_SUMMARIES_BULK", channelIds: e, requestedAt: l });
     try {
-        s = await r.Bo.post({ url: f.BVt.USER_SUMMARIES, body: { channel_ids: e }, rejectWithError: !1 });
+        s = await r.Bo.post({ url: g.BVt.USER_SUMMARIES, body: { channel_ids: e }, rejectWithError: !1 });
     } catch (e) {
         t = new u.LG(e);
     }
@@ -132,7 +132,7 @@ async function N(e) {
 }
 async function j(e) {
     try {
-        (await r.Bo.del({ url: f.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
+        (await r.Bo.del({ url: g.BVt.CHANNEL_SUMMARY(e.channelId, e.id), rejectWithError: !1 }),
             o.h.dispatch({ type: "DELETE_SUMMARY", summary: e }));
     } catch (e) {
         throw new u.LG(e);

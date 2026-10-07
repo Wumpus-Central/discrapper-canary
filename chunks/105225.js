@@ -37,8 +37,8 @@ var l = t(477900),
     G = t(984624),
     V = t(394412),
     B = t(267102),
-    w = t(625075),
-    H = t(526292),
+    H = t(625075),
+    w = t(526292),
     Y = t(396495),
     F = t(123973),
     X = t(447404),
@@ -100,7 +100,7 @@ function eT(e) {
             if ((a?.(), !s)) return (0, eC.A)();
             (0, ep.A)(E, n.id, h);
         }, [E, n.id, s, a, h]),
-        j = (0, H.k0)(),
+        j = (0, w.k0)(),
         [T, N] = i.useState(!1);
     if (!(0, u.bG)([ei.Ay], () => ei.Ay.supports(eI.O5.VIDEO))) return null;
     function _() {
@@ -251,7 +251,7 @@ let e_ = i.memo(function (e) {
     i.useEffect(() => {
         L() !== M && g(!0);
     }, [M, L]);
-    let w = i.useCallback(() => {
+    let H = i.useCallback(() => {
         if (null != E) (0, x.vN)((0, D._z)(E));
         else for (let e of T) (0, x.vN)((0, D._z)(e));
     }, [T, E]);
@@ -297,7 +297,7 @@ let e_ = i.memo(function (e) {
                                 streamActive: !0,
                                 color: "disconnect",
                                 onClick: () => {
-                                    ((0, b.X)(o, b.O.STOP_WATCHING), w());
+                                    ((0, b.X)(o, b.O.STOP_WATCHING), H());
                                 },
                                 onPopoutClick: T.length > 1 ? i : null,
                                 isSelfStream: !1,
@@ -378,7 +378,7 @@ let ey = function (e) {
             return (r()(null != e, "CenterControlTray: currentUser cannot be undefined"), e);
         }),
         { cameraUnavailable: x, enabled: E } = (0, eo.A)(),
-        j = !w.k.useConfig({ location: "CenterControlTray" }).videoEnabled,
+        j = !H.k.useConfig({ location: "CenterControlTray" }).videoEnabled,
         b = (0, ec.A)(n),
         { suppress: O, selfMute: y, mute: D } = (0, eu.A)(n),
         { canGoLive: M } = (0, u.cf)([ei.Ay], () => ({ canGoLive: (0, L.A)(ei.Ay) })),
@@ -386,7 +386,7 @@ let ey = function (e) {
         k = (0, u.bG)([S.default], () => null != S.default.getAwaitingRemoteSessionInfo()),
         U = null != P,
         G = (0, u.bG)([ea.Ay], () => (P?.channelId ?? ea.Ay.getVoiceChannelId()) === n.id),
-        H = (0, u.bG)([f.Ay], () => f.Ay.getCurrentEmbeddedActivity()),
+        w = (0, u.bG)([f.Ay], () => f.Ay.getCurrentEmbeddedActivity()),
         { reachedLimit: Y, limit: X } = (0, er.A)(n),
         { analyticsLocations: W } = (0, v.Ay)(I.A.VOICE_CONTROL_TRAY),
         J = (0, F.Ay)(n),
@@ -525,7 +525,7 @@ let ey = function (e) {
                                     })
                                   : null,
                               (0, l.jsx)(e_, {
-                                  connectedEmbeddedActivity: H,
+                                  connectedEmbeddedActivity: w,
                                   currentUser: p,
                                   channel: n,
                                   onDisconnectCall: a,

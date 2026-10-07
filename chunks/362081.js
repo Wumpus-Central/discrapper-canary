@@ -34,8 +34,8 @@ function C(e) {
         L = k.type === f.nQ.SCREENSHOT,
         {
             initialDuration: M,
-            initialCropStart: R,
-            initialCropEnd: T,
+            initialCropStart: T,
+            initialCropEnd: R,
             initialCurrentTime: D,
         } = ((C = k.length / 1e3),
         (y = k.editMetadata?.start ?? 0),
@@ -55,8 +55,8 @@ function C(e) {
         ),
         [_, O] = n.useState({
             clipName: k.name,
-            cropStart: R,
-            cropEnd: 0 === T ? M : T,
+            cropStart: T,
+            cropEnd: 0 === R ? M : R,
             voiceAudioEnabled: k.editMetadata?.voiceAudio ?? !0,
             applicationAudioEnabled: k.editMetadata?.applicationAudio ?? !0,
             soundboardAudioEnabled: k.editMetadata?.soundboardAudio ?? !0,
@@ -302,8 +302,8 @@ function C(e) {
         n.useEffect(() => {
             Z > 0 && K <= 0 && M <= 0 && O((e) => ({ ...e, cropEnd: Z }));
         }, [Z, K, M]));
-    let eR = n.useMemo(() => K - B, [B, K]),
-        eT = n.useCallback(
+    let eT = n.useMemo(() => K - B, [B, K]),
+        eR = n.useCallback(
             (e) => (
                 ee.current.add(e),
                 () => {
@@ -446,7 +446,7 @@ function C(e) {
                 isLoaded: J,
                 cropStart: B,
                 cropEnd: K,
-                cropDuration: eR,
+                cropDuration: eT,
                 setCropStart: eD,
                 setCropEnd: eS,
                 setCrop: e_,
@@ -457,7 +457,7 @@ function C(e) {
                 play: eO,
                 pause: eP,
                 seek: eG,
-                subscribe: eT,
+                subscribe: eR,
                 setVideoPlayerRef: eI,
                 videoPlayerRef: V,
                 videoURL: en,
@@ -493,7 +493,7 @@ function C(e) {
                 J,
                 B,
                 K,
-                eR,
+                eT,
                 eD,
                 eS,
                 e_,
@@ -505,7 +505,7 @@ function C(e) {
                 eP,
                 eG,
                 es,
-                eT,
+                eR,
                 eI,
                 en,
                 eo,

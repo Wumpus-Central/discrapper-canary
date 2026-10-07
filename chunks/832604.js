@@ -1,15 +1,15 @@
-t.d(n, { A: () => c });
+t.d(n, { A: () => a });
 var r = t(582128),
     l = t(635377),
     s = t.n(l),
     u = t(306044);
-let a = new (s())({ max: 1e3 });
-function c(e, n) {
+let c = new (s())({ max: 1e3 });
+function a(e, n) {
     let [t, l] = r.useState();
     return (
         r.useEffect(() => {
             if (null == e || null != n) return void l(void 0);
-            let t = a.get(e);
+            let t = c.get(e);
             if (null != t) return void l(t);
             let r = !1;
             return (
@@ -22,7 +22,7 @@ function c(e, n) {
                                 if (0 !== n || null == t.icon || "" === t.icon || null == t.name || "" === t.name)
                                     return void l(void 0);
                                 let s = `data:image/png;base64,${t.icon}`;
-                                (a.set(e, s), l(s));
+                                (c.set(e, s), l(s));
                             });
                     })
                     .catch(() => {

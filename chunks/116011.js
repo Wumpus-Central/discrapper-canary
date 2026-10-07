@@ -1,4 +1,4 @@
-n.d(t, { u5: () => S, vw: () => I, wx: () => w });
+n.d(t, { u5: () => S, vw: () => I, wx: () => D });
 var i,
     a = n(477900),
     r = n(582128),
@@ -9,8 +9,8 @@ var i,
     c = n(624479),
     u = n(821609),
     m = n(695366),
-    f = n(194261),
-    g = n(297264),
+    g = n(194261),
+    f = n(297264),
     b = n(331322),
     p = n(144165),
     C = n(914410),
@@ -61,7 +61,7 @@ let A = (e) => {
                 "aria-label": "",
                 onClick: () => {
                     (navigator.clipboard.writeText(t.code),
-                        g(i),
+                        f(i),
                         h.default.track(R.HAw.THIRD_PARTY_PARTNER_CTA_CLICKED, {
                             partner: t.partnerId,
                             cta_type: "copy code",
@@ -72,7 +72,7 @@ let A = (e) => {
                 },
             }),
         }),
-        [f, g] = r.useState(() => m);
+        [g, f] = r.useState(() => m);
     if (null != t.code)
         return (0, a.jsx)("div", {
             className: _.oP,
@@ -87,7 +87,7 @@ let A = (e) => {
                             children: t.code,
                         }),
                     }),
-                    f,
+                    g,
                     (0, a.jsx)(u.$, {
                         variant: "secondary",
                         size: "sm",
@@ -122,7 +122,7 @@ function L(e) {
         analyticsLocations: s = [],
         onClaim: d,
         onClaimError: c,
-        isClaiming: g,
+        isClaiming: f,
     } = e;
     return n
         ? i
@@ -139,11 +139,11 @@ function L(e) {
             : (0, a.jsx)("div", {
                   className: o,
                   children: (0, a.jsx)(u.$, {
-                      icon: f.LockIcon,
+                      icon: g.LockIcon,
                       variant: "secondary",
                       size: "sm",
                       text: t.claimCtaText ?? O.intl.string(O.t.vwASIl),
-                      loading: g,
+                      loading: f,
                       onClick: () => {
                           (null != d
                               ? d()
@@ -166,7 +166,7 @@ function L(e) {
         : null;
 }
 var S = (((i = {}).INLINE = "inline"), (i.FOOTER = "footer"), i);
-function w(e) {
+function D(e) {
     let {
             recurrence: t,
             titleClassName: n,
@@ -178,7 +178,7 @@ function w(e) {
             footerContent: c,
             analyticsLocations: u = [],
             onClaim: m,
-            onClaimError: f,
+            onClaimError: g,
             isClaiming: C,
             hideClaimButton: h = !1,
         } = e,
@@ -198,7 +198,7 @@ function w(e) {
                             (0, a.jsxs)("div", {
                                 className: null != n ? `${_.yO} ${n}` : _.yO,
                                 children: [
-                                    (0, a.jsx)(g.D, {
+                                    (0, a.jsx)(f.D, {
                                         variant: "secondary" === s ? "heading-md/semibold" : "heading-lg/semibold",
                                         color: "text-strong",
                                         children: t.title,
@@ -207,7 +207,7 @@ function w(e) {
                                         direction: "vertical",
                                         gap: 8,
                                         children: [
-                                            (0, a.jsx)(g.D, {
+                                            (0, a.jsx)(f.D, {
                                                 variant: "heading-sm/medium",
                                                 color: "text-subtle",
                                                 children: P
@@ -221,7 +221,7 @@ function w(e) {
                                                         : t.body,
                                             }),
                                             null != t.bodyNote &&
-                                                (0, a.jsx)(g.D, {
+                                                (0, a.jsx)(f.D, {
                                                     variant: "heading-sm/medium",
                                                     color: "text-subtle",
                                                     children: O.intl.format(t.bodyNote, {
@@ -243,7 +243,7 @@ function w(e) {
                                     setHasClaimError: j,
                                     analyticsLocations: u,
                                     onClaim: m,
-                                    onClaimError: f,
+                                    onClaimError: g,
                                     isClaiming: C,
                                 }),
                         ],
@@ -277,7 +277,7 @@ function w(e) {
                         className: _.qx,
                         analyticsLocations: u,
                         onClaim: m,
-                        onClaimError: f,
+                        onClaimError: g,
                         isClaiming: C,
                     }),
                 }),

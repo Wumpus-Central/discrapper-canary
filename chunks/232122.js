@@ -1,8 +1,8 @@
 i.d(t, { A: () => h, m: () => p });
 var s = i(477900),
-    r = i(582128),
-    n = i(503698),
-    a = i.n(n),
+    n = i(582128),
+    r = i(503698),
+    a = i.n(r),
     l = i(297264),
     o = i(696986),
     c = i(939249),
@@ -29,8 +29,8 @@ let p = [
 ];
 function h(e) {
     let { className: t } = e,
-        [i, n] = r.useState(null),
-        [g, T] = r.useState(null);
+        [i, r] = n.useState(null),
+        [g, T] = n.useState(null);
     return (0, s.jsxs)("div", {
         className: a()(_.iE, t),
         children: [
@@ -39,15 +39,15 @@ function h(e) {
             (0, s.jsx)("ul", {
                 className: _.p_,
                 children: p.map((e, t) => {
-                    let r = i === t,
+                    let n = i === t,
                         l = g === t,
-                        o = r || l ? "text-default" : "text-muted";
+                        o = n || l ? "text-default" : "text-muted";
                     return (0, s.jsxs)(
                         c.D,
                         {
                             tag: "li",
-                            className: a()(_.Aw, { [_.$K]: r }),
-                            onClick: () => n((e) => (e === t ? null : t)),
+                            className: a()(_.Aw, { [_.$K]: n }),
+                            onClick: () => r((e) => (e === t ? null : t)),
                             onMouseEnter: () => T(t),
                             onMouseLeave: () => T(null),
                             children: [
@@ -65,11 +65,11 @@ function h(e) {
                                             size: "sm",
                                             color: m.A.colors.INTERACTIVE_ICON_DEFAULT,
                                             className: _.q4,
-                                            style: { transform: r ? "rotate(180deg)" : "rotate(0deg)" },
+                                            style: { transform: n ? "rotate(180deg)" : "rotate(0deg)" },
                                         }),
                                     ],
                                 }),
-                                r &&
+                                n &&
                                     (0, s.jsx)(d.E, {
                                         className: _.ZF,
                                         color: "text-muted",

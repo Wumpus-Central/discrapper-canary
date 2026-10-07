@@ -11,8 +11,8 @@ var n = s(477900),
     h = s(939249),
     m = s(113494),
     p = s(782134),
-    f = s(559106),
-    g = s(43990),
+    g = s(559106),
+    f = s(43990),
     v = s(607470),
     C = s(384015),
     A = s(945810),
@@ -173,10 +173,10 @@ class Z extends a.Component {
             onVolumeHide: h,
             width: m,
             volume: p,
-            type: f,
+            type: g,
         } = this.props;
         return (0, n.jsxs)(u.A.div, {
-            className: f === K.VIDEO ? H._v : H.dH,
+            className: g === K.VIDEO ? H._v : H.dH,
             onClick: (e) => e.stopPropagation(),
             onDoubleClick: (e) => e.stopPropagation(),
             style: this.getAnimatedStyle(),
@@ -557,13 +557,13 @@ class et extends a.PureComponent {
             ? (this.play(), this.handleMouseMove(), this.handleUIUpdate(), t.hasClickedPlay && p?.pop(r))
             : !r && t.playing && (m.pause(), p?.pop(r), s?.()),
             r && null == this._analytics.metadata.hasValidFrame && this.checkVideoDecodability());
-        let f = (0, I.qf)(m.parentNode, m);
-        (o && !t.fullscreen && null != f
-            ? ((0, I.tl)(f), f.addEventListener(I.Wb, this.handleFullScreenExit))
+        let g = (0, I.qf)(m.parentNode, m);
+        (o && !t.fullscreen && null != g
+            ? ((0, I.tl)(g), g.addEventListener(I.Wb, this.handleFullScreenExit))
             : !o &&
               t.fullscreen &&
-              null != f &&
-              (f.removeEventListener(I.Wb, this.handleFullScreenExit), (0, I.sP)(f, f.ownerDocument)),
+              null != g &&
+              (g.removeEventListener(I.Wb, this.handleFullScreenExit), (0, I.sP)(g, g.ownerDocument)),
             d === b.A.Types.DURATION && t.dragging !== b.A.Types.DURATION && r
                 ? m.pause()
                 : d !== b.A.Types.DURATION && t.dragging === b.A.Types.DURATION && r && m.play(),
@@ -892,8 +892,8 @@ class et extends a.PureComponent {
                     hasClickedPlay: h,
                     hideControls: m,
                     muted: p,
-                    playing: f,
-                    fullscreen: g,
+                    playing: g,
+                    fullscreen: f,
                     volume: v,
                     dragging: C,
                 },
@@ -918,11 +918,11 @@ class et extends a.PureComponent {
                   onVolumeHide: i,
                   onControlsShow: o,
                   onControlsHide: r,
-                  playing: f,
+                  playing: g,
                   dragging: C,
                   type: t,
                   ref: this.controlsRef,
-                  width: g ? window.screen.width : A,
+                  width: f ? window.screen.width : A,
                   disabled: !a,
                   children:
                       t === K.VIDEO && !1 !== this.props.allowFullScreen
@@ -1000,12 +1000,12 @@ class et extends a.PureComponent {
             onKeyDown: this.handleKeyDown,
             tabIndex: 0,
             style: this.getMediaStyle(),
-            children: (0, n.jsxs)(f.xp, {
+            children: (0, n.jsxs)(g.xp, {
                 containerRef: this.containerRef,
                 children: [
                     this.renderMetadata(),
                     t === K.AUDIO ? this.renderAudio() : this.renderVideo(),
-                    (0, n.jsx)(g.N, {
+                    (0, n.jsx)(f.N, {
                         theme: V.NJ8.ONYX,
                         children: (e) => (0, n.jsx)("div", { className: e, children: this.renderControls() }),
                     }),

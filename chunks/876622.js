@@ -1,8 +1,8 @@
 l.d(t, { A: () => A });
 var s = l(477900),
     i = l(582128),
-    a = l(503698),
-    n = l.n(a),
+    n = l(503698),
+    a = l.n(n),
     r = l(661531),
     o = l(922016),
     c = l(761508),
@@ -15,15 +15,15 @@ var s = l(477900),
     x = l(375708),
     v = l(129066);
 function j(e) {
-    let { onTabSelect: t, tabs: l, selectedTab: a } = e,
+    let { onTabSelect: t, tabs: l, selectedTab: n } = e,
         m = i.useMemo(
             () =>
                 null !=
                 l.find((e) => {
                     let { id: t } = e;
-                    return t === a;
+                    return t === n;
                 }),
-            [a, l],
+            [n, l],
         ),
         [p, j] = i.useState(!1),
         A = (function (e) {
@@ -41,7 +41,7 @@ function j(e) {
         targetElementRef: E,
         renderPopout: (e) => {
             let { closePopout: i } = e;
-            return (0, s.jsx)(g.A, { selectedTab: a, onClose: i, tabs: l, onTabSelect: t });
+            return (0, s.jsx)(g.A, { selectedTab: n, onClose: i, tabs: l, onTabSelect: t });
         },
         position: "bottom",
         align: "left",
@@ -52,7 +52,7 @@ function j(e) {
                 id: "more",
                 look: "brand",
                 selectedItem: m ? "more" : void 0,
-                className: n()(v.Mf, { [v.wH]: !1 }),
+                className: a()(v.Mf, { [v.wH]: !1 }),
                 clickableRef: (e) => {
                     null != e && null != e.ref && (E.current = e.ref);
                 },
@@ -75,7 +75,7 @@ function j(e) {
     });
 }
 function A(e) {
-    let { className: t, selectedTab: l, tabs: a, onTabSelect: r, onAvailableWidthChange: o } = e,
+    let { className: t, selectedTab: l, tabs: n, onTabSelect: r, onAvailableWidthChange: o } = e,
         [u, h] = i.useState(0),
         g = i.useRef(u),
         {
@@ -83,9 +83,9 @@ function A(e) {
             onItemLayout: A,
             overflowItemsRef: C,
             itemWidthsRef: I,
-        } = (0, m.Wv)({ items: a, itemGapPx: 20, maxLines: 1, containerWidth: u }),
-        _ = i.useMemo(() => a.slice(0, x + 1), [x, a]),
-        E = i.useMemo(() => a.slice(x + 1), [x, a]),
+        } = (0, m.Wv)({ items: n, itemGapPx: 20, maxLines: 1, containerWidth: u }),
+        _ = i.useMemo(() => n.slice(0, x + 1), [x, n]),
+        E = i.useMemo(() => n.slice(x + 1), [x, n]),
         f = i.useRef(null),
         N = i.useCallback(
             (e) => {
@@ -100,13 +100,13 @@ function A(e) {
     (0, p.g)(f, N);
     let S = 0 !== u;
     return (0, s.jsxs)("div", {
-        className: n()(v.kL, t),
+        className: a()(v.kL, t),
         ref: f,
         children: [
             (0, s.jsxs)("div", {
                 className: v.Kk,
                 children: [
-                    a.map((e, t) =>
+                    n.map((e, t) =>
                         (0, s.jsx)(
                             m.Ae,
                             {
