@@ -92,8 +92,17 @@ class B extends _.A {
         null == r || r <= C.oe || r > C.G1 || (h.wv.getSetting() && R(t));
     };
     handleStreamUpdate = (e) => {
-        let { streamKey: t } = e;
-        (G(t), U());
+        let t,
+            { streamKey: n, paused: i } = e;
+        (G(n),
+            U(),
+            i ||
+                (null != (t = m.A.getRTCConnection(n)?.getMediaEngineConnectionId()) &&
+                    c.h.dispatch({
+                        type: "MEDIA_ENGINE_CONNECTION_USER_STATS_RESET",
+                        mediaEngineConnectionId: t,
+                        userId: (0, N.Iy)(n).ownerId,
+                    })));
     };
     handleStreamDelete = (e) => {
         let { reason: t, streamKey: n } = e;

@@ -1277,7 +1277,7 @@ var tC = n(414405),
     tG = n(71393),
     tU = n(977997),
     tF = n(46282),
-    tH = n(489277),
+    tH = n(233741),
     tZ = n(243612),
     tY = n(731854),
     tX = n(816466);
@@ -3356,7 +3356,9 @@ let ib = c.memo(function (e) {
                         (0, r.jsx)(ig.CS, {
                             onClick: (e) => {
                                 (0, l.L3)(e, async () => {
-                                    let { default: e } = await n.e("751607").then(n.bind(n, 98109));
+                                    let { default: e } = await Promise.all([n.e("903820"), n.e("751607")]).then(
+                                        n.bind(n, 98109),
+                                    );
                                     return (t) => (0, r.jsx)(e, { ...t });
                                 });
                             },

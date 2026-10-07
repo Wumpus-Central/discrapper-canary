@@ -22,7 +22,7 @@ let S = new Set([m.AR.INITIALIZING, m.AR.WAITING_FOR_SCREEN_TYPE_RESOLUTION]);
 var N = n(515183),
     C = n(592598),
     O = n(682763),
-    R = n(614455),
+    R = n(950869),
     L = n(394072);
 n(672396);
 var y = n(392164);

@@ -292,6 +292,12 @@ let r = {
         inlineRequire: () => n(81009).A,
         loadAfterConnectionOpen: !0,
     },
+    OverlayBridgeManager: {
+        actions: __OVERLAY__
+            ? ["OVERLAY_RELAY_CLICK_ZONE_CLICKED"]
+            : ["OVERLAY_CALL_PRIVATE_CHANNEL", "OVERLAY_JOIN_GAME"],
+        inlineRequire: () => n(472310).A,
+    },
     OverlayContentProtectionManager: { actions: ["STREAM_START", "STREAM_STOP"], inlineRequire: () => n(48345).A },
     OverlayLockSideEffectManager: { actions: ["OVERLAY_SET_INPUT_LOCKED"], inlineRequire: () => n(674684).A },
     OverlayNotificationAnalyticsManager: {
@@ -445,6 +451,7 @@ let r = {
     },
     RelationshipManager: { actions: ["RELATIONSHIP_ADD", "FRIEND_REQUEST_ACCEPTED"], inlineRequire: () => n(908816).A },
     RTCLatencyTestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(335560).A },
+    RTCReconnectTimeoutManager: { actions: ["VOICE_STATE_UPDATES"], inlineRequire: () => n(940950).A },
     SavedMessagesManager: {
         actions: ["POST_CONNECTION_OPEN"],
         inlineRequire: () => n(199543).A,
@@ -580,6 +587,7 @@ let r = {
         actions: ["RTC_CONNECTION_STATE", "RTC_CONNECTION_VIDEO", "MEDIA_SESSION_JOINED"],
         inlineRequire: () => n(583534).A,
     },
+    NativePermissionManager: { actions: ["AUDIO_SET_MODE"], inlineRequire: () => n(404044).A },
     GuestManager: { actions: ["POST_CONNECTION_OPEN"], inlineRequire: () => n(921037).A },
     ClipsManager: {
         hasStoreChangeListeners: !0,

@@ -1,4 +1,4 @@
-a.d(t, { default: () => X });
+a.d(t, { default: () => $ });
 var n = a(477900),
     l = a(582128),
     r = a(812729),
@@ -134,17 +134,18 @@ function W(e) {
         placeholder: l,
     });
 }
-var B = a(489277),
-    U = a(127242),
-    R = a(614455);
+var B = a(661886),
+    U = a(233741),
+    R = a(127242),
+    H = a(950869);
 a(672396);
-var H = a(652215),
-    K = a(375708),
-    z = a(582830);
-function q(e, t) {
+var K = a(652215),
+    z = a(375708),
+    q = a(582830);
+function J(e, t) {
     return i()(e, t);
 }
-let J = new Set([
+let Z = new Set([
         p.aI.BORDERLESS_FULLSCREEN,
         p.aI.FULLSCREEN,
         p.aI.WINDOWED,
@@ -152,16 +153,16 @@ let J = new Set([
         p.aI.MINIMIZED,
         p.aI.UNKNOWN,
     ]),
-    Z = {
+    X = {
         HandleFocusChanged: (e, t) => {
             if (!(0, G.$8)(e, "HandleFocusChanged")) return !0;
-            let a = null != t ? (B.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set(),
+            let a = null != t ? (U.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set(),
                 { focusedPid: n, focusedWindowHandle: l } = e.data;
             return null != l && null != n && -1 !== n && !!a.has(l) && n === t;
         },
         EventHook: (e, t) => {
             if (!(0, G.$8)(e, "EventHook")) return !0;
-            let a = null != t ? (B.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set();
+            let a = null != t ? (U.A.getKnownWindowHandlesForPID(t) ?? new Set()) : new Set();
             try {
                 let { receivedWindow: n, targetPid: l } = e.data;
                 if (null != n && a.has(n)) return null != l && l === t;
@@ -170,15 +171,15 @@ let J = new Set([
             }
         },
     };
-function X(e) {
+function $(e) {
     let t,
         r,
         i,
         E,
         D,
         { onClose: j, transitionState: M, location: C, appContext: L } = e,
-        X = (0, u.bG)([I.default], () => I.default.getFocusedPID()) ?? (0, S.getPID)(),
-        $ = (0, u.bG)([T.default], () => T.default.getTrackedGameByPid(X), [X]),
+        U = (0, u.bG)([I.default], () => I.default.getFocusedPID()) ?? (0, S.getPID)(),
+        $ = (0, u.bG)([T.default], () => T.default.getTrackedGameByPid(U), [U]),
         [V, Y] = l.useState(null),
         [Q, ee] = l.useState(""),
         et =
@@ -259,34 +260,34 @@ function X(e) {
                 ),
             ),
             (0, u.bG)(
-                [U.A],
-                () => ({ nativeState: U.A.getDebuggingState(), breadcrumbs: U.A.getOverlayLoggingBreadcrumbs() }),
+                [R.A],
+                () => ({ nativeState: R.A.getDebuggingState(), breadcrumbs: R.A.getOverlayLoggingBreadcrumbs() }),
                 [],
-                q,
+                J,
             )),
         ef = l.useMemo(() => {
             let e = {
-                game_crashes_occurred: K.t["1UWmCV"],
-                poor_performance: K.t["4owu+4"],
-                overlay_unresponsive: K.t.Q8Z0xo,
-                keybindings_not_working: K.t.UnzaZs,
-                alt_tabbing_issues: K.t["/sG9Sf"],
-                game_not_interactable: K.t["+18gq6"],
-                game_forced_minimized: K.t.dabM8C,
-                other: K.t["UhbPA+"],
+                game_crashes_occurred: z.t["1UWmCV"],
+                poor_performance: z.t["4owu+4"],
+                overlay_unresponsive: z.t.Q8Z0xo,
+                keybindings_not_working: z.t.UnzaZs,
+                alt_tabbing_issues: z.t["/sG9Sf"],
+                game_not_interactable: z.t["+18gq6"],
+                game_forced_minimized: z.t.dabM8C,
+                other: z.t["UhbPA+"],
             };
-            return Object.keys(e).map((t) => ({ id: t, label: K.intl.string(e[t]), value: t }));
+            return Object.keys(e).map((t) => ({ id: t, label: z.intl.string(e[t]), value: t }));
         }, []),
         ey = l.useMemo(() => {
             let e = {
-                [p.aI.FULLSCREEN]: K.t.AjBsPe,
-                [p.aI.WINDOWED]: K.t["0oYq2i"],
-                [p.aI.BORDERLESS_FULLSCREEN]: K.t.NwNvjf,
-                [p.aI.MINIMIZED]: K.t.Wypflu,
-                [p.aI.MAXIMIZED]: K.t["MUX2+G"],
-                [p.aI.UNKNOWN]: K.t.QPOep8,
+                [p.aI.FULLSCREEN]: z.t.AjBsPe,
+                [p.aI.WINDOWED]: z.t["0oYq2i"],
+                [p.aI.BORDERLESS_FULLSCREEN]: z.t.NwNvjf,
+                [p.aI.MINIMIZED]: z.t.Wypflu,
+                [p.aI.MAXIMIZED]: z.t["MUX2+G"],
+                [p.aI.UNKNOWN]: z.t.QPOep8,
             };
-            return [...J].map((t) => ({ id: t.toString(), label: K.intl.string(e[t]), value: t }));
+            return [...Z].map((t) => ({ id: t.toString(), label: z.intl.string(e[t]), value: t }));
         }, []);
     async function ep() {
         (es(!0), await (0, d.yy)(500), es(!1));
@@ -303,7 +304,7 @@ function X(e) {
             r = t?.overlayMethod != null ? x.Ue[t.overlayMethod] : null,
             i = t?.fullscreenType ?? p.aI.UNKNOWN,
             u = (0, G.tn)(eg, (t) => {
-                for (let a of Object.values(Z))
+                for (let a of Object.values(X))
                     try {
                         if (!a(t, e)) return !1;
                     } catch (e) {
@@ -339,14 +340,14 @@ function X(e) {
                 overlay_module_state: t?.state,
                 overlay_native_state: JSON.stringify(ec),
                 overlay_module_oop_initialization_state: JSON.stringify(l),
-                overlay_module_error_message: R.A.errorMessage,
+                overlay_module_error_message: H.A.errorMessage,
                 overlay_module_breadcrumbs: JSON.stringify(u),
                 fullscreen_history_for_pid: c,
                 media_session_id: b.A.getMediaSessionId(),
                 recent_experiment_buckets: JSON.stringify(m),
                 location: C,
             };
-        (await A.default.track(H.HAw.OVERLAY_BUG_REPORT, g),
+        (await A.default.track(K.HAw.OVERLAY_BUG_REPORT, g),
             await (0, d.yy)(1e3),
             eu(!1),
             j?.(),
@@ -360,21 +361,21 @@ function X(e) {
     }
     return (
         (0, v.Ay)(() => {
-            A.default.track(H.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: C });
+            A.default.track(K.HAw.OPEN_MODAL, { type: "overlay_bug_reporter_modal", location: C });
         }),
         (0, n.jsx)(s.a, {
             transitionState: M,
-            title: K.intl.string(K.t.OKmenM),
+            title: z.intl.string(z.t.OKmenM),
             actions: [
-                { text: K.intl.string(K.t["ETE/oC"]), onClick: j, variant: "secondary", disabled: ei },
-                { text: K.intl.string(K.t.geKm7t), onClick: ev, variant: "primary", loading: ei },
+                { text: z.intl.string(z.t["ETE/oC"]), onClick: j, variant: "secondary", disabled: ei },
+                { text: z.intl.string(z.t.geKm7t), onClick: ev, variant: "primary", loading: ei },
             ],
             onClose: j,
             children: (0, n.jsxs)("div", {
-                className: z.jE,
+                className: q.jE,
                 children: [
                     (0, n.jsxs)("div", {
-                        className: z.DB,
+                        className: q.DB,
                         children: [
                             (0, n.jsx)(m.b, {
                                 isShaking: ed,
@@ -382,13 +383,13 @@ function X(e) {
                                 children: (0, n.jsx)(c.E, {
                                     variant: "text-md/medium",
                                     color: eo ? "text-feedback-critical" : "text-strong",
-                                    children: K.intl.string(K.t.Trx7eJ),
+                                    children: z.intl.string(z.t.Trx7eJ),
                                 }),
                             }),
                             (0, n.jsx)(g.l, {
-                                label: K.intl.string(K.t.mKTzjI),
+                                label: z.intl.string(z.t.mKTzjI),
                                 hideLabel: !0,
-                                placeholder: K.intl.string(K.t.mKTzjI),
+                                placeholder: z.intl.string(z.t.mKTzjI),
                                 options: ef,
                                 value: V,
                                 onSelectionChange: function (e) {
@@ -401,51 +402,51 @@ function X(e) {
                                 (0, n.jsx)(c.E, {
                                     variant: "text-xs/semibold",
                                     color: "text-feedback-critical",
-                                    children: K.intl.string(K.t["5cqa9J"]),
+                                    children: z.intl.string(z.t["5cqa9J"]),
                                 }),
                         ],
                     }),
                     (0, n.jsxs)("div", {
-                        className: z.DB,
+                        className: q.DB,
                         children: [
                             (0, n.jsx)(c.E, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
-                                children: K.intl.string(K.t.iZufAY),
+                                children: z.intl.string(z.t.iZufAY),
                             }),
                             (0, n.jsx)(f.f, {
                                 autosize: !0,
                                 value: Q,
                                 maxLength: 1e3,
                                 showCharacterCount: !1,
-                                placeholder: K.intl.string(K.t["68mJXW"]),
+                                placeholder: z.intl.string(z.t["68mJXW"]),
                                 onChange: ee,
                             }),
                             (0, n.jsx)(c.E, {
                                 variant: "text-xs/normal",
                                 color: "text-muted",
-                                children: K.intl.string(K.t.TzkM2a),
+                                children: z.intl.string(z.t.TzkM2a),
                             }),
                         ],
                     }),
-                    (0, n.jsx)("div", { className: z.hr }),
+                    (0, n.jsx)("div", { className: q.hr }),
                     (0, n.jsxs)("div", {
-                        className: z.DB,
+                        className: q.DB,
                         children: [
                             (0, n.jsx)(c.E, {
                                 variant: "text-md/medium",
                                 color: "text-strong",
-                                children: K.intl.string(K.t["8+SU+a"]),
+                                children: z.intl.string(z.t["8+SU+a"]),
                             }),
                             (0, n.jsx)(W, {
                                 selectedGame: el,
                                 setSelectedGame: er,
-                                placeholder: K.intl.string(K.t.b1IW2e),
+                                placeholder: z.intl.string(z.t.b1IW2e),
                             }),
                             (0, n.jsx)(g.l, {
-                                label: K.intl.string(K.t.IjlqrF),
+                                label: z.intl.string(z.t.IjlqrF),
                                 hideLabel: !0,
-                                placeholder: K.intl.string(K.t.IjlqrF),
+                                placeholder: z.intl.string(z.t.IjlqrF),
                                 options: ey,
                                 value: ea,
                                 onSelectionChange: en,

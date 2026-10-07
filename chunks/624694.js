@@ -1,16 +1,14 @@
-(n.d(t, { A: () => I }), n(321073));
+(n.d(t, { A: () => h }), n(321073));
 var i = n(17928),
     r = n(73153),
-    a = n(652896),
-    s = n(280450),
-    l = n(116956);
-let o = {},
-    d = {},
-    c = {};
-function u(e) {
+    a = n(280450);
+let s = {},
+    l = {},
+    o = {};
+function d(e) {
     return "packetsSent" in e;
 }
-function _(e, t, n, i, r) {
+function c(e, t, n, i, r) {
     let a = i.find((e) => "video" === e.type);
     if (
         (null == n &&
@@ -30,19 +28,19 @@ function _(e, t, n, i, r) {
         null == a)
     )
         return n;
-    let s = u(a) ? (a.packetsSent ?? 0) : (a.packetsReceived ?? 0),
-        l = (u(a), a.packetsLost ?? 0),
-        o = u(a) ? (a.frameRateEncode ?? 0) : (a.frameRateDecode ?? 0),
-        d = a.resolution?.height ?? 0,
-        c = u(a) ? (a.videoEntropy ?? 0) : 0;
-    ((n.numDatapoints += 1), (n.frameRateAggregated += o), (n.resolutionAggregated += d), (n.entropyAggregated += c));
+    let s = d(a) ? (a.packetsSent ?? 0) : (a.packetsReceived ?? 0),
+        l = (d(a), a.packetsLost ?? 0),
+        o = d(a) ? (a.frameRateEncode ?? 0) : (a.frameRateDecode ?? 0),
+        c = a.resolution?.height ?? 0,
+        u = d(a) ? (a.videoEntropy ?? 0) : 0;
+    ((n.numDatapoints += 1), (n.frameRateAggregated += o), (n.resolutionAggregated += c), (n.entropyAggregated += u));
     let _ = r?.find((e) => "video" === e.type);
     if (null != _ && t >= n.minVersion) {
         n.numDatapoints -= 1;
-        let e = u(_) ? (_.packetsSent ?? 0) : (_.packetsReceived ?? 0),
-            t = (u(_), _.packetsLost ?? 0),
-            i = u(_) ? (_.frameRateEncode ?? 0) : (_.frameRateDecode ?? 0),
-            r = u(_) ? (_.videoEntropy ?? 0) : 0,
+        let e = d(_) ? (_.packetsSent ?? 0) : (_.packetsReceived ?? 0),
+            t = (d(_), _.packetsLost ?? 0),
+            i = d(_) ? (_.frameRateEncode ?? 0) : (_.frameRateDecode ?? 0),
+            r = d(_) ? (_.videoEntropy ?? 0) : 0,
             a = _.resolution?.height ?? 0;
         ((n.frameRateAggregated -= i),
             (n.resolutionAggregated -= a),
@@ -58,42 +56,42 @@ function _(e, t, n, i, r) {
         n
     );
 }
-function E(e, t, n, i) {
+function u(e, t, n, i) {
     null == e[t] && (e[t] = {});
-    let r = s.default.getId();
-    for (let a of ((e[t][r] = _(n.version, i?.version ?? 0, e[t][r], n.stats.rtp.outbound, i?.stats.rtp.outbound)),
+    let r = a.default.getId();
+    for (let a of ((e[t][r] = c(n.version, i?.version ?? 0, e[t][r], n.stats.rtp.outbound, i?.stats.rtp.outbound)),
     Object.keys(n.stats.rtp.inbound)))
-        e[t][a] = _(n.version, i?.version ?? 0, e[t][a], n.stats.rtp.inbound[a], i?.stats.rtp.inbound[a]);
+        e[t][a] = c(n.version, i?.version ?? 0, e[t][a], n.stats.rtp.inbound[a], i?.stats.rtp.inbound[a]);
 }
-function A(e, t) {
-    (d[e]?.[t] != null && delete d[e][t], c[e]?.[t] != null && delete c[e][t]);
+function _(e, t) {
+    (l[e]?.[t] != null && delete l[e][t], o[e]?.[t] != null && delete o[e][t]);
 }
-function h(e, t) {
+function E(e, t) {
     if (null == e) return null;
-    let n = o[e];
+    let n = s[e];
     return null == n || n.length <= t ? null : n[n.length - t - 1];
 }
-class f extends i.Ay.Store {
+class A extends i.Ay.Store {
     initialize() {
-        this.waitFor(s.default, l.A);
+        this.waitFor(a.default);
     }
     static displayName = "MediaEngineStatsStore";
     getConnectionStats(e) {
-        return h(e, 0);
+        return E(e, 0);
     }
     getLastConnectionStats(e) {
-        return h(e, 1);
+        return E(e, 1);
     }
     getStatsHistory(e) {
-        return null == e ? [] : (o[e] ?? []);
+        return null == e ? [] : (s[e] ?? []);
     }
     getAccumulatedPerformanceStats(e, t, n) {
         if (null == e) return null;
-        let i = "long" === n ? d : c;
+        let i = "long" === n ? l : o;
         return i[e]?.[t] ?? null;
     }
 }
-let I = new f(r.h, {
+let h = new A(r.h, {
     MEDIA_ENGINE_CONNECTION_STATS: function (e) {
         let { connectionStats: t } = e,
             n = {};
@@ -102,27 +100,24 @@ let I = new f(r.h, {
                 { mediaEngineConnectionId: i } = e;
             0 !== i.length &&
                 ((n[i] = e),
-                i in o || (o[i] = []),
-                o[i].push(e),
-                o[i].length > 30 && (t = o[i].shift()),
-                E(c, i, e, h(i, 15) ?? void 0),
-                E(d, i, e, t));
+                i in s || (s[i] = []),
+                s[i].push(e),
+                s[i].length > 30 && (t = s[i].shift()),
+                u(o, i, e, E(i, 15) ?? void 0),
+                u(l, i, e, t));
         }
     },
     MEDIA_ENGINE_CONNECTION_STATS_HISTORY_RESET: function (e) {
         let { mediaEngineConnectionId: t } = e;
-        null != t && (delete o[t], delete d[t], delete c[t]);
+        null != t && (delete s[t], delete l[t], delete o[t]);
     },
-    STREAM_UPDATE: function (e) {
-        let { streamKey: t, paused: n } = e;
-        if (n) return !1;
-        let i = l.A.getRTCConnection(t)?.getMediaEngineConnectionId();
-        if (null == i) return !1;
-        A(i, (0, a.Iy)(t).ownerId);
+    MEDIA_ENGINE_CONNECTION_USER_STATS_RESET: function (e) {
+        let { mediaEngineConnectionId: t, userId: n } = e;
+        _(t, n);
     },
     RTC_CONNECTION_VIDEO: function (e) {
         let { userId: t, mediaEngineConnectionId: n } = e;
         if (null == n) return !1;
-        A(n, t);
+        _(n, t);
     },
 });

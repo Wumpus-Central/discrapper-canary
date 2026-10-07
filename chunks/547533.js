@@ -1481,7 +1481,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eK.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 631890, Version Hash: 916970b8543eed5c99a0b85e62540b8a32a78145`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 631893, Version Hash: 37ec80cf81646f66491382d1b8b304a12afcb589`,
 ),
     U.A.setTags({ appContext: V.QCW }),
     em.A.initBasic(),
@@ -4579,6 +4579,7 @@ let ae = (0, ia.Fe)({
                 n.e("639721"),
                 n.e("419631"),
                 n.e("82384"),
+                n.e("903820"),
                 n.e("876892"),
                 n.e("971508"),
                 n.e("816799"),
@@ -4793,7 +4794,7 @@ var ao = n(920814),
     aS = n(246338),
     aN = n(197184),
     aC = n(850891),
-    aO = n(742023),
+    aO = n(964404),
     aR = n(204651),
     aL = n(520006),
     ay = n(128286),
@@ -25574,7 +25575,7 @@ let LP = "isHideDevBanner",
                     className: tc()(LM.Wz, LM.mr),
                     children: [
                         (0, v.jsx)(Lb, { className: LM.Kk }),
-                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "631890" }),
+                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "631893" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -29782,7 +29783,7 @@ let vf = (0, tY.Fe)({
     vN = (0, tY.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("959371"),
+                n.e("132073"),
                 n.e("179028"),
                 n.e("203112"),
                 n.e("886896"),
@@ -37010,7 +37011,7 @@ function PM(e, t, n, i) {
         t && (e ? a.priorityHeld.add(i.id) : a.priorityHeld.delete(i.id)));
     let s = a.held.size > 0,
         l = a.priorityHeld.size > 0;
-    (0, PC.N)(s, l);
+    (0, PC.N)(eG.Ay.getMediaEngine(), s, l);
 }
 let PP = {
     [V.hCu.TOGGLE_PRIORITY_SPEAKER]: { onTrigger() {}, keyEvents: {} },
@@ -37231,7 +37232,7 @@ let PP = {
     },
 };
 function PU() {
-    (Pb.clear(), (0, PC.N)(!1, !1));
+    (Pb.clear(), (0, PC.N)(eG.Ay.getMediaEngine(), !1, !1));
 }
 class Pw extends ni.A {
     _initialize() {
@@ -46785,7 +46786,7 @@ let kC = {
                 let {
                     args: { active: t },
                 } = e;
-                eG.Ay.getMode(nD.x.DEFAULT) === V.TBI.PUSH_TO_TALK && (0, PC.N)(t);
+                eG.Ay.getMode(nD.x.DEFAULT) === V.TBI.PUSH_TO_TALK && (0, PC.N)(eG.Ay.getMediaEngine(), t);
             },
         },
     },
@@ -50243,7 +50244,7 @@ class V5 extends eu.Ay.PersistedStore {
     n(207989),
     n(517092),
     n(310031),
-    n(614455),
+    n(950869),
     n(648427),
     n(185657),
     n(91868),
@@ -51448,9 +51449,9 @@ let H3 = (0, tY.Fe)({
     createPromise: () =>
         Promise.all([
             n.e("860350"),
-            n.e("452467"),
+            n.e("352456"),
             n.e("238417"),
-            n.e("959371"),
+            n.e("132073"),
             n.e("880150"),
             n.e("657266"),
             n.e("272396"),
@@ -52914,6 +52915,7 @@ let H3 = (0, tY.Fe)({
             n.e("419631"),
             n.e("652212"),
             n.e("82384"),
+            n.e("903820"),
             n.e("876892"),
             n.e("239367"),
             n.e("152695"),
@@ -53685,7 +53687,7 @@ function j$() {
 let jz = (0, ia.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("959371"),
+                n.e("132073"),
                 n.e("702154"),
                 n.e("240461"),
                 n.e("342551"),
@@ -53710,7 +53712,7 @@ let jz = (0, ia.Fe)({
     jX = (0, ia.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("959371"),
+                n.e("132073"),
                 n.e("702154"),
                 n.e("405689"),
                 n.e("238417"),
@@ -53748,7 +53750,7 @@ let jz = (0, ia.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("238417"),
-                n.e("959371"),
+                n.e("132073"),
                 n.e("414522"),
                 n.e("827708"),
                 n.e("901555"),
@@ -53790,7 +53792,8 @@ let jz = (0, ia.Fe)({
                 n.e("564091"),
                 n.e("638781"),
                 n.e("500505"),
-                n.e("452467"),
+                n.e("720538"),
+                n.e("352456"),
                 n.e("457428"),
                 n.e("959880"),
                 n.e("188941"),
@@ -54179,7 +54182,7 @@ let Ws = (0, ia.Fe)({
                 n.e("560338"),
                 n.e("638781"),
                 n.e("25300"),
-                n.e("452467"),
+                n.e("352456"),
                 n.e("314479"),
                 n.e("226589"),
                 n.e("611137"),
@@ -54194,7 +54197,7 @@ let Ws = (0, ia.Fe)({
                 n.e("247917"),
                 n.e("89530"),
                 n.e("64769"),
-                n.e("959371"),
+                n.e("132073"),
                 n.e("992956"),
                 n.e("880150"),
                 n.e("490743"),
@@ -55052,6 +55055,7 @@ let Ws = (0, ia.Fe)({
                 n.e("842775"),
                 n.e("941348"),
                 n.e("639721"),
+                n.e("903820"),
                 n.e("81941"),
                 n.e("726223"),
                 n.e("751743"),

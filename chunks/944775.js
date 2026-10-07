@@ -2,7 +2,7 @@ n.d(t, { Ax: () => x, Lk: () => C, cu: () => w, hK: () => E });
 var r = n(477900);
 n(582128);
 var i = n(73153),
-    s = n(489277),
+    s = n(233741),
     l = n(979186),
     o = n(574172),
     a = n(734057),
@@ -11,8 +11,8 @@ var i = n(73153),
     d = n(19575),
     h = n(317084),
     f = n(980504),
-    p = n(652215),
-    g = n(375708);
+    g = n(652215),
+    p = n(375708);
 let m = {
         width: f.ed.width,
         height: f.ed.height,
@@ -37,12 +37,12 @@ async function x(e) {
     if (null == t || null == i) return;
     let { x: s, y: u } = await d.Ay.invoke("GET_MOUSE_COORDINATES");
     (0, o.open)(
-        p.MLl.SOUNDBOARD,
+        g.MLl.SOUNDBOARD,
         (n) =>
             (0, r.jsx)(l.A, {
                 windowKey: n,
                 withTitleBar: !1,
-                title: g.intl.string(g.t["IiA///"]),
+                title: p.intl.string(p.t["IiA///"]),
                 onBlur: w,
                 children: (0, r.jsx)(h.A, {
                     guildId: t,
@@ -58,7 +58,7 @@ async function x(e) {
     );
 }
 function w() {
-    (0, o.close)(p.MLl.SOUNDBOARD);
+    (0, o.close)(g.MLl.SOUNDBOARD);
 }
 function E(e, t) {
     let n = s.A.isOverlayV3EnabledForPID(t),

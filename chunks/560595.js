@@ -9,7 +9,7 @@ let s = (0, t(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var d = t(91777),
+var d = t(674966),
     u = t(885386),
     l = t(929921),
     c = t(734057),

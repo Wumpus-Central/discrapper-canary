@@ -3614,7 +3614,7 @@ class tT extends m.A {
                     reconnect: r,
                     reason: i,
                     duration: this.getDuration(),
-                    ...es.A.getUserVoiceSettingsStats(this.context),
+                    ...es.A.getUserVoiceSettingsStats(ea.Ay.getSettings(this.context)),
                     ...this._voiceQuality?.getPacketStats(),
                     ...this._voiceQuality?.getBytesStats(),
                     ...this._voiceQuality?.getBufferStats(),

@@ -1,9 +1,8 @@
-n.d(t, { N: () => s });
+n.d(t, { N: () => a });
 var i = n(73153),
-    r = n(192820),
-    a = n(731854);
-function s(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
-    (i.h.dispatch({ type: "PUSH_TO_TALK_STATE_CHANGE", isActive: e, isPriority: t }),
-        r.Ay.getMediaEngine().eachConnection((n) => n.setForceAudioInput(e, t, !1), a.x.DEFAULT));
+    r = n(731854);
+function a(e, t) {
+    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
+    (i.h.dispatch({ type: "PUSH_TO_TALK_STATE_CHANGE", isActive: t, isPriority: n }),
+        e.eachConnection((e) => e.setForceAudioInput(t, n, !1), r.x.DEFAULT));
 }

@@ -127,17 +127,7 @@ class V extends r.Ay.DeviceSettingsStore {
         (e) => ({ ...e, hasClips: e.hasClips ?? !1 }),
         (e) => ({ ...e, clipsSettings: { ...e.clipsSettings, decoupledClipsEnabled: U.decoupledClipsEnabled } }),
         (e) => ({ ...e, hardwareClassificationForDecoupled: e.hardwareClassificationForDecoupled ?? null }),
-        (e) => {
-            let t = n(192820).Ay.getHardwareEncoding();
-            return {
-                ...e,
-                clipsSettings: {
-                    ...e.clipsSettings,
-                    clipsEnabled: !!t && e.clipsSettings.clipsEnabled,
-                    decoupledClipsEnabled: !!t && e.clipsSettings.decoupledClipsEnabled,
-                },
-            };
-        },
+        (e) => e,
         (e) => ({ ...e, newClipIds: e.newClipIds ?? [], newClipIDs: void 0 }),
         (e) => ({
             ...e,

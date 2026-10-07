@@ -17,7 +17,7 @@ function _(e) {
         (0, s.openModalLazy)(
             async () => {
                 let { ForwardModal: e } = await Promise.all([
-                    a.e("959371"),
+                    a.e("132073"),
                     a.e("325522"),
                     a.e("401317"),
                     a.e("790340"),
@@ -61,7 +61,7 @@ function _(e) {
                     a.e("826139"),
                     a.e("405714"),
                     a.e("360732"),
-                    a.e("452467"),
+                    a.e("352456"),
                     a.e("638781"),
                     a.e("678906"),
                     a.e("415695"),
