@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => O, W1: () => C }), n(323874), n(14289), n(35956));
+(n.d(t, { Ay: () => R, W1: () => O }), n(323874), n(14289), n(35956));
 var i = n(435558),
     r = n.n(i),
     a = n(635377),
@@ -51,19 +51,22 @@ let f = ["http:", "https:", "discord:", "tel:", "sms:", "mailto:"],
         _.D.BLOCK_QUOTE,
         _.D.SUBTEXT,
     ];
-function S(e, t) {
+function S(e) {
+    return e.foundNestedMaskedLink;
+}
+function N(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : [];
     for (let i of (Array.isArray(e) || (e = [e]), e)) {
         if (void 0 === i || !t.includes(i.type)) return null;
         if (i.type === _.D.INLINE_CODE) {
             let e = [...t, ...n];
-            if (null == S(i.validationChildContent, e)) return null;
+            if (null == N(i.validationChildContent, e)) return null;
         }
-        if (Array.isArray(i.content) && null == S(i.content, t)) return null;
+        if (Array.isArray(i.content) && null == N(i.content, t)) return null;
     }
     return e;
 }
-function N(e) {
+function C(e) {
     if ((0, d.rL)(e) || h(e).whitespaceSanitized !== e) return !0;
     let t = u.A.toURLSafe(e);
     if (null == t) return !0;
@@ -71,9 +74,9 @@ function N(e) {
     let n = e.split("/");
     return n.length < 3 || "" !== n[1] || u.A.safeDecodeURIComponent(n[2]) !== n[2];
 }
-function C(e) {
+function O(e) {
     try {
-        if (N(e)) throw Error("Rejected due to suspicious characters in URL: " + JSON.stringify(e));
+        if (C(e)) throw Error("Rejected due to suspicious characters in URL: " + JSON.stringify(e));
         let t = new URL(e),
             n = t.protocol ?? "";
         if (!f.includes(n.toLowerCase())) throw Error("Provided protocol is not allowed: " + n);
@@ -87,7 +90,7 @@ function C(e) {
         return null;
     }
 }
-let O = {
+let R = {
     ...o().defaultRules.link,
     match(e, t, n) {
         if (!t.allowLinks || -1 === e.indexOf("](")) return null;
@@ -116,25 +119,32 @@ let O = {
         function u() {
             return { type: _.D.TEXT, content: i };
         }
-        if (N(s)) return u();
+        if (null != n.maskedLinkValidation) return ((n.maskedLinkValidation.foundNestedMaskedLink = !0), u());
+        if (C(s)) return u();
         let E = h(s),
             A = h(a),
             f = h(null != l ? l : ""),
-            O = E.whitespaceSanitized,
-            R = A.fullySanitized,
-            L = f.fullySanitized,
-            y = R.trim();
-        if (0 === O.trim().length || 0 === y.length) return u();
-        let D = C(o().unescapeUrl(s));
-        if (null == D || (0, d.F9)(l)) return u();
-        let v = { ...n, allowEscape: !1, parseInlineCodeChildContent: !0 },
-            b = n.allowEmojiLinks ? p : I,
-            M = [...b, ...T],
-            P = [...m, ...g],
-            U = S(t(R, v), M, [_.D.EMOJI]),
-            w = S(t(L, v), P);
-        if (null == U || null == w) return u();
-        let G = (function e(t) {
+            R = E.whitespaceSanitized,
+            L = A.fullySanitized,
+            y = f.fullySanitized,
+            D = L.trim();
+        if (0 === R.trim().length || 0 === D.length) return u();
+        let v = O(o().unescapeUrl(s));
+        if (null == v || (0, d.F9)(l)) return u();
+        let b = { ...n, allowEscape: !1, parseInlineCodeChildContent: !0 },
+            M = { foundNestedMaskedLink: !1 },
+            P = { ...b, maskedLinkValidation: M },
+            U = n.allowEmojiLinks ? p : I,
+            w = [...U, ...T],
+            G = [...m, ...g],
+            x = t(L, P);
+        if (S(M)) return u();
+        let k = N(x, w, [_.D.EMOJI]),
+            F = t(y, P);
+        if (S(M)) return u();
+        let B = N(F, G);
+        if (null == k || null == B) return u();
+        let V = (function e(t) {
             let n = "";
             for (let i of t)
                 switch (i.type) {
@@ -171,17 +181,17 @@ let O = {
                         (0, c.xb)(i.type);
                 }
             return n;
-        })(U);
-        if (
-            0 === G.trim().length ||
-            (0, d.Ay)(G).length > 0 ||
-            (G !== R && ((0, d.Ay)(R).length > 0 || null == S(t(G, v), [...M, _.D.EMOJI])))
-        )
-            return u();
-        let x = r().pick(t.rules, b),
-            k = o().parserFor(x)(A.whitespaceSanitized, v),
-            F = f.whitespaceSanitized,
-            { target: B } = D;
-        return { content: k, target: B, title: F };
+        })(k);
+        if (0 === V.trim().length || (0, d.Ay)(V).length > 0) return u();
+        if (V !== L) {
+            if ((0, d.Ay)(L).length > 0) return u();
+            let e = t(V, P);
+            if (S(M) || null == N(e, [...w, _.D.EMOJI])) return u();
+        }
+        let H = r().pick(t.rules, U),
+            j = o().parserFor(H)(A.whitespaceSanitized, b),
+            W = f.whitespaceSanitized,
+            { target: Y } = v;
+        return { content: j, target: Y, title: W };
     },
 };
