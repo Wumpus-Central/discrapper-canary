@@ -28,7 +28,7 @@
     c9: () => eP,
     ct: () => eu,
     dz: () => eb,
-    PK: () => eG,
+    PK: () => eW,
     Qe: () => ev,
     y_: () => eL,
     xE: () => eU,
@@ -230,18 +230,18 @@ function x(e, t) {
     }),
         (0, k.Hy)(e, { ...n, message: t }));
 }
-function W(e) {
+function G(e) {
     return `optimistic:${e}`;
 }
-let G = new Map();
+let W = new Map();
 function q(e, t) {
     let { content: n, nonce: r, attachments: i } = t;
-    (G.set(r, a.default.getCurrentUser()?.id),
+    (W.set(r, a.default.getCurrentUser()?.id),
         s.h.dispatch({
             type: "CONJURE_CHAT_MESSAGE_APPEND",
             projectId: e,
             content: n,
-            id: W(r),
+            id: G(r),
             userId: a.default.getCurrentUser()?.id,
             timestamp: new Date().toISOString(),
             attachments: i,
@@ -301,7 +301,7 @@ async function Y(e, t, n) {
             spec: n.spec,
             build: n.build,
             onAccepted: async () => (t.ws.sendCaptureAck(n.id, "accepted"), await g(e, n.id)),
-            resolveUploadUrl: () => eW(e),
+            resolveUploadUrl: () => eG(e),
         });
     } catch (e) {
         (console.error("[vibegrations] preview capture relay failed", e), (r = { status: "failed" }));
@@ -400,16 +400,16 @@ async function ee(e, t) {
                             r.stopped || "open" !== J.get(t) || K(t, n));
                     else if ("user_message" === r.type) {
                         let e, n, i;
-                        ((n = (e = null != r.nonce && G.has(r.nonce)) && null != r.nonce ? G.get(r.nonce) : void 0),
+                        ((n = (e = null != r.nonce && W.has(r.nonce)) && null != r.nonce ? W.get(r.nonce) : void 0),
                             (i = e && (null == n || null == r.user_id || n === r.user_id)) &&
                                 null != r.nonce &&
-                                G.delete(r.nonce),
+                                W.delete(r.nonce),
                             s.h.dispatch({
                                 type: "CONJURE_CHAT_MESSAGE_APPEND",
                                 projectId: t,
                                 content: r.content,
                                 id: r.id,
-                                ...(i && null != r.nonce ? { optimisticId: W(r.nonce) } : {}),
+                                ...(i && null != r.nonce ? { optimisticId: G(r.nonce) } : {}),
                                 userId: r.user_id,
                                 timestamp: r.ts,
                                 attachments: r.attachments,
@@ -836,45 +836,52 @@ async function ee(e, t) {
                                                         cacheWriteTokens: r.cache_write_tokens ?? 0,
                                                         observedAt: new Date().toISOString(),
                                                     }))
-                                              : "debug_tool_call" === r.type
-                                                ? s.h.dispatch({
-                                                      type: "CONJURE_TOOL_CALL_APPEND",
+                                              : "timing_trace" === r.type
+                                                ? (console.log("[vibegrations] timing trace", JSON.stringify(r.trace)),
+                                                  s.h.dispatch({
+                                                      type: "CONJURE_DEBUG_TIMING_TRACE",
                                                       projectId: t,
-                                                      toolCall: r,
-                                                  })
-                                                : "request_upstream_ticket" === r.type
-                                                  ? V(n, r.id, r.project_id)
-                                                  : "debug_history_state" === r.type
-                                                    ? s.h.dispatch({
-                                                          type: "CONJURE_HISTORY_LOAD_SETTLE",
-                                                          projectId: t,
-                                                          scope: r.scope,
-                                                          status: r.status,
-                                                          count: r.count,
-                                                          truncated: !0 === r.truncated,
-                                                      })
-                                                    : (s.h.dispatch({
-                                                          type: "CONJURE_LOG_APPEND",
-                                                          projectId: t,
-                                                          log: r,
-                                                      }),
-                                                      (function (e, t) {
-                                                          if (!0 === t.historical || "error" !== t.level) return;
-                                                          let n = null != t.source ? Q[t.source] : void 0;
-                                                          if (null == n) return;
-                                                          let r = X.get(e);
-                                                          null == r && ((r = new Set()), X.set(e, r));
-                                                          let i = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
-                                                          r.has(i) ||
-                                                              r.size >= 10 ||
-                                                              (r.add(i),
-                                                              (0, k.Hy)(e, {
-                                                                  location: n.location,
-                                                                  code: n.code,
-                                                                  message: t.message,
-                                                                  details: t.source,
-                                                              }));
-                                                      })(t, r));
+                                                      trace: r.trace,
+                                                  }))
+                                                : "debug_tool_call" === r.type
+                                                  ? s.h.dispatch({
+                                                        type: "CONJURE_TOOL_CALL_APPEND",
+                                                        projectId: t,
+                                                        toolCall: r,
+                                                    })
+                                                  : "request_upstream_ticket" === r.type
+                                                    ? V(n, r.id, r.project_id)
+                                                    : "debug_history_state" === r.type
+                                                      ? s.h.dispatch({
+                                                            type: "CONJURE_HISTORY_LOAD_SETTLE",
+                                                            projectId: t,
+                                                            scope: r.scope,
+                                                            status: r.status,
+                                                            count: r.count,
+                                                            truncated: !0 === r.truncated,
+                                                        })
+                                                      : (s.h.dispatch({
+                                                            type: "CONJURE_LOG_APPEND",
+                                                            projectId: t,
+                                                            log: r,
+                                                        }),
+                                                        (function (e, t) {
+                                                            if (!0 === t.historical || "error" !== t.level) return;
+                                                            let n = null != t.source ? Q[t.source] : void 0;
+                                                            if (null == n) return;
+                                                            let r = X.get(e);
+                                                            null == r && ((r = new Set()), X.set(e, r));
+                                                            let i = `${t.source}:${t.message.replace(/\d+/g, "#").slice(0, 200)}`;
+                                                            r.has(i) ||
+                                                                r.size >= 10 ||
+                                                                (r.add(i),
+                                                                (0, k.Hy)(e, {
+                                                                    location: n.location,
+                                                                    code: n.code,
+                                                                    message: t.message,
+                                                                    details: t.source,
+                                                                }));
+                                                        })(t, r));
                 })(e, t, n),
             onClose: () => {
                 (R(t, "Connection closed before the publish result arrived"),
@@ -1368,11 +1375,11 @@ async function ex(e, t) {
         i = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${i}`;
 }
-async function eW(e) {
+async function eG(e) {
     let { ticket: t, baseUrl: n } = await ey(e);
     return `${n}/agent/screenshots?${new URLSearchParams({ ticket: t })}`;
 }
-async function eG(e, t) {
+async function eW(e, t) {
     let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
         { ticket: r, baseUrl: i } = await ey(e),
         s = new URLSearchParams({ ticket: r });
@@ -1380,7 +1387,7 @@ async function eG(e, t) {
 }
 async function eq(e, t) {
     async function n() {
-        return fetch(await eG(e, t), { method: "HEAD" });
+        return fetch(await eW(e, t), { method: "HEAD" });
     }
     let r = await n();
     if ((401 === r.status && (e_.delete(e), (r = await n())), 404 === r.status)) return !1;
@@ -1442,6 +1449,6 @@ let eK = [],
         LOGOUT: function () {
             if (0 === U.size) return !1;
             for (let e of Array.from(U.keys())) en(e);
-            (I.clear(), G.clear(), e_.clear());
+            (I.clear(), W.clear(), e_.clear());
         },
     });
