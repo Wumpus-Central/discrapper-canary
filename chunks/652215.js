@@ -5439,6 +5439,7 @@ var rb =
         (ew.TYPING_INDICATOR_STYLE_REMOVED = "typing_indicator_style_removed"),
         (ew.TYPING_INDICATOR_STYLE_SURPRISE_ME = "typing_indicator_style_surprise_me"),
         (ew.TYPING_INDICATOR_STYLE_SEEN = "typing_indicator_style_seen"),
+        (ew.TYPING_INDICATOR_STYLE_CLICKED = "typing_indicator_style_clicked"),
         (ew.TYPING_INDICATOR_EDIT_SCREEN_OPENED = "typing_indicator_edit_screen_opened"),
         (ew.RING_TO_GUILD_VC_BANNER_SHOWN = "impression_ring_to_guild_vc_banner_shown"),
         (ew.RING_TO_GUILD_VC_MENU_ITEM_SHOWN = "impression_ring_to_guild_vc_menu_item_shown"),
