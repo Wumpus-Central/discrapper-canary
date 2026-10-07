@@ -1,4 +1,4 @@
-n.d(t, { US: () => v, BD: () => D, X8: () => G, mH: () => U });
+n.d(t, { US: () => U, BD: () => D, X8: () => G, mH: () => b });
 var i = n(477900);
 n(582128);
 var l = n(435558),
@@ -115,7 +115,7 @@ let L = (e, t) => {
             (S.Ay.getMentionCount(t) > 0 || (O.Ay.getVoiceChannelId() === t && S.Ay.getUnreadCount(t) > 0))
         );
     },
-    U = {
+    b = {
         binds: ["alt+shift+down"],
         comboKeysBindGlobal: !0,
         action() {
@@ -132,7 +132,7 @@ let L = (e, t) => {
             );
         },
     },
-    v = {
+    U = {
         binds: ["alt+shift+up"],
         comboKeysBindGlobal: !0,
         action() {
@@ -149,14 +149,14 @@ let L = (e, t) => {
             );
         },
     },
-    b = (e, t) => S.Ay.getMentionCount(t) > 0,
+    v = (e, t) => S.Ay.getMentionCount(t) > 0,
     D = {
         binds: ["mod+shift+alt+down"],
         comboKeysBindGlobal: !0,
-        action: () => (I(1, { channelPredicate: b, ensureChatIsVisible: R, withVoiceChannels: !0 }), !1),
+        action: () => (I(1, { channelPredicate: v, ensureChatIsVisible: R, withVoiceChannels: !0 }), !1),
     },
     G = {
         binds: ["mod+shift+alt+up"],
         comboKeysBindGlobal: !0,
-        action: () => (I(-1, { channelPredicate: b, ensureChatIsVisible: R, withVoiceChannels: !0 }), !1),
+        action: () => (I(-1, { channelPredicate: v, ensureChatIsVisible: R, withVoiceChannels: !0 }), !1),
     };

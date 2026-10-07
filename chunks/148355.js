@@ -1,4 +1,4 @@
-n.d(t, { A: () => M, h: () => k });
+n.d(t, { A: () => M, h: () => _ });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(269115),
     h = n(395899),
     m = n(834730),
-    p = n(866323),
-    f = n(717421),
+    f = n(866323),
+    p = n(717421),
     g = n(775602),
     x = n(776231),
     E = n(750506),
@@ -34,11 +34,11 @@ function j(e, t) {
         "data-format-type": t.format_type,
     });
 }
-function k(e) {
+function _(e) {
     let t = "description" in e && null != e.description ? `${e.name}, ${e.description}` : e.name;
     return b.intl.formatToPlainString(b.t.rk6pOw, { stickerName: t });
 }
-function _(e) {
+function k(e) {
     let { children: t, hasError: n, isLoading: i, maskAsset: r, size: a, withLoadingIndicator: o = !0 } = e,
         u = a >= 33;
     return (0, l.jsxs)("div", {
@@ -81,8 +81,8 @@ function R(e) {
             className: d,
             maskAsset: h,
             positionRef: m,
-            withLoadingIndicator: p,
-            onError: f,
+            withLoadingIndicator: f,
+            onError: p,
         } = e,
         g = i.useRef(null),
         E = i.useRef(null),
@@ -111,7 +111,7 @@ function R(e) {
                             t || y(!1);
                         },
                         onError: () => {
-                            t || (y(!1), N(!0), f?.());
+                            t || (y(!1), N(!0), p?.());
                         },
                     })),
                     v.current && E.current.setState(!0));
@@ -120,7 +120,7 @@ function R(e) {
                 (E.current?.drop(), (E.current = null), (t = !0));
             }
         );
-    }, [T, r, s.id, u, f]),
+    }, [T, r, s.id, u, p]),
     i.useEffect(() => {
         let e;
         (t || (e = 0), E.current?.setState(t && c, e));
@@ -130,14 +130,14 @@ function R(e) {
         : (0, l.jsx)("div", {
               role: "img",
               className: d,
-              "aria-label": C ? b.intl.string(b.t.yEvsK9) : k(s),
+              "aria-label": C ? b.intl.string(b.t.yEvsK9) : _(s),
               ref: m,
-              children: (0, l.jsx)(_, {
+              children: (0, l.jsx)(k, {
                   hasError: C,
                   isLoading: S,
                   maskAsset: h,
                   size: r,
-                  withLoadingIndicator: p,
+                  withLoadingIndicator: f,
                   children: j((0, l.jsx)("canvas", { className: I.ex, ref: g }), s),
               }),
           });
@@ -154,12 +154,12 @@ let O = (e) => {
                 withLoadingIndicator: h,
                 fileUri: m,
             } = e,
-            [p, f] = i.useState(!1),
+            [f, p] = i.useState(!1),
             [g, x] = i.useState(!0),
             [E, S] = i.useState(!1),
             y = i.useRef(null),
             C = i.useRef(null),
-            b = m ?? (0, A.zg)(n, { isPreview: !t || !p || !r, size: a }),
+            b = m ?? (0, A.zg)(n, { isPreview: !t || !f || !r, size: a }),
             v = i.useCallback(() => {
                 x(!1);
             }, []),
@@ -169,7 +169,7 @@ let O = (e) => {
         return (i.useEffect(() => {
             if (null != y.current) {
                 let { isVisible: e } = y.current;
-                f(e);
+                p(e);
             }
         }, []),
         i.useLayoutEffect(() => {
@@ -180,12 +180,12 @@ let O = (e) => {
             : (0, l.jsx)(d.L, {
                   innerRef: c,
                   ref: y,
-                  onChange: f,
+                  onChange: p,
                   threshold: 0.7,
                   children: (0, l.jsx)("div", {
                       className: s()(o, I.__invalid_pngImageWrapper),
                       ref: c,
-                      children: (0, l.jsx)(_, {
+                      children: (0, l.jsx)(k, {
                           hasError: E,
                           isLoading: g,
                           maskAsset: u,
@@ -194,7 +194,7 @@ let O = (e) => {
                           children: j(
                               (0, l.jsx)("img", {
                                   className: I.r3,
-                                  alt: k(n),
+                                  alt: _(n),
                                   src: b,
                                   draggable: !1,
                                   onError: T,
@@ -221,9 +221,9 @@ let O = (e) => {
             h = (0, c.bG)([g.Ay], () => g.Ay.useReducedMotion),
             x = i.useRef(null),
             S = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
-            y = (0, p.p)(s, { ref: x, from: S, enter: { transform: "scale(1)", opacity: 1 }, leave: S, config: v }),
+            y = (0, f.p)(s, { ref: x, from: S, enter: { transform: "scale(1)", opacity: 1 }, leave: S, config: v }),
             C = i.useRef(null),
-            A = (0, f.z)(
+            A = (0, p.z)(
                 { ref: C, transform: s || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!s, config: T },
                 "animate-always",
             );
@@ -285,8 +285,8 @@ function w(e) {
             className: d,
             withLoadingIndicator: h,
             assetData: m,
-            fileUri: p,
-            onError: f,
+            fileUri: f,
+            onError: p,
         } = e,
         g = (0, S.j)(),
         x = (0, y.Th)(t) && !n,
@@ -307,8 +307,8 @@ function w(e) {
                     positionRef: E,
                     withLoadingIndicator: h,
                     assetData: m,
-                    fileUri: p,
-                    onError: f,
+                    fileUri: f,
+                    onError: p,
                 }),
                 r &&
                     (0, l.jsx)(L, {

@@ -1,38 +1,38 @@
 let n;
-l.d(t, { F: () => d, Q4: () => f, W9: () => m });
-var s = l(915639);
-let r = new Map(),
-    a = new Map(),
-    c = new Set(),
-    o = Promise.resolve();
+l.d(t, { F: () => d, Q4: () => g, W9: () => m });
+var r = l(915639);
+let s = new Map(),
+    o = new Map(),
+    a = new Set(),
+    c = Promise.resolve();
 function i(e) {
-    let t = r.get(e);
+    let t = s.get(e);
     if (null != t) return t;
-    if (!(e in s.pb)) {
+    if (!(e in r.pb)) {
         let t = Promise.resolve(null);
-        return (r.set(e, t), t);
+        return (s.set(e, t), t);
     }
     return (
-        (o = (t = o
+        (c = (t = c
             .then(async () => {
                 let t = await (null == n &&
                     (n = Promise.resolve()
-                        .then(() => (0, s.A)())
+                        .then(() => (0, r.A)())
                         .catch(() => null)
                         .then((e) => (null == e && (n = void 0), e))),
                 n);
-                return null == t ? null : t.loadGrammar(s.pb[e]);
+                return null == t ? null : t.loadGrammar(r.pb[e]);
             })
             .then((t) => {
-                if (null == t) return (r.delete(e), a.delete(e), null);
-                for (let l of (a.set(e, t), c)) l(e);
+                if (null == t) return (s.delete(e), o.delete(e), null);
+                for (let l of (o.set(e, t), a)) l(e);
                 return t;
             })
-            .catch(() => (r.delete(e), a.delete(e), null))).then(
+            .catch(() => (s.delete(e), o.delete(e), null))).then(
             () => {},
             () => {},
         )),
-        r.set(e, t),
+        s.set(e, t),
         t
     );
 }
@@ -64,9 +64,9 @@ function m(e) {
     return (null == t && ((t = p(e)), u.set(e, t)), t);
 }
 function d(e) {
-    let t = a.has(e) ? (a.get(e) ?? null) : (i(e), null);
+    let t = o.has(e) ? (o.get(e) ?? null) : (i(e), null);
     return null != t ? h(t) : null;
 }
-function f(e) {
-    return (c.add(e), () => c.delete(e));
+function g(e) {
+    return (a.add(e), () => a.delete(e));
 }

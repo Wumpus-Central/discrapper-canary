@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => L });
 var i = n(477900),
     l = n(582128),
     a = n(562708),
@@ -15,9 +15,9 @@ var i = n(477900),
     g = n(557722),
     A = n(363195),
     v = n(870570),
-    E = n(446868),
-    x = n(503698),
-    C = n.n(x),
+    x = n(446868),
+    E = n(503698),
+    C = n.n(E),
     _ = n(607399),
     T = n(821609),
     I = n(331322),
@@ -37,7 +37,7 @@ class w extends l.PureComponent {
             children: e.map((e) =>
                 e === N.Fz7.CAPTCHA
                     ? (0, i.jsx)(y.A, { onVerify: l, theme: n }, t)
-                    : (0, i.jsx)(T.$, { onClick: () => this.handleClick(e), text: E.A.getButtonTitle(e) }, e),
+                    : (0, i.jsx)(T.$, { onClick: () => this.handleClick(e), text: x.A.getButtonTitle(e) }, e),
             ),
         });
     }
@@ -133,12 +133,12 @@ class w extends l.PureComponent {
     };
 }
 var k = n(87404),
-    L = n(53516);
-function P() {
+    P = n(53516);
+function L() {
     let { action: e, theme: t } = (0, r.cf)([v.A, A.A], () => ({ action: v.A.getAction(), theme: A.A.theme })),
-        x = E.A.getVerificationTypes(e),
+        E = x.A.getVerificationTypes(e),
         [C, _] = l.useState(0),
-        T = (0, m.Ay)(x);
+        T = (0, m.Ay)(E);
     function I() {
         ((0, u.Cw)(),
             (0, o.openModalLazy)(
@@ -156,10 +156,10 @@ function P() {
             {
                 type: a.ImpressionTypes.MODAL,
                 name: a.ImpressionNames.USER_ACTION_REQUIRED,
-                properties: { verification_type: x[0], verification_types: x },
+                properties: { verification_type: E[0], verification_types: E },
             },
             {},
-            [x.toString()],
+            [E.toString()],
         ),
         l.useEffect(
             () => (
@@ -172,7 +172,7 @@ function P() {
         ),
         l.useEffect(() => {
             T?.[0] === N.Fz7.PHONE &&
-                x?.[0] === N.Fz7.EMAIL &&
+                E?.[0] === N.Fz7.EMAIL &&
                 (0, o.openModalLazy)(
                     async () => {
                         let { Alert: e } = await Promise.all([n.e("844331"), n.e("21553")]).then(n.bind(n, 381512));
@@ -186,9 +186,9 @@ function P() {
                     },
                     { modalKey: k.Pr, Layer: p.Ay, onCloseCallback: I },
                 );
-        }, [x, T]),
+        }, [E, T]),
         (0, i.jsx)(w, {
-            types: x,
+            types: E,
             captchaKey: C,
             onCaptchaVerify: function (e) {
                 s.Bo.post({
@@ -218,7 +218,7 @@ function P() {
                               return (t) =>
                                   (0, i.jsx)(e, { layerContext: p.OH, reason: g.d.USER_ACTION_REQUIRED, ...t });
                           },
-                          { modalKey: L.V, Layer: p.Ay },
+                          { modalKey: P.V, Layer: p.Ay },
                       );
             },
             onLogout: function () {

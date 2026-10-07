@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(39623),
     h = n(22231),
     m = n(241326),
-    p = n(834730),
-    f = n(608299),
+    f = n(834730),
+    p = n(608299),
     g = n(478531),
     x = n(607470),
     E = n(274652),
@@ -25,7 +25,7 @@ var l = n(477900),
     v = n(704796),
     T = n(429955);
 let j = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
-function k(e) {
+function _(e) {
     let { alt: t, spoiler: n, renderContent: r, size: a } = e,
         [o, u] = i.useState(!1);
     return (0, l.jsx)(y.Bs.Provider, {
@@ -61,11 +61,11 @@ function k(e) {
         }),
     });
 }
-function _(e) {
+function k(e) {
     let { file: t, alt: n, spoiler: r, size: a = I.L.MEDIUM, onMouseEnter: u } = e,
         [c, d] = i.useState(),
         [h, m] = i.useState({ width: 0, height: 0 }),
-        p = a === I.L.SMALL;
+        f = a === I.L.SMALL;
     i.useEffect(() => {
         if (null == t || !1 === j.includes(t.type)) return;
         let e = URL.createObjectURL(t);
@@ -82,7 +82,7 @@ function _(e) {
             }
         );
     }, [t]);
-    let f = i.useCallback(
+    let p = i.useCallback(
             function (e) {
                 let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
                 return null == c
@@ -91,7 +91,7 @@ function _(e) {
                           src: c,
                           className: s()(T.media, {
                               [T.spoiler]: e,
-                              [T.imageSmall]: p,
+                              [T.imageSmall]: f,
                               [T.sizeXSmall]: a === I.L.XSMALL,
                               [T.sizeXXSmall]: a === I.L.XXSMALL,
                           }),
@@ -100,7 +100,7 @@ function _(e) {
                           style: t ? h : {},
                       });
             },
-            [c, p, a, n, h],
+            [c, f, a, n, h],
         ),
         g = i.useCallback(() => {
             null != c &&
@@ -117,13 +117,13 @@ function _(e) {
                 : N.intl.formatToPlainString(N.t.lXoOEZ, { filename: x });
     return (0, l.jsx)("div", {
         onMouseEnter: u,
-        className: s()(T.mediaContainer, { [T.imageSmall]: p }),
+        className: s()(T.mediaContainer, { [T.imageSmall]: f }),
         children: (0, l.jsx)(o.D, {
             onClick: g,
             className: T.clickableMedia,
             "aria-label": E,
             tabIndex: -1,
-            children: (0, l.jsx)(k, { size: a, alt: n, spoiler: r, renderContent: f }),
+            children: (0, l.jsx)(_, { size: a, alt: n, spoiler: r, renderContent: p }),
         }),
     });
 }
@@ -139,7 +139,7 @@ function R(e) {
             guildId: d,
         } = e,
         [h, m] = i.useState(),
-        p = i.useRef(null);
+        f = i.useRef(null);
     return (
         i.useEffect(() => {
             if (null == t) return;
@@ -155,13 +155,13 @@ function R(e) {
             onMouseEnter: o,
             className: T.mediaContainer,
             children: [
-                (0, l.jsx)(k, {
+                (0, l.jsx)(_, {
                     size: a,
                     alt: n,
                     spoiler: r,
                     renderContent: (e) =>
                         (0, l.jsx)(x.A, {
-                            ref: p,
+                            ref: f,
                             src: h,
                             className: s()(T.media, {
                                 [T.spoiler]: e,
@@ -194,7 +194,7 @@ function O(e) {
     let { upload: t, size: n = I.L.MEDIUM, onMouseEnter: r, clip: a, guildId: o } = e,
         [u, c] = i.useState(!1);
     return t.isImage && t.item.platform === E.x.WEB
-        ? (0, l.jsx)(_, { file: t.item.file, alt: t.description, spoiler: t.spoiler, size: n, onMouseEnter: r })
+        ? (0, l.jsx)(k, { file: t.item.file, alt: t.description, spoiler: t.spoiler, size: n, onMouseEnter: r })
         : !u && t.isVideo && t.item.platform === E.x.WEB
           ? (0, l.jsx)(R, {
                 file: t.item.file,
@@ -234,10 +234,10 @@ function L(e) {
             clip: A,
         } = e,
         j = null != A,
-        k = E === I.L.SMALL,
-        _ = (0, a.bG)([C.A], () => C.A.getChannel(t)?.guild_id);
+        _ = E === I.L.SMALL,
+        k = (0, a.bG)([C.A], () => C.A.getChannel(t)?.guild_id);
     function R() {
-        f.A.remove(t, o.id, r);
+        p.A.remove(t, o.id, r);
     }
     function L(e) {
         (e.stopPropagation(), j)
@@ -301,7 +301,7 @@ function L(e) {
                           upload: o,
                           onSubmit: (e) => {
                               let { name: n, description: l, spoiler: i } = e;
-                              f.A.update(t, o.id, r, { filename: n, description: l, spoiler: i });
+                              p.A.update(t, o.id, r, { filename: n, description: l, spoiler: i });
                           },
                       });
               });
@@ -311,45 +311,45 @@ function L(e) {
             children: [
                 S
                     ? (0, l.jsx)(b.A, {
-                          className: s()({ [T.action]: k }),
+                          className: s()({ [T.action]: _ }),
                           tooltip: j ? N.intl.string(N.t.MYgdY2) : N.intl.string(N.t.cuurzA),
                           onClick: () => {
-                              f.A.update(t, o.id, r, { spoiler: !o.spoiler });
+                              p.A.update(t, o.id, r, { spoiler: !o.spoiler });
                           },
                           children: o.spoiler
                               ? (0, l.jsx)(c.EyeSlashIcon, {
                                     size: "md",
                                     color: "currentColor",
-                                    className: s()({ [T.actionBarIcon]: k }),
+                                    className: s()({ [T.actionBarIcon]: _ }),
                                 })
                               : (0, l.jsx)(d.EyeIcon, {
                                     size: "xs",
                                     color: "currentColor",
-                                    className: s()({ [T.actionBarIcon]: k }),
+                                    className: s()({ [T.actionBarIcon]: _ }),
                                 }),
                       })
                     : null,
                 S
                     ? (0, l.jsx)(b.A, {
-                          className: s()({ [T.action]: k }),
+                          className: s()({ [T.action]: _ }),
                           tooltip: j ? N.intl.string(v.default.V8YlF7) : N.intl.string(N.t.Y8ujqr),
                           onClick: L,
                           children: (0, l.jsx)(h.PencilIcon, {
                               size: "xs",
                               color: "currentColor",
-                              className: s()({ [T.actionBarIcon]: k }),
+                              className: s()({ [T.actionBarIcon]: _ }),
                           }),
                       })
                     : null,
                 (0, l.jsx)(b.A, {
-                    className: s()({ [T.action]: k }),
+                    className: s()({ [T.action]: _ }),
                     tooltip: j ? N.intl.string(N.t.MskAXa) : N.intl.string(N.t.vN7REz),
                     onClick: R,
                     dangerous: !0,
                     children: (0, l.jsx)(m.TrashIcon, {
                         size: "md",
                         color: "currentColor",
-                        className: s()({ [T.actionBarIcon]: k }),
+                        className: s()({ [T.actionBarIcon]: _ }),
                     }),
                 }),
             ],
@@ -360,14 +360,14 @@ function L(e) {
         handleEditModal: L,
         keyboardModeEnabled: g,
         size: E,
-        className: s()({ [T.attachmentItemSmall]: k }),
+        className: s()({ [T.attachmentItemSmall]: _ }),
         children: [
-            (0, l.jsx)(O, { upload: o, size: E, clip: A, guildId: _ }),
+            (0, l.jsx)(O, { upload: o, size: E, clip: A, guildId: k }),
             !y &&
                 (0, l.jsx)("div", {
                     className: T.filenameContainer,
                     "aria-hidden": !0,
-                    children: (0, l.jsx)(p.E, {
+                    children: (0, l.jsx)(f.E, {
                         className: T.filename,
                         variant: "text-sm/normal",
                         children: null != x ? x : j ? A.name : o.filename,

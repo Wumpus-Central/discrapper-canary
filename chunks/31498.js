@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => f, Ur: () => p, mk: () => m });
+n.d(t, { Ay: () => p, Ur: () => f, mk: () => m });
 var l = n(143236),
     i = n(651188),
     r = n(721768),
@@ -10,7 +10,7 @@ var l = n(143236),
     d = n(38405),
     h = n(597184);
 let m = ["gameMentionInput", "timestampMentionInput"];
-function p() {
+function f() {
     return {
         query: null,
         selectedIndex: null,
@@ -20,14 +20,14 @@ function p() {
         isInitialAfterError: !1,
     };
 }
-class f extends l.EventEmitter {
+class p extends l.EventEmitter {
     props;
     state;
     nextUpdateQueryChanged = !1;
     nextUpdateContextChanged = !1;
     updateTimeout;
     constructor(e) {
-        (super(), (this.props = e), (this.state = p()));
+        (super(), (this.props = e), (this.state = f()));
     }
     updateProps(e) {
         let t = this.props.focused !== e.focused,
@@ -136,13 +136,13 @@ class f extends l.EventEmitter {
             } = await Promise.all([n.e("435751"), n.e("423798"), n.e("753149")]).then(n.bind(n, 778572));
         if (null == this.props.editorRef.current) return;
         let d = u(this.props),
-            p = this.props.editorRef.current.getSlateEditor();
-        null != p &&
+            f = this.props.editorRef.current.getSlateEditor();
+        null != f &&
             (t =
-                null != (e = a.VW.getSelectedParentOfType(p, m))
-                    ? a.VW.getTextFromRange(p, a.VW.range(p, e[1]))
+                null != (e = a.VW.getSelectedParentOfType(f, m))
+                    ? a.VW.getTextFromRange(f, a.VW.range(f, e[1]))
                     : null);
-        let f = o({
+        let p = o({
                 channel: this.props.channel,
                 guild: this.props.guild,
                 options: d,
@@ -154,9 +154,9 @@ class f extends l.EventEmitter {
                 parentAutocompleteInputValue: t,
             }),
             g = d.commands !== h.Ze.DISABLED ? r(this.props.activeCommandOption, this.props.currentWord) : null;
-        if (null == f && null != g) f = g;
-        else if (null == f || (null != g && f.type !== g.type)) return void this.clearQuery();
-        let { type: x, typeInfo: E, query: S } = f,
+        if (null == p && null != g) p = g;
+        else if (null == p || (null != g && p.type !== g.type)) return void this.clearQuery();
+        let { type: x, typeInfo: E, query: S } = p,
             y = i || (l && (this.state.query?.queryText !== S || this.state.query?.typeInfo !== E)),
             C = c.ML.getSetting();
         d.allowStickers = d.allowStickers ? C : d.allowStickers;

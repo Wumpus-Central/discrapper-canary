@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(602853),
     h = n(661531),
     m = n(939249),
-    p = n(935286),
-    f = n(628284),
+    f = n(935286),
+    p = n(628284),
     g = n(775602),
     x = n(47167),
     E = n(713654),
@@ -25,8 +25,8 @@ var l = n(477900),
     v = n(473529),
     T = n(111487),
     j = n(652215),
-    k = n(660183),
-    _ = n(160639);
+    _ = n(660183),
+    k = n(160639);
 let R = { compact: 58, cozy: 74, default: 64 };
 function O(e) {
     let { action: t } = e,
@@ -36,12 +36,12 @@ function O(e) {
         ? (0, l.jsx)(u.E, {
               variant: "text-xxs/normal",
               color: "text-default",
-              children: k.intl.format(k.t.MkzlDL, { channelName: k.intl.string(k.t.J90oLW) }),
+              children: _.intl.format(_.t.MkzlDL, { channelName: _.intl.string(_.t.J90oLW) }),
           })
         : (0, l.jsx)(u.E, {
               variant: "text-xxs/normal",
               color: "text-default",
-              children: k.intl.format(k.t.MkzlDL, { channelName: i }),
+              children: _.intl.format(_.t.MkzlDL, { channelName: i }),
           });
 }
 function L(e) {
@@ -53,7 +53,7 @@ function L(e) {
         emojiId: n,
         emojiName: i,
         size: T.g.MEDIUM,
-        defaultComponent: (0, l.jsx)(s, { className: _.p }),
+        defaultComponent: (0, l.jsx)(s, { className: k.p }),
     });
 }
 function w(e) {
@@ -83,13 +83,13 @@ function w(e) {
     return null == c || (C && !T)
         ? null
         : (0, l.jsx)("div", {
-              className: s()(_.kL, r),
+              className: s()(k.kL, r),
               children:
                   T && null != E
                       ? (0, l.jsx)(a.A.div, {
                             style: { marginBottom: M.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
                             children: (0, l.jsxs)(m.D, {
-                                className: s()(_.vK, _.vk, { [_.pJ]: n.isForumChannel() }),
+                                className: s()(k.vK, k.vk, { [k.pJ]: n.isForumChannel() }),
                                 onClick: P,
                                 children: [
                                     (0, l.jsx)(L, {
@@ -98,25 +98,25 @@ function w(e) {
                                         emojiName: E?.emoji?.name,
                                     }),
                                     (0, l.jsxs)("div", {
-                                        className: _.Qq,
+                                        className: k.Qq,
                                         children: [
                                             (0, l.jsx)(u.E, {
                                                 variant: "text-md/semibold",
                                                 color: "text-strong",
-                                                children: k.intl.format(k.t["/beONw"], { step: E.title }),
+                                                children: _.intl.format(_.t["/beONw"], { step: E.title }),
                                             }),
                                             (0, l.jsx)(O, { action: E }),
                                         ],
                                     }),
                                     (0, l.jsx)("div", {
-                                        className: _.kJ,
-                                        children: (0, l.jsx)(p.E, { size: "xs", color: A.hex(), className: _.fz }),
+                                        className: k.kJ,
+                                        children: (0, l.jsx)(f.E, { size: "xs", color: A.hex(), className: k.fz }),
                                     }),
                                 ],
                             }),
                         })
                       : (0, l.jsxs)(a.A.div, {
-                            className: s()(_.vK, { [_.pJ]: n.isForumChannel() }),
+                            className: s()(k.vK, { [k.pJ]: n.isForumChannel() }),
                             style: { marginBottom: w.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
                             children: [
                                 (0, l.jsx)(L, {
@@ -125,7 +125,7 @@ function w(e) {
                                     emojiName: c?.emoji?.name,
                                 }),
                                 (0, l.jsxs)("div", {
-                                    className: _.Qq,
+                                    className: k.Qq,
                                     children: [
                                         (0, l.jsx)(u.E, {
                                             variant: "text-md/semibold",
@@ -135,15 +135,15 @@ function w(e) {
                                         (0, l.jsx)(u.E, {
                                             variant: "text-xxs/normal",
                                             color: "text-muted",
-                                            children: k.intl.string(k.t["ElGg8+"]),
+                                            children: _.intl.string(_.t["ElGg8+"]),
                                         }),
                                     ],
                                 }),
                                 x
-                                    ? (0, l.jsx)(f.y, {
+                                    ? (0, l.jsx)(p.y, {
                                           size: "custom",
                                           color: "currentColor",
-                                          className: _.so,
+                                          className: k.so,
                                           secondaryColor: A.hex(),
                                           width: 20,
                                           height: 20,

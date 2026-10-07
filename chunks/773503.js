@@ -1,4 +1,4 @@
-n.d(t, { A: () => x });
+n.d(t, { A: () => E });
 var i = n(477900),
     l = n(582128),
     a = n(435558),
@@ -33,7 +33,7 @@ function v(e) {
         a = (0, p.tx)(n, l, t);
     return null == t ? null : (0, i.jsx)(A, { avatarURL: t.getAvatarURL(n, 24, !1), avatarLabel: a, text: a });
 }
-function E(e) {
+function x(e) {
     let { soundboard: t, user: n, guildId: l } = e;
     if (null == n) return null;
     let a =
@@ -48,7 +48,7 @@ function E(e) {
             : (0, i.jsx)(u.J, { size: "refresh_sm", color: m.A.colors.ICON_DEFAULT });
     return (0, i.jsx)(A, { avatarURL: n.getAvatarURL(l, 24, !1), avatarLabel: n.username, text: t.name, leading: a });
 }
-let x = l.memo(function (e) {
+let E = l.memo(function (e) {
     let { speakingUserIds: t, activeSoundboards: n, userIds: l, guildId: a, channelId: o } = e,
         d = (0, s.cf)([f.default], () => r().pick(f.default.getUsers(), l));
     return (0, i.jsxs)("div", {
@@ -61,7 +61,7 @@ let x = l.memo(function (e) {
             n.map((e) => {
                 let t = d[e.userId];
                 return (0, i.jsx)(
-                    E,
+                    x,
                     { soundboard: e, user: t, guildId: a, channelId: o },
                     `${e.soundboardId}:${e.userId}`,
                 );

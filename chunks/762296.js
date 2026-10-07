@@ -1,1 +1,1 @@
-e.exports = s.p + "53af3752c754c087.wasm";
+e.exports = a.p + "53af3752c754c087.wasm";

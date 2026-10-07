@@ -1,9 +1,9 @@
 n.d(t, {
-    KJ: () => k,
+    KJ: () => B,
     N_: () => Y,
     vw: () => Z,
     lg: () => F,
-    nG: () => B,
+    nG: () => k,
     c3: () => H,
     OS: () => j,
     Y9: () => K,
@@ -41,9 +41,9 @@ let L = function (e) {
 };
 var m = n(769015),
     R = n(106191),
-    U = n(548118),
-    v = n(376943),
-    b = n(636585),
+    b = n(548118),
+    U = n(376943),
+    v = n(636585),
     D = n(71393),
     G = n(994500),
     y = n(287809),
@@ -100,7 +100,7 @@ class j extends l.Component {
         let { guild: e } = this.props;
         return (0, i.jsx)("div", {
             className: V._C,
-            children: (0, i.jsx)(U.Ay, { tabIndex: -1, guild: e, size: U.Ay.Sizes.MINI, className: V.$f }),
+            children: (0, i.jsx)(b.Ay, { tabIndex: -1, guild: e, size: b.Ay.Sizes.MINI, className: V.$f }),
         });
     }
     renderName() {
@@ -175,7 +175,7 @@ class H extends l.Component {
         let { voiceStates: e, channel: t } = this.props;
         return null == e
             ? null
-            : (0, i.jsx)(b.A, {
+            : (0, i.jsx)(v.A, {
                   className: V.x7,
                   guildId: t.guild_id,
                   users: e.map((e) => {
@@ -215,7 +215,7 @@ class H extends l.Component {
         });
     }
 }
-class B extends l.Component {
+class k extends l.Component {
     renderIcon() {
         let { channel: e, status: t } = this.props;
         return (0, i.jsx)("div", {
@@ -263,7 +263,7 @@ class B extends l.Component {
         });
     }
 }
-class k extends l.Component {
+class B extends l.Component {
     renderIcon() {
         let { user: e, status: t, isMobile: n } = this.props;
         return (0, i.jsx)("div", {
@@ -403,10 +403,10 @@ class Y extends l.Component {
         if (null != n.inviteCode)
             ((e = x.intl.string(x.t.w6QG3F)), (t = (0, i.jsx)(o.f, { size: "xs", color: "currentColor" })));
         else {
-            let l = (0, v.vu)(n.path);
+            let l = (0, U.vu)(n.path);
             null == l || void 0 === l.messageId
                 ? ((e = x.intl.string(x.t.qbSCqj)), (t = (0, i.jsx)(d.LinkIcon, { size: "xs", color: "currentColor" })))
-                : (0, v.r9)(l)
+                : (0, U.r9)(l)
                   ? ((e = x.intl.string(x.t["6Fd/j1"])), (t = (0, i.jsx)(c.t, { size: "xs", color: "currentColor" })))
                   : ((e = x.intl.string(x.t.jQRwp4)),
                     (t = (0, i.jsx)(u.LockIcon, { size: "xs", color: "currentColor" })));

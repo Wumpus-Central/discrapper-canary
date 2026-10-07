@@ -16,10 +16,10 @@ var i,
     A = n(562708);
 n(181658);
 var v = n(499785),
-    E = n(652215);
-async function x() {
+    x = n(652215);
+async function E() {
     let e = await v.A.get({
-        url: E.Rsh.SAFETY_FLOWS_TASK,
+        url: x.Rsh.SAFETY_FLOWS_TASK,
         trackedActionData: { event: A.NetworkActionNames.USER_VERIFY },
         rejectWithError: !0,
     });
@@ -28,7 +28,7 @@ async function x() {
 async function C(e) {
     return (
         await v.A.post({
-            url: E.Rsh.SAFETY_FLOWS_TASK,
+            url: x.Rsh.SAFETY_FLOWS_TASK,
             body: e,
             trackedActionData: { event: A.NetworkActionNames.USER_VERIFY },
             rejectWithError: !0,
@@ -70,8 +70,8 @@ var M = (((l = {}).Empty = "empty"), (l.VerificationCode = "verification_code"),
     O = n(627575),
     w = n(17928),
     k = n(155718),
-    L = n(379257),
-    P = n(287809),
+    P = n(379257),
+    L = n(287809),
     D = n(430993),
     U = n(503698),
     F = n.n(U),
@@ -134,7 +134,7 @@ function es() {
         className: er.Q,
         children: S.intl.format(I.default.ifObbX, {
             handleAgeVerifyHook: () =>
-                L.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.PARENTAL_CONSENT_LOCKOUT }),
+                P.A.showAgeVerificationGetStartedModal({ entryPoint: f.q1.PARENTAL_CONSENT_LOCKOUT }),
         }),
     });
 }
@@ -157,7 +157,7 @@ let eg = () => ({
 });
 var eA = n(273665),
     ev = n(838131);
-function eE(e) {
+function ex(e) {
     var t;
     let {
             request: n,
@@ -168,12 +168,12 @@ function eE(e) {
             onAccept: c,
             onDecline: m,
         } = e,
-        h = (0, w.bG)([P.default], () => P.default.getUser(n.parent_id)),
+        h = (0, w.bG)([L.default], () => L.default.getUser(n.parent_id)),
         f = h?.globalName ?? h?.username ?? n.parent_username,
         p = h?.username ?? n.parent_username,
         g = p !== f,
         A = h?.avatar ?? n.parent_avatar,
-        { isConnected: v, isResolved: E } = (function (e) {
+        { isConnected: v, isResolved: x } = (function (e) {
             let t = (0, w.bG)([ee.A], () => ee.A.getLinkedUsers()[e]?.link_status),
                 [n, i] = r.useState(() =>
                     t === eo.Ef.ACTIVE ? "connected" : null == t || t === eo.Ef.PENDING ? null : "declined",
@@ -192,7 +192,7 @@ function eE(e) {
                 o = "declined" === n;
             return { isConnected: s, isDeclined: o, isResolved: s || o };
         })(n.parent_id),
-        x = ((t = n.created_at), (0, ep.mV)(Date.parse(t), eg)),
+        E = ((t = n.created_at), (0, ep.mV)(Date.parse(t), eg)),
         C = ef.Ay.getUserAvatarURL({ id: n.parent_id, avatar: A }, !1, (0, ed.FT)(ed._3.SIZE_40));
     return (0, a.jsxs)("div", {
         className: ev.nM,
@@ -217,10 +217,10 @@ function eE(e) {
                             lineClamp: 1,
                             children: p,
                         }),
-                    (0, a.jsx)(u.E, { variant: "text-xs/normal", color: "text-muted", children: x }),
+                    (0, a.jsx)(u.E, { variant: "text-xs/normal", color: "text-muted", children: E }),
                 ],
             }),
-            E
+            x
                 ? (0, a.jsx)(u.E, {
                       variant: "text-sm/normal",
                       color: "text-muted",
@@ -255,7 +255,7 @@ function eE(e) {
         ],
     });
 }
-function ex(e) {
+function eE(e) {
     let { pendingRequests: t, linkedUsersProcessed: n } = e,
         {
             seenRequests: i,
@@ -302,22 +302,22 @@ function ex(e) {
                     },
                     [m, p, d],
                 ),
-                [v, E] = r.useState(t),
-                [x, C] = r.useState(t),
+                [v, x] = r.useState(t),
+                [E, C] = r.useState(t),
                 [_, T] = r.useState(n);
             return (
                 n && !_
                     ? (T(!0),
                       C(t),
-                      E((e) => {
+                      x((e) => {
                           let n = new Map();
                           for (let t of e) h.has(t.parent_id) && n.set(t.parent_id, t);
                           for (let e of t) n.set(e.parent_id, e);
                           return Array.from(n.values());
                       }))
-                    : t !== x &&
+                    : t !== E &&
                       (C(t),
-                      E((e) => {
+                      x((e) => {
                           let n = new Map(e.map((e) => [e.parent_id, e]));
                           for (let e of t) n.set(e.parent_id, e);
                           return Array.from(n.values());
@@ -346,7 +346,7 @@ function ex(e) {
               className: ev.Nr,
               children: i.map((e) =>
                   (0, a.jsx)(
-                      eE,
+                      ex,
                       {
                           request: e,
                           hasMaxConnections: l,
@@ -400,7 +400,7 @@ let eS = {
         },
         age_verification: function (e) {
             let { onSubmit: t } = e,
-                n = (0, w.bG)([P.default], () => P.default.getCurrentUser());
+                n = (0, w.bG)([L.default], () => L.default.getCurrentUser());
             return (0, a.jsx)(z, {
                 title: "Lorem ipsum dolor",
                 actions: [
@@ -409,7 +409,7 @@ let eS = {
                         variant: "primary",
                         onClick: function () {
                             n?.ageVerificationStatus === k.Tk.UNVERIFIED
-                                ? L.A.showAgeVerificationGetStartedModal({
+                                ? P.A.showAgeVerificationGetStartedModal({
                                       entryPoint: f.q1.SAFETY_FLOWS,
                                       onClose: () => t({ type: M.Empty }),
                                   })
@@ -452,19 +452,19 @@ let eS = {
                 }, [l]),
                 A = (0, el.VT)(),
                 v = (0, el.Du)(),
-                E = (0, w.bG)([ee.A], () => ee.A.getLinkedUsers()),
-                x = (0, w.bG)([ee.A], () => ee.A.getAreLinkedUsersProcessed()),
+                x = (0, w.bG)([ee.A], () => ee.A.getLinkedUsers()),
+                E = (0, w.bG)([ee.A], () => ee.A.getAreLinkedUsersProcessed()),
                 C =
                     ((t = g.pending_requests),
                     (n = (0, w.bG)([ee.A], () => ee.A.getLinkedUsers())),
-                    (i = (0, w.bG)([P.default], () => P.default.getCurrentUser()?.id)),
+                    (i = (0, w.bG)([L.default], () => L.default.getCurrentUser()?.id)),
                     r.useMemo(() => {
-                        if (!x) return t;
+                        if (!E) return t;
                         let e = new Map(t.map((e) => [e.parent_id, e])),
                             l = [];
                         for (let t of Object.values(n)) {
                             if (null == t || t.link_status !== eo.Ef.PENDING || t.requestor_id === i) continue;
-                            let n = P.default.getUser(t.user_id),
+                            let n = L.default.getUser(t.user_id),
                                 a = e.get(t.user_id);
                             l.push({
                                 parent_id: t.user_id,
@@ -474,9 +474,9 @@ let eS = {
                             });
                         }
                         return l;
-                    }, [x, n, i, t])),
-                _ = x ? Object.values(E).some((e) => null != e) : g.pending_requests.length > 0,
-                T = x ? A : g.pending_requests.length,
+                    }, [E, n, i, t])),
+                _ = E ? Object.values(x).some((e) => null != e) : g.pending_requests.length > 0,
+                T = E ? A : g.pending_requests.length,
                 b = (0, w.bG)([ee.A], () => ee.A.getLinkCode()),
                 y = (0, w.bG)([ee.A], () => ee.A.getLinkCodeExpiresAt()),
                 j = b ?? g.link_code,
@@ -488,8 +488,8 @@ let eS = {
                         (0, Z.P)((0, q.o)(S.intl.string(I.default["+QRSxc"]), Y.Ck.FAILURE));
                     }
                 }, [o]),
-                [k, L] = r.useState(_);
-            _ && !k && L(!0);
+                [k, P] = r.useState(_);
+            _ && !k && P(!0);
             let [U, F] = r.useState(!1),
                 G = r.useCallback(() => {
                     (F(!1), p());
@@ -529,7 +529,7 @@ let eS = {
                                 }),
                             (0, a.jsx)("div", {
                                 hidden: V,
-                                children: (0, a.jsx)(ex, { pendingRequests: C, linkedUsersProcessed: x }),
+                                children: (0, a.jsx)(eE, { pendingRequests: C, linkedUsersProcessed: E }),
                             }),
                         ],
                     }),
@@ -709,12 +709,12 @@ let ek = function (e) {
     let { transitionState: t, onClose: n } = e,
         [i, l] = r.useState(null),
         [A, v] = r.useState(!0),
-        [E, _] = r.useState(null),
+        [x, _] = r.useState(null),
         [T, R] = r.useState(!1),
         w = r.useCallback(async () => {
             (v(!0), _(null));
             try {
-                let e = await x();
+                let e = await E();
                 if (null == e) return void n();
                 !(0, g.uJ)(e.ui_component?.component.type) && j.has(e.ui_component.component.type)
                     ? l(e)
@@ -751,13 +751,13 @@ let ek = function (e) {
     (0, h.Ay)(() => {
         w();
     });
-    let L = r.useMemo(() => i?.task_type === b.AGE_VERIFICATION, [i]),
-        P = null != i && null === E && N.has(i.task_type);
+    let P = r.useMemo(() => i?.task_type === b.AGE_VERIFICATION, [i]),
+        L = null != i && null === x && N.has(i.task_type);
     return (0, a.jsxs)("div", {
         className: eM.Tp,
         children: [
             (0, a.jsx)("img", { className: eM.xX, src: eO, alt: "" }),
-            L
+            P
                 ? (0, a.jsx)(p.default, {
                       transitionState: t ?? s.ip.ENTERED,
                       entryPoint: f.q1.SAFETY_FLOWS,
@@ -767,7 +767,7 @@ let ek = function (e) {
                       },
                       dismissable: !1,
                   })
-                : P && null != i
+                : L && null != i
                   ? (0, a.jsx)(ew, { task: i, handleSubmit: k, disabled: T, transitionState: t ?? s.ip.ENTERED })
                   : (0, a.jsx)("div", {
                         className: eM.nA,
@@ -780,7 +780,7 @@ let ek = function (e) {
                                       justify: "start",
                                       className: eM.rf,
                                       children: [
-                                          null !== E &&
+                                          null !== x &&
                                               (0, a.jsxs)(d.B, {
                                                   direction: "vertical",
                                                   justify: "space-between",
@@ -827,7 +827,7 @@ let ek = function (e) {
                                                       }),
                                                   ],
                                               }),
-                                          null === E &&
+                                          null === x &&
                                               null != i &&
                                               (0, a.jsx)(ew, { task: i, handleSubmit: k, disabled: T }),
                                       ],

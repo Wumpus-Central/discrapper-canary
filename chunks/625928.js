@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(834730),
     h = n(140735),
     m = n(793574),
-    p = n(688810),
-    f = n(135621),
+    f = n(688810),
+    p = n(135621),
     g = n(287809),
     x = n(158045),
     E = n(192308),
@@ -25,19 +25,19 @@ var l = n(477900),
     v = n(652215),
     T = n(660183),
     j = n(845210);
-function k() {
+function _() {
     (0, E.openModalLazy)(async () => {
         let { default: e } = await Promise.all([n.e("235257"), n.e("66920")]).then(n.bind(n, 220763));
         return (t) => (0, l.jsx)(e, { ...t });
     });
 }
-function _(e) {
+function k(e) {
     let { className: t, iconOnly: n } = e,
         r = (0, o.bG)([I.Ay, b.A], () => {
             let e = b.A.getChannel(I.Ay.getChannelId());
             return e?.isPrivate() ? v.liQ.DM_CHANNEL : v.liQ.GUILD_CHANNEL;
         }),
-        { analyticsLocations: a } = (0, p.Ay)(m.A.PREMIUM_UPSELL);
+        { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
     return (
         i.useEffect(() => {
             (N.default.track(v.HAw.PREMIUM_UPSELL_VIEWED, {
@@ -50,7 +50,7 @@ function _(e) {
         n
             ? (0, l.jsx)(S.D, {
                   className: j.e7,
-                  onClick: () => k(),
+                  onClick: () => _(),
                   children: (0, l.jsx)(u.m, {
                       text: T.intl.string(T.t["+eFIjX"]),
                       position: "top",
@@ -64,7 +64,7 @@ function _(e) {
                       (0, l.jsx)(d.E, {
                           className: j.Qq,
                           variant: "text-sm/normal",
-                          children: T.intl.format(T.t.BNAIBU, { onLearnMore: k }),
+                          children: T.intl.format(T.t.BNAIBU, { onLearnMore: _ }),
                       }),
                   ],
               })
@@ -75,14 +75,14 @@ var R = n(263582),
 function L(e) {
     let { type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r, className: E } = e,
         S = (0, o.bG)([g.default], () => x.Ay.canUseIncreasedMessageLength(g.default.getCurrentUser())),
-        y = (0, f.A)(),
+        y = (0, p.A)(),
         C = i ?? y,
         A = r ?? i ?? y / 10,
         b = n.length,
         I = null != t.upsellLongMessages && (b ?? 0) > v.uvi && S,
         N = null != t.upsellLongMessages && !S,
         j = C - b,
-        k = j > A;
+        _ = j > A;
     (0, a.$)({ currentLength: b, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
     let L =
             0 === j
@@ -90,11 +90,11 @@ function L(e) {
                 : j > 0
                   ? T.intl.formatToPlainString(T.t.qH8uFW, { count: j })
                   : T.intl.string(T.t.YSRIqa),
-        { analyticsLocations: w } = (0, p.Ay)(m.A.CHARACTER_COUNT),
+        { analyticsLocations: w } = (0, f.Ay)(m.A.CHARACTER_COUNT),
         { isVisible: M } = (0, R.A)({ type: t, textValue: n, maxCharacterCount: i, showRemainingCharsAfterCount: r });
     if (!M) return null;
     let P = j >= 0;
-    return (0, l.jsx)(p.f5, {
+    return (0, l.jsx)(f.f5, {
         value: w,
         children: (0, l.jsxs)("div", {
             className: s()(E, O.Dq),
@@ -109,7 +109,7 @@ function L(e) {
                                   children: (0, l.jsx)(c.t, { size: "md", color: "currentColor", className: O.y }),
                               })
                             : null,
-                        k
+                        _
                             ? null
                             : (0, l.jsx)(u.m, {
                                   text: L,
@@ -125,8 +125,8 @@ function L(e) {
                     ],
                 }),
                 (0, l.jsx)(h.A, { "aria-live": "polite", children: T.intl.format(T.t.qH8uFW, { count: j }) }),
-                N && !k
-                    ? (0, l.jsx)(_, { className: O.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: j })
+                N && !_
+                    ? (0, l.jsx)(k, { className: O.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: j })
                     : null,
             ],
         }),

@@ -1,4 +1,4 @@
-(n.d(t, { A: () => f, j: () => m }), n(483606));
+(n.d(t, { A: () => p, j: () => m }), n(483606));
 var l = n(877413),
     i = n.n(l),
     r = n(284009),
@@ -18,14 +18,14 @@ function m(e, t) {
         (null == r || e.shiftKey === r)
     );
 }
-function p(e, t) {
+function f(e, t) {
     let n = a.rL.findDocumentOrShadowRoot(e).getSelection();
     if (null == n || 0 === n.rangeCount) return !1;
     n.modify("move", t, "lineboundary");
     let l = d.VW.toSlateRange(e, n, { exactMatch: !1, suppressThrow: !0 });
     return (null != l && c.b.select(e, l), !0);
 }
-function f(e) {
+function p(e) {
     return (
         (e.onKeyDown = (t) => {
             let n = e.isMac;
@@ -163,10 +163,10 @@ function f(e) {
                         return !0;
                     break;
                 case h.Ks6.HOME:
-                    if (m(t, { shift: !1, ctrl: !1 }) && p(e, "backward")) return !0;
+                    if (m(t, { shift: !1, ctrl: !1 }) && f(e, "backward")) return !0;
                     break;
                 case h.Ks6.END:
-                    if (m(t, { shift: !1, ctrl: !1 }) && p(e, "forward")) return !0;
+                    if (m(t, { shift: !1, ctrl: !1 }) && f(e, "forward")) return !0;
                     break;
                 case h.Ks6.BACKSPACE:
                 case h.Ks6.DELETE:

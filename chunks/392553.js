@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(608299),
     h = n(494921),
     m = n(155718),
-    p = n(861382),
-    f = n(94221),
+    f = n(861382),
+    p = n(94221),
     g = n(626584),
     x = n(274652),
     E = n(522602),
@@ -25,11 +25,11 @@ var l = n(477900),
     v = n(573163),
     T = n(531685),
     j = n(365971);
-function k(e) {
+function _(e) {
     let t = v.Ay.getChannelIdsForWindowId(e)[0];
     return null == t ? null : (N.A.getChannel(t) ?? null);
 }
-var _ = n(826745),
+var k = n(826745),
     R = n(442433),
     O = n(721768),
     L = n(555424),
@@ -46,7 +46,7 @@ class V extends i.PureComponent {
             let { value: e } = this.props;
             this._ref?.setSelection(e.length, e.length);
         }),
-            null != p.A.getActiveCommand(this.props.channel.id) &&
+            null != f.A.getActiveCommand(this.props.channel.id) &&
                 O.Gf({ channelId: this.props.channel.id, command: null, section: null }));
     }
     componentDidUpdate(e, t) {
@@ -133,12 +133,12 @@ class V extends i.PureComponent {
             spellcheckEnabled: d,
             "aria-controls": h,
             "aria-expanded": m,
-            "aria-activedescendant": p,
+            "aria-activedescendant": f,
         } = this.props;
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(S.EG, { event: P.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
-                (0, l.jsx)(_.y, {
+                (0, l.jsx)(k.y, {
                     ref: this.handleSetRef,
                     className: s()(a, c),
                     id: o,
@@ -162,7 +162,7 @@ class V extends i.PureComponent {
                     spellCheck: d,
                     "aria-controls": h,
                     "aria-expanded": m,
-                    "aria-activedescendant": p,
+                    "aria-activedescendant": f,
                     "aria-haspopup": "listbox",
                     "aria-autocomplete": "list",
                     "aria-multiline": !0,
@@ -277,7 +277,7 @@ var W = n(666860),
     et = n(2368),
     en = n(551483);
 function el(e, t) {
-    let n = p.A.getActiveCommand(e.id),
+    let n = f.A.getActiveCommand(e.id),
         l = n?.options?.find((e) => e.name === t.optionName);
     return null != l && (l.type !== m.n4.STRING || l?.choices != null || l?.autocomplete);
 }
@@ -303,23 +303,23 @@ var ec = n(870748),
     ed = n(17928),
     eh = n(31717),
     em = n(660183),
-    ep = n(106972);
-let ef = (e) => {
+    ef = n(106972);
+let ep = (e) => {
     let t,
         { channelId: n, element: r, attributes: a, children: o } = e,
         u = (0, Y.f7)(),
         c = (0, Y.zL)(),
         d = (0, Y.RV)(),
-        { optionType: h, errored: f } = (0, ed.cf)(
-            [p.A],
+        { optionType: h, errored: p } = (0, ed.cf)(
+            [f.A],
             () => ({
-                optionType: p.A.getOption(n, r.optionName)?.type,
-                errored: p.A.getOptionState(n, r.optionName)?.lastValidationResult?.success !== !0,
+                optionType: f.A.getOption(n, r.optionName)?.type,
+                errored: f.A.getOptionState(n, r.optionName)?.lastValidationResult?.success !== !0,
             }),
             [n, r.optionName],
         ),
         g = (0, ed.bG)([E.A], () => E.A.getUpload(n, r.optionName, eh.C.SlashCommand), [n, r.optionName]),
-        x = s()(ep.S0, ep.xP, { [ep.t$]: c && u, [ep.$2]: (!c || !u) && f }),
+        x = s()(ef.S0, ef.xP, { [ef.t$]: c && u, [ef.$2]: (!c || !u) && p }),
         S = i.useCallback(() => {
             q.VW.isVoid(d, r) || z.b.selectCommandOption(d, r.optionName, !0);
         }, [d, r]);
@@ -328,22 +328,22 @@ let ef = (e) => {
             h === m.n4.ATTACHMENT
                 ? g?.filename != null
                     ? (0, l.jsxs)("span", {
-                          className: s()(ep._K, ep.dU),
+                          className: s()(ef._K, ef.dU),
                           contentEditable: !1,
                           children: [g.filename, o],
                       })
                     : (0, l.jsxs)("span", {
-                          className: s()(ep._K, ep.ZI),
+                          className: s()(ef._K, ef.ZI),
                           contentEditable: !1,
                           children: [em.intl.string(em.t.GRdFni), o],
                       })
-                : (0, l.jsx)("span", { className: ep._K, children: o })),
+                : (0, l.jsx)("span", { className: ef._K, children: o })),
         (0, l.jsxs)("span", {
             ...a,
             className: x,
             children: [
                 (0, l.jsxs)("span", {
-                    className: ep.gA,
+                    className: ef.gA,
                     contentEditable: !1,
                     onClick: S,
                     children: [r.optionDisplayName, "\u200B"],
@@ -358,13 +358,13 @@ function eg(e) {
     let { element: t, attributes: n, children: i } = e,
         r = (0, Y.f7)(),
         a = (0, Y.zL)(),
-        o = s()(ep.S0, ep.xP, ep.Bz, { [ep.t$]: a && r, [ep.$2]: t.error }),
-        u = (0, l.jsx)("span", { className: ep._K, children: i });
+        o = s()(ef.S0, ef.xP, ef.Bz, { [ef.t$]: a && r, [ef.$2]: t.error }),
+        u = (0, l.jsx)("span", { className: ef._K, children: i });
     return (0, l.jsxs)("span", {
         ...n,
         className: o,
         children: [
-            (0, l.jsxs)("span", { className: ep.gA, contentEditable: !1, children: ["@game", "\u200B"] }),
+            (0, l.jsxs)("span", { className: ef.gA, contentEditable: !1, children: ["@game", "\u200B"] }),
             u,
             (0, l.jsx)("span", { contentEditable: !1, children: "\u200B" }),
         ],
@@ -374,18 +374,18 @@ function ex(e) {
     let { element: t, attributes: n, children: i } = e,
         r = (0, Y.f7)(),
         a = (0, Y.zL)(),
-        o = s()(ep.S0, ep.xP, ep.Bz, { [ep.t$]: a && r, [ep.$2]: t.error }),
+        o = s()(ef.S0, ef.xP, ef.Bz, { [ef.t$]: a && r, [ef.$2]: t.error }),
         u = t.children[t.children.length - 1],
         c = null != u && q.l5.isText(u) && u.text.endsWith("\n"),
         d = (0, l.jsxs)("span", {
-            className: ep._K,
-            children: [i, c ? (0, l.jsx)("span", { className: ep.Nx, contentEditable: !1 }) : null],
+            className: ef._K,
+            children: [i, c ? (0, l.jsx)("span", { className: ef.Nx, contentEditable: !1 }) : null],
         });
     return (0, l.jsxs)("span", {
         ...n,
         className: o,
         children: [
-            (0, l.jsxs)("span", { className: ep.gA, contentEditable: !1, children: ["@time", "\u200B"] }),
+            (0, l.jsxs)("span", { className: ef.gA, contentEditable: !1, children: ["@time", "\u200B"] }),
             d,
             (0, l.jsx)("span", { contentEditable: !1, children: "\u200B" }),
         ],
@@ -402,7 +402,7 @@ function eS(e) {
         { ref: c, ...d } = e,
         {
             value: h,
-            type: f,
+            type: p,
             channel: g,
             className: x,
             id: y,
@@ -413,8 +413,8 @@ function eS(e) {
             textAreaPaddingClassName: v,
             onChange: T,
             onPaste: j,
-            onResize: k,
-            onFocus: _,
+            onResize: _,
+            onFocus: k,
             onBlur: R,
             onKeyDown: O,
             onKeyUp: w,
@@ -435,8 +435,8 @@ function eS(e) {
             "aria-expanded": ev,
             "aria-haspopup": eT,
             "aria-activedescendant": ej,
-            "aria-controls": ek,
-            "aria-invalid": e_,
+            "aria-controls": e_,
+            "aria-invalid": ek,
             "aria-describedby": eR,
             "aria-labelledby": eO,
             "aria-autocomplete": eL,
@@ -476,7 +476,7 @@ function eS(e) {
                 let u = B.n$(e);
                 if (
                     (null != u &&
-                        u[0].command.id !== p.A.getActiveCommand(g.id)?.id &&
+                        u[0].command.id !== f.A.getActiveCommand(g.id)?.id &&
                         K.o.withMergedEntry(e, () => {
                             (0, ec.t)(e, g.id, null, !0);
                         }),
@@ -498,7 +498,7 @@ function eS(e) {
         eF = i.useCallback(() => {
             eP.current = !0;
         }, []),
-        eB = (0, Z.A)({ channel: g, chatInputType: f, onChangeStart: eW, onChangeEnd: eF, updateState: eV }),
+        eB = (0, Z.A)({ channel: g, chatInputType: p, onChangeStart: eW, onChangeEnd: eF, updateState: eV }),
         eK = i.useCallback(
             (e, t) => {
                 let n = B.SQ(eB, e, g.id),
@@ -511,7 +511,7 @@ function eS(e) {
             let e,
                 t = q.VW.getNodesOfType(eB, ["gameMentionInput", "timestampMentionInput"]),
                 n = null != t ? [...t] : null,
-                l = eC ? p.A.getActiveCommand(g.id) : null,
+                l = eC ? f.A.getActiveCommand(g.id) : null,
                 i = !1;
             if (null != l && null != l.options) {
                 let t = eK(l, !1);
@@ -605,12 +605,12 @@ function eS(e) {
             getCurrentCommandOptionValue() {
                 let e = B.M3(eB);
                 if (null == e) return [];
-                let t = p.A.getActiveCommand(g.id),
+                let t = f.A.getActiveCommand(g.id),
                     n = t?.options?.find((t) => t.name === e[0].optionName);
                 return null == n ? [] : B.FV(eB, n, e[0], g.id);
             },
             getCommandOptionValues() {
-                let e = p.A.getActiveCommand(g.id);
+                let e = f.A.getActiveCommand(g.id);
                 return null == e ? {} : B.SQ(eB, e, g.id);
             },
             insertText(e) {
@@ -708,15 +708,15 @@ function eS(e) {
             let e = n.current;
             if (null == e) return;
             let l = e.offsetHeight;
-            t.current !== l && (null != ew.current && (ew.current.style.height = `${l}px`), (t.current = l), k?.(l));
-        }, [ew, k])),
-        (0, es.g)(n, a, [a, eB, k], eo),
+            t.current !== l && (null != ew.current && (ew.current.style.height = `${l}px`), (t.current = l), _?.(l));
+        }, [ew, _])),
+        (0, es.g)(n, a, [a, eB, _], eo),
         i.useLayoutEffect(() => {
             let e = Y.rL.findDocumentOrShadowRoot(eB).defaultView;
             if (e?.ResizeObserver == null) return;
             let n = eu(eB);
-            null != n && ((t.current = n.offsetHeight), k?.(t.current));
-        }, [ew, eB, k]));
+            null != n && ((t.current = n.offsetHeight), _?.(t.current));
+        }, [ew, eB, _]));
     let { handleKeyDown: eH, handleKeyUp: ez } = (function (e) {
             let {
                 editor: t,
@@ -756,7 +756,7 @@ function eS(e) {
                                     (e.preventDefault(), e.stopPropagation());
                                     return;
                                 }
-                                if (null != p.A.getActiveCommand(n.id)) {
+                                if (null != f.A.getActiveCommand(n.id)) {
                                     (e.preventDefault(),
                                         e.stopPropagation(),
                                         e.shiftKey
@@ -847,7 +847,7 @@ function eS(e) {
     }, [eB, h, eV]),
         i.useEffect(() => {
             function e() {
-                let e = p.A.getActiveCommand(g.id) ?? null;
+                let e = f.A.getActiveCommand(g.id) ?? null;
                 null !== e && null != e.options && eK(e, !0);
             }
             return (E.A.addChangeListener(e), () => E.A.removeChangeListener(e));
@@ -882,7 +882,7 @@ function eS(e) {
                     let { attributes: i, children: r, element: s } = t;
                     switch (s.type) {
                         case "applicationCommand":
-                            let a = p.A.getActiveCommand(n),
+                            let a = f.A.getActiveCommand(n),
                                 o = 0,
                                 u = 0;
                             if (null != a && a.id === s.command.id) {
@@ -898,9 +898,9 @@ function eS(e) {
                                         : em.intl.formatToPlainString(em.t.lziVC9, { count: o })),
                                     (c["data-trailing-placeholder"] = e));
                             }
-                            return (0, l.jsx)("div", { className: ep.uB, ...i, ...c, children: r });
+                            return (0, l.jsx)("div", { className: ef.uB, ...i, ...c, children: r });
                         case "applicationCommandOption":
-                            return (0, l.jsx)(ef, { attributes: i, channelId: n, element: s, children: r });
+                            return (0, l.jsx)(ep, { attributes: i, channelId: n, element: s, children: r });
                         default:
                             return null;
                     }
@@ -930,7 +930,7 @@ function eS(e) {
                 (function (e) {
                     let { attributes: t, children: n, leaf: i, text: r } = e;
                     if (i.commandName) {
-                        let e = s()(ep.p6, { [ep.BI]: "" === r.text });
+                        let e = s()(ef.p6, { [ef.BI]: "" === r.text });
                         return (0, l.jsx)("span", { ...t, className: e, spellCheck: !1, children: n });
                     }
                     return null;
@@ -955,7 +955,7 @@ function eS(e) {
                     autoFocus: !eA,
                     canFocus: !C,
                     onChange: eZ,
-                    onFocus: _,
+                    onFocus: k,
                     onBlur: R,
                     onClick: eQ,
                     onPaste: eq,
@@ -968,10 +968,10 @@ function eS(e) {
                     "aria-haspopup": eT,
                     "aria-expanded": ev,
                     "aria-activedescendant": ej,
-                    "aria-controls": ek,
+                    "aria-controls": e_,
                     "aria-labelledby": eO,
                     "aria-describedby": eR,
-                    "aria-invalid": e_,
+                    "aria-invalid": ek,
                     "aria-autocomplete": eL,
                     "aria-required": N,
                 }),
@@ -1152,8 +1152,8 @@ class eA extends i.Component {
                 channel: d,
                 type: h,
                 useSlate: m,
-                spellcheckEnabled: p,
-                useNewSlashCommands: f,
+                spellcheckEnabled: f,
+                useNewSlashCommands: p,
                 canOnlyUseTextCommands: g,
                 className: x,
                 id: E,
@@ -1165,8 +1165,8 @@ class eA extends i.Component {
                 accessibilityLabel: v,
                 showValueWhenDisabled: T,
             } = this.props,
-            { submitting: j, popup: k } = this.state,
-            _ = {
+            { submitting: j, popup: _ } = this.state,
+            k = {
                 channel: d,
                 className: s()(x, ey.Tg, { [ey.w5]: m, [ey.Rr]: n || j }),
                 id: E,
@@ -1196,14 +1196,14 @@ class eA extends i.Component {
                     [ey.Yg]: h === A.oU.USER_PROFILE,
                     [ey.$$]: h === A.oU.OVERLAY_INLINE_REPLY,
                 }),
-                spellcheckEnabled: p,
-                useNewSlashCommands: f,
+                spellcheckEnabled: f,
+                useNewSlashCommands: p,
                 disableAutoFocus: u.Fr || (h.disableAutoFocus ?? !1),
                 disableEnterToSubmit: h.submit?.disableEnterToSubmit ?? !1,
-                "aria-controls": k.id ?? void 0,
+                "aria-controls": _.id ?? void 0,
                 "aria-haspopup": "listbox",
-                "aria-expanded": null !== k.id || void 0,
-                "aria-activedescendant": k.activeDescendant ?? void 0,
+                "aria-expanded": null !== _.id || void 0,
+                "aria-activedescendant": _.activeDescendant ?? void 0,
                 "aria-invalid": e.length > C,
                 "aria-describedby": I,
                 "aria-labelledby": N,
@@ -1212,14 +1212,14 @@ class eA extends i.Component {
             R = m
                 ? (0, l.jsx)(eS, {
                       ref: this.ref,
-                      ..._,
+                      ...k,
                       type: h,
                       value: n && !T ? this._emptyRichValue : t,
                       canUseCommands: h.commands?.enabled,
                       canOnlyUseTextCommands: g,
                       onSubmitFailure: c,
                   })
-                : (0, l.jsx)(V, { ref: this.ref, ..._, value: n && !T ? "" : e });
+                : (0, l.jsx)(V, { ref: this.ref, ...k, value: n && !T ? "" : e });
         return (0, l.jsxs)(l.Fragment, {
             children: [
                 (0, l.jsx)(S.EG, { event: P.jej.INSERT_TEXT, handler: this.handleInsertText }),
@@ -1230,7 +1230,7 @@ class eA extends i.Component {
     }
     handleSaveCurrentText = (e) => {
         let { textValue: t } = this.props,
-            n = (0, f.I)(p.A.getActiveCommand(e), t);
+            n = (0, p.I)(f.A.getActiveCommand(e), t);
         c.A.saveDraft(e, t, this.props.type.drafts.type, n);
     };
     handleClearText = () => {
@@ -1266,18 +1266,18 @@ class eA extends i.Component {
                     ? (function (e) {
                           if (null == e) return null;
                           let t = (0, j.Q2)(e);
-                          return null == t ? null : k(t);
+                          return null == t ? null : _(t);
                       })(n)
                     : null,
-            c = null == (t = T.A.getFocusedWindowId()) ? null : k(t),
-            f = !(function (e, t) {
+            c = null == (t = T.A.getFocusedWindowId()) ? null : _(t),
+            p = !(function (e, t) {
                 if (null == e || null == t) return !1;
                 let n = (0, j.Q2)(e);
                 return n === (0, j.Q2)(t) && null != n;
             })(n, this._getEditorWindow())
                 ? (u ?? c ?? l)
                 : l;
-        if (null == s || (!f.isPrivate() && !i) || (f.isPrivate() && f.isManaged())) return !1;
+        if (null == s || (!p.isPrivate() && !i) || (p.isPrivate() && p.isManaged())) return !1;
         let { files: g, errors: S } = (function (e, t) {
             let n = [],
                 l = [],
@@ -1348,20 +1348,20 @@ class eA extends i.Component {
               this.saveCurrentText(),
               !(function (e) {
                   if (null == s) return;
-                  let t = p.A.getActiveCommand(f.id);
-                  if (null == t) return s(e, f, o.drafts.type, { requireConfirm: !0, origin: "clipboard" });
+                  let t = f.A.getActiveCommand(p.id);
+                  if (null == t) return s(e, p, o.drafts.type, { requireConfirm: !0, origin: "clipboard" });
                   let n = o.drafts.commandType ?? o.drafts.type,
                       l = null,
-                      i = p.A.getActiveOption(f.id);
+                      i = f.A.getActiveOption(p.id);
                   null !=
                       (l =
                           i?.type === m.n4.ATTACHMENT
                               ? i
                               : t.options?.find((e) => {
-                                    if (e.type === m.n4.ATTACHMENT) return null == E.A.getUpload(f.id, e.name, n);
+                                    if (e.type === m.n4.ATTACHMENT) return null == E.A.getUpload(p.id, e.name, n);
                                 })) &&
                       d.A.setFile({
-                          channelId: f.id,
+                          channelId: p.id,
                           id: l.name,
                           draftType: n,
                           file: { id: l.name, platform: x.x.WEB, file: e[0] },

@@ -10,8 +10,8 @@ var l = n(477900),
     d = n(811024),
     h = n(933958),
     m = n(969151),
-    p = n(659280),
-    f = n(579940),
+    f = n(659280),
+    p = n(579940),
     g = n(915089),
     x = n(750506),
     E = n(513609),
@@ -25,8 +25,8 @@ var l = n(477900),
     v = n(820066),
     T = n(696451),
     j = n(576705),
-    k = n(351906),
-    _ = n(287809),
+    _ = n(351906),
+    k = n(287809),
     R = n(31498),
     O = n(887129),
     L = n(741918),
@@ -46,29 +46,29 @@ function W(e) {
             let { channel: l, type: r } = e,
                 [s, a] = i.useState(() => (0, R.Ur)()),
                 u = (0, A.A)(),
-                c = (0, o.bG)([T.Ay, _.default], () => {
-                    let e = _.default.getCurrentUser();
+                c = (0, o.bG)([T.Ay, k.default], () => {
+                    let e = k.default.getCurrentUser();
                     return (null != l.guild_id && null != e ? T.Ay.getMember(l.guild_id, e.id)?.isPending : null) ?? !1;
                 }),
                 { canMentionEveryone: d, hidePersonalInformation: h } = (0, o.cf)(
-                    [j.A, k.A],
+                    [j.A, _.A],
                     () => ({
                         canMentionEveryone:
                             l.isPrivate() || c || r === N.oU.RULES_INPUT || j.A.can(M.xBc.MENTION_EVERYONE, l),
-                        hidePersonalInformation: k.A.hidePersonalInformation,
+                        hidePersonalInformation: _.A.hidePersonalInformation,
                     }),
                     [l, r, c],
                 ),
-                { activeCommand: m, activeCommandOption: p } = (0, o.cf)([I.A], () => ({
+                { activeCommand: m, activeCommandOption: f } = (0, o.cf)([I.A], () => ({
                     activeCommand: I.A.getActiveCommand(l.id),
                     activeCommandOption: I.A.getActiveOption(l.id),
                 })),
-                f = i.useMemo(
+                p = i.useMemo(
                     () =>
                         m?.untranslatedName != null &&
-                        p?.name != null &&
-                        (D.get(m.untranslatedName)?.has(p.name) ?? !1),
-                    [m?.untranslatedName, p?.name],
+                        f?.name != null &&
+                        (D.get(m.untranslatedName)?.has(f.name) ?? !1),
+                    [m?.untranslatedName, f?.name],
                 ),
                 g = (function (e) {
                     let { navId: t, scrollerRef: n, state: l, onFocus: r } = e,
@@ -123,7 +123,7 @@ function W(e) {
                     ...e,
                     navigator: g,
                     activeCommand: m,
-                    activeCommandOption: p,
+                    activeCommandOption: f,
                     activeInlineAutocompleteInput: S,
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
@@ -132,16 +132,16 @@ function W(e) {
                     emojiIntention:
                         r === N.oU.RULES_INPUT
                             ? P.EmojiIntention.COMMUNITY_CONTENT
-                            : f
+                            : p
                               ? P.EmojiIntention.NO_CUSTOM_EMOJI
                               : P.EmojiIntention.CHAT,
                     currentWord: x?.word ?? "",
                     currentWordIsAtStart: x?.isAtStart === !0,
                     optionText:
-                        null != p
+                        null != f
                             ? (0, b.getString)(
-                                  { [p.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
-                                  p.name,
+                                  { [f.name]: e.editorRef.current?.getCurrentCommandOptionValue() ?? [] },
+                                  f.name,
                               )
                             : "",
                 },
@@ -180,8 +180,8 @@ function W(e) {
             );
         })({ ...n, guild: z }, t, q),
         X = W.autocomplete?.forceChatLayer ? E.Ay : x.Ay,
-        J = (0, p.aI)($.selectedIndex);
-    (0, f.gf)(H, $.isVisible, J);
+        J = (0, f.aI)($.selectedIndex);
+    (0, p.gf)(H, $.isVisible, J);
     let Y = (0, C.l)({ editorHeight: F, type: W, state: $ }),
         ee = (0, o.bG)(
             [h.Ay],
@@ -222,7 +222,7 @@ function W(e) {
     let er = Math.max(F, K?.current?.clientHeight ?? 0),
         es = Math.min(0.5 * window.innerHeight, er);
     ei = Math.min(window.innerHeight - 120 - es - (G ?? 0), ei);
-    let ea = (0, l.jsx)(p.Ay, {
+    let ea = (0, l.jsx)(f.Ay, {
         id: H,
         className: s()(V.nx, el),
         innerClassName: V.Fv,
@@ -243,7 +243,7 @@ function W(e) {
                         className: V.XG,
                         style: { maxHeight: ei },
                         role: "listbox",
-                        "aria-labelledby": (0, p.Sz)(H),
+                        "aria-labelledby": (0, f.Sz)(H),
                         children: en,
                     });
                 },

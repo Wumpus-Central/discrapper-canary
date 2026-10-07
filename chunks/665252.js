@@ -1,4 +1,4 @@
-n.d(t, { A: () => ep });
+n.d(t, { A: () => ef });
 var l,
     i = n(477900),
     r = n(582128),
@@ -10,8 +10,8 @@ var l,
     d = n(922016),
     h = n(97808),
     m = n(866665),
-    p = n(939249),
-    f = n(834730),
+    f = n(939249),
+    p = n(834730),
     g = n(866323),
     x = n(565645),
     E = n(114166),
@@ -158,8 +158,8 @@ function ei(e) {
             (0, i.jsxs)("div", {
                 className: el.FS,
                 children: [
-                    (0, i.jsx)(f.E, { variant: "text-sm/medium", children: n }),
-                    (0, i.jsx)(f.E, { variant: "text-xs/medium", color: "text-muted", children: l }),
+                    (0, i.jsx)(p.E, { variant: "text-sm/medium", children: n }),
+                    (0, i.jsx)(p.E, { variant: "text-xs/medium", color: "text-muted", children: l }),
                 ],
             }),
         ],
@@ -186,7 +186,7 @@ function er(e) {
             children: (0, i.jsxs)("div", {
                 className: el.Kt,
                 children: [
-                    (0, i.jsx)(f.E, {
+                    (0, i.jsx)(p.E, {
                         variant: "text-xs/medium",
                         color: "text-muted",
                         children: en.intl.format(en.t["/ZJIuo"], { guildName: t }),
@@ -343,11 +343,11 @@ function ea(e) {
                       })
                     : (0, i.jsx)("div", {
                           className: el.x_,
-                          children: (0, i.jsxs)(p.D, {
+                          children: (0, i.jsxs)(f.D, {
                               onClick: () => E(!0),
                               className: el._x,
                               children: [
-                                  (0, i.jsx)(f.E, {
+                                  (0, i.jsx)(p.E, {
                                       variant: "text-sm/medium",
                                       children: en.intl.string(en.t["UQT3/h"]),
                                   }),
@@ -369,7 +369,7 @@ function ed(e) {
         [c, d] = r.useState({}),
         h = r.useRef(null),
         m = r.useRef(null),
-        p = (0, g.p)(n, {
+        f = (0, g.p)(n, {
             from: { translateX: -100, opacity: 0 },
             enter: { translateX: 0, opacity: 1 },
             leave: { translateX: 100, opacity: 0 },
@@ -407,11 +407,11 @@ function ed(e) {
             },
             [],
         ));
-    let { className: f } = (0, eu.p)(eo.x.PIXELIFY);
-    return p((e, t) =>
+    let { className: p } = (0, eu.p)(eo.x.PIXELIFY);
+    return f((e, t) =>
         t
             ? (0, i.jsx)(o.animated.div, {
-                  className: a()(ec._, f),
+                  className: a()(ec._, p),
                   style: { ...c, ...e },
                   children:
                       100 === s
@@ -540,7 +540,7 @@ function em(e) {
                     }),
                     (0, i.jsx)(m.m, {
                         text: b ? en.intl.string(en.t.VqNHoS) : null,
-                        children: (0, i.jsxs)(p.D, {
+                        children: (0, i.jsxs)(f.D, {
                             className: a()(eh.nG, { [eh.Tz]: V, [eh.Jx]: b }),
                             onClick: b ? () => null : U,
                             "aria-label": en.intl.formatToPlainString(en.t.VOmeSq, { name: H }),
@@ -553,12 +553,12 @@ function em(e) {
                                         emojiName: K,
                                         animated: G,
                                     }),
-                                (0, i.jsx)(f.E, { variant: "text-md/medium", children: H }),
+                                (0, i.jsx)(p.E, { variant: "text-md/medium", children: H }),
                                 !b &&
                                     (0, i.jsxs)(i.Fragment, {
                                         children: [
                                             (0, i.jsx)("div", { className: eh.SU }),
-                                            (0, i.jsxs)(f.E, {
+                                            (0, i.jsxs)(p.E, {
                                                 variant: "text-md/medium",
                                                 className: eh.Zi,
                                                 tabularNumbers: !0,
@@ -578,7 +578,7 @@ function em(e) {
         ],
     });
 }
-function ep(e) {
+function ef(e) {
     let { guildId: t, channelId: n } = e,
         l = (0, u.cf)([R], () => Object.fromEntries(R.getSoundboardEchoes())),
         [s, a] = r.useState({}),
@@ -589,7 +589,7 @@ function ep(e) {
         m = r.useCallback(() => {
             d(!1);
         }, []),
-        p = r.useMemo(
+        f = r.useMemo(
             () =>
                 (c
                     ? Object.entries(s).map((e) => {
@@ -602,8 +602,8 @@ function ep(e) {
                     .reverse(),
             [s, l, c],
         ),
-        f = r.useMemo(() => p.map((e, t) => ({ echo: e, y: 42 * t })), [p]),
-        x = (0, g.p)(f, {
+        p = r.useMemo(() => f.map((e, t) => ({ echo: e, y: 42 * t })), [f]),
+        x = (0, g.p)(p, {
             keys: (e) => e.echo.sound.soundId,
             from: () => ({ opacity: 0 }),
             enter: (e) => {
@@ -623,7 +623,7 @@ function ep(e) {
         [E, S] = r.useState(null),
         y = r.useRef(null);
     (r.useEffect(() => () => clearTimeout(y.current), []),
-        null == E || p.some((e) => e.sound.soundId === E) || S(null));
+        null == E || f.some((e) => e.sound.soundId === E) || S(null));
     let C = r.useCallback((e) => {
             (clearTimeout(y.current), S(e));
         }, []),

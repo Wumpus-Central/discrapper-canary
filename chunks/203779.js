@@ -10,7 +10,7 @@ var l = n(459016),
     d = n(360161),
     h = n(168186),
     m = n(660183);
-let p = {
+let f = {
     [a.n4.SUB_COMMAND]: () => ({ success: !1 }),
     [a.n4.SUB_COMMAND_GROUP]: () => ({ success: !1 }),
     [a.n4.BOOLEAN]: (e) => {
@@ -114,7 +114,7 @@ let p = {
         }
     },
     [a.n4.ROLE]: (e, t, n, l) => {
-        if ("text" !== e.type) return { success: f(e) };
+        if ("text" !== e.type) return { success: p(e) };
         {
             if ((0, h.hT)(e.text)) return { success: !0 };
             let t = (0, o.f)(e.text, l, n, { allowUsers: !1 });
@@ -122,11 +122,11 @@ let p = {
         }
     },
     [a.n4.MENTIONABLE]: (e, t, n, l) => {
-        if ("text" !== e.type) return { success: "userMention" === e.type || f(e) };
+        if ("text" !== e.type) return { success: "userMention" === e.type || p(e) };
         {
             if ((0, h.hT)(e.text)) return { success: !0 };
             let t = (0, o.f)(e.text, l, n);
-            return { success: null != t && ("userMention" === t.type || f(t)) };
+            return { success: null != t && ("userMention" === t.type || p(t)) };
         }
     },
     [a.n4.ATTACHMENT]: (e, t, n, l, i) => {
@@ -135,7 +135,7 @@ let p = {
         return { success: null != r && r.filename === e.text };
     },
 };
-function f(e) {
+function p(e) {
     return "roleMention" === e.type || ("textMention" === e.type && "@everyone" === e.text);
 }
 function g(e, t, n, l, i) {
@@ -168,6 +168,6 @@ function S(e) {
               ? { success: !1, error: m.intl.string(m.t.JZJQL2) }
               : { success: !1, error: (0, E.tE)(t) };
     let d = n.length > 1 ? { type: "text", text: u } : n[0],
-        h = p[t.type](d, t, s, r, o);
+        h = f[t.type](d, t, s, r, o);
     return (h.success || null != h.error || (h.error = (0, E.tE)(t)), h);
 }
