@@ -80,8 +80,7 @@ let s = {
     },
     l = r.createContext(s);
 function o() {
-    let e = r.useContext(l);
-    return (e === s && console.warn("useManaContext must be used within a ManaContext.Provider"), e);
+    return r.useContext(l);
 }
 function d(e) {
     let { children: t, value: n } = e;
