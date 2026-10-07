@@ -7,7 +7,11 @@ class a extends Map {
         (super(), (this.maxSize = t));
     }
     set(t, e) {
-        return (this.size >= this.maxSize && this.delete(this.keys().next().value), super.set(t, e));
+        if (this.size >= this.maxSize) {
+            let t = this.keys().next();
+            t.done || this.delete(t.value);
+        }
+        return super.set(t, e);
     }
 }
 let u = new a(196606),

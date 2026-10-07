@@ -430,8 +430,8 @@ class Z extends a.Component {
                             onChange: this.handleChangePath,
                         }),
                         (0, l.jsx)(_, {
-                            eulaId: t.eulaId,
-                            applicationName: t.name,
+                            eulaId: t?.eulaId,
+                            applicationName: t?.name,
                             disabled: i,
                             onChange: this.handlePurchaseTermsChange,
                             className: V.a_,

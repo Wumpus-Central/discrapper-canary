@@ -45,7 +45,7 @@ let A = new E(l.h, {
         BILLING_POPUP_BRIDGE_CALLBACK: function (e) {
             let { paymentSourceType: t, state: n, path: r, query: a } = e;
             if (t !== d.hes.PAYPAL || n !== i) return;
-            let s = window.popupBridge.onComplete;
+            let s = window.popupBridge?.onComplete;
             "function" == typeof s && s(null, { path: r, queryItems: a });
         },
         BILLING_POPUP_BRIDGE_STATE_UPDATE: function (e) {

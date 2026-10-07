@@ -13,7 +13,7 @@ var r = n(477900),
     g = n(625494),
     p = n(652215);
 function m() {
-    window.getSelection().removeAllRanges();
+    window.getSelection()?.removeAllRanges();
 }
 function A(e) {
     let {

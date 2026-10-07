@@ -5,9 +5,9 @@ var e = n(536637),
 (n(723702), n(371794));
 var A = n(652215),
     l = n(375708);
-let a = {},
+let a = Object.freeze({ ALL: -1, ...A.dHA }),
     u = {},
-    H = Object.freeze({ ALL: -1, ...A.dHA });
+    H = {};
 function c(t) {
     let r = (0, i.B)(t, { path: A.BVt.APPLICATION_STORE_LISTING_SKU(":skuId", ":slug") });
     return null != r ? r.params.skuId : null;
@@ -156,10 +156,10 @@ function d(t) {
             return l.intl.string(l.t["9b4eUr"]);
     }
 }
-Object.keys(H).forEach((t) => {
-    let r = t.toLowerCase().replace(/_/g, "-"),
-        n = H[t];
-    ((a[r] = n), (u[n] = r));
+Object.entries(a).forEach((t) => {
+    let [r, n] = t,
+        e = r.toLowerCase().replace(/_/g, "-");
+    ((u[e] = n), (H[n] = e));
 });
 let g = [
     ["YYYY-MM-DD", "MMMM DD, Y"],

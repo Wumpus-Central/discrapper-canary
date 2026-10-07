@@ -637,16 +637,16 @@ function tT(e) {
     return null == e ? null : document.querySelector(`[data-frame-id="${CSS.escape(e)}"]`);
 }
 function tM(e) {
-    let t;
+    let t, l;
     return (
         null != e &&
-        ((t =
-            document.fullscreenElement ??
-            document.webkitFullscreenElement ??
-            document.mozFullScreenElement ??
-            document.msFullscreenElement ??
+        ((l =
+            (t = document).fullscreenElement ??
+            t.webkitFullscreenElement ??
+            t.mozFullScreenElement ??
+            t.msFullscreenElement ??
             null),
-        ((0, tI.vq)(t, Element) ? t.getAttribute("data-frame-id") : null) === e)
+        ((0, tI.vq)(l, Element) ? l.getAttribute("data-frame-id") : null) === e)
     );
 }
 function t_(e) {

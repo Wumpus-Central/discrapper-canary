@@ -54,7 +54,7 @@ function B(t) {
     s.useEffect(() => {
         (0, y.sx)({ fromStep: P.pj.SAFETY_CHECK, toStep: P.pj.BASICS, guildId: e.id });
     }, [e.id]);
-    let u = (0, r.bG)([j.Ay], () => (null != e ? j.Ay.getChannels(e.id) : null)),
+    let u = (0, r.bG)([j.Ay], () => j.Ay.getChannels(e.id)),
         p = s.useCallback((t) => ({ id: t.value, value: t.value, label: t.label }), []),
         g = [{ value: P.SP, label: L.intl.string(L.t.Cla0re) }];
     return (

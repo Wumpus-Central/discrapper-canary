@@ -6912,7 +6912,7 @@ let oh = r.memo(function (e) {
                                     if (u && e.isFirstMessageInForumPost(i)) return;
                                     if (null != o && o.length > 0) {
                                         let t = el.default.extractTimestamp(e.id);
-                                        for (let e = 0; e < o?.length; e++) {
+                                        for (let e = 0; e < o.length; e++) {
                                             if (null == o[e]) continue;
                                             let n = el.default.extractTimestamp(o[e].startId),
                                                 l = el.default.extractTimestamp(o[e].endId);

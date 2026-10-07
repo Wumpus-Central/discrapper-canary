@@ -153,8 +153,7 @@ class U extends o.PureComponent {
 }
 let k = a.isPlatformEmbedded && null != h.Ay.getDiscordUtils().inputCaptureRegisterElement;
 class w extends o.PureComponent {
-    _input;
-    gs;
+    gs = null;
     _mounted = !1;
     constructor(e) {
         super(e);

@@ -13,7 +13,7 @@ let l = (e, t, n) => Math.ceil(e * (t / n.numOfRecentUses)),
     d = class {
         dirty;
         version;
-        _frequently;
+        _frequently = [];
         numFrequentlyItems;
         maxSamples;
         computeBonus;

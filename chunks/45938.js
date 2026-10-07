@@ -224,10 +224,11 @@ function H(e, t, n) {
     return a.length === r.length ? a[0] : null;
 }
 function j(e) {
-    let t = e.trim().split("/").pop().match(O);
-    if (null == t) return null;
-    let [n, i, r] = t;
-    return null == r ? null : r.replace(/-/g, "");
+    let t = e.trim().split("/").pop(),
+        n = t?.match(O);
+    if (null == n) return null;
+    let [i, r, a] = n;
+    return null == a ? null : a.replace(/-/g, "");
 }
 function W(e, t) {
     return (0, s.bG)([d.A], () => {

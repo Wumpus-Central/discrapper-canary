@@ -223,8 +223,9 @@ class E extends _ {
     }
     addLocalMessages(e, t) {
         for (this.cachedChannelCounts.set(e, t); this.cachedChannelCounts.size > 100;) {
-            let e = this.cachedChannelCounts.keys();
-            this.cachedChannelCounts.delete(e.next().value);
+            let e = this.cachedChannelCounts.keys().next();
+            if (e.done) break;
+            this.cachedChannelCounts.delete(e.value);
         }
     }
     attachReadyPayloadProperties(e) {
