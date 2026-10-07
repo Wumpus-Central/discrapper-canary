@@ -16,8 +16,8 @@ var a = n(477900),
     E = n(297264),
     g = n(736653),
     h = n(139286),
-    R = n(531260),
-    N = n(914410),
+    N = n(531260),
+    R = n(914410),
     x = n(174459),
     A = n(872725),
     v = n(721157),
@@ -128,7 +128,7 @@ function V(e) {
             listItemProps: ed,
         } = e,
         eu = (0, g.DP)(),
-        { fractionalState: em } = (0, R.A)(),
+        { fractionalState: em } = (0, N.A)(),
         ep = (0, I.N)(),
         eb = { name: t };
     (ec?.thirdPartyPartner != null && (eb.third_party_partner = ec.thirdPartyPartner),
@@ -152,30 +152,31 @@ function V(e) {
                 }));
         }, [K, n]),
         eE = !0 === q && (J ? ep?.state === v.zE.UPSELL : em === k.xc.FP_ONLY),
-        eg = s.useRef(!1);
+        eg = !J || ep?.state === v.zE.CAN_CLAIM,
+        eh = s.useRef(!1);
     s.useEffect(() => {
-        !Z || eg.current || W || eE || ((eg.current = !0), e_());
-    }, [Z, W, e_, eE]);
-    let eh = !(0, l.isEmpty)(M),
-        eR = eh && (0, u.q)(eu),
-        eN = (0, m.r)(p.A.colors.BACKGROUND_BASE_LOW).hex(),
-        ex = eE || !(0, l.isEmpty)(F),
-        eA = X ?? (!eh && (0, u.q)(eu) ? "primary" : "overlay-primary"),
-        ev = (0, l.isEmpty)(F)
+        !Z || eh.current || W || eE || !eg || ((eh.current = !0), e_());
+    }, [Z, eg, W, e_, eE]);
+    let eN = !(0, l.isEmpty)(M),
+        eR = eN && (0, u.q)(eu),
+        ex = (0, m.r)(p.A.colors.BACKGROUND_BASE_LOW).hex(),
+        eA = eE || !(0, l.isEmpty)(F),
+        ev = X ?? (!eN && (0, u.q)(eu) ? "primary" : "overlay-primary"),
+        eI = (0, l.isEmpty)(F)
             ? null
             : {
                   icon: y,
                   iconPosition: V,
                   text: F,
-                  variant: eA,
+                  variant: ev,
                   size: ee ? "md" : void 0,
                   onClick: e_,
                   disabled: W,
                   loading: z,
                   tabIndex: ed?.tabIndex,
               },
-        eI = (0, a.jsx)(w.A, { fullWidth: !0, defaultTextOverride: U.intl.string(U.t.sEAnVH), tabIndex: ed?.tabIndex }),
-        eO = null == ev ? null : J ? (0, a.jsx)(O.A, { ...ev }) : (0, a.jsx)(o.$, { ...ev });
+        eO = (0, a.jsx)(w.A, { fullWidth: !0, defaultTextOverride: U.intl.string(U.t.sEAnVH), tabIndex: ed?.tabIndex }),
+        eP = null == eI ? null : J ? (0, a.jsx)(O.A, { ...eI }) : (0, a.jsx)(o.$, { ...eI });
     return (0, a.jsx)(d.N, {
         theme: eR ? Y.NJ8.DARK : void 0,
         children: (e) =>
@@ -190,7 +191,7 @@ function V(e) {
                 hueRotate: 25,
                 glowAmount: (0, u.M)(eu) ? 2 : 8,
                 blurAmount: 10,
-                className: r()(G.Ui, es, { [G.Tn]: eh }),
+                className: r()(G.Ui, es, { [G.Tn]: eN }),
                 cardClassName: r()(G.Nr, e, ea, { [G.j8]: ee, [G._7]: et === D.L.EXPIRED }),
                 cardStyle: {
                     backgroundImage: null != M ? `url(${M})` : void 0,
@@ -221,7 +222,7 @@ function V(e) {
                     ee &&
                         (0, a.jsxs)("div", {
                             className: G.iy,
-                            style: { "--custom-tint-color": er ?? eN },
+                            style: { "--custom-tint-color": er ?? ex },
                             "aria-hidden": !0,
                             children: [(0, a.jsx)("div", { className: G.u_ }), (0, a.jsx)("div", { className: G.G3 })],
                         }),
@@ -231,7 +232,7 @@ function V(e) {
                             !ee &&
                                 (0, a.jsx)("div", {
                                     className: G.u_,
-                                    style: { "--custom-tint-color": er ?? eN },
+                                    style: { "--custom-tint-color": er ?? ex },
                                     "aria-hidden": !0,
                                 }),
                             (0, a.jsxs)("div", {
@@ -280,8 +281,8 @@ function V(e) {
                                     null != j &&
                                         (0, a.jsx)("div", {
                                             className: G.oU,
-                                            children: (0, a.jsx)(N.Ay, {
-                                                variant: N.qP.BLUE,
+                                            children: (0, a.jsx)(R.Ay, {
+                                                variant: R.qP.BLUE,
                                                 progress: (0, l.clamp)(j, 0, 1),
                                                 maximum: 1,
                                                 glowing: Q,
@@ -291,10 +292,10 @@ function V(e) {
                                         null != en &&
                                         (0, a.jsx)("div", { className: G.Gv, children: (0, a.jsx)(B, { endsAt: en }) }),
                                     null != el && (0, a.jsx)("div", { className: G.Gv, children: el }),
-                                    ex && (0, a.jsx)("div", { className: G.Cj }),
+                                    eA && (0, a.jsx)("div", { className: G.Cj }),
                                 ],
                             }),
-                            ex && (0, a.jsx)("div", { className: G.yk, children: eE ? eI : eO }),
+                            eA && (0, a.jsx)("div", { className: G.yk, children: eE ? eO : eP }),
                         ],
                     }),
                 ],
