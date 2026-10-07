@@ -1,15 +1,13 @@
-n.d(t, { YK: () => h, fo: () => E, J$: () => f, Mg: () => A });
+n.d(t, { YK: () => A, fo: () => _, J$: () => h, Mg: () => E });
 var i = n(582128),
     r = n(17928),
     a = n(636537),
     s = n(73153),
     l = n(243264),
-    o = n(986496),
-    d = n(929396),
-    c = n(652215);
-async function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.a.DEFAULT,
-        n = (0, d.C7)(e);
+    o = n(929396),
+    d = n(652215);
+async function c(e, t) {
+    let n = (0, o.C7)(e);
     if (null != n) {
         if (l.A.shouldSuppressFetch(n, t))
             return void s.h.dispatch({
@@ -20,7 +18,11 @@ async function u(e) {
             });
         s.h.dispatch({ type: "GAME_AUTOCOMPLETE_FETCH", query: n, filterGroup: t });
         try {
-            let { body: e } = await a.Bo.get({ url: c.Rsh.GAMES_AUTOCOMPLETE, query: { q: n }, rejectWithError: !1 }),
+            let { body: e } = await a.Bo.get({
+                    url: d.Rsh.GAMES_AUTOCOMPLETE,
+                    query: { q: n, filter_group: t },
+                    rejectWithError: !1,
+                }),
                 i = (e ?? []).map((e) => ({
                     id: String(e.id),
                     name: e.name,
@@ -33,16 +35,13 @@ async function u(e) {
         }
     }
 }
-var _ = n(649079);
-let E = 200,
-    A = 500,
-    h = (0, r.UT)(l.A, {
-        getQueryId: function (e) {
-            let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : o.a.DEFAULT;
-            return c.fic.GAME_AUTOCOMPLETE((0, d.C7)(e), t);
-        },
+var u = n(649079);
+let _ = 200,
+    E = 500,
+    A = (0, r.UT)(l.A, {
+        getQueryId: (e, t) => d.fic.GAME_AUTOCOMPLETE((0, o.C7)(e), t),
         get: (e, t) => l.A.getResults(e, t) ?? null,
-        load: (e, t) => u(e, t),
+        load: (e, t) => c(e, t),
         getIsLoading: (e, t) => l.A.isFetching(e, t),
         retryConfig: {
             retryableErrors: function (e) {
@@ -53,9 +52,9 @@ let E = 200,
         staleAfter: 3600,
         failureStaleAfter: 60,
     });
-function f(e, t) {
-    let { surface: n, filterGroup: r = o.a.DEFAULT } = t,
-        a = (0, d.C7)(e),
+function h(e, t) {
+    let { surface: n, filterGroup: r } = t,
+        a = (0, o.C7)(e),
         s = (function (e) {
             let [t, n] = i.useState(e),
                 r = i.useRef(t),
@@ -67,7 +66,7 @@ function f(e, t) {
                         ((a.current = Date.now()), (r.current = e), n(e));
                     }
                     if (null == e || null == r.current) return void t();
-                    let i = setTimeout(t, Math.min(E, Math.max(0, A - (Date.now() - a.current))));
+                    let i = setTimeout(t, Math.min(_, Math.max(0, E - (Date.now() - a.current))));
                     return () => {
                         clearTimeout(i);
                     };
@@ -75,22 +74,22 @@ function f(e, t) {
                 t
             );
         })(a),
-        { data: l, error: c, isLoading: u } = h(s, r),
-        [f, I] = i.useState(null),
-        p = null != l && null != s ? { query: s, results: l } : null;
-    null == a ? null != f && I(null) : null != p && p.results !== f?.results && I(p);
-    let T = null != a ? (p ?? f) : null,
-        m = T?.query ?? null,
-        g = T?.results ?? null,
-        [S] = i.useState(() => new _.vn(n, r));
+        { data: l, error: d, isLoading: c } = A(s, r),
+        [h, f] = i.useState(null),
+        I = null != l && null != s ? { query: s, results: l } : null;
+    null == a ? null != h && f(null) : null != I && I.results !== h?.results && f(I);
+    let p = null != a ? (I ?? h) : null,
+        T = p?.query ?? null,
+        m = p?.results ?? null,
+        [g] = i.useState(() => new u.vn(n, r));
     return (
         i.useEffect(() => {
-            S.onQuery(a);
-        }, [S, a]),
+            g.onQuery(a);
+        }, [g, a]),
         i.useEffect(() => {
-            null != m && null != g && S.onResults(m, g);
-        }, [S, m, g]),
-        i.useEffect(() => S.end, [S]),
-        { results: g, isLoading: u || s !== a, error: s === a ? c : null, onSelect: S.select, endSession: S.end }
+            null != T && null != m && g.onResults(T, m);
+        }, [g, T, m]),
+        i.useEffect(() => g.end, [g]),
+        { results: m, isLoading: c || s !== a, error: s === a ? d : null, onSelect: g.select, endSession: g.end }
     );
 }

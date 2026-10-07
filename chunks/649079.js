@@ -1,21 +1,20 @@
-n.d(t, { $g: () => c, vn: () => o });
+n.d(t, { $g: () => d, vn: () => l });
 var i = n(174459),
-    r = n(986496),
-    a = n(929396),
-    s = n(652215);
-function l(e) {
+    r = n(929396),
+    a = n(652215);
+function s(e) {
     return (e?.results ?? []).slice(0, 10).map((e) => e.id);
 }
-class o {
+class l {
     surface;
     filterGroup;
     state = null;
     selectedQuery = null;
-    constructor(e, t = r.a.DEFAULT) {
+    constructor(e, t) {
         ((this.surface = e), (this.filterGroup = t));
     }
     onQuery = (e) => {
-        let t = (0, a.C7)(e);
+        let t = (0, r.C7)(e);
         if (null == t) {
             ((this.selectedQuery = null), null != this.state && (this.state.query = null));
             return;
@@ -24,7 +23,7 @@ class o {
         this.selectedQuery = null;
         let n = Date.now();
         null != this.state && n - this.state.lastActivityAt > 6e4 && this.endAt(this.state.lastActivityAt);
-        let r = (this.state ??= {
+        let a = (this.state ??= {
             id: (0, i.getNewAnalyticsLoadId)(),
             startedAt: n,
             lastActivityAt: n,
@@ -36,10 +35,10 @@ class o {
             numResultSets: 0,
             numSelections: 0,
         });
-        ((r.query = t),
-            (r.lastQuery = t),
-            (r.maxQueryLength = Math.max(r.maxQueryLength, t.length)),
-            (r.lastActivityAt = n));
+        ((a.query = t),
+            (a.lastQuery = t),
+            (a.maxQueryLength = Math.max(a.maxQueryLength, t.length)),
+            (a.lastActivityAt = n));
     };
     onResults = (e, t) => {
         var n;
@@ -59,21 +58,21 @@ class o {
         if (null == t || null == t.query) return;
         let n = Date.now();
         (t.numSelections++, (t.lastActivityAt = n));
-        let { displayed: r } = t,
-            o = r?.results.findIndex((t) => t.id === e) ?? -1;
-        ((this.selectedQuery = (0, a.C7)(r?.results[o]?.name)),
-            i.default.track(s.HAw.GAME_SEARCH_RESULT_SELECTED, {
+        let { displayed: l } = t,
+            o = l?.results.findIndex((t) => t.id === e) ?? -1;
+        ((this.selectedQuery = (0, r.C7)(l?.results[o]?.name)),
+            i.default.track(a.HAw.GAME_SEARCH_RESULT_SELECTED, {
                 search_session_id: t.id,
                 surface: this.surface,
                 filter_group: this.filterGroup,
                 query: t.query,
                 query_length: t.query.length,
-                results_query: r?.query ?? null,
-                results_stale: r?.query !== t.query,
+                results_query: l?.query ?? null,
+                results_stale: l?.query !== t.query,
                 game_id: e,
                 result_index: o,
-                num_results: r?.results.length ?? 0,
-                result_game_ids: l(r),
+                num_results: l?.results.length ?? 0,
+                result_game_ids: s(l),
                 num_result_sets: t.numResultSets,
                 selection_number: t.numSelections,
                 ms_since_session_start: n - t.startedAt,
@@ -87,7 +86,7 @@ class o {
         ((this.state = null),
             (this.selectedQuery = null),
             null != t &&
-                i.default.track(s.HAw.GAME_SEARCH_SESSION_ENDED, {
+                i.default.track(a.HAw.GAME_SEARCH_SESSION_ENDED, {
                     search_session_id: t.id,
                     surface: this.surface,
                     filter_group: this.filterGroup,
@@ -96,7 +95,7 @@ class o {
                     max_query_length: t.maxQueryLength,
                     results_query: t.displayed?.query ?? null,
                     num_results: t.displayed?.results.length ?? 0,
-                    result_game_ids: l(t.displayed),
+                    result_game_ids: s(t.displayed),
                     saw_any_results: t.sawAnyResults,
                     num_result_sets: t.numResultSets,
                     num_selections: t.numSelections,
@@ -104,8 +103,8 @@ class o {
                 }));
     }
 }
-let d = new Map();
-function c(e) {
-    let t = d.get(e);
-    return (null == t && ((t = new o(e)), d.set(e, t)), t);
+let o = new Map();
+function d(e, t) {
+    let n = o.get(e);
+    return (null == n && ((n = new l(e, t)), o.set(e, n)), n);
 }

@@ -1,64 +1,59 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => E });
 var i = n(635377),
     r = n.n(i),
     a = n(17928),
     s = n(73153),
-    l = n(986496),
-    o = n(929396);
-function d(e, t) {
+    l = n(929396);
+function o(e, t) {
     return `${e}:${t}`;
 }
-let c = new (r())({ max: 100 }),
-    u = new Set(),
-    _ = new (r())({ max: 500 });
-class E extends a.Ay.Store {
+let d = new (r())({ max: 100 }),
+    c = new Set(),
+    u = new (r())({ max: 500 });
+class _ extends a.Ay.Store {
     static displayName = "GameAutocompleteStore";
-    getResults(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.a.DEFAULT,
-            n = (0, o.C7)(e);
-        return null == n ? void 0 : c.peek(d(t, n));
+    getResults(e, t) {
+        let n = (0, l.C7)(e);
+        return null == n ? void 0 : d.peek(o(t, n));
     }
-    getClosestResults(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.a.DEFAULT,
-            n = (0, o.C7)(e);
+    getClosestResults(e, t) {
+        let n = (0, l.C7)(e);
         if (null != n)
             for (let e = n.length; e >= 1; e--) {
                 let i = n.slice(0, e),
-                    r = c.peek(d(t, i));
+                    r = d.peek(o(t, i));
                 if (null != r) return { query: i, results: r };
             }
     }
-    shouldSuppressFetch(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.a.DEFAULT,
-            n = (0, o.C7)(e);
+    shouldSuppressFetch(e, t) {
+        let n = (0, l.C7)(e);
         if (null == n) return !1;
-        let i = d(t, n);
-        return !(c.has(i) || u.has(i)) && (0, o.bC)(n, (e) => c.peek(d(t, e)));
+        let i = o(t, n);
+        return !(d.has(i) || c.has(i)) && (0, l.bC)(n, (e) => d.peek(o(t, e)));
     }
-    isFetching(e) {
-        let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : l.a.DEFAULT,
-            n = (0, o.C7)(e);
-        return null != n && u.has(d(t, n));
+    isFetching(e, t) {
+        let n = (0, l.C7)(e);
+        return null != n && c.has(o(t, n));
     }
     getGameById(e) {
-        return _.peek(e);
+        return u.peek(e);
     }
 }
-let A = new E(s.h, {
+let E = new _(s.h, {
     LOGOUT: function () {
-        (c.reset(), (u = new Set()), _.reset());
+        (d.reset(), (c = new Set()), u.reset());
     },
     GAME_AUTOCOMPLETE_FETCH: function (e) {
         let { query: t, filterGroup: n } = e;
-        u.add(d(n, t));
+        c.add(o(n, t));
     },
     GAME_AUTOCOMPLETE_FETCH_SUCCESS: function (e) {
         let { query: t, filterGroup: n, results: i } = e,
-            r = d(n, t);
-        for (let e of (u.delete(r), c.set(r, i), i)) _.set(e.id, e);
+            r = o(n, t);
+        for (let e of (c.delete(r), d.set(r, i), i)) u.set(e.id, e);
     },
     GAME_AUTOCOMPLETE_FETCH_FAILURE: function (e) {
         let { query: t, filterGroup: n } = e;
-        u.delete(d(n, t));
+        c.delete(o(n, t));
     },
 });
