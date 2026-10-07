@@ -70,6 +70,7 @@ let l = (0, s.mj)({
             settingKey: "DESKTOP_NATIVE_PREMAP",
             defaultValue: !1,
             readValue: (e) =>
+                (0, a.isWindows)() &&
                 (function (e) {
                     let { location: t } = e;
                     return l.getConfig({ location: t });
