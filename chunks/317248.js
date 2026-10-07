@@ -140,8 +140,8 @@ function Z(e) {
             query: { cache: e },
             rejectWithError: !0,
         }).then((e) => {
-            if (null != e.body && "d8bc15a471af1d4f7be73f472986078b06000acb" !== e.body.hash) {
-                let e = new Date("1791394500812"),
+            if (null != e.body && "c49585ffb1e07f64f4668019385a056682c30fed" !== e.body.hash) {
+                let e = new Date("1791394674339"),
                     t = new Date(),
                     n = (0, M.Tf)(t, e);
                 n.hours > 6 && eL(n.hours);
