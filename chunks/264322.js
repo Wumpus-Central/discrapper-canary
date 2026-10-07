@@ -313,6 +313,13 @@ let ee = new J(c.h, {
                 ee.hasUserStateApplication(t) && K({ type: "user" }, { serverVersion: x }),
                 ee.hasApplicationState(t) && K({ type: "application", applicationId: t }, { serverVersion: x }));
         },
+        APPLICATION_COMMAND_INDEX_APPLICATION_STALE: function (e) {
+            let { applicationId: t } = e;
+            for (let e of Reflect.ownKeys(ee.indices))
+                ("string" == typeof e && ee.applicationIndices.has(e)) ||
+                    (ee.indices[e] = { ...ee.indices[e], serverVersion: x });
+            ee.hasApplicationState(t) && K({ type: "application", applicationId: t }, { serverVersion: x });
+        },
         CHANNEL_DELETE: function (e) {
             let { channel: t } = e;
             $({ type: "channel", channelId: t.id });
