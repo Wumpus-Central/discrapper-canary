@@ -34,6 +34,5 @@ var i,
         (r.SLIMY = "SlimyIcon"),
         (r.ZOMBIE = "ZombieIcon"),
         (r.CLYDE_STEIN = "ClydeSteinIcon"),
-        (r.HEXAGON = "HexagonIcon"),
         r);
 ({ ...l, ...a, ...c });

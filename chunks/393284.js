@@ -1,8 +1,8 @@
-n.d(t, { k: () => J });
+n.d(t, { k: () => $ });
 var i = n(419954),
     s = n(780964),
     l = n(17928),
-    r = n(175734),
+    r = n(147248),
     a = n(141343),
     o = n(665267),
     u = n(375708);
@@ -256,9 +256,9 @@ let K = (0, i.E2)(s.X.APPEARANCE_DUAL_THEME_SELECTOR, {
     usePredicate: a.V,
 });
 var Z = n(462887),
-    q = n(817281),
-    Q = (n(644235), n(189916));
-let $ = (0, i.zD)(s.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
+    q = n(817281);
+n(644235);
+let Q = (0, i.zD)(s.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
         useTitle: () => u.intl.string(u.t.c445ix),
         useSubtitle: () => u.intl.string(u.t["+tBsvs"]),
         useSearchTerms: () => [u.intl.string(u.t.Ksh3ik)],
@@ -266,26 +266,23 @@ let $ = (0, i.zD)(s.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
             return (0, l.bG)([D.A], () => D.A.isSameAsDeviceThemeEnabled());
         },
         setValue: function (e) {
-            e
-                ? (function () {
-                      if (
-                          (q.Ay.setShouldSyncAppearanceSettings(!1),
-                          null == D.A.getSyncedClientTheme(X.Fc.LIGHT) && null == D.A.getSyncedClientTheme(X.Fc.DARK))
-                      ) {
-                          let e = D.A.theme,
-                              t = (0, Z.M)(e) ? X.Fc.DARK : X.Fc.LIGHT,
-                              n = r.A.gradientPreset?.id,
-                              i = !r.A.isPreview || (0, Q.oB)(n) ? n : void 0;
-                          ((0, Y.NA)({ [t]: e }),
-                              null != i ? (0, Y.qX)(t, { backgroundGradientPresetId: i }) : (0, Y.qX)(t, { theme: e }));
-                      }
-                      ((0, Y.ZM)(!0), (0, Y.k7)(X.Q_.ON));
-                  })()
-                : ((0, Y.k7)(X.Q_.OFF), (0, Y.ZM)(!1));
+            if (e) {
+                if (
+                    (q.Ay.setShouldSyncAppearanceSettings(!1),
+                    null == D.A.getSyncedClientTheme(X.Fc.LIGHT) && null == D.A.getSyncedClientTheme(X.Fc.DARK))
+                ) {
+                    let e = D.A.theme,
+                        t = (0, Z.M)(e) ? X.Fc.DARK : X.Fc.LIGHT,
+                        n = r.A.isPreview ? void 0 : r.A.gradientPreset?.id;
+                    ((0, Y.NA)({ [t]: e }),
+                        null != n ? (0, Y.qX)(t, { backgroundGradientPresetId: n }) : (0, Y.qX)(t, { theme: e }));
+                }
+                ((0, Y.ZM)(!0), (0, Y.k7)(X.Q_.ON));
+            } else ((0, Y.k7)(X.Q_.OFF), (0, Y.ZM)(!1));
         },
     }),
-    J = (0, i.FW)(s.X.APPEARANCE_THEME_FIELDSET, {
+    $ = (0, i.FW)(s.X.APPEARANCE_THEME_FIELDSET, {
         useTitle: () => u.intl.string(u.t.Ksh3ik),
         isTitleHiddenVisually: !0,
-        buildLayout: () => [$, K, w, M, v, d],
+        buildLayout: () => [Q, K, w, M, v, d],
     });
