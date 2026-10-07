@@ -1481,7 +1481,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eK.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 632247, Version Hash: 66bc2fc2c7e0a256efccf3f6bfe71e95840774a8`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 632257, Version Hash: 103228aa7cc9d98679a00c9dc6eced3ae7b5a699`,
 ),
     U.A.setTags({ appContext: V.QCW }),
     em.A.initBasic(),
@@ -25575,7 +25575,7 @@ let LP = "isHideDevBanner",
                     className: tc()(LM.Wz, LM.mr),
                     children: [
                         (0, v.jsx)(Lb, { className: LM.Kk }),
-                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "632247" }),
+                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "632257" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -50039,13 +50039,16 @@ class Vj extends eu.Ay.Store {
         this.waitFor(nz.A, ex.default);
     }
     getAnswer(e, t) {
-        return VV(e, t);
+        return VV(e, t)?.smartSearchResult ?? null;
     }
     getStatus(e, t) {
-        return VV(e, t)?.status ?? null;
+        return this.getAnswer(e, t)?.status ?? null;
     }
     hasAnswer(e, t) {
         return null != VV(e, t);
+    }
+    getResultFeedback(e, t) {
+        return VV(e, t)?.hasPositiveFeedback ?? null;
     }
 }
 function VW(e) {
@@ -50055,17 +50058,33 @@ function VW(e) {
     SMART_SEARCH_FETCH_START: function (e) {
         let { smartSearchQuery: t } = e,
             { requestKey: n, guildId: i, queryText: r, channelIds: a } = t;
-        VB(i).set(n, { status: Vk.LOADING, queryText: r, answerText: "", citations: [], channelIds: a });
+        VB(i).set(n, {
+            smartSearchResult: { status: Vk.LOADING, queryText: r, answerText: "", citations: [], channelIds: a },
+            hasPositiveFeedback: null,
+        });
     },
     SMART_SEARCH_FETCH_SUCCESS: function (e) {
         let { smartSearchQuery: t, smartSearchStatus: n, answerText: i, citations: r } = e,
             { requestKey: a, guildId: s, queryText: l, channelIds: o } = t;
-        VB(s).set(a, { status: n, queryText: l, answerText: i, citations: r, channelIds: o });
+        VB(s).set(a, {
+            smartSearchResult: { status: n, queryText: l, answerText: i, citations: r, channelIds: o },
+            hasPositiveFeedback: null,
+        });
     },
     SMART_SEARCH_FETCH_FAILURE: function (e) {
         let { smartSearchQuery: t, status: n } = e,
             { requestKey: i, guildId: r, queryText: a, channelIds: s } = t;
-        VB(r).set(i, { status: n, queryText: a, answerText: "", citations: [], channelIds: s });
+        VB(r).set(i, {
+            smartSearchResult: { status: n, queryText: a, answerText: "", citations: [], channelIds: s },
+            hasPositiveFeedback: null,
+        });
+    },
+    SMART_SEARCH_SET_RESULT_FEEDBACK: function (e) {
+        let { smartSearchQuery: t, hasPositiveFeedback: n } = e,
+            { requestKey: i, guildId: r } = t,
+            a = VV(r, i);
+        if (null == a || a.hasPositiveFeedback === n) return !1;
+        a.hasPositiveFeedback = n;
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
@@ -50080,7 +50099,9 @@ function VW(e) {
         let i = [];
         if (
             (n.forEach((e, n) => {
-                (e.channelIds.includes(t.id) || e.citations.some((e) => e.channelId === t.id)) && i.push(n);
+                (e.smartSearchResult.channelIds.includes(t.id) ||
+                    e.smartSearchResult.citations.some((e) => e.channelId === t.id)) &&
+                    i.push(n);
             }),
             0 === i.length)
         )
