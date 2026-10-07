@@ -1,45 +1,46 @@
-l.d(n, { A: () => u });
+l.d(n, { A: () => o });
 var t = l(477900),
     i = l(582128),
     a = l(821609),
     s = l(331322),
-    r = l(834730),
-    c = l(306537),
-    d = l(349164);
-let u = function (e) {
+    r = l(297264),
+    c = l(834730),
+    d = l(306537),
+    u = l(349164);
+let o = function (e) {
     let {
         title: n,
         subtitle: l,
-        description: u,
-        agreement: o,
-        agreementButtonVariant: A = "primary",
-        disagreement: g,
-        disagreementButtonVariant: h = "secondary",
-        onAgree: m,
-        onDisagree: x,
-        modalType: f,
-        channelId: j,
-        guildId: N,
-        "data-testid": p,
+        description: o,
+        agreement: A,
+        agreementButtonVariant: g = "primary",
+        disagreement: h,
+        disagreementButtonVariant: m = "secondary",
+        onAgree: x,
+        onDisagree: f,
+        modalType: j,
+        channelId: N,
+        guildId: p,
+        "data-testid": C,
     } = e;
     i.useEffect(() => {
-        (0, c.Bf)(f, j, N);
-    }, [f, j, N]);
-    let C = i.useCallback(() => {
-            ((0, c.mU)(c.IY.NSFW_CHANNEL_DISAGREE_CTA, f, j, N), x?.());
-        }, [x, f, j, N]),
-        E = i.useCallback(() => {
-            ((0, c.mU)(c.IY.NSFW_CHANNEL_AGREE_CTA, f, j, N), m?.());
-        }, [m, f, j, N]),
-        I = null != o && null != m ? (0, t.jsx)(a.$, { variant: A, text: o, onClick: E }, "agree") : null,
-        b = null != g && null != x ? (0, t.jsx)(a.$, { variant: h, text: g, onClick: C }, "disagree") : null;
+        (0, d.Bf)(j, N, p);
+    }, [j, N, p]);
+    let E = i.useCallback(() => {
+            ((0, d.mU)(d.IY.NSFW_CHANNEL_DISAGREE_CTA, j, N, p), f?.());
+        }, [f, j, N, p]),
+        I = i.useCallback(() => {
+            ((0, d.mU)(d.IY.NSFW_CHANNEL_AGREE_CTA, j, N, p), x?.());
+        }, [x, j, N, p]),
+        b = null != A && null != x ? (0, t.jsx)(a.$, { variant: g, text: A, onClick: I }, "agree") : null,
+        _ = null != h && null != f ? (0, t.jsx)(a.$, { variant: m, text: h, onClick: E }, "disagree") : null;
     return (0, t.jsxs)(s.B, {
         justify: "center",
         align: "center",
         direction: "vertical",
         gap: 16,
-        className: d.XG,
-        "data-testid": p,
+        className: u.XG,
+        "data-testid": C,
         children: [
             (0, t.jsxs)(s.B, {
                 gap: 8,
@@ -47,16 +48,16 @@ let u = function (e) {
                 align: "center",
                 direction: "vertical",
                 children: [
-                    (0, t.jsx)(r.E, { variant: "text-lg/semibold", className: d.DD, children: n }),
+                    (0, t.jsx)(r.D, { variant: "text-lg/semibold", className: u.DD, children: n }),
                     null != l
-                        ? (0, t.jsx)(r.E, {
+                        ? (0, t.jsx)(c.E, {
                               variant: "text-md/medium",
-                              className: d.VA,
+                              className: u.VA,
                               color: "text-muted",
                               children: l,
                           })
                         : null,
-                    (0, t.jsx)(r.E, { variant: "text-md/medium", className: d.h_, color: "text-muted", children: u }),
+                    (0, t.jsx)(c.E, { variant: "text-md/medium", className: u.h_, color: "text-muted", children: o }),
                 ],
             }),
             (0, t.jsx)(s.B, {
@@ -64,7 +65,7 @@ let u = function (e) {
                 justify: "center",
                 align: "center",
                 gap: 16,
-                children: "primary" === h ? [I, b] : [b, I],
+                children: "primary" === m ? [b, _] : [_, b],
             }),
         ],
     });
