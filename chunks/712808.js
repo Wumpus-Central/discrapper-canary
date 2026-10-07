@@ -22,7 +22,7 @@
     ho: () => e$,
     $D: () => eT,
     fu: () => es,
-    Ay: () => ez,
+    Ay: () => eV,
     $C: () => ea,
     vX: () => eN,
     c9: () => eP,
@@ -271,7 +271,7 @@ function K(e, t) {
         }
     }
 }
-async function z(e, t, n) {
+async function V(e, t, n) {
     try {
         let { ticket: r } = await (0, b.g)(n);
         e.ws.sendUpstreamTicketAck(t, r);
@@ -280,7 +280,7 @@ async function z(e, t, n) {
         e.ws.sendUpstreamTicketAck(t, void 0, 403 === n ? "forbidden" : "failed");
     }
 }
-let V = {
+let z = {
         build_error: { location: "build", code: k.xf.BUILD_FAILED },
         healthcheck_failed: { location: "healthcheck", code: k.xf.HEALTHCHECK_FAILED },
         error: { location: "agent", code: k.xf.AGENT_ERROR },
@@ -497,6 +497,13 @@ async function ee(e, t) {
                                     type: "CONJURE_CHAT_COMPACTING_SET",
                                     projectId: t,
                                     compacting: "start" === r.phase,
+                                });
+                        else if ("saving" === r.kind)
+                            ("start" === r.phase || "end" === r.phase) &&
+                                s.h.dispatch({
+                                    type: "CONJURE_CHAT_SAVING_SET",
+                                    projectId: t,
+                                    saving: "start" === r.phase,
                                 });
                         else if ("debug_compaction_declined" === r.kind)
                             null != r.projected &&
@@ -736,7 +743,7 @@ async function ee(e, t) {
                                   }),
                                   ("build_error" === r.kind || "healthcheck_failed" === r.kind || "error" === r.kind) &&
                                       (0, k.Hy)(t, {
-                                          ...V[r.kind],
+                                          ...z[r.kind],
                                           message: r.message,
                                           details: "build_error" === r.kind ? r.stderr_tail : void 0,
                                       }),
@@ -836,7 +843,7 @@ async function ee(e, t) {
                                                       toolCall: r,
                                                   })
                                                 : "request_upstream_ticket" === r.type
-                                                  ? z(n, r.id, r.project_id)
+                                                  ? V(n, r.id, r.project_id)
                                                   : "debug_history_state" === r.type
                                                     ? s.h.dispatch({
                                                           type: "CONJURE_HISTORY_LOAD_SETTLE",
@@ -1404,7 +1411,7 @@ class eF extends i.Ay.Store {
     }
 }
 let eK = [],
-    ez = new eF(s.h, {
+    eV = new eF(s.h, {
         CONJURE_CHAT_CONN_STATE: function (e) {
             let { projectId: t, connState: n } = e;
             if (J.get(t) === n) return !1;
