@@ -4804,7 +4804,10 @@ class tT extends m.A {
     shouldReport() {
         let e = ed.default.getCurrentUser();
         if (e?.isStaff() || e?.isStaffPersonal()) return !0;
-        let t = this.getMediaSessionId();
+        let t =
+            this.context === W.x.STREAM && null != this.parentMediaSessionId
+                ? this.parentMediaSessionId
+                : this.getMediaSessionId();
         return null != t && f().v3(t) % 100 < 5;
     }
     shouldReportPeriodicStats(e) {
