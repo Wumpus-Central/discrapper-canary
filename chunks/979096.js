@@ -196,7 +196,7 @@ class f {
     messages = {
         getLatest: (e) =>
             this.database.execute(
-                { type: "messages.get_latest", table: this.tableId, guildId: e },
+                { type: "messages.get_latest", table: this.tableId, messageKey: this.prefix[0], guildId: e },
                 this.defaultDebugTag,
             ),
     };
