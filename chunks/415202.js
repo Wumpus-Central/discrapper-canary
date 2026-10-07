@@ -4,7 +4,7 @@ var i = n(439372),
     a = n(961250),
     s = n(532309),
     l = n(636592),
-    o = n(17843),
+    o = n(26508),
     d = n(216238);
 let c = 5 * r.A.Millis.MINUTE,
     u = 30 * r.A.Millis.SECOND;
@@ -41,7 +41,7 @@ class _ extends i.A {
             }, c)));
     }
     _initializeProgramRewards() {
-        if (!(0, o.CC)("ProgramRewardsManager")) return;
+        if (!(0, o.CC)()) return;
         let e = s.A.getRewardForProgram(l.W.NITRO);
         ((0, o.J8)(e) ? (0, a.uM)() : (0, a.Ay)(),
             null != this.intervalId && clearInterval(this.intervalId),

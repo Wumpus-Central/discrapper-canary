@@ -2,7 +2,7 @@ n.d(t, { Ay: () => c, uM: () => u });
 var i = n(636537),
     r = n(73153),
     a = n(532309),
-    s = n(17843),
+    s = n(26508),
     l = n(150092),
     o = n(652215);
 async function d() {
@@ -18,5 +18,5 @@ async function c() {
     (0, l.q)() && (await d());
 }
 async function u() {
-    !(0, s.CZ)("ProgramRewardsActionCreators") || a.A.isFetching() || (await d());
+    !(0, s.CZ)() || a.A.isFetching() || (await d());
 }

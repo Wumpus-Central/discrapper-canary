@@ -8,7 +8,7 @@ var i,
     d = n(287809),
     c = n(927813),
     u = n(636592),
-    _ = n(17843),
+    _ = n(26508),
     E =
         (((i = {}).NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD = "NOT_ELIGIBLE_FOR_ANY_PROGRAM_REWARD"),
         (i.CACHE_SHOULD_NOT_FETCH = "CACHE_SHOULD_NOT_FETCH"),
@@ -132,10 +132,10 @@ class f extends l.Ay.PersistedStore {
         return null != A.getValue();
     }
     isReady() {
-        return !this.isFetching() && (this.hasCachedValue() || !(0, _.CZ)("ProgramRewardsStore") || this.isError());
+        return !this.isFetching() && (this.hasCachedValue() || !(0, _.CZ)() || this.isError());
     }
     shouldFetch() {
-        return (0, _.CZ)("ProgramRewardsStore.shouldFetch")
+        return (0, _.CZ)()
             ? A.shouldFetch()
                 ? { shouldFetch: !0 }
                 : { shouldFetch: !1, reason: "CACHE_SHOULD_NOT_FETCH" }
