@@ -1562,7 +1562,6 @@ var j =
         (m[(m.CLIENT_THEMES = 17)] = "CLIENT_THEMES"),
         (m[(m.PREMIUM_COLLECTIBLES = 18)] = "PREMIUM_COLLECTIBLES"),
         (m[(m.CUSTOM_CALL_SOUNDS = 19)] = "CUSTOM_CALL_SOUNDS"),
-        (m[(m.SAVED_MESSAGES = 20)] = "SAVED_MESSAGES"),
         (m[(m.PREMIUM_VOICE_FILTERS = 21)] = "PREMIUM_VOICE_FILTERS"),
         (m[(m.CHAT_WALLPAPERS = 22)] = "CHAT_WALLPAPERS"),
         (m[(m.MONTHLY_ORBS = 23)] = "MONTHLY_ORBS"),
