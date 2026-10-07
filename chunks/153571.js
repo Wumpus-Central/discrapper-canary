@@ -16,7 +16,7 @@ var o = t(477900),
     f = t(355216),
     A = t(625864),
     I = t(866665),
-    b = t(375708);
+    b = t(660183);
 function j(e) {
     let { children: n } = e,
         { notificationCenterVariant: t } = (0, x.X8)({ location: "NotificationsInboxTooltip" }),

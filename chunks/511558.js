@@ -485,7 +485,7 @@ var eP = n(554146),
     eD = n(43105),
     eU = n(131607),
     eV = n(49999),
-    eW = n(375708);
+    eW = n(660183);
 function eF(e) {
     let { targetElementRef: t } = e,
         { allowReordering: n } = eh.q.useConfig({ location: "SoundboardFavoritesCoachmark" }),
@@ -606,7 +606,7 @@ function e5(e) {
         h = (0, W.TW)(d, eR.PremiumTypes.TIER_2),
         m = i.useCallback(
             (e, t, n, i) => {
-                let s = r && e8(e.categoryInfo, h, o);
+                let s = r && e6(e.categoryInfo, h, o);
                 return (0, l.jsx)(e2, {
                     category: e,
                     categoryIndex: t,
@@ -641,10 +641,10 @@ function e5(e) {
         itemIdPrefix: eX,
     });
 }
-function e8(e, t, n) {
+function e6(e, t, n) {
     return (null == n && e.type === ec.Cx.GUILD && !t) || (e.type === ec.Cx.GUILD && e.guild.id !== n && !t);
 }
-var e6 = n(191023),
+var e8 = n(191023),
     e3 = n(192308),
     e7 = n(28863),
     e4 = n(695366),
@@ -672,7 +672,7 @@ function tc(e) {
             graphicPrimary:
                 null != t.emojiId || null != t.emojiName
                     ? (0, l.jsx)(tt.A, { emojiId: t.emojiId, emojiName: t.emojiName, className: tu.Zg })
-                    : (0, l.jsx)(e6.ImageIcon, { size: "md", color: "currentColor", className: tu.Zg }),
+                    : (0, l.jsx)(e8.ImageIcon, { size: "md", color: "currentColor", className: tu.Zg }),
             graphicSecondary: null != a ? (0, l.jsx)(M.A, { guild: a, shouldAnimate: !o && u }) : null,
             titlePrimary: t.name,
             titleSecondary: a?.name,
@@ -1227,7 +1227,7 @@ function tv(e) {
         e1 = i.useCallback(
             (e, n, i, a, o) => {
                 let u = eK[i.sectionIndex],
-                    c = f && e8(u.categoryInfo, B, t) && eH,
+                    c = f && e6(u.categoryInfo, B, t) && eH,
                     d = $ && u.categoryInfo.type === ec.Cx.FAVORITES;
                 return (0, l.jsx)(
                     "ul",
@@ -1283,20 +1283,20 @@ function tv(e) {
                 if (e <= 0 || !f) return !1;
                 let n = eK[e],
                     l = eK[e - 1],
-                    i = e8(n.categoryInfo, B, t),
-                    r = e8(l.categoryInfo, B, t);
+                    i = e6(n.categoryInfo, B, t),
+                    r = e6(l.categoryInfo, B, t);
                 return i && !r;
             },
             [eK, f, B],
         ),
-        e6 = i.useCallback(() => {
+        e8 = i.useCallback(() => {
             let e = g.A.getSoundById("3");
             null != e && V(e);
         }, []),
         e3 = i.useCallback(() => {
             let e = (0, W.Dd)(eR.PremiumTypes.TIER_2);
-            return eW.intl.format(eW.t["tw/SSq"], { nitroTierName: e, onClick: e6 });
-        }, [e6]),
+            return eW.intl.format(eW.t["tw/SSq"], { nitroTierName: e, onClick: e8 });
+        }, [e8]),
         e7 = i.useCallback((e) => (e2(e, t) ? tC : 32), [t, e2]),
         e4 = i.useCallback(
             (e) => {
@@ -1315,7 +1315,7 @@ function tv(e) {
         te = i.useCallback(
             (e, n) => {
                 let i = `${e.key}`,
-                    r = f && e8(e.categoryInfo, B, t),
+                    r = f && e6(e.categoryInfo, B, t),
                     s = e2(n, t),
                     a = eQ.has(i);
                 return (0, l.jsx)(

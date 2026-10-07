@@ -5,7 +5,7 @@ var i = n(488428),
     u = n(486020),
     l = n(403362),
     s = n(652215),
-    o = n(375708);
+    o = n(660183);
 function c(e) {
     let { storageHash: t, canAnimate: n = !1, allowWebp: i = !0 } = e;
     if (n && (0, u.VI)(t)) return i && u.QB ? "webp" : "gif";

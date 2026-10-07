@@ -31,7 +31,7 @@ var i = s(477900),
     D = s(652215),
     T = s(202541),
     P = s(553875),
-    y = s(375708),
+    y = s(660183),
     z = s(367863);
 let M = [
     { icon: l.B, message: P.default.bpksos },

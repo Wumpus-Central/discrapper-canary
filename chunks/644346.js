@@ -31,7 +31,7 @@ var h = n(633075),
     R = n(280450),
     w = n(384377),
     k = n(518477),
-    S = n(375708),
+    S = n(660183),
     W = n(347727);
 function G(e) {
     let { widget: t, className: n, buttonRef: r, additionalMenuItems: l } = e,

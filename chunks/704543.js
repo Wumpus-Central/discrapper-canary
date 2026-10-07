@@ -6,7 +6,7 @@ var s = n(17928),
     e = n(816662),
     a = n(543465),
     u = n(652215),
-    l = n(375708);
+    l = n(660183);
 function c(i) {
     let t = (0, s.bG)([a.Ay], () => a.Ay.isFavorite(i.guild_id, i.id));
     if (i.isThread() || i.isCategory()) return null;

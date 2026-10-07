@@ -27,7 +27,7 @@ var i = n(477900),
     R = n(998218),
     L = n(321987),
     y = n(652215),
-    D = n(375708),
+    D = n(660183),
     v = n(6612);
 function b(e) {
     let { message: t, footer: n, headerClassName: r, illustration: a, showsCloseWindowText: l, spinner: o } = e;

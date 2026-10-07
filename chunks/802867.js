@@ -203,7 +203,7 @@ var L = n(964404),
     W = n(256195),
     $ = n(834730),
     B = n(1215),
-    Y = n(375708),
+    Y = n(660183),
     Z = n(584841);
 function Q(e) {
     let { stream: t, isSmall: n, selected: i, isSelfStream: s } = e;

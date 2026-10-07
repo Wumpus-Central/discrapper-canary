@@ -4,7 +4,7 @@ var i = n(17928),
     a = n(724066),
     s = n(77729),
     l = n(617617),
-    o = n(375708);
+    o = n(660183);
 async function d() {
     if (s.A?.app?.getPreferredSystemLanguages != null) {
         let e = await s.A.app.getPreferredSystemLanguages().then((e) => e[0]);

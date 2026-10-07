@@ -18,7 +18,7 @@ var i = o(477900),
     x = o(821589),
     b = o(49999),
     C = o(307731),
-    k = o(375708),
+    k = o(660183),
     E = o(346089);
 let N = { tension: 800, friction: 24 };
 function A(e) {

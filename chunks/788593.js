@@ -12,7 +12,7 @@ var i = s(477900),
     x = s(207803),
     j = s(591179),
     h = s(485745),
-    v = s(375708),
+    v = s(660183),
     N = s(365611);
 function f(e) {
     let { imageSrc: a, gameName: s } = e,

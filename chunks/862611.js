@@ -34,7 +34,7 @@ var i,
     k = (((i = {}).FETCH_FAILED = "FETCH_FAILED"), (i.NO_GAMES_AVAILABLE = "NO_GAMES_AVAILABLE"), i),
     q = n(190107),
     w = n(652215),
-    U = n(375708),
+    U = n(660183),
     j = n(398889);
 function Q(e) {
     let t,

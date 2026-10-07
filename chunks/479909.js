@@ -1,10 +1,10 @@
 n.d(t, {
-    C: () => t8,
+    C: () => t6,
     Sk: () => ne,
     Zx: () => t1,
     v7: () => t7,
     L0: () => t4,
-    N_: () => t6,
+    N_: () => t8,
     MD: () => nt,
     Ay: () => nl,
     uW: () => nn,
@@ -38,7 +38,7 @@ var l = n(477900),
     N = n(268218),
     v = n(750506),
     T = n(60809),
-    j = n(375708),
+    j = n(660183),
     k = n(836555);
 let _ = { width: 500, height: T.$V },
     R = (0, N.Fe)({
@@ -530,8 +530,8 @@ var eD = n(194004),
     e1 = n(834730),
     e2 = n(140735),
     e5 = n(176781),
-    e8 = n(463930),
-    e6 = n(935063),
+    e6 = n(463930),
+    e8 = n(935063),
     e3 = n(73392),
     e7 = n(650019),
     e4 = n(763754),
@@ -674,7 +674,7 @@ function tc(e) {
                                                                   }),
                                                               ],
                                                           })
-                                                        : (0, l.jsx)(e8.g, {
+                                                        : (0, l.jsx)(e6.g, {
                                                               className: ta.UU,
                                                               name: f,
                                                               colorString: g,
@@ -709,7 +709,7 @@ function tc(e) {
                                                         color: c ? "text-link" : "text-muted",
                                                         className: ta.Z4,
                                                         children: [
-                                                            (0, l.jsx)(e6.X, {
+                                                            (0, l.jsx)(e8.X, {
                                                                 size: "md",
                                                                 color: "currentColor",
                                                                 "aria-label": j.intl.string(j.t.P8tvKG),
@@ -1227,7 +1227,7 @@ function t5(e) {
         [e],
     );
 }
-function t8(e) {
+function t6(e) {
     let { editorRef: t, disabled: n, textValue: l, channelId: r, chatInputType: s, submit: a } = e,
         { analyticsLocations: o } = (0, C.Ay)();
     return i.useCallback(
@@ -1266,7 +1266,7 @@ function t8(e) {
         [n, l, r, t, o, a, s],
     );
 }
-function t6(e, t, n) {
+function t8(e, t, n) {
     let l = i.useCallback(() => {
             t || (0, ex.r$)(t0.kx.EMOJI, e, n);
         }, [t, e, n]),
@@ -1465,9 +1465,9 @@ let nl = i.memo(function (e) {
         e1 = !eV.D_.useSetting() && !(0, eX.isAndroidWeb)() && null != window.ResizeObserver,
         e2 = !e1 || !j.commands?.enabled || !k || "/" !== r,
         e5 = (0, eA.A)(),
-        { fontSize: e8 } = (0, m.cf)([S.Ay], () => ({ fontSize: S.Ay.fontSize })),
-        e6 = (0, m.bG)([eG.A], () => eG.A.isEnabled());
-    t6(j, eB, T.id);
+        { fontSize: e6 } = (0, m.cf)([S.Ay], () => ({ fontSize: S.Ay.fontSize })),
+        e8 = (0, m.bG)([eG.A], () => eG.A.isEnabled());
+    t8(j, eB, T.id);
     let { eventEmitter: e3, handleEditorSelectionChanged: e7 } = t3(ey, r, a),
         e4 = i.useRef(r);
     e4.current = r;
@@ -1482,7 +1482,7 @@ let nl = i.memo(function (e) {
         { autocompleteRef: tl, handleMaybeShowAutocomplete: ti, handleHideAutocomplete: tr } = t7(),
         ts = t2(tt, j, ey),
         ta = t5(ey),
-        tu = t8({ editorRef: ey, disabled: eB, textValue: r, channelId: T.id, chatInputType: j, submit: B }),
+        tu = t6({ editorRef: ey, disabled: eB, textValue: r, channelId: T.id, chatInputType: j, submit: B }),
         td = i.useCallback(
             (e, t, n) => {
                 let l = ey.current;
@@ -1750,8 +1750,8 @@ let nl = i.memo(function (e) {
                                                     onMaybeShowAutocomplete: ti,
                                                     onHideAutocomplete: tr,
                                                     promptToUpload: K,
-                                                    fontSize: e8,
-                                                    spellcheckEnabled: e6,
+                                                    fontSize: e6,
+                                                    spellcheckEnabled: e8,
                                                     canOnlyUseTextCommands: tP,
                                                     className: s()(
                                                         {

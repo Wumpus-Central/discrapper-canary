@@ -8,7 +8,7 @@ let a = (0, n(945810).mj)({
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
 var s = n(235079),
-    l = n(375708);
+    l = n(660183);
 let o = n.p + "122274207f3e636d.webm",
     d = n.p + "8ae88831d931e5a6.webm";
 var c = (((i = {})[(i.THROW_EMOJI = 0)] = "THROW_EMOJI"), (i[(i.SNOW = 1)] = "SNOW"), i);

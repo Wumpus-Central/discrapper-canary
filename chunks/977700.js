@@ -8,7 +8,7 @@ var t = e(477900),
     r = e(486503),
     d = e(885386),
     u = e(957565),
-    p = e(375708);
+    p = e(660183);
 function g(n) {
     let { splashUrl: i, onSelect: e } = n,
         g = d.Q_.useSetting(),

@@ -7,7 +7,7 @@ var i = n(980707),
     s = n(723702),
     d = n(19575),
     c = n(826308),
-    o = n(375708);
+    o = n(660183);
 function p(t) {
     let { text: e, onSelect: n } = t,
         p = (0, c.A)(e);

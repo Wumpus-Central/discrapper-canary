@@ -32,7 +32,7 @@ var i = n(477900),
     U = n(499785),
     w = n(652215),
     H = n(818348),
-    R = n(375708),
+    R = n(660183),
     V = n(660652);
 function T(t) {
     let { guildId: e, transitionState: n, onSubmit: T, onClose: B } = t,

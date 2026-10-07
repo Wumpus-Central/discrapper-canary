@@ -7,7 +7,7 @@ var i = n(148494),
     o = n(25201),
     d = n(46013),
     c = n(381941),
-    u = n(375708);
+    u = n(660183);
 class _ extends r.A {
     actions = { CHANNEL_SELECT: (e) => this.handleChannelSelect(e), DICE_ROLL_START: (e) => this.handleStartRoll(e) };
     rollTimer = null;

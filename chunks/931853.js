@@ -6,7 +6,7 @@ var r = n(477900),
     u = n(834730),
     o = n(363195),
     s = n(711127),
-    c = n(375708),
+    c = n(660183),
     d = n(862649);
 function m(e) {
     let { hasVideoAsset: t, playerState: n, pauseReason: r } = e;

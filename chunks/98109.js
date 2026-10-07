@@ -8,7 +8,7 @@ var a = i(477900),
     u = i(222407),
     d = i(592598),
     l = i(672396),
-    f = i(375708);
+    f = i(660183);
 function h(t) {
     let { onSelect: e, onClose: i } = t,
         h = (0, c.bG)([d.A], () => d.A.isNotificationDisabled(l.KS.TextChat)),

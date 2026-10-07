@@ -24,7 +24,7 @@ var n = l(477900),
     k = l(246338),
     y = l(506774),
     P = l(248675),
-    A = l(375708);
+    A = l(660183);
 let T = `<#${"9".repeat(20)}>`,
     G = "VibegrationsPatchNotesLastChannelsByApp";
 function I(e) {

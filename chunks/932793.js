@@ -78,7 +78,7 @@ class k extends l.PureComponent {
         return a({ pages: this.getPageList(), hasMultiplePages: e > 1 });
     }
 }
-var x = t(375708),
+var x = t(660183),
     C = t(875634);
 function N(e) {
     let { page: a, totalPageCount: t, disabled: s, onPageChange: i } = e,

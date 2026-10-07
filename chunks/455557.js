@@ -9,7 +9,7 @@ var i = t(980707),
     l = t(153594),
     u = t(531335),
     h = t(652215),
-    o = t(375708);
+    o = t(660183);
 function p(e) {
     let { guild: n, onSelect: t } = e,
         p = d.Ay.getDefaultChannel(n.id, !0, h.xBc.CREATE_INSTANT_INVITE),

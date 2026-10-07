@@ -26,7 +26,7 @@ var A = n(832712),
     E = n(652215),
     S = n(790782),
     I = n(355097),
-    j = n(375708),
+    j = n(660183),
     y = n(113528);
 function v(e) {
     let { channel: t, clearUnreadsNotice: n } = e;

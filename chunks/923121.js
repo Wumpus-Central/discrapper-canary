@@ -6,7 +6,7 @@ var i = n(73153),
     a = n(352821),
     o = n(107795),
     d = n(539916),
-    c = n(375708);
+    c = n(660183);
 function u(e) {
     i.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_CONNECTIONS_ADD", connection: e });
 }

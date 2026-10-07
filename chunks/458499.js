@@ -9,7 +9,7 @@ var n = t(17928),
     c = t(428610),
     o = t(946274),
     u = t(363195),
-    m = t(375708);
+    m = t(660183);
 function h(e) {
     let { lastEdit: a, cropAndUpload: t, onChangeImage: h, onClose: g } = e,
         p = (0, n.bG)([u.A], () => u.A.theme);

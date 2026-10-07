@@ -7,7 +7,7 @@ var e = n(477900),
     c = n(732159),
     u = n(365258),
     d = n(929120),
-    l = n(375708);
+    l = n(660183);
 function C(t) {
     let { direction: i, affectedGuildIds: n, settingName: C, onClose: p, transitionState: h } = t,
         k = i === u.AI.RESTRICTING,

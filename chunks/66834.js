@@ -31,7 +31,7 @@ var i = n(562708),
     M = n(157559),
     P = n(652215),
     U = n(204925),
-    w = n(375708);
+    w = n(660183);
 function G(e) {
     M.A.show({ title: w.intl.string(w.t.cTaRxF), body: w.intl.formatToPlainString(w.t["VSd+Aj"], { quantity: e }) });
 }

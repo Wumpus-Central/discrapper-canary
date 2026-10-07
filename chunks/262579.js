@@ -4,7 +4,7 @@ var i = n(477900),
     a = n(789645),
     s = n(204651),
     l = n(580954),
-    o = n(375708);
+    o = n(660183);
 function d(e) {
     let { frameId: t, centerButton: n = !1, ...d } = e,
         c = r.useCallback(() => {

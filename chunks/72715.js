@@ -11,7 +11,7 @@ var n = a(503698),
     h = a(915089),
     j = a(871194),
     o = a(895600),
-    p = a(375708),
+    p = a(660183),
     m = a(744409);
 function u(s) {
     let { transitionState: i, onClose: a, guildTemplate: n } = s,

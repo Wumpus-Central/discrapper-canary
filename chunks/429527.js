@@ -32,7 +32,7 @@ var a = t(477900),
     X = t(652215),
     I = t(202541),
     M = t(181666),
-    T = t(375708),
+    T = t(660183),
     K = t(521857);
 function P(e) {
     let { icon: s, title: t, description: c, footer: l, thumbnailSrc: r, thumbnailImageClassName: n } = e;

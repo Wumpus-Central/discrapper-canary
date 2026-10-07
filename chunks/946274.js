@@ -3,7 +3,7 @@ var n = i(477900),
     a = i(582128),
     s = i(780777),
     l = i(693591),
-    r = i(375708);
+    r = i(660183);
 function o() {
     return [{ name: r.intl.string(r.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "jfif", "png", "gif", "webp", "avif"] }];
 }

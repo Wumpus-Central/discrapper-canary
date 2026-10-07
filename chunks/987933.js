@@ -7,7 +7,7 @@ var l = t(477900),
     r = t(131607),
     c = t(246356),
     u = t(49999),
-    d = t(375708),
+    d = t(660183),
     A = t(401191);
 function m(e) {
     let { targetElementRef: n, openSoundboardPicker: t, shouldShowSoundboardPicker: m } = e,

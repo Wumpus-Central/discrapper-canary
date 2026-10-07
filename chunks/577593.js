@@ -46,7 +46,7 @@ var l = s(477900),
     J = s(177953),
     K = s(203363),
     X = s(321191),
-    Q = s(375708),
+    Q = s(660183),
     Z = s(763800);
 function q(e) {
     let { icon: i, title: s, description: n } = e;
@@ -458,7 +458,7 @@ function e0(e) {
     });
 }
 var e3 = s(717877);
-function e7(e) {
+function e5(e) {
     let { section: i, user: s, currentUser: n, displayProfile: t, guildId: d, channelId: r, onClose: a } = e;
     return i === eh.RP.ACTIVITY
         ? (0, l.jsx)(e_, { user: s, currentUser: n, guildId: d, onClose: a })
@@ -472,7 +472,7 @@ function e7(e) {
                 ? (0, l.jsx)(ep, { user: s, displayProfile: t, guildId: d, onClose: a })
                 : (0, l.jsx)(eH, { user: s, displayProfile: t, onClose: a });
 }
-function e5(e) {
+function e7(e) {
     let {
             user: i,
             currentUser: s,
@@ -533,7 +533,7 @@ function e5(e) {
                           );
                       }),
                   }),
-                  (0, l.jsx)(e7, {
+                  (0, l.jsx)(e5, {
                       items: r,
                       section: A,
                       user: i,
@@ -691,7 +691,7 @@ function e8(e) {
                                                 onClose: z,
                                             }),
                                         }),
-                                        (0, l.jsx)(e5, {
+                                        (0, l.jsx)(e7, {
                                             user: i,
                                             currentUser: s,
                                             displayProfile: Y,

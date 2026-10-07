@@ -3,7 +3,7 @@ var n = a(477900),
     e = a(582128),
     s = a(189213),
     l = a(306537),
-    r = a(375708);
+    r = a(660183);
 function c(t) {
     let { application: i, onAgree: a, onClose: c, onDisagree: o, channelId: E, transitionState: A } = t;
     e.useEffect(() => {

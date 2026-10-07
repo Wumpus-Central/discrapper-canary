@@ -266,8 +266,19 @@
     margin-inline-start: auto
 }
 
-.gameName__1af21,
 .header__1af21 {
+    cursor: pointer
+}
+
+.separated__1af21:before {
+    box-shadow: inset 0 1px 0 var(--border-subtle);
+    content: "";
+    display: block;
+    height: 12px;
+    margin-inline: var(--space-8)
+}
+
+.gameName__1af21 {
     cursor: pointer
 }
 
@@ -2533,4 +2544,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=0bb194a5ed4d025e.css.map*/
+/*# sourceMappingURL=6da0e4e2cba2b0d5.css.map*/

@@ -18,7 +18,7 @@ var i = n(284009),
     T = n(30529),
     m = n(975571),
     g = n(544105),
-    S = n(375708),
+    S = n(660183),
     N = n(731854);
 let C = new d.A("GameConsoleManager");
 async function O(e) {

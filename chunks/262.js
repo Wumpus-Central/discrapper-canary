@@ -3,7 +3,7 @@ var a = n(702841),
     l = n(885386),
     r = n(351906),
     s = n(287809),
-    i = n(375708);
+    i = n(660183);
 let o = "quest_completed",
     d = "legacy_username";
 function c(e, t) {

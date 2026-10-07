@@ -3,7 +3,7 @@ var r = e(288106),
     u = e(604913),
     l = e(993408),
     a = e(623373),
-    o = e(375708);
+    o = e(660183);
 function i(t) {
     return t?.tenantMetadata?.collectibles?.type === u.hE.TARGETED_OFFER;
 }

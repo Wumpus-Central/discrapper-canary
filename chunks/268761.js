@@ -4,7 +4,7 @@ var i = n(360143),
 n(536637);
 var a = n(927813),
     s = n(37411),
-    l = n(375708);
+    l = n(660183);
 function o() {
     return [
         { id: "1hour", label: l.intl.string(l.t.cs8A1c), value: a.A.Minutes.HOUR },

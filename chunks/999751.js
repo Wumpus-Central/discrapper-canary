@@ -17,7 +17,7 @@ var i = n(477900),
     m = n(978171),
     E = n(834730),
     I = n(29160),
-    S = n(375708),
+    S = n(660183),
     _ = n(177129);
 let N = function (e) {
     let { className: t, hasVideo: n, text: l, hasConnectedChannel: r, textVariant: a = "text-md/medium" } = e,

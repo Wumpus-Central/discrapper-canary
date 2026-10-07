@@ -28,7 +28,7 @@ var r = n(297264),
     k = n(229087),
     R = n(753437),
     y = n(229231),
-    L = n(375708),
+    L = n(660183),
     S = n(149253);
 function _(e) {
     let { tags: t, allowEditing: n, widgetType: a, gameId: r, className: d, disableInteraction: o = !1 } = e,

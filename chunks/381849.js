@@ -1,7 +1,7 @@
 n.d(t, { Ay: () => d, WR: () => o, _e: () => l, i: () => s });
 var i = n(536637),
     r = n.n(i),
-    a = n(375708);
+    a = n(660183);
 function s() {
     return { minutes: a.t["XIGt+W"], hours: a.t.rhY1Rs, days: a.t.GBLpQ8, months: a.t.XzBNbS, years: a.t.I1E8p6 };
 }

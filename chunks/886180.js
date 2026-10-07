@@ -94,7 +94,7 @@ var L = t(349085),
     y = t(231513),
     R = t(885574),
     G = t(394107),
-    D = t(375708),
+    D = t(660183),
     O = t(233658);
 function T(e) {
     let { gameName: i, text: t } = e;

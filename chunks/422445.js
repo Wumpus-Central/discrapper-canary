@@ -83,7 +83,7 @@ var w = n(73153),
     C = n(317608),
     N = n(378859),
     S = n(206600),
-    v = n(375708),
+    v = n(660183),
     y = n(728846);
 function _(e) {
     let { applicationId: t, channel: n, showChatToasts: a } = e,

@@ -34,7 +34,7 @@ var r = i(477900),
     v = i(339984),
     M = i(652215),
     j = i(577718),
-    B = i(375708),
+    B = i(660183),
     k = i(43850);
 let z = { x: 0, y: 0 };
 function P(e, t) {
@@ -479,7 +479,7 @@ function K(e) {
             if (null != er.current) return () => er.current?.();
         }, []));
     let e4 = K === v.HL.AVATAR || K === v.HL.BANNER,
-        e7 = (0, G.b)(!e4);
+        e8 = (0, G.b)(!e4);
     return (0, r.jsx)(I.f5, {
         value: eN,
         children: (0, r.jsxs)(d.a, {
@@ -507,7 +507,7 @@ function K(e) {
             onClose: V,
             children: [
                 $ &&
-                    !e7 &&
+                    !e8 &&
                     (0, r.jsx)(_.A, {
                         type: K,
                         analyticsPage: Q,
@@ -713,7 +713,7 @@ function K(e) {
                             ],
                         }),
                         $ &&
-                            e7 &&
+                            e8 &&
                             (0, r.jsx)(N.A, { uploadType: K, showUpsell: !0, position: "inline", className: k.Lu }),
                     ],
                 }),

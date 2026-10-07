@@ -19,7 +19,7 @@ var l = n(477900),
     C = n(736653),
     v = n(236285),
     _ = n(386784),
-    y = n(375708),
+    y = n(660183),
     N = n(455168);
 function E(e) {
     let { guildId: t, option: n, selected: a, onSelect: E, hideMemberCount: w, canBeNew: I } = e,

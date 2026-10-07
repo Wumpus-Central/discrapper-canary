@@ -53,7 +53,7 @@ var C = t(604121),
     O = t(652215),
     G = t(49999),
     E = t(556427),
-    S = t(375708);
+    S = t(660183);
 function D(e) {
     let { currentTier: n, giftCount: t, variant: a, onComplete: r, markAsDismissed: o, children: c } = e,
         u = l.useRef(null),

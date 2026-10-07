@@ -14,7 +14,7 @@ var r = a(772707),
     f = a(349828),
     h = a(202541),
     v = a(22277),
-    A = a(375708),
+    A = a(660183),
     k = a(988572);
 function E(t) {
     let { onClose: e, source: a = "channel_context_menu", variant: E = "no_access", limit: g = 3, ...L } = t,

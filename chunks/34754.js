@@ -111,7 +111,7 @@ var eM = n(224640),
     eV = n(320448),
     eH = n(834730),
     eB = n(993401),
-    eW = n(375708),
+    eW = n(660183),
     ez = n(211450);
 function eK(e) {
     return (0, i.jsx)("div", {
@@ -239,8 +239,8 @@ var eY = n(780964),
     e2 = n(475358),
     e3 = n(866665),
     e5 = n(408278),
-    e7 = n(625903),
-    e8 = n(404778),
+    e8 = n(625903),
+    e7 = n(404778),
     e6 = n(689175),
     e4 = n(821609),
     e9 = n(532624),
@@ -383,7 +383,7 @@ function t_(e) {
                                     text: eW.intl.string(eW.t["3D5yo/"]),
                                     children: (0, i.jsx)(e5.K, {
                                         onClick: () => n(),
-                                        icon: e7.SettingsIcon,
+                                        icon: e8.SettingsIcon,
                                         size: "sm",
                                         variant: "icon-only",
                                         "aria-label": eW.intl.string(eW.t["3D5yo/"]),
@@ -434,7 +434,7 @@ function t_(e) {
                             }),
                     ],
                 }),
-                (0, i.jsx)(e8.c, {}),
+                (0, i.jsx)(e7.c, {}),
                 A.length > 0
                     ? (0, i.jsxs)(e6.Ch, {
                           className: tC.Vg,
@@ -676,8 +676,8 @@ var t$ = n(397562),
     t2 = n(718019),
     t3 = n(365607),
     t5 = n(915614),
-    t7 = n(744753),
-    t8 = n(559506),
+    t8 = n(744753),
+    t7 = n(559506),
     t6 = n(646986),
     t4 = n(657538),
     t9 = n(946356),
@@ -1365,8 +1365,8 @@ let n5 = [
         { duration: 3 * L.A.Millis.DAY, label: () => eW.intl.string(eW.t["f3/1ch"]) },
         { duration: void 0, label: () => eW.intl.string(eW.t["46dqJY"]) },
     ],
-    n7 = "forever";
-function n8(e) {
+    n8 = "forever";
+function n7(e) {
     let { status: t, currentStatus: n, description: l } = e,
         a = t !== tv.clD.ONLINE,
         r = (0, i.jsx)(i.Fragment, {
@@ -1380,7 +1380,7 @@ function n8(e) {
                         action: () => (0, n3.A)({ nextStatus: t, prevStatus: n, durationMillis: l }),
                         dontCloseOnAction: !0,
                     },
-                    l ?? n7,
+                    l ?? n8,
                 );
             }),
         });
@@ -1462,14 +1462,14 @@ function it(e) {
                                 },
                                 dontCloseOnAction: !0,
                             },
-                            n ?? n7,
+                            n ?? n8,
                         );
                     }),
                 }),
-                s = n8({ status: tv.clD.ONLINE, currentStatus: e }),
-                o = n8({ status: tv.clD.IDLE, currentStatus: e, description: a(tv.clD.IDLE) }),
-                d = n8({ status: tv.clD.DND, currentStatus: e, description: a(tv.clD.DND) }),
-                c = n8({ status: tv.clD.INVISIBLE, currentStatus: e, description: a(tv.clD.INVISIBLE) });
+                s = n7({ status: tv.clD.ONLINE, currentStatus: e }),
+                o = n7({ status: tv.clD.IDLE, currentStatus: e, description: a(tv.clD.IDLE) }),
+                d = n7({ status: tv.clD.DND, currentStatus: e, description: a(tv.clD.DND) }),
+                c = n7({ status: tv.clD.INVISIBLE, currentStatus: e, description: a(tv.clD.INVISIBLE) });
             return (0, i.jsxs)(i.Fragment, {
                 children: [
                     s,
@@ -1713,7 +1713,7 @@ function it(e) {
                                         className: ez.rf,
                                         style: { pointerEvents: W ? "none" : void 0 },
                                         children: [
-                                            (0, i.jsx)(t8.A, { userId: t.id }),
+                                            (0, i.jsx)(t7.A, { userId: t.id }),
                                             (0, i.jsx)(ne.Ay, {
                                                 className: ez.eF,
                                                 user: t,
@@ -1729,7 +1729,7 @@ function it(e) {
                                                     shouldGlowTenureBadge: H.current,
                                                 }),
                                             }),
-                                            (0, i.jsx)(t7.A, { isPremiumUser: k, onInteraction: n }),
+                                            (0, i.jsx)(t8.A, { isPremiumUser: k, onInteraction: n }),
                                             (0, i.jsx)(no.A, {
                                                 userId: t.id,
                                                 userBio: p?.bio,
@@ -2249,7 +2249,7 @@ function i3(e) {
     });
 }
 var i5 = n(764014);
-function i7(e) {
+function i8(e) {
     let { targetElementRef: t } = e,
         n = (0, tP.A)((e) => e.isOpen),
         [l, a] = (0, tM.kn)(n ? [] : [c.M.ORB_WALLET_PROFILE_INTRODUCTION_COACHMARK], nY.m.ACCOUNT_NAME_ZONE, !0);
@@ -2278,7 +2278,7 @@ function i7(e) {
           })
         : null;
 }
-function i8(e) {
+function i7(e) {
     let { isQuestBarEmpty: t, hasLoadedQuestBar: n } = (0, ii.c9)(),
         l = null != e.targetElementRef.current && t && n,
         [a, r] = (function (e) {
@@ -2334,7 +2334,7 @@ function i8(e) {
               : (0, i.jsxs)(i.Fragment, {
                     children: [
                         (0, i.jsx)(i2, { groupName: nY.m.ACCOUNT_NAME_ZONE, targetElementRef: e.targetElementRef }),
-                        e.isOrbchievementsEnabled && (0, i.jsx)(i7, { targetElementRef: e.targetElementRef }),
+                        e.isOrbchievementsEnabled && (0, i.jsx)(i8, { targetElementRef: e.targetElementRef }),
                         (0, i.jsx)(iM.Ay, {
                             contentTypes: e.additionalDCs ?? [],
                             groupName: nY.m.ACCOUNT_NAME_ZONE,
@@ -2822,13 +2822,13 @@ function lP(e) {
         }, [r]),
         g = ex.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lL.A)("1791399731507", !0);
+        let e = (0, lL.A)("1791399835675", !0);
         t =
             null != e
                 ? eW.intl.formatToPlainString(eW.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
                 : eW.intl.formatToPlainString(eW.t.Gzh6ZP, { webBuildOverride: a.id });
     } else t = eW.intl.string(eW.t.cduTBL);
-    let A = e7.SettingsIcon,
+    let A = e8.SettingsIcon,
         v = (0, lC.w)();
     return (
         (A = null != a ? l_.H : v.Component),
@@ -3982,7 +3982,7 @@ class lB extends l.PureComponent {
         } = this.props;
         return null == n
             ? null
-            : (0, i.jsx)(i8, {
+            : (0, i.jsx)(i7, {
                   guildId: this.props.selectedGuildId ?? null,
                   currentUser: n,
                   targetElementRef: this.avatarWithPopoutRef,

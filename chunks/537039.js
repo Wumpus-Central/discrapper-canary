@@ -14,7 +14,7 @@ var s = n(477900),
     w = n(467324),
     p = n(438437),
     g = n(306417),
-    A = n(375708),
+    A = n(660183),
     f = n(588466);
 function j(e) {
     let { didSelfVote: t, label: n, percentage: i } = e;

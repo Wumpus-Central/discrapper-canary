@@ -21,7 +21,7 @@ var i = t(17928),
     I = t(470743),
     v = t(806931),
     j = t(652215),
-    T = t(375708);
+    T = t(660183);
 function N(e) {
     let { onClose: n, onSelect: t, channel: N, remoteMode: _, onInteraction: b } = e,
         O = (0, c.Us)(),

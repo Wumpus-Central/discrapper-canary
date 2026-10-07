@@ -62,7 +62,7 @@ var l,
     b = n(299846),
     H = n(693879);
 n(424994);
-var k = n(375708),
+var k = n(660183),
     W = n(681978);
 let Z = {
     [x.ContentInventoryEntryType.TOP_ARTIST]: [ta],

@@ -127,7 +127,7 @@ var ti = i(946261),
     th = i(202541),
     tp = i(758836),
     tm = i(341535),
-    tg = i(375708),
+    tg = i(660183),
     tA = i(368773);
 function tx(t) {
     let { openedGift: e } = t,

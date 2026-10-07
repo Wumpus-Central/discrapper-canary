@@ -8,7 +8,7 @@ if (221552 == a.j) var c = a(477782);
 if (221552 == a.j) var r = a(173936);
 var o = a(317525),
     d = a(370480),
-    h = a(375708);
+    h = a(660183);
 let v = "guild-connection-roles";
 function u(l) {
     (0, s.openModalLazy)(

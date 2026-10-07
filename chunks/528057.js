@@ -3,7 +3,7 @@ var i = n(477900);
 n(582128);
 var r = n(416696),
     a = n(204651),
-    s = n(375708);
+    s = n(660183);
 function l(e) {
     let { isSelfStream: t, centerButton: n = !1, onMouseEnter: l, onMouseLeave: o, ...d } = e,
         c = n ? a.l : a.A,

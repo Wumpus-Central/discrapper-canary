@@ -4,7 +4,7 @@ var l = n(582128),
     r = n(157559),
     s = n(773669);
 n(723702);
-var a = n(375708);
+var a = n(660183);
 let o = ["png", "gif", "jpg", "jpeg", "jfif", "webp", "avif"],
     u = ["mp4", "mov", "qt", "webm"],
     c = ["mp3", "m4a", "wav", "ogg", "opus", "flac"];

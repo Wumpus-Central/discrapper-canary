@@ -6,7 +6,7 @@ var n = t(477900),
     r = t(318346),
     c = t(70926),
     o = t(652215),
-    d = t(375708);
+    d = t(660183);
 function u(e) {
     let { location: l, onNavigate: t, variant: u, themeOverride: A } = e,
         C = a.useCallback(() => {

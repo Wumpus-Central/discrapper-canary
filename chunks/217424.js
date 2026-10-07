@@ -42,7 +42,7 @@ var i = n(477900),
     B = n(71393),
     J = n(994500);
 n(827669);
-var z = n(375708),
+var z = n(660183),
     Z = n(894625);
 let K = { tag: "span", variant: "text-md/normal", color: "text-default" },
     X = { className: a()("mention", Z.lE) };

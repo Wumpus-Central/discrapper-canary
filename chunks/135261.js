@@ -18,7 +18,7 @@ var l = n(477900),
     S = n(186306),
     y = n(339871),
     C = n(820066),
-    A = n(375708),
+    A = n(660183),
     b = n(9287);
 function I(e) {
     let { slateEditor: t, options: n, iconClassName: i, dividerClassName: r } = e;

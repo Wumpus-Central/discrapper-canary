@@ -36,7 +36,7 @@ var s = n(477900),
     b = n(190107),
     U = n(652215),
     F = n(818348),
-    H = n(375708);
+    H = n(660183);
 function V(e) {
     let t = (0, a.bG)([v.A], () => v.A.getQuestPreviewOverride(w.uF.QUEST_BAR_V2), []),
         n = (0, a.bG)([v.A], () => v.A.getQuestPreviewOverride(w.uF.ACTIVITY_PANEL), []),

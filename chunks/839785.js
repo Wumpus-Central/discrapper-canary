@@ -18,7 +18,7 @@ var n = e(477900),
     m = e(353394),
     p = e(754495),
     y = e(939075),
-    I = e(375708),
+    I = e(660183),
     k = e(535355);
 function R(t) {
     let { user: i, entry: e, transitionState: R, onAction: S, onClose: b, onOpenGameSettings: g } = t,

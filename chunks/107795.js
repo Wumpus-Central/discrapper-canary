@@ -20,7 +20,7 @@ var i = n(636537),
     u = n(655943),
     I = n(652215),
     E = n(539916),
-    N = n(375708);
+    N = n(660183);
 function S() {
     l.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_PROMPTS_RESET" });
 }

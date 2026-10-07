@@ -54,7 +54,7 @@ var T = n(87719),
     M = n(617986),
     V = n(190107),
     W = n(652215),
-    G = n(375708);
+    G = n(660183);
 function j(t) {
     let { quest: e, questContent: n, questContentPosition: r, questContentRowIndex: s, sourceQuestContent: a } = t,
         o = (0, u.bG)([g.default], () => g.default.getCurrentUser()),

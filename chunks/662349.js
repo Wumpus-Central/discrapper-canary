@@ -7,7 +7,7 @@ var n = t(477900),
     c = t(597770),
     o = t(821609),
     u = t(287809),
-    d = t(375708),
+    d = t(660183),
     h = t(164463);
 function p(i) {
     let { wishlistOwner: e, isOwned: t, hideIcon: n, shortText: l } = i,

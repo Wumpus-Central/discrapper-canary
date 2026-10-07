@@ -17,7 +17,7 @@ function x(t) {
     let { analyticsLocations: e, distributor: n, gameId: l, level: i } = t;
     p.default.track(g.HAw.PLAY_CTA_IMPRESSION, { location_stack: e, distributor: n, game_id: l, level: i });
 }
-var _ = n(375708);
+var _ = n(660183);
 function I(t) {
     let {
             distributorCTAConfigs: e,

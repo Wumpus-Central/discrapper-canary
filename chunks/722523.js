@@ -11,7 +11,7 @@ var s = r(503698),
     o = r(224331),
     E = r(568065),
     p = r(25525),
-    _ = r(375708),
+    _ = r(660183),
     R = r(191137);
 function f(t) {
     let { className: e, guildId: r, powerup: s, onClick: l } = t,

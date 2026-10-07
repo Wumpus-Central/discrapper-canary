@@ -4,7 +4,7 @@ var i = e(477900),
     r = e(477782),
     s = e(442433),
     d = e(50268),
-    l = e(375708);
+    l = e(660183);
 function c(t) {
     let { skuId: a } = t;
     return (0, i.jsx)(n.W, {

@@ -14,7 +14,7 @@ var l = i(477900),
     g = i(953727),
     v = i(469802),
     m = i(643501),
-    p = i(375708),
+    p = i(660183),
     j = i(510920);
 let x = (0, r.k)(function (e) {
     let { width: t = 24, height: i = 24, color: n = "currentColor", foreground: s, ...a } = e;

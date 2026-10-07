@@ -4,7 +4,7 @@ t(582128);
 var s = t(980707),
     n = t(477782),
     a = t(628284),
-    i = t(375708);
+    i = t(660183);
 function c(e) {
     let { tabs: l, selectedTab: t, onTabSelect: c, onClose: o } = e;
     return (0, r.jsx)(s.W, {

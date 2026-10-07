@@ -23,7 +23,7 @@ let f = (0, t(945810).mj)({
     defaultConfig: { showServerTag: !1 },
     variations: { 1: { showServerTag: !0 } },
 });
-var C = t(375708),
+var C = t(660183),
     p = t(604280);
 function b(e) {
     let { profile: l, disableGuildNameClick: t, guildNameId: s } = e,

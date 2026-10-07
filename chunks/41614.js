@@ -10,7 +10,7 @@ var e = a(17928),
     c = a(957565),
     p = a(832163),
     h = a(746080),
-    u = a(375708);
+    u = a(660183);
 function g(t) {
     let { guild: n, onSelect: a } = t,
         g = (0, e.bG)([p.A], () => p.A.getStorefrontData(n.id)?.storefront?.applicationId),

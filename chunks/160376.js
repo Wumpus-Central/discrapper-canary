@@ -10,7 +10,7 @@ var l = n(788733),
     d = n(287743);
 let A = new Set([o.fg2.LEAGUE_OF_LEGENDS, o.fg2.ROBLOX, o.fg2.TWITCH, o.fg2.YOUTUBE]);
 var f = n(190915),
-    p = n(375708);
+    p = n(660183);
 function g(t) {
     let e = (0, d.A)(t.session_id),
         n = (function (t) {

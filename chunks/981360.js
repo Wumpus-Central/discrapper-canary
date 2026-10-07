@@ -47,7 +47,7 @@ var w = n(212407),
     W = n(604913),
     Z = n(773669);
 n(321073);
-var Y = n(375708);
+var Y = n(660183);
 function $(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     if (t) return Y.intl.formatToPlainString(Y.t["/0Yndu"], { num: e.bundledProducts?.length });
@@ -719,18 +719,18 @@ function e2(e) {
 }
 var e8 = n(268959),
     e6 = n(866665),
-    e5 = n(508770),
-    e3 = n(278416);
+    e3 = n(508770),
+    e5 = n(278416);
 let e9 = (e) => {
     let { promotion: t } = e;
     return (0, s.jsx)(e6.m, {
         position: "top",
         asContainer: !0,
         text: Y.intl.formatToPlainString(Y.t.cNtuKF, { offerName: t.displayName }),
-        children: (0, s.jsx)(e5.E, {
+        children: (0, s.jsx)(e3.E, {
             type: { text: Y.intl.string(Y.t["nb5PC/"]) },
             variant: "expressive",
-            icon: e3.TagIcon,
+            icon: e5.TagIcon,
         }),
     });
 };
@@ -1002,7 +1002,7 @@ function tV(e) {
             (0, s.jsxs)("div", {
                 className: tz.fZ,
                 children: [
-                    (0, s.jsx)(e3.TagIcon, { size: "xs", color: "currentColor", className: tz.CE }),
+                    (0, s.jsx)(e5.TagIcon, { size: "xs", color: "currentColor", className: tz.CE }),
                     (0, s.jsx)(G.E, { variant: "text-xs/medium", color: "none", children: t }),
                 ],
             }),
@@ -1336,13 +1336,13 @@ var tY = n(529756),
     t2 = n(365491),
     t8 = n(668953),
     t6 = n(881636),
-    t5 = n(807562);
-function t3(e) {
+    t3 = n(807562);
+function t5(e) {
     let { goPrev: t, goNext: n } = e;
     return (0, s.jsxs)(s.Fragment, {
         children: [
             (0, s.jsx)("div", {
-                className: t5.Y,
+                className: t3.Y,
                 children: (0, s.jsx)(t$.K, {
                     "aria-label": Y.intl.string(Y.t["3NdvMK"]),
                     onClick: t,
@@ -1352,7 +1352,7 @@ function t3(e) {
                 }),
             }),
             (0, s.jsx)("div", {
-                className: t5.K,
+                className: t3.K,
                 children: (0, s.jsx)(t$.K, {
                     "aria-label": Y.intl.string(Y.t.RYIeOX),
                     onClick: n,
@@ -1477,7 +1477,7 @@ function t7(e) {
                         isOrbCheckoutModalOpen: m,
                     }),
                 }),
-                v && N > 1 && (0, s.jsx)(t3, { goPrev: R, goNext: y }),
+                v && N > 1 && (0, s.jsx)(t5, { goPrev: R, goNext: y }),
                 (0, s.jsxs)("div", {
                     className: t9.VG,
                     children: [

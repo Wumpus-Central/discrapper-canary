@@ -39,7 +39,7 @@ var n = i(284009),
     K = i(780907),
     G = i(581730),
     F = i(672396),
-    Y = i(375708),
+    Y = i(660183),
     H = i(486020),
     J = i(652215),
     B = i(477900),
@@ -197,14 +197,14 @@ var tq = i(554146),
     t2 = i(192820),
     t3 = i(308726),
     t8 = i(46282),
-    t7 = i(818023),
-    t9 = i(731854),
-    t5 = i(709946),
+    t9 = i(818023),
+    t5 = i(731854),
+    t7 = i(709946),
     t4 = i(302933);
 function t6(t) {
     let { game: e } = t,
         i = (0, tZ.h)(e.id);
-    return null == i ? null : (0, B.jsx)(t0.V, { src: i.getIconURL(t7.iu.LARGE), size: 40 });
+    return null == i ? null : (0, B.jsx)(t0.V, { src: i.getIconURL(t9.iu.LARGE), size: 40 });
 }
 let et = 5 * R.A.Millis.SECOND,
     ee = 8 * R.A.Millis.SECOND,
@@ -575,7 +575,7 @@ let e_ = new eN(s.h, {
         if (M.default.hasChangedRenderMode(n)) return;
         let l = (function (t, e) {
             if (V.A.isNotificationDisabled(F.KS.WelcomeNudge)) return null;
-            t2.Ay.supports(t9.O5.VIDEO) ||
+            t2.Ay.supports(t5.O5.VIDEO) ||
                 (e = e.filter((t) => t.type !== F.Jr.GO_LIVE_VOICE && t.type !== F.Jr.GO_LIVE_NON_VOICE));
             let { trackView: n, trackClick: l } = (0, G.Y9)(F.KS.WelcomeNudge, {
                     notif_type: F.KS.WelcomeNudge,
@@ -638,7 +638,7 @@ let e_ = new eN(s.h, {
                 icon:
                     null != t
                         ? (0, B.jsx)(t6, { game: t })
-                        : (0, B.jsx)("img", { src: i(513653), className: t5.Kk, alt: "" }),
+                        : (0, B.jsx)("img", { src: i(513653), className: t7.Kk, alt: "" }),
                 title: s,
                 hint: function () {
                     return (0, tz.sI)((0, G.Jn)(), Y.t["z8/sgJ"], { highlightAdminWarningIfElevated: !0 });

@@ -26,7 +26,7 @@ var i = n(636537),
     E = n(962052),
     A = n(356645),
     h = n(652215),
-    f = n(375708);
+    f = n(660183);
 function I(e, t) {
     E.A.init({
         userToken: e,

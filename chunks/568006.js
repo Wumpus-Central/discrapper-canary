@@ -22,7 +22,7 @@ var i = n(477900),
     _ = n(820672),
     j = n(768349),
     N = n(905322),
-    y = n(375708);
+    y = n(660183);
 function T(e) {
     let { currentUserId: t, message: l, application: r, channel: a, analyticsLocations: T, onView: S } = e,
         { staticBannerSrc: b, videoBannerSrc: k, bannerAspectRatio: R } = (0, g.f)(r),

@@ -6,16 +6,16 @@ var o = n(477900),
     i = n(597770),
     d = n(688810),
     s = n(75678),
-    p = n(412260),
-    u = n(49999),
+    u = n(412260),
+    p = n(49999),
     c = n(652215),
-    b = n(375708),
+    b = n(660183),
     m = n(971656);
 function A(e) {
     let { markAsDismissed: t, className: n } = e,
         { analyticsLocations: A } = (0, d.Ay)(),
-        _ = (0, a.bG)([p.A], () => {
-            let e = p.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR);
+        _ = (0, a.bG)([u.A], () => {
+            let e = u.A.getMarketingComponentByType(l.C.GIFT_REMINDER_NAGBAR);
             return null == e || "giftReminderNagbar" !== e.properties.properties.oneofKind
                 ? null
                 : e.properties.properties.giftReminderNagbar;
@@ -27,7 +27,7 @@ function A(e) {
               className: n,
               children: [
                   (0, o.jsx)(r.PM, {
-                      onClick: () => t(u.i.USER_DISMISS),
+                      onClick: () => t(p.i.USER_DISMISS),
                       noticeType: c.kqX.GIFTING_PROMOTION_REMINDER,
                   }),
                   (0, o.jsx)(i.GiftIcon, {

@@ -11,7 +11,7 @@ var s = e(702841),
     u = e(900019),
     I = e(279547),
     E = e(961997),
-    _ = e(375708);
+    _ = e(660183);
 function C(t) {
     let { channelId: n, messageId: e, transitionState: C, onClose: h } = t,
         p = (0, s.bG)([u.A], () => u.A.getFpMessageInfo(e)),

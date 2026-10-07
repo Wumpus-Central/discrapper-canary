@@ -4,7 +4,7 @@ r(582128);
 var l = r(331322),
     s = r(297264),
     a = r(821609),
-    i = r(375708);
+    i = r(660183);
 let o = function (e) {
     let { onShopCollectionClick: t, className: r } = e;
     return (0, n.jsxs)(l.B, {

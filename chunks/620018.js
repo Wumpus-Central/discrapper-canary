@@ -26,7 +26,7 @@ var l = n(477900),
     D = n(492260),
     S = n(103355),
     j = n(988794),
-    N = n(375708),
+    N = n(660183),
     G = n(214040);
 function T(t) {
     let { recurrenceId: e, originalScheduledStartTime: i, guildEventId: r, onClick: a, isActive: u } = t,

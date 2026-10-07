@@ -8,7 +8,7 @@ var s = l(477900),
     u = l(316254),
     o = l(723702),
     d = l(19575),
-    p = l(375708);
+    p = l(660183);
 function h(t) {
     let { text: e, target: l, onHeightUpdate: h, onSelect: x } = t,
         m = i.useCallback(() => {

@@ -8,7 +8,7 @@ var r = n(205693),
     o = n(975571),
     u = n(200749),
     c = n(652215),
-    d = n(375708);
+    d = n(660183);
 function h(e) {
     let { stream: t, width: n, avError: h, avErrorContext: m, selected: A = !1, noArt: g = !1 } = e,
         f = (function (e) {

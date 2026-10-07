@@ -8,7 +8,7 @@ var a = e(477900),
     r = e(531685),
     m = e(486020),
     h = e(240248),
-    u = e(375708),
+    u = e(660183),
     o = e(705843);
 function N(i) {
     let { guildName: s, iconSize: e, className: l } = i,

@@ -5,7 +5,7 @@ var s = n(408278),
     l = n(921853),
     r = n(834730),
     a = n(320448),
-    o = n(375708),
+    o = n(660183),
     u = n(22306);
 function d(e) {
     let { currentPageIndex: t, numPages: n, onChangePage: d, children: c, showPageCount: g = !0, ref: m, ...A } = e,

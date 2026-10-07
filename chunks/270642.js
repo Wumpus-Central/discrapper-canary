@@ -24,7 +24,7 @@ var i,
     T = n(696451),
     v = n(287809),
     S = n(654265),
-    O = n(375708);
+    O = n(660183);
 function R(e, t) {
     let { joinRequest: n, joinRequestGuild: i } = (0, S.A)(t.id),
         l = (0, c.bG)([v.default], () => v.default.getUser(n?.userId)),

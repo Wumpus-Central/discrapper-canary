@@ -34,7 +34,7 @@ var h = t(793574),
     G = t(342942),
     D = t(49999),
     L = t(394107),
-    U = t(375708),
+    U = t(660183),
     F = t(377325);
 function V(e) {
     let { guildId: n, instance: t } = e,

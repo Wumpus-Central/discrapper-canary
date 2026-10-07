@@ -8,7 +8,7 @@ var i = t(136722),
     s = t(961973),
     d = t(539916),
     c = t(652215),
-    A = t(375708);
+    A = t(660183);
 async function g(e, n) {
     return null == e || (await h(e, n, { removingView: !0, removingChat: !0 }));
 }

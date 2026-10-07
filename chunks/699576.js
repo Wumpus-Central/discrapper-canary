@@ -10,7 +10,7 @@ var a = n(477900),
     d = n(688796),
     o = n(652215),
     k = n(339984),
-    b = n(375708),
+    b = n(660183),
     p = n(758824);
 function C(t) {
     let { uploadType: e, className: n, ...s } = t,

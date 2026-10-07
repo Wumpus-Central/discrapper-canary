@@ -23,7 +23,7 @@ var a = n(477900),
     w = n(801870),
     E = n(586035),
     D = n(190107),
-    _ = n(375708),
+    _ = n(660183),
     I = n(928213);
 function S(e) {
     let { quest: t, avatarDeco: n, onUseNow: r, user: s, mode: i } = e,

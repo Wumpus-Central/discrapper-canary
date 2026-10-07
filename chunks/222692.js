@@ -6,7 +6,7 @@ var r = n(192308),
     s = n(625075),
     a = n(192820),
     o = n(731854),
-    u = n(375708);
+    u = n(660183);
 function c(e) {
     s.k.getConfig({ location: "handleCameraUnavailable" }).videoEnabled
         ? a.Ay.supports(o.O5.VIDEO)

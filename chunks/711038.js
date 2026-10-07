@@ -8,7 +8,7 @@ var n = s(477900),
     c = s(814793),
     u = s(160185),
     d = s(190107),
-    m = s(375708);
+    m = s(660183);
 function x(t) {
     let { questId: e } = t;
     return (0, n.jsx)(u.i, {

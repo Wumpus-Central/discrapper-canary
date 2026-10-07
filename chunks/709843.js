@@ -8,7 +8,7 @@ var t = s(477900),
     c = s(468689),
     u = s(576705),
     o = s(652215),
-    b = s(375708);
+    b = s(660183);
 function p(e) {
     let { guild: a, onSelect: s } = e,
         [p, h] = r.useState(a.premiumProgressBarEnabled),

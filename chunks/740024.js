@@ -6,7 +6,7 @@ var e = n(980707),
     c = n(442433),
     r = n(679164),
     s = n(957565),
-    o = n(375708);
+    o = n(660183);
 function d(t) {
     let { attachmentUrl: a, attachmentName: n, onSelect: d } = t;
     return (0, i.jsx)(e.W, {

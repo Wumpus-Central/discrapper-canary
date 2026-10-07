@@ -6,7 +6,7 @@ var r = n(477900),
     u = n(95477),
     s = n(545059),
     o = n(870391),
-    d = n(375708);
+    d = n(660183);
 function p(t) {
     let { onClose: e, transitionState: n, groupId: p, initialUserIds: c } = t,
         m = (0, a.bG)([o.A], () => (null == p ? null : o.A.getGroup(p))),

@@ -2,7 +2,7 @@ n.d(e, { A: () => u });
 var s = n(477900);
 n(582128);
 var r = n(9578),
-    a = n(375708),
+    a = n(660183),
     t = n(195719);
 function u(l) {
     let { termsOfServiceUrl: e, privacyPolicyUrl: n } = l;

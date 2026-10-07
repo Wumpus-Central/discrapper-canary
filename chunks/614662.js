@@ -11,8 +11,8 @@ var l = n(477900),
     f = n(862482),
     h = n(109802),
     C = n(452027),
-    m = n(778712),
-    p = n(297264),
+    p = n(778712),
+    m = n(297264),
     E = n(289873),
     I = n(890497),
     y = n(398590),
@@ -50,7 +50,7 @@ var l = n(477900),
     X = n(766075),
     $ = n(403362),
     J = n(758836),
-    ee = n(375708),
+    ee = n(660183),
     et = n(341535),
     en = n(863263);
 function el(e) {
@@ -65,7 +65,7 @@ function el(e) {
             openGiftingBadgePostPurchaseModal: h,
             onClose: C,
         } = e,
-        [p, E] = r.useState([]),
+        [m, E] = r.useState([]),
         [g, P] = r.useState(!1),
         { isLoading: R, potentialRecipients: M } = (function () {
             r.useEffect(() => {
@@ -92,19 +92,19 @@ function el(e) {
             };
         })(),
         { analyticsLocations: L } = (0, W.Ay)(K.A.PREMIUM_GIFT_SUCCESS_MODAL),
-        b = (0, c.yK)([N.default], () => p.map(N.default.getUser).filter($.Vq), [p]),
+        b = (0, c.yK)([N.default], () => m.map(N.default.getUser).filter($.Vq), [m]),
         U = i > 1,
         k = U ? !a : null == t,
-        H = 1 === p.length,
+        H = 1 === m.length,
         j = H ? null == t : !a,
-        el = p.length > 1 && null == s,
-        ei = g || 0 === p.length || p.length > i || b.length !== p.length || j || el,
+        el = m.length > 1 && null == s,
+        ei = g || 0 === m.length || m.length > i || b.length !== m.length || j || el,
         es = M.map((e) => ({
             id: e.id,
             value: e.id,
             label: w.Ay.getUserTag(e),
-            leading: (0, l.jsx)(_.A, { user: e, size: m._3.SIZE_20 }),
-            disabled: U && p.length >= i && !p.includes(e.id),
+            leading: (0, l.jsx)(_.A, { user: e, size: p._3.SIZE_20 }),
+            disabled: U && m.length >= i && !m.includes(e.id),
         })),
         ea = (0, q.D)(d),
         [eu, ...ec] = (0, c.yK)([Y.A], () => d.map((e) => Y.A.getProduct(e)).filter((e) => null != e));
@@ -118,7 +118,7 @@ function el(e) {
                 (await (0, A.UN)(e, t), (r = { recipients: [e], failedRecipients: [] }));
             } else {
                 if (null == s) throw Error("Checkout session ID must be defined");
-                let e = await (0, Z.kW)(p, s),
+                let e = await (0, Z.kW)(m, s),
                     t = new Set(e.successful_recipient_ids),
                     n = new Set(e.failed_recipient_ids);
                 r = { recipients: b.filter((e) => t.has(e.id)), failedRecipients: b.filter((e) => n.has(e.id)) };
@@ -175,7 +175,7 @@ function el(e) {
                                                       tabularNumbers: !0,
                                                       role: "status",
                                                       children: ee.intl.format(ee.t.H55rqz, {
-                                                          numMembers: p.length,
+                                                          numMembers: m.length,
                                                           maxMemberLimit: i,
                                                       }),
                                                   }),
@@ -188,7 +188,7 @@ function el(e) {
                                               placeholder: ee.intl.string(et.default.xdDO7f),
                                               loading: R || k,
                                               disabled: k || g,
-                                              value: p,
+                                              value: m,
                                               onSelectionChange: ed,
                                               options: es,
                                           }),
@@ -200,7 +200,7 @@ function el(e) {
                                       placeholder: ee.intl.string(ee.t.J019jZ),
                                       loading: R || k,
                                       disabled: k || g,
-                                      value: p[0],
+                                      value: m[0],
                                       onSelectionChange: (e) => ed(null != e ? [e] : []),
                                       options: es,
                                   }),
@@ -383,7 +383,7 @@ function eu(e) {
                                       skuId: V(),
                                   })
                                 : null,
-                            (0, l.jsx)(p.D, {
+                            (0, l.jsx)(m.D, {
                                 variant: "heading-lg/semibold",
                                 className: s()({ [ea.wx]: null == A && !Z, [ea.$A]: null != A && !Z }),
                                 children:
@@ -399,8 +399,8 @@ function eu(e) {
                                           (0, l.jsxs)("div", {
                                               className: ea.jx,
                                               children: [
-                                                  (0, l.jsx)(_.A, { user: T, size: m._3.SIZE_24 }),
-                                                  (0, l.jsx)(p.D, {
+                                                  (0, l.jsx)(_.A, { user: T, size: p._3.SIZE_24 }),
+                                                  (0, l.jsx)(m.D, {
                                                       variant: "heading-lg/semibold",
                                                       children: w.Ay.getName(T),
                                                   }),
@@ -481,7 +481,7 @@ function eo(e) {
     let [i, s] = r.useState(),
         [a, o] = r.useState(!1),
         [f, h] = r.useState(!1),
-        { userAffinities: C, isLoading: p } = (0, c.cf)([T.A], () => ({
+        { userAffinities: C, isLoading: m } = (0, c.cf)([T.A], () => ({
             userAffinities: T.A.getUserAffinitiesMap(),
             isLoading: T.A.isFetching(),
         })),
@@ -502,7 +502,7 @@ function eo(e) {
                         selectionMode: "single",
                         label: ee.intl.string(ee.t.MJw05f),
                         placeholder: ee.intl.string(ee.t.J019jZ),
-                        loading: p,
+                        loading: m,
                         value: i,
                         onSelectionChange: (e) => {
                             (s(e), o(!1));
@@ -511,7 +511,7 @@ function eo(e) {
                             id: e.id,
                             value: e,
                             label: `${w.Ay.getUserTag(e)}`,
-                            leading: (0, l.jsx)(_.A, { user: e, size: m._3.SIZE_20 }),
+                            leading: (0, l.jsx)(_.A, { user: e, size: p._3.SIZE_20 }),
                         })),
                     }),
                     (0, l.jsx)("div", {

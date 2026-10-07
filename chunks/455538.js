@@ -8,7 +8,7 @@ var t = i(477900),
     s = i(486503),
     u = i(885386),
     d = i(957565),
-    p = i(375708);
+    p = i(660183);
 function k(n) {
     let { imageUrl: e, onSelect: i } = n,
         k = u.Q_.useSetting(),

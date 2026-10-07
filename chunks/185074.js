@@ -3,7 +3,7 @@ var a = n(477900);
 n(582128);
 var r = n(189213),
     s = n(834730),
-    l = n(375708);
+    l = n(660183);
 function e(t) {
     let { onClose: i, onConfirmDelete: n, transitionState: e } = t;
     return (0, a.jsx)(r.a, {

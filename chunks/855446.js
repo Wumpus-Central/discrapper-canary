@@ -16,7 +16,7 @@ var l,
     x = t(697675),
     g = t(869003),
     f = t(652215),
-    E = t(375708),
+    E = t(660183),
     I = t(441386);
 let v = ["embedded_cover"],
     j = { tension: 800, friction: 24 };

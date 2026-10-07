@@ -80,7 +80,7 @@ let B = new V(k.h, {
     },
 });
 var q = a(652215),
-    J = a(375708);
+    J = a(660183);
 async function X() {
     if (B.shouldFetch) {
         k.h.dispatch({ type: "RECENT_AVATARS_FETCH_START" });

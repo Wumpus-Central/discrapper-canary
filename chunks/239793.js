@@ -60,7 +60,7 @@ var C = l(503698),
     ea = l(121806),
     ei = l(988665),
     eo = l(652215),
-    ec = l(375708);
+    ec = l(660183);
 function eu(e, t) {
     return { type: e, data: t };
 }
@@ -1023,8 +1023,8 @@ function e5(e, t) {
     }
     return !1;
 }
-let e3 = { whiteSpace: "pre", wordWrap: "normal" };
-function e6(e) {
+let e6 = { whiteSpace: "pre", wordWrap: "normal" };
+function e3(e) {
     let [t, l] = e,
         r = [];
     if (!j.EY.isText(t) || 0 === t.text.length) return r;
@@ -1038,11 +1038,11 @@ function e6(e) {
 function e2(e) {
     return (0, n.jsx)(eZ, { ...e });
 }
-function e7(e) {
+function e9(e) {
     let { children: t, attributes: l } = e;
     return (0, n.jsx)("span", { ...l, style: { ...l.style, opacity: 1 }, children: t });
 }
-let e9 = s.memo(function (e) {
+let e7 = s.memo(function (e) {
     let {
         editor: t,
         initialValue: l,
@@ -1060,11 +1060,11 @@ let e9 = s.memo(function (e) {
         onChange: i,
         children: (0, n.jsx)(L.Fo, {
             className: eX.E,
-            style: e3,
+            style: e6,
             placeholder: r,
-            decorate: e6,
+            decorate: e3,
             renderLeaf: e2,
-            renderPlaceholder: e7,
+            renderPlaceholder: e9,
             onKeyDown: o,
             onFocus: c,
             onBlur: u,
@@ -1409,7 +1409,7 @@ function e8(e) {
                                 className: T()(eV.ON, eX.O),
                                 ref: H,
                                 children: [
-                                    (0, n.jsx)(e9, {
+                                    (0, n.jsx)(e7, {
                                         editor: x,
                                         initialValue: p,
                                         placeholder: eu,

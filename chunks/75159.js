@@ -125,7 +125,7 @@ class r {
 }
 var m = i(696016),
     o = i(801344),
-    h = i(375708);
+    h = i(660183);
 async function c(t) {
     let e = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         i = await l.Ay.fetchRiotGamesLiveClientData(t, e);

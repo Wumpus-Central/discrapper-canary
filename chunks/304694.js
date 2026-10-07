@@ -5,7 +5,7 @@ var l = t(477782),
     a = t(138134),
     c = t(928658),
     s = t(446600),
-    r = t(375708);
+    r = t(660183);
 function o(n) {
     let i = s.A.isLive(n.id);
     return n.isGuildStageVoice() && i

@@ -6,7 +6,7 @@ var n = t(477900),
     a = t(240248),
     c = t(594832),
     o = t(818023),
-    u = t(375708),
+    u = t(660183),
     d = t(764035);
 function h(i) {
     let { spec: e, icon: t, tooltipText: s } = i,

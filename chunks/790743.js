@@ -2,7 +2,7 @@
 var a = n(477900),
     e = n(582128),
     s = n(189213),
-    r = n(375708);
+    r = n(660183);
 function l(t) {
     let { transitionState: i, onClose: n, title: l, body: c, cta: o, closeLabel: u, onConfirm: p } = t,
         [d, h] = e.useState(!1);

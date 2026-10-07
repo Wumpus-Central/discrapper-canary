@@ -10,7 +10,7 @@ var i = n(796873),
     u = n(292348),
     _ = n(652215),
     E = n(202541),
-    A = n(375708);
+    A = n(660183);
 function h(e, t) {
     return e instanceof File ? e : f(e.data.buffer, e.filename, t ?? "text/plain");
 }

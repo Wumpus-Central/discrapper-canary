@@ -10,7 +10,7 @@ var l = n(477900),
     u = n(174459),
     h = n(816662),
     m = n(652215),
-    g = n(375708),
+    g = n(660183),
     p = n(859937);
 function A(e) {
     let { channel: t, narrow: n } = e;

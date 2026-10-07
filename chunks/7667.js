@@ -4,7 +4,7 @@ var s = i(17928),
     r = i(852218),
     a = i(421108),
     l = i(773669),
-    o = i(375708);
+    o = i(660183);
 function c(e) {
     let t = (0, s.bG)([n.A], () => n.A.getPromotionByTypeAndId(r.pt.MARKETING_MOMENT, e) ?? null),
         i = (0, s.bG)([l.default], () => l.default.locale),

@@ -1,6 +1,6 @@
 n.d(t, { C7: () => u, MB: () => i, Us: () => d, nY: () => r });
 var l = n(248675),
-    a = n(375708);
+    a = n(660183);
 function i(e) {
     let t = Math.max(1, Math.round(e / 1e3));
     if (t < 60) return a.intl.formatToPlainString(l.default["Cn+5go"], { count: t });

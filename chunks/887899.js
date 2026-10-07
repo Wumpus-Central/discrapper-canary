@@ -14,7 +14,7 @@ var s = n(477900),
     A = n(753386),
     I = n(617986),
     T = n(190107),
-    f = n(375708);
+    f = n(660183);
 function O(t, e) {
     return C.o.VIDEO.has(t) ? d.Cy.WATCH_VIDEO : (0, x.vA)(e) ? d.Cy.START_QUEST : d.Cy.ACCEPT_QUEST;
 }

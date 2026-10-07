@@ -5,7 +5,7 @@ var e = t(980707),
     d = t(477782),
     r = t(442433),
     l = t(114129),
-    s = t(375708);
+    s = t(660183);
 function c(n) {
     let { tab: i, onSelect: t } = n;
     return (0, a.jsxs)(e.W, {

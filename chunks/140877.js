@@ -13,7 +13,7 @@ var r = n(477900),
     p = n(219103),
     g = n(561769),
     A = n(57020),
-    v = n(375708),
+    v = n(660183),
     x = n(178287);
 function C(e) {
     let { product: t, prioritizedCurrency: n } = e,

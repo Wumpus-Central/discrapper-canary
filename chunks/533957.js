@@ -6,7 +6,7 @@ var d = a(17928),
     l = a(192308),
     c = a(576705),
     r = a(652215),
-    s = a(375708);
+    s = a(660183);
 function p(e, n) {
     let p = (0, d.bG)([c.A], () => c.A.can(r.xBc.MANAGE_CHANNELS, e), [e]);
     return __OVERLAY__ || !p

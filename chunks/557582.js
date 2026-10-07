@@ -20,7 +20,7 @@ var r = n(503698),
     A = n(937050),
     j = n(850183),
     T = n(103355),
-    I = n(375708),
+    I = n(660183),
     C = n(386522);
 function L(t) {
     let { className: e, creator: n, guildId: r, isNew: m, guildEvent: A, eventPreview: j, recurrenceId: L } = t,

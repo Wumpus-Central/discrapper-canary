@@ -23,7 +23,7 @@ var l = n(284009),
     C = n(576705),
     T = n(257120),
     D = n(148355),
-    O = n(375708);
+    O = n(660183);
 function _(e) {
     let {
             titleWithQuery: t,
@@ -957,8 +957,8 @@ function e0(e) {
     });
 }
 var e1 = n(696451),
-    e7 = n(427262);
-let e4 = {
+    e4 = n(427262);
+let e7 = {
     sentinel: "@",
     stores: [e1.Ay],
     matches: (e, t, n, l, i) =>
@@ -1096,7 +1096,7 @@ let e4 = {
                 (l = m.hidePersonalInformation),
                 U.Ay.hasSameRoleAsUsername(n, t)
                     ? `@${t.tag}`
-                    : `@${e7.Ay.getUserTag(t, { identifiable: l ? "never" : "always" })}`),
+                    : `@${e4.Ay.getUserTag(t, { identifiable: l ? "never" : "always" })}`),
                 ((i = y.user), `<@${i.id}>`),
             );
         } else if (null != h)
@@ -1378,7 +1378,7 @@ let tt = ["h:mm:ssa", "h:mm:ss a", "H:mm:ss", "h:mma", "h:mm a", "H:mm", "HHmm",
         [o.DB.STICKERS]: e5,
         [o.DB.GIFS]: eZ,
         [o.DB.LEGACY_COMMANDS]: eX,
-        [o.DB.MENTIONS]: e4,
+        [o.DB.MENTIONS]: e7,
         [o.DB.REACTIONS]: {
             sentinel: "+:",
             matches: (e, t, n, l, i) =>

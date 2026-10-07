@@ -9,7 +9,7 @@ var r = n(503698),
     d = n(87221),
     c = n(834730),
     u = n(191096),
-    _ = n(375708),
+    _ = n(660183),
     E = n(123502);
 function A(e) {
     let { obscured: t, children: n, className: r, contentClassName: A, heading: h, description: f, onClose: I } = e;

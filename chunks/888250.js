@@ -78,7 +78,7 @@ var $ = n(554146),
     et = n(7807),
     en = n(131607),
     er = n(49999),
-    ei = n(375708),
+    ei = n(660183),
     es = n(831931);
 function el(e) {
     let { locked: t } = e,
@@ -658,13 +658,13 @@ function e2() {
 }
 var e3 = n(661886),
     e8 = n(682763),
-    e5 = n(73153);
-function e7(e, t) {
+    e4 = n(73153);
+function e5(e, t) {
     e3.A.getPopoutInitializationStages()[e] !== t &&
-        e5.h.dispatch({ type: "OVERLAY_OOP_POPOUT_INITIALIZATION_STAGE_CHANGED", update: { [e]: t } });
+        e4.h.dispatch({ type: "OVERLAY_OOP_POPOUT_INITIALIZATION_STAGE_CHANGED", update: { [e]: t } });
 }
 n(96175);
-var e4 = n(366032);
+var e7 = n(366032);
 (n(191701), n(921955));
 let e6 = !p.isPlatformEmbedded && !1,
     e9 = new c.A("AppOverlay");
@@ -771,18 +771,18 @@ let ti = i.memo(function (e) {
                     async (e, t) => {
                         try {
                             if ((await te(e, N), b.current)) return;
-                            e7("cssLoaded", !0);
+                            e5("cssLoaded", !0);
                         } catch (e) {
                             (e9.error("Timed out waiting for CSS to load", e),
                                 l.A.setOverlayCrashed(e_.A.getTargetPID(), e),
-                                e7("errorMessage", "CSS failed load"));
+                                e5("errorMessage", "CSS failed load"));
                             return;
                         }
                         try {
                             if ((await tt(e, t), b.current)) return;
                             (0, e8.Mq)();
                         } catch (e) {
-                            (l.A.setOverlayCrashed(e_.A.getTargetPID(), e), e7("errorMessage", "showInactive failed"));
+                            (l.A.setOverlayCrashed(e_.A.getTargetPID(), e), e5("errorMessage", "showInactive failed"));
                             return;
                         }
                         (await new Promise((t) => {
@@ -795,8 +795,8 @@ let ti = i.memo(function (e) {
                 _ = i.useRef(!1);
             return (
                 i.useEffect(() => {
-                    if (!w.current && (e7("hasUseEffectFired", !0), e7("trackedPidFocused", m), a)) {
-                        if (null == c) return void e7("errorMessage", "No targetOverlayWindow");
+                    if (!w.current && (e5("hasUseEffectFired", !0), e5("trackedPidFocused", m), a)) {
+                        if (null == c) return void e5("errorMessage", "No targetOverlayWindow");
                         if (!m) {
                             _.current ||
                                 (l.A.updateOverlayState(
@@ -807,7 +807,7 @@ let ti = i.memo(function (e) {
                                 (_.current = !0));
                             return;
                         }
-                        ((w.current = !0), e7("reactInitializationStarted", !0), O(c, e));
+                        ((w.current = !0), e5("reactInitializationStarted", !0), O(c, e));
                     }
                 }, [O, m, e, c, a]),
                 (0, o.l0)(() => {
@@ -838,7 +838,7 @@ let ti = i.memo(function (e) {
         v = (0, s.bG)([e_.A], () => e_.A.getFocusedPID()),
         C = (0, s.bG)([eD.A], () => eD.A.isInputLocked(v), [v]),
         b = (0, s.bG)([ek.default, e_.A], () =>
-            (0, e4.S)(e_.A.getNativeLimitedInteraction(), ek.default.getOverlayMethod(e_.A.getTargetPID())),
+            (0, e7.S)(e_.A.getNativeLimitedInteraction(), ek.default.getOverlayMethod(e_.A.getTargetPID())),
         );
     return m
         ? (0, r.jsx)(w.p, {

@@ -26,7 +26,7 @@ var i,
     N = n(836602),
     S = n(814390),
     b = n(448429),
-    _ = n(375708),
+    _ = n(660183),
     R = n(529676);
 let U = function (e) {
     let { user: t, profileEffect: n, guild: i } = e,

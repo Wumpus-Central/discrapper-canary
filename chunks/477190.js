@@ -6,7 +6,7 @@ var r = n(17928),
     l = n(477782),
     c = n(576705),
     d = n(652215),
-    s = n(375708);
+    s = n(660183);
 function u(e, t) {
     let u = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : e.type,
         h = (0, r.bG)([c.A], () => c.A.can(d.xBc.MANAGE_CHANNELS, e), [e]);

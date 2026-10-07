@@ -5,7 +5,7 @@ var A = n(17928),
     r = n(158045),
     N = n(580630),
     T = n(202541),
-    i = n(375708);
+    i = n(660183);
 function E(e) {
     let t = "...",
         n = (0, A.bG)([l.A], () => l.A.isLoadedForSKU(T.pe.TIER_2));

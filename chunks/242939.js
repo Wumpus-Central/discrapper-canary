@@ -259,7 +259,7 @@ function et() {
     let e = document.body.style.getPropertyValue("--custom-guild-sidebar-width").slice(0, -2);
     return parseInt("" !== e ? e : "375");
 }
-var en = n(375708),
+var en = n(660183),
     es = n(393824);
 let er = function (e) {
     let { isFullyExpanded: t, partnerBranding: n } = e,

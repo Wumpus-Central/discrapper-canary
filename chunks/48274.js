@@ -4,7 +4,7 @@ i(582128);
 var r = i(17928),
     e = i(189213),
     s = i(977997),
-    l = i(375708);
+    l = i(660183);
 function o(t) {
     let { username: n, onConfirm: i, onClose: o, transitionState: c } = t,
         d = (0, r.bG)([s.A], () => s.A.isCurrentClientInVoiceChannel());

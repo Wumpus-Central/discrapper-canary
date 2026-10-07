@@ -5,7 +5,7 @@ var r = n(477900),
     u = n.n(l),
     s = n(866665),
     c = n(765671),
-    a = n(375708),
+    a = n(660183),
     d = n(738446);
 function o(e) {
     let { itemGapPx: t, items: n, maxLines: r, containerWidth: l } = e,

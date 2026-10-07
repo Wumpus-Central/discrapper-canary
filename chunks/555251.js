@@ -5,7 +5,7 @@ var e = s(477900),
     l = s(778712),
     r = s(834730),
     c = s(656925),
-    o = s(375708),
+    o = s(660183),
     d = s(164086);
 function u(t) {
     let { avatarId: i, storageHash: s, avatarDescription: u, onConfirmDelete: x, onClose: h, ...m } = t,

@@ -320,7 +320,7 @@ var eP = n(967347),
     ez = n(355097),
     eX = n(621380),
     eZ = n(731854),
-    eq = n(375708);
+    eq = n(660183);
 let eQ = new I.A("MediaEngineStore"),
     eJ = "MediaEngineStore",
     e0 = {
@@ -337,8 +337,8 @@ let eQ = new I.A("MediaEngineStore"),
     e1 = { left: 1, right: 1 },
     e2 = 5 * ex.A.Millis.SECOND,
     e3 = 2 * ex.A.Millis.SECOND,
-    e5 = 30 * ex.A.Millis.SECOND,
-    e6 = "https://ciscobinary.openh264.org/libopenh264-2.5.1-linux64.7.so.bz2",
+    e6 = 30 * ex.A.Millis.SECOND,
+    e5 = "https://ciscobinary.openh264.org/libopenh264-2.5.1-linux64.7.so.bz2",
     e4 = 0;
 var e7 =
     (((h = {}).WEBCAM = "WEBCAM"),
@@ -485,13 +485,13 @@ let tW = new Set(),
     t1 = !1,
     t2 = !1,
     t3 = {};
-function t5(e) {
+function t6(e) {
     return (function (e) {
         let { location: t } = e;
         return en.getConfig({ location: t });
     })({ location: e }).hdrCaptureMode;
 }
-async function t6() {
+async function t5() {
     if (
         "u" < typeof window ||
         "u" < typeof navigator ||
@@ -606,7 +606,7 @@ function nt() {
     if (((a = t), null != t)) {
         let e = { resolution: t.quality.resolution, frameRate: t.quality.frameRate };
         if (null != t.desktopSource) {
-            let n = t5("MediaEngineStore go live"),
+            let n = t6("MediaEngineStore go live"),
                 r = t7().videoHook,
                 a = nu(),
                 s = a ? ((0, p.isWindows)() && L().satisfies(P.A?.os.release, es.fG) ? es.zl : es.eg) : 0,
@@ -1074,13 +1074,13 @@ async function nw() {
         let e,
             t = "",
             n = !1,
-            i = URL.parse(e6);
+            i = URL.parse(e5);
         if (null === i) return void eQ.log("OpenH264 URL ", i, " is invalid");
         let r = i.pathname.split("/"),
             a = r[r.length - 1].replace(".bz2", "");
         try {
             let t = await T.Ay.downloadOpenH264(
-                e6,
+                e5,
                 a,
                 "d828a944d4d2bb64195ada89cf2cde9bc41733b1547d0788ef49fb8cb231b76f",
                 (e) => {
@@ -1124,7 +1124,7 @@ class nF extends y.Ay.Store {
         let e;
         if (
             ((l ??= new eo(tt, this)),
-            th.start(e5, () => {
+            th.start(e6, () => {
                 (eQ.error("Device enumeration timed out"), eD.default.track(ev.HAw.DEVICE_ENUMERATION_TIMEOUT, {}));
             }),
             tt.on(D.bg.Connection, (e) => {
@@ -1137,7 +1137,7 @@ class nF extends y.Ay.Store {
                         ? (null != tH
                               ? tH
                               : "u" > typeof window
-                                ? (tH = t6().then((e) => ((tV = e), e)))
+                                ? (tH = t5().then((e) => ((tV = e), e)))
                                 : Promise.resolve(!1)
                           ).then((t) => {
                               e.setExperimentFlag(eZ.fd.H265_HARDWARE_DECODE_AVAILABLE, t);
@@ -2492,7 +2492,7 @@ let nV = (i = new nF(M.h, {
         let a = eG.A.getPidFromDesktopSource(t),
             { soundshareId: l, soundshareSession: o } = ny(a, !0);
         s = { desktopSource: { id: t, sourcePid: a, soundshareId: l, soundshareSession: o }, quality: r };
-        let d = t5("MediaEngineStore clips"),
+        let d = t6("MediaEngineStore clips"),
             c = t7().videoHook,
             u = c && eT.getConfig({ location: "handleClipsInit" }).enabled,
             { minCaptureWidth: _, minCaptureHeight: E } = ef.getConfig({ location: "handleClipsInit" });

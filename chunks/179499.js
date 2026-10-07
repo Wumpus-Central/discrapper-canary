@@ -8,7 +8,7 @@ var r = e(582128),
     l = e(871109),
     h = e(882863),
     u = e(960427),
-    d = e(375708);
+    d = e(660183);
 function y(t) {
     let { guildId: n, productId: e } = t,
         a = (0, c.bG)([l.A], () => l.A.getGuildProduct(e)),

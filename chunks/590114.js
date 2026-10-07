@@ -31,7 +31,7 @@ var R = n(186111),
     j = n(113673),
     w = n(652215),
     _ = n(650583),
-    v = n(375708),
+    v = n(660183),
     L = n(969465);
 class E extends l.Component {
     searchBarRef = l.createRef();
@@ -855,14 +855,14 @@ function t0(t) {
     return (0, i.jsx)("div", { className: e, onContextMenu: (t) => l(t, s), children: n });
 }
 let t1 = [tj.A.unsafe_rawColors.BLUE_345.css, tj.A.colors.INTERACTIVE_TEXT_DEFAULT.css],
-    t5 = (t) => {
+    t4 = (t) => {
         let { tooltip: e, onClick: n, icon: l } = t;
         return (0, i.jsx)(X.m, {
             text: e,
             children: (0, i.jsx)(t_.K, { "aria-label": e, variant: "secondary", icon: l, onClick: n, size: "sm" }),
         });
     };
-function t4(t, e) {
+function t5(t, e) {
     switch (e) {
         case w.OQC.POST_INSTALL_SCRIPTS:
         case w.OQC.PLANNING:
@@ -914,8 +914,8 @@ function t3(t, e, n, i, l) {
 }
 function t2(t) {
     let { type: e, stage: n, percent: i, progress: l, total: s, secondsRemaining: a } = t,
-        r = t4(s, n),
-        o = t4(l, n);
+        r = t5(s, n),
+        o = t5(l, n);
     switch (n) {
         case w.OQC.QUEUED:
             if (0 === l) return v.intl.string(v.t.RpfBqd);
@@ -1005,8 +1005,8 @@ class t7 extends l.PureComponent {
         if (null != n) {
             let { progress: i, total: l, stage: s } = n;
             if (null != i && null != l) {
-                let n = t4(l, s),
-                    a = t4(i, s),
+                let n = t5(l, s),
+                    a = t5(i, s),
                     r = Math.floor((e = te.uA(i, l)));
                 t =
                     s === w.OQC.PAUSING
@@ -1115,14 +1115,14 @@ class t7 extends l.PureComponent {
     }
 }
 function t9() {
-    return (0, i.jsx)(t5, { icon: tb.PlayIcon, tooltip: v.intl.string(v.t.YGm6SZ), onClick: () => tO.U() });
+    return (0, i.jsx)(t4, { icon: tb.PlayIcon, tooltip: v.intl.string(v.t.YGm6SZ), onClick: () => tO.U() });
 }
 function t8() {
-    return (0, i.jsx)(t5, { icon: tD.PauseIcon, tooltip: v.intl.string(v.t.TVAd5J), onClick: () => tO.v7() });
+    return (0, i.jsx)(t4, { icon: tD.PauseIcon, tooltip: v.intl.string(v.t.TVAd5J), onClick: () => tO.v7() });
 }
 let et = (t) => {
         let { item: e } = t;
-        return (0, i.jsx)(t5, {
+        return (0, i.jsx)(t4, {
             icon: tM.z,
             tooltip: v.intl.string(v.t["Eqb+LN"]),
             onClick: () => tO.BO(e.applicationId, e.branchId),
@@ -1130,7 +1130,7 @@ let et = (t) => {
     },
     ee = (t) => {
         let { item: e } = t;
-        return (0, i.jsx)(t5, {
+        return (0, i.jsx)(t4, {
             icon: tB.P,
             tooltip: v.intl.string(v.t["0lFmC9"]),
             onClick: () => tO.ZT(e.applicationId, e.branchId),

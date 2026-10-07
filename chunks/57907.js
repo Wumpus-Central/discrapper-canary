@@ -8,7 +8,7 @@ var e = n(17928),
     a = n(867455),
     o = n(812141),
     u = n(995102),
-    c = n(375708);
+    c = n(660183);
 function b(t) {
     let [i, n, b] = (0, e.yK)([l.A], () => [l.A.isMuted(t.id), l.A.getMuteConfig(t.id), l.A.hasJoined(t.id)]),
         g = (0, d.M)(n);

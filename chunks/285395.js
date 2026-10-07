@@ -1,7 +1,7 @@
 n.d(t, { j: () => l, t: () => s });
 var i = n(403362),
     r = n(488995),
-    a = n(375708);
+    a = n(660183);
 function s(e) {
     switch (e) {
         case r.GlobalDiscoveryTab.SERVERS:

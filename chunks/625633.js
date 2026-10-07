@@ -31,7 +31,7 @@ function E(t) {
 }
 var h = i(652215),
     R = i(202541),
-    P = i(375708);
+    P = i(660183);
 function v() {
     return { color: r.A.unsafe_rawColors.PREMIUM_PERK_ORANGE.css, icon: o.i, description: P.intl.string(P.t.zZe94m) };
 }

@@ -13,7 +13,7 @@ var i = t(17928),
     o = t(576705),
     h = t(935208),
     b = t(652215),
-    C = t(375708);
+    C = t(660183);
 function p(e) {
     let n = e.isForumPost(),
         t = (0, i.bG)([g.default], () => e.isOwner(g.default.getId()), [e]),

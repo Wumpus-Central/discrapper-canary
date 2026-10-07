@@ -10,7 +10,7 @@ var a = e(477900),
     u = e(26741),
     g = e(722884),
     h = e(579129),
-    p = e(375708);
+    p = e(660183);
 function w(i) {
     let { channel: n, onSelect: e } = i,
         w = d.useCallback(() => {

@@ -3,7 +3,7 @@ var n = i(477900),
     l = i(582128),
     r = i(189213),
     s = i(614584),
-    e = i(375708);
+    e = i(660183);
 function o(t) {
     let { onClose: a, onBeforeDelete: i, onAfterDelete: o, clips: c, ...d } = t,
         [p, u] = l.useState(!1),

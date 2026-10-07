@@ -33,7 +33,7 @@ var s = n(477900),
     U = n(657792),
     j = n(518293),
     M = n(818348),
-    q = n(375708),
+    q = n(660183),
     b = n(175276);
 function w(t) {
     let { quest: e, transitionState: n, onClose: r, sourceQuestContent: I, refreshOnOpen: T = !1 } = t,

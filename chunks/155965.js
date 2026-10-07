@@ -13,7 +13,7 @@ var l = n(477900),
     p = n(289873),
     g = n(628284),
     x = n(821609),
-    f = n(375708),
+    f = n(660183),
     A = n(469792);
 function j(e) {
     let { displayName: t, description: n, icon: i, isLoading: a, isConnected: r, canConnect: o, onConnect: s } = e;

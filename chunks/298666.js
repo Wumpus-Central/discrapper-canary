@@ -23,7 +23,7 @@ var n = t(477900),
     k = t(950305),
     E = t(941985),
     G = t(248675),
-    A = t(375708),
+    A = t(660183),
     C = t(749472);
 function S(e) {
     let { guilds: l, forMeGuildId: t, onNavigate: a } = e,

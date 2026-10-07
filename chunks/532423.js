@@ -7,7 +7,7 @@ var n = e(477900),
     a = e(866665),
     u = e(240248),
     l = e(594832),
-    p = e(375708),
+    p = e(660183),
     d = e(422596);
 function x(s) {
     let { spec: t, icon: e, tooltipText: i } = s,

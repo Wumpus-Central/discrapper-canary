@@ -7,7 +7,7 @@ var i = n(477900),
     u = n(475743),
     a = n(942370),
     c = n(211850),
-    d = n(375708);
+    d = n(660183);
 let f = "in-game-auth-check-modal";
 function m(e, t) {
     let { showInGameModal: m = !0, showToastOnSuccess: g = !0 } =

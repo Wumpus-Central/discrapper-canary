@@ -2,13 +2,13 @@ n.d(t, { A: () => h });
 var l = n(477900);
 n(582128);
 var s = n(297264),
-    r = n(866665),
-    i = n(939249),
+    i = n(866665),
+    r = n(939249),
     a = n(885574),
     o = n(975807),
     u = n(975571),
     c = n(652215),
-    d = n(375708),
+    d = n(660183),
     m = n(373599);
 let h = function (e) {
     let { personalizedResults: t, label: n } = e,
@@ -18,11 +18,11 @@ let h = function (e) {
         children: [
             (0, l.jsx)(s.D, { variant: "heading-lg/semibold", children: h }),
             t &&
-                (0, l.jsx)(r.m, {
+                (0, l.jsx)(i.m, {
                     text: d.intl.string(d.t["3taPdj"]),
                     position: "top",
                     "aria-label": d.intl.string(d.t["3taPdj"]),
-                    children: (0, l.jsx)(i.D, {
+                    children: (0, l.jsx)(r.D, {
                         onClick: () => (0, o.A)(u.A.getArticleURL(c.MVz.DATA_USED_FOR_RECOMMENDED)),
                         className: m.s,
                         children: (0, l.jsx)(a.CircleInformationIcon, { size: "sm" }),

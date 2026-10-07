@@ -7,10 +7,10 @@ var l = n(503698),
     i = n(297264),
     d = n(403581),
     s = n(43990),
-    p = n(939249),
-    u = n(789645),
+    u = n(939249),
+    p = n(789645),
     c = n(818348),
-    b = n(375708),
+    b = n(660183),
     m = n(698833);
 function A(e) {
     let { children: t } = e;
@@ -30,12 +30,12 @@ function f(e) {
                 className: a()(m.lm, e, t),
                 children: [
                     (0, o.jsx)("div", { className: m.qZ, children: l }),
-                    (0, o.jsx)(p.D, {
+                    (0, o.jsx)(u.D, {
                         focusProps: { offset: 6 },
                         className: m.b,
                         onClick: r,
                         "aria-label": b.intl.string(b.t.WAI6xu),
-                        children: (0, o.jsx)(u.P, { size: "sm" }),
+                        children: (0, o.jsx)(p.P, { size: "sm" }),
                     }),
                 ],
             }),

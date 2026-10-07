@@ -32,7 +32,7 @@ var i = n(477900),
     P = n(980504),
     U = n(652215),
     w = n(202541),
-    G = n(375708),
+    G = n(660183),
     x = n(454992);
 function k(e) {
     let { analyticsLocations: t } = e,

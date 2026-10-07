@@ -14,7 +14,7 @@ var i = n(582128),
     p = n(354287),
     A = n(652215),
     x = n(488995),
-    f = n(375708);
+    f = n(660183);
 function I(e) {
     let { isDiscoverable: t, customInstallUrl: n, installParams: i, integrationTypesConfig: r } = e,
         a = (0, g.Ie)({ customInstallUrl: n, installParams: i, integrationTypesConfig: r }),

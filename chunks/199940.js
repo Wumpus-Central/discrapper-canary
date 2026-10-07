@@ -29,7 +29,7 @@ var _ = n(435558),
     N = n(38405),
     l = n(132514),
     I = n(652215),
-    T = n(375708);
+    T = n(660183);
 function d(t) {
     r.h.dispatch({ type: "GUILD_SETTINGS_ONBOARDING_UPDATE_WELCOME_MESSAGE", welcomeMessage: t });
 }

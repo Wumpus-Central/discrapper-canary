@@ -2,7 +2,7 @@ n.d(t, { A: () => a });
 var l = n(550946),
     i = n(562153),
     s = n(806931),
-    r = n(375708);
+    r = n(660183);
 function a(e, t, n) {
     if (t.type === s.lp.ACTIVITY) return n?.name ?? null;
     let a = (0, l.t)(e.guild_id, t.user?.id);

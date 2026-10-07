@@ -38,7 +38,7 @@ var P = t(877624),
     U = t(412260),
     D = t(860300),
     G = t(531536),
-    k = t(375708),
+    k = t(660183),
     L = t(951321);
 function B() {
     let { claimableRewards: e } = (0, y.Pv)(),

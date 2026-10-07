@@ -12,7 +12,7 @@ var r = n(477900),
     x = n(396583),
     h = n(421108),
     j = n(818348),
-    v = n(375708),
+    v = n(660183),
     f = n(395822);
 function k(t) {
     let { className: e, color: n = "default", sticky: s = !1, children: l } = t,

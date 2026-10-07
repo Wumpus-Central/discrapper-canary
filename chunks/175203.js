@@ -82,7 +82,7 @@ var t = s(477900),
     eO = s(806931),
     eR = s(31408),
     eV = s(731854),
-    ek = s(375708),
+    ek = s(660183),
     eM = s(584841);
 let e_ = [eO.lp.ACTIVITY],
     eD = i.memo((e) => {
@@ -262,9 +262,9 @@ let e_ = [eO.lp.ACTIVITY],
                     popoutType: x,
                 });
         }
-        let { ref: e1, width: e8, height: e7 } = (0, U.Ay)(),
+        let { ref: e1, width: e8, height: e6 } = (0, U.Ay)(),
             e2 = (0, r.bG)([ep.A], () => (u.type === eO.lp.USER ? ep.A.getVoiceVolume(u.id) : -1 / 0)),
-            e6 = (0, H.v)({ isSpeaking: eU, voiceDb: e2, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
+            e7 = (0, H.v)({ isSpeaking: eU, voiceDb: e2, spreadDirection: H.O.INSET_ONLY, maxInnerSpreadRadius: 4 }),
             e5 = (0, eO.Ay)(u) ? p.k : eP ? m.VideoIcon : A.E,
             e9 = u.type === eO.lp.STREAM && k;
         return (0, t.jsx)(D.A, {
@@ -316,7 +316,7 @@ let e_ = [eO.lp.ACTIVITY],
                                                       userId: eI,
                                                       channelId: v.id,
                                                       guildId: v.getGuildId(),
-                                                      containerDimensions: { width: e8 ?? 0, height: e7 ?? 0 },
+                                                      containerDimensions: { width: e8 ?? 0, height: e6 ?? 0 },
                                                   }),
                                               })
                                             : null,
@@ -364,7 +364,7 @@ let e_ = [eO.lp.ACTIVITY],
                                         b && !R
                                             ? (0, t.jsx)("div", {
                                                   className: a()(eM.PQ, { [eM.pU]: !k && (ew || null != eW) }),
-                                                  style: k || ew ? void 0 : e6,
+                                                  style: k || ew ? void 0 : e7,
                                               })
                                             : null,
                                     ],

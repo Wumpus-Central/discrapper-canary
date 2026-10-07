@@ -14,7 +14,7 @@ var l = n(477900),
     g = n(939496),
     m = n(985629),
     x = n(996988),
-    _ = n(375708),
+    _ = n(660183),
     I = n(41821);
 function N(t) {
     let { applicationId: e, onAction: n, onClose: N, activity: E } = t,

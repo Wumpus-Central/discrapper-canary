@@ -1,11 +1,12 @@
-n.d(t, { A: () => d });
+n.d(t, { A: () => c });
 var i = n(181370),
     r = n.n(i),
     a = n(384939),
     s = n(315069),
     l = n(927813),
     o = n(767589);
-class d extends s.A {
+let d = { month: "long", day: "numeric", year: "numeric" };
+class c extends s.A {
     id;
     componentType;
     properties;
@@ -14,12 +15,13 @@ class d extends s.A {
     endDate;
     effectiveStartDate;
     effectiveEndDate;
+    promotionEndDate;
     static createFromServer(e, t) {
         let n = null != e.start_date ? new Date(e.start_date) : null,
             i = null != e.end_date ? new Date(e.end_date) : null,
             r = t?.startDate ?? null,
             s = t?.endDate ?? null;
-        return new d({
+        return new c({
             id: e.id,
             componentType: e.component_type,
             properties: (0, o.ii)(a.m, e.properties),
@@ -28,6 +30,7 @@ class d extends s.A {
             endDate: i,
             effectiveStartDate: n ?? r,
             effectiveEndDate: i ?? s,
+            promotionEndDate: s,
         });
     }
     constructor(e) {
@@ -39,7 +42,21 @@ class d extends s.A {
             (this.startDate = e.startDate),
             (this.endDate = e.endDate),
             (this.effectiveStartDate = e.effectiveStartDate),
-            (this.effectiveEndDate = e.effectiveEndDate));
+            (this.effectiveEndDate = e.effectiveEndDate),
+            (this.promotionEndDate = e.promotionEndDate));
+    }
+    getFormatVariableValues(e) {
+        var t, n;
+        let i;
+        return null == this.promotionEndDate
+            ? {}
+            : {
+                  days_left:
+                      ((t = this.promotionEndDate),
+                      (n = new Date()),
+                      (i = t.getTime() - n.getTime()) > 0 ? Math.ceil(i / l.A.Millis.DAY) : 0),
+                  promotion_end_date: this.promotionEndDate.toLocaleDateString(e, d),
+              };
     }
     get isTimed() {
         return null != this.startDate || null != this.endDate;

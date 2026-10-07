@@ -18,7 +18,7 @@ var i = n(582128),
     f = n(989837),
     v = n(500049),
     I = n(652215),
-    b = n(375708);
+    b = n(660183);
 let g = {
         ...E.Ay.RULES.commandMention,
         parse: (e, t, n) => ({ content: E.Ay.RULES.commandMention.parse(e, t, n).content }),

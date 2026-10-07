@@ -45,7 +45,7 @@ var l = n(477900),
     X = n(993401),
     $ = n(280450),
     F = n(518477),
-    Q = n(375708);
+    Q = n(660183);
 function J(t) {
     let { application: e, onAction: n, onClose: a } = t,
         r = (0, b.bG)([$.default], () => $.default.getId()),

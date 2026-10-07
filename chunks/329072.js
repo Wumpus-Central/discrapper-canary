@@ -16,7 +16,7 @@ var r = t(284009),
     v = t(780964),
     b = t(766075),
     C = t(652215),
-    S = t(375708),
+    S = t(660183),
     T = t(731854);
 function U(e) {
     let { onClose: n, onSelect: t, minimal: r = !1, appContext: U, onInteraction: f } = e,

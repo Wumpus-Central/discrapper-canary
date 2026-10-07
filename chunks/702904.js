@@ -4,7 +4,7 @@ n(582128);
 var r = n(192308),
     a = n(834730),
     s = n(625075),
-    l = n(375708);
+    l = n(660183);
 function o() {
     if (!s.k.getConfig({ location: "handleScreenshareUnavailable" }).videoEnabled)
         return void (0, r.openModalLazy)(async () => {

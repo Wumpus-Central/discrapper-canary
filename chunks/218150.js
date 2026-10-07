@@ -23,7 +23,7 @@ var l = n(477900),
     E = n(313627),
     S = n(746080),
     C = n(61567),
-    T = n(375708),
+    T = n(660183),
     y = n(121051);
 function O(e) {
     let { guildId: t, leaderboardWinnerData: n, title: i, detailText: s, onClose: a } = e,

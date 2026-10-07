@@ -17,7 +17,7 @@ var s = n(477900),
     f = n(475825),
     v = n(834730),
     N = n(303727),
-    w = n(375708),
+    w = n(660183),
     S = n(116379);
 function k(e) {
     let { channel: t, header: n, startThread: l } = e,

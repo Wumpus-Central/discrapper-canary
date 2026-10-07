@@ -16,10 +16,10 @@ let d = (0, n(945810).mj)({
 var f = n(211287),
     h = n(739508),
     C = n(120700),
-    m = n(818348);
-let p = new Set([C.C.COLLECTIBLES_CHECKOUT, C.C.SLAYER_STOREFRONT_CHECKOUT]);
+    p = n(818348);
+let m = new Set([C.C.COLLECTIBLES_CHECKOUT, C.C.SLAYER_STOREFRONT_CHECKOUT]);
 var E = n(169797),
-    I = n(375708);
+    I = n(660183);
 let y = r.createContext({ order: null, isOrderCreationEnabled: !1 });
 function S() {
     return r.useContext(y);
@@ -60,8 +60,8 @@ function g(e) {
                 } = e,
                 E = f.A.useConfig({ location: "payment_modal" }).enabled,
                 I = d.useConfig({ location: "payment_modal" }).enabled,
-                y = i === m.kM.VIRTUAL_CURRENCY,
-                S = null != s && p.has(s);
+                y = i === p.kM.VIRTUAL_CURRENCY,
+                S = null != s && m.has(s);
             t = y ? E : !!S && !0 !== a && I;
             let _ = y && E,
                 g = null != n ? n[0] : void 0,

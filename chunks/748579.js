@@ -16,7 +16,7 @@ var n = a(477900),
     f = a(19886),
     g = a(202541),
     x = a(652215),
-    v = a(375708),
+    v = a(660183),
     T = a(31233);
 function N(e) {
     let { levelUpData: t } = e,

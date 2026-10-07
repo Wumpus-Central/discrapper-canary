@@ -11,7 +11,7 @@ var n = i(477900),
     d = i(52093),
     f = i(190107),
     u = i(652215),
-    h = i(375708),
+    h = i(660183),
     x = i(475169);
 function p(e) {
     let { gameTitle: t, showConfirmationWindow: i } = e,

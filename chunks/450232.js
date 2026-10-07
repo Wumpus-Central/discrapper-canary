@@ -6,7 +6,7 @@ var r = n(503698),
     s = n(661531),
     l = n(866665),
     o = n(403581),
-    d = n(375708),
+    d = n(660183),
     c = n(192416);
 let u = { inherit: "currentColor", strong: s.A.colors.ICON_STRONG };
 function _(e) {

@@ -13,7 +13,7 @@ var e = n(477900),
     m = n(627363),
     h = n(130771),
     x = n(269927),
-    C = n(375708);
+    C = n(660183);
 function b(t) {
     let { transitionState: i, application: n, onClose: a } = t,
         [b, f] = l.useState(n?.team?.id),

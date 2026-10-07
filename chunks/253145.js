@@ -28,7 +28,7 @@ var r = l(593673),
     p = l(834730),
     _ = l(331322),
     A = l(297264),
-    E = l(375708),
+    E = l(660183),
     N = l(448492);
 function b() {
     return (0, i.jsx)("div", {
@@ -1232,12 +1232,12 @@ function e2(e) {
               }),
           });
 }
-var e3 = l(452027),
-    e6 = l(103557),
+var e6 = l(452027),
+    e3 = l(103557),
     e8 = l(825484),
     e4 = l(95477),
-    e7 = l(241326),
-    e5 = l(683071),
+    e5 = l(241326),
+    e7 = l(683071),
     e9 = l(2553),
     te = l(405810),
     tt = l(967198),
@@ -1996,11 +1996,11 @@ var tJ = l(625903),
     t0 = l(780964),
     t1 = l(766075),
     t2 = l(30370),
-    t3 = l(123894);
-function t6() {
+    t6 = l(123894);
+function t3() {
     let e = (0, C.bG)([t2.A], () => t2.A.getAccounts().some((e) => e.type === eK.fg2.SPOTIFY && e.showActivity));
     return (0, i.jsx)(S, {
-        className: t3.w,
+        className: t6.w,
         title: E.intl.string(Q.default.ULK65a),
         body: E.intl.format(e ? Q.default.BLuvck : Q.default["Ko3a0+"], { memberCount: 2 }),
         action: e
@@ -2016,23 +2016,23 @@ function t6() {
 }
 function t8() {
     return (0, i.jsx)(S, {
-        className: t3.w,
+        className: t6.w,
         title: E.intl.string(Q.default.ULK65a),
         body: E.intl.format(Q.default.ZQxU8v, { memberCount: 2 }),
     });
 }
 var t4 = l(109487),
-    t7 = l(279543);
-function t5(e) {
+    t5 = l(279543);
+function t7(e) {
     let { isCompact: t } = e;
     return (0, i.jsxs)("div", {
-        className: t7.qr,
+        className: t5.qr,
         children: [
             (0, i.jsxs)("div", {
-                className: t7.Os,
+                className: t5.Os,
                 children: [
                     (0, i.jsx)("span", {
-                        className: t7.Kk,
+                        className: t5.Kk,
                         children: (0, i.jsx)(R.RefreshIcon, {
                             size: "xxs",
                             color: d.A.colors.ICON_SUBTLE,
@@ -2040,7 +2040,7 @@ function t5(e) {
                         }),
                     }),
                     (0, i.jsx)(p.E, {
-                        className: t7.Pf,
+                        className: t5.Pf,
                         tag: "span",
                         variant: "text-xs/medium",
                         color: "text-subtle",
@@ -2049,17 +2049,17 @@ function t5(e) {
                 ],
             }),
             (0, i.jsxs)(tc.Anchor, {
-                className: t7.al,
+                className: t5.al,
                 href: tf.RQ.WEB_HOME,
                 "aria-label": E.intl.string(Q.default["jUr+wF"]),
                 children: [
                     (0, i.jsx)("span", {
-                        className: t7.Kk,
+                        className: t5.Kk,
                         children: (0, i.jsx)(t4.L, { size: "xs", color: d.A.colors.ICON_STRONG, "aria-hidden": !0 }),
                     }),
                     !t &&
                         (0, i.jsx)(p.E, {
-                            className: t7.G2,
+                            className: t5.G2,
                             tag: "span",
                             variant: "text-xs/medium",
                             color: "none",
@@ -2597,8 +2597,8 @@ async function lJ(e) {
 let l0 = [];
 var l1 = l(344351),
     l2 = l(256693),
-    l3 = l(343030),
-    l6 = l(317608),
+    l6 = l(343030),
+    l3 = l(317608),
     l8 = l(953538);
 let l4 = {
     [r.a.IMAGE_TEXT]: {
@@ -2642,7 +2642,7 @@ let l4 = {
                         maxLength: 100,
                         showCharacterCount: !0,
                     }),
-                    (0, i.jsx)(e3.D, {
+                    (0, i.jsx)(e6.D, {
                         label: E.intl.string(E.t.X4IxWL),
                         children: (0, i.jsxs)(_.B, {
                             gap: 16,
@@ -2670,7 +2670,7 @@ let l4 = {
                                                 ariaHidden: !0,
                                                 children: (0, i.jsx)(u.K, {
                                                     variant: "critical-secondary",
-                                                    icon: e7.TrashIcon,
+                                                    icon: e5.TrashIcon,
                                                     onClick: function () {
                                                         (j(null), f(null));
                                                     },
@@ -2683,7 +2683,7 @@ let l4 = {
                             ],
                         }),
                     }),
-                    (0, i.jsx)(e6.f, {
+                    (0, i.jsx)(e3.f, {
                         label: E.intl.string(E.t.COGMNC),
                         value: m,
                         onChange: function (e) {
@@ -2697,7 +2697,7 @@ let l4 = {
                     null != g &&
                         (0, i.jsx)("div", {
                             role: "alert",
-                            children: (0, i.jsx)(e5.w, { type: "critical", children: g }),
+                            children: (0, i.jsx)(e7.w, { type: "critical", children: g }),
                         }),
                     (0, i.jsxs)(e8.e, {
                         fullWidth: !0,
@@ -2880,7 +2880,7 @@ let l4 = {
                                 if (null == o || "idle" === o.status || "loading" === o.status)
                                     return (0, i.jsx)(b, {});
                                 if ("error" === o.status) return (0, i.jsx)(I, {});
-                                if (_) return (0, i.jsx)(t6, {});
+                                if (_) return (0, i.jsx)(t3, {});
                                 switch (h) {
                                     case tL.TOP_SONGS:
                                         return (0, i.jsx)(lI, {
@@ -2898,7 +2898,7 @@ let l4 = {
                         }),
                     }),
                     h !== tL.TOP_LISTENERS && E,
-                    (0, i.jsx)(t5, { isCompact: x }),
+                    (0, i.jsx)(t7, { isCompact: x }),
                 ],
             });
         },
@@ -2998,9 +2998,9 @@ let l4 = {
                         className: l8.kL,
                         children: [
                             null != d &&
-                                (0, i.jsx)(l6.A, {
+                                (0, i.jsx)(l3.A, {
                                     frameId: (0, l2.Ri)(d),
-                                    level: l3.A.WithinAppContent,
+                                    level: l6.A.WithinAppContent,
                                     className: l8.t$,
                                 }),
                             null == d &&
@@ -3087,11 +3087,11 @@ let l4 = {
                               fullWidth: !0,
                               wrapTags: !0,
                           }),
-                          !d && (0, i.jsx)(e5.w, { type: "warning", children: E.intl.string(Q.default.UPLtlA) }),
+                          !d && (0, i.jsx)(e7.w, { type: "warning", children: E.intl.string(Q.default.UPLtlA) }),
                           f &&
                               (0, i.jsx)("div", {
                                   role: "alert",
-                                  children: (0, i.jsx)(e5.w, {
+                                  children: (0, i.jsx)(e7.w, {
                                       type: "critical",
                                       children: E.intl.string(Q.default.xyCJYs),
                                   }),

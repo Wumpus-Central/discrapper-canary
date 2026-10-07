@@ -37,7 +37,7 @@ var i = n(477900),
     H = n(155965),
     V = n(539916),
     $ = n(652215),
-    q = n(375708),
+    q = n(660183),
     F = n(579235);
 function M(e) {
     let { guildId: t, onComplete: n, isLastStep: l, isSubmitting: r = !1, disableTracking: a } = e,

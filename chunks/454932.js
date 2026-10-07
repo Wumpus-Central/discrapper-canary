@@ -4,7 +4,7 @@ var i = n(17928),
     a = n(994500),
     s = n(427262),
     l = n(420825),
-    o = n(375708);
+    o = n(660183);
 function d(e) {
     let { user: t, applicationId: n, isGameRelationship: d } = e,
         c = (0, i.bG)([a.A], () => a.A.getNickname(t.id)),

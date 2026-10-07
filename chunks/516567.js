@@ -29,7 +29,7 @@ let I = function (t) {
     return (0, i.jsx)(r.$m, { "data-migration-pending": !0, className: R()(p.j, n), children: e });
 };
 var F = n(652215),
-    U = n(375708),
+    U = n(660183),
     k = n(367699);
 let y = function (t) {
     let { onClose: e, channelId: n } = t,

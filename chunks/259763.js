@@ -6,7 +6,7 @@ var l = n(17928),
     s = n(832712),
     a = n(543465),
     u = n(477427),
-    d = n(375708);
+    d = n(660183);
 let c = function (t) {
     let { onClose: i, channelId: n, transitionState: c } = t,
         g = (0, l.bG)([a.Ay], () => a.Ay.isChannelMuted(null, n));

@@ -105,7 +105,7 @@ function E(e) {
             ));
     }
 }
-var j = t(375708),
+var j = t(660183),
     I = t(379961);
 let C = function (e) {
     let { gameId: n, authorId: p } = e,

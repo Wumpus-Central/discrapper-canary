@@ -20,7 +20,7 @@ var r = n(536637),
     i = n(695515),
     a = n(191627),
     o = n(513687),
-    s = n(375708);
+    s = n(660183);
 function f() {
     return {
         today: s.intl.string(o.default.VjIAQQ),

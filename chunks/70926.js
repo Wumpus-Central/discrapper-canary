@@ -8,8 +8,8 @@ var n = a(477900),
     o = a(482589),
     c = a(892227),
     d = a(492462),
-    f = a(17928),
-    m = a(273875),
+    m = a(17928),
+    f = a(273875),
     x = a(916845),
     h = a(834730),
     v = a(43990),
@@ -20,8 +20,8 @@ var n = a(477900),
     p = a(309954),
     A = a(287809),
     E = a(975571),
-    R = a(474090),
-    b = a(920050),
+    b = a(474090),
+    R = a(920050),
     N = a(94264),
     y = a(549384),
     L = a(566119),
@@ -29,7 +29,7 @@ var n = a(477900),
     S = a(652215),
     _ = a(901123),
     T = a(1889),
-    D = a(375708),
+    D = a(660183),
     M = a(226068),
     w = a(268920),
     P = a(633217),
@@ -46,14 +46,14 @@ function U() {
 function I(e) {
     let { targetElementRef: t, shouldShow: a, onRequestClose: r, onNavigate: i, ctaText: u, ctaOnClick: o } = e,
         { passesGeneralUIInvariant: E, programReward: w } = (0, C.F)(),
-        P = (0, f.bG)([A.default], () => A.default.getCurrentUser()),
+        P = (0, m.bG)([A.default], () => A.default.getCurrentUser()),
         { balance: I } = (0, p.W)(),
-        W = !(0, R.ki)(P),
+        W = !(0, b.ki)(P),
         V = l.useCallback(() => {
             ((0, L.RQ)(),
                 r(),
                 null != i && i(),
-                (0, j.pX)(_.BV.NITRO_HOME, { search: (0, d.stringify)({ perk: b.NITRO_ORBS_REWARDS_CARD_ID }) }));
+                (0, j.pX)(_.BV.NITRO_HOME, { search: (0, d.stringify)({ perk: R.NITRO_ORBS_REWARDS_CARD_ID }) }));
         }, [r, i]),
         q = l.useCallback(() => {
             ((0, L.gP)(),
@@ -62,7 +62,7 @@ function I(e) {
                 (0, j.pX)(_.BV.NITRO_HOME, { search: (0, d.stringify)({ section: y.L }) }));
         }, [r, i]),
         z = l.useMemo(() => {
-            let e = (0, R.YE)(P, O.PremiumTypes.TIER_2);
+            let e = (0, b.YE)(P, O.PremiumTypes.TIER_2);
             if (!E || W) return null;
             if (e && null != w) {
                 let e = (0, c.default)(new Date(w.next_reward_date), new Date());
@@ -83,7 +83,7 @@ function I(e) {
             return null;
         }, [P, W, w, E, V]),
         G = (I ?? 0) >= 4100;
-    return (0, n.jsx)(m.x, {
+    return (0, n.jsx)(f.x, {
         targetElementRef: t,
         shouldShow: a,
         onRequestClose: r,
@@ -162,7 +162,7 @@ var K = a(505274),
     $ = a(37402);
 function H(e) {
     let { pillRef: t, clickableRef: a, ...l } = e,
-        { balancePillOverlay: r } = (0, f.cf)([K.A], () => ({ balancePillOverlay: K.A.balancePillOverlay })),
+        { balancePillOverlay: r } = (0, m.cf)([K.A], () => ({ balancePillOverlay: K.A.balancePillOverlay })),
         s = (0, n.jsx)($.Gy, { ref: t, clickableRef: a, ...l }),
         i = (0, n.jsx)($.Gy, { ...l, isInModalOverlay: !0, disabled: !0 }),
         u = null != t.current ? t.current.offsetHeight : 36;
@@ -190,8 +190,8 @@ function X(e) {
             ctaOnClick: r,
             onNavigate: c,
             analyticsPage: d,
-            className: f,
-            pillVariant: m,
+            className: m,
+            pillVariant: f,
             themeOverride: x,
         } = e,
         { balance: h } = (0, p.W)(),
@@ -199,32 +199,32 @@ function X(e) {
         [k, C] = l.useState(!1),
         [j, A] = l.useState(!1),
         E = l.useRef(null),
-        R = l.useRef(null);
+        b = l.useRef(null);
     (0, o.j)(!k);
-    let b = (0, V.H)({ location: "BalanceWidgetMenu" }),
+    let R = (0, V.H)({ location: "BalanceWidgetMenu" }),
         N = l.useCallback(() => {
             let e = !k;
             (e &&
                 null != d &&
                 (0, W.Y)({
                     pageType: d,
-                    sectionType: b ? u.A.ORB_WALLET : S.JJy.ORBS_BALANCE_MENU,
-                    ctaObject: b ? u.A.ORB_WALLET_OPEN_FROM_BALANCE_PILL : S.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
+                    sectionType: R ? u.A.ORB_WALLET : S.JJy.ORBS_BALANCE_MENU,
+                    ctaObject: R ? u.A.ORB_WALLET_OPEN_FROM_BALANCE_PILL : S.ZSU.OPEN_ORB_BALANCE_MENU_FROM_PILL,
                 }),
                 g(e ? z.k.SELECTED : z.k.DEFAULT),
                 C(e));
-        }, [k, d, b]),
+        }, [k, d, R]),
         y = l.useCallback(() => {
             k && N();
         }, [k, N]),
         L = (0, i.A)(null, y),
-        { hasUnreadUpdate: O } = (0, q.I)({ enabled: b }),
+        { hasUnreadUpdate: O } = (0, q.I)({ enabled: R }),
         _ = t ?? O,
         T = l.useMemo(
             () =>
                 (0, n.jsx)(H, {
                     pillRef: E,
-                    clickableRef: R,
+                    clickableRef: b,
                     ariaExpanded: k,
                     balance: h,
                     balanceWidgetMode: v,
@@ -232,19 +232,19 @@ function X(e) {
                         e.stopPropagation();
                     },
                     onClick: N,
-                    variant: m,
+                    variant: f,
                     themeOverride: x,
                     showNotificationBadge: _,
                 }),
-            [h, v, m, x, _, N, k],
+            [h, v, f, x, _, N, k],
         ),
         D = l.useCallback(
             (e) =>
-                b
+                R
                     ? e
                         ? (0, n.jsx)(Q.EA, {
                               cardRef: L,
-                              returnRef: R,
+                              returnRef: b,
                               targetElementRef: E,
                               shouldShow: e,
                               analyticsPage: d,
@@ -263,8 +263,8 @@ function X(e) {
                               (N(), r());
                           },
                       }),
-            [b, L, E, N, a, r, d, c],
+            [R, L, E, N, a, r, d, c],
         );
-    return (0, n.jsxs)("div", { className: s()(Y.kL, f, { [Y.R]: j, [Y.RK]: !j }), children: [T, D(k)] });
+    return (0, n.jsxs)("div", { className: s()(Y.kL, m, { [Y.R]: j, [Y.RK]: !j }), children: [T, D(k)] });
 }
 X.CardAlignment = J;

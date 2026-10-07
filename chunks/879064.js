@@ -106,7 +106,7 @@ var P = n(451731),
     $ = n(985242),
     Q = n(652215),
     ee = n(746080),
-    et = n(375708),
+    et = n(660183),
     en = n(196404);
 function ei(e) {
     let t,
@@ -357,8 +357,8 @@ var e3 = n(724511),
     e5 = n(132500),
     e4 = n(770335),
     e8 = n(7584),
-    e7 = n(526292),
-    e6 = n(926972),
+    e6 = n(526292),
+    e7 = n(926972),
     e9 = n(711014),
     te =
         (((i = {})[(i.EMOJI = 0)] = "EMOJI"),
@@ -956,7 +956,7 @@ var t2 = n(182922),
 function t8(e) {
     return null != e && "animated" in e;
 }
-let t7 = r.memo(function (e) {
+let t6 = r.memo(function (e) {
     let t,
         i,
         { className: s, emojiGrid: a, guildId: o, pickerIntention: c, channel: u } = e,
@@ -1056,7 +1056,7 @@ let t7 = r.memo(function (e) {
     });
 });
 n(30146);
-var t6 = n(607399),
+var t7 = n(607399),
     t9 = n(765178),
     ne = n(537652),
     nt = n(962125),
@@ -1817,7 +1817,7 @@ let nk = (0, eu.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                             }),
                         [d, t, v, S, x],
                     ),
-                    F = (0, e7.k0)(),
+                    F = (0, e6.k0)(),
                     J = r.useCallback(
                         (e, n) => {
                             let i = d[e],
@@ -1985,7 +1985,7 @@ let nk = (0, eu.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_TOP),
                               }),
                               className: nG.BZ,
                           }),
-                    P || t6.Fr
+                    P || t7.Fr
                         ? null
                         : (0, l.jsx)(na.d, {
                               showUpsell: H,
@@ -2090,8 +2090,8 @@ let n2 = "premiumRetentionEmojiPickerNotice",
     };
 var n4 = n(148361);
 let n8 = (0, eu.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_CONTAINER_PADDING_HORIZONTAL),
-    n7 = (0, eu.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT);
-function n6(e) {
+    n6 = (0, eu.xI)(E.A.EMOJI_PICKER_CONSTANTS_EMOJI_LIST_PADDING_LEFT);
+function n7(e) {
     return e.stopPropagation();
 }
 function n9(e, t) {
@@ -2159,7 +2159,7 @@ let ie = u()(ed.bo, 200),
             eW = r.useCallback((e) => {
                 el.iM.updateSetting(Array.from(e));
             }, []),
-            eZ = (0, k.oV)({ gridWrapperRef: eC, containerWidth: y, listPaddingLeft: n7, listScrollbarWidth: 8 }),
+            eZ = (0, k.oV)({ gridWrapperRef: eC, containerWidth: y, listPaddingLeft: n6, listScrollbarWidth: 8 }),
             {
                 rowCountBySection: eY,
                 sectionDescriptors: ez,
@@ -2191,9 +2191,9 @@ let ie = u()(ed.bo, 200),
                     x = (0, m.bG)([S.Ay], () => S.Ay.expandedSectionsByGuildIds),
                     T = (0, m.bG)([ea.default], () => ea.default.getCurrentUser()),
                     y = (0, ec.ki)(T),
-                    j = (0, e7.k0)(),
+                    j = (0, e6.k0)(),
                     R = h.getGroupedCustomEmoji(),
-                    b = (0, e6.Ym)({ location: "useEmojiGrid" });
+                    b = (0, e7.Ym)({ location: "useEmojiGrid" });
                 return r.useMemo(() => {
                     let e = [],
                         n = [],
@@ -2668,7 +2668,7 @@ let ie = u()(ed.bo, 200),
                     E ? null : tu,
                     (0, l.jsxs)("div", {
                         className: o()(t0.Fb, b),
-                        onScroll: n6,
+                        onScroll: n7,
                         children: [
                             E ? tu : null,
                             (0, l.jsxs)("div", {
@@ -2720,7 +2720,7 @@ let ie = u()(ed.bo, 200),
                                           }),
                                 ],
                             }),
-                            (0, l.jsx)(t7, {
+                            (0, l.jsx)(t6, {
                                 emojiGrid: eq,
                                 className: t0.qV,
                                 guildId: ex,

@@ -8,7 +8,7 @@ var a = l(17928),
     u = l(994500),
     d = l(589051),
     s = l(521398),
-    c = l(375708);
+    c = l(660183);
 function p(e) {
     let { user: n, onAction: l, groupId: p } = e,
         { hasFriendList: h } = (0, d.M8)("useManageFriendGroupsItems"),

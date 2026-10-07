@@ -1,7 +1,7 @@
 l.d(t, { Fz: () => u, Qu: () => r, gF: () => e });
 var i = l(696016),
     o = l(753070),
-    a = l(375708);
+    a = l(660183);
 function r() {
     return [
         { id: "30s", value: i.LX.SECONDS_30, label: a.intl.formatToPlainString(a.t["bTFv/3"], { count: 30 }) },

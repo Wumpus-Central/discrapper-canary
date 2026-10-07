@@ -258,7 +258,7 @@ var X = n(561844),
     Z = n(710969),
     q = n(319252),
     Q = n(190107),
-    J = n(375708);
+    J = n(660183);
 let ee = new Set([H.uF.QUEST_BAR, H.uF.QUEST_BAR_V2, H.uF.QUEST_BAR_MOBILE]);
 async function et(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];

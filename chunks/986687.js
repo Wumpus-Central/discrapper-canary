@@ -28,7 +28,7 @@ var l = a(477900),
     T = a(19575),
     k = a(980707),
     O = a(477782),
-    S = a(375708);
+    S = a(660183);
 let B = function (e) {
     let { onChangeAvatar: i, onChangeAvatarDecoration: a, onClose: n } = e;
     return (0, l.jsxs)(k.W, {

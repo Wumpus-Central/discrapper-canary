@@ -6,7 +6,7 @@ var a = n(477900),
     o = n(97483),
     r = n(464477),
     d = n(917136),
-    h = n(375708);
+    h = n(660183);
 async function p() {
     try {
         let { ticket: e, challenge: t } = await d.startRegisterWebAuthnCredential();

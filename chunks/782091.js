@@ -8,7 +8,7 @@ var i,
     d = n(170148),
     c = n(818023),
     u = n(652215),
-    _ = n(375708),
+    _ = n(660183),
     E =
         (((i = {})[(i.CAN_LAUNCH = 0)] = "CAN_LAUNCH"),
         (i[(i.NO_USE_EMBEDDED_ACTIVITIES_PERMISSION = 1)] = "NO_USE_EMBEDDED_ACTIVITIES_PERMISSION"),

@@ -168,7 +168,7 @@ var ey = n(220884),
     eK = n(935208),
     ez = n(67103),
     eX = n(652215),
-    eB = n(375708);
+    eB = n(660183);
 function eZ(e) {
     return e.find((e) => (0, eG.A)(e, eX.jUm.JOIN));
 }
@@ -343,7 +343,7 @@ var eQ = n(808380),
     e3 = n(266080),
     e5 = n(70191);
 let e2 = { [eQ.Y.XBOX]: e3.A, [eQ.Y.PLAYSTATION]: e1.A };
-function e4(e) {
+function e6(e) {
     let { activities: t, gameProfileEntry: n, gameIconSize: l, platformIconSizePx: s } = e,
         a = (0, d.b4)(),
         u = r.useMemo(() => {
@@ -370,8 +370,8 @@ function e4(e) {
               return (0, i.jsx)(ea.A, { game: n, size: l, unknownGameIconFallback: u ?? d });
           })({ gameProfileEntry: n, gameApplication: o, gameIconSize: l, platformIconSizePx: s });
 }
-let e9 = G._3.SIZE_32,
-    e6 = [et.iq, et.tR, et.K7, et.sp, et.MK];
+let e4 = G._3.SIZE_32,
+    e9 = [et.iq, et.tR, et.K7, et.sp, et.MK];
 function e7(e) {
     let t,
         { channel: n, textVariant: l, activities: u, applicationStream: o } = e,
@@ -469,7 +469,7 @@ function e8(e) {
             avatarDecorationSrc: m,
             avatarSrc: I,
             eventHandlers: E,
-        } = (0, eh.A)({ userId: g, size: e9, animateOnHover: !0, guildId: null }),
+        } = (0, eh.A)({ userId: g, size: e4, animateOnHover: !0, guildId: null }),
         A = r.useMemo(() => {
             let e = h ?? "no-group",
                 t = l ?? "no-relationship",
@@ -516,7 +516,7 @@ function e8(e) {
                 return (0, i.jsx)(et.mG, {
                     location: et.N5.FRIENDS_POPOUT,
                     className: eT.cV,
-                    children: e6.map((e, n) => (0, i.jsx)(e, { entry: t }, n)),
+                    children: e9.map((e, n) => (0, i.jsx)(e, { entry: t }, n)),
                 });
             }
             if ((0, B.A)({ activities: n, status: p, applicationStream: N, voiceChannel: S })) {
@@ -665,7 +665,7 @@ let tt = r.memo((e) => {
                                 "div",
                                 {
                                     className: eT.im,
-                                    children: (0, i.jsx)(e4, {
+                                    children: (0, i.jsx)(e6, {
                                         activities: n,
                                         gameProfileEntry: N,
                                         gameIconSize: ea.M.SMALL,
@@ -690,7 +690,7 @@ let tt = r.memo((e) => {
         onContextMenu: D,
         avatar: (0, i.jsx)(U.eu, {
             ...p,
-            size: e9,
+            size: e4,
             src: S,
             isMobile: _,
             isTyping: !1,
@@ -823,7 +823,7 @@ let tn = r.memo((e) => {
         onContextMenu: _,
         avatar: (0, i.jsx)(U.eu, {
             ...I,
-            size: e9,
+            size: e4,
             src: m,
             isMobile: p,
             isTyping: !1,
@@ -846,7 +846,7 @@ let tn = r.memo((e) => {
                     G
                         ? (0, i.jsx)("div", {
                               className: eT.im,
-                              children: (0, i.jsx)(e4, {
+                              children: (0, i.jsx)(e6, {
                                   activities: n,
                                   gameProfileEntry: E,
                                   gameIconSize: ea.M.XSMALL,
@@ -1926,7 +1926,7 @@ function t2(e) {
         ],
     });
 }
-function t4(e) {
+function t6(e) {
     let { currentUser: t, activity: n, currentGameName: l, activeTab: u, onTabChange: d } = e,
         {
             friendsHasUnreadFavorites: c,
@@ -1996,7 +1996,7 @@ function t4(e) {
                         l = !0 === E[t],
                         r = !0 === f[t];
                     return (0, i.jsx)(
-                        t9,
+                        t4,
                         {
                             tab: t,
                             label: eB.intl.formatToPlainString(n, {}),
@@ -2012,7 +2012,7 @@ function t4(e) {
         ],
     });
 }
-function t9(e) {
+function t4(e) {
     let {
             tab: t,
             label: n,
@@ -2035,7 +2035,7 @@ function t9(e) {
     });
 }
 t5.displayName = "OverlayVoiceCallElapsedTime";
-var t6 = n(594831),
+var t9 = n(594831),
     t7 = n(645959),
     t8 = n(812993),
     ne = n(602853),
@@ -2940,7 +2940,7 @@ function n1() {
         [l, a] = r.useState(""),
         d = l.trim().toLowerCase(),
         c =
-            ((e = (0, t6.Dz)()),
+            ((e = (0, t9.Dz)()),
             (0, s.yK)(
                 [t7.A, eI.A],
                 () => {
@@ -3236,9 +3236,9 @@ function n1() {
 var n3 = n(776096),
     n5 = n(607567),
     n2 = n(377802),
-    n4 = n(342952),
-    n9 = n(676923),
-    n6 = n(342296),
+    n6 = n(342952),
+    n4 = n(676923),
+    n9 = n(342296),
     n7 = n(936520),
     n8 = n(956123);
 let le = r.memo(function (e) {
@@ -3267,7 +3267,7 @@ let le = r.memo(function (e) {
             [t, o, g, m],
         );
     return (0, tC.Vq)(g) && null != m
-        ? (0, i.jsx)(n6.A, {
+        ? (0, i.jsx)(n9.A, {
               targetElementRef: d,
               user: g,
               guildId: n ?? void 0,
@@ -3367,7 +3367,7 @@ function ll(e) {
         ? null
         : (0, i.jsx)("div", {
               className: n8.X0,
-              children: (0, i.jsx)(n4.A, {
+              children: (0, i.jsx)(n6.A, {
                   users: l,
                   guildId: n ?? void 0,
                   maxUsers: Math.min(l.length, 4),
@@ -3484,7 +3484,7 @@ function li(e) {
             n = f ? H : nx._;
         return (0, i.jsx)("div", {
             onDoubleClick: ln,
-            children: (0, i.jsx)(n9.S, {
+            children: (0, i.jsx)(n4.S, {
                 tooltipText: e,
                 onClick: f ? b : D,
                 onMouseEnter: Y,
@@ -3605,7 +3605,7 @@ function lo() {
         a = n.trim().toLowerCase(),
         [d, c] = r.useState(() => new Set()),
         h = (0, s.bG)([tf], () => tf.getCollapsedSectionOverridesForTab(o.x.VOICE), []),
-        g = (0, t6.qZ)(),
+        g = (0, t9.qZ)(),
         m = r.useMemo(() => {
             let e = new Map();
             for (let t of g) e.set(t.channel.id, t.voiceStates);
@@ -3622,12 +3622,12 @@ function lo() {
         }, []),
         S = r.useMemo(() => new Set(g.map((e) => e.channel.id)), [g]),
         [p, _] = r.useState([]);
-    (0, ty.RT)(n, g, _, t6.MV);
+    (0, ty.RT)(n, g, _, t9.MV);
     let C = r.useRef(null),
         v = (0, y.A)("friends-widget-voice", C),
         [R, b] = (0, s.bG)([tp.A], () => tp.A.getFavoriteTargetIdsForTab(o.x.VOICE), [], j.D),
         k = r.useMemo(() => R.filter((e) => S.has(e)), [R, S]),
-        { friendVoiceChannelIds: O, recentVoiceChannelIds: w } = (0, t6.S4)(),
+        { friendVoiceChannelIds: O, recentVoiceChannelIds: w } = (0, t9.S4)(),
         F = r.useMemo(() => O.filter((e) => S.has(e)), [O, S]),
         G = r.useMemo(() => w.filter((e) => S.has(e)), [w, S]),
         L = (0, s.bG)([ef.Ay], () => ef.Ay.getVoiceChannelId(), []),
@@ -3989,7 +3989,7 @@ function l_() {
     return (0, i.jsxs)("div", {
         className: lT.kL,
         children: [
-            (0, i.jsx)(t4, {
+            (0, i.jsx)(t6, {
                 currentUser: h,
                 activity: E,
                 currentGameName: n?.name ?? null,

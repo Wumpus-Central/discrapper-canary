@@ -6,7 +6,7 @@ var n = i(636537),
     a = i(966833),
     o = i(157559),
     c = i(652215),
-    g = i(375708);
+    g = i(660183);
 let d = {
         async pinMessage(t, e) {
             let { id: i, name: r } = t;

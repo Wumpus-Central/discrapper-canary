@@ -8,8 +8,8 @@ var r = t(503698),
     c = t(775602),
     u = t(166532),
     o = t(45938),
-    m = t(935462),
-    d = t(834730),
+    d = t(935462),
+    m = t(834730),
     C = t(235986),
     x = t(224016),
     L = t(217392),
@@ -69,7 +69,7 @@ var j = t(158045),
     A = t(724651),
     T = t(732280),
     g = t(202541),
-    E = t(375708),
+    E = t(660183),
     S = t(294230);
 function I(e) {
     let { isTier0: s, discountAmount: t } = e,
@@ -82,7 +82,7 @@ function I(e) {
             : a && (l = E.intl.string(E.t.gtNqJQ)),
         (0, n.jsx)("div", {
             className: S.TX,
-            children: (0, n.jsx)(d.E, { variant: "text-xs/bold", className: i()(S.El, { [S.LD]: s }), children: l }),
+            children: (0, n.jsx)(m.E, { variant: "text-xs/bold", className: i()(S.El, { [S.LD]: s }), children: l }),
         })
     );
 }
@@ -96,13 +96,13 @@ let v = function (e) {
             renderAnimation: c,
             onClose: u,
             isGift: o,
-            upgradeToPremiumType: d,
+            upgradeToPremiumType: m,
             className: p,
             showTrialBadge: T = !1,
             showDiscountBadge: v = !1,
         } = e,
-        _ = d === g.PremiumTypes.TIER_2;
-    s = d === g.PremiumTypes.TIER_0 ? L.A : d === g.PremiumTypes.TIER_1 ? f : x.A;
+        _ = m === g.PremiumTypes.TIER_2;
+    s = m === g.PremiumTypes.TIER_0 ? L.A : m === g.PremiumTypes.TIER_1 ? f : x.A;
     let y = (0, A.O)(),
         M = y?.discount?.amount;
     return (0, n.jsxs)("div", {
@@ -120,11 +120,11 @@ let v = function (e) {
                         children: [
                             (0, n.jsx)(s, { className: i()(S.nr, { [S.w6]: !_ }) }),
                             (T || v) &&
-                                (0, n.jsx)(I, { isTier0: d === g.PremiumTypes.TIER_0, discountAmount: v ? M : void 0 }),
+                                (0, n.jsx)(I, { isTier0: m === g.PremiumTypes.TIER_0, discountAmount: v ? M : void 0 }),
                         ],
                     }),
                     !t &&
-                        (0, n.jsx)(m.s_, {
+                        (0, n.jsx)(d.s_, {
                             "data-migration-pending": !0,
                             hideOnFullscreen: r,
                             onClick: u,
@@ -215,8 +215,8 @@ function w(e) {
             currentStep: s,
             className: t,
             purchaseState: r,
-            premiumType: m,
-            onClose: d,
+            premiumType: d,
+            onClose: m,
             hideCloseButton: C,
             showTrialBadge: x,
             showDiscountBadge: L,
@@ -234,7 +234,7 @@ function w(e) {
               title: (function () {
                   switch (s) {
                       case u.pn.PLAN_SELECT:
-                          return m === g.PremiumTypes.TIER_0 ? E.intl.string(E.t.rk4Uu8) : E.intl.string(E.t["7YWj6+"]);
+                          return d === g.PremiumTypes.TIER_0 ? E.intl.string(E.t.rk4Uu8) : E.intl.string(E.t["7YWj6+"]);
                       case u.pn.ADD_PAYMENT_STEPS:
                           return E.intl.string(E.t.vHqbJE);
                       case u.pn.REVIEW:
@@ -250,8 +250,8 @@ function w(e) {
                 hideCloseOnFullScreen: !0,
                 forceBrandRefreshHeader: N,
                 hideCloseButton: C,
-                upgradeToPremiumType: m,
-                onClose: d,
+                upgradeToPremiumType: d,
+                onClose: m,
                 isEligibleForTrial: h,
                 showTrialBadge: x,
                 showDiscountBadge: L,
@@ -263,17 +263,17 @@ function w(e) {
                     hideCloseOnFullScreen: !0,
                     hideCloseButton: C,
                     shouldShowPrice: !0,
-                    upgradeToPremiumType: m,
+                    upgradeToPremiumType: d,
                     renderAnimation: () =>
-                        m === g.PremiumTypes.TIER_0
+                        d === g.PremiumTypes.TIER_0
                             ? (0, n.jsx)(b, { className: U.mv, currentStep: s, purchaseState: r, pause: S })
-                            : m === g.PremiumTypes.TIER_1
+                            : d === g.PremiumTypes.TIER_1
                               ? (0, n.jsx)(P, { className: U.mv, currentStep: s, purchaseState: r, pause: S })
                               : (0, n.jsx)(R, { className: U.mv, currentStep: s, purchaseState: r, pause: S }),
                     plan: null,
                     isGift: !1,
                     className: U.wx,
-                    onClose: d,
+                    onClose: m,
                     showTrialBadge: x,
                     showDiscountBadge: L,
                 }),

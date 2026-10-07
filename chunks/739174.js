@@ -28,7 +28,7 @@ var i = n(477900),
     k = n(287809),
     O = n(427262),
     L = n(652215),
-    w = n(375708),
+    w = n(660183),
     R = n(924466);
 function M(e) {
     let { guild: t, id: s, type: a, isLocked: r, lockTooltipText: c } = e,

@@ -20,7 +20,7 @@ var i = n(477900),
     g = n(792348),
     S = n(817232),
     N = n(257645),
-    C = n(375708),
+    C = n(660183),
     O = n(948611);
 function R(e) {
     let { sound: t, disabled: n, setIsChildTooltipShowing: a, previewSound: l } = e,

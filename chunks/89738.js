@@ -9,15 +9,15 @@
             u = /^xn--/,
             c = /[^\x20-\x7E]/,
             f = /[\x2E\u3002\uFF0E\uFF61]/g,
-            d = {
+            p = {
                 overflow: "Overflow: input needs wider integers to process",
                 "not-basic": "Illegal input >= 0x80 (not a basic code point)",
                 "invalid-input": "Invalid input",
             },
-            p = Math.floor,
+            d = Math.floor,
             h = String.fromCharCode;
         function m(e) {
-            throw RangeError(d[e]);
+            throw RangeError(p[e]);
         }
         function v(e, t) {
             for (var r = e.length, n = []; r--;) n[r] = t(e[r]);
@@ -53,8 +53,8 @@
         }
         function _(e, t, r) {
             var n = 0;
-            for (e = r ? p(e / 700) : e >> 1, e += p(e / t); e > 455; n += 36) e = p(e / 35);
-            return p(n + (36 * e) / (e + 38));
+            for (e = r ? d(e / 700) : e >> 1, e += d(e / t); e > 455; n += 36) e = d(e / 35);
+            return d(n + (36 * e) / (e + 38));
         }
         function S(e) {
             var t,
@@ -68,13 +68,13 @@
                 u,
                 c,
                 f,
-                d = [],
+                p = [],
                 h = e.length,
                 v = 0,
                 y = 128,
                 g = 72;
             for ((n = e.lastIndexOf("-")) < 0 && (n = 0), i = 0; i < n; ++i)
-                (e.charCodeAt(i) >= 128 && m("not-basic"), d.push(e.charCodeAt(i)));
+                (e.charCodeAt(i) >= 128 && m("not-basic"), p.push(e.charCodeAt(i)));
             for (o = n > 0 ? n + 1 : 0; o < h;) {
                 for (
                     a = v, s = 1, l = 36;
@@ -87,23 +87,23 @@
                                   : t - 97 < 26
                                     ? t - 97
                                     : 36) >= 36 ||
-                            u > p((0x7fffffff - v) / s)) &&
+                            u > d((0x7fffffff - v) / s)) &&
                             m("overflow"),
                         (v += u * s),
                         !(u < (c = l <= g ? 1 : l >= g + 26 ? 26 : l - g));
                     l += 36
                 ) {
-                    (s > p(0x7fffffff / (f = 36 - c)) && m("overflow"), (s *= f));
+                    (s > d(0x7fffffff / (f = 36 - c)) && m("overflow"), (s *= f));
                 }
-                ((g = _(v - a, (r = d.length + 1), 0 == a)),
-                    p(v / r) > 0x7fffffff - y && m("overflow"),
-                    (y += p(v / r)),
+                ((g = _(v - a, (r = p.length + 1), 0 == a)),
+                    d(v / r) > 0x7fffffff - y && m("overflow"),
+                    (y += d(v / r)),
                     (v %= r),
-                    d.splice(v++, 0, y));
+                    p.splice(v++, 0, y));
             }
-            return b(d);
+            return b(p);
         }
-        function x(e) {
+        function E(e) {
             var t,
                 r,
                 n,
@@ -115,22 +115,22 @@
                 u,
                 c,
                 f,
-                d,
+                p,
                 v,
                 y,
                 b,
                 S = [];
-            for (a = 0, d = (e = g(e)).length, t = 128, r = 0, o = 72; a < d; ++a) (f = e[a]) < 128 && S.push(h(f));
-            for (n = i = S.length, i && S.push("-"); n < d;) {
-                for (s = 0x7fffffff, a = 0; a < d; ++a) (f = e[a]) >= t && f < s && (s = f);
+            for (a = 0, p = (e = g(e)).length, t = 128, r = 0, o = 72; a < p; ++a) (f = e[a]) < 128 && S.push(h(f));
+            for (n = i = S.length, i && S.push("-"); n < p;) {
+                for (s = 0x7fffffff, a = 0; a < p; ++a) (f = e[a]) >= t && f < s && (s = f);
                 for (
-                    s - t > p((0x7fffffff - r) / (v = n + 1)) && m("overflow"), r += (s - t) * v, t = s, a = 0;
-                    a < d;
+                    s - t > d((0x7fffffff - r) / (v = n + 1)) && m("overflow"), r += (s - t) * v, t = s, a = 0;
+                    a < p;
                     ++a
                 )
                     if (((f = e[a]) < t && ++r > 0x7fffffff && m("overflow"), f == t)) {
                         for (l = r, u = 36; !(l < (c = u <= o ? 1 : u >= o + 26 ? 26 : u - o)); u += 36)
-                            ((b = l - c), (y = 36 - c), S.push(h(w(c + (b % y), 0))), (l = p(b / y)));
+                            ((b = l - c), (y = 36 - c), S.push(h(w(c + (b % y), 0))), (l = d(b / y)));
                         (S.push(h(w(l, 0))), (o = _(r, v, n == i)), (r = 0), ++n);
                     }
                 (++r, ++t);
@@ -142,10 +142,10 @@
                 version: "1.4.1",
                 ucs2: { decode: g, encode: b },
                 decode: S,
-                encode: x,
+                encode: E,
                 toASCII: function (e) {
                     return y(e, function (e) {
-                        return c.test(e) ? "xn--" + x(e) : e;
+                        return c.test(e) ? "xn--" + E(e) : e;
                     });
                 },
                 toUnicode: function (e) {

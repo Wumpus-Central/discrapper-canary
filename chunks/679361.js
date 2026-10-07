@@ -3,7 +3,7 @@ var i = e(477900),
     n = e(582128),
     s = e(189213),
     r = e(37948),
-    l = e(375708);
+    l = e(660183);
 let o = (t) => {
     let { transitionState: a, onClose: e, game: o, websiteButtons: c, trackAction: u } = t,
         p = (0, r.A)(),

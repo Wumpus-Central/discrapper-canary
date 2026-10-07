@@ -6,7 +6,7 @@ var n = i(562708),
     o = i(174459),
     u = i(499785),
     l = i(652215),
-    g = i(375708);
+    g = i(660183);
 let E = {
     resetSuggestions: () => r.h.dispatch({ type: "UNIQUE_USERNAME_SUGGESTIONS_RESET" }),
     async fetchSuggestionsRegistration(e) {

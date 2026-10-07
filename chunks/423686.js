@@ -55,7 +55,7 @@ async function h(e) {
     throw Error("Order signing deferral context has no action the client can complete");
 }
 var _ = r(26279),
-    E = r(375708);
+    E = r(660183);
 function R(e) {
     let { order: t, errorSource: r, onSignFailure: d, onError: s } = e,
         [c, o] = (0, n.useState)(null),

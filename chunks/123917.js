@@ -151,7 +151,7 @@ let F = new k(s.h, {
 var B = n(232835),
     V = n(994500),
     H = n(309010),
-    j = n(375708);
+    j = n(660183);
 function W(e, t) {
     let n = O.A.getChannel(H.Ay.getChannelId());
     return (null == n || n.type !== h.rbe.DM || !!V.A.isFriend(n.getRecipientId() ?? "")) && e === t;

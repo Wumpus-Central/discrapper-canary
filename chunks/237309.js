@@ -1,7 +1,7 @@
 n.d(t, { Ay: () => l, XG: () => s, gB: () => i.g });
 var i = n(717398),
     r = n(395422),
-    a = n(375708);
+    a = n(660183);
 let s = 120,
     l = function (e) {
         let { discordTag: t, note: n, location: l, errorUxConfig: o = i.g.SHOW_ALWAYS } = e;

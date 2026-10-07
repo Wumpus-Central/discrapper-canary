@@ -7,7 +7,7 @@ var i = n(477900),
     u = n(287809),
     p = n(158045),
     o = n(885377),
-    c = n(375708);
+    c = n(660183);
 class d extends r.Component {
     render() {
         let { user: t, transitionState: e, onClose: n } = this.props;

@@ -5,7 +5,7 @@ var r = n(477782),
     l = n(867455),
     a = n(406704),
     d = n(652215),
-    s = n(375708);
+    s = n(660183);
 function o(t) {
     if (!(0, a.H_)(t) || t.type !== d.rbe.PRIVATE_THREAD) return null;
     let e = t.threadMetadata?.invitable ?? !0;

@@ -14,7 +14,7 @@ var a = n(477900),
     f = n(808247),
     g = n(594832),
     R = n(240248),
-    I = n(375708),
+    I = n(660183),
     m = n(49999);
 function y(t) {
     let { userId: e, skuId: s, nuxGraphic: c, onNuxShow: u, location: y, onAddSuccess: P, onError: T } = t,

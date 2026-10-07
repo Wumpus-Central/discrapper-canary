@@ -11,7 +11,7 @@ var s = i(477900),
     m = i(661531),
     g = i(975571),
     T = i(652215),
-    E = i(375708),
+    E = i(660183),
     _ = i(462150);
 let p = [
     { getQuestion: () => E.intl.string(E.t.C4J8UB), getAnswer: () => E.intl.string(E.t.nhkk6k) },

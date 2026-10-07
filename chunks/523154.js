@@ -2,7 +2,7 @@ n.d(t, { Sx: () => d, U_: () => o });
 var i = n(927813),
     r = n(518782),
     a = n(61567),
-    s = n(375708);
+    s = n(660183);
 let l = {
     [r.zu.COMPETITION_ENDED]: {
         [r.RE.GAMING_LEADERBOARD_STAT_HOURS_PLAYED]: a.default.unVTUQ,

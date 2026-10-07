@@ -24,7 +24,7 @@ var a = l(477900),
     f = l(440938),
     R = l(758836),
     B = l(652215),
-    y = l(375708),
+    y = l(660183),
     h = l(848913);
 function k(e) {
     let { handleTransition: t, selectedTab: l, isNarrow: i, hasText: o } = e,

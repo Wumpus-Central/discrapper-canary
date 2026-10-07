@@ -13,7 +13,7 @@ var r = n(503698),
     E = n(763827),
     A = n(6155),
     h = n(919706),
-    f = n(375708),
+    f = n(660183),
     I = n(967481);
 function p(e) {
     let { title: t, onJumpToChannel: n, idle: r, preventIdleComponent: a } = e,

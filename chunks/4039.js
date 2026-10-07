@@ -11,7 +11,7 @@ var e = l(477900),
     m = l(364522),
     x = l(498642),
     f = l(548118),
-    S = l(375708),
+    S = l(660183),
     g = l(599127);
 function p(t) {
     let { guild: i, onClick: l } = t,

@@ -15,7 +15,7 @@ var r = n(477900),
     b = n(576761),
     R = n(652215),
     k = n(202541),
-    C = n(375708),
+    C = n(660183),
     O = n(181666);
 function g(t) {
     let { onClose: i, multiplier: n, orbMultiplierEligibility: g, customSubtitle: E, ...T } = t,

@@ -4,7 +4,7 @@ var a = s(477900),
     i = s(224640),
     l = s(707539),
     c = s(702513),
-    o = s(375708),
+    o = s(660183),
     r = s(392344);
 function d(t) {
     let { channel: e, onClose: s, transitionState: d } = t;

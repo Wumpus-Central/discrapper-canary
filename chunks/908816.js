@@ -7,7 +7,7 @@ var i = n(765178),
     o = n(793574),
     d = n(486020),
     c = n(652215),
-    u = n(375708);
+    u = n(660183);
 function _(e, t, n) {
     l.default.showNotification(
         d.Ay.getUserAvatarURL(e),

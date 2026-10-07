@@ -4,7 +4,7 @@ var l = n(811996),
     r = n(832163);
 n(652215);
 var s = n(206285),
-    i = n(375708);
+    i = n(660183);
 let o = {
         [l.U.DESKTOP]: "PC",
         [l.U.XBOX]: "Xbox",

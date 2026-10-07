@@ -24,7 +24,7 @@ function N(e, a) {
     return `${n}?format=${l}&animated=${t}`;
 }
 var A = t(458499),
-    I = t(375708),
+    I = t(660183),
     U = t(842730);
 function b(e, a, t) {
     let i = f.kt.useSetting(),

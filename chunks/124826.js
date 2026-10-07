@@ -123,7 +123,7 @@ var R = n(994500),
     $ = n(158045),
     Q = n(652215),
     Z = n(202541),
-    X = n(375708),
+    X = n(660183),
     J = n(858981);
 function Y(e) {
     let { icon: t, title: n, description: i } = e;

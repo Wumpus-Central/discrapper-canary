@@ -18,7 +18,7 @@ var a = n(174459),
     E = n(355097),
     T = n(954225),
     f = n(652215),
-    R = n(375708);
+    R = n(660183);
 function I(t) {
     let { ingress: e, guildId: n } = t,
         r = c.pE.useSetting().includes(n),

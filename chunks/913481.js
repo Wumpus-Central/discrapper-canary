@@ -14,7 +14,7 @@ var i = n(477900),
     A = n(743943),
     f = n(950075),
     x = n(270103),
-    g = n(375708),
+    g = n(660183),
     C = n(232059);
 function y(e, t) {
     return { x: (100 * t.offsetX) / e.clientWidth, y: (100 * t.offsetY) / e.clientHeight };

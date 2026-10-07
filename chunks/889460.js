@@ -15,7 +15,7 @@ var i = n(477900),
     I = n(711014),
     h = n(287809),
     C = n(652215),
-    v = n(375708);
+    v = n(660183);
 function m(t, e) {
     a.A.ensurePrivateChannel(t).then((t) => {
         null != c.A.getChannel(t) && o.A.sendInvite(t, e, "context_menu", { source: C.PE1.GUILD_CONTEXT_MENU });

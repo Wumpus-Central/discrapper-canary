@@ -8,7 +8,7 @@ var l = n(477900),
     c = n(939496),
     u = n(993401),
     d = n(996988),
-    A = n(375708);
+    A = n(660183);
 function f(t) {
     let { application: e, analyticsLocations: n, onAction: f, onClose: p } = t,
         { themeType: g } = (0, c.E)(),

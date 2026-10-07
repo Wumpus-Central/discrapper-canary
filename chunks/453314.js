@@ -45,7 +45,7 @@ var C = n(12351),
     B = n(451988),
     V = n(844222),
     H = n(652215),
-    j = n(375708),
+    j = n(660183),
     W = n(188854);
 let Y = { friction: 15, tension: 100 };
 class K extends r.PureComponent {

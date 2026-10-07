@@ -3,7 +3,7 @@ var r = n(477900);
 n(582128);
 var l = n(821609),
     s = n(279449),
-    i = n(375708);
+    i = n(660183);
 function a(t) {
     let { onClick: e, size: n } = t;
     return (0, r.jsx)(l.$, {

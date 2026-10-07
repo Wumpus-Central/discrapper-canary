@@ -69,7 +69,7 @@ var Y = l(702841),
     ei = l(953932),
     es = l(652215),
     er = l(268378),
-    eo = l(375708),
+    eo = l(660183),
     ec = l(71967);
 function eu(e) {
     let { header: t, description: l } = e;
@@ -735,8 +735,8 @@ var e7 = l(792852);
 function e9(e) {
     return Math.min(45 * e, 520);
 }
-var e4 = l(91440),
-    e6 = l(762831);
+var e6 = l(91440),
+    e4 = l(762831);
 function te(e) {
     let { filteredClips: t, totalClipCount: l, onClipClick: i, onEdit: s, isLoading: r, topInset: o = 0 } = e,
         [c, d] = a.useState({ width: 0, height: 0 }),
@@ -849,7 +849,7 @@ function te(e) {
                 return (0, n.jsx)(
                     "div",
                     {
-                        className: e4.UX,
+                        className: e6.UX,
                         ...I(e),
                         children: c.map((t, l) => {
                             let a = { width: b };
@@ -858,7 +858,7 @@ function te(e) {
                                 (0, n.jsx)(
                                     "div",
                                     {
-                                        className: F ? e6.$ : void 0,
+                                        className: F ? e4.$ : void 0,
                                         style: a,
                                         children: (0, n.jsx)(eZ, {
                                             actionsDisabled: f,
@@ -894,7 +894,7 @@ function te(e) {
                     : (0, n.jsxs)(
                           "div",
                           {
-                              className: e4.aE,
+                              className: e6.aE,
                               children: [
                                   (0, n.jsx)(h.D, {
                                       variant: "text-md/semibold",
@@ -905,7 +905,7 @@ function te(e) {
                                       (0, n.jsx)(p.E, {
                                           variant: "text-sm/normal",
                                           color: "text-subtle",
-                                          className: e4.yV,
+                                          className: e6.yV,
                                           children: t.description,
                                       }),
                               ],
@@ -916,11 +916,11 @@ function te(e) {
             [j],
         );
     if (!r && 0 === j.length) return (0, n.jsx)(em, { isEmptyBecauseQuery: l > 0 });
-    if (r && 0 === j.length) return (0, n.jsx)("div", { className: e4.dc, children: (0, n.jsx)(V.y, {}) });
+    if (r && 0 === j.length) return (0, n.jsx)("div", { className: e6.dc, children: (0, n.jsx)(V.y, {}) });
     let U = (0, n.jsx)($.A, {
             ref: w,
             role: "none presentation",
-            className: e4.Vb,
+            className: e6.Vb,
             listPadding: y,
             renderRow: H,
             renderSectionHeader: O,
@@ -931,7 +931,7 @@ function te(e) {
             onResize: d,
         }),
         { onFocus: G, ...B } = L();
-    return (0, n.jsx)("div", { className: e4.UT, ...B, children: U });
+    return (0, n.jsx)("div", { className: e6.UT, ...B, children: U });
 }
 var tt = l(405433),
     tl = l(241326),
@@ -2182,7 +2182,7 @@ function t8(e) {
                                     (0, n.jsx)(
                                         "div",
                                         {
-                                            className: c ? e6.$ : void 0,
+                                            className: c ? e4.$ : void 0,
                                             style: s,
                                             children: (0, n.jsx)(eZ, {
                                                 clip: e,
@@ -2332,8 +2332,8 @@ function t9(e) {
           ? (0, n.jsx)("div", { className: t7.dc, children: (0, n.jsx)(V.y, {}) })
           : (0, n.jsx)(em, { isEmptyBecauseQuery: l > 0 });
 }
-var t4 = l(837381),
-    t6 = l(741918),
+var t6 = l(837381),
+    t4 = l(741918),
     le = l(812993),
     lt = l(332837),
     ll = l(176781),
@@ -2345,7 +2345,7 @@ var t4 = l(837381),
 function lo(e) {
     let { itemId: t, icon: l, label: a, onClick: i, isSelected: r = !1, isDisabled: o = !1, badgeCount: c = 0 } = e,
         u = o && !r,
-        d = (0, t4.rm)(t);
+        d = (0, t6.rm)(t);
     return (0, n.jsx)(v.m, {
         text: a,
         position: "right",
@@ -2405,10 +2405,10 @@ function lc(e) {
     a.useEffect(() => {
         S(I);
     }, [S, I]);
-    let { ref: M, onKeyDown: D, ...T } = (0, t4.LT)(E),
+    let { ref: M, onKeyDown: D, ...T } = (0, t6.LT)(E),
         _ = a.useCallback(
             (e) => {
-                v.current = e.key === t6.D$.ENTER || e.key === t6.D$.SPACE;
+                v.current = e.key === t4.D$.ENTER || e.key === t4.D$.SPACE;
                 try {
                     D(e);
                 } finally {
@@ -2417,7 +2417,7 @@ function lc(e) {
             },
             [D],
         );
-    return (0, n.jsx)(t4.hD, {
+    return (0, n.jsx)(t6.hD, {
         navigator: E,
         children: (0, n.jsxs)("div", {
             className: lr.H$,
@@ -2793,16 +2793,16 @@ function lm(e) {
                 e.setActiveMainLink(G.oH.ALL_CLIPS),
                 e.setPendingSearchFocus(!0));
         }, []),
-        e4 = a.useMemo(() => {
+        e6 = a.useMemo(() => {
             let e = ef.filter((e) => el.has(e.id));
             return e.length > 0 && e.every((e) => e.isFavorite);
         }, [ef, el]),
-        e6 = a.useCallback(async () => {
+        e4 = a.useCallback(async () => {
             let e = ef.filter((e) => el.has(e.id)),
-                t = !e4;
+                t = !e6;
             (await Promise.all(e.filter((e) => e.isFavorite !== t).map((e) => (0, _.Yy)(e.id, { isFavorite: t }, !0))),
                 e1());
-        }, [ef, el, e4, e1]),
+        }, [ef, el, e6, e1]),
         tt = a.useMemo(() => {
             let e = 0,
                 t = 0,
@@ -2984,9 +2984,9 @@ function lm(e) {
                                                   e2 &&
                                                   (0, n.jsx)(ts, {
                                                       selectedCount: el.size,
-                                                      allSelectedFavorited: e4,
+                                                      allSelectedFavorited: e6,
                                                       onClear: e1,
-                                                      onFavorite: e6,
+                                                      onFavorite: e4,
                                                       onDelete: e3,
                                                       onShare: e5,
                                                       isSharing: ev,

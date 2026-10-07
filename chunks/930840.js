@@ -9,7 +9,7 @@ var e = c(477900),
     u = c(866665),
     p = c(661531),
     C = c(957565),
-    E = c(375708),
+    E = c(660183),
     T = c(596872);
 function d(s) {
     let { chunks: t, className: c, onCopy: n, ...d } = s,

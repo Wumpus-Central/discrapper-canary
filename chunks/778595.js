@@ -34,7 +34,7 @@ var r = n(980707),
     S = n(297413),
     D = n(966327),
     G = n(287809),
-    O = n(375708),
+    O = n(660183),
     Z = n(575721);
 function z(e) {
     let { color: i, className: n } = e;

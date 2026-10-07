@@ -2,7 +2,7 @@ n.d(i, { default: () => u });
 var r = n(477900);
 n(582128);
 var s = n(732159),
-    e = n(375708);
+    e = n(660183);
 function u(t) {
     let { ruleName: i, keyword: n, ...u } = t,
         a = i ?? e.intl.string(e.t.ffR2cM);

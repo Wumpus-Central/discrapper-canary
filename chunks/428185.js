@@ -3,7 +3,7 @@ var a = n(477900);
 n(582128);
 var r = n(732159),
     e = n(435183),
-    o = n(375708);
+    o = n(660183);
 let s = function (t) {
     let { channelId: i, application: n, onClose: s, ...c } = t;
     async function l(t) {

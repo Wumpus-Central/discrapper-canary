@@ -15,7 +15,7 @@ var l = t(477900),
     I = t(576705),
     k = t(927813),
     m = t(652215),
-    b = t(375708);
+    b = t(660183);
 function v(e, n) {
     let t = (0, i.bG)([p.A], () => p.A.getSavedMessage(e.channel_id, e.id)),
         a = x({ message: e, savedMessage: t, source: h.r.CONTEXT_MENU });

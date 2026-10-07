@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => te, Sb: () => e9, TC: () => e6, Hy: () => e7 });
+n.d(t, { Ay: () => te, Sb: () => e9, TC: () => e4, Hy: () => e7 });
 var i = n(477900),
     s = n(582128),
     l = n(503698),
@@ -51,7 +51,7 @@ var i = n(477900),
     $ = n(950305),
     J = n(854627),
     ee = n(148155),
-    et = n(375708),
+    et = n(660183),
     en = n(443543);
 function ei(e) {
     let { user: t, isOwnUser: n, label: l, removeButton: a, isFaded: o } = e,
@@ -1166,7 +1166,7 @@ function e5(e) {
         })
     );
 }
-function e4(e) {
+function e6(e) {
     let { subscription: t, renewalInvoicePreview: n, openInvoice: s, className: l, fractionalPremiumInfo: a } = e;
     return (0, i.jsxs)("div", {
         className: r()(e1.KF, l),
@@ -1180,7 +1180,7 @@ function e4(e) {
         ],
     });
 }
-function e6() {
+function e4() {
     let e = (0, u.bG)([b.default], () => b.default.getCurrentUser()),
         t = null != e && e.isPremiumGroupMember();
     return (0, i.jsxs)("div", {
@@ -1307,7 +1307,7 @@ function e8(e) {
                         children: (0, i.jsxs)("div", {
                             className: e1.zH,
                             children: [
-                                (0, i.jsx)(e4, {
+                                (0, i.jsx)(e6, {
                                     subscription: n,
                                     renewalInvoicePreview: C,
                                     className: e1.g4,

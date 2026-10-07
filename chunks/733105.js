@@ -64,7 +64,7 @@ var F = n(261958),
     q = n(885574),
     Q = n(442433),
     J = n(200662),
-    Z = n(375708),
+    Z = n(660183),
     X = n(634968);
 function $(e) {
     let { applicationIcon: t, applicationName: i, canNavigate: a, command: r, guildId: o } = e,
@@ -996,19 +996,19 @@ function e2(e) {
         ],
     });
 }
-var e3 = n(573648);
+var e1 = n(573648);
 (n(323874), n(14289), n(35956));
-var e1 = n(536637),
-    e8 = n.n(e1),
-    e7 = n(788373),
-    e5 =
+var e3 = n(536637),
+    e8 = n.n(e3),
+    e6 = n(788373),
+    e7 =
         (((i = {})[(i.ONE_DAY = 1)] = "ONE_DAY"),
         (i[(i.THREE_DAYS = 3)] = "THREE_DAYS"),
         (i[(i.SEVEN_DAYS = 7)] = "SEVEN_DAYS"),
         (i[(i.FOURTEEN_DAYS = 14)] = "FOURTEEN_DAYS"),
         (i[(i.THIRTY_DAYS = 30)] = "THIRTY_DAYS"),
         i),
-    e6 = n(125744),
+    e5 = n(125744),
     e4 = n(139033),
     e9 = n(408278),
     te = n(663417),
@@ -1037,14 +1037,14 @@ function tr(e) {
         }, [i, h]),
         N = s.useCallback(() => {
             if (!i.syncing)
-                if (b || i.expire_behavior !== e7.F.KICK) {
+                if (b || i.expire_behavior !== e6.F.KICK) {
                     let e =
-                        i.expire_behavior === e7.F.REMOVE_ROLE
+                        i.expire_behavior === e6.F.REMOVE_ROLE
                             ? Z.intl.string(Z.t["6kpw4i"])
                             : Z.intl.string(Z.t.fQUQIJ);
                     (0, eL.A)({
                         title: Z.intl.string(Z.t.emx3lN),
-                        subtitle: i.type === e6.s.YOUTUBE ? Z.intl.string(Z.t.anKQWU) : Z.intl.string(Z.t["BW/xtn"]),
+                        subtitle: i.type === e5.s.YOUTUBE ? Z.intl.string(Z.t.anKQWU) : Z.intl.string(Z.t["BW/xtn"]),
                         confirmText: e,
                         onConfirm: () => m(i),
                         variant: "critical",
@@ -1052,7 +1052,7 @@ function tr(e) {
                 } else
                     (0, e4.A)({
                         title: Z.intl.string(Z.t.emx3lN),
-                        subtitle: i.type === e6.s.YOUTUBE ? Z.intl.string(Z.t.pDCiEf) : Z.intl.string(Z.t.sQqHFk),
+                        subtitle: i.type === e5.s.YOUTUBE ? Z.intl.string(Z.t.pDCiEf) : Z.intl.string(Z.t.sQqHFk),
                     });
         }, [i, m, b]),
         E = s.useCallback(() => {
@@ -1068,9 +1068,9 @@ function tr(e) {
             syncLabel: R,
             subscribersText: M,
         } = s.useMemo(() => {
-            let e = e3.A.get(i.type)?.getPlatformUserUrl?.({ id: i.account.id, name: i.account.name }) ?? "";
+            let e = e1.A.get(i.type)?.getPlatformUserUrl?.({ id: i.account.id, name: i.account.name }) ?? "";
             switch (i.type) {
-                case e6.s.YOUTUBE:
+                case e5.s.YOUTUBE:
                     return {
                         serviceName: Z.intl.string(Z.t.aS6cK4),
                         expireBehaviorLabel: Z.intl.string(Z.t.A5MiqO),
@@ -1080,7 +1080,7 @@ function tr(e) {
                         }),
                         channelURL: e,
                     };
-                case e6.s.TWITCH:
+                case e5.s.TWITCH:
                 default:
                     return {
                         serviceName: Z.intl.string(Z.t.q4pBG3),
@@ -1097,7 +1097,7 @@ function tr(e) {
         { roleLink: W, syncDescriptionText: G } = s.useMemo(() => {
             let e;
             e = null != P ? (0, l.jsx)(tn.Anchor, { onClick: v, children: P.name }) : Z.intl.string(Z.t.PoWNfe);
-            let t = e3.A.get(i.type);
+            let t = e1.A.get(i.type);
             return {
                 roleLink: e,
                 syncDescriptionText:
@@ -1283,12 +1283,12 @@ function tr(e) {
                                         options: [
                                             {
                                                 id: "remove-role",
-                                                value: e7.F.REMOVE_ROLE.toString(),
+                                                value: e6.F.REMOVE_ROLE.toString(),
                                                 label: Z.intl.string(Z.t["6kpw4i"]),
                                             },
                                             {
                                                 id: "kick",
-                                                value: e7.F.KICK.toString(),
+                                                value: e6.F.KICK.toString(),
                                                 label: Z.intl.string(Z.t.fQUQIJ),
                                             },
                                         ],
@@ -1304,7 +1304,7 @@ function tr(e) {
                                         placeholder: Z.intl.string(Z.t.uiXMow),
                                         maxOptionsVisible: 5,
                                         value: `${t.expire_grace_period}`,
-                                        options: Object.values(e5)
+                                        options: Object.values(e7)
                                             .filter(Number.isInteger)
                                             .map((e) => ({
                                                 id: `${e}`,
@@ -1328,14 +1328,14 @@ function tr(e) {
                         },
                     }),
                     !b &&
-                        a.expire_behavior === e7.F.KICK &&
+                        a.expire_behavior === e6.F.KICK &&
                         (0, l.jsx)(I.E, {
                             className: ts.Ce,
                             color: "text-feedback-critical",
                             variant: "text-sm/normal",
                             children: Z.intl.string(Z.t.mThMlB),
                         }),
-                    i.type === e6.s.TWITCH
+                    i.type === e5.s.TWITCH
                         ? (function (e) {
                               let { integration: t, emojis: n, onToggle: i } = e;
                               return (0, l.jsxs)(g.A, {
@@ -1428,7 +1428,7 @@ function tc(e) {
             errors: d,
             canNavigate: m,
         } = e,
-        g = e3.A.get(a),
+        g = e1.A.get(a),
         h = s.useCallback(
             async (e) => {
                 m() && (await w.default.enableIntegration(i.id, e.type, e.id), u.A.startEditingIntegration(e.id));
@@ -2057,7 +2057,7 @@ function tQ(e) {
         ),
         ea &&
             eC.push(
-                ((j = e3.A.get(eG.fg2.TWITCH)),
+                ((j = e1.A.get(eG.fg2.TWITCH)),
                 en > 0
                     ? ((f = (0, l.jsx)(t_.u, { size: "xs" })),
                       (x = Z.intl.formatToPlainString(Z.t.FFpnT8, { count: el })),
@@ -2083,7 +2083,7 @@ function tQ(e) {
             ),
         er &&
             eC.push(
-                ((L = e3.A.get(eG.fg2.YOUTUBE)),
+                ((L = e1.A.get(eG.fg2.YOUTUBE)),
                 ei > 0
                     ? ((O = (0, l.jsx)(t_.u, { size: "xs" })),
                       (v = Z.intl.formatToPlainString(Z.t.b2g5vC, { count: es })),

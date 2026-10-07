@@ -3,7 +3,7 @@ var r = n(477900);
 n(582128);
 var i = n(189213),
     s = n(192308),
-    o = n(375708);
+    o = n(660183);
 function a(t) {
     let { transitionState: e, title: n, body: s, onClose: a } = t;
     return (0, r.jsx)(i.a, {

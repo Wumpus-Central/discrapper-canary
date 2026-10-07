@@ -1,5 +1,5 @@
 r.d(e, { jQ: () => i, v7: () => l, wT: () => o });
-var n = r(375708);
+var n = r(660183);
 let i = "klipy",
     l = "Klipy";
 function o() {
