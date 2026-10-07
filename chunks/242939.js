@@ -2046,16 +2046,22 @@ function tz(e) {
     });
 }
 function t$(e) {
-    let { decisionId: t } = e,
+    let { noFillDecision: t } = e,
         n = (0, u.bG)([C.A], () => C.A.hasLayers());
-    return (0, s.jsx)(j.Z, {
-        adContentId: t,
-        adCreativeType: o.p.NO_FILL,
-        questContent: E.uF.QUEST_BAR_V2,
-        overrideVisibility: !n,
-        sourceQuestContent: E.uF.QUEST_BAR_V2,
-        children: (e) => (0, s.jsx)("div", { ref: e, "aria-hidden": !0, className: tG.ui }),
-    });
+    function r(e) {
+        return (0, s.jsx)("div", { ref: e, "aria-hidden": !0, className: tG.ui });
+    }
+    return null == t.adContentId
+        ? r()
+        : (0, s.jsx)(j.Z, {
+              adContentId: t.adContentId,
+              adCreativeType: o.p.NO_FILL,
+              noFillDecision: t,
+              questContent: E.uF.QUEST_BAR_V2,
+              overrideVisibility: !n,
+              sourceQuestContent: E.uF.QUEST_BAR_V2,
+              children: (e) => r(e),
+          });
 }
 let tK =
     221552 == n.j
@@ -2079,7 +2085,7 @@ let tK =
                   case o.p.BOUNTY:
                       return null;
                   case o.p.NO_FILL:
-                      return null != t ? (0, s.jsx)(t$, { decisionId: t.decisionId }) : null;
+                      return null != t ? (0, s.jsx)(t$, { noFillDecision: t }, t.decisionId) : null;
               }
           }
         : null;

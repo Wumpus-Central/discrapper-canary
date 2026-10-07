@@ -578,16 +578,19 @@ async function em(e, t) {
                 $.getConfig({ location: "QuestActionCreators.fetchQuestToDeliver" }).enabled
                     ? R.creative
                     : null,
-            y = null;
+            y = null,
+            D = null;
         if (null != L)
             switch (L.creative_type) {
                 case a.p.QUEST:
                     ((i = (0, q.Yn)(L.creative_content)), (y = { type: a.p.QUEST, questId: i.id }));
                     break;
                 case a.p.BOUNTY:
-                    let D = (0, u.t)(L.creative_content);
-                    y = { type: a.p.BOUNTY, bounty: D };
+                    let b = (0, u.t)(L.creative_content);
+                    y = { type: a.p.BOUNTY, bounty: b };
+                    break;
                 case a.p.NO_FILL:
+                    D = L.creative_content?.ad_content_id ?? null;
             }
         else {
             let e = R.quest;
@@ -599,6 +602,7 @@ async function em(e, t) {
                 quest: i,
                 creative: y,
                 isNoFill: L?.creative_type === a.p.NO_FILL,
+                noFillAdContentId: D,
                 adDecisionData: {
                     ad_id: R.ad_identifiers?.ad_id,
                     adset_id: R.ad_identifiers?.adset_id,

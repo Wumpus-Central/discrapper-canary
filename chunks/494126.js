@@ -30,34 +30,35 @@ var d = n(197184),
     E = n(165610),
     A = n(5867);
 async function h(e) {
-    let { applicationId: t, surface: n, launch: l, analyticsContext: _, hostWindowKey: A } = e,
-        h = (0, E.VA)(t, n),
-        I = c.A.getFrame(h);
-    if (null != I) return (I.intent === E.sV.MAIN && (p(h), T({ frameId: h, layoutMode: E.y0.FOCUSED })), h);
+    let { applicationId: t, surface: n, launch: l, analyticsContext: _, hostWindowKey: A, showErrorModal: h = !0 } = e,
+        I = (0, E.VA)(t, n),
+        m = c.A.getFrame(I);
+    if (null != m) return (m.intent === E.sV.MAIN && (p(I), T({ frameId: I, layoutMode: E.y0.FOCUSED })), I);
     ((0, E.Yf)(n) === E.sV.MAIN && (o(), f()),
-        i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: h, surface: n }));
+        i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: I, surface: n }));
     try {
         let e = await (0, r.D2)(t, (0, d.A)(n), (0, u.A)(n));
         return (
             i.h.dispatch({
                 type: "FRAME_LAUNCH",
                 applicationId: t,
-                frameId: h,
+                frameId: I,
                 surface: n,
                 proxyTicket: e,
                 analyticsContext: _,
                 launch: l ?? {},
                 hostWindowKey: A,
             }),
-            h
+            I
         );
-    } catch (r) {
-        let e = (0, s.A)(),
-            n = await (0, a.f)(r, t);
+    } catch (e) {
+        if (h) {
+            let n = (0, s.A)(),
+                i = await (0, a.f)(e, t);
+            n.showLaunchErrorModal(i.message);
+        }
         throw (
-            e.showLaunchErrorModal(n.message),
-            i.h.dispatch({ type: "FRAME_LAUNCH_FAIL", applicationId: t, frameId: h, error: r, analyticsContext: _ }),
-            r
+            i.h.dispatch({ type: "FRAME_LAUNCH_FAIL", applicationId: t, frameId: I, error: e, analyticsContext: _ }), e
         );
     }
 }

@@ -98,18 +98,12 @@ function O(e, t) {
 function R(e, t) {
     let n = m[t];
     if (null == n) return _.K3;
-    let { adDecisionData: i, questId: a, adCreativeId: s } = O(n, e) ?? {};
-    if (null != i && (a === e || s === e || i.ad_id === e)) return i;
-    let l = r.A.getNoFillForPlacement(n, { includeExpired: !0 });
-    return null != l && l.decisionId === e ? { decision_id: l.decisionId, is_targeted: !1 } : _.K3;
+    let { adDecisionData: i, questId: r, adCreativeId: a } = O(n, e) ?? {};
+    return null != i && (r === e || a === e || i.ad_id === e) ? i : _.K3;
 }
 function L(e, t) {
     let n = m[e];
-    if (null == n) return;
-    let i = O(n, t)?.metadataSealed;
-    if (null != i) return i;
-    let a = r.A.getNoFillForPlacement(n, { includeExpired: !0 });
-    return null != a && a.decisionId === t ? a.metadataSealed : void 0;
+    if (null != n) return O(n, t)?.metadataSealed;
 }
 function y(e, t) {
     let n = m[e];
@@ -118,10 +112,8 @@ function y(e, t) {
 function D(e, t, n) {
     let i = m[e];
     if (null != i) {
-        let e = r.A.getNoFillForPlacement(i, { includeExpired: !0 });
-        if (null != e && e.decisionId === n) return e.trafficMetadataSealed;
-        let { trafficMetadataSealed: a, questId: s } = O(i, n) ?? {};
-        if (null != a && (null != n || s === t)) return a;
+        let { trafficMetadataSealed: e, questId: r } = O(i, n) ?? {};
+        if (null != e && (null != n || r === t)) return e;
     }
     if (null != t) {
         let e = d.A.getQuest(t);

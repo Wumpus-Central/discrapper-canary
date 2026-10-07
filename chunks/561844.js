@@ -281,14 +281,15 @@ function F(e) {
     let {
             adContentId: t,
             relatedQuestId: n,
-            adCreativeType: i,
-            event: r,
-            properties: a,
-            trackGuildAndChannelMetadata: s,
-            shouldExtendSession: l = !1,
-            sourceQuestContent: o,
+            noFillDecision: i,
+            adCreativeType: r,
+            event: a,
+            properties: s,
+            trackGuildAndChannelMetadata: l,
+            shouldExtendSession: o = !1,
+            sourceQuestContent: d,
         } = e,
-        d = {
+        c = {
             ...(function (e) {
                 let {
                         adContentId: t,
@@ -296,18 +297,34 @@ function F(e) {
                         sourceQuestContent: i,
                         shouldExtendSession: r,
                         relatedQuestId: a,
+                        noFillDecision: s,
                     } = e,
-                    s = null != a ? f.A.getQuest(a) : null;
+                    l = null != a ? f.A.getQuest(a) : null;
                 return {
                     ...L(t, i, n, r),
                     metadata_sealed: (0, T.L4)(i, t) ?? null,
                     traffic_metadata_sealed: (0, T.Gp)(i, void 0, t) ?? null,
-                    ...(null != a ? { quest_id: a, quest_status: null != s ? (0, S.NI)(s) : null } : {}),
+                    ...(null != s
+                        ? {
+                              decision_id: s.decisionId,
+                              is_targeted: !1,
+                              metadata_sealed: s.metadataSealed ?? null,
+                              traffic_metadata_sealed: s.trafficMetadataSealed ?? null,
+                          }
+                        : {}),
+                    ...(null != a ? { quest_id: a, quest_status: null != l ? (0, S.NI)(l) : null } : {}),
                 };
-            })({ adContentId: t, adCreativeType: i, sourceQuestContent: o, shouldExtendSession: l, relatedQuestId: n }),
-            ...a,
+            })({
+                adContentId: t,
+                adCreativeType: r,
+                sourceQuestContent: d,
+                shouldExtendSession: o,
+                relatedQuestId: n,
+                noFillDecision: i,
+            }),
+            ...s,
         };
-    y(r, d, s, !1);
+    y(a, c, l, !1);
 }
 async function B(e) {
     let {

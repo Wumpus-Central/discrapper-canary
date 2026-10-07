@@ -131,6 +131,7 @@ function g(e) {
     (0, l.Qg)({
         event: I.HAw.QUEST_CONTENT_VIEWED,
         adContentId: e.adCreativeId,
+        noFillDecision: e.noFillDecision,
         relatedQuestId: e.relatedQuestId,
         adCreativeType: e.adCreativeType,
         trackGuildAndChannelMetadata: g,
@@ -183,6 +184,7 @@ function C(e) {
                     (0, l.Qg)({
                         event: I.HAw.QUEST_CONTENT_LOADED,
                         adContentId: e.adCreativeId,
+                        noFillDecision: e.noFillDecision,
                         relatedQuestId: e.relatedQuestId,
                         adCreativeType: e.adCreativeType,
                         trackGuildAndChannelMetadata: e.trackGuildAndChannelMetadata,

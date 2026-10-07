@@ -11405,17 +11405,16 @@ var oX = l(409478),
     oY = l(652227);
 function oQ(e) {
     let {
-            applicationId: t,
-            previewApplicationId: l,
-            surface: n,
-            previewReady: a,
-            previewGate: i,
-            availability: s,
-            activeMode: u,
-            widgetApplicationId: o,
-            frameOverlay: d,
-        } = e,
-        { data: c, isLoading: m } = (0, U.YY)(t ?? void 0);
+        applicationId: t,
+        previewApplicationId: l,
+        surface: n,
+        previewReady: a,
+        previewGate: i,
+        availability: s,
+        activeMode: u,
+        widgetApplicationId: o,
+        frameOverlay: d,
+    } = e;
     if (i?.type === "checking") return (0, r.jsx)("div", { className: oY.q, children: (0, r.jsx)(N.y, {}) });
     if (i?.type === "permissions")
         return (0, r.jsx)("div", {
@@ -11424,11 +11423,10 @@ function oQ(e) {
         });
     if (!a) return (0, r.jsx)(op, { className: oY.q });
     if (null == t) return null;
-    if (m && null == c) return (0, r.jsx)("div", { className: oY.q, children: (0, r.jsx)(N.y, {}) });
-    let f = s.showModeSwitch && null != u ? { role: "tabpanel", id: (0, tz.z3)(u), "aria-label": (0, tz.kZ)(u) } : {};
+    let c = s.showModeSwitch && null != u ? { role: "tabpanel", id: (0, tz.z3)(u), "aria-label": (0, tz.kZ)(u) } : {};
     return (0, r.jsxs)("div", {
         className: oY.R,
-        ...f,
+        ...c,
         children: [
             (0, tv.yf)(s, u) ? (0, r.jsx)(oL, { applicationId: t, surface: n, frameOverlay: d }) : null,
             "widget" === u && null != o

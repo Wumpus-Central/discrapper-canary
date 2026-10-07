@@ -1,18 +1,21 @@
-t.d(a, { A: () => w, n: () => g });
+t.d(a, { A: () => y, n: () => E });
 var n,
     r = t(582128),
-    i = t(17928),
-    o = t(956518),
-    u = t(627363),
-    s = t(878014),
-    l = t(869146),
-    c = t(625180),
-    d = t(91242),
-    h = t(759829),
-    f = t(409397),
-    p = t(165610),
-    A = t(652215),
-    g =
+    o = t(17928),
+    u = t(956518),
+    l = t(950803),
+    i = t(574152),
+    s = t(627363),
+    c = t(878014),
+    d = t(869146),
+    f = t(625180),
+    h = t(91242),
+    p = t(580954),
+    A = t(759829),
+    g = t(409397),
+    w = t(165610),
+    m = t(652215),
+    E =
         (((n = {}).Loading = "loading"),
         (n.AwaitingLaunch = "awaiting-launch"),
         (n.Launched = "launched"),
@@ -21,73 +24,91 @@ var n,
         (n.DoesNotSupportSurface = "does-not-support-surface"),
         (n.Error = "error"),
         n);
-function w(e) {
+function y(e) {
     let { applicationId: a, surface: t, hostWindowKey: n } = e,
         {
-            frameId: g,
-            frameLaunched: w,
-            surface: m,
-            setFailed: y,
-            lifecycle: W,
+            frameId: E,
+            frameExists: y,
+            frameLaunched: F,
+            surface: L,
+            launchFailure: W,
+            setFailed: v,
+            lifecycle: M,
         } = (function (e) {
             let { applicationId: a, surface: t, hostWindowKey: n } = e,
-                c = r.useMemo(() => (0, p.VA)(a, t), [a, t]),
-                g = r.useMemo(() => t, [c]),
-                w = (0, h.A)(c),
-                m = (0, i.bG)(
-                    [l.A, d.A],
+                l = r.useMemo(() => (0, w.VA)(a, t), [a, t]),
+                i = r.useMemo(() => t, [l]),
+                f = (0, A.A)(l),
+                p = (0, o.bG)(
+                    [d.A, h.A],
                     () => {
-                        if (l.A.getWindowOpen(A.MLl.ACTIVITY_POPOUT) && d.A.getMainFrame()?.id === c) return !0;
-                        let e = (0, f.A)(d.A.getFrame(c));
+                        if (d.A.getWindowOpen(m.MLl.ACTIVITY_POPOUT) && h.A.getMainFrame()?.id === l) return !0;
+                        let e = (0, g.A)(h.A.getFrame(l));
                         return null != e && e !== n;
                     },
-                    [c, n],
+                    [l, n],
                 ),
-                { data: y, isLoading: W } = (0, u.YY)(a),
-                F = (0, s.D)(y),
-                L = null != (0, o.Ay)(a),
-                [b, k] = r.useState(null),
-                v = b === c,
-                C = r.useCallback(() => k(c), [c]);
+                { data: E, isLoading: y } = (0, s.YY)(a),
+                F = (0, c.D)(E),
+                L = null != (0, u.Ay)(a),
+                [W, v] = r.useState(null),
+                M = W?.frameId === l ? W : null,
+                b = r.useCallback((e) => v({ frameId: l, error: e }), [l]);
             return {
-                frameId: c,
-                frameLaunched: (0, p.x1)(w),
-                surface: g,
-                setFailed: C,
-                lifecycle: (0, p.x1)(w)
-                    ? m
-                        ? { state: "rendering-elsewhere" }
-                        : null != y
-                          ? { state: "launched", frame: w, application: y }
-                          : { state: "loading", frame: void 0 }
-                    : v
-                      ? { state: "error" }
-                      : w?.state === "loading"
-                        ? { state: "loading", frame: w }
-                        : W
-                          ? { state: "loading", frame: void 0 }
-                          : null != y && L
-                            ? F
-                                ? { state: "awaiting-launch" }
-                                : { state: "does-not-support-surface" }
-                            : { state: "no-application" },
+                frameId: l,
+                frameExists: null != f,
+                frameLaunched: (0, w.x1)(f),
+                surface: i,
+                launchFailure: M,
+                setFailed: b,
+                lifecycle:
+                    null == E || F
+                        ? (0, w.x1)(f)
+                            ? p
+                                ? { state: "rendering-elsewhere" }
+                                : null != E
+                                  ? { state: "launched", frame: f, application: E }
+                                  : { state: "loading", frame: void 0 }
+                            : null != M
+                              ? null == E
+                                  ? y
+                                      ? { state: "loading", frame: void 0 }
+                                      : { state: "no-application" }
+                                  : { state: "error" }
+                              : f?.state === "loading"
+                                ? { state: "loading", frame: f }
+                                : L
+                                  ? { state: "awaiting-launch" }
+                                  : { state: "no-application" }
+                        : { state: "does-not-support-surface" },
             };
         })({ applicationId: a, surface: t, hostWindowKey: n }),
-        { state: F } = W;
+        { state: b } = M;
     return (
         r.useEffect(() => {
-            if (null != n && w) return (c.A.attachFrameHostWindow(g, n), () => c.A.detachFrameHostWindow(g, n));
-        }, [g, n, w]),
+            if (null != n && F) return (f.A.attachFrameHostWindow(E, n), () => f.A.detachFrameHostWindow(E, n));
+        }, [E, n, F]),
         r.useEffect(() => {
-            "awaiting-launch" === F && e();
+            "awaiting-launch" === b && e();
             async function e() {
                 try {
-                    await c.A.launchFrame({ applicationId: a, surface: m, hostWindowKey: n });
-                } catch {
-                    y();
+                    await f.A.launchFrame({ applicationId: a, surface: L, hostWindowKey: n, showErrorModal: !1 });
+                } catch (e) {
+                    v(e);
                 }
             }
-        }, [F, a, m, n, y]),
-        W
+        }, [b, a, L, n, v]),
+        r.useEffect(() => {
+            "error" === b &&
+                null != W &&
+                (0, l.f)(W.error, a).then((e) => {
+                    let { message: a } = e;
+                    return (0, i.A)().showLaunchErrorModal(a);
+                });
+        }, [b, W, a]),
+        r.useEffect(() => {
+            "does-not-support-surface" === b && y && (0, p.A)().leaveFrame(E);
+        }, [b, y, E]),
+        M
     );
 }

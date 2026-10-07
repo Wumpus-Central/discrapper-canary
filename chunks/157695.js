@@ -41,9 +41,8 @@ class S extends _.Ay.Store {
         return a;
     }
     getNoFillForPlacement(e) {
-        let { includeExpired: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-            n = s.get(e);
-        return null == n ? null : t || n.fetchedAt + n.ttlMillis >= Date.now() ? n : null;
+        let t = s.get(e);
+        return null == t ? null : t.fetchedAt + t.ttlMillis >= Date.now() ? t : null;
     }
     isFetchingQuestHomeHero() {
         return T;
@@ -69,40 +68,42 @@ let N = new S(E.h, {
             quest: t,
             creative: n,
             isNoFill: i,
-            placement: d,
-            adDecisionData: c,
-            adContext: u,
-            responseTtlSeconds: _,
-            metadataSealed: E,
-            trafficMetadataSealed: A,
-            provenanceMetadataSealed: f,
-            fetchedAt: I,
+            noFillAdContentId: d,
+            placement: c,
+            adDecisionData: u,
+            adContext: _,
+            responseTtlSeconds: E,
+            metadataSealed: A,
+            trafficMetadataSealed: f,
+            provenanceMetadataSealed: I,
+            fetchedAt: p,
         } = e;
         ((r = Date.now()),
-            g(d, !1),
+            g(c, !1),
             (s = new Map(s)),
-            !0 === i && null == t && c?.decision_id != null
-                ? s.set(d, {
-                      decisionId: c.decision_id,
-                      metadataSealed: E,
-                      trafficMetadataSealed: A,
-                      fetchedAt: I,
-                      ttlMillis: (0, h.Ce)(_),
+            !0 === i && null == t && u?.decision_id != null
+                ? s.set(c, {
+                      decisionId: u.decision_id,
+                      adContentId: d ?? void 0,
+                      metadataSealed: A,
+                      trafficMetadataSealed: f,
+                      fetchedAt: p,
+                      ttlMillis: (0, h.Ce)(E),
                   })
-                : s.delete(d),
-            l.get(d)?.succeed(),
-            o.delete(d));
-        let p = {
+                : s.delete(c),
+            l.get(c)?.succeed(),
+            o.delete(c));
+        let T = {
             creative: n ?? null,
-            fetchedAt: I,
-            ttlMillis: (0, h.Ce)(_),
-            adDecisionData: c,
-            adContext: u,
-            metadataSealed: E,
-            trafficMetadataSealed: A,
-            provenanceMetadataSealed: f,
+            fetchedAt: p,
+            ttlMillis: (0, h.Ce)(E),
+            adDecisionData: u,
+            adContext: _,
+            metadataSealed: A,
+            trafficMetadataSealed: f,
+            provenanceMetadataSealed: I,
         };
-        (a = new Map(a)).set(d, p);
+        (a = new Map(a)).set(c, T);
     },
     QUESTS_FETCH_QUEST_TO_DELIVER_FAILURE: function (e) {
         let { placement: t } = e;
