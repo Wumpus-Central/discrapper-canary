@@ -69,6 +69,14 @@ class c {
             return (this.items.delete(e), [e, t]);
         }
     }
+    putOldest(e, t) {
+        (this.items.delete(e), (this.items = new Map([[e, t], ...this.items])));
+    }
+    newest() {
+        let e;
+        for (let t of this.items.entries()) e = t;
+        return e;
+    }
     delete(e) {
         return this.items.delete(e);
     }
@@ -113,9 +121,9 @@ class u {
         return (this.upstreamItems(), t || n);
     }
     upstreamItems() {
-        if (this.canUpstreamItems()) {
-            for (let [e, t] of this.extended.entries())
-                if ((this.primary.put(e, t), this.extended.delete(e), !this.canUpstreamItems())) break;
+        for (; this.canUpstreamItems();) {
+            let [e, t] = this.extended.newest();
+            (this.extended.delete(e), this.primary.putOldest(e, t));
         }
     }
     canUpstreamItems() {
@@ -220,16 +228,16 @@ class g extends a.A {
         p.delete(e);
     }
     static deleteGuild(e) {
-        for (let t of p.allValues()) t.guildId === e && p.delete(t.channelId);
+        for (let t of [...p.allValues()]) t.guildId === e && p.delete(t.channelId);
     }
     static dropUnreachableChannels() {
-        for (let e of p.keys()) {
+        for (let e of [...p.allKeys()]) {
             let t = i.A.getBasicChannel(e);
             (0, A.c)(t) || g.deleteChannel(e);
         }
     }
     static deleteUnreadableGuildChannels(e) {
-        for (let t of p.values()) e !== t.guildId || (0, A.J)(t.channelId) || g.deleteChannel(t.channelId);
+        for (let t of [...p.allValues()]) e !== t.guildId || (0, A.J)(t.channelId) || g.deleteChannel(t.channelId);
     }
     static replaceLru(e) {
         p = e;
