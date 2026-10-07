@@ -1,4 +1,4 @@
-n.d(t, { A: () => er });
+n.d(t, { A: () => eu });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -107,8 +107,8 @@ var R = n(994500),
     O = n(287809),
     L = n(562153),
     w = n(427262),
-    P = n(435558),
-    M = n.n(P),
+    M = n(435558),
+    P = n.n(M),
     D = n(111159),
     U = n(952270),
     V = n(320448),
@@ -250,7 +250,7 @@ function en(e) {
             let { playedByUserIds: t, guildId: n, channelId: l } = e,
                 i = t.size,
                 r = (0, o.yK)([O.default, R.A], () =>
-                    M()(Array.from(t))
+                    P()(Array.from(t))
                         .reject((e) => R.A.isBlockedOrIgnored(e))
                         .take(3)
                         .map((e) => {
@@ -309,8 +309,75 @@ function en(e) {
         ],
     });
 }
-var el = n(998812);
-function ei(e) {
+var el = n(559949),
+    ei = n(73392),
+    er = n(889053);
+function es(e) {
+    let { count: t } = e,
+        [n, r] = i.useState(!1),
+        [o, u] = i.useState(null),
+        [c, d] = i.useState({}),
+        h = i.useRef(null),
+        m = i.useRef(null),
+        p = (0, f.p)(n, {
+            from: { translateX: -100, opacity: 0 },
+            enter: { translateX: 0, opacity: 1 },
+            leave: { translateX: 100, opacity: 0 },
+            config: a.config.default,
+        });
+    (i.useEffect(() => {
+        if (t <= 100 && t >= 50 && null != m.current && Math.floor(t / 10) > Math.floor(m.current / 10)) {
+            let e, n;
+            null != h.current && clearTimeout(h.current);
+            let l = 10 * Math.floor(t / 10);
+            (u(l),
+                r(!0),
+                d(
+                    ((e = Math.floor(50 * Math.random()) + 20),
+                    (n = l - 10),
+                    {
+                        transform: `rotate(${Math.floor(25 * Math.random()) - 12.5}deg)`,
+                        bottom: e,
+                        top: -e - (l >= 100 ? 2 * n : n),
+                        left: Math.floor(100 * Math.random()) - 200,
+                        fontSize: `${n}px`,
+                        lineHeight: `${n}px`,
+                    }),
+                ),
+                (m.current = t),
+                (h.current = setTimeout(() => {
+                    r(!1);
+                }, 1500)));
+        }
+        m.current = t;
+    }, [t]),
+        i.useEffect(
+            () => () => {
+                null != h.current && clearTimeout(h.current);
+            },
+            [],
+        ));
+    let { className: g } = (0, ei.p)(el.x.PIXELIFY);
+    return p((e, t) =>
+        t
+            ? (0, l.jsx)(a.animated.div, {
+                  className: s()(er._, g),
+                  style: { ...c, ...e },
+                  children:
+                      100 === o
+                          ? (0, l.jsxs)(l.Fragment, {
+                                children: [
+                                    (0, l.jsx)("div", { children: `${o} HIT` }),
+                                    (0, l.jsx)("div", { children: "SUPER COMBO" }),
+                                ],
+                            })
+                          : `${o} HIT COMBO`,
+              })
+            : null,
+    );
+}
+var ea = n(998812);
+function eo(e) {
     let {
             guildId: t,
             channelId: n,
@@ -332,102 +399,110 @@ function ei(e) {
             };
         }),
         _ = i.useRef(null),
-        { analyticsLocations: P } = (0, S.Ay)(E.A.SOUNDBOARD_ECHO),
-        M = i.useCallback(() => {
+        { analyticsLocations: M } = (0, S.Ay)(E.A.SOUNDBOARD_ECHO),
+        P = i.useCallback(() => {
             v(r.soundId);
         }, [v, r.soundId]),
         D = i.useCallback(() => {
-            (0, C.CZ)(r, n, P);
-        }, [P, n, r]),
+            (0, C.CZ)(r, n, M);
+        }, [M, n, r]),
         U = (0, o.bG)([y.A], () => y.A.isPlayingSound(r.soundId), [r]),
         V = i.useMemo(() => j?.getAvatarURL(t, (0, u.FT)(u._3.SIZE_32)), [j, t]),
         W = i.useMemo(() => k?.getAvatarURL(t, (0, u.FT)(u._3.SIZE_32)), [k, t]);
     if (null == t || null == j) return null;
     let { emojiId: F, emojiName: B, emojiAnimated: K, name: G } = r;
-    return (0, l.jsxs)("div", {
-        className: s()(el.Iv, { [el.E$]: b }),
-        style: { height: 36 },
+    return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(c.Y, {
-                targetElementRef: _,
-                shouldShow: N,
-                renderPopout: (e) => {
-                    let { setPopoutRef: i } = e;
-                    return (0, l.jsx)("div", {
-                        ref: i,
-                        onMouseEnter: M,
-                        onMouseLeave: T,
-                        children: (0, l.jsx)(en, { guildId: t, channelId: n, sound: r, playedByUserIds: I }),
-                    });
-                },
-                position: "top",
-                align: "center",
-                children: () =>
-                    (0, l.jsx)("div", {
-                        ref: _,
-                        onMouseEnter: M,
-                        onMouseLeave: T,
-                        children: (0, l.jsxs)("div", {
-                            className: el.yA,
-                            children: [
-                                (0, l.jsx)("div", {
-                                    className: el.R3,
-                                    children: (0, l.jsx)(d.eu, {
-                                        className: el.Du,
-                                        src: V,
-                                        size: u._3.SIZE_32,
-                                        "aria-label": L.Ay.getNickname(t, n, j) ?? w.Ay.getName(j),
-                                    }),
-                                }),
-                                null != k &&
-                                    (0, l.jsx)("div", {
-                                        className: s()(el.R3, el.aR),
-                                        children: (0, l.jsx)(d.eu, {
-                                            className: el.mf,
-                                            src: W,
-                                            size: u._3.SIZE_32,
-                                            "aria-label": L.Ay.getNickname(t, n, k) ?? w.Ay.getName(k),
+            (0, l.jsxs)("div", {
+                className: s()(ea.Iv, { [ea.E$]: b }),
+                style: { height: 36 },
+                children: [
+                    (0, l.jsx)(c.Y, {
+                        targetElementRef: _,
+                        shouldShow: N,
+                        renderPopout: (e) => {
+                            let { setPopoutRef: i } = e;
+                            return (0, l.jsx)("div", {
+                                ref: i,
+                                onMouseEnter: P,
+                                onMouseLeave: T,
+                                children: (0, l.jsx)(en, { guildId: t, channelId: n, sound: r, playedByUserIds: I }),
+                            });
+                        },
+                        position: "top",
+                        align: "center",
+                        children: () =>
+                            (0, l.jsx)("div", {
+                                ref: _,
+                                onMouseEnter: P,
+                                onMouseLeave: T,
+                                children: (0, l.jsxs)("div", {
+                                    className: ea.yA,
+                                    children: [
+                                        (0, l.jsx)("div", {
+                                            className: ea.R3,
+                                            children: (0, l.jsx)(d.eu, {
+                                                className: ea.Du,
+                                                src: V,
+                                                size: u._3.SIZE_32,
+                                                "aria-label": L.Ay.getNickname(t, n, j) ?? w.Ay.getName(j),
+                                            }),
                                         }),
+                                        null != k &&
+                                            (0, l.jsx)("div", {
+                                                className: s()(ea.R3, ea.aR),
+                                                children: (0, l.jsx)(d.eu, {
+                                                    className: ea.mf,
+                                                    src: W,
+                                                    size: u._3.SIZE_32,
+                                                    "aria-label": L.Ay.getNickname(t, n, k) ?? w.Ay.getName(k),
+                                                }),
+                                            }),
+                                    ],
+                                }),
+                            }),
+                    }),
+                    (0, l.jsx)(h.m, {
+                        text: b ? X.intl.string(X.t.VqNHoS) : null,
+                        children: (0, l.jsxs)(m.D, {
+                            className: s()(ea.nG, { [ea.Tz]: U, [ea.Jx]: b }),
+                            onClick: b ? () => null : D,
+                            "aria-label": X.intl.formatToPlainString(X.t.VOmeSq, { name: G }),
+                            children: [
+                                (null != B || null != F) &&
+                                    (0, l.jsx)(g.A, {
+                                        size: "reaction",
+                                        className: ea.FA,
+                                        emojiId: F,
+                                        emojiName: B,
+                                        animated: K,
+                                    }),
+                                (0, l.jsx)(p.E, { variant: "text-md/medium", children: G }),
+                                !b &&
+                                    (0, l.jsxs)(l.Fragment, {
+                                        children: [
+                                            (0, l.jsx)("div", { className: ea.SU }),
+                                            (0, l.jsxs)(p.E, {
+                                                variant: "text-md/medium",
+                                                className: ea.Zi,
+                                                tabularNumbers: !0,
+                                                children: [
+                                                    "x",
+                                                    (0, l.jsx)(x.A, { className: ea.Zi, value: A, digitWidth: 8 }),
+                                                ],
+                                            }),
+                                        ],
                                     }),
                             ],
                         }),
                     }),
+                ],
             }),
-            (0, l.jsx)(h.m, {
-                text: b ? X.intl.string(X.t.VqNHoS) : null,
-                children: (0, l.jsxs)(m.D, {
-                    className: s()(el.nG, { [el.Tz]: U, [el.Jx]: b }),
-                    onClick: b ? () => null : D,
-                    "aria-label": X.intl.formatToPlainString(X.t.VOmeSq, { name: G }),
-                    children: [
-                        (null != B || null != F) &&
-                            (0, l.jsx)(g.A, {
-                                size: "reaction",
-                                className: el.FA,
-                                emojiId: F,
-                                emojiName: B,
-                                animated: K,
-                            }),
-                        (0, l.jsx)(p.E, { variant: "text-md/medium", children: G }),
-                        !b &&
-                            (0, l.jsxs)(l.Fragment, {
-                                children: [
-                                    (0, l.jsx)("div", { className: el.SU }),
-                                    (0, l.jsxs)(p.E, {
-                                        variant: "text-md/medium",
-                                        className: el.Zi,
-                                        tabularNumbers: !0,
-                                        children: ["x", (0, l.jsx)(x.A, { className: el.Zi, value: A, digitWidth: 8 })],
-                                    }),
-                                ],
-                            }),
-                    ],
-                }),
-            }),
+            (0, l.jsx)(es, { count: A }),
         ],
     });
 }
-function er(e) {
+function eu(e) {
     let { guildId: t, channelId: n } = e,
         r = (0, o.cf)([_], () => Object.fromEntries(_.getSoundboardEchoes())),
         [s, u] = i.useState({}),
@@ -454,10 +529,10 @@ function er(e) {
         g = i.useMemo(() => p.map((e, t) => ({ echo: e, y: 42 * t })), [p]),
         x = (0, f.p)(g, {
             keys: (e) => e.echo.sound.soundId,
-            from: () => ({ height: 0, opacity: 0 }),
+            from: () => ({ opacity: 0 }),
             enter: (e) => {
                 let { y: t } = e;
-                return { height: 36, opacity: 1, translateY: -t };
+                return { opacity: 1, translateY: -t };
             },
             update: (e) => {
                 let { y: t } = e;
@@ -465,7 +540,7 @@ function er(e) {
             },
             leave: (e) => {
                 let { y: t } = e;
-                return { height: 0, opacity: 0, translateY: -t - 36, pointerEvents: "none" };
+                return { opacity: 0, translateY: -t - 36, pointerEvents: "none" };
             },
             config: a.config.gentle,
         }),
@@ -480,15 +555,15 @@ function er(e) {
             (clearTimeout(y.current), (y.current = setTimeout(() => S(null), 200)));
         }, []);
     return (0, l.jsx)("div", {
-        className: el.ei,
+        className: ea.ei,
         style: { height: 126 },
         onMouseEnter: h,
         onMouseLeave: m,
         children: x((e, i) =>
             (0, l.jsx)(a.animated.div, {
-                className: el.Ob,
+                className: ea.Ob,
                 style: e,
-                children: (0, l.jsx)(ei, {
+                children: (0, l.jsx)(eo, {
                     guildId: t,
                     channelId: n,
                     ...i.echo,

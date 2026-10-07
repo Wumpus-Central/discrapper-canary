@@ -19,7 +19,7 @@ var l = t(477900),
     E = t(662080),
     I = t(511558),
     v = t(173660),
-    j = t(886109),
+    j = t(124826),
     T = t(192820),
     N = t(607567),
     _ = t(246356),
@@ -134,36 +134,32 @@ function S(e) {
                               });
                     },
                     children: () =>
-                        (0, l.jsxs)(l.Fragment, {
-                            children: [
-                                !ei && null != V && Z ? (0, l.jsx)(j.A, { guildId: V, channelId: n.id }) : null,
-                                (0, l.jsx)(b.l, {
-                                    ref: ec,
-                                    isTrayButton: !0,
-                                    themeable: S,
-                                    label: B
-                                        ? y.intl.string(y.t["Ox4/zU"])
-                                        : H
-                                          ? y.intl.string(y.t["+YBKYI"])
-                                          : w
-                                            ? y.intl.string(y.t.X1lQli)
-                                            : y.intl.string(y.t["6EJvHt"]),
-                                    iconComponent: P,
-                                    disabled: Y,
-                                    onContextMenu: ea,
-                                    onClick: eo,
-                                    onMouseEnter: (e) => {
-                                        (U(), "focus" !== e.type && et());
-                                    },
-                                    onMouseLeave: () => {
-                                        null == R && (el(), G());
-                                    },
-                                    isActive: ee || R === O.P.SOUNDBOARD,
-                                    color: ee || R === O.P.SOUNDBOARD ? "primaryDark" : void 0,
-                                }),
-                            ],
+                        (0, l.jsx)(b.l, {
+                            ref: ec,
+                            isTrayButton: !0,
+                            themeable: S,
+                            label: B
+                                ? y.intl.string(y.t["Ox4/zU"])
+                                : H
+                                  ? y.intl.string(y.t["+YBKYI"])
+                                  : w
+                                    ? y.intl.string(y.t.X1lQli)
+                                    : y.intl.string(y.t["6EJvHt"]),
+                            iconComponent: P,
+                            disabled: Y,
+                            onContextMenu: ea,
+                            onClick: eo,
+                            onMouseEnter: (e) => {
+                                (U(), "focus" !== e.type && et());
+                            },
+                            onMouseLeave: () => {
+                                null == R && (el(), G());
+                            },
+                            isActive: ee || R === O.P.SOUNDBOARD,
+                            color: ee || R === O.P.SOUNDBOARD ? "primaryDark" : void 0,
                         }),
                 }),
+                !ei && null != V && Z ? (0, l.jsx)(j.A, { guildId: V, channelId: n.id }) : null,
                 ed &&
                     (0, l.jsx)(g.A, { targetElementRef: ec, openSoundboardPicker: es, shouldShowSoundboardPicker: ei }),
             ],
