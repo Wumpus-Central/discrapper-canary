@@ -42,11 +42,11 @@ function P(e) {
     }, [t?.entitlements]);
 }
 var R = l(660183),
-    L = l(356863),
+    L = l(25525),
     D = l(144977),
     O = l(628049),
     U = l(568065),
-    B = l(344045),
+    B = l(394107),
     V = l(929729),
     M = l(517826);
 function W(e) {
@@ -694,16 +694,16 @@ function e0(e) {
     let d = l || t.isBannerEligible || u?.kind === "video";
     return { variant: e, content: u, isReserved: d };
 }
-var e6 = l(463080);
-function e8(e) {
+var e1 = l(463080);
+function e6(e) {
     let { text: t } = e,
         l = (0, j.c)("Tier3OverrideNotice");
     return (0, n.jsx)("div", {
-        className: e6.ac,
+        className: e1.ac,
         children: (0, n.jsx)(I.E, { variant: l ? "text-sm/normal" : "text-sm/medium", children: t }),
     });
 }
-function e1(e) {
+function e8(e) {
     let { guildId: t } = e,
         l = (0, r.bG)([c.A], () => c.A.getGuild(t)?.features.has(ep.GuildFeatures.PREMIUM_TIER_3_OVERRIDE) === !0)
             ? { shouldShow: !0, text: R.intl.string(L.default.l9n4QZ) }
@@ -748,14 +748,14 @@ function e1(e) {
         d = (0, j.c)("GuildPowerupNotificationContainer");
     return l.shouldShow || s.shouldShow || o.shouldShow || u.shouldShow || null != a.content
         ? (0, n.jsxs)("div", {
-              className: e6.kL,
+              className: e1.kL,
               children: [
                   (0, n.jsx)(I.E, {
                       variant: d ? "experimental/heading-sm/semibold" : "eyebrow",
                       color: d ? "text-strong" : "text-subtle",
                       children: R.intl.string(L.default["3FRirU"]),
                   }),
-                  l.shouldShow && (0, n.jsx)(e8, { text: l.text }),
+                  l.shouldShow && (0, n.jsx)(e6, { text: l.text }),
                   s.shouldShow &&
                       (0, n.jsx)(eQ, { guildId: t, powerupNames: s.expiringPowerupNames, warnings: s.warnings }),
                   o.shouldShow &&
@@ -768,7 +768,7 @@ function e1(e) {
         : null;
 }
 var e9 = l(72377);
-function e3(e) {
+function e2(e) {
     let { guildId: t, powerup: l, badge: s } = e,
         [r, o] = i.useState(void 0);
     (0, e_.A)(r);
@@ -797,10 +797,10 @@ function e3(e) {
         ],
     });
 }
-var e2 = l(862482),
-    e5 = l(944304),
-    e4 = l(975571),
-    e7 = l(380572);
+var e5 = l(862482),
+    e3 = l(944304),
+    e7 = l(975571),
+    e4 = l(380572);
 function te(e) {
     let { count: t, type: l } = e,
         i = (0, j.c)("GuildPowerupsBoostInfo"),
@@ -815,12 +815,12 @@ function te(e) {
             }
         })(t, l);
     return (0, n.jsxs)("div", {
-        className: e7.k,
+        className: e4.k,
         role: "img",
         "aria-label": `${t}, ${s}`,
         children: [
             (0, n.jsxs)("div", {
-                className: e7.N,
+                className: e4.N,
                 "aria-hidden": "true",
                 children: [
                     (0, n.jsx)(f._, {
@@ -865,7 +865,7 @@ function tl(e) {
                             className: tt.C2,
                             variant: a ? "experimental/body-sm/medium" : "text-xs/semibold",
                             children: R.intl.format(L.default.fXE30d, {
-                                helpDeskArticle: e4.A.getArticleURL(ep.MVz.GUILD_BOOSTING_FAQ),
+                                helpDeskArticle: e7.A.getArticleURL(ep.MVz.GUILD_BOOSTING_FAQ),
                             }),
                         }),
                     ],
@@ -878,15 +878,15 @@ function tl(e) {
                         (0, n.jsx)(te, { count: o, type: U.yG.TOTAL }),
                     ],
                 }),
-                (0, n.jsx)(e5.A, {
+                (0, n.jsx)(e3.A, {
                     className: tt.S6,
                     guild: l,
                     analyticsLocation: {
                         page: ep.liQ.GUILD_POWERUPS_OVERVIEW,
                         section: ep.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                     },
-                    color: e2.XD.CUSTOM,
-                    size: e2.lO.LARGE,
+                    color: e5.XD.CUSTOM,
+                    size: e5.lO.LARGE,
                     icon: (0, n.jsx)(f._, {
                         className: tt.Ng,
                         size: "sm",
@@ -979,15 +979,15 @@ function tA(e) {
                               className: tg.$J,
                           }),
                       }),
-                  (0, n.jsx)(e5.A, {
+                  (0, n.jsx)(e3.A, {
                       guild: l,
                       className: tg.Qs,
                       analyticsLocation: {
                           page: ep.liQ.GUILD_POWERUPS_OVERVIEW,
                           section: ep.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                       },
-                      color: e2.XD.BRAND,
-                      size: e2.lO.MEDIUM,
+                      color: e5.XD.BRAND,
+                      size: e5.lO.MEDIUM,
                       fullWidth: !0,
                       icon: (0, n.jsx)(f._, { color: "currentColor", size: "sm" }),
                   }),
@@ -1437,7 +1437,7 @@ function tk(e) {
                                                               );
                                                           case "singlePerk":
                                                               return (0, n.jsx)(
-                                                                  e3,
+                                                                  e2,
                                                                   { guildId: N, powerup: e.powerup, badge: e.badge },
                                                                   `powerup-${e.powerup.skuId}`,
                                                               );
@@ -1467,7 +1467,7 @@ function tk(e) {
                               children: [
                                   P
                                       ? (0, n.jsxs)(n.Fragment, {
-                                            children: [(0, n.jsx)(tl, { guildId: N }), (0, n.jsx)(e1, { guildId: N })],
+                                            children: [(0, n.jsx)(tl, { guildId: N }), (0, n.jsx)(e8, { guildId: N })],
                                         })
                                       : (0, n.jsx)(tT, { guildId: N }),
                                   (0, n.jsx)(tC, { guildId: N }),

@@ -3,7 +3,7 @@ var t = l(913563),
     a = l(898985),
     r = l(469054),
     i = l(660183),
-    s = l(763052);
+    s = l(701974);
 function u(e) {
     if (null == e) return i.intl.string(i.t["3Xph0/"]);
     let n = i.intl.string((0, t.A)(e.fontId)),

@@ -54,7 +54,7 @@ var T = t(945096),
     Y = t(661531),
     G = t(48736),
     H = t(317097),
-    z = t(763052),
+    z = t(701974),
     U = t(660183);
 function K(e) {
     return n.useMemo(
@@ -767,8 +767,8 @@ var eU = t(366010),
     e8 = t(986687),
     e2 = t(101058),
     e5 = t(999291),
-    e3 = t(686189),
-    e9 = t(946356),
+    e9 = t(686189),
+    e3 = t(946356),
     e6 = t(975571),
     e7 = t(996988),
     e4 = t(228839);
@@ -809,7 +809,7 @@ function se(e) {
         F = u ? void 0 : I,
         R = u ? x.tryItOutBanner : _,
         B = u ? x.tryItOutThemeColors : C,
-        { bannerSrc: Y } = (0, e3.A)({ displayProfile: E, size: 413, canAnimate: !1, pendingBanner: R }),
+        { bannerSrc: Y } = (0, e9.A)({ displayProfile: E, size: 413, canAnimate: !1, pendingBanner: R }),
         { userNameplate: G, guildNameplate: H, pendingNameplate: K } = (0, S.rv)(s, t?.id),
         J = (0, eV.WK)(H);
     h && !f ? (m = w.NJ8.DARK) : !h && f && (m = w.NJ8.LIGHT);
@@ -824,7 +824,7 @@ function se(e) {
         className: e4._l,
         children: [
             null != Y &&
-                (0, a.jsx)(e9.A, {
+                (0, a.jsx)(e3.A, {
                     user: s,
                     displayProfile: E,
                     themeType: e7.d.MODAL_V2,

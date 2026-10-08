@@ -134,7 +134,7 @@ function q() {
 var $ = l(967144),
     Q = l(696451),
     V = l(562153),
-    X = l(104129);
+    X = l(61567);
 function Z(e, t) {
     let { showYouSuffix: l = !1, fallbackName: n } =
             arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
@@ -1270,8 +1270,8 @@ function e8(e) {
           });
 }
 var e4 = l(452027),
-    e7 = l(103557),
-    e5 = l(825484),
+    e5 = l(103557),
+    e7 = l(825484),
     e9 = l(95477),
     te = l(241326),
     tt = l(683071),
@@ -1350,7 +1350,7 @@ function tj(e) {
                                 l.e("629972"),
                                 l.e("334168"),
                                 l.e("582012"),
-                                l.e("272915"),
+                                l.e("495296"),
                                 l.e("162182"),
                                 l.e("327545"),
                                 l.e("860640"),
@@ -1446,7 +1446,7 @@ function tj(e) {
                                 l.e("890027"),
                                 l.e("536200"),
                                 l.e("183776"),
-                                l.e("117268"),
+                                l.e("136022"),
                                 l.e("776195"),
                                 l.e("832817"),
                                 l.e("425544"),
@@ -1481,10 +1481,10 @@ function tj(e) {
                                 l.e("728633"),
                                 l.e("313681"),
                                 l.e("628439"),
-                                l.e("757238"),
-                                l.e("141432"),
-                                l.e("92678"),
-                                l.e("475166"),
+                                l.e("631608"),
+                                l.e("343550"),
+                                l.e("756148"),
+                                l.e("552712"),
                                 l.e("829177"),
                                 l.e("225990"),
                                 l.e("539620"),
@@ -1539,8 +1539,8 @@ function tj(e) {
                                 l.e("238412"),
                                 l.e("817852"),
                                 l.e("831145"),
-                                l.e("772493"),
-                                l.e("390098"),
+                                l.e("556967"),
+                                l.e("643612"),
                                 l.e("187856"),
                                 l.e("577084"),
                                 l.e("332470"),
@@ -1578,7 +1578,7 @@ function tj(e) {
                                 l.e("784727"),
                                 l.e("851243"),
                                 l.e("220518"),
-                                l.e("398082"),
+                                l.e("278424"),
                                 l.e("237834"),
                                 l.e("807771"),
                                 l.e("478476"),
@@ -1906,7 +1906,7 @@ function t$(e) {
 var tQ = l(803613),
     tV = l(682348),
     tX = l(73152),
-    tZ = l(968987),
+    tZ = l(57129),
     tJ = l(280911);
 function t0(e) {
     let { guildId: t, isCompact: l } = e,
@@ -2050,11 +2050,11 @@ var t6 = l(625903),
     t3 = l(780964),
     t8 = l(766075),
     t4 = l(30370),
-    t7 = l(123894);
-function t5() {
+    t5 = l(123894);
+function t7() {
     let e = (0, C.bG)([t4.A], () => t4.A.getAccounts().some((e) => e.type === e$.fg2.SPOTIFY && e.showActivity));
     return (0, i.jsx)(S, {
-        className: t7.w,
+        className: t5.w,
         title: E.intl.string(X.default.ULK65a),
         body: E.intl.format(e ? X.default.BLuvck : X.default["Ko3a0+"], { memberCount: 2 }),
         action: e
@@ -2070,7 +2070,7 @@ function t5() {
 }
 function t9() {
     return (0, i.jsx)(S, {
-        className: t7.w,
+        className: t5.w,
         title: E.intl.string(X.default.ULK65a),
         body: E.intl.format(X.default.ZQxU8v, { memberCount: 2 }),
     });
@@ -2645,8 +2645,8 @@ let l6 = [];
 var l3 = l(344351),
     l8 = l(256693),
     l4 = l(343030),
-    l7 = l(317608),
-    l5 = l(953538);
+    l5 = l(317608),
+    l7 = l(953538);
 let l9 = {
     [r.a.IMAGE_TEXT]: {
         View: function (e) {
@@ -2730,7 +2730,7 @@ let l9 = {
                             ],
                         }),
                     }),
-                    (0, i.jsx)(e7.f, {
+                    (0, i.jsx)(e5.f, {
                         label: E.intl.string(E.t.COGMNC),
                         value: m,
                         onChange: function (e) {
@@ -2746,7 +2746,7 @@ let l9 = {
                             role: "alert",
                             children: (0, i.jsx)(tt.w, { type: "critical", children: g }),
                         }),
-                    (0, i.jsxs)(e5.e, {
+                    (0, i.jsxs)(e7.e, {
                         fullWidth: !0,
                         children: [
                             (0, i.jsx)(U.$, { variant: "secondary", text: E.intl.string(E.t["ETE/oC"]), onClick: n }),
@@ -2927,7 +2927,7 @@ let l9 = {
                                 if (null == o || "idle" === o.status || "loading" === o.status)
                                     return (0, i.jsx)(I, {});
                                 if ("error" === o.status) return (0, i.jsx)(b, {});
-                                if (_) return (0, i.jsx)(t5, {});
+                                if (_) return (0, i.jsx)(t7, {});
                                 switch (h) {
                                     case tO.TOP_SONGS:
                                         return (0, i.jsx)(lT, {
@@ -3035,25 +3035,25 @@ let l9 = {
                 h = null != n && o && !u;
             return null == n
                 ? (0, i.jsx)(_.B, {
-                      className: l5.kL,
+                      className: l7.kL,
                       align: "center",
                       justify: "center",
                       children: (0, i.jsx)(a, { alt: "", width: 200, height: 192 }),
                   })
                 : r
                   ? (0, i.jsxs)("div", {
-                        className: l5.kL,
+                        className: l7.kL,
                         children: [
                             null != d &&
-                                (0, i.jsx)(l7.A, {
+                                (0, i.jsx)(l5.A, {
                                     frameId: (0, l8.Ri)(d),
                                     level: l4.A.WithinAppContent,
-                                    className: l5.t$,
+                                    className: l7.t$,
                                 }),
                             null == d &&
                                 h &&
                                 (0, i.jsx)("div", {
-                                    className: l5.P5,
+                                    className: l7.P5,
                                     children: (0, i.jsx)(U.$, {
                                         variant: "secondary",
                                         text: E.intl.string(X.default.PSuly6),
@@ -3064,9 +3064,9 @@ let l9 = {
                         ],
                     })
                   : (0, i.jsx)("div", {
-                        className: l5.kL,
+                        className: l7.kL,
                         children: (0, i.jsx)("div", {
-                            className: l5.m0,
+                            className: l7.m0,
                             children: (0, i.jsx)(p.E, {
                                 variant: "text-sm/normal",
                                 color: "text-muted",
@@ -3143,7 +3143,7 @@ let l9 = {
                                       children: E.intl.string(X.default.xyCJYs),
                                   }),
                               }),
-                          (0, i.jsxs)(e5.e, {
+                          (0, i.jsxs)(e7.e, {
                               fullWidth: !0,
                               children: [
                                   (0, i.jsx)(U.$, {

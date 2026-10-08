@@ -680,7 +680,7 @@ var ek = n(269115),
     eP = n(758836),
     eB = n(49999),
     eH = n(818348),
-    eU = n(344045),
+    eU = n(394107),
     eF = n(196064);
 let eV = "GAME_SERVER_HOSTING_BANNER";
 function eG(e) {
@@ -953,8 +953,8 @@ let e1 = function (e) {
 };
 var e2 = n(172218),
     e5 = n(28863),
-    e4 = n(9530);
-let e6 = function (e) {
+    e6 = n(9530);
+let e3 = function (e) {
     let { immersiveBannerBlock: t, onVisibilityChange: n } = e,
         l = (0, e2.K)(
             (e) => {
@@ -969,21 +969,21 @@ let e6 = function (e) {
         u = null != t.helpCenterUrl && "" !== t.helpCenterUrl;
     return (0, i.jsxs)("div", {
         ref: l,
-        className: e4.BX,
+        className: e6.BX,
         children: [
             (0, i.jsx)("div", {
-                className: e4.vK,
+                className: e6.vK,
                 children: null != s && (0, i.jsx)(eq.A, { bannerStatic: s, bannerAnimated: r }),
             }),
             (0, i.jsx)("div", {
-                className: e4.HQ,
+                className: e6.HQ,
                 children: (0, i.jsxs)("div", {
-                    className: e4.Yn,
+                    className: e6.Yn,
                     children: [
                         null != t.endTime ? (0, i.jsx)(U, { endDate: t.endTime, size: "lg" }) : null,
                         (0, i.jsx)(m.D, {
                             variant: "heading-xxl/bold",
-                            className: e4.DD,
+                            className: e6.DD,
                             color: "text-strong",
                             style: { ...a },
                             children: t.title,
@@ -998,7 +998,7 @@ let e6 = function (e) {
                                       u &&
                                           (0, i.jsx)(e5.Anchor, {
                                               href: t.helpCenterUrl,
-                                              className: e4.CU,
+                                              className: e6.CU,
                                               style: { ...a },
                                               children: B.intl.string(B.t.O7ADgv),
                                           }),
@@ -1011,7 +1011,7 @@ let e6 = function (e) {
         ],
     });
 };
-var e3 = n(449543),
+var e4 = n(449543),
     e9 = n(197935),
     e8 = n(275161),
     e7 = n(554661);
@@ -1094,7 +1094,7 @@ let tn = function (e) {
                                           e.skuId,
                                       ),
                               })
-                            : (0, i.jsx)(e3.A, {
+                            : (0, i.jsx)(e4.A, {
                                   gap: "xl",
                                   edgeFade: v ? "sm" : void 0,
                                   children: E.map((e, n) =>
@@ -1449,7 +1449,7 @@ let tx = function (e) {
                                     break;
                                 case u.g.IMMERSIVE_BANNER:
                                     d = (0, i.jsx)(
-                                        e6,
+                                        e3,
                                         { immersiveBannerBlock: e, onVisibilityChange: (e) => h(!e) },
                                         a,
                                     );

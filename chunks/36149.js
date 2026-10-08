@@ -39,7 +39,7 @@ n(96358);
 var I = n(40449),
     p = n(652215),
     T = n(204925),
-    m = n(799719),
+    m = n(841365),
     g = n(660183);
 let S = new Set([h.q1.STAGE_CHANNEL_AGE_VERIFICATION_PROMPT, h.q1.START_STAGE_PROMPT, h.q1.STAGE_CHANNEL_RAISE_HAND]),
     N = new Set([
