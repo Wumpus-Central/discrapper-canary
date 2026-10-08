@@ -88,6 +88,7 @@ class N extends r.Component {
         null != t &&
             (t.ownerDocument?.addEventListener("mousedown", this.handleDocumentMouseDown, !0),
             t.ownerDocument?.addEventListener("mouseup", this.handleDocumentMouseUp, !0),
+            t.ownerDocument?.addEventListener("click", this.handleDocumentClick, !0),
             "close" === this.props.scrollBehavior
                 ? t.ownerDocument?.addEventListener("scroll", this.handleScroll, !0)
                 : "sticky" === this.props.scrollBehavior &&
@@ -114,6 +115,7 @@ class N extends r.Component {
         (null != e &&
             (e.ownerDocument?.removeEventListener("mousedown", this.handleDocumentMouseDown, !0),
             e.ownerDocument?.removeEventListener("mouseup", this.handleDocumentMouseUp, !0),
+            e.ownerDocument?.removeEventListener("click", this.handleDocumentClick, !0),
             e.ownerDocument?.removeEventListener("scroll", this.handleScroll, !0),
             e.ownerDocument?.removeEventListener("scroll", this.handleStickyScroll, !0)),
             this.context.windowDispatch.unsubscribe(m.jej.POPOUT_CLOSE, this.handleEscapeClose),
@@ -244,18 +246,25 @@ class N extends r.Component {
     handleKeyboardPreload = (e) => {
         S.has(e.key) && this.handlePreload();
     };
-    handleDocumentMouseDown = (e) => {
+    isDismissingEventOutside(e) {
         let { ignoreModalClicks: t, closeOnClickOutside: n } = this.props;
-        if (!1 === n) return;
-        let i = e.target,
-            r = this.domElementRef.current;
-        if (null != r) {
-            if ((0, _.H)(r, i) || I.A.isOpen() || (t && (0, A.hasModalOpenedSince)(this.modalsAtOpen))) return;
-            this.isValidClickStart = !0;
-        }
+        if (!1 === n) return !1;
+        let i = this.domElementRef.current;
+        return !(
+            null == i ||
+            (0, _.H)(i, e.target) ||
+            I.A.isOpen() ||
+            (t && (0, A.hasModalOpenedSince)(this.modalsAtOpen))
+        );
+    }
+    handleDocumentMouseDown = (e) => {
+        this.isDismissingEventOutside(e) && (this.isValidClickStart = !0);
     };
     handleDocumentMouseUp = (e) => {
         this.isValidClickStart && ((this.isValidClickStart = !1), this.close(e, "system:click_outside"));
+    };
+    handleDocumentClick = (e) => {
+        0 !== e.detail || (this.isDismissingEventOutside(e) && this.close(e, "system:click_outside"));
     };
     handlePopoutPositionChange = (e) => {
         this.setState({ renderedPosition: e });
