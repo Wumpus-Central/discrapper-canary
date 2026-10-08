@@ -388,10 +388,11 @@
 
 .joinButton_d7e468 {
     opacity: 0;
-    transition: opacity .15s ease-out
+    transition: opacity 80ms ease-out
 }
 
-.voiceGroup_d7e468:focus-within .joinButton_d7e468,
+.joinButton_d7e468.visible_d7e468,
+.voiceGroup_d7e468:has(:focus-visible) .joinButton_d7e468,
 .voiceGroup_d7e468:hover .joinButton_d7e468 {
     opacity: 1
 }
@@ -2569,4 +2570,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=bf50116c260a50b2.css.map*/
+/*# sourceMappingURL=c7f0b033ef05bb84.css.map*/
