@@ -418,30 +418,44 @@ function z(e) {
             !0
         );
     }
-    return w && M?.startsWith("/discovery/quests")
-        ? (e) => (e?.preventDefault(), (0, R.m)({ fromContent: r.u.QUEST_BADGE }), !0)
-        : w && M?.startsWith("/quest-home")
-          ? (e) => (e?.preventDefault(), (0, L.pX)(j.BVt.QUEST_HOME + (P ?? "")), !0)
-          : w && M?.startsWith("/quest-preview")
-            ? (e) => (
-                  e?.preventDefault(),
-                  (0, L.pX)(j.BVt.QUEST_HOME + `?tab=preview_tool&quest_id=${M.split("/").at(-1)}`),
-                  !0
-              )
-            : w && M?.startsWith("/discovery/servers")
-              ? (e) => (
-                    e?.preventDefault(),
-                    n
-                        .e("138042")
-                        .then(n.bind(n, 837057))
-                        .then((e) => {
-                            let { transitionToGlobalDiscovery: t } = e,
-                                { GlobalDiscoveryTab: i } = n(488995);
-                            t({ tab: i.SERVERS });
-                        }),
-                    !0
-                )
-              : t || null == (0, b.m)(e)
-                ? void 0
-                : (t) => (t?.preventDefault(), v.A.show(e), !0);
+    if (w && M?.startsWith("/discovery/quests"))
+        return (e) => (e?.preventDefault(), (0, R.m)({ fromContent: r.u.QUEST_BADGE }), !0);
+    if (w && M?.startsWith("/quest-home"))
+        return (e) => (e?.preventDefault(), (0, L.pX)(j.BVt.QUEST_HOME + (P ?? "")), !0);
+    if (w && M?.startsWith("/quest-bar-preview")) {
+        let e = new URLSearchParams(P ?? "").get("ad_creative_ids");
+        if (null != e)
+            return (t) => (
+                t?.preventDefault(),
+                Promise.all([n.e("633128"), n.e("50799")])
+                    .then(n.bind(n, 894386))
+                    .then((t) => {
+                        let { openQuestBarPreview: n } = t;
+                        return n(e);
+                    }),
+                !0
+            );
+    }
+    return w && M?.startsWith("/quest-preview")
+        ? (e) => (
+              e?.preventDefault(),
+              (0, L.pX)(j.BVt.QUEST_HOME + `?tab=preview_tool&quest_id=${M.split("/").at(-1)}`),
+              !0
+          )
+        : w && M?.startsWith("/discovery/servers")
+          ? (e) => (
+                e?.preventDefault(),
+                n
+                    .e("138042")
+                    .then(n.bind(n, 837057))
+                    .then((e) => {
+                        let { transitionToGlobalDiscovery: t } = e,
+                            { GlobalDiscoveryTab: i } = n(488995);
+                        t({ tab: i.SERVERS });
+                    }),
+                !0
+            )
+          : t || null == (0, b.m)(e)
+            ? void 0
+            : (t) => (t?.preventDefault(), v.A.show(e), !0);
 }
