@@ -15,11 +15,9 @@ var s,
     E = n(707554),
     f = n(685094),
     g = n(830215),
-    y = n(730134);
-function A() {
-    return "u" < typeof document || "visible" === document.visibilityState;
-}
-var x = n(414121),
+    A = n(730134),
+    y = n(598047),
+    x = n(414121),
     I =
         (((s = {})[(s.INITIALIZING = 0)] = "INITIALIZING"),
         (s[(s.PENDING_REMOTE_INIT = 1)] = "PENDING_REMOTE_INIT"),
@@ -219,7 +217,7 @@ function X(e) {
             let { user: e } = t;
             return (0, r.jsxs)(r.Fragment, {
                 children: [
-                    (0, r.jsx)(y.A, {
+                    (0, r.jsx)(A.A, {
                         className: Z.b4,
                         user: e,
                         size: N._3.SIZE_120,
@@ -310,12 +308,12 @@ function Y(e) {
                         if (null != l) return l;
                         throw Error("No key pair set");
                     }
-                    function y() {
+                    function A() {
                         E
                             ? ((E = !1), i.send(JSON.stringify({ op: "heartbeat" })))
                             : (r("heartbeat timeout, reconnecting."), i.close(), p());
                     }
-                    async function A(t) {
+                    async function y(t) {
                         let { data: a } = t,
                             l = JSON.parse(a);
                         switch (l.op) {
@@ -368,7 +366,7 @@ function Y(e) {
                                 let e = l.heartbeat_interval;
                                 N = setTimeout(
                                     () => {
-                                        ((N = null), y(), (m = setInterval(y, e)));
+                                        ((N = null), A(), (m = setInterval(A, e)));
                                     },
                                     Math.floor(e * Math.random()),
                                 );
@@ -396,13 +394,13 @@ function Y(e) {
                     }
                     return (
                         i.addEventListener("open", x),
-                        i.addEventListener("message", A),
+                        i.addEventListener("message", y),
                         i.addEventListener("close", w),
                         i.addEventListener("error", v),
                         () => {
                             (r("cleaning up"),
                                 i.removeEventListener("open", x),
-                                i.removeEventListener("message", A),
+                                i.removeEventListener("message", y),
                                 i.removeEventListener("close", w),
                                 i.removeEventListener("error", v),
                                 i.close(1e3),
@@ -415,27 +413,7 @@ function Y(e) {
                 }, [h, e, s, u, p, n]),
                 { state: o, cancel: h }
             );
-        })(
-            t,
-            (function () {
-                let [e, t] = (0, a.useState)(A());
-                return (
-                    (0, a.useEffect)(() => {
-                        function e() {
-                            t(A());
-                        }
-                        return (
-                            window.addEventListener("visibilitychange", e),
-                            () => {
-                                window.removeEventListener("visibilitychange", e);
-                            }
-                        );
-                    }, [t]),
-                    e
-                );
-            })(),
-            s,
-        ),
+        })(t, (0, y.A)(), s),
         h = (function (e) {
             switch (e) {
                 case I.INITIALIZING:

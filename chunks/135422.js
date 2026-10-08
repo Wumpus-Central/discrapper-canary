@@ -1,0 +1,17 @@
+a.exports = {
+    lJ: "viewer_a159d5",
+    wx: "header_a159d5",
+    vR: "tabs_a159d5",
+    Gn: "tabLabel_a159d5",
+    WT: "tabTitle_a159d5",
+    W9: "liveDot_a159d5",
+    M7: "livePulse_a159d5",
+    oM: "liveDotEnded_a159d5",
+    dZ: "session_a159d5",
+    dw: "stage_a159d5",
+    _d: "stageControlling_a159d5",
+    Ji: "canvas_a159d5",
+    tl: "canvasEnded_a159d5",
+    Lw: "overlay_a159d5",
+    Hl: "overlayEnded_a159d5",
+};
