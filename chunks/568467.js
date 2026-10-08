@@ -19,7 +19,7 @@ async function h(t) {
                     return (
                         r.A.show({
                             title: g.intl.string(g.t.mlbiZW),
-                            body: g.intl.formatToPlainString(t ? g.t.Anr1Dg : g.t["1zVbEG"], { max: t ? 50 : 200 }),
+                            body: g.intl.formatToPlainString(t ? g.t.Anr1Dg : g.t["1zVbEG"], { max: t ? 50 : 500 }),
                             cancelText: g.intl.string(g.t.BddRzS),
                             confirmText: g.intl.string(g.t.ZGbTcy),
                             onConfirm: () => d._.dispatch(o.jej.TOGGLE_INBOX, t ? i.Y2.REMINDERS : i.Y2.BOOKMARKS),
