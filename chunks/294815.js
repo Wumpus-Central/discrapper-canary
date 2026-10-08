@@ -807,17 +807,17 @@ function nA(e) {
 var np = t(12470),
     ng = t(811893),
     nx = t(91242),
-    nf = t(809871),
-    nI = t(73153),
-    nj = t(494126);
-async function nE(e) {
+    nf = t(73153),
+    nI = t(494126);
+async function nj(e) {
     null == nx.A.getFrame(e) ||
-        ((await (0, nj.refreshProxyTicket)(e)) &&
-            ((0, nj.promoteFrame)(e),
-            (0, nj.updateFramePanelMode)(e, eZ.Gd.ACTIVITY_POPOUT_WINDOW),
-            nI.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })));
+        ((await (0, nI.refreshProxyTicket)(e)) &&
+            ((0, nI.promoteFrame)(e),
+            (0, nI.updateFramePanelMode)(e, eZ.Gd.ACTIVITY_POPOUT_WINDOW),
+            nf.h.dispatch({ type: "ACTIVITY_POPOUT_WINDOW_OPEN" })));
 }
-var nC = t(869146);
+var nE = t(567245),
+    nC = t(869146);
 function ny(e) {
     let { channel: n } = e,
         t = s.useMemo(
@@ -832,10 +832,10 @@ function ny(e) {
             [i],
         ),
         o = s.useCallback(() => {
-            null != i && (0, eW.A)({ onConfirm: () => nE(i.id) });
+            null != i && (0, eW.A)({ onConfirm: () => nj(i.id) });
         }, [i]),
         d = s.useCallback(() => {
-            (0, eW.A)({ onConfirm: () => nf.A.popInFrame() });
+            (0, eW.A)({ onConfirm: () => (0, nE.E)() });
         }, []);
     return (0, nm.x1)(i)
         ? a
@@ -1752,7 +1752,7 @@ let tR = function (e) {
         () => () => {
             let e = eQ.Ay.lastMessageId(n.id);
             null != e &&
-                nI.h.wait(() => {
+                nf.h.wait(() => {
                     (0, n0.ack)(
                         n.id,
                         {
@@ -2183,8 +2183,8 @@ var iI = t(925166),
     iE = t(857253),
     iC = t(872363);
 let iy = function (e, n) {
-    nI.h.wait(() => {
-        nI.h.dispatch({ type: "GUILD_PROMPT_VIEWED", prompt: e, guildId: n });
+    nf.h.wait(() => {
+        nf.h.dispatch({ type: "GUILD_PROMPT_VIEWED", prompt: e, guildId: n });
     });
 };
 var ib = t(561446),
@@ -2881,7 +2881,7 @@ class lq extends m.Ay.PersistedStore {
         return lz;
     }
 }
-let lK = new lq(nI.h, {
+let lK = new lq(nf.h, {
     GUILD_PROMPT_VIEWED: function (e) {
         let { prompt: n, guildId: t } = e,
             i = lz[t];
@@ -3921,7 +3921,7 @@ function rp(e) {
         s.useEffect(() => {
             i &&
                 null != n &&
-                (nI.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: n.parent_id }),
+                (nf.h.dispatch({ type: "SIDEBAR_CLOSE", baseChannelId: n.parent_id }),
                 (0, t2.N9)(n, { source: io.H9.VOICE_AUTO_OPEN }));
         }, [i, n]));
     let p = s.useRef(!1);
@@ -7960,7 +7960,7 @@ function uf(e) {
                                     impression_capped_item_ids: [..._.current.impressionCappedEntryIds],
                                 }),
                                 (0, ue.sE)("useInjectContentInventoryFeed") &&
-                                    nI.h.dispatch({ type: "CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS", itemIds: n }));
+                                    nf.h.dispatch({ type: "CONTENT_INVENTORY_TRACK_ITEM_IMPRESSIONS", itemIds: n }));
                         }
                     ),
                     [d, l, r, h, A, x],

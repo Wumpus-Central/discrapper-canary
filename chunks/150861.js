@@ -1,24 +1,24 @@
-u.d(l, { A: () => d });
-var n = u(582128),
-    t = u(17928),
-    a = u(734057),
-    r = u(576705),
-    c = u(91242),
-    s = u(580954),
-    i = u(165610),
-    A = u(652215);
-function d(e) {
-    let l = e?.id,
-        u = n.useMemo(() => (null != e ? (0, i.HD)(e) : null), [e]),
-        d = (0, t.bG)(
-            [a.A, r.A],
+l.d(u, { A: () => f });
+var n = l(582128),
+    t = l(17928),
+    r = l(734057),
+    c = l(576705),
+    s = l(91242),
+    a = l(457827),
+    i = l(165610),
+    d = l(652215);
+function f(e) {
+    let u = e?.id,
+        l = n.useMemo(() => (null != e ? (0, i.HD)(e) : null), [e]),
+        f = (0, t.bG)(
+            [r.A, c.A],
             () => {
-                let e = a.A.getChannel(l);
-                return null != e && r.A.can(A.xBc.VIEW_CHANNEL, e);
+                let e = r.A.getChannel(u);
+                return null != e && c.A.can(d.xBc.VIEW_CHANNEL, e);
             },
-            [l],
+            [u],
         );
     n.useEffect(() => {
-        if (null != u && !d) for (let e of c.A.getFramesForSurface(u)) (0, s.A)().leaveFrame(e.id);
-    }, [u, d]);
+        if (null != l && !f) for (let e of s.A.getFramesForSurface(l)) (0, a.r)(e.id);
+    }, [l, f]);
 }

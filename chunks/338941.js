@@ -4,13 +4,13 @@ var n,
     o = t(17928),
     l = t(956518),
     u = t(950803),
-    s = t(574152),
+    s = t(85982),
     i = t(627363),
     c = t(878014),
     d = t(869146),
     f = t(625180),
     h = t(91242),
-    p = t(580954),
+    p = t(457827),
     g = t(165610),
     w = t(652215),
     A =
@@ -29,9 +29,9 @@ function m(e) {
             frameExists: m,
             frameLaunched: E,
             surface: y,
-            launchFailure: F,
-            setFailed: L,
-            lifecycle: W,
+            launchFailure: W,
+            setFailed: F,
+            lifecycle: L,
         } = (function (e) {
             let { applicationId: a, surface: t, hostWindowKey: n } = e,
                 u = r.useMemo(() => (0, g.VA)(a, t), [a, t]),
@@ -54,16 +54,16 @@ function m(e) {
                 { data: A, isLoading: m } = (0, i.YY)(a),
                 E = (0, c.D)(A),
                 y = null != (0, l.Ay)(a),
-                [F, L] = r.useState(null),
-                W = F?.frameId === u ? F : null,
-                M = r.useCallback((e) => L({ frameId: u, error: e }), [u]);
+                [W, F] = r.useState(null),
+                L = W?.frameId === u ? W : null,
+                b = r.useCallback((e) => F({ frameId: u, error: e }), [u]);
             return {
                 frameId: u,
                 frameExists: null != f,
                 frameLaunched: (0, g.x1)(f),
                 surface: s,
-                launchFailure: W,
-                setFailed: M,
+                launchFailure: L,
+                setFailed: b,
                 lifecycle:
                     null == A || E
                         ? (0, g.x1)(f)
@@ -72,7 +72,7 @@ function m(e) {
                                 : null != A
                                   ? { state: "launched", frame: f, application: A }
                                   : { state: "loading", frame: void 0 }
-                            : null != W
+                            : null != L
                               ? null == A
                                   ? m
                                       ? { state: "loading", frame: void 0 }
@@ -86,32 +86,32 @@ function m(e) {
                         : { state: "does-not-support-surface" },
             };
         })({ applicationId: a, surface: t, hostWindowKey: n }),
-        { state: M } = W;
+        { state: b } = L;
     return (
         r.useEffect(() => {
             if (null != n && E) return (f.A.attachFrameHostWindow(A, n), () => f.A.detachFrameHostWindow(A, n));
         }, [A, n, E]),
         r.useEffect(() => {
-            "awaiting-launch" === M && e();
+            "awaiting-launch" === b && e();
             async function e() {
                 try {
                     await f.A.launchFrame({ applicationId: a, surface: y, hostWindowKey: n, showErrorModal: !1 });
                 } catch (e) {
-                    L(e);
+                    F(e);
                 }
             }
-        }, [M, a, y, n, L]),
+        }, [b, a, y, n, F]),
         r.useEffect(() => {
-            "error" === M &&
-                null != F &&
-                (0, u.f)(F.error, a).then((e) => {
+            "error" === b &&
+                null != W &&
+                (0, u.f)(W.error, a).then((e) => {
                     let { message: a } = e;
-                    return (0, s.A)().showLaunchErrorModal(a);
+                    return (0, s.A)(a);
                 });
-        }, [M, F, a]),
+        }, [b, W, a]),
         r.useEffect(() => {
-            "does-not-support-surface" === M && m && (0, p.A)().leaveFrame(A);
-        }, [M, m, A]),
-        W
+            "does-not-support-surface" === b && m && (0, p.r)(A);
+        }, [b, m, A]),
+        L
     );
 }

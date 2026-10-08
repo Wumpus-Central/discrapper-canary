@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => p });
 var i = n(587895),
     r = n(734057),
     a = n(309010),
@@ -10,78 +10,66 @@ var i = n(587895),
     u = n(799061),
     _ = n(969151),
     E = n(817636),
-    A = n(574152),
-    h = n(108959),
-    f = n(90804),
-    I = n(748975),
-    p = n(818023);
-function T(e) {
-    return (0, o.w)((0, o.f)(), () => m(e));
+    A = n(108959),
+    h = n(90804),
+    f = n(748975),
+    I = n(818023);
+function p(e) {
+    return (0, o.w)((0, o.f)(), () => T(e));
 }
-async function m(e) {
+async function T(e) {
     let t,
         {
             applicationId: n,
             activityChannelId: o,
-            locationObject: T,
-            analyticsLocations: m,
-            componentId: g,
-            sectionName: S,
-            source: N,
-            inviterUserId: C,
-            customId: O,
-            referrerId: R,
+            locationObject: p,
+            analyticsLocations: T,
+            componentId: m,
+            sectionName: g,
+            source: S,
+            inviterUserId: N,
+            customId: C,
+            referrerId: O,
         } = e,
-        L = (0, A.A)(),
-        y = r.A.getChannel(o),
-        D = y?.getGuildId(),
-        v = null == D || "" === D,
-        b = s.default.getCurrentUser();
-    if (null == b) return !1;
-    if (null == y || (v && !y.isPrivate()) || null == o) return Promise.resolve(!1);
-    let M = c.Ay.getCurrentEmbeddedActivity();
+        R = r.A.getChannel(o),
+        L = R?.getGuildId(),
+        y = null == L || "" === L,
+        D = s.default.getCurrentUser();
+    if (null == D) return !1;
+    if (null == R || (y && !R.isPrivate()) || null == o) return Promise.resolve(!1);
+    let v = c.Ay.getCurrentEmbeddedActivity();
     if (
-        (M?.applicationId != null && (t = i.A.getApplication(M?.applicationId)),
+        (v?.applicationId != null && (t = i.A.getApplication(v?.applicationId)),
         a.Ay.getVoiceChannelId() === o &&
-            null != M &&
-            M.applicationId === n &&
-            (0, _.H)(M.location) === a.Ay.getVoiceChannelId())
+            null != v &&
+            v.applicationId === n &&
+            (0, _.H)(v.location) === a.Ay.getVoiceChannelId())
     )
-        return ((0, I.A)(D, M.location), Promise.resolve(!0));
-    let P = await (0, E.A)(n, o);
-    if (
-        !(await (0, u.O)({
-            applicationId: n,
-            application: P,
-            channel: y,
-            currentEmbeddedApplication: t,
-            embeddedActivitiesManager: L,
-            user: b,
-        }))
-    )
+        return ((0, f.A)(L, v.location), Promise.resolve(!0));
+    let b = await (0, E.A)(n, o);
+    if (!(await (0, u.O)({ applicationId: n, application: b, channel: R, currentEmbeddedApplication: t, user: D })))
         return !1;
-    if (null != y) {
-        let e = (0, h.A)(y.id),
-            n = p.lk.includes(y.type);
+    if (null != R) {
+        let e = (0, A.A)(R.id),
+            n = I.lk.includes(R.type);
         if (e) {
-            if (!(await (0, f.A)({ channelId: y.id, bypassChangeModal: null != t }))) return !1;
-        } else if (!(0, l.pE)(y) || !n) return !1;
-    } else if (null == y) return !1;
+            if (!(await (0, h.A)({ channelId: R.id, bypassChangeModal: null != t }))) return !1;
+        } else if (!(0, l.pE)(R) || !n) return !1;
+    } else if (null == R) return !1;
     return (
-        null != M && (0, d.rW)(M.location),
+        null != v && (0, d.rW)(v.location),
         await (0, d.su)({
             channelId: o,
             applicationId: n,
             isStart: !1,
-            embeddedActivitiesManager: L,
-            analyticsLocations: m,
-            locationObject: T,
-            componentId: g,
-            sectionName: S,
-            source: N,
-            inviterUserId: C,
-            customId: O,
-            referrerId: R,
+            analyticsLocations: T,
+            locationObject: p,
+            componentId: m,
+            sectionName: g,
+            source: S,
+            inviterUserId: N,
+            customId: C,
+            referrerId: O,
         })
     );
 }

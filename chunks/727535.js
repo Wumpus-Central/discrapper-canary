@@ -4355,7 +4355,7 @@ var sG = n(825244),
     sw = n(957283),
     sF = n(189213),
     sB = n(933958),
-    sH = n(869003),
+    sH = n(988534),
     sK = n(321191);
 function sV(e) {
     return (0, u.bG)([sK.A], () => (null !== e ? sK.A.getUserProfile(e ?? eh.dJq)?.application : void 0)) ?? void 0;
@@ -4449,7 +4449,7 @@ function s9(e) {
     function s() {
         sY.A.delete(l.id);
         let e = i.get(n.id);
-        null != e && sH.A.leaveActivity({ location: e.location, applicationId: n.id });
+        null != e && (0, sH.d)({ location: e.location, applicationId: n.id });
     }
     return (0, a.jsx)(ek.$, {
         variant: "secondary",

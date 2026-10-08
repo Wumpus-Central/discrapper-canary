@@ -16,14 +16,14 @@ var c = n(231723),
     f = n(287809),
     I = n(240248),
     p = n(660183),
-    T = n(969151),
-    m = n(817636),
-    g = n(574152),
+    T = n(988534),
+    m = n(969151),
+    g = n(817636),
     S = n(652215);
 async function N(e) {
     let { applicationId: t, channelId: n, guildId: s } = e;
     try {
-        return await (0, m.A)(t, n);
+        return await (0, g.A)(t, n);
     } catch (l) {
         let e = null != s ? i.T.GUILD_CHANNEL : i.T.PRIVATE_CHANNEL;
         r.h.dispatch({
@@ -48,7 +48,7 @@ async function C(e) {
             !!(await new Promise((e) => {
                 let r,
                     a = o.Ay.getSelfEmbeddedActivities().get(t.id),
-                    s = (0, T.H)(a?.location),
+                    s = (0, m.H)(a?.location),
                     d = l.A.getChannel(s);
                 null == a || null == d
                     ? e(!0)
@@ -59,12 +59,7 @@ async function C(e) {
                           cancelText: p.intl.string(p.t["ETE/oC"]),
                           confirmText: p.intl.string(p.t["cY+Oob"]),
                           onConfirm: () => {
-                              ((0, g.A)().leaveActivity({
-                                  location: a.location,
-                                  applicationId: t.id,
-                                  shouldClosePopout: n,
-                              }),
-                                  e(!0));
+                              ((0, T.d)({ location: a.location, applicationId: t.id, shouldClosePopout: n }), e(!0));
                           },
                           onCancel: () => e(!1),
                           body: p.intl.format(p.t["5/Xort"], {

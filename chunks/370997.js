@@ -24,13 +24,13 @@ var n = l(477900),
     _ = l(847374),
     E = l(661531),
     b = l(320448),
-    y = l(821609),
-    S = l(707554),
+    S = l(821609),
+    y = l(707554),
     P = l(683438),
     R = l(289873),
     D = l(331322),
     G = l(933958),
-    U = l(869003),
+    U = l(988534),
     k = l(224750),
     O = l(875444),
     F = l(62447),
@@ -273,7 +273,7 @@ function ev(e) {
         U = (0, F.A)(u);
     return (0, n.jsx)("div", {
         className: ex.Zy,
-        children: (0, n.jsx)(S.F, {
+        children: (0, n.jsx)(y.F, {
             component:
                 ((l =
                     null != (t = V.Ay.getApplicationIconURL({ id: u.id, icon: u.icon }))
@@ -449,7 +449,7 @@ function ev(e) {
                                   : null,
                             (0, n.jsx)("div", {
                                 className: ex.hU,
-                                children: (0, n.jsx)(y.$, {
+                                children: (0, n.jsx)(S.$, {
                                     variant: "critical-secondary",
                                     size: "sm",
                                     text: ec.intl.string(ec.t.xUqheM),
@@ -507,7 +507,7 @@ let eC = (0, c.v)(() => ({ searchQuery: "" })),
                   : t.filter((t) => t.application.name.toLowerCase().includes(e));
         }, [t, c]);
         return (0, n.jsx)(D.B, {
-            children: (0, n.jsx)(S.F, {
+            children: (0, n.jsx)(y.F, {
                 children:
                     null == t || null == N || e !== w.FetchState.FETCHED
                         ? (0, n.jsx)(R.y, { className: ex.p$, type: R.y.Type.SPINNING_CIRCLE })
@@ -529,7 +529,7 @@ let eC = (0, c.v)(() => ({ searchQuery: "" })),
                                                           M.A.delete(t);
                                                           let n = s.get(l.id);
                                                           null != n &&
-                                                              U.A.leaveActivity({
+                                                              (0, U.d)({
                                                                   location: n.location,
                                                                   applicationId: l.id,
                                                                   showFeedback: !1,

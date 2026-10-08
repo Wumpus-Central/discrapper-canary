@@ -2,7 +2,7 @@ n.d(t, { A: () => c });
 var i = n(477900);
 n(582128);
 var r = n(70688),
-    a = n(869003),
+    a = n(988534),
     s = n(688810),
     l = n(384059),
     o = n(204651),
@@ -15,7 +15,7 @@ function c(e) {
         ...u,
         isTrayButton: !1,
         onClick: function () {
-            ((0, l.X)(_, l.O.LEAVE_ACTIVITY), a.A.leaveActivity({ location: t, applicationId: n, showFeedback: !0 }));
+            ((0, l.X)(_, l.O.LEAVE_ACTIVITY), (0, a.d)({ location: t, applicationId: n, showFeedback: !0 }));
         },
         iconComponent: r.DoorExitIcon,
         label: d.intl.string(d.t["R/FK4A"]),

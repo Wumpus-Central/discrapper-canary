@@ -1,4 +1,4 @@
-(e.d(n, { A: () => F }), e(321073));
+(e.d(n, { A: () => L }), e(321073));
 var t = e(477900),
     i = e(582128),
     c = e(17928),
@@ -8,7 +8,7 @@ var t = e(477900),
     d = e(624479),
     a = e(70688),
     s = e(91242),
-    A = e(580954),
+    A = e(457827),
     p = e(574172),
     g = e(869146),
     I = e(976860),
@@ -26,44 +26,44 @@ var t = e(477900),
     V = e(371169),
     j = e(652215),
     P = e(746080),
-    v = e(165610),
-    T = e(261425),
+    T = e(165610),
+    v = e(261425),
     B = e(660183);
-function F(l, n, e) {
-    var F;
-    let L,
-        M,
-        m,
+function L(l, n, e) {
+    var L;
+    let M,
+        F,
         H,
         S,
+        m,
         O = (0, C.w$)(l, e),
         k =
-            ((F = O ? l : null),
-            (M = null != (L = (0, C.us)(F))),
-            (m = F?.guild_id ?? null),
-            (H = (0, c.bG)(
+            ((L = O ? l : null),
+            (F = null != (M = (0, C.us)(L))),
+            (H = L?.guild_id ?? null),
+            (S = (0, c.bG)(
                 [D.A, f.A],
                 () => {
-                    let l = null != m ? D.A.getGuild(m) : null;
+                    let l = null != H ? D.A.getGuild(H) : null;
                     return null != l && f.A.can(j.xBc.MANAGE_GUILD, l);
                 },
-                [m],
+                [H],
             )),
-            (S = (0, c.yK)([E.Ay], () => (null != m ? (E.Ay.getSelfMember(m)?.roles ?? []) : []), [m])),
+            (m = (0, c.yK)([E.Ay], () => (null != H ? (E.Ay.getSelfMember(H)?.roles ?? []) : []), [H])),
             i.useEffect(() => {
-                M && null != L && (0, V.hF)(m ?? void 0);
-            }, [M, L, m, H, S]),
+                F && null != M && (0, V.hF)(H ?? void 0);
+            }, [F, M, H, S, m]),
             (0, c.bG)(
                 [h.Ay],
                 () => {
-                    if (null == L) return null;
-                    let l = h.Ay.findProjectByApplicationId(L);
+                    if (null == M) return null;
+                    let l = h.Ay.findProjectByApplicationId(M);
                     if (null == l || (0, h.PV)(l)) return l;
-                    let n = null != m ? G.default.castGuildIdAsEveryoneGuildRoleId(m) : null,
-                        e = (l.collaborator_role_ids ?? []).some((l) => l === n || S.includes(l));
-                    return l.guild_id === m && (0, N.Hn)(l) && (H || e) ? l : null;
+                    let n = null != H ? G.default.castGuildIdAsEveryoneGuildRoleId(H) : null,
+                        e = (l.collaborator_role_ids ?? []).some((l) => l === n || m.includes(l));
+                    return l.guild_id === H && (0, N.Hn)(l) && (S || e) ? l : null;
                 },
-                [L, H, S, m],
+                [M, S, m, H],
             )),
         w = k?.id ?? null,
         U = l.guild_id ?? null;
@@ -77,7 +77,7 @@ function F(l, n, e) {
                 g.A.getWindowOpen(j.MLl.ACTIVITY_POPOUT) &&
                 s.A.getMainFrame()?.id === K &&
                 (0, p.close)(j.MLl.ACTIVITY_POPOUT),
-                (0, A.A)().leaveFrame(K),
+                (0, A.r)(K),
                 (0, I.pX)(
                     (function (l, n) {
                         if (null == l) return j.BVt.FRIENDS;
@@ -99,7 +99,7 @@ function F(l, n, e) {
                 id: "conjure-edit",
                 icon: u.PencilIcon,
                 leadingAccessory: { type: "icon", icon: u.PencilIcon },
-                label: B.intl.string(T.default.jMMrDM),
+                label: B.intl.string(v.default.jMMrDM),
                 action: () => (0, I.pX)(j.BVt.CHANNEL(U, P.VV.CONJURE, k.id)),
             },
             "edit",
@@ -114,7 +114,7 @@ function F(l, n, e) {
                         id: "conjure-settings",
                         icon: r.SettingsIcon,
                         leadingAccessory: { type: "icon", icon: r.SettingsIcon },
-                        label: B.intl.string(T.default.I2XSKe),
+                        label: B.intl.string(v.default.I2XSKe),
                         action: () => (0, x.A)(k.id, { guildId: U, initialTab: "app" }),
                     },
                     "settings",
@@ -128,13 +128,13 @@ function F(l, n, e) {
                         id: "conjure-remix",
                         icon: d.CopyIcon,
                         leadingAccessory: { type: "icon", icon: d.CopyIcon },
-                        label: B.intl.string(T.default["9wQTdG"]),
+                        label: B.intl.string(v.default["9wQTdG"]),
                         action: () => (0, b.A)(k, U),
                     },
                     "remix",
                 ),
             ),
-        (0, v.x1)(n) &&
+        (0, T.x1)(n) &&
             W.push(
                 (0, t.jsx)(
                     o.Dr,
@@ -142,7 +142,7 @@ function F(l, n, e) {
                         id: "conjure-close",
                         icon: a.DoorExitIcon,
                         leadingAccessory: { type: "icon", icon: a.DoorExitIcon },
-                        label: B.intl.string(T.default["/TlGcK"]),
+                        label: B.intl.string(v.default["/TlGcK"]),
                         action: X,
                     },
                     "close",

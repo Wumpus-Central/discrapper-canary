@@ -552,7 +552,7 @@ let eO = (e) => {
     });
 };
 var ew = l(933958),
-    eG = l(869003);
+    eG = l(988534);
 let eL = (e) => {
     let { application: t, reportId: l } = e,
         [a, s] = i.useState(!1),
@@ -577,7 +577,7 @@ let eL = (e) => {
                 return;
             W.A.delete(r.id);
             let e = o.get(t.id);
-            null != e && eG.A.leaveActivity({ location: e.location, applicationId: t.id, showFeedback: !1 });
+            null != e && (0, eG.d)({ location: e.location, applicationId: t.id, showFeedback: !1 });
         }, [t.id, r, o, l]);
     return null == t
         ? null
@@ -854,31 +854,31 @@ let e3 = (e) => {
           });
 };
 var e8 = l(486020),
-    e2 = l(695451);
-let e4 = (e) => {
+    e4 = l(695451);
+let e2 = (e) => {
     let { entry: t } = e,
         l = (0, V.c)("GuildDiscoveryPreviewElement"),
         { id: i, icon: a, name: s } = t,
         r = e8.Ay.getGuildIconURL({ id: i, icon: a, size: 32 }) ?? void 0;
     return (0, n.jsxs)("div", {
-        className: e2.kL,
+        className: e4.kL,
         children: [
             (0, n.jsx)(p.D, {
-                className: e2.wx,
+                className: e4.wx,
                 variant: l ? "heading-sm/medium" : "heading-sm/semibold",
                 children: T.intl.string(T.t.nTe4HC),
             }),
             (0, n.jsx)("div", {
-                className: e2.bo,
+                className: e4.bo,
                 children: (0, n.jsxs)("div", {
-                    className: e2.OA,
+                    className: e4.OA,
                     children: [
                         (0, n.jsx)(B.Ay, {
                             mask: B.Ay.Masks.SQUIRCLE,
                             width: 32,
                             height: 32,
-                            className: e2.$d,
-                            children: (0, n.jsx)("img", { src: r, alt: "", className: e2.$f }),
+                            className: e4.$d,
+                            children: (0, n.jsx)("img", { src: r, alt: "", className: e4.$f }),
                         }),
                         (0, n.jsx)(P.E, { color: "text-default", variant: "text-sm/normal", children: s }),
                     ],
@@ -1490,8 +1490,8 @@ function t3(e) {
         : null;
 }
 var t8 = l(957565),
-    t2 = l(65489);
-function t4(e) {
+    t4 = l(65489);
+function t2(e) {
     let {
             element: {
                 data: { title: t, body: l, sms: a, is_localized: s },
@@ -1501,28 +1501,28 @@ function t4(e) {
         u = i.useRef(e_.A.reactParserFor(e_.A.defaultRules));
     return s
         ? (0, n.jsxs)("div", {
-              className: t2.kL,
+              className: t4.kL,
               children: [
                   (0, n.jsx)(p.D, {
                       variant: "heading-sm/semibold",
                       color: "text-default",
-                      className: t2.wx,
+                      className: t4.wx,
                       children: t,
                   }),
-                  (0, n.jsx)(P.E, { variant: "text-sm/normal", className: t2.G3, children: u.current(l) }),
+                  (0, n.jsx)(P.E, { variant: "text-sm/normal", className: t4.G3, children: u.current(l) }),
                   (0, n.jsx)("div", {
                       children: (0, n.jsxs)("div", {
-                          className: ed()(t2.GH, { [t2.pG]: r }),
+                          className: ed()(t4.GH, { [t4.pG]: r }),
                           children: [
                               (0, n.jsx)(P.E, {
                                   variant: "text-md/normal",
                                   selectable: !0,
-                                  className: t2.Kk,
+                                  className: t4.Kk,
                                   children: a,
                               }),
                               (0, n.jsx)("div", {
                                   "data-button-hoisted-classname-wrapper": !0,
-                                  className: t2.__invalid_trailingButton,
+                                  className: t4.__invalid_trailingButton,
                                   children: (0, n.jsx)(O.$, {
                                       variant: "secondary",
                                       size: "sm",
@@ -1830,7 +1830,7 @@ let ld = (e) => {
                 "data-migration-pending": !0,
                 className: em.rf,
                 children: [
-                    null != y && (0, n.jsx)(t4, { element: y }),
+                    null != y && (0, n.jsx)(t2, { element: y }),
                     null != L && (0, n.jsx)(t3, { element: L }),
                     null != ls(t, "message_preview") &&
                         ("message" === l.name || "first_dm" === l.name || "report_to_mod_message" === l.name) &&
@@ -1921,7 +1921,7 @@ let ld = (e) => {
                         (0, n.jsx)(e3, { entry: l.record }),
                     null != ls(t, "guild_discovery_preview") &&
                         "guild_discovery" === l.name &&
-                        (0, n.jsx)(e4, { entry: l.record }),
+                        (0, n.jsx)(e2, { entry: l.record }),
                     null != ls(t, "app_preview") && "application" === l.name && (0, n.jsx)(Y, { entry: l.record }),
                     null != E && (0, n.jsx)(tE, { element: E, onChange: ei, state: K }),
                     la.includes(l.name) && null != P && (0, n.jsx)(eM, { element: P, onChange: ea, state: q }),

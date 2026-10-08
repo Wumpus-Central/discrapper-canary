@@ -533,8 +533,8 @@ var tc = n(994314),
     tp = n(687966),
     tT = n(34188),
     tm = n(942857),
-    tg = n(55730),
-    tS = n(869003),
+    tg = n(988534),
+    tS = n(55730),
     tN = n(521588),
     tC = n(702841),
     tO = n(176781),
@@ -566,7 +566,7 @@ let tb = function () {
           })
         : null;
 };
-var tM = n(580954),
+var tM = n(457827),
     tP = n(907878),
     tU = n(831617),
     tw = n(196736);
@@ -638,7 +638,7 @@ function tQ(e, t, n) {
             : null != t &&
               (t.application_id === e.id || e.linkedGames?.some((e) => e.id === t.application_id)) &&
               t.type === x.$pd.PLAYING &&
-              (0, tg.A)(t, x.jUm.JOIN))
+              (0, tS.A)(t, x.jUm.JOIN))
     );
 }
 let tJ = a.memo(function (e) {
@@ -692,14 +692,13 @@ let tJ = a.memo(function (e) {
         }, [I, m, y, u]),
         Y = a.useCallback(
             (e, t) => () => {
-                ((0, eA.X)(y, eA.O.LEAVE_ACTIVITY),
-                    tS.A.leaveActivity({ location: t, applicationId: e, showFeedback: !0 }));
+                ((0, eA.X)(y, eA.O.LEAVE_ACTIVITY), (0, tg.d)({ location: t, applicationId: e, showFeedback: !0 }));
             },
             [y],
         ),
         K = a.useCallback(
             (e) => () => {
-                ((0, eA.X)(y, eA.O.LEAVE_ACTIVITY), (0, tM.A)().leaveFrame(e));
+                ((0, eA.X)(y, eA.O.LEAVE_ACTIVITY), (0, tM.r)(e));
             },
             [y],
         ),

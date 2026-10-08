@@ -100,7 +100,7 @@ class n {
     }
 }
 var i = a(281969),
-    r = a(580954);
+    r = a(457827);
 let o = { [l.A.Backstage]: 0, [l.A.WithinAppContent]: 1, [l.A.WithinCallContent]: 3, [l.A.AboveAppContent]: 1002 };
 class d {
     _pool = null;
@@ -185,7 +185,7 @@ class p extends n {
         null != t && (this.strategy.unplace(t.container), (0, s.fS)(e) || i.A.setFrameVisible(e, !1));
     }
     destroyFrame(e) {
-        (0, s.fS)(e) ? (0, s.aQ)(e) : (0, r.A)().leaveFrame(e);
+        (0, s.fS)(e) ? (0, s.aQ)(e) : (0, r.r)(e);
     }
 }
 let h = new p();
