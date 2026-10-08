@@ -1,29 +1,29 @@
-o.d(l, { A: () => e });
-var s = o(477900);
-o(582128);
-var i = o(272984),
-    t = o(660183);
-let r = {
-    [i.M0.TRACK]: 80,
-    [i.M0.EPISODE]: 232,
-    [i.M0.SHOW]: 232,
-    [i.M0.ALBUM]: 352,
-    [i.M0.ARTIST]: 352,
-    [i.M0.PLAYLIST]: 352,
+i.d(l, { A: () => r });
+var o = i(477900);
+i(582128);
+var s = i(272984),
+    t = i(660183);
+let e = {
+    [s.M0.TRACK]: 80,
+    [s.M0.EPISODE]: 232,
+    [s.M0.SHOW]: 232,
+    [s.M0.ALBUM]: 352,
+    [s.M0.ARTIST]: 352,
+    [s.M0.PLAYLIST]: 352,
 };
-function e(a) {
-    let { className: l, resourceId: o, resourceType: e, onLoad: p } = a;
-    return "" === o
+function r(a) {
+    let { className: l, resourceId: i, resourceType: r, onLoad: d, allowEncryptedMedia: p = !1 } = a;
+    return "" === i
         ? null
-        : (0, s.jsx)("iframe", {
+        : (0, o.jsx)("iframe", {
               className: l ?? void 0,
-              src: i.RQ.EMBED(`/${e}/${o}`),
-              style: { maxWidth: 400, minWidth: 300, width: "100%", height: r[e] },
+              src: s.RQ.EMBED(`/${r}/${i}`),
+              style: { maxWidth: 400, minWidth: 300, width: "100%", height: e[r] },
               frameBorder: 0,
               sandbox:
                   "allow-forms allow-modals allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts",
-              allow: "clipboard-write",
-              onLoad: p,
+              allow: p ? "encrypted-media; clipboard-write" : "clipboard-write",
+              onLoad: d,
               title: t.intl.string(t.t["0ZB/XE"]),
           });
 }
