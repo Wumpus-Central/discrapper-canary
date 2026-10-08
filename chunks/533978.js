@@ -9,8 +9,8 @@ var l = t(477900),
     u = t(688810),
     d = t(384059),
     A = t(480890),
-    m = t(595529),
-    h = t(421773),
+    h = t(595529),
+    m = t(421773),
     C = t(600597),
     p = t(813564),
     x = t(674168),
@@ -36,11 +36,11 @@ function S(e) {
             events: { onMouseEnter: U, onMouseLeave: G },
         } = (0, o.E)(),
         V = n.getGuildId(),
-        { mute: B, suppress: H } = (0, v.A)(n),
-        w = (0, a.bG)([T.Ay], () => T.Ay.isDeaf()),
-        Y = B || H || w,
+        { mute: B, suppress: w } = (0, v.A)(n),
+        H = (0, a.bG)([T.Ay], () => T.Ay.isDeaf()),
+        Y = B || w || H,
         F = (0, p.VE)({ isSoundboardButtonDisabled: Y }),
-        [X, K] = (0, m.DP)(F),
+        [X, K] = (0, h.DP)(F),
         { analyticsLocations: z } = (0, u.Ay)(),
         { showQuickAccess: W } = (0, C.j)("ActionBarSoundboardButton"),
         [J, q] = i.useState(W),
@@ -52,7 +52,7 @@ function S(e) {
         ),
         $ = i.useCallback(() => Q(!1), [Q]),
         { enabled: Z } = (0, f.W)(V ?? "0", "ActionBarSoundboardButton"),
-        { isHovered: ee, setIsHovered: en, onMouseEnter: et, onMouseLeave: el } = (0, h.A)(200, 300),
+        { isHovered: ee, setIsHovered: en, onMouseEnter: et, onMouseLeave: el } = (0, m.A)(200, 300),
         ei = i.useMemo(() => (ee && (R === O.P.SOUNDBOARD || null == R)) || R === O.P.SOUNDBOARD, [ee, R]);
     function ea(e) {
         null != V &&
@@ -120,6 +120,7 @@ function S(e) {
                                                 openFullPicker: $,
                                                 onClose: t,
                                                 analyticsSource: "action bar button",
+                                                showEchoes: Z,
                                             })
                                           : (0, l.jsx)(I.A, {
                                                 guildId: V,
@@ -129,6 +130,7 @@ function S(e) {
                                                     X === s.M.CUSTOM_CALL_SOUNDS_PICKER_UPSELL &&
                                                     (0, l.jsx)(x.m, { onClose: t, markAsDismissed: K }),
                                                 analyticsSource: "action bar button",
+                                                showEchoes: Z,
                                             }),
                                   }),
                               });
@@ -140,9 +142,9 @@ function S(e) {
                             themeable: S,
                             label: B
                                 ? y.intl.string(y.t["Ox4/zU"])
-                                : H
+                                : w
                                   ? y.intl.string(y.t["+YBKYI"])
-                                  : w
+                                  : H
                                     ? y.intl.string(y.t.X1lQli)
                                     : y.intl.string(y.t["6EJvHt"]),
                             iconComponent: P,
