@@ -5827,6 +5827,28 @@
     }
   },
   {
+    "name": "2026-10-macaron",
+    "kind": "user",
+    "defaultConfig": {
+      "enabled": false,
+      "phase": 0
+    },
+    "variations": {
+      "0": {
+        "enabled": false,
+        "variant": 0
+      },
+      "1": {
+        "enabled": true,
+        "phase": 1
+      },
+      "2": {
+        "enabled": true,
+        "phase": 2
+      }
+    }
+  },
+  {
     "name": "2026-10-purchase-history",
     "kind": "user",
     "defaultConfig": {
