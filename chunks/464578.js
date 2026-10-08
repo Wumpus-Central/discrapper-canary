@@ -5,13 +5,15 @@ function a() {
     return r.size;
 }
 let s = () => {};
-n.g.__timingFunction = () => performance.now();
-let l = null == n.g.__getTotalRequireTime ? () => 0 : () => n.g.__getTotalRequireTime();
+function l() {
+    return n.g.__getTotalRequireTime?.() ?? 0;
+}
 function o(e, t) {
     if (0 === t || null == t) return null;
     let n = t - e;
     return n < 0 || n > 1e6 ? null : n;
 }
+n.g.__timingFunction = () => performance.now();
 class d {
     emoji;
     name;

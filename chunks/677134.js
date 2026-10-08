@@ -3,13 +3,12 @@ var l = n(477900);
 n(582128);
 var r = n(442433);
 function i() {
-    let e;
+    let e,
+        t = document.selection;
     return (
         null != window.getSelection
             ? (e = window.getSelection()?.toString())
-            : null != document.selection &&
-              "Control" !== document.selection.type &&
-              (e = document.selection.createRange().text),
+            : null != t && "Control" !== t.type && (e = t.createRange().text),
         e ?? ""
     );
 }
@@ -17,7 +16,7 @@ function a(e) {
     let t = i(),
         a = e.target;
     if (a?.tagName === "TEXTAREA" || a?.tagName === "INPUT") {
-        if (a?.type !== "checkbox")
+        if ("checkbox" !== a.type)
             return (0, r.L3)(
                 e,
                 async () => {

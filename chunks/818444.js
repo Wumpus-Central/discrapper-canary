@@ -5708,7 +5708,7 @@ let s7 = iv(lj),
         let { location: t, transitionTo: i = U.pX } = e,
             [l, s] = h.useState("submitting");
         function r() {
-            return "Android" === eq().os.family || "iOS" === eq().os.family
+            return eq().os?.family === "Android" || eq().os?.family === "iOS"
                 ? null
                 : (0, d.jsx)(W.$, {
                       text: q.intl.string(q.t.dKhVQN),

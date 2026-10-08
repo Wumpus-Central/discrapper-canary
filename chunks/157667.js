@@ -876,7 +876,7 @@ let er = (0, Y.mj)({
                 if ((null != d && "" !== d && e.set("X-Installation-ID", d), l)) {
                     let t,
                         n = [];
-                    null != navigator && (n = [...navigator.languages] ?? []);
+                    null != navigator && (n = [...navigator.languages]);
                     let i =
                         ((t = 10),
                         n
@@ -1484,7 +1484,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let tn = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eq.A().log(
-    `[BUILD INFO] Release Channel: ${tn}, Build Number: 633720, Version Hash: 5b2d001568b7939a2664a000bc8a2e390031d088`,
+    `[BUILD INFO] Release Channel: ${tn}, Build Number: 633748, Version Hash: 23447e1b5a7088d2c556efa7fdc7a156764b9622`,
 ),
     F.A.setTags({ appContext: K.QCW }),
     eO.A.initBasic(),
@@ -26225,7 +26225,7 @@ let yN = "isHideDevBanner",
                     className: th()(yS.Wz, yS.mr),
                     children: [
                         (0, w.jsx)(yg, { className: yS.Kk }),
-                        tD.intl.format(tD.t.uyrfYF, { buildNumber: "633720" }),
+                        tD.intl.format(tD.t.uyrfYF, { buildNumber: "633748" }),
                         (0, w.jsx)(r, {}),
                     ],
                 })
@@ -43553,11 +43553,7 @@ let xy = {
                         ? { name: a.name, id: a.id, icon: a.icon, cover_image: a.coverImage, type: a.type }
                         : null,
                 l = i?.sourceName,
-                o = {
-                    active: null != i,
-                    pid: i?.pid ?? null,
-                    application: (null != s ?? null != l) ? { name: l } : null,
-                };
+                o = { active: null != i, pid: i?.pid ?? null, application: null != s ? { name: l } : null };
             return (iw().isEqual(o, t) || n(o), o);
         },
     },
