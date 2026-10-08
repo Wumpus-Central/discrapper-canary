@@ -1,31 +1,31 @@
-t.d(s, { A: () => w });
-var n = t(477900);
-t(582128);
-var r = t(503698),
-    i = t.n(r),
-    a = t(17928),
-    l = t(20742),
-    c = t(775602),
-    u = t(166532),
-    o = t(45938),
-    d = t(935462),
-    m = t(834730),
-    C = t(235986),
-    x = t(224016),
-    L = t(217392),
-    p = t(953727);
-function f(e) {
-    let { width: s = 143, height: t = 41, color: r = "currentColor", foreground: i, ...a } = e;
+s.d(t, { A: () => U });
+var n = s(477900),
+    r = s(582128),
+    a = s(503698),
+    i = s.n(a),
+    l = s(17928),
+    o = s(20742),
+    c = s(775602),
+    u = s(166532),
+    d = s(45938),
+    m = s(935462),
+    E = s(834730),
+    p = s(235986),
+    _ = s(224016),
+    L = s(217392),
+    A = s(953727);
+function h(e) {
+    let { width: t = 143, height: s = 41, color: r = "currentColor", foreground: a, ...i } = e;
     return (0, n.jsxs)("svg", {
-        ...(0, p.A)(a),
-        width: s,
-        height: t,
+        ...(0, A.A)(i),
+        width: t,
+        height: s,
         viewBox: "0 0 143 41",
         children: [
             (0, n.jsx)("title", { children: "Nitro Classic" }),
             (0, n.jsx)("g", {
                 fill: r,
-                className: i,
+                className: a,
                 fillRule: "evenodd",
                 "aria-hidden": !0,
                 children: (0, n.jsx)("path", {
@@ -35,15 +35,15 @@ function f(e) {
         ],
     });
 }
-function h(e) {
-    let { className: s } = e;
+function N(e) {
+    let { className: t } = e;
     return (0, n.jsxs)("svg", {
         width: "135",
         height: "32",
         viewBox: "0 0 135 32",
         fill: "none",
         xmlns: "http://www.w3.org/2000/svg",
-        className: s,
+        className: t,
         children: [
             (0, n.jsx)("path", {
                 d: "M2.17332 27.8901L6.92419 26.1319C7.02527 26.044 7.02527 25.9561 6.92419 25.9561L2.17332 24.1099L0.050529 20.0659C0.050529 19.978 -0.0505667 19.978 -0.15165 20.0659L-2.17332 24.1099H-2.27438L-6.92419 25.9561C-7.02527 25.9561 -7.02527 26.044 -6.92419 26.1319L-2.27438 27.8901H-2.17332L-0.15165 31.9341C-0.0505667 32.022 0.050529 32.022 0.050529 31.9341L2.17332 27.8901Z",
@@ -64,218 +64,231 @@ function h(e) {
         ],
     });
 }
-var j = t(158045),
-    N = t(580630),
-    A = t(724651),
-    T = t(732280),
-    g = t(202541),
-    E = t(660183),
-    S = t(294230);
-function I(e) {
-    let { isTier0: s, discountAmount: t } = e,
-        r = (0, T.V)(),
+var S = s(158045),
+    I = s(580630),
+    T = s(724651),
+    C = s(732280),
+    f = s(202541),
+    x = s(660183),
+    g = s(294230);
+function j(e) {
+    let { isTier0: t, discountAmount: s } = e,
+        r = (0, C.V)(),
         a = null != r && r.isReferralTrial,
-        l = E.intl.string(E.t.IBYG5U);
+        l = x.intl.string(x.t.IBYG5U);
     return (
-        void 0 !== t
-            ? (l = E.intl.formatToPlainString(E.t.iiLbvu, { percent: t }))
-            : a && (l = E.intl.string(E.t.gtNqJQ)),
+        void 0 !== s
+            ? (l = x.intl.formatToPlainString(x.t.iiLbvu, { percent: s }))
+            : a && (l = x.intl.string(x.t.gtNqJQ)),
         (0, n.jsx)("div", {
-            className: S.TX,
-            children: (0, n.jsx)(m.E, { variant: "text-xs/bold", className: i()(S.El, { [S.LD]: s }), children: l }),
+            className: g.TX,
+            children: (0, n.jsx)(E.E, { variant: "text-xs/bold", className: i()(g.El, { [g.LD]: t }), children: l }),
         })
     );
 }
-let v = function (e) {
-    let s,
+let y = function (e) {
+    let t,
         {
-            hideCloseButton: t = !1,
+            hideCloseButton: s = !1,
             hideCloseOnFullScreen: r,
             shouldShowPrice: a,
             plan: l,
-            renderAnimation: c,
-            onClose: u,
-            isGift: o,
-            upgradeToPremiumType: m,
-            className: p,
-            showTrialBadge: T = !1,
-            showDiscountBadge: v = !1,
+            renderAnimation: o,
+            onClose: c,
+            isGift: u,
+            upgradeToPremiumType: d,
+            className: E,
+            showTrialBadge: A = !1,
+            showDiscountBadge: C = !1,
         } = e,
-        _ = m === g.PremiumTypes.TIER_2;
-    s = m === g.PremiumTypes.TIER_0 ? L.A : m === g.PremiumTypes.TIER_1 ? f : x.A;
-    let y = (0, A.O)(),
-        M = y?.discount?.amount;
+        y = d === f.PremiumTypes.TIER_2;
+    t = d === f.PremiumTypes.TIER_0 ? L.A : d === f.PremiumTypes.TIER_1 ? h : _.A;
+    let R = (0, T.O)(),
+        O = R?.discount?.amount;
     return (0, n.jsxs)("div", {
         "aria-hidden": !0,
-        className: i()({ [S.y2]: !_, [S.qG]: _ }, p),
+        className: i()({ [g.y2]: !y, [g.qG]: y }, E),
         children: [
-            (T || v) && (0, n.jsx)(h, { className: S.N8 }),
-            c(),
-            (0, n.jsxs)(C.A, {
-                align: C.A.Align.START,
-                justify: C.A.Justify.BETWEEN,
-                className: S.LI,
+            (A || C) && (0, n.jsx)(N, { className: g.N8 }),
+            o(),
+            (0, n.jsxs)(p.A, {
+                align: p.A.Align.START,
+                justify: p.A.Justify.BETWEEN,
+                className: g.LI,
                 children: [
                     (0, n.jsxs)("div", {
                         children: [
-                            (0, n.jsx)(s, { className: i()(S.nr, { [S.w6]: !_ }) }),
-                            (T || v) &&
-                                (0, n.jsx)(I, { isTier0: m === g.PremiumTypes.TIER_0, discountAmount: v ? M : void 0 }),
+                            (0, n.jsx)(t, { className: i()(g.nr, { [g.w6]: !y }) }),
+                            (A || C) &&
+                                (0, n.jsx)(j, { isTier0: d === f.PremiumTypes.TIER_0, discountAmount: C ? O : void 0 }),
                         ],
                     }),
-                    !t &&
-                        (0, n.jsx)(d.s_, {
+                    !s &&
+                        (0, n.jsx)(m.s_, {
                             "data-migration-pending": !0,
                             hideOnFullscreen: r,
-                            onClick: u,
-                            className: S.b,
+                            onClick: c,
+                            className: g.b,
                         }),
                 ],
             }),
             a && null != l
                 ? (0, n.jsx)("div", {
-                      className: S.q9,
-                      children: (function (e, s) {
-                          let t = j.Ay.getDefaultPrice(e),
-                              { intervalType: n } = j.Ay.getInterval(e),
-                              r = (0, N.$g)(t.amount, t.currency);
-                          if (s) return r;
+                      className: g.q9,
+                      children: (function (e, t) {
+                          let s = S.Ay.getDefaultPrice(e),
+                              { intervalType: n } = S.Ay.getInterval(e),
+                              r = (0, I.$g)(s.amount, s.currency);
+                          if (t) return r;
                           switch (n) {
-                              case g.WT.MONTH:
-                                  return E.intl.formatToPlainString(E.t.AbOLNu, { price: r });
-                              case g.WT.YEAR:
-                                  return E.intl.formatToPlainString(E.t["rS8FA+"], { price: r });
+                              case f.WT.MONTH:
+                                  return x.intl.formatToPlainString(x.t.AbOLNu, { price: r });
+                              case f.WT.YEAR:
+                                  return x.intl.formatToPlainString(x.t["rS8FA+"], { price: r });
                           }
-                      })(l, o),
+                      })(l, u),
                   })
                 : null,
         ],
     });
 };
-var _ = t(25743),
-    y = t(899343),
-    M = t(997330);
+var R = s(25743),
+    O = s(566980);
+function D(e) {
+    let { purchaseState: t, currentStep: s, initialScene: n, purchaseScene: a, errorScene: i, successScene: l } = e,
+        [o, c] = (0, r.useState)(n);
+    return (
+        (0, r.useEffect)(() => {
+            t === O.h.PURCHASING ? c(a) : t === O.h.FAIL && c(i);
+        }, [t, a, i]),
+        (0, r.useEffect)(() => {
+            s === u.pn.CONFIRM && c(l);
+        }, [s, l]),
+        [o, c]
+    );
+}
+var P = s(997330);
+function v(e) {
+    let { currentStep: t, purchaseState: s, className: r, pause: a } = e,
+        [i, l] = D({
+            purchaseState: s,
+            currentStep: t,
+            initialScene: P.yh.Scenes.NORMAL,
+            purchaseScene: P.yh.Scenes.SPEED_START,
+            errorScene: P.yh.Scenes.NORMAL,
+            successScene: P.yh.Scenes.FINISH,
+        });
+    return (0, n.jsx)(P.yh, {
+        className: r,
+        nextScene: i,
+        onScenePlay: (e) => l(P.yh.getNextScene(e)),
+        pauseWhileUnfocused: !1,
+        pause: a,
+    });
+}
+function M(e) {
+    let { currentStep: t, purchaseState: s, className: r, pause: a } = e,
+        [i, l] = D({
+            purchaseState: s,
+            currentStep: t,
+            initialScene: P.rF.Scenes.NORMAL,
+            purchaseScene: P.rF.Scenes.SPEED_START,
+            errorScene: P.rF.Scenes.NORMAL,
+            successScene: P.rF.Scenes.FINISH,
+        });
+    return (0, n.jsx)(P.rF, {
+        className: r,
+        nextScene: i,
+        onScenePlay: (e) => l(P.rF.getNextScene(e)),
+        pauseWhileUnfocused: !1,
+        pause: a,
+    });
+}
 function b(e) {
-    let { currentStep: s, purchaseState: t, className: r, pause: i } = e,
-        [a, l] = (0, y.f)({
-            purchaseState: t,
-            currentStep: s,
-            initialScene: M.yh.Scenes.NORMAL,
-            purchaseScene: M.yh.Scenes.SPEED_START,
-            errorScene: M.yh.Scenes.NORMAL,
-            successScene: M.yh.Scenes.FINISH,
+    let { currentStep: t, purchaseState: s, className: r, pause: a } = e,
+        [i, l] = D({
+            purchaseState: s,
+            currentStep: t,
+            initialScene: P.yC.Scenes.IDLE_ENTRY,
+            purchaseScene: P.yC.Scenes.BOOST_START,
+            errorScene: P.yC.Scenes.ERROR,
+            successScene: P.yC.Scenes.BOOST_END,
         });
-    return (0, n.jsx)(M.yh, {
+    return (0, n.jsx)(P.yC, {
         className: r,
-        nextScene: a,
-        onScenePlay: (e) => l(M.yh.getNextScene(e)),
+        nextScene: i,
+        onScenePlay: (e) => l(P.yC.getNextScene(e)),
         pauseWhileUnfocused: !1,
-        pause: i,
+        pause: a,
     });
 }
-function P(e) {
-    let { currentStep: s, purchaseState: t, className: r, pause: i } = e,
-        [a, l] = (0, y.f)({
-            purchaseState: t,
-            currentStep: s,
-            initialScene: M.rF.Scenes.NORMAL,
-            purchaseScene: M.rF.Scenes.SPEED_START,
-            errorScene: M.rF.Scenes.NORMAL,
-            successScene: M.rF.Scenes.FINISH,
-        });
-    return (0, n.jsx)(M.rF, {
-        className: r,
-        nextScene: a,
-        onScenePlay: (e) => l(M.rF.getNextScene(e)),
-        pauseWhileUnfocused: !1,
-        pause: i,
-    });
-}
-function R(e) {
-    let { currentStep: s, purchaseState: t, className: r, pause: i } = e,
-        [a, l] = (0, y.f)({
-            purchaseState: t,
-            currentStep: s,
-            initialScene: M.yC.Scenes.IDLE_ENTRY,
-            purchaseScene: M.yC.Scenes.BOOST_START,
-            errorScene: M.yC.Scenes.ERROR,
-            successScene: M.yC.Scenes.BOOST_END,
-        });
-    return (0, n.jsx)(M.yC, {
-        className: r,
-        nextScene: a,
-        onScenePlay: (e) => l(M.yC.getNextScene(e)),
-        pauseWhileUnfocused: !1,
-        pause: i,
-    });
-}
-var U = t(652006);
-function w(e) {
+var w = s(652006);
+function U(e) {
     let {
-            currentStep: s,
-            className: t,
+            currentStep: t,
+            className: s,
             purchaseState: r,
-            premiumType: d,
+            premiumType: a,
             onClose: m,
-            hideCloseButton: C,
-            showTrialBadge: x,
-            showDiscountBadge: L,
-            isGift: p,
-            giftRecipient: f,
+            hideCloseButton: E,
+            showTrialBadge: p,
+            showDiscountBadge: _,
+            isGift: L,
+            giftRecipient: A,
             isEligibleForTrial: h,
-            enablePremiumBrandRefresh: j,
-            forceBrandRefreshHeader: N,
-            isDisplayingWowMomentConfirmation: A,
+            enablePremiumBrandRefresh: N,
+            forceBrandRefreshHeader: S,
+            isDisplayingWowMomentConfirmation: I,
             isPremiumGroupPurchase: T,
         } = e,
-        S = (0, a.bG)([c.Ay], () => c.Ay.useReducedMotion);
-    return p && (0, o.Ik)(f) && s !== u.pn.CONFIRM
-        ? (0, n.jsx)(l.rQ, {
+        C = (0, l.bG)([c.Ay], () => c.Ay.useReducedMotion);
+    return L && (0, d.Ik)(A) && t !== u.pn.CONFIRM
+        ? (0, n.jsx)(o.rQ, {
               title: (function () {
-                  switch (s) {
+                  switch (t) {
                       case u.pn.PLAN_SELECT:
-                          return d === g.PremiumTypes.TIER_0 ? E.intl.string(E.t.rk4Uu8) : E.intl.string(E.t["7YWj6+"]);
+                          return a === f.PremiumTypes.TIER_0 ? x.intl.string(x.t.rk4Uu8) : x.intl.string(x.t["7YWj6+"]);
                       case u.pn.ADD_PAYMENT_STEPS:
-                          return E.intl.string(E.t.vHqbJE);
+                          return x.intl.string(x.t.vHqbJE);
                       case u.pn.REVIEW:
-                          return E.intl.string(E.t.wKaVLC);
+                          return x.intl.string(x.t.wKaVLC);
                       default:
-                          return E.intl.string(E.t["7YWj6+"]);
+                          return x.intl.string(x.t["7YWj6+"]);
                   }
               })(),
               titleTextVariant: "heading-lg/semibold",
           })
-        : j || A
-          ? (0, n.jsx)(_.A, {
+        : N || I
+          ? (0, n.jsx)(R.A, {
                 hideCloseOnFullScreen: !0,
-                forceBrandRefreshHeader: N,
-                hideCloseButton: C,
-                upgradeToPremiumType: d,
+                forceBrandRefreshHeader: S,
+                hideCloseButton: E,
+                upgradeToPremiumType: a,
                 onClose: m,
                 isEligibleForTrial: h,
-                showTrialBadge: x,
-                showDiscountBadge: L,
+                showTrialBadge: p,
+                showDiscountBadge: _,
                 isPremiumGroupPurchase: T,
             })
           : (0, n.jsx)("div", {
-                className: i()(U.Q$, t),
-                children: (0, n.jsx)(v, {
+                className: i()(w.Q$, s),
+                children: (0, n.jsx)(y, {
                     hideCloseOnFullScreen: !0,
-                    hideCloseButton: C,
+                    hideCloseButton: E,
                     shouldShowPrice: !0,
-                    upgradeToPremiumType: d,
+                    upgradeToPremiumType: a,
                     renderAnimation: () =>
-                        d === g.PremiumTypes.TIER_0
-                            ? (0, n.jsx)(b, { className: U.mv, currentStep: s, purchaseState: r, pause: S })
-                            : d === g.PremiumTypes.TIER_1
-                              ? (0, n.jsx)(P, { className: U.mv, currentStep: s, purchaseState: r, pause: S })
-                              : (0, n.jsx)(R, { className: U.mv, currentStep: s, purchaseState: r, pause: S }),
+                        a === f.PremiumTypes.TIER_0
+                            ? (0, n.jsx)(v, { className: w.mv, currentStep: t, purchaseState: r, pause: C })
+                            : a === f.PremiumTypes.TIER_1
+                              ? (0, n.jsx)(M, { className: w.mv, currentStep: t, purchaseState: r, pause: C })
+                              : (0, n.jsx)(b, { className: w.mv, currentStep: t, purchaseState: r, pause: C }),
                     plan: null,
                     isGift: !1,
-                    className: U.wx,
+                    className: w.wx,
                     onClose: m,
-                    showTrialBadge: x,
-                    showDiscountBadge: L,
+                    showTrialBadge: p,
+                    showDiscountBadge: _,
                 }),
             });
 }

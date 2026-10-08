@@ -16,8 +16,8 @@ var l = n(477900),
     S = n(892349),
     E = n(35587),
     y = n(180522),
-    A = n(341774),
-    I = n(45938),
+    I = n(637969),
+    A = n(45938),
     g = n(158045),
     P = n(951305),
     v = n(166532),
@@ -47,10 +47,10 @@ function R(e) {
         { isGift: G, selectedGiftStyle: F, giftRecipient: B } = (0, P.Pv)(),
         H = (0, S.p)("PremiumUnifiedCheckoutCustomHeader"),
         W = (0, C.Wh)({ location: "PremiumUnifiedCheckoutCustomHeader" }),
-        Y = D?.productLine === x.EZt.COLLECTIBLES,
-        V = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
+        V = D?.productLine === x.EZt.COLLECTIBLES,
+        Y = D?.productLine === x.EZt.SOCIAL_LAYER_GAME_ITEM,
         K = U === v.pn.CONFIRM && W && (0, f.M)({ isGift: G, giftRecipient: B, selectedPlanId: d }),
-        Z = G && (0, I.Ik)(B) && U === v.pn.CONFIRM && null != F && !Y && !V,
+        Z = G && (0, A.Ik)(B) && U === v.pn.CONFIRM && null != F && !V && !Y,
         q = [v.pn.SKU_SELECT, v.pn.SELECT_FREE_SKU],
         z = null != U && !q.includes(U) && null != n,
         $ = i.useCallback(() => t(!1), [t]);
@@ -91,7 +91,7 @@ function R(e) {
                     : z &&
                       (e =
                           n in _.WN
-                              ? (0, l.jsx)(A.A, {
+                              ? (0, l.jsx)(I.A, {
                                     currentStep: U ?? void 0,
                                     purchaseState: E,
                                     premiumType: _.WN[n],

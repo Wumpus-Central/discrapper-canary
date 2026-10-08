@@ -1,0 +1,286 @@
+.planSelectorHeader__3fb91 {
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: 8px
+}
+
+.planSelectorRadioBarALaCarte__3fb91 {
+    align-items: flex-start
+}
+
+.planSelectorRadioIconALaCarte__3fb91 {
+    margin-top: 4px
+}
+
+.planSelectorPlanName__3fb91 {
+    margin-inline-end: 4px
+}
+
+.invoiceTableBottom__3fb91,
+.paymentSourceWrapper__3fb91 {
+    margin: 16px 0
+}
+
+.taxInclusiveNote__3fb91 {
+    margin-top: 12px
+}
+
+.confirmationContainer__3fb91 {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 56px 32px 64px
+}
+
+.confirmationAnimation__3fb91 {
+    height: 140px;
+    margin-bottom: 32px;
+    width: 400px
+}
+
+.confirmationText__3fb91,
+.confirmationUpgradedBanner__3fb91 {
+    margin-bottom: 16px
+}
+
+.confirmationText__3fb91 {
+    text-align: center
+}
+
+.confirmationText__3fb91 p {
+    margin: 0
+}
+
+.confirmationText__3fb91 p+p {
+    margin-top: 8px
+}
+
+.existingSlotNotice__3fb91 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    color: var(--text-default);
+    display: flex;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+    padding: 8px
+}
+
+.existingSlotIcon__3fb91 {
+    flex-shrink: 0;
+    height: 24px;
+    margin-inline-end: 8px;
+    width: 24px
+}
+
+.existingSlotTooltipWarningIcon__3fb91 {
+    cursor: pointer;
+    height: 16px;
+    margin-inline-start: 6px;
+    vertical-align: text-bottom;
+    width: 14px
+}
+
+.loadingSpinner__3fb91 {
+    flex: 1;
+    max-width: 100px
+}
+
+.reverseTrialContextInfoDivider__3fb91 {
+    background-color: var(--border-subtle);
+    height: 1px
+}
+
+.reverseTrialContextText__3fb91 {
+    margin: 12px 0
+}
+
+.reverseTrialContextMarginBottom__3fb91 {
+    margin-bottom: 8px
+}
+
+.container_d0a022 {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px
+}
+
+.icon_d0a022 {
+    flex-shrink: 0
+}
+
+.activeFractionalPremiumBannerContainer__06a0f {
+    align-items: center;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    margin-top: 5px;
+    min-height: 48px;
+    padding-inline: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative
+}
+
+.theme-light .activeFractionalPremiumBannerContainer__06a0f {
+    background: linear-gradient(90deg, rgba(133, 71, 198, .4), rgba(184, 69, 193, .4) 50.24%, rgba(171, 93, 138, .4))
+}
+
+.theme-dark .activeFractionalPremiumBannerContainer__06a0f {
+    background: linear-gradient(90deg, rgba(133, 71, 198, .5), rgba(184, 69, 193, .5) 50.24%, rgba(171, 93, 138, .5))
+}
+
+.activeFractionalPremiumBannerBackgroundImage__06a0f {
+    background-image: url(/assets/bb502dc7cfcbbacc.svg);
+    background-repeat: no-repeat;
+    bottom: 0;
+    position: absolute;
+    top: 40%;
+    inset-inline: 78% 0
+}
+
+.nitroIconContainer__06a0f {
+    height: 28px;
+    padding-inline-end: 12px;
+    width: 28px
+}
+
+.theme-light .iconFractional__06a0f {
+    display: none
+}
+
+.theme-light .iconFractionalDark__06a0f {
+    filter: drop-shadow(0 1px 2px rgb(0 0 0/.4));
+    height: 28px;
+    width: 28px
+}
+
+.theme-dark .iconFractional__06a0f {
+    filter: drop-shadow(0 1px 2px rgb(0 0 0/.4));
+    height: 28px;
+    width: 28px
+}
+
+.theme-dark .iconFractionalDark__06a0f {
+    display: none
+}
+
+.premiumBrandRefreshContainer__06a0f {
+    align-items: center;
+    background-color: var(--background-surface-highest);
+    border-radius: var(--radius-md);
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 16px;
+    margin-top: 5px;
+    padding: var(--space-8);
+    position: relative
+}
+
+.premiumBrandRefreshIcon__06a0f {
+    margin-inline-end: var(--space-12)
+}
+
+.trialForAllHeader__06a0f {
+    padding-bottom: 12px
+}
+
+.trialForAllSeparator__06a0f {
+    background: var(--border-subtle);
+    border: 0;
+    height: 1px;
+    margin: 0 0 4px;
+    width: 100%
+}
+
+.upsellFooter__696f3 {
+    align-items: center;
+    background-color: var(--background-base-lower);
+    border-radius: 8px;
+    color: var(--text-default);
+    display: flex;
+    font-size: 14px;
+    line-height: 18px;
+    margin-top: 16px;
+    padding: 8px
+}
+
+.upsellFooterIcon__696f3 {
+    flex-shrink: 0;
+    height: 24px;
+    margin-inline-end: 8px;
+    width: 24px
+}
+
+.reverseTrialUpsellContainer__696f3 {
+    border-radius: 4px;
+    box-shadow: 0 0 40px 0 rgba(229, 85, 211, .5);
+    position: relative
+}
+
+.unlockIcon__696f3 {
+    height: 46px;
+    inset-inline-start: 7px;
+    pointer-events: none;
+    position: absolute;
+    top: -14px;
+    width: 46px
+}
+
+.upsellText__696f3 {
+    padding-inline-start: 48px
+}
+
+.container_be3184 {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-md);
+    justify-content: space-between;
+    padding: var(--space-8)
+}
+
+.container_be3184,
+.content_be3184 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-8)
+}
+
+.content_be3184 {
+    min-width: 0
+}
+
+.asset_be3184 {
+    border-radius: var(--radius-xs);
+    flex-shrink: 0;
+    height: 40px;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 71px
+}
+
+.textStack_be3184 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 0;
+    overflow-wrap: anywhere
+}
+
+.countdown_be3184 {
+    align-items: center;
+    display: flex;
+    flex-shrink: 0;
+    gap: var(--space-4)
+}
+
+.clockIcon_be3184 {
+    color: var(--icon-default)
+}
+
+.link_be3184 {
+    color: var(--text-link)
+}
+
+/*# sourceMappingURL=152133.9172801124ff42f3.css.map*/

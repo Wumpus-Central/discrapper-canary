@@ -570,8 +570,7 @@ function e0(e) {
                                                         n.e("300641"),
                                                         n.e("932020"),
                                                         n.e("586662"),
-                                                        n.e("758053"),
-                                                        n.e("963398"),
+                                                        n.e("831377"),
                                                         n.e("611137"),
                                                         n.e("709976"),
                                                         n.e("750955"),
@@ -584,11 +583,9 @@ function e0(e) {
                                                         n.e("807432"),
                                                         n.e("873532"),
                                                         n.e("590088"),
-                                                        n.e("60104"),
+                                                        n.e("807003"),
                                                         n.e("46083"),
-                                                        n.e("857297"),
-                                                        n.e("295570"),
-                                                        n.e("327439"),
+                                                        n.e("152133"),
                                                         n.e("747802"),
                                                         n.e("626353"),
                                                         n.e("71169"),
@@ -628,7 +625,7 @@ function e0(e) {
                                                         n.e("724086"),
                                                         n.e("358937"),
                                                         n.e("448738"),
-                                                        n.e("680431"),
+                                                        n.e("699806"),
                                                         n.e("686889"),
                                                         n.e("338332"),
                                                         n.e("894292"),
@@ -693,7 +690,7 @@ function e0(e) {
                                                         n.e("147662"),
                                                         n.e("82344"),
                                                         n.e("749894"),
-                                                        n.e("171678"),
+                                                        n.e("904448"),
                                                         n.e("833703"),
                                                         n.e("256274"),
                                                         n.e("544571"),
@@ -706,7 +703,7 @@ function e0(e) {
                                                         n.e("958038"),
                                                         n.e("532039"),
                                                         n.e("719466"),
-                                                        n.e("111880"),
+                                                        n.e("630267"),
                                                         n.e("576909"),
                                                         n.e("27355"),
                                                         n.e("406174"),
@@ -970,8 +967,8 @@ var e3 = n(34188),
     e7 = n(700623),
     e6 = n(177953),
     e4 = n(825484),
-    e5 = n(512950),
-    e9 = n(900797),
+    e9 = n(512950),
+    e5 = n(900797),
     te = n(847374),
     tt = n(10716),
     tn = n(702841),
@@ -1354,9 +1351,9 @@ function tM(e) {
                   ],
               })
             : s && !i && (0, I.Z$)(n)
-              ? (0, r.jsx)(e5.p, {
+              ? (0, r.jsx)(e9.p, {
                     className: tP.ai,
-                    messageType: e5.Y.WARNING,
+                    messageType: e9.Y.WARNING,
                     children: et.intl.format(et.t["s/3hjE"], {}),
                 })
               : null
@@ -1419,7 +1416,7 @@ function tk(e) {
                               children: h ? et.intl.string(et.t.u4YJ8g) : et.intl.string(et.t["N/tajD"]),
                           }),
                           h
-                              ? (0, r.jsx)(e9.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
+                              ? (0, r.jsx)(e5.t, { size: "sm", color: e_.A.colors.TEXT_BRAND })
                               : (0, r.jsx)(te.a, { size: "sm", color: e_.A.colors.TEXT_BRAND }),
                       ],
                   })
@@ -1532,7 +1529,7 @@ var tQ = n(111042),
     t7 = n(935208),
     t6 = n(630248),
     t4 = n(355097);
-function t5(e, t) {
+function t9(e, t) {
     o.useEffect(() => {
         t3.bW.loadIfUncached(t4.oD.FRECENCY_AND_FAVORITES_SETTINGS);
     }, []);
@@ -1576,7 +1573,7 @@ function t5(e, t) {
         return [...s.filter((e) => e.id === a), ...s.filter((e) => e.id !== a)];
     }, [s, l, n, t]);
 }
-var t9 = n(457408),
+var t5 = n(457408),
     ne = n(712440),
     nt = n(733110),
     nn = n(73153);
@@ -2245,11 +2242,11 @@ function n4(e, t) {
         i,
     ).slice(0, i);
 }
-function n5(e, t) {
+function n9(e, t) {
     let n = t6.A.getScoreWithoutLoadingLatest(e.id);
     return t6.A.getScoreWithoutLoadingLatest(t.id) - n;
 }
-function n9(e, t) {
+function n5(e, t) {
     let n = (0, I.lq)(e),
         l = (0, I.lq)(t);
     return (0, g.RF)(n, l);
@@ -2677,7 +2674,7 @@ function lh(e) {
                                 return t?.includes(c.toLocaleLowerCase()) ?? !1;
                             }),
                         ],
-                        sortComparers: [n5, n9],
+                        sortComparers: [n9, n5],
                     });
                 }, [a, r, i, t, n, m, p]),
                 x = A.length > 0,
@@ -3181,11 +3178,11 @@ function lS(e) {
                             let e = [];
                             return (c && e.push(na.gq), e);
                         }, [c]),
-                        u = t5(r, a),
+                        u = t9(r, a),
                         m = (0, A.bG)([eG.default], () => eG.default.getCurrentUser()?.nsfwAllowed);
                     return o.useMemo(() => {
                         function e(e) {
-                            return !(!1 === m && (0, t9.A)(e.id));
+                            return !(!1 === m && (0, t5.A)(e.id));
                         }
                         return l
                             ? u
@@ -3360,7 +3357,7 @@ function lb(e) {
                         }, new Set()),
                     [s],
                 ),
-                c = t5(
+                c = t9(
                     o.useMemo(
                         () =>
                             Object.values(l.result?.sections ?? {})
@@ -3382,7 +3379,7 @@ function lb(e) {
                                     return t;
                                 }),
                             )
-                            .filter((e) => !(!1 === i && (0, t9.A)(e.id)))
+                            .filter((e) => !(!1 === i && (0, t5.A)(e.id)))
                             .map((e) => ({ application: e })),
                     [i, c],
                 ),

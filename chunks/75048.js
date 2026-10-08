@@ -1,11 +1,4 @@
 e.exports = {
-    G3: "bodyText__3fb91",
-    hA: "planSelectText__3fb91",
-    mP: "planSelectRow__3fb91",
-    E6: "planSelectorWrapper__3fb91",
-    $0: "planSelectorLabel__3fb91",
-    QK: "planSelectorPreviewPrice__3fb91",
-    J3: "planSelectDivider__3fb91",
     RP: "confirmationContainer__3fb91",
     ud: "confirmationAnimation__3fb91",
     xR: "confirmationText__3fb91",
