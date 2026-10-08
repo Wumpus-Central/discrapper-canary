@@ -36,8 +36,17 @@ function o(e) {
     if (null == e) return null;
     let t = e.winning_stat ?? null,
         n = e.winning_streak ?? null,
-        i = e.winning_week ?? null;
-    return null == t && null == n && null == i
+        i = e.winning_week ?? null,
+        r = e.current_leader_stat ?? null,
+        a = e.current_leader_week ?? null;
+    return null == t && null == n && null == i && null == r && null == a
         ? null
-        : { winningStat: t, winningStreak: n, winningWeek: i, winningValue: e.winning_value ?? null };
+        : {
+              winningStat: t,
+              winningStreak: n,
+              winningWeek: i,
+              winningValue: e.winning_value ?? null,
+              currentLeaderStat: r,
+              currentLeaderWeek: a,
+          };
 }
