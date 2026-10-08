@@ -1,0 +1,63 @@
+.transitionJumbleContainer__014df {
+    --custom-transition-rail-height: 202px
+}
+
+.transitionJumbleSpacer__014df {
+    height: var(--custom-transition-rail-height);
+    min-height: var(--custom-transition-rail-height);
+    width: 100%
+}
+
+.overlayContainer__014df {
+    bottom: 0;
+    overflow: hidden;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
+
+.jumbleWrapper__014df {
+    inset-inline: 0;
+    bottom: 0;
+    position: absolute;
+    top: 0;
+    transform: translateY(var(--custom-transition-rail-height));
+    transition: transform .1s ease-in-out
+}
+
+.full-motion .jumbleWrapper__014df {
+    transition: transform .1s cubic-bezier(.48, -.08, .06, 1.4)
+}
+
+.jumbleWrapper__014df.peaking__014df {
+    transform: translateY(0);
+    transition-duration: .3s
+}
+
+.asset__014df {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    pointer-events: none;
+    position: absolute
+}
+
+.full-motion .asset__014df {
+    transition-property: transform;
+    transition-timing-function: ease-in-out
+}
+
+.avatar__014df {
+    pointer-events: auto
+}
+
+.theme-dark .avatar__014df {
+    background: #0c0e0e
+}
+
+.theme-light .avatar__014df {
+    background: #a8a9aa
+}
+
+/*# sourceMappingURL=d7181fbe5b3ed38d.css.map*/

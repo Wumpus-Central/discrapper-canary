@@ -1,67 +1,70 @@
-(l.d(t, { o: () => u }), l(321073));
+(l.d(t, { o: () => A }), l(321073));
 var a = l(582128),
     n = l(806163),
     i = l(641150),
-    s = l(365491),
-    o = l(856686),
-    r = l(758836),
-    c = l(652215);
-let E = {
-        [r.G2.AVATAR_DECORATIONS]: i.q.AVATAR_DECORATION,
-        [r.G2.PROFILE_EFFECTS]: i.q.PROFILE_EFFECT,
-        [r.G2.NAMEPLATES]: i.q.NAMEPLATE,
-        [r.G2.PROFILE_FRAMES]: i.q.PROFILE_FRAME,
-        [r.G2.BUNDLES]: i.q.BUNDLE,
+    s = l(17928),
+    o = l(775602),
+    c = l(365491),
+    r = l(856686),
+    E = l(758836),
+    u = l(652215);
+let C = {
+        [E.G2.AVATAR_DECORATIONS]: i.q.AVATAR_DECORATION,
+        [E.G2.PROFILE_EFFECTS]: i.q.PROFILE_EFFECT,
+        [E.G2.NAMEPLATES]: i.q.NAMEPLATE,
+        [E.G2.PROFILE_FRAMES]: i.q.PROFILE_FRAME,
+        [E.G2.BUNDLES]: i.q.BUNDLE,
     },
-    u = (e) => {
-        let {
-                setItemTypeFilter: t,
-                setThirdPartyOnlyFilter: l,
-                setOfferEligibleFilter: i,
-                reset: u,
-                setCurrentTab: C,
-            } = (0, s.v)(),
-            L = a.useMemo(() => {
+    A = (e) => {
+        let t = (0, s.bG)([o.Ay], () => o.Ay.useReducedMotion),
+            {
+                setItemTypeFilter: l,
+                setThirdPartyOnlyFilter: i,
+                setOfferEligibleFilter: A,
+                reset: L,
+                setCurrentTab: O,
+            } = (0, c.v)(),
+            S = a.useMemo(() => {
                 var t;
-                return (0, r.dF)(e) || (t = e) === r.G2.COLLABS || t === r.G2.OFFER_ELIGIBLE ? r.G2.CATALOG : e;
+                return (0, E.dF)(e) || (t = e) === E.G2.COLLABS || t === E.G2.OFFER_ELIGIBLE ? E.G2.CATALOG : e;
             }, [e]),
-            [O, A] = a.useState(L),
-            [S, _] = a.useState(r.Pf.VISIBLE);
+            [_, p] = a.useState(S),
+            [d, G] = a.useState(E.Pf.VISIBLE);
         (a.useEffect(() => {
-            O !== r.G2.GAME_SERVERS && C(O);
-        }, [O, C]),
+            _ !== E.G2.GAME_SERVERS && O(_);
+        }, [_, O]),
             a.useEffect(() => {
-                if ((A(L), e === r.G2.CATALOG)) u();
-                else if (e === r.G2.COLLABS) l();
-                else if (e === r.G2.OFFER_ELIGIBLE) i();
-                else if ((0, r.dF)(e)) {
-                    let l = E[e];
-                    null != l ? t(l) : u();
+                if ((p(S), e === E.G2.CATALOG)) L();
+                else if (e === E.G2.COLLABS) i();
+                else if (e === E.G2.OFFER_ELIGIBLE) A();
+                else if ((0, E.dF)(e)) {
+                    let t = C[e];
+                    null != t ? l(t) : L();
                 }
-            }, [L, e, t, l, i, u]));
-        let { clearError: p } = (0, o.S)(),
-            d = (0, n.W6)(),
-            G = a.useCallback(
+            }, [S, e, l, i, A, L]));
+        let { clearError: T } = (0, r.S)(),
+            I = (0, n.W6)(),
+            g = a.useCallback(
                 async (e, a) => {
-                    if ((p(), e === r.G2.CATALOG)) u();
-                    else if (e === r.G2.COLLABS) l();
-                    else if (e === r.G2.OFFER_ELIGIBLE) i();
-                    else if ((0, r.dF)(e) && e !== O) {
-                        let l = E[e];
-                        null != l ? t(l) : u();
+                    if ((T(), e === E.G2.CATALOG)) L();
+                    else if (e === E.G2.COLLABS) i();
+                    else if (e === E.G2.OFFER_ELIGIBLE) A();
+                    else if ((0, E.dF)(e) && e !== _) {
+                        let t = C[e];
+                        null != t ? l(t) : L();
                     }
-                    if (O !== e) {
-                        if (a) {
+                    if (_ !== e) {
+                        if (a && !t) {
                             var n;
-                            (_(r.Pf.OUT), await ((n = 1.1 * r.H1), new Promise((e) => setTimeout(e, n))));
+                            (G(E.Pf.OUT), await ((n = 1.1 * E.H1), new Promise((e) => setTimeout(e, n))));
                         }
-                        (A(e === r.G2.HOME || e === r.G2.ORBS || e === r.G2.GAME_SERVERS ? e : r.G2.CATALOG),
-                            a && _(r.Pf.IN),
-                            d.push(c.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
-                            _(r.Pf.VISIBLE));
+                        (p(e === E.G2.HOME || e === E.G2.ORBS || e === E.G2.GAME_SERVERS ? e : E.G2.CATALOG),
+                            a && !t && G(E.Pf.IN),
+                            I.push(u.BVt.COLLECTIBLES_SHOP_WITH_TAB(e), { shallow: !0 }),
+                            G(E.Pf.VISIBLE));
                     }
                 },
-                [d, t, l, i, u, O, p],
+                [I, l, i, A, L, _, T, t],
             );
-        return { selectedTab: O, transitionState: S, transitionToTab: G };
+        return { selectedTab: _, transitionState: d, transitionToTab: g };
     };

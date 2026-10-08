@@ -8,6 +8,7 @@ e.exports = {
     nM: "row__08415",
     Tq: "between__08415",
     Do: "placeholderPulse__08415",
+    or: "shopContainer__08415",
     bx: "shop__08415",
     vK: "banner__08415",
     no: "responsive__08415",
@@ -23,8 +24,6 @@ e.exports = {
     ub: "promotionIndex__08415",
     fy: "rivBannerButtonContainer__08415",
     Xt: "riveEventOverlay__08415",
-    rb: "mainContent__08415",
-    GS: "layoutContent__08415",
     bC: "heroHeaderContainer__08415",
     Hw: "heroHeaderBadgeLogoSummaryContainer__08415",
     Wq: "heroLogoNameContainer__08415",
@@ -64,5 +63,4 @@ e.exports = {
     nP: "wideBannerCtaContainer__08415",
     bU: "wideBannerLogo__08415",
     Mh: "wideBannerCloseButton__08415",
-    OW: "shopScroll__08415",
 };
