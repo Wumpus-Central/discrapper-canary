@@ -138,8 +138,8 @@ function d(e) {
             );
         }, [n, h]));
     let p = { width: e.width, height: e.height },
-        { onHoverTime: m, onHoverClick: E } = e;
-    function I(e) {
+        { onHoverTime: m, onHoverClick: I } = e;
+    function E(e) {
         if (null == C) return null;
         let t = e.currentTarget.getBoundingClientRect();
         if (t.width <= 0) return null;
@@ -149,15 +149,15 @@ function d(e) {
     let S =
             null != m && null != C
                 ? (e) => {
-                      let t = I(e);
+                      let t = E(e);
                       null != t && m(t);
                   }
                 : void 0,
         _ =
-            null != E && null != C
+            null != I && null != C
                 ? (e) => {
-                      let t = I(e);
-                      null != t && E(t);
+                      let t = E(e);
+                      null != t && I(t);
                   }
                 : void 0;
     return (0, i.jsx)(

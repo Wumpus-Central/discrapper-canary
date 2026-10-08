@@ -1,4 +1,4 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => p });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -6,19 +6,19 @@ var r = n(503698),
     s = n(17928),
     a = n(821609),
     o = n(866665),
-    c = n(408278),
-    u = n(622631),
+    u = n(408278),
+    c = n(622631),
     d = n(401843),
     h = n(616356),
     m = n(280450),
     A = n(200749),
-    g = n(660183),
+    E = n(660183),
     f = n(604889);
-let b = n(913516);
-function E(e) {
-    let { participant: t, width: n, noArt: r = !1, selected: E = !1 } = e,
-        p = n < 195,
-        C = (0, s.bG)([h.A, m.default], () =>
+let g = n(913516);
+function p(e) {
+    let { participant: t, width: n, noArt: r = !1, selected: p = !1 } = e,
+        C = n < 195,
+        _ = (0, s.bG)([h.A, m.default], () =>
             h.A.getAllActiveStreams().some((e) => {
                 let { ownerId: t } = e;
                 return t !== m.default.getId();
@@ -28,34 +28,34 @@ function E(e) {
         className: l()(f.Qs, f.FY),
         children: (0, i.jsx)(A.A, {
             className: f.FP,
-            artURL: b,
+            artURL: g,
             noArt: r,
-            selected: E,
+            selected: p,
             size: (0, A.J)(n),
-            header: p ? null : g.intl.string(g.t.epU4Ec),
-            description: E
+            header: C ? null : E.intl.string(E.t.epU4Ec),
+            description: p
                 ? null
                 : (0, i.jsxs)("div", {
-                      className: l()(f.t2, { [f.y8]: !p }),
+                      className: l()(f.t2, { [f.y8]: !C }),
                       children: [
                           (0, i.jsx)("div", {
                               className: f.lO,
                               children: (0, i.jsx)(a.$, {
                                   variant: "secondary",
-                                  size: p ? "sm" : "md",
-                                  text: n < 175 ? g.intl.string(g.t.I6JG46) : g.intl.string(g.t["7Xq/nV"]),
+                                  size: C ? "sm" : "md",
+                                  text: n < 175 ? E.intl.string(E.t.I6JG46) : E.intl.string(E.t["7Xq/nV"]),
                               }),
                           }),
-                          C
+                          _
                               ? (0, i.jsx)("div", {
                                     className: l()(f.lO, f.EU),
                                     children: (0, i.jsx)(o.m, {
-                                        text: g.intl.string(g.t.wCrzut),
-                                        children: (0, i.jsx)(c.K, {
+                                        text: E.intl.string(E.t.wCrzut),
+                                        children: (0, i.jsx)(u.K, {
                                             variant: "secondary",
-                                            size: p ? "sm" : "md",
-                                            icon: u.v,
-                                            "aria-label": g.intl.string(g.t.wCrzut),
+                                            size: C ? "sm" : "md",
+                                            icon: c.v,
+                                            "aria-label": E.intl.string(E.t.wCrzut),
                                             onClick: (e) => {
                                                 (e.stopPropagation(), (0, d.A9)(t.stream, { forceMultiple: !0 }));
                                             },

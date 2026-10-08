@@ -15,8 +15,8 @@ var i = n(17928),
     A = n(806931);
 let p = new s.A(),
     m = new s.A(),
-    E = new Set();
-function I(e, t, n) {
+    I = new Set();
+function E(e, t, n) {
     let i = new o.A({ userId: e.id, channelId: n }),
         l = (0, g.RQ)(i, t ?? C.ME, e.id);
     p.set(e.id, l);
@@ -41,7 +41,7 @@ function I(e, t, n) {
 function S(e) {
     let t = p.delete(e),
         n = m.delete(e),
-        i = E.delete(e);
+        i = I.delete(e);
     return t || n || i;
 }
 function _() {
@@ -50,16 +50,16 @@ function _() {
     let t = d.A.getChannel(e)?.getGuildId(),
         n = !1;
     return (
-        E.forEach((i) => {
-            if (null != f.A.getVoiceStateForChannel(e, i)) return void E.delete(i);
+        I.forEach((i) => {
+            if (null != f.A.getVoiceStateForChannel(e, i)) return void I.delete(i);
             let l = h.default.getUser(i);
-            null != l && ((n = !0), E.delete(i), I(l, t, e));
+            null != l && ((n = !0), I.delete(i), E(l, t, e));
         }),
         n
     );
 }
 function N() {
-    (p.clear(), m.clear(), E.clear());
+    (p.clear(), m.clear(), I.clear());
 }
 class T extends i.Ay.Store {
     static displayName = "RTCConnectionDesyncStore";
@@ -107,7 +107,7 @@ let M = new T(r.h, {
             t.reduce((e, t) => {
                 if (null != f.A.getVoiceStateForChannel(i, t)) return e;
                 let l = h.default.getUser(t);
-                return null == l ? (E.add(t), e) : (I(l, n, i), !0);
+                return null == l ? (I.add(t), e) : (E(l, n, i), !0);
             }, !1)
         );
     },

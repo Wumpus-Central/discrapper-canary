@@ -30,8 +30,8 @@ function A(e) {
             [A, t?.id, T.result, _.result],
         ),
         b = t?.bot === !0 || null != A,
-        { token: y } = (0, o.U)(b ? E : null),
-        { isUserApp: S, isGuildApp: P } = i.useMemo(() => {
+        { token: S } = (0, o.U)(b ? E : null),
+        { isUserApp: y, isGuildApp: P } = i.useMemo(() => {
             if (null == E) return { isGuildApp: !1, isUserApp: !1 };
             let e = Object.values(T.result?.sections ?? {}),
                 t = Object.values(_.result?.sections ?? {});
@@ -65,8 +65,8 @@ function A(e) {
                     "manage-server-integration",
                 ),
             ),
-        S &&
-            null != y &&
+        y &&
+            null != S &&
             G.push(
                 (0, n.jsx)(
                     r.Dr,

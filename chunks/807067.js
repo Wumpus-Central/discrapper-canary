@@ -23,8 +23,8 @@ var l = t(477900),
     T = t(111042),
     N = t(939635),
     _ = t(267102),
-    b = t(246356),
-    O = t(111162),
+    O = t(246356),
+    b = t(111162),
     y = t(174459),
     S = t(795816),
     R = t(648027),
@@ -39,7 +39,7 @@ function G(e) {
         t,
         { channel: a, openInPopout: o, onClick: d } = e,
         { fetchState: A, voiceBannerCollection: h } =
-            ((n = (0, c.bG)([O.default], () => O.default.onlyShowPreviewAppCollections) ? s.W.PREVIEW : s.W.ACTIVE),
+            ((n = (0, c.bG)([b.default], () => b.default.onlyShowPreviewAppCollections) ? s.W.PREVIEW : s.W.ACTIVE),
             i.useEffect(() => {
                 (0, j.An)({ surface: k, activeState: n });
             }, [n]),
@@ -103,7 +103,7 @@ function V(e) {
             a || s();
         }, [s, a]));
     let N = (0, _.Us)(),
-        { analyticsLocations: O, newestAnalyticsLocation: k } = (0, g.Ay)(x.A.ACTIVITIES_MINI_SHELF),
+        { analyticsLocations: b, newestAnalyticsLocation: k } = (0, g.Ay)(x.A.ACTIVITIES_MINI_SHELF),
         V = N === L.BRT.POPOUT,
         B = ((n = t.getGuildId()), (0, R.A)({ guildId: n }).slice(0, 5));
     i.useEffect(() => {
@@ -130,8 +130,8 @@ function V(e) {
             [o, t],
         );
     return (0, l.jsx)(g.f5, {
-        value: O,
-        children: (0, l.jsx)(b.A, {
+        value: b,
+        children: (0, l.jsx)(O.A, {
             children: (0, l.jsxs)(d.l, {
                 ref: E,
                 "aria-labelledby": U,

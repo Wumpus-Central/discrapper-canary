@@ -15,7 +15,7 @@ var i = n(477900),
     A = n(953792);
 let p = "/assets/b6c2e5ec03845c03.jpg",
     m = "/assets/f2e13fd1d0c497be.jpg";
-function E() {
+function I() {
     return (0, i.jsx)("div", {
         className: A.k,
         children: (0, i.jsxs)("svg", {
@@ -89,10 +89,10 @@ function E() {
         }),
     });
 }
-var I = n(781380);
+var E = n(781380);
 function S() {
     return (0, i.jsx)("div", {
-        className: I.k,
+        className: E.k,
         children: (0, i.jsxs)("svg", {
             width: "248",
             height: "67",
@@ -375,7 +375,7 @@ let U = Object.freeze({
         popoutPosition: "right",
         textAlign: C.YL.CENTER,
         spacing: 8,
-        media: () => (0, i.jsx)(E, {}),
+        media: () => (0, i.jsx)(I, {}),
     },
     "instant-invite": { popoutPosition: "right", spacing: 24, highPriority: !0 },
     "whos-online": { spacing: 16, popoutPosition: "left" },
@@ -385,20 +385,20 @@ let U = Object.freeze({
 });
 var P = n(241541),
     b = n(967198),
-    j = n(660183),
-    V = n(851230);
+    V = n(660183),
+    j = n(851230);
 function F() {
     return (0, i.jsx)(i.Fragment, {
-        children: j.intl.format(j.t.ymkBti, {
-            shareIcon: j.intl.string(j.t.VINpSK),
-            shareIconHook: () => (0, i.jsx)(P.D, { className: V.Kk }, "icon"),
+        children: V.intl.format(V.t.ymkBti, {
+            shareIcon: V.intl.string(V.t.VINpSK),
+            shareIconHook: () => (0, i.jsx)(P.D, { className: j.Kk }, "icon"),
         }),
     });
 }
 function G() {
     let e = (0, d.bG)([x.A, b.A], () => x.A.getGuild(b.A.getGuildId()), []),
         t = e?.name;
-    return (0, i.jsx)(i.Fragment, { children: j.intl.format(j.t.oQuG3K, { serverName: t }) });
+    return (0, i.jsx)(i.Fragment, { children: V.intl.format(V.t.oQuG3K, { serverName: t }) });
 }
 var H = n(79858),
     k = n(303634);
@@ -460,24 +460,24 @@ class Z extends l.PureComponent {
             title: (e =
                 {
                     VOICE_CONVERSATIONS: {
-                        title: (0, i.jsx)("div", { className: V.lU, children: j.intl.string(j.t.w5HAll) }),
-                        body: j.intl.string(j.t.Ww4hhq),
+                        title: (0, i.jsx)("div", { className: j.lU, children: V.intl.string(V.t.w5HAll) }),
+                        body: V.intl.string(V.t.Ww4hhq),
                     },
                     WRITING_MESSAGES: {
-                        title: (0, i.jsx)("div", { className: V.nG, children: j.intl.string(j.t.nkP0ly) }),
+                        title: (0, i.jsx)("div", { className: j.nG, children: V.intl.string(V.t.nkP0ly) }),
                         body: (0, i.jsx)(G, {}),
                     },
                     ORGANIZE_BY_TOPIC: {
-                        title: (0, i.jsx)("div", { className: V.vX, children: j.intl.string(j.t["j/5+IX"]) }),
-                        body: j.intl.string(j.t.mufH2P),
+                        title: (0, i.jsx)("div", { className: j.vX, children: V.intl.string(V.t["j/5+IX"]) }),
+                        body: V.intl.string(V.t.mufH2P),
                     },
-                    WHOS_ONLINE: { title: j.intl.string(j.t.l2nSoI), body: j.intl.format(j.t.y6tbBB, {}) },
-                    INSTANT_INVITE: { title: j.intl.string(j.t.XcehY3), body: (0, i.jsx)(F, {}) },
-                    SERVER_SETTINGS: { title: j.intl.string(j.t.wc8wi5), body: j.intl.format(j.t.mIfDhc, {}) },
-                    DIRECT_MESSAGES: { title: j.intl.string(j.t.V07x5y), body: j.intl.format(j.t.GEBBey, {}) },
-                    CREATE_MORE_SERVERS: { title: j.intl.string(j.t["50FORo"]), body: j.intl.format(j.t.zVL4qa, {}) },
-                    CREATE_FIRST_SERVER: { title: j.intl.string(j.t.CtOX9T), body: j.intl.format(j.t.TflqTe, {}) },
-                    FRIENDS_LIST: { title: j.intl.string(j.t.Fnk9L4), body: j.intl.format(j.t.NTq0AZ, {}) },
+                    WHOS_ONLINE: { title: V.intl.string(V.t.l2nSoI), body: V.intl.format(V.t.y6tbBB, {}) },
+                    INSTANT_INVITE: { title: V.intl.string(V.t.XcehY3), body: (0, i.jsx)(F, {}) },
+                    SERVER_SETTINGS: { title: V.intl.string(V.t.wc8wi5), body: V.intl.format(V.t.mIfDhc, {}) },
+                    DIRECT_MESSAGES: { title: V.intl.string(V.t.V07x5y), body: V.intl.format(V.t.GEBBey, {}) },
+                    CREATE_MORE_SERVERS: { title: V.intl.string(V.t["50FORo"]), body: V.intl.format(V.t.zVL4qa, {}) },
+                    CREATE_FIRST_SERVER: { title: V.intl.string(V.t.CtOX9T), body: V.intl.format(V.t.TflqTe, {}) },
+                    FRIENDS_LIST: { title: V.intl.string(V.t.Fnk9L4), body: V.intl.format(V.t.NTq0AZ, {}) },
                 }[t.replace(/-/g, "_").toUpperCase()] ?? {}).title,
             body: e.body,
             isLongText: e.isLongText ?? !1,
@@ -498,11 +498,11 @@ class Z extends l.PureComponent {
             } = r,
             { offsetX: A, offsetY: p } = this.state,
             m = { left: null != A ? l.x + A : void 0, top: null != p ? l.y + p : void 0 };
-        function E(e) {
+        function I(e) {
             let t = n && !e;
             return { [k.bW]: t, [k.EO]: !t, [k.TX]: d };
         }
-        let I = this.getTutorialPopoutText();
+        let E = this.getTutorialPopoutText();
         return (0, i.jsx)(C.Ay, {
             innerRef: this.contentRef,
             position: g,
@@ -515,18 +515,18 @@ class Z extends l.PureComponent {
             arrowAlignment: f,
             onSkipAll: this.handleSkipTips,
             onComplete: this.handleDismiss,
-            ...I,
+            ...E,
             children: (e, t) => {
                 let l,
                     { isShown: r } = t;
                 return (0, i.jsx)(c.D, {
                     ...e,
-                    "aria-label": j.intl.string(j.t.IyCzIF),
+                    "aria-label": V.intl.string(V.t.IyCzIF),
                     className: k.q3,
                     style: m,
                     innerRef: this.contentRef,
                     children: (0, i.jsxs)("div", {
-                        className: s()(k.Mp, E(r)),
+                        className: s()(k.Mp, I(r)),
                         children: [
                             ((l = n && !r),
                             !0 !== d
@@ -537,8 +537,8 @@ class Z extends l.PureComponent {
                                           (0, i.jsx)("div", { className: s()(k.sQ, { [k.bW]: l, [k.EO]: !l }) }),
                                       ],
                                   })),
-                            (0, i.jsx)("div", { className: s()(k.r6, E(r)) }),
-                            (0, i.jsx)("div", { className: s()(k.CY, E(r)) }),
+                            (0, i.jsx)("div", { className: s()(k.r6, I(r)) }),
+                            (0, i.jsx)("div", { className: s()(k.CY, I(r)) }),
                         ],
                     }),
                 });

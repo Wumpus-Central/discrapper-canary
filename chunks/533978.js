@@ -23,9 +23,9 @@ var l = t(477900),
     T = t(192820),
     N = t(607567),
     _ = t(246356),
-    b = t(204651);
+    O = t(204651);
 t(980504);
-var O = t(376086),
+var b = t(376086),
     y = t(660183);
 function S(e) {
     let { channel: n, themeable: S, whichPopoutIsOpen: R, setWhichPopoutIsOpen: D, idle: L } = e,
@@ -53,7 +53,7 @@ function S(e) {
         $ = i.useCallback(() => Q(!1), [Q]),
         { enabled: Z } = (0, f.W)(V ?? "0", "ActionBarSoundboardButton"),
         { isHovered: ee, setIsHovered: en, onMouseEnter: et, onMouseLeave: el } = (0, m.A)(200, 300),
-        ei = i.useMemo(() => (ee && (R === O.P.SOUNDBOARD || null == R)) || R === O.P.SOUNDBOARD, [ee, R]);
+        ei = i.useMemo(() => (ee && (R === b.P.SOUNDBOARD || null == R)) || R === b.P.SOUNDBOARD, [ee, R]);
     function ea(e) {
         null != V &&
             (0, c.L3)(e, async () => {
@@ -68,16 +68,16 @@ function S(e) {
             });
     }
     function es() {
-        (k(), null != R && et(), J && $(), D?.(O.P.SOUNDBOARD));
+        (k(), null != R && et(), J && $(), D?.(b.P.SOUNDBOARD));
     }
     function eo() {
-        ((0, d.X)(M, d.O.SOUNDBOARD), R === O.P.SOUNDBOARD ? (D?.(void 0), el()) : es());
+        ((0, d.X)(M, d.O.SOUNDBOARD), R === b.P.SOUNDBOARD ? (D?.(void 0), el()) : es());
     }
     i.useEffect(() => {
         ei || J || Q(!0);
     }, [ei, J, Q]);
     let er = i.useCallback(() => {
-            null == R && D?.(O.P.SOUNDBOARD);
+            null == R && D?.(b.P.SOUNDBOARD);
         }, [R, D]),
         ec = i.useRef(null),
         { usersInChannel: eu } = (0, a.cf)([N.Ay], () => ({ usersInChannel: N.Ay.countVoiceStatesForChannel(n.id) }), [
@@ -136,7 +136,7 @@ function S(e) {
                               });
                     },
                     children: () =>
-                        (0, l.jsx)(b.l, {
+                        (0, l.jsx)(O.l, {
                             ref: ec,
                             isTrayButton: !0,
                             themeable: S,
@@ -157,8 +157,8 @@ function S(e) {
                             onMouseLeave: () => {
                                 null == R && (el(), G());
                             },
-                            isActive: ee || R === O.P.SOUNDBOARD,
-                            color: ee || R === O.P.SOUNDBOARD ? "primaryDark" : void 0,
+                            isActive: ee || R === b.P.SOUNDBOARD,
+                            color: ee || R === b.P.SOUNDBOARD ? "primaryDark" : void 0,
                         }),
                 }),
                 !ei && null != V && Z ? (0, l.jsx)(j.A, { guildId: V, channelId: n.id }) : null,

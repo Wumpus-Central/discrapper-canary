@@ -1,4 +1,4 @@
-n.d(t, { cy: () => p, p: () => m });
+n.d(t, { cy: () => m, p: () => p });
 var r = n(477900),
     l = n(582128),
     i = n(503698),
@@ -10,13 +10,13 @@ var r = n(477900),
     d = n(820287),
     f = n(999784),
     h = n(429308);
-function m(e) {
+function p(e) {
     let { onClick: t, loading: n, disabled: l, text: i, tooltipText: s, ...u } = e,
         o = { text: i, ...u },
         d = (0, r.jsx)(a.$, { ...o, onClick: t, loading: n, disabled: l, text: i });
     return null != s ? (0, r.jsx)(c.m, { text: s, asContainer: !0, children: d }) : d;
 }
-function p(e) {
+function m(e) {
     let { primaryCTAButtonProps: t, showLockIcon: n, onBackClick: i } = e,
         a = l.useMemo(() => [t], [t]),
         c = l.useMemo(() => (null != i ? (0, r.jsx)(d.A, { onClick: i }) : void 0), [i]);
@@ -27,7 +27,7 @@ function p(e) {
                   children: [
                       null != i ? (0, r.jsx)(d.A, { onClick: i }) : null,
                       n && (0, r.jsx)(f.A, {}),
-                      (0, r.jsx)(m, { ...t }),
+                      (0, r.jsx)(p, { ...t }),
                   ],
               }),
           })

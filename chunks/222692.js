@@ -1,4 +1,4 @@
-n.d(t, { A: () => u });
+n.d(t, { A: () => c });
 var i = n(477900);
 n(582128);
 var r = n(192308),
@@ -6,8 +6,8 @@ var r = n(192308),
     s = n(625075),
     a = n(192820),
     o = n(731854),
-    c = n(660183);
-function u(e) {
+    u = n(660183);
+function c(e) {
     s.k.getConfig({ location: "handleCameraUnavailable" }).videoEnabled
         ? a.Ay.supports(o.O5.VIDEO)
             ? (0, r.openModalLazy)(async () => {
@@ -15,9 +15,9 @@ function u(e) {
                   return (n) =>
                       (0, i.jsx)(t, {
                           ...n,
-                          header: c.intl.string(c.t["8jSzSe"]),
-                          body: c.intl.string(c.t.bhqSWl),
-                          confirmText: c.intl.string(c.t.BddRzS),
+                          header: u.intl.string(u.t["8jSzSe"]),
+                          body: u.intl.string(u.t.bhqSWl),
+                          confirmText: u.intl.string(u.t.BddRzS),
                           onConfirm: e,
                       });
               })
@@ -26,9 +26,9 @@ function u(e) {
                   return (l) =>
                       (0, i.jsx)(t, {
                           ...l,
-                          header: c.intl.string(c.t.XLw6FF),
-                          body: c.intl.string(c.t.wVjKGi),
-                          confirmText: c.intl.string(c.t["BK8LK+"]),
+                          header: u.intl.string(u.t.XLw6FF),
+                          body: u.intl.string(u.t.wVjKGi),
+                          confirmText: u.intl.string(u.t["BK8LK+"]),
                           onConfirm: () => {
                               (e?.(),
                                   (0, r.openModalLazy)(async () => {
@@ -47,13 +47,13 @@ function u(e) {
               return (t) =>
                   (0, i.jsx)(e, {
                       ...t,
-                      header: c.intl.string(c.t["8jSzSe"]),
-                      body: c.intl.string(c.t.UoW002),
-                      confirmText: c.intl.string(c.t.BddRzS),
+                      header: u.intl.string(u.t["8jSzSe"]),
+                      body: u.intl.string(u.t.UoW002),
+                      confirmText: u.intl.string(u.t.BddRzS),
                       children: (0, i.jsx)(l.E, {
                           variant: "text-sm/normal",
                           color: "text-subtle",
-                          children: c.intl.format(c.t.BPDKoA, { helpdeskArticle: s.M }),
+                          children: u.intl.format(u.t.BPDKoA, { helpdeskArticle: s.M }),
                       }),
                   });
           });

@@ -1,4 +1,4 @@
-n.d(t, { DJ: () => R, Jg: () => T, KT: () => L, lo: () => M, oH: () => b, s3: () => x });
+n.d(t, { DJ: () => M, Jg: () => T, KT: () => L, lo: () => R, oH: () => b, s3: () => x });
 var r = n(477900),
     l = n(582128),
     i = n(503698),
@@ -10,8 +10,8 @@ var r = n(477900),
     d = n(231723),
     f = n(430993),
     h = n(632088),
-    m = n(500380),
-    p = n(423764),
+    p = n(500380),
+    m = n(423764),
     C = n(820287),
     E = n(708791),
     y = n(981036),
@@ -33,7 +33,7 @@ function x(e) {
             ...d
         } = e,
         f = l.useCallback(
-            () => (null == o ? null : (0, r.jsx)("img", { alt: "", className: A.bI, src: (0, m.t)(o) })),
+            () => (null == o ? null : (0, r.jsx)("img", { alt: "", className: A.bI, src: (0, p.t)(o) })),
             [o],
         ),
         h = l.useMemo(() => {
@@ -41,7 +41,7 @@ function x(e) {
         }, [s, u, i]),
         C = null != o && null != c,
         E = l.useMemo(() => {
-            if (!C && null != o) return { text: (0, p.j7)((0, p.ni)(o)), leadingIcon: f };
+            if (!C && null != o) return { text: (0, m.j7)((0, m.ni)(o)), leadingIcon: f };
         }, [C, o, f]);
     return (0, r.jsxs)(r.Fragment, {
         children: [
@@ -60,7 +60,7 @@ function x(e) {
     });
 }
 let v = { top: 16, bottom: 8 };
-function M(e) {
+function R(e) {
     let { onBackClick: t, primaryButtonProps: n, portalClassName: l, stripeExpressCheckoutComponent: i } = e,
         { variant: a } = n,
         { setCheckoutFooterContentNode: c } = (0, I.ck)(),
@@ -87,7 +87,7 @@ function M(e) {
         ],
     });
 }
-function R(e) {
+function M(e) {
     let { className: t } = e;
     return (0, r.jsx)("div", { className: s()(A.g4, t), children: (0, r.jsx)(_.I, {}) });
 }
@@ -99,7 +99,7 @@ function T(e) {
             ...s,
             maxHeight: l,
             contentOutsideContainer: (0, r.jsx)(h.A, {}),
-            children: i ? (0, r.jsx)(R, {}) : t,
+            children: i ? (0, r.jsx)(M, {}) : t,
         }),
     });
 }
@@ -132,7 +132,7 @@ function b(e) {
                     headerBadgeIcon: a,
                 }),
                 (0, r.jsx)(f.c, { children: d }),
-                (0, r.jsx)(M, { onBackClick: u, primaryButtonProps: o }),
+                (0, r.jsx)(R, { onBackClick: u, primaryButtonProps: o }),
             ],
         }),
     });

@@ -14,7 +14,7 @@ function a() {
         o = r.useCallback(() => {
             null != e.current && e.current.stopIfPlaying("all");
         }, []),
-        c = r.useCallback(
+        u = r.useCallback(
             (t) =>
                 (0, i.jsx)(l.P, { ...t, src: () => n.e("370552").then(n.t.bind(n, 772203, 19)), ref: e, markers: s }),
             [],
@@ -24,6 +24,6 @@ function a() {
         play: t,
         getDuration: r.useCallback(() => e.current?.getDuration(), []),
         getCurrentFrame: r.useCallback(() => e.current?.getCurrentFrame() ?? null, []),
-        Component: c,
+        Component: u,
     };
 }

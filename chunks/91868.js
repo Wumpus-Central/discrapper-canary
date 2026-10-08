@@ -1,4 +1,4 @@
-(n.d(t, { A: () => D, Y: () => E }), n(321073));
+(n.d(t, { A: () => D, Y: () => I }), n(321073));
 var i,
     l = n(17928),
     r = n(713402),
@@ -15,8 +15,8 @@ var i,
     A = n(648427),
     p = n(315240),
     m = n(652215),
-    E = (((i = {}).ACTIVE_NOW = "ACTIVE_NOW"), (i.DMS = "DMS"), (i.RECENT_TEXT = "RECENT_TEXT"), i);
-let I = new r.J(
+    I = (((i = {}).ACTIVE_NOW = "ACTIVE_NOW"), (i.DMS = "DMS"), (i.RECENT_TEXT = "RECENT_TEXT"), i);
+let E = new r.J(
         function (e) {
             let t = [];
             return (
@@ -79,18 +79,18 @@ function T(e) {
             sortKey: g,
         };
     })(e);
-    return null == t ? I.delete(e) : I.set(e, t);
+    return null == t ? E.delete(e) : E.set(e, t);
 }
 function M() {
     let e = p.A.getActiveNowChannelIds({ kind: p.u.Text }),
         t = new Set(e),
         n = !1;
     for (let t of e) n = T(t) || n;
-    for (let e of [...I.values("ACTIVE_NOW")]) t.has(e.channelId) || (n = T(e.channelId) || n);
+    for (let e of [...E.values("ACTIVE_NOW")]) t.has(e.channelId) || (n = T(e.channelId) || n);
     return ((_ = t), n);
 }
 function v() {
-    (I.clear(), (_ = new Set()));
+    (E.clear(), (_ = new Set()));
     let e = !1;
     for (let t of h.A.getPrivateChannelIds()) e = T(t) || e;
     for (let t of a.A.getChannelHistory()) e = T(t) || e;
@@ -109,10 +109,10 @@ class L extends l.Ay.Store {
         (this.waitFor(u.A, p.A, a.A, d.Ay, c.A, h.A, A.A), v());
     }
     getRows(e) {
-        return [I.values(e), I.version];
+        return [E.values(e), E.version];
     }
     getChannel(e) {
-        return I.get(e);
+        return E.get(e);
     }
 }
 function x(e) {
@@ -184,8 +184,8 @@ let D = new L(
               CACHE_LOADED_LAZY: x(v),
               FRIENDS_LIST_POPOUT_MOUNTED: x(v),
               LOGOUT: x(function () {
-                  let e = I.size() > 0;
-                  return (I.clear(), (S = null), (_ = new Set()), e);
+                  let e = E.size() > 0;
+                  return (E.clear(), (S = null), (_ = new Set()), e);
               }),
           },
 );

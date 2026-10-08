@@ -6,11 +6,11 @@ var r = n(205693),
     s = n(487329),
     a = n(338771),
     o = n(975571),
-    c = n(200749),
-    u = n(652215),
+    u = n(200749),
+    c = n(652215),
     d = n(660183);
 function h(e) {
-    let { stream: t, width: n, avError: h, avErrorContext: m, selected: A = !1, noArt: g = !1 } = e,
+    let { stream: t, width: n, avError: h, avErrorContext: m, selected: A = !1, noArt: E = !1 } = e,
         f = (function (e) {
             switch (e?.type) {
                 case s.iy.SCREENSHARE_OS_ERROR:
@@ -20,14 +20,14 @@ function h(e) {
                     return d.intl.string(d.t.rSlOep);
             }
         })(m),
-        b = (0, s.B1)(h ?? s.iy.STREAM_FAILED_TO_START)?.errorCode;
-    return (0, i.jsx)(c.A, {
+        g = (0, s.B1)(h ?? s.iy.STREAM_FAILED_TO_START)?.errorCode;
+    return (0, i.jsx)(u.A, {
         header: f,
-        size: (0, c.J)(n),
-        noArt: g,
+        size: (0, u.J)(n),
+        noArt: E,
         selected: A,
-        description: d.intl.format(d.t.sXsgsP, { helpUrl: o.A.getArticleURL(u.MVz.STREAM_FAILED) }),
-        errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: b }),
+        description: d.intl.format(d.t.sXsgsP, { helpUrl: o.A.getArticleURL(c.MVz.STREAM_FAILED) }),
+        errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: g }),
         onCTAClick: () => {
             ((0, l.W)(r.x.STREAM, t.ownerId), (0, a.A)(t));
         },

@@ -1,4 +1,4 @@
-(n.d(t, { A: () => ea, u: () => j }), n(321073));
+(n.d(t, { A: () => ea, u: () => V }), n(321073));
 var i,
     l,
     r = n(17928),
@@ -15,8 +15,8 @@ var i,
     A = n(977997),
     p = n(927813),
     m = n(935208),
-    E = n(914853),
-    I = n(41984),
+    I = n(914853),
+    E = n(41984),
     S = n(956753),
     _ = n(296027),
     N =
@@ -282,8 +282,8 @@ class w {
 var U = n(406595),
     P = n(240516),
     b = n(652215),
-    j = (((l = {}).Text = "TEXT"), (l.Voice = "VOICE"), l);
-class V {
+    V = (((l = {}).Text = "TEXT"), (l.Voice = "VOICE"), l);
+class j {
     _maxItems;
     _channelsByChannelId = new Map();
     _sortedScoreIndex = [];
@@ -344,8 +344,8 @@ class V {
 let F = !1,
     G = null,
     H = !1,
-    k = new V(100),
-    Z = new V(100);
+    k = new j(100),
+    Z = new j(100);
 function B() {
     return _.default.isAnyOverlayRendering();
 }
@@ -439,7 +439,7 @@ function X() {
 function Q(e, t) {
     let n = u.A.getChannel(e);
     if (null == n) return !1;
-    let [i] = U.A.isFavorite(E.x.MESSAGES, e);
+    let [i] = U.A.isFavorite(I.x.MESSAGES, e);
     if (i || n.isPrivate?.()) return !1;
     let l = n.getGuildId?.() ?? null;
     return (
@@ -593,7 +593,7 @@ let ea = new er(
         ? {}
         : {
               OVERLAY_FRIENDS_WIDGET_SET_FAVORITE: es(function (e) {
-                  if (e.tab !== E.x.MESSAGES) return !1;
+                  if (e.tab !== I.x.MESSAGES) return !1;
                   let t = e.targetId;
                   if (e.isFavorite) {
                       let e = null != k.getChannel(t),
@@ -607,7 +607,7 @@ let ea = new er(
               }),
               OVERLAY_UPDATE_OVERLAY_METHOD: es(function (e) {
                   let { overlayMethod: t } = e;
-                  return t === I.Ue.OutOfProcess || t === I.Ue.OutOfProcessLimitedInteraction
+                  return t === E.Ue.OutOfProcess || t === E.Ue.OutOfProcessLimitedInteraction
                       ? (W(!0), $(), !0)
                       : !B() && W(!1);
               }),

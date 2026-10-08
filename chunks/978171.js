@@ -15,8 +15,8 @@ var i = n(477900),
     A = n(628284),
     p = n(95635),
     m = n(993077),
-    E = n(194261),
-    I = n(661531),
+    I = n(194261),
+    E = n(661531),
     S = n(233545),
     _ = n(144009),
     N = n(229659),
@@ -167,7 +167,7 @@ let U = function (e) {
                 type: m.Z.Types.SUCCESS,
                 className: w.g4,
                 children: [
-                    (0, i.jsx)(E.LockIcon, { size: "xxs", color: I.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
+                    (0, i.jsx)(I.LockIcon, { size: "xxs", color: E.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
                     (0, i.jsx)(f.E, { variant: "text-xs/medium", color: "text-feedback-positive", children: h }),
                 ],
             }),
@@ -176,8 +176,8 @@ let U = function (e) {
 };
 var P = n(297264),
     b = n(939249),
-    j = n(624479),
-    V = n(957565),
+    V = n(624479),
+    j = n(957565),
     F = n(814278),
     G = n(998759),
     H = n(75811),
@@ -191,7 +191,7 @@ function B(e) {
         c = l.useMemo(() => s?.join(" "), [s]),
         h = l.useCallback(() => {
             null != c &&
-                (0, V.C)(c, () => {
+                (0, j.C)(c, () => {
                     (u(!0), (0, d.k0)({ channelId: t }), setTimeout(() => u(!1), 2e3));
                 });
         }, [t, c]);
@@ -216,7 +216,7 @@ function B(e) {
                         (0, i.jsx)("div", {
                             className: a ? w.Dx : w.t6,
                             children: (0, i.jsx)(g.$, {
-                                icon: j.CopyIcon,
+                                icon: V.CopyIcon,
                                 text: R.intl.string(R.t.OpuAlK),
                                 variant: "secondary",
                                 size: "sm",
@@ -241,7 +241,7 @@ function B(e) {
                 type: m.Z.Types.SUCCESS,
                 className: w.g4,
                 children: [
-                    (0, i.jsx)(E.LockIcon, { size: "xxs", color: I.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
+                    (0, i.jsx)(I.LockIcon, { size: "xxs", color: E.A.colors.TEXT_FEEDBACK_POSITIVE.css }),
                     (0, i.jsx)(f.E, {
                         variant: "text-xs/medium",
                         color: "text-feedback-positive",

@@ -1,4 +1,4 @@
-n.d(t, { Lq: () => u, U0: () => h, _n: () => A, mB: () => m, x4: () => c });
+n.d(t, { Lq: () => c, U0: () => h, _n: () => A, mB: () => m, x4: () => u });
 var i = n(775602),
     r = n(363195),
     l = n(885386),
@@ -15,7 +15,7 @@ let a = Object.freeze({
         underlineLinks: !1,
     }),
     o = 221552 == n.j ? ["custom-theme-background", "custom-client-theme"] : null;
-function c(e) {
+function u(e) {
     switch (e) {
         case "light":
         case "midnight":
@@ -25,7 +25,7 @@ function c(e) {
             return "dark";
     }
 }
-function u() {
+function c() {
     if ("u" < typeof document || "u" < typeof window) return null;
     let e = document.documentElement,
         t = o.filter((t) => e.classList.contains(t));
@@ -53,8 +53,8 @@ function h() {
 }
 function m(e) {
     return {
-        baseTheme: c(r.A.theme),
-        customTheme: u(),
+        baseTheme: u(r.A.theme),
+        customTheme: c(),
         uiDensity: d(),
         messageDisplayCompact: l.hH.getSetting(),
         fontScale: h(),
@@ -66,7 +66,7 @@ function m(e) {
 }
 function A() {
     return {
-        theme: c(r.A.theme),
+        theme: u(r.A.theme),
         ui_density: d(),
         message_display_compact: String(l.hH.getSetting()),
         font_scale: String(h()),

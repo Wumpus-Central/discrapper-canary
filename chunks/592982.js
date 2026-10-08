@@ -23,8 +23,8 @@ var i = t(17928),
     j = t(652215),
     T = t(660183);
 function N(e) {
-    let { onClose: n, onSelect: t, channel: N, remoteMode: _, onInteraction: b } = e,
-        O = (0, c.Us)(),
+    let { onClose: n, onSelect: t, channel: N, remoteMode: _, onInteraction: O } = e,
+        b = (0, c.Us)(),
         { id: y, type: S } = N,
         R = (0, i.bG)([d.A], () => d.A.getGuild(N.guild_id), [N.guild_id]),
         D = (0, i.bG)([A.A], () => A.A.getSelectedParticipant(y)),
@@ -37,7 +37,7 @@ function N(e) {
         V = (0, I.A)(),
         B = (0, u.RQ)(y),
         w = (0, u.dA)(y),
-        H = (0, f.A)(L, O),
+        H = (0, f.A)(L, b),
         Y = (0, g.A)(M, y),
         F = (0, p.A)(),
         X = (0, r.A)(N),
@@ -46,7 +46,7 @@ function N(e) {
         "data-menu-migrated": !0,
         onClose: n,
         onSelect: t,
-        onInteraction: b,
+        onInteraction: O,
         navId: "more-settings-context",
         "aria-label": T.intl.string(T.t.FTLzdR),
         children: [

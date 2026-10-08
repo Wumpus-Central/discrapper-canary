@@ -15,8 +15,8 @@ var l,
     A = n(977997),
     p = n(562153),
     m = n(914853),
-    E = n(956753),
-    I = n(406595),
+    I = n(956753),
+    E = n(406595),
     S = n(70191),
     _ = n(240516),
     N = n(652215),
@@ -112,7 +112,7 @@ function O(e) {
                         o,
                         u,
                         h,
-                        { userId: C, user: E, activities: _, nickname: T, affinity: M } = e,
+                        { userId: C, user: I, activities: _, nickname: T, affinity: M } = e,
                         { category: v, displayActivities: x } =
                             ((t = g.A.getPrimaryActivity()),
                             (n = i),
@@ -133,18 +133,18 @@ function O(e) {
                                       : { category: "OFFLINE", displayActivities: o }),
                         D = "IN_GAME" === v ? (x[0]?.name ?? null) : null,
                         O = L.get(C) ?? [],
-                        [w] = I.A.isFavorite(m.x.FRIENDS, C),
+                        [w] = E.A.isFavorite(m.x.FRIENDS, C),
                         U = f.Ay.getVoiceChannelId() ?? f.Ay.getChannelId(),
                         P = null != U ? d.A.getChannel(U)?.guild_id : null,
                         b = c.A.getStatus(C),
-                        j = b === N.clD.ONLINE,
-                        V = x.some(R),
+                        V = b === N.clD.ONLINE,
+                        j = x.some(R),
                         F = b === N.clD.DND || b === N.clD.IDLE,
-                        G = p.Ay.getName(P, U, E);
+                        G = p.Ay.getName(P, U, I);
                     return {
                         id: C,
                         userId: C,
-                        user: E,
+                        user: I,
                         activities: x,
                         nickname: T,
                         category: "FRIEND",
@@ -172,8 +172,8 @@ function O(e) {
                             }
                             return `FRD\0${u}\0${d}\0${c}\0${y(s)}\0${h}\0${o}`;
                         })({
-                            isOnline: j,
-                            hasDisplayableActivity: V,
+                            isOnline: V,
+                            hasDisplayableActivity: j,
                             isDndOrIdle: F,
                             activityCategory: v,
                             inGameActivityName: D,
@@ -218,7 +218,7 @@ function w() {
 class U extends r.Ay.Store {
     static displayName = "FriendsWidgetFriendsStore";
     initialize() {
-        (this.waitFor(d.A, o.A, I.A, c.A, h.A, f.Ay, g.A, u.A, C.default, A.A), w());
+        (this.waitFor(d.A, o.A, E.A, c.A, h.A, f.Ay, g.A, u.A, C.default, A.A), w());
     }
     getRows(e) {
         return [M.values(e), M.version];
@@ -228,7 +228,7 @@ class U extends r.Ay.Store {
     }
 }
 function P(e) {
-    return (0, E.v$)(e, "FriendsWidgetFriendsStore");
+    return (0, I.v$)(e, "FriendsWidgetFriendsStore");
 }
 let b = new U(
     a.h,

@@ -9,15 +9,15 @@ var a = n(477900),
     d = n(821609),
     u = n(745396),
     m = n(85463),
-    p = n(834730),
-    b = n(297264),
+    b = n(834730),
+    p = n(297264),
     f = n(825484),
     _ = n(315629),
     E = n(241524),
     g = n(303136),
     h = n(607470),
-    N = n(174459),
-    R = n(676279),
+    R = n(174459),
+    N = n(676279),
     x = n(406860),
     A = n(639031),
     v = n(652215),
@@ -48,7 +48,7 @@ let P = (e) => {
             containerClassName: F,
         } = e,
         X = (0, m.N)(),
-        W = (0, R.TM)(),
+        W = (0, N.TM)(),
         z = s.useRef(null),
         K = s.useRef(0),
         { sectionRef: q, handleVisibilityChange: J } = (0, x.A)({ boxType: t }),
@@ -59,7 +59,7 @@ let P = (e) => {
         et = s.useMemo(
             () =>
                 (0, l.debounce)(() => {
-                    N.default.track(v.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
+                    R.default.track(v.HAw.PREMIUM_WHATS_NEW_BOX_CTA_CLICKED, { box_type: (0, l.snakeCase)(t) });
                 }, 800),
             [t],
         ),
@@ -67,7 +67,7 @@ let P = (e) => {
             className: r()(O.captionWrapper, O[`${D}`]),
             children:
                 "string" == typeof i
-                    ? (0, a.jsx)(p.E, { variant: "text-sm/normal", color: "text-muted", children: i })
+                    ? (0, a.jsx)(b.E, { variant: "text-sm/normal", color: "text-muted", children: i })
                     : i,
         });
     function ea() {
@@ -114,7 +114,7 @@ let P = (e) => {
                                     className: O.badgeContainer,
                                     children: (0, a.jsx)("div", {
                                         className: O.badge,
-                                        children: (0, a.jsx)(b.D, {
+                                        children: (0, a.jsx)(p.D, {
                                             variant: X,
                                             color: "text-overlay-light",
                                             children: B,
@@ -126,10 +126,10 @@ let P = (e) => {
                                     children: (0, a.jsx)(o.E, { type: { text: B }, variant: w }),
                                 }),
                         null != i && D === A.A0.LARGE && en,
-                        (0, a.jsx)(b.D, { variant: ei, color: "text-strong", className: O.header, children: n }),
+                        (0, a.jsx)(p.D, { variant: ei, color: "text-strong", className: O.header, children: n }),
                     ],
                 }),
-                (0, a.jsx)(p.E, {
+                (0, a.jsx)(b.E, {
                     variant: "text-md/medium",
                     color: "text-strong",
                     className: O.description,

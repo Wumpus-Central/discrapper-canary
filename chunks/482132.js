@@ -10,8 +10,8 @@ var r = n(477900),
     d = n(71804),
     f = n(883645),
     h = n(601194),
-    m = n(642639),
-    p = n(573359),
+    p = n(642639),
+    m = n(573359),
     C = n(166532),
     E = n(819252);
 function y(e) {
@@ -25,8 +25,8 @@ function y(e) {
         })(e),
         { step: a, stepConfigs: y } = (0, f.Ay)(),
         { setBodyNode: I, setFooterNode: S, setModalOverlayNode: g } = (0, h.Gm)(),
-        _ = (0, u.bG)([p.A], () => p.A.isDisplayingWowMomentConfirmation),
-        { setReadySlideId: P, unifiedCheckoutFlow: A } = (0, m.t4)((e) => ({
+        _ = (0, u.bG)([m.A], () => m.A.isDisplayingWowMomentConfirmation),
+        { setReadySlideId: P, unifiedCheckoutFlow: A } = (0, p.t4)((e) => ({
             setReadySlideId: e.setReadySlideId,
             unifiedCheckoutFlow: e.unifiedCheckoutFlow,
         })),
@@ -42,8 +42,8 @@ function y(e) {
             extraSentryInformation: { stepConfig: x, step: a, unifiedCheckoutFlow: A, stepConfigs: y },
         });
     let v = x?.options?.hideSlider ?? !1,
-        M = x?.options?.hideDefaultModalBody ?? !1,
-        R = x?.options?.sliderBodyClassName,
+        R = x?.options?.hideDefaultModalBody ?? !1,
+        M = x?.options?.sliderBodyClassName,
         T = a === C.pn.REVIEW,
         L = l.useCallback(
             (e, t) => {
@@ -59,7 +59,7 @@ function y(e) {
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
-                          M
+                          R
                               ? null
                               : (0, r.jsx)(o.c, {
                                     children: (0, r.jsx)(c.t, {
@@ -78,7 +78,7 @@ function y(e) {
                                                     {
                                                         id: e.key,
                                                         children: (0, r.jsx)("form", {
-                                                            className: s()(E.OO, { [E.Wq]: T }, R),
+                                                            className: s()(E.OO, { [E.Wq]: T }, M),
                                                             ref: (t) => L(t, e.key),
                                                             onSubmit: (e) => e.preventDefault(),
                                                         }),
