@@ -101,6 +101,7 @@ let r = new Set([
         i.M.TINY_BRONCO_SETTINGS,
         i.M.TINY_BRONCO_NOTICE,
         i.M.PREMIUM_GIFT_QUANTITY_STEPPER_NEW_BADGE,
+        i.M.GIFT_INVENTORY_SETTINGS_NEW_BADGE,
     ]),
     a = {
         6: { is_server_arbitrated: !1 },

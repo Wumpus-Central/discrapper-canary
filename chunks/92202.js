@@ -1,4 +1,4 @@
-n.d(t, { K: () => l });
+n.d(t, { A: () => r, K: () => l });
 let i = (0, n(945810).mj)({
     name: "2026-10-gift-cards-in-app-marketing",
     kind: "user",
@@ -8,3 +8,4 @@ let i = (0, n(945810).mj)({
 function l(e) {
     return { enabled: i.useConfig(e).enabled };
 }
+let r = i;
