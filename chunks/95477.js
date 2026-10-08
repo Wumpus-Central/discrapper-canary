@@ -97,8 +97,8 @@ function L(e) {
             showCharacterCount: U = !1,
             ...w
         } = e,
-        { fieldProps: G } = (0, _.n)(w),
-        x = (0, S.Y)({
+        { fieldProps: G, props: x } = (0, _.n)(w),
+        k = (0, S.Y)({
             validateOn: v,
             error: T,
             value: h,
@@ -108,54 +108,55 @@ function L(e) {
             max: null != w.max ? Number(w.max) : void 0,
             defaultDirty: m,
         }),
-        { setShouldValidate: k } = x,
-        F = C(h, I),
-        B = "object" == typeof L && "type" in L && "tags" === L.type,
-        V = r.useRef(null),
-        H = (0, l.A)(V, a),
-        j = r.useRef(null),
-        W = w.readOnly;
-    null == W && !1 === n && (W = !0);
-    let Y = null;
-    ("boolean" == typeof P ? P && null != h && "" !== h && !W : P.show)
-        ? (Y = (0, i.jsx)(R, {
+        { setShouldValidate: F } = k,
+        B = C(h, I),
+        V = "object" == typeof L && "type" in L && "tags" === L.type,
+        H = r.useRef(null),
+        j = (0, l.A)(H, a),
+        W = r.useRef(null),
+        Y = w.readOnly;
+    null == Y && !1 === n && (Y = !0);
+    let K = null;
+    ("boolean" == typeof P ? P && null != h && "" !== h && !Y : P.show)
+        ? (K = (0, i.jsx)(R, {
               inputSize: b,
               onClick: function (e) {
                   (null != w.onClear ? w.onClear(e) : w.onChange?.("", d),
                       requestAnimationFrame(() => {
-                          V.current?.focus();
+                          H.current?.focus();
                       }));
               },
           }))
-        : null != D && (Y = (0, i.jsx)(O, { accessory: D, inputSize: b }));
-    let K = null;
-    null != L && (K = (0, i.jsx)(O, { accessory: L, inputSize: b }));
-    let $ = U ? (0, i.jsx)(g.n, { value: h, maxLength: A }) : null;
+        : null != D && (K = (0, i.jsx)(O, { accessory: D, inputSize: b }));
+    let $ = null;
+    null != L && ($ = (0, i.jsx)(O, { accessory: L, inputSize: b }));
+    let z = U ? (0, i.jsx)(g.n, { value: h, maxLength: A }) : null;
     return (0, i.jsx)(_.D, {
         ...G,
-        errorMessage: x.hasError ? (x.errorMessage ?? void 0) : void 0,
-        trailingAuxiliaryContent: $,
+        errorMessage: k.hasError ? (k.errorMessage ?? void 0) : void 0,
+        trailingAuxiliaryContent: z,
         children: (0, i.jsxs)(f.F, {
-            ref: j,
+            ref: W,
             disabled: t,
-            validation: x,
+            validation: k,
             fullWidth: M,
-            readOnly: W,
+            readOnly: Y,
             className: s()(N.container, N[b], {
-                [N.hasLeading]: null != K,
-                [N.hasTrailing]: null != Y,
-                [N.hasTags]: B,
+                [N.hasLeading]: null != $,
+                [N.hasTrailing]: null != K,
+                [N.hasTags]: V,
             }),
             children: [
-                K,
+                $,
                 (0, i.jsx)(u.vN, {
-                    ringTarget: j,
+                    ringTarget: W,
                     ...o,
                     children: (0, i.jsx)(y, {
                         name: d,
                         className: N.input,
                         disabled: t,
-                        readOnly: W,
+                        readOnly: Y,
+                        required: G.required,
                         "aria-required": G.required,
                         type: c,
                         placeholder: E,
@@ -164,21 +165,21 @@ function L(e) {
                         value: h,
                         defaultValue: I,
                         "data-mana-component": "text-input",
-                        ...w,
+                        ...x,
                         onChange: function (e) {
                             let t = e.currentTarget.value;
-                            (w.onChange?.(t, d), k(!0), F.setHasValue?.("" !== t));
+                            (w.onChange?.(t, d), F(!0), B.setHasValue?.("" !== t));
                         },
                         onBlur: (e) => {
-                            (w.onBlur?.(e), F.setIsFocused?.(!1));
+                            (w.onBlur?.(e), B.setIsFocused?.(!1));
                         },
                         onFocus: (e) => {
-                            (w.onFocus?.(e), F.setIsFocused?.(!0));
+                            (w.onFocus?.(e), B.setIsFocused?.(!0));
                         },
-                        ref: H,
+                        ref: j,
                     }),
                 }),
-                Y,
+                K,
             ],
         }),
     });
