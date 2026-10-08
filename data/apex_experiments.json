@@ -2163,22 +2163,6 @@
     }
   },
   {
-    "name": "2026-05-badge-discovery-milestone-2",
-    "kind": "user",
-    "defaultConfig": {
-      "enabled": false
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "enabled": true
-      }
-    }
-  },
-  {
     "name": "2026-05-bounty-stale-refresh-quest-home",
     "kind": "user",
     "defaultConfig": {
