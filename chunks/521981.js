@@ -117,34 +117,34 @@ function h(n) {
                             formatInline: b,
                             toAST: g,
                         } = n,
-                        I = Array.isArray(y) ? y : [y],
-                        M = !1;
+                        M = Array.isArray(y) ? y : [y],
+                        I = !1;
                     return (
-                        f && (I = [{ type: "text", content: A, originalMatch: { index: 0, 0: A } }]),
+                        f && (M = [{ type: "text", content: A, originalMatch: { index: 0, 0: A } }]),
                         L &&
-                            ((e = I), (t = (w ?? k).embeds), (I = (0, i.k5)(t) && (0, i.iz)((0, i.dn)(e, m)) ? [] : e)),
+                            ((e = M), (t = (w ?? k).embeds), (M = (0, i.k5)(t) && (0, i.iz)((0, i.dn)(e, m)) ? [] : e)),
                         b ||
                             k.type === a.lAJ.MEDIA_MENTION_MESSAGE ||
-                            ((o = I),
-                            (I = h
+                            ((o = M),
+                            (M = h
                                 ? u(o)
                                 : ("paragraph" === o[0].type &&
                                       o[0].content instanceof Array &&
                                       (o[0].content = u(o[0].content)),
                                   o))),
-                        (r = I),
+                        (r = M),
                         (p = { onlyLinkContent: (0, i.dn)(r, m).onlyLinks, stripGameServerShareLinks: !0 }),
-                        (I = r.filter((n) => {
+                        (M = r.filter((n) => {
                             let e = "link" === n.type ? (n.target ?? null) : null;
                             return null == e || !(0, i.c_)(e, p);
                         })),
                         (w ?? k).embeds.length > 0 &&
-                            ((d = I),
-                            (M = h
+                            ((d = M),
+                            (I = h
                                 ? c(d)
                                 : "paragraph" === d[0].type && d[0].content instanceof Array && c(d[0].content))),
                         b &&
-                            (I = (function n(e) {
+                            (M = (function n(e) {
                                 return (
                                     e.forEach((e) => {
                                         s.has(e.type) &&
@@ -159,8 +159,8 @@ function h(n) {
                                     }),
                                     e
                                 );
-                            })(I)),
-                        { ast: I, hasSpoilerEmbeds: M }
+                            })(M)),
+                        { ast: M, hasSpoilerEmbeds: I }
                     );
                 })({
                     ast: n,
@@ -207,6 +207,7 @@ function f(n, e) {
                 messageId: a,
                 authorId: r,
                 muted: !1,
+                unknownUserMentionPlaceholder: !0,
                 disablePressableChannelMention: !0,
                 textColor: t.textColor,
             },
