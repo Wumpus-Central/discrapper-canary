@@ -21,22 +21,22 @@ var i = n(477900),
     A = n(34188),
     E = n(577473),
     h = n(403581),
-    C = n(323384),
-    _ = n(625903),
+    _ = n(323384),
+    C = n(625903),
     g = n(659421),
     I = n(329308),
     T = n(571694),
     p = n(47167),
     N = n(713654),
     S = n(503698),
-    O = n.n(S),
-    f = n(62986);
+    f = n.n(S),
+    O = n(62986);
 let L = function (e) {
     let { value: t = 0, text: n, className: l, lowImportance: r, ...s } = e;
     return null != n
-        ? (0, i.jsx)("div", { className: O()(f.i, l, r && f.H), ...s, children: n })
+        ? (0, i.jsx)("div", { className: f()(O.i, l, r && O.H), ...s, children: n })
         : t > 0
-          ? (0, i.jsx)("div", { className: O()(f.i, l, r && f.H), ...s, children: t })
+          ? (0, i.jsx)("div", { className: f()(O.i, l, r && O.H), ...s, children: t })
           : null;
 };
 var m = n(769015),
@@ -457,11 +457,11 @@ class Z extends l.Component {
                 ((e = x.intl.string(x.t.JALI2K)), (t = (0, i.jsx)(E.r, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.APPS_HOME:
-                ((e = x.intl.string(x.t.PHjkRE)), (t = (0, i.jsx)(C.k, { size: "xs", color: "currentColor" })));
+                ((e = x.intl.string(x.t.PHjkRE)), (t = (0, i.jsx)(_.k, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.SETTINGS:
                 ((e = n.label ?? x.intl.string(x.t["3D5yo/"])),
-                    (t = (0, i.jsx)(_.SettingsIcon, { size: "xs", color: "currentColor" })));
+                    (t = (0, i.jsx)(C.SettingsIcon, { size: "xs", color: "currentColor" })));
                 break;
             case I.t1.PLAYGROUND:
                 if (((e = n.label ?? `${n.collectionId} Playground`), null != n.IconComponent)) {

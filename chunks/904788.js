@@ -1,19 +1,19 @@
-n.d(e, { A: () => x, p: () => d });
+n.d(e, { A: () => x, p: () => m });
 var r = n(477900);
 n(582128);
 var i = n(503698),
-    s = n.n(i),
-    l = n(812993),
+    l = n.n(i),
+    s = n(812993),
     a = n(953727),
     o = n(771104),
     c = n(63517);
 function g(t) {
-    let { className: e, children: n, forceUseColor: i = !1, hideStars: l } = t;
+    let { className: e, children: n, forceUseColor: i = !1, hideStars: s } = t;
     return (0, r.jsxs)("span", {
-        className: s()(c.kL, e, { [c.cu]: i }),
+        className: l()(c.kL, e, { [c.cu]: i }),
         children: [
             n,
-            l
+            s
                 ? null
                 : (0, r.jsxs)(r.Fragment, {
                       children: [
@@ -26,8 +26,8 @@ function g(t) {
     });
 }
 var u = n(660183),
-    m = n(975117);
-function d(t) {
+    d = n(975117);
+function m(t) {
     return (0, r.jsx)("svg", {
         ...(0, a.A)({ ...t }),
         width: "25",
@@ -51,9 +51,9 @@ function x(t) {
     return (0, r.jsx)(g, {
         className: e,
         forceUseColor: n,
-        children: (0, r.jsx)(l.Lp, {
+        children: (0, r.jsx)(s.Lp, {
             disableColor: !0,
-            className: s()(m.Tc, { [m.YO]: i, [m.ju]: a }),
+            className: l()(d.Tc, { [d.YO]: i, [d.ju]: a }),
             text: u.intl.string(u.t.y2b7CA),
         }),
     });

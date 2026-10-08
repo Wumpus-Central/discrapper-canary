@@ -16,8 +16,8 @@ var l = n(477900),
     S = n(240248),
     E = n(166532),
     y = n(676230),
-    A = n(818348),
-    I = n(400400);
+    I = n(818348),
+    A = n(400400);
 let g = [E.pn.PAYMENT_ELEMENT],
     P = [
         E.pn.PAYPAL_INFORMATION,
@@ -65,13 +65,13 @@ function x(e) {
             }
         }, [d]);
     return (0, l.jsxs)("div", {
-        className: s()(I.kL, { [I.rf]: !_ }),
+        className: s()(A.kL, { [A.rf]: !_ }),
         children: [
             (0, l.jsxs)("div", {
-                className: s()(v ? I.RK : [I.R, I.$u], {
-                    [I.df]: null == d,
-                    [I._m]: d === A.he.CARD,
-                    [I.JD]: d === A.he.PAYPAL,
+                className: s()(v ? A.RK : [A.R, A.$u], {
+                    [A.df]: null == d,
+                    [A._m]: d === I.he.CARD,
+                    [A.JD]: d === I.he.PAYPAL,
                 }),
                 children: [
                     (0, l.jsx)(m.Wf, {
@@ -85,7 +85,7 @@ function x(e) {
                 ],
             }),
             (0, l.jsx)("div", {
-                className: s()(I.K_, x ? I.RK : [I.R, I.vg]),
+                className: s()(A.K_, x ? A.RK : [A.R, A.vg]),
                 children: (0, l.jsx)(m.KS, {
                     ...u,
                     internalKey: h,
@@ -98,7 +98,7 @@ function x(e) {
 }
 function _() {
     return (0, l.jsx)("div", {
-        className: s()(I.kL, I.rf, I.g4),
+        className: s()(A.kL, A.rf, A.g4),
         children: (0, l.jsx)(o.y, { type: o.y.Type.PULSING_ELLIPSIS }),
     });
 }
@@ -132,10 +132,10 @@ function b(e) {
         } = e,
         c = i.useRef(null),
         C = i.useRef(null),
-        [y, I] = i.useState(!1),
+        [y, A] = i.useState(!1),
         [g, P] = i.useState(!1),
         x = o === E.pn.CREDIT_CARD_INFORMATION || o === E.pn.PAYMENT_ELEMENT,
-        [_, T] = i.useState(x ? A.he.CARD : null),
+        [_, T] = i.useState(x ? I.he.CARD : null),
         [b, j] = i.useState(!1),
         [R, O] = i.useState(void 0),
         M = (function (e) {
@@ -153,7 +153,7 @@ function b(e) {
         D = i.useMemo(
             () => ({
                 onChange: (e, t) => {
-                    (s && null != l && l.log("PaymentElements onChange event:", e), I(e.complete), T(t));
+                    (s && null != l && l.log("PaymentElements onChange event:", e), A(e.complete), T(t));
                 },
                 onReady: () => {
                     P(!0);

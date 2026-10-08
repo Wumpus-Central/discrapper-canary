@@ -1,4 +1,4 @@
-n.d(t, { k: () => $ });
+n.d(t, { k: () => J });
 var i = n(419954),
     s = n(780964),
     l = n(17928),
@@ -281,7 +281,7 @@ let Q = (0, i.zD)(s.X.APPEARANCE_SAME_AS_DEVICE_THEME, {
             } else ((0, Y.k7)(X.Q_.OFF), (0, Y.ZM)(!1));
         },
     }),
-    $ = (0, i.FW)(s.X.APPEARANCE_THEME_FIELDSET, {
+    J = (0, i.FW)(s.X.APPEARANCE_THEME_FIELDSET, {
         useTitle: () => u.intl.string(u.t.Ksh3ik),
         isTitleHiddenVisually: !0,
         buildLayout: () => [Q, K, w, M, v, d],

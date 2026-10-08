@@ -1,4 +1,4 @@
-n.d(t, { A: () => A });
+n.d(t, { A: () => I });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -16,7 +16,7 @@ var l = n(477900),
     S = n(540796);
 let E = (0, m.createChannelRecord)({ id: "1", type: C.rbe.DM }),
     y = (0, p.Ld)();
-function A(e) {
+function I(e) {
     let {
             label: t = f.intl.string(f.t.B3miE8),
             onTextChange: n,
@@ -24,13 +24,13 @@ function A(e) {
             currentText: p,
             className: m,
             innerClassName: C,
-            disableThemedBackground: A = !1,
+            disableThemedBackground: I = !1,
         } = e,
-        [I, g] = i.useState(r ?? p),
-        [P, v] = i.useState((0, c.x7)(I)),
+        [A, g] = i.useState(r ?? p),
+        [P, v] = i.useState((0, c.x7)(A)),
         x = i.useRef(!1);
     function _(e, t, l) {
-        t !== I && (g(t), v(l), n(t));
+        t !== A && (g(t), v(l), n(t));
     }
     function T() {
         return new Promise((e) => {
@@ -62,7 +62,7 @@ function A(e) {
                                 maxCharacterCount: h.Jo,
                                 onChange: _,
                                 channel: E,
-                                textValue: I,
+                                textValue: A,
                                 richValue: P,
                                 type: u.oU.CUSTOM_GIFT,
                                 onBlur: () => {
@@ -73,7 +73,7 @@ function A(e) {
                                 },
                                 focused: x.current,
                                 onSubmit: T,
-                                disableThemedBackground: A,
+                                disableThemedBackground: I,
                             }),
                             (0, l.jsx)(o.A, { id: y, children: f.intl.format(f.t["+DFxLc"], { maxLength: h.Jo }) }),
                         ],

@@ -1,4 +1,4 @@
-n.d(t, { A: () => C });
+n.d(t, { A: () => _ });
 var i = n(477900);
 n(582128);
 var l = n(661531),
@@ -20,22 +20,22 @@ let E = {
         locked: l.A.unsafe_rawColors.PRIMARY_400.css,
         unlocked: l.A.unsafe_rawColors.GREEN_330.css,
     };
-function C(e) {
+function _(e) {
     let { achievementId: t, unlocked: n, size: l = s._3.SIZE_40 } = e,
-        C = (0, d.Ay)(),
-        _ = (0, u.vM)(t);
-    if (null == _) return null;
+        _ = (0, d.Ay)(),
+        C = (0, u.vM)(t);
+    if (null == C) return null;
     let g = (0, s.Kj)(l),
-        { name: I, rarity: T } = _,
+        { name: I, rarity: T } = C,
         { color: p } = (0, u.ag)(T),
-        N = (0, r.M)(C) ? E : h,
+        N = (0, r.M)(_) ? E : h,
         S = (g.size - g.offset - 2 * g.stroke) * 0.8,
-        O = g.size - g.stroke,
-        f = { width: 0.4 * S, height: 0.4 * S },
-        L = { width: f.width + 1, height: f.height + 1, right: g.stroke + 1, bottom: g.stroke + 1, padding: 0 };
+        f = g.size - g.stroke,
+        O = { width: 0.4 * S, height: 0.4 * S },
+        L = { width: O.width + 1, height: O.height + 1, right: g.stroke + 1, bottom: g.stroke + 1, padding: 0 };
     return (0, i.jsxs)("div", {
         className: A.kL,
-        style: { width: O, height: O, padding: g.stroke },
+        style: { width: f, height: f, padding: g.stroke },
         "aria-label": `${I() ?? ""}`,
         children: [
             (0, i.jsx)("div", {
@@ -46,12 +46,12 @@ function C(e) {
                 (0, i.jsx)("div", {
                     className: A.dq,
                     style: L,
-                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...f }),
+                    children: (0, i.jsx)(o.LockIcon, { size: "custom", color: N.locked, ...O }),
                 }),
             n &&
                 T === u.md.LEGENDARY &&
-                (0, i.jsx)("div", { className: A.dq, style: L, children: (0, i.jsx)(c.A, { className: A.ox, ...f }) }),
+                (0, i.jsx)("div", { className: A.dq, style: L, children: (0, i.jsx)(c.A, { className: A.ox, ...O }) }),
         ],
     });
 }
-C.Sizes = s._3;
+_.Sizes = s._3;

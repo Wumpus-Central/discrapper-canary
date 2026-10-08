@@ -1,4 +1,4 @@
-d.exports = {
+e.exports = {
     Kk: "icon_f4b9b5",
     YR: "unlocked_f4b9b5",
     Zg: "emoji_f4b9b5",

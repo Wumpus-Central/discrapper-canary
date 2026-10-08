@@ -48,14 +48,14 @@ var i = n(477900),
     Z = n(778712),
     q = n(97808),
     Q = n(123292),
-    $ = n(950305),
-    J = n(854627),
+    J = n(950305),
+    $ = n(854627),
     ee = n(259589),
     et = n(660183),
     en = n(443543);
 function ei(e) {
     let { user: t, isOwnUser: n, label: l, removeButton: a, isFaded: o } = e,
-        { avatarSrc: u, eventHandlers: d } = (0, J.A)({ userId: t?.id, size: Z._3.SIZE_24 }),
+        { avatarSrc: u, eventHandlers: d } = (0, $.A)({ userId: t?.id, size: Z._3.SIZE_24 }),
         c = (0, z.$3)(t),
         [m, A] = s.useState(!1);
     return (0, i.jsxs)("div", {
@@ -134,7 +134,7 @@ function eo(e) {
                 children: [
                     (0, i.jsx)("div", {
                         className: r()(en.vG, en.my),
-                        children: (0, i.jsx)($.UserIcon, { size: "xxs", color: d.A.colors.ICON_SUBTLE }),
+                        children: (0, i.jsx)(J.UserIcon, { size: "xxs", color: d.A.colors.ICON_SUBTLE }),
                     }),
                     (0, i.jsx)(g.E, {
                         className: en.Xh,
@@ -1048,8 +1048,8 @@ function eZ(e) {
 }
 var eq = n(983048),
     eQ = n(951555),
-    e$ = n(28863),
-    eJ = n(109681);
+    eJ = n(28863),
+    e$ = n(109681);
 function e0(e) {
     let { subscription: t, renewalMutations: s, className: l, analyticsLocation: a } = e,
         o = (0, I.A)(),
@@ -1057,11 +1057,11 @@ function e0(e) {
     return (
         o.fractionalState === eu.xc.FP_SUB_PAUSED && (u = o.endsAt.toDate()),
         (0, i.jsxs)("div", {
-            className: r()(eJ.zr, l),
+            className: r()(e$.zr, l),
             children: [
-                (0, i.jsx)(c.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: eJ.G }),
+                (0, i.jsx)(c.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: e$.G }),
                 (0, i.jsx)("div", {
-                    className: eJ.Qq,
+                    className: e$.Qq,
                     children: et.intl.format(et.t.ar1cPl, {
                         planName: t.hasExternalPlanChange ? (0, O.OU)(s) : O.Ay.getDisplayName(s.planId),
                         date: u,
@@ -1069,7 +1069,7 @@ function e0(e) {
                 }),
                 t.isPurchasedExternally
                     ? null
-                    : (0, i.jsx)(e$.Anchor, {
+                    : (0, i.jsx)(eJ.Anchor, {
                           onClick: (e) => {
                               (e.preventDefault(),
                                   (0, V.openModalLazy)(async () => {
@@ -1083,7 +1083,7 @@ function e0(e) {
                                           });
                                   }));
                           },
-                          className: eJ.Lu,
+                          className: e$.Lu,
                           children: et.intl.string(et.t["ETE/oC"]),
                       }),
             ],

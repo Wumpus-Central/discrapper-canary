@@ -1,19 +1,19 @@
 n.d(t, { A: () => d });
 var r = n(477900);
 n(582128);
-var o = n(503698),
-    l = n.n(o),
+var l = n(503698),
+    i = n.n(l),
     s = n(194261),
-    i = n(834730),
-    a = n(660183),
-    u = n(629264),
+    a = n(834730),
+    u = n(660183),
+    o = n(629264),
     c = n(938442);
 function d() {
     return (0, r.jsxs)("div", {
-        className: l()(u.iG, c.Uu, c.Hu),
+        className: i()(o.iG, c.Uu, c.Hu),
         children: [
-            (0, r.jsx)(s.LockIcon, { size: "sm", color: "currentColor", className: u.hz }),
-            (0, r.jsx)(i.E, { variant: "text-sm/medium", className: u.aK, children: a.intl.string(a.t.Kv6Z4I) }),
+            (0, r.jsx)(s.LockIcon, { size: "sm", color: "currentColor", className: o.hz }),
+            (0, r.jsx)(a.E, { variant: "text-sm/medium", className: o.aK, children: u.intl.string(u.t.Kv6Z4I) }),
         ],
     });
 }

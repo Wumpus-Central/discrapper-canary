@@ -1,4 +1,4 @@
-n.d(t, { m: () => O });
+n.d(t, { m: () => f });
 var i = n(477900);
 n(582128);
 var l = n(17928),
@@ -12,35 +12,35 @@ var l = n(17928),
     A = n(725807),
     E = n(212168),
     h = n(780964),
-    C = n(766075),
-    _ = n(287809),
+    _ = n(766075),
+    C = n(287809),
     g = n(158045),
     I = n(652215),
     T = n(49999),
     p = n(202541),
     N = n(660183),
     S = n(316632);
-function O(e) {
+function f(e) {
     var t;
-    let { onClose: n, markAsDismissed: O } = e,
-        f = (0, l.bG)([_.default], () => _.default.getCurrentUser()),
+    let { onClose: n, markAsDismissed: f } = e,
+        O = (0, l.bG)([C.default], () => C.default.getCurrentUser()),
         L =
-            (t = f?.premiumType) === p.PremiumTypes.TIER_2
+            (t = O?.premiumType) === p.PremiumTypes.TIER_2
                 ? N.intl.string(N.t.jqO5Qn)
                 : null == t
                   ? N.intl.string(N.t.f2qjw5)
                   : N.intl.string(N.t.SblICW),
-        m = g.Ay.canUseCustomCallSounds(f);
+        m = g.Ay.canUseCustomCallSounds(O);
     return (0, i.jsxs)(E.A, {
         isShown: !0,
         type: E.i.PREMIUM,
         className: S.ne,
         backgroundClassName: S.u4,
         children: [
-            null != O
+            null != f
                 ? (0, i.jsx)(s.D, {
                       className: S.VN,
-                      onClick: () => O?.(T.i.DISMISS),
+                      onClick: () => f?.(T.i.DISMISS),
                       "aria-label": N.intl.string(N.t.cpT0Cq),
                       children: (0, i.jsx)(a.P, { size: "xs", color: "currentColor", className: S.ut }),
                   })
@@ -56,7 +56,7 @@ function O(e) {
             m
                 ? (0, i.jsx)(u.$, {
                       onClick: function () {
-                          ((0, C.openUserSettings)(h.X.SOUNDBOARD_CATEGORY), n?.(), O?.(T.i.PRIMARY));
+                          ((0, _.openUserSettings)(h.X.SOUNDBOARD_CATEGORY), n?.(), f?.(T.i.PRIMARY));
                       },
                       text: N.intl.string(N.t.RzWDqY),
                       fullWidth: !0,
@@ -69,7 +69,7 @@ function O(e) {
                           object: I.ZSU.BUTTON_CTA,
                       },
                       color: r.$n.Colors.GREEN,
-                      onSubscribeModalClose: () => O?.(T.i.PRIMARY),
+                      onSubscribeModalClose: () => f?.(T.i.PRIMARY),
                   }),
         ],
     });

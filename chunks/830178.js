@@ -1,7 +1,7 @@
 n.d(t, { W: () => l, t: () => o });
 var i = n(477900),
-    r = n(582128),
-    s = n(121894);
+    s = n(582128),
+    r = n(121894);
 class a {
     registeredNodes = new Map();
     visibleComponents = new Set();
@@ -11,7 +11,7 @@ class a {
         if (e) return;
         this.observer = new window.IntersectionObserver(
             (e) => {
-                (0, s.r)(() => {
+                (0, r.r)(() => {
                     e.forEach((e) => {
                         let t = this.registeredNodes.get(e.target);
                         null == t ||
@@ -85,22 +85,22 @@ class a {
         (this.observer?.disconnect(), this.registeredNodes.clear(), this.visibleComponents.clear());
     }
 }
-let l = r.createContext({
+let l = s.createContext({
     manager: new a(!0),
     useThoughtfullyAnimated: () => ({ animate: !0, registerRef: () => {} }),
 });
 function o(e) {
     let { children: t } = e,
-        [n] = r.useState(() => {
+        [n] = s.useState(() => {
             let e = new a();
             return {
                 manager: e,
                 useThoughtfullyAnimated() {
-                    let t = r.useRef(null),
-                        [n, i] = r.useState(!1);
+                    let t = s.useRef(null),
+                        [n, i] = s.useState(!1);
                     return {
                         animate: n,
-                        registerRef: r.useCallback((n) => {
+                        registerRef: s.useCallback((n) => {
                             (null != t.current && e.unregisterNode(t.current),
                                 (t.current = n),
                                 null != t.current && e.registerNode(t.current, i));
@@ -110,6 +110,6 @@ function o(e) {
             };
         });
     return (
-        r.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(l.Provider, { value: n, children: t })
+        s.useEffect(() => () => n.manager.cleanUp(), [n.manager]), (0, i.jsx)(l.Provider, { value: n, children: t })
     );
 }

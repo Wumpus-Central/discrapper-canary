@@ -1,25 +1,25 @@
-n.d(t, { A: () => G, m: () => P });
-var l = n(582128),
-    u = n(17928),
-    r = n(554146),
-    i = n(501419),
-    o = n(131607),
-    s = n(645619),
-    A = n(786173),
-    _ = n(568065),
-    E = n(49999);
+l.d(t, { A: () => G, m: () => P });
+var n = l(582128),
+    u = l(17928),
+    r = l(554146),
+    i = l(501419),
+    o = l(131607),
+    s = l(645619),
+    A = l(786173),
+    _ = l(568065),
+    E = l(49999);
 let a = r.M.GUILD_POWERUP_NEW_PERK_AVAILABLE_BADGE;
 function d(e) {
     let t = (0, u.bG)([s.A], () => s.A.getStateForGuild(e)),
-        n = (0, A.A)(e, t ?? void 0);
-    return n >= _.QS.GUILD_THEME ? n : 0;
+        l = (0, A.A)(e, t ?? void 0);
+    return l >= _.QS.GUILD_THEME ? l : 0;
 }
 function G(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1],
-        n = d(e),
-        [u, r] = (0, o.RF)(n > 0 && !t ? a : null, n),
+        l = d(e),
+        [u, r] = (0, o.RF)(l > 0 && !t ? a : null, l),
         i = u === a,
-        s = l.useCallback(
+        s = n.useCallback(
             function () {
                 let e = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : E.i.TAKE_ACTION;
                 i && r(e);
@@ -30,7 +30,7 @@ function G(e) {
 }
 function P(e) {
     let t = d(e);
-    l.useEffect(() => {
+    n.useEffect(() => {
         t > 0 && (0, i.$l)(a, t, { dismissAction: E.i.AUTO_DISMISS, guildId: e });
     }, [t, e]);
 }

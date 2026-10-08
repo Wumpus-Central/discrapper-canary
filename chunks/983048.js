@@ -1,4 +1,4 @@
-n.d(t, { A: () => ee, i: () => J });
+n.d(t, { A: () => ee, i: () => $ });
 var i = n(477900);
 n(582128);
 var s = n(503698),
@@ -211,7 +211,7 @@ function Q(e) {
         ],
     });
 }
-function $() {
+function J() {
     return (0, i.jsxs)("div", {
         className: H.Up,
         children: [
@@ -220,10 +220,10 @@ function $() {
         ],
     });
 }
-function J() {
+function $() {
     let { analyticsLocations: e } = (0, h.Ay)(E.A.ACCOUNT_CREDIT_BANNER);
     return (0, i.jsx)(q, {
-        wordMark: (0, i.jsx)($, {}),
+        wordMark: (0, i.jsx)(J, {}),
         subscriptionInfo: (0, i.jsx)("div", { className: H.MS, children: V.intl.string(V.t.R0GJL2) }),
         buttons: (0, i.jsx)(F.A, {
             className: H.au,
@@ -245,14 +245,14 @@ let ee = function (e) {
         { analyticsLocations: M } = (0, h.Ay)(E.A.SUBSCRIPTION_HEADER),
         U = (0, x.A)({ forceFetch: !1 }),
         { fractionalState: k } = U,
-        J = k === z.xc.FP_SUB_PAUSED,
+        $ = k === z.xc.FP_SUB_PAUSED,
         ee = (0, P.O)(),
         et = ee?.discount?.amount,
         en = (0, L.k5)(),
         ei = (0, L.nf)(),
         es = (0, R.ds)();
     function el() {
-        (t.status === Y.Dmq.ACTIVE || t.status === Y.Dmq.PAST_DUE || t.status === Y.Dmq.PAUSE_PENDING || J) && ea();
+        (t.status === Y.Dmq.ACTIVE || t.status === Y.Dmq.PAST_DUE || t.status === Y.Dmq.PAUSE_PENDING || $) && ea();
     }
     function er() {
         t.status === Y.Dmq.BILLING_RETRY && ea(B.g.CONFIRM);
@@ -376,7 +376,7 @@ let ee = function (e) {
             [H.hA]: eA === z.PremiumTypes.TIER_2,
             [H.aD]: em === Y.Dmq.CANCELED,
             [H.WY]: em === Y.Dmq.PAUSE_PENDING,
-            [H.Ft]: em === Y.Dmq.PAUSED && !J,
+            [H.Ft]: em === Y.Dmq.PAUSED && !$,
             [H.GD]: (0, v.PK)(em),
         },
         eh = null;
@@ -391,12 +391,12 @@ let ee = function (e) {
             });
             break;
         case z.PremiumTypes.TIER_1:
-            eh = (0, i.jsx)($, {});
+            eh = (0, i.jsx)(J, {});
             break;
         case z.PremiumTypes.TIER_2:
             eh = (0, i.jsx)(N, { className: H.V6, "aria-label": V.intl.string(V.t.lpNrPu) });
     }
-    let ex = Z.includes(t.status) && !J ? Q : q;
+    let ex = Z.includes(t.status) && !$ ? Q : q;
     return (0, i.jsx)(ex, {
         wordMark: eh,
         subscriptionInfo:
@@ -412,7 +412,7 @@ let ee = function (e) {
                           renewalInvoiceWithEntitlementsPreview: r,
                           hasDiscountApplied: en,
                           activeDiscountInfo: ei,
-                          hasFractionalPremiumWithSub: J,
+                          hasFractionalPremiumWithSub: $,
                           fractionalPremiumInfo: U,
                       }),
             })),
@@ -517,7 +517,7 @@ let ee = function (e) {
                         ],
                     });
                 case Y.Dmq.PAUSED:
-                    if (J) return n();
+                    if ($) return n();
                     let { durations: s } = (0, O.Vy)(t);
                     return (0, i.jsxs)("div", {
                         className: H.Lv,

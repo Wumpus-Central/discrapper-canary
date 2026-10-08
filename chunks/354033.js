@@ -17,8 +17,8 @@ var i = n(503698),
     S = n(500345),
     E = n(599941),
     y = n(320137),
-    A = n(417360),
-    I = n(759625),
+    I = n(417360),
+    A = n(759625),
     g = n(2242),
     P = n(660183),
     v = n(631907),
@@ -65,7 +65,7 @@ function T(e) {
         r = (0, a.bG)([C.A], () => C.A.getGuild(i), [i]),
         o = (0, y.A)(i).filter((e) => e.roles.includes(n.role_id)),
         u = n.role_benefits.benefits.filter(S.B1).slice(0, null === o.length ? 4 : 3),
-        m = (0, A.A)(u).slice(0, null === o.length ? 4 : 3);
+        m = (0, I.A)(u).slice(0, null === o.length ? 4 : 3);
     return (0, l.jsxs)("div", {
         className: v.RP,
         children: [
@@ -93,7 +93,7 @@ function T(e) {
                         (0, l.jsx)("div", {
                             className: v.M3,
                             children: m.map((e) =>
-                                (0, l.jsx)(I.A, { benefit: e, guildId: i, onClick: () => t(!0) }, (0, S.nh)(e)),
+                                (0, l.jsx)(A.A, { benefit: e, guildId: i, onClick: () => t(!0) }, (0, S.nh)(e)),
                             ),
                         }),
                     ],

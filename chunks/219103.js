@@ -25,8 +25,8 @@ function E(e) {
         variant: s = "text-md/semibold",
     } = e;
     return n === h.Yr.DISCORD_ORB
-        ? (0, l.jsx)(I, { orbAmount: t, className: r, discount: a, variant: s })
-        : (0, l.jsx)(A, {
+        ? (0, l.jsx)(A, { orbAmount: t, className: r, discount: a, variant: s })
+        : (0, l.jsx)(I, {
               priceAmount: t,
               priceCurrency: n,
               discountIconConfig: i,
@@ -59,7 +59,7 @@ function y(e) {
             return (t.source, null);
     }
 }
-function A(e) {
+function I(e) {
     let {
             priceAmount: t,
             priceCurrency: n,
@@ -101,7 +101,7 @@ function A(e) {
         ],
     });
 }
-function I(e) {
+function A(e) {
     let { orbAmount: t, className: n, discount: i = m.rr, variant: a = "text-md/semibold" } = e,
         s =
             i !== m.rr && i.discountPercentage >= m.es

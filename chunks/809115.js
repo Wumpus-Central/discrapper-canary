@@ -1,7 +1,7 @@
 n.d(t, { a: () => h, l: () => g });
 var i = n(477900),
-    l = n(582128),
-    s = n(17928),
+    s = n(582128),
+    l = n(17928),
     a = n(97808),
     r = n(778712),
     o = n(775602),
@@ -12,15 +12,15 @@ var i = n(477900),
 let x = d.Ay.getEnableHardwareAcceleration() ? a.Js : a.eu;
 function h() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        [t, n] = l.useState(!1),
-        i = (0, s.bG)([o.Ay], () => o.Ay.useReducedMotion),
-        a = l.useMemo(() => {
+        [t, n] = s.useState(!1),
+        i = (0, l.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        a = s.useMemo(() => {
             let n = t || (!i && !e);
             return (0, c.q)(n);
         }, [t, i, e]);
     return {
         avatarSrc: a,
-        eventHandlers: { onMouseEnter: l.useCallback(() => n(!0), []), onMouseLeave: l.useCallback(() => n(!1), []) },
+        eventHandlers: { onMouseEnter: s.useCallback(() => n(!0), []), onMouseLeave: s.useCallback(() => n(!1), []) },
     };
 }
 function g(e) {

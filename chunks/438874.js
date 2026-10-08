@@ -1,18 +1,18 @@
-e.d(t, { A: () => A });
-var r = e(512750),
-    d = e(17928),
-    n = e(71393),
-    s = e(294384),
-    a = e(998418),
-    o = e(568065),
-    i = e(652215);
-function A(u, t) {
-    let e = (0, a.Ay)(u, t),
-        A = (0, d.bG)([n.A], () => n.A.getGuild(u)?.features.has(i.GuildFeatures.GUILD_THEME) === !0, [u]),
-        c = t.skuId === r.d0,
-        p = e.type !== o.b_.INACTIVE || (c && A),
-        I = e.type === o.b_.TIER_OVERRIDE_ACTIVATED,
-        h = (0, s.Ay)(u, t, "GuildPowerupCardFooterAdmin"),
-        k = o.HO;
-    return { showToggleButton: (p || !h) && !I, showConfigureButton: p && k.has(t.skuId), isPowerupActive: p };
+l.d(t, { A: () => d });
+var n = l(512750),
+    i = l(17928),
+    s = l(71393),
+    r = l(294384),
+    o = l(998418),
+    a = l(568065),
+    u = l(652215);
+function d(e, t) {
+    let l = (0, o.Ay)(e, t),
+        d = (0, i.bG)([s.A], () => s.A.getGuild(e)?.features.has(u.GuildFeatures.GUILD_THEME) === !0, [e]),
+        c = t.skuId === n.d0,
+        m = l.type !== a.b_.INACTIVE || (c && d),
+        p = l.type === a.b_.TIER_OVERRIDE_ACTIVATED,
+        x = (0, r.Ay)(e, t, "GuildPowerupCardFooterAdmin"),
+        g = a.HO;
+    return { showToggleButton: (m || !x) && !p, showConfigureButton: m && g.has(t.skuId), isPowerupActive: m };
 }

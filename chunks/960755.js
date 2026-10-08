@@ -11,20 +11,20 @@ var i = n(435558),
     A = n(152007),
     E = n(617617),
     h = n(280450),
-    C = n(924985),
-    _ = n(734057),
+    _ = n(924985),
+    C = n(734057),
     g = n(945886),
     I = n(576705),
     T = n(573163),
     p = n(309010),
     N = n(543465),
     S = n(403362),
-    O = n(935208),
-    f = n(297469),
+    f = n(935208),
+    O = n(297469),
     L = n(355097);
 let m = null,
     R = null,
-    b = new f.Ay();
+    b = new O.Ay();
 function U() {
     let e = p.Ay.getChannelId(),
         t = p.Ay.getVoiceChannelId();
@@ -76,7 +76,7 @@ function x() {
 }
 function V(e) {
     let { id: t } = e,
-        n = _.A.getChannel(t);
+        n = C.A.getChannel(t);
     return null == n ? b.clearGuildId(t) : b.clearGuildId(n.guild_id);
 }
 function w(e) {
@@ -93,7 +93,7 @@ function H(e) {
 class k extends r.Ay.Store {
     static displayName = "ChannelListStore";
     initialize() {
-        this.waitFor(u.A, h.default, C.A, _.A, g.A, a.Ay, d.A, c.Ay, A.A, I.A, T.Ay, p.Ay, N.Ay, E.A);
+        this.waitFor(u.A, h.default, _.A, C.A, g.A, a.Ay, d.A, c.Ay, A.A, I.A, T.Ay, p.Ay, N.Ay, E.A);
     }
     getGuild(e, t) {
         let n = b.getGuild(e, t?.guildActionRows ?? [], t?.channelNoticeRows ?? []);
@@ -122,7 +122,7 @@ let B = new k(s.h, {
             n = !1;
         return (
             l()(t)
-                .map((e) => _.A.getChannel(e.channelId)?.guild_id)
+                .map((e) => C.A.getChannel(e.channelId)?.guild_id)
                 .filter(S.Vq)
                 .uniq()
                 .forEach((e) => {
@@ -140,7 +140,7 @@ let B = new k(s.h, {
     CHANNEL_ACK: y,
     CHANNEL_COLLAPSE: function (e) {
         let { channelId: t } = e;
-        return b.clearGuildId(_.A.getChannel(t)?.guild_id);
+        return b.clearGuildId(C.A.getChannel(t)?.guild_id);
     },
     CHANNEL_CREATE: D,
     CHANNEL_DELETE: D,
@@ -266,7 +266,7 @@ let B = new k(s.h, {
             i = !1;
         return (
             null != n &&
-                O.default.keys(n).forEach((e) => {
+                f.default.keys(n).forEach((e) => {
                     null != n[e].guildRecentsDismissedAt && (i = b.updateRecentsCategory(e) || i);
                 }),
             i

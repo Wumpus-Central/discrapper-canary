@@ -22,7 +22,7 @@ function u(e) {
             metadata: c,
         }),
         y = f ? d : S,
-        A = l.useMemo(() => {
+        I = l.useMemo(() => {
             let e = p ? (y ?? null) : null;
             return {
                 discountOffer: m,
@@ -39,13 +39,13 @@ function u(e) {
         })),
         l.useEffect(
             () => (
-                t(A),
+                t(I),
                 () => {
                     t(r.T);
                 }
             ),
-            [A, t],
+            [I, t],
         ),
-        A
+        I
     );
 }

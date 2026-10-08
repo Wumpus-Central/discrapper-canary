@@ -16,8 +16,8 @@ var l = n(477900),
     S = n(403581),
     E = n(278416),
     y = n(993408),
-    A = n(1076),
-    I = n(288106),
+    I = n(1076),
+    A = n(288106),
     g = n(604913),
     P = n(223311),
     v = n(306396),
@@ -42,7 +42,7 @@ function D(e) {
                     setCollectedModalOverrideTitle: l,
                     setCollectedModalOverrideDescription: r,
                     setCollectedModalGradientColor: a,
-                } = (0, A.z)(),
+                } = (0, I.z)(),
                 s = (0, P.A)(N.FYj),
                 o = null != n ? (0, x.L)(n, s) : null,
                 u = o?.tenantMetadata?.collectibles;
@@ -51,7 +51,7 @@ function D(e) {
                     case g.hE.COLLECT_AND_CLAIM: {
                         let e = o?.progress;
                         if (null == n || null == e) break;
-                        if (o?.rewardStatus === I.GM.IN_PROGRESS) {
+                        if (o?.rewardStatus === A.GM.IN_PROGRESS) {
                             let t = Math.min(e.current + (0, v.oO)(n, u.collectionId), e.target);
                             l(b.intl.formatToPlainString(b.t.G9koyR, { current: t, target: e.target }));
                         } else l(void 0);
@@ -78,8 +78,8 @@ var U = n(951305),
     B = n(991690),
     H = n(17928),
     W = n(10716),
-    Y = n(206828),
-    V = n(31823),
+    V = n(206828),
+    Y = n(31823),
     K = n(427675),
     Z = n(977445),
     q = n(118982),
@@ -174,7 +174,7 @@ function er(e) {
         { isGift: C, giftRecipient: S } = (0, U.Pv)(),
         {
             sku: y,
-            application: A,
+            application: I,
             eligiblePaymentGateways: P,
             disabled: v,
         } = (function () {
@@ -182,7 +182,7 @@ function er(e) {
                     selectedSkuId: e.selectedSkuId,
                     purchaseState: e.purchaseState,
                 })),
-                { application: n } = (0, V.V)(),
+                { application: n } = (0, Y.V)(),
                 l = (0, K.gU)();
             F()(null != e, "Expected selectedSkuId");
             let i = l[e],
@@ -216,7 +216,7 @@ function er(e) {
         { upperInlineNoticeProps: M, footerInlineNoticeProps: L } = (function (e) {
             let { sku: t, application: n, isGift: l } = e,
                 r = (0, H.bG)([W.A], () => W.A.getFetchState()),
-                { fetched: a, hasAlreadyLinked: s } = (0, Y.RD)(n),
+                { fetched: a, hasAlreadyLinked: s } = (0, V.RD)(n),
                 o = (0, Z.uS)(n.id),
                 u = null != t && t.productLine === N.EZt.SOCIAL_LAYER_GAME_ITEM,
                 c = n.supportsEmbeddedSurface(B.U.MAIN) && r === W.$.ERROR,
@@ -249,7 +249,7 @@ function er(e) {
                     );
                 }, [d]),
             };
-        })({ sku: y, application: A, isGift: C }),
+        })({ sku: y, application: I, isGift: C }),
         w = i.useMemo(() => ({ paymentGatewayRestrictions: P, shouldUseUnifiedCheckoutUI: !0 }), [P]),
         G = (0, l.jsx)(u.N, {
             label: b.intl.string(b.t["u+Cw58"]),
@@ -304,7 +304,7 @@ function er(e) {
             var e, t;
             return (
                 (e = n),
-                (t = { priceText: er, sku: y, application: A, giftRecipient: S }),
+                (t = { priceText: er, sku: y, application: I, giftRecipient: S }),
                 e === o.C.SLAYER_STOREFRONT_CHECKOUT
                     ? (0, l.jsx)(en, { ...t })
                     : e === o.C.GUILD_PRODUCT_CHECKOUT
@@ -313,7 +313,7 @@ function er(e) {
                         ? (0, l.jsx)(ei, { ...t })
                         : (0, l.jsx)(et, { ...t })
             );
-        }, [n, y, A, S, er]),
+        }, [n, y, I, S, er]),
         eo = i.useMemo(() => (null != r ? (0, f.$g)(r.getAmountDue(), r.currency) : void 0), [r]),
         eu = (0, h.g)(X ?? null),
         ec = i.useMemo(
@@ -331,7 +331,7 @@ function er(e) {
                                         return t
                                             ? null
                                             : (function (e) {
-                                                  if (e.rewardStatus !== I.GM.IN_PROGRESS) return null;
+                                                  if (e.rewardStatus !== A.GM.IN_PROGRESS) return null;
                                                   let t = e.progress;
                                                   if (null == t || null == e.endsAt) return null;
                                                   let n = (0, O.X)(e.endsAt);

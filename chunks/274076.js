@@ -23,10 +23,10 @@ function h(e) {
         } = (0, s.Pv)(),
         E = (0, u.lo)(n, t),
         y = E === u.tB.CUSTOM_MESSAGE_EMOJI_SOUNDBOARD,
-        A = E !== u.tB.DEFAULT;
+        I = E !== u.tB.DEFAULT;
     return (0, l.jsxs)("div", {
         children: [
-            A &&
+            I &&
                 (0, l.jsxs)("div", {
                     className: m.Os,
                     children: [

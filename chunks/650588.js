@@ -18,8 +18,8 @@ function E(e) {
     let { onSelect: t, sound: n } = e,
         [r, E] = i.useState(!1),
         y = i.useRef(null),
-        A = a()(f.Qq, f.Ow);
-    function I(e) {
+        I = a()(f.Qq, f.Ow);
+    function A(e) {
         (E(!1), t?.(e));
     }
     function g(e) {
@@ -52,7 +52,7 @@ function E(e) {
                     guildId: null,
                     channel: null,
                     onClose: t,
-                    onSelect: I,
+                    onSelect: A,
                     analyticsSource: "gift soundboard",
                     soundButtonOverlay: m.If.ADD,
                     listPadding: S,
@@ -79,7 +79,7 @@ function E(e) {
                                       height: 14,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: A,
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: C.intl.string(C.t.aThJz8),
@@ -90,13 +90,13 @@ function E(e) {
                               className: f.hQ,
                               children: [
                                   (0, l.jsx)(o.E, {
-                                      className: A,
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.emojiName,
                                   }),
                                   (0, l.jsx)(o.E, {
-                                      className: A,
+                                      className: I,
                                       variant: "text-sm/semibold",
                                       lineClamp: 1,
                                       children: n.name,

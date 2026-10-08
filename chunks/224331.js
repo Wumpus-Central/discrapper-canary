@@ -1,8 +1,8 @@
-e.d(t, { A: () => n });
-var r = e(582128),
-    d = e(915667);
-function n(u, t) {
-    return r.useCallback(() => {
-        (0, d.A)(u, t);
-    }, [u, t]);
+l.d(t, { A: () => s });
+var n = l(582128),
+    i = l(915667);
+function s(e, t) {
+    return n.useCallback(() => {
+        (0, i.A)(e, t);
+    }, [e, t]);
 }

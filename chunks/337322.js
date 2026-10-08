@@ -1,47 +1,47 @@
-(s.d(e, { A: () => d }), s(321073));
-var a = s(582128),
-    o = s(403362),
-    i = s(202541),
-    r = s(568065),
-    n = s(356863),
-    l = s(660183);
-function d(t) {
+(i.d(o, { A: () => l }), i(321073));
+var s = i(582128),
+    e = i(403362),
+    a = i(202541),
+    n = i(568065),
+    r = i(356863),
+    d = i(660183);
+function l(t) {
     let {
-        includeEmojis: e,
-        includeStickers: s,
-        includeSoundboards: d,
+        includeEmojis: o,
+        includeStickers: i,
+        includeSoundboards: l,
     } = arguments.length > 1 && void 0 !== arguments[1]
         ? arguments[1]
         : { includeEmojis: !0, includeStickers: !0, includeSoundboards: !0 };
-    return a.useMemo(() => {
-        let a = [],
-            u = (0, r.w$)();
+    return s.useMemo(() => {
+        let s = [],
+            u = (0, n.w$)();
         return (
-            e &&
-                a.push({
-                    perkIcon: i.TP.EMOJI,
-                    description: l.intl.formatToPlainString(n.default["NXvV0+"], {
+            o &&
+                s.push({
+                    perkIcon: a.TP.EMOJI,
+                    description: d.intl.formatToPlainString(r.default["NXvV0+"], {
                         totalEmojis: t.features.total_emoji_slots,
                         additionalEmojis: t.features.additional_emoji_slots,
                     }),
                 }),
-            s &&
-                a.push({
-                    perkIcon: i.TP.STICKER,
-                    description: l.intl.formatToPlainString(n.default.ZEvvPz, {
+            i &&
+                s.push({
+                    perkIcon: a.TP.STICKER,
+                    description: d.intl.formatToPlainString(r.default.ZEvvPz, {
                         totalStickers: t.features.total_sticker_slots,
                         additionalStickers: t.features.additional_sticker_slots,
                     }),
                 }),
-            d &&
-                a.push({
-                    perkIcon: i.TP.SOUNDBOARD,
-                    description: l.intl.formatToPlainString(n.default["s9u/E7"], {
+            l &&
+                s.push({
+                    perkIcon: a.TP.SOUNDBOARD,
+                    description: d.intl.formatToPlainString(r.default["s9u/E7"], {
                         totalSoundboards: t.features.total_sound_slots,
                         additionalSoundboards: t.features.additional_sound_slots,
                     }),
                 }),
-            a.concat(t.features.features.map((t) => u[t]).filter(o.Vq))
+            s.concat(t.features.features.map((t) => u[t]).filter(e.Vq))
         );
-    }, [t, e, s, d]);
+    }, [t, o, i, l]);
 }

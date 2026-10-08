@@ -163,10 +163,10 @@ let y = [
         "ZA",
         "ZW",
     ],
-    A = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
+    I = u.A.map((e) => ({ id: e.alpha2, value: e.alpha2, label: e.name })).filter(
         (e) => "KP" !== e.value && "SY" !== e.value,
     ),
-    I = Object.freeze(A.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
+    A = Object.freeze(I.reduce((e, t) => ({ ...e, [t.label.toLowerCase()]: t.value }), {})),
     g = (0, h.Ld)(),
     P = (0, h.Ld)(),
     v = (0, h.Ld)(),
@@ -210,7 +210,7 @@ let R = { US: c, CA: s },
     }),
     L = (e, t) => {
         let n = t?.allowedBillingAddressCountries,
-            l = null != n && n.length > 0 ? A.filter((e) => n.includes(e.value)) : A,
+            l = null != n && n.length > 0 ? I.filter((e) => n.includes(e.value)) : I,
             i = t?.countryHelperText;
         return {
             name: "country",
@@ -242,7 +242,7 @@ let R = { US: c, CA: s },
                         let l = t.target.value;
                         if (null == n) return;
                         let i = l.toLowerCase();
-                        i in I && n(I[i], e.name);
+                        i in A && n(A[i], e.name);
                     },
                     onSelectionChange: (t) => {
                         null != n && n(t, e.name);

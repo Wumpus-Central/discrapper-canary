@@ -51,9 +51,9 @@ function E(e) {
             primaryTooltip: f,
             primaryDisabled: E,
             primarySubmitting: y,
-            onPrimary: A,
+            onPrimary: I,
         } = e,
-        I =
+        A =
             null == t
                 ? null
                 : (0, i.jsx)(o.Q, { text: n ?? m.intl.string(m.t["13/7kX"]), onClick: t, variant: "secondary" }),
@@ -74,16 +74,16 @@ function E(e) {
                         primaryText: C,
                         primaryDisabled: E,
                         primarySubmitting: y,
-                        onPrimary: A,
+                        onPrimary: I,
                     };
                     return null != f
                         ? (0, i.jsx)(c.m, { text: f, asContainer: !0, children: (0, i.jsx)(S, { ...e }) })
-                        : (0, i.jsx)(S, { ...e, onPrimary: A });
+                        : (0, i.jsx)(S, { ...e, onPrimary: I });
                 })(),
             ],
         });
     return (0, i.jsx)(u.j, {
-        children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == I }), children: [I, g] }),
+        children: (0, i.jsxs)("div", { className: a()(h.eT, { [h.T$]: null == A }), children: [A, g] }),
     });
 }
 E.CTAType = C;

@@ -1,39 +1,39 @@
-t.d(n, { A: () => f });
+t.d(a, { A: () => E });
 var l = t(477900);
 t(582128);
-var r = t(191023),
-    i = t(140735),
-    a = t(963027),
+var n = t(191023),
+    r = t(140735),
+    i = t(963027),
     s = t(47167),
     u = t(713654),
-    c = t(403362),
-    o = t(739455),
-    d = t(2242),
-    m = t(660183),
-    h = t(669748);
-function E(e) {
-    let { channelId: n } = e,
-        t = (0, o.fE)(n),
-        c = (0, s.Ay)(t);
-    if (null == t) return `[${m.intl.string(m.t.bz1PZX)}]`;
-    let d = t.isMediaChannel() ? r.ImageIcon : (0, u._U)(t.type);
+    o = t(403362),
+    c = t(739455),
+    h = t(2242),
+    d = t(660183),
+    m = t(669748);
+function A(e) {
+    let { channelId: a } = e,
+        t = (0, c.fE)(a),
+        o = (0, s.Ay)(t);
+    if (null == t) return `[${d.intl.string(d.t.bz1PZX)}]`;
+    let h = t.isMediaChannel() ? n.ImageIcon : (0, u._U)(t.type);
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(i.A, { children: (0, a.Ay)({ channel: t }) }),
+            (0, l.jsx)(r.A, { children: (0, i.Ay)({ channel: t }) }),
             (0, l.jsxs)("div", {
                 "aria-hidden": !0,
-                children: [null != d && (0, l.jsx)(d, { className: h.K, "aria-hidden": !0 }), c],
+                children: [null != h && (0, l.jsx)(h, { className: m.K, "aria-hidden": !0 }), o],
             }),
         ],
     });
 }
-function f(e) {
+function E(e) {
     switch (e.ref_type) {
-        case d.bN.CHANNEL:
-            return (0, l.jsx)(E, { channelId: e.ref_id });
-        case d.bN.INTANGIBLE:
+        case h.bN.CHANNEL:
+            return (0, l.jsx)(A, { channelId: e.ref_id });
+        case h.bN.INTANGIBLE:
             return e.name;
         default:
-            (0, c.xb)(e);
+            (0, o.xb)(e);
     }
 }

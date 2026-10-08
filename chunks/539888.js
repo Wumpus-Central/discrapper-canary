@@ -68,11 +68,11 @@ function C() {
 var y = l(562073),
     T = l(189213),
     R = l(192308),
-    D = l(253145),
-    k = l(104129),
+    k = l(253145),
+    D = l(104129),
     w = l(660183),
-    M = l(397462);
-function L(e) {
+    L = l(397462);
+function M(e) {
     let {
         title: t,
         widgetName: l,
@@ -85,31 +85,31 @@ function L(e) {
         onRemove: f,
     } = e;
     return (0, n.jsxs)("div", {
-        className: a()(M.wx, { [M.kZ]: null != m }),
+        className: a()(L.wx, { [L.kZ]: null != m }),
         children: [
             (0, n.jsx)("div", {
                 ref: m,
-                className: M.T_,
+                className: L.T_,
                 "data-dnd-name": l,
                 children: (0, n.jsxs)("div", {
-                    className: M.i8,
+                    className: L.i8,
                     children: [
                         null != m &&
                             (0, n.jsx)("div", {
-                                className: M.BU,
+                                className: L.BU,
                                 children: (0, n.jsx)(p.jV, {
                                     iconSize: "xs",
-                                    "aria-label": w.intl.formatToPlainString(k.default.NV85DR, { widgetName: l }),
+                                    "aria-label": w.intl.formatToPlainString(D.default.NV85DR, { widgetName: l }),
                                 }),
                             }),
-                        null != i && (0, n.jsx)("div", { className: M.gr, children: i }),
+                        null != i && (0, n.jsx)("div", { className: L.gr, children: i }),
                         t,
                         s,
                     ],
                 }),
             }),
             (0, n.jsxs)("div", {
-                className: M.o1,
+                className: L.o1,
                 children: [
                     x &&
                         (0, n.jsx)(d.m, {
@@ -133,7 +133,7 @@ function L(e) {
                                 "aria-label":
                                     "" === l
                                         ? w.intl.string(w.t.Mm07Yc)
-                                        : w.intl.formatToPlainString(k.default.hmNYxk, { widgetName: l }),
+                                        : w.intl.formatToPlainString(D.default.hmNYxk, { widgetName: l }),
                                 disabled: r,
                                 onClick: f,
                             }),
@@ -146,18 +146,18 @@ function L(e) {
 function U(e) {
     let { title: t, titleIcon: l, accessory: i, trailing: s, actions: a } = e;
     return (0, n.jsxs)("div", {
-        className: M.wx,
+        className: L.wx,
         children: [
             (0, n.jsxs)("div", {
-                className: M.i8,
-                children: [null != l && (0, n.jsx)("div", { className: M.gr, children: l }), t, i],
+                className: L.i8,
+                children: [null != l && (0, n.jsx)("div", { className: L.gr, children: l }), t, i],
             }),
             (null != s || null != a) &&
                 (0, n.jsxs)("div", {
-                    className: M.Bo,
+                    className: L.Bo,
                     children: [
-                        null != s && (0, n.jsx)("div", { className: M.o5, children: s }),
-                        null != a && (0, n.jsx)("div", { className: M.o1, children: a }),
+                        null != s && (0, n.jsx)("div", { className: L.o5, children: s }),
+                        null != a && (0, n.jsx)("div", { className: L.o1, children: a }),
                     ],
                 }),
         ],
@@ -167,7 +167,7 @@ function G(e) {
     let { title: t, boostPrice: l, powerupSkuId: i, LockedPreview: s, guildId: a } = e,
         d = (0, r.bG)([j.A], () => (null != i ? j.A.getStateForGuild(a)?.allPowerups[i] : void 0), [a, i]);
     return (0, n.jsxs)(m.B, {
-        className: M.xt,
+        className: L.xt,
         align: "center",
         justify: "center",
         gap: 32,
@@ -177,7 +177,7 @@ function G(e) {
                 gap: 16,
                 children: [
                     (0, n.jsx)("div", {
-                        className: M.$x,
+                        className: L.$x,
                         children: null != s ? (0, n.jsx)(s, { alt: "", ariaHidden: !0 }) : (0, n.jsx)(C, {}),
                     }),
                     (0, n.jsxs)(m.B, {
@@ -187,7 +187,7 @@ function G(e) {
                             (0, n.jsx)(x.E, {
                                 variant: "text-md/semibold",
                                 color: "text-default",
-                                children: w.intl.formatToPlainString(k.default.G5zCGV, { widgetName: t }),
+                                children: w.intl.formatToPlainString(D.default.G5zCGV, { widgetName: t }),
                             }),
                             null != l &&
                                 l > 0 &&
@@ -204,7 +204,7 @@ function G(e) {
                                         (0, n.jsx)(x.E, {
                                             variant: "text-sm/normal",
                                             color: "text-muted",
-                                            children: w.intl.format(k.default["8wD0Un"], { boostPrice: l }),
+                                            children: w.intl.format(D.default["8wD0Un"], { boostPrice: l }),
                                         }),
                                     ],
                                 }),
@@ -238,7 +238,7 @@ function P(e) {
             disabled: o = !1,
             lock: u,
         } = e,
-        m = D.m[l.type],
+        m = k.m[l.type],
         x = i.useCallback(() => {
             m?.Edit != null &&
                 null != d &&
@@ -276,11 +276,11 @@ function P(e) {
                 ? (0, n.jsx)(v, { widget: l, hydration: a, guildSpaceMode: s, guildId: t })
                 : (0, n.jsx)(y.q, { children: S });
     return (0, n.jsxs)("div", {
-        className: M.kL,
+        className: L.kL,
         "data-guild-space-widget": "",
         children: [
             A
-                ? (0, n.jsx)(L, {
+                ? (0, n.jsx)(M, {
                       title: C,
                       widgetName: S,
                       titleIcon: I,
@@ -299,7 +299,7 @@ function P(e) {
                       actions: b,
                   }),
             (0, n.jsx)("div", {
-                className: M.rf,
+                className: L.rf,
                 children:
                     null != u
                         ? (0, n.jsx)(G, {

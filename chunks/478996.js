@@ -1,10 +1,10 @@
-r.d(t, { rQ: () => s, W0: () => n.W, Qr: () => c.Q });
+r.d(t, { rQ: () => c, W0: () => n.W, Qr: () => s.Q });
 var n = r(309954),
     a = r(582128),
     l = r(17928),
     i = r(786953),
     d = r(505274);
-function s(e) {
+function c(e) {
     let {
         totalRedeemed: t,
         isFetching: r,
@@ -21,4 +21,4 @@ function s(e) {
         { totalRedeemed: t, isFetching: r, error: n }
     );
 }
-var c = r(715054);
+var s = r(715054);

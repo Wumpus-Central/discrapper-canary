@@ -1,6 +1,6 @@
-t.d(n, { A: () => i });
+t.d(a, { A: () => r });
 var l = t(17928),
-    r = t(734057);
-function i(e) {
-    return (0, l.yK)([r.A], () => e.filter((e) => r.A.hasChannel(e.ref_id)), [e]);
+    n = t(734057);
+function r(e) {
+    return (0, l.yK)([n.A], () => e.filter((e) => n.A.hasChannel(e.ref_id)), [e]);
 }

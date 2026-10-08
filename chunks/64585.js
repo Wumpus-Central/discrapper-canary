@@ -1,4 +1,4 @@
-(n.d(t, { A: () => f }), n(321073));
+(n.d(t, { A: () => O }), n(321073));
 var i = n(73153),
     l = n(272355),
     r = n(400492),
@@ -11,12 +11,12 @@ var i = n(73153),
     A = n(559908),
     E = n(652215);
 let h = (0, r.aN)("poggermode_applause", s.A.getSoundpack()),
-    C = !1,
     _ = !1,
+    C = !1,
     g = [],
     I = null;
 function T() {
-    (h.stop(), (C = !1));
+    (h.stop(), (_ = !1));
 }
 function p() {
     let e = u.A.isEnabled(),
@@ -24,15 +24,15 @@ function p() {
     return !!e && !!t && null != d.Ay.getChannelId();
 }
 function N() {
-    if (0 === g.length || !p() || _) return;
-    _ = !0;
+    if (0 === g.length || !p() || C) return;
+    C = !0;
     let [e, t] = g[g.length - 1];
     ((0, r.Ak)(e, t), (I = setTimeout(S, 1e3)));
 }
 function S() {
-    (g.pop(), (_ = !1), N());
+    (g.pop(), (C = !1), N());
 }
-class O extends l.A {
+class f extends l.A {
     _initialize() {
         (A.Ay.addChangeListener(this.startAudio),
             i.h.subscribe("RTC_CONNECTION_STATE", this.setVolume),
@@ -69,7 +69,7 @@ class O extends l.A {
             n = c.A.isTyping(e, t),
             i = A.Ay.getUserCombo(t, e),
             l = i?.multiplier ?? 1;
-        n && l >= 7 ? C || (h.loop(), (C = !0)) : T();
+        n && l >= 7 ? _ || (h.loop(), (_ = !0)) : T();
     }
     playAchievementUnlockSound() {
         p() &&
@@ -80,4 +80,4 @@ class O extends l.A {
             })("poggermode_achievement_unlock");
     }
 }
-let f = new O();
+let O = new f();

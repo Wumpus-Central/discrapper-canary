@@ -13,8 +13,8 @@ var i = n(582128),
     _ = n(247186),
     E = n(999915),
     h = n(551965),
-    m = n(625494),
-    y = n(211401),
+    y = n(625494),
+    m = n(211401),
     f = n(989837),
     v = n(500049),
     I = n(652215),
@@ -53,7 +53,7 @@ function S(e) {
             autoDismissOnClick: _ = !0,
             launchingComponentId: E,
             submitting: h = !1,
-            fetchesApplication: m = !0,
+            fetchesApplication: y = !0,
             onConfirmActivityLaunchChecksAlertOpen: g,
         } = e,
         T = (0, r.p)(),
@@ -69,7 +69,7 @@ function S(e) {
                 }, [e]),
                 t
             );
-        })((0, d.Hq)({ context: t, applicationId: n.id, fetchesApplication: m })),
+        })((0, d.Hq)({ context: t, applicationId: n.id, fetchesApplication: y })),
         S = (0, o.bG)([f.A], () => f.A.entrypoint()),
         w = i.useMemo(() => {
             if ("channel" !== t.type) return n.bot?.id ?? (0, s.Sx)(t, n.id).descriptor?.botId;
@@ -82,7 +82,7 @@ function S(e) {
             locationObject: T.location,
             onActivityItemSelectedProp: (e) => {
                 let { applicationId: t } = e;
-                (_ && y.k(v.Se.ACTIVITY),
+                (_ && m.k(v.Se.ACTIVITY),
                     (0, u.zV)(I.HAw.APP_LAUNCHER_ACTIVITY_ITEM_SELECTED, {
                         location: a,
                         application_id: t,
@@ -95,7 +95,7 @@ function S(e) {
             commandOrigin: A.iw.APPLICATION_LAUNCHER,
             sectionName: l,
             source: S,
-            fetchesApplication: m,
+            fetchesApplication: y,
             onConfirmActivityLaunchChecksAlertOpen: g,
         }),
         P = "primary",
@@ -125,5 +125,5 @@ function w(e, t) {
     }, [e, t, n, l]);
 }
 function L(e) {
-    m._.dispatchToLastSubscribed(I.jej.OPEN_APP_LAUNCHER, { applicationId: e });
+    y._.dispatchToLastSubscribed(I.jej.OPEN_APP_LAUNCHER, { applicationId: e });
 }

@@ -1,4 +1,4 @@
-n.d(t, { e: () => _ });
+n.d(t, { e: () => C });
 var i = n(477900),
     l = n(582128),
     r = n(503698),
@@ -11,21 +11,21 @@ if (221552 == n.j) var u = n(789645);
 var A = n(558001),
     E = n(835002),
     h = n(660183),
-    C = n(323747);
-function _(e) {
-    let { label: t, labelHook: n, count: r, dismissNotice: _, className: g, noticeType: I } = e,
-        T = null != _;
+    _ = n(323747);
+function C(e) {
+    let { label: t, labelHook: n, count: r, dismissNotice: C, className: g, noticeType: I } = e,
+        T = null != C;
     l.useEffect(() => {
         (0, A.N)(I, E.YX.VIEWED);
     }, [I]);
     let p = l.useCallback(() => {
-            null != _ && (_(), (0, A.N)(I, E.YX.DISMISS));
-        }, [I, _]),
+            null != C && (C(), (0, A.N)(I, E.YX.DISMISS));
+        }, [I, C]),
         N = l.useCallback(() => {
             (n(), (0, A.N)(I, E.YX.LEARN_MORE));
         }, [I, n]);
     return (0, i.jsxs)("div", {
-        className: s()(C.I, g),
+        className: s()(_.I, g),
         children: [
             (0, i.jsx)(a.CircleInformationIcon, { size: "md" }),
             (0, i.jsx)(o.E, {
@@ -39,7 +39,7 @@ function _(e) {
                           })
                         : h.intl.format(t, { hook: (e, t) => (0, i.jsx)(d.Anchor, { onClick: N, children: e }, t) }),
             }),
-            T && (0, i.jsx)(c.D, { className: C.b, onClick: p, children: (0, i.jsx)(u.P, {}) }),
+            T && (0, i.jsx)(c.D, { className: _.b, onClick: p, children: (0, i.jsx)(u.P, {}) }),
         ],
     });
 }

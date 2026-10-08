@@ -117,16 +117,16 @@ var I = n(192308),
     R = n(534890),
     y = n(331322),
     T = n(297264),
-    L = n(93055),
-    M = n(17839),
+    M = n(93055),
+    L = n(17839),
     U = n(384539),
     D = n(660183),
     O = n(27948);
 function P() {
     let e = l.useCallback(() => {
-        let { hasAccess: e } = (0, L.ad)();
+        let { hasAccess: e } = (0, M.ad)();
         e
-            ? (0, M.A)({ source: "favorites_empty_sidebar" })
+            ? (0, L.A)({ source: "favorites_empty_sidebar" })
             : (0, I.openModalLazy)(async () => {
                   let { default: e } = await n.e("307476").then(n.bind(n, 777023));
                   return (t) => (0, i.jsx)(e, { ...t, source: "favorites_empty_sidebar" });

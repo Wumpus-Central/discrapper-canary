@@ -1,30 +1,30 @@
-t.d(s, { K: () => p });
-var l = t(477900),
-    a = t(503698),
-    u = t.n(a),
-    c = t(17928),
-    n = t(462887),
-    r = t(607470),
-    i = t(363195),
-    d = t(770342);
-function p(e) {
-    let { className: s, options: t } = e,
-        a = (0, c.bG)([i.A], () => (0, n.M)(i.A.theme));
+t.d(e, { K: () => b });
+var a = t(477900),
+    p = t(503698),
+    n = t.n(p),
+    d = t(17928),
+    r = t(462887),
+    c = t(607470),
+    l = t(363195),
+    o = t(770342);
+function b(s) {
+    let { className: e, options: t } = s,
+        p = (0, d.bG)([l.A], () => (0, r.M)(l.A.theme));
     return null == t
         ? null
         : null != t
           ? t.animated
-              ? (0, l.jsx)(r.A, {
-                    src: t.getSrc(a),
-                    className: u()(d.O, s),
+              ? (0, a.jsx)(c.A, {
+                    src: t.getSrc(p),
+                    className: n()(o.O, e),
                     style: t.style,
                     loop: !1,
                     muted: !0,
                     autoPlay: !0,
                 })
-              : (0, l.jsx)("img", {
-                    src: t.getSrc(a),
-                    className: u()(d.O, s),
+              : (0, a.jsx)("img", {
+                    src: t.getSrc(p),
+                    className: n()(o.O, e),
                     style: t.style,
                     alt: "",
                     "aria-hidden": "true",

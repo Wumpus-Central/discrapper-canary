@@ -1,4 +1,4 @@
-(a.r(t), a.d(t, { playgroundConfig: () => Q, guildSpaceCollection: () => z }));
+(a.r(t), a.d(t, { playgroundConfig: () => K, guildSpaceCollection: () => z }));
 var s = a(477900),
     l = a(582128),
     n = a(503698),
@@ -215,8 +215,8 @@ let f = [
     };
 a(321073);
 var x = a(17928),
-    S = a(994500),
-    E = a(711014),
+    E = a(994500),
+    S = a(711014),
     w = a(287809),
     k = a(427262),
     I = a(539888),
@@ -245,15 +245,15 @@ let D = a(282435).sx.slice(0, 10),
         { days: 1, totalSeconds: 660, gameIndexes: [9] },
     ];
 var C = a(546184);
-let G = g("leaderboard", p.a.LEADERBOARD, 0, 0);
-function L(e) {
+let L = g("leaderboard", p.a.LEADERBOARD, 0, 0);
+function G(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
         className: `${C.Gt} ${a}`,
         children: [(0, s.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
-let M = {
+let P = {
     name: "Gaming Leaderboard",
     id: "guild-space-gaming-leaderboard",
     component: function (e) {
@@ -261,9 +261,9 @@ let M = {
             a,
             { state: n, stat: i, currentUserPlacement: o } = e,
             d = (0, x.bG)([w.default], () => w.default.getCurrentUser()?.id),
-            c = (0, x.bG)([E.Ay], () => E.Ay.getFlattenedGuildIds()[0]),
+            c = (0, x.bG)([S.Ay], () => S.Ay.getFlattenedGuildIds()[0]),
             u =
-                ((t = (0, x.yK)([S.A], () => S.A.getFriendIDs())),
+                ((t = (0, x.yK)([E.A], () => E.A.getFriendIDs())),
                 l.useMemo(
                     () =>
                         t
@@ -345,12 +345,12 @@ let M = {
                     : "error" === n
                       ? { status: "error" }
                       : { status: "success", data: g }));
-        let y = (0, s.jsx)(I.P, { guildId: c, widget: G, guildSpaceMode: "view", hydration: a });
+        let y = (0, s.jsx)(I.P, { guildId: c, widget: L, guildSpaceMode: "view", hydration: a });
         return (0, s.jsxs)("div", {
             className: C.Zp,
             children: [
-                (0, s.jsx)(L, { label: "Narrow column (380px)", className: C.sc, children: y }),
-                (0, s.jsx)(L, { label: "Wide column (685px)", className: C.U, children: y }),
+                (0, s.jsx)(G, { label: "Narrow column (380px)", className: C.sc, children: y }),
+                (0, s.jsx)(G, { label: "Wide column (685px)", className: C.U, children: y }),
             ],
         });
     },
@@ -390,12 +390,12 @@ let M = {
         },
     },
 };
-var P = a(343508);
+var M = a(343508);
 let F = [32, 21, 15, 14, 9],
     N = [3, 2, 0, 3, 1],
     H = g("popular-music", p.a.POPULAR_MUSIC, 0, 0),
-    U = ["1330000000000000101", "1330000000000000102", "1330000000000000103"],
-    j = {
+    j = ["1330000000000000101", "1330000000000000102", "1330000000000000103"],
+    U = {
         ranked_songs: [
             {
                 track_external_id: "2plbrEY59IikOBgBGLjaoe",
@@ -406,7 +406,7 @@ let F = [32, 21, 15, 14, 9],
                 plays: 21,
                 unique_listeners: 8,
                 plays_change_percent: 2,
-                facepile_user_ids: U,
+                facepile_user_ids: j,
             },
             {
                 track_external_id: "4eCwFoinvpIQi1kBEoAzQO",
@@ -417,7 +417,7 @@ let F = [32, 21, 15, 14, 9],
                 plays: 17,
                 unique_listeners: 6,
                 plays_change_percent: -4,
-                facepile_user_ids: U,
+                facepile_user_ids: j,
             },
             {
                 track_external_id: "1BxfuPKGuaTgP7aM0Bbdwr",
@@ -427,7 +427,7 @@ let F = [32, 21, 15, 14, 9],
                 cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f003",
                 plays: 14,
                 unique_listeners: 5,
-                facepile_user_ids: U,
+                facepile_user_ids: j,
             },
             {
                 track_external_id: "0V3wPSX9ygBnCm8psDIegu",
@@ -447,7 +447,7 @@ let F = [32, 21, 15, 14, 9],
                 cover_art_hash: "ab67616d0000b273d2e5f0b0e0b0a0c0d0e0f005",
                 plays: 9,
                 unique_listeners: 4,
-                facepile_user_ids: U,
+                facepile_user_ids: j,
             },
             {
                 track_external_id: "2takcwOaAZWiXQijPHIx7B",
@@ -515,7 +515,7 @@ let F = [32, 21, 15, 14, 9],
         plays_trend_pct: null,
     },
     B = {
-        ranked_songs: j.ranked_songs.map((e) => ({
+        ranked_songs: U.ranked_songs.map((e) => ({
             track_external_id: e.track_external_id,
             track_title: null,
             artist_external_id: null,
@@ -524,7 +524,7 @@ let F = [32, 21, 15, 14, 9],
             plays: e.plays,
             unique_listeners: e.unique_listeners,
         })),
-        ranked_artists: j.ranked_artists.map((e) => ({
+        ranked_artists: U.ranked_artists.map((e) => ({
             artist_external_id: e.artist_external_id,
             artist_name: null,
             plays: e.plays,
@@ -554,7 +554,7 @@ function Y(e, t, a) {
         top_listeners: t.map((e, t) => {
             let s;
             return a
-                ? ((s = j.ranked_songs[t % j.ranked_songs.length]),
+                ? ((s = U.ranked_songs[t % U.ranked_songs.length]),
                   {
                       user_id: e,
                       plays: F[t] ?? 1,
@@ -580,7 +580,7 @@ function Y(e, t, a) {
 function V(e) {
     let { label: t, className: a, children: l } = e;
     return (0, s.jsxs)("div", {
-        className: `${P.Gt} ${a}`,
+        className: `${M.Gt} ${a}`,
         children: [(0, s.jsx)(r.E, { variant: "text-xs/medium", color: "text-muted", children: t }), l],
     });
 }
@@ -671,7 +671,7 @@ let Z = {
                     },
                 ],
             },
-            { title: "Server Hub Gaming Leaderboard", stories: [M] },
+            { title: "Server Hub Gaming Leaderboard", stories: [P] },
             {
                 title: "Server Hub Popular Music",
                 stories: [
@@ -683,11 +683,11 @@ let Z = {
                             let t,
                                 a,
                                 { state: n, mode: i, viewerPlacement: r } = e,
-                                o = (0, x.bG)([E.Ay], () => E.Ay.getFlattenedGuildIds()[0]),
+                                o = (0, x.bG)([S.Ay], () => S.Ay.getFlattenedGuildIds()[0]),
                                 d = (function (e, t) {
                                     switch (e) {
                                         case "populated":
-                                            return { status: "success", data: Y(j, t, !0) };
+                                            return { status: "success", data: Y(U, t, !0) };
                                         case "minimal":
                                             return { status: "success", data: Y(B, t, !1) };
                                         case "empty":
@@ -700,7 +700,7 @@ let Z = {
                                 })(
                                     n,
                                     ((t = (0, x.bG)([w.default], () => w.default.getCurrentUser()?.id)),
-                                    (a = (0, x.yK)([S.A], () => S.A.getFriendIDs())),
+                                    (a = (0, x.yK)([E.A], () => E.A.getFriendIDs())),
                                     l.useMemo(() => {
                                         let e = a.filter((e) => null != w.default.getUser(e)).slice(0, 5);
                                         return ("listed" === r && null != t && e.splice(1, 1, t), e);
@@ -720,21 +720,21 @@ let Z = {
                                 );
                             }
                             return (0, s.jsxs)("div", {
-                                className: P.Zp,
+                                className: M.Zp,
                                 children: [
                                     (0, s.jsx)(V, {
                                         label: "Wide column (685px)",
-                                        className: P.U,
+                                        className: M.U,
                                         children: c("wide"),
                                     }),
                                     (0, s.jsx)(V, {
                                         label: "Narrow column (380px)",
-                                        className: P.sc,
+                                        className: M.sc,
                                         children: c("narrow"),
                                     }),
                                     (0, s.jsx)(V, {
                                         label: "Minimum width (320px)",
-                                        className: P.Bp,
+                                        className: M.Bp,
                                         children: c("minimum"),
                                     }),
                                 ],
@@ -778,4 +778,4 @@ let Z = {
         ],
         tags: ["Server Hub", "Widgets", "GuildSpace", "Publish", "Leaderboard", "Popular Music"],
     },
-    Q = { playgroundBaseUrl: "guild-space", collections: [z] };
+    K = { playgroundBaseUrl: "guild-space", collections: [z] };

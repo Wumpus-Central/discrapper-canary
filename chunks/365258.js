@@ -1,4 +1,4 @@
-n.d(t, { AB: () => S, AI: () => A, Xc: () => I, ae: () => p, g8: () => g, gF: () => O, gS: () => N, vz: () => T });
+n.d(t, { AB: () => S, AI: () => A, Xc: () => I, ae: () => p, g8: () => g, gF: () => f, gS: () => N, vz: () => T });
 var i,
     l = n(873298),
     r = n(885386),
@@ -22,13 +22,13 @@ function h(e) {
             return -1;
     }
 }
-let C = new Map([
+let _ = new Map([
     [l.KP.FRIENDS_AND_ALL_GUILDS, E.ACTIVITY_STATUS_OFF],
     [l.KP.FRIENDS_AND_SMALL_GUILDS, E.ACTIVITY_STATUS_ON_FOR_LARGE_GUILDS],
     [l.KP.FRIENDS_ONLY, E.ACTIVITY_STATUS_ON],
 ]);
-function _(e) {
-    return C.get(e) ?? E.ACTIVITY_STATUS_OFF;
+function C(e) {
+    return _.get(e) ?? E.ACTIVITY_STATUS_OFF;
 }
 function g(e, t) {
     if (e === t) return null;
@@ -98,9 +98,9 @@ function p(e, t) {
     };
 }
 function N(e, t) {
-    let n = _(t),
+    let n = C(t),
         i = r._Z.getSetting();
-    if (i === n || h(_(e)) > h(n) != h(i) > h(n)) return null;
+    if (i === n || h(C(e)) > h(n) != h(i) > h(n)) return null;
     let s = g(i, n);
     if (null == s) return null;
     let a = (function (e) {
@@ -120,7 +120,7 @@ function N(e, t) {
 function S(e) {
     return [...e].sort((e, t) => s.A.getScoreWithoutFetchingLatest(t) - s.A.getScoreWithoutFetchingLatest(e));
 }
-function O(e, t) {
+function f(e, t) {
     let n = (0, c.Kk)(),
         i = new Set(t);
     if ("restricting" === e) {

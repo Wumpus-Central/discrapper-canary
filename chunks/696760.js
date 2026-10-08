@@ -1,4 +1,4 @@
-n.d(t, { Bx: () => eT, Ay: () => ep, Gm: () => eC, Q_: () => eh, zF: () => e_, zR: () => eI });
+n.d(t, { Bx: () => eT, Ay: () => ep, Gm: () => e_, Q_: () => eh, zF: () => eC, zR: () => eI });
 var i,
     l = n(192308),
     r = n(793322),
@@ -11,19 +11,19 @@ var i,
     A = n(323073),
     E = n(288254),
     h = n(734057),
-    C = n(406704),
-    _ = n(747926),
+    _ = n(406704),
+    C = n(747926),
     g = n(774603),
     I = n(176522),
     T = n(435558),
     p = n.n(T),
     N = n(739187),
     S = n(857250),
-    O = n(97483),
-    f = n(147036),
+    f = n(97483),
+    O = n(147036),
     L = n(957565),
     m = n(660183);
-let R = (0, T.throttle)(() => (0, N.P)((0, S.o)(m.intl.string(m.t["+5kSoW"]), O.Ck.SUCCESS)), 3e3, {
+let R = (0, T.throttle)(() => (0, N.P)((0, S.o)(m.intl.string(m.t["+5kSoW"]), f.Ck.SUCCESS)), 3e3, {
     leading: !0,
     trailing: !1,
 });
@@ -86,7 +86,7 @@ var ei = n(478437),
         (i.MESSAGE = "MESSAGE"),
         (i.DND = "DND"),
         i);
-function eC(e) {
+function e_(e) {
     switch (e) {
         case "NAVIGATION":
             return m.intl.string(m.t["yGE+jg"]);
@@ -102,7 +102,7 @@ function eC(e) {
             return m.intl.string(m.t["69j6+4"]);
     }
 }
-function e_(e) {
+function eC(e) {
     switch (e) {
         case "MESSAGE":
             return m.intl.string(m.t.iepGDn);
@@ -215,8 +215,8 @@ let eI = {
                 t = ((e = h.A.getChannel(o.Ay.getChannelId())), e?.isThread() === !0 ? h.A.getChannel(e.parent_id) : e);
             return (
                 !(null == t || t.isForumLikeChannel() || (0, A.qR)(t) || (0, E.BV)(t)) &&
-                (!!(0, C.D1)(t) || !!(0, C.vy)(t)) &&
-                ((0, _.Tv)(t, void 0, "Keyboard Shortcut"), !1)
+                (!!(0, _.D1)(t) || !!(0, _.vy)(t)) &&
+                ((0, C.Tv)(t, void 0, "Keyboard Shortcut"), !1)
             );
         },
     },
@@ -342,7 +342,7 @@ let eI = {
             let t = h.A.getChannel(e);
             if (null == t) return !1;
             let n = h.A.getChannel(t.parent_id),
-                i = (0, f.af)(t, n);
+                i = (0, O.af)(t, n);
             return ((0, L.C)(i, R), !1);
         },
     },

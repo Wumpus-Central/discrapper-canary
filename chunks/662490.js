@@ -84,8 +84,8 @@ var L = n(536637),
     Z = n(793574),
     q = n(688810),
     Q = n(206828),
-    $ = n(587895),
-    J = n(458790),
+    J = n(587895),
+    $ = n(458790),
     ee = n(39209),
     et = n(769015),
     en = n(576243),
@@ -411,7 +411,7 @@ class eV extends s.PureComponent {
                         t.isGuildProductPurchase &&
                             null != u &&
                             null != t.sku &&
-                            (0, i.jsx)(J.u, { guildId: u, guildProductListingId: t.sku.id }),
+                            (0, i.jsx)($.u, { guildId: u, guildProductListingId: t.sku.id }),
                     ],
                 }),
             ],
@@ -721,7 +721,7 @@ class eV extends s.PureComponent {
                             })
                           : null != s &&
                             null != n.sku &&
-                            (0, i.jsx)(J.Q, { guildId: s, guildProductListingId: n.sku.id }),
+                            (0, i.jsx)($.Q, { guildId: s, guildProductListingId: n.sku.id }),
                   ],
               })
             : null;
@@ -789,13 +789,13 @@ function ek(e) {
             applicationStatistics: m,
             gameApplication: A,
             paymentSources: E,
-        } = (0, d.cf)([eA.A, eE.A, $.A], () => ({
+        } = (0, d.cf)([eA.A, eE.A, J.A], () => ({
             applicationStatistics: null != u ? eE.A.getCurrentUserStatisticsForApplication(u) : null,
-            gameApplication: $.A.getApplication(u ?? "") ?? a.sku?.application,
+            gameApplication: J.A.getApplication(u ?? "") ?? a.sku?.application,
             paymentSources: eA.A.paymentSources,
         })),
         { hasAlreadyLinked: h } = (0, Q.RD)((0, es.bF)(a.sku) ? A : void 0),
-        x = (0, d.bG)([$.A], () => (null != c ? $.A.getApplication(c) : null));
+        x = (0, d.bG)([J.A], () => (null != c ? J.A.getApplication(c) : null));
     s.useEffect(() => {
         g && null != c && (0, ei.TA)(c);
     }, [c, g]);

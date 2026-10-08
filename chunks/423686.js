@@ -4,12 +4,12 @@ var n = r(582128),
     l = r(739508),
     i = r(158317),
     d = r(71532);
-async function s() {
+async function c() {
     let e = await (0, d.Cv)();
     if (null == e) throw Error("Stripe is not loaded");
     return e;
 }
-async function c(e, t) {
+async function s(e, t) {
     let { error: r, paymentIntent: n } = await e.retrievePaymentIntent(t);
     if (null != r) throw Error(`Could not retrieve the payment intent: ${r.message}`);
     if (null == n) throw Error("Payment intent does not exist");
@@ -19,11 +19,11 @@ async function o(e, t, r) {
     let { error: n } = await e.confirmCardPayment(t, r);
     if (null != n) throw Error(`Card authentication failed: ${n.message}`);
 }
-async function u(e) {
+async function _(e) {
     let { client_secret: t, payment_method_id: r } = e;
     if (null == t) throw Error("Stripe 3DS context has no client secret");
-    let n = await s(),
-        a = await c(n, t);
+    let n = await c(),
+        a = await s(n, t);
     switch (a.status) {
         case "succeeded":
         case "processing":
@@ -42,7 +42,7 @@ async function u(e) {
             throw Error(`Unexpected payment intent status: ${a.status}`);
     }
 }
-async function h(e) {
+async function u(e) {
     if (null == e) throw Error("Order signing was deferred without a deferral context");
     let { payment_redirect_context: t, stripe_3ds_context: r } = e;
     if (null != t)
@@ -51,28 +51,28 @@ async function h(e) {
             if (null == t) throw Error("Payment redirect context has no redirect url");
             window.open(t);
         })(t);
-    if (null != r) return void (await u(r));
+    if (null != r) return void (await _(r));
     throw Error("Order signing deferral context has no action the client can complete");
 }
-var _ = r(26279),
-    E = r(660183);
+var E = r(26279),
+    h = r(660183);
 function R(e) {
-    let { order: t, errorSource: r, onSignFailure: d, onError: s } = e,
-        [c, o] = (0, n.useState)(null),
-        u = (0, n.useCallback)(
+    let { order: t, errorSource: r, onSignFailure: d, onError: c } = e,
+        [s, o] = (0, n.useState)(null),
+        _ = (0, n.useCallback)(
             (e) => {
-                (o(e), s?.(e));
+                (o(e), c?.(e));
             },
-            [s],
+            [c],
         ),
         R = (0, n.useCallback)(
             (e, t, n) => {
                 let i = e instanceof a.Ay ? e : new a.Ay(e);
                 (0, l.gr)(e) || (0, l.pM)(e instanceof Error ? e : i, { tags: { source: r }, extra: t });
                 let d = null != n ? new a.Ay(n) : i;
-                return (u(d), d);
+                return (_(d), d);
             },
-            [r, u],
+            [r, _],
         ),
         C = (0, n.useCallback)(
             async function () {
@@ -82,35 +82,35 @@ function R(e) {
                     gatewayCheckoutContext: n,
                     errorExtra: l,
                 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-                if (null == t) return (u(new a.Ay("Order not created yet")), { type: "failed" });
+                if (null == t) return (_(new a.Ay("Order not created yet")), { type: "failed" });
                 o(null);
                 try {
                     let d = await (0, i.Ub)({ orderId: t.id, loadId: e, purchaseToken: r, gatewayCheckoutContext: n });
-                    if (d.status === _.Re.SIGNED) return { type: "signed", order: d };
-                    if (d.status === _.Re.SIGNING_IN_PROGRESS) {
+                    if (d.status === E.Re.SIGNED) return { type: "signed", order: d };
+                    if (d.status === E.Re.SIGNING_IN_PROGRESS) {
                         let e = d.billing_facet;
                         try {
-                            await h(null != e ? e.order_signing_deferral_context : null);
+                            await u(null != e ? e.order_signing_deferral_context : null);
                         } catch (e) {
-                            return (R(e, { ...l, orderId: t.id }, E.intl.string(E.t.khEaRI)), { type: "failed" });
+                            return (R(e, { ...l, orderId: t.id }, h.intl.string(h.t.khEaRI)), { type: "failed" });
                         }
                         return { type: "pending", order: d };
                     }
-                    let s = (function (e) {
+                    let c = (function (e) {
                         let { error: t } = e;
-                        return null == t || t.code === _.lD.UNKNOWN_ERROR_CODE
+                        return null == t || t.code === E.lD.UNKNOWN_ERROR_CODE
                             ? null
                             : new a.Ay(t.message, t.billing_error_code);
                     })(d);
-                    if (null != s) return (u(s), { type: "failed" });
+                    if (null != c) return (_(c), { type: "failed" });
                     if (null != d.error) throw Error(`Order signing failed with error: ${d.error.code}`);
                     throw Error(`Unexpected order status: ${d.status}`);
                 } catch (e) {
-                    if (e instanceof i.FY) return (d?.(e.order), u(e), { type: "failed" });
+                    if (e instanceof i.FY) return (d?.(e.order), _(e), { type: "failed" });
                     return (R(e, { ...l, orderId: t.id }), { type: "failed" });
                 }
             },
-            [t, d, R, u],
+            [t, d, R, _],
         );
-    return { error: c, signOrder: C, reportError: R };
+    return { error: s, signOrder: C, reportError: R };
 }

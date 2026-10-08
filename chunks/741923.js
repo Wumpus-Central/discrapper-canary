@@ -1,12 +1,12 @@
-n.d(t, { _5: () => S, rV: () => g });
-var l = n(477900),
-    r = n(582128),
+n.d(t, { _5: () => S, rV: () => _ });
+var r = n(477900),
+    l = n(582128),
     i = n(20742),
     s = n(430993),
     a = n(834730),
     u = n(534479),
-    c = n(977445),
-    o = n(624210);
+    o = n(977445),
+    c = n(624210);
 let d = (0, n(945810).mj)({
     name: "2026-06-otp-orders-phase-1",
     kind: "user",
@@ -15,68 +15,68 @@ let d = (0, n(945810).mj)({
 });
 var f = n(211287),
     h = n(739508),
-    C = n(120700),
+    m = n(120700),
     p = n(818348);
-let m = new Set([C.C.COLLECTIBLES_CHECKOUT, C.C.SLAYER_STOREFRONT_CHECKOUT]);
+let C = new Set([m.C.COLLECTIBLES_CHECKOUT, m.C.SLAYER_STOREFRONT_CHECKOUT]);
 var E = n(169797),
-    I = n(660183);
-let y = r.createContext({ order: null, isOrderCreationEnabled: !1 });
+    y = n(660183);
+let I = l.createContext({ order: null, isOrderCreationEnabled: !1 });
 function S() {
-    return r.useContext(y);
-}
-function _(e) {
-    let { renderModalProps: t, children: n } = e,
-        r = (0, l.jsxs)(l.Fragment, { children: [(0, l.jsx)(i.rQ, {}), (0, l.jsx)(s.c, { children: n })] });
-    return null != t ? (0, l.jsx)(E.Jg, { ...t, children: r }) : r;
+    return l.useContext(I);
 }
 function g(e) {
+    let { renderModalProps: t, children: n } = e,
+        l = (0, r.jsxs)(r.Fragment, { children: [(0, r.jsx)(i.rQ, {}), (0, r.jsx)(s.c, { children: n })] });
+    return null != t ? (0, r.jsx)(E.Jg, { ...t, children: l }) : l;
+}
+function _(e) {
     let {
             loadId: t,
             skuIDs: n,
             applicationId: i,
             paymentGateway: s,
-            checkoutFlow: C,
+            checkoutFlow: m,
             isGift: E,
             onOrderCreated: S,
-            renderModalProps: g,
+            renderModalProps: _,
             children: P,
         } = e,
         {
             order: A,
-            isCreateOrderLoading: R,
-            createOrderError: M,
-            shouldBlockOnOrderCreation: v,
-            isOrderCreationEnabled: T,
+            isCreateOrderLoading: x,
+            createOrderError: v,
+            shouldBlockOnOrderCreation: M,
+            isOrderCreationEnabled: R,
         } = (function (e) {
             let t,
                 {
                     skuIDs: n,
-                    applicationId: l,
+                    applicationId: r,
                     paymentGateway: i,
                     checkoutFlow: s,
                     isGift: a,
                     loadId: u,
-                    onOrderCreated: C,
+                    onOrderCreated: m,
                 } = e,
                 E = f.A.useConfig({ location: "payment_modal" }).enabled,
-                I = d.useConfig({ location: "payment_modal" }).enabled,
-                y = i === p.kM.VIRTUAL_CURRENCY,
-                S = null != s && m.has(s);
-            t = y ? E : !!S && !0 !== a && I;
-            let _ = y && E,
-                g = null != n ? n[0] : void 0,
-                [P, A] = (0, r.useState)(null),
-                [R, M] = (0, r.useState)(null),
-                [v, T] = (0, r.useState)(_),
-                L = (0, r.useRef)(!1),
-                x = (0, r.useCallback)(
+                y = d.useConfig({ location: "payment_modal" }).enabled,
+                I = i === p.kM.VIRTUAL_CURRENCY,
+                S = null != s && C.has(s);
+            t = I ? E : !!S && !0 !== a && y;
+            let g = I && E,
+                _ = null != n ? n[0] : void 0,
+                [P, A] = (0, l.useState)(null),
+                [x, v] = (0, l.useState)(null),
+                [M, R] = (0, l.useState)(g),
+                T = (0, l.useRef)(!1),
+                L = (0, l.useCallback)(
                     async (e) => {
                         let { skuId: t } = e;
-                        T(!0);
+                        R(!0);
                         try {
-                            let e = null != l && (0, c.Fs)(l),
-                                n = await (0, o.fS)({ skuId: t, paymentGateway: i, loadId: u, testMode: e });
-                            (A(n), null != C && C(n));
+                            let e = null != r && (0, o.Fs)(r),
+                                n = await (0, c.fS)({ skuId: t, paymentGateway: i, loadId: u, testMode: e });
+                            (A(n), null != m && m(n));
                         } catch (n) {
                             let e = n instanceof Error ? n : Error(String(n));
                             ((0, h.gr)(n) ||
@@ -84,22 +84,22 @@ function g(e) {
                                     tags: { source: "create_order" },
                                     extra: { skuId: t, paymentGateway: String(i), loadId: u },
                                 }),
-                                M(e));
+                                v(e));
                         } finally {
-                            T(!1);
+                            R(!1);
                         }
                     },
-                    [l, i, u, C],
+                    [r, i, u, m],
                 );
             return (
-                (0, r.useEffect)(() => {
-                    t && null != g && (null != P || null != R || L.current || ((L.current = !0), x({ skuId: g })));
-                }, [g, t, P, x, R]),
+                (0, l.useEffect)(() => {
+                    t && null != _ && (null != P || null != x || T.current || ((T.current = !0), L({ skuId: _ })));
+                }, [_, t, P, L, x]),
                 {
                     order: P,
-                    isCreateOrderLoading: v,
-                    createOrderError: R,
-                    shouldBlockOnOrderCreation: _,
+                    isCreateOrderLoading: M,
+                    createOrderError: x,
+                    shouldBlockOnOrderCreation: g,
                     isOrderCreationEnabled: t,
                 }
             );
@@ -107,19 +107,19 @@ function g(e) {
             skuIDs: n,
             applicationId: i,
             paymentGateway: s,
-            checkoutFlow: C,
+            checkoutFlow: m,
             isGift: E,
             loadId: t,
             onOrderCreated: S,
         }),
-        L = r.useMemo(() => ({ order: A, isOrderCreationEnabled: T }), [A, T]);
-    if (v) {
-        if (R) return (0, l.jsx)(_, { renderModalProps: g, children: (0, l.jsx)(u.A, {}) });
-        else if (null != M)
-            return (0, l.jsx)(_, {
-                renderModalProps: g,
-                children: (0, l.jsx)(a.E, { variant: "text-md/normal", children: I.intl.string(I.t.F8FvUy) }),
+        T = l.useMemo(() => ({ order: A, isOrderCreationEnabled: R }), [A, R]);
+    if (M) {
+        if (x) return (0, r.jsx)(g, { renderModalProps: _, children: (0, r.jsx)(u.A, {}) });
+        else if (null != v)
+            return (0, r.jsx)(g, {
+                renderModalProps: _,
+                children: (0, r.jsx)(a.E, { variant: "text-md/normal", children: y.intl.string(y.t.F8FvUy) }),
             });
     }
-    return (0, l.jsx)(y.Provider, { value: L, children: P });
+    return (0, r.jsx)(I.Provider, { value: T, children: P });
 }

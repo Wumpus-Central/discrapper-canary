@@ -1,4 +1,4 @@
-n.d(t, { A: () => A, iB: () => S, Y0: () => y });
+n.d(t, { A: () => I, iB: () => S, Y0: () => y });
 var l = n(582128),
     i = n(702841),
     r = n(642639),
@@ -178,8 +178,8 @@ function y(e) {
             isReady: E = !0,
             subscriptionPaymentSourceId: y,
         } = e,
-        { enabled: A } = (0, s.c)({ location: S }),
-        { enabled: I } = (0, o.U)({ location: S }),
+        { enabled: I } = (0, s.c)({ location: S }),
+        { enabled: A } = (0, o.U)({ location: S }),
         {
             pendingPaymentSourceId: g,
             hasInitialPaymentSourceSeed: P,
@@ -201,11 +201,11 @@ function y(e) {
         })),
         { dropdownPaymentSources: j, giftCardWallet: R } = l.useMemo(() => {
             let e = i.filter((e) => e.type !== d.hes.TDS_WALLET);
-            return A
+            return I
                 ? { dropdownPaymentSources: e, giftCardWallet: (0, c.N)(i) }
                 : { dropdownPaymentSources: e, giftCardWallet: null };
-        }, [i, A]),
-        O = I && x === d.VVm.ONE_TIME && null != R,
+        }, [i, I]),
+        O = A && x === d.VVm.ONE_TIME && null != R,
         M = O ? null : R,
         [L, k] = l.useState(null),
         w = null != R && a === R.id,
@@ -224,11 +224,11 @@ function y(e) {
                 isReady: E,
                 pendingPaymentSourceId: g,
                 paymentSourceId: a,
-                giftCardsEnabled: A,
+                giftCardsEnabled: I,
                 hasInitialPaymentSourceSeed: P,
                 hasAddedPaymentSourceThisSession: v,
             }),
-            [i, j, y, M, E, g, a, A, P, v],
+            [i, j, y, M, E, g, a, I, P, v],
         );
     ((t = l.useRef(!1)),
         (n = l.useMemo(() => new m(G), [G])),
@@ -264,22 +264,22 @@ function y(e) {
             },
             [u, R, a, D, H],
         ),
-        Y = l.useCallback(
+        V = l.useCallback(
             (e) => {
                 (e && H(), N(e));
             },
             [N, H],
         ),
         {
-            walletCoversSubtotal: V,
+            walletCoversSubtotal: Y,
             walletCoversTotal: K,
             isWalletBalanceLoaded: Z,
             isWalletCoverageLoading: q,
-        } = f({ giftCardsEnabled: A, checkoutPaymentSources: i }),
+        } = f({ giftCardsEnabled: I, checkoutPaymentSources: i }),
         z = null != y && null != R && y === R.id;
     l.useEffect(() => {
-        !z && Z && !V && w && u(D);
-    }, [z, Z, V, w, u, D]);
+        !z && Z && !Y && w && u(D);
+    }, [z, Z, Y, w, u, D]);
     let $ = l.useMemo(
         () =>
             null == R
@@ -288,7 +288,7 @@ function y(e) {
                   ? {
                         giftCardWallet: R,
                         checked: (_ ?? T) === !0,
-                        onChange: Y,
+                        onChange: V,
                         loading: !1,
                         disabled: !1,
                         disabledTooltip: void 0,
@@ -298,13 +298,13 @@ function y(e) {
                         checked: w,
                         onChange: W,
                         loading: q,
-                        disabled: !q && !V,
-                        disabledTooltip: q || V ? void 0 : h.intl.string(C.default.ccWIdu),
+                        disabled: !q && !Y,
+                        disabledTooltip: q || Y ? void 0 : h.intl.string(C.default.ccWIdu),
                     },
-        [R, O, _, T, Y, w, W, V, q],
+        [R, O, _, T, V, w, W, Y, q],
     );
     return {
-        giftCardsEnabled: A,
+        giftCardsEnabled: I,
         dropdownPaymentSources: j,
         dropdownPaymentSourceId: U,
         giftCardWallet: R,
@@ -313,14 +313,14 @@ function y(e) {
         handleGiftCardCreditsToggle: W,
         handleDropdownPaymentSourceChange: F,
         giftCardCheckboxProps: $,
-        walletCoversSubtotal: V,
+        walletCoversSubtotal: Y,
         walletCoversTotal: K,
         isWalletBalanceLoaded: Z,
         isWalletCoverageLoading: q,
         isSplitPaymentMode: O,
     };
 }
-function A(e) {
+function I(e) {
     let { location: t, message: n } = e,
         o = (0, i.bG)([a.A], () => {
             let e = a.A.getPremiumTypeSubscription();

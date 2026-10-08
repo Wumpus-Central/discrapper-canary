@@ -1,4 +1,4 @@
-d.exports = {
+e.exports = {
     Vg: "grid_d87d30",
     Yf: "placeholderCard_d87d30",
     d4: "placeholderImg_d87d30",

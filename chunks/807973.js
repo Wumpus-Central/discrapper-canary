@@ -1,31 +1,31 @@
-t.d(n, { A: () => m });
+t.d(a, { A: () => d });
 var l = t(477900);
 t(582128);
-var r = t(503698),
-    i = t.n(r),
-    a = t(661531),
+var n = t(503698),
+    r = t.n(n),
+    i = t(661531),
     s = t(565645),
     u = t(17928),
-    c = t(236285),
-    o = t(35275),
-    d = t(655756);
-function m(e) {
-    let { guildId: n, emojiId: t, emojiName: r, className: m } = e,
-        h = (0, u.bG)(
-            [c.Ay],
+    o = t(236285),
+    c = t(35275),
+    h = t(655756);
+function d(e) {
+    let { guildId: a, emojiId: t, emojiName: n, className: d } = e,
+        m = (0, u.bG)(
+            [o.Ay],
             () => {
                 if (null == t) return null;
-                let e = c.Ay.getDisambiguatedEmojiContext(n);
+                let e = o.Ay.getDisambiguatedEmojiContext(a);
                 return e.getById(t) ?? e.getByName(t);
             },
-            [n, t],
+            [a, t],
         );
-    return null != h || null != r
+    return null != m || null != n
         ? (0, l.jsx)(s.A, {
-              emojiId: h?.id,
-              emojiName: r ?? h?.name,
-              animated: h?.animated ?? !1,
-              className: i()(d.m, m),
+              emojiId: m?.id,
+              emojiName: n ?? m?.name,
+              animated: m?.animated ?? !1,
+              className: r()(h.m, d),
           })
-        : (0, l.jsx)(o.A, { className: i()(d.m, m), color: a.A.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css });
+        : (0, l.jsx)(c.A, { className: r()(h.m, d), color: i.A.colors.CREATOR_REVENUE_LOCKED_CHANNEL_ICON.css });
 }

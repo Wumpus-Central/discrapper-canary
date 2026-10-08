@@ -16,11 +16,11 @@ var l = n(477900),
     S = n(649975),
     E = n(660183),
     y = n(170691);
-let A = new Set([m.C.ORB_CHECKOUT]);
-function I(e) {
+let I = new Set([m.C.ORB_CHECKOUT]);
+function A(e) {
     let { onGiftCardRedeemed: t } = e,
         n = (0, C.t4)((e) => e.unifiedCheckoutFlow);
-    return null != n && A.has(n) ? null : (0, l.jsx)(h.Z4, { className: y.K, onComplete: t });
+    return null != n && I.has(n) ? null : (0, l.jsx)(h.Z4, { className: y.K, onComplete: t });
 }
 function g(e) {
     let { onPaymentSourceAdd: t } = e,
@@ -62,7 +62,7 @@ function b(e) {
             onPaymentSourceAdd: f,
             subscriptionPaymentSourceId: S,
             hideCurrencySelect: y,
-            resolveInternalState: A,
+            resolveInternalState: I,
             renderCustomPaymentSourceSelectorContent: _,
         } = e,
         { setPaymentSourceId: b, paymentSourceId: j } = (function (e) {
@@ -130,8 +130,8 @@ function b(e) {
                     giftCardsEnabled: S,
                     dropdownPaymentSourceId: E,
                     handleDropdownPaymentSourceChange: y,
-                    giftCardCheckboxProps: A,
-                    walletCoversSubtotal: I,
+                    giftCardCheckboxProps: I,
+                    walletCoversSubtotal: A,
                     walletCoversTotal: g,
                     isSubscriptionPaidByWallet: P,
                     giftCardWallet: v,
@@ -183,7 +183,7 @@ function b(e) {
             })({
                 giftCardWallet: v,
                 isWalletBalanceLoaded: _,
-                walletCoversSubtotal: I,
+                walletCoversSubtotal: A,
                 isGiftCardCreditsChecked: x,
                 subscriptionPaymentSourceId: a,
                 handleGiftCardCreditsToggle: T,
@@ -197,8 +197,8 @@ function b(e) {
                 j = (0, r.bG)([d.A], () => d.A.hidePersonalInformation ?? !1);
             return {
                 giftCardsEnabled: S,
-                giftCardCheckboxProps: A,
-                walletCoversSubtotal: I,
+                giftCardCheckboxProps: I,
+                walletCoversSubtotal: A,
                 walletCoversTotal: g,
                 basePaymentSourceDropdownProps: i.useMemo(
                     () => ({
@@ -227,22 +227,22 @@ function b(e) {
             priceOptions: B,
             setCurrency: H,
             expressCheckoutSubmitting: W,
-            isOrderLocked: Y,
+            isOrderLocked: V,
         } = (0, C.t4)((e) => ({
             priceOptions: e.checkoutPriceOptions,
             setCurrency: e.setCheckoutCurrency,
             expressCheckoutSubmitting: e.expressCheckoutSubmitting,
             isOrderLocked: e.get("isOrderLocked"),
         })),
-        { dropdownCurrencies: V, displayCurrency: K } = (0, P.Jn)(),
+        { dropdownCurrencies: Y, displayCurrency: K } = (0, P.Jn)(),
         Z = i.useCallback(() => O(!0), []),
-        q = i.useMemo(() => Y || W || (m ?? !1), [Y, W, m]),
+        q = i.useMemo(() => V || W || (m ?? !1), [V, W, m]),
         { giftCardCheckboxProps: z, disabled: $ } = i.useMemo(
             () =>
-                null != A
-                    ? A({ giftCardCheckboxProps: L, disabled: q }, { isSubscriptionPaidByWallet: U })
+                null != I
+                    ? I({ giftCardCheckboxProps: L, disabled: q }, { isSubscriptionPaidByWallet: U })
                     : { giftCardCheckboxProps: L, disabled: q },
-            [q, A, L, U],
+            [q, I, L, U],
         ),
         Q = null != z && !0 === z.locked,
         J = i.useMemo(() => {
@@ -258,11 +258,11 @@ function b(e) {
                 return {
                     label: E.intl.string(E.t["/AAR02"]),
                     selectedCurrency: B.currency ?? K,
-                    currencies: V,
+                    currencies: Y,
                     onChange: H,
                     disabled: $,
                 };
-        }, [y, B.currency, K, V, H, $]),
+        }, [y, B.currency, K, Y, H, $]),
         ee = i.useMemo(() => ({ ...D, ...p, onPaymentSourceAdd: f }), [D, f, p]),
         et = null != z && z.checked,
         en = F || k || Q,
@@ -294,7 +294,7 @@ function b(e) {
                 label: c,
                 children: [en && el, !ea && eu, !en && el, !es && !ei && void 0 !== X && (0, l.jsx)(T.q, { ...X })],
             }),
-            M ? (0, l.jsx)(I, { onGiftCardRedeemed: Z }) : null,
+            M ? (0, l.jsx)(A, { onGiftCardRedeemed: Z }) : null,
             (0, l.jsx)(g, { onPaymentSourceAdd: f }),
             (0, l.jsx)(x.B, {}),
         ],

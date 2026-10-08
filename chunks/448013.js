@@ -16,8 +16,8 @@ var l = n(477900),
     S = n(97352),
     E = n(45938),
     y = n(158045),
-    A = n(580630),
-    I = n(557679),
+    I = n(580630),
+    A = n(557679),
     g = n(35587),
     P = n(387278),
     v = n(202541),
@@ -25,7 +25,7 @@ var l = n(477900),
     _ = n(268431);
 function T(e, t) {
     let n = e.interval === v.WT.YEAR ? x.t.ECT4A5 : x.t.v9QeON;
-    return x.intl.format(n, { price: (0, A.$g)(t.amount, t.currency) });
+    return x.intl.format(n, { price: (0, I.$g)(t.amount, t.currency) });
 }
 function N(e) {
     return { type: "badge", textBadgeVariant: "eyebrow", text: e };
@@ -87,18 +87,18 @@ function j(e) {
         H = (0, c.bG)([S.A], () => S.A.get(n));
     o()(null != H, "Missing subscriptionPlan");
     let W = (0, y.m6)(H.id),
-        Y = (0, g.Sq)(),
-        V = (0, y.L_)({ planId: n, isGift: w, priceOptions: s, subscriptionPlan: H }),
+        V = (0, g.Sq)(),
+        Y = (0, y.L_)({ planId: n, isGift: w, priceOptions: s, subscriptionPlan: H }),
         K = (0, y.y8)(n, !1, w, s),
-        Z = null != V && !P,
+        Z = null != Y && !P,
         q = i.useCallback(() => {
             let e = b(t, H, {
                 userLocale: M,
-                isEligibleForBOGOPromotion: Y,
+                isEligibleForBOGOPromotion: V,
                 shouldShowSavingsPercent: Z,
                 isGift: w,
                 planId: n,
-                savingsPercent: V,
+                savingsPercent: Y,
                 priceOptions: s,
                 isEligibleForTrial: j,
             });
@@ -114,25 +114,25 @@ function j(e) {
                         children: e.text,
                     }))
                   : null;
-        }, [M, Y, H, t, Z, w, n, V, s, j]),
+        }, [M, V, H, t, Z, w, n, Y, s, j]),
         z = i.useMemo(
             () => (0, y.D8)(H.interval, w, u, H.intervalCount, U, W),
             [H.interval, H.intervalCount, w, u, U, W],
         ),
         $ = null != B && n === B;
     function Q() {
-        O || r || k(n, { shouldUpdateQuantity: !(0, I.b)(n) });
+        O || r || k(n, { shouldUpdateQuantity: !(0, A.b)(n) });
     }
     let J = P
         ? x.intl.format(x.t.hXcaLT, {
               price:
                   N && null != F && $
-                      ? (0, A.$g)(K.amount - F, K.currency)
+                      ? (0, I.$g)(K.amount - F, K.currency)
                       : j
-                        ? (0, A.$g)(0, K.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
-                        : (0, A.$g)(K.amount, K.currency),
+                        ? (0, I.$g)(0, K.currency, { minimumFractionDigits: 0, maximumFractionDigits: 0 })
+                        : (0, I.$g)(K.amount, K.currency),
           })
-        : (0, A.$g)(K.amount, K.currency);
+        : (0, I.$g)(K.amount, K.currency);
     return (0, l.jsxs)(p.D, {
         role: "radio",
         "aria-checked": r,
@@ -168,7 +168,7 @@ function j(e) {
                                         (0, l.jsx)("div", {
                                             className: _._R,
                                             children: x.intl.format(x.t.ori2Jm, {
-                                                currencyAmount: (0, A.$g)(K.amount, K.currency),
+                                                currencyAmount: (0, I.$g)(K.amount, K.currency),
                                             }),
                                         }),
                                 ],
@@ -207,12 +207,12 @@ function j(e) {
                                 ? e.interval === v.WT.YEAR
                                     ? x.intl.format(x.t["EQmTl+"], {
                                           numYears: a?.discount.intervalCount ?? v.OJ,
-                                          regularPrice: (0, A.$g)(n.amount, n.currency),
+                                          regularPrice: (0, I.$g)(n.amount, n.currency),
                                       })
                                     : x.intl.format(x.t["VeE/4E"], {
                                           numMonths: a?.discount.intervalCount ?? v.OJ,
-                                          discountedPrice: (0, A.$g)(n.amount - r, n.currency),
-                                          regularPrice: (0, A.$g)(n.amount, n.currency),
+                                          discountedPrice: (0, I.$g)(n.amount - r, n.currency),
+                                          regularPrice: (0, I.$g)(n.amount, n.currency),
                                       })
                                 : i
                                   ? T(e, n)
@@ -226,7 +226,7 @@ function j(e) {
                             discountAmountOff: F,
                             discountOffer: G,
                             isDiscountApplicableToPlan: $,
-                            savingsPercent: V,
+                            savingsPercent: Y,
                         }),
                     }),
                 }),
