@@ -1,0 +1,35 @@
+.frame_d9c451 {
+    border-radius: calc(var(--custom-conjure-project-icon-size)/4);
+    box-sizing: border-box;
+    flex: 0 0 auto;
+    height: var(--custom-conjure-project-icon-size);
+    outline: 1px solid var(--border-subtle);
+    outline-offset: -1px;
+    width: var(--custom-conjure-project-icon-size)
+}
+
+.header_d9c451 {
+    --custom-conjure-project-icon-size: var(--space-20)
+}
+
+.card_d9c451 {
+    --custom-conjure-project-icon-size: var(--space-40)
+}
+
+.list_d9c451 {
+    --custom-conjure-project-icon-size: calc(var(--space-40) + var(--space-4))
+}
+
+.image_d9c451 {
+    -o-object-fit: cover;
+    object-fit: cover
+}
+
+.placeholder_d9c451 {
+    align-items: center;
+    background: var(--background-mod-strong);
+    display: flex;
+    justify-content: center
+}
+
+/*# sourceMappingURL=e4fcb932bccd89e9.css.map*/

@@ -1312,7 +1312,7 @@ function lD(e) {
         },
     });
 }
-var l$ = l(845079),
+var l$ = l(497183),
     lz = l(104171),
     lF = l(286739);
 function lO(e) {
@@ -13831,7 +13831,8 @@ function dG(e) {
 }
 var dq = l(631417);
 function dB(e) {
-    let { title: t, actions: l, breadcrumb: n } = e;
+    let { title: t, actions: l, breadcrumb: n, project: a, onOpenProjectSettings: i } = e,
+        s = ed.intl.string(ec.default.FzfmQ8);
     return (0, r.jsx)(H.A, {
         hideSearch: !0,
         toolbar: l,
@@ -13853,6 +13854,19 @@ function dB(e) {
                               (0, r.jsx)(H.A.Title, { onClick: n.onClick, children: n.title }),
                               (0, r.jsx)(H.A.Caret, {}),
                           ],
+                      })
+                    : null,
+                null != a && null != i
+                    ? (0, r.jsx)(w.m, {
+                          asContainer: !0,
+                          text: s,
+                          position: "bottom",
+                          children: (0, r.jsx)(k.D, {
+                              className: dq.FF,
+                              onClick: i,
+                              "aria-label": s,
+                              children: (0, r.jsx)(l$.A, { project: a, size: "header" }),
+                          }),
                       })
                     : null,
                 (0, r.jsx)(H.A.Title, { className: dq.Qw, wrapperClassName: dq.DD, children: t }),
@@ -14111,7 +14125,7 @@ function d2(e) {
                 tabIndex: D ? -1 : void 0,
                 "aria-describedby": null != $ ? F : void 0,
                 children: [
-                    (0, r.jsx)(l$.A, { project: C, size: "md", className: dX.VJ }),
+                    (0, r.jsx)(l$.A, { project: C, size: "card", className: dX.VJ }),
                     (0, r.jsxs)("div", {
                         className: dX.MM,
                         children: [
@@ -14530,9 +14544,12 @@ function d3(e) {
                           }),
                       }),
                   }),
-        td = (0, r.jsx)(dB, {
+        td = null == s ? void 0 : () => (0, lu.A)(s.id, { guildId: d, isPreview: !0, publishOptions: e8 }),
+        tf = (0, r.jsx)(dB, {
             title: s?.name ?? ed.intl.string(ec.default.G1WwgK),
             breadcrumb: { title: ed.intl.string(ec.default.uk6jhJ), onClick: c },
+            project: s,
+            onOpenProjectSettings: td,
             actions:
                 null == s
                     ? null
@@ -14593,7 +14610,7 @@ function d3(e) {
                                   icon: I.SettingsIcon,
                                   tooltip: ed.intl.string(ec.default.I2XSKe),
                                   "aria-label": ed.intl.string(ec.default.I2XSKe),
-                                  onClick: () => (0, lu.A)(s.id, { guildId: d, isPreview: !0, publishOptions: e8 }),
+                                  onClick: td,
                               }),
                               (0, r.jsx)(lD, {
                                   projectId: s.id,
@@ -14667,7 +14684,7 @@ function d3(e) {
                         ? (0, r.jsxs)("div", {
                               className: dX.j5,
                               children: [
-                                  td,
+                                  tf,
                                   (0, r.jsxs)("div", {
                                       className: dX.sD,
                                       children: [
@@ -14700,7 +14717,7 @@ function d3(e) {
                                       applicationId: s.preview_application_id,
                                       previewApplicationId: s.preview_application_id,
                                       surface: eG,
-                                      header: td,
+                                      header: tf,
                                       chatOpen: h,
                                       onCloseChat: eN,
                                       chatHeaderAction: tc,

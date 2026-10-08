@@ -5,7 +5,6 @@ _.exports = {
     dc: "rowHost__4cd87",
     nM: "row__4cd87",
     $f: "guildIcon__4cd87",
-    Pz: "iconPlaceholder__4cd87",
     fw: "rowBody__4cd87",
     j1: "projectName__4cd87",
     en: "rowMeta__4cd87",

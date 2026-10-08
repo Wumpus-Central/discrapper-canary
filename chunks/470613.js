@@ -1,1 +1,8 @@
-_.exports = { Gt: "frame_d9c451", md: "md_d9c451", lg: "lg_d9c451", Sl: "image_d9c451", qf: "placeholder_d9c451" };
+c.exports = {
+    Gt: "frame_d9c451",
+    wx: "header_d9c451",
+    Nr: "card_d9c451",
+    p_: "list_d9c451",
+    Sl: "image_d9c451",
+    qf: "placeholder_d9c451",
+};

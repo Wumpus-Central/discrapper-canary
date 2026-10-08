@@ -162,6 +162,14 @@
     margin-inline-end: var(--space-12)
 }
 
+.projectIconButton__2688e {
+    border-radius: calc(var(--space-20)/4);
+    cursor: pointer;
+    display: flex;
+    flex-shrink: 0;
+    margin-inline-end: var(--space-8)
+}
+
 .title__2688e {
     flex: 1 1 auto;
     margin-inline-end: 0;
@@ -186,4 +194,4 @@
     width: 100%
 }
 
-/*# sourceMappingURL=983fbd1abd827a7d.css.map*/
+/*# sourceMappingURL=66589604d1264b7d.css.map*/
