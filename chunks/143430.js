@@ -2544,6 +2544,8 @@ class to extends m.A {
             output_device_time_to_first_audio: this.outputDeviceStats.timeToFirstCallbackMs,
             input_device_buffer_overfull_count: this.inputDeviceStats.bufferViolations?.accumulated,
             output_device_buffer_underrun_count: this.outputDeviceStats.bufferViolations?.accumulated,
+            input_device_buffer_size: this.inputDeviceStats.bufferSize,
+            input_device_buffer_occupied_size_mean: this.inputDeviceStats.bufferOccupiedSizeMean,
             input_device_session_sample_rate: this.inputDeviceStats.sessionSampleRate,
             output_device_session_sample_rate: this.outputDeviceStats.sessionSampleRate,
             input_device_time_from_connect_to_first_audio_ms: this.inputDeviceStats.timeFromConnectToFirstCallbackMs,
@@ -2612,6 +2614,8 @@ class to extends m.A {
         void 0 !== e &&
             (void 0 !== e.restartCount && (t.restartCount = td(e.restartCount, t.restartCount)),
             void 0 !== e.bufferViolations && (t.bufferViolations = td(e.bufferViolations, t.bufferViolations)),
+            (e.bufferSize ?? 0) !== 0 && (t.bufferSize = e.bufferSize),
+            (e.bufferOccupiedSizeMean ?? 0) !== 0 && (t.bufferOccupiedSizeMean = e.bufferOccupiedSizeMean),
             (e.timeToFirstCallbackMs ?? 0) !== 0 &&
                 void 0 === t.timeToFirstCallbackMs &&
                 (t.timeToFirstCallbackMs = e.timeToFirstCallbackMs),
@@ -3600,6 +3604,8 @@ class tT extends m.A {
                               "output_device_time_to_first_audio",
                               "input_device_buffer_overfull_count",
                               "output_device_buffer_underrun_count",
+                              "input_device_buffer_size",
+                              "input_device_buffer_occupied_size_mean",
                               "input_device_session_sample_rate",
                               "output_device_session_sample_rate",
                               "input_device_time_from_connect_to_first_audio_ms",
