@@ -1007,7 +1007,7 @@ class tu extends i.PureComponent {
             case D.geh.VIDEO:
                 return e.thumbnailSrc;
             default:
-                return null;
+                return;
         }
     }
     renderPaginationItem = (e, t) => {
@@ -1019,7 +1019,7 @@ class tu extends i.PureComponent {
                 className: a()(tt.Yw, i ? tt.sM : tt.N7),
                 children: [
                     (0, s.jsx)("img", {
-                        alt: null == e.alt ? t : e.alt,
+                        alt: e.alt ?? String(t),
                         className: tt.Pr,
                         src: this.getPaginationSrc(e),
                         draggable: !1,

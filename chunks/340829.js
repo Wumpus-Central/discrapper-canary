@@ -164,10 +164,12 @@ let B = new F(s.h, {
                                 repairing: f,
                             } = e,
                             { should_patch: I } = e;
-                        switch ((null == I && (I = !0), e.state.type)) {
+                        null == I && (I = !0);
+                        let p = e.state.type;
+                        switch (e.state.type) {
                             case m.l6E.COMPLETE: {
                                 let e,
-                                    T = {},
+                                    p = {},
                                     g = null;
                                 if (f) e = m.WTw.REPAIRING;
                                 else if (null == t) e = m.WTw.INSTALL_REQUIRED;
@@ -177,9 +179,9 @@ let B = new F(s.h, {
                                     let e = l.A.fileManager.join(E, "content"),
                                         t = (0, A.O)();
                                     if (null != u && 0 !== u.length) {
-                                        var p;
+                                        var T;
                                         for (let n of (t !== m.lM6.WIN64 ||
-                                            ((p = t), u.some((e) => e.platforms.includes(p))) ||
+                                            ((T = t), u.some((e) => e.platforms.includes(T))) ||
                                             (t = m.lM6.WIN32),
                                         u))
                                             if (n.platforms.includes(t)) {
@@ -191,7 +193,7 @@ let B = new F(s.h, {
                                                         null != a
                                                             ? l.A.fileManager.join(e, a)
                                                             : l.A.fileManager.dirname(s)),
-                                                    (T[r] = { ...n, id: r, fullExecutablePath: s, fullWorkingDir: t }),
+                                                    (p[r] = { ...n, id: r, fullExecutablePath: s, fullWorkingDir: t }),
                                                     null == g && (g = r));
                                             }
                                     } else if (null != c) {
@@ -200,7 +202,7 @@ let B = new F(s.h, {
                                         if (null != n) {
                                             let { executable: i } = n,
                                                 r = "Default";
-                                            ((T[r] = {
+                                            ((p[r] = {
                                                 ...n,
                                                 name: r,
                                                 id: r,
@@ -222,7 +224,7 @@ let B = new F(s.h, {
                                     targetManifestIds: a,
                                     installPath: E,
                                     installedSize: h,
-                                    launchOptions: T,
+                                    launchOptions: p,
                                     defaultLaunchOptionId: g,
                                     shouldPatch: I,
                                     storage: _,
@@ -267,7 +269,7 @@ let B = new F(s.h, {
                                 };
                             }
                         }
-                        throw Error(`Invalid Dispatch State. state=${e.state.type}`);
+                        throw Error(`Invalid Dispatch State. state=${p}`);
                     })(i[e][t])),
                     null != S[c])
                 ) {

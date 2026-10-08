@@ -82,8 +82,8 @@ class N extends s.PureComponent {
     };
     draggableRef = s.createRef();
     _dragStart = { x: 0, y: 0 };
-    _offsetX;
-    _offsetY;
+    _offsetX = 0;
+    _offsetY = 0;
     position;
     constructor(e) {
         super(e);
@@ -157,46 +157,47 @@ class N extends s.PureComponent {
         }
     };
     handleMouseMove = (e) => {
+        let t;
         e.preventDefault();
-        let { clientX: t, clientY: n } = e,
-            { current: i } = this.draggableRef,
+        let { clientX: n, clientY: i } = e,
+            { current: l } = this.draggableRef,
             {
-                maxX: l,
-                maxY: s,
-                flipVertical: o,
-                flipHorizontal: a,
-                onDragStart: r,
-                onDrag: d,
-                onFlip: u,
-                snapOrientation: h,
+                maxX: s,
+                maxY: o,
+                flipVertical: a,
+                flipHorizontal: r,
+                onDragStart: d,
+                onDrag: u,
+                onFlip: h,
+                snapOrientation: c,
             } = this.props,
-            { dragging: c, dragging: p, verticalOrientation: f, horizontalOrientation: g } = this.state,
-            m = !1;
+            { dragging: p, dragging: f, verticalOrientation: g, horizontalOrientation: m } = this.state,
+            A = !1;
         if (
-            null == i ||
-            (!c &&
+            null == l ||
+            (!p &&
                 9 >
                     ((e, t) => {
                         let { x: n, y: i } = e,
                             { x: l, y: s } = t;
                         return Math.pow(n - l, 2) + Math.pow(i - s, 2);
-                    })(this._dragStart, { x: t, y: n }))
+                    })(this._dragStart, { x: n, y: i }))
         )
             return;
-        c = !0;
-        let { clientWidth: A, clientHeight: v } = i,
-            E = D(b({ top: n - this._offsetY, left: t - this._offsetX }, l, s, A, v));
-        if (h) {
-            let e = C((E = O(E)));
-            ((f = e[0]), (g = e[1]));
-        } else E = { top: E.top, left: E.left };
-        (2 === a && g !== this.state.horizontalOrientation && ((this._offsetX = A - this._offsetX), (m = !0)),
-            2 === o && f !== this.state.verticalOrientation && ((this._offsetY = v - this._offsetY), (m = !0)),
-            this.setDOMPositions(E),
-            p || r?.(E, i),
-            d?.(E, i),
-            m && u?.([f, g]),
-            this.setState({ dragging: c, verticalOrientation: f, horizontalOrientation: g, atTopEdge: 0 === E.top }));
+        p = !0;
+        let { clientWidth: v, clientHeight: E } = l,
+            x = D(b({ top: i - this._offsetY, left: n - this._offsetX }, s, o, v, E));
+        if (c) {
+            let e = C((t = O(x)));
+            ((g = e[0]), (m = e[1]));
+        } else t = { top: x.top, left: x.left };
+        (2 === r && m !== this.state.horizontalOrientation && ((this._offsetX = v - this._offsetX), (A = !0)),
+            2 === a && g !== this.state.verticalOrientation && ((this._offsetY = E - this._offsetY), (A = !0)),
+            this.setDOMPositions(t),
+            f || d?.(t, l),
+            u?.(t, l),
+            A && h?.([g, m]),
+            this.setState({ dragging: p, verticalOrientation: g, horizontalOrientation: m, atTopEdge: 0 === t.top }));
     };
     handleMouseUp = () => {
         (window.removeEventListener("mousemove", this.handleMouseMove),
@@ -243,7 +244,14 @@ class N extends s.PureComponent {
             ref: this.draggableRef,
             className: t,
             onMouseDown: this.handleMouseDown,
-            style: { pointerEvents: n ? "none" : "auto", position: "absolute", top: r, left: d, bottom: h, right: u },
+            style: {
+                pointerEvents: n ? "none" : "auto",
+                position: "absolute",
+                top: r ?? void 0,
+                left: d ?? void 0,
+                bottom: h ?? void 0,
+                right: u ?? void 0,
+            },
             children: s.cloneElement(s.Children.only(e), {
                 flipped: "RIGHT" === o,
                 verticalFlipped: "BOTTOM" === i,

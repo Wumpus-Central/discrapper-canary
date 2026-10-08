@@ -96,10 +96,10 @@ if (v) {
         null != i && (i.onclick(), i.close());
     }),
         L.Ay.send("NOTIFICATIONS_CLEAR"),
-        (j = class {
+        (j = class t {
             static permission = "granted";
             static _id = 0;
-            id = j._id++;
+            id = t._id++;
             title;
             body;
             icon;

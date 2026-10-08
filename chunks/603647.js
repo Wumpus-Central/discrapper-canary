@@ -50,8 +50,8 @@ let L = n(843020),
 function R(e) {
     return T.some((t) => e.startsWith(t));
 }
-let N = [p.BVt.VERIFY, p.BVt.VERIFY_HUB_EMAIL],
-    f = [p.BVt.GIFT_CARD_REDEEM];
+let f = [p.BVt.VERIFY, p.BVt.VERIFY_HUB_EMAIL],
+    N = [p.BVt.GIFT_CARD_REDEEM];
 function F(e) {
     let { children: t } = e,
         n = (function () {
@@ -68,8 +68,8 @@ function F(e) {
         })(),
         a = (0, r.zy)(),
         { hidden: o } = s.useContext(_.F),
-        u = f.includes(a.pathname),
-        c = N.includes(a.pathname);
+        u = N.includes(a.pathname),
+        c = f.includes(a.pathname);
     if (u) return t;
     switch (n) {
         case "default":
@@ -105,11 +105,11 @@ class w extends s.Component {
         if (R(e)) (0, B.pX)(e, t);
         else {
             let n = null != t && null != t.search ? t.search : null;
-            window.location = null == n ? e : `${e}?${n}`;
+            window.location.href = null == n ? e : `${e}?${n}`;
         }
     }
     mobileReplaceWith(e) {
-        R(e) ? (0, B.bG)(e) : (window.location = e);
+        R(e) ? (0, B.bG)(e) : (window.location.href = e);
     }
     renderDefault() {
         let { splash: e } = this.props,

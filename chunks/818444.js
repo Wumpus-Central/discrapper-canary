@@ -6337,7 +6337,7 @@ class rx extends h.PureComponent {
                                 location: i,
                                 transitionTo: l,
                             } = e,
-                            s = (0, e0.fB)(t, i.search);
+                            s = (0, e0.fB)(t ?? "", i.search);
                         return f.Fr || f.v1
                             ? (0, d.jsx)(rt, { inviteKey: s, transitionTo: l }, s)
                             : (0, d.jsx)(

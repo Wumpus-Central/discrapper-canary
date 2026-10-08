@@ -120,7 +120,7 @@ class A extends r.A {
         return l.Lt(this.flags, 1);
     }
     get isPremiumGift() {
-        return this.isGift && Object.values(m.pe).includes(this.skuId);
+        return this.isGift && null != this.skuId && Object.values(m.pe).includes(this.skuId);
     }
     get isGuildProductPurchase() {
         return (
