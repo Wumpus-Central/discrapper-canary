@@ -1,43 +1,41 @@
-(e.r(n), e.d(n, { default: () => C }));
+(e.r(n), e.d(n, { default: () => E }));
 var i = e(477900);
 e(582128);
-var s = e(702841),
-    a = e(739187),
-    l = e(857250),
-    o = e(97483),
-    r = e(104217),
-    c = e(135598),
-    d = e(390248),
-    u = e(900019),
-    I = e(279547),
-    E = e(961997),
-    _ = e(660183);
-function C(t) {
-    let { channelId: n, messageId: e, transitionState: C, onClose: h } = t,
-        p = (0, s.bG)([u.A], () => u.A.getFpMessageInfo(e)),
-        S = p.attachments.map((t) => t.id),
-        v = p.attachments.map((t) => t.filename),
-        { reportFalsePositive: A, isReportFalsePositiveLoading: m } = (0, I.d)({
+var a = e(702841),
+    l = e(376357),
+    s = e(104217),
+    r = e(135598),
+    o = e(390248),
+    c = e(900019),
+    u = e(279547),
+    d = e(961997),
+    I = e(660183);
+function E(t) {
+    let { channelId: n, messageId: e, transitionState: E, onClose: _ } = t,
+        C = (0, a.bG)([c.A], () => c.A.getFpMessageInfo(e)),
+        p = C.attachments.map((t) => t.id),
+        h = C.attachments.map((t) => t.filename),
+        { reportFalsePositive: A, isReportFalsePositiveLoading: S } = (0, u.d)({
             onSuccess: () => {
-                ((0, E.o)(h), r.A.disableFalsePositiveButton(n, e));
+                ((0, d.o)(_), s.A.disableFalsePositiveButton(n, e));
             },
             onError: () => {
-                (0, a.P)((0, l.o)(_.intl.string(_.t.R0RpRX), o.Ck.FAILURE));
+                (0, l.P0)((0, l.ox)(I.intl.string(I.t.R0RpRX), l.Ck.FAILURE));
             },
             report: () => {
-                (0, c.wV)(n, e, S, v);
+                (0, r.wV)(n, e, p, h);
             },
         });
     return (
-        p.attachments.length > 0 || h(),
-        (0, i.jsx)(E.k, {
+        C.attachments.length > 0 || _(),
+        (0, i.jsx)(d.k, {
             messageId: e,
             channelId: n,
-            isReportFalsePositiveLoading: m,
-            analyticsContext: d.SW.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
+            isReportFalsePositiveLoading: S,
+            analyticsContext: o.SW.EXPLICIT_MEDIA_SENDER_FALSE_POSITIVE_FLOW,
             onConfirmPress: A,
-            transitionState: C,
-            onClose: h,
+            transitionState: E,
+            onClose: _,
         })
     );
 }

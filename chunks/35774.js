@@ -1,49 +1,20 @@
-n.d(t, { A: () => O });
+n.d(t, { A: () => h });
 var i = n(439372),
     r = n(232835),
     a = n(309010),
     s = n(477900);
 n(582128);
-var l = n(858899),
+var l = n(376357),
     o = n(231483),
     d = n(661531),
-    c = n(739187),
-    u = n(857250),
-    _ = n(97483),
-    E = n(192308),
-    A = n(973283),
-    h = n(734057),
-    f = n(503698),
-    I = n.n(f),
-    p = n(834730),
-    T = n(660183),
-    m = n(394272),
-    g = n(655214);
-function S(e) {
-    let { channelName: t } = e;
-    return (0, s.jsxs)("div", {
-        className: I()(g.oR, m.o),
-        children: [
-            (0, s.jsx)(o.ShieldIcon, { size: "sm", color: "currentColor", className: m.K }),
-            (0, s.jsx)(p.E, {
-                variant: "text-md/normal",
-                color: "text-strong",
-                children: T.intl.format(T.t["9U3Wb3"], {
-                    channel: (0, s.jsxs)(p.E, {
-                        variant: "text-md/semibold",
-                        color: "text-strong",
-                        tag: "span",
-                        children: ["#", t],
-                    }),
-                }),
-            }),
-        ],
-    });
-}
-function N(e) {
-    let { message: t, thread: i, guildId: f } = e;
-    if (null != i || null == t || null == r.A.getAutomodRemovalNotice(t.id))
-        (0, E.openModalLazy)(async () => {
+    c = n(192308),
+    u = n(734057),
+    _ = n(660183);
+function E(e) {
+    var t;
+    let { message: i, thread: E, guildId: A } = e;
+    if (null != E || null == i || null == r.A.getAutomodRemovalNotice(i.id))
+        (0, c.openModalLazy)(async () => {
             let { default: t } = await Promise.all([
                 n.e("618416"),
                 n.e("490743"),
@@ -167,7 +138,7 @@ function N(e) {
                 n.e("401317"),
                 n.e("311580"),
                 n.e("67702"),
-                n.e("702154"),
+                n.e("662387"),
                 n.e("296956"),
                 n.e("334168"),
                 n.e("319714"),
@@ -263,7 +234,7 @@ function N(e) {
                 n.e("772565"),
                 n.e("839772"),
                 n.e("533781"),
-                n.e("737853"),
+                n.e("328276"),
                 n.e("225307"),
                 n.e("332165"),
                 n.e("501546"),
@@ -475,6 +446,7 @@ function N(e) {
                 n.e("300699"),
                 n.e("349619"),
                 n.e("543039"),
+                n.e("704434"),
                 n.e("140402"),
                 n.e("599666"),
                 n.e("244560"),
@@ -764,8 +736,8 @@ function N(e) {
                 n.e("496715"),
                 n.e("400501"),
                 n.e("985794"),
-                n.e("329218"),
                 n.e("767837"),
+                n.e("329218"),
                 n.e("473384"),
                 n.e("622825"),
                 n.e("282783"),
@@ -1006,24 +978,19 @@ function N(e) {
             ]).then(n.bind(n, 130577));
             return (n) => (0, s.jsx)(t, { ...n, action: e });
         });
-    else
-        t.channel_id !== a.Ay.getCurrentlySelectedChannelId() &&
-            (function (e) {
-                let t = h.A.getChannel(e)?.name;
-                if (null != t) {
-                    if ((0, A.WD)("showRemovedMessageToast"))
-                        return (0, l.P0)({
-                            text: T.intl.formatToPlainString(T.t["9U3Wb3"], { channel: `#${t}` }),
-                            icon: o.ShieldIcon,
-                            iconColor: d.A.colors.ICON_FEEDBACK_CRITICAL,
-                        });
-                    (0, c.P)(
-                        (0, u.o)("", _.Ck.CUSTOM, { component: (0, s.jsx)(S, { channelName: t }), duration: 6e3 }),
-                    );
-                }
-            })(t.channel_id);
+    else {
+        let e;
+        i.channel_id !== a.Ay.getCurrentlySelectedChannelId() &&
+            ((t = i.channel_id),
+            null != (e = u.A.getChannel(t)?.name) &&
+                (0, l.P0)({
+                    text: _.intl.formatToPlainString(_.t["9U3Wb3"], { channel: `#${e}` }),
+                    icon: o.ShieldIcon,
+                    iconColor: d.A.colors.ICON_FEEDBACK_CRITICAL,
+                }));
+    }
 }
-class C extends i.A {
-    actions = { AUTO_MODERATION_CONTENT_DELETED: N };
+class A extends i.A {
+    actions = { AUTO_MODERATION_CONTENT_DELETED: E };
 }
-let O = new C();
+let h = new A();

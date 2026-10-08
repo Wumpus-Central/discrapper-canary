@@ -1,4 +1,4 @@
-(t.r(s), t.d(s, { default: () => sf }));
+(t.r(s), t.d(s, { default: () => su }));
 var a = t(477900),
     l = t(582128),
     n = t(503698),
@@ -980,16 +980,14 @@ function si(e) {
         ],
     });
 }
-var sr = t(739187),
-    so = t(857250),
-    sd = t(97483),
-    sc = t(765178);
-function su() {
+var sr = t(376357),
+    so = t(765178);
+function sd() {
     let e = U.intl.string(U.t.iufib1);
-    ((0, sr.P)((0, so.o)(e, sd.Ck.FAILURE)), sc.O.announce(e));
+    ((0, sr.P0)((0, sr.ox)(e, sr.Ck.FAILURE)), so.O.announce(e));
 }
-var sm = t(226451);
-function sf(e) {
+var sc = t(226451);
+function su(e) {
     let s,
         {
             transitionState: t,
@@ -1106,7 +1104,7 @@ function sf(e) {
             isTryItOut: v,
             onClose: C,
             shouldSaveWithoutPendingChanges: ee,
-            onSaveError: su,
+            onSaveError: sd,
         }),
         eT = l.useCallback(() => (ej ? eD() : void C()), [ej, eD, C]),
         eb = l.useCallback(() => {
@@ -1136,23 +1134,23 @@ function sf(e) {
                       transitionState: t,
                       size: m.rI.LARGE,
                       parentComponent: "DisplayNameStylesModal",
-                      className: i()(sm.CR, { [sm.st]: e_ }),
+                      className: i()(sc.CR, { [sc.st]: e_ }),
                       returnRef: y,
                       children: [
-                          (0, a.jsx)(m.s_, { "data-migration-pending": !0, onClick: eb, className: sm.b }),
+                          (0, a.jsx)(m.s_, { "data-migration-pending": !0, onClick: eb, className: sc.b }),
                           (0, a.jsxs)(m.$m, {
                               "data-migration-pending": !0,
-                              className: i()(sm.jE, { [sm.st]: e_ }),
+                              className: i()(sc.jE, { [sc.st]: e_ }),
                               style: { overflow: "hidden auto" },
                               scrollbarGutter: !1,
                               children: [
                                   (0, a.jsxs)("div", {
-                                      className: sm.w1,
+                                      className: sc.w1,
                                       children: [
                                           (0, a.jsx)(m.rQ, {
                                               "data-migration-pending": !0,
                                               separator: !1,
-                                              className: sm.bV,
+                                              className: sc.bV,
                                               children: (0, a.jsx)(f.D, {
                                                   variant: "heading-lg/semibold",
                                                   children: U.intl.string(z.default.ZPMAlX),
@@ -1162,18 +1160,18 @@ function sf(e) {
                                               selectedFontId: el,
                                               setSelectedFontId: en,
                                               displayName: H,
-                                              className: sm._,
+                                              className: sc._,
                                           }),
                                           (0, a.jsx)(eL, {
                                               selectedEffectId: ei,
                                               setSelectedEffectId: er,
-                                              className: sm._,
+                                              className: sc._,
                                           }),
                                           (0, a.jsx)(eA, {
                                               selectedColors: eE,
                                               setSelectedColors: eM,
                                               selectedEffectId: ei,
-                                              className: sm._,
+                                              className: sc._,
                                               defaultColor: ed.defaultColors[0],
                                           }),
                                       ],

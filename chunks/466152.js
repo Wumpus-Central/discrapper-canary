@@ -1,53 +1,51 @@
-l.d(e, { A: () => G });
+l.d(e, { A: () => I });
 var t = l(477900),
-    r = l(739187),
-    i = l(857250),
-    u = l(97483),
-    a = l(192308),
-    d = l(66834),
-    c = l(913122),
-    f = l(443063),
-    o = l(16236),
-    p = l(5180),
-    h = l(734057),
-    s = l(71393),
-    y = l(576705),
-    g = l(488926),
-    A = l(97587),
-    _ = l(652215),
-    I = l(660183);
-function C(n, e) {
-    d.A.batchChannelUpdate(n, e).catch((n) => {
-        let e = new c.LG(n).getAnyErrorMessage() ?? I.intl.string(I.t.iufib1);
-        (0, r.P)((0, i.o)(e, u.Ck.FAILURE));
+    r = l(376357),
+    i = l(192308),
+    u = l(66834),
+    a = l(913122),
+    d = l(443063),
+    c = l(16236),
+    f = l(5180),
+    o = l(734057),
+    p = l(71393),
+    h = l(576705),
+    s = l(488926),
+    y = l(97587),
+    g = l(652215),
+    A = l(660183);
+function _(n, e) {
+    u.A.batchChannelUpdate(n, e).catch((n) => {
+        let e = new a.LG(n).getAnyErrorMessage() ?? A.intl.string(A.t.iufib1);
+        (0, r.P0)((0, r.ox)(e, r.Ck.FAILURE));
     });
 }
-function G(n, e, r, i) {
-    if (0 === i.length) return;
-    if ((0, p.ai)(n)) return void (0, o.zN)(i);
-    let u = s.A.getGuild(n);
-    if (null == u) return;
-    let d = (e.parent_id ?? null) !== (r ?? null),
-        c = null != r ? h.A.getChannel(r) : null;
-    if (d && (!(0, A.JL)(c) || !(0, A.Ay)(c, u))) return;
-    let I = i.filter((n) => {
+function I(n, e, r, u) {
+    if (0 === u.length) return;
+    if ((0, f.ai)(n)) return void (0, c.zN)(u);
+    let a = p.A.getGuild(n);
+    if (null == a) return;
+    let A = (e.parent_id ?? null) !== (r ?? null),
+        I = null != r ? o.A.getChannel(r) : null;
+    if (A && (!(0, y.JL)(I) || !(0, y.Ay)(I, a))) return;
+    let C = u.filter((n) => {
         let { id: e } = n,
-            l = h.A.getChannel(e);
-        return null != l && (0, A.Ay)((0, A.Fd)(l), u);
+            l = o.A.getChannel(e);
+        return null != l && (0, y.Ay)((0, y.Fd)(l), a);
     });
-    if (0 === I.length) return;
-    let G = d ? c : null,
-        E = I.find((n) => n.id === e.id);
+    if (0 === C.length) return;
+    let G = A ? I : null,
+        E = C.find((n) => n.id === e.id);
     null != E &&
     null != G &&
     (function (n, e) {
-        if (!y.A.can(_.xBc.MANAGE_ROLES, n) || !y.A.can(_.xBc.MANAGE_ROLES, e)) return !1;
-        let l = (0, f.GY)(n);
-        if (g.r(n, e, l)) return !1;
-        let t = g.r(n, h.A.getChannel(n.parent_id), l);
+        if (!h.A.can(g.xBc.MANAGE_ROLES, n) || !h.A.can(g.xBc.MANAGE_ROLES, e)) return !1;
+        let l = (0, d.GY)(n);
+        if (s.r(n, e, l)) return !1;
+        let t = s.r(n, o.A.getChannel(n.parent_id), l);
         return null == n.parent_id || t;
     })(e, G)
-        ? (0, a.openModalLazy)(async () => {
+        ? (0, i.openModalLazy)(async () => {
               let { default: r } = await l.e("687634").then(l.bind(l, 544169));
               return (l) =>
                   (0, t.jsx)(r, {
@@ -55,10 +53,10 @@ function G(n, e, r, i) {
                       channel: e,
                       category: G,
                       onConfirm: () => {
-                          ((E.lock_permissions = !0), C(n, I));
+                          ((E.lock_permissions = !0), _(n, C));
                       },
-                      onCancel: () => C(n, I),
+                      onCancel: () => _(n, C),
                   });
           })
-        : C(n, I);
+        : _(n, C);
 }

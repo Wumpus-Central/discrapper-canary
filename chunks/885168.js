@@ -1,118 +1,116 @@
-l.d(a, { default: () => k });
+l.d(a, { default: () => C });
 var i = l(477900),
     t = l(582128),
     n = l(189213),
     o = l(103557),
     s = l(911608),
-    r = l(739187),
-    u = l(857250),
-    c = l(97483),
-    d = l(331322),
-    p = l(691885);
+    r = l(376357),
+    u = l(331322),
+    c = l(691885);
 l(321073);
-var h = l(562708),
-    m = l(636537),
-    b = l(77729),
-    v = l(144009),
-    f = l(53677),
-    _ = l(652215);
-let g = -1 / 0;
-async function y(e) {
+var d = l(562708),
+    p = l(636537),
+    h = l(77729),
+    m = l(144009),
+    b = l(53677),
+    v = l(652215);
+let f = -1 / 0;
+async function _(e) {
     let { clip: a, rating: l, description: i, onProgress: t } = e,
-        n = await b.A.clips.loadClip(a.filepath),
+        n = await h.A.clips.loadClip(a.filepath),
         o = new File([n.data], n.filename, { type: "video/mp4" }),
         s = [
             { name: "clip_uuid", value: a.id },
             { name: "rating", value: l },
-            { name: "clip_type", value: (0, f.NM)(a) },
+            { name: "clip_type", value: (0, b.NM)(a) },
         ];
     null != i && "" !== i && s.push({ name: "description", value: i });
-    let r = (0, h.getSuperProperties)();
+    let r = (0, d.getSuperProperties)();
     if (
         (r?.os != null && s.push({ name: "os", value: r.os }),
         r?.os_version != null && s.push({ name: "os_version", value: r.os_version }),
         r?.client_version != null && s.push({ name: "client_version", value: r.client_version }),
         r?.client_build_number != null && s.push({ name: "client_build_number", value: `${r.client_build_number}` }),
         r?.release_channel != null && s.push({ name: "release_channel", value: r.release_channel }),
-        performance.now() - g >= 9e5)
+        performance.now() - f >= 9e5)
     )
         try {
-            (await (0, v.a)(_.Umv.WEB_APP), (g = performance.now()));
+            (await (0, m.a)(v.Umv.WEB_APP), (f = performance.now()));
         } catch (e) {}
-    return m.Bo.post({
-        url: _.Rsh.CLIP_FEEDBACK,
+    return p.Bo.post({
+        url: v.Rsh.CLIP_FEEDBACK,
         attachments: [{ name: "file", file: o, filename: o.name }],
         fields: s,
         rejectWithError: !0,
         onRequestProgress: t,
     });
 }
-var C = l(696016);
-let w = [
+var g = l(696016);
+let y = [
     { id: "good", label: "Good", value: "good" },
     { id: "neutral", label: "Neutral", value: "neutral" },
     { id: "bad", label: "Bad", value: "bad" },
 ];
-function k(e) {
-    let { clip: a, transitionState: l, onClose: h } = e,
-        [m, b] = t.useState(null),
-        [v, f] = t.useState(0),
-        [_, g] = t.useState(""),
-        [k, S] = t.useState(!1);
-    async function x() {
-        if (null != m) {
-            S(!0);
+function C(e) {
+    let { clip: a, transitionState: l, onClose: d } = e,
+        [p, h] = t.useState(null),
+        [m, b] = t.useState(0),
+        [v, f] = t.useState(""),
+        [C, w] = t.useState(!1);
+    async function k() {
+        if (null != p) {
+            w(!0);
             try {
-                (await y({
+                (await _({
                     clip: a,
-                    rating: m,
-                    description: _,
+                    rating: p,
+                    description: v,
                     onProgress: (e) => {
-                        f(e.loaded / e.total);
+                        b(e.loaded / e.total);
                     },
                 }),
-                    (0, r.P)((0, u.o)("Thanks for your feedback!", c.Ck.SUCCESS)),
-                    h());
+                    (0, r.P0)((0, r.ox)("Thanks for your feedback!", r.Ck.SUCCESS)),
+                    d());
             } catch (e) {
-                (C.nx.error("Failed to submit clip feedback", e),
-                    (0, r.P)((0, u.o)("Failed to submit clip feedback. Please try again.", c.Ck.FAILURE)));
+                (g.nx.error("Failed to submit clip feedback", e),
+                    (0, r.P0)((0, r.ox)("Failed to submit clip feedback. Please try again.", r.Ck.FAILURE)));
             } finally {
-                S(!1);
+                w(!1);
             }
         }
     }
     return (0, i.jsx)(n.a, {
         transitionState: l,
-        onClose: h,
+        onClose: d,
         title: "Clip Feedback",
         subtitle:
             "Rate this clip to help us improve clip quality. The clip is attached automatically. We will use this clip for model training, so please don't complete this form if you don't want your clip to be used in this way.",
         actions: [
-            { text: "Cancel", variant: "secondary", onClick: h, disabled: k },
-            { text: "Submit", variant: "primary", onClick: x, disabled: null == m, loading: k },
+            { text: "Cancel", variant: "secondary", onClick: d, disabled: C },
+            { text: "Submit", variant: "primary", onClick: k, disabled: null == p, loading: C },
         ],
-        children: (0, i.jsxs)(d.B, {
+        children: (0, i.jsxs)(u.B, {
             gap: 16,
             children: [
-                (0, i.jsx)(p.l, {
+                (0, i.jsx)(c.l, {
                     label: "Rating",
                     placeholder: "How good was this clip?",
                     selectionMode: "single",
-                    options: w,
-                    value: m,
-                    onSelectionChange: b,
+                    options: y,
+                    value: p,
+                    onSelectionChange: h,
                 }),
                 (0, i.jsx)(o.f, {
                     label: "Description (optional)",
                     placeholder: "Anything else you want to say about this clip?",
-                    value: _,
-                    onChange: g,
+                    value: v,
+                    onChange: f,
                     maxLength: 5e4,
                     autosize: !0,
                 }),
-                k &&
+                C &&
                     (0, i.jsx)(s.z, {
-                        value: v,
+                        value: m,
                         minValue: 0,
                         maxValue: 1,
                         isIndeterminate: !1,

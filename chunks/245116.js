@@ -1,27 +1,25 @@
-l.d(t, { fn: () => j, As: () => b, JQ: () => C });
+l.d(t, { fn: () => C, As: () => y, JQ: () => v });
 var a = l(477900),
     n = l(582128),
-    i = l(739187),
-    s = l(857250),
-    r = l(97483);
-let o = (0, l(945810).mj)({
+    i = l(376357);
+let s = (0, l(945810).mj)({
     kind: "user",
     name: "2026-09-clips-editor-image-track",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
 l(508300);
-var c = l(77729),
-    u = l(696016),
-    d = l(268378),
-    m = l(660183);
-class h extends Error {
+var r = l(77729),
+    o = l(696016),
+    c = l(268378),
+    u = l(660183);
+class d extends Error {
     userMessage;
     constructor(e) {
         (super(e), (this.userMessage = e), (this.name = "ClipImageError"));
     }
 }
-async function f(e, t) {
+async function m(e, t) {
     let l,
         a =
             e.length >= 8 && 137 === e[0] && 80 === e[1] && 78 === e[2] && 71 === e[3]
@@ -33,16 +31,16 @@ async function f(e, t) {
                       "WEBP" === String.fromCharCode(...e.subarray(8, 12))
                     ? "image/webp"
                     : null;
-    if (null == a || !u._9.includes(a)) throw new h(m.intl.string(d.default.j3AKJQ));
+    if (null == a || !o._9.includes(a)) throw new d(u.intl.string(c.default.j3AKJQ));
     try {
         l = await createImageBitmap(new Blob([e], { type: a }));
     } catch {
-        throw new h(m.intl.string(d.default.piRNeN));
+        throw new d(u.intl.string(c.default.piRNeN));
     }
     try {
         let n = Math.max(l.width, l.height),
-            i = n > u.L4 ? u.L4 / n : 1;
-        if (!(i < 1 || e.length > u.rD))
+            i = n > o.L4 ? o.L4 / n : 1;
+        if (!(i < 1 || e.length > o.rD))
             return {
                 src: `data:${a};base64,${(function (e) {
                     let t = "";
@@ -56,83 +54,83 @@ async function f(e, t) {
             };
         let s = Math.max(1, Math.round(l.width * i)),
             r = Math.max(1, Math.round(l.height * i)),
-            { src: o, mimeType: c } = (function (e, t, l) {
+            { src: m, mimeType: h } = (function (e, t, l) {
                 let a = document.createElement("canvas");
                 ((a.width = t), (a.height = l));
                 let n = a.getContext("2d");
-                if (null == n) throw new h(m.intl.string(d.default.piRNeN));
+                if (null == n) throw new d(u.intl.string(c.default.piRNeN));
                 n.drawImage(e, 0, 0, e.width, e.height, 0, 0, t, l);
-                let i = a.toDataURL(u.w6, u.ku),
-                    s = i.startsWith(`data:${u.w6}`) ? u.w6 : "image/png";
+                let i = a.toDataURL(o.w6, o.ku),
+                    s = i.startsWith(`data:${o.w6}`) ? o.w6 : "image/png";
                 return { src: i, mimeType: s };
             })(l, s, r);
-        return { src: o, mimeType: c, fileName: t, naturalWidth: s, naturalHeight: r };
+        return { src: m, mimeType: h, fileName: t, naturalWidth: s, naturalHeight: r };
     } finally {
         l.close();
     }
 }
-async function p() {
+async function h() {
     let e;
     try {
-        e = await c.A.fileManager.openFiles(
-            { properties: ["openFile"], filters: [{ name: m.intl.string(d.default.qM8PRd), extensions: u.G$ }] },
-            u.sL,
+        e = await r.A.fileManager.openFiles(
+            { properties: ["openFile"], filters: [{ name: u.intl.string(c.default.qM8PRd), extensions: o.G$ }] },
+            o.sL,
         );
     } catch (e) {
-        if (null != e && "object" == typeof e && "ETOOLARGE" === e.code) throw new h(m.intl.string(d.default.ar2OUZ));
+        if (null != e && "object" == typeof e && "ETOOLARGE" === e.code) throw new d(u.intl.string(c.default.ar2OUZ));
         throw e;
     }
     let t = e[0];
     return null == t ? null : { bytes: t.data, fileName: t.filename };
 }
-var x = l(635793),
-    v = l(362081);
-let g = n.createContext(null);
-function C(e) {
+var f = l(635793),
+    p = l(362081);
+let x = n.createContext(null);
+function v(e) {
     let { children: t, isCropEnabled: l = !0 } = e,
         {
             setActiveTool: i,
-            tracks: s,
-            addTextTrack: r,
+            tracks: r,
+            addTextTrack: o,
             addImageTrack: c,
             removeTrack: u,
             updateTrackRange: d,
             updateTextTrackData: m,
             updateImageTrackData: h,
-        } = (0, v.T)(),
-        { enabled: f } = o.useConfig({ location: "ClipsEditorContextProvider" }),
-        [p, C] = n.useState(null),
+        } = (0, p.T)(),
+        { enabled: v } = s.useConfig({ location: "ClipsEditorContextProvider" }),
+        [C, y] = n.useState(null),
         j = n.useCallback(
             (e) => {
-                (i(x.Y.NONE), C(e));
+                (i(f.Y.NONE), y(e));
             },
             [i],
         ),
         b = n.useCallback(() => {
-            C(r());
-        }, [r]),
+            y(o());
+        }, [o]),
         w = n.useCallback(async () => {
-            let e = await y();
-            null != e && C(c(e));
+            let e = await g();
+            null != e && y(c(e));
         }, [c]),
         E = n.useCallback(
             async (e) => {
-                let t = await y();
+                let t = await g();
                 null != t && h(e, (e) => ({ ...e, ...t }));
             },
             [h],
         ),
         N = n.useCallback(
             (e) => {
-                (u(e), C((t) => (t === e ? null : t)));
+                (u(e), y((t) => (t === e ? null : t)));
             },
             [u],
         ),
-        k = n.useMemo(() => ({ isCropEnabled: l, isTextTrackEnabled: !0, isImageTrackEnabled: f }), [l, !0, f]),
+        k = n.useMemo(() => ({ isCropEnabled: l, isTextTrackEnabled: !0, isImageTrackEnabled: v }), [l, !0, v]),
         A = n.useMemo(
             () => ({
-                tracks: s,
-                selectedTrackId: p,
+                tracks: r,
+                selectedTrackId: C,
                 setSelectedTrackId: j,
                 addTextTrack: b,
                 pickAndAddImageTrack: w,
@@ -143,30 +141,30 @@ function C(e) {
                 updateImageTrackData: h,
                 editorFeatures: k,
             }),
-            [s, p, j, b, w, E, N, d, m, h, k],
+            [r, C, j, b, w, E, N, d, m, h, k],
         );
-    return (0, a.jsx)(g.Provider, { value: A, children: t });
+    return (0, a.jsx)(x.Provider, { value: A, children: t });
 }
-async function y() {
+async function g() {
     try {
         var e;
-        let t = await p();
+        let t = await h();
         if (null == t) return null;
-        let l = await f(t.bytes, t.fileName);
+        let l = await m(t.bytes, t.fileName);
         if (!(await (l.src, (e = l.mimeType), Promise.resolve({ allowed: !0, checked: !1 }))).allowed)
-            return ((0, i.P)((0, s.o)(m.intl.string(d.default.uF5VXk), r.Ck.FAILURE)), null);
+            return ((0, i.P0)((0, i.ox)(u.intl.string(c.default.uF5VXk), i.Ck.FAILURE)), null);
         return l;
     } catch (t) {
-        u.nx.warn("Failed to add clip image track", t);
-        let e = t instanceof h ? t.userMessage : m.intl.string(d.default["+20A3o"]);
-        return ((0, i.P)((0, s.o)(e, r.Ck.FAILURE)), null);
+        o.nx.warn("Failed to add clip image track", t);
+        let e = t instanceof d ? t.userMessage : u.intl.string(c.default["+20A3o"]);
+        return ((0, i.P0)((0, i.ox)(e, i.Ck.FAILURE)), null);
     }
 }
-function j() {
-    let e = n.useContext(g);
+function C() {
+    let e = n.useContext(x);
     if (null == e) throw Error("useClipsEditorContext must be used within a ClipsEditorContextProvider");
     return e;
 }
-function b() {
-    return j().editorFeatures;
+function y() {
+    return C().editorFeatures;
 }

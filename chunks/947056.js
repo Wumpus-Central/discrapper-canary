@@ -1,4 +1,4 @@
-n.d(t, { default: () => e7 });
+n.d(t, { default: () => e1 });
 var i,
     r = n(477900),
     l = n(582128),
@@ -314,34 +314,32 @@ var ei = n(778712),
     eh = n(92259),
     ef = n(218429),
     eg = n(292801),
-    ex = n(739187),
-    eC = n(857250),
-    ey = n(97483),
-    eA = n(32880),
-    ej = n(811893),
-    eI = n(980707),
-    eN = n(477782),
-    eS = n(624479),
-    eb = n(173936),
-    eT = n(922016),
-    eO = n(365199),
-    ev = n(50268),
-    eM = n(843626),
-    e_ = n(294454),
-    eD = n(803316),
-    ek = n(465856),
-    eL = n(885386),
-    eP = n(957565),
-    eR = n(255438),
-    ew = n(123917),
-    eU = n(723702),
-    eV = n(19575),
-    eF = n(256905),
-    eG = n(610365);
-function eX() {
-    (0, ep.closeModal)(eF.K);
+    ex = n(376357),
+    eC = n(32880),
+    ey = n(811893),
+    eA = n(980707),
+    ej = n(477782),
+    eI = n(624479),
+    eN = n(173936),
+    eS = n(922016),
+    eb = n(365199),
+    eT = n(50268),
+    eO = n(843626),
+    ev = n(294454),
+    eM = n(803316),
+    e_ = n(465856),
+    eD = n(885386),
+    ek = n(957565),
+    eL = n(255438),
+    eP = n(123917),
+    eR = n(723702),
+    ew = n(19575),
+    eU = n(256905),
+    eV = n(610365);
+function eF() {
+    (0, ep.closeModal)(eU.K);
 }
-function eW(e) {
+function eG(e) {
     let { tooltipText: t, ...n } = e;
     return (0, r.jsx)(J.m, {
         text: t,
@@ -350,9 +348,9 @@ function eW(e) {
         children: (0, r.jsx)(eE.K, { variant: "icon-only", "aria-label": t, size: "sm", ...n }),
     });
 }
-function ez() {
+function eX() {
     let { zoomed: e, setZoomed: t } = (0, y.Q)();
-    return (0, r.jsx)(eW, {
+    return (0, r.jsx)(eG, {
         onClick: () => {
             (C.l.markActionPerformed(e ? C.N.ZOOM_OUT_BUTTON_PRESSED : C.N.ZOOM_IN_BUTTON_PRESSED), t(!e));
         },
@@ -360,98 +358,98 @@ function ez() {
         icon: e ? eh.V : ef.r,
     });
 }
-function eq(e) {
+function eW(e) {
     let { item: t } = e,
         n = t.sourceMetadata?.message,
         i = t.sourceMetadata?.identifier,
         a = l.useCallback(() => {
             if (null != n && null != i) {
                 if ((C.l.markActionPerformed(C.N.FORWARD_PRESSED), "embed" === i.type))
-                    return void (0, e_.fO)({
+                    return void (0, ev.fO)({
                         message: n,
                         source: "media-viewer",
                         forwardOptions: { onlyEmbedIndices: [i.embedIndex] },
-                        onRequestSent: eX,
+                        onRequestSent: eF,
                     });
-                (0, e_.fO)({
+                (0, ev.fO)({
                     message: n,
                     source: "media-viewer",
                     forwardOptions: { onlyAttachmentIds: [i.attachmentId] },
-                    onRequestSent: eX,
+                    onRequestSent: eF,
                 });
             }
         }, [n, i]);
-    return null != n && null != i && (0, eM.p)(n)
-        ? (0, r.jsx)(eW, { onClick: a, tooltipText: H.intl.string(H.t.I3ltXO), icon: eg.t })
+    return null != n && null != i && (0, eO.p)(n)
+        ? (0, r.jsx)(eG, { onClick: a, tooltipText: H.intl.string(H.t.I3ltXO), icon: eg.t })
         : null;
 }
-function eH(e) {
+function ez(e) {
     let { item: t } = e,
         [n, i] = l.useState(!1),
-        a = (0, eD.bc)(t.original, t.url),
+        a = (0, eM.bc)(t.original, t.url),
         s = "VIDEO" === t.type,
         o = "IMAGE" === t.type,
         c = null != t.children,
-        u = (0, eD.e7)(a, t.contentType, t.originalContentType);
-    if (!(s || (eU.isPlatformEmbedded && !c && o && u))) return null;
-    let d = (0, eD.XW)(a, t.contentType, t.originalContentType, eD.N7);
+        u = (0, eM.e7)(a, t.contentType, t.originalContentType);
+    if (!(s || (eR.isPlatformEmbedded && !c && o && u))) return null;
+    let d = (0, eM.XW)(a, t.contentType, t.originalContentType, eM.N7);
     async function m() {
         if (
             (C.l.markActionPerformed(C.N.SAVE_MEDIA_PRESSED),
-            "VIDEO" === t.type && (0, ew.h)({ href: d }),
+            "VIDEO" === t.type && (0, eP.h)({ href: d }),
             "IMAGE" === t.type)
         ) {
             i(!0);
             try {
-                let e = await eV.Ay.saveImage(d, t.contentType, eD.N7);
-                if (e === eV._0.ERRORED) throw Error(`DesktopNativeUtils.saveImage errored for ${d}`);
-                e === eV._0.SAVED &&
+                let e = await ew.Ay.saveImage(d, t.contentType, eM.N7);
+                if (e === ew._0.ERRORED) throw Error(`DesktopNativeUtils.saveImage errored for ${d}`);
+                e === ew._0.SAVED &&
                     (C.l.trackMediaViewerImageSaved({ url: d, success: !0 }),
-                    (0, ex.P)((0, eC.o)(H.intl.string(H.t.cqpdJW), ey.Ck.SUCCESS)));
+                    (0, ex.P0)((0, ex.ox)(H.intl.string(H.t.cqpdJW), ex.Ck.SUCCESS)));
             } catch (e) {
                 (C.l.trackMediaViewerImageSaved({ url: d, success: !1 }),
-                    (0, ex.P)((0, eC.o)(H.intl.string(H.t["8Ve/S0"]), ey.Ck.FAILURE)));
+                    (0, ex.P0)((0, ex.ox)(H.intl.string(H.t["8Ve/S0"]), ex.Ck.FAILURE)));
             } finally {
                 i(!1);
             }
         }
     }
-    return (0, r.jsx)(eW, {
+    return (0, r.jsx)(eG, {
         onClick: m,
         tooltipText: H.intl.string("VIDEO" === t.type ? H.t.JVuuz3 : H.t["S/xNKV"]),
         loading: n,
-        icon: eA.DownloadIcon,
+        icon: eC.DownloadIcon,
     });
 }
-function eB(e) {
+function eq(e) {
     let { item: t } = e,
-        n = (0, eD.bc)(t.original, t.url);
-    if (!(0, eD.fW)(n)) return null;
-    let i = (0, eD.XW)(n, t.contentType, t.originalContentType);
-    return (0, r.jsx)(eW, {
+        n = (0, eM.bc)(t.original, t.url);
+    if (!(0, eM.fW)(n)) return null;
+    let i = (0, eM.XW)(n, t.contentType, t.originalContentType);
+    return (0, r.jsx)(eG, {
         onClick: () => {
             (C.l.markActionPerformed(C.N.OPEN_LINK_PRESSED),
                 C.l.trackMediaViewerLinkOpened({ href: i }),
-                (0, ew.h)({ href: i }));
+                (0, eP.h)({ href: i }));
         },
         tooltipText: H.intl.string(H.t.q5jLJB),
-        icon: ej.t,
+        icon: ey.t,
     });
 }
-function eZ(e) {
+function eH(e) {
     let { item: t, canCopyImage: n, canCopyLink: i, onClose: l, onSelect: a, src: s } = e,
         o = t.sourceMetadata?.identifier?.type === "attachment" ? t.sourceMetadata.identifier.attachmentId : null,
-        c = (0, ev.A)({ id: o, label: H.intl.string(H.t.nwg3lR) }),
+        c = (0, eT.A)({ id: o, label: H.intl.string(H.t.nwg3lR) }),
         u = (function (e) {
             let { alt: t, sourceMetadata: n, width: i, height: l } = e,
-                a = eK(H.intl.string(H.t.ILJuBq), "name", { subtextLineClamp: 1 }),
-                s = eK(H.intl.string(H.t["3Nf9u2"]), "size"),
-                o = eK(H.intl.string(H.t.eOB2eR), "alt", { subtextLineClamp: 2 });
+                a = eB(H.intl.string(H.t.ILJuBq), "name", { subtextLineClamp: 1 }),
+                s = eB(H.intl.string(H.t["3Nf9u2"]), "size"),
+                o = eB(H.intl.string(H.t.eOB2eR), "alt", { subtextLineClamp: 2 });
             if (n?.identifier?.type !== "attachment") return null;
-            let c = (0, ek.A)(n.identifier),
-                u = (0, eR.Xq)(n.identifier.size / 1e3);
+            let c = (0, e_.A)(n.identifier),
+                u = (0, eL.Xq)(n.identifier.size / 1e3);
             return (0, r.jsxs)(
-                eN.Dr,
+                ej.Dr,
                 {
                     id: "media-viewer-details",
                     label: H.intl.string(H.t.sqBLa9),
@@ -468,50 +466,50 @@ function eZ(e) {
             let { item: t, canCopyImage: n, canCopyLink: i, src: l } = e;
             async function a() {
                 C.l.markActionPerformed(C.N.COPY_IMAGE_PRESSED);
-                let e = (0, eD.XW)(l, t.contentType, t.originalContentType, eD.N7);
+                let e = (0, eM.XW)(l, t.contentType, t.originalContentType, eM.N7);
                 try {
-                    (await eV.Ay.copyImage(e, t.originalContentType ?? t.contentType),
+                    (await ew.Ay.copyImage(e, t.originalContentType ?? t.contentType),
                         C.l.trackMediaViewerImageCopied({ url: e, success: !0 }),
-                        (0, ex.P)((0, eC.o)(H.intl.string(H.t.bhUpvC), ey.Ck.SUCCESS)));
+                        (0, ex.P0)((0, ex.ox)(H.intl.string(H.t.bhUpvC), ex.Ck.SUCCESS)));
                 } catch (t) {
                     (C.l.trackMediaViewerImageCopied({ url: e, success: !1 }),
-                        (0, ex.P)((0, eC.o)(H.intl.string(H.t.PTPbjx), ey.Ck.FAILURE)));
+                        (0, ex.P0)((0, ex.ox)(H.intl.string(H.t.PTPbjx), ex.Ck.FAILURE)));
                 }
             }
-            return (0, r.jsxs)(eN.rX, {
+            return (0, r.jsxs)(ej.rX, {
                 children: [
                     n &&
                         (0, r.jsx)(
-                            eN.Dr,
+                            ej.Dr,
                             {
                                 label: H.intl.string(H.t.tvUqWn),
                                 id: "media-viewer-copy-image",
-                                icon: eS.CopyIcon,
-                                leadingAccessory: { type: "icon", icon: eS.CopyIcon },
+                                icon: eI.CopyIcon,
+                                leadingAccessory: { type: "icon", icon: eI.CopyIcon },
                                 action: a,
                             },
                             "media-viewer-copy-image",
                         ),
                     i &&
                         (0, r.jsx)(
-                            eN.Dr,
+                            ej.Dr,
                             {
                                 id: "media-viewer-copy-link",
                                 label: H.intl.string(H.t["92CPQ+"]),
-                                icon: eb.LinkIcon,
-                                leadingAccessory: { type: "icon", icon: eb.LinkIcon },
+                                icon: eN.LinkIcon,
+                                leadingAccessory: { type: "icon", icon: eN.LinkIcon },
                                 action: function () {
                                     C.l.markActionPerformed(C.N.COPY_LINK_PRESSED);
-                                    let e = (0, eD.XW)(l, t.contentType, t.originalContentType);
-                                    (0, eP.C)(
+                                    let e = (0, eM.XW)(l, t.contentType, t.originalContentType);
+                                    (0, ek.C)(
                                         e,
                                         () => {
                                             (C.l.trackMediaViewerLinkCopied({ href: e, success: !0 }),
-                                                (0, ex.P)((0, eC.o)(H.intl.string(H.t["L/PwZf"]), ey.Ck.SUCCESS)));
+                                                (0, ex.P0)((0, ex.ox)(H.intl.string(H.t["L/PwZf"]), ex.Ck.SUCCESS)));
                                         },
                                         () => {
                                             (C.l.trackMediaViewerLinkCopied({ href: e, success: !1 }),
-                                                (0, ex.P)((0, eC.o)(H.intl.string(H.t.uVV00B), ey.Ck.FAILURE)));
+                                                (0, ex.P0)((0, ex.ox)(H.intl.string(H.t.uVV00B), ex.Ck.FAILURE)));
                                         },
                                     );
                                 },
@@ -521,7 +519,7 @@ function eZ(e) {
                 ],
             });
         })({ item: t, canCopyImage: n, canCopyLink: i, src: s });
-    return (0, r.jsxs)(eI.W, {
+    return (0, r.jsxs)(eA.W, {
         "data-menu-migrated": !0,
         navId: "image-menu",
         "aria-label": "placeholder",
@@ -530,52 +528,52 @@ function eZ(e) {
         children: [d, u, c],
     });
 }
-function eK(e, t, n) {
+function eB(e, t, n) {
     let i = l.useCallback((e) => {
-        (0, eP.C)(e, () =>
-            (0, ex.P)({ message: H.intl.string(H.t.mGZ66D), type: ey.Ck.SUCCESS, id: "media-viewer-detail-copied" }),
+        (0, ek.C)(e, () =>
+            (0, ex.P0)({ message: H.intl.string(H.t.mGZ66D), type: ex.Ck.SUCCESS, id: "media-viewer-detail-copied" }),
         );
     }, []);
-    return (l) => (null != l ? (0, r.jsx)(eN.Dr, { action: () => i(l), label: e, subtext: l, id: t, ...n }, t) : null);
+    return (l) => (null != l ? (0, r.jsx)(ej.Dr, { action: () => i(l), label: e, subtext: l, id: t, ...n }, t) : null);
 }
-function eQ(e) {
+function eZ(e) {
     let { item: t } = e,
         n = l.useRef(null),
         [i, a] = l.useState(!1),
-        s = eL.Q_.useSetting(),
+        s = eD.Q_.useSetting(),
         o = "IMAGE" === t.type,
         c = null == t.children,
         u = !t.animated,
-        d = (0, eD.bc)(t.original, t.url),
-        m = (0, eD.PK)(d, t.contentType, t.originalContentType),
+        d = (0, eM.bc)(t.original, t.url),
+        m = (0, eM.PK)(d, t.contentType, t.originalContentType),
         p = o && c && u && m,
-        E = (0, eD.fW)(d);
+        E = (0, eM.fW)(d);
     return s || p || E || t.sourceMetadata?.identifier?.type === "attachment"
-        ? (0, r.jsx)(eT.Y, {
+        ? (0, r.jsx)(eS.Y, {
               targetElementRef: n,
               shouldShow: i,
               align: "left",
               position: "top",
               spacing: 18,
               onRequestClose: () => a(!1),
-              animation: eT.Y.Animation.NONE,
+              animation: eS.Y.Animation.NONE,
               renderPopout: () =>
-                  (0, r.jsx)(eZ, { item: t, canCopyImage: p, canCopyLink: E, onClose: () => a(!1), src: d }),
+                  (0, r.jsx)(eH, { item: t, canCopyImage: p, canCopyLink: E, onClose: () => a(!1), src: d }),
               children: (e) => {
                   let { onClick: t } = e;
-                  return (0, r.jsx)(eW, {
+                  return (0, r.jsx)(eG, {
                       buttonRef: n,
                       tooltipText: H.intl.string(H.t["UKOtz+"]),
                       onClick: () => {
                           (C.l.markActionPerformed(C.N.MORE_BUTTON_PRESSED), a(!i));
                       },
-                      icon: eO.MoreHorizontalIcon,
+                      icon: eb.MoreHorizontalIcon,
                   });
               },
           })
         : null;
 }
-let eJ = l.memo(function (e) {
+let eK = l.memo(function (e) {
     let { item: t, hideMediaOptions: n } = e,
         i = (0, _.bG)([g.Ay], () => g.Ay.keyboardModeEnabled),
         a = l.useRef(null),
@@ -589,18 +587,18 @@ let eJ = l.memo(function (e) {
             children: (e) =>
                 (0, r.jsxs)("div", {
                     ref: a,
-                    className: s()(eG.uu, e),
+                    className: s()(eV.uu, e),
                     onClick: (e) => e.stopPropagation(),
                     onMouseLeave: o,
                     children: [
-                        "IMAGE" === t.type && (0, r.jsx)(ez, {}),
+                        "IMAGE" === t.type && (0, r.jsx)(eX, {}),
                         !n &&
                             (0, r.jsxs)(r.Fragment, {
                                 children: [
+                                    (0, r.jsx)(eW, { item: t }),
+                                    (0, r.jsx)(ez, { item: t }),
                                     (0, r.jsx)(eq, { item: t }),
-                                    (0, r.jsx)(eH, { item: t }),
-                                    (0, r.jsx)(eB, { item: t }),
-                                    (0, r.jsx)(eQ, { item: t }),
+                                    (0, r.jsx)(eZ, { item: t }),
                                 ],
                             }),
                     ],
@@ -608,8 +606,8 @@ let eJ = l.memo(function (e) {
         })
     );
 });
-var eY = n(125256);
-let e$ = l.memo(function (e) {
+var eQ = n(125256);
+let eJ = l.memo(function (e) {
     let { message: t } = e,
         n = (0, _.bG)([ed.A], () => ed.A.getChannel(t.channel_id));
     if (null == n) return null;
@@ -619,31 +617,31 @@ let e$ = l.memo(function (e) {
             (0, r.jsxs)(eo.A.Provider, {
                 value: n.guild_id,
                 children: [
-                    (0, r.jsx)(ea.A, { user: t.author, size: ei._3.SIZE_40, className: s()(eY.Du, e) }),
+                    (0, r.jsx)(ea.A, { user: t.author, size: ei._3.SIZE_40, className: s()(eQ.Du, e) }),
                     (0, r.jsxs)("div", {
-                        className: s()(eY.cy, e),
+                        className: s()(eQ.cy, e),
                         children: [
                             (0, r.jsx)(er.M, {
                                 children: (0, r.jsx)("div", {
-                                    className: eY.mG,
-                                    children: (0, r.jsx)(eu.A, { className: eY.fh, message: t, channel: n }),
+                                    className: eQ.mG,
+                                    children: (0, r.jsx)(eu.A, { className: eQ.fh, message: t, channel: n }),
                                 }),
                             }),
-                            (0, r.jsx)(ec.A, { timestamp: i, className: eY.vE, tooltipPosition: "bottom" }),
+                            (0, r.jsx)(ec.A, { timestamp: i, className: eQ.vE, tooltipPosition: "bottom" }),
                         ],
                     }),
                 ],
             }),
     });
 });
-function e0(e) {
+function eY(e) {
     let { item: t, hideMediaOptions: n, onClose: i } = e,
         l = t.sourceMetadata?.message;
     return (0, r.jsxs)("div", {
-        className: eY.XV,
+        className: eQ.XV,
         children: [
-            null != l && (0, r.jsx)(e$, { message: l }),
-            (0, r.jsx)(eJ, { item: t, hideMediaOptions: n }),
+            null != l && (0, r.jsx)(eJ, { message: l }),
+            (0, r.jsx)(eK, { item: t, hideMediaOptions: n }),
             (0, r.jsx)(L, {
                 mode: k.PINNED,
                 children: (e) =>
@@ -651,18 +649,18 @@ function e0(e) {
                         onClick: i,
                         icon: el.P,
                         tooltip: H.intl.string(H.t.cpT0Cq),
-                        className: s()(eY.b, e),
+                        className: s()(eQ.b, e),
                     }),
             }),
         ],
     });
 }
-var e1 = n(700535);
-function e2(e, t) {
+var e$ = n(700535);
+function e0(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2];
     !0 === n || g.Ay.useReducedMotion ? e.set(t) : e.start(t);
 }
-function e7(e) {
+function e1(e) {
     let {
             onClose: t,
             onIndexChange: n,
@@ -696,10 +694,10 @@ function e7(e) {
         if (j !== _.current)
             switch (((_.current = j), j)) {
                 case u.ip.ENTERING:
-                    e2(O.scale, 1);
+                    e0(O.scale, 1);
                     break;
                 case u.ip.EXITING:
-                    g.Ay.useReducedMotion || (e2(O.x, 0), e2(O.y, 0), e2(O.scale, 0.9));
+                    g.Ay.useReducedMotion || (e0(O.x, 0), e0(O.y, 0), e0(O.scale, 0.9));
             }
     }, [j, O]),
         j === u.ip.HIDDEN && b && (T(!1), O.x.set(0), O.y.set(0), O.scale.set(1)),
@@ -733,14 +731,14 @@ function e7(e) {
                 x: O.x,
                 y: O.y,
                 setScale(e, t) {
-                    e2(O.scale, e, t?.immediate);
+                    e0(O.scale, e, t?.immediate);
                 },
                 setOffset(e, t, n) {
-                    (e2(O.x, e, n?.immediate), e2(O.y, t, n?.immediate));
+                    (e0(O.x, e, n?.immediate), e0(O.y, t, n?.immediate));
                 },
                 zoomed: b,
                 setZoomed(e) {
-                    (T(e), e2(O.scale, e ? 2.5 : 1), e || (e2(O.x, 0), e2(O.y, 0)));
+                    (T(e), e0(O.scale, e ? 2.5 : 1), e || (e0(O.x, 0), e0(O.y, 0)));
                 },
             }),
             [b, O],
@@ -751,7 +749,7 @@ function e7(e) {
             (0, r.jsx)(o.EO, {
                 "data-migration-pending": !0,
                 hideShadow: !0,
-                className: s()(e1.O, e),
+                className: s()(e$.O, e),
                 transitionState: j,
                 ...I,
                 size: o.rI.DYNAMIC,
@@ -763,7 +761,7 @@ function e7(e) {
                 children: (0, r.jsxs)(y.f.Provider, {
                     value: k,
                     children: [
-                        (0, r.jsx)(e0, { item: i[N], hideMediaOptions: A, onClose: t }),
+                        (0, r.jsx)(eY, { item: i[N], hideMediaOptions: A, onClose: t }),
                         (0, r.jsx)("div", { style: { display: "none" }, ref: M }),
                         (0, r.jsx)(en, {
                             items: i,

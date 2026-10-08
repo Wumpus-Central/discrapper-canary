@@ -1,4 +1,4 @@
-n.d(e, { default: () => O });
+n.d(e, { default: () => P });
 var a = n(477900),
     r = n(582128),
     l = n(719442),
@@ -15,54 +15,52 @@ var a = n(477900),
     p = n(723702),
     S = n(19575),
     T = n(820066),
-    y = n(636537),
-    x = n(739187),
-    C = n(857250),
-    h = n(97483),
-    A = n(152367),
-    j = n(192308),
-    D = n(869388),
-    E = n(147087),
-    _ = n(773669),
-    k = n(186306),
-    M = n(323350),
-    N = n(652215),
-    P = n(660183),
-    I = n(946190);
-function O(t) {
-    let { text: e, editor: O, target: R, onHeightUpdate: X, onSelect: U, clipboardHasMixedContent: L } = t,
-        v = r.useCallback(
+    x = n(636537),
+    y = n(376357),
+    C = n(152367),
+    h = n(192308),
+    A = n(869388),
+    j = n(147087),
+    D = n(773669),
+    E = n(186306),
+    _ = n(323350),
+    k = n(652215),
+    M = n(660183),
+    N = n(946190);
+function P(t) {
+    let { text: e, editor: P, target: I, onHeightUpdate: O, onSelect: R, clipboardHasMixedContent: X } = t,
+        U = r.useCallback(
             (t) => {
-                (i.rL.focus(O),
+                (i.rL.focus(P),
                     setTimeout(() => {
-                        (t?.(), T.VW.focus(O));
+                        (t?.(), T.VW.focus(P));
                     }, 0));
             },
-            [O],
+            [P],
         ),
-        w = r.useCallback(() => {
-            (0, u.Z_)(v);
-        }, [v]),
-        F = r.useCallback(() => {
+        L = r.useCallback(() => {
+            (0, u.Z_)(U);
+        }, [U]),
+        v = r.useCallback(() => {
             let t = S.Ay.readClipboard();
             0 !== t.length &&
-                v(() => {
-                    l.gB.insertText(O, t);
+                U(() => {
+                    l.gB.insertText(P, t);
                 });
-        }, [v, O]),
-        [G, K] = (0, f.A)({ text: e, target: R, onHeightUpdate: X }),
-        V = (function (t) {
-            let e = (0, E.b)(),
-                l = (0, s.bG)([D.A], () => D.A.getTransforms()),
+        }, [U, P]),
+        [w, F] = (0, f.A)({ text: e, target: I, onHeightUpdate: O }),
+        G = (function (t) {
+            let e = (0, j.b)(),
+                l = (0, s.bG)([A.A], () => A.A.getTransforms()),
                 { selection: c } = t,
                 u =
                     null != c
-                        ? (0, M.WO)(T.VW.richValue(t), { mode: "plain", range: c, preventEmojiSurrogates: !1 })
+                        ? (0, _.WO)(T.VW.richValue(t), { mode: "plain", range: c, preventEmojiSurrogates: !1 })
                         : "",
                 d = r.useCallback(
                     (e) => {
                         (i.rL.focus(t),
-                            k.o.withSingleEntry(t, () => {
+                            E.o.withSingleEntry(t, () => {
                                 (t.deleteFragment(), t.insertText(e));
                             }));
                     },
@@ -72,16 +70,16 @@ function O(t) {
                     let [n, l] = r.useState(!1),
                         i = r.useCallback(async () => {
                             if (!n) {
-                                (l(!0), (0, x.P)((0, C.o)(P.intl.string(P.t.p54KYY), h.Ck.AI)));
+                                (l(!0), (0, y.P0)((0, y.ox)(M.intl.string(M.t.p54KYY), y.Ck.AI)));
                                 try {
-                                    let n = await y.Bo.post({
-                                        url: N.Rsh.AI_FIX_GRAMMAR,
+                                    let n = await x.Bo.post({
+                                        url: k.Rsh.AI_FIX_GRAMMAR,
                                         body: { content: t },
-                                        rejectWithError: (0, y.fT)(),
+                                        rejectWithError: (0, x.fT)(),
                                     });
                                     n.body &&
                                         (e(n.body.content),
-                                        (0, x.P)((0, C.o)(P.intl.string(P.t.mxQpUY), h.Ck.SUCCESS)));
+                                        (0, y.P0)((0, y.ox)(M.intl.string(M.t.mxQpUY), y.Ck.SUCCESS)));
                                 } finally {
                                     l(!1);
                                 }
@@ -89,36 +87,36 @@ function O(t) {
                         }, [n, t, e]);
                     return (0, a.jsx)(o.Dr, {
                         id: "fix-grammar",
-                        label: n ? P.intl.string(P.t.p54KYY) : P.intl.string(P.t.fCpOHj),
-                        icon: A.D,
+                        label: n ? M.intl.string(M.t.p54KYY) : M.intl.string(M.t.fCpOHj),
+                        icon: C.D,
                         action: i,
                         disabled: n,
                     });
                 })(u, d),
                 f = (function (t, e) {
                     let [l, i] = r.useState(!1),
-                        c = (0, s.bG)([_.default], () => _.default.locale),
+                        c = (0, s.bG)([D.default], () => D.default.locale),
                         u = r.useCallback(
                             async (n, a) => {
                                 if (l) return;
                                 let r = n ?? c;
                                 i(!0);
                                 let s = a ?? r;
-                                (0, x.P)(
-                                    (0, C.o)(P.intl.formatToPlainString(P.t.Znl8Z8, { targetLanguage: s }), h.Ck.AI),
+                                (0, y.P0)(
+                                    (0, y.ox)(M.intl.formatToPlainString(M.t.Znl8Z8, { targetLanguage: s }), y.Ck.AI),
                                 );
                                 try {
-                                    let n = await y.Bo.post({
-                                        url: N.Rsh.AI_TRANSLATE,
+                                    let n = await x.Bo.post({
+                                        url: k.Rsh.AI_TRANSLATE,
                                         body: { content: t, locale: r },
-                                        rejectWithError: (0, y.fT)(),
+                                        rejectWithError: (0, x.fT)(),
                                     });
                                     n.body &&
                                         (e(n.body.content),
-                                        (0, x.P)(
-                                            (0, C.o)(
-                                                P.intl.formatToPlainString(P.t.FtVUqm, { targetLanguage: s }),
-                                                h.Ck.SUCCESS,
+                                        (0, y.P0)(
+                                            (0, y.ox)(
+                                                M.intl.formatToPlainString(M.t.FtVUqm, { targetLanguage: s }),
+                                                y.Ck.SUCCESS,
                                             ),
                                         ));
                                 } finally {
@@ -127,7 +125,7 @@ function O(t) {
                             },
                             [l, c, t, e],
                         ),
-                        d = (0, P.getAvailableLocales)().map((t) => {
+                        d = (0, M.getAvailableLocales)().map((t) => {
                             let e;
                             try {
                                 e = n(579832)(`./${t.value}.png`);
@@ -139,7 +137,7 @@ function O(t) {
                                 {
                                     id: `translate-${t.value}`,
                                     label: t.name,
-                                    icon: () => (0, a.jsx)("img", { alt: "", src: e, className: I.M }),
+                                    icon: () => (0, a.jsx)("img", { alt: "", src: e, className: N.M }),
                                     leadingAccessory: { type: "image", src: e },
                                     action: () => u(t.value, t.name),
                                     disabled: l,
@@ -149,7 +147,7 @@ function O(t) {
                         });
                     return (0, a.jsx)(o.Dr, {
                         id: "translate",
-                        label: l ? P.intl.string(P.t.SVKIdU) : P.intl.string(P.t["6epDlR"]),
+                        label: l ? M.intl.string(M.t.SVKIdU) : M.intl.string(M.t["6epDlR"]),
                         action: () => u(),
                         disabled: l,
                         children: d,
@@ -161,24 +159,24 @@ function O(t) {
                             async (t) => {
                                 if (null == l) {
                                     (i(t.id),
-                                        (0, x.P)(
-                                            (0, C.o)(
-                                                P.intl.formatToPlainString(P.t.rrf7Kf, { transformName: t.name }),
-                                                h.Ck.AI,
+                                        (0, y.P0)(
+                                            (0, y.ox)(
+                                                M.intl.formatToPlainString(M.t.rrf7Kf, { transformName: t.name }),
+                                                y.Ck.AI,
                                             ),
                                         ));
                                     try {
-                                        let a = await y.Bo.post({
-                                            url: N.Rsh.AI_TEXT_TRANSFORM,
+                                        let a = await x.Bo.post({
+                                            url: k.Rsh.AI_TEXT_TRANSFORM,
                                             body: { content: e, prompt: t.prompt },
-                                            rejectWithError: (0, y.fT)(),
+                                            rejectWithError: (0, x.fT)(),
                                         });
                                         a.body &&
                                             (n(a.body.content),
-                                            (0, x.P)(
-                                                (0, C.o)(
-                                                    P.intl.formatToPlainString(P.t.qe4KvQ, { transformName: t.name }),
-                                                    h.Ck.SUCCESS,
+                                            (0, y.P0)(
+                                                (0, y.ox)(
+                                                    M.intl.formatToPlainString(M.t.qe4KvQ, { transformName: t.name }),
+                                                    y.Ck.SUCCESS,
                                                 ),
                                             ));
                                     } finally {
@@ -194,8 +192,8 @@ function O(t) {
                             o.Dr,
                             {
                                 id: `text-transform-${t.id}`,
-                                label: e ? P.intl.formatToPlainString(P.t.rrf7Kf, { transformName: t.name }) : t.name,
-                                icon: A.D,
+                                label: e ? M.intl.formatToPlainString(M.t.rrf7Kf, { transformName: t.name }) : t.name,
+                                icon: C.D,
                                 action: () => s(t),
                                 disabled: null != l,
                             },
@@ -210,16 +208,16 @@ function O(t) {
                           f,
                           (0, a.jsxs)(o.Dr, {
                               id: "text-transforms",
-                              label: P.intl.string(P.t["6YZezO"]),
-                              icon: A.D,
+                              label: M.intl.string(M.t["6YZezO"]),
+                              icon: C.D,
                               children: [
                                   g,
                                   g.length > 0 ? (0, a.jsx)(o.bX, {}) : null,
                                   (0, a.jsx)(o.Dr, {
                                       id: "manage-text-transforms",
-                                      label: P.intl.string(P.t.IcDoaD),
+                                      label: M.intl.string(M.t.IcDoaD),
                                       action: () => {
-                                          (0, j.openModalLazy)(async () => {
+                                          (0, h.openModalLazy)(async () => {
                                               let { default: t } = await Promise.all([
                                                   n.e("378267"),
                                                   n.e("54191"),
@@ -233,22 +231,22 @@ function O(t) {
                       ],
                   })
                 : null;
-        })(O),
-        W = (0, s.bG)([m.Ay], () => m.Ay.isSubmitButtonEnabled),
-        Y = g._3.useSetting();
+        })(P),
+        K = (0, s.bG)([m.Ay], () => m.Ay.isSubmitButtonEnabled),
+        V = g._3.useSetting();
     if (!p.isPlatformEmbedded) return null;
-    let B = O.chatInputType?.commands?.enabled ?? !1,
-        Z = O.chatInputType?.stickers?.autoSuggest ?? !1,
-        z = O.chatInputType?.submit?.button ?? !1,
-        H = B || Z,
-        Q =
+    let W = P.chatInputType?.commands?.enabled ?? !1,
+        Y = P.chatInputType?.stickers?.autoSuggest ?? !1,
+        B = P.chatInputType?.submit?.button ?? !1,
+        Z = W || Y,
+        z =
             "" !== e
                 ? [
                       (0, a.jsx)(
                           o.Dr,
                           {
                               id: "cut",
-                              label: P.intl.string(P.t.pNPVhe),
+                              label: M.intl.string(M.t.pNPVhe),
                               shortcut: (0, p.isMac)() ? "\u2318X" : "Ctrl+X",
                               action: () => S.Ay.cut(),
                           },
@@ -258,7 +256,7 @@ function O(t) {
                           o.Dr,
                           {
                               id: "copy",
-                              label: P.intl.string(P.t.OpuAlK),
+                              label: M.intl.string(M.t.OpuAlK),
                               shortcut: (0, p.isMac)() ? "\u2318C" : "Ctrl+C",
                               action: () => S.Ay.copy(),
                           },
@@ -266,48 +264,48 @@ function O(t) {
                       ),
                   ]
                 : null,
-        $ = (0, a.jsx)(o.sL, {
+        H = (0, a.jsx)(o.sL, {
             id: "command-suggestions",
-            label: P.intl.string(P.t["9rJKF7"]),
-            checked: Y,
+            label: M.intl.string(M.t["9rJKF7"]),
+            checked: V,
             action: () => {
-                let t = !Y;
+                let t = !V;
                 (g._3.updateSetting(t),
-                    b.default.track(N.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
+                    b.default.track(k.HAw.SLASH_COMMAND_SUGGESTIONS_TOGGLED, {
                         enabled: t,
-                        location: { object: N.ZSU.CONTEXT_MENU },
+                        location: { object: k.ZSU.CONTEXT_MENU },
                     }));
             },
         });
     return (0, a.jsxs)(c.W, {
         "data-menu-migrated": !0,
         navId: "textarea-context",
-        onClose: w,
-        "aria-label": P.intl.string(P.t.NWlDSI),
-        onSelect: U,
+        onClose: L,
+        "aria-label": M.intl.string(M.t.NWlDSI),
+        onSelect: R,
         children: [
-            H && (0, a.jsx)(o.Dr, { id: "suggestions", label: P.intl.string(P.t.zgxg7v), children: B && $ }),
-            z &&
+            Z && (0, a.jsx)(o.Dr, { id: "suggestions", label: M.intl.string(M.t.zgxg7v), children: W && H }),
+            B &&
                 (0, a.jsx)(o.sL, {
                     id: "submit-button",
-                    label: P.intl.string(P.t.G8XDyj),
-                    checked: W,
+                    label: M.intl.string(M.t.G8XDyj),
+                    checked: K,
                     action: () => {
                         (0, d.Xt)();
                     },
                 }),
-            (0, a.jsx)(o.rX, { children: G }),
-            (0, a.jsxs)(o.rX, { children: [K, V] }),
+            (0, a.jsx)(o.rX, { children: w }),
+            (0, a.jsxs)(o.rX, { children: [F, G] }),
             (0, a.jsxs)(o.rX, {
                 children: [
-                    Q,
+                    z,
                     (0, a.jsx)(o.Dr, {
                         id: "paste",
-                        label: P.intl.string(P.t.lMUxVi),
+                        label: M.intl.string(M.t.lMUxVi),
                         shortcut: (0, p.isMac)() ? "\u2318V" : "Ctrl+V",
                         action: () => S.Ay.paste(),
                     }),
-                    L && (0, a.jsx)(o.Dr, { id: "paste-as-plain-text", label: P.intl.string(P.t.X92Qnr), action: F }),
+                    X && (0, a.jsx)(o.Dr, { id: "paste-as-plain-text", label: M.intl.string(M.t.X92Qnr), action: v }),
                 ],
             }),
         ],

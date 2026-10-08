@@ -1,32 +1,30 @@
-n.d(t, { A: () => c });
+n.d(t, { A: () => u });
 var l = n(582128),
-    i = n(739187),
-    r = n(857250),
-    s = n(97483),
-    a = n(957565),
-    o = n(927813),
-    u = n(907878),
-    d = n(660183);
-function c(e, t, n, c) {
-    let _ = l.useRef(null),
-        [E, f] = l.useState(!1);
+    i = n(376357),
+    r = n(957565),
+    s = n(927813),
+    a = n(907878),
+    o = n(660183);
+function u(e, t, n, u) {
+    let d = l.useRef(null),
+        [c, _] = l.useState(!1);
     return {
         handleCopyServerIp: l.useCallback(
             () => (
-                null != _.current && clearTimeout(_.current),
-                (0, u.ed)(e, t, n),
-                (0, a.C)(c ?? ""),
-                (0, i.P)((0, r.o)(d.intl.string(d.t["+5kSoW"]), s.Ck.SUCCESS)),
-                f(!0),
-                (_.current = setTimeout(() => {
-                    f(!1);
-                }, 2 * o.A.Millis.SECOND)),
+                null != d.current && clearTimeout(d.current),
+                (0, a.ed)(e, t, n),
+                (0, r.C)(u ?? ""),
+                (0, i.P0)((0, i.ox)(o.intl.string(o.t["+5kSoW"]), i.Ck.SUCCESS)),
+                _(!0),
+                (d.current = setTimeout(() => {
+                    _(!1);
+                }, 2 * s.A.Millis.SECOND)),
                 () => {
-                    null != _.current && clearTimeout(_.current);
+                    null != d.current && clearTimeout(d.current);
                 }
             ),
-            [e, t, n, c],
+            [e, t, n, u],
         ),
-        animateCopyIcon: E,
+        animateCopyIcon: c,
     };
 }

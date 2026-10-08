@@ -1,83 +1,81 @@
-n.d(e, { default: () => f });
+n.d(e, { default: () => d });
 var i = n(477900),
     a = n(582128),
     s = n(562708),
-    r = n(739187),
-    l = n(857250),
-    o = n(97483),
-    u = n(772707),
-    c = n(331322),
-    p = n(95477),
-    y = n(123292),
-    g = n(181658),
-    d = n(660183),
-    h = n(661965);
-function f(t) {
+    r = n(376357),
+    l = n(772707),
+    o = n(331322),
+    u = n(95477),
+    c = n(123292),
+    p = n(181658),
+    y = n(660183),
+    g = n(661965);
+function d(t) {
     let {
             transitionState: e,
             onFormSubmit: n,
-            onResend: f,
-            onSuccess: k,
-            onClose: C,
-            headerText: m,
-            confirmButtonText: x,
-            confirmButtonVariant: S = "primary",
-            impression: b,
+            onResend: d,
+            onSuccess: h,
+            onClose: x,
+            headerText: f,
+            confirmButtonText: k,
+            confirmButtonVariant: C = "primary",
+            impression: m,
         } = t,
-        [w, A] = a.useState(!1),
-        [E, j] = a.useState(""),
-        [v, M] = a.useState(!1),
-        [P, R] = a.useState(null),
-        T = a.useRef(null);
-    async function D(t) {
-        (t.preventDefault(), R(null), A(!0));
+        [S, b] = a.useState(!1),
+        [w, A] = a.useState(""),
+        [E, j] = a.useState(!1),
+        [v, M] = a.useState(null),
+        P = a.useRef(null);
+    async function R(t) {
+        (t.preventDefault(), M(null), b(!0));
         try {
-            let t = await n(E);
-            (null != k && k(t), C());
+            let t = await n(w);
+            (null != h && h(t), x());
         } catch (t) {
-            R(new g.A(t).getAnyErrorMessage());
+            M(new p.A(t).getAnyErrorMessage());
         } finally {
-            A(!1);
+            b(!1);
         }
     }
-    async function I() {
-        if (!v) {
-            M(!0);
+    async function T() {
+        if (!E) {
+            j(!0);
             try {
-                (await f(), (0, r.P)((0, l.o)(d.intl.string(d.t["84yeoz"]), o.Ck.SUCCESS)));
+                (await d(), (0, r.P0)((0, r.ox)(y.intl.string(y.t["84yeoz"]), r.Ck.SUCCESS)));
             } catch (e) {
-                let t = new g.A(e).getAnyErrorMessage();
-                null != t && (0, r.P)((0, l.o)(t, o.Ck.FAILURE));
+                let t = new p.A(e).getAnyErrorMessage();
+                null != t && (0, r.P0)((0, r.ox)(t, r.Ck.FAILURE));
             } finally {
-                M(!1);
+                j(!1);
             }
         }
     }
-    let L = w || v;
+    let D = S || E;
     return (0, i.jsx)("form", {
-        onSubmit: D,
-        children: (0, i.jsx)(u.k, {
+        onSubmit: R,
+        children: (0, i.jsx)(l.k, {
             transitionState: e,
-            trackingProps: { impression: b, impressionType: s.ImpressionTypes.MODAL },
-            graphic: { src: h, type: "image" },
-            title: m,
-            subtitle: d.intl.string(d.t.SZJowy),
+            trackingProps: { impression: m, impressionType: s.ImpressionTypes.MODAL },
+            graphic: { src: g, type: "image" },
+            title: f,
+            subtitle: y.intl.string(y.t.SZJowy),
             actions: [
-                { text: d.intl.string(d.t["ETE/oC"]), onClick: C, variant: "secondary", disabled: L },
-                { text: x, variant: S, loading: L, type: "submit" },
+                { text: y.intl.string(y.t["ETE/oC"]), onClick: x, variant: "secondary", disabled: D },
+                { text: k, variant: C, loading: D, type: "submit" },
             ],
-            onClose: C,
-            children: (0, i.jsxs)(c.B, {
+            onClose: x,
+            children: (0, i.jsxs)(o.B, {
                 gap: 8,
                 children: [
-                    (0, i.jsx)(p.k, {
-                        label: d.intl.string(d.t["8mZX6M"]),
-                        error: P,
-                        value: E,
-                        onChange: j,
-                        inputRef: T,
+                    (0, i.jsx)(u.k, {
+                        label: y.intl.string(y.t["8mZX6M"]),
+                        error: v,
+                        value: w,
+                        onChange: A,
+                        inputRef: P,
                     }),
-                    (0, i.jsx)(y.Q, { textVariant: "text-sm/normal", text: d.intl.string(d.t.K0NPQ6), onClick: I }),
+                    (0, i.jsx)(c.Q, { textVariant: "text-sm/normal", text: y.intl.string(y.t.K0NPQ6), onClick: T }),
                 ],
             }),
         }),

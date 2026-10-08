@@ -1,68 +1,66 @@
-n.d(t, { default: () => G });
+n.d(t, { default: () => L });
 var l,
     i = n(477900),
     a = n(582128),
     r = n(837381),
     s = n(189213),
     o = n(765178),
-    d = n(739187),
-    u = n(857250),
-    c = n(97483),
-    g = n(506309),
-    h = n(123292),
-    f = n(834730),
-    m = n(922016),
-    x = n(939249),
-    S = n(112173),
-    p = n(778712),
-    v = n(658675),
-    b = n(308528),
-    j = n(928039),
-    C = n(47167),
-    k = n(359378),
-    y = n(598104),
-    T = n(980707),
-    E = n(477782);
+    d = n(376357),
+    u = n(506309),
+    c = n(123292),
+    g = n(834730),
+    h = n(922016),
+    f = n(939249),
+    m = n(112173),
+    x = n(778712),
+    S = n(658675),
+    p = n(308528),
+    v = n(928039),
+    b = n(47167),
+    j = n(359378),
+    C = n(598104),
+    k = n(980707),
+    y = n(477782);
 (n(321073), n(839272));
-var P = n(309199),
-    A = n(734057),
-    O = n(573163),
-    w = n(935208),
-    D = (((l = {}).NEWEST = "newest"), (l.OLDEST = "oldest"), l);
-function M(e, t) {
+var T = n(309199),
+    E = n(734057),
+    P = n(573163),
+    A = n(935208),
+    O = (((l = {}).NEWEST = "newest"), (l.OLDEST = "oldest"), l);
+function w(e, t) {
     return e.toSorted((e, n) => ("newest" === t ? n.lastActivity - e.lastActivity : e.lastActivity - n.lastActivity));
 }
-var z = n(186492),
-    N = n(660183),
-    H = n(443648);
-function I(e) {
+var D = n(186492),
+    M = n(660183),
+    z = n(443648);
+function N(e) {
     let { sortOrder: t, onChangeSortOrder: n, closePopout: l } = e;
     return (0, i.jsx)("div", {
-        className: H.k,
-        children: (0, i.jsx)(T.W, {
+        className: z.k,
+        children: (0, i.jsx)(k.W, {
             navId: "clean-up-gdms-sort",
-            "aria-label": N.intl.string(z.default.yySzqH),
+            "aria-label": M.intl.string(D.default.yySzqH),
             hideScroller: !0,
             onClose: l,
             onSelect: l,
-            children: (0, i.jsxs)(E.rX, {
+            children: (0, i.jsxs)(y.rX, {
                 children: [
-                    (0, i.jsx)(E.iD, {
+                    (0, i.jsx)(y.iD, {
                         id: "clean-up-gdms-sort-newest",
                         group: "clean-up-gdms-sort",
-                        label: N.intl.string(z.default.VHmOpK),
-                        checked: t === D.NEWEST,
+                        label: M.intl.string(D.default.VHmOpK),
+                        checked: t === O.NEWEST,
                         action: () => {
-                            (n(D.NEWEST), l());
+                            (n(O.NEWEST), l());
                         },
                     }),
-                    (0, i.jsx)(E.iD, {
+                    (0, i.jsx)(y.iD, {
                         id: "clean-up-gdms-sort-oldest",
                         group: "clean-up-gdms-sort",
-                        label: N.intl.string(z.default.NLTGck),
-                        checked: t === D.OLDEST,
+                        label: M.intl.string(D.default.NLTGck),
+                        checked: t === O.OLDEST,
                         action: () => {
-                            (n(D.OLDEST), l());
+                            (n(O.OLDEST), l());
                         },
                     }),
                 ],
@@ -70,9 +68,9 @@ function I(e) {
         }),
     });
 }
-var L = n(373207);
-let R = { height: 480 };
-function G(e) {
+var H = n(373207);
+let I = { height: 480 };
+function L(e) {
     let { transitionState: t, onClose: n } = e,
         [l] = a.useState(() =>
             (function () {
@@ -84,231 +82,231 @@ function G(e) {
                         return (t.setDate(t.getDate() - e), t.getTime());
                     })(t),
                     l = [];
-                for (let e of Object.values(A.A.getMutablePrivateChannels())) {
+                for (let e of Object.values(E.A.getMutablePrivateChannels())) {
                     let t = (function (e, t) {
-                        if (!e.isGroupDM() || (0, P.k_)(e.id)) return null;
+                        if (!e.isGroupDM() || (0, T.k_)(e.id)) return null;
                         let n = (function (e, t) {
-                            let n = O.Ay.lastMessageTimestamp(e);
+                            let n = P.Ay.lastMessageTimestamp(e);
                             if (n > 0) return n;
-                            let l = O.Ay.lastMessageId(e) ?? t ?? e;
-                            return w.default.extractTimestamp(l);
+                            let l = P.Ay.lastMessageId(e) ?? t ?? e;
+                            return A.default.extractTimestamp(l);
                         })(e.id, e.lastMessageId);
                         return n < t ? n : null;
                     })(e, n);
                     null != t && l.push({ channel: e, lastActivity: t });
                 }
-                return M(l, "oldest").slice(0, e);
+                return w(l, "oldest").slice(0, e);
             })(),
         ),
-        [f, m] = a.useState(D.OLDEST),
-        [x, S] = a.useState(() => new Set(l.slice(0, 1e3).map((e) => e.channel.id))),
-        [p, v] = a.useState(!1),
-        C = a.useMemo(() => M(l, f), [l, f]),
-        k = 0 === l.length,
-        y = x.size,
-        T = Math.min(l.length, 1e3),
-        E = l.length <= 1e3,
-        H = T > 0 && y >= T,
-        I = y >= 1e3,
-        G = a.useCallback(
+        [g, h] = a.useState(O.OLDEST),
+        [f, m] = a.useState(() => new Set(l.slice(0, 1e3).map((e) => e.channel.id))),
+        [x, S] = a.useState(!1),
+        b = a.useMemo(() => w(l, g), [l, g]),
+        j = 0 === l.length,
+        C = f.size,
+        k = Math.min(l.length, 1e3),
+        y = l.length <= 1e3,
+        z = k > 0 && C >= k,
+        N = C >= 1e3,
+        L = a.useCallback(
             (e, t) => {
-                let n = !x.has(e);
-                (n && x.size >= 1e3) ||
+                let n = !f.has(e);
+                (n && f.size >= 1e3) ||
                     (null != t &&
                         o.O.announce(
-                            N.intl.formatToPlainString(n ? z.default["SsUZo/"] : z.default.x03WqE, {
+                            M.intl.formatToPlainString(n ? D.default["SsUZo/"] : D.default.x03WqE, {
                                 name: t,
-                                count: n ? y + 1 : y - 1,
+                                count: n ? C + 1 : C - 1,
                             }),
                             "polite",
                         ),
-                    S((t) => {
+                    m((t) => {
                         let n = new Set(t);
                         return (n.has(e) ? n.delete(e) : n.size < 1e3 && n.add(e), n);
                     }));
             },
-            [x, y],
+            [f, C],
         ),
-        U = a.useCallback(() => {
-            let e = y >= T,
-                t = e ? 0 : T;
+        _ = a.useCallback(() => {
+            let e = C >= k,
+                t = e ? 0 : k;
             (o.O.announce(
-                e ? N.intl.string(z.default.hhQnsH) : N.intl.formatToPlainString(z.default.GpUOWb, { count: t }),
+                e ? M.intl.string(D.default.hhQnsH) : M.intl.formatToPlainString(D.default.GpUOWb, { count: t }),
                 "polite",
             ),
-                S((e) => (e.size >= T ? new Set() : new Set(C.slice(0, 1e3).map((e) => e.channel.id)))));
-        }, [C, T, y]),
-        B = a.useCallback(
+                m((e) => (e.size >= k ? new Set() : new Set(b.slice(0, 1e3).map((e) => e.channel.id)))));
+        }, [b, k, C]),
+        F = a.useCallback(
             async (e) => {
                 try {
-                    await b.A.bulkLeaveGroupDMs(e);
+                    await p.A.bulkLeaveGroupDMs(e);
                 } catch (t) {
                     let e;
-                    if ((v(!1), t?.status === 409)) e = N.intl.string(z.default.ojlzko);
+                    if ((S(!1), t?.status === 409)) e = M.intl.string(D.default.ojlzko);
                     else if (t?.status === 429) {
                         let n = t.body?.retry_after;
                         e =
                             "number" == typeof n && Number.isFinite(n) && n > 0
-                                ? N.intl.formatToPlainString(z.default.SHTZTm, { seconds: Math.ceil(n) })
-                                : N.intl.string(z.default.f5Xg0V);
-                    } else e = N.intl.string(z.default["+HM0x2"]);
-                    (0, d.P)((0, u.o)(e, c.Ck.FAILURE));
+                                ? M.intl.formatToPlainString(D.default.SHTZTm, { seconds: Math.ceil(n) })
+                                : M.intl.string(D.default.f5Xg0V);
+                    } else e = M.intl.string(D.default["+HM0x2"]);
+                    (0, d.P0)((0, d.ox)(e, d.Ck.FAILURE));
                     return;
                 }
-                ((0, d.P)((0, u.o)(N.intl.formatToPlainString(z.default.b2r81u, { count: e.length }), c.Ck.SUCCESS)),
+                ((0, d.P0)((0, d.ox)(M.intl.formatToPlainString(D.default.b2r81u, { count: e.length }), d.Ck.SUCCESS)),
                     n().catch(() => {}));
             },
             [n],
         ),
-        K = a.useCallback(() => {
-            let e = Array.from(x);
-            0 !== e.length && (v(!0), B(e));
-        }, [x, B]),
-        q = 0 === y ? N.intl.string(z.default.YBjUwi) : N.intl.formatToPlainString(z.default.SakG2D, { count: y }),
-        V = (0, g.W)(16),
-        Y = a.useRef(null),
-        Z = (0, j.A)("clean-up-inactive-gdms-modal", Y),
-        Q = a.useMemo(
+        U = a.useCallback(() => {
+            let e = Array.from(f);
+            0 !== e.length && (S(!0), F(e));
+        }, [f, F]),
+        B = 0 === C ? M.intl.string(D.default.YBjUwi) : M.intl.formatToPlainString(D.default.SakG2D, { count: C }),
+        K = (0, u.W)(16),
+        q = a.useRef(null),
+        V = (0, v.A)("clean-up-inactive-gdms-modal", q),
+        Y = a.useMemo(
             () => ({
-                sections: [C.length],
+                sections: [b.length],
                 sectionHeight: 0,
                 rowHeight: 48,
-                paddingBottom: V,
-                style: R,
+                paddingBottom: K,
+                style: I,
                 renderRow: (e) => {
                     let { row: t } = e,
-                        n = C[t];
+                        n = b[t];
                     if (null == n) return null;
-                    let l = x.has(n.channel.id);
+                    let l = f.has(n.channel.id);
                     return (0, i.jsx)(
-                        F,
+                        W,
                         {
                             gdm: n,
                             selected: l,
-                            disabled: I && !l,
-                            onToggle: G,
-                            ariaSetSize: C.length,
+                            disabled: N && !l,
+                            onToggle: L,
+                            ariaSetSize: b.length,
                             ariaPosInSet: t + 1,
                         },
                         n.channel.id,
                     );
                 },
             }),
-            [C, x, I, G, V],
+            [b, f, N, L, K],
         );
     return (0, i.jsx)(r.hD, {
-        navigator: Z,
+        navigator: V,
         children: (0, i.jsx)(r.PR, {
             children: (e) => {
                 let { ref: l, ...a } = e;
                 return (0, i.jsx)(s.a, {
                     transitionState: t,
                     onClose: n,
-                    title: N.intl.string(z.default.FrCK4r),
-                    subtitle: N.intl.string(z.default["2Cgdhl"]),
-                    input: k
+                    title: M.intl.string(D.default.FrCK4r),
+                    subtitle: M.intl.string(D.default["2Cgdhl"]),
+                    input: j
                         ? void 0
                         : (0, i.jsxs)("div", {
-                              className: L.HO,
+                              className: H.HO,
                               children: [
-                                  (0, i.jsx)(_, { sortOrder: f, onChangeSortOrder: m }),
-                                  (0, i.jsx)(h.Q, {
+                                  (0, i.jsx)(G, { sortOrder: g, onChangeSortOrder: h }),
+                                  (0, i.jsx)(c.Q, {
                                       variant: "primary",
                                       textVariant: "text-sm/medium",
-                                      onClick: U,
-                                      text: H
-                                          ? N.intl.string(z.default.jxi9GF)
-                                          : E
-                                            ? N.intl.string(z.default.mKxGpP)
-                                            : N.intl.formatToPlainString(z.default["9oRyjg"], { count: 1e3 }),
+                                      onClick: _,
+                                      text: z
+                                          ? M.intl.string(D.default.jxi9GF)
+                                          : y
+                                            ? M.intl.string(D.default.mKxGpP)
+                                            : M.intl.formatToPlainString(D.default["9oRyjg"], { count: 1e3 }),
                                   }),
                               ],
                           }),
-                    listProps: k
+                    listProps: j
                         ? void 0
                         : {
-                              ...Q,
+                              ...Y,
                               ...a,
                               innerRole: void 0,
                               ref: (e) => {
-                                  ((Y.current = e), (l.current = e?.getScrollerNode() ?? null));
+                                  ((q.current = e), (l.current = e?.getScrollerNode() ?? null));
                               },
                           },
-                    actions: k
+                    actions: j
                         ? [
                               {
                                   variant: "secondary",
-                                  text: N.intl.string(N.t["ETE/oC"]),
+                                  text: M.intl.string(M.t["ETE/oC"]),
                                   onClick: () => {
                                       n();
                                   },
                               },
                           ]
-                        : [{ variant: "critical-primary", text: q, onClick: K, disabled: 0 === y, loading: p }],
-                    children: k ? (0, i.jsx)(W, {}) : void 0,
+                        : [{ variant: "critical-primary", text: B, onClick: U, disabled: 0 === C, loading: x }],
+                    children: j ? (0, i.jsx)(R, {}) : void 0,
                 });
             },
         }),
     });
 }
-function W() {
+function R() {
     return (0, i.jsxs)("div", {
-        className: L.p$,
-        style: R,
+        className: H.p$,
+        style: I,
         children: [
-            (0, i.jsx)(f.E, { variant: "text-md/medium", children: N.intl.string(z.default.s8TEkh) }),
-            (0, i.jsx)(f.E, {
+            (0, i.jsx)(g.E, { variant: "text-md/medium", children: M.intl.string(D.default.s8TEkh) }),
+            (0, i.jsx)(g.E, {
                 variant: "text-sm/medium",
                 color: "text-muted",
-                children: N.intl.string(z.default["Y//IPC"]),
+                children: M.intl.string(D.default["Y//IPC"]),
             }),
         ],
     });
 }
-function _(e) {
+function G(e) {
     let { sortOrder: t, onChangeSortOrder: n } = e,
         l = a.useRef(null);
-    return (0, i.jsx)(m.Y, {
+    return (0, i.jsx)(h.Y, {
         targetElementRef: l,
         renderPopout: (e) => {
             let { closePopout: l } = e;
-            return (0, i.jsx)(I, { sortOrder: t, onChangeSortOrder: n, closePopout: l });
+            return (0, i.jsx)(N, { sortOrder: t, onChangeSortOrder: n, closePopout: l });
         },
         position: "bottom",
         align: "left",
         children: (e, t) => {
             let { onClick: n } = e,
                 { isShown: a } = t;
-            return (0, i.jsxs)(x.D, {
+            return (0, i.jsxs)(f.D, {
                 innerRef: l,
-                className: L.$O,
+                className: H.$O,
                 onClick: n,
-                "aria-label": N.intl.string(z.default.yySzqH),
+                "aria-label": M.intl.string(D.default.yySzqH),
                 "aria-expanded": a,
                 children: [
-                    (0, i.jsx)(f.E, {
+                    (0, i.jsx)(g.E, {
                         variant: "text-sm/medium",
                         color: "currentColor",
-                        children: N.intl.string(z.default["FLgBG/"]),
+                        children: M.intl.string(D.default["FLgBG/"]),
                     }),
-                    (0, i.jsx)(S.J, { size: "xxs", color: "currentColor" }),
+                    (0, i.jsx)(m.J, { size: "xxs", color: "currentColor" }),
                 ],
             });
         },
     });
 }
-function F(e) {
+function W(e) {
     let { gdm: t, selected: n, disabled: l, onToggle: a, ariaSetSize: r, ariaPosInSet: s } = e,
-        o = (0, C.Ay)(t.channel) ?? void 0,
+        o = (0, b.Ay)(t.channel) ?? void 0,
         d = t.channel.recipients.length + 1;
-    return (0, i.jsx)(k.A, {
+    return (0, i.jsx)(j.A, {
         listItemId: t.channel.id,
-        icon: (0, i.jsx)(y.A, { "aria-hidden": !0, size: p._3.SIZE_32, channel: t.channel }),
+        icon: (0, i.jsx)(C.A, { "aria-hidden": !0, size: x._3.SIZE_32, channel: t.channel }),
         label: o,
-        subLabel: N.intl.formatToPlainString(N.t.ABMKx3, { members: d }),
+        subLabel: M.intl.formatToPlainString(M.t.ABMKx3, { members: d }),
         selected: n,
         disabled: l,
-        trailing: (0, i.jsx)(v.P, { checked: n, disabled: l }),
+        trailing: (0, i.jsx)(S.P, { checked: n, disabled: l }),
         onPress: () => a(t.channel.id, o),
         "aria-label": o,
         "aria-setsize": r,

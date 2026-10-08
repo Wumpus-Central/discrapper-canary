@@ -1,32 +1,30 @@
-i.d(t, { default: () => w });
+i.d(t, { default: () => U });
 var l = i(477900),
     a = i(582128),
     s = i(834730),
     r = i(831544),
     n = i(432017),
-    c = i(739187),
-    o = i(857250),
-    d = i(97483),
-    u = i(173936),
-    m = i(148494),
-    h = i(914718),
-    C = i(451909),
-    k = i(446244),
-    p = i(734057),
-    x = i(957565),
-    f = i(403362),
-    v = i(148166),
-    g = i(381941),
-    S = i(660183),
-    U = i(555414);
-function j(e) {
+    c = i(376357),
+    o = i(173936),
+    d = i(148494),
+    u = i(914718),
+    m = i(451909),
+    h = i(446244),
+    x = i(734057),
+    C = i(957565),
+    k = i(403362),
+    p = i(148166),
+    f = i(381941),
+    v = i(660183),
+    g = i(555414);
+function S(e) {
     let { target: t } = e,
         i = "artist" === t.kind;
     return (0, l.jsxs)("div", {
-        className: U.sq,
+        className: g.sq,
         children: [
             (0, l.jsxs)("div", {
-                className: U.kx,
+                className: g.kx,
                 children: [
                     (0, l.jsx)(s.E, {
                         variant: "text-md/medium",
@@ -44,35 +42,35 @@ function j(e) {
                 ],
             }),
             (0, l.jsx)("div", {
-                className: U.SZ,
-                children: (0, l.jsx)(v.R, { src: t.imageUrl, isCircular: i, FallbackIcon: i ? r.MicrophoneIcon : n.T }),
+                className: g.SZ,
+                children: (0, l.jsx)(p.R, { src: t.imageUrl, isCircular: i, FallbackIcon: i ? r.MicrophoneIcon : n.T }),
             }),
         ],
     });
 }
-function w(e) {
+function U(e) {
     let { target: t, onClose: i, ...s } = e,
         r = a.useCallback(
             async (e, l, a) => {
                 let { withMessage: s, closeAfterSend: r } = l;
                 a(!0);
                 try {
-                    let l = (await Promise.all(e.map(k.pk))).filter(f.Vq);
+                    let l = (await Promise.all(e.map(h.pk))).filter(k.Vq);
                     if (0 === l.length) return void a(!1);
                     r && i();
                     let n = `${t.shareUrl}
 
 `;
                     for (let e of l) {
-                        let t = p.A.getChannel(e);
+                        let t = x.A.getChannel(e);
                         null != t &&
-                            (await m.A.sendMessage(t.id, C.Ay.parse(t, n + (s ?? "")), !1, {
-                                location: g.Hx.GUILD_SPACE,
+                            (await d.A.sendMessage(t.id, m.Ay.parse(t, n + (s ?? "")), !1, {
+                                location: f.Hx.GUILD_SPACE,
                             }));
                     }
-                    (0, c.P)((0, o.o)(S.intl.string(S.t.kwmYkt), d.Ck.SUCCESS));
+                    (0, c.P0)((0, c.ox)(v.intl.string(v.t.kwmYkt), c.Ck.SUCCESS));
                 } catch (e) {
-                    (0, c.P)((0, o.o)(S.intl.string(S.t.iufib1), d.Ck.FAILURE));
+                    (0, c.P0)((0, c.ox)(v.intl.string(v.t.iufib1), c.Ck.FAILURE));
                 } finally {
                     a(!1);
                 }
@@ -85,17 +83,17 @@ function w(e) {
                     variant: "secondary",
                     text: void 0,
                     onClick: () =>
-                        (0, x.C)(t.shareUrl, () => (0, c.P)((0, o.o)(S.intl.string(S.t["L/PwZf"]), d.Ck.SUCCESS))),
-                    icon: u.LinkIcon,
+                        (0, C.C)(t.shareUrl, () => (0, c.P0)((0, c.ox)(v.intl.string(v.t["L/PwZf"]), c.Ck.SUCCESS))),
+                    icon: o.LinkIcon,
                 },
             ],
             [t.shareUrl],
         );
-    return (0, l.jsx)(h.ForwardModal, {
+    return (0, l.jsx)(u.ForwardModal, {
         ...s,
         onClose: i,
         source: "guild-space-popular-music",
-        customPreview: (0, l.jsx)(j, { target: t }),
+        customPreview: (0, l.jsx)(S, { target: t }),
         customSendHandler: r,
         additionalActions: n,
     });

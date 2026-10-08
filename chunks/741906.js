@@ -1,4 +1,4 @@
-(n.d(t, { e: () => K }), n(321073));
+(n.d(t, { e: () => $ }), n(321073));
 var i,
     r = n(477900),
     a = n(582128),
@@ -57,31 +57,37 @@ var I = n(775602),
     m = n(267102),
     g = n(652215);
 let S = ["Shift", "Alt", "Meta", "Control"];
-var N = n(973283),
-    C = n(534409),
-    O = n(37537);
-let R = (0, n(945810).mj)({
+var N = n(945810);
+let C = (0, N.mj)({
+    name: "2026-09-design-systems-notification-components",
+    kind: "user",
+    defaultConfig: { enabled: !1 },
+    variations: { 1: { enabled: !0 } },
+});
+var O = n(534409),
+    R = n(37537);
+let L = (0, N.mj)({
     name: "2026-08-rive-web-perf",
     kind: "user",
     defaultConfig: { enabled: !1 },
     variations: { 1: { enabled: !0 } },
 });
-var L = n(750506),
-    y = n(869146),
-    D = n(773669),
-    v = n(363195),
-    b = n(531685),
-    M = n(19575),
-    P = n(418842),
-    U = n(607399),
-    w = n(112834),
-    G = n(964486),
-    x = n(657043),
-    k = n(723702),
-    F = n(354328),
-    B = n(964404),
-    V = n(611635);
-function H(e) {
+var y = n(750506),
+    D = n(869146),
+    v = n(773669),
+    b = n(363195),
+    M = n(531685),
+    P = n(19575),
+    U = n(418842),
+    w = n(607399),
+    G = n(112834),
+    x = n(964486),
+    k = n(657043),
+    F = n(723702),
+    B = n(354328),
+    V = n(964404),
+    H = n(611635);
+function j(e) {
     let t,
         {
             rootClassName: i,
@@ -107,14 +113,14 @@ function H(e) {
         L = window.CSS.supports("selector(::-webkit-scrollbar)"),
         y = (0, c.bG)([I.Ay], () => I.Ay.zoom),
         D = O ? "" : `--custom-zoom: ${y};`,
-        v = (0, F.A)("highlight_mana_buttons"),
-        b = (0, F.A)("highlight_mana_components"),
-        P = (0, F.A)("highlight_mana_text"),
-        H = (0, F.A)("highlight_void_toggleables"),
-        j = (0, F.A)("highlight_void_buttons"),
-        W = (0, F.A)("highlight_mana_text_overrides");
+        v = (0, B.A)("highlight_mana_buttons"),
+        b = (0, B.A)("highlight_mana_components"),
+        M = (0, B.A)("highlight_mana_text"),
+        U = (0, B.A)("highlight_void_toggleables"),
+        j = (0, B.A)("highlight_void_buttons"),
+        W = (0, B.A)("highlight_mana_text_overrides");
     (a.useEffect(() => {
-        if (!P) return;
+        if (!M) return;
         let e = () => {},
             t = !1;
         return (
@@ -128,7 +134,7 @@ function H(e) {
                 ((t = !0), e());
             }
         );
-    }, [P]),
+    }, [M]),
         a.useEffect(() => {
             if (!W) return;
             let e = () => {},
@@ -145,20 +151,20 @@ function H(e) {
                 }
             );
         }, [W]));
-    let Y = (0, c.bG)([B.Ay], () => B.Ay.hdrDynamicRange),
-        K = (0, x.BX)("RootElementContextProvider"),
+    let Y = (0, c.bG)([V.Ay], () => V.Ay.hdrDynamicRange),
+        K = (0, k.BX)("RootElementContextProvider"),
         $ = `font-size: ${_}%; --saturation-factor: ${f}; dynamic-range-limit: ${Y}; ${D}`,
         z = o()(
             ((t = ""),
-            (0, k.isWindows)()
+            (0, F.isWindows)()
                 ? (t = "platform-win")
-                : (0, k.isMac)()
+                : (0, F.isMac)()
                   ? (t = "platform-osx")
-                  : (0, k.isLinux)()
+                  : (0, F.isLinux)()
                     ? (t = "platform-linux")
-                    : (0, k.isWeb)() && (t = "platform-web"),
+                    : (0, F.isWeb)() && (t = "platform-web"),
             __OVERLAY__ ? `${t} platform-overlay` : t),
-            (0, w.m)(l),
+            (0, G.m)(l),
             `density-${d}`,
             E,
             {
@@ -170,7 +176,7 @@ function H(e) {
                 "mouse-mode": A,
                 "reduce-motion": g,
                 "full-motion": !g,
-                "is-mobile": U.Fr,
+                "is-mobile": w.Fr,
                 "app-focused": u,
                 "desaturate-user-colors": p,
                 "disable-forced-colors": !T && "active" === m,
@@ -180,9 +186,9 @@ function H(e) {
                 "visual-refresh-chat-input": !1,
                 "highlight-mana-buttons": v,
                 "highlight-mana-components": b,
-                "highlight-mana-text": P,
+                "highlight-mana-text": M,
                 "highlight-mana-text-overrides": W,
-                "highlight-void-toggleables": H,
+                "highlight-void-toggleables": U,
                 "highlight-void-buttons": j,
                 "high-contrast-mode": C,
                 "enlarge-target-size": K,
@@ -191,23 +197,23 @@ function H(e) {
         ),
         X = a.useMemo(() => ({ lang: s, style: $, className: z, focused: u }), [s, $, z, u]);
     return (
-        (0, G.Ay)(() => {
-            M.Ay.setTrafficLightPosition({ x: 9, y: 9 });
+        (0, x.Ay)(() => {
+            P.Ay.setTrafficLightPosition({ x: 9, y: 9 });
         }),
-        (0, r.jsx)(V.q.Provider, { value: X, children: R })
+        (0, r.jsx)(H.q.Provider, { value: X, children: R })
     );
 }
-var j = n(422411),
-    W = n(660183);
-let Y = { Modal: d.ImpressionTypes.MODAL };
-function K(e) {
+var W = n(422411),
+    Y = n(660183);
+let K = { Modal: d.ImpressionTypes.MODAL };
+function $(e) {
     let { windowKey: t, themeOverride: n, children: i } = e,
         l = null != t,
-        [d] = a.useState(() => M.Ay.getEnableHardwareAcceleration()),
+        [d] = a.useState(() => P.Ay.getEnableHardwareAcceleration()),
         {
             locale: A,
             theme: h,
-            focused: U,
+            focused: N,
             mainWindowVisible: w,
             currentWindow: G,
             fontScale: x,
@@ -215,17 +221,17 @@ function K(e) {
             keyboardModeEnabled: F,
             saturation: B,
             desaturateUserColors: V,
-            useForcedColors: K,
+            useForcedColors: H,
             systemForcedColors: $,
             useReducedMotion: z,
             alwaysShowLinkDecorations: X,
             highContrastMode: Z,
-        } = (0, c.cf)([D.default, I.Ay, v.A, y.A, b.A], () => ({
-            locale: D.default.locale,
-            theme: n ?? v.A.theme,
-            focused: l ? y.A.getWindowFocused(t) : b.A.isFocused(),
-            mainWindowVisible: b.A.isVisible(),
-            currentWindow: l ? (y.A.getWindow(t) ?? window) : window,
+        } = (0, c.cf)([v.default, I.Ay, b.A, D.A, M.A], () => ({
+            locale: v.default.locale,
+            theme: n ?? b.A.theme,
+            focused: l ? D.A.getWindowFocused(t) : M.A.isFocused(),
+            mainWindowVisible: M.A.isVisible(),
+            currentWindow: l ? (D.A.getWindow(t) ?? window) : window,
             fontScale: I.Ay.fontScale,
             fontScaleClass: I.Ay.fontScaleClass,
             keyboardModeEnabled: I.Ay.keyboardModeEnabled,
@@ -271,16 +277,16 @@ function K(e) {
                 }, [e, s, n, t]),
                 t && 0 === n && s
             );
-        })(G, __OVERLAY__ || U),
+        })(G, __OVERLAY__ || N),
         Q = 0;
     1 !== B && (Q |= _.REDUCE_SATURATION_ENABLED);
-    let J = (0, P.C)(),
-        ee = (0, C.qK)("RootThemeContextProvider"),
-        et = (0, C.k5)("RootThemeContextProvider"),
-        en = (0, C.lV)("RootThemeContextProvider"),
-        ei = (0, O.c)("RootThemeContextProvider"),
-        er = (0, N.D2)("RootThemeContextProvider"),
-        ea = R.useConfig({ location: "RootThemeContextProvider" }).enabled,
+    let J = (0, U.C)(),
+        ee = (0, O.qK)("RootThemeContextProvider"),
+        et = (0, O.k5)("RootThemeContextProvider"),
+        en = (0, O.lV)("RootThemeContextProvider"),
+        ei = (0, R.c)("RootThemeContextProvider"),
+        er = C.useConfig({ location: "RootThemeContextProvider" }).enabled,
+        ea = L.useConfig({ location: "RootThemeContextProvider" }).enabled,
         es = (0, T.m2)({ isPopoutWindow: l }),
         el = (function (e) {
             let { theme: t, saturation: n, enabledExperiments: i, focused: r, mainWindowVisible: l, locale: o } = e,
@@ -290,7 +296,7 @@ function K(e) {
                         let { componentName: t, payload: n } = e;
                         d(
                             {
-                                type: n.impressionType ?? Y[t],
+                                type: n.impressionType ?? K[t],
                                 name: n.impression?.impressionName,
                                 properties: n.impression?.impressionProperties,
                             },
@@ -302,77 +308,77 @@ function K(e) {
                 _ = a.useCallback(
                     () => ({
                         i18n: {
-                            CANCEL: W.intl.string(W.t["ETE/oC"]),
-                            BACK: W.intl.string(W.t["13/7kX"]),
-                            NEXT: W.intl.string(W.t.PDTjLN),
-                            SUBMIT: W.intl.string(W.t.geKm7t),
-                            SPINNER_LOADING_LABEL: W.intl.string(W.t.ZTNur7),
-                            BUTTON_LOADING_STARTED_LABEL: W.intl.string(W.t.pfChQr),
-                            BUTTON_LOADING_FINISHED_LABEL: W.intl.string(W.t.SVParY),
-                            CLOSE_BUTTON_LABEL: W.intl.string(W.t.cpT0Cq),
-                            DISMISS_BUTTON_LABEL: W.intl.string(W.t.WAI6xu),
-                            PLAY_BUTTON_LABEL: W.intl.string(W.t.RscU7I),
-                            PAUSE_BUTTON_LABEL: W.intl.string(W.t.ZcgDJX),
-                            NEW: W.intl.string(W.t.y2b7CA),
-                            BETA: W.intl.string(W.t.oW0eUd),
-                            EARLY_ACCESS: W.intl.string(W.t.EYxi0o),
-                            BILLING_TRIAL_FREE_TRIAL_TEXT: W.intl.string(W.t.IBYG5U),
-                            MODAL_DONT_SHOW_AGAIN: W.intl.string(j.default.m3Vfcs),
-                            SEARCH: W.intl.string(W.t["5h0QOP"]),
-                            AUTOCOMPLETE_NO_RESULTS_HEADER: W.intl.string(W.t["4o4z3e"]),
-                            AUTOCOMPLETE_NO_RESULTS_BODY: W.intl.string(W.t.QwSXv8),
-                            LISTBOX_EMPTY_STATE: W.intl.string(j.default.db85vU),
+                            CANCEL: Y.intl.string(Y.t["ETE/oC"]),
+                            BACK: Y.intl.string(Y.t["13/7kX"]),
+                            NEXT: Y.intl.string(Y.t.PDTjLN),
+                            SUBMIT: Y.intl.string(Y.t.geKm7t),
+                            SPINNER_LOADING_LABEL: Y.intl.string(Y.t.ZTNur7),
+                            BUTTON_LOADING_STARTED_LABEL: Y.intl.string(Y.t.pfChQr),
+                            BUTTON_LOADING_FINISHED_LABEL: Y.intl.string(Y.t.SVParY),
+                            CLOSE_BUTTON_LABEL: Y.intl.string(Y.t.cpT0Cq),
+                            DISMISS_BUTTON_LABEL: Y.intl.string(Y.t.WAI6xu),
+                            PLAY_BUTTON_LABEL: Y.intl.string(Y.t.RscU7I),
+                            PAUSE_BUTTON_LABEL: Y.intl.string(Y.t.ZcgDJX),
+                            NEW: Y.intl.string(Y.t.y2b7CA),
+                            BETA: Y.intl.string(Y.t.oW0eUd),
+                            EARLY_ACCESS: Y.intl.string(Y.t.EYxi0o),
+                            BILLING_TRIAL_FREE_TRIAL_TEXT: Y.intl.string(Y.t.IBYG5U),
+                            MODAL_DONT_SHOW_AGAIN: Y.intl.string(W.default.m3Vfcs),
+                            SEARCH: Y.intl.string(Y.t["5h0QOP"]),
+                            AUTOCOMPLETE_NO_RESULTS_HEADER: Y.intl.string(Y.t["4o4z3e"]),
+                            AUTOCOMPLETE_NO_RESULTS_BODY: Y.intl.string(Y.t.QwSXv8),
+                            LISTBOX_EMPTY_STATE: Y.intl.string(W.default.db85vU),
                             LISTBOX_EMPTY_STATE_WITH_QUERY: (e) =>
-                                W.intl.formatToPlainString(j.default.bPKiId, { query: e }),
-                            KEY_CTRL_A11Y_LABEL: W.intl.string(W.t.jm6v8i),
-                            KEY_CMD_A11Y_LABEL: W.intl.string(W.t.pYkiQq),
-                            KEY_ALT_A11Y_LABEL: W.intl.string(W.t.R2n7d3),
-                            KEY_OPTION_A11Y_LABEL: W.intl.string(W.t.FMYSJY),
-                            KEY_SHIFT: W.intl.string(W.t["L+jWo5"]),
-                            KEY_SHIFT_A11Y_LABEL: W.intl.string(W.t["q+/2+S"]),
-                            KEY_UP_A11Y_LABEL: W.intl.string(W.t.HxzHDb),
-                            KEY_DOWN_A11Y_LABEL: W.intl.string(W.t["a+iRlH"]),
-                            KEY_LEFT_A11Y_LABEL: W.intl.string(W.t.xFjIVC),
-                            KEY_RIGHT_A11Y_LABEL: W.intl.string(W.t["BT3jf/"]),
-                            KEY_PAGEUP: W.intl.string(W.t.VdCWGI),
-                            KEY_PAGEDOWN: W.intl.string(W.t.gpSh3U),
-                            KEY_ANY: W.intl.string(W.t.CkGpcV),
-                            KEY_ENTER: W.intl.string(W.t.SUweGy),
-                            KEY_ENTER_A11Y_LABEL: W.intl.string(W.t.yLNala),
-                            KEY_RETURN_A11Y_LABEL: W.intl.string(W.t.V7nPj0),
-                            KEY_ESCAPE: W.intl.string(W.t.cQmsQF),
-                            KEY_ESCAPE_A11Y_LABEL: W.intl.string(W.t["2qsw5/"]),
-                            KEY_BACKSPACE: W.intl.string(W.t["L+36+h"]),
-                            KEY_BACKSPACE_A11Y_LABEL: W.intl.string(W.t["9c/Ikv"]),
-                            KEY_DELETE_A11Y_LABEL: W.intl.string(W.t.BTFDmq),
-                            DATE_INPUT_OPEN_CALENDAR_LABEL: W.intl.string(j.default.I8kUqR),
-                            CALENDAR_PREVIOUS_MONTH_LABEL: W.intl.string(j.default.raS6yf),
-                            CALENDAR_NEXT_MONTH_LABEL: W.intl.string(j.default["/cp93l"]),
-                            INLINE_NOTICE_GENERIC_ERROR: W.intl.string(W.t["rTU7/z"]),
-                            FEEDBACK_CRITICAL_ICON_A11Y_LABEL: W.intl.string(j.default.uKMqrF),
-                            FEEDBACK_WARNING_ICON_A11Y_LABEL: W.intl.string(j.default["7vL/d/"]),
-                            FEEDBACK_INFO_ICON_A11Y_LABEL: W.intl.string(j.default.BReS7U),
-                            FEEDBACK_POSITIVE_ICON_A11Y_LABEL: W.intl.string(j.default["1MXXPf"]),
+                                Y.intl.formatToPlainString(W.default.bPKiId, { query: e }),
+                            KEY_CTRL_A11Y_LABEL: Y.intl.string(Y.t.jm6v8i),
+                            KEY_CMD_A11Y_LABEL: Y.intl.string(Y.t.pYkiQq),
+                            KEY_ALT_A11Y_LABEL: Y.intl.string(Y.t.R2n7d3),
+                            KEY_OPTION_A11Y_LABEL: Y.intl.string(Y.t.FMYSJY),
+                            KEY_SHIFT: Y.intl.string(Y.t["L+jWo5"]),
+                            KEY_SHIFT_A11Y_LABEL: Y.intl.string(Y.t["q+/2+S"]),
+                            KEY_UP_A11Y_LABEL: Y.intl.string(Y.t.HxzHDb),
+                            KEY_DOWN_A11Y_LABEL: Y.intl.string(Y.t["a+iRlH"]),
+                            KEY_LEFT_A11Y_LABEL: Y.intl.string(Y.t.xFjIVC),
+                            KEY_RIGHT_A11Y_LABEL: Y.intl.string(Y.t["BT3jf/"]),
+                            KEY_PAGEUP: Y.intl.string(Y.t.VdCWGI),
+                            KEY_PAGEDOWN: Y.intl.string(Y.t.gpSh3U),
+                            KEY_ANY: Y.intl.string(Y.t.CkGpcV),
+                            KEY_ENTER: Y.intl.string(Y.t.SUweGy),
+                            KEY_ENTER_A11Y_LABEL: Y.intl.string(Y.t.yLNala),
+                            KEY_RETURN_A11Y_LABEL: Y.intl.string(Y.t.V7nPj0),
+                            KEY_ESCAPE: Y.intl.string(Y.t.cQmsQF),
+                            KEY_ESCAPE_A11Y_LABEL: Y.intl.string(Y.t["2qsw5/"]),
+                            KEY_BACKSPACE: Y.intl.string(Y.t["L+36+h"]),
+                            KEY_BACKSPACE_A11Y_LABEL: Y.intl.string(Y.t["9c/Ikv"]),
+                            KEY_DELETE_A11Y_LABEL: Y.intl.string(Y.t.BTFDmq),
+                            DATE_INPUT_OPEN_CALENDAR_LABEL: Y.intl.string(W.default.I8kUqR),
+                            CALENDAR_PREVIOUS_MONTH_LABEL: Y.intl.string(W.default.raS6yf),
+                            CALENDAR_NEXT_MONTH_LABEL: Y.intl.string(W.default["/cp93l"]),
+                            INLINE_NOTICE_GENERIC_ERROR: Y.intl.string(Y.t["rTU7/z"]),
+                            FEEDBACK_CRITICAL_ICON_A11Y_LABEL: Y.intl.string(W.default.uKMqrF),
+                            FEEDBACK_WARNING_ICON_A11Y_LABEL: Y.intl.string(W.default["7vL/d/"]),
+                            FEEDBACK_INFO_ICON_A11Y_LABEL: Y.intl.string(W.default.BReS7U),
+                            FEEDBACK_POSITIVE_ICON_A11Y_LABEL: Y.intl.string(W.default["1MXXPf"]),
                             STEP_INDICATOR: (e, t) =>
-                                W.intl.formatToPlainString(j.default["v2YSk/"], { stepNumber: e, stepCount: t }),
-                            SELECT_PLACEHOLDER: W.intl.string(j.default["A+pfVR"]),
-                            CLEAR_SELECTION: W.intl.string(j.default.JA5C7L),
-                            SELECTED_TAGS_HEADING: W.intl.string(j.default.VMNfsY),
-                            PRESS_DELETE_TO_REMOVE_TAG: W.intl.string(j.default["/Y7vRd"]),
-                            PERCENT_COMPLETE: (e) => W.intl.formatToPlainString(j.default["2L/ygS"], { percent: e }),
-                            TEXT_INPUT_CLEAR: W.intl.string(W.t.VkKicb),
-                            CHARACTER_COUNT_LIMIT_REACHED: W.intl.string(W.t.c2Jqed),
+                                Y.intl.formatToPlainString(W.default["v2YSk/"], { stepNumber: e, stepCount: t }),
+                            SELECT_PLACEHOLDER: Y.intl.string(W.default["A+pfVR"]),
+                            CLEAR_SELECTION: Y.intl.string(W.default.JA5C7L),
+                            SELECTED_TAGS_HEADING: Y.intl.string(W.default.VMNfsY),
+                            PRESS_DELETE_TO_REMOVE_TAG: Y.intl.string(W.default["/Y7vRd"]),
+                            PERCENT_COMPLETE: (e) => Y.intl.formatToPlainString(W.default["2L/ygS"], { percent: e }),
+                            TEXT_INPUT_CLEAR: Y.intl.string(Y.t.VkKicb),
+                            CHARACTER_COUNT_LIMIT_REACHED: Y.intl.string(Y.t.c2Jqed),
                             CHARACTER_COUNT_A11Y_LABEL: (e) =>
-                                W.intl.formatToPlainString(W.t.fR1cof, { remainingCharacters: e }),
-                            MINIMUM_LENGTH_ERROR: (e) => W.intl.formatToPlainString(W.t["62rk1K"], { minLength: e }),
-                            MAXIMUM_LENGTH_ERROR: (e) => W.intl.formatToPlainString(W.t.ICT5S6, { maxLength: e }),
-                            MINIMUM_VALUE_ERROR: (e) => W.intl.formatToPlainString(W.t.ykmNSo, { min: e }),
-                            MAXIMUM_VALUE_ERROR: (e) => W.intl.formatToPlainString(W.t.KiDDCk, { max: e }),
+                                Y.intl.formatToPlainString(Y.t.fR1cof, { remainingCharacters: e }),
+                            MINIMUM_LENGTH_ERROR: (e) => Y.intl.formatToPlainString(Y.t["62rk1K"], { minLength: e }),
+                            MAXIMUM_LENGTH_ERROR: (e) => Y.intl.formatToPlainString(Y.t.ICT5S6, { maxLength: e }),
+                            MINIMUM_VALUE_ERROR: (e) => Y.intl.formatToPlainString(Y.t.ykmNSo, { min: e }),
+                            MAXIMUM_VALUE_ERROR: (e) => Y.intl.formatToPlainString(Y.t.KiDDCk, { max: e }),
                         },
                         locale: o,
                         theme: t,
                         saturation: n,
-                        defaultLayerContext: L.uY,
+                        defaultLayerContext: y.uY,
                         experiments: { enabledExperiments: i },
                         trackImpression: c,
                         isWindowFocused: () => r,
@@ -387,7 +393,7 @@ function K(e) {
                     function e() {
                         A(_);
                     }
-                    ((0, s.waitForAllDefaultIntlMessagesLoaded)().then(e), W.intl.onLocaleChange(e));
+                    ((0, s.waitForAllDefaultIntlMessagesLoaded)().then(e), Y.intl.onLocaleChange(e));
                 }, [_]),
                 E
             );
@@ -406,7 +412,7 @@ function K(e) {
                     e
                 );
             }, [ee, et, en, ei, er, ea]),
-            focused: U,
+            focused: N,
             mainWindowVisible: w,
             locale: A,
         });
@@ -417,18 +423,18 @@ function K(e) {
             flags: Q,
             saturation: B,
             density: J,
-            children: (0, r.jsx)(H, {
+            children: (0, r.jsx)(j, {
                 lang: A,
                 theme: h,
                 density: J,
-                focused: U,
+                focused: N,
                 fontScale: x,
                 fontScaleClass: k,
                 keyboardModeEnabled: F,
                 mouseMode: q,
                 saturation: B,
                 desaturateUserColors: V,
-                useForcedColors: K,
+                useForcedColors: H,
                 systemForcedColors: $,
                 useReducedMotion: z,
                 alwaysShowLinkDecorations: X,

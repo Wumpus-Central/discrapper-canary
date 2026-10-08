@@ -11,7 +11,7 @@ let r = {
         ],
         inlineRequire: () => n(386741).A,
     },
-    AutomodRemovedContentManager: { actions: ["AUTO_MODERATION_CONTENT_DELETED"], inlineRequire: () => n(892992).A },
+    AutomodRemovedContentManager: { actions: ["AUTO_MODERATION_CONTENT_DELETED"], inlineRequire: () => n(35774).A },
     AutoUpdateManager: {
         actions: ["POST_CONNECTION_OPEN", "AUTO_UPDATER_QUIT_AND_INSTALL"],
         inlineRequire: () => n(578152).A,

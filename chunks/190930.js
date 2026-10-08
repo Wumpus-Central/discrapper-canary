@@ -1,4 +1,4 @@
-n.d(t, { default: () => q });
+n.d(t, { default: () => V });
 var a = n(477900),
     i = n(582128),
     l = n(562708),
@@ -6,123 +6,121 @@ var a = n(477900),
     s = n(17928),
     o = n(189213),
     c = n(834730),
-    d = n(739187),
-    u = n(857250),
-    p = n(97483),
-    m = n(289873),
-    A = n(683438),
-    h = n(331322),
-    g = n(308528),
-    y = n(148494),
-    C = n(608299),
-    f = n(928039),
-    _ = n(139286),
-    I = n(429913),
-    S = n(115718),
-    E = n(61916),
-    x = n(274652),
-    w = n(823099),
-    M = n(451909),
-    T = n(151054),
-    v = n(734057),
-    k = n(31717),
-    U = n(576705),
-    b = n(522602),
-    D = n(287809),
-    R = n(174459),
-    j = n(741394),
-    N = n(998218),
-    L = n(19575),
-    P = n(933958),
-    F = n(652215),
-    H = n(381941),
-    O = n(660183),
-    G = n(868494);
-let V = (e, t) =>
-    e.type === S.rD.USER
-        ? t || null != v.A.getDMChannelFromUserId(e.record.id)
-        : e.type === S.rD.GROUP_DM ||
-          (e.record.type !== F.rbe.GUILD_FORUM &&
-              e.record.type !== F.rbe.GUILD_MEDIA &&
-              U.A.can(F.xBc.VIEW_CHANNEL, e.record) &&
-              U.A.can(F.xBc.SEND_MESSAGES, e.record) &&
-              U.A.can(F.xBc.ATTACH_FILES, e.record));
-function B() {
+    d = n(376357),
+    u = n(289873),
+    p = n(683438),
+    m = n(331322),
+    A = n(308528),
+    h = n(148494),
+    g = n(608299),
+    y = n(928039),
+    C = n(139286),
+    f = n(429913),
+    _ = n(115718),
+    I = n(61916),
+    S = n(274652),
+    E = n(823099),
+    x = n(451909),
+    w = n(151054),
+    M = n(734057),
+    T = n(31717),
+    v = n(576705),
+    k = n(522602),
+    U = n(287809),
+    b = n(174459),
+    D = n(741394),
+    R = n(998218),
+    j = n(19575),
+    N = n(933958),
+    L = n(652215),
+    P = n(381941),
+    F = n(660183),
+    H = n(868494);
+let O = (e, t) =>
+    e.type === _.rD.USER
+        ? t || null != M.A.getDMChannelFromUserId(e.record.id)
+        : e.type === _.rD.GROUP_DM ||
+          (e.record.type !== L.rbe.GUILD_FORUM &&
+              e.record.type !== L.rbe.GUILD_MEDIA &&
+              v.A.can(L.xBc.VIEW_CHANNEL, e.record) &&
+              v.A.can(L.xBc.SEND_MESSAGES, e.record) &&
+              v.A.can(L.xBc.ATTACH_FILES, e.record));
+function G() {
     return (0, a.jsx)("div", {
-        className: G.w,
+        className: H.w,
         children: (0, a.jsx)(c.E, {
             variant: "text-md/normal",
             color: "text-muted",
-            children: O.intl.string(O.t.V6nAfF),
+            children: F.intl.string(F.t.V6nAfF),
         }),
     });
 }
-function q(e) {
-    let { applicationId: t, mediaUrl: n, onClose: S, transitionState: U, ...q } = e,
-        Y = (0, s.bG)([P.Ay], () => P.Ay.getCurrentEmbeddedActivity());
-    (0, _.A)({
+function V(e) {
+    let { applicationId: t, mediaUrl: n, onClose: _, transitionState: v, ...V } = e,
+        B = (0, s.bG)([N.Ay], () => N.Ay.getCurrentEmbeddedActivity());
+    (0, C.A)({
         type: l.ImpressionTypes.MODAL,
         name: l.ImpressionNames.ACTIVITY_SHARE_MOMENT_MODAL,
-        properties: { application_id: t, activity_session_id: Y?.compositeInstanceId },
+        properties: { application_id: t, activity_session_id: B?.compositeInstanceId },
     });
-    let [Q] = (0, I.A)([t]),
-        W = (0, s.bG)([D.default], () => D.default.getCurrentUser()),
+    let [q] = (0, f.A)([t]),
+        Y = (0, s.bG)([U.default], () => U.default.getCurrentUser()),
+        [Q, W] = i.useState(null),
         [z, J] = i.useState(null),
-        [K, X] = i.useState(null),
-        [Z, $] = i.useState(!1),
-        [ee, et] = i.useState(""),
-        [en, ea] = i.useState([]),
-        ei = en.length >= 10,
-        { results: el, updateSearchText: er } = (0, T.R)({
-            selectedDestinations: en,
-            channelFilter: V,
+        [K, X] = i.useState(!1),
+        [Z, $] = i.useState(""),
+        [ee, et] = i.useState([]),
+        en = ee.length >= 10,
+        { results: ea, updateSearchText: ei } = (0, w.R)({
+            selectedDestinations: ee,
+            channelFilter: O,
             includeMissingDMs: !0,
         }),
-        es = i.useCallback(
+        el = i.useCallback(
             (e) => {
-                (et(e), er(e));
+                ($(e), ei(e));
             },
-            [er],
+            [ei],
         );
     (i.useEffect(() => {
         !(async function () {
-            let e = N.A.toURLSafe(n);
+            let e = R.A.toURLSafe(n);
             if (null == e) return;
-            let t = (0, j.uk)(e.pathname),
+            let t = (0, D.uk)(e.pathname),
                 a = await fetch(n),
                 i = new File([await a.arrayBuffer()], t);
-            J(i);
+            W(i);
             let l = new FileReader();
-            ((l.onload = () => X(l?.result?.toString())), l.readAsDataURL(i));
+            ((l.onload = () => J(l?.result?.toString())), l.readAsDataURL(i));
         })();
-    }, [n, J]),
+    }, [n, W]),
         i.useEffect(() => {
             let e;
             return (
-                Z &&
+                K &&
                     (e = setTimeout(() => {
-                        $(!1);
+                        X(!1);
                     }, 1e3)),
                 () => {
                     null != e && clearTimeout(e);
                 }
             );
-        }, [Z]));
-    let eo = i.useCallback(async () => {
-            await S();
-        }, [S]),
-        ec = i.useCallback(async () => {
-            (R.default.track(F.HAw.ACTIVITY_SHARE_MOMENT_COPY, {
-                user_id: W?.id,
+        }, [K]));
+    let er = i.useCallback(async () => {
+            await _();
+        }, [_]),
+        es = i.useCallback(async () => {
+            (b.default.track(L.HAw.ACTIVITY_SHARE_MOMENT_COPY, {
+                user_id: Y?.id,
                 application_id: t,
-                activity_session_id: Y?.compositeInstanceId,
+                activity_session_id: B?.compositeInstanceId,
             }),
-                await L.Ay.copyImage(n),
-                $(!0));
-        }, [Y?.compositeInstanceId, t, n, W?.id]),
-        ed = i.useCallback(
+                await j.Ay.copyImage(n),
+                X(!0));
+        }, [B?.compositeInstanceId, t, n, Y?.id]),
+        eo = i.useCallback(
             (e) => {
-                ea((t) => {
+                et((t) => {
                     let n = t.findIndex((t) => {
                         let { type: n, id: a } = t;
                         return n === e.type && a === e.id;
@@ -131,47 +129,47 @@ function q(e) {
                         let e = [...t];
                         return (e.splice(n, 1), e);
                     }
-                    return t.length >= 10 || null == z ? t : (es(""), [...t, e]);
+                    return t.length >= 10 || null == Q ? t : (el(""), [...t, e]);
                 });
             },
-            [z, es],
+            [Q, el],
         ),
-        eu = i.useCallback(async () => {
+        ec = i.useCallback(async () => {
             let e = 0,
                 n = 0,
                 a = 0;
-            for (let t of en)
+            for (let t of ee)
                 if ("user" === t.type) e++;
                 else {
-                    let e = v.A.getChannel(t.id);
-                    e?.type === F.rbe.GROUP_DM ? n++ : a++;
+                    let e = M.A.getChannel(t.id);
+                    e?.type === L.rbe.GROUP_DM ? n++ : a++;
                 }
             async function i(e) {
                 let n;
-                n = "user" === e.type ? await g.A.ensurePrivateChannel(e.id) : e.id;
-                let a = v.A.getChannel(n);
-                if (null != z) {
-                    let e = new File([z], z.name, { type: z.type });
-                    C.A.addFile({
-                        file: { file: e, platform: x.x.WEB, origin: "unknown:activity_share" },
+                n = "user" === e.type ? await A.A.ensurePrivateChannel(e.id) : e.id;
+                let a = M.A.getChannel(n);
+                if (null != Q) {
+                    let e = new File([Q], Q.name, { type: Q.type });
+                    g.A.addFile({
+                        file: { file: e, platform: S.x.WEB, origin: "unknown:activity_share" },
                         channelId: n,
-                        draftType: k.C.ChannelMessage,
+                        draftType: T.C.ChannelMessage,
                     });
                 }
-                let i = b.A.getUploads(n, k.C.ChannelMessage);
-                (y.A.sendMessage(
+                let i = k.A.getUploads(n, T.C.ChannelMessage);
+                (h.A.sendMessage(
                     n,
-                    null != Q
-                        ? M.Ay.parse(a, O.intl.formatToPlainString(O.t.jQULqL, { applicationName: `**${Q.name}**` }))
+                    null != q
+                        ? x.Ay.parse(a, F.intl.formatToPlainString(F.t.jQULqL, { applicationName: `**${q.name}**` }))
                         : { content: "", tts: !1, invalidEmojis: [], validNonShortcutEmojis: [] },
                     !1,
                     {
                         eagerDispatch: !1,
-                        location: H.Hx.ACTIVITY_SHARE,
+                        location: P.Hx.ACTIVITY_SHARE,
                         applicationId: t,
                         attachmentsToUpload: i,
                         onAttachmentUploadError: (e, t, n) => {
-                            (0, w.k)({
+                            (0, E.k)({
                                 file: e,
                                 guildId: a?.getGuildId() ?? null,
                                 analyticsLocations: [],
@@ -181,98 +179,101 @@ function q(e) {
                         },
                     },
                 ),
-                    C.A.clearAll(n, k.C.ChannelMessage));
+                    g.A.clearAll(n, T.C.ChannelMessage));
             }
-            R.default.track(F.HAw.ACTIVITY_SHARE_MOMENT_SEND, {
-                user_id: W?.id,
+            b.default.track(L.HAw.ACTIVITY_SHARE_MOMENT_SEND, {
+                user_id: Y?.id,
                 application_id: t,
-                activity_session_id: Y?.compositeInstanceId,
+                activity_session_id: B?.compositeInstanceId,
                 n_users: e,
                 n_gdms: n,
                 n_channels: a,
             });
             try {
-                (await Promise.all(en.map(i)),
-                    null != Q &&
-                        (0, d.P)(
-                            (0, u.o)(O.intl.formatToPlainString(O.t.jQULqL, { applicationName: Q.name }), p.Ck.SUCCESS),
+                (await Promise.all(ee.map(i)),
+                    null != q &&
+                        (0, d.P0)(
+                            (0, d.ox)(
+                                F.intl.formatToPlainString(F.t.jQULqL, { applicationName: q.name }),
+                                d.Ck.SUCCESS,
+                            ),
                         ));
             } catch (e) {
-                throw ((0, d.P)((0, u.o)(O.intl.string(O.t.PanA4J), p.Ck.FAILURE)), e);
+                throw ((0, d.P0)((0, d.ox)(F.intl.string(F.t.PanA4J), d.Ck.FAILURE)), e);
             }
-            eo();
-        }, [Y, Q, t, en, z, eo, W]),
-        ep = (0, E.s)({ rowData: el, selectedDestinations: en, handleToggleDestination: ed, disableSelection: ei }),
-        em = i.useRef(null),
-        eA = (0, f.A)("activity-share-moment-modal", em),
-        eh = i.useMemo(
+            er();
+        }, [B, q, t, ee, Q, er, Y]),
+        ed = (0, I.s)({ rowData: ea, selectedDestinations: ee, handleToggleDestination: eo, disableSelection: en }),
+        eu = i.useRef(null),
+        ep = (0, y.A)("activity-share-moment-modal", eu),
+        em = i.useMemo(
             () =>
-                el.length > 0
-                    ? ep
-                    : { sections: [1], sectionHeight: 0, renderRow: () => (0, a.jsx)(B, {}), rowHeight: 72 },
-            [el, ep],
+                ea.length > 0
+                    ? ed
+                    : { sections: [1], sectionHeight: 0, renderRow: () => (0, a.jsx)(G, {}), rowHeight: 72 },
+            [ea, ed],
         );
-    return null == K
-        ? (0, a.jsx)(m.y, {})
+    return null == z
+        ? (0, a.jsx)(u.y, {})
         : (0, a.jsx)(r.hD, {
-              navigator: eA,
+              navigator: ep,
               children: (0, a.jsx)(r.PR, {
                   children: (e) => {
                       let { ref: t, ...i } = e;
                       return (0, a.jsx)(o.a, {
-                          transitionState: U,
-                          onClose: eo,
+                          transitionState: v,
+                          onClose: er,
                           size: "md",
-                          title: O.intl.string(O.t.r9qKow),
-                          input: (0, a.jsx)(A.I, {
-                              query: ee,
-                              onChange: es,
-                              onClear: () => es(""),
-                              placeholder: O.intl.string(O.t["5h0QOP"]),
-                              "aria-label": O.intl.string(O.t["5h0QOP"]),
+                          title: F.intl.string(F.t.r9qKow),
+                          input: (0, a.jsx)(p.I, {
+                              query: Z,
+                              onChange: el,
+                              onClear: () => el(""),
+                              placeholder: F.intl.string(F.t["5h0QOP"]),
+                              "aria-label": F.intl.string(F.t["5h0QOP"]),
                               autoFocus: !0,
                           }),
-                          preview: (0, a.jsxs)(h.B, {
+                          preview: (0, a.jsxs)(m.B, {
                               direction: "vertical",
                               align: "center",
                               gap: 12,
                               children: [
-                                  (0, a.jsx)("img", { alt: n, src: K, className: G.o }),
-                                  en.length >= 10
+                                  (0, a.jsx)("img", { alt: n, src: z, className: H.o }),
+                                  ee.length >= 10
                                       ? (0, a.jsx)(c.E, {
                                             variant: "text-xs/normal",
-                                            children: O.intl.format(O.t.mdE9iE, { maxShares: 10 }),
+                                            children: F.intl.format(F.t.mdE9iE, { maxShares: 10 }),
                                         })
                                       : null,
                               ],
                           }),
                           actions: [
-                              ...(L.Ay.canCopyImage(n)
+                              ...(j.Ay.canCopyImage(n)
                                   ? [
                                         {
-                                            text: Z ? O.intl.string(O.t.t5VZ88) : O.intl.string(O.t.tvUqWn),
-                                            onClick: ec,
+                                            text: K ? F.intl.string(F.t.t5VZ88) : F.intl.string(F.t.tvUqWn),
+                                            onClick: es,
                                             variant: "secondary",
-                                            disabled: Z,
+                                            disabled: K,
                                         },
                                     ]
                                   : []),
                               {
-                                  text: O.intl.string(O.t.TXNS7S),
-                                  onClick: eu,
+                                  text: F.intl.string(F.t.TXNS7S),
+                                  onClick: ec,
                                   variant: "primary",
-                                  disabled: en.length <= 0,
+                                  disabled: ee.length <= 0,
                               },
                           ],
                           listProps: {
-                              ...eh,
+                              ...em,
                               ...i,
                               innerRole: void 0,
                               ref: (e) => {
-                                  ((em.current = e), (t.current = e?.getScrollerNode() ?? null));
+                                  ((eu.current = e), (t.current = e?.getScrollerNode() ?? null));
                               },
                           },
-                          ...q,
+                          ...V,
                       });
                   },
               }),

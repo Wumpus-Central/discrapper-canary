@@ -1,8 +1,8 @@
 n.d(t, { q: () => eN, A: () => eI });
 var r = n(477900),
     i = n(582128),
-    s = n(503698),
-    l = n.n(s),
+    l = n(503698),
+    s = n.n(l),
     o = n(284009),
     a = n.n(o),
     d = n(561028),
@@ -26,8 +26,8 @@ var r = n(477900),
     _ = n(933958),
     D = n(793574),
     I = n(688810),
-    T = n(590703),
-    S = n(681582),
+    S = n(590703),
+    T = n(681582),
     j = n(573435),
     k = n(71855),
     M = n(203480),
@@ -55,8 +55,8 @@ var r = n(477900),
     en = n(870373),
     er = n(302614),
     ei = n(233741),
-    es = n(28528),
-    el = n(672396),
+    el = n(28528),
+    es = n(672396),
     eo = n(652215),
     ea = n(660183),
     ed = n(261289);
@@ -72,7 +72,7 @@ let eu = K().throttle(
     ),
     ec = 10 * Q.A.Millis.SECOND;
 function eh(e) {
-    let { error: t, onLock: n, onReload: s, onDisable: l, onCrashDisabled: o } = e,
+    let { error: t, onLock: n, onReload: l, onDisable: s, onCrashDisabled: o } = e,
         a = i.useMemo(() => new W.SpringValue(1), []),
         d = i.useRef(null),
         [u, c] = i.useState(!1),
@@ -81,7 +81,7 @@ function eh(e) {
     (0, J.Ay)(
         () => (
             (d.current = setTimeout(A, ec)),
-            (0, en.g)(eo.HAw.NOTIFICATION_VIEWED, { notif_type: el.KS.OverlayCrashed }),
+            (0, en.g)(eo.HAw.NOTIFICATION_VIEWED, { notif_type: es.KS.OverlayCrashed }),
             () => {
                 null != d.current && clearTimeout(d.current);
             }
@@ -98,13 +98,13 @@ function eh(e) {
                     n?.(),
                     (0, en.g)(
                         eo.HAw.NOTIFICATION_CLICKED,
-                        { notif_type: el.KS.OverlayCrashed, action_type: "reload" },
+                        { notif_type: es.KS.OverlayCrashed, action_type: "reload" },
                         !0,
                     ),
                     e.stopPropagation(),
-                    setTimeout(() => s?.(), 200));
+                    setTimeout(() => l?.(), 200));
             },
-            [n, s, f],
+            [n, l, f],
         ),
         v = i.useCallback(
             (e) => {
@@ -114,9 +114,9 @@ function eh(e) {
         ),
         w = i.useCallback(
             (e) => {
-                (e.stopPropagation(), n?.(), l?.());
+                (e.stopPropagation(), n?.(), s?.());
             },
-            [l, n],
+            [s, n],
         ),
         x = (0, h.bG)([ei.A], () => ei.A.getFocusedRunningGame()),
         E = u
@@ -145,7 +145,7 @@ function eh(e) {
               })
             : null,
         b = u ? null : ea.intl.string(ea.t.oEJEFq);
-    return (0, r.jsx)(es.$, {
+    return (0, r.jsx)(el.$, {
         title: ea.intl.string(ea.t.U38qZj),
         body: E,
         hint: p ? b : void 0,
@@ -219,7 +219,7 @@ class ef extends i.PureComponent {
     }
 }
 var eg = n(97469),
-    em = n(933787),
+    em = n(741906),
     ep = n(611635),
     eA = n(892019),
     ey = n(723702),
@@ -236,11 +236,11 @@ function eN(e) {
 function eO(e) {
     let { windowKey: t, themeOverride: n } = e,
         { theme: r } = (0, g.wR)(),
-        s = n ?? r;
+        l = n ?? r;
     return (
         i.useLayoutEffect(() => {
-            ew.Ay.setTrafficLightAppearance((0, f.M)(s) ? "dark" : "light", t);
-        }, [s, t]),
+            ew.Ay.setTrafficLightAppearance((0, f.M)(l) ? "dark" : "light", t);
+        }, [l, t]),
         null
     );
 }
@@ -295,13 +295,13 @@ class e_ extends i.Component {
             n = t.document,
             r = n.head;
         a()(null != r, "Window document head was null");
-        let i = r.querySelector(`style[${T.Vg}]`);
+        let i = r.querySelector(`style[${S.Vg}]`);
         if (null != i) {
             i.textContent = e;
             return;
         }
-        let s = n.createElement("style");
-        (s.setAttribute(T.Vg, "true"), (s.textContent = e), r.appendChild(s));
+        let l = n.createElement("style");
+        (l.setAttribute(S.Vg, "true"), (l.textContent = e), r.appendChild(l));
     }
     handleBlur = () => {
         this.props.onBlur?.();
@@ -324,7 +324,7 @@ class e_ extends i.Component {
                 children: t,
                 windowKey: n,
                 isFullScreen: i,
-                withTitleBar: s,
+                withTitleBar: l,
                 guestWindow: o,
                 clientThemesClassName: a,
                 contentClassName: u,
@@ -333,7 +333,7 @@ class e_ extends i.Component {
                 hideModals: g = !1,
                 appContext: m,
             } = this.props,
-            p = eN({ withTitleBar: s, isFullScreen: i }),
+            p = eN({ withTitleBar: l, isFullScreen: i }),
             x = n === eb.f,
             b = x ? ef : L.A;
         return (0, r.jsx)(d.Kd, {
@@ -350,14 +350,14 @@ class e_ extends i.Component {
                                 children: [
                                     (0, r.jsx)(eD, {
                                         guestWindow: o,
-                                        className: l()(a, { overlay: x }),
+                                        className: s()(a, { overlay: x }),
                                         children: (0, r.jsxs)(b, {
                                             children: [
                                                 (0, r.jsx)(j.Al, {}),
                                                 (0, r.jsx)(U.Wr, {
                                                     appContext: m ?? eo.BRT.POPOUT,
                                                     renderWindow: o,
-                                                    children: (0, r.jsx)(S.l, {
+                                                    children: (0, r.jsx)(T.l, {
                                                         children: (0, r.jsxs)(P.Yf, {
                                                             children: [
                                                                 (0, r.jsxs)("div", {
@@ -369,11 +369,11 @@ class e_ extends i.Component {
                                                                                 children: (e) =>
                                                                                     (0, r.jsx)(k.cq, {
                                                                                         windowKey: n,
-                                                                                        className: l()(e, eC.uv),
+                                                                                        className: s()(e, eC.uv),
                                                                                     }),
                                                                             }),
                                                                         (0, r.jsx)("div", {
-                                                                            className: l()(eC.Qs, u),
+                                                                            className: s()(eC.Qs, u),
                                                                             children: t,
                                                                         }),
                                                                     ],
@@ -401,7 +401,7 @@ class e_ extends i.Component {
     }
 }
 function eD(e) {
-    let { guestWindow: t, className: n, children: s, ref: o } = e,
+    let { guestWindow: t, className: n, children: l, ref: o } = e,
         { lang: d, style: u, className: c } = (0, ep.x)();
     (i.useEffect(() => {
         let e = t.document.documentElement;
@@ -412,29 +412,29 @@ function eD(e) {
             (a()(null != e, "Window document element was null"), e.setAttribute("lang", d));
         }, [t, d]),
         (0, eA.A)(t.document.documentElement));
-    let h = l()(c, n, "in-popout");
+    let h = s()(c, n, "in-popout");
     return (
         i.useLayoutEffect(() => {
             let e = t.document.documentElement;
             (a()(null != e, "Window document element was null"), e.setAttribute("class", h));
         }, [t, h]),
-        (0, r.jsx)("div", { "data-popout-root": !0, ref: o, children: s })
+        (0, r.jsx)("div", { "data-popout-root": !0, ref: o, children: l })
     );
 }
 let eI = function (e) {
     let { ref: t, ...n } = e,
-        { guestWindow: i, isFullScreen: s } = (0, h.cf)([eE.A], () => ({
+        { guestWindow: i, isFullScreen: l } = (0, h.cf)([eE.A], () => ({
             guestWindow: eE.A.getWindow(n.windowKey),
             isFullScreen: eE.A.isWindowFullScreen(n.windowKey),
         }));
     a()(null != i, "Missing guestWindow reference");
-    let { forcedColors: l, connectedEmbeddedActivity: o } = (0, h.cf)([N.Ay, _.Ay], () => ({
+    let { forcedColors: s, connectedEmbeddedActivity: o } = (0, h.cf)([N.Ay, _.Ay], () => ({
         forcedColors: N.Ay.useForcedColors ? "yes" : "no",
         connectedEmbeddedActivity: _.Ay.getCurrentEmbeddedActivity(),
     }));
     (0, M.A)(i, !1);
     let { analyticsLocations: d } = (0, I.Ay)(D.A.POPOUT_WINDOW),
-        { clientThemesClassName: u, clientThemesCSS: c } = (0, T.Ay)(),
+        { clientThemesClassName: u, clientThemesCSS: c } = (0, S.Ay)(),
         f = (0, eg.NC)(),
         g = n.themeOverride ?? f;
     return null == i
@@ -447,8 +447,8 @@ let eI = function (e) {
                       ...n,
                       titleBarTheme: g,
                       guestWindow: i,
-                      isFullScreen: s,
-                      forcedColors: l,
+                      isFullScreen: l,
+                      forcedColors: s,
                       connectedEmbeddedActivity: o,
                       clientThemesClassName: u,
                       clientThemesCSS: c,

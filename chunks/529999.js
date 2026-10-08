@@ -1,4 +1,4 @@
-(i.d(e, { default: () => W }), i(323874), i(14289), i(35956));
+(i.d(e, { default: () => F }), i(323874), i(14289), i(35956));
 var l = i(477900),
     n = i(582128),
     a = i(503698),
@@ -6,53 +6,51 @@ var l = i(477900),
     r = i(17928),
     o = i(65154),
     c = i(834730),
-    d = i(739187),
-    u = i(857250),
-    h = i(97483),
-    m = i(173936),
-    f = i(148494),
-    g = i(280889),
-    p = i(342384),
-    x = i(429913),
-    v = i(573435),
-    k = i(914718),
-    C = i(619517),
-    A = i(274652),
-    j = i(823099),
-    w = i(451909),
-    y = i(135621),
-    E = i(446244),
-    P = i(734057),
-    R = i(287809),
-    U = i(957565),
-    b = i(403362),
-    L = i(381941),
-    S = i(660183),
-    T = i(476765),
-    F = i(739126);
-function I(t) {
+    d = i(376357),
+    u = i(173936),
+    h = i(148494),
+    m = i(280889),
+    f = i(342384),
+    g = i(429913),
+    x = i(573435),
+    p = i(914718),
+    v = i(619517),
+    k = i(274652),
+    C = i(823099),
+    A = i(451909),
+    j = i(135621),
+    w = i(446244),
+    y = i(734057),
+    E = i(287809),
+    P = i(957565),
+    R = i(403362),
+    U = i(381941),
+    b = i(660183),
+    L = i(476765),
+    S = i(739126);
+function T(t) {
     let { title: e, subtitle: i, imageUrl: n, fileUrl: a, isVideo: r, overflowCount: d } = t,
         u = null;
     return (
         null != a &&
             ((u = (0, l.jsx)("div", {
-                className: s()(F.cR, { [F.JZ]: r }),
+                className: s()(S.cR, { [S.JZ]: r }),
                 children: r
-                    ? (0, l.jsx)(o.S, { className: F.uZ, size: "md", color: "white" })
-                    : (0, l.jsx)("img", { className: T.$, src: a, alt: "", width: 56, height: 56 }),
+                    ? (0, l.jsx)(o.S, { className: S.uZ, size: "md", color: "white" })
+                    : (0, l.jsx)("img", { className: L.$, src: a, alt: "", width: 56, height: 56 }),
             })),
             d > 0 &&
                 (u = (0, l.jsxs)("div", {
-                    className: F.EW,
+                    className: S.EW,
                     children: [
-                        (0, l.jsx)(v.Ay, {
-                            mask: v.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
+                        (0, l.jsx)(x.Ay, {
+                            mask: x.Ay.Masks.FORWARD_ATTACHMENT_PILE_OVERFLOW,
                             width: 56,
                             height: 56,
                             children: u,
                         }),
                         (0, l.jsxs)(c.E, {
-                            className: F.mB,
+                            className: S.mB,
                             variant: "text-xs/semibold",
                             color: "text-default",
                             children: ["+", d],
@@ -60,10 +58,10 @@ function I(t) {
                     ],
                 }))),
         (0, l.jsxs)("div", {
-            className: F.sq,
+            className: S.sq,
             children: [
                 (0, l.jsxs)("div", {
-                    className: F.FG,
+                    className: S.FG,
                     children: [
                         (0, l.jsx)(c.E, {
                             variant: "text-md/normal",
@@ -82,15 +80,15 @@ function I(t) {
                 }),
                 null != n &&
                     (0, l.jsx)("div", {
-                        className: F.cR,
-                        children: (0, l.jsx)(C.Ay, { src: n, alt: "", width: 56, height: 56 }),
+                        className: S.cR,
+                        children: (0, l.jsx)(v.Ay, { src: n, alt: "", width: 56, height: 56 }),
                     }),
                 u,
             ],
         })
     );
 }
-function W(t) {
+function F(t) {
     let e,
         i,
         {
@@ -98,33 +96,33 @@ function W(t) {
             content: s,
             link: o,
             customId: c,
-            linkId: v,
-            imageUrl: C,
-            files: T,
-            previewTitle: F,
-            previewSubtitle: W,
-            onClose: N,
-            onCopyLink: _,
-            onShare: M,
-            ...O
+            linkId: x,
+            imageUrl: v,
+            files: L,
+            previewTitle: S,
+            previewSubtitle: F,
+            onClose: I,
+            onCopyLink: W,
+            onShare: N,
+            ..._
         } = t,
-        [V] = (0, x.A)([a]),
-        q = (0, r.bG)([R.default], () => R.default.getCurrentUser()),
-        H = T?.[0],
-        Z = n.useMemo(() => (null != H ? URL.createObjectURL(H) : void 0), [H]);
+        [M] = (0, g.A)([a]),
+        O = (0, r.bG)([E.default], () => E.default.getCurrentUser()),
+        V = L?.[0],
+        q = n.useMemo(() => (null != V ? URL.createObjectURL(V) : void 0), [V]);
     n.useEffect(() => {
-        if (null != Z) return () => URL.revokeObjectURL(Z);
-    }, [Z]);
-    let G = n.useMemo(
-            () => o ?? (0, p.W)({ applicationId: a, referrerId: q?.id, customId: c, linkId: v }),
-            [o, a, q?.id, c, v],
+        if (null != q) return () => URL.revokeObjectURL(q);
+    }, [q]);
+    let H = n.useMemo(
+            () => o ?? (0, f.W)({ applicationId: a, referrerId: O?.id, customId: c, linkId: x }),
+            [o, a, O?.id, c, x],
         ),
-        B = n.useCallback(
+        Z = n.useCallback(
             async (t, e, i) => {
                 let l,
                     { withMessage: n, closeAfterSend: a } = e;
                 (i(!0),
-                    M(
+                    N(
                         new Promise((t) => {
                             l = t;
                         }),
@@ -132,29 +130,29 @@ function W(t) {
                 let r = 0,
                     o = 0;
                 try {
-                    let e = (await Promise.all(t.map(E.pk)))
-                        .filter(b.Vq)
-                        .map((t) => P.A.getChannel(t))
-                        .filter(b.Vq);
+                    let e = (await Promise.all(t.map(w.pk)))
+                        .filter(R.Vq)
+                        .map((t) => y.A.getChannel(t))
+                        .filter(R.Vq);
                     if (((o = t.length - e.length), 0 === e.length))
-                        return void (0, d.P)((0, u.o)(S.intl.string(S.t.iufib1), h.Ck.FAILURE));
-                    let i = [C, s, n]
-                        .filter(b.Vq)
+                        return void (0, d.P0)((0, d.ox)(b.intl.string(b.t.iufib1), d.Ck.FAILURE));
+                    let i = [v, s, n]
+                        .filter(R.Vq)
                         .join("\n")
-                        .slice(0, (0, y.a)());
+                        .slice(0, (0, j.a)());
                     for (let t of e) {
                         let e;
                         try {
-                            e = await f.A.sendMessage(t.id, w.Ay.parse(t, i), !1, {
-                                location: L.Hx.ACTIVITY_SHARE,
+                            e = await h.A.sendMessage(t.id, A.Ay.parse(t, i), !1, {
+                                location: U.Hx.ACTIVITY_SHARE,
                                 attachmentsToUpload:
-                                    null != T && T.length > 0
-                                        ? T.map(
+                                    null != L && L.length > 0
+                                        ? L.map(
                                               (e) =>
-                                                  new g.bK(
+                                                  new m.bK(
                                                       {
                                                           file: new File([e], e.name, { type: e.type }),
-                                                          platform: A.x.WEB,
+                                                          platform: k.x.WEB,
                                                           origin: "unknown:activity_share",
                                                       },
                                                       t.id,
@@ -162,7 +160,7 @@ function W(t) {
                                           )
                                         : void 0,
                                 onAttachmentUploadError: (e, i, l) => {
-                                    (0, j.k)({
+                                    (0, C.k)({
                                         file: e,
                                         guildId: t.getGuildId(),
                                         analyticsLocations: [],
@@ -177,59 +175,59 @@ function W(t) {
                         null == e ? (o += 1) : (r += 1);
                     }
                     (o > 0
-                        ? (0, d.P)((0, u.o)(S.intl.string(S.t.iufib1), h.Ck.FAILURE))
-                        : (0, d.P)((0, u.o)(S.intl.string(S.t.kwmYkt), h.Ck.FORWARD)),
-                        a && r > 0 && N());
+                        ? (0, d.P0)((0, d.ox)(b.intl.string(b.t.iufib1), d.Ck.FAILURE))
+                        : (0, d.P0)((0, d.ox)(b.intl.string(b.t.kwmYkt), d.Ck.FORWARD)),
+                        a && r > 0 && I());
                 } catch {
-                    (0, d.P)((0, u.o)(S.intl.string(S.t.iufib1), h.Ck.FAILURE));
+                    (0, d.P0)((0, d.ox)(b.intl.string(b.t.iufib1), d.Ck.FAILURE));
                 } finally {
                     (l(r > 0), i(!1));
                 }
             },
-            [s, T, C, N, M],
+            [s, L, v, I, N],
         ),
-        D = n.useMemo(
+        G = n.useMemo(
             () => [
                 {
                     variant: "secondary",
                     text: void 0,
-                    "aria-label": S.intl.string(S.t.WqhZss),
+                    "aria-label": b.intl.string(b.t.WqhZss),
                     onClick: () => {
-                        (0, U.C)(G, () => {
-                            (_(), (0, d.P)((0, u.o)(S.intl.string(S.t["L/PwZf"]), h.Ck.SUCCESS)));
+                        (0, P.C)(H, () => {
+                            (W(), (0, d.P0)((0, d.ox)(b.intl.string(b.t["L/PwZf"]), d.Ck.SUCCESS)));
                         });
                     },
-                    icon: m.LinkIcon,
+                    icon: u.LinkIcon,
                 },
             ],
-            [_, G],
+            [W, H],
         ),
-        J = V?.name ?? "";
-    return (0, l.jsx)(k.ForwardModal, {
-        ...O,
-        onClose: N,
+        B = M?.name ?? "";
+    return (0, l.jsx)(p.ForwardModal, {
+        ..._,
+        onClose: I,
         source: "frame",
-        customPreview: (0, l.jsx)(I, {
-            title: F ?? J,
+        customPreview: (0, l.jsx)(T, {
+            title: S ?? B,
             subtitle:
-                W ??
-                (null != T && T.length > 0
-                    ? ((e = T.filter((t) => t.type.startsWith("image/")).length),
-                      (i = T.filter((t) => t.type.startsWith("video/")).length),
+                F ??
+                (null != L && L.length > 0
+                    ? ((e = L.filter((t) => t.type.startsWith("image/")).length),
+                      (i = L.filter((t) => t.type.startsWith("video/")).length),
                       e > 0 && i > 0
-                          ? S.intl.formatToPlainString(S.t.Lr0Top, { image_count: e, video_count: i })
+                          ? b.intl.formatToPlainString(b.t.Lr0Top, { image_count: e, video_count: i })
                           : i > 0
-                            ? S.intl.formatToPlainString(S.t.SJ6pPX, { count: i })
+                            ? b.intl.formatToPlainString(b.t.SJ6pPX, { count: i })
                             : e > 0
-                              ? S.intl.formatToPlainString(S.t.h4pFfU, { count: e })
-                              : S.intl.formatToPlainString(S.t["89ihS8"], { count: T.length }))
+                              ? b.intl.formatToPlainString(b.t.h4pFfU, { count: e })
+                              : b.intl.formatToPlainString(b.t["89ihS8"], { count: L.length }))
                     : void 0),
-            imageUrl: C,
-            fileUrl: Z,
-            isVideo: H?.type.startsWith("video/") ?? !1,
-            overflowCount: Math.max((T?.length ?? 1) - 1, 0),
+            imageUrl: v,
+            fileUrl: q,
+            isVideo: V?.type.startsWith("video/") ?? !1,
+            overflowCount: Math.max((L?.length ?? 1) - 1, 0),
         }),
-        customSendHandler: B,
-        additionalActions: D,
+        customSendHandler: Z,
+        additionalActions: G,
     });
 }

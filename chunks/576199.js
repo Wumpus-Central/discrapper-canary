@@ -1,46 +1,44 @@
-n.d(t, { A: () => v });
+n.d(t, { A: () => m });
 var r = n(477900),
     l = n(582128),
-    i = n(739187),
-    s = n(857250),
-    u = n(97483),
-    a = n(866665),
-    o = n(408278),
-    c = n(173936),
-    d = n(738822),
-    E = n(590202),
-    _ = n(971649),
-    f = n(651892),
-    p = n(814793),
-    m = n(795068),
-    S = n(660183);
-function v(e) {
+    i = n(376357),
+    s = n(866665),
+    u = n(408278),
+    a = n(173936),
+    o = n(738822),
+    c = n(590202),
+    d = n(971649),
+    E = n(651892),
+    _ = n(814793),
+    f = n(795068),
+    p = n(660183);
+function m(e) {
     let { floatRight: t } = e,
-        { quest: n, sourceQuestContent: v } = l.useContext(m.a),
-        C = (0, _.go)(),
-        A = (0, p.E0)(n.config),
-        h = l.useCallback(() => {
-            A &&
-                ((0, f.Xm)(n.id, {
-                    content: d.uF.VIDEO_MODAL,
-                    ctaContent: E.Cy.COPY_QUEST_URL,
-                    impressionId: C,
-                    sourceQuestContent: v,
+        { quest: n, sourceQuestContent: m } = l.useContext(f.a),
+        S = (0, d.go)(),
+        v = (0, _.E0)(n.config),
+        C = l.useCallback(() => {
+            v &&
+                ((0, E.Xm)(n.id, {
+                    content: o.uF.VIDEO_MODAL,
+                    ctaContent: c.Cy.COPY_QUEST_URL,
+                    impressionId: S,
+                    sourceQuestContent: m,
                 }),
-                (0, i.P)((0, s.o)(S.intl.string(S.t["+5kSoW"]), u.Ck.SUCCESS)));
-        }, [C, A, n.id, v]);
-    return A
+                (0, i.P0)((0, i.ox)(p.intl.string(p.t["+5kSoW"]), i.Ck.SUCCESS)));
+        }, [S, v, n.id, m]);
+    return v
         ? (0, r.jsx)("div", {
               "data-testid": "video-quest-share-btn",
               "data-quest-id": n.id,
               style: { marginLeft: t ? "auto" : void 0, pointerEvents: "auto" },
-              children: (0, r.jsx)(a.m, {
-                  text: S.intl.string(S.t.WmfZHZ),
-                  children: (0, r.jsx)(o.K, {
+              children: (0, r.jsx)(s.m, {
+                  text: p.intl.string(p.t.WmfZHZ),
+                  children: (0, r.jsx)(u.K, {
                       variant: "overlay-secondary",
-                      icon: c.LinkIcon,
-                      "aria-label": S.intl.string(S.t.RDE0Sc),
-                      onClick: h,
+                      icon: a.LinkIcon,
+                      "aria-label": p.intl.string(p.t.RDE0Sc),
+                      onClick: C,
                   }),
               }),
           })

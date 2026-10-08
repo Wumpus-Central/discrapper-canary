@@ -1,77 +1,75 @@
-n.d(i, { default: () => k });
+n.d(i, { default: () => C });
 var e = n(477900),
     l = n(582128),
     r = n(139033),
     d = n(477782),
-    a = n(739187),
-    u = n(857250),
-    s = n(97483),
-    o = n(980707),
-    c = n(442433),
-    g = n(820284),
-    h = n(913122),
-    f = n(50268),
-    p = n(627794),
+    a = n(376357),
+    u = n(980707),
+    s = n(442433),
+    o = n(820284),
+    c = n(913122),
+    g = n(50268),
+    h = n(627794),
     x = n(928348),
-    b = n(995786),
-    j = n(364806),
-    m = n(979816),
-    w = n(264349),
-    C = n(652215),
-    I = n(660183);
-function k(t) {
-    let { rule: i, analyticsContext: n, onSelect: k } = t,
-        y = (0, p.wC)(i),
-        A = (function (t) {
-            let { editingRule: i, setEditingRule: n } = (0, j.U)();
+    f = n(995786),
+    p = n(364806),
+    b = n(979816),
+    j = n(264349),
+    m = n(652215),
+    w = n(660183);
+function C(t) {
+    let { rule: i, analyticsContext: n, onSelect: C } = t,
+        I = (0, h.wC)(i),
+        k = (function (t) {
+            let { editingRule: i, setEditingRule: n } = (0, p.U)();
             return (0, e.jsx)(d.Dr, {
                 id: "edit-automod-rule",
-                label: I.intl.string(I.t.uQq6Px),
+                label: w.intl.string(w.t.uQq6Px),
                 action: function () {
                     n(t);
                 },
                 disabled: null != i,
             });
         })(i),
-        E = (function (t) {
-            let { setEditingRule: i } = (0, j.U)(),
-                [n, o] = l.useState(!1),
-                { removeRule: c } = (0, x.wP)(t.guildId),
-                g = (0, m._x)(t.guildId, t.triggerType);
-            async function f() {
-                if (!n && (await (0, w.ih)(t.name))) {
-                    o(!0);
+        y = (function (t) {
+            let { setEditingRule: i } = (0, p.U)(),
+                [n, u] = l.useState(!1),
+                { removeRule: s } = (0, x.wP)(t.guildId),
+                o = (0, b._x)(t.guildId, t.triggerType);
+            async function g() {
+                if (!n && (await (0, j.ih)(t.name))) {
+                    u(!0);
                     try {
-                        (await (0, b.nV)(t.id, t.guildId), i(null), c(t.id, t.guildId));
+                        (await (0, f.nV)(t.id, t.guildId), i(null), s(t.id, t.guildId));
                     } catch (i) {
-                        let t = new h.LG(i);
-                        (0, a.P)((0, u.o)(t.getAnyErrorMessage() ?? I.intl.string(I.t.fEptJP), s.Ck.FAILURE));
+                        let t = new c.LG(i);
+                        (0, a.P0)((0, a.ox)(t.getAnyErrorMessage() ?? w.intl.string(w.t.fEptJP), a.Ck.FAILURE));
                     } finally {
-                        o(!1);
+                        u(!1);
                     }
                 }
             }
             return (0, e.jsx)(d.Dr, {
                 id: "delete-automod-rule",
-                label: I.intl.string(I.t["92m/01"]),
-                action: g
+                label: w.intl.string(w.t["92m/01"]),
+                action: o
                     ? function () {
-                          (0, r.A)({ title: I.intl.string(I.t.MmpqMC), subtitle: I.intl.string(I.t.XMdBLw) });
+                          (0, r.A)({ title: w.intl.string(w.t.MmpqMC), subtitle: w.intl.string(w.t.XMdBLw) });
                       }
-                    : f,
+                    : g,
             });
         })(i),
-        M = (0, f.A)({ id: i.id, label: I.intl.string(I.t.F64hjn) });
-    return (0, e.jsx)(g.A, {
+        A = (0, g.A)({ id: i.id, label: w.intl.string(w.t.F64hjn) });
+    return (0, e.jsx)(o.A, {
         context: n,
-        object: C.ZSU.CONTEXT_MENU,
-        children: (0, e.jsxs)(o.W, {
+        object: m.ZSU.CONTEXT_MENU,
+        children: (0, e.jsxs)(u.W, {
             "data-menu-migrated-auto": !0,
             navId: "automod-rule-context",
-            onClose: c.Z_,
-            "aria-label": I.intl.string(I.t.uT36So),
-            onSelect: k,
-            children: [(0, e.jsxs)(d.rX, { children: [A, y && E] }), y && (0, e.jsx)(d.rX, { children: M })],
+            onClose: s.Z_,
+            "aria-label": w.intl.string(w.t.uT36So),
+            onSelect: C,
+            children: [(0, e.jsxs)(d.rX, { children: [k, I && y] }), I && (0, e.jsx)(d.rX, { children: A })],
         }),
     });
 }

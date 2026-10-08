@@ -214,24 +214,6 @@
     }
 }
 
-.containerTop__45edc {
-    top: calc(var(--custom-app-top-bar-height) + var(--space-8))
-}
-
-.containerBottom__45edc,
-.containerTop__45edc {
-    display: flex;
-    flex-direction: column;
-    inset-inline-start: 50%;
-    position: fixed;
-    transform: translateX(-50%);
-    z-index: 4999
-}
-
-.containerBottom__45edc {
-    bottom: 140px
-}
-
 .group__8a9ed,
 .toolbar__8a9ed {
     align-items: center;
@@ -260,4 +242,4 @@
     padding: var(--space-16)
 }
 
-/*# sourceMappingURL=515857.8737e8395e5701d5.css.map*/
+/*# sourceMappingURL=765531.ce453d42ea1db966.css.map*/

@@ -1,87 +1,85 @@
-n.d(t, { W: () => p });
+n.d(t, { W: () => f });
 var i = n(830917),
-    l = n(739187),
-    s = n(857250),
-    r = n(97483),
-    a = n(157559),
-    o = n(554375),
-    d = n(268429),
-    c = n(61310),
-    u = n(73621),
-    m = n(174459),
-    g = n(690521),
-    x = n(515718),
-    h = n(307731),
-    E = n(652215),
-    j = n(660183),
-    f = n(264572).Buffer;
-function N(e, t, n, i) {
+    l = n(376357),
+    s = n(157559),
+    r = n(554375),
+    a = n(268429),
+    o = n(61310),
+    d = n(73621),
+    c = n(174459),
+    u = n(690521),
+    m = n(515718),
+    g = n(307731),
+    x = n(652215),
+    h = n(660183),
+    E = n(264572).Buffer;
+function j(e, t, n, i) {
     return (
-        m.default.track(E.HAw.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, { guild_id: n, file_size: t, upload_id: i }),
-        u.o.TOO_BIG
+        c.default.track(x.HAw.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, { guild_id: n, file_size: t, upload_id: i }),
+        d.o.TOO_BIG
     );
 }
-async function p(e) {
-    let { data: t, file: n, guildId: p, uploadId: A, roles: I, image: S, hideErrorModal: C, analyticsLocation: _ } = e,
-        v = d.A.fromBlob(c.f.EMOJI, n),
-        T = g.Ay.sanitizeEmojiName(n.name.split(".")[0]);
-    if (g.Ay.isFileTooBig(n)) {
+async function f(e) {
+    let { data: t, file: n, guildId: f, uploadId: N, roles: p, image: A, hideErrorModal: I, analyticsLocation: S } = e,
+        C = a.A.fromBlob(o.f.EMOJI, n),
+        _ = u.Ay.sanitizeEmojiName(n.name.split(".")[0]);
+    if (u.Ay.isFileTooBig(n)) {
         if ("image/gif" === n.type || "image/webp" === n.type || "image/avif" === n.type)
-            return N(n.name, n.size, p, A);
-        else if (null != S) {
-            var b, y;
+            return j(n.name, n.size, f, N);
+        else if (null != A) {
+            var v, T;
             let e;
-            t = (0, i.h_)(S, 128, 128);
+            t = (0, i.h_)(A, 128, 128);
             try {
-                e = g.Ay.isDataTooBig(t);
+                e = u.Ay.isDataTooBig(t);
             } catch (e) {
-                return N(n.name, n.size, p, A);
+                return j(n.name, n.size, f, N);
             }
             if (
-                ((b = t),
-                (y = e),
-                m.default.track(E.HAw.EMOJI_FILE_RESIZED, {
+                ((v = t),
+                (T = e),
+                c.default.track(x.HAw.EMOJI_FILE_RESIZED, {
                     is_animated: !1,
                     file_type: n.type.split("/").pop(),
                     original_file_size_bytes: n.size,
-                    resized_file_size_bytes: (0, x.EW)(b),
-                    resized_file_too_big: y,
+                    resized_file_size_bytes: (0, m.EW)(v),
+                    resized_file_too_big: T,
                 }),
                 e)
             )
-                return N(n.name, n.size, p, A);
+                return j(n.name, n.size, f, N);
         }
     }
     try {
-        let e = await v.getOriginalMd5(),
-            n = await (0, o.Gf)({ guildId: p, image: t, name: T, roles: I, analyticsLocation: _, originalMd5: e });
+        let e = await C.getOriginalMd5(),
+            n = await (0, r.Gf)({ guildId: f, image: t, name: _, roles: p, analyticsLocation: S, originalMd5: e });
         return (
-            m.default.track(E.HAw.EMOJI_UPLOAD_COMPLETED, { guild_id: p, upload_id: A }),
-            (0, l.P)((0, s.o)(j.intl.string(j.t["r0w9m/"]), r.Ck.SUCCESS)),
+            c.default.track(x.HAw.EMOJI_UPLOAD_COMPLETED, { guild_id: f, upload_id: N }),
+            (0, l.P0)((0, l.ox)(h.intl.string(h.t["r0w9m/"]), l.Ck.SUCCESS)),
             n
         );
-    } catch (s) {
+    } catch (r) {
         let e,
             n,
-            { body: i, status: l } = s;
+            { body: i, status: l } = r;
         return (
             null != i &&
-                (i.code === E.t02.TOO_MANY_EMOJI
-                    ? ((e = j.intl.string(j.t["jP/Rqm"])), (n = u.o.TOO_MANY_EMOJI))
-                    : i.code === E.t02.TOO_MANY_ANIMATED_EMOJI
-                      ? ((e = j.intl.string(j.t["6v5dP/"])), (n = u.o.TOO_MANY_ANIMATED_EMOJI))
-                      : null != i.image || i.code === E.t02.INVALID_FILE_ASSET_SIZE
-                        ? (m.default.track(E.HAw.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
-                              guild_id: p,
-                              file_size: f.byteLength(t),
-                              upload_id: A,
+                (i.code === x.t02.TOO_MANY_EMOJI
+                    ? ((e = h.intl.string(h.t["jP/Rqm"])), (n = d.o.TOO_MANY_EMOJI))
+                    : i.code === x.t02.TOO_MANY_ANIMATED_EMOJI
+                      ? ((e = h.intl.string(h.t["6v5dP/"])), (n = d.o.TOO_MANY_ANIMATED_EMOJI))
+                      : null != i.image || i.code === x.t02.INVALID_FILE_ASSET_SIZE
+                        ? (c.default.track(x.HAw.EMOJI_UPLOAD_FILE_SIZE_LIMIT_EXCEEDED, {
+                              guild_id: f,
+                              file_size: E.byteLength(t),
+                              upload_id: N,
                           }),
-                          (e = j.intl.formatToPlainString(j.t.kIO9jy, { maxSize: h.EMOJI_MAX_FILESIZE_KB })),
-                          (n = u.o.TOO_BIG))
-                        : (null != i.image || i.code === E.t02.INVALID_FILE_ASSET_SIZE_RESIZE_ANIMATED) &&
-                          (n = u.o.RESIZE_ANIMATED)),
-            429 === l && ((e = j.intl.string(j.t.Whhv4w)), (n = u.o.RATE_LIMIT)),
-            null == e || C || a.A.show({ title: j.intl.string(j.t.iufib1), body: e }),
+                          (e = h.intl.formatToPlainString(h.t.kIO9jy, { maxSize: g.EMOJI_MAX_FILESIZE_KB })),
+                          (n = d.o.TOO_BIG))
+                        : (null != i.image || i.code === x.t02.INVALID_FILE_ASSET_SIZE_RESIZE_ANIMATED) &&
+                          (n = d.o.RESIZE_ANIMATED)),
+            429 === l && ((e = h.intl.string(h.t.Whhv4w)), (n = d.o.RATE_LIMIT)),
+            null == e || I || s.A.show({ title: h.intl.string(h.t.iufib1), body: e }),
             n
         );
     }

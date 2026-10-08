@@ -1,31 +1,29 @@
-s.d(e, { default: () => b });
+s.d(e, { default: () => A });
 var n = s(477900),
     i = s(582128),
     a = s(17928),
-    r = s(739187),
-    l = s(857250),
-    o = s(97483),
-    h = s(830215),
-    d = s(631670);
+    r = s(376357),
+    l = s(830215),
+    o = s(631670);
 s(321073);
-var g = s(451988),
-    p = s(772707),
-    u = s(331322),
-    c = s(95477),
-    C = s(652215),
-    m = s(650583),
-    f = s(660183),
-    E = s(31008);
-class k extends i.PureComponent {
+var h = s(451988),
+    d = s(772707),
+    g = s(331322),
+    p = s(95477),
+    u = s(652215),
+    c = s(650583),
+    C = s(660183),
+    m = s(31008);
+class f extends i.PureComponent {
     static defaultProps = {
         canResend: !1,
         canChange: !0,
-        onChangeEmailClick: C.tEg,
+        onChangeEmailClick: u.tEg,
         onVerify: (t, e) => {},
-        onResend: C.tEg,
-        onClose: C.tEg,
+        onResend: u.tEg,
+        onClose: u.tEg,
     };
-    _timeout = new g.Ep();
+    _timeout = new h.Ep();
     state = { resent: !1, shouldClose: !1, email: "", password: "" };
     componentWillUnmount() {
         this._timeout.stop();
@@ -36,38 +34,38 @@ class k extends i.PureComponent {
         if (!t)
             return [
                 {
-                    text: f.intl.string(f.t.v740sh),
+                    text: C.intl.string(C.t.v740sh),
                     variant: "primary",
                     onClick: this.handleVerify,
                     loading: s,
                     disabled: 0 === n.length || 0 === i.length,
                 },
             ];
-        let a = [{ variant: "secondary", text: f.intl.string(f.t.WnX4J2), onClick: this.handleResendEmail }];
+        let a = [{ variant: "secondary", text: C.intl.string(C.t.WnX4J2), onClick: this.handleResendEmail }];
         return (
-            e && a.push({ text: f.intl.string(f.t.Vm8akB), variant: "primary", onClick: this.handleChangeEmailClick }),
+            e && a.push({ text: C.intl.string(C.t.Vm8akB), variant: "primary", onClick: this.handleChangeEmailClick }),
             a
         );
     }
     renderInputs() {
         let { emailError: t, passwordError: e } = this.props,
             { email: s, password: i } = this.state;
-        return (0, n.jsx)(u.B, {
+        return (0, n.jsx)(g.B, {
             gap: 40,
             padding: { bottom: 8 },
-            children: (0, n.jsxs)(u.B, {
+            children: (0, n.jsxs)(g.B, {
                 gap: 20,
                 children: [
-                    (0, n.jsx)(c.k, {
-                        label: f.intl.string(f.t.dI4d4S),
+                    (0, n.jsx)(p.k, {
+                        label: C.intl.string(C.t.dI4d4S),
                         value: s,
                         error: t,
                         onChange: this.handleEmailChange,
                         onKeyPress: this.handleKeyPress,
                         autoFocus: !0,
                     }),
-                    (0, n.jsx)(c.k, {
-                        label: f.intl.string(f.t["CIGa+7"]),
+                    (0, n.jsx)(p.k, {
+                        label: C.intl.string(C.t["CIGa+7"]),
                         type: "password",
                         value: i,
                         error: e,
@@ -85,15 +83,15 @@ class k extends i.PureComponent {
         return (
             (t =
                 e && null != s
-                    ? f.intl.format(f.t.JqLgQL, { email: s })
+                    ? C.intl.format(C.t.JqLgQL, { email: s })
                     : i
-                      ? f.intl.string(f.t.tSXg8O)
-                      : f.intl.string(f.t.KW5DEh)),
-            (0, n.jsx)(p.k, {
+                      ? C.intl.string(C.t.tSXg8O)
+                      : C.intl.string(C.t.KW5DEh)),
+            (0, n.jsx)(d.k, {
                 transitionState: a,
-                title: f.intl.string(f.t["1MPz27"]),
+                title: C.intl.string(C.t["1MPz27"]),
                 subtitle: t,
-                graphic: { type: "image", src: E.A },
+                graphic: { type: "image", src: m.A },
                 onClose: this.props.onClose,
                 actions: this.getActions(),
                 children: !i && this.renderInputs(),
@@ -125,54 +123,54 @@ class k extends i.PureComponent {
     };
     handleKeyPress = (t) => {
         let { email: e, password: s } = this.state;
-        t.key === m.dh.ENTER && e.length > 0 && s.length > 0 && (t.preventDefault(), this.handleVerify());
+        t.key === c.dh.ENTER && e.length > 0 && s.length > 0 && (t.preventDefault(), this.handleVerify());
     };
 }
-var y = s(836602),
-    R = s(774914),
-    v = s(870570),
-    A = s(287809),
-    S = s(446868);
-let b = function (t) {
+var E = s(836602),
+    k = s(774914),
+    y = s(870570),
+    R = s(287809),
+    v = s(446868);
+let A = function (t) {
     let { transitionState: e, onClose: s } = t,
-        { formState: g, errors: p } = (0, a.cf)([y.A], () => ({
-            formState: y.A.getFormState(),
-            errors: y.A.getErrors(),
+        { formState: h, errors: d } = (0, a.cf)([E.A], () => ({
+            formState: E.A.getFormState(),
+            errors: E.A.getErrors(),
         })),
-        u = (0, a.bG)([A.default], () => A.default.getCurrentUser()),
-        c = (0, a.bG)([v.A], () => v.A.getAction()),
-        m = !S.A.isEmailReverification(c),
-        [E, b] = i.useState(!0),
-        P = g === C.XlH.SUBMITTING;
-    function w(t) {
-        return p?.[t]?.[0] ?? "";
+        g = (0, a.bG)([R.default], () => R.default.getCurrentUser()),
+        p = (0, a.bG)([y.A], () => y.A.getAction()),
+        c = !v.A.isEmailReverification(p),
+        [m, A] = i.useState(!0),
+        S = h === u.XlH.SUBMITTING;
+    function b(t) {
+        return d?.[t]?.[0] ?? "";
     }
-    let x = w("email"),
-        I = w("password");
-    return (0, n.jsx)(k, {
+    let x = b("email"),
+        P = b("password");
+    return (0, n.jsx)(f, {
         transitionState: e,
-        email: u?.email,
+        email: g?.email,
         emailError: x,
-        passwordError: I,
-        submitting: P,
-        canResend: E && !P && u?.email != null && 0 === x.length && 0 === I.length,
-        canChange: m,
+        passwordError: P,
+        submitting: S,
+        canResend: m && !S && g?.email != null && 0 === x.length && 0 === P.length,
+        canChange: c,
         onChangeEmailClick: function () {
-            b(!1);
+            A(!1);
         },
         onVerify: function (t, e) {
-            ((0, d._L)({ email: t, password: e }).then((t) => {
+            ((0, o._L)({ email: t, password: e }).then((t) => {
                 t?.ok ||
                     (t?.body?.username != null
-                        ? (0, R.E)()
-                        : 0 === I.length &&
+                        ? (0, k.E)()
+                        : 0 === P.length &&
                           0 === x.length &&
-                          (0, r.P)((0, l.o)(f.intl.string(f.t.R0RpRX), o.Ck.FAILURE)));
+                          (0, r.P0)((0, r.ox)(C.intl.string(C.t.R0RpRX), r.Ck.FAILURE)));
             }),
-                b(!0));
+                A(!0));
         },
         onResend: function () {
-            h.A.verifyResend();
+            l.A.verifyResend();
         },
         onClose: s,
     });

@@ -1,34 +1,32 @@
-n.d(t, { A: () => h });
+n.d(t, { A: () => g });
 var i = n(582128),
-    r = n(739187),
-    l = n(857250),
-    a = n(97483),
-    s = n(887725),
-    o = n(660183);
-function c(e) {
+    r = n(376357),
+    l = n(887725),
+    a = n(660183);
+function s(e) {
     let { text: t, ok: n } = (function (e) {
         switch (e) {
             case "dispatched":
-                return { text: o.intl.string(s.default["um/5Kc"]), ok: !0 };
+                return { text: a.intl.string(l.default["um/5Kc"]), ok: !0 };
             case "rate_limited":
-                return { text: o.intl.string(s.default.T1n7hc), ok: !1 };
+                return { text: a.intl.string(l.default.T1n7hc), ok: !1 };
             case "unauthorized":
-                return { text: o.intl.string(s.default["30UxZU"]), ok: !1 };
+                return { text: a.intl.string(l.default["30UxZU"]), ok: !1 };
             case "no_widget_config":
-                return { text: o.intl.string(s.default["1UFWet"]), ok: !1 };
+                return { text: a.intl.string(l.default["1UFWet"]), ok: !1 };
             case "undeliverable":
-                return { text: o.intl.string(s.default.ypKX9A), ok: !1 };
+                return { text: a.intl.string(l.default.ypKX9A), ok: !1 };
             default:
-                return { text: o.intl.string(s.default.BLKD4B), ok: !1 };
+                return { text: a.intl.string(l.default.BLKD4B), ok: !1 };
         }
     })(e);
-    (0, r.P)((0, l.o)(t, n ? a.Ck.SUCCESS : a.Ck.FAILURE));
+    (0, r.P0)((0, r.ox)(t, n ? r.Ck.SUCCESS : r.Ck.FAILURE));
 }
-var d = n(51906),
-    u = n(636537),
-    g = n(652215);
-let f = new d.Zy();
-function h(e) {
+var o = n(51906),
+    c = n(636537),
+    d = n(652215);
+let u = new o.Zy();
+function g(e) {
     let [t, n] = i.useState(!1),
         r = i.useRef(!0);
     i.useEffect(
@@ -44,12 +42,12 @@ function h(e) {
         !t &&
             null != e &&
             (n(!0),
-            f
+            u
                 .one(e, async () => {
                     try {
                         return (
-                            await u.Bo.post({
-                                url: g.Rsh.APPLICATION_WIDGET_REFRESH(e),
+                            await c.Bo.post({
+                                url: d.Rsh.APPLICATION_WIDGET_REFRESH(e),
                                 rejectWithError: !0,
                                 failImmediatelyWhenRateLimited: !0,
                             }),
@@ -58,7 +56,7 @@ function h(e) {
                     } catch (e) {
                         switch (
                             (function (e) {
-                                if (e instanceof u.oh) return e.status;
+                                if (e instanceof c.oh) return e.status;
                                 let t = e?.status;
                                 return "number" == typeof t ? t : void 0;
                             })(e)
@@ -76,7 +74,7 @@ function h(e) {
                         }
                     }
                 })
-                .then(c)
+                .then(s)
                 .finally(() => {
                     r.current && n(!1);
                 }));

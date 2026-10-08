@@ -1,36 +1,34 @@
-n.d(t, { A: () => h });
-var i = n(739187),
-    r = n(857250),
-    a = n(97483),
-    s = n(439372),
-    l = n(666860),
-    o = n(280450),
-    d = n(174459),
-    c = n(504049),
-    u = n(587426),
-    _ = n(652215),
-    E = n(660183);
-class A extends s.A {
+n.d(t, { A: () => E });
+var i = n(376357),
+    r = n(439372),
+    a = n(666860),
+    s = n(280450),
+    l = n(174459),
+    o = n(504049),
+    d = n(587426),
+    c = n(652215),
+    u = n(660183);
+class _ extends r.A {
     actions = {
         GUILD_BULK_BAN_FAILED: (e) => {
-            ((0, i.P)((0, r.o)(E.intl.string(E.t.mICAWY), a.Ck.FAILURE)), u.E.getState().clearSelection(e.guildId));
+            ((0, i.P0)((0, i.ox)(u.intl.string(u.t.mICAWY), i.Ck.FAILURE)), d.E.getState().clearSelection(e.guildId));
         },
         GUILD_BULK_BAN_UPDATE: (e) => {
-            let { bannedUsers: t, failedUsers: n, targetUserIds: s } = e.bulkBan,
-                A = null != s ? s : [...t, ...n];
+            let { bannedUsers: t, failedUsers: n, targetUserIds: r } = e.bulkBan,
+                _ = null != r ? r : [...t, ...n];
             (n.length > 0 && 0 === t.length
-                ? (0, i.P)((0, r.o)(E.intl.string(E.t.mICAWY), a.Ck.FAILURE))
-                : ((0, i.P)((0, r.o)(E.intl.string(E.t.AsCe5I), a.Ck.SUCCESS)),
-                  d.default.track(_.HAw.BULK_MODERATION_ACTION_COMPLETED, {
-                      ...(0, l.H$)(e.guildId),
-                      action_type: c.Nj.BAN,
-                      target_user_ids: A,
-                      mod_user_id: o.default.getId(),
+                ? (0, i.P0)((0, i.ox)(u.intl.string(u.t.mICAWY), i.Ck.FAILURE))
+                : ((0, i.P0)((0, i.ox)(u.intl.string(u.t.AsCe5I), i.Ck.SUCCESS)),
+                  l.default.track(c.HAw.BULK_MODERATION_ACTION_COMPLETED, {
+                      ...(0, a.H$)(e.guildId),
+                      action_type: o.Nj.BAN,
+                      target_user_ids: _,
+                      mod_user_id: s.default.getId(),
                       successful_user_ids: t,
                       location: "MemberSafetyPageActionNotice",
                   })),
-                u.E.getState().clearSelection(e.guildId));
+                d.E.getState().clearSelection(e.guildId));
         },
     };
 }
-let h = new A();
+let E = new _();

@@ -1,4 +1,4 @@
-(i.d(e, { default: () => j }), i(321073));
+(i.d(e, { default: () => b }), i(321073));
 var a = i(477900),
     l = i(582128),
     n = i(17928),
@@ -8,46 +8,44 @@ var a = i(477900),
     o = i(71393),
     u = i(711014),
     c = i(246338),
-    g = i(739187),
-    f = i(857250),
-    p = i(97483),
-    m = i(976860),
-    v = i(712808),
-    h = i(371169),
-    k = i(248675),
-    C = i(660183);
-let x = " (Remix)";
-async function y(t, e) {
+    g = i(376357),
+    f = i(976860),
+    p = i(712808),
+    m = i(371169),
+    v = i(248675),
+    h = i(660183);
+let k = " (Remix)";
+async function C(t, e) {
     let i = null;
     try {
         var a;
-        ((i = await (0, h.gA)({
-            name: ((a = t.name), `${a.slice(0, 128 - x.length)}${x}`),
+        ((i = await (0, m.gA)({
+            name: ((a = t.name), `${a.slice(0, 128 - k.length)}${k}`),
             guild_id: e,
             install_scope: t.install_scope,
         })),
-            await (0, v.oX)(t.id, i));
+            await (0, p.oX)(t.id, i));
     } catch (e) {
-        null != i && (await (0, h.xx)(i).catch(() => void 0));
-        let t = e instanceof v.Qe && 409 === e.status ? k.default.kQerlZ : k.default.Cn8H0Y;
-        return { ok: !1, message: C.intl.string(t) };
+        null != i && (await (0, m.xx)(i).catch(() => void 0));
+        let t = e instanceof p.Qe && 409 === e.status ? v.default.kQerlZ : v.default.Cn8H0Y;
+        return { ok: !1, message: h.intl.string(t) };
     }
     return (
-        (0, v.Hc)(i), (0, v.dv)(i, C.intl.string(k.default.jviD6Y), void 0, { remix: !0 }), { ok: !0, projectId: i }
+        (0, p.Hc)(i), (0, p.dv)(i, h.intl.string(v.default.jviD6Y), void 0, { remix: !0 }), { ok: !0, projectId: i }
     );
 }
-var A = i(652215),
-    b = i(746080);
-async function w(t, e) {
-    let i = await y(t, e);
+var x = i(652215),
+    y = i(746080);
+async function A(t, e) {
+    let i = await C(t, e);
     return i.ok
-        ? ((0, m.pX)(A.BVt.CHANNEL(e, b.VV.CONJURE, i.projectId)), !0)
-        : ((0, g.P)((0, f.o)(i.message, p.Ck.FAILURE)), !1);
+        ? ((0, f.pX)(x.BVt.CHANNEL(e, y.VV.CONJURE, i.projectId)), !0)
+        : ((0, g.P0)((0, g.ox)(i.message, g.Ck.FAILURE)), !1);
 }
-function j(t) {
+function b(t) {
     let { project: e, currentGuildId: i, transitionState: g, onClose: f } = t,
         [p, m] = l.useState(i),
-        [v, h] = l.useState(!1),
+        [k, C] = l.useState(!1),
         x = (0, n.bG)([u.Ay, o.A], () => {
             let t = [];
             for (let e of u.Ay.getFlattenedGuildIds()) {
@@ -66,28 +64,28 @@ function j(t) {
                 })),
             [x],
         ),
-        A = l.useCallback(async () => {
-            if (!v) {
-                if ((h(!0), await w(e, p))) return void (await f());
-                h(!1);
+        b = l.useCallback(async () => {
+            if (!k) {
+                if ((C(!0), await A(e, p))) return void (await f());
+                C(!1);
             }
-        }, [v, e, p, f]);
+        }, [k, e, p, f]);
     return (0, a.jsx)(s.a, {
         transitionState: g,
         onClose: f,
-        title: C.intl.string(k.default["9wQTdG"]),
+        title: h.intl.string(v.default["9wQTdG"]),
         size: "md",
         actions: [
-            { text: C.intl.string(C.t["ETE/oC"]), variant: "secondary", onClick: f, disabled: v },
-            { text: C.intl.string(k.default.XWgAfc), variant: "primary", onClick: A, loading: v },
+            { text: h.intl.string(h.t["ETE/oC"]), variant: "secondary", onClick: f, disabled: k },
+            { text: h.intl.string(v.default.XWgAfc), variant: "primary", onClick: b, loading: k },
         ],
         children: (0, a.jsx)(d.Z, {
             selectionMode: "single",
-            label: C.intl.string(k.default["maL0+X"]),
+            label: h.intl.string(v.default["maL0+X"]),
             options: y,
             value: p,
             onSelectionChange: m,
-            disabled: v,
+            disabled: k,
             fullWidth: !0,
         }),
     });

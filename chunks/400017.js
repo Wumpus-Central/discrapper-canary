@@ -1,31 +1,29 @@
-t.d(n, { default: () => C });
+t.d(n, { default: () => k });
 var c = t(477900),
     o = t(980707),
     s = t(477782),
-    e = t(739187),
-    r = t(857250),
-    a = t(97483),
-    l = t(173936),
-    d = t(442433),
-    k = t(957565),
-    p = t(660183);
-function C(i) {
+    e = t(376357),
+    r = t(173936),
+    a = t(442433),
+    l = t(957565),
+    d = t(660183);
+function k(i) {
     let { link: n } = i;
     return (0, c.jsx)(o.W, {
         navId: "gif-picker",
-        onClose: d.Z_,
-        "aria-label": p.intl.string(p.t.XoasSC),
+        onClose: a.Z_,
+        "aria-label": d.intl.string(d.t.XoasSC),
         onSelect: void 0,
         children: (0, c.jsx)(s.Dr, {
             id: "gif-picker-copy-link",
-            label: p.intl.string(p.t.WqhZss),
+            label: d.intl.string(d.t.WqhZss),
             action: () => {
-                (0, k.C)(n, () => {
-                    (0, e.P)((0, r.o)(p.intl.string(p.t["+5kSoW"]), a.Ck.SUCCESS));
+                (0, l.C)(n, () => {
+                    (0, e.P0)((0, e.ox)(d.intl.string(d.t["+5kSoW"]), e.Ck.SUCCESS));
                 });
             },
-            icon: l.LinkIcon,
-            leadingAccessory: { type: "icon", icon: l.LinkIcon },
+            icon: r.LinkIcon,
+            leadingAccessory: { type: "icon", icon: r.LinkIcon },
         }),
     });
 }
