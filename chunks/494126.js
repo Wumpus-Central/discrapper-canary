@@ -1,18 +1,18 @@
 (n.r(t),
     n.d(t, {
-        promoteFrame: () => T,
-        launchFrame: () => f,
-        resetFrameLayoutModes: () => N,
-        demoteMainFrame: () => p,
-        refreshProxyTicket: () => y,
-        attachFrameIframe: () => C,
-        attachFrameHostWindow: () => R,
-        detachFrameHostWindow: () => L,
-        setFramePrefersPictureInPictureOnNavigateAway: () => g,
-        detachFrameIframe: () => O,
-        updateFrameLayoutMode: () => m,
-        updateFramePanelMode: () => S,
-        clearMainFrameSlot: () => I,
+        promoteFrame: () => p,
+        launchFrame: () => h,
+        resetFrameLayoutModes: () => S,
+        demoteMainFrame: () => I,
+        refreshProxyTicket: () => L,
+        attachFrameIframe: () => N,
+        attachFrameHostWindow: () => O,
+        detachFrameHostWindow: () => R,
+        setFramePrefersPictureInPictureOnNavigateAway: () => m,
+        detachFrameIframe: () => C,
+        updateFrameLayoutMode: () => T,
+        updateFramePanelMode: () => g,
+        clearMainFrameSlot: () => f,
     }));
 var i = n(73153),
     r = n(795816),
@@ -27,87 +27,86 @@ var d = n(85982),
     c = n(197184),
     u = n(91242),
     _ = n(457827),
-    E = n(297878),
-    A = n(165610),
-    h = n(5867);
-async function f(e) {
-    let { applicationId: t, surface: n, launch: s, analyticsContext: l, hostWindowKey: _, showErrorModal: h = !0 } = e,
-        f = (0, A.VA)(t, n),
-        p = u.A.getFrame(f);
-    if (null != p) return (p.intent === A.sV.MAIN && (T(f), m({ frameId: f, layoutMode: A.y0.FOCUSED })), f);
-    ((0, A.Yf)(n) === A.sV.MAIN && (o(), I()),
-        i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: f, surface: n, hostWindowKey: _ }));
+    E = n(165610),
+    A = n(5867);
+async function h(e) {
+    let { applicationId: t, surface: n, launch: s, analyticsContext: l, hostWindowKey: _, showErrorModal: A = !0 } = e,
+        h = (0, E.VA)(t, n),
+        I = u.A.getFrame(h);
+    if (null != I) return (I.intent === E.sV.MAIN && (p(h), T({ frameId: h, layoutMode: E.y0.FOCUSED })), h);
+    ((0, E.Yf)(n) === E.sV.MAIN && (o(), f()),
+        i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: h, surface: n, hostWindowKey: _ }));
     try {
-        let e = await (0, r.D2)(t, (0, c.A)(n), (0, E.A)(n));
+        let e = await (0, r.D2)(t, (0, c.A)(n), n.type);
         return (
             i.h.dispatch({
                 type: "FRAME_LAUNCH",
                 applicationId: t,
-                frameId: f,
+                frameId: h,
                 surface: n,
                 proxyTicket: e,
                 analyticsContext: l,
                 launch: s ?? {},
                 hostWindowKey: _,
             }),
-            f
+            h
         );
     } catch (e) {
-        if (h) {
+        if (A) {
             let n = await (0, a.f)(e, t);
             (0, d.A)(n.message);
         }
         throw (
-            i.h.dispatch({ type: "FRAME_LAUNCH_FAIL", applicationId: t, frameId: f, error: e, analyticsContext: l }), e
+            i.h.dispatch({ type: "FRAME_LAUNCH_FAIL", applicationId: t, frameId: h, error: e, analyticsContext: l }), e
         );
     }
 }
-function I() {
+function f() {
     let e = u.A.getMainFrame();
-    null != e && (e.intent === A.sV.MAIN ? (0, _.r)(e.id) : p(e.id));
+    null != e && (e.intent === E.sV.MAIN ? (0, _.r)(e.id) : I(e.id));
+}
+function I(e) {
+    u.A.getMainFrame()?.id === e && (S(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
 }
 function p(e) {
-    u.A.getMainFrame()?.id === e && (N(e), i.h.dispatch({ type: "FRAME_CLEAR_MAIN_SLOT", frameId: e }));
-}
-function T(e) {
     null != u.A.getFrame(e) &&
         u.A.getMainFrame()?.id !== e &&
-        (o(), I(), i.h.dispatch({ type: "FRAME_PROMOTE", frameId: e }));
+        (o(), f(), i.h.dispatch({ type: "FRAME_PROMOTE", frameId: e }));
 }
-function m(e) {
+function T(e) {
     let { frameId: t, layoutMode: n } = e,
         r = u.A.getFrame(t);
     null != r &&
         i.h.dispatch({ type: "FRAME_UPDATE_LAYOUT_MODE", applicationId: r.applicationId, frameId: t, layoutMode: n });
 }
-function g(e, t) {
+function m(e, t) {
     i.h.dispatch({ type: "FRAME_SET_PREFERS_PICTURE_IN_PICTURE_ON_NAVIGATE_AWAY", frameId: e, enabled: t });
 }
-function S(e, t) {
+function g(e, t) {
     i.h.dispatch({ type: "FRAME_SET_PANEL_MODE", frameId: e, activityPanelMode: t });
 }
-function N(e) {
-    (m({ frameId: e, layoutMode: A.y0.FOCUSED }), S(e, h.Gd.PANEL));
+function S(e) {
+    (T({ frameId: e, layoutMode: E.y0.FOCUSED }), g(e, A.Gd.PANEL));
 }
-function C(e, t) {
+function N(e, t) {
     i.h.dispatch({ type: "FRAME_IFRAME_MOUNT", frameId: e, iframeId: t });
 }
-function O(e, t) {
+function C(e, t) {
     i.h.dispatch({ type: "FRAME_IFRAME_UNMOUNT", frameId: e, iframeId: t });
 }
-function R(e, t) {
+function O(e, t) {
     i.h.dispatch({ type: "FRAME_HOST_WINDOW_MOUNT", frameId: e, windowKey: t });
 }
-function L(e, t) {
+function R(e, t) {
     i.h.dispatch({ type: "FRAME_HOST_WINDOW_UNMOUNT", frameId: e, windowKey: t });
 }
-async function y(e) {
+async function L(e) {
     let t = u.A.getFrame(e);
     if (null == t) return !1;
     let { applicationId: n, surface: s } = t;
     i.h.dispatch({ type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: n, frameId: e, refreshing: !0 });
     try {
-        let t = await (0, r.D2)(n, (0, c.A)(s), (0, E.A)(s));
+        let t = await (0, r.D2)(n, (0, c.A)(s), s.type);
         i.h.dispatch({ type: "FRAME_UPDATE_PROXY_TICKET", applicationId: n, frameId: e, proxyTicket: t });
     } catch (t) {
         let e = await (0, a.f)(t, n);

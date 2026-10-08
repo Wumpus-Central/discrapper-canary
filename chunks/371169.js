@@ -1,22 +1,22 @@
 (n.d(e, {
-    BD: () => y,
-    CW: () => m,
-    GG: () => $,
+    BD: () => A,
+    CW: () => v,
+    GG: () => K,
     GO: () => M,
-    HV: () => K,
+    HV: () => $,
     I$: () => V,
-    Is: () => A,
+    Is: () => f,
     K: () => F,
-    Lw: () => Z,
+    Lw: () => z,
     M7: () => b,
-    Ru: () => v,
+    Ru: () => m,
     U1: () => k,
     YI: () => H,
     Zq: () => x,
     b8: () => L,
     dm: () => G,
     gA: () => D,
-    hF: () => U,
+    hF: () => P,
     tZ: () => W,
     xx: () => B,
 }),
@@ -38,7 +38,7 @@ var i = n(636537),
     C = n(426035),
     O = n(652215),
     T = n(790782);
-function A(t, e, n) {
+function f(t, e, n) {
     (0, d.Hy)(t, {
         location: "publish",
         code: d.xf.PUBLISH_FAILED,
@@ -47,20 +47,20 @@ function A(t, e, n) {
         isPreview: n,
     });
 }
-function f(t) {
+function y(t) {
     R.A.reloadAppFrames(t);
 }
-function y(t) {
+function A(t) {
     let e = h.Ay.getProject(t);
-    null != e && (f(e.application_id), f(e.preview_application_id ?? null));
+    null != e && (y(e.application_id), y(e.preview_application_id ?? null));
 }
 let I = null,
-    N = null,
-    P = !1;
-async function U(t) {
+    U = null,
+    N = !1;
+async function P(t) {
     let e = t ?? null;
     if (h.Ay.getProjectsFetchState()?.type === "loading")
-        return void (null != e && e !== I ? (N = e) : null == e && null != I && (P = !0));
+        return void (null != e && e !== I ? (U = e) : null == e && null != I && (N = !0));
     ((I = e), l.h.dispatch({ type: "CONJURE_PROJECTS_FETCH_START", guildId: e }));
     try {
         let { body: n } = await i.Bo.get({
@@ -68,17 +68,17 @@ async function U(t) {
             query: null != t ? { guild_id: t } : void 0,
             rejectWithError: !0,
         });
-        (l.h.dispatch({ type: "CONJURE_PROJECTS_FETCH_SUCCESS", projects: n, guildId: e }), (P = !1), J());
+        (l.h.dispatch({ type: "CONJURE_PROJECTS_FETCH_SUCCESS", projects: n, guildId: e }), (N = !1), S());
     } catch {
         l.h.dispatch({ type: "CONJURE_PROJECTS_FETCH_FAIL", guildId: e });
     }
-    let n = N;
-    ((N = null), null != n && n !== e ? U(n) : P && ((P = !1), U()));
+    let n = U;
+    ((U = null), null != n && n !== e ? P(n) : N && ((N = !1), P()));
 }
-let S = !1;
-async function J() {
-    if (!S) {
-        for (let t of ((S = !0), a.Ay.getResourceIds(T.P.CONJURING_PROJECT)))
+let J = !1;
+async function S() {
+    if (!J) {
+        for (let t of ((J = !0), a.Ay.getResourceIds(T.P.CONJURING_PROJECT)))
             if (null == h.Ay.getProject(t)) {
                 if (0 === a.Ay.getMentionCount(t, T.P.CONJURING_PROJECT)) {
                     g(t);
@@ -129,7 +129,7 @@ async function k(t, e) {
 }
 async function D(t) {
     let e,
-        n = (t.flags ?? E.Zh.PUBLIC) | ("guild" === t.install_scope ? E.Zh.NATIVE_APP_CHANNELS : 0);
+        n = t.flags ?? E.Zh.PUBLIC;
     try {
         let { body: r } = await i.Bo.post({
             url: O.Rsh.CONJURE_PROJECTS,
@@ -146,10 +146,10 @@ async function j(t, e) {
     let n = await i.Bo.patch({ url: O.Rsh.CONJURE_PROJECT(t), body: e, rejectWithError: !1 });
     return (n.ok && l.h.dispatch({ type: "CONJURE_PROJECT_UPDATE_SUCCESS", project: n.body }), n);
 }
-function m(t, e) {
+function v(t, e) {
     return j(t, e);
 }
-async function v(t, e) {
+async function m(t, e) {
     let n = await j(t, { icon: e });
     if (n.ok) {
         let t = n.body.preview_application_id;
@@ -207,7 +207,7 @@ async function W(t, e) {
         (l.h.dispatch({ type: "APPLICATION_COMMAND_INDEX_APPLICATION_STALE", applicationId: a }),
         await (0, o.TA)(a),
         await (0, u.un)(a, { force: !0 }).catch(() => {}),
-        n ? r && !i && (0, p.k)(a) : f(a)),
+        n ? r && !i && (0, p.k)(a) : y(a)),
         (0, d.w2)(t, { isPreview: n }));
 }
 function V(t, e) {
@@ -216,12 +216,12 @@ function V(t, e) {
 function x(t) {
     l.h.dispatch({ type: "CONJURE_CHAT_SIDEBAR_WIDTH_SET", width: t });
 }
-function K(t) {
+function $(t) {
     l.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_APPLICATION_SET", applicationId: t });
 }
-function $(t) {
+function K(t) {
     l.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_MOBILE_SET", enabled: t });
 }
-function Z(t) {
+function z(t) {
     l.h.dispatch({ type: "CONJURE_BUILDER_PREVIEW_LANDSCAPE_SET", landscape: t });
 }

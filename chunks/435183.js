@@ -1,7 +1,7 @@
 (n.d(t, { Ay: () => N, D3: () => S, RT: () => T, Ts: () => d, VN: () => E, c4: () => _, fy: () => c }), n(938796));
-var l = n(636537),
-    i = n(73153),
-    r = n(568185);
+var r = n(636537),
+    l = n(73153),
+    i = n(568185);
 n(250953);
 var a = n(867455);
 n(863036);
@@ -9,20 +9,20 @@ var u = n(734057),
     o = n(398590),
     s = n(652215);
 function d(e, t, n) {
-    i.h.dispatch({ type: "CHANNEL_SETTINGS_INIT", channelId: e, location: t, subsection: n });
+    l.h.dispatch({ type: "CHANNEL_SETTINGS_INIT", channelId: e, location: t, subsection: n });
 }
 function E() {
-    i.h.dispatch({ type: "CHANNEL_SETTINGS_CLOSE" });
+    l.h.dispatch({ type: "CHANNEL_SETTINGS_CLOSE" });
 }
 function _(e) {
-    i.h.dispatch({ type: "CHANNEL_SETTINGS_SET_SECTION", section: e });
+    l.h.dispatch({ type: "CHANNEL_SETTINGS_SET_SECTION", section: e });
 }
 function c(e) {
     let {
         name: t,
         type: n,
-        topic: l,
-        bitrate: r,
+        topic: r,
+        bitrate: i,
         userLimit: a,
         nsfw: u,
         flags: o,
@@ -44,12 +44,12 @@ function c(e) {
         themeColor: L,
         applicationId: g,
     } = e;
-    i.h.dispatch({
+    l.h.dispatch({
         type: "CHANNEL_SETTINGS_UPDATE",
         name: t,
         channelType: n,
-        topic: l,
-        bitrate: r,
+        topic: r,
+        bitrate: i,
         userLimit: a,
         nsfw: u,
         flags: o,
@@ -103,14 +103,10 @@ async function T(e, t) {
         } = t,
         D = u.A.getChannel(e);
     return (
-        null != D &&
-            (o === D.type && (o = void 0),
-            (E ?? "") === (D.topic ?? "") && (E = void 0),
-            (j ?? null) === (D.application_id ?? null) && (j = void 0)),
         D?.isGameInvitesChannel() && (f = void 0),
-        i.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
+        l.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT" }),
         await a.A.unarchiveThreadIfNecessary(e),
-        l.Bo.patch({
+        r.Bo.patch({
             url: s.Rsh.CHANNEL(e),
             body: {
                 name: n,
@@ -148,22 +144,22 @@ async function T(e, t) {
                 application_id: j,
             },
             oldFormErrors: !0,
-            rejectWithError: (0, l.fT)(),
+            rejectWithError: (0, r.fT)(),
         }).then(
             (t) => {
-                i.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: e });
+                l.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_SUCCESS", channelId: e });
                 let n = D?.getGuildId();
-                return (null == n || D?.isThread() || r.A.checkGuildTemplateDirty(n), t);
+                return (null == n || D?.isThread() || i.A.checkGuildTemplateDirty(n), t);
             },
-            (e) => (i.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_FAILURE", errors: e.body }), e),
+            (e) => (l.h.dispatch({ type: "CHANNEL_SETTINGS_SUBMIT_FAILURE", errors: e.body }), e),
         )
     );
 }
 async function S(e) {
     let t = u.A.getChannel(e);
-    await l.Bo.del({ url: s.Rsh.CHANNEL(e), oldFormErrors: !0, rejectWithError: !0 });
+    await r.Bo.del({ url: s.Rsh.CHANNEL(e), oldFormErrors: !0, rejectWithError: !0 });
     let n = t?.getGuildId();
-    (null == n || t?.isThread() || r.A.checkGuildTemplateDirty(n), E());
+    (null == n || t?.isThread() || i.A.checkGuildTemplateDirty(n), E());
 }
 let N = {
     init: d,
@@ -173,19 +169,19 @@ let N = {
     close: E,
     setSection: _,
     selectPermissionOverwrite: function (e) {
-        i.h.dispatch({ type: "CHANNEL_SETTINGS_OVERWRITE_SELECT", overwriteId: e });
+        l.h.dispatch({ type: "CHANNEL_SETTINGS_OVERWRITE_SELECT", overwriteId: e });
     },
     updateChannel: c,
     saveChannel: T,
     deleteChannel: S,
     updateVoiceChannelStatus: function (e, t) {
-        return l.Bo.put({
+        return r.Bo.put({
             url: s.Rsh.UPDATE_VOICE_CHANNEL_STATUS(e),
             body: { status: t },
-            rejectWithError: (0, l.fT)(),
+            rejectWithError: (0, r.fT)(),
         });
     },
     removeLinkedLobby: function (e) {
-        return l.Bo.del({ url: s.Rsh.CHANNEL_LINKED_LOBBY(e), rejectWithError: !0 });
+        return r.Bo.del({ url: s.Rsh.CHANNEL_LINKED_LOBBY(e), rejectWithError: !0 });
     },
 };

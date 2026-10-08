@@ -115,13 +115,7 @@ function M(e) {
             disabledReason: null,
         };
     let o = (function (e) {
-            let {
-                installScope: t,
-                guildName: n,
-                canManageGuild: l,
-                canManageChannels: i,
-                usesNativeAppChannels: a,
-            } = e;
+            let { installScope: t, guildName: n, canManageGuild: l, canManageChannels: i, usesAppChannels: a } = e;
             if ("guild" !== t) return null;
             let r = !1 === l,
                 u = a && !1 === i,
@@ -187,7 +181,7 @@ function T(e, t) {
             appChannelPending: v.Ay.isAppChannelPending(e),
             canManageGuild: null == a ? null : p.A.can(R.xBc.MANAGE_GUILD, a),
             canManageChannels: null == a ? null : p.A.can(R.xBc.MANAGE_CHANNELS, a),
-            usesNativeAppChannels: (0, h.KQ)(n),
+            usesAppChannels: (0, h.Hv)(n),
             botInGuild: (0, x.AS)(n, l),
             liveNameOutdated: F(n),
         },
@@ -388,7 +382,7 @@ function z(e, t) {
             appChannelPending: w,
             canManageGuild: k,
             canManageChannels: S,
-            usesNativeAppChannels: I,
+            usesAppChannels: I,
             botInGuild: N,
             liveNameOutdated: E,
         } = (0, i.cf)(
@@ -409,7 +403,7 @@ function z(e, t) {
                     appChannelPending: t?.input.appChannelPending ?? !1,
                     canManageGuild: t?.input.canManageGuild ?? null,
                     canManageChannels: t?.input.canManageChannels ?? null,
-                    usesNativeAppChannels: t?.input.usesNativeAppChannels ?? !1,
+                    usesAppChannels: t?.input.usesAppChannels ?? !1,
                     botInGuild: t?.input.botInGuild ?? null,
                     liveNameOutdated: t?.input.liveNameOutdated ?? !1,
                 };
@@ -429,7 +423,7 @@ function z(e, t) {
                           appChannelPending: w,
                           canManageGuild: k,
                           canManageChannels: S,
-                          usesNativeAppChannels: I,
+                          usesAppChannels: I,
                           botInGuild: N,
                           liveNameOutdated: E,
                       },

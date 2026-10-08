@@ -2,9 +2,9 @@
     A4: () => b,
     CA: () => f,
     Hn: () => o,
+    Hv: () => c,
     IU: () => u,
     Ju: () => N,
-    KQ: () => c,
     Oq: () => C,
     PY: () => R,
     RX: () => _,
@@ -37,11 +37,12 @@ let i = Object.freeze({
         BOT: 5,
         APPLICATION_COMMANDS: 6,
         OVERLAY: 7,
+        ACTIVITY: 8,
     }),
     r = 2,
     a = 128,
     s = 25,
-    l = Object.freeze({ PUBLIC: 1, SHAREABLE: 2, NATIVE_APP_CHANNELS: 4 });
+    l = Object.freeze({ PUBLIC: 1, SHAREABLE: 2 });
 function o(e) {
     return ((e.flags ?? 0) & l.PUBLIC) != 0;
 }
@@ -49,7 +50,8 @@ function d(e) {
     return ((e.flags ?? 0) & l.SHAREABLE) != 0;
 }
 function c(e) {
-    return e.supported_surfaces?.includes(i.APP_CHANNEL) === !0 || ((e.flags ?? 0) & l.NATIVE_APP_CHANNELS) != 0;
+    let t = e.supported_surfaces ?? [];
+    return t.includes(i.APP_CHANNEL) || ("guild" === e.install_scope && 0 === t.length);
 }
 function u(e) {
     return null != e.flags;

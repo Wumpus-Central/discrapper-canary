@@ -31,7 +31,7 @@ function s(t) {
     let e = c(t, t.guild_id);
     return !0 === e || E(t.guild_id, t.application_id).length > 0
         ? "in_server"
-        : (t.supported_surfaces?.length ?? 0) > 0 && ((0, u.KQ)(t) || !1 === e)
+        : (t.supported_surfaces?.length ?? 0) > 0 && ((0, u.Hv)(t) || !1 === e)
           ? "not_in_server"
           : null;
 }

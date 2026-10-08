@@ -12,15 +12,16 @@ function c(e) {
     return e?.install_scope === "guild" ? e.guild_id : void 0;
 }
 function u(e) {
-    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.U.APP_CHANNEL;
-    return t === i.U.APP_CHANNEL && null == e
+    let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : i.U.APP_CHANNEL,
+        n = (0, a.BR)(t);
+    return n === i.U.APP_CHANNEL && null == e
         ? o
         : null == e
-          ? { type: t, channelId: l }
-          : { type: t, channelId: l, guildId: e };
+          ? { type: n, channelId: l }
+          : { type: n, channelId: l, guildId: e };
 }
 function _(e) {
-    return a.YF.map((t) => r.A.getFrame((0, s.VA)(e, u(void 0, t)))).filter((e) => null != e);
+    return a.Eb.map((t) => r.A.getFrame((0, s.VA)(e, u(void 0, t)))).filter((e) => null != e);
 }
 function E(e) {
     let t = _(e);

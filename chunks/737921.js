@@ -14241,7 +14241,7 @@ function dX(e) {
                 _ = (0, tM.PH)(f, T);
             return (
                 i.useEffect(() => {
-                    if (null != t) for (let e of (0, ty.Mm)(t)) e.surface.type !== _ && (0, tC.r)(e.id);
+                    if (null != t) for (let e of (0, ty.Mm)(t)) e.surface.type !== (0, tM.BR)(_) && (0, tC.r)(e.id);
                 }, [t, _]),
                 {
                     availability: M,
