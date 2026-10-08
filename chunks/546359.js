@@ -271,12 +271,19 @@ function J() {
         H();
     });
 }
-class ee extends i.Ay.Store {
+class ee extends i.Ay.PersistedStore {
     static displayName = "FriendRowStore";
-    initialize() {
-        (this.waitFor(o.A, l.default, d.A, c.A, u.A, _.default, E.A),
+    static persistKey = "FriendRowStore";
+    initialize(e) {
+        ((O = e?.groupingMode ?? p.Vj.ACTIVE_NOW),
+            (R = e?.voiceGroupingEnabled ?? !0),
+            K(),
+            this.waitFor(o.A, l.default, d.A, c.A, u.A, _.default, E.A),
             this.syncWith([l.default], J),
             this.syncWith([d.A], Q));
+    }
+    getState() {
+        return { groupingMode: O, voiceGroupingEnabled: R };
     }
     getGroupingMode() {
         return O;
@@ -294,7 +301,9 @@ class ee extends i.Ay.Store {
 let et = new ee(a.h, {
     CONNECTION_OPEN: K,
     OVERLAY_INITIALIZE: K,
-    LOGOUT: K,
+    LOGOUT: function () {
+        ((O = p.Vj.ACTIVE_NOW), (R = !0), K());
+    },
     CONNECTION_OPEN_SUPPLEMENTAL: X,
     PRESENCES_REPLACE: X,
     GUILD_CREATE: X,
@@ -369,7 +378,8 @@ let et = new ee(a.h, {
             ((O = t),
             W(() => {
                 H();
-            }))
+            }),
+            !0)
         );
     },
     FRIENDS_LIST_SET_VOICE_GROUPING_ENABLED: function (e) {
@@ -379,7 +389,8 @@ let et = new ee(a.h, {
             ((R = t),
             W(() => {
                 H();
-            }))
+            }),
+            !0)
         );
     },
 });
