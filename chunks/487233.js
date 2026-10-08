@@ -1,63 +1,64 @@
-l.d(n, { A: () => f });
-var a = l(477900),
-    t = l(582128),
+l.d(n, { A: () => h });
+var t = l(477900),
+    a = l(582128),
     r = l(17928),
     i = l(919395),
     s = l(252732),
     u = l(696451),
-    o = l(84540),
-    d = l(836602),
-    c = l(342866),
-    g = l(569059),
-    v = l(660183);
-function f(e) {
-    let { user: n, guildId: l, disabled: f, errorMessageId: h } = e,
-        p = t.useRef(null),
+    o = l(841183),
+    d = l(84540),
+    c = l(836602),
+    g = l(342866),
+    v = l(569059),
+    f = l(660183);
+function h(e) {
+    let { user: n, guildId: l, disabled: h, errorMessageId: p } = e,
+        b = a.useRef(null),
         {
-            pendingAvatar: b,
-            accessibleValue: m,
-            currentProfileAvatarHash: A,
-            hasMainProfileFallback: I,
+            pendingAvatar: m,
+            accessibleValue: A,
+            currentProfileAvatarHash: I,
+            hasMainProfileFallback: C,
         } = (function (e, n) {
-            let { pendingAvatar: l, currentProfileAvatarHash: a } = (0, r.cf)(
-                    [d.A, u.Ay],
+            let { pendingAvatar: l, currentProfileAvatarHash: t } = (0, r.cf)(
+                    [c.A, u.Ay],
                     () => ({
-                        pendingAvatar: d.A.getPendingChanges(n ?? void 0).pendingAvatar,
+                        pendingAvatar: c.A.getPendingChanges(n ?? void 0).pendingAvatar,
                         currentProfileAvatarHash: null != n ? u.Ay.getMember(n, e.id)?.avatar : e.avatar,
                     }),
                     [n, e],
                 ),
-                t = null != n,
+                a = null != n,
                 i = null != e.avatar;
             return {
                 pendingAvatar: l,
-                accessibleValue: (0, c.$)(l, a),
-                currentProfileAvatarHash: a,
-                hasMainProfileFallback: t && i,
+                accessibleValue: (0, o.Fk)(l, t),
+                currentProfileAvatarHash: t,
+                hasMainProfileFallback: a && i,
             };
         })(n, l),
-        C = (0, i.z5)(b, A)
+        y = (0, i.z5)(m, I)
             ? {
                   onClick: () => {
-                      ((0, s.rM)(null, A, (e) => (0, o.p)({ guildId: l ?? void 0, avatar: e })),
-                          (0, i.WU)(I ? "reset" : "remove"));
+                      ((0, s.rM)(null, I, (e) => (0, d.p)({ guildId: l ?? void 0, avatar: e })),
+                          (0, i.WU)(C ? "reset" : "remove"));
                   },
-                  type: I ? "reset" : "remove",
-                  accessibleLabel: v.intl.string(I ? v.t.Y0mxy1 : v.t.twB3fz),
+                  type: C ? "reset" : "remove",
+                  accessibleLabel: f.intl.string(C ? f.t.Y0mxy1 : f.t.twB3fz),
               }
             : void 0,
-        y = (0, g._)({ guildId: l, returnRef: p });
-    return (0, a.jsx)(c.A, {
-        buttonRef: p,
+        k = (0, v._)({ guildId: l, returnRef: b });
+    return (0, t.jsx)(g.A, {
+        buttonRef: b,
         userId: n.id,
         guildId: l,
-        avatarChange: b,
-        accessibleValue: m,
+        avatarChange: m,
+        accessibleValue: A,
         variant: "square",
-        affordance: C,
-        onClick: y,
+        affordance: y,
+        onClick: k,
         "aria-haspopup": "dialog",
-        disabled: f,
-        errorMessageId: h,
+        disabled: h,
+        errorMessageId: p,
     });
 }
