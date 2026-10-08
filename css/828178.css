@@ -1,36 +1,3 @@
-.fallback_b789ab {
-    align-items: center;
-    background-color: #423d80;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    padding: 12px;
-    text-align: center
-}
-
-.spacer_b789ab {
-    flex: 1
-}
-
-.iconFallback_b789ab {
-    align-items: center;
-    background-color: var(--background-base-low);
-    box-sizing: border-box;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    overflow: hidden
-}
-
-.icon_b789ab {
-    aspect-ratio: 1/1;
-    border-radius: var(--radius-sm);
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%
-}
-
 .container_e0f8ae {
     background-color: var(--background-base-low);
     border: 1px solid var(--border-subtle);
@@ -167,4 +134,4 @@
     width: 36px
 }
 
-/*# sourceMappingURL=788029.130969f6e3e3d50b.css.map*/
+/*# sourceMappingURL=828178.d4888d0920cefce4.css.map*/

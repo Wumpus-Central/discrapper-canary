@@ -23,6 +23,154 @@
     justify-content: center
 }
 
+.container_da75ce {
+    background-color: var(--background-base-lowest);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: var(--space-4);
+    padding: var(--space-4)
+}
+
+.container__14a18 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    -moz-column-gap: var(--space-16);
+    column-gap: var(--space-16);
+    flex-wrap: wrap;
+    padding-block: var(--space-8);
+    padding-inline: var(--space-8) var(--space-16);
+    row-gap: var(--space-8)
+}
+
+.container__14a18,
+.guildInfo__14a18 {
+    align-items: center;
+    display: flex
+}
+
+.guildInfo__14a18 {
+    flex: 1 1 240px;
+    gap: var(--space-12);
+    min-width: 0
+}
+
+.textContainer__14a18 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    min-width: 0
+}
+
+.guildNameContainer__14a18 {
+    align-items: center;
+    display: flex;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.guildName__14a18 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap
+}
+
+.actions__14a18 {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-16);
+    justify-content: flex-end;
+    margin-inline-start: auto
+}
+
+.scroller_b1bfc6 {
+    scroll-padding-top: calc(var(--custom-top-nav-height) + var(--space-4))
+}
+
+.topNavSpacer_b1bfc6 {
+    flex: 0 0 var(--custom-top-nav-height);
+    height: var(--custom-top-nav-height)
+}
+
+.section_b1bfc6 {
+    padding: var(--space-16)
+}
+
+.list_b1bfc6,
+.toolbar_b1bfc6 {
+    display: flex
+}
+
+.list_b1bfc6 {
+    flex-direction: column
+}
+
+.grid_b1bfc6,
+.list_b1bfc6 {
+    gap: var(--space-12)
+}
+
+.grid_b1bfc6 {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
+}
+
+.skeletonCard_b1bfc6 {
+    flex-direction: column;
+    gap: var(--space-8);
+    padding: var(--space-16)
+}
+
+.skeletonCard_b1bfc6,
+.skeletonListItem_b1bfc6 {
+    background-color: var(--background-surface-high);
+    border: 1px solid var(--border-subtle);
+    border-radius: var(--radius-lg);
+    display: flex
+}
+
+.skeletonListItem_b1bfc6 {
+    align-items: center;
+    gap: var(--space-12);
+    padding-block: var(--space-8);
+    padding-inline: var(--space-8) var(--space-16)
+}
+
+.skeletonCardTop_b1bfc6 {
+    display: flex;
+    gap: var(--space-12);
+    margin-block-end: auto
+}
+
+.skeletonIcon_b1bfc6 {
+    border-radius: var(--radius-md);
+    flex-shrink: 0;
+    height: var(--size-48);
+    width: var(--size-48)
+}
+
+.skeletonText_b1bfc6 {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: var(--space-4);
+    min-width: 0
+}
+
+.skeletonName_b1bfc6 {
+    border-radius: var(--radius-xs);
+    height: var(--size-20);
+    width: 60%
+}
+
+.skeletonDescription_b1bfc6 {
+    border-radius: var(--radius-xs);
+    height: var(--size-12);
+    width: 90%
+}
+
 .boostedGuildIconGem__97677 {
     height: 12px;
     transition: color .1s linear;
@@ -639,4 +787,4 @@
     }
 }
 
-/*# sourceMappingURL=398791.70fdc529a8720a21.css.map*/
+/*# sourceMappingURL=209856.90649883e6463a98.css.map*/

@@ -115,6 +115,41 @@
     }
 }
 
+.container__78d34 {
+    gap: var(--space-16)
+}
+
+.container__78d34,
+.count__78d34 {
+    align-items: center;
+    display: flex
+}
+
+.count__78d34 {
+    gap: var(--space-4)
+}
+
+.pillIcon__78d34 {
+    border-radius: 50%;
+    display: inline-block;
+    height: 8px;
+    width: 8px
+}
+
+.pillIconTotal__78d34 {
+    background-color: var(--text-default)
+}
+
+.pillIconOnline__78d34 {
+    background-color: var(--icon-feedback-positive)
+}
+
+.skeleton__78d34 {
+    border-radius: var(--radius-xs);
+    height: var(--size-12);
+    width: 55%
+}
+
 .section_adbbea {
     display: flex;
     flex-direction: column;
@@ -207,33 +242,6 @@
     overflow: hidden
 }
 
-.pillIcon_adbbea {
-    border-radius: 50%;
-    display: inline-block;
-    height: 8px;
-    width: 8px
-}
-
-.pillIconTotal_adbbea {
-    background-color: var(--text-default)
-}
-
-.pillIconOnline_adbbea {
-    background-color: var(--icon-feedback-positive)
-}
-
-.memberContainer_adbbea {
-    align-items: center;
-    display: flex;
-    gap: var(--space-16)
-}
-
-.memberCountContainer_adbbea {
-    align-items: center;
-    display: flex;
-    gap: var(--space-4)
-}
-
 .skeletonSectionTitle_adbbea {
     border-radius: var(--radius-xs);
     height: var(--size-16);
@@ -260,19 +268,14 @@
 }
 
 .skeletonGuildInfo_adbbea {
+    border-radius: var(--radius-xs);
+    height: var(--size-12);
     margin-block: 2px;
     width: 90%
 }
 
-.skeletonGuildInfo_adbbea,
 .skeletonMemberContainer_adbbea {
-    border-radius: var(--radius-xs);
-    height: var(--size-12)
-}
-
-.skeletonMemberContainer_adbbea {
-    margin-top: 2px;
-    width: 55%
+    margin-top: 2px
 }
 
 .container__0b616 {
@@ -296,74 +299,4 @@
     min-width: 0
 }
 
-.scroller_b1bfc6 {
-    scroll-padding-top: calc(var(--custom-top-nav-height) + var(--space-4))
-}
-
-.topNavSpacer_b1bfc6 {
-    flex: 0 0 var(--custom-top-nav-height);
-    height: var(--custom-top-nav-height)
-}
-
-.section_b1bfc6 {
-    padding: var(--space-16)
-}
-
-.grid_b1bfc6 {
-    display: grid;
-    gap: var(--space-12);
-    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr))
-}
-
-.skeletonCard_b1bfc6 {
-    background-color: var(--background-surface-high);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-lg);
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-8);
-    padding: var(--space-16)
-}
-
-.skeletonCardTop_b1bfc6 {
-    display: flex;
-    gap: var(--space-12);
-    margin-block-end: auto
-}
-
-.skeletonIcon_b1bfc6 {
-    border-radius: var(--radius-md);
-    flex-shrink: 0;
-    height: var(--size-48);
-    width: var(--size-48)
-}
-
-.skeletonText_b1bfc6 {
-    display: flex;
-    flex: 1;
-    flex-direction: column;
-    gap: var(--space-4);
-    min-width: 0
-}
-
-.skeletonName_b1bfc6 {
-    border-radius: var(--radius-xs);
-    height: var(--size-20);
-    width: 60%
-}
-
-.skeletonDescription_b1bfc6 {
-    width: 90%
-}
-
-.skeletonDescription_b1bfc6,
-.skeletonMemberCounts_b1bfc6 {
-    border-radius: var(--radius-xs);
-    height: var(--size-12)
-}
-
-.skeletonMemberCounts_b1bfc6 {
-    width: 55%
-}
-
-/*# sourceMappingURL=1b73468e952146c1.css.map*/
+/*# sourceMappingURL=341a2e076c7213b4.css.map*/
