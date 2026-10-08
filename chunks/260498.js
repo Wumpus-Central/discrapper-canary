@@ -1,396 +1,418 @@
-(n.d(t, { Ay: () => K, H_: () => c, PV: () => l, jf: () => d }), n(321073));
+(n.d(t, { Ay: () => J, H_: () => u, PV: () => o, jf: () => c }), n(321073), n(134528), n(947204));
 var i = n(17928),
     r = n(73153),
     a = n(287809),
-    s = n(164892);
-function l(e) {
+    s = n(164892),
+    l = n(746524);
+function o(e) {
     return e.owner_user_id === a.default.getCurrentUser()?.id;
 }
-function o(e) {
+function d(e) {
     return (0, s.Hn)(e) && null != e.guild_id;
 }
-function d(e) {
-    return l(e) || o(e);
-}
 function c(e) {
-    return l(e) || (0, s.tr)(e) || o(e);
+    return o(e) || d(e);
 }
-let u = new Map(),
-    _ = new Map(),
+function u(e) {
+    return o(e) || (0, s.tr)(e) || d(e);
+}
+let _ = new Map(),
     E = new Map(),
-    A = new Set(),
+    A = new Map(),
     h = new Set(),
-    f = new Map(),
-    I = new Set(),
-    p = !1,
-    T = null,
-    m = !1,
-    g = null,
-    S = new Set(),
-    N = new Map(),
-    C = "unattempted",
-    O = [],
-    R = new Map(),
-    L = 0,
-    y = new Map(),
+    f = new Set(),
+    I = new Map(),
+    p = new Set(),
+    T = !1,
+    m = null,
+    g = !1,
+    S = null,
+    N = new Set(),
+    C = new Map(),
+    O = "unattempted",
+    R = [],
+    L = new Map(),
+    y = 0,
     D = new Map(),
     v = [],
-    b = new Map(),
-    M = new Map();
-function P(e, t, n) {
-    return null != t && M.get(e)?.get(t) === n;
+    b = new Map();
+function M(e, t, n) {
+    let i = e.get(t);
+    return (null == i && ((i = new l.g(n)), e.set(t, i)), i);
 }
-function U(e, t, n) {
+function P(e) {
+    return e.log.seq;
+}
+function U(e) {
+    return e.seq;
+}
+function w(e, t) {
+    let n = t.call_seq ?? t.entry_seq;
+    return e?.seq == null ? n : null == n ? e.seq : Math.min(e.seq, n);
+}
+function G(e) {
+    return 400 + (K.get(e)?.snapshot.size ?? 0);
+}
+let x = new Map();
+function k(e, t, n) {
+    return null != t && x.get(e)?.get(t) === n;
+}
+function F(e, t, n) {
     if (null == t) return;
-    let i = M.get(e);
-    for (null == i && ((i = new Map()), M.set(e, i)), i.set(t, n); i.size > 800;) {
+    let i = x.get(e);
+    for (null == i && ((i = new Map()), x.set(e, i)), i.set(t, n); i.size > 800;) {
         let e = i.keys().next();
         if (!0 === e.done) break;
         i.delete(e.value);
     }
 }
-let w = { status: "idle", truncated: !1, count: 0 },
-    G = new Map();
-function x(e, t, n) {
-    let i = G.get(e);
-    (null == i && ((i = new Map()), G.set(e, i)), i.set(t, n));
+let B = { status: "idle", truncated: !1, count: 0 },
+    V = new Map();
+function H(e, t, n) {
+    let i = V.get(e);
+    (null == i && ((i = new Map()), V.set(e, i)), i.set(t, n));
 }
-function k(e, t, n) {
-    let i = t.concat(n);
-    b.set(e, i.length > 400 ? i.slice(-400) : i);
-}
-class F extends i.Ay.Store {
+class j extends i.Ay.Store {
     initialize() {
         this.waitFor(a.default);
     }
     getOwnedProjects() {
-        return Array.from(u.values()).filter(l);
+        return Array.from(_.values()).filter(o);
     }
     hasFetchedOwnedProjects() {
-        return p;
-    }
-    getMaxProjects() {
         return T;
     }
-    hasFetchedProjectLimit() {
+    getMaxProjects() {
         return m;
     }
+    hasFetchedProjectLimit() {
+        return g;
+    }
     getProject(e) {
-        return u.get(e) ?? null;
+        return _.get(e) ?? null;
     }
     findProjectByApplicationId(e) {
-        for (let t of u.values()) if (t.application_id === e || t.preview_application_id === e) return t;
+        for (let t of _.values()) if (t.application_id === e || t.preview_application_id === e) return t;
         return null;
     }
     getSharedProjects(e) {
         let t = [];
-        for (let n of u.values()) l(n) || n.guild_id !== e || t.push(n);
+        for (let n of _.values()) o(n) || n.guild_id !== e || t.push(n);
         return t;
     }
     getIntegrationStatus(e) {
-        return _.get(e) ?? null;
-    }
-    getPublishStatus(e) {
         return E.get(e) ?? null;
     }
-    isProjectPublishing(e) {
-        return A.has(e);
+    getPublishStatus(e) {
+        return A.get(e) ?? null;
     }
-    isAppChannelPending(e) {
+    isProjectPublishing(e) {
         return h.has(e);
     }
+    isAppChannelPending(e) {
+        return f.has(e);
+    }
     isProjectDeleting(e) {
-        return I.has(e);
+        return p.has(e);
     }
     getSelectedProjectId(e) {
-        return f.get(e) ?? null;
+        return I.get(e) ?? null;
     }
     getLogs(e) {
-        return R.get(e) ?? O;
+        return L.get(e)?.snapshot() ?? R;
     }
     getUnreadLogErrorCount(e) {
-        let t = R.get(e);
+        let t = L.get(e);
         if (null == t) return 0;
         let n = D.get(e) ?? 0,
             i = 0;
-        for (let e of t) e.key > n && "error" === e.log.level && !0 !== e.log.historical && (i += 1);
+        for (let e of t.values()) e.key > n && "error" === e.log.level && !0 !== e.log.historical && (i += 1);
         return i;
     }
     getTrace(e) {
-        return b.get(e) ?? v;
+        return b.get(e)?.snapshot() ?? v;
     }
     getHistoryState(e, t) {
-        return G.get(e)?.get(t) ?? w;
+        return V.get(e)?.get(t) ?? B;
     }
     getProjectsFetchState() {
-        return g;
+        return S;
     }
     hasFetchedGuildProjects(e) {
-        return S.has(e);
+        return N.has(e);
     }
     getGuildProjectsFetchState(e) {
-        return N.get(e) ?? "unattempted";
+        return C.get(e) ?? "unattempted";
     }
     getOwnedProjectsFetchState() {
-        return C;
+        return O;
     }
     isConjureProjectApplication(e) {
         return null != e && null != this.findProjectByApplicationId(e);
     }
 }
-function B(e) {
+function W(e) {
     let { project: t } = e;
-    u.set(t.id, t);
+    _.set(t.id, t);
 }
-let V = new Map();
-function H(e, t) {
+function Y(e) {
+    let { projectId: t, log: n } = e,
+        i = M(L, t, P);
+    if (null != n.seq && -1 !== i.indexOfSeq(n.seq)) return !1;
+    (i.insert({ key: ++y, log: n }), i.trim(500));
+}
+let K = new Map();
+function $(e, t) {
     return `${e}:${t}`;
 }
-function j(e, t, n) {
-    V.get(e)?.touched.add(H(t, n));
+function z(e, t, n) {
+    K.get(e)?.touched.add($(t, n));
 }
-function W(e, t, n) {
+function X(e) {
+    let { projectId: t, scope: n, status: i, count: r, truncated: a } = e,
+        s = "trace" === n ? K.get(t) : void 0;
+    "trace" === n && K.delete(t);
+    let l = "trace" === n ? b.get(t) : void 0;
+    if ("failed" === i) {
+        l?.trim(400);
+        let e = V.get(t)?.get(n);
+        H(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
+        return;
+    }
+    (null != s && l?.retain((e) => !s.snapshot.has($(e.kind, e.id)) || s.touched.has($(e.kind, e.id))),
+        l?.trim(400),
+        H(t, n, { status: "loaded", truncated: a, count: r }));
+}
+function Z(e, t, n) {
     return e.findIndex((e) => e.kind === t && e.id === n);
 }
-function Y(e, t, n, i) {
-    let r = t.slice();
-    ((r[n] = i), b.set(e, r));
+function q(e) {
+    let { projectId: t, modelCall: n } = e;
+    if ((z(t, "model", n.id), k(t, n.entry_id, n.status))) return !1;
+    let i = M(b, t, U),
+        r = Z(i, "model", n.id),
+        a = -1 === r ? null : i.at(r),
+        s = w(a, n),
+        l = {
+            kind: "model",
+            id: n.id,
+            ...(null != s ? { seq: s } : {}),
+            ...((n.turn_id ?? a?.turnId) != null ? { turnId: n.turn_id ?? a?.turnId } : {}),
+            agent: n.agent,
+            model: n.model,
+            status: n.status,
+            ...(function (e, t) {
+                let n = {};
+                for (let [i, r] of Object.entries(t)) {
+                    let t = r ?? e?.[i];
+                    "number" == typeof t && (n[i] = t);
+                }
+                return n;
+            })(a, {
+                promptTokens: n.prompt_tokens,
+                systemTokens: n.system_tokens,
+                toolsTokens: n.tools_tokens,
+                messagesTokens: n.messages_tokens,
+                tools: n.tools,
+                messages: n.messages,
+                durationMs: n.duration_ms,
+                inputTokens: n.input_tokens,
+                outputTokens: n.output_tokens,
+                cacheReadTokens: n.cache_read_tokens,
+                cacheWriteTokens: n.cache_write_tokens,
+                costUsd: n.cost_usd,
+            }),
+            ...((n.estimated ?? a?.estimated) === !0 ? { estimated: !0 } : {}),
+            ...(null != n.stop_reason ? { stopReason: n.stop_reason } : {}),
+            ...(null != n.error ? { error: n.error } : {}),
+            startedAt: a?.startedAt ?? n.ts,
+        };
+    (F(t, n.entry_id, n.status), null != a ? i.replace(r, l) : i.insert(l), i.trim(G(t)));
 }
-let K = new F(r.h, {
+function Q(e) {
+    let { projectId: t, toolCall: n } = e;
+    if ((z(t, "tool", n.id), k(t, n.entry_id, n.status))) return !1;
+    let i = M(b, t, U),
+        r = Z(i, "tool", n.id),
+        a = -1 === r ? null : i.at(r),
+        s = n.summary ?? a?.summary,
+        l = n.fields ?? a?.fields,
+        o = n.schema ?? a?.schema,
+        d = n.detail_id ?? a?.detailId,
+        c = n.turn_id ?? a?.turnId,
+        u = n.parent_id ?? a?.parentId,
+        _ = w(a, n),
+        E = {
+            kind: "tool",
+            id: n.id,
+            ...(null != _ ? { seq: _ } : {}),
+            ...(null != c ? { turnId: c } : {}),
+            ...(null != u ? { parentId: u } : {}),
+            agent: n.agent,
+            tool: n.tool,
+            status: n.status,
+            ...(null != s ? { summary: s } : {}),
+            ...(null != l ? { fields: l } : {}),
+            ...(null != o ? { schema: o } : {}),
+            ...(null != d ? { detailId: d } : {}),
+            ...(null != n.duration_ms ? { durationMs: n.duration_ms } : {}),
+            ...(null != n.result_chars ? { resultChars: n.result_chars } : {}),
+            ...(!0 === n.result_truncated ? { resultTruncated: !0 } : {}),
+            ...(null != n.result_added ? { resultAdded: n.result_added } : {}),
+            ...(null != n.result_removed ? { resultRemoved: n.result_removed } : {}),
+            ...(null != n.error ? { error: n.error } : {}),
+            startedAt: a?.startedAt ?? n.ts,
+        };
+    (F(t, n.entry_id, n.status), null != a ? i.replace(r, E) : i.insert(E), i.trim(G(t)));
+}
+let J = new j(r.h, {
     LOGOUT: function () {
         if (
-            0 === u.size &&
             0 === _.size &&
             0 === E.size &&
             0 === A.size &&
             0 === h.size &&
             0 === f.size &&
             0 === I.size &&
-            0 === R.size &&
-            0 === S.size &&
+            0 === p.size &&
+            0 === L.size &&
+            0 === N.size &&
             0 === b.size &&
-            0 === G.size &&
-            0 === M.size &&
-            null == g &&
-            null == T &&
-            !m
+            0 === V.size &&
+            0 === x.size &&
+            null == S &&
+            null == m &&
+            !g
         )
             return !1;
-        (u.clear(),
-            _.clear(),
+        (_.clear(),
             E.clear(),
             A.clear(),
             h.clear(),
             f.clear(),
             I.clear(),
-            R.clear(),
-            S.clear(),
+            p.clear(),
+            L.clear(),
             N.clear(),
-            y.clear(),
+            C.clear(),
             D.clear(),
             b.clear(),
-            G.clear(),
-            M.clear(),
-            (g = null),
-            (p = !1),
-            (C = "unattempted"),
-            (T = null),
-            (m = !1),
-            V.clear());
+            V.clear(),
+            x.clear(),
+            (S = null),
+            (T = !1),
+            (O = "unattempted"),
+            (m = null),
+            (g = !1),
+            K.clear());
     },
     CONJURE_PROJECTS_FETCH_START: function (e) {
         let { guildId: t } = e;
-        (null != t ? N.set(t, "loading") : (C = "loading"), (g = { type: "loading" }));
+        (null != t ? C.set(t, "loading") : (O = "loading"), (S = { type: "loading" }));
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
             i = new Set(t.map((e) => e.id));
-        for (let [e, t] of u) !i.has(e) && (l(t) || (null != n && t.guild_id === n)) && u.delete(e);
-        for (let e of t) u.set(e.id, e);
-        for (let e of (null != n && (S.add(n), N.set(n, "success")), _.keys())) u.has(e) || _.delete(e);
-        for (let e of E.keys()) u.has(e) || E.delete(e);
-        for (let [e, t] of f) u.has(t) || f.delete(e);
-        ((p = !0), (C = "success"), (g = { type: "success", fetchedAt: Date.now() }));
+        for (let [e, t] of _) !i.has(e) && (o(t) || (null != n && t.guild_id === n)) && _.delete(e);
+        for (let e of t) _.set(e.id, e);
+        for (let e of (null != n && (N.add(n), C.set(n, "success")), E.keys())) _.has(e) || E.delete(e);
+        for (let e of A.keys()) _.has(e) || A.delete(e);
+        for (let [e, t] of I) _.has(t) || I.delete(e);
+        ((T = !0), (O = "success"), (S = { type: "success", fetchedAt: Date.now() }));
     },
     CONJURE_PROJECTS_FETCH_FAIL: function (e) {
         let { guildId: t } = e;
-        (null != t ? N.set(t, "error") : (C = "error"), (g = { type: "error", fetchedAt: Date.now() }));
+        (null != t ? C.set(t, "error") : (O = "error"), (S = { type: "error", fetchedAt: Date.now() }));
     },
     CONJURE_PROJECT_LIMIT_FETCH_SETTLE: function (e) {
         let { maxProjects: t } = e;
-        ((T = t), (m = !0));
+        ((m = t), (g = !0));
     },
-    CONJURE_PROJECT_CREATE_SUCCESS: B,
-    CONJURE_PROJECT_UPDATE_SUCCESS: B,
+    CONJURE_PROJECT_CREATE_SUCCESS: W,
+    CONJURE_PROJECT_UPDATE_SUCCESS: W,
     CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE: function (e) {
         let { projectId: t, integrationStatus: n } = e;
-        _.set(t, n);
+        E.set(t, n);
     },
     CONJURE_PROJECT_PUBLISH_STATUS_UPDATE: function (e) {
         let { projectId: t, published: n, hasUnpublishedChanges: i, surface: r } = e,
             a = n ? (i ? "changes" : "up_to_date") : "unpublished",
-            s = E.get(t);
+            s = A.get(t);
         if (s?.state === a && s.surface === r) return !1;
-        E.set(t, { state: a, surface: r });
+        A.set(t, { state: a, surface: r });
     },
     CONJURE_PROJECT_PUBLISH_START: function (e) {
         let { projectId: t } = e;
-        A.add(t);
+        h.add(t);
     },
     CONJURE_PROJECT_PUBLISH_SETTLE: function (e) {
         let { projectId: t } = e;
-        return A.delete(t);
+        return h.delete(t);
     },
     CONJURE_PROJECT_APP_CHANNEL_PENDING: function (e) {
         let { projectId: t, pending: n } = e;
-        if (h.has(t) === n) return !1;
-        n ? h.add(t) : h.delete(t);
+        if (f.has(t) === n) return !1;
+        n ? f.add(t) : f.delete(t);
     },
     CONJURE_PROJECT_DELETE_START: function (e) {
         let { projectId: t } = e;
-        I.add(t);
+        p.add(t);
     },
     CONJURE_PROJECT_DELETE_SUCCESS: function (e) {
         let { projectId: t } = e;
-        for (let [e, n] of (I.delete(t),
-        u.delete(t),
+        for (let [e, n] of (p.delete(t),
         _.delete(t),
         E.delete(t),
         A.delete(t),
         h.delete(t),
-        R.delete(t),
-        y.delete(t),
+        f.delete(t),
+        L.delete(t),
         D.delete(t),
         b.delete(t),
-        G.delete(t),
-        M.delete(t),
-        f))
-            n === t && f.delete(e);
+        V.delete(t),
+        x.delete(t),
+        I))
+            n === t && I.delete(e);
     },
     CONJURE_PROJECT_DELETE_FAIL: function (e) {
         let { projectId: t } = e;
-        return I.delete(t);
+        return p.delete(t);
     },
     CONJURE_PROJECT_SELECT: function (e) {
         let { guildId: t, projectId: n } = e;
-        if ((f.get(t) ?? null) === n) return !1;
-        null == n ? f.delete(t) : f.set(t, n);
+        if ((I.get(t) ?? null) === n) return !1;
+        null == n ? I.delete(t) : I.set(t, n);
     },
     CONJURE_TRACE_REPLAY_STARTING: function (e) {
         let { projectId: t } = e;
-        V.set(t, { snapshot: new Set((b.get(t) ?? v).map((e) => H(e.kind, e.id))), touched: new Set() });
+        K.set(t, { snapshot: new Set((b.get(t)?.values() ?? v).map((e) => $(e.kind, e.id))), touched: new Set() });
     },
-    CONJURE_HISTORY_LOAD_SETTLE: function (e) {
-        let { projectId: t, scope: n, status: i, count: r, truncated: a } = e,
-            s = "trace" === n ? V.get(t) : void 0;
-        if (("trace" === n && V.delete(t), "failed" === i)) {
-            let e = G.get(t)?.get(n);
-            x(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
-            return;
-        }
-        if (null != s) {
-            let e = b.get(t);
-            null != e &&
-                b.set(
-                    t,
-                    e.filter((e) => !s.snapshot.has(H(e.kind, e.id)) || s.touched.has(H(e.kind, e.id))),
-                );
-        }
-        x(t, n, { status: "loaded", truncated: a, count: r });
+    CONJURE_HISTORY_LOAD_SETTLE: X,
+    CONJURE_DEBUG_BACKLOG: function (e) {
+        let { projectId: t, backlog: n } = e;
+        for (let e of n.logs) Y({ type: "CONJURE_LOG_APPEND", projectId: t, log: e });
+        for (let e of n.trace)
+            "debug_model_call" === e.type
+                ? q({ type: "CONJURE_MODEL_CALL_APPEND", projectId: t, modelCall: e })
+                : Q({ type: "CONJURE_TOOL_CALL_APPEND", projectId: t, toolCall: e });
+        for (let e of n.states)
+            X({
+                type: "CONJURE_HISTORY_LOAD_SETTLE",
+                projectId: t,
+                scope: e.scope,
+                status: e.status,
+                count: e.count,
+                truncated: !0 === e.truncated,
+            });
     },
-    CONJURE_LOG_APPEND: function (e) {
-        let { projectId: t, log: n } = e,
-            i = n.seq;
-        if (null != i) {
-            let e = y.get(t);
-            if (null != e && i <= e) return !1;
-            y.set(t, i);
-        }
-        let r = { key: ++L, log: n },
-            a = R.get(t),
-            s = null == a ? [r] : a.concat(r);
-        R.set(t, s.length > 500 ? s.slice(-500) : s);
-    },
+    CONJURE_LOG_APPEND: Y,
     CONJURE_LOGS_SEEN: function (e) {
         let { projectId: t } = e,
-            n = R.get(t),
-            i = null == n || 0 === n.length ? 0 : n[n.length - 1].key;
-        if ((D.get(t) ?? 0) >= i) return !1;
-        D.set(t, i);
+            n = 0;
+        for (let e of L.get(t)?.values() ?? R) n = Math.max(n, e.key);
+        if ((D.get(t) ?? 0) >= n) return !1;
+        D.set(t, n);
     },
-    CONJURE_TOOL_CALL_APPEND: function (e) {
-        let { projectId: t, toolCall: n } = e;
-        if ((j(t, "tool", n.id), P(t, n.entry_id, n.status))) return !1;
-        let i = b.get(t) ?? v,
-            r = W(i, "tool", n.id),
-            a = -1 === r ? null : i[r],
-            s = n.summary ?? a?.summary,
-            l = n.fields ?? a?.fields,
-            o = n.schema ?? a?.schema,
-            d = n.detail_id ?? a?.detailId,
-            c = n.turn_id ?? a?.turnId,
-            u = n.parent_id ?? a?.parentId,
-            _ = {
-                kind: "tool",
-                id: n.id,
-                ...(null != c ? { turnId: c } : {}),
-                ...(null != u ? { parentId: u } : {}),
-                agent: n.agent,
-                tool: n.tool,
-                status: n.status,
-                ...(null != s ? { summary: s } : {}),
-                ...(null != l ? { fields: l } : {}),
-                ...(null != o ? { schema: o } : {}),
-                ...(null != d ? { detailId: d } : {}),
-                ...(null != n.duration_ms ? { durationMs: n.duration_ms } : {}),
-                ...(null != n.result_chars ? { resultChars: n.result_chars } : {}),
-                ...(!0 === n.result_truncated ? { resultTruncated: !0 } : {}),
-                ...(null != n.result_added ? { resultAdded: n.result_added } : {}),
-                ...(null != n.result_removed ? { resultRemoved: n.result_removed } : {}),
-                ...(null != n.error ? { error: n.error } : {}),
-                startedAt: a?.startedAt ?? n.ts,
-            };
-        (U(t, n.entry_id, n.status), null != a) ? Y(t, i, r, _) : k(t, i, _);
-    },
-    CONJURE_MODEL_CALL_APPEND: function (e) {
-        let { projectId: t, modelCall: n } = e;
-        if ((j(t, "model", n.id), P(t, n.entry_id, n.status))) return !1;
-        let i = b.get(t) ?? v,
-            r = W(i, "model", n.id),
-            a = -1 === r ? null : i[r],
-            s = {
-                kind: "model",
-                id: n.id,
-                ...((n.turn_id ?? a?.turnId) != null ? { turnId: n.turn_id ?? a?.turnId } : {}),
-                agent: n.agent,
-                model: n.model,
-                status: n.status,
-                ...(function (e, t) {
-                    let n = {};
-                    for (let [i, r] of Object.entries(t)) {
-                        let t = r ?? e?.[i];
-                        "number" == typeof t && (n[i] = t);
-                    }
-                    return n;
-                })(a, {
-                    promptTokens: n.prompt_tokens,
-                    systemTokens: n.system_tokens,
-                    toolsTokens: n.tools_tokens,
-                    messagesTokens: n.messages_tokens,
-                    tools: n.tools,
-                    messages: n.messages,
-                    durationMs: n.duration_ms,
-                    inputTokens: n.input_tokens,
-                    outputTokens: n.output_tokens,
-                    cacheReadTokens: n.cache_read_tokens,
-                    cacheWriteTokens: n.cache_write_tokens,
-                    costUsd: n.cost_usd,
-                }),
-                ...((n.estimated ?? a?.estimated) === !0 ? { estimated: !0 } : {}),
-                ...(null != n.stop_reason ? { stopReason: n.stop_reason } : {}),
-                ...(null != n.error ? { error: n.error } : {}),
-                startedAt: a?.startedAt ?? n.ts,
-            };
-        (U(t, n.entry_id, n.status), null != a) ? Y(t, i, r, s) : k(t, i, s);
-    },
+    CONJURE_TOOL_CALL_APPEND: Q,
+    CONJURE_MODEL_CALL_APPEND: q,
 });
