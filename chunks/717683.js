@@ -1,5 +1,5 @@
 _.exports = {
-    U6: "pulse_e475bb",
+    AJ: "appear_e475bb",
     qV: "skeleton_e475bb",
     Dk: "carousel_e475bb",
     yI: "carouselCompact_e475bb",
