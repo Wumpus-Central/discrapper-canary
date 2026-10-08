@@ -1,59 +1,61 @@
-n.d(t, { A: () => E });
+n.d(t, { A: () => h });
 var i = n(635377),
     r = n.n(i),
     a = n(17928),
     s = n(73153),
-    l = n(929396);
-function o(e, t) {
+    l = n(927813),
+    o = n(929396);
+let d = l.A.Millis.HOUR;
+function c(e, t) {
     return `${e}:${t}`;
 }
-let d = new (r())({ max: 100 }),
-    c = new Set(),
-    u = new (r())({ max: 500 });
-class _ extends a.Ay.Store {
+let u = new (r())({ max: 100, maxAge: d }),
+    _ = new Set(),
+    E = new (r())({ max: 500, maxAge: d });
+class A extends a.Ay.Store {
     static displayName = "GameAutocompleteStore";
     getResults(e, t) {
-        let n = (0, l.C7)(e);
-        return null == n ? void 0 : d.peek(o(t, n));
+        let n = (0, o.C7)(e);
+        return null == n ? void 0 : u.peek(c(t, n));
     }
     getClosestResults(e, t) {
-        let n = (0, l.C7)(e);
+        let n = (0, o.C7)(e);
         if (null != n)
             for (let e = n.length; e >= 1; e--) {
                 let i = n.slice(0, e),
-                    r = d.peek(o(t, i));
+                    r = u.peek(c(t, i));
                 if (null != r) return { query: i, results: r };
             }
     }
     shouldSuppressFetch(e, t) {
-        let n = (0, l.C7)(e);
+        let n = (0, o.C7)(e);
         if (null == n) return !1;
-        let i = o(t, n);
-        return !(d.has(i) || c.has(i)) && (0, l.bC)(n, (e) => d.peek(o(t, e)));
+        let i = c(t, n);
+        return !(u.has(i) || _.has(i)) && (0, o.bC)(n, (e) => u.peek(c(t, e)));
     }
     isFetching(e, t) {
-        let n = (0, l.C7)(e);
-        return null != n && c.has(o(t, n));
+        let n = (0, o.C7)(e);
+        return null != n && _.has(c(t, n));
     }
     getGameById(e) {
-        return u.peek(e);
+        return E.peek(e);
     }
 }
-let E = new _(s.h, {
+let h = new A(s.h, {
     LOGOUT: function () {
-        (d.reset(), (c = new Set()), u.reset());
+        (u.reset(), (_ = new Set()), E.reset());
     },
     GAME_AUTOCOMPLETE_FETCH: function (e) {
         let { query: t, filterGroup: n } = e;
-        c.add(o(n, t));
+        _.add(c(n, t));
     },
     GAME_AUTOCOMPLETE_FETCH_SUCCESS: function (e) {
         let { query: t, filterGroup: n, results: i } = e,
-            r = o(n, t);
-        for (let e of (c.delete(r), d.set(r, i), i)) u.set(e.id, e);
+            r = c(n, t);
+        for (let e of (_.delete(r), u.set(r, i), i)) E.set(e.id, e);
     },
     GAME_AUTOCOMPLETE_FETCH_FAILURE: function (e) {
         let { query: t, filterGroup: n } = e;
-        c.delete(o(n, t));
+        _.delete(c(n, t));
     },
 });
