@@ -102,31 +102,37 @@ async function O(e) {
         throw (s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: e }), e);
     }
 }
-function R(e) {
-    let t,
-        n,
-        i = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
-        r = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : C.intl.string(C.t.khEaRI),
-        a = arguments.length > 3 && void 0 !== arguments[3] ? arguments[3] : {};
+function R(e, t) {
+    let n,
+        i,
+        { defaultErrorMessage: r = C.intl.string(C.t.khEaRI), captureExceptionOptions: a = {} } = t ?? {},
+        o = t?.captureException ?? !0;
     if (S.includes(e.type)) {
-        let a = null != e.message ? `${r}: ${e.message}` : r,
-            s = {
-                failure_message: a,
+        let t = null != e.message ? `${r}: ${e.message}` : r,
+            a = {
+                failure_message: t,
                 error_type: e.type,
                 failure_code: e.code,
                 failure_sub_code: e.decline_code,
                 payment_source_type: e.payment_method?.type,
             };
-        ((n = s),
+        ((i = a),
             "card_error" === e.type &&
-                (_.default.track(N.HAw.PAYMENT_SOURCE_CREATION_FAILED, { ...s, stacktrace: Error().stack }), (i = !1)),
-            (t = new l.Ey(a)));
+                (_.default.track(N.HAw.PAYMENT_SOURCE_CREATION_FAILED, { ...a, stacktrace: Error().stack }), (o = !1)),
+            (n = new l.Ey(t)));
     } else
-        ((n = { failure_message: (t = new l.Ey("string" == typeof e ? r : e)).message, status_code: t.code }),
-            429 === t.code && (i = !1));
-    s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: t });
-    let o = Error("string" == typeof e ? e : t.message);
-    return (i && (0, E.pM)(o, { ...a, extra: { ...n, ...a.extra } }), o);
+        ((i = {
+            failure_message: (n = e instanceof l.Ey ? e : new l.Ey("string" == typeof e ? r : e)).message,
+            status_code: n.code,
+        }),
+            429 === n.code && (o = !1));
+    s.h.dispatch({ type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL", error: n });
+    let d = Error("string" == typeof e ? e : n.message);
+    if (o) {
+        let e = { ...a, extra: { ...i, ...a.extra } };
+        (0, E.pM)(d, e);
+    }
+    return d;
 }
 async function L(e) {
     let {
@@ -180,7 +186,11 @@ let b = new T.A("BillingPaymentGatewayActionCreators.tsx");
 function M(e) {
     let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1],
         n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : C.intl.string(C.t.khEaRI);
-    return R(e, t, n, { tags: { source: "payment_elements" } });
+    return R(e, {
+        captureException: t,
+        defaultErrorMessage: n,
+        captureExceptionOptions: { tags: { source: "payment_elements" } },
+    });
 }
 async function P(e, t) {
     if (null == e || null == t) throw R("Stripe or elements not loaded");
@@ -352,37 +362,27 @@ async function $(e, t, n) {
 }
 async function z(e, t, n, i) {
     let r = arguments.length > 4 && void 0 !== arguments[4] && arguments[4],
-        d = await O(e),
-        c = { type: v.Kc.get(t), ...(i?.paymentMethod ?? {}) },
-        u = await L(t),
-        _ = (0, a.TP)() + N.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(t, u ?? "", "success");
+        s = await O(e),
+        l = { type: v.Kc.get(t), ...(i?.paymentMethod ?? {}) },
+        d = await L(t),
+        c = (0, a.TP)() + N.Rsh.BILLING_POPUP_BRIDGE_CALLBACK_REDIRECT_PREFIX(t, d ?? "", "success");
     try {
         return {
             paymentSource: await y(
                 N.kM_.ADYEN,
-                JSON.stringify(c),
+                JSON.stringify(l),
                 e,
-                { billingAddressToken: d, analyticsLocation: n, returnUrl: _ },
+                { billingAddressToken: s, analyticsLocation: n, returnUrl: c },
                 r,
             ),
             redirectConfirmation: !1,
         };
     } catch (t) {
-        var E;
-        if (t.code !== o.tG.CONFIRMATION_REQUIRED)
-            throw (
-                s.h.dispatch({
-                    type: "BILLING_PAYMENT_SOURCE_CREATE_FAIL",
-                    error: new l.Ey(
-                        `Unable to create payment source token: code: ${t?.code} message: ${t?.message}`,
-                        l.Ey.ErrorCodes.UNKNOWN,
-                    ),
-                }),
-                t
-            );
+        var u;
+        if (t.code !== o.tG.CONFIRMATION_REQUIRED) throw t;
         let e = t.fields.adyen_redirect_url;
         if (null == e) throw R("redirect url cannot be null on a redirect for adyen.");
-        return ((E = e), window.open(E), { redirectConfirmation: !0 });
+        return ((u = e), window.open(u), { redirectConfirmation: !0 });
     }
 }
 async function X(e) {

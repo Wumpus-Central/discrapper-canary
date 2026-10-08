@@ -169,19 +169,22 @@ function b(e) {
                     let {
                             complete: t,
                             value: { address: n, name: i },
+                            ...r
                         } = e,
-                        r = (0, m.ZB)(n);
+                        o = r.isNewAddress,
+                        u = (0, m.ZB)(n);
                     (s &&
                         null != l &&
                         l.log("AddressElement onChange event:", {
-                            complete: t,
+                            stripeComplete: t,
+                            stripeIsNewAddress: o,
                             address: n,
                             name: i,
                             addressElementOnChangeFired: b,
-                            isAddressSubstantial: r,
+                            isAddressSubstantial: u,
                         }),
                         j(!0));
-                    let o = {
+                    let c = {
                             name: i,
                             country: n.country,
                             city: n.city,
@@ -190,19 +193,20 @@ function b(e) {
                             state: n.state,
                             postalCode: n.postal_code,
                         },
-                        u = (0, d.Qd)(o);
+                        p = (0, d.Qd)(c);
                     (!t ||
-                        u ||
+                        p ||
                         d.im.has(n.country) ||
                         f.A.captureMessage(
                             "Unexpected AddressElement validity mismatch: Stripe complete but address was computed invalid",
                             {
                                 tags: { app_context: "billing", billing_context: "payment_element" },
                                 extra: {
-                                    isValidComputed: u,
+                                    isValidComputed: p,
+                                    stripeIsNewAddress: o,
                                     stripeComplete: t,
                                     country: n.country,
-                                    emptyFields: Object.entries(o)
+                                    emptyFields: Object.entries(c)
                                         .filter((e) => {
                                             let [, t] = e;
                                             return (0, S.uJ)(t);
@@ -214,7 +218,7 @@ function b(e) {
                                 },
                             },
                         ),
-                        a(o, u && t));
+                        a(c, p && t));
                 },
             }),
             [a, s, l, b, j],

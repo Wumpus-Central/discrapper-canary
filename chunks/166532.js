@@ -1,4 +1,4 @@
-n.d(t, { Ir: () => I, l_: () => d, ou: () => p, pn: () => u, zT: () => S });
+n.d(t, { Ir: () => I, h5: () => p, l_: () => d, ou: () => S, pn: () => u, zT: () => A });
 var a,
     r = n(582128),
     s = n(913122),
@@ -73,7 +73,10 @@ function I(e) {
     }
     throw new i.v({ message: `Unexpected step: ${e}`, extraSentryInformation: { step: e } });
 }
-function p(e) {
+function p(e, t) {
+    return null != e && (null == S(e) || !!t);
+}
+function S(e) {
     if (null != e) {
         if (!(e instanceof s.Ey)) throw (_.error(e), (0, l.pM)(e), Error("Unexpected error type"));
         if (e.hasCardError()) return "credit_card_information";
@@ -81,7 +84,7 @@ function p(e) {
     }
     return null;
 }
-function S(e, t, n) {
+function A(e, t, n) {
     r.useEffect(() => {
         null != e && "review" !== e && t !== E.h.WAITING && t !== E.h.COMPLETED && n(E.h.WAITING);
     }, [e, t, n]);

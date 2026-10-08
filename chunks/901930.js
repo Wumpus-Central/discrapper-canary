@@ -1,63 +1,63 @@
-l.d(n, { A: () => x, j: () => g });
-var t = l(477900),
-    r = l(582128),
-    i = l(192308),
-    a = l(28863),
-    s = l(683071),
-    u = l(308528),
-    c = l(913122),
-    o = l(136857),
-    d = l(211083),
-    m = l(655857),
-    h = l(642639),
-    f = l(834981),
-    E = l(975571),
-    A = l(166532),
-    N = l(652215),
-    p = l(660183);
+t.d(n, { A: () => C, j: () => g });
+var l = t(477900),
+    r = t(582128),
+    i = t(192308),
+    a = t(28863),
+    s = t(683071),
+    u = t(308528),
+    c = t(913122),
+    o = t(136857),
+    d = t(211083),
+    m = t(655857),
+    h = t(642639),
+    E = t(834981),
+    f = t(975571),
+    A = t(166532),
+    p = t(652215),
+    N = t(660183);
 function g(e) {
-    let { planError: n } = e,
-        { paymentError: l } = (0, d.o)(),
-        { dropdownCurrencies: s } = (0, m.Jn)(),
-        { purchaseError: g, purchasePreviewError: x } = (0, h.t4)((e) => ({
+    let { planError: n, hasSelectedPaymentElementSourceType: t } = e,
+        { paymentError: s } = (0, d.o)(),
+        { dropdownCurrencies: g } = (0, m.Jn)(),
+        { purchaseError: C, purchasePreviewError: x } = (0, h.t4)((e) => ({
             purchaseError: e.purchaseError,
             purchasePreviewError: e.purchasePreviewError,
         })),
-        C = null;
-    null != x ? (C = x) : null != l && null == (0, A.ou)(l) ? (C = l) : null != g ? (C = g) : null != n && (C = n);
-    let j = (0, f.vx)(),
+        y = null;
+    null != x ? (y = x) : null != s && (0, A.h5)(s, t) ? (y = s) : null != C ? (y = C) : null != n && (y = n);
+    let j = (0, E.vx)(),
         v = r.useCallback(() => {
             ((0, i.closeAllModals)(), u.A.openPrivateChannel({ recipientIds: j }));
         }, [j]),
-        _ = s.length > 1,
-        y = null != C ? C.message : "";
+        _ = g.length > 1,
+        I = null != y ? y.message : "";
     if (
-        null != C &&
-        C instanceof c.Ey &&
-        (C.code === o.tG.CARD_DECLINED && _ && (y += ` ${p.intl.string(p.t.iWvwQS)}`),
-        C.code === o.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (y = p.intl.string(p.t.ypuSd8)),
-        C.code === N.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (y = p.intl.string(p.t.mXMmWE)),
-        C.code === o.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (y = p.intl.string(p.t.mC1Fjz)),
-        (C.code === o.tG.BILLING_SPENDING_LIMIT_REACHED || C.code === o.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
-            (y = p.intl.format(p.t["mv/fF2"], {
+        null != y &&
+        y instanceof c.Ey &&
+        (y.code === o.tG.CARD_DECLINED && _ && (I += ` ${N.intl.string(N.t.iWvwQS)}`),
+        y.code === o.tG.INVALID_GIFT_REDEMPTION_FRAUD_REJECTED && (I = N.intl.string(N.t.ypuSd8)),
+        y.code === p.t02.BILLING_NON_REFUNDABLE_PAYMENT_SOURCE && (I = N.intl.string(N.t.mXMmWE)),
+        y.code === o.tG.INVALID_CURRENCY_FOR_PAYMENT_SOURCE && (I = N.intl.string(N.t.mC1Fjz)),
+        (y.code === o.tG.BILLING_SPENDING_LIMIT_REACHED || y.code === o.tG.BILLING_SPENDING_LIMIT_WILL_EXCEED) &&
+            (I = N.intl.format(N.t["mv/fF2"], {
                 guardianHook: (e, n) =>
                     j.length > 0
-                        ? (0, t.jsx)(a.Anchor, { onClick: v, children: e }, n)
-                        : (0, t.jsx)(r.Fragment, { children: e }, n),
+                        ? (0, l.jsx)(a.Anchor, { onClick: v, children: e }, n)
+                        : (0, l.jsx)(r.Fragment, { children: e }, n),
             })),
-        C.code === o.tG.INVALID_BILLING_ADDRESS)
+        y.code === o.tG.INVALID_BILLING_ADDRESS)
     ) {
-        let e = p.intl.format(p.t.BPDKoA, {
-            helpdeskArticle: E.A.getArticleURL(N.MVz.BILLING).concat(N.bNI.INVALID_BILLING_ADDRESS),
+        let e = N.intl.format(N.t.BPDKoA, {
+            helpdeskArticle: f.A.getArticleURL(p.MVz.BILLING).concat(p.bNI.INVALID_BILLING_ADDRESS),
         });
-        y = (0, t.jsxs)(t.Fragment, { children: [p.intl.string(p.t["yVIm/G"]), " ", e] });
+        I = (0, l.jsxs)(l.Fragment, { children: [N.intl.string(N.t["yVIm/G"]), " ", e] });
     }
-    return { error: C, errorMessage: y };
+    return { error: y, errorMessage: I };
 }
-function x(e) {
-    let { planError: n, purchaseErrorBlockRef: l, className: r } = e,
-        { error: i, errorMessage: a } = g({ planError: n });
-    return null == i
+function C(e) {
+    let { planError: n, purchaseErrorBlockRef: t, hasSelectedPaymentElementSourceType: r, className: i } = e,
+        { error: a, errorMessage: u } = g({ planError: n, hasSelectedPaymentElementSourceType: r });
+    return null == a
         ? null
-        : (0, t.jsx)("div", { ref: l, className: r, children: (0, t.jsx)(s.w, { type: "critical", children: a }) });
+        : (0, l.jsx)("div", { ref: t, className: i, children: (0, l.jsx)(s.w, { type: "critical", children: u }) });
 }
