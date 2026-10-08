@@ -172,22 +172,7 @@
     margin-top: 12px
 }
 
-.contentExpanded__24e2c {
-    box-sizing: border-box;
-    height: auto;
-    inset-inline-start: 0;
-    padding: 8px;
-    position: absolute;
-    top: 0;
-    width: 100%;
-    z-index: 1
-}
-
-.contentExpandedAccepted__24e2c {
-    padding: 12px
-}
-
-.questPromoContent__24e2c {
+.questPromoContent__1699b {
     align-items: stretch;
     display: flex;
     flex-direction: column;
@@ -196,18 +181,18 @@
     z-index: 3
 }
 
-.ctaNotInteractable__24e2c {
+.ctaNotInteractable__1699b {
     pointer-events: none
 }
 
-.divider__24e2c {
+.divider__1699b {
     background-color: var(--interactive-background-hover);
     height: 1px;
     margin-bottom: 12px;
     width: 100%
 }
 
-.details__24e2c {
+.details__1699b {
     display: flex;
     flex: 1 1 auto;
     flex-direction: column;
@@ -215,19 +200,19 @@
     margin-bottom: 2px
 }
 
-.detailsMargin__24e2c {
+.detailsMargin__1699b {
     margin-top: 74px
 }
 
-.detailsMarginVideoQuest__24e2c {
+.detailsMarginVideoQuest__1699b {
     margin-top: 45px
 }
 
-.white__24e2c {
+.white__1699b {
     color: var(--white)
 }
 
-.videoQuestPreviewCont__24e2c {
+.videoQuestPreviewCont__1699b {
     aspect-ratio: 16/9;
     border: 1px solid var(--themes-dark-background-background-modifier-accent, rgba(78, 80, 88, .48));
     border-radius: 8px;
@@ -238,13 +223,13 @@
     width: 100%
 }
 
-.assetBodyVideoPreviewMedia__24e2c {
+.assetBodyVideoPreviewMedia__1699b {
     cursor: pointer;
     height: 100%;
     width: 100%
 }
 
-.assetBodyVideoPreviewVideo__24e2c {
+.assetBodyVideoPreviewVideo__1699b {
     height: 102%;
     inset-inline-start: -1px;
     -o-object-fit: cover;
@@ -256,11 +241,11 @@
     width: 102%
 }
 
-.assetBodyVideoPreviewVisible__24e2c {
+.assetBodyVideoPreviewVisible__1699b {
     opacity: 1
 }
 
-.heroAssetWrapper__24e2c {
+.heroAssetWrapper__1699b {
     border-radius: var(--radius-sm) var(--radius-sm) 0 0;
     height: 100%;
     inset-inline: 0;
@@ -271,58 +256,58 @@
     z-index: 1
 }
 
-.high-contrast-mode .heroAssetWrapper__24e2c {
+.high-contrast-mode .heroAssetWrapper__1699b {
     border: 1px solid var(--border-subtle)
 }
 
-.legibilityGradient__24e2c {
+.legibilityGradient__1699b {
     background-image: linear-gradient(180deg, transparent, var(--background-base-low));
     bottom: 0;
     inset-inline-start: 0;
     z-index: 1
 }
 
-.heroAsset__24e2c,
-.legibilityGradient__24e2c {
+.heroAsset__1699b,
+.legibilityGradient__1699b {
     height: 100%;
     position: absolute;
     width: 100%
 }
 
-.heroAsset__24e2c {
+.heroAsset__1699b {
     -o-object-fit: cover;
     object-fit: cover;
     z-index: 0
 }
 
-.cta__24e2c {
+.cta__1699b {
     flex: 0 0 auto;
     margin-top: 8px
 }
 
-.iconButton__24e2c {
+.iconButton__1699b {
     background-color: var(--interactive-background-hover);
     padding: 8px
 }
 
-.iconButton__24e2c:hover {
+.iconButton__1699b:hover {
     background-color: var(--background-mod-subtle)
 }
 
-.ctaClaimReward__24e2c {
+.ctaClaimReward__1699b {
     margin-bottom: 4px
 }
 
-.title__24e2c {
+.title__1699b {
     margin-bottom: 2px
 }
 
-.rewardTile__24e2c {
+.rewardTile__1699b {
     margin-bottom: 8px;
     margin-top: 74px
 }
 
-.hiddenRewardTile__24e2c {
+.hiddenRewardTile__1699b {
     pointer-events: none;
     -webkit-user-select: none;
     -moz-user-select: none;
@@ -331,12 +316,12 @@
     z-index: -1
 }
 
-.questAcceptedContentHeading__24e2c {
+.questAcceptedContentHeading__1699b {
     align-items: center;
     display: flex
 }
 
-.questProgressRewardTile__24e2c {
+.questProgressRewardTile__1699b {
     border-radius: 4px;
     box-shadow: var(--shadow-high);
     display: block;
@@ -346,33 +331,33 @@
     width: 28px
 }
 
-.questAcceptedContentHeading__24e2c .questProgressRewardTile__24e2c {
+.questAcceptedContentHeading__1699b .questProgressRewardTile__1699b {
     height: 32px;
     width: 32px
 }
 
-.questAcceptedContentCopySubheading__24e2c {
+.questAcceptedContentCopySubheading__1699b {
     opacity: .7
 }
 
-.questAcceptedContent__24e2c .description__24e2c {
+.questAcceptedContent__1699b .description__1699b {
     margin-bottom: 2px;
     text-shadow: none
 }
 
-.description__24e2c a:hover {
+.description__1699b a:hover {
     opacity: .8;
     text-decoration: none
 }
 
-.promotedBadgeWrapper__24e2c {
+.promotedBadgeWrapper__1699b {
     flex: 0 0 auto;
     margin-inline-end: 4px;
     padding-inline-end: 8px;
     position: relative
 }
 
-.promotedBadge__24e2c {
+.promotedBadge__1699b {
     cursor: pointer;
     display: flex;
     flex: 1 0 auto;
@@ -382,11 +367,11 @@
     transition: opacity .125s
 }
 
-.promotedBadge__24e2c:hover {
+.promotedBadge__1699b:hover {
     opacity: 1
 }
 
-.promotedBadgeWrapper__24e2c:after {
+.promotedBadgeWrapper__1699b:after {
     background-color: var(--opacity-white-40);
     content: "";
     height: 12px;
@@ -397,13 +382,13 @@
     width: 1px
 }
 
-.promotedBadgeIcon__24e2c {
+.promotedBadgeIcon__1699b {
     flex: 0 0 auto;
     height: 12px;
     width: 12px
 }
 
-.postEnrollmentBackground__24e2c {
+.postEnrollmentBackground__1699b {
     background-color: var(--home-background);
     border-radius: 8px 8px 0 0;
     border-top: 2px solid var(--background-mod-subtle);
@@ -415,16 +400,16 @@
     width: 100%
 }
 
-.postEnrollmentBackgroundCollapsed__24e2c {
+.postEnrollmentBackgroundCollapsed__1699b {
     pointer-events: none;
     z-index: 3
 }
 
-.postEnrollmentBackgroundExpanded__24e2c {
+.postEnrollmentBackgroundExpanded__1699b {
     z-index: -1
 }
 
-.previewPlayButtonCont__24e2c {
+.previewPlayButtonCont__1699b {
     align-items: center;
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
@@ -441,17 +426,17 @@
     width: 44px
 }
 
-.previewPlayButton__24e2c {
+.previewPlayButton__1699b {
     cursor: pointer;
     height: 22px;
     width: 22px
 }
 
-.premiumOrbsGlow__24e2c {
+.premiumOrbsGlow__1699b {
     z-index: 2
 }
 
-.contentCollapsedBackgroundWrapper__24e2c {
+.contentCollapsedBackgroundWrapper__1699b {
     border-radius: var(--radius-sm) var(--radius-sm) 0 0;
     height: 50%;
     inset-inline-start: 0;
@@ -464,7 +449,7 @@
     z-index: 2
 }
 
-.contentCollapsedBackgroundWrapper__24e2c:after {
+.contentCollapsedBackgroundWrapper__1699b:after {
     background-color: var(--background-base-low);
     bottom: 0;
     content: "";
@@ -475,7 +460,7 @@
     top: 0
 }
 
-.contentCollapsedBackground__24e2c {
+.contentCollapsedBackground__1699b {
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: cover;
@@ -486,14 +471,14 @@
     top: -20px
 }
 
-.blur__24e2c {
+.blur__1699b {
     bottom: -50px;
     filter: blur(30px) brightness(.6) saturate(110%);
     inset-inline: -50px;
     top: -50px
 }
 
-.instructionRow__24e2c {
+.instructionRow__1699b {
     align-items: center;
     -moz-column-gap: 8px;
     column-gap: 8px;
@@ -501,13 +486,13 @@
     row-gap: 4px
 }
 
-.ctaButtons__24e2c,
-.instructionRow__24e2c {
+.ctaButtons__1699b,
+.instructionRow__1699b {
     display: flex;
     flex-direction: row
 }
 
-.ctaButtons__24e2c {
+.ctaButtons__1699b {
     align-items: end;
     gap: 8px
 }
@@ -597,4 +582,4 @@
     top: 0
 }
 
-/*# sourceMappingURL=69f6f68f101d2e89.css.map*/
+/*# sourceMappingURL=df60d73947db9e19.css.map*/

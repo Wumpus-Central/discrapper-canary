@@ -1,4 +1,4 @@
-(n.d(t, { IU: () => O, SP: () => C, ec: () => b, rh: () => N, ei: () => v }), n(938796));
+(n.d(t, { IU: () => R, SP: () => O, ec: () => M, rh: () => C, ei: () => b }), n(938796));
 var i = n(536637),
     r = n.n(i),
     a = n(721779),
@@ -39,35 +39,33 @@ n(763754);
 var m = n(652215);
 let g = new c.A({ id: "???", username: "???" });
 function S(e) {
+    return h.default.getUser(e.id) ?? new c.A(e);
+}
+function N(e) {
     return new _.go({
         ...e,
         timestamp: new Date(e.timestamp),
         editedTimestamp: null != e.edited_timestamp ? new Date(e.edited_timestamp) : null,
         attachments: e.attachments ?? [],
-        embeds: L(e),
+        embeds: y(e),
         components: (0, s.ZV)(e.components ?? []),
         codedLinks: m.MRS.NON_PARSED.has(e.type) ? [] : (0, a.Ay)(e.content),
     });
 }
-function N(e) {
+function C(e) {
     let t,
         n,
         { reactions: i, interactionData: r } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
-        a = S(e),
+        a = N(e),
         s = e.mentions?.map((e) => e.id) ?? [],
         o = e.mention_roles ?? [],
         d = e.mention_channels ?? [],
-        f = e.message_reference,
-        N =
-            null == e.author
-                ? g
-                : null != e.webhook_id
-                  ? new c.A(e.author)
-                  : (h.default.getUser(e.author.id) ?? new c.A(e.author)),
+        h = e.message_reference,
+        f = null == e.author ? g : null != e.webhook_id ? new c.A(e.author) : S(e.author),
         C = e?.gift_info,
         O = e.gifting_prompt,
-        L = null != e.interaction ? u.createFromServer(e.interaction) : null,
-        v = e.type === m.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
+        R = null != e.interaction ? u.createFromServer(e.interaction) : null,
+        y = e.type === m.lAJ.THREAD_STARTER_MESSAGE ? e.referenced_message?.author?.id : void 0,
         b = e.content;
     return (
         e.type === m.lAJ.PREMIUM_REFERRAL &&
@@ -78,15 +76,16 @@ function N(e) {
             ...e,
             ...null,
             ...a.toJS(),
-            author: N,
+            author: f,
+            actor: null != e.actor ? S(e.actor) : null,
             webhookId: e.webhook_id,
-            blocked: A.A.isBlockedForMessage(e) || (null != v && A.A.isBlocked(v)),
-            ignored: A.A.isIgnoredForMessage(e) || (null != v && A.A.isIgnored(v)),
+            blocked: A.A.isBlockedForMessage(e) || (null != y && A.A.isBlocked(y)),
+            ignored: A.A.isIgnoredForMessage(e) || (null != y && A.A.isIgnored(y)),
             mentionEveryone: e.mention_everyone,
             mentions: s,
             mentionRoles: o,
             mentionChannels: d,
-            messageReference: f,
+            messageReference: h,
             mentioned: (0, T.Uj)({
                 userId: E.default.getId(),
                 channelId: e.channel_id,
@@ -98,10 +97,10 @@ function N(e) {
             content: b,
             referralTrialOfferId: t,
             premiumGroupInviteId: n,
-            call: R(e.call, a.timestamp),
-            messageSnapshots: D(e),
-            reactions: y(i ?? e.reactions, e.poll),
-            interaction: L,
+            call: L(e.call, a.timestamp),
+            messageSnapshots: v(e),
+            reactions: D(i ?? e.reactions, e.poll),
+            interaction: R,
             interactionData: r ?? e.interaction_data,
             interactionMetadata: e.interaction_metadata,
             roleSubscriptionData: e.role_subscription_data,
@@ -115,29 +114,29 @@ function N(e) {
         })
     );
 }
-function C(e, t) {
+function O(e, t) {
     return null != t.edited_timestamp
         ? { ...t, reactions: e.reactions, interaction_data: e.interaction_data }
         : { ...e, ...t };
 }
-function O(e, t) {
-    if (null != t.edited_timestamp) return N(t, { reactions: e.reactions, interactionData: e.interactionData });
+function R(e, t) {
+    if (null != t.edited_timestamp) return C(t, { reactions: e.reactions, interactionData: e.interactionData });
     let n = e,
         i = !1;
     return (
-        null != t.call && (n = n.set("call", R(t.call, e.timestamp))),
+        null != t.call && (n = n.set("call", L(t.call, e.timestamp))),
         null != t.attachments && (n = n.set("attachments", t.attachments)),
         null != t.application && (n = n.set("application", t.application)),
         null != t.activity && (n = n.set("activity", t.activity)),
         null != t.content && "" !== t.content && (n = n.set("content", t.content)),
-        null != t.embeds && (n = n.set("embeds", L(t))),
-        null != t.message_snapshots && (n = n.set("messageSnapshots", D(t))),
+        null != t.embeds && (n = n.set("embeds", y(t))),
+        null != t.message_snapshots && (n = n.set("messageSnapshots", v(t))),
         t.pinned !== n.pinned && (n = n.set("pinned", t.pinned)),
         null != n.webhookId && null != t.author && (n = n.set("author", new c.A(t.author))),
         null != t.flags && t.flags !== n.flags && (n = n.set("flags", t.flags)),
         null != t.components && (n = n.set("components", (0, s.ZV)(t.components))),
         null != t.role_subscription_data && (n = n.set("roleSubscriptionData", t.role_subscription_data)),
-        null != t.reactions && (n = n.set("reactions", y(e.reactions ?? t.reactions))),
+        null != t.reactions && (n = n.set("reactions", D(e.reactions ?? t.reactions))),
         null != t.poll && (n = n.set("poll", l(t.poll))),
         null != t.mentions &&
             ((n = n.set(
@@ -151,7 +150,7 @@ function O(e, t) {
         n
     );
 }
-function R(e, t) {
+function L(e, t) {
     if (null != e) {
         let n = null != e.ended_timestamp ? r()(new Date(e.ended_timestamp)) : null,
             i = null != n ? r().duration(n.diff(t)) : null;
@@ -159,12 +158,12 @@ function R(e, t) {
     }
     return null;
 }
-function L(e) {
+function y(e) {
     if (null == e.embeds) return [];
     let t = e.embeds.map((t) => (0, f.fK)(e.channel_id, e.id, t));
     return (0, f.nh)(t);
 }
-function y(e, t) {
+function D(e, t) {
     return null == e && t?.results == null
         ? []
         : [
@@ -189,17 +188,17 @@ function y(e, t) {
               );
           });
 }
-function D(e) {
+function v(e) {
     return null == e.message_snapshots
         ? []
         : e.message_snapshots.map((e) => {
               let { message: t, moderator_report: n } = e;
-              return new _.vF({ message: S(t), moderator_report: n });
+              return new _.vF({ message: N(t), moderator_report: n });
           });
 }
-function v(e) {
+function b(e) {
     return 0 === (0, o.o6)(e).length || "" !== e.content;
 }
-function b(e) {
+function M(e) {
     return e.hasFlag(m.pr7.EPHEMERAL) && e.type !== m.lAJ.IN_GAME_MESSAGE_NUX;
 }

@@ -1,0 +1,46 @@
+.ctaButtons_cc03e1 {
+    align-items: end;
+    display: flex;
+    flex-direction: row;
+    gap: 8px
+}
+
+.cta_cc03e1 {
+    flex: 1;
+    margin-top: 12px
+}
+
+.copyIcon_cc03e1 {
+    margin-inline-start: 8px
+}
+
+.iconButtonLarge_cc03e1 {
+    align-items: center;
+    background-color: var(--interactive-background-hover);
+    display: flex;
+    flex: 1 0 0;
+    height: 32px;
+    justify-content: center;
+    padding: 8px
+}
+
+.iconButtonLarge_cc03e1:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.iconButton_cc03e1 {
+    background-color: var(--interactive-background-hover);
+    padding: 8px
+}
+
+.iconButton_cc03e1:hover {
+    background-color: var(--background-mod-subtle)
+}
+
+.iconButtonInner_cc03e1 {
+    align-items: center;
+    color: var(--interactive-text-default);
+    display: flex
+}
+
+/*# sourceMappingURL=df09875b5a7d2b2c.css.map*/
