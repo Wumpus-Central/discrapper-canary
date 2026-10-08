@@ -1041,8 +1041,6 @@
     padding-inline-end: var(--space-xl)
 }
 
-.accessoryMessageRow_a9077e:has(.userMessageButtonsShown_a9077e),
-.conjurMessage_a9077e:has(.userMessageButtonsShown_a9077e) .accessoryMessageRow_a9077e,
 .keyboard-mode .accessoryMessageRow_a9077e:focus-within,
 .keyboard-mode .conjurMessage_a9077e:focus-within .accessoryMessageRow_a9077e,
 .mouse-mode.full-motion .accessoryMessageRow_a9077e:hover,
@@ -1064,7 +1062,6 @@
     top: -16px
 }
 
-.userMessageButtonsShown_a9077e,
 .keyboard-mode .accessoryMessageRow_a9077e:focus-within .userMessageButtons_a9077e,
 .keyboard-mode .conjurMessage_a9077e:focus-within .userMessageButtons_a9077e,
 .mouse-mode .accessoryMessageRow_a9077e:hover .userMessageButtons_a9077e,
@@ -1168,4 +1165,4 @@
     display: inline
 }
 
-/*# sourceMappingURL=584996.00b810dd33e18d93.css.map*/
+/*# sourceMappingURL=584996.a0bac93cb748a876.css.map*/

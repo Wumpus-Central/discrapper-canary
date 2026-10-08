@@ -1,42 +1,43 @@
 (n.d(t, {
-    DM: () => eS,
-    r2: () => el,
-    $S: () => eD,
-    gm: () => eP,
-    n6: () => eB,
-    ss: () => e$,
-    cS: () => ev,
-    R7: () => ed,
-    aF: () => eW,
-    Lj: () => eu,
-    JI: () => ej,
-    Vm: () => ex,
-    oX: () => eI,
+    DM: () => ek,
+    tp: () => eo,
+    r2: () => ec,
+    gm: () => eU,
+    n6: () => eF,
+    ss: () => eL,
+    $S: () => eH,
+    cS: () => eJ,
+    R7: () => eu,
+    aF: () => eG,
+    Lj: () => ep,
+    JI: () => ex,
+    Vm: () => eW,
+    oX: () => eD,
     ms: () => eT,
-    TV: () => eo,
+    TV: () => ea,
     dv: () => es,
     Hc: () => er,
-    Bn: () => eF,
-    XZ: () => eh,
+    Bn: () => eK,
+    XZ: () => ef,
     oB: () => em,
-    ho: () => eL,
-    $D: () => eb,
+    ho: () => eM,
+    $D: () => eO,
     fu: () => ei,
     Ay: () => ez,
-    $C: () => ea,
-    vX: () => eR,
-    c9: () => eU,
-    ct: () => ep,
-    dz: () => eO,
-    PK: () => eq,
-    Qe: () => eJ,
-    TP: () => ec,
-    y_: () => eM,
-    xE: () => eA,
-    nU: () => eH,
-    P6: () => e_,
-    _m: () => ek,
-    Du: () => ew,
+    $C: () => el,
+    vX: () => eP,
+    c9: () => eA,
+    ct: () => eh,
+    dz: () => eN,
+    PK: () => eB,
+    Qe: () => eI,
+    TP: () => ed,
+    y_: () => ej,
+    xE: () => ev,
+    nU: () => e$,
+    P6: () => eg,
+    _m: () => eC,
+    Du: () => eS,
 }),
     n(321073),
     n(508300),
@@ -84,10 +85,10 @@ function y(e) {
 }
 var E = n(573083),
     w = n(855859),
-    m = n(371169),
-    S = n(260498),
-    T = n(385081),
-    k = n(89505);
+    S = n(371169),
+    m = n(260498),
+    k = n(385081),
+    T = n(89505);
 class C {
     socket = null;
     open(e) {
@@ -142,6 +143,10 @@ class C {
     sendInterrupt() {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
         this.socket.send(JSON.stringify({ type: "interrupt" }));
+    }
+    sendQueuedMessageAction(e, t) {
+        if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
+        this.socket.send(JSON.stringify({ type: `${e}_queued_message`, id: t }));
     }
     sendPublish() {
         if (null == this.socket || this.socket.readyState !== WebSocket.OPEN) throw Error("WebSocket not open");
@@ -225,8 +230,8 @@ let J = new Map(),
 function L(e, t) {
     i.h.dispatch({ type: "CONJURE_CHAT_CONN_STATE", projectId: e, connState: t });
 }
-let M = { location: "connection", code: T.xf.SEND_FAILED },
-    j = { location: "agent", code: T.xf.AGENT_ERROR };
+let M = { location: "connection", code: k.xf.SEND_FAILED },
+    j = { location: "agent", code: k.xf.AGENT_ERROR };
 function x(e, t) {
     let n = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : M;
     (i.h.dispatch({
@@ -234,7 +239,7 @@ function x(e, t) {
         projectId: e,
         step: { type: "step", kind: "terminal_error", message: t },
     }),
-        (0, T.Hy)(e, { ...n, message: t }));
+        (0, k.Hy)(e, { ...n, message: t }));
 }
 function W(e) {
     return `optimistic:${e}`;
@@ -268,7 +273,7 @@ function K(e, t) {
                 r.content,
                 r.nonce,
                 r.attachments?.map((e) => e.id),
-                S.Ay.getProject(e)?.name,
+                m.Ay.getProject(e)?.name,
                 { templateId: r.templateId, remix: r.remix, clarificationAnswers: r.clarificationAnswers },
             );
         } catch (t) {
@@ -286,14 +291,14 @@ async function V(e, t, n) {
         e.ws.sendUpstreamTicketAck(t, void 0, 403 === n ? "forbidden" : "failed");
     }
 }
-let z = {
-        build_error: { location: "build", code: T.xf.BUILD_FAILED },
-        healthcheck_failed: { location: "healthcheck", code: T.xf.HEALTHCHECK_FAILED },
-        error: { location: "agent", code: T.xf.AGENT_ERROR },
+let Q = {
+        build_error: { location: "build", code: k.xf.BUILD_FAILED },
+        healthcheck_failed: { location: "healthcheck", code: k.xf.HEALTHCHECK_FAILED },
+        error: { location: "agent", code: k.xf.AGENT_ERROR },
     },
-    Q = {
-        web: { location: "runtime_frame", code: T.xf.RUNTIME_FRAME_ERROR },
-        preview: { location: "runtime_worker", code: T.xf.RUNTIME_WORKER_ERROR },
+    z = {
+        web: { location: "runtime_frame", code: k.xf.RUNTIME_FRAME_ERROR },
+        preview: { location: "runtime_worker", code: k.xf.RUNTIME_WORKER_ERROR },
     },
     X = new Map();
 async function Y(e, t, n) {
@@ -302,12 +307,12 @@ async function Y(e, t, n) {
     (console.debug("[vibegrations] capture request received", { id: n.id, build: n.build, probe: n.probe }),
         !0 !== n.probe && n.spec?.mode === "widget" && (0, w.b)(e, "widget"));
     try {
-        r = await k.A.relayPreviewCapture(e, n.id, {
+        r = await T.A.relayPreviewCapture(e, n.id, {
             probe: n.probe,
             spec: n.spec,
             build: n.build,
             onAccepted: async () => (t.ws.sendCaptureAck(n.id, "accepted"), await g(e, n.id)),
-            resolveUploadUrl: () => eG(e),
+            resolveUploadUrl: () => eq(e),
         });
     } catch (e) {
         (console.error("[vibegrations] preview capture relay failed", e), (r = { status: "failed" }));
@@ -328,7 +333,7 @@ async function Z(e, t, n) {
         steps: n.request?.steps?.length,
     });
     try {
-        let s = await k.A.relayPreviewControl(
+        let s = await T.A.relayPreviewControl(
             e,
             n.id,
             n.request,
@@ -371,7 +376,7 @@ async function ee(e, t) {
                     )
                         return void n.pendingEvents.push(r);
                     if ("history_page" === r.type) {
-                        if (r.requested !== ef.get(t) || (ef.delete(t), !0 === r.failed)) return;
+                        if (r.requested !== e_.get(t) || (e_.delete(t), !0 === r.failed)) return;
                         i.h.dispatch({
                             type: "CONJURE_CHAT_HISTORY_PREPEND",
                             projectId: t,
@@ -390,7 +395,7 @@ async function ee(e, t) {
                             cursor: !0 === r.has_more ? (r.cursor ?? null) : null,
                             degraded: !0 === r.degraded,
                         }),
-                            ef.delete(t));
+                            e_.delete(t));
                         let o = n.pendingEvents;
                         for (let r of ((n.pendingEvents = []), L(t, "open"), o)) e(t, n, r);
                         let a = n.pendingModelSettings;
@@ -430,6 +435,8 @@ async function ee(e, t) {
                                     activeTurnId: r.active_turn_id,
                                     disposition: r.disposition,
                                 }));
+                    else if ("message_cancelled" === r.type)
+                        i.h.dispatch({ type: "CONJURE_CHAT_MESSAGE_CANCELLED", projectId: t, id: r.id });
                     else if ("publish_notice" === r.type)
                         i.h.dispatch({
                             type: "CONJURE_CHAT_PUBLISH_NOTICE",
@@ -446,7 +453,7 @@ async function ee(e, t) {
                         "app_channel_deleted" === r.type
                     )
                         (i.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: t, event: r }),
-                            "app_channel_deleted" !== r.type && (0, m.GO)(t));
+                            "app_channel_deleted" !== r.type && (0, S.GO)(t));
                     else if ("side_reply" === r.type)
                         i.h.dispatch({
                             type: "CONJURE_CHAT_SIDE_REPLY",
@@ -683,7 +690,7 @@ async function ee(e, t) {
                                     emoji: r.emoji,
                                 });
                         else if ("project_named" === r.kind) {
-                            let e = S.Ay.getProject(t);
+                            let e = m.Ay.getProject(t);
                             null != e &&
                                 null != r.name &&
                                 i.h.dispatch({
@@ -697,9 +704,9 @@ async function ee(e, t) {
                                 null != e && (clearTimeout(e.timeout), e.resolve(r)),
                                 !0 !== r.ok)
                             )
-                                (0, m.Is)(t, r.error ?? "publish_result not ok", !1);
+                                (0, S.Is)(t, r.error ?? "publish_result not ok", !1);
                             else {
-                                let e = S.Ay.getPublishStatus(t);
+                                let e = m.Ay.getPublishStatus(t);
                                 null != e &&
                                     i.h.dispatch({
                                         type: "CONJURE_PROJECT_PUBLISH_STATUS_UPDATE",
@@ -721,7 +728,7 @@ async function ee(e, t) {
                                 function o(e) {
                                     null != s && "" !== s && n.ws.sendAppIconAck(s, e);
                                 }
-                                (0, m.Ru)(t, e)
+                                (0, S.Ru)(t, e)
                                     .then((e) => {
                                         (e.ok || console.error("[vibegrations] icon from agent rejected", t, e.status),
                                             o(e.ok ? "applied" : "failed"));
@@ -732,7 +739,7 @@ async function ee(e, t) {
                             }
                         } else
                             "turn_result" === r.kind
-                                ? ((0, T.hV)(t, r),
+                                ? ((0, k.hV)(t, r),
                                   "deployed" === r.result &&
                                       i.h.dispatch({
                                           type: "CONJURE_CHAT_TURN_PATCH",
@@ -756,13 +763,13 @@ async function ee(e, t) {
                                       step: r,
                                   }),
                                   ("build_error" === r.kind || "healthcheck_failed" === r.kind || "error" === r.kind) &&
-                                      (0, T.Hy)(t, {
-                                          ...z[r.kind],
+                                      (0, k.Hy)(t, {
+                                          ...Q[r.kind],
                                           message: r.message,
                                           details: "build_error" === r.kind ? r.stderr_tail : void 0,
                                       }),
                                   "preview_ready" === r.kind &&
-                                      (0, m.tZ)(t, { isPreview: !0 }).catch((e) => {
+                                      (0, S.tZ)(t, { isPreview: !0 }).catch((e) => {
                                           console.error("[vibegrations] post-preview-publish refresh failed", t, e);
                                       }));
                     else
@@ -771,7 +778,7 @@ async function ee(e, t) {
                             : "control_preview" === r.type
                               ? Z(t, n, r).catch(() => {})
                               : "control_abort" === r.type
-                                ? k.A.abortPreviewControl(t)
+                                ? T.A.abortPreviewControl(t)
                                 : "control_claim" === r.type || "capture_claim" === r.type
                                   ? (function (e, t, n) {
                                         let r = d.get(t);
@@ -783,8 +790,8 @@ async function ee(e, t) {
                                     })(t, r.id, "capture_claim" === r.type ? r.upload_token : void 0)
                                   : "preview_operation" === r.type
                                     ? "begin" === r.phase
-                                        ? ((0, E.pF)(t, "tuning" === r.mode), k.A.beginPreviewOperation(t))
-                                        : ((0, E.pF)(t, !1), k.A.endPreviewOperation(t))
+                                        ? ((0, E.pF)(t, "tuning" === r.mode), T.A.beginPreviewOperation(t))
+                                        : ((0, E.pF)(t, !1), T.A.endPreviewOperation(t))
                                     : "browser_sessions" === r.type
                                       ? i.h.dispatch({
                                             type: "CONJURE_BROWSER_SESSIONS_SET",
@@ -890,7 +897,7 @@ async function ee(e, t) {
                                                           }),
                                                           (function (e, t) {
                                                               if (!0 === t.historical || "error" !== t.level) return;
-                                                              let n = null != t.source ? Q[t.source] : void 0;
+                                                              let n = null != t.source ? z[t.source] : void 0;
                                                               if (null == n) return;
                                                               let r = X.get(e);
                                                               null == r && ((r = new Set()), X.set(e, r));
@@ -898,7 +905,7 @@ async function ee(e, t) {
                                                               r.has(s) ||
                                                                   r.size >= 10 ||
                                                                   (r.add(s),
-                                                                  (0, T.Hy)(e, {
+                                                                  (0, k.Hy)(e, {
                                                                       location: n.location,
                                                                       code: n.code,
                                                                       message: t.message,
@@ -929,9 +936,9 @@ async function ee(e, t) {
             (t.pendingModelSettings = null),
             R(t, "Connection failed before the publish result arrived"),
             P(t, "Connection failed before the draft arrived"),
-            (0, T.Hy)(e, {
+            (0, k.Hy)(e, {
                 location: "connection",
-                code: T.xf.WS_OPEN_FAILED,
+                code: k.xf.WS_OPEN_FAILED,
                 message: n instanceof Error ? n.message : "ws open failed",
             }));
     }
@@ -973,8 +980,8 @@ function en(e) {
         n.ws.close(),
         U.delete(e),
         (t = e),
-        ef.delete(t),
-        k.A.releasePreviewControl(e),
+        e_.delete(t),
+        T.A.releasePreviewControl(e),
         y(e),
         L(e, "closed"),
         !0)
@@ -1012,7 +1019,7 @@ function es(e, t, n) {
             c.content,
             c.nonce,
             c.attachments?.map((e) => e.id),
-            S.Ay.getProject(e)?.name,
+            m.Ay.getProject(e)?.name,
             { templateId: c.templateId, remix: c.remix, clarificationAnswers: c.clarificationAnswers },
         );
     } catch (t) {
@@ -1029,7 +1036,16 @@ function ei(e) {
         console.error("[vibegrations] interrupt send failed", e);
     }
 }
-function eo(e) {
+function eo(e, t, n) {
+    try {
+        let r = U.get(e);
+        if (null == r) throw Error("Not connected");
+        r.ws.sendQueuedMessageAction(n, t);
+    } catch (e) {
+        console.error(`[vibegrations] ${n} queued message failed`, e);
+    }
+}
+function ea(e) {
     let t = !1;
     return new Promise((n, r) => {
         let s = U.get(e);
@@ -1048,13 +1064,13 @@ function eo(e) {
         }
     })
         .catch((t) => {
-            throw ((0, m.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
+            throw ((0, S.Is)(e, t instanceof Error ? t.message : "publish failed", !1), t);
         })
         .finally(() => {
             t && i.h.dispatch({ type: "CONJURE_PROJECT_PUBLISH_SETTLE", projectId: e });
         });
 }
-function ea(e) {
+function el(e) {
     return new Promise((t, n) => {
         let r = U.get(e);
         if (null == r) return void n(Error("Not connected"));
@@ -1073,16 +1089,16 @@ function ea(e) {
         }
     });
 }
-function el(e, t) {
+function ec(e, t) {
     let n = U.get(e);
     null == n
         ? console.error("[vibegrations] stageModelSettings with no connection \u2014 call ensureConnection first")
         : (n.pendingModelSettings = t);
 }
-function ec(e) {
+function ed(e) {
     U.get(e)?.ws.sendRefreshBrowserSessions();
 }
-function ed(e) {
+function eu(e) {
     i.h.dispatch({ type: "CONJURE_DEBUG_STATUS_REQUESTED", projectId: e });
     let t = U.get(e);
     try {
@@ -1093,7 +1109,7 @@ function ed(e) {
             i.h.dispatch({ type: "CONJURE_DEBUG_STATUS_SET", projectId: e, status: null, failed: !0 }));
     }
 }
-function eu(e) {
+function ep(e) {
     let t = arguments.length > 1 && void 0 !== arguments[1] && arguments[1];
     i.h.dispatch({ type: "CONJURE_DEBUG_FORCE_COMPACTION_REQUESTED", projectId: e });
     let n = U.get(e);
@@ -1111,7 +1127,7 @@ function eu(e) {
             }));
     }
 }
-function ep(e, t) {
+function eh(e, t) {
     let n = U.get(e);
     try {
         if (null == n) throw Error("Not connected");
@@ -1120,7 +1136,7 @@ function ep(e, t) {
         return (console.error("[vibegrations] live reload send failed", e), !1);
     }
 }
-function eh(e, t) {
+function ef(e, t) {
     let n = U.get(e);
     try {
         if (null == n) throw Error("Not connected");
@@ -1129,20 +1145,20 @@ function eh(e, t) {
         console.error("[vibegrations] model settings send failed", e);
     }
 }
-let ef = new Map();
-function e_(e) {
+let e_ = new Map();
+function eg(e) {
     let t = (0, l.bi)(e);
     if (null == t) return !1;
-    if (ef.get(e) === t) return !0;
+    if (e_.get(e) === t) return !0;
     let n = U.get(e);
-    return null != n && "open" === J.get(e) && (ef.set(e, t), n.ws.sendLoadHistory(t), !0);
+    return null != n && "open" === J.get(e) && (e_.set(e, t), n.ws.sendLoadHistory(t), !0);
 }
-let eg = new Map(),
-    ey = new Map();
-function eE(e) {
-    let t = eg.get(e);
+let ey = new Map(),
+    eE = new Map();
+function ew(e) {
+    let t = ey.get(e);
     if (null != t && t.expiresAt > Date.now()) return Promise.resolve(t.ticket);
-    let n = ey.get(e);
+    let n = eE.get(e);
     if (null != n) return n;
     let r = (0, b.d)(e)
         .then((t) => {
@@ -1155,14 +1171,14 @@ function eE(e) {
                     return null;
                 }
             })(t.ticket);
-            return (null != n && eg.set(e, { ticket: t, expiresAt: n - 3e4 }), t);
+            return (null != n && ey.set(e, { ticket: t, expiresAt: n - 3e4 }), t);
         })
         .finally(() => {
-            ey.delete(e);
+            eE.delete(e);
         });
-    return (ey.set(e, r), r);
+    return (eE.set(e, r), r);
 }
-async function ew(e) {
+async function eS(e) {
     let { ticket: t, baseUrl: n } = await (0, b.d)(e),
         r = new URLSearchParams({ ticket: t }),
         s = await fetch(`${n}/agent/source-history?${r}`);
@@ -1186,13 +1202,13 @@ async function em(e, t) {
     if (null == o.entry) throw Error("version restore returned no commit");
     return (
         !0 === o.live ||
-            (0, m.tZ)(e, { isPreview: !0 }).catch((t) => {
+            (0, S.tZ)(e, { isPreview: !0 }).catch((t) => {
                 console.error("[vibegrations] post-version-restore refresh failed", e, t);
             }),
         o.entry
     );
 }
-async function eS(e, t) {
+async function ek(e, t) {
     let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         s = new URLSearchParams({ ticket: n, environment: t }),
         i = await fetch(`${r}/agent/database/restore-points?${s}`);
@@ -1207,7 +1223,7 @@ async function eT(e, t) {
     if (!i.ok) throw Error(`restore window failed (${i.status})`);
     return await i.json();
 }
-async function ek(e, t, n) {
+async function eC(e, t, n) {
     let { ticket: r, baseUrl: s } = await (0, b.d)(e),
         i = new URLSearchParams({ ticket: r }),
         o = await fetch(`${s}/agent/database/restore-points?${i}`, {
@@ -1220,7 +1236,7 @@ async function ek(e, t, n) {
     if (null == a.restorePoint) throw Error("restore point create returned nothing");
     return a.restorePoint;
 }
-async function eC(e, t) {
+async function eb(e, t) {
     var n;
     let r = t.ok && 202 !== t.status ? "" : (await t.text()).trim(),
         s =
@@ -1232,24 +1248,24 @@ async function eC(e, t) {
                   : { ok: !1, code: 410 === n ? "expired" : "failed", message: r });
     if (s.ok)
         try {
-            (0, m.BD)(e);
+            (0, S.BD)(e);
         } catch (t) {
             console.error("[vibegrations] post-data-restore frame reload failed", e, t);
         }
     return s;
 }
-async function eb(e, t) {
+async function eO(e, t) {
     let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         s = new URLSearchParams({ ticket: n });
-    return eC(
+    return eb(
         e,
         await fetch(`${r}/agent/database/restore-points/${encodeURIComponent(t)}/restore?${s}`, { method: "POST" }),
     );
 }
-async function eO(e, t, n) {
+async function eN(e, t, n) {
     let { ticket: r, baseUrl: s } = await (0, b.d)(e),
         i = new URLSearchParams({ ticket: r });
-    return eC(
+    return eb(
         e,
         await fetch(`${s}/agent/database/restore?${i}`, {
             method: "POST",
@@ -1258,15 +1274,15 @@ async function eO(e, t, n) {
         }),
     );
 }
-function eN(e, t) {
+function eR(e, t) {
     return null == t ? `${e}/agent/attachments` : `${e}/agent/attachments/${encodeURIComponent(t)}`;
 }
-function eR(e, t) {
-    return eU(e, t, t.name, t.type);
+function eP(e, t) {
+    return eA(e, t, t.name, t.type);
 }
-async function eP(e, t) {
+async function eU(e, t) {
     let { ticket: n, baseUrl: r } = await (0, b.d)(e),
-        s = await fetch(`${eN(r, "from-url")}?${new URLSearchParams({ ticket: n })}`, {
+        s = await fetch(`${eR(r, "from-url")}?${new URLSearchParams({ ticket: n })}`, {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ url: t }),
@@ -1276,10 +1292,10 @@ async function eP(e, t) {
         throw Error(null != i && "error" in i && "string" == typeof i.error ? i.error : "");
     return i;
 }
-async function eU(e, t, n, r) {
+async function eA(e, t, n, r) {
     let { ticket: s, baseUrl: i } = await (0, b.d)(e),
         o = new URLSearchParams({ ticket: s, name: n }),
-        a = await fetch(`${eN(i)}?${o}`, {
+        a = await fetch(`${eR(i)}?${o}`, {
             method: "POST",
             headers: { "content-type": "" !== r ? r : "application/octet-stream" },
             body: t,
@@ -1287,26 +1303,26 @@ async function eU(e, t, n, r) {
     if (!a.ok) throw Error(`attachment upload failed (${a.status})`);
     return await a.json();
 }
-class eA extends Error {
+class ev extends Error {
     status;
     constructor(e) {
         (super(`export failed (${e})`), (this.status = e));
     }
 }
-async function ev(e, t) {
+async function eJ(e, t) {
     let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         s = new URLSearchParams({ ticket: n, name: t }),
         i = await fetch(`${r}/agent/export?${s}`);
-    if (!i.ok) throw new eA(i.status);
+    if (!i.ok) throw new ev(i.status);
     return await i.blob();
 }
-class eJ extends Error {
+class eI extends Error {
     status;
     constructor(e) {
         (super(`remix failed (${e})`), (this.status = e));
     }
 }
-async function eI(e, t) {
+async function eD(e, t) {
     let [n, r] = await Promise.all([(0, b.g)(e), (0, b.d)(t)]),
         s = new URLSearchParams({ ticket: n.ticket }),
         i = await fetch(`${n.baseUrl}/agent/fork?${s}`, {
@@ -1314,9 +1330,9 @@ async function eI(e, t) {
             headers: { "content-type": "application/json" },
             body: JSON.stringify({ dest_ticket: r.ticket }),
         });
-    if (!i.ok) throw new eJ(i.status);
+    if (!i.ok) throw new eI(i.status);
 }
-async function eD(e, t) {
+async function eH(e, t) {
     let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         s = new URLSearchParams({ ticket: n }),
         i = await fetch(`${r}/agent/secrets?${s}`, {
@@ -1326,7 +1342,7 @@ async function eD(e, t) {
         });
     if (!i.ok) throw Error(`secret submission failed (${i.status})`);
 }
-async function eH(e, t) {
+async function e$(e, t) {
     let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         s = new URLSearchParams({ ticket: n }),
         i = await fetch(`${r}/agent/settings?${s}`, {
@@ -1338,7 +1354,7 @@ async function eH(e, t) {
     let o = await i.json().catch(() => null);
     return { rebuildRequired: o?.rebuild_required === !0 };
 }
-function e$(e) {
+function eL(e) {
     (async function () {
         let { ticket: t, baseUrl: n } = await (0, b.d)(e),
             r = new URLSearchParams({ ticket: t }),
@@ -1348,10 +1364,10 @@ function e$(e) {
         console.warn("[vibegrations] settings rebuild request failed", e, t);
     });
 }
-function eL(e) {
+function eM(e) {
     return new Date(e.expiresAtMs).toLocaleTimeString(void 0, { hour: "numeric", minute: "2-digit" });
 }
-async function eM(e) {
+async function ej(e) {
     let { regenerate: t = !1 } = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         { ticket: n, baseUrl: r } = await (0, b.d)(e),
         s = new URLSearchParams({ ticket: n });
@@ -1362,7 +1378,7 @@ async function eM(e) {
         a = "number" == typeof o.expires_in ? Date.now() + 1e3 * o.expires_in : Date.parse(o.expires_at);
     return { url: o.url, expiresAtMs: a };
 }
-async function ej(e, t) {
+async function ex(e, t) {
     let n, r;
     try {
         let { ticket: r, baseUrl: s } = await (0, b.d)(e);
@@ -1390,42 +1406,42 @@ async function ej(e, t) {
         ? { type: "url", url: r }
         : { type: "error", error: "unavailable" };
 }
-async function ex(e, t) {
+async function eW(e, t) {
     let { ticket: n, baseUrl: r } = await (0, b.d)(e),
         s = new URLSearchParams({ ticket: n }),
-        i = await fetch(`${eN(r, t)}?${s}`, { method: "DELETE", keepalive: !0 });
+        i = await fetch(`${eR(r, t)}?${s}`, { method: "DELETE", keepalive: !0 });
     if (!i.ok) throw Error(`attachment cleanup failed (${i.status})`);
 }
-async function eW(e, t) {
-    let { ticket: n, baseUrl: r } = await eE(e),
+async function eG(e, t) {
+    let { ticket: n, baseUrl: r } = await ew(e),
         s = new URLSearchParams({ ticket: n });
     return `${r}/agent/screenshots/${encodeURIComponent(t)}?${s}`;
 }
-async function eG(e) {
-    let { ticket: t, baseUrl: n } = await eE(e);
+async function eq(e) {
+    let { ticket: t, baseUrl: n } = await ew(e);
     return `${n}/agent/screenshots?${new URLSearchParams({ ticket: t })}`;
 }
-async function eq(e, t) {
-    let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        { ticket: r, baseUrl: s } = await eE(e),
-        i = new URLSearchParams({ ticket: r });
-    return (n && i.set("download", "1"), `${eN(s, t)}?${i}`);
-}
 async function eB(e, t) {
+    let { download: n = !1 } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
+        { ticket: r, baseUrl: s } = await ew(e),
+        i = new URLSearchParams({ ticket: r });
+    return (n && i.set("download", "1"), `${eR(s, t)}?${i}`);
+}
+async function eF(e, t) {
     async function n() {
-        return fetch(await eq(e, t), { method: "HEAD" });
+        return fetch(await eB(e, t), { method: "HEAD" });
     }
     let r = await n();
-    if ((401 === r.status && (eg.delete(e), (r = await n())), 404 === r.status)) return !1;
+    if ((401 === r.status && (ey.delete(e), (r = await n())), 404 === r.status)) return !1;
     if (!r.ok) throw Error(`attachment availability check failed (${r.status})`);
     return !0;
 }
-function eF(e) {
+function eK(e) {
     en(e);
 }
-class eK extends s.Ay.Store {
+class eV extends s.Ay.Store {
     initialize() {
-        this.waitFor(a.default, l.Ay, S.Ay);
+        this.waitFor(a.default, l.Ay, m.Ay);
     }
     getConnState(e) {
         return J.get(e) ?? "connecting";
@@ -1440,11 +1456,11 @@ class eK extends s.Ay.Store {
         return $.get(e) ?? null;
     }
     getDeclaredConnections(e) {
-        return $.get(e)?.connections ?? eV;
+        return $.get(e)?.connections ?? eQ;
     }
 }
-let eV = [],
-    ez = new eK(i.h, {
+let eQ = [],
+    ez = new eV(i.h, {
         CONJURE_CHAT_CONN_STATE: function (e) {
             let { projectId: t, connState: n } = e;
             if (J.get(t) === n) return !1;
@@ -1469,12 +1485,12 @@ let eV = [],
         },
         CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
             let t = !1;
-            for (let e of Array.from(U.keys())) null == S.Ay.getProject(e) && en(e) && (t = !0);
+            for (let e of Array.from(U.keys())) null == m.Ay.getProject(e) && en(e) && (t = !0);
             if (!t) return !1;
         },
         LOGOUT: function () {
             if (0 === U.size) return !1;
             for (let e of Array.from(U.keys())) en(e);
-            (I.clear(), G.clear(), eg.clear());
+            (I.clear(), G.clear(), ey.clear());
         },
     });

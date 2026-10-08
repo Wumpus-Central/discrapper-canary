@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => es, B0: () => F, BL: () => O, bi: () => ee }), n(667532), n(321073));
+(n.d(t, { Ay: () => es, B0: () => G, BL: () => O, bi: () => ee }), n(667532), n(321073));
 var i = n(17928),
     l = n(73153),
     s = n(695515),
@@ -7,13 +7,13 @@ var i = n(17928),
     o = n(617617),
     d = n(803224),
     a = n(309010),
-    c = n(967198),
-    f = n(461213),
+    f = n(967198),
+    c = n(461213),
     _ = n(935208),
     p = n(260498),
     g = n(189714),
-    h = n(89505),
-    E = n(246338),
+    E = n(89505),
+    h = n(246338),
     C = n(652215),
     T = n(746080),
     A = n(261425),
@@ -41,8 +41,8 @@ let U = new Map(),
     q = new Set(),
     J = new Map(),
     y = 0,
-    P = [],
-    D = 0;
+    D = [],
+    P = 0;
 function b(e, t) {
     let {
             ts: n,
@@ -51,7 +51,7 @@ function b(e, t) {
             attachments: s,
             turnId: r,
         } = arguments.length > 2 && void 0 !== arguments[2] ? arguments[2] : {},
-        u = i ?? `m${++D}`;
+        u = i ?? `m${++P}`;
     return {
         id: u,
         render_id: u,
@@ -108,27 +108,27 @@ function M(e) {
         "awaiting_user" === n.kind && "secrets" === n.action && (t.awaitingUser = { action: n.action });
     return t;
 }
-function z(e, t) {
+function L(e, t) {
     return e.turn_id === t || e.id === `${j}${t}`;
 }
-function x(e, t) {
+function z(e, t) {
     if (null == t) return -1;
-    for (let n = e.length - 1; n >= 0; n--) if (z(e[n], t)) return n;
+    for (let n = e.length - 1; n >= 0; n--) if (L(e[n], t)) return n;
     return -1;
 }
-function F(e, t) {
+function G(e, t) {
     let n = e[t],
         i = n?.turn_id;
     if (null == n || "assistant" !== n.role || null == i || "" !== n.content || O(n)) return !1;
     for (let n = t - 1; n >= 0; n--) {
         let t = e[n];
         if ("user" === t.role) break;
-        if (z(t, i)) return O(t);
+        if (L(t, i)) return O(t);
     }
     return !1;
 }
-function G(e, t) {
-    let n = x(e, t);
+function x(e, t) {
+    let n = z(e, t);
     if (-1 !== n) return n;
     for (let t = e.length - 1; t >= 0; t--) {
         let n = e[t];
@@ -136,13 +136,13 @@ function G(e, t) {
     }
     return -1;
 }
-function L(e, t, n) {
+function F(e, t, n) {
     let i = U.get(e);
     if (null == i) return;
-    let l = G(i, t);
+    let l = x(i, t);
     if (-1 === l) return void U.set(e, [...i, n(b("assistant", "", null != t ? { turnId: t } : {}))]);
     let s = i[l],
-        r = null == t || null != s.turn_id || z(s, t) ? s : { ...s, turn_id: t };
+        r = null == t || null != s.turn_id || L(s, t) ? s : { ...s, turn_id: t };
     U.set(e, [...i.slice(0, l), n(r), ...i.slice(l + 1)]);
 }
 function V(e) {
@@ -166,26 +166,26 @@ function W(e, t, n, i, l) {
         J.set(e, l);
     }
     if (
-        h.A.areTurnNotificationsDisabled() ||
-        f.A.getStatus() === C.clD.DND ||
+        E.A.areTurnNotificationsDisabled() ||
+        c.A.getStatus() === C.clD.DND ||
         u.NO.getSetting() ||
         s.A.isCurrentUserInRestrictedHours() ||
         (0, g.j)(o.A.settings, e)
     )
         return;
     let _ = !d.A.isSoundDisabled("message1"),
-        A = c.A.getGuildId();
+        A = f.A.getGuildId();
     if (
         null != A &&
         p.Ay.getSelectedProjectId(A) === e &&
         a.Ay.getChannelId() === T.VV.CONJURE &&
-        h.A.isWindowFocused()
+        E.A.isWindowFocused()
     ) {
         _ && (0, r.Ak)(N, 0.4);
         return;
     }
-    let S = t ?? (0, E.oX)("VibegrationsChatStore");
-    h.A.presentTurnNotification({
+    let S = t ?? (0, h.oX)("VibegrationsChatStore");
+    E.A.presentTurnNotification({
         projectId: e,
         guildId: S,
         title: n,
@@ -247,10 +247,10 @@ function K(e) {
 }
 class Q extends i.Ay.Store {
     initialize() {
-        this.waitFor(s.A, d.A, a.Ay, c.A, f.A, o.A, p.Ay);
+        this.waitFor(s.A, d.A, a.Ay, f.A, c.A, o.A, p.Ay);
     }
     getMessages(e) {
-        return U.get(e) ?? P;
+        return U.get(e) ?? D;
     }
     hasPendingSettingsRequest(e) {
         let t = this.getMessages(e),
@@ -399,8 +399,8 @@ let es = new Q(l.h, {
             ((d.render_id = o[a].render_id), U.set(t, [...o.slice(0, a), d, ...o.slice(a + 1)]), Y(t));
             return;
         }
-        let c = [...o, d];
-        (B(c) || c.push(b("assistant", "")), U.set(t, c), Y(t));
+        let f = [...o, d];
+        (B(f) || f.push(b("assistant", "")), U.set(t, f), Y(t));
     },
     CONJURE_CHAT_MESSAGE_DISPOSITION: function (e) {
         let { projectId: t, id: n, activeTurnId: i, disposition: l } = e,
@@ -408,28 +408,37 @@ let es = new Q(l.h, {
         if (null == s) return !1;
         let r = s.findIndex((e) => e.id === n);
         if (-1 === r) return !1;
-        let u = s[r].disposition === l ? s : [...s.slice(0, r), { ...s[r], disposition: l }, ...s.slice(r + 1)],
-            o = "steered" === l ? x(u, i) : -1;
-        if ("steered" === l && -1 === o && null != i) {
-            let e = G(u, i);
+        let u = "steered" === l ? s.filter((e, t) => t <= r || e.in_reply_to !== n || "queued" !== e.acknowledges) : s,
+            o = u[r].disposition === l ? u : [...u.slice(0, r), { ...u[r], disposition: l }, ...u.slice(r + 1)],
+            d = "steered" === l ? z(o, i) : -1;
+        if ("steered" === l && -1 === d && null != i) {
+            let e = x(o, i);
             if (-1 !== e && e < r) {
-                let n = { ...u[e], turn_id: i };
+                let n = { ...o[e], turn_id: i };
                 if (0 === n.steps.length) {
-                    (U.set(t, [...u.slice(0, e), ...u.slice(e + 1, r + 1), n, ...u.slice(r + 1)]), Y(t));
+                    (U.set(t, [...o.slice(0, e), ...o.slice(e + 1, r + 1), n, ...o.slice(r + 1)]), Y(t));
                     return;
                 }
-                ((u = [...u.slice(0, e), n, ...u.slice(e + 1)]), (o = e));
+                ((o = [...o.slice(0, e), n, ...o.slice(e + 1)]), (d = e));
             }
         }
-        if (-1 === o || o > r) return u !== s && void U.set(t, u);
+        if (-1 === d || d > r) return o !== s && void U.set(t, o);
         (U.set(t, [
-            ...u.slice(0, o),
-            { ...u[o], continued: !0, finished_at: u[o].finished_at ?? Date.now() },
-            ...u.slice(o + 1, r + 1),
+            ...o.slice(0, d),
+            { ...o[d], continued: !0, finished_at: o[d].finished_at ?? Date.now() },
+            ...o.slice(d + 1, r + 1),
             b("assistant", "", { turnId: i }),
-            ...u.slice(r + 1),
+            ...o.slice(r + 1),
         ]),
             Y(t));
+    },
+    CONJURE_CHAT_MESSAGE_CANCELLED: function (e) {
+        let { projectId: t, id: n } = e,
+            i = U.get(t);
+        if (null == i) return !1;
+        let l = i.filter((e) => e.id !== n && e.in_reply_to !== n);
+        if (l.length === i.length) return !1;
+        U.set(t, l);
     },
     CONJURE_CHAT_MESSAGE_REACTION: function (e) {
         let { projectId: t, id: n, emoji: i } = e,
@@ -447,8 +456,8 @@ let es = new Q(l.h, {
         ((u.kind = "side_reply"), (u.in_reply_to = i));
         let o = r.findIndex((e) => e.id === i);
         if (-1 === o) return void U.set(t, [...r, u]);
-        let { disposition: d, ...a } = r[o];
-        (null != d && (u.acknowledges = d), U.set(t, [...r.slice(0, o), a, u, ...r.slice(o + 1)]));
+        let { disposition: d } = r[o];
+        (null != d && (u.acknowledges = d), U.set(t, [...r.slice(0, o + 1), u, ...r.slice(o + 1)]));
     },
     CONJURE_CHAT_PUBLISH_NOTICE: function (e) {
         let { projectId: t, id: n, content: i, timestamp: l, publishNotice: s } = e,
@@ -467,7 +476,7 @@ let es = new Q(l.h, {
     CONJURE_CHAT_STEP_APPEND: function (e) {
         let { projectId: t, step: n, turnId: i } = e;
         if ("preview_ready" === n.kind && null == i && !$(t)) return !1;
-        (L(t, i, (e) => {
+        (F(t, i, (e) => {
             var t;
             let i;
             return { ...e, steps: ((t = e.steps), ei((i = en(t)), n), i.steps) };
@@ -487,7 +496,7 @@ let es = new Q(l.h, {
                     return n;
                 }),
             ),
-            L(t, i, (e) => ({
+            F(t, i, (e) => ({
                 ...e,
                 finished: !0,
                 finished_at: Date.now(),
@@ -520,7 +529,7 @@ let es = new Q(l.h, {
             !(function (e, t, n) {
                 let i = U.get(e);
                 if (null == i) return !1;
-                let l = x(i, t);
+                let l = z(i, t);
                 return -1 !== l && (U.set(e, [...i.slice(0, l), n(i[l]), ...i.slice(l + 1)]), !0);
             })(t, n, (e) => ({ ...e, provisionalTodo: i }))
         )
@@ -530,7 +539,7 @@ let es = new Q(l.h, {
         let { projectId: t, turnId: n, sourceSha: i } = e,
             l = U.get(t);
         if (null == l) return !1;
-        let s = l.map((e) => ("assistant" === e.role && e.sourceSha !== i && z(e, n) ? { ...e, sourceSha: i } : e));
+        let s = l.map((e) => ("assistant" === e.role && e.sourceSha !== i && L(e, n) ? { ...e, sourceSha: i } : e));
         if (s.every((e, t) => e === l[t])) return !1;
         U.set(t, s);
     },
@@ -562,7 +571,7 @@ let es = new Q(l.h, {
     },
     CONJURE_CHAT_TURN_PATCH: function (e) {
         let { projectId: t, patch: n, turnId: i } = e;
-        (L(t, i, (e) => {
+        (F(t, i, (e) => {
             let t = { ...e, ...n };
             return ("todos" in n && (t.provisionalTodo = void 0), t);
         }),

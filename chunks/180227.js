@@ -1,7 +1,6 @@
 e.exports = {
     $4: "conjurMessage_a9077e",
     yE: "accessoryMessageRow_a9077e",
-    vg: "userMessageButtonsShown_a9077e",
     QE: "userMessageButtons_a9077e",
     Rn: "userMessageButtonsHeader_a9077e",
     x1: "messageAccessoriesUnderProse_a9077e",
