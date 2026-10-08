@@ -45,5 +45,9 @@ e.exports = {
     Nh: "barFailed_e2dd98",
     _0: "detail_e2dd98",
     TQ: "detailTitle_e2dd98",
+    vl: "detailBlock_e2dd98",
+    M1: "stats_e2dd98",
+    Fc: "statsBar_e2dd98",
+    DJ: "statsSegment_e2dd98",
     xZ: "mostTime_e2dd98",
 };

@@ -1250,7 +1250,7 @@
     display: grid;
     gap: var(--space-4) var(--space-16);
     grid-template-columns: max-content 1fr;
-    max-height: calc(var(--space-80)*2);
+    max-height: calc(var(--space-80)*3);
     overflow-wrap: anywhere;
     overflow-y: auto;
     width: 100%
@@ -1263,11 +1263,35 @@
     grid-column: 1/-1
 }
 
+.detailBlock_e2dd98 {
+    white-space: pre-wrap
+}
+
+.stats_e2dd98 {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+    padding-bottom: var(--space-12)
+}
+
+.statsBar_e2dd98 {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-xs);
+    display: flex;
+    height: var(--space-8);
+    overflow: hidden
+}
+
+.statsSegment_e2dd98 {
+    flex-basis: 0;
+    flex-grow: var(--custom-conjure-perf-trace-weight, 0);
+    min-width: 2px
+}
+
 .mostTime_e2dd98 {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-4) var(--space-16);
-    padding-top: var(--space-12)
+    gap: var(--space-4) var(--space-16)
 }
 
 .toolbar_bef5a8 {
@@ -1352,4 +1376,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=50f9d705475f1e60.css.map*/
+/*# sourceMappingURL=97163f445538c567.css.map*/
