@@ -31,6 +31,8 @@ e.exports = {
     jh: "durationAfter_e2dd98",
     EU: "durationBefore_e2dd98",
     Q: "categoryOp_e2dd98",
+    i3: "categoryModel_e2dd98",
+    dH: "categoryTool_e2dd98",
     kc: "categorySetup_e2dd98",
     Qx: "categoryWorktree_e2dd98",
     QH: "categorySandbox_e2dd98",

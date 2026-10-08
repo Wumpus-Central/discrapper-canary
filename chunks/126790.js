@@ -8214,9 +8214,19 @@ function or(e) {
         a = `${oa(n.getHours(), 2)}:${oa(n.getMinutes(), 2)}:${oa(n.getSeconds(), 2)}`;
     return "millis" === t ? `${a}.${oa(n.getMilliseconds(), 3)}` : a;
 }
-let oi = ["op", "setup", "worktree", "sandbox", "build", "platform", "other"],
+let oi = ["op", "model", "tool", "setup", "worktree", "sandbox", "build", "platform", "other"],
     os = {
         op: "op",
+        ws: "op",
+        turn: "op",
+        alarm: "op",
+        side_chat: "op",
+        session: "op",
+        step: "op",
+        model: "model",
+        version_note: "model",
+        tool: "tool",
+        mcp: "tool",
         sandbox: "sandbox",
         worktree: "worktree",
         build: "build",
@@ -8226,11 +8236,20 @@ let oi = ["op", "setup", "worktree", "sandbox", "build", "platform", "other"],
         publish: "platform",
         preview: "platform",
         healthcheck: "platform",
+        usage: "platform",
+        live: "platform",
+        replay: "platform",
         template: "setup",
         workspace: "setup",
         declarations: "setup",
         manifest: "setup",
         storage: "setup",
+        conversation: "setup",
+        runtime: "setup",
+        attachments: "setup",
+        upstream: "setup",
+        remix: "setup",
+        repo: "setup",
     };
 function oo(e) {
     return e.spans.find((e) => null == e.parent) ?? null;
@@ -8261,7 +8280,7 @@ function of(e) {
             .replace(/([a-z0-9])([A-Z])/g, "$1 $2")
             .replace(/_/g, " ")
             .toLowerCase(),
-        a = e.attrs?.cmd;
+        a = e.attrs?.cmd ?? e.attrs?.model;
     return {
         service: l,
         operation: "string" == typeof a && "" !== a ? `${n} \xb7 ${a}` : n,
@@ -8307,6 +8326,8 @@ function ov(e, t, l, n) {
 }
 let oj = {
     op: "Operation",
+    model: "Model",
+    tool: "Tool",
     setup: "Setup",
     worktree: "Git worktree",
     sandbox: "Sandbox",
@@ -8340,7 +8361,17 @@ var oA = l(738188),
     oI = l(20742);
 let oM = { collapsed: new Set(), revealed: new Set() };
 var oT = l(872892);
-let o_ = { op: oT.Q, setup: oT.kc, worktree: oT.Qx, sandbox: oT.QH, build: oT.F1, platform: oT.Op, other: oT.fv };
+let o_ = {
+    op: oT.Q,
+    model: oT.i3,
+    tool: oT.dH,
+    setup: oT.kc,
+    worktree: oT.Qx,
+    sandbox: oT.QH,
+    build: oT.F1,
+    platform: oT.Op,
+    other: oT.fv,
+};
 function oP(e) {
     return `conjure-perf-trace-${e}`;
 }
@@ -9036,7 +9067,7 @@ function oU(e) {
                   (0, r.jsx)(y.E, {
                       variant: "text-sm/normal",
                       color: "text-muted",
-                      children: "Recipe imports and remix builds record a timing trace here when they finish.",
+                      children: "Turns and project operations over 100ms record a timing trace here when they finish.",
                   }),
               ],
           })

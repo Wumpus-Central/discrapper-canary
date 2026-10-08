@@ -1197,6 +1197,14 @@
     background: var(--chart-categorical-1)
 }
 
+.categoryModel_e2dd98 {
+    background: var(--chart-categorical-6)
+}
+
+.categoryTool_e2dd98 {
+    background: var(--chart-categorical-8)
+}
+
 .categorySetup_e2dd98 {
     background: var(--chart-categorical-9)
 }
@@ -1344,4 +1352,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=f4e6cc58e454c934.css.map*/
+/*# sourceMappingURL=50f9d705475f1e60.css.map*/
