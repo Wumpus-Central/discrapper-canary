@@ -44,17 +44,14 @@ function y(e) {
                         (0, A.openModalLazy)(async () => {
                             let { default: e } = await Promise.all([
                                 n.e("861494"),
-                                n.e("463455"),
-                                n.e("470532"),
-                                n.e("466924"),
+                                n.e("771137"),
                                 n.e("553584"),
-                                n.e("504045"),
-                                n.e("706350"),
                                 n.e("955861"),
-                                n.e("149379"),
+                                n.e("161283"),
                                 n.e("669149"),
-                                n.e("234598"),
-                                n.e("786794"),
+                                n.e("149379"),
+                                n.e("901559"),
+                                n.e("30863"),
                                 n.e("393038"),
                             ]).then(n.bind(n, 432669));
                             return (n) => (0, i.jsx)(e, { guildId: t, gameInstance: a, ...n });

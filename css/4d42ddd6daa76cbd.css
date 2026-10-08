@@ -612,13 +612,6 @@
     margin: var(--space-16) 0
 }
 
-.cancelImage__968a4 {
-    background-image: url(/assets/14d412ef35277fe7.svg);
-    height: 128px;
-    margin: 0 auto var(--space-24);
-    width: 270px
-}
-
 html .invoiceCancelRow__968a4 {
     color: var(--text-feedback-critical)
 }
@@ -863,4 +856,4 @@ html .invoiceCancelRow__968a4 {
     padding-top: var(--space-8)
 }
 
-/*# sourceMappingURL=5763627b79769fd0.css.map*/
+/*# sourceMappingURL=4d42ddd6daa76cbd.css.map*/

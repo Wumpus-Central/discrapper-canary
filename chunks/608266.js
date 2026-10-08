@@ -95,15 +95,9 @@ function j(e) {
                                 ((e = E.id),
                                 (t = null == F ? "created" : "updated"),
                                 (0, v.openModalLazy)(async () => {
-                                    let { default: a } = await Promise.all([
-                                        l.e("414522"),
-                                        l.e("364827"),
-                                        l.e("784569"),
-                                        l.e("322455"),
-                                        l.e("200957"),
-                                        l.e("720969"),
-                                        l.e("413634"),
-                                    ]).then(l.bind(l, 483225));
+                                    let { default: a } = await Promise.all([l.e("720969"), l.e("413634")]).then(
+                                        l.bind(l, 483225),
+                                    );
                                     return (l) => (0, n.jsx)(a, { gameServerGame: q, guildId: e, status: t, ...l });
                                 })));
                     })

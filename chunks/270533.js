@@ -45,10 +45,10 @@ var G = n(990208),
     j = n(864310),
     v = n(363487),
     R = n(828162),
-    y = n(490557),
+    y = n(72377),
     T = n(565553),
-    L = n(168900),
-    M = n(285828);
+    M = n(168900),
+    L = n(285828);
 function U(e) {
     let { powerup: t, eventTargetRef: n, className: l } = e,
         s = { eventTargetRef: n, fit: "contain", className: l };
@@ -56,9 +56,9 @@ function U(e) {
         case a.ec:
             return (0, i.jsx)(T.t, { ...s });
         case a.RV:
-            return (0, i.jsx)(L.J, { ...s });
+            return (0, i.jsx)(M.J, { ...s });
         case a.YG:
-            return (0, i.jsx)(M.z, { ...s });
+            return (0, i.jsx)(L.z, { ...s });
         default:
             return null;
     }

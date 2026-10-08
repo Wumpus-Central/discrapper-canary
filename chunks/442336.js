@@ -767,7 +767,7 @@ function e1(e) {
           })
         : null;
 }
-var e9 = l(490557);
+var e9 = l(72377);
 function e3(e) {
     let { guildId: t, powerup: l, badge: s } = e,
         [r, o] = i.useState(void 0);
@@ -797,8 +797,8 @@ function e3(e) {
         ],
     });
 }
-var e5 = l(862482),
-    e2 = l(944304),
+var e2 = l(862482),
+    e5 = l(944304),
     e4 = l(975571),
     e7 = l(380572);
 function te(e) {
@@ -878,15 +878,15 @@ function tl(e) {
                         (0, n.jsx)(te, { count: o, type: U.yG.TOTAL }),
                     ],
                 }),
-                (0, n.jsx)(e2.A, {
+                (0, n.jsx)(e5.A, {
                     className: tt.S6,
                     guild: l,
                     analyticsLocation: {
                         page: ep.liQ.GUILD_POWERUPS_OVERVIEW,
                         section: ep.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                     },
-                    color: e5.XD.CUSTOM,
-                    size: e5.lO.LARGE,
+                    color: e2.XD.CUSTOM,
+                    size: e2.lO.LARGE,
                     icon: (0, n.jsx)(f._, {
                         className: tt.Ng,
                         size: "sm",
@@ -979,15 +979,15 @@ function tA(e) {
                               className: tg.$J,
                           }),
                       }),
-                  (0, n.jsx)(e2.A, {
+                  (0, n.jsx)(e5.A, {
                       guild: l,
                       className: tg.Qs,
                       analyticsLocation: {
                           page: ep.liQ.GUILD_POWERUPS_OVERVIEW,
                           section: ep.JJy.GUILD_POWERUPS_OVERVIEW_SIDEBAR,
                       },
-                      color: e5.XD.BRAND,
-                      size: e5.lO.MEDIUM,
+                      color: e2.XD.BRAND,
+                      size: e2.lO.MEDIUM,
                       fullWidth: !0,
                       icon: (0, n.jsx)(f._, { color: "currentColor", size: "sm" }),
                   }),

@@ -7,8 +7,7 @@ function i(e, n) {
         (0, l.openModalLazy)(async () => {
             let { default: u } = await Promise.all([
                 d.e("861494"),
-                d.e("463455"),
-                d.e("470532"),
+                d.e("771137"),
                 d.e("543039"),
                 d.e("266900"),
                 d.e("721690"),
@@ -18,12 +17,12 @@ function i(e, n) {
                 d.e("401590"),
                 d.e("588940"),
                 d.e("553584"),
-                d.e("504045"),
-                d.e("706350"),
+                d.e("161283"),
                 d.e("669149"),
-                d.e("234598"),
-                d.e("786794"),
-            ]).then(d.bind(d, 922545));
+                d.e("149379"),
+                d.e("901559"),
+                d.e("30863"),
+            ]).then(d.bind(d, 204690));
             return (d) => (0, t.jsx)(u, { guildId: e, powerup: n, ...d });
         });
     }, [e, n]);

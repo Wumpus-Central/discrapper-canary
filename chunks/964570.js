@@ -234,8 +234,8 @@ var eK = n(780964),
     e2 = n(625903),
     e3 = n(404778),
     e5 = n(689175),
-    e8 = n(821609),
-    e7 = n(532624),
+    e7 = n(821609),
+    e8 = n(532624),
     e6 = n(879631),
     e4 = n(350535),
     e9 = n(974293),
@@ -255,7 +255,7 @@ function ts(e) {
             },
             [a, t],
         );
-    return (0, i.jsx)(e8.$, {
+    return (0, i.jsx)(e7.$, {
         onClick: r,
         icon: eI.PencilIcon,
         variant: n,
@@ -326,7 +326,7 @@ function tx(e) {
         u = (0, d.bG)([eY.Ay], () => eY.Ay.getNewClipIds()),
         c = (0, e9.aJ)("ClipsPopout"),
         m = (0, d.bG)([eY.Ay], () => eY.Ay.getEnableAutoclipping()),
-        h = (0, d.bG)([e7.Ay], () => e7.Ay.getKeybindForAction(tp.hCu.SAVE_CLIP)),
+        h = (0, d.bG)([e8.Ay], () => e8.Ay.getKeybindForAction(tp.hCu.SAVE_CLIP)),
         f = l.useCallback(
             (e) => {
                 r?.(e);
@@ -437,7 +437,7 @@ function tx(e) {
                               v &&
                                   (0, i.jsx)("div", {
                                       className: tv.qr,
-                                      children: (0, i.jsx)(e8.$, {
+                                      children: (0, i.jsx)(e7.$, {
                                           onClick: () => t(),
                                           text: eV.intl.string(tA.default["55C2MH"]),
                                           variant: "secondary",
@@ -671,8 +671,8 @@ var tZ = n(397562),
     t2 = n(744753),
     t3 = n(559506),
     t5 = n(646986),
-    t8 = n(657538),
-    t7 = n(946356),
+    t7 = n(657538),
+    t8 = n(946356),
     t6 = n(465829),
     t4 = n(624479),
     t9 = n(206845),
@@ -1019,8 +1019,7 @@ function nq(e) {
                 n.e("932020"),
                 n.e("586662"),
                 n.e("758053"),
-                n.e("247471"),
-                n.e("889002"),
+                n.e("963398"),
                 n.e("709976"),
                 n.e("750955"),
                 n.e("953343"),
@@ -1108,7 +1107,6 @@ function nq(e) {
                 n.e("834552"),
                 n.e("863232"),
                 n.e("993103"),
-                n.e("364827"),
                 n.e("708757"),
                 n.e("517888"),
                 n.e("811133"),
@@ -1117,12 +1115,11 @@ function nq(e) {
                 n.e("907167"),
                 n.e("910471"),
                 n.e("11301"),
-                n.e("952372"),
-                n.e("784569"),
                 n.e("861060"),
+                n.e("364827"),
                 n.e("77333"),
                 n.e("264572"),
-                n.e("639161"),
+                n.e("217229"),
                 n.e("477175"),
                 n.e("960235"),
                 n.e("402368"),
@@ -1131,21 +1128,20 @@ function nq(e) {
                 n.e("221856"),
                 n.e("678157"),
                 n.e("147134"),
-                n.e("883846"),
                 n.e("996481"),
                 n.e("331988"),
+                n.e("10866"),
                 n.e("585968"),
                 n.e("40291"),
                 n.e("733115"),
                 n.e("397270"),
                 n.e("373122"),
                 n.e("724285"),
-                n.e("293159"),
                 n.e("755936"),
                 n.e("147662"),
-                n.e("209338"),
+                n.e("82344"),
                 n.e("749894"),
-                n.e("927875"),
+                n.e("171678"),
                 n.e("833703"),
                 n.e("256274"),
                 n.e("544571"),
@@ -1158,7 +1154,7 @@ function nq(e) {
                 n.e("958038"),
                 n.e("532039"),
                 n.e("719466"),
-                n.e("776458"),
+                n.e("111880"),
                 n.e("576909"),
                 n.e("27355"),
                 n.e("406174"),
@@ -1199,16 +1195,13 @@ function nq(e) {
                 n.e("729963"),
                 n.e("812042"),
                 n.e("538513"),
-                n.e("102328"),
                 n.e("147864"),
                 n.e("830938"),
-                n.e("895785"),
                 n.e("122990"),
-                n.e("113458"),
-                n.e("534874"),
+                n.e("276177"),
                 n.e("50097"),
                 n.e("518954"),
-                n.e("500520"),
+                n.e("319383"),
                 n.e("201050"),
                 n.e("93461"),
                 n.e("203930"),
@@ -1399,8 +1392,8 @@ function n5(e) {
         ? eV.intl.formatToPlainString(eV.t.ZxxHIO, { timeString: i })
         : eV.intl.formatToPlainString(eV.t["9OFjSe"], { dateString: n, timeString: i });
 }
-var n8 = n(996988),
-    n7 = n(207634),
+var n7 = n(996988),
+    n8 = n(207634),
     n6 = n(47453);
 function n4(e) {
     let { currentUser: t, onClose: n, setPopoutRef: a, highlightBadge: s, openedAt: o, className: c } = e,
@@ -1675,26 +1668,26 @@ function n4(e) {
                     }),
                     (0, i.jsxs)(e_.F, {
                         children: [
-                            (0, i.jsxs)(t7.A, {
+                            (0, i.jsxs)(t8.A, {
                                 className: eH.BK,
                                 user: t,
                                 displayProfile: p,
-                                themeType: n8.d.POPOUT,
+                                themeType: n7.d.POPOUT,
                                 children: [
                                     (0, i.jsxs)("div", {
                                         className: n6.wx,
                                         children: [
-                                            (0, i.jsx)(t1.A, { user: t, displayProfile: p, themeType: n8.d.POPOUT }),
+                                            (0, i.jsx)(t1.A, { user: t, displayProfile: p, themeType: n7.d.POPOUT }),
                                             (0, i.jsx)(tJ.A, {
                                                 user: t,
                                                 displayProfile: p,
-                                                avatarSize: n7.T[n8.d.POPOUT].avatarSize,
+                                                avatarSize: n8.T[n7.d.POPOUT].avatarSize,
                                                 onOpenProfile: f ? void 0 : K,
                                             }),
                                             (0, i.jsx)(nl.A, {
                                                 ref: D,
                                                 user: t,
-                                                themeType: n8.d.POPOUT,
+                                                themeType: n7.d.POPOUT,
                                                 onCloseProfile: n,
                                                 prompt: B,
                                             }),
@@ -1715,7 +1708,7 @@ function n4(e) {
                                                 pronouns: p?.pronouns,
                                                 trailing: (0, i.jsx)(t0.A, {
                                                     displayProfile: p,
-                                                    themeType: n8.d.POPOUT,
+                                                    themeType: n7.d.POPOUT,
                                                     onClose: n,
                                                     shouldOpenBadgeTooltip: null != s ? (e) => e === s : void 0,
                                                     shouldGlowTenureBadge: H.current,
@@ -1729,7 +1722,7 @@ function n4(e) {
                                                 onClose: n,
                                             }),
                                             Z &&
-                                                (0, i.jsx)(t8.A, {
+                                                (0, i.jsx)(t7.A, {
                                                     user: t,
                                                     widgets: p?.widgets,
                                                     onOpenUserProfileModal: K,
@@ -1743,7 +1736,7 @@ function n4(e) {
                                             (0, i.jsxs)("div", {
                                                 className: eH.T_,
                                                 children: [
-                                                    (0, i.jsx)(t7.A.Overlay, {
+                                                    (0, i.jsx)(t8.A.Overlay, {
                                                         className: eH.g0,
                                                         children: (0, i.jsxs)(ez, {
                                                             children: [
@@ -1871,7 +1864,7 @@ function n4(e) {
                                                             ],
                                                         }),
                                                     }),
-                                                    (0, i.jsx)(t7.A.Overlay, {
+                                                    (0, i.jsx)(t8.A.Overlay, {
                                                         className: eH.g0,
                                                         children: (0, i.jsxs)(ez, {
                                                             children: [
@@ -2365,8 +2358,8 @@ function i5(e) {
                 })
         : e.children;
 }
-var i8 = n(348858),
-    i7 = n(615675),
+var i7 = n(348858),
+    i8 = n(615675),
     i6 = n(900797),
     i4 = n(847374),
     i9 = n(617354),
@@ -2391,8 +2384,8 @@ function la(e) {
             Component: h,
             play: p,
             events: { onMouseEnter: g, onMouseLeave: A },
-        } = (0, i8.I)(m ? "undeafen" : "deafen"),
-        v = n ? i7.T : h,
+        } = (0, i7.I)(m ? "undeafen" : "deafen"),
+        v = n ? i8.T : h,
         { name: x } = (0, ex.x5)(ln.oh.AUDIO_OUTPUT),
         E = (0, i9.A)(t, n, a),
         { analyticsLocations: C } = (0, O.Ay)(M.A.AUDIO_OUTPUT_BUTTON),
@@ -2812,7 +2805,7 @@ function lk(e) {
         }, [r]),
         g = eA.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lw.A)("1791482680858", !0);
+        let e = (0, lw.A)("1791482842043", !0);
         t =
             null != e
                 ? eV.intl.formatToPlainString(eV.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
@@ -3050,8 +3043,7 @@ class lV extends l.PureComponent {
                     n.e("932020"),
                     n.e("586662"),
                     n.e("758053"),
-                    n.e("247471"),
-                    n.e("889002"),
+                    n.e("963398"),
                     n.e("709976"),
                     n.e("750955"),
                     n.e("953343"),
@@ -3373,7 +3365,6 @@ class lV extends l.PureComponent {
                     n.e("834552"),
                     n.e("863232"),
                     n.e("993103"),
-                    n.e("364827"),
                     n.e("708757"),
                     n.e("517888"),
                     n.e("811133"),
@@ -3382,12 +3373,11 @@ class lV extends l.PureComponent {
                     n.e("907167"),
                     n.e("910471"),
                     n.e("11301"),
-                    n.e("952372"),
-                    n.e("784569"),
                     n.e("861060"),
+                    n.e("364827"),
                     n.e("77333"),
                     n.e("264572"),
-                    n.e("639161"),
+                    n.e("217229"),
                     n.e("477175"),
                     n.e("960235"),
                     n.e("402368"),
@@ -3396,21 +3386,20 @@ class lV extends l.PureComponent {
                     n.e("221856"),
                     n.e("678157"),
                     n.e("147134"),
-                    n.e("883846"),
                     n.e("996481"),
                     n.e("331988"),
+                    n.e("10866"),
                     n.e("585968"),
                     n.e("40291"),
                     n.e("733115"),
                     n.e("397270"),
                     n.e("373122"),
                     n.e("724285"),
-                    n.e("293159"),
                     n.e("755936"),
                     n.e("147662"),
-                    n.e("209338"),
+                    n.e("82344"),
                     n.e("749894"),
-                    n.e("927875"),
+                    n.e("171678"),
                     n.e("833703"),
                     n.e("256274"),
                     n.e("544571"),
@@ -3423,7 +3412,7 @@ class lV extends l.PureComponent {
                     n.e("958038"),
                     n.e("532039"),
                     n.e("719466"),
-                    n.e("776458"),
+                    n.e("111880"),
                     n.e("576909"),
                     n.e("27355"),
                     n.e("406174"),
@@ -3576,21 +3565,18 @@ class lV extends l.PureComponent {
                     n.e("588070"),
                     n.e("692513"),
                     n.e("538513"),
-                    n.e("102328"),
                     n.e("147864"),
                     n.e("793438"),
                     n.e("830938"),
                     n.e("691671"),
-                    n.e("895785"),
                     n.e("122990"),
-                    n.e("113458"),
-                    n.e("534874"),
+                    n.e("276177"),
                     n.e("305557"),
                     n.e("36227"),
                     n.e("50097"),
                     n.e("518954"),
                     n.e("145811"),
-                    n.e("500520"),
+                    n.e("319383"),
                     n.e("201050"),
                     n.e("883952"),
                     n.e("229666"),
@@ -3711,7 +3697,6 @@ class lV extends l.PureComponent {
                     n.e("527462"),
                     n.e("501888"),
                     n.e("186546"),
-                    n.e("322455"),
                     n.e("960816"),
                     n.e("168031"),
                     n.e("271203"),
@@ -3794,7 +3779,7 @@ class lV extends l.PureComponent {
                     n.e("407755"),
                     n.e("993720"),
                     n.e("654658"),
-                    n.e("705371"),
+                    n.e("631453"),
                     n.e("233049"),
                     n.e("569443"),
                     n.e("439518"),

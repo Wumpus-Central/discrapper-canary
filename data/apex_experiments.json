@@ -768,25 +768,6 @@
     }
   },
   {
-    "name": "2026-02-boosting-refresh-modals",
-    "kind": "user",
-    "defaultConfig": {
-      "variant": "control"
-    },
-    "variations": {
-      "0": {
-        "enabled": false,
-        "variant": 0
-      },
-      "1": {
-        "variant": "refresh"
-      },
-      "2": {
-        "variant": "refresh_expressive_cta"
-      }
-    }
-  },
-  {
     "name": "2026-02-capture-target-window",
     "kind": "user",
     "defaultConfig": {
