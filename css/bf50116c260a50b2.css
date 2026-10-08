@@ -231,10 +231,25 @@
 }
 
 .name__79ea5 {
+    text-overflow: ellipsis
+}
+
+.name__79ea5,
+.subtitleText__79ea5 {
     min-width: 0;
     overflow: hidden;
-    text-overflow: ellipsis;
     white-space: nowrap
+}
+
+.subtitleText__79ea5 {
+    display: flex;
+    gap: var(--space-4)
+}
+
+.subtitleLabel__79ea5 {
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis
 }
 
 .dpad__06abd {
@@ -2554,4 +2569,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=f4ad830e9e6bea4f.css.map*/
+/*# sourceMappingURL=bf50116c260a50b2.css.map*/
