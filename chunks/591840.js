@@ -903,8 +903,8 @@ function t1(e) {
     let _ = (0, tm.A)(),
         { isQuestBarEmpty: E, hasLoadedQuestBar: A } = (0, b.c9)(),
         h = d && null != l && null != s && !_ && E && A,
-        [f, I] = (0, eI.kn)(h && null != l ? [l] : [], void 0, !0),
-        [p, T] = (0, eI.kn)(d ? [o] : [], void 0, !0),
+        [f, I] = (0, eI.kn)(h && null != l ? [l] : [], { bypassAutoDismiss: !0 }),
+        [p, T] = (0, eI.kn)(d ? [o] : [], { bypassAutoDismiss: !0 }),
         m = a.useCallback(() => {
             (I(ea.i.TAKE_ACTION), T(ea.i.TAKE_ACTION), n());
         }, [I, T, n]);
@@ -1629,7 +1629,7 @@ let nL = (0, N.A)(function (e) {
                         e
                     );
                 }, [n, t, I, d, i, c, o, T]),
-                [N, C] = (0, eI.kn)(S, ea.m.ACCOUNT_NAME_ZONE, !1),
+                [N, C] = (0, eI.kn)(S, { groupName: ea.m.ACCOUNT_NAME_ZONE }),
                 { shouldShow: O, markAsDismissed: R } = (function () {
                     let { disabled: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
                         t = (0, eO.A)("AutoclippingAccountPanelCoachmark"),

@@ -39,12 +39,12 @@ function v(e) {
         title: R.intl.string(R.t.y0cRrO),
     });
 }
-var g = s(323889),
-    y = s(305866),
+var y = s(323889),
+    g = s(305866),
     q = s(939249),
-    S = s(789645),
-    U = s(274670),
-    b = s(144779),
+    b = s(789645),
+    S = s(274670),
+    U = s(144779),
     Y = s(915089),
     V = s(104886),
     F = s(18437),
@@ -61,9 +61,9 @@ function M(e) {
         I = (0, Q.wW)(),
         C = i.useCallback(() => {
             ((0, V.E5)(V.kI.STEP_2_CLICKED_INTERNAL, "quest_activity_header_popout")
-                ? (0, U.r)({
-                      type: b.F.CLICK_INTERNAL,
-                      adCreativeType: g.p.QUEST,
+                ? (0, S.r)({
+                      type: U.F.CLICK_INTERNAL,
+                      adCreativeType: y.p.QUEST,
                       adCreativeId: t.id,
                       questContentCTA: h.Cy.LEARN_MORE,
                       surfaceId: E.uF.RUNNING_ACTIVITY,
@@ -80,7 +80,7 @@ function M(e) {
                 l(),
                 r());
         }, [t.id, d, I, l, r]);
-    return (0, n.jsxs)(y.l, {
+    return (0, n.jsxs)(g.l, {
         className: L.kL,
         "aria-labelledby": o,
         children: [
@@ -97,7 +97,7 @@ function M(e) {
                         className: L.b,
                         "aria-label": R.intl.string(R.t.cpT0Cq),
                         onClick: r,
-                        children: (0, n.jsx)(S.P, { size: "sm", color: "currentColor" }),
+                        children: (0, n.jsx)(b.P, { size: "sm", color: "currentColor" }),
                     }),
                 ],
             }),
@@ -149,13 +149,13 @@ function K(e) {
         [I, N] = i.useState(!1),
         A = i.useRef(null),
         x = i.useRef(null),
-        [j, f] = (0, C.kn)([l.M.QUEST_ACTIVITY_HEADER_INTRO], void 0, !0),
-        { completedRatio: g, completedRatioDisplay: y, percentComplete: q } = (0, _.O9)(t, !0),
-        S = i.useCallback(() => {
+        [j, f] = (0, C.kn)([l.M.QUEST_ACTIVITY_HEADER_INTRO], { bypassAutoDismiss: !0 }),
+        { completedRatio: y, completedRatioDisplay: g, percentComplete: q } = (0, _.O9)(t, !0),
+        b = i.useCallback(() => {
             "frame" === s.type && m.A.updateFrameLayoutMode({ frameId: s.frameId, layoutMode: O.y0.PIP });
         }, [s]),
-        U = t.userStatus?.enrolledAt != null,
-        b = i.useCallback(() => {
+        S = t.userStatus?.enrolledAt != null,
+        U = i.useCallback(() => {
             (0, T.Oy)(t.id, {
                 questContent: E.uF.QUEST_ACTIVITY_HEADER,
                 questContentCTA: h.Cy.ACCEPT_QUEST,
@@ -194,8 +194,8 @@ function K(e) {
                                     return (0, n.jsx)(M, {
                                         quest: t,
                                         questDescription: d,
-                                        completedRatio: g,
-                                        minimizeFrame: S,
+                                        completedRatio: y,
+                                        minimizeFrame: b,
                                         onClose: s,
                                     });
                                 },
@@ -224,7 +224,7 @@ function K(e) {
                             (0, n.jsxs)("div", {
                                 className: $.L$,
                                 children: [
-                                    (0, n.jsx)(c.E, { variant: "text-sm/semibold", color: "text-strong", children: y }),
+                                    (0, n.jsx)(c.E, { variant: "text-sm/semibold", color: "text-strong", children: g }),
                                     (0, n.jsxs)("div", {
                                         className: $.hr,
                                         children: [
@@ -242,7 +242,7 @@ function K(e) {
                                     }),
                                 ],
                             }),
-                            U
+                            S
                                 ? (0, n.jsx)(P.A, {
                                       quest: t,
                                       questContent: E.uF.QUEST_ACTIVITY_HEADER,
@@ -253,14 +253,14 @@ function K(e) {
                                       variant: "primary",
                                       text: R.intl.string(R.t.l7E81v),
                                       size: "sm",
-                                      onClick: b,
+                                      onClick: U,
                                   }),
                         ],
                     }),
                 ],
             }),
             null != j &&
-                U &&
+                S &&
                 (0, n.jsx)(v, {
                     onDismiss: function () {
                         return f(H.i.USER_DISMISS);

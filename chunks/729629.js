@@ -1483,7 +1483,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let tt = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eZ.A().log(
-    `[BUILD INFO] Release Channel: ${tt}, Build Number: 633258, Version Hash: ca88400ec9def4a32ddc2feea266f21e19ada65b`,
+    `[BUILD INFO] Release Channel: ${tt}, Build Number: 633267, Version Hash: db9d50a8e137587f731f45b5c38b2c855457c0f3`,
 ),
     k.A.setTags({ appContext: Y.QCW }),
     eC.A.initBasic(),
@@ -2430,7 +2430,7 @@ function iR() {
                     let { name: t } = e;
                     return t;
                 }),
-            iN.m.SIDEBAR,
+            { groupName: iN.m.SIDEBAR },
         );
     if (null == n) return null;
     let r = t[n];
@@ -3311,7 +3311,7 @@ function rs() {
         t = (0, eh.bG)([i8], () => i8.getOnlineFriendCount()),
         n = eT.useRef(null),
         i = (0, tI.A)(),
-        [r, a] = (0, im.kn)(i || e ? [] : [iz.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK], void 0, !0),
+        [r, a] = (0, im.kn)(i || e ? [] : [iz.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK], { bypassAutoDismiss: !0 }),
         s = r === iz.M.FRIENDS_SIDEBAR_APP_BAR_TOGGLE_COACHMARK,
         l = eT.useCallback(() => {
             (a(iN.i.TAKE_ACTION), iZ.A.setFriendsSidebarCollapsed(e), e && (0, i9.sk)());
@@ -3517,7 +3517,7 @@ var rP = n(912592),
 let rw = iz.M.FOR_LATER_POPOUT_COACHMARK;
 function rG(e) {
     let { location: t, targetElementRef: n } = e,
-        [i, r] = (0, im.kn)("inbox-button" === t ? [rw] : [], void 0);
+        [i, r] = (0, im.kn)("inbox-button" === t ? [rw] : []);
     return i !== rw
         ? null
         : (0, U.jsx)(re.A, {
@@ -23706,7 +23706,7 @@ var OP = n(945276),
     Ok = n(19886);
 function OF() {
     let e = (0, Ok.bu)(),
-        [t, n] = (0, im.kn)(null != e ? [iz.M.WHATS_NEW_TENURE_BADGE_REWARD] : [], void 0, !0);
+        [t, n] = (0, im.kn)(null != e ? [iz.M.WHATS_NEW_TENURE_BADGE_REWARD] : [], { bypassAutoDismiss: !0 });
     return t === iz.M.WHATS_NEW_TENURE_BADGE_REWARD
         ? [ty.intl.string(ty.t["jyYgZ+"]).toLocaleUpperCase(), n]
         : [null, n];
@@ -23856,7 +23856,7 @@ var Ra = n(964661),
 let Rd = function (e) {
     let { isSelected: t, discountOffer: n } = e,
         i = (0, Rl.N)(),
-        [r, a] = (0, im.kn)([iz.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE], void 0, !0);
+        [r, a] = (0, im.kn)([iz.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE], { bypassAutoDismiss: !0 });
     return (eT.useEffect(() => {
         t && r === iz.M.CHURN_DISCOUNT_PREMIUM_TAB_BADGE && a(iN.i.TAKE_ACTION);
     }, [t, a, r]),
@@ -24598,10 +24598,9 @@ function R6(e) {
             let e = (0, tZ.useHasAnyModalOpen)(),
                 t = (0, OO.Ay)((e) => e.postConnectionOpen),
                 { shouldShowBonusOrbsUX: n, multiplier: i } = (0, OB.lk)(sc.rE.NITRO_HOME_TAB),
-                [r, a] = (0, im.kn)(
-                    !e && n && t ? [iz.M.NITRO_TAB_QUEST_ORB_MULTIPLIER_TOOLTIP] : [],
-                    iN.m.PRIVATE_CHANNELS_LIST,
-                );
+                [r, a] = (0, im.kn)(!e && n && t ? [iz.M.NITRO_TAB_QUEST_ORB_MULTIPLIER_TOOLTIP] : [], {
+                    groupName: iN.m.PRIVATE_CHANNELS_LIST,
+                });
             return {
                 shouldShowBonusOrbsUX: r === iz.M.NITRO_TAB_QUEST_ORB_MULTIPLIER_TOOLTIP,
                 dismissOrbMultiplierTabTooltip: a,
@@ -24648,7 +24647,7 @@ function R6(e) {
         L && em.push(iz.M.MACARON_3P_POPOVER),
         y && em.push(iz.M.NITRO_FILE_UPLOAD_1GB_ANNOUNCEMENT),
         D && em.push(iz.M.NITRO_FILE_UPLOAD_1GB_UPSELL));
-    let [eg, eS] = (0, im.kn)(ei ? [] : em, void 0, !0),
+    let [eg, eS] = (0, im.kn)(ei ? [] : em, { bypassAutoDismiss: !0 }),
         eN = (0, O2.c)(lv.C.PREMIUM_TAB),
         eC = (0, O2.c)(lv.C.PREMIUM_TAB_TOOLTIP),
         eO = (0, O2.c)(lv.C.PREMIUM_TAB_POPOVER),
@@ -25139,11 +25138,10 @@ let Lh = Math.ceil(Math.sqrt(115200)),
                 let e = (0, tZ.useHasAnyModalOpen)(),
                     t = (0, eh.bG)([dL.A], () => dL.A.quests.size > 0),
                     n = (0, eh.bG)([eV.default], () => eV.default.getCurrentUser()),
-                    [i, r] = (0, im.kn)(
-                        !e && t && null != n ? [iz.M.QUEST_HOME_ENTRYPOINT_ONBOARDING] : [],
-                        iN.m.PRIVATE_CHANNELS_LIST,
-                        !0,
-                    ),
+                    [i, r] = (0, im.kn)(!e && t && null != n ? [iz.M.QUEST_HOME_ENTRYPOINT_ONBOARDING] : [], {
+                        groupName: iN.m.PRIVATE_CHANNELS_LIST,
+                        bypassAutoDismiss: !0,
+                    }),
                     a = eT.useCallback(() => {
                         r(iN.i.TAKE_ACTION);
                     }, [r]),
@@ -25614,7 +25612,7 @@ function Lx() {
         T = [];
     !I && (0, OO.Tc)() && A && T.push(iz.M.REFERRAL_PROGRAM_INCENTIVE_POPOVER);
     let [m] = (0, im.Cc)(I || !E || A ? null : iz.M.REFERRAL_PROGRAM_POPOVER_V2, p ?? "", void 0, !0),
-        [g, S] = (0, im.kn)(T, void 0, !0),
+        [g, S] = (0, im.kn)(T, { bypassAutoDismiss: !0 }),
         N = g === iz.M.REFERRAL_PROGRAM_INCENTIVE_POPOVER,
         C = !N && m === iz.M.REFERRAL_PROGRAM_POPOVER_V2,
         O = OM(),
@@ -25683,7 +25681,7 @@ let L$ = "isHideDevBanner",
                     className: tA()(LK.Wz, LK.mr),
                     children: [
                         (0, U.jsx)(LY, { className: LK.Kk }),
-                        ty.intl.format(ty.t.uyrfYF, { buildNumber: "633258" }),
+                        ty.intl.format(ty.t.uyrfYF, { buildNumber: "633267" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -53998,7 +53996,7 @@ let j9 = (0, id.Fe)({
             !o &&
             !a &&
             (i && !n && d.push(iz.M.CLIENT_THEMES_COACHMARK), r && n && d.push(iz.M.CUSTOM_THEME_COACHMARK));
-        let [c, u] = (0, im.kn)(d, iN.m.SIDEBAR, !0),
+        let [c, u] = (0, im.kn)(d, { groupName: iN.m.SIDEBAR, bypassAutoDismiss: !0 }),
             _ = c === iz.M.CLIENT_THEMES_COACHMARK,
             E = c === iz.M.CUSTOM_THEME_COACHMARK,
             A = a && n,

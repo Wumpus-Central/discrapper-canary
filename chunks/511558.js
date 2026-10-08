@@ -488,7 +488,7 @@ var eP = n(554146),
 function eW(e) {
     let { targetElementRef: t } = e,
         { allowReordering: n } = ed.q.useConfig({ location: "SoundboardFavoritesCoachmark" }),
-        [i, r] = (0, eD.kn)(n ? [eP.M.SOUNDBOARD_FAVORITES_ORDERING_COACHMARK] : [], void 0, !0);
+        [i, r] = (0, eD.kn)(n ? [eP.M.SOUNDBOARD_FAVORITES_ORDERING_COACHMARK] : [], { bypassAutoDismiss: !0 });
     return i !== eP.M.SOUNDBOARD_FAVORITES_ORDERING_COACHMARK
         ? null
         : (0, l.jsx)(eM.A, {

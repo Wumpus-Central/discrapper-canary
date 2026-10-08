@@ -39,8 +39,7 @@ let m = i.memo(function () {
         [f, I] = (0, o.kn)(e && t && !n && r && h ? [s.M.FAVORITES_SERVER_ONBOARDING_INTRO] : []),
         [p] = (0, o.kn)(
             f === s.M.FAVORITES_SERVER_ONBOARDING_INTRO ? [s.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM] : [],
-            void 0,
-            !0,
+            { bypassAutoDismiss: !0 },
         ),
         T = p === s.M.FAVORITES_SERVER_ONBOARDING_MENU_ITEM;
     return (

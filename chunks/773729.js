@@ -1652,8 +1652,7 @@ function n4(e) {
                 $ ? c.M.DISPLAY_NAME_STYLES_FLYWHEEL_EDIT_PROFILE_NEW_BADGE : void 0,
                 X ? c.M.USER_PROFILE_PERSONAL_WIDGET_COACHMARK : void 0,
             ].filter(nC.Vq),
-            void 0,
-            !0,
+            { groupName: void 0, bypassAutoDismiss: !0 },
         ),
         ei = l.useId();
     return (0, i.jsx)(O.f5, {
@@ -2244,7 +2243,10 @@ var i1 = n(764014);
 function i2(e) {
     let { targetElementRef: t } = e,
         n = (0, tw.A)((e) => e.isOpen),
-        [l, a] = (0, tj.kn)(n ? [] : [c.M.ORB_WALLET_PROFILE_INTRODUCTION_COACHMARK], nK.m.ACCOUNT_NAME_ZONE, !0);
+        [l, a] = (0, tj.kn)(n ? [] : [c.M.ORB_WALLET_PROFILE_INTRODUCTION_COACHMARK], {
+            groupName: nK.m.ACCOUNT_NAME_ZONE,
+            bypassAutoDismiss: !0,
+        });
     return l === c.M.ORB_WALLET_PROFILE_INTRODUCTION_COACHMARK
         ? (0, i.jsx)(nD.A, {
               targetElementRef: t,
@@ -2814,7 +2816,7 @@ function lw(e) {
         }, [r]),
         g = eA.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lO.A)("1791478316104", !0);
+        let e = (0, lO.A)("1791478815110", !0);
         t =
             null != e
                 ? eV.intl.formatToPlainString(eV.t.wve4kg, { webBuildOverride: a.id, builtAt: e })

@@ -15615,7 +15615,7 @@ let SI = (0, E.E2)(h.X.OVERLAY_VOICE_WIDGET_PREVIEW, {
     });
 var SN = n(54761);
 function SC() {
-    let [e, t] = (0, mT.kn)([eA.M.OVERLAY_OOP_SETTINGS_NUX], void 0, !0);
+    let [e, t] = (0, mT.kn)([eA.M.OVERLAY_OOP_SETTINGS_NUX], { bypassAutoDismiss: !0 });
     return ((0, K.Ay)(() => () => {
         t(mj.i.AUTO_DISMISS);
     }),

@@ -4,7 +4,7 @@ n(582128);
 var s = n(131607);
 function l(e) {
     let { contentTypes: t, children: n, groupName: l, bypassAutoDismiss: r } = e,
-        [a, o] = (0, s.kn)(t, l, r);
+        [a, o] = (0, s.kn)(t, { groupName: l, bypassAutoDismiss: r });
     return (0, i.jsx)(i.Fragment, { children: n({ visibleContent: a, markAsDismissed: o }) });
 }
 function r(e) {

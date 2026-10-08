@@ -497,7 +497,7 @@ function ey(e) {
 function ej(e, t) {
     let { ctaClickHandler: l, dismissibleContent: a, ctaObject: s } = t,
         { analyticsPage: i = m.A.ORB_WALLET, forceVisible: r, onClose: c, onCloseWallet: o } = e,
-        [h, u] = (0, eE.kn)([a], eN.m.ORB_WALLET, !0),
+        [h, u] = (0, eE.kn)([a], { groupName: eN.m.ORB_WALLET, bypassAutoDismiss: !0 }),
         d = n.useCallback(() => {
             ((0, L.Y)({ pageType: i, sectionType: m.A.ORB_WALLET_PRIMARY_CARD, ctaObject: s }),
                 l(),

@@ -82,7 +82,7 @@ var $ = n(554146),
     es = n(831931);
 function el(e) {
     let { locked: t } = e,
-        [n, s] = (0, en.kn)(t ? [] : [$.M.OVERLAY_OOP_WELCOME_BACKGROUND_NUX], void 0, !0);
+        [n, s] = (0, en.kn)(t ? [] : [$.M.OVERLAY_OOP_WELCOME_BACKGROUND_NUX], { bypassAutoDismiss: !0 });
     return (i.useEffect(() => {
         if (!t && n === $.M.OVERLAY_OOP_WELCOME_BACKGROUND_NUX)
             return () => {

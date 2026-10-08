@@ -1485,7 +1485,7 @@ function n7(e) {
                           .map((e) => e.dismissibleContentType),
             [A, h, C],
         ),
-        [N, p] = (0, Z.kn)(_, er.m.CHANNEL_NOTICES),
+        [N, p] = (0, Z.kn)(_, { groupName: er.m.CHANNEL_NOTICES }),
         S = g ?? N,
         T = null != g ? I : p,
         M = l.useCallback(
@@ -2568,7 +2568,7 @@ function io(e) {
     (function (e, t) {
         let { isNuxOpen: n, openNux: i } = t,
             s = (0, eT.Kb)(e, "GuildThemeNuxTrigger"),
-            [r, a] = (0, Z.kn)(null != s ? [o.M.GUILD_THEME_NUX] : [], er.m.GUILD_THEME_NUX),
+            [r, a] = (0, Z.kn)(null != s ? [o.M.GUILD_THEME_NUX] : [], { groupName: er.m.GUILD_THEME_NUX }),
             d = r === o.M.GUILD_THEME_NUX,
             u = l.useRef(!1);
         (l.useEffect(() => {
@@ -2672,7 +2672,7 @@ function io(e) {
                 markAsDismissed: l,
             };
         })(e9 ? null : L),
-        [te, tt] = (0, Z.kn)(e9 ? [] : e2, er.m.GUILD_HEADER_TOOLTIPS),
+        [te, tt] = (0, Z.kn)(e9 ? [] : e2, { groupName: er.m.GUILD_HEADER_TOOLTIPS }),
         [tn, ti] = (0, eD.vB)(e$ && !1 === eQ && !(0, J.ai)(L) && !e9, er.m.GUILD_HEADER_TOOLTIPS),
         [ts, tl] = (0, Z.D8)(
             e6 && !e9 ? o.M.BOOST_TO_UNLOCK_COACHMARK : null,

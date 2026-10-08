@@ -295,7 +295,7 @@ var ex = n(43105),
 function ej(e) {
     let { guild: t, selected: i } = e,
         l = (0, eS.A)(),
-        [a, o] = (0, $.kn)(l ? [] : [W.M.GUILD_SPACE_COACHMARK], void 0, !0),
+        [a, o] = (0, $.kn)(l ? [] : [W.M.GUILD_SPACE_COACHMARK], { bypassAutoDismiss: !0 }),
         d = a === W.M.GUILD_SPACE_COACHMARK,
         c = r.useRef(null),
         u = (0, eI.mN)(t),
@@ -5453,7 +5453,7 @@ function rm(e) {
                 G = (0, tb.C$)(e.id, "useGuildActionRows"),
                 j = e.features.has(w.GuildFeatures.GAME_SERVERS),
                 v = (0, tG.N)("useGuildActionRows"),
-                [R] = (0, $.kn)(G && v && !j ? [W.M.EMPTY_GAME_SERVER_TAB] : [], void 0, !0);
+                [R] = (0, $.kn)(G && v && !j ? [W.M.EMPTY_GAME_SERVER_TAB] : [], { bypassAutoDismiss: !0 });
             return (
                 x && E.push(tH.n.GUILD_HUB_HEADER_OPTIONS),
                 A && f

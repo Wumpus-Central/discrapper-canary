@@ -1394,7 +1394,10 @@ function e6(e) {
         let a = (0, z.useHasModalOpen)(e1.J),
             u = (0, i.bG)([e0.A], () => e0.A.getGuildId()),
             s = (0, eQ.A)(),
-            [c, d] = (0, eZ.kn)(t && u === e && !s ? [eJ.M.GUILD_SPACE_NUX_MODAL] : [], e2.m.GUILD_SPACE_NUX, !0),
+            [c, d] = (0, eZ.kn)(t && u === e && !s ? [eJ.M.GUILD_SPACE_NUX_MODAL] : [], {
+                groupName: e2.m.GUILD_SPACE_NUX,
+                bypassAutoDismiss: !0,
+            }),
             o = r.useRef(!1),
             f = c === eJ.M.GUILD_SPACE_NUX_MODAL;
         (r.useEffect(() => {

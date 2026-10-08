@@ -18,8 +18,9 @@ function d(e, t) {
         [d, t, e, i],
     );
 }
-function c(e, t) {
-    let n = arguments.length > 2 && void 0 !== arguments[2] && arguments[2],
+function c(e) {
+    let { groupName: t, bypassAutoDismiss: n = !1 } =
+            arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : {},
         [r, a] = (0, i.DP)(e, t);
     return (d(r, a, n), [r, a]);
 }
