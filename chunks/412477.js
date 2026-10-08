@@ -1,15 +1,15 @@
 n.d(t, { g: () => u });
 var i = n(477900),
-    s = n(582128),
-    r = n(503698),
-    l = n.n(r),
+    r = n(582128),
+    s = n(503698),
+    l = n.n(s),
     a = n(866665),
     o = n(661531),
     d = n(58367);
-let u = s.memo(function (e) {
-    let { emptyText: t, icon: n, absolute: s = !1 } = e;
+let u = r.memo(function (e) {
+    let { emptyText: t, icon: n, absolute: r = !1 } = e;
     return (0, i.jsx)("div", {
-        className: l()(d.TP, s && d.ys),
+        className: l()(d.TP, r && d.ys),
         children: (0, i.jsx)(a.m, {
             text: t,
             children: (0, i.jsx)("div", {

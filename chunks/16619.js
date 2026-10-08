@@ -1,4 +1,4 @@
-(n.d(t, { nM: () => _, qh: () => y, rX: () => N, z9: () => S }), n(321073));
+(n.d(t, { nM: () => _, qh: () => y, rX: () => S, z9: () => N }), n(321073));
 var l = n(582128),
     a = n(17928),
     i = n(587895),
@@ -12,8 +12,8 @@ var l = n(582128),
     f = n(793480),
     h = n(246338),
     g = n(434279),
-    x = n(260498),
-    p = n(426035),
+    p = n(260498),
+    x = n(426035),
     k = n(261425),
     v = n(660183);
 function j(e, t) {
@@ -57,7 +57,7 @@ function _(e) {
 function y(e) {
     let [t, n] = l.useState(0),
         { entries: d, nextExpiry: c } = (0, a.bG)(
-            [x.Ay, m.Ay, o.A, u.Ay, s.A, i.A, r.Bt],
+            [p.Ay, m.Ay, o.A, u.Ay, s.A, i.A, r.Bt],
             () =>
                 (function (e) {
                     let t = Date.now(),
@@ -91,7 +91,7 @@ function y(e) {
                             guildId: n,
                             guild: c,
                             guildName: c?.name ?? null,
-                            notInServer: "not_in_server" === (0, p.kF)(e),
+                            notInServer: "not_in_server" === (0, x.kF)(e),
                             activity: d,
                             sortTime: (function (e, t) {
                                 if (null != t) return t;
@@ -101,10 +101,10 @@ function y(e) {
                             })(e, u),
                         });
                     }
-                    for (let e of x.Ay.getOwnedProjects()) s(e);
+                    for (let e of p.Ay.getOwnedProjects()) s(e);
                     for (let e of Object.values(o.A.getGuilds()))
-                        if (x.Ay.hasFetchedGuildProjects(e.id) && l(e.id))
-                            for (let t of x.Ay.getSharedProjects(e.id)) s(t);
+                        if (p.Ay.hasFetchedGuildProjects(e.id) && l(e.id))
+                            for (let t of p.Ay.getSharedProjects(e.id)) s(t);
                     return { entries: (0, g.Ng)(i), nextExpiry: r };
                 })(e),
             [e, t],
@@ -119,7 +119,7 @@ function y(e) {
         d
     );
 }
-function S(e) {
+function N(e) {
     return (0, a.bG)(
         [o.A, r.Bt, d.A],
         () =>
@@ -130,7 +130,7 @@ function S(e) {
         b,
     );
 }
-function N(e) {
+function S(e) {
     return (0, a.bG)(
         [o.A, c.A, r.Bt],
         () => {

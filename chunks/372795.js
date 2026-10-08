@@ -14,13 +14,13 @@ function u(e) {
             fps: u,
             interactive: c = !1,
             paused: d = !1,
-            drawWidth: m,
-            className: f,
+            drawWidth: f,
+            className: m,
             "aria-label": h,
             onStateChange: g,
         } = e,
-        x = a.useRef(null),
         p = a.useRef(null),
+        x = a.useRef(null),
         v = a.useRef(null),
         [j, b] = a.useState(!1),
         y = (0, r.A)(),
@@ -28,12 +28,12 @@ function u(e) {
             async (e) => {
                 let n = await createImageBitmap(new Blob([e.jpeg], { type: "image/jpeg" }));
                 try {
-                    let a = x.current,
+                    let a = p.current,
                         r = a?.getContext("2d");
                     if (null == a || null == r || !(0, i.j_)(t, l, e)) return;
                     ((a.width !== n.width || a.height !== n.height) && ((a.width = n.width), (a.height = n.height)),
                         r.drawImage(n, 0, 0),
-                        (p.current = e),
+                        (x.current = e),
                         b(!0));
                 } finally {
                     n.close();
@@ -42,21 +42,21 @@ function u(e) {
             [t, l],
         ),
         w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-        N = null == m ? 0 : Math.round(m * Math.min(w, 2)),
+        N = null == f ? 0 : Math.round(f * Math.min(w, 2)),
         A = (0, i.KK)(t, l, { fps: u, onFrame: k, enabled: !d && y, width: N }),
         S = (0, i.AV)(t, l),
         C = a.useRef(S);
     (a.useEffect(() => {
         if (C.current === S) return;
-        ((C.current = S), (p.current = null), b(!1));
-        let e = x.current;
+        ((C.current = S), (x.current = null), b(!1));
+        let e = p.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
     }, [S]),
         a.useEffect(() => {
             g?.(A, j);
         }, [A, j, g]),
         a.useEffect(() => {
-            c && x.current?.focus();
+            c && p.current?.focus();
         }, [c]));
     let E = a.useRef(new Map());
     function I(e) {
@@ -65,8 +65,8 @@ function u(e) {
             n = Math.min(l.width / t.width, l.height / t.height),
             a = l.left + (l.width - t.width * n) / 2,
             r = l.top + (l.height - t.height * n) / 2,
-            i = p.current?.deviceWidth ?? t.width,
-            s = p.current?.deviceHeight ?? t.height;
+            i = x.current?.deviceWidth ?? t.width,
+            s = x.current?.deviceHeight ?? t.height;
         return {
             x: Math.round(((e.clientX - a) / (t.width * n)) * i),
             y: Math.round(((e.clientY - r) / (t.height * n)) * s),
@@ -116,8 +116,8 @@ function u(e) {
         };
     }
     return (0, n.jsx)("canvas", {
-        ref: x,
-        className: f,
+        ref: p,
+        className: m,
         role: c ? "application" : "img",
         "aria-label": h,
         tabIndex: c ? 0 : -1,

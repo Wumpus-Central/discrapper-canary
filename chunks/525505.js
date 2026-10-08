@@ -1,4 +1,4 @@
-n.d(t, { A: () => u, u: () => o });
+n.d(t, { A: () => c, u: () => o });
 var i = n(17928),
     r = n(280450),
     l = n(487329),
@@ -19,6 +19,6 @@ function o(e, t) {
             if (n.mediaContext === e && n.userId === t) return n;
     });
 }
-function u(e, t) {
+function c(e, t) {
     return o(e, t)?.type;
 }

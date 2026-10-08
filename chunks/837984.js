@@ -77,22 +77,22 @@ function p() {
                     y = Math.min(1, Math.max(0, y + ((P ? 1 : -1) * a) / 260));
                     let M = n.getBoundingClientRect(),
                         k = M.width > 0 ? M.width / p : 1,
-                        I = r.getBoundingClientRect(),
-                        E = (I.left - M.left) / k,
-                        N = (1 - Math.min(1, Math.abs(E + I.width / k / 2 - u) / 16)) * y;
+                        S = r.getBoundingClientRect(),
+                        I = (S.left - M.left) / k,
+                        N = (1 - Math.min(1, Math.abs(I + S.width / k / 2 - u) / 16)) * y;
                     if (N < 0.01) {
                         (x && l.clearRect(0, 0, p, h), (x = !1));
                         return;
                     }
                     (x || (A = t), (x = !0), l.clearRect(0, 0, p, h));
-                    let S = E - 1 - (1 - N) * 16,
+                    let E = I - 1 - (1 - N) * 16,
                         _ = (t - C) / 1e3,
-                        R = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (t - A) / 1500))) ** 3),
-                        O = Math.ceil(S / m);
+                        O = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (t - A) / 1500))) ** 3),
+                        R = Math.ceil(E / m);
                     l.fillStyle = i;
                     for (let e = 0; e < 3; e++) {
                         let t = 72 * (0.825 + 0.35 * f(e, 11)),
-                            n = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(_ * c * 0.13 + f(e, 29) * c))) * R,
+                            n = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(_ * c * 0.13 + f(e, 29) * c))) * O,
                             i = 0;
                         for (let t of d) {
                             let n = (e * t.stagger + 0.07 * f(e, t.salt)) * c;
@@ -103,11 +103,11 @@ function p() {
                             u = 1 + e * m + g / 2,
                             o = g / 2 + 3,
                             p = Math.abs(u - h / 2) < o;
-                        for (let t = 0; t < O; t++) {
+                        for (let t = 0; t < R; t++) {
                             let i,
-                                d = S - (t * m + g / 2);
+                                d = E - (t * m + g / 2);
                             if (d < 0) break;
-                            let c = (S - d) / n;
+                            let c = (E - d) / n;
                             if (c >= 1) break;
                             let h = Math.min(6, Math.floor(7 * (1 - c ** a)));
                             ((i =

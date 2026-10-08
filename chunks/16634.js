@@ -1,4 +1,4 @@
-n.d(t, { A: () => w });
+n.d(t, { A: () => T });
 var l = n(477900),
     a = n(582128),
     i = n(503698),
@@ -12,26 +12,26 @@ var l = n(477900),
     f = n(919790),
     h = n(712808),
     g = n(115982),
-    x = n(17928),
-    p = n(866665),
+    p = n(17928),
+    x = n(866665),
     k = n(778712),
     v = n(730134),
     j = n(287809),
     b = n(427262),
     _ = n(261425),
     y = n(660183),
-    S = n(59678);
-function N(e) {
+    N = n(59678);
+function S(e) {
     let { userId: t } = e,
-        n = (0, x.bG)([j.default], () => j.default.getUser(t), [t]),
+        n = (0, p.bG)([j.default], () => j.default.getUser(t), [t]),
         a = (0, b.tx)(n);
     if (null == n || null == a) return null;
     let i = y.intl.formatToPlainString(_.default["664n2O"], { name: a });
-    return (0, l.jsx)(p.m, {
+    return (0, l.jsx)(x.m, {
         text: i,
         ariaHidden: !0,
         children: (0, l.jsx)("span", {
-            className: S.jz,
+            className: N.jz,
             role: "img",
             "aria-label": i,
             children: (0, l.jsx)(v.A, { user: n, size: k._3.SIZE_16, "aria-hidden": !0 }),
@@ -39,79 +39,79 @@ function N(e) {
     });
 }
 var A = n(60160),
-    T = n(162052);
-function w(e) {
+    w = n(162052);
+function T(e) {
     let { projectId: t, node: n, presentation: i = "row", active: c = !1 } = e,
         [m, h] = a.useState(!1),
-        x = a.useId(),
-        p = a.useCallback(() => h((e) => !e), []),
+        p = a.useId(),
+        x = a.useCallback(() => h((e) => !e), []),
         k = (0, g.WQ)(n),
         v = n.detail,
         j = "failed" === n.status ? "text-feedback-critical" : "detail" === i ? "text-muted" : "text-default",
         b = "text-muted" === j,
-        w = c && b ? "none" : m && b ? "currentColor" : j,
-        I = r()(S.iq, { [T.Hz]: c && b }),
-        M = "detail" === i ? "text-md/normal" : "text-sm/normal",
+        T = c && b ? "none" : m && b ? "currentColor" : j,
+        I = r()(N.iq, { [w.Hz]: c && b }),
+        C = "detail" === i ? "text-md/normal" : "text-sm/normal",
         P = "detail" === i ? "text-sm/normal" : "text-xs/normal",
         E = null != t ? n.screenshots : [],
         B = null != t ? n.attachments : [];
     if (0 === v.length && 0 === E.length && 0 === B.length)
         return (0, l.jsx)("li", {
             "data-step-kind": n.labelKey ?? "step",
-            className: S.Dx,
+            className: N.Dx,
             children: (0, l.jsx)(s.E, {
                 tag: "div",
-                variant: M,
-                color: w,
+                variant: C,
+                color: T,
                 selectable: !0,
                 className: I,
-                children: (0, l.jsx)(A.A, { text: k, variant: M, prose: !0 }),
+                children: (0, l.jsx)(A.A, { text: k, variant: C, prose: !0 }),
             }),
         });
-    let G = m ? u.a : o._;
+    let D = m ? u.a : o._;
     return (0, l.jsxs)("li", {
         "data-step-kind": n.labelKey ?? "step",
-        className: S.Dx,
+        className: N.Dx,
         children: [
             (0, l.jsxs)(d.D, {
                 tag: "div",
-                className: S.kG,
+                className: N.kG,
                 "aria-expanded": m,
-                "aria-controls": x,
+                "aria-controls": p,
                 "aria-label": y.intl.formatToPlainString(_.default["KE1KI+"], { step: k }),
-                onClick: p,
+                onClick: x,
                 children: [
                     (0, l.jsx)(s.E, {
                         tag: "span",
-                        variant: M,
-                        color: w,
+                        variant: C,
+                        color: T,
                         className: I,
-                        children: (0, l.jsx)(A.A, { text: k, variant: M, prose: !0 }),
+                        children: (0, l.jsx)(A.A, { text: k, variant: C, prose: !0 }),
                     }),
-                    (0, l.jsx)(G, { size: "xs", color: "currentColor", className: S.Ue }),
+                    (0, l.jsx)(D, { size: "xs", color: "currentColor", className: N.Ue }),
                 ],
             }),
             (0, l.jsxs)("div", {
-                id: x,
+                id: p,
                 hidden: !m,
-                className: S.yJ,
+                className: N.yJ,
                 children: [
                     v.map((e, t) => {
                         let a = n.detailDrivenBy[t];
                         return (0, l.jsxs)(
                             "div",
                             {
-                                className: S.l6,
+                                className: N.l6,
                                 children: [
                                     (0, l.jsx)(s.E, {
                                         tag: "div",
                                         variant: P,
                                         color: c && b ? "none" : "text-muted",
                                         selectable: !0,
-                                        className: r()({ [T.Hz]: c && b }),
+                                        className: r()({ [w.Hz]: c && b }),
                                         children: (0, l.jsx)(A.A, { text: e, variant: P }),
                                     }),
-                                    null != a ? (0, l.jsx)(N, { userId: a }) : null,
+                                    null != a ? (0, l.jsx)(S, { userId: a }) : null,
                                 ],
                             },
                             t,
@@ -119,8 +119,8 @@ function w(e) {
                     }),
                     null != t && E.length > 0
                         ? (0, l.jsx)("div", {
-                              className: S.y8,
-                              children: E.map((e) => (0, l.jsx)(C, { projectId: t, screenshotId: e }, e)),
+                              className: N.y8,
+                              children: E.map((e) => (0, l.jsx)(M, { projectId: t, screenshotId: e }, e)),
                           })
                         : null,
                     null != t && B.length > 0 ? (0, l.jsx)(f.A, { projectId: t, attachments: B }) : null,
@@ -130,7 +130,7 @@ function w(e) {
     });
 }
 function I() {}
-function C(e) {
+function M(e) {
     let { projectId: t, screenshotId: n } = e,
         [i, r] = a.useState(null),
         [s, u] = a.useState(!1);

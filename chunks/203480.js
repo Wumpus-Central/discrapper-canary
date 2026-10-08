@@ -5,9 +5,9 @@ var r = n(582128),
     l = n(192308),
     o = n(312138),
     a = n(775121),
-    c = n(955572),
+    d = n(955572),
     u = n(775602),
-    d = n(502229),
+    c = n(502229),
     h = n(532624),
     f = n(350535),
     g = n(650583);
@@ -17,10 +17,10 @@ function p(e) {
         t ||
         __OVERLAY__ ||
         (0, l.hasAnyModalOpen)() ||
-        d.A.maybeShowKeyboardNavigationExplainerModal();
+        c.A.maybeShowKeyboardNavigationExplainerModal();
 }
 function m() {
-    (0, c.Bm)();
+    (0, d.Bm)();
 }
 let A = function (e, t) {
     let n = (0, s.bG)([u.Ay], () => u.Ay.keyboardModeEnabled);
@@ -55,7 +55,7 @@ let A = function (e, t) {
                 null == r ||
                     h.Ay.hasExactKeybind(r) ||
                     a.A.hasBind(f.Qd(r[0]) ?? "") ||
-                    ((0, c.uS)(), n && !t && e.preventDefault());
+                    ((0, d.uS)(), n && !t && e.preventDefault());
             })(e, t);
         },
         [t],

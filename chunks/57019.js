@@ -1,12 +1,12 @@
-n.d(t, { Fn: () => m, Gt: () => A, Ru: () => E });
+n.d(t, { Fn: () => m, Gt: () => A, Ru: () => b });
 var i = n(582128),
     r = n(717421),
     l = n(232554),
     s = n(626584),
     a = n(567249),
     o = n(287809),
-    u = n(531685),
-    c = n(365971),
+    c = n(531685),
+    u = n(365971),
     d = n(392164);
 let h = new s.A("NotificationLayoutManager");
 class m {
@@ -91,32 +91,32 @@ function g(e, t, n) {
     return t && 0 !== e ? 20 * Math.max(e / 5, 0) : n;
 }
 let f = { mass: 0.8, friction: 25, tension: 320 };
-function E(e, t, n) {
+function b(e, t, n) {
     let [s, m] = (0, r.z)(
             () => ({ from: { opacity: 0, scale: 1, transform: 0, height: 0, contentOpacity: 1 } }),
             void 0,
             [],
         ),
-        E = i.useRef(m),
-        b = i.useContext(A),
+        b = i.useRef(m),
+        E = i.useContext(A),
         p = i.useMemo(() => {
             let t = !1;
             return (n) => {
                 null == n
-                    ? b.unsubscribe(e)
-                    : b.subscribe(e, n, (n) => {
+                    ? E.unsubscribe(e)
+                    : E.subscribe(e, n, (n) => {
                           let { locked: i, matchHeight: r, height: l, top: s, index: m } = n;
                           if (o.default.getCurrentUser()?.isStaff()) {
                               let t = a.A.getWindow(d.f),
-                                  n = null != t ? u.A.windowSize((0, c.Q2)(t)) : void 0;
+                                  n = null != t ? c.A.windowSize((0, u.Q2)(t)) : void 0;
                               h.info(
                                   "Notification layout update",
                                   { id: e, locked: i, matchHeight: r, height: l, top: s, index: m },
                                   n,
                               );
                           }
-                          let { current: A } = E,
-                              b = {
+                          let { current: A } = b,
+                              E = {
                                   opacity: i && m > 4 ? 0 : i ? Math.min(1 - m / 4, 1) : 1,
                                   scale: i ? Math.min(1 - m / 4, 1) : 1,
                                   transform: g(m, i, s),
@@ -133,29 +133,29 @@ function E(e, t, n) {
                                         contentOpacity: 1,
                                         height: i ? r : l,
                                     },
-                              to: b,
+                              to: E,
                               config: f,
                           }),
                               (t = !0));
                       });
             };
-        }, [e, b]);
+        }, [e, E]);
     return (
         i.useLayoutEffect(() => {
             if (t === l.wL.YEETED) {
-                let t = b.getLayoutSpecs(e);
+                let t = E.getLayoutSpecs(e);
                 if (null == t) return void n();
-                (E.current({
+                (b.current({
                     to: {
                         scale: 0.8,
                         opacity: 0,
-                        transform: g(t.index, b.locked, t.top) + (b.locked ? 0 : t.height / 2),
+                        transform: g(t.index, E.locked, t.top) + (E.locked ? 0 : t.height / 2),
                     },
                     config: f,
                 }),
                     setTimeout(n, 300));
             }
-        }, [t, n, e, b]),
+        }, [t, n, e, E]),
         { ref: p, springs: s }
     );
 }

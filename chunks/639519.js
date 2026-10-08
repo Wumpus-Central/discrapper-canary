@@ -1,8 +1,8 @@
-n.d(e, { $k: () => o, DS: () => l, hj: () => u, mG: () => a });
+n.d(e, { $k: () => o, DS: () => _, hj: () => u, mG: () => a });
 var i = n(652215),
     r = n(261425),
-    _ = n(660183);
-class l extends Error {
+    l = n(660183);
+class _ extends Error {
     reason;
     status;
     constructor(t, e) {
@@ -25,12 +25,12 @@ function o(t) {
     return "number" == typeof e ? e : 0;
 }
 function a(t) {
-    switch (t instanceof l ? t.reason : "unknown") {
+    switch (t instanceof _ ? t.reason : "unknown") {
         case "project_limit":
-            return _.intl.string(r.default["lh+h/p"]);
+            return l.intl.string(r.default["lh+h/p"]);
         case "rate_limited":
-            return _.intl.string(r.default.zBENJU);
+            return l.intl.string(r.default.zBENJU);
         default:
-            return _.intl.string(r.default["9m86fn"]);
+            return l.intl.string(r.default["9m86fn"]);
     }
 }

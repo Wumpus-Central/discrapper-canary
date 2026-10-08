@@ -1,24 +1,24 @@
-n.d(e, { A: () => o });
-var r = n(582128),
-    t = n(17928),
-    a = n(734057),
-    s = n(576705),
-    c = n(91242),
-    i = n(580954),
-    u = n(165610),
-    d = n(652215);
-function o(l) {
-    let e = l?.id,
-        n = r.useMemo(() => (null != l ? (0, u.HD)(l) : null), [l]),
-        o = (0, t.bG)(
-            [a.A, s.A],
+u.d(l, { A: () => d });
+var n = u(582128),
+    t = u(17928),
+    a = u(734057),
+    r = u(576705),
+    c = u(91242),
+    s = u(580954),
+    i = u(165610),
+    A = u(652215);
+function d(e) {
+    let l = e?.id,
+        u = n.useMemo(() => (null != e ? (0, i.HD)(e) : null), [e]),
+        d = (0, t.bG)(
+            [a.A, r.A],
             () => {
-                let l = a.A.getChannel(e);
-                return null != l && s.A.can(d.xBc.VIEW_CHANNEL, l);
+                let e = a.A.getChannel(l);
+                return null != e && r.A.can(A.xBc.VIEW_CHANNEL, e);
             },
-            [e],
+            [l],
         );
-    r.useEffect(() => {
-        if (null != n && !o) for (let l of c.A.getFramesForSurface(n)) (0, i.A)().leaveFrame(l.id);
-    }, [n, o]);
+    n.useEffect(() => {
+        if (null != u && !d) for (let e of c.A.getFramesForSurface(u)) (0, s.A)().leaveFrame(e.id);
+    }, [u, d]);
 }

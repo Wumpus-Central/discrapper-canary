@@ -6,8 +6,8 @@ var r = n(205693),
     s = n(487329),
     a = n(338771),
     o = n(975571),
-    u = n(200749),
-    c = n(652215),
+    c = n(200749),
+    u = n(652215),
     d = n(660183);
 function h(e) {
     let { stream: t, width: n, avError: h, avErrorContext: m, selected: A = !1, noArt: g = !1 } = e,
@@ -20,14 +20,14 @@ function h(e) {
                     return d.intl.string(d.t.rSlOep);
             }
         })(m),
-        E = (0, s.B1)(h ?? s.iy.STREAM_FAILED_TO_START)?.errorCode;
-    return (0, i.jsx)(u.A, {
+        b = (0, s.B1)(h ?? s.iy.STREAM_FAILED_TO_START)?.errorCode;
+    return (0, i.jsx)(c.A, {
         header: f,
-        size: (0, u.J)(n),
+        size: (0, c.J)(n),
         noArt: g,
         selected: A,
-        description: d.intl.format(d.t.sXsgsP, { helpUrl: o.A.getArticleURL(c.MVz.STREAM_FAILED) }),
-        errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: E }),
+        description: d.intl.format(d.t.sXsgsP, { helpUrl: o.A.getArticleURL(u.MVz.STREAM_FAILED) }),
+        errorCodeMessage: d.intl.formatToPlainString(d.t.ejOT95, { errorCode: b }),
         onCTAClick: () => {
             ((0, l.W)(r.x.STREAM, t.ownerId), (0, a.A)(t));
         },

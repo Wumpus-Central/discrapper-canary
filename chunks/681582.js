@@ -1,15 +1,15 @@
-n.d(t, { l: () => d });
+n.d(t, { l: () => c });
 var r = n(477900),
     i = n(582128),
     s = n(776310),
     l = n(17928),
     o = n(309010),
     a = n(21161),
-    c = n(536283),
+    d = n(536283),
     u = n(920822);
-function d(e) {
+function c(e) {
     let { children: t } = e,
-        [n, d] = i.useState(null),
+        [n, c] = i.useState(null),
         [h, f] = i.useState(null),
         g = i.useRef(void 0),
         p = i.useRef(new Set()),
@@ -18,8 +18,8 @@ function d(e) {
         v = i.useCallback((e) => {
             (p.current.delete(e), A(p.current.size > 0));
         }, []),
-        x = i.useCallback((e) => (p.current.add(e), A(!0), () => v(e)), [v]),
-        w = i.useCallback((e, t) => {
+        w = i.useCallback((e) => (p.current.add(e), A(!0), () => v(e)), [v]),
+        x = i.useCallback((e, t) => {
             for (let n of p.current) n(e, t);
         }, []);
     i.useEffect(() => {
@@ -31,7 +31,7 @@ function d(e) {
                     ((e.width = 0), (e.height = 0));
                 }, 1e4)));
         }, []),
-        C = i.useCallback((e) => {
+        b = i.useCallback((e) => {
             window.clearTimeout(g.current);
             let t = e.canvas;
             if (0 === t.width && 0 === t.height) {
@@ -39,7 +39,7 @@ function d(e) {
                 ((t.width = e * window.devicePixelRatio), (t.height = n * window.devicePixelRatio));
             }
         }, []),
-        b = i.useCallback(
+        C = i.useCallback(
             (e) => {
                 E(e.canvas);
             },
@@ -62,20 +62,20 @@ function d(e) {
                 (0, r.jsx)(a.k, {
                     confettiCanvas: h,
                     spriteCanvas: n,
-                    baseConfig: c.Mw,
-                    addClickListener: x,
+                    baseConfig: d.Mw,
+                    addClickListener: w,
                     removeClickListener: v,
                     children: t,
                 }),
                 (0, r.jsx)(s.Fk, {
                     ref: f,
                     className: u.J,
-                    environment: c.XA,
-                    onClick: m ? w : void 0,
-                    onBeforeRender: C,
-                    onAfterRender: b,
+                    environment: d.XA,
+                    onClick: m ? x : void 0,
+                    onBeforeRender: b,
+                    onAfterRender: C,
                 }),
-                (0, r.jsx)(s.K_, { ref: d, colors: c._t, sprites: c.uI, spriteWidth: c.wn, spriteHeight: c.wn }),
+                (0, r.jsx)(s.K_, { ref: c, colors: d._t, sprites: d.uI, spriteWidth: d.wn, spriteHeight: d.wn }),
             ],
         })
     );

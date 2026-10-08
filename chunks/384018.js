@@ -5,11 +5,11 @@ var r = n(477900),
     l = n.n(s),
     o = n(661531),
     a = n(252392),
-    c = n(888633),
+    d = n(888633),
     u = n(765178),
-    d = n(844222),
+    c = n(844222),
     h = n(435462);
-let f = (0, c.v)(() => ({ containerIdsBySurface: new Map() })),
+let f = (0, d.v)(() => ({ containerIdsBySurface: new Map() })),
     g = 0;
 var p = n(435871);
 function m(e) {
@@ -17,7 +17,7 @@ function m(e) {
 }
 function A(e) {
     let { surface: t = "app", offset: n } = e,
-        { entry: s, position: c } = (function (e) {
+        { entry: s, position: d } = (function (e) {
             let t = i.useId(),
                 n =
                     (i.useEffect(
@@ -45,8 +45,8 @@ function A(e) {
                 [l, o] = i.useState("top"),
                 a = null != s ? (s.toast.position ?? "top") : l;
             a !== l && o(a);
-            let { minToastDurationMs: c } = i.useContext(d.C),
-                p = Math.max(s?.toast.duration ?? 3e3, c);
+            let { minToastDurationMs: d } = i.useContext(c.C),
+                p = Math.max(s?.toast.duration ?? 3e3, d);
             return (
                 i.useEffect(() => {
                     if (null == s) return;
@@ -69,7 +69,7 @@ function A(e) {
     let v = i.useCallback(() => y((e) => ({ ...e, leaving: null })), []);
     return (0, r.jsxs)("div", {
         "aria-hidden": !0,
-        className: l()(p.container, p[c]),
+        className: l()(p.container, p[d]),
         style: {
             "--custom-toast-animation-duration": `${o.A.modules.toast.ANIMATION_DURATION_MS.resolve()}ms`,
             "--custom-toast-queue-enter-delay": `${o.A.modules.toast.QUEUE_ENTER_DELAY_MS.resolve()}ms`,
@@ -101,34 +101,34 @@ function A(e) {
 }
 var y = n(202091),
     v = n(866323),
-    x = n(857250),
-    w = n(691540),
+    w = n(857250),
+    x = n(691540),
     E = n(97483),
-    C = n(773019);
-let b = { duration: 300, friction: 24, tension: 280 },
+    b = n(773019);
+let C = { duration: 300, friction: 24, tension: 280 },
     N = {
         [E.xJ.TOP]: {
-            styles: C.N,
+            styles: b.N,
             transition: {
                 trail: 400,
-                from: { transform: "translate3d(0, -100%, 0)", opacity: 0, config: b },
-                enter: { transform: "translate3d(0, -0px, 0)", opacity: 1, config: b },
-                leave: { transform: "translate3d(0, -100%, 0)", opacity: 0, config: { ...b, friction: 40, clamp: !0 } },
+                from: { transform: "translate3d(0, -100%, 0)", opacity: 0, config: C },
+                enter: { transform: "translate3d(0, -0px, 0)", opacity: 1, config: C },
+                leave: { transform: "translate3d(0, -100%, 0)", opacity: 0, config: { ...C, friction: 40, clamp: !0 } },
             },
         },
         [E.xJ.BOTTOM]: {
-            styles: C.H,
+            styles: b.H,
             transition: {
                 trail: 400,
-                from: { transform: "translate3d(0, 100%, 0)", opacity: 0, config: b },
-                enter: { transform: "translate3d(0, 0px, 0)", opacity: 1, config: b },
-                leave: { transform: "translate3d(0, 100%, 0)", opacity: 0, config: { ...b, friction: 40, clamp: !0 } },
+                from: { transform: "translate3d(0, 100%, 0)", opacity: 0, config: C },
+                enter: { transform: "translate3d(0, 0px, 0)", opacity: 1, config: C },
+                leave: { transform: "translate3d(0, 100%, 0)", opacity: 0, config: { ...C, friction: 40, clamp: !0 } },
             },
         },
     };
 function O(e) {
     let { appContext: t } = e,
-        n = (0, w.WE)((e) => e.currentToastMap.get(t)),
+        n = (0, x.WE)((e) => e.currentToastMap.get(t)),
         s = i.useRef(n?.options?.position ?? E.jg.position),
         l = i.useRef(n?.options?.duration ?? E.jg.duration);
     i.useEffect(() => {
@@ -141,13 +141,13 @@ function O(e) {
         i.useEffect(() => {
             null != n &&
                 setTimeout(() => {
-                    (0, w.VD)(t);
+                    (0, x.VD)(t);
                 }, l.current);
         }, [n, t]),
         (0, r.jsx)("div", {
             className: o.styles,
             children: a((e, t) =>
-                null == t ? null : (0, r.jsx)(y.animated.div, { style: e, children: (0, r.jsx)(x.y, { ...t }) }, t.id),
+                null == t ? null : (0, r.jsx)(y.animated.div, { style: e, children: (0, r.jsx)(w.y, { ...t }) }, t.id),
             ),
         })
     );

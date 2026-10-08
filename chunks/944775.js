@@ -1,4 +1,4 @@
-n.d(t, { Ax: () => x, Lk: () => C, cu: () => w, hK: () => E });
+n.d(t, { Ax: () => w, Lk: () => b, cu: () => x, hK: () => E });
 var r = n(477900);
 n(582128);
 var i = n(73153),
@@ -6,9 +6,9 @@ var i = n(73153),
     l = n(979186),
     o = n(574172),
     a = n(734057),
-    c = n(763827),
+    d = n(763827),
     u = n(532294),
-    d = n(19575),
+    c = n(19575),
     h = n(317084),
     f = n(980504),
     g = n(652215),
@@ -30,12 +30,12 @@ let m = {
     A = f.ed.padding,
     y = m.width - A,
     v = m.height - A;
-async function x(e) {
-    let t = c.A.getGuildId(),
-        n = c.A.getChannelId(),
+async function w(e) {
+    let t = d.A.getGuildId(),
+        n = d.A.getChannelId(),
         i = a.A.getChannel(n);
     if (null == t || null == i) return;
-    let { x: s, y: u } = await d.Ay.invoke("GET_MOUSE_COORDINATES");
+    let { x: s, y: u } = await c.Ay.invoke("GET_MOUSE_COORDINATES");
     (0, o.open)(
         g.MLl.SOUNDBOARD,
         (n) =>
@@ -43,21 +43,21 @@ async function x(e) {
                 windowKey: n,
                 withTitleBar: !1,
                 title: p.intl.string(p.t["IiA///"]),
-                onBlur: w,
+                onBlur: x,
                 children: (0, r.jsx)(h.A, {
                     guildId: t,
                     channel: i,
                     width: y,
                     height: v,
                     keepOpen: e,
-                    onClose: w,
+                    onClose: x,
                     analyticsSource: "global",
                 }),
             }),
         { ...m, left: s - m.width / 2, top: u - m.height / 2 },
     );
 }
-function w() {
+function x() {
     (0, o.close)(g.MLl.SOUNDBOARD);
 }
 function E(e, t) {
@@ -66,7 +66,7 @@ function E(e, t) {
     (n || r || i.h.dispatch({ type: "OVERLAY_SET_INPUT_LOCKED", locked: !1, pid: t }),
         i.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: t, enabled: !0, keepOpen: e }));
 }
-function C(e) {
+function b(e) {
     i.h.dispatch({ type: "SOUNDBOARD_SET_OVERLAY_ENABLED", pid: e, enabled: !1 });
     let t = s.A.isOverlayV3EnabledForPID(e),
         n = u.default.disableClickableRegions;

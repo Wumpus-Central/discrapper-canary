@@ -1,4 +1,4 @@
-n.d(t, { O: () => o, X: () => u });
+n.d(t, { O: () => o, X: () => c });
 var i,
     r = n(734057),
     l = n(763827),
@@ -43,16 +43,16 @@ var i,
         (i.VOICE_USER = "Voice User"),
         (i.STREAM_SETTINGS = "Stream Settings"),
         i);
-function u(e, t, n) {
+function c(e, t, n) {
     let i = l.A.getChannelId(),
         o = l.A.getGuildId(),
-        u = r.A.getChannel(i)?.type;
+        c = r.A.getChannel(i)?.type;
     s.default.track(a.HAw.CALL_BUTTON_CLICKED, {
         location: e,
         button_name: t,
         toggled_active: n,
         guild_id: o,
         channel_id: i,
-        channel_type: u,
+        channel_type: c,
     });
 }

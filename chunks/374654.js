@@ -1,6 +1,6 @@
 l.d(n, { A: () => P });
-var a = l(477900),
-    t = l(582128),
+var t = l(477900),
+    a = l(582128),
     r = l(503698),
     i = l.n(r),
     s = l(17928),
@@ -42,16 +42,16 @@ function j(e) {
         I = (0, s.bG)([h.A], () => h.A.getPendingChanges(l ?? null).pendingAvatar),
         k = (function (e) {
             let { enabled: n, isInteracting: l } = e,
-                { categories: a, purchases: r } = (0, m.Ay)({ stalePurchasesOK: !0 }),
-                i = t.useMemo(() => (0, b.zd)(r, a), [r, a]),
+                { categories: t, purchases: r } = (0, m.Ay)({ stalePurchasesOK: !0 }),
+                i = a.useMemo(() => (0, b.zd)(r, t), [r, t]),
                 s = (0, C.A)({ enabled: n, isInteracting: l, items: i, preload: y });
             return null != s ? { skuId: s.skuId, asset: s.asset, label: s.label, palette: s.palette } : null;
         })({ enabled: u && !o && !g, isInteracting: c }),
         j = null != k;
-    return (0, a.jsx)("div", {
+    return (0, t.jsx)("div", {
         className: i()(x.M, { [N.O]: j }),
         "aria-hidden": !0,
-        children: (0, a.jsx)(d.A, {
+        children: (0, t.jsx)(d.A, {
             user: n,
             guildId: l ?? void 0,
             nameplate: j ? k : r,
@@ -67,7 +67,7 @@ function j(e) {
 }
 function P(e) {
     let { user: n, guildId: l, disabled: r, errorMessageId: i } = e,
-        s = t.useRef(null),
+        s = a.useRef(null),
         { analyticsLocations: d } = (0, u.Ay)(),
         h = null != l,
         { guildNameplate: b, pendingNameplate: m } = (0, v.rv)(n, l ?? void 0),
@@ -87,28 +87,28 @@ function P(e) {
                       accessibleLabel: k.intl.string(x ? k.t.neYqhR : k.t["9zwziY"]),
                   }
                 : void 0,
-        w = t.useCallback(() => {
+        w = a.useCallback(() => {
             (0, c.p)({ analyticsLocations: d, guildId: l ?? void 0, stackingBehavior: "stack", returnRef: s });
         }, [d, l]);
-    return (0, a.jsx)(p.A, {
+    return (0, t.jsx)(p.A, {
         buttonRef: s,
         affordance: y && !x ? "add" : R,
         variant: "bar",
         onClick: w,
         accessibleLabel: k.intl.string(k.t.x5CoXR),
         accessibleValue: (function (e) {
-            let { nameplatePreview: n, productName: l, hasPendingSelection: a } = e;
+            let { nameplatePreview: n, productName: l, hasPendingSelection: t } = e;
             return null == n
                 ? k.intl.string(k.t["3Xph0/"])
                 : null != l && "" !== l
                   ? l
-                  : k.intl.string(a ? k.t.mo1Huz : k.t.s9kNKK);
+                  : k.intl.string(t ? k.t.mo1Huz : k.t.s9kNKK);
         })({ nameplatePreview: N, productName: (0, g.VG)(P), hasPendingSelection: null != m }),
         "aria-haspopup": "dialog",
         disabled: r,
         errorMessageId: i,
         renderPreview: (e) =>
-            (0, a.jsx)(j, {
+            (0, t.jsx)(j, {
                 user: n,
                 guildId: l,
                 nameplatePreview: N,

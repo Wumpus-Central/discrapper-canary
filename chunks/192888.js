@@ -20,14 +20,14 @@ function i(e, t, n, i) {
         let w = 0,
             p = o,
             m = window.setTimeout(() => {
-                (v(), h(new r.fq(t, i.timeoutMs)));
+                (b(), h(new r.fq(t, i.timeoutMs)));
             }, i.timeoutMs),
             g = null != i.retryMs ? window.setInterval(y, i.retryMs) : null;
-        function b() {
+        function v() {
             null != g && window.clearInterval(g);
         }
-        function v() {
-            (window.clearTimeout(m), b(), window.removeEventListener("message", M));
+        function b() {
+            (window.clearTimeout(m), v(), window.removeEventListener("message", M));
         }
         function y() {
             (w += 1) > 1 &&
@@ -41,7 +41,7 @@ function i(e, t, n, i) {
         }
         function M(e) {
             ("window" === c ? e.source !== p : e.origin !== a) ||
-                ((0, r.YX)(e.data, d, f) ? b() : (0, r.YX)(e.data, s, f) && (v(), l(e.data)));
+                ((0, r.YX)(e.data, d, f) ? v() : (0, r.YX)(e.data, s, f) && (b(), l(e.data)));
         }
         (window.addEventListener("message", M), y());
     });

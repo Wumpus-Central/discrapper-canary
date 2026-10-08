@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     om: "block__40b01",
     ys: "glow__40b01",
     HA: "conjure-control-glow__40b01",

@@ -1,12 +1,12 @@
 n.d(t, { CZ: () => c, Qp: () => u, XG: () => h, dh: () => d, f4: () => o });
 var i = n(812729),
-    s = n.n(i),
-    r = n(839214),
+    r = n.n(i),
+    s = n(839214),
     l = n(652896);
-let a = (0, r.D)(() => ({ streams: {} }));
+let a = (0, s.D)(() => ({ streams: {} }));
 function o(e) {
     let t = (0, l._z)(e),
-        n = a.useState((e) => e.streams, s());
+        n = a.useState((e) => e.streams, r());
     return n[t]?.zoom ?? 100;
 }
 function d(e) {
@@ -25,6 +25,6 @@ function c(e, t) {
 }
 function h(e) {
     let t = (0, l._z)(e),
-        n = a.useState((e) => e.streams, s());
+        n = a.useState((e) => e.streams, r());
     return n[t]?.fitOverride;
 }

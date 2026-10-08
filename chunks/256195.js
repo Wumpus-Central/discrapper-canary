@@ -1,4 +1,4 @@
-n.d(t, { A: () => b });
+n.d(t, { A: () => E });
 var i = n(477900);
 n(582128);
 var r = n(503698),
@@ -6,17 +6,17 @@ var r = n(503698),
     s = n(17928),
     a = n(821609),
     o = n(866665),
-    u = n(408278),
-    c = n(622631),
+    c = n(408278),
+    u = n(622631),
     d = n(401843),
     h = n(616356),
     m = n(280450),
     A = n(200749),
     g = n(660183),
     f = n(604889);
-let E = n(913516);
-function b(e) {
-    let { participant: t, width: n, noArt: r = !1, selected: b = !1 } = e,
+let b = n(913516);
+function E(e) {
+    let { participant: t, width: n, noArt: r = !1, selected: E = !1 } = e,
         p = n < 195,
         C = (0, s.bG)([h.A, m.default], () =>
             h.A.getAllActiveStreams().some((e) => {
@@ -28,12 +28,12 @@ function b(e) {
         className: l()(f.Qs, f.FY),
         children: (0, i.jsx)(A.A, {
             className: f.FP,
-            artURL: E,
+            artURL: b,
             noArt: r,
-            selected: b,
+            selected: E,
             size: (0, A.J)(n),
             header: p ? null : g.intl.string(g.t.epU4Ec),
-            description: b
+            description: E
                 ? null
                 : (0, i.jsxs)("div", {
                       className: l()(f.t2, { [f.y8]: !p }),
@@ -51,10 +51,10 @@ function b(e) {
                                     className: l()(f.lO, f.EU),
                                     children: (0, i.jsx)(o.m, {
                                         text: g.intl.string(g.t.wCrzut),
-                                        children: (0, i.jsx)(u.K, {
+                                        children: (0, i.jsx)(c.K, {
                                             variant: "secondary",
                                             size: p ? "sm" : "md",
-                                            icon: c.v,
+                                            icon: u.v,
                                             "aria-label": g.intl.string(g.t.wCrzut),
                                             onClick: (e) => {
                                                 (e.stopPropagation(), (0, d.A9)(t.stream, { forceMultiple: !0 }));

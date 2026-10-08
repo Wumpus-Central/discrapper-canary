@@ -17,12 +17,12 @@ function h(e) {
     let { userId: t, guildId: n, ...h } = e,
         { trackUserProfileAction: x } = (0, u.NJ)(),
         A = (0, l.bG)([a.A], () => a.A.getGuild(n)),
-        v = (0, l.bG)([r.Ay], () => r.Ay.getMember(n, t)),
-        I = v?.roles,
-        j = (0, l.yK)([s.A], () => s.A.getManyRoles(n, I ?? []).sort(d.m), [I, n]),
+        I = (0, l.bG)([r.Ay], () => r.Ay.getMember(n, t)),
+        v = I?.roles,
+        j = (0, l.yK)([s.A], () => s.A.getManyRoles(n, v ?? []).sort(d.m), [v, n]),
         [b] = (0, l.yK)([o.A], () => [o.A.can(m.xBc.MANAGE_ROLES, A), o.A.getGuildVersion(n)]);
     if (null == A) return null;
-    let C = b && null != v;
+    let C = b && null != I;
     return 0 !== j.length || C
         ? (0, i.jsx)(g.A, {
               heading: p.intl.string(p.t["LPJmL/"]),

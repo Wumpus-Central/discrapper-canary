@@ -1,6 +1,6 @@
 l.d(n, { A: () => M });
-var a = l(477900),
-    t = l(582128),
+var t = l(477900),
+    a = l(582128),
     r = l(503698),
     i = l.n(r),
     s = l(17928),
@@ -42,10 +42,10 @@ function D(e) {
             disabled: c,
         } = e,
         v = (function (e) {
-            let { size: n, enabled: l, isInteracting: a } = e,
+            let { size: n, enabled: l, isInteracting: t } = e,
                 { categories: r, purchases: i } = (0, y.Ay)({ stalePurchasesOK: !0 }),
-                s = t.useMemo(() => (0, C.ps)(i, r).filter(j), [i, r]),
-                u = t.useCallback(
+                s = a.useMemo(() => (0, C.ps)(i, r).filter(j), [i, r]),
+                u = a.useCallback(
                     (e) => {
                         let l = (0, k.F_)({
                             avatarDecoration: { asset: e.asset, skuId: e.skuId },
@@ -56,7 +56,7 @@ function D(e) {
                     },
                     [n],
                 ),
-                o = (0, N.A)({ enabled: l, isInteracting: a, items: s, preload: u });
+                o = (0, N.A)({ enabled: l, isInteracting: t, items: s, preload: u });
             return null != o ? { asset: o.asset, skuId: o.skuId } : null;
         })({ size: w, enabled: r && !s && !c, isInteracting: d }),
         f = null != v,
@@ -74,7 +74,7 @@ function D(e) {
             animateOnHover: !d,
         }),
         I = "default" === h && null != p && d;
-    return (0, a.jsx)(S, {
+    return (0, t.jsx)(S, {
         className: i()({ [E.yT]: null == p, [R.O]: "placeholder" === h }),
         src: I ? b : m,
         imageClassName: I ? E.WG : void 0,
@@ -85,7 +85,7 @@ function D(e) {
 }
 function M(e) {
     let { user: n, guildId: l, disabled: r, errorMessageId: i } = e,
-        u = (0, t.useRef)(null),
+        u = (0, a.useRef)(null),
         { analyticsLocations: o } = (0, d.Ay)(),
         b = (0, s.bG)([p.A], () => (null != l ? p.A.getGuild(l) : null)),
         A = null != l,
@@ -107,7 +107,7 @@ function M(e) {
                       accessibleLabel: P.intl.string(j ? P.t.pJsnPf : P.t["2U4Bga"]),
                   }
                 : void 0;
-    return (0, a.jsx)(I.A, {
+    return (0, t.jsx)(I.A, {
         buttonRef: u,
         affordance: N && !j ? "add" : M,
         variant: "square",
@@ -116,18 +116,18 @@ function M(e) {
         },
         accessibleLabel: P.intl.string(P.t["7v0T9P"]),
         accessibleValue: (function (e) {
-            let { avatarDecorationPreview: n, productName: l, hasPendingSelection: a } = e;
+            let { avatarDecorationPreview: n, productName: l, hasPendingSelection: t } = e;
             return null == n
                 ? P.intl.string(P.t["3Xph0/"])
                 : null != l && "" !== l
                   ? l
-                  : P.intl.string(a ? P.t.SZPJG4 : P.t.K77yQe);
+                  : P.intl.string(t ? P.t.SZPJG4 : P.t.K77yQe);
         })({ avatarDecorationPreview: R, productName: (0, f.VG)(w), hasPendingSelection: null != k }),
         "aria-haspopup": "dialog",
         disabled: r,
         errorMessageId: i,
         renderPreview: (e) =>
-            (0, a.jsx)(D, {
+            (0, t.jsx)(D, {
                 user: n,
                 guildId: l,
                 isEmpty: N,

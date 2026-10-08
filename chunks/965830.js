@@ -1,4 +1,4 @@
-n.d(t, { W: () => C });
+n.d(t, { W: () => b });
 var r = n(477900);
 n(582128);
 var i = n(676999),
@@ -6,7 +6,7 @@ var i = n(676999),
     l = n(765178),
     o = n(425763),
     a = n(660183);
-class c {
+class d {
     announcer;
     constructor(e) {
         if (null != e) this.announcer = e;
@@ -84,7 +84,7 @@ class u {
     }
 }
 n(321073);
-var d = n(52724);
+var c = n(52724);
 let h = "dndOriginalRole";
 class f {
     targetNodes;
@@ -101,7 +101,7 @@ class f {
             (this.previewer = r),
             (this.announcer = i),
             (this.currentHoveredNode = this.findInitialHoveredNode(e, t)),
-            (this.focusManager = (0, d.C)({
+            (this.focusManager = (0, c.C)({
                 getFocusableElements: () => this.getViableTargets(t),
                 getActiveElement: () => e.ownerDocument.activeElement,
             })),
@@ -231,7 +231,7 @@ class v {
             (this.sourcePreviewNodeOptions = new Map()),
             (this.targetNodes = new Map()),
             (this._previewer = new u(t.document)),
-            (this._announcer = new c(n?.announcer)));
+            (this._announcer = new d(n?.announcer)));
     }
     setup() {
         if (v.isSetUp) throw Error("Cannot have two Keyboard backends at the same time.");
@@ -323,25 +323,25 @@ class v {
             this.setDndMode(!1));
     }
 }
-let x = (0, s.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
-    w = (0, s.eV)(
+let w = (0, s.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
+    x = (0, s.eV)(
         "mousedown",
         (e) => -1 === e.type.indexOf("touch") && -1 !== e.type.indexOf("mouse") && ((0, o.ef)(!1), !0),
     ),
     E = {
         backends: [
-            { id: "html5", backend: i.t, transition: w },
+            { id: "html5", backend: i.t, transition: x },
             {
                 id: "keyboard",
                 backend: (e, t, n) => new v(e, t, n),
                 context: { window, document },
                 options: { onDndModeChanged: o.ef, announcer: l.O },
                 preview: !0,
-                transition: x,
+                transition: w,
             },
         ],
     };
-function C(e) {
+function b(e) {
     let { children: t } = e;
     return (0, r.jsx)(s.QP, { options: E, children: t });
 }

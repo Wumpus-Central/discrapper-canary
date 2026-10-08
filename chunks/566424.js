@@ -28,8 +28,8 @@ function g(e) {
     a.useLayoutEffect(() => {
         i && y.current?.style.setProperty("--custom-conjure-shine-delay", `${-(performance.now() % 2e3)}ms`);
     }, [i]);
-    let S = a.useId(),
-        N = a.useCallback(() => _((e) => !e), []),
+    let N = a.useId(),
+        S = a.useCallback(() => _((e) => !e), []),
         { text: A, phase: w } = (0, c.Q)(n),
         T = b ? s.a : u._,
         I = null != x,
@@ -73,13 +73,13 @@ function g(e) {
                       tag: "div",
                       className: r()(h.ep, h.EK),
                       "aria-expanded": b,
-                      "aria-controls": S,
+                      "aria-controls": N,
                       "aria-label": f.intl.formatToPlainString(m.default.yByAPh, { activity: A }),
-                      onClick: N,
+                      onClick: S,
                       children: C,
                   })
                 : (0, l.jsx)("div", { className: h.ep, children: C }),
-            (0, l.jsx)("div", { id: S, hidden: !b, className: h.BA, children: x }),
+            (0, l.jsx)("div", { id: N, hidden: !b, className: h.BA, children: x }),
         ],
     });
 }

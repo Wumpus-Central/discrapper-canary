@@ -6,22 +6,22 @@ var r = n(17928),
     s = n(477782),
     a = n(695366),
     o = n(652896),
-    u = n(834757),
-    c = n(280450),
+    c = n(834757),
+    u = n(280450),
     d = n(116956),
     h = n(660183);
 function m(e, t, m) {
-    let A = (0, u.AO)(e),
-        g = (0, r.bG)([c.default], () => c.default.getId());
+    let A = (0, c.AO)(e),
+        g = (0, r.bG)([u.default], () => u.default.getId());
     if (null == e) return null;
     let f = (0, o._z)(e),
-        E = d.A.getVideoStats(f) ?? {},
-        b = {
+        b = d.A.getVideoStats(f) ?? {},
+        E = {
             media_session_id: d.A.getMediaSessionId(f),
             rtc_connection_id: d.A.getRtcConnectionId(f),
             stream_region: d.A.getRegion(f),
             max_viewers: d.A.getMaxViewers(f),
-            ...E,
+            ...b,
         };
     return (0, i.jsx)(s.Dr, {
         id: "report-stream-problem",
@@ -37,7 +37,7 @@ function m(e, t, m) {
                                 stream: e,
                                 streamApplication: A,
                                 isStreamer: g === e?.ownerId,
-                                analyticsData: b,
+                                analyticsData: E,
                                 ...n,
                             });
                     }));

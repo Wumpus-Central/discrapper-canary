@@ -1,20 +1,20 @@
-n.d(t, { A: () => O });
+n.d(t, { A: () => y });
 var i = n(477900),
     r = n(582128),
     l = n(503698),
     s = n.n(l),
     a = n(649852),
     o = n.n(a),
-    u = n(132500),
-    c = n(17928),
+    c = n(132500),
+    u = n(17928),
     d = n(52133),
     h = n(684013),
     m = n(869146),
     A = n(532294),
     g = n(723702),
     f = n(41984),
-    E = n(127242),
-    b = n(545807),
+    b = n(127242),
+    E = n(545807),
     p = n(392164),
     C = n(85290);
 function S(e, t) {
@@ -47,7 +47,7 @@ class v {
         let t = this.zones.get(e);
         null != t && this.resizeObserver.unobserve(t.element);
         let n = e.getBoundingClientRect();
-        (this.zones.set(e, { element: e, zone: S(t?.zone.name ?? (0, u.A)(), n) }),
+        (this.zones.set(e, { element: e, zone: S(t?.zone.name ?? (0, c.A)(), n) }),
             this.elements.add(e),
             this.resizeObserver.observe(e),
             this.updateZones());
@@ -101,12 +101,12 @@ class v {
             this.updateZones());
     }
 }
-let _ = r.createContext(new v((0, b.b)()));
-function O(e) {
+let _ = r.createContext(new v((0, E.b)()));
+function y(e) {
     let { observe: t = !0, className: n, style: l, children: a } = e,
         o = r.useContext(_),
-        u = (0, c.bG)([E.A], () => E.A.hasRenderDebugMode(f.x7.ClickZones)),
-        d = (0, c.bG)([A.default], () => A.default.disableClickableRegions),
+        c = (0, u.bG)([b.A], () => b.A.hasRenderDebugMode(f.x7.ClickZones)),
+        d = (0, u.bG)([A.default], () => A.default.disableClickableRegions),
         [{ refHandler: h, setObserve: m }] = r.useState(() => {
             let e = null;
             return {
@@ -122,6 +122,6 @@ function O(e) {
         r.useLayoutEffect(() => {
             d ? m(!1) : m(t);
         }, [t, m, d]),
-        (0, i.jsx)("div", { ref: h, style: l, className: s()(n, C.v, u && C.p), "data-click-zone": !0, children: a })
+        (0, i.jsx)("div", { ref: h, style: l, className: s()(n, C.v, c && C.p), "data-click-zone": !0, children: a })
     );
 }

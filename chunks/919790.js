@@ -22,7 +22,7 @@ function m(e) {
                 ? (0, l.jsx)(h, { name: e.name }, n)
                 : f(e)
                   ? (0, l.jsx)(
-                        x,
+                        p,
                         {
                             projectId: t,
                             viewableImages: i,
@@ -68,10 +68,10 @@ function g(e) {
               onClick: m,
           });
 }
-function x(e) {
+function p(e) {
     let { projectId: t, viewableImages: n, viewerIndex: r, unavailableIds: c, markUnavailable: m } = e,
         { id: f, name: g } = n[r],
-        [x, p] = a.useState(null),
+        [p, x] = a.useState(null),
         k = c.has(f),
         [v, j] = a.useState(0);
     a.useEffect(() => {
@@ -79,7 +79,7 @@ function x(e) {
         return (
             (0, s.PK)(t, f).then(
                 (t) => {
-                    e || p(t);
+                    e || x(t);
                 },
                 () => {},
             ),
@@ -108,11 +108,11 @@ function x(e) {
         ? (0, l.jsx)(h, { name: g, unavailable: !0 })
         : (0, l.jsx)(u.n, {
               name: g,
-              thumbSrc: x,
+              thumbSrc: p,
               ariaLabel: d.intl.formatToPlainString(o.default.GtNukg, { name: g }),
               onClick: b,
               onThumbError: () => {
-                  (p(null),
+                  (x(null),
                       (0, s.n6)(t, f).then(
                           (e) => {
                               e ? 0 === v && j(1) : m(f);

@@ -247,7 +247,7 @@ class G extends C.G {
             { no: 21, name: "unit_id_matches_filter_snapshot", kind: "message", oneof: "filter", T: () => e1 },
             { no: 22, name: "guild_ids", kind: "message", oneof: "filter", T: () => e3 },
             { no: 23, name: "guild_id_range", kind: "message", oneof: "filter", T: () => e7 },
-            { no: 25, name: "guild_member_count_range", kind: "message", oneof: "filter", T: () => e6 },
+            { no: 25, name: "guild_member_count_range", kind: "message", oneof: "filter", T: () => e5 },
             { no: 26, name: "guild_has_feature", kind: "message", oneof: "filter", T: () => e9 },
             { no: 27, name: "user_location", kind: "message", oneof: "filter", T: () => ea },
             { no: 28, name: "user_ip", kind: "message", oneof: "filter", T: () => eu },
@@ -404,7 +404,7 @@ class G extends C.G {
                 case 25:
                     r.filter = {
                         oneofKind: "guildMemberCountRange",
-                        guildMemberCountRange: e6.internalBinaryRead(e, e.uint32(), n, r.filter.guildMemberCountRange),
+                        guildMemberCountRange: e5.internalBinaryRead(e, e.uint32(), n, r.filter.guildMemberCountRange),
                     };
                     break;
                 case 26:
@@ -502,7 +502,7 @@ class G extends C.G {
             "guildIdRange" === e.filter.oneofKind &&
                 e7.internalBinaryWrite(e.filter.guildIdRange, t.tag(23, g.O0.LengthDelimited).fork(), n).join(),
             "guildMemberCountRange" === e.filter.oneofKind &&
-                e6
+                e5
                     .internalBinaryWrite(e.filter.guildMemberCountRange, t.tag(25, g.O0.LengthDelimited).fork(), n)
                     .join(),
             "guildHasFeature" === e.filter.oneofKind &&
@@ -2259,7 +2259,7 @@ class e2 extends C.G {
     }
 }
 let e3 = new e2();
-class e5 extends C.G {
+class e6 extends C.G {
     constructor() {
         super(
             "discord_protos.discord_experimentation.v1.GuildMemberCountRange",
@@ -2310,7 +2310,7 @@ class e5 extends C.G {
         return (!1 !== i && (!0 == i ? g.f$.onWrite : i)(this.typeName, e, t), t);
     }
 }
-let e6 = new e5();
+let e5 = new e6();
 class e4 extends C.G {
     constructor() {
         super(

@@ -1,1 +1,1 @@
-e.exports = { P: "snapshot__586c9" };
+s.exports = { P: "snapshot__586c9" };

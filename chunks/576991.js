@@ -1931,8 +1931,8 @@ class e3 extends eJ.EventEmitter {
         this.send(e2.REMOTE_COMMAND, { target_session_id: e, payload: t });
     }
 }
-var e5 = n(33282),
-    e6 = n(981133),
+var e6 = n(33282),
+    e5 = n(981133),
     e4 = n(751124),
     e7 = n(852015),
     e8 = n(144367),
@@ -2249,7 +2249,7 @@ class tg extends e3 {
         var e, t, n;
         let i, r;
         if (!this.willReconnect()) return void tu.verbose("Skipping _connect because willReconnect is false");
-        if (e5.j()) return void tu.info("Skipping _connect because socket is paused");
+        if (e6.j()) return void tu.info("Skipping _connect because socket is paused");
         ((this.connectionState = v.A.CONNECTING), (this.nextReconnectIsImmediate = !1));
         let a = this.compressionHandler.getAlgorithm(),
             s = t_.getName(),
@@ -2654,7 +2654,7 @@ class tg extends e3 {
                 capabilities: (function (e) {
                     let { useChannelObfuscation: t } = e;
                     return t ? 1767421 : 1734653;
-                })({ useChannelObfuscation: (0, e6.RK)("GatewaySocket") }),
+                })({ useChannelObfuscation: (0, e5.RK)("GatewaySocket") }),
                 properties: o,
                 presence: c,
                 compress: this.compressionHandler.usesLegacyCompression(),
