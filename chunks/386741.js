@@ -31,8 +31,10 @@ function g() {
                         l = {};
                     for (let [e, t] of Object.entries(i.localMutes))
                         l[e] = { muted: t, volume: m(n), modifiedAt: s, soundboardMuted: !1 };
-                    for (let [e, t] of Object.entries(i.localVolumes))
-                        l[e] = { muted: !1, modifiedAt: s, ...l[e], volume: (0, I.z)(t, n) };
+                    for (let [e, t] of Object.entries(i.localVolumes)) {
+                        let i = l[e];
+                        l[e] = { ...(i ?? { muted: !1, modifiedAt: s }), volume: (0, I.z)(t, n) };
+                    }
                     let o = Object.keys(a).length;
                     for (let [e, [n, i]] of Object.entries(l).entries()) {
                         if (300 - o - (e + 1) <= 0) break;

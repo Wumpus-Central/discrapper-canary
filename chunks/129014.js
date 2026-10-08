@@ -13,7 +13,7 @@ function _(e, t) {
     return `${e}:${t}`;
 }
 let E = s.parse(location.search.slice(1)),
-    A = parseInt(null != E.rpc && "" !== E.rpc ? E.rpc : c.xEi, 10),
+    A = null != E.rpc && "" !== E.rpc ? parseInt(String(E.rpc), 10) : c.xEi,
     h = null;
 class f extends i.EventEmitter {
     get port() {

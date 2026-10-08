@@ -86,8 +86,8 @@ function x(e) {
 }
 let k = [
         (e) => {
-            let t = { ...e, version: 1, applicationName: e.gameName, applicationId: void 0 };
-            return (delete t.gameName, t);
+            let { gameName: t, ...n } = e;
+            return { ...n, version: 1, applicationName: t, applicationId: void 0 };
         },
         (e) => ({ ...e, version: 2, name: e.name.startsWith("Clip - ") ? void 0 : e.name }),
         (e) => ({ ...e, version: 3, name: "" === e.name ? void 0 : e.name }),

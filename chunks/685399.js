@@ -75,11 +75,9 @@ function A(e) {
             let t = new Map();
             return (
                 e.forEach((e) => {
-                    let l = r.A.findActivity(
-                        e?.embeddedActivity.userIds.values().next().value,
-                        (t) => t.application_id === e?.application?.id,
-                    );
-                    t.set(e?.application?.id, { ...e, presenceActivity: l });
+                    let l = e?.embeddedActivity.userIds.values().next().value,
+                        n = null != l ? r.A.findActivity(l, (t) => t.application_id === e?.application?.id) : void 0;
+                    t.set(e?.application?.id, { ...e, presenceActivity: n });
                 }),
                 t
             );

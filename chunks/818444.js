@@ -2336,7 +2336,7 @@ let id = {
             }),
             e({
                 browser: { name: eX().name, version: eX().version },
-                os: { name: eX().os.family, version: eX().os.version },
+                os: { name: eX().os?.family, version: eX().os?.version },
                 memory: t,
             }));
     },

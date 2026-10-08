@@ -1483,7 +1483,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let tn = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eq.A().log(
-    `[BUILD INFO] Release Channel: ${tn}, Build Number: 633564, Version Hash: e1fb413bfad655352ca69df703f6ca03bf463ead`,
+    `[BUILD INFO] Release Channel: ${tn}, Build Number: 633570, Version Hash: 8ec49ca3b08e30b03b7322a6b0b89f8bb213f688`,
 ),
     F.A.setTags({ appContext: K.QCW }),
     eO.A.initBasic(),
@@ -2707,7 +2707,7 @@ let iP = new iM();
 var iU = n(435558),
     iw = n.n(iU);
 class iG extends em.Component {
-    animProps;
+    animProps = this.getDefaultAnimProps();
     _animationFrame;
     ref = em.createRef();
     constructor(e) {
@@ -26188,7 +26188,7 @@ let yg = "isHideDevBanner",
                     className: th()(ym.Wz, ym.mr),
                     children: [
                         (0, w.jsx)(yT, { className: ym.Kk }),
-                        tD.intl.format(tD.t.uyrfYF, { buildNumber: "633564" }),
+                        tD.intl.format(tD.t.uyrfYF, { buildNumber: "633570" }),
                         (0, w.jsx)(r, {}),
                     ],
                 })

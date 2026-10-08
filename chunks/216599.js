@@ -602,7 +602,7 @@ function en(e) {
         ],
     });
 }
-let ea = (e) => {
+let ea = function (e) {
     let { transitionState: t, onClose: i } = e;
     l.useEffect(() => {
         k.default.track(q.HAw.OPEN_MODAL, { type: z.bK });
@@ -621,7 +621,7 @@ let ea = (e) => {
         P = (0, c.bG)([_.Ay], () => (null != n ? _.Ay.getChannels(n.id) : null)),
         w = (0, E.GV)(),
         { enabled: O } = (0, b.zi)(n?.id ?? q.dJq);
-    if (null == n) return null;
+    if (null == n || null == P) return null;
     let T = [{ value: z.SP, label: B.intl.string(B.t.Cla0re) }];
     P[_.I6].forEach((e) => {
         let { channel: t } = e;
