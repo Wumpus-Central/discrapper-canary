@@ -360,6 +360,7 @@ let r = new Set([
         839: { is_server_arbitrated: !1 },
         840: { is_server_arbitrated: !1 },
         841: { is_server_arbitrated: !0 },
+        845: { is_server_arbitrated: !0 },
     };
 function s(e) {
     return a[e]?.is_server_arbitrated === !0;
