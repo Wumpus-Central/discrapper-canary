@@ -1,151 +1,153 @@
-(n.d(t, { A: () => h }), n(321073), n(134528), n(947204));
+(n.d(t, { A: () => g }), n(321073), n(134528), n(947204));
 var l = n(477900),
     i = n(582128),
     a = n(503698),
     r = n.n(a),
-    u = n(390870);
-let s = 1e3 / 30,
-    o = [
+    u = n(148087),
+    s = n(390870);
+let o = 1e3 / 30,
+    d = [
         { hz: 0.285, stagger: 0.17, weight: 0.62, salt: 47 },
         { hz: 0.1245, stagger: -0.29, weight: 0.38, salt: 91 },
     ],
-    d = 2 * Math.PI;
-function c(e, t) {
+    c = 2 * Math.PI;
+function f(e, t) {
     let n = Math.imul(e, 0x165667b1) + Math.imul(t, 0x27d4eb2f);
     return (((n = Math.imul(n ^ (n >>> 13), 0x4bf19f61)) ^ (n >>> 16)) >>> 0) / 0xffffffff;
 }
-function f() {
-    let e = i.useRef(null);
+function p() {
+    let e = i.useRef(null),
+        t = (0, u.A)();
     return (
         i.useEffect(() => {
-            let t = e.current,
-                n = t?.getContext("2d");
-            if (null == t || null == n || !document.documentElement.classList.contains("full-motion")) return;
-            let l = getComputedStyle(t).getPropertyValue("color").trim(),
-                i = t.closest('[role="group"]'),
-                a = i?.querySelector("[data-conjure-effort-handle]") ?? null,
-                r = 0,
-                u = [],
-                f = 0,
+            let n = e.current,
+                l = n?.getContext("2d");
+            if (null == n || null == l || !t || !document.documentElement.classList.contains("full-motion")) return;
+            let i = getComputedStyle(n).getPropertyValue("color").trim(),
+                a = n.closest('[role="group"]'),
+                r = a?.querySelector("[data-conjure-effort-handle]") ?? null,
+                u = 0,
+                s = [],
                 p = 0,
-                h = 8,
-                g = 9,
-                m = 0,
+                h = 0,
+                g = 8,
+                m = 9,
                 b = 0,
-                v = !1,
-                x = 0,
+                v = 0,
+                x = !1,
                 y = 0,
-                A = performance.now();
-            function C() {
-                if (null == n) return;
-                ((n.textAlign = "center"),
-                    (n.textBaseline = "middle"),
-                    (n.font = `${h}px 'AI Visual Identity Glyphs', monospace`));
+                A = 0,
+                C = performance.now();
+            function j() {
+                if (null == l) return;
+                ((l.textAlign = "center"),
+                    (l.textBaseline = "middle"),
+                    (l.font = `${g}px 'AI Visual Identity Glyphs', monospace`));
                 let e = 0;
                 for (let t of "123456789ABC") {
-                    let l = n.measureText(t);
-                    e = Math.max(e, l.actualBoundingBoxAscent + l.actualBoundingBoxDescent);
+                    let n = l.measureText(t);
+                    e = Math.max(e, n.actualBoundingBoxAscent + n.actualBoundingBoxDescent);
                 }
-                let t = e > 0 ? Math.max(4, (h * h) / e) : h;
-                n.font = `${t}px 'AI Visual Identity Glyphs', monospace`;
+                let t = e > 0 ? Math.max(4, (g * g) / e) : g;
+                l.font = `${t}px 'AI Visual Identity Glyphs', monospace`;
             }
-            function j() {
-                if (null == t || null == n) return;
-                let e = t.clientWidth,
-                    l = t.clientHeight;
-                if (e === f && l === p) return;
-                ((f = e), (g = (h = ((p = l) - 2 - 2) / 3) + 1));
-                let a = i?.querySelectorAll("[data-stop]"),
-                    s = a?.[a.length - 1];
-                (null != s && (r = s.offsetLeft + s.offsetWidth / 2),
-                    (u = null == a ? [] : Array.from(a, (e) => e.offsetLeft + e.offsetWidth / 2)));
+            function P() {
+                if (null == n || null == l) return;
+                let e = n.clientWidth,
+                    t = n.clientHeight;
+                if (e === p && t === h) return;
+                ((p = e), (m = (g = ((h = t) - 2 - 2) / 3) + 1));
+                let i = a?.querySelectorAll("[data-stop]"),
+                    r = i?.[i.length - 1];
+                (null != r && (u = r.offsetLeft + r.offsetWidth / 2),
+                    (s = null == i ? [] : Array.from(i, (e) => e.offsetLeft + e.offsetWidth / 2)));
                 let o = window.devicePixelRatio,
                     d = Number.isFinite(o) && o > 0 ? o : 1;
-                ((t.width = Math.round(f * d)), (t.height = Math.round(p * d)), n.setTransform(d, 0, 0, d, 0, 0), C());
+                ((n.width = Math.round(p * d)), (n.height = Math.round(h * d)), l.setTransform(d, 0, 0, d, 0, 0), j());
             }
-            (j(),
-                (m = requestAnimationFrame(function e(i) {
-                    if (((m = requestAnimationFrame(e)), i - b < s)) return;
-                    let C = i - b;
-                    if (((b = i), null == t || null == n || 0 === f || null == a)) return;
-                    let j = Number(a.dataset.effortCentre),
-                        P = a.hasAttribute("data-effort-live"),
-                        w = Number.isFinite(j) && Math.abs(j - r) > 16;
-                    if (!v && (!P || w)) return;
-                    x = Math.min(1, Math.max(0, x + ((P ? 1 : -1) * C) / 260));
-                    let M = t.getBoundingClientRect(),
-                        k = M.width > 0 ? M.width / f : 1,
-                        I = a.getBoundingClientRect(),
+            (P(),
+                (b = requestAnimationFrame(function e(t) {
+                    if (((b = requestAnimationFrame(e)), t - v < o)) return;
+                    let a = t - v;
+                    if (((v = t), null == n || null == l || 0 === p || null == r)) return;
+                    let j = Number(r.dataset.effortCentre),
+                        P = r.hasAttribute("data-effort-live"),
+                        w = Number.isFinite(j) && Math.abs(j - u) > 16;
+                    if (!x && (!P || w)) return;
+                    y = Math.min(1, Math.max(0, y + ((P ? 1 : -1) * a) / 260));
+                    let M = n.getBoundingClientRect(),
+                        k = M.width > 0 ? M.width / p : 1,
+                        I = r.getBoundingClientRect(),
                         E = (I.left - M.left) / k,
-                        N = (1 - Math.min(1, Math.abs(E + I.width / k / 2 - r) / 16)) * x;
+                        N = (1 - Math.min(1, Math.abs(E + I.width / k / 2 - u) / 16)) * y;
                     if (N < 0.01) {
-                        (v && n.clearRect(0, 0, f, p), (v = !1));
+                        (x && l.clearRect(0, 0, p, h), (x = !1));
                         return;
                     }
-                    (v || (y = i), (v = !0), n.clearRect(0, 0, f, p));
+                    (x || (A = t), (x = !0), l.clearRect(0, 0, p, h));
                     let S = E - 1 - (1 - N) * 16,
-                        _ = (i - A) / 1e3,
-                        R = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (i - y) / 1500))) ** 3),
-                        O = Math.ceil(S / g);
-                    n.fillStyle = l;
+                        _ = (t - C) / 1e3,
+                        R = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (t - A) / 1500))) ** 3),
+                        O = Math.ceil(S / m);
+                    l.fillStyle = i;
                     for (let e = 0; e < 3; e++) {
-                        let t = 72 * (0.825 + 0.35 * c(e, 11)),
-                            l = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(_ * d * 0.13 + c(e, 29) * d))) * R,
+                        let t = 72 * (0.825 + 0.35 * f(e, 11)),
+                            n = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(_ * c * 0.13 + f(e, 29) * c))) * R,
                             i = 0;
-                        for (let t of o) {
-                            let n = (e * t.stagger + 0.07 * c(e, t.salt)) * d;
-                            i += t.weight * Math.sin(_ * d * t.hz + n);
+                        for (let t of d) {
+                            let n = (e * t.stagger + 0.07 * f(e, t.salt)) * c;
+                            i += t.weight * Math.sin(_ * c * t.hz + n);
                         }
                         let a = 0.30000000000000004 + 0.7 * (1 + i),
-                            r = Math.floor((_ * t) / g),
-                            s = 1 + e * g + h / 2,
-                            f = h / 2 + 3,
-                            m = Math.abs(s - p / 2) < f;
+                            r = Math.floor((_ * t) / m),
+                            u = 1 + e * m + g / 2,
+                            o = g / 2 + 3,
+                            p = Math.abs(u - h / 2) < o;
                         for (let t = 0; t < O; t++) {
                             let i,
-                                o = S - (t * g + h / 2);
-                            if (o < 0) break;
-                            let d = (S - o) / l;
-                            if (d >= 1) break;
-                            let p = Math.min(6, Math.floor(7 * (1 - d ** a)));
+                                d = S - (t * m + g / 2);
+                            if (d < 0) break;
+                            let c = (S - d) / n;
+                            if (c >= 1) break;
+                            let h = Math.min(6, Math.floor(7 * (1 - c ** a)));
                             ((i =
-                                0.07 > c(t - r, e + 613)
+                                0.07 > f(t - r, e + 613)
                                     ? "123456".charAt(0)
-                                    : p < 6
-                                      ? "123456".charAt(p)
-                                      : "789ABC".charAt(Math.floor(6 * c(e, 977)))),
-                                (m && u.some((e) => Math.abs(o - e) < f)) ||
-                                    ((n.globalAlpha =
+                                    : h < 6
+                                      ? "123456".charAt(h)
+                                      : "789ABC".charAt(Math.floor(6 * f(e, 977)))),
+                                (p && s.some((e) => Math.abs(d - e) < o)) ||
+                                    ((l.globalAlpha =
                                         0.5 *
                                         (function (e) {
                                             let t = Math.min(1, Math.max(0, e));
                                             return t * t * (3 - 2 * t);
-                                        })((1 - d) / 0.34) *
+                                        })((1 - c) / 0.34) *
                                         N),
-                                    n.fillText(i, o, s)));
+                                    l.fillText(i, d, u)));
                         }
                     }
-                    n.globalAlpha = 1;
+                    l.globalAlpha = 1;
                 })));
-            let P = document.fonts;
-            null != P && P.load(`${h}px 'AI Visual Identity Glyphs'`, "123456789ABC").then(C, () => void 0);
-            let w = "u" < typeof ResizeObserver ? null : new ResizeObserver(j);
+            let w = document.fonts;
+            null != w && w.load(`${g}px 'AI Visual Identity Glyphs'`, "123456789ABC").then(j, () => void 0);
+            let M = "u" < typeof ResizeObserver ? null : new ResizeObserver(P);
             return (
-                w?.observe(t),
+                M?.observe(n),
                 () => {
-                    (cancelAnimationFrame(m), w?.disconnect());
+                    (cancelAnimationFrame(b), M?.disconnect());
                 }
             );
-        }, []),
-        (0, l.jsx)("canvas", { ref: e, className: u.Z, "aria-hidden": "true" })
+        }, [t]),
+        (0, l.jsx)("canvas", { ref: e, className: s.Z, "aria-hidden": "true" })
     );
 }
-var p = n(841479);
-function h(e) {
+var h = n(841479);
+function g(e) {
     let { activeIndex: t, stops: n, ariaLabel: a, disabled: u, onSelect: s, className: o } = e,
         d = i.useRef(null),
         c = i.useRef(null),
-        h = i.useRef(null),
+        f = i.useRef(null),
         [g, m] = i.useState(-1),
         b = i.useRef(!1),
         v = i.useRef(t),
@@ -155,7 +157,7 @@ function h(e) {
         C = t < 0 && g >= 0,
         j = i.useCallback((e, t, n, l) => {
             let i = c.current,
-                a = h.current;
+                a = f.current;
             null != i &&
                 null != a &&
                 ("arrive" === l
@@ -317,23 +319,23 @@ function h(e) {
             );
         }, [x, y, j]),
         (0, l.jsx)("div", {
-            className: r()(p.u4, o),
+            className: r()(h.u4, o),
             role: "group",
             "aria-label": a,
             children: (0, l.jsxs)("div", {
                 ref: d,
-                className: p.Gb,
+                className: h.Gb,
                 children: [
                     (0, l.jsx)("span", {
-                        className: p.Ek,
+                        className: h.Ek,
                         "aria-hidden": "true",
-                        children: (0, l.jsx)("span", { ref: h, className: r()(p.GS, { [p.eG]: t < 0 }) }),
+                        children: (0, l.jsx)("span", { ref: f, className: r()(h.GS, { [h.eG]: t < 0 }) }),
                     }),
                     (0, l.jsx)("span", {
                         ref: c,
                         "data-conjure-effort-handle": "",
                         "data-effort-live": t >= 0 ? "" : void 0,
-                        className: r()(p.p$, { [p.Jb]: A < 0, [p.jz]: C, [p.al]: t >= 0 && !u }),
+                        className: r()(h.p$, { [h.Jb]: A < 0, [h.jz]: C, [h.al]: t >= 0 && !u }),
                         "aria-hidden": "true",
                     }),
                     n.map((e, n) =>
@@ -345,19 +347,19 @@ function h(e) {
                                 "aria-pressed": n === t,
                                 "aria-label": e,
                                 disabled: u,
-                                className: p.ds,
+                                className: h.ds,
                                 onKeyDown: w,
                                 onPointerEnter: () => m(n),
                                 onPointerLeave: () => m((e) => (e === n ? -1 : e)),
                                 onFocus: () => m(n),
                                 onBlur: () => m((e) => (e === n ? -1 : e)),
                                 onClick: () => s(n),
-                                children: (0, l.jsx)("span", { className: p.Om, "aria-hidden": "true" }),
+                                children: (0, l.jsx)("span", { className: h.Om, "aria-hidden": "true" }),
                             },
                             e,
                         ),
                     ),
-                    (0, l.jsx)("span", { className: p.jN, "aria-hidden": "true", children: (0, l.jsx)(f, {}) }),
+                    (0, l.jsx)("span", { className: h.jN, "aria-hidden": "true", children: (0, l.jsx)(p, {}) }),
                 ],
             }),
         })

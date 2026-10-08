@@ -12,7 +12,7 @@ var a = n(683063),
     m = n(660183),
     f = n(59678);
 function h(e) {
-    let t = (0, s.GO)(e, { turnActive: !0 }),
+    let t = (0, s.Jf)(e, !0),
         n = (0, s.SY)(t.steps);
     return null != n
         ? (0, s.WQ)(n)
@@ -24,14 +24,14 @@ function g(e) {
             steps: n,
             fallbackLabel: h,
             live: g,
-            durationMs: x,
-            connectsDown: p = !1,
+            durationMs: p,
+            connectsDown: x = !1,
             closed: k = !1,
             tier: v,
         } = e,
         j = (0, s.SY)(n),
         b = (0, i.Q7)(m.intl.string(c.default.uk6jhJ), v),
-        _ = g ? void 0 : x,
+        _ = g ? void 0 : p,
         y = null != _ ? (0, r.nY)(_) : null != j ? (0, s.WQ)(j) : (h ?? m.intl.string(c.default.t8skVB)),
         S = n.length > 1 || n.some((e) => e.detail.length > 0 || e.screenshots.length > 0 || e.attachments.length > 0);
     return (0, l.jsx)(u.A, {
@@ -47,7 +47,7 @@ function g(e) {
         anchor: !0,
         live: g,
         settled: null != _ || (!g && k),
-        connectsDown: p,
+        connectsDown: x,
         detail: S
             ? (0, l.jsx)("ol", {
                   className: f.dO,

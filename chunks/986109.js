@@ -3,6 +3,7 @@ _.exports = {
     q3: "chatRowContinuation__0e5cb",
     tC: "chat-row-enter__0e5cb",
     xk: "chatRow__0e5cb",
+    g5: "chatRowSkipEntrance__0e5cb",
     jH: "chatLogListLoading__0e5cb",
     Ub: "historySpinner__0e5cb",
     Qo: "chatRowHighlighted__0e5cb",

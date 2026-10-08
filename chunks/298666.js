@@ -1,4 +1,4 @@
-(t.r(l), t.d(l, { default: () => ec }));
+(t.r(l), t.d(l, { default: () => ed }));
 var n = t(477900),
     s = t(582128),
     i = t(503698),
@@ -110,8 +110,8 @@ var S = t(834730),
     M = t(289873),
     _ = t(821609),
     F = t(364522),
-    z = t(145497),
-    T = t(967198),
+    T = t(145497),
+    z = t(967198),
     w = t(855793),
     R = t(260498),
     X = t(845079),
@@ -335,7 +335,7 @@ function el(e) {
                                         ((0, E.g7)(e.id), s());
                                     },
                                     children: [
-                                        (0, n.jsx)(z.Ay, { guild: e, iconSize: 32, className: V.$f }),
+                                        (0, n.jsx)(T.Ay, { guild: e, iconSize: 32, className: V.$f }),
                                         (0, n.jsx)(S.E, {
                                             variant: "text-sm/medium",
                                             color: "text-strong",
@@ -357,7 +357,7 @@ function et(e) {
     let { eligibleGuilds: l, forMeGuildId: t, onNavigate: s } = e,
         i = (0, p.qh)("VibegrationsProjectList"),
         a = (0, r.bG)([R.Ay], () => R.Ay.getProjectsFetchState()),
-        c = (0, r.bG)([T.A], () => T.A.getGuildId()),
+        c = (0, r.bG)([z.A], () => z.A.getGuildId()),
         d = l.find((e) => e.id === c)?.id ?? l[0]?.id ?? null,
         o = i.filter((e) => "idle" !== e.activity),
         u = i.filter((e) => "idle" === e.activity);
@@ -413,32 +413,33 @@ function et(e) {
               ],
           });
 }
-var en = t(559962);
-let es = "VibegrationsPopout";
-function ei(e) {
+var en = t(606128),
+    es = t(559962);
+let ei = "VibegrationsPopout";
+function ea(e) {
     let { onNavigate: l } = e,
         t = A.intl.string(G.default.uk6jhJ),
-        s = (0, p.z9)(es),
-        i = (0, p.rX)(es);
+        s = (0, p.z9)(ei),
+        i = (0, p.rX)(ei);
     return (0, n.jsxs)("div", {
-        className: en.kL,
+        className: a()(es.kL, en.T),
         children: [
-            (0, n.jsx)("div", { className: en._Q, children: (0, n.jsx)("span", { className: en.Tp }) }),
+            (0, n.jsx)("div", { className: es._Q, children: (0, n.jsx)("span", { className: es.Tp }) }),
             (0, n.jsx)("div", {
-                className: en.Qs,
+                className: es.Qs,
                 children: (0, n.jsx)(u.F, {
                     forceLevel: 1,
                     component: (0, n.jsxs)("header", {
-                        className: en.wx,
+                        className: es.wx,
                         children: [
                             (0, n.jsx)(m.D, {
                                 variant: "text-md/semibold",
                                 lineClamp: 1,
-                                className: en.DD,
+                                className: es.DD,
                                 children: t,
                             }),
                             (0, n.jsx)("div", {
-                                className: en.$s,
+                                className: es.$s,
                                 children: (0, n.jsx)(D, { guilds: s, forMeGuildId: i, onNavigate: l }),
                             }),
                         ],
@@ -449,7 +450,7 @@ function ei(e) {
         ],
     });
 }
-function ea(e) {
+function er(e) {
     let { children: l, targetElementRef: t } = e,
         [i, a] = s.useState(!1),
         r = s.useCallback(() => a(!1), []),
@@ -471,7 +472,7 @@ function ea(e) {
             renderPopout: () =>
                 (0, n.jsx)(j.l, {
                     "aria-label": A.intl.string(G.default.uk6jhJ),
-                    children: (0, n.jsx)(ei, { onNavigate: r }),
+                    children: (0, n.jsx)(ea, { onNavigate: r }),
                 }),
             children: (e, t) => {
                 let { isShown: n } = t;
@@ -480,12 +481,12 @@ function ea(e) {
         })
     );
 }
-var er = t(50172);
-function ec() {
+var ec = t(50172);
+function ed() {
     let e = s.useRef(null),
         l = (0, r.bG)([o.Ay], () => o.Ay.isAnyThinking()),
         t = A.intl.string(G.default.uk6jhJ);
-    return (0, n.jsx)(ea, {
+    return (0, n.jsx)(er, {
         targetElementRef: e,
         children: (s, i) =>
             (0, n.jsx)(d.A, {
@@ -498,7 +499,7 @@ function ec() {
                 onClick: s,
                 overlay: l
                     ? (0, n.jsx)(c.D, {
-                          className: a()(er.bI, { [er.lL]: i }),
+                          className: a()(ec.bI, en.T, { [ec.lL]: i }),
                           color: "currentColor",
                           size: "sm",
                           "aria-hidden": !0,

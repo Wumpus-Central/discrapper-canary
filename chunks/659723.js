@@ -1,14 +1,15 @@
-n.d(t, { A: () => g });
+n.d(t, { A: () => p });
 var r = n(477900),
     i = n(582128),
     l = n(17928),
     a = n(245179);
 n(321073);
-var o = n(725927);
+var o = n(148087),
+    u = n(725927);
 let s = [6, 8, 10, 12],
-    u = 0,
-    h = -1 / 0,
-    c = {
+    h = 0,
+    c = -1 / 0,
+    f = {
         home: { blob: 1, twink: 1, alpha: 0.7 },
         conversation: { blob: 1, twink: 1, alpha: 0.7 },
         thinking: { blob: 3, twink: 2.4, alpha: 0.7 },
@@ -17,18 +18,24 @@ function d(e, t, n) {
     let r = (0x165667b1 * e) ^ (0x27d4eb2f * t) ^ (0x7fffffff * n);
     return ((r = Math.imul(r ^ (r >>> 13), 0x4bf19f61)), (((r ^= r >>> 16) >>> 0) % 1e6) / 1e6);
 }
-let f = i.memo(function (e) {
+let m = i.memo(function (e) {
     let { state: t, orientation: n = "bottom" } = e,
         l = i.useRef(null),
         a = i.useRef(null),
-        f = i.useRef(t);
+        m = i.useRef(t);
     i.useEffect(() => {
-        f.current = t;
+        m.current = t;
     }, [t]);
-    let m = i.useRef(n);
+    let g = i.useRef(n);
+    i.useEffect(() => {
+        g.current = n;
+    }, [n]);
+    let p = (0, o.A)(),
+        v = i.useRef(p),
+        b = i.useRef(null);
     (i.useEffect(() => {
-        m.current = n;
-    }, [n]),
+        ((v.current = p), p && b.current?.());
+    }, [p]),
         i.useEffect(() => {
             let e = a.current,
                 t = l.current;
@@ -41,10 +48,10 @@ let f = i.memo(function (e) {
                         : 1,
                 i = 0,
                 o = 0,
-                g = [],
+                u = [],
                 p = 0,
-                v = 0,
-                b = (function () {
+                x = 0,
+                y = (function () {
                     let e = [];
                     for (let t = 0; t < 3; t++)
                         e.push({
@@ -57,15 +64,15 @@ let f = i.memo(function (e) {
                         });
                     return e;
                 })(),
-                x = c.home.blob,
-                y = c.home.twink,
-                M = c.home.alpha,
-                w = s[u],
-                j = [],
-                A = 0,
-                $ = Array(8).fill(""),
-                k = !1;
-            function R() {
+                M = f.home.blob,
+                w = f.home.twink,
+                j = f.home.alpha,
+                A = s[h],
+                $ = [],
+                k = 0,
+                R = Array(8).fill(""),
+                F = !1;
+            function N() {
                 (!(function () {
                     let {
                             r: e,
@@ -87,25 +94,25 @@ let f = i.memo(function (e) {
                         })();
                     for (let t = 0; t < 8; t++) {
                         let l = ((t + 0.5) / 8) * i;
-                        $[t] = `rgba(${e}, ${n}, ${r}, ${l})`;
+                        R[t] = `rgba(${e}, ${n}, ${r}, ${l})`;
                     }
                 })(),
-                    (k = "1" === getComputedStyle(t).getPropertyValue("--custom-conjure-glow-mirror").trim()));
+                    (F = "1" === getComputedStyle(t).getPropertyValue("--custom-conjure-glow-mirror").trim()));
             }
-            R();
-            let F = [];
-            for (let e = 0; e < 8; e++) F.push([]);
-            let N = new MutationObserver(R);
-            N.observe(document.documentElement, { attributes: !0, attributeFilter: ["class", "dir", "lang"] });
-            let P = -1;
-            function T() {
+            N();
+            let P = [];
+            for (let e = 0; e < 8; e++) P.push([]);
+            let T = new MutationObserver(N);
+            T.observe(document.documentElement, { attributes: !0, attributeFilter: ["class", "dir", "lang"] });
+            let E = -1;
+            function C() {
                 let e = Math.max(i, p),
-                    t = Math.max(o, v);
-                (e === p && t === v && P === w && g.length > 0) ||
+                    t = Math.max(o, x);
+                (e === p && t === x && E === A && u.length > 0) ||
                     ((p = e),
-                    (v = t),
-                    (P = w),
-                    (g = (function (e, t, n) {
+                    (x = t),
+                    (E = A),
+                    (u = (function (e, t, n) {
                         let r = [],
                             { cols: i, rows: l } = {
                                 cols: Math.ceil(Math.max(0, e) / n) + 1,
@@ -121,9 +128,9 @@ let f = i.memo(function (e) {
                                     freq: 0.25 + 1.5 * d(t, e, 3),
                                 });
                         return r;
-                    })(e, t, w)));
+                    })(e, t, A)));
             }
-            function E() {
+            function S() {
                 let t = e.getBoundingClientRect(),
                     l = t.width,
                     a = t.height;
@@ -133,46 +140,46 @@ let f = i.memo(function (e) {
                     (e.width = Math.max(1, Math.floor(i * r))),
                     (e.height = Math.max(1, Math.floor(o * r))),
                     null != n && (n.setTransform(r, 0, 0, r, 0, 0), (n.imageSmoothingEnabled = !1)),
-                    T(),
-                    I(0.001 * performance.now()));
+                    C(),
+                    V(0.001 * performance.now()));
             }
-            E();
-            let C = new ResizeObserver(E);
-            (C.observe(t), window.addEventListener("resize", E));
-            let S = performance.now(),
-                q = 0;
-            function I(e) {
+            S();
+            let q = new ResizeObserver(S);
+            (q.observe(t), window.addEventListener("resize", S));
+            let I = performance.now(),
+                O = 0;
+            function V(e) {
                 var t, r, l;
                 if (i <= 0 || o <= 0) return;
-                (n.clearRect(0, 0, i, o), (n.globalAlpha = M));
-                let a = w,
-                    s = "right" === m.current,
-                    u = s ? o : i,
-                    h = u <= 1e3 ? 1.2 : (1e3 / u) * 1.2;
-                for (let e = 0; e < 8; e++) F[e].length = 0;
-                for (let n = 0; n < g.length; n++) {
+                (n.clearRect(0, 0, i, o), (n.globalAlpha = j));
+                let a = A,
+                    s = "right" === g.current,
+                    h = s ? o : i,
+                    c = h <= 1e3 ? 1.2 : (1e3 / h) * 1.2;
+                for (let e = 0; e < 8; e++) P[e].length = 0;
+                for (let n = 0; n < u.length; n++) {
                     let r,
-                        l = g[n],
-                        u = (l.i * a) / i,
-                        c = (l.j * a) / o,
-                        { u: d, v: f } = ((t = k), s ? { u: c, v: t ? 1 - u : u } : { u: u, v: c }),
-                        m =
+                        l = u[n],
+                        h = (l.i * a) / i,
+                        f = (l.j * a) / o,
+                        { u: d, v: m } = ((t = F), s ? { u: f, v: t ? 1 - h : h } : { u: h, v: f }),
+                        g =
                             0.55 *
                             (function (e, t, n) {
                                 let r = (e - 0.5) * n,
                                     i = 1 - t,
                                     l = 1 - Math.sqrt(r * r + i * i * 1.8);
                                 return l < 0 ? 0 : l * l;
-                            })(d, f, h);
-                    for (let e = 0; e < b.length; e++) {
-                        let t = b[e],
+                            })(d, m, c);
+                    for (let e = 0; e < y.length; e++) {
+                        let t = y[e],
                             n = d - t.x,
-                            r = f - t.y,
+                            r = m - t.y,
                             i = (n * n + r * r) / (t.radius * t.radius);
-                        m += t.strength * Math.exp(-i) * 0.7;
+                        g += t.strength * Math.exp(-i) * 0.7;
                     }
-                    let p = 0.1 * Math.sin(e * l.freq * 1.85 * y + l.phase),
-                        v = m - (l.threshold + p);
+                    let p = 0.1 * Math.sin(e * l.freq * 1.85 * w + l.phase),
+                        v = g - (l.threshold + p);
                     1;
                     if (!(v <= -0.1)) {
                         if (v >= 0.1) r = 7;
@@ -180,13 +187,13 @@ let f = i.memo(function (e) {
                             let e = (v + 0.1) / 0.2;
                             r = Math.min(7, Math.floor(e * e * (3 - 2 * e) * 8));
                         }
-                        Number.isFinite(r) && F[r].push(l);
+                        Number.isFinite(r) && P[r].push(l);
                     }
                 }
                 for (let e = 0; e < 8; e++) {
-                    let t = F[e];
+                    let t = P[e];
                     if (0 !== t.length) {
-                        ((n.fillStyle = $[e]), n.beginPath());
+                        ((n.fillStyle = R[e]), n.beginPath());
                         for (let e = 0; e < t.length; e++) {
                             let i = t[e];
                             ((r = i.i * a),
@@ -203,86 +210,96 @@ let f = i.memo(function (e) {
                     }
                 }
             }
+            function z(e) {
+                if (!v.current) {
+                    O = 0;
+                    return;
+                }
+                A = s[h];
+                let t = e - I,
+                    n = Math.min(64, t);
+                ((I = e),
+                    !(function (e, t) {
+                        if (
+                            ++k < 30 ||
+                            e > 100 ||
+                            ($.push(e), $.length > 60 && $.shift(), $.length < 60 || t - c < 3e3 || h >= s.length - 1)
+                        )
+                            return;
+                        let n = 0;
+                        for (let e = 0; e < $.length; e++) n += $[e];
+                        let r = n / $.length;
+                        r <= 22 ||
+                            ((A = s[++h]),
+                            (c = t),
+                            (E = -1),
+                            C(),
+                            console.log(
+                                "[Vibegrations/glow-dither] perf degrade \u2192 spacing",
+                                A,
+                                "avg",
+                                r.toFixed(2),
+                                "ms",
+                            ));
+                    })(t, e));
+                let r = f[m.current] ?? f.home,
+                    i = 1 - Math.exp(-n / 80);
+                ((M += (r.blob - M) * i), (w += (r.twink - w) * i), (j += (r.alpha - j) * i));
+                let l = 1.5 * M;
+                for (let e = 0; e < y.length; e++) {
+                    let t = y[e];
+                    ((t.x += t.vx * n * l),
+                        (t.y += t.vy * n * l),
+                        (t.x < -0.1 || t.x > 1.1) && (t.vx *= -1),
+                        (t.y < 0.1 || t.y > 1.1) && (t.vy *= -1),
+                        (t.vx += (Math.random() - 0.5) * 2e-7 * n),
+                        (t.vy += (Math.random() - 0.5) * 2e-7 * n));
+                }
+                (V(0.001 * e), (O = requestAnimationFrame(z)));
+            }
             return (
-                (q = requestAnimationFrame(function e(t) {
-                    w = s[u];
-                    let n = t - S,
-                        r = Math.min(64, n);
-                    ((S = t),
-                        !(function (e, t) {
-                            if (
-                                ++A < 30 ||
-                                e > 100 ||
-                                (j.push(e),
-                                j.length > 60 && j.shift(),
-                                j.length < 60 || t - h < 3e3 || u >= s.length - 1)
-                            )
-                                return;
-                            let n = 0;
-                            for (let e = 0; e < j.length; e++) n += j[e];
-                            let r = n / j.length;
-                            r <= 22 ||
-                                ((w = s[++u]),
-                                (h = t),
-                                (P = -1),
-                                T(),
-                                console.log(
-                                    "[Vibegrations/glow-dither] perf degrade \u2192 spacing",
-                                    w,
-                                    "avg",
-                                    r.toFixed(2),
-                                    "ms",
-                                ));
-                        })(n, t));
-                    let i = c[f.current] ?? c.home,
-                        l = 1 - Math.exp(-r / 80);
-                    ((x += (i.blob - x) * l), (y += (i.twink - y) * l), (M += (i.alpha - M) * l));
-                    let a = 1.5 * x;
-                    for (let e = 0; e < b.length; e++) {
-                        let t = b[e];
-                        ((t.x += t.vx * r * a),
-                            (t.y += t.vy * r * a),
-                            (t.x < -0.1 || t.x > 1.1) && (t.vx *= -1),
-                            (t.y < 0.1 || t.y > 1.1) && (t.vy *= -1),
-                            (t.vx += (Math.random() - 0.5) * 2e-7 * r),
-                            (t.vy += (Math.random() - 0.5) * 2e-7 * r));
-                    }
-                    (I(0.001 * t), (q = requestAnimationFrame(e)));
-                })),
+                (b.current = () => {
+                    0 === O && ((I = performance.now()), (O = requestAnimationFrame(z)));
+                }),
+                (O = requestAnimationFrame(z)),
                 () => {
-                    (cancelAnimationFrame(q), C.disconnect(), N.disconnect(), window.removeEventListener("resize", E));
+                    ((b.current = null),
+                        cancelAnimationFrame(O),
+                        q.disconnect(),
+                        T.disconnect(),
+                        window.removeEventListener("resize", S));
                 }
             );
         }, []));
-    let g = o.P5;
+    let x = u.P5;
     return (
-        (g = "conversation" === t ? `${g} ${o.wY}` : "home" === t ? `${g} ${o.Qy}` : `${g} ${o.fR}`),
-        "right" === n && (g = `${g} ${o.L$}`),
+        (x = "conversation" === t ? `${x} ${u.wY}` : "home" === t ? `${x} ${u.Qy}` : `${x} ${u.fR}`),
+        "right" === n && (x = `${x} ${u.L$}`),
         (0, r.jsx)("div", {
             ref: l,
-            className: g,
+            className: x,
             "aria-hidden": "true",
-            children: (0, r.jsx)("canvas", { ref: a, className: "right" === n ? `${o.DX} ${o.l4}` : o.DX }),
+            children: (0, r.jsx)("canvas", { ref: a, className: "right" === n ? `${u.DX} ${u.l4}` : u.DX }),
         })
     );
 });
-var m = n(839806);
-function g(e) {
+var g = n(839806);
+function p(e) {
     let { projectId: t, orientation: n = "bottom", state: i } = e,
         o = (0, l.bG)([a.Ay], () => (a.Ay.isThinking(t) ? "thinking" : "conversation"), [t]),
-        s = i ?? o,
-        u = "right" === n ? `${m.ys} ${m.WR}` : m.ys;
+        u = i ?? o,
+        s = "right" === n ? `${g.ys} ${g.WR}` : g.ys;
     return (0, r.jsxs)("div", {
-        className: m.D1,
+        className: g.D1,
         "data-conjure-glow": !0,
         "aria-hidden": !0,
         children: [
             (0, r.jsxs)("div", {
-                className: u,
-                "data-state": s,
-                children: [(0, r.jsx)("div", { className: m.Fc }), (0, r.jsx)("div", { className: m.dW })],
+                className: s,
+                "data-state": u,
+                children: [(0, r.jsx)("div", { className: g.Fc }), (0, r.jsx)("div", { className: g.dW })],
             }),
-            (0, r.jsx)(f, { state: s, orientation: n }),
+            (0, r.jsx)(m, { state: u, orientation: n }),
         ],
     });
 }

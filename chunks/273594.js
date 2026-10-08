@@ -1,4 +1,4 @@
-n.d(s, { default: () => k });
+n.d(s, { default: () => E });
 var i = n(477900),
     l = n(582128),
     t = n(503698),
@@ -18,8 +18,9 @@ var i = n(477900),
     v = n(372795),
     b = n(261425),
     C = n(660183),
-    N = n(135422);
-function k(e) {
+    N = n(606128),
+    k = n(135422);
+function E(e) {
     let { transitionState: s, onClose: n, projectId: t, sessionId: f, sessionIds: x } = e,
         p = (0, d.yK)(
             [j.A],
@@ -32,22 +33,22 @@ function k(e) {
             ],
             [t, x],
         ),
-        [v, k] = l.useState(f),
-        [S, I] = l.useState(null),
+        [v, E] = l.useState(f),
+        [I, T] = l.useState(null),
         H = p.find((e) => e.session.id === v) ?? p[0];
-    (null != H && H.session.id !== v && k(H.session.id),
-        null != S && S !== H?.session.id && I(null),
+    (null != H && H.session.id !== v && E(H.session.id),
+        null != I && I !== H?.session.id && T(null),
         l.useEffect(() => {
-            if (null != S) return ((0, h.EG)(t, S, !0), () => (0, h.EG)(t, S, !1));
-        }, [t, S]));
-    let T = l.useRef([]);
+            if (null != I) return ((0, h.EG)(t, I, !0), () => (0, h.EG)(t, I, !1));
+        }, [t, I]));
+    let y = l.useRef([]);
     return (
         l.useEffect(() => {
-            T.current = p.map((e) => e.session.id);
+            y.current = p.map((e) => e.session.id);
         }, [p]),
         l.useEffect(
             () => () => {
-                for (let e of T.current) (0, h.gG)(t, e);
+                for (let e of y.current) (0, h.gG)(t, e);
             },
             [t],
         ),
@@ -56,17 +57,17 @@ function k(e) {
             onClose: n,
             "aria-label": C.intl.string(b.default.sGsShB),
             children: (0, i.jsxs)("div", {
-                className: N.lJ,
+                className: a()(k.lJ, N.T),
                 children: [
                     (0, i.jsxs)("header", {
-                        className: N.wx,
+                        className: k.wx,
                         children: [
                             (0, i.jsx)(o.V, {
                                 type: "top",
                                 selectedItem: H?.session.id,
-                                onItemSelect: k,
+                                onItemSelect: E,
                                 "aria-label": C.intl.string(b.default.UjUsph),
-                                className: N.vR,
+                                className: k.vR,
                                 children: p.map((e) => {
                                     var s;
                                     let n;
@@ -82,15 +83,15 @@ function k(e) {
                                                     { title: n },
                                                 )),
                                             children: (0, i.jsxs)("span", {
-                                                className: N.Gn,
+                                                className: k.Gn,
                                                 children: [
-                                                    (0, i.jsx)("span", { className: a()(N.W9, e.ended && N.oM) }),
+                                                    (0, i.jsx)("span", { className: a()(k.W9, e.ended && k.oM) }),
                                                     (0, i.jsx)(c.E, {
                                                         tag: "span",
                                                         variant: "text-sm/medium",
                                                         color: "none",
                                                         lineClamp: 1,
-                                                        className: N.WT,
+                                                        className: k.WT,
                                                         children: (0, g.i)(e.session),
                                                     }),
                                                 ],
@@ -102,14 +103,14 @@ function k(e) {
                             }),
                             null == H || H.ended
                                 ? null
-                                : (0, i.jsx)(E, {
+                                : (0, i.jsx)(w, {
                                       projectId: t,
                                       sessionId: H.session.id,
-                                      inControl: S === H.session.id,
+                                      inControl: I === H.session.id,
                                       onTakeControl: () => {
-                                          ((0, h.EG)(t, H.session.id, !0), I(H.session.id));
+                                          ((0, h.EG)(t, H.session.id, !0), T(H.session.id));
                                       },
-                                      onHandBack: () => I(null),
+                                      onHandBack: () => T(null),
                                   }),
                             (0, i.jsx)(u.K, {
                                 onClick: n,
@@ -123,8 +124,8 @@ function k(e) {
                     null == H
                         ? null
                         : (0, i.jsx)(
-                              w,
-                              { projectId: t, tab: H, inControl: S === H.session.id, onHandBack: () => I(null) },
+                              S,
+                              { projectId: t, tab: H, inControl: I === H.session.id, onHandBack: () => T(null) },
                               H.session.id,
                           ),
                 ],
@@ -132,7 +133,7 @@ function k(e) {
         })
     );
 }
-function E(e) {
+function w(e) {
     let { projectId: s, sessionId: n, inControl: l, onTakeControl: t, onHandBack: a } = e,
         d = (0, h.HJ)(s, n),
         r = l && "granted" === d,
@@ -152,7 +153,7 @@ function E(e) {
         }),
     });
 }
-function w(e) {
+function S(e) {
     let { projectId: s, tab: n, inControl: t, onHandBack: d } = e,
         { session: r } = n,
         [o, u] = l.useState({ state: "connecting", hasFrame: !1 }),
@@ -165,9 +166,9 @@ function w(e) {
             t && (f || "denied" === x) && d();
         }, [t, f, x, d]),
         (0, i.jsx)("div", {
-            className: N.dZ,
+            className: k.dZ,
             children: (0, i.jsxs)("div", {
-                className: a()(N.dw, j && N._d),
+                className: a()(k.dw, j && k._d),
                 children: [
                     (0, i.jsx)(v.A, {
                         projectId: s,
@@ -175,14 +176,14 @@ function w(e) {
                         fps: 15,
                         interactive: j,
                         paused: f,
-                        className: a()(N.Ji, f && N.tl),
+                        className: a()(k.Ji, f && k.tl),
                         "aria-label": C.intl.formatToPlainString(b.default.rnwqXb, { name: (0, g.i)(r) }),
                         onStateChange: m,
                     }),
                     o.hasFrame || f
                         ? null
                         : (0, i.jsxs)("div", {
-                              className: N.Lw,
+                              className: k.Lw,
                               children: [
                                   (0, i.jsx)(p.y, {}),
                                   (0, i.jsx)(c.E, {
@@ -194,7 +195,7 @@ function w(e) {
                           }),
                     f
                         ? (0, i.jsx)("div", {
-                              className: a()(N.Lw, N.Hl),
+                              className: a()(k.Lw, k.Hl),
                               children: (0, i.jsx)(c.E, {
                                   variant: "text-md/medium",
                                   color: "text-strong",
