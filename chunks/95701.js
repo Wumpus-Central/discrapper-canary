@@ -433,7 +433,7 @@ class eg extends ep {
         return { ...this };
     }
     set(e, t) {
-        return this.merge(eT({ [e]: t }));
+        return this.merge({ [e]: t });
     }
     merge(e) {
         let t = null,
