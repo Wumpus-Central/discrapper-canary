@@ -101,6 +101,7 @@ var i,
         (a.GuildProfileGames = "guild_profile_games"),
         (a.GameInvitesChannel = "game_invites_channel"),
         (a.VoiceChannelGames = "voice_channel_games"),
+        (a.Frame = "frame"),
         a),
     h = (((s = {}).FullProfile = "full_profile"), (s.MiniProfile = "mini_profile"), s);
 function f() {
