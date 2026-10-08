@@ -1,133 +1,138 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => D });
 var i = n(17928),
     r = n(73153),
     a = n(334738),
-    s = n(940382),
-    l = n(617617),
-    o = n(280450),
-    d = n(734057),
-    c = n(808728),
-    u = n(696451),
-    _ = n(71393),
-    E = n(573163),
-    A = n(543465),
-    h = n(927813),
-    f = n(935208),
-    I = n(652215);
-let p = new Set(),
-    T = {},
+    s = n(874850),
+    l = n(940382),
+    o = n(617617),
+    d = n(280450),
+    c = n(734057),
+    u = n(808728),
+    _ = n(696451),
+    E = n(71393),
+    A = n(573163),
+    h = n(543465),
+    f = n(927813),
+    I = n(935208),
+    p = n(652215);
+let T = new Set(),
     m = {},
-    g = new Set();
-function S(e) {
-    return _.A.getGuild(e)?.features.has(I.GuildFeatures.COMMUNITY) === !0;
+    g = {},
+    S = new Set();
+function N(e) {
+    return E.A.getGuild(e)?.features.has(p.GuildFeatures.COMMUNITY) === !0;
 }
-function N() {
-    for (let e of (g.clear(), _.A.getGuildIds())) S(e) && g.add(e);
+function C() {
+    for (let e of (S.clear(), E.A.getGuildIds())) N(e) && S.add(e);
     return !1;
 }
-function C(e, t) {
-    let n = T[e];
+function O(e, t) {
+    let n = m[e];
     null != n &&
         null != t &&
         n.has(t) &&
-        S(e) &&
-        !d.A.getChannel(t)?.isThread() &&
-        null == E.Ay.ackMessageId(t) &&
-        0 === E.Ay.getMentionCount(t) &&
+        N(e) &&
+        !c.A.getChannel(t)?.isThread() &&
+        null == A.Ay.ackMessageId(t) &&
+        0 === A.Ay.getMentionCount(t) &&
         r.h.wait(() =>
             (0, a.ack)(
                 t,
                 {
-                    object: I.ZSU.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED,
-                    objectType: I.AnalyticsObjectTypes.ACK_AUTOMATIC,
+                    object: p.ZSU.ACK_RECENT_CHANNEL_NEW_CHANNEL_VIEWED,
+                    objectType: p.AnalyticsObjectTypes.ACK_AUTOMATIC,
                 },
                 !0,
                 !0,
-                f.default.atPreviousMillisecond(t),
+                I.default.atPreviousMillisecond(t),
             ),
         );
 }
-function O(e) {
-    if (null != T[e]) return;
-    let t = c.Ay.getChannels(e)[c.I6].map((e) => e.channel.id),
-        n = u.Ay.getMember(e, o.default.getId())?.joinedAt;
+function R(e) {
+    if (null != m[e]) return;
+    let t = u.Ay.getChannels(e)[u.I6].map((e) => e.channel.id),
+        n = _.Ay.getMember(e, d.default.getId())?.joinedAt;
     if (null == n) return;
-    T[e] = new Set();
+    m[e] = new Set();
     let i = new Date(n).getTime();
     0 !== t.length &&
-        ((T[e] = new Set(
+        ((m[e] = new Set(
             t.filter((t) => {
-                let n = f.default.extractTimestamp(t);
+                let n = I.default.extractTimestamp(t);
                 return (
-                    null == E.Ay.getTrackedAckMessageId(t) &&
-                    n > Date.now() - h.A.Millis.WEEK &&
-                    n > l.A.getGuildRecentsDismissedAt(e) &&
+                    null == A.Ay.getTrackedAckMessageId(t) &&
+                    n > Date.now() - f.A.Millis.WEEK &&
+                    n > o.A.getGuildRecentsDismissedAt(e) &&
                     n > i &&
-                    !A.Ay.isChannelOrParentOptedIn(e, t)
+                    !h.Ay.isChannelOrParentOptedIn(e, t)
                 );
             }),
         )),
-        (m[e] = Date.now()));
+        (g[e] = Date.now()));
 }
-function R() {
-    f.default.keys(T).forEach((e) => {
-        let t = T[e];
-        T[e] = new Set([...t].filter((t) => !A.Ay.isChannelOrParentOptedIn(e, t)));
+function L() {
+    I.default.keys(m).forEach((e) => {
+        let t = m[e];
+        m[e] = new Set([...t].filter((t) => !h.Ay.isChannelOrParentOptedIn(e, t)));
     });
 }
-class L extends i.Ay.Store {
+class y extends i.Ay.Store {
     static displayName = "NewChannelsStore";
     initialize() {
-        (this.waitFor(o.default, d.A, c.Ay, u.Ay, _.A, E.Ay, A.Ay, l.A), this.syncWith([A.Ay], R));
+        (this.waitFor(d.default, c.A, u.Ay, _.Ay, E.A, A.Ay, h.Ay, o.A), this.syncWith([h.Ay], L));
     }
     getNewChannelIds(e) {
-        return (null != e && null == T[e] && O(e), null != e ? (T[e] ?? p) : p);
+        null != e && null == m[e] && R(e);
+        let t = null != e ? (m[e] ?? T) : T;
+        return (0, s.EV)() ? t : new Set([...t].filter((e) => (0, s.G3)(c.A.getChannel(e))));
     }
     shouldIndicateNewChannel(e, t) {
         if (null == e) return !1;
-        let n = _.A.getGuild(e);
+        let n = E.A.getGuild(e);
         return (
             null != n &&
-            !!n.features.has(I.GuildFeatures.COMMUNITY) &&
-            (null != e && null == T[e] && O(e), T[e]?.has(t) && null == E.Ay.getTrackedAckMessageId(t))
+            !!n.features.has(p.GuildFeatures.COMMUNITY) &&
+            (null != e && null == m[e] && R(e),
+            !!m[e]?.has(t) && !!(0, s.G3)(c.A.getChannel(t)) && null == A.Ay.getTrackedAckMessageId(t))
         );
     }
 }
-let y = new L(r.h, {
+let D = new y(r.h, {
     BULK_CLEAR_RECENTS: function (e) {
         let { guildId: t, channelIds: n } = e;
-        if (null == T[t]) return !1;
-        (n.forEach((e) => T[t].delete(e)), 0 === T[t].size && delete T[t]);
+        if (null == m[t]) return !1;
+        (n.forEach((e) => m[t].delete(e)), 0 === m[t].size && delete m[t]);
     },
     CHANNEL_ACK: () => !0,
+    CURRENT_USER_UPDATE: () => !0,
     CHANNEL_SELECT: function (e) {
         let { guildId: t, channelId: n } = e;
         if (null == t) return !1;
-        let i = T[t],
+        let i = m[t],
             r = !1;
-        return ((null == i || m[t] < Date.now() - h.A.Millis.HOUR) && (O(t), (r = !0)), null != n && C(t, n), r);
+        return ((null == i || g[t] < Date.now() - f.A.Millis.HOUR) && (R(t), (r = !0)), null != n && O(t, n), r);
     },
     SIDEBAR_VIEW_CHANNEL: function (e) {
         let { guildId: t, channelId: n, sidebarType: i } = e;
-        return null != t && i === s.PE.VIEW_CHANNEL && (C(t, n), !1);
+        return null != t && i === l.PE.VIEW_CHANNEL && (O(t, n), !1);
     },
     SIDEBAR_VIEW_GUILD: function (e) {
         let { guildId: t, baseChannelId: n } = e;
-        return null != t && (C(t, n), !1);
+        return null != t && (O(t, n), !1);
     },
-    CONNECTION_OPEN: N,
-    CACHE_LOADED: N,
+    CONNECTION_OPEN: C,
+    CACHE_LOADED: C,
     GUILD_CREATE: function (e) {
         let { guild: t } = e;
-        return (S(t.id) && g.add(t.id), !1);
+        return (N(t.id) && S.add(t.id), !1);
     },
     GUILD_UPDATE: function (e) {
         let { guild: t } = e,
-            n = S(t.id);
-        if (n && !g.has(t.id)) {
-            g.add(t.id);
-            let e = T[t.id],
-                n = _.A.getGuild(t.id),
+            n = N(t.id);
+        if (n && !S.has(t.id)) {
+            S.add(t.id);
+            let e = m[t.id],
+                n = E.A.getGuild(t.id),
                 i = new Set();
             return (
                 null != n &&
@@ -135,19 +140,19 @@ let y = new L(r.h, {
                     [n.rulesChannelId, n.publicUpdatesChannelId].forEach((t) => {
                         null != t && e.has(t) && i.add(t);
                     }),
-                (T[t.id] = i),
-                (m[t.id] = Date.now()),
+                (m[t.id] = i),
+                (g[t.id] = Date.now()),
                 !0
             );
         }
-        return (n || g.delete(t.id), !1);
+        return (n || S.delete(t.id), !1);
     },
     GUILD_DELETE: function (e) {
         let { guild: t } = e;
-        (delete T[t.id], g.delete(t.id));
+        (delete m[t.id], S.delete(t.id));
     },
     CHANNEL_CREATE: function (e) {
         let { channel: t } = e;
-        t.isVocal() || ((T[t.guild_id] = T[t.guild_id] ?? new Set()), T[t.guild_id].add(t.id));
+        t.isVocal() || ((m[t.guild_id] = m[t.guild_id] ?? new Set()), m[t.guild_id].add(t.id));
     },
 });

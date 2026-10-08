@@ -1483,7 +1483,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let tt = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eZ.A().log(
-    `[BUILD INFO] Release Channel: ${tt}, Build Number: 633340, Version Hash: 59fda666797ad9d95a94fa080383a053882435e4`,
+    `[BUILD INFO] Release Channel: ${tt}, Build Number: 633342, Version Hash: c13b77fddb3042da3b751e5f54f037f755949d85`,
 ),
     k.A.setTags({ appContext: Y.QCW }),
     eC.A.initBasic(),
@@ -25686,7 +25686,7 @@ let L$ = "isHideDevBanner",
                     className: tA()(LK.Wz, LK.mr),
                     children: [
                         (0, U.jsx)(LY, { className: LK.Kk }),
-                        ty.intl.format(ty.t.uyrfYF, { buildNumber: "633340" }),
+                        ty.intl.format(ty.t.uyrfYF, { buildNumber: "633342" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -49218,6 +49218,7 @@ function Ve(e, t) {
         null == e ||
         e.type !== t.type ||
         e.parent_id !== t.parent_id ||
+        (e.nsfw ?? !1) !== t.nsfw ||
         dK.A.computeBasicPermissions(e) !== dK.A.computeBasicPermissions(t)
     );
 }
@@ -49388,6 +49389,7 @@ let Vt = new (class {
                     guild_id: e.guild_id,
                     parent_id: e.parent_id,
                     basicPermissions: B7.A.asBasicFlag(dK.A.computePermissions(e)),
+                    nsfw: e.nsfw || void 0,
                 }))),
             ),
             B8.A.syncedBasicChannelsTransaction(t).put(e, !0),
