@@ -1,31 +1,37 @@
 n.d(t, {
-    $0: () => u,
-    A5: () => o,
-    Jq: () => d,
-    UZ: () => I,
-    Xr: () => m,
-    as: () => c,
-    cf: () => h,
-    gN: () => T,
-    mT: () => p,
-    nO: () => f,
-    xo: () => _,
+    $0: () => E,
+    A5: () => d,
+    Jq: () => u,
+    UZ: () => T,
+    Xr: () => S,
+    as: () => _,
+    cf: () => I,
+    gN: () => g,
+    kv: () => c,
+    mT: () => m,
+    nO: () => p,
+    xo: () => A,
 });
 var i = n(310784),
     r = n.n(i),
     a = n(508425),
-    s = n(317097);
-n(52133);
-var l = n(750656);
-function o(e, t) {
+    s = n(317097),
+    l = n(52133),
+    o = n(750656);
+function d(e, t) {
     if (null == e) return null;
     let { fontId: n, effectId: i, colors: r } = e;
     return { fontId: n, effectId: i, colors: r.length > 0 ? r : t[i] };
 }
-function d(e, t, n) {
-    return e === t || (0, l.ii)(n).some((t) => t[0] === e) ? e : t;
+function c(e, t) {
+    return null == e || null == t
+        ? null == e && null == t
+        : e.fontId === t.fontId && e.effectId === t.effectId && (0, l.v)(e.colors, t.colors);
 }
-function c(e) {
+function u(e, t, n) {
+    return e === t || (0, o.ii)(n).some((t) => t[0] === e) ? e : t;
+}
+function _(e) {
     switch (e) {
         case a.z.GRADIENT:
             return 2;
@@ -37,7 +43,7 @@ function c(e) {
             return 1;
     }
 }
-function u(e) {
+function E(e) {
     let t = r()(e).alpha(1),
         n = t.get("hsl.l"),
         i = Math.min(1, 1.2 * t.get("hsl.s")),
@@ -52,48 +58,48 @@ function u(e) {
         neonStroke: t.set("hsl.s", i).set("hsl.l", a).hex(),
     };
 }
-function _(e) {
+function A(e) {
     return ((e % 360) + 360) % 360;
 }
 (a.z.NEON, a.z.TOON, a.z.POP, a.z.GUMMY);
-let E = [
+let h = [
     { hueShift: -18, saturation: 0.54, lightness: 0.72 },
     { hueShift: -5, saturation: 0.66, lightness: 0.6 },
     { hueShift: 9, saturation: 0.56, lightness: 0.68 },
     { hueShift: 22, saturation: 0.6, lightness: 0.63 },
 ];
-function A(e) {
+function f(e) {
     let [t, n, i] = r()((0, s.Hl)(e)).hsl();
     return [Number.isNaN(t) ? 0 : t, n, i];
 }
-function h(e) {
-    let [t] = A(e);
-    return E.map((e) => {
+function I(e) {
+    let [t] = f(e);
+    return h.map((e) => {
         let { hueShift: n, saturation: i, lightness: a } = e;
         return r()
-            .hsl(_(t + n), i, a)
+            .hsl(A(t + n), i, a)
             .num();
     });
 }
-function f(e) {
-    let t = e[0];
-    if (null == t) return I(0);
-    let [n] = A(t);
-    return I(_(n - E[0].hueShift));
-}
-function I(e) {
-    return r().hsl(e, l.kp, l.PS).num();
-}
 function p(e) {
-    return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
+    let t = e[0];
+    if (null == t) return T(0);
+    let [n] = f(t);
+    return T(A(n - h[0].hueShift));
 }
-function T(e, t) {
-    let n = t[Math.floor(Math.random() * t.length)],
-        i = e[Math.floor(Math.random() * e.length)],
-        r = (0, l.ii)(n);
-    return { fontId: i, effectId: n, colors: [...r[Math.floor(Math.random() * r.length)]] };
+function T(e) {
+    return r().hsl(e, o.kp, o.PS).num();
 }
 function m(e) {
+    return null == e ? null : { fontId: e.font_id, effectId: e.effect_id, colors: e.colors };
+}
+function g(e, t) {
+    let n = t[Math.floor(Math.random() * t.length)],
+        i = e[Math.floor(Math.random() * e.length)],
+        r = (0, o.ii)(n);
+    return { fontId: i, effectId: n, colors: [...r[Math.floor(Math.random() * r.length)]] };
+}
+function S(e) {
     if (null == e) return !1;
     let t = e.replace(/[^\p{L}]/gu, "");
     return /\P{Script=Latin}/u.test(t);

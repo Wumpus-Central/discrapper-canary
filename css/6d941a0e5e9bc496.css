@@ -134,6 +134,21 @@
     border: 1px solid var(--border-muted)
 }
 
+.banner_e110e7 {
+    align-items: center;
+    gap: var(--space-8)
+}
+
+.banner_e110e7,
+.copy_e110e7 {
+    display: flex;
+    min-width: 0
+}
+
+.copy_e110e7 {
+    flex-direction: column
+}
+
 .modalRoot__39813 {
     position: relative;
     width: 800px
@@ -179,4 +194,4 @@
     margin-top: var(--space-24)
 }
 
-/*# sourceMappingURL=e408909637a9c04d.css.map*/
+/*# sourceMappingURL=6d941a0e5e9bc496.css.map*/

@@ -5529,7 +5529,7 @@
     "name": "2026-09-try-display-name-style",
     "kind": "user",
     "defaultConfig": {
-      "placement": "off"
+      "placement": null
     },
     "variations": {
       "0": {
@@ -5537,10 +5537,10 @@
         "variant": 0
       },
       "1": {
-        "placement": "top_level_menu_item"
+        "placement": null
       },
       "2": {
-        "placement": "submenu"
+        "placement": null
       }
     }
   },
