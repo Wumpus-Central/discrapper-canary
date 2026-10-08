@@ -7707,31 +7707,39 @@ function om(e) {
     });
 }
 function og(e) {
-    let { isLoading: t, staticEmoji: i, animatedEmoji: l, theme: s, guild: r, onEdit: a, newlyAddedEmojiIds: o } = e;
+    let { isLoading: t, staticEmoji: n, animatedEmoji: i, guild: l, onEdit: s, newlyAddedEmojiIds: r } = e;
     return t
         ? (0, p.jsx)(eO.y, { className: od.u1, type: eO.y.Type.SPINNING_CIRCLE })
-        : 0 === i.length && 0 === l.length
-          ? (0, p.jsxs)(aK.pp, {
-                theme: s,
+        : 0 === n.length && 0 === i.length
+          ? (0, p.jsxs)(sa.B, {
+                gap: 8,
                 className: od.Ie,
                 children: [
-                    (0, p.jsx)(aK.G8, { darkSrc: n(223685), lightSrc: n(388547), width: 272, height: 212 }),
-                    (0, p.jsx)(aK.SG, { note: el.intl.string(el.t.RBbtMy), children: el.intl.string(el.t.lxsmBd) }),
+                    (0, p.jsx)(D.D, {
+                        variant: "heading-lg/semibold",
+                        color: "text-muted",
+                        children: el.intl.string(el.t.lxsmBd),
+                    }),
+                    (0, p.jsx)(G.E, {
+                        variant: "text-md/normal",
+                        color: "text-muted",
+                        children: el.intl.string(el.t.RBbtMy),
+                    }),
                 ],
             })
           : (0, p.jsxs)("div", {
                 children: [
                     (0, p.jsx)(ox, {
                         title: el.intl.string(el.t.sMOuuS),
-                        maxSlots: (0, a6.sN)(r),
-                        emojiCount: i.length,
-                        children: (0, p.jsx)(oh, { emojis: i, guild: r, onEdit: a, newlyAddedEmojiIds: o }),
+                        maxSlots: (0, a6.sN)(l),
+                        emojiCount: n.length,
+                        children: (0, p.jsx)(oh, { emojis: n, guild: l, onEdit: s, newlyAddedEmojiIds: r }),
                     }),
                     (0, p.jsx)(ox, {
                         title: el.intl.string(el.t.wWjQye),
-                        maxSlots: (0, a6.sN)(r),
-                        emojiCount: l.length,
-                        children: (0, p.jsx)(oh, { emojis: l, guild: r, onEdit: a, newlyAddedEmojiIds: o }),
+                        maxSlots: (0, a6.sN)(l),
+                        emojiCount: i.length,
+                        children: (0, p.jsx)(oh, { emojis: i, guild: l, onEdit: s, newlyAddedEmojiIds: r }),
                     }),
                 ],
             });
@@ -7840,22 +7848,21 @@ let oj = function () {
             i = (0, L.bG)([O.A], () => O.A.getGuild()),
             [l, s] = R.useState("");
         iW()(null != i, "ConnectedGuildSettingsEmoji must be rendered within a guild context");
-        let r = (0, L.bG)([ol.A], () => ol.A.theme),
-            { revision: a, emojis: o } = (0, L.cf)([az.A], () => ({
+        let { revision: r, emojis: a } = (0, L.cf)([az.A], () => ({
                 revision: az.A.getEmojiRevision(i.id),
                 emojis: az.A.getEmojis(i.id),
             })),
-            d = (0, na.Ay)(a),
-            [c, u] = R.useState(!1),
-            [m, g] = R.useState(!1),
-            x = R.useRef(null),
+            o = (0, na.Ay)(r),
+            [d, c] = R.useState(!1),
+            [u, m] = R.useState(!1),
+            g = R.useRef(null),
             {
-                maxEmojiSlots: h,
-                availableEmojiSlots: E,
-                staticEmoji: j,
-                totalStaticEmoji: f,
-                animatedEmoji: N,
-                totalAnimatedEmoji: A,
+                maxEmojiSlots: x,
+                availableEmojiSlots: h,
+                staticEmoji: E,
+                totalStaticEmoji: j,
+                animatedEmoji: f,
+                totalAnimatedEmoji: N,
             } = (function (e) {
                 let { guild: t } = e;
                 if (null == t)
@@ -7884,31 +7891,31 @@ let oj = function () {
                     totalAnimatedEmoji: s.length,
                 };
             })({ guild: i }),
-            [I, S] = R.useState(null);
+            [A, I] = R.useState(null);
         (R.useEffect(() => {
-            c && null !== x.current && ((0, C.closeModal)(x.current), (x.current = null));
-        }, [c]),
+            d && null !== g.current && ((0, C.closeModal)(g.current), (g.current = null));
+        }, [d]),
             R.useEffect(() => {
                 ou(i.id);
             }, [i.id]),
             R.useEffect(() => {
-                null != d && d < a && ou(i.id);
-            }, [a, d, i.id]),
+                null != o && o < r && ou(i.id);
+            }, [r, o, i.id]),
             R.useEffect(() => {
-                if (null != o && null == I) return void S(o);
-            }, [o, I]));
-        let _ = R.useMemo(
+                if (null != a && null == A) return void I(a);
+            }, [a, A]));
+        let S = R.useMemo(
                 () =>
-                    null == I
+                    null == A
                         ? new Set()
                         : new Set(
                               P()
-                                  .differenceBy(o, I, "id")
+                                  .differenceBy(a, A, "id")
                                   .map((e) => e.id),
                           ),
-                [o, I],
+                [a, A],
             ),
-            v = R.useCallback(
+            _ = R.useCallback(
                 function () {
                     let { emoji: e } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
                     null != e
@@ -7927,7 +7934,7 @@ let oj = function () {
                 },
                 [i],
             );
-        async function T(e, t, n) {
+        async function v(e, t, n) {
             if (null == i) return;
             let s = await (0, a4.W)({
                 data: e,
@@ -7941,20 +7948,20 @@ let oj = function () {
             if ("object" != typeof s || !("id" in s)) return s;
             oo.X({ emojiId: s.id, userImage: { data: e, file: t, image: n } });
         }
-        async function b(e) {
+        async function T(e) {
             null == i ||
                 (s((0, aY.A)()),
                 sh.default.track(ei.HAw.EMOJI_UPLOAD_STARTED, { guild_id: i.id, upload_id: l }),
-                await (0, aJ.UD)(e, T),
-                u(!0));
+                await (0, aJ.UD)(e, v),
+                c(!0));
         }
-        async function y(e) {
-            x.current = await (0, C.openModalLazy)(async () => {
+        async function b(e) {
+            g.current = await (0, C.openModalLazy)(async () => {
                 let { default: t } = await Promise.all([n.e("886895"), n.e("817259")]).then(n.bind(n, 897126));
-                return (n) => (0, p.jsx)(t, { processFiles: () => b(e), ...n });
+                return (n) => (0, p.jsx)(t, { processFiles: () => T(e), ...n });
             });
         }
-        let M = R.useCallback(
+        let y = R.useCallback(
                 async (e, n, l) => {
                     (await (0, a3.f)({
                         userImage: { data: e, file: n, image: l },
@@ -7965,11 +7972,11 @@ let oj = function () {
                 },
                 [i.id],
             ),
-            k = (0, a2.w)(i);
+            M = (0, a2.w)(i);
         return (0, p.jsxs)("div", {
             className: od.Gi,
             children: [
-                0 === E ? null : (0, p.jsx)(a$, { className: od.Lc, onDrop: y }),
+                0 === h ? null : (0, p.jsx)(a$, { className: od.Lc, onDrop: b }),
                 (0, p.jsxs)(sa.B, {
                     gap: 20,
                     children: [
@@ -7982,15 +7989,15 @@ let oj = function () {
                                 }),
                                 (0, p.jsx)(G.E, {
                                     variant: "text-md/normal",
-                                    children: el.intl.format(el.t.TA1BR0, { count: h }),
+                                    children: el.intl.format(el.t.TA1BR0, { count: x }),
                                 }),
                             ],
                         }),
-                        (0, p.jsx)(oE, { guild: i, staticEmojiCount: f, animatedEmojiCount: A }),
+                        (0, p.jsx)(oE, { guild: i, staticEmojiCount: j, animatedEmojiCount: N }),
                         (0, p.jsxs)("div", {
                             className: od.xp,
                             children: [
-                                k &&
+                                M &&
                                     (0, p.jsx)(z.p, {
                                         messageType: z.Y.INFO,
                                         children: el.intl.format(el.t.uMkfTo, {
@@ -8009,13 +8016,13 @@ let oj = function () {
                                     onClick: function () {
                                         e.current?.activateUploadDialogue();
                                     },
-                                    disabled: m,
+                                    disabled: u,
                                 }),
                                 (0, p.jsx)("div", {
                                     className: od.Fg,
                                     children: (0, p.jsx)(
                                         aJ.Ay,
-                                        { ref: e, onChange: M, setLoading: g, disabled: m },
+                                        { ref: e, onChange: y, setLoading: m, disabled: u },
                                         t.current,
                                     ),
                                 }),
@@ -8023,15 +8030,14 @@ let oj = function () {
                             ],
                         }),
                         (0, p.jsx)(og, {
-                            isLoading: null == o,
-                            staticEmoji: j,
-                            animatedEmoji: N,
+                            isLoading: null == a,
+                            staticEmoji: E,
+                            animatedEmoji: f,
                             guild: i,
-                            theme: r,
                             onEdit: function (e) {
-                                return v({ emoji: e });
+                                return _({ emoji: e });
                             },
-                            newlyAddedEmojiIds: _,
+                            newlyAddedEmojiIds: S,
                         }),
                     ],
                 }),

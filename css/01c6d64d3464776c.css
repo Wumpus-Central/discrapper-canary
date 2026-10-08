@@ -169,26 +169,9 @@
     padding: 0
 }
 
-.iconContainer__1b24f {
-    margin-bottom: 16px;
-    position: relative
-}
-
-.icon__1b24f {
-    background-color: var(--background-base-low);
-    border-radius: 80px;
-    color: var(--interactive-text-default);
-    display: inline-block;
-    padding: 22px
-}
-
-.compact__1b24f .icon__1b24f {
-    padding: 10px
-}
-
-.stars__1b24f {
-    inset-inline-start: -10px;
-    position: absolute
+.illustration__1b24f {
+    display: flex;
+    margin-bottom: 12px
 }
 
 .header__1b24f {
@@ -199,4 +182,4 @@
     margin-top: 24px
 }
 
-/*# sourceMappingURL=05778eb7d233082b.css.map*/
+/*# sourceMappingURL=01c6d64d3464776c.css.map*/
