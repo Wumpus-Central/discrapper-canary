@@ -48,8 +48,8 @@ var L = n(739187),
     W = n(376728),
     q = n(279208),
     $ = n(189883),
-    X = n(237309),
-    Y = n(957565),
+    Y = n(237309),
+    X = n(957565),
     Q = n(297264),
     K = n(625903),
     J = n(689175),
@@ -430,7 +430,7 @@ function eM() {
         x(!0);
         try {
             let e = await W.Ay.createFriendInvite(null, em.PE1.ADD_FRIENDS_POPOUT);
-            (0, Y.C)(
+            (0, X.C)(
                 (0, q.A)(e.code),
                 () => (0, L.P)((0, _.o)(ep.intl.string(ep.t.tBOSx4), T.Ck.SUCCESS)),
                 () => (0, L.P)((0, _.o)(ep.intl.string(ep.t.R0RpRX), T.Ck.FAILURE)),
@@ -477,11 +477,11 @@ function eM() {
                         onSubmit: function (e) {
                             (e.preventDefault(),
                                 t({ type: "SENDING" }),
-                                (0, X.Ay)({
+                                (0, Y.Ay)({
                                     discordTag: a,
                                     note: h && "" !== u ? u : void 0,
                                     location: "Add Friend Popout",
-                                    errorUxConfig: X.gB.SHOW_ONLY_IF_ACTION_NEEDED,
+                                    errorUxConfig: Y.gB.SHOW_ONLY_IF_ACTION_NEEDED,
                                 })
                                     .then((e) => {
                                         (t({ type: "SUCCESS", text: e }), o(""), c(""));
@@ -517,7 +517,7 @@ function eM() {
                                             (c(e), t({ type: "RESET" }));
                                         },
                                         helperText: ep.intl.string(ep.t.UtfQNw),
-                                        maxLength: X.XG,
+                                        maxLength: Y.XG,
                                         showCharacterCount: !0,
                                         rows: 3,
                                         placeholder: ep.intl.string(ep.t.bTMtdN),
@@ -708,8 +708,8 @@ var eB = n(837381),
     eW = n(736347),
     eq = n(599026),
     e$ = n(683063),
-    eX = n(687966),
-    eY = n(432017),
+    eY = n(687966),
+    eX = n(432017),
     eQ = n(31300),
     eK = n(442433),
     eJ = n(566903),
@@ -774,9 +774,9 @@ function tr(e) {
                 switch (e.type) {
                     case em.$pd.PLAYING:
                     case em.$pd.COMPETING:
-                        return { Icon: eX.GameControllerIcon, text: n };
+                        return { Icon: eY.GameControllerIcon, text: n };
                     case em.$pd.LISTENING:
-                        return { Icon: eY.T, text: n };
+                        return { Icon: eX.T, text: n };
                     case em.$pd.WATCHING:
                         return { Icon: eQ.k, text: n };
                     case em.$pd.CUSTOM_STATUS:
@@ -953,7 +953,7 @@ function to(e) {
               gap: 4,
               fullWidth: !1,
               children: [
-                  t.icon,
+                  null != t.icon && (0, l.jsx)("div", { className: ts.LY, children: t.icon }),
                   (0, l.jsx)(R.E, {
                       variant: "text-xs/normal",
                       color: t.textColor,
@@ -1268,14 +1268,14 @@ var tV = n(983851),
     tW = n(47167),
     tq = n(977997),
     t$ = n(798350);
-function tX(e) {
+function tY(e) {
     let { row: t, sectionType: n } = e,
         i = (0, C.bG)([tl.A], () => tl.A.getChannel(t.channelId), [t.channelId]),
         s = (0, tW.Ay)(i) ?? ep.intl.string(ep.t["/YzI63"]),
         a = (0, e6.gU)(i) ?? tV.H,
         o = (0, C.bG)([tq.A], () => tq.A.isInChannel(t.channelId))
             ? null
-            : (0, l.jsx)(tY, { channelId: t.channelId, channelName: s });
+            : (0, l.jsx)(tX, { channelId: t.channelId, channelName: s });
     return (0, l.jsxs)(v.B, {
         gap: 4,
         padding: { top: 16, bottom: 16 },
@@ -1297,7 +1297,7 @@ function tX(e) {
         ],
     });
 }
-function tY(e) {
+function tX(e) {
     let { channelId: t, channelName: n } = e;
     return (0, l.jsx)(eB.tG, {
         id: `voice:${t}:join`,
@@ -1382,7 +1382,7 @@ function tJ() {
                 return null == a || null == s
                     ? null
                     : a.type === eW.VZ.VOICE_GROUP
-                      ? (0, l.jsx)(tX, { row: a, sectionType: s.type }, a.key)
+                      ? (0, l.jsx)(tY, { row: a, sectionType: s.type }, a.key)
                       : (0, l.jsx)(tr, { row: a, sectionType: s.type }, a.userId);
             },
             [e, r],
