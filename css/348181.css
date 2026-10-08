@@ -2204,6 +2204,11 @@
     }
 }
 
+:where(.contain_f90522) {
+    -o-object-fit: contain;
+    object-fit: contain
+}
+
 .wrapper_b76614 {
     align-items: center;
     display: flex;
@@ -3141,4 +3146,4 @@
     z-index: 2
 }
 
-/*# sourceMappingURL=878311.e529f661c8cd0dcf.css.map*/
+/*# sourceMappingURL=348181.c160ab9de555d350.css.map*/

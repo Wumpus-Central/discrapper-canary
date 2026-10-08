@@ -1,40 +1,40 @@
-e.d(t, { default: () => S });
-var i = e(477900),
-    a = e(582128),
-    n = e(935399),
-    d = e(400829),
-    c = e(22856),
-    r = e(224640),
-    l = e(315629),
-    o = e(20742),
-    x = e(297264),
-    h = e(834730),
-    m = e(821609),
-    p = e(403581),
-    b = e(501419),
-    g = e(975571),
-    j = e(87719),
-    u = e(652215),
-    f = e(49999),
-    v = e(660183),
-    k = e(431901);
-function S(s) {
-    let { renderModalProps: t, dismissibleContent: e, markAsDismissed: S } = s,
-        { onClose: w, transitionState: C } = t,
-        { headingId: N } = (0, c.k)();
+t.d(e, { default: () => N });
+var i = t(477900),
+    a = t(582128),
+    n = t(935399),
+    d = t(122074),
+    c = t(22856),
+    r = t(224640),
+    l = t(315629),
+    o = t(20742),
+    x = t(297264),
+    h = t(834730),
+    m = t(821609),
+    p = t(403581),
+    b = t(501419),
+    g = t(975571),
+    u = t(87719),
+    f = t(652215),
+    j = t(49999),
+    v = t(660183),
+    k = t(431901);
+function N(s) {
+    let { renderModalProps: e, dismissibleContent: t, markAsDismissed: N } = s,
+        { onClose: S, transitionState: w } = e,
+        { headingId: C } = (0, c.k)();
     return (
         (0, n.Ay)(() => {
-            (0, b.Wx)(e);
+            (0, b.Wx)(t);
         }),
         a.useEffect(
             () => () => {
-                S(f.i.AUTO_DISMISS);
+                N(j.i.AUTO_DISMISS);
             },
-            [S],
+            [N],
         ),
         (0, i.jsx)(r.d, {
-            transitionState: C,
-            onClose: w,
+            transitionState: w,
+            onClose: S,
             size: "md",
             paddingSize: "lg",
             children: (0, i.jsxs)(l.h, {
@@ -50,7 +50,7 @@ function S(s) {
                         className: k.Qs,
                         children: [
                             (0, i.jsx)(x.D, {
-                                id: N,
+                                id: C,
                                 variant: "nitro-md",
                                 color: "text-strong",
                                 className: k.wx,
@@ -68,7 +68,7 @@ function S(s) {
                                     (0, i.jsx)(m.$, {
                                         variant: "secondary",
                                         size: "md",
-                                        onClick: () => window.open(g.A.getArticleURL(u.MVz.PREMIUM_DETAILS), "_blank"),
+                                        onClick: () => window.open(g.A.getArticleURL(f.MVz.PREMIUM_DETAILS), "_blank"),
                                         text: v.intl.string(v.t.WHWwCY),
                                     }),
                                     (0, i.jsx)(m.$, {
@@ -76,7 +76,7 @@ function S(s) {
                                         size: "md",
                                         icon: p.t,
                                         text: v.intl.string(v.t["mHF+AF"]),
-                                        onClick: () => (0, j.x)(w),
+                                        onClick: () => (0, u.x)(S),
                                     }),
                                 ],
                             }),
