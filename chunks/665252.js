@@ -109,9 +109,9 @@ let R = new k(b.h, {
 var O = n(994500),
     L = n(287809),
     w = n(562153),
-    P = n(427262),
-    M = n(435558),
-    D = n.n(M),
+    M = n(427262),
+    P = n(435558),
+    D = n.n(P),
     U = n(111159),
     V = n(952270),
     W = n(320448),
@@ -477,9 +477,9 @@ var ep = n(998812);
 function eg(e) {
     let { guildId: t, channelId: n, authorUser: l, mostRecentPlayedUser: s } = e,
         o = r.useMemo(() => l?.getAvatarURL(t, (0, c.FT)(c._3.SIZE_32)), [l, t]),
-        u = r.useMemo(() => w.Ay.getNickname(t, n, l) ?? P.Ay.getName(l), [l, t, n]),
+        u = r.useMemo(() => w.Ay.getNickname(t, n, l) ?? M.Ay.getName(l), [l, t, n]),
         h = r.useMemo(() => s?.getAvatarURL(t, (0, c.FT)(c._3.SIZE_32)), [s, t]),
-        m = r.useMemo(() => (null != s ? (w.Ay.getNickname(t, n, s) ?? P.Ay.getName(s)) : null), [s, t, n]);
+        m = r.useMemo(() => (null != s ? (w.Ay.getNickname(t, n, s) ?? M.Ay.getName(s)) : null), [s, t, n]);
     return (0, i.jsxs)("div", {
         className: ep.yA,
         children: [
@@ -547,9 +547,9 @@ function ex(e) {
         w = r.useCallback(() => {
             (0, A.CZ)(l, n, k);
         }, [k, n, l]),
-        P = (0, u.bG)([C.A], () => C.A.isPlayingSound(l.soundId), [l]);
+        M = (0, u.bG)([C.A], () => C.A.isPlayingSound(l.soundId), [l]);
     if (null == t || null == T) return null;
-    let { emojiId: M, emojiName: D, emojiAnimated: U, name: V } = l;
+    let { emojiId: P, emojiName: D, emojiAnimated: U, name: V } = l;
     return (0, i.jsxs)("div", {
         className: a()(ep.Iv, { [ep.E$]: d }),
         style: { height: 36 },
@@ -585,15 +585,15 @@ function ex(e) {
             (0, i.jsx)(m.m, {
                 text: d ? el.intl.string(el.t.VqNHoS) : null,
                 children: (0, i.jsxs)(f.D, {
-                    className: a()(ep.nG, { [ep.Tz]: P, [ep.Jx]: d }),
+                    className: a()(ep.nG, { [ep.Tz]: M, [ep.Jx]: d }),
                     onClick: d ? () => null : w,
                     "aria-label": el.intl.formatToPlainString(el.t.VOmeSq, { name: V }),
                     children: [
-                        (null != D || null != M) &&
+                        (null != D || null != P) &&
                             (0, i.jsx)(x.A, {
                                 size: "reaction",
                                 className: ep.FA,
-                                emojiId: M,
+                                emojiId: P,
                                 emojiName: D,
                                 animated: U,
                             }),
@@ -665,7 +665,7 @@ function eE(e) {
         }, []);
     return (0, i.jsx)("div", {
         className: ep.ei,
-        style: { height: 126 },
+        style: { height: 42 * f.length },
         onMouseEnter: h,
         onMouseLeave: m,
         children: x((e, l) =>
