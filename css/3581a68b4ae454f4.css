@@ -28,7 +28,7 @@
 }
 
 .stepWrapperWithNextStep_a99139 .stepContent_a99139 {
-    margin-bottom: 12px
+    padding-bottom: 12px
 }
 
 .stepIndicator_a99139 {
@@ -68,6 +68,7 @@
 .stepConnector_a99139 {
     background-color: var(--interactive-background-selected);
     flex: 1 1 auto;
+    min-height: 12px;
     position: relative;
     width: 2px
 }
@@ -115,4 +116,4 @@
     color: transparent
 }
 
-/*# sourceMappingURL=9a04baa48a592d64.css.map*/
+/*# sourceMappingURL=3581a68b4ae454f4.css.map*/
