@@ -116,35 +116,29 @@ function b(e) {
                     pendingGiftCardWalletSelection: s,
                     setPendingGiftCardWalletSelection: c,
                 } = e,
-                {
-                    isCheckoutDataLoading: p,
-                    checkoutPaymentSources: m,
-                    hasCheckoutContextLoaded: h,
-                } = (0, C.t4)((e) => ({
+                { isCheckoutDataLoading: p, hasCheckoutContextLoaded: m } = (0, C.t4)((e) => ({
                     isCheckoutDataLoading: e.get("isCheckoutDataLoading"),
-                    checkoutPaymentSources: e.get("checkoutPaymentSources"),
                     hasCheckoutContextLoaded: e.get("hasCheckoutContextLoaded"),
                 })),
                 {
-                    dropdownPaymentSources: f,
-                    giftCardsEnabled: S,
-                    dropdownPaymentSourceId: E,
-                    handleDropdownPaymentSourceChange: y,
-                    giftCardCheckboxProps: I,
-                    walletCoversSubtotal: A,
-                    walletCoversTotal: g,
-                    isSubscriptionPaidByWallet: P,
-                    giftCardWallet: v,
-                    isGiftCardCreditsChecked: x,
-                    isWalletBalanceLoaded: _,
-                    handleGiftCardCreditsToggle: T,
-                    isSplitPaymentMode: N,
+                    dropdownPaymentSources: h,
+                    giftCardsEnabled: f,
+                    dropdownPaymentSourceId: S,
+                    handleDropdownPaymentSourceChange: E,
+                    giftCardCheckboxProps: y,
+                    walletCoversSubtotal: I,
+                    walletCoversTotal: A,
+                    isSubscriptionPaidByWallet: g,
+                    giftCardWallet: P,
+                    isGiftCardCreditsChecked: v,
+                    isWalletBalanceLoaded: x,
+                    handleGiftCardCreditsToggle: _,
+                    isSplitPaymentMode: T,
                 } = (0, o.Y0)({
-                    checkoutPaymentSources: m,
                     paymentSourceId: t,
                     setPaymentSourceId: n,
                     location: l ?? "BaseStatefulPaymentSourceSelector",
-                    isReady: h,
+                    isReady: m,
                     subscriptionPaymentSourceId: a,
                 });
             !(function (e) {
@@ -181,39 +175,39 @@ function b(e) {
                     }
                 }, [c, t, p, n, l, a, s, o, d]);
             })({
-                giftCardWallet: v,
-                isWalletBalanceLoaded: _,
-                walletCoversSubtotal: A,
-                isGiftCardCreditsChecked: x,
+                giftCardWallet: P,
+                isWalletBalanceLoaded: x,
+                walletCoversSubtotal: I,
+                isGiftCardCreditsChecked: v,
                 subscriptionPaymentSourceId: a,
-                handleGiftCardCreditsToggle: T,
+                handleGiftCardCreditsToggle: _,
                 pendingGiftCardWalletSelection: s,
                 setPendingGiftCardWalletSelection: c,
             });
-            let b = i.useMemo(() => {
-                    let e = f.find((e) => e.isDefault);
+            let N = i.useMemo(() => {
+                    let e = h.find((e) => e.isDefault);
                     return null != e ? e.id : void 0;
-                }, [f]),
-                j = (0, r.bG)([d.A], () => d.A.hidePersonalInformation ?? !1);
+                }, [h]),
+                b = (0, r.bG)([d.A], () => d.A.hidePersonalInformation ?? !1);
             return {
-                giftCardsEnabled: S,
-                giftCardCheckboxProps: I,
-                walletCoversSubtotal: A,
-                walletCoversTotal: g,
+                giftCardsEnabled: f,
+                giftCardCheckboxProps: y,
+                walletCoversSubtotal: I,
+                walletCoversTotal: A,
                 basePaymentSourceDropdownProps: i.useMemo(
                     () => ({
-                        selectedPaymentSourceId: E,
-                        paymentSources: f,
-                        defaultPaymentSourceId: b,
-                        hidePersonalInformation: j,
-                        onChange: y,
+                        selectedPaymentSourceId: S,
+                        paymentSources: h,
+                        defaultPaymentSourceId: N,
+                        hidePersonalInformation: b,
+                        onChange: E,
                         dropdownLoading: p,
                     }),
-                    [E, f, b, j, y, p],
+                    [S, h, N, b, E, p],
                 ),
-                isSubscriptionPaidByWallet: P,
-                hidePersonalInformation: j,
-                isSplitPaymentMode: N,
+                isSubscriptionPaidByWallet: g,
+                hidePersonalInformation: b,
+                isSplitPaymentMode: T,
             };
         })({
             paymentSourceId: j,

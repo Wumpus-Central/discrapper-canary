@@ -60,7 +60,7 @@ function f(e) {
             let e = R.find((e) => e.id === v);
             return null != e && !e.enabled;
         }, [R, O, v]),
-        G = (0, s.iB)({ checkoutPaymentSources: R, paymentSourceId: v, location: "CheckoutBaseReviewStep" }),
+        G = (0, s.iB)({ paymentSourceId: v, location: "CheckoutBaseReviewStep" }),
         { disablePurchase: F } = i.useMemo(() => {
             let e = { disablePurchase: G || _ === C.uH.DEV_STORYBOOK_CHECKOUT };
             return null != E

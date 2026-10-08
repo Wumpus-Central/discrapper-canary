@@ -1,19 +1,14 @@
-n.d(t, { N: () => o, h: () => c });
+n.d(t, { h: () => u });
 var r = n(582128),
     l = n(702841),
     i = n(642639),
-    s = n(202613),
-    a = n(277984),
-    u = n(176095);
-function o(e) {
-    return e.find((e) => e.source instanceof s.LQ) ?? null;
-}
-function c() {
-    let e = (0, i.t4)((e) => e.get("checkoutPaymentSources")),
-        t = r.useMemo(() => o(e)?.id, [e]);
+    s = n(277984),
+    a = n(176095);
+function u() {
+    let e = (0, i.t4)((e) => e.getGiftCardWallet()?.id);
     r.useEffect(() => {
-        null != t && (0, a.YP)(t);
-    }, [t]);
-    let n = (0, l.bG)([u.A], () => (null != t ? u.A.getBalance(t) : null), [t]);
-    return { giftCardBalance: null != n ? n.amount : null, giftCardCurrency: null != n ? n.currency : null };
+        null != e && (0, s.YP)(e);
+    }, [e]);
+    let t = (0, l.bG)([a.A], () => (null != e ? a.A.getBalance(e) : null), [e]);
+    return { giftCardBalance: null != t ? t.amount : null, giftCardCurrency: null != t ? t.currency : null };
 }
