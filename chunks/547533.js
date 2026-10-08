@@ -1481,7 +1481,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eK.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 632926, Version Hash: f7443bd7579374458dc9733ba64f233e8ddaf028`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 632928, Version Hash: 0932fa0ffcdbd672a6978690390c7cea6704e14e`,
 ),
     U.A.setTags({ appContext: V.QCW }),
     em.A.initBasic(),
@@ -3686,7 +3686,7 @@ let at = (0, ia.Fe)({
             Promise.all([
                 n.e("123727"),
                 n.e("6168"),
-                n.e("876090"),
+                n.e("931510"),
                 n.e("720141"),
                 n.e("875842"),
                 n.e("518954"),
@@ -3706,7 +3706,7 @@ let at = (0, ia.Fe)({
         createPromise: () =>
             Promise.all([
                 n.e("860350"),
-                n.e("238417"),
+                n.e("249169"),
                 n.e("657266"),
                 n.e("272396"),
                 n.e("865429"),
@@ -10786,7 +10786,8 @@ let _H =
                             n.e("172413"),
                             n.e("145006"),
                             n.e("33909"),
-                            n.e("238417"),
+                            n.e("249169"),
+                            n.e("754596"),
                             n.e("191601"),
                             n.e("401106"),
                             n.e("498589"),
@@ -25568,7 +25569,7 @@ let LU = "isHideDevBanner",
                     className: tc()(LP.Wz, LP.mr),
                     children: [
                         (0, v.jsx)(LM, { className: LP.Kk }),
-                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "632926" }),
+                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "632928" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -28665,9 +28666,9 @@ let vI = (0, tY.Fe)({
             Promise.all([
                 n.e("635338"),
                 n.e("6168"),
-                n.e("611577"),
-                n.e("238417"),
-                n.e("876090"),
+                n.e("163399"),
+                n.e("931510"),
+                n.e("50384"),
                 n.e("865429"),
                 n.e("720141"),
                 n.e("740826"),
@@ -28863,7 +28864,9 @@ let vI = (0, tY.Fe)({
                 n.e("377016"),
                 n.e("584996"),
                 n.e("651886"),
-                n.e("532872"),
+                n.e("303425"),
+                n.e("249169"),
+                n.e("653697"),
                 n.e("786830"),
                 n.e("873943"),
                 n.e("152263"),
@@ -29209,16 +29212,16 @@ let vI = (0, tY.Fe)({
                 n.e("464675"),
                 n.e("496914"),
                 n.e("736410"),
-                n.e("935412"),
                 n.e("81766"),
+                n.e("935412"),
                 n.e("926503"),
                 n.e("560250"),
                 n.e("261064"),
                 n.e("815341"),
                 n.e("256769"),
                 n.e("526274"),
-            ]).then(n.bind(n, 126790)),
-        webpackId: 126790,
+            ]).then(n.bind(n, 369219)),
+        webpackId: 369219,
         name: "VibegrationsScreen",
         renderLoader: vf,
     }),
@@ -35668,7 +35671,8 @@ let b8 = (0, ia.Fe)({
                 n.e("172413"),
                 n.e("145006"),
                 n.e("33909"),
-                n.e("238417"),
+                n.e("249169"),
+                n.e("754596"),
                 n.e("191601"),
                 n.e("401106"),
                 n.e("498589"),
@@ -39858,9 +39862,8 @@ function UX(e) {
             t.applicationId === UK.A.getBuilderPreviewApplicationId() || t.data.prefersPictureInPictureOnNavigateAway;
         switch (t.surface.type) {
             case UW.U.APP_CHANNEL:
-                if (t.surface.channelId === bs.kG) return n ? t : null;
-                return t;
             case UW.U.VOICE_CHANNEL:
+                if (t.surface.channelId === bs.kG) return n ? t : null;
                 return t;
             case UW.U.MAIN:
                 return n ? t : null;
@@ -46703,7 +46706,7 @@ let kS = {
                               ? (0, ue.XI)(s.guild_id, s.id, { pid: a.pid })
                               : (0, tK.openModalLazy)(async () => {
                                     let { default: e } = await Promise.all([
-                                        n.e("238417"),
+                                        n.e("249169"),
                                         n.e("473782"),
                                         n.e("553464"),
                                         n.e("130662"),
@@ -51466,7 +51469,7 @@ let H5 = (0, tY.Fe)({
         Promise.all([
             n.e("860350"),
             n.e("352456"),
-            n.e("238417"),
+            n.e("249169"),
             n.e("132073"),
             n.e("880150"),
             n.e("657266"),
@@ -53731,7 +53734,7 @@ let jZ = (0, ia.Fe)({
                 n.e("132073"),
                 n.e("702154"),
                 n.e("405689"),
-                n.e("238417"),
+                n.e("249169"),
                 n.e("238595"),
                 n.e("342551"),
                 n.e("827708"),
@@ -53765,7 +53768,7 @@ let jZ = (0, ia.Fe)({
     jQ = (0, ia.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("238417"),
+                n.e("249169"),
                 n.e("132073"),
                 n.e("414522"),
                 n.e("827708"),

@@ -1,11 +1,10 @@
-u.d(t, { NK: () => i, kZ: () => d, z3: () => l });
-var n = u(261425),
-    r = u(660183);
-let i = 221552 == u.j ? ["frame", "widget", "bot"] : null,
-    a = { frame: n.default.FKuG6X, widget: n.default.oOAVlP, bot: n.default.uE5z15 };
-function d(e) {
-    return r.intl.string(a[e]);
-}
-function l(e) {
-    return `conjure-preview-mode-panel-${e}`;
+e.d(u, { NK: () => i, XV: () => r });
+var a = e(991690),
+    d = e(261425),
+    l = e(660183);
+let i = 221552 == e.j ? ["frame", "widget", "bot"] : null;
+(d.default.FKuG6X, d.default.oOAVlP, d.default.uE5z15);
+let n = { [a.U.APP_CHANNEL]: d.default.xI4N6Q, [a.U.VOICE_CHANNEL]: d.default.oWMDh6 };
+function r(t) {
+    return l.intl.string(n[t]);
 }
