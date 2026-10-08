@@ -1203,6 +1203,7 @@ let a = {
         "ZM",
         "ZW",
     ]),
+    OPTIONAL_CITY_BILLING_ADDRESS_COUNTRIES: new Set(["AE", "GI", "KY", "MO", "NR", "PR", "SG"]),
     NON_AD_SERVING_COUNTRIES: new Set(["RU", "TR"]),
     TAX_EXCLUSIVE: new Set(["CA", "KR", "US"]),
     TAX_ADDRESS_REQUIRE_POSTAL_CODE: new Set(["CA", "US"]),

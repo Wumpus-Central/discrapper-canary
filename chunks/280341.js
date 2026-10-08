@@ -1124,16 +1124,17 @@ function tp(e) {
         } = a,
         C = (0, N.S)(),
         { createSetupIntent: f } = (0, to.x)(),
+        { contextMetadata: S } = (0, T.t4)((e) => ({ contextMetadata: e.contextMetadata })),
         {
-            isSubmittingCurrentStep: S,
-            billingAddressState: E,
-            setIsSubmittingCurrentStep: y,
-            hasRedirectURL: I,
-            setHasRedirectURL: A,
-            isAuthenticating: g,
+            isSubmittingCurrentStep: E,
+            billingAddressState: y,
+            setIsSubmittingCurrentStep: I,
+            hasRedirectURL: A,
+            setHasRedirectURL: g,
+            isAuthenticating: P,
         } = t;
-    async function P() {
-        y(!0);
+    async function v() {
+        I(!0);
         let e = s ? c : i.methodType,
             n = p.current,
             r = null != e && (0, tc.i)(e) ? tc.F[e] : null;
@@ -1154,26 +1155,35 @@ function tp(e) {
                 createSetupIntent: f,
                 overwriteSubscriptionPaymentSource: u,
             });
-            ("redirect-url" === e.responseType ? A(e.hasRedirectURL) : l(e.paymentSource), I || y(!1));
+            ("redirect-url" === e.responseType ? g(e.hasRedirectURL) : l(e.paymentSource), A || I(!1));
         } catch (e) {
             if (e instanceof ts.Ey) {
-                let t = Object.keys(e.fields).sort();
-                (0, m.pM)(e, {
-                    tags: {
-                        ...(s ? { source: "payment_elements" } : {}),
-                        error_location: "submit_address_step",
-                        has_field_error: t.length > 0 ? "true" : "false",
-                        error_code: String(e.code),
-                        ...(null != e.status ? { status: String(e.status) } : {}),
-                    },
-                    extra: { code: e.code, fields: e.fields, ...(null != e.status ? { status: e.status } : {}) },
-                });
+                let t = Object.keys(e.fields).sort(),
+                    n = null != e.status ? { status: String(e.status) } : {},
+                    l = Error(e.message);
+                ((l.name = `BillingError[${e.code}]`),
+                    (0, m.pM)(l, {
+                        tags: {
+                            ...(s ? { source: "payment_elements" } : {}),
+                            error_location: "submit_address_step",
+                            has_field_error: t.length > 0 ? "true" : "false",
+                            error_code: String(e.code),
+                            ...n,
+                        },
+                        extra: {
+                            loadId: S.loadId,
+                            message: e.message,
+                            errorCode: e.code,
+                            errorStatus: e.status,
+                            fields: e.fields,
+                        },
+                    }));
             }
-            (y(!1), td.warn(`Error confirming submitting Address Step for Payment Source Type: ${v}`, e));
+            (I(!1), td.warn(`Error confirming submitting Address Step for Payment Source Type: ${x}`, e));
         }
     }
-    let v = i.methodType,
-        { backStep: x } = s
+    let x = i.methodType,
+        { backStep: _ } = s
             ? { backStep: M.pn.PAYMENT_ELEMENT }
             : (function (e) {
                   switch (e) {
@@ -1192,15 +1202,15 @@ function tp(e) {
                       default:
                           return { backStep: M.pn.PAYMENT_ELEMENT };
                   }
-              })(v),
-        _ = s ? () => d(void 0) : () => n(x);
+              })(x),
+        b = s ? () => d(void 0) : () => n(_);
     return (0, r.jsx)(el, {
-        onBack: _,
+        onBack: b,
         primaryCTA: q.Ay.CTAType.CONTINUE,
         primaryText: B.intl.string(B.t.PDTjLN),
-        primarySubmitting: S,
-        primaryDisabled: !E.isValid || g,
-        onPrimary: P,
+        primarySubmitting: E,
+        primaryDisabled: !y.isValid || P,
+        onPrimary: v,
     });
 }
 var tm = n(648335);
