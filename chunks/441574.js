@@ -2604,6 +2604,7 @@ class eF extends O.G {
             { no: 19, name: "typing_indicator_style", kind: "message", T: () => ef },
             { no: 20, name: "disable_staff_discount", kind: "scalar", T: 8 },
             { no: 21, name: "vad_colors", kind: "message", T: () => tc },
+            { no: 22, name: "hidden_flags", kind: "scalar", T: 4 },
         ]);
     }
     create(e) {
@@ -2613,6 +2614,7 @@ class eF extends O.G {
             safetyFlags: {},
             isPendingRequiredAction: !1,
             disableStaffDiscount: !1,
+            hiddenFlags: "0",
         };
         return (
             globalThis.Object.defineProperty(t, C.$, { enumerable: !1, value: this }),
@@ -2688,6 +2690,9 @@ class eF extends O.G {
                     break;
                 case 21:
                     r.vadColors = tc.internalBinaryRead(e, e.uint32(), n, r.vadColors);
+                    break;
+                case 22:
+                    r.hiddenFlags = e.uint64().toString();
                     break;
                 default:
                     let a = n.readUnknownField;
@@ -2804,7 +2809,8 @@ class eF extends O.G {
             e.typingIndicatorStyle &&
                 ef.internalBinaryWrite(e.typingIndicatorStyle, t.tag(19, S.O0.LengthDelimited).fork(), n).join(),
             !1 !== e.disableStaffDiscount && t.tag(20, S.O0.Varint).bool(e.disableStaffDiscount),
-            e.vadColors && tc.internalBinaryWrite(e.vadColors, t.tag(21, S.O0.LengthDelimited).fork(), n).join());
+            e.vadColors && tc.internalBinaryWrite(e.vadColors, t.tag(21, S.O0.LengthDelimited).fork(), n).join(),
+            "0" !== e.hiddenFlags && t.tag(22, S.O0.Varint).uint64(e.hiddenFlags));
         let i = n.writeUnknownFields;
         return (!1 !== i && (!0 == i ? S.f$.onWrite : i)(this.typeName, e, t), t);
     }
