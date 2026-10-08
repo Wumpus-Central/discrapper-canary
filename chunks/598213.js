@@ -9,20 +9,33 @@ function s(e) {
     return e.decision.timestamp;
 }
 function l(e, t, n) {
-    return { srcStartMs: e.startMs - t.beforeMs, srcEndMs: e.endMs + t.afterMs, ...n };
+    return {
+        srcStartMs: e.startMs - t.beforeMs,
+        srcEndMs: e.endMs + t.afterMs,
+        eventStartMs: e.startMs,
+        eventEndMs: e.endMs,
+        ...n,
+    };
 }
 function o(e) {
     let t = [];
-    for (let n of e) {
+    for (let s of e) {
         let e = t[t.length - 1];
-        if (null != e && n.srcStartMs <= e.srcEndMs) {
-            ((e.srcEndMs = Math.max(e.srcEndMs, n.srcEndMs)),
-                (e.hasGame = !0 === e.hasGame || !0 === n.hasGame),
-                (e.hasAudio = !0 === e.hasAudio || !0 === n.hasAudio),
-                null != n.label && (e.label = null != e.label ? `${e.label} + ${n.label}` : n.label));
+        if (null != e && s.srcStartMs <= e.srcEndMs) {
+            var n, i, r, a;
+            ((e.srcEndMs = Math.max(e.srcEndMs, s.srcEndMs)),
+                (n = e.eventStartMs),
+                (i = s.eventStartMs),
+                (e.eventStartMs = null == n ? i : null == i ? n : Math.min(n, i)),
+                (r = e.eventEndMs),
+                (a = s.eventEndMs),
+                (e.eventEndMs = null == r ? a : null == a ? r : Math.max(r, a)),
+                (e.hasGame = !0 === e.hasGame || !0 === s.hasGame),
+                (e.hasAudio = !0 === e.hasAudio || !0 === s.hasAudio),
+                null != s.label && (e.label = null != e.label ? `${e.label} + ${s.label}` : s.label));
             continue;
         }
-        t.push({ ...n });
+        t.push({ ...s });
     }
     return t;
 }
@@ -31,18 +44,21 @@ function d(e, t) {
         i = [];
     for (let l of e) {
         let e = (function (e, t) {
-            let n = (e.srcStartMs + e.srcEndMs) / 2,
-                i = null,
-                r = 1 / 0;
-            for (let l of t) {
-                let t = a(l),
-                    o = s(l);
-                if (t <= e.srcStartMs && o >= e.srcEndMs) {
-                    let e = Math.abs((t + o) / 2 - n);
-                    e < r && ((r = e), (i = l));
-                }
+            let n = e.eventStartMs ?? e.srcStartMs,
+                i = e.eventEndMs ?? e.srcEndMs,
+                r = (e.srcStartMs + e.srcEndMs) / 2,
+                l = null,
+                o = -1 / 0,
+                d = 1 / 0;
+            for (let c of t) {
+                let t = a(c),
+                    u = s(c);
+                if (t > n || u < i) continue;
+                let _ = Math.min(u, e.srcEndMs) - Math.max(t, e.srcStartMs),
+                    E = Math.abs((t + u) / 2 - r);
+                (_ > o || (_ === o && E < d)) && ((o = _), (d = E), (l = c));
             }
-            return i;
+            return l;
         })(l, t);
         if (null == e) {
             i.push(l);

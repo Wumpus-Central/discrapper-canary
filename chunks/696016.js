@@ -1,74 +1,76 @@
 n.d(t, {
-    CN: () => $,
-    Cx: () => el,
-    DX: () => eO,
-    EC: () => eD,
-    Ew: () => eu,
+    A_: () => F,
+    CN: () => X,
+    Cx: () => ed,
+    DX: () => eL,
+    EC: () => eb,
+    Ew: () => eE,
     Fv: () => m,
-    G$: () => eS,
+    G$: () => eC,
     GU: () => G,
-    Gy: () => q,
-    HA: () => ev,
-    Hz: () => ey,
-    L4: () => eI,
+    Gy: () => J,
+    HA: () => eM,
+    Hz: () => ev,
+    L4: () => eT,
     LX: () => T,
-    Me: () => er,
+    Me: () => es,
     Mu: () => P,
     Ot: () => N,
     P4: () => S,
-    QK: () => eA,
-    QY: () => en,
-    Qw: () => eL,
-    RC: () => ee,
-    SC: () => z,
-    T7: () => ef,
-    UY: () => e_,
-    U_: () => X,
+    QK: () => ef,
+    QY: () => er,
+    Qw: () => eD,
+    RC: () => en,
+    SC: () => Z,
+    T7: () => ep,
+    UY: () => eA,
+    U_: () => q,
     V0: () => y,
-    VP: () => F,
+    VP: () => V,
     Vi: () => O,
-    Y2: () => K,
-    YK: () => eC,
-    YM: () => H,
-    _1: () => ei,
-    _9: () => eN,
-    _S: () => eo,
-    ad: () => ed,
-    cM: () => k,
-    dV: () => V,
-    gC: () => Z,
-    iJ: () => j,
-    k9: () => J,
+    Y2: () => z,
+    YK: () => eR,
+    YM: () => W,
+    _1: () => ea,
+    _9: () => eO,
+    _S: () => ec,
+    ad: () => eu,
+    cM: () => B,
+    dV: () => j,
+    gC: () => Q,
+    gy: () => k,
+    iJ: () => Y,
+    k9: () => et,
     kd: () => L,
-    ku: () => eg,
+    ku: () => eN,
     l_: () => D,
-    mO: () => eE,
-    mY: () => ea,
-    nQ: () => eP,
-    nS: () => eR,
+    mO: () => eh,
+    mY: () => el,
+    nQ: () => ew,
+    nS: () => ey,
     nm: () => M,
     nx: () => R,
-    p4: () => ec,
-    pZ: () => Q,
-    pk: () => eM,
-    rD: () => eT,
-    rb: () => eU,
-    rv: () => Y,
+    p4: () => e_,
+    pZ: () => ee,
+    pk: () => eU,
+    rD: () => eg,
+    rb: () => eG,
+    rv: () => $,
     s3: () => w,
-    sL: () => ep,
+    sL: () => em,
     sT: () => g,
     sc: () => v,
     sz: () => C,
-    tS: () => es,
+    tS: () => eo,
     td: () => x,
-    ut: () => B,
+    ut: () => H,
     vZ: () => U,
-    w6: () => em,
-    xy: () => eb,
-    yz: () => et,
-    z2: () => eh,
+    w6: () => eS,
+    xy: () => eP,
+    yz: () => ei,
+    z2: () => eI,
     zj: () => b,
-    zq: () => W,
+    zq: () => K,
 });
 var i,
     r,
@@ -109,26 +111,28 @@ let N = "alt+c",
     w = 360,
     G = 100,
     x = 1e3,
-    k = (e) => `Clip - ${new Date(e).toLocaleString()}`,
-    F = 15,
-    B = 60 * p.A.Millis.SECOND,
-    V = 3e4,
-    H = 30,
-    j = 10;
+    k = "id",
+    F = "killIds",
+    B = (e) => `Clip - ${new Date(e).toLocaleString()}`,
+    V = 15,
+    H = 60 * p.A.Millis.SECOND,
+    j = 3e4,
+    W = 30,
+    Y = 10;
 p.A.Millis.DAY;
-let W = 10,
-    Y = 100,
-    K = 75,
-    $ = 0x3c0000000,
-    z = ".autoclip-cache",
-    X = 0;
-var Z =
+let K = 10,
+    $ = 100,
+    z = 75,
+    X = 0x3c0000000,
+    Z = ".autoclip-cache",
+    q = 0;
+var Q =
         (((s = {}).ALL = ":all"),
         (s.APPLICATION = ":application"),
         (s.VOICE = ":voice"),
         (s.SOUNDBOARD = ":soundboard"),
         s),
-    q =
+    J =
         (((l = {}).MANUAL = "manual"),
         (l.DISTRIBUTED = "distributed"),
         (l.SHOUTING = "shouting"),
@@ -137,18 +141,18 @@ var Z =
         (l.SPEAKING = "speaking"),
         (l.SOUNDBOARD = "soundboard"),
         l),
-    Q =
+    ee =
         (((o = {})[(o.LAUGHTER = 1)] = "LAUGHTER"),
         (o[(o.SHOUTING = 2)] = "SHOUTING"),
         (o[(o.GAME_EVENTS = 4)] = "GAME_EVENTS"),
         o),
-    J =
+    et =
         (((d = {}).UNKNOWN = "unknown"),
         (d.BELOW_MINIMUM = "below_minimum"),
         (d.MEETS_MINIMUM = "meets_minimum"),
         (d.MEETS_AUTO_ENABLE = "meets_auto_enable"),
         d),
-    ee =
+    en =
         (((c = {}).MAX_CONCURRENT_SAVES = "max_concurrent_saves"),
         (c.NO_ELIGIBLE_SOURCE = "no_eligible_source"),
         (c.MODULE_NOT_LOADED = "module_not_loaded"),
@@ -156,8 +160,8 @@ var Z =
         (c.BRIDGE_SHUTDOWN = "bridge_shutdown"),
         (c.RECORDING_NOT_READY = "recording_not_ready"),
         c),
-    et = (((u = {}).ORIGINAL = "original"), (u.PORTRAIT_9_16 = "9:16"), (u.LANDSCAPE_16_9 = "16:9"), u);
-function en(e) {
+    ei = (((u = {}).ORIGINAL = "original"), (u.PORTRAIT_9_16 = "9:16"), (u.LANDSCAPE_16_9 = "16:9"), u);
+function er(e) {
     switch (e) {
         case "9:16":
             return 9 / 16;
@@ -167,47 +171,47 @@ function en(e) {
             return null;
     }
 }
-function ei(e) {
+function ea(e) {
     if (e?.bounds != null) return e.bounds;
-    let t = en(e?.preset);
+    let t = er(e?.preset);
     return null != t ? { aspectRatio: t } : null;
 }
-var er = (((_ = {}).TEXT = "text"), (_.IMAGE = "image"), _);
-let ea = { text: "#D53FAE", image: "#3F7FD5" },
-    es = 5,
-    el = 1,
-    eo = { x: 0.5, y: 0.5 },
-    ed = 0,
-    ec = 15;
-function eu(e) {
-    let t = (((Math.round(e / ec) * ec) % 360) + 360) % 360;
+var es = (((_ = {}).TEXT = "text"), (_.IMAGE = "image"), _);
+let el = { text: "#D53FAE", image: "#3F7FD5" },
+    eo = 5,
+    ed = 1,
+    ec = { x: 0.5, y: 0.5 },
+    eu = 0,
+    e_ = 15;
+function eE(e) {
+    let t = (((Math.round(e / e_) * e_) % 360) + 360) % 360;
     return t > 180 ? t - 360 : t;
 }
-var e_ = (((E = {}).NONE = "none"), (E.SMALL = "small"), (E.MEDIUM = "medium"), (E.LARGE = "large"), E);
-let eE = { none: 0, small: 1 / 16, medium: 1 / 8, large: 1 / 4 },
-    eA = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" },
-    eh = 0.015,
-    ef = 0.5,
-    eI = 2048,
-    ep = 0x2000000,
-    eT = 2097152,
-    em = "image/webp",
-    eg = 0.92,
-    eS = ["png", "jpg", "jpeg", "webp"],
-    eN = ["image/png", "image/jpeg", "image/webp"],
-    eC = 0.35,
-    eO = 0.02,
-    eR = 2;
-function eL(e, t) {
-    return Math.max(eO, Math.min(eC, (0.5 * e) / t));
+var eA = (((E = {}).NONE = "none"), (E.SMALL = "small"), (E.MEDIUM = "medium"), (E.LARGE = "large"), E);
+let eh = { none: 0, small: 1 / 16, medium: 1 / 8, large: 1 / 4 },
+    ef = { fontSize: 0.06, color: "#FFFFFF", strokeWidth: "none", strokeColor: "#000000" },
+    eI = 0.015,
+    ep = 0.5,
+    eT = 2048,
+    em = 0x2000000,
+    eg = 2097152,
+    eS = "image/webp",
+    eN = 0.92,
+    eC = ["png", "jpg", "jpeg", "webp"],
+    eO = ["image/png", "image/jpeg", "image/webp"],
+    eR = 0.35,
+    eL = 0.02,
+    ey = 2;
+function eD(e, t) {
+    return Math.max(eL, Math.min(eR, (0.5 * e) / t));
 }
-var ey = (((A = {}).NONE = "none"), (A.SMALL = "small"), (A.MEDIUM = "medium"), (A.LARGE = "large"), A);
-let eD = { none: 0, small: 0.02, medium: 0.05, large: 0.1 },
-    ev = 0.4,
-    eb = "none",
-    eM = "#000000";
-var eP = (((h = {}).CLIP = "clip"), (h.SCREENSHOT = "screenshot"), (h.VOICE_CLIP = "voice_clip"), h),
-    eU =
+var ev = (((A = {}).NONE = "none"), (A.SMALL = "small"), (A.MEDIUM = "medium"), (A.LARGE = "large"), A);
+let eb = { none: 0, small: 0.02, medium: 0.05, large: 0.1 },
+    eM = 0.4,
+    eP = "none",
+    eU = "#000000";
+var ew = (((h = {}).CLIP = "clip"), (h.SCREENSHOT = "screenshot"), (h.VOICE_CLIP = "voice_clip"), h),
+    eG =
         (((f = {}).UNCLASSIFIED = "unclassified"),
         (f.KILL = "kill"),
         (f.MULTIKILL = "multikill"),
