@@ -1,10 +1,10 @@
-e.d(u, { NK: () => i, XV: () => r });
-var a = e(991690),
-    d = e(261425),
-    l = e(660183);
-let i = 221552 == e.j ? ["frame", "widget", "bot"] : null;
-(d.default.FKuG6X, d.default.oOAVlP, d.default.uE5z15);
-let n = { [a.U.APP_CHANNEL]: d.default.xI4N6Q, [a.U.VOICE_CHANNEL]: d.default.oWMDh6 };
+u.d(e, { NK: () => i, XV: () => r });
+var a = u(991690),
+    l = u(261425),
+    d = u(660183);
+let i = 221552 == u.j ? ["frame", "widget", "overlay", "bot"] : null;
+(l.default.FKuG6X, l.default.oOAVlP, l.default.EnTNKg, l.default.uE5z15);
+let n = { [a.U.APP_CHANNEL]: l.default.xI4N6Q, [a.U.VOICE_CHANNEL]: l.default.oWMDh6 };
 function r(t) {
-    return l.intl.string(n[t]);
+    return d.intl.string(n[t]);
 }

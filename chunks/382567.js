@@ -895,7 +895,7 @@ var eM = n(280450),
     ew = n(287809),
     eL = n(152056),
     e_ = n(780964),
-    eD = n(536894),
+    eD = n(984147),
     eO = n(980707),
     eB = n(477782),
     eK = n(28863),
@@ -915,13 +915,13 @@ var eM = n(280450),
 function eJ() {
     let e = (0, eV.GV)(),
         t = window.GLOBAL_ENV.RELEASE_CHANNEL,
-        n = "632928",
-        s = "0932fa0ffcdbd672a6978690390c7cea6704e14e".substring(0, 7),
+        n = "632947",
+        s = "27de19a3ada356af842b960d21ec88630b667d0e".substring(0, 7),
         r = eY.A?.app.getVersion(),
         l = eY.A?.app.getBuildNumber(),
         c = eY.A?.app.getAppArch(),
         o = eX.A.getCurrentBuildOverride().overrides?.discord_web,
-        u = null != o ? (0, eq.A)("1791430241363", !1) : null,
+        u = null != o ? (0, eq.A)("1791433313783", !1) : null,
         d = null != u ? ` (built ${u})` : "",
         m = (function () {
             let e = ez()?.os?.toString();
@@ -1086,8 +1086,8 @@ function e2() {
         ],
     });
 }
-var e9 = n(402651),
-    e7 = n(669067),
+var e7 = n(402651),
+    e9 = n(669067),
     e5 = n(830543),
     e4 = n(953056);
 let e8 = new Set([e_.X.PROFILE_PANEL, e_.X.SUBSCRIPTIONS_PANEL, e_.X.FAMILY_CENTER_PANEL, e_.X.POGGERMODE_PANEL]),
@@ -1106,7 +1106,7 @@ function e3(e) {
         return (
             eM.default.addChangeListener(e),
             () => {
-                (eM.default.removeChangeListener(e), e9.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
+                (eM.default.removeChangeListener(e), e7.A.resetState(), d.A.resetState(), c.A.close(), (0, u.ZQ)());
             }
         );
     }, []),
@@ -1118,15 +1118,15 @@ function e3(e) {
               emptyState: tt,
               sidebarFooter: e2,
               onViewChange: function (e) {
-                  e8.has(e) || (0, e7._)(e);
+                  e8.has(e) || (0, e9._)(e);
                   let t = e6.get(e);
                   (null != t &&
                       (0, o.x)({
                           type: r.ImpressionTypes.PANE,
                           name: t,
-                          properties: { source: e9.A.getField("source") },
+                          properties: { source: e7.A.getField("source") },
                       }),
-                      e9.A.setState({ source: void 0 }));
+                      e7.A.setState({ source: void 0 }));
               },
               target: t,
               defaultTarget: e_.X.ACCOUNT_PANEL,

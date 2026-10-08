@@ -35,7 +35,7 @@ async function h(e) {
         m = c.A.getFrame(I);
     if (null != m) return (m.intent === E.sV.MAIN && (p(I), T({ frameId: I, layoutMode: E.y0.FOCUSED })), I);
     ((0, E.Yf)(n) === E.sV.MAIN && (o(), f()),
-        i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: I, surface: n }));
+        i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: I, surface: n, hostWindowKey: A }));
     try {
         let e = await (0, r.D2)(t, (0, d.A)(n), (0, u.A)(n));
         return (

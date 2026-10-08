@@ -8,6 +8,7 @@ function r(e) {
             case i.U.VOICE_CHANNEL:
             case i.U.INTERACTION_MODAL:
                 return e.channelId;
+            case i.U.OVERLAY:
             default:
                 return;
         }

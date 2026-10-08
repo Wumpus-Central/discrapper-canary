@@ -1,4 +1,4 @@
-n.d(t, { IV: () => _, In: () => o, ZO: () => u, cv: () => c, dO: () => d, zb: () => l });
+n.d(t, { Du: () => _, IV: () => E, In: () => o, ZO: () => u, cv: () => c, dO: () => d, zb: () => l });
 var i,
     r,
     a,
@@ -19,4 +19,7 @@ function c(e) {
 function u(e) {
     return e.type === s.uss.VOICE_V3;
 }
-var _ = (((a = {}).HORIZONTAL = "horizontal"), (a.VERTICAL = "vertical"), a);
+function _(e) {
+    return e?.type === s.uss.CONJURE && "string" == typeof e.meta.applicationId;
+}
+var E = (((a = {}).HORIZONTAL = "horizontal"), (a.VERTICAL = "vertical"), a);

@@ -11295,7 +11295,8 @@ let du = o.memo(function (e) {
     });
 function dh(e) {
     var t;
-    let a = ((t = Object.values((0, d.yK)([o9.A], () => o9.A.getWidgetsForLayout(di.G)))), t.find((t) => t.type === e));
+    let a =
+        ((t = Object.values((0, d.yK)([o9.A], () => o9.A.getWidgetsForLayout(di.GJ)))), t.find((t) => t.type === e));
     return [
         a,
         function () {
@@ -11303,7 +11304,7 @@ function dh(e) {
             else {
                 let t = dr[e];
                 if (null == t) return;
-                let a = t(di.G);
+                let a = t(di.GJ);
                 (0, oY.jn)(a);
             }
         },
@@ -20220,7 +20221,7 @@ function pz() {
     });
 }
 var pH = a(963935),
-    pK = a(536894),
+    pK = a(984147),
     pY = a(555738);
 function pq(e) {
     let { title: t, initExpanded: a, highlightMode: n = "none", children: l } = e,

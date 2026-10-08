@@ -1481,7 +1481,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let e7 = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eK.A().log(
-    `[BUILD INFO] Release Channel: ${e7}, Build Number: 632928, Version Hash: 0932fa0ffcdbd672a6978690390c7cea6704e14e`,
+    `[BUILD INFO] Release Channel: ${e7}, Build Number: 632947, Version Hash: 27de19a3ada356af842b960d21ec88630b667d0e`,
 ),
     U.A.setTags({ appContext: V.QCW }),
     em.A.initBasic(),
@@ -4059,6 +4059,8 @@ let at = (0, ia.Fe)({
                 n.e("643363"),
                 n.e("980902"),
                 n.e("157771"),
+                n.e("43853"),
+                n.e("529659"),
                 n.e("721654"),
                 n.e("283543"),
                 n.e("715958"),
@@ -4107,7 +4109,7 @@ let at = (0, ia.Fe)({
                 n.e("442781"),
                 n.e("803511"),
                 n.e("868052"),
-                n.e("951589"),
+                n.e("64231"),
                 n.e("257073"),
                 n.e("29489"),
                 n.e("445380"),
@@ -4489,7 +4491,9 @@ let at = (0, ia.Fe)({
                 n.e("986300"),
                 n.e("479006"),
                 n.e("138733"),
+                n.e("817006"),
                 n.e("759174"),
+                n.e("932011"),
                 n.e("821883"),
                 n.e("576415"),
                 n.e("983947"),
@@ -4507,6 +4511,7 @@ let at = (0, ia.Fe)({
                 n.e("384820"),
                 n.e("966598"),
                 n.e("598421"),
+                n.e("154168"),
                 n.e("420643"),
                 n.e("506627"),
                 n.e("443256"),
@@ -4578,7 +4583,7 @@ let at = (0, ia.Fe)({
                 n.e("816799"),
                 n.e("316140"),
                 n.e("728549"),
-                n.e("632482"),
+                n.e("671056"),
                 n.e("162883"),
                 n.e("335068"),
                 n.e("210413"),
@@ -4613,7 +4618,7 @@ let at = (0, ia.Fe)({
                 n.e("993720"),
                 n.e("725246"),
                 n.e("654658"),
-                n.e("165477"),
+                n.e("912938"),
                 n.e("487318"),
                 n.e("169987"),
                 n.e("504787"),
@@ -25569,7 +25574,7 @@ let LU = "isHideDevBanner",
                     className: tc()(LP.Wz, LP.mr),
                     children: [
                         (0, v.jsx)(LM, { className: LP.Kk }),
-                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "632928" }),
+                        tC.intl.format(tC.t.uyrfYF, { buildNumber: "632947" }),
                         (0, v.jsx)(r, {}),
                     ],
                 })
@@ -28895,7 +28900,11 @@ let vI = (0, tY.Fe)({
                 n.e("330150"),
                 n.e("205406"),
                 n.e("64640"),
-                n.e("175896"),
+                n.e("529659"),
+                n.e("258759"),
+                n.e("114383"),
+                n.e("912597"),
+                n.e("146090"),
                 n.e("348567"),
                 n.e("452075"),
                 n.e("900277"),
@@ -29204,15 +29213,16 @@ let vI = (0, tY.Fe)({
                 n.e("206152"),
                 n.e("722440"),
                 n.e("704374"),
+                n.e("817006"),
+                n.e("932011"),
                 n.e("623547"),
                 n.e("141049"),
                 n.e("156751"),
                 n.e("90474"),
-                n.e("87729"),
                 n.e("464675"),
                 n.e("496914"),
-                n.e("736410"),
                 n.e("81766"),
+                n.e("736410"),
                 n.e("935412"),
                 n.e("926503"),
                 n.e("560250"),
@@ -29220,8 +29230,8 @@ let vI = (0, tY.Fe)({
                 n.e("815341"),
                 n.e("256769"),
                 n.e("526274"),
-            ]).then(n.bind(n, 369219)),
-        webpackId: 369219,
+            ]).then(n.bind(n, 938991)),
+        webpackId: 938991,
         name: "VibegrationsScreen",
         renderLoader: vf,
     }),
@@ -37623,7 +37633,8 @@ let Ul = (0, ia.Fe)({
                 n.e("849162"),
                 n.e("770583"),
                 n.e("64097"),
-                n.e("355197"),
+                n.e("43853"),
+                n.e("529659"),
                 n.e("786830"),
                 n.e("873943"),
                 n.e("152263"),
@@ -38086,6 +38097,8 @@ let Ul = (0, ia.Fe)({
                 n.e("896480"),
                 n.e("704374"),
                 n.e("986300"),
+                n.e("817006"),
+                n.e("932011"),
                 n.e("821883"),
                 n.e("576415"),
                 n.e("501888"),
@@ -38093,6 +38106,7 @@ let Ul = (0, ia.Fe)({
                 n.e("874821"),
                 n.e("426792"),
                 n.e("271203"),
+                n.e("154168"),
                 n.e("81398"),
                 n.e("621343"),
                 n.e("815057"),
@@ -38115,12 +38129,10 @@ let Ul = (0, ia.Fe)({
                 n.e("497306"),
                 n.e("736793"),
                 n.e("677602"),
-                n.e("87729"),
                 n.e("59228"),
                 n.e("760971"),
-                n.e("889300"),
-                n.e("932011"),
                 n.e("586546"),
+                n.e("191934"),
                 n.e("997934"),
                 n.e("792461"),
                 n.e("471138"),
@@ -39044,7 +39056,8 @@ let Ul = (0, ia.Fe)({
                 n.e("849162"),
                 n.e("770583"),
                 n.e("64097"),
-                n.e("355197"),
+                n.e("43853"),
+                n.e("529659"),
                 n.e("786830"),
                 n.e("873943"),
                 n.e("152263"),
@@ -39507,6 +39520,8 @@ let Ul = (0, ia.Fe)({
                 n.e("896480"),
                 n.e("704374"),
                 n.e("986300"),
+                n.e("817006"),
+                n.e("932011"),
                 n.e("821883"),
                 n.e("576415"),
                 n.e("501888"),
@@ -39514,6 +39529,7 @@ let Ul = (0, ia.Fe)({
                 n.e("874821"),
                 n.e("426792"),
                 n.e("271203"),
+                n.e("154168"),
                 n.e("81398"),
                 n.e("621343"),
                 n.e("815057"),
@@ -39536,12 +39552,10 @@ let Ul = (0, ia.Fe)({
                 n.e("497306"),
                 n.e("736793"),
                 n.e("677602"),
-                n.e("87729"),
                 n.e("59228"),
                 n.e("760971"),
-                n.e("889300"),
-                n.e("932011"),
                 n.e("586546"),
+                n.e("191934"),
                 n.e("997934"),
                 n.e("792461"),
                 n.e("471138"),
@@ -39557,15 +39571,15 @@ let Ul = (0, ia.Fe)({
     U_ = (0, ia.Fe)({
         createPromise: () =>
             Promise.all([
-                n.e("355197"),
+                n.e("529659"),
                 n.e("169727"),
                 n.e("920099"),
                 n.e("993103"),
                 n.e("636373"),
                 n.e("474610"),
+                n.e("932011"),
                 n.e("230761"),
                 n.e("556385"),
-                n.e("932011"),
                 n.e("832986"),
                 n.e("113492"),
             ]).then(n.bind(n, 241941)),
@@ -39864,6 +39878,8 @@ function UX(e) {
             case UW.U.APP_CHANNEL:
             case UW.U.VOICE_CHANNEL:
                 if (t.surface.channelId === bs.kG) return n ? t : null;
+                return t;
+            case UW.U.OVERLAY:
                 return t;
             case UW.U.MAIN:
                 return n ? t : null;
@@ -40893,6 +40909,9 @@ let wE = (e) =>
                     channel_id: e.string().required().meta({ className: "ChannelId" }),
                     guild_id: e.string().optional().meta({ className: "GuildId" }),
                 }),
+                e.object({
+                    type: e.number().valid(UW.U.OVERLAY).required().meta({ className: "EmbeddedSurfaceType.OVERLAY" }),
+                }),
             )
             .meta({ className: "EmbeddedSurface" }),
     wI = (e) => e.object({ type: e.number().valid(1).required(), components: e.array().max(5).items(wp(e)) }),
@@ -41431,6 +41450,8 @@ let ww = { [vh.sm.ANY]: [vh.W_, vh.VH] },
                             case UW.U.VOICE_CHANNEL:
                             case UW.U.INTERACTION_MODAL:
                                 return { type: e.type, channel_id: e.channelId, guild_id: e.guildId };
+                            case UW.U.OVERLAY:
+                                return { type: e.type };
                             default:
                                 throw Error("Unknown embedded surface type");
                         }
@@ -52019,6 +52040,8 @@ let H5 = (0, tY.Fe)({
             n.e("643363"),
             n.e("980902"),
             n.e("157771"),
+            n.e("43853"),
+            n.e("529659"),
             n.e("721654"),
             n.e("283543"),
             n.e("715958"),
@@ -52072,7 +52095,7 @@ let H5 = (0, tY.Fe)({
             n.e("442781"),
             n.e("803511"),
             n.e("868052"),
-            n.e("951589"),
+            n.e("64231"),
             n.e("257073"),
             n.e("29489"),
             n.e("445380"),
@@ -52801,8 +52824,10 @@ let H5 = (0, tY.Fe)({
             n.e("986300"),
             n.e("479006"),
             n.e("138733"),
+            n.e("817006"),
             n.e("759174"),
             n.e("560075"),
+            n.e("932011"),
             n.e("576415"),
             n.e("901922"),
             n.e("983947"),
@@ -52839,6 +52864,7 @@ let H5 = (0, tY.Fe)({
             n.e("440142"),
             n.e("536973"),
             n.e("598421"),
+            n.e("154168"),
             n.e("420643"),
             n.e("697116"),
             n.e("845928"),
@@ -52944,7 +52970,7 @@ let H5 = (0, tY.Fe)({
             n.e("316140"),
             n.e("852694"),
             n.e("728549"),
-            n.e("632482"),
+            n.e("671056"),
             n.e("162883"),
             n.e("335068"),
             n.e("210413"),
@@ -53001,7 +53027,7 @@ let H5 = (0, tY.Fe)({
             n.e("725246"),
             n.e("911521"),
             n.e("654658"),
-            n.e("165477"),
+            n.e("912938"),
             n.e("487318"),
             n.e("155361"),
             n.e("233049"),
@@ -53145,7 +53171,7 @@ var H7 = n(670735),
     je = n(597396),
     jt = n(256693),
     jn = n(51250),
-    ji = n(908700),
+    ji = n(489719),
     jr = n(558960);
 function ja(e) {
     let [t] = eh.useState(() => {
@@ -53190,7 +53216,9 @@ function jl() {
         children: [
             e
                 ? n.map((e) =>
-                      !(0, rJ.x1)(e) || e.id === i || r.includes(e.id) ? null : (0, v.jsx)(jo, { frame: e }, e.id),
+                      !(0, rJ.x1)(e) || e.id === i || r.includes(e.id) || e.surface.type === UW.U.OVERLAY
+                          ? null
+                          : (0, v.jsx)(jo, { frame: e }, e.id),
                   )
                 : null,
             e && null != a ? (0, v.jsx)(jd, { embeddedActivity: a }, (0, jt.Ri)(a)) : null,

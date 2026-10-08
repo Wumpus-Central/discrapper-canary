@@ -6,7 +6,7 @@ var i = n(991690),
 let l = "0",
     o = { type: i.U.APP_CHANNEL, channelId: l };
 function d(e) {
-    return (0, a.Jq)(e.type) && e.channelId === l;
+    return (e.type === i.U.APP_CHANNEL || e.type === i.U.VOICE_CHANNEL) && e.channelId === l;
 }
 function c(e) {
     return e?.install_scope === "guild" ? e.guild_id : void 0;

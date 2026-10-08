@@ -1,4 +1,4 @@
-n.d(t, { A: () => S });
+n.d(t, { A: () => N });
 var i = n(739187),
     r = n(857250),
     a = n(97483),
@@ -42,7 +42,10 @@ class I extends u.A {
             let { guild: t } = e;
             if (!("unavailable" in t) || !0 !== t.unavailable)
                 for (let e of h.A.getAllFrames())
-                    e.surface.type !== c.U.MAIN && e.surface.guildId === t.id && this.leaveFrame(e.id);
+                    e.surface.type !== c.U.MAIN &&
+                        e.surface.type !== c.U.OVERLAY &&
+                        e.surface.guildId === t.id &&
+                        this.leaveFrame(e.id);
         },
         CHANNEL_UPDATES: (e) => {
             let { channels: t } = e;
@@ -76,38 +79,51 @@ class I extends u.A {
     }
 }
 var p = n(165610),
-    T = n(660183);
-let m = !1,
-    g = !1,
-    S = new (class extends I {
+    T = n(392164),
+    m = n(660183);
+let g = !1,
+    S = !1,
+    N = new (class extends I {
         static displayName = "FramesWebManager";
         _initialize() {
             (super._initialize(),
                 o.A.addChangeListener(this.handlePopoutWindowUpdate),
-                s.h.subscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen));
+                s.h.subscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen),
+                s.h.subscribe("FRAME_LAUNCH", this.handleFrameLaunch),
+                s.h.subscribe("LOGOUT", this.handleLogout));
         }
         _terminate() {
             (super._terminate(),
                 o.A.removeChangeListener(this.handlePopoutWindowUpdate),
-                s.h.unsubscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen));
+                s.h.unsubscribe("POPOUT_WINDOW_OPEN", this.handlePopoutWindowOpen),
+                s.h.unsubscribe("FRAME_LAUNCH", this.handleFrameLaunch),
+                s.h.unsubscribe("LOGOUT", this.handleLogout));
         }
         handlePopoutWindowOpen = (e) => {
             let { key: t } = e;
-            t === f.MLl.ACTIVITY_POPOUT && (g = !1);
+            t === f.MLl.ACTIVITY_POPOUT && (S = !1);
         };
         handlePopoutWindowUpdate = () => {
-            let e = m,
+            let e = g,
                 t = o.A.getWindowOpen(f.MLl.ACTIVITY_POPOUT);
-            (!e || t || g || d.A.clearMainFrameSlot(), (m = t));
+            if ((!e || t || S || d.A.clearMainFrameSlot(), (g = t), !o.A.getWindowOpen(T.f)))
+                for (let e of h.A.getFramesForSurface(p.ZN)) (0, p.zB)(e) === T.f && this.leaveFrame(e.id);
+        };
+        handleLogout = () => {
+            for (let e of h.A.getFramesForSurface(p.ZN)) this.leaveFrame(e.id);
+        };
+        handleFrameLaunch = (e) => {
+            let { frameId: t, hostWindowKey: n } = e;
+            n !== T.f || o.A.getWindowOpen(T.f) || this.leaveFrame(t);
         };
         popInFrame = () => {
-            ((g = !0), l.close(f.MLl.ACTIVITY_POPOUT));
+            ((S = !0), l.close(f.MLl.ACTIVITY_POPOUT));
             let e = h.A.getMainFrame();
             null != e && (e.intent === p.sV.MAIN ? d.A.resetFrameLayoutModes(e.id) : d.A.clearMainFrameSlot());
         };
         showRPCDisconnectErrorUI(e) {
             let { code: t, message: n } = e,
-                s = `${T.intl.formatToPlainString(T.t.hbiAO6, { code: t })}: ${n}`;
+                s = `${m.intl.formatToPlainString(m.t.hbiAO6, { code: t })}: ${n}`;
             (0, i.P)((0, r.o)(s, a.Ck.FAILURE));
         }
     })();

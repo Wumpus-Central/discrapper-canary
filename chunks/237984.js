@@ -12,7 +12,7 @@ let u = { defaultWidth: 1280, defaultHeight: 720, focusable: !0 },
     _ = { outOfProcessOverlay: !0, focusable: !1 };
 async function E() {
     let { windowed: e = !1 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {};
-    (0, s.Vz)(d.G, o.A.getDefaultLayout(d.G, 4), 4);
+    (0, s.Vz)(d.GJ, o.A.getDefaultLayout(d.GJ, 4), 4);
     let t = (0, r.Fe)({
         createPromise: () =>
             Promise.all([
@@ -456,6 +456,10 @@ async function E() {
                 n.e("245851"),
                 n.e("459397"),
                 n.e("652014"),
+                n.e("43853"),
+                n.e("598947"),
+                n.e("32125"),
+                n.e("529659"),
                 n.e("721654"),
                 n.e("283543"),
                 n.e("715958"),
@@ -1178,7 +1182,9 @@ async function E() {
                 n.e("146149"),
                 n.e("703168"),
                 n.e("986300"),
+                n.e("817006"),
                 n.e("560075"),
+                n.e("932011"),
                 n.e("685937"),
                 n.e("576415"),
                 n.e("911802"),
@@ -1198,6 +1204,7 @@ async function E() {
                 n.e("154791"),
                 n.e("440142"),
                 n.e("536973"),
+                n.e("154168"),
                 n.e("697116"),
                 n.e("845928"),
                 n.e("733314"),
@@ -1230,7 +1237,7 @@ async function E() {
                 n.e("652212"),
                 n.e("152695"),
                 n.e("852694"),
-                n.e("632482"),
+                n.e("671056"),
                 n.e("812663"),
                 n.e("191218"),
                 n.e("295841"),
@@ -1259,14 +1266,15 @@ async function E() {
                 n.e("870272"),
                 n.e("484861"),
                 n.e("760497"),
+                n.e("704629"),
                 n.e("632607"),
-                n.e("876277"),
+                n.e("721248"),
                 n.e("702097"),
                 n.e("881104"),
                 n.e("258469"),
                 n.e("12925"),
-            ]).then(n.bind(n, 888250)),
-        webpackId: 888250,
+            ]).then(n.bind(n, 362151)),
+        webpackId: 362151,
         name: "AppOverlay",
     });
     await l.open(c.f, (e) => (0, i.jsx)(t, { withTitleBar: !1, windowKey: e }), e ? u : _);

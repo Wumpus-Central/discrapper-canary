@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => Y, H_: () => c, PV: () => l, jf: () => d }), n(321073));
+(n.d(t, { Ay: () => K, H_: () => c, PV: () => l, jf: () => d }), n(321073));
 var i = n(17928),
     r = n(73153),
     a = n(287809),
@@ -28,37 +28,38 @@ let u = new Map(),
     g = null,
     S = new Set(),
     N = new Map(),
-    C = [],
-    O = new Map(),
-    R = 0,
-    L = new Map(),
+    C = "unattempted",
+    O = [],
+    R = new Map(),
+    L = 0,
     y = new Map(),
-    D = [],
-    v = new Map(),
-    b = new Map();
-function M(e, t, n) {
-    return null != t && b.get(e)?.get(t) === n;
-}
+    D = new Map(),
+    v = [],
+    b = new Map(),
+    M = new Map();
 function P(e, t, n) {
+    return null != t && M.get(e)?.get(t) === n;
+}
+function U(e, t, n) {
     if (null == t) return;
-    let i = b.get(e);
-    for (null == i && ((i = new Map()), b.set(e, i)), i.set(t, n); i.size > 800;) {
+    let i = M.get(e);
+    for (null == i && ((i = new Map()), M.set(e, i)), i.set(t, n); i.size > 800;) {
         let e = i.keys().next();
         if (!0 === e.done) break;
         i.delete(e.value);
     }
 }
-let U = { status: "idle", truncated: !1, count: 0 },
-    w = new Map();
-function G(e, t, n) {
-    let i = w.get(e);
-    (null == i && ((i = new Map()), w.set(e, i)), i.set(t, n));
-}
+let w = { status: "idle", truncated: !1, count: 0 },
+    G = new Map();
 function x(e, t, n) {
-    let i = t.concat(n);
-    v.set(e, i.length > 400 ? i.slice(-400) : i);
+    let i = G.get(e);
+    (null == i && ((i = new Map()), G.set(e, i)), i.set(t, n));
 }
-class k extends i.Ay.Store {
+function k(e, t, n) {
+    let i = t.concat(n);
+    b.set(e, i.length > 400 ? i.slice(-400) : i);
+}
+class F extends i.Ay.Store {
     initialize() {
         this.waitFor(a.default);
     }
@@ -105,21 +106,21 @@ class k extends i.Ay.Store {
         return f.get(e) ?? null;
     }
     getLogs(e) {
-        return O.get(e) ?? C;
+        return R.get(e) ?? O;
     }
     getUnreadLogErrorCount(e) {
-        let t = O.get(e);
+        let t = R.get(e);
         if (null == t) return 0;
-        let n = y.get(e) ?? 0,
+        let n = D.get(e) ?? 0,
             i = 0;
         for (let e of t) e.key > n && "error" === e.log.level && !0 !== e.log.historical && (i += 1);
         return i;
     }
     getTrace(e) {
-        return v.get(e) ?? D;
+        return b.get(e) ?? v;
     }
     getHistoryState(e, t) {
-        return w.get(e)?.get(t) ?? U;
+        return G.get(e)?.get(t) ?? w;
     }
     getProjectsFetchState() {
         return g;
@@ -130,29 +131,32 @@ class k extends i.Ay.Store {
     getGuildProjectsFetchState(e) {
         return N.get(e) ?? "unattempted";
     }
+    getOwnedProjectsFetchState() {
+        return C;
+    }
     isConjureProjectApplication(e) {
         return null != e && null != this.findProjectByApplicationId(e);
     }
 }
-function F(e) {
+function B(e) {
     let { project: t } = e;
     u.set(t.id, t);
 }
-let B = new Map();
-function V(e, t) {
+let V = new Map();
+function H(e, t) {
     return `${e}:${t}`;
 }
-function H(e, t, n) {
-    B.get(e)?.touched.add(V(t, n));
-}
 function j(e, t, n) {
+    V.get(e)?.touched.add(H(t, n));
+}
+function W(e, t, n) {
     return e.findIndex((e) => e.kind === t && e.id === n);
 }
-function W(e, t, n, i) {
+function Y(e, t, n, i) {
     let r = t.slice();
-    ((r[n] = i), v.set(e, r));
+    ((r[n] = i), b.set(e, r));
 }
-let Y = new k(r.h, {
+let K = new F(r.h, {
     LOGOUT: function () {
         if (
             0 === u.size &&
@@ -162,11 +166,11 @@ let Y = new k(r.h, {
             0 === h.size &&
             0 === f.size &&
             0 === I.size &&
-            0 === O.size &&
+            0 === R.size &&
             0 === S.size &&
-            0 === v.size &&
-            0 === w.size &&
             0 === b.size &&
+            0 === G.size &&
+            0 === M.size &&
             null == g &&
             null == T &&
             !m
@@ -179,23 +183,24 @@ let Y = new k(r.h, {
             h.clear(),
             f.clear(),
             I.clear(),
-            O.clear(),
+            R.clear(),
             S.clear(),
             N.clear(),
-            L.clear(),
             y.clear(),
-            v.clear(),
-            w.clear(),
+            D.clear(),
             b.clear(),
+            G.clear(),
+            M.clear(),
             (g = null),
             (p = !1),
+            (C = "unattempted"),
             (T = null),
             (m = !1),
-            B.clear());
+            V.clear());
     },
     CONJURE_PROJECTS_FETCH_START: function (e) {
         let { guildId: t } = e;
-        (null != t && N.set(t, "loading"), (g = { type: "loading" }));
+        (null != t ? N.set(t, "loading") : (C = "loading"), (g = { type: "loading" }));
     },
     CONJURE_PROJECTS_FETCH_SUCCESS: function (e) {
         let { projects: t, guildId: n } = e,
@@ -205,18 +210,18 @@ let Y = new k(r.h, {
         for (let e of (null != n && (S.add(n), N.set(n, "success")), _.keys())) u.has(e) || _.delete(e);
         for (let e of E.keys()) u.has(e) || E.delete(e);
         for (let [e, t] of f) u.has(t) || f.delete(e);
-        ((p = !0), (g = { type: "success", fetchedAt: Date.now() }));
+        ((p = !0), (C = "success"), (g = { type: "success", fetchedAt: Date.now() }));
     },
     CONJURE_PROJECTS_FETCH_FAIL: function (e) {
         let { guildId: t } = e;
-        (null != t && N.set(t, "error"), (g = { type: "error", fetchedAt: Date.now() }));
+        (null != t ? N.set(t, "error") : (C = "error"), (g = { type: "error", fetchedAt: Date.now() }));
     },
     CONJURE_PROJECT_LIMIT_FETCH_SETTLE: function (e) {
         let { maxProjects: t } = e;
         ((T = t), (m = !0));
     },
-    CONJURE_PROJECT_CREATE_SUCCESS: F,
-    CONJURE_PROJECT_UPDATE_SUCCESS: F,
+    CONJURE_PROJECT_CREATE_SUCCESS: B,
+    CONJURE_PROJECT_UPDATE_SUCCESS: B,
     CONJURE_PROJECT_INTEGRATION_STATUS_UPDATE: function (e) {
         let { projectId: t, integrationStatus: n } = e;
         _.set(t, n);
@@ -253,12 +258,12 @@ let Y = new k(r.h, {
         E.delete(t),
         A.delete(t),
         h.delete(t),
-        O.delete(t),
-        L.delete(t),
+        R.delete(t),
         y.delete(t),
-        v.delete(t),
-        w.delete(t),
+        D.delete(t),
         b.delete(t),
+        G.delete(t),
+        M.delete(t),
         f))
             n === t && f.delete(e);
     },
@@ -273,51 +278,51 @@ let Y = new k(r.h, {
     },
     CONJURE_TRACE_REPLAY_STARTING: function (e) {
         let { projectId: t } = e;
-        B.set(t, { snapshot: new Set((v.get(t) ?? D).map((e) => V(e.kind, e.id))), touched: new Set() });
+        V.set(t, { snapshot: new Set((b.get(t) ?? v).map((e) => H(e.kind, e.id))), touched: new Set() });
     },
     CONJURE_HISTORY_LOAD_SETTLE: function (e) {
         let { projectId: t, scope: n, status: i, count: r, truncated: a } = e,
-            s = "trace" === n ? B.get(t) : void 0;
-        if (("trace" === n && B.delete(t), "failed" === i)) {
-            let e = w.get(t)?.get(n);
-            G(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
+            s = "trace" === n ? V.get(t) : void 0;
+        if (("trace" === n && V.delete(t), "failed" === i)) {
+            let e = G.get(t)?.get(n);
+            x(t, n, { status: "failed", truncated: e?.truncated ?? !1, count: e?.count ?? 0 });
             return;
         }
         if (null != s) {
-            let e = v.get(t);
+            let e = b.get(t);
             null != e &&
-                v.set(
+                b.set(
                     t,
-                    e.filter((e) => !s.snapshot.has(V(e.kind, e.id)) || s.touched.has(V(e.kind, e.id))),
+                    e.filter((e) => !s.snapshot.has(H(e.kind, e.id)) || s.touched.has(H(e.kind, e.id))),
                 );
         }
-        G(t, n, { status: "loaded", truncated: a, count: r });
+        x(t, n, { status: "loaded", truncated: a, count: r });
     },
     CONJURE_LOG_APPEND: function (e) {
         let { projectId: t, log: n } = e,
             i = n.seq;
         if (null != i) {
-            let e = L.get(t);
+            let e = y.get(t);
             if (null != e && i <= e) return !1;
-            L.set(t, i);
+            y.set(t, i);
         }
-        let r = { key: ++R, log: n },
-            a = O.get(t),
+        let r = { key: ++L, log: n },
+            a = R.get(t),
             s = null == a ? [r] : a.concat(r);
-        O.set(t, s.length > 500 ? s.slice(-500) : s);
+        R.set(t, s.length > 500 ? s.slice(-500) : s);
     },
     CONJURE_LOGS_SEEN: function (e) {
         let { projectId: t } = e,
-            n = O.get(t),
+            n = R.get(t),
             i = null == n || 0 === n.length ? 0 : n[n.length - 1].key;
-        if ((y.get(t) ?? 0) >= i) return !1;
-        y.set(t, i);
+        if ((D.get(t) ?? 0) >= i) return !1;
+        D.set(t, i);
     },
     CONJURE_TOOL_CALL_APPEND: function (e) {
         let { projectId: t, toolCall: n } = e;
-        if ((H(t, "tool", n.id), M(t, n.entry_id, n.status))) return !1;
-        let i = v.get(t) ?? D,
-            r = j(i, "tool", n.id),
+        if ((j(t, "tool", n.id), P(t, n.entry_id, n.status))) return !1;
+        let i = b.get(t) ?? v,
+            r = W(i, "tool", n.id),
             a = -1 === r ? null : i[r],
             s = n.summary ?? a?.summary,
             l = n.fields ?? a?.fields,
@@ -345,13 +350,13 @@ let Y = new k(r.h, {
                 ...(null != n.error ? { error: n.error } : {}),
                 startedAt: a?.startedAt ?? n.ts,
             };
-        (P(t, n.entry_id, n.status), null != a) ? W(t, i, r, _) : x(t, i, _);
+        (U(t, n.entry_id, n.status), null != a) ? Y(t, i, r, _) : k(t, i, _);
     },
     CONJURE_MODEL_CALL_APPEND: function (e) {
         let { projectId: t, modelCall: n } = e;
-        if ((H(t, "model", n.id), M(t, n.entry_id, n.status))) return !1;
-        let i = v.get(t) ?? D,
-            r = j(i, "model", n.id),
+        if ((j(t, "model", n.id), P(t, n.entry_id, n.status))) return !1;
+        let i = b.get(t) ?? v,
+            r = W(i, "model", n.id),
             a = -1 === r ? null : i[r],
             s = {
                 kind: "model",
@@ -386,6 +391,6 @@ let Y = new k(r.h, {
                 ...(null != n.error ? { error: n.error } : {}),
                 startedAt: a?.startedAt ?? n.ts,
             };
-        (P(t, n.entry_id, n.status), null != a) ? W(t, i, r, s) : x(t, i, s);
+        (U(t, n.entry_id, n.status), null != a) ? Y(t, i, r, s) : k(t, i, s);
     },
 });

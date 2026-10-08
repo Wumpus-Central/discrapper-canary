@@ -408,7 +408,7 @@ class eC extends i.Ay.Store {
         return J.has(e);
     }
     getWidgetByType(e) {
-        let t = d.A.getLayout(q.G);
+        let t = d.A.getLayout(q.GJ);
         if (null != t) {
             let n = t.widgets.find((t) => {
                 let n = d.A.getWidget(t);

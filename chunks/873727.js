@@ -1,9 +1,9 @@
-n.d(t, { Lq: () => c, U0: () => _, _n: () => A, mB: () => E, x4: () => d });
+n.d(t, { Lq: () => u, U0: () => h, _n: () => A, mB: () => m, x4: () => c });
 var i = n(775602),
     r = n(363195),
-    a = n(885386),
+    l = n(885386),
     s = n(157146);
-let l = Object.freeze({
+let a = Object.freeze({
         baseTheme: "dark",
         customTheme: null,
         uiDensity: "default",
@@ -14,8 +14,8 @@ let l = Object.freeze({
         forcedColors: !1,
         underlineLinks: !1,
     }),
-    o = ["custom-theme-background", "custom-client-theme"];
-function d(e) {
+    o = 221552 == n.j ? ["custom-theme-background", "custom-client-theme"] : null;
+function c(e) {
     switch (e) {
         case "light":
         case "midnight":
@@ -25,7 +25,7 @@ function d(e) {
             return "dark";
     }
 }
-function c() {
+function u() {
     if ("u" < typeof document || "u" < typeof window) return null;
     let e = document.documentElement,
         t = o.filter((t) => e.classList.contains(t));
@@ -38,26 +38,26 @@ function c() {
     }
     return { classNames: t, variables: i };
 }
-function u() {
+function d() {
     let e =
         "u" > typeof window && "function" == typeof window.matchMedia
             ? window.matchMedia(s.Un).matches
                 ? "cozy"
                 : "compact"
             : s.fS;
-    return (0, s.dV)(a.Xi.getSetting(), e);
+    return (0, s.dV)(l.Xi.getSetting(), e);
 }
-function _() {
+function h() {
     let e = i.Ay.fontScale;
-    return Number.isFinite(e) ? Math.round(100 * e) / 100 : l.fontScale;
+    return Number.isFinite(e) ? Math.round(100 * e) / 100 : a.fontScale;
 }
-function E(e) {
+function m(e) {
     return {
-        baseTheme: d(r.A.theme),
-        customTheme: c(),
-        uiDensity: u(),
-        messageDisplayCompact: a.hH.getSetting(),
-        fontScale: _(),
+        baseTheme: c(r.A.theme),
+        customTheme: u(),
+        uiDensity: d(),
+        messageDisplayCompact: l.hH.getSetting(),
+        fontScale: h(),
         reducedMotion: e,
         highContrast: i.Ay.isHighContrastModeEnabled,
         forcedColors: i.Ay.useForcedColors,
@@ -66,10 +66,10 @@ function E(e) {
 }
 function A() {
     return {
-        theme: d(r.A.theme),
-        ui_density: u(),
-        message_display_compact: String(a.hH.getSetting()),
-        font_scale: String(_()),
+        theme: c(r.A.theme),
+        ui_density: d(),
+        message_display_compact: String(l.hH.getSetting()),
+        font_scale: String(h()),
         reduced_motion: String(i.Ay.useReducedMotion),
         high_contrast: String(i.Ay.isHighContrastModeEnabled),
         forced_colors: String(i.Ay.useForcedColors),

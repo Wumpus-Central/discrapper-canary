@@ -36,6 +36,7 @@ let i = Object.freeze({
         AUTOMOD: 4,
         BOT: 5,
         APPLICATION_COMMANDS: 6,
+        OVERLAY: 7,
     }),
     r = 2,
     a = 128,

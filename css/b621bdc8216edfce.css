@@ -530,6 +530,32 @@
     min-height: 200px
 }
 
+.container__78e49 {
+    flex-direction: column
+}
+
+.container__78e49,
+.row__78e49 {
+    display: flex;
+    gap: var(--space-12)
+}
+
+.row__78e49 {
+    align-items: center
+}
+
+.icon__78e49 {
+    border-radius: var(--radius-sm);
+    flex: none;
+    height: 32px;
+    width: 32px
+}
+
+.toggle__78e49 {
+    flex: 1;
+    min-width: 0
+}
+
 .enableOverlayItemAction_ef8d95 {
     align-items: center;
     display: flex;
@@ -1118,4 +1144,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=8eff7c1699b0a974.css.map*/
+/*# sourceMappingURL=b621bdc8216edfce.css.map*/

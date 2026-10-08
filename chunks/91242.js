@@ -45,10 +45,18 @@ class h extends i.Ay.Store {
 }
 let f = new h(r.h, {
     FRAME_LAUNCH_START: function (e) {
-        let { applicationId: t, frameId: n, surface: i } = e,
-            r = (0, o.Yf)(i);
-        (u.set(n, { id: n, applicationId: t, intent: r, surface: i, state: "loading", data: null }),
-            r === o.sV.MAIN && (_ = n));
+        let { applicationId: t, frameId: n, surface: i, hostWindowKey: r } = e,
+            a = (0, o.Yf)(i);
+        (u.set(n, {
+            id: n,
+            applicationId: t,
+            intent: a,
+            surface: i,
+            state: "loading",
+            data: null,
+            hostWindowKey: r ?? null,
+        }),
+            a === o.sV.MAIN && (_ = n));
     },
     FRAME_LAUNCH: function (e) {
         let { frameId: t, proxyTicket: n, launch: i, hostWindowKey: r } = e,
@@ -59,8 +67,12 @@ let f = new h(r.h, {
             (u.delete(t), _ === t && (_ = null));
             return;
         }
+        let { id: c, applicationId: E, intent: A, surface: h } = s;
         u.set(t, {
-            ...s,
+            id: c,
+            applicationId: E,
+            intent: A,
+            surface: h,
             state: "launched",
             data: {
                 url: l,

@@ -1,4 +1,4 @@
-n.d(t, { L0: () => d, TW: () => c, m0: () => o });
+n.d(t, { L0: () => d, OC: () => c, TW: () => u, m0: () => o });
 var i = n(17928),
     r = n(945810),
     a = n(71393),
@@ -17,14 +17,10 @@ function d(e) {
     let { guildId: t, location: n } = e;
     return null != t && l.getConfig({ guildId: t, location: n }).enabled;
 }
-function c(e) {
-    return (0, i.bG)(
-        [a.A, r.Bt],
-        () =>
-            (function (e, t) {
-                for (let n of e) if (d({ guildId: n.id, location: t })) return !0;
-                return !1;
-            })(Object.values(a.A.getGuilds()), e),
-        [e],
-    );
+function c(e, t) {
+    for (let n of e) if (d({ guildId: n.id, location: t })) return !0;
+    return !1;
+}
+function u(e) {
+    return (0, i.bG)([a.A, r.Bt], () => c(Object.values(a.A.getGuilds()), e), [e]);
 }
