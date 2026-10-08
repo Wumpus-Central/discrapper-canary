@@ -181,6 +181,7 @@ let D = new y(a.h, {
     },
     MEDIA_ENGINE_CONNECTION_STATS: function (e) {
         let { connectionStats: t } = e;
+        if (0 === t.length) return !1;
         Object.values(c.x).forEach((e) => {
             t.filter((t) => {
                 let { context: n } = t;

@@ -93,8 +93,9 @@ class A extends i.Ay.Store {
 }
 let h = new A(r.h, {
     MEDIA_ENGINE_CONNECTION_STATS: function (e) {
-        let { connectionStats: t } = e,
-            n = {};
+        let { connectionStats: t } = e;
+        if (0 === t.length) return !1;
+        let n = {};
         for (let e of t) {
             let t,
                 { mediaEngineConnectionId: i } = e;

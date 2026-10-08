@@ -234,8 +234,8 @@ var ez = n(780964),
     e2 = n(404778),
     e3 = n(689175),
     e5 = n(821609),
-    e6 = n(532624),
-    e8 = n(879631),
+    e8 = n(532624),
+    e6 = n(879631),
     e7 = n(350535),
     e4 = n(974293),
     e9 = n(572164),
@@ -325,7 +325,7 @@ function tv(e) {
         u = (0, d.bG)([eq.Ay], () => eq.Ay.getNewClipIds()),
         c = (0, e4.aJ)("ClipsPopout"),
         m = (0, d.bG)([eq.Ay], () => eq.Ay.getEnableAutoclipping()),
-        h = (0, d.bG)([e6.Ay], () => e6.Ay.getKeybindForAction(tf.hCu.SAVE_CLIP)),
+        h = (0, d.bG)([e8.Ay], () => e8.Ay.getKeybindForAction(tf.hCu.SAVE_CLIP)),
         f = l.useCallback(
             (e) => {
                 r?.(e);
@@ -341,7 +341,7 @@ function tv(e) {
         v = g.length > 16,
         x = null != h ? e7.dI(h.shortcut, !0) : null,
         E = [
-            (0, e8.$)(o.clipsLength / L.A.Millis.SECOND),
+            (0, e6.$)(o.clipsLength / L.A.Millis.SECOND),
             (0, tp.zr)(o.clipsQuality.resolution),
             eG.intl.formatToPlainString(eG.t.Qb44XH, { fps: o.clipsQuality.frameRate }),
         ];
@@ -671,8 +671,8 @@ var tK = n(397562),
     t2 = n(559506),
     t3 = n(646986),
     t5 = n(657538),
-    t6 = n(946356),
-    t8 = n(465829),
+    t8 = n(946356),
+    t6 = n(465829),
     t7 = n(624479),
     t4 = n(206845),
     t9 = n(957565),
@@ -1389,8 +1389,8 @@ function n3(e) {
         : eG.intl.formatToPlainString(eG.t["9OFjSe"], { dateString: n, timeString: i });
 }
 var n5 = n(996988),
-    n6 = n(207634),
-    n8 = n(47453);
+    n8 = n(207634),
+    n6 = n(47453);
 function n7(e) {
     let { currentUser: t, onClose: n, setPopoutRef: a, highlightBadge: s, openedAt: o, className: c } = e,
         f = __OVERLAY__,
@@ -1663,20 +1663,20 @@ function n7(e) {
                     }),
                     (0, i.jsxs)(e_.F, {
                         children: [
-                            (0, i.jsxs)(t6.A, {
+                            (0, i.jsxs)(t8.A, {
                                 className: eV.BK,
                                 user: t,
                                 displayProfile: p,
                                 themeType: n5.d.POPOUT,
                                 children: [
                                     (0, i.jsxs)("div", {
-                                        className: n8.wx,
+                                        className: n6.wx,
                                         children: [
                                             (0, i.jsx)(t0.A, { user: t, displayProfile: p, themeType: n5.d.POPOUT }),
                                             (0, i.jsx)(tQ.A, {
                                                 user: t,
                                                 displayProfile: p,
-                                                avatarSize: n6.T[n5.d.POPOUT].avatarSize,
+                                                avatarSize: n8.T[n5.d.POPOUT].avatarSize,
                                                 onOpenProfile: f ? void 0 : z,
                                             }),
                                             (0, i.jsx)(ni.A, {
@@ -1694,7 +1694,7 @@ function n7(e) {
                                         style: { pointerEvents: B ? "none" : void 0 },
                                         children: [
                                             (0, i.jsx)(t2.A, { userId: t.id }),
-                                            (0, i.jsx)(t8.Ay, {
+                                            (0, i.jsx)(t6.Ay, {
                                                 className: eV.eF,
                                                 user: t,
                                                 displayName: nC.Ay.getName(void 0, null, t),
@@ -1731,7 +1731,7 @@ function n7(e) {
                                             (0, i.jsxs)("div", {
                                                 className: eV.T_,
                                                 children: [
-                                                    (0, i.jsx)(t6.A.Overlay, {
+                                                    (0, i.jsx)(t8.A.Overlay, {
                                                         className: eV.g0,
                                                         children: (0, i.jsxs)(eW, {
                                                             children: [
@@ -1858,7 +1858,7 @@ function n7(e) {
                                                             ],
                                                         }),
                                                     }),
-                                                    (0, i.jsx)(t6.A.Overlay, {
+                                                    (0, i.jsx)(t8.A.Overlay, {
                                                         className: eV.g0,
                                                         children: (0, i.jsxs)(eW, {
                                                             children: [
@@ -2353,8 +2353,8 @@ function i3(e) {
         : e.children;
 }
 var i5 = n(348858),
-    i6 = n(615675),
-    i8 = n(900797),
+    i8 = n(615675),
+    i6 = n(900797),
     i7 = n(847374),
     i4 = n(617354),
     i9 = n(829773),
@@ -2379,7 +2379,7 @@ function ll(e) {
             play: p,
             events: { onMouseEnter: g, onMouseLeave: A },
         } = (0, i5.I)(m ? "undeafen" : "deafen"),
-        v = n ? i6.T : h,
+        v = n ? i8.T : h,
         { name: x } = (0, ex.x5)(lt.oh.AUDIO_OUTPUT),
         E = (0, i4.A)(t, n, a),
         { analyticsLocations: C } = (0, O.Ay)(M.A.AUDIO_OUTPUT_BUTTON),
@@ -2414,7 +2414,7 @@ function ll(e) {
                 children: (e, t) => {
                     let { onClick: l } = e,
                         { isShown: c } = t,
-                        h = c ? i8.t : i7.a;
+                        h = c ? i6.t : i7.a;
                     return (0, i.jsxs)("div", {
                         ref: _,
                         className: r()(ln.Lh, { [ln.v8]: m, [ln.q6]: c }),
@@ -2579,7 +2579,7 @@ function lg(e) {
                 children: (e, n) => {
                     let { onClick: l } = e,
                         { isShown: a } = n,
-                        s = a ? i8.t : i7.a;
+                        s = a ? i6.t : i7.a;
                     return (0, i.jsxs)("div", {
                         ref: j,
                         className: r()(ln.Lh, { [ln.v8]: N, [ln.q6]: a }),
@@ -2799,7 +2799,7 @@ function lw(e) {
         }, [r]),
         g = eA.A.coachmarkDismissibleContent;
     if (null != a) {
-        let e = (0, lO.A)("1791495196652", !0);
+        let e = (0, lO.A)("1791495250380", !0);
         t =
             null != e
                 ? eG.intl.formatToPlainString(eG.t.wve4kg, { webBuildOverride: a.id, builtAt: e })
