@@ -3026,7 +3026,7 @@ let l9 = {
                       className: l5.kL,
                       align: "center",
                       justify: "center",
-                      children: (0, i.jsx)(a, { alt: "", width: 200 }),
+                      children: (0, i.jsx)(a, { alt: "", width: 200, height: 192 }),
                   })
                 : r
                   ? (0, i.jsxs)("div", {
