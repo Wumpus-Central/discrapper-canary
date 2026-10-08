@@ -881,6 +881,7 @@
   "ADS_CREATIVES_PREVIEW_DELIVERY_STATE_LOOKBACK": "/ads/creatives/preview/delivery-state",
   "QUESTS_APP_STORE_METADATA": "/quests/appstore-metadata",
   "GAME_ANNOUNCEMENTS": "/games/:param/announcements",
+  "GAME_ORGANIZATION_INVITES": "/game-organizations/:param/:param/invites",
   "GUILD_ROOM": "/guilds/:param/rooms/:param",
   "GUILD_ROOM_CONNECT": "/guilds/:param/rooms/:param/connect",
   "GUILD_ROOM_UPDATE": "/guilds/:param/rooms/:param/update",

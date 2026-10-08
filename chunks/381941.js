@@ -83,6 +83,7 @@ var S =
     (r.SOCIAL_LAYER_STOREFRONT = "social_layer_storefront"),
     (r.COLLECTIBLES_SHOP = "collectibles_shop"),
     (r.GAME_SERVER_SHOP = "game_server_shop"),
+    (r.GAME_ORGANIZATION_INVITE = "game_organization_invite"),
     (r.MEDIA_MENTION = "media_mention"),
     (r.GUILD_SPACE = "guild_space"),
     (r.OTHER = "other"),
