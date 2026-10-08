@@ -387,7 +387,7 @@
 }
 
 .groupBackgroundEffect_d7e468 {
-    border-inline-start: 1px solid var(--custom-group-color);
+    border-inline-start: 1px solid color-mix(in srgb, var(--custom-group-color) 40%, transparent);
     inset-block: 8px;
     inset-inline: -8px;
     pointer-events: none;
@@ -2554,4 +2554,4 @@
     background-color: var(--background-mod-strong)
 }
 
-/*# sourceMappingURL=6898b64980a1538e.css.map*/
+/*# sourceMappingURL=f4ad830e9e6bea4f.css.map*/
