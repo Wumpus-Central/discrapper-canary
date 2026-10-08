@@ -1,15 +1,15 @@
-n.d(t, { A: () => o });
-var i = n(734057),
-    r = n(763827),
-    a = n(528767),
-    s = n(174459),
-    l = n(652215);
-function o(e, t, n) {
-    s.default.track(l.HAw.VOICE_CALL_TRANSFER, {
-        source_platform: null != n ? a.A.getSessionById(n)?.clientInfo.os : "discord_client",
-        guild_id: i.A.getChannel(e)?.guild_id,
-        channel_id: e,
-        rtc_connection_id: r.A.getRTCConnectionId(),
+i.d(t, { A: () => s });
+var c = i(734057),
+    d = i(763827),
+    e = i(528767),
+    o = i(174459),
+    a = i(652215);
+function s(n, t, i) {
+    o.default.track(a.HAw.VOICE_CALL_TRANSFER, {
+        source_platform: null != i ? e.A.getSessionById(i)?.clientInfo.os : "discord_client",
+        guild_id: c.A.getChannel(n)?.guild_id,
+        channel_id: n,
+        rtc_connection_id: d.A.getRTCConnectionId(),
         target_platform: t,
     });
 }

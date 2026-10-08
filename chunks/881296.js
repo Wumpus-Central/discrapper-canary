@@ -30,8 +30,8 @@ function I(e) {
         { transitionState: I, onClose: _, analyticsLocations: v } = e,
         P = (0, T.U)(),
         {
-            code: S,
-            redemptionUrl: y,
+            code: y,
+            redemptionUrl: S,
             isClaimed: D,
             isClaimedCodesLoaded: M,
             isClaiming: O,
@@ -102,7 +102,7 @@ function I(e) {
         })(P);
     if (null == P) return null;
     let G =
-        ((l = L ? 3 : null != S ? 2 : D && !M ? 0 : 1),
+        ((l = L ? 3 : null != y ? 2 : D && !M ? 0 : 1),
         null == P.startsAt || null == P.endsAt
             ? null
             : (3 === l
@@ -119,8 +119,8 @@ function I(e) {
                   body: s,
                   startDate: P.startsAt,
                   endDate: P.endsAt,
-                  code: S,
-                  redemptionURL: null != y ? y : "",
+                  code: y,
+                  redemptionURL: null != S ? S : "",
                   asset: "https://cdn.discordapp.com/assets/content/f9a03629577352ebb83c4b1a24f8f7a2a7a6163c92db8028806fa121b24c2b65.webp",
                   redeemCtaText: R.intl.string(C.default.YRjiSW),
                   claimCtaText: R.intl.string(C.default.pjdMpI),

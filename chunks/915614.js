@@ -1,4 +1,4 @@
-n.d(t, { A: () => R, o: () => v });
+n.d(t, { A: () => v, o: () => R });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -19,14 +19,14 @@ var a = n(477900),
     _ = n(859161),
     A = n(207634),
     N = n(565890);
-function v(e) {
+function R(e) {
     let {
             user: t,
             displayProfile: n,
             guildId: r,
             pendingBanner: A,
-            overlay: v,
-            className: R,
+            overlay: R,
+            className: v,
             avatarSize: I,
             avatarOffsetX: j,
             avatarOffsetY: T,
@@ -53,18 +53,18 @@ function v(e) {
         F = (0, m.A)(D ?? n?.primaryColor ?? $).hex,
         z = { align: "start", insetStart: j - S, insetBottom: T + S, radius: (0, _.A)(I) };
     return (0, a.jsx)(x.A, {
-        fillClassName: s()(N.v, R),
+        fillClassName: s()(N.v, v),
         bannerSrc: L,
         backgroundColor: "COMPLETE" === k || G ? F : d.A.unsafe_rawColors.PRIMARY_800.css,
         showGifTag: !B && (0, E.o4)(L),
         height: C,
         cutout: z,
-        overlay: v,
+        overlay: R,
         onInteractionStart: () => U(!0),
         onInteractionEnd: () => U(!1),
     });
 }
-function R(e) {
+function v(e) {
     let {
             themeType: t,
             user: n,
@@ -76,5 +76,5 @@ function R(e) {
         o = A.T[t],
         d = null != s ? { ...o, ...s } : o,
         c = !(0, h.Qq)() && (r || l?.canUsePremiumProfileCustomization || !1);
-    return (0, a.jsx)(v, { ...i, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
+    return (0, a.jsx)(R, { ...i, ...d, user: n, displayProfile: l, themePadding: c ? d.themePadding : 0 });
 }

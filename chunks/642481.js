@@ -44,8 +44,8 @@ function h(e) {
             scrollBehavior: _,
             showCloseButton: A = !0,
             isCaretHoverable: N = !1,
-            shouldTrapFocus: v = !1,
-            returnRef: R,
+            shouldTrapFocus: R = !1,
+            returnRef: v,
             onNudgeChange: I,
             ...j
         } = e,
@@ -78,8 +78,8 @@ function h(e) {
             onPositionChange: M,
             onNudgeChange: I,
             scrollBehavior: _,
-            modal: v,
-            returnRef: R,
+            modal: R,
+            returnRef: v,
             gradientOffsetBottom: 0,
             experimental_ignoreModalClicks: !1,
             ...("edge" === j.alignmentStrategy

@@ -1,1 +1,1 @@
-e.exports = { f: "defaultColor__5345c" };
+n.exports = { f: "defaultColor__5345c" };

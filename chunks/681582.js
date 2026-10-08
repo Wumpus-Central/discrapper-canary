@@ -12,15 +12,15 @@ function c(e) {
         [n, c] = i.useState(null),
         [h, f] = i.useState(null),
         g = i.useRef(void 0),
-        p = i.useRef(new Set()),
-        [m, A] = i.useState(!1),
+        m = i.useRef(new Set()),
+        [p, A] = i.useState(!1),
         y = (0, l.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
         v = i.useCallback((e) => {
-            (p.current.delete(e), A(p.current.size > 0));
+            (m.current.delete(e), A(m.current.size > 0));
         }, []),
-        w = i.useCallback((e) => (p.current.add(e), A(!0), () => v(e)), [v]),
+        w = i.useCallback((e) => (m.current.add(e), A(!0), () => v(e)), [v]),
         x = i.useCallback((e, t) => {
-            for (let n of p.current) n(e, t);
+            for (let n of m.current) n(e, t);
         }, []);
     i.useEffect(() => {
         h?.clearConfetti();
@@ -71,7 +71,7 @@ function c(e) {
                     ref: f,
                     className: u.J,
                     environment: d.XA,
-                    onClick: m ? x : void 0,
+                    onClick: p ? x : void 0,
                     onBeforeRender: b,
                     onAfterRender: C,
                 }),

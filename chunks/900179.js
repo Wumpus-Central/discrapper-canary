@@ -31,18 +31,18 @@ function A(e) {
             headingIcon: c,
             hideHeading: A = !1,
             introText: N,
-            className: v,
-            scrollTargetId: R,
+            className: R,
+            scrollTargetId: v,
         } = e,
         I = (0, p.GV)(),
         j = l.useRef(null),
         T = (0, h.g)(),
-        y = null != R && T === R;
+        y = null != v && T === v;
     (0, E.A)(j, y);
     let C = "function" == typeof c ? { icon: c } : c;
     return (0, a.jsxs)("section", {
         ref: y ? j : void 0,
-        className: s()(b.uW, v),
+        className: s()(b.uW, R),
         "aria-labelledby": I,
         children: [
             A

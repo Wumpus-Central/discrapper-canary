@@ -25,11 +25,11 @@ function E(e) {
             a11yAnnounceOnHide: A,
         } = e,
         N = (0, o.bG)([m.Ay], () => m.Ay.useReducedMotion),
-        v = l.useRef(null);
+        R = l.useRef(null);
     return (
         l.useEffect(
             () => () => {
-                null != v.current && clearTimeout(v.current);
+                null != R.current && clearTimeout(R.current);
             },
             [],
         ),
@@ -40,12 +40,12 @@ function E(e) {
             onRest: (e, t) => {
                 if (!e.finished) return;
                 let n = t.item ? _ : A;
-                (null != v.current && clearTimeout(v.current),
+                (null != R.current && clearTimeout(R.current),
                     null != n
-                        ? (v.current = setTimeout(() => {
-                              ((v.current = null), c.O.announce(n));
+                        ? (R.current = setTimeout(() => {
+                              ((R.current = null), c.O.announce(n));
                           }, 300))
-                        : (v.current = null));
+                        : (R.current = null));
             },
         })((e, n) =>
             n

@@ -1,4 +1,4 @@
-n.d(t, { A: () => P });
+n.d(t, { A: () => M });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -66,7 +66,7 @@ function w(e) {
         v = R[(0, S.C)()],
         [T, j] = i.useState(!1),
         [w] = i.useState(new a.A.Value(0)),
-        [P] = i.useState(new a.A.Value(0));
+        [M] = i.useState(new a.A.Value(0));
     (i.useEffect(() => {
         x
             ? a.A.timing(w, { toValue: 0, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !C }).start(() =>
@@ -75,9 +75,9 @@ function w(e) {
             : a.A.timing(w, { toValue: 1, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
     }, [x, w, C, y]),
         i.useEffect(() => {
-            x && T && a.A.timing(P, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
-        }, [x, P, T, y]));
-    let M = i.useCallback(() => {
+            x && T && a.A.timing(M, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
+        }, [x, M, T, y]));
+    let P = i.useCallback(() => {
         null != E && (0, b.qo)(t, E.channelId);
     }, [t, E]);
     return null == c || (C && !T)
@@ -87,10 +87,10 @@ function w(e) {
               children:
                   T && null != E
                       ? (0, l.jsx)(a.A.div, {
-                            style: { marginBottom: P.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
+                            style: { marginBottom: M.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
                             children: (0, l.jsxs)(m.D, {
                                 className: s()(k.vK, k.vk, { [k.pJ]: n.isForumChannel() }),
-                                onClick: M,
+                                onClick: P,
                                 children: [
                                     (0, l.jsx)(L, {
                                         channelId: E.channelId,
@@ -153,7 +153,7 @@ function w(e) {
                         }),
           });
 }
-function P(e) {
+function M(e) {
     let { guildId: t, channel: n, className: i } = e,
         r = (0, v.d)(t),
         s = (0, o.bG)([C.Ay], () => C.Ay.getSelfMember(t)?.isPending === !0),

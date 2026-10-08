@@ -60,21 +60,21 @@ function M(e) {
                 (L("submitted"), n(_.i.TAKE_ACTION), await E());
             }
         }, [t, x, n, E, D, R]),
-        P = s.useCallback(async () => {
+        y = s.useCallback(async () => {
             ("submitted" !== R && n(_.i.USER_DISMISS), await E());
         }, [n, E, R]),
-        y = s.useMemo(
+        H = s.useMemo(
             () => [
                 { value: c.tI.GUILD, id: "guild", label: N.intl.string(N.t.aN3RNQ) },
                 { value: c.tI.PERSONAL, id: "personal", label: N.intl.string(N.t.js8y7t) },
             ],
             [],
         ),
-        H = x ? N.intl.string(N.t.cvoikF) : N.intl.string(N.t["cY+Oob"]);
+        P = x ? N.intl.string(N.t.cvoikF) : N.intl.string(N.t["cY+Oob"]);
     return (0, i.jsx)(a.k, {
         size: "md",
         transitionState: A,
-        onClose: P,
+        onClose: y,
         gradientColor: "blue",
         graphic: {
             type: "dynamic",
@@ -86,7 +86,7 @@ function M(e) {
         subtitle: N.intl.string(N.t.XLpBLj),
         actions: [
             {
-                text: H,
+                text: P,
                 variant: x ? "secondary" : "primary",
                 loading: "submitting" === R,
                 disabled: "submitting" === R,
@@ -100,7 +100,7 @@ function M(e) {
             children: [
                 (0, i.jsx)(d.l, {
                     selectionMode: "single",
-                    options: y,
+                    options: H,
                     value: m,
                     onSelectionChange: b,
                     fullWidth: !0,

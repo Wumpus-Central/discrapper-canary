@@ -1,4 +1,4 @@
-e.exports = {
+a.exports = {
     Rm: "toggleButton__79243",
     mQ: "standard__79243 toggleButton__79243",
     GA: "labeled__79243 toggleButton__79243",

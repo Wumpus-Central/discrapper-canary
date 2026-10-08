@@ -79,7 +79,7 @@ class u {
 }
 let c = new Set(),
     d = new Map();
-function f(e, t) {
+function m(e, t) {
     let l = `${e}:${t}`,
         n = d.get(l);
     if (null == n) {
@@ -100,14 +100,14 @@ function f(e, t) {
             stateListeners: new Set(),
             backoff: new a.A(500, 8e3),
             retry: () => {
-                ((r.socketKey = null), x(r));
+                ((r.socketKey = null), p(r));
             },
         };
         ((n = r), d.set(l, n));
     }
     return n;
 }
-function m(e, t) {
+function f(e, t) {
     if (e.state !== t) for (let l of ((e.state = t), e.stateListeners)) l();
 }
 function h(e, t) {
@@ -116,16 +116,16 @@ function h(e, t) {
 function g(e, t) {
     return i.A.getSessions(e).find((e) => e.id === t)?.started_at ?? null;
 }
-function p(e) {
+function x(e) {
     (e.backoff.cancel(),
         e.socket?.close(),
         (e.socket = null),
         (e.socketKey = null),
         "granted" === e.controlState && h(e, e.control ? "pending" : "off"));
 }
-function x(e) {
+function p(e) {
     if (0 === e.subscribers.size || null == e.startedAt || c.has(e.projectId)) {
-        (p(e), m(e, "connecting"));
+        (x(e), f(e, "connecting"));
         return;
     }
     let t = [...e.subscribers],
@@ -134,7 +134,7 @@ function x(e) {
         a = e.control ? "control" : "view",
         r = `${a}:${l}:${n}`;
     if (e.socketKey === r && (null != e.socket || e.backoff.pending)) return;
-    (p(e), (e.socketKey = r));
+    (x(e), (e.socketKey = r));
     let i = new u({
         projectId: e.projectId,
         sessionId: e.sessionId,
@@ -145,23 +145,23 @@ function x(e) {
             e.socket === i &&
                 ((e.lastFrame = t),
                 e.backoff.succeed(),
-                m(e, "live"),
+                f(e, "live"),
                 await Promise.allSettled([...e.subscribers].map((e) => e.onFrame(t))));
         },
         onMode: (t) => {
             e.socket === i &&
                 e.control &&
-                ("control" === t ? h(e, "granted") : ((e.control = !1), h(e, "denied"), x(e)));
+                ("control" === t ? h(e, "granted") : ((e.control = !1), h(e, "denied"), p(e)));
         },
         onClosed: (t) => {
             if (e.socket !== i) return;
-            if ((p(e), 4403 === t))
+            if ((x(e), 4403 === t))
                 return void (function (e) {
-                    for (let t of (c.add(e), d.values())) t.projectId === e && (p(t), v(t), m(t, "connecting"));
+                    for (let t of (c.add(e), d.values())) t.projectId === e && (x(t), v(t), f(t, "connecting"));
                 })(e.projectId);
             let l = 4409 === t && e.control;
             (l && ((e.control = !1), e.backoff.succeed(), h(e, "denied")),
-                m(e, "connecting"),
+                f(e, "connecting"),
                 0 !== e.subscribers.size && null != e.startedAt && (l || (e.socketKey = r), e.backoff.fail(e.retry)));
         },
     });
@@ -171,9 +171,9 @@ function v(e) {
     ((e.control = !1), h(e, "off"));
 }
 function j(e, t, l) {
-    let n = f(e, t),
+    let n = m(e, t),
         a = l && null != n.startedAt;
-    n.control !== a && ((n.control = a), a ? h(n, "pending") : "denied" !== n.controlState && h(n, "off"), x(n));
+    n.control !== a && ((n.control = a), a ? h(n, "pending") : "denied" !== n.controlState && h(n, "off"), p(n));
 }
 function b(e, t) {
     let l = d.get(`${e}:${t}`);
@@ -186,7 +186,7 @@ function y(e, t, l) {
 function k(e, t) {
     let l = n.useCallback(
         (l) => {
-            let n = f(e, t);
+            let n = m(e, t);
             return (
                 n.controlListeners.add(l),
                 () => {
@@ -205,7 +205,7 @@ function N(e, t) {
     let [l, a] = n.useState(() => d.get(`${e}:${t}`)?.restarts ?? 0);
     return (
         n.useEffect(() => {
-            let l = f(e, t);
+            let l = m(e, t);
             return (
                 l.restartListeners.add(a),
                 () => {
@@ -220,7 +220,7 @@ function A(e, t, l) {
     let { fps: a, onFrame: r, enabled: i = !0, width: s = 0 } = l,
         o = n.useCallback(
             (l) => {
-                let n = f(e, t);
+                let n = m(e, t);
                 return (
                     n.stateListeners.add(l),
                     () => {
@@ -233,14 +233,14 @@ function A(e, t, l) {
         u = n.useSyncExternalStore(o, () => d.get(`${e}:${t}`)?.state ?? "connecting");
     return (
         n.useEffect(() => {
-            let l = f(e, t);
+            let l = m(e, t);
             if ((null != l.lastFrame && Promise.resolve(r(l.lastFrame)).catch(() => void 0), !i)) return;
             let n = { fps: a, width: s, onFrame: r };
             return (
                 l.subscribers.add(n),
-                x(l),
+                p(l),
                 () => {
-                    (l.subscribers.delete(n), x(l));
+                    (l.subscribers.delete(n), p(l));
                 }
             );
         }, [e, t, a, r, i, s]),
@@ -251,16 +251,16 @@ function A(e, t, l) {
     for (let e of d.values()) {
         let t = g(e.projectId, e.sessionId);
         if (t !== e.startedAt) {
-            if (((e.startedAt = t), p(e), null == t)) {
+            if (((e.startedAt = t), x(e), null == t)) {
                 v(e);
                 continue;
             }
             for (let t of ((e.lastFrame = null), (e.restarts += 1), e.restartListeners)) t(e.restarts);
-            (e.backoff.succeed(), h(e, e.control ? "pending" : "off"), m(e, "connecting"), x(e));
+            (e.backoff.succeed(), h(e, e.control ? "pending" : "off"), f(e, "connecting"), p(e));
         }
     }
 }),
     r.h.subscribe("CONJURE_BROWSER_SESSIONS_SET", function (e) {
         let { projectId: t } = e;
-        if (c.delete(t)) for (let e of d.values()) e.projectId === t && (e.backoff.succeed(), x(e));
+        if (c.delete(t)) for (let e of d.values()) e.projectId === t && (e.backoff.succeed(), p(e));
     }));

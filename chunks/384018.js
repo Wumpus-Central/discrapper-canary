@@ -11,8 +11,8 @@ var r = n(477900),
     h = n(435462);
 let f = (0, d.v)(() => ({ containerIdsBySurface: new Map() })),
     g = 0;
-var p = n(435871);
-function m(e) {
+var m = n(435871);
+function p(e) {
     return "number" == typeof e ? `${e}px` : e;
 }
 function A(e) {
@@ -46,13 +46,13 @@ function A(e) {
                 a = null != s ? (s.toast.position ?? "top") : l;
             a !== l && o(a);
             let { minToastDurationMs: d } = i.useContext(c.C),
-                p = Math.max(s?.toast.duration ?? 3e3, d);
+                m = Math.max(s?.toast.duration ?? 3e3, d);
             return (
                 i.useEffect(() => {
                     if (null == s) return;
-                    let t = setTimeout(() => (0, h.VD)(e), p);
+                    let t = setTimeout(() => (0, h.VD)(e), m);
                     return () => clearTimeout(t);
-                }, [s, p, e]),
+                }, [s, m, e]),
                 i.useEffect(() => {
                     let e = s?.toast.text;
                     null != s &&
@@ -69,19 +69,19 @@ function A(e) {
     let v = i.useCallback(() => y((e) => ({ ...e, leaving: null })), []);
     return (0, r.jsxs)("div", {
         "aria-hidden": !0,
-        className: l()(p.container, p[d]),
+        className: l()(m.container, m[d]),
         style: {
             "--custom-toast-animation-duration": `${o.A.modules.toast.ANIMATION_DURATION_MS.resolve()}ms`,
             "--custom-toast-queue-enter-delay": `${o.A.modules.toast.QUEUE_ENTER_DELAY_MS.resolve()}ms`,
-            "--toast-container-offset-top": m(n?.top),
-            "--toast-container-offset-bottom": m(n?.bottom),
+            "--toast-container-offset-top": p(n?.top),
+            "--toast-container-offset-bottom": p(n?.bottom),
         },
         children: [
             null != A.leaving &&
                 (0, r.jsx)(
                     "div",
                     {
-                        className: l()(p.toast, p.leave),
+                        className: l()(m.toast, m.leave),
                         onAnimationEnd: v,
                         children: (0, r.jsx)(a.y, { ...A.leaving.toast }),
                     },
@@ -91,7 +91,7 @@ function A(e) {
                 (0, r.jsx)(
                     "div",
                     {
-                        className: l()(p.toast, p.enter, { [p.delayed]: A.isDelayed }),
+                        className: l()(m.toast, m.enter, { [m.delayed]: A.isDelayed }),
                         children: (0, r.jsx)(a.y, { ...A.entry.toast }),
                     },
                     A.entry.key,

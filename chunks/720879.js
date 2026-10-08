@@ -23,8 +23,8 @@ function c(e) {
         x = l.useContext(r.C),
         [_, A] = l.useState("closed"),
         N = l.useRef(null),
-        v = l.useRef(!1),
-        R = "opening-mouse" === _ || "open-mouse" === _,
+        R = l.useRef(!1),
+        v = "opening-mouse" === _ || "open-mouse" === _,
         I = "opening-keyboard" === _ || "open-keyboard" === _,
         j = "open-mouse" === _ || "open-keyboard" === _,
         T = (x.keyboardModeEnabled || I) && null != h,
@@ -52,7 +52,7 @@ function c(e) {
         }, []),
         M = l.useCallback(
             (e) => {
-                (e && (v.current = !0), D(), A("closing"));
+                (e && (R.current = !0), D(), A("closing"));
             },
             [D],
         );
@@ -61,11 +61,11 @@ function c(e) {
             ("closed" === _ || "closing" === _) && (D(), A("opening-mouse"));
         }, [D, _]),
         U = l.useCallback(() => {
-            R && M(!1);
-        }, [M, R]),
+            v && M(!1);
+        }, [M, v]),
         O = l.useCallback(() => {
-            if (v.current || !s.Ay.keyboardModeEnabled || ("closed" !== _ && "closing" !== _)) {
-                v.current = !1;
+            if (R.current || !s.Ay.keyboardModeEnabled || ("closed" !== _ && "closing" !== _)) {
+                R.current = !1;
                 return;
             }
             (D(), A("opening-keyboard"));

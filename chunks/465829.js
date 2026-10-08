@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => T, Ce: () => I, c$: () => N, gU: () => A, n2: () => R });
+n.d(t, { Ay: () => T, Ce: () => I, c$: () => N, gU: () => A, n2: () => v });
 var a = n(477900);
 n(582128);
 var l = n(503698),
@@ -50,7 +50,7 @@ function N(e) {
           })
         : (0, a.jsxs)(s.E, { className: r()(_.QC, _.O2, u), variant: E, children: [l, " ", c] });
 }
-function v(e) {
+function R(e) {
     let {
             user: t,
             guildId: n,
@@ -79,7 +79,7 @@ function v(e) {
         ],
     });
 }
-function R(e) {
+function v(e) {
     let { pronouns: t, className: n } = e;
     return (0, a.jsxs)(s.E, {
         className: r()(_.hI, n),
@@ -108,7 +108,7 @@ function j(e) {
         p = (0, h.j)({ location: "UserProfileUserInfo" }),
         A = null != s && s.length > 0,
         N = (0, u.r)(t),
-        v = t.isProvisional
+        R = t.isProvisional
             ? null
             : (0, a.jsx)(c.A, {
                   user: t,
@@ -122,7 +122,7 @@ function j(e) {
     return (0, a.jsxs)("div", {
         className: r()(_.AK, { [_.j6]: A, [_.w2]: null != N }),
         children: [
-            null != v && null != l ? (0, a.jsx)(i.D, { onClick: l, className: r()(_.qp, _.vk), children: v }) : v,
+            null != R && null != l ? (0, a.jsx)(i.D, { onClick: l, className: r()(_.qp, _.vk), children: R }) : R,
             A &&
                 (0, a.jsxs)(a.Fragment, {
                     children: [
@@ -131,7 +131,7 @@ function j(e) {
                             text: x.intl.string(x.t.GI2A8C),
                             delay: b.In,
                             ariaHidden: !0,
-                            children: (0, a.jsx)("span", { className: _.Ez, children: (0, a.jsx)(R, { pronouns: s }) }),
+                            children: (0, a.jsx)("span", { className: _.Ez, children: (0, a.jsx)(v, { pronouns: s }) }),
                         }),
                     ],
                 }),
@@ -167,7 +167,7 @@ function T(e) {
     return (0, a.jsxs)("div", {
         className: l,
         children: [
-            (0, a.jsx)(v, {
+            (0, a.jsx)(R, {
                 user: t,
                 guildId: n,
                 displayName: s,

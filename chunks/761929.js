@@ -21,8 +21,8 @@ let o = function (e) {
             onElementResizeStart: s,
             onElementResizeEnd: c,
             throttleDuration: f = 300,
-            orientation: d,
-            usePointerEvents: p = !1,
+            orientation: p,
+            usePointerEvents: d = !1,
             getClampedValue: h = i.clamp,
             onApplyDimension: m,
         } = e,
@@ -34,8 +34,8 @@ let o = function (e) {
         r.useLayoutEffect(() => {
             if (!g || null == n.current) return;
             function e(e) {
-                let t = 1 === u(d) ? e.screenX : e.screenY,
-                    n = 0 === d || 2 === d,
+                let t = 1 === u(p) ? e.screenX : e.screenY,
+                    n = 0 === p || 2 === p,
                     l = (t - E.current) * (n ? -1 : 1);
                 return x.current + l;
             }
@@ -43,7 +43,7 @@ let o = function (e) {
                 return h(e, a ?? 0, l ?? e);
             }
             let r = null != o ? (0, i.throttle)(o, f) : null,
-                L = 1 === u(d) ? "width" : "height",
+                L = 1 === u(p) ? "width" : "height",
                 T =
                     m ??
                     ((e) => {
@@ -61,8 +61,8 @@ let o = function (e) {
                     r = t(l);
                 (T(r), o?.(r, l), c?.(r), (v.current = !1));
             }
-            let R = p ? "pointerup" : "mouseup",
-                S = p ? "pointermove" : "mousemove",
+            let R = d ? "pointerup" : "mouseup",
+                S = d ? "pointermove" : "mousemove",
                 A = n.current.ownerDocument;
             return (
                 A.addEventListener(R, w),
@@ -71,15 +71,15 @@ let o = function (e) {
                     (A.removeEventListener(R, w), A.removeEventListener(S, C), r?.cancel());
                 }
             );
-        }, [g, o, a, l, d, n, f, c, p, h, s, m]),
+        }, [g, o, a, l, p, n, f, c, d, h, s, m]),
         r.useCallback(
             (e) => {
-                let t = 1 === u(d);
+                let t = 1 === u(p);
                 (null != n.current && (x.current = t ? n.current.offsetWidth : n.current.offsetHeight),
                     (E.current = t ? e.screenX : e.screenY),
                     y(!0));
             },
-            [d, n],
+            [p, n],
         )
     );
 };

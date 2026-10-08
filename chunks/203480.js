@@ -11,7 +11,7 @@ var r = n(582128),
     h = n(532624),
     f = n(350535),
     g = n(650583);
-function p(e) {
+function m(e) {
     let t = e.ctrlKey || e.altKey || e.metaKey;
     e.key !== g.N$.Tab ||
         t ||
@@ -19,7 +19,7 @@ function p(e) {
         (0, l.hasAnyModalOpen)() ||
         c.A.maybeShowKeyboardNavigationExplainerModal();
 }
-function m() {
+function p() {
     (0, d.Bm)();
 }
 let A = function (e, t) {
@@ -64,11 +64,11 @@ let A = function (e, t) {
         (0, r.useLayoutEffect)(
             () => (
                 n
-                    ? (e.addEventListener("mousedown", m), e.addEventListener("keydown", p))
+                    ? (e.addEventListener("mousedown", p), e.addEventListener("keydown", m))
                     : e.addEventListener("keydown", l),
                 () => {
                     n
-                        ? (e.removeEventListener("mousedown", m), e.removeEventListener("keydown", p))
+                        ? (e.removeEventListener("mousedown", p), e.removeEventListener("keydown", m))
                         : e.removeEventListener("keydown", l);
                 }
             ),

@@ -1,4 +1,4 @@
-n.d(t, { JR: () => h, P5: () => a, Qg: () => f, Qs: () => d, Xm: () => o, yZ: () => c, yf: () => s });
+n.d(t, { JR: () => N, P5: () => a, Qg: () => f, Qs: () => d, Xm: () => o, yZ: () => s, yf: () => c });
 var r = n(164892),
     l = n(696645),
     u = n(373677);
@@ -36,10 +36,10 @@ function o(e) {
 function d(e, t) {
     return null != e && t.modes.includes(e) ? e : t.defaultMode;
 }
-function s(e, t) {
+function c(e, t) {
     return ("frame" === t && e.modes.includes("frame")) || 0 === e.modes.length;
 }
-function c(e) {
+function s(e) {
     let t = e.widgetTop && e.widgetBottom,
         n = e.miniProfile;
     return { hasMainCard: t, hasPopoutCard: n, hasAny: t || n };
@@ -48,6 +48,6 @@ function f(e) {
     let { installScope: t, previewReady: n, integrationInstalled: r, botPermissionsChanged: l } = e;
     return !!n && null != r && (!!l || ("user" !== t && !r));
 }
-function h(e, t) {
+function N(e, t) {
     return t && "bot" === e;
 }

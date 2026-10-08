@@ -1,4 +1,4 @@
-n.d(t, { E: () => R, A: () => v });
+n.d(t, { E: () => v, A: () => R });
 var a = n(477900),
     l = n(582128),
     r = n(503698),
@@ -39,7 +39,7 @@ var E = n(311016),
     _ = n(900179),
     A = n(165668),
     N = n(165648);
-function v(e) {
+function R(e) {
     let {
             userBio: t,
             className: n,
@@ -52,17 +52,17 @@ function v(e) {
             guildId: g,
         } = e,
         _ = (0, i.bG)([x.A], () => x.A.getGuildId()),
-        v = g ?? _,
-        R = l.useMemo(
+        R = g ?? _,
+        v = l.useMemo(
             () =>
                 (0, E.A)(m)
                     ? (0, a.jsx)(p, {})
                     : null == t || "" === t
                       ? null
-                      : (0, b.parseBioReact)(t, void 0, { guildId: v }),
-            [m, t, v],
+                      : (0, b.parseBioReact)(t, void 0, { guildId: R }),
+            [m, t, R],
         );
-    return null == R
+    return null == v
         ? null
         : (0, a.jsx)("div", {
               className: s()(n, N.PT, A.z),
@@ -73,14 +73,14 @@ function v(e) {
                   className: A.w,
                   children: (0, a.jsx)(h.Y.Provider, {
                       value: { disableAnimations: r && !d, disableInteractions: !1 },
-                      children: R,
+                      children: v,
                   }),
               }),
           });
 }
-function R(e) {
+function v(e) {
     let { userBio: t, userId: n } = e;
     return (0, E.A)(n) || (null != t && "" !== t)
-        ? (0, a.jsx)(_.A, { heading: m.intl.string(m.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(v, { ...e }) })
+        ? (0, a.jsx)(_.A, { heading: m.intl.string(m.t.ZzAR2Y), hideHeading: !0, children: (0, a.jsx)(R, { ...e }) })
         : null;
 }

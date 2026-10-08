@@ -80,9 +80,9 @@ function O(e) {
 var L = n(664929);
 n(827669);
 var w = n(660183),
-    P = n(633331);
-function M(e, t, n) {
-    return (0, l.jsx)(O, { className: P.uK, name: e.displayName, state: t, onClick: n }, e.name);
+    M = n(633331);
+function P(e, t, n) {
+    return (0, l.jsx)(O, { className: M.uK, name: e.displayName, state: t, onClick: n }, e.name);
 }
 function D(e) {
     let { command: t, optionStates: n, onOptionClick: r } = e,
@@ -100,20 +100,20 @@ function D(e) {
             };
         }, [t.options, n]),
         u = (0, l.jsx)("div", {
-            className: P.$2,
+            className: M.$2,
             children: o.map((e) => (0, l.jsx)(C.E, { variant: "text-sm/normal", children: e.displayName }, e.name)),
         }),
-        c = s.map((e) => M(e, n?.[e.name], r)),
+        c = s.map((e) => P(e, n?.[e.name], r)),
         h =
             a.length > 0
                 ? (0, l.jsxs)(l.Fragment, {
                       children: [
                           (0, l.jsx)(d.D, {
-                              className: P.Ki,
+                              className: M.Ki,
                               variant: "heading-deprecated-12/semibold",
                               children: w.intl.string(w.t["5C107K"]),
                           }),
-                          a.map((e) => M(e, n?.[e.name], r)),
+                          a.map((e) => P(e, n?.[e.name], r)),
                       ],
                   })
                 : null,
@@ -124,7 +124,7 @@ function D(e) {
                       "aria-label": !1,
                       delay: 200,
                       children: (0, l.jsx)(C.E, {
-                          className: P.kP,
+                          className: M.kP,
                           color: "text-muted",
                           variant: "text-sm/normal",
                           children:
@@ -135,7 +135,7 @@ function D(e) {
                   })
                 : null;
     return (0, l.jsxs)(l.Fragment, {
-        children: [c, null != h || null != m ? (0, l.jsxs)("div", { className: P.gM, children: [h, m] }) : null],
+        children: [c, null != h || null != m ? (0, l.jsxs)("div", { className: M.gM, children: [h, m] }) : null],
     });
 }
 function U(e) {
@@ -159,26 +159,26 @@ function U(e) {
             if (null != a.guild_id && h?.botId != null) return k.Ay.getMember(a.guild_id, h.botId)?.nick;
         });
     return (0, l.jsxs)("div", {
-        className: s()(P.iE, m ? null : P.r9),
+        className: s()(M.iE, m ? null : M.r9),
         children: [
-            null != g ? (0, l.jsx)(g, { className: P.Sl, channel: a, section: h, width: 32, height: 32 }) : null,
+            null != g ? (0, l.jsx)(g, { className: M.Sl, channel: a, section: h, width: 32, height: 32 }) : null,
             (0, l.jsxs)("div", {
-                className: P.QR,
+                className: M.QR,
                 children: [
                     (0, l.jsxs)("div", {
-                        className: P.nY,
+                        className: M.nY,
                         children: [
-                            (0, l.jsx)(T, { className: P.DD, children: "/" + n.displayName }),
+                            (0, l.jsx)(T, { className: M.DD, children: "/" + n.displayName }),
                             o ? (0, l.jsx)(D, { command: n, optionStates: c, onOptionClick: d }) : null,
                         ],
                     }),
                     (0, l.jsx)(j, {
-                        className: s()(P.h_, null != t ? P.z3 : null),
+                        className: s()(M.h_, null != t ? M.z3 : null),
                         children: t ?? f?.displayDescription ?? n.displayDescription,
                     }),
                 ],
             }),
-            (0, l.jsx)(_, { className: P.sP, children: x ?? h?.name }),
+            (0, l.jsx)(_, { className: M.sP, children: x ?? h?.name }),
         ],
     });
 }

@@ -11,8 +11,8 @@ var r = n(477900),
     h = n(397613),
     f = n(821609),
     g = n(825484),
-    p = n(148810),
-    m = n(521502),
+    m = n(148810),
+    p = n(521502),
     A = n(380610),
     y = n(807393),
     v = n(976860),
@@ -25,11 +25,11 @@ var r = n(477900),
     O = n(684637);
 function _() {
     let [e, t] = i.useState(!1);
-    if (null == (0, c.bG)([m.A], () => ((0, A.kK)() ? m.A.getCurrentBuildOverride().overrides?.discord_web : null)))
+    if (null == (0, c.bG)([p.A], () => ((0, A.kK)() ? p.A.getCurrentBuildOverride().overrides?.discord_web : null)))
         return null;
     async function n() {
         try {
-            (t(!0), await (0, p.iD)(), window.location.reload(!0));
+            (t(!0), await (0, m.iD)(), window.location.reload(!0));
         } catch (e) {
             t(!1);
         }

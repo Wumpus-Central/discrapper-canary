@@ -1,5 +1,5 @@
-t.r(
-    (e.exports = {
+r.r(
+    (a.exports = {
         badge: "badge_c2b88c",
         label: "label_c2b88c",
         default: "default_c2b88c",

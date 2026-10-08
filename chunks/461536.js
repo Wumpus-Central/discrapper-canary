@@ -44,8 +44,8 @@ function N(e) {
         children: (0, a.jsx)(i, { size: "xxs", color: "currentColor" }),
     });
 }
-var v = n(140049),
-    R = n(518477),
+var R = n(140049),
+    v = n(518477),
     I = n(881518);
 function j(e) {
     let {
@@ -70,7 +70,7 @@ function j(e) {
             isVisible: P,
             targetElementRef: U,
             trigger: O,
-        } = (0, i.D)({ children: t, targetElementRef: T, delay: R.In, onTooltipShow: y, shouldShow: S }),
+        } = (0, i.D)({ children: t, targetElementRef: T, delay: v.In, onTooltipShow: y, shouldShow: S }),
         B = null != A && A !== s.x.COMMON,
         G = (0, a.jsxs)("div", {
             className: I.Qs,
@@ -80,7 +80,7 @@ function j(e) {
                 (0, a.jsx)("div", {
                     className: r()(I.fA, { [I.qJ]: D }),
                     "aria-hidden": !0,
-                    children: (0, a.jsx)(v.BadgeImageWithProgressCircle, {
+                    children: (0, a.jsx)(R.BadgeImageWithProgressCircle, {
                         src: b,
                         alt: x,
                         progressCircleText: _?.text,

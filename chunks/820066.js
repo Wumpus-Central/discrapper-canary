@@ -137,8 +137,8 @@ let T = {
     O = c.X(k),
     L = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
     w = new (o())(L),
-    P = new (o())(L);
-function M(e, t, n, l, r) {
+    M = new (o())(L);
+function P(e, t, n, l, r) {
     let { content: s, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof s;
     o && E.warn(`Slate: parser bailed out past MAX_PARSE_DEPTH, rendering ${s.length} chars as plain text`);
@@ -297,7 +297,7 @@ function W(e, t, n, l, i) {
             ? (l = B({ result: e, sourceText: t, text: n, originalStart: l, attributes: i, data: null }))
             : (n instanceof Array || (n = [n]),
               n.forEach((n) => {
-                  l = M(e, t, n, l, i);
+                  l = P(e, t, n, l, i);
               })),
         K(t, l)
     );
@@ -597,7 +597,7 @@ let q = {
                             "" !== o &&
                                 (function (e, t, n) {
                                     let l = [],
-                                        i = n ? P : w,
+                                        i = n ? M : w,
                                         r = i.get(e);
                                     if (null != r) return r;
                                     let s =
@@ -617,7 +617,7 @@ let q = {
                                                 allowTimeMentionInput: !0,
                                             }),
                                         };
-                                    M(l, s, a, 0, []);
+                                    P(l, s, a, 0, []);
                                     let o = (function (e) {
                                         if (0 === (e = e.filter((e) => e.text.length > 0)).length) return e;
                                         let t = [e[0]];

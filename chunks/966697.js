@@ -1,18 +1,18 @@
-a.d(t, { y: () => o });
-var i = a(477900),
-    s = a(582128),
-    l = a(503698),
-    n = a.n(l),
-    r = a(289873);
-(a(323874), a(14289), a(35956));
-var d = a(132500);
-let c = new Worker(new URL("/assets/" + a.u("314250"), a.b));
-var h = a(652215),
-    u = a(774702);
+i.d(t, { y: () => o });
+var a = i(477900),
+    s = i(582128),
+    l = i(503698),
+    n = i.n(l),
+    r = i(289873);
+(i(323874), i(14289), i(35956));
+var d = i(132500);
+let c = new Worker(new URL("/assets/" + i.u("314250"), i.b));
+var h = i(652215),
+    u = i(774702);
 function o(e) {
     let {
             readyState: t,
-            aspectRatio: a,
+            aspectRatio: i,
             placeholder: l,
             placeholderVersion: o,
             placeholderStyle: m,
@@ -22,24 +22,24 @@ function o(e) {
         f = t === h.Rv1.LOADING,
         [p] = s.useState(f),
         [v, b] = s.useState(!1),
-        [R] = s.useState(() => Date.now()),
-        N = (function (e, t, a) {
-            let i = a && 1 === t && null != e,
+        [N] = s.useState(() => Date.now()),
+        R = (function (e, t, i) {
+            let a = i && 1 === t && null != e,
                 [l, n] = s.useState(void 0);
             return (
                 s.useEffect(() => {
                     let t = !1;
                     return (
-                        i &&
+                        a &&
                             new Promise((t) => {
-                                let a = (0, d.A)();
-                                (c.addEventListener("message", function e(i) {
+                                let i = (0, d.A)();
+                                (c.addEventListener("message", function e(a) {
                                     let {
                                         data: { id: s, png: l },
-                                    } = i;
-                                    a === s && (t(l), c.removeEventListener("message", e));
+                                    } = a;
+                                    i === s && (t(l), c.removeEventListener("message", e));
                                 }),
-                                    c.postMessage({ id: a, placeholderData: e }));
+                                    c.postMessage({ id: i, placeholderData: e }));
                             }).then((e) => {
                                 t || n(e);
                             }),
@@ -47,11 +47,11 @@ function o(e) {
                             t = !0;
                         }
                     );
-                }, [e, i]),
+                }, [e, a]),
                 l
             );
         })(l, o, p),
-        w = t === h.Rv1.READY && Date.now() - R < 200;
+        y = t === h.Rv1.READY && Date.now() - N < 200;
     return (
         s.useEffect(() => {
             if (g) return;
@@ -62,24 +62,24 @@ function o(e) {
                 clearTimeout(e);
             };
         }, [g, p]),
-        (0, i.jsxs)("div", {
+        (0, a.jsxs)("div", {
             className: u.bX,
-            style: { aspectRatio: a },
+            style: { aspectRatio: i },
             children: [
                 x,
-                null != N &&
-                    (0, i.jsx)("img", {
+                null != R &&
+                    (0, a.jsx)("img", {
                         style: m,
-                        className: n()(u.bc, { [u.t5]: f, [u.Jh]: !f, [u.zg]: w }),
-                        src: N,
+                        className: n()(u.bc, { [u.t5]: f, [u.Jh]: !f, [u.zg]: y }),
+                        src: R,
                         alt: "",
                     }),
                 g || !f
                     ? null
-                    : (0, i.jsx)("div", {
+                    : (0, a.jsx)("div", {
                           "aria-hidden": !v,
                           className: n()(u.oM, { [u.__]: v }),
-                          children: (0, i.jsx)(r.y, { type: r.t.SPINNING_CIRCLE_SIMPLE, animated: v, className: u.Xd }),
+                          children: (0, a.jsx)(r.y, { type: r.t.SPINNING_CIRCLE_SIMPLE, animated: v, className: u.Xd }),
                       }),
             ],
         })

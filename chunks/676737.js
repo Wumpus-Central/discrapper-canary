@@ -1,4 +1,4 @@
-e.exports = {
+c.exports = {
     qG: "fadeIn__5cd44",
     Xn: "fadeOut__5cd44",
     E3: "base__5cd44",

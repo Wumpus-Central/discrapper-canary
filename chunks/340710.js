@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     dw: "stage__0c12a",
     x2: "stageGrid__0c12a",
     c2: "povStack__0c12a",
