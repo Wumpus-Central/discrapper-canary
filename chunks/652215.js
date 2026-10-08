@@ -4435,6 +4435,7 @@ var rb =
         (ew.UPSELL_VIEWED = "upsell_viewed"),
         (ew.UPSELL_CLICKED = "upsell_clicked"),
         (ew.PREMIUM_UPSELL_VIEWED = "premium_upsell_viewed"),
+        (ew.MOBILE_SUBSCRIPTION_DEEP_LINK_OPENED = "mobile_subscription_deep_link_opened"),
         (ew.PREMIUM_EDUCATION_VIEWED = "premium_education_viewed"),
         (ew.PREMIUM_UPSELL_MESSAGE_SENT = "premium_upsell_message_sent"),
         (ew.PREMIUM_UPSELL_INTERACTED = "premium_upsell_interacted"),
