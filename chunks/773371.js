@@ -748,7 +748,7 @@ let eC = new eN(
                       let { port: t } = e;
                       K = btoa(String.fromCharCode(...crypto.getRandomValues(new Uint8Array(8))));
                       let n = new URLSearchParams();
-                      (n.append("build_id", "e1c83ea5c1fb5cbfa10a665581ecb01eaa6e09ce"),
+                      (n.append("build_id", "a7783d8bb3d5df39bce0f3a06303a5b59f2a75b6"),
                           n.append("rpc", String(t)),
                           n.append("rpc_auth_token", K),
                           (i = `${location.protocol}//${location.host}/overlay?${n.toString()}`));
