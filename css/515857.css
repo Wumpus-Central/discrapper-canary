@@ -134,6 +134,12 @@
     z-index: 1
 }
 
+.customContent__518a0 {
+    display: flex;
+    max-width: 100%;
+    pointer-events: auto
+}
+
 .container__5ab60 {
     display: grid;
     inset-inline: 0;
@@ -254,4 +260,4 @@
     padding: var(--space-16)
 }
 
-/*# sourceMappingURL=515857.ad7e483febfbac14.css.map*/
+/*# sourceMappingURL=515857.8737e8395e5701d5.css.map*/

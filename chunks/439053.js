@@ -1,4 +1,4 @@
-n.d(e, { A: () => y });
+n.d(e, { A: () => g });
 var i = n(477900);
 n(582128);
 var l = n(503698),
@@ -6,92 +6,39 @@ var l = n(503698),
     r = n(202091),
     a = n(17928),
     d = n(866323),
-    o = n(857250),
-    u = n(97483),
-    c = n(933832),
-    m = n(661531),
-    A = n(834730),
-    f = n(289873),
-    E = n(308528),
-    x = n(775602),
-    g = n(183555),
-    h = n(679492),
-    I = n(518477),
-    v = n(660183),
-    p = n(988199),
-    C = n(655214);
-function N(t) {
-    let { message: e, userId: n, onClose: l } = t,
-        { trackUserProfileAction: r } = (0, g.NJ)();
-    return (0, i.jsxs)("div", {
-        className: s()(C.oR, p.d6),
-        children: [
-            (0, i.jsx)(c.CheckmarkLargeIcon, { size: "sm", className: p.RC, color: m.A.colors.STATUS_POSITIVE.css }),
-            (0, i.jsxs)("div", {
-                className: p.Zx,
-                children: [
-                    (0, i.jsx)(A.E, { color: "text-strong", variant: "text-sm/semibold", children: e }),
-                    (0, i.jsx)(A.E, {
-                        variant: "text-sm/semibold",
-                        children: v.intl.format(v.t.QEW8Mq, {
-                            onClick: () => {
-                                (r({ action: "PRESS_REACT_REPLY_TOAST" }),
-                                    l?.(),
-                                    E.A.openPrivateChannel({ recipientIds: n }));
-                            },
-                        }),
-                    }),
-                ],
-            }),
-        ],
-    });
-}
-function j() {
-    return (0, i.jsxs)("div", {
-        className: s()(C.oR, p.d6),
-        children: [
-            (0, i.jsx)(f.y, { type: f.t.SPINNING_CIRCLE_SIMPLE, className: p.RC }),
-            (0, i.jsx)(A.E, { color: "text-strong", variant: "text-sm/semibold", children: v.intl.string(v.t.tcARX0) }),
-        ],
-    });
-}
-let y = (t) => {
-    let { userId: e, onClose: n, className: l } = t,
-        { interactionTypeSent: c, showInteractionToast: m } = (0, h.Pq)(),
-        A = c === I.AQ.REPLY ? v.intl.string(v.t.BPaiaa) : v.intl.string(v.t.Ry2EtG),
-        f = (0, a.bG)([x.Ay], () => x.Ay.useReducedMotion),
-        E = (0, d.p)(
-            m,
+    u = n(252392),
+    o = n(775602),
+    c = n(679492),
+    A = n(518477),
+    f = n(660183),
+    m = n(988199);
+let g = (t) => {
+    let { className: e } = t,
+        { interactionTypeSent: n, showInteractionToast: l } = (0, c.Pq)(),
+        g = n === A.AQ.REPLY ? f.intl.string(f.t.BPaiaa) : f.intl.string(f.t.Ry2EtG),
+        E = (0, a.bG)([o.Ay], () => o.Ay.useReducedMotion),
+        h = (0, d.p)(
+            l,
             {
-                from: { transform: f ? "translateY(0)" : "translateY(16px)", opacity: 0 },
+                from: { transform: E ? "translateY(0)" : "translateY(16px)", opacity: 0 },
                 enter: { transform: "translateY(0)", opacity: 1 },
-                leave: { transform: f ? "translateY(0)" : "translateY(16px)", opacity: 0 },
+                leave: { transform: E ? "translateY(0)" : "translateY(16px)", opacity: 0 },
                 config: { mass: 1, tension: 500, friction: 18, clamp: !0 },
                 delay: 200,
             },
             "animate-always",
         );
     return (0, i.jsx)(i.Fragment, {
-        children: E(
-            (t, a) =>
-                a &&
+        children: h(
+            (t, l) =>
+                l &&
                 (0, i.jsx)(r.animated.div, {
-                    className: s()(p.Jt, l),
+                    className: s()(m.J, e),
                     style: t,
                     children:
-                        null != c
-                            ? (0, i.jsx)(o.y, {
-                                  message: "",
-                                  type: u.Ck.CUSTOM,
-                                  id: "react_reply_success_toast",
-                                  options: { component: (0, i.jsx)(N, { userId: e, message: A, onClose: n }) },
-                              })
-                            : (0, i.jsx)(o.y, {
-                                  message: "",
-                                  type: u.Ck.CUSTOM,
-                                  id: "react_reply_loading_toast",
-                                  options: { component: (0, i.jsx)(j, {}) },
-                              }),
+                        null != n
+                            ? (0, i.jsx)(u.y, { text: g, variant: "success" })
+                            : (0, i.jsx)(u.y, { text: f.intl.string(f.t.tcARX0) }),
                 }),
         ),
     });

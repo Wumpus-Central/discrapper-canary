@@ -1,8 +1,8 @@
-l.d(t, { y: () => v });
+l.d(t, { y: () => N });
 var a = l(477900),
-    r = l(582128),
-    s = l(503698),
-    n = l.n(s),
+    n = l(582128),
+    r = l(503698),
+    s = l.n(r),
     c = l(249686),
     i = l.n(c),
     o = l(661531),
@@ -14,12 +14,12 @@ var a = l(477900),
     p = l(627805);
 function j(e) {
     let { entity: t, className: l } = e,
-        r = n()(
+        n = s()(
             p.EG,
             { [p.my]: "avatar" === t.type, [p.EB]: "guild" === t.type, [p.Hj]: "guild" === t.type && null == t.src },
             l,
         );
-    return (0, a.jsx)("span", { className: r, "aria-hidden": !0, children: (0, a.jsx)(y, { entity: t }) });
+    return (0, a.jsx)("span", { className: n, "aria-hidden": !0, children: (0, a.jsx)(y, { entity: t }) });
 }
 function y(e) {
     let { entity: t } = e;
@@ -55,34 +55,39 @@ function y(e) {
             }
             return (0, a.jsx)("img", { className: p.Sl, src: t.src, alt: t.name, draggable: !1 });
         case "image":
-            return (0, a.jsx)("img", { className: n()(p.Sl, p.M2), src: t.src, alt: t.alt ?? "", draggable: !1 });
+            return (0, a.jsx)("img", { className: s()(p.Sl, p.M2), src: t.src, alt: t.alt ?? "", draggable: !1 });
     }
 }
 function h(e) {
     return "object" == typeof e && null != e && "type" in e && "string" == typeof e.type;
 }
-var f = l(395762);
-let N = {
+var C = l(395762);
+let f = {
     success: { color: o.A.colors.ICON_FEEDBACK_POSITIVE, icon: d.y },
     critical: { color: o.A.colors.ICON_FEEDBACK_CRITICAL, icon: m.E },
 };
+function N(e) {
+    return null != e.__dangerouslyRenderContent
+        ? (0, a.jsx)("div", { className: C.customContent, children: e.__dangerouslyRenderContent() })
+        : (0, a.jsx)(v, { ...e });
+}
 function v(e) {
-    let { variant: t = "default", text: l, icon: s, iconColor: c, secondaryIconColor: d } = e,
+    let { variant: t = "default", text: l, icon: r, iconColor: c, secondaryIconColor: d } = e,
         m = (0, u.r)(o.A.modules.toast.TEXT_LINE_COUNT),
-        g = r.useMemo(() => {
-            let e = N[t];
-            if (null == e && h(s)) return (0, a.jsx)(j, { entity: s });
-            let l = e?.icon ?? (h(s) ? void 0 : s);
+        g = n.useMemo(() => {
+            let e = f[t];
+            if (null == e && h(r)) return (0, a.jsx)(j, { entity: r });
+            let l = e?.icon ?? (h(r) ? void 0 : r);
             if (null == l) return null;
-            let r = { color: e?.color ?? c ?? o.A.colors.ICON_DEFAULT };
-            return (null != d && (r.secondaryColor = d), (0, a.jsx)(l, { className: f.icon, size: "sm", ...r }));
-        }, [s, c, d, t]);
+            let n = { color: e?.color ?? c ?? o.A.colors.ICON_DEFAULT };
+            return (null != d && (n.secondaryColor = d), (0, a.jsx)(l, { className: C.icon, size: "sm", ...n }));
+        }, [r, c, d, t]);
     return (0, a.jsxs)("div", {
-        className: n()(f.wrapper, f[t]),
+        className: s()(C.wrapper, C[t]),
         children: [
-            (0, a.jsx)("div", { className: n()(f.baselayer, f[t]) }),
+            (0, a.jsx)("div", { className: s()(C.baselayer, C[t]) }),
             (0, a.jsxs)("div", {
-                className: f.content,
+                className: C.content,
                 children: [
                     g,
                     !i()(l) &&

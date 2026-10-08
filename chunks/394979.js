@@ -7450,7 +7450,7 @@ function uZ(e) {
                                                             }),
                                                         (0, i.jsx)("div", {
                                                             className: uB.profileCardToastContainer,
-                                                            children: (0, i.jsx)(eZ.A, { userId: u.id, onClose: q }),
+                                                            children: (0, i.jsx)(eZ.A, {}),
                                                         }),
                                                         (0, i.jsxs)(rR, {
                                                             showScrim: e0,
