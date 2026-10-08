@@ -5057,7 +5057,7 @@ function rw(e) {
 }
 var rD = n(786567),
     rU = n(918786),
-    rG = n(639574);
+    rG = n(303025);
 let rF = (e) => {
         let { onReviewButtonClick: t, loading: n, disabled: l } = e;
         return {

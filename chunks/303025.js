@@ -42,7 +42,7 @@ var T = n(202541),
     H = n(607123),
     W = n(287809),
     V = n(341535),
-    Y = n(225529);
+    Y = n(189399);
 function K(e) {
     let { Icon: t = U.t, iconSize: n, customGraphic: i, gradientColor: r = "nitro-pink", ...a } = e;
     return (0, l.jsx)(G.J, {
