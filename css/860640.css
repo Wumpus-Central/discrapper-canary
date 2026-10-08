@@ -102,9 +102,13 @@
 }
 
 .avatarStack_effefc {
+    flex-direction: row
+}
+
+.avatarStack_effefc,
+.avatarWrapper_effefc {
     align-items: center;
     display: flex;
-    flex-direction: row;
     justify-content: center
 }
 
@@ -136,4 +140,22 @@
     mask-type: alpha
 }
 
-/*# sourceMappingURL=860640.f72cc90b6972ecaa.css.map*/
+.full-motion .animateIn_effefc {
+    animation: animate-grow_effefc .2s ease-in-out
+}
+
+@keyframes animate-grow_effefc {
+    0% {
+        height: 8px;
+        scale: 0;
+        width: 8px
+    }
+
+    to {
+        height: 32px;
+        scale: 100%;
+        width: 32px
+    }
+}
+
+/*# sourceMappingURL=860640.36792bd2205638f1.css.map*/

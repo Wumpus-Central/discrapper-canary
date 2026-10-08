@@ -15,4 +15,6 @@ e.exports = {
     my: "avatar_effefc",
     Du: "authorAvatar_effefc avatar_effefc",
     mf: "replyAvatar_effefc avatar_effefc",
+    HY: "animateIn_effefc",
+    kl: "animate-grow_effefc",
 };
