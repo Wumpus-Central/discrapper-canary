@@ -3543,7 +3543,7 @@ function aT(e) {
                     (0, r.jsx)(aC.A, {
                         projectId: t,
                         sessionId: n.session.id,
-                        fps: 1,
+                        fps: 3,
                         drawWidth: 200,
                         paused: !u || c || h,
                         className: aE.Ji,

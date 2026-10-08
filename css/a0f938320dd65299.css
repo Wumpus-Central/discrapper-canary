@@ -67,11 +67,11 @@
 .canvas__75c55 {
     display: block;
     height: 100%;
-    -o-object-fit: cover;
-    object-fit: cover;
-    -o-object-position: top;
-    object-position: top;
+    inset: 0;
+    -o-object-fit: contain;
+    object-fit: contain;
     pointer-events: none;
+    position: absolute;
     width: 100%
 }
 
@@ -138,8 +138,10 @@
 }
 
 .turnBrowsers__39a0d {
+    margin-block-start: calc(var(--custom-conjure-thread-gap)*-1);
     min-width: 0;
-    padding-inline: calc(var(--custom-message-avatar-size) + var(--custom-message-margin-horizontal) + var(--space-16)) var(--space-16)
+    padding-block-end: var(--space-8);
+    padding-inline: var(--custom-message-margin-left-content-cozy) var(--custom-message-margin-horizontal)
 }
 
 .body_ba2ab6 {
@@ -158,4 +160,4 @@
     min-width: 0
 }
 
-/*# sourceMappingURL=659ef2c139106326.css.map*/
+/*# sourceMappingURL=a0f938320dd65299.css.map*/
