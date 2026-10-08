@@ -568,7 +568,7 @@ let eC = {
         if ((i -= t.length) < l.length) {
             let e = l[i];
             return (
-                r.insertText(""),
+                r.insertText("", void 0, { addSpace: !1 }),
                 r.sendSticker(e.sticker, eI.D6.AUTOCOMPLETE),
                 {
                     type: o.kc.STICKER,
