@@ -1,8 +1,8 @@
 let r;
 (n.d(t, { A: () => _ }), n(321073));
 var i = n(17928),
-    s = n(73153),
-    l = n(308368),
+    l = n(73153),
+    s = n(308368),
     o = n(115718),
     a = n(47167),
     d = n(734057),
@@ -43,7 +43,7 @@ class N extends i.Ay.Store {
         return x;
     }
 }
-let O = new N(s.h, {
+let O = new N(l.h, {
         ACTIVITY_INVITE_MODAL_OPEN: function (e) {
             ((y = e.activity),
                 (v = e.resolve),
@@ -117,14 +117,14 @@ let O = new N(s.h, {
             let t = e.channelId,
                 n = e.userId;
             null != t
-                ? l.A.sendActivityInvite({
+                ? s.A.sendActivityInvite({
                       channelId: t,
                       type: p.xL.JOIN,
                       activity: y,
                       location: "Channel Text Area - Invite to Join Modal",
                   }).then(() => E(t))
                 : null != n &&
-                  l.A.sendActivityInviteUser({
+                  s.A.sendActivityInviteUser({
                       userId: n,
                       type: p.xL.JOIN,
                       activity: y,

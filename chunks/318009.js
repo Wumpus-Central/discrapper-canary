@@ -1,8 +1,8 @@
 n.d(t, { A: () => v });
 var r = n(477900),
     i = n(582128),
-    s = n(562708),
-    l = n(508382),
+    l = n(562708),
+    s = n(508382),
     o = n(17928),
     a = n(980707),
     d = n(442433),
@@ -38,7 +38,7 @@ function A(e) {
         x.current = o;
     }),
         i.useEffect(() => () => x.current?.(), []),
-        (0, u.A)({ type: s.ImpressionTypes.MENU, name: g, properties: A }));
+        (0, u.A)({ type: l.ImpressionTypes.MENU, name: g, properties: A }));
     let E = (0, c.aL)(),
         b = i.useCallback(() => {
             E.dispatch(m.jej.POPOUT_SHOW);
@@ -47,7 +47,7 @@ function A(e) {
             E.dispatch(m.jej.POPOUT_HIDE);
         }, [E]),
         N = a.ownerDocument;
-    return (0, r.jsx)(l.Ow, {
+    return (0, r.jsx)(s.Ow, {
         focus: "modal",
         returnFocusElement: a,
         spacing: 0,
@@ -57,7 +57,7 @@ function A(e) {
             e ? b() : (C(), "outside-press" === n && setTimeout(p, 0), w.current());
         },
         overrideTargetRect: d,
-        placement: (0, l.Pv)(h ?? "right", f ?? "top"),
+        placement: (0, s.Pv)(h ?? "right", f ?? "top"),
         blockPointerEvents: !y,
         crossAccessFlip: !1,
         autoUpdate: v,
@@ -108,33 +108,33 @@ class y extends i.PureComponent {
                 target: t,
                 isOpen: n,
                 theme: i,
-                config: s,
-                rect: l,
+                config: l,
+                rect: s,
                 renderWindow: o,
                 renderLazy: a,
             } = this.props,
             d = this.state.render ?? this.props.render;
         return n &&
-            null != l &&
             null != s &&
+            null != l &&
             null != t &&
             null != d &&
-            s.context === e &&
+            l.context === e &&
             t.ownerDocument?.defaultView === o
             ? (0, r.jsx)(A, {
                   target: t,
-                  rect: l,
+                  rect: s,
                   close: this.close,
-                  onUnmount: s.onClose,
-                  align: s.align,
-                  position: s.position,
-                  impressionName: s.impressionName,
-                  impressionProperties: s.impressionProperties,
-                  disableClickTrap: s.disableClickTrap ?? !1,
-                  repositionOnContentChange: null != a || !0 === s.repositionOnContentChange,
+                  onUnmount: l.onClose,
+                  align: l.align,
+                  position: l.position,
+                  impressionName: l.impressionName,
+                  impressionProperties: l.impressionProperties,
+                  disableClickTrap: l.disableClickTrap ?? !1,
+                  repositionOnContentChange: null != a || !0 === l.repositionOnContentChange,
                   children: (n, r) => {
-                      let { position: l } = n;
-                      return d({ position: l, theme: i, onHeightUpdate: r, config: s, target: t, context: e });
+                      let { position: s } = n;
+                      return d({ position: s, theme: i, onHeightUpdate: r, config: l, target: t, context: e });
                   },
               })
             : null;
@@ -146,7 +146,7 @@ function v() {
             version: t,
             isOpen: n,
         } = (0, o.cf)([f.A], () => ({ contextMenu: f.A.getContextMenu(), version: f.A.version, isOpen: f.A.isOpen() })),
-        s = (0, o.bG)([h.A], () => h.A.theme),
-        { appContext: l, renderWindow: a } = i.useContext(c.Ay);
-    return (0, r.jsx)(y, { appContext: l, renderWindow: a, ...e, isOpen: n, theme: s, closeContextMenu: d.Z_ }, t);
+        l = (0, o.bG)([h.A], () => h.A.theme),
+        { appContext: s, renderWindow: a } = i.useContext(c.Ay);
+    return (0, r.jsx)(y, { appContext: s, renderWindow: a, ...e, isOpen: n, theme: l, closeContextMenu: d.Z_ }, t);
 }

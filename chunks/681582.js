@@ -1,8 +1,8 @@
 n.d(t, { l: () => c });
 var r = n(477900),
     i = n(582128),
-    s = n(776310),
-    l = n(17928),
+    l = n(776310),
+    s = n(17928),
     o = n(309010),
     a = n(21161),
     d = n(536283),
@@ -14,7 +14,7 @@ function c(e) {
         g = i.useRef(void 0),
         m = i.useRef(new Set()),
         [p, A] = i.useState(!1),
-        y = (0, l.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
+        y = (0, s.bG)([o.Ay], () => o.Ay.getCurrentlySelectedChannelId()),
         v = i.useCallback((e) => {
             (m.current.delete(e), A(m.current.size > 0));
         }, []),
@@ -67,7 +67,7 @@ function c(e) {
                     removeClickListener: v,
                     children: t,
                 }),
-                (0, r.jsx)(s.Fk, {
+                (0, r.jsx)(l.Fk, {
                     ref: f,
                     className: u.J,
                     environment: d.XA,
@@ -75,7 +75,7 @@ function c(e) {
                     onBeforeRender: b,
                     onAfterRender: C,
                 }),
-                (0, r.jsx)(s.K_, { ref: c, colors: d._t, sprites: d.uI, spriteWidth: d.wn, spriteHeight: d.wn }),
+                (0, r.jsx)(l.K_, { ref: c, colors: d._t, sprites: d.uI, spriteWidth: d.wn, spriteHeight: d.wn }),
             ],
         })
     );

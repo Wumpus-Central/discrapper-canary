@@ -40,15 +40,15 @@ let L = function (e) {
           : null;
 };
 var m = n(769015),
-    R = n(106191),
-    b = n(548118),
-    U = n(376943),
-    v = n(636585),
+    b = n(106191),
+    R = n(548118),
+    v = n(376943),
+    U = n(636585),
     D = n(71393),
-    G = n(994500),
-    y = n(287809),
-    M = n(147036),
-    P = n(427262),
+    y = n(994500),
+    G = n(287809),
+    P = n(147036),
+    M = n(427262),
     x = n(660183),
     V = n(445388);
 class w extends l.PureComponent {
@@ -100,7 +100,7 @@ class j extends l.Component {
         let { guild: e } = this.props;
         return (0, i.jsx)("div", {
             className: V._C,
-            children: (0, i.jsx)(b.Ay, { tabIndex: -1, guild: e, size: b.Ay.Sizes.MINI, className: V.$f }),
+            children: (0, i.jsx)(R.Ay, { tabIndex: -1, guild: e, size: R.Ay.Sizes.MINI, className: V.$f }),
         });
     }
     renderName() {
@@ -145,7 +145,7 @@ class H extends l.Component {
         let { channel: e } = this.props,
             t = (0, N.gU)(e);
         if (null == t) return null;
-        let n = (0, M.Jg)(e) ?? "";
+        let n = (0, P.Jg)(e) ?? "";
         return (0, i.jsx)("div", {
             className: V.zc,
             role: "img",
@@ -159,11 +159,11 @@ class H extends l.Component {
             { mentions: n, category: l, channel: r, isMentionLowImportance: s } = this.props;
         return (
             null != n && n > 0 && (e = (0, i.jsx)(L, { className: V.qS, value: n, lowImportance: s })),
-            null != l && (t = (0, i.jsx)("span", { className: V.N4, children: (0, p.m1)(l, y.default, G.A) })),
+            null != l && (t = (0, i.jsx)("span", { className: V.N4, children: (0, p.m1)(l, G.default, y.A) })),
             (0, i.jsxs)("div", {
                 className: V.UU,
                 children: [
-                    (0, i.jsx)("span", { className: V.YW, children: (0, p.m1)(r, y.default, G.A) }),
+                    (0, i.jsx)("span", { className: V.YW, children: (0, p.m1)(r, G.default, y.A) }),
                     e,
                     this.renderVoiceStates(),
                     t,
@@ -175,7 +175,7 @@ class H extends l.Component {
         let { voiceStates: e, channel: t } = this.props;
         return null == e
             ? null
-            : (0, i.jsx)(v.A, {
+            : (0, i.jsx)(U.A, {
                   className: V.x7,
                   guildId: t.guild_id,
                   users: e.map((e) => {
@@ -196,8 +196,8 @@ class H extends l.Component {
     getAccessibilityLabel() {
         let { channel: e } = this.props,
             t = D.A.getGuild(this.props.channel.guild_id)?.name,
-            n = (0, p.m1)(e, y.default, G.A),
-            i = (0, M.Jg)(e);
+            n = (0, p.m1)(e, G.default, y.A),
+            i = (0, P.Jg)(e);
         return x.intl.formatToPlainString(x.t["Vw/da+"], { name: n, type: i, guild: t });
     }
     render() {
@@ -230,7 +230,7 @@ class k extends l.Component {
             null != t && t > 0 && (e = (0, i.jsx)(L, { className: V.qS, value: t })),
             (0, i.jsxs)("div", {
                 className: V.UU,
-                children: [(0, i.jsx)("span", { className: V.YW, children: (0, p.m1)(n, y.default, G.A) }), e],
+                children: [(0, i.jsx)("span", { className: V.YW, children: (0, p.m1)(n, G.default, y.A) }), e],
             })
         );
     }
@@ -243,7 +243,7 @@ class k extends l.Component {
     }
     getAccessibilityLabel() {
         let { channel: e, mentions: t } = this.props,
-            n = (0, p.m1)(e, y.default, G.A);
+            n = (0, p.m1)(e, G.default, y.A);
         return null != t && t > 0
             ? x.intl.formatToPlainString(x.t.LYdVfN, { name: n, mentions: t })
             : x.intl.formatToPlainString(x.t.lLSbno, { name: n });
@@ -280,10 +280,10 @@ class B extends l.Component {
     getDisplayNickname() {
         let e,
             { user: t, comparator: n } = this.props,
-            i = G.A.getNickname(t.id);
+            i = y.A.getNickname(t.id);
         return (
             ((e = n === t.tag || null == n || "" === n ? t.username : n) === t.username || e === t.id) &&
-                (e = i ?? P.Ay.getName(t)),
+                (e = i ?? M.Ay.getName(t)),
             e
         );
     }
@@ -298,7 +298,7 @@ class B extends l.Component {
                 children: [
                     (0, i.jsx)("span", { className: V.YW, children: l }),
                     e,
-                    (0, i.jsx)("span", { className: V.Xh, children: P.Ay.getUserTag(t) }),
+                    (0, i.jsx)("span", { className: V.Xh, children: M.Ay.getUserTag(t) }),
                 ],
             })
         );
@@ -313,7 +313,7 @@ class B extends l.Component {
     getAccessibilityLabel() {
         let { mentions: e, user: t } = this.props,
             n = this.getDisplayNickname(),
-            i = P.Ay.getUserTag(t);
+            i = M.Ay.getUserTag(t);
         return null != e && e > 0
             ? x.intl.formatToPlainString(x.t["6b9UrR"], { name: n, id: i, mentions: e })
             : x.intl.formatToPlainString(x.t.GWYOAY, { name: n, id: i });
@@ -371,7 +371,7 @@ function W(e) {
         children: (0, i.jsxs)("div", {
             className: V.xr,
             children: [
-                (0, i.jsx)("div", { className: V.zc, children: (0, i.jsx)(R.A, { game: t, iconClassName: V.bN }) }),
+                (0, i.jsx)("div", { className: V.zc, children: (0, i.jsx)(b.A, { game: t, iconClassName: V.bN }) }),
                 (0, i.jsxs)("div", {
                     className: V.UU,
                     children: [
@@ -403,10 +403,10 @@ class Y extends l.Component {
         if (null != n.inviteCode)
             ((e = x.intl.string(x.t.w6QG3F)), (t = (0, i.jsx)(o.f, { size: "xs", color: "currentColor" })));
         else {
-            let l = (0, U.vu)(n.path);
+            let l = (0, v.vu)(n.path);
             null == l || void 0 === l.messageId
                 ? ((e = x.intl.string(x.t.qbSCqj)), (t = (0, i.jsx)(d.LinkIcon, { size: "xs", color: "currentColor" })))
-                : (0, U.r9)(l)
+                : (0, v.r9)(l)
                   ? ((e = x.intl.string(x.t["6Fd/j1"])), (t = (0, i.jsx)(c.t, { size: "xs", color: "currentColor" })))
                   : ((e = x.intl.string(x.t.jQRwp4)),
                     (t = (0, i.jsx)(u.LockIcon, { size: "xs", color: "currentColor" })));

@@ -124,16 +124,16 @@ function W(e) {
                         t = (0, P.bG)([N.default], () => N.default.getCurrentUser()?.isPremiumGroupMember() === !0);
                     return e === U.xc.NONE && !t;
                 })(),
-                [y, Q] = (0, m.ww)(null != t && !G && !B && null != v && F, e),
-                x = y === i.M.BOOST_TO_UNLOCK_COACHMARK,
+                [y, x] = (0, m.ww)(null != t && !G && !B && null != v && F, e),
+                Q = y === i.M.BOOST_TO_UNLOCK_COACHMARK,
                 j = (0, w.A)(e),
-                [z, Y] = (0, m.W2)(null != t && !G && !B && !x && null != j, e),
+                [z, Y] = (0, m.W2)(null != t && !G && !B && !Q && null != j, e),
                 $ = z === i.M.EXPIRING_POWERUP_COACHMARK,
                 X = (0, s.TS)(e, "useGuildPowerupsChannelListPopout"),
                 [q, J] = (0, m.vB)(null != t && X),
                 Z = q === i.M.GAME_SERVER_NEW_GAMES_COACHMARK,
                 ee = n.useMemo(() => {
-                    if (null == t || G || B || Z || x || $) return;
+                    if (null == t || G || B || Z || Q || $) return;
                     let l = (function (e, t) {
                         let l = d.fi.find((e) => {
                             let l = V.a8[e],
@@ -214,7 +214,7 @@ function W(e) {
                             };
                     })(e, S, R, I);
                     if (null != r) return r;
-                }, [e, t, G, B, Z, x, $, R, S, I, k]),
+                }, [e, t, G, B, Z, Q, $, R, S, I, k]),
                 [et, el] = (0, m.ru)(null != ee);
             return n.useMemo(() => {
                 if (null != t) {
@@ -227,7 +227,7 @@ function W(e) {
                         if (0 === l.length) return;
                         return { powerups: l, type: p.o.NEW_PERK_AVAILABLE, markAsDismissed: W };
                     }
-                    if (x && null != v) return { type: p.o.BOOST_TO_UNLOCK, powerup: v, markAsDismissed: Q };
+                    if (Q && null != v) return { type: p.o.BOOST_TO_UNLOCK, powerup: v, markAsDismissed: x };
                     if ($ && null != j)
                         return { type: p.o.EXPIRING_PERK, featuredExpiringPowerup: j, markAsDismissed: Y };
                     if (Z) return { type: p.o.GAME_SERVER_NEW_GAMES, markAsDismissed: J };
@@ -239,7 +239,7 @@ function W(e) {
                             },
                         };
                 }
-            }, [t, G, o, ee, et, el, B, W, K, x, v, Q, $, j, Y, Z, J]);
+            }, [t, G, o, ee, et, el, B, W, K, Q, v, x, $, j, Y, Z, J]);
         })(e, H ?? void 0);
     if (null !== H && (null != W || B || null != v)) return { indicator: W, showUnread: B, popout: v };
 }

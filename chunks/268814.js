@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Gg: "focusLock__49fc1",
     zr: "root__49fc1",
     EX: "small__49fc1",

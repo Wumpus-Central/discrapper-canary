@@ -1,8 +1,8 @@
 n.d(t, { A: () => A });
 var r = n(582128),
     i = n(621466),
-    s = n(17928),
-    l = n(192308),
+    l = n(17928),
+    s = n(192308),
     o = n(312138),
     a = n(775121),
     d = n(955572),
@@ -16,16 +16,16 @@ function m(e) {
     e.key !== g.N$.Tab ||
         t ||
         __OVERLAY__ ||
-        (0, l.hasAnyModalOpen)() ||
+        (0, s.hasAnyModalOpen)() ||
         c.A.maybeShowKeyboardNavigationExplainerModal();
 }
 function p() {
     (0, d.Bm)();
 }
 let A = function (e, t) {
-    let n = (0, s.bG)([u.Ay], () => u.Ay.keyboardModeEnabled);
+    let n = (0, l.bG)([u.Ay], () => u.Ay.keyboardModeEnabled);
     (0, o.Op)(n);
-    let l = (0, r.useCallback)(
+    let s = (0, r.useCallback)(
         (e) => {
             !(function (e, t) {
                 let n = (0, i.Cw)((0, i.BF)(e)?.activeElement);
@@ -65,14 +65,14 @@ let A = function (e, t) {
             () => (
                 n
                     ? (e.addEventListener("mousedown", p), e.addEventListener("keydown", m))
-                    : e.addEventListener("keydown", l),
+                    : e.addEventListener("keydown", s),
                 () => {
                     n
                         ? (e.removeEventListener("mousedown", p), e.removeEventListener("keydown", m))
-                        : e.removeEventListener("keydown", l);
+                        : e.removeEventListener("keydown", s);
                 }
             ),
-            [e, l, n],
+            [e, s, n],
         ),
         n
     );

@@ -1,4 +1,4 @@
-e.exports = {
+_.exports = {
     Uu: "flex_abf706",
     CT: "alignStart_abf706",
     ZT: "alignEnd_abf706",

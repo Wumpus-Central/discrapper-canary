@@ -2,8 +2,8 @@ n.d(t, { W: () => b });
 var r = n(477900);
 n(582128);
 var i = n(676999),
-    s = n(929783),
-    l = n(765178),
+    l = n(929783),
+    s = n(765178),
     o = n(425763),
     a = n(660183);
 class d {
@@ -323,8 +323,8 @@ class v {
             this.setDndMode(!1));
     }
 }
-let w = (0, s.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
-    x = (0, s.eV)(
+let w = (0, l.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
+    x = (0, l.eV)(
         "mousedown",
         (e) => -1 === e.type.indexOf("touch") && -1 !== e.type.indexOf("mouse") && ((0, o.ef)(!1), !0),
     ),
@@ -335,7 +335,7 @@ let w = (0, s.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
                 id: "keyboard",
                 backend: (e, t, n) => new v(e, t, n),
                 context: { window, document },
-                options: { onDndModeChanged: o.ef, announcer: l.O },
+                options: { onDndModeChanged: o.ef, announcer: s.O },
                 preview: !0,
                 transition: w,
             },
@@ -343,5 +343,5 @@ let w = (0, s.eV)("keydown", (e) => !!y(e) && (e.preventDefault(), !0)),
     };
 function b(e) {
     let { children: t } = e;
-    return (0, r.jsx)(s.QP, { options: E, children: t });
+    return (0, r.jsx)(l.QP, { options: E, children: t });
 }

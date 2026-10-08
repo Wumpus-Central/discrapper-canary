@@ -1,4 +1,4 @@
-t.d(a, { T_: () => v, Ed: () => P, yg: () => x });
+t.d(a, { T_: () => N, Ed: () => _, yg: () => P });
 var l = t(477900),
     n = t(582128),
     r = t(503698),
@@ -17,7 +17,7 @@ var c = t(901930),
     C = t(583741),
     g = t(660183),
     y = t(66414);
-function P(e) {
+function _(e) {
     let { className: a, shouldShowUnifiedHeader: t, headerBadgeConfig: n } = e;
     return (0, l.jsxs)(l.Fragment, {
         children: [
@@ -26,24 +26,24 @@ function P(e) {
         ],
     });
 }
-function x() {
+function P() {
     return (0, l.jsx)(A.Jg, {
         transitionState: s.i.ENTERED,
         onClose: p.tEg,
         size: "md",
         isModalContentLoading: !0,
-        children: (0, l.jsx)(P, { shouldShowUnifiedHeader: !0 }),
+        children: (0, l.jsx)(_, { shouldShowUnifiedHeader: !0 }),
     });
 }
-function _(e) {
+function x(e) {
     return null != e && "object" == typeof e && "message" in e && "type" in e
         ? (0, l.jsx)(u.w, { type: e.type, hidden: e.hidden, children: e.message }, e.key)
         : (0, l.jsx)(n.Fragment, { children: e.directContent }, e.key);
 }
-function f(e) {
+function T(e) {
     return null == e || "" === e;
 }
-function T(e) {
+function f(e) {
     let { children: a, showUpperNoticesAboveGlobalNotices: t = !1 } = e,
         { errorMessage: r, richNotices: i } = (function () {
             let { errorMessage: e } = (0, c.j)({}),
@@ -90,12 +90,12 @@ function T(e) {
         s = n.useRef(null);
     return (
         n.useEffect(() => {
-            f(r) || null == s.current || s.current.scrollIntoView({ behavior: "smooth" });
+            T(r) || null == s.current || s.current.scrollIntoView({ behavior: "smooth" });
         }, [r]),
         n.useMemo(() => {
-            if (!(!f(r) || i.length > 0 || null != a)) return null;
+            if (!(!T(r) || i.length > 0 || null != a)) return null;
             let e = (0, l.jsxs)(l.Fragment, {
-                children: [f(r) ? null : (0, l.jsx)(u.w, { type: "critical", children: r }), i.map(_)],
+                children: [T(r) ? null : (0, l.jsx)(u.w, { type: "critical", children: r }), i.map(x)],
             });
             return (0, l.jsx)("div", {
                 ref: s,
@@ -115,9 +115,9 @@ function M(e) {
                 : Array.isArray(e)
                   ? 0 === e.length
                       ? null
-                      : (0, l.jsx)(l.Fragment, { children: e.map((e) => _(e)) })
+                      : (0, l.jsx)(l.Fragment, { children: e.map((e) => x(e)) })
                   : null != e
-                    ? _(e)
+                    ? x(e)
                     : null,
         [e],
     );
@@ -130,14 +130,14 @@ function I(e) {
             null != i || t
                 ? t
                     ? null != i
-                        ? (0, l.jsx)(T, { showUpperNoticesAboveGlobalNotices: r, children: i })
-                        : (0, l.jsx)(T, {})
+                        ? (0, l.jsx)(f, { showUpperNoticesAboveGlobalNotices: r, children: i })
+                        : (0, l.jsx)(f, {})
                     : (0, l.jsx)("div", { className: y.dD, children: i })
                 : null,
         [t, i, r],
     );
 }
-function v(e) {
+function N(e) {
     let {
             upperInlineNoticeProps: a,
             planSelectContent: t,
@@ -150,25 +150,25 @@ function v(e) {
             legalContent: d,
             invoiceTotalDueLabel: A = g.intl.string(C.default.R0cZsM),
             invoiceTotalDueValue: p,
-            shouldShowGlobalNotices: x,
-            showUpperNoticesAboveGlobalNotices: _,
-            footerInlineNoticeProps: f,
-            headerBadgeConfig: T,
-            className: v,
+            shouldShowGlobalNotices: P,
+            showUpperNoticesAboveGlobalNotices: x,
+            footerInlineNoticeProps: T,
+            headerBadgeConfig: f,
+            className: N,
         } = e,
-        N = M(f),
-        { setCheckoutFooterLineItemNode: S } = (0, o.ck)();
+        v = M(T),
+        { setCheckoutFooterLineItemNode: L } = (0, o.ck)();
     return s
-        ? (0, l.jsx)(P, { className: v, shouldShowUnifiedHeader: !0 })
+        ? (0, l.jsx)(_, { className: N, shouldShowUnifiedHeader: !0 })
         : (0, l.jsxs)(l.Fragment, {
               children: [
                   (0, l.jsxs)("div", {
-                      className: i()(v, { [y.pg]: null == c }),
+                      className: i()(N, { [y.pg]: null == c }),
                       children: [
                           (0, l.jsx)(I, {
                               upperInlineNoticeProps: a,
-                              shouldShowGlobalNotices: x,
-                              showUpperNoticesAboveGlobalNotices: _,
+                              shouldShowGlobalNotices: P,
+                              showUpperNoticesAboveGlobalNotices: x,
                           }),
                           t,
                           null != t && null != n && (0, l.jsx)("div", { className: y.ls }),
@@ -178,14 +178,14 @@ function v(e) {
                           null != c && (0, l.jsx)("div", { className: y.ZF, children: c }),
                       ],
                   }),
-                  (0, l.jsx)(o.UY, { children: (0, l.jsx)(m.f, { headerBadgeConfig: T }) }),
+                  (0, l.jsx)(o.UY, { children: (0, l.jsx)(m.f, { headerBadgeConfig: f }) }),
                   (0, l.jsxs)(o.bx, {
                       children: [
-                          (0, l.jsx)("div", { ref: S }),
+                          (0, l.jsx)("div", { ref: L }),
                           null != A && null != p && (0, l.jsx)(E.Qf, { className: y.NR, label: A, value: p }),
                           null != h ? (0, l.jsx)("div", { className: y.uh, children: h }) : null,
                           d,
-                          null != N ? (0, l.jsx)("div", { className: y.Uu, children: N }) : null,
+                          null != v ? (0, l.jsx)("div", { className: y.Uu, children: v }) : null,
                       ],
                   }),
               ],

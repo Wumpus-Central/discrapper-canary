@@ -1,5 +1,5 @@
-d.r(
-    (e.exports = {
+e.r(
+    (_.exports = {
         "spinner-wandering-cubes": "spinner-wandering-cubes__46696",
         "spinner-chasing-dots-rotate": "spinner-chasing-dots-rotate__46696",
         "spinner-chasing-dots-bounce": "spinner-chasing-dots-bounce__46696",

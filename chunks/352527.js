@@ -11,11 +11,11 @@ let o = function (e) {
             async (n) => {
                 let { clips: i, onShareComplete: l, messageReference: o, povTargetInformation: d } = n;
                 if (0 === i.length) return;
-                let u = (0, r.t)(e);
+                let c = (0, r.t)(e);
                 (0, a.H1)(i.map((e) => e.id));
                 try {
                     await (0, s.K)(i, {
-                        channelId: u ? e : void 0,
+                        channelId: c ? e : void 0,
                         analyticsLocations: t,
                         messageReference: o,
                         povTargetInformation: d,

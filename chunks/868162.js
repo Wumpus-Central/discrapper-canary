@@ -1,4 +1,4 @@
-n.d(t, { A: () => R, x: () => f });
+n.d(t, { A: () => b, x: () => f });
 var i = n(435558),
     l = n.n(i),
     r = n(17928),
@@ -66,7 +66,7 @@ class m extends r.Ay.DeviceSettingsStore {
         return N;
     }
 }
-let R = new m(s.h, {
+let b = new m(s.h, {
     MEDIA_ENGINE_DEVICES: function (e) {
         let { inputDevices: t, outputDevices: n } = e,
             i = {};

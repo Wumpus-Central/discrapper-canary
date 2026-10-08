@@ -1,8 +1,8 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => S });
 var r = n(477900),
     i = n(582128),
-    s = n(435558),
-    l = n.n(s),
+    l = n(435558),
+    s = n.n(l),
     o = n(258873),
     a = n(622242),
     d = n(731738),
@@ -42,7 +42,7 @@ function _() {
         loading: e,
     });
 }
-let D = l().throttle(
+let D = s().throttle(
     (e) => {
         y.A.increment(
             {
@@ -128,4 +128,4 @@ class I extends i.PureComponent {
         return e;
     }
 }
-let T = I;
+let S = I;

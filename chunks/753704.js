@@ -1,15 +1,15 @@
-t.d(n, { R: () => y, _: () => I });
-var s = t(477900),
-    a = t(582128),
-    i = t(503698),
-    r = t.n(i),
-    l = t(17928),
+t.d(n, { R: () => T, _: () => I });
+var a = t(477900),
+    i = t(582128),
+    s = t(503698),
+    l = t.n(s),
+    r = t(17928),
     d = t(844222),
     o = t(926268),
     c = t(559758),
     u = t(939249),
-    m = t(683063),
-    f = t(866665),
+    f = t(683063),
+    m = t(866665),
     b = t(661492);
 let h = (0, t(945810).mj)({
     name: "2026-09-halloween-wishlisting-animation",
@@ -17,50 +17,50 @@ let h = (0, t(945810).mj)({
     defaultConfig: { enabled: !1 },
     variations: { 0: { enabled: !1 }, 1: { enabled: !0 } },
 });
-var x = t(280450),
-    g = t(536572),
-    v = t(113265),
-    T = t(758836),
-    j = t(660183),
-    p = t(715838);
-let k =
+var g = t(280450),
+    v = t(536572),
+    p = t(113265),
+    x = t(758836),
+    k = t(660183),
+    w = t(715838);
+let y =
         "https://cdn.discordapp.com/assets/content/7f66bcf14a6000b54874d74ee5a72fbbaec3d5944edfd7d6e9b3d597d3dbbaf2.png",
-    C = !1,
-    w = { xs: "xxs", sm: "xs", md: "refresh_sm" };
-function y(e) {
+    j = !1,
+    C = { xs: "xxs", sm: "xs", md: "refresh_sm" };
+function T(e) {
     let {
             product: n,
             selectedVariantIndex: t,
-            location: i,
-            onError: r,
+            location: s,
+            onError: l,
             isCardHovered: d = !0,
             onTrackClick: o,
             ...c
         } = e,
-        u = (0, l.bG)([x.default], () => x.default.getId()),
+        u = (0, r.bG)([g.default], () => g.default.getId()),
         {
-            isWishlisted: m,
-            isBusy: f,
+            isWishlisted: f,
+            isBusy: m,
             isFirstTimeWishlister: h,
-            handleToggle: j,
-            specificProductOrVariant: p,
-            isPurchased: k,
-        } = (0, v.z)({ userId: u, product: n, selectedVariantIndex: t, location: i, onError: r }),
-        C = (0, g.s7)(p),
-        w = a.useCallback(() => {
-            (o?.(m ? T.sH.REMOVE_FROM_WISHLIST : T.sH.ADD_TO_WISHLIST), j());
-        }, [m, j, o]);
-    return k
+            handleToggle: k,
+            specificProductOrVariant: w,
+            isPurchased: y,
+        } = (0, p.z)({ userId: u, product: n, selectedVariantIndex: t, location: s, onError: l }),
+        j = (0, v.s7)(w),
+        C = i.useCallback(() => {
+            (o?.(f ? x.sH.REMOVE_FROM_WISHLIST : x.sH.ADD_TO_WISHLIST), k());
+        }, [f, k, o]);
+    return y
         ? null
-        : (0, s.jsx)(I, {
-              skuId: p.skuId,
-              productName: C,
-              disabled: !(0, b.q)(p),
-              isWishlisted: m,
-              isBusy: f,
+        : (0, a.jsx)(I, {
+              skuId: w.skuId,
+              productName: j,
+              disabled: !(0, b.q)(w),
+              isWishlisted: f,
+              isBusy: m,
               isFirstTimeWishlister: h,
-              isVisuallyHidden: !d && !m,
-              onClick: w,
+              isVisuallyHidden: !d && !f,
+              onClick: C,
               ...c,
           });
 }
@@ -68,115 +68,115 @@ function I(e) {
     let {
             skuId: n,
             productName: t,
-            className: i,
-            disabled: l,
+            className: s,
+            disabled: r,
             variant: b = "default",
-            size: x = "md",
-            isWishlisted: g,
-            isBusy: v,
-            isFirstTimeWishlister: T,
-            isVisuallyHidden: y,
+            size: g = "md",
+            isWishlisted: v,
+            isBusy: p,
+            isFirstTimeWishlister: x,
+            isVisuallyHidden: T,
             onClick: I,
-            shouldShowTooltip: S,
-            tooltipConfig: E = {},
-            tabIndex: A = 0,
+            shouldShowTooltip: E,
+            tooltipConfig: H = {},
+            tabIndex: S = 0,
         } = e,
-        H = w[x],
-        { reducedMotion: N } = a.useContext(d.C),
+        A = C[g],
+        { reducedMotion: _ } = i.useContext(d.C),
         O = h.useConfig({ location: "WishlistButton" }).enabled,
-        _ = a.useRef(null),
-        [R, W] = a.useState(!1),
-        D = O ? g || R : g && !R,
-        P = D ? o.HeartIcon : c.y,
-        z = r()(p.normalIconColor, D && p.wishlistedOrAnimating);
-    (a.useEffect(() => {
-        O && !N.enabled && (C || ((C = !0), (new Image().src = k)));
-    }, [O, N.enabled]),
-        a.useEffect(() => {
-            W(!1);
+        R = i.useRef(null),
+        [D, N] = i.useState(!1),
+        W = O ? v || D : v && !D,
+        z = W ? o.HeartIcon : c.y,
+        B = l()(w.normalIconColor, W && w.wishlistedOrAnimating);
+    (i.useEffect(() => {
+        O && !_.enabled && (j || ((j = !0), (new Image().src = y)));
+    }, [O, _.enabled]),
+        i.useEffect(() => {
+            N(!1);
         }, [n]),
-        a.useEffect(() => {
-            R && N.enabled && W(!1);
-        }, [R, N.enabled]),
-        a.useEffect(() => {
-            if (!O || !R || N.enabled) return;
+        i.useEffect(() => {
+            D && _.enabled && N(!1);
+        }, [D, _.enabled]),
+        i.useEffect(() => {
+            if (!O || !D || _.enabled) return;
             let e = window.setTimeout(() => {
-                W(!1);
+                N(!1);
             }, 2042);
             return () => window.clearTimeout(e);
-        }, [R, O, N.enabled]));
-    let L = a.useCallback(
+        }, [D, O, _.enabled]));
+    let F = i.useCallback(
             (e) => {
-                (e.stopPropagation(), l || (g || N.enabled ? g && R && W(!1) : W(!0), I()));
+                (e.stopPropagation(), r || (v || _.enabled ? v && D && N(!1) : N(!0), I()));
             },
-            [l, g, N.enabled, R, I],
+            [r, v, _.enabled, D, I],
         ),
-        B = !l && !g && !R,
-        F = a.useCallback(
+        L = !r && !v && !D,
+        P = i.useCallback(
             (e) => {
-                e.target === e.currentTarget && R && requestAnimationFrame(() => W(!1));
+                e.target === e.currentTarget && D && requestAnimationFrame(() => N(!1));
             },
-            [R],
+            [D],
         );
     function M() {
-        let e = j.intl.formatToPlainString(j.t["7kFjeK"], { productName: t });
-        return (0, s.jsx)(u.D, {
-            className: r()(
-                p.wishlistButton,
-                p[x],
+        let e = k.intl.formatToPlainString(k.t["7kFjeK"], { productName: t });
+        return (0, a.jsx)(u.D, {
+            className: l()(
+                w.wishlistButton,
+                w[g],
                 {
-                    [p.variantDefault]: "default" === b,
-                    [p.variantSecondary]: "secondary" === b,
-                    [p.variantSecondaryOverlay]: "overlay-secondary" === b,
-                    [p.disabled]: l,
-                    [p.visuallyHidden]: y,
+                    [w.variantDefault]: "default" === b,
+                    [w.variantSecondary]: "secondary" === b,
+                    [w.variantSecondaryOverlay]: "overlay-secondary" === b,
+                    [w.disabled]: r,
+                    [w.visuallyHidden]: T,
                 },
-                i,
+                s,
             ),
-            innerRef: _,
-            onClick: L,
-            tabIndex: A,
+            innerRef: R,
+            onClick: F,
+            tabIndex: S,
             "aria-label": e,
-            "aria-pressed": g,
-            "aria-busy": v,
-            "aria-disabled": l,
-            children: N.enabled
-                ? (0, s.jsx)(P, { colorClass: void 0 ?? z, size: H })
-                : (0, s.jsxs)("div", {
-                      className: r()(p.iconContainer, B && p.canAnimate),
+            "aria-pressed": v,
+            "aria-busy": p,
+            "aria-disabled": r,
+            children: _.enabled
+                ? (0, a.jsx)(z, { colorClass: void 0 ?? B, size: A })
+                : (0, a.jsxs)("div", {
+                      className: l()(w.iconContainer, L && w.canAnimate),
                       children: [
-                          (0, s.jsx)("span", {
-                              className: r()(p.iconWrapper, B && p.canHover),
-                              children: (0, s.jsx)(P, { colorClass: void 0 ?? z, size: H }),
+                          (0, a.jsx)("span", {
+                              className: l()(w.iconWrapper, L && w.canHover),
+                              children: (0, a.jsx)(z, { colorClass: void 0 ?? B, size: A }),
                           }),
                           O
-                              ? R
-                                  ? (0, s.jsx)("img", {
-                                        className: p.halloweenAnimationOverlay,
-                                        src: k,
+                              ? D
+                                  ? (0, a.jsx)("img", {
+                                        className: w.halloweenAnimationOverlay,
+                                        src: y,
                                         alt: "",
                                         "aria-hidden": !0,
                                         draggable: !1,
                                     })
                                   : null
-                              : (0, s.jsx)("span", {
-                                    className: r()(p.animationOverlay, R && p.clickAnimation),
-                                    onAnimationEnd: F,
-                                    children: (0, s.jsx)(o.HeartIcon, { size: H }),
+                              : (0, a.jsx)("span", {
+                                    className: l()(w.animationOverlay, D && w.clickAnimation),
+                                    onAnimationEnd: P,
+                                    children: (0, a.jsx)(o.HeartIcon, { size: A }),
                                 }),
                       ],
                   }),
         });
     }
-    if (T && !l) {
-        let e = E.firstTimeTitle ?? j.intl.string(j.t["47Rhc3"]),
-            n = E.firstTimeBody ?? j.intl.string(j.t.PXjA0b);
-        return (0, s.jsx)(m.u, { title: e, body: n, shouldShow: S, children: M() });
+    if (x && !r) {
+        let e = H.firstTimeTitle ?? k.intl.string(k.t["47Rhc3"]),
+            n = H.firstTimeBody ?? k.intl.string(k.t.PXjA0b);
+        return (0, a.jsx)(f.u, { title: e, body: n, shouldShow: E, children: M() });
     }
-    let V = l
-        ? (E.disabled ?? j.intl.string(j.t["50TX9k"]))
-        : g
-          ? (E.remove ?? j.intl.string(j.t.yr9TTf))
-          : (E.add ?? j.intl.string(j.t["8DkMEQ"]));
-    return (0, s.jsx)(f.m, { text: V, ariaHidden: !l, shouldShow: S, children: M() });
+    let q = r
+        ? (H.disabled ?? k.intl.string(k.t["50TX9k"]))
+        : v
+          ? (H.remove ?? k.intl.string(k.t.yr9TTf))
+          : (H.add ?? k.intl.string(k.t["8DkMEQ"]));
+    return (0, a.jsx)(m.m, { text: q, ariaHidden: !r, shouldShow: E, children: M() });
 }

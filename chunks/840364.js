@@ -1,8 +1,8 @@
-n.d(t, { A: () => l });
+n.d(t, { A: () => s });
 var r = n(463347),
     i = n(311964),
-    s = n(652215);
-function l(e) {
+    l = n(652215);
+function s(e) {
     let { guildId: t } = e;
-    null == t || (0, r.tZ)(t) || (0, i.k)(s.HAw.GUILD_VIEWED_CLICKSTREAM, { guild_id: t });
+    null == t || (0, r.tZ)(t) || (0, i.k)(l.HAw.GUILD_VIEWED_CLICKSTREAM, { guild_id: t });
 }
