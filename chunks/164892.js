@@ -111,7 +111,7 @@ let R = ["simple", "balanced", "complex"],
     v = { main: D, subagent: D, thinking: y.thinking },
     b = { tier: "balanced", provider: "openai" },
     M = {
-        simple: { model: "claude-haiku-5-5", thinking: "high" },
+        simple: { model: "gpt-6-luna", thinking: "high" },
         balanced: { model: "claude-sonnet-5-5", thinking: "high" },
         complex: { model: "claude-opus-5-5", thinking: "high" },
     };
