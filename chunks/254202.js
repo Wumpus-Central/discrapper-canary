@@ -175,7 +175,11 @@ function V(e) {
                   loading: z,
                   tabIndex: ed?.tabIndex,
               },
-        eO = (0, a.jsx)(w.A, { fullWidth: !0, defaultTextOverride: U.intl.string(U.t.sEAnVH), tabIndex: ed?.tabIndex }),
+        eO = (0, a.jsx)(w.A, {
+            fullWidth: !ee,
+            defaultTextOverride: U.intl.string(U.t.sEAnVH),
+            tabIndex: ed?.tabIndex,
+        }),
         eP = null == eI ? null : J ? (0, a.jsx)(O.A, { ...eI }) : (0, a.jsx)(o.$, { ...eI });
     return (0, a.jsx)(d.N, {
         theme: eR ? Y.NJ8.DARK : void 0,

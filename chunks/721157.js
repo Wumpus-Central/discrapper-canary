@@ -1,32 +1,34 @@
-n.d(t, { ON: () => o, P3: () => m, Sw: () => p, ij: () => d, zE: () => u });
+n.d(t, { ON: () => d, P3: () => p, Sw: () => b, ij: () => u, zE: () => m });
 var a,
     s,
     i = n(158045),
     r = n(202541),
-    l = n(660183);
-let c = new Set([r.k4, r.Dw, r.pX, r.Hp, r.fY, r.bi, r.J7, r.a7, r.Tt]);
-var o =
+    l = n(652215),
+    c = n(660183);
+let o = new Set([r.k4, r.Dw, r.pX, r.Hp, r.fY, r.bi, r.J7, r.a7, r.Tt]);
+var d =
     (((a = {}).NO_SUBSCRIPTION = "no_subscription"),
     (a.NOT_TIER_2_SUBSCRIPTION = "not_tier_2_subscription"),
     (a.SUBSCRIPTION_STATUS_NOT_ALLOWED = "subscription_status_not_allowed"),
     (a.TRIAL_USER_NOT_ELIGIBLE = "trial_user_not_eligible"),
     a);
-function d(e, t, n) {
+function u(e, t) {
     if (null == t)
         return e?.isPremiumGroupMember() === !0
             ? { isEligible: !0, reason: null }
             : { isEligible: !1, reason: "no_subscription" };
-    let a = (0, i.EL)(t);
-    return null == a || r.hd[a.planId]?.premiumType !== r.PremiumTypes.TIER_2
-        ? { isEligible: !1, reason: "not_tier_2_subscription" }
-        : t.statusAllowsPerks || n === r.xc.FP_SUB_PAUSED
-          ? null != t.trialId && t.hasActiveTrial && !c.has(t.trialId)
-              ? { isEligible: !1, reason: "trial_user_not_eligible" }
-              : { isEligible: !0, reason: null }
-          : { isEligible: !1, reason: "subscription_status_not_allowed" };
+    let n = (0, i.EL)(t);
+    if (null == n || r.hd[n.planId]?.premiumType !== r.PremiumTypes.TIER_2)
+        return { isEligible: !1, reason: "not_tier_2_subscription" };
+    let a = t.status === l.Dmq.PAUSED && e?.isFractionalPremium() === !0;
+    return t.statusAllowsPerks || a
+        ? null != t.trialId && t.hasActiveTrial && !o.has(t.trialId)
+            ? { isEligible: !1, reason: "trial_user_not_eligible" }
+            : { isEligible: !0, reason: null }
+        : { isEligible: !1, reason: "subscription_status_not_allowed" };
 }
-var u = (((s = {}).CAN_CLAIM = "CAN_CLAIM"), (s.BLOCK_CLAIM = "BLOCKED"), (s.UPSELL = "UPSELL"), s);
-function m(e) {
+var m = (((s = {}).CAN_CLAIM = "CAN_CLAIM"), (s.BLOCK_CLAIM = "BLOCKED"), (s.UPSELL = "UPSELL"), s);
+function p(e) {
     switch (e) {
         case null:
             return "CAN_CLAIM";
@@ -38,9 +40,9 @@ function m(e) {
             return "BLOCKED";
     }
 }
-function p(e) {
+function b(e) {
     if (null != e)
-        return new Intl.DateTimeFormat(l.intl.currentLocale, {
+        return new Intl.DateTimeFormat(c.intl.currentLocale, {
             day: "numeric",
             month: "short",
             timeZone: "UTC",

@@ -1664,6 +1664,7 @@ function sI(e) {
                                   helpCenterUrl: em.A.getArticleURL(eZ.MVz.YOUTUBE_PROMOTION),
                               }),
                               isThirdPartyPerk: !0,
+                              subscriptionRequired: !0,
                               backgroundAssetUrl:
                                   "https://cdn.discordapp.com/assets/content/e07fd53d33f374f567964ff5b7843f09bc6943288891cfed6e573df04ba9741c.webp",
                               blurTint: "#18181C",
