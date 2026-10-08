@@ -889,6 +889,7 @@
   "GUILD_ROOM_OBJECT_DELETE": "/guilds/:param/rooms/:param/objects/:param",
   "CONJURE_PROJECTS": "/vibegrations/projects",
   "CONJURE_PROJECT": "/vibegrations/projects/:param",
+  "CONJURE_PROJECT_UNPUBLISH": "/vibegrations/projects/:param/unpublish",
   "CONJURE_PROJECT_LIMIT": "/vibegrations/project-limit",
   "CONJURE_PROJECT_WS_TICKET": "/vibegrations/projects/:param/ws-ticket",
   "CONJURE_PROJECT_REMIX_TICKET": "/vibegrations/projects/:param/remix-ticket",

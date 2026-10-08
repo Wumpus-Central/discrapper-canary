@@ -445,7 +445,8 @@ async function ee(e, t) {
                         "preview_bot_removed" === r.type ||
                         "app_channel_deleted" === r.type
                     )
-                        i.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: t, event: r });
+                        (i.h.dispatch({ type: "CONJURE_CHAT_PROJECT_EVENT", projectId: t, event: r }),
+                            "app_channel_deleted" !== r.type && (0, m.GO)(t));
                     else if ("side_reply" === r.type)
                         i.h.dispatch({
                             type: "CONJURE_CHAT_SIDE_REPLY",

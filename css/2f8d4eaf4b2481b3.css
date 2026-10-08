@@ -6,6 +6,33 @@
     padding: var(--space-4) var(--space-12)
 }
 
+.nameWithTag__21abf {
+    white-space: nowrap
+}
+
+.tag__21abf {
+    display: inline-flex;
+    vertical-align: middle
+}
+
+.box__21abf {
+    background: var(--background-mod-subtle);
+    border-radius: var(--radius-sm);
+    flex-direction: column;
+    padding: var(--space-12)
+}
+
+.box__21abf,
+.row__21abf {
+    display: flex;
+    gap: var(--space-8)
+}
+
+.row__21abf {
+    align-items: center;
+    color: var(--text-subtle)
+}
+
 .trigger__106b4 {
     align-items: center;
     display: inline-flex
@@ -47,4 +74,4 @@
     flex: 0 0 auto
 }
 
-/*# sourceMappingURL=4ada3a2de3ed2c95.css.map*/
+/*# sourceMappingURL=2f8d4eaf4b2481b3.css.map*/
