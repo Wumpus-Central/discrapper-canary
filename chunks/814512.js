@@ -20962,7 +20962,7 @@ let ba = (0, E.zD)(h.X.FRIEND_REQUESTS_NOTES_SETTING, {
     });
 var bu = n(994500),
     bd = n(428678),
-    bc = n(717398),
+    bc = n(49229),
     bg = n(730134),
     bm = n(276573);
 function bA(e) {

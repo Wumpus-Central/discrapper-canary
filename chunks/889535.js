@@ -9108,7 +9108,7 @@ let op = {
             });
     },
     PlayStationModal: async () => {
-        let { default: e } = await Promise.all([a.e("187880"), a.e("538035")]).then(a.bind(a, 14860)),
+        let { default: e } = await Promise.all([a.e("187880"), a.e("465694"), a.e("398816")]).then(a.bind(a, 855170)),
             t = await Promise.resolve().then(a.bind(a, 643501)),
             { createChannelRecord: n } = await Promise.resolve().then(a.bind(a, 95701)),
             l = n({

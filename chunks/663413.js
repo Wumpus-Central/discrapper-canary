@@ -9,7 +9,7 @@ var i = n(477900),
     c = n(590703),
     u = n(265059),
     _ = n(567249),
-    E = n(597619),
+    E = n(611635),
     A = n(892019),
     h = n(726249),
     f = n(203480),
@@ -23,7 +23,7 @@ let p = new Set([I.BVt.LOGIN, I.BVt.REGISTER]),
         return (0, i.jsxs)(l.mg, {
             children: [
                 (function (e) {
-                    let { lang: t, style: n, className: a } = (0, E.xb)(),
+                    let { lang: t, style: n, className: a } = (0, E.x)(),
                         l = (0, o.zy)(),
                         c = r.useMemo(() => p.has(l.pathname), [l.pathname]);
                     ((0, f.A)(window, c), (0, A.A)(document.documentElement));

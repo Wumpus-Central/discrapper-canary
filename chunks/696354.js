@@ -6,7 +6,7 @@ var i = {
     "./asmr_message1.mp3": "746630",
     "./bit_message1.mp3": "44226",
     "./bop_message1.mp3": "918952",
-    "./call_calling.mp3": "453318",
+    "./call_calling.mp3": "230937",
     "./call_ringing.mp3": "561771",
     "./call_ringing_beat.mp3": "368674",
     "./call_ringing_snow_halation.mp3": "69384",

@@ -55,7 +55,7 @@ let j = {
         w.h.dispatch({ type: "PRIVATE_CHANNEL_RECIPIENTS_INVITE_CLOSE" });
     },
 };
-var F = n(717398),
+var F = n(49229),
     G = n(684136),
     H = n(964486),
     k = n(793574),

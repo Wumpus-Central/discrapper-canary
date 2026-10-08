@@ -219,8 +219,8 @@ class ef extends i.PureComponent {
     }
 }
 var eg = n(97469),
-    ep = n(867045),
-    em = n(597619),
+    ep = n(933787),
+    em = n(611635),
     eA = n(892019),
     ey = n(723702),
     ev = n(677134),
@@ -402,7 +402,7 @@ class e_ extends i.Component {
 }
 function eD(e) {
     let { guestWindow: t, className: n, children: s, ref: o } = e,
-        { lang: d, style: u, className: c } = (0, em.xb)();
+        { lang: d, style: u, className: c } = (0, em.x)();
     (i.useEffect(() => {
         let e = t.document.documentElement;
         (a()(null != e, "Window document element was null"), e.setAttribute("style", u));

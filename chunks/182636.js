@@ -836,13 +836,13 @@ n(926675);
 var e0 = n(305866),
     e1 = n(123181),
     e8 = n(229087),
-    e2 = n(753437),
-    e3 = n(382701),
+    e3 = n(753437),
+    e2 = n(382701),
     e7 = n(408519);
 function e5(e) {
     let { clipId: t, tags: n, allowEditing: l, disableInteraction: a = !1, onEditingChange: s } = e,
         r = l && !a,
-        d = o.useMemo(() => n?.filter((e) => null != (0, e2.W3)(e)) ?? [], [n]),
+        d = o.useMemo(() => n?.filter((e) => null != (0, e3.W3)(e)) ?? [], [n]),
         c = d.length > 0,
         u = r && d.length < 20,
         { trackUserProfileEditAction: m } = (0, eG.NJ)(),
@@ -969,7 +969,7 @@ function e6(e) {
         d = v.intl.string(v.t.pWHvBI);
     return s
         ? (0, i.jsx)("div", {
-              className: `${e7.lv} ${e3.r9}`,
+              className: `${e7.lv} ${e2.r9}`,
               ref: t,
               children: (0, i.jsx)(g.E, { variant: "text-xxs/medium", color: "none", children: `+${n}` }),
           })
@@ -1633,7 +1633,7 @@ function tF(e) {
     });
 }
 var tU = n(896170),
-    tH = n(230937),
+    tH = n(453318),
     tV = n(168017),
     tW = n(778747),
     tX = n(321108),
@@ -1834,20 +1834,20 @@ function t8(e) {
         [a, s] = o.useState(l);
     return (0, i.jsx)(t1.Provider, { value: { expanded: a, setExpanded: s }, children: n });
 }
-function t2() {
+function t3() {
     let e = o.useContext(t1);
     if (null == e)
         throw Error("useGameWidgetExpandCollapse must be used within a GameWidgetExpandCollapseContextProvider");
     return e;
 }
-var t3 = n(67438);
+var t2 = n(67438);
 function t7(e) {
     let { widget: t } = e,
         n = (0, j.cv)(t.type),
         l = 1 === n,
         a = l ? v.intl.string(v.t["3FdPBT"]) : v.intl.format(v.t.W8K2GH, { maxGames: n });
     return (0, i.jsxs)("div", {
-        className: l ? t3.O : t3.k,
+        className: l ? t2.O : t2.k,
         children: [
             l && (0, i.jsx)(tZ, { widget: t, widgetType: t.type }),
             (0, i.jsx)(g.E, { variant: "text-xs/normal", color: "text-subtle", children: a }),
@@ -1901,7 +1901,7 @@ function ni(e) {
     let { widgetType: t, allowEditing: n, disableInteraction: l = !1, games: a } = e,
         { getManageButtonForWidget: s } = (0, ne.r)(),
         r = s(t),
-        { expanded: d, setExpanded: o } = t2(),
+        { expanded: d, setExpanded: o } = t3(),
         c = d ? a : a.slice(0, 2),
         u = a.length > 2,
         m = (0, i.jsxs)(i.Fragment, {
@@ -2059,7 +2059,7 @@ function np(e) {
     let { widgetType: t, allowEditing: n, disableInteraction: l = !1, games: a } = e,
         { getManageButtonForWidget: s } = (0, ne.r)(),
         r = s(t),
-        { expanded: d, setExpanded: o } = t2(),
+        { expanded: d, setExpanded: o } = t3(),
         c = d ? a : a.slice(0, 8),
         u = a.length > 8,
         m = (0, i.jsxs)(i.Fragment, {
@@ -2153,7 +2153,7 @@ function nv(e) {
 function nC(e) {
     let { userId: t, widgetType: n, ...l } = e,
         { games: a, onAddGame: s } = (0, tz.S)(n),
-        { setExpanded: r } = t2(),
+        { setExpanded: r } = t3(),
         { trackUserProfileEditAction: d } = (0, eG.NJ)(),
         c = o.useCallback(
             (e) => {
@@ -2193,7 +2193,7 @@ function nb(e) {
 }
 function nN(e) {
     let { widget: t, user: n, allowEditing: l, disableInteraction: a, ...s } = e,
-        { setExpanded: r } = t2(),
+        { setExpanded: r } = t3(),
         { shouldShowSuggestions: d, handleDismissSuggestions: c } = (function (e) {
             let [t, n] = o.useState(!1),
                 i = eU(e.type),

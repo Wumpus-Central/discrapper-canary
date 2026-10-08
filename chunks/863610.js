@@ -6,7 +6,7 @@ var i = n(477900),
     l = n(202091),
     o = n(717421),
     d = n(866323),
-    c = n(597619),
+    c = n(611635),
     u = n(704038);
 let _ = {
         config: { friction: 50, tension: 900, mass: 1 },
@@ -23,7 +23,7 @@ function A(e) {
 }
 let h = r.memo(function (e) {
         let { dotRadius: t, dotPosition: n, fill: a = "currentColor", spacing: s = 2.5 } = e,
-            { focused: d } = (0, c.xb)(),
+            { focused: d } = (0, c.x)(),
             u = r.useRef(!0);
         r.useEffect(
             () => () => {
@@ -76,7 +76,7 @@ let h = r.memo(function (e) {
     }),
     f = r.memo(function (e) {
         let { dotRadius: t, x: n, y: r, hide: a = !1, themed: o = !1, className: E, ref: A } = e,
-            { focused: f } = (0, c.xb)();
+            { focused: f } = (0, c.x)();
         return (0, d.p)(
             a,
             { ..._, key: (e) => (e ? "true" : "false") },

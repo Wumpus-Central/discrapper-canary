@@ -46,7 +46,7 @@ class c extends r.A {
             this._didAttemptToOpenModal = !0;
             try {
                 let { openSocialLayerStorefrontAnnouncementModal: e } = await Promise.all([
-                    n.e("237427"),
+                    n.e("324732"),
                     n.e("101105"),
                     n.e("263406"),
                     n.e("1955"),
@@ -78,7 +78,7 @@ class c extends r.A {
                     n.e("247917"),
                     n.e("89530"),
                     n.e("64769"),
-                    n.e("132073"),
+                    n.e("329172"),
                     n.e("992956"),
                     n.e("880150"),
                     n.e("490743"),
@@ -187,8 +187,7 @@ class c extends r.A {
                     n.e("962953"),
                     n.e("734818"),
                     n.e("216870"),
-                    n.e("841136"),
-                    n.e("560338"),
+                    n.e("89100"),
                     n.e("340363"),
                     n.e("459086"),
                     n.e("720210"),

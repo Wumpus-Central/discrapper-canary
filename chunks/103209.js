@@ -1726,8 +1726,8 @@ let e0 = {
 };
 var e1 = a(501907),
     e2 = a(315648),
-    e3 = a(353509),
-    e4 = a(834730),
+    e4 = a(353509),
+    e3 = a(834730),
     e6 = a(219052);
 function e8(e) {
     let {
@@ -1807,14 +1807,14 @@ function e9(e) {
                                     ref: n,
                                     disabled: o,
                                 }),
-                            (0, t.jsx)(e4.E, {
+                            (0, t.jsx)(e3.E, {
                                 tag: "span",
                                 variant: "text-md/medium",
                                 color: "none",
                                 children: l.label,
                             }),
                             null != a &&
-                                (0, t.jsxs)(e4.E, {
+                                (0, t.jsxs)(e3.E, {
                                     tag: "span",
                                     variant: "text-sm/medium",
                                     color: "none",
@@ -1822,7 +1822,7 @@ function e9(e) {
                                 }),
                         ],
                     }),
-                    (0, t.jsx)(e3.i, { className: e6.q3, "aria-hidden": "true" }),
+                    (0, t.jsx)(e4.i, { className: e6.q3, "aria-hidden": "true" }),
                 ],
             });
         },
@@ -1996,7 +1996,7 @@ let lp = {
                                   maxValue: n ? (0, ls._U)("2024-12-31") : void 0,
                                   "aria-label": "Select a date",
                               }),
-                              (0, t.jsxs)(e4.E, {
+                              (0, t.jsxs)(e3.E, {
                                   variant: "text-sm/normal",
                                   children: [
                                       "Selected date: ",
@@ -2083,7 +2083,7 @@ let ly = {
                             labelType: i,
                             leadingIcon: s ? lm.CircleInformationIcon : void 0,
                         }),
-                        (0, t.jsxs)(e4.E, {
+                        (0, t.jsxs)(e3.E, {
                             variant: "text-sm/normal",
                             children: ["Current state: ", r ? "Checked" : "Unchecked"],
                         }),
@@ -2211,7 +2211,7 @@ let lv = {
                     gap: "md",
                     children: [
                         (0, t.jsx)(lh.$, { selectedValues: u, label: n, onChange: p, options: b, disabled: l }),
-                        (0, t.jsxs)(e4.E, {
+                        (0, t.jsxs)(e3.E, {
                             variant: "text-sm/normal",
                             children: ["Current selection: ", u.length > 0 ? u.join(", ") : "None"],
                         }),
@@ -2427,7 +2427,7 @@ function lO(e) {
                                             .toDate(e.state.timeZone)
                                             .toLocaleDateString(p, { month: "long", year: "numeric" });
                                         return (0, t.jsx)(
-                                            e4.E,
+                                            e3.E,
                                             { variant: "text-md/medium", color: "text-strong", children: o },
                                             a,
                                         );
@@ -2735,7 +2735,7 @@ function lZ(e) {
                 auxiliaryContentPosition: l,
                 children: (0, t.jsx)(lE.F, {
                     disabled: !0,
-                    children: (0, t.jsx)(e4.E, {
+                    children: (0, t.jsx)(e3.E, {
                         variant: "text-md/normal",
                         color: "text-subtle",
                         children: "Inner InputField content",
@@ -2825,7 +2825,7 @@ let lK = {
                         icon: a.showIcon ? x.LockIcon : void 0,
                         children: (0, t.jsx)("div", {
                             className: lq.q,
-                            children: (0, t.jsx)(e4.E, {
+                            children: (0, t.jsx)(e3.E, {
                                 color: "text-subtle",
                                 variant: "text-md/medium",
                                 children: "Field",
@@ -2942,7 +2942,7 @@ let lJ = ["info", "success", "warning", "critical"],
                     (0, t.jsxs)(h.B, {
                         gap: 8,
                         children: [
-                            (0, t.jsx)(e4.E, {
+                            (0, t.jsx)(e3.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-subtle",
                                 children: "Old (HelpMessage-backed)",
@@ -2956,7 +2956,7 @@ let lJ = ["info", "success", "warning", "critical"],
                     (0, t.jsxs)(h.B, {
                         gap: 8,
                         children: [
-                            (0, t.jsx)(e4.E, {
+                            (0, t.jsx)(e3.E, {
                                 variant: "text-sm/semibold",
                                 color: "text-subtle",
                                 children: "New (refreshed notice)",
@@ -3024,8 +3024,8 @@ let lJ = ["info", "success", "warning", "critical"],
     };
 var l1 = a(935063),
     l2 = a(307301),
-    l3 = a(683438),
-    l4 = a(103557),
+    l4 = a(683438),
+    l3 = a(103557),
     l6 = a(404778),
     l8 = a(34011),
     l9 = a(193885),
@@ -3137,7 +3137,7 @@ let ae = [
                 name: "SearchBar",
                 component: function (e) {
                     let [l, a] = o.useState("");
-                    return (0, t.jsx)(l3.I, {
+                    return (0, t.jsx)(l4.I, {
                         ...e,
                         query: l,
                         onChange: a,
@@ -3165,7 +3165,7 @@ let ae = [
                 id: "text-area",
                 component: function (e) {
                     let [l, a] = o.useState("");
-                    return (0, t.jsx)(l4.f, { ...e, value: l, onChange: a });
+                    return (0, t.jsx)(l3.f, { ...e, value: l, onChange: a });
                 },
                 controls: {
                     label: { label: "Label", type: "text", defaultValue: "Example Label" },
@@ -3204,11 +3204,11 @@ let ae = [
                                 : void 0,
                             value: u,
                         }),
-                        v = (0, t.jsx)(e4.E, { variant: "text-sm/normal", children: "Neighbor" });
+                        v = (0, t.jsx)(e3.E, { variant: "text-sm/normal", children: "Neighbor" });
                     return (0, t.jsxs)(h.B, {
                         gap: 16,
                         children: [
-                            (0, t.jsx)(e4.E, {
+                            (0, t.jsx)(e3.E, {
                                 variant: "text-sm/normal",
                                 color: "text-subtle",
                                 children:
@@ -3253,13 +3253,13 @@ let ae = [
                                       align: "row" === a ? "start" : "stretch",
                                       children: [y, v],
                                   }),
-                            (0, t.jsx)(e4.E, {
+                            (0, t.jsx)(e3.E, {
                                 variant: "text-sm/normal",
                                 role: "status",
                                 children: null == b ? "No commits" : `Last committed value: ${JSON.stringify(b)}`,
                             }),
                             s
-                                ? (0, t.jsxs)(e4.E, { variant: "text-sm/normal", children: ["Accessory clicks: ", m] })
+                                ? (0, t.jsxs)(e3.E, { variant: "text-sm/normal", children: ["Accessory clicks: ", m] })
                                 : null,
                         ],
                     });
@@ -3392,8 +3392,8 @@ let ae = [
                             (0, t.jsxs)(lG.n, {
                                 label: "Search Bar",
                                 children: [
-                                    (0, t.jsx)(l3.I, { query: u, onChange: r.tE, disabled: s, placeholder: d }),
-                                    (0, t.jsx)(l3.I, {
+                                    (0, t.jsx)(l4.I, { query: u, onChange: r.tE, disabled: s, placeholder: d }),
+                                    (0, t.jsx)(l4.I, {
                                         query: u,
                                         onChange: r.tE,
                                         size: "sm",
@@ -3403,7 +3403,7 @@ let ae = [
                                 ],
                             }),
                             (0, t.jsx)(l6.c, {}),
-                            (0, t.jsx)(lG.n, { label: "Text Area", children: (0, t.jsx)(l4.f, { ...x }) }),
+                            (0, t.jsx)(lG.n, { label: "Text Area", children: (0, t.jsx)(l3.f, { ...x }) }),
                         ],
                     });
                 },
@@ -3439,7 +3439,7 @@ var aa = a(102079),
     ap = a(314116);
 let am = "/assets/f66ae7bb8510ab4f.svg";
 function ax() {
-    return (0, t.jsx)(e4.E, {
+    return (0, t.jsx)(e3.E, {
         variant: "text-sm/normal",
         color: "text-subtle",
         children: "Lost access to your radness? Talk to your radness provider to refresh your aura.",
@@ -3571,7 +3571,7 @@ let ag = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e4.E, {
+                        (0, t.jsx)(e3.E, {
                             variant: "text-md/normal",
                             children: "Click the button below to open the modal",
                         }),
@@ -3587,7 +3587,7 @@ let ag = {
                                             title: n.title,
                                             subtitle: i,
                                             input: a
-                                                ? (0, t.jsx)(l3.I, {
+                                                ? (0, t.jsx)(l4.I, {
                                                       placeholder: "Search...",
                                                       onChange: () => {},
                                                       query: "",
@@ -3597,11 +3597,11 @@ let ag = {
                                                 ? (0, t.jsxs)(h.B, {
                                                       gap: 8,
                                                       children: [
-                                                          (0, t.jsx)(e4.E, {
+                                                          (0, t.jsx)(e3.E, {
                                                               variant: "text-lg/semibold",
                                                               children: "Preview Content",
                                                           }),
-                                                          (0, t.jsx)(e4.E, {
+                                                          (0, t.jsx)(e3.E, {
                                                               variant: "text-md/normal",
                                                               color: "text-subtle",
                                                               children:
@@ -3637,7 +3637,7 @@ let ag = {
                                                         label: "Example Input",
                                                         placeholder: "Enter some text...",
                                                     }),
-                                                    (0, t.jsx)(e4.E, {
+                                                    (0, t.jsx)(e3.E, {
                                                         variant: "text-md/normal",
                                                         children:
                                                             "This is the main content area of the modal. You can place any content here.",
@@ -3696,7 +3696,7 @@ let ag = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e4.E, {
+                        (0, t.jsx)(e3.E, {
                             variant: "text-md/normal",
                             children: "Click the button below to open the confirm modal",
                         }),
@@ -3789,7 +3789,7 @@ let ag = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e4.E, {
+                        (0, t.jsx)(e3.E, {
                             variant: "text-md/normal",
                             children: "Click the button below to open the expressive modal",
                         }),
@@ -3811,7 +3811,7 @@ let ag = {
                                             ],
                                             children: (0, t.jsx)(h.B, {
                                                 gap: 16,
-                                                children: (0, t.jsx)(e4.E, {
+                                                children: (0, t.jsx)(e3.E, {
                                                     variant: "text-md/normal",
                                                     children:
                                                         "This is an expressive modal with a gradient background and optional badge.",
@@ -3879,7 +3879,7 @@ let ag = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e4.E, {
+                        (0, t.jsx)(e3.E, {
                             variant: "text-md/normal",
                             children:
                                 "This example demonstrates the DynamicGraphic component rendering a React component inside the modal header.",
@@ -3904,7 +3904,7 @@ let ag = {
                                                 ],
                                                 children: (0, t.jsx)(h.B, {
                                                     gap: 16,
-                                                    children: (0, t.jsx)(e4.E, {
+                                                    children: (0, t.jsx)(e3.E, {
                                                         variant: "text-md/normal",
                                                         children:
                                                             "The header above is rendered using a React component via DynamicGraphic, allowing for dynamic, interactive content in the modal header.",
@@ -3959,7 +3959,7 @@ let ag = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e4.E, {
+                        (0, t.jsx)(e3.E, {
                             variant: "text-md/normal",
                             children: "Click the button below to open the layer modal",
                         }),
@@ -3973,7 +3973,7 @@ let ag = {
                                         ...l,
                                         children: (0, t.jsx)(h.B, {
                                             gap: 16,
-                                            children: (0, t.jsx)(e4.E, {
+                                            children: (0, t.jsx)(e3.E, {
                                                 variant: "text-md/normal",
                                                 children: "This is the layer modal content",
                                             }),
@@ -4002,7 +4002,7 @@ let ag = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e4.E, {
+                        (0, t.jsx)(e3.E, {
                             variant: "text-md/normal",
                             children: "Click the button below to open the multi-step modal",
                         }),
@@ -4055,7 +4055,7 @@ let ag = {
                     gap: 16,
                     align: "center",
                     children: [
-                        (0, t.jsx)(e4.E, {
+                        (0, t.jsx)(e3.E, {
                             variant: "text-md/normal",
                             children: "Click the button below to open the base modal",
                         }),
@@ -4073,11 +4073,11 @@ let ag = {
                                                 children: (0, t.jsxs)(h.B, {
                                                     gap: 16,
                                                     children: [
-                                                        (0, t.jsx)(e4.E, {
+                                                        (0, t.jsx)(e3.E, {
                                                             variant: "text-lg/semibold",
                                                             children: "BaseModal Content",
                                                         }),
-                                                        (0, t.jsx)(e4.E, {
+                                                        (0, t.jsx)(e3.E, {
                                                             variant: "text-md/normal",
                                                             children:
                                                                 "This is the raw BaseModal container. It provides the modal chrome (animation, sizing, padding, focus management) without any opinionated header, body, or action bar layout.",
@@ -4085,7 +4085,7 @@ let ag = {
                                                         a
                                                             ? Array.from({ length: 20 }, (e, l) =>
                                                                   (0, t.jsxs)(
-                                                                      e4.E,
+                                                                      e3.E,
                                                                       {
                                                                           variant: "text-md/normal",
                                                                           children: [
@@ -4245,7 +4245,7 @@ function aD(e) {
                     children: (0, t.jsxs)("div", {
                         className: aE.multistepActionLayout,
                         children: [
-                            (0, t.jsx)(e4.E, {
+                            (0, t.jsx)(e3.E, {
                                 variant: "text-xs/normal",
                                 className: aE.multistepIndicator,
                                 children: aI.intl.formatToPlainString(aI.t.rO31eY, {
@@ -4642,7 +4642,7 @@ let aR = {
                         gap: "md",
                         children: [
                             (0, t.jsx)(e7.z, { value: u, label: n, onChange: p, options: b, disabled: l }),
-                            (0, t.jsxs)(e4.E, {
+                            (0, t.jsxs)(e3.E, {
                                 variant: "text-sm/normal",
                                 children: ["Current selection: ", "string" == typeof u && "" !== u ? u : "None"],
                             }),
@@ -4749,7 +4749,7 @@ let aR = {
                                 maxValue: n ? (0, ls._U)("2024-12-31") : void 0,
                                 "aria-label": "Select a date range",
                             }),
-                            (0, t.jsxs)(e4.E, {
+                            (0, t.jsxs)(e3.E, {
                                 variant: "text-sm/normal",
                                 children: [
                                     "Selected range: ",
@@ -4809,7 +4809,7 @@ let aG = Object.entries(aP)
     .sort((e, l) => e.name.localeCompare(l.name));
 var aF = a(649998),
     a_ = a(715022),
-    aH = a(230937),
+    aH = a(453318),
     aq = a(379649);
 let aU = [
         { label: "Aardvark", value: "aardvark", id: "aardvark", description: "This is an aardvark" },
@@ -5168,7 +5168,7 @@ let a1 = [
         { id: "safety", label: "Safety Center", href: "https://discord.com/safety" },
         { id: "support", label: "Support", href: "https://support.discord.com" },
     ],
-    a3 = {
+    a4 = {
         title: "TagGroup",
         stories: [
             {
@@ -5303,12 +5303,12 @@ let a1 = [
             },
         ],
     };
-var a4 = a(364522),
+var a3 = a(364522),
     a6 = a(404544);
 let a8 = {
     name: "Text",
     id: "text",
-    component: e4.E,
+    component: e3.E,
     controls: {
         variant: {
             label: "Variant",
@@ -5582,7 +5582,7 @@ let tb = {
                         name: "Typography Scales",
                         id: "text-scales",
                         component: function (e) {
-                            return (0, t.jsx)(a4.Ar, {
+                            return (0, t.jsx)(a3.Ar, {
                                 className: a6.H,
                                 children: Object.values(X).map((l) =>
                                     (0, t.jsxs)(
@@ -5590,8 +5590,8 @@ let tb = {
                                         {
                                             className: a6.N,
                                             children: [
-                                                (0, t.jsx)(e4.E, { ...e, variant: l, children: e.children }),
-                                                (0, t.jsx)(e4.E, {
+                                                (0, t.jsx)(e3.E, { ...e, variant: l, children: e.children }),
+                                                (0, t.jsx)(e3.E, {
                                                     variant: "text-xs/normal",
                                                     color: "text-subtle",
                                                     children: l,
@@ -5779,7 +5779,7 @@ let tb = {
             },
             td,
             ln,
-            a3,
+            a4,
             lK,
             {
                 title: "FloatingLayer",
@@ -5811,7 +5811,7 @@ let tb = {
                                 renderLayer: () =>
                                     (0, t.jsx)("div", {
                                         className: tc.q,
-                                        children: (0, t.jsx)(e4.E, {
+                                        children: (0, t.jsx)(e3.E, {
                                             variant: "text-sm/medium",
                                             children: "FloatingLayer Content",
                                         }),
@@ -5913,7 +5913,7 @@ let tb = {
                                                                     style: { width: "100%", height: "100%" },
                                                                 }),
                                                             }),
-                                                            (0, t.jsx)(e4.E, {
+                                                            (0, t.jsx)(e3.E, {
                                                                 variant: "text-xs/normal",
                                                                 color: "text-subtle",
                                                                 className: a$.Pf,

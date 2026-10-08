@@ -1,4 +1,4 @@
-n.d(t, { g: () => m, A: () => N });
+n.d(t, { A: () => N, g: () => m });
 var i,
     r = n(636537),
     a = n(765178),
@@ -130,9 +130,6 @@ let S = {
                 (e) => s.h.dispatch({ type: "LOAD_RELATIONSHIPS_SUCCESS", relationships: e.body }),
                 () => s.h.dispatch({ type: "LOAD_RELATIONSHIPS_FAILURE" }),
             );
-        },
-        confirmClearPendingRelationships(e) {
-            (0, n(507019).A)(e);
         },
         clearPendingRelationships: () =>
             r.Bo.del({
