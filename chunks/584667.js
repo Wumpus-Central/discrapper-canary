@@ -548,7 +548,7 @@ function e3(e) {
         ? (d.message = d.message.addReaction(a, r, { colors: e.colors, reactionType: s }))
         : (d.message = d.message.removeReaction(a, r, s));
 }
-function e2(e) {
+function e9(e) {
     let { channelId: t } = e,
         n = [],
         i = [];
@@ -560,7 +560,7 @@ function e2(e) {
     if (((ey = eZ(s, t)), (ew = eN ? a && ey.length >= Y.$P : a && ez(i, eE)), 0 === n.length && a === ew)) return !1;
     0 !== n.length && ((eL = i), (eO = [...eO, ...n]));
 }
-class e9 extends o.Ay.PersistedStore {
+class e2 extends o.Ay.PersistedStore {
     static displayName = "ICYMIStore";
     static persistKey = "ICYMIStore";
     initialize(e) {
@@ -684,7 +684,7 @@ class e9 extends o.Ay.PersistedStore {
         };
     }
 }
-let e4 = new e9(A.h, {
+let e4 = new e2(A.h, {
         LOGOUT: function () {
             ((ep = []),
                 (eE = []),
@@ -897,8 +897,8 @@ let e4 = new e9(A.h, {
             if (null == i || i.type !== Y.Mm.MESSAGE) return !1;
             i.message = i.message.removeReactionsForEmoji(n);
         },
-        CHANNEL_ACK: e2,
-        MESSAGE_ACK: e2,
+        CHANNEL_ACK: e9,
+        MESSAGE_ACK: e9,
         ICYMI_JOINED_RECOMMENDED_GUILD: function () {
             eU = Date.now();
         },
@@ -1463,7 +1463,7 @@ var tG = n(837381),
     tb = n(763754),
     tL = n(491182),
     tO = n(860227),
-    tR = n(439762),
+    tR = n(470964),
     tj = n(699352),
     tU = n(715628),
     tF = n(752636),
