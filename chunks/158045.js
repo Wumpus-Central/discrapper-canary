@@ -1587,10 +1587,11 @@ let tK = Object.freeze({
         if (e.status === S.Dmq.CANCELED || e.status === S.Dmq.PAUSE_PENDING) return n;
         o()(null != t, "Expected invoicePreview");
         let i = t.invoiceItems.find((e) => {
-            let { subscriptionPlanId: t } = e;
-            return e3(t);
-        });
-        return ((null == i || (0, eE.m1)(i.subscriptionPlanId)) && (n = S.Dmq.CANCELED), n);
+                let { subscriptionPlanId: t } = e;
+                return e3(t);
+            }),
+            r = e.isPurchasedExternally && null != e.renewalMutations;
+        return ((null == i || (0, eE.m1)(i.subscriptionPlanId)) && !r && (n = S.Dmq.CANCELED), n);
     },
     isBaseSubscriptionCanceled: tl,
     getPremiumGuildIntervalPrice: td,
