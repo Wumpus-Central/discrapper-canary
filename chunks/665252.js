@@ -554,21 +554,13 @@ function em(e) {
                                         animated: G,
                                     }),
                                 (0, i.jsx)(p.E, { variant: "text-md/medium", children: H }),
-                                !b &&
-                                    (0, i.jsxs)(i.Fragment, {
-                                        children: [
-                                            (0, i.jsx)("div", { className: eh.SU }),
-                                            (0, i.jsxs)(p.E, {
-                                                variant: "text-md/medium",
-                                                className: eh.Zi,
-                                                tabularNumbers: !0,
-                                                children: [
-                                                    "x",
-                                                    (0, i.jsx)(E.A, { className: eh.Zi, value: g, digitWidth: 8 }),
-                                                ],
-                                            }),
-                                        ],
-                                    }),
+                                (0, i.jsx)("div", { className: eh.SU }),
+                                (0, i.jsxs)(p.E, {
+                                    variant: "text-md/medium",
+                                    className: eh.Zi,
+                                    tabularNumbers: !0,
+                                    children: ["x", (0, i.jsx)(E.A, { className: eh.Zi, value: g, digitWidth: 8 })],
+                                }),
                             ],
                         }),
                     }),

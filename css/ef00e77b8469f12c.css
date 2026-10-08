@@ -177,8 +177,7 @@
 }
 
 .avatar__86e10 {
-    flex-shrink: 0;
-    margin-inline-end: var(--space-4)
+    flex-shrink: 0
 }
 
 .member__86e10 {
@@ -464,8 +463,7 @@
 }
 
 .activityBarAvatar__95c51 {
-    flex-shrink: 0;
-    margin-inline-end: var(--space-4)
+    flex-shrink: 0
 }
 
 .activityBarText__95c51 {
@@ -478,7 +476,7 @@
 .activityBarSubtitle__95c51 {
     align-items: center;
     display: flex;
-    gap: var(--space-4)
+    gap: 2px
 }
 
 .activityBarRight__95c51 {
@@ -529,4 +527,4 @@
     min-height: 0
 }
 
-/*# sourceMappingURL=656b7ca35717b33e.css.map*/
+/*# sourceMappingURL=ef00e77b8469f12c.css.map*/
