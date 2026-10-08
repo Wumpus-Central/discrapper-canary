@@ -1876,7 +1876,7 @@ function iM(e) {
                             if (
                                 null != n &&
                                 ib(W.A.getBasicChannel(n), i ?? void 0, ee.A) &&
-                                !en.Ay.isGuildOrCategoryOrChannelMuted(e, n)
+                                !en.Ay.isChannelMuted(e, n)
                             )
                                 return !0;
                         }
@@ -1889,7 +1889,7 @@ function iM(e) {
                             if (
                                 null != n &&
                                 ib(W.A.getBasicChannel(n), i ?? void 0, ee.A) &&
-                                !en.Ay.isGuildOrCategoryOrChannelMuted(e, n)
+                                !en.Ay.isChannelMuted(e, n)
                             )
                                 return !0;
                         }
@@ -1929,7 +1929,7 @@ function iM(e) {
                 p = c && (W.A.getChannel(r)?.isGuildStageVoice() ?? !1),
                 T = !!c && null != j.A.getActiveStreamForUser(d, e),
                 m = (0, ta.Mt)(j.A.getAllApplicationStreams()).some(
-                    (t) => t.guildId === e && !en.Ay.isGuildOrCategoryOrChannelMuted(e, t.channelId),
+                    (t) => t.guildId === e && !en.Ay.isChannelMuted(e, t.channelId),
                 ),
                 g = c && o,
                 S = (() => {
@@ -2186,7 +2186,7 @@ function iJ(e) {
                 ...iz.Ay.getChannels(t)
                     [iz.vM].filter((e) => {
                         let { channel: n } = e;
-                        return n.type === eS.rbe.GUILD_VOICE && !en.Ay.isGuildOrCategoryOrChannelMuted(t, n.id);
+                        return n.type === eS.rbe.GUILD_VOICE && !en.Ay.isChannelMuted(t, n.id);
                     })
                     .map((e) => {
                         let { channel: t } = e;
@@ -2229,7 +2229,7 @@ function iJ(e) {
             [j.A, en.Ay],
             () => {
                 let e = j.A.getAllApplicationStreams()
-                    .filter((e) => e.guildId === t && !en.Ay.isGuildOrCategoryOrChannelMuted(t, e.channelId))
+                    .filter((e) => e.guildId === t && !en.Ay.isChannelMuted(t, e.channelId))
                     .map((e) => e.ownerId);
                 return (0, ta.F7)(e, d);
             },

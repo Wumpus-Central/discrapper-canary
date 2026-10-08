@@ -60,7 +60,7 @@ function B(e, t, n) {
         i.type !== a.r.GUILD_STAGE_VOICE &&
         n !== i.id &&
         !!S.A.canBasicChannel(y.hVb.VIEW_CHANNEL, i) &&
-        !O.Ay.isGuildOrCategoryOrChannelMuted(e, t)
+        !O.Ay.isChannelMuted(e, t)
     );
 }
 function V() {
@@ -150,7 +150,7 @@ class j extends s.Ay.Store {
                         break;
                     }
                 let y = t.streamChannelIdsByGuild.get(e),
-                    v = null != y && y.some((t) => !O.Ay.isGuildOrCategoryOrChannelMuted(e, t)),
+                    v = null != y && y.some((t) => !O.Ay.isChannelMuted(e, t)),
                     x = L.default.keys(f.A.getStageInstancesByGuild(e)).some((e) => {
                         let t = m.A.getBasicChannel(e);
                         return null != t && (0, E.A)(t, S.A);
