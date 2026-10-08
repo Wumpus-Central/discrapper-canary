@@ -359,7 +359,7 @@ let r = new Set([
         827: { is_server_arbitrated: !0 },
         831: { is_server_arbitrated: !0 },
         839: { is_server_arbitrated: !1 },
-        840: { is_server_arbitrated: !1 },
+        840: { is_server_arbitrated: !0 },
         841: { is_server_arbitrated: !0 },
         845: { is_server_arbitrated: !0 },
     };

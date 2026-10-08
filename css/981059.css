@@ -1,0 +1,23 @@
+.overflowButtonContainer__8b035 {
+    display: inline-flex;
+    position: relative
+}
+
+.buttonCutout__8b035 {
+    display: inline-flex;
+    -webkit-mask-image: radial-gradient(circle 6.3px at calc(100% - 6.3px) calc(100% - 6.3px), transparent 6.3px, #000 6.8px);
+    mask-image: radial-gradient(circle 6.3px at calc(100% - 6.3px) calc(100% - 6.3px), transparent 6.3px, #000 6.8px)
+}
+
+.redDot__8b035 {
+    background: var(--icon-feedback-notification);
+    border-radius: var(--radius-round);
+    bottom: 2px;
+    height: 8.5px;
+    inset-inline-end: 2px;
+    pointer-events: none;
+    position: absolute;
+    width: 8.5px
+}
+
+/*# sourceMappingURL=981059.ffcf49afd6a325fa.css.map*/
