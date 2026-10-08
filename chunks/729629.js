@@ -1483,7 +1483,7 @@ if (
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let tt = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new eZ.A().log(
-    `[BUILD INFO] Release Channel: ${tt}, Build Number: 633172, Version Hash: da7da7b5b060ba694095a31e5ab6c2a1ca0928c3`,
+    `[BUILD INFO] Release Channel: ${tt}, Build Number: 633185, Version Hash: ad13c6baa50d98209e649a78b5789af7805b7762`,
 ),
     k.A.setTags({ appContext: Y.QCW }),
     eC.A.initBasic(),
@@ -25683,7 +25683,7 @@ let L$ = "isHideDevBanner",
                     className: tA()(LK.Wz, LK.mr),
                     children: [
                         (0, U.jsx)(LY, { className: LK.Kk }),
-                        ty.intl.format(ty.t.uyrfYF, { buildNumber: "633172" }),
+                        ty.intl.format(ty.t.uyrfYF, { buildNumber: "633185" }),
                         (0, U.jsx)(r, {}),
                     ],
                 })
@@ -31135,7 +31135,7 @@ let vv = (0, tX.Fe)({
                 n.e("408203"),
                 n.e("398791"),
                 n.e("435860"),
-                n.e("186204"),
+                n.e("785215"),
                 n.e("997708"),
                 n.e("147662"),
                 n.e("544571"),
@@ -31221,8 +31221,8 @@ let vv = (0, tX.Fe)({
                 n.e("209114"),
                 n.e("192910"),
                 n.e("983373"),
-            ]).then(n.bind(n, 77315)),
-        webpackId: 77315,
+            ]).then(n.bind(n, 838665)),
+        webpackId: 838665,
         name: "GuildSidebar",
         renderLoader: ic.L,
     }),
