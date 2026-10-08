@@ -1,4 +1,4 @@
-(n.d(t, { A: () => M }), n(321073));
+(n.d(t, { A: () => P }), n(321073));
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(424170),
     b = n(274652),
     I = n(31717),
-    v = n(914905),
-    N = n(650583),
+    N = n(914905),
+    v = n(650583),
     T = n(660183),
     j = n(40974);
 function _(e) {
@@ -75,7 +75,7 @@ function _(e) {
         );
     }, [c, R, O, w]),
     null != c)
-        ? (0, l.jsx)(v.A, {
+        ? (0, l.jsx)(N.A, {
               channelId: t,
               upload: c,
               keyboardModeEnabled: r,
@@ -98,7 +98,7 @@ function _(e) {
               channelId: t,
               keyboardModeEnabled: r,
               onKeyDown: function (e) {
-                  e.key === N.dh.ENTER && (e.preventDefault(), a.current?.activateUploadDialogue());
+                  e.key === v.dh.ENTER && (e.preventDefault(), a.current?.activateUploadDialogue());
               },
               className: s()(j.xd, { [j.LB]: o }),
               draftType: I.C.SlashCommand,
@@ -148,14 +148,14 @@ function w(e) {
         {
             isApplicationCommand: b,
             commandOptions: I,
-            commandOptionStates: N,
+            commandOptionStates: v,
         } = (0, u.cf)([p.A], () => {
             let e = p.A.getActiveCommand(t);
             if (null == e) return { isApplicationCommand: !1, commandOptions: L, commandOptionStates: null };
             let n = p.A.getOptionStates(t);
             return { isApplicationCommand: !0, commandOptions: e.options, commandOptionStates: n };
         }),
-        T = i.useMemo(() => I?.filter((e) => e.type === h.n4.ATTACHMENT && N?.[e.name]?.hasValue) ?? [], [I, N]),
+        T = i.useMemo(() => I?.filter((e) => e.type === h.n4.ATTACHMENT && v?.[e.name]?.hasValue) ?? [], [I, v]),
         [j, w] = i.useState([]);
     i.useEffect(() => {
         function e() {
@@ -166,14 +166,14 @@ function w(e) {
             () => c.h.unsubscribe("APPLICATION_COMMAND_SET_ACTIVE_COMMAND", e)
         );
     }, [t, n]);
-    let M = i.useCallback(() => {
+    let P = i.useCallback(() => {
         C.focusFirstVisibleItem();
     }, [C]);
-    (0, x.Vo)({ event: k.jej.FOCUS_ATTACHMENT_AREA, handler: M });
-    let P = { isApplicationCommand: b, previousUploadOptions: j, uploadOptions: T },
-        D = i.useRef(P);
+    (0, x.Vo)({ event: k.jej.FOCUS_ATTACHMENT_AREA, handler: P });
+    let M = { isApplicationCommand: b, previousUploadOptions: j, uploadOptions: T },
+        D = i.useRef(M);
     (i.useEffect(() => {
-        D.current = P;
+        D.current = M;
     }),
         i.useEffect(() => {
             let { isApplicationCommand: e, previousUploadOptions: l, uploadOptions: i } = D.current;
@@ -204,7 +204,7 @@ function w(e) {
                               ? T.map((e) => (0, l.jsx)(_, { channelId: t, keyboardModeEnabled: y, option: e }, e.name))
                               : U.map((e) =>
                                     (0, l.jsx)(
-                                        v.A,
+                                        N.A,
                                         {
                                             channelId: t,
                                             draftType: n.drafts.type,
@@ -221,7 +221,7 @@ function w(e) {
               }),
           });
 }
-let M = i.memo(function (e) {
+let P = i.memo(function (e) {
     let { channelId: t, type: n, canAttachFiles: i, ignoreUploadId: r, smallAttachments: s = !1 } = e;
     return i ? (0, l.jsx)(w, { channelId: t, type: n, ignoreUploadId: r, smallAttachments: s }) : null;
 });

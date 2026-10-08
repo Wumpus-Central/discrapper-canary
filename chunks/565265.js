@@ -1,8 +1,8 @@
 l.d(n, { A: () => b });
 var t = l(477900),
-    i = l(582128),
-    s = l(503698),
-    r = l.n(s),
+    s = l(582128),
+    i = l(503698),
+    r = l.n(i),
     a = l(621466),
     c = l(192308),
     o = l(939249),
@@ -22,7 +22,7 @@ function j(e) {
         e.className.includes("emojiContainer")
     );
 }
-class E extends i.Component {
+class E extends s.Component {
     handleOpenTopic = (e) => {
         let n = e.target;
         if ((0, a.vq)(n)) {
@@ -36,7 +36,7 @@ class E extends i.Component {
         });
     };
     handleContextMenu = (e) => {
-        let { channel: n, guild: i } = this.props;
+        let { channel: n, guild: s } = this.props;
         (0, d.L3)(e, async () => {
             let { default: e } = await Promise.all([
                 l.e("926132"),
@@ -58,7 +58,7 @@ class E extends i.Component {
                 l.e("29542"),
                 l.e("359545"),
             ]).then(l.bind(l, 22496));
-            return (l) => (0, t.jsx)(e, { ...l, channel: n, guild: i, includeTopic: !0 });
+            return (l) => (0, t.jsx)(e, { ...l, channel: n, guild: s, includeTopic: !0 });
         });
     };
     render() {
@@ -66,7 +66,7 @@ class E extends i.Component {
         if (e.isMultiUserDM()) return null;
         let n = null != e.topic && e.topic.length > 0;
         return null != e.linkedLobby || n
-            ? (0, t.jsxs)(i.Fragment, {
+            ? (0, t.jsxs)(s.Fragment, {
                   children: [
                       (0, t.jsx)(x.A.Divider, {}),
                       (0, t.jsxs)("div", {

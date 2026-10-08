@@ -1,4 +1,4 @@
-(n.d(t, { Ay: () => N, Q9: () => U, W: () => D }), n(321073));
+(n.d(t, { Ay: () => v, Q9: () => U, W: () => D }), n(321073));
 var l = n(626551),
     i = n(635377),
     r = n.n(i),
@@ -21,8 +21,8 @@ let C = new o.Vy("withCodeBlocks"),
     A = new Set(["line"]),
     b = /^[a-z0-9_+\-.#]+$/i,
     I = null,
-    v = null;
-function N(e) {
+    N = null;
+function v(e) {
     let { onChange: t } = e,
         l = null,
         i = !1,
@@ -59,16 +59,16 @@ function N(e) {
                             null != I ||
                             i ||
                             ((i = !0),
-                            (null == v &&
-                                (v = Promise.all([n.e("818449"), n.e("175134")])
+                            (null == N &&
+                                (N = Promise.all([n.e("818449"), n.e("175134")])
                                     .then(n.bind(n, 981776))
                                     .then((e) => {
                                         I = e.default;
                                     })
                                     .catch((e) => {
-                                        throw ((v = null), e);
+                                        throw ((N = null), e);
                                     })),
-                            v)
+                            N)
                                 .then(() => {
                                     ((l = null),
                                         f.o.withoutSaving(e, () => {
@@ -161,7 +161,7 @@ function T(e, t) {
                         if (null != r && "ansi" === (0, d.py)(r)) {
                             let t = (function (e, t) {
                                 let n = a()(e),
-                                    i = P.get(n);
+                                    i = M.get(n);
                                 if (null != i && i.length === t) return i;
                                 let r = [[]],
                                     s = 0;
@@ -185,7 +185,7 @@ function T(e, t) {
                                 }
                                 return (o(e.substring(u), [S.ansiControlSequence]), r.length !== t)
                                     ? null
-                                    : (P.set(n, r), r);
+                                    : (M.set(n, r), r);
                             })(e, i.length);
                             for (let e = 0; e < i.length; e++) i[e].hljsTypes = t?.[e] ?? [];
                         } else if (null != r && n)
@@ -229,7 +229,7 @@ function T(e, t) {
                                                     r = 0;
                                                 for (_.lastIndex = 0; null != (t = _.exec(e));) {
                                                     let s = t.index + t[0].length,
-                                                        a = M(e.substring(r, t.index)).length,
+                                                        a = P(e.substring(r, t.index)).length,
                                                         o = l.filter((e) => null != e);
                                                     if (
                                                         (a > 0 &&
@@ -243,7 +243,7 @@ function T(e, t) {
                                                     } else l.pop();
                                                     r = s;
                                                 }
-                                                let s = M(e.substring(r)).length,
+                                                let s = P(e.substring(r)).length,
                                                     a = l.filter((e) => null != e);
                                                 return (
                                                     s > 0 && a.length > 0 && n.push({ types: a, start: i, end: i + s }),
@@ -336,7 +336,7 @@ let R = { max: 1 / 0, maxAge: +h.A.Millis.MINUTE, updateAgeOnGet: !0 },
     O = new (r())(R),
     L = new (r())(R),
     w = new (r())(R);
-function M(e) {
+function P(e) {
     return e
         .replace(/&amp;/g, "&")
         .replace(/&lt;/g, "<")
@@ -347,7 +347,7 @@ function M(e) {
 (0, c.Q4)(() => {
     L.reset();
 });
-let P = new (r())(R);
+let M = new (r())(R);
 function D(e, t) {
     let n = 0;
     for (let l of x.VW.nodes(e, {

@@ -6,8 +6,8 @@ var i = n(477900),
     s = n(17928),
     o = n(97808),
     d = n(778712),
-    c = n(834730),
-    u = n(7807),
+    u = n(834730),
+    c = n(7807),
     m = n(661531),
     h = n(565645),
     f = n(287809),
@@ -19,7 +19,7 @@ function A(e) {
         className: g.AB,
         children: [
             (0, i.jsx)(o.eu, { "aria-label": n, size: d._3.SIZE_24, src: t }),
-            (0, i.jsxs)(c.E, {
+            (0, i.jsxs)(u.E, {
                 className: g.PW,
                 color: "text-overlay-light",
                 variant: "text-sm/normal",
@@ -45,7 +45,7 @@ function x(e) {
                   alt: t.name,
                   size: "reaction",
               })
-            : (0, i.jsx)(u.J, { size: "refresh_sm", color: m.A.colors.ICON_DEFAULT });
+            : (0, i.jsx)(c.J, { size: "refresh_sm", color: m.A.colors.ICON_DEFAULT });
     return (0, i.jsx)(A, { avatarURL: n.getAvatarURL(l, 24, !1), avatarLabel: n.username, text: t.name, leading: a });
 }
 let E = l.memo(function (e) {

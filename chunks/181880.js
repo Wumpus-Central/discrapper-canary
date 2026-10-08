@@ -12,10 +12,10 @@ var i = n(477900),
     h = n(967198),
     E = n(594061),
     m = n(617617);
-function I() {
+function g() {
     return m.A.getDefaultGuildThemePreference() === c.tI.PERSONAL ? c.tI.PERSONAL : c.tI.GUILD;
 }
-async function g(e, t) {
+async function I(e, t) {
     let n = t ? c.tI.PERSONAL : c.tI.GUILD;
     (await (0, E.JM)(n), await (0, E.Sh)(e));
 }
@@ -27,7 +27,7 @@ let S = "GUILD_THEME_NUX_MODAL",
     T = new A.A("GuildThemeNuxModal");
 function M(e) {
     let { guildId: t, markAsDismissed: n, transitionState: A, onClose: E } = e,
-        [m, S] = s.useState(I),
+        [m, S] = s.useState(g),
         [M, f] = s.useState(null),
         [R, L] = s.useState("init"),
         x = m === c.tI.PERSONAL,
@@ -44,15 +44,15 @@ function M(e) {
     s.useEffect(() => {
         D !== t && E();
     }, [t, E, D]);
-    let U = s.useCallback((e) => {
+    let b = s.useCallback((e) => {
             (f(null), S(e));
         }, []),
-        b = s.useCallback(async () => {
+        U = s.useCallback(async () => {
             if ("init" === R) {
                 if (D !== t) return void (await E());
                 (L("submitting"), f(null));
                 try {
-                    await g(t, x);
+                    await I(t, x);
                 } catch (e) {
                     (T.error("Failed to save guild theme NUX preference", e), f(N.intl.string(N.t.fEptJP)), L("init"));
                     return;
@@ -90,7 +90,7 @@ function M(e) {
                 variant: x ? "secondary" : "primary",
                 loading: "submitting" === R,
                 disabled: "submitting" === R,
-                onClick: b,
+                onClick: U,
             },
         ],
         children: (0, i.jsxs)(o.B, {
@@ -102,7 +102,7 @@ function M(e) {
                     selectionMode: "single",
                     options: y,
                     value: m,
-                    onSelectionChange: U,
+                    onSelectionChange: b,
                     fullWidth: !0,
                     label: N.intl.string(N.t.Q7mm4g),
                     hideLabel: !0,

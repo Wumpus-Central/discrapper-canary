@@ -1,4 +1,4 @@
-n.d(t, { A: () => M, h: () => _ });
+n.d(t, { A: () => P, h: () => _ });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -21,10 +21,10 @@ var l = n(477900),
     A = n(378058),
     b = n(660183),
     I = n(193833);
-function v(e) {
+function N(e) {
     return e.preventDefault();
 }
-let N = { tension: 1100, friction: 40 },
+let v = { tension: 1100, friction: 40 },
     T = { tension: 1600, friction: 60 };
 function j(e, t) {
     return i.cloneElement(e, {
@@ -87,9 +87,9 @@ function R(e) {
         g = i.useRef(null),
         E = i.useRef(null),
         [S, y] = i.useState(!0),
-        [C, v] = i.useState(!1),
-        N = i.useRef(!1);
-    N.current = t && c;
+        [C, N] = i.useState(!1),
+        v = i.useRef(!1);
+    v.current = t && c;
     let T = null == a ? (0, A.zg)(s) : a;
     return (o()(null != T, `Unable to determine sticker asset URL. Sticker ID: ${s.id}`),
     i.useEffect(() => {
@@ -111,10 +111,10 @@ function R(e) {
                             t || y(!1);
                         },
                         onError: () => {
-                            t || (y(!1), v(!0), p?.());
+                            t || (y(!1), N(!0), p?.());
                         },
                     })),
-                    N.current && E.current.setState(!0));
+                    v.current && E.current.setState(!0));
             })(),
             () => {
                 (E.current?.drop(), (E.current = null), (t = !0));
@@ -160,7 +160,7 @@ let O = (e) => {
             y = i.useRef(null),
             C = i.useRef(null),
             b = m ?? (0, A.zg)(n, { isPreview: !t || !f || !r, size: a }),
-            N = i.useCallback(() => {
+            v = i.useCallback(() => {
                 x(!1);
             }, []),
             T = i.useCallback(() => {
@@ -198,8 +198,8 @@ let O = (e) => {
                                   src: b,
                                   draggable: !1,
                                   onError: T,
-                                  onLoad: N,
-                                  onContextMenu: v,
+                                  onLoad: v,
+                                  onContextMenu: N,
                                   ref: C,
                               }),
                               n,
@@ -221,7 +221,7 @@ let O = (e) => {
             h = (0, c.bG)([g.Ay], () => g.Ay.useReducedMotion),
             x = i.useRef(null),
             S = { transform: `scale(${h ? 1 : 1 / n})`, opacity: 0 },
-            y = (0, f.p)(s, { ref: x, from: S, enter: { transform: "scale(1)", opacity: 1 }, leave: S, config: N }),
+            y = (0, f.p)(s, { ref: x, from: S, enter: { transform: "scale(1)", opacity: 1 }, leave: S, config: v }),
             C = i.useRef(null),
             A = (0, p.z)(
                 { ref: C, transform: s || h ? "translateY(0)" : "translateY(-25px)", opacity: +!!s, config: T },
@@ -325,4 +325,4 @@ function w(e) {
         `${c.id},${u}`,
     );
 }
-let M = w;
+let P = w;

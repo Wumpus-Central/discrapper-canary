@@ -9,8 +9,8 @@ var l = t(477900),
     u = t(47167),
     d = t(688438),
     A = t(812771),
-    m = t(355622),
-    h = t(826673),
+    h = t(355622),
+    m = t(826673),
     C = t(58736),
     p = t(31717),
     x = t(625494),
@@ -23,7 +23,7 @@ let j = function (e) {
     let { channel: n, guild: t, maxWidth: j } = e,
         T = (0, u.Ay)(n);
     i.useEffect(() => {
-        (0, h.Dr)(a.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: E.i.AUTO });
+        (0, m.Dr)(a.M.CALL_CHAT_BUTTON_TEXT_IN_VOICE_COACH_MARK, { dismissAction: E.i.AUTO });
     }, []);
     let N = i.useCallback(() => {
             (r.A.updateChatOpen(n.id, !1), x._.safeDispatch(f.jej.FOCUS_CHAT_BUTTON));
@@ -45,7 +45,7 @@ let j = function (e) {
             }),
             (0, l.jsx)("div", {
                 className: v.T,
-                children: (0, l.jsx)(d.A, { channel: n, guild: t, chatInputType: m.oU.SIDEBAR }, n.id),
+                children: (0, l.jsx)(d.A, { channel: n, guild: t, chatInputType: h.oU.SIDEBAR }, n.id),
             }),
         ],
     });

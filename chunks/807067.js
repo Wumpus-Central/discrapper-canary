@@ -9,8 +9,8 @@ var l = t(477900),
     u = t(939249),
     d = t(305866),
     A = t(707554),
-    m = t(140735),
-    h = t(323384),
+    h = t(140735),
+    m = t(323384),
     C = t(834730),
     p = t(320448),
     x = t(793574),
@@ -38,7 +38,7 @@ function G(e) {
     let n,
         t,
         { channel: a, openInPopout: o, onClick: d } = e,
-        { fetchState: A, voiceBannerCollection: m } =
+        { fetchState: A, voiceBannerCollection: h } =
             ((n = (0, c.bG)([O.default], () => O.default.onlyShowPreviewAppCollections) ? s.W.PREVIEW : s.W.ACTIVE),
             i.useEffect(() => {
                 (0, j.An)({ surface: k, activeState: n });
@@ -47,11 +47,11 @@ function G(e) {
                 fetchState: (0, c.bG)([T.A], () => T.A.getFetchState({ surface: k, activeState: n })),
                 voiceBannerCollection: (0, c.bG)([T.A], () => T.A.getCollections({ surface: k, activeState: n }))[0],
             }),
-        h = A === T.e.FETCHING,
+        m = A === T.e.FETCHING,
         C = i.useMemo(() => {
-            let e = m?.application_directory_collection_items[0];
+            let e = h?.application_directory_collection_items[0];
             return null == e ? null : e.type === r.L.APPLICATION_BANNER ? e : null;
-        }, [m?.application_directory_collection_items]),
+        }, [h?.application_directory_collection_items]),
         { trackItemImpressionRef: p } = (0, E.A)({
             applicationId: C?.application.id ?? "",
             applicationFlags: C?.application.flags,
@@ -60,7 +60,7 @@ function G(e) {
             sectionOverallPosition: 0,
             promotionalLabel: null != C ? (0, f.Ii)(C.application) : void 0,
         });
-    return null == C || null == m || h
+    return null == C || null == h || m
         ? null
         : (null != C.id &&
               null != C.image_hash &&
@@ -110,7 +110,7 @@ function V(e) {
         let e = setTimeout(() => S.LK(), 1e3);
         return () => clearTimeout(e);
     }, []);
-    let H = i.useCallback(() => {
+    let w = i.useCallback(() => {
             ((0, I.A)({
                 context: null != t ? { type: "channel", channel: t } : { type: "contextless" },
                 openInPopout: V,
@@ -119,7 +119,7 @@ function V(e) {
                 r(),
                 c());
         }, [t, k, c, r, V]),
-        w = i.useCallback(
+        H = i.useCallback(
             (e) => {
                 (o(),
                     y.default.track(L.HAw.ACTIVITIES_MINI_SHELF_HOVERED, {
@@ -139,13 +139,13 @@ function V(e) {
                 children: [
                     (0, l.jsx)(A.F, {
                         forceLevel: 2,
-                        children: (0, l.jsx)(m.A, {
+                        children: (0, l.jsx)(h.A, {
                             children: (0, l.jsx)(A.H, { id: U, children: M.intl.string(M.t["2lnYtB"]) }),
                         }),
                     }),
                     (0, l.jsxs)("div", {
                         className: P.kL,
-                        onMouseEnter: w,
+                        onMouseEnter: H,
                         onMouseLeave: r,
                         children: [
                             (0, l.jsxs)("div", {
@@ -154,7 +154,7 @@ function V(e) {
                                     (0, l.jsxs)("div", {
                                         className: P.gH,
                                         children: [
-                                            (0, l.jsx)(h.k, {
+                                            (0, l.jsx)(m.k, {
                                                 size: "md",
                                                 className: P.ch,
                                                 color: "var(--interactive-text-active)",
@@ -167,7 +167,7 @@ function V(e) {
                                     }),
                                     (0, l.jsxs)(u.D, {
                                         className: P.hc,
-                                        onClick: H,
+                                        onClick: w,
                                         children: [
                                             (0, l.jsx)(C.E, {
                                                 variant: "eyebrow",

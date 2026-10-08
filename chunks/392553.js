@@ -21,21 +21,21 @@ var l = n(477900),
     A = n(355622),
     b = n(408018),
     I = n(579940),
-    v = n(734057),
-    N = n(573163),
+    N = n(734057),
+    v = n(573163),
     T = n(531685),
     j = n(365971);
 function _(e) {
-    let t = N.Ay.getChannelIdsForWindowId(e)[0];
-    return null == t ? null : (v.A.getChannel(t) ?? null);
+    let t = v.Ay.getChannelIdsForWindowId(e)[0];
+    return null == t ? null : (N.A.getChannel(t) ?? null);
 }
 var k = n(826745),
     R = n(442433),
     O = n(721768),
     L = n(555424),
     w = n(723702),
-    M = n(677134),
-    P = n(652215),
+    P = n(677134),
+    M = n(652215),
     D = n(650583);
 let U = /(\t|\s)/;
 class V extends i.PureComponent {
@@ -137,7 +137,7 @@ class V extends i.PureComponent {
         } = this.props;
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(S.EG, { event: P.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
+                (0, l.jsx)(S.EG, { event: M.jej.GLOBAL_CLIPBOARD_PASTE, handler: this.handleGlobalPaste }),
                 (0, l.jsx)(k.y, {
                     ref: this.handleSetRef,
                     className: s()(a, c),
@@ -184,20 +184,20 @@ class V extends i.PureComponent {
     };
     handleKeyDown = (e) => {
         switch (e.which) {
-            case P.Ks6.ARROW_DOWN:
+            case M.Ks6.ARROW_DOWN:
                 this.props.moveSelection(1) && e.preventDefault();
                 break;
-            case P.Ks6.N:
+            case M.Ks6.N:
                 e.ctrlKey && this.props.moveSelection(1) && e.preventDefault();
                 break;
-            case P.Ks6.ARROW_UP:
+            case M.Ks6.ARROW_UP:
                 this.props.moveSelection(-1) && e.preventDefault();
                 break;
-            case P.Ks6.P:
+            case M.Ks6.P:
                 e.ctrlKey && this.props.moveSelection(-1) && e.preventDefault();
                 break;
-            case P.Ks6.TAB:
-            case P.Ks6.ENTER:
+            case M.Ks6.TAB:
+            case M.Ks6.ENTER:
                 this.handleTabOrEnterDown(e);
         }
         let { onKeyDown: t } = this.props;
@@ -240,7 +240,7 @@ class V extends i.PureComponent {
                 e,
                 async () => {
                     let { default: e } = await Promise.all([n.e("230803"), n.e("342312")]).then(n.bind(n, 216603));
-                    return (t) => (0, l.jsx)(e, { ...t, text: (0, M.u)() });
+                    return (t) => (0, l.jsx)(e, { ...t, text: (0, P.u)() });
                 },
                 { align: "bottom", enableSpellCheck: !0 },
             );
@@ -409,8 +409,8 @@ function eS(e) {
             disabled: C,
             submitting: b,
             placeholder: I,
-            required: v,
-            textAreaPaddingClassName: N,
+            required: N,
+            textAreaPaddingClassName: v,
             onChange: T,
             onPaste: j,
             onResize: _,
@@ -418,7 +418,7 @@ function eS(e) {
             onBlur: R,
             onKeyDown: O,
             onKeyUp: w,
-            onTab: M,
+            onTab: P,
             onEnter: U,
             onSpace: V,
             onSubmit: X,
@@ -431,8 +431,8 @@ function eS(e) {
             disableAutoFocus: eA,
             disableEnterToSubmit: eb,
             allowNewLines: eI,
-            "aria-owns": ev,
-            "aria-expanded": eN,
+            "aria-owns": eN,
+            "aria-expanded": ev,
             "aria-haspopup": eT,
             "aria-activedescendant": ej,
             "aria-controls": e_,
@@ -442,8 +442,8 @@ function eS(e) {
             "aria-autocomplete": eL,
         } = d,
         ew = i.useRef(null),
-        eM = i.useRef(null),
-        eP = i.useRef(!0),
+        eP = i.useRef(null),
+        eM = i.useRef(!0),
         eD = i.useRef(!0),
         eU = C || b,
         eV = i.useCallback(
@@ -493,10 +493,10 @@ function eS(e) {
             [g.id, g.guild_id],
         ),
         eW = i.useCallback(() => {
-            eP.current = !1;
+            eM.current = !1;
         }, []),
         eF = i.useCallback(() => {
-            eP.current = !0;
+            eM.current = !0;
         }, []),
         eB = (0, Z.A)({ channel: g, chatInputType: p, onChangeStart: eW, onChangeEnd: eF, updateState: eV }),
         eK = i.useCallback(
@@ -525,7 +525,7 @@ function eS(e) {
                     let e = n[0];
                     (z.b.selectCommandOption(eB, e.name),
                         (i = !0),
-                        (0, W.zV)(P.HAw.APPLICATION_COMMAND_VALIDATION_FAILED, {
+                        (0, W.zV)(M.HAw.APPLICATION_COMMAND_VALIDATION_FAILED, {
                             application_id: l?.applicationId,
                             command_id: l?.rootCommand?.id,
                             argument_type: m.n4[e?.type ?? 3],
@@ -537,7 +537,7 @@ function eS(e) {
                 for (let [e, t] of n)
                     (z.b.setNodes(eB, { error: !0 }, { at: t }), i || z.b.select(eB, q.VW.end(eB, t)), (i = !0));
             if (i) {
-                (F._.dispatch(P.jej.SHAKE_APP, { duration: 200, intensity: 2 }), ea?.());
+                (F._.dispatch(M.jej.SHAKE_APP, { duration: 200, intensity: 2 }), ea?.());
                 return;
             }
             X?.((0, H.WO)(q.VW.richValue(eB), { mode: "raw", ignoreTrailingEmptyNodes: !0 }), l, e);
@@ -736,22 +736,22 @@ function eS(e) {
                 handleKeyDown: i.useCallback(
                     (e) => {
                         switch (e.which) {
-                            case P.Ks6.ARROW_UP:
+                            case M.Ks6.ARROW_UP:
                                 if (m(-1)) return void e.preventDefault();
                                 break;
-                            case P.Ks6.ARROW_DOWN:
+                            case M.Ks6.ARROW_DOWN:
                                 if (m(1)) return void e.preventDefault();
                                 break;
-                            case P.Ks6.P:
+                            case M.Ks6.P:
                                 if ((0, er.j)(e, { ctrl: !0 }) && m(-1)) return void e.preventDefault();
                                 break;
-                            case P.Ks6.N:
+                            case M.Ks6.N:
                                 if ((0, er.j)(e, { ctrl: !0 }) && m(1)) return void e.preventDefault();
                                 break;
-                            case P.Ks6.ESCAPE:
+                            case M.Ks6.ESCAPE:
                                 h?.();
                                 break;
-                            case P.Ks6.TAB:
+                            case M.Ks6.TAB:
                                 if ((0, er.j)(e, {}) && a?.()) {
                                     (e.preventDefault(), e.stopPropagation());
                                     return;
@@ -765,13 +765,13 @@ function eS(e) {
                                     return;
                                 }
                                 break;
-                            case P.Ks6.ENTER:
+                            case M.Ks6.ENTER:
                                 if ((0, er.j)(e, {}) && o?.(e)) {
                                     (e.preventDefault(), e.stopPropagation());
                                     return;
                                 }
                                 break;
-                            case P.Ks6.SPACE:
+                            case M.Ks6.SPACE:
                                 if ((0, er.j)(e, {}) && u?.()) {
                                     (e.preventDefault(), e.stopPropagation());
                                     return;
@@ -801,7 +801,7 @@ function eS(e) {
             disableEnterToSubmit: eb,
             onKeyDown: O,
             onKeyUp: w,
-            onTab: M,
+            onTab: P,
             onEnter: U,
             onSpace: V,
             allowNewLines: eI,
@@ -838,12 +838,12 @@ function eS(e) {
         ),
         eZ = i.useCallback(
             (e) => {
-                e !== eM.current ? eD.current && T?.(null, (0, H.WO)(e, { mode: "raw" }), e) : eD.current && ed();
+                e !== eP.current ? eD.current && T?.(null, (0, H.WO)(e, { mode: "raw" }), e) : eD.current && ed();
             },
             [ed, T],
         );
     (i.useLayoutEffect(() => {
-        eP.current && ((eM.current = h), eV(eB, "parent", { value: h }));
+        eM.current && ((eP.current = h), eV(eB, "parent", { value: h }));
     }, [eB, h, eV]),
         i.useEffect(() => {
             function e() {
@@ -939,7 +939,7 @@ function eS(e) {
         );
     return (0, l.jsxs)(l.Fragment, {
         children: [
-            (0, l.jsx)(S.EG, { event: P.jej.GLOBAL_CLIPBOARD_PASTE, handler: e$ }),
+            (0, l.jsx)(S.EG, { event: M.jej.GLOBAL_CLIPBOARD_PASTE, handler: e$ }),
             (0, l.jsx)("div", {
                 ref: ew,
                 className: s()(x, eE.pC),
@@ -948,7 +948,7 @@ function eS(e) {
                     editor: eB,
                     channelId: g.id,
                     guildId: g.guild_id,
-                    className: s()(eE.gf, N),
+                    className: s()(eE.gf, v),
                     placeholder: I,
                     readOnly: eU,
                     spellCheck: ey,
@@ -964,16 +964,16 @@ function eS(e) {
                     decorate: eX,
                     renderExtraElement: eJ,
                     renderExtraLeaf: eY,
-                    "aria-owns": ev,
+                    "aria-owns": eN,
                     "aria-haspopup": eT,
-                    "aria-expanded": eN,
+                    "aria-expanded": ev,
                     "aria-activedescendant": ej,
                     "aria-controls": e_,
                     "aria-labelledby": eO,
                     "aria-describedby": eR,
                     "aria-invalid": ek,
                     "aria-autocomplete": eL,
-                    "aria-required": v,
+                    "aria-required": N,
                 }),
             }),
         ],
@@ -1161,8 +1161,8 @@ class eA extends i.Component {
                 maxCharacterCount: C,
                 allowNewLines: b,
                 "aria-describedby": I,
-                "aria-labelledby": v,
-                accessibilityLabel: N,
+                "aria-labelledby": N,
+                accessibilityLabel: v,
                 showValueWhenDisabled: T,
             } = this.props,
             { submitting: j, popup: _ } = this.state,
@@ -1172,7 +1172,7 @@ class eA extends i.Component {
                 id: E,
                 placeholder: this.getPlaceholder(),
                 required: y,
-                accessibilityLabel: N,
+                accessibilityLabel: v,
                 disabled: n || !1,
                 submitting: j,
                 isEdit: h === A.oU.EDIT,
@@ -1206,7 +1206,7 @@ class eA extends i.Component {
                 "aria-activedescendant": _.activeDescendant ?? void 0,
                 "aria-invalid": e.length > C,
                 "aria-describedby": I,
-                "aria-labelledby": v,
+                "aria-labelledby": N,
                 "aria-autocomplete": "list",
             },
             R = m
@@ -1222,8 +1222,8 @@ class eA extends i.Component {
                 : (0, l.jsx)(V, { ref: this.ref, ...k, value: n && !T ? "" : e });
         return (0, l.jsxs)(l.Fragment, {
             children: [
-                (0, l.jsx)(S.EG, { event: P.jej.INSERT_TEXT, handler: this.handleInsertText }),
-                (0, l.jsx)(S.EG, { event: P.jej.CLEAR_TEXT, handler: this.handleClearText }),
+                (0, l.jsx)(S.EG, { event: M.jej.INSERT_TEXT, handler: this.handleInsertText }),
+                (0, l.jsx)(S.EG, { event: M.jej.CLEAR_TEXT, handler: this.handleClearText }),
                 R,
             ],
         });

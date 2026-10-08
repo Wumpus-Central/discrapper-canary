@@ -9,8 +9,8 @@ var l = t(477900),
     u = t(267102),
     d = t(931991),
     A = t(246356),
-    m = t(404355),
-    h = t(734057),
+    h = t(404355),
+    m = t(734057),
     C = t(707592),
     p = t(496092),
     x = t(132860),
@@ -20,7 +20,7 @@ function E(e) {
     let { channelId: n, onClick: t } = e,
         E = (0, u.Us)(),
         I = (0, g.Qs)(n),
-        v = (0, a.bG)([h.A], () => h.A.getChannel(n), [n]),
+        v = (0, a.bG)([m.A], () => m.A.getChannel(n), [n]),
         { canManageGuildEvent: j } = (0, d.nr)(v),
         T = j(I),
         N = i.useRef(null);
@@ -59,7 +59,7 @@ function E(e) {
               animation: s.Y.Animation.FADE,
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, l.jsx)(m.A, {
+                  return (0, l.jsx)(h.A, {
                       buttonRef: N,
                       label: f.intl.string(f.t["6vrfgt"]),
                       onClick: _,
@@ -67,5 +67,5 @@ function E(e) {
                   });
               },
           })
-        : (0, l.jsx)(m.A, { label: f.intl.string(f.t["6vrfgt"]), onClick: t });
+        : (0, l.jsx)(h.A, { label: f.intl.string(f.t["6vrfgt"]), onClick: t });
 }

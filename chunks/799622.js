@@ -1,4 +1,4 @@
-a.exports = {
+_.exports = {
     kL: "container__4a98c",
     FG: "contentWrapper__4a98c",
     wx: "header__4a98c",

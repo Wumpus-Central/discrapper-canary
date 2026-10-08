@@ -9,8 +9,8 @@ var l = t(477900),
     u = t(933958),
     d = t(404522),
     A = t(782091),
-    m = t(807067),
-    h = t(521588),
+    h = t(807067),
+    m = t(521588),
     C = t(688810),
     p = t(975412),
     x = t(384059),
@@ -42,15 +42,15 @@ function _(e) {
             [M],
         ),
         B = (0, f.Us)() === j.BRT.POPOUT,
-        { parentAnalyticsLocation: H, newestAnalyticsLocation: w } = (0, C.Ay)(),
+        { parentAnalyticsLocation: w, newestAnalyticsLocation: H } = (0, C.Ay)(),
         Y = i.useCallback(() => {
-            ((0, x.X)(H, x.O.ACTIVITY),
+            ((0, x.X)(w, x.O.ACTIVITY),
                 (0, p.A)({
                     context: null != n ? { type: "channel", channel: n } : { type: "contextless" },
                     openInPopout: B,
-                    analyticsLocation: w,
+                    analyticsLocation: H,
                 }));
-        }, [n, B, w, H]),
+        }, [n, B, H, w]),
         F = R ? [] : [s.M.VOICE_PANEL_ACTIVITIES_SHAPES_BUTTON_EDUCATION_TOOLTIP],
         X = i.useRef(!1),
         K = i.useRef(null);
@@ -77,7 +77,7 @@ function _(e) {
                     renderPopout: (e) => {
                         let { closePopout: t, setPopoutRef: i } = e;
                         return G
-                            ? (0, l.jsx)(m.f, {
+                            ? (0, l.jsx)(h.f, {
                                   ref: (e) => {
                                       i?.(e);
                                   },
@@ -124,7 +124,7 @@ function _(e) {
                                             }),
                                         }),
                                         n === s.M.ACTIVITIES_VOICE_LAUNCHER_BADGE
-                                            ? (0, l.jsx)(h.a, { top: 2, right: 2, size: 6 })
+                                            ? (0, l.jsx)(m.a, { top: 2, right: 2, size: 6 })
                                             : null,
                                     ],
                                 });

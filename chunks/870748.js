@@ -21,8 +21,8 @@ var l = n(485845),
     A = n(323350),
     b = n(35277),
     I = n(820066),
-    v = n(551483),
-    N = n(652215);
+    N = n(551483),
+    v = n(652215);
 n(827669);
 let T = new Set(["applicationCommandOption"]),
     j = new Set([r.n4.ATTACHMENT]),
@@ -34,7 +34,7 @@ function k(e, t) {
         isVoid: g,
         onChange: E,
         deleteBackward: S,
-        deleteForward: N,
+        deleteForward: v,
         deleteFragment: k,
     } = e;
     ((e.insertData = (l) => {
@@ -70,13 +70,13 @@ function k(e, t) {
         (e.isInline = (e) => !!T.has(e.type) || h(e)),
         (e.isVoid = (e) => !!("applicationCommandOption" === e.type && j.has(e.optionType)) || g(e)),
         (e.deleteBackward = (t) => {
-            M(e, () => S(t));
+            P(e, () => S(t));
         }),
         (e.deleteForward = (t) => {
-            M(e, () => N(t));
+            P(e, () => v(t));
         }),
         (e.deleteFragment = (t) => {
-            M(e, () => k(t));
+            P(e, () => k(t));
         }));
     let D = null,
         U = null,
@@ -156,7 +156,7 @@ function k(e, t) {
                                                 if (null != s)
                                                     for (let l of s) {
                                                         e.add(l.name);
-                                                        let i = P(n, t, l.name) ?? l.text,
+                                                        let i = M(n, t, l.name) ?? l.text,
                                                             r = {
                                                                 type: "applicationCommandOption",
                                                                 optionName: l.name,
@@ -171,7 +171,7 @@ function k(e, t) {
                                                         let e, i;
                                                         o.length > 0 && !j.has(l.type)
                                                             ? ((e = o), (o = ""))
-                                                            : (e = (i = P(n, t, l.name)) ?? "");
+                                                            : (e = (i = M(n, t, l.name)) ?? "");
                                                         let r = {
                                                             type: "applicationCommandOption",
                                                             optionName: l.name,
@@ -201,9 +201,9 @@ function k(e, t) {
                                                 },
                                             };
                                             I.VW.withoutNormalizing(e, () => {
-                                                for (let [, t] of (b.b.insertNodes(e, [p], { at: v.Xg }),
+                                                for (let [, t] of (b.b.insertNodes(e, [p], { at: N.Xg }),
                                                 I.VW.blocks(e).reverse()))
-                                                    I.PW.isAfter(t, v.Xg) && b.b.removeNodes(e, { at: t, voids: !0 });
+                                                    I.PW.isAfter(t, N.Xg) && b.b.removeNodes(e, { at: t, voids: !0 });
                                             });
                                             let g = null;
                                             return (
@@ -295,8 +295,8 @@ function k(e, t) {
                                             let l = t.text.trim();
                                             t.text !== l &&
                                                 b.b.textToText(e, l, {
-                                                    anchor: { path: v.fP, offset: 0 },
-                                                    focus: { path: v.fP, offset: t.text.length },
+                                                    anchor: { path: N.fP, offset: 0 },
+                                                    focus: { path: N.fP, offset: t.text.length },
                                                 });
                                         }),
                                         !0)
@@ -349,7 +349,7 @@ function R(e, t, n, l) {
             .split("\n")
             .map((e) => ({ type: "line", children: [{ text: e }] })),
         a = [r.length - 1];
-    for (let [, t] of (b.b.insertNodes(e, r, { at: v.Xg }), I.VW.blocks(e).reverse()))
+    for (let [, t] of (b.b.insertNodes(e, r, { at: N.Xg }), I.VW.blocks(e).reverse()))
         I.PW.isAfter(t, a) && b.b.removeNodes(e, { at: t, voids: !0 });
     null != n && s.Gf({ channelId: t, command: null, section: null });
 }
@@ -366,8 +366,8 @@ function O(e, t) {
     let n = I.VW.getFirstText(e);
     if (null == n) return !1;
     let l = t.options[0],
-        i = { path: v.fP, offset: t.displayName.length + 2 },
-        r = { path: v.fP, offset: n.text.length };
+        i = { path: N.fP, offset: t.displayName.length + 2 },
+        r = { path: N.fP, offset: n.text.length };
     return (
         !(!n.text.startsWith(`/${t.displayName} `.toLocaleLowerCase()) || I.Kh.equals(i, r)) &&
         (b.b.textToInline(
@@ -434,17 +434,17 @@ function w(e) {
         l = n.children[0];
     return I.l5.isText(l) ? { command: n.command, commandText: l.text } : { command: n.command, commandText: null };
 }
-function M(e, t) {
+function P(e, t) {
     let n = y.O7(e)[0];
     t();
     let l = I.ZF.toPoint(e.selection);
     if (null == l || n === y.O7(e)[0]) return;
     let { command: i, commandText: r } = w(e);
     !(null == i || null == r || r.endsWith(" ")) &&
-        I.Kh.equals(l, { path: v.fP, offset: i.displayName.length + 1 }) &&
+        I.Kh.equals(l, { path: N.fP, offset: i.displayName.length + 1 }) &&
         b.b.insertText(e, " ");
 }
-function P(e, t, n) {
+function M(e, t, n) {
     let l = e.activeCommand?.options?.find((e) => e.name === n),
         i = e.initialValues[n];
     if (null == l || null == i) return null;
@@ -454,7 +454,7 @@ function P(e, t, n) {
         ? `<#${s}>	`
         : l.type === r.n4.USER || (l.type === r.n4.MENTIONABLE && null != S.default.getUser(s))
           ? `<@${s}>`
-          : l.type === r.n4.ROLE || (l.type === r.n4.MENTIONABLE && null != E.A.getRole(t.guild_id, s ?? N.dJq))
+          : l.type === r.n4.ROLE || (l.type === r.n4.MENTIONABLE && null != E.A.getRole(t.guild_id, s ?? v.dJq))
             ? `<@&${s}>`
             : s;
 }

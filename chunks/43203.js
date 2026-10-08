@@ -6,8 +6,8 @@ var i = n(73153),
     s = n(280450),
     o = n(174459),
     d = n(723702),
-    c = n(19575),
-    u = n(636401),
+    u = n(19575),
+    c = n(636401),
     m = n(613057),
     h = n(652215);
 async function f(e, t) {
@@ -17,7 +17,7 @@ async function f(e, t) {
         p = (0, a.LO)(n?.guildScheduledEventId),
         g = (0, a.WU)({ baseCode: e, targetChannelId: m, targetMessageId: f, guildScheduledEventId: p }),
         { invite: A } = await l.Ay.resolveInvite(g, t);
-    if (null == A) throw new u.A({ errorCode: h.Lw6.INVALID_INVITE }, `Invalid invite id: ${e}`);
+    if (null == A) throw new c.A({ errorCode: h.Lw6.INVALID_INVITE }, `Invalid invite id: ${e}`);
     return (
         n?.installationId != null &&
             o.default.track(h.HAw.EXTERNAL_INSTALLATION_ID_RECEIVED, {
@@ -35,7 +35,7 @@ async function f(e, t) {
             : (n?.installationId != null &&
                   l.Ay.setReceivedInstallationIdForInviteCode(A.code, String(n.installationId)),
               (0, r.bG)(h.BVt.INVITE(g))),
-        d.isPlatformEmbedded && c.Ay.focus(),
+        d.isPlatformEmbedded && u.Ay.focus(),
         { invite: A, code: e }
     );
 }

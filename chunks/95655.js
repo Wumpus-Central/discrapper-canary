@@ -1,7 +1,7 @@
 l.d(n, { n: () => p });
 var t = l(477900),
-    i = l(582128),
-    s = l(866665),
+    s = l(582128),
+    i = l(866665),
     r = l(254138),
     a = l(661531),
     c = l(939249),
@@ -21,7 +21,7 @@ var t = l(477900),
 function f(e) {
     let { channel: n } = e;
     return (0, j.bG)({ channelId: n.id })
-        ? (0, t.jsx)(s.m, {
+        ? (0, t.jsx)(i.m, {
               text: N.intl.string(N.t.QyZ4Td),
               children: (0, t.jsx)(r.m, {
                   size: "xs",
@@ -31,20 +31,20 @@ function f(e) {
           })
         : null;
 }
-let p = i.memo(function (e) {
+let p = s.memo(function (e) {
     let { channel: n } = e,
-        i = n.id,
+        s = n.id,
         r = (0, m.Ay)(n);
     return (0, t.jsxs)(t.Fragment, {
         children: [
-            (0, t.jsx)(s.m, {
+            (0, t.jsx)(i.m, {
                 asContainer: !0,
                 text: N.intl.string(N.t["5Q9+/L"]),
                 position: "bottom",
                 children: (0, t.jsxs)(c.D, {
                     className: C.cD,
                     onClick: () => {
-                        (0, g.U)(i, x.A.HEADER_BAR);
+                        (0, g.U)(s, x.A.HEADER_BAR);
                     },
                     onContextMenu: (e) =>
                         (0, h.L3)(

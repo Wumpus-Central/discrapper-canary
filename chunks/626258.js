@@ -11,13 +11,13 @@ function s(e) {
             height: s,
             color: o = l.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: d = "",
-            ...c
+            ...u
         } = e,
-        u = (0, r.J)(t),
-        m = u?.width ?? n,
-        h = u?.height ?? s;
+        c = (0, r.J)(t),
+        m = c?.width ?? n,
+        h = c?.height ?? s;
     return (0, i.jsx)("svg", {
-        ...(0, a.A)(c),
+        ...(0, a.A)(u),
         xmlns: "http://www.w3.org/2000/svg",
         width: m,
         height: h,

@@ -10,8 +10,8 @@ var i = t(503698),
     u = t(192820),
     d = t(824744),
     A = t(723702),
-    m = t(447404),
-    h = t(609142);
+    h = t(447404),
+    m = t(609142);
 function C(e) {
     let {
             className: n,
@@ -26,10 +26,10 @@ function C(e) {
             currentVolume: u.Ay.getLocalVolume(C, p),
             muted: u.Ay.isLocalMute(C, p),
         }));
-    return (0, l.jsx)(m.A, {
+    return (0, l.jsx)(h.A, {
         children: (0, l.jsx)(c.A, {
             currentWindow: x,
-            iconClassName: a()(t, h.pd),
+            iconClassName: a()(t, m.pd),
             sliderClassName: i,
             className: n,
             value: (0, d.M)(f),

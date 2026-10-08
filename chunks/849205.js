@@ -1,7 +1,7 @@
 l.d(n, { A: () => D });
 var t = l(477900),
-    i = l(582128),
-    s = l(702841),
+    s = l(582128),
+    i = l(702841),
     r = l(273875),
     a = l(798618),
     c = l(97808),
@@ -26,28 +26,28 @@ var t = l(477900),
 function D(e) {
     let n = e.channel.getRecipientId(),
         l = e.channel.isSystemDM(),
-        D = (0, s.bG)([f.default], () => f.default.getUser(n)),
-        v = (0, s.bG)([N.A], () => N.A.getStatus(n)),
-        U = (0, s.bG)([N.A], () => N.A.isMobileOnline(n)),
-        M = (0, s.bG)([N.A], () => N.A.isVROnline(n)),
-        L = (0, s.bG)([C.A], () => C.A.getNickname(n)),
+        D = (0, i.bG)([f.default], () => f.default.getUser(n)),
+        v = (0, i.bG)([N.A], () => N.A.getStatus(n)),
+        U = (0, i.bG)([N.A], () => N.A.isMobileOnline(n)),
+        M = (0, i.bG)([N.A], () => N.A.isVROnline(n)),
+        L = (0, i.bG)([C.A], () => C.A.getNickname(n)),
         S = p.Ay.useUserTag(D),
         R = (0, j.a)({ displayNameStyles: D?.displayNameStyles }),
         G = (0, E.bG)({ channelId: e.channel.id }),
-        O = i.useRef(null),
-        [y, k] = i.useState(!1),
-        P = i.useRef(void 0),
-        F = i.useCallback(() => {
+        O = s.useRef(null),
+        [y, k] = s.useState(!1),
+        P = s.useRef(void 0),
+        F = s.useCallback(() => {
             (clearTimeout(P.current), k(!0));
         }, []),
-        V = i.useCallback(() => {
+        V = s.useCallback(() => {
             P.current = setTimeout(() => {
                 k(!1);
             }, 250);
         }, []);
-    i.useEffect(() => () => clearTimeout(P.current), []);
-    let B = (0, s.cf)([b.Ay], () => b.Ay.getNicknameGuildsMapping(n), [n]),
-        H = i.useMemo(
+    s.useEffect(() => () => clearTimeout(P.current), []);
+    let B = (0, i.cf)([b.Ay], () => b.Ay.getNicknameGuildsMapping(n), [n]),
+        H = s.useMemo(
             () =>
                 Object.entries(B)
                     .filter((e) => {

@@ -1,4 +1,4 @@
-n.d(t, { A: () => M });
+n.d(t, { A: () => P });
 var l = n(477900),
     i = n(582128),
     r = n(503698),
@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(71393),
     b = n(225142),
     I = n(374084),
-    v = n(101611),
-    N = n(473529),
+    N = n(101611),
+    v = n(473529),
     T = n(111487),
     j = n(652215),
     _ = n(660183),
@@ -58,15 +58,15 @@ function L(e) {
 }
 function w(e) {
     let { guildId: t, channel: n, className: r } = e,
-        { channelAction: c, completed: x } = (0, v.j4)(t, n),
-        E = (0, v.Lr)(t, c?.channelId),
+        { channelAction: c, completed: x } = (0, N.j4)(t, n),
+        E = (0, N.Lr)(t, c?.channelId),
         y = (0, o.bG)([g.Ay], () => g.Ay.useReducedMotion),
         C = c?.actionType === I.NewMemberActionTypes.VIEW,
         A = (0, d.r)(h.A.colors.WHITE),
-        N = R[(0, S.C)()],
+        v = R[(0, S.C)()],
         [T, j] = i.useState(!1),
         [w] = i.useState(new a.A.Value(0)),
-        [M] = i.useState(new a.A.Value(0));
+        [P] = i.useState(new a.A.Value(0));
     (i.useEffect(() => {
         x
             ? a.A.timing(w, { toValue: 0, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 500 * !C }).start(() =>
@@ -75,9 +75,9 @@ function w(e) {
             : a.A.timing(w, { toValue: 1, duration: y ? 1 : 350, easing: a.A.Easing.quad, delay: 400 }).start();
     }, [x, w, C, y]),
         i.useEffect(() => {
-            x && T && a.A.timing(M, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
-        }, [x, M, T, y]));
-    let P = i.useCallback(() => {
+            x && T && a.A.timing(P, { toValue: 1, duration: 350 * !y, easing: a.A.Easing.quad, delay: 400 }).start();
+        }, [x, P, T, y]));
+    let M = i.useCallback(() => {
         null != E && (0, b.qo)(t, E.channelId);
     }, [t, E]);
     return null == c || (C && !T)
@@ -87,10 +87,10 @@ function w(e) {
               children:
                   T && null != E
                       ? (0, l.jsx)(a.A.div, {
-                            style: { marginBottom: M.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
+                            style: { marginBottom: P.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
                             children: (0, l.jsxs)(m.D, {
                                 className: s()(k.vK, k.vk, { [k.pJ]: n.isForumChannel() }),
-                                onClick: P,
+                                onClick: M,
                                 children: [
                                     (0, l.jsx)(L, {
                                         channelId: E.channelId,
@@ -117,7 +117,7 @@ function w(e) {
                         })
                       : (0, l.jsxs)(a.A.div, {
                             className: s()(k.vK, { [k.pJ]: n.isForumChannel() }),
-                            style: { marginBottom: w.interpolate({ inputRange: [0, 1], outputRange: [-N, 0] }) },
+                            style: { marginBottom: w.interpolate({ inputRange: [0, 1], outputRange: [-v, 0] }) },
                             children: [
                                 (0, l.jsx)(L, {
                                     channelId: c.channelId,
@@ -153,11 +153,11 @@ function w(e) {
                         }),
           });
 }
-function M(e) {
+function P(e) {
     let { guildId: t, channel: n, className: i } = e,
-        r = (0, N.d)(t),
+        r = (0, v.d)(t),
         s = (0, o.bG)([C.Ay], () => C.Ay.getSelfMember(t)?.isPending === !0),
-        a = (0, v.jY)(t),
+        a = (0, N.jY)(t),
         u = (0, o.bG)([A.A], () => A.A.getGuild(t)?.features.has(j.GuildFeatures.GUILD_SERVER_GUIDE));
     return a || s || !r || !u ? null : (0, l.jsx)(w, { guildId: t, channel: n, className: i });
 }

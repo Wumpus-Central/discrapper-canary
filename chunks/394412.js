@@ -10,8 +10,8 @@ var i = t(17928),
     u = t(87401),
     d = t(707592),
     A = t(698441),
-    m = t(935159),
-    h = t(508654),
+    h = t(935159),
+    m = t(508654),
     C = t(974930),
     p = t(47868),
     x = t(660183),
@@ -19,8 +19,8 @@ var i = t(17928),
 function f(e) {
     let { channelId: n, showDismiss: f = !0 } = e,
         E = (0, i.bG)([c.A], () => c.A.getChannel(n), [n]),
-        I = (0, h.RO)(n),
-        v = null != (0, h.Qs)(n),
+        I = (0, m.RO)(n),
+        v = null != (0, m.Qs)(n),
         { canManageGuildEvent: j } = (0, r.nr)(E),
         T = (0, i.bG)([u.A], () => I.filter((e) => !u.A.isEventDismissed(e.id)), [I]),
         N = (0, i.cf)([A.Ay], () => T.reduce((e, n) => ((e[n.id] = A.Ay.getUserCount(n.id, (0, C.G3)(n))), e), {}), [
@@ -64,7 +64,7 @@ function f(e) {
                           onDismiss: f
                               ? () => {
                                     var n;
-                                    return ((n = e.id), void (0, m.Nt)(n));
+                                    return ((n = e.id), void (0, h.Nt)(n));
                                 }
                               : void 0,
                           userCount: N[e.id],

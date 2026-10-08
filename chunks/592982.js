@@ -10,8 +10,8 @@ var i = t(17928),
     u = t(516311),
     d = t(71393),
     A = t(198052),
-    m = t(457246),
-    h = t(973937),
+    h = t(457246),
+    m = t(973937),
     C = t(854182),
     p = t(422229),
     x = t(834857),
@@ -33,15 +33,15 @@ function N(e) {
         P = (0, C.A)(y),
         k = (0, E.A)(y),
         U = (0, x.A)(N, R, L?.ownerId, M?.id),
-        G = (0, h.A)(y, N.guild_id),
+        G = (0, m.A)(y, N.guild_id),
         V = (0, I.A)(),
         B = (0, u.RQ)(y),
-        H = (0, u.dA)(y),
-        w = (0, f.A)(L, O),
+        w = (0, u.dA)(y),
+        H = (0, f.A)(L, O),
         Y = (0, g.A)(M, y),
         F = (0, p.A)(),
         X = (0, r.A)(N),
-        K = (0, m.f)(y);
+        K = (0, h.f)(y);
     return (0, l.jsxs)(a.W, {
         "data-menu-migrated": !0,
         onClose: n,
@@ -54,7 +54,7 @@ function N(e) {
             (0, l.jsxs)(s.rX, {
                 children: [
                     S === j.rbe.GUILD_STAGE_VOICE ? B : null,
-                    S === j.rbe.GUILD_STAGE_VOICE ? H : null,
+                    S === j.rbe.GUILD_STAGE_VOICE ? w : null,
                     _ || S === j.rbe.GUILD_STAGE_VOICE ? null : G,
                     F,
                     S !== j.rbe.GUILD_STAGE_VOICE ? P : null,
@@ -63,7 +63,7 @@ function N(e) {
             }),
             (0, l.jsx)(s.rX, { children: X }),
             (0, l.jsxs)(s.rX, { children: [V, !N.isManaged() && N.isPrivate() ? K : null] }),
-            (0, l.jsxs)(s.rX, { children: [null != L ? w : null, null != M ? Y : null] }),
+            (0, l.jsxs)(s.rX, { children: [null != L ? H : null, null != M ? Y : null] }),
         ],
     });
 }

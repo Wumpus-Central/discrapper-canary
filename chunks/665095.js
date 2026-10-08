@@ -6,8 +6,8 @@ var i = n(477900),
     s = n(636537),
     o = n(192308),
     d = n(830215),
-    c = n(398590),
-    u = n(631670),
+    u = n(398590),
+    c = n(631670),
     m = n(475743),
     h = n(775121),
     f = n(139286),
@@ -140,7 +140,7 @@ function L() {
         [C, _] = l.useState(0),
         T = (0, m.Ay)(E);
     function I() {
-        ((0, u.Cw)(),
+        ((0, c.Cw)(),
             (0, o.openModalLazy)(
                 async () => {
                     let { default: e } = await Promise.all([n.e("647999"), n.e("689913"), n.e("25467")]).then(
@@ -196,7 +196,7 @@ function L() {
                     body: { captcha_key: e },
                     oldFormErrors: !0,
                     rejectWithError: !0,
-                }).then(c.jH, () => {
+                }).then(u.jH, () => {
                     _((e) => e + 1);
                 });
             },

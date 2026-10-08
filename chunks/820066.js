@@ -89,10 +89,10 @@ for (let e in m.Ay.RULES) {
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
     let t = S[e];
-    ("skip" !== t.type && (b[e] = v(m.Ay.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (I[e] = v("text" === e ? f.Ay : m.Ay.RULES[e])));
+    ("skip" !== t.type && (b[e] = N(m.Ay.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (I[e] = N("text" === e ? f.Ay : m.Ay.RULES[e])));
 }
-function v(e) {
+function N(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
     let t = e.parse;
     return {
@@ -103,7 +103,7 @@ function v(e) {
         },
     };
 }
-function N(e) {
+function v(e) {
     return { type: "autolink", content: e[1], originalMatch: e };
 }
 let T = {
@@ -114,10 +114,10 @@ let T = {
                     : { type: "link", content: e[1], originalMatch: e },
         },
         autolink: {
-            parse: (e) => (null == (0, h.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : N(e)),
+            parse: (e) => (null == (0, h.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : v(e)),
         },
-        mailto: { parse: N },
-        tel: { parse: N },
+        mailto: { parse: v },
+        tel: { parse: v },
         codeBlockSyntax: {
             order: u.defaultRules.inlineCode.order - 0.1,
             match: (e) => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),
@@ -137,8 +137,8 @@ let T = {
     O = c.X(k),
     L = { max: 1 / 0, maxAge: +g.A.Millis.MINUTE, updateAgeOnGet: !0 },
     w = new (o())(L),
-    M = new (o())(L);
-function P(e, t, n, l, r) {
+    P = new (o())(L);
+function M(e, t, n, l, r) {
     let { content: s, type: a } = n,
         o = null == n.originalMatch && "text" === a && "string" == typeof s;
     o && E.warn(`Slate: parser bailed out past MAX_PARSE_DEPTH, rendering ${s.length} chars as plain text`);
@@ -297,7 +297,7 @@ function W(e, t, n, l, i) {
             ? (l = B({ result: e, sourceText: t, text: n, originalStart: l, attributes: i, data: null }))
             : (n instanceof Array || (n = [n]),
               n.forEach((n) => {
-                  l = P(e, t, n, l, i);
+                  l = M(e, t, n, l, i);
               })),
         K(t, l)
     );
@@ -597,7 +597,7 @@ let q = {
                             "" !== o &&
                                 (function (e, t, n) {
                                     let l = [],
-                                        i = n ? M : w,
+                                        i = n ? P : w,
                                         r = i.get(e);
                                     if (null != r) return r;
                                     let s =
@@ -617,7 +617,7 @@ let q = {
                                                 allowTimeMentionInput: !0,
                                             }),
                                         };
-                                    P(l, s, a, 0, []);
+                                    M(l, s, a, 0, []);
                                     let o = (function (e) {
                                         if (0 === (e = e.filter((e) => e.text.length > 0)).length) return e;
                                         let t = [e[0]];

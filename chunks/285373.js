@@ -15,22 +15,22 @@ let h = {
 };
 function p(t) {
     let { className: e, disabled: n, size: p, variant: A, location: f, forceDarkTheme: g, ref: R } = t,
-        I = d.pe.TIER_2,
-        m = o.intl.string(o.t.lG6a5x),
-        y = (0, i.bG)([u.default], () => u.default.getId());
+        m = d.pe.TIER_2,
+        y = o.intl.string(o.t.lG6a5x),
+        I = (0, i.bG)([u.default], () => u.default.getId());
     (0, c.pE)();
     let {
         isWishlisted: E,
         isBusy: P,
         isFirstTimeWishlister: T,
         handleToggle: v,
-    } = (0, s.c)({ userId: y, location: f, skuId: I, nuxGraphic: h, onNuxShow: l.D });
+    } = (0, s.c)({ userId: I, location: f, skuId: m, nuxGraphic: h, onNuxShow: l.D });
     return (0, a.jsx)("div", {
         ref: R,
         className: g ? "theme-dark" : void 0,
         children: (0, a.jsx)(r._, {
-            skuId: I,
-            productName: m,
+            skuId: m,
+            productName: y,
             className: e,
             disabled: n,
             size: p,

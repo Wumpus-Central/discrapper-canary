@@ -1,4 +1,4 @@
-t.d(n, { A: () => C, x: () => m });
+t.d(n, { A: () => C, x: () => h });
 var l,
     i = t(477900),
     a = t(582128),
@@ -9,8 +9,8 @@ var l,
     u = t(401685),
     d = t(919706),
     A = t(297468),
-    m = (((l = {})[(l.TOP = 0)] = "TOP"), (l[(l.BOTTOM = 1)] = "BOTTOM"), l);
-function h(e) {
+    h = (((l = {})[(l.TOP = 0)] = "TOP"), (l[(l.BOTTOM = 1)] = "BOTTOM"), l);
+function m(e) {
     let {
             disableGradients: n = !1,
             renderHeader: t,
@@ -19,14 +19,14 @@ function h(e) {
             renderBottomRight: o,
             renderCenter: d,
         } = e,
-        m = a.useRef(null),
-        { width: h, ref: C } = (0, c.Ay)(),
-        p = (0, u.bf)(h);
+        h = a.useRef(null),
+        { width: m, ref: C } = (0, c.Ay)(),
+        p = (0, u.bf)(m);
     return (0, i.jsx)(r.xp, {
-        containerRef: m,
+        containerRef: h,
         children: (0, i.jsxs)("div", {
             className: A._v,
-            ref: m,
+            ref: h,
             children: [
                 0 !== n && !0 !== n && (0, i.jsx)("div", { className: A.aw }),
                 1 !== n && !0 !== n && (0, i.jsx)("div", { className: A.YA }),
@@ -58,19 +58,19 @@ function C(e) {
         children: r,
         renderChatToasts: c,
         renderVoiceChannelEffects: u,
-        style: m,
+        style: h,
         hideControls: C = !1,
         ...p
     } = e;
     return (0, i.jsxs)("div", {
         className: o()(A.zr, { [A.N7]: s }),
-        style: m,
+        style: h,
         onMouseMove: l,
         onMouseDown: l,
         onMouseLeave: a,
         onDoubleClick: t,
         children: [
-            !C && (0, i.jsx)(h, { ...p }),
+            !C && (0, i.jsx)(m, { ...p }),
             r,
             null != n ? (0, i.jsx)(d.A, { size: "large", ...n }) : null,
             c?.(),

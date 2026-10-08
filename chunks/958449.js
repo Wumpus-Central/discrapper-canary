@@ -13,14 +13,14 @@ function c(e) {
             streamActive: u,
             isSelfStream: d,
             videoBlocked: A = !1,
-            centerButton: m,
-            onMouseEnter: h,
+            centerButton: h,
+            onMouseEnter: m,
             onMouseLeave: C,
             renderNUXHighlight: p,
             buttonRef: x,
             ...g
         } = e,
-        f = m ? o.l : o.A;
+        f = h ? o.l : o.A;
     t = A
         ? r.intl.string(r.t.GFr0GR)
         : u
@@ -43,7 +43,7 @@ function c(e) {
             isActive: u,
             color: (p ? (n = "premiumGradient") : u && (n = "green"), n),
             onMouseEnter: (e) => {
-                (h?.(e), I.onMouseEnter());
+                (m?.(e), I.onMouseEnter());
             },
             onMouseLeave: (e) => {
                 (C?.(e), I.onMouseLeave());

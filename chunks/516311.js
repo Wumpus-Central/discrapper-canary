@@ -11,16 +11,16 @@ var r = t(288104),
     u = t(734057),
     d = t(576705),
     A = t(993838),
-    m = t(233993),
-    h = t(446600),
+    h = t(233993),
+    m = t(446600),
     C = t(418208);
 t(806931);
 var p = t(660183);
 function x(e) {
     let n = (0, s.bG)([u.A], () => u.A.getChannel(e), [e]),
-        t = (0, s.bG)([d.A], () => d.A.can(m.QY, n)),
+        t = (0, s.bG)([d.A], () => d.A.can(h.QY, n)),
         i = (0, C.zU)(),
-        a = (0, s.bG)([h.A], () => h.A.getStageInstanceByChannel(e), [e]),
+        a = (0, s.bG)([m.A], () => m.A.getStageInstanceByChannel(e), [e]),
         r = (0, c.Us)();
     return n?.isGuildStageVoice() && t && !i
         ? null != a

@@ -9,8 +9,8 @@ var l,
     u = t(834730),
     d = t(939249),
     A = t(805901),
-    m = t(43990),
-    h = t(932413),
+    h = t(43990),
+    m = t(932413),
     C = t(849269),
     p = t(881343),
     x = t(697675),
@@ -100,10 +100,10 @@ function N(e) {
             to: { value: +!!S },
             children: (e) => {
                 let { value: n } = e;
-                return (0, i.jsx)(m.N, {
+                return (0, i.jsx)(h.N, {
                     theme: f.NJ8.DARK,
                     children: (e) =>
-                        (0, i.jsx)(h.A, {
+                        (0, i.jsx)(m.A, {
                             applicationId: t.application.id,
                             questContent: c.u.ACTIVITY_SUGGESTION,
                             children: (l) =>

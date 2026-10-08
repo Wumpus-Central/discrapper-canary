@@ -1,8 +1,8 @@
-i.d(t, { m: () => c });
-var l = i(17928),
-    s = i(851746),
-    a = i(190187);
-function c() {
+s.d(t, { m: () => l });
+var c = s(17928),
+    i = s(851746),
+    a = s(190187);
+function l() {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0];
-    return ((0, a.i)(e), (0, l.bG)([s.A], () => s.A.getIsEligibleToSendReferrals()));
+    return ((0, a.i)(e), (0, c.bG)([i.A], () => i.A.getIsEligibleToSendReferrals()));
 }

@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(265431),
     b = n(459016),
     I = n(861382),
-    v = n(355622),
-    N = n(820066),
+    N = n(355622),
+    v = n(820066),
     T = n(696451),
     j = n(576705),
     _ = n(351906),
@@ -31,8 +31,8 @@ var l = n(477900),
     O = n(887129),
     L = n(741918),
     w = n(267102),
-    M = n(652215),
-    P = n(307731);
+    P = n(652215),
+    M = n(307731);
 let D = new Map([["thread", new Set(["name"])]]);
 var U = n(5867),
     V = n(940169);
@@ -54,7 +54,7 @@ function W(e) {
                     [j.A, _.A],
                     () => ({
                         canMentionEveryone:
-                            l.isPrivate() || c || r === v.oU.RULES_INPUT || j.A.can(M.xBc.MENTION_EVERYONE, l),
+                            l.isPrivate() || c || r === N.oU.RULES_INPUT || j.A.can(P.xBc.MENTION_EVERYONE, l),
                         hidePersonalInformation: _.A.hidePersonalInformation,
                     }),
                     [l, r, c],
@@ -118,7 +118,7 @@ function W(e) {
                 x = e.editorRef.current?.getCurrentWord(),
                 E = e.editorRef.current?.getSlateEditor(),
                 S = null;
-            null != E && (S = N.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
+            null != E && (S = v.VW.getSelectedParentOfType(E, R.mk)?.[0] ?? null);
             let C = {
                     ...e,
                     navigator: g,
@@ -128,13 +128,13 @@ function W(e) {
                     canMentionUsers: r.users?.allowMentioning ?? !1,
                     canMentionEveryone: d,
                     hidePersonalInformation: h,
-                    hideMentionDescription: r === v.oU.RULES_INPUT,
+                    hideMentionDescription: r === N.oU.RULES_INPUT,
                     emojiIntention:
-                        r === v.oU.RULES_INPUT
-                            ? P.EmojiIntention.COMMUNITY_CONTENT
+                        r === N.oU.RULES_INPUT
+                            ? M.EmojiIntention.COMMUNITY_CONTENT
                             : p
-                              ? P.EmojiIntention.NO_CUSTOM_EMOJI
-                              : P.EmojiIntention.CHAT,
+                              ? M.EmojiIntention.NO_CUSTOM_EMOJI
+                              : M.EmojiIntention.CHAT,
                     currentWord: x?.word ?? "",
                     currentWordIsAtStart: x?.isAtStart === !0,
                     optionText:

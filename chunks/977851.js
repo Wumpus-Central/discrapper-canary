@@ -9,8 +9,8 @@ var l = t(477900),
     u = t(688810),
     d = t(198052),
     A = t(384059),
-    m = t(573163),
-    h = t(309010),
+    h = t(573163),
+    m = t(309010),
     C = t(741961),
     p = t(234320),
     x = t(20465),
@@ -20,10 +20,10 @@ var l = t(477900),
     I = t(660183);
 function v(e) {
     let n = (0, r.bG)([C.A], () => !(0, o.isEmpty)(C.A.getTypingUsers(e)), [e]),
-        t = (0, r.bG)([h.Ay], () => h.Ay.getVoiceChannelId() === e, [e]),
+        t = (0, r.bG)([m.Ay], () => m.Ay.getVoiceChannelId() === e, [e]),
         { unreadCount: l, mentionCount: i } = (0, r.cf)(
-            [m.Ay],
-            () => ({ unreadCount: m.Ay.getUnreadCount(e), mentionCount: m.Ay.getMentionCount(e) }),
+            [h.Ay],
+            () => ({ unreadCount: h.Ay.getUnreadCount(e), mentionCount: h.Ay.getMentionCount(e) }),
             [e],
         );
     return { unreadCount: l, mentionCount: i, voiceChannelIsSelected: t, isTyping: n };
@@ -39,8 +39,8 @@ function T(e) {
             channelId: t,
             className: a,
             showingClassName: o,
-            onClick: m,
-            inPopout: h,
+            onClick: h,
+            inPopout: m,
             showRequestToSpeakSidebar: C,
             toggleRequestToSpeakSidebar: g,
             ...T
@@ -70,8 +70,8 @@ function T(e) {
             );
         })(t),
         D = i.useCallback(() => {
-            ((0, A.X)(N, A.O.CHAT, !O), m?.(), !O && C && g?.(), c.A.updateChatOpen(t, !O));
-        }, [t, O, m, C, g, N]),
+            ((0, A.X)(N, A.O.CHAT, !O), h?.(), !O && C && g?.(), c.A.updateChatOpen(t, !O));
+        }, [t, O, h, C, g, N]),
         L = i.useCallback(
             (e) => {
                 let { className: n } = e;
@@ -85,8 +85,8 @@ function T(e) {
     (0, p.Vo)({ event: E.jej.FOCUS_CHAT_BUTTON, handler: _ ? null : M });
     let [P, k] = i.useState(!1),
         U = i.useCallback(() => {
-            h && k(!0);
-        }, [h]);
+            m && k(!0);
+        }, [m]);
     ((0, p.Vo)({ event: E.jej.SHOW_TEXT_IN_VOICE_POPOUT_COMING_SOON_TIP, handler: U }),
         i.useEffect(() => {
             let e;
@@ -100,7 +100,7 @@ function T(e) {
                 }
             );
         }, [P]));
-    let G = [(n = h && _ ? I.intl.string(I.t.DPgc5h) : O ? I.intl.string(I.t.nthdxB) : I.intl.string(I.t["5KxXrK"]))];
+    let G = [(n = m && _ ? I.intl.string(I.t.DPgc5h) : O ? I.intl.string(I.t.nthdxB) : I.intl.string(I.t["5KxXrK"]))];
     return (
         R > 0 && G.push(I.intl.formatToPlainString(I.t["3l1GOx"], { mentionCount: R })),
         S > 0 && G.push(I.intl.string(I.t.x5zAGZ)),

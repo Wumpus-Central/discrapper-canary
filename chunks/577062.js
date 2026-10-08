@@ -13,8 +13,8 @@ function A(e) {
             selfMute: n,
             serverMute: t,
             suppress: A,
-            centerButton: m = !1,
-            awaitingRemote: h,
+            centerButton: h = !1,
+            awaitingRemote: m,
             onMouseEnter: C,
             onMouseLeave: p,
             onClick: x,
@@ -22,8 +22,8 @@ function A(e) {
         } = e,
         { parentAnalyticsLocation: f } = (0, o.Ay)(),
         E = n || t || A,
-        I = m ? u.l : u.A,
-        v = (0, r.A)(n, t, A, h),
+        I = h ? u.l : u.A,
+        v = (0, r.A)(n, t, A, m),
         { events: j, play: T, Component: N } = (0, a.L)(E ? "unmute" : "mute"),
         _ = t || A ? s.O : N;
     return (

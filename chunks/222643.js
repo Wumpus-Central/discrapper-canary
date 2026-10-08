@@ -13,8 +13,8 @@ function d(e) {
             dismissed: t,
             onDismiss: d,
             renderComponent: A,
-            nudgeAlignIntoViewport: m = !1,
-            skipForceHide: h = !1,
+            nudgeAlignIntoViewport: h = !1,
+            skipForceHide: m = !1,
         } = e,
         C = i.useContext(c.vG),
         [p, x] = i.useState(""),
@@ -27,8 +27,8 @@ function d(e) {
         if (null != e) return (e.addEventListener("click", d), () => e.removeEventListener("click", d));
     }),
         i.useEffect(() => {
-            h || (x(String(v.current)), f(void 0 !== E && E < (I.current?.clientHeight ?? 300) + 24), (v.current += 1));
-        }, [E, I, h]));
+            m || (x(String(v.current)), f(void 0 !== E && E < (I.current?.clientHeight ?? 300) + 24), (v.current += 1));
+        }, [E, I, m]));
     let { preventIdle: j, allowIdle: T } = (0, u.o)("popup");
     return n?.current == null
         ? null
@@ -39,7 +39,7 @@ function d(e) {
                   align: "center",
                   spacing: 0,
                   positionKey: p,
-                  nudgeAlignIntoViewport: m,
+                  nudgeAlignIntoViewport: h,
                   children: () =>
                       (0, l.jsx)("div", {
                           ref: I,
