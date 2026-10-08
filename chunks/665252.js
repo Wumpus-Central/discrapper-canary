@@ -1,4 +1,4 @@
-n.d(t, { A: () => ef });
+n.d(t, { A: () => eg });
 var l,
     i = n(477900),
     r = n(582128),
@@ -21,10 +21,10 @@ var l,
     A = n(813564),
     b = n(73153),
     I = n(734057),
-    N = n(927813),
-    v = n(714736);
+    v = n(927813),
+    N = n(714736);
 n(980504);
-let T = 7.5 * N.A.Millis.SECOND,
+let T = 7.5 * v.A.Millis.SECOND,
     j = new Map(),
     _ = new Map();
 class k extends u.Ay.Store {
@@ -55,7 +55,7 @@ let R = new k(b.h, {
         if (null == t || null == s) return !1;
         let c = I.A.getChannel(n)?.getGuildId();
         if (null == c) return !1;
-        let { enabled: d } = (0, v.j)(c, "handleSoundPlayStart");
+        let { enabled: d } = (0, N.j)(c, "handleSoundPlayStart");
         if (!d) return !1;
         let h = {
             soundId: t,
@@ -121,23 +121,24 @@ var O = n(994500),
     G = n(465794),
     H = n(796774),
     z = n(71393),
-    q = n(158045),
-    $ = n(763827),
-    Q = n(174459),
-    Z = n(652215),
-    X = n(202541),
-    J = (((l = {}).HOVER = "hover"), (l.SEE_MORE_DETAILS = "see_more_details"), l);
-let Y = new Set();
-function ee(e, t) {
+    q = n(449054),
+    $ = n(158045),
+    Q = n(763827),
+    Z = n(174459),
+    X = n(652215),
+    J = n(202541),
+    Y = (((l = {}).HOVER = "hover"), (l.SEE_MORE_DETAILS = "see_more_details"), l);
+let ee = new Set();
+function et(e, t) {
     let { sound: n, startedAt: l } = t,
         i = `${e}:${n.soundId}:${l}`;
-    return !Y.has(i) && (Y.add(i), !0);
+    return !ee.has(i) && (ee.add(i), !0);
 }
-function et(e) {
+function en(e) {
     let { action: t, guildId: n, channelId: l, echo: i, sourceGuildState: r, analyticsLocations: s } = e;
-    if (!ee(`${Z.HAw.SOUNDBOARD_ECHO_SOUND_DETAILS_VIEWED}:${t}`, i)) return;
+    if (!et(`${X.HAw.SOUNDBOARD_ECHO_SOUND_DETAILS_VIEWED}:${t}`, i)) return;
     let { sound: a } = i;
-    Q.default.track(Z.HAw.SOUNDBOARD_ECHO_SOUND_DETAILS_VIEWED, {
+    Z.default.track(X.HAw.SOUNDBOARD_ECHO_SOUND_DETAILS_VIEWED, {
         action: t,
         voice_guild_id: n,
         channel_id: l,
@@ -147,16 +148,16 @@ function et(e) {
         location_stack: s,
     });
 }
-var en = n(660183),
-    el = n(858981);
-function ei(e) {
+var el = n(660183),
+    ei = n(858981);
+function er(e) {
     let { icon: t, title: n, description: l } = e;
     return (0, i.jsxs)("div", {
-        className: el.wt,
+        className: ei.wt,
         children: [
             t,
             (0, i.jsxs)("div", {
-                className: el.FS,
+                className: ei.FS,
                 children: [
                     (0, i.jsx)(p.E, { variant: "text-sm/medium", children: n }),
                     (0, i.jsx)(p.E, { variant: "text-xs/medium", color: "text-muted", children: l }),
@@ -165,44 +166,61 @@ function ei(e) {
         ],
     });
 }
-function er(e) {
+function es(e) {
     let { sourceGuildName: t, isExternal: n } = e,
         { analyticsLocations: l } = (0, y.Ay)(S.A.SOUNDBOARD_ECHO, S.A.PREMIUM_UPSELL);
     return (
         (0, F.Ay)(() => {
             !(function (e) {
                 let { isExternal: t, analyticsLocations: n } = e;
-                Q.default.track(Z.HAw.PREMIUM_UPSELL_VIEWED, {
-                    type: X.e.SOUNDBOARD_ECHO_SOUND_DETAILS_UPSELL,
+                Z.default.track(X.HAw.PREMIUM_UPSELL_VIEWED, {
+                    type: J.e.SOUNDBOARD_ECHO_SOUND_DETAILS_UPSELL,
                     is_external: t,
                     location_stack: n,
-                    sku_id: q.Ay.getSkuIdForPremiumType(X.PremiumTypes.TIER_2),
-                    voice_guild_id: $.A.getGuildId() ?? null,
+                    sku_id: $.Ay.getSkuIdForPremiumType(J.PremiumTypes.TIER_2),
+                    voice_guild_id: Q.A.getGuildId() ?? null,
                 });
             })({ isExternal: n, analyticsLocations: l });
         }),
         (0, i.jsx)(y.f5, {
             value: l,
             children: (0, i.jsxs)("div", {
-                className: el.Kt,
+                className: ei.Kt,
                 children: [
                     (0, i.jsx)(p.E, {
                         variant: "text-xs/medium",
                         color: "text-muted",
-                        children: en.intl.format(en.t["/ZJIuo"], { guildName: t }),
+                        children: el.intl.format(el.t["/ZJIuo"], { guildName: t }),
                     }),
                     (0, i.jsx)(G.A, {
                         size: "sm",
                         fullWidth: !0,
-                        subscriptionTier: X.pe.TIER_2,
-                        buttonTextOverride: en.intl.string(en.t.pj0XBN),
+                        subscriptionTier: J.pe.TIER_2,
+                        buttonTextOverride: el.intl.string(el.t.pj0XBN),
                     }),
                 ],
             }),
         })
     );
 }
-function es(e) {
+function ea(e) {
+    let { sourceGuild: t } = e,
+        n = r.useCallback(() => {
+            (0, q.Z2)(t.id, {});
+        }, [t.id]);
+    return (0, i.jsxs)("div", {
+        className: ei.Ae,
+        children: [
+            (0, i.jsx)(f.D, {
+                onClick: n,
+                className: ei.vk,
+                children: (0, i.jsx)(p.E, { variant: "text-sm/medium", children: el.intl.string(el.t.BETi5Z) }),
+            }),
+            (0, i.jsx)(p.E, { variant: "text-xs/normal", color: "text-muted", children: el.intl.string(el.t.QzKwEQ) }),
+        ],
+    });
+}
+function eo(e) {
     let { guildId: t, channelId: n, sound: l, startedAt: s } = e,
         a = (function (e) {
             let { guildId: t, soundId: n } = e,
@@ -232,13 +250,13 @@ function es(e) {
                 )
             );
         })(l),
-        o = (0, u.bG)([L.default], () => q.Ay.canUseSoundboardEverywhere(L.default.getCurrentUser())),
+        o = (0, u.bG)([L.default], () => $.Ay.canUseSoundboardEverywhere(L.default.getCurrentUser())),
         { analyticsLocations: c } = (0, y.Ay)();
     switch (
         (r.useEffect(() => {
             "LOADING" !== a.state &&
-                et({
-                    action: J.SEE_MORE_DETAILS,
+                en({
+                    action: Y.SEE_MORE_DETAILS,
                     guildId: t,
                     channelId: n,
                     echo: { sound: l, startedAt: s },
@@ -250,41 +268,52 @@ function es(e) {
     ) {
         case "LOADING":
             return (0, i.jsxs)("div", {
-                className: el.wt,
-                children: [(0, i.jsx)("div", { className: el.EQ }), (0, i.jsx)("div", { className: el.jC })],
+                className: ei.wt,
+                children: [(0, i.jsx)("div", { className: ei.EQ }), (0, i.jsx)("div", { className: ei.jC })],
             });
         case "DEFAULT_SOUND":
-            return (0, i.jsx)(ei, {
-                icon: (0, i.jsx)("div", { className: el.EQ, children: (0, i.jsx)(U.p, { size: "refresh_sm" }) }),
-                title: en.intl.string(en.t.rWPrJC),
-                description: en.intl.string(en.t.ixMwGl),
+            return (0, i.jsx)(er, {
+                icon: (0, i.jsx)("div", { className: ei.EQ, children: (0, i.jsx)(U.p, { size: "refresh_sm" }) }),
+                title: el.intl.string(el.t.rWPrJC),
+                description: el.intl.string(el.t.ixMwGl),
             });
         case "UNAVAILABLE":
-            return (0, i.jsx)(ei, {
+            return (0, i.jsx)(er, {
                 icon: (0, i.jsx)("div", {
-                    className: el.EQ,
+                    className: ei.EQ,
                     children: (0, i.jsx)(V.EyeSlashIcon, { size: "refresh_sm" }),
                 }),
-                title: en.intl.string(en.t.T7AWtb),
-                description: en.intl.string(en.t.Z4UD3R),
+                title: el.intl.string(el.t.T7AWtb),
+                description: el.intl.string(el.t.Z4UD3R),
             });
         case "MEMBER":
-        case "DISCOVERABLE": {
-            let { state: e, sourceGuild: n } = a;
+            let { sourceGuild: d } = a;
             return (0, i.jsxs)(i.Fragment, {
                 children: [
-                    (0, i.jsx)(ei, {
-                        icon: (0, i.jsx)(K.Ay, { size: K.Ay.Sizes.MEDIUM, guild: n, active: !0 }),
-                        title: n.name,
-                        description: en.intl.string("MEMBER" === e ? en.t.l3QzyC : en.t.s5No7R),
+                    (0, i.jsx)(er, {
+                        icon: (0, i.jsx)(K.Ay, { size: K.Ay.Sizes.MEDIUM, guild: d, active: !0 }),
+                        title: d.name,
+                        description: el.intl.string(el.t.l3QzyC),
                     }),
-                    !o && (0, i.jsx)(er, { sourceGuildName: n.name, isExternal: n.id !== t }),
+                    !o && (0, i.jsx)(es, { sourceGuildName: d.name, isExternal: d.id !== t }),
+                ],
+            });
+        case "DISCOVERABLE": {
+            let { sourceGuild: e } = a;
+            return (0, i.jsxs)(i.Fragment, {
+                children: [
+                    (0, i.jsx)(er, {
+                        icon: (0, i.jsx)(K.Ay, { size: K.Ay.Sizes.MEDIUM, guild: e, active: !0 }),
+                        title: e.name,
+                        description: el.intl.string(el.t.s5No7R),
+                    }),
+                    (0, i.jsx)(ea, { sourceGuild: e }),
                 ],
             });
         }
     }
 }
-function ea(e) {
+function eu(e) {
     let { guildId: t, channelId: n, sound: l, playedByUserIds: s, startedAt: a } = e,
         { emojiId: o, emojiName: c, emojiAnimated: d, name: h } = l,
         m = (function (e) {
@@ -302,33 +331,33 @@ function ea(e) {
                 ),
                 s = i - r.length;
             if (1 === r.length)
-                if (s > 0) return en.intl.formatToPlainString(en.t.EXaquk, { a: r[0], n: s });
-                else return en.intl.formatToPlainString(en.t["DU+Rd+"], { a: r[0] });
+                if (s > 0) return el.intl.formatToPlainString(el.t.EXaquk, { a: r[0], n: s });
+                else return el.intl.formatToPlainString(el.t["DU+Rd+"], { a: r[0] });
             if (2 === r.length)
-                if (s > 0) return en.intl.formatToPlainString(en.t.EO8JM8, { a: r[0], b: r[1], n: s });
-                else return en.intl.formatToPlainString(en.t.qr8Cg3, { a: r[0], b: r[1] });
+                if (s > 0) return el.intl.formatToPlainString(el.t.EO8JM8, { a: r[0], b: r[1], n: s });
+                else return el.intl.formatToPlainString(el.t.qr8Cg3, { a: r[0], b: r[1] });
             return 3 !== r.length
-                ? en.intl.formatToPlainString(en.t.P5JeeM, { n: s })
+                ? el.intl.formatToPlainString(el.t.P5JeeM, { n: s })
                 : s > 0
-                  ? en.intl.formatToPlainString(en.t["+z+JUw"], { a: r[0], b: r[1], c: r[2], n: s })
-                  : en.intl.formatToPlainString(en.t["3Zq6FM"], { a: r[0], b: r[1], c: r[2] });
+                  ? el.intl.formatToPlainString(el.t["+z+JUw"], { a: r[0], b: r[1], c: r[2], n: s })
+                  : el.intl.formatToPlainString(el.t["3Zq6FM"], { a: r[0], b: r[1], c: r[2] });
         })({ playedByUserIds: s, guildId: t, channelId: n }),
         [g, E] = r.useState(!1),
         S = r.useCallback((e) => e?.focus(), []),
         { analyticsLocations: C } = (0, y.Ay)();
     return (
         (0, F.Ay)(() => {
-            et({ action: J.HOVER, guildId: t, channelId: n, echo: { sound: l, startedAt: a }, analyticsLocations: C });
+            en({ action: Y.HOVER, guildId: t, channelId: n, echo: { sound: l, startedAt: a }, analyticsLocations: C });
         }),
         (0, i.jsxs)("div", {
-            className: el.kL,
+            className: ei.kL,
             children: [
                 (0, i.jsx)("div", {
-                    className: el.r,
-                    children: (0, i.jsx)(ei, {
+                    className: ei.r,
+                    children: (0, i.jsx)(er, {
                         icon:
                             null != c || null != o
-                                ? (0, i.jsx)(x.A, { className: el.Zg, emojiId: o, emojiName: c, animated: d })
+                                ? (0, i.jsx)(x.A, { className: ei.Zg, emojiId: o, emojiName: c, animated: d })
                                 : null,
                         title: h,
                         description: m,
@@ -338,18 +367,18 @@ function ea(e) {
                     ? (0, i.jsx)("div", {
                           ref: S,
                           tabIndex: -1,
-                          className: el.bT,
-                          children: (0, i.jsx)(es, { guildId: t, channelId: n, sound: l, startedAt: a }, l.soundId),
+                          className: ei.bT,
+                          children: (0, i.jsx)(eo, { guildId: t, channelId: n, sound: l, startedAt: a }, l.soundId),
                       })
                     : (0, i.jsx)("div", {
-                          className: el.x_,
+                          className: ei.x_,
                           children: (0, i.jsxs)(f.D, {
                               onClick: () => E(!0),
-                              className: el._x,
+                              className: ei.vk,
                               children: [
                                   (0, i.jsx)(p.E, {
                                       variant: "text-sm/medium",
-                                      children: en.intl.string(en.t["UQT3/h"]),
+                                      children: el.intl.string(el.t["UQT3/h"]),
                                   }),
                                   (0, i.jsx)(W._, { size: "xs", color: "currentColor" }),
                               ],
@@ -359,10 +388,10 @@ function ea(e) {
         })
     );
 }
-var eo = n(559949),
-    eu = n(73392),
-    ec = n(889053);
-function ed(e) {
+var ec = n(559949),
+    ed = n(73392),
+    eh = n(889053);
+function em(e) {
     let { count: t } = e,
         [n, l] = r.useState(!1),
         [s, u] = r.useState(null),
@@ -407,11 +436,11 @@ function ed(e) {
             },
             [],
         ));
-    let { className: p } = (0, eu.p)(eo.x.PIXELIFY);
+    let { className: p } = (0, ed.p)(ec.x.PIXELIFY);
     return f((e, t) =>
         t
             ? (0, i.jsx)(o.animated.div, {
-                  className: a()(ec._, p),
+                  className: a()(eh._, p),
                   style: { ...c, ...e },
                   children:
                       100 === s
@@ -426,8 +455,8 @@ function ed(e) {
             : null,
     );
 }
-var eh = n(998812);
-function em(e) {
+var ef = n(998812);
+function ep(e) {
     let {
             guildId: t,
             channelId: n,
@@ -437,8 +466,8 @@ function em(e) {
             count: g,
             disabled: b,
             playedByUserIds: I,
-            startedAt: N,
-            showDetails: v,
+            startedAt: v,
+            showDetails: N,
             onDetailsMouseEnter: T,
             onDetailsMouseLeave: j,
         } = e,
@@ -457,9 +486,9 @@ function em(e) {
             b ||
             (function (e) {
                 let { guildId: t, channelId: n, echo: l, analyticsLocations: i } = e;
-                if (!ee(Z.HAw.SOUNDBOARD_ECHO_VIEWED, l)) return;
+                if (!et(X.HAw.SOUNDBOARD_ECHO_VIEWED, l)) return;
                 let { sound: r, authorId: s } = l;
-                Q.default.track(Z.HAw.SOUNDBOARD_ECHO_VIEWED, {
+                Z.default.track(X.HAw.SOUNDBOARD_ECHO_VIEWED, {
                     voice_guild_id: t,
                     channel_id: n,
                     sound_id: r.soundId,
@@ -468,8 +497,8 @@ function em(e) {
                     is_author: s === L.default.getCurrentUser()?.id,
                     location_stack: i,
                 });
-            })({ guildId: t, channelId: n, echo: { sound: l, authorId: s, startedAt: N }, analyticsLocations: P });
-    }, [P, s, _, n, b, t, l, N]);
+            })({ guildId: t, channelId: n, echo: { sound: l, authorId: s, startedAt: v }, analyticsLocations: P });
+    }, [P, s, _, n, b, t, l, v]);
     let D = r.useCallback(() => {
             T(l.soundId);
         }, [T, l.soundId]),
@@ -484,24 +513,24 @@ function em(e) {
     return (0, i.jsxs)(i.Fragment, {
         children: [
             (0, i.jsxs)("div", {
-                className: a()(eh.Iv, { [eh.E$]: b }),
+                className: a()(ef.Iv, { [ef.E$]: b }),
                 style: { height: 36 },
                 children: [
                     (0, i.jsx)(d.Y, {
                         targetElementRef: R,
-                        shouldShow: v,
+                        shouldShow: N,
                         renderPopout: (e) => {
                             let { setPopoutRef: r } = e;
                             return (0, i.jsx)("div", {
                                 ref: r,
                                 onMouseEnter: D,
                                 onMouseLeave: j,
-                                children: (0, i.jsx)(ea, {
+                                children: (0, i.jsx)(eu, {
                                     guildId: t,
                                     channelId: n,
                                     sound: l,
                                     playedByUserIds: I,
-                                    startedAt: N,
+                                    startedAt: v,
                                 }),
                             });
                         },
@@ -513,12 +542,12 @@ function em(e) {
                                 onMouseEnter: D,
                                 onMouseLeave: j,
                                 children: (0, i.jsxs)("div", {
-                                    className: eh.yA,
+                                    className: ef.yA,
                                     children: [
                                         (0, i.jsx)("div", {
-                                            className: eh.R3,
+                                            className: ef.R3,
                                             children: (0, i.jsx)(h.eu, {
-                                                className: eh.Du,
+                                                className: ef.Du,
                                                 src: W,
                                                 size: c._3.SIZE_32,
                                                 "aria-label": w.Ay.getNickname(t, n, _) ?? M.Ay.getName(_),
@@ -526,9 +555,9 @@ function em(e) {
                                         }),
                                         null != k &&
                                             (0, i.jsx)("div", {
-                                                className: a()(eh.R3, eh.aR),
+                                                className: a()(ef.R3, ef.aR),
                                                 children: (0, i.jsx)(h.eu, {
-                                                    className: eh.mf,
+                                                    className: ef.mf,
                                                     src: F,
                                                     size: c._3.SIZE_32,
                                                     "aria-label": w.Ay.getNickname(t, n, k) ?? M.Ay.getName(k),
@@ -539,38 +568,38 @@ function em(e) {
                             }),
                     }),
                     (0, i.jsx)(m.m, {
-                        text: b ? en.intl.string(en.t.VqNHoS) : null,
+                        text: b ? el.intl.string(el.t.VqNHoS) : null,
                         children: (0, i.jsxs)(f.D, {
-                            className: a()(eh.nG, { [eh.Tz]: V, [eh.Jx]: b }),
+                            className: a()(ef.nG, { [ef.Tz]: V, [ef.Jx]: b }),
                             onClick: b ? () => null : U,
-                            "aria-label": en.intl.formatToPlainString(en.t.VOmeSq, { name: H }),
+                            "aria-label": el.intl.formatToPlainString(el.t.VOmeSq, { name: H }),
                             children: [
                                 (null != K || null != B) &&
                                     (0, i.jsx)(x.A, {
                                         size: "reaction",
-                                        className: eh.FA,
+                                        className: ef.FA,
                                         emojiId: B,
                                         emojiName: K,
                                         animated: G,
                                     }),
                                 (0, i.jsx)(p.E, { variant: "text-md/medium", children: H }),
-                                (0, i.jsx)("div", { className: eh.SU }),
+                                (0, i.jsx)("div", { className: ef.SU }),
                                 (0, i.jsxs)(p.E, {
                                     variant: "text-md/medium",
-                                    className: eh.Zi,
+                                    className: ef.Zi,
                                     tabularNumbers: !0,
-                                    children: ["x", (0, i.jsx)(E.A, { className: eh.Zi, value: g, digitWidth: 8 })],
+                                    children: ["x", (0, i.jsx)(E.A, { className: ef.Zi, value: g, digitWidth: 8 })],
                                 }),
                             ],
                         }),
                     }),
                 ],
             }),
-            (0, i.jsx)(ed, { count: g }),
+            (0, i.jsx)(em, { count: g }),
         ],
     });
 }
-function ef(e) {
+function eg(e) {
     let { guildId: t, channelId: n } = e,
         l = (0, u.cf)([R], () => Object.fromEntries(R.getSoundboardEchoes())),
         [s, a] = r.useState({}),
@@ -623,15 +652,15 @@ function ef(e) {
             (clearTimeout(y.current), (y.current = setTimeout(() => S(null), 200)));
         }, []);
     return (0, i.jsx)("div", {
-        className: eh.ei,
+        className: ef.ei,
         style: { height: 126 },
         onMouseEnter: h,
         onMouseLeave: m,
         children: x((e, l) =>
             (0, i.jsx)(o.animated.div, {
-                className: eh.Ob,
+                className: ef.Ob,
                 style: e,
-                children: (0, i.jsx)(em, {
+                children: (0, i.jsx)(ep, {
                     guildId: t,
                     channelId: n,
                     ...l.echo,
