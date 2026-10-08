@@ -158,7 +158,6 @@ function P(e, t) {
         }),
         M(e.resolved, t),
         e.interaction_metadata?.user != null && y(e.interaction_metadata.user) && D(e.interaction_metadata.user, t),
-        null != e.actor && y(e.actor) && D(e.actor, t),
         null != e.message_snapshots &&
             e.message_snapshots.forEach((e) => {
                 (e.moderator_report?.reported_member?.user != null && D(e.moderator_report.reported_member.user, t),

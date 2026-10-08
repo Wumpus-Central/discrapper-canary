@@ -52,7 +52,6 @@ let E = class extends c {
     id;
     channel_id;
     author;
-    actor;
     bot;
     customRenderedContent;
     pinned;
@@ -103,7 +102,6 @@ let E = class extends c {
             (this.id = e.id),
             (this.channel_id = e.channel_id),
             (this.author = e.author),
-            (this.actor = e.actor ?? null),
             (this.customRenderedContent = e.customRenderedContent),
             (this.mentions = e.mentions || []),
             (this.mentionRoles = e.mentionRoles || []),
