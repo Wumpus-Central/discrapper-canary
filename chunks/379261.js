@@ -1,41 +1,41 @@
-n.d(t, { r: () => d });
+n.d(t, { r: () => c });
 var i = n(477900),
     r = n(582128),
     a = n(503698),
     s = n.n(a),
-    l = n(834730),
-    o = n(869431);
-function d(e) {
-    let { children: t, className: n, style: a } = e,
-        d = r.useRef(null),
-        c = r.useRef(null),
-        [u, _] = r.useState(null);
+    l = n(535185),
+    o = n(834730),
+    d = n(869431);
+function c(e) {
+    let { children: t, className: n, style: a, variant: c = "text-sm/medium" } = e,
+        u = r.useRef(null),
+        _ = r.useRef(null),
+        [E, A] = r.useState(null),
+        h = r.useCallback(() => {
+            let e = u.current,
+                t = _.current;
+            if (null == e || null == t) return;
+            let n = t.scrollWidth - e.clientWidth;
+            A(n > 0 ? n : null);
+        }, []);
     return (
-        r.useLayoutEffect(() => {
-            !(function () {
-                let e = d.current,
-                    t = c.current;
-                if (null == e || null == t) return;
-                let n = t.scrollWidth - e.clientWidth;
-                _(n > 0 ? n : null);
-            })();
-        }, [t]),
+        (0, l.g)(u, h, [t]),
         (0, i.jsx)("div", {
-            ref: d,
-            className: s()(o.kL, n),
-            "data-marquee-overflow": null != u,
+            ref: u,
+            className: s()(d.kL, n),
+            "data-marquee-overflow": null != E,
             style: a,
-            children: (0, i.jsx)(l.E, {
-                variant: "text-sm/medium",
+            children: (0, i.jsx)(o.E, {
+                variant: c,
                 color: "none",
                 tag: "span",
-                ref: c,
-                className: o.Qq,
+                ref: _,
+                className: d.Qq,
                 style:
-                    null != u
+                    null != E
                         ? {
-                              "--custom-marquee-overflow": `${u}px`,
-                              "--custom-marquee-duration": `${Math.min(5, Math.max(2, u / 40))}s`,
+                              "--custom-marquee-overflow": `${E}px`,
+                              "--custom-marquee-duration": `${Math.min(5, Math.max(2, E / 40))}s`,
                           }
                         : void 0,
                 children: t,

@@ -31,15 +31,7 @@ function _(e) {
                       style: p,
                       children: t,
                   })
-                : (0, i.jsx)(o.r, {
-                      style: p,
-                      children: (0, i.jsx)(d.E, {
-                          tag: "span",
-                          variant: "text-md/normal",
-                          color: "currentColor",
-                          children: t,
-                      }),
-                  }),
+                : (0, i.jsx)(o.r, { variant: "text-md/normal", style: p, children: t }),
             I &&
                 (0, i.jsx)(d.E, {
                     variant: "text-sm/normal",
