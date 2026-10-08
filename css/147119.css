@@ -91,10 +91,9 @@
 }
 
 .source__920ab {
-    flex-grow: 0;
-    flex-shrink: 0;
+    flex: 0 0 auto;
     margin-inline-start: 16px;
-    max-width: 33%;
+    max-width: 40%;
     overflow: hidden;
     text-overflow: ellipsis
 }
@@ -245,4 +244,4 @@
     width: 16px
 }
 
-/*# sourceMappingURL=147119.244550b749634536.css.map*/
+/*# sourceMappingURL=147119.09e27d8b1815aaeb.css.map*/
