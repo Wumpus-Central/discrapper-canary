@@ -232,15 +232,8 @@
     flex-direction: column;
     height: 400px;
     justify-content: center;
-    padding: 16px
-}
-
-.image__5682d {
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 145px;
-    margin-bottom: 16px;
-    width: 314px
+    padding: 16px;
+    text-align: center
 }
 
 .header__5682d {
@@ -406,4 +399,4 @@
     width: 22px
 }
 
-/*# sourceMappingURL=0b323051910c97c2.css.map*/
+/*# sourceMappingURL=8f483eeadd18ca0d.css.map*/

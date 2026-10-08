@@ -1,4 +1,4 @@
-(l.r(t), l.d(t, { default: () => tm }));
+(l.r(t), l.d(t, { default: () => th }));
 var s = l(477900),
     a = l(582128),
     r = l(806163),
@@ -767,8 +767,7 @@ function e6(e) {
               ],
           });
 }
-var e7 = l(468646),
-    e9 = l(842503);
+var e7 = l(468646);
 let e4 = function (e) {
     let { loadId: t } = e,
         l = C.A.useField("categoryId"),
@@ -787,15 +786,15 @@ let e4 = function (e) {
     return (0, s.jsxs)("div", {
         className: e7.kL,
         children: [
-            (0, s.jsx)("img", { alt: "", src: e9, className: e7.Sl }),
+            (0, s.jsx)("img", { alt: "", src: "/assets/025eea446d3b4403.svg", className: e7.Sl }),
             (0, s.jsx)(g.D, { variant: "heading-xl/semibold", className: e7.wx, children: c }),
             (0, s.jsx)(X.E, { variant: "text-md/normal", color: "text-default", children: o }),
         ],
     });
 };
-var e5 = l(890497),
-    e8 = l(118216);
-function te(e) {
+var e9 = l(890497),
+    e5 = l(118216);
+function e8(e) {
     let { loadId: t } = e,
         l = (0, i.bG)([ez.default], () => (0, I.Kv)([ez.default])),
         r = C.A.useField("languageCode"),
@@ -815,8 +814,8 @@ function te(e) {
         ),
         c = a.useMemo(() => (0, k.tO)().map((e) => ({ id: e.code, value: e.code, label: e.name })), []);
     return (0, s.jsx)("div", {
-        className: e8.k,
-        children: (0, s.jsx)(e5.Z, {
+        className: e5.k,
+        children: (0, s.jsx)(e9.Z, {
             selectionMode: "single",
             label: v.intl.string(v.t.Ng5cTK),
             hideLabel: !0,
@@ -826,12 +825,12 @@ function te(e) {
         }),
     });
 }
-var tt = l(413185);
-let tl = Object.freeze({ top: 0, bottom: 0, left: 32, right: 202 }),
-    ts = Object.freeze({ top: 0, bottom: 0, left: 32, right: 32 }),
-    ta = { page: E.liQ.GUILD_DISCOVERY, object: E.ZSU.CARD, section: E.JJy.DISCOVER_SEARCH },
-    tr = eQ().throttle(y.Cf, 1e3, { leading: !1, trailing: !0 });
-function ti(e) {
+var te = l(413185);
+let tt = Object.freeze({ top: 0, bottom: 0, left: 32, right: 202 }),
+    tl = Object.freeze({ top: 0, bottom: 0, left: 32, right: 32 }),
+    ts = { page: E.liQ.GUILD_DISCOVERY, object: E.ZSU.CARD, section: E.JJy.DISCOVER_SEARCH },
+    ta = eQ().throttle(y.Cf, 1e3, { leading: !1, trailing: !0 });
+function tr(e) {
     let { loadId: t, onGuildCardSeen: l, onGuildCardClick: r } = e,
         {
             guildIds: n,
@@ -902,7 +901,7 @@ function ti(e) {
         f((0, I.YP)());
     }, [o]),
         a.useEffect(() => {
-            tr({
+            ta({
                 loadId: t,
                 searchId: m,
                 query: o,
@@ -921,12 +920,12 @@ function ti(e) {
                             "div",
                             {
                                 style: { paddingLeft: l.left, width: l.width - 16 },
-                                className: Y()(tt.R_, { [tt.Ze]: !A }),
+                                className: Y()(te.R_, { [te.Ze]: !A }),
                                 children: [
                                     !A &&
                                         (0, s.jsxs)("div", {
-                                            className: tt.eW,
-                                            children: [(0, s.jsx)(e6, { loadId: t }), (0, s.jsx)(te, { loadId: t })],
+                                            className: te.eW,
+                                            children: [(0, s.jsx)(e6, { loadId: t }), (0, s.jsx)(e8, { loadId: t })],
                                         }),
                                     g && (0, s.jsx)(e4, { loadId: t }),
                                 ],
@@ -934,7 +933,7 @@ function ti(e) {
                             a,
                         );
                     case 1:
-                        return (0, s.jsx)(Z.y, { className: Y()(tt.u1, { [tt.qx]: A }) }, a);
+                        return (0, s.jsx)(Z.y, { className: Y()(te.u1, { [te.qx]: A }) }, a);
                 }
             },
             [g, A, t],
@@ -995,7 +994,7 @@ function ti(e) {
                             style: l,
                             children: (0, s.jsx)(eE, {
                                 guildId: e,
-                                onClick: async (e) => await U(e, t, u, ta),
+                                onClick: async (e) => await U(e, t, u, ts),
                                 onView: (e) => p(e),
                             }),
                         },
@@ -1039,13 +1038,13 @@ function ti(e) {
                 ),
             [d],
         ),
-        O = A ? tl : ts;
+        O = A ? tt : tl;
     return (0, s.jsx)("div", {
-        className: tt.kL,
+        className: te.kL,
         ref: N,
         children: (0, s.jsx)(eH.f, {
             ref: E,
-            className: tt.kf,
+            className: te.kf,
             sections: G,
             columns: S,
             itemGutter: 16,
@@ -1060,12 +1059,12 @@ function ti(e) {
             renderAccessory: (e) =>
                 A
                     ? (0, s.jsx)("div", {
-                          className: tt.pz,
+                          className: te.pz,
                           style: { height: e },
                           children: (0, s.jsxs)("div", {
-                              className: tt.wp,
+                              className: te.wp,
                               children: [
-                                  (0, s.jsx)("div", { className: tt.jp, children: (0, s.jsx)(te, { loadId: t }) }),
+                                  (0, s.jsx)("div", { className: te.jp, children: (0, s.jsx)(e8, { loadId: t }) }),
                                   (0, s.jsx)(e1, { loadId: t }),
                               ],
                           }),
@@ -1074,9 +1073,9 @@ function ti(e) {
         }),
     });
 }
-var tn = l(488995),
-    tc = l(877149);
-function to() {
+var ti = l(488995),
+    tn = l(877149);
+function tc() {
     let e,
         t,
         l,
@@ -1219,7 +1218,7 @@ function to() {
             V || C.A.setState({ scrollPosition: null });
         }, [V]),
         (0, s.jsxs)("div", {
-            className: tc.kL,
+            className: tn.kL,
             children: [
                 (0, s.jsxs)(f.Ay, {
                     variant: V ? f.Z5.RELATIVE : f.Z5.OVERLAY,
@@ -1238,7 +1237,7 @@ function to() {
                             (0, s.jsx)(g.D, {
                                 variant: "heading-lg/semibold",
                                 color: "text-strong",
-                                className: tc.ov,
+                                className: tn.ov,
                                 children: v.intl.format(v.t.zHdzqW, { query: B }),
                             }),
                         G &&
@@ -1249,33 +1248,33 @@ function to() {
                                 onClear: _,
                                 onSubmit: q,
                                 onCollapsedClick: Q,
-                                state: V ? tn.GlobalDiscoverySearchBarState.DEFAULT : M,
+                                state: V ? ti.GlobalDiscoverySearchBarState.DEFAULT : M,
                                 onBlur: H,
                             }),
                     ],
                 }),
                 V
-                    ? (0, s.jsx)(ti, { loadId: r.current, onGuildCardClick: W, onGuildCardSeen: Z })
+                    ? (0, s.jsx)(tr, { loadId: r.current, onGuildCardClick: W, onGuildCardSeen: Z })
                     : (0, s.jsx)(eM, { selectedTab: R, onScroll: i, onGuildCardClick: W, onGuildCardSeen: Z }),
             ],
         })
     );
 }
-var td = l(870729),
-    tu = l(726845),
-    tg = l(285395),
-    th = l(272030);
-let tm = function () {
+var to = l(870729),
+    td = l(726845),
+    tu = l(285395),
+    tg = l(272030);
+let th = function () {
     let e = (0, i.bG)([c.A], () => c.A.hasLoadedExperiments),
-        t = tu.A.useField("selectedTab"),
+        t = td.A.useField("selectedTab"),
         l = (function (e) {
             switch (e) {
-                case tn.GlobalDiscoveryTab.SERVERS:
-                    return (0, s.jsx)(to, {});
-                case tn.GlobalDiscoveryTab.APPS:
+                case ti.GlobalDiscoveryTab.SERVERS:
+                    return (0, s.jsx)(tc, {});
+                case ti.GlobalDiscoveryTab.APPS:
                     return (0, s.jsx)(o.default, {});
-                case tn.GlobalDiscoveryTab.QUESTS:
-                    return (0, s.jsx)(td.default, { topLevelRoute: !1 });
+                case ti.GlobalDiscoveryTab.QUESTS:
+                    return (0, s.jsx)(to.default, { topLevelRoute: !1 });
                 default:
                     (0, V.xb)(e);
             }
@@ -1284,15 +1283,15 @@ let tm = function () {
     return (
         a.useEffect(() => {
             let e = d.pathname,
-                t = (0, tg.j)(e);
-            t !== tu.A.getField("selectedTab") && tu.A.setState({ selectedTab: t });
+                t = (0, tu.j)(e);
+            t !== td.A.getField("selectedTab") && td.A.setState({ selectedTab: t });
         }, [d.pathname]),
         a.useEffect(() => {
             e && (0, q.tx)({ selectedTab: t });
         }, [t, e]),
         (0, s.jsxs)("section", {
-            className: th.k,
-            children: [(0, s.jsx)(n.HI, { location: (0, tg.t)(t) }), (0, s.jsx)("div", { className: th.T }), l],
+            className: tg.k,
+            children: [(0, s.jsx)(n.HI, { location: (0, tu.t)(t) }), (0, s.jsx)("div", { className: tg.T }), l],
         })
     );
 };

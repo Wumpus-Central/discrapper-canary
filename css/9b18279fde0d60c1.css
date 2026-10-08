@@ -371,115 +371,9 @@
     width: 100%
 }
 
-.bannerContainer__9e177 {
-    height: 240px;
+.illustration__9e177 {
     margin-bottom: 32px;
-    margin-top: 12px;
-    position: relative;
-    width: 100%
-}
-
-.banner__9e177 {
-    align-items: center;
-    background-position: 50%;
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
-    height: 240px;
-    overflow: hidden;
-    position: absolute;
-    transition: opacity var(--custom-guild-settings-roles-intro-background-transition) var(--custom-guild-settings-roles-intro-banner-transition-delay);
-    width: 100%
-}
-
-.bannerOut__9e177 {
-    opacity: 0
-}
-
-.bannerClubs__9e177 {
-    background-image: url(/assets/00d80bb908d5ec63.svg)
-}
-
-.bannerGaming__9e177 {
-    background-image: url(/assets/b7006e08b3d3eea0.svg)
-}
-
-.bannerHobbies__9e177 {
-    background-image: url(/assets/1eb0aca7c3ee0b2d.svg)
-}
-
-.profileCard__9e177 {
-    background-color: var(--background-base-lower);
-    border: 1px solid var(--border-subtle);
-    border-radius: var(--radius-sm);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, .1);
-    box-sizing: border-box;
-    height: 100%;
-    margin-bottom: 16px;
-    margin-top: 16px;
-    overflow: hidden;
-    width: 180px
-}
-
-.avatarContainer__9e177 {
-    align-items: center;
-    background-color: var(--background-base-low);
-    display: flex;
-    flex-direction: column;
-    height: 120px;
-    padding: 16px
-}
-
-.avatarName__9e177 {
-    margin-top: 8px
-}
-
-.roles__9e177 {
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, .1));
-    opacity: 1;
-    position: absolute;
-    top: 152px
-}
-
-.full-motion .roles__9e177 {
-    transition: transform var(--custom-guild-settings-roles-intro-roles-transition) var(--custom-guild-settings-roles-intro-roles-transition) Delay, opacity var(--custom-guild-settings-roles-intro-roles-transition) var(--custom-guild-settings-roles-intro-roles-transition) Delay
-}
-
-.bannerOut__9e177 .roles__9e177 {
-    opacity: 0;
-    transform: translateY(24px)
-}
-
-.full-motion .bannerOut__9e177 .roles__9e177 {
-    transition: transform var(--custom-guild-settings-roles-intro-roles-transition), opacity var(--custom-guild-settings-roles-intro-roles-transition)
-}
-
-.rolesRow__9e177 {
-    display: flex;
-    flex-direction: row;
-    justify-content: center
-}
-
-.roleTag__9e177 {
-    background-color: var(--background-base-low);
-    border-radius: var(--radius-xs);
-    margin: 2px;
-    padding: 4px 8px;
-    white-space: nowrap
-}
-
-.roleDot__9e177 {
-    margin-top: 3px;
-    margin-inline: 0 8px
-}
-
-.roleDot__9e177,
-.roleText__9e177 {
-    display: inline-block
-}
-
-.roleText__9e177 {
-    vertical-align: top
+    margin-top: 12px
 }
 
 .container__9e177 {
@@ -789,4 +683,4 @@
     margin-inline-start: 4px
 }
 
-/*# sourceMappingURL=c05262ba7cf6fa5b.css.map*/
+/*# sourceMappingURL=9b18279fde0d60c1.css.map*/
