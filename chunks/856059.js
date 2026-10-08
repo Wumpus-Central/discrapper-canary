@@ -29,12 +29,12 @@ function k(e) {
         [b, A] = i.useState(M),
         [C, k] = i.useState({}),
         [E, N] = i.useState(!1),
-        [_, S] = i.useState(!1),
+        [S, _] = i.useState(!1),
         R = i.useCallback((e, t) => {
-            (S(!1), A((n) => ({ ...n, values: { ...n.values, [e]: t } })));
+            (_(!1), A((n) => ({ ...n, values: { ...n.values, [e]: t } })));
         }, []),
         O = i.useCallback((e, t) => {
-            (S(!1), A((n) => ({ ...n, secrets: { ...n.secrets, [e]: t } })));
+            (_(!1), A((n) => ({ ...n, secrets: { ...n.secrets, [e]: t } })));
         }, []),
         L = i.useMemo(() => m?.schema ?? [], [m]),
         W = i.useMemo(() => m?.values ?? {}, [m]),
@@ -44,10 +44,10 @@ function k(e) {
             [L, m],
         ),
         T = L.filter((e) => "secret" !== e.type),
-        G = new Map(F.map((e) => [e.name, e])),
-        B = (n ?? []).filter((e) => T.some((t) => t.key === e) || G.has(e)),
-        D = B.length > 0,
-        U = B.some((e) => G.has(e)),
+        D = new Map(F.map((e) => [e.name, e])),
+        G = (n ?? []).filter((e) => T.some((t) => t.key === e) || D.has(e)),
+        B = G.length > 0,
+        U = G.some((e) => D.has(e)),
         q = i.useMemo(() => {
             let e = {};
             for (let [t, n] of Object.entries(b.values)) {
@@ -66,7 +66,7 @@ function k(e) {
         $ = null != q.values || null != q.secrets,
         X = i.useCallback(async () => {
             if (!$ || E) return !0;
-            (N(!0), S(!1));
+            (N(!0), _(!1));
             try {
                 let { rebuildRequired: e } = await (0, x.nU)(t, q);
                 return (
@@ -80,7 +80,7 @@ function k(e) {
                     !0
                 );
             } catch {
-                return (S(!0), !1);
+                return (_(!0), !1);
             } finally {
                 N(!1);
             }
@@ -218,7 +218,7 @@ function k(e) {
                   e.name,
               );
     }
-    let J = _
+    let J = S
             ? (0, l.jsx)(u.E, {
                   variant: "text-xs/normal",
                   color: "text-feedback-critical",
@@ -243,7 +243,7 @@ function k(e) {
                       : null,
                 null == m
                     ? null
-                    : D
+                    : B
                       ? (0, l.jsxs)(l.Fragment, {
                             children: [
                                 U
@@ -254,8 +254,8 @@ function k(e) {
                                           children: P.intl.string(j.default.dsHRPK),
                                       })
                                     : null,
-                                B.map(function (e) {
-                                    let t = G.get(e);
+                                G.map(function (e) {
+                                    let t = D.get(e);
                                     if (null != t) return Z(t);
                                     let n = T.find((t) => t.key === e);
                                     return null == n ? null : z(n);
@@ -288,7 +288,7 @@ function k(e) {
             secretCount: F.length,
             canSave: $,
             saving: E,
-            isScoped: D,
+            isScoped: B,
             submit: X,
         }),
     });

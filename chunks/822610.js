@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(424170),
     b = n(274652),
     I = n(31717),
-    N = n(914905),
-    v = n(650583),
+    v = n(914905),
+    N = n(650583),
     T = n(660183),
     j = n(40974);
 function _(e) {
@@ -75,7 +75,7 @@ function _(e) {
         );
     }, [c, R, O, w]),
     null != c)
-        ? (0, l.jsx)(N.A, {
+        ? (0, l.jsx)(v.A, {
               channelId: t,
               upload: c,
               keyboardModeEnabled: r,
@@ -98,7 +98,7 @@ function _(e) {
               channelId: t,
               keyboardModeEnabled: r,
               onKeyDown: function (e) {
-                  e.key === v.dh.ENTER && (e.preventDefault(), a.current?.activateUploadDialogue());
+                  e.key === N.dh.ENTER && (e.preventDefault(), a.current?.activateUploadDialogue());
               },
               className: s()(j.xd, { [j.LB]: o }),
               draftType: I.C.SlashCommand,
@@ -148,14 +148,14 @@ function w(e) {
         {
             isApplicationCommand: b,
             commandOptions: I,
-            commandOptionStates: v,
+            commandOptionStates: N,
         } = (0, u.cf)([p.A], () => {
             let e = p.A.getActiveCommand(t);
             if (null == e) return { isApplicationCommand: !1, commandOptions: L, commandOptionStates: null };
             let n = p.A.getOptionStates(t);
             return { isApplicationCommand: !0, commandOptions: e.options, commandOptionStates: n };
         }),
-        T = i.useMemo(() => I?.filter((e) => e.type === h.n4.ATTACHMENT && v?.[e.name]?.hasValue) ?? [], [I, v]),
+        T = i.useMemo(() => I?.filter((e) => e.type === h.n4.ATTACHMENT && N?.[e.name]?.hasValue) ?? [], [I, N]),
         [j, w] = i.useState([]);
     i.useEffect(() => {
         function e() {
@@ -204,7 +204,7 @@ function w(e) {
                               ? T.map((e) => (0, l.jsx)(_, { channelId: t, keyboardModeEnabled: y, option: e }, e.name))
                               : U.map((e) =>
                                     (0, l.jsx)(
-                                        N.A,
+                                        v.A,
                                         {
                                             channelId: t,
                                             draftType: n.drafts.type,

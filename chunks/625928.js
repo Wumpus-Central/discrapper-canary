@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(82498),
     b = n(734057),
     I = n(309010),
-    N = n(174459),
-    v = n(652215),
+    v = n(174459),
+    N = n(652215),
     T = n(660183),
     j = n(845210);
 function _() {
@@ -35,17 +35,17 @@ function k(e) {
     let { className: t, iconOnly: n } = e,
         r = (0, o.bG)([I.Ay, b.A], () => {
             let e = b.A.getChannel(I.Ay.getChannelId());
-            return e?.isPrivate() ? v.liQ.DM_CHANNEL : v.liQ.GUILD_CHANNEL;
+            return e?.isPrivate() ? N.liQ.DM_CHANNEL : N.liQ.GUILD_CHANNEL;
         }),
         { analyticsLocations: a } = (0, f.Ay)(m.A.PREMIUM_UPSELL);
     return (
         i.useEffect(() => {
-            (N.default.track(v.HAw.PREMIUM_UPSELL_VIEWED, {
+            (v.default.track(N.HAw.PREMIUM_UPSELL_VIEWED, {
                 type: "longer messages inline",
-                location: { location_page: r, location_section: v.JJy.CHANNEL_TEXT_AREA },
+                location: { location_page: r, location_section: N.JJy.CHANNEL_TEXT_AREA },
                 location_stack: a,
             }),
-                (0, C.sq)(v.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, A.uq)("longer messages inline")));
+                (0, C.sq)(N.U7l.PREMIUM_UPSELL_VIEWED, a, () => (0, A.uq)("longer messages inline")));
         }, [r, a]),
         n
             ? (0, l.jsx)(S.D, {
@@ -79,8 +79,8 @@ function L(e) {
         C = i ?? y,
         A = r ?? i ?? y / 10,
         b = n.length,
-        I = null != t.upsellLongMessages && (b ?? 0) > v.uvi && S,
-        N = null != t.upsellLongMessages && !S,
+        I = null != t.upsellLongMessages && (b ?? 0) > N.uvi && S,
+        v = null != t.upsellLongMessages && !S,
         j = C - b,
         _ = j > A;
     (0, a.$)({ currentLength: b, maxLength: C, message: T.intl.string(T.t.c2Jqed) });
@@ -125,7 +125,7 @@ function L(e) {
                     ],
                 }),
                 (0, l.jsx)(h.A, { "aria-live": "polite", children: T.intl.format(T.t.qH8uFW, { count: j }) }),
-                N && !_
+                v && !_
                     ? (0, l.jsx)(k, { className: O.UX, iconOnly: t.upsellLongMessages?.iconOnly || !1, remaining: j })
                     : null,
             ],

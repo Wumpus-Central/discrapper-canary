@@ -1,8 +1,8 @@
 (l.d(t, {
     Df: () => r,
     Fl: () => s,
-    S3: () => d,
-    SF: () => c,
+    S3: () => c,
+    SF: () => d,
     Wl: () => o,
     Wn: () => u,
     b5: () => m,
@@ -35,7 +35,7 @@ function u(e) {
     }
     return null;
 }
-function d(e) {
+function c(e) {
     return null == e
         ? null
         : {
@@ -47,7 +47,7 @@ function d(e) {
               })),
           };
 }
-function c(e) {
+function d(e) {
     return e?.server ?? { title: a.intl.string(n.default.vcxYIA), hint: a.intl.string(n.default.auUHPZ) };
 }
 function m(e) {

@@ -1,4 +1,4 @@
-n.d(t, { yh: () => N, rF: () => h, V1: () => x, yC: () => f });
+n.d(t, { yh: () => N, rF: () => h, V1: () => x, yC: () => R });
 var a,
     r,
     s,
@@ -169,26 +169,26 @@ class g extends l.PureComponent {
         });
     }
 }
-let R = Object.freeze({
+let f = Object.freeze({
     IDLE_ENTRY: { toValue: 1, duration: 1500 },
     IDLE_LOOP: { toValue: 1, duration: 6e3, easing: u.A.Easing.linear },
     BOOST_START: { toValue: 0, duration: 2e3, delay: 500 },
     ERROR: { toValue: 1, duration: 1500, delay: 1e3 },
 });
-class f extends l.PureComponent {
+class R extends l.PureComponent {
     static Scenes = D;
     static getNextScene(e) {
         switch (e) {
-            case f.Scenes.IDLE_ENTRY:
-                return f.Scenes.IDLE_LOOP;
-            case f.Scenes.BOOST_START:
-                return f.Scenes.BOOST_LOOP;
-            case f.Scenes.BOOST_END:
-                return f.Scenes.VICTORY;
-            case f.Scenes.VICTORY:
-                return f.Scenes.IDLE_ENTRY;
-            case f.Scenes.ERROR:
-                return f.Scenes.IDLE_LOOP;
+            case R.Scenes.IDLE_ENTRY:
+                return R.Scenes.IDLE_LOOP;
+            case R.Scenes.BOOST_START:
+                return R.Scenes.BOOST_LOOP;
+            case R.Scenes.BOOST_END:
+                return R.Scenes.VICTORY;
+            case R.Scenes.VICTORY:
+                return R.Scenes.IDLE_ENTRY;
+            case R.Scenes.ERROR:
+                return R.Scenes.IDLE_LOOP;
             default:
                 return e;
         }
@@ -219,10 +219,10 @@ class f extends l.PureComponent {
         ]).start();
     }
     animateIdleEntry() {
-        this.animateEntry(R.IDLE_ENTRY);
+        this.animateEntry(f.IDLE_ENTRY);
     }
     animateError() {
-        this.animateEntry(R.ERROR);
+        this.animateEntry(f.ERROR);
     }
     animateIdleLoop() {
         (this.animateIdleLoopBackground(), this.animateIdleLoopForeground());
@@ -231,8 +231,8 @@ class f extends l.PureComponent {
         this.didUnmount ||
             (this.backgroundAnimation.x.setValue(0),
             u.A.timing(this.backgroundAnimation.x, {
-                toValue: R.IDLE_LOOP.toValue,
-                duration: 1.2 * R.IDLE_LOOP.duration,
+                toValue: f.IDLE_LOOP.toValue,
+                duration: 1.2 * f.IDLE_LOOP.duration,
                 easing: u.A.Easing.linear,
             }).start(this.animateIdleLoopBackground));
     };
@@ -240,22 +240,22 @@ class f extends l.PureComponent {
         this.didUnmount ||
             (this.foregroundAnimation.x.setValue(0),
             u.A.timing(this.foregroundAnimation.x, {
-                toValue: R.IDLE_LOOP.toValue,
-                duration: R.IDLE_LOOP.duration,
-                easing: R.IDLE_LOOP.easing,
+                toValue: f.IDLE_LOOP.toValue,
+                duration: f.IDLE_LOOP.duration,
+                easing: f.IDLE_LOOP.easing,
             }).start(this.animateIdleLoopForeground));
     };
     animateBoostStart() {
         u.A.parallel([
             u.A.timing(this.foregroundAnimation.y, {
-                toValue: R.BOOST_START.toValue,
-                duration: R.BOOST_START.duration,
-                delay: R.BOOST_START.delay,
+                toValue: f.BOOST_START.toValue,
+                duration: f.BOOST_START.duration,
+                delay: f.BOOST_START.delay,
             }),
             u.A.timing(this.backgroundAnimation.y, {
-                toValue: R.BOOST_START.toValue,
-                duration: 1.2 * R.BOOST_START.duration,
-                delay: R.BOOST_START.delay,
+                toValue: f.BOOST_START.toValue,
+                duration: 1.2 * f.BOOST_START.duration,
+                delay: f.BOOST_START.delay,
             }),
         ]).start();
     }

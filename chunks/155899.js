@@ -1,4 +1,4 @@
-l.d(t, { F: () => d });
+l.d(t, { F: () => c });
 var n = l(477900),
     a = l(582128),
     r = l(732159),
@@ -7,7 +7,7 @@ var n = l(477900),
     o = l(660183);
 function u(e) {
     let { matchingBackup: t, onConfirm: l, transitionState: i, onClose: u } = e,
-        [d, c] = a.useState(!1);
+        [c, d] = a.useState(!1);
     return (0, n.jsx)(r.u, {
         transitionState: i,
         onClose: u,
@@ -20,13 +20,13 @@ function u(e) {
                 ? {
                       label: o.intl.string(s.default["+/pFME"]),
                       description: o.intl.string(s.default["+I112y"]),
-                      checked: d,
-                      onChange: (e) => c(e),
+                      checked: c,
+                      onChange: (e) => d(e),
                   }
                 : void 0,
-        onConfirm: () => l(d && null != t ? t : null),
+        onConfirm: () => l(c && null != t ? t : null),
     });
 }
-function d(e) {
+function c(e) {
     (0, i.openModalLazy)(() => Promise.resolve((t) => (0, n.jsx)(u, { ...t, ...e })));
 }

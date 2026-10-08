@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(211401),
     b = n(989837),
     I = n(500049),
-    N = n(598071),
-    v = n(60809),
+    v = n(598071),
+    N = n(60809),
     T = n(660183),
     j = n(215837);
 let _ = function (e) {
@@ -32,7 +32,7 @@ let _ = function (e) {
                 () => b.A.shouldShowPopup() && b.A.activeViewType() === t && b.A.activeChannelId() === n,
             ),
             { Component: o, events: u, play: c } = (0, S.c)(),
-            d = i.useContext(N.Ay);
+            d = i.useContext(v.Ay);
         i.useEffect(() => {
             function e() {
                 u.onMouseEnter();
@@ -49,7 +49,7 @@ let _ = function (e) {
             }, [a, t, n, c]),
             m = (0, l.jsx)(o, { size: "refresh_sm", color: "currentColor" });
         return (0, l.jsx)("div", {
-            className: E()(j.UD, v.KG),
+            className: E()(j.UD, N.KG),
             ref: r,
             children: (0, l.jsx)(y.D, {
                 tabIndex: 0,
@@ -260,18 +260,18 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                 expressionButtonsHidden: b,
             } = e,
             I = (0, O.n)("ChannelTextAreaButtons"),
-            N = (0, s.cf)([o.Ay], () => ({
+            v = (0, s.cf)([o.Ay], () => ({
                 isSubmitButtonEnabled: o.Ay.isSubmitButtonEnabled,
                 isAppsButtonEnabled: o.Ay.isAppsButtonEnabled,
                 isEmojiButtonEnabled: o.Ay.isEmojiButtonEnabled,
                 isGifButtonEnabled: o.Ay.isGifButtonEnabled,
                 isStickerButtonEnabled: o.Ay.isStickerButtonEnabled,
             })),
-            v = N.isSubmitButtonEnabled,
-            T = !I || N.isAppsButtonEnabled,
-            j = !I || N.isEmojiButtonEnabled,
-            _ = !I || N.isGifButtonEnabled,
-            M = !I || N.isStickerButtonEnabled,
+            N = v.isSubmitButtonEnabled,
+            T = !I || v.isAppsButtonEnabled,
+            j = !I || v.isEmojiButtonEnabled,
+            _ = !I || v.isGifButtonEnabled,
+            M = !I || v.isStickerButtonEnabled,
             P =
                 ((t = S.id),
                 (n = x),
@@ -316,7 +316,7 @@ let ee = { click: { name: "click", start: 0, duration: 66 }, hover: { name: "hov
                     }));
                 return l && i && null == r;
             })({ channel: S, chatInputType: x }),
-            q = x.submit?.button != null && (x.submit?.ignorePreference || v),
+            q = x.submit?.button != null && (x.submit?.ignorePreference || N),
             Z = null == D || (null != U && U.type !== a.n4.ATTACHMENT);
         return (!r.Fr &&
             (x.gifts?.button != null &&

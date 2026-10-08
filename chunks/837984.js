@@ -83,29 +83,29 @@ function f() {
                         return;
                     }
                     (v || (y = i), (v = !0), n.clearRect(0, 0, f, p));
-                    let _ = E - 1 - (1 - N) * 16,
-                        S = (i - A) / 1e3,
+                    let S = E - 1 - (1 - N) * 16,
+                        _ = (i - A) / 1e3,
                         R = 0.1 + 0.9 * (1 - (1 - Math.min(1, Math.max(0, (i - y) / 1500))) ** 3),
-                        O = Math.ceil(_ / g);
+                        O = Math.ceil(S / g);
                     n.fillStyle = l;
                     for (let e = 0; e < 3; e++) {
                         let t = 72 * (0.825 + 0.35 * c(e, 11)),
-                            l = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(S * d * 0.13 + c(e, 29) * d))) * R,
+                            l = 224 * (0.88 + 0.12 * (0.5 + 0.5 * Math.sin(_ * d * 0.13 + c(e, 29) * d))) * R,
                             i = 0;
                         for (let t of o) {
                             let n = (e * t.stagger + 0.07 * c(e, t.salt)) * d;
-                            i += t.weight * Math.sin(S * d * t.hz + n);
+                            i += t.weight * Math.sin(_ * d * t.hz + n);
                         }
                         let a = 0.30000000000000004 + 0.7 * (1 + i),
-                            r = Math.floor((S * t) / g),
+                            r = Math.floor((_ * t) / g),
                             s = 1 + e * g + h / 2,
                             f = h / 2 + 3,
                             m = Math.abs(s - p / 2) < f;
                         for (let t = 0; t < O; t++) {
                             let i,
-                                o = _ - (t * g + h / 2);
+                                o = S - (t * g + h / 2);
                             if (o < 0) break;
-                            let d = (_ - o) / l;
+                            let d = (S - o) / l;
                             if (d >= 1) break;
                             let p = Math.min(6, Math.floor(7 * (1 - d ** a)));
                             ((i =

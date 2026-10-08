@@ -21,8 +21,8 @@ var l = n(477900),
     A = n(515718),
     b = n(851023),
     I = n(215497),
-    N = n(660183),
-    v = n(704796),
+    v = n(660183),
+    N = n(704796),
     T = n(429955);
 let j = ["image/jpeg", "image/png", "image/webp", "image/gif", "image/avif", "video/quicktime", "video/mp4"];
 function _(e) {
@@ -46,12 +46,12 @@ function _(e) {
                             className: T.tags,
                             children: [
                                 null != t && "" !== t
-                                    ? (0, l.jsx)("span", { className: T.altTag, children: N.intl.string(N.t.QEW81z) })
+                                    ? (0, l.jsx)("span", { className: T.altTag, children: v.intl.string(v.t.QEW81z) })
                                     : null,
                                 o && n
                                     ? (0, l.jsx)("span", {
                                           className: T.altTag,
-                                          children: N.intl.string(N.t["F+x38C"]),
+                                          children: v.intl.string(v.t["F+x38C"]),
                                       })
                                     : null,
                             ],
@@ -110,11 +110,11 @@ function k(e) {
                     shouldHideMediaOptions: !0,
                 });
         }, [c]),
-        x = t?.name != null ? t.name : N.intl.string(N.t.lduvqL),
+        x = t?.name != null ? t.name : v.intl.string(v.t.lduvqL),
         E =
             null != n && "" !== n
-                ? N.intl.formatToPlainString(N.t["8TRAzR"], { filename: x, alt: n })
-                : N.intl.formatToPlainString(N.t.lXoOEZ, { filename: x });
+                ? v.intl.formatToPlainString(v.t["8TRAzR"], { filename: x, alt: n })
+                : v.intl.formatToPlainString(v.t.lXoOEZ, { filename: x });
     return (0, l.jsx)("div", {
         onMouseEnter: u,
         className: s()(T.mediaContainer, { [T.imageSmall]: f }),
@@ -216,7 +216,7 @@ function O(e) {
                 children: (0, l.jsx)("div", {
                     className: T.tags,
                     children: t.spoiler
-                        ? (0, l.jsx)("span", { className: T.altTag, children: N.intl.string(N.t["F+x38C"]) })
+                        ? (0, l.jsx)("span", { className: T.altTag, children: v.intl.string(v.t["F+x38C"]) })
                         : null,
                 }),
             });
@@ -312,7 +312,7 @@ function L(e) {
                 S
                     ? (0, l.jsx)(b.A, {
                           className: s()({ [T.action]: _ }),
-                          tooltip: j ? N.intl.string(N.t.MYgdY2) : N.intl.string(N.t.cuurzA),
+                          tooltip: j ? v.intl.string(v.t.MYgdY2) : v.intl.string(v.t.cuurzA),
                           onClick: () => {
                               p.A.update(t, o.id, r, { spoiler: !o.spoiler });
                           },
@@ -332,7 +332,7 @@ function L(e) {
                 S
                     ? (0, l.jsx)(b.A, {
                           className: s()({ [T.action]: _ }),
-                          tooltip: j ? N.intl.string(v.default.V8YlF7) : N.intl.string(N.t.Y8ujqr),
+                          tooltip: j ? v.intl.string(N.default.V8YlF7) : v.intl.string(v.t.Y8ujqr),
                           onClick: L,
                           children: (0, l.jsx)(h.PencilIcon, {
                               size: "xs",
@@ -343,7 +343,7 @@ function L(e) {
                     : null,
                 (0, l.jsx)(b.A, {
                     className: s()({ [T.action]: _ }),
-                    tooltip: j ? N.intl.string(N.t.MskAXa) : N.intl.string(N.t.vN7REz),
+                    tooltip: j ? v.intl.string(v.t.MskAXa) : v.intl.string(v.t.vN7REz),
                     onClick: R,
                     dangerous: !0,
                     children: (0, l.jsx)(m.TrashIcon, {

@@ -24,11 +24,11 @@ function I(e) {
     let { children: t, className: n } = e;
     return (0, l.jsx)("div", { className: s()(b.um, n), children: t });
 }
-function N(e) {
+function v(e) {
     let { children: t, className: n } = e;
     return (0, l.jsx)("div", { className: s()(b.Ov, n), children: t });
 }
-function v(e) {
+function N(e) {
     let { children: t, className: n } = e;
     return (0, l.jsx)("div", { className: s()(b.wq, n), children: t });
 }
@@ -230,7 +230,7 @@ let J = function (e) {
     return (0, l.jsxs)(I, {
         className: X.UX,
         children: [
-            (0, l.jsx)(N, { children: (0, l.jsx)(T, { children: w.intl.format(w.t.uEky42, { count: t.length }) }) }),
+            (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: w.intl.format(w.t.uEky42, { count: t.length }) }) }),
             (0, l.jsx)(_, { children: r }),
         ],
     });
@@ -247,8 +247,8 @@ function er(e) {
     return (0, l.jsxs)(I, {
         children: [
             (null != t.emojiId || null != t.emojiName) &&
-                (0, l.jsx)(v, { children: (0, l.jsx)(el.A, { emojiId: t.emojiId, emojiName: t.emojiName }) }),
-            (0, l.jsx)(N, { children: (0, l.jsx)(T, { children: t.name }) }),
+                (0, l.jsx)(N, { children: (0, l.jsx)(el.A, { emojiId: t.emojiId, emojiName: t.emojiName }) }),
+            (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: t.name }) }),
             null != n && (0, l.jsx)(_, { children: n }),
         ],
     });
@@ -326,7 +326,7 @@ class eg extends ep {
             i = (0, l.jsx)(T, { children: e });
         return (0, l.jsxs)(I, {
             children: [
-                (0, l.jsx)(N, { children: null != n ? (0, l.jsxs)("div", { className: b.QN, children: [i, n] }) : i }),
+                (0, l.jsx)(v, { children: null != n ? (0, l.jsxs)("div", { className: b.QN, children: [i, n] }) : i }),
                 null != t ? (0, l.jsx)(_, { children: t }) : null,
             ],
         });
@@ -338,7 +338,7 @@ function ex(e) {
         className: b.E3,
         "aria-busy": !0,
         children: (0, l.jsx)(I, {
-            children: (0, l.jsx)(N, {
+            children: (0, l.jsx)(v, {
                 children: (0, l.jsx)(T, { children: (0, l.jsx)("div", { className: b.M, style: { width: t } }) }),
             }),
         }),
@@ -371,7 +371,7 @@ class ey extends ep {
             s = null == r ? eu.A.getNickname(e.id) : null;
         return (0, l.jsxs)(I, {
             children: [
-                (0, l.jsx)(v, {
+                (0, l.jsx)(N, {
                     children: (0, l.jsx)(h.eu, {
                         size: m._3.SIZE_24,
                         src: e.getAvatarURL(r, 24),
@@ -379,7 +379,7 @@ class ey extends ep {
                         status: n,
                     }),
                 }),
-                (0, l.jsx)(N, { children: (0, l.jsx)(T, { children: t ?? s ?? ed.Ay.getName(e) }) }),
+                (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: t ?? s ?? ed.Ay.getName(e) }) }),
                 (0, l.jsxs)(_, {
                     children: [
                         ed.Ay.getUserTag(e, { mode: "username", identifiable: i ? "never" : "always" }),
@@ -409,7 +409,7 @@ class eC extends ep {
             m = o ? { ...(c ? d : { color: null != i ? i : void 0 }) } : void 0;
         return (0, l.jsxs)(I, {
             children: [
-                (0, l.jsx)(N, {
+                (0, l.jsx)(v, {
                     children: (0, l.jsxs)(T, {
                         children: [
                             a && (0, l.jsx)(p.W, { className: b.m4, color: i, colors: u, tooltip: !1 }),
@@ -432,7 +432,7 @@ class eA extends ep {
         let { timestamp: e, description: t } = this.props;
         return (0, l.jsxs)(I, {
             children: [
-                (0, l.jsx)(N, {
+                (0, l.jsx)(v, {
                     children: (0, l.jsx)(T, { children: (0, l.jsx)(et.A, { node: e, showTooltip: !1 }) }),
                 }),
                 null != t ? (0, l.jsx)(_, { children: t }) : null,
@@ -446,8 +446,8 @@ class eb extends ep {
             n = e.type === $.rbe.GUILD_CATEGORY ? g.FolderIcon : (0, F.gU)(e);
         return (0, l.jsxs)(I, {
             children: [
-                null != n && (0, l.jsx)(v, { children: (0, l.jsx)(n, { className: b.Kk }) }),
-                (0, l.jsx)(N, { children: (0, l.jsx)(T, { children: (0, W.m1)(e, ec.default, eu.A) }) }),
+                null != n && (0, l.jsx)(N, { children: (0, l.jsx)(n, { className: b.Kk }) }),
+                (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: (0, W.m1)(e, ec.default, eu.A) }) }),
                 null != t ? (0, l.jsx)(_, { children: t.name }) : null,
             ],
         });
@@ -458,16 +458,16 @@ class eI extends ep {
         let { command: e } = this.props;
         return (0, l.jsxs)(I, {
             children: [
-                (0, l.jsx)(v, {
+                (0, l.jsx)(N, {
                     children: (0, l.jsx)(x.F, { size: "xs", color: "currentColor", className: b.Kk, colorClass: b.t4 }),
                 }),
-                (0, l.jsx)(N, { children: (0, l.jsx)(T, { children: e.displayName }) }),
+                (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: e.displayName }) }),
                 (0, l.jsx)(_, { children: e.displayDescription }),
             ],
         });
     }
 }
-class eN extends ep {
+class ev extends ep {
     isSelectable() {
         return this.props.command.inputType !== S.y$.PLACEHOLDER;
     }
@@ -487,7 +487,7 @@ class eN extends ep {
               });
     }
 }
-class ev extends ep {
+class eN extends ep {
     layoutClass = s()(b.rT, b.Mf);
     renderContent() {
         let { emoji: e, sentinel: t, guild: n } = this.props,
@@ -510,8 +510,8 @@ class ev extends ep {
             s = null != n ? (0, l.jsx)(_, { children: n.name }) : null;
         return (0, l.jsxs)(I, {
             children: [
-                (0, l.jsx)(v, { children: r }),
-                (0, l.jsx)(N, { children: (0, l.jsxs)(T, { children: [t, e.name, t] }) }),
+                (0, l.jsx)(N, { children: r }),
+                (0, l.jsx)(v, { children: (0, l.jsxs)(T, { children: [t, e.name, t] }) }),
                 s,
             ],
         });
@@ -529,8 +529,8 @@ class eT extends ep {
                 : (0, ea.Xw)(r) && (e = ei.A.getGuild(r.guild_id)?.name),
             (0, l.jsxs)(I, {
                 children: [
-                    (0, l.jsx)(v, { children: n(r, s || !0 === i) }),
-                    (0, l.jsxs)(N, {
+                    (0, l.jsx)(N, { children: n(r, s || !0 === i) }),
+                    (0, l.jsxs)(v, {
                         children: [
                             (0, l.jsx)(T, { children: r.name }),
                             null != t && (0, l.jsx)(j, { children: w.intl.format(w.t.PAutaQ, { queryMatch: t }) }),
@@ -563,8 +563,8 @@ class eR extends ep {
     renderContent() {
         return (0, l.jsxs)(I, {
             children: [
-                (0, l.jsx)(v, { children: (0, l.jsx)(Y.A, { game: this.props.game, iconClassName: b.Kk }) }),
-                (0, l.jsx)(N, { children: (0, l.jsx)(T, { children: this.props.game.name }) }),
+                (0, l.jsx)(N, { children: (0, l.jsx)(Y.A, { game: this.props.game, iconClassName: b.Kk }) }),
+                (0, l.jsx)(v, { children: (0, l.jsx)(T, { children: this.props.game.name }) }),
                 (0, l.jsx)(ee.A, {
                     platforms: this.props.game.platformAvailability,
                     location: "game_mention_autocomplete",
@@ -582,8 +582,8 @@ class eO extends i.PureComponent {
     static Role = eC;
     static Channel = eb;
     static Command = eI;
-    static NewCommand = eN;
-    static Emoji = ev;
+    static NewCommand = ev;
+    static Emoji = eN;
     static GIFIntegration = ej;
     static Sticker = eT;
     static EmojiUpsell = e_;

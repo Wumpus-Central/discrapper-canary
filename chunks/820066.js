@@ -89,10 +89,10 @@ for (let e in m.Ay.RULES) {
             `Slate: Unknown markdown rule: ${e}.  If you have just added a new markdown rule then you probably need to add it to this file so that the rich chat box understands it.`,
         );
     let t = S[e];
-    ("skip" !== t.type && (b[e] = N(m.Ay.RULES[e])),
-        "skip" !== t.type && "inlineObject" !== t.type && (I[e] = N("text" === e ? f.Ay : m.Ay.RULES[e])));
+    ("skip" !== t.type && (b[e] = v(m.Ay.RULES[e])),
+        "skip" !== t.type && "inlineObject" !== t.type && (I[e] = v("text" === e ? f.Ay : m.Ay.RULES[e])));
 }
-function N(e) {
+function v(e) {
     i()(null != e.parse, "Slate: rule must have a parse function");
     let t = e.parse;
     return {
@@ -103,7 +103,7 @@ function N(e) {
         },
     };
 }
-function v(e) {
+function N(e) {
     return { type: "autolink", content: e[1], originalMatch: e };
 }
 let T = {
@@ -114,10 +114,10 @@ let T = {
                     : { type: "link", content: e[1], originalMatch: e },
         },
         autolink: {
-            parse: (e) => (null == (0, h.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : v(e)),
+            parse: (e) => (null == (0, h.W1)(e[1]) ? { type: "text", content: e[0], originalMatch: e } : N(e)),
         },
-        mailto: { parse: v },
-        tel: { parse: v },
+        mailto: { parse: N },
+        tel: { parse: N },
         codeBlockSyntax: {
             order: u.defaultRules.inlineCode.order - 0.1,
             match: (e) => /^(```)([a-z0-9_+\-.#]+$)?/.exec(e),

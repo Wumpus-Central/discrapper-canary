@@ -5,8 +5,8 @@ var l = n(477900),
     r = n(164892),
     s = n(712808),
     u = n(922329),
-    d = n(261425),
-    o = n(660183),
+    o = n(261425),
+    d = n(660183),
     c = n(986109);
 function m(e) {
     let { projectId: t, attachments: n } = e,
@@ -41,7 +41,7 @@ function f(e) {
 }
 function h(e) {
     let { name: t, unavailable: n = !1 } = e,
-        a = n ? o.intl.formatToPlainString(d.default.nd81jR, { name: t }) : t;
+        a = n ? d.intl.formatToPlainString(o.default.nd81jR, { name: t }) : t;
     return (0, l.jsx)(u.p, { name: a, compact: !0 });
 }
 function g(e) {
@@ -64,7 +64,7 @@ function g(e) {
         : (0, l.jsx)(u.n, {
               name: i,
               thumbSrc: null,
-              ariaLabel: o.intl.formatToPlainString(d.default["g5+7Vs"], { name: i }),
+              ariaLabel: d.intl.formatToPlainString(o.default["g5+7Vs"], { name: i }),
               onClick: m,
           });
 }
@@ -73,7 +73,7 @@ function x(e) {
         { id: f, name: g } = n[r],
         [x, p] = a.useState(null),
         k = c.has(f),
-        [j, v] = a.useState(0);
+        [v, j] = a.useState(0);
     a.useEffect(() => {
         let e = !1;
         return (
@@ -87,7 +87,7 @@ function x(e) {
                 e = !0;
             }
         );
-    }, [t, f, j]);
+    }, [t, f, v]);
     let b = a.useCallback(() => {
         Promise.all(
             n.map(async (e) => (c.has(e.id) ? null : { type: "IMAGE", url: await (0, s.PK)(t, e.id), alt: e.name })),
@@ -109,13 +109,13 @@ function x(e) {
         : (0, l.jsx)(u.n, {
               name: g,
               thumbSrc: x,
-              ariaLabel: o.intl.formatToPlainString(d.default.GtNukg, { name: g }),
+              ariaLabel: d.intl.formatToPlainString(o.default.GtNukg, { name: g }),
               onClick: b,
               onThumbError: () => {
                   (p(null),
                       (0, s.n6)(t, f).then(
                           (e) => {
-                              e ? 0 === j && v(1) : m(f);
+                              e ? 0 === v && j(1) : m(f);
                           },
                           () => {},
                       ));

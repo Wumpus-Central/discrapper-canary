@@ -14,8 +14,8 @@ function u(e) {
             fps: u,
             interactive: c = !1,
             paused: d = !1,
-            drawWidth: f,
-            className: m,
+            drawWidth: m,
+            className: f,
             "aria-label": h,
             onStateChange: g,
         } = e,
@@ -42,7 +42,7 @@ function u(e) {
             [t, l],
         ),
         w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-        N = null == f ? 0 : Math.round(f * Math.min(w, 2)),
+        N = null == m ? 0 : Math.round(m * Math.min(w, 2)),
         A = (0, i.KK)(t, l, { fps: u, onFrame: k, enabled: !d && y, width: N }),
         S = (0, i.AV)(t, l),
         C = a.useRef(S);
@@ -117,7 +117,7 @@ function u(e) {
     }
     return (0, n.jsx)("canvas", {
         ref: x,
-        className: m,
+        className: f,
         role: c ? "application" : "img",
         "aria-label": h,
         tabIndex: c ? 0 : -1,

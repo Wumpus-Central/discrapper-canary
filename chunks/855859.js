@@ -1,8 +1,8 @@
-n.d(t, { b: () => s, x: () => o });
+n.d(t, { b: () => i, x: () => o });
 var r = n(582128);
-let i = new Set();
-function s(e, t) {
-    for (let n of i) n(e, t);
+let s = new Set();
+function i(e, t) {
+    for (let n of s) n(e, t);
 }
 function o(e, t) {
     let n = r.useRef(t);
@@ -15,9 +15,9 @@ function o(e, t) {
                 t === e && n.current(r);
             };
             return (
-                i.add(t),
+                s.add(t),
                 () => {
-                    i.delete(t);
+                    s.delete(t);
                 }
             );
         }, [e]));

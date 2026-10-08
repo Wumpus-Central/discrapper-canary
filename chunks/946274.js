@@ -1,8 +1,8 @@
 i.d(t, { AM: () => p, Ay: () => u, JF: () => h, gA: () => o });
 var n = i(477900),
     a = i(582128),
-    s = i(780777),
-    l = i(693591),
+    l = i(780777),
+    s = i(693591),
     r = i(660183);
 function o() {
     return [{ name: r.intl.string(r.t["Sp2NF+"]), extensions: ["jpg", "jpeg", "jfif", "png", "gif", "webp", "avif"] }];
@@ -18,7 +18,7 @@ function p(e, t) {
 }
 function h(e, t, i) {
     p(e, (n) => {
-        if (e.type === l.a.MP4) return t(n, e);
+        if (e.type === s.a.MP4) return t(n, e);
         let a = new Image();
         ((a.src = n),
             (a.onload = () => {
@@ -67,12 +67,12 @@ class d extends a.PureComponent {
             disabled: t,
             className: i,
             tabIndex: a,
-            "aria-label": l,
+            "aria-label": s,
             "aria-hidden": r,
             filters: p,
             title: h,
         } = this.props;
-        return (0, n.jsx)(s.A, {
+        return (0, n.jsx)(l.A, {
             ref: this._ref,
             onClick: this.props.onClick,
             onChange: this.handleFileChange,
@@ -81,7 +81,7 @@ class d extends a.PureComponent {
             disabled: t,
             className: i,
             tabIndex: a,
-            "aria-label": l,
+            "aria-label": s,
             "aria-hidden": r,
             title: h,
         });

@@ -1,8 +1,8 @@
 l.d(t, { F6: () => h, T4: () => v, UF: () => p, zE: () => j });
 var n = l(582128),
     i = l(17928),
-    a = l(290595),
-    s = l(419954),
+    s = l(290595),
+    a = l(419954),
     r = l(885386),
     d = l(311059),
     c = l(641216),
@@ -12,7 +12,7 @@ var n = l(582128),
     x = l(652215);
 function h(e, t) {
     let { useTitle: l, useDisabled: n } = t;
-    return (0, s.zD)("guild_space_sharing_modal_guild_activity_sharing_setting", {
+    return (0, a.zD)("guild_space_sharing_modal_guild_activity_sharing_setting", {
         useTitle: l,
         useSubtitle: () => (0, i.bG)([u.A], () => u.A.getGuild(e)?.name),
         useValue: () => !r.JG.useSetting().includes(e),
@@ -28,17 +28,17 @@ function g() {
     f = null;
 }
 function j() {
-    o.A.fetchedConsents || null != f || (f = (0, a.Q)().then(g, g));
+    o.A.fetchedConsents || null != f || (f = (0, s.Q)().then(g, g));
 }
 function v(e) {
     n.useEffect(j, []);
     let t = r.tz.useSetting(),
         l = !r.JG.useSetting().includes(e),
-        { hasFetchedConsents: a, hasPersonalizationConsent: s } = (0, i.cf)([o.A], () => ({
+        { hasFetchedConsents: s, hasPersonalizationConsent: a } = (0, i.cf)([o.A], () => ({
             hasFetchedConsents: o.A.fetchedConsents,
             hasPersonalizationConsent: o.A.hasConsented(x.YAq.PERSONALIZATION),
         }));
-    return { isSharingActivity: t, isSharingActivityInGuild: l, hasFetchedConsents: a, hasPersonalizationConsent: s };
+    return { isSharingActivity: t, isSharingActivityInGuild: l, hasFetchedConsents: s, hasPersonalizationConsent: a };
 }
 function p(e) {
     let { guildId: t, useGuildSharingTitle: l } = e;

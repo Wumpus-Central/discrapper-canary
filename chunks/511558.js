@@ -22,8 +22,8 @@ var E = n(675816),
     A = n(406810),
     b = n(111159),
     I = n(7689),
-    N = n(369606),
-    v = n(939249),
+    v = n(369606),
+    N = n(939249),
     T = n(297264),
     j = n(358618),
     _ = n(983851),
@@ -91,8 +91,8 @@ let K = (0, U.throttle)(
             A = i.useRef(!1),
             b = i.useRef(null),
             I = (0, d.RQ)((e) => e.searchQuery),
-            N = n.useStore((e) => e.activeCategoryIndex),
-            v = i.useMemo(
+            v = n.useStore((e) => e.activeCategoryIndex),
+            N = i.useMemo(
                 () =>
                     t.map((e) =>
                         (0, W.Em)(e.categoryInfo)
@@ -102,7 +102,7 @@ let K = (0, U.throttle)(
                 [t],
             ),
             T = (0, D.Fk)({
-                activeCategoryIndex: N,
+                activeCategoryIndex: v,
                 isScrolling: A,
                 listRef: b,
                 onActiveCategoryIndexChange: n.setActiveCategoryIndex,
@@ -115,20 +115,20 @@ let K = (0, U.throttle)(
                         K({
                             listRef: b,
                             searchQuery: I,
-                            nitroLockedSectionStates: v,
+                            nitroLockedSectionStates: N,
                             scrollTop: e,
                             sectionHeaderHeight: x,
                             sectionFooterHeight: E,
                         }),
                         y?.(e));
                 },
-                [T, I, v, x, E, y],
+                [T, I, N, x, E, y],
             );
         return (
             i.useEffect(() => {
                 null != b.current && j(b.current.getScrollerNode()?.scrollTop ?? 0);
             }, [j, b]),
-            (0, D.FV)({ searchQuery: I, activeCategoryIndex: N, listRef: b }),
+            (0, D.FV)({ searchQuery: I, activeCategoryIndex: v, listRef: b }),
             i.useImperativeHandle(
                 C,
                 () => ({
@@ -270,8 +270,8 @@ function X(e) {
             renderHeaderAccessories: A,
             rowHeight: b,
             sectionHeaderHeight: I,
-            sectionFooterHeight: N,
-            itemNodeWidth: v,
+            sectionFooterHeight: v,
+            itemNodeWidth: N,
             listPaddingRight: T,
             itemNodeMargin: j,
             listPadding: _,
@@ -298,7 +298,7 @@ function X(e) {
             collapsedCategories: n,
             gridWidth: F,
             listPaddingRight: T,
-            itemNodeWidth: v,
+            itemNodeWidth: N,
             itemNodeMargin: j,
         }),
         {
@@ -392,7 +392,7 @@ function X(e) {
                                             rowCountBySection: H,
                                             rowHeight: b,
                                             sectionHeaderHeight: I,
-                                            sectionFooterHeight: N,
+                                            sectionFooterHeight: v,
                                             renderUpsell: L,
                                             onScroll: u,
                                         })
@@ -431,14 +431,14 @@ var ef = n(964486),
     eA = n(73153),
     eb = n(463347),
     eI = n(125831),
-    eN = n(945810);
-let ev = (0, eN.mj)({
+    ev = n(945810);
+let eN = (0, ev.mj)({
     kind: "user",
     name: "2026-08-top-soundboard-sounds",
     defaultConfig: { enabled: !1, topSoundsFirst: !1 },
     variations: { 1: { enabled: !0, topSoundsFirst: !0 }, 2: { enabled: !0, topSoundsFirst: !1 } },
 });
-(0, eN.mj)({
+(0, ev.mj)({
     kind: "user",
     name: "2026-08-top-soundboard-sounds-mobile",
     defaultConfig: { enabled: !1, topSoundsFirst: !1 },
@@ -517,7 +517,7 @@ function eY(e) {
     let { children: t, className: n, isSelected: r, listItemProps: s, onClick: a } = e,
         o = i.useRef(null),
         { isHoveringOrFocusing: u } = (0, eG.A)(o);
-    return (0, l.jsxs)(v.D, {
+    return (0, l.jsxs)(N.D, {
         innerRef: o,
         ...s,
         className: n,
@@ -562,7 +562,7 @@ function e1(e, t, n, i, r) {
         case ec.Cx.DEFAULTS:
             return (0, l.jsx)(e0, { icon: b.p, onClick: t, isSelected: n, listItemProps: i }, e.key);
         case ec.Cx.TOP_SOUNDS:
-            return (0, l.jsx)(e0, { icon: N.TrophyIcon, onClick: t, isSelected: n, listItemProps: i }, e.key);
+            return (0, l.jsx)(e0, { icon: v.TrophyIcon, onClick: t, isSelected: n, listItemProps: i }, e.key);
         default:
             return null;
     }
@@ -705,7 +705,7 @@ function tc(e) {
               children: [
                   (0, l.jsx)(e4.E, { size: "custom", width: 20, height: 20, color: "currentColor", className: tu.QW }),
                   (0, l.jsx)(e9.E, { variant: "text-sm/medium", color: "text-default", className: tu.L5, children: p }),
-                  (0, l.jsx)(v.D, {
+                  (0, l.jsx)(N.D, {
                       className: tu.b,
                       onClick: function () {
                           return (0, tl.Dr)(eP.M.SOUNDBOARD_KEYBIND_TIP);
@@ -841,7 +841,7 @@ function tb(e) {
             o && (0, l.jsx)(et.Ay, { className: ty.yH }),
             (0, l.jsx)("div", {
                 className: s()(ty.hd, { [ty.Jb]: a, [ty.VD]: a }),
-                children: (0, l.jsx)(v.D, {
+                children: (0, l.jsx)(N.D, {
                     className: ty.bV,
                     onClick: r,
                     onKeyDown: (e) => e.stopPropagation(),
@@ -881,7 +881,7 @@ function tb(e) {
                                             className: ty.nr,
                                         });
                                     case ec.Cx.TOP_SOUNDS:
-                                        return (0, l.jsx)(N.TrophyIcon, {
+                                        return (0, l.jsx)(v.TrophyIcon, {
                                             size: "xs",
                                             color: "currentColor",
                                             className: ty.nr,
@@ -926,12 +926,12 @@ function tb(e) {
 function tI() {
     return (0, l.jsx)(R.A, { message: eW.intl.string(eW.t.bgDdNK) });
 }
-function tN(e) {
+function tv(e) {
     let { className: t } = e,
         n = (0, y.bG)([g.A], () => g.A.isSoundboardVolumeMuted()) ? j._ : _.H;
     return (0, l.jsx)(n, { size: "md", color: "currentColor", className: t });
 }
-function tv(e) {
+function tN(e) {
     let {
             guildId: t,
             channel: r,
@@ -946,7 +946,7 @@ function tv(e) {
             listPadding: A,
             renderHeader: b,
             defaultSoundsOnly: I = !1,
-            inExpressionPicker: N,
+            inExpressionPicker: v,
             analyticsSource: T,
         } = e,
         { analyticsLocations: j } = (0, c.Ay)(),
@@ -982,7 +982,7 @@ function tv(e) {
         }
     }, [Q]);
     let {
-            categories: eN,
+            categories: ev,
             availableSounds: eP,
             soundCounts: eD,
         } = (function (e) {
@@ -1026,7 +1026,7 @@ function tv(e) {
                         t = null != e ? eg.A.getChannel(e) : null;
                     return t?.guild_id != null ? ex.A.getGuild(t.guild_id) : void 0;
                 }),
-                { enabled: C, topSoundsFirst: A } = ev.getConfig({ location: "useSoundGrid" });
+                { enabled: C, topSoundsFirst: A } = eN.getConfig({ location: "useSoundGrid" });
             (0, ef.Ay)(() => {
                 C &&
                     (function (e) {
@@ -1034,7 +1034,7 @@ function tv(e) {
                         if (
                             null == e ||
                             null == es.default.getCurrentUser() ||
-                            !ev.getConfig({ location: "maybeFetchTopSoundboardSoundsByGuild" }).enabled
+                            !eN.getConfig({ location: "maybeFetchTopSoundboardSoundsByGuild" }).enabled
                         )
                             return;
                         let n = g.A.getTopSoundboardSoundsMetadata(e);
@@ -1169,8 +1169,8 @@ function tv(e) {
         })(r, void 0, I),
         [eU, eV] = i.useState([]),
         eF = i.useMemo(
-            () => (H.length > 0 ? [{ key: ec.Cx.SEARCH, categoryInfo: { type: ec.Cx.SEARCH }, items: eO(eU) }] : eN),
-            [eN, H.length, eU],
+            () => (H.length > 0 ? [{ key: ec.Cx.SEARCH, categoryInfo: { type: ec.Cx.SEARCH }, items: eO(eU) }] : ev),
+            [ev, H.length, eU],
         ),
         eB = (0, d.RQ)((e) => e.isNitroLockedSectionVisible),
         eK = i.useMemo(() => eF.filter((e) => e.items.length > 0), [eF]),
@@ -1267,7 +1267,7 @@ function tv(e) {
                                     buttonOverlay: C,
                                     isNitroLocked: c,
                                     showLockForDisabledSound: p,
-                                    inExpressionPicker: N,
+                                    inExpressionPicker: v,
                                 },
                                 s,
                             );
@@ -1276,7 +1276,7 @@ function tv(e) {
                     `row-${n["aria-rowindex"]}`,
                 );
             },
-            [eK, p, B, t, f, e0, r, eZ, eX, G, j, C, eH, N, $, eo, Q],
+            [eK, p, B, t, f, e0, r, eZ, eX, G, j, C, eH, v, $, eo, Q],
         ),
         e2 = i.useCallback(
             (e, t) => {
@@ -1367,7 +1367,7 @@ function tv(e) {
         ),
         ti = i.useCallback(
             () =>
-                N
+                v
                     ? (0, l.jsx)(Y.Gq, {
                           renderPopout: () => (0, l.jsx)(Y.qn, {}),
                           tooltipText: eW.intl.string(eW.t["19lt24"]),
@@ -1375,26 +1375,26 @@ function tv(e) {
                           clickableClassName: s()(ty.Jm, ty.Zz),
                           children: (0, l.jsx)(_.H, { size: "md", color: "currentColor", className: ty.By }),
                       })
-                    : (0, l.jsx)(v.D, {
+                    : (0, l.jsx)(N.D, {
                           tabIndex: 0,
                           className: ty.Jm,
                           onClick: tl,
                           "aria-label": eW.intl.string(eW.t.kbFsAD),
-                          children: (0, l.jsx)(tN, { className: ty.By }),
+                          children: (0, l.jsx)(tv, { className: ty.By }),
                       }),
-            [N, tl],
+            [v, tl],
         ),
         tr = i.useCallback(
             (e) =>
                 (0, l.jsx)(e5, {
                     soundboardListRef: e,
-                    categories: eN,
+                    categories: ev,
                     shouldUpsellLockedCategories: eH,
                     listPadding: A,
                     guildId: t,
-                    inExpressionPicker: N,
+                    inExpressionPicker: v,
                 }),
-            [eN, A, eH, t, N],
+            [ev, A, eH, t, v],
         ),
         ts = i.useCallback(() => {
             let e = (0, J.qD)();
@@ -1444,8 +1444,8 @@ function tv(e) {
             children: [
                 null != U
                     ? (0, l.jsx)(el.A, {
-                          title: eW.intl.string(N ? eW.t.rZEEvU : eW.t.jGDYF0),
-                          description: eW.intl.string(N ? eW.t.ZPNG5A : eW.t["grL/hg"]),
+                          title: eW.intl.string(v ? eW.t.rZEEvU : eW.t.jGDYF0),
+                          description: eW.intl.string(v ? eW.t.ZPNG5A : eW.t["grL/hg"]),
                           analyticsLocationSection: eT.JJy.SOUNDBOARD_SOUND_PICKER_UPSELL,
                           upsellViewedTrackingData: {
                               type: eR.e.SOUND_PICKER_SOUND_CLICKED,
@@ -1502,8 +1502,8 @@ function tj(e) {
             shouldValidateSelectedSound: A,
             shouldShowLockedSounds: b = !0,
             gridNotice: I,
-            inExpressionPicker: N,
-            soundButtonOverlay: v,
+            inExpressionPicker: v,
+            soundButtonOverlay: N,
             listPadding: T,
             renderHeader: j,
             defaultSoundsOnly: _,
@@ -1516,24 +1516,24 @@ function tj(e) {
         },
         { analyticsLocations: O } = (0, c.Ay)(u.A.SOUNDBOARD_POPOUT),
         { enabled: L } = (0, x.W)(t ?? "0", "SoundboardSoundPicker"),
-        w = N ? void 0 : { height: 520 };
+        w = v ? void 0 : { height: 520 };
     return (
         i.useEffect(() => {
             R();
         }, [R]),
         i.useEffect(() => {
-            N || (0, d.Ri)("");
-        }, [N]),
+            v || (0, d.Ri)("");
+        }, [v]),
         (0, l.jsx)(c.f5, {
             value: O,
             children: (0, l.jsxs)(a.l, {
                 style: w,
-                className: s()(tT.Nz, { [tT.Bg]: k, [tT.yV]: N }),
+                className: s()(tT.Nz, { [tT.Bg]: k, [tT.yV]: v }),
                 children: [
                     null != t && n?.id != null && L ? (0, l.jsx)(h.A, { guildId: t, channelId: n.id }) : null,
                     k
                         ? (0, l.jsx)(o.y, {})
-                        : (0, l.jsx)(tv, {
+                        : (0, l.jsx)(tN, {
                               guildId: t,
                               channel: n,
                               onClose: E,
@@ -1543,11 +1543,11 @@ function tj(e) {
                               suppressPlaySound: C,
                               shouldShowLockedSounds: b,
                               gridNotice: I,
-                              soundButtonOverlay: v,
+                              soundButtonOverlay: N,
                               listPadding: T,
                               renderHeader: j,
                               defaultSoundsOnly: _,
-                              inExpressionPicker: N,
+                              inExpressionPicker: v,
                               analyticsSource: y,
                           }),
                 ],

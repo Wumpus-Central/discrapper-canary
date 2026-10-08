@@ -1,1 +1,1 @@
-e.exports = { b: "switcher__36487", u: "option__36487" };
+_.exports = { b: "switcher__36487", u: "option__36487" };

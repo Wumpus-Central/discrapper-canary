@@ -1,6 +1,6 @@
-l.d(n, { g: () => i });
-var t = l(288106);
+t.d(n, { g: () => i });
+var l = t(288106);
 let r = new Set(["gift_customization", "sku_gift_badge"]);
 function i(e) {
-    return r.has(e) ? t.QK.GIFT : t.QK.SELF_PURCHASE;
+    return r.has(e) ? l.QK.GIFT : l.QK.SELF_PURCHASE;
 }

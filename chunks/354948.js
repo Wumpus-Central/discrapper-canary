@@ -15,8 +15,8 @@ var s = n(477900),
     E = n(91871),
     f = n.n(E),
     g = n(435558),
-    y = n.n(g),
-    A = n(96337),
+    A = n.n(g),
+    y = n(96337),
     x = n(404778),
     I = n(683438),
     w = n(305866),
@@ -28,7 +28,7 @@ var s = n(477900),
     b = n(650583),
     T = n(858918),
     k = n(221851);
-let P = y().memoize((e) => {
+let P = A().memoize((e) => {
     let t = !1;
     if (null != e && (0, C.qt)(e)) {
         let n = (0, C.LX)(e);
@@ -117,7 +117,7 @@ class $ extends r.PureComponent {
     }
     renderItems() {
         let { query: e } = this.state,
-            t = A.A.flatMap((e, t) => {
+            t = y.A.flatMap((e, t) => {
                 let { alpha2: n, phoneCountryCodes: r, name: a } = e,
                     i = (0, K.Gw)(n);
                 return r.map((e) => ({
@@ -136,7 +136,7 @@ class $ extends r.PureComponent {
                     }),
                 }));
             }),
-            n = y()(t)
+            n = A()(t)
                 .filter(
                     (t) =>
                         0 === e.length ||
@@ -244,8 +244,8 @@ function J(e) {
             setRef: E,
             placeholder: f,
             autoFocus: g,
-            maxLength: y,
-            spellCheck: A,
+            maxLength: A,
+            spellCheck: y,
             autoComplete: x,
             autoCapitalize: I,
             autoCorrect: w,
@@ -283,8 +283,8 @@ function J(e) {
                         autoCapitalize: I,
                         autoCorrect: w,
                         autoFocus: g,
-                        maxLength: y,
-                        spellCheck: A,
+                        maxLength: A,
+                        spellCheck: y,
                         className: V.I6,
                         inputClassName: V.LF,
                         onFocus: () => j(!0),

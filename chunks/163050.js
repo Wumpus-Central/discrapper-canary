@@ -15,8 +15,8 @@ var s = n(477900),
     E = n(572469),
     f = n(976860),
     g = n(210714),
-    y = n(280450),
-    A = n(625494),
+    A = n(280450),
+    y = n(625494),
     x = n(652215),
     I = n(660183),
     w = n(498206),
@@ -48,7 +48,7 @@ class v extends r.PureComponent {
         let { location: t, onLoginSuccess: n, source: s, resetToken: r } = this.props,
             { password: a, error: i } = this.state;
         if ((e.preventDefault(), 0 === a.length)) {
-            (this.setState({ error: I.intl.string(I.t.R98xD5) }), A._.dispatch(x.jej.WAVE_EMPHASIZE));
+            (this.setState({ error: I.intl.string(I.t.R98xD5) }), y._.dispatch(x.jej.WAVE_EMPHASIZE));
             return;
         }
         null != i && this.setState({ error: null });
@@ -197,9 +197,9 @@ class v extends r.PureComponent {
     }
 }
 let S = function (e) {
-    let t = (0, l.cf)([y.default], () => ({
-        mfaTicket: y.default.getMFATicket(),
-        mfaMethods: y.default.getMFAMethods(),
+    let t = (0, l.cf)([A.default], () => ({
+        mfaTicket: A.default.getMFATicket(),
+        mfaMethods: A.default.getMFAMethods(),
     }));
     return (0, s.jsx)(v, { ...e, ...t });
 };
