@@ -12051,7 +12051,7 @@ class E5 extends T.Component {
             user_ids: Array.from(this.state.userIds),
             allowed_versions: this.isMobile() ? this.state.allowedVersions : void 0,
             allow_logged_out: this.state.allowLoggedOut,
-            experiments: null == this.state.experiments ? null : JSON.parse(this.state.experiments),
+            experiments: this.isMobile() || null == this.state.experiments ? null : JSON.parse(this.state.experiments),
         },
     });
     handleGenerateLink = async () => {
@@ -12141,15 +12141,17 @@ class E5 extends T.Component {
                           onBlur: () => this.setUserEntryError(""),
                           onChange: this.handleUserIDEntry,
                       }),
-                (0, S.jsx)(EX.f, {
-                    label: "Client Experiment Override",
-                    description:
-                        "Locally override the given experiments to the given bucket. This ONLY applies locally and WILL NOT affect the server. When the user clears build override, the experiment override is removed as well.",
-                    value: o,
-                    error: u,
-                    onChange: this.handleExperiments,
-                    placeholder: '{"2022-01_threads":1}',
-                }),
+                this.isMobile()
+                    ? null
+                    : (0, S.jsx)(EX.f, {
+                          label: "Client Experiment Override",
+                          description:
+                              "Locally override the given experiments to the given bucket. This ONLY applies locally and WILL NOT affect the server. When the user clears build override, the experiment override is removed as well.",
+                          value: o,
+                          error: u,
+                          onChange: this.handleExperiments,
+                          placeholder: '{"2022-01_threads":1}',
+                      }),
                 (0, S.jsx)(t7.d, { label: "Allow logged out users", checked: a, onChange: this.handleAllowLoggedOut }),
             ],
         });
