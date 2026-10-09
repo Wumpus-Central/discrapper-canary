@@ -1915,7 +1915,9 @@ class tt extends m.A {
     }
     receivedStats(e, t, n) {
         let i = t.transport,
-            r = (0, eE.isWeb)() ? 1 : (i.receiverReports?.length ?? 0),
+            r = (0, eE.isWeb)()
+                ? 1
+                : new Set(i.receiverReports?.filter((e) => null != this.outboundStats[e.ssrc]).map((e) => e.id)).size,
             a = new Set(),
             s = new Set();
         this.updateSendState({ receivers: r });

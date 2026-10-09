@@ -1,9 +1,10 @@
-a.exports = {
+_.exports = {
     HA: "channelName__7c7a6",
     Xh: "username__7c7a6",
     l5: "kvContainer__7c7a6",
     AS: "item__7c7a6",
     R$: "itemValue__7c7a6",
+    A0: "receiverReportRow__7c7a6",
     nm: "valueIcon__7c7a6",
     DD: "title__7c7a6",
     yF: "divider__7c7a6",
