@@ -24,12 +24,12 @@ function h(e) {
         { width: f, height: x } = m,
         g = n?.length ?? 0,
         C = f - 16,
-        y = x - (h + p),
+        j = x - (h + p),
         {
-            tileStyle: j,
+            tileStyle: y,
             tileWidth: I,
             rows: N,
-            columns: v,
+            columns: E,
         } = l.useMemo(
             () =>
                 (function (e, t, n) {
@@ -59,33 +59,33 @@ function h(e) {
                         (h = Math.ceil(i / (o = d(s, l)))),
                         { tileWidth: s, columns: Math.max(1, o), rows: h });
                     return { tileStyle: { width: A }, tileWidth: A, rows: p, columns: m };
-                })(g, C, y),
-            [g, C, y],
+                })(g, C, j),
+            [g, C, j],
         ),
-        E = v + 1,
-        b = E * I + (E - 1) * 8 <= f,
+        v = E + 1,
+        b = v * I + (v - 1) * 8 <= f,
         _ = Math.floor(I / c) + 8,
-        T = Math.max(0, y - _ * N) / 2;
+        S = Math.max(0, j - _ * N) / 2;
     return (0, i.jsx)(r.A, {
         fade: !0,
         className: t,
-        listPadding: [h + T, 0, p + T - 8, 8],
+        listPadding: [h + S, 0, p + S - 8, 8],
         renderRow: function (e) {
-            let t = e * v;
+            let t = e * E;
             return (0, i.jsx)(
                 "div",
                 {
                     className: o.nM,
-                    children: n?.slice(t, t + v)?.map((e, n) => {
+                    children: n?.slice(t, t + E)?.map((e, n) => {
                         let l = t + n;
                         return (0, i.jsx)(
                             "div",
                             {
-                                style: j,
+                                style: y,
                                 className: s()(o.Vs, {
                                     [o.E3]: b,
-                                    [o.k4]: l >= (N - 1) * v,
-                                    [o.Kk]: (l + 1) % v == 0 || l === g - 1,
+                                    [o.k4]: l >= (N - 1) * E,
+                                    [o.Kk]: (l + 1) % E == 0 || l === g - 1,
                                 }),
                                 children: (0, i.jsx)("div", { className: o.eP, children: e(I) }),
                             },

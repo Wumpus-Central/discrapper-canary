@@ -1,1 +1,1 @@
-p.exports = { F: "thumb__50615" };
+e.exports = { F: "thumb__50615" };

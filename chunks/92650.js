@@ -39,7 +39,7 @@ function x(e) {
             },
             [R, i, C],
         ),
-        L = l.useCallback(
+        k = l.useCallback(
             async (e) => {
                 if (!R) {
                     y(!0);
@@ -55,7 +55,7 @@ function x(e) {
             },
             [R, x, C],
         ),
-        k = l.useCallback(
+        L = l.useCallback(
             async (e) => {
                 if (R) return;
                 y(!0);
@@ -159,8 +159,8 @@ function x(e) {
         );
     return {
         acceptMessageRequest: E ? P : D,
-        rejectMessageRequest: L,
-        rejectAll: k,
+        rejectMessageRequest: k,
+        rejectAll: L,
         markAsNotSpam: O,
         isAcceptLoading: S,
         isRejectLoading: j,

@@ -16,19 +16,19 @@ var i = n(477900),
     x = n(821609),
     g = n(283973),
     C = n(834730),
-    y = n(789645),
-    j = n(964486),
+    j = n(789645),
+    y = n(964486),
     I = n(648027),
     N = n(855446),
-    v = n(793574),
-    E = n(688810),
+    E = n(793574),
+    v = n(688810),
     b = n(975412),
     _ = n(392054),
-    T = n(826673),
-    S = n(757293),
+    S = n(826673),
+    T = n(757293),
     R = n(174459),
-    L = n(272812),
-    O = n(652215),
+    O = n(272812),
+    L = n(652215),
     P = n(660183),
     M = n(253802),
     w = n(867010);
@@ -45,15 +45,15 @@ function U(e) {
     return l < 250
         ? (0, i.jsx)(D, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
         : r > 1
-          ? (0, i.jsx)(k, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
+          ? (0, i.jsx)(G, { channel: t, guild: n, width: l, inPopout: a, handleClose: s, userParticipantCount: r })
           : (0, i.jsx)(V, { channel: t, guild: n, width: l, inPopout: a, activitiesEnabled: o });
 }
 function D(e) {
     let { channel: t, inPopout: n, handleClose: l } = e,
-        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
-    return (0, i.jsx)(E.f5, {
+        { analyticsLocations: a, newestAnalyticsLocation: r } = (0, v.Ay)(E.A.VC_TILE_ACTIVITY_SHELF_BUTTON);
+    return (0, i.jsx)(v.f5, {
         value: a,
-        children: (0, i.jsxs)(L.A, {
+        children: (0, i.jsxs)(O.A, {
             className: M.zr,
             children: [
                 (0, i.jsx)(c.m, {
@@ -75,7 +75,7 @@ function D(e) {
                     }),
                 }),
                 (0, i.jsx)(h.N, {
-                    theme: O.NJ8.DARK,
+                    theme: L.NJ8.DARK,
                     children: (e) =>
                         (0, i.jsx)(d.D, {
                             onClick: l,
@@ -95,12 +95,12 @@ function D(e) {
 function V(e) {
     let { channel: t, guild: a, inPopout: r, activitiesEnabled: o = !0 } = e;
     l.useEffect(() => {
-        R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+        R.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity invite",
             n_participants: 1,
         });
     }, []);
-    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_INVITE);
+    let { analyticsLocations: c, newestAnalyticsLocation: d } = (0, v.Ay)(E.A.VC_TILE_ACTIVITY_INVITE);
     function p() {
         (0, m.openModalLazy)(
             async () => {
@@ -113,7 +113,7 @@ function V(e) {
                     n.e("216084"),
                     n.e("284819"),
                 ]).then(n.bind(n, 405342));
-                return (n) => (0, i.jsx)(e, { ...n, guild: a, channel: t, source: O.PE1.ACTIVITY_ENTRY_POINT_TILE });
+                return (n) => (0, i.jsx)(e, { ...n, guild: a, channel: t, source: L.PE1.ACTIVITY_ENTRY_POINT_TILE });
             },
             { contextKey: r ? A.KX : A.SY },
         );
@@ -125,13 +125,13 @@ function V(e) {
             analyticsLocation: d,
         });
     }
-    return (0, i.jsx)(E.f5, {
+    return (0, i.jsx)(v.f5, {
         value: c,
         children: (0, i.jsx)(h.N, {
             disableAdaptiveTheme: !0,
-            theme: O.NJ8.ONYX,
+            theme: L.NJ8.ONYX,
             children: (e) =>
-                (0, i.jsxs)(L.A, {
+                (0, i.jsxs)(O.A, {
                     className: s()(M.zr, M.co, e),
                     children: [
                         (0, i.jsx)("img", { src: w, className: M.Qw, alt: "" }),
@@ -159,20 +159,20 @@ function V(e) {
         }),
     });
 }
-function k(e) {
+function G(e) {
     let { channel: t, guild: n, handleClose: a, width: o, userParticipantCount: c } = e;
-    (0, j.Ay)(() => {
-        R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
+    (0, y.Ay)(() => {
+        R.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_VIEWED, {
             tile_type: "activity suggestion",
             n_participants: c,
         });
     });
     let u = (0, I.A)({ guildId: n.id }).slice(0, 3),
-        { analyticsLocations: h } = (0, E.Ay)(v.A.VC_TILE_ACTIVITY_SUGGESTION),
+        { analyticsLocations: h } = (0, v.Ay)(E.A.VC_TILE_ACTIVITY_SUGGESTION),
         p = l.useMemo(() => ({ channel: t, type: "channel" }), [t]);
-    return (0, i.jsx)(E.f5, {
+    return (0, i.jsx)(v.f5, {
         value: h,
-        children: (0, i.jsxs)(L.A, {
+        children: (0, i.jsxs)(O.A, {
             className: M.zr,
             children: [
                 o > 300
@@ -201,29 +201,29 @@ function k(e) {
                 (0, i.jsxs)(d.D, {
                     className: M.HI,
                     onClick: function () {
-                        (R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        (R.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "permanent",
                             n_participants: c,
                         }),
-                            (0, T.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT));
+                            (0, S.Dr)(r.M.VC_TILE_ACTIVITIES_ENTRY_POINT));
                     },
                     children: [
-                        (0, i.jsx)(S.A, {}),
+                        (0, i.jsx)(T.A, {}),
                         (0, i.jsx)(C.E, { variant: "text-sm/medium", children: P.intl.string(P.t["5E9SB9"]) }),
                     ],
                 }),
                 (0, i.jsx)(d.D, {
                     className: M.cG,
                     onClick: function () {
-                        (R.default.track(O.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
+                        (R.default.track(L.HAw.VC_TILE_ACTIVITIES_ENTRY_POINT_CLOSED, {
                             tile_type: "activity suggestion",
                             close_type: "temporary",
                             n_participants: c,
                         }),
                             a());
                     },
-                    children: (0, i.jsx)(y.P, { size: "md", color: "currentColor", className: M.b }),
+                    children: (0, i.jsx)(j.P, { size: "md", color: "currentColor", className: M.b }),
                 }),
             ],
         }),

@@ -1,10 +1,10 @@
 t.d(n, { A: () => A });
-var l = t(477900),
-    i = t(582128),
-    a = t(523875),
-    s = t(666654),
-    o = t(688810),
-    r = t(980923),
+var i = t(477900),
+    l = t(582128),
+    s = t(523875),
+    a = t(666654),
+    r = t(688810),
+    o = t(980923),
     c = t(384059),
     u = t(204651),
     d = t(660183);
@@ -15,21 +15,21 @@ function A(e) {
             suppress: A,
             centerButton: h = !1,
             awaitingRemote: m,
-            onMouseEnter: C,
-            onMouseLeave: p,
-            onClick: x,
-            ...g
+            onMouseEnter: g,
+            onMouseLeave: x,
+            onClick: C,
+            ...f
         } = e,
-        { parentAnalyticsLocation: f } = (0, o.Ay)(),
+        { parentAnalyticsLocation: p } = (0, r.Ay)(),
         E = n || t || A,
-        I = h ? u.l : u.A,
-        v = (0, r.A)(n, t, A, m),
-        { events: j, play: T, Component: N } = (0, a.L)(E ? "unmute" : "mute"),
-        _ = t || A ? s.O : N;
+        j = h ? u.l : u.A,
+        v = (0, o.A)(n, t, A, m),
+        { events: I, play: N, Component: T } = (0, s.L)(E ? "unmute" : "mute"),
+        _ = t || A ? a.O : T;
     return (
-        i.useEffect(() => () => T(), [T, E]),
-        (0, l.jsx)(I, {
-            ...g,
+        l.useEffect(() => () => N(), [N, E]),
+        (0, i.jsx)(j, {
+            ...f,
             iconComponent: _,
             isTrayButton: !0,
             caretColor: E ? "red" : "primaryDark",
@@ -37,13 +37,13 @@ function A(e) {
             color: E ? "red" : void 0,
             label: v,
             onMouseEnter: (e) => {
-                (C?.(e), j.onMouseEnter());
+                (g?.(e), I.onMouseEnter());
             },
             onMouseLeave: (e) => {
-                (p?.(e), j.onMouseLeave());
+                (x?.(e), I.onMouseLeave());
             },
             onClick: (e) => {
-                (x?.(e), (0, c.X)(f, c.O.MIC, n));
+                (C?.(e), (0, c.X)(p, c.O.MIC, n));
             },
         })
     );

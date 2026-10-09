@@ -1,4 +1,4 @@
-n.d(t, { Ay: () => b, FT: () => g, bR: () => m });
+n.d(t, { Ay: () => b, FT: () => m, bR: () => g });
 var l = n(477900),
     i = n(582128),
     a = n(691885),
@@ -8,10 +8,10 @@ var l = n(477900),
     o = n(534554),
     d = n(56681),
     c = n(837984),
-    p = n(248675),
-    f = n(660183),
+    f = n(248675),
+    p = n(660183),
     h = n(944847);
-function g(e, t) {
+function m(e, t) {
     let [n, l] = i.useState(null),
         [a, r] = i.useState(e);
     return (
@@ -27,14 +27,14 @@ function g(e, t) {
         ]
     );
 }
-function m(e) {
+function g(e) {
     let { settings: t, tiers: n, choices: u, disabled: s, onChange: c } = e,
         h = i.useMemo(
             () => u.main.map((e) => ({ id: e.id, label: e.label, value: e.id, description: d.oU[e.provider] })),
             [u.main],
         ),
-        g = i.useMemo(() => u.thinking.map((e) => ({ id: e, label: d.hW[e] ?? e, value: e })), [u.thinking]);
-    function m(e) {
+        m = i.useMemo(() => u.thinking.map((e) => ({ id: e, label: d.hW[e] ?? e, value: e })), [u.thinking]);
+    function g(e) {
         c((0, o.CM)(e));
     }
     let b = (0, o.Id)(t, n, t.tier);
@@ -42,31 +42,31 @@ function m(e) {
         children: [
             null != b
                 ? (0, l.jsx)(a.l, {
-                      label: f.intl.string(p.default["59TDiR"]),
+                      label: p.intl.string(f.default["59TDiR"]),
                       options: h,
                       value: b,
-                      onSelectionChange: (e) => m((0, o.t7)(t, t.tier, e)),
+                      onSelectionChange: (e) => g((0, o.t7)(t, t.tier, e)),
                       selectionMode: "single",
                       disabled: s,
                       fullWidth: !0,
                   })
                 : null,
             (0, l.jsx)(a.l, {
-                label: f.intl.string(p.default.fpdVCO),
-                options: g,
+                label: p.intl.string(f.default.fpdVCO),
+                options: m,
                 value: t.thinking ?? n?.[t.tier]?.thinking ?? "",
-                onSelectionChange: (e) => m({ ...t, thinking: e }),
+                onSelectionChange: (e) => g({ ...t, thinking: e }),
                 selectionMode: "single",
                 disabled: s,
                 fullWidth: !0,
             }),
             (0, o.gz)(t, n, u.main)
                 ? (0, l.jsx)(r.d, {
-                      label: f.intl.string(p.default["5AblQX"]),
-                      description: f.intl.string(p.default.QnUV8M),
+                      label: p.intl.string(f.default["5AblQX"]),
+                      description: p.intl.string(f.default.QnUV8M),
                       checked: !0 === t.fast,
                       disabled: s,
-                      onChange: (e) => m({ ...t, fast: e }),
+                      onChange: (e) => g({ ...t, fast: e }),
                   })
                 : null,
         ],
@@ -88,7 +88,7 @@ function b(e) {
                                 tag: "span",
                                 variant: "text-md/medium",
                                 color: "text-default",
-                                children: f.intl.string(p.default.aBPQxX),
+                                children: p.intl.string(f.default.aBPQxX),
                             }),
                             (0, l.jsx)(u.E, {
                                 tag: "span",
@@ -105,20 +105,20 @@ function b(e) {
                                 tag: "span",
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: f.intl.string(p.default["/tlOR5"]),
+                                children: p.intl.string(f.default["/tlOR5"]),
                             }),
                             (0, l.jsx)(u.E, {
                                 tag: "span",
                                 variant: "text-sm/medium",
                                 color: "text-subtle",
-                                children: f.intl.string(p.default.FxoUwB),
+                                children: p.intl.string(f.default.FxoUwB),
                             }),
                         ],
                     }),
                     (0, l.jsx)(c.A, {
                         activeIndex: d,
                         stops: s.PY.map(o.D0),
-                        ariaLabel: f.intl.string(p.default.aBPQxX),
+                        ariaLabel: p.intl.string(f.default.aBPQxX),
                         disabled: a,
                         onSelect: function (e) {
                             let n = s.PY[e];
@@ -127,7 +127,7 @@ function b(e) {
                     }),
                 ],
             }),
-            (0, l.jsx)(m, { settings: t, tiers: n, choices: i, disabled: a, onChange: r }),
+            (0, l.jsx)(g, { settings: t, tiers: n, choices: i, disabled: a, onChange: r }),
         ],
     });
 }

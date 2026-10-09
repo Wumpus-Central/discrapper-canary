@@ -1,1 +1,1 @@
-p.exports = { c: "people__36261" };
+e.exports = { c: "people__36261" };

@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => j });
 var i = n(477900),
     l = n(582128),
     a = n(297264),
@@ -16,15 +16,15 @@ var i = n(477900),
     x = n(806931),
     g = n(660183),
     C = n(853325);
-let y = function (e) {
-    let { participants: t, channel: n, hasConnectPermission: y } = e,
-        j = t.filter(x.Xw),
+let j = function (e) {
+    let { participants: t, channel: n, hasConnectPermission: j } = e,
+        y = t.filter(x.Xw),
         I = (0, h.H)(n.guild_id),
         N = l.useCallback(() => {
             I ? (0, u.Ze)(n.guild_id, () => o.default.selectVoiceChannel(n.id)) : o.default.selectVoiceChannel(n.id);
         }, [n.id, n.guild_id, I]),
-        v = 4 === j.length ? 2 : 3,
-        E = (0, d.Ay)(n),
+        E = 4 === y.length ? 2 : 3,
+        v = (0, d.Ay)(n),
         b = (0, p.R)("ChannelCallEmpty");
     return (0, i.jsxs)("div", {
         className: C.kL,
@@ -32,8 +32,8 @@ let y = function (e) {
             (0, i.jsx)(f.A, { disableAnimation: b }),
             (0, i.jsx)("div", {
                 className: C.os,
-                style: { maxWidth: 168 * v },
-                children: j
+                style: { maxWidth: 168 * E },
+                children: y
                     .slice(0, 5)
                     .map((e) =>
                         (0, i.jsx)(
@@ -51,27 +51,27 @@ let y = function (e) {
                         ),
                     ),
             }),
-            (0, i.jsx)(a.D, { className: C.HA, variant: "heading-xxl/semibold", children: E }),
+            (0, i.jsx)(a.D, { className: C.HA, variant: "heading-xxl/semibold", children: v }),
             (0, i.jsx)("div", {
                 className: C.Nu,
                 children: (0, i.jsx)(s.E, {
                     color: "text-default",
                     variant: "text-sm/normal",
                     children:
-                        0 === j.length
+                        0 === y.length
                             ? g.intl.string(g.t.zSqdrS)
-                            : 1 === j.length
-                              ? g.intl.formatToPlainString(g.t.BUyJIG, { a: (0, m.A)(n, j[0]) })
-                              : 2 === j.length
+                            : 1 === y.length
+                              ? g.intl.formatToPlainString(g.t.BUyJIG, { a: (0, m.A)(n, y[0]) })
+                              : 2 === y.length
                                 ? g.intl.formatToPlainString(g.t["dcyZf/"], {
-                                      a: (0, m.A)(n, j[0]),
-                                      b: (0, m.A)(n, j[1]),
+                                      a: (0, m.A)(n, y[0]),
+                                      b: (0, m.A)(n, y[1]),
                                   })
-                                : j.length > 2
+                                : y.length > 2
                                   ? g.intl.formatToPlainString(g.t["44/Obu"], {
-                                        a: (0, m.A)(n, j[0]),
-                                        b: (0, m.A)(n, j[1]),
-                                        n: j.length - 2,
+                                        a: (0, m.A)(n, y[0]),
+                                        b: (0, m.A)(n, y[1]),
+                                        n: y.length - 2,
                                     })
                                   : void 0,
                 }),
@@ -80,9 +80,9 @@ let y = function (e) {
                 className: C.PD,
                 children: (0, i.jsx)(r.$, {
                     variant: "overlay-primary",
-                    text: y ? g.intl.string(g.t["96ANUN"]) : g.intl.string(g.t.TVBCKZ),
+                    text: j ? g.intl.string(g.t["96ANUN"]) : g.intl.string(g.t.TVBCKZ),
                     onClick: N,
-                    disabled: !y,
+                    disabled: !j,
                 }),
             }),
         ],

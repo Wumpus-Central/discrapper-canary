@@ -1,53 +1,53 @@
 t.d(n, { A: () => E });
-var l = t(477900),
-    i = t(582128),
-    a = t(17928),
-    s = t(922016),
-    o = t(980707),
-    r = t(477782),
+var i = t(477900),
+    l = t(582128),
+    s = t(17928),
+    a = t(922016),
+    r = t(980707),
+    o = t(477782),
     c = t(285796),
     u = t(267102),
     d = t(931991),
     A = t(246356),
     h = t(404355),
     m = t(734057),
-    C = t(707592),
-    p = t(496092),
-    x = t(132860),
-    g = t(508654),
-    f = t(660183);
+    g = t(707592),
+    x = t(496092),
+    C = t(132860),
+    f = t(508654),
+    p = t(660183);
 function E(e) {
     let { channelId: n, onClick: t } = e,
         E = (0, u.Us)(),
-        I = (0, g.Qs)(n),
-        v = (0, a.bG)([m.A], () => m.A.getChannel(n), [n]),
-        { canManageGuildEvent: j } = (0, d.nr)(v),
-        T = j(I),
-        N = i.useRef(null);
-    if (null == I) return null;
+        j = (0, f.Qs)(n),
+        v = (0, s.bG)([m.A], () => m.A.getChannel(n), [n]),
+        { canManageGuildEvent: I } = (0, d.nr)(v),
+        N = I(j),
+        T = l.useRef(null);
+    if (null == j) return null;
     function _() {
-        null != v && (0, x.A)(v) ? (0, C.Py)(v, E) : t();
+        null != v && (0, C.A)(v) ? (0, g.Py)(v, E) : t();
     }
-    function O() {
-        null != I && p.default.endEvent(I.id, I.guild_id);
+    function b() {
+        null != j && x.default.endEvent(j.id, j.guild_id);
     }
-    return T
-        ? (0, l.jsx)(s.Y, {
-              targetElementRef: N,
+    return N
+        ? (0, i.jsx)(a.Y, {
+              targetElementRef: T,
               renderPopout: (e) => {
                   let { closePopout: n } = e;
-                  return (0, l.jsx)(A.A, {
-                      children: (0, l.jsx)(o.W, {
+                  return (0, i.jsx)(A.A, {
+                      children: (0, i.jsx)(r.W, {
                           "data-menu-migrated": !0,
                           navId: "exit-options",
                           onSelect: () => {},
-                          "aria-label": f.intl.string(f.t["K6/mk3"]),
+                          "aria-label": p.intl.string(p.t["K6/mk3"]),
                           onClose: n,
-                          children: (0, l.jsx)(r.Dr, {
+                          children: (0, i.jsx)(o.Dr, {
                               id: "end-voice-event",
                               color: "danger",
-                              action: O,
-                              label: f.intl.string(f.t.qaYzPA),
+                              action: b,
+                              label: p.intl.string(p.t.qaYzPA),
                               leadingAccessory: { type: "icon", icon: c.a },
                               icon: c.a,
                           }),
@@ -56,16 +56,16 @@ function E(e) {
               },
               align: "center",
               position: "top",
-              animation: s.Y.Animation.FADE,
+              animation: a.Y.Animation.FADE,
               children: (e) => {
                   let { onClick: n } = e;
-                  return (0, l.jsx)(h.A, {
-                      buttonRef: N,
-                      label: f.intl.string(f.t["6vrfgt"]),
+                  return (0, i.jsx)(h.A, {
+                      buttonRef: T,
+                      label: p.intl.string(p.t["6vrfgt"]),
                       onClick: _,
                       onPopoutClick: n,
                   });
               },
           })
-        : (0, l.jsx)(h.A, { label: f.intl.string(f.t["6vrfgt"]), onClick: t });
+        : (0, i.jsx)(h.A, { label: p.intl.string(p.t["6vrfgt"]), onClick: t });
 }

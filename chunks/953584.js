@@ -1,7 +1,7 @@
 i.d(t, { Ay: () => l, FM: () => o, Vh: () => u, ke: () => d });
-var a = i(17928),
-    n = i(73153);
-class r extends a.il {
+var n = i(17928),
+    a = i(73153);
+class r extends n.il {
     videoStatsEnabled = new Map();
     isVideoStatsEnabled(e) {
         return this.videoStatsEnabled.get(e) ?? !1;
@@ -33,7 +33,7 @@ class r extends a.il {
         this.videoStatsEnabled.delete(e) && this.emitChange();
     }
 }
-let s = new r(n.h, {}),
+let s = new r(a.h, {}),
     l = s;
 function o(e) {
     s.toggleVideoStats(e);

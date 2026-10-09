@@ -14,8 +14,8 @@ var r = n(477900),
     h = n(782134),
     x = n(113494),
     v = n(834730),
-    g = n(964486),
-    E = n(770178),
+    E = n(964486),
+    g = n(770178),
     b = n(765548),
     y = n(775602),
     S = n(475815),
@@ -99,8 +99,8 @@ function Y(e) {
             onLoadStart: eh,
             onLoadEnd: ex,
             onFirstFrame: ev,
-            onBufferingStart: eg,
-            onBufferingEnd: eE,
+            onBufferingStart: eE,
+            onBufferingEnd: eg,
             onFocusChange: eb,
             onVisibilityChange: ey,
             onSeek: eS,
@@ -156,8 +156,8 @@ function Y(e) {
         [tf, tp] = l.useState(!1),
         th = l.useRef(null),
         [tx, tv] = l.useState(c.h$.LOADING),
-        tg = l.useRef(!1),
-        tE = l.useRef(null),
+        tE = l.useRef(!1),
+        tg = l.useRef(null),
         [tb, ty] = l.useState([]),
         [tS, tC] = l.useState(!1),
         tP = l.useRef(!1),
@@ -258,10 +258,10 @@ function Y(e) {
             let t = e.contentRect.width;
             t <= 0 || nd(t < H);
         });
-    (0, E.g)(tX, nm, [], { enabled: eF, fireOnMount: eF });
+    (0, g.g)(tX, nm, [], { enabled: eF, fireOnMount: eF });
     let nf = tH ? c.oA.LG : eF && nc ? c.oA.SM : c.oA.MD,
         np = V[nf];
-    (0, g.u5)(() => {
+    (0, E.u5)(() => {
         tq.current && (tq.current = !1);
     });
     let nh = l.useCallback(
@@ -308,36 +308,36 @@ function Y(e) {
             e5 && ey?.(e3, tt);
         }, [e3, e5, tt, ey]));
     let [nx, nv] = l.useState(!1),
-        ng = l.useRef(null),
-        nE = l.useRef(0);
+        nE = l.useRef(null),
+        ng = l.useRef(0);
     l.useLayoutEffect(() => {
-        nE.current = performance.now();
+        ng.current = performance.now();
     }, []);
     let nb = l.useCallback(() => {
-            switch ((null != ng.current && clearTimeout(ng.current), tt)) {
+            switch ((null != nE.current && clearTimeout(nE.current), tt)) {
                 case c.Q6.PLAYING:
-                    ng.current = setTimeout(
+                    nE.current = setTimeout(
                         () => {
                             nv(!0);
                         },
-                        Math.max(0, 3e3 - (performance.now() - nE.current)),
+                        Math.max(0, 3e3 - (performance.now() - ng.current)),
                     );
                 case c.Q6.PAUSED:
                 case c.Q6.ENDED:
             }
         }, [tt]),
         ny = l.useCallback(() => {
-            (nv(!1), (nE.current = performance.now()), nb());
+            (nv(!1), (ng.current = performance.now()), nb());
         }, [nb]);
     (l.useEffect(() => {
         if (tt !== c.Q6.PLAYING) {
-            (nv(!1), null != ng.current && clearTimeout(ng.current));
+            (nv(!1), null != nE.current && clearTimeout(nE.current));
             return;
         }
         return (
             nb(),
             () => {
-                null != ng.current && clearTimeout(ng.current);
+                null != nE.current && clearTimeout(nE.current);
             }
         );
     }, [tt, nb]),
@@ -356,12 +356,12 @@ function Y(e) {
     }, []);
     function nA() {
         null == tz.current ||
-            (nN(Math.max((tE.current ?? tz.current.currentTime) - 10, 0)),
+            (nN(Math.max((tg.current ?? tz.current.currentTime) - 10, 0)),
             tt === c.Q6.ENDED && nh(c.Q6.PAUSED, c.KB.SEEK));
     }
     function nR() {
         if (null == tz.current) return;
-        let e = Math.min((tE.current ?? tz.current.currentTime) + 10, ns);
+        let e = Math.min((tg.current ?? tz.current.currentTime) + 10, ns);
         (nN(e), tt !== c.Q6.ENDED && e >= tz.current.duration && nh(c.Q6.ENDED, c.KB.SEEK));
     }
     l.useEffect(() => {
@@ -376,14 +376,14 @@ function Y(e) {
             let t = !(arguments.length > 1) || void 0 === arguments[1] || arguments[1];
             if (null == tz.current) return;
             let n = tz.current.currentTime;
-            ((tE.current = e),
+            ((tg.current = e),
                 tc((e / (tz.current.duration ?? 1)) * 100),
                 tp(!0),
                 null != th.current && clearTimeout(th.current),
                 (th.current = setTimeout(() => {
                     (tp(!1), (th.current = null));
                 }, 100)),
-                (tg.current = !0),
+                (tE.current = !0),
                 (tz.current.currentTime = e),
                 t && eS?.(n, e));
         },
@@ -426,7 +426,7 @@ function Y(e) {
         if (null != tz.current) {
             if (tx === c.h$.BUFFERING) {
                 let e = null != tM.current ? performance.now() - tM.current : null;
-                eE?.(e);
+                eg?.(e);
             } else if (tx === c.h$.LOADING) {
                 let e = null != tk.current ? performance.now() - tk.current : null;
                 ex?.(e);
@@ -531,7 +531,7 @@ function Y(e) {
             onTimeUpdate: function (e) {
                 null != tz.current &&
                     (J?.(tz.current.currentTime, tz.current.duration),
-                    tg.current || td((tz.current.currentTime / tz.current.duration) * 100));
+                    tE.current || td((tz.current.currentTime / tz.current.duration) * 100));
             },
             onEnded: function (e) {
                 (tv(c.h$.READY), ee?.(), tA.current || nh(c.Q6.ENDED, c.KB.PLAYBACK_COMPLETE));
@@ -558,7 +558,7 @@ function Y(e) {
                 tT.current && (ev?.(performance.now()), (tT.current = !1));
             },
             onWaiting: function (e) {
-                ((tM.current = performance.now()), eg?.(), tv(c.h$.BUFFERING));
+                ((tM.current = performance.now()), eE?.(), tv(c.h$.BUFFERING));
             },
             onProgress: function (e) {
                 if (null == tz.current) return;
@@ -573,8 +573,8 @@ function Y(e) {
             onCanPlay: nk,
             onCanPlayThrough: nk,
             onSeeked: function () {
-                ((tg.current = !1),
-                    (tE.current = null),
+                ((tE.current = !1),
+                    (tg.current = null),
                     null != tz.current && td((tz.current.currentTime / tz.current.duration) * 100));
             },
             onAbort: function () {
@@ -628,8 +628,8 @@ function Y(e) {
                     onMouseEnter: function () {
                         (tl(!0),
                             nv(!1),
-                            (nE.current = performance.now()),
-                            null != ng.current && clearTimeout(ng.current));
+                            (ng.current = performance.now()),
+                            null != nE.current && clearTimeout(nE.current));
                     },
                     onMouseLeave: function () {
                         (tl(!1), nv(!1));

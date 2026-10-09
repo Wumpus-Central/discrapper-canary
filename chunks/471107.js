@@ -1,28 +1,28 @@
-l.d(t, { G: () => u });
-var n = l(582128),
-    a = l(17928),
-    s = l(451988),
-    i = l(775602),
-    r = l(927813);
+n.d(t, { G: () => u });
+var r = n(582128),
+    i = n(17928),
+    a = n(451988),
+    l = n(775602),
+    s = n(927813);
 function o(e) {
-    return Math.floor(e / r.A.Millis.SECOND) * r.A.Millis.SECOND;
+    return Math.floor(e / s.A.Millis.SECOND) * s.A.Millis.SECOND;
 }
 function u() {
     let { hovered: e, isAppFocused: t = !0 } = arguments.length > 0 && void 0 !== arguments[0] ? arguments[0] : {},
-        [l, u] = n.useState(() => o(Date.now())),
-        c = (0, a.bG)([i.Ay], () => i.Ay.useReducedMotion),
-        m = !t || (c && !e),
-        d = m ? 15 * r.A.Millis.SECOND : r.A.Millis.SECOND;
+        [n, u] = r.useState(() => o(Date.now())),
+        c = (0, i.bG)([l.Ay], () => l.Ay.useReducedMotion),
+        d = !t || (c && !e),
+        h = d ? 15 * s.A.Millis.SECOND : s.A.Millis.SECOND;
     return (
-        n.useEffect(() => {
-            let e = new s.IX();
+        r.useEffect(() => {
+            let e = new a.IX();
             return (
-                e.start(d, () => {
+                e.start(h, () => {
                     u(o(Date.now()));
                 }),
                 () => e.stop()
             );
-        }, [d]),
-        { now: l, slowTickMode: m }
+        }, [h]),
+        { now: n, slowTickMode: d }
     );
 }

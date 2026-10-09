@@ -17,36 +17,36 @@ var a = n(17928),
 function x(e) {
     let { channelId: t, asset: n, position: x, width: g } = e,
         C = (0, a.bG)([s.A], () => s.A.getChannel(t)?.guild_id),
-        { interactionsEnabled: y } = (0, u.mf)({ guildId: C, location: "GuildRoom" }, { autoTrackExposure: !1 }),
-        j = (0, a.bG)([d.A], () => null != d.A.getPendingNote(t)),
+        { interactionsEnabled: j } = (0, u.mf)({ guildId: C, location: "GuildRoom" }, { autoTrackExposure: !1 }),
+        y = (0, a.bG)([d.A], () => null != d.A.getPendingNote(t)),
         I = (0, a.bG)([d.A], () => d.A.getNotes(t).length >= 20),
         N = (0, a.bG)([r.Ay], () => r.Ay.getVoiceChannelId() === t),
-        v = l.useRef(null),
-        E = l.useCallback(() => {
-            v.current?.focus();
+        E = l.useRef(null),
+        v = l.useCallback(() => {
+            E.current?.focus();
         }, []),
         b = (0, h.Y1)(t);
     l.useEffect(() => {
         if (b)
             return (
-                o._.subscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, E),
+                o._.subscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, v),
                 () => {
-                    o._.unsubscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, E);
+                    o._.unsubscribe(m.jej.GUILD_ROOM_NOTE_PLACEMENT_CANCEL, v);
                 }
             );
-    }, [b, E]);
+    }, [b, v]);
     let _ = l.useCallback(() => {
         (0, c.WT)(t);
     }, [t]);
-    return y
+    return j
         ? (0, i.jsx)(p.A, {
               asset: n,
               label: f.intl.string(I ? A.default.k4cbsb : A.default["lL1Y+d"]),
               position: x,
               width: g,
-              disabled: !N || j || I,
+              disabled: !N || y || I,
               onClick: _,
-              innerRef: v,
+              innerRef: E,
           })
         : (0, i.jsx)(p.c, { asset: n, label: f.intl.string(A.default["lL1Y+d"]), position: x, width: g });
 }

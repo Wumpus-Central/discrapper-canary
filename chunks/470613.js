@@ -1,4 +1,4 @@
-c.exports = {
+e.exports = {
     Gt: "frame_d9c451",
     wx: "header_d9c451",
     Nr: "card_d9c451",

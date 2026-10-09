@@ -29,8 +29,8 @@ var l = n(477900),
     M = n(709977),
     R = n(212455),
     D = n(224640),
-    L = n(604121),
-    k = n(430993),
+    k = n(604121),
+    L = n(430993),
     P = n(297264),
     O = n(834730),
     G = n(696208),
@@ -52,8 +52,8 @@ let H = function (e) {
         ...e,
         size: "sm",
         children: [
-            (0, l.jsx)("div", { className: F.Mp, children: (0, l.jsx)(L.a, { importData: B, className: F.WG }) }),
-            (0, l.jsx)(k.c, {
+            (0, l.jsx)("div", { className: F.Mp, children: (0, l.jsx)(k.a, { importData: B, className: F.WG }) }),
+            (0, l.jsx)(L.c, {
                 children: (0, l.jsxs)("div", {
                     className: F.lq,
                     children: [
@@ -292,87 +292,87 @@ class ep extends i.PureComponent {
                 pendingGameProfileReturn: M,
                 guild: R,
             } = this.props,
-            { shouldShowLurkerModeUpsellPopout: D, shouldShowLurkerModeSuccessPopout: L } = this.state,
-            k = { theme: d, useReducedMotion: I };
+            { shouldShowLurkerModeUpsellPopout: D, shouldShowLurkerModeSuccessPopout: k } = this.state,
+            L = { theme: d, useReducedMotion: I };
         if (e && !p && null != M)
-            (null != M.gameIconUrl && (k.imageSrc = M.gameIconUrl),
-                (k.message = w.intl.format(w.t["qxH/YE"], { gameName: M.gameName })),
-                (k.buttonText = w.intl.string(w.t.DjifDP)),
-                (k.buttonIcon = h.r),
-                (k.buttonVariant = "primary"),
-                (k.onButtonClick = M.onReturnToGameProfile));
+            (null != M.gameIconUrl && (L.imageSrc = M.gameIconUrl),
+                (L.message = w.intl.format(w.t["qxH/YE"], { gameName: M.gameName })),
+                (L.buttonText = w.intl.string(w.t.DjifDP)),
+                (L.buttonIcon = h.r),
+                (L.buttonVariant = "primary"),
+                (L.onButtonClick = M.onReturnToGameProfile));
         else if (e && !p) {
-            if (((k.message = w.intl.string(w.t.Hl0Mqh)), null != A && A >= 1e3)) {
+            if (((L.message = w.intl.string(w.t.Hl0Mqh)), null != A && A >= 1e3)) {
                 let e = 1e3 * Math.floor(A / 1e3);
-                k.subtitle = w.intl.formatToPlainString(w.t.C5bgrC, { count: e.toLocaleString() });
+                L.subtitle = w.intl.formatToPlainString(w.t.C5bgrC, { count: e.toLocaleString() });
             }
-            ((k.buttonText = w.intl.string(w.t["3aOv+h"])),
-                (k.onButtonClick = this.handleFollowAnnouncement),
+            ((L.buttonText = w.intl.string(w.t["3aOv+h"])),
+                (L.onButtonClick = this.handleFollowAnnouncement),
                 t &&
-                    ((k.onSecondaryButtonClick = this.handleJoinServer),
-                    (k.secondaryButtonText = w.intl.string(w.t.RLch70))));
+                    ((L.onSecondaryButtonClick = this.handleJoinServer),
+                    (L.secondaryButtonText = w.intl.string(w.t.RLch70))));
         } else if (n)
-            ((k.message = w.intl.string(w.t["Eg3/c9"])),
-                (k.buttonText = w.intl.string(w.t.fiNVin)),
-                (k.onButtonClick = x ? this.handleShowMemberVerification : this.handleClaimAccount));
+            ((L.message = w.intl.string(w.t["Eg3/c9"])),
+                (L.buttonText = w.intl.string(w.t.fiNVin)),
+                (L.onButtonClick = x ? this.handleShowMemberVerification : this.handleClaimAccount));
         else if (x)
             switch (y?.applicationStatus) {
                 case T.B5.SUBMITTED:
-                    ((k.message = w.intl.string(w.t["5iLvSx"])),
-                        (k.subtitle = w.intl.string(w.t.FdsK4h)),
-                        (k.buttonText = w.intl.string(w.t.mqtdmQ)),
-                        (k.onButtonClick = this.handleCancelApplication));
+                    ((L.message = w.intl.string(w.t["5iLvSx"])),
+                        (L.subtitle = w.intl.string(w.t.FdsK4h)),
+                        (L.buttonText = w.intl.string(w.t.mqtdmQ)),
+                        (L.onButtonClick = this.handleCancelApplication));
                     break;
                 case T.B5.REJECTED:
-                    ((k.message = w.intl.string(w.t.lk30cY)),
-                        (k.buttonText = w.intl.string(w.t["8RrsHr"])),
-                        (k.onButtonClick = this.handleViewApplicationRejection));
+                    ((L.message = w.intl.string(w.t.lk30cY)),
+                        (L.buttonText = w.intl.string(w.t["8RrsHr"])),
+                        (L.onButtonClick = this.handleViewApplicationRejection));
                     break;
                 default:
-                    ((k.message = w.intl.string(w.t.rEBKvg)),
-                        (k.buttonText = w.intl.string(w.t["r8/DT+"])),
-                        (k.buttonVariant = "primary"),
-                        (k.onButtonClick = this.handleShowMemberVerification));
+                    ((L.message = w.intl.string(w.t.rEBKvg)),
+                        (L.buttonText = w.intl.string(w.t["r8/DT+"])),
+                        (L.buttonVariant = "primary"),
+                        (L.onButtonClick = this.handleShowMemberVerification));
             }
         else
             null != R && null != S && C
-                ? ((k.message = w.intl.format(w.t.HbivnU, { roleName: `@${S.name}` })),
+                ? ((L.message = w.intl.format(w.t.HbivnU, { roleName: `@${S.name}` })),
                   null === S.tags.guild_connections &&
-                      ((k.buttonText = w.intl.string(w.t["6Ge2LG"])), (k.onButtonClick = () => (0, E.b)(S, R.id))))
+                      ((L.buttonText = w.intl.string(w.t["6Ge2LG"])), (L.onButtonClick = () => (0, E.b)(S, R.id))))
                 : _ || null == b
                   ? i && !j
-                      ? ((k.message = w.intl.string(w.t["2dThMM"])),
-                        (k.buttonText = w.intl.string(w.t["50gfOv"])),
-                        (k.onButtonClick = this.handleVerifyPhone))
+                      ? ((L.message = w.intl.string(w.t["2dThMM"])),
+                        (L.buttonText = w.intl.string(w.t["50gfOv"])),
+                        (L.onButtonClick = this.handleVerifyPhone))
                       : s
-                        ? ((k.message = w.intl.string(w.t.FkGPS5)),
-                          (k.buttonText = w.intl.string(w.t.lm1UKt)),
-                          (k.onButtonClick = this.handleResendVerification))
+                        ? ((L.message = w.intl.string(w.t.FkGPS5)),
+                          (L.buttonText = w.intl.string(w.t.lm1UKt)),
+                          (L.onButtonClick = this.handleResendVerification))
                         : a
-                          ? ((k.message = w.intl.formatToPlainString(w.t.IH7RMF, { min: v.$8o.MEMBER_AGE })),
-                            (k.countdown = r))
+                          ? ((L.message = w.intl.formatToPlainString(w.t.IH7RMF, { min: v.$8o.MEMBER_AGE })),
+                            (L.countdown = r))
                           : o &&
-                            ((k.message = w.intl.formatToPlainString(w.t["2JA2GH"], { min: v.$8o.ACCOUNT_AGE })),
-                            (k.countdown = c))
-                  : ((k.imageSrc = b.getIconURL(eh.iu.SMALL) ?? void 0),
+                            ((L.message = w.intl.formatToPlainString(w.t["2JA2GH"], { min: v.$8o.ACCOUNT_AGE })),
+                            (L.countdown = c))
+                  : ((L.imageSrc = b.getIconURL(eh.iu.SMALL) ?? void 0),
                     N
-                        ? (k.message = w.intl.format(w.t["SU2mY/"], { name: b.name }))
-                        : ((k.message = w.intl.format(w.t.EvDn1D, { name: b.name })),
+                        ? (L.message = w.intl.format(w.t["SU2mY/"], { name: b.name }))
+                        : ((L.message = w.intl.format(w.t.EvDn1D, { name: b.name })),
                           null != b.connectionEntrypointUrl &&
-                              ((k.buttonText = w.intl.string(w.t.S0W8Z5)),
-                              (k.onButtonClick = () => {
+                              ((L.buttonText = w.intl.string(w.t.S0W8Z5)),
+                              (L.onButtonClick = () => {
                                   window.open(b.connectionEntrypointUrl, "_blank");
                               }))));
         return (0, l.jsx)(m.Y, {
             targetElementRef: this.textAreaContainerRef,
             position: "top",
             align: "left",
-            shouldShow: L,
+            shouldShow: k,
             onRequestClose: () => this.setState({ shouldShowLurkerModeSuccessPopout: !1 }),
             renderPopout: this.renderSuccessPopout,
             children: (e) =>
                 (0, l.jsx)(eu.A, {
-                    ...k,
+                    ...L,
                     children: (0, l.jsxs)("div", {
                         ref: this.textAreaContainerRef,
                         children: [

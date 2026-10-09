@@ -1,6 +1,6 @@
 i.d(t, { At: () => s, BZ: () => r, K: () => u, YQ: () => l });
-let a = new (i(626584).A)("mp4box"),
-    n = {
+let n = new (i(626584).A)("mp4box"),
+    a = {
         videoCodec: null,
         audioCodec: null,
         videoCodecDescription: null,
@@ -49,7 +49,7 @@ function o(e, t) {
 async function u(e) {
     try {
         let t;
-        if ("u" < typeof fetch) return n;
+        if ("u" < typeof fetch) return a;
         let { default: r } = await i.e("25777").then(i.t.bind(i, 293384, 19)),
             s = null;
         try {
@@ -62,33 +62,33 @@ async function u(e) {
         try {
             t = await o(e, { method: "GET", headers: { Range: "bytes=0-524287" } });
         } catch (e) {
-            return (a.warn("Range request failed, likely CORS issue:", e), n);
+            return (n.warn("Range request failed, likely CORS issue:", e), a);
         }
-        if (!t.ok && 206 !== t.status) return (a.warn("Unexpected response status:", t.status), n);
-        if ("opaque" === t.type) return (a.warn("Opaque response, CORS headers may be missing"), n);
+        if (!t.ok && 206 !== t.status) return (n.warn("Unexpected response status:", t.status), a);
+        if ("opaque" === t.type) return (n.warn("Opaque response, CORS headers may be missing"), a);
         let l = await t.arrayBuffer(),
             u = r.createFile();
         return new Promise((t) => {
             let i = !1,
                 r = !1,
                 d = null,
-                h = null;
-            function c() {
-                i || ((i = !0), clearTimeout(f), null != h && clearTimeout(h), t(n));
+                c = null;
+            function h() {
+                i || ((i = !0), clearTimeout(f), null != c && clearTimeout(c), t(a));
             }
             let f = setTimeout(() => {
-                (a.warn("Timeout after", 5e3, "ms, moov atom not found"), c());
+                (n.warn("Timeout after", 5e3, "ms, moov atom not found"), h());
             }, 5e3);
             ((u.onReady = (e) => {
                 if (i) return;
-                ((i = !0), clearTimeout(f), null != h && clearTimeout(h));
-                let a = e.videoTracks[0],
-                    n = e.audioTracks[0],
+                ((i = !0), clearTimeout(f), null != c && clearTimeout(c));
+                let n = e.videoTracks[0],
+                    a = e.audioTracks[0],
                     r = {
-                        videoCodec: a?.codec ?? null,
-                        audioCodec: n?.codec ?? null,
+                        videoCodec: n?.codec ?? null,
+                        audioCodec: a?.codec ?? null,
                         videoCodecDescription:
-                            null != a
+                            null != n
                                 ? (function (e) {
                                       if (e.startsWith("avc1")) return "H.264/AVC";
                                       if (e.startsWith("hev1") || e.startsWith("hvc1")) return "H.265/HEVC";
@@ -96,10 +96,10 @@ async function u(e) {
                                       if (e.startsWith("vp09")) return "VP9";
                                       if (e.startsWith("av01")) return "AV1";
                                       return e;
-                                  })(a.codec)
+                                  })(n.codec)
                                 : null,
                         audioCodecDescription:
-                            null != n
+                            null != a
                                 ? (function (e) {
                                       if (e.startsWith("mp4a.40.2")) return "AAC-LC";
                                       if (e.startsWith("mp4a.40.5")) return "HE-AAC";
@@ -108,14 +108,14 @@ async function u(e) {
                                       if ("opus" === e) return "Opus";
                                       else if ("vorbis" === e) return "Vorbis";
                                       return e;
-                                  })(n.codec)
+                                  })(a.codec)
                                 : null,
-                        videoBitrate: a?.bitrate ?? null,
-                        audioBitrate: n?.bitrate ?? null,
-                        audioChannels: n?.audio?.channel_count ?? null,
-                        audioSampleRate: n?.audio?.sample_rate ?? null,
+                        videoBitrate: n?.bitrate ?? null,
+                        audioBitrate: a?.bitrate ?? null,
+                        audioChannels: a?.audio?.channel_count ?? null,
+                        audioSampleRate: a?.audio?.sample_rate ?? null,
                         frameRate:
-                            null != a
+                            null != n
                                 ? (function (e) {
                                       if (
                                           null != e.nb_samples &&
@@ -127,10 +127,10 @@ async function u(e) {
                                           if (t > 0) return Math.round(e.nb_samples / t);
                                       }
                                       return null;
-                                  })(a)
+                                  })(n)
                                 : null,
-                        videoWidth: a?.video?.width ?? null,
-                        videoHeight: a?.video?.height ?? null,
+                        videoWidth: n?.video?.width ?? null,
+                        videoHeight: n?.video?.height ?? null,
                         isProgressive: e.isProgressive ?? null,
                         isFragmented: e.isFragmented ?? null,
                         containerFormat: (function (e) {
@@ -151,17 +151,17 @@ async function u(e) {
                 t(r);
             }),
                 (u.onError = () => {
-                    c();
+                    h();
                 }),
                 (u.onSeek = async (t) => {
                     if (i || r || null == s || !(s > 524288)) {
                         if (r) {
                             if (null != d && performance.now() - d < 5e3) return;
-                            c();
+                            h();
                             return;
                         }
                     } else {
-                        ((r = !0), a.log("Fetching end chunk for moov atom"));
+                        ((r = !0), n.log("Fetching end chunk for moov atom"));
                         try {
                             let t = await o(e, { method: "GET", headers: { Range: `bytes=${s - 524288}-${s - 1}` } });
                             if (t.ok || 206 === t.status) {
@@ -170,36 +170,36 @@ async function u(e) {
                                 200 === t.status && i.byteLength === s
                                     ? ((i = i.slice(s - 524288)), (e = Math.max(0, s - 524288)))
                                     : (e = 206 === t.status ? Math.max(0, s - 524288) : 0);
-                                let n = i;
-                                n.fileStart = e;
+                                let a = i;
+                                a.fileStart = e;
                                 try {
-                                    (u.appendBuffer(n), u.flush(), (d = performance.now()));
+                                    (u.appendBuffer(a), u.flush(), (d = performance.now()));
                                     return;
                                 } catch (e) {
-                                    (a.warn("Failed to append end chunk:", e), c());
+                                    (n.warn("Failed to append end chunk:", e), h());
                                     return;
                                 }
                             }
                         } catch (e) {
-                            a.warn("Failed to fetch end chunk:", e);
+                            n.warn("Failed to fetch end chunk:", e);
                         }
-                        c();
+                        h();
                         return;
                     }
-                    (null == s || s <= 524288) && c();
+                    (null == s || s <= 524288) && h();
                 }),
                 (l.fileStart = 0));
             try {
                 (u.appendBuffer(l),
                     u.flush(),
-                    (h = setTimeout(() => {
+                    (c = setTimeout(() => {
                         i || r || null == u.onSeek || u.onSeek({ offset: 0, isLast: !1 });
                     }, 500)));
             } catch (e) {
-                c();
+                h();
             }
         });
     } catch (e) {
-        return n;
+        return a;
     }
 }

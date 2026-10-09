@@ -1,4 +1,4 @@
-n.d(t, { Sb: () => v, Y1: () => N, bE: () => E });
+n.d(t, { Sb: () => E, Y1: () => N, bE: () => v });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -21,10 +21,10 @@ function C() {
     let e = (2 * Math.random() - 1) * 5;
     return 0.5 > Math.random() ? { x: 5, y: e } : { x: e, y: -5 };
 }
-function y(e, t) {
+function j(e, t) {
     return { x: g(e.x + t.x), y: g(e.y + t.y) };
 }
-let j = l.createContext(null);
+let y = l.createContext(null);
 function I(e) {
     return (0, a.bG)([h.A], () => {
         let t = h.A.getPendingNote(e);
@@ -36,9 +36,9 @@ function N(e) {
         n = (0, a.bG)([c.Ay], () => c.Ay.keyboardModeEnabled);
     return t && n;
 }
-function v(e) {
+function E(e) {
     let { position: t, targetLabel: n } = e,
-        i = l.useContext(j),
+        i = l.useContext(y),
         { x: a, y: s } = t;
     return l.useMemo(
         () =>
@@ -53,14 +53,14 @@ function v(e) {
         [i, n, a, s],
     );
 }
-function E(e) {
+function v(e) {
     let { channelId: t, containerRef: n, roomWidth: a, children: c } = e,
         g = I(t),
-        v = N(t),
-        E = l.useId(),
+        E = N(t),
+        v = l.useId(),
         [b, _] = l.useState(null),
-        T = l.useRef(null);
-    (v || null == b || _(null),
+        S = l.useRef(null);
+    (E || null == b || _(null),
         l.useEffect(() => {
             if (g)
                 return (
@@ -74,37 +74,37 @@ function E(e) {
             }
         }, [g, t]),
         l.useEffect(() => {
-            if (v)
+            if (E)
                 return () => {
-                    T.current = null;
+                    S.current = null;
                 };
-        }, [v]),
+        }, [E]),
         l.useEffect(() => {
-            v && n.current?.querySelector('[tabindex]:not([tabindex="-1"])')?.focus();
-        }, [v, n]));
-    let S = l.useMemo(
+            E && n.current?.querySelector('[tabindex]:not([tabindex="-1"])')?.focus();
+        }, [E, n]));
+    let T = l.useMemo(
         () =>
-            v
+            E
                 ? {
-                      descriptionId: E,
+                      descriptionId: v,
                       setPreviewTarget: (e) => {
-                          let t = T.current ?? C();
-                          ((T.current = t), _(y(e, t)));
+                          let t = S.current ?? C();
+                          ((S.current = t), _(j(e, t)));
                       },
                       placeNextTo: (e) => {
                           let n = h.A.getPendingNote(t);
                           if (null == n || null != n.position) return;
-                          let i = T.current ?? C();
-                          ((T.current = i), (0, u.Dr)(t, y(e, i)));
+                          let i = S.current ?? C();
+                          ((S.current = i), (0, u.Dr)(t, j(e, i)));
                       },
                   }
                 : null,
-        [v, E, t],
+        [E, v, t],
     );
-    return (0, i.jsxs)(j.Provider, {
-        value: S,
+    return (0, i.jsxs)(y.Provider, {
+        value: T,
         children: [
-            v &&
+            E &&
                 (0, i.jsx)(r.Ok, {
                     containerRef: n,
                     disableReturn: !0,
@@ -112,7 +112,7 @@ function E(e) {
                         className: x.a,
                         children: (0, i.jsx)("div", {
                             className: x.G,
-                            id: E,
+                            id: v,
                             children: (0, i.jsx)(o.E, {
                                 variant: "text-sm/medium",
                                 children: f.intl.string(A.default.xyO7AD),

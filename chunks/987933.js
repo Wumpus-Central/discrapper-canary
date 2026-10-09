@@ -1,44 +1,44 @@
 t.d(n, { A: () => h });
-var l = t(477900),
-    i = t(582128),
-    a = t(554146),
-    s = t(43105),
-    o = t(7807),
-    r = t(131607),
+var i = t(477900),
+    l = t(582128),
+    s = t(554146),
+    a = t(43105),
+    r = t(7807),
+    o = t(131607),
     c = t(246356),
     u = t(49999),
     d = t(660183),
     A = t(401191);
 function h(e) {
     let { targetElementRef: n, openSoundboardPicker: t, shouldShowSoundboardPicker: h } = e,
-        [m, C] = (0, r.kn)([a.M.SOUNDBOARD_DESKTOP_NUX]),
-        p = i.useMemo(
+        [m, g] = (0, o.kn)([s.M.SOUNDBOARD_DESKTOP_NUX]),
+        x = l.useMemo(
             () => [
                 {
-                    icon: o.J,
+                    icon: r.J,
                     text: d.intl.string(d.t["6EJvHt"]),
                     onClick: () => {
-                        (t(), C(u.i.TAKE_ACTION));
+                        (t(), g(u.i.TAKE_ACTION));
                     },
                 },
             ],
-            [C, t],
+            [g, t],
         );
-    return (i.useEffect(() => {
-        h && m === a.M.SOUNDBOARD_DESKTOP_NUX && C(u.i.INDIRECT_ACTION);
-    }, [C, h, m]),
-    m !== a.M.SOUNDBOARD_DESKTOP_NUX)
+    return (l.useEffect(() => {
+        h && m === s.M.SOUNDBOARD_DESKTOP_NUX && g(u.i.INDIRECT_ACTION);
+    }, [g, h, m]),
+    m !== s.M.SOUNDBOARD_DESKTOP_NUX)
         ? null
-        : (0, l.jsx)(c.A, {
-              children: (0, l.jsx)(s.A, {
+        : (0, i.jsx)(c.A, {
+              children: (0, i.jsx)(a.A, {
                   targetElementRef: n,
                   graphic: { type: "image", src: A.A },
                   title: d.intl.string(d.t.UaGc2V),
                   body: d.intl.string(d.t.lyhz2x),
                   position: "top",
                   gradientColor: "pink",
-                  actions: p,
-                  onRequestClose: () => C(u.i.DISMISS),
+                  actions: x,
+                  onRequestClose: () => g(u.i.DISMISS),
               }),
           });
 }

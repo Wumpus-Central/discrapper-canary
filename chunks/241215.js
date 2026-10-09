@@ -1,4 +1,4 @@
-n.d(t, { A: () => T });
+n.d(t, { A: () => S });
 var i = n(477900),
     l = n(582128),
     a = n(621466),
@@ -16,36 +16,36 @@ var i = n(477900),
     x = n(734057),
     g = n(71393),
     C = n(576705),
-    y = n(309010),
-    j = n(977997),
+    j = n(309010),
+    y = n(977997),
     I = n(625494),
     N = n(446243),
-    v = n(889426),
-    E = n(652215),
+    E = n(889426),
+    v = n(652215),
     b = n(806931),
     _ = n(527133);
-let T = function (e) {
-    let { channelId: t, popoutType: n, width: T, height: S, idle: R, onClose: L } = e,
-        O = (0, m.Us)(),
+let S = function (e) {
+    let { channelId: t, popoutType: n, width: S, height: T, idle: R, onClose: O } = e,
+        L = (0, m.Us)(),
         P = (0, s.bG)([d.A], () => d.A.getSelectedParticipant(t)),
         M = (0, s.bG)([x.A], () => x.A.getChannel(t)),
         w = (0, s.bG)([g.A], () => g.A.getGuild(M?.getGuildId())),
-        U = (0, s.bG)([y.Ay], () => null != M && y.Ay.getVoiceChannelId() === M.id),
+        U = (0, s.bG)([j.Ay], () => null != M && j.Ay.getVoiceChannelId() === M.id),
         {
             participants: D,
             filteredParticipants: V,
-            participantsVersion: k,
-            mode: G,
+            participantsVersion: G,
+            mode: k,
             layout: B,
             participantsOpen: F,
         } = (0, s.cf)([d.A], () => {
-            let e = null != M ? d.A.getLayout(M.id, O) : E.DUB.NORMAL;
+            let e = null != M ? d.A.getLayout(M.id, L) : v.DUB.NORMAL;
             return {
                 participants: d.A.getParticipants(t),
                 filteredParticipants: d.A.getFilteredParticipants(t),
                 participantsVersion: d.A.getParticipantsVersion(t),
                 mode: d.A.getMode(t),
-                layout: O === E.BRT.POPOUT && e !== E.DUB.FULL_SCREEN ? E.DUB.NO_CHAT : e,
+                layout: L === v.BRT.POPOUT && e !== v.DUB.FULL_SCREEN ? v.DUB.NO_CHAT : e,
                 participantsOpen: d.A.getParticipantsOpen(t),
             };
         }),
@@ -53,9 +53,9 @@ let T = function (e) {
     return ((0, l.useEffect)(() => {
         if (null != M)
             return (
-                I._.subscribe(E.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
+                I._.subscribe(v.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e),
                 () => {
-                    I._.unsubscribe(E.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e);
+                    I._.unsubscribe(v.jej.GUILD_ROOM_VIDEO_OVERLAY_CLOSE, e);
                 }
             );
         function e() {
@@ -65,10 +65,10 @@ let T = function (e) {
     null == M)
         ? null
         : (0, i.jsx)(r.D, {
-              style: { width: T, height: S },
+              style: { width: S, height: T },
               className: _.Lw,
               onClick: function (e) {
-                  null == M || ((0, a.vq)(e.target, Element) && null != e.target.closest("[data-call-tile]")) || L();
+                  null == M || ((0, a.vq)(e.target, Element) && null != e.target.closest("[data-call-tile]")) || O();
               },
               tabIndex: -1,
               "aria-hidden": !0,
@@ -79,19 +79,19 @@ let T = function (e) {
                   guild: w,
                   participants: D,
                   filteredParticipants: V,
-                  participantsVersion: k,
-                  selectedParticipant: U && G === E._Of.VIDEO ? P : null,
+                  participantsVersion: G,
+                  selectedParticipant: U && k === v._Of.VIDEO ? P : null,
                   layout: B,
                   idle: R,
-                  mode: G,
+                  mode: k,
                   onSelectParticipant: function (e, t) {
                       if (null != M) {
                           if (
                               (0, b.Ay)(e) &&
-                              (0, p.eo)(M, j.A, g.A, C.A, u.default)[0] &&
+                              (0, p.eo)(M, y.A, g.A, C.A, u.default)[0] &&
                               0 ===
                                   f.A.getAllActiveStreams().filter(
-                                      (t) => (0, h._z)(t) === e.id && t.state !== E.XYD.ENDED,
+                                      (t) => (0, h._z)(t) === e.id && t.state !== v.XYD.ENDED,
                                   ).length
                           )
                               return void (0, c.A9)((0, h.Iy)(e.id), { forceMultiple: t.shiftKey });
@@ -99,20 +99,20 @@ let T = function (e) {
                       }
                   },
                   onContextMenuParticipant: function (e, n, i, l) {
-                      (0, v.A)({
+                      (0, E.A)({
                           participant: e,
                           event: n,
                           minimalContextMenu: i,
                           entrypoint: l,
                           channelId: t,
-                          appContext: O,
+                          appContext: L,
                           location: "GuildRoomVideoOverlay",
                       });
                   },
                   showParticipants: F,
                   popoutType: n,
                   awaitingRemoteSessionInfo: z,
-                  callContainerDimensions: { width: T, height: S },
+                  callContainerDimensions: { width: S, height: T },
               }),
           });
 };

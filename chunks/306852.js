@@ -16,7 +16,7 @@ var i = n(477900),
     x = n(969426);
 let g = "CameraPreviewPosition";
 function C(e) {
-    let { width: t, onContextMenuParticipant: n, height: a, channel: C, participants: y, onSelectParticipant: j } = e,
+    let { width: t, onContextMenuParticipant: n, height: a, channel: C, participants: j, onSelectParticipant: y } = e,
         [I, N] = (function () {
             let [e, t] = l.useState(() => o.w.get(g, m.CUs.BOTTOM_RIGHT));
             return [
@@ -26,12 +26,12 @@ function C(e) {
                 }, []),
             ];
         })(),
-        v = l.useRef(null),
-        E = null == C.getGuildId() ? 70 : 50,
+        E = l.useRef(null),
+        v = null == C.getGuildId() ? 70 : 50,
         b = (0, r.bG)([h.A], () => h.A.pipWidth(A.R8.CAMERA_PREVIEW)),
-        _ = y.length,
-        T = b * _ + 8 * (_ - 1),
-        S = l.useMemo(
+        _ = j.length,
+        S = b * _ + 8 * (_ - 1),
+        T = l.useMemo(
             () => ({
                 minWidth: A.mn[A.R8.CAMERA_PREVIEW] * _ + 8 * (_ - 1),
                 maxWidth: A.cF[A.R8.CAMERA_PREVIEW] * _ + 8 * (_ - 1),
@@ -39,8 +39,8 @@ function C(e) {
             [_],
         );
     l.useLayoutEffect(() => {
-        v.current?.ensureIsInPosition();
-    }, [y.length]);
+        E.current?.ensureIsInPosition();
+    }, [j.length]);
     let R = l.useCallback(
             (e) => {
                 let t = 0 === _ ? e : (e - 8 * (_ - 1)) / _;
@@ -48,7 +48,7 @@ function C(e) {
             },
             [_],
         ),
-        L = l.useCallback(
+        O = l.useCallback(
             (e, t) => {
                 N(t);
             },
@@ -59,20 +59,20 @@ function C(e) {
         children: (0, i.jsx)(u.S, {
             position: I,
             id: 0,
-            width: T,
-            ref: v,
-            onMove: L,
+            width: S,
+            ref: E,
+            onMove: O,
             onResize: R,
             maxX: t,
             maxY: a,
-            edgeOffsetTop: E,
+            edgeOffsetTop: v,
             edgeOffsetBottom: 70,
             edgeOffsetLeft: 16,
             edgeOffsetRight: 16,
-            resizeConfig: S,
+            resizeConfig: T,
             children: (0, i.jsx)("div", {
                 className: f.iA,
-                children: y.map((e) =>
+                children: j.map((e) =>
                     (0, i.jsx)(
                         p.Ay,
                         {
@@ -84,7 +84,7 @@ function C(e) {
                             inCall: !0,
                             popoutType: d.N.NO_POPOUT,
                             width: 160,
-                            onClick: j,
+                            onClick: y,
                         },
                         e.id,
                     ),

@@ -1,6 +1,6 @@
-(i.d(t, { s: () => n }), i(321073));
-var a = i(265486);
-class n {
+(i.d(t, { s: () => a }), i(321073));
+var n = i(265486);
+class a {
     videoElement;
     updateInterval = null;
     updateCallback = null;
@@ -21,7 +21,7 @@ class n {
         let e = "" !== this.videoElement.src ? this.videoElement.src : this.videoElement.currentSrc;
         if (null == e || "" === e || null != this.codecInfoPromise) return;
         let t = this.codecInfoFetchId;
-        this.codecInfoPromise = (0, a.K)(e);
+        this.codecInfoPromise = (0, n.K)(e);
         let i = await this.codecInfoPromise;
         this.codecInfoFetchId === t && (this.cachedCodecInfo = i);
     }
@@ -42,75 +42,75 @@ class n {
         let e,
             t,
             i,
-            a = this.videoElement;
+            n = this.videoElement;
         this.cachedCodecInfo?.videoWidth != null && this.cachedCodecInfo?.videoHeight != null
             ? ((e = this.cachedCodecInfo.videoWidth), (t = this.cachedCodecInfo.videoHeight), (i = `${e}x${t}`))
-            : ((e = 0 !== a.videoWidth ? a.videoWidth : 0),
-              (t = 0 !== a.videoHeight ? a.videoHeight : 0),
+            : ((e = 0 !== n.videoWidth ? n.videoWidth : 0),
+              (t = 0 !== n.videoHeight ? n.videoHeight : 0),
               (i = e > 0 && t > 0 ? `${e}x${t}` : "Unknown"));
-        let n = Math.round(a.clientWidth),
-            r = Math.round(a.clientHeight),
+        let a = Math.round(n.clientWidth),
+            r = Math.round(n.clientHeight),
             s = [],
             l = 0,
-            o = a.currentTime;
-        for (let e = 0; e < a.buffered.length; e++) {
-            let t = a.buffered.start(e),
-                i = a.buffered.end(e);
+            o = n.currentTime;
+        for (let e = 0; e < n.buffered.length; e++) {
+            let t = n.buffered.start(e),
+                i = n.buffered.end(e);
             (s.push({ start: t, end: i }), i > o && (t <= o ? (l += i - o) : (l += i - t)));
         }
         let u = 0,
             d = 0,
-            h = 0,
-            c = null;
-        if ("function" == typeof a.getVideoPlaybackQuality) {
-            let e = a.getVideoPlaybackQuality();
-            ((u = e.droppedVideoFrames), (h = (d = e.totalVideoFrames) > 0 ? (u / d) * 100 : 0));
+            c = 0,
+            h = null;
+        if ("function" == typeof n.getVideoPlaybackQuality) {
+            let e = n.getVideoPlaybackQuality();
+            ((u = e.droppedVideoFrames), (c = (d = e.totalVideoFrames) > 0 ? (u / d) * 100 : 0));
         }
-        if (this.cachedCodecInfo?.frameRate != null) c = this.cachedCodecInfo.frameRate;
-        else if ("function" == typeof a.getVideoPlaybackQuality) {
-            if (null !== this.lockedFrameRate) c = this.lockedFrameRate;
-            else if (Math.abs(a.currentTime - this.lastCurrentTime) > 1.5 && this.lastCurrentTime > 0)
+        if (this.cachedCodecInfo?.frameRate != null) h = this.cachedCodecInfo.frameRate;
+        else if ("function" == typeof n.getVideoPlaybackQuality) {
+            if (null !== this.lockedFrameRate) h = this.lockedFrameRate;
+            else if (Math.abs(n.currentTime - this.lastCurrentTime) > 1.5 && this.lastCurrentTime > 0)
                 if (this.recentFrameRates.length >= 3) {
                     let e = this.recentFrameRates.reduce((e, t) => e + t, 0) / this.recentFrameRates.length;
                     ((this.lockedFrameRate = Math.round(e)),
-                        (c = this.lockedFrameRate),
+                        (h = this.lockedFrameRate),
                         (this.lastKnownFrameRate = this.lockedFrameRate));
                 } else
                     ((this.baselineFrames = d),
-                        (this.baselineTime = a.currentTime),
+                        (this.baselineTime = n.currentTime),
                         (this.recentFrameRates = []),
-                        (c = this.lastKnownFrameRate));
+                        (h = this.lastKnownFrameRate));
             else {
                 let e = d - this.baselineFrames,
-                    t = a.currentTime - this.baselineTime;
+                    t = n.currentTime - this.baselineTime;
                 t >= 1 && e > 0
                     ? (this.recentFrameRates.push(e / t),
                       this.recentFrameRates.length > 5 && this.recentFrameRates.shift(),
-                      (c = Math.round(this.recentFrameRates.reduce((e, t) => e + t, 0) / this.recentFrameRates.length)),
-                      (this.lastKnownFrameRate = c))
-                    : null !== this.lastKnownFrameRate && (c = this.lastKnownFrameRate);
+                      (h = Math.round(this.recentFrameRates.reduce((e, t) => e + t, 0) / this.recentFrameRates.length)),
+                      (this.lastKnownFrameRate = h))
+                    : null !== this.lastKnownFrameRate && (h = this.lastKnownFrameRate);
             }
-            this.lastCurrentTime = a.currentTime;
+            this.lastCurrentTime = n.currentTime;
         }
-        let f = a.error?.code ?? null,
-            m = a.error?.message ?? null;
+        let f = n.error?.code ?? null,
+            m = n.error?.message ?? null;
         return (
             null == this.codecInfoPromise && this.fetchCodecInfo(),
             {
                 resolution: i,
                 videoWidth: e,
                 videoHeight: t,
-                viewportWidth: n,
+                viewportWidth: a,
                 viewportHeight: r,
-                currentTime: a.currentTime,
-                duration: a.duration,
+                currentTime: n.currentTime,
+                duration: n.duration,
                 bufferedRanges: s,
                 bufferedSeconds: l,
                 droppedFrames: u,
                 totalFrames: d,
-                droppedFramesPercent: h,
-                frameRate: c,
-                src: a.src,
+                droppedFramesPercent: c,
+                frameRate: h,
+                src: n.src,
                 fileSizeBytes: this.fileSizeBytes,
                 codecInfo: this.cachedCodecInfo,
                 errorCode: f,

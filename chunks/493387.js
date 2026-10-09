@@ -1,4 +1,4 @@
-(n.d(t, { A: () => v }), n(321073));
+(n.d(t, { A: () => E }), n(321073));
 var i = n(477900),
     l = n(582128),
     a = n(503698),
@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(806931),
     g = n(660183),
     C = n(836905),
-    y = n(938442),
-    j = n(138267);
+    j = n(938442),
+    y = n(138267);
 let I = {
     SCALE_MIN: 0.7,
     SCALE_MAX: 1,
@@ -80,14 +80,14 @@ class N extends l.PureComponent {
     render() {
         let { theme: e, children: t, className: n } = this.props,
             l = (0, d.M)(e),
-            a = s()(C._y, { [j.cp]: l, [j.QB]: !l });
+            a = s()(C._y, { [y.cp]: l, [y.QB]: !l });
         return (0, i.jsxs)(r.A.div, {
             role: "listitem",
             className: s()(C.kY, n),
             style: this.getWidthStyle(),
             children: [
                 (0, i.jsx)("div", {
-                    className: s()(C.XY, y.xM, y.wq, y.Hu),
+                    className: s()(C.XY, j.xM, j.wq, j.Hu),
                     children: (0, i.jsx)(r.A.div, { className: a, style: this.getSpriteStyle() }),
                 }),
                 (0, i.jsx)(r.A.div, { style: this.getScaleStyle(), children: t }),
@@ -95,18 +95,18 @@ class N extends l.PureComponent {
         });
     }
 }
-function v(e) {
+function E(e) {
     var t;
-    let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: y } = e,
-        j = (0, p.Ay)(),
+    let { participants: n, onContextMenu: l, className: a, onClick: r, width: d, guildId: j } = e,
+        y = (0, p.Ay)(),
         I = ((t = n.length), ((0, u.FT)(u._3.SIZE_80) + 16) * t > d ? u._3.SIZE_40 : u._3.SIZE_80),
-        v = (0, o.bG)([A.A], () => A.A.isFocused()),
-        E = (0, o.bG)([m.Ay], () => new Map(n.filter(x.Xw).map((e) => [e.user.id, m.Ay.isLocalMute(e.user.id)])), [n]),
+        E = (0, o.bG)([A.A], () => A.A.isFocused()),
+        v = (0, o.bG)([m.Ay], () => new Map(n.filter(x.Xw).map((e) => [e.user.id, m.Ay.isLocalMute(e.user.id)])), [n]),
         b = n.map((e) => {
             if (e.type !== x.lp.USER) return null;
             let { user: t, voiceState: n, speaking: a, ringing: s } = e,
                 o = null;
-            !0 === E.get(t.id)
+            !0 === v.get(t.id)
                 ? (o = g.intl.string(g.t.Q8Uzof))
                 : n?.isVoiceDeafened() === !0
                   ? (o = g.intl.string(g.t.NjmiOL))
@@ -118,7 +118,7 @@ function v(e) {
                 {
                     className: C.Wp,
                     width: (0, u.FT)(I),
-                    theme: j,
+                    theme: y,
                     children: (0, i.jsx)(h.s, {
                         "aria-label": c,
                         onClick: (t) => r?.(e, t),
@@ -127,7 +127,7 @@ function v(e) {
                             f.Ay,
                             {
                                 userId: t.id,
-                                src: t.getAvatarURL(y, (0, u.FT)(I), a && v),
+                                src: t.getAvatarURL(j, (0, u.FT)(I), a && E),
                                 size: I,
                                 muted: n?.isVoiceMuted() ?? !1,
                                 deafen: n?.isVoiceDeafened() ?? !1,

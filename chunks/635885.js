@@ -1,6 +1,6 @@
 n.d(t, { V: () => u });
-var l = n(582128),
-    i = n(17928),
+var i = n(582128),
+    l = n(17928),
     s = n(290863),
     r = n(240248),
     a = n(832163),
@@ -10,18 +10,18 @@ function u(e) {
     let n,
         u,
         d =
-            ((t = l.useMemo(() => (null != e ? [e] : []), [e])),
+            ((t = i.useMemo(() => (null != e ? [e] : []), [e])),
             (n = (0, o.W)()),
-            (u = (0, i.bG)([a.A], () => a.A.getDetectableIdsToApplicationIds())),
-            (0, i.bG)(
+            (u = (0, l.bG)([a.A], () => a.A.getDetectableIdsToApplicationIds())),
+            (0, l.bG)(
                 [s.A],
                 () =>
                     null != n
                         ? t.reduce((e, t) => ({ ...e, [t]: n }), {})
                         : t.reduce((e, t) => {
                               for (let n of s.A.getActivities(t)) {
-                                  let l = n.application_id;
-                                  if (null != l && !(0, r.uJ)(u[l])) return { ...e, [t]: u[l] };
+                                  let i = n.application_id;
+                                  if (null != i && !(0, r.uJ)(u[i])) return { ...e, [t]: u[i] };
                               }
                               return e;
                           }, {}),
@@ -32,6 +32,6 @@ function u(e) {
 }
 function c(e, t) {
     let n = Object.keys(e),
-        l = Object.keys(t);
-    return n.length === l.length && n.every((n) => e[n] === t[n]);
+        i = Object.keys(t);
+    return n.length === i.length && n.every((n) => e[n] === t[n]);
 }

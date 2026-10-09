@@ -1,60 +1,60 @@
-l.d(t, { A: () => p, z: () => f });
-var n = l(477900),
-    a = l(582128),
-    s = l(503698),
-    i = l.n(s),
-    r = l(17928),
-    o = l(834730),
-    u = l(140735),
-    c = l(773669),
-    m = l(574520),
-    d = l(583846),
-    v = l(809854),
-    x = l(358509);
-function f(e) {
+n.d(t, { A: () => f, z: () => v });
+var r = n(477900),
+    i = n(582128),
+    a = n(503698),
+    l = n.n(a),
+    s = n(17928),
+    o = n(834730),
+    u = n(140735),
+    c = n(773669),
+    d = n(574520),
+    h = n(583846),
+    A = n(809854),
+    p = n(358509);
+function v(e) {
     let {
             entry: t,
-            inline: l = !1,
-            textColor: s,
-            textTabularNumbers: r = !0,
+            inline: n = !1,
+            textColor: a,
+            textTabularNumbers: s = !0,
             hovered: c = !1,
-            scaleFontToUserSetting: m = !1,
+            scaleFontToUserSetting: d = !1,
         } = e,
-        { now: f } = (0, v.e)(c),
-        { timestamp: p, a11yTimeStamp: h } = a.useMemo(
-            () => ({ timestamp: (0, d.W6)(t, f), a11yTimeStamp: (0, d.U3)(t, f) }),
-            [t, f],
+        { now: v } = (0, A.e)(c),
+        { timestamp: f, a11yTimeStamp: g } = i.useMemo(
+            () => ({ timestamp: (0, h.W6)(t, v), a11yTimeStamp: (0, h.U3)(t, v) }),
+            [t, v],
         );
-    return (0, n.jsxs)(o.E, {
-        className: i()(x.$N, { [x.E1]: l }),
+    return (0, r.jsxs)(o.E, {
+        className: l()(p.$N, { [p.E1]: n }),
         variant: "text-xs/normal",
-        tabularNumbers: r,
-        color: s,
-        scaleFontToUserSetting: m,
+        tabularNumbers: s,
+        color: a,
+        scaleFontToUserSetting: d,
         children: [
-            (0, n.jsx)(u.A, { tag: "span", role: "timer", children: h }),
-            (0, n.jsx)("span", { "aria-hidden": "true", children: p }),
+            (0, r.jsx)(u.A, { tag: "span", role: "timer", children: g }),
+            (0, r.jsx)("span", { "aria-hidden": "true", children: f }),
         ],
     });
 }
-let p = function (e) {
-    let { entry: t, textColor: l, hovered: a = !1, scaleFontToUserSetting: s = !1 } = e,
-        i = (0, d.Hd)(t),
-        v = (0, r.bG)([c.default], () => c.default.locale),
-        x = (0, r.bG)([m.A], () => m.A.getMatchingActivity(t)),
-        p = x?.timestamps?.start ?? x?.created_at;
-    if (null != p) return (0, n.jsx)(f, { entry: { start: p }, textColor: l, hovered: a, scaleFontToUserSetting: s });
-    if (i) return (0, n.jsx)(f, { entry: t, textColor: l, hovered: a, scaleFontToUserSetting: s });
-    let h = (0, d.aJ)(t, v),
-        _ = (0, d.aJ)(t, v, void 0, { formatSet: d.sg });
-    return (0, n.jsxs)(o.E, {
+let f = function (e) {
+    let { entry: t, textColor: n, hovered: i = !1, scaleFontToUserSetting: a = !1 } = e,
+        l = (0, h.Hd)(t),
+        A = (0, s.bG)([c.default], () => c.default.locale),
+        p = (0, s.bG)([d.A], () => d.A.getMatchingActivity(t)),
+        f = p?.timestamps?.start ?? p?.created_at;
+    if (null != f) return (0, r.jsx)(v, { entry: { start: f }, textColor: n, hovered: i, scaleFontToUserSetting: a });
+    if (l) return (0, r.jsx)(v, { entry: t, textColor: n, hovered: i, scaleFontToUserSetting: a });
+    let g = (0, h.aJ)(t, A),
+        m = (0, h.aJ)(t, A, void 0, { formatSet: h.sg });
+    return (0, r.jsxs)(o.E, {
         variant: "text-xs/normal",
-        color: l,
+        color: n,
         lineClamp: 1,
-        scaleFontToUserSetting: s,
+        scaleFontToUserSetting: a,
         children: [
-            (0, n.jsx)(u.A, { tag: "span", children: _ }),
-            (0, n.jsx)("span", { "aria-hidden": "true", children: h }),
+            (0, r.jsx)(u.A, { tag: "span", children: m }),
+            (0, r.jsx)("span", { "aria-hidden": "true", children: g }),
         ],
     });
 };

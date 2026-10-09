@@ -19,8 +19,8 @@ function C(e) {
     let { channelId: t, corners: n, roomWidth: a } = e,
         {
             screenBounds: C,
-            screenClipPath: y,
-            center: j,
+            screenClipPath: j,
+            center: y,
             boundingBoxCorners: I,
         } = l.useMemo(() => {
             let e = (function (e) {
@@ -61,27 +61,27 @@ function C(e) {
                 boundingBoxCorners: t,
             };
         }, [n]),
-        { ref: N, width: v, height: E } = (0, r.Ay)(),
-        b = l.useMemo(() => (null == v || null == E ? null : (0, p.t)(I, v, E, g)), [I, v, E]),
+        { ref: N, width: E, height: v } = (0, r.Ay)(),
+        b = l.useMemo(() => (null == E || null == v ? null : (0, p.t)(I, E, v, g)), [I, E, v]),
         _ = Math.min(48, Math.max(20, 0.025 * a)),
-        T = (0, o.yK)([d.A, u.default], () => {
+        S = (0, o.yK)([d.A, u.default], () => {
             if ((0, c.F2)(t)) return [];
             let e = u.default.getId();
             return d.A.getAllApplicationStreamsForChannel(t).sort(
                 (t, n) => Number(t.ownerId === e) - Number(n.ownerId === e),
             );
         }),
-        S = (0, h.Y1)(t),
-        R = l.useMemo(() => (null == E ? 0 : -(((I.topLeft.y + I.topRight.y) / 2 / 100) * E)), [I, E]);
+        T = (0, h.Y1)(t),
+        R = l.useMemo(() => (null == v ? 0 : -(((I.topLeft.y + I.topRight.y) / 2 / 100) * v)), [I, v]);
     return (0, i.jsxs)("div", {
         ref: N,
         className: x.nj,
-        inert: S,
-        style: { left: `${C.left}%`, top: `${C.top}%`, width: `${C.width}%`, height: `${C.height}%`, clipPath: y },
+        inert: T,
+        style: { left: `${C.left}%`, top: `${C.top}%`, width: `${C.width}%`, height: `${C.height}%`, clipPath: j },
         children: [
-            T.length > 0 && null != b && null != v
-                ? (0, i.jsx)(f.A, { streams: T, fit: b, tooltipSpacing: R, containerWidthPx: v })
-                : (0, i.jsx)(A.A, { channelId: t, center: j, iconSize: _ }),
+            S.length > 0 && null != b && null != E
+                ? (0, i.jsx)(f.A, { streams: S, fit: b, tooltipSpacing: R, containerWidthPx: E })
+                : (0, i.jsx)(A.A, { channelId: t, center: y, iconSize: _ }),
             (0, i.jsx)(m.A, { className: s()(x.MQ, x.zq) }),
         ],
     });

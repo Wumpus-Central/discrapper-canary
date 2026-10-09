@@ -14,8 +14,8 @@ var r = n(477900),
     h = n(983851),
     x = n(299163),
     v = n(86147),
-    g = n(729475),
-    E = n(261958),
+    E = n(729475),
+    g = n(261958),
     b = n(32880),
     y = n(922016),
     S = n(980707),
@@ -106,8 +106,8 @@ function V(e) {
             shortcut: h,
             onClick: x,
             buttonSize: v = d.n4.MD,
-            "data-testid": g,
-            clickableProps: E,
+            "data-testid": E,
+            clickableProps: g,
             ref: b,
         } = e,
         y = "" !== (h ?? "").trim();
@@ -122,9 +122,9 @@ function V(e) {
             "aria-label": a,
             "aria-keyshortcuts": y ? h : void 0,
             "aria-disabled": s,
-            "data-testid": g,
+            "data-testid": E,
             innerRef: b,
-            ...E,
+            ...g,
             children: (0, r.jsx)(u.animated.div, {
                 className: U.K5,
                 style: {
@@ -200,7 +200,7 @@ function en(e) {
         ef = (0, s.bG)([L.Ay], () => L.Ay.keyboardModeEnabled),
         { isFullscreen: ep, videoRef: eh } = (0, k.X$)(),
         [ex, ev] = l.useState(F ? 0 : B),
-        [eg, eE] = l.useState(!1),
+        [eE, eg] = l.useState(!1),
         [eb, ey] = l.useState(!1),
         [{ volumeAnimSpring: eS }, eC] = (0, m.z)(() => ({
             from: { volumeAnimSpring: 0 },
@@ -240,10 +240,10 @@ function en(e) {
                 } else (es(ex), ej(0), ec(!0));
         }, [eh, ex, ej, B, ec, es]);
     function eI() {
-        (eE(!0), ed(!0));
+        (eg(!0), ed(!0));
     }
     function eB() {
-        (eE(!1), ed(!1));
+        (eg(!1), ed(!1));
     }
     let eF = l.useCallback(
         (e) => {
@@ -289,12 +289,12 @@ function en(e) {
         ),
         l.useEffect(
             () => (
-                eC({ volumeAnimSpring: !ei || eb || eg ? 1 : 0, immediate: em }),
+                eC({ volumeAnimSpring: !ei || eb || eE ? 1 : 0, immediate: em }),
                 () => {
                     eS.stop();
                 }
             ),
-            [ei, eb, eg, eC, em, eS],
+            [ei, eb, eE, eC, em, eS],
         ));
     let e_ = 0 === ex ? f._ : ex < 0.5 ? p.S : h.H,
         eU = _.intl.string(0 === ex ? _.t.YqAjXy : _.t.w4m945),
@@ -434,7 +434,7 @@ function en(e) {
                                 t ||
                                     m.push({
                                         id: "transcript",
-                                        iconComponent: E.u,
+                                        iconComponent: g.u,
                                         label: _.intl.string(Z.default["6EjGUv"]),
                                         onClick: i,
                                         active: r && a !== d.Q6.ENDED,
@@ -489,7 +489,7 @@ function en(e) {
                         }),
                     !A &&
                         (0, r.jsx)(V, {
-                            iconComponent: ep ? v.z : g.T,
+                            iconComponent: ep ? v.z : E.T,
                             animationTime: n,
                             visible: a,
                             onClick: et,

@@ -1,6 +1,6 @@
-n.d(t, { M: () => f, u: () => p });
-var l,
-    i = n(499979),
+n.d(t, { M: () => h, u: () => p });
+var i,
+    l = n(499979),
     s = n(626584),
     r = n(280450),
     a = n(734057),
@@ -10,36 +10,36 @@ var l,
     d = n(174459),
     m = n(652215),
     p =
-        (((l = {}).SELF_VIDEO = "self_video"),
-        (l.SELF_STREAM = "self_stream"),
-        (l.REMOTE_VIDEO = "remote_video"),
-        (l.REMOTE_STREAM = "remote_stream"),
-        (l.CHANGE_VIDEO_BACKGROUND = "change_video_background"),
-        (l.REPLAY_VIDEO_STREAM = "replay_video_stream"),
-        l);
+        (((i = {}).SELF_VIDEO = "self_video"),
+        (i.SELF_STREAM = "self_stream"),
+        (i.REMOTE_VIDEO = "remote_video"),
+        (i.REMOTE_STREAM = "remote_stream"),
+        (i.CHANGE_VIDEO_BACKGROUND = "change_video_background"),
+        (i.REPLAY_VIDEO_STREAM = "replay_video_stream"),
+        i);
 let g = new Map();
-class f {
+class h {
     logger;
     spinnerVisibleStart = null;
     constructor(e) {
         this.logger = new s.A(e);
     }
     onSpinnerStarted() {
-        null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, i.tB)());
+        null == this.spinnerVisibleStart && (this.spinnerVisibleStart = (0, l.tB)());
     }
     trackSpinnerDuration(e, t, n) {
-        let l;
+        let i;
         if (null == this.spinnerVisibleStart) return;
-        let s = ((l = (g.get(n) ?? 0) + 1), g.set(n, l), l),
-            p = (0, i.tB)() - this.spinnerVisibleStart;
+        let s = ((i = (g.get(n) ?? 0) + 1), g.set(n, i), i),
+            p = (0, l.tB)() - this.spinnerVisibleStart;
         if (((this.spinnerVisibleStart = null), p < 0))
             return void this.logger.warn(`spinner duration is negative: ${p} ms
         [${e}, count for stream: ${s}]`);
         this.logger.info(`spinner visible for ${p} ms
       [${e}, count for stream: ${s}]`);
-        let f = u.A.getGuildId(),
-            x = c.A.getUserVoiceChannelId(f, r.default.getId()),
-            h = (function (e) {
+        let h = u.A.getGuildId(),
+            x = c.A.getUserVoiceChannelId(h, r.default.getId()),
+            f = (function (e) {
                 if (null != e) {
                     if (e.isGuildVoice()) return "guild_voice";
                     if (e.isGuildStageVoice()) return "is_stage_channel";
@@ -54,9 +54,9 @@ class f {
             rtc_connection_id: u.A.getRTCConnectionId(),
             media_session_id: u.A.getMediaSessionId(),
             event_count_for_stream: s,
-            guild_id: f,
+            guild_id: h,
             channel_id: x,
-            channel_type: h,
+            channel_type: f,
             spinning_user_id: t,
             connection_type: o.A.getType(),
             effective_connection_speed: o.A.getEffectiveConnectionSpeed(),

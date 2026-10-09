@@ -1,6 +1,6 @@
-n.d(t, { A: () => h });
-var l = n(477900),
-    i = n(582128),
+n.d(t, { A: () => f });
+var i = n(477900),
+    l = n(582128),
     s = n(202091),
     r = n(17928),
     a = n(866323),
@@ -11,16 +11,16 @@ var l = n(477900),
     m = n(96969);
 let p = 6 * c.A.Millis.SECOND,
     g = 2 * c.A.Millis.SECOND,
-    f = 2 * c.A.Millis.SECOND;
+    h = 2 * c.A.Millis.SECOND;
 function x(e) {
     return `scale(${1 - -(e / 120)}) rotate(${e}deg)`;
 }
-function h(e) {
+function f(e) {
     let { userId: t, voiceChannelEffect: n, onComplete: c } = e,
-        { emoji: h, sentAt: A } = n,
+        { emoji: f, sentAt: A } = n,
         v = (0, r.bG)([u.Ay], () => u.Ay.useReducedMotion),
-        [E, j] = i.useState(!0),
-        C = !v,
+        [E, C] = l.useState(!0),
+        j = !v,
         I = (0, a.p)(E, {
             from: { rotate: -120 },
             enter: { rotate: 0 },
@@ -31,36 +31,36 @@ function h(e) {
                 "leave" === n && c();
             },
         });
-    return (i.useEffect(() => {
+    return (l.useEffect(() => {
         let e;
         return (
-            Date.now() - A >= f
+            Date.now() - A >= h
                 ? (0, d.a)(t)
                 : (e = setTimeout(
                       () => {
-                          (j(!1), C && (0, d.a)(t));
+                          (C(!1), j && (0, d.a)(t));
                       },
-                      C ? g : p,
+                      j ? g : p,
                   )),
             () => {
                 null != e && clearTimeout(e);
             }
         );
-    }, [A, t, C]),
-    C)
+    }, [A, t, j]),
+    j)
         ? null
         : I((e, t) => {
               let { rotate: n } = e;
               return (
                   t &&
-                  (0, l.jsx)(s.animated.div, {
+                  (0, i.jsx)(s.animated.div, {
                       className: m._,
                       style: { transform: n.to(x) },
-                      children: (0, l.jsx)(o.A, {
+                      children: (0, i.jsx)(o.A, {
                           className: m.F,
-                          emojiId: h.id,
-                          emojiName: h.name,
-                          animated: h.animated ?? !1,
+                          emojiId: f.id,
+                          emojiName: f.name,
+                          animated: f.animated ?? !1,
                       }),
                   })
               );

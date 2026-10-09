@@ -16,24 +16,24 @@ var i = n(477900),
     x = n(652896),
     g = n(616356),
     C = n(287809),
-    y = n(927813),
-    j = n(562153),
+    j = n(927813),
+    y = n(562153),
     I = n(218394),
     N = n(920639),
-    v = n(393371),
-    E = n(360627),
+    E = n(393371),
+    v = n(360627),
     b = n(809369),
     _ = n(652215),
-    T = n(270103),
-    S = n(660183),
+    S = n(270103),
+    T = n(660183),
     R = n(814402);
-let L = 10 * y.A.Millis.SECOND,
-    O = { tension: 220, friction: 30, clamp: !0 },
+let O = 10 * j.A.Millis.SECOND,
+    L = { tension: 220, friction: 30, clamp: !0 },
     P = { x: "100%" },
     M = { x: "0%" },
     w = { x: "-100%" };
 function U(e) {
-    let { streams: t, fit: n, tooltipSpacing: a, containerWidthPx: y } = e,
+    let { streams: t, fit: n, tooltipSpacing: a, containerWidthPx: j } = e,
         U = (0, o.yK)(
             [g.A],
             () =>
@@ -46,7 +46,7 @@ function U(e) {
             [t],
         ),
         [D, V] = l.useState({ streamKey: U[0] ?? null, sequence: 0 }),
-        [k, G] = l.useState(!1),
+        [G, k] = l.useState(!1),
         [B, F] = l.useState(!1),
         z = Math.max(
             0,
@@ -58,20 +58,20 @@ function U(e) {
         $ = U.includes((0, x._z)(H)),
         K = B ? W : H,
         X = (0, o.bG)([C.default], () => C.default.getUser(K.ownerId), [K]),
-        q = j.Ay.useName(K.guildId, K.channelId, X),
+        q = y.Ay.useName(K.guildId, K.channelId, X),
         Z = (0, I.j)(),
-        Q = y / 225,
-        J = $ ? S.intl.string(T.default.zW6Hyu) : S.intl.string(S.t["7Xq/nV"]),
-        ee = S.intl.string(T.default["t+GPi4"]),
+        Q = j / 225,
+        J = $ ? T.intl.string(S.default.zW6Hyu) : T.intl.string(T.t["7Xq/nV"]),
+        ee = T.intl.string(S.default["t+GPi4"]),
         et = l.useCallback(() => {
             let e = (0, x._z)(W);
             V((t) => ({ streamKey: e, sequence: t.sequence + 1 }));
         }, [W]);
     l.useEffect(() => {
-        if (!Y || !Z || k || $) return;
-        let e = setTimeout(et, L);
+        if (!Y || !Z || G || $) return;
+        let e = setTimeout(et, O);
         return () => clearTimeout(e);
-    }, [Y, Z, k, $, et]);
+    }, [Y, Z, G, $, et]);
     let en = l.useCallback(() => {
             ((0, N.n0)({ channelId: H.channelId, interactionType: "tv_clicked_stream_preview" }), (0, b.k)(H));
         }, [H]),
@@ -82,13 +82,13 @@ function U(e) {
             from: P,
             enter: M,
             leave: w,
-            config: O,
+            config: L,
         });
     function ea() {
-        G(!0);
+        k(!0);
     }
     function es() {
-        (G(!1), F(!1));
+        (k(!1), F(!1));
     }
     return (0, i.jsxs)("div", {
         className: s()(R.VH, { [R.ke]: $ }),
@@ -98,7 +98,7 @@ function U(e) {
         onFocus: ea,
         onBlur: es,
         children: [
-            (0, i.jsx)(E.A, {
+            (0, i.jsx)(v.A, {
                 title: q,
                 image: (0, i.jsx)(d.eu, { src: X?.getAvatarURL(K.guildId, 96), size: u._3.SIZE_48, "aria-hidden": !0 }),
                 forceOpen: B,
@@ -115,7 +115,7 @@ function U(e) {
                                 (0, i.jsx)(r.animated.div, {
                                     className: R.G8,
                                     style: e,
-                                    children: (0, i.jsx)(v.A, { stream: t, previewClassName: R.oz }),
+                                    children: (0, i.jsx)(E.A, { stream: t, previewClassName: R.oz }),
                                 }),
                             ),
                         }),

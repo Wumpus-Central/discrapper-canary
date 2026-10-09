@@ -16,10 +16,10 @@ var i = n(477900),
     x = n(270103),
     g = n(660183),
     C = n(232059);
-function y(e, t) {
+function j(e, t) {
     return { x: (100 * t.offsetX) / e.clientWidth, y: (100 * t.offsetY) / e.clientHeight };
 }
-function j(e) {
+function y(e) {
     let { channelId: t, roomWidth: n, containerRef: a, pointerRef: s } = e,
         [r, o] = (0, l.useState)(null),
         c = (0, l.useRef)(!1);
@@ -40,12 +40,12 @@ function j(e) {
         }
         function n(e) {
             let t = a.current;
-            null != t && o(y(t, e));
+            null != t && o(j(t, e));
         }
         function i(e) {
             if ((e.stopPropagation(), c.current)) return;
             let n = a.current;
-            null != n && ((c.current = !0), (0, d.Dr)(t, y(n, e)));
+            null != n && ((c.current = !0), (0, d.Dr)(t, j(n, e)));
         }
     }, [a, s, t]),
     null == r)
@@ -57,7 +57,7 @@ function I(e) {
         a = (0, l.useRef)(null),
         d = (0, l.useRef)({ x: 0, y: 0, hasValue: !1 }),
         A = (0, r.bG)([u.A], () => u.A.getPendingNote(t)),
-        y = (0, r.bG)([u.A], () => u.A.getCreatingNotes(t)),
+        j = (0, r.bG)([u.A], () => u.A.getCreatingNotes(t)),
         I = (0, r.bG)([u.A], () => u.A.getNotes(t)),
         N = (0, r.bG)([o.Ay], () => o.Ay.keyboardModeEnabled);
     (0, l.useEffect)(() => {
@@ -69,20 +69,20 @@ function I(e) {
             () => document.removeEventListener("mousemove", e)
         );
     }, []);
-    let { interactionsEnabled: v } = (0, h.mf)({ guildId: c.A.getChannel(t)?.guild_id, location: "GuildRoom" });
-    if (!v || (0 === I.length && null == A && 0 === y.length)) return null;
-    let E = null != A && null == A.position;
+    let { interactionsEnabled: E } = (0, h.mf)({ guildId: c.A.getChannel(t)?.guild_id, location: "GuildRoom" });
+    if (!E || (0 === I.length && null == A && 0 === j.length)) return null;
+    let v = null != A && null == A.position;
     return (0, i.jsxs)(i.Fragment, {
         children: [
-            E &&
+            v &&
                 !N &&
                 (0, i.jsx)("div", {
                     ref: a,
                     className: C.kL,
-                    children: (0, i.jsx)(j, { channelId: t, roomWidth: n, containerRef: a, pointerRef: d }),
+                    children: (0, i.jsx)(y, { channelId: t, roomWidth: n, containerRef: a, pointerRef: d }),
                 }),
             A?.position != null && (0, i.jsx)(f.A, { channelId: t, position: A.position, roomWidth: n }),
-            y.map((e) =>
+            j.map((e) =>
                 (0, i.jsx)(
                     "div",
                     {
@@ -97,7 +97,7 @@ function I(e) {
                 (0, i.jsx)("div", {
                     role: "list",
                     "aria-label": g.intl.string(x.default.zzZaRe),
-                    className: s()({ [C.IU]: E }),
+                    className: s()({ [C.IU]: v }),
                     children: I.map((e) => (0, i.jsx)(p.A, { channelId: t, note: e, roomWidth: n }, e.objectId)),
                 }),
         ],

@@ -1,46 +1,46 @@
-t.d(n, { A: () => C, x: () => h });
-var l,
-    i = t(477900),
-    a = t(582128),
-    s = t(503698),
-    o = t.n(s),
-    r = t(559106),
+t.d(n, { A: () => g, x: () => h });
+var i,
+    l = t(477900),
+    s = t(582128),
+    a = t(503698),
+    r = t.n(a),
+    o = t(559106),
     c = t(765671),
     u = t(401685),
     d = t(919706),
     A = t(297468),
-    h = (((l = {})[(l.TOP = 0)] = "TOP"), (l[(l.BOTTOM = 1)] = "BOTTOM"), l);
+    h = (((i = {})[(i.TOP = 0)] = "TOP"), (i[(i.BOTTOM = 1)] = "BOTTOM"), i);
 function m(e) {
     let {
             disableGradients: n = !1,
             renderHeader: t,
-            renderBottomLeft: l,
-            renderBottomCenter: s,
-            renderBottomRight: o,
+            renderBottomLeft: i,
+            renderBottomCenter: a,
+            renderBottomRight: r,
             renderCenter: d,
         } = e,
-        h = a.useRef(null),
-        { width: m, ref: C } = (0, c.Ay)(),
-        p = (0, u.bf)(m);
-    return (0, i.jsx)(r.xp, {
+        h = s.useRef(null),
+        { width: m, ref: g } = (0, c.Ay)(),
+        x = (0, u.bf)(m);
+    return (0, l.jsx)(o.xp, {
         containerRef: h,
-        children: (0, i.jsxs)("div", {
+        children: (0, l.jsxs)("div", {
             className: A._v,
             ref: h,
             children: [
-                0 !== n && !0 !== n && (0, i.jsx)("div", { className: A.aw }),
-                1 !== n && !0 !== n && (0, i.jsx)("div", { className: A.YA }),
-                (0, i.jsx)("div", { className: A.K1, children: t?.() }),
+                0 !== n && !0 !== n && (0, l.jsx)("div", { className: A.aw }),
+                1 !== n && !0 !== n && (0, l.jsx)("div", { className: A.YA }),
+                (0, l.jsx)("div", { className: A.K1, children: t?.() }),
                 d?.(),
-                (0, i.jsx)(u.Ay.Provider, {
-                    value: p,
-                    children: (0, i.jsxs)("div", {
+                (0, l.jsx)(u.Ay.Provider, {
+                    value: x,
+                    children: (0, l.jsxs)("div", {
                         className: A.q6,
-                        ref: C,
+                        ref: g,
                         children: [
-                            (0, i.jsx)("div", { className: A.i$, children: l?.() }),
-                            (0, i.jsx)("div", { className: A.Kz, children: s?.() }),
-                            (0, i.jsx)("div", { className: A.He, children: o?.() }),
+                            (0, l.jsx)("div", { className: A.i$, children: i?.() }),
+                            (0, l.jsx)("div", { className: A.Kz, children: a?.() }),
+                            (0, l.jsx)("div", { className: A.He, children: r?.() }),
                         ],
                     }),
                 }),
@@ -48,31 +48,31 @@ function m(e) {
         }),
     });
 }
-function C(e) {
+function g(e) {
     let {
         screenMessage: n,
         onDoubleClick: t,
-        onActive: l,
-        onForceIdle: a,
-        idle: s,
-        children: r,
+        onActive: i,
+        onForceIdle: s,
+        idle: a,
+        children: o,
         renderChatToasts: c,
         renderVoiceChannelEffects: u,
         style: h,
-        hideControls: C = !1,
-        ...p
+        hideControls: g = !1,
+        ...x
     } = e;
-    return (0, i.jsxs)("div", {
-        className: o()(A.zr, { [A.N7]: s }),
+    return (0, l.jsxs)("div", {
+        className: r()(A.zr, { [A.N7]: a }),
         style: h,
-        onMouseMove: l,
-        onMouseDown: l,
-        onMouseLeave: a,
+        onMouseMove: i,
+        onMouseDown: i,
+        onMouseLeave: s,
         onDoubleClick: t,
         children: [
-            !C && (0, i.jsx)(m, { ...p }),
-            r,
-            null != n ? (0, i.jsx)(d.A, { size: "large", ...n }) : null,
+            !g && (0, l.jsx)(m, { ...x }),
+            o,
+            null != n ? (0, l.jsx)(d.A, { size: "large", ...n }) : null,
             c?.(),
             u?.(),
         ],

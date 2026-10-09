@@ -45,8 +45,8 @@ function M(e) {
 }
 var R = n(406704),
     D = n(885386),
-    L = n(951260),
-    k = n(629016),
+    k = n(951260),
+    L = n(629016),
     P = n(576705),
     O = n(461213),
     G = n(625494),
@@ -391,7 +391,7 @@ let ev = s.memo(function (e) {
             canOnlyUseTextCommands: T,
             chatInputType: B,
         } = e,
-        H = (0, L.n)("ChannelAttachButton"),
+        H = (0, k.n)("ChannelAttachButton"),
         K = (0, o.bG)([m.Ay], () => m.Ay.isAppsButtonEnabled),
         V = (0, E.Us)(),
         z = s.useRef(null),
@@ -400,8 +400,8 @@ let ev = s.memo(function (e) {
         q = (0, f.E)(),
         Z = (0, o.yK)([A.Ay], () => A.Ay.getNewClipIds()),
         J = (0, o.yK)(
-            [k.A],
-            () => (l.type === ex.rbe.DM ? $.filter((e) => !k.A.getParty(e.party?.id)?.has(l.getRecipientId())) : $),
+            [L.A],
+            () => (l.type === ex.rbe.DM ? $.filter((e) => !L.A.getParty(e.party?.id)?.has(l.getRecipientId())) : $),
             [$, l],
         ),
         { onShareClick: Y } = (0, C.A)(l.id),
@@ -588,8 +588,8 @@ let ev = s.memo(function (e) {
             return { isCoachmarkVisible: n === y, dismissCoachmark: l };
         })({ isEligible: eN });
     if (0 === eM.length) return null;
-    let eL = (0, i.jsx)(d.PlusLargeIcon, { size: "refresh_sm", color: "currentColor", colorClass: ey.dW }),
-        ek = (0, i.jsx)(u.Y, {
+    let ek = (0, i.jsx)(d.PlusLargeIcon, { size: "refresh_sm", color: "currentColor", colorClass: ey.dW }),
+        eL = (0, i.jsx)(u.Y, {
             targetElementRef: W,
             shouldShow: null != Q,
             animation: u.Y.Animation.NONE,
@@ -628,7 +628,7 @@ let ev = s.memo(function (e) {
                     onDoubleClick: eC ? () => z.current?.activateUploadDialogue() : void 0,
                     "aria-haspopup": "menu",
                     ...e,
-                    children: eL,
+                    children: ek,
                 }),
         });
     return (0, i.jsxs)(i.Fragment, {
@@ -651,7 +651,7 @@ let ev = s.memo(function (e) {
                     "aria-hidden": !0,
                 }),
             }),
-            (0, i.jsx)("div", { className: ey.Jd, children: ek }),
+            (0, i.jsx)("div", { className: ey.Jd, children: eL }),
             eR && (0, i.jsx)(M, { targetElementRef: W, onDismiss: eD }),
         ],
     });

@@ -14,12 +14,12 @@ var r = n(477900),
     h = n(650583),
     x = n(565164),
     v = n(202091),
-    g = n(494154);
-let E = l.memo(function (e) {
+    E = n(494154);
+let g = l.memo(function (e) {
     let { playbackPxSpring: t, isDragging: n, dragX: l } = e;
     return (0, r.jsx)(v.animated.div, {
         "data-testid": "discord-web-video-player-playhead",
-        className: g.lG,
+        className: E.lG,
         style: { left: n && null != l ? `${l}px` : t.to((e) => `${e}px`) },
     });
 });
@@ -39,8 +39,8 @@ let y = (e) => {
             segmentBorderRadius: p = 99,
             progressClassName: h,
         } = e,
-        { startPx: x, endPx: E, leftIndicatorIndex: y, rightIndicatorIndex: S } = t,
-        C = E - x,
+        { startPx: x, endPx: g, leftIndicatorIndex: y, rightIndicatorIndex: S } = t,
+        C = g - x,
         P = a.to((e) => Math.min(Math.max(0, e - x), C)),
         A = null != n && null != c && y === n,
         R = !A && null != n && null != c && S === n,
@@ -87,31 +87,31 @@ let y = (e) => {
             () =>
                 m
                     ?.map((e) => ({ startPx: e.start * d, endPx: (e.start + e.size) * d }))
-                    .filter((e) => e.endPx >= x && e.startPx <= E),
-            [m, x, E, d],
+                    .filter((e) => e.endPx >= x && e.startPx <= g),
+            [m, x, g, d],
         );
     return (0, r.jsxs)(v.animated.div, {
-        className: i()(g.Td, h),
+        className: i()(E.Td, h),
         style: {
             left: A ? c.to((e) => x + e) : x,
             width: N ? c.to((e) => C - e) : C,
             "--custom-r-left": a.to((e) => (0 === x || e >= x ? "99px" : "0px")),
-            "--custom-r-right": a.to((e) => (E >= d || e >= E ? "99px" : "0px")),
+            "--custom-r-right": a.to((e) => (g >= d || e >= g ? "99px" : "0px")),
             "--custom-timeline-width": `${d}px`,
         },
         children: [
             (0, r.jsxs)("div", {
-                className: g.MI,
+                className: E.MI,
                 children: [
                     (0, r.jsxs)(v.animated.div, {
-                        className: g._I,
+                        className: E._I,
                         style: { left: A ? c.to((e) => -(x + e)) : -x },
                         children: [
                             I?.map((e) =>
                                 (0, r.jsx)(
                                     "div",
                                     {
-                                        className: g.Zn,
+                                        className: E.Zn,
                                         style: { width: `${e.endPx - e.startPx}px`, left: `${e.startPx}px`, ...D },
                                     },
                                     `${e.startPx}:${e.endPx}`,
@@ -119,17 +119,17 @@ let y = (e) => {
                             ),
                             null != f &&
                                 j > 0 &&
-                                (0, r.jsx)("div", { className: g.YK, style: { width: `${j}px`, opacity: 1, ...D } }),
+                                (0, r.jsx)("div", { className: E.YK, style: { width: `${j}px`, opacity: 1, ...D } }),
                         ],
                     }),
-                    (0, r.jsx)(v.animated.div, { className: g.wx, style: { transform: L, opacity: k } }),
+                    (0, r.jsx)(v.animated.div, { className: E.wx, style: { transform: L, opacity: k } }),
                 ],
             }),
-            M && (0, r.jsx)(v.animated.div, { className: g.fk, style: { width: T, opacity: k } }),
+            M && (0, r.jsx)(v.animated.div, { className: E.fk, style: { width: T, opacity: k } }),
         ],
     });
 };
-g.f5;
+E.f5;
 let S = { tension: 300, friction: 30, clamp: !0 };
 function C(e) {
     let {
@@ -186,7 +186,7 @@ function C(e) {
                     onDragStateChange: c,
                 } = e,
                 [x, v] = l.useState(null),
-                [g, E] = l.useState(null),
+                [E, g] = l.useState(null),
                 [b, y] = l.useState(!1),
                 [S, C] = l.useState(!1),
                 [P, A] = l.useState(null),
@@ -214,7 +214,7 @@ function C(e) {
                     let t = M.current.getBoundingClientRect(),
                         n = e.clientX - t.left,
                         l = null != r ? (r / i) * t.width : null;
-                    (N(null != l && n > l), E(n));
+                    (N(null != l && n > l), g(n));
                 }
             }
             let D = l.useRef(!1),
@@ -248,7 +248,7 @@ function C(e) {
                         a && (y(!0), j(e));
                     },
                     handleMouseLeave: function (e) {
-                        a && !D.current && (y(!1), E(null), N(!1));
+                        a && !D.current && (y(!1), g(null), N(!1));
                     },
                     handleMouseMove: function (e) {
                         a && b && j(e);
@@ -264,7 +264,7 @@ function C(e) {
                                     n = Math.max(0, Math.min(e.clientX - t.left, t.width)),
                                     l = null != r ? (r / i) * t.width : null,
                                     a = null != l ? Math.min(n, l) : n;
-                                (N(null != l && n > l), E(n), A(a), B(e.clientX, t));
+                                (N(null != l && n > l), g(n), A(a), B(e.clientX, t));
                             } else B(e.clientX, t);
                         }
                         function s(e) {
@@ -275,7 +275,7 @@ function C(e) {
                                 c?.(!1),
                                 N(!1),
                                 null != M.current &&
-                                    (((0, d.vq)(e.target, Node) && M.current.contains(e.target)) || (y(!1), E(null))),
+                                    (((0, d.vq)(e.target, Node) && M.current.contains(e.target)) || (y(!1), g(null))),
                                 window.removeEventListener("mousemove", l),
                                 window.removeEventListener("mouseup", s));
                         }
@@ -292,7 +292,7 @@ function C(e) {
                             }));
                     },
                     handleKeyDown: F,
-                    hoveredAtX: g,
+                    hoveredAtX: E,
                     maxSeekableX: T,
                     isHovering: b,
                     isDragging: S,
@@ -389,7 +389,7 @@ function C(e) {
                   }))
                 : void 0;
         }, [ex, A, O, eh]),
-        eg = l.useMemo(
+        eE = l.useMemo(
             () =>
                 (function (e, t) {
                     let n = [{ startPx: 0, endPx: e, leftIndicatorIndex: null, rightIndicatorIndex: null }];
@@ -412,20 +412,20 @@ function C(e) {
                 })(eu, ev),
             [eu, ev],
         ),
-        eE = F?.hoverExpansionPx ?? 0,
+        eg = F?.hoverExpansionPx ?? 0,
         eb = l.useCallback(
             (e) =>
                 null != e &&
                 null != ev &&
                 ev.some(
                     (t) =>
-                        e >= t.leftPx - t.gapPx - (F?.animatingIndex === t.index ? eE : 0) &&
-                        e <= t.rightPx + t.gapPx + (F?.animatingIndex === t.index ? eE : 0),
+                        e >= t.leftPx - t.gapPx - (F?.animatingIndex === t.index ? eg : 0) &&
+                        e <= t.rightPx + t.gapPx + (F?.animatingIndex === t.index ? eg : 0),
                 ),
-            [ev, F?.animatingIndex, eE],
+            [ev, F?.animatingIndex, eg],
         );
     return (0, r.jsx)("div", {
-        className: g.jD,
+        className: E.jD,
         ref: K,
         "data-testid": $,
         style: {
@@ -433,7 +433,7 @@ function C(e) {
             "--custom-initial-timeline-height": `${k}px`,
         },
         children: (0, r.jsxs)(s.D, {
-            className: i()(g.KF, { [g.uc]: c }),
+            className: i()(E.KF, { [E.uc]: c }),
             style: J ? { cursor: "default" } : void 0,
             ignoreKeyPress: !0,
             onClick: ee,
@@ -445,12 +445,12 @@ function C(e) {
             tabIndex: c ? void 0 : -1,
             children: [
                 (0, r.jsx)("div", {
-                    className: g.PH,
+                    className: E.PH,
                     ...en,
                     style: null != v ? { "--custom-segment-bg": v } : void 0,
                     children:
                         null != O &&
-                        eg.map((e, t) =>
+                        eE.map((e, t) =>
                             (0, r.jsx)(
                                 y,
                                 {
@@ -493,7 +493,7 @@ function C(e) {
                     c &&
                     null != ei &&
                     !eb(Z && null != q ? q : ei) &&
-                    (0, r.jsx)(E, { playbackPxSpring: eo, isDragging: Z, dragX: q }),
+                    (0, r.jsx)(g, { playbackPxSpring: eo, isDragging: Z, dragX: q }),
             ],
         }),
     });
@@ -516,7 +516,7 @@ function P(e) {
           : null == a
             ? null
             : (0, r.jsx)(c.E, {
-                  className: g.Hz,
+                  className: E.Hz,
                   variant: "text-xs/normal",
                   color: "text-overlay-light",
                   tabularNumbers: !0,

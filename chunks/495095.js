@@ -16,10 +16,10 @@ var i = n(477900),
 function x(e) {
     let { channel: t, position: n, setEditorRef: x } = e,
         g = (0, a.bG)([r.Ay], () => r.Ay.keyboardModeEnabled),
-        [C, y] = (0, l.useState)(""),
-        [j, I] = (0, l.useState)(""),
-        [N, v] = (0, l.useState)((0, c.x7)("")),
-        [E, b] = (0, l.useState)(g),
+        [C, j] = (0, l.useState)(""),
+        [y, I] = (0, l.useState)(""),
+        [N, E] = (0, l.useState)((0, c.x7)("")),
+        [v, b] = (0, l.useState)(g),
         _ = (0, l.useRef)(!1);
     return (0, i.jsx)(s.l, {
         className: f.kL,
@@ -29,11 +29,11 @@ function x(e) {
             maxCharacterCount: 512,
             showRemainingCharsAfterCount: 10,
             onChange: function (e, t, n) {
-                (I(t), v(n), y(u.Ay.translateInlineEmojiToSurrogates(t)));
+                (I(t), E(n), j(u.Ay.translateInlineEmojiToSurrogates(t)));
             },
             placeholder: A.intl.string(m.default.IAcEEn),
             channel: t,
-            textValue: j,
+            textValue: y,
             richValue: N,
             type: o.oU.GUILD_ROOM,
             onFocus: () => {
@@ -42,7 +42,7 @@ function x(e) {
             onBlur: () => {
                 b(!1);
             },
-            focused: E,
+            focused: v,
             onSubmit: function () {
                 let e = t.guild_id;
                 return 0 === C.trim().length || null == e

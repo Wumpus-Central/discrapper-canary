@@ -1,4 +1,4 @@
-n.d(t, { A: () => y });
+n.d(t, { A: () => j });
 var i = n(477900),
     l = n(582128),
     a = n(17928),
@@ -16,24 +16,24 @@ var i = n(477900),
     x = n(652215),
     g = n(806931),
     C = n(804273);
-let y = (0, s.A)((e) => {
+let j = (0, s.A)((e) => {
     let {
         participants: t,
         filteredParticipants: n,
         selectedParticipant: s,
-        participantsVersion: y,
-        layout: j,
+        participantsVersion: j,
+        layout: y,
         onSelectParticipant: I,
         onContextMenuParticipant: N,
-        onFullscreenParticipant: v,
-        channel: E,
+        onFullscreenParticipant: E,
+        channel: v,
         hasConnectPermission: b,
         className: _,
-        inCall: T,
-        showParticipants: S = !0,
+        inCall: S,
+        showParticipants: T = !0,
         width: R,
-        height: L,
-        idle: O,
+        height: O,
+        idle: L,
         mode: P,
         popoutType: M,
         awaitingRemoteSessionInfo: w,
@@ -41,41 +41,41 @@ let y = (0, s.A)((e) => {
     } = e;
     l.useEffect(() => {
         u._.dispatch(x.jej.REMEASURE_TARGET);
-    }, [R, L, U.width, U.height]);
+    }, [R, O, U.width, U.height]);
     let D = l.useMemo(
             () => n.filter((e) => e.type !== g.lp.ACTIVITY || !e.participants.some((e) => (0, r.S)(e))),
-            [n, y],
+            [n, j],
         ),
-        V = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(E.id), [E.id]);
-    if (w?.channelId === E.id) return (0, i.jsx)(p.A, { height: L });
-    if (E?.isGuildVocalOrThread() && !T)
-        return (0, i.jsx)(h.A, { channel: E, participants: t, hasConnectPermission: b });
-    if (((n = T ? n : t), P === x._Of.VOICE))
-        return (0, i.jsx)(c.A, { guildId: E.guild_id, width: R, className: C.Er, participants: t, onContextMenu: N });
+        V = (0, a.bG)([o.A], () => o.A.getVoiceParticipantsHidden(v.id), [v.id]);
+    if (w?.channelId === v.id) return (0, i.jsx)(p.A, { height: O });
+    if (v?.isGuildVocalOrThread() && !S)
+        return (0, i.jsx)(h.A, { channel: v, participants: t, hasConnectPermission: b });
+    if (((n = S ? n : t), P === x._Of.VOICE))
+        return (0, i.jsx)(c.A, { guildId: v.guild_id, width: R, className: C.Er, participants: t, onContextMenu: N });
     if (null == s) {
         if (0 === n.length) {
             let e = t.length > 0 && !V;
-            return (0, i.jsx)(f.A, { channelId: E.id, allPoppedOut: e });
+            return (0, i.jsx)(f.A, { channelId: v.id, allPoppedOut: e });
         }
         return (0, i.jsx)(d.A, {
             className: C.HA,
             justify: d.A.Justify.CENTER,
             align: d.A.Align.CENTER,
             children: (0, i.jsx)(m.A, {
-                channel: E,
+                channel: v,
                 className: C.g9,
                 participants: D,
                 totalNumberOfParticipants: t.length,
                 onClick: I,
-                onDoubleClick: v,
+                onDoubleClick: E,
                 onContextMenu: N,
-                inCall: T,
+                inCall: S,
                 popoutType: M,
             }),
         });
     }
     return (0, i.jsx)(A.A, {
-        onFullscreenParticipant: v,
+        onFullscreenParticipant: E,
         onContextMenuParticipant: N,
         onSelectParticipant: I,
         selectedParticipant: s,
@@ -83,12 +83,12 @@ let y = (0, s.A)((e) => {
         participants: t,
         popoutType: M,
         className: _,
-        idle: O,
-        height: L,
+        idle: L,
+        height: O,
         width: R,
-        layout: j,
-        inCall: T,
-        channel: E,
-        showParticipants: S,
+        layout: y,
+        inCall: S,
+        channel: v,
+        showParticipants: T,
     });
 });

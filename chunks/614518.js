@@ -1,6 +1,6 @@
-let l;
+let i;
 (n.d(t, { A: () => A, a: () => p }), n(667532));
-var i = n(435558),
+var l = n(435558),
     s = n(17928),
     r = n(765178),
     a = n(73153),
@@ -14,40 +14,40 @@ function p(e) {
     null != e && a.h.dispatch({ type: "VOICE_CHANNEL_EFFECT_CLEAR", userId: e });
 }
 let g = [],
-    f = 10 * o.A.Millis.SECOND,
-    x = (0, i.debounce)(() => {
+    h = 10 * o.A.Millis.SECOND,
+    x = (0, l.debounce)(() => {
         let e = (0, u.fr)(m);
         (r.O.announce(e, "polite"), (m = []));
     }, 500);
-class h extends s.Ay.Store {
+class f extends s.Ay.Store {
     static displayName = "VoiceChannelEffectsStore";
     get recentlyUsedEmojis() {
         return c;
     }
     get isOnCooldown() {
-        return null != l && new Date() < l;
+        return null != i && new Date() < i;
     }
     get effectCooldownEndTime() {
-        return l;
+        return i;
     }
     getEffectForUserId(e) {
         return d[e];
     }
 }
-let A = new h(a.h, {
+let A = new f(a.h, {
     VOICE_CHANNEL_EFFECT_CLEAR: function (e) {
         let { userId: t } = e;
         null != d[t] && delete d[t];
     },
     VOICE_CHANNEL_EFFECT_RECENT_EMOJI: function (e) {
         let { emoji: t } = e;
-        null != t && (c.unshift(t), (c = (0, i.uniqBy)(c, "name")).length > 9 && c.pop());
+        null != t && (c.unshift(t), (c = (0, l.uniqBy)(c, "name")).length > 9 && c.pop());
     },
     VOICE_CHANNEL_EFFECT_SEND: function (e) {
-        let { emoji: t, userId: n, animationType: l } = e;
+        let { emoji: t, userId: n, animationType: i } = e;
         null != t &&
-            null != l &&
-            ((d[n] = { emoji: t, sentAt: Date.now(), animationType: l }),
+            null != i &&
+            ((d[n] = { emoji: t, sentAt: Date.now(), animationType: i }),
             (m = [...m, { emojiName: t.name, userId: n }]),
             x());
     },
@@ -56,11 +56,11 @@ let A = new h(a.h, {
         if ((g = [e, ...g].slice(0, 20)).length >= 20) {
             let t = g[g.length - 1],
                 n = e.getTime() - t.getTime();
-            n < f && (l = new Date(e.getTime() + f - n));
+            n < h && (i = new Date(e.getTime() + h - n));
         }
     },
     VOICE_CHANNEL_EFFECT_UPDATE_TIME_STAMP: function (e) {
         let { cooldownEndsAtMs: t } = e;
-        l = new Date(Date.now() + t);
+        i = new Date(Date.now() + t);
     },
 });

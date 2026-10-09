@@ -1,31 +1,31 @@
-l.d(t, { A: () => m });
-var n = l(582128),
-    a = l(17928),
-    s = l(401843),
-    i = l(384200),
-    r = l(734057),
-    o = l(576705),
-    u = l(309010),
-    c = l(818348);
-function m(e, t, l) {
-    let m = null == t || null == l,
-        d = (0, a.bG)([r.A], () => r.A.getChannel(t)),
-        v = (0, a.bG)([o.A], () => null != d && o.A.canBasicChannel(c.hV.CONNECT, d)),
-        x = (0, a.bG)([u.Ay], () => u.Ay.getVoiceChannelId() === t),
+n.d(t, { A: () => d });
+var r = n(582128),
+    i = n(17928),
+    a = n(401843),
+    l = n(384200),
+    s = n(734057),
+    o = n(576705),
+    u = n(309010),
+    c = n(818348);
+function d(e, t, n) {
+    let d = null == t || null == n,
+        h = (0, i.bG)([s.A], () => s.A.getChannel(t)),
+        A = (0, i.bG)([o.A], () => null != h && o.A.canBasicChannel(c.hV.CONNECT, h)),
+        p = (0, i.bG)([u.Ay], () => u.Ay.getVoiceChannelId() === t),
         {
-            shouldFetchPreview: f,
-            previewUrl: p,
-            isLoading: h,
-        } = (0, a.cf)([i.A], () => ({
-            shouldFetchPreview: !m && i.A.shouldFetchPreview(e, t, l),
-            previewUrl: m ? null : i.A.getPreviewURL(e, t, l),
-            isLoading: !m && i.A.getIsPreviewLoading(e, t, l),
+            shouldFetchPreview: v,
+            previewUrl: f,
+            isLoading: g,
+        } = (0, i.cf)([l.A], () => ({
+            shouldFetchPreview: !d && l.A.shouldFetchPreview(e, t, n),
+            previewUrl: d ? null : l.A.getPreviewURL(e, t, n),
+            isLoading: !d && l.A.getIsPreviewLoading(e, t, n),
         })),
-        _ = v || x;
-    return (n.useEffect(() => {
-        f && !m && _ && (0, s.Tp)(e, t, l);
-    }, [f, t, e, l, m, _]),
-    m || !_)
+        m = A || p;
+    return (r.useEffect(() => {
+        v && !d && m && (0, a.Tp)(e, t, n);
+    }, [v, t, e, n, d, m]),
+    d || !m)
         ? { previewUrl: void 0, isLoading: !1 }
-        : { previewUrl: p, isLoading: h };
+        : { previewUrl: f, isLoading: g };
 }

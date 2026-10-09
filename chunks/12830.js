@@ -16,8 +16,8 @@ var i = n(477900),
     x = n(488947),
     g = n(806931),
     C = n(389036),
-    y = n(660183),
-    j = n(649914);
+    j = n(660183),
+    y = n(649914);
 function I(e) {
     var t, n;
     let l,
@@ -34,13 +34,13 @@ function I(e) {
                 ? [a]
                 : []),
         { ref: m, width: x, height: C } = (0, r.Ay)(),
-        y = p.length > 0 && null != x && null != C ? h?.(p, { width: x, height: C }) : null;
+        j = p.length > 0 && null != x && null != C ? h?.(p, { width: x, height: C }) : null;
     return (0, i.jsx)("div", {
-        className: j.MT,
+        className: y.MT,
         children: (0, i.jsx)("div", {
             ref: m,
-            className: j.dw,
-            children: (0, i.jsx)(N, { applicationId: c, channelId: d, guildId: u, overlay: y }),
+            className: y.dw,
+            children: (0, i.jsx)(N, { applicationId: c, channelId: d, guildId: u, overlay: j }),
         }),
     });
 }
@@ -54,18 +54,18 @@ function N(e) {
             if (null != A && f.frame.data.proxyTicketRefreshing) return (0, i.jsx)(u.j, {});
             return null != A
                 ? (0, i.jsxs)("div", {
-                      className: j.oI,
-                      children: [(0, i.jsx)(h.A, { frame: f.frame, application: f.application, className: j.Z7 }), r],
+                      className: y.oI,
+                      children: [(0, i.jsx)(h.A, { frame: f.frame, application: f.application, className: y.Z7 }), r],
                   })
-                : (0, i.jsx)(d.A, { frameId: f.frame.id, level: c.A.WithinCallContent, className: j.Z7, overlay: r });
+                : (0, i.jsx)(d.A, { frameId: f.frame.id, level: c.A.WithinCallContent, className: y.Z7, overlay: r });
         case p.n.RenderingElsewhere:
-            return (0, i.jsx)(u.A, { description: y.intl.string(y.t["2KIDX+"]) });
+            return (0, i.jsx)(u.A, { description: j.intl.string(j.t["2KIDX+"]) });
         case p.n.NoApplication:
-            return (0, i.jsx)(u.A, { description: y.intl.string(C.default.TQptZV) });
+            return (0, i.jsx)(u.A, { description: j.intl.string(C.default.TQptZV) });
         case p.n.DoesNotSupportSurface:
-            return (0, i.jsx)(u.A, { description: y.intl.string(C.default["13FYwI"]) });
+            return (0, i.jsx)(u.A, { description: j.intl.string(C.default["13FYwI"]) });
         case p.n.Error:
-            return (0, i.jsx)(u.A, { heading: y.intl.string(y.t.VquUff), error: y.intl.string(y.t["Sd9D/R"]) });
+            return (0, i.jsx)(u.A, { heading: j.intl.string(j.t.VquUff), error: j.intl.string(j.t["Sd9D/R"]) });
         case p.n.AwaitingLaunch:
         case p.n.Loading:
             return (0, i.jsx)(u.j, {});

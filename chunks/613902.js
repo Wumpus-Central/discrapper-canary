@@ -1,11 +1,11 @@
 n.d(t, { E: () => r });
-var l = n(945810);
-let i = { enabled: !1 },
-    s = (0, l.mj)({
+var i = n(945810);
+let l = { enabled: !1 },
+    s = (0, i.mj)({
         name: "2026-08-game-profiles-vc",
         kind: "user",
-        defaultConfig: i,
-        variations: { 0: i, 1: { enabled: !0 } },
+        defaultConfig: l,
+        variations: { 0: l, 1: { enabled: !0 } },
     });
 function r(e) {
     let { location: t } = e;

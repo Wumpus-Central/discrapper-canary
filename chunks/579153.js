@@ -1,50 +1,50 @@
-t.d(n, { A: () => C });
-var l = t(477900),
-    i = t(582128),
-    a = t(922016),
-    s = t(365199),
-    o = t(688810),
-    r = t(592982),
+t.d(n, { A: () => g });
+var i = t(477900),
+    l = t(582128),
+    s = t(922016),
+    a = t(365199),
+    r = t(688810),
+    o = t(592982),
     c = t(384059),
     u = t(480890),
     d = t(246356),
     A = t(204651),
     h = t(806931),
     m = t(660183);
-let C = function (e) {
+let g = function (e) {
     let { channel: n, remoteMode: t = !1 } = e,
-        { parentAnalyticsLocation: C } = (0, o.Ay)(),
-        p = i.useRef(null);
-    return (0, l.jsx)(a.Y, {
-        targetElementRef: p,
+        { parentAnalyticsLocation: g } = (0, r.Ay)(),
+        x = l.useRef(null);
+    return (0, i.jsx)(s.Y, {
+        targetElementRef: x,
         renderPopout: (e) => {
-            let { closePopout: i } = e;
-            return (0, l.jsx)(d.A, {
-                children: (0, l.jsx)(r.A, {
-                    onClose: i,
+            let { closePopout: l } = e;
+            return (0, i.jsx)(d.A, {
+                children: (0, i.jsx)(o.A, {
+                    onClose: l,
                     channel: n,
                     remoteMode: t,
-                    onInteraction: (0, u.s)("MoreSettingsMenu", C, { entrypoint: h.GK.THREE_DOT }),
+                    onInteraction: (0, u.s)("MoreSettingsMenu", g, { entrypoint: h.GK.THREE_DOT }),
                 }),
             });
         },
         align: "right",
         position: "top",
-        animation: a.Y.Animation.FADE,
+        animation: s.Y.Animation.FADE,
         spacing: 16,
         children: (e, n) => {
             let { onClick: t } = e,
-                { isShown: i } = n;
-            return (0, l.jsx)(A.l, {
-                ref: p,
+                { isShown: l } = n;
+            return (0, i.jsx)(A.l, {
+                ref: x,
                 isTrayButton: !0,
                 onClick: (e) => {
-                    ((0, c.X)(C, c.O.MORE), t(e));
+                    ((0, c.X)(g, c.O.MORE), t(e));
                 },
                 label: m.intl.string(m.t.PdRCRg),
-                iconComponent: s.MoreHorizontalIcon,
+                iconComponent: a.MoreHorizontalIcon,
                 color: "primaryDark",
-                isActive: i,
+                isActive: l,
             });
         },
     });

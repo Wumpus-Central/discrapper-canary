@@ -68,11 +68,11 @@ var _ = n(228098),
     M = n(666860),
     R = n(174459),
     D = n(867455),
-    L = n(406704),
-    k = n(215741);
+    k = n(406704),
+    L = n(215741);
 function P(e) {
     let { channel: t, narrow: n } = e,
-        s = (0, L.lK)(t);
+        s = (0, k.lK)(t);
     return (
         i.useEffect(() => {
             R.default.track(E.HAw.CHANNEL_BANNER_VIEWED, {
@@ -82,10 +82,10 @@ function P(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: T()(k.JD, { [k.sc]: n }),
+            className: T()(L.JD, { [L.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
-                    className: k.E5,
+                    className: L.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: t.isForumPost() ? j.intl.string(j.t["833FDn"]) : j.intl.string(j.t.rEeodK),
@@ -112,7 +112,7 @@ function P(e) {
 }
 function O(e) {
     let { channel: t, narrow: n } = e,
-        s = (0, L.H_)(t);
+        s = (0, k.H_)(t);
     return (
         i.useEffect(() => {
             R.default.track(E.HAw.CHANNEL_BANNER_VIEWED, {
@@ -122,10 +122,10 @@ function O(e) {
             });
         }, [t]),
         (0, l.jsxs)("div", {
-            className: T()(k.JD, { [k.sc]: n }),
+            className: T()(L.JD, { [L.sc]: n }),
             children: [
                 (0, l.jsx)(d.E, {
-                    className: k.E5,
+                    className: L.E5,
                     variant: "text-sm/normal",
                     color: "text-default",
                     children: t.isForumPost() ? j.intl.string(j.t.E7oO8u) : j.intl.string(j.t["V/JF2N"]),

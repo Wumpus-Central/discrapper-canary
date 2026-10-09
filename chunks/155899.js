@@ -1,14 +1,14 @@
-l.d(t, { F: () => c });
-var n = l(477900),
-    a = l(582128),
-    r = l(732159),
-    i = l(192308),
-    s = l(248675),
-    o = l(660183);
+n.d(t, { F: () => c });
+var l = n(477900),
+    r = n(582128),
+    a = n(732159),
+    i = n(192308),
+    s = n(248675),
+    o = n(660183);
 function u(e) {
-    let { matchingBackup: t, onConfirm: l, transitionState: i, onClose: u } = e,
-        [c, d] = a.useState(!1);
-    return (0, n.jsx)(r.u, {
+    let { matchingBackup: t, onConfirm: n, transitionState: i, onClose: u } = e,
+        [c, d] = r.useState(!1);
+    return (0, l.jsx)(a.u, {
         transitionState: i,
         onClose: u,
         title: o.intl.string(s.default.NDY6Zv),
@@ -24,9 +24,9 @@ function u(e) {
                       onChange: (e) => d(e),
                   }
                 : void 0,
-        onConfirm: () => l(c && null != t ? t : null),
+        onConfirm: () => n(c && null != t ? t : null),
     });
 }
 function c(e) {
-    (0, i.openModalLazy)(() => Promise.resolve((t) => (0, n.jsx)(u, { ...t, ...e })));
+    (0, i.openModalLazy)(() => Promise.resolve((t) => (0, l.jsx)(u, { ...t, ...e })));
 }

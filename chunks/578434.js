@@ -69,18 +69,18 @@ function S(e) {
                     (b.current = 0));
             };
         }, [_, v]));
-    let L = (0, g.A)(M.id),
-        k = M.isSystemDM(),
-        P = D && !k && !M.isMultiUserDM(),
+    let k = (0, g.A)(M.id),
+        L = M.isSystemDM(),
+        P = D && !L && !M.isMultiUserDM(),
         O = {};
-    if (k) {
-        let e = L ? E.intl.string(E.t["+KSnWX"]) : E.intl.string(E.t.hvVgAZ);
+    if (L) {
+        let e = k ? E.intl.string(E.t["+KSnWX"]) : E.intl.string(E.t.hvVgAZ);
         ((O.message = E.intl.string(E.t.Bt2N7D)),
             (O.subtitle = E.intl.string(E.t["n/Vzkw"])),
             (O.buttonText = e),
-            (O.buttonIcon = L ? a.t : void 0),
+            (O.buttonIcon = k ? a.t : void 0),
             (O.onButtonClick = function () {
-                if (L) {
+                if (k) {
                     (open(C.Do),
                         u.default.track(p.HAw.CHANGE_LOG_CTA_CLICKED, { cta_type: "chat_blocker", target: C.Do }));
                     return;

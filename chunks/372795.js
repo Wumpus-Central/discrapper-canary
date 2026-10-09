@@ -1,8 +1,8 @@
-l.d(t, { A: () => u });
-var n = l(477900),
-    a = l(582128),
-    r = l(598047),
-    i = l(546772);
+n.d(t, { A: () => u });
+var l = n(477900),
+    r = n(582128),
+    a = n(598047),
+    i = n(546772);
 let s = ["left", "middle", "right"];
 function o(e) {
     return !!e.altKey | (2 * !!e.ctrlKey) | (4 * !!e.metaKey) | (8 * !!e.shiftKey);
@@ -10,114 +10,114 @@ function o(e) {
 function u(e) {
     let {
             projectId: t,
-            sessionId: l,
+            sessionId: n,
             fps: u,
             interactive: c = !1,
             paused: d = !1,
-            drawWidth: m,
-            className: f,
+            drawWidth: f,
+            className: m,
             "aria-label": h,
             onStateChange: g,
         } = e,
-        x = a.useRef(null),
-        p = a.useRef(null),
-        v = a.useRef(null),
-        [j, b] = a.useState(!1),
-        y = (0, r.A)(),
-        k = a.useCallback(
+        p = r.useRef(null),
+        x = r.useRef(null),
+        v = r.useRef(null),
+        [j, b] = r.useState(!1),
+        y = (0, a.A)(),
+        k = r.useCallback(
             async (e) => {
-                let n = await createImageBitmap(new Blob([e.jpeg], { type: "image/jpeg" }));
+                let l = await createImageBitmap(new Blob([e.jpeg], { type: "image/jpeg" }));
                 try {
-                    let a = x.current,
-                        r = a?.getContext("2d");
-                    if (null == a || null == r || !(0, i.j_)(t, l, e)) return;
-                    ((a.width !== n.width || a.height !== n.height) && ((a.width = n.width), (a.height = n.height)),
-                        r.drawImage(n, 0, 0),
-                        (p.current = e),
+                    let r = p.current,
+                        a = r?.getContext("2d");
+                    if (null == r || null == a || !(0, i.j_)(t, n, e)) return;
+                    ((r.width !== l.width || r.height !== l.height) && ((r.width = l.width), (r.height = l.height)),
+                        a.drawImage(l, 0, 0),
+                        (x.current = e),
                         b(!0));
                 } finally {
-                    n.close();
+                    l.close();
                 }
             },
-            [t, l],
+            [t, n],
         ),
         w = window.devicePixelRatio > 0 ? window.devicePixelRatio : 1,
-        N = null == m ? 0 : Math.round(m * Math.min(w, 2)),
-        A = (0, i.KK)(t, l, { fps: u, onFrame: k, enabled: !d && y, width: N }),
-        S = (0, i.AV)(t, l),
-        C = a.useRef(S);
-    (a.useEffect(() => {
+        A = null == f ? 0 : Math.round(f * Math.min(w, 2)),
+        N = (0, i.KK)(t, n, { fps: u, onFrame: k, enabled: !d && y, width: A }),
+        S = (0, i.AV)(t, n),
+        C = r.useRef(S);
+    (r.useEffect(() => {
         if (C.current === S) return;
-        ((C.current = S), (p.current = null), b(!1));
-        let e = x.current;
+        ((C.current = S), (x.current = null), b(!1));
+        let e = p.current;
         e?.getContext("2d")?.clearRect(0, 0, e.width, e.height);
     }, [S]),
-        a.useEffect(() => {
-            g?.(A, j);
-        }, [A, j, g]),
-        a.useEffect(() => {
-            c && x.current?.focus();
+        r.useEffect(() => {
+            g?.(N, j);
+        }, [N, j, g]),
+        r.useEffect(() => {
+            c && p.current?.focus();
         }, [c]));
-    let E = a.useRef(new Map());
+    let E = r.useRef(new Map());
     function I(e) {
         let t = e.currentTarget,
-            l = t.getBoundingClientRect(),
-            n = Math.min(l.width / t.width, l.height / t.height),
-            a = l.left + (l.width - t.width * n) / 2,
-            r = l.top + (l.height - t.height * n) / 2,
-            i = p.current?.deviceWidth ?? t.width,
-            s = p.current?.deviceHeight ?? t.height;
+            n = t.getBoundingClientRect(),
+            l = Math.min(n.width / t.width, n.height / t.height),
+            r = n.left + (n.width - t.width * l) / 2,
+            a = n.top + (n.height - t.height * l) / 2,
+            i = x.current?.deviceWidth ?? t.width,
+            s = x.current?.deviceHeight ?? t.height;
         return {
-            x: Math.round(((e.clientX - a) / (t.width * n)) * i),
-            y: Math.round(((e.clientY - r) / (t.height * n)) * s),
+            x: Math.round(((e.clientX - r) / (t.width * l)) * i),
+            y: Math.round(((e.clientY - a) / (t.height * l)) * s),
         };
     }
     function M(e) {
-        return (n) => {
+        return (l) => {
             if (!c) return;
             if ("mouseMoved" === e) {
-                let e = I(n);
+                let e = I(l);
                 (null == v.current &&
                     requestAnimationFrame(() => {
                         let e = v.current;
                         ((v.current = null),
-                            null != e && (0, i.ZL)(t, l, { type: "input_mouse", eventType: "mouseMoved", ...e }));
+                            null != e && (0, i.ZL)(t, n, { type: "input_mouse", eventType: "mouseMoved", ...e }));
                     }),
-                    (v.current = { ...e, modifiers: o(n) }));
+                    (v.current = { ...e, modifiers: o(l) }));
                 return;
             }
-            let a = s[n.button];
-            if (null == a) return;
+            let r = s[l.button];
+            if (null == r) return;
             v.current = null;
-            let r = I(n);
-            ("mousePressed" === e && n.currentTarget.focus(),
-                (0, i.ZL)(t, l, {
+            let a = I(l);
+            ("mousePressed" === e && l.currentTarget.focus(),
+                (0, i.ZL)(t, n, {
                     type: "input_mouse",
                     eventType: e,
-                    ...r,
-                    button: a,
-                    clickCount: n.detail > 0 ? n.detail : 1,
-                    modifiers: o(n),
+                    ...a,
+                    button: r,
+                    clickCount: l.detail > 0 ? l.detail : 1,
+                    modifiers: o(l),
                 }));
         };
     }
-    function T(e) {
-        return (n) => {
-            if (!c || "Escape" === n.key) return;
-            n.preventDefault();
-            let a = n.getModifierState("AltGraph") ? -4 & o(n) : o(n);
-            ((0, i.ZL)(t, l, { type: "input_keyboard", eventType: e, key: n.key, code: n.code, modifiers: a }),
-                "keyDown" === e ? E.current.set(n.code, n.key) : E.current.delete(n.code));
-            let r = "Enter" === n.key ? "\r" : n.key;
+    function _(e) {
+        return (l) => {
+            if (!c || "Escape" === l.key) return;
+            l.preventDefault();
+            let r = l.getModifierState("AltGraph") ? -4 & o(l) : o(l);
+            ((0, i.ZL)(t, n, { type: "input_keyboard", eventType: e, key: l.key, code: l.code, modifiers: r }),
+                "keyDown" === e ? E.current.set(l.code, l.key) : E.current.delete(l.code));
+            let a = "Enter" === l.key ? "\r" : l.key;
             "keyDown" === e &&
-                1 === r.length &&
-                (6 & a) == 0 &&
-                (0, i.ZL)(t, l, { type: "input_keyboard", eventType: "char", text: r });
+                1 === a.length &&
+                (6 & r) == 0 &&
+                (0, i.ZL)(t, n, { type: "input_keyboard", eventType: "char", text: a });
         };
     }
-    return (0, n.jsx)("canvas", {
-        ref: x,
-        className: f,
+    return (0, l.jsx)("canvas", {
+        ref: p,
+        className: m,
         role: c ? "application" : "img",
         "aria-label": h,
         tabIndex: c ? 0 : -1,
@@ -132,7 +132,7 @@ function u(e) {
         onMouseMove: M("mouseMoved"),
         onWheel: function (e) {
             c &&
-                (0, i.ZL)(t, l, {
+                (0, i.ZL)(t, n, {
                     type: "input_mouse",
                     eventType: "mouseWheel",
                     ...I(e),
@@ -141,11 +141,11 @@ function u(e) {
                     modifiers: o(e),
                 });
         },
-        onKeyDown: T("keyDown"),
-        onKeyUp: T("keyUp"),
+        onKeyDown: _("keyDown"),
+        onKeyUp: _("keyUp"),
         onBlur: function () {
-            for (let [e, n] of E.current)
-                (0, i.ZL)(t, l, { type: "input_keyboard", eventType: "keyUp", key: n, code: e, modifiers: 0 });
+            for (let [e, l] of E.current)
+                (0, i.ZL)(t, n, { type: "input_keyboard", eventType: "keyUp", key: l, code: e, modifiers: 0 });
             E.current.clear();
         },
     });

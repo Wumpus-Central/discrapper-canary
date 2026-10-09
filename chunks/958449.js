@@ -1,10 +1,10 @@
 t.d(n, { h: () => c });
-var l = t(477900),
-    i = t(582128),
-    a = t(416696),
-    s = t(797394),
-    o = t(204651),
-    r = t(660183);
+var i = t(477900),
+    l = t(582128),
+    s = t(416696),
+    a = t(797394),
+    r = t(204651),
+    o = t(660183);
 function c(e) {
     let n,
         t,
@@ -15,40 +15,40 @@ function c(e) {
             videoBlocked: A = !1,
             centerButton: h,
             onMouseEnter: m,
-            onMouseLeave: C,
-            renderNUXHighlight: p,
-            buttonRef: x,
-            ...g
+            onMouseLeave: g,
+            renderNUXHighlight: x,
+            buttonRef: C,
+            ...f
         } = e,
-        f = h ? o.l : o.A;
+        p = h ? r.l : r.A;
     t = A
-        ? r.intl.string(r.t.GFr0GR)
+        ? o.intl.string(o.t.GFr0GR)
         : u
           ? d
-              ? r.intl.string(r.t.S5anIc)
-              : r.intl.string(r.t.q3O3J8)
+              ? o.intl.string(o.t.S5anIc)
+              : o.intl.string(o.t.q3O3J8)
           : c
-            ? r.intl.string(r.t.fjBNo1)
-            : r.intl.string(r.t.uQn9B8);
-    let { Component: E, events: I, play: v } = (0, a.c)(u ? "disable" : "enable"),
-        j = A ? s.i : E;
+            ? o.intl.string(o.t.fjBNo1)
+            : o.intl.string(o.t.uQn9B8);
+    let { Component: E, events: j, play: v } = (0, s.c)(u ? "disable" : "enable"),
+        I = A ? a.i : E;
     return (
-        i.useEffect(() => () => v(), [u, v]),
-        (0, l.jsx)(f, {
-            buttonRef: x,
+        l.useEffect(() => () => v(), [u, v]),
+        (0, i.jsx)(p, {
+            buttonRef: C,
             isTrayButton: !0,
             label: t,
             disabled: !c,
-            iconComponent: j,
+            iconComponent: I,
             isActive: u,
-            color: (p ? (n = "premiumGradient") : u && (n = "green"), n),
+            color: (x ? (n = "premiumGradient") : u && (n = "green"), n),
             onMouseEnter: (e) => {
-                (m?.(e), I.onMouseEnter());
+                (m?.(e), j.onMouseEnter());
             },
             onMouseLeave: (e) => {
-                (C?.(e), I.onMouseLeave());
+                (g?.(e), j.onMouseLeave());
             },
-            ...g,
+            ...f,
         })
     );
 }

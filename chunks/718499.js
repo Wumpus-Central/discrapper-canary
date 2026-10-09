@@ -12,15 +12,15 @@ function c(e, t) {
         [h, x] = r.useState(null),
         v = r.useRef(c);
     v.current = c;
-    let g = r.useRef(d),
-        E = r.useRef(m),
+    let E = r.useRef(d),
+        g = r.useRef(m),
         b = r.useRef(f);
     ((b.current = f),
         r.useEffect(() => {
-            g.current = d;
+            E.current = d;
         }, [d]),
         r.useEffect(() => {
-            E.current = m;
+            g.current = m;
         }, [m]));
     let [y, S] = r.useState(!1),
         C = !y && a.u.isHlsUrl(n) && (0, i.Ap)();
@@ -57,7 +57,7 @@ function c(e, t) {
                             new Request(e.url, t)
                         ),
                     }));
-                    ((p.current = i), x(i), E.current?.(i));
+                    ((p.current = i), x(i), g.current?.(i));
                     let d = 0;
                     ((c = () => {
                         i.mainForwardBufferInfo?.len === 0 &&
@@ -72,7 +72,7 @@ function c(e, t) {
                         }),
                         i.on(e.Events.ERROR, function (t, n) {
                             if (
-                                (g.current?.(
+                                (E.current?.(
                                     (function (e, t) {
                                         switch (t) {
                                             case e.ErrorTypes.NETWORK_ERROR:
@@ -92,7 +92,7 @@ function c(e, t) {
                                 n.fatal)
                             ) {
                                 if (d >= 3) {
-                                    (i.destroy(), (p.current = null), x(null), E.current?.(null));
+                                    (i.destroy(), (p.current = null), x(null), g.current?.(null));
                                     return;
                                 }
                                 switch ((d++, n.type)) {
@@ -103,7 +103,7 @@ function c(e, t) {
                                         i.recoverMediaError();
                                         break;
                                     default:
-                                        (i.destroy(), (p.current = null), E.current?.(null));
+                                        (i.destroy(), (p.current = null), g.current?.(null));
                                 }
                             }
                         }),
@@ -115,7 +115,7 @@ function c(e, t) {
                     ((r = !0),
                         null != c && t.removeEventListener("seeking", c),
                         null != a &&
-                            (p.current === a && (a.destroy(), (p.current = null), x(null), E.current?.(null)),
+                            (p.current === a && (a.destroy(), (p.current = null), x(null), g.current?.(null)),
                             t.removeAttribute("src"),
                             t.load()));
                 }

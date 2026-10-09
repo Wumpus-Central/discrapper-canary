@@ -1,7 +1,7 @@
-l.d(t, { e: () => s });
-var n = l(218394),
-    a = l(471107);
-function s(e) {
-    let t = (0, n.j)();
-    return (0, a.G)({ hovered: e, isAppFocused: t });
+n.d(t, { e: () => a });
+var r = n(218394),
+    i = n(471107);
+function a(e) {
+    let t = (0, r.j)();
+    return (0, i.G)({ hovered: e, isAppFocused: t });
 }
