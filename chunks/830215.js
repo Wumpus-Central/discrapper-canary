@@ -321,14 +321,22 @@ let D = {
         null != N.vz && null != u && ((i.push_voip_provider = N.vz), (i.push_voip_token = u));
         try {
             let {
-                body: { mfa: e, sms: t, webauthn: n, ticket: r, token: s, backup: o, totp: d },
-            } = await m.A.post({
-                url: S.Rsh.RESET_PASSWORD,
-                body: i,
-                oldFormErrors: !0,
-                trackedActionData: { event: a.NetworkActionNames.USER_RESET_PASSWORD },
-                rejectWithError: (0, l.fT)(),
-            });
+                mfa: e,
+                sms: t,
+                webauthn: n,
+                ticket: r,
+                token: s,
+                backup: o,
+                totp: d,
+            } = (
+                await m.A.post({
+                    url: S.Rsh.RESET_PASSWORD,
+                    body: i,
+                    oldFormErrors: !0,
+                    trackedActionData: { event: a.NetworkActionNames.USER_RESET_PASSWORD },
+                    rejectWithError: (0, l.fT)(),
+                })
+            ).body ?? {};
             return { result: e ? "MFA" : "SUCCESS", sms: t, webauthn: n, ticket: r, token: s, backup: o, totp: d };
         } catch (t) {
             let e = new c.Wl(t);
@@ -337,18 +345,15 @@ let D = {
     },
     async resetPasswordMFAv2(e) {
         let { method: t, code: n, ticket: i, password: r, token: s, source: l } = e;
-        return (
-            d.h.dispatch({ type: "LOGIN_MFA" }),
-            (
-                await m.A.post({
-                    url: S.Rsh.RESET_PASSWORD,
-                    body: { code: n, ticket: i, password: r, token: s, source: l, method: t },
-                    oldFormErrors: !0,
-                    trackedActionData: { event: a.NetworkActionNames.USER_RESET_PASSWORD, properties: { mfa: !0 } },
-                    rejectWithError: !0,
-                })
-            ).body.token
-        );
+        d.h.dispatch({ type: "LOGIN_MFA" });
+        let o = await m.A.post({
+            url: S.Rsh.RESET_PASSWORD,
+            body: { code: n, ticket: i, password: r, token: s, source: l, method: t },
+            oldFormErrors: !0,
+            trackedActionData: { event: a.NetworkActionNames.USER_RESET_PASSWORD, properties: { mfa: !0 } },
+            rejectWithError: !0,
+        });
+        return o.body?.token;
     },
     async forgotPassword(e) {
         d.h.dispatch({ type: "FORGOT_PASSWORD_REQUEST" });

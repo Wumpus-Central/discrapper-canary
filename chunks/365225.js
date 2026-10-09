@@ -272,6 +272,7 @@ class G extends n.PureComponent {
             onLoginSuccess: (e) => {
                 (this.setState({ errors: {} }), m.A.switchAccountToken(e));
             },
+            onLoginRequired: this.handleReset,
             ...this.props,
         });
     }

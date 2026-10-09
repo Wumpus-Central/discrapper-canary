@@ -2974,11 +2974,12 @@ function lh(e) {
             handleLogin: N,
             handleForgotPassword: v,
             handleGotoRegister: C,
+            showPasswordResetNotice: I = !1,
         } = e,
-        I = (0, x.bG)([ev.A], () => ev.A.getCountryCode()),
-        S = (0, x.bG)([eJ.default], () => eJ.default.getLoginStatus()),
-        T = (0, x.bG)([ll.A], () => ll.A.getHasLoggedInAccounts()),
-        y = h.useCallback(
+        S = (0, x.bG)([ev.A], () => ev.A.getCountryCode()),
+        T = (0, x.bG)([eJ.default], () => eJ.default.getLoginStatus()),
+        y = (0, x.bG)([ll.A], () => ll.A.getHasLoggedInAccounts()),
+        b = h.useCallback(
             (e) => {
                 L.default.track(D.HAw.LOGIN_SUCCESSFUL, {
                     source: D.mdB.QR_CODE,
@@ -2991,37 +2992,41 @@ function lh(e) {
             },
             [g, l],
         ),
-        { handoff_token: b } = (0, m.parse)(window.location.search),
-        R = f.Fr && f.KY && null != b,
-        O = null == u.email && null != u.password,
-        k = h.useRef(null),
+        { handoff_token: R } = (0, m.parse)(window.location.search),
+        O = f.Fr && f.KY && null != R,
+        k = null == u.email && null != u.password,
         w = h.useRef(null),
-        G = (0, iq.Ay)(u);
-    (h.useEffect(() => {
-        function e(e) {
-            return null != u[e];
+        G = h.useRef(null),
+        U = (0, iq.Ay)(u);
+    if (
+        (h.useEffect(() => {
+            function e(e) {
+                return null != u[e];
+            }
+            null != U &&
+                U !== u &&
+                (e("password") ? G.current?.focus() : (e("email") || e("login")) && w.current?.focus());
+        }, [u, w, G, U]),
+        r)
+    )
+        t = null;
+    else if (null != n) t = (0, d.jsx)("div", { className: Z.S3, children: (0, d.jsx)(iJ.A, { invite: n }) });
+    else if (null != l) t = (0, d.jsx)(iz, { giftCode: l });
+    else {
+        let e = null;
+        if (!1 === (0, nw.isAndroidWeb)()) {
+            let t = I ? q.t["N9U/9X"] : q.t.euS7r4;
+            e = (0, d.jsx)(P.tK, { children: q.intl.string(t) }, "subtitle");
         }
-        null != G && G !== u && (e("password") ? w.current?.focus() : (e("email") || e("login")) && k.current?.focus());
-    }, [u, k, w, G]),
-        (t = r
-            ? null
-            : null != n
-              ? (0, d.jsx)("div", { className: Z.S3, children: (0, d.jsx)(iJ.A, { invite: n }) })
-              : null != l
-                ? (0, d.jsx)(iz, { giftCode: l })
-                : (0, d.jsxs)("div", {
-                      className: iZ.wx,
-                      children: [
-                          (0, d.jsx)(P.hE, { className: Z.QB, children: q.intl.string(q.t["7fNJgA"]) }, "title"),
-                          !1 === (0, nw.isAndroidWeb)()
-                              ? (0, d.jsx)(P.tK, { children: q.intl.string(q.t.euS7r4) }, "subtitle")
-                              : null,
-                      ],
-                  })));
-    let U = (0, d.jsxs)("div", {
+        t = (0, d.jsxs)("div", {
+            className: iZ.wx,
+            children: [(0, d.jsx)(P.hE, { className: Z.QB, children: q.intl.string(q.t["7fNJgA"]) }, "title"), e],
+        });
+    }
+    let B = (0, d.jsxs)("div", {
         className: iZ.Eh,
         children: [
-            T &&
+            y &&
                 p &&
                 (0, d.jsx)("div", {
                     className: iZ.AX,
@@ -3038,19 +3043,19 @@ function lh(e) {
                     className: Z.QX,
                     children: [
                         (0, d.jsx)(eC.A, {
-                            alpha2: I.alpha2,
-                            countryCode: I.code.split(" ")[0],
+                            alpha2: S.alpha2,
+                            countryCode: S.code.split(" ")[0],
                             className: Z.SX,
                             label: q.intl.string(q.t.tUjnxr),
                             error: ld("login", u) ?? ld("email", u),
                             onChange: _,
-                            setRef: k,
+                            setRef: w,
                             autoCapitalize: "none",
                             autoComplete: "username webauthn",
                             autoCorrect: "off",
                             spellCheck: "false",
                             value: o,
-                            autoFocus: !O && !R && !a,
+                            autoFocus: !k && !O && !a,
                             required: !0,
                         }),
                         (0, d.jsx)(P.pd, {
@@ -3059,10 +3064,10 @@ function lh(e) {
                             onChange: j,
                             name: "password",
                             type: "password",
-                            setRef: w,
+                            setRef: G,
                             autoComplete: "current-password",
                             spellCheck: "false",
-                            autoFocus: O && !R && !a,
+                            autoFocus: k && !O && !a,
                             value: c,
                             required: !0,
                         }),
@@ -3072,7 +3077,7 @@ function lh(e) {
                                 text: q.intl.string(q.t.wWIufs),
                                 textVariant: "text-sm/normal",
                                 onClick: () => {
-                                    (null != k.current && k.current.focus(), v());
+                                    (null != w.current && w.current.focus(), v());
                                 },
                             }),
                         }),
@@ -3082,7 +3087,7 @@ function lh(e) {
                                 text: q.intl.string(q.t.dKhVQN),
                                 fullWidth: !0,
                                 type: "submit",
-                                loading: S === D.aUe.LOGGING_IN,
+                                loading: T === D.aUe.LOGGING_IN,
                             }),
                         }),
                         (0, d.jsxs)("div", {
@@ -3107,25 +3112,25 @@ function lh(e) {
     return null != n && n.state === D.elq.RESOLVING
         ? (0, d.jsx)(lc, {
               authBoxClassName: s,
-              country: I,
+              country: S,
               login: o,
               password: c,
               onLoginChange: _,
               onPasswordChange: j,
-              loginRef: k,
-              passwordRef: w,
+              loginRef: w,
+              passwordRef: G,
           })
         : null != i
           ? i.state === lu.QB.RESOLVING
               ? (0, d.jsx)(lc, {
                     authBoxClassName: s,
-                    country: I,
+                    country: S,
                     login: o,
                     password: c,
                     onLoginChange: _,
                     onPasswordChange: j,
-                    loginRef: k,
-                    passwordRef: w,
+                    loginRef: w,
+                    passwordRef: G,
                 })
               : (0, d.jsx)(i2, {
                     onSubmit: N,
@@ -3133,17 +3138,17 @@ function lh(e) {
                     className: M()(s, iZ.Sy),
                     children: () => [
                         (0, d.jsx)(i3.A, { guildTemplate: i }, "template"),
-                        (0, d.jsx)(h.Fragment, { children: U }, "form-wrapper"),
+                        (0, d.jsx)(h.Fragment, { children: B }, "form-wrapper"),
                     ],
                 })
-          : T && !p
+          : y && !p
             ? (0, d.jsx)(lo, { onDismiss: () => E(!0), embedded: r })
             : (0, d.jsxs)("div", {
                   children: [
                       (0, d.jsx)(P.Ay, {
                           onSubmit: N,
                           tag: "form",
-                          className: M()(s, { [iZ.M0]: R }),
+                          className: M()(s, { [iZ.M0]: O }),
                           transparent: r,
                           expanded: !0,
                           children: (0, d.jsxs)(eG.B, {
@@ -3151,16 +3156,16 @@ function lh(e) {
                               align: r ? "stretch" : "center",
                               gap: r ? 24 : 64,
                               children: [
-                                  U,
+                                  B,
                                   (0, d.jsx)(i0.A, {
                                       horizontal: r,
-                                      onAuthenticateSuccess: y,
+                                      onAuthenticateSuccess: b,
                                       conditionalMediationAbortController: A,
                                   }),
                               ],
                           }),
                       }),
-                      R && (0, d.jsx)(li, {}),
+                      O && (0, d.jsx)(li, {}),
                   ],
               });
 }
@@ -3493,14 +3498,12 @@ function lj(e) {
             (0, B.d0)("login"));
     });
     let et = (0, iq.Ay)(g);
-    if (
-        (h.useEffect(() => {
-            let e = j && (f || N);
-            g && !1 === et && !e && (k.abort("Transitioning to authenticated state"), G(g, l));
-        }, [g, f, et, N, j, k, G, l]),
-        N || j)
-    )
-        return (0, d.jsx)(P.Ay, { transparent: o, children: (0, d.jsx)(eP.y, {}) });
+    h.useEffect(() => {
+        let e = j && (f || N);
+        g && !1 === et && !e && (k.abort("Transitioning to authenticated state"), G(g, l));
+    }, [g, f, et, N, j, k, G, l]);
+    let en = l?.state?.passwordReset === !0;
+    if (N || j) return (0, d.jsx)(P.Ay, { transparent: o, children: (0, d.jsx)(eP.y, {}) });
     if (f)
         return (0, d.jsxs)(P.Ay, {
             className: a,
@@ -3574,6 +3577,7 @@ function lj(e) {
                 handleLogin: F,
                 handleForgotPassword: W,
                 handleGotoRegister: Y,
+                showPasswordResetNotice: en,
             });
     }
 }
