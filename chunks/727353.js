@@ -2,8 +2,8 @@ l.d(t, { P: () => N, Z: () => v });
 var n = l(477900);
 l(582128);
 var i = l(503698),
-    s = l.n(i),
-    a = l(17928),
+    a = l.n(i),
+    s = l(17928),
     r = l(834730),
     c = l(939249),
     o = l(302959),
@@ -31,7 +31,7 @@ function v(e) {
             className: S,
         } = e,
         { actionString: I, canWatch: C } = (0, x.K)(t),
-        P = (0, a.bG)(
+        P = (0, s.bG)(
             [u.A],
             () => {
                 if (null != i) {
@@ -129,7 +129,7 @@ function v(e) {
         });
     return (0, n.jsx)("div", {
         className: j.yt,
-        children: (0, n.jsx)("div", { className: s()(j.Rh, S), children: b }),
+        children: (0, n.jsx)("div", { className: a()(j.Rh, S), children: b }),
     });
 }
 function N(e) {
@@ -137,7 +137,7 @@ function N(e) {
             stream: t,
             streamActivity: l,
             user: i,
-            onWatchStream: a,
+            onWatchStream: s,
             onAction: u,
             showHeader: A = !1,
             wrapperClassName: p,
@@ -146,7 +146,7 @@ function N(e) {
     return null == N
         ? null
         : (0, n.jsxs)("div", {
-              className: s()(j.yt, p),
+              className: a()(j.yt, p),
               children: [
                   A &&
                       (0, n.jsxs)("div", {
@@ -160,12 +160,12 @@ function N(e) {
                               (0, n.jsx)(m.Ay, { size: m.ed.SMALL }),
                           ],
                       }),
-                  null != a
+                  null != s
                       ? (0, n.jsxs)(c.D, {
-                            onClick: a,
+                            onClick: s,
                             className: j.GE,
                             children: [
-                                (0, n.jsx)(g.A, { className: j.oz, stream: t }),
+                                (0, n.jsx)(g.A, { className: j.oz, stream: t, noImage: !0 }),
                                 v
                                     ? (0, n.jsx)("div", {
                                           className: j.xD,
@@ -182,7 +182,7 @@ function N(e) {
                       : (0, n.jsxs)("div", {
                             className: j.GE,
                             children: [
-                                (0, n.jsx)(g.A, { className: j.oz, stream: t }),
+                                (0, n.jsx)(g.A, { className: j.oz, stream: t, noImage: !0 }),
                                 v
                                     ? (0, n.jsx)("div", {
                                           className: j.xD,

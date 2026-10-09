@@ -353,15 +353,8 @@
     flex-direction: column;
     height: 400px;
     justify-content: center;
-    padding: 16px
-}
-
-.image__74f3e {
-    background-repeat: no-repeat;
-    background-size: contain;
-    height: 145px;
-    margin-bottom: 16px;
-    width: 314px
+    padding: 16px;
+    text-align: center
 }
 
 .header__74f3e {
@@ -476,4 +469,4 @@
     justify-content: flex-end
 }
 
-/*# sourceMappingURL=041ddfee96896f03.css.map*/
+/*# sourceMappingURL=1831e53c593fffd5.css.map*/
