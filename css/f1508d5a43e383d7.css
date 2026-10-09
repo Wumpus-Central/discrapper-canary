@@ -24,6 +24,14 @@
     font-family: var(--font-code)
 }
 
+.cardPlacement__9a7e8 {
+    box-sizing: border-box;
+    flex-shrink: 0;
+    margin-block: var(--space-sm) var(--space-md);
+    margin-inline-start: var(--space-sm);
+    max-width: calc(var(--custom-member-list-width) - 16px)
+}
+
 .container_a154bf {
     flex-direction: column
 }
@@ -2060,4 +2068,4 @@
     border-top: 1px solid var(--app-frame-border)
 }
 
-/*# sourceMappingURL=0b15ba77f2e3b151.css.map*/
+/*# sourceMappingURL=f1508d5a43e383d7.css.map*/
