@@ -4344,8 +4344,14 @@ class tm extends m.A {
             : this.logger.warn("Cannot set SDP on connection with protocol:", this.protocol);
     }
     _handleMediaSessionId(e) {
-        ((this._mediaSessionId = e),
-            this.logger.info(`Setting media-session-id: ${e} for rtc-connection-id: ${this.getRTCConnectionId()}`));
+        if (
+            ((this._mediaSessionId = e),
+            this.logger.info(`Setting media-session-id: ${e} for rtc-connection-id: ${this.getRTCConnectionId()}`),
+            this.shouldReport())
+        ) {
+            let e = this._connection;
+            null != e && e.setAudioLatencyMeasurement(!0);
+        }
         let t = D.A.getRawThermalState();
         (eu.default.track(eC.HAw.MEDIA_SESSION_JOINED, {
             ...this._getAnalyticsProperties(),

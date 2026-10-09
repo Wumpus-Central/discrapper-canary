@@ -1100,6 +1100,9 @@ class W extends N.A {
     setSingleCpuCopy(e) {
         ((this.singleCpuCopy = e), this.conn.setTransportOptions({ singleCpuCopy: this.singleCpuCopy }));
     }
+    setAudioLatencyMeasurement(e) {
+        this.conn.setTransportOptions({ audioLatencyMeasurement: e });
+    }
     setAudioVideoOverridesTransport(e) {
         let t = null != e.overrideDeniedVideoCodecs && e.overrideDeniedVideoCodecs !== this.lastOverrideCodecDenylist,
             n =
