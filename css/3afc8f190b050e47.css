@@ -1,9 +1,9 @@
 html:not(.app-focused) .pauseWhenUnfocused__7b4d5,
-html:not(.app-focused) .pauseWhenUnfocused__7b4d5 *,
 html:not(.app-focused) .pauseWhenUnfocused__7b4d5 :after,
-html:not(.app-focused) .pauseWhenUnfocused__7b4d5 :before {
+html:not(.app-focused) .pauseWhenUnfocused__7b4d5 :before,
+html:not(.app-focused) .pauseWhenUnfocused__7b4d5 :not([data-conjure-entrance]) {
     animation-play-state: paused !important;
     transition: none !important
 }
 
-/*# sourceMappingURL=853a644a70fea363.css.map*/
+/*# sourceMappingURL=3afc8f190b050e47.css.map*/
