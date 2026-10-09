@@ -48,6 +48,8 @@ let x = {
         [f.I.Assist]: i.q,
         [f.I.Death]: s.V,
         [f.I.RoshanKill]: o.q,
+        [f.I.TeamFightWin]: i.q,
+        [f.I.TeamFight]: null,
         [f.I.GameEnd]: null,
         [f.I.InMatchChange]: null,
         [f.I.PlayStateChange]: null,
@@ -58,6 +60,8 @@ let x = {
         [f.I.Assist]: 9,
         [f.I.Death]: 1,
         [f.I.RoshanKill]: 9,
+        [f.I.TeamFightWin]: 8,
+        [f.I.TeamFight]: 0,
         [f.I.GameEnd]: 0,
         [f.I.InMatchChange]: 0,
         [f.I.PlayStateChange]: 0,
@@ -189,19 +193,19 @@ let A = {
     };
 var L = l(477900);
 l(582128);
-var M = l(661531),
-    T = l(260612),
+var T = l(661531),
+    M = l(260612),
     R = l(953727);
 function D(e) {
     let {
             size: t = "md",
             width: l,
             height: a,
-            color: n = M.A.colors.INTERACTIVE_ICON_DEFAULT,
+            color: n = T.A.colors.INTERACTIVE_ICON_DEFAULT,
             colorClass: i = "",
             ...s
         } = e,
-        r = (0, T.J)(t),
+        r = (0, M.J)(t),
         o = r?.width ?? l,
         c = r?.height ?? a,
         u = "string" == typeof n ? n : n.css;

@@ -55,7 +55,7 @@ class N extends i.A {
                     name: "league-of-legends",
                     applicationId: T.m,
                     isEnabled: () => S(T.m) && h.A.getConfig({ location: g }).enableLeagueEvents,
-                    importHandler: () => n.e("747868").then(n.bind(n, 75159)),
+                    importHandler: () => n.e("618549").then(n.bind(n, 877588)),
                 },
                 {
                     type: "application",
@@ -69,7 +69,7 @@ class N extends i.A {
                     name: "dota-gsi",
                     applicationId: p.b,
                     isEnabled: () => S(p.b) && A.A.getConfig({ location: g }).enableDotaGsi,
-                    importHandler: () => Promise.all([n.e("556967"), n.e("677980")]).then(n.bind(n, 250263)),
+                    importHandler: () => Promise.all([n.e("556967"), n.e("709692")]).then(n.bind(n, 840631)),
                 },
                 {
                     type: "application",

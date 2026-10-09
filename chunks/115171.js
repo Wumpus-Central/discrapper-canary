@@ -1,21 +1,27 @@
-n.d(t, { d: () => r });
-var i = n(144705);
-function r(e) {
+n.d(t, { d: () => s });
+var i = n(309470),
+    r = n(144705),
+    a = n(826685);
+function s(e) {
     switch (e.eventName) {
-        case i.I.Kill:
+        case r.I.Kill:
             return { ...e, score: 0.15, importance: 1 };
-        case i.I.MultiKill:
+        case r.I.MultiKill:
             return { ...e, score: 0.05, importance: 1 };
-        case i.I.Assist:
+        case r.I.Assist:
             return { ...e, score: 0.06, importance: 1 };
-        case i.I.Death:
+        case r.I.Death:
             return { ...e, score: 0, importance: 1 };
-        case i.I.RoshanKill:
+        case r.I.RoshanKill:
             return { ...e, score: 0.15, importance: 1 };
-        case i.I.GameEnd:
+        case r.I.TeamFightWin:
+            return { ...e, score: (0, i.VD)(e.additionalData[i.zp], a.L), importance: 1 };
+        case r.I.TeamFight:
+            return { ...e, score: (0, i.VD)(e.additionalData[i.zp], a.L), importance: 0 };
+        case r.I.GameEnd:
             return { ...e, score: 0.05 * !!e.additionalData.win, importance: +!!e.additionalData.win };
-        case i.I.InMatchChange:
-        case i.I.PlayStateChange:
+        case r.I.InMatchChange:
+        case r.I.PlayStateChange:
             return { ...e, score: 0, importance: 0 };
     }
 }
