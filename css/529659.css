@@ -100,12 +100,22 @@
 }
 
 .game__438f2 {
-    background: radial-gradient(circle at 22% 38%, var(--yellow-360) 0, var(--orange-500) 4%, transparent 14%), radial-gradient(ellipse 60% 30% at 70% 100%, var(--teal-700) 0, transparent 70%), linear-gradient(170deg, transparent 58%, var(--green-800) 58%, var(--green-900) 100%), linear-gradient(185deg, transparent 50%, var(--teal-900) 50%, var(--teal-800) 64%, transparent 64%), linear-gradient(180deg, var(--blue-900) 0, var(--blue-700) 38%, var(--orange-600) 56%, var(--red-800) 70%);
-    inset: 0
+    height: 100%;
+    inset: 0;
+    -o-object-fit: cover;
+    object-fit: cover;
+    position: absolute;
+    width: 100%
 }
 
-.game__438f2,
-.stage__438f2 {
+.blurred__438f2 {
+    filter: blur(12px);
+    transform: scale(1.1)
+}
+
+.backgroundSettings__438f2 {
+    inset-block-start: var(--space-12);
+    inset-inline-start: var(--space-12);
     position: absolute
 }
 
@@ -113,7 +123,8 @@
     align-items: flex-start;
     display: flex;
     inset: var(--space-24);
-    justify-content: flex-end
+    justify-content: flex-end;
+    position: absolute
 }
 
 .widget__438f2 {
@@ -378,4 +389,4 @@
     }
 }
 
-/*# sourceMappingURL=529659.7be9a36f2f6fd23a.css.map*/
+/*# sourceMappingURL=529659.6b66e5e4de621ada.css.map*/

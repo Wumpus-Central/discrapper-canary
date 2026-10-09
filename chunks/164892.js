@@ -1,31 +1,32 @@
 (n.d(t, {
-    A4: () => M,
+    A4: () => P,
     CA: () => I,
     Fl: () => d,
     Hn: () => o,
     Hv: () => u,
     IU: () => _,
-    Ju: () => C,
-    Oq: () => O,
-    PY: () => L,
+    Ju: () => O,
+    Oq: () => R,
+    PY: () => y,
     RX: () => E,
     XB: () => m,
-    XE: () => b,
+    XE: () => M,
     Zh: () => l,
     a7: () => A,
+    aI: () => g,
     aM: () => h,
     c6: () => r,
     eq: () => a,
-    km: () => g,
-    lN: () => S,
-    lO: () => P,
-    o2: () => N,
+    km: () => S,
+    lN: () => N,
+    lO: () => U,
+    o2: () => C,
     q7: () => i,
-    sM: () => R,
+    sM: () => L,
     sj: () => f,
     sq: () => s,
     tr: () => c,
-    vC: () => D,
+    vC: () => v,
     wU: () => p,
     wV: () => T,
 }),
@@ -88,20 +89,21 @@ function T(e, t) {
     };
 }
 let m = new Set(["image/png", "image/jpeg", "image/gif", "image/webp"]),
-    g = 0x3200000,
-    S = 10,
-    N = 36e5;
-function C(e) {
-    return m.has(e) ? 5242880 : g;
+    g = 5242880,
+    S = 0x3200000,
+    N = 10,
+    C = 36e5;
+function O(e) {
+    return m.has(e) ? g : S;
 }
-function O(e, t) {
-    return e <= C(t);
+function R(e, t) {
+    return e <= O(t);
 }
-function R(e) {
+function L(e) {
     return `${Math.round(e / 1048576)} MB`;
 }
-let L = ["simple", "balanced", "complex"],
-    y = [
+let y = ["simple", "balanced", "complex"],
+    D = [
         { id: "claude-fable-5-1", label: "Claude Fable 5.1", provider: "anthropic" },
         { id: "claude-opus-5-5", label: "Claude Opus 5.5", provider: "anthropic" },
         { id: "claude-sonnet-5-5", label: "Claude Sonnet 5.5", provider: "anthropic" },
@@ -111,14 +113,14 @@ let L = ["simple", "balanced", "complex"],
         { id: "gpt-6-luna", label: "GPT-6 Luna", provider: "openai", supports_fast: !0 },
         { id: "xai/grok-4.7", label: "Grok 4.7", provider: "xai" },
     ],
-    D = { main: y, subagent: y, thinking: ["low", "medium", "high", "xhigh", "max"] },
-    v = [
+    v = { main: D, subagent: D, thinking: ["low", "medium", "high", "xhigh", "max"] },
+    b = [
         { id: "deepseek/deepseek-flash", label: "DeepSeek V4.1 Flash", provider: "deepseek" },
         { id: "moonshotai/kimi-k3", label: "Kimi K3", provider: "moonshotai" },
     ],
-    b = { main: v, subagent: v, thinking: D.thinking },
-    M = { tier: "balanced", provider: "openai" },
-    P = {
+    M = { main: b, subagent: b, thinking: v.thinking },
+    P = { tier: "balanced", provider: "openai" },
+    U = {
         simple: { model: "gpt-6-luna", thinking: "high" },
         balanced: { model: "claude-sonnet-5-5", thinking: "high" },
         complex: { model: "claude-opus-5-5", thinking: "high" },
