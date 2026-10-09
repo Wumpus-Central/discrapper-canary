@@ -704,18 +704,18 @@ let _ = {
                         n.e("243710"),
                         n.e("631951"),
                         n.e("571180"),
-                        n.e("913627"),
+                        n.e("549334"),
                         n.e("86454"),
                         n.e("913954"),
                         n.e("994646"),
-                    ]).then(n.bind(n, 386774));
+                    ]).then(n.bind(n, 533173));
                     return (n) => (0, i.jsx)(e, { gameId: t, source: l, sourceUserId: c, ...n, appContext: u }, t);
                 },
                 { modalKey: d, contextKey: null != u ? (0, s.modalContextFromAppContext)(u) : void 0 },
             ));
     },
     returnToGameProfile: function (e) {
-        let { gameId: t, source: r, initialScrollOffset: a } = e;
+        let { gameId: t, source: r, initialScrollOffset: a, initialTab: l } = e;
         (u(t),
             (0, s.openModalLazy)(
                 async () => {
@@ -1397,19 +1397,27 @@ let _ = {
                         n.e("243710"),
                         n.e("631951"),
                         n.e("571180"),
-                        n.e("913627"),
+                        n.e("549334"),
                         n.e("86454"),
                         n.e("913954"),
                         n.e("994646"),
-                    ]).then(n.bind(n, 386774));
-                    return (n) => (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: a, ...n }, t);
+                    ]).then(n.bind(n, 533173));
+                    return (n) =>
+                        (0, i.jsx)(e, { gameId: t, source: r, initialScrollOffset: a, initialTab: l, ...n }, t);
                 },
                 { modalKey: d },
             ));
     },
     setGameProfilePendingReturn: function (e) {
-        let { gameId: t, channelId: n, initialScrollOffset: i } = e;
-        l.h.dispatch({ type: "GAME_PROFILE_SET_PENDING_RETURN", gameId: t, channelId: n, initialScrollOffset: i });
+        let { gameId: t, channelId: n, initialScrollOffset: i, tab: r, source: a } = e;
+        l.h.dispatch({
+            type: "GAME_PROFILE_SET_PENDING_RETURN",
+            gameId: t,
+            channelId: n,
+            initialScrollOffset: i,
+            tab: r,
+            source: a,
+        });
     },
     clearGameProfilePendingReturn: u,
 };

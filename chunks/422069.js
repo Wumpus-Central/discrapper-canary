@@ -2,12 +2,12 @@ t.d(n, { A: () => s });
 var E = t(17928),
     _ = t(73153);
 let i = {},
-    l = {},
     u = {},
+    l = {},
     r = {},
     c = {},
-    S = {},
     o = {},
+    S = {},
     O = null;
 class R extends E.Ay.Store {
     static displayName = "GameProfileStore";
@@ -15,10 +15,10 @@ class R extends E.Ay.Store {
         return i[e];
     }
     getShopCollectionSkuIds(e) {
-        return l[e];
+        return u[e];
     }
     hasShopCollectionBeenFetched(e) {
-        return u[e] ?? !1;
+        return l[e] ?? !1;
     }
     isShopCollectionFetching(e) {
         return r[e] ?? !1;
@@ -27,10 +27,10 @@ class R extends E.Ay.Store {
         return c[e];
     }
     hasAnnouncementsBeenFetched(e) {
-        return S[e] ?? !1;
+        return o[e] ?? !1;
     }
     isAnnouncementsFetching(e) {
-        return o[e] ?? !1;
+        return S[e] ?? !1;
     }
     getPendingReturn() {
         return O;
@@ -47,28 +47,29 @@ let s = new R(_.h, {
     },
     GAME_PROFILE_GET_SHOP_COLLECTION_SUCCESS: function (e) {
         let { collectionId: n, skuIds: t } = e;
-        ((l[n] = t), (u[n] = !0), (r[n] = !1));
+        ((u[n] = t), (l[n] = !0), (r[n] = !1));
     },
     GAME_PROFILE_GET_SHOP_COLLECTION_ERROR: function (e) {
         let { collectionId: n } = e;
-        ((u[n] = !0), (r[n] = !1));
+        ((l[n] = !0), (r[n] = !1));
     },
     GAME_PROFILE_GET_ANNOUNCEMENTS_START: function (e) {
         let { gameId: n } = e;
-        o[n] = !0;
+        S[n] = !0;
     },
     GAME_PROFILE_GET_ANNOUNCEMENTS_SUCCESS: function (e) {
         let { gameId: n, messages: t, channelId: E, guildId: _ } = e;
-        ((c[n] = { messages: t, channelId: E, guildId: _ }), (S[n] = !0), (o[n] = !1));
+        ((c[n] = { messages: t, channelId: E, guildId: _ }), (o[n] = !0), (S[n] = !1));
     },
     GAME_PROFILE_GET_ANNOUNCEMENTS_ERROR: function (e) {
         let { gameId: n } = e;
-        ((S[n] = !0), (o[n] = !1));
+        ((o[n] = !0), (S[n] = !1));
     },
     GAME_PROFILE_SET_PENDING_RETURN: function (e) {
-        let { gameId: n, channelId: t, initialScrollOffset: E } = e;
-        if (O?.gameId === n && O?.channelId === t && O?.initialScrollOffset === E) return !1;
-        O = { gameId: n, channelId: t, initialScrollOffset: E };
+        let { gameId: n, channelId: t, initialScrollOffset: E, tab: _, source: i } = e;
+        if (O?.gameId === n && O?.channelId === t && O?.initialScrollOffset === E && O?.tab === _ && O?.source === i)
+            return !1;
+        O = { gameId: n, channelId: t, initialScrollOffset: E, tab: _, source: i };
     },
     GAME_PROFILE_CLEAR_PENDING_RETURN: function (e) {
         let { gameId: n } = e;
