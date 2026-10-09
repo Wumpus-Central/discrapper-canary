@@ -145,8 +145,8 @@ let ed = {
                                 highlightedClassName: er.H,
                                 children: (0, l.jsx)(h.c2, {
                                     createPromise: () =>
-                                        Promise.all([t.e("818449"), t.e("175134")]).then(t.bind(t, 981776)),
-                                    webpackId: 981776,
+                                        Promise.all([t.e("818449"), t.e("175134")]).then(t.bind(t, 752238)),
+                                    webpackId: 752238,
                                     renderFallback: a,
                                     render: (n) => {
                                         if (!(e.lang && n.hasLanguage(e.lang))) return a();

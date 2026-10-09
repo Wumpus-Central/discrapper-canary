@@ -19,8 +19,8 @@ function u(e) {
             lang: a,
             className: d,
             children: (0, n.jsx)(i.c2, {
-                createPromise: () => Promise.all([s.e("818449"), s.e("175134")]).then(s.bind(s, 981776)),
-                webpackId: 981776,
+                createPromise: () => Promise.all([s.e("818449"), s.e("175134")]).then(s.bind(s, 752238)),
+                webpackId: 752238,
                 renderFallback: c,
                 render: (e) => {
                     if (null == a || !e.hasLanguage(a)) return c();
