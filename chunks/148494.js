@@ -1276,9 +1276,9 @@ ${a}`),
                                 let t;
                                 eH.log("Failed to send message", {
                                     hasErr: E.hasErr,
-                                    status: E.status,
-                                    code: E.body?.code,
-                                    error: E.err,
+                                    status: E.hasErr ? void 0 : E.status,
+                                    code: E.hasErr ? void 0 : E.body?.code,
+                                    error: E.hasErr ? E.err : void 0,
                                 });
                                 let r = !1;
                                 if (E.hasErr) "ABORTED" === E.err.code && (r = !0);
