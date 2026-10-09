@@ -1275,9 +1275,6 @@ class W extends N.A {
         }
         this.localVideoSinkWants = e;
     }
-    setAvSyncEnabled(e, t) {
-        this.conn.setAvSyncEnabled?.(e, t);
-    }
     startSamplesLocalPlayback(e, t, n, i) {
         if (t.numberOfChannels > 2) return void i(2, "Too many channels");
         if (null == this.conn.startSamplesLocalPlayback) return void i(3, "Not supported");

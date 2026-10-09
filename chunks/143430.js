@@ -3353,9 +3353,6 @@ class tT extends m.A {
     setSpatialAudioEnabled(e) {
         this._voiceDuration?.setSpatialAudioEnabled(e);
     }
-    setAvSyncEnabled(e, t) {
-        this._connection?.setAvSyncEnabled(e, t);
-    }
     setSimulcastDebugOverride(e, t, n) {
         t === this.context && t === W.x.DEFAULT && this._localMediaSinkWantsManager?.setSimulcastDebugOverride(e, n);
     }
