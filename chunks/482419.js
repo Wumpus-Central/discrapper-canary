@@ -1,4 +1,4 @@
-n.d(t, { k: () => c });
+(n.d(t, { k: () => c }), n(321073));
 var l = n(477900);
 n(582128);
 var i = n(888751),
@@ -26,6 +26,15 @@ function c(e) {
                   subscriptionPlan: n,
                   subscriptionTrial: c,
               }).lineItems;
-    let C = (0, r.lp)(m, { manualLineItems: h, includeTaxLineItem: !0 });
-    return (0, l.jsx)(s.Vm, { label: u.intl.string(o.default.eoXh7B), lineItems: C, currency: m.currency });
+    let C = (0, r.lp)(m, { manualLineItems: h, includeTaxLineItem: !0 }),
+        f = (0, r.Dn)(m);
+    return (
+        null != f && C.push(f),
+        (0, l.jsx)(s.Vm, {
+            label: u.intl.string(o.default.eoXh7B),
+            lineItems: C,
+            currency: m.currency,
+            defaultExpanded: null != f,
+        })
+    );
 }

@@ -106,13 +106,21 @@ async function A(e) {
     }
 }
 async function h(e) {
-    let { paymentSourceId: t, skuId: n, subscriptionPlanId: i, currency: r, loadId: s, quantity: l } = e;
+    let {
+        paymentSourceId: t,
+        skuId: n,
+        subscriptionPlanId: i,
+        currency: r,
+        loadId: s,
+        quantity: l,
+        applyWalletBalance: c,
+    } = e;
     a()(null != n && "" !== n, "SKU ID is missing for one time purchase gift invoice preview");
-    let c = { gift: !0, payment_source_id: t, sku_subscription_plan_id: i, currency: r, load_id: s };
-    null != l && (c.quantity = l);
+    let E = { gift: !0, payment_source_id: t, sku_subscription_plan_id: i, currency: r, load_id: s };
+    (null != l && (E.quantity = l), null != c && (E.apply_wallet_balance = c));
     try {
-        let e = await (0, u.aP)({ url: _.Rsh.STORE_SKU_PURCHASE(n), query: c, oldFormErrors: !0, rejectWithError: !1 });
-        return d.A.createInvoiceFromServer(e.body);
+        let e = await (0, u.aP)({ url: _.Rsh.STORE_SKU_PURCHASE(n), query: E, oldFormErrors: !0, rejectWithError: !1 });
+        return d.A.createFromOTPPreview(e.body);
     } catch (e) {
         throw new o.Ey(e);
     }

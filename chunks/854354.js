@@ -1,4 +1,4 @@
-(n.d(t, { Nc: () => c, YR: () => u, kw: () => p, lp: () => d }), n(321073));
+(n.d(t, { Dn: () => p, Nc: () => c, YR: () => u, kw: () => m, lp: () => d }), n(321073));
 var l = n(118751),
     i = n(158045),
     r = n(580630),
@@ -46,6 +46,17 @@ function d(e) {
     );
 }
 function p(e) {
+    let t = e.getWalletAmount();
+    return t <= 0
+        ? null
+        : {
+              id: "gift-card-adjustment",
+              label: o.intl.string(s.default.bdF0KJ),
+              amount: -t,
+              lineItemType: "adjustment",
+          };
+}
+function m(e) {
     let { subscriptionInvoiceRecord: t } = e;
-    return (0, r.$g)(t.total, t.currency);
+    return (0, r.$g)(t.getAmountDue(), t.currency);
 }
