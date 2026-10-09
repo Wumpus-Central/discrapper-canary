@@ -1,8 +1,3 @@
-.container__907e2 {
-    height: 100%;
-    width: 100%
-}
-
 .boxBackdrop__53b4c {
     align-items: center;
     display: flex;
@@ -217,6 +212,10 @@
     background: linear-gradient(180deg, #3e000cbf 0, var(--background-base-lower) 100%)
 }
 
+.macaronGradient__53b4c:before {
+    background: linear-gradient(180deg, #001e73 0, var(--background-base-lower) 100%)
+}
+
 .overlayTextBox__53b4c {
     inset-inline-start: var(--space-12);
     z-index: 1
@@ -326,4 +325,4 @@
     }
 }
 
-/*# sourceMappingURL=8ba5976fc2c448bd.css.map*/
+/*# sourceMappingURL=447272.347fbb59fe645c45.css.map*/

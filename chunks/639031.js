@@ -1,135 +1,135 @@
-(n.d(t, { Tb: () => ex, A0: () => eA, Ay: () => ev }), n(321073));
-var a,
+(a.d(t, { Tb: () => e_, A0: () => eA, Ay: () => ev }), a(321073));
+var n,
     s,
-    i = n(477900),
-    r = n(582128),
-    l = n(492462),
-    o = n(696292),
-    c = n(17928),
-    d = n(403581),
-    u = n(192308),
-    m = n(793574),
-    b = n(688810),
-    p = n(793943),
-    f = n(259065),
-    _ = n(741231),
-    E = n(325499),
-    g = n(75678),
-    h = n(206835),
-    R = n(192444),
-    N = n(216934),
-    x = n(591179),
-    A = n(462463),
-    v = n(780964),
-    I = n(766075),
-    O = n(166403),
-    P = n(676279),
-    T = n(975571),
-    C = n(158045),
-    U = n(789861),
-    S = n(769623),
-    L = n(920050),
-    M = n(707922),
-    j = n(395315),
-    y = n(239016),
-    B = n(398523),
-    w = n(881373),
-    D = n(852218),
-    k = n(50949),
-    Y = n(713271),
-    G = n(503698),
-    V = n.n(G),
-    H = n(907581),
-    F = n(830370);
-function X(e) {
-    let { className: t, ref: n } = e,
-        a = r.useRef(null);
+    i = a(477900),
+    r = a(582128),
+    l = a(492462),
+    c = a(696292),
+    d = a(17928),
+    o = a(403581),
+    u = a(192308),
+    m = a(793574),
+    p = a(688810),
+    b = a(793943),
+    f = a(259065),
+    h = a(741231),
+    g = a(325499),
+    R = a(75678),
+    E = a(206835),
+    x = a(192444),
+    N = a(216934),
+    _ = a(591179),
+    A = a(462463),
+    v = a(780964),
+    O = a(766075),
+    I = a(166403),
+    P = a(676279),
+    C = a(975571),
+    T = a(158045),
+    U = a(789861),
+    M = a(769623),
+    S = a(920050),
+    j = a(707922),
+    L = a(261995),
+    y = a(164832),
+    B = a(398523),
+    D = a(881373),
+    k = a(852218),
+    w = a(50949),
+    Y = a(713271),
+    V = a(503698),
+    G = a.n(V),
+    H = a(907581),
+    X = a(830370);
+function F(e) {
+    let { className: t, ref: a } = e,
+        n = r.useRef(null);
     return (
-        r.useImperativeHandle(n, () => ({
+        r.useImperativeHandle(a, () => ({
             play: () => {
-                a.current?.play();
+                n.current?.play();
             },
-            pause: () => a.current?.pause(),
+            pause: () => n.current?.pause(),
         })),
         (0, i.jsx)("div", {
-            className: V()(t, F.k),
-            children: (0, i.jsx)(H.C, { ref: a, autoplay: !1, stateMachine: "State Machine 1", fit: "contain" }),
+            className: G()(t, X.k),
+            children: (0, i.jsx)(H.C, { ref: n, autoplay: !1, stateMachine: "State Machine 1", fit: "contain" }),
         })
     );
 }
-X.displayName = "PremiumRewardsBentoBoxAsset";
-var W = n(592909),
-    z = n(989790),
-    K = n(612413),
-    q = n(202541);
-n(92737);
-var J = n(88001),
-    $ = n(652215),
-    Z = n(190107),
-    Q = n(355097),
-    ee = n(310235),
-    et = n(334551),
-    en = n(148155),
-    ea = n(1889),
-    es = n(762359),
-    ei = n(660183),
-    er = n(72191),
-    el = n(701974),
-    eo = n(553875),
-    ec = n(505051),
-    ed = n(817577);
+F.displayName = "PremiumRewardsBentoBoxAsset";
+var W = a(592909),
+    z = a(989790),
+    K = a(612413),
+    q = a(202541);
+a(92737);
+var $ = a(88001),
+    J = a(652215),
+    Z = a(190107),
+    Q = a(355097),
+    ee = a(310235),
+    et = a(334551),
+    ea = a(148155),
+    en = a(1889),
+    es = a(762359),
+    ei = a(660183),
+    er = a(72191),
+    el = a(701974),
+    ec = a(553875),
+    ed = a(505051),
+    eo = a(817577);
 let eu = "/assets/035ad0fba4997f3f.svg",
     em =
         "https://cdn.discordapp.com/assets/content/a3d8a5ad88850f5dbfb86dcff1844ef525771e03d2e6bf64328980a361538f05.mov",
-    eb =
-        "https://cdn.discordapp.com/assets/content/1950d090a67ef578499d21526718bbbbc01d5799318f64435930ecef3e524241.webm",
     ep =
+        "https://cdn.discordapp.com/assets/content/1950d090a67ef578499d21526718bbbbc01d5799318f64435930ecef3e524241.webm",
+    eb =
         "https://cdn.discordapp.com/assets/content/de126b095fb3d2353650e750d46c54b7156297482f9205ca1645a45fb0082169.png";
-var ef = n(112992);
-let e_ =
+var ef = a(112992);
+let eh =
     "https://cdn.discordapp.com/assets/content/94614efcdbc454cb327b5744501edff7f4342aaf09cc67720a7b25a79262b08a.webp";
-var eE = n(679502),
-    eg = n(576765),
-    eh = n(88433),
-    eR = n(909340),
-    eN = n(455482),
-    ex = (((a = {}).CONTAINED = "contained"), (a.OVERLAY = "overlay"), a),
+var eg = a(679502),
+    eR = a(576765),
+    eE = a(88433),
+    ex = a(909340),
+    eN = a(455482),
+    e_ = (((n = {}).CONTAINED = "contained"), (n.OVERLAY = "overlay"), n),
     eA = (((s = {}).SMALL = "small"), (s.MEDIUM = "medium"), (s.LARGE = "large"), s);
 let ev = function () {
     let e = arguments.length > 0 && void 0 !== arguments[0] && arguments[0],
-        { analyticsLocations: t } = (0, b.Ay)(m.A.PREMIUM_MARKETING_BENTO_BOX),
-        a = (0, x.X)("useBentoBoxes"),
+        { analyticsLocations: t } = (0, p.Ay)(m.A.PREMIUM_MARKETING_BENTO_BOX),
+        n = (0, _.X)("useBentoBoxes"),
         s = (0, A.A)({ analyticsLocations: t }),
-        G = (0, r.useCallback)(() => {
-            (0, _.A)($.BVt.NITRO_HOME, { search: (0, l.stringify)({ perk: L.CALL_OF_DUTY_3PP_CARD_ID }) });
-        }, []),
         V = (0, r.useCallback)(() => {
-            (0, _.A)($.BVt.NITRO_HOME, { search: (0, l.stringify)({ perk: L.XBOX_PREMIUM_PERK_CARD_ID }) });
+            (0, h.A)(J.BVt.NITRO_HOME, { search: (0, l.stringify)({ perk: S.CALL_OF_DUTY_3PP_CARD_ID }) });
         }, []),
-        H = (0, h.A)({ scrollPosition: Q._F.TRY_IT_OUT, analyticsLocations: t }),
-        F = (0, r.useCallback)(() => {
-            (0, I.openUserSettings)(v.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
+        G = (0, r.useCallback)(() => {
+            (0, h.A)(J.BVt.NITRO_HOME, { search: (0, l.stringify)({ perk: S.XBOX_PREMIUM_PERK_CARD_ID }) });
+        }, []),
+        H = (0, E.A)({ scrollPosition: Q._F.TRY_IT_OUT, analyticsLocations: t }),
+        X = (0, r.useCallback)(() => {
+            (0, O.openUserSettings)(v.X.PROFILE_PANEL, { analyticsLocations: t }, () =>
                 (0, f.L)({ analyticsLocations: t }),
             );
         }, [t]),
-        ex = (0, r.useCallback)(() => {
-            (0, g.A)({ subscriptionTier: q.pe.TIER_2, initialPlanId: q.gD.PREMIUM_GROUP_MONTH, analyticsLocations: t });
+        e_ = (0, r.useCallback)(() => {
+            (0, R.A)({ subscriptionTier: q.pe.TIER_2, initialPlanId: q.gD.PREMIUM_GROUP_MONTH, analyticsLocations: t });
         }, [t]),
         eA = (0, P.TM)(),
-        ev = T.A.getArticleURL($.MVz.REFERRAL_PROGRAM),
-        { shouldShowBonusOrbsUX: eI, multiplier: eO } = (0, R.lk)(Z.rE.NITRO_HOME_MARKETING),
+        ev = C.A.getArticleURL(J.MVz.REFERRAL_PROGRAM),
+        { shouldShowBonusOrbsUX: eO, multiplier: eI } = (0, x.lk)(Z.rE.NITRO_HOME_MARKETING),
         eP = r.useRef(null),
-        eT = (0, E.b)("bento_box"),
-        eC = (function () {
+        eC = (0, g.b)("bento_box"),
+        eT = (function () {
             let { enabled: e } = B.A.useConfig({ location: "useRecurring3PModalEligiblePartnerIds" }),
-                t = (0, w.YS)({ location: "useRecurring3PModalEligiblePartnerIds" }).functionalityEnabled;
+                t = (0, D.YS)({ location: "useRecurring3PModalEligiblePartnerIds" }).functionalityEnabled;
             return r.useMemo(() => {
-                let n = { [D.XY]: t, [D.KS]: e };
-                return D.mY.filter((e) => n[e]);
+                let a = { [k.XY]: t, [k.KS]: e };
+                return k.mY.filter((e) => a[e]);
             }, [e, t, void 0]);
         })(),
         eU = {
-            premiumGroup: { thumbnail: ed, assetUrl: ed },
+            premiumGroup: { thumbnail: eo, assetUrl: eo },
             serverProfiles: {
                 thumbnail: "/assets/27e5bfe55cd9ceac.png",
                 assetUrl: eA
@@ -172,10 +172,10 @@ let ev = function () {
                     : "https://cdn.discordapp.com/assets/content/f1a6a6b7512e50f319f8749704e31d40eb06d028c854d9fb86ba89ae05cc907d.webm",
             },
             emojis: {
-                thumbnail: eg.A,
+                thumbnail: eR.A,
                 assetUrl: eA
                     ? "https://cdn.discordapp.com/assets/content/3f5085611f7c0ed8a1dde79c4c7f4842cd12734a4f6f7cefe043ae166257c039.mov"
-                    : eh.A,
+                    : eE.A,
             },
             noLimits: {
                 thumbnail:
@@ -184,11 +184,11 @@ let ev = function () {
                     ? "https://cdn.discordapp.com/assets/content/a39efd6ebd57352a7cf6887285f4e13988cef7068f17d31bd4839fcbd54189e4.mov"
                     : "https://cdn.discordapp.com/assets/content/2951de28d84d4fcba8b5c4db54b094b98dca5bfb168d77d356e9896708768a5f.webm",
             },
-            orbRewards: { thumbnail: eN.A, assetUrl: eR.A },
-            orbMultiplier: { thumbnail: ep, assetUrl: eA ? em : eb },
-            combinedOrbs: { thumbnail: ep, assetUrl: eA ? em : eb },
-            callOfDuty: { thumbnail: e_, assetUrl: e_ },
-            threePPromotions: { thumbnail: eT ? (0, i.jsx)(X, { ref: eP }) : eu, assetUrl: eT ? void 0 : eu },
+            orbRewards: { thumbnail: eN.A, assetUrl: ex.A },
+            orbMultiplier: { thumbnail: eb, assetUrl: eA ? em : ep },
+            combinedOrbs: { thumbnail: eb, assetUrl: eA ? em : ep },
+            callOfDuty: { thumbnail: eh, assetUrl: eh },
+            threePPromotions: { thumbnail: eC ? (0, i.jsx)(F, { ref: eP }) : eu, assetUrl: eC ? void 0 : eu },
             youtube: {
                 thumbnail:
                     "https://cdn.discordapp.com/assets/content/67348bc7420d5ab8029fb93d7d514fcdbd39b9273c238123bb1ea90b656bfe13.webp",
@@ -197,13 +197,12 @@ let ev = function () {
                 thumbnail:
                     "https://cdn.discordapp.com/assets/content/6e51a46eb536e6422319f2ec4f49dc97b707b6df317f9cc144c0d2b1f4244ad0.png",
             },
-            macaron: { thumbnail: "", assetUrl: "" },
         },
-        eS = (0, S.Y)({ location: "bento_box" }),
-        eL = (0, M.A)(!eS),
-        eM = (0, c.bG)([O.A], () => O.A.getPremiumTypeSubscription()),
-        ej = null != eM && (0, C.Nc)(eM),
-        ey = (0, j.uq)({ location: "bento_box" }),
+        eM = (0, M.Y)({ location: "bento_box" }),
+        eS = (0, j.A)(!eM),
+        ej = (0, d.bG)([I.A], () => I.A.getPremiumTypeSubscription()),
+        eL = null != ej && (0, T.Nc)(ej),
+        ey = (0, L.uq)({ location: "bento_box" }),
         eB = {
             [Y.N.MACARON]: null != ey ? ey : void 0,
             [Y.N.SERVER_PROFILES]: {
@@ -211,7 +210,7 @@ let ev = function () {
                 title: ei.intl.string(ei.t.I9TYMg),
                 description: ei.intl.string(ei.t.HMSHeH),
                 descriptionCta: ei.intl.string(ei.t.jVcuVY),
-                onClick: a ? s : H,
+                onClick: n ? s : H,
                 previewImage: eU.serverProfiles.thumbnail,
                 videoUrl: eU.serverProfiles.assetUrl,
             },
@@ -229,7 +228,7 @@ let ev = function () {
                 descriptionCta: ei.intl.string(ei.t.jVcuVY),
                 previewImage: eU.customThemes.thumbnail,
                 onClick: () => {
-                    (0, p.nf)(p.HP.CUSTOM_THEME);
+                    (0, b.nf)(b.HP.CUSTOM_THEME);
                 },
                 videoUrl: eU.customThemes.assetUrl,
             },
@@ -239,29 +238,29 @@ let ev = function () {
                 description: ei.intl.string(el.default.MFNXZh),
                 descriptionCta: ei.intl.string(ei.t.jVcuVY),
                 previewImage: eU.displayNameStyles.thumbnail,
-                onClick: a ? s : F,
+                onClick: n ? s : X,
                 videoUrl: eU.displayNameStyles.assetUrl,
             },
             [Y.N.PREMIUM_GROUP]: {
                 name: Y.N.PREMIUM_GROUP,
-                title: ei.intl.formatToPlainString(en.default.VFEDDB, { premiumGroupProductName: (0, J.DP)() }),
+                title: ei.intl.formatToPlainString(ea.default.VFEDDB, { premiumGroupProductName: (0, $.DP)() }),
                 description:
-                    eS && null != eL
-                        ? ei.intl.formatToPlainString(en.default.vmvhN5, { pricePerPerson: eL, totalMember: J.LM })
-                        : ei.intl.formatToPlainString(en.default.WudmR3, {
-                              totalSeats: J.aw,
-                              premiumGroupProductName: (0, J.DP)(),
+                    eM && null != eS
+                        ? ei.intl.formatToPlainString(ea.default.vmvhN5, { pricePerPerson: eS, totalMember: $.LM })
+                        : ei.intl.formatToPlainString(ea.default.WudmR3, {
+                              totalSeats: $.aw,
+                              premiumGroupProductName: (0, $.DP)(),
                           }),
                 previewImage: eU.premiumGroup.thumbnail,
                 videoUrl: eU.premiumGroup.assetUrl,
                 actions: [
                     {
                         variant: "primary",
-                        text: ei.intl.formatToPlainString(en.default.LwdrNi, { premiumGroupProductName: (0, J.DP)() }),
-                        onClick: ex,
-                        icon: d.t,
+                        text: ei.intl.formatToPlainString(ea.default.LwdrNi, { premiumGroupProductName: (0, $.DP)() }),
+                        onClick: e_,
+                        icon: o.t,
                         iconPosition: "start",
-                        disabled: ej,
+                        disabled: eL,
                     },
                     {
                         variant: "secondary",
@@ -269,10 +268,10 @@ let ev = function () {
                         onClick: () => {
                             (0, u.openModalLazy)(async () => {
                                 let { default: e } = await Promise.all([
-                                    n.e("499709"),
-                                    n.e("403370"),
-                                    n.e("569595"),
-                                ]).then(n.bind(n, 526710));
+                                    a.e("499709"),
+                                    a.e("403370"),
+                                    a.e("569595"),
+                                ]).then(a.bind(a, 526710));
                                 return (t) => (0, i.jsx)(e, { ...t });
                             });
                         },
@@ -287,7 +286,7 @@ let ev = function () {
                 description: ei.intl.string(ei.t.UsOUxY),
                 descriptionCta: ei.intl.string(ei.t.jVcuVY),
                 previewImage: eU.showYourStyle.thumbnail,
-                onClick: a ? s : H,
+                onClick: n ? s : H,
                 videoUrl: eU.showYourStyle.assetUrl,
             },
             [Y.N.YOUR_SPACE]: {
@@ -298,7 +297,7 @@ let ev = function () {
                 previewImage: eU.yourSpace.thumbnail,
                 onClick: function () {
                     {
-                        let { openUserSettings: e } = n(766075);
+                        let { openUserSettings: e } = a(766075);
                         e(v.X.APPEARANCE_THEME_CATEGORY, { analyticsLocations: t });
                     }
                 },
@@ -324,66 +323,66 @@ let ev = function () {
                 description: ei.intl.formatToPlainString(ee.default["RuZS+B"], { validDates: (0, U.a1)() }),
                 previewImage: eU[Y.N.CALL_OF_DUTY].thumbnail,
                 videoUrl: eU[Y.N.CALL_OF_DUTY].assetUrl,
-                containerClassName: ec.callOfDutyGradient,
+                containerClassName: ed.callOfDutyGradient,
                 actions: [
                     {
                         variant: "primary",
                         text: ei.intl.string(ee.default["9Rq7t1"]),
                         onClick: () =>
-                            (0, g.A)({
+                            (0, R.A)({
                                 subscriptionTier: q.pe.TIER_2,
                                 analyticsLocations: t,
-                                onSubscriptionConfirmation: G,
+                                onSubscriptionConfirmation: V,
                             }),
-                        icon: d.t,
+                        icon: o.t,
                         iconPosition: "start",
                     },
                 ],
             },
             [Y.N.THREE_P_PROMOTIONS]: {
                 name: Y.N.THREE_P_PROMOTIONS,
-                title: eT ? ei.intl.string(ei.t.E4U4SS) : ei.intl.string(et.default.OlObRa),
-                description: eT ? ei.intl.string(ei.t["B4uSy/"]) : ei.intl.string(et.default["8Gl8gP"]),
-                descriptionCta: eT ? ei.intl.string(ei.t.RzWDqY) : ei.intl.string(et.default.HINTfJ),
+                title: eC ? ei.intl.string(ei.t.E4U4SS) : ei.intl.string(et.default.OlObRa),
+                description: eC ? ei.intl.string(ei.t["B4uSy/"]) : ei.intl.string(et.default["8Gl8gP"]),
+                descriptionCta: eC ? ei.intl.string(ei.t.RzWDqY) : ei.intl.string(et.default.HINTfJ),
                 previewImage: eU[Y.N.THREE_P_PROMOTIONS].thumbnail,
                 videoUrl: eU[Y.N.THREE_P_PROMOTIONS].assetUrl,
                 onClick: () =>
                     (0, y.P)({
                         analyticsLocations: t,
-                        partnerIds: eC,
+                        partnerIds: eT,
                         isLocked: !0,
-                        showXboxCard: eT,
-                        title: eT ? ei.intl.string(ei.t.NG1e6l) : ei.intl.string(ei.t["7ioAjs"]),
-                        subtitle: eT
-                            ? ei.intl.format(eo.default.zS4GBR, { termsLink: T.A.getArticleURL($.MVz.NITRO_2_POINT_0) })
+                        showXboxCard: eC,
+                        title: eC ? ei.intl.string(ei.t.NG1e6l) : ei.intl.string(ei.t["7ioAjs"]),
+                        subtitle: eC
+                            ? ei.intl.format(ec.default.zS4GBR, { termsLink: C.A.getArticleURL(J.MVz.NITRO_2_POINT_0) })
                             : ei.intl.format(ei.t.LOYRxB, {
-                                  helpCenterLink: T.A.getArticleURL($.MVz.RECURRING_PROMOTION),
+                                  helpCenterLink: C.A.getArticleURL(J.MVz.RECURRING_PROMOTION),
                               }),
                     }),
-                badgeText: eT ? void 0 : ei.intl.string(ei.t.y2b7CA).toLocaleUpperCase(),
+                badgeText: eC ? void 0 : ei.intl.string(ei.t.y2b7CA).toLocaleUpperCase(),
                 badgeVariant: "expressive",
-                mediaRef: eT ? eP : void 0,
+                mediaRef: eC ? eP : void 0,
             },
             [Y.N.ORB_REWARDS]: {
                 name: Y.N.ORB_REWARDS,
-                title: ei.intl.string(ea.default["ZFJ/NU"]),
-                description: ei.intl.string(ea.default.wMi514),
+                title: ei.intl.string(en.default["ZFJ/NU"]),
+                description: ei.intl.string(en.default.wMi514),
                 descriptionCta: ei.intl.string(ei.t.hvVgAZ),
                 onClick: () => {
-                    window.open(T.A.getArticleURL($.MVz.ORBS_REWARDS_FAQ), "_blank");
+                    window.open(C.A.getArticleURL(J.MVz.ORBS_REWARDS_FAQ), "_blank");
                 },
                 previewImage: eU.orbRewards.thumbnail,
                 previewImageStyle: "overlay",
                 backgroundVideoUrl: eU.orbRewards.assetUrl,
-                badgeText: eT ? void 0 : ei.intl.string(ei.t.oW0eUd).toLocaleUpperCase(),
+                badgeText: eC ? void 0 : ei.intl.string(ei.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
             },
             [Y.N.ORB_MULTIPLIER]: {
                 name: Y.N.ORB_MULTIPLIER,
                 title: ei.intl.string(ei.t.Csf5Ol),
-                description: ei.intl.format(ei.t["G5k+lZ"], { bonusOrbMultiplier: eO }),
+                description: ei.intl.format(ei.t["G5k+lZ"], { bonusOrbMultiplier: eI }),
                 descriptionCta: ei.intl.string(ei.t.jVcuVY),
-                onClick: () => (0, N.m)({ fromContent: o.u.NITRO_HOME_PERK_CARD }),
+                onClick: () => (0, N.m)({ fromContent: c.u.NITRO_HOME_PERK_CARD }),
                 badgeVariant: "expressive",
                 previewImage: eU[Y.N.ORB_MULTIPLIER].thumbnail,
                 videoUrl: eU[Y.N.ORB_MULTIPLIER].assetUrl,
@@ -391,89 +390,89 @@ let ev = function () {
             [Y.N.COMBINED_ORBS]: {
                 name: Y.N.COMBINED_ORBS,
                 title: ei.intl.string(ei.t.Tzhw6e),
-                description: ei.intl.format(ei.t.djzJx6, { bonusOrbMultiplier: eO }),
+                description: ei.intl.format(ei.t.djzJx6, { bonusOrbMultiplier: eI }),
                 descriptionCta: ei.intl.string(ei.t.RzWDqY),
-                onClick: () => (0, N.m)({ fromContent: o.u.NITRO_HOME_PERK_CARD }),
-                badgeText: eT ? void 0 : ei.intl.string(ei.t.oW0eUd).toLocaleUpperCase(),
+                onClick: () => (0, N.m)({ fromContent: c.u.NITRO_HOME_PERK_CARD }),
+                badgeText: eC ? void 0 : ei.intl.string(ei.t.oW0eUd).toLocaleUpperCase(),
                 badgeVariant: "expressive",
                 previewImage: eU[Y.N.COMBINED_ORBS].thumbnail,
                 videoUrl: eU[Y.N.COMBINED_ORBS].assetUrl,
             },
             [Y.N.YOUTUBE]: {
                 name: Y.N.YOUTUBE,
-                caption: (0, i.jsx)("img", { src: eE.A, alt: "YouTube Premium" }),
+                caption: (0, i.jsx)("img", { src: eg.A, alt: "YouTube Premium" }),
                 title: ei.intl.string(es.default["BdIVB+"]),
                 description: ei.intl.format(es.default["3jY5i3"], {
-                    helpCenterUrl: T.A.getArticleURL($.MVz.YOUTUBE_PROMOTION),
+                    helpCenterUrl: C.A.getArticleURL(J.MVz.YOUTUBE_PROMOTION),
                 }),
                 previewImage: eU[Y.N.YOUTUBE].thumbnail,
                 descriptionCta: ei.intl.string(es.default.VwLXyT),
-                containerClassName: ec.youtubeGradient,
-                onClick: () => (0, k.z)(t),
+                containerClassName: ed.youtubeGradient,
+                onClick: () => (0, w.z)(t),
             },
             [Y.N.XBOX_PARTNER_PASS]: {
                 name: Y.N.XBOX_PARTNER_PASS,
                 caption: (0, i.jsx)("img", { src: ef.A, alt: "Xbox Game Pass" }),
-                title: ei.intl.string(eo.default.IthhpG),
-                description: ei.intl.format(eo.default.NKTF0a, {
-                    helpCenterLink: T.A.getArticleURL($.MVz.NITRO_2_POINT_0),
+                title: ei.intl.string(ec.default.IthhpG),
+                description: ei.intl.format(ec.default.NKTF0a, {
+                    helpCenterLink: C.A.getArticleURL(J.MVz.NITRO_2_POINT_0),
                 }),
                 previewImage: eU[Y.N.XBOX_PARTNER_PASS].thumbnail,
-                containerClassName: ec.xboxGradient,
+                containerClassName: ed.xboxGradient,
                 actions: [
                     {
                         variant: "secondary",
                         text: ei.intl.string(ei.t["2pG5Ga"]),
                         onClick: () =>
-                            (0, g.A)({
+                            (0, R.A)({
                                 subscriptionTier: q.pe.TIER_2,
                                 analyticsLocations: t,
-                                onSubscriptionConfirmation: V,
+                                onSubscriptionConfirmation: G,
                             }),
-                        icon: d.t,
+                        icon: o.t,
                         iconPosition: "start",
                     },
                 ],
             },
         };
-    function ew(e) {
+    function eD(e) {
         let t = eB[e];
         if (null == t) throw Error(`useBentoBoxes: missing bento config for ${e}`);
         return t;
     }
-    let eD = (function (e) {
+    let ek = (function (e) {
             let t,
-                n = (0, W.A0)({ location: "bento_box" }),
-                a = (0, w.YS)({ location: "bento_box" }).functionalityEnabled,
+                a = (0, W.A0)({ location: "bento_box" }),
+                n = (0, D.YS)({ location: "bento_box" }).functionalityEnabled,
                 s = (0, K.mh)({ location: "bento_box" }),
-                i = (0, E.b)("bento_box"),
+                i = (0, g.b)("bento_box"),
                 { enabled: r } = B.A.useConfig({ location: "bento_box" }),
-                { enabled: l } = (0, j.vc)({ location: "bento_box" });
-            t = n ? Y.N.CALL_OF_DUTY : Y.N.THREE_P_PROMOTIONS;
-            let o = (0, z.O9)();
+                { enabled: l } = (0, L.vc)({ location: "bento_box" });
+            t = a ? Y.N.CALL_OF_DUTY : Y.N.THREE_P_PROMOTIONS;
+            let c = (0, z.O9)();
             return [
                 ...(l ? [Y.N.MACARON] : []),
                 ...(s ? [Y.N.YOUTUBE] : []),
                 ...(i && (s || l) ? [Y.N.XBOX_PARTNER_PASS] : []),
-                ...(n || a || r ? [t] : []),
+                ...(a || n || r ? [t] : []),
                 ...(e ? [Y.N.COMBINED_ORBS] : []),
-                ...(o ? [Y.N.PREMIUM_GROUP] : []),
+                ...(c ? [Y.N.PREMIUM_GROUP] : []),
                 ...(e ? [] : [Y.N.ORB_REWARDS]),
                 Y.N.DISPLAY_NAME_STYLES,
                 Y.N.CUSTOM_THEMES,
                 Y.N.SERVER_PROFILES,
                 Y.N.REFERRAL_PROGRAM,
             ];
-        })(eI),
-        ek = [],
-        eY = e ? null : eD[0],
-        eG = eD.slice(+!e, e ? 2 : 3);
+        })(eO),
+        ew = [],
+        eY = e ? null : ek[0],
+        eV = ek.slice(+!e, e ? 2 : 3);
     return (
-        null != eY && ek.push([ew(eY)]),
-        1 === eG.length ? ek.push([ew(eG[0])]) : 2 === eG.length && ek.push([ew(eG[0]), ew(eG[1])]),
+        null != eY && ew.push([eD(eY)]),
+        1 === eV.length ? ew.push([eD(eV[0])]) : 2 === eV.length && ew.push([eD(eV[0]), eD(eV[1])]),
         {
-            whatsNewBoxes: [...ek],
-            bestOfBoxes: [[ew(Y.N.SHOW_YOUR_STYLE)], [ew(Y.N.YOUR_SPACE)], [ew(Y.N.EMOJIS), ew(Y.N.NO_LIMITS)]],
+            whatsNewBoxes: [...ew],
+            bestOfBoxes: [[eD(Y.N.SHOW_YOUR_STYLE)], [eD(Y.N.YOUR_SPACE)], [eD(Y.N.EMOJIS), eD(Y.N.NO_LIMITS)]],
         }
     );
 };

@@ -661,6 +661,6 @@ var i,
         (i.CUSTOM_TYPING_INDICATOR_PROFILE_COACHMARK = "custom typing indicator profile coachmark"),
         (i.CUSTOM_TYPING_INDICATOR_ANNOUNCEMENT_SHEET = "custom typing indicator announcement sheet"),
         (i.CHAT_TYPING_INDICATOR = "chat typing indicator"),
-        (i.MACARON_PREMIUM_TAB_POPOVER = ""),
+        (i.BEST_BUY_PREMIUM_TAB_POPOVER = "best buy premium tab popover"),
         i);
 let a = r;

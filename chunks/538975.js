@@ -1,1 +1,3 @@
-p.exports = JSON.parse('{"cfEYME":["cfEYME"],"lyE3Rw":["lyE3Rw"],"Q86yGA":["Q86yGA"]}');
+p.exports = JSON.parse(
+    '{"cfEYME":["cfEYME"],"lyE3Rw":["\u0911\u095E\u0930 \u0905\u0928\u0932\u0949\u0915 \u0915\u0930\u0947\u0902"],"Q86yGA":["\u0930\u093F\u0935\u0949\u0930\u094D\u0921 \u0905\u0928\u0932\u0949\u0915 \u0915\u0930\u0947\u0902"]}',
+);

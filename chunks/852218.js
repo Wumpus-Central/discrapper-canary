@@ -1,9 +1,9 @@
 n.d(t, {
-    Bc: () => _,
     Bt: () => c,
     CD: () => l,
     KS: () => o,
     NC: () => u,
+    P_: () => _,
     XY: () => d,
     km: () => E,
     mY: () => A,
@@ -28,6 +28,6 @@ let l = { steelseries: { id: "steelseries", label: "SteelSeries" }, logitech: { 
     d = "logitech",
     c = "call_of_duty",
     u = "youtube",
-    _ = "macaron",
+    _ = "best_buy",
     E = new Set([d, c, u, _]),
     A = [d, o];

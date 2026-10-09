@@ -25,6 +25,7 @@ a.r(
         callOfDutyGradient: "callOfDutyGradient__53b4c",
         xboxGradient: "xboxGradient__53b4c",
         youtubeGradient: "youtubeGradient__53b4c",
+        macaronGradient: "macaronGradient__53b4c",
         overlayTextBox: "overlayTextBox__53b4c",
         backgroundVideoContainer: "backgroundVideoContainer__53b4c",
         backgroundVideo: "backgroundVideo__53b4c",

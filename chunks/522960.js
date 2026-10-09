@@ -1456,8 +1456,8 @@ var t3 = s(517846),
     sn = s(555393),
     sa = s(325652),
     sl = s(852218),
-    sr = s(395315),
-    sc = s(239016),
+    sr = s(261995),
+    sc = s(164832),
     so = s(280761),
     sd = s(881296),
     su = s(945810);
@@ -1747,7 +1747,12 @@ function s_(e) {
         })(),
         p =
             null != g
-                ? { card: g, backgroundAssetUrl: "" }
+                ? {
+                      card: g,
+                      backgroundAssetUrl:
+                          "https://cdn.discordapp.com/assets/content/d6bc70e4b19392250948d59f11fcdb7360b2ed7fa636f8d9ab30c199a728a7c6.png",
+                      blurTint: "#001E73",
+                  }
                 : null != m
                   ? {
                         card: m,
@@ -3840,13 +3845,14 @@ function nW(e) {
 let nz = o.memo(function (e) {
         let t = (0, tM.b)("premium_marketing_bento"),
             s = (0, sx.mh)({ location: "premium_marketing_bento" }),
-            i = t && !s,
-            { whatsNewBoxes: n } = (0, nF.Ay)(i);
+            { enabled: i } = (0, sr.vc)({ location: "premium_marketing_bento" }),
+            n = t && !s && !i,
+            { whatsNewBoxes: a } = (0, nF.Ay)(n);
         return (0, c.jsx)(nW, {
-            boxLayout: n,
+            boxLayout: a,
             title: J.intl.string(J.t.LRmNAl),
             startLeftAligned: !0,
-            highlightBento: i ? (0, c.jsx)(nB, {}) : null,
+            highlightBento: n ? (0, c.jsx)(nB, {}) : null,
             ...e,
         });
     }),
