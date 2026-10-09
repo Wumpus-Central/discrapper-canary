@@ -759,6 +759,7 @@
   "ELIGIBLE_APPLICATION_SUBSCRIPTION_GUILDS": "/users/@me/billing/eligible-application-subscription-guilds",
   "APPLICATION_USER_ROLE_CONNECTIONS": "/users/@me/applications/role-connections",
   "GET_SAVED_MESSAGES": "/users/@me/saved-messages",
+  "GET_BOOKMARKS": "/users/@me/saved-messages/bookmarks",
   "PUT_SAVED_MESSAGE": "/users/@me/saved-messages/:param/:param",
   "DELETE_SAVED_MESSAGE": "/users/@me/saved-messages/:param/:param",
   "GET_REFERRALS_REMAINING": "/users/@me/referrals/eligibility",

@@ -88,6 +88,10 @@
     min-height: 0
 }
 
+.hasMore__4ad69 {
+    margin-bottom: var(--space-16)
+}
+
 .deletedMessage__4ad69 {
     display: flex;
     justify-content: space-between;
@@ -227,4 +231,4 @@
     overflow: hidden
 }
 
-/*# sourceMappingURL=fa6168fb2d46ca6a.css.map*/
+/*# sourceMappingURL=af7029703817da0b.css.map*/
