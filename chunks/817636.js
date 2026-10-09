@@ -3,13 +3,13 @@ var i = n(587895),
     r = n(337095),
     a = n(395671),
     s = n(734057),
-    l = n(795816),
+    l = n(445672),
     o = n(692957);
 async function d(e, t) {
     let n = i.A.getApplication(e);
     if (c(n)) return n;
     let d = s.A.getChannel(t)?.guild_id,
-        { activityConfigs: u, applications: _ } = await (0, l.LV)({ guildId: d }),
+        { activityConfigs: u, applications: _ } = await (0, l.L)({ guildId: d }),
         E = (0, o.A)({ applicationId: e, activityConfigs: u, applications: _ });
     if (c(E?.application)) return E?.application;
     {

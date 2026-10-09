@@ -187,15 +187,8 @@ class o extends a.D {
             return null;
         }
     }
-    getSystemMetrics() {
+    getSystemMetrics(e) {
         try {
-            let e;
-            try {
-                let { getIsNativeSystemCpuTimesEnabled: t } = n(451704);
-                e = t();
-            } catch {
-                e = !1;
-            }
             return i.A?.processUtils?.getSystemMetrics?.(e) ?? Promise.resolve(null);
         } catch (e) {
             return Promise.resolve(null);

@@ -9,7 +9,7 @@ var r = n(830215),
     d = n(885386),
     c = n(975571),
     u = n(10716),
-    _ = n(795816),
+    _ = n(578983),
     E = n(28863);
 function A(e) {
     let { href: t, children: n } = e;
@@ -25,7 +25,7 @@ async function I(e, t) {
     if (e instanceof a.A) {
         ((n = 0), (I = e.reason));
         let i = u.A.getFetchState();
-        switch ((d.Q_.getSetting() && i !== u.$.LOADED && (await (0, _.SE)()), e.reason)) {
+        switch ((d.Q_.getSetting() && i !== u.$.LOADED && (await (0, _.S)()), e.reason)) {
             case a.A.Reasons.PRIMARY_APP_COMMAND_NOT_FOUND:
                 u.A.inDevModeForApplication(t) && (p = f.intl.string(f.t.hXRXfz));
                 break;

@@ -434,7 +434,7 @@ function V() {
 }
 var X = n(991690),
     $ = n(10716),
-    J = n(795816),
+    J = n(578983),
     ee = n(627363),
     et = n(885386);
 function en() {
@@ -444,7 +444,7 @@ function en() {
         r = (0, C.bG)([$.A], () => $.A.getFetchState());
     return (
         l.useEffect(() => {
-            null != t && t.supportsEmbeddedSurface(X.U.MAIN) && n && null == r && (0, J.SE)();
+            null != t && t.supportsEmbeddedSurface(X.U.MAIN) && n && null == r && (0, J.S)();
         }, [t, n, r]),
         null
     );

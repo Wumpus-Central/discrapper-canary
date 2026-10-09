@@ -14,7 +14,7 @@ var i = n(477900),
     h = n(323384),
     f = n(320448),
     A = n(811024),
-    _ = n(795816),
+    _ = n(445672),
     E = n(793574),
     p = n(688810),
     C = n(735991),
@@ -467,7 +467,7 @@ function es(e) {
                 openInPopout: !1,
                 analyticsLocation: c,
             }),
-                (0, _.LV)({ guildId: l.guild_id }));
+                (0, _.L)({ guildId: l.guild_id }));
         }
         t = F
             ? z.intl.format(z.t.kfV8WM, {

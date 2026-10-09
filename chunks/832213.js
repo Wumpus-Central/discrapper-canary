@@ -12,7 +12,7 @@ var i,
         i);
 class a {
     cpuCoreCount;
-    getSystemMetrics() {
+    getSystemMetrics(e) {
         return Promise.resolve(null);
     }
     setShouldCollectHermesInstrumentedStats(e) {}

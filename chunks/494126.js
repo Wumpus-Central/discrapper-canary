@@ -15,7 +15,7 @@
         clearMainFrameSlot: () => f,
     }));
 var i = n(73153),
-    r = n(795816),
+    r = n(730602),
     a = n(950803),
     s = n(933958),
     l = n(988534);
@@ -37,7 +37,7 @@ async function h(e) {
     ((0, E.Yf)(n) === E.sV.MAIN && (o(), f()),
         i.h.dispatch({ type: "FRAME_LAUNCH_START", applicationId: t, frameId: h, surface: n, hostWindowKey: _ }));
     try {
-        let e = await (0, r.D2)(t, (0, c.A)(n), n.type);
+        let e = await (0, r.D)(t, (0, c.A)(n), n.type);
         return (
             i.h.dispatch({
                 type: "FRAME_LAUNCH",
@@ -106,7 +106,7 @@ async function L(e) {
     let { applicationId: n, surface: s } = t;
     i.h.dispatch({ type: "FRAME_SET_PROXY_TICKET_REFRESHING", applicationId: n, frameId: e, refreshing: !0 });
     try {
-        let t = await (0, r.D2)(n, (0, c.A)(s), s.type);
+        let t = await (0, r.D)(n, (0, c.A)(s), s.type);
         i.h.dispatch({ type: "FRAME_UPDATE_PROXY_TICKET", applicationId: n, frameId: e, proxyTicket: t });
     } catch (t) {
         let e = await (0, a.f)(t, n);
