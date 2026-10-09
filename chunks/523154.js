@@ -40,7 +40,9 @@ function d(e, t) {
         : {
               message: l[c.event][c.stat],
               values:
-                  ((o = Math.floor((n = Math.floor(Math.max(e.value, 0) / i.A.Millis.MINUTE)) / i.A.Minutes.HOUR)),
+                  ((o = Math.floor(
+                      (n = Math.floor(Math.max(e.secondaryValue, 0) / i.A.Millis.MINUTE)) / i.A.Minutes.HOUR,
+                  )),
                   (d = n % i.A.Minutes.HOUR),
                   {
                       ...t,

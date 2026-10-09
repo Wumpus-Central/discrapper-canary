@@ -414,7 +414,7 @@
     width: 100%;
     --custom-conjure-log-underhang: 24px;
     margin-block-end: calc(var(--custom-conjure-log-underhang)*-1);
-    padding-block-end: var(--custom-conjure-log-underhang)
+    padding-block-end: max(var(--custom-conjure-log-underhang), calc(var(--custom-conjure-docked-card-inset, 0px) + var(--space-16)))
 }
 
 .clarificationSlot__10897 {
@@ -989,4 +989,4 @@
     white-space: nowrap
 }
 
-/*# sourceMappingURL=7dab6654bada4f31.css.map*/
+/*# sourceMappingURL=bcd963159e843db5.css.map*/

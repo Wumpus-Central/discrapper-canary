@@ -29,6 +29,7 @@ function l(e) {
               userId: e.user_id,
               secondaryUserId: e.secondary_user_id ?? null,
               value: e.value,
+              secondaryValue: null != e.secondary_value && e.secondary_value > 0 ? e.secondary_value : e.value,
           }
         : null;
 }

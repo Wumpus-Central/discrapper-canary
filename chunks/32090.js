@@ -9,7 +9,8 @@ function a(e, t) {
             null != e
                 ? (function (e) {
                       let t = arguments.length > 1 && void 0 !== arguments[1] ? arguments[1] : Date.now();
-                      if (null == e || null == e.winningWeek) return null;
+                      if (null == e || null == e.winningWeek || null == e.winningValue || 0 === e.winningValue)
+                          return null;
                       let n = Date.parse(e.winningWeek);
                       return isNaN(n) || t - n > s ? null : e;
                   })(i.Ay.getMember(e, t)?.gamingLeaderboardData)

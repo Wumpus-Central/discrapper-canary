@@ -3252,31 +3252,31 @@ function rv(e) {
     var t;
     let n,
         l,
-        { steps: r, content: a, hasProposal: i, hasAttachments: s } = e,
-        u = (0, nX.B4)(r),
-        o = u.filter((e) => "message" === e.type).at(-1),
-        c =
+        { steps: r, content: a, hasProposal: i, hasLiveClarification: s = !1, hasAttachments: u } = e,
+        o = (0, nX.B4)(r),
+        c = o.filter((e) => "message" === e.type).at(-1),
+        d =
             !i &&
-            null != o &&
-            ((t = o.content),
+            null != c &&
+            ((t = c.content),
             (n = t.trim()),
             (l = a.trim()),
             "" !== n && "" !== l && (n === l || (t.length >= 16e3 && l.startsWith(n))))
-                ? o
+                ? c
                 : null,
-        d = u.filter((e) => e !== c),
-        f = d.filter((e) => "message" === e.type).at(-1),
-        m = !i && "" !== a.trim();
+        f = o.filter((e) => e !== d),
+        m = f.filter((e) => "message" === e.type).at(-1),
+        h = !i && !s && "" !== a.trim();
     return {
-        streamed: d,
-        lastStreamedMessage: f,
-        replyKey: c?.key,
-        showsClosingMessage: m,
-        closingContent: m ? a.trim() : "",
+        streamed: f,
+        lastStreamedMessage: m,
+        replyKey: d?.key,
+        showsClosingMessage: h,
+        closingContent: h ? a.trim() : "",
         attachmentsHost: (function (e) {
             let { hasAttachments: t, showsClosingMessage: n, endsOnStreamedMessage: l } = e;
             return t ? (n ? "closing" : l ? "streamed" : "standalone") : "none";
-        })({ hasAttachments: s, showsClosingMessage: m, endsOnStreamedMessage: (0, nX.Lf)(r) }),
+        })({ hasAttachments: u, showsClosingMessage: h, endsOnStreamedMessage: (0, nX.Lf)(r) }),
     };
 }
 (n(134528), n(947204));
@@ -6743,32 +6743,33 @@ let sH = i.memo(function (e) {
                 draftHasText: o,
                 onApprovePlan: c,
                 floatingSettingsMessageId: d,
-                onRestoreVersion: m,
-                scrollerRef: h,
-                stickToBottomRef: g,
-                pinned: p,
-                onUnpin: x,
-                handleRef: v,
-                onShowsLatestChange: b,
+                liveClarificationId: m,
+                onRestoreVersion: h,
+                scrollerRef: g,
+                stickToBottomRef: p,
+                pinned: x,
+                onUnpin: v,
+                handleRef: b,
+                onShowsLatestChange: y,
             } = e,
-            y = i.useRef(null),
-            [k, A] = i.useState(null),
-            N = i.useCallback((e) => {
-                ((y.current = e), A(e));
+            k = i.useRef(null),
+            [A, N] = i.useState(null),
+            S = i.useCallback((e) => {
+                ((k.current = e), N(e));
             }, []),
-            [S, C] = i.useState(null),
-            E = i.useRef(0);
-        i.useEffect(() => () => window.clearTimeout(E.current), []);
-        let I = i.useCallback((e) => {
-                (C(e), window.clearTimeout(E.current), (E.current = window.setTimeout(() => C(null), 1600)));
+            [C, E] = i.useState(null),
+            I = i.useRef(0);
+        i.useEffect(() => () => window.clearTimeout(I.current), []);
+        let M = i.useCallback((e) => {
+                (E(e), window.clearTimeout(I.current), (I.current = window.setTimeout(() => E(null), 1600)));
             }, []),
-            M = (0, f.bG)([eN.Ay], () => eN.Ay.getPublishStatus(t)?.state ?? null),
-            _ = (0, f.bG)([tX.default], () => tX.default.getCurrentUser()?.id),
-            T = i.useMemo(() => {
+            _ = (0, f.bG)([eN.Ay], () => eN.Ay.getPublishStatus(t)?.state ?? null),
+            T = (0, f.bG)([tX.default], () => tX.default.getCurrentUser()?.id),
+            P = i.useMemo(() => {
                 let e;
-                return (function (e) {
-                    let t = [],
-                        n = (function (e) {
+                return (function (e, t) {
+                    let n = [],
+                        l = (function (e) {
                             let t = new Set(),
                                 n = !1;
                             for (let l = e.length - 1; l >= 0; l--) {
@@ -6788,63 +6789,65 @@ let sH = i.memo(function (e) {
                             }
                             return t;
                         })(e);
-                    for (let l of e) {
-                        let e = n.has(l.render_id),
-                            r = sL.get(l);
-                        if (null != r && r.superseded === e) {
-                            t.push(...r.planned);
+                    for (let r of e) {
+                        let e = l.has(r.render_id),
+                            a = null != r.clarification && r.clarification.id === t,
+                            i = sL.get(r);
+                        if (null != i && i.superseded === e && i.liveCard === a) {
+                            n.push(...i.planned);
                             continue;
                         }
-                        let a = (function (e, t) {
-                            let n = [];
-                            function l(e, t) {
-                                n.push({ row: e, groupable: { key: e.key, ...t } });
+                        let s = (function (e, t, n) {
+                            let l = [];
+                            function r(e, t) {
+                                l.push({ row: e, groupable: { key: e.key, ...t } });
                             }
                             if ("user" === e.role)
                                 return (
-                                    l(
+                                    r(
                                         { kind: "user", key: e.render_id, message: e, groupStart: !1 },
                                         { actor: "user", authorId: e.user_id, boundary: void 0 },
                                     ),
-                                    n
+                                    l
                                 );
                             if ("publish_notice" === e.kind) {
                                 let t = `${e.render_id}:publish`;
                                 return (
-                                    l(
+                                    r(
                                         { kind: "publishNotice", key: t, message: e, groupStart: !1 },
                                         { actor: "assistant", boundary: t },
                                     ),
-                                    n
+                                    l
                                 );
                             }
                             if ("project_event" === e.kind) {
                                 let t = `${e.render_id}:projectEvent`;
                                 return (
-                                    l(
+                                    r(
                                         { kind: "projectEvent", key: t, message: e, groupStart: !1 },
                                         { actor: "assistant", boundary: t },
                                     ),
-                                    n
+                                    l
                                 );
                             }
-                            let r = !(0, ej.BL)(e),
-                                a = rv({
+                            let a = !(0, ej.BL)(e),
+                                i = rv({
                                     steps: e.steps,
                                     content: e.content,
                                     hasProposal: null != e.proposal,
+                                    hasLiveClarification: n,
                                     hasAttachments: (e.attachments?.length ?? 0) > 0,
                                 }),
-                                i = a.lastStreamedMessage?.key,
-                                s = (0, nX.C6)(e.steps, { turnActive: r }),
-                                { lastWork: u, open: o } = (0, nX.CT)(s, { turnActive: r }),
-                                c = s.at(-1)?.index,
-                                d = !1;
-                            for (let n of s) {
-                                if (null != n.prose && sR.test(n.prose.content)) d = !0;
-                                else if (null != n.prose && n.prose.key !== a.replyKey) {
+                                s = i.lastStreamedMessage?.key,
+                                u = (0, nX.C6)(e.steps, { turnActive: a }),
+                                { lastWork: o, open: c } = (0, nX.CT)(u, { turnActive: a }),
+                                d = u.at(-1)?.index,
+                                f = !1;
+                            for (let n of u) {
+                                if (null != n.prose && sR.test(n.prose.content)) f = !0;
+                                else if (null != n.prose && n.prose.key !== i.replyKey) {
                                     let t = `${e.render_id}:${n.key}`;
-                                    l(
+                                    r(
                                         {
                                             kind: "prose",
                                             key: t,
@@ -6852,26 +6855,26 @@ let sH = i.memo(function (e) {
                                             groupStart: !1,
                                             content: n.prose.content,
                                             hostsAttachments:
-                                                "streamed" === a.attachmentsHost &&
-                                                n.prose.key === i &&
+                                                "streamed" === i.attachmentsHost &&
+                                                n.prose.key === s &&
                                                 null != e.attachments,
-                                            streaming: r && n.index === c && !n.hasWork,
+                                            streaming: a && n.index === d && !n.hasWork,
                                         },
                                         { actor: "assistant", boundary: t },
                                     );
                                 }
                                 (n.hasWork || n.hasTodos) &&
-                                    l(
+                                    r(
                                         {
                                             kind: "activity",
                                             key: `${e.render_id}:work-${n.index}`,
                                             message: e,
                                             groupStart: !1,
                                             segment: n.index,
-                                            active: n.index === o,
-                                            closed: n.index !== o,
+                                            active: n.index === c,
+                                            closed: n.index !== c,
                                             ...(null != n.durationMs ? { segmentDurationMs: n.durationMs } : {}),
-                                            reportsDuration: n.index === u,
+                                            reportsDuration: n.index === o,
                                             hostsChecklist: n.hasTodos,
                                             turnActive: nJ(e),
                                             checklistSuperseded: n.hasTodos && t,
@@ -6879,10 +6882,10 @@ let sH = i.memo(function (e) {
                                         { actor: null, boundary: void 0 },
                                     );
                             }
-                            let f = sR.test(e.content ?? "");
+                            let m = sR.test(e.content ?? "");
                             if (
-                                (!0 === e.interrupted || d || f
-                                    ? l(
+                                (!0 === e.interrupted || f || m
+                                    ? r(
                                           {
                                               kind: "interrupted",
                                               key: `${e.render_id}:interrupted`,
@@ -6891,9 +6894,9 @@ let sH = i.memo(function (e) {
                                           },
                                           { actor: null, boundary: void 0 },
                                       )
-                                    : s.every((e) => !e.hasTodos) &&
+                                    : u.every((e) => !e.hasTodos) &&
                                       (e.todos?.length ?? 0) > 0 &&
-                                      l(
+                                      r(
                                           {
                                               kind: "legacyTodos",
                                               key: `${e.render_id}:todos`,
@@ -6903,27 +6906,27 @@ let sH = i.memo(function (e) {
                                           },
                                           { actor: null, boundary: void 0 },
                                       ),
-                                (a.showsClosingMessage && !f) ||
+                                (i.showsClosingMessage && !m) ||
                                     null != e.proposal ||
-                                    null != e.clarification ||
+                                    (null != e.clarification && !n) ||
                                     null != e.restoreProposal ||
-                                    (!r &&
+                                    (!a &&
                                         (null != e.ideas ||
                                             null != e.publishCta ||
                                             null != e.secretRequest ||
                                             null != e.settingsRequest)) ||
-                                    "standalone" === a.attachmentsHost)
+                                    "standalone" === i.attachmentsHost)
                             ) {
                                 let t = `${e.render_id}:closing`;
-                                l(
+                                r(
                                     {
                                         kind: "closing",
                                         key: t,
                                         message: e,
                                         groupStart: !1,
-                                        active: r,
-                                        attachmentsHost: a.attachmentsHost,
-                                        content: a.closingContent,
+                                        active: a,
+                                        attachmentsHost: i.attachmentsHost,
+                                        content: i.closingContent,
                                         sideReply: "side_reply" === e.kind,
                                     },
                                     {
@@ -6934,11 +6937,11 @@ let sH = i.memo(function (e) {
                                     },
                                 );
                             }
-                            return n;
-                        })(l, e);
-                        (sL.set(l, { superseded: e, planned: a }), t.push(...a));
+                            return l;
+                        })(r, e, a);
+                        (sL.set(r, { superseded: e, liveCard: a, planned: s }), n.push(...s));
                     }
-                    let l = (function (e) {
+                    let r = (function (e) {
                         let t,
                             n,
                             l = [],
@@ -6957,14 +6960,14 @@ let sH = i.memo(function (e) {
                                 l.push(e));
                         }
                         return l;
-                    })(t.map((e) => e.groupable));
-                    return t.map((e, t) => ({ ...e.row, groupStart: l[t] ?? !0 }));
+                    })(n.map((e) => e.groupable));
+                    return n.map((e, t) => ({ ...e.row, groupStart: r[t] ?? !0 }));
                 })(
                     ((e = (function (e, t) {
                         if ("unpublished" !== t) return null;
                         for (let t = e.length - 1; t >= 0; t--) if (null != e[t].publishCta) return e[t].id;
                         return null;
-                    })(n, M)),
+                    })(n, _)),
                     n.every((t) => null == t.publishCta || t.id === e)
                         ? n
                         : n.map((t) => {
@@ -6972,26 +6975,27 @@ let sH = i.memo(function (e) {
                               let n = a3.get(t);
                               return (null == n && ((n = { ...t, publishCta: null }), a3.set(t, n)), n);
                           })),
+                    m,
                 );
-            }, [n, M]),
-            P = i.useMemo(() => T.map((e) => e.key), [T]),
-            [R, L] = i.useState(null),
-            D = (function (e, t, n) {
+            }, [n, _, m]),
+            R = i.useMemo(() => P.map((e) => e.key), [P]),
+            [L, D] = i.useState(null),
+            $ = (function (e, t, n) {
                 if (null == t) return sO(e, e.length - 60, e.length);
                 let l = null == t.endKey,
                     r = l ? e.length : sG(e, t.endKey, t.end - 1) + 1,
                     a = sG(e, t.startKey, t.start);
                 return (l && n && r - a > 120 && (a = r - 60), sO(e, a, r));
-            })(P, R, p),
-            $ = i.useRef(D),
-            z = i.useRef(P),
-            F = i.useRef(T),
-            O = i.useRef(null),
+            })(R, L, x),
+            z = i.useRef($),
+            F = i.useRef(R),
+            O = i.useRef(P),
             G = i.useRef(null),
-            U = i.useRef(new Set()),
-            q = i.useCallback(() => {
-                let e = h.current?.getScrollerNode(),
-                    t = y.current;
+            U = i.useRef(null),
+            q = i.useRef(new Set()),
+            B = i.useCallback(() => {
+                let e = g.current?.getScrollerNode(),
+                    t = k.current;
                 if (null == e || null == t) return;
                 let n = e.getBoundingClientRect().top,
                     l = t.querySelectorAll("[data-conjure-row-key]"),
@@ -7003,10 +7007,10 @@ let sH = i.memo(function (e) {
                     l[e].getBoundingClientRect().bottom > n ? ((i = l[e]), (a = e - 1)) : (r = e + 1);
                 }
                 let s = i?.dataset.conjureRowKey;
-                O.current = null != i && null != s ? { key: s, offset: i.getBoundingClientRect().top - n } : null;
-            }, [h]),
-            B = i.useCallback(() => {
-                let e = h.current?.getScrollerNode();
+                G.current = null != i && null != s ? { key: s, offset: i.getBoundingClientRect().top - n } : null;
+            }, [g]),
+            H = i.useCallback(() => {
+                let e = g.current?.getScrollerNode();
                 if (null == e) return;
                 let n = (function (e, t, n) {
                     let { nearTop: l, nearBottom: r, pinned: a } = n;
@@ -7022,83 +7026,83 @@ let sH = i.memo(function (e) {
                     }
                     let i = Math.max(t.start - 30, t.end - 120);
                     return i < t.start ? sO(e, i, t.end) : null;
-                })(z.current, $.current, {
+                })(F.current, z.current, {
                     nearTop: e.scrollTop < 600,
                     nearBottom: e.scrollHeight - e.clientHeight - e.scrollTop < 600,
-                    pinned: g.current,
+                    pinned: p.current,
                 });
-                "older" === n ? (0, en.P6)(t) : null != n && L(n);
-            }, [h, g, t]);
+                "older" === n ? (0, en.P6)(t) : null != n && D(n);
+            }, [g, p, t]);
         i.useImperativeHandle(
-            v,
+            b,
             () => ({
                 handleScroll() {
-                    (q(),
-                        L((e) => {
-                            let t = $.current;
+                    (B(),
+                        D((e) => {
+                            let t = z.current;
                             return null != e && e.startKey === t.startKey && e.endKey === t.endKey ? e : t;
                         }),
-                        B());
+                        H());
                 },
-                recordAnchor: q,
+                recordAnchor: B,
                 showLatest(e) {
-                    ((G.current = e ?? null), L(null));
+                    ((U.current = e ?? null), D(null));
                 },
             }),
-            [q, B],
+            [B, H],
         );
-        let H = i.useRef(null),
-            K = i.useCallback(
+        let K = i.useRef(null),
+            V = i.useCallback(
                 (e) => {
                     var n;
                     let l;
-                    H.current = null;
-                    let r = y.current?.querySelector(`[data-conjure-message="${e}"]`);
+                    K.current = null;
+                    let r = k.current?.querySelector(`[data-conjure-message="${e}"]`);
                     if (null != r) {
-                        (x(), L($.current), r.scrollIntoView({ block: "center", behavior: "smooth" }), I(e));
+                        (v(), D(z.current), r.scrollIntoView({ block: "center", behavior: "smooth" }), M(e));
                         return;
                     }
-                    let a = F.current.findIndex((t) => "user" === t.kind && t.message.id === e);
+                    let a = O.current.findIndex((t) => "user" === t.kind && t.message.id === e);
                     if (-1 === a) {
-                        (0, en.P6)(t) && (H.current = e);
+                        (0, en.P6)(t) && (K.current = e);
                         return;
                     }
-                    (x(),
-                        (G.current = () => {
-                            (y.current
+                    (v(),
+                        (U.current = () => {
+                            (k.current
                                 ?.querySelector(`[data-conjure-message="${e}"]`)
                                 ?.scrollIntoView({ block: "center" }),
-                                I(e));
+                                M(e));
                         }),
-                        L(((n = z.current), sO(n, (l = Math.max(0, a - 30)), l + 60))));
+                        D(((n = F.current), sO(n, (l = Math.max(0, a - 30)), l + 60))));
                 },
-                [I, x, t],
+                [M, v, t],
             );
         (i.useEffect(() => {
-            let e = H.current;
-            null != e && K(e);
-        }, [T, K]),
+            let e = K.current;
+            null != e && V(e);
+        }, [P, V]),
             i.useLayoutEffect(() => {
-                if (null == k) return;
-                let e = k.getBoundingClientRect().height,
+                if (null == A) return;
+                let e = A.getBoundingClientRect().height,
                     t = new ResizeObserver((t) => {
                         let [n] = t,
                             l = n?.contentRect.height;
-                        null != l && l !== e && ((e = l), g.current ? h.current?.scrollToBottom() : q());
+                        null != l && l !== e && ((e = l), p.current ? g.current?.scrollToBottom() : B());
                     });
-                return (t.observe(k), () => t.disconnect());
-            }, [k, q, h, g]));
-        let V = null == D.endKey;
-        (i.useEffect(() => b?.(V), [V, b]),
+                return (t.observe(A), () => t.disconnect());
+            }, [A, B, g, p]));
+        let W = null == $.endKey;
+        (i.useEffect(() => y?.(W), [W, y]),
             i.useLayoutEffect(() => {
-                (($.current = D), (z.current = P), (F.current = T));
+                ((z.current = $), (F.current = R), (O.current = P));
             }),
             i.useLayoutEffect(() => {
-                let e = h.current?.getScrollerNode(),
-                    t = y.current;
+                let e = g.current?.getScrollerNode(),
+                    t = k.current;
                 if (null != e && null != t) {
-                    let n = O.current;
-                    if (g.current) h.current?.scrollToBottom();
+                    let n = G.current;
+                    if (p.current) g.current?.scrollToBottom();
                     else if (null != n) {
                         let l = Array.from(t.querySelectorAll("[data-conjure-row-key]")).find(
                                 (e) => e.dataset.conjureRowKey === n.key,
@@ -7109,13 +7113,13 @@ let sH = i.memo(function (e) {
                                     : l.getBoundingClientRect().top - e.getBoundingClientRect().top - n.offset;
                         0 !== r && (e.scrollTop += r);
                     }
-                    let l = G.current;
-                    ((G.current = null), l?.(), q(), B());
+                    let l = U.current;
+                    ((U.current = null), l?.(), B(), H());
                 }
-                U.current = new Set(P);
-            }, [T, P, D.start, D.end, h, g, q, B]));
-        let W = n.at(-1),
-            X = (function (e, t, n) {
+                q.current = new Set(R);
+            }, [P, R, $.start, $.end, g, p, B, H]));
+        let X = n.at(-1),
+            J = (function (e, t, n) {
                 var l;
                 let r = (0, ns.Ay)(e),
                     a = (0, iq.A)(),
@@ -7268,7 +7272,7 @@ let sH = i.memo(function (e) {
                     h
                 );
             })(t, n, !0 === o),
-            J = i.useCallback(
+            Y = i.useCallback(
                 (e) => {
                     switch (e) {
                         case "outdated":
@@ -7289,7 +7293,7 @@ let sH = i.memo(function (e) {
                 },
                 [t, s],
             ),
-            Y = i.useMemo(
+            Q = i.useMemo(
                 () =>
                     (function (e) {
                         if (e.at(-1)?.role !== "assistant") return null;
@@ -7304,7 +7308,7 @@ let sH = i.memo(function (e) {
                     })(n),
                 [n],
             ),
-            Q = i.useMemo(
+            Z = i.useMemo(
                 () =>
                     (function (e) {
                         let t = new Map(),
@@ -7326,7 +7330,7 @@ let sH = i.memo(function (e) {
                     })(n),
                 [n],
             ),
-            Z = i.useMemo(
+            ee = i.useMemo(
                 () =>
                     (function (e) {
                         let t = new Map(),
@@ -7346,7 +7350,7 @@ let sH = i.memo(function (e) {
                     })(n),
                 [n],
             ),
-            ee = i.useMemo(
+            et = i.useMemo(
                 () =>
                     (function (e) {
                         let t = new Map();
@@ -7363,14 +7367,14 @@ let sH = i.memo(function (e) {
                     })(n),
                 [n],
             ),
-            et =
-                (W?.role !== "assistant" || null == W.awaitingUser || null == W.secretRequest
+            el =
+                (X?.role !== "assistant" || null == X.awaitingUser || null == X.secretRequest
                     ? null
-                    : (0, ej.BL)(W)
-                      ? W.awaitingUser
+                    : (0, ej.BL)(X)
+                      ? X.awaitingUser
                       : null) ?? void 0,
-            el = (0, f.bG)([en.Ay], () => en.Ay.getSettings(t)?.secrets, [t]),
-            er = i.useMemo(
+            er = (0, f.bG)([en.Ay], () => en.Ay.getSettings(t)?.secrets, [t]),
+            ea = i.useMemo(
                 () =>
                     (function (e, t) {
                         let n = null != t ? new Set(t.filter((e) => e.set).map((e) => e.name)) : null,
@@ -7408,8 +7412,8 @@ let sH = i.memo(function (e) {
                             ((a = !0), (i = !1));
                         }
                         return l;
-                    })(n, el),
-                [n, el],
+                    })(n, er),
+                [n, er],
             );
         if (0 === n.length) {
             if ("loading" === l)
@@ -7428,12 +7432,12 @@ let sH = i.memo(function (e) {
             });
         }
         return (0, a.jsx)(sq.Provider, {
-            value: U,
+            value: q,
             children: (0, a.jsxs)("ol", {
-                ref: N,
+                ref: S,
                 className: sU.x7,
                 children: [
-                    T.slice(D.start, D.end).map((e) => {
+                    P.slice($.start, $.end).map((e) => {
                         let n = e.message;
                         if ("closing" !== e.kind)
                             return (0, a.jsx)(
@@ -7441,34 +7445,34 @@ let sH = i.memo(function (e) {
                                 {
                                     row: e,
                                     projectId: t,
-                                    highlighted: "user" === e.kind && S === n.id,
-                                    currentUserId: "user" === e.kind ? _ : void 0,
+                                    highlighted: "user" === e.kind && C === n.id,
+                                    currentUserId: "user" === e.kind ? T : void 0,
                                 },
                                 e.key,
                             );
-                        let l = n === W;
+                        let l = n === X;
                         return (0, a.jsx)(
                             sK,
                             {
                                 row: e,
                                 projectId: t,
                                 highlighted: !1,
-                                replyTo: null != n.in_reply_to ? ee.get(n.in_reply_to) : void 0,
-                                onJumpTo: K,
-                                planVersion: Q.get(n.render_id),
-                                pickedIdeaIds: Z.get(n.render_id),
-                                secretRequestAwaiting: l ? et : void 0,
-                                secretRequestStatus: er.get(n.render_id),
+                                replyTo: null != n.in_reply_to ? et.get(n.in_reply_to) : void 0,
+                                onJumpTo: V,
+                                planVersion: Z.get(n.render_id),
+                                pickedIdeaIds: ee.get(n.render_id),
+                                secretRequestAwaiting: l ? el : void 0,
+                                secretRequestStatus: ea.get(n.render_id),
                                 settingsFloating: n.id === d,
                                 isNewest: l,
                                 onPickIdea: r,
-                                onApprovePlan: n.render_id === Y ? c : void 0,
-                                onRestoreVersion: m,
+                                onApprovePlan: n.render_id === Q ? c : void 0,
+                                onRestoreVersion: h,
                             },
                             e.key,
                         );
                     }),
-                    null != et && V
+                    null != el && W
                         ? (0, a.jsx)(sX, {
                               role: "assistant",
                               continuation: !0,
@@ -7483,11 +7487,11 @@ let sH = i.memo(function (e) {
                               }),
                           })
                         : null,
-                    V
+                    W
                         ? (0, a.jsx)("li", {
                               role: "none",
                               className: sU.q3,
-                              children: (0, a.jsx)(i1, { reminder: X, renderReminder: J }),
+                              children: (0, a.jsx)(i1, { reminder: J, renderReminder: Y }),
                           })
                         : null,
                 ],
@@ -8414,7 +8418,28 @@ function uc(e) {
             null != ec && eo(ec.id);
         }, [ec]),
         em = null != ed,
-        eh = (function (e) {
+        [eh, eg] = i.useState(null),
+        ep = el?.id ?? ec?.id;
+    i.useLayoutEffect(() => {
+        let e = v.current?.getScrollerNode(),
+            t = eh?.firstElementChild;
+        if (null == eh || null == e || !(0, tL.vq)(t, HTMLElement) || null == ep) return;
+        function n() {
+            k.current && v.current?.scrollToBottom();
+        }
+        let l = new ResizeObserver(() => {
+            let l = e.getBoundingClientRect().bottom - eh.getBoundingClientRect().top - t.offsetTop;
+            (e.style.setProperty("--custom-conjure-docked-card-inset", `${Math.max(0, Math.round(l))}px`), n());
+        });
+        return (
+            l.observe(t),
+            l.observe(e, { box: "border-box" }),
+            () => {
+                (l.disconnect(), e.style.removeProperty("--custom-conjure-docked-card-inset"), n());
+            }
+        );
+    }, [eh, ep, v, k]);
+    let ex = (function (e) {
             let { historyLoaded: t, historyUnavailable: n, connState: l } = e;
             return n ? "unavailable" : t ? "greeting" : "failed" === l || "closed" === l ? "unavailable" : "loading";
         })({
@@ -8422,22 +8447,22 @@ function uc(e) {
             historyUnavailable: (0, f.bG)([ej.Ay], () => ej.Ay.isHistoryUnavailable(n), [n]),
             connState: o,
         }),
-        eg = "loading" === eh && 0 === u.length,
-        ep = i.useMemo(() => {
+        ev = "loading" === ex && 0 === u.length,
+        ey = i.useMemo(() => {
             let e = 0;
             for (let t = 0; t < n.length; t++) e = (31 * e + n.charCodeAt(t)) % 0x7fffffff;
             return uo[e % uo.length];
         }, [n]),
-        ex = Z ? eu.intl.string(es.default.Zc7gML) : "greeting" === eh && 0 === u.length ? ep : null,
-        ev = i.useMemo(() => {
+        ek = Z ? eu.intl.string(es.default.Zc7gML) : "greeting" === ex && 0 === u.length ? ey : null,
+        ew = i.useMemo(() => {
             for (let e = u.length - 1; e >= 0; e--) {
                 let t = u[e];
                 if ("assistant" === t.role && !(0, ej.BL)(t)) return t;
             }
         }, [u]),
-        ey = null != ev,
-        ek =
-            null != ev
+        eA = null != ew,
+        eN =
+            null != ew
                 ? (function (e) {
                       let t = e.turn_id ?? e.steps.find((e) => null != e.turn_id)?.turn_id;
                       if (null != t && /^\d+$/.test(t)) {
@@ -8445,15 +8470,15 @@ function uc(e) {
                           if (Number.isFinite(e) && e > 0) return e;
                       }
                       return e.created_at;
-                  })(ev)
+                  })(ew)
                 : void 0,
-        ew = Z && Y ? W : void 0,
-        eA = i.useCallback(() => lY(n, eu.intl.string(es.default.EMgIuY)), [n]),
-        [eN, eS] = i.useState(null),
-        [eC, eE] = i.useState(ey);
-    (eC !== ey && (eE(ey), ey || eS(null)),
+        eS = Z && Y ? W : void 0,
+        eC = i.useCallback(() => lY(n, eu.intl.string(es.default.EMgIuY)), [n]),
+        [eE, eI] = i.useState(null),
+        [eM, e_] = i.useState(eA);
+    (eM !== eA && (e_(eA), eA || eI(null)),
         i.useEffect(() => {
-            if (!ey) return;
+            if (!eA) return;
             let e = v.current?.getScrollerNode(),
                 t = e?.querySelector('[data-conjure-turn-status="true"][data-live="true"]');
             if (null == e || null == t) return;
@@ -8461,22 +8486,22 @@ function uc(e) {
                 (e) => {
                     let [t] = e;
                     null == t || t.isIntersecting || null == t.rootBounds
-                        ? eS(null)
-                        : eS(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
+                        ? eI(null)
+                        : eI(t.boundingClientRect.top < t.rootBounds.top ? "top" : "bottom");
                 },
                 { root: e, threshold: 0 },
             );
             return (n.observe(t), () => n.disconnect());
-        }, [ey, ev?.steps, E]));
-    let eI = E ? eN : "bottom",
-        eM = i.useMemo(() => (null != ev ? (0, nY.b)(ev.steps) : ""), [ev]),
-        e_ = i.useMemo(() => (null != ev ? ((0, nX.lt)(ev.steps) ?? ev.todos) : void 0), [ev]),
-        eT = ev?.provisionalTodo,
-        eP = null != ev && nJ(ev),
-        eR = i.useMemo(() => {
+        }, [eA, ew?.steps, E]));
+    let eT = E ? eE : "bottom",
+        eP = i.useMemo(() => (null != ew ? (0, nY.b)(ew.steps) : ""), [ew]),
+        eR = i.useMemo(() => (null != ew ? ((0, nX.lt)(ew.steps) ?? ew.todos) : void 0), [ew]),
+        eL = ew?.provisionalTodo,
+        eD = null != ew && nJ(ew),
+        e$ = i.useMemo(() => {
             var e;
-            return null != ev ? ((e = ev.steps), id((0, nX.Jf)(e, !0).tasks)) : void 0;
-        }, [ev]);
+            return null != ew ? ((e = ew.steps), id((0, nX.Jf)(e, !0).tasks)) : void 0;
+        }, [ew]);
     return (0, a.jsxs)("section", {
         ref: x,
         "data-conjure-chat": !0,
@@ -8492,12 +8517,12 @@ function uc(e) {
                 : null,
             (0, a.jsx)(la, {
                 onJumpToActivity: T,
-                line: eM,
-                placement: ey && "top" === eI ? "top" : null,
-                todos: e_,
-                todosLive: eP,
-                provisionalTodo: eT,
-                agents: eR,
+                line: eP,
+                placement: eA && "top" === eT ? "top" : null,
+                todos: eR,
+                todosLive: eD,
+                provisionalTodo: eL,
+                agents: e$,
             }),
             (0, a.jsxs)("div", {
                 className: uu.JX,
@@ -8505,18 +8530,19 @@ function uc(e) {
                     (0, a.jsx)(nK.Ch, {
                         ref: v,
                         onScroll: R,
-                        scrollbarGutter: eg ? "both-edges" : "stable",
+                        scrollbarGutter: ev ? "both-edges" : "stable",
                         className: [uu.N$, N ? null : uu.hB, em ? uu.J9 : null].filter(Boolean).join(" "),
                         children: (0, a.jsx)(sH, {
                             projectId: n,
                             messages: u,
-                            emptyState: eh,
+                            emptyState: ex,
                             floatingSettingsMessageId: ec?.id,
+                            liveClarificationId: el?.id,
                             onPickIdea: Y ? O : void 0,
                             onAskForIdeas: Y ? q : void 0,
                             draftHasText: G,
-                            onApprovePlan: Y ? eA : void 0,
-                            onRestoreVersion: J || ey ? void 0 : r,
+                            onApprovePlan: Y ? eC : void 0,
+                            onRestoreVersion: J || eA ? void 0 : r,
                             scrollerRef: v,
                             stickToBottomRef: k,
                             pinned: w,
@@ -8529,10 +8555,10 @@ function uc(e) {
                         className: uu.NJ,
                         children: (0, a.jsx)(ua, {
                             projectId: n,
-                            thinking: ey,
-                            turnStartedAt: ek,
+                            thinking: eA,
+                            turnStartedAt: eN,
                             restoring: J,
-                            recalling: eg,
+                            recalling: ev,
                             thinkingActivity: m,
                             compacting: h,
                             saving: g,
@@ -8543,6 +8569,7 @@ function uc(e) {
                     null == el
                         ? null
                         : (0, a.jsx)("div", {
+                              ref: eg,
                               className: em ? `${uu.B5} ${uu.J9}` : uu.B5,
                               children: (0, a.jsx)(
                                   re,
@@ -8553,6 +8580,7 @@ function uc(e) {
                     null == ed
                         ? null
                         : (0, a.jsx)("div", {
+                              ref: null == el ? eg : void 0,
                               className: uu.B5,
                               children: (0, a.jsx)(rl, { projectId: n, request: ed, onDismiss: ef }, ec?.id),
                           }),
@@ -8563,12 +8591,12 @@ function uc(e) {
                 children: [
                     (0, a.jsx)(la, {
                         onJumpToActivity: T,
-                        line: eM,
-                        placement: ey && "bottom" === eI ? "bottom" : null,
-                        todos: e_,
-                        todosLive: eP,
-                        provisionalTodo: eT,
-                        agents: eR,
+                        line: eP,
+                        placement: eA && "bottom" === eT ? "bottom" : null,
+                        todos: eR,
+                        todosLive: eD,
+                        provisionalTodo: eL,
+                        agents: e$,
                     }),
                     0 === L.annotations.length
                         ? null
@@ -8622,15 +8650,15 @@ function uc(e) {
                         projectId: n,
                         canSend: Y,
                         stopped: c,
-                        running: ey,
+                        running: eA,
                         restoring: J,
                         onSend: z,
                         hasPendingContext: L.annotations.length > 0,
                         onInterrupt: Y ? F : void 0,
                         onUploadFile: K,
                         onImport: s,
-                        onApprove: ew,
-                        suggestion: ex,
+                        onApprove: eS,
+                        suggestion: ek,
                         questionOpen: null != el || null != ed,
                         modelSettings: p,
                         onModelSettingsChange: H,
