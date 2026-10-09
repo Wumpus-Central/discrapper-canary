@@ -1482,7 +1482,7 @@ if (null == e9 || "0.0.0" !== e9.app.getVersion()) {
     n.e("859864").then(n.t.bind(n, 122123, 19)));
 let te = window.GLOBAL_ENV.RELEASE_CHANNEL;
 (new ez.A().log(
-    `[BUILD INFO] Release Channel: ${te}, Build Number: 634640, Version Hash: 7a8cd8a7e0311a337e9d534267a2e06802f0856b`,
+    `[BUILD INFO] Release Channel: ${te}, Build Number: 634651, Version Hash: 2c9c3b53f2e061ada20a1ad22ea5dcbe20a4c30d`,
 ),
     G.A.setTags({ appContext: j.QCW }),
     eS.A.initBasic(),
@@ -26221,7 +26221,7 @@ let yI = "isHideDevBanner",
                     className: tE()(yf.Wz, yf.mr),
                     children: [
                         (0, M.jsx)(yh, { className: yf.Kk }),
-                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "634640" }),
+                        tL.intl.format(tL.t.uyrfYF, { buildNumber: "634651" }),
                         (0, M.jsx)(r, {}),
                     ],
                 })
@@ -38788,6 +38788,7 @@ let U1 = (0, i8.Fe)({
                 n.e("215980"),
                 n.e("842492"),
                 n.e("230761"),
+                n.e("60701"),
                 n.e("975076"),
                 n.e("736793"),
                 n.e("677602"),
@@ -38796,7 +38797,6 @@ let U1 = (0, i8.Fe)({
                 n.e("586546"),
                 n.e("191934"),
                 n.e("997934"),
-                n.e("60701"),
                 n.e("792461"),
                 n.e("471138"),
             ]).then(n.bind(n, 140539)),
@@ -39583,6 +39583,7 @@ let U1 = (0, i8.Fe)({
                 n.e("215980"),
                 n.e("842492"),
                 n.e("230761"),
+                n.e("60701"),
                 n.e("975076"),
                 n.e("59228"),
                 n.e("580372"),
@@ -40212,6 +40213,7 @@ let U1 = (0, i8.Fe)({
                 n.e("215980"),
                 n.e("842492"),
                 n.e("230761"),
+                n.e("60701"),
                 n.e("975076"),
                 n.e("736793"),
                 n.e("677602"),
@@ -40220,7 +40222,6 @@ let U1 = (0, i8.Fe)({
                 n.e("586546"),
                 n.e("191934"),
                 n.e("997934"),
-                n.e("60701"),
                 n.e("792461"),
                 n.e("471138"),
             ]).then(n.bind(n, 767675)),

@@ -207,7 +207,7 @@ function J(e) {
                     ? (0, i.jsxs)("div", {
                           className: Z.ne,
                           children: [
-                              h ? (0, i.jsx)(Y.d1, { channel: s }) : null,
+                              h ? (0, i.jsx)(Y.d1, { useVerboseLabel: !0, channel: s }) : null,
                               u
                                   ? (0, i.jsx)(y.k, {
                                         value: f,
