@@ -1026,6 +1026,7 @@ class eA extends S.A {
     setLocalVideoSinkWants(e) {
         this.localVideoSinkWants = e;
     }
+    setAvSyncEnabled(e, t) {}
     updateVideoQualityCore(e, t) {
         let n;
         if (!this.videoSupported) return;
